@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import { View, Text, ScrollView, Pressable, ActivityIndicator } from "react-native";
 import { useFocusEffect, useLocalSearchParams, useRouter } from "expo-router";
 import api from "../../services/api";
+import { ArabicText } from "../../components/ArabicText";
 import { Colors, FontSizes, LineHeights, Radii, Shadows, Spacing } from "../../../constants/theme";
 
 export default function ChapterScreen() {
@@ -61,6 +62,11 @@ export default function ChapterScreen() {
   return (
     <ScrollView style={{ flex: 1, backgroundColor: Colors.bg.primary }} contentContainerStyle={{ padding: Spacing.xl }}>
       <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, fontWeight: "700", color: Colors.text.primary, marginBottom: Spacing.sm }}>{chapter.title}</Text>
+      {chapter.titleAr ? (
+        <ArabicText size="md" style={{ marginBottom: Spacing.sm, color: Colors.accent.gold }}>
+          {chapter.titleAr}
+        </ArabicText>
+      ) : null}
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.lg, lineHeight: LineHeights.bodyL }}>{chapter.description}</Text>
       <Text style={{ color: Colors.text.primary, marginBottom: Spacing.lg }}>
         {chapter.completedLessonCount} / {chapter.lessons.length} lessons completed
@@ -77,6 +83,11 @@ export default function ChapterScreen() {
       {chapter.lessons.map((lesson: any) => (
         <View key={lesson.id} style={{ marginBottom: Spacing.lg, padding: Spacing.lg, borderRadius: Radii.lg, backgroundColor: Colors.bg.card, borderWidth: 1, borderColor: lesson.isCompleted ? Colors.accent.teal : Colors.border.subtle, ...Shadows.card }}>
           <Text style={{ fontSize: FontSizes.h3, lineHeight: LineHeights.h3, fontWeight: "700", color: Colors.text.primary, marginBottom: Spacing.sm }}>{lesson.title}</Text>
+          {lesson.titleAr ? (
+            <ArabicText size="sm" style={{ marginBottom: Spacing.sm, color: Colors.accent.gold }}>
+              {lesson.titleAr}
+            </ArabicText>
+          ) : null}
           <Text style={{ color: Colors.accent.gold, marginBottom: Spacing.sm }}>XP: {lesson.xpReward}</Text>
           <Text style={{ color: lesson.isCompleted ? Colors.accent.teal : Colors.text.secondary, marginBottom: Spacing.md }}>
             {lesson.isCompleted ? "Completed" : "Not completed"}

@@ -66,6 +66,11 @@ export default function HomeScreen() {
           }}
         >
           <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontWeight: "700", marginBottom: Spacing.sm }}>{chapter.title}</Text>
+          {chapter.titleAr ? (
+            <ArabicText size="sm" style={{ marginBottom: Spacing.sm, color: Colors.accent.gold }}>
+              {chapter.titleAr}
+            </ArabicText>
+          ) : null}
           <Text style={{ marginBottom: Spacing.md, color: Colors.text.secondary, lineHeight: LineHeights.bodyL }}>{chapter.description}</Text>
           <Text style={{ marginBottom: Spacing.sm, color: Colors.text.primary }}>
             {chapter.completedLessonCount} / {chapter.lessons.length} lessons completed

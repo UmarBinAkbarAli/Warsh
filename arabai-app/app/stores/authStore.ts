@@ -7,6 +7,10 @@ export interface User {
   id: string;
   email: string;
   name: string;
+  nativeLanguage?: string;
+  goal?: string;
+  level?: string;
+  xp?: number;
 }
 
 interface AuthStore {

@@ -2,6 +2,12 @@
 
 Last updated: 2026-04-28
 
+## Phase Status
+
+- **Phase 1 core app flow:** working end-to-end on device
+- **Current focus:** Phase 1.5 content expansion and polish
+- **Recommended next milestone:** expand curriculum before starting true Phase 2 work
+
 ## Current Status
 
 - Workspace contains two active projects:
@@ -13,15 +19,15 @@ Last updated: 2026-04-28
   - Database: `arabai`
 - Backend dev server is running on the local network:
   - Local: `http://localhost:3000`
-  - Phone/LAN: `http://192.168.2.101:3000`
+  - Phone/LAN: `http://192.168.100.135:3000`
 - Expo Metro is running for Expo Go on Android:
-  - Manual Expo URL: `exp://192.168.2.101:8081`
+  - Manual Expo URL: `exp://192.168.100.135:8082`
   - Android bundle endpoint has been verified with HTTP 200.
 - Expo is being started with:
 
 ```powershell
-$env:EXPO_PUBLIC_API_URL='http://192.168.2.101:3000'
-npx.cmd expo start --lan --clear
+$env:EXPO_PUBLIC_API_URL='http://192.168.100.135:3000'
+npx.cmd expo start --lan --port 8082
 ```
 
 ## What Was Fixed
@@ -55,8 +61,10 @@ DATABASE_URL="postgresql://arabai:arabai_dev_password@localhost:5432/arabai"
   - Register screen now includes a `Name` field.
   - Users can register directly without first completing onboarding.
   - Successful account creation now lands directly on the home screen as an authenticated user.
-- Expanded seed content:
-  - Database now seeds `5` chapters and `16` lessons.
+- Expanded Phase 1.5 curriculum content:
+  - Database now seeds `10` chapters and `68` lessons for Units 1 and 2.
+  - Added a dedicated curriculum seed module at `arabai-backend/prisma/curriculum-phase15.cjs`.
+  - Replaced the shallow starter seed path with the Phase 1.5 beginner curriculum from `arabai-curriculum.md`.
   - Fixed corrupted Arabic seed text using valid Arabic strings.
 - Added app icon configuration and generated:
   - `arabai-app/assets/icon.png`
@@ -75,22 +83,49 @@ DATABASE_URL="postgresql://arabai:arabai_dev_password@localhost:5432/arabai"
   - Loaded both fonts in `arabai-app/app/_layout.tsx` with `useFonts()`.
   - Upgraded `arabai-app/app/components/ArabicText.tsx` to enforce RTL Amiri styling and standardized Arabic sizing.
   - Replaced runtime raw Arabic lesson text renders with `ArabicText`.
+- Implemented Noor brand system from `arabai-brand.md`:
+  - Added shared brand tokens in `arabai-app/constants/theme.ts`.
+  - Added reusable branded CTA component in `arabai-app/app/components/BrandButton.tsx`.
+  - Restyled landing, login, register, onboarding, home, chat, profile, chapter, and lesson screens to the Noor dark lapis / gold visual system.
+  - Updated copy and naming from scaffold-like `ArabAI` UI language to branded `Noor` user-facing language where appropriate.
+- Fixed the tab/navigation structure:
+  - Moved the real bottom navigation into `arabai-app/app/(app)/(tabs)/`.
+  - Kept lesson routes as stack detail screens instead of exposing them as bottom tabs.
+  - Removed the invalid extra tab entries caused by dynamic lesson routes living directly inside the tab group.
+- Completed missing mobile screens that were previously scaffold-level:
+  - Onboarding route files now render real branded screens.
+  - Lesson play screen is implemented and connected to completion/progress APIs.
+  - Profile screen is implemented and shows XP/streak/completed lesson information.
+- Upgraded lesson data and lesson rendering for Phase 1.5:
+  - Lesson payloads now include richer curriculum metadata such as hook, explanation, Quranic example, conversation example, Ustadh Noor tip, transliteration, and review words.
+  - Lesson and chapter API responses now include `titleAr` so Arabic subtitles can be shown in the app.
+  - Lesson play screen now renders bilingual learning sections instead of only a bare prompt/answer card.
+  - Home and chapter screens now display Arabic chapter and lesson subtitles.
+- Improved auth session payloads:
+  - Login and register responses now include `nativeLanguage`, `goal`, `level`, and `xp` in the returned user object so the app can adapt lesson presentation to the learner.
+- Reseeded the database directly with `node prisma/seed.cjs`:
+  - `prisma db seed` still attempts a Prisma network checksum fetch in this environment, so the direct seed script is the reliable local fallback.
 
 ## Current Seed Data
 
 Verified database counts:
 
 ```json
-{"chapters":5,"lessons":16,"users":1}
+{"chapters":10,"lessons":68}
 ```
 
 Seeded chapter path:
 
-1. Alphabet
-2. Joining Letters
-3. Short Vowels
-4. First Quran Words
-5. Daily Phrases
+1. The Arabic Alphabet: Part 1
+2. The Arabic Alphabet: Part 2
+3. The Arabic Alphabet: Part 3 + Special Letters
+4. Short Vowels (Harakat)
+5. Long Vowels & Tanwin
+6. Bismillah & Salah Vocabulary
+7. People & Pronouns
+8. The World Around Us
+9. Action Words (Basic Verbs)
+10. Descriptive Words (Adjectives)
 
 ## Verified Working
 
@@ -102,6 +137,8 @@ Seeded chapter path:
 - Login endpoint works.
 - Protected chapter endpoint works with JWT auth wiring in code.
 - Ustadh Noor chat endpoint works with local fallback response.
+- Phase 1.5 curriculum seed loads successfully through `node prisma/seed.cjs`.
+- Verified seeded curriculum counts are `10` chapters and `68` lessons.
 - App TypeScript check passes:
 
 ```powershell
@@ -110,7 +147,18 @@ npx.cmd tsc --noEmit
 ```
 
 - Android Expo bundle returns HTTP 200.
-- App opens in Expo Go and reaches the login screen.
+- App opens in Expo Go and the full bottom-tab flow works.
+- Register, login, home, chapter, lesson, profile, and chat flows are all working on device.
+- Bottom tab bar now shows only the intended 3 destinations:
+  - `Learn`
+  - `Noor`
+  - `You`
+- Lesson screen now shows:
+  - Hook
+  - Learn
+  - Quranic and conversation examples
+  - Ustadh Noor tip
+  - Review words
 - Backend TypeScript check passes:
 
 ```powershell
@@ -151,14 +199,24 @@ Use the Windows LAN IP, not `localhost`, so the phone can reach the backend:
 
 ```powershell
 cd D:\Code\ArabAI\arabai-app
-$env:EXPO_PUBLIC_API_URL='http://192.168.2.101:3000'
-npx.cmd expo start --lan --clear
+$env:EXPO_PUBLIC_API_URL='http://192.168.100.135:3000'
+npx.cmd expo start --lan --port 8082
 ```
 
 Then scan:
 
 ```text
-exp://192.168.2.101:8081
+exp://192.168.100.135:8082
+```
+
+### Start Expo For Android Studio Emulator
+
+Use `10.0.2.2` so the emulator can reach the backend running on the Windows host:
+
+```powershell
+cd D:\Code\ArabAI\arabai-app
+$env:EXPO_PUBLIC_API_URL='http://10.0.2.2:3000'
+npx.cmd expo start --lan --port 8082
 ```
 
 ## Important Notes
@@ -168,34 +226,38 @@ exp://192.168.2.101:8081
 - `npm audit` still reports vulnerabilities in dependency trees. These have not been force-fixed because doing so may introduce breaking changes.
 - Backend `.env` contains local development credentials only.
 - AI keys are not required for basic chat testing because Ustadh Noor has a local fallback.
+- The current app is stable enough for continued content production; the largest product gap is depth of curriculum, not app wiring.
+- Next.js dev may need to be started outside the sandbox in this environment because `next dev` can fail with `spawn EPERM` under restricted process spawning.
+- Expo Metro may also need to be started outside the sandbox in this environment so file watching and bundle serving work normally.
 
 ## Remaining Work / Next Steps
 
-1. Test the complete phone flow again:
-   - Create account
-   - Confirm direct landing on home after register
-   - View chapter locking/unlocking on device
-   - Open Chapter 1
-   - Complete a lesson
-   - Confirm XP/streak changes in profile
-   - Use Ustadh Noor chat
-2. Continue polishing lesson UI and Arabic rendering:
+1. Continue Phase 1.5 lesson polish:
    - Review any remaining mixed Arabic/Latin layout edge cases.
    - Tune sizing/spacing for Arabic-heavy lesson screens.
    - Consider using `Amiri-Bold` for headings or emphasis where appropriate.
+   - Improve feedback copy and completion moments.
+2. Expand the next curriculum block before Phase 2:
+   - Seed Units 3 and 4 after validating the Phase 1.5 learning flow.
+   - Decide whether to keep all lesson types within the current `FLASHCARD` / quiz UI or add specialized renderers for matching/listening later.
+   - Review whether any chapters need custom XP rewards instead of the current default `10`.
 3. Add real app assets:
-   - Current icon is a simple generated placeholder.
+   - Current icon is still a placeholder-quality asset.
    - Add splash screen branding.
+   - Add any missing Noor visual assets/illustrations.
 4. Add real AI configuration when ready:
    - Set `OPENAI_API_KEY` or `ANTHROPIC_API_KEY`.
    - Decide the default AI provider/model.
+   - Revisit whether fallback behavior should only apply when keys are absent, not when provider calls fail.
 5. Clean temporary files before commit:
    - `arabai-app/bundle-test.out`
-   - `arabai-app/expo-lan.log`
+   - `arabai-app/expo-dev.out.log`
+   - `arabai-app/expo-dev.err.log`
+   - `arabai-app/expo-lan.out.log`
    - `arabai-app/expo-lan.err.log`
-   - `arabai-app/expo-start.log`
-   - `arabai-app/expo-start.err.log`
-   - `arabai-backend/backend-dev.log`
+   - `arabai-app/expo-lan-8082.out.log`
+   - `arabai-app/expo-lan-8082.err.log`
+   - `arabai-backend/backend-dev.out.log`
    - `arabai-backend/backend-dev.err.log`
    - API test output files if present
-6. Review and commit the stable working baseline.
+6. Review and commit the stable working Phase 1.5 baseline.
