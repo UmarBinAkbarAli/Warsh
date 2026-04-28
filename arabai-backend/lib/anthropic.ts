@@ -11,20 +11,25 @@ export async function getAssistantReply(
   message: string,
   history: HistoryMessage[] = []
 ): Promise<string> {
-  const provider =
-    process.env.AI_PROVIDER?.trim() ||
-    (process.env.OPENAI_API_KEY ? "openai" : "anthropic");
+  try {
+    const provider =
+      process.env.AI_PROVIDER?.trim() ||
+      (process.env.OPENAI_API_KEY ? "openai" : "anthropic");
 
-  if (provider === "openai") {
-    if (!process.env.OPENAI_API_KEY) {
+    if (provider === "openai") {
+      if (!process.env.OPENAI_API_KEY) {
+        return getLocalTutorReply(message);
+      }
+      return getOpenAIReply(message, history);
+    }
+
+    if (!process.env.ANTHROPIC_API_KEY) {
       return getLocalTutorReply(message);
     }
-    return getOpenAIReply(message, history);
-  }
-  if (!process.env.ANTHROPIC_API_KEY) {
+    return getAnthropicReply(message, history);
+  } catch (error) {
     return getLocalTutorReply(message);
   }
-  return getAnthropicReply(message, history);
 }
 
 function getLocalTutorReply(message: string): string {

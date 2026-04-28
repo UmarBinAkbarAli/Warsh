@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "../../../../lib/prisma";
+import { signToken } from "../../../../lib/auth";
 
 export async function POST(request: Request) {
   const body = await request.json();
@@ -26,5 +27,10 @@ export async function POST(request: Request) {
     }
   });
 
-  return NextResponse.json({ data: { user: { id: user.id, email: user.email, name: user.name } } }, { status: 201 });
+  const token = signToken(user.id);
+
+  return NextResponse.json(
+    { data: { user: { id: user.id, email: user.email, name: user.name }, token } },
+    { status: 201 }
+  );
 }

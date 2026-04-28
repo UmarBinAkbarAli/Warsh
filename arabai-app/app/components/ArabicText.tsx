@@ -1,15 +1,16 @@
-import { Text, StyleSheet, TextStyle } from "react-native";
+import { Text, StyleSheet, TextProps, TextStyle } from "react-native";
 import type { ReactNode } from "react";
+import { Colors, FontSizes, Fonts, LineHeights } from "../../constants/theme";
 
-interface ArabicTextProps {
+interface ArabicTextProps extends TextProps {
   children: ReactNode;
   size?: "sm" | "md" | "lg" | "xl";
   style?: TextStyle;
 }
 
-export function ArabicText({ children, size = "md", style }: ArabicTextProps) {
+export function ArabicText({ children, size = "md", style, ...props }: ArabicTextProps) {
   return (
-    <Text style={[styles.arabic, styles[size], style, { writingDirection: "rtl", textAlign: "right" }]}>
+    <Text {...props} style={[styles.arabic, styles[size], style]}>
       {children}
     </Text>
   );
@@ -17,10 +18,13 @@ export function ArabicText({ children, size = "md", style }: ArabicTextProps) {
 
 const styles = StyleSheet.create({
   arabic: {
-    fontFamily: "System",
+    fontFamily: Fonts.arabic,
+    writingDirection: "rtl",
+    textAlign: "right",
+    color: Colors.text.arabic,
   },
-  sm: { fontSize: 16, lineHeight: 24 },
-  md: { fontSize: 20, lineHeight: 28 },
-  lg: { fontSize: 26, lineHeight: 36 },
-  xl: { fontSize: 32, lineHeight: 44 },
+  sm: { fontSize: FontSizes.arabicS, lineHeight: LineHeights.arabicS },
+  md: { fontSize: FontSizes.arabicM, lineHeight: LineHeights.arabicM },
+  lg: { fontSize: FontSizes.arabicL, lineHeight: LineHeights.arabicL },
+  xl: { fontSize: FontSizes.arabicXL, lineHeight: LineHeights.arabicXL },
 });

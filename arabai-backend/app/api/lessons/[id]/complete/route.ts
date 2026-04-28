@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "../../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../../lib/auth";
 import { isTodayPKT, isYesterdayPKT } from "../../../../../lib/date";
+import { getUserCourseState } from "../../../../../lib/course";
 
 interface Props {
   params: { id: string };
@@ -22,6 +23,11 @@ export async function POST(request: Request, { params }: Props) {
   const lesson = await prisma.lesson.findUnique({ where: { id: params.id } });
   if (!lesson) {
     return NextResponse.json({ error: "Lesson not found", code: "not_found" }, { status: 404 });
+  }
+
+  const { chapterStateById } = await getUserCourseState(userId);
+  if (chapterStateById.get(lesson.chapterId)?.isLocked) {
+    return NextResponse.json({ error: "Chapter is locked", code: "chapter_locked" }, { status: 403 });
   }
 
   const existingProgress = await prisma.progress.findUnique({ where: { userId_lessonId: { userId, lessonId: lesson.id } } });
@@ -93,6 +99,19 @@ export async function POST(request: Request, { params }: Props) {
     }
   });
 
-  const user = await prisma.user.findUnique({ where: { id: userId } });
-  return NextResponse.json({ data: { xpEarned, totalXp: user?.xp ?? 0, newAchievements: [], streakUpdated: true } });
+  const [user, streak] = await Promise.all([
+    prisma.user.findUnique({ where: { id: userId } }),
+    prisma.streak.findUnique({ where: { userId } }),
+  ]);
+
+  return NextResponse.json({
+    data: {
+      xpEarned,
+      totalXp: user?.xp ?? 0,
+      newAchievements: [],
+      streakUpdated: true,
+      currentStreak: streak?.currentStreak ?? 0,
+      longestStreak: streak?.longestStreak ?? 0,
+    },
+  });
 }

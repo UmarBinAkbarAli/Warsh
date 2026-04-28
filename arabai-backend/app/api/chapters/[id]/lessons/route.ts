@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../../lib/auth";
+import { getUserCourseState } from "../../../../../lib/course";
 
 interface Props {
   params: { id: string };
@@ -26,16 +27,23 @@ export async function GET(request: Request, { params }: Props) {
     return NextResponse.json({ error: "Chapter not found", code: "not_found" }, { status: 404 });
   }
 
-  const progress = await prisma.progress.findMany({ where: { userId, lesson: { chapterId: params.id }, completed: true } });
-  const completedIds = new Set(progress.map((item: any) => item.lessonId));
+  const { chapterStateById, completedLessonIds } = await getUserCourseState(userId);
+  const chapterState = chapterStateById.get(params.id);
+
+  if (chapterState?.isLocked) {
+    return NextResponse.json({ error: "Chapter is locked", code: "chapter_locked" }, { status: 403 });
+  }
 
   return NextResponse.json({
     data: {
       chapter: {
         ...chapter,
+        isLocked: false,
+        isCompleted: chapterState?.isCompleted ?? false,
+        completedLessonCount: chapterState?.completedLessonCount ?? 0,
         lessons: chapter.lessons.map((lesson: any) => ({
           ...lesson,
-          isCompleted: completedIds.has(lesson.id)
+          isCompleted: completedLessonIds.has(lesson.id)
         }))
       }
     }

@@ -1,14 +1,13 @@
+const PKT_OFFSET_MS = 5 * 60 * 60 * 1000;
+
 export function getPKTDateString(date: Date) {
-  const utc = date.getTime() + date.getTimezoneOffset() * 60000;
-  const pktTime = new Date(utc + 5 * 60 * 60 * 1000);
-  return pktTime.toISOString().slice(0, 10);
+  return new Date(date.getTime() + PKT_OFFSET_MS).toISOString().slice(0, 10);
 }
 
 export function getPKTStartOfDay(date: Date) {
-  const utc = date.getTime() + date.getTimezoneOffset() * 60000;
-  const pktTime = new Date(utc + 5 * 60 * 60 * 1000);
-  pktTime.setHours(0, 0, 0, 0);
-  return pktTime;
+  const pktDate = getPKTDateString(date);
+  const pktMidnightUtcMs = Date.parse(`${pktDate}T00:00:00.000Z`) - PKT_OFFSET_MS;
+  return new Date(pktMidnightUtcMs);
 }
 
 export function isTodayPKT(date: Date) {
@@ -16,10 +15,6 @@ export function isTodayPKT(date: Date) {
 }
 
 export function isYesterdayPKT(date: Date) {
-  const utc = date.getTime() + date.getTimezoneOffset() * 60000;
-  const pktToday = new Date(utc + 5 * 60 * 60 * 1000);
-  pktToday.setHours(0, 0, 0, 0);
-  const yesterday = new Date(pktToday);
-  yesterday.setDate(pktToday.getDate() - 1);
-  return getPKTDateString(date) === yesterday.toISOString().slice(0, 10);
+  const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000);
+  return getPKTDateString(date) === getPKTDateString(yesterday);
 }

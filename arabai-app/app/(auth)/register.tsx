@@ -1,12 +1,15 @@
-import { View, Text, TextInput, Pressable, ActivityIndicator } from "react-native";
+import { View, Text, TextInput } from "react-native";
 import { useState } from "react";
 import { Link, useRouter } from "expo-router";
 import { useAuth } from "../hooks/useAuth";
 import { useOnboardingStore } from "../stores/onboardingStore";
+import { ArabicText } from "../components/ArabicText";
+import { BrandButton } from "../components/BrandButton";
+import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../constants/theme";
 
 export default function RegisterScreen() {
   const router = useRouter();
-  const { register, login } = useAuth();
+  const { register } = useAuth();
   const { name, language, goal, setName } = useOnboardingStore();
   const [displayName, setDisplayName] = useState(name);
   const [email, setEmail] = useState("");
@@ -25,7 +28,6 @@ export default function RegisterScreen() {
     try {
       setName(trimmedName);
       await register(trimmedName, email, password, language, goal);
-      await login(email, password);
       router.replace("/(app)");
     } catch (err) {
       setError("Unable to register. Please try again.");
@@ -35,40 +37,46 @@ export default function RegisterScreen() {
   }
 
   return (
-    <View style={{ flex: 1, padding: 24, justifyContent: "center" }}>
-      <Text style={{ fontSize: 28, fontWeight: "bold", marginBottom: 16 }}>Create Account</Text>
-      <Text style={{ color: "#6b7280", marginBottom: 24 }}>
-        {displayName ? `Welcome ${displayName}! Let's create your account.` : "Let's create your account."}
+    <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
+      <ArabicText size="lg" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
+        نُور
+      </ArabicText>
+      <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", marginBottom: Spacing.sm }}>
+        Create your Noor account
+      </Text>
+      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
+        {displayName ? `Welcome ${displayName}. Your journey to understanding the Quran starts here.` : "Your journey to understanding the Quran starts here."}
       </Text>
       <TextInput
         value={displayName}
         onChangeText={setDisplayName}
         placeholder="Name"
+        placeholderTextColor={Colors.text.muted}
         autoCapitalize="words"
-        style={{ borderWidth: 1, borderColor: "#ccc", borderRadius: 12, padding: 12, marginBottom: 12 }}
+        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.md }}
       />
       <TextInput
         value={email}
         onChangeText={setEmail}
         placeholder="Email"
+        placeholderTextColor={Colors.text.muted}
         keyboardType="email-address"
         autoCapitalize="none"
-        style={{ borderWidth: 1, borderColor: "#ccc", borderRadius: 12, padding: 12, marginBottom: 12 }}
+        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.md }}
       />
       <TextInput
         value={password}
         onChangeText={setPassword}
         placeholder="Password"
+        placeholderTextColor={Colors.text.muted}
         secureTextEntry
-        style={{ borderWidth: 1, borderColor: "#ccc", borderRadius: 12, padding: 12, marginBottom: 24 }}
+        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.xl }}
       />
-      {error ? <Text style={{ color: "#b91c1c", marginBottom: 12 }}>{error}</Text> : null}
-      <Pressable onPress={handleSubmit} style={{ backgroundColor: "#0f766e", padding: 16, borderRadius: 12 }} disabled={loading}>
-        {loading ? <ActivityIndicator color="white" /> : <Text style={{ color: "white", textAlign: "center", fontWeight: "bold" }}>Create Account</Text>}
-      </Pressable>
-      <View style={{ flexDirection: "row", justifyContent: "center", marginTop: 24 }}>
-        <Text>Already have an account? </Text>
-        <Link href="/(auth)/login" style={{ color: "#0f766e", fontWeight: "bold" }}>
+      {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.md }}>{error}</Text> : null}
+      <BrandButton title="Create Account" onPress={handleSubmit} loading={loading} />
+      <View style={{ flexDirection: "row", justifyContent: "center", marginTop: Spacing.xl }}>
+        <Text style={{ color: Colors.text.secondary }}>Already have an account? </Text>
+        <Link href="/(auth)/login" style={{ color: Colors.accent.gold, fontWeight: "700" }}>
           Login
         </Link>
       </View>

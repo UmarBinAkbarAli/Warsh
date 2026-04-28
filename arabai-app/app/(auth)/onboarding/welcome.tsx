@@ -1,15 +1,25 @@
-import { View, Text, Pressable } from "react-native";
+import { View, Text } from "react-native";
 import { Link } from "expo-router";
+import { ArabicText } from "../../components/ArabicText";
+import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../../constants/theme";
 
 export default function WelcomeScreen() {
   return (
-    <View style={{ flex: 1, padding: 24, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontSize: 32, fontWeight: "bold", marginBottom: 16 }}>Welcome to ArabAI</Text>
-      <Text style={{ fontSize: 16, textAlign: "center", marginBottom: 24 }}>
-        Learn Quranic Arabic with Ustadh Noor, earn XP, and build a daily streak.
+    <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center", alignItems: "center" }}>
+      <ArabicText size="sm" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+      </ArabicText>
+      <ArabicText size="lg" style={{ textAlign: "center", marginBottom: Spacing.xs }}>
+        نُور
+      </ArabicText>
+      <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", marginBottom: Spacing.md, textAlign: "center" }}>
+        Welcome to Noor
       </Text>
-      <Link href="/(auth)/onboarding/goal" style={{ backgroundColor: "#0f766e", padding: 16, borderRadius: 12 }}>
-        <Text style={{ color: "white", fontWeight: "bold" }}>Start Onboarding</Text>
+      <Text style={{ fontSize: FontSizes.bodyL, color: Colors.text.secondary, textAlign: "center", marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
+        Light on every word. Learn Quranic Arabic with Ustadh Noor, build a streak, and keep moving one lesson at a time.
+      </Text>
+      <Link href="/(auth)/onboarding/goal" style={{ backgroundColor: Colors.accent.gold, paddingHorizontal: Spacing.xl, paddingVertical: Spacing.md, borderRadius: Radii.md + 2 }}>
+        <Text style={{ color: Colors.bg.primary, fontWeight: "700" }}>Start</Text>
       </Link>
     </View>
   );

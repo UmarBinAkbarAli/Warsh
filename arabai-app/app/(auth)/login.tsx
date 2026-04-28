@@ -1,7 +1,10 @@
-import { View, Text, TextInput, Pressable, ActivityIndicator } from "react-native";
+import { View, Text, TextInput } from "react-native";
 import { useState } from "react";
 import { Link, useRouter } from "expo-router";
 import { useAuth } from "../hooks/useAuth";
+import { ArabicText } from "../components/ArabicText";
+import { BrandButton } from "../components/BrandButton";
+import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../constants/theme";
 
 export default function LoginScreen() {
   const router = useRouter();
@@ -25,34 +28,38 @@ export default function LoginScreen() {
   }
 
   return (
-    <View style={{ flex: 1, padding: 24, justifyContent: "center" }}>
-      <Text style={{ fontSize: 28, fontWeight: "bold", marginBottom: 16 }}>Login</Text>
+    <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
+      <ArabicText size="sm" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+      </ArabicText>
+      <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", marginBottom: Spacing.sm }}>
+        Welcome back to Noor
+      </Text>
+      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
+        Pick up where you left off. Your next word is waiting.
+      </Text>
       <TextInput
         value={email}
         onChangeText={setEmail}
         placeholder="Email"
+        placeholderTextColor={Colors.text.muted}
         keyboardType="email-address"
         autoCapitalize="none"
-        style={{ borderWidth: 1, borderColor: "#ccc", borderRadius: 12, padding: 12, marginBottom: 12 }}
+        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.md }}
       />
       <TextInput
         value={password}
         onChangeText={setPassword}
         placeholder="Password"
+        placeholderTextColor={Colors.text.muted}
         secureTextEntry
-        style={{ borderWidth: 1, borderColor: "#ccc", borderRadius: 12, padding: 12, marginBottom: 12 }}
+        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.md }}
       />
-      {error ? <Text style={{ color: "#b91c1c", marginBottom: 12 }}>{error}</Text> : null}
-      <Pressable
-        onPress={handleSubmit}
-        style={{ backgroundColor: "#0f766e", padding: 16, borderRadius: 12, marginBottom: 24 }}
-        disabled={loading}
-      >
-        {loading ? <ActivityIndicator color="white" /> : <Text style={{ color: "white", textAlign: "center", fontWeight: "bold" }}>Sign In</Text>}
-      </Pressable>
+      {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.md }}>{error}</Text> : null}
+      <BrandButton title="Sign In" onPress={handleSubmit} loading={loading} />
       <View style={{ flexDirection: "row", justifyContent: "center" }}>
-        <Text>Don't have an account? </Text>
-        <Link href="/(auth)/register" style={{ color: "#0f766e", fontWeight: "bold" }}>
+        <Text style={{ color: Colors.text.secondary }}>Don't have an account? </Text>
+        <Link href="/(auth)/register" style={{ color: Colors.accent.gold, fontWeight: "700" }}>
           Register
         </Link>
       </View>

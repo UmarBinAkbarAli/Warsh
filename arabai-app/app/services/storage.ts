@@ -1,33 +1,34 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const STORAGE_KEYS = {
-  token: "auth_token",
-  user: "auth_user",
+  auth: "auth-storage",
   onboarding: "onboarding_data"
 };
 
-export function setToken(token: string) {
-  return AsyncStorage.setItem(STORAGE_KEYS.token, token);
+type PersistedAuthState = {
+  state?: {
+    token?: string | null;
+    user?: string | { id: string; email: string; name: string } | null;
+  };
+};
+
+async function getPersistedAuthState() {
+  const rawAuth = await AsyncStorage.getItem(STORAGE_KEYS.auth);
+  if (!rawAuth) {
+    return null;
+  }
+
+  try {
+    return JSON.parse(rawAuth) as PersistedAuthState;
+  } catch {
+    await AsyncStorage.removeItem(STORAGE_KEYS.auth);
+    return null;
+  }
 }
 
-export function getToken() {
-  return AsyncStorage.getItem(STORAGE_KEYS.token);
-}
-
-export function removeToken() {
-  return AsyncStorage.removeItem(STORAGE_KEYS.token);
-}
-
-export function setUser(user: string) {
-  return AsyncStorage.setItem(STORAGE_KEYS.user, user);
-}
-
-export function getUser() {
-  return AsyncStorage.getItem(STORAGE_KEYS.user);
-}
-
-export function removeUser() {
-  return AsyncStorage.removeItem(STORAGE_KEYS.user);
+export async function getToken() {
+  const authState = await getPersistedAuthState();
+  return authState?.state?.token ?? null;
 }
 
 export function setOnboarding(data: string) {
@@ -39,5 +40,5 @@ export function getOnboarding() {
 }
 
 export function clearAuth() {
-  return Promise.all([removeToken(), removeUser()]);
+  return AsyncStorage.removeItem(STORAGE_KEYS.auth);
 }

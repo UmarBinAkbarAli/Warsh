@@ -1,6 +1,9 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
+import { createJSONStorage, persist } from "zustand/middleware";
+import { STORAGE_KEYS } from "../services/storage";
 
-interface User {
+export interface User {
   id: string;
   email: string;
   name: string;
@@ -9,13 +12,35 @@ interface User {
 interface AuthStore {
   user: User | null;
   token: string | null;
-  setUser: (user: User | null, token: string | null) => void;
-  logout: () => void;
+  isHydrated: boolean;
+  setSession: (user: User, token: string) => void;
+  clearSession: () => Promise<void>;
+  setHydrated: (isHydrated: boolean) => void;
 }
 
-export const useAuthStore = create<AuthStore>((set) => ({
-  user: null,
-  token: null,
-  setUser: (user, token) => set({ user, token }),
-  logout: () => set({ user: null, token: null }),
-}));
+export const useAuthStore = create<AuthStore>()(
+  persist(
+    (set) => ({
+      user: null,
+      token: null,
+      isHydrated: false,
+      setSession: (user, token) => set({ user, token }),
+      clearSession: async () => {
+        set({ user: null, token: null });
+        await AsyncStorage.removeItem(STORAGE_KEYS.auth);
+      },
+      setHydrated: (isHydrated) => set({ isHydrated }),
+    }),
+    {
+      name: STORAGE_KEYS.auth,
+      storage: createJSONStorage(() => AsyncStorage),
+      partialize: (state) => ({
+        user: state.user,
+        token: state.token,
+      }),
+      onRehydrateStorage: () => (state) => {
+        state?.setHydrated(true);
+      },
+    }
+  )
+);

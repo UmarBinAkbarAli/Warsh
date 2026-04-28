@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { prisma } from "../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../lib/auth";
+import { getUserCourseState } from "../../../lib/course";
 
 export async function GET(request: Request) {
   const userId = getUserIdFromRequest(request);
@@ -8,34 +8,19 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  const completedProgress = await prisma.progress.findMany({
-    where: { userId, completed: true },
-    include: { lesson: { select: { chapterId: true } } }
-  });
+  const { chapters, chapterStateById, completedLessonIds } = await getUserCourseState(userId);
 
-  const completedLessonIds = new Set(completedProgress.map((item: any) => item.lessonId));
-  const completedChapterIds = new Set(completedProgress.map((item: any) => item.lesson.chapterId));
-
-  const chapters = await prisma.chapter.findMany({
-    orderBy: { order: "asc" },
-    include: {
-      lessons: {
-        orderBy: { order: "asc" },
-        select: { id: true, title: true, type: true, xpReward: true }
-      }
-    }
-  });
-
-  const chapterList = chapters.map((chapter: any) => {
-    const previousChapterOrder = chapter.order - 1;
-    const previousChapterCompleted = chapter.order === 1 || chapters.some((candidate: any) => candidate.order === previousChapterOrder && completedChapterIds.has(candidate.id));
+  const chapterList = chapters.map((chapter) => {
+    const chapterState = chapterStateById.get(chapter.id);
     return {
       ...chapter,
-      isLocked: !previousChapterCompleted,
-      lessons: chapter.lessons.map((lesson: any) => ({
+      isLocked: chapterState?.isLocked ?? true,
+      isCompleted: chapterState?.isCompleted ?? false,
+      completedLessonCount: chapterState?.completedLessonCount ?? 0,
+      lessons: chapter.lessons.map((lesson) => ({
         ...lesson,
-        isCompleted: completedLessonIds.has(lesson.id)
-      }))
+        isCompleted: completedLessonIds.has(lesson.id),
+      })),
     };
   });
 

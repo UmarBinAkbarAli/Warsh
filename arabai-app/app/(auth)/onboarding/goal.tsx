@@ -1,26 +1,27 @@
-import { View, Text, Pressable } from "react-native";
+import { View, Text } from "react-native";
 import { Link } from "expo-router";
 import { useOnboardingStore } from "../../stores/onboardingStore";
+import { BrandButton } from "../../components/BrandButton";
+import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
 
 export default function OnboardingGoalScreen() {
   const setGoal = useOnboardingStore((state) => state.setGoal);
 
   return (
-    <View style={{ flex: 1, padding: 24, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontSize: 28, fontWeight: "bold", marginBottom: 16 }}>Choose your goal</Text>
-      <Text style={{ textAlign: "center", color: "#4b5563", marginBottom: 24 }}>
-        Select the reason you want to learn Arabic so we can personalize your first lessons.
+    <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
+      <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, color: Colors.text.primary, fontWeight: "700", marginBottom: Spacing.sm }}>
+        Choose your goal
       </Text>
-      <Pressable onPress={() => setGoal("QURAN")} style={{ backgroundColor: "#0f766e", padding: 16, borderRadius: 12, width: "100%", marginBottom: 12 }}>
-        <Text style={{ color: "white", textAlign: "center", fontWeight: "bold" }}>Quranic Arabic</Text>
-      </Pressable>
-      <Pressable onPress={() => setGoal("TRAVEL")} style={{ backgroundColor: "#0ea5e9", padding: 16, borderRadius: 12, width: "100%", marginBottom: 12 }}>
-        <Text style={{ color: "white", textAlign: "center", fontWeight: "bold" }}>Travel & Conversation</Text>
-      </Pressable>
-      <Pressable onPress={() => setGoal("STUDY")} style={{ backgroundColor: "#8b5cf6", padding: 16, borderRadius: 12, width: "100%", marginBottom: 24 }}>
-        <Text style={{ color: "white", textAlign: "center", fontWeight: "bold" }}>Study Arabic</Text>
-      </Pressable>
-      <Link href="/(auth)/onboarding/level" style={{ color: "#0f766e", fontWeight: "bold" }}>
+      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
+        Select why you want to learn Arabic so Noor can shape your first steps well.
+      </Text>
+      <BrandButton title="Quranic Arabic" onPress={() => setGoal("QURAN")} />
+      <View style={{ height: Spacing.md }} />
+      <BrandButton title="Travel & Conversation" variant="secondary" onPress={() => setGoal("TRAVEL")} />
+      <View style={{ height: Spacing.md }} />
+      <BrandButton title="Study Arabic" variant="secondary" onPress={() => setGoal("STUDY")} />
+      <View style={{ height: Spacing.xl }} />
+      <Link href="/(auth)/onboarding/level" style={{ color: Colors.accent.gold, fontWeight: "700", textAlign: "center" }}>
         Continue
       </Link>
     </View>

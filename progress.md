@@ -47,9 +47,14 @@ DATABASE_URL="postgresql://arabai:arabai_dev_password@localhost:5432/arabai"
   - Added `scheme: "arabai"` to silence Expo Linking scheme warning.
 - Replaced `react-native-mmkv` with `@react-native-async-storage/async-storage` because MMKV requires a custom native build and does not work in Expo Go.
 - Updated auth/API storage code for async storage.
+- Fixed complete JWT auth flow:
+  - `POST /api/auth/register` now returns a JWT token as well as user data.
+  - Login and register both persist the authenticated session in a persisted Zustand auth store.
+  - Axios now injects `Authorization: Bearer <token>` on requests and defaults to the LAN backend URL when `EXPO_PUBLIC_API_URL` is not set.
 - Fixed Create Account flow:
   - Register screen now includes a `Name` field.
   - Users can register directly without first completing onboarding.
+  - Successful account creation now lands directly on the home screen as an authenticated user.
 - Expanded seed content:
   - Database now seeds `5` chapters and `16` lessons.
   - Fixed corrupted Arabic seed text using valid Arabic strings.
@@ -58,6 +63,18 @@ DATABASE_URL="postgresql://arabai:arabai_dev_password@localhost:5432/arabai"
   - `arabai-app/assets/adaptive-icon.png`
 - Made Ustadh Noor usable without external AI keys:
   - Added a local fallback tutor response when `OPENAI_API_KEY` and `ANTHROPIC_API_KEY` are not set.
+- Fixed the main learning flow:
+  - Chapter unlock logic now requires all lessons in all previous chapters to be completed before the next chapter unlocks.
+  - Locked chapters and lessons are now enforced on the backend, not just visually in the app.
+  - Lesson completion returns XP and streak data so the UI can show what changed immediately.
+  - Chapter, home, chat, and profile screens refresh on focus so progress/streak/chat state stays up to date after navigation.
+- Fixed streak date handling:
+  - Corrected PKT day boundary logic so completing a lesson updates the daily streak correctly.
+- Added Arabic typography support:
+  - Downloaded `Amiri-Regular.ttf` and `Amiri-Bold.ttf` into `arabai-app/assets/fonts/`.
+  - Loaded both fonts in `arabai-app/app/_layout.tsx` with `useFonts()`.
+  - Upgraded `arabai-app/app/components/ArabicText.tsx` to enforce RTL Amiri styling and standardized Arabic sizing.
+  - Replaced runtime raw Arabic lesson text renders with `ArabicText`.
 
 ## Current Seed Data
 
@@ -83,6 +100,7 @@ Seeded chapter path:
 - Backend `/api/health` responds.
 - Register endpoint works.
 - Login endpoint works.
+- Protected chapter endpoint works with JWT auth wiring in code.
 - Ustadh Noor chat endpoint works with local fallback response.
 - App TypeScript check passes:
 
@@ -93,6 +111,12 @@ npx.cmd tsc --noEmit
 
 - Android Expo bundle returns HTTP 200.
 - App opens in Expo Go and reaches the login screen.
+- Backend TypeScript check passes:
+
+```powershell
+cd D:\Code\ArabAI\arabai-backend
+npx.cmd tsc --noEmit
+```
 
 ## Test Account
 
@@ -149,25 +173,23 @@ exp://192.168.2.101:8081
 
 1. Test the complete phone flow again:
    - Create account
-   - Login
-   - View all chapters
-   - Open first chapter
-   - Complete lessons
-   - Check progress/streak updates
+   - Confirm direct landing on home after register
+   - View chapter locking/unlocking on device
+   - Open Chapter 1
+   - Complete a lesson
+   - Confirm XP/streak changes in profile
    - Use Ustadh Noor chat
-2. Improve chapter unlocking logic:
-   - Current chapter locking is basic and should require all previous chapter lessons to be completed.
-3. Improve lesson UI and Arabic rendering:
-   - Better RTL layout.
-   - Better Arabic font support.
-   - More polished exercise interactions.
-4. Add real app assets:
+2. Continue polishing lesson UI and Arabic rendering:
+   - Review any remaining mixed Arabic/Latin layout edge cases.
+   - Tune sizing/spacing for Arabic-heavy lesson screens.
+   - Consider using `Amiri-Bold` for headings or emphasis where appropriate.
+3. Add real app assets:
    - Current icon is a simple generated placeholder.
    - Add splash screen branding.
-5. Add real AI configuration when ready:
+4. Add real AI configuration when ready:
    - Set `OPENAI_API_KEY` or `ANTHROPIC_API_KEY`.
    - Decide the default AI provider/model.
-6. Clean temporary files before commit:
+5. Clean temporary files before commit:
    - `arabai-app/bundle-test.out`
    - `arabai-app/expo-lan.log`
    - `arabai-app/expo-lan.err.log`
@@ -176,4 +198,4 @@ exp://192.168.2.101:8081
    - `arabai-backend/backend-dev.log`
    - `arabai-backend/backend-dev.err.log`
    - API test output files if present
-7. Review and commit the stable working baseline.
+6. Review and commit the stable working baseline.
