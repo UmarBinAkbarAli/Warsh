@@ -1,0 +1,134 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider  = "postgresql"
+}
+
+model User {
+    id             String            @id @default(cuid())
+    email          String            @unique
+    passwordHash   String
+    name           String
+    nativeLanguage String            @default("ur")
+    goal           Goal              @default(QURAN)
+    level          Level             @default(BEGINNER)
+    xp             Int               @default(0)
+    gems           Int               @default(0)
+    createdAt      DateTime          @default(now())
+    updatedAt      DateTime          @updatedAt
+    streak         Streak?
+    progress       Progress[]
+    chatMessages   ChatMessage[]
+    achievements   UserAchievement[]
+}
+
+enum Goal {
+    QURAN
+    TRAVEL
+    STUDY
+    GENERAL
+}
+
+enum Level {
+    BEGINNER
+    ELEMENTARY
+    INTERMEDIATE
+}
+
+model Streak {
+    id             String    @id @default(cuid())
+    userId         String    @unique
+    user           User      @relation(fields: [userId], references: [id])
+    currentStreak  Int       @default(0)
+    longestStreak  Int       @default(0)
+    lastActiveDate DateTime?
+    streakFreezes  Int       @default(0)
+    updatedAt      DateTime  @updatedAt
+}
+
+model Chapter {
+    id          String   @id @default(cuid())
+    order       Int      @unique
+    title       String
+    titleAr     String
+    description String
+    worldMapX   Float
+    worldMapY   Float
+    isLocked    Boolean  @default(true)
+    lessons     Lesson[]
+}
+
+model Lesson {
+    id        String     @id @default(cuid())
+    chapterId String
+    chapter   Chapter    @relation(fields: [chapterId], references: [id])
+    order     Int
+    title     String
+    titleAr   String
+    type      LessonType
+    xpReward  Int        @default(10)
+    content   Json
+    progress  Progress[]
+}
+
+enum LessonType {
+    FLASHCARD
+    FILL_BLANK
+    MULTIPLE_CHOICE
+    MATCHING
+    LISTENING
+}
+
+model Progress {
+    id          String    @id @default(cuid())
+    userId      String
+    user        User      @relation(fields: [userId], references: [id])
+    lessonId    String
+    lesson      Lesson    @relation(fields: [lessonId], references: [id])
+    completed   Boolean   @default(false)
+    score       Int?
+    attempts    Int       @default(0)
+    xpEarned    Int       @default(0)
+    completedAt DateTime?
+    createdAt   DateTime  @default(now())
+
+    @@unique([userId, lessonId])
+}
+
+model ChatMessage {
+    id        String      @id @default(cuid())
+    userId    String
+    user      User        @relation(fields: [userId], references: [id])
+    role      MessageRole
+    content   String
+    tokens    Int?
+    createdAt DateTime    @default(now())
+}
+
+enum MessageRole {
+    USER
+    ASSISTANT
+}
+
+model Achievement {
+    id          String            @id @default(cuid())
+    key         String            @unique
+    title       String
+    description String
+    icon        String
+    xpReward    Int
+    users       UserAchievement[]
+}
+
+model UserAchievement {
+    id            String      @id @default(cuid())
+    userId        String
+    user          User        @relation(fields: [userId], references: [id])
+    achievementId String
+    achievement   Achievement @relation(fields: [achievementId], references: [id])
+    unlockedAt    DateTime    @default(now())
+
+    @@unique([userId, achievementId])
+}
