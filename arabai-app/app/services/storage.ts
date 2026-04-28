@@ -1,6 +1,4 @@
-import { MMKV } from "react-native-mmkv";
-
-const storage = new MMKV({ id: "arabai" });
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const STORAGE_KEYS = {
   token: "auth_token",
@@ -9,38 +7,37 @@ export const STORAGE_KEYS = {
 };
 
 export function setToken(token: string) {
-  storage.set(STORAGE_KEYS.token, token);
+  return AsyncStorage.setItem(STORAGE_KEYS.token, token);
 }
 
 export function getToken() {
-  return storage.getString(STORAGE_KEYS.token);
+  return AsyncStorage.getItem(STORAGE_KEYS.token);
 }
 
 export function removeToken() {
-  storage.delete(STORAGE_KEYS.token);
+  return AsyncStorage.removeItem(STORAGE_KEYS.token);
 }
 
 export function setUser(user: string) {
-  storage.set(STORAGE_KEYS.user, user);
+  return AsyncStorage.setItem(STORAGE_KEYS.user, user);
 }
 
 export function getUser() {
-  return storage.getString(STORAGE_KEYS.user);
+  return AsyncStorage.getItem(STORAGE_KEYS.user);
 }
 
 export function removeUser() {
-  storage.delete(STORAGE_KEYS.user);
+  return AsyncStorage.removeItem(STORAGE_KEYS.user);
 }
 
 export function setOnboarding(data: string) {
-  storage.set(STORAGE_KEYS.onboarding, data);
+  return AsyncStorage.setItem(STORAGE_KEYS.onboarding, data);
 }
 
 export function getOnboarding() {
-  return storage.getString(STORAGE_KEYS.onboarding);
+  return AsyncStorage.getItem(STORAGE_KEYS.onboarding);
 }
 
 export function clearAuth() {
-  removeToken();
-  removeUser();
+  return Promise.all([removeToken(), removeUser()]);
 }

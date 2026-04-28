@@ -7,21 +7,24 @@ import { useOnboardingStore } from "../stores/onboardingStore";
 export default function RegisterScreen() {
   const router = useRouter();
   const { register, login } = useAuth();
-  const { name, language, goal } = useOnboardingStore();
+  const { name, language, goal, setName } = useOnboardingStore();
+  const [displayName, setDisplayName] = useState(name);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   async function handleSubmit() {
-    if (!name || !email || !password) {
+    const trimmedName = displayName.trim();
+    if (!trimmedName || !email || !password) {
       setError("Please fill in all fields.");
       return;
     }
     setLoading(true);
     setError("");
     try {
-      await register(name, email, password, language, goal);
+      setName(trimmedName);
+      await register(trimmedName, email, password, language, goal);
       await login(email, password);
       router.replace("/(app)");
     } catch (err) {
@@ -34,7 +37,16 @@ export default function RegisterScreen() {
   return (
     <View style={{ flex: 1, padding: 24, justifyContent: "center" }}>
       <Text style={{ fontSize: 28, fontWeight: "bold", marginBottom: 16 }}>Create Account</Text>
-      <Text style={{ color: "#6b7280", marginBottom: 24 }}>Welcome {name}! Let's create your account.</Text>
+      <Text style={{ color: "#6b7280", marginBottom: 24 }}>
+        {displayName ? `Welcome ${displayName}! Let's create your account.` : "Let's create your account."}
+      </Text>
+      <TextInput
+        value={displayName}
+        onChangeText={setDisplayName}
+        placeholder="Name"
+        autoCapitalize="words"
+        style={{ borderWidth: 1, borderColor: "#ccc", borderRadius: 12, padding: 12, marginBottom: 12 }}
+      />
       <TextInput
         value={email}
         onChangeText={setEmail}

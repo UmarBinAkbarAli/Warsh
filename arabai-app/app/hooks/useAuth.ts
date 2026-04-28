@@ -11,13 +11,13 @@ export function useAuth() {
 
   useEffect(() => {
     async function load() {
-      const storedToken = getToken();
-      const storedUser = getUser();
+      const storedToken = await getToken();
+      const storedUser = await getUser();
       if (storedToken && storedUser) {
         try {
           setUserState(JSON.parse(storedUser), storedToken);
         } catch {
-          clearAuth();
+          await clearAuth();
         }
       }
       setIsLoading(false);
@@ -29,8 +29,8 @@ export function useAuth() {
   async function login(email: string, password: string) {
     const response = await api.post("/api/auth/login", { email, password });
     const data = response.data.data;
-    setToken(data.token);
-    setUser(JSON.stringify(data.user));
+    await setToken(data.token);
+    await setUser(JSON.stringify(data.user));
     setUserState(data.user, data.token);
     return data;
   }
@@ -40,8 +40,8 @@ export function useAuth() {
     return response.data.data;
   }
 
-  function logout() {
-    clearAuth();
+  async function logout() {
+    await clearAuth();
     logoutStore();
     router.replace("/(auth)/login");
   }

@@ -1,132 +1,179 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-04-27
+Last updated: 2026-04-28
 
 ## Current Status
 
-- Workspace contains two scaffolded projects:
-  - `arabai-app/`: Expo / React Native mobile app.
-  - `arabai-backend/`: Next.js backend API project with Prisma.
-- Mobile app dependencies are installed and Metro is currently reachable at `http://localhost:8081`.
-- Backend dependencies are installed, but the backend is **not currently listening** on `http://localhost:3000`.
-- `arabai-app/.env` currently points API calls to:
+- Workspace contains two active projects:
+  - `arabai-app/`: Expo SDK 51 / React Native mobile app.
+  - `arabai-backend/`: Next.js 14 backend API with Prisma 7 and PostgreSQL.
+- Local PostgreSQL is running in Docker:
+  - Container: `arabai-postgres`
+  - Host: `localhost:5432`
+  - Database: `arabai`
+- Backend dev server is running on the local network:
+  - Local: `http://localhost:3000`
+  - Phone/LAN: `http://192.168.2.101:3000`
+- Expo Metro is running for Expo Go on Android:
+  - Manual Expo URL: `exp://192.168.2.101:8081`
+  - Android bundle endpoint has been verified with HTTP 200.
+- Expo is being started with:
+
+```powershell
+$env:EXPO_PUBLIC_API_URL='http://192.168.2.101:3000'
+npx.cmd expo start --lan --clear
+```
+
+## What Was Fixed
+
+- Installed app and backend dependencies.
+- Fixed Prisma 7 configuration:
+  - Removed duplicated `url = env("DATABASE_URL")` from `arabai-backend/prisma/schema.prisma`.
+  - Kept datasource URL in `arabai-backend/prisma.config.ts`.
+- Created `arabai-backend/.env` from `.env.example`.
+- Updated backend `DATABASE_URL` to match Docker Compose:
 
 ```env
-EXPO_PUBLIC_API_URL=http://localhost:3000
-EXPO_PUBLIC_APP_VERSION=1.0.0
+DATABASE_URL="postgresql://arabai:arabai_dev_password@localhost:5432/arabai"
 ```
 
-- For Android Emulator testing, this API URL should be changed to `http://10.0.2.2:3000` because emulator `localhost` points to the emulator, not the Windows host.
+- Started the Postgres Docker database from `arabai-backend/docker-compose.yml`.
+- Applied Prisma migration and generated Prisma Client.
+- Seeded the database.
+- Fixed Expo app startup:
+  - Changed `arabai-app/package.json` `main` to `expo-router/entry`.
+  - Removed unused NativeWind Babel plugin and dependency because it pulled incompatible Metro packages.
+  - Aligned Expo SDK 51 package versions for Metro, Expo Router, Linking, Constants, Status Bar, Font, Safe Area, Screens, Babel preset, TypeScript, and React types.
+  - Added `scheme: "arabai"` to silence Expo Linking scheme warning.
+- Replaced `react-native-mmkv` with `@react-native-async-storage/async-storage` because MMKV requires a custom native build and does not work in Expo Go.
+- Updated auth/API storage code for async storage.
+- Fixed Create Account flow:
+  - Register screen now includes a `Name` field.
+  - Users can register directly without first completing onboarding.
+- Expanded seed content:
+  - Database now seeds `5` chapters and `16` lessons.
+  - Fixed corrupted Arabic seed text using valid Arabic strings.
+- Added app icon configuration and generated:
+  - `arabai-app/assets/icon.png`
+  - `arabai-app/assets/adaptive-icon.png`
+- Made Ustadh Noor usable without external AI keys:
+  - Added a local fallback tutor response when `OPENAI_API_KEY` and `ANTHROPIC_API_KEY` are not set.
 
-## What Has Been Implemented So Far
+## Current Seed Data
 
-- Initial app and backend scaffolds exist.
-- `arabai-app` includes app routes and folders for:
-  - app shell
-  - auth flow
-  - components
-  - hooks
-  - services
-  - stores
-- `arabai-backend` includes:
-  - Next.js API folder structure
-  - Prisma schema and migrations folder
-  - seed scripts
-  - auth, Prisma, date, and Anthropic helper modules
-- Environment files exist for both projects.
-- Dependencies have been installed for both projects.
+Verified database counts:
 
-## Startup / Testing Work Completed
+```json
+{"chapters":5,"lessons":16,"users":1}
+```
 
-- Started investigating how to run the app locally.
-- Confirmed backend script:
+Seeded chapter path:
+
+1. Alphabet
+2. Joining Letters
+3. Short Vowels
+4. First Quran Words
+5. Daily Phrases
+
+## Verified Working
+
+- PostgreSQL container is healthy.
+- Prisma migration applied successfully.
+- Prisma Client generation works.
+- Backend `/api/health` responds.
+- Register endpoint works.
+- Login endpoint works.
+- Ustadh Noor chat endpoint works with local fallback response.
+- App TypeScript check passes:
 
 ```powershell
-cd arabai-backend
-npm run dev
+cd D:\Code\ArabAI\arabai-app
+npx.cmd tsc --noEmit
 ```
 
-- Confirmed mobile script:
+- Android Expo bundle returns HTTP 200.
+- App opens in Expo Go and reaches the login screen.
+
+## Test Account
+
+Because reseeding clears users, the latest known test account is:
+
+```text
+Email: mobile-test4@example.com
+Password: password123
+```
+
+You can also create a new account from the app because the register form now includes name, email, and password.
+
+## How To Run The Current Setup
+
+### Start Database
 
 ```powershell
-cd arabai-app
-npm start
+cd D:\Code\ArabAI\arabai-backend
+docker compose up -d postgres
 ```
 
-- Backend initially started on `localhost:3000`, but later checks show it is no longer running.
-- Expo initially failed because the wrong Metro version was hoisted into the app root.
-- Fixed Expo startup by pinning Expo SDK 51-compatible Metro packages in `arabai-app/package.json` and `package-lock.json`:
-  - `metro@^0.80.12`
-  - `metro-config@^0.80.12`
-  - `metro-core@^0.80.12`
-  - `metro-transform-worker@^0.80.12`
-- Confirmed Metro is currently responding with HTTP 200 at `http://localhost:8081`.
-- Confirmed current port status:
-  - `8081`: listening, Expo Metro.
-  - `3000`: not listening, backend needs to be restarted.
-
-## How To Test Now
-
-### Android Emulator
-
-1. Start an Android Virtual Device from Android Studio Device Manager.
-2. Update `arabai-app/.env` for emulator backend access:
-
-```env
-EXPO_PUBLIC_API_URL=http://10.0.2.2:3000
-EXPO_PUBLIC_APP_VERSION=1.0.0
-```
-
-3. Start the backend:
+### Start Backend
 
 ```powershell
-cd D:\OneDrive\Documents\ArabAI\arabai-backend
-npm run dev
+cd D:\Code\ArabAI\arabai-backend
+npx.cmd next dev -H 0.0.0.0
 ```
 
-4. Start or restart the mobile app:
+### Start Expo For Physical Android Phone
+
+Use the Windows LAN IP, not `localhost`, so the phone can reach the backend:
 
 ```powershell
-cd D:\OneDrive\Documents\ArabAI\arabai-app
-npm start
+cd D:\Code\ArabAI\arabai-app
+$env:EXPO_PUBLIC_API_URL='http://192.168.2.101:3000'
+npx.cmd expo start --lan --clear
 ```
 
-5. Open the app in the emulator from Expo / Metro.
+Then scan:
 
-### Physical Android Device
-
-For a real phone on the same Wi-Fi, use the computer LAN IP instead of `localhost`:
-
-```env
-EXPO_PUBLIC_API_URL=http://YOUR_COMPUTER_LAN_IP:3000
+```text
+exp://192.168.2.101:8081
 ```
 
-## Issues / Blockers
+## Important Notes
 
-- Backend is not currently running on port `3000`; it must be restarted before API-backed app testing.
-- Windows sandboxing caused `EPERM` errors when Next.js and Metro attempted to spawn worker processes. Running dev servers outside the sandbox worked better.
-- Expo dependency health is not perfect. Expo CLI reported several package version warnings:
-  - `expo-font`
-  - `expo-status-bar`
-  - `react-native-safe-area-context`
-  - `react-native-screens`
-  - `@types/react`
-  - `babel-preset-expo`
-  - `typescript`
-- `npm audit` reports vulnerabilities in the current dependency tree. These were not addressed yet because forced audit fixes may introduce breaking changes.
-- The app still needs real end-to-end validation through the Android Emulator after the backend is restarted and the emulator API URL is set.
+- Expo Go will show Expo Go's own launcher icon. The custom app icon appears in standalone/dev builds, not necessarily inside Expo Go.
+- The app currently uses Expo Go-compatible dependencies. If native modules like MMKV are needed later, switch to an Expo development build.
+- `npm audit` still reports vulnerabilities in dependency trees. These have not been force-fixed because doing so may introduce breaking changes.
+- Backend `.env` contains local development credentials only.
+- AI keys are not required for basic chat testing because Ustadh Noor has a local fallback.
 
-## Next Steps
+## Remaining Work / Next Steps
 
-1. Change `arabai-app/.env` to `EXPO_PUBLIC_API_URL=http://10.0.2.2:3000` for Android Emulator testing.
-2. Restart the backend on `localhost:3000`.
-3. Restart Expo Metro after the `.env` change.
-4. Launch the Android Emulator and run the app.
-5. Test the main Phase 1 flows:
-   - registration / login
-   - onboarding
-   - lesson screens
-   - progress / XP / streak behavior
-   - chat flow
-6. Align Expo package versions with SDK 51 recommendations.
-7. Add or run automated checks once the runtime path is stable.
+1. Test the complete phone flow again:
+   - Create account
+   - Login
+   - View all chapters
+   - Open first chapter
+   - Complete lessons
+   - Check progress/streak updates
+   - Use Ustadh Noor chat
+2. Improve chapter unlocking logic:
+   - Current chapter locking is basic and should require all previous chapter lessons to be completed.
+3. Improve lesson UI and Arabic rendering:
+   - Better RTL layout.
+   - Better Arabic font support.
+   - More polished exercise interactions.
+4. Add real app assets:
+   - Current icon is a simple generated placeholder.
+   - Add splash screen branding.
+5. Add real AI configuration when ready:
+   - Set `OPENAI_API_KEY` or `ANTHROPIC_API_KEY`.
+   - Decide the default AI provider/model.
+6. Clean temporary files before commit:
+   - `arabai-app/bundle-test.out`
+   - `arabai-app/expo-lan.log`
+   - `arabai-app/expo-lan.err.log`
+   - `arabai-app/expo-start.log`
+   - `arabai-app/expo-start.err.log`
+   - `arabai-backend/backend-dev.log`
+   - `arabai-backend/backend-dev.err.log`
+   - API test output files if present
+7. Review and commit the stable working baseline.

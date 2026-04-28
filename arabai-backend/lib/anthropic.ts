@@ -12,13 +12,30 @@ export async function getAssistantReply(
   history: HistoryMessage[] = []
 ): Promise<string> {
   const provider =
-    process.env.AI_PROVIDER ??
+    process.env.AI_PROVIDER?.trim() ||
     (process.env.OPENAI_API_KEY ? "openai" : "anthropic");
 
   if (provider === "openai") {
+    if (!process.env.OPENAI_API_KEY) {
+      return getLocalTutorReply(message);
+    }
     return getOpenAIReply(message, history);
   }
+  if (!process.env.ANTHROPIC_API_KEY) {
+    return getLocalTutorReply(message);
+  }
   return getAnthropicReply(message, history);
+}
+
+function getLocalTutorReply(message: string): string {
+  const normalized = message.toLowerCase();
+  if (normalized.includes("alphabet") || normalized.includes("letter")) {
+    return "Let's start with alif (alif), the first Arabic letter. It makes a long aa sound, like in the word asad (lion).";
+  }
+  if (normalized.includes("hello") || normalized.includes("salam") || normalized.includes("salaam")) {
+    return "Wa alaykum as-salam. I am Ustadh Noor, and I can help you practice Arabic letters, words, and simple Quranic phrases.";
+  }
+  return "Good question. Start by reading the Arabic slowly, then say the transliteration out loud. Tell me the word or letter you want to practice, and I will guide you step by step.";
 }
 
 async function getAnthropicReply(message: string, history: HistoryMessage[]): Promise<string> {
