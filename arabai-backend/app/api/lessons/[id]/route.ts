@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
-import { getUserCourseState } from "../../../../lib/course";
+import { getUserCourseState, PROGRESS_STATUS } from "../../../../lib/course";
 
 interface Props {
   params: { id: string };
@@ -29,5 +29,15 @@ export async function GET(request: Request, { params }: Props) {
 
   const progress = await prisma.progress.findUnique({ where: { userId_lessonId: { userId, lessonId: lesson.id } } });
 
-  return NextResponse.json({ data: { lesson: { ...lesson, isCompleted: progress?.completed ?? false } } });
+  const progressStatus = progress?.status || (progress?.completed ? PROGRESS_STATUS.COMPLETED : PROGRESS_STATUS.NOT_STARTED);
+
+  return NextResponse.json({
+    data: {
+      lesson: {
+        ...lesson,
+        isCompleted: progressStatus === PROGRESS_STATUS.COMPLETED,
+        isSkippedByPlacement: progressStatus === PROGRESS_STATUS.SKIPPED_BY_PLACEMENT,
+      },
+    },
+  });
 }

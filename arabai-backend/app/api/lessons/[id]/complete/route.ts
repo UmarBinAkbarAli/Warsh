@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "../../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../../lib/auth";
 import { isTodayPKT, isYesterdayPKT } from "../../../../../lib/date";
-import { getUserCourseState } from "../../../../../lib/course";
+import { getUserCourseState, PROGRESS_STATUS } from "../../../../../lib/course";
 
 interface Props {
   params: { id: string };
@@ -31,7 +31,8 @@ export async function POST(request: Request, { params }: Props) {
   }
 
   const existingProgress = await prisma.progress.findUnique({ where: { userId_lessonId: { userId, lessonId: lesson.id } } });
-  const firstCompletion = !existingProgress?.completed;
+  const existingStatus = existingProgress?.status || (existingProgress?.completed ? PROGRESS_STATUS.COMPLETED : PROGRESS_STATUS.NOT_STARTED);
+  const firstCompletion = existingStatus !== PROGRESS_STATUS.COMPLETED;
   const baseXp = lesson.xpReward;
   const bonusXp = score === 100 && firstCompletion ? 5 : 0;
   const xpEarned = firstCompletion ? baseXp + bonusXp : 0;
@@ -43,6 +44,7 @@ export async function POST(request: Request, { params }: Props) {
           userId,
           lessonId: lesson.id,
           completed: true,
+          status: PROGRESS_STATUS.COMPLETED,
           score,
           attempts: 1,
           xpEarned,
@@ -54,6 +56,7 @@ export async function POST(request: Request, { params }: Props) {
         where: { id: existingProgress.id },
         data: {
           completed: true,
+          status: PROGRESS_STATUS.COMPLETED,
           score,
           attempts: existingProgress.attempts + 1,
           xpEarned: existingProgress.xpEarned || xpEarned,

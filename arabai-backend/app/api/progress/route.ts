@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../lib/auth";
+import { PROGRESS_STATUS } from "../../../lib/course";
 
 function getLevel(xp: number) {
   if (xp >= 2001) return "INTERMEDIATE";
@@ -16,7 +17,7 @@ export async function GET(request: Request) {
 
   const [user, progress, streak] = await Promise.all([
     prisma.user.findUnique({ where: { id: userId }, select: { xp: true, level: true } }),
-    prisma.progress.findMany({ where: { userId, completed: true }, select: { lessonId: true } }),
+    prisma.progress.findMany({ where: { userId, status: PROGRESS_STATUS.COMPLETED }, select: { lessonId: true } }),
     prisma.streak.findUnique({ where: { userId }, select: { currentStreak: true, longestStreak: true, lastActiveDate: true } })
   ]);
 

@@ -11,6 +11,8 @@ export interface User {
   goal?: string;
   level?: string;
   xp?: number;
+  placementType?: string | null;
+  startingChapterOrder?: number | null;
 }
 
 interface AuthStore {

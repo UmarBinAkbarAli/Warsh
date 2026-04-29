@@ -8,7 +8,7 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  const { chapters, chapterStateById, completedLessonIds } = await getUserCourseState(userId);
+  const { chapters, chapterStateById, completedLessonIds, skippedLessonIds } = await getUserCourseState(userId);
 
   const chapterList = chapters.map((chapter) => {
     const chapterState = chapterStateById.get(chapter.id);
@@ -16,10 +16,12 @@ export async function GET(request: Request) {
       ...chapter,
       isLocked: chapterState?.isLocked ?? true,
       isCompleted: chapterState?.isCompleted ?? false,
+      isSkippedByPlacement: chapterState?.isSkippedByPlacement ?? false,
       completedLessonCount: chapterState?.completedLessonCount ?? 0,
       lessons: chapter.lessons.map((lesson) => ({
         ...lesson,
         isCompleted: completedLessonIds.has(lesson.id),
+        isSkippedByPlacement: skippedLessonIds.has(lesson.id),
       })),
     };
   });

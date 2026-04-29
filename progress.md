@@ -1,12 +1,12 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-04-28
+Last updated: 2026-04-29
 
 ## Phase Status
 
 - **Phase 1 core app flow:** working end-to-end on device
-- **Current focus:** Phase 1.5 content expansion and polish
-- **Recommended next milestone:** expand curriculum before starting true Phase 2 work
+- **Current focus:** Phase 1.5 content expansion, onboarding placement, and learning-flow evaluation
+- **Recommended next milestone:** rethink chapter/pedagogy UX before expanding more curriculum blocks
 
 ## Current Status
 
@@ -23,6 +23,9 @@ Last updated: 2026-04-28
 - Expo Metro is running for Expo Go on Android:
   - Manual Expo URL: `exp://192.168.100.135:8082`
   - Android bundle endpoint has been verified with HTTP 200.
+- Android Studio emulator flow has also been validated with host mapping:
+  - Backend from emulator: `http://10.0.2.2:3000`
+  - Expo session used for emulator testing: `exp://127.0.0.1:8085`
 - Expo is being started with:
 
 ```powershell
@@ -101,10 +104,31 @@ DATABASE_URL="postgresql://arabai:arabai_dev_password@localhost:5432/arabai"
   - Lesson and chapter API responses now include `titleAr` so Arabic subtitles can be shown in the app.
   - Lesson play screen now renders bilingual learning sections instead of only a bare prompt/answer card.
   - Home and chapter screens now display Arabic chapter and lesson subtitles.
+- Implemented Placement & Smart Skip (self-selection only, no quiz yet):
+  - Added placement state to onboarding and auth/session payloads.
+  - Added backend support for `startingChapterOrder`, `placementType`, and progress `status`.
+  - Added `POST /api/placement/apply`.
+  - Placement mappings currently behave as:
+    - `BEGINNER` -> start Chapter 1
+    - `KNOWS_LETTERS` -> skip Chapters 1-3
+    - `STUDIED_BEFORE` -> skip Chapters 1-5
+    - `CAN_READ_BASIC` -> skip Chapters 1-7
+  - Skipped lessons are marked `SKIPPED_BY_PLACEMENT`, unlock later chapters, and do not award XP.
+  - Home and chapter APIs now expose skipped state so the mobile app can show reviewable skipped chapters.
+- Fixed the new-user onboarding path so placement is actually reachable:
+  - The landing `Create Account` button and login `Register` link originally bypassed onboarding and jumped straight to the register screen.
+  - Both entry points now route into onboarding first.
+- Fixed onboarding selection UX:
+  - Choice buttons now show a selected/highlighted state.
+  - Goal, level, language, and placement screens now use a clearer `select then continue` pattern instead of silent state changes.
 - Improved auth session payloads:
   - Login and register responses now include `nativeLanguage`, `goal`, `level`, and `xp` in the returned user object so the app can adapt lesson presentation to the learner.
+- Added placement metadata to auth session payloads:
+  - Login, register, and `/api/auth/me` now include `placementType` and `startingChapterOrder`.
 - Reseeded the database directly with `node prisma/seed.cjs`:
   - `prisma db seed` still attempts a Prisma network checksum fetch in this environment, so the direct seed script is the reliable local fallback.
+- Applied the new Prisma migration once Docker/Postgres was confirmed healthy:
+  - `20260429120000_placement_smart_skip`
 
 ## Current Seed Data
 
@@ -135,6 +159,7 @@ Seeded chapter path:
 - Backend `/api/health` responds.
 - Register endpoint works.
 - Login endpoint works.
+- Placement apply endpoint works with an authenticated user.
 - Protected chapter endpoint works with JWT auth wiring in code.
 - Ustadh Noor chat endpoint works with local fallback response.
 - Phase 1.5 curriculum seed loads successfully through `node prisma/seed.cjs`.
@@ -149,6 +174,15 @@ npx.cmd tsc --noEmit
 - Android Expo bundle returns HTTP 200.
 - App opens in Expo Go and the full bottom-tab flow works.
 - Register, login, home, chapter, lesson, profile, and chat flows are all working on device.
+- New-account onboarding now routes correctly through:
+  - `welcome`
+  - `goal`
+  - `level`
+  - `name`
+  - `language`
+  - `placement`
+  - `ready`
+  - `register`
 - Bottom tab bar now shows only the intended 3 destinations:
   - `Learn`
   - `Noor`
@@ -165,6 +199,18 @@ npx.cmd tsc --noEmit
 cd D:\Code\ArabAI\arabai-backend
 npx.cmd tsc --noEmit
 ```
+
+## Product Feedback / Current Concern
+
+- The app wiring is working, but the current chapter presentation is not yet satisfactory as a learning system.
+- After testing against stronger language-learning apps such as Duolingo and other Play Store / App Store products, the current conclusion is:
+  - the chapter experience still feels too weak pedagogically
+  - simply expanding more chapters in the same format is not enough
+  - the student may not learn Arabic as effectively with the current chapter structure and progression style
+- Work is intentionally paused at this point on further chapter/content rollout until there is better research on:
+  - how strong language apps present progression
+  - how they structure repetition, pacing, and lesson variety
+  - how ArabAI/Noor should teach more effectively rather than only listing chapters
 
 ## Test Account
 
@@ -237,10 +283,11 @@ npx.cmd expo start --lan --port 8082
    - Tune sizing/spacing for Arabic-heavy lesson screens.
    - Consider using `Amiri-Bold` for headings or emphasis where appropriate.
    - Improve feedback copy and completion moments.
-2. Expand the next curriculum block before Phase 2:
-   - Seed Units 3 and 4 after validating the Phase 1.5 learning flow.
-   - Decide whether to keep all lesson types within the current `FLASHCARD` / quiz UI or add specialized renderers for matching/listening later.
-   - Review whether any chapters need custom XP rewards instead of the current default `10`.
+2. Rework the learning-system design before expanding more chapters:
+   - Research how strong language-learning apps structure early progression.
+   - Revisit whether a chapter list is the right primary teaching surface.
+   - Design a more effective teaching loop for Arabic before seeding Units 3 and 4.
+   - Use the current curriculum as content input, but not necessarily as the final UX structure.
 3. Add real app assets:
    - Current icon is still a placeholder-quality asset.
    - Add splash screen branding.
@@ -260,4 +307,4 @@ npx.cmd expo start --lan --port 8082
    - `arabai-backend/backend-dev.out.log`
    - `arabai-backend/backend-dev.err.log`
    - API test output files if present
-6. Review and commit the stable working Phase 1.5 baseline.
+6. Review and commit the stable working Phase 1.5 + placement baseline.

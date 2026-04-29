@@ -39,7 +39,7 @@ export default function HomeScreen() {
         </Text>
         <BrandButton title="Sign In" onPress={() => router.push("/(auth)/login")} />
         <View style={{ height: Spacing.md }} />
-        <BrandButton title="Create Account" variant="secondary" onPress={() => router.push("/(auth)/register")} />
+        <BrandButton title="Create Account" variant="secondary" onPress={() => router.push("/(auth)/onboarding/welcome")} />
       </View>
     </View>
   );

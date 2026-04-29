@@ -3,8 +3,15 @@ import { Link } from "expo-router";
 import { useOnboardingStore } from "../../stores/onboardingStore";
 import { Colors, FontSizes, LineHeights, Radii, Shadows, Spacing } from "../../../constants/theme";
 
+const placementLabels: Record<string, string> = {
+  BEGINNER: "Start from Chapter 1",
+  KNOWS_LETTERS: "Skip Chapters 1-3",
+  STUDIED_BEFORE: "Skip Chapters 1-5",
+  CAN_READ_BASIC: "Skip Chapters 1-7",
+};
+
 export default function OnboardingReadyScreen() {
-  const { goal, level, name, language } = useOnboardingStore();
+  const { goal, level, name, language, placementType } = useOnboardingStore();
 
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center", alignItems: "center" }}>
@@ -31,7 +38,8 @@ export default function OnboardingReadyScreen() {
         </Text>
         <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xs }}>Goal: {goal}</Text>
         <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xs }}>Level: {level}</Text>
-        <Text style={{ color: Colors.text.secondary }}>Language: {language}</Text>
+        <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xs }}>Language: {language}</Text>
+        <Text style={{ color: Colors.text.secondary }}>Starting point: {placementLabels[placementType] ?? placementLabels.BEGINNER}</Text>
       </View>
       <Link
         href="/(auth)/register"

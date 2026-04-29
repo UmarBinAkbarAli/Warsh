@@ -5,6 +5,25 @@ import api from "../../services/api";
 import { ArabicText } from "../../components/ArabicText";
 import { Colors, FontSizes, LineHeights, Radii, Shadows, Spacing } from "../../../constants/theme";
 
+function ChapterBadge({ label }: { label: string }) {
+  return (
+    <View
+      style={{
+        alignSelf: "flex-start",
+        paddingHorizontal: Spacing.sm,
+        paddingVertical: 6,
+        borderRadius: 999,
+        backgroundColor: Colors.bg.surface,
+        borderWidth: 1,
+        borderColor: Colors.border.subtle,
+        marginBottom: Spacing.sm,
+      }}
+    >
+      <Text style={{ color: Colors.text.secondary, fontWeight: "700" }}>{label}</Text>
+    </View>
+  );
+}
+
 export default function HomeScreen() {
   const router = useRouter();
   const [chapters, setChapters] = useState<any[]>([]);
@@ -48,7 +67,7 @@ export default function HomeScreen() {
         Your learning path
       </Text>
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
-        Start with Chapter 1 and unlock each next step by completing the lessons before it.
+        Follow your recommended starting point and unlock each next step by satisfying the lessons before it.
       </Text>
       {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.lg }}>{error}</Text> : null}
       {chapters.map((chapter) => (
@@ -65,6 +84,7 @@ export default function HomeScreen() {
             ...Shadows.card,
           }}
         >
+          {chapter.isSkippedByPlacement ? <ChapterBadge label="Skipped" /> : null}
           <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontWeight: "700", marginBottom: Spacing.sm }}>{chapter.title}</Text>
           {chapter.titleAr ? (
             <ArabicText size="sm" style={{ marginBottom: Spacing.sm, color: Colors.accent.gold }}>
@@ -98,7 +118,7 @@ export default function HomeScreen() {
               })}
             >
               <Text style={{ color: Colors.bg.primary, textAlign: "center", fontWeight: "700" }}>
-                {chapter.isCompleted ? "Review Chapter" : "Open Chapter"}
+                {chapter.isCompleted || chapter.isSkippedByPlacement ? "Review Chapter" : "Open Chapter"}
               </Text>
             </Pressable>
           )}

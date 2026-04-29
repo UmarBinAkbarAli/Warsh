@@ -1,11 +1,12 @@
 import { View, Text } from "react-native";
-import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 import { useOnboardingStore } from "../../stores/onboardingStore";
 import { BrandButton } from "../../components/BrandButton";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
 
 export default function OnboardingGoalScreen() {
-  const setGoal = useOnboardingStore((state) => state.setGoal);
+  const router = useRouter();
+  const { goal, setGoal } = useOnboardingStore();
 
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
@@ -15,15 +16,13 @@ export default function OnboardingGoalScreen() {
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
         Select why you want to learn Arabic so Noor can shape your first steps well.
       </Text>
-      <BrandButton title="Quranic Arabic" onPress={() => setGoal("QURAN")} />
+      <BrandButton title="Quranic Arabic" onPress={() => setGoal("QURAN")} selected={goal === "QURAN"} />
       <View style={{ height: Spacing.md }} />
-      <BrandButton title="Travel & Conversation" variant="secondary" onPress={() => setGoal("TRAVEL")} />
+      <BrandButton title="Travel & Conversation" variant="secondary" onPress={() => setGoal("TRAVEL")} selected={goal === "TRAVEL"} />
       <View style={{ height: Spacing.md }} />
-      <BrandButton title="Study Arabic" variant="secondary" onPress={() => setGoal("STUDY")} />
+      <BrandButton title="Study Arabic" variant="secondary" onPress={() => setGoal("STUDY")} selected={goal === "STUDY"} />
       <View style={{ height: Spacing.xl }} />
-      <Link href="/(auth)/onboarding/level" style={{ color: Colors.accent.gold, fontWeight: "700", textAlign: "center" }}>
-        Continue
-      </Link>
+      <BrandButton title="Continue" onPress={() => router.push("/(auth)/onboarding/level")} />
     </View>
   );
 }

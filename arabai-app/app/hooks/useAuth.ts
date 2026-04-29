@@ -20,6 +20,11 @@ export function useAuth() {
     return data;
   }
 
+  async function applyPlacement(placementType: string) {
+    const response = await api.post("/api/placement/apply", { placementType });
+    return response.data.data;
+  }
+
   async function logout() {
     await clearSession();
     router.replace("/(auth)/login");
@@ -31,6 +36,7 @@ export function useAuth() {
     isLoading: !isHydrated,
     login,
     register,
+    applyPlacement,
     logout
   };
 }

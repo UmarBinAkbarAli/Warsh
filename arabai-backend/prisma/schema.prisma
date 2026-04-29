@@ -14,6 +14,8 @@ model User {
     nativeLanguage String            @default("ur")
     goal           Goal              @default(QURAN)
     level          Level             @default(BEGINNER)
+    startingChapterOrder Int?
+    placementType  String?
     xp             Int               @default(0)
     gems           Int               @default(0)
     createdAt      DateTime          @default(now())
@@ -88,6 +90,7 @@ model Progress {
     lessonId    String
     lesson      Lesson    @relation(fields: [lessonId], references: [id])
     completed   Boolean   @default(false)
+    status      String    @default("NOT_STARTED")
     score       Int?
     attempts    Int       @default(0)
     xpEarned    Int       @default(0)

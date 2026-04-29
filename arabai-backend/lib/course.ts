@@ -1,5 +1,11 @@
 import { prisma } from "./prisma";
 
+export const PROGRESS_STATUS = {
+  NOT_STARTED: "NOT_STARTED",
+  COMPLETED: "COMPLETED",
+  SKIPPED_BY_PLACEMENT: "SKIPPED_BY_PLACEMENT",
+} as const;
+
 type ChapterWithLessons = {
   id: string;
   order: number;
@@ -22,32 +28,41 @@ export type ChapterState = {
   order: number;
   isLocked: boolean;
   isCompleted: boolean;
+  isSkippedByPlacement: boolean;
   completedLessonCount: number;
+  skippedLessonCount: number;
   lessonCount: number;
 };
 
-export function buildChapterStates(chapters: ChapterWithLessons[], completedLessonIds: Set<string>) {
-  let allPreviousChaptersCompleted = true;
+type ProgressStatusByLessonId = Map<string, string>;
+
+export function buildChapterStates(chapters: ChapterWithLessons[], progressStatusByLessonId: ProgressStatusByLessonId) {
+  let allPreviousChaptersSatisfied = true;
 
   return chapters.map((chapter) => {
-    const completedLessonCount = chapter.lessons.filter((lesson) => completedLessonIds.has(lesson.id)).length;
+    const completedLessonCount = chapter.lessons.filter((lesson) => progressStatusByLessonId.get(lesson.id) === PROGRESS_STATUS.COMPLETED).length;
+    const skippedLessonCount = chapter.lessons.filter((lesson) => progressStatusByLessonId.get(lesson.id) === PROGRESS_STATUS.SKIPPED_BY_PLACEMENT).length;
     const isCompleted = chapter.lessons.length > 0 && completedLessonCount === chapter.lessons.length;
+    const isSkippedByPlacement = chapter.lessons.length > 0 && skippedLessonCount === chapter.lessons.length;
+    const isSatisfiedForProgression = chapter.lessons.length > 0 && completedLessonCount + skippedLessonCount === chapter.lessons.length;
     const state: ChapterState = {
       id: chapter.id,
       order: chapter.order,
-      isLocked: !allPreviousChaptersCompleted,
+      isLocked: !allPreviousChaptersSatisfied,
       isCompleted,
+      isSkippedByPlacement,
       completedLessonCount,
+      skippedLessonCount,
       lessonCount: chapter.lessons.length,
     };
 
-    allPreviousChaptersCompleted = allPreviousChaptersCompleted && isCompleted;
+    allPreviousChaptersSatisfied = allPreviousChaptersSatisfied && isSatisfiedForProgression;
     return state;
   });
 }
 
 export async function getUserCourseState(userId: string) {
-  const [chapters, completedProgress] = await Promise.all([
+  const [chapters, progressRows] = await Promise.all([
     prisma.chapter.findMany({
       orderBy: { order: "asc" },
       include: {
@@ -58,13 +73,28 @@ export async function getUserCourseState(userId: string) {
       },
     }),
     prisma.progress.findMany({
-      where: { userId, completed: true },
-      select: { lessonId: true },
+      where: { userId },
+      select: { lessonId: true, status: true, completed: true },
     }),
   ]);
 
-  const completedLessonIds = new Set(completedProgress.map((item) => item.lessonId));
-  const chapterStates = buildChapterStates(chapters as ChapterWithLessons[], completedLessonIds);
+  const progressStatusByLessonId = new Map(
+    progressRows.map((item) => [
+      item.lessonId,
+      item.status || (item.completed ? PROGRESS_STATUS.COMPLETED : PROGRESS_STATUS.NOT_STARTED),
+    ])
+  );
+  const completedLessonIds = new Set(
+    progressRows
+      .filter((item) => (item.status || (item.completed ? PROGRESS_STATUS.COMPLETED : PROGRESS_STATUS.NOT_STARTED)) === PROGRESS_STATUS.COMPLETED)
+      .map((item) => item.lessonId)
+  );
+  const skippedLessonIds = new Set(
+    progressRows
+      .filter((item) => item.status === PROGRESS_STATUS.SKIPPED_BY_PLACEMENT)
+      .map((item) => item.lessonId)
+  );
+  const chapterStates = buildChapterStates(chapters as ChapterWithLessons[], progressStatusByLessonId);
 
   const chapterStateById = new Map(chapterStates.map((chapterState) => [chapterState.id, chapterState]));
 
@@ -73,5 +103,7 @@ export async function getUserCourseState(userId: string) {
     chapterStates,
     chapterStateById,
     completedLessonIds,
+    skippedLessonIds,
+    progressStatusByLessonId,
   };
 }

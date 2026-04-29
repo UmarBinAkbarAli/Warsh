@@ -27,7 +27,7 @@ export async function GET(request: Request, { params }: Props) {
     return NextResponse.json({ error: "Chapter not found", code: "not_found" }, { status: 404 });
   }
 
-  const { chapterStateById, completedLessonIds } = await getUserCourseState(userId);
+  const { chapterStateById, completedLessonIds, skippedLessonIds } = await getUserCourseState(userId);
   const chapterState = chapterStateById.get(params.id);
 
   if (chapterState?.isLocked) {
@@ -40,10 +40,12 @@ export async function GET(request: Request, { params }: Props) {
         ...chapter,
         isLocked: false,
         isCompleted: chapterState?.isCompleted ?? false,
+        isSkippedByPlacement: chapterState?.isSkippedByPlacement ?? false,
         completedLessonCount: chapterState?.completedLessonCount ?? 0,
         lessons: chapter.lessons.map((lesson: any) => ({
           ...lesson,
-          isCompleted: completedLessonIds.has(lesson.id)
+          isCompleted: completedLessonIds.has(lesson.id),
+          isSkippedByPlacement: skippedLessonIds.has(lesson.id),
         }))
       }
     }

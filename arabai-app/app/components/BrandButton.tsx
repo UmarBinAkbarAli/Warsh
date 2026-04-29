@@ -9,6 +9,7 @@ type BrandButtonProps = {
   disabled?: boolean;
   loading?: boolean;
   variant?: Variant;
+  selected?: boolean;
   style?: ViewStyle;
 };
 
@@ -18,6 +19,7 @@ export function BrandButton({
   disabled = false,
   loading = false,
   variant = "primary",
+  selected = false,
   style,
 }: BrandButtonProps) {
   const isDisabled = disabled || loading;
@@ -30,6 +32,7 @@ export function BrandButton({
       style={({ pressed }) => [
         styles.base,
         styles[variant],
+        selected ? styles.selected : null,
         variant === "primary" ? Shadows.goldGlow : null,
         pressed && !isDisabled ? styles.pressed : null,
         isDisabled ? styles.disabled : null,
@@ -39,7 +42,7 @@ export function BrandButton({
       {loading ? (
         <ActivityIndicator color={variant === "primary" ? Colors.bg.primary : Colors.text.primary} />
       ) : (
-        <Text style={[styles.label, labelStyles[variant]]}>{title}</Text>
+        <Text style={[styles.label, labelStyles[variant], selected ? labelStyles.selected : null]}>{title}</Text>
       )}
     </Pressable>
   );
@@ -77,6 +80,11 @@ const styles = StyleSheet.create({
   disabled: {
     opacity: 0.7,
   },
+  selected: {
+    borderColor: Colors.accent.gold,
+    borderWidth: 2,
+    backgroundColor: "rgba(212, 175, 55, 0.12)",
+  },
 });
 
 const labelStyles = StyleSheet.create({
@@ -90,5 +98,8 @@ const labelStyles = StyleSheet.create({
   danger: {
     color: "#E8A09A",
     fontWeight: "600",
+  },
+  selected: {
+    color: Colors.text.primary,
   },
 });

@@ -9,8 +9,8 @@ import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../constants/
 
 export default function RegisterScreen() {
   const router = useRouter();
-  const { register } = useAuth();
-  const { name, language, goal, setName } = useOnboardingStore();
+  const { register, applyPlacement } = useAuth();
+  const { name, language, goal, placementType, setName } = useOnboardingStore();
   const [displayName, setDisplayName] = useState(name);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,9 +28,10 @@ export default function RegisterScreen() {
     try {
       setName(trimmedName);
       await register(trimmedName, email, password, language, goal);
+      await applyPlacement(placementType);
       router.replace("/(app)");
     } catch (err) {
-      setError("Unable to register. Please try again.");
+      setError("Unable to finish account setup. Please try again.");
     } finally {
       setLoading(false);
     }

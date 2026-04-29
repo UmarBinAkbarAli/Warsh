@@ -40,6 +40,8 @@ export async function POST(request: Request) {
           goal: user.goal,
           level: user.level,
           xp: user.xp,
+          placementType: user.placementType,
+          startingChapterOrder: user.startingChapterOrder,
         },
         token,
       },
