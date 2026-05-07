@@ -44,6 +44,7 @@ export async function GET(request: Request, { params }: Props) {
         completedLessonCount: chapterState?.completedLessonCount ?? 0,
         lessons: chapter.lessons.map((lesson: any) => ({
           ...lesson,
+          isLocked: false,
           isCompleted: completedLessonIds.has(lesson.id),
           isSkippedByPlacement: skippedLessonIds.has(lesson.id),
         }))

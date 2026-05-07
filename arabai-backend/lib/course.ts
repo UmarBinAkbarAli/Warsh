@@ -5,6 +5,7 @@ export const PROGRESS_STATUS = {
   COMPLETED: "COMPLETED",
   SKIPPED_BY_PLACEMENT: "SKIPPED_BY_PLACEMENT",
 } as const;
+export const DEV_UNLOCK_ALL = true; // TODO: set to false before production release
 
 type ChapterWithLessons = {
   id: string;
@@ -48,7 +49,7 @@ export function buildChapterStates(chapters: ChapterWithLessons[], progressStatu
     const state: ChapterState = {
       id: chapter.id,
       order: chapter.order,
-      isLocked: !allPreviousChaptersSatisfied,
+      isLocked: DEV_UNLOCK_ALL ? false : !allPreviousChaptersSatisfied,
       isCompleted,
       isSkippedByPlacement,
       completedLessonCount,

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getUserIdFromRequest } from "../../../lib/auth";
-import { getUserCourseState } from "../../../lib/course";
+import { DEV_UNLOCK_ALL, getUserCourseState } from "../../../lib/course";
 
 export async function GET(request: Request) {
   const userId = getUserIdFromRequest(request);
@@ -14,12 +14,13 @@ export async function GET(request: Request) {
     const chapterState = chapterStateById.get(chapter.id);
     return {
       ...chapter,
-      isLocked: chapterState?.isLocked ?? true,
+      isLocked: DEV_UNLOCK_ALL ? false : chapterState?.isLocked ?? true,
       isCompleted: chapterState?.isCompleted ?? false,
       isSkippedByPlacement: chapterState?.isSkippedByPlacement ?? false,
       completedLessonCount: chapterState?.completedLessonCount ?? 0,
       lessons: chapter.lessons.map((lesson) => ({
         ...lesson,
+        isLocked: false,
         isCompleted: completedLessonIds.has(lesson.id),
         isSkippedByPlacement: skippedLessonIds.has(lesson.id),
       })),
