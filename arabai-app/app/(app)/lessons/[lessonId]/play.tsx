@@ -13,6 +13,7 @@ type Hook = {
 };
 
 type DiscoverCard = {
+  emoji?: string;
   arabicText?: string;
   translation?: string;
   transliteration?: string;
@@ -520,6 +521,7 @@ export default function LessonPlayScreen() {
         </View>
 
         <View style={styles.discoverCard}>
+          {card?.emoji ? <Text style={styles.discoverEmoji}>{card.emoji}</Text> : null}
           {card?.arabicText ? (
             <ArabicText size="lg" style={styles.discoverArabic}>
               {card.arabicText}
@@ -745,6 +747,11 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 16,
     backgroundColor: "#EDE8D8",
+  },
+  discoverEmoji: {
+    fontSize: 52,
+    textAlign: "center",
+    marginBottom: 8,
   },
   discoverArabic: {
     color: "#0F1117",
