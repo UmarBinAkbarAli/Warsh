@@ -15,7 +15,7 @@ export async function GET(request: Request, { params }: Props) {
 
   const lesson = await prisma.lesson.findUnique({
     where: { id: params.id },
-    select: { id: true, title: true, titleAr: true, type: true, xpReward: true, content: true, chapterId: true }
+    select: { id: true, title: true, titleAr: true, type: true, xpReward: true, content: true, hook: true, discoverCards: true, exercises: true, revealText: true, revealAyah: true, fatihaProgressDelta: true, chapterId: true }
   });
 
   if (!lesson) {

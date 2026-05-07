@@ -33,7 +33,13 @@ async function main() {
           titleAr: lesson.titleAr,
           type: lesson.type,
           xpReward: lesson.xpReward ?? 10,
-          content: lesson.content
+          content: lesson.content ?? {},
+          hook: lesson.hook,
+          discoverCards: lesson.discoverCards,
+          exercises: lesson.exercises,
+          revealText: lesson.revealText,
+          revealAyah: lesson.revealAyah,
+          fatihaProgressDelta: lesson.fatihaProgressDelta ?? 0,
         }
       });
     }

@@ -14,7 +14,7 @@ export default function OnboardingLevelScreen() {
         Your Arabic level
       </Text>
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
-        Help Ustadh Noor calibrate your first lessons.
+        Help Ustaad Noor calibrate your first lessons.
       </Text>
       <BrandButton title="None" onPress={() => setLevel("BEGINNER")} selected={level === "BEGINNER"} />
       <View style={{ height: Spacing.md }} />

@@ -14,7 +14,7 @@ export default function OnboardingLanguageScreen() {
         Native language
       </Text>
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
-        Choose the language Noor should use for prompts and explanations.
+        Choose the language Ustaad Noor should use for prompts and explanations.
       </Text>
       <BrandButton title="Urdu" onPress={() => setLanguage("ur")} selected={language === "ur"} />
       <View style={{ height: Spacing.md }} />

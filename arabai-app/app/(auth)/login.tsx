@@ -33,7 +33,7 @@ export default function LoginScreen() {
         بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
       </ArabicText>
       <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", marginBottom: Spacing.sm }}>
-        Welcome back to Noor
+        Welcome back to Warsh
       </Text>
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
         Pick up where you left off. Your next word is waiting.

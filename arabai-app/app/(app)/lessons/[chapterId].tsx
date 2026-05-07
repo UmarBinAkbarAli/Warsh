@@ -83,7 +83,7 @@ export default function ChapterScreen() {
       {chapter.isSkippedByPlacement ? <StatusBadge label="Skipped" /> : null}
       <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, fontWeight: "700", color: Colors.text.primary, marginBottom: Spacing.sm }}>{chapter.title}</Text>
       {chapter.titleAr ? (
-        <ArabicText size="md" style={{ marginBottom: Spacing.sm, color: Colors.accent.gold }}>
+        <ArabicText size="sm" style={{ marginBottom: Spacing.sm, color: Colors.accent.gold }}>
           {chapter.titleAr}
         </ArabicText>
       ) : null}

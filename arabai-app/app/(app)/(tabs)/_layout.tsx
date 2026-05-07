@@ -49,7 +49,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="chat"
         options={{
-          title: "Noor",
+          title: "Ustaad Noor",
           tabBarIcon: ({ color, focused, size }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <Feather name="message-circle" color={color} size={size} />

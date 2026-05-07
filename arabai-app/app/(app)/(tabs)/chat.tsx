@@ -76,10 +76,10 @@ export default function ChatScreen() {
             marginRight: Spacing.md,
           }}
         >
-          <Text style={{ color: Colors.accent.gold, fontSize: 18, fontWeight: "700" }}>Ù†</Text>
+          <Text style={{ color: Colors.accent.gold, fontSize: 18, fontWeight: "700" }}>ن</Text>
         </View>
         <View>
-          <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontWeight: "700" }}>Ustadh Noor</Text>
+          <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontWeight: "700" }}>Ustaad Noor</Text>
           <Text style={{ color: Colors.text.secondary }}>Warm, patient, and always ready to help.</Text>
         </View>
       </View>
@@ -113,7 +113,7 @@ export default function ChatScreen() {
         <TextInput
           value={input}
           onChangeText={setInput}
-          placeholder="Ask Ustadh Noor"
+          placeholder="Ask Ustaad Noor"
           placeholderTextColor={Colors.text.muted}
           style={{ flex: 1, borderWidth: 1, borderColor: Colors.border.subtle, borderRadius: Radii.md, padding: Spacing.md, color: Colors.text.primary, backgroundColor: Colors.bg.surface }}
         />

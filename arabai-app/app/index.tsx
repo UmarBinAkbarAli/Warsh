@@ -31,7 +31,7 @@ export default function HomeScreen() {
             marginBottom: Spacing.sm,
           }}
         >
-          Noor
+          Warsh
         </Text>
         <Text style={{ color: Colors.accent.gold, textAlign: "center", marginBottom: Spacing.lg }}>Light on every word</Text>
         <Text style={{ color: Colors.text.secondary, textAlign: "center", lineHeight: LineHeights.bodyL, marginBottom: Spacing.xxl }}>

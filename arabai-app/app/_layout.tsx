@@ -8,6 +8,10 @@ export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts({
     "Amiri-Regular": require("../assets/fonts/Amiri-Regular.ttf"),
     "Amiri-Bold": require("../assets/fonts/Amiri-Bold.ttf"),
+    "Scheherazade New": require("../assets/fonts/ScheherazadeNew-Regular.ttf"),
+    "Scheherazade New Bold": require("../assets/fonts/ScheherazadeNew-Bold.ttf"),
+    "Scheherazade New SemiBold": require("../assets/fonts/ScheherazadeNew-SemiBold.ttf"),
+    "Scheherazade New Medium": require("../assets/fonts/ScheherazadeNew-Medium.ttf"),
   });
 
   if (fontError) {

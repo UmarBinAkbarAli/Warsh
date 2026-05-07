@@ -14,7 +14,7 @@ export default function OnboardingPlacementScreen() {
         Choose your starting point
       </Text>
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
-        Noor can unlock the early chapters for you if you already know the basics. You can still review any skipped chapter later.
+        Ustaad Noor can unlock the early chapters for you if you already know the basics. You can still review any skipped chapter later.
       </Text>
       <BrandButton title="I'm completely new to Arabic" onPress={() => setPlacementType("BEGINNER")} selected={placementType === "BEGINNER"} />
       <View style={{ height: Spacing.md }} />

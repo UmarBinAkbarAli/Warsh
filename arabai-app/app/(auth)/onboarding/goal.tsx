@@ -14,7 +14,7 @@ export default function OnboardingGoalScreen() {
         Choose your goal
       </Text>
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
-        Select why you want to learn Arabic so Noor can shape your first steps well.
+        Select why you want to learn Arabic so Ustaad Noor can shape your first steps well.
       </Text>
       <BrandButton title="Quranic Arabic" onPress={() => setGoal("QURAN")} selected={goal === "QURAN"} />
       <View style={{ height: Spacing.md }} />

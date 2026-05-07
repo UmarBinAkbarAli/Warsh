@@ -1,0 +1,417 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0F1117;--gold:#9A8F6A;--parchment:#D4C99A;
+  --sage:#3A5030;--cream-bg:#F5F2EA;--parchment-bg:#EDE8D8;
+  --mint-bg:#EAF2E8;--mint-border:#B8CEAE;
+}
+h2.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+body{font-family:'Lora',serif}
+.wrap{padding:1rem;display:flex;flex-direction:column;gap:1.5rem}
+
+.section-label{font-size:10px;font-weight:500;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.6rem}
+
+.tab-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1rem}
+.tab{font-size:11px;font-weight:500;padding:4px 12px;border-radius:20px;border:.5px solid #d8d0be;color:#5a5240;background:var(--parchment-bg);cursor:pointer;font-family:'Lora',serif}
+.tab.on{background:var(--ink);color:var(--parchment);border-color:var(--ink)}
+
+.panel{display:none}.panel.on{display:block}
+
+.step-row{display:flex;gap:0;margin-bottom:1rem;align-items:stretch}
+.step{flex:1;display:flex;flex-direction:column;align-items:center;position:relative}
+.step-circle{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;font-family:'Lora',serif;flex-shrink:0;z-index:1;position:relative}
+.step-line{position:absolute;top:18px;left:50%;right:-50%;height:2px;z-index:0}
+.step:last-child .step-line{display:none}
+.step-label{font-size:10px;color:var(--color-text-secondary);text-align:center;margin-top:6px;font-family:'Lora',serif;line-height:1.4;max-width:56px}
+
+.detail-card{background:var(--parchment-bg);border:.5px solid #c8c0a8;border-radius:12px;padding:10px 14px;margin-bottom:8px}
+.detail-title{font-size:13px;font-weight:500;color:var(--ink);font-family:'Lora',serif;margin-bottom:3px;display:flex;align-items:center;gap:8px}
+.detail-body{font-size:11px;color:#5a5240;font-family:'Lora',serif;line-height:1.6}
+.time-badge{font-size:9px;font-weight:500;padding:2px 7px;border-radius:10px;background:#fff;border:.5px solid #d8d0be;color:#7a7060;font-family:'Lora',serif;white-space:nowrap}
+.format-badge{font-size:9px;font-weight:500;padding:2px 7px;border-radius:10px;color:var(--sage);background:var(--mint-bg);border:.5px solid var(--mint-border);font-family:'Lora',serif}
+.quran-badge{font-size:9px;font-weight:500;padding:2px 7px;border-radius:10px;color:#7a6040;background:#FEF9E7;border:.5px solid #F0D080;font-family:'Lora',serif}
+.divider{height:.5px;background:#d8d0be;margin:4px 0 8px}
+
+.unit-grid{display:flex;flex-direction:column;gap:6px}
+.unit-row{background:#fff;border:.5px solid #d8d0be;border-radius:10px;padding:8px 12px}
+.unit-name{font-size:12px;font-weight:500;color:var(--ink);font-family:'Lora',serif;margin-bottom:5px}
+.format-row{display:flex;gap:4px;flex-wrap:wrap}
+.fmt{font-size:9px;padding:2px 7px;border-radius:10px;font-family:'Lora',serif;font-weight:500}
+.fmt-blue{background:#E6F1FB;color:#0C447C;border:.5px solid #B5D4F4}
+.fmt-amber{background:#FAEEDA;color:#633806;border:.5px solid #FAC775}
+.fmt-teal{background:#E1F5EE;color:#085041;border:.5px solid #9FE1CB}
+.fmt-purple{background:#EEEDFE;color:#3C3489;border:.5px solid #CECBF6}
+.fmt-coral{background:#FAECE7;color:#712B13;border:.5px solid #F5C4B3}
+.fmt-gold{background:#FEF9E7;color:#7a6040;border:.5px solid #F0D080}
+
+.reveal-card{background:#FEF9E7;border:.5px solid #F0D080;border-radius:12px;padding:10px 14px;margin-bottom:8px}
+.reveal-ar{font-family:'Scheherazade New',serif;font-size:22px;direction:rtl;color:var(--ink)}
+.reveal-en{font-size:11px;color:#7a6040;font-family:'Lora',serif;font-style:italic;margin-top:2px}
+
+.rule-row{display:flex;gap:8px;align-items:flex-start;padding:6px 0;border-bottom:.5px solid #e8e0cc}
+.rule-row:last-child{border-bottom:none}
+.rule-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:5px}
+.rule-text{font-size:11px;color:#5a5240;font-family:'Lora',serif;line-height:1.5;flex:1}
+</style>
+
+<h2 class="sr-only">Warsh chapter flow system — anatomy of a lesson, interaction formats, unit map, grammar reveal system, and production rules</h2>
+
+<div class="wrap">
+
+<div class="section-label">Chapter flow system — tap to explore</div>
+<div class="tab-row">
+  <div class="tab on" onclick="show('anatomy')">Lesson anatomy</div>
+  <div class="tab" onclick="show('formats')">8 formats</div>
+  <div class="tab" onclick="show('units')">Unit map</div>
+  <div class="tab" onclick="show('reveal')">Grammar reveal</div>
+  <div class="tab" onclick="show('rules')">Production rules</div>
+</div>
+
+<div id="anatomy" class="panel on">
+  <div class="section-label">Every lesson — same 5-beat structure</div>
+
+  <div class="step-row">
+    <div class="step">
+      <div class="step-circle" style="background:var(--ink);color:var(--parchment)">1</div>
+      <div class="step-line" style="background:#d8d0be"></div>
+      <div class="step-label">Hook</div>
+    </div>
+    <div class="step">
+      <div class="step-circle" style="background:var(--parchment-bg);color:var(--ink);border:.5px solid #c8c0a8">2</div>
+      <div class="step-line" style="background:#d8d0be"></div>
+      <div class="step-label">Discover</div>
+    </div>
+    <div class="step">
+      <div class="step-circle" style="background:var(--mint-bg);color:var(--sage);border:.5px solid var(--mint-border)">3</div>
+      <div class="step-line" style="background:#d8d0be"></div>
+      <div class="step-label">Practice</div>
+    </div>
+    <div class="step">
+      <div class="step-circle" style="background:#FEF9E7;color:#7a6040;border:.5px solid #F0D080">4</div>
+      <div class="step-line" style="background:#d8d0be"></div>
+      <div class="step-label">Reveal</div>
+    </div>
+    <div class="step">
+      <div class="step-circle" style="background:var(--sage);color:#fff">5</div>
+      <div class="step-label">Close</div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">
+      <span style="background:var(--ink);color:var(--parchment);border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0">1</span>
+      Hook
+      <span class="time-badge">~30 sec</span>
+      <span class="quran-badge">Quran first</span>
+    </div>
+    <div class="detail-body">
+      One Quranic ayah shown — no explanation. The user feels the gap: "I've read this 1000 times and I don't understand it." Creates the need before filling it. Never skip this step — the emotional anchor is the whole point.
+    </div>
+    <div class="divider"></div>
+    <div style="font-size:10px;color:#7a7060;font-family:'Lora',serif;font-style:italic">Example: Show بِسْمِ اللهِ — ask "what does اسم mean here?"</div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">
+      <span style="background:var(--parchment-bg);color:var(--ink);border:.5px solid #c8c0a8;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0">2</span>
+      Discover
+      <span class="time-badge">~60 sec</span>
+    </div>
+    <div class="detail-body">
+      3–4 example cards. Arabic large, translation below. No grammar labels — patterns only. User taps through at their pace. This is exposure, not testing. The brain is absorbing before being asked to produce.
+    </div>
+    <div class="divider"></div>
+    <div style="font-size:10px;color:#7a7060;font-family:'Lora',serif;font-style:italic">Rule: Never introduce a grammar term here. Patterns only.</div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">
+      <span style="background:var(--mint-bg);color:var(--sage);border:.5px solid var(--mint-border);border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0">3</span>
+      Practice
+      <span class="time-badge">2–4 min</span>
+      <span class="format-badge">min 3 formats</span>
+    </div>
+    <div class="detail-body">
+      4–6 exercises using at least 3 different interaction formats. Each exercise gives immediate feedback. Correct: بارك الله فيك + explanation. Wrong: "Almost — let's look at this again" + correct answer shown. Never "Wrong!" Never silence.
+    </div>
+    <div class="divider"></div>
+    <div style="font-size:10px;color:#7a7060;font-family:'Lora',serif;font-style:italic">Rule: True/False must appear at least once — it resets pacing.</div>
+  </div>
+
+  <div class="detail-card" style="background:#FEF9E7;border-color:#F0D080">
+    <div class="detail-title">
+      <span style="background:#FEF9E7;color:#7a6040;border:.5px solid #F0D080;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0">4</span>
+      Reveal
+      <span class="time-badge">~30 sec</span>
+      <span class="quran-badge">Grammar named here only</span>
+    </div>
+    <div class="detail-body">
+      Name the grammar concept they just learned — AFTER they've learned it. Show the classical Arabic term. Tell them madrasah students study this for months. Then show the original ayah again — now it makes sense.
+    </div>
+    <div class="divider"></div>
+    <div style="font-size:10px;color:#7a7060;font-family:'Lora',serif;font-style:italic">This is the emotional peak. Never rush it. Never make it feel like a test result.</div>
+  </div>
+
+  <div class="detail-card" style="background:var(--mint-bg);border-color:var(--mint-border)">
+    <div class="detail-title">
+      <span style="background:var(--sage);color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0">5</span>
+      Close
+      <span class="time-badge">~20 sec</span>
+    </div>
+    <div class="detail-body">
+      Stats (pts earned, accuracy, words learned). Surah Al-Fatiha comprehension meter update. Ustaad Noor gives one specific tip — connects today's lesson to an ayah to look for tonight. Two buttons: Next lesson or View journey.
+    </div>
+    <div class="divider"></div>
+    <div style="font-size:10px;color:#7a7060;font-family:'Lora',serif;font-style:italic">Noor never says "Great job!" He says "You're doing beautifully — this root alone unlocks 40 Quranic words."</div>
+  </div>
+</div>
+
+<div id="formats" class="panel">
+  <div class="section-label">8 interaction formats — when each is used</div>
+
+  <div class="detail-card">
+    <div class="detail-title">Flashcard <span class="fmt fmt-blue">Units 1, 2, 7</span></div>
+    <div class="detail-body">Arabic word front. Tap to flip — meaning, transliteration, example sentence revealed. Used for pure recognition: the user's job is just to see and remember the shape. No production required.</div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">Letter flip <span class="fmt fmt-amber">Unit 1 only</span></div>
+    <div class="detail-body">Letter shape shown. Tap to hear sound. Swipe to see connected forms (start / middle / end / isolated). Only in Unit 1 — script recognition phase. Never used once letters are established.</div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">Multiple choice <span class="fmt fmt-blue">Units 2–6</span></div>
+    <div class="detail-body">Arabic word or sentence shown. 4 meaning options. Brief explanation shown after answer — not just correct/wrong. This is the workhorse format. Used across all middle units.</div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">Fill-in-blank <span class="fmt fmt-teal">Units 1–8</span></div>
+    <div class="detail-body">Sentence with a gap. User selects from 3–4 word tiles. Immediate right/wrong feedback. The only format used in every single unit — it scales from simple vocabulary to complex grammar.</div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">Matching <span class="fmt fmt-purple">Units 2, 6</span></div>
+    <div class="detail-body">Two columns — Arabic on left, meanings on right. Drag lines to connect pairs. Score all at once. Used when a cluster of vocabulary needs to be consolidated before moving forward.</div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">Word order <span class="fmt fmt-coral">Units 3–5, 8</span></div>
+    <div class="detail-body">Shuffled Arabic word tiles. Tap into correct sentence order. Tests grammar instinct — the user must feel what sounds right. This is where Nahw is practiced without being named.</div>
+  </div>
+
+  <div class="detail-card" style="border-color:#F0D080;background:#FFFBF0">
+    <div class="detail-title">Grammar parse ⭐ <span class="fmt fmt-gold">Units 4, 5, 7</span></div>
+    <div class="detail-body">Tap each word to label its grammatical role — فاعل، مفعول، مبتدا، خبر. The only format of its kind in any Arabic app. This is how Nahw actually gets learned — active labelling, not passive reading. Warsh's strongest differentiator.</div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">Conversation builder <span class="fmt fmt-teal">Unit 8</span></div>
+    <div class="detail-body">Dialogue shown with a gap. User picks the correct reply from options. Feels like a real exchange. Used only in Unit 8 when the user is ready to produce language, not just recognise it.</div>
+  </div>
+</div>
+
+<div id="units" class="panel">
+  <div class="section-label">Curriculum × interaction format map</div>
+  <div class="unit-grid">
+    <div class="unit-row">
+      <div class="unit-name">Unit 1 · Script</div>
+      <div style="font-size:10px;color:#9a9080;font-family:'Lora',serif;margin-bottom:5px">Letters, harakat, joined forms</div>
+      <div class="format-row">
+        <span class="fmt fmt-blue">Flashcard</span>
+        <span class="fmt fmt-amber">Letter flip</span>
+        <span class="fmt fmt-teal">Fill-in-blank</span>
+      </div>
+    </div>
+    <div class="unit-row">
+      <div class="unit-name">Unit 2 · Words</div>
+      <div style="font-size:10px;color:#9a9080;font-family:'Lora',serif;margin-bottom:5px">هٰذَا، ذٰلِكَ، نکرہ، معرفہ</div>
+      <div class="format-row">
+        <span class="fmt fmt-blue">Flashcard</span>
+        <span class="fmt fmt-blue">Multiple choice</span>
+        <span class="fmt fmt-purple">Matching</span>
+        <span class="fmt fmt-teal">Fill-in-blank</span>
+      </div>
+    </div>
+    <div class="unit-row">
+      <div class="unit-name">Unit 3 · Sentences</div>
+      <div style="font-size:10px;color:#9a9080;font-family:'Lora',serif;margin-bottom:5px">جملہ اسمیہ، مبتدا، خبر</div>
+      <div class="format-row">
+        <span class="fmt fmt-teal">Fill-in-blank</span>
+        <span class="fmt fmt-blue">Multiple choice</span>
+        <span class="fmt fmt-coral">Word order</span>
+      </div>
+    </div>
+    <div class="unit-row">
+      <div class="unit-name">Unit 4 · Nouns</div>
+      <div style="font-size:10px;color:#9a9080;font-family:'Lora',serif;margin-bottom:5px">اعراب، حروفِ جار، مُرَكَّب اِضَافِي</div>
+      <div class="format-row">
+        <span class="fmt fmt-teal">Fill-in-blank</span>
+        <span class="fmt fmt-blue">Multiple choice</span>
+        <span class="fmt fmt-coral">Word order</span>
+        <span class="fmt fmt-gold">Grammar parse</span>
+      </div>
+    </div>
+    <div class="unit-row">
+      <div class="unit-name">Unit 5 · Verbs</div>
+      <div style="font-size:10px;color:#9a9080;font-family:'Lora',serif;margin-bottom:5px">فعل ماضی، ضمائر، فعل مضارع</div>
+      <div class="format-row">
+        <span class="fmt fmt-teal">Fill-in-blank</span>
+        <span class="fmt fmt-blue">Multiple choice</span>
+        <span class="fmt fmt-coral">Word order</span>
+        <span class="fmt fmt-gold">Grammar parse</span>
+      </div>
+    </div>
+    <div class="unit-row">
+      <div class="unit-name">Unit 6 · Particles</div>
+      <div style="font-size:10px;color:#9a9080;font-family:'Lora',serif;margin-bottom:5px">حرف، واو، فاء، لام، إنّ</div>
+      <div class="format-row">
+        <span class="fmt fmt-teal">Fill-in-blank</span>
+        <span class="fmt fmt-blue">Multiple choice</span>
+        <span class="fmt fmt-purple">Matching</span>
+      </div>
+    </div>
+    <div class="unit-row" style="border-color:#F0D080;background:#FFFBF0">
+      <div class="unit-name">Unit 7 · Quran</div>
+      <div style="font-size:10px;color:#9a9080;font-family:'Lora',serif;margin-bottom:5px">سورۃ الفاتحہ — full parse</div>
+      <div class="format-row">
+        <span class="fmt fmt-gold">Grammar parse</span>
+        <span class="fmt fmt-teal">Fill-in-blank</span>
+        <span class="fmt fmt-blue">Ayah flashcard</span>
+      </div>
+    </div>
+    <div class="unit-row">
+      <div class="unit-name">Unit 8 · Conversation</div>
+      <div style="font-size:10px;color:#9a9080;font-family:'Lora',serif;margin-bottom:5px">Speaking, producing, real exchange</div>
+      <div class="format-row">
+        <span class="fmt fmt-teal">Convo builder</span>
+        <span class="fmt fmt-teal">Fill-in-blank</span>
+        <span class="fmt fmt-coral">Word order</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="reveal" class="panel">
+  <div class="section-label">Hidden grammar — the reveal map</div>
+  <div style="font-size:11px;color:#5a5240;font-family:'Lora',serif;line-height:1.6;margin-bottom:1rem">The user never sees grammar terminology until after they have already learned it. The reveal is the reward, not the starting point.</div>
+
+  <div class="detail-card">
+    <div class="detail-title">Lessons 1–3 <span class="time-badge">Unit 2</span></div>
+    <div style="font-size:11px;color:#5a5240;font-family:'Lora',serif;margin-bottom:6px">User thinks: "Learning this and that — pointing words"</div>
+    <div class="reveal-card">
+      <div class="reveal-ar">اِسْمِ اِشَارَه + نکرہ + تنوین</div>
+      <div class="reveal-en">Demonstrative pronouns, indefinite nouns, tanween</div>
+    </div>
+    <div style="font-size:10px;color:#7a7060;font-family:'Lora',serif;font-style:italic">Reveal: "You used نکرہ 50 times without knowing it."</div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">Lessons 4–6 <span class="time-badge">Unit 3</span></div>
+    <div style="font-size:11px;color:#5a5240;font-family:'Lora',serif;margin-bottom:6px">User thinks: "Describing things — the book is new"</div>
+    <div class="reveal-card">
+      <div class="reveal-ar">جُمْلَہ اِسْمِيَّہ — مُبْتَدَا + خَبَر</div>
+      <div class="reveal-en">Nominal sentence — subject + predicate</div>
+    </div>
+    <div style="font-size:10px;color:#7a7060;font-family:'Lora',serif;font-style:italic">Reveal: "You built Arabic sentences the way classical scholars do."</div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">Lessons 7–9 <span class="time-badge">Unit 4</span></div>
+    <div style="font-size:11px;color:#5a5240;font-family:'Lora',serif;margin-bottom:6px">User thinks: "Where things are — in, on, from, to"</div>
+    <div class="reveal-card">
+      <div class="reveal-ar">حُرُوفِ جَار + اِعْرَابِ جَر</div>
+      <div class="reveal-en">Prepositions + genitive case</div>
+    </div>
+    <div style="font-size:10px;color:#7a7060;font-family:'Lora',serif;font-style:italic">Reveal: "You learned I'rab without a single grammar table."</div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">Lessons 10–12 <span class="time-badge">Unit 4</span></div>
+    <div style="font-size:11px;color:#5a5240;font-family:'Lora',serif;margin-bottom:6px">User thinks: "Whose things are — Muhammad's book"</div>
+    <div class="reveal-card">
+      <div class="reveal-ar">مُرَكَّبِ اِضَافِي — مُضَاف + مُضَافٌ إِلَيْه</div>
+      <div class="reveal-en">Possessive construction</div>
+    </div>
+    <div style="font-size:10px;color:#7a7060;font-family:'Lora',serif;font-style:italic">Reveal: "مسجدِ رسول اللہ — you now know exactly why it's written this way."</div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">Lessons 13–15 <span class="time-badge">Unit 4–5</span></div>
+    <div style="font-size:11px;color:#5a5240;font-family:'Lora',serif;margin-bottom:6px">User thinks: "Calling people — ya Muhammad!"</div>
+    <div class="reveal-card">
+      <div class="reveal-ar">حَرْفِ نِدَا + هَمْزَةُ الْوَصْل</div>
+      <div class="reveal-en">Vocative particle + connecting hamza</div>
+    </div>
+    <div style="font-size:10px;color:#7a7060;font-family:'Lora',serif;font-style:italic">Reveal: "بِسْمِ اللهِ — you now understand every single word."</div>
+  </div>
+
+  <div class="detail-card" style="background:var(--mint-bg);border-color:var(--mint-border)">
+    <div class="detail-title">Unit 7 milestone <span class="quran-badge">Quran unit</span></div>
+    <div style="font-size:11px;color:#5a5240;font-family:'Lora',serif;margin-bottom:6px">Full parse of سورۃ الفاتحہ — every word labelled</div>
+    <div class="reveal-card" style="background:#fff">
+      <div style="font-family:'Scheherazade New',serif;font-size:18px;direction:rtl;color:var(--ink);line-height:2">اَلْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِيْنَ</div>
+    </div>
+    <div style="font-size:10px;color:#7a7060;font-family:'Lora',serif;font-style:italic">Reveal: "You can now parse every word of Surah Al-Fatiha. Scholars call this full I'rab. You just did it."</div>
+  </div>
+</div>
+
+<div id="rules" class="panel">
+  <div class="section-label">Content production rules — locked</div>
+
+  <div class="detail-card" style="padding:8px 14px">
+    <div style="font-size:11px;font-weight:500;color:var(--ink);font-family:'Lora',serif;margin-bottom:8px">Every lesson must have</div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">Exactly one Quranic ayah in the Hook — genuinely relevant, never decorative</div></div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">At least 3 different interaction formats in Practice</div></div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">True/False exercise at least once to reset pacing</div></div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">Grammar term named only in the Reveal — never before</div></div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">Ustaad Noor tip connecting today's lesson to a specific ayah</div></div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">Surah Al-Fatiha meter updated in the Close</div></div>
+  </div>
+
+  <div class="detail-card" style="padding:8px 14px">
+    <div style="font-size:11px;font-weight:500;color:var(--ink);font-family:'Lora',serif;margin-bottom:8px">Feedback language — locked</div>
+    <div class="rule-row">
+      <div style="width:6px;height:6px;border-radius:50%;background:var(--sage);flex-shrink:0;margin-top:5px"></div>
+      <div class="rule-text">Correct: "بارك الله فيك" + one sentence explaining why the answer is right</div>
+    </div>
+    <div class="rule-row">
+      <div style="width:6px;height:6px;border-radius:50%;background:#b07070;flex-shrink:0;margin-top:5px"></div>
+      <div class="rule-text">Wrong: "Almost — let's look at this again" + correct answer shown immediately</div>
+    </div>
+    <div class="rule-row">
+      <div style="width:6px;height:6px;border-radius:50%;background:#d8d0be;flex-shrink:0;margin-top:5px"></div>
+      <div class="rule-text">Never: "Wrong!", "Oops!", "Incorrect!", "Try again!" — these shame and break flow</div>
+    </div>
+  </div>
+
+  <div class="detail-card" style="padding:8px 14px">
+    <div style="font-size:11px;font-weight:500;color:var(--ink);font-family:'Lora',serif;margin-bottom:8px">Chapter length targets</div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">One lesson = 5–8 minutes total</div></div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">One chapter = 4–6 lessons</div></div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">One unit = 3–5 chapters</div></div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">Total curriculum = 8 units</div></div>
+  </div>
+
+  <div class="detail-card" style="padding:8px 14px">
+    <div style="font-size:11px;font-weight:500;color:var(--ink);font-family:'Lora',serif;margin-bottom:8px">Grammar parse rules (Unit 4+)</div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">Only introduced after the concept has appeared in at least 3 previous lessons passively</div></div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">Labels shown in Arabic: فاعل، مفعول، مبتدا، خبر — with English/Urdu gloss below</div></div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">First parse exercise is always on a previously seen sentence — never a new one</div></div>
+    <div class="rule-row"><div class="rule-dot"></div><div class="rule-text">Hint available on first attempt — removed from second attempt onward</div></div>
+  </div>
+
+  <button onclick="sendPrompt('Now write the full content spec for Unit 2 Chapter 1 based on this chapter flow system')" style="width:100%;padding:10px;background:var(--ink);color:var(--parchment);border:none;border-radius:10px;font-size:12px;font-weight:500;cursor:pointer;font-family:'Lora',serif;margin-top:4px">Start building Unit 2 Chapter 1 content ↗</button>
+</div>
+
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  event.target.classList.add('on');
+}
+</script>

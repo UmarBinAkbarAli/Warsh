@@ -43,7 +43,7 @@ export default function RegisterScreen() {
         نُور
       </ArabicText>
       <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", marginBottom: Spacing.sm }}>
-        Create your Noor account
+        Create your Warsh account
       </Text>
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
         {displayName ? `Welcome ${displayName}. Your journey to understanding the Quran starts here.` : "Your journey to understanding the Quran starts here."}

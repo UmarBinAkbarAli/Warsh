@@ -11,7 +11,7 @@ export default function OnboardingNameScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
       <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, color: Colors.text.primary, fontWeight: "700", marginBottom: Spacing.sm }}>
-        What should Ustadh Noor call you?
+        What should Ustaad Noor call you?
       </Text>
       <TextInput
         value={name}

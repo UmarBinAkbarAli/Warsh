@@ -63,16 +63,22 @@ model Chapter {
 }
 
 model Lesson {
-    id        String     @id @default(cuid())
-    chapterId String
-    chapter   Chapter    @relation(fields: [chapterId], references: [id])
-    order     Int
-    title     String
-    titleAr   String
-    type      LessonType
-    xpReward  Int        @default(10)
-    content   Json
-    progress  Progress[]
+    id                 String     @id @default(cuid())
+    chapterId          String
+    chapter            Chapter    @relation(fields: [chapterId], references: [id])
+    order              Int
+    title              String
+    titleAr            String
+    type               LessonType
+    xpReward           Int        @default(10)
+    content            Json
+    hook               Json?
+    discoverCards      Json?
+    exercises          Json?
+    revealText         String?
+    revealAyah         Json?
+    fatihaProgressDelta Int      @default(0)
+    progress           Progress[]
 }
 
 enum LessonType {
@@ -81,6 +87,7 @@ enum LessonType {
     MULTIPLE_CHOICE
     MATCHING
     LISTENING
+    VOCABULARY
 }
 
 model Progress {

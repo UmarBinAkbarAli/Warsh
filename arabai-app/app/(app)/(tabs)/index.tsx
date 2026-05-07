@@ -61,7 +61,7 @@ export default function HomeScreen() {
   return (
     <ScrollView style={{ flex: 1, backgroundColor: Colors.bg.primary }} contentContainerStyle={{ padding: Spacing.xl }}>
       <ArabicText size="sm" style={{ textAlign: "center", marginBottom: Spacing.xs }}>
-        Ù†ÙÙˆØ±
+        نُور
       </ArabicText>
       <Text style={{ color: Colors.text.primary, fontSize: FontSizes.h1, lineHeight: LineHeights.h1, fontWeight: "700", marginBottom: Spacing.sm }}>
         Your learning path
