@@ -37,6 +37,12 @@ export type ChapterState = {
 
 type ProgressStatusByLessonId = Map<string, string>;
 
+type ProgressRow = {
+  lessonId: string;
+  status: string | null;
+  completed: boolean;
+};
+
 export function buildChapterStates(chapters: ChapterWithLessons[], progressStatusByLessonId: ProgressStatusByLessonId) {
   let allPreviousChaptersSatisfied = true;
 
@@ -63,7 +69,7 @@ export function buildChapterStates(chapters: ChapterWithLessons[], progressStatu
 }
 
 export async function getUserCourseState(userId: string) {
-  const [chapters, progressRows] = await Promise.all([
+  const [chapters, progressRows] = (await Promise.all([
     prisma.chapter.findMany({
       orderBy: { order: "asc" },
       include: {
@@ -77,7 +83,7 @@ export async function getUserCourseState(userId: string) {
       where: { userId },
       select: { lessonId: true, status: true, completed: true },
     }),
-  ]);
+  ])) as [ChapterWithLessons[], ProgressRow[]];
 
   const progressStatusByLessonId = new Map(
     progressRows.map((item) => [
@@ -95,12 +101,12 @@ export async function getUserCourseState(userId: string) {
       .filter((item) => item.status === PROGRESS_STATUS.SKIPPED_BY_PLACEMENT)
       .map((item) => item.lessonId)
   );
-  const chapterStates = buildChapterStates(chapters as ChapterWithLessons[], progressStatusByLessonId);
+  const chapterStates = buildChapterStates(chapters, progressStatusByLessonId);
 
   const chapterStateById = new Map(chapterStates.map((chapterState) => [chapterState.id, chapterState]));
 
   return {
-    chapters: chapters as ChapterWithLessons[],
+    chapters,
     chapterStates,
     chapterStateById,
     completedLessonIds,

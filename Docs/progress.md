@@ -1,6 +1,6 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-05-05
+Last updated: 2026-05-07
 
 ## Purpose
 
@@ -164,19 +164,30 @@ The workspace contains two active projects:
 ### Branding and Arabic support
 
 - Arabic fonts are included:
-  - `Amiri-Regular.ttf`
-  - `Amiri-Bold.ttf`
+  - `Amiri-Regular.ttf` / `Amiri-Bold.ttf` (used for English body text)
+  - `Scheherazade New` / `Scheherazade New Bold` / `Scheherazade New SemiBold` / `Scheherazade New Medium` (used for Arabic text)
 - Fonts are loaded in the app layout
-- `ArabicText` is used to standardize Arabic rendering and RTL presentation
+- `ArabicText` is used to standardize Arabic rendering and RTL presentation (uses Scheherazade New)
 - Noor-style branding is implemented across major app screens
 
 ## Important Code Reality
 
 The repo is in a stronger state than the old tracker wording suggested, but a few details still matter:
 
-- The mobile UI brands the experience as `Noor`, but `arabai-app/app.json` still has the Expo app name set to `ArabAI`
+- The app name in `arabai-app/app.json` is **"Warsh"** (package: `com.arabai.app`, scheme: `arabai`)
 - The mobile API client currently falls back to a hardcoded LAN URL in `arabai-app/app/services/api.ts`
+- `DEV_UNLOCK_ALL = true` in `arabai-backend/lib/course.ts` — chapter locking is bypassed; must be set to `false` before production
+- `lib/anthropic.ts` falls back to local tutor not only when AI keys are missing but also when provider calls throw — can mask real provider errors during debugging
 - Runtime health claims such as "server is running" or "Expo bundle returned 200" are environment checks, not source-of-truth code facts
+- The visual/design source of truth is `Docs/warsh-brand-ui-sot.md`
+
+## Recent Changes (since 2026-05-05)
+
+- Chapter list API (`GET /api/chapters`) now returns enriched per-chapter state: `isCompleted`, `isSkippedByPlacement`, `completedLessonCount`, and per-lesson `isCompleted`/`isSkippedByPlacement` flags
+- Chapter lessons API (`GET /api/chapters/[id]/lessons`) mirrors the same enrichment and properly returns `403 chapter_locked` when accessing a locked chapter
+- `lib/course.ts` refactored: `buildChapterStates()` now correctly derives chapter lock state from cumulative `completedLessonCount + skippedLessonCount` across prior chapters; `getUserCourseState()` returns `chapterStateById`, `completedLessonIds`, `skippedLessonIds`, and `progressStatusByLessonId`
+- Chapter 5 seeded (`seeded chapter-5` commit)
+- `CLAUDE.md` updated: corrected brand SOT path, added missing env vars, error codes, lesson types, `DEV_UNLOCK_ALL` flag, and full API endpoint table
 
 ## What Was Fixed / Added So Far
 
@@ -221,7 +232,7 @@ Current product concern:
 1. Rework the learning-system design before expanding more curriculum.
 2. Review and improve lesson pedagogy, not just lesson quantity.
 3. Remove machine-specific assumptions from app networking.
-4. Decide whether the app's official product name in Expo config should remain `ArabAI` or change to `Noor`.
+4. Set `DEV_UNLOCK_ALL = false` in `lib/course.ts` before any production or QA build.
 5. Add stronger app assets:
    - polished icon
    - splash treatment
@@ -239,9 +250,11 @@ Current product concern:
 
 ## Current Source-Of-Truth Summary
 
-As of 2026-05-05:
+As of 2026-05-07:
 - the codebase implements the full Phase 1 app loop
 - onboarding, auth, placement, progression, lesson play, chat, and profile flows exist in code
-- the backend enforces locked progression and placement skipping
-- the curriculum seed is at 10 chapters / 68 lessons
+- the backend enforces locked progression and placement skipping (bypassed by `DEV_UNLOCK_ALL = true`)
+- the curriculum seed is at 10 chapters / 68 lessons (chapter 5 recently seeded)
+- chapter and chapter-lessons APIs now return full enriched state (completion, skip flags, counts)
 - the biggest gap is product/pedagogy quality, not basic app wiring
+- there are uncommitted changes to `arabai-backend/app/api/chapters/`, `arabai-backend/app/api/chapters/[id]/lessons/`, and `arabai-backend/lib/course.ts`

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ActivityIndicator, Pressable, StyleSheet, Text, TextStyle, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import api from "../../../services/api";
 import { ArabicText } from "../../../components/ArabicText";
 import { BrandButton } from "../../../components/BrandButton";
@@ -45,6 +46,8 @@ type Lesson = {
   revealText?: string | null;
   revealAyah?: RevealAyah | null;
   fatihaProgressDelta?: number;
+  content?: Record<string, unknown> | null;
+  type?: string | null;
 };
 
 type CompletionResult = {
@@ -93,6 +96,7 @@ function renderMaybeArabic(value: string, arabicStyle: TextStyle = styles.option
 
 export default function LessonPlayScreen() {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   const { lessonId } = useLocalSearchParams<{ lessonId: string }>();
   const [lesson, setLesson] = useState<Lesson | null>(null);
   const [loading, setLoading] = useState(true);
@@ -114,6 +118,7 @@ export default function LessonPlayScreen() {
   const selectedText = getSelectedText(selectedAnswer);
   const answeredCorrectly = isAnswered && isAnswerCorrect(currentExercise, selectedAnswer);
   const completedExerciseCount = Math.min(currentExerciseIndex + (isAnswered ? 1 : 0), exercises.length);
+  const screenPadding = { paddingTop: insets.top + 16 };
 
   useEffect(() => {
     async function loadLesson() {
@@ -375,7 +380,7 @@ export default function LessonPlayScreen() {
 
     if (isFlashcard && !cardFlipped) {
       return (
-        <View style={styles.fullScreen}>
+        <View style={[styles.fullScreen, screenPadding]}>
           <View style={styles.centerStack}>
             {content?.arabic ? (
               <ArabicText size="xl" style={styles.hookAyah}>
@@ -395,7 +400,7 @@ export default function LessonPlayScreen() {
 
     if (isFlashcard) {
       return (
-        <View style={styles.fullScreen}>
+        <View style={[styles.fullScreen, screenPadding]}>
           <View style={styles.centerStack}>
             {content?.arabic ? (
               <ArabicText size="lg" style={styles.hookAyah}>
@@ -424,7 +429,7 @@ export default function LessonPlayScreen() {
     if (hasOptions && !legacyAnswered) {
       const correctAnswer = content?.answer as string | undefined;
       return (
-        <View style={styles.fullScreen}>
+        <View style={[styles.fullScreen, screenPadding]}>
           <View style={styles.centerStack}>
             {content?.question ? (
               <Text style={styles.hookQuestion}>{content.question as string}</Text>
@@ -456,7 +461,7 @@ export default function LessonPlayScreen() {
     }
 
     return (
-      <View style={styles.fullScreen}>
+      <View style={[styles.fullScreen, screenPadding]}>
         <View style={styles.centerStack}>
           {content?.question ? <Text style={styles.hookQuestion}>{content.question as string}</Text> : null}
           {content?.arabic ? (
@@ -478,7 +483,7 @@ export default function LessonPlayScreen() {
 
   function renderHook() {
     return (
-      <View style={styles.fullScreen}>
+      <View style={[styles.fullScreen, screenPadding]}>
         <View style={styles.centerStack}>
           {lesson?.hook?.ayahAr ? (
             <ArabicText size="lg" style={styles.hookAyah}>
@@ -499,7 +504,7 @@ export default function LessonPlayScreen() {
     const isLastCard = currentCardIndex >= discoverCards.length - 1;
 
     return (
-      <View style={styles.fullScreen}>
+      <View style={[styles.fullScreen, screenPadding]}>
         <View style={styles.topRow}>
           <Pressable
             accessibilityRole="button"
@@ -548,7 +553,7 @@ export default function LessonPlayScreen() {
 
   function renderPractice() {
     return (
-      <View style={styles.fullScreen}>
+      <View style={[styles.fullScreen, screenPadding]}>
         {renderProgressBar()}
         <Text style={styles.exercisePrompt}>{currentExercise?.prompt}</Text>
         {currentExercise?.arabicText ? (
@@ -582,7 +587,7 @@ export default function LessonPlayScreen() {
 
   function renderReveal() {
     return (
-      <View style={[styles.fullScreen, styles.revealScreen]}>
+      <View style={[styles.fullScreen, screenPadding, styles.revealScreen]}>
         <View style={styles.revealContent}>
           <Text style={styles.revealHeading}>Without realising it...</Text>
           {lesson?.revealText ? <Text style={styles.revealText}>{lesson.revealText}</Text> : null}
@@ -599,7 +604,7 @@ export default function LessonPlayScreen() {
     const earnedPoints = completionResult?.xpEarned ?? lesson?.xpReward ?? 10;
 
     return (
-      <View style={styles.fullScreen}>
+      <View style={[styles.fullScreen, screenPadding]}>
         <View style={styles.closeContent}>
           {error ? <Text style={styles.errorText}>{error}</Text> : null}
           <Text style={styles.xpText}>+{earnedPoints} pts</Text>
@@ -672,7 +677,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "space-between",
     paddingHorizontal: 24,
-    paddingTop: 56,
     paddingBottom: 32,
     backgroundColor: "#F5F2EA",
   },

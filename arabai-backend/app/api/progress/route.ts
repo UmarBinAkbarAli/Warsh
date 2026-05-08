@@ -21,6 +21,24 @@ export async function GET(request: Request) {
     prisma.streak.findUnique({ where: { userId }, select: { currentStreak: true, longestStreak: true, lastActiveDate: true } })
   ]);
 
+  const fatihaResult = await prisma.progress.findMany({
+    where: {
+      userId,
+      status: "COMPLETED",
+    },
+    include: {
+      lesson: {
+        select: { fatihaProgressDelta: true }
+      }
+    }
+  });
+
+  const fatihaProgress = fatihaResult.reduce(
+    (sum, p) => sum + (p.lesson?.fatihaProgressDelta ?? 0),
+    0
+  );
+  const fatihaPercent = Math.min(100, fatihaProgress);
+
   return NextResponse.json({
     data: {
       xp: user?.xp ?? 0,
@@ -29,6 +47,7 @@ export async function GET(request: Request) {
       longestStreak: streak?.longestStreak ?? 0,
       lastActiveDate: streak?.lastActiveDate ?? null,
       completedLessons: progress.map((item: any) => item.lessonId),
+      fatihaPercent,
       achievements: []
     }
   });

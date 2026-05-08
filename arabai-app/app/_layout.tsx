@@ -2,6 +2,7 @@ import { useFonts } from "expo-font";
 import { ActivityIndicator, View } from "react-native";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { Colors } from "../constants/theme";
 
 export default function RootLayout() {
@@ -27,9 +28,11 @@ export default function RootLayout() {
   }
 
   return (
-    <>
-      <StatusBar style="light" />
-      <Stack screenOptions={{ headerShown: false }} />
-    </>
+    <SafeAreaProvider>
+      <>
+        <StatusBar style="light" />
+        <Stack screenOptions={{ headerShown: false }} />
+      </>
+    </SafeAreaProvider>
   );
 }

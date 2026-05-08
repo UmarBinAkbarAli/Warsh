@@ -1,9 +1,29 @@
 import { useCallback, useState } from "react";
-import { View, Text, ScrollView, Pressable, ActivityIndicator } from "react-native";
+import { View, Text, ScrollView, Pressable, ActivityIndicator, StyleSheet } from "react-native";
+import type { DimensionValue } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import api from "../../services/api";
 import { ArabicText } from "../../components/ArabicText";
-import { Colors, FontSizes, LineHeights, Radii, Shadows, Spacing } from "../../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights, Radii, Shadows, Spacing, WarshPalette } from "../../../constants/theme";
+
+const FATIHA_WORDS = [
+  { word: "بِسْمِ", threshold: 70 },
+  { word: "اللهِ", threshold: 70 },
+  { word: "الرَّحْمٰنِ", threshold: 20 },
+  { word: "الرَّحِيمِ", threshold: 20 },
+  { word: "اَلْحَمْدُ", threshold: 20 },
+  { word: "لِلّٰهِ", threshold: 40 },
+  { word: "رَبِّ", threshold: 70 },
+  { word: "الْعَالَمِينَ", threshold: 20 },
+  { word: "الرَّحْمٰنِ", threshold: 20 },
+  { word: "الرَّحِيمِ", threshold: 20 },
+  { word: "مٰلِكِ", threshold: 70 },
+  { word: "يَوْمِ", threshold: 70 },
+  { word: "الدِّينِ", threshold: 20 },
+  { word: "الصِّرَاطَ", threshold: 20 },
+  { word: "الْمُسْتَقِيمَ", threshold: 30 },
+];
 
 function ChapterBadge({ label }: { label: string }) {
   return (
@@ -26,7 +46,10 @@ function ChapterBadge({ label }: { label: string }) {
 
 export default function HomeScreen() {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   const [chapters, setChapters] = useState<any[]>([]);
+  const [fatihaPercent, setFatihaPercent] = useState(0);
+  const [fatihaExpanded, setFatihaExpanded] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -34,8 +57,12 @@ export default function HomeScreen() {
     setLoading(true);
     setError(null);
     try {
-      const response = await api.get("/api/chapters");
-      setChapters(response.data.data.chapters);
+      const [chaptersResponse, progressResponse] = await Promise.all([
+        api.get("/api/chapters"),
+        api.get("/api/progress"),
+      ]);
+      setChapters(chaptersResponse.data.data.chapters);
+      setFatihaPercent(progressResponse.data.data.fatihaPercent ?? 0);
     } catch (err) {
       setError("Unable to load chapters. Please login or try again.");
     } finally {
@@ -58,16 +85,56 @@ export default function HomeScreen() {
     );
   }
 
+  const fatihaProgressWidth = `${fatihaPercent}%` as DimensionValue;
+  const fatihaProgressFillStyle = { width: fatihaProgressWidth };
+  const unlockedFatihaWords = FATIHA_WORDS.filter((item) => fatihaPercent >= item.threshold).length;
+
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: Colors.bg.primary }} contentContainerStyle={{ padding: Spacing.xl }}>
-      <ArabicText size="sm" style={{ textAlign: "center", marginBottom: Spacing.xs }}>
-        نُور
-      </ArabicText>
+    <ScrollView style={{ flex: 1, backgroundColor: Colors.bg.primary }} contentContainerStyle={{ padding: Spacing.xl, paddingTop: insets.top + 16 }}>
+      <View style={styles.fatihaCard}>
+        <Pressable style={styles.fatihaTopRow} onPress={() => setFatihaExpanded((prev) => !prev)}>
+          <Text style={styles.fatihaTitle}>Surah Al-Fatiha</Text>
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <Text style={styles.fatihaPercent}>{fatihaPercent}%</Text>
+            <Text style={styles.fatihaChevron}>{fatihaExpanded ? "⌃" : "⌄"}</Text>
+          </View>
+        </Pressable>
+
+        <View style={styles.fatihaProgressTrack}>
+          <View style={[styles.fatihaProgressFill, fatihaProgressFillStyle]} />
+        </View>
+
+        {fatihaExpanded ? (
+          <>
+            <View style={styles.fatihaAyahRow}>
+              {FATIHA_WORDS.map((item, index) => (
+                <ArabicText
+                  key={`${item.word}-${index}`}
+                  size="sm"
+                  style={StyleSheet.flatten([
+                    styles.fatihaWord,
+                    fatihaPercent >= item.threshold ? styles.fatihaWordUnlocked : styles.fatihaWordLocked,
+                  ])}
+                >
+                  {item.word}
+                </ArabicText>
+              ))}
+            </View>
+
+            <View style={styles.fatihaBottomRow}>
+              <Text style={styles.fatihaHint}>words understood grow as you complete lessons</Text>
+              <Text style={styles.fatihaWordCount}>
+                {unlockedFatihaWords}/{FATIHA_WORDS.length} words
+              </Text>
+            </View>
+          </>
+        ) : null}
+      </View>
       <Text style={{ color: Colors.text.primary, fontSize: FontSizes.h1, lineHeight: LineHeights.h1, fontWeight: "700", marginBottom: Spacing.sm }}>
         Your learning path
       </Text>
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
-        Follow your recommended starting point and unlock each next step by satisfying the lessons before it.
+        Learn Quranic Arabic — one lesson at a time.
       </Text>
       {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.lg }}>{error}</Text> : null}
       {chapters.map((chapter) => (
@@ -127,3 +194,92 @@ export default function HomeScreen() {
     </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  fatihaCard: {
+    padding: Spacing.lg,
+    marginBottom: 20,
+    borderRadius: Radii.md,
+    borderWidth: 0.5,
+    borderColor: WarshPalette.parchmentCardBorder,
+    backgroundColor: WarshPalette.parchmentBg,
+  },
+  fatihaTopRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  fatihaTitle: {
+    color: WarshPalette.ink,
+    fontFamily: Fonts.display,
+    fontSize: FontSizes.h3,
+    fontWeight: "500",
+    lineHeight: LineHeights.h3,
+  },
+  fatihaPercent: {
+    color: WarshPalette.sage,
+    fontFamily: Fonts.display,
+    fontSize: FontSizes.h3,
+    fontWeight: "500",
+    lineHeight: LineHeights.h3,
+  },
+  fatihaChevron: {
+    marginLeft: Spacing.sm,
+    color: WarshPalette.subtleBrown,
+    fontSize: 16,
+    lineHeight: 18,
+  },
+  fatihaAyahRow: {
+    flexDirection: "row-reverse",
+    flexWrap: "wrap",
+    marginTop: Spacing.md,
+  },
+  fatihaWord: {
+    marginHorizontal: Spacing.xs,
+    marginVertical: 2,
+    fontSize: 22,
+    lineHeight: 32,
+    textAlign: "right",
+  },
+  fatihaWordUnlocked: {
+    color: WarshPalette.gold,
+  },
+  fatihaWordLocked: {
+    color: WarshPalette.parchmentCardBorder,
+  },
+  fatihaProgressTrack: {
+    width: "100%",
+    height: 4,
+    marginTop: Spacing.md,
+    overflow: "hidden",
+    borderRadius: 2,
+    backgroundColor: WarshPalette.defaultCardBorder,
+  },
+  fatihaProgressFill: {
+    height: "100%",
+    borderRadius: 2,
+    backgroundColor: WarshPalette.sage,
+  },
+  fatihaBottomRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: Spacing.sm,
+    marginTop: Spacing.sm,
+  },
+  fatihaHint: {
+    flex: 1,
+    color: WarshPalette.gold,
+    fontFamily: Fonts.italic,
+    fontSize: FontSizes.caption,
+    fontStyle: "italic",
+    lineHeight: LineHeights.caption,
+  },
+  fatihaWordCount: {
+    color: WarshPalette.sage,
+    fontFamily: Fonts.display,
+    fontSize: FontSizes.caption,
+    fontWeight: "500",
+    lineHeight: LineHeights.caption,
+  },
+});
