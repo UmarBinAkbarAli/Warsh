@@ -34,7 +34,8 @@ export async function GET(request: Request) {
   });
 
   const fatihaProgress = fatihaResult.reduce(
-    (sum: number, p) => sum + (p.lesson?.fatihaProgressDelta ?? 0),
+    (sum: number, p: { lesson: { fatihaProgressDelta: number | null } | null }) => 
+    sum + (p.lesson?.fatihaProgressDelta ?? 0),
     0
   );
   const fatihaPercent = Math.min(100, fatihaProgress);
