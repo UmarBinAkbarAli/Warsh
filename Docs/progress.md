@@ -1,6 +1,6 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-05-07
+Last updated: 2026-05-08
 
 ## Purpose
 
@@ -20,8 +20,14 @@ It should not be treated as a permanent record of:
 ## Current Phase
 
 - **Phase 1 core app flow:** implemented
-- **Current focus:** stabilize the Phase 1.5 learning experience and improve the teaching loop before expanding more content
+- **Current focus:** begin mobile app testing from the first Expo Cloud APK build, then stabilize the Phase 1.5 learning experience and improve the teaching loop before expanding more content
 - **Recommended next milestone:** redesign the chapter/lesson progression UX based on stronger pedagogy, then continue curriculum rollout
+
+## Build and Testing Status
+
+- First APK build has been generated through Expo Cloud
+- The APK has been downloaded and is ready for device testing
+- App is ready for initial mobile QA/testing against the current backend and curriculum state
 
 ## Workspace Status
 
@@ -183,6 +189,7 @@ The repo is in a stronger state than the old tracker wording suggested, but a fe
 
 ## Recent Changes (since 2026-05-05)
 
+- First Expo Cloud APK build completed and downloaded for testing
 - Chapter list API (`GET /api/chapters`) now returns enriched per-chapter state: `isCompleted`, `isSkippedByPlacement`, `completedLessonCount`, and per-lesson `isCompleted`/`isSkippedByPlacement` flags
 - Chapter lessons API (`GET /api/chapters/[id]/lessons`) mirrors the same enrichment and properly returns `403 chapter_locked` when accessing a locked chapter
 - `lib/course.ts` refactored: `buildChapterStates()` now correctly derives chapter lock state from cumulative `completedLessonCount + skippedLessonCount` across prior chapters; `getUserCourseState()` returns `chapterStateById`, `completedLessonIds`, `skippedLessonIds`, and `progressStatusByLessonId`
@@ -250,11 +257,11 @@ Current product concern:
 
 ## Current Source-Of-Truth Summary
 
-As of 2026-05-07:
+As of 2026-05-08:
 - the codebase implements the full Phase 1 app loop
+- the first Expo Cloud APK build has been downloaded and the app is ready for initial device testing
 - onboarding, auth, placement, progression, lesson play, chat, and profile flows exist in code
 - the backend enforces locked progression and placement skipping (bypassed by `DEV_UNLOCK_ALL = true`)
 - the curriculum seed is at 10 chapters / 68 lessons (chapter 5 recently seeded)
 - chapter and chapter-lessons APIs now return full enriched state (completion, skip flags, counts)
 - the biggest gap is product/pedagogy quality, not basic app wiring
-- there are uncommitted changes to `arabai-backend/app/api/chapters/`, `arabai-backend/app/api/chapters/[id]/lessons/`, and `arabai-backend/lib/course.ts`

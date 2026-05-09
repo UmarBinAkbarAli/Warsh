@@ -1,0 +1,631 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); }
+  .root { padding: 1rem 0; }
+  .group-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  .gnav-btn { padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); font-size: 13px; cursor: pointer; background: var(--color-background-primary); color: var(--color-text-secondary); transition: all 0.15s; }
+  .gnav-btn.active { background: #1A1A2E; color: #D4AF37; border-color: #1A1A2E; }
+  .screens-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1.5rem; }
+  .screen-card { cursor: pointer; }
+  .screen-card:hover .phone-frame { border-color: #D4AF37; }
+  .phone-frame { border: 2px solid var(--color-border-secondary); border-radius: 20px; overflow: hidden; background: #1A1A2E; transition: border-color 0.15s; height: 280px; position: relative; }
+  .screen-label { font-size: 12px; color: var(--color-text-secondary); margin-top: 6px; text-align: center; }
+  .screen-id { font-size: 11px; color: var(--color-text-tertiary); text-align: center; }
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 100; }
+  .modal-inner { background: var(--color-background-primary); border-radius: 16px; padding: 1.5rem; max-width: 480px; width: 92%; max-height: 90vh; overflow-y: auto; }
+  .modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+  .modal-title { font-size: 15px; font-weight: 500; }
+  .modal-close { background: none; border: none; cursor: pointer; font-size: 20px; color: var(--color-text-secondary); line-height: 1; }
+  .modal-phone { width: 220px; border: 2px solid var(--color-border-secondary); border-radius: 28px; overflow: hidden; margin: 0 auto 1rem; height: 420px; position: relative; }
+  .spec-list { font-size: 13px; }
+  .spec-item { display: flex; gap: 8px; padding: 5px 0; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
+  .spec-item:last-child { border-bottom: none; }
+  .spec-label { color: var(--color-text-tertiary); min-width: 90px; font-size: 12px; }
+  .priority-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; display: inline-block; }
+  .p-critical { background: #fef3e2; color: #7a4f00; }
+  .p-high { background: #e3f0fb; color: #0c447c; }
+  .p-medium { background: #eaf3de; color: #3b6d11; }
+  .p-low { background: #f1efe8; color: #5f5e5a; }
+  .anim-section { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 0.5px solid var(--color-border-tertiary); }
+  .anim-title { font-size: 12px; color: var(--color-text-tertiary); margin-bottom: 4px; }
+  .anim-text { font-size: 13px; color: var(--color-text-secondary); }
+  svg text { font-family: var(--font-sans); }
+  .hidden { display: none; }
+</style>
+
+<div class="root">
+<h2 class="sr-only">Warsh app wireframes — all 21 screens across 4 groups</h2>
+
+<div class="group-nav">
+  <button class="gnav-btn active" onclick="filterGroup('all')">All screens (21)</button>
+  <button class="gnav-btn" onclick="filterGroup('A')">A — Onboarding (9)</button>
+  <button class="gnav-btn" onclick="filterGroup('B')">B — Core tabs (3)</button>
+  <button class="gnav-btn" onclick="filterGroup('C')">C — Lesson flow (7)</button>
+  <button class="gnav-btn" onclick="filterGroup('D')">D — Supporting (3)</button>
+</div>
+
+<div class="screens-grid" id="grid"></div>
+</div>
+
+<div id="modal" class="hidden">
+  <div class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-inner" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <span class="modal-title" id="m-title"></span>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-phone" id="m-phone"></div>
+      <div class="spec-list" id="m-specs"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const INK = '#1A1A2E';
+const GOLD = '#D4AF37';
+const PARCH = '#F5F0E8';
+const SAGE = '#7A9E7E';
+const CREAM = '#FFF8F0';
+const MUTED = '#2A2A40';
+const GRAY = '#3A3A55';
+const LGRAY = '#9999BB';
+
+function rect(x,y,w,h,fill,rx=0){return `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}" rx="${rx}"/>`}
+function txt(x,y,s,fill,size=11,anchor='middle',weight='normal'){return `<text x="${x}" y="${y}" fill="${fill}" font-size="${size}" text-anchor="${anchor}" font-weight="${weight}">${s}</text>`}
+function pill(x,y,w,h,fill,tfill,label,size=10){return `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}" rx="${h/2}"/><text x="${x+w/2}" y="${y+h/2+3.5}" fill="${tfill}" font-size="${size}" text-anchor="middle">${label}</text>`}
+function line(x1,y1,x2,y2,stroke='#3A3A55',sw=1){return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${stroke}" stroke-width="${sw}"/>`}
+function circle(cx,cy,r,fill){return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${fill}"/>`}
+function phoneShell(w,h,content,bg=INK){return `<svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">${rect(0,0,w,h,bg)}${content}</svg>`}
+
+const screens = [
+  {
+    id:'A1', group:'A', label:'Splash screen', priority:'medium',
+    effort:'0.5 day', status:'Not designed',
+    anims:'Wordmark fade-in 600ms → screen fade-out to landing',
+    elements:'Warsh wordmark centered, Gold crescent motif, Ink background',
+    svg: ()=> phoneShell(160,280,`
+      ${rect(50,90,60,18,GOLD,2)}
+      ${txt(80,103,'وَرْش',INK,13,'middle','bold')}
+      ${rect(62,114,36,6,'#2A2A40',1)}
+      ${txt(80,120,'Warsh','#D4AF37',7)}
+      ${circle(80,160,12,'#2A2A40')}
+      ${txt(80,164,'☽','#D4AF37',10)}
+      ${txt(80,210,'tap to begin','#3A3A55',8)}
+    `)
+  },
+  {
+    id:'A2', group:'A', label:'Landing screen', priority:'high',
+    effort:'1 day', status:'Basic scaffolding',
+    anims:'Tagline slides up, CTA pulses (scale loop 2s)',
+    elements:'Hero calligraphy area, tagline EN+AR, Begin CTA, login link',
+    svg: ()=> phoneShell(160,280,`
+      ${rect(0,0,160,120,MUTED)}
+      ${txt(80,45,'تَعَلَّمْ','#5A5A7A',18,'middle','bold')}
+      ${txt(80,68,'لُغَةَ الْقُرْآنِ','#4A4A6A',11)}
+      ${txt(80,90,'[ hero motif ]','#3A3A55',8)}
+      ${rect(0,120,160,160,INK)}
+      ${txt(80,148,'Learn the language','#D4AF37',9,'middle','bold')}
+      ${txt(80,160,'of the Quran',CREAM,8)}
+      ${rect(24,172,112,22,GOLD,11)}
+      ${txt(80,187,'Begin your journey',INK,9,'middle','bold')}
+      ${txt(80,218,'Already have an account?','#5A5A7A',8)}
+      ${txt(80,229,'Sign in','#D4AF37',8)}
+    `)
+  },
+  {
+    id:'A3', group:'A', label:'Goal selection', priority:'medium',
+    effort:'0.5 day', status:'Basic',
+    anims:'Cards stagger in 80ms delay, selected card scale pop',
+    elements:'Step dots, heading, 4 goal cards, selected = Gold border',
+    svg: ()=> phoneShell(160,280,`
+      ${[0,1,2,3,4,5].map(i=>circle(52+i*11,22,4,i===0?GOLD:'#3A3A55')).join('')}
+      ${txt(80,42,'What is your goal?',CREAM,9,'middle','bold')}
+      ${[[14,52,'📖 Understand Quran',true],[14,82,'🕌 Improve Salah',false],[14,112,'📚 Islamic texts',false],[14,142,'🌍 Speak Arabic',false]].map(([x,y,l,sel])=>
+        `${rect(x,y,132,24,sel?'#252540':'#232333',4)}
+         ${rect(x,y,132,24,'transparent',4).replace('transparent','none')}
+         <rect x="${x}" y="${y}" width="132" height="24" fill="none" rx="4" stroke="${sel?GOLD:'#3A3A55'}" stroke-width="${sel?1.5:0.5}"/>
+         ${txt(x+10,y+15.5,l,sel?GOLD:CREAM,8,'start')}`
+      ).join('')}
+      ${rect(24,230,112,22,GOLD,11)}
+      ${txt(80,245,'Continue',INK,9,'middle','bold')}
+    `)
+  },
+  {
+    id:'A4', group:'A', label:'Level selection', priority:'medium',
+    effort:'0.5 day', status:'Basic',
+    anims:'Same stagger as goal screen',
+    elements:'Step dots, 4 level cards with Arabic sample per level',
+    svg: ()=> phoneShell(160,280,`
+      ${[0,1,2,3,4,5].map(i=>circle(52+i*11,22,4,i===1?GOLD:'#3A3A55')).join('')}
+      ${txt(80,42,'What is your level?',CREAM,9,'middle','bold')}
+      ${[['Complete beginner','ا ب ت'],['Know the letters','بِسْمِ'],['Studied before','الحمد لله'],['Can read basic','إِيَّاكَ نَعْبُدُ']].map(([l,ar],i)=>
+        `<rect x="14" y="${52+i*30}" width="132" height="24" fill="#232333" rx="4" stroke="#3A3A55" stroke-width="0.5"/>
+         ${txt(20,52+i*30+10,l,'#9999BB',7,'start')}
+         ${txt(138,52+i*30+15,ar,GOLD,8,'end')}`
+      ).join('')}
+      ${rect(24,230,112,22,GOLD,11)}
+      ${txt(80,245,'Continue',INK,9,'middle','bold')}
+    `)
+  },
+  {
+    id:'A5', group:'A', label:'Name entry', priority:'low',
+    effort:'0.25 day', status:'Basic',
+    anims:'Gold border glow on input focus',
+    elements:'Warm prompt copy, large text input, continue activates on input',
+    svg: ()=> phoneShell(160,280,`
+      ${txt(80,60,'What should Ustaad',CREAM,9,'middle')}
+      ${txt(80,74,'Noor call you?',CREAM,9,'middle')}
+      ${rect(20,95,120,26,'#232333',6)}
+      <rect x="20" y="95" width="120" height="26" fill="none" rx="6" stroke="${GOLD}" stroke-width="1"/>
+      ${txt(34,112,'Your name...',LGRAY,9,'start')}
+      ${txt(80,148,'Ustaad Noor will use this',LGRAY,8,'middle')}
+      ${txt(80,160,'to address you personally',LGRAY,8,'middle')}
+      ${rect(24,230,112,22,GOLD,11)}
+      ${txt(80,245,'Continue',INK,9,'middle','bold')}
+    `)
+  },
+  {
+    id:'A6', group:'A', label:'Language selection', priority:'low',
+    effort:'0.25 day', status:'Basic',
+    anims:'None required',
+    elements:'Search input, flag+language list, Gold checkmark on selected',
+    svg: ()=> phoneShell(160,280,`
+      ${txt(80,30,'Your native language',CREAM,9,'middle','bold')}
+      ${rect(14,40,132,20,'#232333',10)}
+      ${txt(28,53,'🔍  Search...',LGRAY,8,'start')}
+      ${[['🇵🇰 Urdu',true],['🇬🇧 English',false],['🇸🇦 Arabic',false],['🇮🇳 Hindi',false],['🇧🇩 Bengali',false]].map(([l,sel],i)=>
+        `<rect x="14" y="${68+i*28}" width="132" height="24" fill="${sel?'#252540':'transparent'}" rx="4" stroke="${sel?GOLD:'#3A3A55'}" stroke-width="${sel?1:0.5}"/>
+         ${txt(24,68+i*28+15,l,sel?GOLD:CREAM,9,'start')}
+         ${sel?txt(134,68+i*28+15,'✓',GOLD,10,'end'):''}`
+      ).join('')}
+      ${rect(24,246,112,22,GOLD,11)}
+      ${txt(80,261,'Continue',INK,9,'middle','bold')}
+    `)
+  },
+  {
+    id:'A7', group:'A', label:'Placement screen', priority:'medium',
+    effort:'0.5 day', status:'Basic',
+    anims:'Cards stagger in',
+    elements:'Explanation text, 4 placement option cards describing skill level',
+    svg: ()=> phoneShell(160,280,`
+      ${txt(80,28,"Let's find your",CREAM,9,'middle','bold')}
+      ${txt(80,40,'starting point',CREAM,9,'middle','bold')}
+      ${txt(80,56,'Pick what describes you best',LGRAY,8,'middle')}
+      ${[["I'm a complete beginner",'BEGINNER'],["I know Arabic letters",'KNOWS_LETTERS'],["I've studied before",'STUDIED_BEFORE'],["I can read basic Arabic",'CAN_READ']].map(([l,k],i)=>
+        `<rect x="10" y="${72+i*40}" width="140" height="34" fill="#232333" rx="5" stroke="#3A3A55" stroke-width="0.5"/>
+         ${txt(18,72+i*40+13,l,CREAM,8,'start')}
+         ${pill(112,72+i*40+18,34,12,'#2A2A40',LGRAY,k,7)}`
+      ).join('')}
+      ${rect(24,246,112,22,GOLD,11)}
+      ${txt(80,261,'Continue',INK,9,'middle','bold')}
+    `)
+  },
+  {
+    id:'A8', group:'A', label:'Ready screen', priority:'high',
+    effort:'1 day', status:'Basic',
+    anims:'Arabic greeting fades first, details +200ms, Noor avatar slides from right',
+    elements:'أَهْلاً [Name], summary cards, Noor avatar intro, Let\'s begin CTA',
+    svg: ()=> phoneShell(160,280,`
+      ${txt(80,38,'أَهْلاً يا',GOLD,14,'middle','bold')}
+      ${txt(80,56,'Umar!',CREAM,11,'middle','bold')}
+      ${rect(18,68,124,40,'#232333',6)}
+      ${txt(80,83,'Goal: Understand Quran',LGRAY,7,'middle')}
+      ${txt(80,94,'Level: Complete beginner',LGRAY,7,'middle')}
+      ${txt(80,104,'Starting: Chapter 1',LGRAY,7,'middle')}
+      ${circle(80,156,22,'#2A2A40')}
+      ${txt(80,153,'👳',CREAM,16,'middle')}
+      ${txt(80,166,'Ustaad Noor',GOLD,8,'middle','bold')}
+      ${txt(80,177,'Your guide awaits',LGRAY,7,'middle')}
+      ${rect(24,218,112,22,GOLD,11)}
+      ${txt(80,233,"Let's begin",INK,9,'middle','bold')}
+    `)
+  },
+  {
+    id:'A9', group:'A', label:'Login screen', priority:'low',
+    effort:'0.5 day', status:'Basic',
+    anims:'None required',
+    elements:'Warsh wordmark, email+password inputs, sign in CTA, forgot password link',
+    svg: ()=> phoneShell(160,280,`
+      ${rect(46,22,68,18,GOLD,2)}
+      ${txt(80,35,'وَرْش',INK,12,'middle','bold')}
+      ${txt(80,60,'Welcome back',CREAM,9,'middle','bold')}
+      ${rect(20,72,120,22,'#232333',5)}
+      <rect x="20" y="72" width="120" height="22" fill="none" rx="5" stroke="#3A3A55" stroke-width="0.5"/>
+      ${txt(30,87,'Email address',LGRAY,8,'start')}
+      ${rect(20,102,120,22,'#232333',5)}
+      <rect x="20" y="102" width="120" height="22" fill="none" rx="5" stroke="#3A3A55" stroke-width="0.5"/>
+      ${txt(30,117,'Password',LGRAY,8,'start')}
+      ${txt(80,136,'Forgot password?',GOLD,8,'middle')}
+      ${rect(20,146,120,22,GOLD,11)}
+      ${txt(80,161,'Sign in',INK,9,'middle','bold')}
+      ${line(20,182,140,182,'#2A2A40')}
+      ${txt(80,196,'New to Warsh?',LGRAY,8,'middle')}
+      ${txt(80,208,'Start your journey',GOLD,8,'middle')}
+    `)
+  },
+  {
+    id:'B1', group:'B', label:'Learn tab', priority:'critical',
+    effort:'2 days', status:'Functional — needs polish',
+    anims:'Cards stagger in 60ms, progress bar fills 400ms on mount, locked pulse',
+    elements:'Al-Fatiha meter top, chapter cards (progress bar, lock/complete states), streak banner',
+    svg: ()=> phoneShell(160,280,`
+      ${rect(0,0,160,28,'#141428')}
+      ${txt(80,18,'تَعَلَّم',GOLD,11,'middle','bold')}
+      ${rect(8,32,144,20,'#232333',4)}
+      ${rect(8,32,60,20,GOLD,4)}
+      ${txt(80,45,'Al-Fatiha  8 / 15 words',LGRAY,7,'middle')}
+      ${[[8,58,'١ — هٰذَا وَذٰلِكَ','3/3',true,false],[8,104,'٢ — الـمَعْرِفَةُ','1/4',false,false],[8,150,'٣ — الجُمْلَة','0/4',false,true]].map(([x,y,title,prog,comp,locked])=>
+        `<rect x="${x}" y="${y}" width="144" height="40" fill="${locked?'#1E1E30':'#252535'}" rx="6" stroke="${comp?GOLD:'#3A3A55'}" stroke-width="${comp?1:0.5}" opacity="${locked?0.5:1}"/>
+         ${txt(x+8,y+13,title,comp?GOLD:CREAM,8,'start')}
+         ${txt(x+8,y+26,`Progress: ${prog}`,LGRAY,7,'start')}
+         <rect x="${x+6}" y="${y+32}" width="132" height="3" fill="#3A3A55" rx="1.5"/>
+         <rect x="${x+6}" y="${y+32}" width="${comp?132:prog==='1/4'?33:0}" height="3" fill="${SAGE}" rx="1.5"/>
+         ${locked?txt(x+130,y+20,'🔒',LGRAY,10,'end'):comp?txt(x+130,y+20,'✓',GOLD,10,'end'):''}`
+      ).join('')}
+      ${rect(0,252,160,28,'#141428')}
+      ${txt(40,270,'تَعَلَّم',GOLD,8,'middle')}
+      ${txt(80,270,'نور',LGRAY,8,'middle')}
+      ${txt(120,270,'أنت',LGRAY,8,'middle')}
+    `)
+  },
+  {
+    id:'B2', group:'B', label:'Noor chat tab', priority:'high',
+    effort:'1.5 days', status:'Functional — basic UI',
+    anims:'Messages slide up + fade, typing dots bounce, chips fade when empty',
+    elements:'Noor avatar header, chat bubbles, typing indicator, suggested prompt chips, input bar',
+    svg: ()=> phoneShell(160,280,`
+      ${rect(0,0,160,36,'#141428')}
+      ${circle(80,18,12,'#2A2A40')}
+      ${txt(80,15,'👳',CREAM,10,'middle')}
+      ${txt(80,32,'Ustaad Noor',GOLD,8,'middle','bold')}
+      ${rect(8,44,100,26,'#2A2A40',10)}
+      ${txt(62,54,'السلام عليكم!',GOLD,7,'middle')}
+      ${txt(62,64,'How can I help you?',LGRAY,6,'middle')}
+      ${rect(52,78,100,22,'#252540',10)}
+      ${txt(102,93,'Why is ال used here?',CREAM,7,'middle')}
+      ${rect(8,108,110,30,'#2A2A40',10)}
+      ${txt(63,120,'Great question! The ال',LGRAY,6,'middle')}
+      ${txt(63,130,'is definite article...',LGRAY,6,'middle')}
+      ${txt(63,140,'•  •  •',GOLD,8,'middle')}
+      ${rect(8,148,66,16,MUTED,8)}
+      <rect x="8" y="148" width="66" height="16" fill="none" rx="8" stroke="#3A3A55" stroke-width="0.5"/>
+      ${txt(41,159,'Explain مُبتدا',LGRAY,7,'middle')}
+      ${rect(80,148,72,16,MUTED,8)}
+      <rect x="80" y="148" width="72" height="16" fill="none" rx="8" stroke="#3A3A55" stroke-width="0.5"/>
+      ${txt(116,159,'Quiz me Ch.1',LGRAY,7,'middle')}
+      ${rect(0,252,160,28,'#141428')}
+      ${rect(8,256,104,16,'#232333',8)}
+      ${txt(60,268,'Ask Ustaad Noor...',LGRAY,7,'middle')}
+      ${rect(118,254,34,20,GOLD,10)}
+      ${txt(135,267,'↑',INK,11,'middle','bold')}
+    `)
+  },
+  {
+    id:'B3', group:'B', label:'Profile / You tab', priority:'medium',
+    effort:'1 day', status:'Rebuilt — needs animation',
+    anims:'XP bar spring-fills on focus, streak counts up 0→N (300ms), stats stagger in',
+    elements:'Dark header + name, streak card, XP + lessons stat cards, level bar, Noor tip',
+    svg: ()=> phoneShell(160,280,`
+      ${rect(0,0,160,60,'#141428')}
+      ${circle(80,24,14,'#2A2A40')}
+      ${txt(80,21,'U',GOLD,12,'middle','bold')}
+      ${txt(80,38,'Umar',CREAM,9,'middle','bold')}
+      ${txt(80,50,'As-salamu alaykum',LGRAY,7,'middle')}
+      ${rect(8,66,144,36,'#252535',6)}
+      <rect x="8" y="66" width="144" height="36" fill="none" rx="6" stroke="#3A3A55" stroke-width="0.5"/>
+      ${txt(32,78,'🔥',CREAM,10,'start')}
+      ${txt(50,82,'7',GOLD,16,'start','bold')}
+      ${txt(50,93,'day streak',LGRAY,7,'start')}
+      ${txt(80,78,'M  T  W  T  F  S  S',LGRAY,6,'end')}
+      ${txt(80,88,'●  ●  ●  ●  ○  ○  ○',GOLD,6,'end')}
+      ${[[8,110,'نقاط','2,450 XP'],[84,110,'دروس','12 done']].map(([x,y,ar,val])=>
+        `<rect x="${x}" y="${y}" width="68" height="36" fill="#252535" rx="5"/>
+         ${txt(x+34,y+13,ar,LGRAY,7,'middle')}
+         ${txt(x+34,y+27,val,GOLD,8,'middle','bold')}`
+      ).join('')}
+      ${rect(8,154,144,24,'#252535',5)}
+      ${txt(20,165,'Level 3',CREAM,8,'start','bold')}
+      ${txt(140,165,'450 / 600 XP',LGRAY,7,'end')}
+      <rect x="8" y="170" width="144" height="5" fill="#3A3A55" rx="2.5"/>
+      <rect x="8" y="170" width="108" height="5" fill="${GOLD}" rx="2.5"/>
+      ${rect(8,186,144,38,'#232333',6)}
+      ${circle(20,205,8,'#2A2A40')}
+      ${txt(20,202,'👳',CREAM,7,'middle')}
+      ${txt(100,196,'Review Chapter 2',LGRAY,7,'middle')}
+      ${txt(100,207,'before moving ahead',LGRAY,7,'middle')}
+      ${txt(100,216,'— Ustaad Noor',GOLD,7,'middle')}
+    `)
+  },
+  {
+    id:'C1', group:'C', label:'Chapter detail', priority:'high',
+    effort:'1 day', status:'Basic list',
+    anims:'Header slides down, lesson rows stagger 50ms',
+    elements:'Chapter title header, lesson rows (complete/current/locked), Continue CTA',
+    svg: ()=> phoneShell(160,280,`
+      ${rect(0,0,160,52,'#141428')}
+      ${txt(80,22,'هٰذَا وَذٰلِكَ',GOLD,13,'middle','bold')}
+      ${txt(80,38,'Chapter 1 — This and That',LGRAY,8,'middle')}
+      ${txt(80,50,'Ism · نَكِرَةٌ · اسمِ اشارہ',LGRAY,6,'middle')}
+      ${[[8,58,'١ — Intro to Ism','done'],[8,86,'٢ — Near & Far','done'],[8,114,'٣ — Plural Ism','active'],[8,142,'٤ — Bonus vocab','locked']].map(([x,y,label,state])=>
+        `<rect x="${x}" y="${y}" width="144" height="24" fill="${state==='active'?'#252540':state==='locked'?'#1E1E2A':'#232333'}" rx="5" stroke="${state==='active'?GOLD:state==='done'?SAGE:'#3A3A55'}" stroke-width="${state==='active'?1.5:0.5}" opacity="${state==='locked'?0.5:1}"/>
+         ${txt(x+8,y+15,label,state==='active'?GOLD:state==='done'?SAGE:CREAM,8,'start')}
+         ${state==='done'?txt(x+134,y+15,'✓',SAGE,9,'end'):state==='locked'?txt(x+134,y+15,'🔒',LGRAY,8,'end'):txt(x+134,y+15,'▶',GOLD,8,'end')}`
+      ).join('')}
+      ${rect(24,230,112,22,GOLD,11)}
+      ${txt(80,245,'Continue lesson',INK,9,'middle','bold')}
+    `)
+  },
+  {
+    id:'C2', group:'C', label:'Hook beat (beat 1)', priority:'high',
+    effort:'1 day', status:'Implemented — needs visual treatment',
+    anims:'Ayah text fades in RTL 800ms, translation fades after, Gold shimmer once',
+    elements:'Full-screen Ink, large Gold ayah, ayah number badge, EN translation, tap to begin',
+    svg: ()=> phoneShell(160,280,`
+      ${rect(0,0,160,8,GOLD)}
+      ${rect(0,8,160,4,'#2A2A40')}
+      ${rect(64,8,32,4,GOLD)}
+      ${txt(80,30,'Beat 1 of 5',LGRAY,7,'middle')}
+      ${txt(80,65,'بِسْمِ اللَّهِ',GOLD,17,'middle','bold')}
+      ${txt(80,88,'الرَّحْمَٰنِ الرَّحِيمِ',GOLD,13,'middle')}
+      ${rect(64,100,32,10,'#2A2A40',5)}
+      ${txt(80,108,'Surah 1:1',LGRAY,6,'middle')}
+      ${line(30,118,130,118,MUTED)}
+      ${txt(80,136,'In the name of Allah,',CREAM,8,'middle')}
+      ${txt(80,148,'the Most Gracious,',CREAM,8,'middle')}
+      ${txt(80,160,'the Most Merciful',CREAM,8,'middle')}
+      ${txt(80,210,'Tap anywhere to begin',LGRAY,7,'middle')}
+      ${txt(80,222,'▼',GOLD,8,'middle')}
+    `)
+  },
+  {
+    id:'C3', group:'C', label:'Discover cards (beat 2)', priority:'critical',
+    effort:'2 days', status:'Functional — emoji feels cheap',
+    anims:'Card slides from right 200ms, swipe follows finger, first card drops from above',
+    elements:'Large card (image/emoji top, Arabic, transliteration, translation), card counter, progress bar',
+    svg: ()=> phoneShell(160,280,`
+      ${rect(0,0,160,8,GOLD)}
+      ${rect(0,8,160,4,'#2A2A40')}
+      ${rect(0,8,64,4,GOLD)}
+      ${txt(120,14,'3 / 10',LGRAY,7,'end')}
+      ${txt(80,28,'Beat 2 of 5 — Discover',LGRAY,7,'middle')}
+      ${rect(14,38,132,168,PARCH,10)}
+      ${txt(80,92,'🏫',INK,36,'middle')}
+      ${txt(80,122,'[ illustration ]',LGRAY,7,'middle')}
+      ${txt(80,146,'مَدْرَسَةٌ',INK,18,'middle','bold')}
+      ${txt(80,162,'mad-ra-sa-tun',SAGE,8,'middle')}
+      ${txt(80,175,'a school',INK,9,'middle')}
+      ${rect(8,210,60,24,'#232333',12)}
+      ${txt(38,226,'← Prev',LGRAY,8,'middle')}
+      ${rect(92,210,60,24,GOLD,12)}
+      ${txt(122,226,'Next →',INK,8,'middle','bold')}
+      ${txt(80,252,'Swipe to navigate',LGRAY,7,'middle')}
+    `)
+  },
+  {
+    id:'C4', group:'C', label:'Practice exercises (beat 3)', priority:'critical',
+    effort:'3 days', status:'Working — needs feedback animations',
+    anims:'Correct: Sage flash 800ms → next slides in. Wrong: red flash + shake 300ms → answer revealed',
+    elements:'Exercise type label, 10-dot progress, question, answer options, Continue after lock-in',
+    svg: ()=> phoneShell(160,280,`
+      ${rect(0,0,160,8,GOLD)}
+      ${rect(0,8,160,4,'#2A2A40')}
+      ${rect(0,8,96,4,GOLD)}
+      ${[0,1,2,3,4,5,6,7,8,9].map(i=>circle(14+i*14.5,22,4.5,i<6?GOLD:'#3A3A55')).join('')}
+      ${rect(38,30,84,14,MUTED,7)}
+      ${txt(80,40,'TAP TRANSLATION',LGRAY,7,'middle')}
+      ${txt(80,62,'What does this mean?',CREAM,8,'middle')}
+      ${txt(80,80,'كِتَابٌ',GOLD,18,'middle','bold')}
+      ${txt(80,96,'ki-taa-bun',LGRAY,7,'middle')}
+      ${[[8,108,'a book',true],[84,108,'a pen',false],[8,138,'a table',false],[84,138,'a house',false]].map(([x,y,l,correct])=>
+        `<rect x="${x}" y="${y}" width="68" height="24" fill="${correct?'#1E3020':'#232333'}" rx="6" stroke="${correct?SAGE:'#3A3A55'}" stroke-width="${correct?1.5:0.5}"/>
+         ${txt(x+34,y+15,l,correct?SAGE:CREAM,8,'middle')}`
+      ).join('')}
+      ${rect(8,172,144,40,SAGE,8)}
+      ${txt(80,186,'✓  صَحِيح!',INK,9,'middle','bold')}
+      ${txt(80,198,'"كِتَابٌ" means "a book"',INK,8,'middle')}
+      ${rect(24,222,112,22,GOLD,11)}
+      ${txt(80,237,'Continue',INK,9,'middle','bold')}
+    `)
+  },
+  {
+    id:'C5', group:'C', label:'Exercise feedback overlay', priority:'critical',
+    effort:'1 day', status:'Basic color change only',
+    anims:'Sheet slides up spring 300ms, correct = confetti burst, wrong = shake before sheet',
+    elements:'Bottom sheet: correct (Sage, ✓, XP chip) or wrong (red, correct answer, explanation)',
+    svg: ()=> phoneShell(160,280,`
+      ${rect(0,0,160,175,MUTED)}
+      ${txt(80,80,'كِتَابٌ',GOLD,22,'middle','bold')}
+      ${txt(80,100,'ki-taa-bun',LGRAY,8,'middle')}
+      ${rect(0,175,160,105,SAGE,0)}
+      ${rect(0,175,160,6,INK)}
+      ${txt(80,185,'✓',INK,12,'middle','bold')}
+      ${txt(80,200,'صَحِيح! Well done.',INK,9,'middle','bold')}
+      ${txt(80,214,'a book',INK,8,'middle')}
+      ${rect(60,220,40,14,GOLD,7)}
+      ${txt(80,230,'+5 XP',INK,8,'middle','bold')}
+      ${rect(24,244,112,22,INK,11)}
+      ${txt(80,259,'Continue',GOLD,9,'middle','bold')}
+      ${[...Array(8)].map((_,i)=>{const x=20+i*17,y=142+Math.sin(i)*8;return `<circle cx="${x}" cy="${y}" r="3" fill="${i%2===0?GOLD:SAGE}" opacity="0.8"/>`}).join('')}
+    `)
+  },
+  {
+    id:'C6', group:'C', label:'Reveal beat (beat 4)', priority:'medium',
+    effort:'1 day', status:'Implemented — needs visual richness',
+    anims:'Grammar term Gold glow pulse once, Gold underline draws in 500ms under target word',
+    elements:'"You already know this" copy, grammar term AR+EN, original ayah with word highlighted',
+    svg: ()=> phoneShell(160,280,`
+      ${rect(0,0,160,8,GOLD)}
+      ${rect(0,8,160,4,'#2A2A40')}
+      ${rect(0,8,128,4,GOLD)}
+      ${txt(80,28,'Beat 4 of 5 — Reveal',LGRAY,7,'middle')}
+      ${txt(80,48,'You already know this.',CREAM,9,'middle','bold')}
+      ${txt(80,62,'You just felt it first.',LGRAY,8,'middle')}
+      ${rect(22,74,116,40,'#252535',8)}
+      <rect x="22" y="74" width="116" height="40" fill="none" rx="8" stroke="${GOLD}" stroke-width="1"/>
+      ${txt(80,92,'اِسْمٌ',GOLD,15,'middle','bold')}
+      ${txt(80,106,'Ism — a noun',LGRAY,8,'middle')}
+      ${txt(80,128,'This word you already saw:',LGRAY,7,'middle')}
+      ${txt(80,150,'بِسْمِ',CREAM,9,'middle')}
+      <text x="80" y="160" fill="${GOLD}" font-size="9" text-anchor="middle" font-weight="bold">اللَّهِ</text>
+      <line x1="58" y1="163" x2="102" y2="163" stroke="${GOLD}" stroke-width="1.5"/>
+      ${txt(80,175,'← highlighted word',LGRAY,6,'middle')}
+      ${rect(8,186,144,40,'#232333',6)}
+      ${txt(80,200,'اِسْمٌ is a noun.',CREAM,8,'middle')}
+      ${txt(80,212,'اللَّهِ = the name of Allah',LGRAY,7,'middle')}
+      ${txt(80,221,'It is an Ism.',LGRAY,7,'middle')}
+      ${rect(24,238,112,22,GOLD,11)}
+      ${txt(80,253,'Continue',INK,9,'middle','bold')}
+    `)
+  },
+  {
+    id:'C7', group:'C', label:'Completion screen (beat 5)', priority:'critical',
+    effort:'1.5 days', status:'Basic API call only',
+    anims:'بارك الله spring scale 0.8→1.0 400ms, confetti burst, XP counts up, stats stagger 100ms',
+    elements:'Celebration heading, XP+streak+accuracy stats, Noor tip card, Next lesson + Back CTAs',
+    svg: ()=> phoneShell(160,280,`
+      ${txt(80,40,'بارَكَ اللهُ فِيكَ',GOLD,13,'middle','bold')}
+      ${txt(80,56,'Lesson complete!',CREAM,9,'middle')}
+      ${[...Array(12)].map((_,i)=>{const a=i/12*Math.PI*2,r=36;const x=80+r*Math.cos(a),y=90+r*0.6*Math.sin(a);return `<circle cx="${x}" cy="${y}" r="2.5" fill="${i%3===0?GOLD:i%3===1?SAGE:'#5A5A7A'}" opacity="${0.4+0.3*Math.sin(i)}"/>`}).join('')}
+      ${[[8,118,'+25 XP','XP Earned'],[60,118,'7 🔥','Streak'],[112,118,'90%','Accuracy']].map(([x,y,val,label])=>
+        `<rect x="${x}" y="${y}" width="44" height="34" fill="#252535" rx="5"/>
+         ${txt(x+22,y+14,val,GOLD,8,'middle','bold')}
+         ${txt(x+22,y+26,label,LGRAY,6,'middle')}`
+      ).join('')}
+      ${rect(8,160,144,42,'#232333',6)}
+      ${circle(22,181,10,'#2A2A40')}
+      ${txt(22,178,'👳',CREAM,8,'middle')}
+      ${txt(98,172,'Review Ch. 2 before',LGRAY,7,'middle')}
+      ${txt(98,182,'moving to Ch. 3',LGRAY,7,'middle')}
+      ${txt(98,194,'— Ustaad Noor',GOLD,7,'middle')}
+      ${rect(8,210,144,22,GOLD,11)}
+      ${txt(80,225,'Next lesson',INK,9,'middle','bold')}
+      ${rect(8,238,144,18,'#232333',9)}
+      <rect x="8" y="238" width="144" height="18" fill="none" rx="9" stroke="#3A3A55" stroke-width="0.5"/>
+      ${txt(80,250,'Back to chapter',LGRAY,8,'middle')}
+    `)
+  },
+  {
+    id:'D1', group:'D', label:'Al-Fatiha meter', priority:'medium',
+    effort:'0.5 day', status:'Implemented — needs polish',
+    anims:'Expand spring-animates height 350ms, newly unlocked word Gold glow pulse once',
+    elements:'Slim bar (collapsed), full Bismillah+Fatiha with Gold highlighted words (expanded)',
+    svg: ()=> phoneShell(160,280,`
+      ${txt(80,20,'Al-Fatiha Progress',LGRAY,7,'middle')}
+      ${rect(8,28,144,8,MUTED,4)}
+      <rect x="8" y="28" width="76" height="8" fill="${GOLD}" rx="4"/>
+      ${txt(80,46,'8 / 15 words unlocked',LGRAY,7,'middle')}
+      ${txt(80,58,'Tap to expand ▼',GOLD,7,'middle')}
+      ${line(8,66,152,66,MUTED)}
+      ${txt(80,80,'بِسْمِ',GOLD,10,'middle','bold')}
+      ${txt(80,94,'اللَّهِ',GOLD,10,'middle','bold')}
+      ${txt(80,108,'الرَّحْمَٰنِ',GOLD,10,'middle','bold')}
+      ${txt(80,122,'الرَّحِيمِ',GOLD,10,'middle','bold')}
+      ${txt(80,136,'الْحَمْدُ',GOLD,10,'middle','bold')}
+      ${txt(80,150,'لِلَّهِ',GOLD,10,'middle','bold')}
+      ${txt(80,164,'رَبِّ',GOLD,10,'middle','bold')}
+      ${txt(80,178,'الْعَالَمِينَ',GOLD,10,'middle','bold')}
+      ${txt(80,192,'الرَّحْمَٰنِ',LGRAY,10,'middle')}
+      ${txt(80,206,'الرَّحِيمِ',LGRAY,10,'middle')}
+      ${txt(80,220,'[ locked words in gray ]',LGRAY,6,'middle')}
+      ${txt(80,234,'Gold = unlocked',GOLD,7,'middle')}
+      ${txt(80,246,'Gray = not yet',LGRAY,7,'middle')}
+    `)
+  },
+  {
+    id:'D2', group:'D', label:'Streak lost screen', priority:'low',
+    effort:'0.5 day', status:'Not designed',
+    anims:'None — empathetic, calm tone, no dramatic animations',
+    elements:'Empathetic Noor copy, streak reset to 0, Begin again CTA, streak freeze placeholder',
+    svg: ()=> phoneShell(160,280,`
+      ${circle(80,60,28,'#2A2A40')}
+      ${txt(80,55,'🔥',CREAM,20,'middle')}
+      ${txt(80,80,'0',LGRAY,12,'middle')}
+      ${txt(80,96,'Your streak has reset.',LGRAY,8,'middle')}
+      ${line(30,106,130,106,MUTED)}
+      ${txt(80,122,'"Even the great scholars',CREAM,8,'middle')}
+      ${txt(80,134,'had days of rest."',CREAM,8,'middle')}
+      ${txt(80,150,'— Ustaad Noor',GOLD,7,'middle')}
+      ${rect(8,164,144,30,'#252535',6)}
+      ${txt(80,176,'Your last streak: 7 days',LGRAY,7,'middle')}
+      ${txt(80,188,'You can build it back.',CREAM,8,'middle')}
+      ${rect(24,204,112,22,GOLD,11)}
+      ${txt(80,219,'Begin again',INK,9,'middle','bold')}
+      ${rect(24,232,112,18,'#252535',9)}
+      <rect x="24" y="232" width="112" height="18" fill="none" rx="9" stroke="#3A3A55" stroke-width="0.5"/>
+      ${txt(80,244,'Streak freeze (coming soon)',LGRAY,7,'middle')}
+    `)
+  },
+  {
+    id:'D3', group:'D', label:'Empty / first visit states', priority:'medium',
+    effort:'1 day', status:'Not designed',
+    anims:'Subtle breathing animation on Start Here prompt',
+    elements:'Learn tab empty state, Noor welcome message, Day 1 profile state',
+    svg: ()=> phoneShell(160,280,`
+      ${txt(80,24,'First visit — Learn tab',LGRAY,7,'middle')}
+      ${line(8,30,152,30,MUTED)}
+      ${rect(8,36,144,60,'#252535',8)}
+      <rect x="8" y="36" width="144" height="60" fill="none" rx="8" stroke="${GOLD}" stroke-width="1.5"/>
+      ${txt(80,52,'Chapter 1',GOLD,9,'middle','bold')}
+      ${txt(80,64,'هٰذَا وَذٰلِكَ',GOLD,11,'middle')}
+      ${txt(80,78,'← Start here',SAGE,8,'middle')}
+      ${[8,104,152].map((y,i)=> i===0?'':
+        `<rect x="8" y="${y}" width="144" height="40" fill="#1E1E2A" rx="6" opacity="0.4"/>
+         ${txt(80,y+22,'Chapter '+(i+1)+' — locked',LGRAY,7,'middle')}`
+      ).join('')}
+      ${rect(8,192,144,50,'#2A2A40',8)}
+      <rect x="8" y="192" width="144" height="50" fill="none" rx="8" stroke="#3A3A55" stroke-width="0.5"/>
+      ${circle(22,217,10,'#232333')}
+      ${txt(22,214,'👳',CREAM,8,'middle')}
+      ${txt(96,205,'السلام عليكم!',GOLD,8,'middle','bold')}
+      ${txt(96,216,'Welcome to Warsh.',LGRAY,7,'middle')}
+      ${txt(96,226,'Begin Chapter 1',LGRAY,7,'middle')}
+      ${txt(96,236,'to start your journey.',LGRAY,7,'middle')}
+    `)
+  }
+];
+
+const priorityMap = {critical:'Critical',high:'High',medium:'Medium',low:'Low'};
+const priorityClass = {critical:'p-critical',high:'p-high',medium:'p-medium',low:'p-low'};
+
+function renderGrid(group){
+  const filtered = group==='all'?screens:screens.filter(s=>s.group===group);
+  const grid = document.getElementById('grid');
+  grid.innerHTML = filtered.map(s=>`
+    <div class="screen-card" onclick="openModal('${s.id}')">
+      <div class="phone-frame">${s.svg()}</div>
+      <div class="screen-label">${s.id} — ${s.label}</div>
+      <div class="screen-id"><span class="priority-badge ${priorityClass[s.priority]}">${priorityMap[s.priority]}</span></div>
+    </div>
+  `).join('');
+}
+
+function filterGroup(g){
+  document.querySelectorAll('.gnav-btn').forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+  renderGrid(g);
+}
+
+function openModal(id){
+  const s = screens.find(x=>x.id===id);
+  document.getElementById('m-title').textContent = `${s.id} — ${s.label}`;
+  document.getElementById('m-phone').innerHTML = s.svg();
+  document.getElementById('m-phone').style.background = '#1A1A2E';
+  document.getElementById('m-specs').innerHTML = `
+    <div class="spec-item"><span class="spec-label">Priority</span><span class="priority-badge ${priorityClass[s.priority]}">${priorityMap[s.priority]}</span></div>
+    <div class="spec-item"><span class="spec-label">Status</span>${s.status}</div>
+    <div class="spec-item"><span class="spec-label">Effort</span>${s.effort}</div>
+    <div class="spec-item"><span class="spec-label">Elements</span>${s.elements}</div>
+    <div class="anim-section"><div class="anim-title">Animations</div><div class="anim-text">${s.anims}</div></div>
+  `;
+  document.getElementById('modal').classList.remove('hidden');
+}
+
+function closeModal(e){
+  if(!e || e.target===document.querySelector('.modal-overlay')||e===undefined){
+    document.getElementById('modal').classList.add('hidden');
+  }
+}
+
+renderGrid('all');
+</script>
