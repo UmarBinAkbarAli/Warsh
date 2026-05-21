@@ -10,7 +10,7 @@ export default function WelcomeScreen() {
         بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
       </ArabicText>
       <ArabicText size="lg" style={{ textAlign: "center", marginBottom: Spacing.xs }}>
-        نُور
+        وَرْش
       </ArabicText>
       <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", marginBottom: Spacing.md, textAlign: "center" }}>
         Welcome to Warsh

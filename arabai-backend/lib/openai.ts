@@ -1,4 +1,3 @@
-import Anthropic from "@anthropic-ai/sdk";
 import OpenAI from "openai";
 
 const SYSTEM_PROMPT = `You are Ustaad Noor — the AI tutor inside Warsh, 
@@ -28,41 +27,7 @@ curriculum follows the Madinah Arabic Reader by Dr. Abdur Rahim,
 with grammar depth from the Quranic Grammar series by Dr. Hafiz 
 Muhammad Zubair. The Reader leads — the Grammar serves.
 
-The app currently has 5 chapters:
-
-CHAPTER 1 — This and That (هٰذَا وَذٰلِكَ)
-- هٰذَا = this (near), ذٰلِكَ = that (far)
-- مَا هٰذَا؟ = what is this?, مَنْ هٰذَا؟ = who is this?
-- نَكِرَةٌ — indefinite nouns ending in tanween ٌ
-- No separate word for "is" or "a" in Arabic — tanween carries both
-
-CHAPTER 2 — The and A (اَلْمَعْرِفَةُ وَالنَّكِرَةُ)
-- نَكِرَةٌ = indefinite — tanween ٌ at end (بَيْتٌ = a house)
-- مَعْرِفَةٌ = definite — ال at start, tanween removed (اَلْبَيْتُ = the house)
-- حُرُوفٌ شَمْسِيَّةٌ = solar letters — ل of ال goes silent
-- حُرُوفٌ قَمَرِيَّةٌ = moon letters — ل of ال is pronounced
-
-CHAPTER 3 — The book is new (اَلْجُمْلَةُ الاِسْمِيَّةُ)
-- جُمْلَةٌ اِسْمِيَّةٌ = nominal sentence — subject + description, no verb
-- مُبْتَدَأٌ = subject, always definite (with ال or pronoun)
-- خَبَرٌ = description/predicate, always indefinite (with tanween ٌ)
-- هُوَ = he/it (masculine), هِيَ = she/it (feminine)
-- Feminine adjectives take ةٌ ending
-
-CHAPTER 4 — Where is it? (أَيْنَ؟ وَحُرُوفُ الْجَرِّ)
-- حُرُوفُ الْجَرِّ = prepositions: فِي (in), عَلَى (on), مِنْ (from), إِلَى (to)
-- After a preposition the noun takes ِ (kasra) ending = جَرّ case
-- أَيْنَ؟ = where? — answered with a preposition phrase
-- خَرَجَ = he left/went out, ذَهَبَ = he went
-
-CHAPTER 5 — Whose is it? (لِمَنْ هٰذَا؟)
-- مُرَكَّبٌ إِضَافِيٌّ = possessive construction (Muhammad's book)
-- مُضَاف = the owned thing — loses tanween
-- مُضَافٌ إِلَيْهِ = the owner — always in jarr (ِ ending)
-- لِمَنْ؟ = whose? 
-- يَا = vocative particle for calling/addressing (يَا مُحَمَّدُ)
-- هَمْزَةُ الْوَصْلِ = connecting hamza — silent when preceded by another word
-- بِسْمِ اللهِ fully parsed: بِ + اسم (hamza drops) + اللهِ (jarr as مُضَافٌ إِلَيْهِ)
+The app now has 15 interactive Reader chapters. The current seeded sequence is: 1) This/That/What/Who, 2) Definite/Indefinite/Place, 3) Possession/Calling, 4) Compounds/Sentences, 5) More Demonstratives/First Verbs, 6) Description/Relative Clauses, 7) Attached Pronouns/Diptotes, 8) Feminine Verbs/Dialogue, 9) Plurals, 10) Plural Pronouns/Dialogue, 11) Numbers/Dual, 12) Colors/Diptotes, 13) Inna/Diptotes/Possessors, 14) Laysa/Inna/Comparison, 15) Comparison/Numbers/Past Tense. Each lesson follows the Warsh 5-beat flow: Quranic hook, discovery, practice, reveal, and close.
 
 ## How you teach
 
@@ -90,7 +55,7 @@ feel alive through Quranic context.
 - When you introduce a new Arabic term always show it in Arabic script 
   first, then give the transliteration and meaning
 - Never use hollow praise like "Amazing!" or "Great job!" or emojis
-- If a student asks something outside the current 5 chapters, you can 
+- If a student asks something outside the current 15 chapters, you can 
   answer it but gently note it is coming in a future lesson
 - If a student asks in Urdu, respond in Urdu with Arabic terms in Arabic 
   script. If they ask in English, respond in English.
@@ -110,21 +75,10 @@ export async function getAssistantReply(
   history: HistoryMessage[] = []
 ): Promise<string> {
   try {
-    const provider =
-      process.env.AI_PROVIDER?.trim() ||
-      (process.env.OPENAI_API_KEY ? "openai" : "anthropic");
-
-    if (provider === "openai") {
-      if (!process.env.OPENAI_API_KEY) {
-        return getLocalTutorReply(message);
-      }
-      return getOpenAIReply(message, history);
-    }
-
-    if (!process.env.ANTHROPIC_API_KEY) {
+    if (!process.env.OPENAI_API_KEY) {
       return getLocalTutorReply(message);
     }
-    return getAnthropicReply(message, history);
+    return getOpenAIReply(message, history);
   } catch (error) {
     return getLocalTutorReply(message);
   }
@@ -137,32 +91,9 @@ function getLocalTutorReply(message: string): string {
     normalized.includes("hello") ||
     normalized.includes("hi")
   ) {
-    return "السلام عليكم. I am Ustaad Noor. It seems I am currently offline — please check that the AI provider is configured. In the meantime, try asking me about any of the 5 chapters when I am back.";
+    return "السلام عليكم. I am Ustaad Noor. It seems I am currently offline — please check that the AI provider is configured. In the meantime, try asking me about any of the 15 reader chapters when I am back.";
   }
   return "It seems I am currently offline. Please ensure OPENAI_API_KEY is set in the backend .env file and restart the server.";
-}
-
-async function getAnthropicReply(message: string, history: HistoryMessage[]): Promise<string> {
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-  const model = process.env.AI_MODEL_DEFAULT ?? "claude-haiku-4-5-20251001";
-
-  const messages: Anthropic.MessageParam[] = [
-    ...history.map((m) => ({
-      role: (m.role === "USER" ? "user" : "assistant") as "user" | "assistant",
-      content: m.content,
-    })),
-    { role: "user", content: message },
-  ];
-
-  const response = await client.messages.create({
-    model,
-    max_tokens: 512,
-    system: SYSTEM_PROMPT,
-    messages,
-  });
-
-  const block = response.content[0];
-  return block.type === "text" ? block.text : "";
 }
 
 async function getOpenAIReply(message: string, history: HistoryMessage[]): Promise<string> {

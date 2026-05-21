@@ -4,6 +4,7 @@ import { Link, useRouter } from "expo-router";
 import { useAuth } from "../hooks/useAuth";
 import { ArabicText } from "../components/ArabicText";
 import { BrandButton } from "../components/BrandButton";
+import { getApiErrorMessage } from "../services/api";
 import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../constants/theme";
 
 export default function LoginScreen() {
@@ -21,7 +22,7 @@ export default function LoginScreen() {
       await login(email, password);
       router.replace("/(app)");
     } catch (err) {
-      setError("Unable to sign in. Check your credentials and try again.");
+      setError(getApiErrorMessage(err, "Unable to sign in. Check your credentials and try again."));
     } finally {
       setLoading(false);
     }

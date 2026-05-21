@@ -19,7 +19,7 @@ export default function HomeScreen() {
         }}
       >
         <ArabicText size="lg" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
-          نُور
+          وَرْش
         </ArabicText>
         <Text
           style={{
@@ -35,7 +35,7 @@ export default function HomeScreen() {
         </Text>
         <Text style={{ color: Colors.accent.gold, textAlign: "center", marginBottom: Spacing.lg }}>Light on every word</Text>
         <Text style={{ color: Colors.text.secondary, textAlign: "center", lineHeight: LineHeights.bodyL, marginBottom: Spacing.xxl }}>
-          Learn Quranic Arabic with a warm, structured path and an Ustadh who meets you where you are.
+          Learn Quranic Arabic with a warm, structured path and Ustaad Noor meeting you where you are.
         </Text>
         <BrandButton title="Sign In" onPress={() => router.push("/(auth)/login")} />
         <View style={{ height: Spacing.md }} />

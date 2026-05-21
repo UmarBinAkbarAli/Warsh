@@ -47,9 +47,29 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
+        name="vocabulary"
+        options={{
+          title: "Vocabulary",
+          tabBarIcon: ({ color, focused, size }) => (
+            <View style={{ alignItems: "center", justifyContent: "center" }}>
+              <Feather name="layers" color={color} size={size} />
+              <View
+                style={{
+                  marginTop: 4,
+                  width: 4,
+                  height: 4,
+                  borderRadius: 999,
+                  backgroundColor: focused ? Colors.accent.gold : "transparent",
+                }}
+              />
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="chat"
         options={{
-          title: "Ustaad Noor",
+          title: "Noor",
           tabBarIcon: ({ color, focused, size }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <Feather name="message-circle" color={color} size={size} />

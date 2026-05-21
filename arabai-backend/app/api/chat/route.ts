@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../lib/auth";
-import { getAssistantReply } from "../../../lib/anthropic";
+import { getAssistantReply } from "../../../lib/openai";
 import { getPKTStartOfDay } from "../../../lib/date";
 
 const DAILY_MESSAGE_LIMIT = Number(process.env.AI_DAILY_MESSAGE_LIMIT ?? 5);

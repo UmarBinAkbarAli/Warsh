@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, Pressable, StyleSheet, Text, TextStyle, View } from "react-native";
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextStyle, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import api from "../../../services/api";
@@ -20,7 +20,23 @@ type DiscoverCard = {
   transliteration?: string;
 };
 
-type ExerciseType = "TRUE_FALSE" | "TAP_TRANSLATION" | "FILL_BLANK" | "BUILD_SENTENCE";
+type ExerciseType = "TRUE_FALSE" | "TAP_TRANSLATION" | "FILL_BLANK" | "BUILD_SENTENCE" | "MATCHING" | "GRAMMAR_PARSE" | "CONVERSATION_BUILDER";
+
+type MatchingPair = {
+  left: string;
+  right: string;
+};
+
+type ParseToken = {
+  word: string;
+  label: string;
+  gloss?: string;
+};
+
+type ConversationLine = {
+  speaker: string;
+  line: string;
+};
 
 type Exercise = {
   type: ExerciseType;
@@ -28,6 +44,10 @@ type Exercise = {
   arabicText?: string;
   options?: string[];
   correctAnswer?: string;
+  pairs?: MatchingPair[];
+  parseTokens?: ParseToken[];
+  labels?: string[];
+  conversation?: ConversationLine[];
 };
 
 type RevealAyah = {
@@ -56,6 +76,8 @@ type CompletionResult = {
   currentStreak: number;
 };
 
+type SelectedAnswer = string | string[] | Record<string, string> | null;
+
 const ANSWER_DELAY_MS = 1200;
 
 function splitWords(value?: string) {
@@ -70,16 +92,52 @@ function normalizeAnswer(value?: string | null) {
   return value?.normalize("NFKD").replace(/[\u064B-\u065F\u0670]/g, "").replace(/\s+/g, " ").trim() ?? "";
 }
 
-function getSelectedText(selectedAnswer: string | string[] | null) {
+function getSelectedText(selectedAnswer: SelectedAnswer) {
+  if (selectedAnswer && !Array.isArray(selectedAnswer) && typeof selectedAnswer === "object") {
+    return Object.values(selectedAnswer).join(" ");
+  }
+
   return Array.isArray(selectedAnswer) ? selectedAnswer.join(" ") : selectedAnswer;
 }
 
-function isAnswerCorrect(exercise: Exercise | undefined, selectedAnswer: string | string[] | null) {
+function isAnswerCorrect(exercise: Exercise | undefined, selectedAnswer: SelectedAnswer) {
   if (!exercise) {
     return false;
   }
 
+  if (exercise.type === "MATCHING") {
+    if (!selectedAnswer || Array.isArray(selectedAnswer) || typeof selectedAnswer !== "object") {
+      return false;
+    }
+
+    return (exercise.pairs ?? []).every((pair) => normalizeAnswer(selectedAnswer[pair.left]) === normalizeAnswer(pair.right));
+  }
+
+  if (exercise.type === "GRAMMAR_PARSE") {
+    if (!selectedAnswer || Array.isArray(selectedAnswer) || typeof selectedAnswer !== "object") {
+      return false;
+    }
+
+    return (exercise.parseTokens ?? []).every((token) => normalizeAnswer(selectedAnswer[token.word]) === normalizeAnswer(token.label));
+  }
+
   return normalizeAnswer(getSelectedText(selectedAnswer)) === normalizeAnswer(exercise.correctAnswer);
+}
+
+function getCorrectAnswerDisplay(exercise?: Exercise) {
+  if (!exercise) {
+    return "";
+  }
+
+  if (exercise.type === "MATCHING") {
+    return (exercise.pairs ?? []).map((pair) => `${pair.left} = ${pair.right}`).join(" | ");
+  }
+
+  if (exercise.type === "GRAMMAR_PARSE") {
+    return (exercise.parseTokens ?? []).map((token) => `${token.word} = ${token.label}`).join(" | ");
+  }
+
+  return exercise.correctAnswer ?? "";
 }
 
 function renderMaybeArabic(value: string, arabicStyle: TextStyle = styles.optionArabicText, textStyle: TextStyle = styles.optionText) {
@@ -104,7 +162,7 @@ export default function LessonPlayScreen() {
   const [currentBeat, setCurrentBeat] = useState(1);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<string | string[] | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = useState<SelectedAnswer>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [completionResult, setCompletionResult] = useState<CompletionResult | null>(null);
@@ -189,7 +247,7 @@ export default function LessonPlayScreen() {
     setIsAnswered(false);
   }
 
-  function answerExercise(answer: string | string[]) {
+  function answerExercise(answer: SelectedAnswer) {
     if (isAnswered) {
       return;
     }
@@ -286,10 +344,10 @@ export default function LessonPlayScreen() {
             <Text style={styles.feedbackWrongTitle}>Almost - let's look at this again</Text>
             {containsArabic(currentExercise.arabicText) || containsArabic(currentExercise.correctAnswer) ? (
               <ArabicText size="sm" style={styles.feedbackCorrectAnswerArabic}>
-                {currentExercise.correctAnswer}
+                {getCorrectAnswerDisplay(currentExercise)}
               </ArabicText>
             ) : (
-              <Text style={styles.feedbackCorrectAnswerText}>{currentExercise.correctAnswer}</Text>
+              <Text style={styles.feedbackCorrectAnswerText}>{getCorrectAnswerDisplay(currentExercise)}</Text>
             )}
           </>
         )}
@@ -368,6 +426,128 @@ export default function LessonPlayScreen() {
         </View>
 
         {canCheck ? <BrandButton title="Check" onPress={checkBuildSentence} style={styles.bottomButton} /> : null}
+      </>
+    );
+  }
+
+  function updateMappedAnswer(key: string, value: string) {
+    if (isAnswered) {
+      return;
+    }
+
+    setSelectedAnswer((current) => ({
+      ...(!Array.isArray(current) && current && typeof current === "object" ? current : {}),
+      [key]: value,
+    }));
+  }
+
+  function renderMatching() {
+    const pairs = currentExercise?.pairs ?? [];
+    const choices = currentExercise?.options ?? pairs.map((pair) => pair.right);
+    const selectedMap = !Array.isArray(selectedAnswer) && selectedAnswer && typeof selectedAnswer === "object" ? selectedAnswer : {};
+    const canCheck = pairs.length > 0 && pairs.every((pair) => selectedMap[pair.left]) && !isAnswered;
+
+    return (
+      <ScrollView style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
+        {pairs.map((pair) => (
+          <View key={pair.left} style={styles.matchingRow}>
+            <View style={styles.matchingLeft}>{renderMaybeArabic(pair.left, styles.matchingArabic, styles.matchingText)}</View>
+            <View style={styles.matchingChoices}>
+              {choices.map((choice) => {
+                const selected = selectedMap[pair.left] === choice;
+                const correct = isAnswered && normalizeAnswer(choice) === normalizeAnswer(pair.right);
+                const wrong = isAnswered && selected && !correct;
+
+                return (
+                  <Pressable
+                    key={`${pair.left}-${choice}`}
+                    accessibilityRole="button"
+                    disabled={isAnswered}
+                    onPress={() => updateMappedAnswer(pair.left, choice)}
+                    style={[styles.matchingChoice, selected ? styles.matchingChoiceSelected : null, correct ? styles.optionCorrect : wrong ? styles.optionWrong : null]}
+                  >
+                    {renderMaybeArabic(choice, correct ? styles.optionArabicTextCorrect : wrong ? styles.optionArabicTextWrong : styles.optionArabicText, correct ? styles.optionTextCorrect : wrong ? styles.optionTextWrong : styles.optionText)}
+                  </Pressable>
+                );
+              })}
+            </View>
+          </View>
+        ))}
+        {canCheck ? <BrandButton title="Check" onPress={() => answerExercise(selectedMap)} style={styles.bottomButton} /> : null}
+      </ScrollView>
+    );
+  }
+
+  function renderGrammarParse() {
+    const tokens = currentExercise?.parseTokens ?? [];
+    const labels = currentExercise?.labels ?? Array.from(new Set(tokens.map((token) => token.label)));
+    const selectedMap = !Array.isArray(selectedAnswer) && selectedAnswer && typeof selectedAnswer === "object" ? selectedAnswer : {};
+    const canCheck = tokens.length > 0 && tokens.every((token) => selectedMap[token.word]) && !isAnswered;
+
+    return (
+      <ScrollView style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
+        <View style={styles.parseSentence}>
+          {tokens.map((token) => (
+            <View key={token.word} style={styles.parseToken}>
+              <ArabicText size="sm" style={styles.parseWord}>
+                {token.word}
+              </ArabicText>
+              <Text style={styles.parseGloss}>{selectedMap[token.word] ?? token.gloss ?? "Choose role"}</Text>
+            </View>
+          ))}
+        </View>
+        {tokens.map((token) => (
+          <View key={`${token.word}-labels`} style={styles.parseRow}>
+            <View style={styles.parseRowWord}>
+              <ArabicText size="sm" style={styles.matchingArabic}>
+                {token.word}
+              </ArabicText>
+              {token.gloss ? <Text style={styles.parseGloss}>{token.gloss}</Text> : null}
+            </View>
+            <View style={styles.labelWrap}>
+              {labels.map((label) => {
+                const selected = selectedMap[token.word] === label;
+                const correct = isAnswered && normalizeAnswer(label) === normalizeAnswer(token.label);
+                const wrong = isAnswered && selected && !correct;
+
+                return (
+                  <Pressable
+                    key={`${token.word}-${label}`}
+                    accessibilityRole="button"
+                    disabled={isAnswered}
+                    onPress={() => updateMappedAnswer(token.word, label)}
+                    style={[styles.labelChip, selected ? styles.matchingChoiceSelected : null, correct ? styles.optionCorrect : wrong ? styles.optionWrong : null]}
+                  >
+                    {renderMaybeArabic(label, correct ? styles.optionArabicTextCorrect : wrong ? styles.optionArabicTextWrong : styles.optionArabicText, correct ? styles.optionTextCorrect : wrong ? styles.optionTextWrong : styles.optionText)}
+                  </Pressable>
+                );
+              })}
+            </View>
+          </View>
+        ))}
+        {canCheck ? <BrandButton title="Check" onPress={() => answerExercise(selectedMap)} style={styles.bottomButton} /> : null}
+      </ScrollView>
+    );
+  }
+
+  function renderConversationBuilder() {
+    return (
+      <>
+        <View style={styles.dialogueCard}>
+          {(currentExercise?.conversation ?? []).map((line, index) => (
+            <View key={`${line.speaker}-${index}`} style={styles.dialogueLine}>
+              <Text style={styles.dialogueSpeaker}>{line.speaker}</Text>
+              {containsArabic(line.line) ? (
+                <ArabicText size="sm" style={styles.dialogueArabic}>
+                  {line.line}
+                </ArabicText>
+              ) : (
+                <Text style={styles.dialogueText}>{line.line}</Text>
+              )}
+            </View>
+          ))}
+        </View>
+        {renderOptionGrid()}
       </>
     );
   }
@@ -552,6 +732,26 @@ export default function LessonPlayScreen() {
   }
 
   function renderPractice() {
+    function renderCurrentExercise() {
+      if (currentExercise?.type === "BUILD_SENTENCE") {
+        return renderBuildSentence();
+      }
+
+      if (currentExercise?.type === "MATCHING") {
+        return renderMatching();
+      }
+
+      if (currentExercise?.type === "GRAMMAR_PARSE") {
+        return renderGrammarParse();
+      }
+
+      if (currentExercise?.type === "CONVERSATION_BUILDER") {
+        return renderConversationBuilder();
+      }
+
+      return renderOptionGrid();
+    }
+
     return (
       <View style={[styles.fullScreen, screenPadding]}>
         {renderProgressBar()}
@@ -564,7 +764,7 @@ export default function LessonPlayScreen() {
           </View>
         ) : null}
 
-        {currentExercise?.type === "BUILD_SENTENCE" ? renderBuildSentence() : renderOptionGrid()}
+        {renderCurrentExercise()}
         {renderFeedback()}
       </View>
     );
@@ -602,6 +802,9 @@ export default function LessonPlayScreen() {
 
   function renderClose() {
     const earnedPoints = completionResult?.xpEarned ?? lesson?.xpReward ?? 10;
+    const noorTip = typeof lesson?.content?.ustadh_noor_tip_en === "string"
+      ? lesson.content.ustadh_noor_tip_en
+      : "Tonight, open the Quran and look for the pattern you learned today. You will see the ayah differently now.";
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
@@ -613,9 +816,7 @@ export default function LessonPlayScreen() {
           </ArabicText>
           <View style={styles.noorBubble}>
             <Text style={styles.noorLabel}>Ustaad Noor</Text>
-            <Text style={styles.noorTip}>
-              Tonight, open the Quran to Al-Baqarah. Find the word you learned today. You will see it differently now.
-            </Text>
+            <Text style={styles.noorTip}>{noorTip}</Text>
           </View>
         </View>
         <BrandButton title="Back to lessons" onPress={() => router.back()} loading={submitting} style={styles.bottomButton} />
@@ -950,6 +1151,146 @@ const styles = StyleSheet.create({
     fontSize: 20,
     lineHeight: 28,
     textAlign: "center",
+  },
+  exerciseScroller: {
+    flex: 1,
+    marginTop: 20,
+    marginBottom: 96,
+  },
+  exerciseScrollerContent: {
+    paddingBottom: 16,
+  },
+  matchingRow: {
+    marginBottom: 12,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: "#D8D0BE",
+    borderRadius: 10,
+    padding: 10,
+    backgroundColor: "#FFFFFF",
+  },
+  matchingLeft: {
+    marginBottom: 8,
+  },
+  matchingChoices: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 6,
+  },
+  matchingChoice: {
+    minHeight: 38,
+    minWidth: "47%",
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1,
+    borderColor: "#D8D0BE",
+    borderRadius: 8,
+    padding: 8,
+    backgroundColor: "#F5F2EA",
+  },
+  matchingChoiceSelected: {
+    borderColor: "#9A8F6A",
+    backgroundColor: "#FEF9E7",
+  },
+  matchingArabic: {
+    color: "#0F1117",
+    fontSize: 22,
+    lineHeight: 32,
+    textAlign: "center",
+  },
+  matchingText: {
+    color: "#0F1117",
+    fontFamily: Fonts.regular,
+    fontSize: 13,
+    lineHeight: 18,
+    textAlign: "center",
+  },
+  parseSentence: {
+    flexDirection: "row-reverse",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    marginBottom: 16,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: "#F0D080",
+    borderRadius: 12,
+    padding: 12,
+    backgroundColor: "#FFFBF0",
+  },
+  parseToken: {
+    alignItems: "center",
+    margin: 6,
+  },
+  parseWord: {
+    color: "#0F1117",
+    fontSize: 24,
+    lineHeight: 34,
+    textAlign: "center",
+  },
+  parseGloss: {
+    marginTop: 2,
+    color: "#9A8F6A",
+    fontFamily: Fonts.regular,
+    fontSize: 9,
+    lineHeight: 13,
+    textAlign: "center",
+  },
+  parseRow: {
+    marginBottom: 12,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: "#D8D0BE",
+    borderRadius: 10,
+    padding: 10,
+    backgroundColor: "#FFFFFF",
+  },
+  parseRowWord: {
+    alignItems: "center",
+    marginBottom: 8,
+  },
+  labelWrap: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: 6,
+  },
+  labelChip: {
+    minHeight: 36,
+    minWidth: "30%",
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1,
+    borderColor: "#D8D0BE",
+    borderRadius: 999,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    backgroundColor: "#F5F2EA",
+  },
+  dialogueCard: {
+    marginTop: 20,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: "#C8C0A8",
+    borderRadius: 12,
+    padding: 12,
+    backgroundColor: "#FFFFFF",
+  },
+  dialogueLine: {
+    marginBottom: 10,
+  },
+  dialogueSpeaker: {
+    color: "#9A8F6A",
+    fontFamily: Fonts.regular,
+    fontSize: 9,
+    lineHeight: 13,
+  },
+  dialogueArabic: {
+    color: "#0F1117",
+    fontSize: 22,
+    lineHeight: 32,
+    textAlign: "left",
+  },
+  dialogueText: {
+    color: "#0F1117",
+    fontFamily: Fonts.regular,
+    fontSize: 12,
+    lineHeight: 18,
   },
   feedbackBar: {
     position: "absolute",

@@ -5,7 +5,8 @@ export const PROGRESS_STATUS = {
   COMPLETED: "COMPLETED",
   SKIPPED_BY_PLACEMENT: "SKIPPED_BY_PLACEMENT",
 } as const;
-export const DEV_UNLOCK_ALL = true; // TODO: set to false before production release
+export const DEV_UNLOCK_ALL =
+  process.env.NODE_ENV !== "production" && process.env.DEV_UNLOCK_ALL === "true";
 
 type ChapterWithLessons = {
   id: string;

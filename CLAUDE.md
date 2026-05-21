@@ -55,25 +55,29 @@ npm run lint          # ESLint
 ```text
 DATABASE_URL="postgresql://arabai:arabai_dev_password@localhost:5432/arabai"
 JWT_SECRET="min-32-char-secret"
-ANTHROPIC_API_KEY=""
-AI_PROVIDER=""                        # auto-detected: "openai" if OPENAI_API_KEY set, else "anthropic"
+DEV_UNLOCK_ALL=false
 AI_DAILY_MESSAGE_LIMIT=5
-AI_MODEL_DEFAULT="claude-haiku-4-5-20251001"
 OPENAI_API_KEY=""
 OPENAI_MODEL="gpt-4o-mini"
 ```
 
-**Mobile** - `.env` in `arabai-app/`:
+**Mobile** - copy `arabai-app/.env.example` to `arabai-app/.env`:
 
 ```text
-EXPO_PUBLIC_API_URL="http://localhost:3000"
+EXPO_PUBLIC_API_URL=http://127.0.0.1:3000
+EXPO_PUBLIC_ENVIRONMENT=development
 ```
 
 Only `EXPO_PUBLIC_*` variables are exposed to the React Native runtime.
 
-For real device usage:
-- **Physical phone / Expo Go:** use the Windows LAN IP, e.g. `http://192.168.x.x:3000`
-- **Android Studio emulator:** use `http://10.0.2.2:3000`
+Preferred local physical-device testing path:
+- Start backend on port `3000`
+- Configure USB reverse:
+  - `adb reverse tcp:8081 tcp:8081`
+  - `adb reverse tcp:3000 tcp:3000`
+- Start Metro with `EXPO_PUBLIC_API_URL=http://127.0.0.1:3000`
+
+Avoid committing machine-specific LAN IPs. Use `EXPO_PUBLIC_API_URL` for any per-developer override.
 
 ## Architecture
 
@@ -84,7 +88,7 @@ Expo App (Android)
   -> Axios (auto-attaches JWT via interceptor)
   -> Next.js API Routes (arabai-backend/app/api/)
   -> Prisma -> PostgreSQL (Docker locally)
-             -> Anthropic/OpenAI/local fallback (chat endpoint only)
+             -> OpenAI/local fallback (chat endpoint only)
 ```
 
 ### Backend Patterns
@@ -100,11 +104,11 @@ Error codes in use: `bad_request`, `unauthorized`, `conflict`, `too_many_request
 
 **Prisma singleton** - `lib/prisma.ts` exports a single `prisma` instance using `@prisma/adapter-pg` (direct PG pooling, no Data Proxy). Import from here — never instantiate `PrismaClient` in route files.
 
-**AI integration** - `lib/anthropic.ts` routes to OpenAI if `OPENAI_API_KEY` is set, otherwise Anthropic, and falls back to a hardcoded local tutor (`getLocalTutorReply()`) when keys are absent **or when the provider call throws** — this can mask provider failures during debugging. The AI persona is "Ustadh Noor." The `/api/chat` route enforces a daily message limit by counting `ChatMessage` rows for the current PKT day.
+**AI integration** - `lib/openai.ts` uses OpenAI when `OPENAI_API_KEY` is set and falls back to a hardcoded local tutor (`getLocalTutorReply()`) when the key is absent **or when the provider call throws** — this can mask provider failures during debugging. The AI persona is "Ustaad Noor." The `/api/chat` route enforces a daily message limit by counting `ChatMessage` rows for the current PKT day.
 
 **Timezone** - `lib/date.ts` contains `getPKTStartOfDay()` and related helpers for streak calculations (Pakistan Time = UTC+5).
 
-**Course locking** - `lib/course.ts` provides `buildChapterStates()` and `getUserCourseState(userId)`. Chapters are locked until the previous chapter is fully completed. `DEV_UNLOCK_ALL = true` in this file bypasses locking — **set to `false` before production**.
+**Course locking** - `lib/course.ts` provides `buildChapterStates()` and `getUserCourseState(userId)`. Chapters are locked until the previous chapter is fully completed. `DEV_UNLOCK_ALL` only bypasses locking outside production when `DEV_UNLOCK_ALL=true`.
 
 **Placement logic** - `lib/placement.ts` maps placement test results to starting chapters:
 - `BEGINNER` → ch1, `KNOWS_LETTERS` → ch4, `STUDIED_BEFORE` → ch6, `CAN_READ_BASIC` → ch8
@@ -135,12 +139,12 @@ Error codes in use: `bad_request`, `unauthorized`, `conflict`, `too_many_request
 - `stores/authStore.ts` — Zustand + `@react-native-async-storage/async-storage` persist. Holds `user`, `token`, `isHydrated`. The `(app)/_layout.tsx` guard waits for `isHydrated` before redirecting.
 - `stores/onboardingStore.ts` — Zustand (non-persisted). Holds `goal`, `level`, `name`, `language`, `placementType` for the onboarding flow.
 
-**API client:** `services/api.ts` — Axios instance that auto-injects `Authorization: Bearer <token>` from auth store on every request. Default base URL falls back to a hardcoded LAN IP when `EXPO_PUBLIC_API_URL` is unset.
+**API client:** `services/api.ts` — Axios instance that auto-injects `Authorization: Bearer <token>` from auth store on every request. Configure the base URL with `EXPO_PUBLIC_API_URL`; local physical-device testing should prefer USB reverse with `http://127.0.0.1:3000`.
 
 **Navigation:** Expo Router file-based.
 - `(auth)` group — login, register, onboarding (welcome → goal → language → level → name → placement → ready)
 - `(app)` — stack wrapper with auth guard
-- `(app)/(tabs)` — 3 bottom-tab destinations: Learn (`index.tsx`), Noor (`chat.tsx`), You (`profile.tsx`)
+- `(app)/(tabs)` — 4 bottom-tab destinations: Learn (`index.tsx`), Vocabulary (`vocabulary.tsx`), Noor (`chat.tsx`), You (`profile.tsx`)
 - `(app)/lessons/[lessonId]/` — stack detail screens, not tabs
 - Root `app/index.tsx` — branded landing screen
 
@@ -164,7 +168,7 @@ Error codes in use: `bad_request`, `unauthorized`, `conflict`, `too_many_request
 - **Implemented and working:** register/login/logout, persisted auth session, chapter list with locking, lesson play flow, lesson completion with XP/streak updates, profile progress screen, chat with AI tutor, placement test, branded onboarding flow, tabs + detail-route navigation
 
 - **Still limited / incomplete:**
-  - Curriculum: 5 chapters / ~16 lessons (Phase 1.5 in progress)
+  - Curriculum: 15 chapters / 60 lessons seeded; content still needs manual pedagogy and mobile QA
   - Splash/brand assets are placeholder quality
   - Upstash Redis rate limiting not integrated (currently counts DB rows)
   - Token refresh (`/api/auth/refresh`) is a stub

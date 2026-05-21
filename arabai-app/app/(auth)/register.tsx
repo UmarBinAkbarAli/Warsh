@@ -5,6 +5,7 @@ import { useAuth } from "../hooks/useAuth";
 import { useOnboardingStore } from "../stores/onboardingStore";
 import { ArabicText } from "../components/ArabicText";
 import { BrandButton } from "../components/BrandButton";
+import { getApiErrorMessage } from "../services/api";
 import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../constants/theme";
 
 export default function RegisterScreen() {
@@ -31,7 +32,7 @@ export default function RegisterScreen() {
       await applyPlacement(placementType);
       router.replace("/(app)");
     } catch (err) {
-      setError("Unable to finish account setup. Please try again.");
+      setError(getApiErrorMessage(err, "Unable to finish account setup. Please try again."));
     } finally {
       setLoading(false);
     }
@@ -40,7 +41,7 @@ export default function RegisterScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
       <ArabicText size="lg" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
-        نُور
+        وَرْش
       </ArabicText>
       <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", marginBottom: Spacing.sm }}>
         Create your Warsh account
