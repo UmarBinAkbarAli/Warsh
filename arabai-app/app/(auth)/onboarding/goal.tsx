@@ -3,6 +3,7 @@ import { useRouter } from "expo-router";
 import { useOnboardingStore } from "../../stores/onboardingStore";
 import { BrandButton } from "../../components/BrandButton";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
+import { trackOnboardingGoalSelected } from "../../services/analytics";
 
 export default function OnboardingGoalScreen() {
   const router = useRouter();
@@ -22,7 +23,7 @@ export default function OnboardingGoalScreen() {
       <View style={{ height: Spacing.md }} />
       <BrandButton title="Study Arabic" variant="secondary" onPress={() => setGoal("STUDY")} selected={goal === "STUDY"} />
       <View style={{ height: Spacing.xl }} />
-      <BrandButton title="Continue" onPress={() => router.push("/(auth)/onboarding/level")} />
+      <BrandButton title="Continue" onPress={() => { if (goal) trackOnboardingGoalSelected(goal); router.push("/(auth)/onboarding/level"); }} />
     </View>
   );
 }

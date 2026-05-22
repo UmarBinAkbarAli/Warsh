@@ -3,6 +3,7 @@ import { useRouter } from "expo-router";
 import { useOnboardingStore } from "../../stores/onboardingStore";
 import { BrandButton } from "../../components/BrandButton";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
+import { trackOnboardingLevelSelected } from "../../services/analytics";
 
 export default function OnboardingLevelScreen() {
   const router = useRouter();
@@ -22,7 +23,7 @@ export default function OnboardingLevelScreen() {
       <View style={{ height: Spacing.md }} />
       <BrandButton title="Some" variant="secondary" onPress={() => setLevel("INTERMEDIATE")} selected={level === "INTERMEDIATE"} />
       <View style={{ height: Spacing.xl }} />
-      <BrandButton title="Continue" onPress={() => router.push("/(auth)/onboarding/name")} />
+      <BrandButton title="Continue" onPress={() => { if (level) trackOnboardingLevelSelected(level); router.push("/(auth)/onboarding/daily-commitment"); }} />
     </View>
   );
 }

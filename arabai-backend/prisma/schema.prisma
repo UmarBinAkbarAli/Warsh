@@ -18,12 +18,22 @@ model User {
     placementType  String?
     xp             Int               @default(0)
     gems           Int               @default(0)
+    dailyGoalMinutes Int             @default(10)
+    trialStartAt   DateTime          @default(now())
+    trialExpiresAt DateTime          @default(dbgenerated("now() + interval '7 days'"))
+    subscriptionStatus String        @default("trial")
+    subscriptionProductId String?
+    subscriptionActiveUntil DateTime?
+    noorOverageBalance Int           @default(0)
+    phrasesSpoken  Int               @default(0)
     createdAt      DateTime          @default(now())
     updatedAt      DateTime          @updatedAt
     streak         Streak?
     progress       Progress[]
     chatMessages   ChatMessage[]
     achievements   UserAchievement[]
+    userWords          UserVocabularyWord[]
+    userSurahProgress  UserSurahProgress[]
 }
 
 enum Goal {
@@ -40,14 +50,15 @@ enum Level {
 }
 
 model Streak {
-    id             String    @id @default(cuid())
-    userId         String    @unique
-    user           User      @relation(fields: [userId], references: [id])
-    currentStreak  Int       @default(0)
-    longestStreak  Int       @default(0)
-    lastActiveDate DateTime?
-    streakFreezes  Int       @default(0)
-    updatedAt      DateTime  @updatedAt
+    id                String    @id @default(cuid())
+    userId            String    @unique
+    user              User      @relation(fields: [userId], references: [id])
+    currentStreak     Int       @default(0)
+    longestStreak     Int       @default(0)
+    lastActiveDate    DateTime?
+    streakFreezes     Int       @default(0)
+    lastFreezeUsedAt  DateTime?
+    updatedAt         DateTime  @updatedAt
 }
 
 model Chapter {
@@ -63,31 +74,23 @@ model Chapter {
 }
 
 model Lesson {
-    id                 String     @id @default(cuid())
-    chapterId          String
-    chapter            Chapter    @relation(fields: [chapterId], references: [id])
-    order              Int
-    title              String
-    titleAr            String
-    type               LessonType
-    xpReward           Int        @default(10)
-    content            Json
-    hook               Json?
-    discoverCards      Json?
-    exercises          Json?
-    revealText         String?
-    revealAyah         Json?
-    fatihaProgressDelta Int      @default(0)
-    progress           Progress[]
+    id          String         @id @default(cuid())
+    chapterId   String
+    chapter     Chapter        @relation(fields: [chapterId], references: [id])
+    order       Int
+    title       String
+    titleAr     String
+    template    LessonTemplate
+    xpReward    Int            @default(10)
+    content     Json
+    progress    Progress[]
 }
 
-enum LessonType {
-    FLASHCARD
-    FILL_BLANK
-    MULTIPLE_CHOICE
-    MATCHING
-    LISTENING
-    VOCABULARY
+enum LessonTemplate {
+    STANDARD
+    SPOKEN_PHRASES
+    REVIEW
+    VERB_PATTERN
 }
 
 model Progress {
@@ -141,4 +144,69 @@ model UserAchievement {
     unlockedAt    DateTime    @default(now())
 
     @@unique([userId, achievementId])
+}
+
+model VocabularyWord {
+    id               String   @id @default(cuid())
+    arabic           String
+    arabicPlain      String
+    transliteration  String
+    translationEn    String
+    translationUr    String
+    wordType         String
+    gender           String?
+    pluralForm       String?
+    rootLetters      String?
+    topicCategories  String[]
+    chapterIntroduced Int     @default(1)
+    frequencyInQuran  Int?
+    quranicExample   Json?
+    sortOrder        Int      @default(0)
+    createdAt        DateTime @default(now())
+    userWords        UserVocabularyWord[]
+}
+
+model TadabburSurah {
+    id          String              @id @default(cuid())
+    orderInProg Int                 @unique
+    surahNumber Int                 @unique
+    nameAr      String
+    nameEn      String
+    meaningEn   String
+    totalAyat   Int
+    // JSON: Array<{ ayahNumber, arabic, translationEn, words: Array<{ pos, arabic, arabicPlain, vocabId: string|null }> }>
+    ayatData    Json
+    createdAt   DateTime            @default(now())
+    userProgress UserSurahProgress[]
+}
+
+model UserSurahProgress {
+    id          String        @id @default(cuid())
+    userId      String
+    user        User          @relation(fields: [userId], references: [id])
+    surahId     String
+    surah       TadabburSurah @relation(fields: [surahId], references: [id])
+    completedAt DateTime?
+    updatedAt   DateTime      @updatedAt
+
+    @@unique([userId, surahId])
+}
+
+model UserVocabularyWord {
+    id                String         @id @default(cuid())
+    userId            String
+    user              User           @relation(fields: [userId], references: [id])
+    wordId            String
+    word              VocabularyWord @relation(fields: [wordId], references: [id])
+    easeFactor        Float          @default(2.5)
+    intervalDays      Int            @default(1)
+    repetitions       Int            @default(0)
+    nextReviewDate    DateTime       @default(now())
+    lastReviewQuality Int            @default(0)
+    isFavorite        Boolean        @default(false)
+    isHidden          Boolean        @default(false)
+    createdAt         DateTime       @default(now())
+    updatedAt         DateTime       @updatedAt
+
+    @@unique([userId, wordId])
 }

@@ -6,6 +6,7 @@ import { ArabicText } from "../components/ArabicText";
 import { BrandButton } from "../components/BrandButton";
 import { getApiErrorMessage } from "../services/api";
 import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../constants/theme";
+import { trackLoginCompleted } from "../services/analytics";
 
 export default function LoginScreen() {
   const router = useRouter();
@@ -20,6 +21,7 @@ export default function LoginScreen() {
     setError("");
     try {
       await login(email, password);
+      trackLoginCompleted();
       router.replace("/(app)");
     } catch (err) {
       setError(getApiErrorMessage(err, "Unable to sign in. Check your credentials and try again."));

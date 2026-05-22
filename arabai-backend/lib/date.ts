@@ -18,3 +18,11 @@ export function isYesterdayPKT(date: Date) {
   const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000);
   return getPKTDateString(date) === getPKTDateString(yesterday);
 }
+
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+export function get4amPKTBoundary(): Date {
+  const pktMidnight = getPKTStartOfDay(new Date());
+  const fourAmPkt = new Date(pktMidnight.getTime() + 4 * 60 * 60 * 1000);
+  return new Date() >= fourAmPkt ? fourAmPkt : new Date(fourAmPkt.getTime() - DAY_MS);
+}

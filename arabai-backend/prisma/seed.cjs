@@ -2,7 +2,31 @@ require("dotenv/config");
 
 const { PrismaClient } = require("@prisma/client");
 const { PrismaPg } = require("@prisma/adapter-pg");
-const { chapters } = require("./curriculum-phase15.cjs");
+const { chapters } = require("./curriculum-book1.cjs");
+const { chapters: chapters2 } = require("./curriculum-books2-4.cjs");
+const { chapters: chapters3 } = require("./curriculum-books5-6.cjs");
+const { chapters: chapters4 } = require("./curriculum-books7-8.cjs");
+const { seedVocabulary } = require("./vocabulary-seed.cjs");
+const { seedTadabbur } = require("./tadabbur-seed.cjs");
+const ch01L01Content = require("./fixtures/chapter-01-lesson-01.json");
+
+const ACHIEVEMENTS = [
+  { key: "first_lesson",           title: "الخُطْوَة الأُولَى",            description: "Complete your very first lesson",                    icon: "footsteps-outline",   xpReward: 25  },
+  { key: "first_chapter",          title: "إِكْمَال الفَصْل الأَوَّل",     description: "Complete your first full chapter",                    icon: "book-outline",        xpReward: 50  },
+  { key: "streak_3",               title: "ثَلَاثَة أَيَّام",               description: "Study 3 days in a row",                               icon: "flame-outline",       xpReward: 15  },
+  { key: "streak_7",               title: "أُسْبُوع",                       description: "Keep a 7-day streak",                                  icon: "star-outline",        xpReward: 25  },
+  { key: "streak_30",              title: "شَهْر كَامِل",                   description: "Keep a 30-day streak",                                 icon: "trophy-outline",      xpReward: 100 },
+  { key: "xp_100",                 title: "عَالِم نَاشِئ",                  description: "Earn 100 points",                                      icon: "medal-outline",       xpReward: 10  },
+  { key: "xp_500",                 title: "عَالِم فِضِّيّ",                 description: "Earn 500 points",                                      icon: "medal-outline",       xpReward: 25  },
+  { key: "xp_1000",                title: "عَالِم ذَهَبِيّ",                description: "Earn 1,000 points",                                    icon: "medal-outline",       xpReward: 50  },
+  { key: "lessons_10",             title: "عَشْرَة دُرُوس",                 description: "Complete 10 lessons",                                  icon: "library-outline",     xpReward: 20  },
+  { key: "first_noor",             title: "أَوَّل سُؤَال",                  description: "Send your first message to Ustaad Noor",               icon: "chatbubble-outline",  xpReward: 10  },
+  { key: "first_shadow_repeat",    title: "أَوَّل مُحَاكَاة",               description: "Complete your first speaking exercise",                icon: "mic-outline",         xpReward: 10  },
+  { key: "first_spoken_lesson",    title: "أَوَّل دَرْس كَلَام",            description: "Complete your first spoken phrases lesson",            icon: "chatbubbles-outline", xpReward: 25  },
+  { key: "phrases_10",             title: "عَشْرَة جُمَل",                  description: "Learn to say 10 phrases",                              icon: "mic-outline",         xpReward: 15  },
+  { key: "phrases_50",             title: "خَمْسُونَ جُمْلَة",              description: "Learn to say 50 phrases",                              icon: "mic-outline",         xpReward: 25  },
+  { key: "phrases_100",            title: "مِئَة جُمْلَة",                  description: "Learn to say 100 phrases",                             icon: "mic-outline",         xpReward: 50  },
+];
 
 const adapter = new PrismaPg({
   connectionString: process.env.DATABASE_URL || ""
@@ -10,41 +34,69 @@ const adapter = new PrismaPg({
 
 const prisma = new PrismaClient({ adapter });
 
+async function waitForNeon(retries = 8, delayMs = 3000) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      await prisma.$connect();
+      await prisma.$queryRaw`SELECT 1`;
+      return;
+    } catch (e) {
+      if (i === retries - 1) throw e;
+      console.log(`Neon cold-start — waiting ${delayMs / 1000}s (attempt ${i + 1}/${retries})...`);
+      await new Promise(r => setTimeout(r, delayMs));
+      await prisma.$disconnect();
+    }
+  }
+}
+
 async function main() {
+  // Wait for Neon to wake up (free tier suspends after inactivity)
+  await waitForNeon();
+
+  // Delete in FK-safe order: children before parents
+  await prisma.userSurahProgress.deleteMany();
+  await prisma.userVocabularyWord.deleteMany();
   await prisma.progress.deleteMany();
   await prisma.chatMessage.deleteMany();
   await prisma.userAchievement.deleteMany();
-  await prisma.achievement.deleteMany();
   await prisma.streak.deleteMany();
+  await prisma.achievement.deleteMany();
   await prisma.lesson.deleteMany();
   await prisma.chapter.deleteMany();
   await prisma.user.deleteMany();
+  await prisma.vocabularyWord.deleteMany();
+  await prisma.tadabburSurah.deleteMany();
 
-  for (const chapterData of chapters) {
-    const { lessons, ...chapterFields } = chapterData;
-    const chapter = await prisma.chapter.create({ data: chapterFields });
-
-    for (const [index, lesson] of lessons.entries()) {
-      await prisma.lesson.create({
-        data: {
-          chapterId: chapter.id,
-          order: index + 1,
-          title: lesson.title,
-          titleAr: lesson.titleAr,
-          type: lesson.type,
-          xpReward: lesson.xpReward ?? 10,
-          content: lesson.content ?? {},
-          hook: lesson.hook,
-          discoverCards: lesson.discoverCards,
-          exercises: lesson.exercises,
-          revealText: lesson.revealText,
-          revealAyah: lesson.revealAyah,
-          fatihaProgressDelta: lesson.fatihaProgressDelta ?? 0,
-        }
-      });
-    }
+  for (const achievement of ACHIEVEMENTS) {
+    await prisma.achievement.create({ data: achievement });
   }
 
+  // Seed chapter metadata only — lessons are now authored individually in
+  // prisma/fixtures/ using warsh-content-schema.ts (see Docs/).
+  const allChapters = [...chapters, ...chapters2, ...chapters3, ...chapters4];
+  const chapterIdByOrder = new Map();
+
+  for (const chapterData of allChapters) {
+    const { lessons: _unused, ...chapterFields } = chapterData;
+    const created = await prisma.chapter.create({ data: chapterFields });
+    chapterIdByOrder.set(created.order, created.id);
+  }
+
+  // Chapter 1, Lesson 1 — هَذَا — fully authored (warsh-content-schema v1.0)
+  await prisma.lesson.create({
+    data: {
+      chapterId: chapterIdByOrder.get(1),
+      order: 1,
+      title: "First Encounter with هَذَا",
+      titleAr: "اللقاء الأول مع هَذَا",
+      template: "STANDARD",
+      xpReward: ch01L01Content._meta?.xp_reward ?? 10,
+      content: ch01L01Content,
+    },
+  });
+
+  await seedVocabulary(prisma);
+  await seedTadabbur(prisma);
   console.log("Seed data created successfully.");
 }
 

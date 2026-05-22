@@ -1,46 +1,40 @@
-import { View, Text } from "react-native";
+import { useEffect, useState } from "react";
+import { ActivityIndicator, View } from "react-native";
 import { useRouter } from "expo-router";
-import { ArabicText } from "./components/ArabicText";
-import { BrandButton } from "./components/BrandButton";
-import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../constants/theme";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useAuthStore } from "./stores/authStore";
+import { Colors } from "../constants/theme";
 
-export default function HomeScreen() {
+export const PREVIEW_SEEN_KEY = "warsh_preview_seen";
+
+export default function Index() {
   const router = useRouter();
+  const isHydrated = useAuthStore((s) => s.isHydrated);
+  const token = useAuthStore((s) => s.token);
+  const [previewChecked, setPreviewChecked] = useState(false);
+  const [hasSeenPreview, setHasSeenPreview] = useState(false);
+
+  useEffect(() => {
+    AsyncStorage.getItem(PREVIEW_SEEN_KEY).then((val) => {
+      setHasSeenPreview(val === "1");
+      setPreviewChecked(true);
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!isHydrated || !previewChecked) return;
+    if (token) {
+      router.replace("/(app)/(tabs)");
+    } else if (hasSeenPreview) {
+      router.replace("/(auth)/login");
+    } else {
+      router.replace("/(auth)/preview/a1-welcome");
+    }
+  }, [isHydrated, previewChecked, token, hasSeenPreview]);
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", backgroundColor: Colors.bg.primary, padding: Spacing.xl }}>
-      <View
-        style={{
-          backgroundColor: Colors.bg.surface,
-          borderRadius: Radii.xl,
-          padding: Spacing.xxl,
-          borderWidth: 1,
-          borderColor: Colors.border.subtle,
-        }}
-      >
-        <ArabicText size="lg" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
-          وَرْش
-        </ArabicText>
-        <Text
-          style={{
-            color: Colors.text.primary,
-            fontSize: FontSizes.displayL,
-            lineHeight: LineHeights.displayL,
-            fontWeight: "700",
-            textAlign: "center",
-            marginBottom: Spacing.sm,
-          }}
-        >
-          Warsh
-        </Text>
-        <Text style={{ color: Colors.accent.gold, textAlign: "center", marginBottom: Spacing.lg }}>Light on every word</Text>
-        <Text style={{ color: Colors.text.secondary, textAlign: "center", lineHeight: LineHeights.bodyL, marginBottom: Spacing.xxl }}>
-          Learn Quranic Arabic with a warm, structured path and Ustaad Noor meeting you where you are.
-        </Text>
-        <BrandButton title="Sign In" onPress={() => router.push("/(auth)/login")} />
-        <View style={{ height: Spacing.md }} />
-        <BrandButton title="Create Account" variant="secondary" onPress={() => router.push("/(auth)/onboarding/welcome")} />
-      </View>
+    <View style={{ flex: 1, backgroundColor: Colors.bg.primary, alignItems: "center", justifyContent: "center" }}>
+      <ActivityIndicator size="large" color={Colors.accent.gold} />
     </View>
   );
 }

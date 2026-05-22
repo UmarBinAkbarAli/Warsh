@@ -13,13 +13,22 @@ export interface AuthPayload {
 }
 
 export function signToken(userId: string) {
-  return jwt.sign({ userId }, getJwtSecret(), { expiresIn: "7d" });
+  return jwt.sign({ userId }, getJwtSecret(), { expiresIn: "30d" });
 }
 
 export function verifyToken(token: string): AuthPayload | null {
   try {
     return jwt.verify(token, getJwtSecret()) as AuthPayload;
-  } catch (error) {
+  } catch {
+    return null;
+  }
+}
+
+// Allows extracting the userId from an expired token — used only by the refresh endpoint.
+export function verifyTokenAllowExpired(token: string): AuthPayload | null {
+  try {
+    return jwt.verify(token, getJwtSecret(), { ignoreExpiration: true }) as AuthPayload;
+  } catch {
     return null;
   }
 }

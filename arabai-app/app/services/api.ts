@@ -1,9 +1,50 @@
-import axios from "axios";
+import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
 import { getToken } from "./storage";
 import { useAuthStore } from "../stores/authStore";
+import { router } from "expo-router";
 
-const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL?.trim() || "https://warsh-backend.vercel.app";
+interface RetryableConfig extends InternalAxiosRequestConfig {
+  _retried?: boolean;
+}
+
+type AppEnvironment = "development" | "staging" | "production";
+
+const APP_ENVIRONMENT: AppEnvironment = process.env.EXPO_PUBLIC_ENVIRONMENT ?? "production";
 const API_TIMEOUT_MS = 10000;
+
+function getApiBaseUrl() {
+  const rawApiUrl = process.env.EXPO_PUBLIC_API_URL?.trim();
+
+  if (!rawApiUrl) {
+    throw new Error(`EXPO_PUBLIC_API_URL must be set for ${APP_ENVIRONMENT} builds.`);
+  }
+
+  let parsedUrl: URL;
+  try {
+    parsedUrl = new URL(rawApiUrl);
+  } catch {
+    throw new Error("EXPO_PUBLIC_API_URL must be a valid absolute URL.");
+  }
+
+  const hostname = parsedUrl.hostname.toLowerCase();
+  const isLocalHost =
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    hostname === "10.0.2.2" ||
+    hostname.endsWith(".local");
+
+  if (APP_ENVIRONMENT !== "development" && parsedUrl.protocol !== "https:") {
+    throw new Error("EXPO_PUBLIC_API_URL must use HTTPS outside development.");
+  }
+
+  if (APP_ENVIRONMENT !== "development" && isLocalHost) {
+    throw new Error("EXPO_PUBLIC_API_URL cannot point to a local host outside development.");
+  }
+
+  return parsedUrl.toString().replace(/\/$/, "");
+}
+
+export const API_BASE_URL = getApiBaseUrl();
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -20,6 +61,103 @@ api.interceptors.request.use(async (config) => {
   }
   return config;
 });
+
+api.interceptors.response.use(
+  (response) => response,
+  async (error: AxiosError) => {
+    const config = error.config as RetryableConfig | undefined;
+
+    // Only attempt refresh once, and never for auth endpoints themselves.
+    const url = config?.url ?? "";
+    const isAuthEndpoint = url.includes("/api/auth/");
+
+    if (
+      error.response?.status === 401 &&
+      config &&
+      !config._retried &&
+      !isAuthEndpoint
+    ) {
+      config._retried = true;
+
+      const currentToken = useAuthStore.getState().token;
+      if (!currentToken) {
+        return Promise.reject(error);
+      }
+
+      try {
+        const refreshResponse = await axios.post(
+          `${API_BASE_URL}/api/auth/refresh`,
+          {},
+          { headers: { Authorization: `Bearer ${currentToken}` }, timeout: API_TIMEOUT_MS }
+        );
+        const newToken: string = refreshResponse.data.data.token;
+        useAuthStore.getState().setToken(newToken);
+        config.headers = config.headers ?? {};
+        config.headers.Authorization = `Bearer ${newToken}`;
+        return api(config);
+      } catch {
+        await useAuthStore.getState().clearSession();
+        return Promise.reject(error);
+      }
+    }
+
+    // Redirect to paywall when subscription is required
+    if (error.response?.status === 402) {
+      router.push("/(app)/paywall");
+      return Promise.reject(error);
+    }
+
+    return Promise.reject(error);
+  }
+);
+
+export function getVocabularyWords(params?: { topic?: string; search?: string }) {
+  return api.get("/api/vocabulary/words", { params });
+}
+
+export function getWordOfDay() {
+  return api.get("/api/vocabulary/word-of-day");
+}
+
+export function getVocabularyWordDetail(wordId: string) {
+  return api.get(`/api/vocabulary/words/${wordId}`);
+}
+
+export function updateUserVocabularyWord(wordId: string, data: { isFavorite?: boolean; isHidden?: boolean; markForReview?: boolean }) {
+  return api.patch(`/api/vocabulary/words/${wordId}/user`, data);
+}
+
+export function getSRSDueWords() {
+  return api.get("/api/vocabulary/srs/due");
+}
+
+export function submitSRSReview(wordId: string, quality: 2 | 4 | 5) {
+  return api.post("/api/vocabulary/srs/review", { wordId, quality });
+}
+
+export function updateUserProfile(data: { dailyGoalMinutes?: number; nativeLanguage?: string }) {
+  return api.patch("/api/users/me", data);
+}
+
+export function deleteAccount() {
+  return api.delete("/api/users/me");
+}
+
+export function getTadabbur() {
+  return api.get("/api/tadabbur");
+}
+
+export function getTadabburSurah(surahId: string) {
+  return api.get(`/api/tadabbur/${surahId}`);
+}
+
+export function getSubscriptionStatus() {
+  return api.get("/api/subscription/status");
+}
+
+export function verifyPurchase(data: { productId: string; purchaseToken?: string; platform: "android" | "ios" }) {
+  return api.post("/api/subscription/verify", data);
+}
 
 export function getApiErrorMessage(error: unknown, fallback: string) {
   if (!axios.isAxiosError(error)) {

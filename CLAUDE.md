@@ -9,8 +9,36 @@ ArabAI is a gamified, AI-powered Arabic language learning mobile app targeting M
 - `arabai-backend/` - Next.js 14 (API Routes only, no pages/SSR) + Prisma + PostgreSQL
 - `arabai-app/` - React Native + Expo (Android-only, SDK 51). The app name in `app.json` is **"Warsh"**, not "ArabAI".
 
-The Phase 1 product specification lives in `arabai-phase1-sot-v2.md`.
-The active visual/design source of truth lives in `Docs/warsh-brand-ui-sot.md`.
+## Source of Truth
+
+**The complete source of truth is `Docs/warsh-spec-00-master-index.md` and the 13 spec files it references (spec-01 through spec-13).** Read `Docs/warsh-spec-00-master-index.md` before every task to orient yourself.
+
+Do NOT reference these old files — they are superseded and may contradict the spec:
+- `Docs/arabai-phase1-sot-v2.md`
+- `Docs/arabai-brand.md`
+- `Docs/arabai-curriculum.md`
+- `Docs/warsh-brand-ui-sot.md`
+- `Docs/warsh-ui-sot.md`
+- `Docs/warsh-master-roadmap.md`
+- `Docs/warsh-vocabulary-bank.md`
+- `Docs/noor_app_mockup_screens.html`
+- `Docs/warsh_wireframes.html`
+- `Docs/warsh_chapter_flow_system.html`
+
+Quick spec reference:
+- Product identity & locked decisions → `warsh-spec-01`
+- All screens & navigation → `warsh-spec-02`
+- Onboarding & auth → `warsh-spec-03`
+- Lesson system & exercise types → `warsh-spec-04`
+- Curriculum (72 chapters, Madinah Reader) → `warsh-spec-05`
+- Spoken Fus'ha → `warsh-spec-06`
+- Vocabulary & Tadabbur → `warsh-spec-07`
+- Engagement & streaks → `warsh-spec-08`
+- Ustaad Noor (AI tutor) → `warsh-spec-09`
+- Monetization & launch → `warsh-spec-10`
+- Design system & copy → `warsh-spec-11`
+- Data model & API → `warsh-spec-12`
+- Technical & infrastructure → `warsh-spec-13`
 
 ## Current Phase Status
 
@@ -150,7 +178,7 @@ Error codes in use: `bad_request`, `unauthorized`, `conflict`, `too_many_request
 
 **Arabic text:** Always use `app/components/ArabicText.tsx` for Arabic strings — it enforces RTL and uses Scheherazade New font. Size variants: `sm | md | lg | xl`. English text uses Amiri font.
 
-**Brand/theme:** Shared UI tokens in `arabai-app/constants/theme.ts` (WarshPalette, Colors, FontSizes, Spacing, Radii, Shadows). Use `app/components/BrandButton.tsx` for CTAs — it has `variant` (`primary | secondary | danger`) and `selected`/`loading`/`disabled` states, min height 52px. All new UI work should follow `Docs/warsh-brand-ui-sot.md`.
+**Brand/theme:** Shared UI tokens in `arabai-app/constants/theme.ts` (WarshPalette, Colors, FontSizes, Spacing, Radii, Shadows). Use `app/components/BrandButton.tsx` for CTAs — it has `variant` (`primary | secondary | danger`) and `selected`/`loading`/`disabled` states, min height 52px. All new UI work must follow `Docs/warsh-spec-11-design-system-and-copy.md`.
 
 **Path aliases (mobile only):** `@app/*`, `@components/*`, `@services/*`, `@stores/*`, `@types/*` — configured in `tsconfig.json`.
 

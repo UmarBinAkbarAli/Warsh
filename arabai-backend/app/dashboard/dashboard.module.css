@@ -1,0 +1,252 @@
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  background: #f7f1e4;
+  color: #1e211b;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.empty {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #f7f1e4;
+  color: #1e211b;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  border-right: 1px solid #d7c8a6;
+  background: #efe2c4;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brandMark {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.brandArabic {
+  font-size: 28px;
+  color: #8a651f;
+}
+
+.search,
+.topbar input,
+.grid input,
+.grid textarea,
+.grid select,
+.jsonField textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbb889;
+  background: #fffaf0;
+  color: #1e211b;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.rail {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 4px;
+}
+
+.chapterButton,
+.lessonButton {
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  padding: 12px;
+  cursor: pointer;
+  display: grid;
+  gap: 4px;
+}
+
+.chapterButton span,
+.lessonButton span,
+.chapterButton small,
+.lessonButton small,
+.kicker {
+  color: #6f725f;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.chapterButton strong,
+.lessonButton strong {
+  font-size: 15px;
+}
+
+.active,
+.activeLesson {
+  background: #fff7e6;
+  border-color: #c89b31;
+}
+
+.workspace {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.header,
+.panelHeader,
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header h1,
+.panelHeader h2 {
+  margin: 0;
+}
+
+.kicker {
+  margin: 0 0 4px;
+}
+
+.statusGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.statusGroup span,
+.saveStatus {
+  border: 1px solid #d7c8a6;
+  background: #fffaf0;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.topbar label {
+  width: min(420px, 100%);
+  display: grid;
+  gap: 6px;
+  color: #4b4f3e;
+  font-size: 13px;
+}
+
+.panel {
+  border: 1px solid #d7c8a6;
+  background: #fffaf0;
+  border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  gap: 18px;
+}
+
+.primaryButton {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 16px;
+  background: #8a651f;
+  color: #fffaf0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.grid label,
+.jsonField {
+  display: grid;
+  gap: 6px;
+  color: #4b4f3e;
+  font-size: 13px;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.checkbox {
+  display: flex !important;
+  align-items: center;
+  gap: 10px !important;
+}
+
+.checkbox input {
+  width: auto;
+}
+
+.lessonLayout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.lessonList {
+  border: 1px solid #d7c8a6;
+  background: #f4ead3;
+  border-radius: 8px;
+  padding: 10px;
+  display: grid;
+  gap: 6px;
+}
+
+.jsonGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.jsonField textarea {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  .shell,
+  .lessonLayout,
+  .jsonGrid,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .header,
+  .panelHeader,
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

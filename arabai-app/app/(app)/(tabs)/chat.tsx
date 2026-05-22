@@ -4,6 +4,7 @@ import { useFocusEffect } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import api from "../../services/api";
 import { Colors, FontSizes, LineHeights, Radii, Shadows, Spacing } from "../../../constants/theme";
+import { trackNoorMessageSent } from "../../services/analytics";
 
 export default function ChatScreen() {
   const insets = useSafeAreaInsets();
@@ -41,7 +42,9 @@ export default function ChatScreen() {
     try {
       const response = await api.post("/api/chat", { message: input.trim() });
       setMessages((prev) => [...prev, { role: "USER", content: input.trim() }, { role: "ASSISTANT", content: response.data.data.reply }]);
-      setUsage({ used: response.data.data.messagesUsedToday, limit: response.data.data.messagesLimit });
+      const usedToday = response.data.data.messagesUsedToday;
+      setUsage({ used: usedToday, limit: response.data.data.messagesLimit });
+      trackNoorMessageSent(usedToday);
       setInput("");
     } catch (err: any) {
       if (err.response?.status === 429) {
@@ -80,9 +83,9 @@ export default function ChatScreen() {
         >
           <Text style={{ color: Colors.accent.gold, fontSize: 18, fontWeight: "700" }}>ن</Text>
         </View>
-        <View>
+        <View style={{ flex: 1 }}>
           <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontWeight: "700" }}>Ustaad Noor</Text>
-          <Text style={{ color: Colors.text.secondary }}>Warm, patient, and always ready to help.</Text>
+          <Text style={{ color: Colors.text.secondary }} numberOfLines={1}>Warm, patient, and always ready to help.</Text>
         </View>
       </View>
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.md }}>

@@ -20,7 +20,7 @@ type ChapterWithLessons = {
     id: string;
     title: string;
     titleAr: string;
-    type: string;
+    template: string;
     xpReward: number;
   }[];
 };
@@ -76,7 +76,7 @@ export async function getUserCourseState(userId: string) {
       include: {
         lessons: {
           orderBy: { order: "asc" },
-          select: { id: true, title: true, titleAr: true, type: true, xpReward: true },
+          select: { id: true, title: true, titleAr: true, template: true, xpReward: true },
         },
       },
     }),
@@ -84,7 +84,7 @@ export async function getUserCourseState(userId: string) {
       where: { userId },
       select: { lessonId: true, status: true, completed: true },
     }),
-  ])) as [ChapterWithLessons[], ProgressRow[]];
+  ]) as unknown as [ChapterWithLessons[], ProgressRow[]];
 
   const progressStatusByLessonId = new Map(
     progressRows.map((item) => [

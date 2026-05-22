@@ -9,8 +9,13 @@
       "android"
     ],
     "orientation": "portrait",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
     "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F4EBD0"
+    },
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -18,11 +23,20 @@
       "package": "com.arabai.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#023c69"
+        "backgroundColor": "#F4EBD0"
       }
     },
     "plugins": [
-      "expo-font"
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#9A8F6A",
+          "sounds": []
+        }
+      ],
+      "@sentry/react-native/expo"
     ],
     "extra": {
       "eas": {

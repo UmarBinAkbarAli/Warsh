@@ -5,10 +5,15 @@ import { signToken } from "../../../../lib/auth";
 
 export async function POST(request: Request) {
   const body = await request.json();
-  const { email, password, name, nativeLanguage, goal } = body;
+  const { email, password, name, nativeLanguage, goal, dailyGoalMinutes } = body;
 
   if (!email || !password || !name) {
     return NextResponse.json({ error: "Missing required fields", code: "bad_request" }, { status: 400 });
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return NextResponse.json({ error: "Invalid email address", code: "bad_request" }, { status: 400 });
   }
 
   const existing = await prisma.user.findUnique({ where: { email } });
@@ -17,13 +22,15 @@ export async function POST(request: Request) {
   }
 
   const passwordHash = bcrypt.hashSync(password, 10);
+  const validGoalMinutes = [5, 10, 15, 30];
   const user = await prisma.user.create({
     data: {
       email,
       passwordHash,
       name,
       nativeLanguage: nativeLanguage ?? "ur",
-      goal: goal ?? "QURAN"
+      goal: goal ?? "QURAN",
+      dailyGoalMinutes: validGoalMinutes.includes(dailyGoalMinutes) ? dailyGoalMinutes : 10,
     }
   });
 

@@ -3,6 +3,7 @@ import { useRouter } from "expo-router";
 import { BrandButton } from "../../components/BrandButton";
 import { useOnboardingStore } from "../../stores/onboardingStore";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
+import { trackOnboardingPlacementSelected } from "../../services/analytics";
 
 export default function OnboardingPlacementScreen() {
   const router = useRouter();
@@ -38,15 +39,8 @@ export default function OnboardingPlacementScreen() {
         onPress={() => setPlacementType("CAN_READ_BASIC")}
         selected={placementType === "CAN_READ_BASIC"}
       />
-      <View style={{ height: Spacing.md }} />
-      <BrandButton
-        title="Skip this - I'll start from the beginning"
-        variant="secondary"
-        onPress={() => setPlacementType("BEGINNER")}
-        selected={placementType === "BEGINNER"}
-      />
       <View style={{ height: Spacing.xl }} />
-      <BrandButton title="Continue" onPress={() => router.push("/(auth)/onboarding/ready")} />
+      <BrandButton title="Continue" onPress={() => { if (placementType) trackOnboardingPlacementSelected(placementType); router.push("/(auth)/onboarding/ready"); }} />
     </View>
   );
 }

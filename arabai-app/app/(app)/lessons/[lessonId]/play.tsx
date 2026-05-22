@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextStyle, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import api from "../../../services/api";
 import { ArabicText } from "../../../components/ArabicText";
 import { BrandButton } from "../../../components/BrandButton";
+import { PlayButton } from "../../../components/PlayButton";
+import { ShadowRepeatExercise } from "../../../components/ShadowRepeatExercise";
 import { Fonts, WarshPalette } from "../../../../constants/theme";
+import { cancelTodayReminders, fireMilestoneNotification } from "../../../services/notifications";
+import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "../../../services/analytics";
 
 type Hook = {
   ayahAr?: string;
@@ -20,7 +24,7 @@ type DiscoverCard = {
   transliteration?: string;
 };
 
-type ExerciseType = "TRUE_FALSE" | "TAP_TRANSLATION" | "FILL_BLANK" | "BUILD_SENTENCE" | "MATCHING" | "GRAMMAR_PARSE" | "CONVERSATION_BUILDER";
+type ExerciseType = "TRUE_FALSE" | "TAP_TRANSLATION" | "FILL_BLANK" | "BUILD_SENTENCE" | "MATCHING" | "GRAMMAR_PARSE" | "CONVERSATION_BUILDER" | "SHADOW_REPEAT";
 
 type MatchingPair = {
   left: string;
@@ -56,6 +60,27 @@ type RevealAyah = {
   highlightedWord?: string;
 };
 
+type SpokenPhrase = {
+  arabic: string;
+  transliteration?: string;
+  translation: string;
+  recognitionOptions?: string[];
+};
+
+type DialogueLine = {
+  speaker: string;
+  line: string;
+  translation?: string;
+};
+
+type SpokenPhrasesContent = {
+  contextTitle?: string;
+  contextTitleEn?: string;
+  contextBody?: string;
+  phrases?: SpokenPhrase[];
+  dialogue?: DialogueLine[];
+};
+
 type Lesson = {
   id: string;
   title: string;
@@ -78,7 +103,7 @@ type CompletionResult = {
 
 type SelectedAnswer = string | string[] | Record<string, string> | null;
 
-const ANSWER_DELAY_MS = 1200;
+const ANSWER_DELAY_MS = 1800;
 
 function splitWords(value?: string) {
   return value?.trim().split(/\s+/).filter(Boolean) ?? [];
@@ -170,6 +195,13 @@ export default function LessonPlayScreen() {
   const [legacyAnswer, setLegacyAnswer] = useState<string | null>(null);
   const [legacyAnswered, setLegacyAnswered] = useState(false);
 
+  // SHADOW_REPEAT / SPOKEN_PHRASES tracking
+  const phrasesCompletedRef = useRef(0);
+  const [spPhraseIdx, setSpPhraseIdx] = useState(0);
+  const [spPhraseStep, setSpPhraseStep] = useState<"intro" | "shadow" | "recognition" | "phraseComplete">("intro");
+  const [spRecognitionAnswer, setSpRecognitionAnswer] = useState<string | null>(null);
+  const [spRecognitionAnswered, setSpRecognitionAnswered] = useState(false);
+
   const discoverCards = lesson?.discoverCards ?? [];
   const exercises = lesson?.exercises ?? [];
   const currentExercise = exercises[currentExerciseIndex];
@@ -188,7 +220,9 @@ export default function LessonPlayScreen() {
 
       try {
         const response = await api.get(`/api/lessons/${lessonId}`);
-        setLesson(response.data.data.lesson);
+        const lessonData = response.data.data.lesson;
+        setLesson(lessonData);
+        trackLessonStarted(lessonId, lessonData?.type);
       } catch (err) {
         setError("Unable to load lesson.");
       } finally {
@@ -209,13 +243,31 @@ export default function LessonPlayScreen() {
       setError(null);
 
       try {
-        const response = await api.post(`/api/lessons/${lessonId}/complete`, { score: 100 });
+        const response = await api.post(`/api/lessons/${lessonId}/complete`, { score: 100, phrasesCompleted: phrasesCompletedRef.current });
         const data = response.data.data;
         setCompletionResult({
           xpEarned: data.xpEarned,
           totalXp: data.totalXp,
           currentStreak: data.currentStreak,
         });
+        trackLessonCompleted({
+          lessonId,
+          lessonType: lesson?.type,
+          xpEarned: data.xpEarned,
+          currentStreak: data.currentStreak,
+          dailyGoalMet: data.dailyGoalXp > 0,
+        });
+        // Cancel today's reminders if daily goal was first met
+        if (data.dailyGoalXp > 0) {
+          cancelTodayReminders().catch(() => {});
+        }
+        // Fire milestone notifications and track achievements
+        if (Array.isArray(data.newAchievements) && data.newAchievements.length > 0) {
+          for (const achievement of data.newAchievements as { key: string; title: string; xpReward: number }[]) {
+            fireMilestoneNotification(achievement.title).catch(() => {});
+            trackMilestoneUnlocked(achievement.key ?? "", achievement.title, achievement.xpReward ?? 0);
+          }
+        }
       } catch (err: any) {
         if (err.response?.status === 403) {
           setError("This lesson is locked until earlier chapters are complete.");
@@ -661,6 +713,186 @@ export default function LessonPlayScreen() {
     );
   }
 
+  // ---- SPOKEN_PHRASES lesson (SP1-SP4) ----
+
+  function getSpContent(): SpokenPhrasesContent {
+    return (lesson?.content ?? {}) as SpokenPhrasesContent;
+  }
+
+  function renderSP1Context() {
+    const sp = getSpContent();
+    return (
+      <View style={[styles.fullScreen, screenPadding]}>
+        <View style={styles.centerStack}>
+          {sp.contextTitle ? (
+            <ArabicText size="lg" style={styles.hookAyah}>{sp.contextTitle}</ArabicText>
+          ) : null}
+          {sp.contextTitleEn ? <Text style={styles.spContextTitleEn}>{sp.contextTitleEn}</Text> : null}
+          <View style={styles.divider} />
+          {sp.contextBody ? (
+            <Text style={styles.hookQuestion}>{sp.contextBody}</Text>
+          ) : null}
+        </View>
+        <BrandButton title="Begin" onPress={() => goToBeat(2)} style={styles.bottomButton} />
+      </View>
+    );
+  }
+
+  function advanceSpPhrase() {
+    const sp = getSpContent();
+    const total = sp.phrases?.length ?? 0;
+    if (spPhraseIdx >= total - 1) {
+      // All phrases done — move to SP3 Dialogue (beat 3)
+      setSpPhraseIdx(0);
+      setSpPhraseStep("intro");
+      setSpRecognitionAnswer(null);
+      setSpRecognitionAnswered(false);
+      goToBeat(3);
+    } else {
+      setSpPhraseIdx((i) => i + 1);
+      setSpPhraseStep("intro");
+      setSpRecognitionAnswer(null);
+      setSpRecognitionAnswered(false);
+    }
+  }
+
+  function renderSP2Phrases() {
+    const sp = getSpContent();
+    const phrases = sp.phrases ?? [];
+    const phrase = phrases[spPhraseIdx];
+    const total = phrases.length;
+
+    if (!phrase) {
+      return (
+        <View style={[styles.fullScreen, screenPadding]}>
+          <View style={styles.centerStack}><Text style={styles.hookQuestion}>No phrases available.</Text></View>
+          <BrandButton title="Continue" onPress={() => goToBeat(3)} style={styles.bottomButton} />
+        </View>
+      );
+    }
+
+    // Step: intro
+    if (spPhraseStep === "intro") {
+      return (
+        <View style={[styles.fullScreen, screenPadding]}>
+          <Text style={styles.spPhraseCounter}>{spPhraseIdx + 1} of {total}</Text>
+          <View style={styles.spPhraseCard}>
+            <ArabicText size="xl" style={styles.spPhraseArabic}>{phrase.arabic}</ArabicText>
+            {phrase.transliteration ? <Text style={styles.discoverTransliteration}>{phrase.transliteration}</Text> : null}
+            <Text style={styles.discoverTranslation}>{phrase.translation}</Text>
+            <View style={styles.discoverPlayRow}>
+              <PlayButton text={phrase.arabic} cacheKey={`sp-${spPhraseIdx}`} category="phrases" size={22} />
+            </View>
+          </View>
+          <BrandButton title="Now I'll try" onPress={() => setSpPhraseStep("shadow")} style={styles.bottomButton} />
+        </View>
+      );
+    }
+
+    // Step: shadow (SHADOW_REPEAT)
+    if (spPhraseStep === "shadow") {
+      return (
+        <View style={[styles.fullScreen, screenPadding]}>
+          <Text style={styles.spPhraseCounter}>{spPhraseIdx + 1} of {total} · Speaking</Text>
+          <ShadowRepeatExercise
+            arabic={phrase.arabic}
+            transliteration={phrase.transliteration}
+            translation={phrase.translation}
+            onComplete={(recorded) => {
+              if (recorded) phrasesCompletedRef.current += 1;
+              if (phrase.recognitionOptions && phrase.recognitionOptions.length >= 2) {
+                setSpPhraseStep("recognition");
+              } else {
+                setSpPhraseStep("phraseComplete");
+              }
+            }}
+          />
+        </View>
+      );
+    }
+
+    // Step: recognition (AUDIO_RECOGNITION check)
+    if (spPhraseStep === "recognition") {
+      const options = phrase.recognitionOptions ?? [];
+      return (
+        <View style={[styles.fullScreen, screenPadding]}>
+          <Text style={styles.spPhraseCounter}>{spPhraseIdx + 1} of {total} · Meaning check</Text>
+          <View style={styles.centerStack}>
+            <ArabicText size="lg" style={styles.spPhraseArabic}>{phrase.arabic}</ArabicText>
+            <Text style={[styles.hookQuestion, { marginTop: 16 }]}>What does this mean?</Text>
+          </View>
+          <View style={styles.optionGrid}>
+            {options.map((opt) => {
+              const isCorrect = spRecognitionAnswered && opt === phrase.translation;
+              const isWrong = spRecognitionAnswered && opt === spRecognitionAnswer && opt !== phrase.translation;
+              return (
+                <Pressable
+                  key={opt}
+                  accessibilityRole="button"
+                  disabled={spRecognitionAnswered}
+                  onPress={() => {
+                    if (spRecognitionAnswered) return;
+                    setSpRecognitionAnswer(opt);
+                    setSpRecognitionAnswered(true);
+                    setTimeout(() => setSpPhraseStep("phraseComplete"), ANSWER_DELAY_MS);
+                  }}
+                  style={[styles.optionButton, isCorrect ? styles.optionCorrect : isWrong ? styles.optionWrong : null]}
+                >
+                  <Text style={isCorrect ? styles.optionTextCorrect : isWrong ? styles.optionTextWrong : styles.optionText}>{opt}</Text>
+                </Pressable>
+              );
+            })}
+          </View>
+        </View>
+      );
+    }
+
+    // Step: phraseComplete (auto-advance)
+    if (spPhraseStep === "phraseComplete") {
+      const completed = spPhraseIdx + 1;
+      return (
+        <View style={[styles.fullScreen, screenPadding]}>
+          <View style={styles.centerStack}>
+            <Text style={styles.spPhraseCompleteCount}>{completed} of {total} phrases learned</Text>
+            <ArabicText size="lg" style={styles.closeArabic}>{phrase.arabic}</ArabicText>
+            <Text style={[styles.hookQuestion, { marginTop: 8 }]}>{phrase.translation}</Text>
+          </View>
+          <BrandButton title={completed < total ? "Next phrase" : "Continue"} onPress={advanceSpPhrase} style={styles.bottomButton} />
+        </View>
+      );
+    }
+
+    return null;
+  }
+
+  function renderSP3Dialogue() {
+    const sp = getSpContent();
+    const dialogue = sp.dialogue ?? [];
+
+    return (
+      <View style={[styles.fullScreen, screenPadding]}>
+        <Text style={styles.spContextTitleEn}>Mini-dialogue</Text>
+        <ScrollView style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
+          <View style={styles.dialogueCard}>
+            {dialogue.map((line, i) => (
+              <View key={i} style={styles.dialogueLine}>
+                <Text style={styles.dialogueSpeaker}>{line.speaker}</Text>
+                <ArabicText size="sm" style={styles.dialogueArabic}>{line.line}</ArabicText>
+                {line.translation ? <Text style={styles.discoverTranslation}>{line.translation}</Text> : null}
+              </View>
+            ))}
+          </View>
+          {dialogue.length === 0 ? (
+            <Text style={styles.hookQuestion}>Dialogue coming soon, in shaa Allah.</Text>
+          ) : null}
+        </ScrollView>
+        <BrandButton title="Continue" onPress={() => goToBeat(5)} style={styles.bottomButton} />
+      </View>
+    );
+  }
+
+  // ---- End SPOKEN_PHRASES ----
+
   function renderHook() {
     return (
       <View style={[styles.fullScreen, screenPadding]}>
@@ -708,9 +940,19 @@ export default function LessonPlayScreen() {
         <View style={styles.discoverCard}>
           {card?.emoji ? <Text style={styles.discoverEmoji}>{card.emoji}</Text> : null}
           {card?.arabicText ? (
-            <ArabicText size="lg" style={styles.discoverArabic}>
-              {card.arabicText}
-            </ArabicText>
+            <>
+              <ArabicText size="lg" style={styles.discoverArabic}>
+                {card.arabicText}
+              </ArabicText>
+              <View style={styles.discoverPlayRow}>
+                <PlayButton
+                  text={card.arabicText}
+                  cacheKey={card.transliteration || card.arabicText}
+                  category="lessons"
+                  size={22}
+                />
+              </View>
+            </>
           ) : null}
           {card?.translation ? <Text style={styles.discoverTranslation}>{card.translation}</Text> : null}
           {card?.transliteration ? <Text style={styles.discoverTransliteration}>{card.transliteration}</Text> : null}
@@ -733,6 +975,20 @@ export default function LessonPlayScreen() {
 
   function renderPractice() {
     function renderCurrentExercise() {
+      if (currentExercise?.type === "SHADOW_REPEAT") {
+        return (
+          <ShadowRepeatExercise
+            arabic={currentExercise.arabicText ?? ""}
+            transliteration={currentExercise.prompt}
+            translation={currentExercise.correctAnswer}
+            onComplete={(recorded) => {
+              if (recorded) phrasesCompletedRef.current += 1;
+              goToNextExercise();
+            }}
+          />
+        );
+      }
+
       if (currentExercise?.type === "BUILD_SENTENCE") {
         return renderBuildSentence();
       }
@@ -761,6 +1017,14 @@ export default function LessonPlayScreen() {
             <ArabicText size="lg" style={styles.exerciseArabic}>
               {currentExercise.arabicText}
             </ArabicText>
+            <View style={styles.exercisePlayRow}>
+              <PlayButton
+                text={currentExercise.arabicText}
+                cacheKey={`${lessonId}-ex${currentExerciseIndex}`}
+                category="lessons"
+                size={20}
+              />
+            </View>
           </View>
         ) : null}
 
@@ -802,9 +1066,14 @@ export default function LessonPlayScreen() {
 
   function renderClose() {
     const earnedPoints = completionResult?.xpEarned ?? lesson?.xpReward ?? 10;
-    const noorTip = typeof lesson?.content?.ustadh_noor_tip_en === "string"
-      ? lesson.content.ustadh_noor_tip_en
-      : "Tonight, open the Quran and look for the pattern you learned today. You will see the ayah differently now.";
+    const isSpoken = lesson?.type === "SPOKEN_PHRASES";
+    const phrasesLearned = phrasesCompletedRef.current;
+
+    const noorTip = isSpoken
+      ? `Barak Allahu feek.\nYou can now say ${phrasesLearned > 0 ? phrasesLearned : "new"} phrase${phrasesLearned !== 1 ? "s" : ""}.\nSpeak them when you can, in shaa Allah.`
+      : typeof lesson?.content?.ustadh_noor_tip_en === "string"
+        ? lesson.content.ustadh_noor_tip_en
+        : "Tonight, open the Quran and look for the pattern you learned today. You will see the ayah differently now.";
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
@@ -814,6 +1083,9 @@ export default function LessonPlayScreen() {
           <ArabicText size="lg" style={styles.closeArabic}>
             بارك الله فيك
           </ArabicText>
+          {isSpoken && phrasesLearned > 0 ? (
+            <Text style={styles.spPhrasesEarned}>{phrasesLearned} phrase{phrasesLearned !== 1 ? "s" : ""} learned to say</Text>
+          ) : null}
           <View style={styles.noorBubble}>
             <Text style={styles.noorLabel}>Ustaad Noor</Text>
             <Text style={styles.noorTip}>{noorTip}</Text>
@@ -838,6 +1110,13 @@ export default function LessonPlayScreen() {
         <Text style={styles.errorText}>{error ?? "Lesson not found."}</Text>
       </View>
     );
+  }
+
+  if (lesson.type === "SPOKEN_PHRASES") {
+    if (currentBeat === 5) return renderClose();
+    if (currentBeat === 2) return renderSP2Phrases();
+    if (currentBeat === 3) return renderSP3Dialogue();
+    return renderSP1Context();
   }
 
   if (lesson.type !== "VOCABULARY") {
@@ -980,6 +1259,14 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
     lineHeight: 14,
     textAlign: "center",
+  },
+  discoverPlayRow: {
+    alignItems: "center",
+    marginTop: 4,
+  },
+  exercisePlayRow: {
+    alignItems: "center",
+    marginTop: 4,
   },
   progressTrack: {
     flexDirection: "row",
@@ -1421,6 +1708,57 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.regular,
     fontSize: 12,
     lineHeight: 18,
+    textAlign: "center",
+  },
+  // SPOKEN_PHRASES styles
+  spContextTitleEn: {
+    marginTop: 8,
+    color: "#9A8F6A",
+    fontFamily: Fonts.regular,
+    fontSize: 12,
+    lineHeight: 18,
+    textAlign: "center",
+    letterSpacing: 0.5,
+  },
+  spPhraseCounter: {
+    marginBottom: 12,
+    color: "#9A9080",
+    fontFamily: Fonts.regular,
+    fontSize: 10,
+    textAlign: "center",
+  },
+  spPhraseCard: {
+    flex: 1,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: "#C8C0A8",
+    borderRadius: 12,
+    padding: 20,
+    backgroundColor: "#EDE8D8",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 16,
+  },
+  spPhraseArabic: {
+    color: "#0F1117",
+    fontSize: 32,
+    lineHeight: 46,
+    textAlign: "center",
+  },
+  spPhraseCompleteCount: {
+    color: "#3A5030",
+    fontFamily: Fonts.semiBold,
+    fontSize: 18,
+    fontWeight: "500",
+    lineHeight: 26,
+    textAlign: "center",
+    marginBottom: 8,
+  },
+  spPhrasesEarned: {
+    marginTop: 8,
+    color: "#3A5030",
+    fontFamily: Fonts.regular,
+    fontSize: 13,
+    lineHeight: 20,
     textAlign: "center",
   },
 });

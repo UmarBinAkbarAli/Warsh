@@ -39,3 +39,47 @@ allprojects {
         maven { url 'https://www.jitpack.io' }
     }
 }
+
+gradle.projectsEvaluated {
+    def sentryUnderscore = findProject(":sentry_react-native")
+    def sentryHyphen = findProject(":sentry-react-native")
+    if (sentryUnderscore != null && sentryHyphen != null) {
+        def sentryGenerateDebugResValues = [
+            sentryUnderscore.tasks.matching { it.name == "generateDebugResValues" },
+            sentryHyphen.tasks.matching { it.name == "generateDebugResValues" }
+        ]
+        [sentryUnderscore, sentryHyphen].each { sentryProject ->
+            sentryProject.tasks.matching {
+                it.name in [
+                    "generateDebugResources",
+                    "packageDebugResources",
+                    "extractDeepLinksDebug",
+                    "processDebugManifest",
+                    "compileDebugLibraryResources",
+                    "parseDebugLocalResources",
+                    "generateDebugRFile"
+                ]
+            }.configureEach {
+                dependsOn(sentryGenerateDebugResValues)
+            }
+            sentryProject.tasks.matching {
+                it.name in ["compileDebugLibraryResources", "parseDebugLocalResources", "generateDebugRFile"]
+            }.configureEach {
+                dependsOn(sentryUnderscore.tasks.matching { it.name == "packageDebugResources" })
+                dependsOn(sentryHyphen.tasks.matching { it.name == "packageDebugResources" })
+            }
+            sentryProject.tasks.matching { it.name == "generateDebugRFile" }.configureEach {
+                dependsOn(sentryUnderscore.tasks.matching { it.name == "processDebugManifest" })
+                dependsOn(sentryHyphen.tasks.matching { it.name == "processDebugManifest" })
+                dependsOn(sentryUnderscore.tasks.matching { it.name == "parseDebugLocalResources" })
+                dependsOn(sentryHyphen.tasks.matching { it.name == "parseDebugLocalResources" })
+            }
+            sentryProject.tasks.matching {
+                it.name in ["compileDebugJavaWithJavac", "bundleLibCompileToJarDebug", "bundleLibRuntimeToJarDebug"]
+            }.configureEach {
+                dependsOn(sentryUnderscore.tasks.matching { it.name == "generateDebugRFile" })
+                dependsOn(sentryHyphen.tasks.matching { it.name == "generateDebugRFile" })
+            }
+        }
+    }
+}

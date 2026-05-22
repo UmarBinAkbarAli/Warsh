@@ -1,15 +1,30 @@
 {
+  "cli": {
+    "version": ">= 10.0.0"
+  },
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_ENVIRONMENT": "development"
+      }
     },
     "preview": {
-      "distribution": "internal"
-    },
-    "production": {
+      "distribution": "internal",
       "android": {
         "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://api-staging.warsh.app",
+        "EXPO_PUBLIC_ENVIRONMENT": "staging"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://api.warsh.app",
+        "EXPO_PUBLIC_ENVIRONMENT": "production"
       }
     }
   }

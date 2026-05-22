@@ -7,29 +7,50 @@ import { ArabicText } from "../components/ArabicText";
 import { BrandButton } from "../components/BrandButton";
 import { getApiErrorMessage } from "../services/api";
 import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../constants/theme";
+import { trackSignupCompleted } from "../services/analytics";
 
 export default function RegisterScreen() {
   const router = useRouter();
   const { register, applyPlacement } = useAuth();
-  const { name, language, goal, placementType, setName } = useOnboardingStore();
+  const { name, language, goal, placementType, dailyGoalMinutes, setName } = useOnboardingStore();
   const [displayName, setDisplayName] = useState(name);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [emailTouched, setEmailTouched] = useState(false);
+  const [passwordTouched, setPasswordTouched] = useState(false);
+
+  const emailInvalid = emailTouched && email.trim().length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+  const passwordShort = passwordTouched && password.length > 0 && password.length < 8;
+
+  function isValidEmail(value: string) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+  }
 
   async function handleSubmit() {
     const trimmedName = displayName.trim();
-    if (!trimmedName || !email || !password) {
+    const trimmedEmail = email.trim();
+
+    if (!trimmedName || !trimmedEmail || !password) {
       setError("Please fill in all fields.");
+      return;
+    }
+    if (!isValidEmail(trimmedEmail)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+    if (password.length < 8) {
+      setError("Password must be at least 8 characters.");
       return;
     }
     setLoading(true);
     setError("");
     try {
       setName(trimmedName);
-      await register(trimmedName, email, password, language, goal);
+      await register(trimmedName, trimmedEmail, password, language, goal, dailyGoalMinutes);
       await applyPlacement(placementType);
+      trackSignupCompleted({ goal: goal ?? "", level: "", placement: placementType ?? "BEGINNER", language: language ?? "en" });
       router.replace("/(app)");
     } catch (err) {
       setError(getApiErrorMessage(err, "Unable to finish account setup. Please try again."));
@@ -59,21 +80,26 @@ export default function RegisterScreen() {
       />
       <TextInput
         value={email}
-        onChangeText={setEmail}
+        onChangeText={(v) => { setEmail(v); setEmailTouched(true); }}
+        onBlur={() => setEmailTouched(true)}
         placeholder="Email"
         placeholderTextColor={Colors.text.muted}
         keyboardType="email-address"
         autoCapitalize="none"
-        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.md }}
+        autoComplete="email"
+        style={{ borderWidth: 1, borderColor: emailInvalid ? Colors.text.danger : Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: emailInvalid ? Spacing.xs : Spacing.md }}
       />
+      {emailInvalid ? <Text style={{ color: Colors.text.danger, fontSize: FontSizes.caption, marginBottom: Spacing.md }}>Enter a valid email address.</Text> : null}
       <TextInput
         value={password}
-        onChangeText={setPassword}
-        placeholder="Password"
+        onChangeText={(v) => { setPassword(v); setPasswordTouched(true); }}
+        onBlur={() => setPasswordTouched(true)}
+        placeholder="Password (min 8 characters)"
         placeholderTextColor={Colors.text.muted}
         secureTextEntry
-        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.xl }}
+        style={{ borderWidth: 1, borderColor: passwordShort ? Colors.text.danger : Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: passwordShort ? Spacing.xs : Spacing.xl }}
       />
+      {passwordShort ? <Text style={{ color: Colors.text.danger, fontSize: FontSizes.caption, marginBottom: Spacing.md }}>Password must be at least 8 characters.</Text> : null}
       {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.md }}>{error}</Text> : null}
       <BrandButton title="Create Account" onPress={handleSubmit} loading={loading} />
       <View style={{ flexDirection: "row", justifyContent: "center", marginTop: Spacing.xl }}>

@@ -1,4 +1,9 @@
-const { chapters } = require("./curriculum-phase15.cjs");
+const { chapters: book1Chapters } = require("./curriculum-book1.cjs");
+const { chapters: books2To4Chapters } = require("./curriculum-books2-4.cjs");
+const { chapters: books5To6Chapters } = require("./curriculum-books5-6.cjs");
+const { chapters: books7To8Chapters } = require("./curriculum-books7-8.cjs");
+
+const chapters = [...book1Chapters, ...books2To4Chapters, ...books5To6Chapters, ...books7To8Chapters];
 
 const ALLOWED_EXERCISE_TYPES = new Set([
   "TRUE_FALSE",
@@ -107,8 +112,8 @@ function validateLesson(lesson, path) {
 }
 
 function main() {
-  if (!Array.isArray(chapters) || chapters.length !== 15) {
-    fail("expected exactly 15 chapters");
+  if (!Array.isArray(chapters) || chapters.length !== 72) {
+    fail("expected exactly 72 chapters");
   }
 
   chapters.forEach((chapter, chapterIndex) => {
@@ -119,8 +124,8 @@ function main() {
     assertString(chapter.title, `chapters[${chapterIndex}].title`);
     assertString(chapter.titleAr, `chapters[${chapterIndex}].titleAr`);
     assertString(chapter.description, `chapters[${chapterIndex}].description`);
-    if (!Array.isArray(chapter.lessons) || chapter.lessons.length < 4 || chapter.lessons.length > 6) {
-      fail(`chapters[${chapterIndex}].lessons must contain 4-6 lessons`);
+    if (!Array.isArray(chapter.lessons) || chapter.lessons.length < 4 || chapter.lessons.length > 9) {
+      fail(`chapters[${chapterIndex}].lessons must contain 4-9 lessons`);
     }
     chapter.lessons.forEach((lesson, lessonIndex) => validateLesson(lesson, `chapters[${chapterIndex}].lessons[${lessonIndex}]`));
   });

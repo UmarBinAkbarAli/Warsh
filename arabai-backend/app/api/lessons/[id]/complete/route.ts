@@ -1,8 +1,15 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../../lib/auth";
-import { isTodayPKT, isYesterdayPKT } from "../../../../../lib/date";
+import { isTodayPKT, isYesterdayPKT, get4amPKTBoundary } from "../../../../../lib/date";
 import { getUserCourseState, PROGRESS_STATUS } from "../../../../../lib/course";
+import { checkAndAwardAchievements } from "../../../../../lib/achievements";
+
+// Award a freeze at the 7-day milestone and every 30 streaks thereafter, max 2
+function shouldAwardFreeze(newStreak: number, currentFreezes: number): boolean {
+  if (currentFreezes >= 2) return false;
+  return newStreak === 7 || (newStreak > 7 && newStreak % 30 === 0);
+}
 
 interface Props {
   params: { id: string };
@@ -15,10 +22,13 @@ export async function POST(request: Request, { params }: Props) {
   }
 
   const body = await request.json();
-  const { score } = body;
+  const { score, phrasesCompleted = 0 } = body;
   if (typeof score !== "number") {
     return NextResponse.json({ error: "Missing score", code: "bad_request" }, { status: 400 });
   }
+  const validPhrasesCompleted = typeof phrasesCompleted === "number" && phrasesCompleted > 0
+    ? Math.min(phrasesCompleted, 100)
+    : 0;
 
   const lesson = await prisma.lesson.findUnique({ where: { id: params.id } });
   if (!lesson) {
@@ -30,12 +40,18 @@ export async function POST(request: Request, { params }: Props) {
     return NextResponse.json({ error: "Chapter is locked", code: "chapter_locked" }, { status: 403 });
   }
 
-  const existingProgress = await prisma.progress.findUnique({ where: { userId_lessonId: { userId, lessonId: lesson.id } } });
+  const todayStart = get4amPKTBoundary();
+
+  const [existingProgress, lessonsCompletedTodayBefore] = await Promise.all([
+    prisma.progress.findUnique({ where: { userId_lessonId: { userId, lessonId: lesson.id } } }),
+    prisma.progress.count({ where: { userId, status: PROGRESS_STATUS.COMPLETED, completedAt: { gte: todayStart } } }),
+  ]);
+
   const existingStatus = existingProgress?.status || (existingProgress?.completed ? PROGRESS_STATUS.COMPLETED : PROGRESS_STATUS.NOT_STARTED);
   const firstCompletion = existingStatus !== PROGRESS_STATUS.COMPLETED;
   const baseXp = lesson.xpReward;
-  const bonusXp = score === 100 && firstCompletion ? 5 : 0;
-  const xpEarned = firstCompletion ? baseXp + bonusXp : 0;
+  const perfectBonus = score === 100 && firstCompletion ? 5 : 0;
+  const xpEarned = firstCompletion ? baseXp + perfectBonus : 0;
 
   await prisma.$transaction(async (tx: any) => {
     if (!existingProgress) {
@@ -79,42 +95,119 @@ export async function POST(request: Request, { params }: Props) {
     } else {
       const lastActive = currentStreakRecord.lastActiveDate ? new Date(currentStreakRecord.lastActiveDate) : null;
       if (lastActive && isTodayPKT(lastActive)) {
+        // Already active today — just refresh timestamp
         await tx.streak.update({ where: { userId }, data: { lastActiveDate: now } });
       } else if (lastActive && isYesterdayPKT(lastActive)) {
+        // Consecutive day — increment streak
         const nextStreak = currentStreakRecord.currentStreak + 1;
+        const freezeAward = shouldAwardFreeze(nextStreak, currentStreakRecord.streakFreezes);
         await tx.streak.update({
           where: { userId },
           data: {
             currentStreak: nextStreak,
             longestStreak: Math.max(currentStreakRecord.longestStreak, nextStreak),
-            lastActiveDate: now
+            lastActiveDate: now,
+            ...(freezeAward ? { streakFreezes: Math.min(2, currentStreakRecord.streakFreezes + 1) } : {}),
           }
         });
       } else {
-        await tx.streak.update({
-          where: { userId },
-          data: {
-            currentStreak: 1,
-            lastActiveDate: now
-          }
-        });
+        // Missed one or more days — try to consume a freeze
+        if (currentStreakRecord.streakFreezes > 0) {
+          await tx.streak.update({
+            where: { userId },
+            data: {
+              streakFreezes: currentStreakRecord.streakFreezes - 1,
+              lastActiveDate: now,
+              lastFreezeUsedAt: now,
+            }
+          });
+        } else {
+          await tx.streak.update({
+            where: { userId },
+            data: { currentStreak: 1, lastActiveDate: now }
+          });
+        }
       }
     }
   });
 
-  const [user, streak] = await Promise.all([
+  // Award daily goal XP (5 XP on first lesson of the day)
+  let dailyGoalXp = 0;
+  if (firstCompletion && lessonsCompletedTodayBefore === 0) {
+    dailyGoalXp = 5;
+    await prisma.user.update({ where: { id: userId }, data: { xp: { increment: 5 } } });
+  }
+
+  // Award chapter completion bonus (50 XP when all lessons in chapter are done/skipped)
+  let chapterBonusXp = 0;
+  let chapterJustCompleted = false;
+  if (firstCompletion) {
+    const [totalInChapter, doneInChapter] = await Promise.all([
+      prisma.lesson.count({ where: { chapterId: lesson.chapterId } }),
+      prisma.progress.count({
+        where: {
+          userId,
+          lesson: { chapterId: lesson.chapterId },
+          status: { in: [PROGRESS_STATUS.COMPLETED, PROGRESS_STATUS.SKIPPED_BY_PLACEMENT] },
+        },
+      }),
+    ]);
+
+    if (totalInChapter > 0 && doneInChapter === totalInChapter) {
+      chapterBonusXp = 50;
+      chapterJustCompleted = true;
+      await prisma.user.update({ where: { id: userId }, data: { xp: { increment: 50 } } });
+    }
+  }
+
+  // Increment phrasesSpoken if any SHADOW_REPEAT exercises were completed
+  let newPhrasesSpoken = 0;
+  let firstShadowRepeat = false;
+  let firstSpokenLesson = false;
+  if (validPhrasesCompleted > 0 && firstCompletion) {
+    const userBefore = await prisma.user.findUnique({ where: { id: userId }, select: { phrasesSpoken: true } });
+    firstShadowRepeat = (userBefore?.phrasesSpoken ?? 0) === 0;
+    firstSpokenLesson = lesson.template === "SPOKEN_PHRASES";
+    await prisma.user.update({ where: { id: userId }, data: { phrasesSpoken: { increment: validPhrasesCompleted } } });
+    const userAfter = await prisma.user.findUnique({ where: { id: userId }, select: { phrasesSpoken: true } });
+    newPhrasesSpoken = userAfter?.phrasesSpoken ?? 0;
+  }
+
+  const [user, streak, completedCount] = await Promise.all([
     prisma.user.findUnique({ where: { id: userId } }),
-    prisma.streak.findUnique({ where: { userId } }),
+    prisma.streak.findUnique({ where: { userId }, select: { currentStreak: true, longestStreak: true, streakFreezes: true, lastFreezeUsedAt: true } }),
+    prisma.progress.count({ where: { userId, status: PROGRESS_STATUS.COMPLETED } }),
   ]);
+
+  const newAchievements = await prisma.$transaction((tx) =>
+    checkAndAwardAchievements(tx, {
+      userId,
+      completedLessonCount: completedCount,
+      totalXp: user?.xp ?? 0,
+      currentStreak: streak?.currentStreak ?? 0,
+      chapterJustCompleted,
+      phrasesSpoken: newPhrasesSpoken > 0 ? newPhrasesSpoken : undefined,
+      firstShadowRepeat,
+      firstSpokenLesson,
+    })
+  );
+
+  const finalXp = newAchievements.length > 0
+    ? (await prisma.user.findUnique({ where: { id: userId }, select: { xp: true } }))?.xp ?? user?.xp ?? 0
+    : user?.xp ?? 0;
 
   return NextResponse.json({
     data: {
       xpEarned,
-      totalXp: user?.xp ?? 0,
-      newAchievements: [],
+      chapterBonusXp,
+      dailyGoalXp,
+      totalXp: finalXp,
+      newAchievements,
       streakUpdated: true,
       currentStreak: streak?.currentStreak ?? 0,
       longestStreak: streak?.longestStreak ?? 0,
+      streakFreezes: streak?.streakFreezes ?? 0,
+      phrasesSpoken: newPhrasesSpoken,
     },
   });
 }

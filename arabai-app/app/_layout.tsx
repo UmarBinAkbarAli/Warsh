@@ -2,10 +2,16 @@ import { useFonts } from "expo-font";
 import { ActivityIndicator, View } from "react-native";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import * as Sentry from "@sentry/react-native";
 import { Colors } from "../constants/theme";
+import { initSentry } from "./services/sentry";
+import { initAnalytics } from "./services/analytics";
 
-export default function RootLayout() {
+initSentry();
+void initAnalytics();
+
+function RootLayout() {
   const [fontsLoaded, fontError] = useFonts({
     "Amiri-Regular": require("../assets/fonts/Amiri-Regular.ttf"),
     "Amiri-Bold": require("../assets/fonts/Amiri-Bold.ttf"),
@@ -36,3 +42,5 @@ export default function RootLayout() {
     </SafeAreaProvider>
   );
 }
+
+export default Sentry.wrap(RootLayout);
