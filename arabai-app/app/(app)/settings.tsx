@@ -13,14 +13,14 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import { updateUserProfile, deleteAccount } from "../services/api";
-import { useAuthStore } from "../stores/authStore";
-import api from "../services/api";
+import { updateUserProfile, deleteAccount } from "@services/api";
+import { useAuthStore } from "@stores/authStore";
+import api from "@services/api";
 import {
   requestNotificationPermission,
   setupNotificationSchedules,
   cancelAllNotifications,
-} from "../services/notifications";
+} from "@services/notifications";
 
 // AsyncStorage keys for local preferences
 const PREFS_KEY = "warsh_settings";

@@ -12,10 +12,10 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import { ArabicText } from "../components/ArabicText";
-import { PlayButton } from "../components/PlayButton";
+import { ArabicText } from "@components/ArabicText";
+import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import { getTadabbur, getTadabburSurah } from "../services/api";
+import { getTadabbur, getTadabburSurah } from "@services/api";
 
 // ─── types ────────────────────────────────────────────────────────────────────
 

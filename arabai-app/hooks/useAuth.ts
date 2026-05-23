@@ -1,7 +1,7 @@
 import { useRouter } from "expo-router";
-import api from "../services/api";
-import { useAuthStore } from "../stores/authStore";
-import { cancelAllNotifications } from "../services/notifications";
+import api from "@services/api";
+import { useAuthStore } from "@stores/authStore";
+import { cancelAllNotifications } from "@services/notifications";
 
 export function useAuth() {
   const { user, token, isHydrated, setSession, clearSession } = useAuthStore();

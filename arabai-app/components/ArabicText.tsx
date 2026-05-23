@@ -1,6 +1,6 @@
 import { Text, StyleSheet, TextProps, TextStyle } from "react-native";
 import type { ReactNode } from "react";
-import { Colors, FontSizes, Fonts, LineHeights } from "../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights } from "../constants/theme";
 
 interface ArabicTextProps extends TextProps {
   children: ReactNode;

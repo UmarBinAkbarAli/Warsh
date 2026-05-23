@@ -1,15 +1,16 @@
 import { useEffect, useRef } from "react";
 import { Stack, useRouter } from "expo-router";
-import * as Notifications from "expo-notifications";
-import { useAuthStore } from "../stores/authStore";
+import { useAuthStore } from "@stores/authStore";
 import {
+  addNotificationResponseListener,
+  clearNotificationBadge,
   requestNotificationPermission,
   setupNotificationSchedules,
-} from "../services/notifications";
-import { setSentryUser, clearSentryUser } from "../services/sentry";
-import { identifyUser, resetAnalytics } from "../services/analytics";
+} from "@services/notifications";
+import { setSentryUser, clearSentryUser } from "@services/sentry";
+import { identifyUser, resetAnalytics } from "@services/analytics";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import api from "../services/api";
+import api from "@services/api";
 
 const PREFS_KEY = "warsh_settings";
 
@@ -47,8 +48,7 @@ export default function AppLayout() {
   const isHydrated = useAuthStore((state) => state.isHydrated);
   const token = useAuthStore((state) => state.token);
   const user = useAuthStore((state) => state.user);
-  const notifListener = useRef<Notifications.Subscription | null>(null);
-  const responseListener = useRef<Notifications.Subscription | null>(null);
+  const responseListener = useRef<{ remove: () => void } | null>(null);
 
   useEffect(() => {
     if (isHydrated && !token) {
@@ -71,22 +71,23 @@ export default function AppLayout() {
     if (!token) return;
 
     // Init schedules once on login
-    initNotifications();
+    void initNotifications();
 
     // Clear badge when app opens
-    Notifications.setBadgeCountAsync(0).catch(() => {});
+    void clearNotificationBadge();
 
     // Handle notification tap — deep link to the right screen
-    responseListener.current = Notifications.addNotificationResponseReceivedListener((response) => {
-      const screen = response.notification.request.content.data?.screen as string | undefined;
+    void addNotificationResponseListener((screen) => {
       if (screen === "learn") router.push("/(app)/(tabs)");
       else if (screen === "vocabulary") router.push("/(app)/(tabs)/vocabulary");
       else if (screen === "milestones") router.push("/milestones" as any);
+    }).then((listener) => {
+      responseListener.current = listener;
     });
 
     return () => {
-      if (notifListener.current) Notifications.removeNotificationSubscription(notifListener.current);
-      if (responseListener.current) Notifications.removeNotificationSubscription(responseListener.current);
+      responseListener.current?.remove();
+      responseListener.current = null;
     };
   }, [token]);
 

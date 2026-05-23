@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ActivityIndicator, View } from "react-native";
 import { useRouter } from "expo-router";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useAuthStore } from "./stores/authStore";
+import { useAuthStore } from "@stores/authStore";
 import { Colors } from "../constants/theme";
 
 export const PREVIEW_SEEN_KEY = "warsh_preview_seen";

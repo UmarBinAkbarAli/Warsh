@@ -2,14 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextStyle, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import api from "../../../services/api";
-import { ArabicText } from "../../../components/ArabicText";
-import { BrandButton } from "../../../components/BrandButton";
-import { PlayButton } from "../../../components/PlayButton";
-import { ShadowRepeatExercise } from "../../../components/ShadowRepeatExercise";
+import api from "@services/api";
+import { ArabicText } from "@components/ArabicText";
+import { BrandButton } from "@components/BrandButton";
+import { PlayButton } from "@components/PlayButton";
+import { ShadowRepeatExercise } from "@components/ShadowRepeatExercise";
 import { Fonts, WarshPalette } from "../../../../constants/theme";
-import { cancelTodayReminders, fireMilestoneNotification } from "../../../services/notifications";
-import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "../../../services/analytics";
+import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
+import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
 
 type Hook = {
   ayahAr?: string;

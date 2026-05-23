@@ -1,7 +1,7 @@
 import { View, Text, TextInput } from "react-native";
 import { useState } from "react";
 import { Link } from "expo-router";
-import { useOnboardingStore } from "../../stores/onboardingStore";
+import { useOnboardingStore } from "@stores/onboardingStore";
 import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../../constants/theme";
 
 export default function OnboardingNameScreen() {

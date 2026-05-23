@@ -1,6 +1,6 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
 import { getToken } from "./storage";
-import { useAuthStore } from "../stores/authStore";
+import { useAuthStore } from "@stores/authStore";
 import { router } from "expo-router";
 
 interface RetryableConfig extends InternalAxiosRequestConfig {

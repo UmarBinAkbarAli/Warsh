@@ -1,5 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import { WarshPalette } from "../../constants/theme";
+import { WarshPalette } from "../constants/theme";
 
 // Decorative static pattern used for original audio display
 const STATIC_LEVELS = [0.3, 0.5, 0.8, 0.6, 1.0, 0.7, 0.9, 0.4, 0.8, 0.6, 0.3, 0.7, 0.5, 0.9, 0.4, 0.6, 0.8, 0.5, 0.3, 0.7];

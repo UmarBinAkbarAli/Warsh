@@ -2,9 +2,9 @@ import { useCallback, useState } from "react";
 import { View, Text, ScrollView, TextInput, Pressable, ActivityIndicator } from "react-native";
 import { useFocusEffect } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import api from "../../services/api";
+import api from "@services/api";
 import { Colors, FontSizes, LineHeights, Radii, Shadows, Spacing } from "../../../constants/theme";
-import { trackNoorMessageSent } from "../../services/analytics";
+import { trackNoorMessageSent } from "@services/analytics";
 
 export default function ChatScreen() {
   const insets = useSafeAreaInsets();

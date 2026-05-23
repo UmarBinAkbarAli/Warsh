@@ -1,8 +1,8 @@
 import { useCallback, useState } from "react";
 import { View, Text, ScrollView, Pressable, ActivityIndicator } from "react-native";
 import { useFocusEffect, useLocalSearchParams, useRouter } from "expo-router";
-import api from "../../services/api";
-import { ArabicText } from "../../components/ArabicText";
+import api from "@services/api";
+import { ArabicText } from "@components/ArabicText";
 import { Colors, FontSizes, LineHeights, Radii, Shadows, Spacing } from "../../../constants/theme";
 
 function StatusBadge({ label }: { label: string }) {

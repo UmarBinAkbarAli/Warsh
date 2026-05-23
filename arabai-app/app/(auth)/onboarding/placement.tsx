@@ -1,9 +1,9 @@
 import { View, Text } from "react-native";
 import { useRouter } from "expo-router";
-import { BrandButton } from "../../components/BrandButton";
-import { useOnboardingStore } from "../../stores/onboardingStore";
+import { BrandButton } from "@components/BrandButton";
+import { useOnboardingStore } from "@stores/onboardingStore";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
-import { trackOnboardingPlacementSelected } from "../../services/analytics";
+import { trackOnboardingPlacementSelected } from "@services/analytics";
 
 export default function OnboardingPlacementScreen() {
   const router = useRouter();

@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import { STORAGE_KEYS } from "../services/storage";
+import { STORAGE_KEYS } from "@services/storage";
 
 export interface User {
   id: string;

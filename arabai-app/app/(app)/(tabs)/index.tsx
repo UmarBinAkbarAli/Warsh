@@ -4,8 +4,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import api from "../../services/api";
-import { ArabicText } from "../../components/ArabicText";
+import api from "@services/api";
+import { ArabicText } from "@components/ArabicText";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Shadows, Spacing, WarshPalette } from "../../../constants/theme";
 
 const FREEZE_BANNER_KEY = "warsh_freeze_banner_shown";

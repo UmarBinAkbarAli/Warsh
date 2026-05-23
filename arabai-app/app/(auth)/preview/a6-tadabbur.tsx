@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ArabicText } from "../../components/ArabicText";
-import { BrandButton } from "../../components/BrandButton";
+import { ArabicText } from "@components/ArabicText";
+import { BrandButton } from "@components/BrandButton";
 import { Colors, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
 
 const AN_NAS_WORDS = [

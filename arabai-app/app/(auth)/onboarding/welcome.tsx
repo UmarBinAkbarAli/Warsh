@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import { Link } from "expo-router";
-import { ArabicText } from "../../components/ArabicText";
+import { ArabicText } from "@components/ArabicText";
 import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../../constants/theme";
 
 export default function WelcomeScreen() {

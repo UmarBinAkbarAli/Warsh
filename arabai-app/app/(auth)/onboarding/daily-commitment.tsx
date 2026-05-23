@@ -1,9 +1,9 @@
 import { View, Text } from "react-native";
 import { useRouter } from "expo-router";
-import { useOnboardingStore } from "../../stores/onboardingStore";
-import { BrandButton } from "../../components/BrandButton";
+import { useOnboardingStore } from "@stores/onboardingStore";
+import { BrandButton } from "@components/BrandButton";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
-import { trackOnboardingDailyCommitmentSelected } from "../../services/analytics";
+import { trackOnboardingDailyCommitmentSelected } from "@services/analytics";
 
 const OPTIONS: { label: string; subtitle: string; value: number }[] = [
   { label: "5 minutes", subtitle: "Casual — I'll squeeze it in.", value: 5 },

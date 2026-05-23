@@ -1,5 +1,5 @@
 import { ActivityIndicator, Pressable, StyleSheet, Text, ViewStyle } from "react-native";
-import { Colors, Radii, Shadows, Spacing } from "../../constants/theme";
+import { Colors, Radii, Shadows, Spacing } from "../constants/theme";
 
 type Variant = "primary" | "secondary" | "danger";
 

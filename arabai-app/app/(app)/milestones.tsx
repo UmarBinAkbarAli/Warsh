@@ -3,9 +3,9 @@ import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-nat
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import api from "../services/api";
-import { ArabicText } from "../components/ArabicText";
-import { BrandButton } from "../components/BrandButton";
+import api from "@services/api";
+import { ArabicText } from "@components/ArabicText";
+import { BrandButton } from "@components/BrandButton";
 import { FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 
 type Achievement = {

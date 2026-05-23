@@ -1,8 +1,8 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ArabicText } from "../../components/ArabicText";
-import { BrandButton } from "../../components/BrandButton";
+import { ArabicText } from "@components/ArabicText";
+import { BrandButton } from "@components/BrandButton";
 import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../../constants/theme";
 
 export default function PreviewA4Grammar() {

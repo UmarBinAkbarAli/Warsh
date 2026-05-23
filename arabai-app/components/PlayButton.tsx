@@ -2,8 +2,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Audio } from "expo-av";
-import { getCachedTtsAudioUri } from "../services/audioCache";
-import { WarshPalette } from "../../constants/theme";
+import { getCachedTtsAudioUri } from "@services/audioCache";
+import { WarshPalette } from "../constants/theme";
 
 type PlayButtonProps = {
   text: string;

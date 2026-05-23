@@ -3,11 +3,11 @@ import { Text, TouchableOpacity, View } from "react-native";
 import { useRouter } from "expo-router";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ArabicText } from "../../components/ArabicText";
-import { BrandButton } from "../../components/BrandButton";
+import { ArabicText } from "@components/ArabicText";
+import { BrandButton } from "@components/BrandButton";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
 import { PREVIEW_SEEN_KEY } from "../../index";
-import { trackPreviewCompleted } from "../../services/analytics";
+import { trackPreviewCompleted } from "@services/analytics";
 
 export default function PreviewA7Cta() {
   const router = useRouter();

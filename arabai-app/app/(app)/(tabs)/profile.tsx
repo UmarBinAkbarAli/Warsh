@@ -4,11 +4,11 @@ import type { DimensionValue } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import api from "../../services/api";
-import { useAuth } from "../../hooks/useAuth";
+import api from "@services/api";
+import { useAuth } from "@hooks/useAuth";
 import * as Theme from "../../../constants/theme";
-import { BrandButton } from "../../components/BrandButton";
-import { ArabicText } from "../../components/ArabicText";
+import { BrandButton } from "@components/BrandButton";
+import { ArabicText } from "@components/ArabicText";
 
 export default function ProfileScreen() {
   const insets = useSafeAreaInsets();

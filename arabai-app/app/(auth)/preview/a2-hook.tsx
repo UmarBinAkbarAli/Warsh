@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { Animated, Text, TouchableOpacity, View } from "react-native";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ArabicText } from "../../components/ArabicText";
-import { BrandButton } from "../../components/BrandButton";
+import { ArabicText } from "@components/ArabicText";
+import { BrandButton } from "@components/BrandButton";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
 
 const WAVEFORM_BARS = 9;

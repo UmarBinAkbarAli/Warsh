@@ -1,12 +1,12 @@
 import { View, Text, TextInput } from "react-native";
 import { useState } from "react";
 import { Link, useRouter } from "expo-router";
-import { useAuth } from "../hooks/useAuth";
-import { ArabicText } from "../components/ArabicText";
-import { BrandButton } from "../components/BrandButton";
-import { getApiErrorMessage } from "../services/api";
+import { useAuth } from "@hooks/useAuth";
+import { ArabicText } from "@components/ArabicText";
+import { BrandButton } from "@components/BrandButton";
+import { getApiErrorMessage } from "@services/api";
 import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../constants/theme";
-import { trackLoginCompleted } from "../services/analytics";
+import { trackLoginCompleted } from "@services/analytics";
 
 export default function LoginScreen() {
   const router = useRouter();

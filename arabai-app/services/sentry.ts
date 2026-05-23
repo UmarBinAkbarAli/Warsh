@@ -4,7 +4,7 @@ const DSN = process.env.EXPO_PUBLIC_SENTRY_DSN;
 const ENV = process.env.EXPO_PUBLIC_ENVIRONMENT ?? "development";
 
 export function initSentry() {
-  if (!DSN) return;
+  if (!DSN) return false;
 
   Sentry.init({
     dsn: DSN,
@@ -20,6 +20,8 @@ export function initSentry() {
       return event;
     },
   });
+
+  return true;
 }
 
 export function setSentryUser(userId: string) {

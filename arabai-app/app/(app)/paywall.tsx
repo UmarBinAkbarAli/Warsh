@@ -14,9 +14,9 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import * as IAP from "react-native-iap";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import { verifyPurchase, getSubscriptionStatus } from "../services/api";
-import { ArabicText } from "../components/ArabicText";
-import { trackPaywallViewed, trackSubscriptionStarted, trackSubscriptionRestored } from "../services/analytics";
+import { verifyPurchase, getSubscriptionStatus } from "@services/api";
+import { ArabicText } from "@components/ArabicText";
+import { trackPaywallViewed, trackSubscriptionStarted, trackSubscriptionRestored } from "@services/analytics";
 
 // ─── product IDs ─────────────────────────────────────────────────────────────
 

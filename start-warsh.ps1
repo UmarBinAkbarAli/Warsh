@@ -122,10 +122,44 @@ Write-Step "Starting Expo Metro (EXPO_PUBLIC_API_URL=$apiUrl)"
 Start-Process powershell -ArgumentList @(
     "-NoExit",
     "-Command",
-    "Set-Location '$RepoRoot\arabai-app'; `$env:EXPO_PUBLIC_API_URL='$apiUrl'; `$env:EXPO_PUBLIC_ENVIRONMENT='$envName'; Write-Host 'Warsh Metro  [$envName]' -ForegroundColor Magenta; npm start"
+    "Set-Location '$RepoRoot\arabai-app'; `$env:EXPO_PUBLIC_API_URL='$apiUrl'; `$env:EXPO_PUBLIC_ENVIRONMENT='$envName'; Write-Host 'Warsh Metro  [$envName]' -ForegroundColor Magenta; npx expo start --localhost --clear"
 ) -WindowStyle Normal
 
 Write-OK "Metro window opened"
+
+# 5. Wait for Metro to be ready, then re-apply ADB tunnel
+#    Metro launch can cause the USB device to briefly reconnect, silently
+#    dropping the reverse tunnel that was set in step 2. Re-applying it
+#    after Metro is up guarantees the phone can reach port 8081.
+Write-Step "Waiting for Metro to be ready at http://localhost:8081/status"
+
+$metroMaxWait = 120
+$metroElapsed = 0
+$metroReady = $false
+
+while ($metroElapsed -lt $metroMaxWait) {
+    Start-Sleep -Seconds 3
+    $metroElapsed += 3
+    try {
+        $resp = Invoke-WebRequest -Uri "http://localhost:8081/status" -UseBasicParsing -TimeoutSec 2 -ErrorAction Stop
+        if ($resp.StatusCode -eq 200) { $metroReady = $true; break }
+    } catch { }
+    Write-Host "    Still waiting for Metro... ($metroElapsed s)"
+}
+
+if ($metroReady) {
+    Write-OK "Metro is up"
+} else {
+    Write-Warn "Metro did not respond in ${metroMaxWait}s - re-applying tunnel anyway. Check Metro window for errors."
+}
+
+# Re-apply the tunnel now that Metro is running (prevents stale/dropped tunnel)
+Write-Step "Re-applying ADB reverse tunnel (tcp:8081) after Metro launch"
+& $adb reverse tcp:8081 tcp:8081 | Out-Null
+if (-not $prod) {
+    & $adb reverse tcp:3000 tcp:3000 | Out-Null
+}
+Write-OK "ADB tunnel refreshed - open/reload the app on your phone"
 
 # Done
 $color = if ($prod) { "Yellow" } else { "Green" }

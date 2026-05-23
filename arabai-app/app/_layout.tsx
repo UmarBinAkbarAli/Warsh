@@ -5,10 +5,10 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import * as Sentry from "@sentry/react-native";
 import { Colors } from "../constants/theme";
-import { initSentry } from "./services/sentry";
-import { initAnalytics } from "./services/analytics";
+import { initSentry } from "@services/sentry";
+import { initAnalytics } from "@services/analytics";
 
-initSentry();
+const sentryEnabled = initSentry();
 void initAnalytics();
 
 function RootLayout() {
@@ -43,4 +43,4 @@ function RootLayout() {
   );
 }
 
-export default Sentry.wrap(RootLayout);
+export default sentryEnabled ? Sentry.wrap(RootLayout) : RootLayout;

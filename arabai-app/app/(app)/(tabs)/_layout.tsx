@@ -6,11 +6,11 @@ import { Colors } from "../../../constants/theme";
 export default function TabsLayout() {
   return (
     <Tabs
-      sceneContainerStyle={{
-        backgroundColor: Colors.bg.primary,
-      }}
       screenOptions={{
         headerShown: false,
+        sceneStyle: {
+          backgroundColor: Colors.bg.primary,
+        },
         tabBarStyle: {
           backgroundColor: Colors.bg.secondary,
           borderTopColor: Colors.border.subtle,

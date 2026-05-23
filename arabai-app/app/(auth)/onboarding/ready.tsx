@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import { Link } from "expo-router";
-import { useOnboardingStore } from "../../stores/onboardingStore";
+import { useOnboardingStore } from "@stores/onboardingStore";
 import { Colors, FontSizes, LineHeights, Radii, Shadows, Spacing } from "../../../constants/theme";
 
 const placementLabels: Record<string, string> = {
