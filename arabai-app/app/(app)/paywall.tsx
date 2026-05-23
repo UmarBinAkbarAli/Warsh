@@ -12,11 +12,22 @@ import {
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import * as IAP from "react-native-iap";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 import { verifyPurchase, getSubscriptionStatus } from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import { trackPaywallViewed, trackSubscriptionStarted, trackSubscriptionRestored } from "@services/analytics";
+import {
+  acknowledgeAndroidPurchase,
+  connectIap,
+  endIapConnection,
+  getAvailableIapPurchases,
+  getSubscriptionProducts,
+  isBillingSupportedEnvironment,
+  isIapUnavailableError,
+  requestSubscriptionPurchase,
+  type IapSubscription,
+  type IapSubscriptionPurchase,
+} from "@services/iap";
 
 // ─── product IDs ─────────────────────────────────────────────────────────────
 
@@ -50,7 +61,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   const router = useRouter();
 
   const [selected, setSelected] = useState<"monthly" | "annual">("annual");
-  const [products, setProducts] = useState<IAP.Subscription[]>([]);
+  const [products, setProducts] = useState<IapSubscription[]>([]);
   const [purchasing, setPurchasing] = useState(false);
   const [restoring, setRestoring] = useState(false);
   const [trialDaysRemaining, setTrialDaysRemaining] = useState<number | null>(null);
@@ -67,19 +78,32 @@ export default function PaywallScreen({ dismissable = true }: Props) {
 
       trackPaywallViewed();
 
-      // Load IAP products from store — guarded for dev/non-Play environments
+      let cancelled = false;
+
+      // Load IAP products from store. Expo Go and non-billing builds get static fallback prices.
       (async () => {
-        try {
-          await IAP.initConnection();
-          const subs = await IAP.getSubscriptions({ skus: SKUS });
+        const connected = await connectIap();
+        if (!connected) {
+          if (!cancelled) {
+            setProducts([]);
+          }
+          return;
+        }
+
+        if (cancelled) {
+          await endIapConnection();
+          return;
+        }
+
+        const subs = await getSubscriptionProducts(SKUS);
+        if (!cancelled) {
           setProducts(subs);
-        } catch {
-          // E_IAP_NOT_AVAILABLE in dev or when Play Store is not configured — silent fallback
         }
       })();
 
       return () => {
-        IAP.endConnection().catch(() => {});
+        cancelled = true;
+        endIapConnection();
       };
     }, [])
   );
@@ -95,16 +119,24 @@ export default function PaywallScreen({ dismissable = true }: Props) {
 
   async function handlePurchase() {
     if (purchasing) return;
+    if (!isBillingSupportedEnvironment()) {
+      Alert.alert(
+        "Purchases unavailable",
+        "Subscriptions can only be tested in a development or Play Store test build, not Expo Go."
+      );
+      return;
+    }
+
     setPurchasing(true);
 
     const productId = selected === "annual" ? PRODUCT_IDS.annual : PRODUCT_IDS.monthly;
 
     try {
       // Trigger native IAP purchase
-      const purchase = await IAP.requestSubscription({ sku: productId });
+      const purchase = await requestSubscriptionPurchase(productId);
       const token = Array.isArray(purchase)
-        ? (purchase[0] as IAP.SubscriptionPurchase).purchaseToken
-        : (purchase as IAP.SubscriptionPurchase)?.purchaseToken;
+        ? (purchase[0] as IapSubscriptionPurchase).purchaseToken
+        : (purchase as IapSubscriptionPurchase)?.purchaseToken;
 
       // Verify with our backend
       await verifyPurchase({
@@ -115,7 +147,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
 
       // Acknowledge the purchase (required on Android)
       if (token && Platform.OS === "android") {
-        await IAP.acknowledgePurchaseAndroid({ token });
+        await acknowledgeAndroidPurchase(token);
       }
 
       trackSubscriptionStarted(selected);
@@ -126,7 +158,12 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       );
     } catch (err: any) {
       // User cancelled — silent
-      if (err?.code !== "E_USER_CANCELLED") {
+      if (isIapUnavailableError(err)) {
+        Alert.alert(
+          "Purchases unavailable",
+          "In-app purchases are not available on this build or device. Use a Play Store test build to test subscriptions."
+        );
+      } else if (err?.code !== "E_USER_CANCELLED") {
         Alert.alert("Purchase failed", "Something went wrong. Please try again or contact support.");
       }
     } finally {
@@ -136,10 +173,18 @@ export default function PaywallScreen({ dismissable = true }: Props) {
 
   async function handleRestore() {
     if (restoring) return;
+    if (!isBillingSupportedEnvironment()) {
+      Alert.alert(
+        "Restore unavailable",
+        "Purchases can only be restored in a development or Play Store test build, not Expo Go."
+      );
+      return;
+    }
+
     setRestoring(true);
 
     try {
-      const purchases = await IAP.getAvailablePurchases();
+      const purchases = await getAvailableIapPurchases();
       const activePurchase = purchases.find(
         (p) => p.productId === PRODUCT_IDS.annual || p.productId === PRODUCT_IDS.monthly
       );
@@ -151,7 +196,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
 
       await verifyPurchase({
         productId: activePurchase.productId,
-        purchaseToken: (activePurchase as IAP.SubscriptionPurchase).purchaseToken ?? undefined,
+        purchaseToken: (activePurchase as IapSubscriptionPurchase).purchaseToken ?? undefined,
         platform: Platform.OS as "android" | "ios",
       });
 
@@ -161,8 +206,15 @@ export default function PaywallScreen({ dismissable = true }: Props) {
         "Your subscription has been restored.",
         [{ text: "Continue", onPress: () => router.replace("/(app)/(tabs)") }]
       );
-    } catch {
-      Alert.alert("Restore failed", "Could not restore purchases. Please try again.");
+    } catch (err) {
+      if (isIapUnavailableError(err)) {
+        Alert.alert(
+          "Restore unavailable",
+          "In-app purchases are not available on this build or device. Use a Play Store test build to restore subscriptions."
+        );
+      } else {
+        Alert.alert("Restore failed", "Could not restore purchases. Please try again.");
+      }
     } finally {
       setRestoring(false);
     }
@@ -172,6 +224,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     trialDaysRemaining !== null && trialDaysRemaining > 0
       ? `Your free trial ends in ${trialDaysRemaining} day${trialDaysRemaining !== 1 ? "s" : ""}.`
       : "Your free trial has ended.";
+  const billingSupported = isBillingSupportedEnvironment();
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
@@ -246,19 +299,25 @@ export default function PaywallScreen({ dismissable = true }: Props) {
 
         {/* CTA */}
         <TouchableOpacity
-          style={[styles.ctaBtn, purchasing ? styles.ctaBtnDisabled : null]}
+          style={[styles.ctaBtn, purchasing || !billingSupported ? styles.ctaBtnDisabled : null]}
           onPress={handlePurchase}
-          disabled={purchasing}
+          disabled={purchasing || !billingSupported}
           activeOpacity={0.85}
         >
           {purchasing ? (
             <ActivityIndicator color={WarshPalette.white} />
           ) : (
-            <Text style={styles.ctaBtnText}>Start subscription</Text>
+            <Text style={styles.ctaBtnText}>
+              {billingSupported ? "Start subscription" : "Unavailable in Expo Go"}
+            </Text>
           )}
         </TouchableOpacity>
 
-        <Text style={styles.cancelNote}>Cancel anytime in your device settings.</Text>
+        <Text style={styles.cancelNote}>
+          {billingSupported
+            ? "Cancel anytime in your device settings."
+            : "Use a development or Play Store test build to test subscriptions."}
+        </Text>
 
         {/* Feature list */}
         <View style={styles.featureList}>
@@ -271,7 +330,11 @@ export default function PaywallScreen({ dismissable = true }: Props) {
         </View>
 
         {/* Restore */}
-        <TouchableOpacity onPress={handleRestore} disabled={restoring} style={styles.restoreBtn}>
+        <TouchableOpacity
+          onPress={handleRestore}
+          disabled={restoring || !billingSupported}
+          style={[styles.restoreBtn, !billingSupported ? styles.restoreBtnDisabled : null]}
+        >
           {restoring ? (
             <ActivityIndicator color={WarshPalette.gold} size="small" />
           ) : (
@@ -392,6 +455,7 @@ const styles = StyleSheet.create({
   ctaBtnText: {
     color: WarshPalette.gold, fontFamily: Fonts.display,
     fontSize: FontSizes.h3, fontWeight: "700",
+    textAlign: "center",
   },
   cancelNote: {
     color: WarshPalette.subtleBrown, fontFamily: Fonts.regular,
@@ -421,6 +485,7 @@ const styles = StyleSheet.create({
     alignItems: "center", paddingVertical: Spacing.sm,
     marginBottom: Spacing.md,
   },
+  restoreBtnDisabled: { opacity: 0.5 },
   restoreText: {
     color: WarshPalette.gold, fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM, textDecorationLine: "underline",

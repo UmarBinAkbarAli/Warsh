@@ -1,0 +1,146 @@
+import Constants from "expo-constants";
+import { Platform } from "react-native";
+
+type IapModule = typeof import("react-native-iap");
+
+export type IapSubscription = import("react-native-iap").Subscription;
+export type IapSubscriptionPurchase = import("react-native-iap").SubscriptionPurchase;
+
+let iapModule: IapModule | null | undefined;
+let connected = false;
+let connectionAttempt: Promise<boolean> | null = null;
+
+export class IapUnavailableError extends Error {
+  code = "IAP_UNAVAILABLE";
+
+  constructor() {
+    super("In-app purchases are not available in this build or on this device.");
+    this.name = "IapUnavailableError";
+  }
+}
+
+export function isBillingSupportedEnvironment() {
+  return Constants.appOwnership !== "expo" && (Platform.OS === "android" || Platform.OS === "ios");
+}
+
+export function isIapUnavailableError(error: unknown) {
+  const code = (error as { code?: string } | null)?.code;
+  return code === "IAP_UNAVAILABLE" || code === "E_IAP_NOT_AVAILABLE";
+}
+
+async function getIapModule() {
+  if (!isBillingSupportedEnvironment()) {
+    return null;
+  }
+
+  if (iapModule !== undefined) {
+    return iapModule;
+  }
+
+  try {
+    iapModule = await import("react-native-iap");
+  } catch {
+    iapModule = null;
+  }
+
+  return iapModule;
+}
+
+export async function connectIap() {
+  if (connected) {
+    return true;
+  }
+
+  if (connectionAttempt) {
+    return connectionAttempt;
+  }
+
+  connectionAttempt = (async () => {
+    const IAP = await getIapModule();
+    if (!IAP) {
+      return false;
+    }
+
+    try {
+      await IAP.initConnection();
+      connected = true;
+      return true;
+    } catch {
+      return false;
+    } finally {
+      connectionAttempt = null;
+    }
+  })();
+
+  return connectionAttempt;
+}
+
+export async function endIapConnection() {
+  if (!connected) {
+    return;
+  }
+
+  const IAP = await getIapModule();
+  connected = false;
+
+  if (!IAP) {
+    return;
+  }
+
+  await IAP.endConnection().catch(() => {});
+}
+
+export async function getSubscriptionProducts(skus: string[]) {
+  const available = await connectIap();
+  if (!available) {
+    return [];
+  }
+
+  const IAP = await getIapModule();
+  if (!IAP) {
+    return [];
+  }
+
+  try {
+    return await IAP.getSubscriptions({ skus });
+  } catch {
+    return [];
+  }
+}
+
+export async function requestSubscriptionPurchase(productId: string) {
+  const available = await connectIap();
+  const IAP = await getIapModule();
+
+  if (!available || !IAP) {
+    throw new IapUnavailableError();
+  }
+
+  return IAP.requestSubscription({ sku: productId });
+}
+
+export async function getAvailableIapPurchases() {
+  const available = await connectIap();
+  const IAP = await getIapModule();
+
+  if (!available || !IAP) {
+    throw new IapUnavailableError();
+  }
+
+  return IAP.getAvailablePurchases();
+}
+
+export async function acknowledgeAndroidPurchase(token: string) {
+  if (Platform.OS !== "android") {
+    return;
+  }
+
+  const available = await connectIap();
+  const IAP = await getIapModule();
+
+  if (!available || !IAP) {
+    return;
+  }
+
+  await IAP.acknowledgePurchaseAndroid({ token });
+}

@@ -20,6 +20,16 @@
         "EXPO_PUBLIC_ENVIRONMENT": "staging"
       }
     },
+    "previewProd": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://warsh-backend.vercel.app",
+        "EXPO_PUBLIC_ENVIRONMENT": "production"
+      }
+    },
     "production": {
       "autoIncrement": true,
       "env": {
