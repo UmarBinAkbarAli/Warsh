@@ -1,6 +1,6 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-05-22 (content dashboard starter)
+Last updated: 2026-05-22 (vocabulary bank expanded to 585 words)
 
 ## Purpose
 
@@ -20,9 +20,11 @@ It should not be treated as a permanent record of:
 ## Current Phase
 
 - **Phase 1 core app flow:** implemented
-- **Phase 1.5 Warsh reader curriculum:** implemented as a 72-chapter interactive seed
-- **Current focus:** larger beta build work while manual QA of lesson formats is intentionally postponed
-- **Recommended next milestone:** use the new dashboard for content review/edit passes, then manually QA lesson formats on device
+- **Content schema:** migrated to `warsh-content-schema v1.0` — single `content Json` blob per lesson, `LessonTemplate` enum (STANDARD / SPOKEN_PHRASES / REVIEW / VERB_PATTERN)
+- **Chapter 1:** fully authored — 4 hand-authored lessons in `arabai-backend/prisma/fixtures/`
+- **Chapters 2–72:** chapter metadata seeded, lessons pending authoring
+- **Current focus:** content authoring — one chapter at a time, using the fixture pattern
+- **Recommended next milestone:** author Chapter 2 (adjectives — جَدِيد، كَبِير، صَغِير, agreement rules), then test Chapter 1 end-to-end on device
 
 ## Build and Testing Status
 
@@ -329,9 +331,86 @@ The repo is in a stronger state than the old tracker wording suggested, but a fe
 - Noor backend generation now uses `arabai-backend/lib/openai.ts` with `OPENAI_MODEL` defaulting to `gpt-4o-mini`
 - Noor still falls back to the local tutor response when `OPENAI_API_KEY` is missing or the provider call throws - this can mask real provider errors during debugging
 - Runtime health claims such as "server is running" or "Expo bundle returned 200" are environment checks, not source-of-truth code facts
-- The visual/design source of truth is `Docs/warsh-brand-ui-sot.md`
+- The visual/design source of truth is `Docs/warsh-spec-11-design-system-and-copy.md` (not `warsh-brand-ui-sot.md` — that file is obsolete)
+- The complete product/engineering SOT is `Docs/warsh-spec-00-master-index.md` + spec-01 through spec-13; old files (`arabai-phase1-sot-v2.md`, `arabai-brand.md`, `warsh-brand-ui-sot.md`, etc.) are superseded and must not be referenced
+- Lesson content lives in `arabai-backend/prisma/fixtures/` as JSON files (warsh-content-schema v1.0); add new lessons there and wire into `seed.cjs`
+- The lesson API transformer in `GET /api/lessons/[id]` converts new content schema → legacy lesson player shape; updating the lesson player to read the new schema directly is future work
+- `npm run db:seed` is fully destructive: wipes all users, progress, chat, achievements, lessons, chapters before reseeding
 
 ## Recent Changes (since 2026-05-22) — latest
+
+### Vocabulary bank expanded to 585 words (2026-05-22)
+
+- Expanded `arabai-backend/prisma/vocabulary-seed.cjs` from 80 words to **585 words** across all 16 topic categories
+- New words added in 4 separate addition files (`vocab-additions-1.cjs` through `vocab-additions-4.cjs`) imported and merged in `vocabulary-seed.cjs`
+- Word counts by category (approximate):
+  - People (النَّاس): ~40 | Family (العَائِلَة): ~25 | Body (الجِسْم): ~35 | Home (البَيْت): ~30
+  - Food (الطَّعَام): ~25 | Time (الزَّمَن): ~30 | Nature (الطَّبِيعَة): ~45 | Worship (العِبَادَة): ~60
+  - Quranic Terms (مُصْطَلَحَات): ~80 | Verbs (الأَفْعَال): ~60 | Travel (السَّفَر): ~25 | Masjid (المَسْجِد): ~30
+  - Marketplace (السُّوق): ~25 | School (المَدْرَسَة): ~30 | Numbers (الأَعْدَاد): ~30 | Colors (الأَلْوَان): ~15
+- All words have: full harakat, transliteration, English + Urdu translations, word type, gender, root letters (where applicable)
+- ~150+ words include Quranic examples referencing real ayat (Al-Fatiha, Al-Ikhlas, An-Nas, Al-Alaq, Al-Baqarah, etc.)
+- sortOrder range: 1–585 with no duplicates
+- Backend TypeScript check passed (0 errors)
+- **To activate:** run `npm run db:seed` in `arabai-backend/`
+
+## Recent Changes (since 2026-05-22) — latest (previous)
+
+### Content schema v2 migration + Chapter 1 authored (2026-05-22)
+
+**Content schema migration:**
+- Replaced old split lesson columns (`hook`, `discoverCards`, `exercises`, `revealText`, `revealAyah`, `fatihaProgressDelta`) with a single `content Json` column holding a full `LessonContent` blob (per `Docs/warsh-content-schema.ts`)
+- Replaced `LessonType` enum (7 old values) with `LessonTemplate` enum: `STANDARD | SPOKEN_PHRASES | REVIEW | VERB_PATTERN`
+- Migration `20260522500000_content_schema_v2` applied to Neon — existing 323 rows migrated cleanly (old `type` mapped; unused columns dropped)
+- Prisma client regenerated; TypeScript check passed across all backend files
+- API route `GET /api/lessons/[id]` now includes a `transformContent()` adapter — reads new schema, outputs the legacy field shape the lesson player already reads (zero app changes needed)
+- Exercise type transformers implemented for: `TAP_TRANSLATION`, `MATCHING`, `BUILD_SENTENCE`, `FILL_BLANK`, `TRUE_FALSE`, `GRAMMAR_PARSE`
+- `LessonTemplate` replaces `LessonType` in all affected routes: `chapters/[id]/lessons`, `lessons/[id]/complete`, `chapters` (via `getUserCourseState`), `admin/content`, `admin/lessons`, `progress`, `dashboard` page + client
+- `fatihaProgressDelta` removed from schema and all routes; `fatihaPercent` in `GET /api/progress` now returns 0 (Tadabbur system tracks this via `UserSurahProgress` instead)
+- Content schema types copied to `arabai-backend/lib/content-schema.ts` for backend type imports
+- Seed updated: old curriculum lessons dropped; chapters seeded from metadata only (72 chapters, 0 lessons by default); lessons added via fixture files
+
+**Chapter 1 — fully authored (4 lessons):**
+
+All lessons in `arabai-backend/prisma/fixtures/` and wired into `seed.cjs`:
+
+| File | Template | Title | Hook | Reveal | New words |
+|---|---|---|---|---|---|
+| `chapter-01-lesson-01.json` | STANDARD | First Encounter with هَذَا | Al-Fatiha 1:1 | Al-Baqarah 2:2 | هَذَا، كِتَاب، قَلَم، بَيْت، مَسْجِد |
+| `chapter-01-lesson-02.json` | STANDARD | ذٰلِكَ وَمَا وَمَنْ | Al-Baqarah 2:2 | Al-Baqarah 2:26 | ذٰلِكَ، مَا، مَنْ |
+| `chapter-01-lesson-03.json` | STANDARD | هَذِهِ وَتِلْكَ | Yusuf 12:108 | Az-Zukhruf 43:72 | هَذِهِ، تِلْكَ، شَجَرَة، جَنَّة |
+| `chapter-01-lesson-04.json` | REVIEW | Chapter 1 Review | Al-Imran 3:138 | Al-Baqarah 2:35 | (review of L1–L3) |
+
+Each lesson has: 5–6 discover cards, 6–8 exercises (xp_value 1 for STANDARD, 5 for REVIEW), Quranic hook + reveal, bilingual Noor messages (English + Urdu).
+
+L4 (REVIEW) reveal is Al-Baqarah 2:35 — Adam and Eve in الْجَنَّةَ — highlights هَٰذِهِ الشَّجَرَةَ, both words from L3.
+
+**Authoring workflow established:**
+1. Copy an existing fixture JSON from `arabai-backend/prisma/fixtures/`
+2. Author content (follows `Docs/warsh-content-schema.ts` v1.0)
+3. Add `require()` and `prisma.lesson.create()` to `seed.cjs`
+4. Run `npm run db:seed` (destructive — wipes all users/progress)
+
+**SOT documentation updated:**
+- `CLAUDE.md` rewritten: warsh-spec-00 through spec-13 declared as the only SOT; 10 old doc files listed as obsolete and must not be referenced; per-spec-file topic index added; `warsh-spec-11` replaces `warsh-brand-ui-sot.md` as design SOT
+- Memory file `project_brand_sot.md` updated to reflect new SOT
+
+**Device testing (2026-05-22):**
+- Fresh Android debug APK built via `expo run:android` with `JAVA_HOME` set to Android Studio bundled JDK (`C:\Program Files\Android\Android Studio\jbr`)
+- ADB reverse tunnels set up: `tcp:8081` and `tcp:3000`
+- App registered new account, completed onboarding, loaded Learn tab
+- Chapter 1 lesson tap confirmed: `GET /api/chapters/{id}/lessons 200` and `GET /api/lessons/{id} 200` both logged on backend
+- Lesson player launched for Ch1 L1 on physical device
+
+**Verification:**
+- Backend TypeScript check passed (0 errors)
+- `npm run db:seed` passed: 72 chapters, 4 Ch1 lessons, 80 vocab words, 11 Tadabbur Surahs
+- API smoke tests passed:
+  - `GET /api/chapters` → 72 chapters, Ch1 with 4 lessons
+  - `GET /api/chapters/{ch1_id}/lessons` → 200, 4 lessons listed
+  - `GET /api/lessons/{l1_id}` → 200, transformed content with hook/discoverCards/exercises/reveal
+
+## Recent Changes (since 2026-05-22) — previous (was latest)
 
 ### Content dashboard starter (2026-05-22)
 
@@ -972,44 +1051,42 @@ Current product concern:
 
 ## Remaining Work
 
-1. Manually QA the new lesson player formats:
-   - early reader lesson
-   - matching exercise
-   - grammar parse exercise
-   - conversation builder
-   - lecture 15 final lesson
-2. Verify runtime APIs after local seed:
-   - `GET /api/chapters`
-   - `GET /api/chapters/:id/lessons`
-   - `GET /api/lessons/:id`
-3. ~~Add audio play buttons in lessons~~ — **Done** (vocabulary word cards, discover cards, exercise Arabic prompts)
-4. Add real AI provider configuration when ready:
-   - `OPENAI_API_KEY`
-   - optional `OPENAI_MODEL` override if not using the default `gpt-4o-mini`
-5. Run fresh runtime verification when needed for local development:
-   - database
-   - backend dev server
-   - Expo session
-   - authenticated mobile flows
-6. Clean temporary logs and local test artifacts before commit if they are not needed.
+### Content authoring (highest priority)
+1. Author Chapter 2: adjectives (جَدِيد، كَبِير، صَغِير، قَدِيم) + agreement with noun gender (4–5 lessons)
+2. Author Chapters 3–5, then R1 REVIEW lesson after Ch5
+3. Author SP1 SPOKEN_PHRASES lesson after Ch3 (basic greetings — per spec-05 Part C)
+4. Continue through Chapters 6–72 following the chapter mapping in `warsh-spec-05`
+5. For each chapter: STANDARD lessons + at least 1 REVIEW at chapter milestones per spec-05 Part B
+
+### Lesson player (engineering)
+6. Update the lesson player (`play.tsx`) to read the new content schema directly (currently using the API transformer as an adapter — acceptable for now but should be replaced)
+7. Wire `explanation_on_wrong` from exercises into the feedback bar (currently shows generic feedback)
+8. Support multiple `highlighted_word_indices` in the Reveal beat (transformer only uses index 0)
+
+### Infrastructure
+9. Configure `OPENAI_API_KEY` in backend `.env` for real AI + TTS
+10. Configure `EXPO_PUBLIC_MIXPANEL_TOKEN` and `EXPO_PUBLIC_SENTRY_DSN` in EAS secrets before beta
+11. Set `ADMIN_DASHBOARD_TOKEN` before using dashboard writes outside local development
+12. Update `validate-curriculum.cjs` to validate fixture-based lessons (currently validates old .cjs curriculum files)
+
+### QA still needed
+13. Full lesson player QA on device for all 4 Ch1 lessons (5-beat flow, all exercise types)
+14. Verify REVIEW template (xp_value: 5) XP display in lesson player close screen
+15. Verify chapter completion logic with new schema (Ch1 completes when all 4 lessons done)
 
 ## Current Source-Of-Truth Summary
 
-As of 2026-05-21:
+As of 2026-05-22:
 - the codebase implements the full Phase 1 app loop
 - the native Android app is installed and launching on the authorized physical device
 - onboarding, auth, placement, progression, lesson play, chat, and profile flows exist in code
-- backend auth endpoints have passed a local API smoke test
-- native Android app login and signup now succeed through the UI; backend-side Neon checks pass, Learn loads on-device after signup, and Noor history loads on-device after login
-- the backend enforces locked progression and placement skipping, with `DEV_UNLOCK_ALL` guarded for development only
-- the curriculum seed is now at 15 chapters / 60 lessons using the Warsh flow system
-- the mobile lesson player supports the new Warsh practice formats required by the seed
-- chapter and chapter-lessons APIs now return full enriched state (completion, skip flags, counts)
-- the bottom tab shell now matches the Warsh spec structure: `Learn | Vocabulary | Noor | You`
+- **lesson content schema has been migrated to warsh-content-schema v1.0** — single `content Json` blob, `LessonTemplate` enum, API transformer in place
+- **Chapter 1 is fully authored** — 4 lessons (3 STANDARD + 1 REVIEW) in `arabai-backend/prisma/fixtures/`, seeded and verified on-device
+- the SOT is `Docs/warsh-spec-00-master-index.md` + spec-01 through spec-13; `CLAUDE.md` updated to reflect this
+- 72 chapters seeded with metadata; Chapters 2–72 have 0 lessons (content authoring in progress)
+- backend enforces locked progression and placement skipping; `DEV_UNLOCK_ALL=true` in local `.env` for development
+- backend TypeScript check passes with 0 errors after the schema migration
+- bottom tab shell matches spec: `Learn | Vocabulary | Noor | You`
 - Noor backend wiring is OpenAI-only with `gpt-4o-mini` as the default model
-- mobile local networking setup is documented with `.env.example` and USB reverse guidance
-- `expo-keep-awake` is now directly declared, the native Android app has been rebuilt/reinstalled, and the keep-awake warning no longer appears in fresh launch logs
-- app icon, adaptive icon, native Android launcher resources, and splash screen now use polished Warsh parchment/gold assets
-- mobile production config now requires explicit `EXPO_PUBLIC_API_URL`, blocks non-HTTPS/local hosts outside development, and has EAS preview/production env values pinned
-- OpenAI TTS backend generation and mobile local audio caching plumbing are in place, but UI play buttons still need to be wired
-- the biggest immediate gap is manual QA of the new lesson formats
+- mobile local networking: USB reverse (`tcp:8081`, `tcp:3000`) + `http://127.0.0.1:3000` is the reliable path
+- the biggest immediate gap is **content depth** — only Chapter 1 has authored lessons; authoring Chapters 2–72 is the primary workstream

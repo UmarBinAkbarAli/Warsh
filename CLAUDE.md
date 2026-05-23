@@ -47,6 +47,39 @@ Quick spec reference:
 - **Biggest remaining gap:** curriculum depth, not app wiring
 - **Recommended next milestone:** expand chapters/lessons before starting true Phase 2 scope
 
+## "Start Warsh App" — Agent Protocol
+
+When the user says **"start warsh app"** (or any close variant), always run the
+PowerShell script at the repo root — never improvise individual steps:
+
+```powershell
+.\start-warsh.ps1        # local dev  — runs backend on localhost:3000
+.\start-warsh.ps1 -prod  # production — points app at warsh-backend.vercel.app
+```
+
+**Local dev** does (in order):
+1. Verifies ADB + USB device is connected
+2. Sets ADB reverse tunnels: `tcp:8081` (Metro) and `tcp:3000` (Backend)
+3. Opens a terminal window running the Next.js backend (`npm run dev` in `arabai-backend/`)
+4. Waits until `http://localhost:3000/api/health` returns 200
+5. Opens a terminal window running Expo Metro with `EXPO_PUBLIC_API_URL=http://127.0.0.1:3000`
+
+**Production (`-prod`)** does:
+1. Verifies ADB + USB device is connected
+2. Sets ADB reverse tunnel: `tcp:8081` (Metro only — no local backend)
+3. Opens a terminal window running Expo Metro with `EXPO_PUBLIC_API_URL=https://warsh-backend.vercel.app`
+
+**No Docker needed** — the database is Neon (cloud Postgres). The backend connects
+to Neon directly via `DATABASE_URL` in `arabai-backend/.env`.
+
+**Never hardcode a LAN IP.** Always use `http://127.0.0.1:3000` — the ADB tunnel
+forwards traffic from the phone to the PC's localhost.
+
+To run the script from the Claude Code terminal:
+```
+! .\start-warsh.ps1
+```
+
 ## Commands
 
 ### Backend (`arabai-backend/`)
@@ -60,12 +93,6 @@ npm run db:generate   # Regenerate Prisma Client after schema changes
 npm run db:migrate    # Apply pending migrations
 npm run db:seed       # Seed initial chapters/lessons/achievements
 npm run db:studio     # Open Prisma Studio GUI
-```
-
-Local PostgreSQL via Docker:
-
-```bash
-docker-compose up -d  # Start PostgreSQL 16 on port 5432
 ```
 
 ### Mobile App (`arabai-app/`)
@@ -115,7 +142,7 @@ Avoid committing machine-specific LAN IPs. Use `EXPO_PUBLIC_API_URL` for any per
 Expo App (Android)
   -> Axios (auto-attaches JWT via interceptor)
   -> Next.js API Routes (arabai-backend/app/api/)
-  -> Prisma -> PostgreSQL (Docker locally)
+  -> Prisma -> PostgreSQL (Neon cloud)
              -> OpenAI/local fallback (chat endpoint only)
 ```
 

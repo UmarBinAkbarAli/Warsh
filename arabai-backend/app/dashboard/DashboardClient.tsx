@@ -10,15 +10,9 @@ export type DashboardLesson = {
   order: number;
   title: string;
   titleAr: string;
-  type: string;
+  template: string;
   xpReward: number;
-  fatihaProgressDelta: number;
   content: JsonValue;
-  hook: JsonValue | null;
-  discoverCards: JsonValue | null;
-  exercises: JsonValue | null;
-  revealText: string | null;
-  revealAyah: JsonValue | null;
 };
 
 export type DashboardChapter = {
@@ -34,18 +28,15 @@ export type DashboardChapter = {
 };
 
 type ChapterDraft = Pick<DashboardChapter, "title" | "titleAr" | "description" | "worldMapX" | "worldMapY" | "isLocked">;
-type LessonDraft = Pick<
-  DashboardLesson,
-  "title" | "titleAr" | "type" | "xpReward" | "fatihaProgressDelta" | "revealText"
-> & {
+type LessonDraft = {
+  title: string;
+  titleAr: string;
+  template: string;
+  xpReward: number;
   content: string;
-  hook: string;
-  discoverCards: string;
-  exercises: string;
-  revealAyah: string;
 };
 
-const LESSON_TYPES = ["FLASHCARD", "FILL_BLANK", "MULTIPLE_CHOICE", "MATCHING", "LISTENING", "VOCABULARY", "SPOKEN_PHRASES"];
+const LESSON_TEMPLATES = ["STANDARD", "SPOKEN_PHRASES", "REVIEW", "VERB_PATTERN"];
 
 function prettyJson(value: JsonValue | null) {
   return JSON.stringify(value ?? null, null, 2);
@@ -63,15 +54,9 @@ function toLessonDraft(lesson: DashboardLesson): LessonDraft {
   return {
     title: lesson.title,
     titleAr: lesson.titleAr,
-    type: lesson.type,
+    template: lesson.template,
     xpReward: lesson.xpReward,
-    fatihaProgressDelta: lesson.fatihaProgressDelta,
-    revealText: lesson.revealText ?? "",
     content: prettyJson(lesson.content),
-    hook: prettyJson(lesson.hook),
-    discoverCards: prettyJson(lesson.discoverCards),
-    exercises: prettyJson(lesson.exercises),
-    revealAyah: prettyJson(lesson.revealAyah),
   };
 }
 
@@ -103,15 +88,7 @@ export default function DashboardClient({ initialChapters }: { initialChapters: 
 
   const totals = useMemo(() => {
     const lessonCount = chapters.reduce((sum, chapter) => sum + chapter.lessons.length, 0);
-    const exerciseCount = chapters.reduce(
-      (sum, chapter) =>
-        sum +
-        chapter.lessons.reduce((lessonSum, lesson) => {
-          return lessonSum + (Array.isArray(lesson.exercises) ? lesson.exercises.length : 0);
-        }, 0),
-      0,
-    );
-    return { lessonCount, exerciseCount };
+    return { lessonCount };
   }, [chapters]);
 
   const filteredChapters = useMemo(() => {
@@ -162,20 +139,14 @@ export default function DashboardClient({ initialChapters }: { initialChapters: 
   async function saveLesson() {
     if (!selectedLesson || !lessonDraft) return;
 
-    let body: Omit<DashboardLesson, "id" | "order">;
+    let body: { title: string; titleAr: string; template: string; xpReward: number; content: JsonValue };
     try {
       body = {
         title: lessonDraft.title,
         titleAr: lessonDraft.titleAr,
-        type: lessonDraft.type,
+        template: lessonDraft.template,
         xpReward: Number(lessonDraft.xpReward),
-        fatihaProgressDelta: Number(lessonDraft.fatihaProgressDelta),
-        revealText: lessonDraft.revealText,
         content: parseJsonField(lessonDraft.content, "Content"),
-        hook: parseJsonField(lessonDraft.hook, "Hook"),
-        discoverCards: parseJsonField(lessonDraft.discoverCards, "Discover cards"),
-        exercises: parseJsonField(lessonDraft.exercises, "Exercises"),
-        revealAyah: parseJsonField(lessonDraft.revealAyah, "Reveal ayah"),
       };
     } catch (error) {
       setStatus(error instanceof Error ? error.message : "Invalid JSON.");
@@ -247,7 +218,6 @@ export default function DashboardClient({ initialChapters }: { initialChapters: 
           <div className={styles.statusGroup}>
             <span>{chapters.length} chapters</span>
             <span>{totals.lessonCount} lessons</span>
-            <span>{totals.exerciseCount} exercises</span>
           </div>
         </header>
 
@@ -339,9 +309,14 @@ export default function DashboardClient({ initialChapters }: { initialChapters: 
               >
                 <span>Lesson {lesson.order}</span>
                 <strong>{lesson.title}</strong>
-                <small>{lesson.type}</small>
+                <small>{lesson.template}</small>
               </button>
             ))}
+            {selectedChapter.lessons.length === 0 && (
+              <p style={{ padding: "16px", color: "#9A8F6A", fontSize: "12px" }}>
+                No lessons yet. Author content using warsh-content-schema.ts and add via seed.
+              </p>
+            )}
           </div>
 
           {selectedLesson && lessonDraft ? (
@@ -370,11 +345,11 @@ export default function DashboardClient({ initialChapters }: { initialChapters: 
                   />
                 </label>
                 <label>
-                  Lesson type
-                  <select value={lessonDraft.type} onChange={(event) => setLessonDraft({ ...lessonDraft, type: event.target.value })}>
-                    {LESSON_TYPES.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
+                  Template
+                  <select value={lessonDraft.template} onChange={(event) => setLessonDraft({ ...lessonDraft, template: event.target.value })}>
+                    {LESSON_TEMPLATES.map((t) => (
+                      <option key={t} value={t}>
+                        {t}
                       </option>
                     ))}
                   </select>
@@ -388,45 +363,18 @@ export default function DashboardClient({ initialChapters }: { initialChapters: 
                     onChange={(event) => setLessonDraft({ ...lessonDraft, xpReward: Number(event.target.value) })}
                   />
                 </label>
-                <label>
-                  Fatiha delta
-                  <input
-                    type="number"
-                    min="0"
-                    value={lessonDraft.fatihaProgressDelta}
-                    onChange={(event) => setLessonDraft({ ...lessonDraft, fatihaProgressDelta: Number(event.target.value) })}
-                  />
-                </label>
-                <label className={styles.wide}>
-                  Reveal text
-                  <textarea
-                    value={lessonDraft.revealText ?? ""}
-                    onChange={(event) => setLessonDraft({ ...lessonDraft, revealText: event.target.value })}
-                    rows={4}
-                  />
-                </label>
               </div>
 
               <div className={styles.jsonGrid}>
-                {(
-                  [
-                    ["content", "Content"],
-                    ["hook", "Hook"],
-                    ["discoverCards", "Discover cards"],
-                    ["exercises", "Exercises"],
-                    ["revealAyah", "Reveal ayah"],
-                  ] as const
-                ).map(([key, label]) => (
-                  <label className={styles.jsonField} key={key}>
-                    {label} JSON
-                    <textarea
-                      spellCheck={false}
-                      value={lessonDraft[key]}
-                      onChange={(event) => setLessonDraft({ ...lessonDraft, [key]: event.target.value })}
-                      rows={key === "exercises" ? 18 : 10}
-                    />
-                  </label>
-                ))}
+                <label className={styles.jsonField}>
+                  Content JSON (warsh-content-schema v1.0)
+                  <textarea
+                    spellCheck={false}
+                    value={lessonDraft.content}
+                    onChange={(event) => setLessonDraft({ ...lessonDraft, content: event.target.value })}
+                    rows={30}
+                  />
+                </label>
               </div>
             </section>
           ) : null}

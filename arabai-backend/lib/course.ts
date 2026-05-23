@@ -84,7 +84,7 @@ export async function getUserCourseState(userId: string) {
       where: { userId },
       select: { lessonId: true, status: true, completed: true },
     }),
-  ]) as unknown as [ChapterWithLessons[], ProgressRow[]];
+  ])) as unknown as [ChapterWithLessons[], ProgressRow[]];
 
   const progressStatusByLessonId = new Map(
     progressRows.map((item) => [

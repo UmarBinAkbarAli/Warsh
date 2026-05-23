@@ -1,7 +1,12 @@
-// Vocabulary Bank seed — 80 curated words across 16 topic categories
-// 5 words per topic, each with full linguistic data
+// Vocabulary Bank seed — 585 words across 16 topic categories
+// Base 80 words + 505 additions imported from vocab-additions-*.cjs
 
-const VOCABULARY_WORDS = [
+const { ADDITIONS_1 } = require("./vocab-additions-1.cjs");
+const { ADDITIONS_2 } = require("./vocab-additions-2.cjs");
+const { ADDITIONS_3 } = require("./vocab-additions-3.cjs");
+const { ADDITIONS_4 } = require("./vocab-additions-4.cjs");
+
+const VOCABULARY_WORDS_BASE = [
   // ── النَّاس — People ─────────────────────────────────────────────────────────
   {
     arabic: "رَجُل", arabicPlain: "رجل", transliteration: "rajul",
@@ -763,6 +768,14 @@ const VOCABULARY_WORDS = [
     frequencyInQuran: 4, sortOrder: 80,
     quranicExample: null,
   },
+];
+
+const VOCABULARY_WORDS = [
+  ...VOCABULARY_WORDS_BASE,
+  ...ADDITIONS_1,
+  ...ADDITIONS_2,
+  ...ADDITIONS_3,
+  ...ADDITIONS_4,
 ];
 
 async function seedVocabulary(prisma) {

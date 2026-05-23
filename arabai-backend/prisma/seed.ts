@@ -45,7 +45,7 @@ async function main() {
         order: index + 1,
         title: `Letter ${letter.transliteration}`,
         titleAr: `درس ${letter.letter}`,
-        type: index % 2 === 0 ? "FLASHCARD" : "FILL_BLANK",
+        template: "STANDARD" as const,
         xpReward: 10,
         content: index % 2 === 0
           ? {

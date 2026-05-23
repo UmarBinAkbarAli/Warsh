@@ -9,6 +9,9 @@ const { chapters: chapters4 } = require("./curriculum-books7-8.cjs");
 const { seedVocabulary } = require("./vocabulary-seed.cjs");
 const { seedTadabbur } = require("./tadabbur-seed.cjs");
 const ch01L01Content = require("./fixtures/chapter-01-lesson-01.json");
+const ch01L02Content = require("./fixtures/chapter-01-lesson-02.json");
+const ch01L03Content = require("./fixtures/chapter-01-lesson-03.json");
+const ch01L04Content = require("./fixtures/chapter-01-lesson-04.json");
 
 const ACHIEVEMENTS = [
   { key: "first_lesson",           title: "الخُطْوَة الأُولَى",            description: "Complete your very first lesson",                    icon: "footsteps-outline",   xpReward: 25  },
@@ -82,16 +85,54 @@ async function main() {
     chapterIdByOrder.set(created.order, created.id);
   }
 
-  // Chapter 1, Lesson 1 — هَذَا — fully authored (warsh-content-schema v1.0)
+  // Chapter 1 — fully authored lessons (warsh-content-schema v1.0)
+  const ch1Id = chapterIdByOrder.get(1);
+
   await prisma.lesson.create({
     data: {
-      chapterId: chapterIdByOrder.get(1),
+      chapterId: ch1Id,
       order: 1,
       title: "First Encounter with هَذَا",
       titleAr: "اللقاء الأول مع هَذَا",
       template: "STANDARD",
       xpReward: ch01L01Content._meta?.xp_reward ?? 10,
       content: ch01L01Content,
+    },
+  });
+
+  await prisma.lesson.create({
+    data: {
+      chapterId: ch1Id,
+      order: 2,
+      title: "That, What, and Who — ذٰلِكَ، مَا، مَنْ",
+      titleAr: "ذٰلِكَ وَمَا وَمَنْ",
+      template: "STANDARD",
+      xpReward: ch01L02Content._meta?.xp_reward ?? 10,
+      content: ch01L02Content,
+    },
+  });
+
+  await prisma.lesson.create({
+    data: {
+      chapterId: ch1Id,
+      order: 3,
+      title: "Feminine Forms — هَذِهِ and تِلْكَ",
+      titleAr: "هَذِهِ وَتِلْكَ",
+      template: "STANDARD",
+      xpReward: ch01L03Content._meta?.xp_reward ?? 10,
+      content: ch01L03Content,
+    },
+  });
+
+  await prisma.lesson.create({
+    data: {
+      chapterId: ch1Id,
+      order: 4,
+      title: "Chapter 1 Review",
+      titleAr: "مُرَاجَعَة الفَصْل الأَوَّل",
+      template: "REVIEW",
+      xpReward: ch01L04Content._meta?.xp_reward ?? 20,
+      content: ch01L04Content,
     },
   });
 

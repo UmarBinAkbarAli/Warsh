@@ -1,0 +1,283 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+
+  "_meta": {
+    "_note": "Chapter 1, Lesson 4 — REVIEW. All 4 demonstratives + مَا/مَنْ + gender agreement. Authored against warsh-content-schema.ts v1.0.",
+    "chapter_order": 1,
+    "lesson_order": 4,
+    "estimated_minutes": 8,
+    "xp_reward": 20
+  },
+
+  "hook": {
+    "ayah": {
+      "surah": 3,
+      "ayah": 138,
+      "label": "Al-Imran 3:138",
+      "ar": "هَٰذَا بَيَانٌ لِّلنَّاسِ وَهُدًى وَمَوْعِظَةٌ لِّلْمُتَّقِينَ",
+      "en": "This is a clear statement for all people — and guidance and admonition for those mindful of Allah.",
+      "ur": "یہ تمام لوگوں کے لیے ایک واضح بیان ہے — اور اللہ سے ڈرنے والوں کے لیے ہدایت اور نصیحت۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-imran-138-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "هَٰذَا بَيَانٌ — 'This is a clear statement.' You recognise هَٰذَا now. This lesson is your chapter review — no new words. Everything is from Lessons 1, 2, and 3. Let's see how much you've built.",
+      "ur": "هَٰذَا بَیانٌ — 'یہ ایک واضح بیان ہے۔' آپ اب هَذا پہچانتے ہیں۔ یہ سبق ابواب 1، 2، 3 کا مراجعہ ہے — کوئی نیا لفظ نہیں۔ دیکھتے ہیں آپ نے کیا سیکھا۔"
+    },
+    "autoplay": true
+  },
+
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The four pointing words — complete",
+        "ar": "أَسْمَاء الإِشَارَة الأَرْبَعَة",
+        "ur": "چاروں اشاروں کا خلاصہ"
+      },
+      "explanation": {
+        "en": "You now know all four Arabic pointing words. Near masculine: هَذَا · Near feminine: هَذِهِ · Far masculine: ذٰلِكَ · Far feminine: تِلْكَ. Every noun is either masculine or feminine — and the pointing word must match.",
+        "ur": "آپ کو اب عربی کے چاروں اشارے معلوم ہیں۔ قریب مذکر: هَذا · قریب مؤنث: هَذِهِ · دور مذکر: ذٰلِکَ · دور مؤنث: تِلْکَ۔ اشارہ اسم سے ملنا ضروری ہے۔"
+      },
+      "examples": [
+        { "ar": "هَذَا كِتَابٌ", "ar_plain": "هذا كتاب", "translit": "hādhā kitābun", "en": "This is a book (m)", "ur": "یہ ایک کتاب ہے (مذکر)" },
+        { "ar": "هَذِهِ شَجَرَةٌ", "ar_plain": "هذه شجرة", "translit": "hādhihi shajaratun", "en": "This is a tree (f)", "ur": "یہ ایک درخت ہے (مؤنث)" },
+        { "ar": "ذٰلِكَ مَسْجِدٌ", "ar_plain": "ذلك مسجد", "translit": "dhālika masjidun", "en": "That is a mosque (m)", "ur": "وہ ایک مسجد ہے (مذکر)" },
+        { "ar": "تِلْكَ جَنَّةٌ", "ar_plain": "تلك جنة", "translit": "tilka jannatun", "en": "That is a garden (f)", "ur": "وہ ایک باغ ہے (مؤنث)" }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "مَا and مَنْ — the question pair",
+        "ar": "مَا وَمَنْ",
+        "ur": "مَا اور مَنْ — سوالیہ جوڑا"
+      },
+      "explanation": {
+        "en": "مَا — what? → for things. مَنْ — who? → for people. مَا هَذَا؟ (What is this?) · مَنْ هَذَا؟ (Who is this?) The question word always comes first. No 'is', no inversion.",
+        "ur": "مَا — کیا؟ → چیزوں کے لیے۔ مَنْ — کون؟ → لوگوں کے لیے۔ سوالیہ لفظ ہمیشہ پہلے آتا ہے۔ نہ 'ہے'، نہ ترتیب تبدیلی۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "ة marks feminine nouns",
+        "ar": "التَّاء الْمَرْبُوطَة",
+        "ur": "ة مؤنث اسم کی علامت"
+      },
+      "explanation": {
+        "en": "Most nouns ending in ة are feminine: شَجَرَة (tree) · جَنَّة (garden) · مَدْرَسَة (school). Feminine nouns need هَذِهِ or تِلْكَ, never هَذَا or ذٰلِكَ. The ة is your gender signal.",
+        "ur": "ة پر ختم ہونے والے اکثر اسم مؤنث ہوتے ہیں: شَجَرَة · جَنَّة · مَدْرَسَة۔ مؤنث اسموں کو هَذِهِ یا تِلْکَ چاہیے، هَذا یا ذٰلِکَ نہیں۔"
+      }
+    }
+  ],
+
+  "exercises": [
+    {
+      "id": "ch01-l04-ex01",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 5,
+      "prompt": {
+        "ar": "هَذِهِ",
+        "ar_plain": "هذه",
+        "translit": "hādhihi",
+        "en": "this (f, near)"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/hadhihi.mp3",
+      "options": [
+        { "en": "that (f)", "ur": "وہ (مؤنث)" },
+        { "en": "that (m)", "ur": "وہ (مذکر)" },
+        { "en": "this (m)", "ur": "یہ (مذکر)" },
+        { "en": "this (f)", "ur": "یہ (مؤنث)" }
+      ],
+      "correct_index": 3
+    },
+    {
+      "id": "ch01-l04-ex02",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 5,
+      "prompt": {
+        "ar": "تِلْكَ",
+        "ar_plain": "تلك",
+        "translit": "tilka",
+        "en": "that (f, far)"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/tilka.mp3",
+      "options": [
+        { "en": "this (f)", "ur": "یہ (مؤنث)" },
+        { "en": "that (f)", "ur": "وہ (مؤنث)" },
+        { "en": "this (m)", "ur": "یہ (مذکر)" },
+        { "en": "that (m)", "ur": "وہ (مذکر)" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "id": "ch01-l04-ex03",
+      "type": "FILL_BLANK",
+      "xp_value": 5,
+      "mode": "TAP",
+      "sentence_ar": "___ بَيْتٌ",
+      "hint": {
+        "en": "This is a house. (بَيْت is masculine — near you)",
+        "ur": "یہ ایک گھر ہے۔ (بَيْت مذکر ہے — قریب)"
+      },
+      "options": [
+        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this (m)" },
+        { "ar": "هَذِهِ", "ar_plain": "هذه", "translit": "hādhihi", "en": "this (f)" },
+        { "ar": "ذٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that (m)" },
+        { "ar": "تِلْكَ", "ar_plain": "تلك", "translit": "tilka", "en": "that (f)" }
+      ],
+      "correct_answer": {
+        "ar": "هَذَا",
+        "ar_plain": "هذا",
+        "translit": "hādhā",
+        "en": "this (m)"
+      },
+      "explanation_on_wrong": {
+        "en": "بَيْتٌ (house) is masculine — it does not end in ة. Masculine near → هَذَا.",
+        "ur": "بَيْتٌ مذکر ہے — ة پر ختم نہیں ہوتا۔ قریب مذکر → هَذا۔"
+      }
+    },
+    {
+      "id": "ch01-l04-ex04",
+      "type": "FILL_BLANK",
+      "xp_value": 5,
+      "mode": "TAP",
+      "sentence_ar": "___ شَجَرَةٌ",
+      "hint": {
+        "en": "That is a tree. (The tree is far from you.)",
+        "ur": "وہ ایک درخت ہے۔ (درخت دور ہے۔)"
+      },
+      "options": [
+        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this (m)" },
+        { "ar": "هَذِهِ", "ar_plain": "هذه", "translit": "hādhihi", "en": "this (f)" },
+        { "ar": "ذٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that (m)" },
+        { "ar": "تِلْكَ", "ar_plain": "تلك", "translit": "tilka", "en": "that (f)" }
+      ],
+      "correct_answer": {
+        "ar": "تِلْكَ",
+        "ar_plain": "تلك",
+        "translit": "tilka",
+        "en": "that (f)"
+      },
+      "explanation_on_wrong": {
+        "en": "شَجَرَةٌ ends in ة → feminine. Far → تِلْكَ. Both conditions must match: gender AND distance.",
+        "ur": "شَجَرَةٌ ة پر ختم ہوتا ہے → مؤنث۔ دور → تِلْکَ۔ دونوں شرطیں پوری ہونی چاہئیں: جنس اور فاصلہ۔"
+      }
+    },
+    {
+      "id": "ch01-l04-ex05",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 5,
+      "target_translation": {
+        "en": "What is this? (asking about a feminine thing)",
+        "ur": "یہ کیا ہے؟ (مؤنث چیز کے بارے میں)"
+      },
+      "tiles": [
+        { "ar": "هَذِهِ", "ar_plain": "هذه", "translit": "hādhihi", "en": "this (f)" },
+        { "ar": "مَا", "ar_plain": "ما", "translit": "mā", "en": "what" }
+      ],
+      "correct_order": [1, 0],
+      "explanation_on_wrong": {
+        "en": "مَا هَذِهِ؟ — 'What is this (f)?' Question word مَا first, then هَذِهِ. When asking about something feminine and near, use هَذِهِ.",
+        "ur": "مَا هَذِهِ؟ سوالیہ لفظ پہلے، پھر هَذِهِ۔"
+      }
+    },
+    {
+      "id": "ch01-l04-ex06",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 5,
+      "target_translation": {
+        "en": "Who is that? (pointing to someone far)",
+        "ur": "وہ کون ہے؟ (دور کسی کی طرف اشارہ)"
+      },
+      "tiles": [
+        { "ar": "ذٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that (m)" },
+        { "ar": "مَنْ", "ar_plain": "من", "translit": "man", "en": "who" }
+      ],
+      "correct_order": [1, 0],
+      "explanation_on_wrong": {
+        "en": "مَنْ ذٰلِكَ؟ — 'Who is that (far)?' مَنْ comes first. ذٰلِكَ is used for a far masculine person.",
+        "ur": "مَنْ ذٰلِکَ؟ — مَنْ پہلے۔ ذٰلِکَ دور مذکر کے لیے۔"
+      }
+    },
+    {
+      "id": "ch01-l04-ex07",
+      "type": "TRUE_FALSE",
+      "xp_value": 5,
+      "statement": {
+        "en": "ذٰلِكَ شَجَرَةٌ is correct Arabic for 'That is a tree.'",
+        "ur": "ذٰلِکَ شَجَرَةٌ درست عربی ہے 'وہ ایک درخت ہے' کے لیے۔",
+        "ar_example": {
+          "ar": "ذٰلِكَ شَجَرَةٌ",
+          "ar_plain": "ذلك شجرة",
+          "translit": "dhālika shajaratun",
+          "en": "incorrect"
+        }
+      },
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "ذٰلِكَ شَجَرَةٌ is wrong. شَجَرَة is feminine (ends in ة) so it needs تِلْكَ شَجَرَةٌ — not the masculine ذٰلِكَ.",
+        "ur": "ذٰلِکَ شَجَرَةٌ غلط ہے۔ شَجَرَة مؤنث ہے (ة پر ختم) اس لیے تِلْکَ شَجَرَةٌ صحیح ہے۔"
+      }
+    },
+    {
+      "id": "ch01-l04-ex08",
+      "type": "MATCHING",
+      "xp_value": 5,
+      "left_column": [
+        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this (m)" },
+        { "ar": "هَذِهِ", "ar_plain": "هذه", "translit": "hādhihi", "en": "this (f)" },
+        { "ar": "ذٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that (m)" },
+        { "ar": "تِلْكَ", "ar_plain": "تلك", "translit": "tilka", "en": "that (f)" },
+        { "ar": "مَا", "ar_plain": "ما", "translit": "mā", "en": "what" },
+        { "ar": "مَنْ", "ar_plain": "من", "translit": "man", "en": "who" }
+      ],
+      "right_column": [
+        { "en": "that (m)", "ur": "وہ (مذکر)" },
+        { "en": "who", "ur": "کون" },
+        { "en": "this (f)", "ur": "یہ (مؤنث)" },
+        { "en": "that (f)", "ur": "وہ (مؤنث)" },
+        { "en": "what", "ur": "کیا" },
+        { "en": "this (m)", "ur": "یہ (مذکر)" }
+      ],
+      "correct_pairs": [
+        [0, 5],
+        [1, 2],
+        [2, 0],
+        [3, 3],
+        [4, 4],
+        [5, 1]
+      ]
+    }
+  ],
+
+  "reveal": {
+    "concept_name": {
+      "en": "هَذِهِ and شَجَرَة in the oldest story",
+      "ar": "هَٰذِهِ الشَّجَرَةُ فِي قِصَّةِ آدَمَ",
+      "ur": "قدیم ترین کہانی میں هَذِهِ اور شَجَرَة"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 35,
+      "label": "Al-Baqarah 2:35",
+      "ar": "وَقُلْنَا يَا آدَمُ اسْكُنْ أَنتَ وَزَوْجُكَ الْجَنَّةَ وَكُلَا مِنْهَا رَغَدًا حَيْثُ شِئْتُمَا وَلَا تَقْرَبَا هَٰذِهِ الشَّجَرَةَ فَتَكُونَا مِنَ الظَّالِمِينَ",
+      "en": "And We said: O Adam, dwell you and your wife in Paradise and eat from wherever you will — but do not approach this tree, lest you become of the wrongdoers.",
+      "ur": "اور ہم نے کہا: اے آدم، تم اور تمہاری زوجہ جنت میں رہو اور جہاں چاہو کھاؤ — لیکن اس درخت کے قریب مت جانا، ورنہ ظالموں میں سے ہو جاؤ گے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-035-mishary.mp3"
+    },
+    "highlighted_word_indices": [14, 15],
+    "noor_explanation": {
+      "en": "هَٰذِهِ الشَّجَرَةَ — 'this tree.' In the very first human story in the Quran — Adam and Hawwa in الْجَنَّةَ — Allah uses هَذِهِ because شَجَرَة is feminine. You also see الْجَنَّةَ — garden — the word from Lesson 3. The words of this chapter are woven into the Quran's oldest story. You are not just learning Arabic. You are learning to hear the Quran.",
+      "ur": "هَٰذِهِ الشَّجَرَةَ — 'یہ درخت'۔ قرآن کی پہلی انسانی کہانی میں — آدم اور حوا الْجَنَّةَ میں — اللہ هَذِهِ استعمال فرماتے ہیں کیونکہ شَجَرَة مؤنث ہے۔ آپ الْجَنَّةَ بھی دیکھ رہے ہیں — وہ لفظ جو سبق 3 میں آیا۔ آپ صرف عربی نہیں سیکھ رہے — قرآن سننا سیکھ رہے ہیں۔"
+    }
+  },
+
+  "close": {
+    "noor_message": {
+      "en": "Chapter 1 complete. You know هَذَا، هَذِهِ، ذٰلِكَ، تِلْكَ، مَا، مَنْ — and ten words of Arabic vocabulary. More importantly, you know that Arabic has gender, that demonstratives must match, and that every word you learn is already in the Quran waiting for you to find it. Chapter 2 begins soon, in shaa Allah.",
+      "ur": "باب 1 مکمل۔ آپ جانتے ہیں هَذا، هَذِهِ، ذٰلِکَ، تِلْکَ، مَا، مَنْ — اور دس عربی الفاظ۔ اہم بات یہ ہے کہ آپ جانتے ہیں عربی میں جنس ہوتی ہے، اشارے کو اسم سے ملنا چاہیے، اور جو لفظ آپ سیکھتے ہیں وہ قرآن میں موجود ہے آپ کا منتظر۔ باب 2 جلد شروع ہوگا، ان شاء اللہ۔"
+    }
+  }
+}
