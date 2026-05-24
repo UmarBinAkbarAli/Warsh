@@ -70,7 +70,7 @@ export default function PreviewA6Tadabbur() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.bg.primary }}>
-      <View style={{ alignItems: "flex-end", paddingHorizontal: Spacing.lg, paddingTop: Spacing.md }}>
+      <View style={{ height: 48, alignItems: "flex-end", justifyContent: "center", paddingHorizontal: Spacing.lg }}>
         <TouchableOpacity
           onPress={() => router.replace("/(auth)/preview/a7-cta")}
           hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
@@ -79,7 +79,7 @@ export default function PreviewA6Tadabbur() {
         </TouchableOpacity>
       </View>
 
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: Spacing.xxl }}>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: Spacing.xxl, paddingBottom: 60 }}>
         <Text
           style={{
             color: Colors.text.muted,
@@ -115,6 +115,7 @@ export default function PreviewA6Tadabbur() {
             flexDirection: "row",
             flexWrap: "wrap",
             justifyContent: "center",
+            direction: "rtl",
             gap: Spacing.md,
             marginBottom: Spacing.lg,
             width: "100%",

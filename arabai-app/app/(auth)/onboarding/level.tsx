@@ -17,7 +17,7 @@ export default function OnboardingLevelScreen() {
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
         Help Ustaad Noor calibrate your first lessons.
       </Text>
-      <BrandButton title="None" onPress={() => setLevel("BEGINNER")} selected={level === "BEGINNER"} />
+      <BrandButton title="None" variant="secondary" onPress={() => setLevel("BEGINNER")} selected={level === "BEGINNER"} />
       <View style={{ height: Spacing.md }} />
       <BrandButton title="A little" variant="secondary" onPress={() => setLevel("ELEMENTARY")} selected={level === "ELEMENTARY"} />
       <View style={{ height: Spacing.md }} />

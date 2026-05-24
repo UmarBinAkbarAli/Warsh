@@ -17,7 +17,7 @@ export default function OnboardingPlacementScreen() {
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
         Ustaad Noor can unlock the early chapters for you if you already know the basics. You can still review any skipped chapter later.
       </Text>
-      <BrandButton title="I'm completely new to Arabic" onPress={() => setPlacementType("BEGINNER")} selected={placementType === "BEGINNER"} />
+      <BrandButton title="I'm completely new to Arabic" variant="secondary" onPress={() => setPlacementType("BEGINNER")} selected={placementType === "BEGINNER"} />
       <View style={{ height: Spacing.md }} />
       <BrandButton
         title="I know the Arabic letters"
@@ -38,6 +38,14 @@ export default function OnboardingPlacementScreen() {
         variant="secondary"
         onPress={() => setPlacementType("CAN_READ_BASIC")}
         selected={placementType === "CAN_READ_BASIC"}
+      />
+      <View style={{ height: Spacing.xl }} />
+      <View style={{ height: Spacing.md }} />
+      <BrandButton
+        title="Skip this - I'll start from the beginning"
+        variant="secondary"
+        onPress={() => { setPlacementType("BEGINNER"); router.push("/(auth)/onboarding/ready"); }}
+        selected={false}
       />
       <View style={{ height: Spacing.xl }} />
       <BrandButton title="Continue" onPress={() => { if (placementType) trackOnboardingPlacementSelected(placementType); router.push("/(auth)/onboarding/ready"); }} />

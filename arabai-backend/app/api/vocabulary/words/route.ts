@@ -5,6 +5,8 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const topic = searchParams.get("topic");
   const search = searchParams.get("search")?.trim();
+  const page = Math.max(1, parseInt(searchParams.get("page") ?? "1", 10));
+  const pageSize = 200;
 
   const where: any = {};
 
@@ -23,11 +25,15 @@ export async function GET(request: Request) {
     ];
   }
 
-  const words = await prisma.vocabularyWord.findMany({
-    where,
-    orderBy: { sortOrder: "asc" },
-    take: 100,
-  });
+  const [words, total] = await Promise.all([
+    prisma.vocabularyWord.findMany({
+      where,
+      orderBy: { sortOrder: "asc" },
+      skip: (page - 1) * pageSize,
+      take: pageSize,
+    }),
+    prisma.vocabularyWord.count({ where }),
+  ]);
 
-  return NextResponse.json({ data: words });
+  return NextResponse.json({ data: words, meta: { total, page, pageSize, hasMore: page * pageSize < total } });
 }

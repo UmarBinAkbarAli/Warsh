@@ -77,13 +77,13 @@ export default function AppLayout() {
     void clearNotificationBadge();
 
     // Handle notification tap — deep link to the right screen
-    void addNotificationResponseListener((screen) => {
+    addNotificationResponseListener((screen) => {
       if (screen === "learn") router.push("/(app)/(tabs)");
       else if (screen === "vocabulary") router.push("/(app)/(tabs)/vocabulary");
       else if (screen === "milestones") router.push("/milestones" as any);
     }).then((listener) => {
       responseListener.current = listener;
-    });
+    }).catch(() => {});
 
     return () => {
       responseListener.current?.remove();

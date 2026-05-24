@@ -3,8 +3,8 @@ import { Platform } from "react-native";
 
 type IapModule = typeof import("react-native-iap");
 
-export type IapSubscription = import("react-native-iap").Subscription;
-export type IapSubscriptionPurchase = import("react-native-iap").SubscriptionPurchase;
+export type IapSubscription = import("react-native-iap").ProductOrSubscription;
+export type IapSubscriptionPurchase = import("react-native-iap").Purchase;
 
 let iapModule: IapModule | null | undefined;
 let connected = false;
@@ -25,7 +25,7 @@ export function isBillingSupportedEnvironment() {
 
 export function isIapUnavailableError(error: unknown) {
   const code = (error as { code?: string } | null)?.code;
-  return code === "IAP_UNAVAILABLE" || code === "E_IAP_NOT_AVAILABLE";
+  return code === "IAP_UNAVAILABLE" || code === "E_IAP_NOT_AVAILABLE" || code === "iap-not-available" || code === "billing-unavailable";
 }
 
 async function getIapModule() {
@@ -102,13 +102,35 @@ export async function getSubscriptionProducts(skus: string[]) {
   }
 
   try {
-    return await IAP.getSubscriptions({ skus });
+    return (await IAP.fetchProducts({ skus, type: "subs" })) ?? [];
   } catch {
     return [];
   }
 }
 
-export async function requestSubscriptionPurchase(productId: string) {
+export function getIapProductId(product: IapSubscription) {
+  return product.id;
+}
+
+export function getIapDisplayPrice(product: IapSubscription) {
+  const anyProduct = product as any;
+  return anyProduct.displayPrice ?? anyProduct.localizedPrice;
+}
+
+function getAndroidSubscriptionOffer(product: IapSubscription | undefined) {
+  if (!product) {
+    return undefined;
+  }
+
+  const offer = product?.subscriptionOffers?.find((item) => item.offerTokenAndroid);
+  if (!offer?.offerTokenAndroid) {
+    return undefined;
+  }
+
+  return [{ sku: product.id, offerToken: offer.offerTokenAndroid }];
+}
+
+export async function requestSubscriptionPurchase(productId: string, product?: IapSubscription) {
   const available = await connectIap();
   const IAP = await getIapModule();
 
@@ -116,7 +138,16 @@ export async function requestSubscriptionPurchase(productId: string) {
     throw new IapUnavailableError();
   }
 
-  return IAP.requestSubscription({ sku: productId });
+  return IAP.requestPurchase({
+    type: "subs",
+    request: {
+      apple: { sku: productId },
+      google: {
+        skus: [productId],
+        subscriptionOffers: getAndroidSubscriptionOffer(product),
+      },
+    },
+  });
 }
 
 export async function getAvailableIapPurchases() {
@@ -142,5 +173,5 @@ export async function acknowledgeAndroidPurchase(token: string) {
     return;
   }
 
-  await IAP.acknowledgePurchaseAndroid({ token });
+  await IAP.acknowledgePurchaseAndroid(token);
 }

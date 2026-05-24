@@ -167,16 +167,29 @@ export default function VocabularyScreen() {
     }, [])
   );
 
+  async function fetchAllWords(): Promise<VocabWord[]> {
+    const collected: VocabWord[] = [];
+    let page = 1;
+    while (true) {
+      const res = await getVocabularyWords({ page });
+      const words: VocabWord[] = res.data.data;
+      collected.push(...words);
+      if (!res.data.meta?.hasMore) break;
+      page += 1;
+    }
+    return collected;
+  }
+
   async function fetchInitialData() {
     setLoading(true);
     try {
-      const [wotdRes, allRes, srsRes] = await Promise.all([
+      const [wotdRes, allWords, srsRes] = await Promise.all([
         getWordOfDay(),
-        getVocabularyWords(),
+        fetchAllWords(),
         getSRSDueWords().catch(() => ({ data: { data: [] } })),
       ]);
       setWordOfDay(wotdRes.data.data);
-      setAllWords(allRes.data.data);
+      setAllWords(allWords);
       setSrsDueCount((srsRes.data.data as unknown[]).length);
     } catch {
       // silently fall back to empty state

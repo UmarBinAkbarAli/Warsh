@@ -22,6 +22,7 @@ type DiscoverCard = {
   arabicText?: string;
   translation?: string;
   transliteration?: string;
+  explanation?: string;
 };
 
 type ExerciseType = "TRUE_FALSE" | "TAP_TRANSLATION" | "FILL_BLANK" | "BUILD_SENTENCE" | "MATCHING" | "GRAMMAR_PARSE" | "CONVERSATION_BUILDER" | "SHADOW_REPEAT";
@@ -197,6 +198,7 @@ export default function LessonPlayScreen() {
 
   // SHADOW_REPEAT / SPOKEN_PHRASES tracking
   const phrasesCompletedRef = useRef(0);
+  const completionFiredRef = useRef(false);
   const [spPhraseIdx, setSpPhraseIdx] = useState(0);
   const [spPhraseStep, setSpPhraseStep] = useState<"intro" | "shadow" | "recognition" | "phraseComplete">("intro");
   const [spRecognitionAnswer, setSpRecognitionAnswer] = useState<string | null>(null);
@@ -235,9 +237,10 @@ export default function LessonPlayScreen() {
 
   useEffect(() => {
     async function finishLesson() {
-      if (!lessonId || currentBeat !== 5 || submitting || completionResult) {
+      if (!lessonId || currentBeat !== 5 || completionFiredRef.current) {
         return;
       }
+      completionFiredRef.current = true;
 
       setSubmitting(true);
       setError(null);
@@ -280,7 +283,7 @@ export default function LessonPlayScreen() {
     }
 
     void finishLesson();
-  }, [completionResult, currentBeat, lessonId, submitting]);
+  }, [currentBeat, lessonId]);
 
   function goToBeat(beat: number) {
     setCurrentBeat(beat);
@@ -956,6 +959,7 @@ export default function LessonPlayScreen() {
           ) : null}
           {card?.translation ? <Text style={styles.discoverTranslation}>{card.translation}</Text> : null}
           {card?.transliteration ? <Text style={styles.discoverTransliteration}>{card.transliteration}</Text> : null}
+          {card?.explanation ? <Text style={styles.discoverTranslation}>{card.explanation}</Text> : null}
         </View>
 
         <BrandButton
@@ -1445,6 +1449,7 @@ const styles = StyleSheet.create({
     marginBottom: 96,
   },
   exerciseScrollerContent: {
+    paddingTop: 8,
     paddingBottom: 16,
   },
   matchingRow: {

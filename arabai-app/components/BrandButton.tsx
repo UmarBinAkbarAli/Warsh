@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 16,
     fontWeight: "700",
+    fontFamily: "Amiri-Bold",
   },
   pressed: {
     transform: [{ scale: 0.97 }],

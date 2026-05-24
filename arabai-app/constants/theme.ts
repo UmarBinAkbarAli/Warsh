@@ -91,10 +91,10 @@ export const LineHeights = {
   caption: 14,
   label: 12,
   transliteration: 14,
-  arabicXL: 64,
-  arabicL: 40,
-  arabicM: 30,
-  arabicS: 28,
+  arabicXL: 80,
+  arabicL: 48,
+  arabicM: 32,
+  arabicS: 30,
 } as const;
 
 export const Radii = {

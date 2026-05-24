@@ -111,7 +111,7 @@ api.interceptors.response.use(
   }
 );
 
-export function getVocabularyWords(params?: { topic?: string; search?: string }) {
+export function getVocabularyWords(params?: { topic?: string; search?: string; page?: number }) {
   return api.get("/api/vocabulary/words", { params });
 }
 

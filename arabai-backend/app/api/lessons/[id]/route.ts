@@ -30,12 +30,21 @@ function transformContent(template: string, content: Record<string, unknown>) {
 
   const mappedCards = (discoverCards ?? []).map((card) => {
     const text = card.text as Record<string, unknown> | undefined;
+    const concept = card.concept as Record<string, unknown> | undefined;
     const explanation = card.explanation as Record<string, unknown> | undefined;
+    const examples = card.examples as Array<Record<string, unknown>> | undefined;
+    // CONCEPT cards have no "text" — fall back to concept.ar / concept.en
+    const arabicText = (text?.ar ?? concept?.ar) as string | undefined;
+    const translation = (text?.en ?? concept?.en) as string | undefined;
+    // For CONCEPT cards, append the first example to give learners context
+    const exampleLine = !text && examples?.[0]
+      ? `${examples[0].ar as string} — ${examples[0].en as string}`
+      : undefined;
     return {
-      arabicText: text?.ar as string | undefined,
-      translation: text?.en as string | undefined,
-      transliteration: text?.translit as string | undefined,
-      explanation: explanation?.en as string | undefined,
+      arabicText,
+      translation,
+      transliteration: (text?.translit) as string | undefined,
+      explanation: (explanation?.en ?? exampleLine) as string | undefined,
     };
   });
 

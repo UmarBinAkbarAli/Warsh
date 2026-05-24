@@ -21,6 +21,8 @@ import {
   connectIap,
   endIapConnection,
   getAvailableIapPurchases,
+  getIapDisplayPrice,
+  getIapProductId,
   getSubscriptionProducts,
   isBillingSupportedEnvironment,
   isIapUnavailableError,
@@ -109,12 +111,11 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   );
 
   function getPriceLabel(productId: string) {
-    const product = products.find((p) => p.productId === productId);
+    const product = products.find((p) => getIapProductId(p) === productId);
     if (!product) {
       return productId === PRODUCT_IDS.annual ? "$10 / year" : "$1 / month";
     }
-    const anyProduct = product as any;
-    return anyProduct.localizedPrice ?? anyProduct.displayPrice ?? (productId === PRODUCT_IDS.annual ? "$10 / year" : "$1 / month");
+    return getIapDisplayPrice(product) ?? (productId === PRODUCT_IDS.annual ? "$10 / year" : "$1 / month");
   }
 
   async function handlePurchase() {
@@ -130,10 +131,11 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     setPurchasing(true);
 
     const productId = selected === "annual" ? PRODUCT_IDS.annual : PRODUCT_IDS.monthly;
+    const product = products.find((item) => getIapProductId(item) === productId);
 
     try {
       // Trigger native IAP purchase
-      const purchase = await requestSubscriptionPurchase(productId);
+      const purchase = await requestSubscriptionPurchase(productId, product);
       const token = Array.isArray(purchase)
         ? (purchase[0] as IapSubscriptionPurchase).purchaseToken
         : (purchase as IapSubscriptionPurchase)?.purchaseToken;
