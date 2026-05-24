@@ -339,6 +339,12 @@ The repo is in a stronger state than the old tracker wording suggested, but a fe
 
 ## Recent Changes (since 2026-05-24) — latest
 
+### Chapter 3 exercise UI bugs fixed (2026-05-25)
+
+- **Bug 1 — `en_to_ar` TAP_TRANSLATION showing no Arabic text:** Ch3 exercises with `direction: "en_to_ar"` have no `prompt.ar` field; the transform was mapping `prompt.ar` (undefined) as `arabicText`. Fix: detect `direction === "en_to_ar"` in the `TAP_TRANSLATION` branch of `transformContent()`, use `prompt.en` to build the question string `Which Arabic means: "..."?`, and set `arabicText: undefined` so no empty Arabic box renders.
+- **Bug 2 — Multiple FILL_BLANK/TAP_TRANSLATION options highlighted as correct:** `normalizeAnswer()` in `play.tsx` strips all harakat (diacritics) before comparing, so Arabic words that differ only in i'rab endings (e.g. رَبُّ vs رَبَّ vs رَبِّ) all strip to the same root and all match the correct answer. Fix: updated `getOptionStyle()`, `getOptionTextStyle()`, and `isAnswerCorrect()` in `arabai-app/app/(app)/lessons/[lessonId]/play.tsx` to use exact string comparison when either option or correctAnswer contains Arabic (detected via the existing `containsArabic()` helper), while keeping `normalizeAnswer()` for English-only comparisons.
+- App TypeScript check recommended after these changes.
+
 ### Chapter 3 lesson-loading bug fixed (2026-05-24)
 
 - **Root cause:** Chapter 3 fixture files (`chapter-03-lesson-01.json` through `chapter-03-lesson-04.json`) were authored with a different exercise schema than Chapters 1/2 — using `choices`/`answer` instead of `options`/`correct_index`, `pairs: [{ar, en}]` instead of `left_column`/`right_column`/`correct_pairs`, `word_bank`/`answer[]` instead of `tiles`/`correct_order`, `template`/`blank_label`/`answer` instead of `hint`/`sentence_ar`/`correct_answer`, `answer` (boolean) instead of `correct_answer`, and `noor_comment` instead of `noor_explanation` in `reveal`. Also added `GRAMMAR_NOTE` and `SENTENCE` discover card types not handled by the transformer.

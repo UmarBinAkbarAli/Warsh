@@ -84,12 +84,25 @@ function transformContent(template: string, content: Record<string, unknown>) {
       const answerV2 = ex.answer as string | undefined;
       let options: string[];
       let correctAnswer: string;
+      const direction = ex.direction as string | undefined;
       if (optionsV1 && correctIndex !== undefined) {
         options = optionsV1.map((o) => o.en as string);
         correctAnswer = optionsV1[correctIndex].en as string;
       } else {
         options = choicesV2 ?? [];
         correctAnswer = answerV2 ?? "";
+      }
+      // en_to_ar: English prompt, Arabic choices — show the English as the question
+      if (direction === "en_to_ar") {
+        const promptEn = prompt.en as string | undefined;
+        return {
+          type,
+          prompt: promptEn ? `Which Arabic means: "${promptEn}"?` : "Choose the correct Arabic.",
+          arabicText: undefined,
+          options,
+          correctAnswer,
+          explanation_on_wrong: wrongMsg?.en as string | undefined,
+        };
       }
       return {
         type,

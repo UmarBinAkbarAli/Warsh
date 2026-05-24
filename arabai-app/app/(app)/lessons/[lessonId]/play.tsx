@@ -147,7 +147,11 @@ function isAnswerCorrect(exercise: Exercise | undefined, selectedAnswer: Selecte
     return (exercise.parseTokens ?? []).every((token) => normalizeAnswer(selectedAnswer[token.word]) === normalizeAnswer(token.label));
   }
 
-  return normalizeAnswer(getSelectedText(selectedAnswer)) === normalizeAnswer(exercise.correctAnswer);
+  const selText = getSelectedText(selectedAnswer) ?? "";
+  if (containsArabic(selText) || containsArabic(exercise.correctAnswer)) {
+    return selText === exercise.correctAnswer;
+  }
+  return normalizeAnswer(selText) === normalizeAnswer(exercise.correctAnswer);
 }
 
 function getCorrectAnswerDisplay(exercise?: Exercise) {
@@ -353,7 +357,10 @@ export default function LessonPlayScreen() {
       return styles.optionButton;
     }
 
-    if (normalizeAnswer(option) === normalizeAnswer(currentExercise?.correctAnswer)) {
+    const isCorrect = containsArabic(option) || containsArabic(currentExercise?.correctAnswer)
+      ? option === currentExercise?.correctAnswer
+      : normalizeAnswer(option) === normalizeAnswer(currentExercise?.correctAnswer);
+    if (isCorrect) {
       return [styles.optionButton, styles.optionCorrect];
     }
 
@@ -369,7 +376,10 @@ export default function LessonPlayScreen() {
       return containsArabic(option) ? styles.optionArabicText : styles.optionText;
     }
 
-    if (normalizeAnswer(option) === normalizeAnswer(currentExercise?.correctAnswer)) {
+    const isCorrect = containsArabic(option) || containsArabic(currentExercise?.correctAnswer)
+      ? option === currentExercise?.correctAnswer
+      : normalizeAnswer(option) === normalizeAnswer(currentExercise?.correctAnswer);
+    if (isCorrect) {
       return containsArabic(option) ? styles.optionArabicTextCorrect : styles.optionTextCorrect;
     }
 
