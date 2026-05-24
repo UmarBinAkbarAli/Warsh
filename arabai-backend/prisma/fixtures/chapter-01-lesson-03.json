@@ -3,10 +3,10 @@
   "template": "STANDARD",
 
   "_meta": {
-    "_note": "Chapter 1, Lesson 3 — هَذِهِ and تِلْكَ. Feminine demonstratives. Authored against warsh-content-schema.ts v1.0.",
+    "_note": "Chapter 1, Lesson 3 — هَذِهِ and تِلْكَ. Feminine demonstratives + 11 feminine nouns. Authored against warsh-content-schema.ts v1.0.",
     "chapter_order": 1,
     "lesson_order": 3,
-    "estimated_minutes": 7,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
 
@@ -21,8 +21,8 @@
       "audio_url": "https://cdn.warsh.app/audio/quran/yusuf-108-mishary.mp3"
     },
     "noor_intro": {
-      "en": "هَٰذِهِ سَبِيلِي — 'This is my way.' You recognise هَذِهِ — it looks like هَذَا, but with ِهِ at the end. That small change is everything. Today you learn why.",
-      "ur": "هَٰذِهِ سَبِيلِي — 'یہ میری راہ ہے۔' آپ هَذِهِ پہچانتے ہیں — هَذا جیسا ہے لیکن آخر میں ِهِ ہے۔ یہ چھوٹی سی تبدیلی بہت بڑی بات ہے۔ آج جانیں گے کیوں۔"
+      "en": "هَٰذِهِ سَبِيلِي — 'This is my way.' You recognise هَذِهِ — it looks like هَذَا, but with ِهِ at the end. That small change is the feminine. Today you learn eleven feminine nouns and point at all of them.",
+      "ur": "هَٰذِهِ سَبِيلِي — 'یہ میری راہ ہے۔' هَذِهِ هَذا جیسا لگتا ہے لیکن آخر میں ِهِ ہے۔ یہ چھوٹی سی تبدیلی مؤنث کی علامت ہے۔ آج آپ گیارہ مؤنث اسم سیکھیں گے۔"
     },
     "autoplay": true
   },
@@ -30,97 +30,127 @@
   "discover_cards": [
     {
       "type": "CONCEPT",
-      "concept": {
-        "en": "Arabic has grammatical gender",
-        "ar": "التَّذْكِير وَالتَّأْنِيث",
-        "ur": "عربی میں ہر اسم مذکر یا مؤنث ہوتا ہے"
-      },
+      "concept": { "en": "Arabic has grammatical gender", "ar": "التَّذْكِير وَالتَّأْنِيث", "ur": "عربی میں ہر اسم مذکر یا مؤنث ہوتا ہے" },
       "explanation": {
-        "en": "Every Arabic noun is either masculine (مُذَكَّر) or feminine (مُؤَنَّث) — not based on biology, but grammar. كِتَاب (book) is masculine. شَجَرَة (tree) is feminine. The demonstrative you use must match.",
-        "ur": "عربی میں ہر اسم یا مذکر ہے یا مؤنث — صرف گرامر کی بنیاد پر، جنس کی بنیاد پر نہیں۔ کِتاب مذکر ہے۔ شَجَرَة مؤنث ہے۔ اشارے کا لفظ اسم سے ملنا چاہیے۔"
+        "en": "Every Arabic noun is either masculine (مُذَكَّر) or feminine (مُؤَنَّث). كِتَاب (book) is masculine. شَجَرَة (tree) is feminine. Most feminine nouns end in ة (tā marbūṭa). The demonstrative you use must match.",
+        "ur": "عربی میں ہر اسم یا مذکر ہے یا مؤنث۔ كِتاب مذکر ہے۔ شَجَرَة مؤنث ہے۔ اکثر مؤنث اسم ة پر ختم ہوتے ہیں۔ اشارے کا لفظ اسم سے ملنا چاہیے۔"
       },
       "examples": [
-        {
-          "ar": "هَذَا كِتَابٌ",
-          "ar_plain": "هذا كتاب",
-          "translit": "hādhā kitābun",
-          "en": "This is a book (masculine)",
-          "ur": "یہ ایک کتاب ہے (مذکر)"
-        },
-        {
-          "ar": "هَذِهِ شَجَرَةٌ",
-          "ar_plain": "هذه شجرة",
-          "translit": "hādhihi shajaratun",
-          "en": "This is a tree (feminine)",
-          "ur": "یہ ایک درخت ہے (مؤنث)"
-        }
+        { "ar": "هَذَا كِتَابٌ", "ar_plain": "هذا كتاب", "translit": "hādhā kitābun", "en": "This is a book (m)", "ur": "یہ ایک کتاب ہے (مذکر)" },
+        { "ar": "هَذِهِ شَجَرَةٌ", "ar_plain": "هذه شجرة", "translit": "hādhihi shajaratun", "en": "This is a tree (f)", "ur": "یہ ایک درخت ہے (مؤنث)" }
       ]
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "هَذِهِ",
-        "ar_plain": "هذه",
-        "translit": "hādhihi",
-        "en": "this (f, near)",
-        "ur": "یہ (مؤنث، قریب)"
-      },
+      "text": { "ar": "هَذِهِ", "ar_plain": "هذه", "translit": "hādhihi", "en": "this (f, near)", "ur": "یہ (مؤنث، قریب)" },
       "audio_url": "https://cdn.warsh.app/audio/vocab/hadhihi.mp3",
       "explanation": {
-        "en": "هَذِهِ is the feminine form of هَذَا. Use هَذِهِ with feminine nouns — mostly nouns ending in ة. هَذِهِ شَجَرَةٌ (This is a tree).",
+        "en": "هَذِهِ is the feminine form of هَذَا. Use هَذِهِ with feminine nouns — mostly nouns ending in ة.",
         "ur": "هَذِهِ، هَذا کی مؤنث شکل ہے۔ مؤنث اسموں کے ساتھ استعمال کریں — خاص طور پر ة پر ختم ہونے والے اسم۔"
       },
       "introduces_vocab": { "ar_plain": "هذه" }
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "تِلْكَ",
-        "ar_plain": "تلك",
-        "translit": "tilka",
-        "en": "that (f, far)",
-        "ur": "وہ (مؤنث، دور)"
-      },
+      "text": { "ar": "تِلْكَ", "ar_plain": "تلك", "translit": "tilka", "en": "that (f, far)", "ur": "وہ (مؤنث، دور)" },
       "audio_url": "https://cdn.warsh.app/audio/vocab/tilka.mp3",
       "explanation": {
-        "en": "تِلْكَ is the feminine form of ذٰلِكَ. The full set — near/far × masculine/feminine: هَذَا · هَذِهِ · ذٰلِكَ · تِلْكَ. You now know all four.",
-        "ur": "تِلْکَ، ذٰلِکَ کی مؤنث شکل ہے۔ چاروں اشارے: هَذا · هَذِهِ · ذٰلِکَ · تِلْکَ — قریب/دور × مذکر/مؤنث۔ آپ نے چاروں سیکھ لیے۔"
+        "en": "تِلْكَ is the feminine of ذٰلِكَ. The full set: هَذَا · هَذِهِ · ذٰلِكَ · تِلْكَ. You now know all four pointing words.",
+        "ur": "تِلْکَ، ذٰلِکَ کی مؤنث شکل ہے۔ چاروں اشارے: هَذا · هَذِهِ · ذٰلِکَ · تِلْکَ — آپ نے چاروں سیکھ لیے۔"
       },
       "introduces_vocab": { "ar_plain": "تلك" }
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "شَجَرَة",
-        "ar_plain": "شجرة",
-        "translit": "shajara",
-        "en": "tree",
-        "ur": "درخت"
-      },
+      "text": { "ar": "شَجَرَة", "ar_plain": "شجرة", "translit": "shajara", "en": "tree", "ur": "درخت" },
       "image_url": "https://cdn.warsh.app/images/discover/shajara.png",
       "audio_url": "https://cdn.warsh.app/audio/vocab/shajara.mp3",
       "explanation": {
-        "en": "شَجَرَة means 'tree'. The ة at the end (called تَاء مَرْبُوطَة — the tied ta) is the most common sign of a feminine noun. Most nouns ending in ة are feminine.",
-        "ur": "شَجَرَة کا مطلب 'درخت'۔ آخر میں ة (تاء مربوطہ) مؤنث اسم کی سب سے عام علامت ہے۔ ة پر ختم ہونے والے اکثر اسم مؤنث ہوتے ہیں۔"
+        "en": "شَجَرَة — tree. The ة at the end (تَاء مَرْبُوطَة) is the most common sign of a feminine noun. Most nouns ending in ة are feminine.",
+        "ur": "شَجَرَة — درخت۔ آخر میں ة (تاء مربوطہ) مؤنث کی سب سے عام علامت ہے۔"
       },
       "introduces_vocab": { "ar_plain": "شجرة" }
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "جَنَّة",
-        "ar_plain": "جنة",
-        "translit": "janna",
-        "en": "garden / paradise",
-        "ur": "باغ / جنت"
-      },
+      "text": { "ar": "جَنَّة", "ar_plain": "جنة", "translit": "janna", "en": "garden / paradise", "ur": "باغ / جنت" },
       "image_url": "https://cdn.warsh.app/images/discover/janna.png",
       "audio_url": "https://cdn.warsh.app/audio/vocab/janna.mp3",
       "explanation": {
-        "en": "جَنَّة means 'garden' — and in the Quran, it is the Paradise Allah promises the believers. It ends in ة so it is feminine: هَذِهِ جَنَّةٌ · تِلْكَ الْجَنَّةُ.",
-        "ur": "جَنَّة کا مطلب 'باغ' — اور قرآن میں یہ وہ جنت ہے جو اللہ مؤمنوں سے وعدہ فرماتے ہیں۔ ة پر ختم ہوتا ہے، اس لیے مؤنث ہے۔"
+        "en": "جَنَّة — garden / Paradise. It ends in ة so it is feminine: هَذِهِ جَنَّةٌ · تِلْكَ الْجَنَّةُ.",
+        "ur": "جَنَّة — باغ / جنت۔ ة پر ختم ہوتا ہے، اس لیے مؤنث ہے۔"
       },
       "introduces_vocab": { "ar_plain": "جنة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "مَدْرَسَة", "ar_plain": "مدرسة", "translit": "madrasa", "en": "school", "ur": "مدرسہ / اسکول" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/madrasa.mp3",
+      "explanation": {
+        "en": "مَدْرَسَة — school. From دَرَسَ (to study). Ends in ة so feminine. هَذِهِ مَدْرَسَةٌ — This is a school.",
+        "ur": "مَدْرَسَة — اسکول۔ دَرَسَ (پڑھنا) سے۔ ة پر ختم، اس لیے مؤنث۔ هَذِهِ مَدْرَسَةٌ — یہ ایک مدرسہ ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "مدرسة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "سُورَة", "ar_plain": "سورة", "translit": "sūra", "en": "surah / chapter (of Quran)", "ur": "سورت" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/sura.mp3",
+      "explanation": {
+        "en": "سُورَة — a chapter of the Quran. Feminine. You recite سُوَرٌ every day. هَذِهِ سُورَةٌ — This is a surah.",
+        "ur": "سُورَة — قرآن کا ایک باب۔ مؤنث۔ آپ ہر روز سُوَرٌ تلاوت کرتے ہیں۔"
+      },
+      "introduces_vocab": { "ar_plain": "سورة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "آيَة", "ar_plain": "آية", "translit": "āya", "en": "ayah / verse / sign", "ur": "آیت" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/aaya.mp3",
+      "explanation": {
+        "en": "آيَة — verse (of Quran), but also 'sign'. هَذِهِ آيَةٌ — This is a verse. Also: 'a sign of Allah in the universe.' Both meanings are in the Quran.",
+        "ur": "آيَة — آیت (قرآن کی)، لیکن 'نشانی' بھی۔ هَذِهِ آيَةٌ — یہ ایک آیت ہے۔ کائنات میں اللہ کی نشانی بھی۔"
+      },
+      "introduces_vocab": { "ar_plain": "آية" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "رَحْمَة", "ar_plain": "رحمة", "translit": "raḥma", "en": "mercy", "ur": "رحمت" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/rahma.mp3",
+      "explanation": {
+        "en": "رَحْمَة — mercy. Feminine. You end the salaam with وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ. Now you know رَحْمَة.",
+        "ur": "رَحْمَة — رحمت۔ مؤنث۔ سلام کا اختتام وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ سے ہوتا ہے — اب آپ رَحْمَة جانتے ہیں۔"
+      },
+      "introduces_vocab": { "ar_plain": "رحمة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "نِعْمَة", "ar_plain": "نعمة", "translit": "ni'ma", "en": "blessing / favour", "ur": "نعمت" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/nima.mp3",
+      "explanation": {
+        "en": "نِعْمَة — blessing. Feminine. وَإِن تَعُدُّوا نِعْمَةَ اللَّهِ لَا تُحْصُوهَا — 'If you count the blessings of Allah, you cannot enumerate them.' (Ibrahim 14:34)",
+        "ur": "نِعْمَة — نعمت۔ مؤنث۔ وَإِن تَعُدُّوا نِعْمَةَ اللَّهِ لَا تُحْصُوهَا — 'اگر اللہ کی نعمتیں گنو تو گن نہیں سکتے'۔"
+      },
+      "introduces_vocab": { "ar_plain": "نعمة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "أُمَّة", "ar_plain": "أمة", "translit": "'umma", "en": "community / nation", "ur": "امت" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/umma.mp3",
+      "explanation": {
+        "en": "أُمَّة — the Muslim community / nation. Feminine. كُنتُمْ خَيْرَ أُمَّةٍ — 'You are the best nation' (Al-Imran 3:110). هَذِهِ أُمَّةٌ عَظِيمَةٌ — This is a great nation.",
+        "ur": "أُمَّة — مسلم امت۔ مؤنث۔ كُنتُمْ خَيْرَ أُمَّةٍ — 'تم بہترین امت ہو' (آل عمران 3:110)۔"
+      },
+      "introduces_vocab": { "ar_plain": "أمة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "قِبْلَة", "ar_plain": "قبلة", "translit": "qibla", "en": "direction of prayer", "ur": "قبلہ" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/qibla.mp3",
+      "explanation": {
+        "en": "قِبْلَة — the direction Muslims face in prayer (toward the Ka'bah). Feminine. فَوَلِّ وَجْهَكَ شَطْرَ الْمَسْجِدِ الْحَرَامِ — 'Turn your face toward the Sacred Mosque.' The قِبْلَة connects every Muslim on earth.",
+        "ur": "قِبْلَة — وہ سمت جس طرف نماز میں منہ کرتے ہیں (کعبہ کی طرف)۔ مؤنث۔ ہر مسلمان کو ایک سمت جوڑتی ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "قبلة" }
     }
   ],
 
@@ -129,12 +159,7 @@
       "id": "ch01-l03-ex01",
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
-      "prompt": {
-        "ar": "هَذِهِ",
-        "ar_plain": "هذه",
-        "translit": "hādhihi",
-        "en": "this (f, near)"
-      },
+      "prompt": { "ar": "هَذِهِ", "ar_plain": "هذه", "translit": "hādhihi", "en": "this (f, near)" },
       "audio_url": "https://cdn.warsh.app/audio/vocab/hadhihi.mp3",
       "options": [
         { "en": "that (f)", "ur": "وہ (مؤنث)" },
@@ -145,19 +170,14 @@
       "correct_index": 1,
       "explanation_on_wrong": {
         "en": "هَذِهِ is feminine 'this'. هَذَا is masculine 'this'. The ِهِ ending marks the feminine.",
-        "ur": "هَذِهِ مؤنث 'یہ' ہے۔ هَذا مذکر 'یہ' ہے۔ ِهِ کی علامت مؤنث کو ظاہر کرتی ہے۔"
+        "ur": "هَذِهِ مؤنث 'یہ' ہے۔ هَذا مذکر 'یہ' ہے۔"
       }
     },
     {
       "id": "ch01-l03-ex02",
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
-      "prompt": {
-        "ar": "تِلْكَ",
-        "ar_plain": "تلك",
-        "translit": "tilka",
-        "en": "that (f, far)"
-      },
+      "prompt": { "ar": "تِلْكَ", "ar_plain": "تلك", "translit": "tilka", "en": "that (f, far)" },
       "audio_url": "https://cdn.warsh.app/audio/vocab/tilka.mp3",
       "options": [
         { "en": "this (f)", "ur": "یہ (مؤنث)" },
@@ -167,45 +187,48 @@
       ],
       "correct_index": 2,
       "explanation_on_wrong": {
-        "en": "تِلْكَ is the feminine of ذٰلِكَ — both mean 'that (far)', but for feminine nouns. تِلْكَ الْجَنَّةُ — 'That is the Garden.'",
-        "ur": "تِلْکَ، ذٰلِکَ کی مؤنث شکل ہے — دونوں کا مطلب 'وہ (دور)' لیکن مؤنث اسموں کے لیے۔"
+        "en": "تِلْكَ is the feminine of ذٰلِكَ — both mean 'that (far)', but تِلْكَ is for feminine nouns.",
+        "ur": "تِلْکَ، ذٰلِکَ کی مؤنث شکل ہے۔"
       }
     },
     {
       "id": "ch01-l03-ex03",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": { "ar": "أُمَّة", "ar_plain": "أمة", "translit": "'umma", "en": "community / nation" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/umma.mp3",
+      "options": [
+        { "en": "mercy", "ur": "رحمت" },
+        { "en": "blessing", "ur": "نعمت" },
+        { "en": "school", "ur": "مدرسہ" },
+        { "en": "community / nation", "ur": "امت" }
+      ],
+      "correct_index": 3
+    },
+    {
+      "id": "ch01-l03-ex04",
       "type": "FILL_BLANK",
       "xp_value": 1,
       "mode": "TAP",
       "sentence_ar": "___ شَجَرَةٌ",
-      "hint": {
-        "en": "This is a tree. (شَجَرَة is feminine)",
-        "ur": "یہ ایک درخت ہے۔ (شَجَرَة مؤنث ہے)"
-      },
+      "hint": { "en": "This is a tree. (شَجَرَة is feminine)", "ur": "یہ ایک درخت ہے۔ (شَجَرَة مؤنث ہے)" },
       "options": [
         { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this (m)" },
         { "ar": "هَذِهِ", "ar_plain": "هذه", "translit": "hādhihi", "en": "this (f)" },
         { "ar": "ذٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that (m)" },
         { "ar": "تِلْكَ", "ar_plain": "تلك", "translit": "tilka", "en": "that (f)" }
       ],
-      "correct_answer": {
-        "ar": "هَذِهِ",
-        "ar_plain": "هذه",
-        "translit": "hādhihi",
-        "en": "this (f)"
-      },
+      "correct_answer": { "ar": "هَذِهِ", "ar_plain": "هذه", "translit": "hādhihi", "en": "this (f)" },
       "explanation_on_wrong": {
-        "en": "شَجَرَة ends in ة so it is feminine — it needs هَذِهِ, not هَذَا. Always match the demonstrative to the gender of the noun.",
-        "ur": "شَجَرَة، ة پر ختم ہوتا ہے اس لیے مؤنث ہے — اسے هَذِهِ چاہیے، هَذا نہیں۔"
+        "en": "شَجَرَة ends in ة so it is feminine — it needs هَذِهِ, not هَذَا.",
+        "ur": "شَجَرَة، ة پر ختم ہوتا ہے اس لیے مؤنث ہے — اسے هَذِهِ چاہیے۔"
       }
     },
     {
-      "id": "ch01-l03-ex04",
+      "id": "ch01-l03-ex05",
       "type": "BUILD_SENTENCE",
       "xp_value": 1,
-      "target_translation": {
-        "en": "That is a garden.",
-        "ur": "وہ ایک باغ ہے۔"
-      },
+      "target_translation": { "en": "That is a garden.", "ur": "وہ ایک باغ ہے۔" },
       "tiles": [
         { "ar": "جَنَّةٌ", "ar_plain": "جنة", "translit": "jannatun", "en": "a garden" },
         { "ar": "تِلْكَ", "ar_plain": "تلك", "translit": "tilka", "en": "that (f)" },
@@ -214,32 +237,27 @@
       ],
       "correct_order": [1, 0],
       "explanation_on_wrong": {
-        "en": "تِلْكَ جَنَّةٌ — 'that (f) + garden'. جَنَّة is feminine so تِلْكَ matches. The demonstrative always comes first.",
-        "ur": "تِلْکَ جَنَّةٌ — مؤنث اشارہ + باغ۔ جَنَّة مؤنث ہے اس لیے تِلْکَ صحیح ہے۔ اشارہ ہمیشہ پہلے آتا ہے۔"
-      }
-    },
-    {
-      "id": "ch01-l03-ex05",
-      "type": "TRUE_FALSE",
-      "xp_value": 1,
-      "statement": {
-        "en": "هَذَا can be used with feminine nouns — هَذَا شَجَرَةٌ is correct Arabic.",
-        "ur": "هَذا مؤنث اسموں کے ساتھ بھی استعمال ہو سکتا ہے — هَذا شَجَرَةٌ درست عربی ہے۔",
-        "ar_example": {
-          "ar": "هَذَا شَجَرَةٌ",
-          "ar_plain": "هذا شجرة",
-          "translit": "hādhā shajaratun",
-          "en": "incorrect"
-        }
-      },
-      "correct_answer": false,
-      "explanation_on_wrong": {
-        "en": "هَذَا شَجَرَةٌ is wrong. شَجَرَة is feminine so you must use هَذِهِ شَجَرَةٌ. Mismatched gender is a grammatical error in Arabic.",
-        "ur": "هَذا شَجَرَةٌ غلط ہے۔ شَجَرَة مؤنث ہے اس لیے هَذِهِ شَجَرَةٌ ہونا چاہیے۔"
+        "en": "تِلْكَ جَنَّةٌ — 'that (f) + garden'. جَنَّة is feminine so تِلْكَ matches.",
+        "ur": "تِلْکَ جَنَّةٌ — مؤنث اشارہ + باغ۔ جَنَّة مؤنث ہے اس لیے تِلْکَ صحیح ہے۔"
       }
     },
     {
       "id": "ch01-l03-ex06",
+      "type": "TRUE_FALSE",
+      "xp_value": 1,
+      "statement": {
+        "en": "هَذَا can be used with feminine nouns — هَذَا شَجَرَةٌ is correct Arabic.",
+        "ur": "هَذا مؤنث اسموں کے ساتھ بھی استعمال ہو سکتا ہے۔",
+        "ar_example": { "ar": "هَذَا شَجَرَةٌ", "ar_plain": "هذا شجرة", "translit": "hādhā shajaratun", "en": "incorrect" }
+      },
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "هَذَا شَجَرَةٌ is wrong. شَجَرَة is feminine so you must use هَذِهِ شَجَرَةٌ.",
+        "ur": "هَذا شَجَرَةٌ غلط ہے۔ شَجَرَة مؤنث ہے اس لیے هَذِهِ شَجَرَةٌ ہونا چاہیے۔"
+      }
+    },
+    {
+      "id": "ch01-l03-ex07",
       "type": "MATCHING",
       "xp_value": 1,
       "left_column": [
@@ -254,21 +272,48 @@
         { "en": "that (m)", "ur": "وہ (مذکر)" },
         { "en": "this (f)", "ur": "یہ (مؤنث)" }
       ],
-      "correct_pairs": [
-        [0, 1],
-        [1, 3],
-        [2, 2],
-        [3, 0]
-      ]
+      "correct_pairs": [[0, 1], [1, 3], [2, 2], [3, 0]]
+    },
+    {
+      "id": "ch01-l03-ex08",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        { "ar": "شَجَرَة", "ar_plain": "شجرة", "translit": "shajara", "en": "tree" },
+        { "ar": "جَنَّة", "ar_plain": "جنة", "translit": "janna", "en": "paradise" },
+        { "ar": "سُورَة", "ar_plain": "سورة", "translit": "sūra", "en": "surah" },
+        { "ar": "آيَة", "ar_plain": "آية", "translit": "āya", "en": "verse / sign" }
+      ],
+      "right_column": [
+        { "en": "verse / sign", "ur": "آیت" },
+        { "en": "tree", "ur": "درخت" },
+        { "en": "paradise", "ur": "جنت" },
+        { "en": "surah", "ur": "سورت" }
+      ],
+      "correct_pairs": [[0, 1], [1, 2], [2, 3], [3, 0]]
+    },
+    {
+      "id": "ch01-l03-ex09",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        { "ar": "رَحْمَة", "ar_plain": "رحمة", "translit": "raḥma", "en": "mercy" },
+        { "ar": "نِعْمَة", "ar_plain": "نعمة", "translit": "ni'ma", "en": "blessing" },
+        { "ar": "أُمَّة", "ar_plain": "أمة", "translit": "'umma", "en": "nation" },
+        { "ar": "مَدْرَسَة", "ar_plain": "مدرسة", "translit": "madrasa", "en": "school" }
+      ],
+      "right_column": [
+        { "en": "school", "ur": "مدرسہ" },
+        { "en": "mercy", "ur": "رحمت" },
+        { "en": "blessing", "ur": "نعمت" },
+        { "en": "nation", "ur": "امت" }
+      ],
+      "correct_pairs": [[0, 1], [1, 2], [2, 3], [3, 0]]
     }
   ],
 
   "reveal": {
-    "concept_name": {
-      "en": "تِلْكَ in the Quran — Paradise revealed",
-      "ar": "تِلْكَ الْجَنَّةُ فِي الْقُرْآن",
-      "ur": "قرآن میں تِلْکَ الْجَنَّةُ"
-    },
+    "concept_name": { "en": "تِلْكَ in the Quran — Paradise revealed", "ar": "تِلْكَ الْجَنَّةُ فِي الْقُرْآن", "ur": "قرآن میں تِلْکَ الْجَنَّةُ" },
     "ayah": {
       "surah": 43,
       "ayah": 72,
@@ -280,15 +325,15 @@
     },
     "highlighted_word_indices": [0, 1],
     "noor_explanation": {
-      "en": "تِلْكَ الْجَنَّةُ — 'That is the Garden.' Allah uses تِلْكَ because الْجَنَّةُ is feminine. You now know all four pointing words of Arabic: هَذَا · هَذِهِ · ذٰلِكَ · تِلْكَ. They appear hundreds of times in the Quran. Today you learned to hear them.",
-      "ur": "تِلْکَ الْجَنَّةُ — 'وہ جنت ہے۔' اللہ تِلْکَ استعمال فرماتے ہیں کیونکہ الْجَنَّةُ مؤنث ہے۔ اب آپ کو عربی کے چاروں اشاروں کا علم ہے: هَذا · هَذِهِ · ذٰلِکَ · تِلْکَ۔"
+      "en": "تِلْكَ الْجَنَّةُ — 'That is the Garden.' Allah uses تِلْكَ because الْجَنَّةُ is feminine. You now know all four pointing words: هَذَا · هَذِهِ · ذٰلِكَ · تِلْكَ. And you know eleven feminine nouns to pair them with. They appear hundreds of times in the Quran.",
+      "ur": "تِلْکَ الْجَنَّةُ — 'وہ جنت ہے۔' اللہ تِلْکَ استعمال فرماتے ہیں کیونکہ الْجَنَّةُ مؤنث ہے۔ اب آپ کے پاس چاروں اشارے اور گیارہ مؤنث اسم ہیں۔"
     }
   },
 
   "close": {
     "noor_message": {
-      "en": "You now know all four Arabic pointing words — near and far, masculine and feminine. هَذِهِ الْجَنَّةُ you can now read. تِلْكَ الْجَنَّةُ you can now hear. May Allah make you among those who inherit it, in shaa Allah.",
-      "ur": "آپ کو اب عربی کے چاروں اشاروں کا علم ہے — قریب اور دور، مذکر اور مؤنث۔ هَذِهِ الْجَنَّةُ آپ اب پڑھ سکتے ہیں۔ تِلْکَ الْجَنَّةُ آپ اب سمجھ سکتے ہیں۔ اللہ آپ کو اس کا وارث بنائے، ان شاء اللہ۔"
+      "en": "Eleven feminine nouns and all four pointing words. You can now read تِلْكَ الْجَنَّةُ in the Quran and understand every word. May Allah make you among those who inherit it, in shaa Allah.",
+      "ur": "گیارہ مؤنث اسم اور چاروں اشارے۔ اب آپ تِلْکَ الْجَنَّةُ پڑھ کر سمجھ سکتے ہیں۔ اللہ آپ کو اس کا وارث بنائے، ان شاء اللہ۔"
     }
   }
 }
