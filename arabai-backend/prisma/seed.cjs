@@ -12,6 +12,10 @@ const ch01L01Content = require("./fixtures/chapter-01-lesson-01.json");
 const ch01L02Content = require("./fixtures/chapter-01-lesson-02.json");
 const ch01L03Content = require("./fixtures/chapter-01-lesson-03.json");
 const ch01L04Content = require("./fixtures/chapter-01-lesson-04.json");
+const ch02L01Content = require("./fixtures/chapter-02-lesson-01.json");
+const ch02L02Content = require("./fixtures/chapter-02-lesson-02.json");
+const ch02L03Content = require("./fixtures/chapter-02-lesson-03.json");
+const ch02L04Content = require("./fixtures/chapter-02-lesson-04.json");
 
 const ACHIEVEMENTS = [
   { key: "first_lesson",           title: "الخُطْوَة الأُولَى",            description: "Complete your very first lesson",                    icon: "footsteps-outline",   xpReward: 25  },
@@ -133,6 +137,57 @@ async function main() {
       template: "REVIEW",
       xpReward: ch01L04Content._meta?.xp_reward ?? 20,
       content: ch01L04Content,
+    },
+  });
+
+  // Chapter 2 — fully authored lessons (warsh-content-schema v1.0)
+  const ch2Id = chapterIdByOrder.get(2);
+
+  await prisma.lesson.create({
+    data: {
+      chapterId: ch2Id,
+      order: 1,
+      title: "Tanween — The Sound of 'A'",
+      titleAr: "التَّنْوِين — صَوْتُ النَّكِرَة",
+      template: "STANDARD",
+      xpReward: ch02L01Content._meta?.xp_reward ?? 10,
+      content: ch02L01Content,
+    },
+  });
+
+  await prisma.lesson.create({
+    data: {
+      chapterId: ch2Id,
+      order: 2,
+      title: "ال — The Definite Article",
+      titleAr: "التَّعْرِيف بِالْ",
+      template: "STANDARD",
+      xpReward: ch02L02Content._meta?.xp_reward ?? 10,
+      content: ch02L02Content,
+    },
+  });
+
+  await prisma.lesson.create({
+    data: {
+      chapterId: ch2Id,
+      order: 3,
+      title: "أَيْنَ — Where?",
+      titleAr: "أَيْنَ وَحُرُوف الْجَرّ",
+      template: "STANDARD",
+      xpReward: ch02L03Content._meta?.xp_reward ?? 10,
+      content: ch02L03Content,
+    },
+  });
+
+  await prisma.lesson.create({
+    data: {
+      chapterId: ch2Id,
+      order: 4,
+      title: "Chapter 2 Review",
+      titleAr: "مُرَاجَعَة الفَصْل الثَّانِي",
+      template: "REVIEW",
+      xpReward: ch02L04Content._meta?.xp_reward ?? 20,
+      content: ch02L04Content,
     },
   });
 

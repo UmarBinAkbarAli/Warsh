@@ -503,33 +503,35 @@ export default function LessonPlayScreen() {
     const canCheck = pairs.length > 0 && pairs.every((pair) => selectedMap[pair.left]) && !isAnswered;
 
     return (
-      <ScrollView style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
-        {pairs.map((pair) => (
-          <View key={pair.left} style={styles.matchingRow}>
-            <View style={styles.matchingLeft}>{renderMaybeArabic(pair.left, styles.matchingArabic, styles.matchingText)}</View>
-            <View style={styles.matchingChoices}>
-              {choices.map((choice) => {
-                const selected = selectedMap[pair.left] === choice;
-                const correct = isAnswered && normalizeAnswer(choice) === normalizeAnswer(pair.right);
-                const wrong = isAnswered && selected && !correct;
+      <>
+        <ScrollView style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
+          {pairs.map((pair) => (
+            <View key={pair.left} style={styles.matchingRow}>
+              <View style={styles.matchingLeft}>{renderMaybeArabic(pair.left, styles.matchingArabic, styles.matchingText)}</View>
+              <View style={styles.matchingChoices}>
+                {choices.map((choice) => {
+                  const selected = selectedMap[pair.left] === choice;
+                  const correct = isAnswered && normalizeAnswer(choice) === normalizeAnswer(pair.right);
+                  const wrong = isAnswered && selected && !correct;
 
-                return (
-                  <Pressable
-                    key={`${pair.left}-${choice}`}
-                    accessibilityRole="button"
-                    disabled={isAnswered}
-                    onPress={() => updateMappedAnswer(pair.left, choice)}
-                    style={[styles.matchingChoice, selected ? styles.matchingChoiceSelected : null, correct ? styles.optionCorrect : wrong ? styles.optionWrong : null]}
-                  >
-                    {renderMaybeArabic(choice, correct ? styles.optionArabicTextCorrect : wrong ? styles.optionArabicTextWrong : styles.optionArabicText, correct ? styles.optionTextCorrect : wrong ? styles.optionTextWrong : styles.optionText)}
-                  </Pressable>
-                );
-              })}
+                  return (
+                    <Pressable
+                      key={`${pair.left}-${choice}`}
+                      accessibilityRole="button"
+                      disabled={isAnswered}
+                      onPress={() => updateMappedAnswer(pair.left, choice)}
+                      style={[styles.matchingChoice, selected ? styles.matchingChoiceSelected : null, correct ? styles.optionCorrect : wrong ? styles.optionWrong : null]}
+                    >
+                      {renderMaybeArabic(choice, correct ? styles.optionArabicTextCorrect : wrong ? styles.optionArabicTextWrong : styles.optionArabicText, correct ? styles.optionTextCorrect : wrong ? styles.optionTextWrong : styles.optionText)}
+                    </Pressable>
+                  );
+                })}
+              </View>
             </View>
-          </View>
-        ))}
+          ))}
+        </ScrollView>
         {canCheck ? <BrandButton title="Check" onPress={() => answerExercise(selectedMap)} style={styles.bottomButton} /> : null}
-      </ScrollView>
+      </>
     );
   }
 
@@ -540,48 +542,50 @@ export default function LessonPlayScreen() {
     const canCheck = tokens.length > 0 && tokens.every((token) => selectedMap[token.word]) && !isAnswered;
 
     return (
-      <ScrollView style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
-        <View style={styles.parseSentence}>
+      <>
+        <ScrollView style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
+          <View style={styles.parseSentence}>
+            {tokens.map((token) => (
+              <View key={token.word} style={styles.parseToken}>
+                <ArabicText size="sm" style={styles.parseWord}>
+                  {token.word}
+                </ArabicText>
+                <Text style={styles.parseGloss}>{selectedMap[token.word] ?? token.gloss ?? "Choose role"}</Text>
+              </View>
+            ))}
+          </View>
           {tokens.map((token) => (
-            <View key={token.word} style={styles.parseToken}>
-              <ArabicText size="sm" style={styles.parseWord}>
-                {token.word}
-              </ArabicText>
-              <Text style={styles.parseGloss}>{selectedMap[token.word] ?? token.gloss ?? "Choose role"}</Text>
+            <View key={`${token.word}-labels`} style={styles.parseRow}>
+              <View style={styles.parseRowWord}>
+                <ArabicText size="sm" style={styles.matchingArabic}>
+                  {token.word}
+                </ArabicText>
+                {token.gloss ? <Text style={styles.parseGloss}>{token.gloss}</Text> : null}
+              </View>
+              <View style={styles.labelWrap}>
+                {labels.map((label) => {
+                  const selected = selectedMap[token.word] === label;
+                  const correct = isAnswered && normalizeAnswer(label) === normalizeAnswer(token.label);
+                  const wrong = isAnswered && selected && !correct;
+
+                  return (
+                    <Pressable
+                      key={`${token.word}-${label}`}
+                      accessibilityRole="button"
+                      disabled={isAnswered}
+                      onPress={() => updateMappedAnswer(token.word, label)}
+                      style={[styles.labelChip, selected ? styles.matchingChoiceSelected : null, correct ? styles.optionCorrect : wrong ? styles.optionWrong : null]}
+                    >
+                      {renderMaybeArabic(label, correct ? styles.optionArabicTextCorrect : wrong ? styles.optionArabicTextWrong : styles.optionArabicText, correct ? styles.optionTextCorrect : wrong ? styles.optionTextWrong : styles.optionText)}
+                    </Pressable>
+                  );
+                })}
+              </View>
             </View>
           ))}
-        </View>
-        {tokens.map((token) => (
-          <View key={`${token.word}-labels`} style={styles.parseRow}>
-            <View style={styles.parseRowWord}>
-              <ArabicText size="sm" style={styles.matchingArabic}>
-                {token.word}
-              </ArabicText>
-              {token.gloss ? <Text style={styles.parseGloss}>{token.gloss}</Text> : null}
-            </View>
-            <View style={styles.labelWrap}>
-              {labels.map((label) => {
-                const selected = selectedMap[token.word] === label;
-                const correct = isAnswered && normalizeAnswer(label) === normalizeAnswer(token.label);
-                const wrong = isAnswered && selected && !correct;
-
-                return (
-                  <Pressable
-                    key={`${token.word}-${label}`}
-                    accessibilityRole="button"
-                    disabled={isAnswered}
-                    onPress={() => updateMappedAnswer(token.word, label)}
-                    style={[styles.labelChip, selected ? styles.matchingChoiceSelected : null, correct ? styles.optionCorrect : wrong ? styles.optionWrong : null]}
-                  >
-                    {renderMaybeArabic(label, correct ? styles.optionArabicTextCorrect : wrong ? styles.optionArabicTextWrong : styles.optionArabicText, correct ? styles.optionTextCorrect : wrong ? styles.optionTextWrong : styles.optionText)}
-                  </Pressable>
-                );
-              })}
-            </View>
-          </View>
-        ))}
+        </ScrollView>
         {canCheck ? <BrandButton title="Check" onPress={() => answerExercise(selectedMap)} style={styles.bottomButton} /> : null}
-      </ScrollView>
+      </>
     );
   }
 
@@ -1446,7 +1450,6 @@ const styles = StyleSheet.create({
   exerciseScroller: {
     flex: 1,
     marginTop: 20,
-    marginBottom: 96,
   },
   exerciseScrollerContent: {
     paddingTop: 8,

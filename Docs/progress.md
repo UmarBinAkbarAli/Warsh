@@ -1,6 +1,6 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-05-22 (vocabulary bank expanded to 585 words)
+Last updated: 2026-05-24 (Chapter 2 fully authored — 4 lessons seeded)
 
 ## Purpose
 
@@ -337,7 +337,37 @@ The repo is in a stronger state than the old tracker wording suggested, but a fe
 - The lesson API transformer in `GET /api/lessons/[id]` converts new content schema → legacy lesson player shape; updating the lesson player to read the new schema directly is future work
 - `npm run db:seed` is fully destructive: wipes all users, progress, chat, achievements, lessons, chapters before reseeding
 
-## Recent Changes (since 2026-05-22) — latest
+## Recent Changes (since 2026-05-24) — latest
+
+### Chapter 2 fully authored — 4 lessons seeded (2026-05-24)
+
+- Authored 4 fixture JSON files in `arabai-backend/prisma/fixtures/`:
+
+| File | Template | Title | Hook | Reveal | Key vocabulary |
+|---|---|---|---|---|---|
+| `chapter-02-lesson-01.json` | STANDARD | Tanween — The Sound of 'A' | Al-Fatiha 1:2 | Al-Fatiha 1:2 (الْحَمْدُ) | كِتَابٌ، قَلَمٌ، بَيْتٌ، مَسْجِدٌ with tanween explained |
+| `chapter-02-lesson-02.json` | STANDARD | ال — The Definite Article | Al-Fatiha 1:2 | Al-Baqarah 2:2 (الْكِتَابُ) | الْكِتَابُ، جَدِيدٌ، كَبِيرٌ، قَدِيمٌ — first adjectives |
+| `chapter-02-lesson-03.json` | STANDARD | أَيْنَ — Where? | Al-Baqarah 2:255 (Ayat al-Kursi) | Al-Baqarah 2:255 (فِي السَّمَاوَاتِ) | أَيْنَ، فِي، عَلَى، الْمَكْتَبُ |
+| `chapter-02-lesson-04.json` | REVIEW | Chapter 2 Review | Al-Fatiha 1:2 | Al-Fatiha 1:2 (full parse) | Review of all Ch2 vocabulary |
+
+- Wired all 4 lessons into `seed.cjs` (requires + `prisma.lesson.create` blocks after Ch1)
+- `npm run db:seed` passed: no errors, "Seed data created successfully."
+- Backend TypeScript check passed (0 errors)
+
+**Authoring notes:**
+- Chapter 2 aligns to curriculum-book1.cjs: "Definite, Indefinite, and Where" (مَعْرِفَة وَنَكِرَة وَأَيْنَ) — NOT adjectives (those are Ch4 in Book 1)
+- L1 builds the نَكِرَة (tanween) concept before introducing ال, so the contrast lands in L2
+- L2 introduces the first 3 adjectives (جَدِيدٌ، كَبِيرٌ، قَدِيمٌ) as predicates in definite-subject sentences
+- L3 grounds أَيْنَ in Ayat al-Kursi (فِي السَّمَاوَاتِ وَالأَرْضِ) — the lesson payoff
+- L4 REVIEW closes with a full parse of الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ — the ayah that opened L1
+
+### Lesson player MATCHING / GRAMMAR_PARSE Check button fix (2026-05-24)
+
+- Fixed `play.tsx`: MATCHING and GRAMMAR_PARSE exercises had the "Check" BrandButton rendered **inside** the ScrollView, causing it to scroll off-screen on small devices when there are several pairs/tokens
+- Wrapped both exercise renderers in a `<>` fragment — ScrollView contains only the scrollable content; Check button sits below at fixed position outside the scroller
+- Change is in `arabai-app/app/(app)/lessons/[lessonId]/play.tsx` (uncommitted, git status: M)
+
+## Recent Changes (since 2026-05-22) — latest (previous)
 
 ### Vocabulary bank expanded to 585 words (2026-05-22)
 
@@ -1052,11 +1082,13 @@ Current product concern:
 ## Remaining Work
 
 ### Content authoring (highest priority)
-1. Author Chapter 2: adjectives (جَدِيد، كَبِير، صَغِير، قَدِيم) + agreement with noun gender (4–5 lessons)
-2. Author Chapters 3–5, then R1 REVIEW lesson after Ch5
-3. Author SP1 SPOKEN_PHRASES lesson after Ch3 (basic greetings — per spec-05 Part C)
-4. Continue through Chapters 6–72 following the chapter mapping in `warsh-spec-05`
-5. For each chapter: STANDARD lessons + at least 1 REVIEW at chapter milestones per spec-05 Part B
+1. ✅ Chapter 2 authored — 4 lessons (tanween / ال / adjectives / أَيْنَ) seeded (2026-05-24)
+2. Author Chapter 3: Possession and the Basmalah (الإضافة — كِتَابُ الطَّالِبِ, بِسْمِ اللَّهِ) — 4–5 lessons
+3. Author Chapter 4: Adjectives and Gender Agreement (الصِّفَة والموصوف — رَجُلٌ كَرِيمٌ, الصِّرَاطَ الْمُسْتَقِيمَ) — 4–5 lessons
+4. Author Chapter 5: Feminine Demonstratives + First Verb (هٰذِهِ، تِلْكَ، ذَهَبَ) — 4–5 lessons
+5. Insert SP1 SPOKEN_PHRASES lesson after Ch3 (basic greetings — per spec-05 Part C)
+6. Insert R1 REVIEW lesson after Ch5 (mid-Book 1 milestone per spec-05 Part B)
+7. Continue through Chapters 6–72 following the chapter mapping in `warsh-spec-05`
 
 ### Lesson player (engineering)
 6. Update the lesson player (`play.tsx`) to read the new content schema directly (currently using the API transformer as an adapter — acceptable for now but should be replaced)

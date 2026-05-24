@@ -1,0 +1,279 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+
+  "_meta": {
+    "_note": "Chapter 2, Lesson 1 — Tanween: the sound of indefiniteness. Authored against warsh-content-schema.ts v1.0.",
+    "chapter_order": 2,
+    "lesson_order": 1,
+    "estimated_minutes": 7,
+    "xp_reward": 10
+  },
+
+  "hook": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 2,
+      "label": "Al-Fatiha 1:2",
+      "ar": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+      "en": "All praise is for Allah, Lord of all the worlds.",
+      "ur": "تمام تعریف اللہ کے لیے ہے جو سارے جہانوں کا رب ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-002-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "You already know بَيْت, كِتَاب, قَلَم. But there's a small sound at the end of each word that carries a big meaning. Listen for the '-un' at the end.",
+      "ur": "آپ بَيْت، كِتاب، قَلَم جانتے ہیں۔ لیکن ہر لفظ کے آخر میں ایک چھوٹی آواز بہت بڑا مطلب رکھتی ہے۔ آخر میں '-un' سنیں۔"
+    },
+    "autoplay": true
+  },
+
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The ٌ — tanween",
+        "ar": "التَّنْوِين",
+        "ur": "تنوین — ٌ"
+      },
+      "explanation": {
+        "en": "The symbol ٌ at the end of a word is called tanween. It sounds like '-un' when spoken. Tanween means the word is indefinite — like 'a' in English. بَيْتٌ = a house. قَلَمٌ = a pen.",
+        "ur": "لفظ کے آخر میں ٌ تنوین کہلاتی ہے۔ بولتے وقت '-un' سنائی دیتی ہے۔ تنوین نکرہ کی علامت ہے — جیسے انگریزی میں 'a'۔ بَيْتٌ = ایک گھر۔ قَلَمٌ = ایک قلم۔"
+      },
+      "examples": [
+        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "a book", "ur": "ایک کتاب" },
+        { "ar": "قَلَمٌ", "ar_plain": "قلم", "translit": "qalamun", "en": "a pen", "ur": "ایک قلم" },
+        { "ar": "بَيْتٌ", "ar_plain": "بيت", "translit": "baytun", "en": "a house", "ur": "ایک گھر" },
+        { "ar": "مَسْجِدٌ", "ar_plain": "مسجد", "translit": "masjidun", "en": "a mosque", "ur": "ایک مسجد" }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "كِتَابٌ",
+        "ar_plain": "كتاب",
+        "translit": "kitābun",
+        "en": "a book",
+        "ur": "ایک کتاب"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kitab.mp3",
+      "explanation": {
+        "en": "The same word you learned in Chapter 1 — now with tanween visible. The ٌ is always there; you just didn't know what it meant yet.",
+        "ur": "وہی لفظ جو باب 1 میں سیکھا — اب تنوین نظر آ رہی ہے۔ ٌ ہمیشہ سے تھی، بس اب اس کا مطلب پتہ ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "قَلَمٌ",
+        "ar_plain": "قلم",
+        "translit": "qalamun",
+        "en": "a pen",
+        "ur": "ایک قلم"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/qalam.mp3",
+      "explanation": {
+        "en": "قَلَمٌ — 'a pen'. The word اقرأ (read) in the first revelation was addressed to the one who taught with the قَلَم.",
+        "ur": "قَلَمٌ — 'ایک قلم'۔ پہلی وحی میں اقرأ (پڑھو) اس ذات کی طرف سے تھا جس نے قَلَم سے علم دیا۔"
+      },
+      "introduces_vocab": { "ar_plain": "قلم" }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "بَيْتٌ",
+        "ar_plain": "بيت",
+        "translit": "baytun",
+        "en": "a house",
+        "ur": "ایک گھر"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/bayt.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "مَسْجِدٌ",
+        "ar_plain": "مسجد",
+        "translit": "masjidun",
+        "en": "a mosque",
+        "ur": "ایک مسجد"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/masjid.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Tanween disappears in sentences",
+        "ar": "هَذَا كِتَابٌ",
+        "ur": "جملے میں تنوین"
+      },
+      "explanation": {
+        "en": "When a tanween word is the second part of هَذَا / ذٰلِكَ sentences, it stays: هَذَا كِتَابٌ (this is a book). The كِتَابٌ tells us we mean any book — an unspecified one.",
+        "ur": "هَذا / ذٰلِکَ کے ساتھ جملے میں تنوین رہتی ہے: هَذَا كِتَابٌ (یہ ایک کتاب ہے)۔ كِتَابٌ بتاتا ہے کسی بھی کتاب کی بات ہو رہی ہے۔"
+      },
+      "examples": [
+        { "ar": "هَذَا بَيْتٌ", "ar_plain": "هذا بيت", "translit": "hādhā baytun", "en": "This is a house", "ur": "یہ ایک گھر ہے" },
+        { "ar": "ذٰلِكَ مَسْجِدٌ", "ar_plain": "ذلك مسجد", "translit": "dhālika masjidun", "en": "That is a mosque", "ur": "وہ ایک مسجد ہے" }
+      ]
+    }
+  ],
+
+  "exercises": [
+    {
+      "id": "ch02-l01-ex01",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "كِتَابٌ",
+        "ar_plain": "كتاب",
+        "translit": "kitābun",
+        "en": "a book"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kitab.mp3",
+      "options": [
+        { "en": "the book", "ur": "وہ کتاب" },
+        { "en": "books", "ur": "کتابیں" },
+        { "en": "a book", "ur": "ایک کتاب" },
+        { "en": "a pen", "ur": "ایک قلم" }
+      ],
+      "correct_index": 2,
+      "explanation_on_wrong": {
+        "en": "The ٌ (tanween) at the end makes this indefinite — 'a book', not 'the book'. The definite form (the book) is الْكِتَابُ — you'll meet it in the next lesson.",
+        "ur": "آخر میں ٌ (تنوین) اسے نکرہ بناتی ہے — 'ایک کتاب'، 'وہ کتاب' نہیں۔ معرفہ شکل (وہ کتاب) الْكِتابُ ہے — اگلے سبق میں ملیں گے۔"
+      }
+    },
+    {
+      "id": "ch02-l01-ex02",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "بَيْتٌ",
+        "ar_plain": "بيت",
+        "translit": "baytun",
+        "en": "a house"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/bayt.mp3",
+      "options": [
+        { "en": "a house", "ur": "ایک گھر" },
+        { "en": "the house", "ur": "وہ گھر" },
+        { "en": "a mosque", "ur": "ایک مسجد" },
+        { "en": "a book", "ur": "ایک کتاب" }
+      ],
+      "correct_index": 0
+    },
+    {
+      "id": "ch02-l01-ex03",
+      "type": "TRUE_FALSE",
+      "xp_value": 1,
+      "statement": {
+        "en": "The ٌ at the end of قَلَمٌ means the word is definite — 'the pen'.",
+        "ur": "قَلَمٌ کے آخر میں ٌ کا مطلب ہے لفظ معرفہ ہے — 'وہ قلم'۔",
+        "ar_example": {
+          "ar": "قَلَمٌ",
+          "ar_plain": "قلم",
+          "translit": "qalamun",
+          "en": "a pen (indefinite)"
+        }
+      },
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "The ٌ (tanween) marks the word as indefinite — 'a pen', not 'the pen'. Definite nouns use ال (the definite article) instead of tanween.",
+        "ur": "ٌ (تنوین) لفظ کو نکرہ بناتی ہے — 'ایک قلم'، 'وہ قلم' نہیں۔ معرفہ اسموں میں تنوین کی جگہ ال ہوتا ہے۔"
+      }
+    },
+    {
+      "id": "ch02-l01-ex04",
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "هَذَا ___",
+      "hint": {
+        "en": "This is a pen.",
+        "ur": "یہ ایک قلم ہے۔"
+      },
+      "options": [
+        { "ar": "بَيْتٌ", "ar_plain": "بيت", "translit": "baytun", "en": "a house" },
+        { "ar": "قَلَمٌ", "ar_plain": "قلم", "translit": "qalamun", "en": "a pen" },
+        { "ar": "مَسْجِدٌ", "ar_plain": "مسجد", "translit": "masjidun", "en": "a mosque" },
+        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "a book" }
+      ],
+      "correct_answer": {
+        "ar": "قَلَمٌ",
+        "ar_plain": "قلم",
+        "translit": "qalamun",
+        "en": "a pen"
+      }
+    },
+    {
+      "id": "ch02-l01-ex05",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "a book" },
+        { "ar": "قَلَمٌ", "ar_plain": "قلم", "translit": "qalamun", "en": "a pen" },
+        { "ar": "بَيْتٌ", "ar_plain": "بيت", "translit": "baytun", "en": "a house" },
+        { "ar": "مَسْجِدٌ", "ar_plain": "مسجد", "translit": "masjidun", "en": "a mosque" }
+      ],
+      "right_column": [
+        { "en": "a mosque", "ur": "ایک مسجد" },
+        { "en": "a book", "ur": "ایک کتاب" },
+        { "en": "a pen", "ur": "ایک قلم" },
+        { "en": "a house", "ur": "ایک گھر" }
+      ],
+      "correct_pairs": [
+        [0, 1],
+        [1, 2],
+        [2, 3],
+        [3, 0]
+      ]
+    },
+    {
+      "id": "ch02-l01-ex06",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "That is a mosque.",
+        "ur": "وہ ایک مسجد ہے۔"
+      },
+      "tiles": [
+        { "ar": "مَسْجِدٌ", "ar_plain": "مسجد", "translit": "masjidun", "en": "a mosque" },
+        { "ar": "ذٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that (m)" },
+        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this (m)" },
+        { "ar": "بَيْتٌ", "ar_plain": "بيت", "translit": "baytun", "en": "a house" }
+      ],
+      "correct_order": [1, 0],
+      "explanation_on_wrong": {
+        "en": "ذٰلِكَ مَسْجِدٌ — 'that' comes first, then the indefinite noun 'a mosque'. Use ذٰلِكَ (not هَذَا) when pointing at something far.",
+        "ur": "ذٰلِکَ مَسْجِدٌ — پہلے 'وہ'، پھر نکرہ اسم 'ایک مسجد'۔ دور چیز کے لیے ذٰلِکَ استعمال ہوتا ہے، هَذا نہیں۔"
+      }
+    }
+  ],
+
+  "reveal": {
+    "concept_name": {
+      "en": "الْحَمْدُ — why it starts with ال",
+      "ar": "الْحَمْدُ وَالتَّعْرِيف",
+      "ur": "الْحَمْدُ — ال کیوں؟"
+    },
+    "ayah": {
+      "surah": 1,
+      "ayah": 2,
+      "label": "Al-Fatiha 1:2",
+      "ar": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+      "en": "All praise is for Allah, Lord of all the worlds.",
+      "ur": "تمام تعریف اللہ کے لیے ہے جو سارے جہانوں کا رب ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-002-mishary.mp3"
+    },
+    "highlighted_word_indices": [0],
+    "noor_explanation": {
+      "en": "حَمْدٌ would mean 'a praise' — indefinite, partial. But Allah begins with الْحَمْدُ — 'the praise', definite, complete, total. This small ال at the front changes everything: not 'some praise belongs to Allah' but 'all praise — the entire category of praise — belongs to Allah alone.' You will understand this completely in the next lesson.",
+      "ur": "حَمْدٌ کا مطلب ہوتا 'ایک تعریف' — نکرہ، ادھوری۔ لیکن اللہ نے الْحَمْدُ سے آغاز کیا — 'وہ تعریف'، معرفہ، مکمل، کلی۔ یہ ایک چھوٹا ال سب بدل دیتا ہے: نہ کہ 'کچھ تعریف اللہ کے لیے ہے' بلکہ 'تمام تعریف — تعریف کی پوری قسم — صرف اللہ کے لیے ہے'۔"
+    }
+  },
+
+  "close": {
+    "noor_message": {
+      "en": "Tanween (ٌ) = indefinite = 'a'. You've named it. The next lesson shows you its opposite: ال — the definite article that makes الْحَمْدُ mean everything.",
+      "ur": "تنوین (ٌ) = نکرہ = 'ایک'۔ آپ نے اسے پہچانا۔ اگلا سبق اس کا الٹ دکھائے گا: ال — جو الْحَمْدُ کو سب کچھ بنا دیتا ہے۔"
+    }
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+
+  "_meta": {
+    "_note": "Chapter 2, Lesson 4 — REVIEW. Tanween vs ال, adjectives (جَدِيدٌ/كَبِيرٌ/قَدِيمٌ), أَيْنَ, فِي, عَلَى. Authored against warsh-content-schema.ts v1.0.",
+    "chapter_order": 2,
+    "lesson_order": 4,
+    "estimated_minutes": 8,
+    "xp_reward": 20
+  },
+
+  "hook": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 2,
+      "label": "Al-Fatiha 1:2",
+      "ar": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+      "en": "All praise is for Allah, Lord of all the worlds.",
+      "ur": "تمام تعریف اللہ کے لیے ہے جو سارے جہانوں کا رب ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-002-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "الْحَمْدُ — you understand this now. ال makes the praise definite: not 'a praise' but 'all praise'. This review pulls together everything from Chapter 2. No new words. Let's see what you've built.",
+      "ur": "الْحَمْدُ — آپ اب اسے سمجھتے ہیں۔ ال تعریف کو معرفہ بناتا ہے: 'ایک تعریف' نہیں بلکہ 'تمام تعریف'۔ یہ مراجعہ باب 2 کا سب کچھ اکٹھا کرتا ہے۔ کوئی نیا لفظ نہیں۔"
+    },
+    "autoplay": true
+  },
+
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The big picture — نَكِرَة vs مَعْرِفَة",
+        "ar": "النَّكِرَة وَالْمَعْرِفَة",
+        "ur": "بڑی تصویر — نکرہ اور معرفہ"
+      },
+      "explanation": {
+        "en": "Every Arabic noun is either نَكِرَة (indefinite — 'a') or مَعْرِفَة (definite — 'the'). Tanween (ٌ) = نَكِرَة. ال at the front = مَعْرِفَة. These two categories are the foundation of every sentence you'll ever read in Arabic.",
+        "ur": "ہر عربی اسم یا تو نکرہ ('ایک') ہے یا معرفہ ('وہ')۔ تنوین (ٌ) = نکرہ۔ آگے ال = معرفہ۔ یہ دو قسمیں ہر اس جملے کی بنیاد ہیں جو آپ عربی میں پڑھیں گے۔"
+      },
+      "examples": [
+        { "ar": "كِتَابٌ ← الْكِتَابُ", "ar_plain": "كتاب ← الكتاب", "translit": "kitābun → al-kitābu", "en": "a book → the book", "ur": "ایک کتاب → وہ کتاب" },
+        { "ar": "بَيْتٌ ← الْبَيْتُ", "ar_plain": "بيت ← البيت", "translit": "baytun → al-baytu", "en": "a house → the house", "ur": "ایک گھر → وہ گھر" },
+        { "ar": "مَسْجِدٌ ← الْمَسْجِدُ", "ar_plain": "مسجد ← المسجد", "translit": "masjidun → al-masjidu", "en": "a mosque → the mosque", "ur": "ایک مسجد → وہ مسجد" }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Sentences — definite subject + indefinite predicate",
+        "ar": "الْمُبْتَدَأُ وَالْخَبَرُ",
+        "ur": "جملے — معرفہ مبتدأ + نکرہ خبر"
+      },
+      "explanation": {
+        "en": "The most common Arabic sentence: the subject is definite (with ال), the predicate is indefinite (with tanween). The predicate can be a noun or an adjective. No word for 'is'.",
+        "ur": "سب سے عام عربی جملہ: مبتدأ معرفہ (ال کے ساتھ)، خبر نکرہ (تنوین کے ساتھ)۔ خبر اسم یا صفت ہو سکتی ہے۔ 'ہے' کے لیے کوئی لفظ نہیں۔"
+      },
+      "examples": [
+        { "ar": "الْكِتَابُ جَدِيدٌ", "ar_plain": "الكتاب جديد", "translit": "al-kitābu jadīdun", "en": "The book is new", "ur": "وہ کتاب نئی ہے" },
+        { "ar": "الْبَيْتُ كَبِيرٌ", "ar_plain": "البيت كبير", "translit": "al-baytu kabīrun", "en": "The house is big", "ur": "وہ گھر بڑا ہے" },
+        { "ar": "الْمَسْجِدُ قَدِيمٌ", "ar_plain": "المسجد قديم", "translit": "al-masjidu qadīmun", "en": "The mosque is old", "ur": "وہ مسجد پرانی ہے" }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "أَيْنَ — asking and answering",
+        "ar": "أَيْنَ وَجَوَابُهُ",
+        "ur": "أَيْنَ — پوچھنا اور جواب دینا"
+      },
+      "explanation": {
+        "en": "Ask: أَيْنَ + definite noun? Answer: noun + فِي / عَلَى + definite noun (with kasra ending). أَيْنَ الْقَلَمُ؟ → الْقَلَمُ عَلَى الْمَكْتَبِ. The noun after a preposition always ends in kasra (-i).",
+        "ur": "پوچھیں: أَيْنَ + معرفہ اسم؟ جواب: اسم + فِي / عَلَى + معرفہ اسم (کسرہ کے ساتھ)۔ أَيْنَ الْقَلَمُ؟ → الْقَلَمُ عَلَى الْمَكْتَبِ۔ حرف جر کے بعد اسم پر ہمیشہ کسرہ آتی ہے۔"
+      }
+    }
+  ],
+
+  "exercises": [
+    {
+      "id": "ch02-l04-ex01",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 5,
+      "prompt": {
+        "ar": "الْمَسْجِدُ",
+        "ar_plain": "المسجد",
+        "translit": "al-masjidu",
+        "en": "the mosque"
+      },
+      "options": [
+        { "en": "a mosque", "ur": "ایک مسجد" },
+        { "en": "the mosque", "ur": "وہ مسجد" },
+        { "en": "the house", "ur": "وہ گھر" },
+        { "en": "the book", "ur": "وہ کتاب" }
+      ],
+      "correct_index": 1,
+      "explanation_on_wrong": {
+        "en": "الْمَسْجِدُ has ال — definite — 'the mosque'. مَسْجِدٌ (with tanween, no ال) means 'a mosque'.",
+        "ur": "الْمَسْجِدُ میں ال ہے — معرفہ — 'وہ مسجد'۔ مَسْجِدٌ (تنوین کے ساتھ، بغیر ال) = 'ایک مسجد'۔"
+      }
+    },
+    {
+      "id": "ch02-l04-ex02",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 5,
+      "prompt": {
+        "ar": "الْكِتَابُ جَدِيدٌ",
+        "ar_plain": "الكتاب جديد",
+        "translit": "al-kitābu jadīdun",
+        "en": "The book is new"
+      },
+      "options": [
+        { "en": "A new book", "ur": "ایک نئی کتاب" },
+        { "en": "The book is old", "ur": "وہ کتاب پرانی ہے" },
+        { "en": "The book is new", "ur": "وہ کتاب نئی ہے" },
+        { "en": "A book is new", "ur": "ایک کتاب نئی ہے" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "id": "ch02-l04-ex03",
+      "type": "FILL_BLANK",
+      "xp_value": 5,
+      "mode": "TAP",
+      "sentence_ar": "الْقَلَمُ ___ الْمَكْتَبِ",
+      "hint": {
+        "en": "The pen is on the desk.",
+        "ur": "وہ قلم میز پر ہے۔"
+      },
+      "options": [
+        { "ar": "فِي", "ar_plain": "في", "translit": "fī", "en": "in" },
+        { "ar": "أَيْنَ", "ar_plain": "أين", "translit": "ayna", "en": "where" },
+        { "ar": "عَلَى", "ar_plain": "على", "translit": "ʿalā", "en": "on" },
+        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from" }
+      ],
+      "correct_answer": {
+        "ar": "عَلَى",
+        "ar_plain": "على",
+        "translit": "ʿalā",
+        "en": "on"
+      },
+      "explanation_on_wrong": {
+        "en": "عَلَى = on/upon. The pen rests on top of the desk, not inside it — so عَلَى, not فِي.",
+        "ur": "عَلَى = پر/اوپر۔ قلم میز کے اوپر رکھا ہے، اندر نہیں — اس لیے عَلَى، فِي نہیں۔"
+      }
+    },
+    {
+      "id": "ch02-l04-ex04",
+      "type": "FILL_BLANK",
+      "xp_value": 5,
+      "mode": "TAP",
+      "sentence_ar": "الْبَيْتُ ___",
+      "hint": {
+        "en": "The house is big.",
+        "ur": "وہ گھر بڑا ہے۔"
+      },
+      "options": [
+        { "ar": "قَدِيمٌ", "ar_plain": "قديم", "translit": "qadīmun", "en": "old" },
+        { "ar": "كَبِيرٌ", "ar_plain": "كبير", "translit": "kabīrun", "en": "big" },
+        { "ar": "جَدِيدٌ", "ar_plain": "جديد", "translit": "jadīdun", "en": "new" },
+        { "ar": "الْكَبِيرُ", "ar_plain": "الكبير", "translit": "al-kabīru", "en": "the big" }
+      ],
+      "correct_answer": {
+        "ar": "كَبِيرٌ",
+        "ar_plain": "كبير",
+        "translit": "kabīrun",
+        "en": "big"
+      },
+      "explanation_on_wrong": {
+        "en": "The predicate must be indefinite (tanween). كَبِيرٌ is correct — indefinite adjective meaning 'big'. الْكَبِيرُ (with ال) would be a different grammatical structure.",
+        "ur": "خبر نکرہ (تنوین کے ساتھ) ہونی چاہیے۔ كَبِيرٌ درست ہے — نکرہ صفت 'بڑا'۔ الْكَبِيرُ (ال کے ساتھ) ایک مختلف گرامر کا ڈھانچہ ہوگا۔"
+      }
+    },
+    {
+      "id": "ch02-l04-ex05",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 5,
+      "target_translation": {
+        "en": "Where is the book?",
+        "ur": "وہ کتاب کہاں ہے؟"
+      },
+      "tiles": [
+        { "ar": "الْكِتَابُ", "ar_plain": "الكتاب", "translit": "al-kitābu", "en": "the book" },
+        { "ar": "أَيْنَ", "ar_plain": "أين", "translit": "ayna", "en": "where?" },
+        { "ar": "فِي", "ar_plain": "في", "translit": "fī", "en": "in" },
+        { "ar": "الْبَيْتُ", "ar_plain": "البيت", "translit": "al-baytu", "en": "the house" }
+      ],
+      "correct_order": [1, 0],
+      "explanation_on_wrong": {
+        "en": "أَيْنَ الْكِتَابُ؟ — question word first (أَيْنَ), then the noun you're asking about (الْكِتَابُ). This is only the question, not the answer.",
+        "ur": "أَيْنَ الْكِتابُ؟ — پہلے سوالیہ لفظ (أَيْنَ)، پھر وہ اسم جس کے بارے میں پوچھ رہے ہیں (الْكِتابُ)۔ یہ صرف سوال ہے، جواب نہیں۔"
+      }
+    },
+    {
+      "id": "ch02-l04-ex06",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 5,
+      "target_translation": {
+        "en": "The mosque is old.",
+        "ur": "وہ مسجد پرانی ہے۔"
+      },
+      "tiles": [
+        { "ar": "الْمَسْجِدُ", "ar_plain": "المسجد", "translit": "al-masjidu", "en": "the mosque" },
+        { "ar": "قَدِيمٌ", "ar_plain": "قديم", "translit": "qadīmun", "en": "old" },
+        { "ar": "كَبِيرٌ", "ar_plain": "كبير", "translit": "kabīrun", "en": "big" },
+        { "ar": "الْبَيْتُ", "ar_plain": "البيت", "translit": "al-baytu", "en": "the house" }
+      ],
+      "correct_order": [0, 1],
+      "explanation_on_wrong": {
+        "en": "الْمَسْجِدُ قَدِيمٌ — definite subject first (الْمَسْجِدُ), then indefinite predicate (قَدِيمٌ). This pattern — ال noun + tanween adjective — means 'the X is Y'.",
+        "ur": "الْمَسْجِدُ قَدِيمٌ — پہلے معرفہ مبتدأ (الْمَسْجِدُ)، پھر نکرہ خبر (قَدِيمٌ)۔ یہ نمونہ — ال اسم + تنوین صفت — مطلب ہے 'وہ X ہے Y'۔"
+      }
+    },
+    {
+      "id": "ch02-l04-ex07",
+      "type": "TRUE_FALSE",
+      "xp_value": 5,
+      "statement": {
+        "en": "كِتَابٌ and الْكِتَابُ mean the same thing.",
+        "ur": "كِتابٌ اور الْكِتابُ ایک ہی چیز کا مطلب رکھتے ہیں۔",
+        "ar_example": {
+          "ar": "كِتَابٌ ≠ الْكِتَابُ",
+          "ar_plain": "كتاب ≠ الكتاب",
+          "translit": "kitābun ≠ al-kitābu",
+          "en": "a book ≠ the book"
+        }
+      },
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "They are different. كِتَابٌ (tanween) = 'a book' — any unspecified book. الْكِتَابُ (ال, no tanween) = 'the book' — a specific book. This difference matters enormously in the Quran.",
+        "ur": "یہ مختلف ہیں۔ كِتابٌ (تنوین) = 'ایک کتاب' — کوئی بھی غیر مخصوص کتاب۔ الْكِتابُ (ال، بغیر تنوین) = 'وہ کتاب' — ایک مخصوص کتاب۔ یہ فرق قرآن میں بہت اہم ہے۔"
+      }
+    },
+    {
+      "id": "ch02-l04-ex08",
+      "type": "MATCHING",
+      "xp_value": 5,
+      "left_column": [
+        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "a book" },
+        { "ar": "الْكِتَابُ", "ar_plain": "الكتاب", "translit": "al-kitābu", "en": "the book" },
+        { "ar": "جَدِيدٌ", "ar_plain": "جديد", "translit": "jadīdun", "en": "new" },
+        { "ar": "قَدِيمٌ", "ar_plain": "قديم", "translit": "qadīmun", "en": "old" },
+        { "ar": "أَيْنَ", "ar_plain": "أين", "translit": "ayna", "en": "where?" },
+        { "ar": "فِي", "ar_plain": "في", "translit": "fī", "en": "in" }
+      ],
+      "right_column": [
+        { "en": "old", "ur": "پرانا" },
+        { "en": "the book", "ur": "وہ کتاب" },
+        { "en": "in", "ur": "میں" },
+        { "en": "a book", "ur": "ایک کتاب" },
+        { "en": "new", "ur": "نیا" },
+        { "en": "where?", "ur": "کہاں؟" }
+      ],
+      "correct_pairs": [
+        [0, 3],
+        [1, 1],
+        [2, 4],
+        [3, 0],
+        [4, 5],
+        [5, 2]
+      ]
+    }
+  ],
+
+  "reveal": {
+    "concept_name": {
+      "en": "الْحَمْدُ لِلَّهِ — fully parsed",
+      "ar": "تَحْلِيل الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "ur": "الْحَمْدُ لِلَّهِ — مکمل تجزیہ"
+    },
+    "ayah": {
+      "surah": 1,
+      "ayah": 2,
+      "label": "Al-Fatiha 1:2",
+      "ar": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+      "en": "All praise is for Allah, Lord of all the worlds.",
+      "ur": "تمام تعریف اللہ کے لیے ہے جو سارے جہانوں کا رب ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-002-mishary.mp3"
+    },
+    "highlighted_word_indices": [0, 3],
+    "noor_explanation": {
+      "en": "الْحَمْدُ — Al (ال) + حَمْدُ (praise). The ال makes it definite — not 'a praise' or 'some praise' but the entire category of praise, all of it, complete. لِلَّهِ — for Allah (the لِ preposition of belonging, like فِي and عَلَى). الْعَالَمِينَ — the worlds (ال again — not 'some worlds' but 'all the worlds'). You started Chapter 2 looking at this ayah as just sound. Now it parses: THE praise — belongs to Allah — Lord of THE worlds. That is what you say seventeen times a day in salah. You are reading it now, not just reciting it.",
+      "ur": "الْحَمْدُ — ال + حَمْدُ (تعریف)۔ ال معرفہ بناتا ہے — 'ایک تعریف' یا 'کچھ تعریف' نہیں بلکہ تعریف کی پوری قسم، سب کچھ، مکمل۔ لِلَّهِ — اللہ کے لیے (لِ حرف جر ملکیت، جیسے فِي اور عَلَى)۔ الْعَالَمِينَ — وہ جہان (ال پھر — 'کچھ جہان' نہیں بلکہ 'تمام جہان')۔ آپ نے باب 2 اس آیت کو صرف آواز سمجھ کر شروع کیا۔ اب یہ تجزیہ ہوتی ہے: تمام تعریف — اللہ کے لیے — تمام جہانوں کے رب۔ یہی آپ روزانہ نماز میں سترہ بار پڑھتے ہیں۔"
+    }
+  },
+
+  "close": {
+    "noor_message": {
+      "en": "Chapter 2 complete. You now know the difference between نَكِرَة and مَعْرِفَة — the foundation of every Arabic sentence. You can ask أَيْنَ and answer with فِي and عَلَى. You have learned جَدِيدٌ، كَبِيرٌ، قَدِيمٌ — your first adjectives. Chapter 3 builds the next layer: possession — الإضافة — and it will open up بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ.",
+      "ur": "باب 2 مکمل۔ آپ اب نکرہ اور معرفہ کا فرق جانتے ہیں — ہر عربی جملے کی بنیاد۔ آپ أَيْنَ پوچھ سکتے ہیں اور فِي و عَلَى سے جواب دے سکتے ہیں۔ آپ نے جَدِيدٌ، كَبِيرٌ، قَدِيمٌ سیکھے — اپنی پہلی صفات۔ باب 3 اگلی پرت بناتا ہے: اضافہ — اور یہ بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ کھول دے گا۔"
+    }
+  }
+}
