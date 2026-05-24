@@ -12,10 +12,10 @@ export default function WelcomeScreen() {
       <ArabicText size="lg" style={{ textAlign: "center", marginBottom: Spacing.xs }}>
         وَرْش
       </ArabicText>
-      <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", marginBottom: Spacing.md, textAlign: "center" }}>
+      <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", fontFamily: "Lora-Bold", marginBottom: Spacing.md, textAlign: "center" }}>
         Welcome to Warsh
       </Text>
-      <Text style={{ fontSize: FontSizes.bodyL, color: Colors.text.secondary, textAlign: "center", marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
+      <Text style={{ fontSize: FontSizes.bodyL, color: Colors.text.secondary, textAlign: "center", marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL, fontFamily: "Lora-Regular" }}>
         Light on every word. Learn Quranic Arabic with Ustaad Noor, build a streak, and keep moving one lesson at a time.
       </Text>
       <Link href="/(auth)/onboarding/goal" style={{ backgroundColor: Colors.accent.gold, paddingHorizontal: Spacing.xl, paddingVertical: Spacing.md, borderRadius: Radii.md + 2 }}>

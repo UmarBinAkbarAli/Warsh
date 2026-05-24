@@ -16,6 +16,10 @@ const ch02L01Content = require("./fixtures/chapter-02-lesson-01.json");
 const ch02L02Content = require("./fixtures/chapter-02-lesson-02.json");
 const ch02L03Content = require("./fixtures/chapter-02-lesson-03.json");
 const ch02L04Content = require("./fixtures/chapter-02-lesson-04.json");
+const ch03L01Content = require("./fixtures/chapter-03-lesson-01.json");
+const ch03L02Content = require("./fixtures/chapter-03-lesson-02.json");
+const ch03L03Content = require("./fixtures/chapter-03-lesson-03.json");
+const ch03L04Content = require("./fixtures/chapter-03-lesson-04.json");
 
 const ACHIEVEMENTS = [
   { key: "first_lesson",           title: "الخُطْوَة الأُولَى",            description: "Complete your very first lesson",                    icon: "footsteps-outline",   xpReward: 25  },
@@ -188,6 +192,57 @@ async function main() {
       template: "REVIEW",
       xpReward: ch02L04Content._meta?.xp_reward ?? 20,
       content: ch02L04Content,
+    },
+  });
+
+  // Chapter 3 — fully authored lessons (warsh-content-schema v1.0)
+  const ch3Id = chapterIdByOrder.get(3);
+
+  await prisma.lesson.create({
+    data: {
+      chapterId: ch3Id,
+      order: 1,
+      title: "The Idafa Construction — Possession",
+      titleAr: "الإِضَافَة — الْمِلْكِيَّة",
+      template: "STANDARD",
+      xpReward: ch03L01Content._meta?.xp_reward ?? 10,
+      content: ch03L01Content,
+    },
+  });
+
+  await prisma.lesson.create({
+    data: {
+      chapterId: ch3Id,
+      order: 2,
+      title: "Whose? and O! — لِمَنْ and يَا",
+      titleAr: "لِمَنْ وَيَا",
+      template: "STANDARD",
+      xpReward: ch03L02Content._meta?.xp_reward ?? 10,
+      content: ch03L02Content,
+    },
+  });
+
+  await prisma.lesson.create({
+    data: {
+      chapterId: ch3Id,
+      order: 3,
+      title: "Basmalah Unlocked — بِسْمِ اللَّهِ",
+      titleAr: "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",
+      template: "STANDARD",
+      xpReward: ch03L03Content._meta?.xp_reward ?? 10,
+      content: ch03L03Content,
+    },
+  });
+
+  await prisma.lesson.create({
+    data: {
+      chapterId: ch3Id,
+      order: 4,
+      title: "Chapter 3 Review",
+      titleAr: "مُرَاجَعَة الفَصْل الثَّالِث",
+      template: "REVIEW",
+      xpReward: ch03L04Content._meta?.xp_reward ?? 20,
+      content: ch03L04Content,
     },
   });
 

@@ -54,13 +54,13 @@ export const Colors = {
 export const Fonts: Record<string, string | undefined> = {
   arabic: "Scheherazade New",
   arabicBold: "Scheherazade New Bold",
-  display: undefined,
-  regular: undefined,
-  semiBold: undefined,
-  bold: undefined,
-  extraBold: undefined,
-  italic: undefined,
-  urduFallback: undefined,
+  arabicSemiBold: "Scheherazade New SemiBold",
+  arabicMedium: "Scheherazade New Medium",
+  regular: "Lora-Regular",
+  semiBold: "Lora-SemiBold",
+  bold: "Lora-Bold",
+  italic: "Lora-Italic",
+  urduFallback: "Scheherazade New",
 };
 
 export const FontSizes = {

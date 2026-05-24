@@ -1,6 +1,6 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-05-24 (Chapter 2 fully authored — 4 lessons seeded)
+Last updated: 2026-05-24 (Chapter 3 fully authored — 4 lessons seeded)
 
 ## Purpose
 
@@ -338,6 +338,28 @@ The repo is in a stronger state than the old tracker wording suggested, but a fe
 - `npm run db:seed` is fully destructive: wipes all users, progress, chat, achievements, lessons, chapters before reseeding
 
 ## Recent Changes (since 2026-05-24) — latest
+
+### Chapter 3 fully authored — 4 lessons seeded (2026-05-24)
+
+- Authored 4 fixture JSON files in `arabai-backend/prisma/fixtures/`:
+
+| File | Template | Title | Hook | Reveal | Key vocabulary (10–12 words each) |
+|---|---|---|---|---|---|
+| `chapter-03-lesson-01.json` | STANDARD | The Idafa Construction | Al-Fatiha 1:1 | Al-Fatiha 1:1 (بِسْمِ parse) | كِتَابُ الطَّالِبِ, بَيْتُ اللَّهِ, رَبُّ الْعَالَمِينَ, مَلِكُ النَّاسِ, كَلَامُ اللَّهِ, + 7 more |
+| `chapter-03-lesson-02.json` | STANDARD | Whose? and O! — لِمَنْ and يَا | Ghafir 40:16 | Ghafir 40:16 (full parse) | لِمَنْ هٰذَا, يَا رَبِّ, يَا أُسْتَاذُ, الْمُلْكُ, الْيَوْمُ, يَوْمُ الْقِيَامَةِ, أَهْلُ الْجَنَّةِ, + 4 more |
+| `chapter-03-lesson-03.json` | STANDARD | Basmalah Unlocked | An-Naml 27:30 | Al-Fatiha 1:1 (5-token parse) | اسْمٌ, اللَّهُ, الرَّحْمٰنُ, الرَّحِيمُ, رَحْمَةُ اللَّهِ, نِعْمَةُ اللَّهِ, فَضْلُ اللَّهِ, عَبْدُ اللَّهِ, + 3 more |
+| `chapter-03-lesson-04.json` | REVIEW | Chapter 3 Review | Al-Fatiha 1:1 | Al-Fatiha 1:2 (رَبِّ الْعَالَمِينَ parse) | Review of all Ch3 vocabulary |
+
+- Wired all 4 lessons into `seed.cjs` (requires + `prisma.lesson.create` blocks after Ch2)
+- `npm run db:seed` passed: no errors, "Seed data created successfully."
+
+**Authoring notes:**
+- Ch3 topic: الإضافة (possessive construction) — two nouns, first loses tanween, second takes kasra
+- L1 teaches the idafa rule with 12 Quranic and everyday idafa phrases (بَيْتُ اللَّهِ, مَدِينَةُ النَّبِيِّ, etc.)
+- L2 teaches لِمَنْ (whose?) and يَا (vocative), including Ghafir 40:16 — Allah's question on Yawm al-Qiyamah
+- L3 fully unpacks بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ (بِ + اسْمِ مضاف + اللَّهِ مضاف إليه + adjectives in kasra); hook is An-Naml 27:30 (Sulayman's letter to the Queen of Sheba)
+- L4 REVIEW closes with رَبِّ الْعَالَمِينَ parsed as idafa — connecting back to Fatiha knowledge from Ch1/Ch2
+- All STANDARD lessons follow the 10+ vocabulary words standard established in Ch2 rewrite
 
 ### Chapter 2 fully authored — 4 lessons seeded (2026-05-24)
 

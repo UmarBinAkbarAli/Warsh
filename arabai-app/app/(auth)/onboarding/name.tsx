@@ -10,7 +10,7 @@ export default function OnboardingNameScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
-      <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, color: Colors.text.primary, fontWeight: "700", marginBottom: Spacing.sm }}>
+      <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, color: Colors.text.primary, fontWeight: "700", fontFamily: "Lora-Bold", marginBottom: Spacing.sm }}>
         What should Ustaad Noor call you?
       </Text>
       <TextInput
@@ -29,6 +29,7 @@ export default function OnboardingNameScreen() {
           marginBottom: Spacing.xl,
           backgroundColor: Colors.bg.surface,
           color: Colors.text.primary,
+          fontFamily: "Lora-Regular",
         }}
       />
       <Link href="/(auth)/onboarding/language" style={{ color: Colors.accent.gold, fontWeight: "700" }}>

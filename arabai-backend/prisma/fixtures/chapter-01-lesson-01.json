@@ -3,10 +3,10 @@
   "template": "STANDARD",
 
   "_meta": {
-    "_note": "This is a mock lesson for development. Authored against warsh-content-schema.ts v1.0. Represents Chapter 1 (هَذَا), Lesson 1 (First Encounter with هَذَا) from File 05 §3.1.",
+    "_note": "Chapter 1, Lesson 1 — First Encounter with هَذَا. 12 masculine nouns introduced. Authored against warsh-content-schema.ts v1.0.",
     "chapter_order": 1,
     "lesson_order": 1,
-    "estimated_minutes": 7,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
 
@@ -18,17 +18,11 @@
       "ar": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
       "en": "In the name of Allah, the Most Gracious, the Most Merciful.",
       "ur": "اللہ کے نام سے جو بہت مہربان اور رحم کرنے والا ہے۔",
-      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-001-mishary.mp3",
-      "word_timings": [
-        { "index": 0, "start_ms": 0, "end_ms": 1200 },
-        { "index": 1, "start_ms": 1200, "end_ms": 2400 },
-        { "index": 2, "start_ms": 2400, "end_ms": 3800 },
-        { "index": 3, "start_ms": 3800, "end_ms": 5400 }
-      ]
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-001-mishary.mp3"
     },
     "noor_intro": {
-      "en": "Let's begin where every Surah begins. Listen first — you don't need to understand a single word yet.",
-      "ur": "آئیے وہاں سے شروع کریں جہاں سے ہر سورت شروع ہوتی ہے۔ پہلے سنیں — ابھی ایک لفظ بھی سمجھنے کی ضرورت نہیں۔"
+      "en": "Let's begin where every Surah begins. Listen first — you don't need to understand a single word yet. Today you will learn هَذَا — 'this' — plus twelve Arabic nouns you can point at with it.",
+      "ur": "آئیے وہاں سے شروع کریں جہاں سے ہر سورت شروع ہوتی ہے۔ پہلے سنیں۔ آج آپ هَذا — 'یہ' — اور بارہ عربی اسم سیکھیں گے۔"
     },
     "autoplay": true
   },
@@ -36,13 +30,7 @@
   "discover_cards": [
     {
       "type": "WORD",
-      "text": {
-        "ar": "هَذَا",
-        "ar_plain": "هذا",
-        "translit": "hādhā",
-        "en": "this (m)",
-        "ur": "یہ (مذکر)"
-      },
+      "text": { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this (m)", "ur": "یہ (مذکر)" },
       "image_url": "https://cdn.warsh.app/images/discover/hadha-pointing.png",
       "audio_url": "https://cdn.warsh.app/audio/vocab/hadha.mp3",
       "explanation": {
@@ -53,86 +41,116 @@
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "كِتَاب",
-        "ar_plain": "كتاب",
-        "translit": "kitāb",
-        "en": "book",
-        "ur": "کتاب"
-      },
+      "text": { "ar": "كِتَاب", "ar_plain": "كتاب", "translit": "kitāb", "en": "book", "ur": "کتاب" },
       "image_url": "https://cdn.warsh.app/images/discover/kitab.png",
       "audio_url": "https://cdn.warsh.app/audio/vocab/kitab.mp3",
       "explanation": {
         "en": "كِتَاب means 'book'. You will see this word often — the Quran refers to itself as الْكِتَاب (the Book).",
-        "ur": "کِتاب کا مطلب 'کتاب' ہے۔ آپ یہ لفظ کثرت سے دیکھیں گے۔"
+        "ur": "کِتاب کا مطلب 'کتاب' ہے۔ قرآن خود کو الْکِتاب کہتا ہے۔"
       },
       "introduces_vocab": { "ar_plain": "كتاب" }
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "قَلَم",
-        "ar_plain": "قلم",
-        "translit": "qalam",
-        "en": "pen",
-        "ur": "قلم"
-      },
+      "text": { "ar": "قَلَم", "ar_plain": "قلم", "translit": "qalam", "en": "pen", "ur": "قلم" },
       "image_url": "https://cdn.warsh.app/images/discover/qalam.png",
       "audio_url": "https://cdn.warsh.app/audio/vocab/qalam.mp3",
+      "explanation": {
+        "en": "قَلَم — pen. Surah 68 is called Al-Qalam — the Pen. Allah swore by it: وَالْقَلَمِ وَمَا يَسْطُرُونَ.",
+        "ur": "قَلَم — قلم۔ سورۃ 68 کا نام القلم ہے۔ اللہ نے اس کی قسم کھائی: وَالْقَلَمِ وَمَا يَسْطُرُونَ۔"
+      },
       "introduces_vocab": { "ar_plain": "قلم" }
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "بَيْت",
-        "ar_plain": "بيت",
-        "translit": "bayt",
-        "en": "house",
-        "ur": "گھر"
-      },
+      "text": { "ar": "بَيْت", "ar_plain": "بيت", "translit": "bayt", "en": "house", "ur": "گھر" },
       "image_url": "https://cdn.warsh.app/images/discover/bayt.png",
       "audio_url": "https://cdn.warsh.app/audio/vocab/bayt.mp3",
       "introduces_vocab": { "ar_plain": "بيت" }
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "مَسْجِد",
-        "ar_plain": "مسجد",
-        "translit": "masjid",
-        "en": "mosque",
-        "ur": "مسجد"
-      },
+      "text": { "ar": "مَسْجِد", "ar_plain": "مسجد", "translit": "masjid", "en": "mosque", "ur": "مسجد" },
       "image_url": "https://cdn.warsh.app/images/discover/masjid.png",
       "audio_url": "https://cdn.warsh.app/audio/vocab/masjid.mp3",
       "introduces_vocab": { "ar_plain": "مسجد" }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Arabic doesn't need 'is'",
-        "ar": "الْجُمْلَة الْاسْمِيَّة",
-        "ur": "عربی میں 'ہے' کی ضرورت نہیں"
-      },
+      "type": "WORD",
+      "text": { "ar": "رَجُل", "ar_plain": "رجل", "translit": "rajul", "en": "man", "ur": "آدمی / مرد" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/rajul.mp3",
       "explanation": {
-        "en": "In Arabic, you can say 'This — book' (هَذَا كِتَاب) and it means 'This is a book'. The word 'is' is understood without being written.",
-        "ur": "عربی میں آپ 'یہ کتاب' (ہَذا کِتاب) کہہ سکتے ہیں اور اس کا مطلب 'یہ ایک کتاب ہے' ہوگا۔"
+        "en": "رَجُل — a man. Appears hundreds of times in the Quran. هَذَا رَجُلٌ — this is a man.",
+        "ur": "رَجُل — ایک مرد۔ قرآن میں سینکڑوں بار آتا ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "رجل" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "وَلَد", "ar_plain": "ولد", "translit": "walad", "en": "boy / child", "ur": "لڑکا / بچہ" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/walad.mp3",
+      "explanation": {
+        "en": "وَلَد — a child or boy. لَمْ يَلِدْ وَلَمْ يُولَدْ — 'He neither begets nor is born' (Al-Ikhlas 112:3). You already know this word from Ikhlas.",
+        "ur": "وَلَد — بچہ یا لڑکا۔ لَمْ يَلِدْ وَلَمْ يُولَدْ (سورۃ الاخلاص 112:3) — آپ پہلے سے یہ لفظ سنتے آئے ہیں۔"
+      },
+      "introduces_vocab": { "ar_plain": "ولد" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "بَاب", "ar_plain": "باب", "translit": "bāb", "en": "door / gate", "ur": "دروازہ" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/bab.mp3",
+      "introduces_vocab": { "ar_plain": "باب" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "نُور", "ar_plain": "نور", "translit": "nūr", "en": "light", "ur": "روشنی / نور" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/noor.mp3",
+      "explanation": {
+        "en": "نُور — light. Surah 24 is An-Nur. اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ — 'Allah is the light of the heavens and the earth.' (An-Nur 24:35)",
+        "ur": "نُور — روشنی۔ سورۃ 24 کا نام النور ہے۔ اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ (النور 24:35)۔"
+      },
+      "introduces_vocab": { "ar_plain": "نور" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "يَوْم", "ar_plain": "يوم", "translit": "yawm", "en": "day", "ur": "دن" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/yawm.mp3",
+      "explanation": {
+        "en": "يَوْم — day. يَوْمُ الدِّين — Day of Judgement. يَوْمُ الْقِيَامَةِ — Day of Resurrection. One of the most frequent words in the Quran.",
+        "ur": "يَوْم — دن۔ يَوْمُ الدِّين — روز جزا۔ يَوْمُ الْقِيَامَةِ — قیامت کا دن۔ قرآن کے سب سے زیادہ آنے والے الفاظ میں سے۔"
+      },
+      "introduces_vocab": { "ar_plain": "يوم" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "صِرَاط", "ar_plain": "صراط", "translit": "ṣirāṭ", "en": "path / road", "ur": "راستہ" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/sirat.mp3",
+      "explanation": {
+        "en": "صِرَاط — path. الصِّرَاطَ الْمُسْتَقِيمَ — 'the straight path' — is in Al-Fatiha 1:6, the ayah you recite every prayer.",
+        "ur": "صِرَاط — راستہ۔ الصِّرَاطَ الْمُسْتَقِيمَ — 'سیدھا راستہ' — الفاتحہ 1:6 میں ہے جو آپ ہر نماز میں پڑھتے ہیں۔"
+      },
+      "introduces_vocab": { "ar_plain": "صراط" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "قَمَر", "ar_plain": "قمر", "translit": "qamar", "en": "moon", "ur": "چاند" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/qamar.mp3",
+      "explanation": {
+        "en": "قَمَر — moon. Surah 54 is Al-Qamar. اقْتَرَبَتِ السَّاعَةُ وَانشَقَّ الْقَمَرُ — 'The Hour has drawn near and the moon has split.'",
+        "ur": "قَمَر — چاند۔ سورۃ 54 کا نام القمر ہے۔ اقْتَرَبَتِ السَّاعَةُ وَانشَقَّ الْقَمَرُ — 'قیامت قریب آ گئی اور چاند پھٹ گیا'۔"
+      },
+      "introduces_vocab": { "ar_plain": "قمر" }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": { "en": "Arabic doesn't need 'is'", "ar": "الْجُمْلَة الْاسْمِيَّة", "ur": "عربی میں 'ہے' کی ضرورت نہیں" },
+      "explanation": {
+        "en": "In Arabic, you can say 'This — book' (هَذَا كِتَابٌ) and it means 'This is a book'. The word 'is' is understood without being written. Every noun you just learned can be used this way.",
+        "ur": "عربی میں آپ 'یہ کتاب' (هَذا كِتابٌ) کہہ سکتے ہیں اور اس کا مطلب 'یہ ایک کتاب ہے' ہوگا۔ ابھی سیکھے گئے ہر اسم کے ساتھ یہ کام کرتا ہے۔"
       },
       "examples": [
-        {
-          "ar": "هَذَا كِتَاب",
-          "ar_plain": "هذا كتاب",
-          "translit": "hādhā kitāb",
-          "en": "This is a book",
-          "ur": "یہ ایک کتاب ہے"
-        },
-        {
-          "ar": "هَذَا بَيْت",
-          "ar_plain": "هذا بيت",
-          "translit": "hādhā bayt",
-          "en": "This is a house",
-          "ur": "یہ ایک گھر ہے"
-        }
+        { "ar": "هَذَا كِتَابٌ", "ar_plain": "هذا كتاب", "translit": "hādhā kitābun", "en": "This is a book", "ur": "یہ ایک کتاب ہے" },
+        { "ar": "هَذَا نُورٌ", "ar_plain": "هذا نور", "translit": "hādhā nūrun", "en": "This is a light", "ur": "یہ ایک روشنی ہے" }
       ]
     }
   ],
@@ -142,12 +160,7 @@
       "id": "ch01-l01-ex01",
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
-      "prompt": {
-        "ar": "هَذَا",
-        "ar_plain": "هذا",
-        "translit": "hādhā",
-        "en": "this (m)"
-      },
+      "prompt": { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this (m)" },
       "audio_url": "https://cdn.warsh.app/audio/vocab/hadha.mp3",
       "options": [
         { "en": "that", "ur": "وہ" },
@@ -157,20 +170,15 @@
       ],
       "correct_index": 1,
       "explanation_on_wrong": {
-        "en": "هَذَا points at something near. The word for 'that' (far) is ذَلِكَ — you'll meet it in Chapter 2.",
-        "ur": "ہَذا کسی قریب چیز کی طرف اشارہ ہے۔ 'وہ' کے لیے ذَلِکَ ہے جو آپ باب 2 میں سیکھیں گے۔"
+        "en": "هَذَا points at something near. The word for 'that' (far) is ذَلِكَ — you'll meet it next lesson.",
+        "ur": "هَذا کسی قریب چیز کی طرف اشارہ ہے۔ 'وہ' کے لیے ذَلِکَ ہے جو اگلے سبق میں آئے گا۔"
       }
     },
     {
       "id": "ch01-l01-ex02",
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
-      "prompt": {
-        "ar": "كِتَاب",
-        "ar_plain": "كتاب",
-        "translit": "kitāb",
-        "en": "book"
-      },
+      "prompt": { "ar": "كِتَاب", "ar_plain": "كتاب", "translit": "kitāb", "en": "book" },
       "audio_url": "https://cdn.warsh.app/audio/vocab/kitab.mp3",
       "options": [
         { "en": "pen", "ur": "قلم" },
@@ -182,6 +190,20 @@
     },
     {
       "id": "ch01-l01-ex03",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": { "ar": "نُور", "ar_plain": "نور", "translit": "nūr", "en": "light" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/noor.mp3",
+      "options": [
+        { "en": "moon", "ur": "چاند" },
+        { "en": "day", "ur": "دن" },
+        { "en": "path", "ur": "راستہ" },
+        { "en": "light", "ur": "روشنی" }
+      ],
+      "correct_index": 3
+    },
+    {
+      "id": "ch01-l01-ex04",
       "type": "MATCHING",
       "xp_value": 1,
       "left_column": [
@@ -196,84 +218,95 @@
         { "en": "mosque", "ur": "مسجد" },
         { "en": "pen", "ur": "قلم" }
       ],
-      "correct_pairs": [
-        [0, 1],
-        [1, 3],
-        [2, 0],
-        [3, 2]
-      ]
-    },
-    {
-      "id": "ch01-l01-ex04",
-      "type": "BUILD_SENTENCE",
-      "xp_value": 1,
-      "target_translation": {
-        "en": "This is a book.",
-        "ur": "یہ ایک کتاب ہے۔"
-      },
-      "tiles": [
-        { "ar": "كِتَاب", "ar_plain": "كتاب", "translit": "kitāb", "en": "book" },
-        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this" },
-        { "ar": "قَلَم", "ar_plain": "قلم", "translit": "qalam", "en": "pen" },
-        { "ar": "بَيْت", "ar_plain": "بيت", "translit": "bayt", "en": "house" }
-      ],
-      "correct_order": [1, 0],
-      "explanation_on_wrong": {
-        "en": "In Arabic, 'this' (هَذَا) comes first, then the noun (كِتَاب). No word for 'is' is needed.",
-        "ur": "عربی میں پہلے 'یہ' (ہَذا) آتا ہے، پھر اسم (کِتاب)۔ 'ہے' کے لیے کوئی لفظ نہیں چاہیے۔"
-      }
+      "correct_pairs": [[0, 1], [1, 3], [2, 0], [3, 2]]
     },
     {
       "id": "ch01-l01-ex05",
-      "type": "FILL_BLANK",
+      "type": "MATCHING",
       "xp_value": 1,
-      "mode": "TAP",
-      "sentence_ar": "___ بَيْت",
-      "hint": {
-        "en": "This is a house.",
-        "ur": "یہ ایک گھر ہے۔"
-      },
-      "options": [
-        { "ar": "كِتَاب", "ar_plain": "كتاب", "translit": "kitāb", "en": "book" },
-        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this" },
-        { "ar": "قَلَم", "ar_plain": "قلم", "translit": "qalam", "en": "pen" },
-        { "ar": "مَسْجِد", "ar_plain": "مسجد", "translit": "masjid", "en": "mosque" }
+      "left_column": [
+        { "ar": "رَجُل", "ar_plain": "رجل", "translit": "rajul", "en": "man" },
+        { "ar": "نُور", "ar_plain": "نور", "translit": "nūr", "en": "light" },
+        { "ar": "يَوْم", "ar_plain": "يوم", "translit": "yawm", "en": "day" },
+        { "ar": "قَمَر", "ar_plain": "قمر", "translit": "qamar", "en": "moon" }
       ],
-      "correct_answer": {
-        "ar": "هَذَا",
-        "ar_plain": "هذا",
-        "translit": "hādhā",
-        "en": "this"
-      }
+      "right_column": [
+        { "en": "day", "ur": "دن" },
+        { "en": "man", "ur": "آدمی" },
+        { "en": "moon", "ur": "چاند" },
+        { "en": "light", "ur": "روشنی" }
+      ],
+      "correct_pairs": [[0, 1], [1, 3], [2, 0], [3, 2]]
     },
     {
       "id": "ch01-l01-ex06",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        { "ar": "وَلَد", "ar_plain": "ولد", "translit": "walad", "en": "child" },
+        { "ar": "بَاب", "ar_plain": "باب", "translit": "bāb", "en": "door" },
+        { "ar": "صِرَاط", "ar_plain": "صراط", "translit": "ṣirāṭ", "en": "path" },
+        { "ar": "مَسْجِد", "ar_plain": "مسجد", "translit": "masjid", "en": "mosque" }
+      ],
+      "right_column": [
+        { "en": "path", "ur": "راستہ" },
+        { "en": "child", "ur": "بچہ" },
+        { "en": "mosque", "ur": "مسجد" },
+        { "en": "door", "ur": "دروازہ" }
+      ],
+      "correct_pairs": [[0, 1], [1, 3], [2, 0], [3, 2]]
+    },
+    {
+      "id": "ch01-l01-ex07",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": { "en": "This is a book.", "ur": "یہ ایک کتاب ہے۔" },
+      "tiles": [
+        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "book" },
+        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this" },
+        { "ar": "قَلَمٌ", "ar_plain": "قلم", "translit": "qalamun", "en": "pen" },
+        { "ar": "بَيْتٌ", "ar_plain": "بيت", "translit": "baytun", "en": "house" }
+      ],
+      "correct_order": [1, 0],
+      "explanation_on_wrong": {
+        "en": "In Arabic, 'this' (هَذَا) comes first, then the noun (كِتَابٌ). No word for 'is' is needed.",
+        "ur": "عربی میں پہلے 'یہ' (هَذا) آتا ہے، پھر اسم (كِتابٌ)۔ 'ہے' کے لیے کوئی لفظ نہیں۔"
+      }
+    },
+    {
+      "id": "ch01-l01-ex08",
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "___ بَيْتٌ",
+      "hint": { "en": "This is a house.", "ur": "یہ ایک گھر ہے۔" },
+      "options": [
+        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "book" },
+        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this" },
+        { "ar": "قَلَمٌ", "ar_plain": "قلم", "translit": "qalamun", "en": "pen" },
+        { "ar": "مَسْجِدٌ", "ar_plain": "مسجد", "translit": "masjidun", "en": "mosque" }
+      ],
+      "correct_answer": { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this" }
+    },
+    {
+      "id": "ch01-l01-ex09",
       "type": "TRUE_FALSE",
       "xp_value": 1,
       "statement": {
         "en": "The word مَسْجِد means 'pen'.",
         "ur": "لفظ مسجد کا مطلب 'قلم' ہے۔",
-        "ar_example": {
-          "ar": "مَسْجِد",
-          "ar_plain": "مسجد",
-          "translit": "masjid",
-          "en": "mosque"
-        }
+        "ar_example": { "ar": "مَسْجِد", "ar_plain": "مسجد", "translit": "masjid", "en": "mosque" }
       },
       "correct_answer": false,
       "explanation_on_wrong": {
-        "en": "مَسْجِد means 'mosque' — the place where Muslims pray. The word for 'pen' is قَلَم.",
+        "en": "مَسْجِد means 'mosque'. The word for 'pen' is قَلَم.",
         "ur": "مسجد کا مطلب 'مسجد' ہے۔ 'قلم' کے لیے لفظ قَلَم ہے۔"
       }
     }
   ],
 
   "reveal": {
-    "concept_name": {
-      "en": "هَذَا in the Quran",
-      "ar": "هَذَا فِي الْقُرْآن",
-      "ur": "قرآن میں ہَذا"
-    },
+    "concept_name": { "en": "هَذَا in the Quran", "ar": "هَذَا فِي الْقُرْآن", "ur": "قرآن میں هَذا" },
     "ayah": {
       "surah": 2,
       "ayah": 2,
@@ -285,16 +318,15 @@
     },
     "highlighted_word_indices": [0, 1],
     "noor_explanation": {
-      "en": "You just learned هَذَا. Here, Allah uses ذَلِكَ — 'that' — pointing at الْكِتَاب (the Book), which is the Quran itself. You'll learn ذَلِكَ in the very next chapter. The word كِتَاب — which you just learned — appears here in its definite form: الْكِتَاب, 'the Book'.",
-      "ur": "آپ نے ابھی ہَذا سیکھا۔ یہاں اللہ ذَلِکَ — 'وہ' — استعمال فرما رہے ہیں، الْکِتاب (وہ کتاب) کی طرف اشارہ کرتے ہوئے جو خود قرآن ہے۔ ذَلِکَ آپ اگلے ہی باب میں سیکھیں گے۔"
+      "en": "You just learned هَذَا. Here, Allah uses ذَلِكَ — 'that' — pointing at الْكِتَاب (the Book). كِتَاب — which you just learned — appears here in its definite form: الْكِتَاب, 'the Book'. You will learn ذَلِكَ in the very next lesson.",
+      "ur": "آپ نے ابھی هَذا سیکھا۔ یہاں اللہ ذَلِکَ استعمال فرما رہے ہیں — الْکِتاب کی طرف اشارہ کرتے ہوئے۔ ذَلِکَ آپ اگلے ہی سبق میں سیکھیں گے۔"
     }
   },
 
   "close": {
-    "noor_message_template": "ch01_l01_close",
     "noor_message": {
-      "en": "Beautiful start. You've taken your first step — five Arabic words, one grammar pattern, and a glimpse of the Quran. Tomorrow we continue.",
-      "ur": "خوبصورت آغاز۔ آپ نے اپنا پہلا قدم اٹھایا — پانچ عربی الفاظ، ایک گرامر کا اصول، اور قرآن کی ایک جھلک۔ کل ہم آگے بڑھیں گے۔"
+      "en": "Twelve Arabic words and one grammar pattern. You can now say 'This is a book', 'This is a mosque', 'This is a light' — and you understand كِتَاب when Allah uses it in Al-Baqarah. That is not a small thing.",
+      "ur": "بارہ عربی الفاظ اور ایک گرامر کا اصول۔ اب آپ کہہ سکتے ہیں 'هَذا کِتابٌ'، 'هَذا نُورٌ' — اور البقرہ میں كِتَاب سمجھ سکتے ہیں۔"
     }
   }
 }

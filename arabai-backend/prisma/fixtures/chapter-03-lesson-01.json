@@ -1,0 +1,253 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+
+  "_meta": {
+    "_note": "Chapter 3, Lesson 1 — Idafa (الإضافة). The possessive construction: two nouns, first loses tanween, second takes kasra. 12 vocabulary words introduced. Authored against warsh-content-schema.ts v1.0.",
+    "chapter_order": 3,
+    "lesson_order": 1,
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+
+  "hook": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 1,
+      "label": "Al-Fatiha 1:1",
+      "ar": "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",
+      "en": "In the name of Allah, the Most Gracious, the Most Merciful.",
+      "ur": "اللہ کے نام سے جو بڑا مہربان، نہایت رحم کرنے والا ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-001-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "You have recited بِسْمِ اللَّهِ thousands of times. Today you learn the grammar behind it — a structure called الإضافة that lets two nouns merge into one meaning. 'Name of Allah.' 'Book of the student.' 'Lord of the worlds.' All the same pattern.",
+      "ur": "آپ نے بِسْمِ اللَّهِ ہزار بار پڑھا ہے۔ آج آپ اس کے پیچھے کی گرامر سیکھیں گے — الإضافة — جو دو اسموں کو ایک معنی میں جوڑتا ہے۔ 'اللہ کا نام'، 'طالب کی کتاب'، 'جہانوں کا رب' — سب ایک ہی نمونہ ہے۔"
+    },
+    "autoplay": true
+  },
+
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Idafa — Two Nouns = Possession",
+        "ar": "الإِضَافَة — اسمان بمعنى الملكية",
+        "ur": "اضافہ — دو اسم = ملکیت"
+      },
+      "explanation": {
+        "en": "Put two nouns together — the first owns, the second is owned. The first noun LOSES its tanween. The second noun takes a kasra (ِ) ending. No word for 'of' is needed.\n\nكِتَابُ الطَّالِبِ = the book of the student = the student's book\nبَيْتُ الرَّجُلِ = the house of the man = the man's house",
+        "ur": "دو اسم ایک ساتھ رکھیں — پہلا مالک، دوسرا ملکیت۔ پہلے اسم سے تنوین چلی جاتی ہے۔ دوسرے اسم کے آخر میں کسرہ (ِ) آتی ہے۔ 'کا' یا 'کی' کے لیے کوئی الگ لفظ نہیں چاہیے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "كِتَابُ الطَّالِبِ", "ar_plain": "كتاب الطالب", "translit": "kitābu-t-tālibi", "en": "the student's book", "ur": "طالب کی کتاب" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kitab-altaalib.mp3",
+      "explanation": {
+        "en": "Notice: كِتَابٌ (a book) lost its tanween → كِتَابُ. الطَّالِبِ ends in kasra. Together: 'the student's book.'",
+        "ur": "غور کریں: كِتَابٌ (ایک کتاب) نے تنوین کھو دی → كِتَابُ۔ الطَّالِبِ کے آخر میں کسرہ ہے۔ مل کر: 'طالب کی کتاب'۔"
+      },
+      "introduces_vocab": { "ar_plain": "كتاب الطالب" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "بَيْتُ الرَّجُلِ", "ar_plain": "بيت الرجل", "translit": "baytu-r-rajuli", "en": "the man's house", "ur": "آدمی کا گھر" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/bayt-alrajul.mp3",
+      "introduces_vocab": { "ar_plain": "بيت الرجل" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "بَابُ الْمَسْجِدِ", "ar_plain": "باب المسجد", "translit": "bābu-l-masjidi", "en": "the door of the mosque", "ur": "مسجد کا دروازہ" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/bab-almasjid.mp3",
+      "introduces_vocab": { "ar_plain": "باب المسجد" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "قَلَمُ الأُسْتَاذِ", "ar_plain": "قلم الأستاذ", "translit": "qalamu-l-ustādhi", "en": "the teacher's pen", "ur": "استاد کا قلم" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/qalam-alustadh.mp3",
+      "introduces_vocab": { "ar_plain": "قلم الأستاذ" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "رَبُّ الْعَالَمِينَ", "ar_plain": "رب العالمين", "translit": "rabbu-l-'ālamīna", "en": "Lord of the worlds", "ur": "جہانوں کا رب" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/rabb-al-aalameen.mp3",
+      "explanation": {
+        "en": "This is in Al-Fatiha 1:2 — رَبِّ الْعَالَمِينَ. رَبّ (Lord) is in idafa with الْعَالَمِينَ (the worlds). The same pattern you just learned.",
+        "ur": "یہ الفاتحہ 1:2 میں ہے — رَبِّ الْعَالَمِينَ۔ رَبّ (رب) الْعَالَمِينَ (جہانوں) کے ساتھ اضافہ میں ہے۔ وہی نمونہ جو آپ نے ابھی سیکھا۔"
+      },
+      "introduces_vocab": { "ar_plain": "رب العالمين" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "مَلِكُ النَّاسِ", "ar_plain": "ملك الناس", "translit": "maliku-n-nāsi", "en": "King of mankind", "ur": "انسانوں کا بادشاہ" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/malik-alnaas.mp3",
+      "explanation": {
+        "en": "From Surah An-Nas (114:2) — مَلِكِ النَّاسِ. Another idafa in the Quran you already know.",
+        "ur": "سورۃ الناس (114:2) سے — مَلِكِ النَّاسِ۔ ایک اور قرآنی اضافہ جو آپ پہلے سے جانتے ہیں۔"
+      },
+      "introduces_vocab": { "ar_plain": "ملك الناس" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "نُورُ السَّمَاءِ", "ar_plain": "نور السماء", "translit": "nūru-s-samā'i", "en": "the light of the sky", "ur": "آسمان کی روشنی" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/noor-alsamaa.mp3",
+      "introduces_vocab": { "ar_plain": "نور السماء" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "كَلَامُ اللَّهِ", "ar_plain": "كلام الله", "translit": "kalāmu-l-lāhi", "en": "the speech of Allah", "ur": "اللہ کا کلام" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kalam-allah.mp3",
+      "explanation": {
+        "en": "Another idafa — كَلَامُ (speech, without tanween) + اللَّهِ (of Allah, kasra ending). The Quran is كَلَامُ اللَّهِ.",
+        "ur": "ایک اور اضافہ — كَلَامُ (کلام، بغیر تنوین) + اللَّهِ (اللہ کا، کسرہ کے ساتھ)۔ قرآن كَلَامُ اللَّهِ ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "كلام الله" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "أُمُّ الْوَلَدِ", "ar_plain": "أم الولد", "translit": "'ummu-l-waladi", "en": "the mother of the child", "ur": "بچے کی ماں" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/umm-alwalad.mp3",
+      "introduces_vocab": { "ar_plain": "أم الولد" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "مَدِينَةُ النَّبِيِّ", "ar_plain": "مدينة النبي", "translit": "madīnatu-n-nabiyyi", "en": "the city of the Prophet", "ur": "نبی کا شہر" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/madinah-alnabbi.mp3",
+      "explanation": {
+        "en": "مَدِينَةُ النَّبِيِّ — the City of the Prophet. You know this phrase — it is Al-Madinah. Now you know its grammar.",
+        "ur": "مَدِينَةُ النَّبِيِّ — نبی کا شہر۔ آپ یہ جملہ جانتے ہیں — یہ المدینہ ہے۔ اب آپ اس کی گرامر بھی جانتے ہیں۔"
+      },
+      "introduces_vocab": { "ar_plain": "مدينة النبي" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "بَيْتُ اللَّهِ", "ar_plain": "بيت الله", "translit": "baytu-l-lāhi", "en": "the House of Allah", "ur": "اللہ کا گھر" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/bayt-allah.mp3",
+      "explanation": {
+        "en": "بَيْتُ اللَّهِ — the Ka'bah. The sacred house. بَيْتٌ (a house) → بَيْتُ (house of). اللَّهِ = of Allah.",
+        "ur": "بَيْتُ اللَّهِ — کعبہ۔ مقدس گھر۔ بَيْتٌ (ایک گھر) → بَيْتُ (گھر کا)۔ اللَّهِ = اللہ کا۔"
+      },
+      "introduces_vocab": { "ar_plain": "بيت الله" }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": { "en": "The Idafa Rule — Summary", "ar": "قاعدة الإضافة", "ur": "اضافے کا اصول" },
+      "body": {
+        "en": "1. First noun (مضاف): LOSES its tanween. Becomes -u/-i/-a at the end (depending on position).\n2. Second noun (مضاف إليه): ALWAYS takes kasra (ِ) ending.\n3. No word for 'of' is used — the two nouns together express it.\n\nكِتَابٌ → كِتَابُ الطَّالِبِ\nbَيْتٌ → بَيْتُ اللَّهِ",
+        "ur": "1. پہلا اسم (مضاف): تنوین کھو دیتا ہے۔ آخر میں -u/-i/-a بن جاتا ہے۔\n2. دوسرا اسم (مضاف إليه): ہمیشہ کسرہ (ِ) لیتا ہے۔\n3. 'کا/کی/کے' کے لیے کوئی الگ لفظ نہیں — دونوں اسم مل کر یہ معنی دیتے ہیں۔"
+      }
+    }
+  ],
+
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch3-l1-ex1",
+      "prompt": { "ar": "كِتَابُ الطَّالِبِ", "en": "the student's book", "ur": "طالب کی کتاب" },
+      "direction": "ar_to_en",
+      "answer": "the student's book",
+      "choices": ["the student's book", "a student book", "the teacher's pen", "a book in the mosque"],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch3-l1-ex2",
+      "prompt": { "ar": "بَيْتُ اللَّهِ", "en": "the House of Allah", "ur": "اللہ کا گھر" },
+      "direction": "ar_to_en",
+      "answer": "the House of Allah",
+      "choices": ["the House of Allah", "a house near Allah", "the man's house", "Lord of the worlds"],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch3-l1-ex3",
+      "prompt": { "en": "the City of the Prophet", "ur": "نبی کا شہر" },
+      "direction": "en_to_ar",
+      "answer": "مَدِينَةُ النَّبِيِّ",
+      "choices": ["مَدِينَةُ النَّبِيِّ", "مَدِينَةٌ كَبِيرَةٌ", "بَيْتُ النَّبِيِّ", "نُورُ السَّمَاءِ"],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch3-l1-ex4",
+      "statement": { "en": "In idafa, the first noun (مضاف) keeps its tanween.", "ar": "في الإضافة، المضاف يحتفظ بتنوينه.", "ur": "اضافہ میں مضاف اپنی تنوین رکھتا ہے۔" },
+      "answer": false,
+      "explanation": {
+        "en": "False — the first noun (مضاف) LOSES its tanween in idafa. كِتَابٌ → كِتَابُ الطَّالِبِ.",
+        "ur": "غلط — مضاف اضافہ میں اپنی تنوین کھو دیتا ہے۔ كِتَابٌ → كِتَابُ الطَّالِبِ۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch3-l1-ex5",
+      "template": { "en": "بَابُ ___ = the door of the mosque", "ur": "بَابُ ___ = مسجد کا دروازہ" },
+      "blank_label": { "en": "fill in the second noun", "ur": "دوسرا اسم بھریں" },
+      "answer": "الْمَسْجِدِ",
+      "choices": ["الْمَسْجِدِ", "الْمَسْجِدُ", "مَسْجِدٌ", "الْمَسْجِدَ"],
+      "explanation": {
+        "en": "The second noun (مضاف إليه) must take kasra → الْمَسْجِدِ.",
+        "ur": "دوسرا اسم (مضاف إليه) کسرہ لیتا ہے → الْمَسْجِدِ۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch3-l1-ex6",
+      "instruction": { "en": "Match each Arabic idafa phrase to its meaning.", "ur": "ہر عربی اضافی ترکیب کو اس کے معنی سے ملائیں۔" },
+      "pairs": [
+        { "ar": "كَلَامُ اللَّهِ", "en": "the speech of Allah" },
+        { "ar": "قَلَمُ الأُسْتَاذِ", "en": "the teacher's pen" },
+        { "ar": "رَبُّ الْعَالَمِينَ", "en": "Lord of the worlds" },
+        { "ar": "أُمُّ الْوَلَدِ", "en": "the mother of the child" }
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch3-l1-ex7",
+      "instruction": { "en": "Match each idafa phrase to its translation.", "ur": "ہر اضافی ترکیب کو اس کے ترجمے سے ملائیں۔" },
+      "pairs": [
+        { "ar": "بَيْتُ الرَّجُلِ", "en": "the man's house" },
+        { "ar": "مَلِكُ النَّاسِ", "en": "King of mankind" },
+        { "ar": "نُورُ السَّمَاءِ", "en": "the light of the sky" },
+        { "ar": "مَدِينَةُ النَّبِيِّ", "en": "the city of the Prophet" }
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch3-l1-ex8",
+      "instruction": { "en": "Build the idafa phrase: 'the door of the mosque'", "ur": "اضافی ترکیب بنائیں: 'مسجد کا دروازہ'" },
+      "word_bank": ["بَابُ", "الْمَسْجِدِ", "بَابٌ", "مَسْجِدٌ", "فِي"],
+      "answer": ["بَابُ", "الْمَسْجِدِ"],
+      "explanation": {
+        "en": "بَابُ (door of — no tanween) + الْمَسْجِدِ (the mosque — kasra ending). Together: 'the door of the mosque.'",
+        "ur": "بَابُ (دروازہ — بغیر تنوین) + الْمَسْجِدِ (مسجد — کسرہ کے ساتھ)۔ مل کر: 'مسجد کا دروازہ'۔"
+      },
+      "xp_value": 1
+    }
+  ],
+
+  "reveal": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 1,
+      "label": "Al-Fatiha 1:1",
+      "ar": "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",
+      "en": "In the name of Allah, the Most Gracious, the Most Merciful.",
+      "ur": "اللہ کے نام سے جو بڑا مہربان، نہایت رحم کرنے والا ہے۔"
+    },
+    "highlighted_word": "بِسْمِ",
+    "noor_comment": {
+      "en": "بِسْمِ اللَّهِ is an idafa — اسم (name) is in a possessive construction with اللَّهِ (of Allah). The بِ before it means 'in/with'. You have been saying this grammar your whole life. Now you see it.",
+      "ur": "بِسْمِ اللَّهِ ایک اضافہ ہے — اسم (نام) اللَّهِ (اللہ کا) کے ساتھ اضافی ترکیب میں ہے۔ اس سے پہلے بِ کا مطلب 'میں/کے ساتھ' ہے۔ آپ یہ گرامر ساری زندگی پڑھتے رہے ہیں۔ اب آپ اسے دیکھ رہے ہیں۔"
+    },
+    "parse_tokens": [
+      { "ar": "بِ", "label": "حرف جر", "en": "in / with" },
+      { "ar": "اسْمِ", "label": "مضاف", "en": "name (of)" },
+      { "ar": "اللَّهِ", "label": "مضاف إليه", "en": "Allah — kasra ending" }
+    ]
+  }
+}

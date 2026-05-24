@@ -18,10 +18,10 @@ export default function DailyCommitmentScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
-      <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, color: Colors.text.primary, fontWeight: "700", marginBottom: Spacing.sm }}>
+      <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, color: Colors.text.primary, fontWeight: "700", fontFamily: "Lora-Bold", marginBottom: Spacing.sm }}>
         How much time can you spend daily?
       </Text>
-      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
+      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL, fontFamily: "Lora-Regular" }}>
         Steady wins. Even 5 minutes a day adds up.
       </Text>
 
@@ -34,7 +34,7 @@ export default function DailyCommitmentScreen() {
             selected={dailyGoalMinutes === option.value}
             onPress={() => setDailyGoalMinutes(option.value)}
           />
-          <Text style={{ color: Colors.text.muted, fontSize: FontSizes.caption, marginTop: 4, marginLeft: 2 }}>
+          <Text style={{ color: Colors.text.muted, fontSize: FontSizes.caption, marginTop: 4, marginLeft: 2, fontFamily: "Lora-Regular" }}>
             {option.subtitle}
           </Text>
         </View>

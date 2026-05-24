@@ -64,10 +64,10 @@ export default function RegisterScreen() {
       <ArabicText size="lg" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
         وَرْش
       </ArabicText>
-      <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", marginBottom: Spacing.sm }}>
+      <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", fontFamily: "Lora-Bold", marginBottom: Spacing.sm }}>
         Create your Warsh account
       </Text>
-      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
+      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL, fontFamily: "Lora-Regular" }}>
         {displayName ? `Welcome ${displayName}. Your journey to understanding the Quran starts here.` : "Your journey to understanding the Quran starts here."}
       </Text>
       <TextInput
@@ -76,7 +76,7 @@ export default function RegisterScreen() {
         placeholder="Name"
         placeholderTextColor={Colors.text.muted}
         autoCapitalize="words"
-        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.md }}
+        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.md, fontFamily: "Lora-Regular" }}
       />
       <TextInput
         value={email}
@@ -87,9 +87,9 @@ export default function RegisterScreen() {
         keyboardType="email-address"
         autoCapitalize="none"
         autoComplete="email"
-        style={{ borderWidth: 1, borderColor: emailInvalid ? Colors.text.danger : Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: emailInvalid ? Spacing.xs : Spacing.md }}
+        style={{ borderWidth: 1, borderColor: emailInvalid ? Colors.text.danger : Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: emailInvalid ? Spacing.xs : Spacing.md, fontFamily: "Lora-Regular" }}
       />
-      {emailInvalid ? <Text style={{ color: Colors.text.danger, fontSize: FontSizes.caption, marginBottom: Spacing.md }}>Enter a valid email address.</Text> : null}
+      {emailInvalid ? <Text style={{ color: Colors.text.danger, fontSize: FontSizes.caption, marginBottom: Spacing.md, fontFamily: "Lora-Regular" }}>Enter a valid email address.</Text> : null}
       <TextInput
         value={password}
         onChangeText={(v) => { setPassword(v); setPasswordTouched(true); }}
@@ -97,10 +97,10 @@ export default function RegisterScreen() {
         placeholder="Password (min 8 characters)"
         placeholderTextColor={Colors.text.muted}
         secureTextEntry
-        style={{ borderWidth: 1, borderColor: passwordShort ? Colors.text.danger : Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: passwordShort ? Spacing.xs : Spacing.xl }}
+        style={{ borderWidth: 1, borderColor: passwordShort ? Colors.text.danger : Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: passwordShort ? Spacing.xs : Spacing.xl, fontFamily: "Lora-Regular" }}
       />
-      {passwordShort ? <Text style={{ color: Colors.text.danger, fontSize: FontSizes.caption, marginBottom: Spacing.md }}>Password must be at least 8 characters.</Text> : null}
-      {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.md }}>{error}</Text> : null}
+      {passwordShort ? <Text style={{ color: Colors.text.danger, fontSize: FontSizes.caption, marginBottom: Spacing.md, fontFamily: "Lora-Regular" }}>Password must be at least 8 characters.</Text> : null}
+      {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.md, fontFamily: "Lora-Regular" }}>{error}</Text> : null}
       <BrandButton title="Create Account" onPress={handleSubmit} loading={loading} />
       <View style={{ flexDirection: "row", justifyContent: "center", marginTop: Spacing.xl }}>
         <Text style={{ color: Colors.text.secondary }}>Already have an account? </Text>

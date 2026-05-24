@@ -3,10 +3,10 @@
   "template": "STANDARD",
 
   "_meta": {
-    "_note": "Chapter 2, Lesson 2 — ال: the definite article. Introduces الْكِتَابُ vs كِتَابٌ and the first adjectives (جَدِيدٌ، كَبِيرٌ، قَدِيمٌ). Authored against warsh-content-schema.ts v1.0.",
+    "_note": "Chapter 2, Lesson 2 — ال (معرفة) + 10 adjectives. Flips L1 nouns to definite, then introduces a full adjective bank. Authored against warsh-content-schema.ts v1.0.",
     "chapter_order": 2,
     "lesson_order": 2,
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
 
@@ -21,8 +21,8 @@
       "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-002-mishary.mp3"
     },
     "noor_intro": {
-      "en": "Last lesson you learned tanween — the sound of 'a'. Today you learn its opposite: ال — the particle that says 'the'. Two small particles, two different worlds.",
-      "ur": "گزشتہ سبق میں آپ نے تنوین سیکھی — 'ایک' کی آواز۔ آج اس کا الٹ سیکھیں گے: ال — جو 'وہ' کہتا ہے۔ دو چھوٹے ذرے، دو مختلف دنیائیں۔"
+      "en": "Last lesson: tanween = indefinite = 'a'. Today: ال flips every one of those words to definite — 'the'. Then ten adjectives that describe them. By the end of this lesson you can say things like: the big mosque is old, the new book is beautiful.",
+      "ur": "گزشتہ سبق: تنوین = نکرہ = 'ایک'۔ آج: ال ان سب الفاظ کو معرفہ بنا دیتا ہے — 'وہ'۔ پھر دس صفات جو ان کو بیان کریں۔ اس سبق کے آخر تک آپ کہہ سکیں گے: وہ بڑی مسجد پرانی ہے، وہ نئی کتاب خوبصورت ہے۔"
     },
     "autoplay": true
   },
@@ -31,101 +31,111 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "ال — tanween disappears",
-        "ar": "تَعْرِيف بِالْ",
-        "ur": "ال — تنوین غائب ہو جاتی ہے"
+        "en": "ال removes tanween → definite",
+        "ar": "التَّعْرِيف بِالْ",
+        "ur": "ال تنوین ہٹاتا ہے → معرفہ"
       },
       "explanation": {
-        "en": "Add ال to the front of a noun and tanween disappears. The word becomes definite — 'the' instead of 'a'. You cannot have both ال and tanween on the same word.",
-        "ur": "اسم کے آگے ال لگائیں اور تنوین غائب ہو جاتی ہے۔ لفظ معرفہ بن جاتا ہے — 'ایک' کی جگہ 'وہ'۔ ایک لفظ پر ال اور تنوین ایک ساتھ نہیں آ سکتے۔"
+        "en": "Add ال to any noun and tanween disappears — the word becomes definite. You cannot have both. كِتَابٌ (a book) → الْكِتَابُ (the book). بَيْتٌ (a house) → الْبَيْتُ (the house). رَجُلٌ (a man) → الرَّجُلُ (the man).",
+        "ur": "کسی بھی اسم کے آگے ال لگائیں اور تنوین غائب ہو جاتی ہے — لفظ معرفہ بن جاتا ہے۔ دونوں ایک ساتھ نہیں آ سکتے۔ كِتابٌ (ایک کتاب) → الْكِتابُ (وہ کتاب)۔"
       },
       "examples": [
-        { "ar": "كِتَابٌ ← الْكِتَابُ", "ar_plain": "كتاب ← الكتاب", "translit": "kitābun → al-kitābu", "en": "a book → the book", "ur": "ایک کتاب → وہ کتاب" },
-        { "ar": "قَلَمٌ ← الْقَلَمُ", "ar_plain": "قلم ← القلم", "translit": "qalamun → al-qalamu", "en": "a pen → the pen", "ur": "ایک قلم → وہ قلم" },
-        { "ar": "بَيْتٌ ← الْبَيْتُ", "ar_plain": "بيت ← البيت", "translit": "baytun → al-baytu", "en": "a house → the house", "ur": "ایک گھر → وہ گھر" },
-        { "ar": "مَسْجِدٌ ← الْمَسْجِدُ", "ar_plain": "مسجد ← المسجد", "translit": "masjidun → al-masjidu", "en": "a mosque → the mosque", "ur": "ایک مسجد → وہ مسجد" }
+        { "ar": "كِتَابٌ → الْكِتَابُ", "ar_plain": "كتاب → الكتاب", "translit": "kitābun → al-kitābu", "en": "a book → the book", "ur": "ایک کتاب → وہ کتاب" },
+        { "ar": "رَجُلٌ → الرَّجُلُ", "ar_plain": "رجل → الرجل", "translit": "rajulun → ar-rajulu", "en": "a man → the man", "ur": "ایک آدمی → وہ آدمی" },
+        { "ar": "طَرِيقٌ → الطَّرِيقُ", "ar_plain": "طريق → الطريق", "translit": "ṭarīqun → aṭ-ṭarīqu", "en": "a path → the path", "ur": "ایک راستہ → وہ راستہ" }
       ]
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "الْكِتَابُ",
-        "ar_plain": "الكتاب",
-        "translit": "al-kitābu",
-        "en": "the book",
-        "ur": "وہ کتاب"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "الْكِتَابُ جَدِيدٌ — The book is new",
+        "ar": "الْمُبْتَدَأُ وَالْخَبَرُ",
+        "ur": "معرفہ مبتدأ + نکرہ خبر"
       },
-      "audio_url": "https://cdn.warsh.app/audio/vocab/al-kitab.mp3",
       "explanation": {
-        "en": "الْكِتَابُ — 'the book'. In Al-Baqarah 2:2, Allah says ذَٰلِكَ الْكِتَابُ — 'That is the Book' — referring to the Quran itself, a specific and definite book.",
-        "ur": "الْكِتابُ — 'وہ کتاب'۔ البقرة 2:2 میں اللہ فرماتے ہیں ذَٰلِکَ الْكِتابُ — 'وہ وہ کتاب ہے' — خود قرآن کی طرف اشارہ، ایک مخصوص اور معرفہ کتاب۔"
-      },
-      "introduces_vocab": { "ar_plain": "الكتاب" }
+        "en": "A complete Arabic statement: definite noun (subject) + indefinite word (predicate). No 'is'. الْكِتَابُ (the book) + جَدِيدٌ (new) = 'The book is new.' The adjectives below are your predicates.",
+        "ur": "مکمل عربی جملہ: معرفہ اسم (مبتدأ) + نکرہ لفظ (خبر)۔ 'ہے' نہیں۔ الْكِتابُ (وہ کتاب) + جَدِيدٌ (نیا) = 'وہ کتاب نئی ہے'۔ نیچے والی صفات آپ کی خبر ہیں۔"
+      }
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "جَدِيدٌ",
-        "ar_plain": "جديد",
-        "translit": "jadīdun",
-        "en": "new",
-        "ur": "نیا"
-      },
+      "text": { "ar": "جَدِيدٌ", "ar_plain": "جديد", "translit": "jadīdun", "en": "new", "ur": "نیا" },
       "audio_url": "https://cdn.warsh.app/audio/vocab/jadid.mp3",
-      "explanation": {
-        "en": "جَدِيدٌ means 'new'. It is an adjective (صِفَة) — it describes a noun. الْكِتَابُ جَدِيدٌ = The book is new. The adjective comes after the noun in Arabic.",
-        "ur": "جَدِيدٌ کا مطلب 'نیا' ہے۔ یہ صفت ہے — کسی اسم کی تعریف کرتی ہے۔ الْكِتابُ جَدِيدٌ = وہ کتاب نئی ہے۔ عربی میں صفت اسم کے بعد آتی ہے۔"
-      },
       "introduces_vocab": { "ar_plain": "جديد" }
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "كَبِيرٌ",
-        "ar_plain": "كبير",
-        "translit": "kabīrun",
-        "en": "big / great",
-        "ur": "بڑا / عظیم"
-      },
+      "text": { "ar": "قَدِيمٌ", "ar_plain": "قديم", "translit": "qadīmun", "en": "old / ancient", "ur": "پرانا / قدیم" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/qadim.mp3",
+      "introduces_vocab": { "ar_plain": "قديم" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "كَبِيرٌ", "ar_plain": "كبير", "translit": "kabīrun", "en": "big / great", "ur": "بڑا / عظیم" },
       "audio_url": "https://cdn.warsh.app/audio/vocab/kabir.mp3",
       "explanation": {
-        "en": "كَبِيرٌ means 'big' or 'great'. Allah is described as الْكَبِيرُ — the Most Great. الْبَيْتُ كَبِيرٌ = The house is big.",
-        "ur": "كَبِيرٌ کا مطلب 'بڑا' یا 'عظیم'۔ اللہ کو الْكَبِيرُ — سب سے عظیم — کہا جاتا ہے۔ الْبَيْتُ كَبِيرٌ = وہ گھر بڑا ہے۔"
+        "en": "كَبِيرٌ — big or great. One of the 99 Names of Allah is الْكَبِيرُ — the Most Great. الْبَيْتُ كَبِيرٌ = The house is big.",
+        "ur": "كَبِيرٌ — بڑا یا عظیم۔ اللہ کے 99 ناموں میں الْكَبِيرُ — سب سے عظیم — شامل ہے۔"
       },
       "introduces_vocab": { "ar_plain": "كبير" }
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "قَدِيمٌ",
-        "ar_plain": "قديم",
-        "translit": "qadīmun",
-        "en": "old / ancient",
-        "ur": "پرانا / قدیم"
-      },
-      "audio_url": "https://cdn.warsh.app/audio/vocab/qadim.mp3",
-      "explanation": {
-        "en": "قَدِيمٌ means 'old' or 'ancient'. It is the opposite of جَدِيدٌ. الْمَسْجِدُ قَدِيمٌ = The mosque is old.",
-        "ur": "قَدِيمٌ کا مطلب 'پرانا' یا 'قدیم'۔ یہ جَدِيدٌ کا الٹ ہے۔ الْمَسْجِدُ قَدِيمٌ = وہ مسجد پرانی ہے۔"
-      },
-      "introduces_vocab": { "ar_plain": "قديم" }
+      "text": { "ar": "صَغِيرٌ", "ar_plain": "صغير", "translit": "ṣaghīrun", "en": "small / young", "ur": "چھوٹا / جوان" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/saghir.mp3",
+      "introduces_vocab": { "ar_plain": "صغير" }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Definite subject + indefinite predicate",
-        "ar": "الْمُبْتَدَأُ وَالْخَبَرُ",
-        "ur": "معرفہ مبتدأ + نکرہ خبر"
-      },
+      "type": "WORD",
+      "text": { "ar": "جَمِيلٌ", "ar_plain": "جميل", "translit": "jamīlun", "en": "beautiful / fine", "ur": "خوبصورت / اچھا" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/jamil.mp3",
       "explanation": {
-        "en": "In Arabic, a simple statement works like this: definite noun (subject) + indefinite word (predicate). الْكِتَابُ (the book) + جَدِيدٌ (new) = The book is new. No word for 'is' needed.",
-        "ur": "عربی میں ایک سادہ بیان اس طرح کام کرتا ہے: معرفہ اسم (مبتدأ) + نکرہ لفظ (خبر)۔ الْكِتابُ (وہ کتاب) + جَدِيدٌ (نیا) = وہ کتاب نئی ہے۔ 'ہے' کے لیے کوئی لفظ نہیں چاہیے۔"
+        "en": "جَمِيلٌ — beautiful. The Prophet ﷺ said: إِنَّ اللَّهَ جَمِيلٌ يُحِبُّ الْجَمَالَ — 'Indeed Allah is beautiful and loves beauty.'",
+        "ur": "جَمِيلٌ — خوبصورت۔ نبی ﷺ نے فرمایا: إِنَّ اللَّهَ جَمِيلٌ يُحِبُّ الْجَمالَ — 'بے شک اللہ خوبصورت ہے اور خوبصورتی کو پسند کرتا ہے'۔"
       },
-      "examples": [
-        { "ar": "الْكِتَابُ جَدِيدٌ", "ar_plain": "الكتاب جديد", "translit": "al-kitābu jadīdun", "en": "The book is new", "ur": "وہ کتاب نئی ہے" },
-        { "ar": "الْبَيْتُ كَبِيرٌ", "ar_plain": "البيت كبير", "translit": "al-baytu kabīrun", "en": "The house is big", "ur": "وہ گھر بڑا ہے" },
-        { "ar": "الْمَسْجِدُ قَدِيمٌ", "ar_plain": "المسجد قديم", "translit": "al-masjidu qadīmun", "en": "The mosque is old", "ur": "وہ مسجد پرانی ہے" }
-      ]
+      "introduces_vocab": { "ar_plain": "جميل" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "كَرِيمٌ", "ar_plain": "كريم", "translit": "karīmun", "en": "generous / noble", "ur": "سخی / کریم" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/karim.mp3",
+      "explanation": {
+        "en": "كَرِيمٌ — generous, noble. الْكَرِيمُ is one of the Names of Allah. The Quran calls itself قُرْآنٌ كَرِيمٌ — a noble recitation (Al-Waqi'ah 56:77).",
+        "ur": "كَرِيمٌ — سخی، کریم۔ الْكَرِيمُ اللہ کے ناموں میں سے ہے۔ قرآن خود کو قُرْآنٌ كَرِيمٌ — قابل قدر قرآن — کہتا ہے (الواقعة 56:77)۔"
+      },
+      "introduces_vocab": { "ar_plain": "كريم" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "طَوِيلٌ", "ar_plain": "طويل", "translit": "ṭawīlun", "en": "tall / long", "ur": "لمبا / طویل" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/tawil.mp3",
+      "introduces_vocab": { "ar_plain": "طويل" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "قَصِيرٌ", "ar_plain": "قصير", "translit": "qaṣīrun", "en": "short / brief", "ur": "چھوٹا / مختصر" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/qasir.mp3",
+      "introduces_vocab": { "ar_plain": "قصير" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "عَزِيزٌ", "ar_plain": "عزيز", "translit": "ʿazīzun", "en": "mighty / dear / rare", "ur": "عزیز / طاقتور / نایاب" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/aziz.mp3",
+      "explanation": {
+        "en": "عَزِيزٌ — mighty, dear, rare. الْعَزِيزُ is one of the most frequent Names of Allah in the Quran — appearing over 90 times. الْعَزِيزُ الْحَكِيمُ — the Almighty, the Wise.",
+        "ur": "عَزِيزٌ — عزیز، طاقتور، نایاب۔ الْعَزِيزُ قرآن میں اللہ کے سب سے زیادہ آنے والے ناموں میں سے ایک — 90 سے زیادہ بار۔ الْعَزِيزُ الْحَكِيمُ — سب پر غالب، حکمت والا۔"
+      },
+      "introduces_vocab": { "ar_plain": "عزيز" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "مُبَارَكٌ", "ar_plain": "مبارك", "translit": "mubārakun", "en": "blessed", "ur": "مبارک" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/mubarak.mp3",
+      "explanation": {
+        "en": "مُبَارَكٌ — blessed. The Quran describes itself as كِتَابٌ مُبَارَكٌ — 'a blessed book' (Al-An'am 6:92). Ramadan is described as شَهْرٌ مُبَارَكٌ — 'a blessed month'.",
+        "ur": "مُبَارَكٌ — بابرکت۔ قرآن خود کو كِتابٌ مُبارَكٌ — 'بابرکت کتاب' (الانعام 6:92) کہتا ہے۔ رمضان کو شَهْرٌ مُبارَكٌ — 'بابرکت مہینہ' کہا جاتا ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "مبارك" }
     }
   ],
 
@@ -134,41 +144,31 @@
       "id": "ch02-l02-ex01",
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
-      "prompt": {
-        "ar": "الْكِتَابُ",
-        "ar_plain": "الكتاب",
-        "translit": "al-kitābu",
-        "en": "the book"
-      },
+      "prompt": { "ar": "الْكِتَابُ", "ar_plain": "الكتاب", "translit": "al-kitābu", "en": "the book" },
       "audio_url": "https://cdn.warsh.app/audio/vocab/al-kitab.mp3",
       "options": [
         { "en": "the book", "ur": "وہ کتاب" },
         { "en": "a book", "ur": "ایک کتاب" },
         { "en": "the pen", "ur": "وہ قلم" },
-        { "en": "books", "ur": "کتابیں" }
+        { "en": "the man", "ur": "وہ آدمی" }
       ],
       "correct_index": 0,
       "explanation_on_wrong": {
-        "en": "الْكِتَابُ has ال at the front — definite, 'the book'. كِتَابٌ (with tanween, no ال) means 'a book'.",
-        "ur": "الْكِتابُ کے آگے ال ہے — معرفہ، 'وہ کتاب'۔ كِتابٌ (تنوین کے ساتھ، ال کے بغیر) کا مطلب 'ایک کتاب'۔"
+        "en": "الْكِتَابُ has ال at the front — that removes tanween and makes it definite: 'the book'. كِتَابٌ (tanween, no ال) = 'a book'.",
+        "ur": "الْكِتابُ کے آگے ال ہے — یہ تنوین ہٹا کر معرفہ بناتا ہے: 'وہ کتاب'۔ كِتابٌ (تنوین، بغیر ال) = 'ایک کتاب'۔"
       }
     },
     {
       "id": "ch02-l02-ex02",
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
-      "prompt": {
-        "ar": "جَدِيدٌ",
-        "ar_plain": "جديد",
-        "translit": "jadīdun",
-        "en": "new"
-      },
-      "audio_url": "https://cdn.warsh.app/audio/vocab/jadid.mp3",
+      "prompt": { "ar": "عَزِيزٌ", "ar_plain": "عزيز", "translit": "ʿazīzun", "en": "mighty" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/aziz.mp3",
       "options": [
-        { "en": "old", "ur": "پرانا" },
-        { "en": "big", "ur": "بڑا" },
-        { "en": "new", "ur": "نیا" },
-        { "en": "small", "ur": "چھوٹا" }
+        { "en": "blessed", "ur": "مبارک" },
+        { "en": "generous", "ur": "سخی" },
+        { "en": "mighty", "ur": "عزیز / طاقتور" },
+        { "en": "beautiful", "ur": "خوبصورت" }
       ],
       "correct_index": 2
     },
@@ -176,23 +176,15 @@
       "id": "ch02-l02-ex03",
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
-      "prompt": {
-        "ar": "الْبَيْتُ كَبِيرٌ",
-        "ar_plain": "البيت كبير",
-        "translit": "al-baytu kabīrun",
-        "en": "The house is big"
-      },
+      "prompt": { "ar": "مُبَارَكٌ", "ar_plain": "مبارك", "translit": "mubārakun", "en": "blessed" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/mubarak.mp3",
       "options": [
-        { "en": "A house is big", "ur": "ایک گھر بڑا ہے" },
-        { "en": "The house is old", "ur": "وہ گھر پرانا ہے" },
-        { "en": "The house is new", "ur": "وہ گھر نیا ہے" },
-        { "en": "The house is big", "ur": "وہ گھر بڑا ہے" }
+        { "en": "tall", "ur": "لمبا" },
+        { "en": "blessed", "ur": "مبارک" },
+        { "en": "noble", "ur": "شریف" },
+        { "en": "new", "ur": "نیا" }
       ],
-      "correct_index": 3,
-      "explanation_on_wrong": {
-        "en": "الْبَيْتُ = the house (definite — note the ال). كَبِيرٌ = big. Together: 'The house is big.' If it were بَيْتٌ كَبِيرٌ (no ال), it would mean 'a big house' — a different structure.",
-        "ur": "الْبَيْتُ = وہ گھر (معرفہ — ال دیکھیں)۔ كَبِيرٌ = بڑا۔ مل کر: 'وہ گھر بڑا ہے'۔ اگر بَيْتٌ كَبِيرٌ ہوتا (بغیر ال) تو مطلب ہوتا 'ایک بڑا گھر' — مختلف ڈھانچہ۔"
-      }
+      "correct_index": 1
     },
     {
       "id": "ch02-l02-ex04",
@@ -200,70 +192,94 @@
       "xp_value": 1,
       "mode": "TAP",
       "sentence_ar": "الْكِتَابُ ___",
-      "hint": {
-        "en": "The book is new.",
-        "ur": "وہ کتاب نئی ہے۔"
-      },
+      "hint": { "en": "The book is new.", "ur": "وہ کتاب نئی ہے۔" },
       "options": [
         { "ar": "قَدِيمٌ", "ar_plain": "قديم", "translit": "qadīmun", "en": "old" },
         { "ar": "جَدِيدٌ", "ar_plain": "جديد", "translit": "jadīdun", "en": "new" },
         { "ar": "كَبِيرٌ", "ar_plain": "كبير", "translit": "kabīrun", "en": "big" },
-        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this" }
+        { "ar": "الْجَدِيدُ", "ar_plain": "الجديد", "translit": "al-jadīdu", "en": "the new" }
       ],
-      "correct_answer": {
-        "ar": "جَدِيدٌ",
-        "ar_plain": "جديد",
-        "translit": "jadīdun",
-        "en": "new"
+      "correct_answer": { "ar": "جَدِيدٌ", "ar_plain": "جديد", "translit": "jadīdun", "en": "new" },
+      "explanation_on_wrong": {
+        "en": "The predicate must be indefinite (tanween). جَدِيدٌ is correct. الْجَدِيدُ (with ال) is definite and would create a different grammatical structure.",
+        "ur": "خبر نکرہ (تنوین) ہونی چاہیے۔ جَدِيدٌ درست ہے۔ الْجَدِيدُ (ال کے ساتھ) معرفہ ہے اور مختلف گرامر ڈھانچہ بنائے گا۔"
       }
     },
     {
       "id": "ch02-l02-ex05",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        { "ar": "جَدِيدٌ", "ar_plain": "جديد", "translit": "jadīdun", "en": "new" },
+        { "ar": "قَدِيمٌ", "ar_plain": "قديم", "translit": "qadīmun", "en": "old" },
+        { "ar": "كَبِيرٌ", "ar_plain": "كبير", "translit": "kabīrun", "en": "big" },
+        { "ar": "صَغِيرٌ", "ar_plain": "صغير", "translit": "ṣaghīrun", "en": "small" }
+      ],
+      "right_column": [
+        { "en": "small", "ur": "چھوٹا" },
+        { "en": "new", "ur": "نیا" },
+        { "en": "old", "ur": "پرانا" },
+        { "en": "big", "ur": "بڑا" }
+      ],
+      "correct_pairs": [[0, 1], [1, 2], [2, 3], [3, 0]]
+    },
+    {
+      "id": "ch02-l02-ex06",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        { "ar": "جَمِيلٌ", "ar_plain": "جميل", "translit": "jamīlun", "en": "beautiful" },
+        { "ar": "كَرِيمٌ", "ar_plain": "كريم", "translit": "karīmun", "en": "generous" },
+        { "ar": "طَوِيلٌ", "ar_plain": "طويل", "translit": "ṭawīlun", "en": "tall" },
+        { "ar": "قَصِيرٌ", "ar_plain": "قصير", "translit": "qaṣīrun", "en": "short" }
+      ],
+      "right_column": [
+        { "en": "tall", "ur": "لمبا" },
+        { "en": "generous", "ur": "سخی" },
+        { "en": "short", "ur": "چھوٹا / مختصر" },
+        { "en": "beautiful", "ur": "خوبصورت" }
+      ],
+      "correct_pairs": [[0, 3], [1, 1], [2, 0], [3, 2]]
+    },
+    {
+      "id": "ch02-l02-ex07",
       "type": "TRUE_FALSE",
       "xp_value": 1,
       "statement": {
         "en": "الْبَيْتُ جَدِيدٌ means 'A house is new.'",
-        "ur": "الْبَيْتُ جَدِيدٌ کا مطلب ہے 'ایک گھر نیا ہے'۔",
-        "ar_example": {
-          "ar": "الْبَيْتُ جَدِيدٌ",
-          "ar_plain": "البيت جديد",
-          "translit": "al-baytu jadīdun",
-          "en": "The house is new"
-        }
+        "ur": "الْبَيْتُ جَدِيدٌ کا مطلب 'ایک گھر نیا ہے'۔",
+        "ar_example": { "ar": "الْبَيْتُ جَدِيدٌ", "ar_plain": "البيت جديد", "translit": "al-baytu jadīdun", "en": "The house is new" }
       },
       "correct_answer": false,
       "explanation_on_wrong": {
-        "en": "الْبَيْتُ has ال — it means 'the house', not 'a house'. So the sentence is 'The house is new.' For 'a house is new', you would write بَيْتٌ جَدِيدٌ (tanween, no ال).",
-        "ur": "الْبَيْتُ میں ال ہے — مطلب 'وہ گھر'، 'ایک گھر' نہیں۔ تو جملہ ہے 'وہ گھر نیا ہے'۔ 'ایک گھر نیا ہے' کے لیے بَيْتٌ جَدِيدٌ لکھیں گے (تنوین، بغیر ال)۔"
+        "en": "الْبَيْتُ has ال — definite — so it means 'the house'. The sentence is 'The house is new.' For 'a house is new': بَيْتٌ جَدِيدٌ (tanween on both).",
+        "ur": "الْبَيْتُ میں ال ہے — معرفہ — تو مطلب 'وہ گھر'۔ جملہ ہے 'وہ گھر نیا ہے'۔ 'ایک گھر نیا ہے' کے لیے: بَيْتٌ جَدِيدٌ (دونوں پر تنوین)۔"
       }
     },
     {
-      "id": "ch02-l02-ex06",
+      "id": "ch02-l02-ex08",
       "type": "BUILD_SENTENCE",
       "xp_value": 1,
-      "target_translation": {
-        "en": "The mosque is old.",
-        "ur": "وہ مسجد پرانی ہے۔"
-      },
+      "target_translation": { "en": "The mosque is old.", "ur": "وہ مسجد پرانی ہے۔" },
       "tiles": [
-        { "ar": "قَدِيمٌ", "ar_plain": "قديم", "translit": "qadīmun", "en": "old" },
         { "ar": "الْمَسْجِدُ", "ar_plain": "المسجد", "translit": "al-masjidu", "en": "the mosque" },
+        { "ar": "قَدِيمٌ", "ar_plain": "قديم", "translit": "qadīmun", "en": "old" },
         { "ar": "جَدِيدٌ", "ar_plain": "جديد", "translit": "jadīdun", "en": "new" },
-        { "ar": "الْبَيْتُ", "ar_plain": "البيت", "translit": "al-baytu", "en": "the house" }
+        { "ar": "كَبِيرٌ", "ar_plain": "كبير", "translit": "kabīrun", "en": "big" }
       ],
-      "correct_order": [1, 0],
+      "correct_order": [0, 1],
       "explanation_on_wrong": {
-        "en": "الْمَسْجِدُ قَدِيمٌ — definite subject (الْمَسْجِدُ) first, then the indefinite predicate (قَدِيمٌ). No word for 'is'.",
-        "ur": "الْمَسْجِدُ قَدِيمٌ — پہلے معرفہ مبتدأ (الْمَسْجِدُ)، پھر نکرہ خبر (قَدِيمٌ)۔ 'ہے' کے لیے کوئی لفظ نہیں۔"
+        "en": "الْمَسْجِدُ قَدِيمٌ — definite subject first (الْمَسْجِدُ), then indefinite predicate (قَدِيمٌ). The adjective follows the noun.",
+        "ur": "الْمَسْجِدُ قَدِيمٌ — پہلے معرفہ مبتدأ، پھر نکرہ خبر۔ صفت اسم کے بعد آتی ہے۔"
       }
     }
   ],
 
   "reveal": {
     "concept_name": {
-      "en": "ذَٰلِكَ الْكِتَابُ — the definite Book",
-      "ar": "ذَٰلِكَ الْكِتَابُ فِي الْقُرْآن",
-      "ur": "قرآن میں ذَٰلِکَ الْكِتابُ"
+      "en": "كِتَابٌ مُبَارَكٌ — a blessed book",
+      "ar": "الْقُرْآن كِتَابٌ مُبَارَكٌ",
+      "ur": "قرآن — كِتابٌ مُبارَكٌ"
     },
     "ayah": {
       "surah": 2,
@@ -271,20 +287,20 @@
       "label": "Al-Baqarah 2:2",
       "ar": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
       "en": "That is the Book — there is no doubt in it — a guidance for those mindful of Allah.",
-      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں — اللہ سے ڈرنے والوں کے لیے ہدایت۔",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں — پرہیزگاروں کے لیے ہدایت۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-002-mishary.mp3"
     },
     "highlighted_word_indices": [0, 1],
     "noor_explanation": {
-      "en": "ذَٰلِكَ — you know that (far, masculine demonstrative from Chapter 1). الْكِتَابُ — the book (definite, with ال). Together: 'That is the Book.' Not 'a book' (كِتَابٌ) but 'the Book' (الْكِتَابُ). The definite article tells you this is a specific, singular, known book — the Quran. كِتَابٌ would reduce it to any book among many. الْكِتَابُ elevates it to the only Book that matters.",
-      "ur": "ذَٰلِکَ — آپ جانتے ہیں 'وہ' (دور، مذکر اشارہ باب 1 سے)۔ الْكِتابُ — وہ کتاب (معرفہ، ال کے ساتھ)۔ مل کر: 'وہ وہ کتاب ہے'۔ 'ایک کتاب' (كِتابٌ) نہیں بلکہ 'وہ کتاب' (الْكِتابُ)۔ معرفہ ذرہ بتاتا ہے کہ یہ ایک مخصوص، واحد، معلوم کتاب ہے — قرآن۔"
+      "en": "ذَٰلِكَ الْكِتَابُ — 'That is the Book'. Not كِتَابٌ (a book) but الْكِتَابُ (the Book). The definite article makes it the specific Book — the Quran. هُدًى — 'a guidance' (tanween, indefinite) — guidance in its fullest sense, but one that belongs to those who are mindful. You now read both the indefinite (tanween) and the definite (ال) in the same ayah.",
+      "ur": "ذَٰلِکَ الْكِتابُ — 'وہ وہ کتاب ہے'۔ كِتابٌ (ایک کتاب) نہیں بلکہ الْكِتابُ (وہ کتاب)۔ معرفہ ذرہ اسے مخصوص کتاب بناتا ہے — قرآن۔ هُدًى — 'ایک ہدایت' (تنوین، نکرہ) — ہدایت اپنی کامل معنوں میں۔ آپ اب ایک ہی آیت میں نکرہ (تنوین) اور معرفہ (ال) دونوں پڑھ رہے ہیں۔"
     }
   },
 
   "close": {
     "noor_message": {
-      "en": "ال turns 'a book' into 'the Book'. One small particle. The Quran uses it to claim the category — الْحَمْدُ, الْكِتَابُ, الرَّحِيمُ. You're learning to read these, not just see them.",
-      "ur": "ال 'ایک کتاب' کو 'وہ کتاب' بناتا ہے۔ ایک چھوٹا ذرہ۔ قرآن اس سے پوری جنس کا دعوی کرتا ہے — الْحَمْدُ، الْكِتابُ، الرَّحِيمُ۔ آپ انہیں دیکھنا نہیں، پڑھنا سیکھ رہے ہیں۔"
+      "en": "Ten adjectives — جَدِيدٌ، قَدِيمٌ، كَبِيرٌ، صَغِيرٌ، جَمِيلٌ، كَرِيمٌ، طَوِيلٌ، قَصِيرٌ، عَزِيزٌ، مُبَارَكٌ. Combined with the twelve nouns from Lesson 1, you can now describe the world in Arabic. Lesson 3: أَيْنَ — where everything lives.",
+      "ur": "دس صفات — جَدِيدٌ، قَدِيمٌ، كَبِيرٌ، صَغِيرٌ، جَمِيلٌ، كَرِيمٌ، طَوِيلٌ، قَصِيرٌ، عَزِيزٌ، مُبَارَكٌ۔ سبق 1 کے بارہ اسموں کے ساتھ مل کر اب آپ عربی میں دنیا بیان کر سکتے ہیں۔ سبق 3: أَيْنَ — ہر چیز کہاں ہے۔"
     }
   }
 }

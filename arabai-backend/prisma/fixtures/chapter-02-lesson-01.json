@@ -3,10 +3,10 @@
   "template": "STANDARD",
 
   "_meta": {
-    "_note": "Chapter 2, Lesson 1 — Tanween: the sound of indefiniteness. Authored against warsh-content-schema.ts v1.0.",
+    "_note": "Chapter 2, Lesson 1 — Tanween (نَكِرَة). 12 masculine nouns introduced as indefinite. Grammar hook: tanween = 'a'. Authored against warsh-content-schema.ts v1.0.",
     "chapter_order": 2,
     "lesson_order": 1,
-    "estimated_minutes": 7,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
 
@@ -21,8 +21,8 @@
       "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-002-mishary.mp3"
     },
     "noor_intro": {
-      "en": "You already know بَيْت, كِتَاب, قَلَم. But there's a small sound at the end of each word that carries a big meaning. Listen for the '-un' at the end.",
-      "ur": "آپ بَيْت، كِتاب، قَلَم جانتے ہیں۔ لیکن ہر لفظ کے آخر میں ایک چھوٹی آواز بہت بڑا مطلب رکھتی ہے۔ آخر میں '-un' سنیں۔"
+      "en": "You already know some words. But every Arabic noun carries a small sound at its end that says: 'I am indefinite — I mean any one of these.' Today you learn to hear that sound — and twelve new words to carry it.",
+      "ur": "آپ کچھ الفاظ جانتے ہیں۔ لیکن ہر عربی اسم کے آخر میں ایک آواز ہوتی ہے جو کہتی ہے: 'میں نکرہ ہوں — کوئی بھی ایک'۔ آج آپ وہ آواز سنیں گے — اور بارہ نئے الفاظ سیکھیں گے۔"
     },
     "autoplay": true
   },
@@ -31,89 +31,106 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "The ٌ — tanween",
-        "ar": "التَّنْوِين",
-        "ur": "تنوین — ٌ"
+        "en": "Tanween (ٌ) = 'a'",
+        "ar": "التَّنْوِين — عَلَامَة النَّكِرَة",
+        "ur": "تنوین = نکرہ کی علامت"
       },
       "explanation": {
-        "en": "The symbol ٌ at the end of a word is called tanween. It sounds like '-un' when spoken. Tanween means the word is indefinite — like 'a' in English. بَيْتٌ = a house. قَلَمٌ = a pen.",
-        "ur": "لفظ کے آخر میں ٌ تنوین کہلاتی ہے۔ بولتے وقت '-un' سنائی دیتی ہے۔ تنوین نکرہ کی علامت ہے — جیسے انگریزی میں 'a'۔ بَيْتٌ = ایک گھر۔ قَلَمٌ = ایک قلم۔"
-      },
-      "examples": [
-        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "a book", "ur": "ایک کتاب" },
-        { "ar": "قَلَمٌ", "ar_plain": "قلم", "translit": "qalamun", "en": "a pen", "ur": "ایک قلم" },
-        { "ar": "بَيْتٌ", "ar_plain": "بيت", "translit": "baytun", "en": "a house", "ur": "ایک گھر" },
-        { "ar": "مَسْجِدٌ", "ar_plain": "مسجد", "translit": "masjidun", "en": "a mosque", "ur": "ایک مسجد" }
-      ]
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "كِتَابٌ",
-        "ar_plain": "كتاب",
-        "translit": "kitābun",
-        "en": "a book",
-        "ur": "ایک کتاب"
-      },
-      "audio_url": "https://cdn.warsh.app/audio/vocab/kitab.mp3",
-      "explanation": {
-        "en": "The same word you learned in Chapter 1 — now with tanween visible. The ٌ is always there; you just didn't know what it meant yet.",
-        "ur": "وہی لفظ جو باب 1 میں سیکھا — اب تنوین نظر آ رہی ہے۔ ٌ ہمیشہ سے تھی، بس اب اس کا مطلب پتہ ہے۔"
+        "en": "The symbol ٌ at the end of a word is called tanween. It sounds like '-un'. Tanween = indefinite = 'a'. كِتَابٌ = a book. بَابٌ = a door. Every noun below has tanween — learn them as 'a ___'.",
+        "ur": "لفظ کے آخر میں ٌ تنوین ہے۔ آواز '-un' جیسی ہے۔ تنوین = نکرہ = 'ایک'۔ كِتابٌ = ایک کتاب۔ بابٌ = ایک دروازہ۔ نیچے ہر اسم کے ساتھ تنوین ہے — انہیں 'ایک ___' کے طور پر سیکھیں۔"
       }
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "قَلَمٌ",
-        "ar_plain": "قلم",
-        "translit": "qalamun",
-        "en": "a pen",
-        "ur": "ایک قلم"
-      },
+      "text": { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "a book", "ur": "ایک کتاب" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kitab.mp3",
+      "introduces_vocab": { "ar_plain": "كتاب" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "قَلَمٌ", "ar_plain": "قلم", "translit": "qalamun", "en": "a pen", "ur": "ایک قلم" },
       "audio_url": "https://cdn.warsh.app/audio/vocab/qalam.mp3",
-      "explanation": {
-        "en": "قَلَمٌ — 'a pen'. The word اقرأ (read) in the first revelation was addressed to the one who taught with the قَلَم.",
-        "ur": "قَلَمٌ — 'ایک قلم'۔ پہلی وحی میں اقرأ (پڑھو) اس ذات کی طرف سے تھا جس نے قَلَم سے علم دیا۔"
-      },
       "introduces_vocab": { "ar_plain": "قلم" }
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "بَيْتٌ",
-        "ar_plain": "بيت",
-        "translit": "baytun",
-        "en": "a house",
-        "ur": "ایک گھر"
-      },
-      "audio_url": "https://cdn.warsh.app/audio/vocab/bayt.mp3"
+      "text": { "ar": "بَيْتٌ", "ar_plain": "بيت", "translit": "baytun", "en": "a house", "ur": "ایک گھر" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/bayt.mp3",
+      "introduces_vocab": { "ar_plain": "بيت" }
     },
     {
       "type": "WORD",
-      "text": {
-        "ar": "مَسْجِدٌ",
-        "ar_plain": "مسجد",
-        "translit": "masjidun",
-        "en": "a mosque",
-        "ur": "ایک مسجد"
-      },
-      "audio_url": "https://cdn.warsh.app/audio/vocab/masjid.mp3"
+      "text": { "ar": "مَسْجِدٌ", "ar_plain": "مسجد", "translit": "masjidun", "en": "a mosque", "ur": "ایک مسجد" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/masjid.mp3",
+      "introduces_vocab": { "ar_plain": "مسجد" }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Tanween disappears in sentences",
-        "ar": "هَذَا كِتَابٌ",
-        "ur": "جملے میں تنوین"
-      },
+      "type": "WORD",
+      "text": { "ar": "رَجُلٌ", "ar_plain": "رجل", "translit": "rajulun", "en": "a man", "ur": "ایک آدمی" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/rajul.mp3",
       "explanation": {
-        "en": "When a tanween word is the second part of هَذَا / ذٰلِكَ sentences, it stays: هَذَا كِتَابٌ (this is a book). The كِتَابٌ tells us we mean any book — an unspecified one.",
-        "ur": "هَذا / ذٰلِکَ کے ساتھ جملے میں تنوین رہتی ہے: هَذَا كِتَابٌ (یہ ایک کتاب ہے)۔ كِتَابٌ بتاتا ہے کسی بھی کتاب کی بات ہو رہی ہے۔"
+        "en": "رَجُلٌ — a man. Appears hundreds of times in the Quran — often paired with مَرْأَة (a woman). Both are masculine and feminine counterparts.",
+        "ur": "رَجُلٌ — ایک آدمی۔ قرآن میں سینکڑوں بار آتا ہے — اکثر مَرْأَة (ایک عورت) کے ساتھ۔"
       },
-      "examples": [
-        { "ar": "هَذَا بَيْتٌ", "ar_plain": "هذا بيت", "translit": "hādhā baytun", "en": "This is a house", "ur": "یہ ایک گھر ہے" },
-        { "ar": "ذٰلِكَ مَسْجِدٌ", "ar_plain": "ذلك مسجد", "translit": "dhālika masjidun", "en": "That is a mosque", "ur": "وہ ایک مسجد ہے" }
-      ]
+      "introduces_vocab": { "ar_plain": "رجل" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "وَلَدٌ", "ar_plain": "ولد", "translit": "waladun", "en": "a boy / a child", "ur": "ایک لڑکا / بچہ" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/walad.mp3",
+      "explanation": {
+        "en": "وَلَدٌ — a child/boy. You will see this word in Al-Ikhlas: لَمْ يَلِدْ — 'He did not beget'. The verb and noun share the same root و-ل-د.",
+        "ur": "وَلَدٌ — بچہ/لڑکا۔ یہ الفظ الاخلاص میں ملے گا: لَمْ يَلِدْ — 'اس نے جنا نہیں'۔ فعل اور اسم ایک ہی جڑ و-ل-د رکھتے ہیں۔"
+      },
+      "introduces_vocab": { "ar_plain": "ولد" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "طَالِبٌ", "ar_plain": "طالب", "translit": "ṭālibun", "en": "a student", "ur": "ایک طالب علم" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/talib.mp3",
+      "introduces_vocab": { "ar_plain": "طالب" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "أُسْتَاذٌ", "ar_plain": "أستاذ", "translit": "ustādhun", "en": "a teacher", "ur": "ایک استاد" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/ustaadh.mp3",
+      "introduces_vocab": { "ar_plain": "أستاذ" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "بَابٌ", "ar_plain": "باب", "translit": "bābun", "en": "a door / a chapter", "ur": "ایک دروازہ / باب" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/bab.mp3",
+      "explanation": {
+        "en": "بَابٌ means both 'a door' and 'a chapter' (in a book). The chapters of this app are also called أبواب — plural of بَاب.",
+        "ur": "بابٌ کا مطلب 'دروازہ' اور 'باب' (کتاب کا) دونوں ہے۔ اس ایپ کے ابواب بھی أبواب — بابٌ کی جمع — کہلاتے ہیں۔"
+      },
+      "introduces_vocab": { "ar_plain": "باب" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "كُرْسِيٌّ", "ar_plain": "كرسي", "translit": "kursiyyun", "en": "a chair / a throne", "ur": "ایک کرسی" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kursi.mp3",
+      "explanation": {
+        "en": "كُرْسِيٌّ — a chair. You have heard it in آيَة الْكُرْسِيِّ — the Verse of the Throne (Al-Baqarah 2:255). There, الْكُرْسِيُّ refers to Allah's Throne extending over the heavens and earth.",
+        "ur": "كُرْسِيٌّ — کرسی۔ آپ نے آيَة الْكُرْسِيِّ میں سنا ہوگا — البقرة 2:255۔ وہاں الْكُرْسِيُّ اللہ کے اس عرش کی طرف اشارہ ہے جو آسمانوں اور زمین پر محیط ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "كرسي" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "سُوقٌ", "ar_plain": "سوق", "translit": "sūqun", "en": "a market / a bazaar", "ur": "ایک بازار" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/suq.mp3",
+      "introduces_vocab": { "ar_plain": "سوق" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "طَرِيقٌ", "ar_plain": "طريق", "translit": "ṭarīqun", "en": "a path / a road / a way", "ur": "ایک راستہ" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/tariq.mp3",
+      "explanation": {
+        "en": "طَرِيقٌ — a path or road. Related to الصِّرَاطَ الْمُسْتَقِيمَ (the straight path) — the guidance you ask for in every prayer. طَرِيق and صِرَاط both mean 'path' in Arabic.",
+        "ur": "طَرِيقٌ — راستہ۔ الصِّرَاطَ الْمُسْتَقِيمَ (سیدھا راستہ) سے تعلق — وہ ہدایت جو آپ ہر نماز میں مانگتے ہیں۔ طَرِيق اور صِرَاط دونوں عربی میں 'راستہ' ہیں۔"
+      },
+      "introduces_vocab": { "ar_plain": "طريق" }
     }
   ],
 
@@ -122,85 +139,61 @@
       "id": "ch02-l01-ex01",
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
-      "prompt": {
-        "ar": "كِتَابٌ",
-        "ar_plain": "كتاب",
-        "translit": "kitābun",
-        "en": "a book"
-      },
+      "prompt": { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "a book" },
       "audio_url": "https://cdn.warsh.app/audio/vocab/kitab.mp3",
       "options": [
         { "en": "the book", "ur": "وہ کتاب" },
-        { "en": "books", "ur": "کتابیں" },
+        { "en": "a pen", "ur": "ایک قلم" },
         { "en": "a book", "ur": "ایک کتاب" },
-        { "en": "a pen", "ur": "ایک قلم" }
+        { "en": "a door", "ur": "ایک دروازہ" }
       ],
       "correct_index": 2,
       "explanation_on_wrong": {
-        "en": "The ٌ (tanween) at the end makes this indefinite — 'a book', not 'the book'. The definite form (the book) is الْكِتَابُ — you'll meet it in the next lesson.",
-        "ur": "آخر میں ٌ (تنوین) اسے نکرہ بناتی ہے — 'ایک کتاب'، 'وہ کتاب' نہیں۔ معرفہ شکل (وہ کتاب) الْكِتابُ ہے — اگلے سبق میں ملیں گے۔"
+        "en": "The ٌ (tanween) marks indefinite — 'a book', not 'the book'. 'The book' is الْكِتَابُ — you'll learn that in Lesson 2.",
+        "ur": "ٌ (تنوین) نکرہ کی علامت — 'ایک کتاب'، 'وہ کتاب' نہیں۔ 'وہ کتاب' الْكِتابُ ہے — سبق 2 میں سیکھیں گے۔"
       }
     },
     {
       "id": "ch02-l01-ex02",
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
-      "prompt": {
-        "ar": "بَيْتٌ",
-        "ar_plain": "بيت",
-        "translit": "baytun",
-        "en": "a house"
-      },
-      "audio_url": "https://cdn.warsh.app/audio/vocab/bayt.mp3",
+      "prompt": { "ar": "رَجُلٌ", "ar_plain": "رجل", "translit": "rajulun", "en": "a man" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/rajul.mp3",
       "options": [
-        { "en": "a house", "ur": "ایک گھر" },
-        { "en": "the house", "ur": "وہ گھر" },
-        { "en": "a mosque", "ur": "ایک مسجد" },
-        { "en": "a book", "ur": "ایک کتاب" }
+        { "en": "a student", "ur": "ایک طالب علم" },
+        { "en": "a teacher", "ur": "ایک استاد" },
+        { "en": "a boy", "ur": "ایک لڑکا" },
+        { "en": "a man", "ur": "ایک آدمی" }
       ],
-      "correct_index": 0
+      "correct_index": 3
     },
     {
       "id": "ch02-l01-ex03",
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "xp_value": 1,
-      "statement": {
-        "en": "The ٌ at the end of قَلَمٌ means the word is definite — 'the pen'.",
-        "ur": "قَلَمٌ کے آخر میں ٌ کا مطلب ہے لفظ معرفہ ہے — 'وہ قلم'۔",
-        "ar_example": {
-          "ar": "قَلَمٌ",
-          "ar_plain": "قلم",
-          "translit": "qalamun",
-          "en": "a pen (indefinite)"
-        }
-      },
-      "correct_answer": false,
-      "explanation_on_wrong": {
-        "en": "The ٌ (tanween) marks the word as indefinite — 'a pen', not 'the pen'. Definite nouns use ال (the definite article) instead of tanween.",
-        "ur": "ٌ (تنوین) لفظ کو نکرہ بناتی ہے — 'ایک قلم'، 'وہ قلم' نہیں۔ معرفہ اسموں میں تنوین کی جگہ ال ہوتا ہے۔"
-      }
+      "prompt": { "ar": "كُرْسِيٌّ", "ar_plain": "كرسي", "translit": "kursiyyun", "en": "a chair" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kursi.mp3",
+      "options": [
+        { "en": "a market", "ur": "ایک بازار" },
+        { "en": "a chair", "ur": "ایک کرسی" },
+        { "en": "a path", "ur": "ایک راستہ" },
+        { "en": "a door", "ur": "ایک دروازہ" }
+      ],
+      "correct_index": 1
     },
     {
       "id": "ch02-l01-ex04",
-      "type": "FILL_BLANK",
+      "type": "TRUE_FALSE",
       "xp_value": 1,
-      "mode": "TAP",
-      "sentence_ar": "هَذَا ___",
-      "hint": {
-        "en": "This is a pen.",
-        "ur": "یہ ایک قلم ہے۔"
+      "statement": {
+        "en": "The ٌ at the end of طَالِبٌ means this word is definite — 'the student'.",
+        "ur": "طَالِبٌ کے آخر میں ٌ کا مطلب ہے یہ لفظ معرفہ ہے — 'وہ طالب علم'۔",
+        "ar_example": { "ar": "طَالِبٌ", "ar_plain": "طالب", "translit": "ṭālibun", "en": "a student (indefinite)" }
       },
-      "options": [
-        { "ar": "بَيْتٌ", "ar_plain": "بيت", "translit": "baytun", "en": "a house" },
-        { "ar": "قَلَمٌ", "ar_plain": "قلم", "translit": "qalamun", "en": "a pen" },
-        { "ar": "مَسْجِدٌ", "ar_plain": "مسجد", "translit": "masjidun", "en": "a mosque" },
-        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "a book" }
-      ],
-      "correct_answer": {
-        "ar": "قَلَمٌ",
-        "ar_plain": "قلم",
-        "translit": "qalamun",
-        "en": "a pen"
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "Tanween (ٌ) marks the word as indefinite — 'a student', not 'the student'. Definite nouns use ال instead of tanween.",
+        "ur": "تنوین (ٌ) لفظ کو نکرہ بناتی ہے — 'ایک طالب علم'، 'وہ طالب علم' نہیں۔ معرفہ اسموں میں تنوین کی جگہ ال آتا ہے۔"
       }
     },
     {
@@ -219,40 +212,68 @@
         { "en": "a pen", "ur": "ایک قلم" },
         { "en": "a house", "ur": "ایک گھر" }
       ],
-      "correct_pairs": [
-        [0, 1],
-        [1, 2],
-        [2, 3],
-        [3, 0]
-      ]
+      "correct_pairs": [[0, 1], [1, 2], [2, 3], [3, 0]]
     },
     {
       "id": "ch02-l01-ex06",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        { "ar": "رَجُلٌ", "ar_plain": "رجل", "translit": "rajulun", "en": "a man" },
+        { "ar": "وَلَدٌ", "ar_plain": "ولد", "translit": "waladun", "en": "a boy" },
+        { "ar": "طَالِبٌ", "ar_plain": "طالب", "translit": "ṭālibun", "en": "a student" },
+        { "ar": "أُسْتَاذٌ", "ar_plain": "أستاذ", "translit": "ustādhun", "en": "a teacher" }
+      ],
+      "right_column": [
+        { "en": "a teacher", "ur": "ایک استاد" },
+        { "en": "a man", "ur": "ایک آدمی" },
+        { "en": "a boy", "ur": "ایک لڑکا" },
+        { "en": "a student", "ur": "ایک طالب علم" }
+      ],
+      "correct_pairs": [[0, 1], [1, 2], [2, 3], [3, 0]]
+    },
+    {
+      "id": "ch02-l01-ex07",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        { "ar": "بَابٌ", "ar_plain": "باب", "translit": "bābun", "en": "a door" },
+        { "ar": "كُرْسِيٌّ", "ar_plain": "كرسي", "translit": "kursiyyun", "en": "a chair" },
+        { "ar": "سُوقٌ", "ar_plain": "سوق", "translit": "sūqun", "en": "a market" },
+        { "ar": "طَرِيقٌ", "ar_plain": "طريق", "translit": "ṭarīqun", "en": "a path" }
+      ],
+      "right_column": [
+        { "en": "a path", "ur": "ایک راستہ" },
+        { "en": "a door", "ur": "ایک دروازہ" },
+        { "en": "a chair", "ur": "ایک کرسی" },
+        { "en": "a market", "ur": "ایک بازار" }
+      ],
+      "correct_pairs": [[0, 1], [1, 2], [2, 3], [3, 0]]
+    },
+    {
+      "id": "ch02-l01-ex08",
       "type": "BUILD_SENTENCE",
       "xp_value": 1,
-      "target_translation": {
-        "en": "That is a mosque.",
-        "ur": "وہ ایک مسجد ہے۔"
-      },
+      "target_translation": { "en": "That is a mosque.", "ur": "وہ ایک مسجد ہے۔" },
       "tiles": [
         { "ar": "مَسْجِدٌ", "ar_plain": "مسجد", "translit": "masjidun", "en": "a mosque" },
         { "ar": "ذٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that (m)" },
         { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this (m)" },
-        { "ar": "بَيْتٌ", "ar_plain": "بيت", "translit": "baytun", "en": "a house" }
+        { "ar": "طَالِبٌ", "ar_plain": "طالب", "translit": "ṭālibun", "en": "a student" }
       ],
       "correct_order": [1, 0],
       "explanation_on_wrong": {
-        "en": "ذٰلِكَ مَسْجِدٌ — 'that' comes first, then the indefinite noun 'a mosque'. Use ذٰلِكَ (not هَذَا) when pointing at something far.",
-        "ur": "ذٰلِکَ مَسْجِدٌ — پہلے 'وہ'، پھر نکرہ اسم 'ایک مسجد'۔ دور چیز کے لیے ذٰلِکَ استعمال ہوتا ہے، هَذا نہیں۔"
+        "en": "ذٰلِكَ مَسْجِدٌ — pointing word first, then the indefinite noun. ذٰلِكَ (that, far) not هَذَا (this, near).",
+        "ur": "ذٰلِکَ مَسْجِدٌ — پہلے اشارہ، پھر نکرہ اسم۔ ذٰلِکَ (وہ، دور) نہ کہ هَذَا (یہ، قریب)۔"
       }
     }
   ],
 
   "reveal": {
     "concept_name": {
-      "en": "الْحَمْدُ — why it starts with ال",
+      "en": "الْحَمْدُ — why it starts with ال, not tanween",
       "ar": "الْحَمْدُ وَالتَّعْرِيف",
-      "ur": "الْحَمْدُ — ال کیوں؟"
+      "ur": "الْحَمْدُ — تنوین نہیں، ال کیوں؟"
     },
     "ayah": {
       "surah": 1,
@@ -265,15 +286,15 @@
     },
     "highlighted_word_indices": [0],
     "noor_explanation": {
-      "en": "حَمْدٌ would mean 'a praise' — indefinite, partial. But Allah begins with الْحَمْدُ — 'the praise', definite, complete, total. This small ال at the front changes everything: not 'some praise belongs to Allah' but 'all praise — the entire category of praise — belongs to Allah alone.' You will understand this completely in the next lesson.",
-      "ur": "حَمْدٌ کا مطلب ہوتا 'ایک تعریف' — نکرہ، ادھوری۔ لیکن اللہ نے الْحَمْدُ سے آغاز کیا — 'وہ تعریف'، معرفہ، مکمل، کلی۔ یہ ایک چھوٹا ال سب بدل دیتا ہے: نہ کہ 'کچھ تعریف اللہ کے لیے ہے' بلکہ 'تمام تعریف — تعریف کی پوری قسم — صرف اللہ کے لیے ہے'۔"
+      "en": "حَمْدٌ (tanween) would mean 'a praise' — one instance, partial, indefinite. But Allah begins Al-Fatiha with الْحَمْدُ — the ال removes the tanween and makes it definite: 'the praise', meaning all praise, the complete category. Next lesson, you learn exactly how ال works.",
+      "ur": "حَمْدٌ (تنوین) کا مطلب ہوتا 'ایک تعریف' — ایک مثال، ادھوری، نکرہ۔ لیکن اللہ نے الفاتحہ الْحَمْدُ سے شروع کی — ال تنوین کو ہٹا کر معرفہ بناتا ہے: 'وہ تعریف' یعنی تمام تعریف، پوری قسم۔ اگلے سبق میں آپ سیکھیں گے ال کیسے کام کرتا ہے۔"
     }
   },
 
   "close": {
     "noor_message": {
-      "en": "Tanween (ٌ) = indefinite = 'a'. You've named it. The next lesson shows you its opposite: ال — the definite article that makes الْحَمْدُ mean everything.",
-      "ur": "تنوین (ٌ) = نکرہ = 'ایک'۔ آپ نے اسے پہچانا۔ اگلا سبق اس کا الٹ دکھائے گا: ال — جو الْحَمْدُ کو سب کچھ بنا دیتا ہے۔"
+      "en": "Twelve words — all with tanween (ٌ), all indefinite, all meaning 'a ___'. رَجُلٌ، وَلَدٌ، طَالِبٌ، أُسْتَاذٌ، بَابٌ، كُرْسِيٌّ، سُوقٌ، طَرِيقٌ — and the four from Chapter 1. Next lesson: ال flips every one of these to definite.",
+      "ur": "بارہ الفاظ — سب تنوین (ٌ) کے ساتھ، سب نکرہ، سب 'ایک ___'۔ رَجُلٌ، وَلَدٌ، طَالِبٌ، أُسْتَاذٌ، بَابٌ، كُرْسِيٌّ، سُوقٌ، طَرِيقٌ — اور باب 1 کے چار۔ اگلا سبق: ال ان سب کو معرفہ بنا دے گا۔"
     }
   }
 }

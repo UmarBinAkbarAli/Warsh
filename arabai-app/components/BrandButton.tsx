@@ -1,5 +1,5 @@
 import { ActivityIndicator, Pressable, StyleSheet, Text, ViewStyle } from "react-native";
-import { Colors, Radii, Shadows, Spacing } from "../constants/theme";
+import { Colors, Fonts, Radii, Shadows, Spacing } from "../constants/theme";
 
 type Variant = "primary" | "secondary" | "danger";
 
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 16,
     fontWeight: "700",
-    fontFamily: "Amiri-Bold",
+    fontFamily: Fonts.bold,
   },
   pressed: {
     transform: [{ scale: 0.97 }],

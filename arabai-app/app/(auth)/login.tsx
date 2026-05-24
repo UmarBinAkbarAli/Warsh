@@ -35,10 +35,10 @@ export default function LoginScreen() {
       <ArabicText size="sm" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
         بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
       </ArabicText>
-      <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", marginBottom: Spacing.sm }}>
+      <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", fontFamily: "Lora-Bold", marginBottom: Spacing.sm }}>
         Welcome back to Warsh
       </Text>
-      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
+      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL, fontFamily: "Lora-Regular" }}>
         Pick up where you left off. Your next word is waiting.
       </Text>
       <TextInput
@@ -48,7 +48,7 @@ export default function LoginScreen() {
         placeholderTextColor={Colors.text.muted}
         keyboardType="email-address"
         autoCapitalize="none"
-        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.md }}
+        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.md, fontFamily: "Lora-Regular" }}
       />
       <TextInput
         value={password}
@@ -56,9 +56,9 @@ export default function LoginScreen() {
         placeholder="Password"
         placeholderTextColor={Colors.text.muted}
         secureTextEntry
-        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.md }}
+        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.md, fontFamily: "Lora-Regular" }}
       />
-      {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.md }}>{error}</Text> : null}
+      {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.md, fontFamily: "Lora-Regular" }}>{error}</Text> : null}
       <BrandButton title="Sign In" onPress={handleSubmit} loading={loading} />
       <View style={{ flexDirection: "row", justifyContent: "center" }}>
         <Text style={{ color: Colors.text.secondary }}>Don't have an account? </Text>

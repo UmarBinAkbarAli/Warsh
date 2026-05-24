@@ -10,13 +10,13 @@ export default function OnboardingLanguageScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
-      <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, color: Colors.text.primary, fontWeight: "700", marginBottom: Spacing.sm }}>
+      <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, color: Colors.text.primary, fontWeight: "700", fontFamily: "Lora-Bold", marginBottom: Spacing.sm }}>
         Native language
       </Text>
-      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
+      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL, fontFamily: "Lora-Regular" }}>
         Choose the language Ustaad Noor should use for prompts and explanations.
       </Text>
-      <BrandButton title="Urdu" onPress={() => setLanguage("ur")} selected={language === "ur"} />
+      <BrandButton title="Urdu" variant="secondary" onPress={() => setLanguage("ur")} selected={language === "ur"} />
       <View style={{ height: Spacing.md }} />
       <BrandButton title="Hindi" variant="secondary" onPress={() => setLanguage("hi")} selected={language === "hi"} />
       <View style={{ height: Spacing.md }} />

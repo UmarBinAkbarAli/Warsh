@@ -30,8 +30,10 @@ class ErrorBoundary extends Component<{ children: React.ReactNode }, { hasError:
 
 function RootLayout() {
   const [fontsLoaded, fontError] = useFonts({
-    "Amiri-Regular": require("../assets/fonts/Amiri-Regular.ttf"),
-    "Amiri-Bold": require("../assets/fonts/Amiri-Bold.ttf"),
+    "Lora-Regular": require("../assets/fonts/Lora-Regular.ttf"),
+    "Lora-SemiBold": require("../assets/fonts/Lora-SemiBold.ttf"),
+    "Lora-Bold": require("../assets/fonts/Lora-Bold.ttf"),
+    "Lora-Italic": require("../assets/fonts/Lora-Italic.ttf"),
     "Scheherazade New": require("../assets/fonts/ScheherazadeNew-Regular.ttf"),
     "Scheherazade New Bold": require("../assets/fonts/ScheherazadeNew-Bold.ttf"),
     "Scheherazade New SemiBold": require("../assets/fonts/ScheherazadeNew-SemiBold.ttf"),

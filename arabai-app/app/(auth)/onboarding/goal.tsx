@@ -11,13 +11,13 @@ export default function OnboardingGoalScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
-      <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, color: Colors.text.primary, fontWeight: "700", marginBottom: Spacing.sm }}>
+      <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, color: Colors.text.primary, fontWeight: "700", fontFamily: "Lora-Bold", marginBottom: Spacing.sm }}>
         Choose your goal
       </Text>
-      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
+      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL, fontFamily: "Lora-Regular" }}>
         Select why you want to learn Arabic so Ustaad Noor can shape your first steps well.
       </Text>
-      <BrandButton title="Quranic Arabic" onPress={() => setGoal("QURAN")} selected={goal === "QURAN"} />
+      <BrandButton title="Quranic Arabic" variant="secondary" onPress={() => setGoal("QURAN")} selected={goal === "QURAN"} />
       <View style={{ height: Spacing.md }} />
       <BrandButton title="Travel & Conversation" variant="secondary" onPress={() => setGoal("TRAVEL")} selected={goal === "TRAVEL"} />
       <View style={{ height: Spacing.md }} />
