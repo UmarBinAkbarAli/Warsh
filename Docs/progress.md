@@ -339,6 +339,19 @@ The repo is in a stronger state than the old tracker wording suggested, but a fe
 
 ## Recent Changes (since 2026-05-24) — latest
 
+### Chapter 3 lesson-loading bug fixed (2026-05-24)
+
+- **Root cause:** Chapter 3 fixture files (`chapter-03-lesson-01.json` through `chapter-03-lesson-04.json`) were authored with a different exercise schema than Chapters 1/2 — using `choices`/`answer` instead of `options`/`correct_index`, `pairs: [{ar, en}]` instead of `left_column`/`right_column`/`correct_pairs`, `word_bank`/`answer[]` instead of `tiles`/`correct_order`, `template`/`blank_label`/`answer` instead of `hint`/`sentence_ar`/`correct_answer`, `answer` (boolean) instead of `correct_answer`, and `noor_comment` instead of `noor_explanation` in `reveal`. Also added `GRAMMAR_NOTE` and `SENTENCE` discover card types not handled by the transformer.
+- **Fix:** Updated `transformContent()` in `arabai-backend/app/api/lessons/[id]/route.ts` to detect and handle both schemas in every exercise type branch:
+  - `TAP_TRANSLATION`: falls back to `choices` (string[]) + `answer` if `options`/`correct_index` absent
+  - `MATCHING`: falls back to `pairs: [{ar, en}]` format if `left_column`/`right_column`/`correct_pairs` absent
+  - `BUILD_SENTENCE`: falls back to `word_bank`/`answer[]` + `instruction` if `tiles`/`correct_order`/`target_translation` absent
+  - `FILL_BLANK`: falls back to `template`/`blank_label`/`choices`/`answer` format; extracts Arabic part before ` = ` from `template.en`
+  - `TRUE_FALSE`: now checks `ex.answer` if `ex.correct_answer` is undefined; checks `ex.explanation.en` if `ex.explanation_on_wrong` absent
+  - Reveal: checks `reveal.noor_comment` as fallback if `reveal.noor_explanation` absent
+  - Discover cards: added `GRAMMAR_NOTE` (title/body) and `SENTENCE` (text) card type handlers (no crash)
+- Backend TypeScript check passed (0 errors)
+
 ### Chapter 3 fully authored — 4 lessons seeded (2026-05-24)
 
 - Authored 4 fixture JSON files in `arabai-backend/prisma/fixtures/`:
@@ -1105,7 +1118,7 @@ Current product concern:
 
 ### Content authoring (highest priority)
 1. ✅ Chapter 2 authored — 4 lessons (tanween / ال / adjectives / أَيْنَ) seeded (2026-05-24)
-2. Author Chapter 3: Possession and the Basmalah (الإضافة — كِتَابُ الطَّالِبِ, بِسْمِ اللَّهِ) — 4–5 lessons
+2. ✅ Chapter 3 authored — 4 lessons (الإضافة, لِمَنْ, يَا, Basmalah) seeded (2026-05-24); lesson-loading bug fixed (2026-05-24)
 3. Author Chapter 4: Adjectives and Gender Agreement (الصِّفَة والموصوف — رَجُلٌ كَرِيمٌ, الصِّرَاطَ الْمُسْتَقِيمَ) — 4–5 lessons
 4. Author Chapter 5: Feminine Demonstratives + First Verb (هٰذِهِ، تِلْكَ، ذَهَبَ) — 4–5 lessons
 5. Insert SP1 SPOKEN_PHRASES lesson after Ch3 (basic greetings — per spec-05 Part C)

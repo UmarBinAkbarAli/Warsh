@@ -29,10 +29,32 @@ function transformContent(template: string, content: Record<string, unknown>) {
     : null;
 
   const mappedCards = (discoverCards ?? []).map((card) => {
+    const cardType = card.type as string | undefined;
     const text = card.text as Record<string, unknown> | undefined;
     const concept = card.concept as Record<string, unknown> | undefined;
     const explanation = card.explanation as Record<string, unknown> | undefined;
     const examples = card.examples as Array<Record<string, unknown>> | undefined;
+    // GRAMMAR_NOTE cards use title/body instead of text/concept
+    const titleObj = card.title as Record<string, unknown> | undefined;
+    const bodyObj = card.body as Record<string, unknown> | undefined;
+    // SENTENCE cards use text directly
+    const sentenceText = card.text as Record<string, unknown> | undefined;
+    if (cardType === "GRAMMAR_NOTE") {
+      return {
+        arabicText: titleObj?.ar as string | undefined,
+        translation: titleObj?.en as string | undefined,
+        transliteration: undefined,
+        explanation: bodyObj?.en as string | undefined,
+      };
+    }
+    if (cardType === "SENTENCE") {
+      return {
+        arabicText: sentenceText?.ar as string | undefined,
+        translation: sentenceText?.en as string | undefined,
+        transliteration: sentenceText?.translit as string | undefined,
+        explanation: undefined,
+      };
+    }
     // CONCEPT cards have no "text" — fall back to concept.ar / concept.en
     const arabicText = (text?.ar ?? concept?.ar) as string | undefined;
     const translation = (text?.en ?? concept?.en) as string | undefined;
@@ -53,70 +75,136 @@ function transformContent(template: string, content: Record<string, unknown>) {
 
     if (type === "TAP_TRANSLATION") {
       const prompt = ex.prompt as Record<string, unknown>;
-      const options = ex.options as Array<Record<string, unknown>>;
-      const correctIndex = ex.correct_index as number;
       const wrongMsg = ex.explanation_on_wrong as Record<string, unknown> | undefined;
+      // Schema v1 (Ch1/Ch2): options = [{en, ur}], correct_index = int
+      const optionsV1 = ex.options as Array<Record<string, unknown>> | undefined;
+      const correctIndex = ex.correct_index as number | undefined;
+      // Schema v2 (Ch3): choices = [string], answer = string
+      const choicesV2 = ex.choices as string[] | undefined;
+      const answerV2 = ex.answer as string | undefined;
+      let options: string[];
+      let correctAnswer: string;
+      if (optionsV1 && correctIndex !== undefined) {
+        options = optionsV1.map((o) => o.en as string);
+        correctAnswer = optionsV1[correctIndex].en as string;
+      } else {
+        options = choicesV2 ?? [];
+        correctAnswer = answerV2 ?? "";
+      }
       return {
         type,
         prompt: "What does this Arabic mean?",
-        arabicText: prompt.ar as string,
-        options: options.map((o) => o.en as string),
-        correctAnswer: options[correctIndex].en as string,
+        arabicText: prompt.ar as string | undefined,
+        options,
+        correctAnswer,
         explanation_on_wrong: wrongMsg?.en as string | undefined,
       };
     }
 
     if (type === "MATCHING") {
-      const leftCol = ex.left_column as Array<Record<string, unknown>>;
-      const rightCol = ex.right_column as Array<Record<string, unknown>>;
-      const pairs = ex.correct_pairs as Array<[number, number]>;
-      return {
-        type,
-        prompt: "Match each Arabic word with its meaning.",
-        pairs: pairs.map(([l, r]) => ({ left: leftCol[l].ar as string, right: rightCol[r].en as string })),
-        options: rightCol.map((r) => r.en as string),
-      };
+      // Schema v1 (Ch1/Ch2): left_column, right_column, correct_pairs
+      const leftCol = ex.left_column as Array<Record<string, unknown>> | undefined;
+      const rightCol = ex.right_column as Array<Record<string, unknown>> | undefined;
+      const correctPairs = ex.correct_pairs as Array<[number, number]> | undefined;
+      // Schema v2 (Ch3): pairs = [{ar, en}]
+      const pairsV2 = ex.pairs as Array<Record<string, unknown>> | undefined;
+      if (leftCol && rightCol && correctPairs) {
+        return {
+          type,
+          prompt: "Match each Arabic word with its meaning.",
+          pairs: correctPairs.map(([l, r]) => ({ left: leftCol[l].ar as string, right: rightCol[r].en as string })),
+          options: rightCol.map((r) => r.en as string),
+        };
+      } else if (pairsV2) {
+        return {
+          type,
+          prompt: "Match each Arabic word with its meaning.",
+          pairs: pairsV2.map((p) => ({ left: p.ar as string, right: p.en as string })),
+          options: pairsV2.map((p) => p.en as string),
+        };
+      }
+      return ex;
     }
 
     if (type === "BUILD_SENTENCE") {
-      const tiles = ex.tiles as Array<Record<string, unknown>>;
-      const order = ex.correct_order as number[];
-      const target = ex.target_translation as Record<string, unknown>;
       const wrongMsg = ex.explanation_on_wrong as Record<string, unknown> | undefined;
-      return {
-        type,
-        prompt: target.en as string,
-        options: tiles.map((t) => t.ar as string),
-        correctAnswer: order.map((i) => tiles[i].ar as string).join(" "),
-        explanation_on_wrong: wrongMsg?.en as string | undefined,
-      };
+      // Schema v1 (Ch1/Ch2): tiles = [{ar,...}], correct_order = [int], target_translation
+      const tiles = ex.tiles as Array<Record<string, unknown>> | undefined;
+      const order = ex.correct_order as number[] | undefined;
+      const target = ex.target_translation as Record<string, unknown> | undefined;
+      // Schema v2 (Ch3): word_bank = [string], answer = [string], instruction
+      const wordBank = ex.word_bank as string[] | undefined;
+      const answerArr = ex.answer as string[] | undefined;
+      const instruction = ex.instruction as Record<string, unknown> | undefined;
+      const explObj = ex.explanation as Record<string, unknown> | undefined;
+      if (tiles && order && target) {
+        return {
+          type,
+          prompt: target.en as string,
+          options: tiles.map((t) => t.ar as string),
+          correctAnswer: order.map((i) => tiles[i].ar as string).join(" "),
+          explanation_on_wrong: wrongMsg?.en as string | undefined,
+        };
+      } else if (wordBank && answerArr) {
+        return {
+          type,
+          prompt: instruction?.en as string ?? "Build the sentence.",
+          options: wordBank,
+          correctAnswer: answerArr.join(" "),
+          explanation_on_wrong: (wrongMsg?.en ?? explObj?.en) as string | undefined,
+        };
+      }
+      return ex;
     }
 
     if (type === "FILL_BLANK") {
-      const hint = ex.hint as Record<string, unknown>;
-      const options = ex.options as Array<Record<string, unknown>> | undefined;
-      const correctAnswer = ex.correct_answer as Record<string, unknown>;
-      return {
-        type,
-        prompt: hint.en as string,
-        arabicText: ex.sentence_ar as string,
-        options: (options ?? []).map((o) => o.ar as string),
-        correctAnswer: correctAnswer.ar as string,
-      };
+      // Schema v1 (Ch1/Ch2): hint, sentence_ar, options = [{ar,...}], correct_answer = {ar,...}
+      const hint = ex.hint as Record<string, unknown> | undefined;
+      const optionsV1 = ex.options as Array<Record<string, unknown>> | undefined;
+      const correctAnswerV1 = ex.correct_answer as Record<string, unknown> | undefined;
+      // Schema v2 (Ch3): template = {en}, blank_label = {en}, answer = string, choices = [string]
+      const template = ex.template as Record<string, unknown> | undefined;
+      const blankLabel = ex.blank_label as Record<string, unknown> | undefined;
+      const answerV2 = ex.answer as string | undefined;
+      const choicesV2 = ex.choices as string[] | undefined;
+      if (hint && optionsV1 && correctAnswerV1) {
+        return {
+          type,
+          prompt: hint.en as string,
+          arabicText: ex.sentence_ar as string,
+          options: optionsV1.map((o) => o.ar as string),
+          correctAnswer: correctAnswerV1.ar as string,
+        };
+      } else if (template || blankLabel) {
+        const templateEn = template?.en as string ?? "";
+        const eqIdx = templateEn.indexOf(" = ");
+        const arabicPart = eqIdx > 0 ? templateEn.slice(0, eqIdx) : templateEn;
+        const hintPart = eqIdx > 0 ? templateEn.slice(eqIdx + 3) : (blankLabel?.en as string ?? "");
+        return {
+          type,
+          prompt: hintPart,
+          arabicText: arabicPart,
+          options: choicesV2 ?? [],
+          correctAnswer: answerV2 ?? "",
+        };
+      }
+      return ex;
     }
 
     if (type === "TRUE_FALSE") {
       const statement = ex.statement as Record<string, unknown>;
       const arExample = statement.ar_example as Record<string, unknown> | undefined;
-      const correct = ex.correct_answer as boolean;
+      // Schema v1 uses correct_answer; schema v2 uses answer
+      const correct = (ex.correct_answer ?? ex.answer) as boolean;
       const wrongMsg = ex.explanation_on_wrong as Record<string, unknown> | undefined;
+      const explObj = ex.explanation as Record<string, unknown> | undefined;
       return {
         type,
         prompt: statement.en as string,
         arabicText: arExample?.ar as string | undefined,
         options: ["True", "False"],
         correctAnswer: correct ? "True" : "False",
-        explanation_on_wrong: wrongMsg?.en as string | undefined,
+        explanation_on_wrong: (wrongMsg?.en ?? explObj?.en) as string | undefined,
       };
     }
 
@@ -145,7 +233,7 @@ function transformContent(template: string, content: Record<string, unknown>) {
       ayahRef: revealAyah.label as string,
       highlightedWord: ayahWords[firstHighlight] ?? "",
     };
-    const explanation = reveal.noor_explanation as Record<string, unknown> | undefined;
+    const explanation = (reveal.noor_explanation ?? reveal.noor_comment) as Record<string, unknown> | undefined;
     revealText = explanation?.en as string ?? null;
   }
 
