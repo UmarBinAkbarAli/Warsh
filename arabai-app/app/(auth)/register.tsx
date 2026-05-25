@@ -1,4 +1,5 @@
-import { View, Text, TextInput } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import { TextInput } from "react-native-paper";
 import { useState } from "react";
 import { Link, useRouter } from "expo-router";
 import { useAuth } from "@hooks/useAuth";
@@ -6,7 +7,7 @@ import { useOnboardingStore } from "@stores/onboardingStore";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { getApiErrorMessage } from "@services/api";
-import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../constants/theme";
+import { Colors, FontSizes, LineHeights, Spacing } from "../../constants/theme";
 import { trackSignupCompleted } from "@services/analytics";
 
 export default function RegisterScreen() {
@@ -60,47 +61,55 @@ export default function RegisterScreen() {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
+    <View style={styles.screen}>
       <ArabicText size="lg" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
         وَرْش
       </ArabicText>
-      <Text style={{ color: Colors.text.primary, fontSize: FontSizes.displayL, lineHeight: LineHeights.displayL, fontWeight: "700", fontFamily: "Lora-Bold", marginBottom: Spacing.sm }}>
-        Create your Warsh account
+      <Text style={styles.heading}>Create your Warsh account</Text>
+      <Text style={styles.subheading}>
+        {displayName
+          ? `Welcome ${displayName}. Your journey to understanding the Quran starts here.`
+          : "Your journey to understanding the Quran starts here."}
       </Text>
-      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL, fontFamily: "Lora-Regular" }}>
-        {displayName ? `Welcome ${displayName}. Your journey to understanding the Quran starts here.` : "Your journey to understanding the Quran starts here."}
-      </Text>
+
       <TextInput
+        label="Name"
         value={displayName}
         onChangeText={setDisplayName}
-        placeholder="Name"
-        placeholderTextColor={Colors.text.muted}
+        mode="outlined"
         autoCapitalize="words"
-        style={{ borderWidth: 1, borderColor: Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: Spacing.md, fontFamily: "Lora-Regular" }}
+        style={styles.input}
       />
       <TextInput
+        label="Email"
         value={email}
         onChangeText={(v) => { setEmail(v); setEmailTouched(true); }}
         onBlur={() => setEmailTouched(true)}
-        placeholder="Email"
-        placeholderTextColor={Colors.text.muted}
+        mode="outlined"
         keyboardType="email-address"
         autoCapitalize="none"
         autoComplete="email"
-        style={{ borderWidth: 1, borderColor: emailInvalid ? Colors.text.danger : Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: emailInvalid ? Spacing.xs : Spacing.md, fontFamily: "Lora-Regular" }}
+        error={emailInvalid}
+        style={styles.input}
       />
-      {emailInvalid ? <Text style={{ color: Colors.text.danger, fontSize: FontSizes.caption, marginBottom: Spacing.md, fontFamily: "Lora-Regular" }}>Enter a valid email address.</Text> : null}
+      {emailInvalid ? (
+        <Text style={styles.fieldError}>Enter a valid email address.</Text>
+      ) : null}
       <TextInput
+        label="Password (min 8 characters)"
         value={password}
         onChangeText={(v) => { setPassword(v); setPasswordTouched(true); }}
         onBlur={() => setPasswordTouched(true)}
-        placeholder="Password (min 8 characters)"
-        placeholderTextColor={Colors.text.muted}
+        mode="outlined"
         secureTextEntry
-        style={{ borderWidth: 1, borderColor: passwordShort ? Colors.text.danger : Colors.border.subtle, color: Colors.text.primary, backgroundColor: Colors.bg.surface, borderRadius: Radii.md, padding: Spacing.md, marginBottom: passwordShort ? Spacing.xs : Spacing.xl, fontFamily: "Lora-Regular" }}
+        error={passwordShort}
+        style={styles.input}
       />
-      {passwordShort ? <Text style={{ color: Colors.text.danger, fontSize: FontSizes.caption, marginBottom: Spacing.md, fontFamily: "Lora-Regular" }}>Password must be at least 8 characters.</Text> : null}
-      {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.md, fontFamily: "Lora-Regular" }}>{error}</Text> : null}
+      {passwordShort ? (
+        <Text style={styles.fieldError}>Password must be at least 8 characters.</Text>
+      ) : null}
+
+      {error ? <Text style={styles.error}>{error}</Text> : null}
       <BrandButton title="Create Account" onPress={handleSubmit} loading={loading} />
       <View style={{ flexDirection: "row", justifyContent: "center", marginTop: Spacing.xl }}>
         <Text style={{ color: Colors.text.secondary }}>Already have an account? </Text>
@@ -111,3 +120,42 @@ export default function RegisterScreen() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: Colors.bg.primary,
+    padding: Spacing.xl,
+    justifyContent: "center",
+  },
+  heading: {
+    color: Colors.text.primary,
+    fontSize: FontSizes.displayL,
+    lineHeight: LineHeights.displayL,
+    fontWeight: "700",
+    fontFamily: "Lora-Bold",
+    marginBottom: Spacing.sm,
+  },
+  subheading: {
+    color: Colors.text.secondary,
+    marginBottom: Spacing.xl,
+    lineHeight: LineHeights.bodyL,
+    fontFamily: "Lora-Regular",
+  },
+  input: {
+    marginBottom: Spacing.md,
+    backgroundColor: Colors.bg.surface,
+  },
+  fieldError: {
+    color: Colors.text.danger,
+    fontSize: FontSizes.caption,
+    marginBottom: Spacing.md,
+    marginTop: -Spacing.sm,
+    fontFamily: "Lora-Regular",
+  },
+  error: {
+    color: Colors.text.danger,
+    marginBottom: Spacing.md,
+    fontFamily: "Lora-Regular",
+  },
+});

@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
-import { View, Text, ScrollView, TextInput, Pressable, ActivityIndicator } from "react-native";
+import { View, Text, ScrollView, Pressable, ActivityIndicator } from "react-native";
+import { TextInput } from "react-native-paper";
 import { useFocusEffect } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import api from "@services/api";
@@ -119,8 +120,9 @@ export default function ChatScreen() {
           value={input}
           onChangeText={setInput}
           placeholder="Ask Ustaad Noor"
-          placeholderTextColor={Colors.text.muted}
-          style={{ flex: 1, borderWidth: 1, borderColor: Colors.border.subtle, borderRadius: Radii.md, padding: Spacing.md, color: Colors.text.primary, backgroundColor: Colors.bg.surface }}
+          mode="outlined"
+          dense
+          style={{ flex: 1, backgroundColor: Colors.bg.surface }}
         />
         <Pressable
           onPress={sendMessage}

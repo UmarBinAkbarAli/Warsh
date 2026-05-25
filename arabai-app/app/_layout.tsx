@@ -4,8 +4,10 @@ import { ActivityIndicator, View, Text } from "react-native";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { PaperProvider } from "react-native-paper";
 import * as Sentry from "@sentry/react-native";
 import { Colors } from "../constants/theme";
+import { WarshPaperTheme } from "../constants/paperTheme";
 import { initSentry } from "@services/sentry";
 import { initAnalytics } from "@services/analytics";
 
@@ -55,10 +57,10 @@ function RootLayout() {
   return (
     <ErrorBoundary>
       <SafeAreaProvider>
-        <>
+        <PaperProvider theme={WarshPaperTheme}>
           <StatusBar style="light" />
           <Stack screenOptions={{ headerShown: false }} />
-        </>
+        </PaperProvider>
       </SafeAreaProvider>
     </ErrorBoundary>
   );

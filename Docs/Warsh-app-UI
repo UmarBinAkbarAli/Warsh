@@ -4075,8 +4075,2447 @@
           "fontFamily": "$font-latin",
           "fontSize": 16,
           "fontWeight": "600"
+        },
+        {
+          "type": "frame",
+          "id": "fm8Hv",
+          "x": 0,
+          "y": 0,
+          "name": "Probe",
+          "width": 10,
+          "height": 10,
+          "fill": "$gold",
+          "layout": "none"
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "fzmxg",
+      "x": 860,
+      "y": 2699,
+      "name": "09 Learn Home",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "#00000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "DTx1c",
+          "x": 0,
+          "y": 0,
+          "name": "Parchment Background",
+          "fill": "$parchment",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "type": "frame",
+          "id": "ZyQlz",
+          "x": 0,
+          "y": 0,
+          "name": "Status Bar",
+          "width": 390,
+          "height": 62,
+          "fill": "$parchment",
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "wmGgY",
+              "x": 22,
+              "y": 22,
+              "fill": "$ink",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "600"
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 2,
+              "id": "mPwOd",
+              "x": 318,
+              "y": 34,
+              "fill": "$ink",
+              "width": 4,
+              "height": 4
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 2,
+              "id": "zKLt1",
+              "x": 326,
+              "y": 31,
+              "fill": "$ink",
+              "width": 4,
+              "height": 7
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 2,
+              "id": "IrMgN",
+              "x": 334,
+              "y": 28,
+              "fill": "$ink",
+              "width": 4,
+              "height": 10
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 3,
+              "id": "BIPDJ",
+              "x": 350,
+              "y": 27,
+              "fill": "#00000000",
+              "width": 22,
+              "height": 10,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$ink"
+              }
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 2,
+              "id": "DaEgw",
+              "x": 352,
+              "y": 29,
+              "fill": "$ink",
+              "width": 16,
+              "height": 6
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "JgfB3",
+          "x": 0,
+          "y": 62,
+          "name": "Learn Home Content",
+          "width": 390,
+          "height": 670,
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 10,
+          "padding": [
+            14,
+            24,
+            12,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Pf3Qm",
+              "name": "Header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ftCcI",
+                  "name": "Brand Lockup",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "H7lEV",
+                      "fill": "$ink",
+                      "content": "Warsh · وَرْش",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "S7pq3",
+                      "fill": "$sage",
+                      "content": "Learn",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tGK7h",
+                  "name": "Profile Initial",
+                  "width": 42,
+                  "height": 42,
+                  "fill": "$cream",
+                  "cornerRadius": 21,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "$sage-soft"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uweNv",
+                      "fill": "$gold-deep",
+                      "content": "Y",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SQ9KS",
+              "name": "Today Goal Card",
+              "width": "fill_container",
+              "fill": "$cream",
+              "cornerRadius": "$radius-card",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5D7AA"
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#9A7D3322",
+                "offset": {
+                  "x": 0,
+                  "y": 4
+                },
+                "blur": 14
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "V5Yjd",
+                  "name": "Goal Top Row",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "EAJmk",
+                      "name": "Goal Text",
+                      "width": 212,
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "kGqpR",
+                          "fill": "$sage",
+                          "content": "Today’s goal",
+                          "fontFamily": "$font-latin",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "BKZ1d",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "12 minutes of Qur’an Arabic",
+                          "lineHeight": 1.1,
+                          "fontFamily": "$font-latin",
+                          "fontSize": 17,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YrYIm",
+                      "name": "Goal Streak",
+                      "width": 72,
+                      "height": 42,
+                      "fill": "$parchment-soft",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 1,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "PpnlV",
+                          "fill": "$gold-deep",
+                          "content": "4 day",
+                          "fontFamily": "$font-latin",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "r3xNJ",
+                          "fill": "$sage",
+                          "content": "streak",
+                          "fontFamily": "$font-latin",
+                          "fontSize": 10,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "r74ht",
+                  "name": "Goal Progress",
+                  "width": "fill_container",
+                  "height": 8,
+                  "fill": "$parchment-deep",
+                  "cornerRadius": 4,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 4,
+                      "id": "WfXGH",
+                      "x": 0,
+                      "y": 0,
+                      "fill": "$gold",
+                      "width": 214,
+                      "height": 8
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "y0kUV7",
+                  "fill": "$ink-muted",
+                  "content": "8 of 12 minutes complete",
+                  "fontFamily": "$font-latin",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "c28Rj",
+              "name": "Current Lesson Card",
+              "width": "fill_container",
+              "fill": "$parchment-soft",
+              "cornerRadius": "$radius-card",
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E4D6A4"
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#5A69531F",
+                "offset": {
+                  "x": 0,
+                  "y": 5
+                },
+                "blur": 18
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "xbZKg",
+                  "name": "Lesson Label Row",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AKBIx",
+                      "fill": "$sage-deep",
+                      "content": "Chapter 1 / Lesson 1",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "J92hrJ",
+                      "name": "Live Chip",
+                      "fill": "#E0BC6840",
+                      "cornerRadius": 999,
+                      "padding": [
+                        5,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "n9dSh",
+                          "fill": "$gold-deep",
+                          "content": "LIVE",
+                          "fontFamily": "$font-latin",
+                          "fontSize": 10,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "sImov",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "هَذَا",
+                  "lineHeight": 1,
+                  "textAlign": "center",
+                  "fontFamily": "$font-arabic",
+                  "fontSize": 54,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "ew6db",
+                  "fill": "$ink-soft",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "This · used to point to something near",
+                  "lineHeight": 1.2,
+                  "textAlign": "center",
+                  "fontFamily": "$font-latin",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "ftyaT",
+                  "name": "Primary CTA",
+                  "width": "fill_container",
+                  "height": 50,
+                  "fill": "$gold",
+                  "cornerRadius": 12,
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WZVOh",
+                      "fill": "$ink",
+                      "content": "Continue lesson",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "YlxsF",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "arrow-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "$ink"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yUEsl",
+              "name": "Progress And Word Row",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ITlOp",
+                  "name": "Tadabbur Progress",
+                  "width": "fill_container",
+                  "height": 140,
+                  "fill": "$cream",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E8D9AA"
+                  },
+                  "layout": "vertical",
+                  "gap": 7,
+                  "padding": 13,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wQfKy",
+                      "fill": "$sage",
+                      "content": "Tadabbur",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "j4uEH",
+                      "fill": "$ink",
+                      "content": "Al-Fatiha",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 19,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "BvAj0",
+                      "name": "Tadabbur Visual",
+                      "width": "fill_container",
+                      "height": 48,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "nAo8e",
+                          "x": 49,
+                          "y": 0,
+                          "innerRadius": 0.68,
+                          "fill": "$parchment-deep",
+                          "width": 48,
+                          "height": 48
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "V7gGE",
+                          "x": 49,
+                          "y": 0,
+                          "innerRadius": 0.68,
+                          "startAngle": 90,
+                          "sweepAngle": 238,
+                          "fill": "$sage",
+                          "width": 48,
+                          "height": 48
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "QeiVJ",
+                      "fill": "$ink-muted",
+                      "content": "66% reflected",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NRmGt",
+                  "name": "Word Of Day",
+                  "width": "fill_container",
+                  "height": 140,
+                  "fill": "$cream",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E8D9AA"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 13,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lTPcK",
+                      "fill": "$sage",
+                      "content": "Word of day",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "aBwMP",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "نُور",
+                      "lineHeight": 1,
+                      "textAlign": "center",
+                      "fontFamily": "$font-arabic",
+                      "fontSize": 34,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hXNY5",
+                      "fill": "$gold-deep",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "noor",
+                      "textAlign": "center",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mmJna",
+                      "fill": "$ink-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Light that guides",
+                      "lineHeight": 1.2,
+                      "textAlign": "center",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "x7uPMv",
+              "name": "Practice Prompt",
+              "width": "fill_container",
+              "fill": "#FAF6E980",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$sage-soft"
+              },
+              "gap": 12,
+              "padding": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "HHEJP",
+                  "name": "Practice Icon",
+                  "width": 36,
+                  "height": 36,
+                  "fill": "#E0BC684D",
+                  "cornerRadius": 18,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "tGybi",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "book-open",
+                      "iconFontFamily": "lucide",
+                      "fill": "$gold-deep"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rK6BO",
+                  "name": "Practice Text",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YpuHP",
+                      "fill": "$sage",
+                      "content": "Next small step",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "o48cyd",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Review هَذَا in three short examples",
+                      "lineHeight": 1.15,
+                      "fontFamily": "$font-latin",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "reaNe",
+          "x": 0,
+          "y": 732,
+          "name": "Bottom Tab Bar",
+          "width": 390,
+          "height": 112,
+          "fill": "#00000000",
+          "layout": "vertical",
+          "padding": [
+            12,
+            21,
+            21,
+            21
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "s9Wsl",
+              "name": "Tabs Pill",
+              "width": "fill_container",
+              "height": 62,
+              "fill": "$cream",
+              "cornerRadius": 36,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#DCCB94"
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#5A69532B",
+                "offset": {
+                  "x": 0,
+                  "y": 7
+                },
+                "blur": 20
+              },
+              "gap": 2,
+              "padding": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "hs377",
+                  "name": "Tab Learn",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$gold",
+                  "cornerRadius": 26,
+                  "layout": "vertical",
+                  "gap": 3,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "H8LQ7L",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "book-open",
+                      "iconFontFamily": "lucide",
+                      "fill": "$ink"
+                    },
+                    {
+                      "type": "text",
+                      "id": "QnGjT",
+                      "fill": "$ink",
+                      "content": "LEARN",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 9,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RwM4B",
+                  "name": "Tab Vocabulary",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 26,
+                  "layout": "vertical",
+                  "gap": 3,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "poqdj",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "book-a",
+                      "iconFontFamily": "lucide",
+                      "fill": "$sage"
+                    },
+                    {
+                      "type": "text",
+                      "id": "V0HJ5",
+                      "fill": "$sage",
+                      "content": "VOCABULARY",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 9,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vJuE1",
+                  "name": "Tab Noor",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 26,
+                  "layout": "vertical",
+                  "gap": 3,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "EuDkP",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "sparkles",
+                      "iconFontFamily": "lucide",
+                      "fill": "$sage"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wrCYc",
+                      "fill": "$sage",
+                      "content": "NOOR",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 9,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yP0hs",
+                  "name": "Tab You",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 26,
+                  "layout": "vertical",
+                  "gap": 3,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "NZ8OB",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "user",
+                      "iconFontFamily": "lucide",
+                      "fill": "$sage"
+                    },
+                    {
+                      "type": "text",
+                      "id": "o4boMd",
+                      "fill": "$sage",
+                      "content": "YOU",
+                      "fontFamily": "$font-latin",
+                      "fontSize": 9,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "wQkJ4",
+      "x": 1290,
+      "y": 2699,
+      "name": "10 Lesson Hook",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$parchment",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "MYWCF",
+          "x": 22,
+          "y": 22,
+          "name": "Time",
+          "fill": "$ink",
+          "content": "9:41",
+          "fontFamily": "Inter",
+          "fontSize": 15,
+          "fontWeight": "600"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "Cn5rR",
+          "x": 318,
+          "y": 34,
+          "fill": "$ink",
+          "width": 4,
+          "height": 4
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "D0OO7i",
+          "x": 326,
+          "y": 31,
+          "fill": "$ink",
+          "width": 4,
+          "height": 7
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "ipWNa",
+          "x": 334,
+          "y": 28,
+          "fill": "$ink",
+          "width": 4,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "S02VO",
+          "x": 350,
+          "y": 26,
+          "name": "Battery",
+          "fill": "#FFFFFF00",
+          "width": 22,
+          "height": 11,
+          "stroke": {
+            "thickness": 1,
+            "fill": "$ink"
+          }
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "wpdVC",
+          "x": 98,
+          "y": 82,
+          "name": "Progress 0",
+          "fill": "$gold",
+          "width": 30,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "fzFL1",
+          "x": 137,
+          "y": 82,
+          "name": "Progress 1",
+          "fill": "$sage-soft",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "Gadw3",
+          "x": 176,
+          "y": 82,
+          "name": "Progress 2",
+          "fill": "$sage-soft",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "z6MRv",
+          "x": 215,
+          "y": 82,
+          "name": "Progress 3",
+          "fill": "$sage-soft",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "BPs6H",
+          "x": 254,
+          "y": 82,
+          "name": "Progress 4",
+          "fill": "$sage-soft",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "text",
+          "id": "QmVP4",
+          "x": 24,
+          "y": 105,
+          "name": "Lesson Label",
+          "fill": "$gold-deep",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Standard lesson",
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 13,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "QJyD5",
+          "x": 24,
+          "y": 136,
+          "name": "Hook Title",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Listen first",
+          "lineHeight": 1.12,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 34,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "w4CV5",
+          "x": 36,
+          "y": 186,
+          "name": "Noor Intro",
+          "fill": "$ink-soft",
+          "textGrowth": "fixed-width",
+          "width": 318,
+          "content": "Noor begins with the opening words. Hear the ayah before you read or repeat.",
+          "lineHeight": 1.45,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 15,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 18,
+          "id": "pEiAO",
+          "x": 24,
+          "y": 258,
+          "name": "Ayah Card",
+          "fill": "$cream",
+          "width": 342,
+          "height": 286,
+          "stroke": {
+            "thickness": 1,
+            "fill": "$sage-soft"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#1A1A1A12",
+            "offset": {
+              "x": 0,
+              "y": 5
+            },
+            "blur": 16
+          }
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 1,
+          "id": "p9DYHe",
+          "x": 88,
+          "y": 290,
+          "name": "Gold Rule",
+          "fill": "#C8A04788",
+          "width": 214,
+          "height": 1
+        },
+        {
+          "type": "text",
+          "id": "dVGO4",
+          "x": 44,
+          "y": 318,
+          "name": "Ayah Line 1",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 302,
+          "content": "بِسْمِ ٱللَّهِ",
+          "lineHeight": 1.25,
+          "textAlign": "center",
+          "fontFamily": "$font-arabic",
+          "fontSize": 42,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "qBeSJ",
+          "x": 44,
+          "y": 388,
+          "name": "Ayah Line 2",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 302,
+          "content": "ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+          "lineHeight": 1.25,
+          "textAlign": "center",
+          "fontFamily": "$font-arabic",
+          "fontSize": 38,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "szhzn",
+          "x": 44,
+          "y": 474,
+          "name": "Ayah Ref",
+          "fill": "$ink-muted",
+          "textGrowth": "fixed-width",
+          "width": 302,
+          "content": "Al-Fatiha 1:1",
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 13,
+          "fontWeight": "600"
+        },
+        {
+          "type": "ellipse",
+          "id": "ims6w",
+          "x": 136,
+          "y": 581,
+          "name": "Audio Ring",
+          "fill": "$ink",
+          "width": 118,
+          "height": 118
+        },
+        {
+          "type": "ellipse",
+          "id": "OVdHz",
+          "x": 147,
+          "y": 592,
+          "name": "Audio Inner",
+          "fill": "#C8A04722",
+          "width": 96,
+          "height": 96,
+          "stroke": {
+            "thickness": 1,
+            "fill": "$gold"
+          }
+        },
+        {
+          "type": "icon_font",
+          "id": "OFkKe",
+          "x": 178,
+          "y": 621,
+          "name": "Play Icon",
+          "width": 38,
+          "height": 38,
+          "iconFontName": "play",
+          "iconFontFamily": "lucide",
+          "fill": "$gold"
+        },
+        {
+          "type": "text",
+          "id": "cgLRL",
+          "x": 24,
+          "y": 719,
+          "name": "Autoplay Label",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Autoplay on",
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 17,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "DLl20",
+          "x": 44,
+          "y": 747,
+          "name": "Audio Helper",
+          "fill": "$ink-muted",
+          "textGrowth": "fixed-width",
+          "width": 302,
+          "content": "Tap to pause or replay the recitation.",
+          "lineHeight": 1.35,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 12,
+          "id": "uiqIW",
+          "x": 24,
+          "y": 786,
+          "name": "Primary CTA",
+          "fill": "$gold",
+          "width": 342,
+          "height": 50
+        },
+        {
+          "type": "text",
+          "id": "TCPAG",
+          "x": 24,
+          "y": 802,
+          "name": "Primary CTA Label",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Continue",
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 16,
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "i7HQL9",
+      "x": 1720,
+      "y": 2699,
+      "name": "11 Discover Word",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$parchment",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "ER3ki",
+          "x": 22,
+          "y": 22,
+          "name": "Time",
+          "fill": "$ink",
+          "content": "9:41",
+          "fontFamily": "Inter",
+          "fontSize": 15,
+          "fontWeight": "600"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "GEPdo",
+          "x": 318,
+          "y": 34,
+          "fill": "$ink",
+          "width": 4,
+          "height": 4
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "Td4Vm",
+          "x": 326,
+          "y": 31,
+          "fill": "$ink",
+          "width": 4,
+          "height": 7
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "wdVtg",
+          "x": 334,
+          "y": 28,
+          "fill": "$ink",
+          "width": 4,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "I38fUq",
+          "x": 350,
+          "y": 26,
+          "name": "Battery",
+          "fill": "#FFFFFF00",
+          "width": 22,
+          "height": 11,
+          "stroke": {
+            "thickness": 1,
+            "fill": "$ink"
+          }
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "kgvGZ",
+          "x": 98,
+          "y": 82,
+          "name": "Progress 0",
+          "fill": "$gold",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "nFXMK",
+          "x": 137,
+          "y": 82,
+          "name": "Progress 1",
+          "fill": "$gold",
+          "width": 30,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "A7wNv",
+          "x": 176,
+          "y": 82,
+          "name": "Progress 2",
+          "fill": "$sage-soft",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "onUaB",
+          "x": 215,
+          "y": 82,
+          "name": "Progress 3",
+          "fill": "$sage-soft",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "N5Lyn",
+          "x": 254,
+          "y": 82,
+          "name": "Progress 4",
+          "fill": "$sage-soft",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "text",
+          "id": "KMXuA",
+          "x": 24,
+          "y": 105,
+          "name": "Lesson Label",
+          "fill": "$gold-deep",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Discover word",
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 13,
+          "fontWeight": "700"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 18,
+          "id": "ibmkl",
+          "x": 24,
+          "y": 132,
+          "name": "Word Header",
+          "fill": "$ink",
+          "width": 342,
+          "height": 178,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#1A1A1A12",
+            "offset": {
+              "x": 0,
+              "y": 5
+            },
+            "blur": 16
+          }
+        },
+        {
+          "type": "text",
+          "id": "T5Xd4",
+          "x": 24,
+          "y": 151,
+          "name": "Arabic Word",
+          "fill": "$gold-soft",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "هَذَا",
+          "lineHeight": 1.05,
+          "textAlign": "center",
+          "fontFamily": "$font-arabic",
+          "fontSize": 74,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "uiZMA",
+          "x": 24,
+          "y": 238,
+          "name": "Translit",
+          "fill": "$cream",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "hādhā",
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 18,
+          "fontWeight": "700"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 1,
+          "id": "A1k4m",
+          "x": 154,
+          "y": 271,
+          "name": "Header Rule",
+          "fill": "#E0BC6888",
+          "width": 82,
+          "height": 1
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 18,
+          "id": "X2fiw",
+          "x": 24,
+          "y": 336,
+          "name": "Meaning Card",
+          "fill": "$cream",
+          "width": 342,
+          "height": 152,
+          "stroke": {
+            "thickness": 1,
+            "fill": "$sage-soft"
+          }
+        },
+        {
+          "type": "text",
+          "id": "psPzM",
+          "x": 44,
+          "y": 361,
+          "name": "Meaning",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 302,
+          "content": "this (m)",
+          "lineHeight": 1.15,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 30,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "mIuDl",
+          "x": 48,
+          "y": 410,
+          "name": "Explanation",
+          "fill": "$ink-soft",
+          "textGrowth": "fixed-width",
+          "width": 294,
+          "content": "Used when pointing to a nearby masculine thing or person. In the ayah flow, Noor asks you to notice sound, then meaning.",
+          "lineHeight": 1.45,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 18,
+          "id": "FnAHv",
+          "x": 24,
+          "y": 516,
+          "name": "Illustration Parchment",
+          "fill": "$parchment-soft",
+          "width": 342,
+          "height": 190,
+          "stroke": {
+            "thickness": 1,
+            "fill": "$gold"
+          }
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 10,
+          "id": "LS32m",
+          "x": 196,
+          "y": 590,
+          "name": "Object Tray",
+          "fill": "$cream",
+          "width": 132,
+          "height": 78,
+          "stroke": {
+            "thickness": 1,
+            "fill": "$sage-soft"
+          }
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 6,
+          "id": "S9yZk",
+          "x": 241,
+          "y": 608,
+          "name": "Near Object",
+          "fill": "#C8A04733",
+          "width": 42,
+          "height": 42,
+          "stroke": {
+            "thickness": 1,
+            "fill": "$gold-deep"
+          }
+        },
+        {
+          "type": "path",
+          "id": "tM854",
+          "x": 70,
+          "y": 580,
+          "name": "Pointing Hand",
+          "geometry": "M4 38c18-8 34-16 52-24m0 0l-6-9m6 9l-9 10m13-9c15 2 28 5 48 7",
+          "viewBox": [
+            0,
+            0,
+            112,
+            62
+          ],
+          "fill": "#FFFFFF00",
+          "width": 112,
+          "height": 62,
+          "stroke": {
+            "thickness": 4,
+            "join": "round",
+            "cap": "round",
+            "fill": "$ink"
+          }
+        },
+        {
+          "type": "path",
+          "id": "priAH",
+          "x": 88,
+          "y": 635,
+          "name": "Parchment Stroke",
+          "geometry": "M2 12c16-8 40-8 66 0",
+          "viewBox": [
+            0,
+            0,
+            70,
+            24
+          ],
+          "fill": "#FFFFFF00",
+          "width": 70,
+          "height": 24,
+          "stroke": {
+            "thickness": 2,
+            "cap": "round",
+            "fill": "$gold-deep"
+          }
+        },
+        {
+          "type": "text",
+          "id": "zAyyI",
+          "x": 196,
+          "y": 672,
+          "name": "Near Object Label",
+          "fill": "$ink-muted",
+          "textGrowth": "fixed-width",
+          "width": 132,
+          "content": "near object",
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 12,
+          "fontWeight": "700"
+        },
+        {
+          "type": "ellipse",
+          "id": "LgvzR",
+          "x": 52,
+          "y": 732,
+          "name": "Audio Button",
+          "fill": "$ink",
+          "width": 56,
+          "height": 56
+        },
+        {
+          "type": "icon_font",
+          "id": "eIFFi",
+          "x": 68,
+          "y": 748,
+          "name": "Audio Icon",
+          "width": 25,
+          "height": 25,
+          "iconFontName": "volume-2",
+          "iconFontFamily": "lucide",
+          "fill": "$gold"
+        },
+        {
+          "type": "text",
+          "id": "lXoCL",
+          "x": 124,
+          "y": 736,
+          "name": "Audio Label",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 220,
+          "content": "Hear the word",
+          "fontFamily": "$font-latin",
+          "fontSize": 17,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "NRUYz",
+          "x": 124,
+          "y": 763,
+          "name": "Audio Sub",
+          "fill": "$ink-muted",
+          "textGrowth": "fixed-width",
+          "width": 220,
+          "content": "هَذَا · hādhā",
+          "fontFamily": "$font-latin",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 1,
+          "id": "F5A8cK",
+          "x": 24,
+          "y": 812,
+          "name": "Bottom Rule",
+          "fill": "#9DAB9477",
+          "width": 342,
+          "height": 1
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "xnHBG",
+      "x": 0,
+      "y": 0,
+      "name": "12 Practice Build Sentence",
+      "width": "fit_content(0)",
+      "height": "fit_content(0)"
+    },
+    {
+      "type": "frame",
+      "id": "E8lyci",
+      "x": 2580,
+      "y": 2699,
+      "name": "13 Reveal Quran",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$parchment",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "M4UroQ",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 0,
+          "name": "Ground",
+          "fill": "$parchment",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "type": "text",
+          "id": "ns12d",
+          "layoutPosition": "absolute",
+          "x": 22,
+          "y": 22,
+          "name": "Time",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 60,
+          "content": "9:41",
+          "lineHeight": 1.35,
+          "fontFamily": "Inter",
+          "fontSize": 15,
+          "fontWeight": "600"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "JClkZ",
+          "layoutPosition": "absolute",
+          "x": 318,
+          "y": 34,
+          "name": "Signal 0",
+          "fill": "$ink",
+          "width": 4,
+          "height": 4
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "cA4xi",
+          "layoutPosition": "absolute",
+          "x": 326,
+          "y": 31,
+          "name": "Signal 1",
+          "fill": "$ink",
+          "width": 4,
+          "height": 7
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "nY8Jr",
+          "layoutPosition": "absolute",
+          "x": 334,
+          "y": 28,
+          "name": "Signal 2",
+          "fill": "$ink",
+          "width": 4,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "G0s8A9",
+          "layoutPosition": "absolute",
+          "x": 350,
+          "y": 26,
+          "name": "Battery",
+          "fill": "#FFFFFF00",
+          "width": 22,
+          "height": 11
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "p6D5a",
+          "layoutPosition": "absolute",
+          "x": 98,
+          "y": 82,
+          "name": "Progress 0",
+          "fill": "$gold",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "KKjs8",
+          "layoutPosition": "absolute",
+          "x": 137,
+          "y": 82,
+          "name": "Progress 1",
+          "fill": "$gold",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "QSc5G",
+          "layoutPosition": "absolute",
+          "x": 176,
+          "y": 82,
+          "name": "Progress 2",
+          "fill": "$gold",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "ftz0n",
+          "layoutPosition": "absolute",
+          "x": 215,
+          "y": 82,
+          "name": "Progress 3",
+          "fill": "$gold",
+          "width": 30,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "G53E4",
+          "layoutPosition": "absolute",
+          "x": 254,
+          "y": 82,
+          "name": "Progress 4",
+          "fill": "$sage-soft",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "text",
+          "id": "RRhqX",
+          "layoutPosition": "absolute",
+          "x": 24,
+          "y": 112,
+          "name": "Header",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Now you can see it",
+          "lineHeight": 1.28,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 28,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "qmnii",
+          "layoutPosition": "absolute",
+          "x": 24,
+          "y": 148,
+          "name": "Arabic Header",
+          "fill": "$sage-deep",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "الآن يُمْكِنُكَ رُؤْيَتُهَا",
+          "lineHeight": 1.5,
+          "textAlign": "center",
+          "fontFamily": "$font-arabic",
+          "fontSize": 18,
+          "fontWeight": "600"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 16,
+          "id": "Q2QJ0y",
+          "layoutPosition": "absolute",
+          "x": 20,
+          "y": 206,
+          "name": "Ayah Card",
+          "fill": "$cream",
+          "width": 350,
+          "height": 232
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 1,
+          "id": "aMrwM",
+          "layoutPosition": "absolute",
+          "x": 44,
+          "y": 230,
+          "name": "Card Border Top",
+          "fill": "$sage-soft",
+          "width": 302,
+          "height": 1
+        },
+        {
+          "type": "text",
+          "id": "jHoqg",
+          "layoutPosition": "absolute",
+          "x": 44,
+          "y": 244,
+          "name": "Reveal Label",
+          "fill": "$gold-deep",
+          "textGrowth": "fixed-width",
+          "width": 302,
+          "content": "Al-Baqarah 2:2",
+          "lineHeight": 1.2,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 12,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "EeEDF",
+          "layoutPosition": "absolute",
+          "x": 42,
+          "y": 274,
+          "name": "Ayah Arabic",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 306,
+          "content": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+          "lineHeight": 1.55,
+          "textAlign": "center",
+          "fontFamily": "$font-arabic",
+          "fontSize": 31,
+          "fontWeight": "700"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 10,
+          "id": "EMRC0",
+          "layoutPosition": "absolute",
+          "x": 58,
+          "y": 292,
+          "name": "Highlight 1",
+          "fill": "#E0BC6855",
+          "width": 76,
+          "height": 34
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 10,
+          "id": "keCfR",
+          "layoutPosition": "absolute",
+          "x": 136,
+          "y": 292,
+          "name": "Highlight 2",
+          "fill": "#E0BC6855",
+          "width": 100,
+          "height": 34
+        },
+        {
+          "type": "ellipse",
+          "id": "AhA25",
+          "layoutPosition": "absolute",
+          "x": 306,
+          "y": 374,
+          "name": "Audio",
+          "fill": "$gold",
+          "width": 34,
+          "height": 34
+        },
+        {
+          "type": "icon_font",
+          "id": "qSn2b",
+          "layoutPosition": "absolute",
+          "x": 314,
+          "y": 382,
+          "name": "Audio Icon",
+          "width": 18,
+          "height": 18,
+          "iconFontName": "volume-2",
+          "iconFontFamily": "lucide",
+          "fill": "$ink"
+        },
+        {
+          "type": "text",
+          "id": "p2vc6U",
+          "layoutPosition": "absolute",
+          "x": 44,
+          "y": 394,
+          "name": "Translation",
+          "fill": "$ink-soft",
+          "textGrowth": "fixed-width",
+          "width": 302,
+          "content": "That is the Book — there is no doubt in it — a guidance for those mindful of Allah.",
+          "lineHeight": 1.35,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 16,
+          "id": "Cg4Vz",
+          "layoutPosition": "absolute",
+          "x": 20,
+          "y": 470,
+          "name": "Noor Card",
+          "fill": "$cream",
+          "width": 350,
+          "height": 206
+        },
+        {
+          "type": "ellipse",
+          "id": "QTV3j",
+          "layoutPosition": "absolute",
+          "x": 44,
+          "y": 494,
+          "name": "Noor Seal",
+          "fill": "$sage",
+          "width": 38,
+          "height": 38
+        },
+        {
+          "type": "text",
+          "id": "uhrqr",
+          "layoutPosition": "absolute",
+          "x": 44,
+          "y": 501,
+          "name": "Noor Initial",
+          "fill": "$cream",
+          "textGrowth": "fixed-width",
+          "width": 38,
+          "content": "ن",
+          "lineHeight": 1.2,
+          "textAlign": "center",
+          "fontFamily": "$font-arabic",
+          "fontSize": 22,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "sCJty",
+          "layoutPosition": "absolute",
+          "x": 96,
+          "y": 493,
+          "name": "Noor Title",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 230,
+          "content": "Ustaad Noor",
+          "lineHeight": 1.2,
+          "fontFamily": "$font-latin",
+          "fontSize": 14,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "PK394",
+          "layoutPosition": "absolute",
+          "x": 44,
+          "y": 546,
+          "name": "Noor Copy",
+          "fill": "$ink-soft",
+          "textGrowth": "fixed-width",
+          "width": 302,
+          "content": "You just learned هَذَا. Here, Allah uses ذَلِكَ — 'that' — pointing at الْكِتَاب, the Book. The word كِتَاب appears here in its definite form: الْكِتَاب.",
+          "lineHeight": 1.42,
+          "fontFamily": "$font-latin",
+          "fontSize": 15,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 12,
+          "id": "Wy2hm",
+          "layoutPosition": "absolute",
+          "x": 24,
+          "y": 764,
+          "name": "Primary CTA",
+          "fill": "$gold",
+          "width": 342,
+          "height": 56
+        },
+        {
+          "type": "text",
+          "id": "yUQGr",
+          "layoutPosition": "absolute",
+          "x": 24,
+          "y": 782,
+          "name": "Primary CTA Label",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Continue →",
+          "lineHeight": 1.2,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 16,
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "GjaI1",
+      "x": 3010,
+      "y": 2699,
+      "name": "14 Lesson Close",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$parchment",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "q1GttY",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 0,
+          "name": "Ground",
+          "fill": "$parchment",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "type": "text",
+          "id": "hyKvV",
+          "layoutPosition": "absolute",
+          "x": 22,
+          "y": 22,
+          "name": "Time",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 60,
+          "content": "9:41",
+          "lineHeight": 1.35,
+          "fontFamily": "Inter",
+          "fontSize": 15,
+          "fontWeight": "600"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "vucQq",
+          "layoutPosition": "absolute",
+          "x": 318,
+          "y": 34,
+          "name": "Signal 0",
+          "fill": "$ink",
+          "width": 4,
+          "height": 4
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "Jnfy8",
+          "layoutPosition": "absolute",
+          "x": 326,
+          "y": 31,
+          "name": "Signal 1",
+          "fill": "$ink",
+          "width": 4,
+          "height": 7
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "SM9XQ",
+          "layoutPosition": "absolute",
+          "x": 334,
+          "y": 28,
+          "name": "Signal 2",
+          "fill": "$ink",
+          "width": 4,
+          "height": 10
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "Xv21a",
+          "layoutPosition": "absolute",
+          "x": 350,
+          "y": 26,
+          "name": "Battery",
+          "fill": "#FFFFFF00",
+          "width": 22,
+          "height": 11
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "Oedwq",
+          "layoutPosition": "absolute",
+          "x": 98,
+          "y": 82,
+          "name": "Progress 0",
+          "fill": "$gold",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "t5tqxT",
+          "layoutPosition": "absolute",
+          "x": 137,
+          "y": 82,
+          "name": "Progress 1",
+          "fill": "$gold",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "omxas",
+          "layoutPosition": "absolute",
+          "x": 176,
+          "y": 82,
+          "name": "Progress 2",
+          "fill": "$gold",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "qB5Mz",
+          "layoutPosition": "absolute",
+          "x": 215,
+          "y": 82,
+          "name": "Progress 3",
+          "fill": "$gold",
+          "width": 28,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "XPP5A",
+          "layoutPosition": "absolute",
+          "x": 254,
+          "y": 82,
+          "name": "Progress 4",
+          "fill": "$gold",
+          "width": 30,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 18,
+          "id": "eKkXP",
+          "layoutPosition": "absolute",
+          "x": 20,
+          "y": 116,
+          "name": "Gold Wash",
+          "fill": "$parchment-deep",
+          "width": 350,
+          "height": 260
+        },
+        {
+          "type": "text",
+          "id": "H7JrE",
+          "layoutPosition": "absolute",
+          "x": 24,
+          "y": 145,
+          "name": "Close Arabic",
+          "fill": "$gold-deep",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "بَارَكَ اللَّهُ فِيكَ",
+          "lineHeight": 1.35,
+          "textAlign": "center",
+          "fontFamily": "$font-arabic",
+          "fontSize": 40,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "AO4LI",
+          "layoutPosition": "absolute",
+          "x": 24,
+          "y": 220,
+          "name": "Close Heading",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Lesson complete",
+          "lineHeight": 1.28,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 28,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "iYVTq",
+          "layoutPosition": "absolute",
+          "x": 48,
+          "y": 263,
+          "name": "Close Body",
+          "fill": "$ink-soft",
+          "textGrowth": "fixed-width",
+          "width": 294,
+          "content": "Beautiful start. You've taken your first step — five Arabic words, one grammar pattern, and a glimpse of the Quran. Tomorrow we continue.",
+          "lineHeight": 1.45,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 16,
+          "id": "kFkOi",
+          "layoutPosition": "absolute",
+          "x": 48,
+          "y": 414,
+          "name": "XP Card",
+          "fill": "$cream",
+          "width": 294,
+          "height": 94
+        },
+        {
+          "type": "text",
+          "id": "QIkYW",
+          "layoutPosition": "absolute",
+          "x": 48,
+          "y": 434,
+          "name": "XP Value",
+          "fill": "$gold-deep",
+          "textGrowth": "fixed-width",
+          "width": 294,
+          "content": "+10 XP",
+          "lineHeight": 1.15,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 32,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "fvBOz",
+          "layoutPosition": "absolute",
+          "x": 48,
+          "y": 474,
+          "name": "XP Label",
+          "fill": "$ink-muted",
+          "textGrowth": "fixed-width",
+          "width": 294,
+          "content": "Chapter 1 · Lesson 1",
+          "lineHeight": 1.2,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 16,
+          "id": "ZWrla",
+          "layoutPosition": "absolute",
+          "x": 20,
+          "y": 542,
+          "name": "Summary Card",
+          "fill": "$cream",
+          "width": 350,
+          "height": 152
+        },
+        {
+          "type": "text",
+          "id": "r0e7Ak",
+          "layoutPosition": "absolute",
+          "x": 44,
+          "y": 566,
+          "name": "Summary Title",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 302,
+          "content": "What opened today",
+          "lineHeight": 1.25,
+          "fontFamily": "$font-latin",
+          "fontSize": 16,
+          "fontWeight": "700"
+        },
+        {
+          "type": "ellipse",
+          "id": "Lg7BH",
+          "layoutPosition": "absolute",
+          "x": 48,
+          "y": 604,
+          "name": "Bullet 0",
+          "fill": "$gold",
+          "width": 8,
+          "height": 8
+        },
+        {
+          "type": "ellipse",
+          "id": "N07Uv5",
+          "layoutPosition": "absolute",
+          "x": 48,
+          "y": 636,
+          "name": "Bullet 1",
+          "fill": "$gold",
+          "width": 8,
+          "height": 8
+        },
+        {
+          "type": "ellipse",
+          "id": "bjU5N",
+          "layoutPosition": "absolute",
+          "x": 48,
+          "y": 668,
+          "name": "Bullet 2",
+          "fill": "$gold",
+          "width": 8,
+          "height": 8
+        },
+        {
+          "type": "text",
+          "id": "vPcBd",
+          "layoutPosition": "absolute",
+          "x": 68,
+          "y": 596,
+          "name": "Summary 1",
+          "fill": "$ink-soft",
+          "textGrowth": "fixed-width",
+          "width": 270,
+          "content": "هَذَا means this (near, masculine).",
+          "lineHeight": 1.35,
+          "fontFamily": "$font-latin",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "JUoHp",
+          "layoutPosition": "absolute",
+          "x": 68,
+          "y": 628,
+          "name": "Summary 2",
+          "fill": "$ink-soft",
+          "textGrowth": "fixed-width",
+          "width": 270,
+          "content": "كِتَاب means book.",
+          "lineHeight": 1.35,
+          "fontFamily": "$font-latin",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "cxf6Y",
+          "layoutPosition": "absolute",
+          "x": 68,
+          "y": 660,
+          "name": "Summary 3",
+          "fill": "$ink-soft",
+          "textGrowth": "fixed-width",
+          "width": 270,
+          "content": "Arabic can say 'This book' for 'This is a book.'",
+          "lineHeight": 1.35,
+          "fontFamily": "$font-latin",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 12,
+          "id": "cnQuv",
+          "layoutPosition": "absolute",
+          "x": 24,
+          "y": 764,
+          "name": "Primary CTA",
+          "fill": "$gold",
+          "width": 342,
+          "height": 56
+        },
+        {
+          "type": "text",
+          "id": "J9DZD",
+          "layoutPosition": "absolute",
+          "x": 24,
+          "y": 782,
+          "name": "Primary CTA Label",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Continue →",
+          "lineHeight": 1.2,
+          "textAlign": "center",
+          "fontFamily": "$font-latin",
+          "fontSize": 16,
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "aZZoP",
+      "x": 0,
+      "y": 0,
+      "width": "fit_content(0)",
+      "height": "fit_content(0)"
     }
   ],
   "themes": {

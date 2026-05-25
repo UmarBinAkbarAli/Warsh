@@ -1,5 +1,6 @@
-import { ActivityIndicator, Pressable, StyleSheet, Text, ViewStyle } from "react-native";
-import { Colors, Fonts, Radii, Shadows, Spacing } from "../constants/theme";
+import { StyleSheet, ViewStyle } from "react-native";
+import { Button } from "react-native-paper";
+import { Colors, Fonts, Radii, Spacing, WarshPalette } from "../constants/theme";
 
 type Variant = "primary" | "secondary" | "danger";
 
@@ -24,83 +25,83 @@ export function BrandButton({
 }: BrandButtonProps) {
   const isDisabled = disabled || loading;
 
+  if (variant === "primary") {
+    return (
+      <Button
+        mode="contained"
+        onPress={onPress}
+        disabled={isDisabled}
+        loading={loading}
+        buttonColor={selected ? "rgba(212, 175, 55, 0.12)" : WarshPalette.gold}
+        textColor={selected ? WarshPalette.ink : WarshPalette.ink}
+        style={[styles.base, selected ? styles.selectedBorder : null, style]}
+        contentStyle={styles.content}
+        labelStyle={styles.label}
+      >
+        {title}
+      </Button>
+    );
+  }
+
+  if (variant === "secondary") {
+    return (
+      <Button
+        mode="outlined"
+        onPress={onPress}
+        disabled={isDisabled}
+        loading={loading}
+        textColor={Colors.text.secondary}
+        style={[styles.base, style]}
+        contentStyle={styles.content}
+        labelStyle={[styles.label, styles.labelSecondary]}
+      >
+        {title}
+      </Button>
+    );
+  }
+
+  // danger
   return (
-    <Pressable
-      accessibilityRole="button"
+    <Button
+      mode="contained-tonal"
       onPress={onPress}
       disabled={isDisabled}
-      style={({ pressed }) => [
-        styles.base,
-        styles[variant],
-        selected ? styles.selected : null,
-        variant === "primary" ? Shadows.goldGlow : null,
-        pressed && !isDisabled ? styles.pressed : null,
-        isDisabled ? styles.disabled : null,
-        style,
-      ]}
+      loading={loading}
+      buttonColor="rgba(192, 57, 43, 0.15)"
+      textColor="#E8A09A"
+      style={[styles.base, styles.dangerBorder, style]}
+      contentStyle={styles.content}
+      labelStyle={[styles.label, styles.labelSecondary]}
     >
-      {loading ? (
-        <ActivityIndicator color={variant === "primary" ? Colors.bg.primary : Colors.text.primary} />
-      ) : (
-        <Text style={[styles.label, labelStyles[variant], selected ? labelStyles.selected : null]}>{title}</Text>
-      )}
-    </Pressable>
+      {title}
+    </Button>
   );
 }
 
 const styles = StyleSheet.create({
   base: {
-    minHeight: 52,
     borderRadius: Radii.md + 2,
-    paddingHorizontal: Spacing.xl,
-    paddingVertical: Spacing.md,
-    alignItems: "center",
-    justifyContent: "center",
+    minWidth: 0,
   },
-  primary: {
-    backgroundColor: Colors.accent.gold,
-  },
-  secondary: {
-    backgroundColor: "transparent",
-    borderWidth: 1.5,
-    borderColor: Colors.border.default,
-  },
-  danger: {
-    backgroundColor: "rgba(192, 57, 43, 0.15)",
-    borderWidth: 1.5,
-    borderColor: Colors.accent.crimson,
+  content: {
+    minHeight: 52,
+    paddingHorizontal: Spacing.lg,
   },
   label: {
+    fontFamily: Fonts.bold,
     fontSize: 16,
     fontWeight: "700",
-    fontFamily: Fonts.bold,
+    letterSpacing: 0,
   },
-  pressed: {
-    transform: [{ scale: 0.97 }],
+  labelSecondary: {
+    fontWeight: "600",
   },
-  disabled: {
-    opacity: 0.7,
-  },
-  selected: {
-    borderColor: Colors.accent.gold,
+  selectedBorder: {
     borderWidth: 2,
-    backgroundColor: "rgba(212, 175, 55, 0.12)",
+    borderColor: WarshPalette.gold,
   },
-});
-
-const labelStyles = StyleSheet.create({
-  primary: {
-    color: Colors.bg.primary,
-  },
-  secondary: {
-    color: Colors.text.secondary,
-    fontWeight: "600",
-  },
-  danger: {
-    color: "#E8A09A",
-    fontWeight: "600",
-  },
-  selected: {
-    color: Colors.text.primary,
+  dangerBorder: {
+    borderWidth: 1.5,
+    borderColor: WarshPalette.wrongBorder,
   },
 });

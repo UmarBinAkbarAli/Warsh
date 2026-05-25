@@ -4,10 +4,10 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
+import { TextInput } from "react-native-paper";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -81,8 +81,10 @@ export default function TopicDetailScreen() {
           value={query}
           onChangeText={setQuery}
           placeholder="Search within topic"
-          placeholderTextColor={Colors.text.muted}
-          style={styles.searchInput}
+          mode="outlined"
+          dense
+          left={<TextInput.Icon icon="magnify" />}
+          style={[styles.searchInput, { backgroundColor: Colors.bg.surface }]}
         />
       </View>
 
@@ -153,10 +155,7 @@ const styles = StyleSheet.create({
   },
 
   searchInput: {
-    borderWidth: 1, borderColor: Colors.border.subtle, borderRadius: Radii.md,
-    paddingHorizontal: Spacing.md, paddingVertical: Spacing.md,
-    color: Colors.text.primary, backgroundColor: Colors.bg.surface,
-    fontSize: FontSizes.bodyM,
+    marginBottom: Spacing.sm,
   },
 
   list: { paddingHorizontal: Spacing.xl, paddingBottom: Spacing.xl * 2 },

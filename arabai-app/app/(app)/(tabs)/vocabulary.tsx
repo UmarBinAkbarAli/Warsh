@@ -4,10 +4,10 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
+import { TextInput } from "react-native-paper";
 import { useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -239,8 +239,10 @@ export default function VocabularyScreen() {
         value={query}
         onChangeText={setQuery}
         placeholder="Search Arabic, English, or root"
-        placeholderTextColor={Colors.text.muted}
-        style={styles.searchInput}
+        mode="outlined"
+        dense
+        left={<TextInput.Icon icon="magnify" />}
+        style={[styles.searchInput, { backgroundColor: Colors.bg.surface }]}
       />
 
       {loading ? (
@@ -340,10 +342,7 @@ const styles = StyleSheet.create({
   titleAr: { color: WarshPalette.gold, marginTop: 0 },
 
   searchInput: {
-    borderWidth: 1, borderColor: Colors.border.subtle,
-    borderRadius: Radii.md, paddingHorizontal: Spacing.md,
-    paddingVertical: Spacing.md, color: Colors.text.primary,
-    backgroundColor: Colors.bg.surface, fontSize: FontSizes.bodyM,
+    marginBottom: Spacing.sm,
   },
 
   // Word of Day
