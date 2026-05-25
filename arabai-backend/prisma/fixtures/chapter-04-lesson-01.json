@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+
+  "_meta": {
+    "_note": "Chapter 4, Lesson 1 — Adjective Follows Noun. 12 indefinite masculine noun+adjective pairs introduced. Authored against warsh-content-schema.ts v1.0.",
+    "chapter_order": 4,
+    "lesson_order": 1,
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+
+  "hook": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 6,
+      "label": "Al-Fatiha 1:6",
+      "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "en": "Guide us to the straight path.",
+      "ur": "ہمیں سیدھے راستے کی ہدایت دے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-006-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "You ask Allah for الصِّرَاطَ الْمُسْتَقِيمَ seventeen times every day in Salah. الصِّرَاطَ is the noun — 'path'. الْمُسْتَقِيمَ is the adjective — 'straight'. The adjective always follows its noun in Arabic. Today you learn this pattern with twelve words.",
+      "ur": "آپ نماز میں ہر روز سترہ بار الصِّرَاطَ الْمُسْتَقِيمَ مانگتے ہیں۔ الصِّرَاطَ اسم ہے — 'راستہ'۔ الْمُسْتَقِيمَ صفت ہے — 'سیدھا'۔ عربی میں صفت ہمیشہ اسم کے بعد آتی ہے۔ آج آپ بارہ الفاظ کے ساتھ یہ نمونہ سیکھیں گے۔"
+    },
+    "autoplay": true
+  },
+
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Adjective After Noun — الصِّفَة بَعْدَ الْمَوْصُوف",
+        "ar": "الصِّفَة تَتْبَعُ الْمَوْصُوف",
+        "ur": "صفت اسم کے بعد آتی ہے"
+      },
+      "explanation": {
+        "en": "In English you say 'a generous man' — adjective first. In Arabic it is reversed: رَجُلٌ كَرِيمٌ — 'a man, generous.' The adjective FOLLOWS and COPIES the noun's ending.\n\nBoth noun and adjective are indefinite here — both carry tanween (ٌ).\n\nرَجُلٌ كَرِيمٌ = a generous man\nكِتَابٌ جَدِيدٌ = a new book",
+        "ur": "انگریزی میں 'a generous man' — پہلے صفت۔ عربی میں الٹ ہے: رَجُلٌ كَرِيمٌ — 'ایک آدمی، سخی'۔ صفت اسم کی تقلید کرتی ہے اور بعد میں آتی ہے۔\n\nیہاں دونوں نکرہ ہیں — دونوں پر تنوین (ٌ) ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "رَجُلٌ كَرِيمٌ", "ar_plain": "رجل كريم", "translit": "rajulun karīmun", "en": "a generous man", "ur": "ایک سخی آدمی" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/rajul-kareem.mp3",
+      "explanation": {
+        "en": "رَجُلٌ (a man) + كَرِيمٌ (generous). Both end in ٌ — tanween. Notice the adjective comes after the noun.",
+        "ur": "رَجُلٌ (ایک آدمی) + كَرِيمٌ (سخی)۔ دونوں پر تنوین ٌ ہے۔ صفت اسم کے بعد ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "رجل كريم" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "كِتَابٌ جَدِيدٌ", "ar_plain": "كتاب جديد", "translit": "kitābun jadīdun", "en": "a new book", "ur": "ایک نئی کتاب" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kitab-jadid.mp3",
+      "introduces_vocab": { "ar_plain": "كتاب جديد" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "بَيْتٌ كَبِيرٌ", "ar_plain": "بيت كبير", "translit": "baytun kabīrun", "en": "a big house", "ur": "ایک بڑا گھر" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/bayt-kabir.mp3",
+      "introduces_vocab": { "ar_plain": "بيت كبير" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "وَلَدٌ صَالِحٌ", "ar_plain": "ولد صالح", "translit": "waladun ṣāliḥun", "en": "a righteous boy", "ur": "ایک نیک لڑکا" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/walad-salih.mp3",
+      "introduces_vocab": { "ar_plain": "ولد صالح" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "طَالِبٌ مُجْتَهِدٌ", "ar_plain": "طالب مجتهد", "translit": "ṭālibun mujtahidun", "en": "a hardworking student", "ur": "ایک محنتی طالب علم" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/talib-mujtahid.mp3",
+      "introduces_vocab": { "ar_plain": "طالب مجتهد" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "قَلَمٌ صَغِيرٌ", "ar_plain": "قلم صغير", "translit": "qalamun ṣaghīrun", "en": "a small pen", "ur": "ایک چھوٹا قلم" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/qalam-saghir.mp3",
+      "introduces_vocab": { "ar_plain": "قلم صغير" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "مَسْجِدٌ قَرِيبٌ", "ar_plain": "مسجد قريب", "translit": "masjidun qarībun", "en": "a nearby mosque", "ur": "ایک قریبی مسجد" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/masjid-qarib.mp3",
+      "introduces_vocab": { "ar_plain": "مسجد قريب" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "نَبِيٌّ عَظِيمٌ", "ar_plain": "نبي عظيم", "translit": "nabiyyun ʿaẓīmun", "en": "a great prophet", "ur": "ایک عظیم نبی" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/nabi-azim.mp3",
+      "introduces_vocab": { "ar_plain": "نبي عظيم" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "دِينٌ حَقٌّ", "ar_plain": "دين حق", "translit": "dīnun ḥaqqun", "en": "a true religion", "ur": "ایک سچا دین" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/deen-haqq.mp3",
+      "introduces_vocab": { "ar_plain": "دين حق" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "عِلْمٌ نَافِعٌ", "ar_plain": "علم نافع", "translit": "ʿilmun nāfiʿun", "en": "beneficial knowledge", "ur": "فائدہ مند علم" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/ilm-nafi.mp3",
+      "explanation": {
+        "en": "عِلْمٌ نَافِعٌ — 'beneficial knowledge.' The Prophet ﷺ used to supplicate: اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا. You have already seen this phrase without knowing the grammar.",
+        "ur": "عِلْمٌ نَافِعٌ — 'مفید علم'۔ نبی ﷺ دعا کرتے تھے: اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا۔ آپ یہ جملہ پہلے سے جانتے ہیں۔"
+      },
+      "introduces_vocab": { "ar_plain": "علم نافع" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "كَلَامٌ حَسَنٌ", "ar_plain": "كلام حسن", "translit": "kalāmun ḥasanun", "en": "beautiful speech", "ur": "اچھی بات / خوبصورت کلام" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kalam-hasan.mp3",
+      "introduces_vocab": { "ar_plain": "كلام حسن" }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": { "en": "The Adjective Rule — Summary", "ar": "قاعدة الصِّفَة", "ur": "صفت کا اصول" },
+      "body": {
+        "en": "Adjective in Arabic (الصِّفَة) always follows its noun (الْمَوْصُوف).\n\nFor indefinite nouns, both carry tanween (ٌ/ً/ٍ):\nرَجُلٌ كَرِيمٌ · كِتَابٌ جَدِيدٌ · بَيْتٌ كَبِيرٌ\n\nThe adjective agrees with the noun in:\n1. Gender (masculine/feminine)\n2. Definiteness (indefinite/definite)\n3. Case (nominative/accusative/genitive)",
+        "ur": "عربی صفت (الصِّفَة) ہمیشہ اپنے موصوف (الْمَوْصُوف) کے بعد آتی ہے۔\n\nنکرہ کے لیے دونوں پر تنوین ہوتی ہے:\nرَجُلٌ كَرِيمٌ · كِتَابٌ جَدِيدٌ\n\nصفت ہم آہنگ رہتی ہے:\n1. جنس (مذکر/مؤنث)\n2. معرفہ/نکرہ\n3. اعراب"
+      }
+    }
+  ],
+
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch4-l1-ex1",
+      "prompt": { "ar": "رَجُلٌ كَرِيمٌ", "en": "a generous man", "ur": "ایک سخی آدمی" },
+      "direction": "ar_to_en",
+      "answer": "a generous man",
+      "choices": ["a generous man", "a big house", "a great prophet", "a righteous boy"],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch4-l1-ex2",
+      "prompt": { "ar": "كِتَابٌ جَدِيدٌ", "en": "a new book", "ur": "ایک نئی کتاب" },
+      "direction": "ar_to_en",
+      "answer": "a new book",
+      "choices": ["a new book", "a small pen", "a hardworking student", "beneficial knowledge"],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch4-l1-ex3",
+      "prompt": { "en": "a righteous boy", "ur": "ایک نیک لڑکا" },
+      "direction": "en_to_ar",
+      "answer": "وَلَدٌ صَالِحٌ",
+      "choices": ["وَلَدٌ صَالِحٌ", "وَلَدٌ كَبِيرٌ", "رَجُلٌ كَرِيمٌ", "نَبِيٌّ عَظِيمٌ"],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch4-l1-ex4",
+      "statement": { "en": "In Arabic, the adjective comes before its noun: كَرِيمٌ رَجُلٌ.", "ar": "في العربية، الصِّفَة تَأتِي قَبْلَ الْمَوْصُوفِ: كَرِيمٌ رَجُلٌ.", "ur": "عربی میں صفت اسم سے پہلے آتی ہے: كَرِيمٌ رَجُلٌ۔" },
+      "answer": false,
+      "explanation": {
+        "en": "False — in Arabic the adjective (الصِّفَة) follows its noun (الْمَوْصُوف). Correct: رَجُلٌ كَرِيمٌ (man, generous).",
+        "ur": "غلط — عربی میں صفت اسم کے بعد آتی ہے۔ درست: رَجُلٌ كَرِيمٌ (آدمی، سخی)۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch4-l1-ex5",
+      "template": { "en": "طَالِبٌ ___ = a hardworking student", "ur": "طَالِبٌ ___ = ایک محنتی طالب علم" },
+      "blank_label": { "en": "choose the adjective", "ur": "صفت منتخب کریں" },
+      "answer": "مُجْتَهِدٌ",
+      "choices": ["مُجْتَهِدٌ", "جَدِيدٌ", "كَرِيمٌ", "صَغِيرٌ"],
+      "explanation": {
+        "en": "مُجْتَهِدٌ means 'hardworking / diligent'. It comes after the noun طَالِبٌ (student).",
+        "ur": "مُجْتَهِدٌ کا مطلب 'محنتی / ذی کوشش' ہے۔ یہ اسم طَالِبٌ کے بعد آتی ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch4-l1-ex6",
+      "instruction": { "en": "Match each Arabic phrase to its meaning.", "ur": "ہر عربی جملہ اس کے معنی سے ملائیں۔" },
+      "pairs": [
+        { "ar": "رَجُلٌ كَرِيمٌ", "en": "a generous man" },
+        { "ar": "كِتَابٌ جَدِيدٌ", "en": "a new book" },
+        { "ar": "بَيْتٌ كَبِيرٌ", "en": "a big house" },
+        { "ar": "قَلَمٌ صَغِيرٌ", "en": "a small pen" }
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch4-l1-ex7",
+      "instruction": { "en": "Match each phrase to its meaning.", "ur": "ہر جملہ اس کے معنی سے ملائیں۔" },
+      "pairs": [
+        { "ar": "نَبِيٌّ عَظِيمٌ", "en": "a great prophet" },
+        { "ar": "دِينٌ حَقٌّ", "en": "a true religion" },
+        { "ar": "عِلْمٌ نَافِعٌ", "en": "beneficial knowledge" },
+        { "ar": "كَلَامٌ حَسَنٌ", "en": "beautiful speech" }
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch4-l1-ex8",
+      "instruction": { "en": "Build: 'a nearby mosque'", "ur": "جملہ بنائیں: 'ایک قریبی مسجد'" },
+      "word_bank": ["مَسْجِدٌ", "قَرِيبٌ", "كَبِيرٌ", "الْمَسْجِدُ", "بَعِيدٌ"],
+      "answer": ["مَسْجِدٌ", "قَرِيبٌ"],
+      "explanation": {
+        "en": "مَسْجِدٌ (a mosque — indefinite, tanween) + قَرِيبٌ (nearby — adjective after noun, also tanween). Together: 'a nearby mosque'.",
+        "ur": "مَسْجِدٌ (ایک مسجد — نکرہ، تنوین) + قَرِيبٌ (قریبی — صفت بعد میں، تنوین بھی)۔ مل کر: 'ایک قریبی مسجد'۔"
+      },
+      "xp_value": 1
+    }
+  ],
+
+  "reveal": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 6,
+      "label": "Al-Fatiha 1:6",
+      "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "en": "Guide us to the straight path.",
+      "ur": "ہمیں سیدھے راستے کی ہدایت دے۔"
+    },
+    "highlighted_word": "الْمُسْتَقِيمَ",
+    "noor_comment": {
+      "en": "الصِّرَاطَ الْمُسْتَقِيمَ — 'the straight path.' الصِّرَاطَ is the noun, الْمُسْتَقِيمَ is the adjective that follows it. Both carry ال because they are definite. You ask Allah for this exact phrase seventeen times every day. Now you see the grammar inside your du'a.",
+      "ur": "الصِّرَاطَ الْمُسْتَقِيمَ — 'سیدھا راستہ'۔ الصِّرَاطَ اسم ہے، الْمُسْتَقِيمَ اس کے بعد آنے والی صفت۔ دونوں پر ال ہے کیونکہ یہ معرفہ ہیں۔ آپ یہ جملہ روز سترہ بار مانگتے ہیں۔ اب آپ اپنی دعا کی گرامر دیکھ رہے ہیں۔"
+    },
+    "parse_tokens": [
+      { "ar": "الصِّرَاطَ", "label": "موصوف", "en": "the path (noun)" },
+      { "ar": "الْمُسْتَقِيمَ", "label": "نعت (صِفَة)", "en": "straight (adjective)" }
+    ]
+  }
+}

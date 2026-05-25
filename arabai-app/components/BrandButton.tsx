@@ -1,6 +1,6 @@
-import { StyleSheet, ViewStyle } from "react-native";
+import { ActivityIndicator, Pressable, StyleSheet, Text, ViewStyle } from "react-native";
 import { Button } from "react-native-paper";
-import { Colors, Fonts, Radii, Spacing, WarshPalette } from "../constants/theme";
+import { Colors, Fonts, Radii, Shadows, Spacing, WarshPalette } from "../constants/theme";
 
 type Variant = "primary" | "secondary" | "danger";
 
@@ -14,7 +14,7 @@ type BrandButtonProps = {
   style?: ViewStyle;
 };
 
-// Returns true for colors that need a light text overlay (contrast check)
+// Returns true for hex colors that need a light text overlay
 function isDarkColor(hex?: string): boolean {
   if (!hex || !hex.startsWith("#") || hex.length < 7) return false;
   const r = parseInt(hex.slice(1, 3), 16);
@@ -34,15 +34,12 @@ export function BrandButton({
 }: BrandButtonProps) {
   const isDisabled = disabled || loading;
 
-  // Callers sometimes pass backgroundColor directly in style (e.g. the ink
-  // dark button in lessons). Extract it so we can hand it to Paper's
-  // buttonColor prop — which controls the actual surface — and derive a
-  // readable text color from it automatically.
-  const flat = StyleSheet.flatten(style) as (ViewStyle & { backgroundColor?: string }) | undefined;
-  const bgFromStyle: string | undefined = flat?.backgroundColor;
-  const { backgroundColor: _stripped, ...outerStyle } = flat ?? {};
-
+  // Primary: use Paper Button — simple contained CTA, no selection state needed
   if (variant === "primary") {
+    const flat = StyleSheet.flatten(style) as (ViewStyle & { backgroundColor?: string }) | undefined;
+    const bgFromStyle: string | undefined = flat?.backgroundColor;
+    const { backgroundColor: _stripped, ...outerStyle } = flat ?? {};
+
     const bg = bgFromStyle ?? (selected ? "rgba(212, 175, 55, 0.12)" : WarshPalette.gold);
     const fg = isDarkColor(bgFromStyle) ? WarshPalette.creamBg : WarshPalette.ink;
 
@@ -54,74 +51,136 @@ export function BrandButton({
         loading={loading}
         buttonColor={bg}
         textColor={fg}
-        style={[styles.base, selected ? styles.selectedBorder : null, outerStyle]}
-        contentStyle={styles.content}
-        labelStyle={styles.label}
+        style={[styles.primaryBase, selected ? styles.selectedBorder : null, outerStyle]}
+        contentStyle={styles.primaryContent}
+        labelStyle={styles.primaryLabel}
       >
         {title}
       </Button>
     );
   }
 
+  // Secondary & danger: Pressable — full control over selection border/bg
   if (variant === "secondary") {
     return (
-      <Button
-        mode="outlined"
+      <Pressable
+        accessibilityRole="button"
         onPress={onPress}
         disabled={isDisabled}
-        loading={loading}
-        textColor={Colors.text.secondary}
-        style={[styles.base, outerStyle]}
-        contentStyle={styles.content}
-        labelStyle={[styles.label, styles.labelSecondary]}
+        style={({ pressed }) => [
+          styles.base,
+          styles.secondary,
+          selected ? styles.secondarySelected : null,
+          pressed && !isDisabled ? styles.pressed : null,
+          isDisabled ? styles.disabled : null,
+          style,
+        ]}
       >
-        {title}
-      </Button>
+        {loading
+          ? <ActivityIndicator color={Colors.text.primary} />
+          : <Text style={[styles.label, styles.labelSecondary, selected ? styles.labelSecondarySelected : null]}>
+              {title}
+            </Text>}
+      </Pressable>
     );
   }
 
   // danger
   return (
-    <Button
-      mode="contained-tonal"
+    <Pressable
+      accessibilityRole="button"
       onPress={onPress}
       disabled={isDisabled}
-      loading={loading}
-      buttonColor="rgba(192, 57, 43, 0.15)"
-      textColor="#E8A09A"
-      style={[styles.base, styles.dangerBorder, outerStyle]}
-      contentStyle={styles.content}
-      labelStyle={[styles.label, styles.labelSecondary]}
+      style={({ pressed }) => [
+        styles.base,
+        styles.danger,
+        pressed && !isDisabled ? styles.pressed : null,
+        isDisabled ? styles.disabled : null,
+        style,
+      ]}
     >
-      {title}
-    </Button>
+      {loading
+        ? <ActivityIndicator color="#E8A09A" />
+        : <Text style={[styles.label, styles.labelDanger]}>{title}</Text>}
+    </Pressable>
   );
 }
 
+// ─── styles ──────────────────────────────────────────────────────────────────
+
 const styles = StyleSheet.create({
-  base: {
+  // Paper Button base (primary only)
+  primaryBase: {
     borderRadius: Radii.md + 2,
     minWidth: 0,
   },
-  content: {
+  primaryContent: {
     minHeight: 52,
     paddingHorizontal: Spacing.lg,
   },
-  label: {
+  primaryLabel: {
     fontFamily: Fonts.bold,
     fontSize: 16,
     fontWeight: "700",
     letterSpacing: 0,
   },
-  labelSecondary: {
-    fontWeight: "600",
-  },
   selectedBorder: {
     borderWidth: 2,
     borderColor: WarshPalette.gold,
   },
-  dangerBorder: {
+
+  // Pressable base (secondary + danger)
+  base: {
+    minHeight: 52,
+    borderRadius: Radii.md + 2,
+    paddingHorizontal: Spacing.xl,
+    paddingVertical: Spacing.md,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  secondary: {
+    backgroundColor: "transparent",
+    borderWidth: 1.5,
+    borderColor: Colors.border.default,
+  },
+  secondarySelected: {
+    borderWidth: 2,
+    borderColor: WarshPalette.gold,
+    backgroundColor: "rgba(154, 143, 106, 0.10)",
+  },
+  danger: {
+    backgroundColor: "rgba(192, 57, 43, 0.15)",
     borderWidth: 1.5,
     borderColor: WarshPalette.wrongBorder,
+  },
+
+  // Labels
+  label: {
+    fontSize: 16,
+    fontWeight: "700",
+    fontFamily: Fonts.bold,
+  },
+  labelSecondary: {
+    color: Colors.text.secondary,
+    fontWeight: "600",
+    fontFamily: Fonts.semiBold,
+  },
+  labelSecondarySelected: {
+    color: WarshPalette.ink,
+    fontFamily: Fonts.bold,
+    fontWeight: "700",
+  },
+  labelDanger: {
+    color: "#E8A09A",
+    fontWeight: "600",
+    fontFamily: Fonts.semiBold,
+  },
+
+  // States
+  pressed: {
+    transform: [{ scale: 0.97 }],
+  },
+  disabled: {
+    opacity: 0.7,
   },
 });

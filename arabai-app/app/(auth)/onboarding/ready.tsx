@@ -42,7 +42,7 @@ export default function OnboardingReadyScreen() {
         <Text style={{ color: Colors.text.secondary }}>Starting point: {placementLabels[placementType] ?? placementLabels.BEGINNER}</Text>
       </View>
       <Link
-        href="/(auth)/register"
+        href="/(auth)/onboarding/attribution"
         style={{
           backgroundColor: Colors.accent.gold,
           color: Colors.bg.primary,

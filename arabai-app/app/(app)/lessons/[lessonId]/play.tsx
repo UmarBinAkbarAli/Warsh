@@ -1084,6 +1084,7 @@ export default function LessonPlayScreen() {
 
   function renderClose() {
     const earnedPoints = completionResult?.xpEarned ?? lesson?.xpReward ?? 10;
+    const streak = completionResult?.currentStreak ?? 1;
     const isSpoken = lesson?.type === "SPOKEN_PHRASES";
     const phrasesLearned = phrasesCompletedRef.current;
 
@@ -1093,23 +1094,87 @@ export default function LessonPlayScreen() {
         ? lesson.content.ustadh_noor_tip_en
         : "Tonight, open the Quran and look for the pattern you learned today. You will see the ayah differently now.";
 
+    // Floating Arabic letters — static positions scattered around the screen
+    const floatingLetters = [
+      { char: "أ",  top:  70, left:  30, size: 34, opacity: 0.55, color: "#9A8F6A" },
+      { char: "ب",  top:  90, right: 45, size: 26, opacity: 0.40, color: "#3A5030" },
+      { char: "ق",  top: 140, left:  65, size: 30, opacity: 0.50, color: "#D4C99A" },
+      { char: "ر",  top: 110, right: 80, size: 22, opacity: 0.45, color: "#9A8F6A" },
+      { char: "م",  top: 200, left:  20, size: 28, opacity: 0.35, color: "#3A5030" },
+      { char: "ل",  top: 170, right: 30, size: 38, opacity: 0.50, color: "#D4C99A" },
+      { char: "ن",  top: 260, left:  55, size: 24, opacity: 0.40, color: "#9A8F6A" },
+      { char: "ه",  top: 230, right: 55, size: 32, opacity: 0.45, color: "#3A5030" },
+      { char: "و",  top: 310, left:  35, size: 28, opacity: 0.35, color: "#D4C99A" },
+      { char: "ي",  top: 340, right: 25, size: 36, opacity: 0.50, color: "#9A8F6A" },
+      { char: "ع",  top: 400, left:  22, size: 24, opacity: 0.40, color: "#3A5030" },
+      { char: "ك",  top: 420, right: 60, size: 30, opacity: 0.45, color: "#D4C99A" },
+      { char: "ص",  top: 460, left:  70, size: 22, opacity: 0.35, color: "#9A8F6A" },
+      { char: "ف",  top: 500, right: 35, size: 28, opacity: 0.40, color: "#3A5030" },
+      { char: "ج",  top: 540, left:  40, size: 32, opacity: 0.45, color: "#D4C99A" },
+    ];
+
     return (
-      <View style={[styles.fullScreen, screenPadding]}>
-        <View style={styles.closeContent}>
+      <View style={[styles.fullScreen, screenPadding, styles.closeScreen]}>
+        {/* Floating Arabic letters */}
+        {floatingLetters.map((l, i) => (
+          <Text
+            key={i}
+            style={{
+              position: "absolute",
+              top: l.top,
+              left: "left" in l ? (l as any).left : undefined,
+              right: "right" in l ? (l as any).right : undefined,
+              fontSize: l.size,
+              opacity: l.opacity,
+              color: l.color,
+              fontFamily: "Scheherazade New",
+            }}
+          >
+            {l.char}
+          </Text>
+        ))}
+
+        {/* Central completion card */}
+        <View style={styles.closeCenter}>
           {error ? <Text style={styles.errorText}>{error}</Text> : null}
-          <Text style={styles.xpText}>+{earnedPoints} pts</Text>
-          <ArabicText size="lg" style={styles.closeArabic}>
+
+          <View style={styles.completeCard}>
+            <Text style={styles.completeCardTitle}>Lesson Complete!</Text>
+            <Text style={styles.xpBadge}>+{earnedPoints} pts</Text>
+          </View>
+
+          {/* Noor avatar */}
+          <View style={styles.noorAvatar}>
+            <View style={styles.noorAvatarEyes}>
+              <View style={styles.noorEye} />
+              <View style={styles.noorEye} />
+            </View>
+            <View style={styles.noorAvatarDot} />
+          </View>
+
+          <ArabicText size="md" style={styles.closeArabic}>
             بارك الله فيك
           </ArabicText>
+
           {isSpoken && phrasesLearned > 0 ? (
-            <Text style={styles.spPhrasesEarned}>{phrasesLearned} phrase{phrasesLearned !== 1 ? "s" : ""} learned to say</Text>
+            <Text style={styles.spPhrasesEarned}>
+              {phrasesLearned} phrase{phrasesLearned !== 1 ? "s" : ""} learned to say
+            </Text>
           ) : null}
-          <View style={styles.noorBubble}>
-            <Text style={styles.noorLabel}>Ustaad Noor</Text>
-            <Text style={styles.noorTip}>{noorTip}</Text>
-          </View>
         </View>
-        <BrandButton title="Back to lessons" onPress={() => router.back()} loading={submitting} style={styles.bottomButton} />
+
+        {/* Noor tip at bottom */}
+        <View style={styles.noorBubble}>
+          <Text style={styles.noorLabel}>Ustaad Noor</Text>
+          <Text style={styles.noorTip}>{noorTip}</Text>
+        </View>
+
+        <BrandButton
+          title="Continue"
+          onPress={() => router.push({ pathname: "/(app)/streak-celebration", params: { streak: String(streak) } })}
+          loading={submitting}
+          style={styles.bottomButton}
+        />
       </View>
     );
   }
@@ -1681,24 +1746,83 @@ const styles = StyleSheet.create({
   highlightedWord: {
     color: "#9A8F6A",
   },
-  closeContent: {
+  closeScreen: {
+    backgroundColor: "#F8F5EE",
+  },
+  closeCenter: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    gap: 16,
+    zIndex: 1,
   },
+  completeCard: {
+    backgroundColor: "#FFFFFF",
+    borderRadius: 20,
+    paddingHorizontal: 40,
+    paddingVertical: 20,
+    alignItems: "center",
+    shadowColor: "#0F1117",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.10,
+    shadowRadius: 16,
+    elevation: 4,
+  },
+  completeCardTitle: {
+    fontFamily: Fonts.bold,
+    fontSize: 22,
+    fontWeight: "700",
+    color: "#0F1117",
+    textAlign: "center",
+  },
+  xpBadge: {
+    marginTop: 6,
+    color: "#3A5030",
+    fontFamily: Fonts.semiBold,
+    fontSize: 15,
+    fontWeight: "600",
+    textAlign: "center",
+  },
+  noorAvatar: {
+    width: 88,
+    height: 88,
+    borderRadius: 44,
+    backgroundColor: "#D4C99A",
+    borderWidth: 3,
+    borderColor: "#9A8F6A",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+  },
+  noorAvatarEyes: {
+    flexDirection: "row",
+    gap: 14,
+  },
+  noorEye: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: "#0F1117",
+  },
+  noorAvatarDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: "#9A8F6A",
+  },
+  closeArabic: {
+    color: "#9A8F6A",
+    fontSize: 22,
+    lineHeight: 34,
+    textAlign: "center",
+  },
+  // Keep old xpText for compatibility (unused now but avoids compile errors if referenced)
   xpText: {
     color: "#3A5030",
     fontFamily: Fonts.semiBold,
     fontSize: 24,
     fontWeight: "500",
     lineHeight: 32,
-    textAlign: "center",
-  },
-  closeArabic: {
-    marginTop: 8,
-    color: "#9A8F6A",
-    fontSize: 22,
-    lineHeight: 34,
     textAlign: "center",
   },
   noorBubble: {
