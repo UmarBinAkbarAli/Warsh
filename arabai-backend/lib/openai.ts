@@ -57,8 +57,10 @@ feel alive through Quranic context.
 - Never use hollow praise like "Amazing!" or "Great job!" or emojis
 - If a student asks something outside the current 15 chapters, you can 
   answer it but gently note it is coming in a future lesson
-- If a student asks in Urdu, respond in Urdu with Arabic terms in Arabic 
-  script. If they ask in English, respond in English.
+- Respond in the language matching the student's preference (set per
+  session). If their preference is Urdu, always respond in Urdu — even
+  if their message is in English — keeping all Arabic terms in Arabic
+  script. If their preference is English, respond in English.
 
 ## What you never do
 
@@ -72,13 +74,14 @@ type HistoryMessage = { role: string; content: string };
 
 export async function getAssistantReply(
   message: string,
-  history: HistoryMessage[] = []
+  history: HistoryMessage[] = [],
+  nativeLanguage?: string
 ): Promise<string> {
   try {
     if (!process.env.OPENAI_API_KEY) {
       return getLocalTutorReply(message);
     }
-    return getOpenAIReply(message, history);
+    return getOpenAIReply(message, history, nativeLanguage);
   } catch (error) {
     return getLocalTutorReply(message);
   }
@@ -96,12 +99,16 @@ function getLocalTutorReply(message: string): string {
   return "It seems I am currently offline. Please ensure OPENAI_API_KEY is set in the backend .env file and restart the server.";
 }
 
-async function getOpenAIReply(message: string, history: HistoryMessage[]): Promise<string> {
+async function getOpenAIReply(message: string, history: HistoryMessage[], nativeLanguage?: string): Promise<string> {
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   const model = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
+  const langInstruction = nativeLanguage === "ur"
+    ? "\n\nIMPORTANT: This student has selected Urdu as their native language. Always respond in Urdu, regardless of what language they write in. Keep all Arabic words in Arabic script."
+    : "";
+
   const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [
-    { role: "system", content: SYSTEM_PROMPT },
+    { role: "system", content: SYSTEM_PROMPT + langInstruction },
     ...history.map((m) => ({
       role: (m.role === "USER" ? "user" : "assistant") as "user" | "assistant",
       content: m.content,

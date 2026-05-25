@@ -20,6 +20,10 @@ const ch03L01Content = require("./fixtures/chapter-03-lesson-01.json");
 const ch03L02Content = require("./fixtures/chapter-03-lesson-02.json");
 const ch03L03Content = require("./fixtures/chapter-03-lesson-03.json");
 const ch03L04Content = require("./fixtures/chapter-03-lesson-04.json");
+const ch04L01Content = require("./fixtures/chapter-04-lesson-01.json");
+const ch04L02Content = require("./fixtures/chapter-04-lesson-02.json");
+const ch04L03Content = require("./fixtures/chapter-04-lesson-03.json");
+const ch04L04Content = require("./fixtures/chapter-04-lesson-04.json");
 
 const ACHIEVEMENTS = [
   { key: "first_lesson",           title: "الخُطْوَة الأُولَى",            description: "Complete your very first lesson",                    icon: "footsteps-outline",   xpReward: 25  },
@@ -61,190 +65,94 @@ async function waitForNeon(retries = 8, delayMs = 3000) {
 }
 
 async function main() {
-  // Wait for Neon to wake up (free tier suspends after inactivity)
   await waitForNeon();
 
-  // Delete in FK-safe order: children before parents
-  await prisma.userSurahProgress.deleteMany();
-  await prisma.userVocabularyWord.deleteMany();
-  await prisma.progress.deleteMany();
-  await prisma.chatMessage.deleteMany();
-  await prisma.userAchievement.deleteMany();
-  await prisma.streak.deleteMany();
-  await prisma.achievement.deleteMany();
-  await prisma.lesson.deleteMany();
-  await prisma.chapter.deleteMany();
-  await prisma.user.deleteMany();
-  await prisma.vocabularyWord.deleteMany();
-  await prisma.tadabburSurah.deleteMany();
+  const userCount = await prisma.user.count();
 
-  for (const achievement of ACHIEVEMENTS) {
-    await prisma.achievement.create({ data: achievement });
+  if (userCount === 0) {
+    // No users — safe to do a full clean reset before seeding
+    console.log("No users found — performing full reset...");
+    await prisma.userSurahProgress.deleteMany();
+    await prisma.userVocabularyWord.deleteMany();
+    await prisma.progress.deleteMany();
+    await prisma.chatMessage.deleteMany();
+    await prisma.userAchievement.deleteMany();
+    await prisma.streak.deleteMany();
+    await prisma.achievement.deleteMany();
+    await prisma.lesson.deleteMany();
+    await prisma.chapter.deleteMany();
+    await prisma.user.deleteMany();
+    await prisma.vocabularyWord.deleteMany();
+    await prisma.tadabburSurah.deleteMany();
+  } else {
+    // Users exist — only refresh vocabulary/tadabbur; preserve all user progress
+    console.log(`${userCount} user(s) found — preserving accounts and progress, refreshing vocabulary/tadabbur...`);
+    await prisma.userSurahProgress.deleteMany();
+    await prisma.userVocabularyWord.deleteMany();
+    await prisma.vocabularyWord.deleteMany();
+    await prisma.tadabburSurah.deleteMany();
   }
 
-  // Seed chapter metadata only — lessons are now authored individually in
-  // prisma/fixtures/ using warsh-content-schema.ts (see Docs/).
+  // Upsert achievements by key (safe for both modes)
+  for (const achievement of ACHIEVEMENTS) {
+    await prisma.achievement.upsert({
+      where: { key: achievement.key },
+      update: achievement,
+      create: achievement,
+    });
+  }
+
+  // Upsert chapters by order — stable across seed runs
   const allChapters = [...chapters, ...chapters2, ...chapters3, ...chapters4];
   const chapterIdByOrder = new Map();
 
   for (const chapterData of allChapters) {
     const { lessons: _unused, ...chapterFields } = chapterData;
-    const created = await prisma.chapter.create({ data: chapterFields });
+    const created = await prisma.chapter.upsert({
+      where: { order: chapterFields.order },
+      update: chapterFields,
+      create: chapterFields,
+    });
     chapterIdByOrder.set(created.order, created.id);
   }
 
-  // Chapter 1 — fully authored lessons (warsh-content-schema v1.0)
+  // Upsert lessons with stable IDs (ch01-l01 … ch04-l04).
+  // Stable IDs mean progress records survive future seed runs.
   const ch1Id = chapterIdByOrder.get(1);
-
-  await prisma.lesson.create({
-    data: {
-      chapterId: ch1Id,
-      order: 1,
-      title: "First Encounter with هَذَا",
-      titleAr: "اللقاء الأول مع هَذَا",
-      template: "STANDARD",
-      xpReward: ch01L01Content._meta?.xp_reward ?? 10,
-      content: ch01L01Content,
-    },
-  });
-
-  await prisma.lesson.create({
-    data: {
-      chapterId: ch1Id,
-      order: 2,
-      title: "That, What, and Who — ذٰلِكَ، مَا، مَنْ",
-      titleAr: "ذٰلِكَ وَمَا وَمَنْ",
-      template: "STANDARD",
-      xpReward: ch01L02Content._meta?.xp_reward ?? 10,
-      content: ch01L02Content,
-    },
-  });
-
-  await prisma.lesson.create({
-    data: {
-      chapterId: ch1Id,
-      order: 3,
-      title: "Feminine Forms — هَذِهِ and تِلْكَ",
-      titleAr: "هَذِهِ وَتِلْكَ",
-      template: "STANDARD",
-      xpReward: ch01L03Content._meta?.xp_reward ?? 10,
-      content: ch01L03Content,
-    },
-  });
-
-  await prisma.lesson.create({
-    data: {
-      chapterId: ch1Id,
-      order: 4,
-      title: "Chapter 1 Review",
-      titleAr: "مُرَاجَعَة الفَصْل الأَوَّل",
-      template: "REVIEW",
-      xpReward: ch01L04Content._meta?.xp_reward ?? 20,
-      content: ch01L04Content,
-    },
-  });
-
-  // Chapter 2 — fully authored lessons (warsh-content-schema v1.0)
   const ch2Id = chapterIdByOrder.get(2);
-
-  await prisma.lesson.create({
-    data: {
-      chapterId: ch2Id,
-      order: 1,
-      title: "Tanween — The Sound of 'A'",
-      titleAr: "التَّنْوِين — صَوْتُ النَّكِرَة",
-      template: "STANDARD",
-      xpReward: ch02L01Content._meta?.xp_reward ?? 10,
-      content: ch02L01Content,
-    },
-  });
-
-  await prisma.lesson.create({
-    data: {
-      chapterId: ch2Id,
-      order: 2,
-      title: "ال — The Definite Article",
-      titleAr: "التَّعْرِيف بِالْ",
-      template: "STANDARD",
-      xpReward: ch02L02Content._meta?.xp_reward ?? 10,
-      content: ch02L02Content,
-    },
-  });
-
-  await prisma.lesson.create({
-    data: {
-      chapterId: ch2Id,
-      order: 3,
-      title: "أَيْنَ — Where?",
-      titleAr: "أَيْنَ وَحُرُوف الْجَرّ",
-      template: "STANDARD",
-      xpReward: ch02L03Content._meta?.xp_reward ?? 10,
-      content: ch02L03Content,
-    },
-  });
-
-  await prisma.lesson.create({
-    data: {
-      chapterId: ch2Id,
-      order: 4,
-      title: "Chapter 2 Review",
-      titleAr: "مُرَاجَعَة الفَصْل الثَّانِي",
-      template: "REVIEW",
-      xpReward: ch02L04Content._meta?.xp_reward ?? 20,
-      content: ch02L04Content,
-    },
-  });
-
-  // Chapter 3 — fully authored lessons (warsh-content-schema v1.0)
   const ch3Id = chapterIdByOrder.get(3);
+  const ch4Id = chapterIdByOrder.get(4);
 
-  await prisma.lesson.create({
-    data: {
-      chapterId: ch3Id,
-      order: 1,
-      title: "The Idafa Construction — Possession",
-      titleAr: "الإِضَافَة — الْمِلْكِيَّة",
-      template: "STANDARD",
-      xpReward: ch03L01Content._meta?.xp_reward ?? 10,
-      content: ch03L01Content,
-    },
-  });
+  const lessons = [
+    // Chapter 1
+    { id: "ch01-l01", chapterId: ch1Id, order: 1, title: "First Encounter with هَذَا",           titleAr: "اللقاء الأول مع هَذَا",                    template: "STANDARD", xpReward: ch01L01Content._meta?.xp_reward ?? 10, content: ch01L01Content },
+    { id: "ch01-l02", chapterId: ch1Id, order: 2, title: "That, What, and Who — ذٰلِكَ، مَا، مَنْ", titleAr: "ذٰلِكَ وَمَا وَمَنْ",                        template: "STANDARD", xpReward: ch01L02Content._meta?.xp_reward ?? 10, content: ch01L02Content },
+    { id: "ch01-l03", chapterId: ch1Id, order: 3, title: "Feminine Forms — هَذِهِ and تِلْكَ",      titleAr: "هَذِهِ وَتِلْكَ",                            template: "STANDARD", xpReward: ch01L03Content._meta?.xp_reward ?? 10, content: ch01L03Content },
+    { id: "ch01-l04", chapterId: ch1Id, order: 4, title: "Chapter 1 Review",                      titleAr: "مُرَاجَعَة الفَصْل الأَوَّل",                template: "REVIEW",   xpReward: ch01L04Content._meta?.xp_reward ?? 20, content: ch01L04Content },
+    // Chapter 2
+    { id: "ch02-l01", chapterId: ch2Id, order: 1, title: "Tanween — The Sound of 'A'",            titleAr: "التَّنْوِين — صَوْتُ النَّكِرَة",            template: "STANDARD", xpReward: ch02L01Content._meta?.xp_reward ?? 10, content: ch02L01Content },
+    { id: "ch02-l02", chapterId: ch2Id, order: 2, title: "ال — The Definite Article",              titleAr: "التَّعْرِيف بِالْ",                          template: "STANDARD", xpReward: ch02L02Content._meta?.xp_reward ?? 10, content: ch02L02Content },
+    { id: "ch02-l03", chapterId: ch2Id, order: 3, title: "أَيْنَ — Where?",                        titleAr: "أَيْنَ وَحُرُوف الْجَرّ",                    template: "STANDARD", xpReward: ch02L03Content._meta?.xp_reward ?? 10, content: ch02L03Content },
+    { id: "ch02-l04", chapterId: ch2Id, order: 4, title: "Chapter 2 Review",                      titleAr: "مُرَاجَعَة الفَصْل الثَّانِي",               template: "REVIEW",   xpReward: ch02L04Content._meta?.xp_reward ?? 20, content: ch02L04Content },
+    // Chapter 3
+    { id: "ch03-l01", chapterId: ch3Id, order: 1, title: "The Idafa Construction — Possession",   titleAr: "الإِضَافَة — الْمِلْكِيَّة",                 template: "STANDARD", xpReward: ch03L01Content._meta?.xp_reward ?? 10, content: ch03L01Content },
+    { id: "ch03-l02", chapterId: ch3Id, order: 2, title: "Whose? and O! — لِمَنْ and يَا",         titleAr: "لِمَنْ وَيَا",                               template: "STANDARD", xpReward: ch03L02Content._meta?.xp_reward ?? 10, content: ch03L02Content },
+    { id: "ch03-l03", chapterId: ch3Id, order: 3, title: "Basmalah Unlocked — بِسْمِ اللَّهِ",     titleAr: "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",     template: "STANDARD", xpReward: ch03L03Content._meta?.xp_reward ?? 10, content: ch03L03Content },
+    { id: "ch03-l04", chapterId: ch3Id, order: 4, title: "Chapter 3 Review",                      titleAr: "مُرَاجَعَة الفَصْل الثَّالِث",               template: "REVIEW",   xpReward: ch03L04Content._meta?.xp_reward ?? 20, content: ch03L04Content },
+    // Chapter 4
+    { id: "ch04-l01", chapterId: ch4Id, order: 1, title: "Adjective Follows Noun",                titleAr: "الصِّفَة بَعْدَ الْمَوْصُوف",                template: "STANDARD", xpReward: ch04L01Content._meta?.xp_reward ?? 10, content: ch04L01Content },
+    { id: "ch04-l02", chapterId: ch4Id, order: 2, title: "Definite Agreement — الْبَيْتُ الْكَبِيرُ", titleAr: "الصِّفَة الْمَعْرِفَة",                  template: "STANDARD", xpReward: ch04L02Content._meta?.xp_reward ?? 10, content: ch04L02Content },
+    { id: "ch04-l03", chapterId: ch4Id, order: 3, title: "Feminine Agreement — كَلِمَةٌ طَيِّبَةٌ",  titleAr: "الصِّفَة الْمُؤَنَّثَة",                   template: "STANDARD", xpReward: ch04L03Content._meta?.xp_reward ?? 10, content: ch04L03Content },
+    { id: "ch04-l04", chapterId: ch4Id, order: 4, title: "Chapter 4 Review",                      titleAr: "مُرَاجَعَة الْفَصْل الرَّابِع",              template: "REVIEW",   xpReward: ch04L04Content._meta?.xp_reward ?? 20, content: ch04L04Content },
+  ];
 
-  await prisma.lesson.create({
-    data: {
-      chapterId: ch3Id,
-      order: 2,
-      title: "Whose? and O! — لِمَنْ and يَا",
-      titleAr: "لِمَنْ وَيَا",
-      template: "STANDARD",
-      xpReward: ch03L02Content._meta?.xp_reward ?? 10,
-      content: ch03L02Content,
-    },
-  });
-
-  await prisma.lesson.create({
-    data: {
-      chapterId: ch3Id,
-      order: 3,
-      title: "Basmalah Unlocked — بِسْمِ اللَّهِ",
-      titleAr: "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",
-      template: "STANDARD",
-      xpReward: ch03L03Content._meta?.xp_reward ?? 10,
-      content: ch03L03Content,
-    },
-  });
-
-  await prisma.lesson.create({
-    data: {
-      chapterId: ch3Id,
-      order: 4,
-      title: "Chapter 3 Review",
-      titleAr: "مُرَاجَعَة الفَصْل الثَّالِث",
-      template: "REVIEW",
-      xpReward: ch03L04Content._meta?.xp_reward ?? 20,
-      content: ch03L04Content,
-    },
-  });
+  for (const { id, ...data } of lessons) {
+    await prisma.lesson.upsert({
+      where: { id },
+      update: data,
+      create: { id, ...data },
+    });
+  }
 
   await seedVocabulary(prisma);
   await seedTadabbur(prisma);

@@ -14,6 +14,7 @@ import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
 import { getSRSDueWords, submitSRSReview } from "@services/api";
 import { trackSRSReviewCompleted } from "@services/analytics";
+import { useLanguage, pickTranslation } from "@services/language";
 
 interface QuranicExample {
   surahNameEn: string;
@@ -41,6 +42,7 @@ type Stage = "loading" | "empty" | "pre" | "front" | "back" | "done";
 export default function SRSReviewScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const language = useLanguage();
 
   const [stage, setStage] = useState<Stage>("loading");
   const [queue, setQueue] = useState<DueWord[]>([]);
@@ -221,7 +223,7 @@ export default function SRSReviewScreen() {
           {stage === "back" ? (
             <View style={styles.backContent}>
               <View style={styles.divider} />
-              <Text style={styles.cardTranslation}>{current?.word.translationEn}</Text>
+              <Text style={styles.cardTranslation}>{current?.word ? pickTranslation(current.word, language) : ""}</Text>
               <Text style={styles.cardTranslit}>{current?.word.transliteration}</Text>
               {current?.word.quranicExample ? (
                 <View style={styles.cardAyah}>

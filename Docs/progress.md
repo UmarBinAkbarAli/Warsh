@@ -1,6 +1,6 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-05-24 (Chapter 3 fully authored — 4 lessons seeded)
+Last updated: 2026-05-25 (Urdu localization wired across vocabulary, Noor, and onboarding)
 
 ## Purpose
 
@@ -337,7 +337,24 @@ The repo is in a stronger state than the old tracker wording suggested, but a fe
 - The lesson API transformer in `GET /api/lessons/[id]` converts new content schema → legacy lesson player shape; updating the lesson player to read the new schema directly is future work
 - `npm run db:seed` is fully destructive: wipes all users, progress, chat, achievements, lessons, chapters before reseeding
 
-## Recent Changes (since 2026-05-24) — latest
+## Recent Changes (since 2026-05-25) — latest
+
+### Urdu localization wired (2026-05-25)
+
+- Created `arabai-app/services/language.ts`:
+  - `useLanguage()` hook — reads `user.nativeLanguage` from auth store, falls back to onboarding store language, then `"en"`; returns `"en" | "ur"`
+  - `pickTranslation(word, language)` — selects `translationUr` or `translationEn` based on active language
+- **Vocabulary tab** (`arabai-app/app/(app)/(tabs)/vocabulary.tsx`): `WordRow` and `WordOfDayCard` now accept a `language` prop and call `pickTranslation()` — Urdu users see Urdu meanings throughout the vocabulary bank and word-of-day card
+- **SRS review** (`arabai-app/app/(app)/vocabulary/review.tsx`): card back now shows Urdu translation when user's language is Urdu
+- **Noor (Ustaad Noor) backend** (`arabai-backend/lib/openai.ts`):
+  - `getAssistantReply()` now accepts optional `nativeLanguage` param
+  - When `nativeLanguage === "ur"`, an explicit instruction is appended to the system prompt: always respond in Urdu, keep Arabic in Arabic script, regardless of the language the student writes in
+- **Chat route** (`arabai-backend/app/api/chat/route.ts`): fetches the user's `nativeLanguage` from DB in parallel with recent chat history and passes it to `getAssistantReply()`
+- **Onboarding language screen** (`arabai-app/app/(auth)/onboarding/language.tsx`): removed Hindi option — only Urdu and English are offered, matching actual backend + content support
+- Backend TypeScript check: 0 errors
+- App TypeScript check: 0 errors
+
+## Recent Changes (since 2026-05-24) — latest (previous)
 
 ### Chapter 3 exercise UI bugs fixed (2026-05-25)
 

@@ -16,6 +16,7 @@ import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
 import { getVocabularyWords, getWordOfDay, getSRSDueWords } from "@services/api";
+import { useLanguage, pickTranslation } from "@services/language";
 
 // ─── topic catalog ──────────────────────────────────────────────────────────
 
@@ -62,7 +63,7 @@ interface VocabWord {
 
 // ─── word row ─────────────────────────────────────────────────────────────────
 
-function WordRow({ word, onPress }: { word: VocabWord; onPress?: () => void }) {
+function WordRow({ word, language, onPress }: { word: VocabWord; language: "en" | "ur"; onPress?: () => void }) {
   const inner = (
     <View style={styles.wordCard}>
       <View style={styles.wordTopRow}>
@@ -74,7 +75,7 @@ function WordRow({ word, onPress }: { word: VocabWord; onPress?: () => void }) {
           <Text style={styles.rootText}>root: {word.rootLetters}</Text>
         ) : null}
       </View>
-      <Text style={styles.meaningText}>{word.translationEn}</Text>
+      <Text style={styles.meaningText}>{pickTranslation(word, language)}</Text>
       <Text style={styles.detailText}>{word.transliteration}</Text>
     </View>
   );
@@ -88,7 +89,7 @@ function WordRow({ word, onPress }: { word: VocabWord; onPress?: () => void }) {
 
 // ─── word of day card ────────────────────────────────────────────────────────
 
-function WordOfDayCard({ word, onPress }: { word: VocabWord; onPress?: () => void }) {
+function WordOfDayCard({ word, language, onPress }: { word: VocabWord; language: "en" | "ur"; onPress?: () => void }) {
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={onPress ? 0.8 : 1}>
       <View style={styles.wotdCard}>
@@ -97,7 +98,7 @@ function WordOfDayCard({ word, onPress }: { word: VocabWord; onPress?: () => voi
           <ArabicText size="xl" style={styles.wotdArabic}>{word.arabic}</ArabicText>
           <PlayButton text={word.arabic} cacheKey={word.arabicPlain} category="words" size={28} />
         </View>
-        <Text style={styles.wotdMeaning}>{word.translationEn}</Text>
+        <Text style={styles.wotdMeaning}>{pickTranslation(word, language)}</Text>
         <Text style={styles.wotdTranslit}>{word.transliteration}</Text>
         {word.quranicExample ? (
           <View style={styles.wotdAyah}>
@@ -153,6 +154,7 @@ function TopicGrid({ wordCounts, onPress }: { wordCounts: Record<string, number>
 export default function VocabularyScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const language = useLanguage();
   const [query, setQuery] = useState("");
   const [wordOfDay, setWordOfDay] = useState<VocabWord | null>(null);
   const [searchResults, setSearchResults] = useState<VocabWord[]>([]);
@@ -257,6 +259,7 @@ export default function VocabularyScreen() {
               <WordRow
                 key={w.id}
                 word={w}
+                language={language}
                 onPress={() => router.push(`/(app)/vocabulary/word/${w.id}`)}
               />
             ))
@@ -274,6 +277,7 @@ export default function VocabularyScreen() {
             <View style={{ marginTop: Spacing.lg }}>
               <WordOfDayCard
                 word={wordOfDay}
+                language={language}
                 onPress={() => router.push(`/(app)/vocabulary/word/${wordOfDay.id}`)}
               />
             </View>

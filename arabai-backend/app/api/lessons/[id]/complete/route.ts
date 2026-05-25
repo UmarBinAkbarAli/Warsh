@@ -30,7 +30,15 @@ export async function POST(request: Request, { params }: Props) {
     ? Math.min(phrasesCompleted, 100)
     : 0;
 
-  const lesson = await prisma.lesson.findUnique({ where: { id: params.id } });
+  const [lesson, userExists] = await Promise.all([
+    prisma.lesson.findUnique({ where: { id: params.id } }),
+    prisma.user.findUnique({ where: { id: userId }, select: { id: true } }),
+  ]);
+
+  if (!userExists) {
+    return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
+  }
+
   if (!lesson) {
     return NextResponse.json({ error: "Lesson not found", code: "not_found" }, { status: 404 });
   }

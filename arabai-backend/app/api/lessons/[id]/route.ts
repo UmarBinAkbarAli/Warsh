@@ -284,9 +284,13 @@ export async function GET(request: Request, { params }: Props) {
     getUserCourseState(userId),
     prisma.user.findUnique({
       where: { id: userId },
-      select: { trialStartAt: true, trialExpiresAt: true, subscriptionStatus: true, subscriptionActiveUntil: true, subscriptionProductId: true, noorOverageBalance: true },
+      select: { id: true, trialStartAt: true, trialExpiresAt: true, subscriptionStatus: true, subscriptionActiveUntil: true, subscriptionProductId: true, noorOverageBalance: true },
     }),
   ]);
+
+  if (!user) {
+    return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
+  }
 
   if (chapterStateById.get(lesson.chapterId)?.isLocked) {
     return NextResponse.json({ error: "Chapter is locked", code: "chapter_locked" }, { status: 403 });

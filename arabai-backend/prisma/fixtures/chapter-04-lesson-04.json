@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+
+  "_meta": {
+    "_note": "Chapter 4, Lesson 4 — REVIEW. All three adjective agreement rules reviewed: (1) adjective follows noun, (2) definite agreement, (3) feminine agreement. No new vocabulary. Authored against warsh-content-schema.ts v1.0.",
+    "chapter_order": 4,
+    "lesson_order": 4,
+    "estimated_minutes": 8,
+    "xp_reward": 20
+  },
+
+  "hook": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 6,
+      "label": "Al-Fatiha 1:6",
+      "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "en": "Guide us to the straight path.",
+      "ur": "ہمیں سیدھے راستے کی ہدایت دے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-006-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "الصِّرَاطَ الْمُسْتَقِيمَ — the phrase that opened this chapter. You can now fully parse it: الصِّرَاطَ is the definite masculine noun, الْمُسْتَقِيمَ is the definite adjective that follows and agrees with it. This review has no new words. Everything you need is already inside you.",
+      "ur": "الصِّرَاطَ الْمُسْتَقِيمَ — وہ جملہ جس سے یہ باب شروع ہوا۔ آپ اب اسے پوری طرح پارس کر سکتے ہیں: الصِّرَاطَ معرفہ مذکر اسم ہے، الْمُسْتَقِيمَ اس کے بعد آنے والی معرفہ صفت ہے۔ اس مراجعہ میں کوئی نیا لفظ نہیں۔ آپ کو جو چاہیے وہ پہلے سے آپ کے اندر ہے۔"
+    },
+    "autoplay": true
+  },
+
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Rule 1 — Adjective follows noun",
+        "ar": "الصِّفَة تَأتِي بَعْدَ الْمَوْصُوف",
+        "ur": "اصول 1 — صفت اسم کے بعد"
+      },
+      "explanation": {
+        "en": "The Arabic adjective always follows its noun — never before. For indefinite nouns, both carry tanween:\n\nرَجُلٌ كَرِيمٌ — a generous man\nكِتَابٌ جَدِيدٌ — a new book\nوَلَدٌ صَالِحٌ — a righteous boy\nمَسْجِدٌ قَرِيبٌ — a nearby mosque",
+        "ur": "عربی صفت ہمیشہ اپنے موصوف کے بعد آتی ہے — پہلے کبھی نہیں۔ نکرہ اسموں کے لیے دونوں پر تنوین:\n\nرَجُلٌ كَرِيمٌ — ایک سخی آدمی\nكِتَابٌ جَدِيدٌ — ایک نئی کتاب\nوَلَدٌ صَالِحٌ — ایک نیک لڑکا\nمَسْجِدٌ قَرِيبٌ — ایک قریبی مسجد"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Rule 2 — Definite noun = definite adjective",
+        "ar": "الاسم الْمَعْرِفَة يَسْتَدْعِي صِفَةً مَعْرِفَة",
+        "ur": "اصول 2 — معرفہ اسم = معرفہ صفت"
+      },
+      "explanation": {
+        "en": "When the noun carries ال, the adjective must also carry ال:\n\nالْبَيْتُ الْكَبِيرُ — the big house (noun phrase)\nالرَّجُلُ الْكَرِيمُ — the generous man\nالصِّرَاطُ الْمُسْتَقِيمُ — the straight path\n\nALERT: الْبَيْتُ كَبِيرٌ (ال on noun only) = 'The house is big' — a complete sentence!",
+        "ur": "جب اسم پر ال ہو تو صفت کو بھی ال ہونی چاہیے:\n\nالْبَيْتُ الْكَبِيرُ — بڑا گھر (اسمی ترکیب)\nالرَّجُلُ الْكَرِيمُ — سخی آدمی\nالصِّرَاطُ الْمُسْتَقِيمُ — سیدھا راستہ\n\nتنبیہ: الْبَيْتُ كَبِيرٌ (صرف اسم پر ال) = 'گھر بڑا ہے' — مکمل جملہ!"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Rule 3 — Feminine noun = feminine adjective (add ة)",
+        "ar": "الاسم الْمُؤَنَّث يَسْتَدْعِي صِفَةً مُؤَنَّثَة",
+        "ur": "اصول 3 — مؤنث اسم = مؤنث صفت (ة لگائیں)"
+      },
+      "explanation": {
+        "en": "Feminine nouns (often ending in ة) require feminine adjectives (add ة to the masculine form):\n\nمَدِينَةٌ جَمِيلَةٌ — a beautiful city\nكَلِمَةٌ طَيِّبَةٌ — a good word\nرَحْمَةٌ وَاسِعَةٌ — a vast mercy\nامْرَأَةٌ صَالِحَةٌ — a righteous woman\n\nجَمِيلٌ (masc) → جَمِيلَةٌ (fem)\nطَيِّبٌ (masc) → طَيِّبَةٌ (fem)",
+        "ur": "مؤنث اسم (اکثر ة پر ختم) کو مؤنث صفت چاہیے (مذکر صفت میں ة لگائیں):\n\nمَدِينَةٌ جَمِيلَةٌ — ایک خوبصورت شہر\nكَلِمَةٌ طَيِّبَةٌ — ایک اچھی بات\nرَحْمَةٌ وَاسِعَةٌ — ایک وسیع رحمت\nامْرَأَةٌ صَالِحَةٌ — ایک نیک عورت"
+      }
+    }
+  ],
+
+  "exercises": [
+    {
+      "id": "ch04-l04-ex01",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 5,
+      "prompt": {
+        "ar": "الصِّرَاطُ الْمُسْتَقِيمُ",
+        "ar_plain": "الصراط المستقيم",
+        "translit": "aṣ-ṣirāṭu al-mustaqīmu",
+        "en": "the straight path"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/alsirat-almustaqim.mp3",
+      "options": [
+        { "en": "the straight path", "ur": "سیدھا راستہ" },
+        { "en": "a straight path", "ur": "ایک سیدھا راستہ" },
+        { "en": "the path is straight", "ur": "راستہ سیدھا ہے" },
+        { "en": "the nearby mosque", "ur": "قریبی مسجد" }
+      ],
+      "correct_index": 0
+    },
+    {
+      "id": "ch04-l04-ex02",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 5,
+      "prompt": {
+        "ar": "كَلِمَةٌ طَيِّبَةٌ",
+        "ar_plain": "كلمة طيبة",
+        "translit": "kalimatun ṭayyibatun",
+        "en": "a good word"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kalimah-tayyibah.mp3",
+      "options": [
+        { "en": "a good tree", "ur": "ایک اچھا درخت" },
+        { "en": "a righteous woman", "ur": "ایک نیک عورت" },
+        { "en": "a good word", "ur": "ایک اچھی بات" },
+        { "en": "a vast mercy", "ur": "ایک وسیع رحمت" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "id": "ch04-l04-ex03",
+      "type": "FILL_BLANK",
+      "xp_value": 5,
+      "mode": "TAP",
+      "sentence_ar": "مَدِينَةٌ ___",
+      "hint": {
+        "en": "'A beautiful city' — مَدِينَة is feminine. Choose the correct adjective form.",
+        "ur": "'ایک خوبصورت شہر' — مَدِينَة مؤنث ہے۔ درست صفت منتخب کریں۔"
+      },
+      "options": [
+        { "ar": "جَمِيلٌ", "ar_plain": "جميل", "translit": "jamīlun", "en": "beautiful (masc)" },
+        { "ar": "جَمِيلَةٌ", "ar_plain": "جميلة", "translit": "jamīlatun", "en": "beautiful (fem)" },
+        { "ar": "الْجَمِيلَةُ", "ar_plain": "الجميلة", "translit": "al-jamīlatu", "en": "the beautiful (def. fem)" },
+        { "ar": "جَمِيلًا", "ar_plain": "جميلا", "translit": "jamīlan", "en": "beautiful (acc.)" }
+      ],
+      "correct_answer": {
+        "ar": "جَمِيلَةٌ",
+        "ar_plain": "جميلة",
+        "translit": "jamīlatun",
+        "en": "beautiful (fem)"
+      },
+      "explanation_on_wrong": {
+        "en": "مَدِينَةٌ is feminine (ends in ة) → adjective must be feminine too: جَمِيلَةٌ. The masculine form جَمِيلٌ only goes with masculine nouns.",
+        "ur": "مَدِينَةٌ مؤنث ہے (ة پر ختم) → صفت بھی مؤنث: جَمِيلَةٌ۔ مذکر صفت جَمِيلٌ صرف مذکر اسموں کے ساتھ جاتی ہے۔"
+      }
+    },
+    {
+      "id": "ch04-l04-ex04",
+      "type": "FILL_BLANK",
+      "xp_value": 5,
+      "mode": "TAP",
+      "sentence_ar": "الدِّينُ ___",
+      "hint": {
+        "en": "'The true religion' — definite noun. Choose the correct adjective.",
+        "ur": "'سچا دین' — معرفہ اسم۔ درست صفت منتخب کریں۔"
+      },
+      "options": [
+        { "ar": "حَقٌّ", "ar_plain": "حق", "translit": "ḥaqqun", "en": "true (indef.)" },
+        { "ar": "الْحَقُّ", "ar_plain": "الحق", "translit": "al-ḥaqqu", "en": "the true (def.)" },
+        { "ar": "حَقَّةٌ", "ar_plain": "حقة", "translit": "ḥaqqatun", "en": "true (fem.)" },
+        { "ar": "الْحَقِّ", "ar_plain": "الحق", "translit": "al-ḥaqqi", "en": "the true (gen.)" }
+      ],
+      "correct_answer": {
+        "ar": "الْحَقُّ",
+        "ar_plain": "الحق",
+        "translit": "al-ḥaqqu",
+        "en": "the true (def.)"
+      },
+      "explanation_on_wrong": {
+        "en": "الدِّينُ is definite (has ال) → adjective must also be definite: الْحَقُّ. Using حَقٌّ (no ال) would make it a sentence: 'The religion is true.'",
+        "ur": "الدِّينُ معرفہ ہے (ال ہے) → صفت بھی معرفہ: الْحَقُّ۔ حَقٌّ (بغیر ال) جملہ بناتا: 'دین سچا ہے'۔"
+      }
+    },
+    {
+      "id": "ch04-l04-ex05",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 5,
+      "target_translation": {
+        "en": "a righteous deed (indefinite, masculine)",
+        "ur": "ایک نیک عمل (نکرہ، مذکر)"
+      },
+      "tiles": [
+        { "ar": "عَمَلٌ", "ar_plain": "عمل", "translit": "ʿamalun", "en": "a deed" },
+        { "ar": "صَالِحٌ", "ar_plain": "صالح", "translit": "ṣāliḥun", "en": "righteous (masc)" },
+        { "ar": "صَالِحَةٌ", "ar_plain": "صالحة", "translit": "ṣāliḥatun", "en": "righteous (fem)" },
+        { "ar": "الصَّالِحُ", "ar_plain": "الصالح", "translit": "aṣ-ṣāliḥu", "en": "the righteous (def)" }
+      ],
+      "correct_order": [0, 1],
+      "explanation_on_wrong": {
+        "en": "عَمَلٌ صَالِحٌ — 'a righteous deed.' Both indefinite (tanween). Masculine noun عَمَلٌ → masculine adjective صَالِحٌ (no ة). The adjective comes after.",
+        "ur": "عَمَلٌ صَالِحٌ — 'ایک نیک عمل'۔ دونوں نکرہ (تنوین)۔ مذکر اسم عَمَلٌ → مذکر صفت صَالِحٌ (بغیر ة)۔ صفت بعد میں آتی ہے۔"
+      }
+    },
+    {
+      "id": "ch04-l04-ex06",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 5,
+      "target_translation": {
+        "en": "the beneficial knowledge (definite noun phrase)",
+        "ur": "مفید علم (معرفہ ترکیب)"
+      },
+      "tiles": [
+        { "ar": "الْعِلْمُ", "ar_plain": "العلم", "translit": "al-ʿilmu", "en": "the knowledge" },
+        { "ar": "النَّافِعُ", "ar_plain": "النافع", "translit": "an-nāfiʿu", "en": "the beneficial (def)" },
+        { "ar": "نَافِعٌ", "ar_plain": "نافع", "translit": "nāfiʿun", "en": "beneficial (indef)" },
+        { "ar": "عِلْمٌ", "ar_plain": "علم", "translit": "ʿilmun", "en": "knowledge (indef)" }
+      ],
+      "correct_order": [0, 1],
+      "explanation_on_wrong": {
+        "en": "الْعِلْمُ النَّافِعُ — 'the beneficial knowledge.' Definite noun (الْعِلْمُ) → definite adjective (النَّافِعُ). Both carry ال. Using نَافِعٌ (no ال) would make it a sentence: 'The knowledge is beneficial.'",
+        "ur": "الْعِلْمُ النَّافِعُ — 'مفید علم'۔ معرفہ اسم (الْعِلْمُ) → معرفہ صفت (النَّافِعُ)۔ دونوں پر ال۔ نَافِعٌ (بغیر ال) جملہ بناتا: 'علم فائدہ مند ہے'۔"
+      }
+    },
+    {
+      "id": "ch04-l04-ex07",
+      "type": "TRUE_FALSE",
+      "xp_value": 5,
+      "statement": {
+        "en": "In Arabic, an adjective describing a definite feminine noun must carry both ال and ة.",
+        "ur": "عربی میں معرفہ مؤنث اسم کی صفت پر ال اور ة دونوں ہونی چاہئیں۔",
+        "ar_example": {
+          "ar": "الْمَدِينَةُ الْجَمِيلَةُ",
+          "ar_plain": "المدينة الجميلة",
+          "translit": "al-madīnatu al-jamīlatu",
+          "en": "the beautiful city"
+        }
+      },
+      "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True — الْمَدِينَةُ الْجَمِيلَةُ shows both: ال (definite) AND ة (feminine) on the adjective الْجَمِيلَةُ. Both rules apply together when the noun is definite AND feminine.",
+        "ur": "درست — الْمَدِينَةُ الْجَمِيلَةُ میں دونوں ہیں: ال (معرفہ) اور ة (مؤنث) صفت الْجَمِيلَةُ پر۔ دونوں اصول اکٹھے لاگو ہوتے ہیں جب اسم معرفہ اور مؤنث ہو۔"
+      }
+    },
+    {
+      "id": "ch04-l04-ex08",
+      "type": "MATCHING",
+      "xp_value": 5,
+      "left_column": [
+        { "ar": "رَجُلٌ كَرِيمٌ", "ar_plain": "رجل كريم", "translit": "rajulun karīmun", "en": "a generous man" },
+        { "ar": "الرَّجُلُ الْكَرِيمُ", "ar_plain": "الرجل الكريم", "translit": "ar-rajulu al-karīmu", "en": "the generous man" },
+        { "ar": "مَرْأَةٌ كَرِيمَةٌ", "ar_plain": "مرأة كريمة", "translit": "marʾatun karīmatun", "en": "a generous woman" },
+        { "ar": "الرَّجُلُ كَرِيمٌ", "ar_plain": "الرجل كريم", "translit": "ar-rajulu karīmun", "en": "the man is generous" }
+      ],
+      "right_column": [
+        { "en": "the man is generous (sentence)", "ur": "آدمی سخی ہے (جملہ)" },
+        { "en": "a generous woman (indef. fem.)", "ur": "ایک سخی عورت (نکرہ مؤنث)" },
+        { "en": "a generous man (indef. masc.)", "ur": "ایک سخی آدمی (نکرہ مذکر)" },
+        { "en": "the generous man (def. phrase)", "ur": "سخی آدمی (معرفہ ترکیب)" }
+      ],
+      "correct_pairs": [
+        [0, 2],
+        [1, 3],
+        [2, 1],
+        [3, 0]
+      ]
+    }
+  ],
+
+  "reveal": {
+    "concept_name": {
+      "en": "الصِّرَاطَ الْمُسْتَقِيمَ — fully parsed",
+      "ar": "الصِّرَاطَ الْمُسْتَقِيمَ — تَحْلِيل كَامِل",
+      "ur": "الصِّرَاطَ الْمُسْتَقِيمَ — مکمل پارسنگ"
+    },
+    "ayah": {
+      "surah": 1,
+      "ayah": 6,
+      "label": "Al-Fatiha 1:6",
+      "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "en": "Guide us to the straight path.",
+      "ur": "ہمیں سیدھے راستے کی ہدایت دے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-006-mishary.mp3"
+    },
+    "highlighted_word_indices": [1, 2],
+    "noor_explanation": {
+      "en": "الصِّرَاطَ الْمُسْتَقِيمَ. You can now fully parse this phrase:\n\nالصِّرَاطَ — definite masculine noun ('the path')\nالْمُسْتَقِيمَ — definite masculine adjective ('the straight')\n\nAdjective follows noun ✓. Both definite ✓. Both masculine ✓.\n\nYou have said this phrase 17 times in every Salah, every day of your life. You are now reading it — not reciting it. That is the difference Chapter 4 made.",
+      "ur": "الصِّرَاطَ الْمُسْتَقِيمَ۔ آپ اب اس ترکیب کو مکمل طور پر پارس کر سکتے ہیں:\n\nالصِّرَاطَ — معرفہ مذکر اسم ('راستہ')\nالْمُسْتَقِيمَ — معرفہ مذکر صفت ('سیدھا')\n\nصفت اسم کے بعد ✓۔ دونوں معرفہ ✓۔ دونوں مذکر ✓۔\n\nآپ نے یہ جملہ زندگی بھر ہر نماز میں سترہ بار پڑھا ہے۔ اب آپ اسے پڑھ رہے ہیں — صرف دہرا نہیں رہے۔ یہی فرق ہے جو باب 4 نے ڈالا۔"
+    }
+  },
+
+  "close": {
+    "noor_message": {
+      "en": "Chapter 4 complete. You now know the three rules of Arabic adjective agreement: (1) adjective follows noun, (2) definite noun needs a definite adjective, (3) feminine noun needs a feminine adjective. You can parse الصِّرَاطَ الْمُسْتَقِيمَ, كَلِمَةٌ طَيِّبَةٌ, and الْعَمَلُ الصَّالِحُ — phrases woven through the Quran and your daily worship. Chapter 5 begins soon, in shaa Allah.",
+      "ur": "باب 4 مکمل۔ آپ اب عربی صفت کی ہم آہنگی کے تین اصول جانتے ہیں: (1) صفت اسم کے بعد، (2) معرفہ اسم کو معرفہ صفت، (3) مؤنث اسم کو مؤنث صفت۔ آپ الصِّرَاطَ الْمُسْتَقِيمَ، كَلِمَةٌ طَيِّبَةٌ، اور الْعَمَلُ الصَّالِحُ پارس کر سکتے ہیں — وہ جملے جو قرآن اور آپ کی روزمرہ عبادت میں بنے ہوئے ہیں۔ باب 5 جلد شروع ہوگا، ان شاء اللہ۔"
+    }
+  }
+}

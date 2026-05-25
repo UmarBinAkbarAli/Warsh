@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+
+  "_meta": {
+    "_note": "Chapter 4, Lesson 3 — Feminine Agreement. 11 feminine noun+adjective pairs introduced. Adjective adds ة for feminine nouns. Quranic reveal: كَلِمَةٌ طَيِّبَةٌ. Authored against warsh-content-schema.ts v1.0.",
+    "chapter_order": 4,
+    "lesson_order": 3,
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+
+  "hook": {
+    "ayah": {
+      "surah": 14,
+      "ayah": 24,
+      "label": "Ibrahim 14:24",
+      "ar": "أَلَمْ تَرَ كَيْفَ ضَرَبَ اللَّهُ مَثَلًا كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ",
+      "en": "Do you not see how Allah has set forth a parable — a good word is like a good tree.",
+      "ur": "کیا آپ نے نہیں دیکھا کہ اللہ نے ایک مثال بیان کی — ایک پاکیزہ بات ایک پاکیزہ درخت کی مثل ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/ibrahim-024-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "كَلِمَةً طَيِّبَةً — 'a good word.' كَلِمَةً is feminine (ends in ة). So the adjective طَيِّبَةً also takes ة. The adjective copies the noun's gender. Today you learn this rule with eleven words — and discover why feminine agreement is everywhere in the Quran.",
+      "ur": "كَلِمَةً طَيِّبَةً — 'ایک اچھی بات'۔ كَلِمَةً مؤنث ہے (ة پر ختم)۔ اس لیے صفت طَيِّبَةً کو بھی ة ملتی ہے۔ صفت اسم کی جنس کی تقلید کرتی ہے۔ آج آپ گیارہ الفاظ کے ساتھ یہ اصول سیکھیں گے۔"
+    },
+    "autoplay": true
+  },
+
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Feminine Adjective Agreement — Add ة",
+        "ar": "تَأنِيث الصِّفَة — إِضَافَة تَاء الْمَرْبُوطَة",
+        "ur": "مؤنث صفت — ة لگائیں"
+      },
+      "explanation": {
+        "en": "Masculine adjective: كَرِيمٌ (generous)\nFeminine adjective: كَرِيمَةٌ (generous — feminine)\n\nWhen the noun is feminine (often ends in ة), the adjective must also take ة:\n\nرَجُلٌ كَرِيمٌ → a generous man (masc)\nمَرْأَةٌ كَرِيمَةٌ → a generous woman (fem)\n\nمَدِينَةٌ جَمِيلَةٌ → a beautiful city (fem)",
+        "ur": "مذکر صفت: كَرِيمٌ (سخی)\nمؤنث صفت: كَرِيمَةٌ (سخی — مؤنث)\n\nجب اسم مؤنث ہو (اکثر ة پر ختم) تو صفت کو بھی ة لگتی ہے:\n\nرَجُلٌ كَرِيمٌ → ایک سخی آدمی (مذکر)\nمَرْأَةٌ كَرِيمَةٌ → ایک سخی عورت (مؤنث)\n\nمَدِينَةٌ جَمِيلَةٌ → ایک خوبصورت شہر (مؤنث)"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "مَدِينَةٌ جَمِيلَةٌ", "ar_plain": "مدينة جميلة", "translit": "madīnatun jamīlatun", "en": "a beautiful city", "ur": "ایک خوبصورت شہر" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/madinah-jamilah.mp3",
+      "explanation": {
+        "en": "مَدِينَةٌ (a city — feminine, ends in ة) → the adjective جَمِيلَةٌ also takes ة. Masculine would be جَمِيلٌ.",
+        "ur": "مَدِينَةٌ (ایک شہر — مؤنث، ة پر ختم) → صفت جَمِيلَةٌ کو بھی ة ملتی ہے۔ مذکر ہوتا: جَمِيلٌ۔"
+      },
+      "introduces_vocab": { "ar_plain": "مدينة جميلة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "مَدْرَسَةٌ كَبِيرَةٌ", "ar_plain": "مدرسة كبيرة", "translit": "madrasatun kabīratun", "en": "a big school", "ur": "ایک بڑا اسکول / مدرسہ" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/madrasah-kabirah.mp3",
+      "introduces_vocab": { "ar_plain": "مدرسة كبيرة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "غُرْفَةٌ صَغِيرَةٌ", "ar_plain": "غرفة صغيرة", "translit": "ghurfatun ṣaghīratun", "en": "a small room", "ur": "ایک چھوٹا کمرہ" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/ghurfah-saghirah.mp3",
+      "introduces_vocab": { "ar_plain": "غرفة صغيرة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "امْرَأَةٌ صَالِحَةٌ", "ar_plain": "امرأة صالحة", "translit": "imraʾatun ṣāliḥatun", "en": "a righteous woman", "ur": "ایک نیک عورت" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/imraah-salihah.mp3",
+      "introduces_vocab": { "ar_plain": "امرأة صالحة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "جَنَّةٌ وَاسِعَةٌ", "ar_plain": "جنة واسعة", "translit": "jannatun wāsiʿatun", "en": "a vast garden (paradise)", "ur": "ایک وسیع باغ (جنت)" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/jannah-wasiiah.mp3",
+      "explanation": {
+        "en": "جَنَّةٌ (paradise / garden — feminine) + وَاسِعَةٌ (vast — feminine adjective). وَاسِعٌ is the masculine form; وَاسِعَةٌ adds ة for the feminine noun.",
+        "ur": "جَنَّةٌ (جنت / باغ — مؤنث) + وَاسِعَةٌ (وسیع — مؤنث صفت)۔ وَاسِعٌ مذکر ہے؛ وَاسِعَةٌ مؤنث اسم کے لیے ة لیتی ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "جنة واسعة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "كَلِمَةٌ طَيِّبَةٌ", "ar_plain": "كلمة طيبة", "translit": "kalimatun ṭayyibatun", "en": "a good / pure word", "ur": "ایک اچھی / پاکیزہ بات" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kalimah-tayyibah.mp3",
+      "explanation": {
+        "en": "From Ibrahim 14:24 — كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ. A good word is like a good tree. Both كَلِمَة and شَجَرَة are feminine — both adjectives take ة.",
+        "ur": "ابراہیم 14:24 سے — كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ۔ اچھی بات پاکیزہ درخت کی مثل ہے۔ كَلِمَة اور شَجَرَة دونوں مؤنث — دونوں صفتوں کو ة ملتی ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "كلمة طيبة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "رَحْمَةٌ وَاسِعَةٌ", "ar_plain": "رحمة واسعة", "translit": "raḥmatun wāsiʿatun", "en": "a vast mercy", "ur": "ایک وسیع رحمت" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/rahmah-wasiiah.mp3",
+      "explanation": {
+        "en": "رَحْمَةٌ (mercy — feminine) + وَاسِعَةٌ (vast — feminine adjective). رَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ — 'My mercy encompasses all things' (Al-A'raf 7:156). Allah's mercy is vast.",
+        "ur": "رَحْمَةٌ (رحمت — مؤنث) + وَاسِعَةٌ (وسیع — مؤنث صفت)۔ رَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ — 'میری رحمت ہر چیز کو محیط ہے' (اعراف 7:156)۔"
+      },
+      "introduces_vocab": { "ar_plain": "رحمة واسعة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "نِعْمَةٌ عَظِيمَةٌ", "ar_plain": "نعمة عظيمة", "translit": "niʿmatun ʿaẓīmatun", "en": "a great blessing", "ur": "ایک عظیم نعمت" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/nimah-azimah.mp3",
+      "introduces_vocab": { "ar_plain": "نعمة عظيمة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "سُورَةٌ كَرِيمَةٌ", "ar_plain": "سورة كريمة", "translit": "sūratun karīmatun", "en": "a noble surah", "ur": "ایک شریف/معزز سورت" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/surah-karimah.mp3",
+      "introduces_vocab": { "ar_plain": "سورة كريمة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "صَلَاةٌ خَاشِعَةٌ", "ar_plain": "صلاة خاشعة", "translit": "ṣalātun khāshiʿatun", "en": "a humble / focused prayer", "ur": "ایک خشوع والی نماز" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/salah-khashiah.mp3",
+      "explanation": {
+        "en": "صَلَاةٌ (prayer — feminine) + خَاشِعَةٌ (humble/focused — feminine adjective). الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ — 'those who are humble in their prayers' (Al-Mu'minun 23:2).",
+        "ur": "صَلَاةٌ (نماز — مؤنث) + خَاشِعَةٌ (خشوع والی — مؤنث صفت)۔ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ — 'جو اپنی نمازوں میں خشوع رکھتے ہیں' (مؤمنون 23:2)۔"
+      },
+      "introduces_vocab": { "ar_plain": "صلاة خاشعة" }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": { "en": "Three Rules of Adjective Agreement", "ar": "ثَلَاثَة قَوَاعِد اتِّفَاق الصِّفَة", "ur": "صفت کی ہم آہنگی کے تین اصول" },
+      "body": {
+        "en": "The adjective in Arabic must agree with its noun in THREE ways:\n\n1. GENDER — feminine noun → feminine adjective (add ة)\n   رَجُلٌ كَرِيمٌ ↔ مَرْأَةٌ كَرِيمَةٌ\n\n2. DEFINITENESS — definite noun → definite adjective (add ال)\n   بَيْتٌ كَبِيرٌ ↔ الْبَيْتُ الْكَبِيرُ\n\n3. CASE — (you will master this in Book 3). For now: tanween tells you the case.\n\nYou have now learned rules 1 and 2.",
+        "ur": "عربی صفت اپنے موصوف سے تین طریقوں میں ہم آہنگ ہوتی ہے:\n\n1. جنس — مؤنث اسم → مؤنث صفت (ة لگائیں)\n   رَجُلٌ كَرِيمٌ ↔ مَرْأَةٌ كَرِيمَةٌ\n\n2. معرفہ/نکرہ — معرفہ اسم → معرفہ صفت (ال لگائیں)\n   بَيْتٌ كَبِيرٌ ↔ الْبَيْتُ الْكَبِيرُ\n\n3. اعراب — (آپ اسے کتاب 3 میں سیکھیں گے)۔\n\nآپ نے اب اصول 1 اور 2 سیکھ لیے۔"
+      }
+    }
+  ],
+
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch4-l3-ex1",
+      "prompt": { "ar": "مَدِينَةٌ جَمِيلَةٌ", "en": "a beautiful city", "ur": "ایک خوبصورت شہر" },
+      "direction": "ar_to_en",
+      "answer": "a beautiful city",
+      "choices": ["a beautiful city", "a beautiful man", "the beautiful city", "a vast paradise"],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch4-l3-ex2",
+      "prompt": { "ar": "كَلِمَةٌ طَيِّبَةٌ", "en": "a good / pure word", "ur": "ایک اچھی / پاکیزہ بات" },
+      "direction": "ar_to_en",
+      "answer": "a good / pure word",
+      "choices": ["a good / pure word", "a good tree", "a noble surah", "a vast mercy"],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch4-l3-ex3",
+      "prompt": { "en": "a great blessing", "ur": "ایک عظیم نعمت" },
+      "direction": "en_to_ar",
+      "answer": "نِعْمَةٌ عَظِيمَةٌ",
+      "choices": ["نِعْمَةٌ عَظِيمَةٌ", "نِعْمَةٌ عَظِيمٌ", "رَجُلٌ عَظِيمٌ", "نَبِيٌّ عَظِيمٌ"],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch4-l3-ex4",
+      "statement": { "en": "The correct Arabic for 'a vast mercy' is رَحْمَةٌ وَاسِعٌ.", "ar": "الصحيح في العربية لـ 'رحمة واسعة' هو رَحْمَةٌ وَاسِعٌ.", "ur": "'ایک وسیع رحمت' کے لیے درست عربی رَحْمَةٌ وَاسِعٌ ہے۔" },
+      "answer": false,
+      "explanation": {
+        "en": "False — رَحْمَةٌ is feminine (ends in ة), so the adjective must also be feminine: وَاسِعَةٌ (not وَاسِعٌ which is masculine). Correct: رَحْمَةٌ وَاسِعَةٌ.",
+        "ur": "غلط — رَحْمَةٌ مؤنث ہے (ة پر ختم)، اس لیے صفت بھی مؤنث ہونی چاہیے: وَاسِعَةٌ (نہ کہ مذکر وَاسِعٌ)۔ درست: رَحْمَةٌ وَاسِعَةٌ۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch4-l3-ex5",
+      "template": { "en": "صَلَاةٌ ___ = a humble prayer (صَلَاة is feminine)", "ur": "صَلَاةٌ ___ = خشوع والی نماز (صَلَاة مؤنث ہے)" },
+      "blank_label": { "en": "choose the correct feminine adjective", "ur": "درست مؤنث صفت منتخب کریں" },
+      "answer": "خَاشِعَةٌ",
+      "choices": ["خَاشِعَةٌ", "خَاشِعٌ", "خَاشِعًا", "الْخَاشِعَةُ"],
+      "explanation": {
+        "en": "صَلَاةٌ is feminine (ends in ة) → adjective must be feminine too: خَاشِعَةٌ. The masculine form خَاشِعٌ would be wrong here.",
+        "ur": "صَلَاةٌ مؤنث ہے (ة پر ختم) → صفت بھی مؤنث ہونی چاہیے: خَاشِعَةٌ۔ مذکر خَاشِعٌ یہاں غلط ہوگا۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch4-l3-ex6",
+      "instruction": { "en": "Match each feminine Arabic phrase to its meaning.", "ur": "ہر مؤنث عربی ترکیب کو اس کے معنی سے ملائیں۔" },
+      "pairs": [
+        { "ar": "مَدِينَةٌ جَمِيلَةٌ", "en": "a beautiful city" },
+        { "ar": "مَدْرَسَةٌ كَبِيرَةٌ", "en": "a big school" },
+        { "ar": "امْرَأَةٌ صَالِحَةٌ", "en": "a righteous woman" },
+        { "ar": "جَنَّةٌ وَاسِعَةٌ", "en": "a vast paradise" }
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch4-l3-ex7",
+      "instruction": { "en": "Match each feminine phrase to its meaning.", "ur": "ہر مؤنث ترکیب کو اس کے معنی سے ملائیں۔" },
+      "pairs": [
+        { "ar": "كَلِمَةٌ طَيِّبَةٌ", "en": "a good word" },
+        { "ar": "رَحْمَةٌ وَاسِعَةٌ", "en": "a vast mercy" },
+        { "ar": "نِعْمَةٌ عَظِيمَةٌ", "en": "a great blessing" },
+        { "ar": "صَلَاةٌ خَاشِعَةٌ", "en": "a humble prayer" }
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch4-l3-ex8",
+      "instruction": { "en": "Build: 'a small room' (feminine)", "ur": "جملہ بنائیں: 'ایک چھوٹا کمرہ' (مؤنث)" },
+      "word_bank": ["غُرْفَةٌ", "صَغِيرَةٌ", "صَغِيرٌ", "كَبِيرَةٌ", "الْغُرْفَةُ"],
+      "answer": ["غُرْفَةٌ", "صَغِيرَةٌ"],
+      "explanation": {
+        "en": "غُرْفَةٌ (a room — feminine, has ة) + صَغِيرَةٌ (small — feminine adjective, also ة). صَغِيرٌ would be wrong because the noun is feminine.",
+        "ur": "غُرْفَةٌ (ایک کمرہ — مؤنث، ة ہے) + صَغِيرَةٌ (چھوٹا — مؤنث صفت، ة بھی)۔ صَغِيرٌ غلط ہوتا کیونکہ اسم مؤنث ہے۔"
+      },
+      "xp_value": 1
+    }
+  ],
+
+  "reveal": {
+    "ayah": {
+      "surah": 14,
+      "ayah": 24,
+      "label": "Ibrahim 14:24",
+      "ar": "كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ",
+      "en": "A good word is like a good tree.",
+      "ur": "ایک پاکیزہ بات ایک پاکیزہ درخت کی مثل ہے۔"
+    },
+    "highlighted_word": "طَيِّبَةً",
+    "noor_comment": {
+      "en": "كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ — 'A good word is like a good tree.' Allah pairs two feminine nouns — كَلِمَة and شَجَرَة — each with the same feminine adjective طَيِّبَةٌ. If you had written طَيِّبٌ (masculine), the grammar would break. Allah's words are exact. Now so is your reading.",
+      "ur": "كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ — 'ایک پاکیزہ بات ایک پاکیزہ درخت کی مثل ہے'۔ اللہ دو مؤنث اسموں — كَلِمَة اور شَجَرَة — کو ایک ہی مؤنث صفت طَيِّبَةٌ کے ساتھ جوڑتا ہے۔ اگر طَيِّبٌ (مذکر) لکھتے تو گرامر ٹوٹ جاتی۔ اللہ کے الفاظ بالکل درست ہیں۔ اب آپ کی پڑھائی بھی۔"
+    },
+    "parse_tokens": [
+      { "ar": "كَلِمَةً", "label": "موصوف مؤنث", "en": "word (feminine noun)" },
+      { "ar": "طَيِّبَةً", "label": "نعت مؤنث", "en": "good/pure (feminine adjective)" }
+    ]
+  }
+}

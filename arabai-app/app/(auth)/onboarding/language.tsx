@@ -18,8 +18,6 @@ export default function OnboardingLanguageScreen() {
       </Text>
       <BrandButton title="Urdu" variant="secondary" onPress={() => setLanguage("ur")} selected={language === "ur"} />
       <View style={{ height: Spacing.md }} />
-      <BrandButton title="Hindi" variant="secondary" onPress={() => setLanguage("hi")} selected={language === "hi"} />
-      <View style={{ height: Spacing.md }} />
       <BrandButton title="English" variant="secondary" onPress={() => setLanguage("en")} selected={language === "en"} />
       <View style={{ height: Spacing.xl }} />
       <BrandButton title="Continue" onPress={() => router.push("/(auth)/onboarding/placement")} />

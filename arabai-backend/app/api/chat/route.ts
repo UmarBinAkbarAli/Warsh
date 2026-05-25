@@ -33,15 +33,18 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "daily_limit_reached", code: "too_many_requests" }, { status: 429 });
   }
 
-  const recentHistory = await prisma.chatMessage.findMany({
-    where: { userId },
-    orderBy: { createdAt: "asc" },
-    take: 10,
-    select: { role: true, content: true },
-  });
+  const [recentHistory, userRecord] = await Promise.all([
+    prisma.chatMessage.findMany({
+      where: { userId },
+      orderBy: { createdAt: "asc" },
+      take: 10,
+      select: { role: true, content: true },
+    }),
+    prisma.user.findUnique({ where: { id: userId }, select: { nativeLanguage: true } }),
+  ]);
 
   await prisma.chatMessage.create({ data: { userId, role: "USER", content: message } });
-  const reply = await getAssistantReply(message, recentHistory);
+  const reply = await getAssistantReply(message, recentHistory, userRecord?.nativeLanguage ?? undefined);
   await prisma.chatMessage.create({ data: { userId, role: "ASSISTANT", content: reply, tokens: reply.length } });
 
   return NextResponse.json({ data: { reply, messagesUsedToday: messagesUsedToday + 1, messagesLimit: DAILY_MESSAGE_LIMIT } });
