@@ -14,6 +14,15 @@ type BrandButtonProps = {
   style?: ViewStyle;
 };
 
+// Returns true for colors that need a light text overlay (contrast check)
+function isDarkColor(hex?: string): boolean {
+  if (!hex || !hex.startsWith("#") || hex.length < 7) return false;
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return r * 0.299 + g * 0.587 + b * 0.114 < 128;
+}
+
 export function BrandButton({
   title,
   onPress,
@@ -25,16 +34,27 @@ export function BrandButton({
 }: BrandButtonProps) {
   const isDisabled = disabled || loading;
 
+  // Callers sometimes pass backgroundColor directly in style (e.g. the ink
+  // dark button in lessons). Extract it so we can hand it to Paper's
+  // buttonColor prop — which controls the actual surface — and derive a
+  // readable text color from it automatically.
+  const flat = StyleSheet.flatten(style) as (ViewStyle & { backgroundColor?: string }) | undefined;
+  const bgFromStyle: string | undefined = flat?.backgroundColor;
+  const { backgroundColor: _stripped, ...outerStyle } = flat ?? {};
+
   if (variant === "primary") {
+    const bg = bgFromStyle ?? (selected ? "rgba(212, 175, 55, 0.12)" : WarshPalette.gold);
+    const fg = isDarkColor(bgFromStyle) ? WarshPalette.creamBg : WarshPalette.ink;
+
     return (
       <Button
         mode="contained"
         onPress={onPress}
         disabled={isDisabled}
         loading={loading}
-        buttonColor={selected ? "rgba(212, 175, 55, 0.12)" : WarshPalette.gold}
-        textColor={selected ? WarshPalette.ink : WarshPalette.ink}
-        style={[styles.base, selected ? styles.selectedBorder : null, style]}
+        buttonColor={bg}
+        textColor={fg}
+        style={[styles.base, selected ? styles.selectedBorder : null, outerStyle]}
         contentStyle={styles.content}
         labelStyle={styles.label}
       >
@@ -51,7 +71,7 @@ export function BrandButton({
         disabled={isDisabled}
         loading={loading}
         textColor={Colors.text.secondary}
-        style={[styles.base, style]}
+        style={[styles.base, outerStyle]}
         contentStyle={styles.content}
         labelStyle={[styles.label, styles.labelSecondary]}
       >
@@ -69,7 +89,7 @@ export function BrandButton({
       loading={loading}
       buttonColor="rgba(192, 57, 43, 0.15)"
       textColor="#E8A09A"
-      style={[styles.base, styles.dangerBorder, style]}
+      style={[styles.base, styles.dangerBorder, outerStyle]}
       contentStyle={styles.content}
       labelStyle={[styles.label, styles.labelSecondary]}
     >
