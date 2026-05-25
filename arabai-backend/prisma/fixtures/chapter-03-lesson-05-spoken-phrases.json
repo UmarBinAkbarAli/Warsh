@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "template": "SPOKEN_PHRASES",
+
+  "_meta": {
+    "_note": "SP1 after Chapter 3 — Basic greetings and introductions. Classical Fus'ha only, no dialect. Authored for current mobile SPOKEN_PHRASES renderer.",
+    "chapter_order": 3,
+    "lesson_order": 5,
+    "estimated_minutes": 8,
+    "xp_reward": 15
+  },
+
+  "hook": {
+    "ayah": {
+      "surah": 24,
+      "ayah": 61,
+      "label": "An-Nur 24:61",
+      "ar": "فَسَلِّمُوا عَلَىٰ أَنْفُسِكُمْ تَحِيَّةً مِّنْ عِندِ اللَّهِ",
+      "en": "Then greet one another with a greeting from Allah.",
+      "ur": "پس اپنے لوگوں کو سلام کرو، اللہ کی طرف سے ایک مبارک سلام۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/an-nur-061-part-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Your first spoken lesson begins with the greeting Allah taught this Ummah to love: السلام عليكم.",
+      "ur": "آپ کا پہلا بولنے والا درس اس سلام سے شروع ہوتا ہے جس سے اللہ نے اس امت کو محبت دی: السلام عليكم۔"
+    },
+    "autoplay": true
+  },
+
+  "contextTitle": "السَّلَامُ وَالتَّعَارُف",
+  "contextTitleEn": "Greetings and Introductions",
+  "contextBody": "Use these phrases when you meet a teacher, a classmate, or a brother at the masjid. This is spoken Fus'ha for religious and learning spaces, not casual dialect.",
+
+  "phrases": [
+    {
+      "arabic": "السَّلَامُ عَلَيْكُمْ",
+      "transliteration": "as-salāmu ʿalaykum",
+      "translation": "Peace be upon you",
+      "recognitionOptions": ["Peace be upon you", "And upon you peace", "What is your name?", "I am a student"]
+    },
+    {
+      "arabic": "وَعَلَيْكُمُ السَّلَامُ",
+      "transliteration": "wa ʿalaykumu s-salām",
+      "translation": "And upon you be peace",
+      "recognitionOptions": ["And upon you be peace", "Peace be upon you", "Welcome", "My name is Umar"]
+    },
+    {
+      "arabic": "مَا اسْمُكَ؟",
+      "transliteration": "mā ismuka?",
+      "translation": "What is your name?",
+      "recognitionOptions": ["What is your name?", "My name is...", "How are you?", "Where is the book?"]
+    },
+    {
+      "arabic": "اسْمِي عُمَرُ",
+      "transliteration": "ismī ʿUmaru",
+      "translation": "My name is Umar",
+      "recognitionOptions": ["My name is Umar", "What is your name?", "I am a student", "Peace be upon you"]
+    },
+    {
+      "arabic": "أَنَا طَالِبٌ",
+      "transliteration": "anā ṭālibun",
+      "translation": "I am a student",
+      "recognitionOptions": ["I am a student", "You are a teacher", "My name is Umar", "This is a book"]
+    },
+    {
+      "arabic": "أَهْلًا وَسَهْلًا",
+      "transliteration": "ahlan wa sahlan",
+      "translation": "Welcome",
+      "recognitionOptions": ["Welcome", "Good morning", "Thank you", "Where are you?"]
+    }
+  ],
+
+  "dialogue": [
+    { "speaker": "A", "line": "السَّلَامُ عَلَيْكُمْ", "translation": "Peace be upon you" },
+    { "speaker": "B", "line": "وَعَلَيْكُمُ السَّلَامُ", "translation": "And upon you be peace" },
+    { "speaker": "A", "line": "مَا اسْمُكَ؟", "translation": "What is your name?" },
+    { "speaker": "B", "line": "اسْمِي عُمَرُ. أَنَا طَالِبٌ.", "translation": "My name is Umar. I am a student." },
+    { "speaker": "A", "line": "أَهْلًا وَسَهْلًا", "translation": "Welcome" }
+  ],
+
+  "close": {
+    "noor_message": {
+      "en": "You can now greet and introduce yourself in simple Fus'ha. Keep it gentle and clear.",
+      "ur": "آپ اب سادہ فصحیٰ میں سلام اور تعارف کر سکتے ہیں۔ اسے نرم اور صاف رکھیں۔"
+    }
+  }
+}

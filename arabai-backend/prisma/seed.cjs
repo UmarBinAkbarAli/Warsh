@@ -20,10 +20,20 @@ const ch03L01Content = require("./fixtures/chapter-03-lesson-01.json");
 const ch03L02Content = require("./fixtures/chapter-03-lesson-02.json");
 const ch03L03Content = require("./fixtures/chapter-03-lesson-03.json");
 const ch03L04Content = require("./fixtures/chapter-03-lesson-04.json");
+const ch03L05SpokenContent = require("./fixtures/chapter-03-lesson-05-spoken-phrases.json");
 const ch04L01Content = require("./fixtures/chapter-04-lesson-01.json");
 const ch04L02Content = require("./fixtures/chapter-04-lesson-02.json");
 const ch04L03Content = require("./fixtures/chapter-04-lesson-03.json");
 const ch04L04Content = require("./fixtures/chapter-04-lesson-04.json");
+const ch05L01Content = require("./fixtures/chapter-05-lesson-01.json");
+const ch05L02Content = require("./fixtures/chapter-05-lesson-02.json");
+const ch05L03Content = require("./fixtures/chapter-05-lesson-03.json");
+const ch05L04Content = require("./fixtures/chapter-05-lesson-04.json");
+const ch05L05Content = require("./fixtures/chapter-05-lesson-05.json");
+const ch06L01Content = require("./fixtures/chapter-06-lesson-01.json");
+const ch06L02Content = require("./fixtures/chapter-06-lesson-02.json");
+const ch06L03Content = require("./fixtures/chapter-06-lesson-03.json");
+const ch06L04Content = require("./fixtures/chapter-06-lesson-04.json");
 
 const ACHIEVEMENTS = [
   { key: "first_lesson",           title: "الخُطْوَة الأُولَى",            description: "Complete your very first lesson",                    icon: "footsteps-outline",   xpReward: 25  },
@@ -49,6 +59,12 @@ const adapter = new PrismaPg({
 
 const prisma = new PrismaClient({ adapter });
 
+const PROGRESS_PRIORITY = {
+  NOT_STARTED: 0,
+  SKIPPED_BY_PLACEMENT: 1,
+  COMPLETED: 2,
+};
+
 async function waitForNeon(retries = 8, delayMs = 3000) {
   for (let i = 0; i < retries; i++) {
     try {
@@ -62,6 +78,98 @@ async function waitForNeon(retries = 8, delayMs = 3000) {
       await prisma.$disconnect();
     }
   }
+}
+
+function chooseProgressData(existing, incoming) {
+  if (!existing) return incoming;
+
+  const existingStatus = existing.status || (existing.completed ? "COMPLETED" : "NOT_STARTED");
+  const incomingStatus = incoming.status || (incoming.completed ? "COMPLETED" : "NOT_STARTED");
+  const existingPriority = PROGRESS_PRIORITY[existingStatus] ?? 0;
+  const incomingPriority = PROGRESS_PRIORITY[incomingStatus] ?? 0;
+
+  if (incomingPriority > existingPriority) return incoming;
+  if (incomingPriority < existingPriority) return null;
+
+  return {
+    ...incoming,
+    attempts: Math.max(existing.attempts ?? 0, incoming.attempts ?? 0),
+    xpEarned: Math.max(existing.xpEarned ?? 0, incoming.xpEarned ?? 0),
+    completedAt: existing.completedAt ?? incoming.completedAt,
+  };
+}
+
+async function cleanupObsoleteAuthoredLessons(stableLessons) {
+  const stableLessonIds = stableLessons.map((lesson) => lesson.id);
+  const chapterIds = Array.from(new Set(stableLessons.map((lesson) => lesson.chapterId)));
+  const stableByChapterOrder = new Map(
+    stableLessons.map((lesson) => [`${lesson.chapterId}:${lesson.order}`, lesson])
+  );
+
+  const obsoleteLessons = await prisma.lesson.findMany({
+    where: {
+      chapterId: { in: chapterIds },
+      id: { notIn: stableLessonIds },
+    },
+    select: {
+      id: true,
+      chapterId: true,
+      order: true,
+      progress: {
+        select: {
+          userId: true,
+          completed: true,
+          status: true,
+          score: true,
+          attempts: true,
+          xpEarned: true,
+          completedAt: true,
+        },
+      },
+    },
+  });
+
+  if (obsoleteLessons.length === 0) return;
+
+  for (const obsoleteLesson of obsoleteLessons) {
+    const stableLesson = stableByChapterOrder.get(`${obsoleteLesson.chapterId}:${obsoleteLesson.order}`);
+    if (!stableLesson) continue;
+
+    for (const progress of obsoleteLesson.progress) {
+      const existing = await prisma.progress.findUnique({
+        where: { userId_lessonId: { userId: progress.userId, lessonId: stableLesson.id } },
+      });
+      const incoming = {
+        completed: progress.completed,
+        status: progress.status,
+        score: progress.score,
+        attempts: progress.attempts,
+        xpEarned: progress.xpEarned,
+        completedAt: progress.completedAt,
+      };
+      const merged = chooseProgressData(existing, incoming);
+
+      if (merged) {
+        await prisma.progress.upsert({
+          where: { userId_lessonId: { userId: progress.userId, lessonId: stableLesson.id } },
+          create: {
+            userId: progress.userId,
+            lessonId: stableLesson.id,
+            ...merged,
+          },
+          update: merged,
+        });
+      }
+    }
+  }
+
+  const obsoleteLessonIds = obsoleteLessons.map((lesson) => lesson.id);
+  await prisma.$transaction([
+    prisma.progress.deleteMany({ where: { lessonId: { in: obsoleteLessonIds } } }),
+    prisma.lesson.deleteMany({ where: { id: { in: obsoleteLessonIds } } }),
+  ]);
+
+  console.log(`Removed ${obsoleteLessonIds.length} obsolete duplicate lesson row(s) from fixture-authored chapters.`);
 }
 
 async function main() {
@@ -116,12 +224,14 @@ async function main() {
     chapterIdByOrder.set(created.order, created.id);
   }
 
-  // Upsert lessons with stable IDs (ch01-l01 … ch04-l04).
+  // Upsert lessons with stable IDs (ch01-l01 … ch06-l04).
   // Stable IDs mean progress records survive future seed runs.
   const ch1Id = chapterIdByOrder.get(1);
   const ch2Id = chapterIdByOrder.get(2);
   const ch3Id = chapterIdByOrder.get(3);
   const ch4Id = chapterIdByOrder.get(4);
+  const ch5Id = chapterIdByOrder.get(5);
+  const ch6Id = chapterIdByOrder.get(6);
 
   const lessons = [
     // Chapter 1
@@ -139,11 +249,23 @@ async function main() {
     { id: "ch03-l02", chapterId: ch3Id, order: 2, title: "Whose? and O! — لِمَنْ and يَا",         titleAr: "لِمَنْ وَيَا",                               template: "STANDARD", xpReward: ch03L02Content._meta?.xp_reward ?? 10, content: ch03L02Content },
     { id: "ch03-l03", chapterId: ch3Id, order: 3, title: "Basmalah Unlocked — بِسْمِ اللَّهِ",     titleAr: "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",     template: "STANDARD", xpReward: ch03L03Content._meta?.xp_reward ?? 10, content: ch03L03Content },
     { id: "ch03-l04", chapterId: ch3Id, order: 4, title: "Chapter 3 Review",                      titleAr: "مُرَاجَعَة الفَصْل الثَّالِث",               template: "REVIEW",   xpReward: ch03L04Content._meta?.xp_reward ?? 20, content: ch03L04Content },
+    { id: "ch03-l05", chapterId: ch3Id, order: 5, title: "SP1 — Greetings and Introductions",      titleAr: "السَّلَامُ وَالتَّعَارُف",                    template: "SPOKEN_PHRASES", xpReward: ch03L05SpokenContent._meta?.xp_reward ?? 15, content: ch03L05SpokenContent },
     // Chapter 4
     { id: "ch04-l01", chapterId: ch4Id, order: 1, title: "Adjective Follows Noun",                titleAr: "الصِّفَة بَعْدَ الْمَوْصُوف",                template: "STANDARD", xpReward: ch04L01Content._meta?.xp_reward ?? 10, content: ch04L01Content },
     { id: "ch04-l02", chapterId: ch4Id, order: 2, title: "Definite Agreement — الْبَيْتُ الْكَبِيرُ", titleAr: "الصِّفَة الْمَعْرِفَة",                  template: "STANDARD", xpReward: ch04L02Content._meta?.xp_reward ?? 10, content: ch04L02Content },
     { id: "ch04-l03", chapterId: ch4Id, order: 3, title: "Feminine Agreement — كَلِمَةٌ طَيِّبَةٌ",  titleAr: "الصِّفَة الْمُؤَنَّثَة",                   template: "STANDARD", xpReward: ch04L03Content._meta?.xp_reward ?? 10, content: ch04L03Content },
     { id: "ch04-l04", chapterId: ch4Id, order: 4, title: "Chapter 4 Review",                      titleAr: "مُرَاجَعَة الْفَصْل الرَّابِع",              template: "REVIEW",   xpReward: ch04L04Content._meta?.xp_reward ?? 20, content: ch04L04Content },
+    // Chapter 5
+    { id: "ch05-l01", chapterId: ch5Id, order: 1, title: "This Feminine — هَٰذِهِ",                 titleAr: "هَٰذِهِ لِلْمُؤَنَّثِ الْقَرِيب",                       template: "STANDARD", xpReward: ch05L01Content._meta?.xp_reward ?? 10, content: ch05L01Content },
+    { id: "ch05-l02", chapterId: ch5Id, order: 2, title: "That Feminine — تِلْكَ",                 titleAr: "تِلْكَ لِلْمُؤَنَّثِ الْبَعِيد",                        template: "STANDARD", xpReward: ch05L02Content._meta?.xp_reward ?? 10, content: ch05L02Content },
+    { id: "ch05-l03", chapterId: ch5Id, order: 3, title: "Possession — لِي، لَكَ، لَهُ",           titleAr: "لَامُ الْمِلْكِيَّة",                                  template: "STANDARD", xpReward: ch05L03Content._meta?.xp_reward ?? 10, content: ch05L03Content },
+    { id: "ch05-l04", chapterId: ch5Id, order: 4, title: "First Verb — ذَهَبَ",                    titleAr: "أَوَّلُ فِعْلٍ — ذَهَبَ",                              template: "STANDARD", xpReward: ch05L04Content._meta?.xp_reward ?? 10, content: ch05L04Content },
+    { id: "ch05-l05", chapterId: ch5Id, order: 5, title: "R1 Review — Mid-Book 1",                 titleAr: "المُرَاجَعَةُ الأُولَى — مُنْتَصَفُ الكِتَابِ الأَوَّل",  template: "REVIEW",   xpReward: ch05L05Content._meta?.xp_reward ?? 20, content: ch05L05Content },
+    // Chapter 6
+    { id: "ch06-l01", chapterId: ch6Id, order: 1, title: "Described Subject — الرَّجُلُ الْكَرِيمُ", titleAr: "المُبْتَدَأ المَوْصُوف",                   template: "STANDARD", xpReward: ch06L01Content._meta?.xp_reward ?? 10, content: ch06L01Content },
+    { id: "ch06-l02", chapterId: ch6Id, order: 2, title: "الَّذِي — Who, That, Which",              titleAr: "الَّذِي — اسْمٌ مَوْصُول",                 template: "STANDARD", xpReward: ch06L02Content._meta?.xp_reward ?? 10, content: ch06L02Content },
+    { id: "ch06-l03", chapterId: ch6Id, order: 3, title: "الَّذِي with Place Phrases",             titleAr: "الَّذِي مَعَ عِبَارَاتِ المَكَان",          template: "STANDARD", xpReward: ch06L03Content._meta?.xp_reward ?? 10, content: ch06L03Content },
+    { id: "ch06-l04", chapterId: ch6Id, order: 4, title: "الَّذِي in Al-A'la",                     titleAr: "الَّذِي فِي سُورَةِ الأَعْلَى",             template: "STANDARD", xpReward: ch06L04Content._meta?.xp_reward ?? 10, content: ch06L04Content },
   ];
 
   for (const { id, ...data } of lessons) {
@@ -153,6 +275,8 @@ async function main() {
       create: { id, ...data },
     });
   }
+
+  await cleanupObsoleteAuthoredLessons(lessons);
 
   await seedVocabulary(prisma);
   await seedTadabbur(prisma);

@@ -100,6 +100,7 @@ type CompletionResult = {
   xpEarned: number;
   totalXp: number;
   currentStreak: number;
+  streakCelebration: boolean;
 };
 
 type SelectedAnswer = string | string[] | Record<string, string> | null;
@@ -256,6 +257,7 @@ export default function LessonPlayScreen() {
           xpEarned: data.xpEarned,
           totalXp: data.totalXp,
           currentStreak: data.currentStreak,
+          streakCelebration: Boolean(data.streakCelebration),
         });
         trackLessonCompleted({
           lessonId,
@@ -1085,6 +1087,7 @@ export default function LessonPlayScreen() {
   function renderClose() {
     const earnedPoints = completionResult?.xpEarned ?? lesson?.xpReward ?? 10;
     const streak = completionResult?.currentStreak ?? 1;
+    const shouldShowStreakCelebration = Boolean(completionResult?.streakCelebration);
     const isSpoken = lesson?.type === "SPOKEN_PHRASES";
     const phrasesLearned = phrasesCompletedRef.current;
 
@@ -1171,7 +1174,13 @@ export default function LessonPlayScreen() {
 
         <BrandButton
           title="Continue"
-          onPress={() => router.push({ pathname: "/(app)/streak-celebration", params: { streak: String(streak) } })}
+          onPress={() => {
+            if (shouldShowStreakCelebration) {
+              router.push({ pathname: "/(app)/streak-celebration", params: { streak: String(streak) } });
+            } else {
+              router.replace("/(app)/(tabs)");
+            }
+          }}
           loading={submitting}
           style={styles.bottomButton}
         />

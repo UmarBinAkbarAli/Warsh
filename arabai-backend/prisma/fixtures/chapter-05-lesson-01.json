@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+
+  "_meta": {
+    "_note": "Chapter 5, Lesson 1 — هٰذِهِ for near feminine nouns. Quranic hook: هٰذِهِ نَاقَةُ اللَّهِ. Authored against warsh-content-schema.ts v1.0.",
+    "chapter_order": 5,
+    "lesson_order": 1,
+    "estimated_minutes": 9,
+    "xp_reward": 10
+  },
+
+  "hook": {
+    "ayah": {
+      "surah": 7,
+      "ayah": 73,
+      "label": "Al-A'raf 7:73",
+      "ar": "هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً",
+      "en": "This is the she-camel of Allah, as a sign for you.",
+      "ur": "یہ اللہ کی اونٹنی ہے، تمہارے لیے نشانی۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-araf-073-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Allah says هَٰذِهِ نَاقَةُ اللَّهِ — 'This is the she-camel of Allah.' You already know هَٰذَا for masculine nouns. Today you learn هَٰذِهِ, the near pointer for feminine nouns.",
+      "ur": "اللہ فرماتا ہے: هَٰذِهِ نَاقَةُ اللَّهِ — 'یہ اللہ کی اونٹنی ہے۔' آپ مذکر کے لیے هَٰذَا جانتے ہیں۔ آج آپ مؤنث قریب کے لیے هَٰذِهِ سیکھیں گے۔"
+    },
+    "autoplay": true
+  },
+
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Near Feminine Pointer — هَٰذِهِ",
+        "ar": "اسْمُ إِشَارَةٍ لِلْمُؤَنَّثِ الْقَرِيب",
+        "ur": "قریب مؤنث اشارہ — هَٰذِهِ"
+      },
+      "explanation": {
+        "en": "هَٰذَا points to a near masculine noun. هَٰذِهِ points to a near feminine noun.\n\nهَٰذَا بَيْتٌ — this is a house\nهَٰذِهِ مَدْرَسَةٌ — this is a school\n\nThe pointer agrees with the noun's gender.",
+        "ur": "هَٰذَا قریب مذکر اسم کی طرف اشارہ کرتا ہے۔ هَٰذِهِ قریب مؤنث اسم کی طرف اشارہ کرتا ہے۔\n\nهَٰذَا بَيْتٌ — یہ گھر ہے\nهَٰذِهِ مَدْرَسَةٌ — یہ مدرسہ ہے\n\nاشارہ اسم کی جنس کے مطابق آتا ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "هَٰذِهِ مَدْرَسَةٌ", "ar_plain": "هذه مدرسة", "translit": "hādhihi madrasatun", "en": "this is a school", "ur": "یہ مدرسہ ہے" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/hadhihi-madrasah.mp3",
+      "introduces_vocab": { "ar_plain": "مدرسة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "هَٰذِهِ مَدِينَةٌ", "ar_plain": "هذه مدينة", "translit": "hādhihi madīnatun", "en": "this is a city", "ur": "یہ شہر ہے" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/hadhihi-madinah.mp3",
+      "introduces_vocab": { "ar_plain": "مدينة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "هَٰذِهِ كَلِمَةٌ", "ar_plain": "هذه كلمة", "translit": "hādhihi kalimatun", "en": "this is a word", "ur": "یہ لفظ ہے" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/hadhihi-kalimah.mp3",
+      "introduces_vocab": { "ar_plain": "كلمة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "هَٰذِهِ آيَةٌ", "ar_plain": "هذه آية", "translit": "hādhihi āyatun", "en": "this is a sign / verse", "ur": "یہ نشانی / آیت ہے" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/hadhihi-ayah.mp3",
+      "introduces_vocab": { "ar_plain": "آية" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "هَٰذِهِ نَاقَةٌ", "ar_plain": "هذه ناقة", "translit": "hādhihi nāqatun", "en": "this is a she-camel", "ur": "یہ اونٹنی ہے" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/hadhihi-naqah.mp3",
+      "introduces_vocab": { "ar_plain": "ناقة" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "هَٰذِهِ جَنَّةٌ", "ar_plain": "هذه جنة", "translit": "hādhihi jannatun", "en": "this is a garden", "ur": "یہ باغ / جنت ہے" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/hadhihi-jannah.mp3",
+      "introduces_vocab": { "ar_plain": "جنة" }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": { "en": "Quick Gender Test", "ar": "اختبار التذكير والتأنيث", "ur": "جنس کی تیز پہچان" },
+      "body": {
+        "en": "Many feminine nouns end with ة:\nمَدْرَسَةٌ · مَدِينَةٌ · كَلِمَةٌ · نَاقَةٌ · جَنَّةٌ\n\nSo they use هَٰذِهِ, not هَٰذَا.",
+        "ur": "بہت سے مؤنث اسم ة پر ختم ہوتے ہیں:\nمَدْرَسَةٌ · مَدِينَةٌ · كَلِمَةٌ · نَاقَةٌ · جَنَّةٌ\n\nاس لیے ان کے ساتھ هَٰذِهِ آتا ہے، هَٰذَا نہیں۔"
+      }
+    }
+  ],
+
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch05-l01-ex01",
+      "prompt": { "ar": "هَٰذِهِ مَدْرَسَةٌ", "en": "this is a school", "ur": "یہ مدرسہ ہے" },
+      "direction": "ar_to_en",
+      "answer": "this is a school",
+      "choices": ["this is a school", "this is a house", "that is a city", "this is a book"],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch05-l01-ex02",
+      "prompt": { "en": "this is a city", "ur": "یہ شہر ہے" },
+      "direction": "en_to_ar",
+      "answer": "هَٰذِهِ مَدِينَةٌ",
+      "choices": ["هَٰذِهِ مَدِينَةٌ", "هَٰذَا بَيْتٌ", "تِلْكَ مَدِينَةٌ", "هَٰذِهِ كَلِمَةٌ"],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch05-l01-ex03",
+      "statement": { "en": "هَٰذِهِ is used for near feminine nouns.", "ur": "هَٰذِهِ قریب مؤنث اسموں کے لیے استعمال ہوتا ہے۔" },
+      "answer": true,
+      "explanation": {
+        "en": "True — هَٰذِهِ points to a near feminine noun, such as مَدْرَسَةٌ or نَاقَةٌ.",
+        "ur": "درست — هَٰذِهِ قریب مؤنث اسم کے لیے ہے، جیسے مَدْرَسَةٌ یا نَاقَةٌ۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch05-l01-ex04",
+      "template": { "en": "___ نَاقَةٌ = this is a she-camel", "ur": "___ نَاقَةٌ = یہ اونٹنی ہے" },
+      "blank_label": { "en": "choose the feminine pointer", "ur": "مؤنث اشارہ منتخب کریں" },
+      "answer": "هَٰذِهِ",
+      "choices": ["هَٰذِهِ", "هَٰذَا", "ذَٰلِكَ", "مَنْ"],
+      "explanation": {
+        "en": "نَاقَةٌ is feminine, so the near pointer is هَٰذِهِ.",
+        "ur": "نَاقَةٌ مؤنث ہے، اس لیے قریب اشارہ هَٰذِهِ ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch05-l01-ex05",
+      "instruction": { "en": "Match each phrase to its meaning.", "ur": "ہر ترکیب کو اس کے معنی سے ملائیں۔" },
+      "pairs": [
+        { "ar": "هَٰذِهِ مَدْرَسَةٌ", "en": "this is a school" },
+        { "ar": "هَٰذِهِ كَلِمَةٌ", "en": "this is a word" },
+        { "ar": "هَٰذِهِ آيَةٌ", "en": "this is a sign / verse" },
+        { "ar": "هَٰذِهِ جَنَّةٌ", "en": "this is a garden" }
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch05-l01-ex06",
+      "instruction": { "en": "Build: 'this is a word'", "ur": "بنائیں: 'یہ لفظ ہے'" },
+      "word_bank": ["هَٰذِهِ", "كَلِمَةٌ", "هَٰذَا", "كِتَابٌ"],
+      "answer": ["هَٰذِهِ", "كَلِمَةٌ"],
+      "explanation": {
+        "en": "كَلِمَةٌ is feminine, so it uses هَٰذِهِ.",
+        "ur": "كَلِمَةٌ مؤنث ہے، اس لیے اس کے ساتھ هَٰذِهِ آئے گا۔"
+      },
+      "xp_value": 1
+    }
+  ],
+
+  "reveal": {
+    "ayah": {
+      "surah": 7,
+      "ayah": 73,
+      "label": "Al-A'raf 7:73",
+      "ar": "هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً",
+      "en": "This is the she-camel of Allah, as a sign for you.",
+      "ur": "یہ اللہ کی اونٹنی ہے، تمہارے لیے نشانی۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-araf-073-mishary.mp3"
+    },
+    "highlighted_word_indices": [0],
+    "noor_explanation": {
+      "en": "هَٰذِهِ points to نَاقَةُ, a feminine noun. The Quran is not only giving a story here; it is using the same pointing system you now know: masculine/feminine, near/far. Today you unlocked the feminine near pointer.",
+      "ur": "هَٰذِهِ نَاقَةُ کی طرف اشارہ کر رہا ہے، جو مؤنث اسم ہے۔ قرآن یہاں صرف واقعہ نہیں بتا رہا؛ وہ وہی اشارہ نظام استعمال کر رہا ہے جو آپ سیکھ رہے ہیں: مذکر/مؤنث، قریب/دور۔ آج آپ نے مؤنث قریب اشارہ کھول لیا۔"
+    }
+  },
+
+  "close": {
+    "noor_message": {
+      "en": "You now know هَٰذِهِ — this, for a near feminine noun. When you see words like مَدْرَسَةٌ, مَدِينَةٌ, كَلِمَةٌ, نَاقَةٌ, and جَنَّةٌ, your mind should reach for هَٰذِهِ.",
+      "ur": "آپ اب هَٰذِهِ جانتے ہیں — قریب مؤنث اسم کے لیے 'یہ'۔ جب آپ مَدْرَسَةٌ، مَدِينَةٌ، كَلِمَةٌ، نَاقَةٌ، اور جَنَّةٌ دیکھیں تو ذہن فوراً هَٰذِهِ تک پہنچے۔"
+    }
+  }
+}

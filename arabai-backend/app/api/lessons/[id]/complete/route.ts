@@ -209,6 +209,7 @@ export async function POST(request: Request, { params }: Props) {
       xpEarned,
       chapterBonusXp,
       dailyGoalXp,
+      streakCelebration: firstCompletion && lessonsCompletedTodayBefore === 0,
       totalXp: finalXp,
       newAchievements,
       streakUpdated: true,

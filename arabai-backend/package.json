@@ -12,7 +12,8 @@
     "db:migrate": "prisma migrate dev",
     "db:seed": "prisma db seed",
     "db:validate-seed": "node prisma/validate-curriculum.cjs",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio",
+    "dev:unlock-through": "node scripts/dev-unlock-through.cjs"
   },
   "prisma": {
     "seed": "node prisma/seed.cjs"

@@ -19,6 +19,7 @@ function transformContent(template: string, content: Record<string, unknown>) {
   const reveal = content.reveal as Record<string, unknown> | undefined;
   const revealAyah = reveal?.ayah as Record<string, unknown> | undefined;
   const highlightedIndices = reveal?.highlighted_word_indices as number[] | undefined;
+  const spokenPhrases = content.spoken_phrases as Record<string, unknown> | undefined;
 
   const mappedHook = ayah
     ? {
@@ -255,6 +256,16 @@ function transformContent(template: string, content: Record<string, unknown>) {
   // SPOKEN_PHRASES → "SPOKEN_PHRASES"
   const legacyType = template === "SPOKEN_PHRASES" ? "SPOKEN_PHRASES" : "VOCABULARY";
 
+  const mappedSpokenContent = template === "SPOKEN_PHRASES"
+    ? {
+        contextTitle: (content.contextTitle ?? (spokenPhrases?.scene as Record<string, unknown> | undefined)?.ar) as string | undefined,
+        contextTitleEn: (content.contextTitleEn ?? (spokenPhrases?.scene as Record<string, unknown> | undefined)?.en) as string | undefined,
+        contextBody: content.contextBody as string | undefined,
+        phrases: (content.phrases as Record<string, unknown>[] | undefined) ?? [],
+        dialogue: (content.dialogue as Record<string, unknown>[] | undefined) ?? [],
+      }
+    : undefined;
+
   return {
     hook: mappedHook,
     discoverCards: mappedCards,
@@ -262,6 +273,7 @@ function transformContent(template: string, content: Record<string, unknown>) {
     revealText,
     revealAyah: mappedRevealAyah,
     type: legacyType,
+    content: mappedSpokenContent,
   };
 }
 
