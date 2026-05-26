@@ -328,7 +328,7 @@ export async function GET(request: Request, { params }: Props) {
 
   const lesson = await prisma.lesson.findUnique({
     where: { id: params.id },
-    select: { id: true, title: true, titleAr: true, template: true, xpReward: true, content: true, chapterId: true },
+    select: { id: true, title: true, titleAr: true, template: true, xpReward: true, content: true, chapterId: true, chapter: { select: { order: true } } },
   });
 
   if (!lesson) {
@@ -351,7 +351,8 @@ export async function GET(request: Request, { params }: Props) {
     return NextResponse.json({ error: "Chapter is locked", code: "chapter_locked" }, { status: 403 });
   }
 
-  if (user && requiresSubscription(getSubscriptionState(user))) {
+  const isChapterOneFree = lesson.chapter?.order === 1;
+  if (!isChapterOneFree && user && requiresSubscription(getSubscriptionState(user))) {
     return NextResponse.json({ error: "Subscription required", code: "subscription_required" }, { status: 402 });
   }
 

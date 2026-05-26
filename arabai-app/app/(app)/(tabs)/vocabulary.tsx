@@ -237,15 +237,20 @@ export default function VocabularyScreen() {
       </View>
 
       {/* Search */}
-      <TextInput
-        value={query}
-        onChangeText={setQuery}
-        placeholder="Search Arabic, English, or root"
-        mode="outlined"
-        dense
-        left={<TextInput.Icon icon="magnify" />}
-        style={[styles.searchInput, { backgroundColor: Colors.bg.surface }]}
-      />
+      <TouchableOpacity activeOpacity={0.85} onPress={() => router.push("/(app)/vocabulary/search")}>
+        <View pointerEvents="none">
+          <TextInput
+            value={query}
+            onChangeText={setQuery}
+            placeholder="Search Arabic, English, or root"
+            mode="outlined"
+            dense
+            editable={false}
+            left={<TextInput.Icon icon="magnify" />}
+            style={[styles.searchInput, { backgroundColor: Colors.bg.surface }]}
+          />
+        </View>
+      </TouchableOpacity>
 
       {loading ? (
         <ActivityIndicator color={WarshPalette.gold} style={{ marginTop: Spacing.xl }} />
@@ -312,6 +317,22 @@ export default function VocabularyScreen() {
               <Text style={styles.statLabel}>topics</Text>
             </View>
           </View>
+
+          {/* My Words */}
+          <TouchableOpacity
+            style={styles.myWordsCard}
+            onPress={() => router.push("/(app)/vocabulary/my-words")}
+            activeOpacity={0.8}
+          >
+            <View style={styles.myWordsLeft}>
+              <Ionicons name="bookmark-outline" size={22} color={WarshPalette.gold} />
+              <View style={{ marginLeft: Spacing.sm }}>
+                <Text style={styles.myWordsTitle}>My Words</Text>
+                <Text style={styles.myWordsSub}>Words from your lessons</Text>
+              </View>
+            </View>
+            <Text style={styles.myWordsCta}>View ›</Text>
+          </TouchableOpacity>
 
           {/* Browse by Topic */}
           <Text style={styles.sectionTitle}>Browse by Topic</Text>
@@ -425,6 +446,29 @@ const styles = StyleSheet.create({
   statLabel: {
     marginTop: Spacing.xs, color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular, fontSize: FontSizes.caption,
+  },
+
+  // My Words card
+  myWordsCard: {
+    flexDirection: "row", justifyContent: "space-between",
+    alignItems: "center", padding: Spacing.md,
+    borderRadius: Radii.md, borderWidth: 1,
+    borderColor: WarshPalette.gold + "55",
+    backgroundColor: WarshPalette.parchmentBg,
+    marginBottom: Spacing.lg,
+  },
+  myWordsLeft: { flexDirection: "row", alignItems: "center" },
+  myWordsTitle: {
+    color: WarshPalette.ink, fontFamily: Fonts.display,
+    fontSize: FontSizes.bodyL, fontWeight: "700",
+  },
+  myWordsSub: {
+    color: WarshPalette.bodyBrown, fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+  },
+  myWordsCta: {
+    color: WarshPalette.gold, fontFamily: Fonts.display,
+    fontSize: FontSizes.bodyL, fontWeight: "700",
   },
 
   // Section

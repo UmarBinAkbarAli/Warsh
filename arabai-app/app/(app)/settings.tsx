@@ -409,6 +409,13 @@ export default function SettingsScreen() {
           />
           <View style={styles.divider} />
           <SettingRow
+            icon="lock-closed-outline"
+            label="Change password"
+            onPress={() => router.push("/(app)/change-password")}
+            showChevron
+          />
+          <View style={styles.divider} />
+          <SettingRow
             icon="trash-outline"
             label="Delete account"
             sublabel="Permanently removes all your data"

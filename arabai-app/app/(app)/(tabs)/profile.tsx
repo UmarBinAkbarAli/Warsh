@@ -69,7 +69,12 @@ export default function ProfileScreen() {
             <Ionicons name="settings-outline" size={22} color={Theme.WarshPalette.gold} />
           </Pressable>
         </View>
-        <Text style={styles.userName}>{displayName}</Text>
+        <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+          <Text style={styles.userName}>{displayName}</Text>
+          <Pressable onPress={() => router.push("/(app)/edit-profile")} hitSlop={8}>
+            <Ionicons name="create-outline" size={16} color={Theme.WarshPalette.gold} />
+          </Pressable>
+        </View>
         <Text style={styles.greeting}>As-salamu alaykum</Text>
       </View>
 
@@ -77,7 +82,7 @@ export default function ProfileScreen() {
 
       {data ? (
         <>
-          <View style={styles.streakCard}>
+          <Pressable style={styles.streakCard} onPress={() => router.push("/(app)/streak-detail")}>
             <View style={styles.streakValueRow}>
               <Text style={styles.streakNumber}>{data.streak}</Text>
               <Text style={styles.streakLabel}>day streak</Text>
@@ -101,7 +106,7 @@ export default function ProfileScreen() {
               </Text>
             ) : null}
             <Text style={styles.streakQuote}>The most beloved deed to Allah is the consistent one, even if small.</Text>
-          </View>
+          </Pressable>
 
           <View style={styles.statsRow}>
             <View style={styles.statCard}>
@@ -151,6 +156,37 @@ export default function ProfileScreen() {
                 ) : null}
               </View>
             </Pressable>
+          ) : null}
+
+          {(data.vocabTotal ?? 0) > 0 ? (
+            <View style={styles.statsRow}>
+              <View style={styles.statCard}>
+                <Ionicons name="book-outline" size={20} color={Theme.WarshPalette.gold} />
+                <Text style={styles.statValue}>{data.vocabTotal}</Text>
+                <Text style={styles.statSub}>words in bank</Text>
+              </View>
+              <View style={styles.statCard}>
+                <Ionicons name="star-outline" size={20} color={Theme.WarshPalette.sage} />
+                <Text style={styles.statValue}>{data.vocabMastered ?? 0}</Text>
+                <Text style={styles.statSub}>words mastered</Text>
+              </View>
+              {(data.surahsCompleted ?? 0) > 0 ? (
+                <View style={styles.statCard}>
+                  <Ionicons name="moon-outline" size={20} color={Theme.WarshPalette.gold} />
+                  <Text style={styles.statValue}>{data.surahsCompleted}</Text>
+                  <Text style={styles.statSub}>surahs understood</Text>
+                </View>
+              ) : null}
+            </View>
+          ) : null}
+
+          {data.memberSince ? (
+            <View style={styles.memberSinceRow}>
+              <Ionicons name="calendar-outline" size={14} color={Theme.WarshPalette.subtleBrown} />
+              <Text style={styles.memberSinceText}>
+                Member since {new Date(data.memberSince).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
+              </Text>
+            </View>
           ) : null}
 
           {(data.phrasesSpoken ?? 0) > 0 ? (
@@ -511,5 +547,18 @@ const styles = StyleSheet.create({
   logoutButton: {
     marginHorizontal: Theme.Spacing.xl,
     marginTop: Theme.Spacing.xl,
+  },
+  memberSinceRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Theme.Spacing.xs,
+    marginHorizontal: Theme.Spacing.xl,
+    marginTop: Theme.Spacing.sm,
+  },
+  memberSinceText: {
+    color: Theme.WarshPalette.subtleBrown,
+    fontFamily: Theme.Fonts.regular,
+    fontSize: Theme.FontSizes.caption,
+    lineHeight: Theme.LineHeights.caption,
   },
 });

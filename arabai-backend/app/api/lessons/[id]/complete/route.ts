@@ -168,6 +168,38 @@ export async function POST(request: Request, { params }: Props) {
     }
   }
 
+  // Add chapter vocabulary words to user's word bank on first lesson completion
+  let wordsAdded = 0;
+  if (firstCompletion) {
+    const chapter = await prisma.chapter.findUnique({
+      where: { id: lesson.chapterId },
+      select: { order: true },
+    });
+    if (chapter) {
+      const chapterWords = await prisma.vocabularyWord.findMany({
+        where: { chapterIntroduced: chapter.order },
+        select: { id: true },
+      });
+      if (chapterWords.length > 0) {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const result = await prisma.userVocabularyWord.createMany({
+          data: chapterWords.map((w) => ({
+            userId,
+            wordId: w.id,
+            nextReviewDate: tomorrow,
+            easeFactor: 2.5,
+            intervalDays: 1,
+            repetitions: 0,
+            isFavorite: false,
+          })),
+          skipDuplicates: true,
+        });
+        wordsAdded = result.count;
+      }
+    }
+  }
+
   // Increment phrasesSpoken if any SHADOW_REPEAT exercises were completed
   let newPhrasesSpoken = 0;
   let firstShadowRepeat = false;
@@ -217,6 +249,7 @@ export async function POST(request: Request, { params }: Props) {
       longestStreak: streak?.longestStreak ?? 0,
       streakFreezes: streak?.streakFreezes ?? 0,
       phrasesSpoken: newPhrasesSpoken,
+      wordsAdded,
     },
   });
 }

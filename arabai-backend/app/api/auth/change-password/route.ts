@@ -1,0 +1,36 @@
+import { NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
+import { prisma } from "../../../../lib/prisma";
+import { getUserIdFromRequest } from "../../../../lib/auth";
+
+export async function POST(request: Request) {
+  const userId = getUserIdFromRequest(request);
+  if (!userId) {
+    return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
+  }
+
+  const body = await request.json();
+  const { currentPassword, newPassword } = body;
+
+  if (!currentPassword || !newPassword) {
+    return NextResponse.json({ error: "currentPassword and newPassword are required", code: "bad_request" }, { status: 400 });
+  }
+
+  if (typeof newPassword !== "string" || newPassword.length < 8) {
+    return NextResponse.json({ error: "New password must be at least 8 characters", code: "bad_request" }, { status: 400 });
+  }
+
+  const user = await prisma.user.findUnique({ where: { id: userId } });
+  if (!user) {
+    return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
+  }
+
+  if (!bcrypt.compareSync(currentPassword, user.passwordHash)) {
+    return NextResponse.json({ error: "Current password is incorrect", code: "unauthorized" }, { status: 401 });
+  }
+
+  const newHash = bcrypt.hashSync(newPassword, 12);
+  await prisma.user.update({ where: { id: userId }, data: { passwordHash: newHash } });
+
+  return NextResponse.json({ data: { success: true } });
+}

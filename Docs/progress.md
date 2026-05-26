@@ -339,7 +339,120 @@ The repo is in a stronger state than the old tracker wording suggested, but a fe
 - The lesson API transformer in `GET /api/lessons/[id]` converts new content schema → legacy lesson player shape; updating the lesson player to read the new schema directly is future work
 - `npm run db:seed` has two modes: if the DB has zero users it performs a full reset; if users exist it preserves accounts/progress and upserts chapters/lessons while refreshing vocabulary/tadabbur
 
+## Recent Changes (since 2026-05-27) — latest
+
+### Product polish sprint: vocabulary pipeline, screens, and account management (2026-05-27)
+
+Read `Docs/warsh-spec-00-master-index.md` before starting, per the build protocol.
+
+**Vocabulary pipeline (Priority 1):**
+
+- `complete/route.ts` — on `firstCompletion`, fetches the lesson's `chapter.order`, then batch-upserts all `VocabularyWord` rows where `chapterIntroduced = chapter.order` into `UserVocabularyWord` (skipDuplicates, nextReviewDate = tomorrow, easeFactor = 2.5, repetitions = 0). Returns `wordsAdded` count in the response.
+- `vocabulary/srs/review/route.ts` — after each SM-2 update, fetches all TadabburSurahs, identifies those whose `ayatData` JSON contains the reviewed `wordId`, and upserts `UserSurahProgress.completedAt` based on the user's current mastery threshold (repetitions ≥ 3).
+
+**Subscription enforcement (Priority 2):**
+
+- `lessons/[id]/route.ts` — Chapter 1 is permanently free (`chapter.order === 1`). Chapters 2+ return 402 `subscription_required` when the user has neither an active trial nor an active subscription. `requiresSubscription()` from `lib/subscription.ts` was already wired; added the chapter-1 exemption only.
+
+**Account deletion (Priority 3):**
+
+- `users/me/route.ts` — existing `DELETE` handler now also deletes `UserSurahProgress` rows before deleting the user, completing the full cascade.
+
+**L1 screen completions (Priority 4):**
+
+- `app/(app)/(tabs)/index.tsx` — added Word of the Day card (fetches `/api/vocabulary/word-of-day`, shows Arabic, transliteration, translation, type, inWordBank badge; taps to word detail). Capped the home chapter list to 5 entries and added an "All N chapters →" link that routes to the new chapters screen.
+- `app/api/vocabulary/word-of-day/route.ts` — updated to require auth, return `inWordBank`/`repetitions`/`isFavorite` per-user fields, and prefer words with Quranic examples.
+
+**All Chapters screen (Priority 5):**
+
+- `app/(app)/chapters.tsx` — new full-list chapters screen: chapter number badge, title/titleAr, description, locked/completed/skipped state, per-chapter progress bar and lesson count, Open/Review CTA. Registered as `chapters` in `_layout.tsx`.
+
+**Profile improvements (Priority 6):**
+
+- `progress/route.ts` — added `createdAt`, `userVocabularyWord` total count, mastered count (repetitions ≥ 3), and `userSurahProgress` completed count to the response as `memberSince`, `vocabTotal`, `vocabMastered`, `surahsCompleted`.
+- `profile.tsx` — added a 2–3 column vocabulary/tadabbur stats row when vocab data exists, and a "Member since" line below the stats.
+
+**Change password (Priority 7):**
+
+- `auth/change-password/route.ts` — new `POST` endpoint: verifies current password with bcrypt, validates new password ≥ 8 chars, updates hash.
+- `app/(app)/change-password.tsx` — new screen with current/new/confirm fields, eye toggle, error display, and success alert. Registered as `change-password` in `_layout.tsx`. Added a "Change password" row to the Account section in `settings.tsx`.
+
+**TypeScript:**
+- App `npx tsc --noEmit` — 0 errors
+- Backend `npx tsc --noEmit` — 0 errors
+
+### All unbuilt screens built and wired (2026-05-27)
+
+- Read `Docs/warsh-spec-00-master-index.md` before starting, per build protocol.
+- Built all remaining unbuilt screens from the `UI-Design-Screen-list.md` inventory.
+
+**New screens built:**
+
+| Screen | Spec ID | File |
+|---|---|---|
+| Milestone celebration | M1 | `app/(app)/milestone-celebration.tsx` |
+| Streak ended modal | M4 | integrated in `app/(app)/(tabs)/index.tsx` |
+| Daily goal toast | M5 | integrated in `app/(app)/(tabs)/index.tsx` |
+| Surah celebration | M6 | `app/(app)/surah-celebration.tsx` |
+| Error/retry modal | M7 | `app/components/ErrorModal.tsx` |
+| Offline bar | M8 | `app/components/OfflineBar.tsx` |
+| Notification permission modal | M2 | `app/components/NotificationPermissionModal.tsx` |
+| Forgot password form | C3 | `app/(auth)/forgot-password.tsx` |
+| Forgot password confirmation | C4 | `app/(auth)/forgot-password-confirm.tsx` |
+| Edit profile | Y2 | `app/(app)/edit-profile.tsx` |
+| Streak detail | L6 | `app/(app)/streak-detail.tsx` |
+| Lesson preview bottom sheet | L4 | integrated in `app/(app)/lessons/[chapterId].tsx` |
+| My Words | V2 | `app/(app)/vocabulary/my-words.tsx` |
+| Vocabulary search | V4 | `app/(app)/vocabulary/search.tsx` |
+| VERB_PATTERN lesson template | VP1–VP5 | integrated in `app/(app)/lessons/[lessonId]/play.tsx` |
+| Noor overage purchase modal | N2 | integrated in `app/(app)/(tabs)/chat.tsx` |
+| Onboarding permissions | B9 | `app/(auth)/onboarding/permissions.tsx` |
+
+**New backend endpoints:**
+
+| Method | Path | Notes |
+|---|---|---|
+| POST | `/api/auth/forgot-password` | Always returns 200, TODO email provider |
+| GET | `/api/vocabulary/my-words` | Filter/sort user word SRS records |
+
+**Navigation wiring completed:**
+
+- `app/(app)/_layout.tsx` — added `edit-profile`, `streak-detail`, `surah-celebration`, `vocabulary/my-words`, `vocabulary/search`, `streak-celebration` Stack screens
+- `app/(auth)/register.tsx` — post-registration routes to `/(auth)/onboarding/permissions` (B9) instead of `/(app)` directly
+- `app/(auth)/login.tsx` — added "Forgot password?" link → C3
+- `app/(app)/(tabs)/profile.tsx` — streak card tappable → L6 (streak-detail); edit icon next to username → Y2 (edit-profile)
+- `app/(app)/(tabs)/vocabulary.tsx` — search bar taps navigate to V4 (vocabulary/search); new "My Words" card → V2
+- `app/(app)/tadabbur.tsx` — triggers surah-celebration when `comprehensionPercent >= 100`; AsyncStorage `warsh_surah_celebrated_<id>` guards against repeat celebration
+- `app/(app)/lessons/[chapterId].tsx` — full rewrite: lesson cards now open L4 preview bottom sheet showing type pill, XP, completion state; Start/Review from sheet launches play
+
+**Chapter screen improvements:**
+
+- Full redesign: lesson cards with numbered index, type icon+label, XP, completion badge
+- Tapping a card opens L4 bottom sheet first (preview) — not immediate navigate-to-play
+- "Chapters" back button, progress bar, chapter title/Arabic title displayed
+
+**TypeScript:**
+- App `npx tsc --noEmit` — 0 errors
+- Backend `npx tsc --noEmit` — 0 errors
+
 ## Recent Changes (since 2026-05-26) — latest
+
+### UI screen inventory documented (2026-05-26)
+
+- Created `UI-Design-Screen-list.md` at the repo root — a full inventory of all app screens mapped against `warsh-spec-02`
+- **36 screens built**, **~20 screens unbuilt**
+- Lists every built screen with its spec ID and file path
+- Lists every unbuilt screen with the reason it is missing
+- Includes a prioritized list of unbuilt screens most critical for v1 shipping:
+  - C3/C4 — Forgot password flow
+  - L4 — Lesson preview bottom sheet
+  - Y2 — Edit profile
+  - VP1–VP5 — VERB_PATTERN lesson template
+  - M1, M4, M5 — Milestone/streak/daily-goal celebration modals
+  - B9 — Permissions ask at end of onboarding
+  - L6 — Streak detail screen
+  - V2/V4 — My Words list + search
+  - N2 — Overage purchase modal
 
 ### SP2 and Chapter 8 authored (2026-05-26)
 
@@ -1377,3 +1490,4 @@ As of 2026-05-26:
 - Noor backend wiring is OpenAI-only with `gpt-4o-mini` as the default model
 - mobile local networking: USB reverse (`tcp:8081`, `tcp:3000`) + `http://127.0.0.1:3000` is the reliable path
 - the biggest immediate content gaps are Chapter 9 authoring and device QA across SP1, SP2, and the newly authored Chapters 6-8 lessons
+- a full UI screen inventory exists at `UI-Design-Screen-list.md` (repo root) — 36 built screens, ~20 unbuilt, each mapped to a spec-02 ID

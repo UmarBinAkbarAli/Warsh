@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../../lib/auth";
+import { computeSurahState } from "../../../../../lib/tadabbur";
 
 // SM-2 algorithm
 function computeNextSRS(
@@ -61,6 +62,35 @@ export async function POST(request: Request) {
     where: { userId_wordId: { userId, wordId } },
     data: { ...next, lastReviewQuality: quality },
   });
+
+  // Recalculate surah comprehension for surahs containing this word
+  const [allSurahs, allUserWords] = await Promise.all([
+    prisma.tadabburSurah.findMany(),
+    prisma.userVocabularyWord.findMany({ where: { userId }, select: { wordId: true, repetitions: true } }),
+  ]);
+
+  const masteredWordIds = new Set(
+    allUserWords.filter((w) => w.repetitions >= 3).map((w) => w.wordId)
+  );
+
+  for (const surah of allSurahs) {
+    const ayatData = surah.ayatData as Array<{ ayahNumber: number; arabic: string; translationEn: string; words: Array<{ pos: number; arabic: string; arabicPlain: string; vocabId: string | null }> }>;
+    const allVocabIds = new Set(ayatData.flatMap((a) => a.words.map((w) => w.vocabId).filter(Boolean)));
+    if (!allVocabIds.has(wordId)) continue;
+
+    const { comprehensionPercent } = computeSurahState(ayatData, masteredWordIds);
+    await prisma.userSurahProgress.upsert({
+      where: { userId_surahId: { userId, surahId: surah.id } },
+      create: {
+        userId,
+        surahId: surah.id,
+        completedAt: comprehensionPercent >= 100 ? new Date() : null,
+      },
+      update: {
+        completedAt: comprehensionPercent >= 100 ? new Date() : null,
+      },
+    });
+  }
 
   return NextResponse.json({ data: updated });
 }

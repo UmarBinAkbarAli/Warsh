@@ -1,4 +1,5 @@
 import { useCallback, useRef, useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   Modal,
   Pressable,
@@ -191,8 +192,26 @@ export default function TadabburScreen() {
     setLoadingAyat(true);
     try {
       const res = await getTadabburSurah(surahId);
+      const surah: SurahMeta = allSurahs.find((s) => s.id === surahId) ?? res.data.data.surah;
       setAyat(res.data.data.ayat);
-      setSurahMeta(allSurahs.find((s) => s.id === surahId) ?? res.data.data.surah);
+      setSurahMeta(surah);
+
+      if (surah.comprehensionPercent >= 100) {
+        const celebKey = `warsh_surah_celebrated_${surahId}`;
+        const alreadyCelebrated = await AsyncStorage.getItem(celebKey);
+        if (!alreadyCelebrated) {
+          await AsyncStorage.setItem(celebKey, "1");
+          router.push({
+            pathname: "/(app)/surah-celebration",
+            params: {
+              surahNameAr: surah.nameAr,
+              surahNameEn: surah.nameEn,
+              xpEarned: "50",
+              isFirst: allSurahs.filter((s) => s.completedAt).length === 0 ? "true" : "false",
+            },
+          });
+        }
+      }
     } catch {}
     finally { setLoadingAyat(false); }
   }

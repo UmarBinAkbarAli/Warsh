@@ -19,8 +19,8 @@ export async function GET(request: Request) {
 
   const todayStart = get4amPKTBoundary();
 
-  const [user, progress, streak, earnedAchievements, todayProgress] = await Promise.all([
-    prisma.user.findUnique({ where: { id: userId }, select: { xp: true, level: true, dailyGoalMinutes: true, name: true, trialStartAt: true, trialExpiresAt: true, subscriptionStatus: true, subscriptionActiveUntil: true, subscriptionProductId: true, noorOverageBalance: true, phrasesSpoken: true } }),
+  const [user, progress, streak, earnedAchievements, todayProgress, vocabTotal, vocabMastered, surahsCompleted] = await Promise.all([
+    prisma.user.findUnique({ where: { id: userId }, select: { xp: true, level: true, dailyGoalMinutes: true, name: true, createdAt: true, trialStartAt: true, trialExpiresAt: true, subscriptionStatus: true, subscriptionActiveUntil: true, subscriptionProductId: true, noorOverageBalance: true, phrasesSpoken: true } }),
     prisma.progress.findMany({ where: { userId, status: PROGRESS_STATUS.COMPLETED }, select: { lessonId: true } }),
     prisma.streak.findUnique({ where: { userId }, select: { currentStreak: true, longestStreak: true, lastActiveDate: true, streakFreezes: true, lastFreezeUsedAt: true } }),
     prisma.userAchievement.findMany({
@@ -29,6 +29,9 @@ export async function GET(request: Request) {
       orderBy: { unlockedAt: "asc" },
     }),
     prisma.progress.count({ where: { userId, status: PROGRESS_STATUS.COMPLETED, completedAt: { gte: todayStart } } }),
+    prisma.userVocabularyWord.count({ where: { userId } }),
+    prisma.userVocabularyWord.count({ where: { userId, repetitions: { gte: 3 } } }),
+    prisma.userSurahProgress.count({ where: { userId, completedAt: { not: null } } }),
   ]);
 
   const fatihaPercent = 0; // Tadabbur progress now tracked via UserSurahProgress, not lesson delta
@@ -54,6 +57,10 @@ export async function GET(request: Request) {
       lessonsCompletedToday: todayProgress,
       dailyGoalMet,
       phrasesSpoken: user?.phrasesSpoken ?? 0,
+      memberSince: user?.createdAt ?? null,
+      vocabTotal,
+      vocabMastered,
+      surahsCompleted,
       subscription: subState,
       achievements: earnedAchievements.map((ua: any) => ({
         key: ua.achievement.key,

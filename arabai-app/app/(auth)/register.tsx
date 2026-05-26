@@ -52,7 +52,7 @@ export default function RegisterScreen() {
       await register(trimmedName, trimmedEmail, password, language, goal, dailyGoalMinutes);
       await applyPlacement(placementType);
       trackSignupCompleted({ goal: goal ?? "", level: "", placement: placementType ?? "BEGINNER", language: language ?? "en" });
-      router.replace("/(app)");
+      router.replace("/(auth)/onboarding/permissions");
     } catch (err) {
       setError(getApiErrorMessage(err, "Unable to finish account setup. Please try again."));
     } finally {

@@ -8,6 +8,7 @@ import { BrandButton } from "@components/BrandButton";
 import { PlayButton } from "@components/PlayButton";
 import { ShadowRepeatExercise } from "@components/ShadowRepeatExercise";
 import { Fonts, WarshPalette } from "../../../../constants/theme";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
 import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
 
@@ -64,6 +65,20 @@ type RevealAyah = {
   highlightedWordIndices?: number[];
 };
 
+type VerbConjugation = {
+  pronoun_ar: string;
+  pronoun_en: string;
+  form: string;
+};
+
+type VerbPattern = {
+  root?: string;
+  base_form?: string;
+  base_form_meaning?: string;
+  tense?: string;
+  conjugations?: VerbConjugation[];
+};
+
 type SpokenPhrase = {
   arabic: string;
   transliteration?: string;
@@ -104,6 +119,8 @@ type CompletionResult = {
   totalXp: number;
   currentStreak: number;
   streakCelebration: boolean;
+  newAchievements: { key: string; title: string; titleAr?: string; xpReward: number }[];
+  dailyGoalMet: boolean;
 };
 
 type SelectedAnswer = string | string[] | Record<string, string> | null;
@@ -256,29 +273,34 @@ export default function LessonPlayScreen() {
       try {
         const response = await api.post(`/api/lessons/${lessonId}/complete`, { score: 100, phrasesCompleted: phrasesCompletedRef.current });
         const data = response.data.data;
+        const achievements = Array.isArray(data.newAchievements) ? data.newAchievements : [];
+        const dailyGoalMet = data.dailyGoalXp > 0;
         setCompletionResult({
           xpEarned: data.xpEarned,
           totalXp: data.totalXp,
           currentStreak: data.currentStreak,
           streakCelebration: Boolean(data.streakCelebration),
+          newAchievements: achievements,
+          dailyGoalMet,
         });
         trackLessonCompleted({
           lessonId,
           lessonType: lesson?.type,
           xpEarned: data.xpEarned,
           currentStreak: data.currentStreak,
-          dailyGoalMet: data.dailyGoalXp > 0,
+          dailyGoalMet,
         });
         // Cancel today's reminders if daily goal was first met
-        if (data.dailyGoalXp > 0) {
+        if (dailyGoalMet) {
           cancelTodayReminders().catch(() => {});
+          // Set flag for M5 toast on Learn tab
+          const today = new Date().toISOString().slice(0, 10);
+          AsyncStorage.setItem(`warsh_daily_goal_toast_${today}`, "1").catch(() => {});
         }
         // Fire milestone notifications and track achievements
-        if (Array.isArray(data.newAchievements) && data.newAchievements.length > 0) {
-          for (const achievement of data.newAchievements as { key: string; title: string; xpReward: number }[]) {
-            fireMilestoneNotification(achievement.title).catch(() => {});
-            trackMilestoneUnlocked(achievement.key ?? "", achievement.title, achievement.xpReward ?? 0);
-          }
+        for (const achievement of achievements as { key: string; title: string; xpReward: number }[]) {
+          fireMilestoneNotification(achievement.title).catch(() => {});
+          trackMilestoneUnlocked(achievement.key ?? "", achievement.title, achievement.xpReward ?? 0);
         }
       } catch (err: any) {
         if (err.response?.status === 403) {
@@ -918,6 +940,74 @@ export default function LessonPlayScreen() {
 
   // ---- End SPOKEN_PHRASES ----
 
+  function renderVerbPattern() {
+    const vp = (lesson?.content?.verb_pattern ?? null) as VerbPattern | null;
+    const conjugations = vp?.conjugations;
+
+    if (!vp || !conjugations || conjugations.length === 0) {
+      return (
+        <View style={[styles.fullScreen, screenPadding]}>
+          <View style={styles.centerStack}>
+            <View style={styles.verbPatternFallbackCard}>
+              <Text style={styles.hookQuestion}>Verb pattern content coming soon.</Text>
+            </View>
+          </View>
+          <BrandButton title="Continue" onPress={() => goToBeat(3)} style={styles.bottomButton} />
+        </View>
+      );
+    }
+
+    return (
+      <ScrollView
+        style={styles.verbPatternScreen}
+        contentContainerStyle={[styles.verbPatternContent, screenPadding]}
+        showsVerticalScrollIndicator={false}
+      >
+        {/* Root pill */}
+        {vp.root ? (
+          <View style={styles.verbRootPill}>
+            <Text style={styles.verbRootPillText}>{vp.root}</Text>
+          </View>
+        ) : null}
+
+        {/* Base form */}
+        {vp.base_form ? (
+          <Text style={styles.verbBaseForm}>{vp.base_form}</Text>
+        ) : null}
+
+        {/* Base form meaning + tense */}
+        {(vp.base_form_meaning || vp.tense) ? (
+          <Text style={styles.verbBaseMeaning}>
+            {[vp.base_form_meaning, vp.tense].filter(Boolean).join(" — ")}
+          </Text>
+        ) : null}
+
+        {/* Conjugation table */}
+        <View style={styles.verbTableCard}>
+          {conjugations.map((row, index) => (
+            <View
+              key={`${row.pronoun_ar}-${index}`}
+              style={[
+                styles.verbTableRow,
+                index < conjugations.length - 1 ? styles.verbTableRowBorder : null,
+              ]}
+            >
+              {/* Left: pronoun */}
+              <View style={styles.verbTableLeft}>
+                <Text style={styles.verbPronounAr}>{row.pronoun_ar}</Text>
+                <Text style={styles.verbPronounEn}> ({row.pronoun_en})</Text>
+              </View>
+              {/* Right: conjugated form */}
+              <Text style={styles.verbConjugatedForm}>{row.form}</Text>
+            </View>
+          ))}
+        </View>
+
+        <BrandButton title="Continue" onPress={() => goToBeat(3)} style={StyleSheet.flatten([styles.bottomButton, styles.verbPatternContinueButton])} />
+      </ScrollView>
+    );
+  }
+
   function renderHook() {
     return (
       <View style={[styles.fullScreen, screenPadding]}>
@@ -1194,7 +1284,18 @@ export default function LessonPlayScreen() {
         <BrandButton
           title="Continue"
           onPress={() => {
-            if (shouldShowStreakCelebration) {
+            const achievements = completionResult?.newAchievements ?? [];
+            if (achievements.length > 0) {
+              const nextRoute = shouldShowStreakCelebration ? "streak-celebration" : "tabs";
+              router.push({
+                pathname: "/(app)/milestone-celebration",
+                params: {
+                  achievements: JSON.stringify(achievements),
+                  nextRoute,
+                  streak: String(streak),
+                },
+              });
+            } else if (shouldShowStreakCelebration) {
               router.push({ pathname: "/(app)/streak-celebration", params: { streak: String(streak) } });
             } else {
               router.replace("/(app)/(tabs)");
@@ -1230,7 +1331,7 @@ export default function LessonPlayScreen() {
     return renderSP1Context();
   }
 
-  if (lesson.type !== "VOCABULARY") {
+  if (lesson.type !== "VOCABULARY" && lesson.type !== "STANDARD" && lesson.type !== "REVIEW" && lesson.type !== "VERB_PATTERN") {
     if (currentBeat === 5) {
       return renderClose();
     }
@@ -1242,6 +1343,9 @@ export default function LessonPlayScreen() {
   }
 
   if (currentBeat === 2) {
+    if (lesson.type === "VERB_PATTERN") {
+      return renderVerbPattern();
+    }
     return renderDiscover();
   }
 
@@ -1933,5 +2037,104 @@ const styles = StyleSheet.create({
     fontSize: 13,
     lineHeight: 20,
     textAlign: "center",
+  },
+  // VERB_PATTERN styles
+  verbPatternScreen: {
+    flex: 1,
+    backgroundColor: "#F5F2EA",
+  },
+  verbPatternContent: {
+    paddingHorizontal: 24,
+    paddingBottom: 40,
+    alignItems: "center",
+  },
+  verbRootPill: {
+    alignSelf: "center",
+    backgroundColor: WarshPalette.gold,
+    borderRadius: 999,
+    paddingHorizontal: 14,
+    paddingVertical: 5,
+    marginBottom: 20,
+    marginTop: 8,
+  },
+  verbRootPillText: {
+    color: "#FFFFFF",
+    fontFamily: Fonts.regular,
+    fontSize: 11,
+    lineHeight: 16,
+    letterSpacing: 0.5,
+  },
+  verbBaseForm: {
+    fontFamily: "Scheherazade New",
+    fontSize: 36,
+    lineHeight: 52,
+    color: WarshPalette.gold,
+    textAlign: "center",
+    writingDirection: "rtl",
+  },
+  verbBaseMeaning: {
+    marginTop: 4,
+    marginBottom: 8,
+    fontFamily: Fonts.italic,
+    fontStyle: "italic",
+    fontSize: 13,
+    lineHeight: 20,
+    color: "#5A5240",
+    textAlign: "center",
+  },
+  verbTableCard: {
+    alignSelf: "stretch",
+    backgroundColor: "#FFFFFF",
+    borderRadius: 12,
+    borderWidth: 0.5,
+    borderColor: "#C8C0A8",
+    overflow: "hidden",
+    marginVertical: 20,
+  },
+  verbTableRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+  },
+  verbTableRowBorder: {
+    borderBottomWidth: 0.5,
+    borderBottomColor: "#EDE8D8",
+  },
+  verbTableLeft: {
+    flexDirection: "row",
+    alignItems: "baseline",
+  },
+  verbPronounAr: {
+    fontFamily: "Scheherazade New",
+    fontSize: 18,
+    lineHeight: 28,
+    color: "#0F1117",
+  },
+  verbPronounEn: {
+    fontFamily: Fonts.regular,
+    fontSize: 10,
+    lineHeight: 14,
+    color: "#9A8F6A",
+  },
+  verbConjugatedForm: {
+    fontFamily: "Scheherazade New",
+    fontSize: 20,
+    lineHeight: 30,
+    color: WarshPalette.gold,
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  verbPatternFallbackCard: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: "#C8C0A8",
+    borderRadius: 12,
+    padding: 24,
+    backgroundColor: "#EDE8D8",
+    alignItems: "center",
+  },
+  verbPatternContinueButton: {
+    alignSelf: "stretch",
   },
 });

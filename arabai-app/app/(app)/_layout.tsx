@@ -106,6 +106,15 @@ export default function AppLayout() {
       <Stack.Screen name="paywall" />
       <Stack.Screen name="tadabbur" />
       <Stack.Screen name="milestones" />
+      <Stack.Screen name="milestone-celebration" />
+      <Stack.Screen name="streak-celebration" />
+      <Stack.Screen name="edit-profile" />
+      <Stack.Screen name="streak-detail" />
+      <Stack.Screen name="surah-celebration" />
+      <Stack.Screen name="vocabulary/my-words" />
+      <Stack.Screen name="vocabulary/search" />
+      <Stack.Screen name="chapters" />
+      <Stack.Screen name="change-password" />
     </Stack>
   );
 }

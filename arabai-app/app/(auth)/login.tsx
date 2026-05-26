@@ -65,6 +65,11 @@ export default function LoginScreen() {
           Register
         </Link>
       </View>
+      <View style={{ alignItems: "center", marginTop: Spacing.sm }}>
+        <Link href="/(auth)/forgot-password" style={{ color: Colors.text.secondary, fontFamily: "Lora-Regular", fontSize: FontSizes.bodyM }}>
+          Forgot password?
+        </Link>
+      </View>
     </View>
   );
 }

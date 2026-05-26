@@ -46,6 +46,7 @@ export async function DELETE(request: Request) {
   await prisma.$transaction([
     prisma.userVocabularyWord.deleteMany({ where: { userId } }),
     prisma.userAchievement.deleteMany({ where: { userId } }),
+    prisma.userSurahProgress.deleteMany({ where: { userId } }),
     prisma.chatMessage.deleteMany({ where: { userId } }),
     prisma.progress.deleteMany({ where: { userId } }),
     prisma.streak.deleteMany({ where: { userId } }),

@@ -1,14 +1,17 @@
-import { useCallback, useState } from "react";
-import { View, Text, ScrollView, Pressable, ActivityIndicator, StyleSheet, TouchableOpacity } from "react-native";
+import { useCallback, useState, useRef, useEffect } from "react";
+import { View, Text, ScrollView, Pressable, ActivityIndicator, StyleSheet, TouchableOpacity, Modal, Animated } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
+import { BrandButton } from "@components/BrandButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Shadows, Spacing, WarshPalette } from "../../../constants/theme";
 
 const FREEZE_BANNER_KEY = "warsh_freeze_banner_shown";
+const LAST_STREAK_KEY = "warsh_last_streak";
+const STREAK_ENDED_SHOWN_KEY = "warsh_streak_ended_shown";
 
 
 function ChapterBadge({ label }: { label: string }) {
@@ -44,17 +47,42 @@ export default function HomeScreen() {
   const [trialDaysRemaining, setTrialDaysRemaining] = useState<number | null>(null);
   const [subscriptionStatus, setSubscriptionStatus] = useState<string>("trial");
   const [trialBannerDismissed, setTrialBannerDismissed] = useState(false);
+  // M4 — streak ended modal
+  const [wordOfDay, setWordOfDay] = useState<{ id: string; arabic: string; transliteration: string; translationEn: string; wordType: string; inWordBank: boolean } | null>(null);
+  const [showStreakEndedModal, setShowStreakEndedModal] = useState(false);
+  // M5 — daily goal toast
+  const [showDailyGoalToast, setShowDailyGoalToast] = useState(false);
+  const toastOpacity = useRef(new Animated.Value(0)).current;
+  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    if (showDailyGoalToast) {
+      Animated.timing(toastOpacity, { toValue: 1, duration: 300, useNativeDriver: true }).start();
+      toastTimer.current = setTimeout(() => {
+        Animated.timing(toastOpacity, { toValue: 0, duration: 300, useNativeDriver: true }).start(() => {
+          setShowDailyGoalToast(false);
+        });
+      }, 3000);
+    }
+    return () => {
+      if (toastTimer.current) clearTimeout(toastTimer.current);
+    };
+  }, [showDailyGoalToast]);
 
   const loadChapters = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
       const today = new Date().toISOString().slice(0, 10);
-      const [chaptersResponse, progressResponse, shownDate, tadabburResponse] = await Promise.all([
+      const [chaptersResponse, progressResponse, shownDate, tadabburResponse, wordOfDayResponse, lastStreakRaw, streakEndedShownDate, dailyGoalToastFlag] = await Promise.all([
         api.get("/api/chapters"),
         api.get("/api/progress"),
         AsyncStorage.getItem(FREEZE_BANNER_KEY),
         api.get("/api/tadabbur").catch(() => null),
+        api.get("/api/vocabulary/word-of-day").catch(() => null),
+        AsyncStorage.getItem(LAST_STREAK_KEY),
+        AsyncStorage.getItem(STREAK_ENDED_SHOWN_KEY),
+        AsyncStorage.getItem(`warsh_daily_goal_toast_${today}`),
       ]);
       setChapters(chaptersResponse.data.data.chapters);
       const progress = progressResponse.data.data;
@@ -71,8 +99,22 @@ export default function HomeScreen() {
         const focus = surahs.find((s: any) => s.id === focusSurahId);
         if (focus) setTadabburFocus({ id: focus.id, nameAr: focus.nameAr, nameEn: focus.nameEn, comprehensionPercent: focus.comprehensionPercent });
       }
+      if (wordOfDayResponse?.data?.data) setWordOfDay(wordOfDayResponse.data.data);
       if (progress.freezeUsedYesterday && shownDate !== today) {
         setShowFreezeBanner(true);
+      }
+      // M4: show streak ended modal if streak dropped to 0 since last session
+      const currentStreak: number = progress.streak ?? progress.currentStreak ?? 0;
+      const lastStreak = lastStreakRaw ? parseInt(lastStreakRaw, 10) : null;
+      if (currentStreak === 0 && lastStreak !== null && lastStreak > 0 && streakEndedShownDate !== today) {
+        setShowStreakEndedModal(true);
+        await AsyncStorage.setItem(STREAK_ENDED_SHOWN_KEY, today);
+      }
+      await AsyncStorage.setItem(LAST_STREAK_KEY, String(currentStreak));
+      // M5: show daily goal toast if flagged by lesson completion
+      if (dailyGoalToastFlag) {
+        await AsyncStorage.removeItem(`warsh_daily_goal_toast_${today}`);
+        setShowDailyGoalToast(true);
       }
     } catch (err) {
       setError("Unable to load chapters. Please login or try again.");
@@ -104,7 +146,42 @@ export default function HomeScreen() {
 
 
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: Colors.bg.primary }} contentContainerStyle={{ padding: Spacing.xl, paddingTop: insets.top + 16 }}>
+    <View style={{ flex: 1, backgroundColor: Colors.bg.primary }}>
+
+    {/* M4 — Streak ended modal */}
+    <Modal visible={showStreakEndedModal} transparent animationType="fade" onRequestClose={() => setShowStreakEndedModal(false)}>
+      <View style={styles.modalOverlay}>
+        <View style={styles.modalCard}>
+          <Text style={styles.modalEmoji}>🌿</Text>
+          <Text style={styles.modalTitle}>Your streak ended</Text>
+          <Text style={styles.modalBody}>
+            {"As-salamu alaykum.\n\nYour streak has ended — and that's okay. Every day is a new beginning. The Prophet ﷺ said: \"The most beloved deeds to Allah are the most consistent ones, even if they are small.\""}
+          </Text>
+          <Text style={styles.modalHadith}>Rekindle your practice today, in shaa Allah.</Text>
+          <BrandButton
+            title="Begin again"
+            onPress={() => setShowStreakEndedModal(false)}
+            style={styles.modalCta}
+          />
+        </View>
+      </View>
+    </Modal>
+
+    {/* M5 — Daily goal toast */}
+    {showDailyGoalToast ? (
+      <Animated.View style={[styles.dailyGoalToast, { top: insets.top + Spacing.sm, opacity: toastOpacity }]}>
+        <Ionicons name="checkmark-circle" size={18} color={WarshPalette.sage} />
+        <Text style={styles.dailyGoalToastText}>Today's goal complete · Barak Allahu feek 🌿</Text>
+        <TouchableOpacity onPress={() => {
+          if (toastTimer.current) clearTimeout(toastTimer.current);
+          setShowDailyGoalToast(false);
+        }} hitSlop={8}>
+          <Ionicons name="close" size={16} color={WarshPalette.bodyBrown} />
+        </TouchableOpacity>
+      </Animated.View>
+    ) : null}
+
+    <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: Spacing.xl, paddingTop: insets.top + 16 }}>
       {/* Trial expired banner — persistent, not dismissable */}
       {subscriptionStatus === "expired" && (
         <TouchableOpacity
@@ -176,6 +253,30 @@ export default function HomeScreen() {
         )}
       </View>
 
+      {/* Word of the Day card */}
+      {wordOfDay ? (
+        <TouchableOpacity
+          style={styles.wotdCard}
+          onPress={() => router.push(`/(app)/vocabulary/word/${wordOfDay.id}`)}
+          activeOpacity={0.85}
+        >
+          <Text style={styles.wotdEyebrow}>Word of the day · كَلِمَةُ الْيَوْم</Text>
+          <View style={styles.wotdRow}>
+            <View style={styles.wotdLeft}>
+              <ArabicText size="lg" style={styles.wotdArabic}>{wordOfDay.arabic}</ArabicText>
+              <Text style={styles.wotdTranslit}>{wordOfDay.transliteration}</Text>
+              <Text style={styles.wotdTranslation}>{wordOfDay.translationEn}</Text>
+            </View>
+            <View style={styles.wotdRight}>
+              <Text style={styles.wotdType}>{wordOfDay.wordType}</Text>
+              {wordOfDay.inWordBank && (
+                <Ionicons name="checkmark-circle" size={18} color={WarshPalette.sage} style={{ marginTop: 4 }} />
+              )}
+            </View>
+          </View>
+        </TouchableOpacity>
+      ) : null}
+
       {/* Tadabbur card */}
       {tadabburFocus ? (
         <TouchableOpacity
@@ -203,7 +304,7 @@ export default function HomeScreen() {
         Learn Quranic Arabic — one lesson at a time.
       </Text>
       {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.lg }}>{error}</Text> : null}
-      {chapters.map((chapter) => (
+      {chapters.slice(0, 5).map((chapter) => (
         <View
           key={chapter.id}
           style={{
@@ -257,7 +358,18 @@ export default function HomeScreen() {
           )}
         </View>
       ))}
+      {chapters.length > 5 && (
+        <TouchableOpacity
+          onPress={() => router.push("/(app)/chapters")}
+          activeOpacity={0.75}
+          style={styles.allChaptersLink}
+        >
+          <Text style={styles.allChaptersText}>All {chapters.length} chapters</Text>
+          <Ionicons name="chevron-forward" size={16} color={WarshPalette.gold} />
+        </TouchableOpacity>
+      )}
     </ScrollView>
+    </View>
   );
 }
 
@@ -425,5 +537,143 @@ const styles = StyleSheet.create({
   tadabburCta: {
     color: WarshPalette.gold, fontFamily: Fonts.display,
     fontSize: FontSizes.bodyM, fontWeight: "700", textAlign: "right",
+  },
+
+  // M4 — Streak ended modal
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(15, 17, 23, 0.7)",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: Spacing.xl,
+  },
+  modalCard: {
+    backgroundColor: Colors.bg.primary,
+    borderRadius: Radii.xl,
+    padding: Spacing.xxl,
+    width: "100%",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: WarshPalette.defaultCardBorder,
+  },
+  modalEmoji: {
+    fontSize: 52,
+    textAlign: "center",
+    marginBottom: Spacing.md,
+  },
+  modalTitle: {
+    fontFamily: Fonts.bold,
+    fontSize: FontSizes.h1,
+    fontWeight: "700",
+    color: WarshPalette.ink,
+    textAlign: "center",
+    lineHeight: LineHeights.h1,
+    marginBottom: Spacing.md,
+  },
+  modalBody: {
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    color: WarshPalette.bodyBrown,
+    textAlign: "center",
+    lineHeight: LineHeights.bodyM * 1.6,
+    marginBottom: Spacing.md,
+  },
+  modalHadith: {
+    fontFamily: Fonts.italic,
+    fontSize: FontSizes.bodyM,
+    color: WarshPalette.subtleBrown,
+    textAlign: "center",
+    lineHeight: LineHeights.bodyM,
+    marginBottom: Spacing.xl,
+  },
+  modalCta: {
+    width: "100%",
+  },
+
+  wotdCard: {
+    padding: Spacing.lg,
+    marginBottom: Spacing.md,
+    borderRadius: Radii.lg,
+    borderWidth: 1,
+    borderColor: WarshPalette.defaultCardBorder,
+    backgroundColor: WarshPalette.parchmentBg,
+  },
+  wotdEyebrow: {
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.caption,
+    fontWeight: "700",
+    textTransform: "uppercase",
+    letterSpacing: 0.6,
+    marginBottom: Spacing.sm,
+  },
+  wotdRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    justifyContent: "space-between",
+  },
+  wotdLeft: { flex: 1 },
+  wotdRight: { alignItems: "flex-end", paddingLeft: Spacing.sm },
+  wotdArabic: { color: WarshPalette.ink, textAlign: "left" },
+  wotdTranslit: {
+    fontFamily: Fonts.italic,
+    fontSize: FontSizes.caption,
+    color: WarshPalette.subtleBrown,
+    marginTop: 2,
+  },
+  wotdTranslation: {
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    lineHeight: LineHeights.bodyM,
+    color: WarshPalette.bodyBrown,
+    marginTop: 2,
+  },
+  wotdType: {
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.caption,
+    color: WarshPalette.gold,
+    textTransform: "capitalize",
+  },
+  allChaptersLink: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: Spacing.xs,
+    paddingVertical: Spacing.md,
+    marginBottom: Spacing.lg,
+  },
+  allChaptersText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+    color: WarshPalette.gold,
+  },
+
+  // M5 — Daily goal toast
+  dailyGoalToast: {
+    position: "absolute",
+    left: Spacing.lg,
+    right: Spacing.lg,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.sm,
+    backgroundColor: WarshPalette.white,
+    borderWidth: 1.5,
+    borderColor: WarshPalette.gold,
+    borderRadius: Radii.lg,
+    paddingVertical: Spacing.md,
+    paddingHorizontal: Spacing.lg,
+    zIndex: 100,
+    shadowColor: WarshPalette.gold,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  dailyGoalToastText: {
+    flex: 1,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    color: WarshPalette.ink,
+    lineHeight: LineHeights.bodyM,
   },
 });
