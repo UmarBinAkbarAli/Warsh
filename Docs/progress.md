@@ -341,6 +341,37 @@ The repo is in a stronger state than the old tracker wording suggested, but a fe
 
 ## Recent Changes (since 2026-05-27) — latest
 
+### Cron jobs, share stats card, and password reset email (2026-05-27)
+
+Read `Docs/warsh-spec-00-master-index.md` before starting, per the build protocol.
+
+**Priority 8 — Cron Jobs:**
+
+- `vercel.json` — added two Vercel cron entries:
+  - `/api/cron/reset-streaks` — daily at 23:00 UTC (04:00 PKT)
+  - `/api/cron/expire-trials` — every 6 hours
+- `app/api/cron/reset-streaks/route.ts` — finds all Streak records where `currentStreak > 0` and `lastActiveDate < 4 AM PKT today`. Consumes a freeze if available (streak survives), otherwise resets to 0. Protected by `Authorization: Bearer CRON_SECRET`.
+- `app/api/cron/expire-trials/route.ts` — bulk-updates all users where `subscriptionStatus = "trial"` and `trialExpiresAt <= now` to `"expired"`. Same CRON_SECRET protection.
+- `.env.example` — added `CRON_SECRET` and replaced SMTP block with `RESEND_API_KEY`.
+
+**Priority 9 — Share Stats Card (Y6):**
+
+- `expo-sharing` and `react-native-view-shot` installed via `npx expo install`.
+- `app/(app)/share-stats.tsx` — full share stats screen: fetches `/api/progress`, renders a dark branded card (streak, XP, lessons, vocab words learned/mastered). Uses `captureRef` from `react-native-view-shot` to capture the card as PNG, then `expo-sharing` to invoke the system share sheet. Handles unavailable share gracefully.
+- Profile screen — added "Share my progress" secondary button above Log Out.
+- `_layout.tsx` — registered `share-stats` Stack screen.
+
+**Priority 10 — Password Reset Email:**
+
+- `app/api/auth/forgot-password/route.ts` — now generates a signed 1-hour JWT (`purpose: "password-reset"`) and calls Resend's REST API (`https://api.resend.com/emails`) to send a branded HTML reset email. `RESEND_API_KEY` is required; if absent it logs a warning and returns 200 silently (no email sent). Response always returns 200 regardless of whether the email is registered (security).
+- `app/api/auth/reset-password/route.ts` — new endpoint: verifies the JWT signature + expiry + purpose claim, then bcrypt-hashes the new password and updates the user record.
+- `app/(auth)/reset-password.tsx` — new screen: accepts `?token=` param from the deep link, shows new/confirm password fields with show/hide toggle, calls `/api/auth/reset-password`, and routes to login on success.
+- No schema migration needed — stateless JWT token approach (1h expiry).
+
+**TypeScript:**
+- App `npx tsc --noEmit` — 0 errors
+- Backend `npx tsc --noEmit` — 0 errors
+
 ### Product polish sprint: vocabulary pipeline, screens, and account management (2026-05-27)
 
 Read `Docs/warsh-spec-00-master-index.md` before starting, per the build protocol.

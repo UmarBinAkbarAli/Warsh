@@ -115,6 +115,7 @@ export default function AppLayout() {
       <Stack.Screen name="vocabulary/search" />
       <Stack.Screen name="chapters" />
       <Stack.Screen name="change-password" />
+      <Stack.Screen name="share-stats" />
     </Stack>
   );
 }

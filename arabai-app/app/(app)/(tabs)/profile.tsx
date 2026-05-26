@@ -210,6 +210,12 @@ export default function ProfileScreen() {
         </>
       ) : null}
 
+      <BrandButton
+        title="Share my progress"
+        onPress={() => router.push("/(app)/share-stats")}
+        variant="secondary"
+        style={styles.shareButton}
+      />
       <BrandButton title="Log Out" onPress={logout} variant="danger" style={styles.logoutButton} />
     </ScrollView>
   );
@@ -545,6 +551,10 @@ const styles = StyleSheet.create({
     lineHeight: Math.round(Theme.FontSizes.bodyL * 1.6),
   },
   logoutButton: {
+    marginHorizontal: Theme.Spacing.xl,
+    marginTop: Theme.Spacing.xl,
+  },
+  shareButton: {
     marginHorizontal: Theme.Spacing.xl,
     marginTop: Theme.Spacing.xl,
   },

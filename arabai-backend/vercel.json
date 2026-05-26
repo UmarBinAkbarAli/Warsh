@@ -5,5 +5,15 @@
       "src": "package.json",
       "use": "@vercel/next"
     }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/reset-streaks",
+      "schedule": "0 23 * * *"
+    },
+    {
+      "path": "/api/cron/expire-trials",
+      "schedule": "0 */6 * * *"
+    }
   ]
 }
