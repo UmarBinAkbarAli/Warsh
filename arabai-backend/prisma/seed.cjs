@@ -34,6 +34,15 @@ const ch06L01Content = require("./fixtures/chapter-06-lesson-01.json");
 const ch06L02Content = require("./fixtures/chapter-06-lesson-02.json");
 const ch06L03Content = require("./fixtures/chapter-06-lesson-03.json");
 const ch06L04Content = require("./fixtures/chapter-06-lesson-04.json");
+const ch07L01Content = require("./fixtures/chapter-07-lesson-01.json");
+const ch07L02Content = require("./fixtures/chapter-07-lesson-02.json");
+const ch07L03Content = require("./fixtures/chapter-07-lesson-03.json");
+const ch07L04Content = require("./fixtures/chapter-07-lesson-04.json");
+const ch07L05SpokenContent = require("./fixtures/chapter-07-lesson-05-spoken-phrases.json");
+const ch08L01Content = require("./fixtures/chapter-08-lesson-01.json");
+const ch08L02Content = require("./fixtures/chapter-08-lesson-02.json");
+const ch08L03Content = require("./fixtures/chapter-08-lesson-03.json");
+const ch08L04Content = require("./fixtures/chapter-08-lesson-04.json");
 
 const ACHIEVEMENTS = [
   { key: "first_lesson",           title: "الخُطْوَة الأُولَى",            description: "Complete your very first lesson",                    icon: "footsteps-outline",   xpReward: 25  },
@@ -224,7 +233,7 @@ async function main() {
     chapterIdByOrder.set(created.order, created.id);
   }
 
-  // Upsert lessons with stable IDs (ch01-l01 … ch06-l04).
+  // Upsert lessons with stable IDs (ch01-l01 … ch08-l04).
   // Stable IDs mean progress records survive future seed runs.
   const ch1Id = chapterIdByOrder.get(1);
   const ch2Id = chapterIdByOrder.get(2);
@@ -232,6 +241,8 @@ async function main() {
   const ch4Id = chapterIdByOrder.get(4);
   const ch5Id = chapterIdByOrder.get(5);
   const ch6Id = chapterIdByOrder.get(6);
+  const ch7Id = chapterIdByOrder.get(7);
+  const ch8Id = chapterIdByOrder.get(8);
 
   const lessons = [
     // Chapter 1
@@ -266,6 +277,17 @@ async function main() {
     { id: "ch06-l02", chapterId: ch6Id, order: 2, title: "الَّذِي — Who, That, Which",              titleAr: "الَّذِي — اسْمٌ مَوْصُول",                 template: "STANDARD", xpReward: ch06L02Content._meta?.xp_reward ?? 10, content: ch06L02Content },
     { id: "ch06-l03", chapterId: ch6Id, order: 3, title: "الَّذِي with Place Phrases",             titleAr: "الَّذِي مَعَ عِبَارَاتِ المَكَان",          template: "STANDARD", xpReward: ch06L03Content._meta?.xp_reward ?? 10, content: ch06L03Content },
     { id: "ch06-l04", chapterId: ch6Id, order: 4, title: "الَّذِي in Al-A'la",                     titleAr: "الَّذِي فِي سُورَةِ الأَعْلَى",             template: "STANDARD", xpReward: ch06L04Content._meta?.xp_reward ?? 10, content: ch06L04Content },
+    // Chapter 7
+    { id: "ch07-l01", chapterId: ch7Id, order: 1, title: "My — attached ي",                         titleAr: "كِتَابِي — يَاءُ المُتَكَلِّم",              template: "STANDARD", xpReward: ch07L01Content._meta?.xp_reward ?? 10, content: ch07L01Content },
+    { id: "ch07-l02", chapterId: ch7Id, order: 2, title: "Your — attached كَ and كِ",               titleAr: "كِتَابُكَ — كَافُ الخِطَاب",                template: "STANDARD", xpReward: ch07L02Content._meta?.xp_reward ?? 10, content: ch07L02Content },
+    { id: "ch07-l03", chapterId: ch7Id, order: 3, title: "His and Her — attached هُ and هَا",        titleAr: "كِتَابُهُ وَمَدْرَسَتُهَا",                 template: "STANDARD", xpReward: ch07L03Content._meta?.xp_reward ?? 10, content: ch07L03Content },
+    { id: "ch07-l04", chapterId: ch7Id, order: 4, title: "I Have — عِنْدِي",                         titleAr: "عِنْدِي — المِلْكِيَّة بِعِنْد",             template: "STANDARD", xpReward: ch07L04Content._meta?.xp_reward ?? 10, content: ch07L04Content },
+    { id: "ch07-l05", chapterId: ch7Id, order: 5, title: "SP2 - Simple Questions",                    titleAr: "الأَسْئِلَةُ السَّهْلَة",                               template: "SPOKEN_PHRASES", xpReward: ch07L05SpokenContent._meta?.xp_reward ?? 15, content: ch07L05SpokenContent },
+    // Chapter 8
+    { id: "ch08-l01", chapterId: ch8Id, order: 1, title: "She Went - ذَهَبَتْ",                        titleAr: "ذَهَبَتْ - تَاءُ التَّأْنِيث",                         template: "STANDARD", xpReward: ch08L01Content._meta?.xp_reward ?? 10, content: ch08L01Content },
+    { id: "ch08-l02", chapterId: ch8Id, order: 2, title: "Feminine Marker Across Verbs",              titleAr: "تَاءُ التَّأْنِيث فِي الأَفْعَال",                       template: "STANDARD", xpReward: ch08L02Content._meta?.xp_reward ?? 10, content: ch08L02Content },
+    { id: "ch08-l03", chapterId: ch8Id, order: 3, title: "الَّتِي - Feminine Relative",                titleAr: "الَّتِي - اسْمٌ مَوْصُولٌ مُؤَنَّث",                    template: "STANDARD", xpReward: ch08L03Content._meta?.xp_reward ?? 10, content: ch08L03Content },
+    { id: "ch08-l04", chapterId: ch8Id, order: 4, title: "My Mother - أُمِّي",                         titleAr: "أُمِّي - تَطْبِيقُ المُؤَنَّث",                          template: "STANDARD", xpReward: ch08L04Content._meta?.xp_reward ?? 10, content: ch08L04Content },
   ];
 
   for (const { id, ...data } of lessons) {

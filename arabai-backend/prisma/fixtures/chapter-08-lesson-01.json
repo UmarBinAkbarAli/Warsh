@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 8, Lesson 1 - feminine past-tense verb marker تْ, using ذَهَبَتْ and قَالَتْ.",
+    "chapter_order": 8,
+    "lesson_order": 1,
+    "estimated_minutes": 9,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 28,
+      "ayah": 25,
+      "label": "Al-Qasas 28:25",
+      "ar": "قَالَتْ إِنَّ أَبِي يَدْعُوكَ",
+      "en": "She said, 'Indeed, my father invites you.'",
+      "ur": "اس نے کہا: میرے والد آپ کو بلا رہے ہیں۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-qasas-025-part-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "The تْ at the end of قَالَتْ tells you the speaker is feminine. Today you learn that same sign in everyday verbs.",
+      "ur": "قَالَتْ کے آخر کی تْ بتاتی ہے کہ کہنے والی مؤنث ہے۔ آج آپ یہی علامت عام افعال میں سیکھیں گے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": { "en": "She did - final تْ", "ar": "تَاءُ التَّأْنِيثِ السَّاكِنَة", "ur": "مؤنث فعل کی تْ" },
+      "explanation": {
+        "en": "A past-tense verb can end with تْ when the doer is feminine.\n\nذَهَبَ - he went\nذَهَبَتْ - she went\nقَالَ - he said\nقَالَتْ - she said",
+        "ur": "ماضی کے فعل کے آخر میں تْ آ سکتی ہے جب کام کرنے والی مؤنث ہو۔\n\nذَهَبَ - وہ گیا\nذَهَبَتْ - وہ گئی\nقَالَ - اس نے کہا\nقَالَتْ - اس نے کہا (مؤنث)"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "he went", "ur": "وہ گیا" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/dhahaba.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/dhahabat.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "قَالَتْ", "ar_plain": "قالت", "translit": "qalat", "en": "she said", "ur": "اس نے کہا (مؤنث)" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/qalat.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "ذَهَبَتْ فَاطِمَةُ", "ar_plain": "ذهبت فاطمة", "translit": "dhahabat Fatimatu", "en": "Fatimah went", "ur": "فاطمہ گئی" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/dhahabat-fatimah.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": { "en": "The doer may come after the verb", "ar": "الفَاعِلُ بَعْدَ الفِعْل", "ur": "فاعل فعل کے بعد بھی آتا ہے" },
+      "explanation": {
+        "en": "ذَهَبَتْ فَاطِمَةُ begins with the verb. The name فَاطِمَةُ comes after it and tells you who went.",
+        "ur": "ذَهَبَتْ فَاطِمَةُ فعل سے شروع ہوتا ہے۔ نام فَاطِمَةُ بعد میں آ کر بتاتا ہے کہ کون گئی۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch08-l01-ex01",
+      "prompt": { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" },
+      "options": [
+        { "en": "she went", "ur": "وہ گئی" },
+        { "en": "he went", "ur": "وہ گیا" },
+        { "en": "my book", "ur": "میری کتاب" },
+        { "en": "where?", "ur": "کہاں؟" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch08-l01-ex02",
+      "statement": {
+        "en": "The final تْ in ذَهَبَتْ marks a feminine doer.",
+        "ur": "ذَهَبَتْ کے آخر کی تْ مؤنث فاعل کو ظاہر کرتی ہے۔",
+        "ar_example": { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch08-l01-ex03",
+      "mode": "TAP",
+      "sentence_ar": "___ فَاطِمَةُ",
+      "hint": { "en": "Fatimah went", "ur": "فاطمہ گئی" },
+      "options": [
+        { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" },
+        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "he went", "ur": "وہ گیا" },
+        { "ar": "كِتَابُهُ", "ar_plain": "كتابه", "translit": "kitabuhu", "en": "his book", "ur": "اس کی کتاب" },
+        { "ar": "أَيْنَ", "ar_plain": "اين", "translit": "ayna", "en": "where", "ur": "کہاں" }
+      ],
+      "correct_answer": { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch08-l01-ex04",
+      "left_column": [
+        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "he went", "ur": "وہ گیا" },
+        { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" },
+        { "ar": "قَالَ", "ar_plain": "قال", "translit": "qala", "en": "he said", "ur": "اس نے کہا (مذکر)" },
+        { "ar": "قَالَتْ", "ar_plain": "قالت", "translit": "qalat", "en": "she said", "ur": "اس نے کہا (مؤنث)" }
+      ],
+      "right_column": [
+        { "en": "he went", "ur": "وہ گیا" },
+        { "en": "she went", "ur": "وہ گئی" },
+        { "en": "he said", "ur": "اس نے کہا (مذکر)" },
+        { "en": "she said", "ur": "اس نے کہا (مؤنث)" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch08-l01-ex05",
+      "sentence_ar": "ذَهَبَتْ فَاطِمَةُ",
+      "words": [
+        { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" },
+        { "ar": "فَاطِمَةُ", "ar_plain": "فاطمة", "translit": "Fatimatu", "en": "Fatimah", "ur": "فاطمہ" }
+      ],
+      "available_roles": ["VERB", "SUBJECT", "PREDICATE", "POSSESSIVE"],
+      "correct_roles": ["VERB", "SUBJECT"],
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": { "en": "Feminine past verb", "ar": "الفِعْلُ المَاضِي المُؤَنَّث", "ur": "مؤنث فعل ماضی" },
+    "ayah": {
+      "surah": 28,
+      "ayah": 25,
+      "label": "Al-Qasas 28:25",
+      "ar": "قَالَتْ إِنَّ أَبِي يَدْعُوكَ",
+      "en": "She said, 'Indeed, my father invites you.'",
+      "ur": "اس نے کہا: میرے والد آپ کو بلا رہے ہیں۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-qasas-025-part-mishary.mp3"
+    },
+    "highlighted_word_indices": [0],
+    "noor_explanation": {
+      "en": "قَالَتْ is قَالَ with the feminine تْ ending. That small ending tells you the speaker in the ayah is a woman.",
+      "ur": "قَالَتْ اصل میں قَالَ ہے جس کے آخر میں مؤنث تْ ہے۔ یہی چھوٹی علامت بتاتی ہے کہ آیت میں کہنے والی عورت ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can now spot the feminine تْ on past verbs: ذَهَبَتْ, قَالَتْ, رَجَعَتْ.",
+      "ur": "آپ اب ماضی کے افعال پر مؤنث تْ پہچان سکتے ہیں: ذَهَبَتْ، قَالَتْ، رَجَعَتْ۔"
+    }
+  }
+}

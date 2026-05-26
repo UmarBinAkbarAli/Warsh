@@ -49,6 +49,7 @@ type Exercise = {
   arabicText?: string;
   options?: string[];
   correctAnswer?: string;
+  explanation_on_wrong?: string;
   pairs?: MatchingPair[];
   parseTokens?: ParseToken[];
   labels?: string[];
@@ -59,6 +60,8 @@ type RevealAyah = {
   ayahAr?: string;
   ayahRef?: string;
   highlightedWord?: string;
+  highlightedWords?: string[];
+  highlightedWordIndices?: number[];
 };
 
 type SpokenPhrase = {
@@ -409,6 +412,9 @@ export default function LessonPlayScreen() {
         ) : (
           <>
             <Text style={styles.feedbackWrongTitle}>Almost - let's look at this again</Text>
+            {currentExercise.explanation_on_wrong ? (
+              <Text style={[styles.feedbackExplanation, styles.feedbackWrongExplanation]}>{currentExercise.explanation_on_wrong}</Text>
+            ) : null}
             {containsArabic(currentExercise.arabicText) || containsArabic(currentExercise.correctAnswer) ? (
               <ArabicText size="sm" style={styles.feedbackCorrectAnswerArabic}>
                 {getCorrectAnswerDisplay(currentExercise)}
@@ -1057,14 +1063,27 @@ export default function LessonPlayScreen() {
   function renderRevealAyah() {
     const ayah = lesson?.revealAyah;
     const words = splitWords(ayah?.ayahAr);
+    const highlightedWordIndices = new Set(ayah?.highlightedWordIndices ?? []);
+    const highlightedWords = highlightedWordIndices.size === 0
+      ? ayah?.highlightedWords?.length
+        ? ayah.highlightedWords
+        : ayah?.highlightedWord
+          ? [ayah.highlightedWord]
+          : []
+      : [];
+    const normalizedHighlightedWords = new Set(highlightedWords.map((word) => normalizeAnswer(word)));
 
     return (
       <ArabicText size="lg" style={styles.revealAyah}>
-        {words.map((word, index) => (
-          <Text key={`${word}-${index}`} style={normalizeAnswer(word) === normalizeAnswer(ayah?.highlightedWord) ? styles.highlightedWord : styles.revealAyahWord}>
-            {index === 0 ? word : ` ${word}`}
-          </Text>
-        ))}
+        {words.map((word, index) => {
+          const isHighlighted = highlightedWordIndices.has(index) || normalizedHighlightedWords.has(normalizeAnswer(word));
+
+          return (
+            <Text key={`${word}-${index}`} style={isHighlighted ? styles.highlightedWord : styles.revealAyahWord}>
+              {index === 0 ? word : ` ${word}`}
+            </Text>
+          );
+        })}
       </ArabicText>
     );
   }
@@ -1705,6 +1724,9 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.regular,
     fontSize: 12,
     lineHeight: 18,
+  },
+  feedbackWrongExplanation: {
+    marginTop: 4,
   },
   feedbackCorrectAnswerArabic: {
     marginTop: 4,

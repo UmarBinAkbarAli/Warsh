@@ -21,11 +21,14 @@ It should not be treated as a permanent record of:
 
 - **Phase 1 core app flow:** implemented
 - **Content schema:** migrated to `warsh-content-schema v1.0` — single `content Json` blob per lesson, `LessonTemplate` enum (STANDARD / SPOKEN_PHRASES / REVIEW / VERB_PATTERN)
-- **Chapters 1–6:** fixture-authored and wired into `seed.cjs` — 26 lessons total across these chapters
-- **SP1:** inserted as `ch03-l05` after Chapter 3 review — basic greetings and introductions
-- **Chapters 7–72:** chapter metadata seeded, fixture authoring still pending
+- **Chapters 1-8:** fixture-authored and wired into `seed.cjs` - 35 lessons total across these chapters, including SP1 and SP2
+- **SP1:** inserted as `ch03-l05` after Chapter 3 review - basic greetings and introductions
+- **SP2:** inserted as `ch07-l05` after Chapter 7 - simple classroom/lesson questions
+- **Chapters 9-72:** chapter metadata seeded, fixture authoring still pending
 - **Current focus:** content authoring — one chapter at a time, using the fixture pattern
-- **Recommended next milestone:** run device QA for SP1 + Chapter 6, then author Chapter 7 (Attached Pronouns — Singular)
+- **Recommended next milestone:** run device QA for SP1 + SP2 + Chapters 6-8 playback, then author Chapter 9 (Plural Nouns)
+
+**2026-05-26 coordinator correction:** Chapters 1-8 are now fixture-authored and wired into `seed.cjs` (35 lessons total across Chapters 1-8, including SP1 and SP2). Chapters 9-72 still need fixture-authored JSON lessons. The next milestone is device QA for SP1 + SP2 + Chapters 6-8, then Chapter 9 authoring.
 
 ## Build and Testing Status
 
@@ -119,13 +122,13 @@ It should not be treated as a permanent record of:
   - an earlier active database snapshot returned `72` chapters and `323` lessons from `GET /api/admin/content`
   - backend production build passed after the dashboard work
 - Current curriculum validation status:
-  - `npm run db:validate-seed` passes with `72` chapters and `323` lessons, but it validates the legacy `.cjs` curriculum modules, not the fixture-authored JSON lessons now wired for Chapters 1-6
-  - fixture-specific validation is still pending and remains listed under Infrastructure remaining work
+  - `npm run db:validate-seed` passes with `72` chapters and `323` lessons, but it validates the legacy `.cjs` curriculum modules, not the fixture-authored JSON lessons now wired for Chapters 1-8
+  - strict fixture validation exists, but the full command still fails until older Chapter 1-6/SP1 fixture schema drift is cleaned up
 - Current seed code reality:
   - `seed.cjs` imports 72 chapter metadata from `curriculum-book1.cjs`, `curriculum-books2-4.cjs`, `curriculum-books5-6.cjs`, and `curriculum-books7-8.cjs`
-  - `seed.cjs` currently upserts 26 fixture-authored lessons for Chapters 1-6
-  - on an empty database, a full reset seed produces 72 chapters plus the 26 fixture-authored lessons
-  - on a database with existing users, seed preserves users/progress and may leave older non-fixture lesson rows outside the authored Chapter 1-6 range
+  - `seed.cjs` currently upserts 35 fixture-authored lessons for Chapters 1-8, including SP1 and SP2
+  - on an empty database, a full reset seed produces 72 chapters plus the 35 fixture-authored lessons
+  - on a database with existing users, seed preserves users/progress and may leave older non-fixture lesson rows outside the authored Chapter 1-8 range
 - Android physical device testing is in progress:
   - Android device is now authorized in ADB
   - native debug app is installed as `com.arabai.app`
@@ -218,8 +221,8 @@ The workspace contains two active projects:
 - Fixture-authored lesson content lives in `arabai-backend/prisma/fixtures/` and is wired into `seed.cjs`
 - Seeded source-of-truth lesson content currently contains:
   - `72` chapter metadata rows
-  - `26` fixture-authored lessons across Chapters 1-6
-- Chapters 7-72 still have legacy `.cjs` module lesson definitions used by the current validator, but they still need fixture-authored JSON lessons before they should be treated as current lesson content
+  - `35` fixture-authored lessons across Chapters 1-8, including SP1 and SP2
+- Chapters 9-72 still have legacy `.cjs` module lesson definitions used by the current validator, but they still need fixture-authored JSON lessons before they should be treated as current lesson content
 - The current fixture seed replaces earlier starter lessons for authored chapters rather than appending to them
 - Chapter order follows reader lecture filename order, not lecture frontmatter
 - The new seed is authored as interactive lessons based on `Docs/warsh_chapter_flow_system.html`, not as raw markdown dumps
@@ -337,6 +340,64 @@ The repo is in a stronger state than the old tracker wording suggested, but a fe
 - `npm run db:seed` has two modes: if the DB has zero users it performs a full reset; if users exist it preserves accounts/progress and upserts chapters/lessons while refreshing vocabulary/tadabbur
 
 ## Recent Changes (since 2026-05-26) — latest
+
+### SP2 and Chapter 8 authored (2026-05-26)
+
+- Checked `Docs/warsh-spec-00-master-index.md` and `Docs/progress.md` before starting, per the build protocol.
+- Device QA remains pending in this shell because `adb` is not available on PATH.
+- Added SP2 as `ch07-l05` after Chapter 7, matching File 05's locked SPOKEN_PHRASES insertion point:
+  - simple Fus'ha lesson questions: `مَا هَذَا؟`, `مَنْ هَذَا؟`, `أَيْنَ الْكِتَابُ؟`, `أَعِنْدَكَ قَلَمٌ؟`
+  - authored in schema-native `spoken_phrases` shape
+- Added Chapter 8 fixture-authored lessons and wired them into `arabai-backend/prisma/seed.cjs`:
+  - `ch08-l01`: feminine past verb marker `تْ` with `ذَهَبَتْ` / `قَالَتْ`
+  - `ch08-l02`: feminine marker across common verbs
+  - `ch08-l03`: feminine relative pronoun `الَّتِي`
+  - `ch08-l04`: `أُمِّي` integration with attached pronouns, `الَّتِي`, and feminine verbs
+- Updated the lesson API transformer so schema-native `spoken_phrases.phrases` and `spoken_phrases.dialogue` map into the current mobile SPOKEN_PHRASES renderer.
+- Validation:
+  - new fixture JSON loads successfully
+  - `node --check arabai-backend/prisma/seed.cjs` passed
+  - `npm run db:validate-seed` passed
+  - scoped strict validation for the new SP2 + Chapter 8 fixtures passed
+  - full `npm run db:validate-fixtures` still fails on known older Chapter 1-6/SP1 schema drift
+  - backend `npx tsc --noEmit` passed
+
+### Priority build list refreshed after Verse 00 check (2026-05-26)
+
+- Checked `Docs/warsh-spec-00-master-index.md` before planning, per the build protocol
+- Current priority order:
+  1. Device QA for SP1, SP2, and Chapters 6-8 lesson playback
+  2. Author Chapter 9 fixture lessons: Plural Nouns
+  3. Clean up older Chapter 1-6/SP1 fixture schema drift so full strict fixture validation can pass
+  4. Update the lesson player to read the new content schema directly
+  5. Prepare beta infrastructure secrets and production runtime checks
+
+### Parallel subagent work completed (2026-05-26)
+
+- Checked `Docs/warsh-spec-00-master-index.md` before starting the parallel work
+- Added Chapter 7 fixture-authored lessons and wired them into `arabai-backend/prisma/seed.cjs`:
+  - `ch07-l01`: attached `ي` for "my"
+  - `ch07-l02`: attached `كَ` / `كِ` for "your"
+  - `ch07-l03`: attached `هُ` / `هَا` for "his/her"
+  - `ch07-l04`: `عِنْدِي` possession pattern
+- Added strict fixture validation mode:
+  - `npm run db:validate-seed` remains legacy-safe and passes against the 72-chapter legacy curriculum
+  - `npm run db:validate-fixtures` now validates JSON fixtures against `warsh-content-schema v1.0`
+  - current strict fixture validation intentionally fails because existing Chapter 1-6/SP1 fixtures still contain schema drift and renderer-era fields
+- Improved lesson player/API schema handling:
+  - wrong-answer feedback now displays authored `explanation_on_wrong`
+  - Reveal beat now supports multiple `highlighted_word_indices`
+  - skipped-by-placement lesson replays no longer award first-completion XP, daily-goal XP, chapter bonus XP, or spoken-lesson achievement credit
+- Added beta infrastructure readiness cleanup:
+  - removed a secret-looking OpenAI key from `arabai-backend/.env.example`; rotate that key if it was ever real
+  - expanded backend/mobile env examples and added `Docs/warsh-beta-infra-readiness-checklist.md`
+  - aligned the production EAS API URL with `https://api.warsh.app`
+- Validation:
+  - `node --check prisma/seed.cjs` passed
+  - `npm run db:validate-seed` passed
+  - backend `npx tsc --noEmit` passed
+  - app `npx tsc --noEmit` passed
+  - edited JSON config parse check passed
 
 ### Streak celebration gated to once per day (2026-05-26)
 
@@ -1277,22 +1338,26 @@ Current product concern:
 4. ✅ Chapter 5 authored — 5 lessons (هٰذِهِ، تِلْكَ، لام الملكية، ذَهَبَ, R1) wired in `seed.cjs` (2026-05-26)
 5. ✅ Inserted SP1 SPOKEN_PHRASES lesson after Ch3 (basic greetings — per spec-05 Part C) as `ch03-l05` (2026-05-26)
 6. ✅ Chapter 6 authored — 4 lessons (described subjects, الَّذِي, place phrases, Al-A'la reveal) wired in `seed.cjs` (2026-05-26)
-7. Author Chapter 7: Attached Pronouns — Singular (كِتَابِي، كِتَابُكَ، كِتَابُهُ، عِنْدِي)
-8. Continue through Chapters 8–72 following the chapter mapping in `warsh-spec-05`
+7. ✅ Chapter 7 authored — 4 lessons (attached singular pronouns: `كِتَابِي`, `كِتَابُكَ`, `كِتَابُهُ`, `عِنْدِي`) wired in `seed.cjs` (2026-05-26)
+8. ✅ Inserted SP2 SPOKEN_PHRASES lesson after Ch7 (simple questions — per spec-05 Part C) as `ch07-l05` (2026-05-26)
+9. ✅ Chapter 8 authored — 4 lessons (feminine verbs, feminine verb marker, `الَّتِي`, `أُمِّي`) wired in `seed.cjs` (2026-05-26)
+10. Continue through Chapters 9-72 following the chapter mapping in `warsh-spec-05`
+
+**2026-05-26 correction:** Chapter 8 and SP2 are now authored and wired. The next content authoring task is Chapter 9; before that, run device QA across SP1, SP2, and Chapters 6-8.
 
 ### Lesson player (engineering)
 6. Update the lesson player (`play.tsx`) to read the new content schema directly (currently using the API transformer as an adapter — acceptable for now but should be replaced)
-7. Wire `explanation_on_wrong` from exercises into the feedback bar (currently shows generic feedback)
-8. Support multiple `highlighted_word_indices` in the Reveal beat (transformer only uses index 0)
+7. ✅ Wire `explanation_on_wrong` from exercises into the feedback bar (completed 2026-05-26)
+8. ✅ Support multiple `highlighted_word_indices` in the Reveal beat (completed 2026-05-26)
 
 ### Infrastructure
 9. Configure `OPENAI_API_KEY` in backend `.env` for real AI + TTS
 10. Configure `EXPO_PUBLIC_MIXPANEL_TOKEN` and `EXPO_PUBLIC_SENTRY_DSN` in EAS secrets before beta
 11. Set `ADMIN_DASHBOARD_TOKEN` before using dashboard writes outside local development
-12. Update `validate-curriculum.cjs` to validate fixture-based lessons (currently validates old .cjs curriculum files)
+12. Clean up older Chapter 1-6/SP1 fixture schema drift so `npm run db:validate-fixtures` can pass across the full fixture set
 
 ### QA still needed
-13. Full lesson player QA on device for Chapters 1–5 (5-beat flow, all exercise types used in authored fixtures)
+13. Full lesson player QA on device for Chapters 1-8 plus SP1/SP2 (5-beat flow, SPOKEN_PHRASES, and all exercise types used in authored fixtures)
 14. Verify REVIEW template (xp_value: 5) XP display in lesson player close screen
 15. Verify chapter completion logic with new schema (Ch1 completes when all 4 lessons done)
 
@@ -1303,12 +1368,12 @@ As of 2026-05-26:
 - the native Android app is installed and launching on the authorized physical device
 - onboarding, auth, placement, progression, lesson play, chat, and profile flows exist in code
 - **lesson content schema has been migrated to warsh-content-schema v1.0** — single `content Json` blob, `LessonTemplate` enum, API transformer in place
-- **Chapters 1–6 are fixture-authored** — 26 lessons total in `arabai-backend/prisma/fixtures/`, wired into `seed.cjs`
+- **Chapters 1-8 are fixture-authored** — 35 lessons total in `arabai-backend/prisma/fixtures/`, wired into `seed.cjs`, including SP1 and SP2
 - the SOT is `Docs/warsh-spec-00-master-index.md` + spec-01 through spec-13; `CLAUDE.md` updated to reflect this
-- 72 chapters seeded with metadata; Chapters 7–72 still need fixture-authored lessons
+- 72 chapters seeded with metadata; Chapters 9-72 still need fixture-authored lessons
 - backend enforces locked progression and placement skipping; `DEV_UNLOCK_ALL=true` in local `.env` for development
 - backend TypeScript check passes with 0 errors after the schema migration
 - bottom tab shell matches spec: `Learn | Vocabulary | Noor | You`
 - Noor backend wiring is OpenAI-only with `gpt-4o-mini` as the default model
 - mobile local networking: USB reverse (`tcp:8081`, `tcp:3000`) + `http://127.0.0.1:3000` is the reliable path
-- the biggest immediate content gaps are Chapter 7 authoring and device QA across SP1 plus the newly authored Chapter 5–6 lessons
+- the biggest immediate content gaps are Chapter 9 authoring and device QA across SP1, SP2, and the newly authored Chapters 6-8 lessons

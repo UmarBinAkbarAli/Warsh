@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "template": "SPOKEN_PHRASES",
+  "_meta": {
+    "_note": "SP2 after Chapter 7 - simple questions using who, what, where, and the attached-pronoun possession patterns already learned.",
+    "chapter_order": 7,
+    "lesson_order": 5,
+    "estimated_minutes": 8,
+    "xp_reward": 15
+  },
+  "hook": {
+    "ayah": {
+      "surah": 20,
+      "ayah": 17,
+      "label": "Ta-Ha 20:17",
+      "ar": "وَمَا تِلْكَ بِيَمِينِكَ يَا مُوسَى",
+      "en": "And what is that in your right hand, O Musa?",
+      "ur": "اور اے موسی، تمہارے دائیں ہاتھ میں یہ کیا ہے؟",
+      "audio_url": "https://cdn.warsh.app/audio/quran/ta-ha-017-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Simple Fus'ha questions are built from words you already know: what, who, where, and your attached pronouns.",
+      "ur": "سادہ فصحی سوالات انہی الفاظ سے بنتے ہیں جو آپ جانتے ہیں: کیا، کون، کہاں، اور جڑی ہوئی ضمیریں۔"
+    },
+    "autoplay": true
+  },
+  "spoken_phrases": {
+    "scene": {
+      "en": "Asking simple questions in a lesson",
+      "ur": "درس میں سادہ سوالات پوچھنا"
+    },
+    "phrases": [
+      {
+        "id": "sp2-01",
+        "phrase": { "ar": "مَا هَذَا؟", "ar_plain": "ما هذا", "translit": "ma hadha?", "en": "What is this?", "ur": "یہ کیا ہے؟" },
+        "audio_url": "https://cdn.warsh.app/audio/phrases/ma-hadha.mp3"
+      },
+      {
+        "id": "sp2-02",
+        "phrase": { "ar": "مَنْ هَذَا؟", "ar_plain": "من هذا", "translit": "man hadha?", "en": "Who is this?", "ur": "یہ کون ہے؟" },
+        "audio_url": "https://cdn.warsh.app/audio/phrases/man-hadha.mp3"
+      },
+      {
+        "id": "sp2-03",
+        "phrase": { "ar": "أَيْنَ الْكِتَابُ؟", "ar_plain": "اين الكتاب", "translit": "ayna al-kitabu?", "en": "Where is the book?", "ur": "کتاب کہاں ہے؟" },
+        "audio_url": "https://cdn.warsh.app/audio/phrases/ayna-al-kitab.mp3"
+      },
+      {
+        "id": "sp2-04",
+        "phrase": { "ar": "أَعِنْدَكَ قَلَمٌ؟", "ar_plain": "اعندك قلم", "translit": "a-indaka qalamun?", "en": "Do you have a pen?", "ur": "کیا تمہارے پاس قلم ہے؟" },
+        "audio_url": "https://cdn.warsh.app/audio/phrases/a-indaka-qalam.mp3"
+      },
+      {
+        "id": "sp2-05",
+        "phrase": { "ar": "نَعَمْ، عِنْدِي قَلَمٌ", "ar_plain": "نعم عندي قلم", "translit": "naam, indi qalamun", "en": "Yes, I have a pen.", "ur": "ہاں، میرے پاس قلم ہے۔" },
+        "audio_url": "https://cdn.warsh.app/audio/phrases/naam-indi-qalam.mp3"
+      },
+      {
+        "id": "sp2-06",
+        "phrase": { "ar": "لَا، لَيْسَ عِنْدِي", "ar_plain": "لا ليس عندي", "translit": "la, laysa indi", "en": "No, I do not have it.", "ur": "نہیں، میرے پاس نہیں ہے۔" },
+        "audio_url": "https://cdn.warsh.app/audio/phrases/la-laysa-indi.mp3"
+      }
+    ],
+    "dialogue": [
+      { "speaker": "A", "phrase_id": "sp2-04" },
+      { "speaker": "B", "phrase_id": "sp2-05" },
+      { "speaker": "A", "phrase_id": "sp2-03" }
+    ]
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can now ask simple lesson questions in Fus'ha: what, who, where, and do you have?",
+      "ur": "آپ اب فصحی میں سادہ درسی سوالات پوچھ سکتے ہیں: کیا، کون، کہاں، اور کیا تمہارے پاس ہے؟"
+    }
+  }
+}

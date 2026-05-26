@@ -21,6 +21,12 @@ function transformContent(template: string, content: Record<string, unknown>) {
   const highlightedIndices = reveal?.highlighted_word_indices as number[] | undefined;
   const spokenPhrases = content.spoken_phrases as Record<string, unknown> | undefined;
 
+  function getWrongExplanation(ex: Record<string, unknown>) {
+    const wrongMsg = ex.explanation_on_wrong as Record<string, unknown> | undefined;
+    const explObj = ex.explanation as Record<string, unknown> | undefined;
+    return (wrongMsg?.en ?? explObj?.en) as string | undefined;
+  }
+
   const mappedHook = ayah
     ? {
         ayahAr: ayah.ar as string,
@@ -76,7 +82,7 @@ function transformContent(template: string, content: Record<string, unknown>) {
 
     if (type === "TAP_TRANSLATION") {
       const prompt = ex.prompt as Record<string, unknown>;
-      const wrongMsg = ex.explanation_on_wrong as Record<string, unknown> | undefined;
+      const explanationOnWrong = getWrongExplanation(ex);
       // Schema v1 (Ch1/Ch2): options = [{en, ur}], correct_index = int
       const optionsV1 = ex.options as Array<Record<string, unknown>> | undefined;
       const correctIndex = ex.correct_index as number | undefined;
@@ -102,7 +108,7 @@ function transformContent(template: string, content: Record<string, unknown>) {
           arabicText: undefined,
           options,
           correctAnswer,
-          explanation_on_wrong: wrongMsg?.en as string | undefined,
+          explanation_on_wrong: explanationOnWrong,
         };
       }
       return {
@@ -111,11 +117,12 @@ function transformContent(template: string, content: Record<string, unknown>) {
         arabicText: prompt.ar as string | undefined,
         options,
         correctAnswer,
-        explanation_on_wrong: wrongMsg?.en as string | undefined,
+        explanation_on_wrong: explanationOnWrong,
       };
     }
 
     if (type === "MATCHING") {
+      const explanationOnWrong = getWrongExplanation(ex);
       // Schema v1 (Ch1/Ch2): left_column, right_column, correct_pairs
       const leftCol = ex.left_column as Array<Record<string, unknown>> | undefined;
       const rightCol = ex.right_column as Array<Record<string, unknown>> | undefined;
@@ -128,6 +135,7 @@ function transformContent(template: string, content: Record<string, unknown>) {
           prompt: "Match each Arabic word with its meaning.",
           pairs: correctPairs.map(([l, r]) => ({ left: leftCol[l].ar as string, right: rightCol[r].en as string })),
           options: rightCol.map((r) => r.en as string),
+          explanation_on_wrong: explanationOnWrong,
         };
       } else if (pairsV2) {
         return {
@@ -135,13 +143,14 @@ function transformContent(template: string, content: Record<string, unknown>) {
           prompt: "Match each Arabic word with its meaning.",
           pairs: pairsV2.map((p) => ({ left: p.ar as string, right: p.en as string })),
           options: pairsV2.map((p) => p.en as string),
+          explanation_on_wrong: explanationOnWrong,
         };
       }
       return ex;
     }
 
     if (type === "BUILD_SENTENCE") {
-      const wrongMsg = ex.explanation_on_wrong as Record<string, unknown> | undefined;
+      const explanationOnWrong = getWrongExplanation(ex);
       // Schema v1 (Ch1/Ch2): tiles = [{ar,...}], correct_order = [int], target_translation
       const tiles = ex.tiles as Array<Record<string, unknown>> | undefined;
       const order = ex.correct_order as number[] | undefined;
@@ -150,14 +159,13 @@ function transformContent(template: string, content: Record<string, unknown>) {
       const wordBank = ex.word_bank as string[] | undefined;
       const answerArr = ex.answer as string[] | undefined;
       const instruction = ex.instruction as Record<string, unknown> | undefined;
-      const explObj = ex.explanation as Record<string, unknown> | undefined;
       if (tiles && order && target) {
         return {
           type,
           prompt: target.en as string,
           options: tiles.map((t) => t.ar as string),
           correctAnswer: order.map((i) => tiles[i].ar as string).join(" "),
-          explanation_on_wrong: wrongMsg?.en as string | undefined,
+          explanation_on_wrong: explanationOnWrong,
         };
       } else if (wordBank && answerArr) {
         return {
@@ -165,13 +173,14 @@ function transformContent(template: string, content: Record<string, unknown>) {
           prompt: instruction?.en as string ?? "Build the sentence.",
           options: wordBank,
           correctAnswer: answerArr.join(" "),
-          explanation_on_wrong: (wrongMsg?.en ?? explObj?.en) as string | undefined,
+          explanation_on_wrong: explanationOnWrong,
         };
       }
       return ex;
     }
 
     if (type === "FILL_BLANK") {
+      const explanationOnWrong = getWrongExplanation(ex);
       // Schema v1 (Ch1/Ch2): hint, sentence_ar, options = [{ar,...}], correct_answer = {ar,...}
       const hint = ex.hint as Record<string, unknown> | undefined;
       const optionsV1 = ex.options as Array<Record<string, unknown>> | undefined;
@@ -188,6 +197,7 @@ function transformContent(template: string, content: Record<string, unknown>) {
           arabicText: ex.sentence_ar as string,
           options: optionsV1.map((o) => o.ar as string),
           correctAnswer: correctAnswerV1.ar as string,
+          explanation_on_wrong: explanationOnWrong,
         };
       } else if (template || blankLabel) {
         const templateEn = template?.en as string ?? "";
@@ -200,6 +210,7 @@ function transformContent(template: string, content: Record<string, unknown>) {
           arabicText: arabicPart,
           options: choicesV2 ?? [],
           correctAnswer: answerV2 ?? "",
+          explanation_on_wrong: explanationOnWrong,
         };
       }
       return ex;
@@ -210,15 +221,13 @@ function transformContent(template: string, content: Record<string, unknown>) {
       const arExample = statement.ar_example as Record<string, unknown> | undefined;
       // Schema v1 uses correct_answer; schema v2 uses answer
       const correct = (ex.correct_answer ?? ex.answer) as boolean;
-      const wrongMsg = ex.explanation_on_wrong as Record<string, unknown> | undefined;
-      const explObj = ex.explanation as Record<string, unknown> | undefined;
       return {
         type,
         prompt: statement.en as string,
         arabicText: arExample?.ar as string | undefined,
         options: ["True", "False"],
         correctAnswer: correct ? "True" : "False",
-        explanation_on_wrong: (wrongMsg?.en ?? explObj?.en) as string | undefined,
+        explanation_on_wrong: getWrongExplanation(ex),
       };
     }
 
@@ -229,23 +238,30 @@ function transformContent(template: string, content: Record<string, unknown>) {
         type,
         parseTokens: words.map((w, i) => ({ word: w.ar as string, label: roles[i], gloss: w.en as string })),
         labels: ex.available_roles as string[],
+        explanation_on_wrong: getWrongExplanation(ex),
       };
     }
 
-    // Pass through any unhandled exercise types as-is
-    return ex;
+    // Pass through any unhandled exercise types while normalizing the wrong-answer explanation.
+    return {
+      ...ex,
+      explanation_on_wrong: getWrongExplanation(ex),
+    };
   });
 
-  // Build revealAyah: highlight the first indexed word
+  // Build revealAyah with all indexed highlights while preserving the legacy first-word field.
   let mappedRevealAyah = null;
   let revealText: string | null = null;
   if (reveal && revealAyah) {
     const ayahWords = (revealAyah.ar as string).split(" ");
-    const firstHighlight = highlightedIndices?.[0] ?? 0;
+    const highlightIndices = highlightedIndices ?? [];
+    const highlightedWords = highlightIndices.map((index) => ayahWords[index]).filter(Boolean);
     mappedRevealAyah = {
       ayahAr: revealAyah.ar as string,
       ayahRef: revealAyah.label as string,
-      highlightedWord: ayahWords[firstHighlight] ?? "",
+      highlightedWord: highlightedWords[0] ?? "",
+      highlightedWords,
+      highlightedWordIndices: highlightIndices,
     };
     const explanation = (reveal.noor_explanation ?? reveal.noor_comment) as Record<string, unknown> | undefined;
     revealText = explanation?.en as string ?? null;
@@ -256,13 +272,40 @@ function transformContent(template: string, content: Record<string, unknown>) {
   // SPOKEN_PHRASES → "SPOKEN_PHRASES"
   const legacyType = template === "SPOKEN_PHRASES" ? "SPOKEN_PHRASES" : "VOCABULARY";
 
+  const schemaSpokenPhraseRows = spokenPhrases?.phrases as Record<string, unknown>[] | undefined;
+  const schemaPhraseById = new Map(
+    (schemaSpokenPhraseRows ?? []).map((row) => {
+      const phrase = row.phrase as Record<string, unknown> | undefined;
+      return [row.id as string, phrase];
+    })
+  );
+  const mappedSchemaPhrases = (schemaSpokenPhraseRows ?? []).map((row) => {
+    const phrase = row.phrase as Record<string, unknown> | undefined;
+    const translation = phrase?.en as string | undefined;
+    return {
+      arabic: phrase?.ar as string | undefined,
+      transliteration: phrase?.translit as string | undefined,
+      translation,
+      recognitionOptions: translation ? [translation] : [],
+    };
+  });
+  const schemaDialogue = spokenPhrases?.dialogue as Record<string, unknown>[] | undefined;
+  const mappedSchemaDialogue = (schemaDialogue ?? []).map((line) => {
+    const phrase = schemaPhraseById.get(line.phrase_id as string);
+    return {
+      speaker: line.speaker as string | undefined,
+      line: phrase?.ar as string | undefined,
+      translation: phrase?.en as string | undefined,
+    };
+  });
+
   const mappedSpokenContent = template === "SPOKEN_PHRASES"
     ? {
         contextTitle: (content.contextTitle ?? (spokenPhrases?.scene as Record<string, unknown> | undefined)?.ar) as string | undefined,
         contextTitleEn: (content.contextTitleEn ?? (spokenPhrases?.scene as Record<string, unknown> | undefined)?.en) as string | undefined,
         contextBody: content.contextBody as string | undefined,
-        phrases: (content.phrases as Record<string, unknown>[] | undefined) ?? [],
-        dialogue: (content.dialogue as Record<string, unknown>[] | undefined) ?? [],
+        phrases: (content.phrases as Record<string, unknown>[] | undefined) ?? mappedSchemaPhrases,
+        dialogue: (content.dialogue as Record<string, unknown>[] | undefined) ?? mappedSchemaDialogue,
       }
     : undefined;
 

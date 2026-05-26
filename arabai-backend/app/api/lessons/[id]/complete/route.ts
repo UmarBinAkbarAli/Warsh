@@ -56,7 +56,7 @@ export async function POST(request: Request, { params }: Props) {
   ]);
 
   const existingStatus = existingProgress?.status || (existingProgress?.completed ? PROGRESS_STATUS.COMPLETED : PROGRESS_STATUS.NOT_STARTED);
-  const firstCompletion = existingStatus !== PROGRESS_STATUS.COMPLETED;
+  const firstCompletion = existingStatus === PROGRESS_STATUS.NOT_STARTED;
   const baseXp = lesson.xpReward;
   const perfectBonus = score === 100 && firstCompletion ? 5 : 0;
   const xpEarned = firstCompletion ? baseXp + perfectBonus : 0;

@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 7, Lesson 3 - attached singular pronouns هُ and هَا for his/her. Quranic reveal: فجورها وتقواها in Ash-Shams 91:8. Authored against warsh-content-schema.ts v1.0.",
+    "chapter_order": 7,
+    "lesson_order": 3,
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 91,
+      "ayah": 8,
+      "label": "Ash-Shams 91:8",
+      "ar": "فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَاهَا",
+      "en": "And inspired it with its wickedness and its righteousness.",
+      "ur": "پھر اس کو اس کی بدی اور اس کی پرہیزگاری سمجھا دی۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/ash-shams-008-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "This ayah repeats هَا three times. Arabic can attach 'her' directly to a verb or noun. Today we focus on his and her attached to nouns.",
+      "ur": "اس آیت میں هَا تین بار آتا ہے۔ عربی 'اس کا/اس کی' کو فعل یا اسم کے ساتھ جوڑ سکتی ہے۔ آج ہم اسموں کے ساتھ 'اس کا' اور 'اس کی' دیکھیں گے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": { "en": "His and Her - هُ and هَا", "ar": "ضَمِيرُ الْغَائِب وَالْغَائِبَة", "ur": "اس کا اور اس کی" },
+      "explanation": {
+        "en": "هُ points to a masculine third person: his. هَا points to a feminine third person: her.\n\nكِتَابُهُ - his book\nمَدْرَسَتُهَا - her school\nقَلَمُهُ - his pen\nأُمُّهَا - her mother",
+        "ur": "هُ تیسرے مذکر کی طرف اشارہ کرتا ہے: اس کا۔ هَا تیسرے مؤنث کی طرف اشارہ کرتا ہے: اس کی۔\n\nكِتَابُهُ - اس کی کتاب\nمَدْرَسَتُهَا - اس کا مدرسہ\nقَلَمُهُ - اس کا قلم\nأُمُّهَا - اس کی ماں"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "كِتَابُهُ", "ar_plain": "كتابه", "translit": "kitabuhu", "en": "his book", "ur": "اس کی کتاب" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kitabuhu.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "قَلَمُهُ", "ar_plain": "قلمه", "translit": "qalamuhu", "en": "his pen", "ur": "اس کا قلم" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/qalamuhu.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "مَدْرَسَتُهَا", "ar_plain": "مدرستها", "translit": "madrasatuha", "en": "her school", "ur": "اس کا مدرسہ" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/madrasatuha.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "أُمُّهَا", "ar_plain": "أمها", "translit": "ummuha", "en": "her mother", "ur": "اس کی ماں" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/ummuha.mp3"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": { "en": "Speaker, listener, absent person", "ar": "مُتَكَلِّم، مُخَاطَب، غَائِب", "ur": "بولنے والا، مخاطب، غائب" },
+      "explanation": {
+        "en": "كِتَابِي - my book: the speaker owns it.\nكِتَابُكَ - your book: the listener owns it.\nكِتَابُهُ - his book: someone absent owns it.\nArabic endings track the relationship.",
+        "ur": "كِتَابِي - میری کتاب: بولنے والے کی۔\nكِتَابُكَ - تمہاری کتاب: مخاطب کی۔\nكِتَابُهُ - اس کی کتاب: کسی غائب شخص کی۔\nعربی کے آخر تعلق کو دکھاتے ہیں۔"
+      },
+      "examples": [
+        { "ar": "كِتَابِي", "ar_plain": "كتابي", "translit": "kitabi", "en": "my book", "ur": "میری کتاب" },
+        { "ar": "كِتَابُكَ", "ar_plain": "كتابك", "translit": "kitabuka", "en": "your book", "ur": "تمہاری کتاب" },
+        { "ar": "كِتَابُهُ", "ar_plain": "كتابه", "translit": "kitabuhu", "en": "his book", "ur": "اس کی کتاب" }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch07-l03-ex01",
+      "prompt": { "ar": "كِتَابُهُ", "ar_plain": "كتابه", "translit": "kitabuhu", "en": "his book", "ur": "اس کی کتاب" },
+      "options": [
+        { "en": "his book", "ur": "اس کی کتاب" },
+        { "en": "my book", "ur": "میری کتاب" },
+        { "en": "your book", "ur": "تمہاری کتاب" },
+        { "en": "her school", "ur": "اس کا مدرسہ" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch07-l03-ex02",
+      "prompt": { "ar": "مَدْرَسَتُهَا", "ar_plain": "مدرستها", "translit": "madrasatuha", "en": "her school", "ur": "اس کا مدرسہ" },
+      "options": [
+        { "en": "her school", "ur": "اس کا مدرسہ" },
+        { "en": "my school", "ur": "میرا مدرسہ" },
+        { "en": "his pen", "ur": "اس کا قلم" },
+        { "en": "your name", "ur": "تمہارا نام" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch07-l03-ex03",
+      "statement": {
+        "en": "هَا at the end of a noun can mean 'her'.",
+        "ur": "اسم کے آخر میں هَا کا معنی 'اس کی' ہو سکتا ہے۔",
+        "ar_example": { "ar": "أُمُّهَا", "ar_plain": "أمها", "translit": "ummuha", "en": "her mother", "ur": "اس کی ماں" }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch07-l03-ex04",
+      "mode": "TAP",
+      "sentence_ar": "___ عَلَى الْمَكْتَبِ",
+      "hint": { "en": "his pen is on the desk", "ur": "اس کا قلم میز پر ہے" },
+      "options": [
+        { "ar": "قَلَمُهُ", "ar_plain": "قلمه", "translit": "qalamuhu", "en": "his pen", "ur": "اس کا قلم" },
+        { "ar": "قَلَمِي", "ar_plain": "قلمي", "translit": "qalami", "en": "my pen", "ur": "میرا قلم" },
+        { "ar": "كِتَابُكَ", "ar_plain": "كتابك", "translit": "kitabuka", "en": "your book", "ur": "تمہاری کتاب" },
+        { "ar": "مَدْرَسَتُهَا", "ar_plain": "مدرستها", "translit": "madrasatuha", "en": "her school", "ur": "اس کا مدرسہ" }
+      ],
+      "correct_answer": { "ar": "قَلَمُهُ", "ar_plain": "قلمه", "translit": "qalamuhu", "en": "his pen", "ur": "اس کا قلم" },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch07-l03-ex05",
+      "left_column": [
+        { "ar": "كِتَابُهُ", "ar_plain": "كتابه", "translit": "kitabuhu", "en": "his book", "ur": "اس کی کتاب" },
+        { "ar": "قَلَمُهُ", "ar_plain": "قلمه", "translit": "qalamuhu", "en": "his pen", "ur": "اس کا قلم" },
+        { "ar": "مَدْرَسَتُهَا", "ar_plain": "مدرستها", "translit": "madrasatuha", "en": "her school", "ur": "اس کا مدرسہ" },
+        { "ar": "أُمُّهَا", "ar_plain": "أمها", "translit": "ummuha", "en": "her mother", "ur": "اس کی ماں" }
+      ],
+      "right_column": [
+        { "en": "his book", "ur": "اس کی کتاب" },
+        { "en": "his pen", "ur": "اس کا قلم" },
+        { "en": "her school", "ur": "اس کا مدرسہ" },
+        { "en": "her mother", "ur": "اس کی ماں" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch07-l03-ex06",
+      "sentence_ar": "كِتَابُهُ جَدِيدٌ",
+      "words": [
+        { "ar": "كِتَابُهُ", "ar_plain": "كتابه", "translit": "kitabuhu", "en": "his book", "ur": "اس کی کتاب" },
+        { "ar": "جَدِيدٌ", "ar_plain": "جديد", "translit": "jadidun", "en": "new", "ur": "نیا" }
+      ],
+      "available_roles": ["SUBJECT", "PREDICATE", "POSSESSIVE"],
+      "correct_roles": ["POSSESSIVE", "PREDICATE"],
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": { "en": "Attached هَا for her", "ar": "ضَمِيرُ الْغَائِبَة", "ur": "اس کی کے لیے هَا" },
+    "ayah": {
+      "surah": 91,
+      "ayah": 8,
+      "label": "Ash-Shams 91:8",
+      "ar": "فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَاهَا",
+      "en": "And inspired it with its wickedness and its righteousness.",
+      "ur": "پھر اس کو اس کی بدی اور اس کی پرہیزگاری سمجھا دی۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/ash-shams-008-mishary.mp3"
+    },
+    "highlighted_word_indices": [1, 2, 3],
+    "noor_explanation": {
+      "en": "The repeated هَا points back to the soul. فُجُورَهَا and تَقْوَاهَا mean its wickedness and its righteousness. A small attached pronoun holds the ayah together.",
+      "ur": "بار بار آنے والی هَا نفس کی طرف لوٹتی ہے۔ فُجُورَهَا اور تَقْوَاهَا کا معنی ہے اس کی بدی اور اس کی پرہیزگاری۔ ایک چھوٹی جڑی ہوئی ضمیر آیت کو جوڑتی ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can now track absent owners: هُ for his, هَا for her. These endings help you follow who belongs to whom inside Quranic phrases.",
+      "ur": "آپ اب غائب مالک کو پہچان سکتے ہیں: هُ اس کا، هَا اس کی۔ یہ آخر قرآن کی ترکیبوں میں تعلق دکھاتے ہیں۔"
+    }
+  }
+}

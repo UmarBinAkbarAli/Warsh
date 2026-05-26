@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 7, Lesson 2 - attached singular pronouns كَ and كِ for 'your'. Quranic reveal: ربك in Al-Alaq 96:1. Authored against warsh-content-schema.ts v1.0.",
+    "chapter_order": 7,
+    "lesson_order": 2,
+    "estimated_minutes": 9,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 96,
+      "ayah": 1,
+      "label": "Al-Alaq 96:1",
+      "ar": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+      "en": "Read in the name of your Lord who created.",
+      "ur": "پڑھیے اپنے رب کے نام سے جس نے پیدا کیا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-alaq-001-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "The first revealed word led straight to رَبِّكَ - your Lord. Today you learn how كَ and كِ attach to nouns for 'your'.",
+      "ur": "وحی کا پہلا لفظ فوراً رَبِّكَ تک لے گیا - آپ کا رب۔ آج آپ سیکھیں گے کہ كَ اور كِ اسموں کے ساتھ 'تمہارا' کے لیے کیسے لگتے ہیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": { "en": "Your - attached كَ and كِ", "ar": "كَافُ الْخِطَاب", "ur": "تمہارا - جڑی ہوئی ك" },
+      "explanation": {
+        "en": "When speaking to a man, Arabic attaches كَ. When speaking to a woman, Arabic attaches كِ.\n\nكِتَابُكَ - your book (to a man)\nكِتَابُكِ - your book (to a woman)\nرَبُّكَ - your Lord",
+        "ur": "مرد سے خطاب ہو تو عربی كَ لگاتی ہے۔ عورت سے خطاب ہو تو كِ لگاتی ہے۔\n\nكِتَابُكَ - تمہاری کتاب (مرد سے)\nكِتَابُكِ - تمہاری کتاب (عورت سے)\nرَبُّكَ - تمہارا رب"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "كِتَابُكَ", "ar_plain": "كتابك", "translit": "kitabuka", "en": "your book (to a man)", "ur": "تمہاری کتاب (مرد سے)" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kitabuka.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "كِتَابُكِ", "ar_plain": "كتابك", "translit": "kitabuki", "en": "your book (to a woman)", "ur": "تمہاری کتاب (عورت سے)" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kitabuki.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "اسْمُكَ", "ar_plain": "اسمك", "translit": "ismuka", "en": "your name", "ur": "تمہارا نام" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/ismuka.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "رَبُّكَ", "ar_plain": "ربك", "translit": "rabbuka", "en": "your Lord", "ur": "تمہارا رب" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/rabbuka.mp3"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": { "en": "My vs Your", "ar": "يَاءُ الْمُتَكَلِّم وَكَافُ الْخِطَاب", "ur": "میرا اور تمہارا" },
+      "explanation": {
+        "en": "كِتَابِي points to the speaker: my book. كِتَابُكَ points to the listener: your book. The ending tells you whose book it is.",
+        "ur": "كِتَابِي بولنے والے کی طرف اشارہ کرتا ہے: میری کتاب۔ كِتَابُكَ سننے والے کی طرف اشارہ کرتا ہے: تمہاری کتاب۔ آخر کی علامت بتاتی ہے کہ کتاب کس کی ہے۔"
+      },
+      "examples": [
+        { "ar": "كِتَابِي", "ar_plain": "كتابي", "translit": "kitabi", "en": "my book", "ur": "میری کتاب" },
+        { "ar": "كِتَابُكَ", "ar_plain": "كتابك", "translit": "kitabuka", "en": "your book", "ur": "تمہاری کتاب" }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch07-l02-ex01",
+      "prompt": { "ar": "كِتَابُكَ", "ar_plain": "كتابك", "translit": "kitabuka", "en": "your book", "ur": "تمہاری کتاب" },
+      "options": [
+        { "en": "your book", "ur": "تمہاری کتاب" },
+        { "en": "my book", "ur": "میری کتاب" },
+        { "en": "his book", "ur": "اس کی کتاب" },
+        { "en": "the book", "ur": "کتاب" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch07-l02-ex02",
+      "prompt": { "ar": "رَبُّكَ", "ar_plain": "ربك", "translit": "rabbuka", "en": "your Lord", "ur": "تمہارا رب" },
+      "options": [
+        { "en": "your Lord", "ur": "تمہارا رب" },
+        { "en": "my Lord", "ur": "میرا رب" },
+        { "en": "his Lord", "ur": "اس کا رب" },
+        { "en": "our Lord", "ur": "ہمارا رب" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch07-l02-ex03",
+      "statement": {
+        "en": "كِتَابُكَ and كِتَابُكِ both mean 'your book', but they address different listeners.",
+        "ur": "كِتَابُكَ اور كِتَابُكِ دونوں کا معنی 'تمہاری کتاب' ہے، مگر مخاطب مختلف ہے۔",
+        "ar_example": { "ar": "كِتَابُكَ / كِتَابُكِ", "ar_plain": "كتابك كتابك", "translit": "kitabuka / kitabuki", "en": "your book", "ur": "تمہاری کتاب" }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch07-l02-ex04",
+      "mode": "TAP",
+      "sentence_ar": "مَا ___؟",
+      "hint": { "en": "What is your name?", "ur": "تمہارا نام کیا ہے؟" },
+      "options": [
+        { "ar": "اسْمُكَ", "ar_plain": "اسمك", "translit": "ismuka", "en": "your name", "ur": "تمہارا نام" },
+        { "ar": "اسْمِي", "ar_plain": "اسمي", "translit": "ismi", "en": "my name", "ur": "میرا نام" },
+        { "ar": "كِتَابُكَ", "ar_plain": "كتابك", "translit": "kitabuka", "en": "your book", "ur": "تمہاری کتاب" },
+        { "ar": "رَبُّهُ", "ar_plain": "ربه", "translit": "rabbuhu", "en": "his Lord", "ur": "اس کا رب" }
+      ],
+      "correct_answer": { "ar": "اسْمُكَ", "ar_plain": "اسمك", "translit": "ismuka", "en": "your name", "ur": "تمہارا نام" },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch07-l02-ex05",
+      "left_column": [
+        { "ar": "كِتَابِي", "ar_plain": "كتابي", "translit": "kitabi", "en": "my book", "ur": "میری کتاب" },
+        { "ar": "كِتَابُكَ", "ar_plain": "كتابك", "translit": "kitabuka", "en": "your book", "ur": "تمہاری کتاب" },
+        { "ar": "اسْمُكَ", "ar_plain": "اسمك", "translit": "ismuka", "en": "your name", "ur": "تمہارا نام" },
+        { "ar": "رَبُّكَ", "ar_plain": "ربك", "translit": "rabbuka", "en": "your Lord", "ur": "تمہارا رب" }
+      ],
+      "right_column": [
+        { "en": "my book", "ur": "میری کتاب" },
+        { "en": "your book", "ur": "تمہاری کتاب" },
+        { "en": "your name", "ur": "تمہارا نام" },
+        { "en": "your Lord", "ur": "تمہارا رب" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch07-l02-ex06",
+      "target_translation": { "en": "your book is large", "ur": "تمہاری کتاب بڑی ہے" },
+      "tiles": [
+        { "ar": "كِتَابُكَ", "ar_plain": "كتابك", "translit": "kitabuka", "en": "your book", "ur": "تمہاری کتاب" },
+        { "ar": "كَبِيرٌ", "ar_plain": "كبير", "translit": "kabirun", "en": "large", "ur": "بڑا" },
+        { "ar": "كِتَابِي", "ar_plain": "كتابي", "translit": "kitabi", "en": "my book", "ur": "میری کتاب" }
+      ],
+      "correct_order": [0, 1],
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": { "en": "Attached كَ for your", "ar": "كَافُ الْخِطَاب", "ur": "تمہارا کے لیے جڑی ہوئی ك" },
+    "ayah": {
+      "surah": 96,
+      "ayah": 1,
+      "label": "Al-Alaq 96:1",
+      "ar": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+      "en": "Read in the name of your Lord who created.",
+      "ur": "پڑھیے اپنے رب کے نام سے جس نے پیدا کیا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-alaq-001-mishary.mp3"
+    },
+    "highlighted_word_indices": [2],
+    "noor_explanation": {
+      "en": "رَبِّكَ is رَبّ plus كَ: your Lord. The same attached pronoun you practised in كِتَابُكَ appears in the first revealed ayah.",
+      "ur": "رَبِّكَ اصل میں رَبّ + كَ ہے: تمہارا رب۔ یہی جڑی ہوئی ضمیر جو آپ نے كِتَابُكَ میں دیکھی، وحی کی پہلی آیت میں آتی ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You now hear the listener inside the ending: كَ for your when addressing a man, كِ for your when addressing a woman.",
+      "ur": "آپ اب آخر کی علامت میں مخاطب کو سن سکتے ہیں: مرد سے خطاب ہو تو كَ، عورت سے خطاب ہو تو كِ۔"
+    }
+  }
+}

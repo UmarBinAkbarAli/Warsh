@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 7, Lesson 1 - attached singular pronoun ي for 'my'. Quranic reveal: عبادي in Az-Zumar 39:53. Authored against warsh-content-schema.ts v1.0.",
+    "chapter_order": 7,
+    "lesson_order": 1,
+    "estimated_minutes": 9,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 39,
+      "ayah": 53,
+      "label": "Az-Zumar 39:53",
+      "ar": "قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ",
+      "en": "Say, O My servants who have transgressed against themselves.",
+      "ur": "کہہ دیجیے: اے میرے بندو جنہوں نے اپنی جانوں پر زیادتی کی۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/az-zumar-053-part-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "In عِبَادِيَ, the final ي makes the word personal: My servants. Today you learn how Arabic attaches 'my' directly to a noun.",
+      "ur": "عِبَادِيَ میں آخر کی ي لفظ کو ذاتی بنا دیتی ہے: میرے بندے۔ آج آپ سیکھیں گے کہ عربی 'میرا' کو اسم کے ساتھ کیسے جوڑتی ہے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "My - attached ي",
+        "ar": "يَاءُ الْمُتَكَلِّم",
+        "ur": "میرا - جڑی ہوئی ي"
+      },
+      "explanation": {
+        "en": "Arabic often expresses 'my' by attaching ي to the end of a noun.\n\nكِتَابٌ - a book\nكِتَابِي - my book\nرَبٌّ - a Lord\nرَبِّي - my Lord\n\nThere is no separate word for 'my' here. The ending carries it.",
+        "ur": "عربی میں 'میرا' اکثر اسم کے آخر میں ي لگا کر آتا ہے۔\n\nكِتَابٌ - کتاب\nكِتَابِي - میری کتاب\nرَبٌّ - رب\nرَبِّي - میرا رب\n\nیہاں 'میرا' کے لیے الگ لفظ نہیں آتا۔ آخر کی ي یہ معنی دیتی ہے۔"
+      },
+      "examples": [
+        { "ar": "كِتَابِي", "ar_plain": "كتابي", "translit": "kitabi", "en": "my book", "ur": "میری کتاب" }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "كِتَابِي", "ar_plain": "كتابي", "translit": "kitabi", "en": "my book", "ur": "میری کتاب" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/kitabi.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "قَلَمِي", "ar_plain": "قلمي", "translit": "qalami", "en": "my pen", "ur": "میرا قلم" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/qalami.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "رَبِّي", "ar_plain": "ربي", "translit": "rabbi", "en": "my Lord", "ur": "میرا رب" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/rabbi.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "دِينِي", "ar_plain": "ديني", "translit": "dini", "en": "my religion", "ur": "میرا دین" },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/dini.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The noun becomes definite",
+        "ar": "الِاسْمُ مَعْرِفَةٌ بِالضَّمِير",
+        "ur": "ضمیر سے اسم خاص ہو جاتا ہے"
+      },
+      "explanation": {
+        "en": "كِتَابِي does not mean 'a my book'. Once the attached ي is added, the noun is already definite: my book.",
+        "ur": "كِتَابِي کا معنی 'ایک میری کتاب' نہیں ہے۔ جب ي لگ جاتی ہے تو اسم پہلے ہی خاص ہو جاتا ہے: میری کتاب۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch07-l01-ex01",
+      "prompt": { "ar": "كِتَابِي", "ar_plain": "كتابي", "translit": "kitabi", "en": "my book", "ur": "میری کتاب" },
+      "options": [
+        { "en": "my book", "ur": "میری کتاب" },
+        { "en": "your book", "ur": "تمہاری کتاب" },
+        { "en": "his book", "ur": "اس کی کتاب" },
+        { "en": "a book", "ur": "ایک کتاب" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch07-l01-ex02",
+      "prompt": { "ar": "رَبِّي", "ar_plain": "ربي", "translit": "rabbi", "en": "my Lord", "ur": "میرا رب" },
+      "options": [
+        { "en": "my Lord", "ur": "میرا رب" },
+        { "en": "your Lord", "ur": "تمہارا رب" },
+        { "en": "his Lord", "ur": "اس کا رب" },
+        { "en": "the Lord", "ur": "رب" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch07-l01-ex03",
+      "statement": {
+        "en": "In كِتَابِي, the final ي means 'my'.",
+        "ur": "كِتَابِي میں آخر کی ي کا معنی 'میرا' ہے۔",
+        "ar_example": { "ar": "كِتَابِي", "ar_plain": "كتابي", "translit": "kitabi", "en": "my book", "ur": "میری کتاب" }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch07-l01-ex04",
+      "mode": "TAP",
+      "sentence_ar": "___ جَدِيدٌ",
+      "hint": { "en": "my book is new", "ur": "میری کتاب نئی ہے" },
+      "options": [
+        { "ar": "كِتَابِي", "ar_plain": "كتابي", "translit": "kitabi", "en": "my book", "ur": "میری کتاب" },
+        { "ar": "كِتَابُكَ", "ar_plain": "كتابك", "translit": "kitabuka", "en": "your book", "ur": "تمہاری کتاب" },
+        { "ar": "كِتَابُهُ", "ar_plain": "كتابه", "translit": "kitabuhu", "en": "his book", "ur": "اس کی کتاب" },
+        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitabun", "en": "a book", "ur": "ایک کتاب" }
+      ],
+      "correct_answer": { "ar": "كِتَابِي", "ar_plain": "كتابي", "translit": "kitabi", "en": "my book", "ur": "میری کتاب" },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch07-l01-ex05",
+      "left_column": [
+        { "ar": "كِتَابِي", "ar_plain": "كتابي", "translit": "kitabi", "en": "my book", "ur": "میری کتاب" },
+        { "ar": "قَلَمِي", "ar_plain": "قلمي", "translit": "qalami", "en": "my pen", "ur": "میرا قلم" },
+        { "ar": "رَبِّي", "ar_plain": "ربي", "translit": "rabbi", "en": "my Lord", "ur": "میرا رب" },
+        { "ar": "دِينِي", "ar_plain": "ديني", "translit": "dini", "en": "my religion", "ur": "میرا دین" }
+      ],
+      "right_column": [
+        { "en": "my book", "ur": "میری کتاب" },
+        { "en": "my pen", "ur": "میرا قلم" },
+        { "en": "my Lord", "ur": "میرا رب" },
+        { "en": "my religion", "ur": "میرا دین" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch07-l01-ex06",
+      "target_translation": { "en": "my pen is new", "ur": "میرا قلم نیا ہے" },
+      "tiles": [
+        { "ar": "قَلَمِي", "ar_plain": "قلمي", "translit": "qalami", "en": "my pen", "ur": "میرا قلم" },
+        { "ar": "جَدِيدٌ", "ar_plain": "جديد", "translit": "jadidun", "en": "new", "ur": "نیا" },
+        { "ar": "كِتَابُكَ", "ar_plain": "كتابك", "translit": "kitabuka", "en": "your book", "ur": "تمہاری کتاب" }
+      ],
+      "correct_order": [0, 1],
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": { "en": "Attached ي for my", "ar": "يَاءُ الْمُتَكَلِّم", "ur": "میرا کے لیے جڑی ہوئی ي" },
+    "ayah": {
+      "surah": 39,
+      "ayah": 53,
+      "label": "Az-Zumar 39:53",
+      "ar": "قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ",
+      "en": "Say, O My servants who have transgressed against themselves.",
+      "ur": "کہہ دیجیے: اے میرے بندو جنہوں نے اپنی جانوں پر زیادتی کی۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/az-zumar-053-part-mishary.mp3"
+    },
+    "highlighted_word_indices": [2],
+    "noor_explanation": {
+      "en": "عِبَادِيَ means 'My servants.' The ي at the end carries the meaning of 'my'. This tiny ending appears in deeply personal Quranic speech.",
+      "ur": "عِبَادِيَ کا معنی ہے 'میرے بندے'۔ آخر کی ي 'میرا' کا معنی دیتی ہے۔ یہ چھوٹی سی علامت قرآن کی نہایت ذاتی خطاب میں آتی ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can now recognise ي on nouns: كِتَابِي, قَلَمِي, رَبِّي, دِينِي. One ending, a whole relationship.",
+      "ur": "آپ اب اسموں کے آخر پر ي پہچان سکتے ہیں: كِتَابِي، قَلَمِي، رَبِّي، دِينِي۔ ایک چھوٹی علامت، پورا تعلق۔"
+    }
+  }
+}
