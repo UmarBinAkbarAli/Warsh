@@ -43,7 +43,20 @@ const ch08L01Content = require("./fixtures/chapter-08-lesson-01.json");
 const ch08L02Content = require("./fixtures/chapter-08-lesson-02.json");
 const ch08L03Content = require("./fixtures/chapter-08-lesson-03.json");
 const ch08L04Content = require("./fixtures/chapter-08-lesson-04.json");
-const ch09L01VerbContent = require("./fixtures/chapter-09-lesson-01-verb-pattern.json");
+const ch09L01Content     = require("./fixtures/chapter-09-lesson-01.json");
+const ch09L02Content     = require("./fixtures/chapter-09-lesson-02.json");
+const ch09L03Content     = require("./fixtures/chapter-09-lesson-03.json");
+const ch09L04Content     = require("./fixtures/chapter-09-lesson-04.json");
+const ch09L05VerbContent = require("./fixtures/chapter-09-lesson-05-verb-pattern.json");
+const ch10L01Content     = require("./fixtures/chapter-10-lesson-01.json");
+const ch10L02Content     = require("./fixtures/chapter-10-lesson-02.json");
+const ch10L03Content     = require("./fixtures/chapter-10-lesson-03.json");
+const ch10L04Content     = require("./fixtures/chapter-10-lesson-04.json");
+const ch11L01Content     = require("./fixtures/chapter-11-lesson-01.json");
+const ch11L02Content     = require("./fixtures/chapter-11-lesson-02.json");
+const ch11L03Content     = require("./fixtures/chapter-11-lesson-03.json");
+const ch11L04Content     = require("./fixtures/chapter-11-lesson-04.json");
+const ch11L05Content     = require("./fixtures/chapter-11-lesson-05.json");
 
 const ACHIEVEMENTS = [
   { key: "first_lesson",           title: "الخُطْوَة الأُولَى",            description: "Complete your very first lesson",                    icon: "footsteps-outline",   xpReward: 25  },
@@ -244,7 +257,9 @@ async function main() {
   const ch6Id = chapterIdByOrder.get(6);
   const ch7Id = chapterIdByOrder.get(7);
   const ch8Id = chapterIdByOrder.get(8);
-  const ch9Id = chapterIdByOrder.get(9);
+  const ch9Id  = chapterIdByOrder.get(9);
+  const ch10Id = chapterIdByOrder.get(10);
+  const ch11Id = chapterIdByOrder.get(11);
 
   const lessons = [
     // Chapter 1
@@ -291,7 +306,22 @@ async function main() {
     { id: "ch08-l03", chapterId: ch8Id, order: 3, title: "الَّتِي - Feminine Relative",                titleAr: "الَّتِي - اسْمٌ مَوْصُولٌ مُؤَنَّث",                    template: "STANDARD", xpReward: ch08L03Content._meta?.xp_reward ?? 10, content: ch08L03Content },
     { id: "ch08-l04", chapterId: ch8Id, order: 4, title: "My Mother - أُمِّي",                         titleAr: "أُمِّي - تَطْبِيقُ المُؤَنَّث",                          template: "STANDARD", xpReward: ch08L04Content._meta?.xp_reward ?? 10, content: ch08L04Content },
     // Chapter 9
-    { id: "ch09-l01", chapterId: ch9Id, order: 1, title: "Past Tense - Verb Pattern", titleAr: "fi-il maadi", template: "VERB_PATTERN", xpReward: ch09L01VerbContent._meta?.xp_reward ?? 10, content: ch09L01VerbContent },
+    { id: "ch09-l01", chapterId: ch9Id, order: 1, title: "Sound Masculine Plural — مُسْلِمُونَ",    titleAr: "جَمْعُ الْمُذَكَّرِ السَّالِم",          template: "STANDARD",     xpReward: ch09L01Content._meta?.xp_reward     ?? 10, content: ch09L01Content },
+    { id: "ch09-l02", chapterId: ch9Id, order: 2, title: "Sound Feminine Plural — مُؤْمِنَاتٌ",    titleAr: "جَمْعُ الْمُؤَنَّثِ السَّالِم",          template: "STANDARD",     xpReward: ch09L02Content._meta?.xp_reward     ?? 10, content: ch09L02Content },
+    { id: "ch09-l03", chapterId: ch9Id, order: 3, title: "Broken Plural — كُتُبٌ and بُيُوتٌ",     titleAr: "الْجَمْعُ الْمُكَسَّر",                  template: "STANDARD",     xpReward: ch09L03Content._meta?.xp_reward     ?? 10, content: ch09L03Content },
+    { id: "ch09-l04", chapterId: ch9Id, order: 4, title: "Plural Demonstrative — هٰؤُلَاءِ",        titleAr: "هٰؤُلَاءِ لِلْجَمَاعَة",                 template: "STANDARD",     xpReward: ch09L04Content._meta?.xp_reward     ?? 10, content: ch09L04Content },
+    { id: "ch09-l05", chapterId: ch9Id, order: 5, title: "Verb Pattern — Past Tense ذَهَبَ",        titleAr: "فِعْل مَاضٍ — نَمُوذَج الصَّرْف",        template: "VERB_PATTERN", xpReward: ch09L05VerbContent._meta?.xp_reward ?? 10, content: ch09L05VerbContent },
+    // Chapter 10
+    { id: "ch10-l01", chapterId: ch10Id, order: 1, title: "Plural Pronouns — هُمْ and هُنَّ",       titleAr: "هُمْ وَهُنَّ — ضَمِيرُ الْجَمَاعَة",    template: "STANDARD",     xpReward: ch10L01Content._meta?.xp_reward     ?? 10, content: ch10L01Content },
+    { id: "ch10-l02", chapterId: ch10Id, order: 2, title: "We — نَحْنُ",                            titleAr: "نَحْنُ — ضَمِيرُ الْمُتَكَلِّمِ الجَمْع", template: "STANDARD",    xpReward: ch10L02Content._meta?.xp_reward     ?? 10, content: ch10L02Content },
+    { id: "ch10-l03", chapterId: ch10Id, order: 3, title: "Before — قَبْلَ",                        titleAr: "قَبْلَ — الظَّرْفُ الزَّمَانِيّ",         template: "STANDARD",    xpReward: ch10L03Content._meta?.xp_reward     ?? 10, content: ch10L03Content },
+    { id: "ch10-l04", chapterId: ch10Id, order: 4, title: "After — بَعْدَ",                         titleAr: "بَعْدَ — الظَّرْفُ الزَّمَانِيّ",         template: "STANDARD",    xpReward: ch10L04Content._meta?.xp_reward     ?? 10, content: ch10L04Content },
+    // Chapter 11
+    { id: "ch11-l01", chapterId: ch11Id, order: 1, title: "My Father and My Mother — أَبِي and أُمِّي", titleAr: "أَبِي وَأُمِّي",                    template: "STANDARD",    xpReward: ch11L01Content._meta?.xp_reward     ?? 10, content: ch11L01Content },
+    { id: "ch11-l02", chapterId: ch11Id, order: 2, title: "Family Vocabulary",                      titleAr: "كَلِمَاتُ الْعَائِلَة",                   template: "STANDARD",    xpReward: ch11L02Content._meta?.xp_reward     ?? 10, content: ch11L02Content },
+    { id: "ch11-l03", chapterId: ch11Id, order: 3, title: "In It — فِيهِ",                          titleAr: "فِيهِ — ضَمِيرُ الْمُفْرَدِ الْغَائِب",  template: "STANDARD",    xpReward: ch11L03Content._meta?.xp_reward     ?? 10, content: ch11L03Content },
+    { id: "ch11-l04", chapterId: ch11Id, order: 4, title: "In It — فِيهَا",                         titleAr: "فِيهَا — ضَمِيرُ الْمُؤَنَّث",            template: "STANDARD",    xpReward: ch11L04Content._meta?.xp_reward     ?? 10, content: ch11L04Content },
+    { id: "ch11-l05", chapterId: ch11Id, order: 5, title: "Home in the Quran — بُيُوتِكُمْ",        titleAr: "بُيُوتِكُمْ فِي الْقُرْآن",               template: "STANDARD",    xpReward: ch11L05Content._meta?.xp_reward     ?? 10, content: ch11L05Content },
   ];
 
   for (const { id, ...data } of lessons) {

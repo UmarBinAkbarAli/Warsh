@@ -1,6 +1,6 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-05-27
+Last updated: 2026-05-27 (post-beta-infra-QA review)
 
 ## Purpose
 
@@ -21,12 +21,13 @@ It should not be treated as a permanent record of:
 
 - **Phase 1 core app flow:** implemented
 - **Content schema:** migrated to `warsh-content-schema v1.0` — single `content Json` blob per lesson, `LessonTemplate` enum (STANDARD / SPOKEN_PHRASES / REVIEW / VERB_PATTERN)
-- **Chapters 1-8:** fixture-authored and wired into `seed.cjs` - 35 lessons total across these chapters, including SP1 and SP2
+- **Chapters 1-8:** fixture-authored and wired into `seed.cjs` — 35 lessons total across these chapters, including SP1 and SP2
 - **SP1:** inserted as `ch03-l05` after Chapter 3 review - basic greetings and introductions
 - **SP2:** inserted as `ch07-l05` after Chapter 7 - simple classroom/lesson questions
-- **Chapters 9-72:** chapter metadata seeded, fixture authoring still pending
-- **Current focus:** Chapter 9+ content authoring and beta infrastructure setup
-- **Recommended next milestone:** author Chapter 9 (Plural Nouns), then prepare the beta infrastructure checklist before inviting testers
+- **Chapters 9-11:** fixture-authored and wired into `seed.cjs` — Ch9: 5 lessons (L01-L04 STANDARD plural nouns + L05 VERB_PATTERN past tense ذَهَبَ), Ch10: 4 lessons (plural pronouns + time expressions), Ch11: 5 lessons (family vocabulary + فِيهِ/فِيهَا)
+- **Chapters 12-72:** chapter metadata seeded, fixture authoring still pending
+- **Current focus:** continue Ch12+ authoring; finish beta infra (EAS APK on device, Google Play Console, Sentry/Mixpanel)
+- **Recommended next milestone:** run `npm run db:seed` to push Ch9-Ch11 to production DB, then download/install EAS preview APK and run 9-item beta gate checklist
 
 **2026-05-26 coordinator correction:** Chapters 1-8 are now fixture-authored and wired into `seed.cjs` (35 lessons total across Chapters 1-8, including SP1 and SP2). Chapters 9-72 still need fixture-authored JSON lessons. Device QA was the next gate at that point; it was run on 2026-05-27.
 
@@ -61,12 +62,15 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 - All TypeScript checks 0 errors; `npm run db:validate-fixtures` passes (35 fixtures)
 
 **What is LEFT (prioritized):**
-1. **Content authoring: Chapters 9-72** — 63 chapters of fixture-authored JSON lessons still needed (highest priority); Ch9-L1 VERB_PATTERN seeded as the first ch9 lesson (2026-05-27)
+1. **Content authoring: Chapters 12-72** — Ch9-Ch11 are now wired and validate at 0 errors (49 total fixtures); Ch12-Ch72 still need fixture-authored JSON lessons (highest priority)
 2. ~~**VERB_PATTERN fixture** — DONE 2026-05-27: `chapter-09-lesson-01-verb-pattern.json` authored, seeded, live as `ch09-l01`~~
-3. ~~**A0 animated splash** — DONE 2026-05-27: `app/index.tsx` rebuilt with full Warsh lockup animation (600ms Latin fade, 350ms Arabic gold illuminate, tagline, 500ms hold)~~
-4. ~~**Pre-beta infrastructure** — DONE 2026-05-27: checklist rewritten (15 sections, exact env var names, step-by-step console instructions). Package renamed `com.arabai.app` → `com.warsh.app` and scheme `arabai` → `warsh` across `app.json`, `build.gradle`, `AndroidManifest.xml`, Kotlin sources, and `reset-password` deep link. See `Docs/warsh-beta-infra-readiness-checklist.md` for all remaining YOU-items.~~
-5. **QA** — REVIEW XP display in close screen, chapter completion edge case, live IAP sandbox purchase+restore; VERB_PATTERN on device (ch09-l01 now available). Run only after Vercel production deploy + Neon seed are confirmed.
+3. ~~**A0 animated splash** — DONE 2026-05-27: `app/index.tsx` rebuilt with full Warsh lockup animation~~
+4. ~~**Pre-beta infrastructure (code side)** — DONE 2026-05-27: package renamed `com.arabai.app` → `com.warsh.app`, scheme updated, checklist written. See `Docs/warsh-beta-infra-readiness-checklist.md` for YOU-items.~~
+5. **QA** — REVIEW XP display in close screen, chapter completion edge case, live IAP sandbox purchase+restore; VERB_PATTERN on device. Run only after EAS APK is installed on test device.
 6. ~~**Lesson player direct schema** — DONE 2026-05-27: `mapContent()` removed; player reads warsh-content-schema v1.0 directly~~
+7. **Beta gate checklist** — 9 items in §14 of `Docs/warsh-beta-infra-readiness-checklist.md`; none confirmed yet. Blocked on: EAS APK installation, custom domain (deferred), Google Play Console setup.
+8. **Google Play Console** — not started; blocking IAP sandbox testing and distribution
+9. **Sentry / Mixpanel / UptimeRobot** — partially configured; need proper project setup, DSN wiring, alert creation
 
 ---
 

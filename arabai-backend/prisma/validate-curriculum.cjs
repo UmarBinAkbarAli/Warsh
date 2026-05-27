@@ -717,7 +717,7 @@ function validateLessonFixture(fileName, lesson, reporter, globalState) {
     globalState.chapterLessonKeys.add(`${lesson._meta.chapter_order}:${lesson._meta.lesson_order}`);
   }
 
-  if (["STANDARD", "REVIEW", "VERB_PATTERN"].includes(lesson.template)) {
+  if (["STANDARD", "REVIEW"].includes(lesson.template)) {
     const discoverBounds = lesson.template === "REVIEW" ? { min: 2, max: 15 } : { min: 4, max: 15 };
     if (assertArray(lesson.discover_cards, `${pathLabel}.discover_cards`, reporter, discoverBounds)) {
       lesson.discover_cards.forEach((card, index) => validateDiscoverCard(card, `${pathLabel}.discover_cards[${index}]`, reporter));
@@ -736,6 +736,18 @@ function validateLessonFixture(fileName, lesson, reporter, globalState) {
   }
 
   if (lesson.template === "VERB_PATTERN") {
+    // VERB_PATTERN uses conjugation_table (validated below) instead of discover_cards
+    if (lesson.discover_cards !== undefined) reporter.add(`${pathLabel}.discover_cards`, "VERB_PATTERN lessons use conjugation_table, not discover_cards");
+    const vpExerciseBounds = { min: 4, max: 10 };
+    if (assertArray(lesson.exercises, `${pathLabel}.exercises`, reporter, vpExerciseBounds)) {
+      const seenExerciseIds = new Set();
+      lesson.exercises.forEach((exercise, index) => validateExercise(exercise, `${pathLabel}.exercises[${index}]`, reporter, seenExerciseIds));
+      for (const exerciseId of seenExerciseIds) {
+        if (globalState.exerciseIds.has(exerciseId)) reporter.add(`${pathLabel}.exercises`, `exercise id "${exerciseId}" is reused in another fixture`);
+        globalState.exerciseIds.add(exerciseId);
+      }
+    }
+    validateReveal(lesson.reveal, `${pathLabel}.reveal`, reporter);
     validateConjugationTable(lesson.conjugation_table, `${pathLabel}.conjugation_table`, reporter);
   } else if (lesson.conjugation_table !== undefined) {
     reporter.add(`${pathLabel}.conjugation_table`, "only VERB_PATTERN lessons may include conjugation_table");
