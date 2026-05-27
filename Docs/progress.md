@@ -366,6 +366,7 @@ Read `Docs/warsh-spec-00-master-index.md` before starting, per the build protoco
 - `app/api/auth/forgot-password/route.ts` — now generates a signed 1-hour JWT (`purpose: "password-reset"`) and calls Resend's REST API (`https://api.resend.com/emails`) to send a branded HTML reset email. `RESEND_API_KEY` is required; if absent it logs a warning and returns 200 silently (no email sent). Response always returns 200 regardless of whether the email is registered (security).
 - `app/api/auth/reset-password/route.ts` — new endpoint: verifies the JWT signature + expiry + purpose claim, then bcrypt-hashes the new password and updates the user record.
 - `app/(auth)/reset-password.tsx` — new screen: accepts `?token=` param from the deep link, shows new/confirm password fields with show/hide toggle, calls `/api/auth/reset-password`, and routes to login on success.
+- `app/reset-password/route.ts` — web landing page served by the backend. The email reset link points here (`https://warsh-backend.vercel.app/reset-password?token=...`). The page auto-redirects to the `arabai://reset-password?token=...` deep link using Android intent URI on Android and the scheme URL on iOS. Shows a branded "Open Warsh app" button fallback if auto-redirect fails.
 - No schema migration needed — stateless JWT token approach (1h expiry).
 
 **TypeScript:**
