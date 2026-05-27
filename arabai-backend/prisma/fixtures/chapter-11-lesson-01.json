@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 11, Lesson 1 - family possessives أَبِي and أُمِّي.",
+    "chapter_order": 11,
+    "lesson_order": 1,
+    "estimated_minutes": 9,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 16,
+      "ayah": 80,
+      "label": "An-Nahl 16:80",
+      "ar": "وَاللَّهُ جَعَلَ لَكُم مِّن بُيُوتِكُمْ سَكَنًا",
+      "en": "And Allah has made for you from your homes a place of rest.",
+      "ur": "اور اللہ نے تمہارے لیے تمہارے گھروں کو سکون کی جگہ بنایا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/an-nahl-080-part-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Arabic family words become close and warm when pronouns attach. Today: my father and my mother.",
+      "ur": "عربی کے خاندانی الفاظ ضمیر لگنے سے بہت قریب اور محبت بھرے ہو جاتے ہیں۔ آج: میرے والد اور میری والدہ۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "WORD",
+      "text": { "ar": "أَبِي", "ar_plain": "ابي", "translit": "abi", "en": "my father", "ur": "میرے والد" },
+      "explanation": { "en": "أَبٌ means father. With ي attached, it becomes أَبِي: my father.", "ur": "أَبٌ کا مطلب والد ہے۔ آخر میں ي لگے تو أَبِي بنتا ہے: میرے والد۔" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "أُمِّي", "ar_plain": "امي", "translit": "ummi", "en": "my mother", "ur": "میری والدہ" },
+      "explanation": { "en": "أُمٌّ means mother. With ي attached, it becomes أُمِّي: my mother.", "ur": "أُمٌّ کا مطلب والدہ ہے۔ آخر میں ي لگے تو أُمِّي بنتا ہے: میری والدہ۔" }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": { "ar": "أَبِي فِي الْبَيْتِ", "ar_plain": "ابي في البيت", "translit": "abi fi al-bayti", "en": "My father is in the house", "ur": "میرے والد گھر میں ہیں" },
+      "explanation": { "en": "This is a complete no-verb sentence: my father - in the house.", "ur": "یہ بغیر فعل کے مکمل جملہ ہے: میرے والد - گھر میں۔" }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": { "ar": "أُمِّي فِي الْمَطْبَخِ", "ar_plain": "امي في المطبخ", "translit": "ummi fi al-matbakhi", "en": "My mother is in the kitchen", "ur": "میری والدہ باورچی خانے میں ہیں" },
+      "explanation": { "en": "Family words often appear in everyday Arabic, but the same attached-pronoun pattern appears in the Quran too.", "ur": "خاندانی الفاظ روزمرہ عربی میں آتے ہیں، مگر یہی جڑی ہوئی ضمیر کا قاعدہ قرآن میں بھی آتا ہے۔" }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch11-l01-ex01",
+      "prompt": { "ar": "أَبِي", "ar_plain": "ابي", "translit": "abi", "en": "my father", "ur": "میرے والد" },
+      "options": [{ "en": "my father", "ur": "میرے والد" }, { "en": "my mother", "ur": "میری والدہ" }, { "en": "the house", "ur": "گھر" }, { "en": "after", "ur": "بعد" }],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch11-l01-ex02",
+      "prompt": { "ar": "أُمِّي", "ar_plain": "امي", "translit": "ummi", "en": "my mother", "ur": "میری والدہ" },
+      "options": [{ "en": "my mother", "ur": "میری والدہ" }, { "en": "my father", "ur": "میرے والد" }, { "en": "in it", "ur": "اس میں" }, { "en": "we", "ur": "ہم" }],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch11-l01-ex03",
+      "mode": "TAP",
+      "sentence_ar": "___ فِي الْبَيْتِ",
+      "hint": { "en": "My father is in the house", "ur": "میرے والد گھر میں ہیں" },
+      "options": [
+        { "ar": "أَبِي", "ar_plain": "ابي", "translit": "abi", "en": "my father", "ur": "میرے والد" },
+        { "ar": "أُمِّي", "ar_plain": "امي", "translit": "ummi", "en": "my mother", "ur": "میری والدہ" },
+        { "ar": "هُمْ", "ar_plain": "هم", "translit": "hum", "en": "they", "ur": "وہ" },
+        { "ar": "قَبْلَ", "ar_plain": "قبل", "translit": "qabla", "en": "before", "ur": "پہلے" }
+      ],
+      "correct_answer": { "ar": "أَبِي", "ar_plain": "ابي", "translit": "abi", "en": "my father", "ur": "میرے والد" },
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch11-l01-ex04",
+      "target_translation": { "en": "My mother is in the kitchen", "ur": "میری والدہ باورچی خانے میں ہیں" },
+      "tiles": [
+        { "ar": "أُمِّي", "ar_plain": "امي", "translit": "ummi", "en": "my mother", "ur": "میری والدہ" },
+        { "ar": "فِي", "ar_plain": "في", "translit": "fi", "en": "in", "ur": "میں" },
+        { "ar": "الْمَطْبَخِ", "ar_plain": "المطبخ", "translit": "al-matbakhi", "en": "the kitchen", "ur": "باورچی خانہ" },
+        { "ar": "بَعْدَ", "ar_plain": "بعد", "translit": "ba'da", "en": "after", "ur": "بعد" }
+      ],
+      "correct_order": [0, 1, 2],
+      "xp_value": 1
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch11-l01-ex05",
+      "sentence_ar": "أَبِي فِي الْبَيْتِ",
+      "words": [
+        { "ar": "أَبِي", "ar_plain": "ابي", "translit": "abi", "en": "my father", "ur": "میرے والد" },
+        { "ar": "فِي", "ar_plain": "في", "translit": "fi", "en": "in", "ur": "میں" },
+        { "ar": "الْبَيْتِ", "ar_plain": "البيت", "translit": "al-bayti", "en": "the house", "ur": "گھر" }
+      ],
+      "available_roles": ["SUBJECT", "PREPOSITION", "POSSESSIVE", "PREDICATE"],
+      "correct_roles": ["SUBJECT", "PREPOSITION", "POSSESSIVE"],
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": { "en": "Family words with my", "ar": "أَسْمَاءُ الأُسْرَةِ مَعَ يَاءِ المُتَكَلِّم", "ur": "خاندانی الفاظ میرے کے ساتھ" },
+    "ayah": {
+      "surah": 16,
+      "ayah": 80,
+      "label": "An-Nahl 16:80",
+      "ar": "وَاللَّهُ جَعَلَ لَكُم مِّن بُيُوتِكُمْ سَكَنًا",
+      "en": "And Allah has made for you from your homes a place of rest.",
+      "ur": "اور اللہ نے تمہارے لیے تمہارے گھروں کو سکون کی جگہ بنایا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/an-nahl-080-part-mishary.mp3"
+    },
+    "highlighted_word_indices": [4],
+    "noor_explanation": {
+      "en": "بُيُوتِكُمْ means your homes. The attached pronoun changes the family/home word into something personal, just like أَبِي and أُمِّي.",
+      "ur": "بُيُوتِكُمْ کا مطلب ہے تمہارے گھر۔ جڑی ہوئی ضمیر گھر کے لفظ کو ذاتی بنا دیتی ہے، جیسے أَبِي اور أُمِّي۔"
+    }
+  },
+  "close": {
+    "noor_message": { "en": "You can now read two tender words: أَبِي and أُمِّي.", "ur": "اب آپ دو محبت بھرے الفاظ پڑھ سکتے ہیں: أَبِي اور أُمِّي۔" }
+  }
+}

@@ -155,7 +155,7 @@ export function getSubscriptionStatus() {
   return api.get("/api/subscription/status");
 }
 
-export function verifyPurchase(data: { productId: string; purchaseToken?: string; platform: "android" | "ios" }) {
+export function verifyPurchase(data: { productId: string; purchaseToken?: string; receiptData?: string; platform: "android" | "ios" }) {
   return api.post("/api/subscription/verify", data);
 }
 

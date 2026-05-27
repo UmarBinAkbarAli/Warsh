@@ -105,10 +105,17 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     const product = products.find((item) => getIapProductId(item) === productId);
     try {
       const purchase = await requestSubscriptionPurchase(productId, product);
-      const token = Array.isArray(purchase)
-        ? (purchase[0] as IapSubscriptionPurchase).purchaseToken
-        : (purchase as IapSubscriptionPurchase)?.purchaseToken;
-      await verifyPurchase({ productId, purchaseToken: token ?? undefined, platform: Platform.OS as "android" | "ios" });
+      const purchaseRecord = Array.isArray(purchase)
+        ? (purchase[0] as IapSubscriptionPurchase)
+        : (purchase as IapSubscriptionPurchase);
+      const token = purchaseRecord?.purchaseToken;
+      const receiptData = (purchaseRecord as { transactionReceipt?: string } | undefined)?.transactionReceipt;
+      await verifyPurchase({
+        productId,
+        purchaseToken: token ?? undefined,
+        receiptData: receiptData ?? undefined,
+        platform: Platform.OS as "android" | "ios",
+      });
       if (token && Platform.OS === "android") await acknowledgeAndroidPurchase(token);
       trackSubscriptionStarted(selected);
       Alert.alert("Subscribed!", "JazakAllah khair. Welcome to Warsh.", [
@@ -141,6 +148,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       await verifyPurchase({
         productId: activePurchase.productId,
         purchaseToken: (activePurchase as IapSubscriptionPurchase).purchaseToken ?? undefined,
+        receiptData: (activePurchase as { transactionReceipt?: string }).transactionReceipt ?? undefined,
         platform: Platform.OS as "android" | "ios",
       });
       trackSubscriptionRestored(activePurchase.productId);

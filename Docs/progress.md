@@ -25,10 +25,70 @@ It should not be treated as a permanent record of:
 - **SP1:** inserted as `ch03-l05` after Chapter 3 review - basic greetings and introductions
 - **SP2:** inserted as `ch07-l05` after Chapter 7 - simple classroom/lesson questions
 - **Chapters 9-72:** chapter metadata seeded, fixture authoring still pending
-- **Current focus:** content authoring — one chapter at a time, using the fixture pattern
-- **Recommended next milestone:** run device QA for SP1 + SP2 + Chapters 6-8 playback, then author Chapter 9 (Plural Nouns)
+- **Current focus:** Chapter 9+ content authoring and beta infrastructure setup
+- **Recommended next milestone:** author Chapter 9 (Plural Nouns), then prepare the beta infrastructure checklist before inviting testers
 
-**2026-05-26 coordinator correction:** Chapters 1-8 are now fixture-authored and wired into `seed.cjs` (35 lessons total across Chapters 1-8, including SP1 and SP2). Chapters 9-72 still need fixture-authored JSON lessons. The next milestone is device QA for SP1 + SP2 + Chapters 6-8, then Chapter 9 authoring.
+**2026-05-26 coordinator correction:** Chapters 1-8 are now fixture-authored and wired into `seed.cjs` (35 lessons total across Chapters 1-8, including SP1 and SP2). Chapters 9-72 still need fixture-authored JSON lessons. Device QA was the next gate at that point; it was run on 2026-05-27.
+
+**2026-05-27 update:** Physical Android device QA for all 35 Chapter 1-8 lessons passed a route-load sweep on a connected TECNO KF8 device over USB reverse. Focused checks also passed for SP1, MATCHING, and ch06-l04 GRAMMAR_PARSE. The current seeded Chapter 1-8 fixture set contains no `VERB_PATTERN` lesson, so that renderer remains uncovered by live fixture data.
+
+## Spec-00 + Progress Review (2026-05-27)
+
+Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state summary below; "Remaining Work" section updated to reflect current reality.
+
+**2026-05-27 coordination note:** Content authoring for Chapters 9-72 can run in parallel with the non-content tasks. Spec 00 explicitly allows File 05 content production in parallel, and the remaining non-content work mostly touches app, infrastructure, QA, and renderer polish. Avoid assigning the same fixture files to multiple agents; the only overlap risk is the `VERB_PATTERN` fixture item, which should be owned either by the content authoring stream or by the renderer-QA stream, not both.
+
+**2026-05-27 Chapter 9 agent handoff:** Spawned one content worker per current Chapter 9 lesson in `curriculum-book1.cjs`: L01 sound masculine plural (`chapter-09-lesson-01.json`), L02 sound feminine plural (`chapter-09-lesson-02.json`), L03 broken plural recognition (`chapter-09-lesson-03.json`), and L04 near plural demonstrative `هٰؤُلَاءِ` (`chapter-09-lesson-04.json`). Workers were instructed to edit only their assigned fixture files; seed wiring, final validation, and progress closeout remain with the coordinator after their outputs are reviewed.
+
+**2026-05-27 Chapter 10-11 agent handoff:** Prepared parallel content-worker lanes for Chapter 10 (4 lessons: plural pronouns and time expressions) and Chapter 11 (5 lessons: home and family). Each worker should own exactly one fixture file under `arabai-backend/prisma/fixtures/`, avoid seed/progress edits, and expect full fixture validation to remain blocked until neighboring parallel-owned files are all reconciled.
+
+**2026-05-27 Chapter 10-11 fixture authoring:** Authored Chapter 10 lessons 1-4 (`chapter-10-lesson-01.json` through `chapter-10-lesson-04.json`) and Chapter 11 lessons 1-5 (`chapter-11-lesson-01.json` through `chapter-11-lesson-05.json`) as STANDARD warsh-content-schema v1.0 fixtures. All nine new files parse as valid JSON. Full `npm run db:validate-fixtures` is still blocked by pre-existing Chapter 9 lesson 1 duplicate/VERB_PATTERN fixture issues; the current validator output names only Ch9-L01 files, not the new Ch10-Ch11 fixtures.
+
+**What is DONE (as of 2026-05-27):**
+- All 13 spec files have been implemented to Phase 1 completeness
+- All ~57 of 62 spec-02 screens are built (only A0 animated splash is missing)
+- Chapters 1-8: 35 fixture-authored lessons (including SP1, SP2) validated at 0 errors
+- All exercise types implemented in the lesson player; VERB_PATTERN renderer exists but has no fixture yet
+- Vocabulary Bank (585 words), SRS/SM-2, Tadabbur (11 Surahs), Word of the Day
+- Streak system with freeze, achievements/milestones (50+), push notifications
+- Paywall with server-side Apple/Google IAP verification, cron jobs (streak reset, trial expiry)
+- Share stats card, Surah celebration, milestone celebrations, streak modals
+- Password reset (forgot/reset), change password, edit profile
+- Preview experience A1-A7, onboarding B1-B9 including permissions
+- Token refresh (30-day JWT), Spoken Fus'ha (SHADOW_REPEAT + SPOKEN_PHRASES), Urdu localization
+- Sentry + Mixpanel analytics wired throughout
+- Content dashboard at `/dashboard`; dev unlock helper script
+- All TypeScript checks 0 errors; `npm run db:validate-fixtures` passes (35 fixtures)
+
+**What is LEFT (prioritized):**
+1. **Content authoring: Chapters 9-72** — 63 chapters of fixture-authored JSON lessons still needed (highest priority); Ch9-L1 VERB_PATTERN seeded as the first ch9 lesson (2026-05-27)
+2. ~~**VERB_PATTERN fixture** — DONE 2026-05-27: `chapter-09-lesson-01-verb-pattern.json` authored, seeded, live as `ch09-l01`~~
+3. ~~**A0 animated splash** — DONE 2026-05-27: `app/index.tsx` rebuilt with full Warsh lockup animation (600ms Latin fade, 350ms Arabic gold illuminate, tagline, 500ms hold)~~
+4. ~~**Pre-beta infrastructure** — DONE 2026-05-27: checklist rewritten (15 sections, exact env var names, step-by-step console instructions). Package renamed `com.arabai.app` → `com.warsh.app` and scheme `arabai` → `warsh` across `app.json`, `build.gradle`, `AndroidManifest.xml`, Kotlin sources, and `reset-password` deep link. See `Docs/warsh-beta-infra-readiness-checklist.md` for all remaining YOU-items.~~
+5. **QA** — REVIEW XP display in close screen, chapter completion edge case, live IAP sandbox purchase+restore; VERB_PATTERN on device (ch09-l01 now available). Run only after Vercel production deploy + Neon seed are confirmed.
+6. ~~**Lesson player direct schema** — DONE 2026-05-27: `mapContent()` removed; player reads warsh-content-schema v1.0 directly~~
+
+---
+
+## Recent Changes (2026-05-27 pre-launch hardening)
+
+- Checked `Docs/warsh-spec-00-master-index.md` and this progress tracker before updating status.
+- Implemented server-side IAP verification in `POST /api/subscription/verify`:
+  - Android verifies Google Play purchase tokens through the Android Publisher API `purchases.subscriptionsv2.get`
+  - iOS verifies App Store receipt data server-side, using production first and sandbox fallback
+  - endpoint now fails closed when store config, purchase token, receipt data, product, platform, or store response is invalid
+- Updated mobile purchase/restore flows to send iOS `transactionReceipt` as `receiptData` while preserving Android `purchaseToken`.
+- Wired `surah-celebration.tsx` share mechanics using `captureRef` + `expo-sharing`, matching the existing share-stats implementation pattern.
+- Added `arabai-app/.eslintrc.js` and fixed the duplicate `@services/api` import in settings so blocking app lint errors are gone.
+- Ran validation:
+  - backend `npx tsc --noEmit` passed
+  - app `npx tsc --noEmit` passed
+  - app `npm run lint -- --quiet` passed
+  - backend `npm run db:validate-fixtures` passed with 35 fixture lesson(s)
+- Ran physical Android QA on TECNO KF8:
+  - all 35 Chapter 1-8 lesson routes loaded without visible load/fatal error state
+  - focused checks passed for SP1, MATCHING, and ch06-l04 GRAMMAR_PARSE
+  - VERB_PATTERN could not be fixture-tested because the current seeded Ch1-8 fixture set has zero VERB_PATTERN lessons
 
 ## Build and Testing Status
 
@@ -116,7 +176,15 @@ It should not be treated as a permanent record of:
   - `GET /api/chapters` returned `15` chapters and `4` lessons in chapter 1
   - `GET /api/progress` returned an empty completed lesson list for a fresh test account
   - `GET /api/chat/history` returned an empty message list for a fresh test account
-- App lint is not currently runnable because `arabai-app/` has no ESLint config file
+- App lint now has a project ESLint config and `npm run lint -- --quiet` passes
+- Backend TypeScript check passed after adding server-side Apple/Google subscription verification
+- App TypeScript check passed after IAP payload, Surah sharing, and lint cleanup changes
+- `npm run db:validate-fixtures` passes with 35 fixture lesson(s)
+- Physical Android device QA for Chapter 1-8 lesson route loading passed on a connected TECNO KF8 device:
+  - all 35 authored lessons opened without a visible "Unable to load lesson" / fatal error state
+  - SP1 context and phrase card rendered
+  - ch06-l04 MATCHING and GRAMMAR_PARSE rendered on-device
+  - current fixture DB has 28 STANDARD, 5 REVIEW, 2 SPOKEN_PHRASES, and 0 VERB_PATTERN lessons
 - Backend content dashboard build passed:
   - `/dashboard` is now available from the Next.js backend for Warsh content management
   - an earlier active database snapshot returned `72` chapters and `323` lessons from `GET /api/admin/content`
@@ -1231,7 +1299,7 @@ L4 (REVIEW) reveal is Al-Baqarah 2:35 — Adam and Eve in الْجَنَّةَ �
 - Migration `20260522200000_add_subscription`
 - Created `lib/subscription.ts` — `getSubscriptionState()` computes `trialDaysRemaining`, `trialActive`, `subscriptionActive`, `hasAccess`; `requiresSubscription()` helper
 - Created `GET /api/subscription/status` — returns full subscription state for authenticated user
-- Created `POST /api/subscription/verify` — records subscription after purchase (v1 trusts client receipt; full Apple/Google verification noted as pre-launch requirement)
+- Created `POST /api/subscription/verify` — verifies store purchase data server-side before recording a subscription
 - Updated `GET /api/lessons/[id]` — returns `402 subscription_required` when trial is expired and no active subscription
 - Updated `GET /api/progress` — now returns `userName`, `subscription` object (trialDaysRemaining, subscriptionStatus, hasAccess etc.)
 
@@ -1257,7 +1325,7 @@ L4 (REVIEW) reveal is Al-Baqarah 2:35 — Adam and Eve in الْجَنَّةَ �
 - Backend TypeScript check passed
 - App TypeScript check passed
 - **To activate:** run `npm run db:migrate && npm run db:generate` in `arabai-backend/`
-- **Before launch:** add real product IDs (`warsh_monthly`, `warsh_annual`) to Google Play Console and replace client-trust receipt with server-side Google Play API verification in `POST /api/subscription/verify`
+- **Before launch:** configure real App Store / Google Play credentials and product IDs (`warsh_monthly`, `warsh_annual`) in the store consoles and beta/staging secret managers; run live sandbox purchase and restore tests against `POST /api/subscription/verify`
 
 ### Push notifications (implemented)
 
@@ -1499,59 +1567,67 @@ L4 (REVIEW) reveal is Al-Baqarah 2:35 — Adam and Eve in الْجَنَّةَ �
 - The app is no longer at a scaffold-only stage
 - Core app wiring for Phase 1 is implemented across mobile + backend
 - The major curriculum quantity gap has been addressed by replacing the starter seed with 15 Warsh reader chapters
-- The main current risk is runtime QA, especially auth on a physical device and playback of the new exercise formats
+- The main current risks are remaining content authoring, beta infrastructure setup, live store/IAP sandbox verification, and chapter-completion edge-case QA
 
 Current product concern:
-- the Warsh flow system is implemented in the seed and lesson player, but it has not yet had enough manual mobile QA
+- the Warsh flow system is implemented in the seed and lesson player, and the current Chapter 1-8 fixture route-load sweep passed on a physical Android device
 - generated lesson content should still be reviewed for pedagogy, ayah relevance, repetition quality, and learner pacing
-- progression and placement behavior still need device-level verification after the new seed
+- progression and placement behavior exist, but chapter-completion edge cases still need focused device-level verification after the new seed
 
 ## Remaining Work
 
 ### Content authoring (highest priority)
-1. ✅ Chapter 2 authored — 4 lessons (tanween / ال / adjectives / أَيْنَ) seeded (2026-05-24)
-2. ✅ Chapter 3 authored — 4 lessons (الإضافة, لِمَنْ, يَا, Basmalah) seeded (2026-05-24); lesson-loading bug fixed (2026-05-24)
-3. ✅ Chapter 4 authored — 4 lessons (الصِّفَة والموصوف, adjective agreement, الصِّرَاطَ الْمُسْتَقِيمَ) wired in `seed.cjs` (confirmed 2026-05-26)
-4. ✅ Chapter 5 authored — 5 lessons (هٰذِهِ، تِلْكَ، لام الملكية، ذَهَبَ, R1) wired in `seed.cjs` (2026-05-26)
-5. ✅ Inserted SP1 SPOKEN_PHRASES lesson after Ch3 (basic greetings — per spec-05 Part C) as `ch03-l05` (2026-05-26)
-6. ✅ Chapter 6 authored — 4 lessons (described subjects, الَّذِي, place phrases, Al-A'la reveal) wired in `seed.cjs` (2026-05-26)
-7. ✅ Chapter 7 authored — 4 lessons (attached singular pronouns: `كِتَابِي`, `كِتَابُكَ`, `كِتَابُهُ`, `عِنْدِي`) wired in `seed.cjs` (2026-05-26)
-8. ✅ Inserted SP2 SPOKEN_PHRASES lesson after Ch7 (simple questions — per spec-05 Part C) as `ch07-l05` (2026-05-26)
-9. ✅ Chapter 8 authored — 4 lessons (feminine verbs, feminine verb marker, `الَّتِي`, `أُمِّي`) wired in `seed.cjs` (2026-05-26)
-10. Continue through Chapters 9-72 following the chapter mapping in `warsh-spec-05`
-
-**2026-05-26 correction:** Chapter 8 and SP2 are now authored and wired. The next content authoring task is Chapter 9; before that, run device QA across SP1, SP2, and Chapters 6-8.
+1. ✅ Chapters 1-8 authored and wired — 35 lessons total, including SP1 (`ch03-l05`) and SP2 (`ch07-l05`)
+2. ✅ Fixture validation passes for all 35 authored JSON lessons
+3. Continue through Chapters 9-72 following the chapter mapping in `warsh-spec-05`
+4. Next content task: Chapter 9 fixture lessons (Plural Nouns)
 
 ### Lesson player (engineering)
-6. Update the lesson player (`play.tsx`) to read the new content schema directly (currently using the API transformer as an adapter — acceptable for now but should be replaced)
-7. ✅ Wire `explanation_on_wrong` from exercises into the feedback bar (completed 2026-05-26)
-8. ✅ Support multiple `highlighted_word_indices` in the Reveal beat (completed 2026-05-26)
+5. Update the lesson player (`play.tsx`) to read the new content schema directly (currently using the client-side mapper/adapter path — acceptable for now but should be replaced)
+6. ✅ Wire `explanation_on_wrong` from exercises into the feedback bar (completed 2026-05-26)
+7. ✅ Support multiple `highlighted_word_indices` in the Reveal beat (completed 2026-05-26)
+8. Add or author a real VERB_PATTERN fixture and run it through physical-device QA; the renderer exists, but the current Ch1-8 fixture set has 0 VERB_PATTERN lessons
 
 ### Infrastructure
-9. Configure `OPENAI_API_KEY` in backend `.env` for real AI + TTS
-10. Configure `EXPO_PUBLIC_MIXPANEL_TOKEN` and `EXPO_PUBLIC_SENTRY_DSN` in EAS secrets before beta
-11. Set `ADMIN_DASHBOARD_TOKEN` before using dashboard writes outside local development
-12. Clean up older Chapter 1-6/SP1 fixture schema drift so `npm run db:validate-fixtures` can pass across the full fixture set
+9. Complete `Docs/warsh-beta-infra-readiness-checklist.md` before inviting beta testers:
+   - Vercel staging/production env vars and domains
+   - Neon beta database
+   - R2 bucket and `assets.warsh.app`
+   - Sentry and Mixpanel projects/tokens
+   - Google Play internal testing track
+10. Configure `OPENAI_API_KEY` in backend environments for real AI + TTS
+11. Configure `EXPO_PUBLIC_MIXPANEL_TOKEN` and `EXPO_PUBLIC_SENTRY_DSN` in EAS secrets before beta
+12. Set `ADMIN_DASHBOARD_TOKEN` before using dashboard writes outside local development
+13. Configure real Apple/Google store secrets and product IDs; run sandbox purchase + restore tests for `warsh_monthly` and `warsh_annual`
+14. Move chat rate limiting from Postgres `ChatMessage` counting to Upstash Redis if load testing shows DB-count latency matters
 
 ### QA still needed
-13. Full lesson player QA on device for Chapters 1-8 plus SP1/SP2 (5-beat flow, SPOKEN_PHRASES, and all exercise types used in authored fixtures)
-14. Verify REVIEW template (xp_value: 5) XP display in lesson player close screen
-15. Verify chapter completion logic with new schema (Ch1 completes when all 4 lessons done)
+15. ✅ Physical Android route-load sweep passed for all 35 Chapter 1-8 lessons on TECNO KF8
+16. ✅ Focused physical-device checks passed for SP1, MATCHING, and ch06-l04 GRAMMAR_PARSE
+17. Verify REVIEW template XP display in the lesson player close screen
+18. Verify chapter completion logic with new schema (Ch1 completes when all 4 lessons are done)
+19. Run live IAP sandbox QA for purchase and restore once store-console products and credentials exist
+20. Run a beta/staging APK against the deployed staging API, not local USB reverse
 
 ## Current Source-Of-Truth Summary
 
-As of 2026-05-26:
+As of 2026-05-27:
 - the codebase implements the full Phase 1 app loop
 - the native Android app is installed and launching on the authorized physical device
 - onboarding, auth, placement, progression, lesson play, chat, and profile flows exist in code
 - **lesson content schema has been migrated to warsh-content-schema v1.0** — single `content Json` blob, `LessonTemplate` enum, API transformer in place
 - **Chapters 1-8 are fixture-authored** — 35 lessons total in `arabai-backend/prisma/fixtures/`, wired into `seed.cjs`, including SP1 and SP2
+- physical Android route-load QA passed for all 35 Chapter 1-8 lessons; focused checks passed for SP1, MATCHING, and ch06-l04 GRAMMAR_PARSE
+- VERB_PATTERN renderer exists, but no current Ch1-8 fixture exercises it
 - the SOT is `Docs/warsh-spec-00-master-index.md` + spec-01 through spec-13; `CLAUDE.md` updated to reflect this
 - 72 chapters seeded with metadata; Chapters 9-72 still need fixture-authored lessons
 - backend enforces locked progression and placement skipping; `DEV_UNLOCK_ALL=true` in local `.env` for development
-- backend TypeScript check passes with 0 errors after the schema migration
+- backend TypeScript check passes with 0 errors after the IAP verification hardening
+- app TypeScript check passes with 0 errors; app lint has a config and `npm run lint -- --quiet` passes
+- `npm run db:validate-fixtures` passes across the 35 authored fixtures
 - bottom tab shell matches spec: `Learn | Vocabulary | Noor | You`
 - Noor backend wiring is OpenAI-only with `gpt-4o-mini` as the default model
 - mobile local networking: USB reverse (`tcp:8081`, `tcp:3000`) + `http://127.0.0.1:3000` is the reliable path
-- the biggest immediate content gaps are Chapter 9 authoring and device QA across SP1, SP2, and the newly authored Chapters 6-8 lessons
+- the biggest immediate content gap is Chapter 9 authoring
+- the biggest pre-beta ops gap is completing `Docs/warsh-beta-infra-readiness-checklist.md`
 - a full UI screen inventory exists at `UI-Design-Screen-list.md` (repo root) — 36 built screens, ~20 unbuilt, each mapped to a spec-02 ID

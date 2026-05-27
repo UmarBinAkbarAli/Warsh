@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.0",
+  "template": "VERB_PATTERN",
+  "_meta": {
+    "_note": "Chapter 9, Lesson 1 — Past tense conjugation of ذَهَبَ. First systematic verb pattern table.",
+    "chapter_order": 9,
+    "lesson_order": 1,
+    "estimated_minutes": 12,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 3,
+      "label": "Al-Baqarah 2:3",
+      "ar": "يُؤْمِنُونَ بِالْغَيْبِ",
+      "en": "They believe in the unseen.",
+      "ur": "وہ غیب پر ایمان رکھتے ہیں۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-003-part-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "You know ذَهَبَ — he went — and ذَهَبَتْ — she went. Today you see the full conjugation table for past tense. Six forms, one root.",
+      "ur": "آپ ذَهَبَ اور ذَهَبَتْ جانتے ہیں۔ آج آپ ماضی کی مکمل گردان دیکھیں گے — چھ صیغے، ایک مادہ۔"
+    },
+    "autoplay": true
+  },
+  "conjugation_table": {
+    "root": "ذ-ه-ب",
+    "pattern_name": {
+      "en": "Past Tense — فِعْل مَاضٍ",
+      "ar": "فِعْل مَاضٍ",
+      "ur": "فعل ماضی"
+    },
+    "rows": [
+      {
+        "pronoun": {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "he"
+        },
+        "conjugated": {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went"
+        },
+        "audio_url": "https://cdn.warsh.app/audio/vocab/dhahaba-huwa.mp3"
+      },
+      {
+        "pronoun": {
+          "ar": "هِيَ",
+          "ar_plain": "هي",
+          "translit": "hiya",
+          "en": "she"
+        },
+        "conjugated": {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went"
+        },
+        "audio_url": "https://cdn.warsh.app/audio/vocab/dhahabat-hiya.mp3"
+      },
+      {
+        "pronoun": {
+          "ar": "أَنْتَ",
+          "ar_plain": "انت",
+          "translit": "anta",
+          "en": "you (m)"
+        },
+        "conjugated": {
+          "ar": "ذَهَبْتَ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabta",
+          "en": "you went (m)"
+        },
+        "audio_url": "https://cdn.warsh.app/audio/vocab/dhahabta-anta.mp3"
+      },
+      {
+        "pronoun": {
+          "ar": "أَنْتِ",
+          "ar_plain": "انت",
+          "translit": "anti",
+          "en": "you (f)"
+        },
+        "conjugated": {
+          "ar": "ذَهَبْتِ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabti",
+          "en": "you went (f)"
+        },
+        "audio_url": "https://cdn.warsh.app/audio/vocab/dhahabti-anti.mp3"
+      },
+      {
+        "pronoun": {
+          "ar": "أَنَا",
+          "ar_plain": "انا",
+          "translit": "ana",
+          "en": "I"
+        },
+        "conjugated": {
+          "ar": "ذَهَبْتُ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabtu",
+          "en": "I went"
+        },
+        "audio_url": "https://cdn.warsh.app/audio/vocab/dhahabtu-ana.mp3"
+      },
+      {
+        "pronoun": {
+          "ar": "نَحْنُ",
+          "ar_plain": "نحن",
+          "translit": "nahnu",
+          "en": "we"
+        },
+        "conjugated": {
+          "ar": "ذَهَبْنَا",
+          "ar_plain": "ذهبنا",
+          "translit": "dhahabnaa",
+          "en": "we went"
+        },
+        "audio_url": "https://cdn.warsh.app/audio/vocab/dhahabna-nahnu.mp3"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "ch09-l01-ex01",
+      "type": "TRUE_FALSE",
+      "statement": {
+        "en": "ذَهَبَتْ is the feminine form of the past tense verb 'to go'.",
+        "ur": "ذَهَبَتْ فعل ماضی 'جانا' کا مؤنث صیغہ ہے۔",
+        "ar_example": {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes — تْ at the end marks the feminine past tense. ذَهَبَ (he) → ذَهَبَتْ (she).",
+        "ur": "ہاں — آخر میں تْ مؤنث ماضی کی علامت ہے۔"
+      }
+    },
+    {
+      "id": "ch09-l01-ex02",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "ذَهَبْتُ",
+        "ar_plain": "ذهبت",
+        "translit": "dhahabtu",
+        "en": "I went"
+      },
+      "options": [
+        { "en": "I went", "ur": "میں گیا" },
+        { "en": "he went", "ur": "وہ گیا" },
+        { "en": "she went", "ur": "وہ گئی" },
+        { "en": "you went", "ur": "تم گئے" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ذَهَبْتُ ends in تُ — the first-person past tense marker. I went.",
+        "ur": "ذَهَبْتُ کے آخر میں تُ ہے — یہ متکلم ماضی کی علامت ہے۔"
+      }
+    },
+    {
+      "id": "ch09-l01-ex03",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "sentence_ar": "___ ذَهَبَتْ إِلَى الْمَدْرَسَةِ",
+      "hint": {
+        "en": "___ went to the school (feminine subject)",
+        "ur": "___ مدرسے گئی (مؤنث فاعل)"
+      },
+      "options": [
+        { "ar": "هِيَ", "ar_plain": "هي", "translit": "hiya", "en": "she" },
+        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "he" },
+        { "ar": "أَنَا", "ar_plain": "انا", "translit": "ana", "en": "I" },
+        { "ar": "نَحْنُ", "ar_plain": "نحن", "translit": "nahnu", "en": "we" }
+      ],
+      "correct_answer": {
+        "ar": "هِيَ",
+        "ar_plain": "هي",
+        "translit": "hiya",
+        "en": "she"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The verb ذَهَبَتْ ends in تْ — that's the feminine marker — so the subject must be هِيَ (she).",
+        "ur": "فعل کے آخر میں تْ ہے جو مؤنث کی علامت ہے — اس لیے فاعل هِيَ ہونا چاہیے۔"
+      }
+    },
+    {
+      "id": "ch09-l01-ex04",
+      "type": "BUILD_SENTENCE",
+      "target_translation": {
+        "en": "We went to the masjid.",
+        "ur": "ہم مسجد گئے۔"
+      },
+      "tiles": [
+        { "ar": "ذَهَبْنَا", "ar_plain": "ذهبنا", "translit": "dhahabnaa", "en": "we went" },
+        { "ar": "إِلَى", "ar_plain": "الى", "translit": "ilaa", "en": "to" },
+        { "ar": "الْمَسْجِدِ", "ar_plain": "المسجد", "translit": "al-masjid", "en": "the masjid" },
+        { "ar": "الْمَدْرَسَةِ", "ar_plain": "المدرسة", "translit": "al-madrasa", "en": "the school" }
+      ],
+      "correct_order": [0, 1, 2],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "ذَهَبْنَا (we went) + إِلَى (to) + الْمَسْجِدِ (the masjid). The last tile is a distractor.",
+        "ur": "ذَهَبْنَا + إِلَى + الْمَسْجِدِ — آخری ٹائل ایک distractor ہے۔"
+      }
+    },
+    {
+      "id": "ch09-l01-ex05",
+      "type": "MATCHING",
+      "left_column": [
+        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "he went" },
+        { "ar": "ذَهَبْتَ", "ar_plain": "ذهبت", "translit": "dhahabta", "en": "you went (m)" },
+        { "ar": "ذَهَبْنَا", "ar_plain": "ذهبنا", "translit": "dhahabnaa", "en": "we went" }
+      ],
+      "right_column": [
+        { "en": "he went", "ur": "وہ گیا" },
+        { "en": "you went (m)", "ur": "تم گئے" },
+        { "en": "we went", "ur": "ہم گئے" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2]],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "Match each pronoun's past tense form to its meaning.",
+        "ur": "ہر ضمیر کے ماضی کے صیغے کو اس کے ترجمے سے ملائیں۔"
+      }
+    },
+    {
+      "id": "ch09-l01-ex06",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "ذَهَبْتَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "ذهبت الى المسجد",
+        "translit": "dhahabta ilal-masjid",
+        "en": "You went to the masjid."
+      },
+      "options": [
+        { "en": "You went to the masjid.", "ur": "تم مسجد گئے۔" },
+        { "en": "She went to the masjid.", "ur": "وہ مسجد گئی۔" },
+        { "en": "I went to the masjid.", "ur": "میں مسجد گیا۔" },
+        { "en": "We went to the masjid.", "ur": "ہم مسجد گئے۔" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ذَهَبْتَ — notice the فتحة (a) at the end of تَ — that marks second-person masculine. You (m) went.",
+        "ur": "ذَهَبْتَ — آخر میں تَ پر زبر مذکر مخاطب کی علامت ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Past Tense — فِعْل مَاضٍ",
+      "ar": "فِعْل مَاضٍ",
+      "ur": "فعل ماضی"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 30,
+      "label": "Al-Baqarah 2:30",
+      "ar": "قَالَ إِنِّي أَعْلَمُ مَا لَا تَعْلَمُونَ",
+      "en": "He said: I know what you do not know.",
+      "ur": "اللہ نے فرمایا: میں وہ جانتا ہوں جو تم نہیں جانتے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-030-part-mishary.mp3"
+    },
+    "highlighted_word_indices": [0],
+    "noor_explanation": {
+      "en": "قَالَ — He said — is the past tense of the root ق-و-ل. It follows the exact same pattern as ذَهَبَ. Every past tense verb in the Quran follows this three-letter root pattern.",
+      "ur": "قَالَ — اس نے کہا — مادہ ق-و-ل کا فعل ماضی ہے۔ یہ ذَهَبَ کے بالکل ایک جیسے وزن پر ہے۔ قرآن کا ہر فعل ماضی اسی تین حرفی مادے کے وزن پر ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You now own the full past tense of ذَهَبَ — six forms, one root. The same endings attach to every Arabic verb. Every time you hear ذَهَبَ in tilawa, you will know exactly who went.",
+      "ur": "اب آپ کے پاس ذَهَبَ کی مکمل ماضی گردان ہے — چھ صیغے، ایک مادہ۔ یہی لاحقے ہر عربی فعل میں لگتے ہیں۔"
+    }
+  }
+}

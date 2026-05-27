@@ -1,4 +1,4 @@
-package com.arabai.app
+﻿package com.warsh.app
 
 import android.os.Build
 import android.os.Bundle
@@ -63,3 +63,4 @@ class MainActivity : ReactActivity() {
       super.invokeDefaultOnBackPressed()
   }
 }
+

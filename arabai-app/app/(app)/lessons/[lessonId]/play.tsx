@@ -12,109 +12,10 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
 import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
 
-type Hook = {
-  ayahAr?: string;
-  ayahRef?: string;
-  question?: string;
-};
-
-type DiscoverCard = {
-  emoji?: string;
-  arabicText?: string;
-  translation?: string;
-  transliteration?: string;
-  explanation?: string;
-};
-
-type ExerciseType = "TRUE_FALSE" | "TAP_TRANSLATION" | "FILL_BLANK" | "BUILD_SENTENCE" | "MATCHING" | "GRAMMAR_PARSE" | "CONVERSATION_BUILDER" | "SHADOW_REPEAT";
-
-type MatchingPair = {
-  left: string;
-  right: string;
-};
-
-type ParseToken = {
-  word: string;
-  label: string;
-  gloss?: string;
-};
-
-type ConversationLine = {
-  speaker: string;
-  line: string;
-};
-
-type Exercise = {
-  type: ExerciseType;
-  prompt?: string;
-  arabicText?: string;
-  options?: string[];
-  correctAnswer?: string;
-  explanation_on_wrong?: string;
-  pairs?: MatchingPair[];
-  parseTokens?: ParseToken[];
-  labels?: string[];
-  conversation?: ConversationLine[];
-};
-
-type RevealAyah = {
-  ayahAr?: string;
-  ayahRef?: string;
-  highlightedWord?: string;
-  highlightedWords?: string[];
-  highlightedWordIndices?: number[];
-};
-
-type VerbConjugation = {
-  pronoun_ar: string;
-  pronoun_en: string;
-  form: string;
-};
-
-type VerbPattern = {
-  root?: string;
-  base_form?: string;
-  base_form_meaning?: string;
-  tense?: string;
-  conjugations?: VerbConjugation[];
-};
-
-type SpokenPhrase = {
-  arabic: string;
-  transliteration?: string;
-  translation: string;
-  recognitionOptions?: string[];
-};
-
-type DialogueLine = {
-  speaker: string;
-  line: string;
-  translation?: string;
-};
-
-type SpokenPhrasesContent = {
-  contextTitle?: string;
-  contextTitleEn?: string;
-  contextBody?: string;
-  phrases?: SpokenPhrase[];
-  dialogue?: DialogueLine[];
-};
-
-type MappedLesson = {
-  id: string;
-  title: string;
-  xpReward: number;
-  hook?: Hook | null;
-  discoverCards?: DiscoverCard[] | null;
-  exercises?: Exercise[] | null;
-  revealText?: string | null;
-  revealAyah?: RevealAyah | null;
-  fatihaProgressDelta?: number;
-  content?: Record<string, unknown> | null;
-  type?: string | null;
-};
-
-type RawLessonResponse = {
+// ---------------------------------------------------------------------------
+// API response shape — content is the raw warsh-content-schema v1.0 blob
+// ---------------------------------------------------------------------------
+type RawLesson = {
   id: string;
   title: string;
   titleAr?: string;
@@ -124,312 +25,6 @@ type RawLessonResponse = {
   isCompleted?: boolean;
   isSkippedByPlacement?: boolean;
 };
-
-// ---------------------------------------------------------------------------
-// Client-side content mapper — reads raw warsh-content-schema v1.0 and
-// produces the internal MappedLesson shape the player renders.
-// ---------------------------------------------------------------------------
-function mapContent(raw: RawLessonResponse): MappedLesson {
-  const { template, content } = raw;
-  const c = content ?? {};
-
-  const hook = c.hook as Record<string, unknown> | undefined;
-  const ayah = hook?.ayah as Record<string, unknown> | undefined;
-  const noorIntro = hook?.noor_intro as Record<string, unknown> | undefined;
-  const discoverCardsRaw = c.discover_cards as Record<string, unknown>[] | undefined;
-  const rawExercises = c.exercises as Record<string, unknown>[] | undefined;
-  const reveal = c.reveal as Record<string, unknown> | undefined;
-  const revealAyahRaw = reveal?.ayah as Record<string, unknown> | undefined;
-  const highlightedIndices = reveal?.highlighted_word_indices as number[] | undefined;
-  const spokenPhrases = c.spoken_phrases as Record<string, unknown> | undefined;
-
-  function getWrongExplanation(ex: Record<string, unknown>): string | undefined {
-    const wrongMsg = ex.explanation_on_wrong as Record<string, unknown> | undefined;
-    const explObj = ex.explanation as Record<string, unknown> | undefined;
-    return (wrongMsg?.en ?? explObj?.en) as string | undefined;
-  }
-
-  const mappedHook: Hook | null = ayah
-    ? {
-        ayahAr: ayah.ar as string,
-        ayahRef: ayah.label as string,
-        question: noorIntro?.en as string | undefined,
-      }
-    : null;
-
-  const mappedCards: DiscoverCard[] = (discoverCardsRaw ?? []).map((card) => {
-    const cardType = card.type as string | undefined;
-    const text = card.text as Record<string, unknown> | undefined;
-    const concept = card.concept as Record<string, unknown> | undefined;
-    const explanation = card.explanation as Record<string, unknown> | undefined;
-    const examples = card.examples as Array<Record<string, unknown>> | undefined;
-    const titleObj = card.title as Record<string, unknown> | undefined;
-    const bodyObj = card.body as Record<string, unknown> | undefined;
-
-    if (cardType === "GRAMMAR_NOTE") {
-      return {
-        arabicText: titleObj?.ar as string | undefined,
-        translation: titleObj?.en as string | undefined,
-        transliteration: undefined,
-        explanation: bodyObj?.en as string | undefined,
-      };
-    }
-    if (cardType === "SENTENCE") {
-      return {
-        arabicText: text?.ar as string | undefined,
-        translation: text?.en as string | undefined,
-        transliteration: text?.translit as string | undefined,
-        explanation: undefined,
-      };
-    }
-    const arabicText = (text?.ar ?? concept?.ar) as string | undefined;
-    const translation = (text?.en ?? concept?.en) as string | undefined;
-    const exampleLine = !text && examples?.[0]
-      ? `${examples[0].ar as string} — ${examples[0].en as string}`
-      : undefined;
-    return {
-      arabicText,
-      translation,
-      transliteration: text?.translit as string | undefined,
-      explanation: (explanation?.en ?? exampleLine) as string | undefined,
-    };
-  });
-
-  const mappedExercises: Exercise[] = (rawExercises ?? []).map((ex) => {
-    const type = ex.type as string;
-
-    if (type === "TAP_TRANSLATION") {
-      const prompt = ex.prompt as Record<string, unknown>;
-      const explanationOnWrong = getWrongExplanation(ex);
-      const optionsV1 = ex.options as Array<Record<string, unknown>> | undefined;
-      const correctIndex = ex.correct_index as number | undefined;
-      const choicesV2 = ex.choices as string[] | undefined;
-      const answerV2 = ex.answer as string | undefined;
-      const direction = ex.direction as string | undefined;
-      let options: string[];
-      let correctAnswer: string;
-      if (optionsV1 && correctIndex !== undefined) {
-        options = optionsV1.map((o) => o.en as string);
-        correctAnswer = optionsV1[correctIndex].en as string;
-      } else {
-        options = choicesV2 ?? [];
-        correctAnswer = answerV2 ?? "";
-      }
-      if (direction === "en_to_ar") {
-        const promptEn = prompt.en as string | undefined;
-        return {
-          type: type as ExerciseType,
-          prompt: promptEn ? `Which Arabic means: "${promptEn}"?` : "Choose the correct Arabic.",
-          arabicText: undefined,
-          options,
-          correctAnswer,
-          explanation_on_wrong: explanationOnWrong,
-        };
-      }
-      return {
-        type: type as ExerciseType,
-        prompt: "What does this Arabic mean?",
-        arabicText: prompt.ar as string | undefined,
-        options,
-        correctAnswer,
-        explanation_on_wrong: explanationOnWrong,
-      };
-    }
-
-    if (type === "MATCHING") {
-      const explanationOnWrong = getWrongExplanation(ex);
-      const leftCol = ex.left_column as Array<Record<string, unknown>> | undefined;
-      const rightCol = ex.right_column as Array<Record<string, unknown>> | undefined;
-      const correctPairs = ex.correct_pairs as Array<[number, number]> | undefined;
-      const pairsV2 = ex.pairs as Array<Record<string, unknown>> | undefined;
-      if (leftCol && rightCol && correctPairs) {
-        return {
-          type: type as ExerciseType,
-          prompt: "Match each Arabic word with its meaning.",
-          pairs: correctPairs.map(([l, r]) => ({ left: leftCol[l].ar as string, right: rightCol[r].en as string })),
-          options: rightCol.map((r) => r.en as string),
-          explanation_on_wrong: explanationOnWrong,
-        };
-      } else if (pairsV2) {
-        return {
-          type: type as ExerciseType,
-          prompt: "Match each Arabic word with its meaning.",
-          pairs: pairsV2.map((p) => ({ left: p.ar as string, right: p.en as string })),
-          options: pairsV2.map((p) => p.en as string),
-          explanation_on_wrong: explanationOnWrong,
-        };
-      }
-      return ex as unknown as Exercise;
-    }
-
-    if (type === "BUILD_SENTENCE") {
-      const explanationOnWrong = getWrongExplanation(ex);
-      const tiles = ex.tiles as Array<Record<string, unknown>> | undefined;
-      const order = ex.correct_order as number[] | undefined;
-      const target = ex.target_translation as Record<string, unknown> | undefined;
-      const wordBank = ex.word_bank as string[] | undefined;
-      const answerArr = ex.answer as string[] | undefined;
-      const instruction = ex.instruction as Record<string, unknown> | undefined;
-      if (tiles && order && target) {
-        return {
-          type: type as ExerciseType,
-          prompt: target.en as string,
-          options: tiles.map((t) => t.ar as string),
-          correctAnswer: order.map((i) => (tiles[i].ar as string)).join(" "),
-          explanation_on_wrong: explanationOnWrong,
-        };
-      } else if (wordBank && answerArr) {
-        return {
-          type: type as ExerciseType,
-          prompt: (instruction?.en as string | undefined) ?? "Build the sentence.",
-          options: wordBank,
-          correctAnswer: answerArr.join(" "),
-          explanation_on_wrong: explanationOnWrong,
-        };
-      }
-      return ex as unknown as Exercise;
-    }
-
-    if (type === "FILL_BLANK") {
-      const explanationOnWrong = getWrongExplanation(ex);
-      const hint = ex.hint as Record<string, unknown> | undefined;
-      const optionsV1 = ex.options as Array<Record<string, unknown>> | undefined;
-      const correctAnswerV1 = ex.correct_answer as Record<string, unknown> | undefined;
-      const tmpl = ex.template as Record<string, unknown> | undefined;
-      const blankLabel = ex.blank_label as Record<string, unknown> | undefined;
-      const answerV2 = ex.answer as string | undefined;
-      const choicesV2 = ex.choices as string[] | undefined;
-      if (hint && optionsV1 && correctAnswerV1) {
-        return {
-          type: type as ExerciseType,
-          prompt: hint.en as string,
-          arabicText: ex.sentence_ar as string,
-          options: optionsV1.map((o) => o.ar as string),
-          correctAnswer: correctAnswerV1.ar as string,
-          explanation_on_wrong: explanationOnWrong,
-        };
-      } else if (tmpl || blankLabel) {
-        const templateEn = (tmpl?.en as string | undefined) ?? "";
-        const eqIdx = templateEn.indexOf(" = ");
-        const arabicPart = eqIdx > 0 ? templateEn.slice(0, eqIdx) : templateEn;
-        const hintPart = eqIdx > 0 ? templateEn.slice(eqIdx + 3) : ((blankLabel?.en as string | undefined) ?? "");
-        return {
-          type: type as ExerciseType,
-          prompt: hintPart,
-          arabicText: arabicPart,
-          options: choicesV2 ?? [],
-          correctAnswer: answerV2 ?? "",
-          explanation_on_wrong: explanationOnWrong,
-        };
-      }
-      return ex as unknown as Exercise;
-    }
-
-    if (type === "TRUE_FALSE") {
-      const statement = ex.statement as Record<string, unknown>;
-      const arExample = statement?.ar_example as Record<string, unknown> | undefined;
-      const correct = (ex.correct_answer ?? ex.answer) as boolean;
-      return {
-        type: type as ExerciseType,
-        prompt: statement?.en as string,
-        arabicText: arExample?.ar as string | undefined,
-        options: ["True", "False"],
-        correctAnswer: correct ? "True" : "False",
-        explanation_on_wrong: getWrongExplanation(ex),
-      };
-    }
-
-    if (type === "GRAMMAR_PARSE") {
-      const words = ex.words as Array<Record<string, unknown>>;
-      const roles = ex.correct_roles as string[];
-      return {
-        type: type as ExerciseType,
-        parseTokens: words.map((w, i) => ({ word: w.ar as string, label: roles[i], gloss: w.en as string })),
-        labels: ex.available_roles as string[],
-        explanation_on_wrong: getWrongExplanation(ex),
-      };
-    }
-
-    return {
-      ...(ex as unknown as Exercise),
-      explanation_on_wrong: getWrongExplanation(ex),
-    };
-  });
-
-  // Build reveal
-  let mappedRevealAyah: RevealAyah | null = null;
-  let revealText: string | null = null;
-  if (reveal && revealAyahRaw) {
-    const ayahWords = (revealAyahRaw.ar as string).split(" ");
-    const highlightIndices = highlightedIndices ?? [];
-    const highlightedWords = highlightIndices.map((idx) => ayahWords[idx]).filter(Boolean);
-    mappedRevealAyah = {
-      ayahAr: revealAyahRaw.ar as string,
-      ayahRef: revealAyahRaw.label as string,
-      highlightedWord: highlightedWords[0] ?? "",
-      highlightedWords,
-      highlightedWordIndices: highlightIndices,
-    };
-    const explanation = (reveal.noor_explanation ?? reveal.noor_comment) as Record<string, unknown> | undefined;
-    revealText = (explanation?.en as string | undefined) ?? null;
-  }
-
-  // Template → legacy type
-  const legacyType = template === "SPOKEN_PHRASES" ? "SPOKEN_PHRASES" : "VOCABULARY";
-
-  // Spoken phrases content
-  const schemaSpokenPhraseRows = spokenPhrases?.phrases as Record<string, unknown>[] | undefined;
-  const schemaPhraseById = new Map(
-    (schemaSpokenPhraseRows ?? []).map((row) => {
-      const phrase = row.phrase as Record<string, unknown> | undefined;
-      return [row.id as string, phrase];
-    })
-  );
-  const mappedSchemaPhrases: SpokenPhrase[] = (schemaSpokenPhraseRows ?? []).map((row) => {
-    const phrase = row.phrase as Record<string, unknown> | undefined;
-    const translation = phrase?.en as string | undefined;
-    return {
-      arabic: (phrase?.ar as string | undefined) ?? "",
-      transliteration: phrase?.translit as string | undefined,
-      translation: translation ?? "",
-      recognitionOptions: translation ? [translation] : [],
-    };
-  });
-  const schemaDialogue = spokenPhrases?.dialogue as Record<string, unknown>[] | undefined;
-  const mappedSchemaDialogue: DialogueLine[] = (schemaDialogue ?? []).map((line) => {
-    const phrase = schemaPhraseById.get(line.phrase_id as string);
-    return {
-      speaker: (line.speaker as string | undefined) ?? "",
-      line: (phrase?.ar as string | undefined) ?? "",
-      translation: phrase?.en as string | undefined,
-    };
-  });
-
-  const mappedSpokenContent: SpokenPhrasesContent | undefined = template === "SPOKEN_PHRASES"
-    ? {
-        contextTitle: ((c.contextTitle as string | undefined) ?? (spokenPhrases?.scene as Record<string, unknown> | undefined)?.ar as string | undefined),
-        contextTitleEn: ((c.contextTitleEn as string | undefined) ?? (spokenPhrases?.scene as Record<string, unknown> | undefined)?.en as string | undefined),
-        contextBody: c.contextBody as string | undefined,
-        phrases: (c.phrases as SpokenPhrase[] | undefined) ?? mappedSchemaPhrases,
-        dialogue: (c.dialogue as DialogueLine[] | undefined) ?? mappedSchemaDialogue,
-      }
-    : undefined;
-
-  return {
-    id: raw.id,
-    title: raw.title,
-    xpReward: raw.xpReward,
-    hook: mappedHook,
-    discoverCards: mappedCards,
-    exercises: mappedExercises,
-    revealText,
-    revealAyah: mappedRevealAyah,
-    content: mappedSpokenContent ?? c,
-    type: legacyType,
-  };
-}
-
-type Lesson = MappedLesson;
 
 type CompletionResult = {
   xpEarned: number;
@@ -442,6 +37,117 @@ type CompletionResult = {
 
 type SelectedAnswer = string | string[] | Record<string, string> | null;
 
+// ---------------------------------------------------------------------------
+// Internal types kept only for renderers that need typed pairs/tokens
+// ---------------------------------------------------------------------------
+type MatchingPair = { left: string; right: string };
+type ParseToken   = { word: string; label: string; gloss?: string };
+
+// ---------------------------------------------------------------------------
+// Raw exercise helper functions — read warsh-content-schema v1.0 directly
+// ---------------------------------------------------------------------------
+type RawEx = Record<string, any>;
+
+function exType(ex: RawEx): string { return ex.type as string; }
+
+function exWrongExpl(ex: RawEx): string | undefined {
+  return ((ex.explanation_on_wrong as any)?.en ?? (ex.explanation as any)?.en) as string | undefined;
+}
+
+function exPrompt(ex: RawEx): string | undefined {
+  const t = exType(ex);
+  if (t === "TAP_TRANSLATION") {
+    const direction = ex.direction as string | undefined;
+    const prompt = ex.prompt as any;
+    if (direction === "en_to_ar") return `Which Arabic means: "${prompt?.en as string}"?`;
+    return "What does this Arabic mean?";
+  }
+  if (t === "TRUE_FALSE") return (ex.statement as any)?.en as string | undefined;
+  if (t === "FILL_BLANK") return (ex.hint as any)?.en as string | undefined;
+  if (t === "BUILD_SENTENCE") return (ex.target_translation as any)?.en as string | undefined;
+  if (t === "MATCHING") return "Match each Arabic word with its meaning.";
+  return undefined;
+}
+
+function exArabicText(ex: RawEx): string | undefined {
+  const t = exType(ex);
+  if (t === "TAP_TRANSLATION") {
+    if ((ex.direction as string | undefined) === "en_to_ar") return undefined;
+    return (ex.prompt as any)?.ar as string | undefined;
+  }
+  if (t === "TRUE_FALSE") return ((ex.statement as any)?.ar_example as any)?.ar as string | undefined;
+  if (t === "FILL_BLANK") return ex.sentence_ar as string | undefined;
+  if (t === "SHADOW_REPEAT") return (ex.phrase as any)?.ar as string | undefined;
+  return undefined;
+}
+
+function exOptions(ex: RawEx): string[] {
+  const t = exType(ex);
+  if (t === "TAP_TRANSLATION") {
+    const opts = ex.options as Array<any> | undefined;
+    return opts ? opts.map((o) => o.en as string) : [];
+  }
+  if (t === "TRUE_FALSE") return ["True", "False"];
+  if (t === "FILL_BLANK") {
+    const opts = ex.options as Array<any> | undefined;
+    return opts ? opts.map((o) => o.ar as string) : [];
+  }
+  if (t === "BUILD_SENTENCE") {
+    const tiles = ex.tiles as Array<any> | undefined;
+    return tiles ? tiles.map((t2) => t2.ar as string) : [];
+  }
+  if (t === "MATCHING") {
+    const right = ex.right_column as Array<any> | undefined;
+    return right ? right.map((r) => r.en as string) : [];
+  }
+  return [];
+}
+
+function exCorrectAnswer(ex: RawEx): string {
+  const t = exType(ex);
+  if (t === "TAP_TRANSLATION") {
+    const opts = ex.options as Array<any> | undefined;
+    const idx = ex.correct_index as number | undefined;
+    if (opts && idx !== undefined) return opts[idx].en as string;
+    return "";
+  }
+  if (t === "TRUE_FALSE") {
+    return (ex.correct_answer as boolean | undefined) ? "True" : "False";
+  }
+  if (t === "FILL_BLANK") return (ex.correct_answer as any)?.ar as string ?? "";
+  if (t === "BUILD_SENTENCE") {
+    const tiles = ex.tiles as Array<any> | undefined;
+    const order = ex.correct_order as number[] | undefined;
+    if (tiles && order) return order.map((i) => tiles[i].ar as string).join(" ");
+    return "";
+  }
+  return "";
+}
+
+function exPairs(ex: RawEx): MatchingPair[] {
+  const left  = ex.left_column  as Array<any> | undefined;
+  const right = ex.right_column as Array<any> | undefined;
+  const pairs = ex.correct_pairs as Array<[number, number]> | undefined;
+  if (left && right && pairs) {
+    return pairs.map(([l, r]) => ({ left: left[l].ar as string, right: right[r].en as string }));
+  }
+  return [];
+}
+
+function exParseTokens(ex: RawEx): ParseToken[] {
+  const words = ex.words as Array<any> | undefined;
+  const roles = ex.correct_roles as string[] | undefined;
+  if (!words || !roles) return [];
+  return words.map((w, i) => ({ word: w.ar as string, label: roles[i], gloss: w.en as string }));
+}
+
+function exLabels(ex: RawEx): string[] {
+  return (ex.available_roles as string[] | undefined) ?? [];
+}
+
+// ---------------------------------------------------------------------------
+// Pure utility helpers
+// ---------------------------------------------------------------------------
 const ANSWER_DELAY_MS = 1800;
 
 function splitWords(value?: string) {
@@ -449,82 +155,61 @@ function splitWords(value?: string) {
 }
 
 function containsArabic(value?: string | null) {
-  return Boolean(value && /[\u0600-\u06FF]/.test(value));
+  return Boolean(value && /[؀-ۿ]/.test(value));
 }
 
 function normalizeAnswer(value?: string | null) {
-  return value?.normalize("NFKD").replace(/[\u064B-\u065F\u0670]/g, "").replace(/\s+/g, " ").trim() ?? "";
+  return value?.normalize("NFKD").replace(/[ً-ٰٟ]/g, "").replace(/\s+/g, " ").trim() ?? "";
 }
 
 function getSelectedText(selectedAnswer: SelectedAnswer) {
   if (selectedAnswer && !Array.isArray(selectedAnswer) && typeof selectedAnswer === "object") {
     return Object.values(selectedAnswer).join(" ");
   }
-
   return Array.isArray(selectedAnswer) ? selectedAnswer.join(" ") : selectedAnswer;
 }
 
-function isAnswerCorrect(exercise: Exercise | undefined, selectedAnswer: SelectedAnswer) {
-  if (!exercise) {
-    return false;
+function isAnswerCorrect(ex: RawEx | undefined, selectedAnswer: SelectedAnswer): boolean {
+  if (!ex) return false;
+
+  if (exType(ex) === "MATCHING") {
+    if (!selectedAnswer || Array.isArray(selectedAnswer) || typeof selectedAnswer !== "object") return false;
+    return exPairs(ex).every((pair) => normalizeAnswer(selectedAnswer[pair.left]) === normalizeAnswer(pair.right));
   }
 
-  if (exercise.type === "MATCHING") {
-    if (!selectedAnswer || Array.isArray(selectedAnswer) || typeof selectedAnswer !== "object") {
-      return false;
-    }
-
-    return (exercise.pairs ?? []).every((pair) => normalizeAnswer(selectedAnswer[pair.left]) === normalizeAnswer(pair.right));
+  if (exType(ex) === "GRAMMAR_PARSE") {
+    if (!selectedAnswer || Array.isArray(selectedAnswer) || typeof selectedAnswer !== "object") return false;
+    return exParseTokens(ex).every((token) => normalizeAnswer(selectedAnswer[token.word]) === normalizeAnswer(token.label));
   }
 
-  if (exercise.type === "GRAMMAR_PARSE") {
-    if (!selectedAnswer || Array.isArray(selectedAnswer) || typeof selectedAnswer !== "object") {
-      return false;
-    }
-
-    return (exercise.parseTokens ?? []).every((token) => normalizeAnswer(selectedAnswer[token.word]) === normalizeAnswer(token.label));
-  }
-
+  const correct = exCorrectAnswer(ex);
   const selText = getSelectedText(selectedAnswer) ?? "";
-  if (containsArabic(selText) || containsArabic(exercise.correctAnswer)) {
-    return selText === exercise.correctAnswer;
-  }
-  return normalizeAnswer(selText) === normalizeAnswer(exercise.correctAnswer);
+  if (containsArabic(selText) || containsArabic(correct)) return selText === correct;
+  return normalizeAnswer(selText) === normalizeAnswer(correct);
 }
 
-function getCorrectAnswerDisplay(exercise?: Exercise) {
-  if (!exercise) {
-    return "";
-  }
-
-  if (exercise.type === "MATCHING") {
-    return (exercise.pairs ?? []).map((pair) => `${pair.left} = ${pair.right}`).join(" | ");
-  }
-
-  if (exercise.type === "GRAMMAR_PARSE") {
-    return (exercise.parseTokens ?? []).map((token) => `${token.word} = ${token.label}`).join(" | ");
-  }
-
-  return exercise.correctAnswer ?? "";
+function getCorrectAnswerDisplay(ex?: RawEx): string {
+  if (!ex) return "";
+  if (exType(ex) === "MATCHING") return exPairs(ex).map((p) => `${p.left} = ${p.right}`).join(" | ");
+  if (exType(ex) === "GRAMMAR_PARSE") return exParseTokens(ex).map((t) => `${t.word} = ${t.label}`).join(" | ");
+  return exCorrectAnswer(ex);
 }
 
 function renderMaybeArabic(value: string, arabicStyle: TextStyle = styles.optionArabicText, textStyle: TextStyle = styles.optionText) {
   if (containsArabic(value)) {
-    return (
-      <ArabicText size="sm" style={arabicStyle}>
-        {value}
-      </ArabicText>
-    );
+    return <ArabicText size="sm" style={arabicStyle}>{value}</ArabicText>;
   }
-
   return <Text style={textStyle}>{value}</Text>;
 }
 
+// ---------------------------------------------------------------------------
+// Component
+// ---------------------------------------------------------------------------
 export default function LessonPlayScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { lessonId } = useLocalSearchParams<{ lessonId: string }>();
-  const [lesson, setLesson] = useState<Lesson | null>(null);
+  const [lesson, setLesson] = useState<RawLesson | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [currentBeat, setCurrentBeat] = useState(1);
@@ -534,9 +219,6 @@ export default function LessonPlayScreen() {
   const [isAnswered, setIsAnswered] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [completionResult, setCompletionResult] = useState<CompletionResult | null>(null);
-  const [cardFlipped, setCardFlipped] = useState(false);
-  const [legacyAnswer, setLegacyAnswer] = useState<string | null>(null);
-  const [legacyAnswered, setLegacyAnswered] = useState(false);
 
   // SHADOW_REPEAT / SPOKEN_PHRASES tracking
   const phrasesCompletedRef = useRef(0);
@@ -546,48 +228,39 @@ export default function LessonPlayScreen() {
   const [spRecognitionAnswer, setSpRecognitionAnswer] = useState<string | null>(null);
   const [spRecognitionAnswered, setSpRecognitionAnswered] = useState(false);
 
-  const discoverCards = lesson?.discoverCards ?? [];
-  const exercises = lesson?.exercises ?? [];
+  // Shorthand content accessor — avoids casting everywhere
+  const c = (lesson?.content ?? {}) as Record<string, any>;
+  const discoverCards = (c.discover_cards ?? []) as Array<Record<string, any>>;
+  const exercises     = (c.exercises ?? []) as Array<RawEx>;
   const currentExercise = exercises[currentExerciseIndex];
-  const selectedText = getSelectedText(selectedAnswer);
+  const selectedText  = getSelectedText(selectedAnswer);
   const answeredCorrectly = isAnswered && isAnswerCorrect(currentExercise, selectedAnswer);
   const completedExerciseCount = Math.min(currentExerciseIndex + (isAnswered ? 1 : 0), exercises.length);
   const screenPadding = { paddingTop: insets.top + 16 };
 
   useEffect(() => {
     async function loadLesson() {
-      if (!lessonId) {
-        setError("Invalid lesson.");
-        setLoading(false);
-        return;
-      }
-
+      if (!lessonId) { setError("Invalid lesson."); setLoading(false); return; }
       try {
         const response = await api.get(`/api/lessons/${lessonId}`);
-        const raw = response.data.data.lesson as RawLessonResponse;
-        const lessonData = mapContent(raw);
-        setLesson(lessonData);
-        trackLessonStarted(lessonId, lessonData?.type);
-      } catch (err) {
+        const raw = response.data.data.lesson as RawLesson;
+        setLesson(raw);
+        trackLessonStarted(lessonId, raw.template);
+      } catch {
         setError("Unable to load lesson.");
       } finally {
         setLoading(false);
       }
     }
-
     void loadLesson();
   }, [lessonId]);
 
   useEffect(() => {
     async function finishLesson() {
-      if (!lessonId || currentBeat !== 5 || completionFiredRef.current) {
-        return;
-      }
+      if (!lessonId || currentBeat !== 5 || completionFiredRef.current) return;
       completionFiredRef.current = true;
-
       setSubmitting(true);
       setError(null);
-
       try {
         const response = await api.post(`/api/lessons/${lessonId}/complete`, { score: 100, phrasesCompleted: phrasesCompletedRef.current });
         const data = response.data.data;
@@ -601,21 +274,12 @@ export default function LessonPlayScreen() {
           newAchievements: achievements,
           dailyGoalMet,
         });
-        trackLessonCompleted({
-          lessonId,
-          lessonType: lesson?.type,
-          xpEarned: data.xpEarned,
-          currentStreak: data.currentStreak,
-          dailyGoalMet,
-        });
-        // Cancel today's reminders if daily goal was first met
+        trackLessonCompleted({ lessonId, lessonType: lesson?.template, xpEarned: data.xpEarned, currentStreak: data.currentStreak, dailyGoalMet });
         if (dailyGoalMet) {
           cancelTodayReminders().catch(() => {});
-          // Set flag for M5 toast on Learn tab
           const today = new Date().toISOString().slice(0, 10);
           AsyncStorage.setItem(`warsh_daily_goal_toast_${today}`, "1").catch(() => {});
         }
-        // Fire milestone notifications and track achievements
         for (const achievement of achievements as { key: string; title: string; xpReward: number }[]) {
           fireMilestoneNotification(achievement.title).catch(() => {});
           trackMilestoneUnlocked(achievement.key ?? "", achievement.title, achievement.xpReward ?? 0);
@@ -630,7 +294,6 @@ export default function LessonPlayScreen() {
         setSubmitting(false);
       }
     }
-
     void finishLesson();
   }, [currentBeat, lessonId]);
 
@@ -641,21 +304,14 @@ export default function LessonPlayScreen() {
   }
 
   function goToNextExercise() {
-    if (currentExerciseIndex >= exercises.length - 1) {
-      goToBeat(4);
-      return;
-    }
-
-    setCurrentExerciseIndex((index) => index + 1);
+    if (currentExerciseIndex >= exercises.length - 1) { goToBeat(4); return; }
+    setCurrentExerciseIndex((i) => i + 1);
     setSelectedAnswer(null);
     setIsAnswered(false);
   }
 
   function answerExercise(answer: SelectedAnswer) {
-    if (isAnswered) {
-      return;
-    }
-
+    if (isAnswered) return;
     setSelectedAnswer(answer);
     setIsAnswered(true);
     setTimeout(goToNextExercise, ANSWER_DELAY_MS);
@@ -667,98 +323,72 @@ export default function LessonPlayScreen() {
   }
 
   function addBuildTile(option: string) {
-    if (isAnswered) {
-      return;
-    }
-
+    if (isAnswered) return;
     setSelectedAnswer((current) => {
-      const currentTiles = Array.isArray(current) ? current : [];
-      const expectedSlots = splitWords(currentExercise?.correctAnswer).length;
-
-      if (currentTiles.length >= expectedSlots) {
-        return currentTiles;
-      }
-
-      return [...currentTiles, option];
+      const tiles = Array.isArray(current) ? current : [];
+      const expected = splitWords(exCorrectAnswer(currentExercise)).length;
+      if (tiles.length >= expected) return tiles;
+      return [...tiles, option];
     });
   }
 
   function removeBuildTile(index: number) {
-    if (isAnswered) {
-      return;
-    }
-
+    if (isAnswered) return;
     setSelectedAnswer((current) => {
-      if (!Array.isArray(current)) {
-        return current;
-      }
-
-      return current.filter((_, tileIndex) => tileIndex !== index);
+      if (!Array.isArray(current)) return current;
+      return current.filter((_, i) => i !== index);
     });
   }
 
   function getOptionStyle(option: string) {
-    if (!isAnswered) {
-      return styles.optionButton;
-    }
-
-    const isCorrect = containsArabic(option) || containsArabic(currentExercise?.correctAnswer)
-      ? option === currentExercise?.correctAnswer
-      : normalizeAnswer(option) === normalizeAnswer(currentExercise?.correctAnswer);
-    if (isCorrect) {
-      return [styles.optionButton, styles.optionCorrect];
-    }
-
-    if (selectedText === option) {
-      return [styles.optionButton, styles.optionWrong];
-    }
-
+    if (!isAnswered) return styles.optionButton;
+    const correct = exCorrectAnswer(currentExercise);
+    const isCorrect = containsArabic(option) || containsArabic(correct)
+      ? option === correct
+      : normalizeAnswer(option) === normalizeAnswer(correct);
+    if (isCorrect) return [styles.optionButton, styles.optionCorrect];
+    if (selectedText === option) return [styles.optionButton, styles.optionWrong];
     return styles.optionButton;
   }
 
   function getOptionTextStyle(option: string) {
-    if (!isAnswered) {
-      return containsArabic(option) ? styles.optionArabicText : styles.optionText;
-    }
-
-    const isCorrect = containsArabic(option) || containsArabic(currentExercise?.correctAnswer)
-      ? option === currentExercise?.correctAnswer
-      : normalizeAnswer(option) === normalizeAnswer(currentExercise?.correctAnswer);
-    if (isCorrect) {
-      return containsArabic(option) ? styles.optionArabicTextCorrect : styles.optionTextCorrect;
-    }
-
-    if (selectedText === option) {
-      return containsArabic(option) ? styles.optionArabicTextWrong : styles.optionTextWrong;
-    }
-
+    if (!isAnswered) return containsArabic(option) ? styles.optionArabicText : styles.optionText;
+    const correct = exCorrectAnswer(currentExercise);
+    const isCorrect = containsArabic(option) || containsArabic(correct)
+      ? option === correct
+      : normalizeAnswer(option) === normalizeAnswer(correct);
+    if (isCorrect) return containsArabic(option) ? styles.optionArabicTextCorrect : styles.optionTextCorrect;
+    if (selectedText === option) return containsArabic(option) ? styles.optionArabicTextWrong : styles.optionTextWrong;
     return containsArabic(option) ? styles.optionArabicText : styles.optionText;
   }
 
-  function renderFeedback() {
-    if (!isAnswered || !currentExercise) {
-      return null;
-    }
+  function updateMappedAnswer(key: string, value: string) {
+    if (isAnswered) return;
+    setSelectedAnswer((current) => ({
+      ...(!Array.isArray(current) && current && typeof current === "object" ? current : {}),
+      [key]: value,
+    }));
+  }
 
+  // ---- Feedback bar ----
+
+  function renderFeedback() {
+    if (!isAnswered || !currentExercise) return null;
+    const wrongExpl = exWrongExpl(currentExercise);
+    const arabicForDisplay = exArabicText(currentExercise) ?? exCorrectAnswer(currentExercise);
     return (
       <View style={[styles.feedbackBar, answeredCorrectly ? styles.feedbackCorrect : styles.feedbackWrong]}>
         {answeredCorrectly ? (
           <>
-            <ArabicText size="sm" style={styles.feedbackArabic}>
-              بارك الله فيك
-            </ArabicText>
+            <ArabicText size="sm" style={styles.feedbackArabic}>بارك الله فيك</ArabicText>
             <Text style={styles.feedbackExplanation}>You recognised the pattern and chose the right answer.</Text>
           </>
         ) : (
           <>
             <Text style={styles.feedbackWrongTitle}>Almost - let's look at this again</Text>
-            {currentExercise.explanation_on_wrong ? (
-              <Text style={[styles.feedbackExplanation, styles.feedbackWrongExplanation]}>{currentExercise.explanation_on_wrong}</Text>
-            ) : null}
-            {containsArabic(currentExercise.arabicText) || containsArabic(currentExercise.correctAnswer) ? (
-              <ArabicText size="sm" style={styles.feedbackCorrectAnswerArabic}>
-                {getCorrectAnswerDisplay(currentExercise)}
-              </ArabicText>
+            {wrongExpl ? <Text style={[styles.feedbackExplanation, styles.feedbackWrongExplanation]}>{wrongExpl}</Text> : null}
+            {containsArabic(arabicForDisplay) ? (
+              <ArabicText size="sm" style={styles.feedbackCorrectAnswerArabic}>{getCorrectAnswerDisplay(currentExercise)}</ArabicText>
             ) : (
               <Text style={styles.feedbackCorrectAnswerText}>{getCorrectAnswerDisplay(currentExercise)}</Text>
             )}
@@ -768,12 +398,14 @@ export default function LessonPlayScreen() {
     );
   }
 
+  // ---- Progress bar ----
+
   function renderProgressBar() {
     return (
       <View style={styles.progressTrack}>
-        {exercises.map((exercise, index) => (
+        {exercises.map((ex, index) => (
           <View
-            key={`${exercise.prompt ?? "exercise"}-${index}`}
+            key={`ex-${index}`}
             style={[styles.progressSegment, index < completedExerciseCount ? styles.progressSegmentFilled : styles.progressSegmentEmpty]}
           />
         ))}
@@ -781,10 +413,13 @@ export default function LessonPlayScreen() {
     );
   }
 
+  // ---- Option grid (TAP_TRANSLATION, TRUE_FALSE) ----
+
   function renderOptionGrid() {
+    const options = exOptions(currentExercise ?? {});
     return (
       <View style={styles.optionGrid}>
-        {(currentExercise?.options ?? []).map((option) => (
+        {options.map((option) => (
           <Pressable
             key={option}
             accessibilityRole="button"
@@ -799,33 +434,34 @@ export default function LessonPlayScreen() {
     );
   }
 
+  // ---- BUILD_SENTENCE ----
+
   function renderBuildSentence() {
     const selectedTiles = Array.isArray(selectedAnswer) ? selectedAnswer : [];
-    const slots = splitWords(currentExercise?.correctAnswer);
+    const slots = splitWords(exCorrectAnswer(currentExercise ?? {}));
     const canCheck = selectedTiles.length === slots.length && !isAnswered;
+    const options = exOptions(currentExercise ?? {});
 
     return (
       <>
-        <View style={[styles.answerRow, isAnswered ? (answeredCorrectly ? styles.answerRowCorrect : styles.answerRowWrong) : null, containsArabic(currentExercise?.correctAnswer) ? styles.answerRowRtl : null]}>
+        <View style={[styles.answerRow, isAnswered ? (answeredCorrectly ? styles.answerRowCorrect : styles.answerRowWrong) : null, containsArabic(exCorrectAnswer(currentExercise ?? {})) ? styles.answerRowRtl : null]}>
           {slots.map((slot, index) => {
-            const selectedTile = selectedTiles[index];
-
+            const tile = selectedTiles[index];
             return (
               <Pressable
                 key={`${slot}-${index}`}
                 accessibilityRole="button"
-                disabled={!selectedTile || isAnswered}
+                disabled={!tile || isAnswered}
                 onPress={() => removeBuildTile(index)}
-                style={[styles.answerSlot, selectedTile ? styles.answerSlotFilled : null]}
+                style={[styles.answerSlot, tile ? styles.answerSlotFilled : null]}
               >
-                {selectedTile ? renderMaybeArabic(selectedTile, styles.tileArabicText, styles.tileText) : <Text style={styles.emptySlotText}> </Text>}
+                {tile ? renderMaybeArabic(tile, styles.tileArabicText, styles.tileText) : <Text style={styles.emptySlotText}> </Text>}
               </Pressable>
             );
           })}
         </View>
-
         <View style={styles.tileWrap}>
-          {(currentExercise?.options ?? []).map((option, index) => (
+          {options.map((option, index) => (
             <Pressable
               key={`${option}-${index}`}
               accessibilityRole="button"
@@ -837,26 +473,16 @@ export default function LessonPlayScreen() {
             </Pressable>
           ))}
         </View>
-
         {canCheck ? <BrandButton title="Check" onPress={checkBuildSentence} style={styles.bottomButton} /> : null}
       </>
     );
   }
 
-  function updateMappedAnswer(key: string, value: string) {
-    if (isAnswered) {
-      return;
-    }
-
-    setSelectedAnswer((current) => ({
-      ...(!Array.isArray(current) && current && typeof current === "object" ? current : {}),
-      [key]: value,
-    }));
-  }
+  // ---- MATCHING ----
 
   function renderMatching() {
-    const pairs = currentExercise?.pairs ?? [];
-    const choices = currentExercise?.options ?? pairs.map((pair) => pair.right);
+    const pairs = exPairs(currentExercise ?? {});
+    const choices = exOptions(currentExercise ?? {});
     const selectedMap = !Array.isArray(selectedAnswer) && selectedAnswer && typeof selectedAnswer === "object" ? selectedAnswer : {};
     const canCheck = pairs.length > 0 && pairs.every((pair) => selectedMap[pair.left]) && !isAnswered;
 
@@ -871,7 +497,6 @@ export default function LessonPlayScreen() {
                   const selected = selectedMap[pair.left] === choice;
                   const correct = isAnswered && normalizeAnswer(choice) === normalizeAnswer(pair.right);
                   const wrong = isAnswered && selected && !correct;
-
                   return (
                     <Pressable
                       key={`${pair.left}-${choice}`}
@@ -893,11 +518,15 @@ export default function LessonPlayScreen() {
     );
   }
 
+  // ---- GRAMMAR_PARSE ----
+
   function renderGrammarParse() {
-    const tokens = currentExercise?.parseTokens ?? [];
-    const labels = currentExercise?.labels ?? Array.from(new Set(tokens.map((token) => token.label)));
+    const tokens = exParseTokens(currentExercise ?? {});
+    const labels = exLabels(currentExercise ?? {}).length > 0
+      ? exLabels(currentExercise ?? {})
+      : Array.from(new Set(tokens.map((t) => t.label)));
     const selectedMap = !Array.isArray(selectedAnswer) && selectedAnswer && typeof selectedAnswer === "object" ? selectedAnswer : {};
-    const canCheck = tokens.length > 0 && tokens.every((token) => selectedMap[token.word]) && !isAnswered;
+    const canCheck = tokens.length > 0 && tokens.every((t) => selectedMap[t.word]) && !isAnswered;
 
     return (
       <>
@@ -905,9 +534,7 @@ export default function LessonPlayScreen() {
           <View style={styles.parseSentence}>
             {tokens.map((token) => (
               <View key={token.word} style={styles.parseToken}>
-                <ArabicText size="sm" style={styles.parseWord}>
-                  {token.word}
-                </ArabicText>
+                <ArabicText size="sm" style={styles.parseWord}>{token.word}</ArabicText>
                 <Text style={styles.parseGloss}>{selectedMap[token.word] ?? token.gloss ?? "Choose role"}</Text>
               </View>
             ))}
@@ -915,9 +542,7 @@ export default function LessonPlayScreen() {
           {tokens.map((token) => (
             <View key={`${token.word}-labels`} style={styles.parseRow}>
               <View style={styles.parseRowWord}>
-                <ArabicText size="sm" style={styles.matchingArabic}>
-                  {token.word}
-                </ArabicText>
+                <ArabicText size="sm" style={styles.matchingArabic}>{token.word}</ArabicText>
                 {token.gloss ? <Text style={styles.parseGloss}>{token.gloss}</Text> : null}
               </View>
               <View style={styles.labelWrap}>
@@ -925,7 +550,6 @@ export default function LessonPlayScreen() {
                   const selected = selectedMap[token.word] === label;
                   const correct = isAnswered && normalizeAnswer(label) === normalizeAnswer(token.label);
                   const wrong = isAnswered && selected && !correct;
-
                   return (
                     <Pressable
                       key={`${token.word}-${label}`}
@@ -947,17 +571,18 @@ export default function LessonPlayScreen() {
     );
   }
 
+  // ---- CONVERSATION_BUILDER ----
+
   function renderConversationBuilder() {
+    const lines = (currentExercise?.conversation as Array<{ speaker: string; line: string }> | undefined) ?? [];
     return (
       <>
         <View style={styles.dialogueCard}>
-          {(currentExercise?.conversation ?? []).map((line, index) => (
+          {lines.map((line, index) => (
             <View key={`${line.speaker}-${index}`} style={styles.dialogueLine}>
               <Text style={styles.dialogueSpeaker}>{line.speaker}</Text>
               {containsArabic(line.line) ? (
-                <ArabicText size="sm" style={styles.dialogueArabic}>
-                  {line.line}
-                </ArabicText>
+                <ArabicText size="sm" style={styles.dialogueArabic}>{line.line}</ArabicText>
               ) : (
                 <Text style={styles.dialogueText}>{line.line}</Text>
               )}
@@ -969,145 +594,325 @@ export default function LessonPlayScreen() {
     );
   }
 
-  function renderLegacyLesson() {
-    const content = lesson?.content as Record<string, any> | null;
-    const isFlashcard = lesson?.type === "FLASHCARD";
-    const contentOptions = Array.isArray(content?.options) ? (content!.options as string[]) : [];
-    const hasOptions = contentOptions.length > 0;
+  // ---- Beat 1: HOOK ----
 
-    if (isFlashcard && !cardFlipped) {
-      return (
-        <View style={[styles.fullScreen, screenPadding]}>
-          <View style={styles.centerStack}>
-            {content?.arabic ? (
-              <ArabicText size="xl" style={styles.hookAyah}>
-                {content.arabic}
-              </ArabicText>
-            ) : null}
-            {content?.transliteration ? (
-              <Text style={styles.ayahRef}>{content.transliteration}</Text>
-            ) : null}
-            <View style={styles.divider} />
-            <Text style={styles.hookQuestion}>What does this mean?</Text>
-          </View>
-          <BrandButton title="Reveal" onPress={() => setCardFlipped(true)} style={styles.bottomButton} />
-        </View>
-      );
-    }
-
-    if (isFlashcard) {
-      return (
-        <View style={[styles.fullScreen, screenPadding]}>
-          <View style={styles.centerStack}>
-            {content?.arabic ? (
-              <ArabicText size="lg" style={styles.hookAyah}>
-                {content.arabic}
-              </ArabicText>
-            ) : null}
-            {content?.meaning_en ? (
-              <Text style={[styles.hookQuestion, { fontSize: 18, marginTop: 12 }]}>{content.meaning_en as string}</Text>
-            ) : null}
-            {content?.transliteration ? (
-              <Text style={styles.ayahRef}>{content.transliteration as string}</Text>
-            ) : null}
-            {content?.explanation_en ? (
-              <>
-                <View style={styles.divider} />
-                <Text style={styles.hookQuestion}>{content.explanation_en as string}</Text>
-              </>
-            ) : null}
-          </View>
-          <BrandButton title="Got it" onPress={() => goToBeat(5)} style={styles.bottomButton} />
-        </View>
-      );
-    }
-
-    // FILL_BLANK / MULTIPLE_CHOICE / MATCHING
-    if (hasOptions && !legacyAnswered) {
-      const correctAnswer = content?.answer as string | undefined;
-      return (
-        <View style={[styles.fullScreen, screenPadding]}>
-          <View style={styles.centerStack}>
-            {content?.question ? (
-              <Text style={styles.hookQuestion}>{content.question as string}</Text>
-            ) : null}
-          </View>
-          <View style={styles.optionGrid}>
-            {contentOptions.map((option) => {
-              const isCorrect = legacyAnswered && normalizeAnswer(option) === normalizeAnswer(correctAnswer);
-              const isWrong = legacyAnswered && legacyAnswer === option && !isCorrect;
-              return (
-                <Pressable
-                  key={option}
-                  accessibilityRole="button"
-                  disabled={legacyAnswered}
-                  onPress={() => {
-                    setLegacyAnswer(option);
-                    setLegacyAnswered(true);
-                    setTimeout(() => goToBeat(5), ANSWER_DELAY_MS);
-                  }}
-                  style={[styles.optionButton, isCorrect ? styles.optionCorrect : isWrong ? styles.optionWrong : null]}
-                >
-                  {renderMaybeArabic(option, isCorrect ? styles.optionArabicTextCorrect : isWrong ? styles.optionArabicTextWrong : styles.optionArabicText, isCorrect ? styles.optionTextCorrect : isWrong ? styles.optionTextWrong : styles.optionText)}
-                </Pressable>
-              );
-            })}
-          </View>
-        </View>
-      );
-    }
+  function renderHook() {
+    const hook = c.hook as Record<string, any> | undefined;
+    const ayah = hook?.ayah as Record<string, any> | undefined;
+    const noorIntroEn = (hook?.noor_intro as Record<string, any> | undefined)?.en as string | undefined;
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
         <View style={styles.centerStack}>
-          {content?.question ? <Text style={styles.hookQuestion}>{content.question as string}</Text> : null}
-          {content?.arabic ? (
-            <ArabicText size="lg" style={styles.hookAyah}>
-              {content.arabic as string}
-            </ArabicText>
-          ) : null}
-          {content?.answer ? (
+          {ayah?.ar ? <ArabicText size="lg" style={styles.hookAyah}>{ayah.ar as string}</ArabicText> : null}
+          {ayah?.label ? <Text style={styles.ayahRef}>{ayah.label as string}</Text> : null}
+          <View style={styles.divider} />
+          {noorIntroEn ? <Text style={styles.hookQuestion}>{noorIntroEn}</Text> : null}
+        </View>
+        <BrandButton title="I want to understand this" onPress={() => goToBeat(2)} style={styles.bottomButton} />
+      </View>
+    );
+  }
+
+  // ---- Beat 2: DISCOVER ----
+
+  function renderDiscover() {
+    const card = discoverCards[currentCardIndex];
+    const isLastCard = currentCardIndex >= discoverCards.length - 1;
+
+    // Extract display fields from raw discover card
+    const cardType = card?.type as string | undefined;
+    let arabicText: string | undefined;
+    let translation: string | undefined;
+    let transliteration: string | undefined;
+    let explanation: string | undefined;
+
+    if (card) {
+      const text    = card.text    as Record<string, any> | undefined;
+      const concept = card.concept as Record<string, any> | undefined;
+      const expl    = card.explanation as Record<string, any> | undefined;
+      const titleObj = card.title  as Record<string, any> | undefined;
+      const bodyObj  = card.body   as Record<string, any> | undefined;
+      const examples = card.examples as Array<Record<string, any>> | undefined;
+
+      if (cardType === "GRAMMAR_NOTE") {
+        arabicText    = titleObj?.ar as string | undefined;
+        translation   = titleObj?.en as string | undefined;
+        explanation   = bodyObj?.en  as string | undefined;
+      } else if (cardType === "SENTENCE") {
+        arabicText    = text?.ar     as string | undefined;
+        translation   = text?.en     as string | undefined;
+        transliteration = text?.translit as string | undefined;
+      } else {
+        arabicText    = (text?.ar ?? concept?.ar) as string | undefined;
+        translation   = (text?.en ?? concept?.en) as string | undefined;
+        transliteration = text?.translit as string | undefined;
+        const exampleLine = !text && examples?.[0]
+          ? `${examples[0].ar as string} — ${examples[0].en as string}`
+          : undefined;
+        explanation   = (expl?.en ?? exampleLine) as string | undefined;
+      }
+    }
+
+    return (
+      <View style={[styles.fullScreen, screenPadding]}>
+        <View style={styles.topRow}>
+          <Pressable
+            accessibilityRole="button"
+            onPress={() => {
+              if (currentCardIndex === 0) goToBeat(1);
+              else setCurrentCardIndex((i) => i - 1);
+            }}
+            style={styles.backButton}
+          >
+            <Text style={styles.backChevron}>‹</Text>
+          </Pressable>
+          <Text style={styles.discoverProgress}>{currentCardIndex + 1} of {discoverCards.length}</Text>
+          <View style={styles.backButtonSpacer} />
+        </View>
+
+        <View style={styles.discoverCard}>
+          {arabicText ? (
             <>
-              <View style={styles.divider} />
-              <Text style={styles.hookQuestion}>{content.answer as string}</Text>
+              <ArabicText size="lg" style={styles.discoverArabic}>{arabicText}</ArabicText>
+              <View style={styles.discoverPlayRow}>
+                <PlayButton text={arabicText} cacheKey={transliteration ?? arabicText} category="lessons" size={22} />
+              </View>
             </>
           ) : null}
+          {translation   ? <Text style={styles.discoverTranslation}>{translation}</Text> : null}
+          {transliteration ? <Text style={styles.discoverTransliteration}>{transliteration}</Text> : null}
+          {explanation   ? <Text style={styles.discoverTranslation}>{explanation}</Text> : null}
+        </View>
+
+        <BrandButton
+          title={isLastCard ? "Start practising" : "Next"}
+          onPress={() => {
+            if (isLastCard) goToBeat(3);
+            else setCurrentCardIndex((i) => i + 1);
+          }}
+          style={styles.bottomButton}
+        />
+      </View>
+    );
+  }
+
+  // ---- Beat 3: PRACTICE ----
+
+  function renderCurrentExercise() {
+    const type = exType(currentExercise ?? {});
+
+    if (type === "SHADOW_REPEAT") {
+      const phrase = currentExercise?.phrase as Record<string, any> | undefined;
+      return (
+        <ShadowRepeatExercise
+          arabic={phrase?.ar as string ?? ""}
+          transliteration={phrase?.translit as string | undefined}
+          translation={phrase?.en as string | undefined}
+          onComplete={(recorded) => {
+            if (recorded) phrasesCompletedRef.current += 1;
+            goToNextExercise();
+          }}
+        />
+      );
+    }
+    if (type === "BUILD_SENTENCE")     return renderBuildSentence();
+    if (type === "MATCHING")           return renderMatching();
+    if (type === "GRAMMAR_PARSE")      return renderGrammarParse();
+    if (type === "CONVERSATION_BUILDER") return renderConversationBuilder();
+    return renderOptionGrid();
+  }
+
+  function renderPractice() {
+    const prompt    = exPrompt(currentExercise ?? {});
+    const arabicTxt = exArabicText(currentExercise ?? {});
+
+    return (
+      <View style={[styles.fullScreen, screenPadding]}>
+        {renderProgressBar()}
+        <Text style={styles.exercisePrompt}>{prompt}</Text>
+        {arabicTxt ? (
+          <View style={styles.exerciseArabicCard}>
+            <ArabicText size="lg" style={styles.exerciseArabic}>{arabicTxt}</ArabicText>
+            <View style={styles.exercisePlayRow}>
+              <PlayButton text={arabicTxt} cacheKey={`${lessonId}-ex${currentExerciseIndex}`} category="lessons" size={20} />
+            </View>
+          </View>
+        ) : null}
+        {renderCurrentExercise()}
+        {renderFeedback()}
+      </View>
+    );
+  }
+
+  // ---- Beat 4: REVEAL ----
+
+  function renderRevealAyah() {
+    const reveal     = c.reveal as Record<string, any> | undefined;
+    const ayah       = reveal?.ayah as Record<string, any> | undefined;
+    const ayahAr     = ayah?.ar as string | undefined;
+    const indices    = (reveal?.highlighted_word_indices as number[] | undefined) ?? [];
+    const indexSet   = new Set(indices);
+    const words      = splitWords(ayahAr);
+
+    return (
+      <ArabicText size="lg" style={styles.revealAyah}>
+        {words.map((word, index) => (
+          <Text key={`${word}-${index}`} style={indexSet.has(index) ? styles.highlightedWord : styles.revealAyahWord}>
+            {index === 0 ? word : ` ${word}`}
+          </Text>
+        ))}
+      </ArabicText>
+    );
+  }
+
+  function renderReveal() {
+    const reveal    = c.reveal as Record<string, any> | undefined;
+    const ayah      = reveal?.ayah as Record<string, any> | undefined;
+    const noorExpl  = (reveal?.noor_explanation as Record<string, any> | undefined)?.en as string | undefined;
+
+    return (
+      <View style={[styles.fullScreen, screenPadding, styles.revealScreen]}>
+        <View style={styles.revealContent}>
+          <Text style={styles.revealHeading}>Without realising it...</Text>
+          {noorExpl ? <Text style={styles.revealText}>{noorExpl}</Text> : null}
+          <View style={styles.divider} />
+          {renderRevealAyah()}
+          {ayah?.label ? <Text style={styles.ayahRef}>{ayah.label as string}</Text> : null}
         </View>
         <BrandButton title="Continue" onPress={() => goToBeat(5)} style={styles.bottomButton} />
       </View>
     );
   }
 
-  // ---- SPOKEN_PHRASES lesson (SP1-SP4) ----
+  // ---- Beat 5: CLOSE ----
 
-  function getSpContent(): SpokenPhrasesContent {
-    return (lesson?.content ?? {}) as SpokenPhrasesContent;
+  function renderClose() {
+    const earnedPoints = completionResult?.xpEarned ?? lesson?.xpReward ?? 10;
+    const streak = completionResult?.currentStreak ?? 1;
+    const shouldShowStreakCelebration = Boolean(completionResult?.streakCelebration);
+    const isSpoken = lesson?.template === "SPOKEN_PHRASES";
+    const phrasesLearned = phrasesCompletedRef.current;
+
+    const closeBlock = c.close as Record<string, any> | undefined;
+    const noorTip = isSpoken
+      ? `Barak Allahu feek.\nYou can now say ${phrasesLearned > 0 ? phrasesLearned : "new"} phrase${phrasesLearned !== 1 ? "s" : ""}.\nSpeak them when you can, in shaa Allah.`
+      : (closeBlock?.noor_message as Record<string, any> | undefined)?.en as string | undefined
+        ?? "Tonight, open the Quran and look for the pattern you learned today. You will see the ayah differently now.";
+
+    const floatingLetters = [
+      { char: "أ",  top:  70, left:  30, size: 34, opacity: 0.55, color: "#9A8F6A" },
+      { char: "ب",  top:  90, right: 45, size: 26, opacity: 0.40, color: "#3A5030" },
+      { char: "ق",  top: 140, left:  65, size: 30, opacity: 0.50, color: "#D4C99A" },
+      { char: "ر",  top: 110, right: 80, size: 22, opacity: 0.45, color: "#9A8F6A" },
+      { char: "م",  top: 200, left:  20, size: 28, opacity: 0.35, color: "#3A5030" },
+      { char: "ل",  top: 170, right: 30, size: 38, opacity: 0.50, color: "#D4C99A" },
+      { char: "ن",  top: 260, left:  55, size: 24, opacity: 0.40, color: "#9A8F6A" },
+      { char: "ه",  top: 230, right: 55, size: 32, opacity: 0.45, color: "#3A5030" },
+      { char: "و",  top: 310, left:  35, size: 28, opacity: 0.35, color: "#D4C99A" },
+      { char: "ي",  top: 340, right: 25, size: 36, opacity: 0.50, color: "#9A8F6A" },
+      { char: "ع",  top: 400, left:  22, size: 24, opacity: 0.40, color: "#3A5030" },
+      { char: "ك",  top: 420, right: 60, size: 30, opacity: 0.45, color: "#D4C99A" },
+      { char: "ص",  top: 460, left:  70, size: 22, opacity: 0.35, color: "#9A8F6A" },
+      { char: "ف",  top: 500, right: 35, size: 28, opacity: 0.40, color: "#3A5030" },
+      { char: "ج",  top: 540, left:  40, size: 32, opacity: 0.45, color: "#D4C99A" },
+    ];
+
+    return (
+      <View style={[styles.fullScreen, screenPadding, styles.closeScreen]}>
+        {floatingLetters.map((l, i) => (
+          <Text
+            key={i}
+            style={{
+              position: "absolute",
+              top: l.top,
+              left: "left" in l ? (l as any).left : undefined,
+              right: "right" in l ? (l as any).right : undefined,
+              fontSize: l.size,
+              opacity: l.opacity,
+              color: l.color,
+              fontFamily: "Scheherazade New",
+            }}
+          >
+            {l.char}
+          </Text>
+        ))}
+
+        <View style={styles.closeCenter}>
+          {error ? <Text style={styles.errorText}>{error}</Text> : null}
+          <View style={styles.completeCard}>
+            <Text style={styles.completeCardTitle}>Lesson Complete!</Text>
+            <Text style={styles.xpBadge}>+{earnedPoints} pts</Text>
+          </View>
+          <View style={styles.noorAvatar}>
+            <View style={styles.noorAvatarEyes}>
+              <View style={styles.noorEye} />
+              <View style={styles.noorEye} />
+            </View>
+            <View style={styles.noorAvatarDot} />
+          </View>
+          <ArabicText size="md" style={styles.closeArabic}>بارك الله فيك</ArabicText>
+          {isSpoken && phrasesLearned > 0 ? (
+            <Text style={styles.spPhrasesEarned}>
+              {phrasesLearned} phrase{phrasesLearned !== 1 ? "s" : ""} learned to say
+            </Text>
+          ) : null}
+        </View>
+
+        <View style={styles.noorBubble}>
+          <Text style={styles.noorLabel}>Ustaad Noor</Text>
+          <Text style={styles.noorTip}>{noorTip}</Text>
+        </View>
+
+        <BrandButton
+          title="Continue"
+          onPress={() => {
+            const achievements = completionResult?.newAchievements ?? [];
+            if (achievements.length > 0) {
+              const nextRoute = shouldShowStreakCelebration ? "streak-celebration" : "tabs";
+              router.push({ pathname: "/(app)/milestone-celebration", params: { achievements: JSON.stringify(achievements), nextRoute, streak: String(streak) } });
+            } else if (shouldShowStreakCelebration) {
+              router.push({ pathname: "/(app)/streak-celebration", params: { streak: String(streak) } });
+            } else {
+              router.replace("/(app)/(tabs)");
+            }
+          }}
+          loading={submitting}
+          style={styles.bottomButton}
+        />
+      </View>
+    );
   }
 
+  // ---- SPOKEN_PHRASES template (SP1-SP4) ----
+
   function renderSP1Context() {
-    const sp = getSpContent();
+    const sp    = c.spoken_phrases as Record<string, any> | undefined;
+    const scene = sp?.scene as Record<string, any> | undefined;
+    const titleAr = scene?.ar as string | undefined;
+    const titleEn = scene?.en as string | undefined;
+
     return (
       <View style={[styles.fullScreen, screenPadding]}>
         <View style={styles.centerStack}>
-          {sp.contextTitle ? (
-            <ArabicText size="lg" style={styles.hookAyah}>{sp.contextTitle}</ArabicText>
-          ) : null}
-          {sp.contextTitleEn ? <Text style={styles.spContextTitleEn}>{sp.contextTitleEn}</Text> : null}
+          {titleAr ? <ArabicText size="lg" style={styles.hookAyah}>{titleAr}</ArabicText> : null}
+          {titleEn ? <Text style={styles.spContextTitleEn}>{titleEn}</Text> : null}
           <View style={styles.divider} />
-          {sp.contextBody ? (
-            <Text style={styles.hookQuestion}>{sp.contextBody}</Text>
-          ) : null}
+          {sp?.context_body ? <Text style={styles.hookQuestion}>{sp.context_body as string}</Text> : null}
         </View>
         <BrandButton title="Begin" onPress={() => goToBeat(2)} style={styles.bottomButton} />
       </View>
     );
   }
 
+  function getSpPhrases(): Array<Record<string, any>> {
+    const sp = c.spoken_phrases as Record<string, any> | undefined;
+    return (sp?.phrases ?? []) as Array<Record<string, any>>;
+  }
+
   function advanceSpPhrase() {
-    const sp = getSpContent();
-    const total = sp.phrases?.length ?? 0;
+    const total = getSpPhrases().length;
     if (spPhraseIdx >= total - 1) {
-      // All phrases done — move to SP3 Dialogue (beat 3)
       setSpPhraseIdx(0);
       setSpPhraseStep("intro");
       setSpRecognitionAnswer(null);
@@ -1122,12 +927,21 @@ export default function LessonPlayScreen() {
   }
 
   function renderSP2Phrases() {
-    const sp = getSpContent();
-    const phrases = sp.phrases ?? [];
-    const phrase = phrases[spPhraseIdx];
+    const phrases = getSpPhrases();
+    const phraseRow = phrases[spPhraseIdx];
     const total = phrases.length;
+    const phrase = phraseRow?.phrase as Record<string, any> | undefined;
+    const arabicPhrase = phrase?.ar as string ?? "";
+    const translit     = phrase?.translit as string | undefined;
+    const translation  = phrase?.en as string ?? "";
 
-    if (!phrase) {
+    // Build recognition options: correct translation + up to 3 others from sibling phrases
+    const recognitionOptions: string[] = phrases.length >= 2
+      ? [translation, ...phrases.filter((_, i) => i !== spPhraseIdx).map((p) => ((p.phrase as any)?.en as string) ?? "").filter(Boolean)].slice(0, 4)
+      : [];
+    const hasRecognition = recognitionOptions.length >= 2;
+
+    if (!phraseRow) {
       return (
         <View style={[styles.fullScreen, screenPadding]}>
           <View style={styles.centerStack}><Text style={styles.hookQuestion}>No phrases available.</Text></View>
@@ -1136,17 +950,16 @@ export default function LessonPlayScreen() {
       );
     }
 
-    // Step: intro
     if (spPhraseStep === "intro") {
       return (
         <View style={[styles.fullScreen, screenPadding]}>
           <Text style={styles.spPhraseCounter}>{spPhraseIdx + 1} of {total}</Text>
           <View style={styles.spPhraseCard}>
-            <ArabicText size="xl" style={styles.spPhraseArabic}>{phrase.arabic}</ArabicText>
-            {phrase.transliteration ? <Text style={styles.discoverTransliteration}>{phrase.transliteration}</Text> : null}
-            <Text style={styles.discoverTranslation}>{phrase.translation}</Text>
+            <ArabicText size="xl" style={styles.spPhraseArabic}>{arabicPhrase}</ArabicText>
+            {translit ? <Text style={styles.discoverTransliteration}>{translit}</Text> : null}
+            <Text style={styles.discoverTranslation}>{translation}</Text>
             <View style={styles.discoverPlayRow}>
-              <PlayButton text={phrase.arabic} cacheKey={`sp-${spPhraseIdx}`} category="phrases" size={22} />
+              <PlayButton text={arabicPhrase} cacheKey={`sp-${spPhraseIdx}`} category="phrases" size={22} />
             </View>
           </View>
           <BrandButton title="Now I'll try" onPress={() => setSpPhraseStep("shadow")} style={styles.bottomButton} />
@@ -1154,42 +967,36 @@ export default function LessonPlayScreen() {
       );
     }
 
-    // Step: shadow (SHADOW_REPEAT)
     if (spPhraseStep === "shadow") {
       return (
         <View style={[styles.fullScreen, screenPadding]}>
           <Text style={styles.spPhraseCounter}>{spPhraseIdx + 1} of {total} · Speaking</Text>
           <ShadowRepeatExercise
-            arabic={phrase.arabic}
-            transliteration={phrase.transliteration}
-            translation={phrase.translation}
+            arabic={arabicPhrase}
+            transliteration={translit}
+            translation={translation}
             onComplete={(recorded) => {
               if (recorded) phrasesCompletedRef.current += 1;
-              if (phrase.recognitionOptions && phrase.recognitionOptions.length >= 2) {
-                setSpPhraseStep("recognition");
-              } else {
-                setSpPhraseStep("phraseComplete");
-              }
+              if (hasRecognition) setSpPhraseStep("recognition");
+              else setSpPhraseStep("phraseComplete");
             }}
           />
         </View>
       );
     }
 
-    // Step: recognition (AUDIO_RECOGNITION check)
     if (spPhraseStep === "recognition") {
-      const options = phrase.recognitionOptions ?? [];
       return (
         <View style={[styles.fullScreen, screenPadding]}>
           <Text style={styles.spPhraseCounter}>{spPhraseIdx + 1} of {total} · Meaning check</Text>
           <View style={styles.centerStack}>
-            <ArabicText size="lg" style={styles.spPhraseArabic}>{phrase.arabic}</ArabicText>
+            <ArabicText size="lg" style={styles.spPhraseArabic}>{arabicPhrase}</ArabicText>
             <Text style={[styles.hookQuestion, { marginTop: 16 }]}>What does this mean?</Text>
           </View>
           <View style={styles.optionGrid}>
-            {options.map((opt) => {
-              const isCorrect = spRecognitionAnswered && opt === phrase.translation;
-              const isWrong = spRecognitionAnswered && opt === spRecognitionAnswer && opt !== phrase.translation;
+            {recognitionOptions.map((opt) => {
+              const isCorrect = spRecognitionAnswered && opt === translation;
+              const isWrong   = spRecognitionAnswered && opt === spRecognitionAnswer && opt !== translation;
               return (
                 <Pressable
                   key={opt}
@@ -1212,15 +1019,14 @@ export default function LessonPlayScreen() {
       );
     }
 
-    // Step: phraseComplete (auto-advance)
     if (spPhraseStep === "phraseComplete") {
       const completed = spPhraseIdx + 1;
       return (
         <View style={[styles.fullScreen, screenPadding]}>
           <View style={styles.centerStack}>
             <Text style={styles.spPhraseCompleteCount}>{completed} of {total} phrases learned</Text>
-            <ArabicText size="lg" style={styles.closeArabic}>{phrase.arabic}</ArabicText>
-            <Text style={[styles.hookQuestion, { marginTop: 8 }]}>{phrase.translation}</Text>
+            <ArabicText size="lg" style={styles.closeArabic}>{arabicPhrase}</ArabicText>
+            <Text style={[styles.hookQuestion, { marginTop: 8 }]}>{translation}</Text>
           </View>
           <BrandButton title={completed < total ? "Next phrase" : "Continue"} onPress={advanceSpPhrase} style={styles.bottomButton} />
         </View>
@@ -1231,38 +1037,42 @@ export default function LessonPlayScreen() {
   }
 
   function renderSP3Dialogue() {
-    const sp = getSpContent();
-    const dialogue = sp.dialogue ?? [];
+    const sp       = c.spoken_phrases as Record<string, any> | undefined;
+    const phrases  = getSpPhrases();
+    const phraseMap = new Map(phrases.map((row) => [row.id as string, row.phrase as Record<string, any> | undefined]));
+    const dialogue = (sp?.dialogue as Array<Record<string, any>> | undefined) ?? [];
+    const lines = dialogue.map((line) => {
+      const phrase = phraseMap.get(line.phrase_id as string);
+      return { speaker: line.speaker as string ?? "", ar: phrase?.ar as string ?? "", en: phrase?.en as string | undefined };
+    });
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
         <Text style={styles.spContextTitleEn}>Mini-dialogue</Text>
         <ScrollView style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
           <View style={styles.dialogueCard}>
-            {dialogue.map((line, i) => (
+            {lines.map((line, i) => (
               <View key={i} style={styles.dialogueLine}>
                 <Text style={styles.dialogueSpeaker}>{line.speaker}</Text>
-                <ArabicText size="sm" style={styles.dialogueArabic}>{line.line}</ArabicText>
-                {line.translation ? <Text style={styles.discoverTranslation}>{line.translation}</Text> : null}
+                <ArabicText size="sm" style={styles.dialogueArabic}>{line.ar}</ArabicText>
+                {line.en ? <Text style={styles.discoverTranslation}>{line.en}</Text> : null}
               </View>
             ))}
+            {lines.length === 0 ? <Text style={styles.hookQuestion}>Dialogue coming soon, in shaa Allah.</Text> : null}
           </View>
-          {dialogue.length === 0 ? (
-            <Text style={styles.hookQuestion}>Dialogue coming soon, in shaa Allah.</Text>
-          ) : null}
         </ScrollView>
         <BrandButton title="Continue" onPress={() => goToBeat(5)} style={styles.bottomButton} />
       </View>
     );
   }
 
-  // ---- End SPOKEN_PHRASES ----
+  // ---- VERB_PATTERN template (Beat 2) ----
 
   function renderVerbPattern() {
-    const vp = (lesson?.content?.verb_pattern ?? null) as VerbPattern | null;
-    const conjugations = vp?.conjugations;
+    const table = c.conjugation_table as Record<string, any> | undefined;
+    const rows  = table?.rows as Array<Record<string, any>> | undefined;
 
-    if (!vp || !conjugations || conjugations.length === 0) {
+    if (!table || !rows || rows.length === 0) {
       return (
         <View style={[styles.fullScreen, screenPadding]}>
           <View style={styles.centerStack}>
@@ -1275,50 +1085,37 @@ export default function LessonPlayScreen() {
       );
     }
 
+    const patternName = (table.pattern_name as Record<string, any> | undefined)?.en as string | undefined;
+
     return (
-      <ScrollView
-        style={styles.verbPatternScreen}
-        contentContainerStyle={[styles.verbPatternContent, screenPadding]}
-        showsVerticalScrollIndicator={false}
-      >
-        {/* Root pill */}
-        {vp.root ? (
+      <ScrollView style={styles.verbPatternScreen} contentContainerStyle={[styles.verbPatternContent, screenPadding]} showsVerticalScrollIndicator={false}>
+        {table.root ? (
           <View style={styles.verbRootPill}>
-            <Text style={styles.verbRootPillText}>{vp.root}</Text>
+            <Text style={styles.verbRootPillText}>{table.root as string}</Text>
           </View>
         ) : null}
 
-        {/* Base form */}
-        {vp.base_form ? (
-          <Text style={styles.verbBaseForm}>{vp.base_form}</Text>
+        {/* Base form — هُوَ conjugation shown as the reference form */}
+        {rows[0] ? (
+          <Text style={styles.verbBaseForm}>{(rows[0].conjugated as Record<string, any>)?.ar as string}</Text>
         ) : null}
 
-        {/* Base form meaning + tense */}
-        {(vp.base_form_meaning || vp.tense) ? (
-          <Text style={styles.verbBaseMeaning}>
-            {[vp.base_form_meaning, vp.tense].filter(Boolean).join(" — ")}
-          </Text>
-        ) : null}
+        {patternName ? <Text style={styles.verbBaseMeaning}>{patternName}</Text> : null}
 
-        {/* Conjugation table */}
         <View style={styles.verbTableCard}>
-          {conjugations.map((row, index) => (
-            <View
-              key={`${row.pronoun_ar}-${index}`}
-              style={[
-                styles.verbTableRow,
-                index < conjugations.length - 1 ? styles.verbTableRowBorder : null,
-              ]}
-            >
-              {/* Left: pronoun */}
-              <View style={styles.verbTableLeft}>
-                <Text style={styles.verbPronounAr}>{row.pronoun_ar}</Text>
-                <Text style={styles.verbPronounEn}> ({row.pronoun_en})</Text>
+          {rows.map((row, index) => {
+            const pronoun    = row.pronoun    as Record<string, any> | undefined;
+            const conjugated = row.conjugated as Record<string, any> | undefined;
+            return (
+              <View key={`row-${index}`} style={[styles.verbTableRow, index < rows.length - 1 ? styles.verbTableRowBorder : null]}>
+                <View style={styles.verbTableLeft}>
+                  <Text style={styles.verbPronounAr}>{pronoun?.ar as string}</Text>
+                  <Text style={styles.verbPronounEn}> ({pronoun?.en as string})</Text>
+                </View>
+                <Text style={styles.verbConjugatedForm}>{conjugated?.ar as string}</Text>
               </View>
-              {/* Right: conjugated form */}
-              <Text style={styles.verbConjugatedForm}>{row.form}</Text>
-            </View>
-          ))}
+            );
+          })}
         </View>
 
         <BrandButton title="Continue" onPress={() => goToBeat(3)} style={StyleSheet.flatten([styles.bottomButton, styles.verbPatternContinueButton])} />
@@ -1326,305 +1123,7 @@ export default function LessonPlayScreen() {
     );
   }
 
-  function renderHook() {
-    return (
-      <View style={[styles.fullScreen, screenPadding]}>
-        <View style={styles.centerStack}>
-          {lesson?.hook?.ayahAr ? (
-            <ArabicText size="lg" style={styles.hookAyah}>
-              {lesson.hook.ayahAr}
-            </ArabicText>
-          ) : null}
-          {lesson?.hook?.ayahRef ? <Text style={styles.ayahRef}>{lesson.hook.ayahRef}</Text> : null}
-          <View style={styles.divider} />
-          {lesson?.hook?.question ? <Text style={styles.hookQuestion}>{lesson.hook.question}</Text> : null}
-        </View>
-        <BrandButton title="I want to understand this" onPress={() => goToBeat(2)} style={styles.bottomButton} />
-      </View>
-    );
-  }
-
-  function renderDiscover() {
-    const card = discoverCards[currentCardIndex];
-    const isLastCard = currentCardIndex >= discoverCards.length - 1;
-
-    return (
-      <View style={[styles.fullScreen, screenPadding]}>
-        <View style={styles.topRow}>
-          <Pressable
-            accessibilityRole="button"
-            onPress={() => {
-              if (currentCardIndex === 0) {
-                goToBeat(1);
-              } else {
-                setCurrentCardIndex((index) => index - 1);
-              }
-            }}
-            style={styles.backButton}
-          >
-            <Text style={styles.backChevron}>‹</Text>
-          </Pressable>
-          <Text style={styles.discoverProgress}>
-            {currentCardIndex + 1} of {discoverCards.length}
-          </Text>
-          <View style={styles.backButtonSpacer} />
-        </View>
-
-        <View style={styles.discoverCard}>
-          {card?.emoji ? <Text style={styles.discoverEmoji}>{card.emoji}</Text> : null}
-          {card?.arabicText ? (
-            <>
-              <ArabicText size="lg" style={styles.discoverArabic}>
-                {card.arabicText}
-              </ArabicText>
-              <View style={styles.discoverPlayRow}>
-                <PlayButton
-                  text={card.arabicText}
-                  cacheKey={card.transliteration || card.arabicText}
-                  category="lessons"
-                  size={22}
-                />
-              </View>
-            </>
-          ) : null}
-          {card?.translation ? <Text style={styles.discoverTranslation}>{card.translation}</Text> : null}
-          {card?.transliteration ? <Text style={styles.discoverTransliteration}>{card.transliteration}</Text> : null}
-          {card?.explanation ? <Text style={styles.discoverTranslation}>{card.explanation}</Text> : null}
-        </View>
-
-        <BrandButton
-          title={isLastCard ? "Start practising" : "Next"}
-          onPress={() => {
-            if (isLastCard) {
-              goToBeat(3);
-            } else {
-              setCurrentCardIndex((index) => index + 1);
-            }
-          }}
-          style={styles.bottomButton}
-        />
-      </View>
-    );
-  }
-
-  function renderPractice() {
-    function renderCurrentExercise() {
-      if (currentExercise?.type === "SHADOW_REPEAT") {
-        return (
-          <ShadowRepeatExercise
-            arabic={currentExercise.arabicText ?? ""}
-            transliteration={currentExercise.prompt}
-            translation={currentExercise.correctAnswer}
-            onComplete={(recorded) => {
-              if (recorded) phrasesCompletedRef.current += 1;
-              goToNextExercise();
-            }}
-          />
-        );
-      }
-
-      if (currentExercise?.type === "BUILD_SENTENCE") {
-        return renderBuildSentence();
-      }
-
-      if (currentExercise?.type === "MATCHING") {
-        return renderMatching();
-      }
-
-      if (currentExercise?.type === "GRAMMAR_PARSE") {
-        return renderGrammarParse();
-      }
-
-      if (currentExercise?.type === "CONVERSATION_BUILDER") {
-        return renderConversationBuilder();
-      }
-
-      return renderOptionGrid();
-    }
-
-    return (
-      <View style={[styles.fullScreen, screenPadding]}>
-        {renderProgressBar()}
-        <Text style={styles.exercisePrompt}>{currentExercise?.prompt}</Text>
-        {currentExercise?.arabicText ? (
-          <View style={styles.exerciseArabicCard}>
-            <ArabicText size="lg" style={styles.exerciseArabic}>
-              {currentExercise.arabicText}
-            </ArabicText>
-            <View style={styles.exercisePlayRow}>
-              <PlayButton
-                text={currentExercise.arabicText}
-                cacheKey={`${lessonId}-ex${currentExerciseIndex}`}
-                category="lessons"
-                size={20}
-              />
-            </View>
-          </View>
-        ) : null}
-
-        {renderCurrentExercise()}
-        {renderFeedback()}
-      </View>
-    );
-  }
-
-  function renderRevealAyah() {
-    const ayah = lesson?.revealAyah;
-    const words = splitWords(ayah?.ayahAr);
-    const highlightedWordIndices = new Set(ayah?.highlightedWordIndices ?? []);
-    const highlightedWords = highlightedWordIndices.size === 0
-      ? ayah?.highlightedWords?.length
-        ? ayah.highlightedWords
-        : ayah?.highlightedWord
-          ? [ayah.highlightedWord]
-          : []
-      : [];
-    const normalizedHighlightedWords = new Set(highlightedWords.map((word) => normalizeAnswer(word)));
-
-    return (
-      <ArabicText size="lg" style={styles.revealAyah}>
-        {words.map((word, index) => {
-          const isHighlighted = highlightedWordIndices.has(index) || normalizedHighlightedWords.has(normalizeAnswer(word));
-
-          return (
-            <Text key={`${word}-${index}`} style={isHighlighted ? styles.highlightedWord : styles.revealAyahWord}>
-              {index === 0 ? word : ` ${word}`}
-            </Text>
-          );
-        })}
-      </ArabicText>
-    );
-  }
-
-  function renderReveal() {
-    return (
-      <View style={[styles.fullScreen, screenPadding, styles.revealScreen]}>
-        <View style={styles.revealContent}>
-          <Text style={styles.revealHeading}>Without realising it...</Text>
-          {lesson?.revealText ? <Text style={styles.revealText}>{lesson.revealText}</Text> : null}
-          <View style={styles.divider} />
-          {renderRevealAyah()}
-          {lesson?.revealAyah?.ayahRef ? <Text style={styles.ayahRef}>{lesson.revealAyah.ayahRef}</Text> : null}
-        </View>
-        <BrandButton title="Continue" onPress={() => goToBeat(5)} style={styles.bottomButton} />
-      </View>
-    );
-  }
-
-  function renderClose() {
-    const earnedPoints = completionResult?.xpEarned ?? lesson?.xpReward ?? 10;
-    const streak = completionResult?.currentStreak ?? 1;
-    const shouldShowStreakCelebration = Boolean(completionResult?.streakCelebration);
-    const isSpoken = lesson?.type === "SPOKEN_PHRASES";
-    const phrasesLearned = phrasesCompletedRef.current;
-
-    const noorTip = isSpoken
-      ? `Barak Allahu feek.\nYou can now say ${phrasesLearned > 0 ? phrasesLearned : "new"} phrase${phrasesLearned !== 1 ? "s" : ""}.\nSpeak them when you can, in shaa Allah.`
-      : typeof lesson?.content?.ustadh_noor_tip_en === "string"
-        ? lesson.content.ustadh_noor_tip_en
-        : "Tonight, open the Quran and look for the pattern you learned today. You will see the ayah differently now.";
-
-    // Floating Arabic letters — static positions scattered around the screen
-    const floatingLetters = [
-      { char: "أ",  top:  70, left:  30, size: 34, opacity: 0.55, color: "#9A8F6A" },
-      { char: "ب",  top:  90, right: 45, size: 26, opacity: 0.40, color: "#3A5030" },
-      { char: "ق",  top: 140, left:  65, size: 30, opacity: 0.50, color: "#D4C99A" },
-      { char: "ر",  top: 110, right: 80, size: 22, opacity: 0.45, color: "#9A8F6A" },
-      { char: "م",  top: 200, left:  20, size: 28, opacity: 0.35, color: "#3A5030" },
-      { char: "ل",  top: 170, right: 30, size: 38, opacity: 0.50, color: "#D4C99A" },
-      { char: "ن",  top: 260, left:  55, size: 24, opacity: 0.40, color: "#9A8F6A" },
-      { char: "ه",  top: 230, right: 55, size: 32, opacity: 0.45, color: "#3A5030" },
-      { char: "و",  top: 310, left:  35, size: 28, opacity: 0.35, color: "#D4C99A" },
-      { char: "ي",  top: 340, right: 25, size: 36, opacity: 0.50, color: "#9A8F6A" },
-      { char: "ع",  top: 400, left:  22, size: 24, opacity: 0.40, color: "#3A5030" },
-      { char: "ك",  top: 420, right: 60, size: 30, opacity: 0.45, color: "#D4C99A" },
-      { char: "ص",  top: 460, left:  70, size: 22, opacity: 0.35, color: "#9A8F6A" },
-      { char: "ف",  top: 500, right: 35, size: 28, opacity: 0.40, color: "#3A5030" },
-      { char: "ج",  top: 540, left:  40, size: 32, opacity: 0.45, color: "#D4C99A" },
-    ];
-
-    return (
-      <View style={[styles.fullScreen, screenPadding, styles.closeScreen]}>
-        {/* Floating Arabic letters */}
-        {floatingLetters.map((l, i) => (
-          <Text
-            key={i}
-            style={{
-              position: "absolute",
-              top: l.top,
-              left: "left" in l ? (l as any).left : undefined,
-              right: "right" in l ? (l as any).right : undefined,
-              fontSize: l.size,
-              opacity: l.opacity,
-              color: l.color,
-              fontFamily: "Scheherazade New",
-            }}
-          >
-            {l.char}
-          </Text>
-        ))}
-
-        {/* Central completion card */}
-        <View style={styles.closeCenter}>
-          {error ? <Text style={styles.errorText}>{error}</Text> : null}
-
-          <View style={styles.completeCard}>
-            <Text style={styles.completeCardTitle}>Lesson Complete!</Text>
-            <Text style={styles.xpBadge}>+{earnedPoints} pts</Text>
-          </View>
-
-          {/* Noor avatar */}
-          <View style={styles.noorAvatar}>
-            <View style={styles.noorAvatarEyes}>
-              <View style={styles.noorEye} />
-              <View style={styles.noorEye} />
-            </View>
-            <View style={styles.noorAvatarDot} />
-          </View>
-
-          <ArabicText size="md" style={styles.closeArabic}>
-            بارك الله فيك
-          </ArabicText>
-
-          {isSpoken && phrasesLearned > 0 ? (
-            <Text style={styles.spPhrasesEarned}>
-              {phrasesLearned} phrase{phrasesLearned !== 1 ? "s" : ""} learned to say
-            </Text>
-          ) : null}
-        </View>
-
-        {/* Noor tip at bottom */}
-        <View style={styles.noorBubble}>
-          <Text style={styles.noorLabel}>Ustaad Noor</Text>
-          <Text style={styles.noorTip}>{noorTip}</Text>
-        </View>
-
-        <BrandButton
-          title="Continue"
-          onPress={() => {
-            const achievements = completionResult?.newAchievements ?? [];
-            if (achievements.length > 0) {
-              const nextRoute = shouldShowStreakCelebration ? "streak-celebration" : "tabs";
-              router.push({
-                pathname: "/(app)/milestone-celebration",
-                params: {
-                  achievements: JSON.stringify(achievements),
-                  nextRoute,
-                  streak: String(streak),
-                },
-              });
-            } else if (shouldShowStreakCelebration) {
-              router.push({ pathname: "/(app)/streak-celebration", params: { streak: String(streak) } });
-            } else {
-              router.replace("/(app)/(tabs)");
-            }
-          }}
-          loading={submitting}
-          style={styles.bottomButton}
-        />
-      </View>
-    );
-  }
+  // ---- Main render ----
 
   if (loading) {
     return (
@@ -1642,39 +1141,20 @@ export default function LessonPlayScreen() {
     );
   }
 
-  if (lesson.type === "SPOKEN_PHRASES") {
+  if (lesson.template === "SPOKEN_PHRASES") {
     if (currentBeat === 5) return renderClose();
     if (currentBeat === 2) return renderSP2Phrases();
     if (currentBeat === 3) return renderSP3Dialogue();
     return renderSP1Context();
   }
 
-  if (lesson.type !== "VOCABULARY" && lesson.type !== "STANDARD" && lesson.type !== "REVIEW" && lesson.type !== "VERB_PATTERN") {
-    if (currentBeat === 5) {
-      return renderClose();
-    }
-    return renderLegacyLesson();
-  }
-
-  if (currentBeat === 1) {
-    return renderHook();
-  }
-
+  if (currentBeat === 1) return renderHook();
   if (currentBeat === 2) {
-    if (lesson.type === "VERB_PATTERN") {
-      return renderVerbPattern();
-    }
+    if (lesson.template === "VERB_PATTERN") return renderVerbPattern();
     return renderDiscover();
   }
-
-  if (currentBeat === 3) {
-    return renderPractice();
-  }
-
-  if (currentBeat === 4) {
-    return renderReveal();
-  }
-
+  if (currentBeat === 3) return renderPractice();
+  if (currentBeat === 4) return renderReveal();
   return renderClose();
 }
 
@@ -1764,11 +1244,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 16,
     backgroundColor: "#EDE8D8",
-  },
-  discoverEmoji: {
-    fontSize: 52,
-    textAlign: "center",
-    marginBottom: 8,
   },
   discoverArabic: {
     color: "#0F1117",
@@ -2269,7 +1744,6 @@ const styles = StyleSheet.create({
     lineHeight: 34,
     textAlign: "center",
   },
-  // Keep old xpText for compatibility (unused now but avoids compile errors if referenced)
   xpText: {
     color: "#3A5030",
     fontFamily: Fonts.semiBold,
@@ -2305,7 +1779,6 @@ const styles = StyleSheet.create({
     lineHeight: 18,
     textAlign: "center",
   },
-  // SPOKEN_PHRASES styles
   spContextTitleEn: {
     marginTop: 8,
     color: "#9A8F6A",
@@ -2356,7 +1829,6 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     textAlign: "center",
   },
-  // VERB_PATTERN styles
   verbPatternScreen: {
     flex: 1,
     backgroundColor: "#F5F2EA",

@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 11, Lesson 4 - feminine in it: فِيهَا.",
+    "chapter_order": 11,
+    "lesson_order": 4,
+    "estimated_minutes": 9,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 97,
+      "ayah": 3,
+      "label": "Al-Qadr 97:3",
+      "ar": "لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ",
+      "en": "The Night of Decree is better than a thousand months.",
+      "ur": "لیلۃ القدر ہزار مہینوں سے بہتر ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-qadr-003-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Some nouns are feminine, so Arabic points back to them with هَا. Today: فِيهَا, in it.",
+      "ur": "کچھ اسم مؤنث ہوتے ہیں، اس لیے عربی ان کی طرف هَا سے لوٹتی ہے۔ آج: فِيهَا، اس میں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": { "en": "In + it feminine", "ar": "فِي + هَا", "ur": "میں + وہ مؤنث" },
+      "explanation": { "en": "فِي plus هَا becomes فِيهَا: in it, referring to a feminine noun.", "ur": "فِي کے ساتھ هَا لگے تو فِيهَا بنتا ہے: اس میں، جب اشارہ مؤنث اسم کی طرف ہو۔" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "فِيهَا", "ar_plain": "فيها", "translit": "fiha", "en": "in it", "ur": "اس میں" }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": { "ar": "الْكِتَابُ فِي الْحَقِيبَةِ", "ar_plain": "الكتاب في الحقيبة", "translit": "al-kitaabu fi al-haqeebati", "en": "The book is in the bag", "ur": "کتاب بیگ میں ہے" },
+      "explanation": { "en": "الْحَقِيبَةِ is feminine, so the next sentence can say فِيهَا.", "ur": "الْحَقِيبَةِ مؤنث ہے، اس لیے اگلے جملے میں فِيهَا آ سکتا ہے۔" }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": { "ar": "هُوَ فِيهَا", "ar_plain": "هو فيها", "translit": "huwa fiha", "en": "It is in it", "ur": "وہ اس میں ہے" },
+      "explanation": { "en": "The thing inside may be masculine, but فِيهَا agrees with the feminine container.", "ur": "اندر والی چیز مذکر ہو سکتی ہے، مگر فِيهَا مؤنث ظرف یا چیز کی طرف لوٹتا ہے۔" }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch11-l04-ex01",
+      "prompt": { "ar": "فِيهَا", "ar_plain": "فيها", "translit": "fiha", "en": "in it", "ur": "اس میں" },
+      "options": [{ "en": "in it feminine", "ur": "اس میں مؤنث" }, { "en": "in it masculine", "ur": "اس میں مذکر" }, { "en": "my sister", "ur": "میری بہن" }, { "en": "we", "ur": "ہم" }],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch11-l04-ex02",
+      "statement": {
+        "en": "فِيهَا refers back to a feminine noun.",
+        "ur": "فِيهَا مؤنث اسم کی طرف واپس اشارہ کرتا ہے۔",
+        "ar_example": { "ar": "الْحَقِيبَةِ — فِيهَا", "ar_plain": "الحقيبة فيها", "translit": "al-haqeebati - fiha", "en": "the bag - in it", "ur": "بیگ - اس میں" }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch11-l04-ex03",
+      "mode": "TAP",
+      "sentence_ar": "هُوَ ___",
+      "hint": { "en": "It is in it (the bag)", "ur": "وہ اس میں ہے (بیگ میں)" },
+      "options": [
+        { "ar": "فِيهَا", "ar_plain": "فيها", "translit": "fiha", "en": "in it feminine", "ur": "اس میں مؤنث" },
+        { "ar": "فِيهِ", "ar_plain": "فيه", "translit": "fihi", "en": "in it masculine", "ur": "اس میں مذکر" },
+        { "ar": "أَبِي", "ar_plain": "ابي", "translit": "abi", "en": "my father", "ur": "میرے والد" },
+        { "ar": "قَبْلَ", "ar_plain": "قبل", "translit": "qabla", "en": "before", "ur": "پہلے" }
+      ],
+      "correct_answer": { "ar": "فِيهَا", "ar_plain": "فيها", "translit": "fiha", "en": "in it feminine", "ur": "اس میں مؤنث" },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch11-l04-ex04",
+      "left_column": [
+        { "ar": "فِيهِ", "ar_plain": "فيه", "translit": "fihi", "en": "in it masculine", "ur": "اس میں مذکر" },
+        { "ar": "فِيهَا", "ar_plain": "فيها", "translit": "fiha", "en": "in it feminine", "ur": "اس میں مؤنث" },
+        { "ar": "الدَّرْجِ", "ar_plain": "الدرج", "translit": "ad-darji", "en": "the drawer", "ur": "دراز" },
+        { "ar": "الْحَقِيبَةِ", "ar_plain": "الحقيبة", "translit": "al-haqeebati", "en": "the bag", "ur": "بیگ" }
+      ],
+      "right_column": [{ "en": "in it masculine", "ur": "اس میں مذکر" }, { "en": "in it feminine", "ur": "اس میں مؤنث" }, { "en": "the drawer", "ur": "دراز" }, { "en": "the bag", "ur": "بیگ" }],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch11-l04-ex05",
+      "target_translation": { "en": "It is in it (feminine)", "ur": "وہ اس میں ہے (مؤنث)" },
+      "tiles": [
+        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "it/he", "ur": "وہ" },
+        { "ar": "فِيهَا", "ar_plain": "فيها", "translit": "fiha", "en": "in it", "ur": "اس میں" },
+        { "ar": "فِيهِ", "ar_plain": "فيه", "translit": "fihi", "en": "in it masculine", "ur": "اس میں مذکر" },
+        { "ar": "بَعْدَ", "ar_plain": "بعد", "translit": "ba'da", "en": "after", "ur": "بعد" }
+      ],
+      "correct_order": [0, 1],
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": { "en": "In it feminine - فِيهَا", "ar": "فِيهَا", "ur": "اس میں مؤنث" },
+    "ayah": {
+      "surah": 97,
+      "ayah": 3,
+      "label": "Al-Qadr 97:3",
+      "ar": "لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ",
+      "en": "The Night of Decree is better than a thousand months.",
+      "ur": "لیلۃ القدر ہزار مہینوں سے بہتر ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-qadr-003-mishary.mp3"
+    },
+    "highlighted_word_indices": [0],
+    "noor_explanation": {
+      "en": "لَيْلَةُ is feminine. When Arabic refers back to a feminine noun, هَا is often the attached pronoun you will see.",
+      "ur": "لَيْلَةُ مؤنث ہے۔ جب عربی مؤنث اسم کی طرف واپس اشارہ کرتی ہے تو اکثر هَا جڑی ہوئی ضمیر آتی ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": { "en": "You can now choose between فِيهِ and فِيهَا by looking at the noun they point back to.", "ur": "اب آپ فِيهِ اور فِيهَا میں فرق پچھلے اسم کو دیکھ کر کر سکتے ہیں۔" }
+  }
+}

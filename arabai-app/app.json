@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "Warsh",
-    "slug": "Warsh",
-    "scheme": "arabai",
+    "slug": "warsh",
+    "scheme": "warsh",
     "version": "1.0.0",
     "platforms": [
       "android"
@@ -19,11 +19,16 @@
       "**/*"
     ],
     "android": {
-      "package": "com.arabai.app",
+      "package": "com.warsh.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#F4EBD0"
-      }
+      },
+      "permissions": [
+        "RECORD_AUDIO",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
     },
     "plugins": [
       "expo-font",
@@ -41,6 +46,14 @@
       "eas": {
         "projectId": "70bb098d-013a-47ab-88d0-890da928d976"
       }
+    },
+    "updates": {
+      "enabled": true,
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/70bb098d-013a-47ab-88d0-890da928d976"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }

@@ -1,4 +1,4 @@
-require("dotenv/config");
+﻿require("dotenv/config");
 
 const { PrismaClient } = require("@prisma/client");
 const { PrismaPg } = require("@prisma/adapter-pg");
@@ -43,6 +43,7 @@ const ch08L01Content = require("./fixtures/chapter-08-lesson-01.json");
 const ch08L02Content = require("./fixtures/chapter-08-lesson-02.json");
 const ch08L03Content = require("./fixtures/chapter-08-lesson-03.json");
 const ch08L04Content = require("./fixtures/chapter-08-lesson-04.json");
+const ch09L01VerbContent = require("./fixtures/chapter-09-lesson-01-verb-pattern.json");
 
 const ACHIEVEMENTS = [
   { key: "first_lesson",           title: "الخُطْوَة الأُولَى",            description: "Complete your very first lesson",                    icon: "footsteps-outline",   xpReward: 25  },
@@ -243,6 +244,7 @@ async function main() {
   const ch6Id = chapterIdByOrder.get(6);
   const ch7Id = chapterIdByOrder.get(7);
   const ch8Id = chapterIdByOrder.get(8);
+  const ch9Id = chapterIdByOrder.get(9);
 
   const lessons = [
     // Chapter 1
@@ -288,6 +290,8 @@ async function main() {
     { id: "ch08-l02", chapterId: ch8Id, order: 2, title: "Feminine Marker Across Verbs",              titleAr: "تَاءُ التَّأْنِيث فِي الأَفْعَال",                       template: "STANDARD", xpReward: ch08L02Content._meta?.xp_reward ?? 10, content: ch08L02Content },
     { id: "ch08-l03", chapterId: ch8Id, order: 3, title: "الَّتِي - Feminine Relative",                titleAr: "الَّتِي - اسْمٌ مَوْصُولٌ مُؤَنَّث",                    template: "STANDARD", xpReward: ch08L03Content._meta?.xp_reward ?? 10, content: ch08L03Content },
     { id: "ch08-l04", chapterId: ch8Id, order: 4, title: "My Mother - أُمِّي",                         titleAr: "أُمِّي - تَطْبِيقُ المُؤَنَّث",                          template: "STANDARD", xpReward: ch08L04Content._meta?.xp_reward ?? 10, content: ch08L04Content },
+    // Chapter 9
+    { id: "ch09-l01", chapterId: ch9Id, order: 1, title: "Past Tense - Verb Pattern", titleAr: "fi-il maadi", template: "VERB_PATTERN", xpReward: ch09L01VerbContent._meta?.xp_reward ?? 10, content: ch09L01VerbContent },
   ];
 
   for (const { id, ...data } of lessons) {

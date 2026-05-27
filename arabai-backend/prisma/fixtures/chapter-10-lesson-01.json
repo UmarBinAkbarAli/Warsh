@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 10, Lesson 1 - plural third-person pronouns هُمْ and هُنَّ.",
+    "chapter_order": 10,
+    "lesson_order": 1,
+    "estimated_minutes": 9,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 7,
+      "label": "Al-Fatiha 1:7",
+      "ar": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ",
+      "en": "The path of those upon whom You have bestowed favor.",
+      "ur": "ان لوگوں کا راستہ جن پر تو نے انعام فرمایا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatihah-007-part-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Al-Fatiha ends with عَلَيْهِمْ: upon them. Today you learn the standalone plural pronouns هُمْ and هُنَّ.",
+      "ur": "الفاتحہ کے آخر میں عَلَيْهِمْ آتا ہے: ان پر۔ آج آپ جمع ضمیریں هُمْ اور هُنَّ سیکھیں گے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "They: masculine or mixed",
+        "ar": "هُمْ",
+        "ur": "وہ سب: مذکر یا مخلوط جماعت"
+      },
+      "explanation": {
+        "en": "هُمْ means they. Use it for a group of males, or for a mixed group.",
+        "ur": "هُمْ کا مطلب ہے: وہ سب۔ یہ مذکر جماعت یا مخلوط جماعت کے لیے آتا ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "هُمْ طُلَّابٌ",
+        "ar_plain": "هم طلاب",
+        "translit": "hum tullaabun",
+        "en": "They are students",
+        "ur": "وہ طلبہ ہیں"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "They: feminine only",
+        "ar": "هُنَّ",
+        "ur": "وہ سب: صرف مؤنث جماعت"
+      },
+      "explanation": {
+        "en": "هُنَّ means they for a group of females only.",
+        "ur": "هُنَّ کا مطلب بھی وہ سب ہے، مگر صرف مؤنث جماعت کے لیے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "هُنَّ طَالِبَاتٌ",
+        "ar_plain": "هن طالبات",
+        "translit": "hunna taalibaatun",
+        "en": "They are female students",
+        "ur": "وہ طالبات ہیں"
+      },
+      "explanation": {
+        "en": "هُنَّ pairs naturally with feminine plural words like طَالِبَاتٌ.",
+        "ur": "هُنَّ مؤنث جمع الفاظ جیسے طَالِبَاتٌ کے ساتھ آتا ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch10-l01-ex01",
+      "prompt": {
+        "ar": "هُمْ",
+        "ar_plain": "هم",
+        "translit": "hum",
+        "en": "they",
+        "ur": "وہ سب"
+      },
+      "options": [
+        { "en": "they", "ur": "وہ سب" },
+        { "en": "we", "ur": "ہم" },
+        { "en": "these", "ur": "یہ سب" },
+        { "en": "after", "ur": "بعد" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch10-l01-ex02",
+      "statement": {
+        "en": "هُنَّ is used for a female-only group.",
+        "ur": "هُنَّ صرف مؤنث جماعت کے لیے آتا ہے۔",
+        "ar_example": {
+          "ar": "هُنَّ طَالِبَاتٌ",
+          "ar_plain": "هن طالبات",
+          "translit": "hunna taalibaatun",
+          "en": "They are female students",
+          "ur": "وہ طالبات ہیں"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch10-l01-ex03",
+      "mode": "TAP",
+      "sentence_ar": "___ طُلَّابٌ",
+      "hint": {
+        "en": "They are students",
+        "ur": "وہ طلبہ ہیں"
+      },
+      "options": [
+        { "ar": "هُمْ", "ar_plain": "هم", "translit": "hum", "en": "they", "ur": "وہ سب" },
+        { "ar": "هُنَّ", "ar_plain": "هن", "translit": "hunna", "en": "they (feminine)", "ur": "وہ سب (مؤنث)" },
+        { "ar": "نَحْنُ", "ar_plain": "نحن", "translit": "nahnu", "en": "we", "ur": "ہم" },
+        { "ar": "قَبْلَ", "ar_plain": "قبل", "translit": "qabla", "en": "before", "ur": "پہلے" }
+      ],
+      "correct_answer": { "ar": "هُمْ", "ar_plain": "هم", "translit": "hum", "en": "they", "ur": "وہ سب" },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch10-l01-ex04",
+      "left_column": [
+        { "ar": "هُمْ", "ar_plain": "هم", "translit": "hum", "en": "they", "ur": "وہ سب" },
+        { "ar": "هُنَّ", "ar_plain": "هن", "translit": "hunna", "en": "they feminine", "ur": "وہ سب مؤنث" },
+        { "ar": "طُلَّابٌ", "ar_plain": "طلاب", "translit": "tullaabun", "en": "students", "ur": "طلبہ" },
+        { "ar": "طَالِبَاتٌ", "ar_plain": "طالبات", "translit": "taalibaatun", "en": "female students", "ur": "طالبات" }
+      ],
+      "right_column": [
+        { "en": "they", "ur": "وہ سب" },
+        { "en": "they feminine", "ur": "وہ سب مؤنث" },
+        { "en": "students", "ur": "طلبہ" },
+        { "en": "female students", "ur": "طالبات" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch10-l01-ex05",
+      "sentence_ar": "هُمْ طُلَّابٌ",
+      "words": [
+        { "ar": "هُمْ", "ar_plain": "هم", "translit": "hum", "en": "they", "ur": "وہ سب" },
+        { "ar": "طُلَّابٌ", "ar_plain": "طلاب", "translit": "tullaabun", "en": "students", "ur": "طلبہ" }
+      ],
+      "available_roles": ["SUBJECT", "PREDICATE", "DEMONSTRATIVE", "ADJECTIVE"],
+      "correct_roles": ["SUBJECT", "PREDICATE"],
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Plural pronouns: they",
+      "ar": "ضَمَائِرُ الغَائِبِ الجَمْع",
+      "ur": "غائب جمع ضمیریں"
+    },
+    "ayah": {
+      "surah": 1,
+      "ayah": 7,
+      "label": "Al-Fatiha 1:7",
+      "ar": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ",
+      "en": "The path of those upon whom You have bestowed favor.",
+      "ur": "ان لوگوں کا راستہ جن پر تو نے انعام فرمایا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatihah-007-part-mishary.mp3"
+    },
+    "highlighted_word_indices": [3],
+    "noor_explanation": {
+      "en": "عَلَيْهِمْ contains هِمْ, the attached form of هُمْ. You are beginning to see plural pronouns inside Quranic phrases.",
+      "ur": "عَلَيْهِمْ میں هِمْ ہے، جو هُمْ کی جڑی ہوئی شکل ہے۔ اب آپ قرآنی جملوں میں جمع ضمیریں پہچان رہے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can now separate هُمْ for they and هُنَّ for female-only they.",
+      "ur": "اب آپ هُمْ اور هُنَّ میں فرق پہچان سکتے ہیں۔"
+    }
+  }
+}

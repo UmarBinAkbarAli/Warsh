@@ -1,6 +1,9 @@
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import { useRef, useState } from "react";
+import { ActivityIndicator, View, Text, StyleSheet, Pressable } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { captureRef } from "react-native-view-shot";
+import * as Sharing from "expo-sharing";
 import { BrandButton } from "@components/BrandButton";
 import {
   Colors,
@@ -15,6 +18,8 @@ import {
 export default function SurahCelebrationScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const viewShotRef = useRef<View>(null);
+  const [sharing, setSharing] = useState(false);
   const { surahNameAr, surahNameEn, xpEarned } =
     useLocalSearchParams<{
       surahNameAr: string;
@@ -27,8 +32,20 @@ export default function SurahCelebrationScreen() {
     router.replace("/(app)/(tabs)");
   }
 
-  function handleShare() {
-    // Share sheet — placeholder for now
+  async function handleShare() {
+    if (!viewShotRef.current || sharing) return;
+    setSharing(true);
+    try {
+      const uri = await captureRef(viewShotRef, { format: "png", quality: 1 });
+      const canShare = await Sharing.isAvailableAsync();
+      if (canShare) {
+        await Sharing.shareAsync(uri, { mimeType: "image/png", dialogTitle: "Share your Warsh Surah milestone" });
+      }
+    } catch {
+      // Share failures are non-blocking for the celebration flow.
+    } finally {
+      setSharing(false);
+    }
   }
 
   return (
@@ -45,7 +62,7 @@ export default function SurahCelebrationScreen() {
       <View style={styles.radiance} pointerEvents="none" />
 
       {/* Center content */}
-      <View style={styles.centerContent}>
+      <View ref={viewShotRef} style={styles.centerContent}>
         {/* Surah Arabic name */}
         <Text style={styles.surahAr}>{surahNameAr ?? ""}</Text>
 
@@ -77,8 +94,12 @@ export default function SurahCelebrationScreen() {
           onPress={handleContinue}
           style={styles.ctaButton}
         />
-        <Pressable onPress={handleShare} style={styles.sharePressable}>
-          <Text style={styles.shareText}>Share this moment</Text>
+        <Pressable onPress={handleShare} style={styles.sharePressable} disabled={sharing}>
+          {sharing ? (
+            <ActivityIndicator color={WarshPalette.gold} size="small" />
+          ) : (
+            <Text style={styles.shareText}>Share this moment</Text>
+          )}
         </Pressable>
       </View>
     </View>

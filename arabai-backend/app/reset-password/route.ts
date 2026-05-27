@@ -1,15 +1,15 @@
 import { NextResponse } from "next/server";
 
 // Web landing page for password reset links.
-// Email → clicks link → opens this page → page opens arabai:// deep link → app handles it.
+// Email → clicks link → opens this page → page opens warsh:// deep link → app handles it.
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const token = searchParams.get("token") ?? "";
 
   const encodedToken = encodeURIComponent(token);
-  const deepLink = `arabai://reset-password?token=${encodedToken}`;
+  const deepLink = `warsh://reset-password?token=${encodedToken}`;
   // Android intent URI (works when app is installed; falls back gracefully)
-  const intentUri = `intent://reset-password?token=${encodedToken}#Intent;scheme=arabai;package=com.arabai.app;end`;
+  const intentUri = `intent://reset-password?token=${encodedToken}#Intent;scheme=warsh;package=com.warsh.app;end`;
 
   const html = `<!DOCTYPE html>
 <html lang="en">
