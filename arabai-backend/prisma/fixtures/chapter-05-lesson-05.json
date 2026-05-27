@@ -1,7 +1,6 @@
 {
   "schema_version": "1.0",
   "template": "REVIEW",
-
   "_meta": {
     "_note": "Chapter 5, Lesson 5 — R1 REVIEW after Chapter 5. Reviews demonstratives, feminine pointers, adjective agreement, possession, and first verb. Authored against warsh-content-schema.ts v1.0.",
     "chapter_order": 5,
@@ -9,7 +8,6 @@
     "estimated_minutes": 10,
     "xp_reward": 20
   },
-
   "hook": {
     "ayah": {
       "surah": 7,
@@ -26,11 +24,14 @@
     },
     "autoplay": true
   },
-
   "discover_cards": [
     {
       "type": "CONCEPT",
-      "concept": { "en": "Pointing Table", "ar": "جَدْوَلُ أَسْمَاءِ الإِشَارَة", "ur": "اشاروں کا جدول" },
+      "concept": {
+        "en": "Pointing Table",
+        "ar": "جَدْوَلُ أَسْمَاءِ الإِشَارَة",
+        "ur": "اشاروں کا جدول"
+      },
       "explanation": {
         "en": "هَٰذَا — this masculine\nذَٰلِكَ — that masculine\nهَٰذِهِ — this feminine\nتِلْكَ — that feminine\n\nDistance and gender both matter.",
         "ur": "هَٰذَا — یہ مذکر\nذَٰلِكَ — وہ مذکر\nهَٰذِهِ — یہ مؤنث\nتِلْكَ — وہ مؤنث\n\nفاصلہ اور جنس دونوں اہم ہیں۔"
@@ -38,7 +39,11 @@
     },
     {
       "type": "CONCEPT",
-      "concept": { "en": "Adjective Agreement", "ar": "مُطَابَقَةُ الصِّفَة", "ur": "صفت کی ہم آہنگی" },
+      "concept": {
+        "en": "Adjective Agreement",
+        "ar": "مُطَابَقَةُ الصِّفَة",
+        "ur": "صفت کی ہم آہنگی"
+      },
       "explanation": {
         "en": "The adjective follows the noun and agrees with it:\n\nرَجُلٌ كَرِيمٌ — masculine indefinite\nالْبَيْتُ الْكَبِيرُ — definite + definite\nكَلِمَةٌ طَيِّبَةٌ — feminine + feminine",
         "ur": "صفت اسم کے بعد آتی ہے اور اس سے ہم آہنگ ہوتی ہے:\n\nرَجُلٌ كَرِيمٌ — مذکر نکرہ\nالْبَيْتُ الْكَبِيرُ — معرفہ + معرفہ\nكَلِمَةٌ طَيِّبَةٌ — مؤنث + مؤنث"
@@ -46,7 +51,11 @@
     },
     {
       "type": "CONCEPT",
-      "concept": { "en": "Idafa and Possession", "ar": "الإِضَافَة وَلَامُ الْمِلْكِيَّة", "ur": "اضافت اور ملکیت کا لام" },
+      "concept": {
+        "en": "Idafa and Possession",
+        "ar": "الإِضَافَة وَلَامُ الْمِلْكِيَّة",
+        "ur": "اضافت اور ملکیت کا لام"
+      },
       "explanation": {
         "en": "كِتَابُ الطَّالِبِ — the student's book\nلِي كِتَابٌ — I have a book\nلَهُ مَا فِي السَّمَاوَاتِ — to Him belongs what is in the heavens",
         "ur": "كِتَابُ الطَّالِبِ — طالب علم کی کتاب\nلِي كِتَابٌ — میرے پاس کتاب ہے\nلَهُ مَا فِي السَّمَاوَاتِ — اسی کا ہے جو آسمانوں میں ہے"
@@ -54,14 +63,17 @@
     },
     {
       "type": "CONCEPT",
-      "concept": { "en": "First Verb", "ar": "أَوَّلُ فِعْل", "ur": "پہلا فعل" },
+      "concept": {
+        "en": "First Verb",
+        "ar": "أَوَّلُ فِعْل",
+        "ur": "پہلا فعل"
+      },
       "explanation": {
         "en": "ذَهَبَ الطَّالِبُ\n\nذَهَبَ = فِعْل — went\nالطَّالِبُ = فَاعِل — the doer\n\nArabic can begin with action.",
         "ur": "ذَهَبَ الطَّالِبُ\n\nذَهَبَ = فِعْل — گیا\nالطَّالِبُ = فَاعِل — کرنے والا\n\nعربی عمل سے شروع ہو سکتی ہے۔"
       }
     }
   ],
-
   "exercises": [
     {
       "id": "ch05-l05-ex01",
@@ -74,10 +86,22 @@
         "en": "this is a she-camel"
       },
       "options": [
-        { "en": "this is a she-camel", "ur": "یہ اونٹنی ہے" },
-        { "en": "that is a she-camel", "ur": "وہ اونٹنی ہے" },
-        { "en": "this is a house", "ur": "یہ گھر ہے" },
-        { "en": "he has a camel", "ur": "اس کے پاس اونٹ ہے" }
+        {
+          "en": "this is a she-camel",
+          "ur": "یہ اونٹنی ہے"
+        },
+        {
+          "en": "that is a she-camel",
+          "ur": "وہ اونٹنی ہے"
+        },
+        {
+          "en": "this is a house",
+          "ur": "یہ گھر ہے"
+        },
+        {
+          "en": "he has a camel",
+          "ur": "اس کے پاس اونٹ ہے"
+        }
       ],
       "correct_index": 0,
       "explanation_on_wrong": {
@@ -96,10 +120,30 @@
         "ur": "'وہ شہر ہے' — دور مؤنث اشارہ چنیں۔"
       },
       "options": [
-        { "ar": "تِلْكَ", "ar_plain": "تلك", "translit": "tilka", "en": "that (fem.)" },
-        { "ar": "هَٰذِهِ", "ar_plain": "هذه", "translit": "hādhihi", "en": "this (fem.)" },
-        { "ar": "هَٰذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this (masc.)" },
-        { "ar": "ذَٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that (masc.)" }
+        {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "tilka",
+          "en": "that (fem.)"
+        },
+        {
+          "ar": "هَٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "hādhihi",
+          "en": "this (fem.)"
+        },
+        {
+          "ar": "هَٰذَا",
+          "ar_plain": "هذا",
+          "translit": "hādhā",
+          "en": "this (masc.)"
+        },
+        {
+          "ar": "ذَٰلِكَ",
+          "ar_plain": "ذلك",
+          "translit": "dhālika",
+          "en": "that (masc.)"
+        }
       ],
       "correct_answer": {
         "ar": "تِلْكَ",
@@ -121,12 +165,36 @@
         "ur": "یہ اچھی بات / اچھا لفظ ہے"
       },
       "tiles": [
-        { "ar": "هَٰذِهِ", "ar_plain": "هذه", "translit": "hādhihi", "en": "this (fem.)" },
-        { "ar": "كَلِمَةٌ", "ar_plain": "كلمة", "translit": "kalimatun", "en": "a word" },
-        { "ar": "طَيِّبَةٌ", "ar_plain": "طيبة", "translit": "ṭayyibatun", "en": "good (fem.)" },
-        { "ar": "طَيِّبٌ", "ar_plain": "طيب", "translit": "ṭayyibun", "en": "good (masc.)" }
+        {
+          "ar": "هَٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "hādhihi",
+          "en": "this (fem.)"
+        },
+        {
+          "ar": "كَلِمَةٌ",
+          "ar_plain": "كلمة",
+          "translit": "kalimatun",
+          "en": "a word"
+        },
+        {
+          "ar": "طَيِّبَةٌ",
+          "ar_plain": "طيبة",
+          "translit": "ṭayyibatun",
+          "en": "good (fem.)"
+        },
+        {
+          "ar": "طَيِّبٌ",
+          "ar_plain": "طيب",
+          "translit": "ṭayyibun",
+          "en": "good (masc.)"
+        }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "explanation_on_wrong": {
         "en": "كَلِمَةٌ is feminine, so it uses هَٰذِهِ and the feminine adjective طَيِّبَةٌ.",
         "ur": "كَلِمَةٌ مؤنث ہے، اس لیے هَٰذِهِ اور مؤنث صفت طَيِّبَةٌ آئے گی۔"
@@ -143,10 +211,22 @@
         "en": "I have a book"
       },
       "options": [
-        { "en": "I have a book", "ur": "میرے پاس کتاب ہے" },
-        { "en": "you have a pen", "ur": "تمہارے پاس قلم ہے" },
-        { "en": "this is a book", "ur": "یہ کتاب ہے" },
-        { "en": "the student's book", "ur": "طالب علم کی کتاب" }
+        {
+          "en": "I have a book",
+          "ur": "میرے پاس کتاب ہے"
+        },
+        {
+          "en": "you have a pen",
+          "ur": "تمہارے پاس قلم ہے"
+        },
+        {
+          "en": "this is a book",
+          "ur": "یہ کتاب ہے"
+        },
+        {
+          "en": "the student's book",
+          "ur": "طالب علم کی کتاب"
+        }
       ],
       "correct_index": 0
     },
@@ -161,10 +241,30 @@
         "ur": "'تمہارے پاس قلم ہے' — ملکیت ترکیب چنیں۔"
       },
       "options": [
-        { "ar": "لَكَ", "ar_plain": "لك", "translit": "laka", "en": "to you / you have" },
-        { "ar": "لِي", "ar_plain": "لي", "translit": "lī", "en": "to me / I have" },
-        { "ar": "لَهُ", "ar_plain": "له", "translit": "lahu", "en": "to him / he has" },
-        { "ar": "تِلْكَ", "ar_plain": "تلك", "translit": "tilka", "en": "that (fem.)" }
+        {
+          "ar": "لَكَ",
+          "ar_plain": "لك",
+          "translit": "laka",
+          "en": "to you / you have"
+        },
+        {
+          "ar": "لِي",
+          "ar_plain": "لي",
+          "translit": "lī",
+          "en": "to me / I have"
+        },
+        {
+          "ar": "لَهُ",
+          "ar_plain": "له",
+          "translit": "lahu",
+          "en": "to him / he has"
+        },
+        {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "tilka",
+          "en": "that (fem.)"
+        }
       ],
       "correct_answer": {
         "ar": "لَكَ",
@@ -178,33 +278,94 @@
       "type": "GRAMMAR_PARSE",
       "xp_value": 5,
       "words": [
-        { "ar": "ذَهَبَ", "en": "went" },
-        { "ar": "الطَّالِبُ", "en": "the student" }
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "—",
+          "en": "went"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "—",
+          "en": "the student"
+        }
       ],
-      "available_roles": ["فِعْل", "فَاعِل"],
-      "correct_roles": ["فِعْل", "فَاعِل"]
+      "available_roles": [
+        "VERB",
+        "SUBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT"
+      ],
+      "sentence_ar": "ذَهَبَ الطَّالِبُ"
     },
     {
       "id": "ch05-l05-ex07",
       "type": "MATCHING",
       "xp_value": 5,
       "left_column": [
-        { "ar": "هَٰذَا بَيْتٌ", "ar_plain": "هذا بيت", "translit": "hādhā baytun", "en": "this is a house" },
-        { "ar": "تِلْكَ مَدْرَسَةٌ", "ar_plain": "تلك مدرسة", "translit": "tilka madrasatun", "en": "that is a school" },
-        { "ar": "كَلِمَةٌ طَيِّبَةٌ", "ar_plain": "كلمة طيبة", "translit": "kalimatun ṭayyibatun", "en": "a good word" },
-        { "ar": "ذَهَبَ الْوَلَدُ", "ar_plain": "ذهب الولد", "translit": "dhahaba al-waladu", "en": "the boy went" }
+        {
+          "ar": "هَٰذَا بَيْتٌ",
+          "ar_plain": "هذا بيت",
+          "translit": "hādhā baytun",
+          "en": "this is a house"
+        },
+        {
+          "ar": "تِلْكَ مَدْرَسَةٌ",
+          "ar_plain": "تلك مدرسة",
+          "translit": "tilka madrasatun",
+          "en": "that is a school"
+        },
+        {
+          "ar": "كَلِمَةٌ طَيِّبَةٌ",
+          "ar_plain": "كلمة طيبة",
+          "translit": "kalimatun ṭayyibatun",
+          "en": "a good word"
+        },
+        {
+          "ar": "ذَهَبَ الْوَلَدُ",
+          "ar_plain": "ذهب الولد",
+          "translit": "dhahaba al-waladu",
+          "en": "the boy went"
+        }
       ],
       "right_column": [
-        { "en": "a good word", "ur": "اچھی بات / اچھا لفظ" },
-        { "en": "the boy went", "ur": "لڑکا گیا" },
-        { "en": "that is a school", "ur": "وہ مدرسہ ہے" },
-        { "en": "this is a house", "ur": "یہ گھر ہے" }
+        {
+          "en": "a good word",
+          "ur": "اچھی بات / اچھا لفظ"
+        },
+        {
+          "en": "the boy went",
+          "ur": "لڑکا گیا"
+        },
+        {
+          "en": "that is a school",
+          "ur": "وہ مدرسہ ہے"
+        },
+        {
+          "en": "this is a house",
+          "ur": "یہ گھر ہے"
+        }
       ],
       "correct_pairs": [
-        [0, 3],
-        [1, 2],
-        [2, 0],
-        [3, 1]
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ]
       ]
     },
     {
@@ -228,7 +389,6 @@
       }
     }
   ],
-
   "reveal": {
     "concept_name": {
       "en": "R1 — Mid-Book 1 Consolidation",
@@ -244,13 +404,17 @@
       "ur": "یہ اللہ کی اونٹنی ہے، تمہارے لیے نشانی۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-araf-073-mishary.mp3"
     },
-    "highlighted_word_indices": [0, 1, 2, 3],
+    "highlighted_word_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
     "noor_explanation": {
       "en": "Look how much grammar is inside one short phrase:\n\nهَٰذِهِ — this, feminine near\nنَاقَةُ اللَّهِ — idafa: the she-camel of Allah\nلَكُمْ — for you\nآيَةً — a sign\n\nFive chapters ago this was just recitation. Now it has structure.",
       "ur": "دیکھیں ایک چھوٹے جملے میں کتنی گرامر ہے:\n\nهَٰذِهِ — یہ، مؤنث قریب\nنَاقَةُ اللَّهِ — اضافت: اللہ کی اونٹنی\nلَكُمْ — تمہارے لیے\nآيَةً — نشانی\n\nپانچ ابواب پہلے یہ صرف تلاوت تھی۔ اب اس کی ساخت نظر آ رہی ہے۔"
     }
   },
-
   "close": {
     "noor_message": {
       "en": "R1 complete. You have consolidated the first foundation: pointing words, gender, adjective agreement, idafa, possession, and your first verb. Chapter 6 can now build richer descriptions on top of this.",

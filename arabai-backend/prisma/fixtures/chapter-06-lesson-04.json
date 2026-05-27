@@ -1,23 +1,361 @@
 {
   "schema_version": "1.0",
   "template": "STANDARD",
-  "_meta": { "_note": "Chapter 6, Lesson 4 — الَّذِي in Al-A'la with consecutive verbs.", "chapter_order": 6, "lesson_order": 4, "estimated_minutes": 10, "xp_reward": 10 },
-  "hook": { "ayah": { "surah": 87, "ayah": 2, "label": "Al-A'la 87:2", "ar": "الَّذِي خَلَقَ فَسَوَّىٰ", "en": "Who created and proportioned.", "ur": "جس نے پیدا کیا، پھر درست بنایا۔", "audio_url": "https://cdn.warsh.app/audio/quran/al-ala-002-mishary.mp3" }, "noor_intro": { "en": "Now return to the ayah. الَّذِي is followed by actions of Allah: خَلَقَ, فَسَوَّىٰ, قَدَّرَ, فَهَدَىٰ.", "ur": "اب آیت کی طرف واپس آئیں۔ الَّذِي کے بعد اللہ کے افعال آتے ہیں: خَلَقَ، فَسَوَّىٰ، قَدَّرَ، فَهَدَىٰ۔" }, "autoplay": true },
+  "_meta": {
+    "_note": "Chapter 6, Lesson 4 — الَّذِي in Al-A'la with consecutive verbs.",
+    "chapter_order": 6,
+    "lesson_order": 4,
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 87,
+      "ayah": 2,
+      "label": "Al-A'la 87:2",
+      "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
+      "en": "Who created and proportioned.",
+      "ur": "جس نے پیدا کیا، پھر درست بنایا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-ala-002-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Now return to the ayah. الَّذِي is followed by actions of Allah: خَلَقَ, فَسَوَّىٰ, قَدَّرَ, فَهَدَىٰ.",
+      "ur": "اب آیت کی طرف واپس آئیں۔ الَّذِي کے بعد اللہ کے افعال آتے ہیں: خَلَقَ، فَسَوَّىٰ، قَدَّرَ، فَهَدَىٰ۔"
+    },
+    "autoplay": true
+  },
   "discover_cards": [
-    { "type": "WORD", "text": { "ar": "الَّذِي خَلَقَ", "ar_plain": "الذي خلق", "translit": "alladhī khalaqa", "en": "Who created", "ur": "جس نے پیدا کیا" }, "audio_url": "https://cdn.warsh.app/audio/vocab/alladhi-khalaqa.mp3" },
-    { "type": "WORD", "text": { "ar": "فَسَوَّىٰ", "ar_plain": "فسوى", "translit": "fasawwā", "en": "then proportioned", "ur": "پھر درست بنایا" }, "audio_url": "https://cdn.warsh.app/audio/vocab/fasawwa.mp3" },
-    { "type": "WORD", "text": { "ar": "وَالَّذِي قَدَّرَ فَهَدَىٰ", "ar_plain": "والذي قدر فهدى", "translit": "wa alladhī qaddara fahadā", "en": "and Who measured, then guided", "ur": "اور جس نے اندازہ مقرر کیا، پھر ہدایت دی" }, "audio_url": "https://cdn.warsh.app/audio/vocab/walladhi-qaddara-fahada.mp3" },
-    { "type": "GRAMMAR_NOTE", "title": { "en": "One connector, many actions", "ar": "اسْمٌ مَوْصُول وَأَفْعَال", "ur": "ایک موصول، کئی افعال" }, "body": { "en": "الَّذِي can be followed by one action or a chain of actions. In Al-A'la, the chain describes Allah's creating, proportioning, measuring, and guiding.", "ur": "الَّذِي کے بعد ایک فعل بھی آ سکتا ہے اور افعال کی لڑی بھی۔ سورۃ الاعلیٰ میں یہ لڑی اللہ کی تخلیق، درستگی، تقدیر، اور ہدایت بیان کرتی ہے۔" } }
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "الَّذِي خَلَقَ",
+        "ar_plain": "الذي خلق",
+        "translit": "alladhī khalaqa",
+        "en": "Who created",
+        "ur": "جس نے پیدا کیا"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/alladhi-khalaqa.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "فَسَوَّىٰ",
+        "ar_plain": "فسوى",
+        "translit": "fasawwā",
+        "en": "then proportioned",
+        "ur": "پھر درست بنایا"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/fasawwa.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "وَالَّذِي قَدَّرَ فَهَدَىٰ",
+        "ar_plain": "والذي قدر فهدى",
+        "translit": "wa alladhī qaddara fahadā",
+        "en": "and Who measured, then guided",
+        "ur": "اور جس نے اندازہ مقرر کیا، پھر ہدایت دی"
+      },
+      "audio_url": "https://cdn.warsh.app/audio/vocab/walladhi-qaddara-fahada.mp3"
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "One connector, many actions",
+        "ar": "اسْمٌ مَوْصُول وَأَفْعَال",
+        "ur": "ایک موصول، کئی افعال"
+      },
+      "body": {
+        "en": "الَّذِي can be followed by one action or a chain of actions. In Al-A'la, the chain describes Allah's creating, proportioning, measuring, and guiding.",
+        "ur": "الَّذِي کے بعد ایک فعل بھی آ سکتا ہے اور افعال کی لڑی بھی۔ سورۃ الاعلیٰ میں یہ لڑی اللہ کی تخلیق، درستگی، تقدیر، اور ہدایت بیان کرتی ہے۔"
+      }
+    }
   ],
   "exercises": [
-    { "type": "TAP_TRANSLATION", "id": "ch06-l04-ex01", "prompt": { "ar": "الَّذِي خَلَقَ", "en": "Who created", "ur": "جس نے پیدا کیا" }, "direction": "ar_to_en", "answer": "Who created", "choices": ["Who created", "the boy who went", "this is a sign", "the pen that is on the desk"], "xp_value": 1 },
-    { "type": "TAP_TRANSLATION", "id": "ch06-l04-ex02", "prompt": { "ar": "فَسَوَّىٰ", "en": "then proportioned", "ur": "پھر درست بنایا" }, "direction": "ar_to_en", "answer": "then proportioned", "choices": ["then proportioned", "then went", "who created", "for you"], "xp_value": 1 },
-    { "type": "TRUE_FALSE", "id": "ch06-l04-ex03", "statement": { "en": "In Al-A'la 87:2, الَّذِي is followed by verbs describing Allah's actions.", "ur": "سورۃ الاعلیٰ 87:2 میں الَّذِي کے بعد اللہ کے افعال آتے ہیں۔" }, "answer": true, "xp_value": 1 },
-    { "type": "FILL_BLANK", "id": "ch06-l04-ex04", "template": { "en": "الَّذِي ___ فَسَوَّىٰ = Who created and proportioned", "ur": "الَّذِي ___ فَسَوَّىٰ = جس نے پیدا کیا، پھر درست بنایا" }, "blank_label": { "en": "choose the verb", "ur": "فعل چنیں" }, "answer": "خَلَقَ", "choices": ["خَلَقَ", "ذَهَبَ", "لَهُ", "هَٰذِهِ"], "xp_value": 1 },
-    { "type": "MATCHING", "id": "ch06-l04-ex05", "instruction": { "en": "Match the Quranic phrase.", "ur": "قرآنی ترکیب ملائیں۔" }, "pairs": [{ "ar": "خَلَقَ", "en": "created" }, { "ar": "فَسَوَّىٰ", "en": "proportioned" }, { "ar": "قَدَّرَ", "en": "measured / decreed" }, { "ar": "فَهَدَىٰ", "en": "then guided" }], "xp_value": 1 },
-    { "type": "BUILD_SENTENCE", "id": "ch06-l04-ex06", "instruction": { "en": "Build: 'Who created and proportioned'", "ur": "بنائیں: 'جس نے پیدا کیا، پھر درست بنایا'" }, "word_bank": ["الَّذِي", "خَلَقَ", "فَسَوَّىٰ", "الْوَلَدُ", "ذَهَبَ"], "answer": ["الَّذِي", "خَلَقَ", "فَسَوَّىٰ"], "xp_value": 1 },
-    { "type": "GRAMMAR_PARSE", "id": "ch06-l04-ex07", "words": [{ "ar": "الَّذِي", "en": "who" }, { "ar": "خَلَقَ", "en": "created" }, { "ar": "فَسَوَّىٰ", "en": "then proportioned" }], "available_roles": ["اسم موصول", "فعل", "فعل مع فاء الترتيب"], "correct_roles": ["اسم موصول", "فعل", "فعل مع فاء الترتيب"], "xp_value": 1 }
+    {
+      "id": "ch06-l04-ex01",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "الَّذِي خَلَقَ",
+        "ar_plain": "الذي خلق",
+        "translit": "alladhī khalaqa",
+        "en": "Who created",
+        "ur": "جس نے پیدا کیا"
+      },
+      "options": [
+        {
+          "en": "Who created"
+        },
+        {
+          "en": "the boy who went"
+        },
+        {
+          "en": "this is a sign"
+        },
+        {
+          "en": "the pen that is on the desk"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "id": "ch06-l04-ex02",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "فَسَوَّىٰ",
+        "ar_plain": "فسوى",
+        "translit": "fasawwā",
+        "en": "then proportioned",
+        "ur": "پھر درست بنایا"
+      },
+      "options": [
+        {
+          "en": "then proportioned"
+        },
+        {
+          "en": "then went"
+        },
+        {
+          "en": "who created"
+        },
+        {
+          "en": "for you"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch06-l04-ex03",
+      "statement": {
+        "en": "In Al-A'la 87:2, الَّذِي is followed by verbs describing Allah's actions.",
+        "ur": "سورۃ الاعلیٰ 87:2 میں الَّذِي کے بعد اللہ کے افعال آتے ہیں۔"
+      },
+      "xp_value": 1,
+      "correct_answer": true
+    },
+    {
+      "id": "ch06-l04-ex04",
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "الَّذِي ___ فَسَوَّىٰ",
+      "hint": {
+        "en": "Who created and proportioned",
+        "ur": "جس نے پیدا کیا، پھر درست بنایا"
+      },
+      "options": [
+        {
+          "ar": "خَلَقَ",
+          "ar_plain": "خلق",
+          "translit": "—",
+          "en": "خَلَقَ"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "—",
+          "en": "ذَهَبَ"
+        },
+        {
+          "ar": "لَهُ",
+          "ar_plain": "له",
+          "translit": "—",
+          "en": "لَهُ"
+        },
+        {
+          "ar": "هَٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "—",
+          "en": "هَٰذِهِ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "خَلَقَ",
+        "ar_plain": "خلق",
+        "translit": "—",
+        "en": "خَلَقَ"
+      }
+    },
+    {
+      "id": "ch06-l04-ex05",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        {
+          "ar": "خَلَقَ",
+          "ar_plain": "خلق",
+          "translit": "—",
+          "en": "created"
+        },
+        {
+          "ar": "فَسَوَّىٰ",
+          "ar_plain": "فسوى",
+          "translit": "fasawwā",
+          "en": "then proportioned",
+          "ur": "پھر درست بنایا"
+        },
+        {
+          "ar": "قَدَّرَ",
+          "ar_plain": "قدر",
+          "translit": "—",
+          "en": "measured / decreed"
+        },
+        {
+          "ar": "فَهَدَىٰ",
+          "ar_plain": "فهدى",
+          "translit": "—",
+          "en": "then guided"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "proportioned"
+        },
+        {
+          "en": "measured / decreed"
+        },
+        {
+          "en": "then guided"
+        },
+        {
+          "en": "created"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "id": "ch06-l04-ex06",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Build: 'Who created and proportioned'",
+        "ur": "بنائیں: 'جس نے پیدا کیا، پھر درست بنایا'"
+      },
+      "tiles": [
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "—",
+          "en": "الَّذِي"
+        },
+        {
+          "ar": "خَلَقَ",
+          "ar_plain": "خلق",
+          "translit": "—",
+          "en": "خَلَقَ"
+        },
+        {
+          "ar": "فَسَوَّىٰ",
+          "ar_plain": "فسوى",
+          "translit": "fasawwā",
+          "en": "then proportioned",
+          "ur": "پھر درست بنایا"
+        },
+        {
+          "ar": "الْوَلَدُ",
+          "ar_plain": "الولد",
+          "translit": "—",
+          "en": "الْوَلَدُ"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "—",
+          "en": "ذَهَبَ"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch06-l04-ex07",
+      "words": [
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "—",
+          "en": "who"
+        },
+        {
+          "ar": "خَلَقَ",
+          "ar_plain": "خلق",
+          "translit": "—",
+          "en": "created"
+        },
+        {
+          "ar": "فَسَوَّىٰ",
+          "ar_plain": "فسوى",
+          "translit": "—",
+          "en": "then proportioned"
+        }
+      ],
+      "available_roles": [
+        "RELATIVE_PRONOUN",
+        "VERB",
+        "VERB"
+      ],
+      "correct_roles": [
+        "RELATIVE_PRONOUN",
+        "VERB",
+        "VERB"
+      ],
+      "xp_value": 1,
+      "sentence_ar": "الَّذِي خَلَقَ فَسَوَّىٰ"
+    }
   ],
-  "reveal": { "ayah": { "surah": 87, "ayah": 2, "label": "Al-A'la 87:2", "ar": "الَّذِي خَلَقَ فَسَوَّىٰ", "en": "Who created and proportioned.", "ur": "جس نے پیدا کیا، پھر درست بنایا۔", "audio_url": "https://cdn.warsh.app/audio/quran/al-ala-002-mishary.mp3" }, "highlighted_word_indices": [0, 1, 2], "noor_explanation": { "en": "You can now read the structure: الَّذِي opens the description; خَلَقَ and فَسَوَّىٰ are the actions. The ayah is short, but its grammar is alive.", "ur": "آپ اب ساخت پڑھ سکتے ہیں: الَّذِي صفت کھولتا ہے؛ خَلَقَ اور فَسَوَّىٰ افعال ہیں۔ آیت مختصر ہے، مگر اس کی گرامر زندہ ہے۔" } },
-  "close": { "noor_message": { "en": "Chapter 6 complete. You can now follow الَّذِي into a description, whether that description is an action, a place phrase, or a Quranic chain of verbs.", "ur": "باب 6 مکمل۔ آپ اب الَّذِي کے بعد صفت کو سمجھ سکتے ہیں، چاہے وہ فعل ہو، جگہ کی ترکیب ہو، یا قرآنی افعال کی لڑی۔" } }
+  "reveal": {
+    "ayah": {
+      "surah": 87,
+      "ayah": 2,
+      "label": "Al-A'la 87:2",
+      "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
+      "en": "Who created and proportioned.",
+      "ur": "جس نے پیدا کیا، پھر درست بنایا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-ala-002-mishary.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      2
+    ],
+    "noor_explanation": {
+      "en": "You can now read the structure: الَّذِي opens the description; خَلَقَ and فَسَوَّىٰ are the actions. The ayah is short, but its grammar is alive.",
+      "ur": "آپ اب ساخت پڑھ سکتے ہیں: الَّذِي صفت کھولتا ہے؛ خَلَقَ اور فَسَوَّىٰ افعال ہیں۔ آیت مختصر ہے، مگر اس کی گرامر زندہ ہے۔"
+    },
+    "concept_name": {
+      "en": "الصِّفَة in the Quran",
+      "ar": "الصِّفَة فِي الْقُرْآن",
+      "ur": "قرآن میں صفت"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 6 complete. You can now follow الَّذِي into a description, whether that description is an action, a place phrase, or a Quranic chain of verbs.",
+      "ur": "باب 6 مکمل۔ آپ اب الَّذِي کے بعد صفت کو سمجھ سکتے ہیں، چاہے وہ فعل ہو، جگہ کی ترکیب ہو، یا قرآنی افعال کی لڑی۔"
+    }
+  }
 }

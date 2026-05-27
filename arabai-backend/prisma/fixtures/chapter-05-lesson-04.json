@@ -1,7 +1,6 @@
 {
   "schema_version": "1.0",
   "template": "STANDARD",
-
   "_meta": {
     "_note": "Chapter 5, Lesson 4 — First past-tense verb ذَهَبَ with simple فِعْل/فَاعِل recognition. Authored against warsh-content-schema.ts v1.0.",
     "chapter_order": 5,
@@ -9,7 +8,6 @@
     "estimated_minutes": 10,
     "xp_reward": 10
   },
-
   "hook": {
     "ayah": {
       "surah": 9,
@@ -26,7 +24,6 @@
     },
     "autoplay": true
   },
-
   "discover_cards": [
     {
       "type": "CONCEPT",
@@ -42,120 +39,333 @@
     },
     {
       "type": "WORD",
-      "text": { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "he went", "ur": "وہ گیا" },
+      "text": {
+        "ar": "ذَهَبَ",
+        "ar_plain": "ذهب",
+        "translit": "dhahaba",
+        "en": "he went",
+        "ur": "وہ گیا"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/dhahaba.mp3",
-      "introduces_vocab": { "ar_plain": "ذهب" }
+      "introduces_vocab": {
+        "ar_plain": "ذهب"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "ذَهَبَ الطَّالِبُ", "ar_plain": "ذهب الطالب", "translit": "dhahaba aṭ-ṭālibu", "en": "the student went", "ur": "طالب علم گیا" },
+      "text": {
+        "ar": "ذَهَبَ الطَّالِبُ",
+        "ar_plain": "ذهب الطالب",
+        "translit": "dhahaba aṭ-ṭālibu",
+        "en": "the student went",
+        "ur": "طالب علم گیا"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/dhahaba-attalib.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "ذَهَبَ الْوَلَدُ", "ar_plain": "ذهب الولد", "translit": "dhahaba al-waladu", "en": "the boy went", "ur": "لڑکا گیا" },
+      "text": {
+        "ar": "ذَهَبَ الْوَلَدُ",
+        "ar_plain": "ذهب الولد",
+        "translit": "dhahaba al-waladu",
+        "en": "the boy went",
+        "ur": "لڑکا گیا"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/dhahaba-alwalad.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "ذَهَبَ الْأُسْتَاذُ", "ar_plain": "ذهب الأستاذ", "translit": "dhahaba al-ustādhu", "en": "the teacher went", "ur": "استاد گیا" },
+      "text": {
+        "ar": "ذَهَبَ الْأُسْتَاذُ",
+        "ar_plain": "ذهب الأستاذ",
+        "translit": "dhahaba al-ustādhu",
+        "en": "the teacher went",
+        "ur": "استاد گیا"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/dhahaba-alustadh.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "ذَهَبَ إِلَى الْمَسْجِدِ", "ar_plain": "ذهب إلى المسجد", "translit": "dhahaba ilā al-masjidi", "en": "he went to the mosque", "ur": "وہ مسجد کی طرف گیا" },
+      "text": {
+        "ar": "ذَهَبَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "ذهب إلى المسجد",
+        "translit": "dhahaba ilā al-masjidi",
+        "en": "he went to the mosque",
+        "ur": "وہ مسجد کی طرف گیا"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/dhahaba-ila-almasjid.mp3"
     },
     {
       "type": "GRAMMAR_NOTE",
-      "title": { "en": "فِعْل and فَاعِل", "ar": "فِعْل وَفَاعِل", "ur": "فعل اور فاعل" },
+      "title": {
+        "en": "فِعْل and فَاعِل",
+        "ar": "فِعْل وَفَاعِل",
+        "ur": "فعل اور فاعل"
+      },
       "body": {
         "en": "ذَهَبَ الطَّالِبُ\n\nذَهَبَ = فِعْل — the action: went\nالطَّالِبُ = فَاعِل — the doer: the student\n\nFor now, just recognize the two jobs.",
         "ur": "ذَهَبَ الطَّالِبُ\n\nذَهَبَ = فِعْل — عمل: گیا\nالطَّالِبُ = فَاعِل — کرنے والا: طالب علم\n\nابھی صرف دونوں کام پہچانیں۔"
       }
     }
   ],
-
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
       "id": "ch05-l04-ex01",
-      "prompt": { "ar": "ذَهَبَ", "en": "he went", "ur": "وہ گیا" },
-      "direction": "ar_to_en",
-      "answer": "he went",
-      "choices": ["he went", "this is", "that is", "he has"],
-      "xp_value": 1
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "ذَهَبَ",
+        "ar_plain": "ذهب",
+        "translit": "dhahaba",
+        "en": "he went",
+        "ur": "وہ گیا"
+      },
+      "options": [
+        {
+          "en": "he went"
+        },
+        {
+          "en": "this is"
+        },
+        {
+          "en": "that is"
+        },
+        {
+          "en": "he has"
+        }
+      ],
+      "correct_index": 0
     },
     {
-      "type": "TAP_TRANSLATION",
       "id": "ch05-l04-ex02",
-      "prompt": { "ar": "ذَهَبَ الطَّالِبُ", "en": "the student went", "ur": "طالب علم گیا" },
-      "direction": "ar_to_en",
-      "answer": "the student went",
-      "choices": ["the student went", "the teacher went", "the student has a book", "this is a student"],
-      "xp_value": 1
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "ذَهَبَ الطَّالِبُ",
+        "ar_plain": "ذهب الطالب",
+        "translit": "dhahaba aṭ-ṭālibu",
+        "en": "the student went",
+        "ur": "طالب علم گیا"
+      },
+      "options": [
+        {
+          "en": "the student went"
+        },
+        {
+          "en": "the teacher went"
+        },
+        {
+          "en": "the student has a book"
+        },
+        {
+          "en": "this is a student"
+        }
+      ],
+      "correct_index": 0
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch05-l04-ex03",
-      "statement": { "en": "In ذَهَبَ الطَّالِبُ, ذَهَبَ is the action and الطَّالِبُ is the doer.", "ur": "ذَهَبَ الطَّالِبُ میں ذَهَبَ عمل ہے اور الطَّالِبُ کرنے والا ہے۔" },
-      "answer": true,
-      "explanation": {
+      "statement": {
+        "en": "In ذَهَبَ الطَّالِبُ, ذَهَبَ is the action and الطَّالِبُ is the doer.",
+        "ur": "ذَهَبَ الطَّالِبُ میں ذَهَبَ عمل ہے اور الطَّالِبُ کرنے والا ہے۔"
+      },
+      "xp_value": 1,
+      "correct_answer": true,
+      "explanation_on_wrong": {
         "en": "True — ذَهَبَ is the verb, and الطَّالِبُ is the فَاعِل, the one who did the action.",
         "ur": "درست — ذَهَبَ فعل ہے، اور الطَّالِبُ فاعل ہے، یعنی عمل کرنے والا۔"
-      },
-      "xp_value": 1
+      }
     },
     {
-      "type": "FILL_BLANK",
       "id": "ch05-l04-ex04",
-      "template": { "en": "___ الْوَلَدُ = the boy went", "ur": "___ الْوَلَدُ = لڑکا گیا" },
-      "blank_label": { "en": "choose the verb", "ur": "فعل منتخب کریں" },
-      "answer": "ذَهَبَ",
-      "choices": ["ذَهَبَ", "هَٰذَا", "لَهُ", "تِلْكَ"],
-      "explanation": {
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "___ الْوَلَدُ",
+      "hint": {
+        "en": "the boy went",
+        "ur": "لڑکا گیا"
+      },
+      "options": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "ar": "هَٰذَا",
+          "ar_plain": "هذا",
+          "translit": "—",
+          "en": "هَٰذَا"
+        },
+        {
+          "ar": "لَهُ",
+          "ar_plain": "له",
+          "translit": "—",
+          "en": "لَهُ"
+        },
+        {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "—",
+          "en": "تِلْكَ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "ذَهَبَ",
+        "ar_plain": "ذهب",
+        "translit": "dhahaba",
+        "en": "he went",
+        "ur": "وہ گیا"
+      },
+      "explanation_on_wrong": {
         "en": "ذَهَبَ is the verb: he went. ذَهَبَ الْوَلَدُ = the boy went.",
         "ur": "ذَهَبَ فعل ہے: وہ گیا۔ ذَهَبَ الْوَلَدُ = لڑکا گیا۔"
-      },
-      "xp_value": 1
+      }
     },
     {
-      "type": "MATCHING",
       "id": "ch05-l04-ex05",
-      "instruction": { "en": "Match each verbal sentence.", "ur": "ہر فعلی جملہ ملائیں۔" },
-      "pairs": [
-        { "ar": "ذَهَبَ الطَّالِبُ", "en": "the student went" },
-        { "ar": "ذَهَبَ الْوَلَدُ", "en": "the boy went" },
-        { "ar": "ذَهَبَ الْأُسْتَاذُ", "en": "the teacher went" },
-        { "ar": "ذَهَبَ إِلَى الْمَسْجِدِ", "en": "he went to the mosque" }
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        {
+          "ar": "ذَهَبَ الطَّالِبُ",
+          "ar_plain": "ذهب الطالب",
+          "translit": "dhahaba aṭ-ṭālibu",
+          "en": "the student went",
+          "ur": "طالب علم گیا"
+        },
+        {
+          "ar": "ذَهَبَ الْوَلَدُ",
+          "ar_plain": "ذهب الولد",
+          "translit": "dhahaba al-waladu",
+          "en": "the boy went",
+          "ur": "لڑکا گیا"
+        },
+        {
+          "ar": "ذَهَبَ الْأُسْتَاذُ",
+          "ar_plain": "ذهب الأستاذ",
+          "translit": "dhahaba al-ustādhu",
+          "en": "the teacher went",
+          "ur": "استاد گیا"
+        },
+        {
+          "ar": "ذَهَبَ إِلَى الْمَسْجِدِ",
+          "ar_plain": "ذهب إلى المسجد",
+          "translit": "dhahaba ilā al-masjidi",
+          "en": "he went to the mosque",
+          "ur": "وہ مسجد کی طرف گیا"
+        }
       ],
-      "xp_value": 1
+      "right_column": [
+        {
+          "en": "the boy went"
+        },
+        {
+          "en": "the teacher went"
+        },
+        {
+          "en": "he went to the mosque"
+        },
+        {
+          "en": "the student went"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
     },
     {
       "type": "GRAMMAR_PARSE",
       "id": "ch05-l04-ex06",
       "words": [
-        { "ar": "ذَهَبَ", "en": "went" },
-        { "ar": "الطَّالِبُ", "en": "the student" }
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "—",
+          "en": "went"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "—",
+          "en": "the student"
+        }
       ],
-      "available_roles": ["فِعْل", "فَاعِل"],
-      "correct_roles": ["فِعْل", "فَاعِل"],
-      "xp_value": 1
+      "available_roles": [
+        "VERB",
+        "SUBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT"
+      ],
+      "xp_value": 1,
+      "sentence_ar": "ذَهَبَ الطَّالِبُ"
     },
     {
-      "type": "BUILD_SENTENCE",
       "id": "ch05-l04-ex07",
-      "instruction": { "en": "Build: 'the teacher went'", "ur": "بنائیں: 'استاد گیا'" },
-      "word_bank": ["ذَهَبَ", "الْأُسْتَاذُ", "لَهُ", "مَدْرَسَةٌ"],
-      "answer": ["ذَهَبَ", "الْأُسْتَاذُ"],
-      "explanation": {
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Build: 'the teacher went'",
+        "ur": "بنائیں: 'استاد گیا'"
+      },
+      "tiles": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "ar": "الْأُسْتَاذُ",
+          "ar_plain": "الأستاذ",
+          "translit": "—",
+          "en": "الْأُسْتَاذُ"
+        },
+        {
+          "ar": "لَهُ",
+          "ar_plain": "له",
+          "translit": "—",
+          "en": "لَهُ"
+        },
+        {
+          "ar": "مَدْرَسَةٌ",
+          "ar_plain": "مدرسة",
+          "translit": "—",
+          "en": "مَدْرَسَةٌ"
+        }
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "explanation_on_wrong": {
         "en": "Simple verbal sentence: verb first, then the doer.",
         "ur": "سادہ فعلی جملہ: پہلے فعل، پھر فاعل۔"
-      },
-      "xp_value": 1
+      }
     }
   ],
-
   "reveal": {
     "ayah": {
       "surah": 9,
@@ -166,13 +376,19 @@
       "ur": "ہم تمہارے ساتھ ضرور جاتے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/at-tawbah-042-part-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "ذَهَبَ is your first doorway into Arabic verbs. The Quran uses the same root in richer forms, such as لَذَهَبْنَا — 'we would have gone.' You do not need the advanced form yet. Recognize the movement: ذ-ه-ب carries the meaning of going.",
       "ur": "ذَهَبَ عربی افعال کا آپ کا پہلا دروازہ ہے۔ قرآن اسی مادہ کو گہری صورتوں میں لاتا ہے، جیسے لَذَهَبْنَا — 'ہم ضرور جاتے۔' ابھی آپ کو اعلیٰ صورت کی ضرورت نہیں۔ حرکت پہچانیں: ذ-ه-ب جانے کا معنی رکھتا ہے۔"
+    },
+    "concept_name": {
+      "en": "الإشارة in the Quran",
+      "ar": "أسماء الإشارة فِي الْقُرْآن",
+      "ur": "قرآن میں اسمائے اشارہ"
     }
   },
-
   "close": {
     "noor_message": {
       "en": "Today Arabic became active. You learned ذَهَبَ, فِعْل, and فَاعِل. You can now read a tiny verbal sentence: ذَهَبَ الطَّالِبُ.",

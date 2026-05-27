@@ -100,7 +100,7 @@ type SpokenPhrasesContent = {
   dialogue?: DialogueLine[];
 };
 
-type Lesson = {
+type MappedLesson = {
   id: string;
   title: string;
   xpReward: number;
@@ -113,6 +113,323 @@ type Lesson = {
   content?: Record<string, unknown> | null;
   type?: string | null;
 };
+
+type RawLessonResponse = {
+  id: string;
+  title: string;
+  titleAr?: string;
+  xpReward: number;
+  template: string;
+  content: Record<string, unknown> | null;
+  isCompleted?: boolean;
+  isSkippedByPlacement?: boolean;
+};
+
+// ---------------------------------------------------------------------------
+// Client-side content mapper — reads raw warsh-content-schema v1.0 and
+// produces the internal MappedLesson shape the player renders.
+// ---------------------------------------------------------------------------
+function mapContent(raw: RawLessonResponse): MappedLesson {
+  const { template, content } = raw;
+  const c = content ?? {};
+
+  const hook = c.hook as Record<string, unknown> | undefined;
+  const ayah = hook?.ayah as Record<string, unknown> | undefined;
+  const noorIntro = hook?.noor_intro as Record<string, unknown> | undefined;
+  const discoverCardsRaw = c.discover_cards as Record<string, unknown>[] | undefined;
+  const rawExercises = c.exercises as Record<string, unknown>[] | undefined;
+  const reveal = c.reveal as Record<string, unknown> | undefined;
+  const revealAyahRaw = reveal?.ayah as Record<string, unknown> | undefined;
+  const highlightedIndices = reveal?.highlighted_word_indices as number[] | undefined;
+  const spokenPhrases = c.spoken_phrases as Record<string, unknown> | undefined;
+
+  function getWrongExplanation(ex: Record<string, unknown>): string | undefined {
+    const wrongMsg = ex.explanation_on_wrong as Record<string, unknown> | undefined;
+    const explObj = ex.explanation as Record<string, unknown> | undefined;
+    return (wrongMsg?.en ?? explObj?.en) as string | undefined;
+  }
+
+  const mappedHook: Hook | null = ayah
+    ? {
+        ayahAr: ayah.ar as string,
+        ayahRef: ayah.label as string,
+        question: noorIntro?.en as string | undefined,
+      }
+    : null;
+
+  const mappedCards: DiscoverCard[] = (discoverCardsRaw ?? []).map((card) => {
+    const cardType = card.type as string | undefined;
+    const text = card.text as Record<string, unknown> | undefined;
+    const concept = card.concept as Record<string, unknown> | undefined;
+    const explanation = card.explanation as Record<string, unknown> | undefined;
+    const examples = card.examples as Array<Record<string, unknown>> | undefined;
+    const titleObj = card.title as Record<string, unknown> | undefined;
+    const bodyObj = card.body as Record<string, unknown> | undefined;
+
+    if (cardType === "GRAMMAR_NOTE") {
+      return {
+        arabicText: titleObj?.ar as string | undefined,
+        translation: titleObj?.en as string | undefined,
+        transliteration: undefined,
+        explanation: bodyObj?.en as string | undefined,
+      };
+    }
+    if (cardType === "SENTENCE") {
+      return {
+        arabicText: text?.ar as string | undefined,
+        translation: text?.en as string | undefined,
+        transliteration: text?.translit as string | undefined,
+        explanation: undefined,
+      };
+    }
+    const arabicText = (text?.ar ?? concept?.ar) as string | undefined;
+    const translation = (text?.en ?? concept?.en) as string | undefined;
+    const exampleLine = !text && examples?.[0]
+      ? `${examples[0].ar as string} — ${examples[0].en as string}`
+      : undefined;
+    return {
+      arabicText,
+      translation,
+      transliteration: text?.translit as string | undefined,
+      explanation: (explanation?.en ?? exampleLine) as string | undefined,
+    };
+  });
+
+  const mappedExercises: Exercise[] = (rawExercises ?? []).map((ex) => {
+    const type = ex.type as string;
+
+    if (type === "TAP_TRANSLATION") {
+      const prompt = ex.prompt as Record<string, unknown>;
+      const explanationOnWrong = getWrongExplanation(ex);
+      const optionsV1 = ex.options as Array<Record<string, unknown>> | undefined;
+      const correctIndex = ex.correct_index as number | undefined;
+      const choicesV2 = ex.choices as string[] | undefined;
+      const answerV2 = ex.answer as string | undefined;
+      const direction = ex.direction as string | undefined;
+      let options: string[];
+      let correctAnswer: string;
+      if (optionsV1 && correctIndex !== undefined) {
+        options = optionsV1.map((o) => o.en as string);
+        correctAnswer = optionsV1[correctIndex].en as string;
+      } else {
+        options = choicesV2 ?? [];
+        correctAnswer = answerV2 ?? "";
+      }
+      if (direction === "en_to_ar") {
+        const promptEn = prompt.en as string | undefined;
+        return {
+          type: type as ExerciseType,
+          prompt: promptEn ? `Which Arabic means: "${promptEn}"?` : "Choose the correct Arabic.",
+          arabicText: undefined,
+          options,
+          correctAnswer,
+          explanation_on_wrong: explanationOnWrong,
+        };
+      }
+      return {
+        type: type as ExerciseType,
+        prompt: "What does this Arabic mean?",
+        arabicText: prompt.ar as string | undefined,
+        options,
+        correctAnswer,
+        explanation_on_wrong: explanationOnWrong,
+      };
+    }
+
+    if (type === "MATCHING") {
+      const explanationOnWrong = getWrongExplanation(ex);
+      const leftCol = ex.left_column as Array<Record<string, unknown>> | undefined;
+      const rightCol = ex.right_column as Array<Record<string, unknown>> | undefined;
+      const correctPairs = ex.correct_pairs as Array<[number, number]> | undefined;
+      const pairsV2 = ex.pairs as Array<Record<string, unknown>> | undefined;
+      if (leftCol && rightCol && correctPairs) {
+        return {
+          type: type as ExerciseType,
+          prompt: "Match each Arabic word with its meaning.",
+          pairs: correctPairs.map(([l, r]) => ({ left: leftCol[l].ar as string, right: rightCol[r].en as string })),
+          options: rightCol.map((r) => r.en as string),
+          explanation_on_wrong: explanationOnWrong,
+        };
+      } else if (pairsV2) {
+        return {
+          type: type as ExerciseType,
+          prompt: "Match each Arabic word with its meaning.",
+          pairs: pairsV2.map((p) => ({ left: p.ar as string, right: p.en as string })),
+          options: pairsV2.map((p) => p.en as string),
+          explanation_on_wrong: explanationOnWrong,
+        };
+      }
+      return ex as unknown as Exercise;
+    }
+
+    if (type === "BUILD_SENTENCE") {
+      const explanationOnWrong = getWrongExplanation(ex);
+      const tiles = ex.tiles as Array<Record<string, unknown>> | undefined;
+      const order = ex.correct_order as number[] | undefined;
+      const target = ex.target_translation as Record<string, unknown> | undefined;
+      const wordBank = ex.word_bank as string[] | undefined;
+      const answerArr = ex.answer as string[] | undefined;
+      const instruction = ex.instruction as Record<string, unknown> | undefined;
+      if (tiles && order && target) {
+        return {
+          type: type as ExerciseType,
+          prompt: target.en as string,
+          options: tiles.map((t) => t.ar as string),
+          correctAnswer: order.map((i) => (tiles[i].ar as string)).join(" "),
+          explanation_on_wrong: explanationOnWrong,
+        };
+      } else if (wordBank && answerArr) {
+        return {
+          type: type as ExerciseType,
+          prompt: (instruction?.en as string | undefined) ?? "Build the sentence.",
+          options: wordBank,
+          correctAnswer: answerArr.join(" "),
+          explanation_on_wrong: explanationOnWrong,
+        };
+      }
+      return ex as unknown as Exercise;
+    }
+
+    if (type === "FILL_BLANK") {
+      const explanationOnWrong = getWrongExplanation(ex);
+      const hint = ex.hint as Record<string, unknown> | undefined;
+      const optionsV1 = ex.options as Array<Record<string, unknown>> | undefined;
+      const correctAnswerV1 = ex.correct_answer as Record<string, unknown> | undefined;
+      const tmpl = ex.template as Record<string, unknown> | undefined;
+      const blankLabel = ex.blank_label as Record<string, unknown> | undefined;
+      const answerV2 = ex.answer as string | undefined;
+      const choicesV2 = ex.choices as string[] | undefined;
+      if (hint && optionsV1 && correctAnswerV1) {
+        return {
+          type: type as ExerciseType,
+          prompt: hint.en as string,
+          arabicText: ex.sentence_ar as string,
+          options: optionsV1.map((o) => o.ar as string),
+          correctAnswer: correctAnswerV1.ar as string,
+          explanation_on_wrong: explanationOnWrong,
+        };
+      } else if (tmpl || blankLabel) {
+        const templateEn = (tmpl?.en as string | undefined) ?? "";
+        const eqIdx = templateEn.indexOf(" = ");
+        const arabicPart = eqIdx > 0 ? templateEn.slice(0, eqIdx) : templateEn;
+        const hintPart = eqIdx > 0 ? templateEn.slice(eqIdx + 3) : ((blankLabel?.en as string | undefined) ?? "");
+        return {
+          type: type as ExerciseType,
+          prompt: hintPart,
+          arabicText: arabicPart,
+          options: choicesV2 ?? [],
+          correctAnswer: answerV2 ?? "",
+          explanation_on_wrong: explanationOnWrong,
+        };
+      }
+      return ex as unknown as Exercise;
+    }
+
+    if (type === "TRUE_FALSE") {
+      const statement = ex.statement as Record<string, unknown>;
+      const arExample = statement?.ar_example as Record<string, unknown> | undefined;
+      const correct = (ex.correct_answer ?? ex.answer) as boolean;
+      return {
+        type: type as ExerciseType,
+        prompt: statement?.en as string,
+        arabicText: arExample?.ar as string | undefined,
+        options: ["True", "False"],
+        correctAnswer: correct ? "True" : "False",
+        explanation_on_wrong: getWrongExplanation(ex),
+      };
+    }
+
+    if (type === "GRAMMAR_PARSE") {
+      const words = ex.words as Array<Record<string, unknown>>;
+      const roles = ex.correct_roles as string[];
+      return {
+        type: type as ExerciseType,
+        parseTokens: words.map((w, i) => ({ word: w.ar as string, label: roles[i], gloss: w.en as string })),
+        labels: ex.available_roles as string[],
+        explanation_on_wrong: getWrongExplanation(ex),
+      };
+    }
+
+    return {
+      ...(ex as unknown as Exercise),
+      explanation_on_wrong: getWrongExplanation(ex),
+    };
+  });
+
+  // Build reveal
+  let mappedRevealAyah: RevealAyah | null = null;
+  let revealText: string | null = null;
+  if (reveal && revealAyahRaw) {
+    const ayahWords = (revealAyahRaw.ar as string).split(" ");
+    const highlightIndices = highlightedIndices ?? [];
+    const highlightedWords = highlightIndices.map((idx) => ayahWords[idx]).filter(Boolean);
+    mappedRevealAyah = {
+      ayahAr: revealAyahRaw.ar as string,
+      ayahRef: revealAyahRaw.label as string,
+      highlightedWord: highlightedWords[0] ?? "",
+      highlightedWords,
+      highlightedWordIndices: highlightIndices,
+    };
+    const explanation = (reveal.noor_explanation ?? reveal.noor_comment) as Record<string, unknown> | undefined;
+    revealText = (explanation?.en as string | undefined) ?? null;
+  }
+
+  // Template → legacy type
+  const legacyType = template === "SPOKEN_PHRASES" ? "SPOKEN_PHRASES" : "VOCABULARY";
+
+  // Spoken phrases content
+  const schemaSpokenPhraseRows = spokenPhrases?.phrases as Record<string, unknown>[] | undefined;
+  const schemaPhraseById = new Map(
+    (schemaSpokenPhraseRows ?? []).map((row) => {
+      const phrase = row.phrase as Record<string, unknown> | undefined;
+      return [row.id as string, phrase];
+    })
+  );
+  const mappedSchemaPhrases: SpokenPhrase[] = (schemaSpokenPhraseRows ?? []).map((row) => {
+    const phrase = row.phrase as Record<string, unknown> | undefined;
+    const translation = phrase?.en as string | undefined;
+    return {
+      arabic: (phrase?.ar as string | undefined) ?? "",
+      transliteration: phrase?.translit as string | undefined,
+      translation: translation ?? "",
+      recognitionOptions: translation ? [translation] : [],
+    };
+  });
+  const schemaDialogue = spokenPhrases?.dialogue as Record<string, unknown>[] | undefined;
+  const mappedSchemaDialogue: DialogueLine[] = (schemaDialogue ?? []).map((line) => {
+    const phrase = schemaPhraseById.get(line.phrase_id as string);
+    return {
+      speaker: (line.speaker as string | undefined) ?? "",
+      line: (phrase?.ar as string | undefined) ?? "",
+      translation: phrase?.en as string | undefined,
+    };
+  });
+
+  const mappedSpokenContent: SpokenPhrasesContent | undefined = template === "SPOKEN_PHRASES"
+    ? {
+        contextTitle: ((c.contextTitle as string | undefined) ?? (spokenPhrases?.scene as Record<string, unknown> | undefined)?.ar as string | undefined),
+        contextTitleEn: ((c.contextTitleEn as string | undefined) ?? (spokenPhrases?.scene as Record<string, unknown> | undefined)?.en as string | undefined),
+        contextBody: c.contextBody as string | undefined,
+        phrases: (c.phrases as SpokenPhrase[] | undefined) ?? mappedSchemaPhrases,
+        dialogue: (c.dialogue as DialogueLine[] | undefined) ?? mappedSchemaDialogue,
+      }
+    : undefined;
+
+  return {
+    id: raw.id,
+    title: raw.title,
+    xpReward: raw.xpReward,
+    hook: mappedHook,
+    discoverCards: mappedCards,
+    exercises: mappedExercises,
+    revealText,
+    revealAyah: mappedRevealAyah,
+    content: mappedSpokenContent ?? c,
+    type: legacyType,
+  };
+}
+
+type Lesson = MappedLesson;
 
 type CompletionResult = {
   xpEarned: number;
@@ -247,7 +564,8 @@ export default function LessonPlayScreen() {
 
       try {
         const response = await api.get(`/api/lessons/${lessonId}`);
-        const lessonData = response.data.data.lesson;
+        const raw = response.data.data.lesson as RawLessonResponse;
+        const lessonData = mapContent(raw);
         setLesson(lessonData);
         trackLessonStarted(lessonId, lessonData?.type);
       } catch (err) {

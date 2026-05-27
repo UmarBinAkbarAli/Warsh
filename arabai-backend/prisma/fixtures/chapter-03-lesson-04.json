@@ -1,7 +1,6 @@
 {
   "schema_version": "1.0",
   "template": "REVIEW",
-
   "_meta": {
     "_note": "Chapter 3, Lesson 4 — Review. Idafa (الإضافة), لِمَنْ, يَا, and Basmalah analysis. 8 review exercises at xp_value:5 each. No new vocabulary. Authored against warsh-content-schema.ts v1.0.",
     "chapter_order": 3,
@@ -9,7 +8,6 @@
     "estimated_minutes": 12,
     "xp_reward": 20
   },
-
   "hook": {
     "ayah": {
       "surah": 1,
@@ -26,7 +24,6 @@
     },
     "autoplay": false
   },
-
   "discover_cards": [
     {
       "type": "CONCEPT",
@@ -42,7 +39,11 @@
     },
     {
       "type": "GRAMMAR_NOTE",
-      "title": { "en": "Idafa Quick Reference", "ar": "الإضافة — مرجع سريع", "ur": "اضافہ — فوری حوالہ" },
+      "title": {
+        "en": "Idafa Quick Reference",
+        "ar": "الإضافة — مرجع سريع",
+        "ur": "اضافہ — فوری حوالہ"
+      },
       "body": {
         "en": "مضاف (first noun): No tanween. Ends in -u, -i, or -a depending on sentence role.\nمضاف إليه (second noun): ALWAYS ends in kasra ِ.\n\nExamples from the Quran:\n• رَبُّ الْعَالَمِينَ — Lord of the worlds\n• مَلِكِ النَّاسِ — King of mankind\n• كَلَامُ اللَّهِ — the speech of Allah\n• يَوْمُ الْقِيَامَةِ — Day of Resurrection\n• سَبِيلُ اللَّهِ — path of Allah\n• أَهْلُ الْجَنَّةِ — people of Paradise",
         "ur": "مضاف (پہلا اسم): تنوین نہیں۔ جملے میں کردار کے مطابق -u, -i یا -a پر ختم ہوتا ہے۔\nمضاف إليه (دوسرا اسم): ہمیشہ کسرہ ِ پر ختم ہوتا ہے۔"
@@ -50,113 +51,391 @@
     },
     {
       "type": "SENTENCE",
-      "text": { "ar": "لِمَنِ الْمُلْكُ الْيَوْمَ؟ لِلَّهِ الْوَاحِدِ الْقَهَّارِ", "ar_plain": "لمن الملك اليوم للله الواحد القهار", "en": "Whose is the dominion today? It belongs to Allah, the One, the Overpowering.", "ur": "آج بادشاہت کس کی ہے؟ اللہ ایک قہار کی۔" },
-      "source": { "label": "Ghafir 40:16", "surah": 40, "ayah": 16 }
+      "text": {
+        "ar": "لِمَنِ الْمُلْكُ الْيَوْمَ؟ لِلَّهِ الْوَاحِدِ الْقَهَّارِ",
+        "ar_plain": "لمن الملك اليوم للله الواحد القهار",
+        "translit": "—",
+        "en": "Whose is the dominion today? It belongs to Allah, the One, the Overpowering.",
+        "ur": "آج بادشاہت کس کی ہے؟ اللہ ایک قہار کی۔"
+      },
+      "source": {
+        "label": "Ghafir 40:16",
+        "surah": 40,
+        "ayah": 16
+      }
     }
   ],
-
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
       "id": "ch3-l4-ex1",
-      "prompt": { "ar": "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ", "en": "In the name of Allah, the Most Gracious, the Most Merciful.", "ur": "اللہ کے نام سے جو بڑا مہربان، نہایت رحم کرنے والا ہے۔" },
-      "direction": "ar_to_en",
-      "answer": "In the name of Allah, the Most Gracious, the Most Merciful.",
-      "choices": [
-        "In the name of Allah, the Most Gracious, the Most Merciful.",
-        "In the name of Allah, the Lord of worlds.",
-        "Praise be to Allah, the Most Gracious.",
-        "With the mercy of Allah, the Most Merciful."
-      ],
-      "xp_value": 5
-    },
-    {
       "type": "TAP_TRANSLATION",
-      "id": "ch3-l4-ex2",
-      "prompt": { "en": "the people of Paradise", "ur": "جنت والے" },
-      "direction": "en_to_ar",
-      "answer": "أَهْلُ الْجَنَّةِ",
-      "choices": ["أَهْلُ الْجَنَّةِ", "أَهْلُ الدُّنْيَا", "سَبِيلُ الْجَنَّةِ", "بَابُ الْجَنَّةِ"],
-      "xp_value": 5
+      "xp_value": 5,
+      "prompt": {
+        "ar": "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",
+        "ar_plain": "بسم الله الرحمن الرحيم",
+        "translit": "—",
+        "en": "In the name of Allah, the Most Gracious, the Most Merciful.",
+        "ur": "اللہ کے نام سے جو بڑا مہربان، نہایت رحم کرنے والا ہے۔"
+      },
+      "options": [
+        {
+          "en": "In the name of Allah, the Most Gracious, the Most Merciful."
+        },
+        {
+          "en": "In the name of Allah, the Lord of worlds."
+        },
+        {
+          "en": "Praise be to Allah, the Most Gracious."
+        },
+        {
+          "en": "With the mercy of Allah, the Most Merciful."
+        }
+      ],
+      "correct_index": 0
     },
     {
-      "type": "FILL_BLANK",
+      "id": "ch3-l4-ex2",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 5,
+      "prompt": {
+        "ar": "أَهْلُ الْجَنَّةِ",
+        "ar_plain": "أهل الجنة",
+        "translit": "—",
+        "en": "the people of Paradise",
+        "ur": "جنت والے"
+      },
+      "options": [
+        {
+          "en": "أَهْلُ الْجَنَّةِ"
+        },
+        {
+          "en": "أَهْلُ الدُّنْيَا"
+        },
+        {
+          "en": "سَبِيلُ الْجَنَّةِ"
+        },
+        {
+          "en": "بَابُ الْجَنَّةِ"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
       "id": "ch3-l4-ex3",
-      "template": { "en": "In idafa: كِتَابُ ___ = the student's book", "ur": "اضافہ میں: كِتَابُ ___ = طالب کی کتاب" },
-      "blank_label": { "en": "choose the correct form", "ur": "صحیح شکل چنیں" },
-      "answer": "الطَّالِبِ",
-      "choices": ["الطَّالِبِ", "الطَّالِبُ", "طَالِبٌ", "الطَّالِبَ"],
-      "explanation": {
+      "type": "FILL_BLANK",
+      "xp_value": 5,
+      "mode": "TAP",
+      "sentence_ar": "In idafa: كِتَابُ ___",
+      "hint": {
+        "en": "the student's book",
+        "ur": "طالب کی کتاب"
+      },
+      "options": [
+        {
+          "ar": "الطَّالِبِ",
+          "ar_plain": "الطالب",
+          "translit": "—",
+          "en": "الطَّالِبِ"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "—",
+          "en": "الطَّالِبُ"
+        },
+        {
+          "ar": "طَالِبٌ",
+          "ar_plain": "طالب",
+          "translit": "—",
+          "en": "طَالِبٌ"
+        },
+        {
+          "ar": "الطَّالِبَ",
+          "ar_plain": "الطالب",
+          "translit": "—",
+          "en": "الطَّالِبَ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الطَّالِبِ",
+        "ar_plain": "الطالب",
+        "translit": "—",
+        "en": "الطَّالِبِ"
+      },
+      "explanation_on_wrong": {
         "en": "مضاف إليه (second noun of idafa) ALWAYS takes kasra → الطَّالِبِ.",
         "ur": "مضاف إليه (اضافہ کا دوسرا اسم) ہمیشہ کسرہ لیتا ہے → الطَّالِبِ۔"
-      },
-      "xp_value": 5
+      }
     },
     {
-      "type": "FILL_BLANK",
       "id": "ch3-l4-ex4",
-      "template": { "en": "يَا ___ = O Teacher! (choose the right form after يَا)", "ur": "يَا ___ = اے استاد! (يَا کے بعد صحیح شکل چنیں)" },
-      "blank_label": { "en": "complete the address", "ur": "ندا مکمل کریں" },
-      "answer": "أُسْتَاذُ",
-      "choices": ["أُسْتَاذُ", "أُسْتَاذٌ", "الأُسْتَاذُ", "أُسْتَاذَ"],
-      "explanation": {
+      "type": "FILL_BLANK",
+      "xp_value": 5,
+      "mode": "TAP",
+      "sentence_ar": "يَا ___",
+      "hint": {
+        "en": "O Teacher! (choose the right form after يَا)",
+        "ur": "اے استاد! (يَا کے بعد صحیح شکل چنیں)"
+      },
+      "options": [
+        {
+          "ar": "أُسْتَاذُ",
+          "ar_plain": "أستاذ",
+          "translit": "—",
+          "en": "أُسْتَاذُ"
+        },
+        {
+          "ar": "أُسْتَاذٌ",
+          "ar_plain": "أستاذ",
+          "translit": "—",
+          "en": "أُسْتَاذٌ"
+        },
+        {
+          "ar": "الأُسْتَاذُ",
+          "ar_plain": "الأستاذ",
+          "translit": "—",
+          "en": "الأُسْتَاذُ"
+        },
+        {
+          "ar": "أُسْتَاذَ",
+          "ar_plain": "أستاذ",
+          "translit": "—",
+          "en": "أُسْتَاذَ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أُسْتَاذُ",
+        "ar_plain": "أستاذ",
+        "translit": "—",
+        "en": "أُسْتَاذُ"
+      },
+      "explanation_on_wrong": {
         "en": "After يَا, tanween disappears: أُسْتَاذٌ → يَا أُسْتَاذُ.",
         "ur": "يَا کے بعد تنوین غائب: أُسْتَاذٌ → يَا أُسْتَاذُ۔"
-      },
-      "xp_value": 5
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
       "id": "ch3-l4-ex5",
-      "instruction": { "en": "Build: 'Whose is this mosque?'", "ur": "بنائیں: 'یہ مسجد کس کی ہے؟'" },
-      "word_bank": ["لِمَنْ", "هٰذَا", "الْمَسْجِدُ", "أَيْنَ", "مَسْجِدٌ", "مَنْ"],
-      "answer": ["لِمَنْ", "هٰذَا", "الْمَسْجِدُ"],
-      "explanation": {
+      "type": "BUILD_SENTENCE",
+      "xp_value": 5,
+      "target_translation": {
+        "en": "Build: 'Whose is this mosque?'",
+        "ur": "بنائیں: 'یہ مسجد کس کی ہے؟'"
+      },
+      "tiles": [
+        {
+          "ar": "لِمَنْ",
+          "ar_plain": "لمن",
+          "translit": "—",
+          "en": "لِمَنْ"
+        },
+        {
+          "ar": "هٰذَا",
+          "ar_plain": "هذا",
+          "translit": "—",
+          "en": "هٰذَا"
+        },
+        {
+          "ar": "الْمَسْجِدُ",
+          "ar_plain": "المسجد",
+          "translit": "—",
+          "en": "الْمَسْجِدُ"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "—",
+          "en": "أَيْنَ"
+        },
+        {
+          "ar": "مَسْجِدٌ",
+          "ar_plain": "مسجد",
+          "translit": "—",
+          "en": "مَسْجِدٌ"
+        },
+        {
+          "ar": "مَنْ",
+          "ar_plain": "من",
+          "translit": "—",
+          "en": "مَنْ"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "explanation_on_wrong": {
         "en": "لِمَنْ (whose?) + هٰذَا (this) + الْمَسْجِدُ (the mosque). الْمَسْجِدُ is definite because it's a specific mosque.",
         "ur": "لِمَنْ (کس کا؟) + هٰذَا (یہ) + الْمَسْجِدُ (مسجد)۔ الْمَسْجِدُ معرفہ ہے کیونکہ مخصوص مسجد مراد ہے۔"
-      },
-      "xp_value": 5
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
       "id": "ch3-l4-ex6",
-      "instruction": { "en": "Build the idafa: 'the mercy of Allah'", "ur": "اضافہ بنائیں: 'اللہ کی رحمت'" },
-      "word_bank": ["رَحْمَةُ", "اللَّهِ", "رَحْمَةٌ", "اللَّهُ", "مِنَ", "فَضْلُ"],
-      "answer": ["رَحْمَةُ", "اللَّهِ"],
-      "explanation": {
+      "type": "BUILD_SENTENCE",
+      "xp_value": 5,
+      "target_translation": {
+        "en": "Build the idafa: 'the mercy of Allah'",
+        "ur": "اضافہ بنائیں: 'اللہ کی رحمت'"
+      },
+      "tiles": [
+        {
+          "ar": "رَحْمَةُ",
+          "ar_plain": "رحمة",
+          "translit": "—",
+          "en": "رَحْمَةُ"
+        },
+        {
+          "ar": "اللَّهِ",
+          "ar_plain": "الله",
+          "translit": "—",
+          "en": "اللَّهِ"
+        },
+        {
+          "ar": "رَحْمَةٌ",
+          "ar_plain": "رحمة",
+          "translit": "—",
+          "en": "رَحْمَةٌ"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "—",
+          "en": "اللَّهُ"
+        },
+        {
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "—",
+          "en": "مِنَ"
+        },
+        {
+          "ar": "فَضْلُ",
+          "ar_plain": "فضل",
+          "translit": "—",
+          "en": "فَضْلُ"
+        }
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "explanation_on_wrong": {
         "en": "رَحْمَةُ (mercy of — no tanween, مضاف) + اللَّهِ (Allah — kasra, مضاف إليه).",
         "ur": "رَحْمَةُ (رحمت — بغیر تنوین، مضاف) + اللَّهِ (اللہ — کسرہ، مضاف إليه)۔"
-      },
-      "xp_value": 5
+      }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch3-l4-ex7",
-      "statement": { "en": "In بِسْمِ اللَّهِ, the بِ is a preposition meaning 'in'.", "ar": "في بِسْمِ اللَّهِ، البِ حرف جر بمعنى 'في'.", "ur": "بِسْمِ اللَّهِ میں بِ حرف جر ہے جس کا مطلب 'میں' ہے۔" },
-      "answer": true,
-      "explanation": {
+      "statement": {
+        "en": "In بِسْمِ اللَّهِ, the بِ is a preposition meaning 'in'.",
+        "ar": "في بِسْمِ اللَّهِ، البِ حرف جر بمعنى 'في'.",
+        "ur": "بِسْمِ اللَّهِ میں بِ حرف جر ہے جس کا مطلب 'میں' ہے۔"
+      },
+      "xp_value": 5,
+      "correct_answer": true,
+      "explanation_on_wrong": {
         "en": "Correct — بِ means 'in/with'. So بِسْمِ اللَّهِ = in (بِ) + name (اسْمِ, مضاف) + of Allah (اللَّهِ, مضاف إليه).",
         "ur": "درست — بِ کا مطلب 'میں/کے ساتھ' ہے۔ لہذا بِسْمِ اللَّهِ = میں (بِ) + نام (اسْمِ، مضاف) + اللہ کا (اللَّهِ، مضاف إليه)۔"
-      },
-      "xp_value": 5
+      }
     },
     {
-      "type": "MATCHING",
       "id": "ch3-l4-ex8",
-      "instruction": { "en": "Match each idafa phrase to its meaning.", "ur": "ہر اضافی ترکیب کو اس کے معنی سے ملائیں۔" },
-      "pairs": [
-        { "ar": "يَوْمُ الْقِيَامَةِ", "en": "Day of Resurrection" },
-        { "ar": "مَلِكُ النَّاسِ", "en": "King of mankind" },
-        { "ar": "فَضْلُ اللَّهِ", "en": "the grace of Allah" },
-        { "ar": "نُورُ السَّمَاءِ", "en": "the light of the sky" },
-        { "ar": "عَبْدُ اللَّهِ", "en": "servant of Allah" },
-        { "ar": "أَهْلُ الْجَنَّةِ", "en": "people of Paradise" }
+      "type": "MATCHING",
+      "xp_value": 5,
+      "left_column": [
+        {
+          "ar": "يَوْمُ الْقِيَامَةِ",
+          "ar_plain": "يوم القيامة",
+          "translit": "—",
+          "en": "Day of Resurrection"
+        },
+        {
+          "ar": "مَلِكُ النَّاسِ",
+          "ar_plain": "ملك الناس",
+          "translit": "—",
+          "en": "King of mankind"
+        },
+        {
+          "ar": "فَضْلُ اللَّهِ",
+          "ar_plain": "فضل الله",
+          "translit": "—",
+          "en": "the grace of Allah"
+        },
+        {
+          "ar": "نُورُ السَّمَاءِ",
+          "ar_plain": "نور السماء",
+          "translit": "—",
+          "en": "the light of the sky"
+        },
+        {
+          "ar": "عَبْدُ اللَّهِ",
+          "ar_plain": "عبد الله",
+          "translit": "—",
+          "en": "servant of Allah"
+        },
+        {
+          "ar": "أَهْلُ الْجَنَّةِ",
+          "ar_plain": "أهل الجنة",
+          "translit": "—",
+          "en": "people of Paradise"
+        }
       ],
-      "xp_value": 5
+      "right_column": [
+        {
+          "en": "King of mankind"
+        },
+        {
+          "en": "the grace of Allah"
+        },
+        {
+          "en": "the light of the sky"
+        },
+        {
+          "en": "servant of Allah"
+        },
+        {
+          "en": "people of Paradise"
+        },
+        {
+          "en": "Day of Resurrection"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ]
     }
   ],
-
   "reveal": {
+    "concept_name": {
+      "en": "الإضافة in the Quran",
+      "ar": "الإِضَافَة فِي الْقُرْآن",
+      "ur": "قرآن میں اضافہ"
+    },
     "ayah": {
       "surah": 1,
       "ayah": 2,
@@ -165,16 +444,18 @@
       "en": "All praise is for Allah, Lord of all the worlds.",
       "ur": "تمام تعریف اللہ کے لیے ہے جو سارے جہانوں کا رب ہے۔"
     },
-    "highlighted_word": "رَبِّ الْعَالَمِينَ",
-    "noor_comment": {
+    "highlighted_word_indices": [
+      2
+    ],
+    "noor_explanation": {
       "en": "رَبِّ الْعَالَمِينَ — another idafa. رَبِّ (Lord of — مضاف, no tanween) + الْعَالَمِينَ (the worlds — مضاف إليه). The very first phrase most of us ever memorized in Arabic — and it is an idafa. You now know the grammar of every word in the first three ayahs of Al-Fatiha.",
       "ur": "رَبِّ الْعَالَمِينَ — ایک اور اضافہ۔ رَبِّ (رب — مضاف، بغیر تنوین) + الْعَالَمِينَ (جہانوں — مضاف إليه)۔ پہلا جملہ جو ہم میں سے اکثر نے عربی میں حفظ کیا — اور یہ ایک اضافہ ہے۔ اب آپ الفاتحہ کی پہلی تین آیات کے ہر لفظ کی گرامر جانتے ہیں۔"
-    },
-    "parse_tokens": [
-      { "ar": "الْحَمْدُ", "label": "مبتدأ", "en": "all praise (subject)" },
-      { "ar": "لِلَّهِ", "label": "جار ومجرور — خبر", "en": "for Allah (predicate)" },
-      { "ar": "رَبِّ", "label": "مضاف — نعت لله", "en": "Lord of (adjective, مضاف)" },
-      { "ar": "الْعَالَمِينَ", "label": "مضاف إليه", "en": "the worlds — kasra" }
-    ]
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You have completed this lesson on idafa (the possessive construction). Review what you learned and continue.",
+      "ur": "آپ نے اضافہ (ملکیتی ترکیب) پر یہ سبق مکمل کیا۔ سیکھی ہوئی باتیں دہرائیں اور آگے بڑھیں۔"
+    }
   }
 }

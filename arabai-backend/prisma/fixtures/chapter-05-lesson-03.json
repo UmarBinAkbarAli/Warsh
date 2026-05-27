@@ -1,7 +1,6 @@
 {
   "schema_version": "1.0",
   "template": "STANDARD",
-
   "_meta": {
     "_note": "Chapter 5, Lesson 3 — لام الملكية with لي، لك، له، لها. Quranic reveal: لَهُ مَا فِي السَّمَاوَاتِ. Authored against warsh-content-schema.ts v1.0.",
     "chapter_order": 5,
@@ -9,7 +8,6 @@
     "estimated_minutes": 10,
     "xp_reward": 10
   },
-
   "hook": {
     "ayah": {
       "surah": 2,
@@ -26,7 +24,6 @@
     },
     "autoplay": true
   },
-
   "discover_cards": [
     {
       "type": "CONCEPT",
@@ -42,27 +39,57 @@
     },
     {
       "type": "WORD",
-      "text": { "ar": "لِي كِتَابٌ", "ar_plain": "لي كتاب", "translit": "lī kitābun", "en": "I have a book", "ur": "میرے پاس کتاب ہے" },
+      "text": {
+        "ar": "لِي كِتَابٌ",
+        "ar_plain": "لي كتاب",
+        "translit": "lī kitābun",
+        "en": "I have a book",
+        "ur": "میرے پاس کتاب ہے"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/li-kitab.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "لَكَ قَلَمٌ", "ar_plain": "لك قلم", "translit": "laka qalamun", "en": "you have a pen", "ur": "تمہارے پاس قلم ہے" },
+      "text": {
+        "ar": "لَكَ قَلَمٌ",
+        "ar_plain": "لك قلم",
+        "translit": "laka qalamun",
+        "en": "you have a pen",
+        "ur": "تمہارے پاس قلم ہے"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/laka-qalam.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "لَهُ بَيْتٌ", "ar_plain": "له بيت", "translit": "lahu baytun", "en": "he has a house", "ur": "اس کے پاس گھر ہے" },
+      "text": {
+        "ar": "لَهُ بَيْتٌ",
+        "ar_plain": "له بيت",
+        "translit": "lahu baytun",
+        "en": "he has a house",
+        "ur": "اس کے پاس گھر ہے"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/lahu-bayt.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "لَهَا مَدْرَسَةٌ", "ar_plain": "لها مدرسة", "translit": "lahā madrasatun", "en": "she has a school", "ur": "اس کے پاس مدرسہ ہے" },
+      "text": {
+        "ar": "لَهَا مَدْرَسَةٌ",
+        "ar_plain": "لها مدرسة",
+        "translit": "lahā madrasatun",
+        "en": "she has a school",
+        "ur": "اس کے پاس مدرسہ ہے"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/laha-madrasah.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "لَكُمْ آيَةٌ", "ar_plain": "لكم آية", "translit": "lakum āyatun", "en": "for you is a sign", "ur": "تمہارے لیے نشانی ہے" },
+      "text": {
+        "ar": "لَكُمْ آيَةٌ",
+        "ar_plain": "لكم آية",
+        "translit": "lakum āyatun",
+        "en": "for you is a sign",
+        "ur": "تمہارے لیے نشانی ہے"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/lakum-ayah.mp3",
       "explanation": {
         "en": "You saw لَكُمْ in the Chapter 5 opening ayah: هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً — for you, a sign.",
@@ -71,83 +98,250 @@
     },
     {
       "type": "GRAMMAR_NOTE",
-      "title": { "en": "Possession Without 'Have'", "ar": "الْمِلْكِيَّة بِدُونِ فِعْل", "ur": "'have' کے بغیر ملکیت" },
+      "title": {
+        "en": "Possession Without 'Have'",
+        "ar": "الْمِلْكِيَّة بِدُونِ فِعْل",
+        "ur": "'have' کے بغیر ملکیت"
+      },
       "body": {
         "en": "Arabic does not need a verb like 'have' here. It says:\n\nلِي كِتَابٌ\nliterally: to me, a book.\nmeaning: I have a book.\n\nThis is normal, elegant Arabic.",
         "ur": "عربی کو یہاں 'have' جیسا فعل نہیں چاہیے۔ وہ کہتی ہے:\n\nلِي كِتَابٌ\nلفظی: میرے لیے، کتاب۔\nمعنی: میرے پاس کتاب ہے۔\n\nیہ عام اور خوبصورت عربی ہے۔"
       }
     }
   ],
-
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
       "id": "ch05-l03-ex01",
-      "prompt": { "ar": "لِي كِتَابٌ", "en": "I have a book", "ur": "میرے پاس کتاب ہے" },
-      "direction": "ar_to_en",
-      "answer": "I have a book",
-      "choices": ["I have a book", "you have a pen", "he has a house", "this is a book"],
-      "xp_value": 1
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "لِي كِتَابٌ",
+        "ar_plain": "لي كتاب",
+        "translit": "lī kitābun",
+        "en": "I have a book",
+        "ur": "میرے پاس کتاب ہے"
+      },
+      "options": [
+        {
+          "en": "I have a book"
+        },
+        {
+          "en": "you have a pen"
+        },
+        {
+          "en": "he has a house"
+        },
+        {
+          "en": "this is a book"
+        }
+      ],
+      "correct_index": 0
     },
     {
-      "type": "TAP_TRANSLATION",
       "id": "ch05-l03-ex02",
-      "prompt": { "en": "you have a pen", "ur": "تمہارے پاس قلم ہے" },
-      "direction": "en_to_ar",
-      "answer": "لَكَ قَلَمٌ",
-      "choices": ["لَكَ قَلَمٌ", "لِي قَلَمٌ", "لَهُ بَيْتٌ", "هَٰذَا قَلَمٌ"],
-      "xp_value": 1
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "لَكَ قَلَمٌ",
+        "ar_plain": "لك قلم",
+        "translit": "laka qalamun",
+        "en": "you have a pen",
+        "ur": "تمہارے پاس قلم ہے"
+      },
+      "options": [
+        {
+          "en": "you have a pen"
+        },
+        {
+          "en": "لِي قَلَمٌ"
+        },
+        {
+          "en": "he has a house"
+        },
+        {
+          "en": "هَٰذَا قَلَمٌ"
+        }
+      ],
+      "correct_index": 0
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch05-l03-ex03",
-      "statement": { "en": "لَهُ can mean 'he has' or 'to him belongs', depending on context.", "ur": "لَهُ سیاق کے مطابق 'اس کے پاس ہے' یا 'اسی کا ہے' ہو سکتا ہے۔" },
-      "answer": true,
-      "explanation": {
+      "statement": {
+        "en": "لَهُ can mean 'he has' or 'to him belongs', depending on context.",
+        "ur": "لَهُ سیاق کے مطابق 'اس کے پاس ہے' یا 'اسی کا ہے' ہو سکتا ہے۔"
+      },
+      "xp_value": 1,
+      "correct_answer": true,
+      "explanation_on_wrong": {
         "en": "True — لَهُ literally means 'to him / for him'. In Quranic context it often means 'to Him belongs'.",
         "ur": "درست — لَهُ کا لفظی معنی 'اس کے لیے / اس کو' ہے۔ قرآنی سیاق میں یہ اکثر 'اسی کا ہے' کے معنی دیتا ہے۔"
-      },
-      "xp_value": 1
+      }
     },
     {
-      "type": "FILL_BLANK",
       "id": "ch05-l03-ex04",
-      "template": { "en": "___ بَيْتٌ = he has a house", "ur": "___ بَيْتٌ = اس کے پاس گھر ہے" },
-      "blank_label": { "en": "choose the correct possession phrase", "ur": "درست ملکیت ترکیب چنیں" },
-      "answer": "لَهُ",
-      "choices": ["لَهُ", "لِي", "لَكَ", "لَهَا"],
-      "explanation": {
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "___ بَيْتٌ",
+      "hint": {
+        "en": "he has a house",
+        "ur": "اس کے پاس گھر ہے"
+      },
+      "options": [
+        {
+          "ar": "لَهُ",
+          "ar_plain": "له",
+          "translit": "—",
+          "en": "لَهُ"
+        },
+        {
+          "ar": "لِي",
+          "ar_plain": "لي",
+          "translit": "—",
+          "en": "لِي"
+        },
+        {
+          "ar": "لَكَ",
+          "ar_plain": "لك",
+          "translit": "—",
+          "en": "لَكَ"
+        },
+        {
+          "ar": "لَهَا",
+          "ar_plain": "لها",
+          "translit": "—",
+          "en": "لَهَا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لَهُ",
+        "ar_plain": "له",
+        "translit": "—",
+        "en": "لَهُ"
+      },
+      "explanation_on_wrong": {
         "en": "لَهُ means 'to him / for him' — he has.",
         "ur": "لَهُ کا معنی 'اس کے لیے' — یعنی اس کے پاس ہے۔"
-      },
-      "xp_value": 1
+      }
     },
     {
-      "type": "MATCHING",
       "id": "ch05-l03-ex05",
-      "instruction": { "en": "Match each possession phrase.", "ur": "ہر ملکیت ترکیب کو ملائیں۔" },
-      "pairs": [
-        { "ar": "لِي كِتَابٌ", "en": "I have a book" },
-        { "ar": "لَكَ قَلَمٌ", "en": "you have a pen" },
-        { "ar": "لَهُ بَيْتٌ", "en": "he has a house" },
-        { "ar": "لَهَا مَدْرَسَةٌ", "en": "she has a school" }
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        {
+          "ar": "لِي كِتَابٌ",
+          "ar_plain": "لي كتاب",
+          "translit": "lī kitābun",
+          "en": "I have a book",
+          "ur": "میرے پاس کتاب ہے"
+        },
+        {
+          "ar": "لَكَ قَلَمٌ",
+          "ar_plain": "لك قلم",
+          "translit": "laka qalamun",
+          "en": "you have a pen",
+          "ur": "تمہارے پاس قلم ہے"
+        },
+        {
+          "ar": "لَهُ بَيْتٌ",
+          "ar_plain": "له بيت",
+          "translit": "lahu baytun",
+          "en": "he has a house",
+          "ur": "اس کے پاس گھر ہے"
+        },
+        {
+          "ar": "لَهَا مَدْرَسَةٌ",
+          "ar_plain": "لها مدرسة",
+          "translit": "lahā madrasatun",
+          "en": "she has a school",
+          "ur": "اس کے پاس مدرسہ ہے"
+        }
       ],
-      "xp_value": 1
+      "right_column": [
+        {
+          "en": "you have a pen"
+        },
+        {
+          "en": "he has a house"
+        },
+        {
+          "en": "she has a school"
+        },
+        {
+          "en": "I have a book"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
     },
     {
-      "type": "BUILD_SENTENCE",
       "id": "ch05-l03-ex06",
-      "instruction": { "en": "Build: 'for you is a sign'", "ur": "بنائیں: 'تمہارے لیے نشانی ہے'" },
-      "word_bank": ["لَكُمْ", "آيَةٌ", "لِي", "كِتَابٌ", "هَٰذِهِ"],
-      "answer": ["لَكُمْ", "آيَةٌ"],
-      "explanation": {
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Build: 'for you is a sign'",
+        "ur": "بنائیں: 'تمہارے لیے نشانی ہے'"
+      },
+      "tiles": [
+        {
+          "ar": "لَكُمْ",
+          "ar_plain": "لكم",
+          "translit": "—",
+          "en": "لَكُمْ"
+        },
+        {
+          "ar": "آيَةٌ",
+          "ar_plain": "آية",
+          "translit": "—",
+          "en": "آيَةٌ"
+        },
+        {
+          "ar": "لِي",
+          "ar_plain": "لي",
+          "translit": "—",
+          "en": "لِي"
+        },
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "—",
+          "en": "كِتَابٌ"
+        },
+        {
+          "ar": "هَٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "—",
+          "en": "هَٰذِهِ"
+        }
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "explanation_on_wrong": {
         "en": "لَكُمْ آيَةٌ means 'for you is a sign.' You saw it in Al-A'raf 7:73.",
         "ur": "لَكُمْ آيَةٌ کا معنی ہے: 'تمہارے لیے نشانی ہے۔' آپ نے اسے الاعراف 7:73 میں دیکھا۔"
-      },
-      "xp_value": 1
+      }
     }
   ],
-
   "reveal": {
     "ayah": {
       "surah": 2,
@@ -158,13 +352,19 @@
       "ur": "اسی کا ہے جو کچھ آسمانوں میں ہے اور جو کچھ زمین میں ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-255-part-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "لَهُ here is not ordinary ownership. It means everything in the heavens and earth belongs to Allah. The same small structure you practiced — لِي, لَكَ, لَهُ — opens one of the greatest ayat Muslims recite: Ayat al-Kursi.",
       "ur": "یہاں لَهُ عام ملکیت نہیں۔ اس کا معنی ہے کہ آسمانوں اور زمین کی ہر چیز اللہ ہی کی ہے۔ وہی چھوٹی ساخت جو آپ نے مشق کی — لِي، لَكَ، لَهُ — آیت الکرسی جیسے عظیم مقام کو کھولتی ہے۔"
+    },
+    "concept_name": {
+      "en": "الإشارة in the Quran",
+      "ar": "أسماء الإشارة فِي الْقُرْآن",
+      "ur": "قرآن میں اسمائے اشارہ"
     }
   },
-
   "close": {
     "noor_message": {
       "en": "You learned how Arabic says possession without a separate 'have' verb: لِي, لَكَ, لَهُ, لَهَا. Small words, very large Quranic reach.",

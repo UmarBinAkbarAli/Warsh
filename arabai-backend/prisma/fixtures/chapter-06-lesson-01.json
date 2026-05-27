@@ -27,7 +27,11 @@
   "discover_cards": [
     {
       "type": "CONCEPT",
-      "concept": { "en": "A Described Subject", "ar": "مُبْتَدَأ مَوْصُوف", "ur": "صفت والا مبتدا" },
+      "concept": {
+        "en": "A Described Subject",
+        "ar": "مُبْتَدَأ مَوْصُوف",
+        "ur": "صفت والا مبتدا"
+      },
       "explanation": {
         "en": "الرَّجُلُ الْكَرِيمُ ذَهَبَ\n\nالرَّجُلُ = the man\nالْكَرِيمُ = the generous\nذَهَبَ = went\n\nThe subject can be more than one word before the sentence completes.",
         "ur": "الرَّجُلُ الْكَرِيمُ ذَهَبَ\n\nالرَّجُلُ = آدمی\nالْكَرِيمُ = سخی\nذَهَبَ = گیا\n\nجملہ مکمل ہونے سے پہلے مبتدا ایک سے زیادہ لفظوں پر مشتمل ہو سکتا ہے۔"
@@ -35,22 +39,44 @@
     },
     {
       "type": "WORD",
-      "text": { "ar": "الرَّجُلُ الْكَرِيمُ ذَهَبَ", "ar_plain": "الرجل الكريم ذهب", "translit": "ar-rajulu al-karīmu dhahaba", "en": "the generous man went", "ur": "سخی آدمی گیا" },
+      "text": {
+        "ar": "الرَّجُلُ الْكَرِيمُ ذَهَبَ",
+        "ar_plain": "الرجل الكريم ذهب",
+        "translit": "ar-rajulu al-karīmu dhahaba",
+        "en": "the generous man went",
+        "ur": "سخی آدمی گیا"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/arrajul-alkarim-dhahaba.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "الطَّالِبُ الْمُجْتَهِدُ ذَهَبَ", "ar_plain": "الطالب المجتهد ذهب", "translit": "aṭ-ṭālibu al-mujtahidu dhahaba", "en": "the hardworking student went", "ur": "محنتی طالب علم گیا" },
+      "text": {
+        "ar": "الطَّالِبُ الْمُجْتَهِدُ ذَهَبَ",
+        "ar_plain": "الطالب المجتهد ذهب",
+        "translit": "aṭ-ṭālibu al-mujtahidu dhahaba",
+        "en": "the hardworking student went",
+        "ur": "محنتی طالب علم گیا"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/attalib-almujtahid-dhahaba.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "الْوَلَدُ الصَّالِحُ ذَهَبَ", "ar_plain": "الولد الصالح ذهب", "translit": "al-waladu aṣ-ṣāliḥu dhahaba", "en": "the righteous boy went", "ur": "نیک لڑکا گیا" },
+      "text": {
+        "ar": "الْوَلَدُ الصَّالِحُ ذَهَبَ",
+        "ar_plain": "الولد الصالح ذهب",
+        "translit": "al-waladu aṣ-ṣāliḥu dhahaba",
+        "en": "the righteous boy went",
+        "ur": "نیک لڑکا گیا"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/alwalad-assalih-dhahaba.mp3"
     },
     {
       "type": "GRAMMAR_NOTE",
-      "title": { "en": "Do not stop too early", "ar": "لَا تَقِفْ مُبَكِّرًا", "ur": "جلدی نہ رکیں" },
+      "title": {
+        "en": "Do not stop too early",
+        "ar": "لَا تَقِفْ مُبَكِّرًا",
+        "ur": "جلدی نہ رکیں"
+      },
       "body": {
         "en": "الرَّجُلُ الْكَرِيمُ is one described noun phrase. ذَهَبَ completes the idea.",
         "ur": "الرَّجُلُ الْكَرِيمُ ایک صفت والی اسمی ترکیب ہے۔ ذَهَبَ بات مکمل کرتا ہے۔"
@@ -58,17 +84,234 @@
     }
   ],
   "exercises": [
-    { "type": "TAP_TRANSLATION", "id": "ch06-l01-ex01", "prompt": { "ar": "الرَّجُلُ الْكَرِيمُ ذَهَبَ", "en": "the generous man went", "ur": "سخی آدمی گیا" }, "direction": "ar_to_en", "answer": "the generous man went", "choices": ["the generous man went", "the man is generous", "a generous man", "the teacher went"], "xp_value": 1 },
-    { "type": "TAP_TRANSLATION", "id": "ch06-l01-ex02", "prompt": { "en": "the hardworking student went", "ur": "محنتی طالب علم گیا" }, "direction": "en_to_ar", "answer": "الطَّالِبُ الْمُجْتَهِدُ ذَهَبَ", "choices": ["الطَّالِبُ الْمُجْتَهِدُ ذَهَبَ", "طَالِبٌ مُجْتَهِدٌ", "ذَهَبَ الْوَلَدُ", "لِي كِتَابٌ"], "xp_value": 1 },
-    { "type": "TRUE_FALSE", "id": "ch06-l01-ex03", "statement": { "en": "In الرَّجُلُ الْكَرِيمُ ذَهَبَ, الْكَرِيمُ describes الرَّجُلُ.", "ur": "الرَّجُلُ الْكَرِيمُ ذَهَبَ میں الْكَرِيمُ، الرَّجُلُ کی صفت ہے۔" }, "answer": true, "explanation": { "en": "True — both are definite and masculine, so الْكَرِيمُ is the adjective.", "ur": "درست — دونوں معرفہ اور مذکر ہیں، اس لیے الْكَرِيمُ صفت ہے۔" }, "xp_value": 1 },
-    { "type": "FILL_BLANK", "id": "ch06-l01-ex04", "template": { "en": "الْوَلَدُ ___ ذَهَبَ = the righteous boy went", "ur": "الْوَلَدُ ___ ذَهَبَ = نیک لڑکا گیا" }, "blank_label": { "en": "choose the definite adjective", "ur": "معرفہ صفت چنیں" }, "answer": "الصَّالِحُ", "choices": ["الصَّالِحُ", "صَالِحٌ", "صَالِحَةٌ", "ذَهَبَ"], "xp_value": 1 },
-    { "type": "MATCHING", "id": "ch06-l01-ex05", "instruction": { "en": "Match each sentence.", "ur": "ہر جملہ ملائیں۔" }, "pairs": [{ "ar": "الرَّجُلُ الْكَرِيمُ ذَهَبَ", "en": "the generous man went" }, { "ar": "الطَّالِبُ الْمُجْتَهِدُ ذَهَبَ", "en": "the hardworking student went" }, { "ar": "الْوَلَدُ الصَّالِحُ ذَهَبَ", "en": "the righteous boy went" }], "xp_value": 1 },
-    { "type": "GRAMMAR_PARSE", "id": "ch06-l01-ex06", "words": [{ "ar": "الرَّجُلُ", "en": "the man" }, { "ar": "الْكَرِيمُ", "en": "generous" }, { "ar": "ذَهَبَ", "en": "went" }], "available_roles": ["مبتدأ", "نعت", "خبر"], "correct_roles": ["مبتدأ", "نعت", "خبر"], "xp_value": 1 }
+    {
+      "id": "ch06-l01-ex01",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "الرَّجُلُ الْكَرِيمُ ذَهَبَ",
+        "ar_plain": "الرجل الكريم ذهب",
+        "translit": "ar-rajulu al-karīmu dhahaba",
+        "en": "the generous man went",
+        "ur": "سخی آدمی گیا"
+      },
+      "options": [
+        {
+          "en": "the generous man went"
+        },
+        {
+          "en": "the man is generous"
+        },
+        {
+          "en": "a generous man"
+        },
+        {
+          "en": "the teacher went"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "id": "ch06-l01-ex02",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "الطَّالِبُ الْمُجْتَهِدُ ذَهَبَ",
+        "ar_plain": "الطالب المجتهد ذهب",
+        "translit": "aṭ-ṭālibu al-mujtahidu dhahaba",
+        "en": "the hardworking student went",
+        "ur": "محنتی طالب علم گیا"
+      },
+      "options": [
+        {
+          "en": "the hardworking student went"
+        },
+        {
+          "en": "طَالِبٌ مُجْتَهِدٌ"
+        },
+        {
+          "en": "ذَهَبَ الْوَلَدُ"
+        },
+        {
+          "en": "لِي كِتَابٌ"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch06-l01-ex03",
+      "statement": {
+        "en": "In الرَّجُلُ الْكَرِيمُ ذَهَبَ, الْكَرِيمُ describes الرَّجُلُ.",
+        "ur": "الرَّجُلُ الْكَرِيمُ ذَهَبَ میں الْكَرِيمُ، الرَّجُلُ کی صفت ہے۔"
+      },
+      "xp_value": 1,
+      "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True — both are definite and masculine, so الْكَرِيمُ is the adjective.",
+        "ur": "درست — دونوں معرفہ اور مذکر ہیں، اس لیے الْكَرِيمُ صفت ہے۔"
+      }
+    },
+    {
+      "id": "ch06-l01-ex04",
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "الْوَلَدُ ___ ذَهَبَ",
+      "hint": {
+        "en": "the righteous boy went",
+        "ur": "نیک لڑکا گیا"
+      },
+      "options": [
+        {
+          "ar": "الصَّالِحُ",
+          "ar_plain": "الصالح",
+          "translit": "—",
+          "en": "الصَّالِحُ"
+        },
+        {
+          "ar": "صَالِحٌ",
+          "ar_plain": "صالح",
+          "translit": "—",
+          "en": "صَالِحٌ"
+        },
+        {
+          "ar": "صَالِحَةٌ",
+          "ar_plain": "صالحة",
+          "translit": "—",
+          "en": "صَالِحَةٌ"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "—",
+          "en": "ذَهَبَ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الصَّالِحُ",
+        "ar_plain": "الصالح",
+        "translit": "—",
+        "en": "الصَّالِحُ"
+      }
+    },
+    {
+      "id": "ch06-l01-ex05",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        {
+          "ar": "الرَّجُلُ الْكَرِيمُ ذَهَبَ",
+          "ar_plain": "الرجل الكريم ذهب",
+          "translit": "ar-rajulu al-karīmu dhahaba",
+          "en": "the generous man went",
+          "ur": "سخی آدمی گیا"
+        },
+        {
+          "ar": "الطَّالِبُ الْمُجْتَهِدُ ذَهَبَ",
+          "ar_plain": "الطالب المجتهد ذهب",
+          "translit": "aṭ-ṭālibu al-mujtahidu dhahaba",
+          "en": "the hardworking student went",
+          "ur": "محنتی طالب علم گیا"
+        },
+        {
+          "ar": "الْوَلَدُ الصَّالِحُ ذَهَبَ",
+          "ar_plain": "الولد الصالح ذهب",
+          "translit": "al-waladu aṣ-ṣāliḥu dhahaba",
+          "en": "the righteous boy went",
+          "ur": "نیک لڑکا گیا"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "the hardworking student went"
+        },
+        {
+          "en": "the righteous boy went"
+        },
+        {
+          "en": "the generous man went"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch06-l01-ex06",
+      "words": [
+        {
+          "ar": "الرَّجُلُ",
+          "ar_plain": "الرجل",
+          "translit": "—",
+          "en": "the man"
+        },
+        {
+          "ar": "الْكَرِيمُ",
+          "ar_plain": "الكريم",
+          "translit": "—",
+          "en": "generous"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "—",
+          "en": "went"
+        }
+      ],
+      "available_roles": [
+        "SUBJECT",
+        "ADJECTIVE",
+        "PREDICATE"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "ADJECTIVE",
+        "PREDICATE"
+      ],
+      "xp_value": 1,
+      "sentence_ar": "الرَّجُلُ الْكَرِيمُ ذَهَبَ"
+    }
   ],
   "reveal": {
-    "ayah": { "surah": 87, "ayah": 2, "label": "Al-A'la 87:2", "ar": "الَّذِي خَلَقَ فَسَوَّىٰ", "en": "Who created and proportioned.", "ur": "جس نے پیدا کیا، پھر درست بنایا۔", "audio_url": "https://cdn.warsh.app/audio/quran/al-ala-002-mishary.mp3" },
-    "highlighted_word_indices": [0],
-    "noor_explanation": { "en": "Today you prepared for الَّذِي by learning to hold a longer noun phrase in your mind before the sentence completes.", "ur": "آج آپ نے الَّذِي کی تیاری کی: جملہ مکمل ہونے سے پہلے لمبی اسمی ترکیب کو ذہن میں رکھنا۔" }
+    "ayah": {
+      "surah": 87,
+      "ayah": 2,
+      "label": "Al-A'la 87:2",
+      "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
+      "en": "Who created and proportioned.",
+      "ur": "جس نے پیدا کیا، پھر درست بنایا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-ala-002-mishary.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "noor_explanation": {
+      "en": "Today you prepared for الَّذِي by learning to hold a longer noun phrase in your mind before the sentence completes.",
+      "ur": "آج آپ نے الَّذِي کی تیاری کی: جملہ مکمل ہونے سے پہلے لمبی اسمی ترکیب کو ذہن میں رکھنا۔"
+    },
+    "concept_name": {
+      "en": "الصِّفَة in the Quran",
+      "ar": "الصِّفَة فِي الْقُرْآن",
+      "ur": "قرآن میں صفت"
+    }
   },
-  "close": { "noor_message": { "en": "You can now read a described subject followed by an action: الرَّجُلُ الْكَرِيمُ ذَهَبَ.", "ur": "آپ اب صفت والے مبتدا کے بعد فعل پڑھ سکتے ہیں: الرَّجُلُ الْكَرِيمُ ذَهَبَ۔" } }
+  "close": {
+    "noor_message": {
+      "en": "You can now read a described subject followed by an action: الرَّجُلُ الْكَرِيمُ ذَهَبَ.",
+      "ur": "آپ اب صفت والے مبتدا کے بعد فعل پڑھ سکتے ہیں: الرَّجُلُ الْكَرِيمُ ذَهَبَ۔"
+    }
+  }
 }

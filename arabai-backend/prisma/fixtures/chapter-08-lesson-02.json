@@ -27,7 +27,11 @@
   "discover_cards": [
     {
       "type": "CONCEPT",
-      "concept": { "en": "One sign across many verbs", "ar": "عَلَامَةٌ وَاحِدَةٌ فِي أَفْعَالٍ كَثِيرَة", "ur": "بہت سے افعال میں ایک ہی علامت" },
+      "concept": {
+        "en": "One sign across many verbs",
+        "ar": "عَلَامَةٌ وَاحِدَةٌ فِي أَفْعَالٍ كَثِيرَة",
+        "ur": "بہت سے افعال میں ایک ہی علامت"
+      },
       "explanation": {
         "en": "The root changes from verb to verb, but the feminine past-tense ending remains تْ.\n\nذَهَبَتْ - she went\nرَجَعَتْ - she returned\nجَلَسَتْ - she sat\nدَخَلَتْ - she entered",
         "ur": "جڑ فعل کے ساتھ بدلتی ہے، مگر مؤنث ماضی کی علامت تْ رہتی ہے۔\n\nذَهَبَتْ - وہ گئی\nرَجَعَتْ - وہ لوٹی\nجَلَسَتْ - وہ بیٹھی\nدَخَلَتْ - وہ داخل ہوئی"
@@ -35,34 +39,74 @@
     },
     {
       "type": "WORD",
-      "text": { "ar": "رَجَعَتْ", "ar_plain": "رجعت", "translit": "rajaat", "en": "she returned", "ur": "وہ لوٹی" },
+      "text": {
+        "ar": "رَجَعَتْ",
+        "ar_plain": "رجعت",
+        "translit": "rajaat",
+        "en": "she returned",
+        "ur": "وہ لوٹی"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/rajaat.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "جَلَسَتْ", "ar_plain": "جلست", "translit": "jalasat", "en": "she sat", "ur": "وہ بیٹھی" },
+      "text": {
+        "ar": "جَلَسَتْ",
+        "ar_plain": "جلست",
+        "translit": "jalasat",
+        "en": "she sat",
+        "ur": "وہ بیٹھی"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/jalasat.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "دَخَلَتْ", "ar_plain": "دخلت", "translit": "dakhalat", "en": "she entered", "ur": "وہ داخل ہوئی" },
+      "text": {
+        "ar": "دَخَلَتْ",
+        "ar_plain": "دخلت",
+        "translit": "dakhalat",
+        "en": "she entered",
+        "ur": "وہ داخل ہوئی"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/dakhalat.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "رَجَعَتِ الطَّالِبَةُ", "ar_plain": "رجعت الطالبة", "translit": "rajaati at-talibatu", "en": "the female student returned", "ur": "طالبہ واپس آئی" },
+      "text": {
+        "ar": "رَجَعَتِ الطَّالِبَةُ",
+        "ar_plain": "رجعت الطالبة",
+        "translit": "rajaati at-talibatu",
+        "en": "the female student returned",
+        "ur": "طالبہ واپس آئی"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/rajaat-at-talibah.mp3"
     },
     {
       "type": "CONTRAST",
-      "concept": { "en": "Masculine vs feminine verb", "ar": "المُذَكَّر وَالمُؤَنَّث", "ur": "مذکر اور مؤنث فعل" },
+      "concept": {
+        "en": "Masculine vs feminine verb",
+        "ar": "المُذَكَّر وَالمُؤَنَّث",
+        "ur": "مذکر اور مؤنث فعل"
+      },
       "explanation": {
         "en": "Compare: دَخَلَ means he entered. دَخَلَتْ means she entered. The تْ changes the doer.",
         "ur": "موازنہ کریں: دَخَلَ کا مطلب ہے وہ داخل ہوا۔ دَخَلَتْ کا مطلب ہے وہ داخل ہوئی۔ تْ فاعل بدل دیتی ہے۔"
       },
       "examples": [
-        { "ar": "دَخَلَ", "ar_plain": "دخل", "translit": "dakhala", "en": "he entered", "ur": "وہ داخل ہوا" },
-        { "ar": "دَخَلَتْ", "ar_plain": "دخلت", "translit": "dakhalat", "en": "she entered", "ur": "وہ داخل ہوئی" }
+        {
+          "ar": "دَخَلَ",
+          "ar_plain": "دخل",
+          "translit": "dakhala",
+          "en": "he entered",
+          "ur": "وہ داخل ہوا"
+        },
+        {
+          "ar": "دَخَلَتْ",
+          "ar_plain": "دخلت",
+          "translit": "dakhalat",
+          "en": "she entered",
+          "ur": "وہ داخل ہوئی"
+        }
       ]
     }
   ],
@@ -70,12 +114,30 @@
     {
       "type": "TAP_TRANSLATION",
       "id": "ch08-l02-ex01",
-      "prompt": { "ar": "رَجَعَتْ", "ar_plain": "رجعت", "translit": "rajaat", "en": "she returned", "ur": "وہ لوٹی" },
+      "prompt": {
+        "ar": "رَجَعَتْ",
+        "ar_plain": "رجعت",
+        "translit": "rajaat",
+        "en": "she returned",
+        "ur": "وہ لوٹی"
+      },
       "options": [
-        { "en": "she returned", "ur": "وہ لوٹی" },
-        { "en": "he entered", "ur": "وہ داخل ہوا" },
-        { "en": "my mother", "ur": "میری ماں" },
-        { "en": "your pen", "ur": "تمہارا قلم" }
+        {
+          "en": "she returned",
+          "ur": "وہ لوٹی"
+        },
+        {
+          "en": "he entered",
+          "ur": "وہ داخل ہوا"
+        },
+        {
+          "en": "my mother",
+          "ur": "میری ماں"
+        },
+        {
+          "en": "your pen",
+          "ur": "تمہارا قلم"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1
@@ -83,12 +145,30 @@
     {
       "type": "TAP_TRANSLATION",
       "id": "ch08-l02-ex02",
-      "prompt": { "ar": "دَخَلَتْ", "ar_plain": "دخلت", "translit": "dakhalat", "en": "she entered", "ur": "وہ داخل ہوئی" },
+      "prompt": {
+        "ar": "دَخَلَتْ",
+        "ar_plain": "دخلت",
+        "translit": "dakhalat",
+        "en": "she entered",
+        "ur": "وہ داخل ہوئی"
+      },
       "options": [
-        { "en": "she entered", "ur": "وہ داخل ہوئی" },
-        { "en": "he entered", "ur": "وہ داخل ہوا" },
-        { "en": "she sat", "ur": "وہ بیٹھی" },
-        { "en": "the book", "ur": "کتاب" }
+        {
+          "en": "she entered",
+          "ur": "وہ داخل ہوئی"
+        },
+        {
+          "en": "he entered",
+          "ur": "وہ داخل ہوا"
+        },
+        {
+          "en": "she sat",
+          "ur": "وہ بیٹھی"
+        },
+        {
+          "en": "the book",
+          "ur": "کتاب"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1
@@ -99,7 +179,13 @@
       "statement": {
         "en": "جَلَسَتْ and دَخَلَتْ both carry the same feminine تْ ending.",
         "ur": "جَلَسَتْ اور دَخَلَتْ دونوں کے آخر میں وہی مؤنث تْ ہے۔",
-        "ar_example": { "ar": "جَلَسَتْ / دَخَلَتْ", "ar_plain": "جلست دخلت", "translit": "jalasat / dakhalat", "en": "she sat / she entered", "ur": "وہ بیٹھی / وہ داخل ہوئی" }
+        "ar_example": {
+          "ar": "جَلَسَتْ / دَخَلَتْ",
+          "ar_plain": "جلست دخلت",
+          "translit": "jalasat / dakhalat",
+          "en": "she sat / she entered",
+          "ur": "وہ بیٹھی / وہ داخل ہوئی"
+        }
       },
       "correct_answer": true,
       "xp_value": 1
@@ -109,31 +195,92 @@
       "id": "ch08-l02-ex04",
       "mode": "TAP",
       "sentence_ar": "___ الطَّالِبَةُ",
-      "hint": { "en": "The female student returned", "ur": "طالبہ واپس آئی" },
+      "hint": {
+        "en": "The female student returned",
+        "ur": "طالبہ واپس آئی"
+      },
       "options": [
-        { "ar": "رَجَعَتِ", "ar_plain": "رجعت", "translit": "rajaati", "en": "she returned", "ur": "وہ لوٹی" },
-        { "ar": "رَجَعَ", "ar_plain": "رجع", "translit": "rajaa", "en": "he returned", "ur": "وہ لوٹا" },
-        { "ar": "قَلَمِي", "ar_plain": "قلمي", "translit": "qalami", "en": "my pen", "ur": "میرا قلم" },
-        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hadha", "en": "this", "ur": "یہ" }
+        {
+          "ar": "رَجَعَتِ",
+          "ar_plain": "رجعت",
+          "translit": "rajaati",
+          "en": "she returned",
+          "ur": "وہ لوٹی"
+        },
+        {
+          "ar": "رَجَعَ",
+          "ar_plain": "رجع",
+          "translit": "rajaa",
+          "en": "he returned",
+          "ur": "وہ لوٹا"
+        },
+        {
+          "ar": "قَلَمِي",
+          "ar_plain": "قلمي",
+          "translit": "qalami",
+          "en": "my pen",
+          "ur": "میرا قلم"
+        },
+        {
+          "ar": "هَذَا",
+          "ar_plain": "هذا",
+          "translit": "hadha",
+          "en": "this",
+          "ur": "یہ"
+        }
       ],
-      "correct_answer": { "ar": "رَجَعَتِ", "ar_plain": "رجعت", "translit": "rajaati", "en": "she returned", "ur": "وہ لوٹی" },
+      "correct_answer": {
+        "ar": "رَجَعَتِ",
+        "ar_plain": "رجعت",
+        "translit": "rajaati",
+        "en": "she returned",
+        "ur": "وہ لوٹی"
+      },
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch08-l02-ex05",
-      "target_translation": { "en": "The female student entered", "ur": "طالبہ داخل ہوئی" },
+      "target_translation": {
+        "en": "The female student entered",
+        "ur": "طالبہ داخل ہوئی"
+      },
       "tiles": [
-        { "ar": "دَخَلَتِ", "ar_plain": "دخلت", "translit": "dakhalati", "en": "she entered", "ur": "وہ داخل ہوئی" },
-        { "ar": "الطَّالِبَةُ", "ar_plain": "الطالبة", "translit": "at-talibatu", "en": "the female student", "ur": "طالبہ" },
-        { "ar": "دَخَلَ", "ar_plain": "دخل", "translit": "dakhala", "en": "he entered", "ur": "وہ داخل ہوا" }
+        {
+          "ar": "دَخَلَتِ",
+          "ar_plain": "دخلت",
+          "translit": "dakhalati",
+          "en": "she entered",
+          "ur": "وہ داخل ہوئی"
+        },
+        {
+          "ar": "الطَّالِبَةُ",
+          "ar_plain": "الطالبة",
+          "translit": "at-talibatu",
+          "en": "the female student",
+          "ur": "طالبہ"
+        },
+        {
+          "ar": "دَخَلَ",
+          "ar_plain": "دخل",
+          "translit": "dakhala",
+          "en": "he entered",
+          "ur": "وہ داخل ہوا"
+        }
       ],
-      "correct_order": [0, 1],
+      "correct_order": [
+        0,
+        1
+      ],
       "xp_value": 1
     }
   ],
   "reveal": {
-    "concept_name": { "en": "Feminine marker across verbs", "ar": "تَاءُ التَّأْنِيثِ", "ur": "افعال میں مؤنث کی علامت" },
+    "concept_name": {
+      "en": "Feminine marker across verbs",
+      "ar": "تَاءُ التَّأْنِيثِ",
+      "ur": "افعال میں مؤنث کی علامت"
+    },
     "ayah": {
       "surah": 12,
       "ayah": 31,
@@ -143,7 +290,9 @@
       "ur": "اور اس نے کہا: ان کے سامنے نکل آؤ۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/yusuf-031-part-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "وَقَالَتِ begins with وَ plus قَالَتِ. The feminine ت remains visible even when the word connects to what follows.",
       "ur": "وَقَالَتِ میں وَ کے بعد قَالَتِ ہے۔ لفظ اگلے لفظ سے مل بھی جائے تو مؤنث ت نظر آتی رہتی ہے۔"

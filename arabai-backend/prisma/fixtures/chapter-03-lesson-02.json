@@ -1,7 +1,6 @@
 {
   "schema_version": "1.0",
   "template": "STANDARD",
-
   "_meta": {
     "_note": "Chapter 3, Lesson 2 — Whose? (لِمَنْ) and O! (يَا). Question of ownership, vocative particle, and more idafa with names. 11 vocabulary items. Authored against warsh-content-schema.ts v1.0.",
     "chapter_order": 3,
@@ -9,7 +8,6 @@
     "estimated_minutes": 10,
     "xp_reward": 10
   },
-
   "hook": {
     "ayah": {
       "surah": 40,
@@ -26,7 +24,6 @@
     },
     "autoplay": true
   },
-
   "discover_cards": [
     {
       "type": "CONCEPT",
@@ -42,15 +39,31 @@
     },
     {
       "type": "WORD",
-      "text": { "ar": "لِمَنْ هٰذَا؟", "ar_plain": "لمن هذا", "translit": "li-man hādhā?", "en": "Whose is this?", "ur": "یہ کس کا ہے؟" },
+      "text": {
+        "ar": "لِمَنْ هٰذَا؟",
+        "ar_plain": "لمن هذا",
+        "translit": "li-man hādhā?",
+        "en": "Whose is this?",
+        "ur": "یہ کس کا ہے؟"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/liman-hadha.mp3",
-      "introduces_vocab": { "ar_plain": "لمن هذا" }
+      "introduces_vocab": {
+        "ar_plain": "لمن هذا"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "هٰذَا كِتَابُ الطَّالِبِ", "ar_plain": "هذا كتاب الطالب", "translit": "hādhā kitābu-t-tālibi", "en": "This is the student's book.", "ur": "یہ طالب کی کتاب ہے۔" },
+      "text": {
+        "ar": "هٰذَا كِتَابُ الطَّالِبِ",
+        "ar_plain": "هذا كتاب الطالب",
+        "translit": "hādhā kitābu-t-tālibi",
+        "en": "This is the student's book.",
+        "ur": "یہ طالب کی کتاب ہے۔"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/hadha-kitab-altaalib.mp3",
-      "introduces_vocab": { "ar_plain": "هذا كتاب الطالب" }
+      "introduces_vocab": {
+        "ar_plain": "هذا كتاب الطالب"
+      }
     },
     {
       "type": "CONCEPT",
@@ -66,173 +79,485 @@
     },
     {
       "type": "WORD",
-      "text": { "ar": "يَا رَبِّ", "ar_plain": "يا رب", "translit": "yā rabbi", "en": "O my Lord!", "ur": "اے میرے رب!" },
+      "text": {
+        "ar": "يَا رَبِّ",
+        "ar_plain": "يا رب",
+        "translit": "yā rabbi",
+        "en": "O my Lord!",
+        "ur": "اے میرے رب!"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/ya-rabbi.mp3",
       "explanation": {
         "en": "يَا + رَبِّ (my Lord — ي attached = my). One of the most common duas in the Quran and in our speech.",
         "ur": "يَا + رَبِّ (میرا رب — ي لگا = میرا)۔ قرآن اور ہماری بولچال میں سب سے عام دعاؤں میں سے ایک۔"
       },
-      "introduces_vocab": { "ar_plain": "يا رب" }
+      "introduces_vocab": {
+        "ar_plain": "يا رب"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "يَا أُسْتَاذُ", "ar_plain": "يا أستاذ", "translit": "yā ustādhu", "en": "O Teacher!", "ur": "اے استاد!" },
+      "text": {
+        "ar": "يَا أُسْتَاذُ",
+        "ar_plain": "يا أستاذ",
+        "translit": "yā ustādhu",
+        "en": "O Teacher!",
+        "ur": "اے استاد!"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/ya-ustaadh.mp3",
       "explanation": {
         "en": "أُسْتَاذٌ (a teacher) → يَا أُسْتَاذُ (O Teacher!). Tanween ٌ disappears after يَا.",
         "ur": "أُسْتَاذٌ (ایک استاد) → يَا أُسْتَاذُ (اے استاد!)۔ يَا کے بعد تنوین ٌ غائب ہو جاتی ہے۔"
       },
-      "introduces_vocab": { "ar_plain": "يا أستاذ" }
+      "introduces_vocab": {
+        "ar_plain": "يا أستاذ"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "يَا وَلَدُ", "ar_plain": "يا ولد", "translit": "yā waladu", "en": "O boy! / O child!", "ur": "اے لڑکے!" },
+      "text": {
+        "ar": "يَا وَلَدُ",
+        "ar_plain": "يا ولد",
+        "translit": "yā waladu",
+        "en": "O boy! / O child!",
+        "ur": "اے لڑکے!"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/ya-walad.mp3",
-      "introduces_vocab": { "ar_plain": "يا ولد" }
+      "introduces_vocab": {
+        "ar_plain": "يا ولد"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "الْمُلْكُ", "ar_plain": "الملك", "translit": "al-mulku", "en": "the dominion / the kingdom", "ur": "بادشاہت / سلطنت" },
+      "text": {
+        "ar": "الْمُلْكُ",
+        "ar_plain": "الملك",
+        "translit": "al-mulku",
+        "en": "the dominion / the kingdom",
+        "ur": "بادشاہت / سلطنت"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/almulk.mp3",
       "explanation": {
         "en": "الْمُلْكُ — the dominion. Also the name of Surah 67: تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ (Blessed is He in whose hand is the dominion).",
         "ur": "الْمُلْكُ — بادشاہت۔ سورۃ الملک (67) کا نام بھی: تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ۔"
       },
-      "introduces_vocab": { "ar_plain": "الملك" }
+      "introduces_vocab": {
+        "ar_plain": "الملك"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "الْيَوْمُ", "ar_plain": "اليوم", "translit": "al-yawmu", "en": "the day / today", "ur": "دن / آج" },
+      "text": {
+        "ar": "الْيَوْمُ",
+        "ar_plain": "اليوم",
+        "translit": "al-yawmu",
+        "en": "the day / today",
+        "ur": "دن / آج"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/alyawm.mp3",
       "explanation": {
         "en": "الْيَوْمُ = the day. يَوْمُ الْقِيَامَةِ = the Day of Resurrection — another idafa you just learned!",
         "ur": "الْيَوْمُ = دن۔ يَوْمُ الْقِيَامَةِ = قیامت کا دن — ایک اور اضافہ جو آپ نے ابھی سیکھا!"
       },
-      "introduces_vocab": { "ar_plain": "اليوم" }
+      "introduces_vocab": {
+        "ar_plain": "اليوم"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "يَوْمُ الْقِيَامَةِ", "ar_plain": "يوم القيامة", "translit": "yawmu-l-qiyāmati", "en": "the Day of Resurrection", "ur": "قیامت کا دن" },
+      "text": {
+        "ar": "يَوْمُ الْقِيَامَةِ",
+        "ar_plain": "يوم القيامة",
+        "translit": "yawmu-l-qiyāmati",
+        "en": "the Day of Resurrection",
+        "ur": "قیامت کا دن"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/yawm-alqiyaama.mp3",
       "explanation": {
         "en": "يَوْمُ (day of — no tanween, mضاف) + الْقِيَامَةِ (the Resurrection — kasra, مضاف إليه). Another idafa.",
         "ur": "يَوْمُ (دن — بغیر تنوین، مضاف) + الْقِيَامَةِ (قیامت — کسرہ، مضاف إليه)۔ ایک اور اضافہ۔"
       },
-      "introduces_vocab": { "ar_plain": "يوم القيامة" }
+      "introduces_vocab": {
+        "ar_plain": "يوم القيامة"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "أَهْلُ الْجَنَّةِ", "ar_plain": "أهل الجنة", "translit": "'ahlu-l-jannati", "en": "the people of Paradise", "ur": "جنت والے" },
+      "text": {
+        "ar": "أَهْلُ الْجَنَّةِ",
+        "ar_plain": "أهل الجنة",
+        "translit": "'ahlu-l-jannati",
+        "en": "the people of Paradise",
+        "ur": "جنت والے"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/ahl-aljanna.mp3",
       "explanation": {
         "en": "أَهْلُ (people of, مضاف) + الْجَنَّةِ (Paradise, مضاف إليه with kasra). أَهْلُ is used across the Quran: أَهْلُ الْكِتَابِ (People of the Book), أَهْلُ الْبَيْتِ (the household).",
         "ur": "أَهْلُ (لوگ، مضاف) + الْجَنَّةِ (جنت، مضاف إليه کسرہ کے ساتھ)۔ أَهْلُ پورے قرآن میں ہے: أَهْلُ الْكِتَابِ، أَهْلُ الْبَيْتِ۔"
       },
-      "introduces_vocab": { "ar_plain": "أهل الجنة" }
+      "introduces_vocab": {
+        "ar_plain": "أهل الجنة"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "سَبِيلُ اللَّهِ", "ar_plain": "سبيل الله", "translit": "sabīlu-l-lāhi", "en": "the path of Allah", "ur": "اللہ کا راستہ" },
+      "text": {
+        "ar": "سَبِيلُ اللَّهِ",
+        "ar_plain": "سبيل الله",
+        "translit": "sabīlu-l-lāhi",
+        "en": "the path of Allah",
+        "ur": "اللہ کا راستہ"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/sabeel-allah.mp3",
       "explanation": {
         "en": "فِي سَبِيلِ اللَّهِ — 'in the path of Allah.' سَبِيلُ (path, مضاف) + اللَّهِ (of Allah, مضاف إليه). Appears over 70 times in the Quran.",
         "ur": "فِي سَبِيلِ اللَّهِ — 'اللہ کی راہ میں'۔ سَبِيلُ (راستہ، مضاف) + اللَّهِ (اللہ کا، مضاف إليه)۔ قرآن میں 70 سے زیادہ بار آتا ہے۔"
       },
-      "introduces_vocab": { "ar_plain": "سبيل الله" }
+      "introduces_vocab": {
+        "ar_plain": "سبيل الله"
+      }
     }
   ],
-
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
       "id": "ch3-l2-ex1",
-      "prompt": { "ar": "لِمَنْ هٰذَا الْكِتَابُ؟", "en": "Whose is this book?", "ur": "یہ کتاب کس کی ہے؟" },
-      "direction": "ar_to_en",
-      "answer": "Whose is this book?",
-      "choices": ["Whose is this book?", "Where is this book?", "What is this book?", "Is this book new?"],
-      "xp_value": 1
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "لِمَنْ هٰذَا الْكِتَابُ؟",
+        "ar_plain": "لمن هذا الكتاب؟",
+        "translit": "—",
+        "en": "Whose is this book?",
+        "ur": "یہ کتاب کس کی ہے؟"
+      },
+      "options": [
+        {
+          "en": "Whose is this book?"
+        },
+        {
+          "en": "Where is this book?"
+        },
+        {
+          "en": "What is this book?"
+        },
+        {
+          "en": "Is this book new?"
+        }
+      ],
+      "correct_index": 0
     },
     {
-      "type": "TAP_TRANSLATION",
       "id": "ch3-l2-ex2",
-      "prompt": { "en": "O my Lord!", "ur": "اے میرے رب!" },
-      "direction": "en_to_ar",
-      "answer": "يَا رَبِّ",
-      "choices": ["يَا رَبِّ", "لِمَنْ رَبٌّ", "هٰذَا رَبٌّ", "يَا مَلِكُ"],
-      "xp_value": 1
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "يَا رَبِّ",
+        "ar_plain": "يا رب",
+        "translit": "yā rabbi",
+        "en": "O my Lord!",
+        "ur": "اے میرے رب!"
+      },
+      "options": [
+        {
+          "en": "O my Lord!"
+        },
+        {
+          "en": "لِمَنْ رَبٌّ"
+        },
+        {
+          "en": "هٰذَا رَبٌّ"
+        },
+        {
+          "en": "يَا مَلِكُ"
+        }
+      ],
+      "correct_index": 0
     },
     {
-      "type": "TAP_TRANSLATION",
       "id": "ch3-l2-ex3",
-      "prompt": { "ar": "أَهْلُ الْجَنَّةِ", "en": "the people of Paradise", "ur": "جنت والے" },
-      "direction": "ar_to_en",
-      "answer": "the people of Paradise",
-      "choices": ["the people of Paradise", "the path to Paradise", "the day of Paradise", "the light of the sky"],
-      "xp_value": 1
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "أَهْلُ الْجَنَّةِ",
+        "ar_plain": "أهل الجنة",
+        "translit": "'ahlu-l-jannati",
+        "en": "the people of Paradise",
+        "ur": "جنت والے"
+      },
+      "options": [
+        {
+          "en": "the people of Paradise"
+        },
+        {
+          "en": "the path to Paradise"
+        },
+        {
+          "en": "the day of Paradise"
+        },
+        {
+          "en": "the light of the sky"
+        }
+      ],
+      "correct_index": 0
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch3-l2-ex4",
-      "statement": { "en": "After يَا, the tanween of a noun disappears.", "ar": "بعد يَا يختفي تنوين الاسم.", "ur": "يَا کے بعد اسم کی تنوین غائب ہو جاتی ہے۔" },
-      "answer": true,
-      "explanation": {
+      "statement": {
+        "en": "After يَا, the tanween of a noun disappears.",
+        "ar": "بعد يَا يختفي تنوين الاسم.",
+        "ur": "يَا کے بعد اسم کی تنوین غائب ہو جاتی ہے۔"
+      },
+      "xp_value": 1,
+      "correct_answer": true,
+      "explanation_on_wrong": {
         "en": "Correct — أُسْتَاذٌ (tanween) → يَا أُسْتَاذُ (no tanween, just a plain -u ending).",
         "ur": "درست — أُسْتَاذٌ (تنوین) → يَا أُسْتَاذُ (بغیر تنوین، صرف -u آخر میں)۔"
-      },
-      "xp_value": 1
+      }
     },
     {
-      "type": "FILL_BLANK",
       "id": "ch3-l2-ex5",
-      "template": { "en": "يَوْمُ ___ = the Day of Resurrection", "ur": "يَوْمُ ___ = قیامت کا دن" },
-      "blank_label": { "en": "complete the idafa", "ur": "اضافہ مکمل کریں" },
-      "answer": "الْقِيَامَةِ",
-      "choices": ["الْقِيَامَةِ", "الْقِيَامَةُ", "قِيَامَةٌ", "الْقِيَامَةَ"],
-      "explanation": {
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "يَوْمُ ___",
+      "hint": {
+        "en": "the Day of Resurrection",
+        "ur": "قیامت کا دن"
+      },
+      "options": [
+        {
+          "ar": "الْقِيَامَةِ",
+          "ar_plain": "القيامة",
+          "translit": "—",
+          "en": "الْقِيَامَةِ"
+        },
+        {
+          "ar": "الْقِيَامَةُ",
+          "ar_plain": "القيامة",
+          "translit": "—",
+          "en": "الْقِيَامَةُ"
+        },
+        {
+          "ar": "قِيَامَةٌ",
+          "ar_plain": "قيامة",
+          "translit": "—",
+          "en": "قِيَامَةٌ"
+        },
+        {
+          "ar": "الْقِيَامَةَ",
+          "ar_plain": "القيامة",
+          "translit": "—",
+          "en": "الْقِيَامَةَ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الْقِيَامَةِ",
+        "ar_plain": "القيامة",
+        "translit": "—",
+        "en": "الْقِيَامَةِ"
+      },
+      "explanation_on_wrong": {
         "en": "مضاف إليه always takes kasra → الْقِيَامَةِ.",
         "ur": "مضاف إليه ہمیشہ کسرہ لیتا ہے → الْقِيَامَةِ۔"
-      },
-      "xp_value": 1
+      }
     },
     {
-      "type": "MATCHING",
       "id": "ch3-l2-ex6",
-      "instruction": { "en": "Match each phrase to its meaning.", "ur": "ہر جملے کو اس کے معنی سے ملائیں۔" },
-      "pairs": [
-        { "ar": "يَا وَلَدُ", "en": "O boy!" },
-        { "ar": "الْمُلْكُ", "en": "the dominion" },
-        { "ar": "سَبِيلُ اللَّهِ", "en": "the path of Allah" },
-        { "ar": "الْيَوْمُ", "en": "today / the day" }
-      ],
-      "xp_value": 1
-    },
-    {
       "type": "MATCHING",
-      "id": "ch3-l2-ex7",
-      "instruction": { "en": "Match the question to its correct answer.", "ur": "سوال کو صحیح جواب سے ملائیں۔" },
-      "pairs": [
-        { "ar": "لِمَنْ هٰذَا الْكِتَابُ؟", "en": "Whose is this book?" },
-        { "ar": "هٰذَا كِتَابُ الطَّالِبِ", "en": "This is the student's book." },
-        { "ar": "يَا أُسْتَاذُ", "en": "O Teacher!" },
-        { "ar": "أَهْلُ الْجَنَّةِ", "en": "the people of Paradise" }
+      "xp_value": 1,
+      "left_column": [
+        {
+          "ar": "يَا وَلَدُ",
+          "ar_plain": "يا ولد",
+          "translit": "yā waladu",
+          "en": "O boy! / O child!",
+          "ur": "اے لڑکے!"
+        },
+        {
+          "ar": "الْمُلْكُ",
+          "ar_plain": "الملك",
+          "translit": "al-mulku",
+          "en": "the dominion / the kingdom",
+          "ur": "بادشاہت / سلطنت"
+        },
+        {
+          "ar": "سَبِيلُ اللَّهِ",
+          "ar_plain": "سبيل الله",
+          "translit": "sabīlu-l-lāhi",
+          "en": "the path of Allah",
+          "ur": "اللہ کا راستہ"
+        },
+        {
+          "ar": "الْيَوْمُ",
+          "ar_plain": "اليوم",
+          "translit": "al-yawmu",
+          "en": "the day / today",
+          "ur": "دن / آج"
+        }
       ],
-      "xp_value": 1
+      "right_column": [
+        {
+          "en": "the dominion"
+        },
+        {
+          "en": "the path of Allah"
+        },
+        {
+          "en": "today / the day"
+        },
+        {
+          "en": "O boy!"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
     },
     {
-      "type": "BUILD_SENTENCE",
+      "id": "ch3-l2-ex7",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        {
+          "ar": "لِمَنْ هٰذَا الْكِتَابُ؟",
+          "ar_plain": "لمن هذا الكتاب؟",
+          "translit": "—",
+          "en": "Whose is this book?"
+        },
+        {
+          "ar": "هٰذَا كِتَابُ الطَّالِبِ",
+          "ar_plain": "هذا كتاب الطالب",
+          "translit": "hādhā kitābu-t-tālibi",
+          "en": "This is the student's book.",
+          "ur": "یہ طالب کی کتاب ہے۔"
+        },
+        {
+          "ar": "يَا أُسْتَاذُ",
+          "ar_plain": "يا أستاذ",
+          "translit": "yā ustādhu",
+          "en": "O Teacher!",
+          "ur": "اے استاد!"
+        },
+        {
+          "ar": "أَهْلُ الْجَنَّةِ",
+          "ar_plain": "أهل الجنة",
+          "translit": "'ahlu-l-jannati",
+          "en": "the people of Paradise",
+          "ur": "جنت والے"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "This is the student's book."
+        },
+        {
+          "en": "O Teacher!"
+        },
+        {
+          "en": "the people of Paradise"
+        },
+        {
+          "en": "Whose is this book?"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
       "id": "ch3-l2-ex8",
-      "instruction": { "en": "Build the question: 'Whose is this book?'", "ur": "سوال بنائیں: 'یہ کتاب کس کی ہے؟'" },
-      "word_bank": ["لِمَنْ", "هٰذَا", "الْكِتَابُ", "أَيْنَ", "كِتَابٌ", "مَنْ"],
-      "answer": ["لِمَنْ", "هٰذَا", "الْكِتَابُ"],
-      "explanation": {
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Build the question: 'Whose is this book?'",
+        "ur": "سوال بنائیں: 'یہ کتاب کس کی ہے؟'"
+      },
+      "tiles": [
+        {
+          "ar": "لِمَنْ",
+          "ar_plain": "لمن",
+          "translit": "—",
+          "en": "لِمَنْ"
+        },
+        {
+          "ar": "هٰذَا",
+          "ar_plain": "هذا",
+          "translit": "—",
+          "en": "هٰذَا"
+        },
+        {
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "—",
+          "en": "الْكِتَابُ"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "—",
+          "en": "أَيْنَ"
+        },
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "—",
+          "en": "كِتَابٌ"
+        },
+        {
+          "ar": "مَنْ",
+          "ar_plain": "من",
+          "translit": "—",
+          "en": "مَنْ"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "explanation_on_wrong": {
         "en": "لِمَنْ (whose?) + هٰذَا (this) + الْكِتَابُ (the book). The definite article ال is needed since we're asking about a specific book.",
         "ur": "لِمَنْ (کس کا؟) + هٰذَا (یہ) + الْكِتَابُ (کتاب)۔ چونکہ ہم کسی مخصوص کتاب کے بارے میں پوچھ رہے ہیں اس لیے ال ضروری ہے۔"
-      },
-      "xp_value": 1
+      }
     }
   ],
-
   "reveal": {
+    "concept_name": {
+      "en": "الإضافة in the Quran",
+      "ar": "الإِضَافَة فِي الْقُرْآن",
+      "ur": "قرآن میں اضافہ"
+    },
     "ayah": {
       "surah": 40,
       "ayah": 16,
@@ -241,15 +566,18 @@
       "en": "Whose is the dominion today? It belongs to Allah, the One, the Overpowering.",
       "ur": "آج بادشاہت کس کی ہے؟ اللہ ایک قہار کی۔"
     },
-    "highlighted_word": "لِمَنِ",
-    "noor_comment": {
+    "highlighted_word_indices": [
+      0
+    ],
+    "noor_explanation": {
       "en": "لِمَنِ الْمُلْكُ الْيَوْمَ — Allah Himself asks this question on the Day of Judgement. لِمَنْ (whose?), الْمُلْكُ (the dominion), الْيَوْمَ (today). Every word in this ayah, you now understand.",
       "ur": "لِمَنِ الْمُلْكُ الْيَوْمَ — قیامت کے دن اللہ خود یہ سوال پوچھتا ہے۔ لِمَنْ (کس کا؟)، الْمُلْكُ (بادشاہت)، الْيَوْمَ (آج)۔ اس آیت کا ہر لفظ آپ اب سمجھتے ہیں۔"
-    },
-    "parse_tokens": [
-      { "ar": "لِمَنِ", "label": "جار ومجرور استفهامي", "en": "Whose? (to whom?)" },
-      { "ar": "الْمُلْكُ", "label": "مبتدأ مؤخر", "en": "the dominion (subject)" },
-      { "ar": "الْيَوْمَ", "label": "ظرف زمان", "en": "today (time adverb)" }
-    ]
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You have completed this lesson on idafa (the possessive construction). Review what you learned and continue.",
+      "ur": "آپ نے اضافہ (ملکیتی ترکیب) پر یہ سبق مکمل کیا۔ سیکھی ہوئی باتیں دہرائیں اور آگے بڑھیں۔"
+    }
   }
 }

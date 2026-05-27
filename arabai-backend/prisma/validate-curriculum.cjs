@@ -20,7 +20,7 @@ const ALLOWED_LEGACY_EXERCISE_TYPES = new Set([
 ]);
 
 const LESSON_TEMPLATES = new Set(["STANDARD", "SPOKEN_PHRASES", "REVIEW", "VERB_PATTERN"]);
-const DISCOVER_CARD_TYPES = new Set(["WORD", "CONCEPT", "EXAMPLE", "CONTRAST", "AYAH_PREVIEW"]);
+const DISCOVER_CARD_TYPES = new Set(["WORD", "CONCEPT", "EXAMPLE", "CONTRAST", "AYAH_PREVIEW", "GRAMMAR_NOTE", "SENTENCE"]);
 const EXERCISE_TYPES = new Set([
   "TRUE_FALSE",
   "TAP_TRANSLATION",
@@ -327,8 +327,15 @@ function validateDiscoverCard(card, pathLabel, reporter) {
   if (card.type === "CONTRAST" && (!Array.isArray(card.examples) || card.examples.length < 2)) {
     reporter.add(`${pathLabel}.examples`, "CONTRAST cards must include at least 2 examples");
   }
+  if (card.type === "GRAMMAR_NOTE") {
+    validateLocalizedText(card.title, `${pathLabel}.title`, reporter);
+    validateLocalizedText(card.body, `${pathLabel}.body`, reporter);
+  }
+  if (card.type === "SENTENCE") {
+    validateArabicText(card.text, `${pathLabel}.text`, reporter);
+  }
 
-  if (card.text !== undefined && card.type !== "WORD") validateArabicText(card.text, `${pathLabel}.text`, reporter);
+  if (card.text !== undefined && card.type !== "WORD" && card.type !== "SENTENCE") validateArabicText(card.text, `${pathLabel}.text`, reporter);
   if (card.concept !== undefined && card.type !== "CONCEPT") validateLocalizedText(card.concept, `${pathLabel}.concept`, reporter);
   if (card.explanation !== undefined && card.type !== "CONCEPT") validateLocalizedText(card.explanation, `${pathLabel}.explanation`, reporter);
   assertOptionalString(card.image_url, `${pathLabel}.image_url`, reporter);
@@ -711,7 +718,8 @@ function validateLessonFixture(fileName, lesson, reporter, globalState) {
   }
 
   if (["STANDARD", "REVIEW", "VERB_PATTERN"].includes(lesson.template)) {
-    if (assertArray(lesson.discover_cards, `${pathLabel}.discover_cards`, reporter, { min: 4, max: 8 })) {
+    const discoverBounds = lesson.template === "REVIEW" ? { min: 2, max: 15 } : { min: 4, max: 15 };
+    if (assertArray(lesson.discover_cards, `${pathLabel}.discover_cards`, reporter, discoverBounds)) {
       lesson.discover_cards.forEach((card, index) => validateDiscoverCard(card, `${pathLabel}.discover_cards[${index}]`, reporter));
     }
     const exerciseBounds = lesson.template === "REVIEW" ? { min: 5, max: 12 } : { min: 5, max: 10 };

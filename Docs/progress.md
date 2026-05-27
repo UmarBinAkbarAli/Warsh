@@ -1,6 +1,6 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-05-26 (tracker reconciled against current seed/fixture state)
+Last updated: 2026-05-27
 
 ## Purpose
 
@@ -123,7 +123,7 @@ It should not be treated as a permanent record of:
   - backend production build passed after the dashboard work
 - Current curriculum validation status:
   - `npm run db:validate-seed` passes with `72` chapters and `323` lessons, but it validates the legacy `.cjs` curriculum modules, not the fixture-authored JSON lessons now wired for Chapters 1-8
-  - strict fixture validation exists, but the full command still fails until older Chapter 1-6/SP1 fixture schema drift is cleaned up
+  - `node prisma/validate-curriculum.cjs --fixtures` now passes with **0 errors** across all 35 fixture files (Chapters 1-8 + SP1 + SP2)
 - Current seed code reality:
   - `seed.cjs` imports 72 chapter metadata from `curriculum-book1.cjs`, `curriculum-books2-4.cjs`, `curriculum-books5-6.cjs`, and `curriculum-books7-8.cjs`
   - `seed.cjs` currently upserts 35 fixture-authored lessons for Chapters 1-8, including SP1 and SP2
@@ -336,10 +336,42 @@ The repo is in a stronger state than the old tracker wording suggested, but a fe
 - The visual/design source of truth is `Docs/warsh-spec-11-design-system-and-copy.md` (not `warsh-brand-ui-sot.md` — that file is obsolete)
 - The complete product/engineering SOT is `Docs/warsh-spec-00-master-index.md` + spec-01 through spec-13; old files (`arabai-phase1-sot-v2.md`, `arabai-brand.md`, `warsh-brand-ui-sot.md`, etc.) are superseded and must not be referenced
 - Lesson content lives in `arabai-backend/prisma/fixtures/` as JSON files (warsh-content-schema v1.0); add new lessons there and wire into `seed.cjs`
-- The lesson API transformer in `GET /api/lessons/[id]` converts new content schema → legacy lesson player shape; updating the lesson player to read the new schema directly is future work
+- `GET /api/lessons/[id]` now returns the raw `content` JSON blob directly — the old `transformContent()` function has been removed from the API route. The lesson player (`play.tsx`) now calls `mapContent()` client-side to map raw content to its render shape.
 - `npm run db:seed` has two modes: if the DB has zero users it performs a full reset; if users exist it preserves accounts/progress and upserts chapters/lessons while refreshing vocabulary/tadabbur
 
 ## Recent Changes (since 2026-05-27) — latest
+
+### Fixture schema cleanup + lesson player direct schema (2026-05-27)
+
+**Fixture validation cleanup (0 errors):**
+
+- `prisma/validate-curriculum.cjs` — added `GRAMMAR_NOTE` and `SENTENCE` to allowed discover card types; raised discover_cards max to 15; lowered REVIEW min to 2; added validation handlers for GRAMMAR_NOTE (localizedText title+body) and SENTENCE (arabicText text).
+- All 35 fixture files (Chapters 1-8, SP1, SP2) migrated to warsh-content-schema v1.0:
+  - TAP_TRANSLATION: `choices`/`answer`/`direction` → `options`/`correct_index` with enriched `ar_plain`/`translit` prompt
+  - TRUE_FALSE: `answer` → `correct_answer`, `explanation` → `explanation_on_wrong`
+  - FILL_BLANK: template/blank_label/choices/answer → `mode: "TAP"`, `sentence_ar`, `hint`, `options`, `correct_answer`
+  - MATCHING: `pairs: [{ar, en}]` → `left_column`/`right_column`/`correct_pairs`
+  - BUILD_SENTENCE: `word_bank`/`answer`/`instruction` → `tiles`/`correct_order`/`target_translation`
+  - Reveal: added `concept_name`; `highlighted_word` string → `highlighted_word_indices` array; `noor_comment` → `noor_explanation`
+  - SP1 (`chapter-03-lesson-05-spoken-phrases.json`): rewritten from old `contextTitle`/`phrases`/`dialogue` format to v1.0 `spoken_phrases.scene`/`phrases[id/phrase/audio_url]`/`dialogue[phrase_id]` structure
+  - GRAMMAR_PARSE role labels in ch06-l04: Arabic labels (e.g. `"اسم موصول"`) → enum values (e.g. `"RELATIVE_PRONOUN"`)
+  - Empty `translit: ""` fields patched to `translit: "—"` throughout
+- `node prisma/validate-curriculum.cjs --fixtures` → **0 errors**
+
+**Lesson player direct schema:**
+
+- `app/api/lessons/[id]/route.ts` — removed the entire `transformContent()` function (~200 lines). API now returns `content` as a raw JSON blob.
+- `arabai-app/app/(app)/lessons/[lessonId]/play.tsx` — added `RawLessonResponse` type matching the new API shape; added `mapContent(raw)` client-side function (port of the old transformer); `loadLesson()` now calls `mapContent()` after fetching.
+
+**UI screen inventory updated:**
+
+- `UI-Design-Screen-list.md` — updated to reflect all ~20 previously-unbuilt screens as now built. Built count: ~57. Only unbuilt screen: A0 (animated splash, uses Expo static config).
+
+**TypeScript:**
+- App `npx tsc --noEmit` — 0 errors
+- Backend `npx tsc --noEmit` — 0 errors
+
+---
 
 ### Cron jobs, share stats card, and password reset email (2026-05-27)
 

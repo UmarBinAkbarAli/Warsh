@@ -1,14 +1,14 @@
 # Warsh — UI Screen Inventory
 
-**Last updated:** 2026-05-26
+**Last updated:** 2026-05-27
 **Source of truth:** `Docs/warsh-spec-02-information-architecture.md`
-**Total spec screens:** ~62 | **Built:** ~36 | **Unbuilt:** ~20
+**Total spec screens:** ~62 | **Built:** ~57 | **Unbuilt:** 1 (A0 splash animation)
 
 ---
 
-## Built Screens (36)
+## Built Screens (57)
 
-### Auth / Pre-login (20)
+### Auth / Pre-login (22)
 
 | # | Screen | Spec ID | File |
 |---|---|---|---|
@@ -16,24 +16,26 @@
 | 2 | Auth Options | C1 | `app/(auth)/auth-options.tsx` |
 | 3 | Login | C2 | `app/(auth)/login.tsx` |
 | 4 | Register / Account Creation | B8 | `app/(auth)/register.tsx` |
-| 5 | Preview — Welcome | A1 | `app/(auth)/preview/a1-welcome.tsx` |
-| 6 | Preview — Hook | A2 | `app/(auth)/preview/a2-hook.tsx` |
-| 7 | Preview — Discover | A3 | `app/(auth)/preview/a3-discover.tsx` |
-| 8 | Preview — Grammar | A4 | `app/(auth)/preview/a4-grammar.tsx` |
-| 9 | Preview — Noor | A5 | `app/(auth)/preview/a5-noor.tsx` |
-| 10 | Preview — Tadabbur | A6 | `app/(auth)/preview/a6-tadabbur.tsx` |
-| 11 | Preview — CTA | A7 | `app/(auth)/preview/a7-cta.tsx` |
-| 12 | Onboarding — Language | B0 | `app/(auth)/onboarding/language.tsx` |
-| 13 | Onboarding — Welcome | B1 | `app/(auth)/onboarding/welcome.tsx` |
-| 14 | Onboarding — Goal | B2 | `app/(auth)/onboarding/goal.tsx` |
-| 15 | Onboarding — Level | B3 | `app/(auth)/onboarding/level.tsx` |
-| 16 | Onboarding — Daily Commitment | B4 | `app/(auth)/onboarding/daily-commitment.tsx` |
-| 17 | Onboarding — Name | B5 | `app/(auth)/onboarding/name.tsx` |
-| 18 | Onboarding — Placement | B6 | `app/(auth)/onboarding/placement.tsx` |
-| 19 | Onboarding — Ready | B7 | `app/(auth)/onboarding/ready.tsx` |
-| 20 | Onboarding — Attribution | — | `app/(auth)/onboarding/attribution.tsx` |
-
-> **Note:** Attribution screen is extra — not in the spec. B9 (Permissions ask) is missing.
+| 5 | Forgot Password | C3 | `app/(auth)/forgot-password.tsx` |
+| 6 | Forgot Password Confirmation | C4 | `app/(auth)/forgot-password-confirm.tsx` |
+| 7 | Reset Password (deep-link target) | — | `app/(auth)/reset-password.tsx` |
+| 8 | Preview — Welcome | A1 | `app/(auth)/preview/a1-welcome.tsx` |
+| 9 | Preview — Hook | A2 | `app/(auth)/preview/a2-hook.tsx` |
+| 10 | Preview — Discover | A3 | `app/(auth)/preview/a3-discover.tsx` |
+| 11 | Preview — Grammar | A4 | `app/(auth)/preview/a4-grammar.tsx` |
+| 12 | Preview — Noor | A5 | `app/(auth)/preview/a5-noor.tsx` |
+| 13 | Preview — Tadabbur | A6 | `app/(auth)/preview/a6-tadabbur.tsx` |
+| 14 | Preview — CTA | A7 | `app/(auth)/preview/a7-cta.tsx` |
+| 15 | Onboarding — Language | B0 | `app/(auth)/onboarding/language.tsx` |
+| 16 | Onboarding — Welcome | B1 | `app/(auth)/onboarding/welcome.tsx` |
+| 17 | Onboarding — Goal | B2 | `app/(auth)/onboarding/goal.tsx` |
+| 18 | Onboarding — Level | B3 | `app/(auth)/onboarding/level.tsx` |
+| 19 | Onboarding — Daily Commitment | B4 | `app/(auth)/onboarding/daily-commitment.tsx` |
+| 20 | Onboarding — Name | B5 | `app/(auth)/onboarding/name.tsx` |
+| 21 | Onboarding — Placement | B6 | `app/(auth)/onboarding/placement.tsx` |
+| 22 | Onboarding — Ready | B7 | `app/(auth)/onboarding/ready.tsx` |
+| 23 | Onboarding — Permissions | B9 | `app/(auth)/onboarding/permissions.tsx` |
+| 24 | Onboarding — Attribution | — | `app/(auth)/onboarding/attribution.tsx` |
 
 ---
 
@@ -41,101 +43,68 @@
 
 | # | Screen | Spec ID | File |
 |---|---|---|---|
-| 21 | Learn (chapter list) | L1 / L2 | `app/(app)/(tabs)/index.tsx` |
-| 22 | Vocabulary | V1 | `app/(app)/(tabs)/vocabulary.tsx` |
-| 23 | Noor (AI chat) | N1 | `app/(app)/(tabs)/chat.tsx` |
-| 24 | You (profile) | Y1 | `app/(app)/(tabs)/profile.tsx` |
-
-> **Note:** L1 is partially built — missing daily goal progress bar, Tadabbur card, streak card, Word of the Day card, and "All chapters →" teaser. L2 (All chapters) is not a separate screen — currently merged into L1.
+| 25 | Learn (chapter list + home widgets) | L1 | `app/(app)/(tabs)/index.tsx` |
+| 26 | Vocabulary (topic browse) | V1 | `app/(app)/(tabs)/vocabulary.tsx` |
+| 27 | Noor (AI chat) | N1 | `app/(app)/(tabs)/chat.tsx` |
+| 28 | You (profile) | Y1 | `app/(app)/(tabs)/profile.tsx` |
 
 ---
 
-### App Detail / Modal Screens (12)
+### App Detail / Stack Screens (17)
 
 | # | Screen | Spec ID | File |
 |---|---|---|---|
-| 25 | Lesson List (by chapter) | L3 | `app/(app)/lessons/[chapterId].tsx` |
-| 26 | Lesson Player (STANDARD + SP + REVIEW beats) | P1–P6, SP1–SP4, R1–R4 | `app/(app)/lessons/[lessonId]/play.tsx` |
-| 27 | Vocabulary by Topic | V3 | `app/(app)/vocabulary/[topic].tsx` |
-| 28 | Word Detail | V5 | `app/(app)/vocabulary/word/[wordId].tsx` |
-| 29 | SRS Vocabulary Review | V6 | `app/(app)/vocabulary/review.tsx` |
-| 30 | Tadabbur | L5 | `app/(app)/tadabbur.tsx` |
-| 31 | Milestones | Y5 | `app/(app)/milestones.tsx` |
-| 32 | Settings | Y3 | `app/(app)/settings.tsx` |
-| 33 | Paywall / Subscription | Y4 | `app/(app)/paywall.tsx` |
-| 34 | Streak Celebration | M1 (partial) | `app/(app)/streak-celebration.tsx` |
-| 35 | Streak Commitment | M4 (partial) | `app/(app)/streak-commitment.tsx` |
-| 36 | Trial Reminder | — | `app/(app)/trial-reminder.tsx` |
+| 29 | All Chapters | L2 | `app/(app)/chapters.tsx` |
+| 30 | Lesson List (by chapter, with preview bottom sheet) | L3 / L4 | `app/(app)/lessons/[chapterId].tsx` |
+| 31 | Lesson Player (STANDARD + SP + REVIEW + VERB_PATTERN) | P1–P6, SP1–SP4, R1–R4, VP1–VP5 | `app/(app)/lessons/[lessonId]/play.tsx` |
+| 32 | Streak Detail (12-month heatmap) | L6 | `app/(app)/streak-detail.tsx` |
+| 33 | Tadabbur | L5 | `app/(app)/tadabbur.tsx` |
+| 34 | My Words (personal word list) | V2 | `app/(app)/vocabulary/my-words.tsx` |
+| 35 | Vocabulary by Topic | V3 | `app/(app)/vocabulary/[topic].tsx` |
+| 36 | Vocabulary Search | V4 | `app/(app)/vocabulary/search.tsx` |
+| 37 | Word Detail | V5 | `app/(app)/vocabulary/word/[wordId].tsx` |
+| 38 | SRS Vocabulary Review | V6 | `app/(app)/vocabulary/review.tsx` |
+| 39 | Edit Profile | Y2 | `app/(app)/edit-profile.tsx` |
+| 40 | Settings | Y3 | `app/(app)/settings.tsx` |
+| 41 | Change Password | — | `app/(app)/change-password.tsx` |
+| 42 | Paywall / Subscription | Y4 | `app/(app)/paywall.tsx` |
+| 43 | Milestones | Y5 | `app/(app)/milestones.tsx` |
+| 44 | Share Stats Card | Y6 | `app/(app)/share-stats.tsx` |
+| 45 | Trial Reminder | — | `app/(app)/trial-reminder.tsx` |
 
 ---
 
-## Unbuilt Screens (~20)
+### Full-screen Celebration / Overlay Screens (5)
 
-### Pre-app / Auth Flows (4)
-
-| Spec ID | Screen | Notes |
-|---|---|---|
-| A0 | Splash screen (animated brand mark) | App uses Expo splash config — no real animated screen |
-| B9 | Permissions ask (notifications + microphone) | No onboarding permissions screen exists |
-| C3 | Forgot password | No file exists |
-| C4 | Forgot password confirmation | No file exists |
-
----
-
-### Learn Tab (2)
-
-| Spec ID | Screen | Notes |
-|---|---|---|
-| L4 | Lesson preview bottom sheet | Lessons open directly — no bottom sheet preview before entering |
-| L6 | Streak detail (full 12-month heatmap screen) | `streak-celebration.tsx` is different; no dedicated streak detail screen |
+| # | Screen | Spec ID | File |
+|---|---|---|---|
+| 46 | Milestone Celebration | M1 | `app/(app)/milestone-celebration.tsx` |
+| 47 | Surah Celebration | M6 | `app/(app)/surah-celebration.tsx` |
+| 48 | Streak Celebration | — | `app/(app)/streak-celebration.tsx` |
+| 49 | Streak Commitment | M4 (partial) | `app/(app)/streak-commitment.tsx` |
+| 50 | Streak at Risk / Daily Goal Toast | M4 / M5 | integrated in `app/(app)/(tabs)/index.tsx` |
 
 ---
 
-### Vocabulary Tab (2)
+### Global Components / Modals (7)
 
-| Spec ID | Screen | Notes |
-|---|---|---|
-| V2 | My Words (full list with filters + sort) | Vocabulary tab only has topic browsing — no personal word list screen |
-| V4 | Vocabulary search | No search screen exists |
-
----
-
-### Noor Tab (1)
-
-| Spec ID | Screen | Notes |
-|---|---|---|
-| N2 | Overage purchase modal (20 extra messages for $0.99) | No modal when daily message limit is hit |
+| # | Component | Spec ID | File |
+|---|---|---|---|
+| 51 | Notification Permission Modal | M2 | `app/components/NotificationPermissionModal.tsx` |
+| 52 | Error / Retry Modal | M7 | `app/components/ErrorModal.tsx` |
+| 53 | Offline Indicator Bar | M8 | `app/components/OfflineBar.tsx` |
+| 54 | Noor Overage Purchase Modal | N2 | integrated in `app/(app)/(tabs)/chat.tsx` |
+| 55 | ArabicText | — | `app/components/ArabicText.tsx` |
+| 56 | BrandButton | — | `app/components/BrandButton.tsx` |
+| 57 | (other shared components) | — | `app/components/` |
 
 ---
 
-### You Tab (2)
+## Unbuilt Screens (1)
 
 | Spec ID | Screen | Notes |
 |---|---|---|
-| Y2 | Edit profile | No edit profile screen exists |
-| Y6 | Share stats card | No share/generate stats image screen |
-
----
-
-### Lesson Player (1 template unbuilt)
-
-| Spec ID | Screen | Notes |
-|---|---|---|
-| VP1–VP5 | VERB_PATTERN lesson template (5 beats) | `play.tsx` handles STANDARD, SPOKEN_PHRASES, REVIEW — VERB_PATTERN not implemented |
-
----
-
-### Modal Overlays (7 unbuilt)
-
-| Spec ID | Screen | Notes |
-|---|---|---|
-| M1 | Milestone celebration overlay (full-screen) | `streak-celebration.tsx` covers streaks only — no general milestone/badge overlay |
-| M2 | Push notification permission ask (in-context) | Not implemented |
-| M4 | Streak at risk warning modal | `streak-commitment.tsx` exists but spec's M4 is a distinct gentle modal |
-| M5 | Daily goal complete celebration | No daily goal celebration overlay |
-| M6 | Surah understood celebration (full-screen) | Not implemented |
-| M7 | Generic error / network state modal | No global error modal |
-| M8 | Offline indicator bar | No offline detection UI |
+| A0 | Animated splash screen | App uses Expo's static splash config — no dedicated animated brand mark screen |
 
 ---
 
@@ -143,28 +112,12 @@
 
 | Category | Built | Unbuilt |
 |---|---|---|
-| Pre-app / Auth / Onboarding | 16 | 4 (A0, B9, C3, C4) |
-| Learn tab | 3 full + 2 partial (L1, L2) | 2 (L4, L6) |
-| Vocabulary tab | 4 | 2 (V2, V4) |
-| Noor tab | 1 | 1 (N2) |
-| You tab | 4 | 2 (Y2, Y6) |
-| Lesson player | STANDARD + SP + REVIEW | 1 template (VP1–VP5) |
-| Modal overlays | M3 only | 7 (M1, M2, M4, M5, M6, M7, M8) |
-| **Total** | **~36** | **~20** |
-
----
-
-## Priority for v1 Shipping
-
-These unbuilt screens are most critical before public launch:
-
-1. **C3 / C4** — Forgot password (users will forget passwords)
-2. **L4** — Lesson preview bottom sheet (spec UX before entering a lesson)
-3. **Y2** — Edit profile (name, language, avatar)
-4. **VP1–VP5** — VERB_PATTERN lesson template (needed for verb-focused chapters)
-5. **M1** — Milestone celebration overlay (core engagement hook)
-6. **M4 / M5** — Streak at risk + daily goal modals (retention mechanics)
-7. **B9** — Permissions ask at end of onboarding
-8. **L6** — Streak detail screen
-9. **V2 / V4** — My Words list + search
-10. **N2** — Overage purchase modal
+| Pre-app / Auth / Onboarding | 24 | 0 |
+| Learn tab | 5 (L1, L2, L3/L4, L5, L6) | 0 |
+| Vocabulary tab | 5 (V1, V2, V3, V4, V5, V6) | 0 |
+| Noor tab | 1 + N2 modal | 0 |
+| You tab | 6 (Y1, Y2, Y3, Y4, Y5, Y6) + change-password | 0 |
+| Lesson player | STANDARD + SP + REVIEW + VERB_PATTERN | 0 |
+| Modal overlays / celebrations | M1, M2, M4, M5, M6, M7, M8 all built | 0 |
+| Animated splash | — | 1 (A0) |
+| **Total** | **~57** | **1** |

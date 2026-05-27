@@ -27,7 +27,11 @@
   "discover_cards": [
     {
       "type": "CONCEPT",
-      "concept": { "en": "الَّتِي - feminine who/which/that", "ar": "اسْمٌ مَوْصُولٌ مُؤَنَّث", "ur": "مؤنث اسم موصول" },
+      "concept": {
+        "en": "الَّتِي - feminine who/which/that",
+        "ar": "اسْمٌ مَوْصُولٌ مُؤَنَّث",
+        "ur": "مؤنث اسم موصول"
+      },
       "explanation": {
         "en": "الَّتِي connects a feminine noun to a description.\n\nالبِنْتُ الَّتِي ذَهَبَتْ - the girl who went\nالمَدْرَسَةُ الَّتِي فِي القَرْيَةِ - the school that is in the village",
         "ur": "الَّتِي مؤنث اسم کو تفصیل سے جوڑتا ہے۔\n\nالبِنْتُ الَّتِي ذَهَبَتْ - وہ لڑکی جو گئی\nالمَدْرَسَةُ الَّتِي فِي القَرْيَةِ - وہ مدرسہ جو بستی میں ہے"
@@ -35,29 +39,63 @@
     },
     {
       "type": "WORD",
-      "text": { "ar": "الَّتِي", "ar_plain": "التي", "translit": "allati", "en": "who/which/that (feminine)", "ur": "جو (مؤنث)" },
+      "text": {
+        "ar": "الَّتِي",
+        "ar_plain": "التي",
+        "translit": "allati",
+        "en": "who/which/that (feminine)",
+        "ur": "جو (مؤنث)"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/allati.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "البِنْتُ الَّتِي ذَهَبَتْ", "ar_plain": "البنت التي ذهبت", "translit": "al-bintu allati dhahabat", "en": "the girl who went", "ur": "وہ لڑکی جو گئی" },
+      "text": {
+        "ar": "البِنْتُ الَّتِي ذَهَبَتْ",
+        "ar_plain": "البنت التي ذهبت",
+        "translit": "al-bintu allati dhahabat",
+        "en": "the girl who went",
+        "ur": "وہ لڑکی جو گئی"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/al-bint-allati-dhahabat.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "المَدْرَسَةُ الَّتِي فِي القَرْيَةِ", "ar_plain": "المدرسة التي في القرية", "translit": "al-madrasatu allati fi al-qaryah", "en": "the school that is in the village", "ur": "وہ مدرسہ جو بستی میں ہے" },
+      "text": {
+        "ar": "المَدْرَسَةُ الَّتِي فِي القَرْيَةِ",
+        "ar_plain": "المدرسة التي في القرية",
+        "translit": "al-madrasatu allati fi al-qaryah",
+        "en": "the school that is in the village",
+        "ur": "وہ مدرسہ جو بستی میں ہے"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/al-madrasah-allati.mp3"
     },
     {
       "type": "CONTRAST",
-      "concept": { "en": "الَّذِي vs الَّتِي", "ar": "المُذَكَّر وَالمُؤَنَّث", "ur": "مذکر اور مؤنث" },
+      "concept": {
+        "en": "الَّذِي vs الَّتِي",
+        "ar": "المُذَكَّر وَالمُؤَنَّث",
+        "ur": "مذکر اور مؤنث"
+      },
       "explanation": {
         "en": "Use الَّذِي with a masculine noun. Use الَّتِي with a feminine noun. The relative pronoun must match.",
         "ur": "مذکر اسم کے ساتھ الَّذِي استعمال کریں۔ مؤنث اسم کے ساتھ الَّتِي۔ اسم موصول کو اسم سے ملنا چاہیے۔"
       },
       "examples": [
-        { "ar": "الرَّجُلُ الَّذِي ذَهَبَ", "ar_plain": "الرجل الذي ذهب", "translit": "ar-rajulu alladhi dhahaba", "en": "the man who went", "ur": "وہ آدمی جو گیا" },
-        { "ar": "البِنْتُ الَّتِي ذَهَبَتْ", "ar_plain": "البنت التي ذهبت", "translit": "al-bintu allati dhahabat", "en": "the girl who went", "ur": "وہ لڑکی جو گئی" }
+        {
+          "ar": "الرَّجُلُ الَّذِي ذَهَبَ",
+          "ar_plain": "الرجل الذي ذهب",
+          "translit": "ar-rajulu alladhi dhahaba",
+          "en": "the man who went",
+          "ur": "وہ آدمی جو گیا"
+        },
+        {
+          "ar": "البِنْتُ الَّتِي ذَهَبَتْ",
+          "ar_plain": "البنت التي ذهبت",
+          "translit": "al-bintu allati dhahabat",
+          "en": "the girl who went",
+          "ur": "وہ لڑکی جو گئی"
+        }
       ]
     }
   ],
@@ -65,12 +103,30 @@
     {
       "type": "TAP_TRANSLATION",
       "id": "ch08-l03-ex01",
-      "prompt": { "ar": "الَّتِي", "ar_plain": "التي", "translit": "allati", "en": "who/which/that (feminine)", "ur": "جو (مؤنث)" },
+      "prompt": {
+        "ar": "الَّتِي",
+        "ar_plain": "التي",
+        "translit": "allati",
+        "en": "who/which/that (feminine)",
+        "ur": "جو (مؤنث)"
+      },
       "options": [
-        { "en": "who/which/that (feminine)", "ur": "جو (مؤنث)" },
-        { "en": "who/which/that (masculine)", "ur": "جو (مذکر)" },
-        { "en": "she went", "ur": "وہ گئی" },
-        { "en": "my mother", "ur": "میری ماں" }
+        {
+          "en": "who/which/that (feminine)",
+          "ur": "جو (مؤنث)"
+        },
+        {
+          "en": "who/which/that (masculine)",
+          "ur": "جو (مذکر)"
+        },
+        {
+          "en": "she went",
+          "ur": "وہ گئی"
+        },
+        {
+          "en": "my mother",
+          "ur": "میری ماں"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1
@@ -81,7 +137,13 @@
       "statement": {
         "en": "الَّتِي should match a feminine noun like البِنْتُ or المَدْرَسَةُ.",
         "ur": "الَّتِي کو مؤنث اسم جیسے البِنْتُ یا المَدْرَسَةُ سے ملنا چاہیے۔",
-        "ar_example": { "ar": "البِنْتُ الَّتِي", "ar_plain": "البنت التي", "translit": "al-bintu allati", "en": "the girl who", "ur": "وہ لڑکی جو" }
+        "ar_example": {
+          "ar": "البِنْتُ الَّتِي",
+          "ar_plain": "البنت التي",
+          "translit": "al-bintu allati",
+          "en": "the girl who",
+          "ur": "وہ لڑکی جو"
+        }
       },
       "correct_answer": true,
       "xp_value": 1
@@ -91,49 +153,164 @@
       "id": "ch08-l03-ex03",
       "mode": "TAP",
       "sentence_ar": "البِنْتُ ___ ذَهَبَتْ",
-      "hint": { "en": "the girl who went", "ur": "وہ لڑکی جو گئی" },
+      "hint": {
+        "en": "the girl who went",
+        "ur": "وہ لڑکی جو گئی"
+      },
       "options": [
-        { "ar": "الَّتِي", "ar_plain": "التي", "translit": "allati", "en": "who (feminine)", "ur": "جو (مؤنث)" },
-        { "ar": "الَّذِي", "ar_plain": "الذي", "translit": "alladhi", "en": "who (masculine)", "ur": "جو (مذکر)" },
-        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "he went", "ur": "وہ گیا" },
-        { "ar": "عِنْدِي", "ar_plain": "عندي", "translit": "indi", "en": "with me", "ur": "میرے پاس" }
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allati",
+          "en": "who (feminine)",
+          "ur": "جو (مؤنث)"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhi",
+          "en": "who (masculine)",
+          "ur": "جو (مذکر)"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "ar": "عِنْدِي",
+          "ar_plain": "عندي",
+          "translit": "indi",
+          "en": "with me",
+          "ur": "میرے پاس"
+        }
       ],
-      "correct_answer": { "ar": "الَّتِي", "ar_plain": "التي", "translit": "allati", "en": "who (feminine)", "ur": "جو (مؤنث)" },
+      "correct_answer": {
+        "ar": "الَّتِي",
+        "ar_plain": "التي",
+        "translit": "allati",
+        "en": "who (feminine)",
+        "ur": "جو (مؤنث)"
+      },
       "xp_value": 1
     },
     {
       "type": "MATCHING",
       "id": "ch08-l03-ex04",
       "left_column": [
-        { "ar": "الرَّجُلُ الَّذِي", "ar_plain": "الرجل الذي", "translit": "ar-rajulu alladhi", "en": "the man who", "ur": "وہ آدمی جو" },
-        { "ar": "البِنْتُ الَّتِي", "ar_plain": "البنت التي", "translit": "al-bintu allati", "en": "the girl who", "ur": "وہ لڑکی جو" },
-        { "ar": "المَدْرَسَةُ الَّتِي", "ar_plain": "المدرسة التي", "translit": "al-madrasatu allati", "en": "the school that", "ur": "وہ مدرسہ جو" },
-        { "ar": "الطَّالِبُ الَّذِي", "ar_plain": "الطالب الذي", "translit": "at-talibu alladhi", "en": "the student who (m)", "ur": "وہ طالب علم جو" }
+        {
+          "ar": "الرَّجُلُ الَّذِي",
+          "ar_plain": "الرجل الذي",
+          "translit": "ar-rajulu alladhi",
+          "en": "the man who",
+          "ur": "وہ آدمی جو"
+        },
+        {
+          "ar": "البِنْتُ الَّتِي",
+          "ar_plain": "البنت التي",
+          "translit": "al-bintu allati",
+          "en": "the girl who",
+          "ur": "وہ لڑکی جو"
+        },
+        {
+          "ar": "المَدْرَسَةُ الَّتِي",
+          "ar_plain": "المدرسة التي",
+          "translit": "al-madrasatu allati",
+          "en": "the school that",
+          "ur": "وہ مدرسہ جو"
+        },
+        {
+          "ar": "الطَّالِبُ الَّذِي",
+          "ar_plain": "الطالب الذي",
+          "translit": "at-talibu alladhi",
+          "en": "the student who (m)",
+          "ur": "وہ طالب علم جو"
+        }
       ],
       "right_column": [
-        { "en": "the man who", "ur": "وہ آدمی جو" },
-        { "en": "the girl who", "ur": "وہ لڑکی جو" },
-        { "en": "the school that", "ur": "وہ مدرسہ جو" },
-        { "en": "the student who (m)", "ur": "وہ طالب علم جو" }
+        {
+          "en": "the man who",
+          "ur": "وہ آدمی جو"
+        },
+        {
+          "en": "the girl who",
+          "ur": "وہ لڑکی جو"
+        },
+        {
+          "en": "the school that",
+          "ur": "وہ مدرسہ جو"
+        },
+        {
+          "en": "the student who (m)",
+          "ur": "وہ طالب علم جو"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch08-l03-ex05",
-      "target_translation": { "en": "the girl who went", "ur": "وہ لڑکی جو گئی" },
+      "target_translation": {
+        "en": "the girl who went",
+        "ur": "وہ لڑکی جو گئی"
+      },
       "tiles": [
-        { "ar": "البِنْتُ", "ar_plain": "البنت", "translit": "al-bintu", "en": "the girl", "ur": "لڑکی" },
-        { "ar": "الَّتِي", "ar_plain": "التي", "translit": "allati", "en": "who", "ur": "جو" },
-        { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" }
+        {
+          "ar": "البِنْتُ",
+          "ar_plain": "البنت",
+          "translit": "al-bintu",
+          "en": "the girl",
+          "ur": "لڑکی"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allati",
+          "en": "who",
+          "ur": "جو"
+        },
+        {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went",
+          "ur": "وہ گئی"
+        }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1
     }
   ],
   "reveal": {
-    "concept_name": { "en": "الَّتِي for feminine nouns", "ar": "الَّتِي لِلمُؤَنَّث", "ur": "مؤنث اسم کے لیے الَّتِي" },
+    "concept_name": {
+      "en": "الَّتِي for feminine nouns",
+      "ar": "الَّتِي لِلمُؤَنَّث",
+      "ur": "مؤنث اسم کے لیے الَّتِي"
+    },
     "ayah": {
       "surah": 89,
       "ayah": 8,
@@ -143,7 +320,9 @@
       "ur": "جس جیسی شہروں میں پیدا نہیں کی گئی تھی۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-fajr-008-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "الَّتِي refers back to a feminine noun from the previous ayah. You now know why the Quran uses الَّتِي here, not الَّذِي.",
       "ur": "الَّتِي پچھلی آیت کے مؤنث اسم کی طرف لوٹتا ہے۔ اب آپ جانتے ہیں کہ یہاں قرآن الَّتِي کیوں لاتا ہے، الَّذِي نہیں۔"

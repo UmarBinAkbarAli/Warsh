@@ -27,7 +27,11 @@
   "discover_cards": [
     {
       "type": "CONCEPT",
-      "concept": { "en": "She did - final تْ", "ar": "تَاءُ التَّأْنِيثِ السَّاكِنَة", "ur": "مؤنث فعل کی تْ" },
+      "concept": {
+        "en": "She did - final تْ",
+        "ar": "تَاءُ التَّأْنِيثِ السَّاكِنَة",
+        "ur": "مؤنث فعل کی تْ"
+      },
       "explanation": {
         "en": "A past-tense verb can end with تْ when the doer is feminine.\n\nذَهَبَ - he went\nذَهَبَتْ - she went\nقَالَ - he said\nقَالَتْ - she said",
         "ur": "ماضی کے فعل کے آخر میں تْ آ سکتی ہے جب کام کرنے والی مؤنث ہو۔\n\nذَهَبَ - وہ گیا\nذَهَبَتْ - وہ گئی\nقَالَ - اس نے کہا\nقَالَتْ - اس نے کہا (مؤنث)"
@@ -35,27 +39,55 @@
     },
     {
       "type": "WORD",
-      "text": { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "he went", "ur": "وہ گیا" },
+      "text": {
+        "ar": "ذَهَبَ",
+        "ar_plain": "ذهب",
+        "translit": "dhahaba",
+        "en": "he went",
+        "ur": "وہ گیا"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/dhahaba.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" },
+      "text": {
+        "ar": "ذَهَبَتْ",
+        "ar_plain": "ذهبت",
+        "translit": "dhahabat",
+        "en": "she went",
+        "ur": "وہ گئی"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/dhahabat.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "قَالَتْ", "ar_plain": "قالت", "translit": "qalat", "en": "she said", "ur": "اس نے کہا (مؤنث)" },
+      "text": {
+        "ar": "قَالَتْ",
+        "ar_plain": "قالت",
+        "translit": "qalat",
+        "en": "she said",
+        "ur": "اس نے کہا (مؤنث)"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/qalat.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "ذَهَبَتْ فَاطِمَةُ", "ar_plain": "ذهبت فاطمة", "translit": "dhahabat Fatimatu", "en": "Fatimah went", "ur": "فاطمہ گئی" },
+      "text": {
+        "ar": "ذَهَبَتْ فَاطِمَةُ",
+        "ar_plain": "ذهبت فاطمة",
+        "translit": "dhahabat Fatimatu",
+        "en": "Fatimah went",
+        "ur": "فاطمہ گئی"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/dhahabat-fatimah.mp3"
     },
     {
       "type": "CONCEPT",
-      "concept": { "en": "The doer may come after the verb", "ar": "الفَاعِلُ بَعْدَ الفِعْل", "ur": "فاعل فعل کے بعد بھی آتا ہے" },
+      "concept": {
+        "en": "The doer may come after the verb",
+        "ar": "الفَاعِلُ بَعْدَ الفِعْل",
+        "ur": "فاعل فعل کے بعد بھی آتا ہے"
+      },
       "explanation": {
         "en": "ذَهَبَتْ فَاطِمَةُ begins with the verb. The name فَاطِمَةُ comes after it and tells you who went.",
         "ur": "ذَهَبَتْ فَاطِمَةُ فعل سے شروع ہوتا ہے۔ نام فَاطِمَةُ بعد میں آ کر بتاتا ہے کہ کون گئی۔"
@@ -66,12 +98,30 @@
     {
       "type": "TAP_TRANSLATION",
       "id": "ch08-l01-ex01",
-      "prompt": { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" },
+      "prompt": {
+        "ar": "ذَهَبَتْ",
+        "ar_plain": "ذهبت",
+        "translit": "dhahabat",
+        "en": "she went",
+        "ur": "وہ گئی"
+      },
       "options": [
-        { "en": "she went", "ur": "وہ گئی" },
-        { "en": "he went", "ur": "وہ گیا" },
-        { "en": "my book", "ur": "میری کتاب" },
-        { "en": "where?", "ur": "کہاں؟" }
+        {
+          "en": "she went",
+          "ur": "وہ گئی"
+        },
+        {
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "en": "my book",
+          "ur": "میری کتاب"
+        },
+        {
+          "en": "where?",
+          "ur": "کہاں؟"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1
@@ -82,7 +132,13 @@
       "statement": {
         "en": "The final تْ in ذَهَبَتْ marks a feminine doer.",
         "ur": "ذَهَبَتْ کے آخر کی تْ مؤنث فاعل کو ظاہر کرتی ہے۔",
-        "ar_example": { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" }
+        "ar_example": {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went",
+          "ur": "وہ گئی"
+        }
       },
       "correct_answer": true,
       "xp_value": 1
@@ -92,32 +148,118 @@
       "id": "ch08-l01-ex03",
       "mode": "TAP",
       "sentence_ar": "___ فَاطِمَةُ",
-      "hint": { "en": "Fatimah went", "ur": "فاطمہ گئی" },
+      "hint": {
+        "en": "Fatimah went",
+        "ur": "فاطمہ گئی"
+      },
       "options": [
-        { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" },
-        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "he went", "ur": "وہ گیا" },
-        { "ar": "كِتَابُهُ", "ar_plain": "كتابه", "translit": "kitabuhu", "en": "his book", "ur": "اس کی کتاب" },
-        { "ar": "أَيْنَ", "ar_plain": "اين", "translit": "ayna", "en": "where", "ur": "کہاں" }
+        {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went",
+          "ur": "وہ گئی"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitabuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "اين",
+          "translit": "ayna",
+          "en": "where",
+          "ur": "کہاں"
+        }
       ],
-      "correct_answer": { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" },
+      "correct_answer": {
+        "ar": "ذَهَبَتْ",
+        "ar_plain": "ذهبت",
+        "translit": "dhahabat",
+        "en": "she went",
+        "ur": "وہ گئی"
+      },
       "xp_value": 1
     },
     {
       "type": "MATCHING",
       "id": "ch08-l01-ex04",
       "left_column": [
-        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "he went", "ur": "وہ گیا" },
-        { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" },
-        { "ar": "قَالَ", "ar_plain": "قال", "translit": "qala", "en": "he said", "ur": "اس نے کہا (مذکر)" },
-        { "ar": "قَالَتْ", "ar_plain": "قالت", "translit": "qalat", "en": "she said", "ur": "اس نے کہا (مؤنث)" }
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went",
+          "ur": "وہ گئی"
+        },
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qala",
+          "en": "he said",
+          "ur": "اس نے کہا (مذکر)"
+        },
+        {
+          "ar": "قَالَتْ",
+          "ar_plain": "قالت",
+          "translit": "qalat",
+          "en": "she said",
+          "ur": "اس نے کہا (مؤنث)"
+        }
       ],
       "right_column": [
-        { "en": "he went", "ur": "وہ گیا" },
-        { "en": "she went", "ur": "وہ گئی" },
-        { "en": "he said", "ur": "اس نے کہا (مذکر)" },
-        { "en": "she said", "ur": "اس نے کہا (مؤنث)" }
+        {
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "en": "she went",
+          "ur": "وہ گئی"
+        },
+        {
+          "en": "he said",
+          "ur": "اس نے کہا (مذکر)"
+        },
+        {
+          "en": "she said",
+          "ur": "اس نے کہا (مؤنث)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -125,16 +267,40 @@
       "id": "ch08-l01-ex05",
       "sentence_ar": "ذَهَبَتْ فَاطِمَةُ",
       "words": [
-        { "ar": "ذَهَبَتْ", "ar_plain": "ذهبت", "translit": "dhahabat", "en": "she went", "ur": "وہ گئی" },
-        { "ar": "فَاطِمَةُ", "ar_plain": "فاطمة", "translit": "Fatimatu", "en": "Fatimah", "ur": "فاطمہ" }
+        {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went",
+          "ur": "وہ گئی"
+        },
+        {
+          "ar": "فَاطِمَةُ",
+          "ar_plain": "فاطمة",
+          "translit": "Fatimatu",
+          "en": "Fatimah",
+          "ur": "فاطمہ"
+        }
       ],
-      "available_roles": ["VERB", "SUBJECT", "PREDICATE", "POSSESSIVE"],
-      "correct_roles": ["VERB", "SUBJECT"],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "PREDICATE",
+        "POSSESSIVE"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT"
+      ],
       "xp_value": 1
     }
   ],
   "reveal": {
-    "concept_name": { "en": "Feminine past verb", "ar": "الفِعْلُ المَاضِي المُؤَنَّث", "ur": "مؤنث فعل ماضی" },
+    "concept_name": {
+      "en": "Feminine past verb",
+      "ar": "الفِعْلُ المَاضِي المُؤَنَّث",
+      "ur": "مؤنث فعل ماضی"
+    },
     "ayah": {
       "surah": 28,
       "ayah": 25,
@@ -144,7 +310,9 @@
       "ur": "اس نے کہا: میرے والد آپ کو بلا رہے ہیں۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-qasas-025-part-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "قَالَتْ is قَالَ with the feminine تْ ending. That small ending tells you the speaker in the ayah is a woman.",
       "ur": "قَالَتْ اصل میں قَالَ ہے جس کے آخر میں مؤنث تْ ہے۔ یہی چھوٹی علامت بتاتی ہے کہ آیت میں کہنے والی عورت ہے۔"

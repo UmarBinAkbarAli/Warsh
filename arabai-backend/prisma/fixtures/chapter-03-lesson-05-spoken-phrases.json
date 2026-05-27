@@ -1,7 +1,6 @@
 {
   "schema_version": "1.0",
   "template": "SPOKEN_PHRASES",
-
   "_meta": {
     "_note": "SP1 after Chapter 3 — Basic greetings and introductions. Classical Fus'ha only, no dialect. Authored for current mobile SPOKEN_PHRASES renderer.",
     "chapter_order": 3,
@@ -9,7 +8,6 @@
     "estimated_minutes": 8,
     "xp_reward": 15
   },
-
   "hook": {
     "ayah": {
       "surah": 24,
@@ -26,58 +24,126 @@
     },
     "autoplay": true
   },
-
-  "contextTitle": "السَّلَامُ وَالتَّعَارُف",
-  "contextTitleEn": "Greetings and Introductions",
-  "contextBody": "Use these phrases when you meet a teacher, a classmate, or a brother at the masjid. This is spoken Fus'ha for religious and learning spaces, not casual dialect.",
-
-  "phrases": [
-    {
-      "arabic": "السَّلَامُ عَلَيْكُمْ",
-      "transliteration": "as-salāmu ʿalaykum",
-      "translation": "Peace be upon you",
-      "recognitionOptions": ["Peace be upon you", "And upon you peace", "What is your name?", "I am a student"]
+  "spoken_phrases": {
+    "scene": {
+      "en": "Greetings and Introductions",
+      "ur": "سلام اور تعارف"
     },
-    {
-      "arabic": "وَعَلَيْكُمُ السَّلَامُ",
-      "transliteration": "wa ʿalaykumu s-salām",
-      "translation": "And upon you be peace",
-      "recognitionOptions": ["And upon you be peace", "Peace be upon you", "Welcome", "My name is Umar"]
-    },
-    {
-      "arabic": "مَا اسْمُكَ؟",
-      "transliteration": "mā ismuka?",
-      "translation": "What is your name?",
-      "recognitionOptions": ["What is your name?", "My name is...", "How are you?", "Where is the book?"]
-    },
-    {
-      "arabic": "اسْمِي عُمَرُ",
-      "transliteration": "ismī ʿUmaru",
-      "translation": "My name is Umar",
-      "recognitionOptions": ["My name is Umar", "What is your name?", "I am a student", "Peace be upon you"]
-    },
-    {
-      "arabic": "أَنَا طَالِبٌ",
-      "transliteration": "anā ṭālibun",
-      "translation": "I am a student",
-      "recognitionOptions": ["I am a student", "You are a teacher", "My name is Umar", "This is a book"]
-    },
-    {
-      "arabic": "أَهْلًا وَسَهْلًا",
-      "transliteration": "ahlan wa sahlan",
-      "translation": "Welcome",
-      "recognitionOptions": ["Welcome", "Good morning", "Thank you", "Where are you?"]
-    }
-  ],
-
-  "dialogue": [
-    { "speaker": "A", "line": "السَّلَامُ عَلَيْكُمْ", "translation": "Peace be upon you" },
-    { "speaker": "B", "line": "وَعَلَيْكُمُ السَّلَامُ", "translation": "And upon you be peace" },
-    { "speaker": "A", "line": "مَا اسْمُكَ؟", "translation": "What is your name?" },
-    { "speaker": "B", "line": "اسْمِي عُمَرُ. أَنَا طَالِبٌ.", "translation": "My name is Umar. I am a student." },
-    { "speaker": "A", "line": "أَهْلًا وَسَهْلًا", "translation": "Welcome" }
-  ],
-
+    "phrases": [
+      {
+        "id": "sp1-p1",
+        "phrase": {
+          "ar": "السَّلَامُ عَلَيْكُمْ",
+          "ar_plain": "السلام عليكم",
+          "translit": "as-salāmu ʿalaykum",
+          "en": "Peace be upon you",
+          "ur": "السلام علیکم"
+        },
+        "audio_url": "https://cdn.warsh.app/audio/spoken/sp1-p1.mp3",
+        "context": {
+          "en": "Islamic greeting",
+          "ur": "اسلامی سلام"
+        }
+      },
+      {
+        "id": "sp1-p2",
+        "phrase": {
+          "ar": "وَعَلَيْكُمُ السَّلَامُ",
+          "ar_plain": "وعليكم السلام",
+          "translit": "wa ʿalaykumu s-salām",
+          "en": "And upon you be peace",
+          "ur": "وعلیکم السلام"
+        },
+        "audio_url": "https://cdn.warsh.app/audio/spoken/sp1-p2.mp3",
+        "context": {
+          "en": "Response to the greeting",
+          "ur": "سلام کا جواب"
+        }
+      },
+      {
+        "id": "sp1-p3",
+        "phrase": {
+          "ar": "مَا اسْمُكَ؟",
+          "ar_plain": "ما اسمك",
+          "translit": "mā ismuka?",
+          "en": "What is your name?",
+          "ur": "آپ کا نام کیا ہے؟"
+        },
+        "audio_url": "https://cdn.warsh.app/audio/spoken/sp1-p3.mp3",
+        "context": {
+          "en": "Asking for someone's name",
+          "ur": "نام پوچھنا"
+        }
+      },
+      {
+        "id": "sp1-p4",
+        "phrase": {
+          "ar": "اسْمِي عُمَرُ",
+          "ar_plain": "اسمي عمر",
+          "translit": "ismī ʿUmaru",
+          "en": "My name is Umar",
+          "ur": "میرا نام عمر ہے"
+        },
+        "audio_url": "https://cdn.warsh.app/audio/spoken/sp1-p4.mp3",
+        "context": {
+          "en": "Introducing yourself",
+          "ur": "اپنا تعارف"
+        }
+      },
+      {
+        "id": "sp1-p5",
+        "phrase": {
+          "ar": "أَنَا طَالِبٌ",
+          "ar_plain": "أنا طالب",
+          "translit": "anā ṭālibun",
+          "en": "I am a student",
+          "ur": "میں طالب علم ہوں"
+        },
+        "audio_url": "https://cdn.warsh.app/audio/spoken/sp1-p5.mp3",
+        "context": {
+          "en": "Describing your role",
+          "ur": "اپنا کردار بیان کرنا"
+        }
+      },
+      {
+        "id": "sp1-p6",
+        "phrase": {
+          "ar": "أَهْلًا وَسَهْلًا",
+          "ar_plain": "أهلا وسهلا",
+          "translit": "ahlan wa sahlan",
+          "en": "Welcome",
+          "ur": "خوش آمدید"
+        },
+        "audio_url": "https://cdn.warsh.app/audio/spoken/sp1-p6.mp3",
+        "context": {
+          "en": "Welcoming someone",
+          "ur": "خیرمقدم"
+        }
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "A",
+        "phrase_id": "sp1-p1"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "sp1-p2"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "sp1-p3"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "sp1-p4"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "sp1-p6"
+      }
+    ]
+  },
   "close": {
     "noor_message": {
       "en": "You can now greet and introduce yourself in simple Fus'ha. Keep it gentle and clear.",

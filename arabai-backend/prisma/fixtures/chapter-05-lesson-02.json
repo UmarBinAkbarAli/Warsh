@@ -1,7 +1,6 @@
 {
   "schema_version": "1.0",
   "template": "STANDARD",
-
   "_meta": {
     "_note": "Chapter 5, Lesson 2 — تِلْكَ for far feminine nouns. Quranic hook: تِلْكَ آيَاتُ اللَّهِ. Authored against warsh-content-schema.ts v1.0.",
     "chapter_order": 5,
@@ -9,7 +8,6 @@
     "estimated_minutes": 9,
     "xp_reward": 10
   },
-
   "hook": {
     "ayah": {
       "surah": 2,
@@ -26,7 +24,6 @@
     },
     "autoplay": true
   },
-
   "discover_cards": [
     {
       "type": "CONCEPT",
@@ -42,10 +39,26 @@
     },
     {
       "type": "CONTRAST",
-      "concept": { "en": "Near vs Far", "ar": "قَرِيب وَبَعِيد", "ur": "قریب اور دور" },
+      "concept": {
+        "en": "Near vs Far",
+        "ar": "قَرِيب وَبَعِيد",
+        "ur": "قریب اور دور"
+      },
       "examples": [
-        { "ar": "هَٰذِهِ آيَةٌ", "ar_plain": "هذه آية", "translit": "hādhihi āyatun", "en": "this is a sign / verse", "ur": "یہ آیت ہے" },
-        { "ar": "تِلْكَ آيَةٌ", "ar_plain": "تلك آية", "translit": "tilka āyatun", "en": "that is a sign / verse", "ur": "وہ آیت ہے" }
+        {
+          "ar": "هَٰذِهِ آيَةٌ",
+          "ar_plain": "هذه آية",
+          "translit": "hādhihi āyatun",
+          "en": "this is a sign / verse",
+          "ur": "یہ آیت ہے"
+        },
+        {
+          "ar": "تِلْكَ آيَةٌ",
+          "ar_plain": "تلك آية",
+          "translit": "tilka āyatun",
+          "en": "that is a sign / verse",
+          "ur": "وہ آیت ہے"
+        }
       ],
       "explanation": {
         "en": "Both phrases use a feminine noun: آيَةٌ. هَٰذِهِ means near. تِلْكَ means far.",
@@ -54,22 +67,46 @@
     },
     {
       "type": "WORD",
-      "text": { "ar": "تِلْكَ مَدْرَسَةٌ", "ar_plain": "تلك مدرسة", "translit": "tilka madrasatun", "en": "that is a school", "ur": "وہ مدرسہ ہے" },
+      "text": {
+        "ar": "تِلْكَ مَدْرَسَةٌ",
+        "ar_plain": "تلك مدرسة",
+        "translit": "tilka madrasatun",
+        "en": "that is a school",
+        "ur": "وہ مدرسہ ہے"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/tilka-madrasah.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "تِلْكَ مَدِينَةٌ", "ar_plain": "تلك مدينة", "translit": "tilka madīnatun", "en": "that is a city", "ur": "وہ شہر ہے" },
+      "text": {
+        "ar": "تِلْكَ مَدِينَةٌ",
+        "ar_plain": "تلك مدينة",
+        "translit": "tilka madīnatun",
+        "en": "that is a city",
+        "ur": "وہ شہر ہے"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/tilka-madinah.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "تِلْكَ جَنَّةٌ", "ar_plain": "تلك جنة", "translit": "tilka jannatun", "en": "that is a garden", "ur": "وہ باغ / جنت ہے" },
+      "text": {
+        "ar": "تِلْكَ جَنَّةٌ",
+        "ar_plain": "تلك جنة",
+        "translit": "tilka jannatun",
+        "en": "that is a garden",
+        "ur": "وہ باغ / جنت ہے"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/tilka-jannah.mp3"
     },
     {
       "type": "WORD",
-      "text": { "ar": "تِلْكَ آيَاتُ اللَّهِ", "ar_plain": "تلك آيات الله", "translit": "tilka āyātu llāh", "en": "those are the signs of Allah", "ur": "وہ اللہ کی نشانیاں ہیں" },
+      "text": {
+        "ar": "تِلْكَ آيَاتُ اللَّهِ",
+        "ar_plain": "تلك آيات الله",
+        "translit": "tilka āyātu llāh",
+        "en": "those are the signs of Allah",
+        "ur": "وہ اللہ کی نشانیاں ہیں"
+      },
       "audio_url": "https://cdn.warsh.app/audio/vocab/tilka-ayatullah.mp3",
       "explanation": {
         "en": "آيَات is plural, but تِلْكَ often appears with non-human plurals in Quranic Arabic. For now, memorize the Quranic phrase: تِلْكَ آيَاتُ اللَّهِ.",
@@ -78,83 +115,248 @@
     },
     {
       "type": "GRAMMAR_NOTE",
-      "title": { "en": "Four Pointing Words So Far", "ar": "أَرْبَعَةُ أَسْمَاءِ إِشَارَة", "ur": "اب تک چار اشارے" },
+      "title": {
+        "en": "Four Pointing Words So Far",
+        "ar": "أَرْبَعَةُ أَسْمَاءِ إِشَارَة",
+        "ur": "اب تک چار اشارے"
+      },
       "body": {
         "en": "Masculine near: هَٰذَا\nMasculine far: ذَٰلِكَ\nFeminine near: هَٰذِهِ\nFeminine far: تِلْكَ\n\nYou now have the full starter table.",
         "ur": "مذکر قریب: هَٰذَا\nمذکر دور: ذَٰلِكَ\nمؤنث قریب: هَٰذِهِ\nمؤنث دور: تِلْكَ\n\nآپ کے پاس اب ابتدائی جدول مکمل ہے۔"
       }
     }
   ],
-
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
       "id": "ch05-l02-ex01",
-      "prompt": { "ar": "تِلْكَ مَدِينَةٌ", "en": "that is a city", "ur": "وہ شہر ہے" },
-      "direction": "ar_to_en",
-      "answer": "that is a city",
-      "choices": ["that is a city", "this is a city", "that is a school", "this is a garden"],
-      "xp_value": 1
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "تِلْكَ مَدِينَةٌ",
+        "ar_plain": "تلك مدينة",
+        "translit": "tilka madīnatun",
+        "en": "that is a city",
+        "ur": "وہ شہر ہے"
+      },
+      "options": [
+        {
+          "en": "that is a city"
+        },
+        {
+          "en": "this is a city"
+        },
+        {
+          "en": "that is a school"
+        },
+        {
+          "en": "this is a garden"
+        }
+      ],
+      "correct_index": 0
     },
     {
-      "type": "TAP_TRANSLATION",
       "id": "ch05-l02-ex02",
-      "prompt": { "en": "that is a garden", "ur": "وہ باغ ہے" },
-      "direction": "en_to_ar",
-      "answer": "تِلْكَ جَنَّةٌ",
-      "choices": ["تِلْكَ جَنَّةٌ", "هَٰذِهِ جَنَّةٌ", "ذَٰلِكَ بَيْتٌ", "تِلْكَ آيَةٌ"],
-      "xp_value": 1
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "تِلْكَ جَنَّةٌ",
+        "ar_plain": "تلك جنة",
+        "translit": "tilka jannatun",
+        "en": "that is a garden",
+        "ur": "وہ باغ / جنت ہے"
+      },
+      "options": [
+        {
+          "en": "that is a garden"
+        },
+        {
+          "en": "هَٰذِهِ جَنَّةٌ"
+        },
+        {
+          "en": "ذَٰلِكَ بَيْتٌ"
+        },
+        {
+          "en": "that is a sign / verse"
+        }
+      ],
+      "correct_index": 0
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch05-l02-ex03",
-      "statement": { "en": "تِلْكَ is the far feminine pointer.", "ur": "تِلْكَ دور مؤنث اشارہ ہے۔" },
-      "answer": true,
-      "explanation": {
+      "statement": {
+        "en": "تِلْكَ is the far feminine pointer.",
+        "ur": "تِلْكَ دور مؤنث اشارہ ہے۔"
+      },
+      "xp_value": 1,
+      "correct_answer": true,
+      "explanation_on_wrong": {
         "en": "True — تِلْكَ means 'that' for feminine nouns.",
         "ur": "درست — تِلْكَ مؤنث اسموں کے لیے 'وہ' ہے۔"
-      },
-      "xp_value": 1
+      }
     },
     {
-      "type": "FILL_BLANK",
       "id": "ch05-l02-ex04",
-      "template": { "en": "___ مَدْرَسَةٌ = that is a school", "ur": "___ مَدْرَسَةٌ = وہ مدرسہ ہے" },
-      "blank_label": { "en": "choose the far feminine pointer", "ur": "دور مؤنث اشارہ منتخب کریں" },
-      "answer": "تِلْكَ",
-      "choices": ["تِلْكَ", "هَٰذِهِ", "هَٰذَا", "ذَٰلِكَ"],
-      "explanation": {
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "___ مَدْرَسَةٌ",
+      "hint": {
+        "en": "that is a school",
+        "ur": "وہ مدرسہ ہے"
+      },
+      "options": [
+        {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "—",
+          "en": "تِلْكَ"
+        },
+        {
+          "ar": "هَٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "—",
+          "en": "هَٰذِهِ"
+        },
+        {
+          "ar": "هَٰذَا",
+          "ar_plain": "هذا",
+          "translit": "—",
+          "en": "هَٰذَا"
+        },
+        {
+          "ar": "ذَٰلِكَ",
+          "ar_plain": "ذلك",
+          "translit": "—",
+          "en": "ذَٰلِكَ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "تِلْكَ",
+        "ar_plain": "تلك",
+        "translit": "—",
+        "en": "تِلْكَ"
+      },
+      "explanation_on_wrong": {
         "en": "مَدْرَسَةٌ is feminine, and 'that' means far: تِلْكَ.",
         "ur": "مَدْرَسَةٌ مؤنث ہے، اور 'وہ' دور کے لیے ہے: تِلْكَ۔"
-      },
-      "xp_value": 1
+      }
     },
     {
-      "type": "MATCHING",
       "id": "ch05-l02-ex05",
-      "instruction": { "en": "Match each pointer phrase.", "ur": "ہر اشارہ ترکیب کو ملائیں۔" },
-      "pairs": [
-        { "ar": "هَٰذَا بَيْتٌ", "en": "this is a house" },
-        { "ar": "ذَٰلِكَ بَيْتٌ", "en": "that is a house" },
-        { "ar": "هَٰذِهِ مَدْرَسَةٌ", "en": "this is a school" },
-        { "ar": "تِلْكَ مَدْرَسَةٌ", "en": "that is a school" }
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        {
+          "ar": "هَٰذَا بَيْتٌ",
+          "ar_plain": "هذا بيت",
+          "translit": "—",
+          "en": "this is a house"
+        },
+        {
+          "ar": "ذَٰلِكَ بَيْتٌ",
+          "ar_plain": "ذلك بيت",
+          "translit": "—",
+          "en": "that is a house"
+        },
+        {
+          "ar": "هَٰذِهِ مَدْرَسَةٌ",
+          "ar_plain": "هذه مدرسة",
+          "translit": "—",
+          "en": "this is a school"
+        },
+        {
+          "ar": "تِلْكَ مَدْرَسَةٌ",
+          "ar_plain": "تلك مدرسة",
+          "translit": "tilka madrasatun",
+          "en": "that is a school",
+          "ur": "وہ مدرسہ ہے"
+        }
       ],
-      "xp_value": 1
+      "right_column": [
+        {
+          "en": "that is a house"
+        },
+        {
+          "en": "this is a school"
+        },
+        {
+          "en": "that is a school"
+        },
+        {
+          "en": "this is a house"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
     },
     {
-      "type": "BUILD_SENTENCE",
       "id": "ch05-l02-ex06",
-      "instruction": { "en": "Build: 'those are the signs of Allah'", "ur": "بنائیں: 'وہ اللہ کی نشانیاں ہیں'" },
-      "word_bank": ["تِلْكَ", "آيَاتُ", "اللَّهِ", "هَٰذِهِ", "كَلِمَةٌ"],
-      "answer": ["تِلْكَ", "آيَاتُ", "اللَّهِ"],
-      "explanation": {
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Build: 'those are the signs of Allah'",
+        "ur": "بنائیں: 'وہ اللہ کی نشانیاں ہیں'"
+      },
+      "tiles": [
+        {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "—",
+          "en": "تِلْكَ"
+        },
+        {
+          "ar": "آيَاتُ",
+          "ar_plain": "آيات",
+          "translit": "—",
+          "en": "آيَاتُ"
+        },
+        {
+          "ar": "اللَّهِ",
+          "ar_plain": "الله",
+          "translit": "—",
+          "en": "اللَّهِ"
+        },
+        {
+          "ar": "هَٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "—",
+          "en": "هَٰذِهِ"
+        },
+        {
+          "ar": "كَلِمَةٌ",
+          "ar_plain": "كلمة",
+          "translit": "—",
+          "en": "كَلِمَةٌ"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "explanation_on_wrong": {
         "en": "The Quranic phrase is تِلْكَ آيَاتُ اللَّهِ — those are the signs of Allah.",
         "ur": "قرآنی ترکیب ہے: تِلْكَ آيَاتُ اللَّهِ — وہ اللہ کی نشانیاں ہیں۔"
-      },
-      "xp_value": 1
+      }
     }
   ],
-
   "reveal": {
     "ayah": {
       "surah": 2,
@@ -165,13 +367,21 @@
       "ur": "یہ اللہ کی آیات ہیں جنہیں ہم آپ پر حق کے ساتھ پڑھتے ہیں۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-252-mishary.mp3"
     },
-    "highlighted_word_indices": [0, 1, 2],
+    "highlighted_word_indices": [
+      0,
+      1,
+      2
+    ],
     "noor_explanation": {
       "en": "تِلْكَ آيَاتُ اللَّهِ is a Quranic phrase you will see again and again. تِلْكَ points, آيَاتُ is what is being pointed to, and اللَّهِ completes the idafa: the signs of Allah. Chapter 3 and Chapter 5 are now working together.",
       "ur": "تِلْكَ آيَاتُ اللَّهِ ایک قرآنی ترکیب ہے جو آپ بار بار دیکھیں گے۔ تِلْكَ اشارہ کرتا ہے، آيَاتُ اشارہ شدہ چیز ہے، اور اللَّهِ اضافت کو مکمل کرتا ہے: اللہ کی نشانیاں۔ باب 3 اور باب 5 اب اکٹھے کام کر رہے ہیں۔"
+    },
+    "concept_name": {
+      "en": "الإشارة in the Quran",
+      "ar": "أسماء الإشارة فِي الْقُرْآن",
+      "ur": "قرآن میں اسمائے اشارہ"
     }
   },
-
   "close": {
     "noor_message": {
       "en": "You now have the full starter pointing table: هَٰذَا, ذَٰلِكَ, هَٰذِهِ, تِلْكَ. Near/far and masculine/feminine are no longer guesses.",

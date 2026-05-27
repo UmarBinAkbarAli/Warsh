@@ -1,7 +1,6 @@
 {
   "schema_version": "1.0",
   "template": "REVIEW",
-
   "_meta": {
     "_note": "Chapter 2, Lesson 4 — REVIEW. Tanween vs ال, adjectives (جَدِيدٌ/كَبِيرٌ/قَدِيمٌ), أَيْنَ, فِي, عَلَى. Authored against warsh-content-schema.ts v1.0.",
     "chapter_order": 2,
@@ -9,7 +8,6 @@
     "estimated_minutes": 8,
     "xp_reward": 20
   },
-
   "hook": {
     "ayah": {
       "surah": 1,
@@ -26,7 +24,6 @@
     },
     "autoplay": true
   },
-
   "discover_cards": [
     {
       "type": "CONCEPT",
@@ -40,9 +37,27 @@
         "ur": "ہر عربی اسم یا تو نکرہ ('ایک') ہے یا معرفہ ('وہ')۔ تنوین (ٌ) = نکرہ۔ آگے ال = معرفہ۔ یہ دو قسمیں ہر اس جملے کی بنیاد ہیں جو آپ عربی میں پڑھیں گے۔"
       },
       "examples": [
-        { "ar": "كِتَابٌ ← الْكِتَابُ", "ar_plain": "كتاب ← الكتاب", "translit": "kitābun → al-kitābu", "en": "a book → the book", "ur": "ایک کتاب → وہ کتاب" },
-        { "ar": "بَيْتٌ ← الْبَيْتُ", "ar_plain": "بيت ← البيت", "translit": "baytun → al-baytu", "en": "a house → the house", "ur": "ایک گھر → وہ گھر" },
-        { "ar": "مَسْجِدٌ ← الْمَسْجِدُ", "ar_plain": "مسجد ← المسجد", "translit": "masjidun → al-masjidu", "en": "a mosque → the mosque", "ur": "ایک مسجد → وہ مسجد" }
+        {
+          "ar": "كِتَابٌ ← الْكِتَابُ",
+          "ar_plain": "كتاب ← الكتاب",
+          "translit": "kitābun → al-kitābu",
+          "en": "a book → the book",
+          "ur": "ایک کتاب → وہ کتاب"
+        },
+        {
+          "ar": "بَيْتٌ ← الْبَيْتُ",
+          "ar_plain": "بيت ← البيت",
+          "translit": "baytun → al-baytu",
+          "en": "a house → the house",
+          "ur": "ایک گھر → وہ گھر"
+        },
+        {
+          "ar": "مَسْجِدٌ ← الْمَسْجِدُ",
+          "ar_plain": "مسجد ← المسجد",
+          "translit": "masjidun → al-masjidu",
+          "en": "a mosque → the mosque",
+          "ur": "ایک مسجد → وہ مسجد"
+        }
       ]
     },
     {
@@ -57,9 +72,27 @@
         "ur": "سب سے عام عربی جملہ: مبتدأ معرفہ (ال کے ساتھ)، خبر نکرہ (تنوین کے ساتھ)۔ خبر اسم یا صفت ہو سکتی ہے۔ 'ہے' کے لیے کوئی لفظ نہیں۔"
       },
       "examples": [
-        { "ar": "الْكِتَابُ جَدِيدٌ", "ar_plain": "الكتاب جديد", "translit": "al-kitābu jadīdun", "en": "The book is new", "ur": "وہ کتاب نئی ہے" },
-        { "ar": "الْبَيْتُ كَبِيرٌ", "ar_plain": "البيت كبير", "translit": "al-baytu kabīrun", "en": "The house is big", "ur": "وہ گھر بڑا ہے" },
-        { "ar": "الْمَسْجِدُ قَدِيمٌ", "ar_plain": "المسجد قديم", "translit": "al-masjidu qadīmun", "en": "The mosque is old", "ur": "وہ مسجد پرانی ہے" }
+        {
+          "ar": "الْكِتَابُ جَدِيدٌ",
+          "ar_plain": "الكتاب جديد",
+          "translit": "al-kitābu jadīdun",
+          "en": "The book is new",
+          "ur": "وہ کتاب نئی ہے"
+        },
+        {
+          "ar": "الْبَيْتُ كَبِيرٌ",
+          "ar_plain": "البيت كبير",
+          "translit": "al-baytu kabīrun",
+          "en": "The house is big",
+          "ur": "وہ گھر بڑا ہے"
+        },
+        {
+          "ar": "الْمَسْجِدُ قَدِيمٌ",
+          "ar_plain": "المسجد قديم",
+          "translit": "al-masjidu qadīmun",
+          "en": "The mosque is old",
+          "ur": "وہ مسجد پرانی ہے"
+        }
       ]
     },
     {
@@ -75,7 +108,6 @@
       }
     }
   ],
-
   "exercises": [
     {
       "id": "ch02-l04-ex01",
@@ -88,10 +120,22 @@
         "en": "the mosque"
       },
       "options": [
-        { "en": "a mosque", "ur": "ایک مسجد" },
-        { "en": "the mosque", "ur": "وہ مسجد" },
-        { "en": "the house", "ur": "وہ گھر" },
-        { "en": "the book", "ur": "وہ کتاب" }
+        {
+          "en": "a mosque",
+          "ur": "ایک مسجد"
+        },
+        {
+          "en": "the mosque",
+          "ur": "وہ مسجد"
+        },
+        {
+          "en": "the house",
+          "ur": "وہ گھر"
+        },
+        {
+          "en": "the book",
+          "ur": "وہ کتاب"
+        }
       ],
       "correct_index": 1,
       "explanation_on_wrong": {
@@ -110,10 +154,22 @@
         "en": "The book is new"
       },
       "options": [
-        { "en": "A new book", "ur": "ایک نئی کتاب" },
-        { "en": "The book is old", "ur": "وہ کتاب پرانی ہے" },
-        { "en": "The book is new", "ur": "وہ کتاب نئی ہے" },
-        { "en": "A book is new", "ur": "ایک کتاب نئی ہے" }
+        {
+          "en": "A new book",
+          "ur": "ایک نئی کتاب"
+        },
+        {
+          "en": "The book is old",
+          "ur": "وہ کتاب پرانی ہے"
+        },
+        {
+          "en": "The book is new",
+          "ur": "وہ کتاب نئی ہے"
+        },
+        {
+          "en": "A book is new",
+          "ur": "ایک کتاب نئی ہے"
+        }
       ],
       "correct_index": 2
     },
@@ -128,10 +184,30 @@
         "ur": "وہ قلم میز پر ہے۔"
       },
       "options": [
-        { "ar": "فِي", "ar_plain": "في", "translit": "fī", "en": "in" },
-        { "ar": "أَيْنَ", "ar_plain": "أين", "translit": "ayna", "en": "where" },
-        { "ar": "عَلَى", "ar_plain": "على", "translit": "ʿalā", "en": "on" },
-        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from" }
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where"
+        },
+        {
+          "ar": "عَلَى",
+          "ar_plain": "على",
+          "translit": "ʿalā",
+          "en": "on"
+        },
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from"
+        }
       ],
       "correct_answer": {
         "ar": "عَلَى",
@@ -155,10 +231,30 @@
         "ur": "وہ گھر بڑا ہے۔"
       },
       "options": [
-        { "ar": "قَدِيمٌ", "ar_plain": "قديم", "translit": "qadīmun", "en": "old" },
-        { "ar": "كَبِيرٌ", "ar_plain": "كبير", "translit": "kabīrun", "en": "big" },
-        { "ar": "جَدِيدٌ", "ar_plain": "جديد", "translit": "jadīdun", "en": "new" },
-        { "ar": "الْكَبِيرُ", "ar_plain": "الكبير", "translit": "al-kabīru", "en": "the big" }
+        {
+          "ar": "قَدِيمٌ",
+          "ar_plain": "قديم",
+          "translit": "qadīmun",
+          "en": "old"
+        },
+        {
+          "ar": "كَبِيرٌ",
+          "ar_plain": "كبير",
+          "translit": "kabīrun",
+          "en": "big"
+        },
+        {
+          "ar": "جَدِيدٌ",
+          "ar_plain": "جديد",
+          "translit": "jadīdun",
+          "en": "new"
+        },
+        {
+          "ar": "الْكَبِيرُ",
+          "ar_plain": "الكبير",
+          "translit": "al-kabīru",
+          "en": "the big"
+        }
       ],
       "correct_answer": {
         "ar": "كَبِيرٌ",
@@ -180,12 +276,35 @@
         "ur": "وہ کتاب کہاں ہے؟"
       },
       "tiles": [
-        { "ar": "الْكِتَابُ", "ar_plain": "الكتاب", "translit": "al-kitābu", "en": "the book" },
-        { "ar": "أَيْنَ", "ar_plain": "أين", "translit": "ayna", "en": "where?" },
-        { "ar": "فِي", "ar_plain": "في", "translit": "fī", "en": "in" },
-        { "ar": "الْبَيْتُ", "ar_plain": "البيت", "translit": "al-baytu", "en": "the house" }
+        {
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitābu",
+          "en": "the book"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where?"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in"
+        },
+        {
+          "ar": "الْبَيْتُ",
+          "ar_plain": "البيت",
+          "translit": "al-baytu",
+          "en": "the house"
+        }
       ],
-      "correct_order": [1, 0],
+      "correct_order": [
+        1,
+        0
+      ],
       "explanation_on_wrong": {
         "en": "أَيْنَ الْكِتَابُ؟ — question word first (أَيْنَ), then the noun you're asking about (الْكِتَابُ). This is only the question, not the answer.",
         "ur": "أَيْنَ الْكِتابُ؟ — پہلے سوالیہ لفظ (أَيْنَ)، پھر وہ اسم جس کے بارے میں پوچھ رہے ہیں (الْكِتابُ)۔ یہ صرف سوال ہے، جواب نہیں۔"
@@ -200,12 +319,35 @@
         "ur": "وہ مسجد پرانی ہے۔"
       },
       "tiles": [
-        { "ar": "الْمَسْجِدُ", "ar_plain": "المسجد", "translit": "al-masjidu", "en": "the mosque" },
-        { "ar": "قَدِيمٌ", "ar_plain": "قديم", "translit": "qadīmun", "en": "old" },
-        { "ar": "كَبِيرٌ", "ar_plain": "كبير", "translit": "kabīrun", "en": "big" },
-        { "ar": "الْبَيْتُ", "ar_plain": "البيت", "translit": "al-baytu", "en": "the house" }
+        {
+          "ar": "الْمَسْجِدُ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidu",
+          "en": "the mosque"
+        },
+        {
+          "ar": "قَدِيمٌ",
+          "ar_plain": "قديم",
+          "translit": "qadīmun",
+          "en": "old"
+        },
+        {
+          "ar": "كَبِيرٌ",
+          "ar_plain": "كبير",
+          "translit": "kabīrun",
+          "en": "big"
+        },
+        {
+          "ar": "الْبَيْتُ",
+          "ar_plain": "البيت",
+          "translit": "al-baytu",
+          "en": "the house"
+        }
       ],
-      "correct_order": [0, 1],
+      "correct_order": [
+        0,
+        1
+      ],
       "explanation_on_wrong": {
         "en": "الْمَسْجِدُ قَدِيمٌ — definite subject first (الْمَسْجِدُ), then indefinite predicate (قَدِيمٌ). This pattern — ال noun + tanween adjective — means 'the X is Y'.",
         "ur": "الْمَسْجِدُ قَدِيمٌ — پہلے معرفہ مبتدأ (الْمَسْجِدُ)، پھر نکرہ خبر (قَدِيمٌ)۔ یہ نمونہ — ال اسم + تنوین صفت — مطلب ہے 'وہ X ہے Y'۔"
@@ -236,32 +378,97 @@
       "type": "MATCHING",
       "xp_value": 5,
       "left_column": [
-        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "a book" },
-        { "ar": "الْكِتَابُ", "ar_plain": "الكتاب", "translit": "al-kitābu", "en": "the book" },
-        { "ar": "جَدِيدٌ", "ar_plain": "جديد", "translit": "jadīdun", "en": "new" },
-        { "ar": "قَدِيمٌ", "ar_plain": "قديم", "translit": "qadīmun", "en": "old" },
-        { "ar": "أَيْنَ", "ar_plain": "أين", "translit": "ayna", "en": "where?" },
-        { "ar": "فِي", "ar_plain": "في", "translit": "fī", "en": "in" }
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "kitābun",
+          "en": "a book"
+        },
+        {
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitābu",
+          "en": "the book"
+        },
+        {
+          "ar": "جَدِيدٌ",
+          "ar_plain": "جديد",
+          "translit": "jadīdun",
+          "en": "new"
+        },
+        {
+          "ar": "قَدِيمٌ",
+          "ar_plain": "قديم",
+          "translit": "qadīmun",
+          "en": "old"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where?"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in"
+        }
       ],
       "right_column": [
-        { "en": "old", "ur": "پرانا" },
-        { "en": "the book", "ur": "وہ کتاب" },
-        { "en": "in", "ur": "میں" },
-        { "en": "a book", "ur": "ایک کتاب" },
-        { "en": "new", "ur": "نیا" },
-        { "en": "where?", "ur": "کہاں؟" }
+        {
+          "en": "old",
+          "ur": "پرانا"
+        },
+        {
+          "en": "the book",
+          "ur": "وہ کتاب"
+        },
+        {
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "en": "a book",
+          "ur": "ایک کتاب"
+        },
+        {
+          "en": "new",
+          "ur": "نیا"
+        },
+        {
+          "en": "where?",
+          "ur": "کہاں؟"
+        }
       ],
       "correct_pairs": [
-        [0, 3],
-        [1, 1],
-        [2, 4],
-        [3, 0],
-        [4, 5],
-        [5, 2]
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          2
+        ]
       ]
     }
   ],
-
   "reveal": {
     "concept_name": {
       "en": "الْحَمْدُ لِلَّهِ — fully parsed",
@@ -277,13 +484,15 @@
       "ur": "تمام تعریف اللہ کے لیے ہے جو سارے جہانوں کا رب ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-002-mishary.mp3"
     },
-    "highlighted_word_indices": [0, 3],
+    "highlighted_word_indices": [
+      0,
+      3
+    ],
     "noor_explanation": {
       "en": "الْحَمْدُ — Al (ال) + حَمْدُ (praise). The ال makes it definite — not 'a praise' or 'some praise' but the entire category of praise, all of it, complete. لِلَّهِ — for Allah (the لِ preposition of belonging, like فِي and عَلَى). الْعَالَمِينَ — the worlds (ال again — not 'some worlds' but 'all the worlds'). You started Chapter 2 looking at this ayah as just sound. Now it parses: THE praise — belongs to Allah — Lord of THE worlds. That is what you say seventeen times a day in salah. You are reading it now, not just reciting it.",
       "ur": "الْحَمْدُ — ال + حَمْدُ (تعریف)۔ ال معرفہ بناتا ہے — 'ایک تعریف' یا 'کچھ تعریف' نہیں بلکہ تعریف کی پوری قسم، سب کچھ، مکمل۔ لِلَّهِ — اللہ کے لیے (لِ حرف جر ملکیت، جیسے فِي اور عَلَى)۔ الْعَالَمِينَ — وہ جہان (ال پھر — 'کچھ جہان' نہیں بلکہ 'تمام جہان')۔ آپ نے باب 2 اس آیت کو صرف آواز سمجھ کر شروع کیا۔ اب یہ تجزیہ ہوتی ہے: تمام تعریف — اللہ کے لیے — تمام جہانوں کے رب۔ یہی آپ روزانہ نماز میں سترہ بار پڑھتے ہیں۔"
     }
   },
-
   "close": {
     "noor_message": {
       "en": "Chapter 2 complete. You now know the difference between نَكِرَة and مَعْرِفَة — the foundation of every Arabic sentence. You can ask أَيْنَ and answer with فِي and عَلَى. You have learned جَدِيدٌ، كَبِيرٌ، قَدِيمٌ — your first adjectives. Chapter 3 builds the next layer: possession — الإضافة — and it will open up بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ.",
