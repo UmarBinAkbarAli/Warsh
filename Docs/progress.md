@@ -1,6 +1,6 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-05-28 (local release APK build fixed and verified)
+Last updated: 2026-05-28 (blank lesson screen root cause found and fixed — Vercel was running stale deployment)
 
 ## Purpose
 
@@ -75,6 +75,25 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 7. **Beta gate checklist** — 9 items in §14 of `Docs/warsh-beta-infra-readiness-checklist.md`; none confirmed yet. Blocked on: EAS APK installation, custom domain (deferred), Google Play Console setup.
 8. **Google Play Console** — not started; blocking IAP sandbox testing and distribution
 9. **Sentry / Mixpanel / UptimeRobot** — partially configured; need proper project setup, DSN wiring, alert creation
+
+---
+
+## Recent Changes (2026-05-28 blank lesson screen fix)
+
+### Blank lesson screen root cause found and fixed (2026-05-28)
+
+**Actual root cause:** Vercel was running a deployment from 20+ hours ago (before commit `5f6f278 "migrate all Ch1-8 fixtures to warsh-content-schema v1.0 and move content transform to client"`). The old server code spread lesson content fields (`hook`, `discoverCards`, `exercises`) as top-level keys on the lesson object. The new APK expects all content nested under a single `content` key. This mismatch caused `lesson.content` to be undefined → empty hook screen → user sees "blank screen" (just a divider line and a button, no Arabic text).
+
+**Fix applied:**
+1. Fixed `vercel.json` cron schedule for `expire-trials` from `0 */6 * * *` (blocked Hobby plan deployment) to `0 0 * * *`
+2. Committed cron fix and pushed to remote
+3. Ran `npx vercel --prod` to deploy latest backend code  
+4. Updated `warsh-backend.vercel.app` alias to new deployment with `vercel alias`
+5. Verified production API now returns `content: {...}` key with v1.0 schema (hook.ayah.ar, discover_cards, exercises, schema_version: "1.0")
+
+Production Neon DB has valid v1.0 content (confirmed in previous session). The DB seed was correct; only the Vercel deployment was stale.
+
+**IMPORTANT for future deploys:** The Vercel project (`umarbinakbarali/warsh-backend`) does not appear to auto-deploy from GitHub pushes. After any backend changes are pushed to `main`, manually run `cd arabai-backend && npx vercel --prod` to deploy, then update the alias if needed with `npx vercel alias <deployment-url> warsh-backend.vercel.app`.
 
 ---
 
