@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "chapter_order": 34,
+    "lesson_order": 6,
+    "chapter_title": "Present Tense — المضارع",
+    "title": "Book 4 Capstone: Al-Fatiha Mastery",
+    "titleAr": "تَمْكِينُ الْكِتَابِ الرَّابِعِ: إِتْقَانُ الْفَاتِحَةِ",
+    "source": "book4_lesson1_present_tense.md",
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 1,
+      "label": "Al-Fatiha 1:1",
+      "ar": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+      "en": "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+      "ur": "اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-001-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "This is the capstone lesson of Book 4. Let's read the ENTIRE Al-Fatiha and parse every single word grammatically. By the end, you will have full structural comprehension of the most recited chapter of the Quran.",
+      "ur": "یہ Book 4 کی capstone lesson ہے۔ آئیے PURE Al-Fatiha پڑھیں اور ہر ایک لفظ کو گرامری طور پر parse کریں۔ آخر تک، آپ کو قرآن کے سب سے زیادہ پڑھی جانے والے chapter کی مکمل structural comprehension ہو گی۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The complete Al-Fatiha: ayah by ayah",
+        "ar": "مکمل الفاتحہ: ayah بہ ayah",
+        "ur": "مکمل Al-Fatiha: ayah by ayah"
+      },
+      "explanation": {
+        "en": "Al-Fatiha has 7 ayahs. Ayah 1: بِسْمِ اللَّهِ — nominal with idafa. Ayah 2: الْحَمْدُ لِلَّهِ — nominal. Ayah 3-4: رَبِّ الْعَالَمِينَ — nominal with idafa. Ayah 5: إِيَّاكَ نَعْبُدُ — verbal with present tense. Ayah 6: اهْدِنَا — command verb. Ayah 7: الصِّرَاطَ — nominal with adjective.",
+        "ur": "Al-Fatiha میں 7 ayahs ہیں۔ Ayah 1: بِسْمِ اللَّهِ — idafa کے ساتھ nominal۔ Ayah 2: الْحَمْدُ لِلَّهِ — nominal۔ Ayah 3-4: رَبِّ الْعَالَمِينَ — idafa کے ساتھ nominal۔ Ayah 5: إِيَّاكَ نَعْبُدُ — present tense کے ساتھ verbal۔ Ayah 6: اهْدِنَا — command verb۔ Ayah 7: الصِّرَاطَ — adjective کے ساتھ nominal۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "بِسْمِ",
+        "ar_plain": "بسم",
+        "translit": "bi-smi",
+        "en": "in the name of",
+        "ur": "نام سے"
+      },
+      "explanation": {
+        "en": "بِ (in) + سْمِ (name — genitive). This is the basmalah — the opening of every Surah. سْمِ is in the genitive because بِ requires the following noun to be genitive.",
+        "ur": "بِ (میں) + سْمِ (نام — مجرور)۔ یہ basmalah ہے — ہر Surah کا opening۔ سْمِ مجرور میں ہے کیونکہ بِ اگلے noun کو مجرور require کرتا ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "الرَّحْمَنِ",
+        "ar_plain": "الرحمن",
+        "translit": "ar-rahmaani",
+        "en": "the Entirely Merciful",
+        "ur": "بڑا مہربان"
+      },
+      "explanation": {
+        "en": "One of Allah's names. رَحْمَانٌ (Merciful) is an intensive form meaning 'especially or completely merciful'. With ال, it refers specifically to Allah's attribute.",
+        "ur": "اللہ کے ناموں میں سے ایک۔ رَحْمَانٌ (مہربان) ایک intensive form ہے جس کا مطلب ہے 'especially یا completely merciful'۔ ال کے ساتھ، یہ specifically اللہ کی صفت کا حوالہ دیتا ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "الصِّرَاطَ",
+        "ar_plain": "الصراط",
+        "translit": "as-siraata",
+        "en": "the path",
+        "ur": "راستہ"
+      },
+      "explanation": {
+        "en": "The straight path. الْمُسْتَقِيمُ = the straight/righteous. Together: the straight path (the path of righteousness).",
+        "ur": "سیدھا راستہ۔ الْمُسْتَقِيمُ = سیدھا/نیک۔ مل کر: سیدھا راستہ (نیکی کا راستہ)۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Al-Fatiha: structure summary",
+        "ur": "الفاتحہ: structure summary"
+      },
+      "body": {
+        "en": "Ayah 1 (Basmalah): Nominal with preposition بِ. Ayah 2: Nominal with لِلَّهِ. Ayahs 3-4: Nominal with idafa. Ayah 5: Verbal — present tense with إِيَّاكَ. Ayah 6: Command verb اهْدِنَا. Ayah 7: Nominal with adjective الْمُسْتَقِيمُ.",
+        "ur": "Ayah 1 (Basmalah): preposition بِ کے ساتھ nominal۔ Ayah 2: لِلَّهِ کے ساتھ nominal۔ Ayahs 3-4: idafa کے ساتھ nominal۔ Ayah 5: إِيَّاكَ کے ساتھ verbal — present tense۔ Ayah 6: Command verb اهْدِنَا۔ Ayah 7: adjective الْمُسْتَقِيمُ کے ساتھ nominal۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch34-l06-ex01",
+      "prompt": {
+        "ar": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+        "ar_plain": "بسم الله الرحمن الرحيم",
+        "translit": "bi-smi allaahi ar-rahmaani ar-rahiiimi",
+        "en": "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+        "ur": "اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے۔"
+      },
+      "options": [
+        {
+          "en": "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          "ur": "اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے۔",
+          "translit": "—",
+          "ar_plain": ""
+        },
+        {
+          "en": "In the name of the merciful Allah.",
+          "ur": "مہربان اللہ کے نام سے۔",
+          "translit": "—",
+          "ar_plain": ""
+        },
+        {
+          "en": "The name of Allah, the Merciful.",
+          "ur": "اللہ کا نام، مہربان۔",
+          "translit": "—",
+          "ar_plain": ""
+        },
+        {
+          "en": "With the name of Allah.",
+          "ur": "اللہ کے نام کے ساتھ۔",
+          "translit": "—",
+          "ar_plain": ""
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "بِسْمِ = in the name (بِ + سْمِ). اللَّهِ = Allah (genitive after بِ). الرَّحْمَنِ الرَّحِيمِ = two names of Allah describing His mercy.",
+        "ur": "بِسْمِ = نام سے (بِ + سْمِ)۔ اللَّهِ = اللہ (بِ کے بعد genitive)۔ الرَّحْمَنِ الرَّحِيمِ = اللہ کے دو نام جو اس کی رحمت describe کرتے ہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch34-l06-ex02",
+      "statement": {
+        "en": "In إِيَّاكَ نَعْبُدُ, the word نَعْبُدُ is a present tense verb with the prefix نَ- meaning 'we'.",
+        "ur": "إِيَّاكَ نَعْبُدُ میں، word نَعْبُدُ ایک present tense verb ہے جس میں prefix نَ- ہے جس کا مطلب 'ہم' ہے۔",
+        "ar_example": {
+          "ar": "إِيَّاكَ نَعْبُدُ",
+          "ar_plain": "إياك نعبد",
+          "translit": "iyyaaka na'budu",
+          "en": "You alone we worship",
+          "ur": "تجھ ہی کو ہم عبادت کرتے ہیں"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch34-l06-ex03",
+      "mode": "TAP",
+      "sentence_ar": "اهْدِنَا الصِّرَاطَ ال___",
+      "hint": {
+        "en": "Guide us to the straight path.",
+        "ur": "ہمیں سیدھے راستے کی طرف راہنمائی فرما۔"
+      },
+      "options": [
+        {
+          "ar": "مُسْتَقِيمِ",
+          "ar_plain": "مستقيم",
+          "translit": "mustaqiimi",
+          "en": "straight",
+          "ur": "سیدھا"
+        },
+        {
+          "ar": "عَالَمِينَ",
+          "ar_plain": "عالمين",
+          "translit": "'aalamiina",
+          "en": "worlds",
+          "ur": "عالمین"
+        },
+        {
+          "ar": "مُسْلِمِينَ",
+          "ar_plain": "مسلمين",
+          "translit": "muslimiina",
+          "en": "Muslims",
+          "ur": "مسلمان"
+        },
+        {
+          "ar": "كَافِرِينَ",
+          "ar_plain": "كافرين",
+          "translit": "kaafiriina",
+          "en": "disbelievers",
+          "ur": "کافر"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مُسْتَقِيمِ",
+        "ar_plain": "مستقيم",
+        "translit": "mustaqiimi",
+        "en": "straight",
+        "ur": "سیدھا"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch34-l06-ex04",
+      "left_column": [
+        {
+          "ar": "بِسْمِ",
+          "ar_plain": "بسم",
+          "translit": "bi-smi",
+          "en": "in the name",
+          "ur": "نام سے"
+        },
+        {
+          "ar": "نَعْبُدُ",
+          "ar_plain": "نعبد",
+          "translit": "na'budu",
+          "en": "we worship",
+          "ur": "ہم عبادت کرتے ہیں"
+        },
+        {
+          "ar": "نَسْتَعِينُ",
+          "ar_plain": "نستعين",
+          "translit": "nasta'iinu",
+          "en": "we seek help",
+          "ur": "ہم مدد مانگتے ہیں"
+        },
+        {
+          "ar": "اهْدِنَا",
+          "ar_plain": "اهدنا",
+          "translit": "ihdinaa",
+          "en": "guide us",
+          "ur": "ہمیں راہنمائی فرما"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "Prepositional phrase (Basmalah)",
+          "ur": "Prepositional phrase (Basmalah)"
+        },
+        {
+          "en": "Present tense 1st pl. verb",
+          "ur": "Present tense 1st pl. verb"
+        },
+        {
+          "en": "Present tense 1st pl. verb",
+          "ur": "Present tense 1st pl. verb"
+        },
+        {
+          "en": "Command verb (fi'l amr)",
+          "ur": "Command verb (فعل امر)"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch34-l06-ex05",
+      "target_translation": {
+        "en": "You alone we worship.",
+        "ur": "تجھ ہی کو ہم عبادت کرتے ہیں۔"
+      },
+      "tiles": [
+        {
+          "ar": "إِيَّاكَ",
+          "ar_plain": "إياك",
+          "translit": "iyyaaka",
+          "en": "You (alone)",
+          "ur": "تجھ ہی کو"
+        },
+        {
+          "ar": "نَعْبُدُ",
+          "ar_plain": "نعبد",
+          "translit": "na'budu",
+          "en": "we worship",
+          "ur": "ہم عبادت کرتے ہیں"
+        },
+        {
+          "ar": "نَسْتَعِينُ",
+          "ar_plain": "نستعين",
+          "translit": "nasta'iinu",
+          "en": "we seek help",
+          "ur": "ہم مدد مانگتے ہیں"
+        },
+        {
+          "ar": "أَعْبُدُ",
+          "ar_plain": "أعبد",
+          "translit": "a'budu",
+          "en": "I worship",
+          "ur": "میں عبادت کروں"
+        }
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch34-l06-ex06",
+      "prompt": {
+        "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+        "ar_plain": "إياك نعبد وإياك نستعين",
+        "translit": "iyyaaka na'budu wa-iyyaaka nasta'iinu",
+        "en": "You alone we worship and You alone we seek help.",
+        "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔"
+      },
+      "options": [
+        {
+          "en": "You alone we worship and You alone we seek help.",
+          "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔",
+          "translit": "—",
+          "ar_plain": ""
+        },
+        {
+          "en": "We worship You and help You.",
+          "ur": "ہم تجھ کی عبادت کرتے ہیں اور تجھ کی مدد کرتے ہیں۔",
+          "translit": "—",
+          "ar_plain": ""
+        },
+        {
+          "en": "You we worship and help.",
+          "ur": "تجھ کو ہم عبادت اور مدد کرتے ہیں۔",
+          "translit": "—",
+          "ar_plain": ""
+        },
+        {
+          "en": "I worship You and seek Your help.",
+          "ur": "میں تجھ کی عبادت کروں اور تیری مدد مانگوں۔",
+          "translit": "—",
+          "ar_plain": ""
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِيَّاكَ appears twice for EMPHASIS — You AND You alone. نَعْبُدُ = we worship (نَ- prefix = we). نَسْتَعِينُ = we seek help. Both are present tense first person plural.",
+        "ur": "إِيَّاكَ EMPHASIS کے لیے دو بار آیا ہے — تجھ اور صرف تجھ۔ نَعْبُدُ = ہم عبادت کرتے ہیں (نَ- prefix = ہم)۔ نَسْتَعِينُ = ہم مدد مانگتے ہیں۔ دونوں present tense first person plural ہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch34-l06-ex07",
+      "xp_value": 1,
+      "statement": {
+        "en": "Parse: iyyaaka na'budu wa-iyyaaka nasta'iinu"
+      },
+      "ar_example": {
+        "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+        "en": "iyyaaka na'budu wa-iyyaaka nasta'iinu"
+      },
+      "correct_answer": true
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Book 4 Capstone: Complete Al-Fatiha comprehension",
+      "ar": "الْكِتَابُ الرَّابِعُ: مَفْهُومَةُ الْفَاتِحَةِ",
+      "ur": "Book 4 Capstone: Complete Al-Fatiha comprehension"
+    },
+    "ayah": {
+      "surah": 1,
+      "ayah": 5,
+      "label": "Al-Fatiha 1:5",
+      "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "en": "You alone we worship and You alone we seek help.",
+      "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-005-mishary.mp3"
+    },
+    "highlighted_word_indices": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "noor_explanation": {
+      "en": "This is Al-Fatiha 1:5 — the emotional and grammatical peak of the Surah. Both verbs نَعْبُدُ and نَسْتَعِينُ have the prefix نَ- = we. إِيَّاكَ appears twice for emphasis: You AND You alone. This is the foundation of Islamic monotheism expressed grammatically.",
+      "ur": "یہ Al-Fatiha 1:5 ہے — Surah کا emotional اور گرامری peak۔ دونوں verbs نَعْبُدُ اور نَسْتَعِينُ میں prefix نَ- = ہم ہے۔ إِيَّاكَ emphasis کے لیے دو بار آیا ہے: تجھ اور صرف تجھ۔ یہ گرامری طور پر بیان کردہ اسلامی توحید کی foundation ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You have completed Book 4. You now know the present tense, its four prefixes, negation with لَا, and can read Al-Fatiha from memory with full grammatical understanding. Every time you recite Al-Fatiha now, you will understand every word. This is the gift of Arabic grammar.",
+      "ur": "آپ نے Book 4 مکمل کر لیا ہے۔ اب آپ present tense، اس کے چار prefixes، لَا سے negation، اور مکمل گرامری understanding کے ساتھ Al-Fatiha یادوں سے پڑھ سکتے ہیں۔ ہر بار جب اب آپ Al-Fatiha پڑھیں گے، ہر لفظ سمجھیں گے۔ یہ عربی گرامر کی gift ہے۔"
+    }
+  }
+}

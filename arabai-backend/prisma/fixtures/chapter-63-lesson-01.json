@@ -1,0 +1,355 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "chapter_order": 63,
+    "lesson_order": 1,
+    "chapter_title": "إضافة Effects and حذف النون",
+    "title": "Introduction to إضافة",
+    "titleAr": "مُقَدِّمَةٌ فِي الْإِضَافَةِ",
+    "source": "book7_ch63_idafa.md",
+    "estimated_minutes": 8,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 49,
+      "ayah": 1,
+      "label": "Al-Hujurat 49:1",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَسُوقُوا أَنفُسَكُمْ فِي هَوَانَ",
+      "en": "O believers, do not put yourselves in lowliness.",
+      "ur": "اے ایمان والو! اپنے آپ کو ذلیلی میں نہ ڈالو۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-hujurat-001-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "إضافة is one of the most important structural features of Arabic. It is how two nouns combine to express possession or description without using ال. كِتَابُ اللَّهِ — the book of Allah.",
+      "ur": "إضافہ عربی کی سب سے اہم ساختی خصوصیات میں سے ایک ہے۔ یہ ہے کہ کیسے دو اسم مل کر ملکیت یا وضاحت بیان کرتے ہیں ال کےبغیر۔ كِتَابُ اللَّهِ — اللہ کی کتاب۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "إضافة — the construct state (idafa)",
+        "ar": "الْإِضَافَةُ — حَالَةُ الْمَجْرُورِ",
+        "ur": "إضافہ — مضاف حالت"
+      },
+      "explanation": {
+        "en": "إضافة is when two nouns are joined without ال to express possession. The first noun (مضاف) is in the genitive case (جر). كِتَابُ مُحَمَّدٍ = 'the book of Muhammad.' The second noun (مضاف إليه) receives the kasrah because it follows the مضاف.",
+        "ur": "إضافہ جب دو اسم بدون ال مل کر ملکیت بیان کرتے ہیں۔ پہلا اسم (مضاف) جر کی حالت میں ہوتا ہے۔ كِتَابُ مُحَمَّدٍ = 'محمود کی کتاب'۔ دوسرا اسم (مضاف الیہ) کسرہ接收 کرتا ہے کیونکہ یہ مضاف کے بعد آتا ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "كِتَابُ اللَّهِ",
+        "ar_plain": "كتاب الله",
+        "translit": "kitaabu allaahi",
+        "en": "the book of Allah",
+        "ur": "اللہ کی کتاب"
+      },
+      "explanation": {
+        "en": "كِتَابُ (book) is the مضاف — it gives possession. اللَّهِ (Allah) is the مضاف إليه — it receives the kasrah of possession. ال disappears because اللَّه is in the construct state.",
+        "ur": "كِتَابُ (کتاب) مضاف ہے — یہ ملکیت دیتی ہے۔ اللَّهِ (اللہ) مضاف الیہ ہے — یہ ملکیت کا کسرہ接收 کرتا ہے۔ ال غائب ہوتا ہے کیونکہ اللَّه construct state میں ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "كتاب" }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "رَسُولُ اللَّهِ",
+        "ar_plain": "رسول الله",
+        "translit": "rasoolu allaahi",
+        "en": "the messenger of Allah",
+        "ur": "اللہ کا رسول"
+      },
+      "explanation": {
+        "en": "رَسُولُ (messenger) is مضاف. اللَّهِ is مضاف إليه with kasrah. رَسُولُ اللَّهِ = 'messenger of Allah' — a title of Prophet Muhammad (peace be upon him).",
+        "ur": "رَسُولُ (رسول) مضاف ہے۔ اللَّهِ مضاف الیہ ہے کسرہ کے ساتھ۔ رَسُولُ اللَّهِ = 'اللہ کا رسول' — رسول محمد (صلی اللہ علیہ وسلم) کا title۔"
+      },
+      "introduces_vocab": { "ar_plain": "رسول" }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "بَيْتُ اللَّهِ",
+        "ar_plain": "بيت الله",
+        "translit": "baytu allaahi",
+        "en": "the house of Allah",
+        "ur": "اللہ کا گھر"
+      },
+      "explanation": {
+        "en": "بَيْتُ (house) is مضاف. اللَّهِ is مضاف إليه. بَيْتُ اللَّهِ is the Ka'bah — the house that Allah has made for humanity.",
+        "ur": "بَيْتُ (گھر) مضاف ہے۔ اللَّهِ مضاف الیہ ہے۔ بَيْتُ اللَّهِ کعبہ ہے — وہ گھر جو اللہ نے انسانیت کے لیے بنایا ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "بيت" }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "عِبَادُ اللَّهِ",
+        "ar_plain": "عباد الله",
+        "translit": "ibaadu allaahi",
+        "en": "the servants of Allah",
+        "ur": "اللہ کے بندے"
+      },
+      "explanation": {
+        "en": "عِبَادُ (servants) is مضاف. اللَّهِ is مضاف إليه. عِبَادُ is plural of عَبْدٌ (servant). عِبَادُ اللَّهِ is a term for the believers.",
+        "ur": "عِبَادُ (بندے) مضاف ہے۔ اللَّهِ مضاف الیہ ہے۔ عِبَادُ عَبْدٌ (بندہ) کی جمع ہے۔ عِبَادُ اللَّهِ مومنوں کے لیے term ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "عباد" }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "أَمْرُ اللَّهِ",
+        "ar_plain": "أمر الله",
+        "translit": "amru allaahi",
+        "en": "the command of Allah",
+        "ur": "اللہ کا حکم"
+      },
+      "explanation": {
+        "en": "أَمْرُ (command) is مضاف. اللَّهِ is مضاف إليه. أَمْرُ اللَّهِ refers to the divine command — what Allah has decreed.",
+        "ur": "أَمْرُ (حکم) مضاف ہے۔ اللَّهِ مضاف الیہ ہے۔ أَمْرُ اللَّهِ الہی حکم کو کہتا ہے — جو اللہ نے مقرر کیا ہے۔"
+      },
+      "introduces_vocab": { "ar_plain": "أمر" }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch63-l01-ex01",
+      "prompt": {
+        "ar": "بَيْتُ اللَّهِ",
+        "ar_plain": "بيت الله",
+        "translit": "baytu allaahi",
+        "en": "the house of Allah",
+        "ur": "اللہ کا گھر"
+      },
+      "options": [
+        { "en": "the house of Allah", "ur": "اللہ کا گھر" },
+        { "en": "the book of Allah", "ur": "اللہ کی کتاب" },
+        { "en": "the servant of Allah", "ur": "اللہ کا بندہ" },
+        { "en": "the command of Allah", "ur": "اللہ کا حکم" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "بَيْتُ is 'house' and اللَّهِ is 'of Allah.' بَيْتُ اللَّهِ = 'the house of Allah' — the Ka'bah. كِتَابُ would be 'book,' عَبْدُ would be 'servant,' أَمْرُ would be 'command.'",
+        "ur": "بَيْتُ 'گھر' ہے اور اللَّهِ 'اللہ کا' ہے۔ بَيْتُ اللَّهِ = 'اللہ کا گھر' — کعبہ۔ كِتَابُ 'کتاب' ہو گا، عَبْدُ 'بندہ' ہو گا، أَمْرُ 'حکم' ہو گا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch63-l01-ex02",
+      "statement": {
+        "en": "In إضَافَة, the مضاف إليه receives the kasrah because it follows the مضاف.",
+        "ur": "إضافہ میں، مضاف الیہ کسرہ接收 کرتا ہے کیونکہ یہ مضاف کے بعد آتا ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch63-l01-ex03",
+      "mode": "TAP",
+      "sentence_ar": "رَسُولُ ___ — مُحَمَّدٌ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ",
+      "hint": {
+        "en": "The messenger of Allah — Muhammad, peace be upon him.",
+        "ur": "اللہ کا رسول — محمد، صلی اللہ علیہ وسلم۔"
+      },
+      "options": [
+        {
+          "ar": "اللَّهِ",
+          "ar_plain": "الله",
+          "translit": "allaahi",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "النَّاسِ",
+          "ar_plain": "الناس",
+          "translit": "an-naasi",
+          "en": "the people",
+          "ur": "لوگ"
+        },
+        {
+          "ar": "الْمُسْلِمِينَ",
+          "ar_plain": "المسلمين",
+          "translit": "al-muslimeen",
+          "en": "the Muslims",
+          "ur": "مسلمان"
+        },
+        {
+          "ar": "الْكِتَابِ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitaabi",
+          "en": "the book",
+          "ur": "کتاب"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّهِ",
+        "ar_plain": "الله",
+        "translit": "allaahi",
+        "en": "Allah",
+        "ur": "اللہ"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch63-l01-ex04",
+      "left_column": [
+        {
+          "ar": "كِتَابُ اللَّهِ",
+          "ar_plain": "كتاب الله",
+          "translit": "kitaabu allaahi",
+          "en": "the book of Allah",
+          "ur": "اللہ کی کتاب"
+        },
+        {
+          "ar": "رَسُولُ اللَّهِ",
+          "ar_plain": "رسول الله",
+          "translit": "rasoolu allaahi",
+          "en": "the messenger of Allah",
+          "ur": "اللہ کا رسول"
+        },
+        {
+          "ar": "بَيْتُ اللَّهِ",
+          "ar_plain": "بيت الله",
+          "translit": "baytu allaahi",
+          "en": "the house of Allah",
+          "ur": "اللہ کا گھر"
+        },
+        {
+          "ar": "عِبَادُ اللَّهِ",
+          "ar_plain": "عباد الله",
+          "translit": "ibaadu allaahi",
+          "en": "the servants of Allah",
+          "ur": "اللہ کے بندے"
+        }
+      ],
+      "right_column": [
+        { "en": "the house of Allah", "ur": "اللہ کا گھر" },
+        { "en": "the book of Allah", "ur": "اللہ کی کتاب" },
+        { "en": "the servants of Allah", "ur": "اللہ کے بندے" },
+        { "en": "the messenger of Allah", "ur": "اللہ کا رسول" }
+      ],
+      "correct_pairs": [[0, 1], [1, 3], [2, 0], [3, 2]],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch63-l01-ex05",
+      "target_translation": {
+        "en": "The servant of Allah is humble.",
+        "ur": "اللہ کا بندہ عاجز ہے۔"
+      },
+      "tiles": [
+        {
+          "ar": "عَبْدُ",
+          "ar_plain": "عبد",
+          "translit": "abdu",
+          "en": "servant",
+          "ur": "بندہ"
+        },
+        {
+          "ar": "اللَّهِ",
+          "ar_plain": "الله",
+          "translit": "allaahi",
+          "en": "of Allah",
+          "ur": "اللہ کا"
+        },
+        {
+          "ar": "مُسْتَمِيعٌ",
+          "ar_plain": "مستميع",
+          "translit": "mustami'un",
+          "en": "humble",
+          "ur": "عاجز"
+        }
+      ],
+      "correct_order": [0, 1, 2],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch63-l01-ex06",
+      "statement": {
+        "en": "كِتَابُ اللَّهِ is an example of إضافة where the ال on اللَّه is dropped because اللَّه is مضاف إليه.",
+        "ur": "كِتَابُ اللَّهِ إضافہ کی ایک مثال ہے جہاں اللَّه پر ال چھوڑ دی گئی ہے کیونکہ اللَّه مضاف الیہ ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch63-l01-ex07",
+      "prompt": {
+        "ar": "أَمْرُ اللَّهِ",
+        "ar_plain": "أمر الله",
+        "translit": "amru allaahi",
+        "en": "the command of Allah",
+        "ur": "اللہ کا حکم"
+      },
+      "options": [
+        { "en": "the command of Allah", "ur": "اللہ کا حکم" },
+        { "en": "the book of Allah", "ur": "اللہ کی کتاب" },
+        { "en": "the house of Allah", "ur": "اللہ کا گھر" },
+        { "en": "the servant of Allah", "ur": "اللہ کا بندہ" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَمْرُ is 'command.' كِتَابُ is 'book.' بَيْتُ is 'house.' عَبْدُ is 'servant.' Each is a different مضاف with مضاف إليه اللَّهِ.",
+        "ur": "أَمْرُ 'حکم' ہے۔ كِتَابُ 'کتاب' ہے۔ بَيْتُ 'گھر' ہے۔ عَبْدُ 'بندہ' ہے۔ ہر ایک مضاف ہے جس کا مضاف الیہ اللَّهِ ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch63-l01-ex08",
+      "mode": "TYPE",
+      "sentence_ar": "عِبَادُ ___ is 'the servants of Allah'",
+      "hint": {
+        "en": "عِبَادُ اللَّهِ = 'the servants of Allah.'",
+        "ur": "عِبَادُ اللَّهِ = 'اللہ کے بندے'۔"
+      },
+      "correct_answer": {
+        "ar": "اللَّهِ",
+        "ar_plain": "الله",
+        "translit": "allaahi",
+        "en": "Allah",
+        "ur": "اللہ"
+      },
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "إضافة — the construct state joining two nouns",
+      "ar": "الْإِضَافَةُ — ضَمُّ اسْمَيْنِ لِلْمِلْكِيَّةِ",
+      "ur": "إضافہ — ملکیت کے لیے دو اسم ملانا"
+    },
+    "ayah": {
+      "surah": 49,
+      "ayah": 1,
+      "label": "Al-Hujurat 49:1",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَسُوقُوا أَنفُسَكُمْ فِي هَوَانَ",
+      "en": "O believers, do not put yourselves in lowliness.",
+      "ur": "اے ایمان والو! اپنے آپ کو ذلیلی میں نہ ڈالو۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-hujurat-001-mishary.mp3"
+    },
+    "highlighted_word_indices": [3],
+    "noor_explanation": {
+      "en": "أَنفُسَكُمْ — 'yourselves.' This is إضافة: أَنْفُسٌ (selves) + كُمْ (your-pl). The كُمْ is مضاف إليه, so it receives the kasrah. أَنْفُسُ itself is مضاف, joined to its possesor. This is how إضافة works in practice.",
+      "ur": "أَنفُسَكُمْ — 'اپنے آپ'۔ یہ إضافہ ہے: أَنْفُسٌ (selves) + كُمْ (تمہاری جمع)۔ كُمْ مضاف الیہ ہے، اس لیے یہ کسرہ接收 کرتا ہے۔ أَنْفُسُ خود مضاف ہے، اپنے مالک سے ملی ہوئی۔ یہی إضافہ کا طریقہ ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "إضافة is the joining of two nouns to show possession. كِتَابُ اللَّهِ, بَيْتُ اللَّهِ, رَسُولُ اللَّهِ — this pattern is everywhere in the Quran. Once you see it, you cannot unsee it.",
+      "ur": "إضافہ دو اسم کو ملکیت دکھانے کے لیے جوڑنا ہے۔ كِتَابُ اللَّهِ، بَيْتُ اللَّهِ، رَسُولُ اللَّهِ — یہ pattern قرآن میں ہر جگہ ہے۔ ایک بار دیکھ لو تو پھر نظر نہیں آ سکتا۔"
+    }
+  }
+}

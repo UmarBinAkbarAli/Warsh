@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "chapter_order": 30,
+    "lesson_order": 4,
+    "chapter_title": "Reading Comprehension and Dialogue",
+    "title": "Reading Comprehension Practice",
+    "titleAr": "تَمْرِينُ فَهْمِ الْمَقْرُوءِ",
+    "source": "book3_lesson7_reading_comprehension.md",
+    "estimated_minutes": 9,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 109,
+      "ayah": 2,
+      "label": "Al-Kafirun 109:2",
+      "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+      "en": "I do not worship what you worship.",
+      "ur": "میں تمہاری عبادت نہیں کرواؤں گا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-kafirun-002-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Reading comprehension means understanding not just words, but the grammatical relationships between them. Let's practice identifying what each sentence does in a passage.",
+      "ur": "Reading comprehension کا مطلب ہے صرف الفاظ نہیں بلکہ ان کے درمیان گرامر کے تعلقات سمجھنا۔ آئیے practice کریں کہ ہر sentence ایک passage میں کیا کرتی ہے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+        "ar_plain": "لا أعبد ما تعبدون",
+        "translit": "laa a'budu maa ta'budoona",
+        "en": "I do not worship what you worship.",
+        "ur": "میں تمہاری عبادت نہیں کرواؤں گا۔"
+      },
+      "explanation": {
+        "en": "لَا negates the present tense verb أَعْبُدُ. مَا is a relative pronoun (what). تَعْبُدُونَ is the verb in the relative clause.",
+        "ur": "لَا present tense verb أَعْبُدُ کو negate کرتا ہے۔ مَا ایک relative pronoun ہے (جو)۔ تَعْبُدُونَ relative clause میں verb ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "لَا",
+        "ar_plain": "لا",
+        "translit": "laa",
+        "en": "no / not",
+        "ur": "نہیں / نہ"
+      },
+      "explanation": {
+        "en": "Negation particle for present/future verbs. لَا + present verb = absolute negation.",
+        "ur": "present/future verbs کے لیے negation particle۔ لَا + present verb = مکمل نفی۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "مَا",
+        "ar_plain": "ما",
+        "translit": "maa",
+        "en": "what / that which",
+        "ur": "جو / وہ جو"
+      },
+      "explanation": {
+        "en": "Relative pronoun meaning 'what' or 'that which'. جَمَلَة مَا تَعْبُدُونَ = the thing which you worship.",
+        "ur": "Relative pronoun جس کا مطلب 'جو' یا 'وہ جو'۔ جَمَلَة مَا تَعْبُدُونَ = وہ چیز جو تم عبادت کرتے ہو۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "تَعْبُدُونَ",
+        "ar_plain": "تعبدون",
+        "translit": "ta'budoona",
+        "en": "you (pl.) worship",
+        "ur": "تم (جمع) عبادت کرتے ہو"
+      },
+      "explanation": {
+        "en": "Present tense from ع-ب-د. Prefix تَ- = second person plural. تَعْبُدُونَ = you all worship.",
+        "ur": "ع-ب-د سے present tense۔ Prefix تَ- = second person plural۔ تَعْبُدُونَ = تم سب عبادت کرتے ہو۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Relative clause structure inside negations",
+        "ar": "بِناءُ الْجُمْلَةِ الْمَوْصُولَةِ دَاخِلَ النَّفْي",
+        "ur": "نفی کے اندر_relative clause کی ساخت"
+      },
+      "explanation": {
+        "en": "When لَا negates a verb that has a مَا clause attached, the entire clause is rejected. لَا أَعْبُدُ مَا تَعْبُدُونَ = I will have nothing to do with your worship.",
+        "ur": "جب لَا ایسے verb کو negate کرتا ہے جس کے ساتھ مَا clause لگی ہو، پوری clause مسترد ہو جاتی ہے۔ لَا أَعْبُدُ مَا تَعْبُدُونَ = میں تمہاری عبادت سے بالکل لایعبُر ہوں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Identifying sentence boundaries in Quranic Arabic",
+        "ur": "قرآنی عربی میں sentence boundaries پہچاننا"
+      },
+      "body": {
+        "en": "Quranic Arabic often uses short sentences joined by وَ or separated by pause marks. Each sentence unit must be identified before parsing. Look for the verb or the equational predicate.",
+        "ur": "قرآنی عربی اکثر مختصر sentences استعمال کرتی ہے جو وَ سے جُڑی ہوتی ہیں یا pause marks سے جدا ہوتی ہیں۔ Parsing سے پہلے ہر sentence unit کو پہچاننا ضروری ہے۔ Verb یا equational predicate تلاش کریں۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch30-l04-ex01",
+      "prompt": {
+        "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+        "ar_plain": "لا أعبد ما تعبدون",
+        "translit": "laa a'budu maa ta'budoona",
+        "en": "I do not worship what you worship.",
+        "ur": "میں تمہاری عبادت نہیں کرواؤں گا۔"
+      },
+      "options": [
+        {
+          "en": "I do not worship what you worship.",
+          "ur": "میں تمہاری عبادت نہیں کرواؤں گا۔"
+        },
+        {
+          "en": "I worship what you do not worship.",
+          "ur": "میں جس چیز کی تم عبادت نہیں کرتے اس کی عبادت کرواؤں گا۔"
+        },
+        {
+          "en": "You do not worship what I worship.",
+          "ur": "تم اس چیز کی عبادت نہیں کرتے جو میں کرواؤں۔"
+        },
+        {
+          "en": "I am not worshipping you.",
+          "ur": "میں تمہاری عبادت نہیں کر رہا۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا negates أَعْبُدُ. مَا تَعْبُدُونَ is a relative clause (what you worship). The whole phrase: I do not worship the things you worship.",
+        "ur": "لَا أَعْبُدُ کو negate کرتا ہے۔ مَا تَعْبُدُونَ ایک relative clause ہے (جو تم عبادت کرتے ہو)۔ پوری phrase: میں ان چیزوں کی عبادت نہیں کرواؤں گا جن کی تم عبادت کرتے ہو۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch30-l04-ex02",
+      "statement": {
+        "en": "In لَا أَعْبُدُ مَا تَعْبُدُونَ, the verb أَعْبُدُ is first person singular present tense.",
+        "ur": "لَا أَعْبُدُ مَا تَعْبُدُونَ میں، verb أَعْبُدُ first person singular present tense ہے۔",
+        "ar_example": {
+          "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+          "ar_plain": "لا أعبد ما تعبدون",
+          "translit": "laa a'budu maa ta'budoona",
+          "en": "I do not worship what you worship.",
+          "ur": "میں تمہاری عبادت نہیں کرواؤں گا۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch30-l04-ex03",
+      "mode": "TAP",
+      "sentence_ar": "لَا أَعْبُدُ مَا ___",
+      "hint": {
+        "en": "I do not worship what you worship.",
+        "ur": "میں تمہاری عبادت نہیں کرواؤں گا۔"
+      },
+      "options": [
+        {
+          "ar": "تَعْبُدُونَ",
+          "ar_plain": "تعبدون",
+          "translit": "ta'budoona",
+          "en": "you (pl.) worship",
+          "ur": "تم (جمع) عبادت کرتے ہو"
+        },
+        {
+          "ar": "أَعْبُدُ",
+          "ar_plain": "أعبد",
+          "translit": "a'budu",
+          "en": "I worship",
+          "ur": "میں عبادت کرواؤں"
+        },
+        {
+          "ar": "يَعْبُدُ",
+          "ar_plain": "يعبد",
+          "translit": "ya'budu",
+          "en": "he worships",
+          "ur": "وہ عبادت کرتا ہے"
+        },
+        {
+          "ar": "نَعْبُدُ",
+          "ar_plain": "نعبد",
+          "translit": "na'budu",
+          "en": "we worship",
+          "ur": "ہم عبادت کرتے ہیں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "تَعْبُدُونَ",
+        "ar_plain": "تعبدون",
+        "translit": "ta'budoona",
+        "en": "you (pl.) worship",
+        "ur": "تم (جمع) عبادت کرتے ہو"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch30-l04-ex04",
+      "left_column": [
+        {
+          "ar": "لَا أَعْبُدُ",
+          "ar_plain": "لا أعبد",
+          "translit": "laa a'budu",
+          "en": "I do not worship",
+          "ur": "میں عبادت نہیں کرواؤں"
+        },
+        {
+          "ar": "مَا تَعْبُدُونَ",
+          "ar_plain": "ما تعبدون",
+          "translit": "maa ta'budoona",
+          "en": "what you worship",
+          "ur": "جو تم عبادت کرتے ہو"
+        },
+        {
+          "ar": "الْمُسْلِمُونَ صَالِحُونَ",
+          "ar_plain": "المسلمون صالحون",
+          "translit": "al-muslimoona saalihoona",
+          "en": "The Muslims are righteous",
+          "ur": "مسلمان نیک ہیں"
+        },
+        {
+          "ar": "إِنَّ الْكِتَابَ جَدِيدٌ",
+          "ar_plain": "إن الكتاب جديد",
+          "translit": "inna al-kitaaba jadiidun",
+          "en": "Truly the book is new",
+          "ur": "بے شک کتاب نئی ہے"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "Verbal sentence (negated)",
+          "ur": "فعلی جملہ (نفی شدہ)"
+        },
+        {
+          "en": "Relative clause",
+          "ur": "جملہ موصولہ"
+        },
+        {
+          "en": "Nominal sentence (human plural)",
+          "ur": "اسمی جملہ (انسانی جمع)"
+        },
+        {
+          "en": "إِنَّ nominal sentence",
+          "ur": "إِنَّ والی اسمی جملہ"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch30-l04-ex05",
+      "target_translation": {
+        "en": "I do not worship what you worship.",
+        "ur": "میں تمہاری عبادت نہیں کرواؤں گا۔"
+      },
+      "tiles": [
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "not",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "أَعْبُدُ",
+          "ar_plain": "أعبد",
+          "translit": "a'budu",
+          "en": "I worship",
+          "ur": "میں عبادت کرواؤں"
+        },
+        {
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "maa",
+          "en": "what",
+          "ur": "جو"
+        },
+        {
+          "ar": "تَعْبُدُونَ",
+          "ar_plain": "تعبدون",
+          "translit": "ta'budoona",
+          "en": "you (pl.) worship",
+          "ur": "تم عبادت کرتے ہو"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch30-l04-ex06",
+      "prompt": {
+        "ar": "وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ",
+        "ar_plain": "ولا أنا عابد ما عبدتم",
+        "translit": "walaa anaa 'aabidun maa 'abadtum",
+        "en": "Nor am I one who worships what you worshipped.",
+        "ur": "اور نہ ہی میں وہ ہوں جو تم نے جس کی عبادت کی۔"
+      },
+      "options": [
+        {
+          "en": "Nor am I one who worships what you worshipped.",
+          "ur": "اور نہ ہی میں وہ ہوں جو تم نے جس کی عبادت کی۔"
+        },
+        {
+          "en": "And I am not worshipping what you worshipped.",
+          "ur": "اور میں وہ چیز نہیں پوج رہا جو تم نے پوجی۔"
+        },
+        {
+          "en": "I was not worshipping what you worship.",
+          "ur": "میں وہ چیز نہیں پوج رہا تھا جو تم پوجتے ہو۔"
+        },
+        {
+          "en": "And I am not a worshipper like you.",
+          "ur": "اور میں تم جیسا پوجنے والا نہیں ہوں۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "عَابِدٌ is a noun (one who worships, from ع-ب-د). مَا عَبَدْتُمْ = what you worshipped. This is a nominal sentence with a relative clause inside.",
+        "ur": "عَابِدٌ ایک noun ہے (پوجنے والا، ع-ب-د سے)۔ مَا عَبَدْتُمْ = جس چیز کی تم نے عبادت کی۔ یہ ایک nominal sentence ہے جس کے اندر relative clause ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch30-l04-ex07",
+      "xp_value": 1,
+      "statement": {
+        "en": "Parse: laa a'budu maa ta'budoona"
+      },
+      "ar_example": {
+        "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+        "en": "laa a'budu maa ta'budoona",
+        "ur": ""
+      },
+      "correct_answer": true
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Reading comprehension: parsing sentence structure",
+      "ar": "فَهْمُ الْمَقْرُوءِ: تَحْلِيلُ بِناءِ الْجُمْلَةِ",
+      "ur": "Reading comprehension: sentence structure کا تجزیہ"
+    },
+    "ayah": {
+      "surah": 109,
+      "ayah": 2,
+      "label": "Al-Kafirun 109:2",
+      "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+      "en": "I do not worship what you worship.",
+      "ur": "میں تمہاری عبادت نہیں کرواؤں گا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-kafirun-002-mishary.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      3
+    ],
+    "noor_explanation": {
+      "en": "لَا negates the verb. The relative clause مَا تَعْبُدُونَ tells us specifically what is being rejected. This is the heart of reading comprehension in Arabic — identifying what each word's role is.",
+      "ur": "لَا verb کو negate کرتا ہے۔ Relative clause مَا تَعْبُدُونَ specifically بتاتی ہے کہ کیا مسترد ہو رہا ہے۔ یہ عربی میں reading comprehension کا دل ہے — ہر لفظ کا کردار پہچاننا۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Reading comprehension grows when you can identify each word's grammatical role. Keep practicing with Quranic passages — they are the most beautifully structured Arabic texts available.",
+      "ur": "Reading comprehension اس وقت بڑھتی ہے جب آپ ہر لفظ کا گرامری کردار پہچان سکیں۔ قرآنی passages کے ساتھ مشق کرتے رہیں — وہ سب سے خوبصورت structured عربی texts ہیں۔"
+    }
+  }
+}

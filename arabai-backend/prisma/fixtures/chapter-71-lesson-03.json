@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.0",
+  "_meta": {
+    "chapter_order": 71,
+    "lesson_order": 3,
+    "chapter_title": "الحال والتمييز",
+    "title": "Introduction to التَّمْيِيز — Specification",
+    "titleAr": "مقدمة في التمييز — التخصيص",
+    "source": "arabai-backend/prisma/fixtures",
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 238,
+      "label": "Al-Baqarah 2:238",
+      "ar": "وَأَقِمِ الصَّلَاةَ وَاتَّقُوا اللَّهَ وَمَا تُخْفُونَ فِي أَنْفُسِكُمْ مِمَّا لَا تُبْدُونَ فِي النَّاسِ",
+      "en": "And establish prayer and fear Allah. And whatever you conceal in your souls of what you do not declare to the people —",
+      "ur": "اور نماز قائم کرو اور اللہ سے ڈرو۔ اور جو کچھ تم اپنے دلوں میں چھپاتے ہو جو لوگوں کو نہیں بتاتے —",
+      "audio_url": ""
+    },
+    "noor_intro": {
+      "ar": "Where الْحَال describes a state, التَّمْيِيز specifies and clarifies. It answers: 'Which one? How many? What kind?' It's the grammatical tool for adding precision to an otherwise vague noun.",
+      "en": "Where الْحَال describes a state, التَّمْيِيز specifies and clarifies. It answers: 'Which one? How many? What kind?' It's the grammatical tool for adding precision to an otherwise vague noun.",
+      "ur": "جہاں الْحَال ایک حالت بیان کرتی ہے، التَّمْيِيز وضاحت کرتی ہے۔ یہ جواب دے: 'کون سی؟ کتنے؟ کس قسم؟' یہ گرامر کا ٹول ہے مبہم اسم کو درست کرنے کے لیے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "term_ar": "التَّمْيِيز",
+      "term_en": "Specification / Clarification",
+      "definition_ar": "اسم منصوب يُوضح ويخصص ما قبله",
+      "definition_en": "A noun in the accusative that clarifies and specifies what precedes it",
+      "example_ar": "جَاءَنِي رَجُلٌ — one man came (how many? WHICH one? The تمييز clarifies)",
+      "example_en": "One man came — the number is specified by the تمييز. Without it, 'رجل' is just 'man'. With it, it's 'one specific man'.",
+      "example_ur": "ایک آدمی آیا — تعداد تمييز سے متعین ہوتی ہے۔ اس کے بغیر 'رجل' صرف 'آدمی' ہے۔ اس کے ساتھ یہ 'ایک خاص آدمی' ہے۔",
+      "highlight": true
+    },
+    {
+      "term_ar": "تمييز العدد",
+      "term_en": "Number Specification (تمييز عدد)",
+      "definition_ar": "تمييز يوضح العدد أو الكمية",
+      "definition_en": "A تمييز that clarifies the number or quantity",
+      "example_ar": "عِشْرُونَ يَوْمًا — twenty days. يوم is the تمييز clarifying the number",
+      "example_en": "Twenty days — يوم clarifies that we're talking about 20 days, not 20 of something else",
+      "example_ur": "بیس دن — يوم واضح کرتا ہے کہ ہم بیس دنوں کی بات کر رہے ہیں"
+    },
+    {
+      "term_ar": "تمييز النكرة",
+      "term_en": "Indefinite Noun Specification",
+      "definition_ar": "تمييز يخصص اسمًا نكرة مبهمًا",
+      "definition_en": "A تمييز that specifies an indefinite/ vague noun",
+      "example_ar": "اكَتَفْتُ يَدًا — I took a handful. يد specifies what kind of handful",
+      "example_en": "A handful (of something unspecified) — the تمييز يد specifies the handful is related to hand",
+      "example_ur": "میں نے ایک اٹھائی — دست (ہاتھ) بتاتا ہے کہ کس قسم کی اٹھائی"
+    },
+    {
+      "term_ar": "مُبَيَّن",
+      "term_en": "The Specified (المبين)",
+      "definition_ar": "الاسم الذي يوضحه التمييز",
+      "definition_en": "The noun that the تمييز clarifies",
+      "example_ar": "في \"عِشْرُونَ يَوْمًا\" — يوم is المُبَيَّن و يوم is also التمييز",
+      "example_en": "In 'twenty days' — يوم is the المُبَيَّن (what is being specified), و يوم is the التمييز",
+      "example_ur": "'بیس دن' میں — يوم مُبَيَّن ہے (کیا متعین ہو رہا ہے)، اور يوم ہی تمييز ہے"
+    },
+    {
+      "term_ar": "تمييز العَدد المفرد",
+      "term_en": "Singular Number Specification",
+      "definition_ar": "تمييز العدد من 3 إلى 10 يكون مفردًا",
+      "definition_en": "Number تمييز from 3 to 10 is singular",
+      "example_ar": "ثَلَاثَةٌ أَفْرَادٍ — three individuals. أَفْرَاد is مفرد despite being plural concept",
+      "example_en": "Three individuals — أَفْرَاد is grammatically singular in form (مفرد) even though it means 'plural individuals'",
+      "example_ur": "تین افراد — 'أفراد' شکل میں مفرد ہے اگرچہ اس کا مطلب 'جمع افراد' ہے"
+    },
+    {
+      "term_ar": "تمييز العَدد المعطوف",
+      "term_en": "Coordinated Number Specification",
+      "definition_ar": "تمييز العدد من 11 إلى 99 يكون معطوفًا",
+      "definition_en": "Number تمييز from 11 to 99 is in the معطوف form (مضاف)",
+      "example_ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا — 25 days. يوم is مضاف إليه",
+      "example_en": "Twenty-five days — يوم is مضاف إليه (genitive) after the number phrase",
+      "example_ur": "پچیس دن — يوم عدد کے بعد مضاف الیہ ہے"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "instruction": {
+        "ar": "ما هو التمييز في هذه الجملة؟",
+        "en": "What is the تمييز in this sentence?"
+      },
+      "prompt": {
+        "ar": "ثَلَاثُونَ يَوْمًا",
+        "en": "Thirty days",
+        "ur": "تیس دن"
+      },
+      "options": [
+        {
+          "label_ar": "ثلاثون",
+          "label_en": "Thirty (the number being specified)",
+          "label_ur": "تیس (وہ عدد جو متعین ہو رہا ہے)",
+          "correct": false
+        },
+        {
+          "label_ar": "يومًا",
+          "label_en": "Days (the تمييز clarifying what is counted)",
+          "label_ur": "دن (وہ تمييز جو بتاتی ہے کہ کیا گنا جا رہا ہے)",
+          "correct": true
+        },
+        {
+          "label_ar": "ثلاث",
+          "label_en": "Three (not relevant)",
+          "label_ur": "تین (متعلق نہیں)",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "TRUE_FALSE",
+      "instruction": {
+        "ar": "حدد: صواب أم خطأ",
+        "en": "True or False"
+      },
+      "statement": {
+        "ar": "تمييز العدد من 3 إلى 10 يكون جمعًا",
+        "en": "Number تمييز from 3 to 10 is plural",
+        "ur": "نمبر تمييز 3 سے 10 تک جمع ہوتی ہے"
+      },
+      "correct": false,
+      "explanation": {
+        "ar": "تمييز العدد من 3 إلى 10 يكون مفردًا (مَنْصُوبًا)",
+        "en": "Number تمييز from 3 to 10 is مفرد (singular, منصوب) not جمع. Example: ثَلَاثَةٌ أَفْرَادٍ — أَفْرَاد is مفرد despite the meaning being plural.",
+        "ur": "نمبر تمييز 3 سے 10 تک مفرد (singular, منصوب) ہوتی ہے، جمع نہیں۔ مثال: تین افراد — 'أفراد' شکل میں مفرد ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "instruction": {
+        "ar": "املأ الفراغ",
+        "en": "Fill in the blank"
+      },
+      "prompt": {
+        "ar": "اشْتَرَيْتُ خَمْسَةَ ___",
+        "en": "I bought five ___",
+        "ur": "میں نے پانچ ___ خریدیے"
+      },
+      "answer": "كتب",
+      "hint": "What's being bought? And what number? The تمييز clarifies the type after the number",
+      "case_sensitive": false
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "instruction": {
+        "ar": "حلّل: ما هو المُبَيَّن وما هو التمييز؟",
+        "en": "Analyze: What is المُبَيَّن and what is the تمييز?"
+      },
+      "sentences": [
+        {
+          "original": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا",
+          "analysis": {
+            "المُبَيَّن": "العدد himself (خمسة وعشرون) — this is what needs specification",
+            "التمييز": "يومًا — clarifies that we're talking about 25 days, not 25 of something else",
+            "نوع_التمييز": "تمييز عدد معطوف — يوم is مضاف إليه (genitive), not منصوب",
+            "note": "For numbers 11-99, the تمييز is always in genitive (مضاف إليه)"
+          }
+        },
+        {
+          "original": "جَاءَنِي رَجَلٌ يَوْمًا",
+          "analysis": {
+            "المُبَيَّن": "رجلٌ — an indefinite noun (نكرة) needing specification",
+            "التمييز": "يَوْمًا — clarifies what kind of 'man' came (perhaps 'one day' meaning 'one man', or in context of time)",
+            "نوع_التمييز": "تمييز نكرة — specifying an indefinite noun",
+            "note": "يَوْمًا here specifies the category or condition of the indefinite noun"
+          }
+        }
+      ]
+    },
+    {
+      "type": "MATCHING",
+      "instruction": {
+        "ar": "طابق العدد بنوع التمييز",
+        "en": "Match the number with its تمييز type"
+      },
+      "left_items": [
+        { "id": "1", "text_ar": "ثَلَاثَةٌ أَفْرَادٍ" },
+        { "id": "2", "text_ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا" },
+        { "id": "3", "text_ar": "عِشْرُونَ كِتَابًا" },
+        { "id": "4", "text_ar": "احْتَلَمْتُ لَيْلَةً" }
+      ],
+      "right_items": [
+        { "id": "A", "text_ar": "تمييز عدد: مفرد منصوب" },
+        { "id": "B", "text_ar": "تمييز عدد: معطوف (مضاف إليه)" },
+        { "id": "C", "text_ar": "تمييز نكرة" }
+      ],
+      "matches": [
+        { "left": "1", "right": "A" },
+        { "left": "2", "right": "B" },
+        { "left": "3", "right": "A" },
+        { "left": "4", "right": "C" }
+      ]
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "instruction": {
+        "ar": "ابنِ جملة: تمييز عدد مع العدد 3-10",
+        "en": "Build: Number تمييز with number 3-10"
+      },
+      "elements": [
+        { "text_ar": "سبعة", "gloss": "seven" },
+        { "text_ar": "تلاميذ", "gloss": "students" },
+        { "text_ar": "دخلوا", "gloss": "entered" },
+        { "text_ar": "المسجد", "gloss": "the mosque" }
+      ],
+      "correct_order": [1, 0, 2, 3],
+      "expected_grammar": "سبعةُ تلاميذٍ دخلوا المسجد — seven students entered the mosque. The تمييز comes between the number and noun"
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "instruction": {
+        "ar": "ما معنى: ثَلَاثُونَ يَوْمًا؟",
+        "en": "What does ثَلَاثُونَ يَوْمًا mean?"
+      },
+      "options": [
+        {
+          "label_ar": "ثلاثة أيام",
+          "label_en": "Three days",
+          "label_ur": "تین دن",
+          "correct": false
+        },
+        {
+          "label_ar": "ثلاثين يومًا",
+          "label_en": "Thirty days",
+          "label_ur": "تیس دن",
+          "correct": true
+        },
+        {
+          "label_ar": "ثالث يوم",
+          "label_en": "Third day",
+          "label_ur": "تیسرا دن",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "FILL_BLANK",
+      "instruction": {
+        "ar": "املأ: العدد ___ تمييزه مفرد",
+        "en": "Fill: Numbers ___ have مفرد تمييز"
+      },
+      "prompt": {
+        "ar": "من العدد ___ إلى ___ التمييز مفرد",
+        "en": "From number ___ to ___ the تمييز is مفرد",
+        "ur": "نمبر ___ سے ___ تک تمييز مفرد ہوتی ہے"
+      },
+      "answer": "3 10",
+      "case_sensitive": false
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "ar": "التمييز — التوضيح والتخصيص",
+      "en": "التمييز — Clarification and Specification",
+      "ur": "التمييز — وضاحت اور خاص کرنے والا"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 184,
+      "label": "Al-Baqarah 2:184",
+      "ar": "فَمَنْ كَانَ مِنْكُمْ مَرِيضًا أَوْ عَلَىٰ سَفَرٍ فَعِدَّةٌ مِنْ أَيَّامٍ أُخَرَ",
+      "en": "So whoever among you is ill or traveling, then a number of other days. For those who are able, fasting a consecutive number of days is upon them.",
+      "ur": "پس جو تم میں سے بیمار ہو یا سفر پر ہو تو کچھ دوسرے دنوں کی تعداد۔ اور جو اس کی طاقت رکھتے ہیں، مسلسل دنوں کے روزے ان پر فرض ہیں۔",
+      "audio_url": ""
+    },
+    "highlighted_word_indices": [4],
+    "noor_explanation": {
+      "ar": "في \"عِدَّةٌ مِنْ أَيَّامٍ أُخَرَ\" — أَيَّامٍ هو تمييز للعدد (مضاف إليه). لم يقل 'عددا' فقط، بل ميزده بأيام. التمييز يحول عددًا مبهمًا إلى كمية محددة من شيء معروف.",
+      "en": "In 'a number of other days' — أَيَّامٍ is the تمييز of the number (مضاف إليه). Not just 'a number' but 'a number of days.' The تمييز converts a vague number into a specific quantity of a known thing. This is the power of التمييز — it turns abstraction into precision.",
+      "ur": "'کچھ دوسرے دنوں کی تعداد' میں — 'أیام' عدد کی تمييز ہے (مضاف الیہ)۔ صرف 'تعداد' نہیں بلکہ 'دنوں کی تعداد'۔ تمييز مبہم تعداد کو کسی معروف چیز کی متعین مقدار میں تبدیل کرتی ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "ar": "التمييز transforms vague numbers and indefinite nouns into precise statements. ثَلَاثُونَ يَوْمًا tells you exactly what is being counted. Without it, you only know a number. With it, you know everything. Tomorrow we see it in the Quran.",
+      "en": "التمييز transforms vague numbers and indefinite nouns into precise statements. ثَلَاثُونَ يَوْمًا tells you exactly what is being counted. Without it, you only know a number. With it, you know everything. Tomorrow we see it in the Quran.",
+      "ur": "التمييز مبہم تعداد اور نامعین اسم کو درست بیانات میں تبدیل کرتی ہے۔ 'تیس دن' آپ کو بتاتی ہے کہ کیا گنا جا رہا ہے۔ اس کے بغیر، آپ صرف ایک عدد جانتے ہیں۔ اس کے ساتھ، آپ سب کچھ جانتے ہیں۔ کل ہم اسے قرآن میں دیکھیں گے۔"
+    }
+  }
+}

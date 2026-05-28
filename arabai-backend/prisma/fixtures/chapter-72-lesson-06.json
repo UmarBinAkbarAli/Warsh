@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0",
+  "_meta": {
+    "chapter_order": 72,
+    "lesson_order": 6,
+    "chapter_title": "المنادى",
+    "title": "Full Review of النِّدَاء Rules",
+    "titleAr": "مراجعة شاملة لقواعد النداء",
+    "source": "arabai-backend/prisma/fixtures",
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 33,
+      "ayah": 70,
+      "label": "Al-Ahzab 33:70",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
+      "en": "O you who believe, fear Allah and speak a right word.",
+      "ur": "اے ایمان والو، اللہ سے ڈرو اور درست بات کہو۔",
+      "audio_url": ""
+    },
+    "noor_intro": {
+      "ar": "Chapter 72 review — today we consolidate everything we learned about النِّدَاء. From يا to أَمَّا, from المنادى to the pattern of Quranic دعاء. You'll identify, parse, and translate all forms.",
+      "en": "Chapter 72 review — today we consolidate everything we learned about النِّدَاء. From يا to أَمَّا, from المنادى to the pattern of Quranic دعاء. You'll identify, parse, and translate all forms.",
+      "ur": "باب 72 کا جائزہ — آج ہم نِّدَاء کے بارے میں سب کچھ ملا کر دیکھتے ہیں۔ 'یا' سے 'اما' تک، منادى سے لے کر قرآنی دعا کے نمونے تک۔ آپ شناخت، تجزیہ، اور ترجمہ کریں گے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "term_ar": "مراجعة: أدوات النداء",
+      "term_en": "Review: Vocative Particles",
+      "definition_ar": "يا — نداء مباشر (متبوع بنوع في مرفوع)\nأَيُّهَا — نداء لمجموعة بوصف (متبوع بمضاف إليه)\nأَمَّا — نداء للتأكيد والتنبيه",
+      "definition_en": "يا — direct vocative (followed by noun in nominative)\nأَيُّهَا — group vocative with description (followed by genitive)\nأَمَّا — emphatic vocative for emphasis/contrast",
+      "example_ar": "يَا زَيْدُ — يا + noun in nominative\nأَيُّهَا النَّاسُ — أيها + noun in genitive\nأَمَّا الَّذِينَ آمَنُوا — أما + clause",
+      "example_en": "يَا زَيْدُ — direct address to one person\nأَيُّهَا النَّاسُ — address to a broad group\nأَمَّا — 'As for...' introducing a contrast",
+      "example_ur": "یا زید — ایک شخص سے براہ راست\nاے لوگو — ایک وسیع گروہ کو\nاما — 'جہاں تک' ایک contrast متعارف کراتا ہے",
+      "highlight": true
+    },
+    {
+      "term_ar": "المنادى case after يا",
+      "term_en": "منادى after يا — always مرفوع",
+      "definition_ar": "المنادى بعد يا يكون دائمًا في حالة الرفع",
+      "definition_en": "The منادى after يا is always in the nominative (مرفوع)",
+      "example_ar": "يَا رَبِّ — رب مرفوع باليا\nيَا مُحَمَّدُ — محمد مرفوع باليا",
+      "example_en": "يَا رَبِّ — رَبّ is مرفوع by يا\nيَا مُحَمَّدُ — مُحَمَّد is مرفوع by يا\nThe vocative particle يا always raises the noun it addresses",
+      "example_ur": "'اے رب' — رب 'یا' کی وجہ سے مرفوع\n'اے محمد' — محمد 'یا' کی وجہ سے مرفوع"
+    },
+    {
+      "term_ar": "أَيُّهَا always不变",
+      "term_en": "أَيُّهَا is always invariable — never changes case",
+      "definition_ar": "أَيُّهَا حرف ثابت لا يتغير — الذي يتغير هو الاسم بعده",
+      "definition_en": "أَيُّهَا never changes case — the noun after it changes instead (to genitive as مضاف إليه)",
+      "example_ar": "أَيُّهَا الَّذِينَ آمَنُوا — الذين is مضاف إليه, not أيها",
+      "example_en": "أَيُّهَا itself is always the same — the noun that follows it gets مضاف إليه case. This is the key to understanding أَيُّهَّا.",
+      "example_ur": "'ایہ' ہمیشہ ایک جیسے رہتے ہیں — جو noun اس کے بعد آتا ہے وہ مضاف الیہ case پاتا ہے۔ یہ سمجھنے کی کلید ہے۔"
+    },
+    {
+      "term_ar": "دعاء pattern",
+      "term_en": "Quranic دعاء pattern — Address + Request",
+      "definition_ar": "نداء + طلب = structure of Quranic supplication",
+      "definition_en": "The Quran teaches us to call upon Allah (رَبَّنَا, يَا رَبِّ, اللَّهُمَّ) and then make our request",
+      "example_ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً\nيَا رَبِّ اشْرَحْ لِي صَدْرِي",
+      "example_en": "Our Lord, grant us goodness in this world\nO Lord, expand my chest for me",
+      "example_ur": "ہمارے رب، ہمیں اس دنیا میں اچھائی دے\nاے رب، میرے لیے سینہ کھول"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "MATCHING",
+      "instruction": {
+        "ar": "طابق الجملة بأداة النداء",
+        "en": "Match sentence with vocative particle"
+      },
+      "left_items": [
+        { "id": "1", "text_ar": "يَا رَبِّ" },
+        { "id": "2", "text_ar": "أَمَّا الَّذِينَ آمَنُوا" },
+        { "id": "3", "text_ar": "يَا أَيُّهَا النَّاسُ" },
+        { "id": "4", "text_ar": "يَا زَيْدُ" }
+      ],
+      "right_items": [
+        { "id": "A", "text_ar": "يا + منادى مرفوع (شخص)" },
+        { "id": "B", "text_ar": "يا + أيها + اسم في الجر (جماعة)" },
+        { "id": "C", "text_ar": "أما (تنبيه)" },
+        { "id": "D", "text_ar": "يا + منادى للہ (نداء إلهي)" }
+      ],
+      "matches": [
+        { "left": "1", "right": "D" },
+        { "left": "2", "right": "C" },
+        { "left": "3", "right": "B" },
+        { "left": "4", "right": "A" }
+      ]
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "instruction": {
+        "ar": "حلّل: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
+        "en": "Parse: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ"
+      },
+      "sentences": [
+        {
+          "original": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
+          "analysis": {
+            "يا": "حرف نداء — initiates the call",
+            "أيها": "اسم بمعنى المدعو — invariable particle of vocative",
+            "الذين": "مضاف إليه (genitive) — governed by أيها, modified by آمنوا",
+            "آمنوا": "فعل ماضٍ — relative clause specifying who",
+            "اتقوا": "فعل أمر — command (imperative) for the addressed group",
+            "الله": "مفعول به منصوب — object of اتقوا",
+            "الهيكل": "نداء مجموعة بوصف + فعل طلب = Address + Command"
+          }
+        }
+      ]
+    },
+    {
+      "type": "TRUE_FALSE",
+      "instruction": {
+        "ar": "حدد: صواب أم خطأ",
+        "en": "True or False"
+      },
+      "statements": [
+        {
+          "statement": "في \"يَا رَبِّ\" — الرب مرفوع بالياء",
+          "en": "In 'O Lord' — رَبّ is مرفوع by يا",
+          "ur": "'اے رب' میں — رب 'یا' کی وجہ سے مرفوع ہے",
+          "correct": true
+        },
+        {
+          "statement": "أَيُّهَا يتغير case حسب ما يليه",
+          "en": "أَيُّهَا changes case depending on what follows",
+          "ur": "ایہ اس کے بعد آنے والے کے مطابق case بدلتا ہے",
+          "correct": false,
+          "explanation": "أَيُّهَا is always fixed — it never changes case. The noun after it changes to genitive (مضاف إليه)."
+        }
+      ]
+    },
+    {
+      "type": "FILL_BLANK",
+      "instruction": {
+        "ar": "املأ الفراغ",
+        "en": "Fill in the blank"
+      },
+      "items": [
+        {
+          "prompt": { "ar": "يَا أَيُّهَا ___ — منادى + صفة (جميع الناس)", "en": "يَا أَيُّهَا ___ — vocative + description (all people)" },
+          "answer": "الناس",
+          "case_sensitive": false
+        },
+        {
+          "prompt": { "ar": "أَمَّا ___ آمنوا — أما + الذين + فعل", "en": "أَمَّا ___ آمنوا — أما + الذين + verb" },
+          "answer": "الذين",
+          "case_sensitive": false
+        },
+        {
+          "prompt": { "ar": "يَا ___ — نداء مباشر للہ (رب)", "en": "يَا ___ — direct vocative to Allah (Lord)" },
+          "answer": "رب",
+          "case_sensitive": false
+        }
+      ]
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "instruction": {
+        "ar": "ابنِ: نداء + مجموعة + أمر",
+        "en": "Build: Vocative + group + command"
+      },
+      "elements": [
+        { "text_ar": "يا", "gloss": "O" },
+        { "text_ar": "أيها", "gloss": "those who" },
+        { "text_ar": "الذين", "gloss": "who" },
+        { "text_ar": "آمنوا", "gloss": "believed" },
+        { "text_ar": "قوموا", "gloss": "stand" },
+        { "text_ar": "الصلاة", "gloss": "prayer" }
+      ],
+      "correct_order": [0, 1, 2, 3, 4, 5],
+      "expected_grammar": "يَا أَيُّهَا الَّذِينَ آمَنُوا قُومُوا الصَّلَاةَ — O you who believed, stand for prayer"
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "instruction": {
+        "ar": "ما هي الأداة وما هو المنادى في: اللهم؟",
+        "en": "What is the particle and what is the منادى in: اللهم؟"
+      },
+      "options": [
+        {
+          "label_ar": "أداة النداء: اللهم / منادى: الله",
+          "label_en": "Particle: اللهم / منادى: الله",
+          "label_ur": "particle: اللهم / منادى: اللہ",
+          "correct": true
+        },
+        {
+          "label_ar": "أداة: يا / منادى: الله",
+          "label_en": "Particle: يا / منادى: الله",
+          "label_ur": "particle: یا / منادى: اللہ",
+          "correct": false
+        },
+        {
+          "label_ar": "أداة: أما / منادى: اللهم",
+          "label_en": "Particle: أما / منادى: اللهم",
+          "label_ur": "particle: اما / منادى: اللہم",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "instruction": {
+        "ar": "استخدم النداء في محادثة",
+        "en": "Use the vocative in a conversation"
+      },
+      "scenario": {
+        "ar": "طالبان يتعلمان النداء",
+        "en": "Two students learning about النداء",
+        "ur": "دو طلباء نداء کے بارے میں سیکھ رہے ہیں"
+      },
+      "dialogue": [
+        {
+          "speaker": "student_a",
+          "ar": "ما الفرق بين يا زيد وياأيهازيد؟",
+          "en": "What's the difference between يا زيد and يا أَيُّهَا زيد?",
+          "label": "question_difference"
+        },
+        {
+          "speaker": "student_b",
+          "ar": "يا زيد = direct address to one person. يا أيهازيد = also addressing one person but emphasizing identity",
+          "en": "يا زيد = direct address to one person. يا أَيُّهَا زيد = also one person but with identity emphasis",
+          "label": "explain_difference"
+        },
+        {
+          "speaker": "student_a",
+          "ar": "وماذا عن يا أيها الذين آمنوا؟",
+          "en": "And what about يَا أَيُّهَا الَّذِينَ آمَنُوا?",
+          "label": "ask_about_group"
+        },
+        {
+          "speaker": "student_b",
+          "ar": "هذا يختبر مجموعة محددة — 'الذين' (مضاف إليه) + 'آمنوا' (فعل يصفهم) — النداء الكامل لمخاطبين محددين",
+          "en": "This addresses a specific group — 'الذين' (genitive) + 'آمنوا' (verb describing them) — the complete vocative for a specific audience",
+          "label": "explain_group_vocative"
+        }
+      ]
+    },
+    {
+      "type": "FILL_BLANK",
+      "instruction": {
+        "ar": "املأ: يا directly addresses one person; أَيُّهَا addresses a ___",
+        "en": "Fill: يا directly addresses one person; أَيُّهَا addresses a ___",
+        "ur": "پورا کریں: یا براہ راست ایک شخص کو خطاب کرتا ہے؛ ایہ ایک ___ کو خطاب کرتا ہے"
+      },
+      "answer": "group",
+      "case_sensitive": false
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "ar": "النداء في القرآن — من الرب إلى العبد",
+      "en": "Vocative in the Quran — From Lord to Servant",
+      "ur": "قرآن میں ندا — رب سے بندے تک"
+    },
+    "ayah": {
+      "surah": 39,
+      "ayah": 53,
+      "label": "Az-Zumar 39:53",
+      "ar": "قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنْفُسِهِمْ لَا تَقْنَطُوا مِنْ رَحْمَةِ اللَّهِ إِنَّ اللَّهَ يَغْفِرُ الذُّنُوبَ جَمِيعًا",
+      "en": "Say: 'O My servants who have committed excess against themselves, do not despair of the mercy of Allah. Indeed, Allah forgives all sins.'",
+      "ur": "کہو: 'اے میرے بندوں جو اپنے آپ پر زیادتی کر چکے ہو، اللہ کی رحمت سے مایوس نہ ہو۔ بیشک اللہ تمام گناہ معاف کر دیتا ہے۔'",
+      "audio_url": ""
+    },
+    "highlighted_word_indices": [1, 2],
+    "noor_explanation": {
+      "ar": "في \"يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا\" — يا عِبَادِيّ is يَا + عِبَاد + ي (مضاف إلى المتكلم). Note the ي at the end of عِبَادِيّ — this is the خاتمة متكلم (pronoun marker for 'my'). The structure: يا + عبد + ي = 'O my servant.' Then الذين describes them.",
+      "en": "In 'O My servants who have committed excess' — يا عِبَادِيّ is يَا + عِبَاد + ي (genitive with 'my' attached). Notice the ي at the end of عِبَادِيّ — this is the pronoun marker for 'my' (خاتمة متكلم). The structure: يا + عبد + ي = 'O my servant.' الَّذِينَ describes them as those who wronged themselves.",
+      "ur": "'اے میرے بندوں جو اپنے آپ پر زیادتی کر چکے' میں — 'یا عبادی' یہ 'یا' + 'عباد' + 'ی' (مضاف الیہ 'میرے' کے ساتھ)۔ 'عبادی' کے آخر میں 'ی' نوٹ کریں — یہ 'میرے' کا pronoun marker ہے۔ ساخت: یا + بندہ + ی = 'اے میرے بندے'۔ 'الذین' انہیں بتاتا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "ar": "Chapter 72 is nearly complete. You now know every form of النِّدَاء — يا, أَيُّهَا, and أَمَّا. You understand the difference between direct address and group address. Tomorrow we reach the emotional and spiritual climax of the entire curriculum.",
+      "en": "Chapter 72 is nearly complete. You now know every form of النِّدَاء — يا, أَيُّهَا, and أَمَّا. You understand the difference between direct address and group address. Tomorrow we reach the emotional and spiritual climax of the entire curriculum.",
+      "ur": "باب 72 تقریباً مکمل ہو گیا ہے۔ اب آپ نِّدَاء کی ہر شکل جانتے ہیں — 'یا'، 'ایہ'، اور 'اما'۔ آپ براہ راست خطاب اور گروہ خطاب کے درمیان فرق سمجھتے ہیں۔ کل ہم پورے نصاب کے جذابی اور روحانی عروج تک پہنچتے ہیں۔"
+    }
+  }
+}

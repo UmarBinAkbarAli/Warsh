@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 44, Lesson 5 - REVIEW. Consolidates لَمْ and لَمَّا negation of past.",
+    "chapter_order": 44,
+    "lesson_order": 5,
+    "chapter_title": "لَمْ and لَمَّا — Negation of Past",
+    "title": "Chapter 44 Review — Negation",
+    "titleAr": "مُرَاجَعَةٌ — نَفْيُ الْمَاضِي",
+    "source": "madina_reader_grammar_negation.md",
+    "estimated_minutes": 7,
+    "xp_reward": 5
+  },
+  "hook": {
+    "ayah": {
+      "surah": 112,
+      "ayah": 2,
+      "label": "Al-Ikhlas 112:2",
+      "ar": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "en": "He neither begets nor is begotten.",
+      "ur": "نہ اس نے کوئی پیدا کیا اور نہ پیدا ہوا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-ikhlas-002-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Review time. لَمْ and لَمَّا — two particles that change how Arabic negates the past. Let us lock both in.",
+      "ur": "مراجعے کا وقت۔ لَمْ اور لَمَّا — دو particles جو عربی کی ماضی کی نفی کو بدلتے ہیں۔ آئیے دونوں کو مضبوط کریں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 44 — Two negation tools",
+        "ar": "الْبَاب 44 — وَسِيلَتَانِ لِلنَّفْي",
+        "ur": "باب 44 — دو نفی کے اوزار"
+      },
+      "explanation": {
+        "en": "لَمْ = did not (past, completed, absolute negation). لَمَّا = not yet (past, pending, implied expectation). Both take verbs in jussive mood (مجزوم).",
+        "ur": "لَمْ = نہیں ہوا (ماضی، مکمل، مطلق نفی)۔ لَمَّا = ابھی نہیں (ماضی، زیر التقاء، متوقع)۔ دونوں فیہ کو مجزوم میں لیتے ہیں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Key contrasts",
+        "ur": "اہم فرق"
+      },
+      "body": {
+        "en": "لَمْ يَذْهَبْ = he did not go (complete, final). لَمَّا يَذْهَبْ = he has not gone yet (still expected to go). لَمْ يَلِدْ = He never begets (eternal truth).",
+        "ur": "لَمْ يَذْهَبْ = اس نے نہیں گیا (مکمل، فائنل)۔ لَمَّا يَذْهَبْ = اس نے ابھی نہیں گیا (ابھی جانے کی توقع)۔ لَمْ يَلِدْ = وہ کبھی پیدا نہیں کرتا (ابدی سچائی)۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch44-l05-ex01",
+      "prompt": {
+        "ar": "لَمْ يُولَدْ",
+        "ar_plain": "لم يولد",
+        "translit": "lam yuwalad",
+        "en": "He was not begotten",
+        "ur": "کسی نے اسے پیدا نہیں کیا"
+      },
+      "options": [
+        { "en": "He was not begotten", "ur": "کسی نے اسے پیدا نہیں کیا" },
+        { "en": "He has not been begotten yet", "ur": "کسی نے اسے ابھی تک پیدا نہیں کیا" },
+        { "en": "He did not beget", "ur": "اس نے پیدا نہیں کیا" },
+        { "en": "He is not being begotten", "ur": "وہ پیدا نہیں ہو رہا" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَمْ يُولَدْ uses passive voice and absolute past negation — no one has ever begotten Allah.",
+        "ur": "لَمْ يُولَدْ مج肥大 voice اور مطلق ماضی نفی استعمال کرتا ہے — کسی نے کبھی اللہ کو پیدا نہیں کیا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch44-l05-ex02",
+      "statement": {
+        "en": "Both لَمْ and لَمَّا require the following verb to be in jussive mood.",
+        "ur": "لَمْ اور لَمَّا دونوں کے بعد والا فعل مجزوم میں ہوتا ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch44-l05-ex03",
+      "mode": "TAP",
+      "sentence_ar": "___ أَتَيْكَ — I have not come to you yet.",
+      "hint": {
+        "en": "I have not come to you yet — pending, expected.",
+        "ur": "میں ابھی تک آپ کے پاس نہیں آیا — متوقع، مگر ابھی تک نہیں آیا۔"
+      },
+      "options": [
+        {
+          "ar": "لَمَّا",
+          "ar_plain": "لما",
+          "translit": "lamaa",
+          "en": "not yet",
+          "ur": "ابھی نہیں"
+        },
+        {
+          "ar": "لَمْ",
+          "ar_plain": "لم",
+          "translit": "lam",
+          "en": "did not",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "no",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "لَنْ",
+          "ar_plain": "لن",
+          "translit": "lan",
+          "en": "will not",
+          "ur": "نہیں ہو گا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لَمَّا",
+        "ar_plain": "لما",
+        "translit": "lamaa",
+        "en": "not yet",
+        "ur": "ابھی نہیں"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch44-l05-ex04",
+      "left_column": [
+        {
+          "ar": "لَمْ يَمُتْ",
+          "ar_plain": "لم يمة",
+          "translit": "lam yamuut",
+          "en": "he did not die (eternal)",
+          "ur": "وہ نہیں مرا (ابدی)"
+        },
+        {
+          "ar": "لَمَّا مَاتَ",
+          "ar_plain": "لما مات",
+          "translit": "lamaa maat",
+          "en": "he has not died yet",
+          "ur": "وہ ابھی تک نہیں مرا"
+        },
+        {
+          "ar": "لَمْ يَلِدْ",
+          "ar_plain": "لم يلد",
+          "translit": "lam yalid",
+          "en": "he did not beget",
+          "ur": "اس نے پیدا نہیں کیا"
+        },
+        {
+          "ar": "لَمَّا يَلِدْ",
+          "ar_plain": "لما يلد",
+          "translit": "lamaa yalid",
+          "en": "he has not begotten yet",
+          "ur": "اس نے ابھی تک پیدا نہیں کیا"
+        }
+      ],
+      "right_column": [
+        { "en": "he did not die (eternal)", "ur": "وہ نہیں مرا (ابدی)" },
+        { "en": "he has not died yet", "ur": "وہ ابھی تک نہیں مرا" },
+        { "en": "he did not beget", "ur": "اس نے پیدا نہیں کیا" },
+        { "en": "he has not begotten yet", "ur": "اس نے ابھی تک پیدا نہیں کیا" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch44-l05-ex05",
+      "target_translation": {
+        "en": "He neither begets nor is begotten.",
+        "ur": "نہ اس نے کوئی پیدا کیا اور نہ پیدا ہوا۔"
+      },
+      "tiles": [
+        {
+          "ar": "لَمْ",
+          "ar_plain": "لم",
+          "translit": "lam",
+          "en": "did not",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "يَلِدْ",
+          "ar_plain": "يلد",
+          "translit": "yalid",
+          "en": "beget",
+          "ur": "پیدا کرے"
+        },
+        {
+          "ar": "وَلَمْ",
+          "ar_plain": "ولم",
+          "translit": "wa-lam",
+          "en": "and did not",
+          "ur": "اور نہیں"
+        },
+        {
+          "ar": "يُولَدْ",
+          "ar_plain": "يولد",
+          "translit": "yuwalad",
+          "en": "is begotten",
+          "ur": "پیدا ہو"
+        }
+      ],
+      "correct_order": [0, 1, 2, 3],
+      "xp_value": 2
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch44-l05-ex06",
+      "statement": {
+        "en": "لَمْ + jussive = completed past negation. لَمَّا + jussive = pending past negation.",
+        "ur": "لَمْ + مجزوم = مکمل ماضی نفی۔ لَمَّا + مجزوم = زیر التقاء ماضی نفی۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch44-l05-ex07",
+      "prompt": {
+        "ar": "لَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+        "ar_plain": "لم يكن له كفا أحد",
+        "translit": "lam yakuun lahu kufwan ahad",
+        "en": "There is nothing equal to Him",
+        "ur": "اس کا کوئی ہمسر نہیں"
+      },
+      "options": [
+        { "en": "There is nothing equal to Him", "ur": "اس کا کوئی ہمسر نہیں" },
+        { "en": "He has not been equal to anyone yet", "ur": "وہ ابھی تک کسی کا ہمسر نہیں ہوا" },
+        { "en": "There was no one equal to Him", "ur": "اس کا کوئی ہمسر نہیں تھا" },
+        { "en": "He is not equal to anyone", "ur": "وہ کسی کا ہمسر نہیں ہے" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Negation of past — mastered",
+      "ar": "نَفْيُ الْمَاضِي — مُتْقَنٌ",
+      "ur": "ماضی کی نفی — مہارت حاصل"
+    },
+    "ayah": {
+      "surah": 112,
+      "ayah": 2,
+      "label": "Al-Ikhlas 112:2",
+      "ar": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "en": "He neither begets nor is begotten.",
+      "ur": "نہ اس نے کوئی پیدا کیا اور نہ پیدا ہوا۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-ikhlas-002-mishary.mp3"
+    },
+    "highlighted_word_indices": [0],
+    "noor_explanation": {
+      "en": "Al-Ikhlas uses لَمْ twice with absolute negation — eternal truths about Allah. Chapter 44 ends here: you now fully own negation of past in Arabic.",
+      "ur": "الاخلاص میں لَمْ دو بار مستقل نفی کے ساتھ — اللہ کے بارے میں ابدی حقائق۔ باب 44 یہاں ختم ہوتا ہے: اب آپ عربی میں ماضی کی نفی کو مکمل طور پر جانتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "لَمْ completes the story of negation. لَمَّا adds the sense of not-yet. Together they open Al-Ikhlas and every other negation in the Quran. Chapter 44 complete.",
+      "ur": "لَمْ نفی کی کہانی مکمل کرتا ہے۔ لَمَّا ابھی نہیں کا احساس jatmati ہے۔ اکٹھے یہ اخلاص کو کھولتے ہیں اور قرآن میں ہر دوسری نفی کو۔ باب 44 مکمل۔"
+    }
+  }
+}

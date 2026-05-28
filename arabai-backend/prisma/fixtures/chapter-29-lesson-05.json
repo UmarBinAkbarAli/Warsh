@@ -1,0 +1,539 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 29, Lesson 5 - GRAMMAR_PARSE on Al-Kafirun ayat: identify verbal vs nominal sentence types.",
+    "chapter_order": 29,
+    "lesson_order": 5,
+    "chapter_title": "Nominal vs. Verbal Sentences",
+    "title": "Parsing Al-Kafirun Sentences",
+    "titleAr": "تحلیل جُمَلِ سُورَةِ الْكَافِرُونَ",
+    "source": "madina_book3_lesson6_nominal_verbal",
+    "estimated_minutes": 9,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 109,
+      "ayah": 1,
+      "label": "Al-Kafirun 109:1",
+      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "en": "Say, O disbelievers.",
+      "ur": "کہہ دیجیے، اے کافرو۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-kafirun-001-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Now you know the rule. Let us apply it to every ayah of Al-Kafirun. You will identify whether each ayah is verbal or nominal — using GRAMMAR_PARSE.",
+      "ur": "اب آپ کو قاعدہ معلوم ہے۔ آئیے اسے سورۃ کافروں کی ہر آیت پر لاگو کرتے ہیں۔ آپ ہر آیت کی قسم پہچانیں گے — GRAMMAR_PARSE استعمال کر کے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Identifying sentence type in Quranic text",
+        "ar": "قرآنی متن میں جملے کی قسم کی شناخت",
+        "ur": "قرآنی متن میں جملے کی قسم کی شناخت"
+      },
+      "explanation": {
+        "en": "Apply the first-word rule: if the first content word is a verb → verbal sentence; if it is a noun/pronoun → nominal sentence. إِنَّ does NOT change this rule — it still opens a nominal sentence.",
+        "ur": "پہلے لفظ کے قاعدے کو لاگو کریں: اگر پہلا اہم لفظ فعل ہے → فعلی جملہ؛ اگر یہ اسم/ضمیر ہے → اسمی جملہ۔ إِنَّ اس قاعدے کو تبدیل نہیں کرتا — یہ پھر بھی ایک اسمی جملہ کھولتا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+        "ar_plain": "قل يا أيها الكافرون",
+        "translit": "qul yaa ayyuhaa al-kaafiroon",
+        "en": "Say, O disbelievers (verbal — قُلْ is a verb first)",
+        "ur": "کہہ دیجیے، اے کافرو (فعلي — قُلْ پہلے فعل ہے)"
+      },
+      "explanation": {
+        "en": "قُلْ is the first word — it is an imperative verb (قول: say!). يَا أَيُّهَا الْكَافِرُونَ is vocative (address). This is a verbal sentence.",
+        "ur": "قُلْ پہلا لفظ ہے — یہ ایک امری فعل ہے (کہہ!)۔ يَا أَيُّهَا الْكَافِرُونَ مخاطب ہے۔ یہ ایک فعلی جملہ ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+        "ar_plain": "لا أعبد ما تعبدون",
+        "translit": "laa a'budu maa ta'budoon",
+        "en": "I do not worship what you worship (verbal — أَعْبُدُ is a verb first)",
+        "ur": "میں اس کی عبادت نہیں کرتا جو تم عبادت کرتے ہو (فعلي — أَعْبُدُ پہلا فعل ہے)"
+      },
+      "explanation": {
+        "en": "أَعْبُدُ is a verb (imperfect, first person) — it is the first content word. لَا is just negation. This is a verbal sentence.",
+        "ur": "أَعْبُدُ ایک فعل ہے (مضارع، اول شخص) — یہ پہلا اہم لفظ ہے۔ لَا صرف نفی ہے۔ یہ ایک فعلی جملہ ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "وَلَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+        "ar_plain": "ولكم دينكم ولي دين",
+        "translit": "wa lakum diinakum wa liya diini",
+        "en": "And to you is your religion, and to me is my religion (nominal — وَلَكُمْ starts with pronoun + noun)",
+        "ur": "اور تمہارا تمہارا دین ہے اور میرا میرا دین ہے (اسمی — وَلَكُمْ ضمیر + اسم سے شروع ہوتا ہے)"
+      },
+      "explanation": {
+        "en": "وَلَكُمْ starts with وَ (conjunction) + لَكُمْ (pronoun 'to you') + دِينُكُمْ (noun). No verb at the start. This is a nominal sentence.",
+        "ur": "وَلَكُمْ وَ (حرف عطف) + لَكُمْ (ضمیر 'تمہارے لیے') + دِينُكُمْ (اسم) سے شروع ہوتا ہے۔ شروع میں کوئی فعل نہیں۔ یہ ایک اسمی جملہ ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "قُلْ",
+        "ar_plain": "قل",
+        "translit": "qul",
+        "en": "say! (imperative verb)",
+        "ur": "کہہ! (امری فعل)"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "أَعْبُدُ",
+        "ar_plain": "أعبد",
+        "translit": "a'budu",
+        "en": "I worship (verb)",
+        "ur": "میں عبادت کرتا ہوں (فعل)"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch29-l05-ex01",
+      "sentence_ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "words": [
+        {
+          "ar": "قُلْ",
+          "ar_plain": "قل",
+          "translit": "qul",
+          "en": "say!",
+          "ur": "کہہ!"
+        },
+        {
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaa",
+          "en": "O",
+          "ur": "اے"
+        },
+        {
+          "ar": "أَيُّهَا",
+          "ar_plain": "أيها",
+          "translit": "ayyuhaa",
+          "en": "O ( vocative)",
+          "ur": "اے (مخاطب)"
+        },
+        {
+          "ar": "الْكَافِرُونَ",
+          "ar_plain": "الكافرون",
+          "translit": "al-kaafiroon",
+          "en": "the disbelievers",
+          "ur": "کافرو"
+        }
+      ],
+      "available_roles": [
+        "VERB",
+        "PARTICLE",
+        "SUBJECT",
+        "INTERJECTION"
+      ],
+      "correct_roles": [
+        "VERB",
+        "INTERJECTION",
+        "INTERJECTION",
+        "PARTICLE"
+      ],
+      "xp_value": 1,
+      "options": [
+        {
+          "en": "verbal — starts with a verb",
+          "ur": "فعلي"
+        },
+        {
+          "en": "nominal — starts with a noun",
+          "ur": "اسمی"
+        },
+        {
+          "en": "imperative — starts with command",
+          "ur": "امریہ"
+        },
+        {
+          "en": "interrogative — starts with question",
+          "ur": "سوالیہ"
+        }
+      ]
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch29-l05-ex02",
+      "sentence_ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+      "words": [
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "not",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "أَعْبُدُ",
+          "ar_plain": "أعبد",
+          "translit": "a'budu",
+          "en": "I worship",
+          "ur": "میں عبادت کرتا ہوں"
+        },
+        {
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "maa",
+          "en": "what",
+          "ur": "جو"
+        },
+        {
+          "ar": "تَعْبُدُونَ",
+          "ar_plain": "تعبدون",
+          "translit": "ta'budoona",
+          "en": "you worship",
+          "ur": "تم عبادت کرو"
+        }
+      ],
+      "available_roles": [
+        "PARTICLE",
+        "VERB",
+        "OBJECT",
+        "VERB"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VERB",
+        "OBJECT",
+        "VERB"
+      ],
+      "xp_value": 1,
+      "options": [
+        {
+          "en": "nominal — starts with a noun",
+          "ur": "اسمی"
+        },
+        {
+          "en": "verbal — starts with a verb",
+          "ur": "فعلي"
+        },
+        {
+          "en": "exclamatory — starts with感叹",
+          "ur": "ندا"
+        },
+        {
+          "en": "conditional — starts with if",
+          "ur": "شرطیہ"
+        }
+      ]
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch29-l05-ex03",
+      "prompt": {
+        "ar": "وَلَكُمْ دِينُكُمْ",
+        "ar_plain": "ولكم دينكم",
+        "translit": "wa lakum diinakum",
+        "en": "And to you is your religion",
+        "ur": "اور تمہارا تمہارا دین ہے"
+      },
+      "options": [
+        {
+          "en": "nominal (no verb first)",
+          "ur": "اسمی (پہلے کوئی فعل نہیں)"
+        },
+        {
+          "en": "verbal (starts with a verb)",
+          "ur": "فعلي (فعل سے شروع)"
+        },
+        {
+          "en": "either is acceptable",
+          "ur": "کوئی بھی قابل قبول"
+        },
+        {
+          "en": "depends on context",
+          "ur": "سیاق و سباق پر منحصر"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch29-l05-ex04",
+      "sentence_ar": "وَلَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+      "words": [
+        {
+          "ar": "وَلَكُمْ",
+          "ar_plain": "ولكم",
+          "translit": "wa lakum",
+          "en": "and to you",
+          "ur": "اور تمہارے لیے"
+        },
+        {
+          "ar": "دِينُكُمْ",
+          "ar_plain": "دينكم",
+          "translit": "diinakum",
+          "en": "your religion",
+          "ur": "تمہارا دین"
+        },
+        {
+          "ar": "وَلِيَ",
+          "ar_plain": "ولي",
+          "translit": "wa liya",
+          "en": "and to me",
+          "ur": "اور میرے لیے"
+        },
+        {
+          "ar": "دِينِ",
+          "ar_plain": "ديني",
+          "translit": "diini",
+          "en": "my religion",
+          "ur": "میرا دین"
+        }
+      ],
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "CONJUNCTION",
+        "POSSESSIVE"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "CONJUNCTION",
+        "POSSESSIVE"
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch29-l05-ex05",
+      "statement": {
+        "en": "وَلَكُمْ دِينُكُمْ is a nominal sentence because it has no verb at the start.",
+        "ur": "وَلَكُمْ دِينُكُمْ ایک اسمی جملہ ہے کیونکہ اس کا آغاز فعل سے نہیں ہوتا۔",
+        "ar_example": {
+          "ar": "وَلَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+          "ar_plain": "ولكم دينكم ولي دين",
+          "translit": "wa lakum diinakum wa liya diini",
+          "en": "And to you is your religion, and to me is my religion",
+          "ur": "اور تمہارا تمہارا دین ہے اور میرا میرا دین ہے"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch29-l05-ex06",
+      "left_column": [
+        {
+          "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+          "ar_plain": "قل يا أيها الكافرون",
+          "en": "Say, O disbelievers",
+          "ur": "کہہ دیجیے، اے کافرو",
+          "translit": "—"
+        },
+        {
+          "ar": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+          "ar_plain": "لا أعبد ما تعبدون",
+          "en": "I do not worship what you worship",
+          "ur": "میں اس کی عبادت نہیں کرتا جو تم عبادت کرتے ہو",
+          "translit": "—"
+        },
+        {
+          "ar": "وَلَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+          "ar_plain": "ولكم دينكم ولي دين",
+          "en": "And to you is your religion, and to me is my religion",
+          "ur": "اور تمہارا تمہارا دین ہے اور میرا میرا دین ہے",
+          "translit": "—"
+        },
+        {
+          "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+          "ar_plain": "ولا أنتم عابدون ما أعبد",
+          "en": "Nor are you worshippers of what I worship",
+          "ur": "اور نہ تم اس کی عبادت کرنے والے ہو جو میں عبادت کرتا ہوں",
+          "translit": "—"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "verbal",
+          "ur": "فعلي"
+        },
+        {
+          "en": "verbal",
+          "ur": "فعلي"
+        },
+        {
+          "en": "nominal",
+          "ur": "اسمی"
+        },
+        {
+          "en": "verbal",
+          "ur": "فعلي"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch29-l05-ex07",
+      "sentence_ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+      "words": [
+        {
+          "ar": "وَلَا",
+          "ar_plain": "ولا",
+          "translit": "wa laa",
+          "en": "and not",
+          "ur": "اور نہیں"
+        },
+        {
+          "ar": "أَنْتُمْ",
+          "ar_plain": "أنتم",
+          "translit": "antum",
+          "en": "you",
+          "ur": "تم"
+        },
+        {
+          "ar": "عَابِدُونَ",
+          "ar_plain": "عابدون",
+          "translit": "aabidoona",
+          "en": "worshippers (active participle)",
+          "ur": "عبادت کرنے والے"
+        },
+        {
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "maa",
+          "en": "what",
+          "ur": "جو"
+        },
+        {
+          "ar": "أَعْبُدُ",
+          "ar_plain": "أعبد",
+          "translit": "a'budu",
+          "en": "I worship",
+          "ur": "میں عبادت کرتا ہوں"
+        }
+      ],
+      "available_roles": [
+        "CONJUNCTION",
+        "SUBJECT",
+        "VERB",
+        "OBJECT",
+        "VERB"
+      ],
+      "correct_roles": [
+        "CONJUNCTION",
+        "SUBJECT",
+        "VERB",
+        "OBJECT",
+        "VERB"
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch29-l05-ex08",
+      "target_translation": {
+        "en": "Say, O disbelievers",
+        "ur": "کہہ دیجیے، اے کافرو"
+      },
+      "tiles": [
+        {
+          "ar": "الْكَافِرُونَ",
+          "ar_plain": "الكافرون",
+          "translit": "al-kaafiroon",
+          "en": "the disbelievers",
+          "ur": "کافرو"
+        },
+        {
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaa",
+          "en": "O",
+          "ur": "اے"
+        },
+        {
+          "ar": "أَيُّهَا",
+          "ar_plain": "أيها",
+          "translit": "ayyuhaa",
+          "en": "O (vocative)",
+          "ur": "اے (مخاطب)"
+        },
+        {
+          "ar": "قُلْ",
+          "ar_plain": "قل",
+          "translit": "qul",
+          "en": "say!",
+          "ur": "کہہ!"
+        }
+      ],
+      "correct_order": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Al-Kafirun — verbal vs nominal ayahs",
+      "ar": "سورۃ الْكَافِرُون — آیاتِ فعلیہ واسمیہ",
+      "ur": "سورۃ کافروں — فعلی بمقابلہ اسمی آیات"
+    },
+    "ayah": {
+      "surah": 109,
+      "ayah": 1,
+      "label": "Al-Kafirun 109:1",
+      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "en": "Say, O disbelievers.",
+      "ur": "کہہ دیجیے، اے کافرو۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-kafirun-001-mishary.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "noor_explanation": {
+      "en": "Al-Kafirun is beautifully constructed: قُلْ (verbal), لَا أَعْبُدُ (verbal), وَلَا أَنْتُمْ عَابِدُونَ (verbal — عَابِدُونَ is a participle used as a verb), but وَلَكُمْ دِينُكُمْ (nominal — no verb). The surah deliberately contrasts the two sentence types.",
+      "ur": "سورۃ کافروں خوبصورتی سے بنا ہے: قُلْ (فعلي)، لَا أَعْبُدُ (فعلي)، وَلَا أَنْتُمْ عَابِدُونَ (فعلي — عَابِدُونَ ایک اسم فاعل ہے جو فعل کے طور پر استعمال ہوا)، لیکن وَلَكُمْ دِينُكُمْ (اسمی — کوئی فعل نہیں)۔ سورہ جان بوجھ کر دونوں جملے کی قسموں کا موازنہ کرتی ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Al-Kafirun is your first GRAMMAR_PARSE surah. Most of its ayahs are verbal (قُلْ, لَا أَعْبُدُ, عَابِدُونَ), but وَلَكُمْ دِينُكُمْ is nominal. Spot the first content word: verb or not — that is the test.",
+      "ur": "سورۃ کافروں آپ کی پہلی GRAMMAR_PARSE سورہ ہے۔ اس کی اکثر آیات فعلی ہیں (قُلْ، لَا أَعْبُدُ، عَابِدُونَ)، لیکن وَلَكُمْ دِينُكُمْ اسمی ہے۔ پہلا اہم لفظ پہچانیں: فعل ہے یا نہیں — یہی امتحان ہے۔"
+    }
+  }
+}

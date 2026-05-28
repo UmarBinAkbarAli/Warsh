@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 42, Lesson 1 - Interrogative adverb كَمْ (how much / how many).",
+    "chapter_order": 42,
+    "lesson_order": 1,
+    "chapter_title": "Advanced Q&A (كَمْ/مَتَى/لِمَاذَا)",
+    "title": "How Much? How Many? — كَمْ",
+    "titleAr": "كَمْ — كَمْ؟",
+    "source": "madina_reader_grammar_qa.md",
+    "estimated_minutes": 8,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 222,
+      "label": "Al-Baqarah 2:222",
+      "ar": "وَيَسْأَلُونَكَ عَنِ الْمَحِيضِ",
+      "en": "And they ask you about menstruation.",
+      "ur": "اور وہ تم سے حیض کے بارے میں پوچھتے ہیں۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-222-part-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Arabic has different ways to ask why, when, and how much. Today: كَمْ — how much? or how many?",
+      "ur": "عربی میں پوچھنے کے مختلف طریقے ہیں۔ آج: كَمْ — کتنا؟ یا کتنے؟"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "How much / How many? — كَمْ",
+        "ar": "كَمْ — كَمْ؟",
+        "ur": "کتنا؟ کتنے؟ — كَمْ"
+      },
+      "explanation": {
+        "en": "كَمْ asks about quantity: how many books? how much water? It is followed by a noun in the genitive case (مجرور).",
+        "ur": "كَمْ مقدار کے بارے میں پوچھتا ہے: کتنی کتابیں؟ کتنا پانی؟ اس کے بعد اسم مجرور میں آتا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "كَمْ كِتَابًا لَدَيْكَ؟",
+        "ar_plain": "كم 책با لدبك",
+        "translit": "kam kitaaban ladayka?",
+        "en": "How many books do you have?",
+        "ur": "تم کے پاس کتنی کتابیں ہیں؟"
+      },
+      "explanation": {
+        "en": "كَمْ asks. كِتَابًا is accusative (indefinite object). لَدَيْكَ means in your possession.",
+        "ur": "كَمْ پوچھتا ہے۔ كِتَابًا نصب میں (نکرہ مفعول) ہے۔ لَدَيْكَ کا مطلب ہے تمہارے پاس۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "كَمْ سَنَةً عِشْتَ؟",
+        "ar_plain": "كم سنة عشت",
+        "translit": "kam sanatan 'ishita?",
+        "en": "How many years did you live?",
+        "ur": "تم کتنے سال جیے؟"
+      },
+      "explanation": {
+        "en": "سَنَةً in the accusative with tanween = a period of time being asked about.",
+        "ur": "سَنَةً تنوین کے ساتھ نصب میں = ایک وقت کی مدت جس کے بارے میں پوچھا جا رہا ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "كَمْ + noun in genitive",
+        "ur": "كَمْ + اسم مجرور"
+      },
+      "body": {
+        "en": "After كَمْ, the noun that follows is always in the genitive case (مجرور), regardless of whether it is the subject or object. Example: كَمْ رَجُلًا رَأَيْتَ؟ — how many men did you see?",
+        "ur": "كَمْ کے بعد جو اسم آتا ہے وہ ہمیشہ مجرور میں ہوتا ہے، چاہے وہ فاعل ہو یا مفعول۔ مثال: كَمْ رَجُلًا رَأَيْتَ؟ — تم نے کتنے آدمی دیکھے؟"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "سَنَةٌ",
+        "ar_plain": "سنة",
+        "translit": "sanatun",
+        "en": "a year",
+        "ur": "ایک سال"
+      },
+      "explanation": {
+        "en": "سَنَةٌ appears in the Quran in expressions of time and in asking about lifespans. Used with كَمْ.",
+        "ur": "سَنَةٌ قرآن میں وقت اور عمر کے اظہار میں آتا ہے۔ كَمْ کے ساتھ استعمال ہوتا ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch42-l01-ex01",
+      "prompt": {
+        "ar": "كَمْ كِتَابًا لَدَيْكَ؟",
+        "ar_plain": "كم كتابا لدبك",
+        "translit": "kam kitaaban ladayka?",
+        "en": "How many books do you have?",
+        "ur": "تم کے پاس کتنی کتابیں ہیں؟"
+      },
+      "options": [
+        { "en": "How many books do you have?", "ur": "تم کے پاس کتنی کتابیں ہیں؟" },
+        { "en": "How much is this book?", "ur": "یہ کتاب کتنا ہے؟" },
+        { "en": "Where are your books?", "ur": "تمہاری کتابیں کہاں ہیں؟" },
+        { "en": "Do you have books?", "ur": "کیا تمہارے پاس کتابیں ہیں؟" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَمْ means how many when asking about countable things like books. لَدَيْكَ means in your possession.",
+        "ur": "كَمْ کتابوں جیسی گنتی والی چیزوں کے لیے کتنے/کتنی ma'anās detā hai۔ لَدَيْكَ ma'anā hai āp ke pās۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch42-l01-ex02",
+      "statement": {
+        "en": "In كَمْ كِتَابًا, the noun كِتَابًا is in the accusative case.",
+        "ur": "كَمْ كِتَابًا میں اسم كِتَابًا نصب میں ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch42-l01-ex03",
+      "mode": "TAP",
+      "sentence_ar": "___ سَنَةً عِشْتَ؟",
+      "hint": {
+        "en": "How many years did you live?",
+        "ur": "تم کتنے سال جیے؟"
+      },
+      "options": [
+        {
+          "ar": "كَمْ",
+          "ar_plain": "كم",
+          "translit": "kam",
+          "en": "how many",
+          "ur": "کتنے"
+        },
+        {
+          "ar": "مَتَى",
+          "ar_plain": "متى",
+          "translit": "mataa",
+          "en": "when",
+          "ur": "کب"
+        },
+        {
+          "ar": "لِمَاذَا",
+          "ar_plain": "لماذا",
+          "translit": "limazaa",
+          "en": "why",
+          "ur": "کیوں"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where",
+          "ur": "کہاں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كَمْ",
+        "ar_plain": "كم",
+        "translit": "kam",
+        "en": "how many",
+        "ur": "کتنے"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch42-l01-ex04",
+      "left_column": [
+        {
+          "ar": "كَمْ كِتَابًا",
+          "ar_plain": "كم كتابا",
+          "translit": "kam kitaaban",
+          "en": "how many books",
+          "ur": "کتنی کتابیں"
+        },
+        {
+          "ar": "كَمْ سَنَةً",
+          "ar_plain": "كم سنة",
+          "translit": "kam sanatan",
+          "en": "how many years",
+          "ur": "کتنے سال"
+        },
+        {
+          "ar": "كَمْ مَالًا",
+          "ar_plain": "كم ما لا",
+          "translit": "kam maalan",
+          "en": "how much wealth",
+          "ur": "کتنی دولت"
+        },
+        {
+          "ar": "كَمْ صَبِيًّا",
+          "ar_plain": "كم صبيا",
+          "translit": "kam sabiyyan",
+          "en": "how many children",
+          "ur": "کتنے بچے"
+        }
+      ],
+      "right_column": [
+        { "en": "how many books", "ur": "کتنی کتابیں" },
+        { "en": "how many years", "ur": "کتنے سال" },
+        { "en": "how much wealth", "ur": "کتنی دولت" },
+        { "en": "how many children", "ur": "کتنے بچے" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch42-l01-ex05",
+      "target_translation": {
+        "en": "How many students are in the school?",
+        "ur": "اسکول میں کتنے طالب علم ہیں؟"
+      },
+      "tiles": [
+        {
+          "ar": "كَمْ",
+          "ar_plain": "كم",
+          "translit": "kam",
+          "en": "how many",
+          "ur": "کتنے"
+        },
+        {
+          "ar": "طُلَّابًا",
+          "ar_plain": "طلابا",
+          "translit": "tullaaban",
+          "en": "students",
+          "ur": "طلبہ"
+        },
+        {
+          "ar": "فُي",
+          "ar_plain": "في",
+          "translit": "fii",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "الْمَدْرَسَةِ",
+          "ar_plain": "المدرسة",
+          "translit": "al-madrasa",
+          "en": "the school",
+          "ur": "اسکول"
+        }
+      ],
+      "correct_order": [0, 2, 3, 1],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch42-l01-ex06",
+      "statement": {
+        "en": "كَمْ is always followed by a noun in the genitive case.",
+        "ur": "كَمْ کے بعد ہمیشہ اسم مجرور آتا ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch42-l01-ex07",
+      "prompt": {
+        "ar": "كَمْ مَالًا لَدَيْكَ؟",
+        "ar_plain": "كم مالا لدبك",
+        "translit": "kam maalan ladayka?",
+        "en": "How much wealth do you have?",
+        "ur": "تم کے پاس کتنی دولت ہے؟"
+      },
+      "options": [
+        { "en": "How much wealth do you have?", "ur": "تم کے پاس کتنی دولت ہے؟" },
+        { "en": "How many friends do you have?", "ur": "تم کتنے دوست ہیں؟" },
+        { "en": "Where is your wealth?", "ur": "تمہاری دولت کہاں ہے؟" },
+        { "en": "How old are you?", "ur": "تمہاری عمر کتنا ہے؟" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "How much / how many — كَمْ",
+      "ar": "كَمْ — كَمْ؟",
+      "ur": "کتنا / کتنے — كَمْ"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 222,
+      "label": "Al-Baqarah 2:222",
+      "ar": "وَيَسْأَلُونَكَ عَنِ الْمَحِيضِ",
+      "en": "And they ask you about menstruation.",
+      "ur": "اور وہ تم سے حیض کے بارے میں پوچھتے ہیں۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-222-part-mishary.mp3"
+    },
+    "highlighted_word_indices": [2],
+    "noor_explanation": {
+      "en": "وَيَسْأَلُونَكَ means they ask you. The verb سَأَلَ follows the same past tense pattern as كَتَبَ — same root pattern, different meaning.",
+      "ur": "وَيَسْأَلُونَكَ کا مطلب ہے وہ تم سے پوچھتے ہیں۔ فعل سَأَلَ ماضی کے وزن پر چلتا ہے جیسے كَتَبَ — ایک جیسا وزن، مختلف معنی۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "كَمْ is your key to asking about quantities in Arabic. How many books? How many years? How much water? All with كَمْ.",
+      "ur": "كَمْ عربی میں مقدار پوچھنے کا کلید ہے۔ کتنی کتابیں؟ کتنے سال؟ کتنا پانی؟ سب كَمْ سے۔"
+    }
+  }
+}

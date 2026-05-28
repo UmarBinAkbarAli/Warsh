@@ -1,0 +1,351 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 46, Lesson 1 - Application of the three states of المضارع in Quranic context.",
+    "chapter_order": 46,
+    "lesson_order": 1,
+    "chapter_title": "The Three States of المضارع (Application)",
+    "title": "Parsing Verbs Across All Three States",
+    "titleAr": "الْمُضَارِعُ فِي حَالَاتِهِ الثَّلَاثِ",
+    "source": "book5_lesson2_states_application.md",
+    "estimated_minutes": 8,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 111,
+      "ayah": 1,
+      "label": "Al-Masad 111:1",
+      "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+      "en": "May the hands of Abu Lahab be ruined, and may he be ruined.",
+      "ur": "ابی لہب کے ہاتھ تباہ ہوں اور وہ خود بھی تباہ ہو۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-masad-001-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Today we apply what we learned in Chapter 45. We will parse present-tense verbs in all three states as they appear in the Quran. The key: identify the trigger first, then the verb state.",
+      "ur": "آج ہم Chapter 45 میں سیکھی گئی بات کو applied کرتے ہیں۔ قرآن میں جہاں بھی مضارع کی تین حالتیں نظر آئیں، parse کریں گے۔ کلید: پہلے trigger پہچانیں، پھر فعل کی حالت۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Parsing across all three states",
+        "ar": "الْتَّحْلِيلُ فِي الْحَالَاتِ الثَّلَاثِ",
+        "ur": "تینوں حالتوں میں تجزیہ"
+      },
+      "explanation": {
+        "en": "A verb in المضارع can be in raf', nasb, or jazm. The state is determined by the particle or word that precedes it. Always look for the trigger before identifying the state.",
+        "ur": "فعل مضارع میں رفع، نصب، یا جزم میں ہو سکتا ہے۔ حالت اس particle یا لفظ سے طے ہوتی ہے جو اس سے پہلے آئے۔ ہمیشہ پہلے trigger دیکھیں، پھر حالت پہچانیں۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يَذْهَبُ",
+        "ar_plain": "يذهب",
+        "translit": "yadhahabu",
+        "en": "he goes (raf' — base state)",
+        "ur": "وہ جاتا ہے (رفع — بنیادی حالت)"
+      },
+      "explanation": {
+        "en": "يَذْهَبُ is raf' — the default state. No trigger needed. The Dhamma on the first letter stays.",
+        "ur": "يَذْهَبُ رفع ہے — default حالت۔ کوئی trigger نہیں چاہیے۔ پہلے حرف پر Dhamma برقرار رہتا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "أَنْ يَذْهَبَ",
+        "ar_plain": "أن يذهب",
+        "translit": "an yadhahaba",
+        "en": "that he goes (nasb)",
+        "ur": "کہ وہ جائے (نصب)"
+      },
+      "explanation": {
+        "en": "أَنْ triggers nasb. The verb takes Alif instead of Dhamma at the end: يَذْهَبَ.",
+        "ur": "أَنْ نصب کو trigger کرتی ہے۔ فعل آخر میں Dhamma کی جگہ Alif لیتا ہے: يَذْهَبَ۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "لَمْ يَذْهَبْ",
+        "ar_plain": "لم يذهب",
+        "translit": "lam yadhahab",
+        "en": "he did not go (jazm)",
+        "ur": "اس نے نہیں گیا (جزم)"
+      },
+      "explanation": {
+        "en": "لَمْ triggers jazm. The Dhamma on the first letter is removed: يْ instead of يَ.",
+        "ur": "لَمْ جزم کو trigger کرتا ہے۔ پہلے حرف کا Dhamma ہٹایا جاتا ہے: يْ کی جگہ يَ۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "The three-step parsing method",
+        "ur": "تین قدمی تجزیہ طریقہ"
+      },
+      "body": {
+        "en": "Step 1: Find the verb (present tense prefix يَ-، تَ-، نَ-، أَ-). Step 2: Look for a trigger before it. Step 3: Name the state. If no trigger: raf'.",
+        "ur": "قدم 1: فعل تلاش کریں (present tense prefix يَ-، تَ-، نَ-، أَ-)۔ قدم 2: اس سے پہلے trigger دیکھیں۔ قدم 3: حالت کا نام دیں۔ اگر کوئی trigger نہیں: رفع۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "إِنَّ اللَّهَ يَغْفِرُ",
+        "ar_plain": "إن الله يغفر",
+        "translit": "inna allaaha yaghfiru",
+        "en": "Indeed, Allah forgives",
+        "ur": "بیشک اللہ معاف کرتا ہے"
+      },
+      "explanation": {
+        "en": "Here يَغْفِرُ is raf' (base state) — no trigger precedes it. But إِنَّ is a particle that makes the following noun accusative, not the verb.",
+        "ur": "یہاں يَغْفِرُ رفع ہے (default حالت) — اس سے پہلے کوئی trigger نہیں۔ لیکن إِنَّ ایک particle ہے جو اگلا اسم accusative بناتی ہے، فعل نہیں۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "يَغْفِرُ",
+        "ar_plain": "يغفر",
+        "translit": "yaghfiru",
+        "en": "he forgives",
+        "ur": "وہ معاف کرتا ہے"
+      },
+      "explanation": {
+        "en": "يَغْفِرُ: يَ (he) + غ-ف-ر (to forgive). This is the most common form of forgiveness in the Quran — appears over 80 times.",
+        "ur": "يَغْفِرُ: يَ (وہ) + غ-ف-ر (معاف کرنا)۔ قرآن میں یہ معافی کی سب سے عام شکل ہے — 80 سے زائد بار آتا ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch46-l01-ex01",
+      "sentence_ar": "يَذْهَبُ الْمُسْلِمُ",
+      "words": [
+        { "ar": "يَذْهَبُ", "ar_plain": "يذهب", "translit": "yadhahabu", "en": "he goes" },
+        { "ar": "الْمُسْلِمُ", "ar_plain": "المسلم", "translit": "al-muslimu", "en": "the Muslim" }
+      ],
+      "available_roles": ["VERB", "SUBJECT", "OBJECT", "PARTICLE"],
+      "correct_roles": ["VERB", "SUBJECT"],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَذْهَبُ is the present tense verb (raf' state — no trigger). الْمُسْلِمُ is the subject (فاعل).",
+        "ur": "يَذْهَبُ present tense verb ہے (رفع حالت — کوئی trigger نہیں)۔ الْمُسْلِمُ فاعل ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch46-l01-ex02",
+      "prompt": {
+        "ar": "أَنْ يَقْرَأَ",
+        "ar_plain": "أن يقرأ",
+        "translit": "an yaqra'a",
+        "en": "that he reads",
+        "ur": "کہ وہ پڑھے"
+      },
+      "options": [
+        { "en": "that he reads", "ur": "کہ وہ پڑھے" },
+        { "en": "he reads", "ur": "وہ پڑھتا ہے" },
+        { "en": "that I read", "ur": "کہ میں پڑھوں" },
+        { "en": "he will read", "ur": "وہ پڑھے گا" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَنْ triggers nasb — the verb takes Alif ending: يَقْرَأَ. This is the subjunctive (منصوب) state.",
+        "ur": "أَنْ نصب کو trigger کرتی ہے — فعل آخر میں Alif لیتا ہے: يَقْرَأَ۔ یہ subjunctive (منصوب) حالت ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch46-l01-ex03",
+      "statement": {
+        "en": "A المضارع verb in context is always either مرفوع، منصوب، or مجزوم. There is no fourth state.",
+        "ur": "سیاق میں مضارع فعل ہمیشہ یا تو مرفوع، منصوب، یا مجزوم ہوتا ہے۔ چوتھی حالت نہیں ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch46-l01-ex04",
+      "mode": "TAP",
+      "sentence_ar": "لَمْ ___",
+      "hint": {
+        "en": "He did not go.",
+        "ur": "اس نے نہیں گیا۔"
+      },
+      "options": [
+        {
+          "ar": "يَذْهَبْ",
+          "ar_plain": "يذهب",
+          "translit": "yadhahab",
+          "en": "he goes (jazm)",
+          "ur": "وہ جاتا ہے (جزم)"
+        },
+        {
+          "ar": "يَذْهَبُ",
+          "ar_plain": "يذهب",
+          "translit": "yadhahabu",
+          "en": "he goes (raf')",
+          "ur": "وہ جاتا ہے (رفع)"
+        },
+        {
+          "ar": "يَذْهَبَ",
+          "ar_plain": "يذهب",
+          "translit": "yadhahaba",
+          "en": "he goes (nasb)",
+          "ur": "وہ جاتا ہے (نصب)"
+        },
+        {
+          "ar": "أَذْهَبْ",
+          "ar_plain": "أذهب",
+          "translit": "adhahab",
+          "en": "I go (jazm)",
+          "ur": "میں جاؤں (جزم)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَذْهَبْ",
+        "ar_plain": "يذهب",
+        "translit": "yadhahab",
+        "en": "he goes (jazm)",
+        "ur": "وہ جاتا ہے (جزم)"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch46-l01-ex05",
+      "left_column": [
+        {
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "he writes (raf')",
+          "ur": "وہ لکھتا ہے (رفع)"
+        },
+        {
+          "ar": "أَنْ يَكْتُبَ",
+          "ar_plain": "أن يكتب",
+          "translit": "an yaktuba",
+          "en": "that he writes (nasb)",
+          "ur": "کہ وہ لکھے (نصب)"
+        },
+        {
+          "ar": "لَمْ يَكْتُبْ",
+          "ar_plain": "لم يكتب",
+          "translit": "lam yaktub",
+          "en": "he did not write (jazm)",
+          "ur": "اس نے نہیں لکھا (جزم)"
+        },
+        {
+          "ar": "لَنْ يَكْتُبَ",
+          "ar_plain": "لن يكتب",
+          "translit": "lan yaktuba",
+          "en": "he will never write (nasb)",
+          "ur": "وہ کبھی نہیں لکھے گا (نصب)"
+        }
+      ],
+      "right_column": [
+        { "en": "he writes (raf')", "ur": "وہ لکھتا ہے (رفع)" },
+        { "en": "that he writes (nasb)", "ur": "کہ وہ لکھے (نصب)" },
+        { "en": "he did not write (jazm)", "ur": "اس نے نہیں لکھا (جزم)" },
+        { "en": "he will never write (nasb)", "ur": "وہ کبھی نہیں لکھے گا (نصب)" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch46-l01-ex06",
+      "target_translation": {
+        "en": "I want that he reads.",
+        "ur": "میں چاہتا ہوں کہ وہ پڑھے۔"
+      },
+      "tiles": [
+        {
+          "ar": "أَرِيدُ",
+          "ar_plain": "أريد",
+          "translit": "ariidu",
+          "en": "I want",
+          "ur": "میں چاہتا ہوں"
+        },
+        {
+          "ar": "أَنْ",
+          "ar_plain": "أن",
+          "translit": "an",
+          "en": "that",
+          "ur": "کہ"
+        },
+        {
+          "ar": "يَقْرَأَ",
+          "ar_plain": "يقرأ",
+          "translit": "yaqra'a",
+          "en": "he reads (nasb)",
+          "ur": "وہ پڑھے (نصب)"
+        },
+        {
+          "ar": "يَقْرَأُ",
+          "ar_plain": "يقرأ",
+          "translit": "yaqra'u",
+          "en": "he reads (raf')",
+          "ur": "وہ پڑھتا ہے (رفع)"
+        }
+      ],
+      "correct_order": [0, 1, 2],
+      "xp_value": 1
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch46-l01-ex07",
+      "sentence_ar": "لَمْ يَغْفِرِ اللَّهُ",
+      "words": [
+        { "ar": "لَمْ", "ar_plain": "لم", "translit": "lam", "en": "did not" },
+        { "ar": "يَغْفِرِ", "ar_plain": "يغفر", "translit": "yaghfiri", "en": "he forgives" },
+        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah" }
+      ],
+      "available_roles": ["PARTICLE", "VERB", "SUBJECT"],
+      "correct_roles": ["PARTICLE", "VERB", "SUBJECT"],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَمْ is the negation particle triggering jazm. يَغْفِرِ is the verb in jazm (note the kasra on the first letter). اللَّهُ is the subject (فاعل).",
+        "ur": "لَمْ نفی particle ہے جو جزم کو trigger کرتی ہے۔ يَغْفِرِ jazm میں فعل ہے (پہلے حرف پر kasra دیکھیں)۔ اللَّهُ فاعل ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Three states — one system",
+      "ar": "تِسْعَةُ أَحْكَامِ الْمُضَارِعِ",
+      "ur": "تین حالتیں — ایک نظام"
+    },
+    "ayah": {
+      "surah": 111,
+      "ayah": 1,
+      "label": "Al-Masad 111:1",
+      "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+      "en": "May the hands of Abu Lahab be ruined, and may he be ruined.",
+      "ur": "ابی لہب کے ہاتھ تباہ ہوں اور وہ خود بھی تباہ ہو۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-masad-001-mishary.mp3"
+    },
+    "highlighted_word_indices": [0],
+    "noor_explanation": {
+      "en": "تَبَّتْ is a past tense verb, not a present tense. Today we focus on parsing present tense verbs in all three states as they appear across the Quran. Al-Masad gives us a moment to breathe before we go deeper.",
+      "ur": "تَبَّتْ ماضی tense کا فعل ہے، present tense نہیں۔ آج ہمارا focus ہے قرآن بھر میں تینوں حالتوں میں present tense verbs کو parse کرنا۔ Al-Masad ہمیں گہرائی میں جانے سے پہلے سانس لینے کا موقع دیتی ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can now look at any present-tense verb in the Quran and identify its state. raf', nasb, jazm — each triggered by what precedes the verb. This is full parser ability.",
+      "ur": "آپ اب قرآن میں کسی بھی present tense verb کو دیکھ کر اس کی حالت پہچان سکتے ہیں۔ رفع، نصب، جزم — ہر ایک اس کے پہلے آنے والے سے trigger ہوتی ہے۔ یہ مکمل parser ability ہے۔"
+    }
+  }
+}

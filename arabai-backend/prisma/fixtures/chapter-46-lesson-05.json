@@ -1,0 +1,358 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 46, Lesson 5 — Parsing ayat with mixed verb states, and verse 2 of Al-Masad.",
+    "chapter_order": 46,
+    "lesson_order": 5,
+    "chapter_title": "The Three States of المضارع (Application)",
+    "title": "Parsing Mixed-State Ayat",
+    "titleAr": "الْآيَاتُ ذَاتُ الْأَحْوَالِ الْمُخْتَلِفَةِ",
+    "source": "book5_lesson2_states_application.md",
+    "estimated_minutes": 8,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 111,
+      "ayah": 2,
+      "label": "Al-Masad 111:2",
+      "ar": "لَا تُفْنِي مَالَهُ وَمَا كَسَبَ",
+      "en": "Neither shall his wealth nor his earnings avail him.",
+      "ur": "نہ اس کا مال اسے فائدہ دے گا اور نہ اس کی کمائی۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-masad-002-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Verse 2 of Al-Masad introduces لَا تُفْنِي — a present-tense verb in the jussive state, triggered by لَا النَّاهِيَة. This lesson practices parsing mixed-state ayat where commands and descriptions coexist.",
+      "ur": "Al-Masad کی verse 2 میں لَا تُفْنِي ہے — jussive حالت میں present-tense verb، لَا النَّاهِيَة سے trigger ہوا۔ اس lesson میں mixed-state ayat parse کرنے کی practice ہو گی جہاں commands اور descriptions اکٹھے ہیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Mixed-state parsing in a single ayah",
+        "ar": "الْتَّحْلِيلُ فِي آيَةٍ ذَاتِ أَحْوَالٍ مُخْتَلِفَةٍ",
+        "ur": "مختلف حالتوں والی ایک ayat میں تجزیہ"
+      },
+      "explanation": {
+        "en": "A single ayah can contain multiple verb states. The key is to look at each verb independently and identify what triggers its state. لَا النَّاهِيَة triggers jazm; أَنْ triggers nasb; no trigger means raf'.",
+        "ur": "ایک ayat میں متعدد verb states ہو سکتے ہیں۔ کلید یہ ہے کہ ہر فعل کو independently دیکھیں اور اس کی حالت trigger کرنے والے کو پہچانیں۔ لَا النَّاهِيَة جزم trigger کرتی ہے؛ أَنْ نصب trigger کرتی ہے؛ کوئی trigger نہیں تو رفع۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "لَا تُفْنِي",
+        "ar_plain": "لا تفني",
+        "translit": "laa tufnii",
+        "en": "it does not use up (jazm)",
+        "ur": "وہ ختم نہیں کرتی (جزم)"
+      },
+      "explanation": {
+        "en": "لَا تُفْنِي — the لَا is النَّاهِيَة (prohibition: no longer), triggering jazm on the verb. تَ (she) is the prefix, ف-ن-ي is the root (to use up/exhaust). With jussive: تُفْنِي (kasra on ت).",
+        "ur": "لَا تُفْنِي — لَا ہے النَّاهِيَة (prohibition: اب نہیں)، جو verb پر jazm trigger کرتی ہے۔ تَ (وہ) prefix ہے، ف-ن-ي root ہے (ختم کرنا/ exhaustion)۔ jazm کے ساتھ: تُفْنِي (تَ پر kasra)۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "مَالَهُ",
+        "ar_plain": "ماله",
+        "translit": "maalahu",
+        "en": "his wealth",
+        "ur": "اس کا مال"
+      },
+      "explanation": {
+        "en": "مَالَهُ — مَالٌ (wealth) + هُ (his). The attached pronoun هُ means 'his.' This is a possession structure with an attached pronoun, not idafa.",
+        "ur": "مَالَهُ — مَالٌ (مال) + هُ (اس کا)۔ attached pronoun هُ کا مطلب ہے 'اس کا'۔ یہ attached pronoun کے ساتھ possession structure ہے، idafa نہیں۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "وَمَا كَسَبَ",
+        "ar_plain": "وما كسب",
+        "translit": "wa maa kasaba",
+        "en": "and what he earned",
+        "ur": "اور جسے اس نے کمایا"
+      },
+      "explanation": {
+        "en": "وَمَا كَسَبَ — وَوْ is conjunction, مَا is relative pronoun (what), كَسَبَ is past tense (he earned). The relative clause مَا كَسَبَ modifies implicitly something from the previous context.",
+        "ur": "وَمَا كَسَبَ — وَوْ conjunction ہے، مَا relative pronoun ہے (جو)، كَسَبَ ماضی tense ہے (اس نے کمایا)۔ relative clause مَا كَسَبَ پچھلے context سے کچھ implicitly modify کرتا ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Parsing: لَا تُفْنِي مَالَهُ وَمَا كَسَبَ",
+        "ur": "تجزیہ: لَا تُفْنِي مَالَهُ وَمَا كَسَبَ"
+      },
+      "body": {
+        "en": "لَا (النَّاهِيَة) → تُفْنِي (jazm, she) → مَالَهُ (object: his wealth) → وَ (conjunction) → مَا (relative pronoun) → كَسَبَ (past: he earned). The whole ayah says: his wealth and his earnings do not avail him.",
+        "ur": "لَا (النَّاهِيَة) → تُفْنِي (جزم، وہ) → مَالَهُ (object: اس کا مال) → وَ (conjunction) → مَا (relative pronoun) → كَسَبَ (ماضی: اس نے کمایا)۔ پوری ayah کہتی ہے: اس کا مال اور اس کی کمائی اسے فائدہ نہیں دیں گی۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "تُفْنِي",
+        "ar_plain": "تفني",
+        "translit": "tufnii",
+        "en": "she uses up / exhausts",
+        "ur": "وہ ختم کرتی ہے"
+      },
+      "explanation": {
+        "en": "تُفْنِي from the root ف-ن-ي (to be exhausted, to use up). لَا تُفْنِي means 'it does not use up' — the prohibition particle creates a universal negation in the present, not a command.",
+        "ur": "تُفْنِي root ف-ن-ي (ختم ہو جانا،的使用 کرنا) سے۔ لَا تُفْنِي کا مطلب ہے 'وہ ختم نہیں کرتی' — prohibition particle present میں universal negation بناتی ہے، command نہیں۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "سَيَصْلَى نَارًا ذَاتَ لَهَبٍ",
+        "ar_plain": "سيصلی نارا ذا لهبا",
+        "translit": "sa-yaslaa naarun dhaata lahabin",
+        "en": "He will enter a Fire of blazing flame.",
+        "ur": "وہ آگ میں داخل ہو گا جس کا شعلہ بھڑکتا ہے۔"
+      },
+      "explanation": {
+        "en": "Verse 3 introduces سَيَصْلَى — future tense with سَـ prefix. يَصْلَى is the present tense (he enters/burns). We'll study this structure in the next lesson.",
+        "ur": "Verse 3 میں سَيَصْلَى ہے — سَـ prefix کے ساتھ future tense۔ يَصْلَى present tense ہے (وہ داخل ہوتا ہے/جلتا ہے)۔ ہم اس structure کو اگلے lesson میں study کریں گے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch46-l05-ex01",
+      "sentence_ar": "لَا تُفْنِي مَالَهُ",
+      "words": [
+        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "not (no longer)" },
+        { "ar": "تُفْنِي", "ar_plain": "تفني", "translit": "tufnii", "en": "she uses up" },
+        { "ar": "مَالَهُ", "ar_plain": "ماله", "translit": "maalahu", "en": "his wealth" }
+      ],
+      "available_roles": ["PARTICLE", "VERB", "SUBJECT", "OBJECT"],
+      "correct_roles": ["PARTICLE", "VERB", "OBJECT"],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا is النَّاهِيَة triggering jazm on تُفْنِي (jussive state). مَالَهُ is the object (مفعول به) — 'his wealth.' The entire phrase means: his wealth does not use up/burn.",
+        "ur": "لَا ہے النَّاهِيَة جو تُفْنِي پر jazm trigger کرتی ہے (jussive حالت)۔ مَالَهُ object (مفعول به) ہے — 'اس کا مال'۔ پوری phrase کا مطلب: اس کا مال ختم نہیں کرتا/نہیں جلائے گی۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch46-l05-ex02",
+      "prompt": {
+        "ar": "لَا تُفْنِي مَالَهُ وَمَا كَسَبَ",
+        "ar_plain": "لا تفني ماله وما كسب",
+        "translit": "laa tufnii maalahu wa maa kasaba",
+        "en": "Neither his wealth nor his earnings avail him.",
+        "ur": "نہ اس کا مال اسے فائدہ دے گا اور نہ اس کی کمائی۔"
+      },
+      "options": [
+        { "en": "Neither his wealth nor his earnings avail him.", "ur": "نہ اس کا مال اسے فائدہ دے گا اور نہ اس کی کمائی۔" },
+        { "en": "His wealth uses up what he earned.", "ur": "اس کا مال اس کی کمائی ختم کر دیتا ہے۔" },
+        { "en": "He does not use up his wealth.", "ur": "وہ اپنا مال ختم نہیں کرتا۔" },
+        { "en": "His wealth is not burned.", "ur": "اس کا مال نہیں جلتا۔" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا تُفْنِي is 'it does not use up' ( النَّاهِيَة = no longer/not). مَالَهُ = his wealth. وَمَا كَسَبَ = and what he earned. The ayah says all his resources will not save him.",
+        "ur": "لَا تُفْنِي ہے 'وہ ختم نہیں کرتی' (النَّاهِيَة = اب نہیں/نہیں)۔ مَالَهُ = اس کا مال۔ وَمَا كَسَبَ = اور جسے اس نے کمایا۔ ayah کہتی ہے کہ اس کے تمام resources اسے بچا نہیں سکیں گے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch46-l05-ex03",
+      "statement": {
+        "en": "لَا النَّاهِيَةُ in this ayah is a negation of an ongoing action, not a prohibition command.",
+        "ur": "اس ayah میں لَا النَّاهِيَةُ ongoing action کی نفی ہے، prohibition command نہیں۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch46-l05-ex04",
+      "left_column": [
+        {
+          "ar": "تُفْنِي",
+          "ar_plain": "تفني",
+          "translit": "tufnii",
+          "en": "she uses up (jazm)",
+          "ur": "وہ ختم کرتی ہے (جزم)"
+        },
+        {
+          "ar": "مَالَهُ",
+          "ar_plain": "ماله",
+          "translit": "maalahu",
+          "en": "his wealth",
+          "ur": "اس کا مال"
+        },
+        {
+          "ar": "كَسَبَ",
+          "ar_plain": "كسب",
+          "translit": "kasaba",
+          "en": "he earned (past)",
+          "ur": "اس نے کمایا (ماضی)"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "not / no longer",
+          "ur": "نہیں / اب نہیں"
+        }
+      ],
+      "right_column": [
+        { "en": "she uses up (jazm)", "ur": "وہ ختم کرتی ہے (جزم)" },
+        { "en": "his wealth", "ur": "اس کا مال" },
+        { "en": "he earned (past)", "ur": "اس نے کمایا (ماضی)" },
+        { "en": "not / no longer", "ur": "نہیں / اب نہیں" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch46-l05-ex05",
+      "mode": "TAP",
+      "sentence_ar": "سَيَصْلَى نَارًا ذَاتَ ___",
+      "hint": {
+        "en": "He will enter a Fire of blazing flame.",
+        "ur": "وہ آگ میں داخل ہو گا جس کا شعلہ بھڑکتا ہے۔"
+      },
+      "options": [
+        {
+          "ar": "لَهَبٍ",
+          "ar_plain": "لهب",
+          "translit": "lahabin",
+          "en": "blaze / flame",
+          "ur": "شعلہ / آگ"
+        },
+        {
+          "ar": "لَهَبٌ",
+          "ar_plain": "لهب",
+          "translit": "lahabun",
+          "en": "blaze (indef.)",
+          "ur": "شعلہ (نکرہ)"
+        },
+        {
+          "ar": "لُهَبٍ",
+          "ar_plain": "لهب",
+          "translit": "luhabin",
+          "en": "flames",
+          "ur": "شعلے"
+        },
+        {
+          "ar": "لَاهِبٍ",
+          "ar_plain": "لاهب",
+          "translit": "laahibin",
+          "en": "blazing",
+          "ur": "بھڑکتا ہوا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لَهَبٍ",
+        "ar_plain": "لهب",
+        "translit": "lahabin",
+        "en": "blaze / flame",
+        "ur": "شعلہ / آگ"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch46-l05-ex06",
+      "target_translation": {
+        "en": "He will enter a Fire of blazing flame.",
+        "ur": "وہ آگ میں داخل ہو گا جس کا شعلہ بھڑکتا ہے۔"
+      },
+      "tiles": [
+        {
+          "ar": "سَيَصْلَى",
+          "ar_plain": "سيصلی",
+          "translit": "sa-yaslaa",
+          "en": "he will enter/burn",
+          "ur": "وہ داخل ہو گا/جلے گا"
+        },
+        {
+          "ar": "نَارًا",
+          "ar_plain": "نارا",
+          "translit": "naaran",
+          "en": "a Fire",
+          "ur": "آگ"
+        },
+        {
+          "ar": "ذَاتَ",
+          "ar_plain": "ذات",
+          "translit": "dhaata",
+          "en": "possessing / of",
+          "ur": "کی / والی"
+        },
+        {
+          "ar": "لَهَبٍ",
+          "ar_plain": "لهب",
+          "translit": "lahabin",
+          "en": "blaze",
+          "ur": "شعلہ"
+        }
+      ],
+      "correct_order": [0, 1, 2, 3],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch46-l05-ex07",
+      "prompt": {
+        "ar": "نَارًا ذَاتَ لَهَبٍ",
+        "ar_plain": "نارا ذا لهبا",
+        "translit": "naaran dhaata lahabin",
+        "en": "a Fire of blazing flame",
+        "ur": "آگ جس کا شعلہ بھڑکتا ہے"
+      },
+      "options": [
+        { "en": "a Fire of blazing flame", "ur": "آگ جس کا شعلہ بھڑکتا ہے" },
+        { "en": "a fire with flame", "ur": "شعلے والی آگ" },
+        { "en": "the fire of Abu Lahab", "ur": "ابی لہب کی آگ" },
+        { "en": "a burning fire", "ur": "جلنے والی آگ" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "نَارًا is 'a Fire' (accusative). ذَاتَ is 'possessing/having' — from ذَاتُ meaning 'the one who has.' لَهَبٍ is 'of flame.' This is an idafa chain: Fire possessing flame.",
+        "ur": "نَارًا 'آگ' ہے (accusative)۔ ذَاتَ 'کی / والی' ہے — ذَاتُ سے جس کا مطلب 'وہ جس کے پاس ہو'۔ لَهَبٍ 'آگ کا' ہے۔ یہ idafa chain ہے: آگ جس میں شعلہ ہو۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Mixed-state parsing in Al-Masad",
+      "ar": "تجزیہ الْمَسَدِ — حَالَاتٌ مُخْتَلِفَةٌ",
+      "ur": "المسد کا تجزیہ — مختلف حالتیں"
+    },
+    "ayah": {
+      "surah": 111,
+      "ayah": 2,
+      "label": "Al-Masad 111:2",
+      "ar": "لَا تُفْنِي مَالَهُ وَمَا كَسَبَ",
+      "en": "Neither shall his wealth nor his earnings avail him.",
+      "ur": "نہ اس کا مال اسے فائدہ دے گا اور نہ اس کی کمائی۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-masad-002-mishary.mp3"
+    },
+    "highlighted_word_indices": [0, 1],
+    "noor_explanation": {
+      "en": "لَا تُفْنِي مَالَهُ — two different verb states in one ayah. لَا (النَّاهِيَة) triggers jazm on تُفْنِي. كَسَبَ is a past-tense verb. These mixed states are common in Quranic Arabic. The next lesson finishes Al-Masad.",
+      "ur": "لَا تُفْنِي مَالَهُ — ایک ayah میں دو مختلف verb states۔ لَا (النَّاهِيَة) تُفْنِي پر jazm trigger کرتی ہے۔ كَسَبَ ماضی tense کا فعل ہے۔ یہ mixed states قرآنی عربی میں عام ہیں۔ اگلا lesson Al-Masad ختم کرتا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can now parse an ayah with multiple verb states. لَا تُفْنِي — the النَّاهِيَة triggers jazm. كَسَبَ — past tense stands separately. Al-Masad is almost complete. One more lesson.",
+      "ur": "آپ اب ایک ayat parse کر سکتے ہیں جس میں متعدد verb states ہوں۔ لَا تُفْنِي — النَّاهِيَة jazm trigger کرتی ہے۔ كَسَبَ — ماضی tense separately کھڑا ہے۔ المسد تقریباً مکمل ہے۔ ایک اور lesson۔"
+    }
+  }
+}

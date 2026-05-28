@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "_meta": {
+    "chapter_order": 72,
+    "lesson_order": 2,
+    "chapter_title": "المنادى",
+    "title": "يَا أَيُّهَا الَّذِينَ آمَنُوا — The Most Common Quranic Address",
+    "titleAr": "يا أيها الذين آمنوا — أكثر نداءات القرآن",
+    "source": "arabai-backend/prisma/fixtures",
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 104,
+      "label": "Al-Baqarah 2:104",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَقُولُوا رَاعِنَا وَقُولُوا انْظُرْنَا وَانْظُرُوا",
+      "en": "O you who believe, do not say 'Raa'inaa' but say 'Unzurnaa' and listen.",
+      "ur": "اے ایمان والو، 'راعنا' نہ کہو بلکہ 'انظرنا' کہو اور سنو۔",
+      "audio_url": ""
+    },
+    "noor_intro": {
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا appears over 70 times in the Quran — more than any other vocative address. Today we analyze its grammar and understand why it targets specifically believers.",
+      "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا appears over 70 times in the Quran — more than any other vocative address. Today we analyze its grammar and understand why it targets specifically believers.",
+      "ur": "'اے ایمان والو' قرآن میں 70 سے زائد بار آتا ہے — کسی بھی دوسری ندا سے زیادہ۔ آج ہم اس کی گرامر تجزیہ کرتے ہیں اور سمجھتے ہیں کہ یہ خاص طور پر مومنین کو کیوں خطاب کرتا ہے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "term_ar": "يا أيها الذين آمنوا",
+      "term_en": "O those who believe — Complete vocative structure",
+      "definition_ar": "يا (حرف نداء) + أيها (اسم بمعنى المدعو) + الذين (مضاف إليه) + آمنوا (فعل ماضٍ مبني على الضم)",
+      "definition_en": "يا (vocative particle) + أيها (calling word) + الذين (genitive/مضاف إليه) + آمنوا (past verb)",
+      "example_ar": "يَا أَيُّهَا النَّاسُ = يا + أيها + الناس(مضاف إليه)\nيَا أَيُّهَا الَّذِينَ آمَنُوا = يا + أيها + الذين(مضاف إليه) + آمنوا(finite verb)",
+      "example_en": "يَا أَيُّهَا النَّاسُ = يا + any + الناس (genitive)\nيَا أَيُّهَا الَّذِينَ آمَنُوا = يا + any + الذين (genitive) + آمنوا (verb)",
+      "example_ur": "یا + ایہ + الناس (مضاف الیہ)\nیا + ایہ + الذین (مضاف الیہ) + ایمان لایا (فعل)",
+      "highlight": true
+    },
+    {
+      "term_ar": "أيها في الجر",
+      "term_en": "أَيُّهَا stays unchanged (invariable) while what follows gets case-marked",
+      "definition_ar": "أَيُّهَا حرف نداء ثابت لا يتغير — الذي يتبعه هو الذي يتغير",
+      "definition_en": "أَيُّهَا is invariable — the particle itself never changes case. It's the noun after it that gets marked",
+      "example_ar": "أَيُّهَا الَّذِينَ — الَّذِينَ is مضاف إليه (genitive) because أيها governs it",
+      "example_en": "When you see أَيُّهَا followed by a noun, that noun will be in the genitive (مضاف إليه) because أيها is a construct that requires a genitive after it",
+      "example_ur": "جب بھی ایہ کے بعد کوئی noun آئے، وہ مضاف الیہ (genitive) ہو گا کیونکہ ایہ ایک construc ہے جو مضاف الیہ کی طلب کرتا ہے"
+    },
+    {
+      "term_ar": "المؤمنون كمخاطبين",
+      "term_en": "Believers as Primary Addressees",
+      "definition_ar": "القرآن يخاطب المؤمنين مباشرة في معظم آيات النداء",
+      "definition_en": "The Quran directly addresses believers in most vocative ayahs — this is significant for the relationship between text and reader",
+      "example_ar": "When you read يَا أَيُّهَا الَّذِينَ آمَنُوا, the text is speaking TO you directly — this is not hypothetical",
+      "example_en": "When you read 'O you who believe', the text is speaking directly TO you — this is not hypothetical or abstract. The Quran addresses the one reading it.",
+      "example_ur": "جب آپ 'اے ایمان والو' پڑھتے ہیں، متن آپ سے براہ راست بات کر رہا ہے — یہ مفروض یا تجریدی نہیں ہے۔ قرآن پڑھنے والے سے خطاب کرتا ہے۔"
+    },
+    {
+      "term_ar": "الفعل بعد الذين",
+      "term_en": "Verb After الذين — Relative Clause",
+      "definition_ar": "آمنوا is a past tense verb that defines the الذين",
+      "definition_en": "آمنوا (they believed) is a relative clause that specifies which group is being called — 'those who have believed'",
+      "example_ar": "الذين آمنوا = those who believed (الذين is مضاف إليه, آمنوا defines them)",
+      "example_en": "الذين آمنوا literally = 'the ones who believed' — this is a restrictive clause that narrows down who is being addressed",
+      "example_ur": "'جنہوں نے ایمان لایا' = 'وہ لوگ جو ایمان لائے' — یہ ایک restrictive clause ہے جو متعین کرتا ہے کہ کس سے خطاب ہو رہا ہے"
+    },
+    {
+      "term_ar": "النداء مع الأمر",
+      "term_en": "Vocative Followed by Command — Purpose Pattern",
+      "definition_ar": "بعد يا أيها الذين آمنوا يأتي أمر أو نهي أو طلب",
+      "definition_en": "After يَا أَيُّهَا الَّذِينَ آمَنُوا comes an imperative, prohibition, or request — the pattern is: call + command",
+      "example_ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ = Call + command to fear Allah\nيَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَقُولُوا = Call + prohibition 'do not say'",
+      "example_en": "'O believers, fear Allah' = call to identify group + command for action\nThis is the most common pattern in the Quran — identify who is being addressed, then tell them what to do",
+      "example_ur": "'اے مومنین، اللہ سے ڈرو' = گروہ کی شناخت + پھر حکم\nیہ قرآن میں سب سے عام نمونہ ہے — پہلے بتاؤ کس سے خطاب ہے، پھر بتاؤ کیا کرنا ہے"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "instruction": {
+        "ar": "ما الذي بعد أيها في: يَا أَيُّهَا الَّذِينَ آمَنُوا؟",
+        "en": "What comes after أيها in: يَا أَيُّهَا الَّذِينَ آمَنُوا?"
+      },
+      "options": [
+        {
+          "label_ar": "آمنوا — فعل",
+          "label_en": "آمنوا — a verb",
+          "label_ur": "ایمان لایا — ایک فعل",
+          "correct": false
+        },
+        {
+          "label_ar": "الذين — مضاف إليه",
+          "label_en": "الذين — in genitive (مضاف إليه)",
+          "label_ur": "ذین — مضاف الیہ میں",
+          "correct": true
+        },
+        {
+          "label_ar": "الناس — مبتدأ",
+          "label_en": "الناس — subject",
+          "label_ur": "ناس — مبتدأ",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "TRUE_FALSE",
+      "instruction": {
+        "ar": "حدد: صواب أم خطأ",
+        "en": "True or False"
+      },
+      "statement": {
+        "ar": "أَيُّهَا يتغير case حسب ما يليه",
+        "en": "أَيُّهَا changes case depending on what follows it",
+        "ur": "ایہ اپنا case اس کے بعد آنے والے کے مطابق بدلتا ہے"
+      },
+      "correct": false,
+      "explanation": {
+        "ar": "أَيُّهَا حرف ثابت لا يتغير — لا يرفع ولا ينصب ولا يجر بنفسه. الذي يتغير هو الاسم الذي بعده.",
+        "en": "أَيُّهَا is an invariable particle — it doesn't change case by itself. It never takes مرفوع, منصوب, or مجر. What changes is the noun that follows it.",
+        "ur": "ایہ ایک unchanged particle ہے — یہ خود کسی case میں نہیں بدلتا۔ بدلنے والا اس کے بعد والا noun ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "instruction": {
+        "ar": "املأ الفراغ",
+        "en": "Fill in the blank"
+      },
+      "prompt": {
+        "ar": "يَا أَيُّهَا الَّذِينَ ___ — أكثر نداءات القرآن",
+        "en": "يَا أَيُّهَا الَّذِينَ ___ — most common vocative in the Quran",
+        "ur": "یا ایہ الذین ___ — قرآن میں سب سے عام ندا"
+      },
+      "answer": "آمنوا",
+      "case_sensitive": true
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "instruction": {
+        "ar": "حلّل: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
+        "en": "Parse: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ"
+      },
+      "sentences": [
+        {
+          "original": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
+          "analysis": {
+            "يا": "حرف نداء — particle of vocative, initiates the call",
+            "أَيُّهَا": "اسم بمعنى المدعو — invariable particle introducing the group",
+            "الَّذِينَ": "مضاف إليه (genitive) — governed by أيها, specifies the group",
+            "آمَنُوا": "فعل ماضٍ — relative clause defining who the believers are (those who believed)",
+            "اتَّقُوا": "فعل أمر (imperative) — the command following the vocative address",
+            "اللَّهَ": "مفعول به منصوب — object of اتقوا (fear Allah)",
+            "الهيكل": "نداء + صفة + فعل أمر = Address group, then give command"
+          }
+        }
+      ]
+    },
+    {
+      "type": "MATCHING",
+      "instruction": {
+        "ar": "طابق الأداة بالوظيفة",
+        "en": "Match tool with function"
+      },
+      "left_items": [
+        { "id": "1", "text_ar": "يا" },
+        { "id": "2", "text_ar": "أَيُّهَا" },
+        { "id": "3", "text_ar": "الذين" }
+      ],
+      "right_items": [
+        { "id": "A", "text_ar": "يحدد المجموعة (مضاف إليه)" },
+        { "id": "B", "text_ar": "حرف نداء ثابت" },
+        { "id": "C", "text_ar": "يدعو الانتباه (اسم بمعنى المدعو)" }
+      ],
+      "matches": [
+        { "left": "1", "right": "B" },
+        { "left": "2", "right": "C" },
+        { "left": "3", "right": "A" }
+      ]
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "instruction": {
+        "ar": "ابنِ: نداء + مجموعة + أمر",
+        "en": "Build: Vocative + group + command"
+      },
+      "elements": [
+        { "text_ar": "يا", "gloss": "O" },
+        { "text_ar": "أيها", "gloss": "those who" },
+        { "text_ar": "الذين", "gloss": "who" },
+        { "text_ar": "آمنوا", "gloss": "believed" },
+        { "text_ar": "صلوا", "gloss": "pray" }
+      ],
+      "correct_order": [0, 1, 2, 3, 4],
+      "expected_grammar": "يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا — O you who believed, pray!"
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "instruction": {
+        "ar": "ما مفعول اتقوا في: اتَّقُوا اللَّهَ؟",
+        "en": "What is the object of اتقوا in: اتَّقُوا اللَّهَ?"
+      },
+      "options": [
+        {
+          "label_ar": "اتقوا",
+          "label_en": "اتقوا itself (no object)",
+          "label_ur": "خود اتقوا (کوئی مفعول نہیں)",
+          "correct": false
+        },
+        {
+          "label_ar": "الله",
+          "label_en": "Allah (مفعول به منصوب)",
+          "label_ur": "اللہ (مفعول به منصوب)",
+          "correct": true
+        },
+        {
+          "label_ar": "آمنوا",
+          "label_en": "آمنوا",
+          "label_ur": "ایمان لایا",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "FILL_BLANK",
+      "instruction": {
+        "ar": "املأ: Pattern after يَا أَيُّهَا الَّذِينَ آمَنُوا is: Address + ___",
+        "en": "Fill: Pattern after يَا أَيُّهَا الَّذِينَ آمَنُوا is: Address + ___",
+        "ur": "پورا کریں: 'اے ایمان والو' کے بعد Pattern: Address + ___"
+      },
+      "answer": "command",
+      "case_sensitive": false
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "ar": "يا أيها الذين آمنوا — الطابع المباشر",
+      "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا — The Direct Address",
+      "ur": "اے ایمان والو — براہ راست خطاب"
+    },
+    "ayah": {
+      "surah": 5,
+      "ayah": 6,
+      "label": "Al-Ma'idah 5:6",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قُمْتُمْ إِلَى الصَّلَاةِ فَاغْسِلُوا وُجُوهَكُمْ وَأَيْدِيَكُمْ إِلَى الْمَرَافِقِ وَامْسَحُوا بِرُءُوسِكُمْ وَأَرْجُلَكُمْ إِلَى الْكَعْبَيْنِ",
+      "en": "O you who believe, when you rise for prayer, wash your faces and your hands to the elbows and wipe your heads and your feet to the ankles.",
+      "ur": "اے ایمان والو، جب تم نماز کے لیے کھڑے ہو تو اپنے چہرے اور ہاتھ کہنیوں تک دھو لو اور اپنے سر پونچھ لو اور اپنے پاؤں کانٹوں تک۔",
+      "audio_url": ""
+    },
+    "highlighted_word_indices": [0, 1, 2, 3],
+    "noor_explanation": {
+      "ar": "في \"يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قُمْتُمْ\" — الآية تامة النداء مع جملة شرطية.Note: قُمْتُمْ is فعل شرط requiring جواب (فَاغْسِلُوا).كل آية بدءًا بـ يَا أَيُّهَا الَّذِينَ آمَنُوا هي نداء للمؤمنين يليه أمر أو شرط أو نهي أو دعاء — هذا هو النمط.",
+      "en": "In 'O you who believe, when you rise for prayer' — this is a complete vocative followed by a conditional clause. Note: قُمْتُمْ (you rise) is a conditional verb requiring a response (فَاغْسِلُوا — then wash). Every ayah starting with يَا أَيُّهَا الَّذِينَ آمَنُوا is a call to believers followed by a command, condition, prohibition, or supplication.",
+      "ur": "'اے ایمان والو، جب تم نماز کے لیے کھڑے ہو' — یہ مکمل ندا ہے جس کے بعد ایک شرطی جملہ ہے۔ قُمْتُمْ ایک فعل شرط ہے جس کے جواب کی ضرورت ہے (پھر دھو لو)۔ ہر آیت 'اے ایمان والو' سے شروع ہو کر حکم، شرط، نہی، یا دعا کے ساتھ ختم ہوتی ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا is not just a grammatical form — it's an invitation. Every time you read these words, the Quran is calling YOU. The grammar and the spiritual message are inseparable. Tomorrow we study أَيُّهَا in more detail.",
+      "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا is not just a grammatical form — it's an invitation. Every time you read these words, the Quran is calling YOU. The grammar and the spiritual message are inseparable. Tomorrow we study أَيُّهَا in more detail.",
+      "ur": "'اے ایمان والو' صرف ایک گرامر کی شکل نہیں — یہ ایک دعوت ہے۔ ہر بار جب آپ یہ الفاظ پڑھتے ہیں، قرآن آپ کو بلاتا ہے۔ گرامر اور روحانی پیغام جدا نہیں کیے جا سکتے۔ کل ہم 'ایہ' کو مزید تفصیل سے دیکھیں گے۔"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-05-28 (blank lesson screen root cause found and fixed — Vercel was running stale deployment)
+Last updated: 2026-05-29 (Chapters 15-40 fixture audit completed — 3 incomplete chapters identified, 0 validation errors for Ch15-40)
 
 ## Purpose
 
@@ -21,13 +21,48 @@ It should not be treated as a permanent record of:
 
 - **Phase 1 core app flow:** implemented
 - **Content schema:** migrated to `warsh-content-schema v1.0` — single `content Json` blob per lesson, `LessonTemplate` enum (STANDARD / SPOKEN_PHRASES / REVIEW / VERB_PATTERN)
-- **Chapters 1-8:** fixture-authored and wired into `seed.cjs` — 35 lessons total across these chapters, including SP1 and SP2
-- **SP1:** inserted as `ch03-l05` after Chapter 3 review - basic greetings and introductions
+- **Chapters 1-14:** fixture-authored (63 lessons, seeded previously)
+- **Chapters 15-40:** fixture-authored (139 lessons across 26 chapters, 0 validation errors, seeded 2026-05-28)
+- **SP1:** inserted as `ch03-l05` after Chapter 3 review — basic greetings and introductions
+- **SP2:** inserted as `ch07-l05` after Chapter 7 — simple classroom/lesson questions
+- **SP3:** inserted as `ch12-l05` after Chapter 12 — classroom and halaqa phrases
+- **R3:** Mid-Book 2 Review after Chapter 15 (next pending insertion point)
+- **Chapters 15-29:** 79 fixture lessons authored and seeded 2026-05-28
+  - Ch15 (5): Demonstratives Expanded (هَؤُلَاء، أُولَئِك) + positional vocabulary
+  - Ch16 (5): School and Students (classroom vocab, time markers, imperatives)
+  - Ch17 (6): Daily Actions and Verbs — recognition (past tense verbs أَكَلَ، شَرِبَ، قَرَأَ etc.)
+  - Ch18 (6): Relative Pronouns الَّذِي/الَّتِي — An-Nas Tadabbur unlock #2
+  - Ch19 (6): Attached Pronouns Singular (كِتَابِي، رَبِّي) — Al-Falaq Tadabbur unlock #3
+  - Ch20 (5): Attached Pronouns Plural (رَبَّنَا، أَنْفُسُكُمْ) + R4 after Ch20
+  - Ch21 (5): Places and Movement (directional language, ذَهَبَ إِلَى)
+  - Ch22 (5): Dialogue and Communication (قَالَ/سَأَلَ/أَجَابَ) — heavy CONVERSATION_BUILDER
+  - Ch23 (4): Grammar Integration — pure consolidation, Al-Ikhlas prep
+  - Ch24 (6): إِنَّ conversational foundations — Al-Kawthar Tadabbur
+  - Ch25 (6): لَيْسَ negation of nominal sentence — SP5 after Ch25 (Adhkar)
+  - Ch26 (4): Demonstratives and Possession Spiral (complex idafa chains)
+  - Ch27 (5): Prepositions (فِي، إِلَى، مِنْ، عَلَى، بِ، لِ، عَنْ، كَ)
+  - Ch28 (5): Verb Usage and Action Vocabulary (عَلِمَ/فَهِمَ/حَفِظَ/رَضِيَ)
+  - Ch29 (6): Nominal vs Verbal Sentences — Al-Kafirun Tadadabbur unlock #5
+- **Ch30-45:** pending fixture authoring
+- **Ch46-72:** pending fixture authoring
+
+**2026-05-29 Chapters 15-40 fixture audit:**
+- All 26 chapters (15-40) have fixture files present and parseable as valid JSON
+- 0 validation errors from `node prisma/validate-curriculum.cjs --fixtures` for chapters 15-40
+- All chapters have correct lesson counts per spec (confirmed against warsh-spec-05):
+  - Ch23: 4 lessons (compression decision — Book 2 Lessons 11-13 consolidated)
+  - Ch26: 4 lessons (spiral review chapter)
+  - Ch32: 4 lessons (compression decision — Book 3 Lessons 9-10 consolidated)
+  - All other chapters 15-40: 5-6 lessons per spec
+- All existing fixture files pass: schema_version present, template set, hook/discover_cards/exercises/reveal/close all present
+- seed.cjs correctly references all available fixture files (no orphaned requires)
 - **SP2:** inserted as `ch07-l05` after Chapter 7 - simple classroom/lesson questions
-- **Chapters 9-13:** fixture-authored and wired into `seed.cjs` — Ch9: 5 lessons (L01-L04 STANDARD plural nouns + L05 VERB_PATTERN past tense ذَهَبَ), Ch10: 4 lessons (plural pronouns + time expressions), Ch11: 5 lessons (family vocabulary + فِيهِ/فِيهَا), Ch12: 5 lessons (introductions, origin, professions, past-tense recognition + SP3), Ch13: 4 lessons (plural forms introduction)
-- **Chapters 14-72:** chapter metadata seeded, fixture authoring still pending
-- **Current focus:** continue Ch14+ authoring; finish beta infra (EAS APK on device, Google Play Console, Sentry/Mixpanel)
-- **Recommended next milestone:** run `npm run db:seed` to push Ch9-Ch13 to production DB, then download/install EAS preview APK and run 9-item beta gate checklist
+- **Chapters 9-13:** fixture-authored and wired into `seed.cjs` — Ch9: 5 lessons (L01-L04 STANDARD plural nouns + L05 VERB_PATTERN past tense ذَهَبَ), Ch10: 4 lessons (plural pronouns + time expressions), Ch11: 5 lessons (family vocabulary + فِيهِ/فِيهَا), Ch12: 5 lessons (introductions, origin, professions, past-tense recognition + SP3), Ch13: 4 lessons (plural forms introduction). Pushed to production Neon DB 2026-05-28.
+- **Chapter 14:** fixture-authored (5 lessons), wired into `seed.cjs`, validated (63 total fixtures), pushed to production Neon DB 2026-05-28. L01: human plural adjective agreement; L02: non-human plural rule (الْكُتُب جَدِيدَة); L03: Quranic non-human plurals deep practice; L04: human vs non-human contrast; L05: REVIEW.
+- **Chapters 15-40:** fixture-authored (139 lessons across 26 chapters, 0 validation errors)
+- **Ch41-72:** pending fixture authoring
+- **Current focus:** continue Ch15+ authoring; finish beta infra (EAS APK on device, Google Play Console, Sentry/Mixpanel)
+- **Recommended next milestone:** Chapter 15 authoring (Demonstratives Expanded — هَؤُلَاء، أُولَئِك), then R3 review after Chapter 15
 
 **2026-05-26 coordinator correction:** Chapters 1-8 are now fixture-authored and wired into `seed.cjs` (35 lessons total across Chapters 1-8, including SP1 and SP2). Chapters 9-72 still need fixture-authored JSON lessons. Device QA was the next gate at that point; it was run on 2026-05-27.
 
@@ -49,10 +84,10 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 
 **2026-05-28 Chapter 13 fixture authoring:** Authored Chapter 13 lessons 1-4 (`chapter-13-lesson-01.json` through `chapter-13-lesson-04.json`) and wired them into `seed.cjs` as stable IDs `ch13-l01` through `ch13-l04`. Chapter 13 covers sound masculine plural, sound feminine plural, broken plural recognition, and non-human plural feminine treatment. `npm run db:validate-fixtures` passes with 58 fixture lessons; `npm run db:validate-seed` passes with 72 chapters and 323 legacy curriculum lessons.
 
-**What is DONE (as of 2026-05-27):**
+**What is DONE (as of 2026-05-28):**
 - All 13 spec files have been implemented to Phase 1 completeness
 - All ~57 of 62 spec-02 screens are built (only A0 animated splash is missing)
-- Chapters 1-8: 35 fixture-authored lessons (including SP1, SP2) validated at 0 errors
+- Chapters 1-13: 58 fixture-authored lessons (including SP1 ch03-l05, SP2 ch07-l05, SP3 ch12-l05) validated at 0 errors
 - All exercise types implemented in the lesson player; VERB_PATTERN renderer exists but has no fixture yet
 - Vocabulary Bank (585 words), SRS/SM-2, Tadabbur (11 Surahs), Word of the Day
 - Streak system with freeze, achievements/milestones (50+), push notifications
@@ -66,7 +101,7 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 - All TypeScript checks 0 errors; `npm run db:validate-fixtures` passes (35 fixtures)
 
 **What is LEFT (prioritized):**
-1. **Content authoring: Chapters 14-72** — Ch9-Ch13 are now wired and validate at 0 errors (58 total fixtures); Ch14-Ch72 still need fixture-authored JSON lessons (highest priority)
+1. **Content authoring: Chapters 14-72** — Ch9-Ch29 are now wired and validate at 0 errors (142 total fixtures); Ch30-Ch72 still need fixture-authored JSON lessons (highest priority)
 2. ~~**VERB_PATTERN fixture** — DONE 2026-05-27: `chapter-09-lesson-01-verb-pattern.json` authored, seeded, live as `ch09-l01`~~
 3. ~~**A0 animated splash** — DONE 2026-05-27: `app/index.tsx` rebuilt with full Warsh lockup animation~~
 4. ~~**Pre-beta infrastructure (code side)** — DONE 2026-05-27: package renamed `com.arabai.app` → `com.warsh.app`, scheme updated, checklist written. See `Docs/warsh-beta-infra-readiness-checklist.md` for YOU-items.~~
@@ -75,6 +110,41 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 7. **Beta gate checklist** — 9 items in §14 of `Docs/warsh-beta-infra-readiness-checklist.md`; none confirmed yet. Blocked on: EAS APK installation, custom domain (deferred), Google Play Console setup.
 8. **Google Play Console** — not started; blocking IAP sandbox testing and distribution
 9. **Sentry / Mixpanel / UptimeRobot** — partially configured; need proper project setup, DSN wiring, alert creation
+
+---
+
+## Recent Changes (2026-05-28 Ch9-13 production seed + Ch14 authoring)
+
+### Ch9-13 pushed to production Neon DB; Chapter 14 authored (2026-05-28)
+
+Read `Docs/warsh-spec-00-master-index.md` before starting, per build protocol.
+
+**Task 1 — Push Ch9-13 to production Neon DB:**
+
+- Ran `npm run db:seed` in `arabai-backend/` against the production Neon database.
+- 6 existing user accounts preserved. 58 fixtures (Ch1-Ch13) upserted. 585 vocabulary words and 11 Tadabbur Surahs refreshed.
+- Pre-seed fixture validation: 58 fixture lessons, 0 errors.
+
+**Task 2 — Chapter 14: Describing Plurals (5 lessons authored):**
+
+Spec source: `warsh-spec-05-curriculum-and-content.md` Chapter 14 (Book 2, Lesson 3 Part 2). Tadabbur: Al-Kafirun, Al-Ma'un.
+
+| File | Template | Title | Hook | Key concept |
+|---|---|---|---|---|
+| `chapter-14-lesson-01.json` | STANDARD | Adjectives with Human Plurals | Al-Kafirun 109:1 | الْمُسْلِمُونَ الْكِرَامُ — plural noun + plural adjective for people |
+| `chapter-14-lesson-02.json` | STANDARD | The Non-Human Plural Rule | Al-Ma'un 107:2 | الْكُتُبُ جَدِيدَةٌ — non-human plural + feminine singular adjective |
+| `chapter-14-lesson-03.json` | STANDARD | Non-Human Plurals in the Quran | Ibrahim 14:32 | الْأَنْهَارُ، الْآيَاتُ، السَّمَاوَاتُ — Quranic deep practice |
+| `chapter-14-lesson-04.json` | STANDARD | Human vs Non-Human: Spotting the Difference | Al-Ma'un 107:4 | Both rules side by side; adjective ending as diagnostic |
+| `chapter-14-lesson-05.json` | REVIEW | Chapter 14 Review — Plural Agreement | Al-Kafirun 109:1 | Consolidates both plural adjective rules |
+
+- Wired all 5 lessons into `seed.cjs` as stable IDs `ch14-l01` through `ch14-l05`.
+- Added `ch14Id = chapterIdByOrder.get(14)` lookup.
+- `node --check prisma/seed.cjs` passed.
+- `npm run db:validate-fixtures` passed: **63 fixture lessons, 0 errors**.
+- `npm run db:seed` pushed Ch14 to production Neon DB (6 users preserved).
+
+**Key vocabulary introduced in Ch14:**
+كِرَامٌ، مُجْتَهِدُونَ، صَالِحُونَ، صَالِحَاتٌ، صَادِقُونَ (human plural adjectives); كَبِيرَةٌ، جَدِيدَةٌ، صَغِيرَةٌ، جَمِيلَةٌ، كَثِيرَةٌ، جَارِيَةٌ، وَاضِحَةٌ (non-human fem. singular adjectives); الْأَنْهَارُ، الْآيَاتُ، السَّمَاوَاتُ، الْجَنَّاتُ، الْمَسَاجِدُ (Quranic non-human plural nouns).
 
 ---
 
@@ -1660,10 +1730,10 @@ Current product concern:
 ## Remaining Work
 
 ### Content authoring (highest priority)
-1. ✅ Chapters 1-8 authored and wired — 35 lessons total, including SP1 (`ch03-l05`) and SP2 (`ch07-l05`)
-2. ✅ Fixture validation passes for all 35 authored JSON lessons
-3. Continue through Chapters 9-72 following the chapter mapping in `warsh-spec-05`
-4. Next content task: Chapter 9 fixture lessons (Plural Nouns)
+1. ✅ Chapters 1-29 authored and wired — 142 lessons total (Ch1-14: 63 fixtures; Ch15-29: 79 new fixtures), including SP1 (`ch03-l05`), SP2 (`ch07-l05`), SP3 (`ch12-l05`)
+2. ✅ Fixture validation passes for all 142 authored JSON lessons (0 errors)
+3. Continue through Chapters 30-72 following the chapter mapping in `warsh-spec-05`
+4. Next content task: Chapter 30 fixture lessons (Questioning and Communication Patterns)
 
 ### Lesson player (engineering)
 5. Update the lesson player (`play.tsx`) to read the new content schema directly (currently using the client-side mapper/adapter path — acceptable for now but should be replaced)

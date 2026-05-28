@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 69, Lesson 4 — Advanced جواب الطلب: conditional response patterns and parsing.",
+    "chapter_order": 69,
+    "lesson_order": 4,
+    "chapter_title": "جواب الطلب",
+    "title": "Advanced جواب الطلب — Parsing Complex Conditional Responses",
+    "titleAr": "جَوَابُ الطَّلَبِ الْمُتَقَدِّمُ — تَحْلِيلُ الِاسْتِجَابَاتِ الشَّرْطِيَّةِ",
+    "source": "book_8_lesson_3_jawab_talab_advanced.md",
+    "estimated_minutes": 9,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 18,
+      "ayah": 60,
+      "label": "Al-Kahf 18:60",
+      "ar": "وَإِذْ قَالَ مُوسَى لِفَتَاهُ لَا أَبْرَحُ حَتَّىٰ أَبْلُغَ مَجْمَعَ الْبَحْرَيْنِ أَوْ أَمْضِيَ حُقُبًا",
+      "en": "And when Moses said to his servant, 'I will not cease until I reach the meeting of the two seas or I will go on for ages.'",
+      "ur": "اور جب موسیٰ نے اپنے نوجوان سے کہا کہ میں نہیں رکوں گا یہاں تک کہ دو دریاؤں کے ملنے کی جگہ تک پہنچ جاؤں یا بہت سال گزر جائیں۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-kahf-060-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "لَا أَبْرَحُ — 'I will not cease.' This is a negative jussive structure — the negation لَا with the jussive. The response to the condition is implicit in the journey itself.",
+      "ur": "لَا أَبْرَحُ — 'میں نہیں رکوں گا'۔ یہ negative jussive ساخت ہے — negation لَا jussive کے ساتھ۔ شرط کا response اسی سفر میں implicit ہے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Negative جواب الطلب — لَا + jussive in response",
+        "ar": "جَوَابُ الطَّلَبِ السَّلْبِيُّ — لَا + مجزوم فِي الِاسْتِجَابَةِ",
+        "ur": "negative جواب الطلب — لَا + مجزوم response میں"
+      },
+      "explanation": {
+        "en": "When the جواب الطلب is negative, لَا الناهية is used. لَا أَبْرَحْ means 'I will not cease' — the negative command response to an implied condition. This is the pattern of determination.",
+        "ur": "جب جواب الطلب منفی ہو، لَا الناهية استعمال ہوتا ہے۔ لَا أَبْرَحْ مطلب 'میں نہیں رکوں گا' — implied شرط کا negative command response۔ یہ عزم کا pattern ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "لَا أَبْرَحُ حَتَّىٰ أَبْلُغَ مَجْمَعَ الْبَحْرَيْنِ",
+        "ar_plain": "لا ابرح حتى ابلغ مجمع البحرين",
+        "translit": "laa abrahu hataa ablugha majma'a al-bahrayni",
+        "en": "I will not cease until I reach the meeting of the two seas.",
+        "ur": "میں نہیں رکوں گا یہاں تک کہ دو دریاؤں کے ملنے کی جگہ تک پہنچ جاؤں۔"
+      },
+      "explanation": {
+        "en": "لَا أَبْرَحْ is the negative jussive — 'I will not cease.' أَبْلُغَ is the purpose clause after حَتَّىٰ. Both are جussive in their respective functions. لَا is negation, حَتَّىٰ introduces purpose.",
+        "ur": "لَا أَبْرَحْ negative مجزوم ہے — 'میں نہیں رکوں گا'۔ أَبْلُغَ purpose clause ہے حَتَّىٰ کے بعد۔ دونوں اپنے respective functions میں مجزوم ہیں۔ لَا انکار ہے، حَتَّىٰ مقصد متعارف کراتا ہے۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Response to the journey condition",
+        "ar": "اسْتِجَابَةُ شَرْطِ الرِّحْلَةِ",
+        "ur": "سفر کی شرط کا response"
+      },
+      "explanation": {
+        "en": "Moses says he will not cease until he reaches the goal. This is a جواب الطلب to an implied internal condition — 'I will not stop [unless I reach the goal].' The determination is itself the response.",
+        "ur": "موسیٰ کہتے ہیں کہ وہ نہیں رکیں گے یہاں تک کہ وہ مقصد تک پہنچ جائیں۔ یہ implied internal شرط کا جواب الطلب ہے — 'میں نہیں رکوں گا [جب تک کہ میں مقصد تک نہ پہنچ جاؤں]'۔ عزم خود response ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch69-l04-ex01",
+      "prompt": {
+        "ar": "لَا أَبْرَحُ حَتَّىٰ أَبْلُغَ مَجْمَعَ الْبَحْرَيْنِ",
+        "ar_plain": "لا ابرح حتى ابلغ مجمع البحرين",
+        "translit": "laa abrahu hataa ablugha majma'a al-bahrayni",
+        "en": "I will not cease until I reach the meeting of the two seas.",
+        "ur": "میں نہیں رکوں گا یہاں تک کہ دو دریاؤں کے ملنے کی جگہ تک پہنچ جاؤں۔"
+      },
+      "options": [
+        { "en": "I will not cease until I reach the meeting of the two seas.", "ur": "میں نہیں رکوں گا یہاں تک کہ دو دریاؤں کے ملنے کی جگہ تک پہنچ جاؤں۔" },
+        { "en": "I will cease until I reach the meeting of the two seas.", "ur": "میں رک جاؤں گا یہاں تک کہ دو دریاؤں کے ملنے کی جگہ تک پہنچ جاؤں۔" },
+        { "en": "I do not want to reach the meeting of the two seas.", "ur": "میں دو دریاؤں کے ملنے کی جگہ تک پہنچنا نہیں چاہتا۔" },
+        { "en": "Stop until I reach the meeting of the two seas.", "ur": "یہاں تک کہ دو دریاؤں کے ملنے کی جگہ تک پہنچنے تک رک جاؤ۔" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا أَبْرَحْ is the negative jussive — 'I will not cease.' أَبْرَحْ is مجزوم after لَا الناهية (implied in this context of self-determination). حَتَّىٰ introduces the purpose clause أَبْلُغَ.",
+        "ur": "لَا أَبْرَحْ negative مجزوم ہے — 'میں نہیں رکوں گا'۔ أَبْرَحْ لَا الناهية (self-determination کے سیاق میں implied) کے بعد مجزوم ہے۔ حَتَّىٰ purpose clause متعارف کراتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch69-l04-ex02",
+      "statement": {
+        "en": "لَا أَبْرَحْ is مجزوم after لَا الناهية (self-negation of ceasing) — 'I will not cease.'",
+        "ur": "لَا أَبْرَحْ لَا الناهية (چلنا بند کرنے کے self-negation) کے بعد مجزوم ہے — 'میں نہیں رکوں گا'۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch69-l04-ex03",
+      "left_column": [
+        {
+          "ar": "لَا أَبْرَحْ",
+          "ar_plain": "لا ابرح",
+          "translit": "laa abrah",
+          "en": "I will not cease",
+          "ur": "میں نہیں رکوں گا"
+        },
+        {
+          "ar": "أَبْلُغَ",
+          "ar_plain": "ابلغ",
+          "translit": "ablugha",
+          "en": "I reach",
+          "ur": "میں پہنچتا ہوں"
+        },
+        {
+          "ar": "فَاقْهَمْ",
+          "ar_plain": "فاقهم",
+          "translit": "faahkam",
+          "en": "then understand",
+          "ur": "تو سمجھو"
+        },
+        {
+          "ar": "زِدْنِي",
+          "ar_plain": "زدني",
+          "translit": "zidnii",
+          "en": "increase me",
+          "ur": "میری طرف اضافہ کر"
+        }
+      ],
+      "right_column": [
+        { "en": "negative jussive (self-determination)", "ur": "negative مجزوم (self-determination)" },
+        { "en": "purpose clause after حَتَّىٰ (مجزوم)", "ur": "حَتَّىٰ کے بعد purpose clause (مجزوم)" },
+        { "en": "فاء + command = جواب الطلب", "ur": "فاء + حکم = جواب الطلب" },
+        { "en": "command response (جواب الطلب)", "ur": "حکم کا response (جواب الطلب)" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch69-l04-ex04",
+      "mode": "TAP",
+      "sentence_ar": "لَا ___ حَتَّىٰ أَبْلُغَ الْمَجْمَعَ",
+      "hint": {
+        "en": "I will not cease until I reach the meeting.",
+        "ur": "میں نہیں رکوں گا یہاں تک کہ ملنے کی جگہ تک پہنچ جاؤں۔"
+      },
+      "options": [
+        {
+          "ar": "أَبْرَحْ",
+          "ar_plain": "ابرح",
+          "translit": "abrah",
+          "en": "I cease (jussive after لَا)",
+          "ur": "میں رکتا ہوں (لَا کے بعد مجزوم)"
+        },
+        {
+          "ar": "أَبْرَحُ",
+          "ar_plain": "ابرح",
+          "translit": "abrahu",
+          "en": "I cease (indicative)",
+          "ur": "میں رکتا ہوں (مرفوع)"
+        },
+        {
+          "ar": "بَرِحْ",
+          "ar_plain": "برح",
+          "translit": "barah",
+          "en": "cease! (command)",
+          "ur": "رک جاؤ! (حکم)"
+        },
+        {
+          "ar": "لَمْ أَبْرَحْ",
+          "ar_plain": "لم ابرح",
+          "translit": "lam abrah",
+          "en": "I did not cease (past negation)",
+          "ur": "میں نہیں رکا (ماضی انکار)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أَبْرَحْ",
+        "ar_plain": "ابرح",
+        "translit": "abrah",
+        "en": "I cease (jussive after لَا)",
+        "ur": "میں رکتا ہوں (لَا کے بعد مجزوم)"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch69-l04-ex05",
+      "target_translation": {
+        "en": "I will not stop until I understand the truth of the Quran.",
+        "ur": "میں نہیں رکوں گا یہاں تک کہ قرآن کا حق سمجھ نہ جاؤں۔"
+      },
+      "tiles": [
+        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "not", "ur": "نہیں" },
+        { "ar": "أَبْرَحْ", "ar_plain": "ابرح", "translit": "abrah", "en": "I cease", "ur": "میں رکتا ہوں" },
+        { "ar": "حَتَّىٰ", "ar_plain": "حتى", "translit": "hataa", "en": "until", "ur": "یہاں تک کہ" },
+        { "ar": "أَفْهَمَ", "ar_plain": "افهم", "translit": "afhama", "en": "I understand", "ur": "میں سمجھتا ہوں" },
+        { "ar": "حَقَّ", "ar_plain": "حق", "translit": "haqqa", "en": "truth of", "ur": "حق" },
+        { "ar": "الْقُرْآنِ", "ar_plain": "القرآن", "translit": "al-qur'aani", "en": "the Quran", "ur": "قرآن" }
+      ],
+      "correct_order": [0, 1, 2, 3, 4, 5],
+      "xp_value": 1
+    },
+    {
+      "type": "IDENTIFY_ROOT",
+      "id": "ch69-l04-ex06",
+      "word": {
+        "ar": "أَبْرَحْ",
+        "ar_plain": "ابرح",
+        "translit": "abrah",
+        "en": "I cease",
+        "ur": "میں رکتا ہوں"
+      },
+      "options": ["ب ر ح", "ع ب د", "ف ه م", "و ق ف"],
+      "correct_index": 0,
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Negative جواب الطلب and purpose clauses after حَتَّىٰ",
+      "ar": "جَوَابُ الطَّلَبِ السَّلْبِيُّ وَجُمَلُ الْمَقْصِدِ بَعْدَ حَتَّىٰ",
+      "ur": "negative جواب الطلب اور حَتَّىٰ کے بعد مقصد کی clauses"
+    },
+    "ayah": {
+      "surah": 18,
+      "ayah": 60,
+      "label": "Al-Kahf 18:60",
+      "ar": "وَإِذْ قَالَ مُوسَى لِفَتَاهُ لَا أَبْرَحُ حَتَّىٰ أَبْلُغَ مَجْمَعَ الْبَحْرَيْنِ أَوْ أَمْضِيَ حُقُبًا",
+      "en": "Moses said to his servant, 'I will not cease until I reach the meeting of the two seas or I will go on for ages.'",
+      "ur": "موسیٰ نے اپنے نوجوان سے کہا کہ میں نہیں رکوں گا یہاں تک کہ دو دریاؤں کے ملنے کی جگہ تک پہنچ جاؤں یا بہت سال گزر جائیں۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-kahf-060-mishary.mp3"
+    },
+    "highlighted_word_indices": [5],
+    "noor_explanation": {
+      "en": "أَبْرَحْ is مجزوم after لَا — negative jussive of self-determination. أَبْلُغَ is مجزوم after حَتَّىٰ (purpose particle). Both demonstrate مجزوم forms in different grammatical functions. This is the complexity of جواب الطلب in real Quranic texts.",
+      "ur": "أَبْرَحْ لَا کے بعد مجزوم ہے — self-determination کا negative مجزوم۔ أَبْلُغَ حَتَّىٰ (purpose particle) کے بعد مجزوم ہے۔ دونوں مختلف grammatical functions میں مجزوم forms دکھاتے ہیں۔ یہ اصل قرآنی متن میں جواب الطلب کی complexity ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "جواب الطلب appears in many forms in the Quran: positive commands (فَاقْهَمْ), negative commands (لَا أَبْرَحْ), and purpose clauses (حَتَّىٰ أَبْلُغَ). All are مجزوم in their respective functions. The key is identifying what triggers the jussive — whether لَا, لام الأمر, or حَتَّىٰ.",
+      "ur": "جواب الطلب قرآن میں کئی forms میں آتا ہے: positive commands (فَاقْهَمْ), negative commands (لَا أَبْرَحْ), اور purpose clauses (حَتَّىٰ أَبْلُغَ)۔ سب اپنے respective functions میں مجزوم ہیں۔ کلید یہ ہے کہ پہچانیں کہ کیا مجزوم trigger کرتا ہے — چاہے لَا، لام الأمر، یا حَتَّىٰ۔"
+    }
+  }
+}

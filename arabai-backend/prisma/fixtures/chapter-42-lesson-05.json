@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 42, Lesson 5 - REVIEW. Consolidates كَمْ, مَتَى, لِمَاذَا interrogative adverbs.",
+    "chapter_order": 42,
+    "lesson_order": 5,
+    "chapter_title": "Advanced Q&A (كَمْ/مَتَى/لِمَاذَا)",
+    "title": "Chapter 42 Review — Interrogatives",
+    "titleAr": "مُرَاجَعَةٌ — كَمْ وَ مَتَى وَ لِمَاذَا",
+    "source": "madina_reader_grammar_qa.md",
+    "estimated_minutes": 7,
+    "xp_reward": 5
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 222,
+      "label": "Al-Baqarah 2:222",
+      "ar": "وَيَسْأَلُونَكَ عَنِ الْمَحِيضِ",
+      "en": "And they ask you about menstruation.",
+      "ur": "اور وہ تم سے حیض کے بارے میں پوچھتے ہیں۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-222-part-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Review time. Three interrogatives — كَمْ, مَتَى, لِمَاذَا — each with a different job. Let us lock them in.",
+      "ur": "مراجعے کا وقت۔ تین استفہامیہ — كَمْ، مَتَى، لِمَاذَا — ہر ایک کا اپنا کام۔ آئیے انہیں مضبوط کریں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Chapter 42 — Three interrogative tools",
+        "ar": "الْبَاب 42 — ثَلَاثَةُ أَدَوَاتِ الِاسْتِفْهَام",
+        "ur": "باب 42 — تین استفہامی اوزار"
+      },
+      "explanation": {
+        "en": "كَمْ asks quantity: how much / how many. مَتَى asks time: when. لِمَاذَا asks reason: why. Each one expects a different kind of answer.",
+        "ur": "كَمْ مقدار پوچھتا ہے: کتنا / کتنے۔ مَتَى وقت پوچھتا ہے: کب۔ لِمَاذَا سبب پوچھتا ہے: کیوں۔ ہر ایک ایک مختلف قسم کا جواب Expect کرتا ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Key question-answer pairs",
+        "ur": "اہم سوال-جواب جوڑے"
+      },
+      "body": {
+        "en": "How many books? → كَمْ كِتَابًا. When did you go? → مَتَى ذَهَبْتَ؟ Why did you read? → لِمَاذَا قَرَأْتَ؟",
+        "ur": "کتنی کتابیں؟ → كَمْ كِتَابًا۔ تم کب گئے؟ → مَتَى ذَهَبْتَ؟ تم کیوں پڑھے؟ → لِمَاذَا قَرَأْتَ؟"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch42-l05-ex01",
+      "prompt": {
+        "ar": "كَمْ سَنَةً عِشْتَ؟",
+        "ar_plain": "كم سنة عشت",
+        "translit": "kam sanatan 'ishita?",
+        "en": "How many years did you live?",
+        "ur": "تم کتنے سال جیے؟"
+      },
+      "options": [
+        { "en": "How many years did you live?", "ur": "تم کتنے سال جیے؟" },
+        { "en": "How much water did you drink?", "ur": "تم نے کتنا پانی پیا؟" },
+        { "en": "When did you live?", "ur": "تم کب جیے؟" },
+        { "en": "Why did you live?", "ur": "تم کیوں جیے؟" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَمْ asks for a quantity — سَنَةً (years). The answer is a number.",
+        "ur": "كَمْ مقدار کے لیے پوچھتا ہے — سَنَةً (سال)۔ جواب ایک عدد ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch42-l05-ex02",
+      "statement": {
+        "en": "مَتَى asks about time. لِمَاذَا asks about a reason.",
+        "ur": "مَتَى وقت کے بارے میں پوچھتا ہے۔ لِمَاذَا وجہ کے بارے میں پوچھتا ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch42-l05-ex03",
+      "mode": "TAP",
+      "sentence_ar": "___ تَذْهَبُ إِلَى الْمَسْجِدِ؟",
+      "hint": {
+        "en": "Why do you go to the masjid?",
+        "ur": "تم کیوں مسجد جاتے ہو؟"
+      },
+      "options": [
+        {
+          "ar": "لِمَاذَا",
+          "ar_plain": "لماذا",
+          "translit": "limazaa",
+          "en": "why",
+          "ur": "کیوں"
+        },
+        {
+          "ar": "مَتَى",
+          "ar_plain": "متى",
+          "translit": "mataa",
+          "en": "when",
+          "ur": "کب"
+        },
+        {
+          "ar": "كَمْ",
+          "ar_plain": "كم",
+          "translit": "kam",
+          "en": "how many",
+          "ur": "کتنے"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where",
+          "ur": "کہاں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لِمَاذَا",
+        "ar_plain": "لماذا",
+        "translit": "limazaa",
+        "en": "why",
+        "ur": "کیوں"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch42-l05-ex04",
+      "left_column": [
+        {
+          "ar": "كَمْ مَالًا",
+          "ar_plain": "كم ما لا",
+          "translit": "kam maalan",
+          "en": "how much wealth",
+          "ur": "کتنی دولت"
+        },
+        {
+          "ar": "مَتَى بَدَأْتَ",
+          "ar_plain": "متى بدأت",
+          "translit": "mataa bada't",
+          "en": "when did you begin",
+          "ur": "تم نے کب شروع کیا"
+        },
+        {
+          "ar": "لِمَاذَا تَعْلَمُ",
+          "ar_plain": "لماذا تتعلم",
+          "translit": "limazaa ta'allamu",
+          "en": "why are you learning",
+          "ur": "تم کیوں سیکھ رہے ہو"
+        },
+        {
+          "ar": "كَمْ طُلَّابًا",
+          "ar_plain": "كم طلابا",
+          "translit": "kam tullaaban",
+          "en": "how many students",
+          "ur": "کتنے طلبہ"
+        }
+      ],
+      "right_column": [
+        { "en": "how much wealth", "ur": "کتنی دولت" },
+        { "en": "when did you begin", "ur": "تم نے کب شروع کیا" },
+        { "en": "why are you learning", "ur": "تم کیوں سیکھ رہے ہو" },
+        { "en": "how many students", "ur": "کتنے طلبہ" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch42-l05-ex05",
+      "target_translation": {
+        "en": "Because I love the masjid.",
+        "ur": "کیونکہ میں مسجد سے محبت کرتا ہوں۔"
+      },
+      "tiles": [
+        {
+          "ar": "لِأَنَّنِي",
+          "ar_plain": "لأنني",
+          "translit": "li'annanii",
+          "en": "because I",
+          "ur": "کیونکہ میں"
+        },
+        {
+          "ar": "مَحَّبُّ",
+          "ar_plain": "محب",
+          "translit": "muhabbitu",
+          "en": "love",
+          "ur": "محبت کرنے والا"
+        },
+        {
+          "ar": "الْمَسْجِدَ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjida",
+          "en": "the masjid",
+          "ur": "مسجد"
+        },
+        {
+          "ar": "كَمْ",
+          "ar_plain": "كم",
+          "translit": "kam",
+          "en": "how many",
+          "ur": "کتنے"
+        }
+      ],
+      "correct_order": [0, 1, 2],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch42-l05-ex06",
+      "statement": {
+        "en": "لِأَنَّ is how Arabic answers a why question.",
+        "ur": "لِأَنَّ عربی میں کیوں کے سوال کا جواب ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch42-l05-ex07",
+      "prompt": {
+        "ar": "مَتَى تَقُومُ كُلَّ صَبَاحٍ؟",
+        "ar_plain": "متى تقوم كل صباح",
+        "translit": "mataa taquumu kulla subaaHin?",
+        "en": "When do you wake up every morning?",
+        "ur": "تم کب ہر صبح اٹھتے ہو؟"
+      },
+      "options": [
+        { "en": "When do you wake up every morning?", "ur": "تم کب ہر صبح اٹھتے ہو؟" },
+        { "en": "Why do you wake up every morning?", "ur": "تم کیوں ہر صبح اٹھتے ہو؟" },
+        { "en": "How many mornings do you wake up?", "ur": "تم کتنی صبحیں اٹھتے ہو؟" },
+        { "en": "Where do you wake up every morning?", "ur": "تم ہر صبح کہاں اٹھتے ہو؟" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Three question words — mastered",
+      "ar": "ثَلَاثَةُ أَسْئِلَةٍ — مُتْقَنَةٌ",
+      "ur": "تین سوالی الفاظ — مہارت حاصل"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 222,
+      "label": "Al-Baqarah 2:222",
+      "ar": "وَيَسْأَلُونَكَ عَنِ الْمَحِيضِ",
+      "en": "And they ask you about menstruation.",
+      "ur": "اور وہ تم سے حیض کے بارے میں پوچھتے ہیں۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-222-part-mishary.mp3"
+    },
+    "highlighted_word_indices": [2],
+    "noor_explanation": {
+      "en": "يَسْأَلُونَكَ — they ask you. Every answer you give in Arabic can now begin with a clear question word. The conversation is fully yours.",
+      "ur": "يَسْأَلُونَكَ — وہ تم سے پوچھتے ہیں۔ ہر جواب جو آپ عربی میں دیں اب ایک صاف سوالی لفظ سے شروع ہو سکتا ہے۔ گفتگو اب مکمل طور پر آپ کی ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "كَمْ, مَتَى, لِمَاذَا — three words, unlimited questions. You can now ask and answer about quantity, time, and reason in Arabic. Chapter 42 complete.",
+      "ur": "كَمْ، مَتَى، لِمَاذَا — تین الفاظ، بے حد سوالات۔ اب آپ عربی میں مقدار، وقت، اور وجہ کے بارے میں پوچھ سکتے ہیں اور جواب دے سکتے ہیں۔ باب 42 مکمل۔"
+    }
+  }
+}

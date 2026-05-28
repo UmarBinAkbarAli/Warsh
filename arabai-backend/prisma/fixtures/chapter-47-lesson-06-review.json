@@ -1,0 +1,466 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "R10 — Mid-Book 5 Review. Covers Ch46 (three states of المضارع) and Ch47 (sound masculine plural).",
+    "chapter_order": 47,
+    "lesson_order": 6,
+    "chapter_title": "R10 — Mid-Book 5 Review",
+    "title": "Review: Verb States and Sound Masculine Plural",
+    "titleAr": "الْمُرَاجَعَةُ: أَحْوَالُ الْمُضَارِعِ وَجَمْعُ الْمُذَكَّرِ السَّالِمِ",
+    "source": "review_r10.md",
+    "estimated_minutes": 12,
+    "xp_reward": 15
+  },
+  "hook": {
+    "ayah": {
+      "surah": 111,
+      "ayah": 1,
+      "label": "Al-Masad 111:1",
+      "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+      "en": "May the hands of Abu Lahab be ruined, and may he be ruined.",
+      "ur": "ابی لہب کے ہاتھ تباہ ہوں اور وہ خود بھی تباہ ہو۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-masad-001-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "R10 — Mid-Book 5 Review. We consolidate two major topics: the three states of المضارع (raf', nasb, jazm) and the sound masculine plural (وُونَ، يَنَ، وُ in idafa). These are the pillars of Quranic grammar.",
+      "ur": "R10 — درمیانی کتاب 5 کا جائزہ۔ ہم دو بڑے topics کو consolidate کرتے ہیں: مضارع کی تین حالتیں (رفع، نصب، جزم) اور جمع مذکر سالم (وُونَ، يَنَ، وُ فی اضافت)۔ یہ قرآنی grammar کے ستون ہیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The three states of المضارع — summary",
+        "ar": "حَالَاتُ الْمُضَارِعِ الثَّلَاثُ — مُلَخَّصٌ",
+        "ur": "مضارع کی تین حالتیں — خلاصہ"
+      },
+      "explanation": {
+        "en": "Raf' (مرفوع): default state, Dhamma on first letter. Nasb (منصوب): after أَنْ، لَنْ، حَتَّى، فَيْ — Alif at end. Jazm (مجزوم): after لَمْ، لَمَّا، لَا النَّاهِيَة، لام الأمر — vowel dropped from first letter.",
+        "ur": "رفع (مرفوع): default حالت، پہلے حرف پر Dhamma۔ نصب (منصوب): أَنْ، لَنْ، حَتَّى، فَيْ کے بعد — آخر میں Alif۔ جزم (مجزوم): لَمْ، لَمَّا، لَا النَّاهِيَة، لام الأمر کے بعد — پہلے حرف سے vowel گرایا جاتا ہے۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Sound masculine plural — three forms",
+        "ar": "جَمْعُ الْمُذَكَّرِ السَّالِمُ — ثَلَاثُ صِيَغٍ",
+        "ur": "جمع مذکر سالم — تین شکلیں"
+      },
+      "explanation": {
+        "en": "Raf': مُسْلِمُونَ (وُونَ). Nasb/jazm: مُسْلِمِينَ (يَنَ — ن dropped). Idafa: مُسْلِمُو (وُ — ن dropped, no يَنَ ending). The ending tells us the noun's role in the sentence.",
+        "ur": "رفع: مُسْلِمُونَ (وُونَ)۔ نصب/جزم: مُسْلِمِينَ (يَنَ — ن ڈرا)۔ اضافت: مُسْلِمُو (وُ — ن ڈرا، كوئی يَنَ ending نہیں)۔ ending ہمیں بتاتی ہے کہ noun کا sentence میں کیا کردار ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "لَنْ يَذْهَبَ الْمُؤْمِنُونَ",
+        "ar_plain": "لن يذهب المؤمنون",
+        "translit": "lan yadhahaba al-mu'minuuna",
+        "en": "The believers will never go",
+        "ur": "مومنین کبھی نہیں جائیں گے"
+      },
+      "explanation": {
+        "en": "لَنْ (nasb trigger) → يَذْهَبَ (nasb, Alif ending). الْمُؤْمِنُونَ stays raf' (وُونَ) — the noun is not directly after a nasb/jazm trigger. Only the verb changes state, not the noun.",
+        "ur": "لَنْ (نصب trigger) → يَذْهَبَ (نصب، Alif ending)۔ الْمُؤْمِنُونَ رفع (وُونَ) میں رہتا ہے — noun nasb/jazm trigger کے فوراً بعد نہیں ہے۔ صرف verb حالت بدلتی ہے، noun نہیں۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "r10-ex01",
+      "prompt": {
+        "ar": "لَمْ يَذْهَبْ",
+        "ar_plain": "لم يذهب",
+        "translit": "lam yadhahab",
+        "en": "He did not go",
+        "ur": "اس نے نہیں گیا"
+      },
+      "options": [
+        { "en": "He did not go", "ur": "اس نے نہیں گیا" },
+        { "en": "He will never go", "ur": "وہ کبھی نہیں جائے گا" },
+        { "en": "He does not go", "ur": "وہ نہیں جاتا" },
+        { "en": "He wants to go", "ur": "وہ جانا چاہتا ہے" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَمْ triggers jazm — the verb loses its vowel on the first letter: يَذْهَبُ → يَذْهَبْ. This is past negation: he did not go.",
+        "ur": "لَمْ جزم trigger کرتی ہے — verb پہلے حرف کا vowel کھو دیتا ہے: يَذْهَبُ → يَذْهَبْ۔ یہ ماضی کی نفی ہے: اس نے نہیں گیا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "r10-ex02",
+      "statement": {
+        "en": "In nasb state, sound masculine plural ends in ينَ (the ن is dropped).",
+        "ur": "نصب حالت میں، جمع مذکر سالم ينَ پر ختم ہوتا ہے (ن ڈرا دی جاتی ہے)۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "r10-ex03",
+      "mode": "TAP",
+      "sentence_ar": "أَرَى الْمُسْلِمِينَ → أَرَى ___",
+      "hint": {
+        "en": "I see the Muslims (nasb).",
+        "ur": "میں مسلمانوں کو دیکھتا ہوں (نصب)۔"
+      },
+      "options": [
+        {
+          "ar": "مُسْلِمِينَ",
+          "ar_plain": "مسلمين",
+          "translit": "muslimeen",
+          "en": "Muslims (nasb)",
+          "ur": "مسلمان (نصب)"
+        },
+        {
+          "ar": "مُسْلِمُونَ",
+          "ar_plain": "مسلمون",
+          "translit": "muslimoona",
+          "en": "Muslims (raf')",
+          "ur": "مسلمان (رفع)"
+        },
+        {
+          "ar": "مُسْلِمُو",
+          "ar_plain": "مسلموي",
+          "translit": "muslimu",
+          "en": "Muslims of (idafa)",
+          "ur": "مسلمانوں کے (اضافت)"
+        },
+        {
+          "ar": "مُسْلِمٌ",
+          "ar_plain": "مسلم",
+          "translit": "muslimun",
+          "en": "a Muslim (sg.)",
+          "ur": "ایک مسلمان (واحد)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مُسْلِمِينَ",
+        "ar_plain": "مسلمين",
+        "translit": "muslimeen",
+        "en": "Muslims (nasb)",
+        "ur": "مسلمان (نصب)"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "r10-ex04",
+      "left_column": [
+        {
+          "ar": "لَمْ يَذْهَبْ",
+          "ar_plain": "لم يذهب",
+          "translit": "lam yadhahab",
+          "en": "he did not go (jazm)",
+          "ur": "اس نے نہیں گیا (جزم)"
+        },
+        {
+          "ar": "لَنْ يَذْهَبَ",
+          "ar_plain": "لن يذهب",
+          "translit": "lan yadhahaba",
+          "en": "he will never go (nasb)",
+          "ur": "وہ کبھی نہیں جائے گا (نصب)"
+        },
+        {
+          "ar": "يَذْهَبُ",
+          "ar_plain": "يذهب",
+          "translit": "yadhahabu",
+          "en": "he goes (raf')",
+          "ur": "وہ جاتا ہے (رفع)"
+        },
+        {
+          "ar": "مُسْلِمُونَ",
+          "ar_plain": "مسلمون",
+          "translit": "muslimoona",
+          "en": "Muslims (raf')",
+          "ur": "مسلمان (رفع)"
+        }
+      ],
+      "right_column": [
+        { "en": "he did not go (jazm)", "ur": "اس نے نہیں گیا (جزم)" },
+        { "en": "he will never go (nasb)", "ur": "وہ کبھی نہیں جائے گا (نصب)" },
+        { "en": "he goes (raf')", "ur": "وہ جاتا ہے (رفع)" },
+        { "en": "Muslims (raf')", "ur": "مسلمان (رفع)" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "r10-ex05",
+      "target_translation": {
+        "en": "The believers will never be unjust.",
+        "ur": "مومنین کبھی ظالم نہیں ہوں گے۔"
+      },
+      "tiles": [
+        {
+          "ar": "لَنْ",
+          "ar_plain": "لن",
+          "translit": "lan",
+          "en": "never",
+          "ur": "کبھی نہیں"
+        },
+        {
+          "ar": "يَكُونُوا",
+          "ar_plain": "يكونوا",
+          "translit": "yakuunuu",
+          "en": "they be (nasb)",
+          "ur": "وہ ہوں (نصب)"
+        },
+        {
+          "ar": "ظَالِمِينَ",
+          "ar_plain": "ظالمين",
+          "translit": "zaalimeen",
+          "en": "unjust (nasb)",
+          "ur": "ظالم (نصب)"
+        },
+        {
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minuuna",
+          "en": "the believers",
+          "ur": "مومنین"
+        }
+      ],
+      "correct_order": [0, 3, 1, 2],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "r10-ex06",
+      "prompt": {
+        "ar": "مُسْلِمُو هَذِهِ الْأُمَّةِ",
+        "ar_plain": "مسلموي هذه الأمة",
+        "translit": "muslimu haadhihii al-ummati",
+        "en": "Muslims of this nation",
+        "ur": "اس امت کے مسلمان"
+      },
+      "options": [
+        { "en": "Muslims of this nation", "ur": "اس امت کے مسلمان" },
+        { "en": "The Muslim nation", "ur": "مسلمان قوم" },
+        { "en": "Muslims are better", "ur": "مسلمان بہتر ہیں" },
+        { "en": "This nation's Muslims", "ur": "یہ قوم کے مسلمان" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مُسْلِمُو is the idafa form (ن dropped). هَذِهِ الْأُمَّةِ is the second element of the اضافة chain. 'Muslims of this nation' describes a group by their national identity.",
+        "ur": "مُسْلِمُو idafa form ہے (نون ڈرا)۔ هَذِهِ الْأُمَّةِ اضافت chain کا دوسرا element ہے۔ 'اس امت کے مسلمان' ایک group کو ان کی قومی شناخت کے ذریعے بیان کرتا ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "r10-ex07",
+      "sentence_ar": "الْمُسْلِمُونَ يَعْبُدُونَ اللَّهَ",
+      "words": [
+        { "ar": "الْمُسْلِمُونَ", "ar_plain": "المسلمون", "translit": "al-muslimoona", "en": "the Muslims" },
+        { "ar": "يَعْبُدُونَ", "ar_plain": "يعبدون", "translit": "ya'buduuna", "en": "they worship" },
+        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah" }
+      ],
+      "available_roles": ["SUBJECT", "VERB", "OBJECT"],
+      "correct_roles": ["SUBJECT", "VERB", "OBJECT"],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْمُسْلِمُونَ (subject, raf' وُونَ). يَعْبُدُونَ (verb, raf' وُونَ). اللَّهَ (object, nasb — fatha on لام). All three in correct states.",
+        "ur": "الْمُسْلِمُونَ (فاعل، رفع وُونَ)۔ يَعْبُدُونَ (فعل، رفع وُونَ)۔ اللَّهَ (مفعول، نصب — لام پر fatha)۔ تینوں درست حالتوں میں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "r10-ex08",
+      "statement": {
+        "en": "Commands in Arabic (imperative) are formed by dropping the present-tense prefix from the base verb.",
+        "ur": "عربی میں Commands (imperative) بنیادی فعل سے present-tense prefix ڈرا کر بنتے ہیں۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "r10-ex09",
+      "mode": "TAP",
+      "sentence_ar": "أَنْ ___",
+      "hint": {
+        "en": "that he reads",
+        "ur": "کہ وہ پڑھے"
+      },
+      "options": [
+        {
+          "ar": "يَقْرَأَ",
+          "ar_plain": "يقرأ",
+          "translit": "yaqra'a",
+          "en": "he reads (nasb)",
+          "ur": "وہ پڑھے (نصب)"
+        },
+        {
+          "ar": "يَقْرَأُ",
+          "ar_plain": "يقرأ",
+          "translit": "yaqra'u",
+          "en": "he reads (raf')",
+          "ur": "وہ پڑھتا ہے (رفع)"
+        },
+        {
+          "ar": "يَقْرَأْ",
+          "ar_plain": "يقرأ",
+          "translit": "yaqra'",
+          "en": "he reads (jazm)",
+          "ur": "وہ پڑھے (جزم)"
+        },
+        {
+          "ar": "أَقْرَأَ",
+          "ar_plain": "أقرأ",
+          "translit": "aqra'a",
+          "en": "I read (nasb)",
+          "ur": "میں پڑھوں (نصب)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَقْرَأَ",
+        "ar_plain": "يقرأ",
+        "translit": "yaqra'a",
+        "en": "he reads (nasb)",
+        "ur": "وہ پڑھے (نصب)"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "r10-ex10",
+      "prompt": {
+        "ar": "لَا تَكْذِبْ",
+        "ar_plain": "لا تكذب",
+        "translit": "laa takdhib",
+        "en": "Do not lie!",
+        "ur": "جھوٹ مت بولو!"
+      },
+      "options": [
+        { "en": "Do not lie!", "ur": "جھوٹ مت بولو!" },
+        { "en": "He does not lie", "ur": "وہ جھوٹ نہیں بولتا" },
+        { "en": "I do not lie", "ur": "میں جھوٹ نہیں بولتا" },
+        { "en": "You are not lying", "ur": "تم جھوٹ نہیں بول رہے" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا تَكْذِبْ is لَا النَّاهِيَة (no longer/stop) + jazm verb. تَ is the prefix (you), كْذِبْ is the root with vowel dropped (jazm). The meaning: 'do not lie!' — a prohibition.",
+        "ur": "لَا تَكْذِبْ لَا النَّاهِيَة (اب نہیں/روک) + jazm verb ہے۔ تَ prefix ہے (تو)، كْذِبْ root ہے vowel ڈرا کر (جزم)۔ مطلب: 'جھوٹ مت بولو!' — ایک منع۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "r10-ex11",
+      "left_column": [
+        {
+          "ar": "مُسْلِمُونَ (raf')",
+          "ar_plain": "مسلمون (رفع)",
+          "translit": "muslimoona",
+          "en": "Muslims (subject)",
+          "ur": "مسلمان (فاعل)"
+        },
+        {
+          "ar": "مُسْلِمِينَ (nasb/jazm)",
+          "ar_plain": "مسلمين (نصب/جزم)",
+          "translit": "muslimeen",
+          "en": "Muslims (object)",
+          "ur": "مسلمان (مفعول)"
+        },
+        {
+          "ar": "مُسْلِمُو (idafa)",
+          "ar_plain": "مسلموي (إضافة)",
+          "translit": "muslimu",
+          "en": "Muslims of",
+          "ur": "مسلمانوں کے"
+        },
+        {
+          "ar": "ذَهَبْ (imperative)",
+          "ar_plain": "ذهب (حكم)",
+          "translit": "dhahab",
+          "en": "go! (sg.)",
+          "ur": "جا! (واحد)"
+        }
+      ],
+      "right_column": [
+        { "en": "Muslims (subject)", "ur": "مسلمان (فاعل)" },
+        { "en": "Muslims (object)", "ur": "مسلمان (مفعول)" },
+        { "en": "Muslims of", "ur": "مسلمانوں کے" },
+        { "en": "go! (sg.)", "ur": "جا! (واحد)" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "r10-ex12",
+      "target_translation": {
+        "en": "Those who believed will never be ashamed.",
+        "ur": "جنہوں نے ایمان لایا وہ کبھی شرمندہ نہیں ہوں گے۔"
+      },
+      "tiles": [
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhiina",
+          "en": "those who",
+          "ur": "جو لوگ"
+        },
+        {
+          "ar": "آمَنُوا",
+          "ar_plain": "آمنوا",
+          "translit": "aamanoo",
+          "en": "believed (past pl.)",
+          "ur": "ایمان لائے (جمع)"
+        },
+        {
+          "ar": "لَنْ",
+          "ar_plain": "لن",
+          "translit": "lan",
+          "en": "never",
+          "ur": "کبھی نہیں"
+        },
+        {
+          "ar": "يَخْزَى",
+          "ar_plain": "يخزی",
+          "translit": "yakhzaa",
+          "en": "be ashamed (nasb)",
+          "ur": "شرمندہ ہو (نصب)"
+        }
+      ],
+      "correct_order": [0, 1, 2, 3],
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "R10 — Mid-Book 5 complete",
+      "ar": "R10 — تَمَّتِ الْمُرَاجَعَةُ",
+      "ur": "R10 — درمیانی کتاب 5 کا جائزہ مکمل"
+    },
+    "ayah": {
+      "surah": 111,
+      "ayah": 1,
+      "label": "Al-Masad 111:1",
+      "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+      "en": "May the hands of Abu Lahab be ruined, and may he be ruined.",
+      "ur": "ابی لہب کے ہاتھ تباہ ہوں اور وہ خود بھی تباہ ہو۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-masad-001-mishary.mp3"
+    },
+    "highlighted_word_indices": [0],
+    "noor_explanation": {
+      "en": "R10 is complete. Chapters 46 and 47 covered the three states of المضارع and sound masculine plural. These two topics form the core of Quranic grammar. You now have the tools to parse almost any verb or noun in the Quran.",
+      "ur": "R10 مکمل ہو گیا۔ Chapters 46 اور 47 نے مضارع کی تین حالتیں اور جمع مذکر سالم کو covered کیا۔ یہ دو topics قرآنی grammar کے core بناتے ہیں۔ اب آپ کے پاس وہ tools ہیں جو تقریباً کوئی بھی verb یا noun قرآن میں parse کرنے کے لیے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "R10 done. You have reviewed raf', nasb, jazm for المضارع, and وُونَ، يَنَ، وُ for sound masculine plural. Chapter 48 next — Time, Numbers, and Measurements. A lighter chapter before the advanced sentence work in Ch49.",
+      "ur": "R10 ہو گیا۔ آپ نے مضارع کے لیے رفع، نصب، جزم، اور sound masculine plural کے لیے وُونَ، يَنَ، وُ کا جائزہ لیا۔ اگلا Chapter 48 — Time، Numbers، اور Measurements۔ Ch49 میں advanced sentence work سے پہلے ایک ہلکا chapter۔"
+    }
+  }
+}

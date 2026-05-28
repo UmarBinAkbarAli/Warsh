@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0",
+  "_meta": {
+    "chapter_order": 70,
+    "lesson_order": 4,
+    "chapter_title": "Exception with إِلَّا",
+    "title": "إِلَّا in the Quran — لَا إِلَٰهَ إِلَّا اللَّه",
+    "titleAr": "إِلَّا في القرآن — لا إله إلا الله",
+    "source": "arabai-backend/prisma/fixtures",
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 37,
+      "ayah": 35,
+      "label": "As-Saffat 37:35",
+      "ar": "وَقَالُوا إِنْ نَتَّبِعُ الْهُدَىٰ مَعَكَ نُتَخَذَنَّكُمْ خَطْفًا ۚ وَمَا أَمْرُنَا إِلَّا قَوْلًا بَيِّنًا",
+      "en": "They said: 'If we follow the guidance with you, we would be taken away unjustly.' But our affair is only one clear statement.",
+      "ur": "انہوں نے کہا: اگر ہم تیرے ساتھ ہدایت کی پیروی کریں تو ہمیں بے انصافی سے الگ کر لیا جائے گا۔ اور ہمارا کام صرف ایک واضح بیان ہے۔",
+      "audio_url": ""
+    },
+    "noor_intro": {
+      "ar": "The Shahadah begins with لَا إِلَٰهَ إِلَّا اللَّه — but this phrase contains a sophisticated grammatical structure. إِلَّا here is doing something extraordinary.",
+      "en": "The Shahadah begins with لَا إِلَٰهَ إِلَّا اللَّه — but this phrase contains a sophisticated grammatical structure. إِلَّا here is doing something extraordinary.",
+      "ur": "شہادت لَا إِلَٰهَ إِلَّا اللَّه سے شروع ہوتی ہے — لیکن اس جملے میں ایک اعلیٰ грамматик ساخت ہے۔ إِلَّا یہاں کچھ غیر معمولی کر رہی ہے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "term_ar": "لَا إِلَٰهَ إِلَّا اللَّه",
+      "term_en": "La ilaha illallah — There is no god but Allah",
+      "definition_ar": "النفي التام + الاستثناء",
+      "definition_en": "Full negation (لا إله) + Exception (إلا الله)",
+      "example_ar": "لَا = negates everything that could be god, إِلَّا = affirms Allah alone",
+      "example_en": "لَا negates every possible deity, إِلَّا reintroduces Allah as the sole exception",
+      "example_ur": "لَا ہر ممکنہ معبود کو رد کرتا ہے، إِلَّا اللہ کو واحد استثنا کے طور پر بحال کرتا ہے",
+      "highlight": true
+    },
+    {
+      "term_ar": "الاستثناء المفرغ",
+      "term_en": "Exhaustive Exception (مثيث) — المستثنى منه محذوف",
+      "definition_ar": "عندما يكون المستثنى منه متروكًا تقديرًا",
+      "definition_en": "When the original rule (مستثنى منه) is understood but omitted",
+      "example_ar": "لَا رَجُلَ إِلَّا زَيْدٌ (المستثنى منه محذوف تقديره: في السوق)",
+      "example_en": "No man except Zayd — 'in the market' is the implied مستثنى منه",
+      "example_ur": "کوئی آدمی نہیں مگر زید — 'بازار میں' مستثنى منه ہے جو محذوف ہے"
+    },
+    {
+      "term_ar": "إِلَّا في سياق النفي المتصل",
+      "term_en": "إِلَّا after consecutive negation",
+      "definition_ar": "إلَّا بعد لَمَّا أو لَو أو في جملة شرطية",
+      "definition_en": "إلَّا after لَمَّا, لَو, or in a conditional sentence",
+      "example_ar": "وَمَا أَمْرُنَا إِلَّا قَوْلًا بَيِّنًا (منفي غير منجز)",
+      "example_en": "Our affair is only one clear statement — unfulfilled negative",
+      "example_ur": "ہمارا کام صرف ایک واضح بیان ہے — غیر مکمل نفی"
+    },
+    {
+      "term_ar": "إِلَّا في سياق النفي القاطع",
+      "term_en": "إِلَّا after final negation لَا",
+      "definition_ar": "إلَّا after the absolute negation لَا التي لا تستثني منها",
+      "definition_en": "إلَّا after the absolute negation لَا which has no exceptions except what follows",
+      "example_ar": "لَا يُسْمِنُ وَلَا يُغْنِي مِنْ جُوعٍ إِلَّا اللَّه",
+      "example_en": "It neither fattens nor satisfies hunger — except Allah alone",
+      "example_ur": "نہ وہ فربہ کرتا ہے نہ بھوک دور کرتا ہے — مگر صرف اللہ",
+      "highlight": true
+    },
+    {
+      "term_ar": "الجمع بين لَا و إِلَّا",
+      "term_en": "Combining لَا and إِلَّا for emphasis",
+      "definition_ar": "لَا نافية للجنس، إِلَّا مستثنية",
+      "definition_en": "لَا is a negating particle (nafiya), إِلَّا is the exception particle",
+      "example_ar": "لَا إِلَٰهَ إِلَّا اللَّه = لا شيء إله إلا الله",
+      "example_en": "لَا إِلَٰهَ إِلَّا اللَّه literally = 'nothing is god except Allah'",
+      "example_ur": "لَا إِلَٰهَ إِلَّا اللَّه کا لغوی مطلب = 'کوئی چیز معبود نہیں مگر اللہ'"
+    },
+    {
+      "term_ar": "المعطوف على المستثنى",
+      "term_en": "Coordinated item after المستثنى",
+      "definition_ar": "ما بعد إِلَّا يمكن أن يكون معطوفًا",
+      "definition_en": "What follows إِلَّا can have a conjunction attached",
+      "example_ar": "لَا إِلَٰهَ إِلَّا اللَّه وَحْدَهُ",
+      "example_en": "No god except Allah, alone — وَحْدَهُ is معطوف on اللَّه",
+      "example_ur": "کوئی معبود نہیں مگر اللہ، اکیلا — وَحْدَهُ اللہ کا معطوف ہے"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "instruction": {
+        "ar": "ما نوع إِلَّا في الشهادتين؟",
+        "en": "What type of إِلَّا is in the Shahadah?"
+      },
+      "prompt": {
+        "ar": "لَا إِلَٰهَ إِلَّا اللَّه",
+        "en": "There is no god but Allah",
+        "ur": "کوئی معبود نہیں مگر اللہ"
+      },
+      "options": [
+        {
+          "label_ar": "مثبت",
+          "label_en": "Positive — everything has a god except Allah",
+          "label_ur": "مثبت — ہر چیز کا معبود ہے مگر اللہ کے سوا",
+          "correct": false
+        },
+        {
+          "label_ar": "منفي تام",
+          "label_en": "Fully negative — no god exists except Allah",
+          "label_ur": "مکمل نفی — کوئی معبود نہیں ہے مگر اللہ",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "type": "FILL_BLANK",
+      "instruction": {
+        "ar": "املأ الفراغ في الآية",
+        "en": "Fill in the blank from the Quran"
+      },
+      "prompt": {
+        "ar": "وَمَا أَمْرُنَا ___ قَوْلًا بَيِّنًا",
+        "en": "Our affair is only ___ clear statement",
+        "ur": "اور ہمارا کام صرف ___ ایک واضح بیان ہے"
+      },
+      "answer": "إِلَّا",
+      "case_sensitive": true
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "instruction": {
+        "ar": "حلّل جملة: لَا إِلَٰهَ إِلَّا اللَّه",
+        "en": "Parse the sentence: لَا إِلَٰهَ إِلَّا اللَّه"
+      },
+      "sentences": [
+        {
+          "original": "لَا إِلَٰهَ إِلَّا اللَّه",
+          "analysis": {
+            "لَا": "نافية للجنس — negates إله (god) absolutely",
+            "إِلَّا": "مُسْتَثْنِية — introduces the exception from negation",
+            "اللَّه": "مُسْتَثْنًى — the sole exception, grammatically منصوب",
+            "type": "منفي تام — complete negation of all deities, exception affirms Allah alone",
+            "note": "This is both a theological statement AND a grammatical masterpiece"
+          }
+        }
+      ]
+    },
+    {
+      "type": "TRUE_FALSE",
+      "instruction": {
+        "ar": "حدد: صواب أم خطأ",
+        "en": "True or False"
+      },
+      "statement": {
+        "ar": "في \"وَمَا أَمْرُنَا إِلَّا قَوْلًا بَيِّنًا\" — إِلَّا هنا منفي تام (full exception)",
+        "en": "In \"Our affair is only one clear statement\" — إِلَّا here is منفي تام (full exception)",
+        "ur": "\"ہمارا کام صرف ایک واضح بیان ہے\" میں — إِلَّا یہاں منفي تام ہے"
+      },
+      "correct": false,
+      "explanation": {
+        "ar": "إِلَّا here is منفي غير منجز — the command لم يصدر فعلا، so the exception doesn't apply. The sentence means 'if commands were issued, our only command would be clear speech' — but no command was actually given.",
+        "en": "This إِلَّا is منفي غير منجز because the conditional لم (if) was not fulfilled — no actual command was given, so the exception is moot. The sentence says 'our affair would be only clear speech IF we commanded — but we didn't.'",
+        "ur": "یہاں إِلَّا منفي غير منجز ہے کیونکہ مشروطہ لم (اگر) پورا نہیں ہوا — کوئی حکم نہیں دیا گیا، تو استثنا لاگو نہیں ہوتی۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "instruction": {
+        "ar": "طابق الآية بنوع الاستثناء",
+        "en": "Match the ayah with its exception type"
+      },
+      "left_items": [
+        { "id": "1", "text_ar": "لَا إِلَٰهَ إِلَّا اللَّه" },
+        { "id": "2", "text_ar": "وَمَا أَمْرُنَا إِلَّا قَوْلًا" },
+        { "id": "3", "text_ar": "لَا يُسْمِنُ وَلَا يُغْنِي إِلَّا اللَّه" }
+      ],
+      "right_items": [
+        { "id": "A", "text_ar": "منفي تام" },
+        { "id": "B", "text_ar": "منفي غير منجز" },
+        { "id": "C", "text_ar": "منفي جزئي" }
+      ],
+      "matches": [
+        { "left": "1", "right": "A" },
+        { "left": "2", "right": "B" },
+        { "left": "3", "right": "A" }
+      ]
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "instruction": {
+        "ar": "ابنِ جملة: منفي تام + استثناء",
+        "en": "Build a sentence: fully negative + exception"
+      },
+      "elements": [
+        { "text_ar": "لَا", "gloss": "no/not" },
+        { "text_ar": "أحد", "gloss": "anyone" },
+        { "text_ar": "إِلَّا", "gloss": "except" },
+        { "text_ar": "محمد", "gloss": "Muhammad" }
+      ],
+      "correct_order": [0, 1, 2, 3],
+      "expected_grammar": "No one except Muhammad — nobody exists except Muhammad"
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "instruction": {
+        "ar": "اختر المعنى الصحيح",
+        "en": "Choose the correct meaning"
+      },
+      "prompt": {
+        "ar": "وَلِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ إِلَّا اللَّهَ",
+        "en": "To Allah belongs whatever is in the heavens and the earth, except Allah",
+        "ur": "اللہ کے لیے ہے جو کچھ آسمانوں اور زمین میں ہے، مگر اللہ"
+      },
+      "options": [
+        {
+          "label_ar": "إلَّا تفيد الاستثناء",
+          "label_en": "إلَّا means exception — to Allah belongs everything except Allah (nonsense)",
+          "label_ur": "إلَّا استثنا ہے — اللہ کے لیے سب کچھ ہے مگر اللہ (بے معنی)",
+          "correct": false
+        },
+        {
+          "label_ar": "لا إله إلا الله",
+          "label_en": "This is the Shahadah structure — full negation لَا + exception إِلَّا اللَّه",
+          "label_ur": "یہ شہادت کی ساخت ہے — مکمل نفی لَا + استثناء إِلَّا اللَّه",
+          "correct": false
+        },
+        {
+          "label_ar": "إلَّا متصلة (connector)",
+          "label_en": "إلَّا here means 'but' (conjunction), not exception",
+          "label_ur": "یہاں إِلَّا کا مطلب 'لیکن' (عطف) ہے، استثنا نہیں",
+          "correct": false
+        },
+        {
+          "label_ar": "محذوفة",
+          "label_en": "إلَّا here is elliptical — 'to Allah belongs everything' (the إِلَّا is مستثنى منه محذوف)",
+          "label_ur": "یہاں إِلَّا حذف شدہ ہے — 'اللہ کے لیے سب ہے' (إلَّا مستثنى منه محذوف ہے)",
+          "correct": true
+        }
+      ]
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "ar": "إِلَّا في القرآن — أنماط واستعمالات",
+      "en": "إِلَّا in the Quran — Patterns and Usages",
+      "ur": "قرآن میں إِلَّا — نمونے اور استعمال"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 255,
+      "label": "Al-Baqarah 2:255 — آية الكرسي",
+      "ar": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ",
+      "en": "Allah — there is no god but He, the Ever-Living, the Sustainer of existence. Neither drowsiness nor sleep overtakes Him. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that intercedes with Him except by His permission?",
+      "ur": "اللہ — کوئی معبود نہیں مگر وہ، زندہ، قائم بنفس۔ نہ کسی کو تھکاوٹ پکڑتی ہے نہ نیند۔ اسی کے لیے ہے جو کچھ آسمانوں اور زمین میں ہے۔ کون ہے جو اس کے پاس سفارش کرے مگر اس کی اجازت سے؟"
+    },
+    "highlighted_word_indices": [1, 2, 3],
+    "noor_explanation": {
+      "ar": "في آية الكرسي، لَا إِلَٰهَ إِلَّا هُوَ的结构 هو منفي تام — لَا نافي، إِلَّا مستثنية، اللَّه is the المستثنى منه (not explicitly stated, but هو refers back). هذا هو أقوى استخدام لـ إِلَّا في القرآن — negation so complete it needs no noun after إِلَّا, only a pronoun.",
+      "en": "In Ayat al-Kursi, لَا إِلَٰهَ إِلَّا هُوَ is a منفي تام — لَا negates absolutely, إِلَّا reintroduces, and هُوَ (He) is the excluded exception. This is the most powerful use of إِلَّا in the Quran — the negation is so complete that after إِلَّا we only need a pronoun, not a full noun. The Shahadah is built on this exact structure.",
+      "ur": "آیت الکرسی میں، لَا إِلَٰهَ إِلَّا هُوَ منفي تام ہے — لَا مکمل طور پر رد کرتا ہے، إِلَّا دوبارہ متعارف کراتا ہے، اور هُوَ (وہ) مستثنا ہے۔ قرآن میں إِلَّا کا سب سے طاقتور استعمال — نفی اتنی مکمل ہے کہ إِلَّا کے بعد صرف ضمیر کافی ہے، نام نہیں۔ شہادت اسی ساخت پر بنی ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "ar": "Every time you say لَا إِلَٰهَ إِلَّا اللَّه, you are reciting one of the most grammatically sophisticated phrases in Arabic. Now you understand why. Tomorrow we tackle advanced exception patterns.",
+      "en": "Every time you say لَا إِلَٰهَ إِلَّا اللَّه, you are reciting one of the most grammatically sophisticated phrases in Arabic. Now you understand why. Tomorrow we tackle advanced exception patterns.",
+      "ur": "ہر بار جب آپ لَا إِلَٰهَ إِلَّا اللَّه کہتے ہیں، آپ عربی کے سب سے грамматик طور پر نفیس جملے میں سے ایک پڑھ رہے ہیں۔ اب آپ سمجھتے ہیں کیوں۔ کل ہم advanced استثنا نمونے دیکھیں گے۔"
+    }
+  }
+}

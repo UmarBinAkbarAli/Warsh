@@ -1,0 +1,344 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 47, Lesson 4 — Comprehensive parsing of Quranic ayat with sound masculine plural.",
+    "chapter_order": 47,
+    "lesson_order": 4,
+    "chapter_title": "Sound Masculine Plural — Full Treatment",
+    "title": "Quranic Parsing with Sound Masculine Plural",
+    "titleAr": "الْقُرْآنُ وَجَمْعُ الْمُذَكَّرِ السَّالِمُ",
+    "source": "book5_lesson3_sound_masculine_plural.md",
+    "estimated_minutes": 8,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 47,
+      "ayah": 33,
+      "label": "Muhammad 47:33",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا أَطِيعُوا اللَّهَ وَأَطِيعُوا الرَّسُولَ",
+      "en": "O you who believe, obey Allah and obey the Messenger.",
+      "ur": "اے ایمان والو! اللہ کی اطاعت کرو اور رسول کی اطاعت کرو۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/muhammad-033-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Today we practice reading Quranic ayat where sound masculine plural appears in all its forms — raf', nasb, and idafa. These patterns appear on every page of the Quran. Master them here.",
+      "ur": "آج ہم قرآنی ayat پڑھنے کی practice کرتے ہیں جہاں جمع مذکر سالم تمام شکلوں میں نظر آتا ہے — رفع، نصب، اور اضافت۔ یہ patterns ہر page پر قرآن میں نظر آتے ہیں۔ یہاں انہیں mastery کریں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Sound masculine plural across Quranic contexts",
+        "ar": "جَمْعُ الْمُذَكَّرِ السَّالِمُ فِي سِيَاقِ الْقُرْآنِ",
+        "ur": "قرآنی سیاق میں جمع مذکر سالم"
+      },
+      "explanation": {
+        "en": "The Quran uses sound masculine plural constantly. Recognizing وُونَ، يُنَ، and وُ forms in context is essential for Quranic reading. Always check what precedes the noun — if it is a verb in raf', the noun is likely raf' too. If a nasb/jazm trigger is present, the form changes.",
+        "ur": "قرآن مسلسل جمع مذکر سالم استعمال کرتا ہے۔ وُونَ، يُنَ، اور وُ forms کو سیاق میں پہچاننا Quranic reading کے لیے ضروری ہے۔ ہمیشہ دیکھیں کہ noun سے کیا precede کرتا ہے — اگر یہ رفع میں verb ہے، noun بھی شاید رفع ہو۔ اگر نصب/جزم trigger موجود ہو، form بدل جاتی ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الَّذِينَ آمَنُوا",
+        "ar_plain": "الذين آمنوا",
+        "translit": "alladhiina aamanoo",
+        "en": "those who believed (raf')",
+        "ur": "جو لوگ ایمان لائے (رفع)"
+      },
+      "explanation": {
+        "en": "الَّذِينَ is plural relative pronoun. آمَنُوا ends in وُوْنَ — raf' for sound masculine plural. This is a very common Quranic phrase: 'those who believed' — الَّذِينَ آمَنُوا.",
+        "ur": "الَّذِينَ plural relative pronoun ہے۔ آمَنُوا وُوْنَ پر ختم ہے — sound masculine plural کے لیے رفع۔ یہ ایک بہت عام قرآنی phrase ہے: 'جو لوگ ایمان لائے' — الَّذِينَ آمَنُوا۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "أَطِيعُوا اللَّهَ",
+        "ar_plain": "أطيعوا الله",
+        "translit": "atee'uu allaaha",
+        "en": "Obey Allah! (plural command)",
+        "ur": "اللہ کی اطاعت کرو! (جمع حکم)"
+      },
+      "explanation": {
+        "en": "أَطِيعُوا is the plural imperative (command) from the root ط-و-ع (to obey). Drop the prefix from تُطِيعُونَ (you pl. obey) → تُطِيعُوا → أَطِيعُوا. The command plural ending is وُوْ.",
+        "ur": "أَطِيعُوا plural imperative (حکم) ہے root ط-و-ع ( اطاعت کرنا) سے۔ تُطِيعُونَ (تم جمع obey کرتے ہو) سے prefix ڈرا → تُطِيعُوا → أَطِيعُوا۔ Command plural ending وُوْ ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "وَأَطِيعُوا الرَّسُولَ",
+        "ar_plain": "وأطيعوا الرسول",
+        "translit": "wa atee'uu ar-rasoola",
+        "en": "and obey the Messenger",
+        "ur": "اور رسول کی اطاعت کرو"
+      },
+      "explanation": {
+        "en": "أَطِيعُوا is plural command (jazm — no prefix, vowel on first letter). الرَّسُولَ is the direct object (منصوب) — notice the fatha on the laam to mark nasb case.",
+        "ur": "أَطِيعُوا plural command ہے (جزم — کوئی prefix نہیں، پہلے حرف پر vowel)۔ الرَّسُولَ direct object (منصوب) ہے — laam پر fatha دیکھیں جو nasb case کی marker ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "آمَنُوا",
+        "ar_plain": "آمنوا",
+        "translit": "aamanoo",
+        "en": "they believed (sound masc. pl. past)",
+        "ur": "انہوں نے ایمان لیا (جمع مذکر سالم ماضی)"
+      },
+      "explanation": {
+        "en": "آمَنُوا from the root ء-م-ن (to believe). آمَنُوا is past tense for sound masculine plural — the وُوْ ending marks the plural. Compare with آمَنَ (singular), آمَنَتْ (feminine singular).",
+        "ur": "آمَنُوا root ء-م-ن (ایمان لانا) سے۔ آمَنُوا sound masculine plural کے لیے ماضی tense ہے — وُوْ ending plural کی marker ہے۔ آمَنَ (واحد)، آمَنَتْ (مؤنث واحد) کے ساتھ موازنہ کریں۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Parsing: يَا أَيُّهَا الَّذِينَ آمَنُوا",
+        "ur": "تجزیہ: يَا أَيُّهَا الَّذِينَ آمَنُوا"
+      },
+      "body": {
+        "en": "يَا = vocative particle. أَيُّهَا = vocative emphasis. الَّذِينَ = relative pronoun (plural). آمَنُوا = past tense verb, sound masculine plural (وُونَ = raf'). The whole: 'O those who believed.'",
+        "ur": "يَا = vocative particle۔ أَيُّهَا = vocative emphasis۔ الَّذِينَ = relative pronoun (plural)۔ آمَنُوا = ماضی tense verb، sound masculine plural (وُونَ = رفع)۔ پوری: 'اے جنہوں نے ایمان لایا'۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch47-l04-ex01",
+      "sentence_ar": "الَّذِينَ آمَنُوا يَعْمَلُونَ",
+      "words": [
+        { "ar": "الَّذِينَ", "ar_plain": "الذين", "translit": "alladhiina", "en": "those who" },
+        { "ar": "آمَنُوا", "ar_plain": "آمنوا", "translit": "aamanoo", "en": "believed" },
+        { "ar": "يَعْمَلُونَ", "ar_plain": "يعملون", "translit": "ya'maluuna", "en": "they do/work" }
+      ],
+      "available_roles": ["RELATIVE_PRONOUN", "VERB", "SUBJECT"],
+      "correct_roles": ["RELATIVE_PRONOUN", "VERB", "SUBJECT"],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الَّذِينَ is the relative pronoun (who). آمَنُوا is past tense (they believed). يَعْمَلُونَ is present tense verb (they do) in raf' (وُونَ). Both verbs agree in number (plural).",
+        "ur": "الَّذِينَ relative pronoun ہے (جو)۔ آمَنُوا ماضی tense ہے (انہوں نے ایمان لایا)۔ يَعْمَلُونَ present tense verb ہے (وہ کرتے ہیں) رفع میں (وُونَ)۔ دونوں verbs تعداد میں agree کرتے ہیں (جمع)۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch47-l04-ex02",
+      "prompt": {
+        "ar": "أَطِيعُوا اللَّهَ وَأَطِيعُوا الرَّسُولَ",
+        "ar_plain": "أطيعوا الله وأطيعوا الرسول",
+        "translit": "aatee'uu allaaha wa aatee'uu ar-rasoola",
+        "en": "Obey Allah and obey the Messenger.",
+        "ur": "اللہ کی اطاعت کرو اور رسول کی اطاعت کرو۔"
+      },
+      "options": [
+        { "en": "Obey Allah and obey the Messenger.", "ur": "اللہ کی اطاعت کرو اور رسول کی اطاعت کرو۔" },
+        { "en": "They obeyed Allah and the Messenger.", "ur": "انہوں نے اللہ اور رسول کی اطاعت کی۔" },
+        { "en": "We obey Allah and the Messenger.", "ur": "ہم اللہ اور رسول کی اطاعت کرتے ہیں۔" },
+        { "en": "The believers obey Allah.", "ur": "مومنین اللہ کی اطاعت کرتے ہیں۔" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَطِيعُوا is plural imperative (command) — 'obey!' أَطِيعُوا اللَّهَ = 'obey Allah!' أَطِيعُوا الرَّسُولَ = 'obey the Messenger!' Both are commands to plural.",
+        "ur": "أَطِيعُوا plural imperative (حکم) ہے — 'اطاعت کرو!' أَطِيعُوا اللَّهَ = 'اللہ کی اطاعت کرو!' أَطِيعُوا الرَّسُولَ = 'رسول کی اطاعت کرو!' دونوں plural کو commands ہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch47-l04-ex03",
+      "statement": {
+        "en": "آمَنُوا is past tense, sound masculine plural. آمَنَ would be singular.",
+        "ur": "آمَنُوا ماضی tense، sound masculine plural ہے۔ آمَنَ واحد ہو گا۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch47-l04-ex04",
+      "left_column": [
+        {
+          "ar": "آمَنُوا",
+          "ar_plain": "آمنوا",
+          "translit": "aamanoo",
+          "en": "they believed (past pl.)",
+          "ur": "انہوں نے ایمان لایا (ماضی جمع)"
+        },
+        {
+          "ar": "يَعْمَلُونَ",
+          "ar_plain": "يعملون",
+          "translit": "ya'maluuna",
+          "en": "they work (pres. pl.)",
+          "ur": "وہ کام کرتے ہیں (حال جمع)"
+        },
+        {
+          "ar": "أَطِيعُوا",
+          "ar_plain": "أطيعوا",
+          "translit": "aatee'uu",
+          "en": "obey! (command pl.)",
+          "ur": "اطاعت کرو! (حکم جمع)"
+        },
+        {
+          "ar": "يُؤْمِنُونَ",
+          "ar_plain": "يؤمنون",
+          "translit": "yu'minuuna",
+          "en": "they believe (pres. pl.)",
+          "ur": "وہ ایمان رکھتے ہیں (حال جمع)"
+        }
+      ],
+      "right_column": [
+        { "en": "they believed (past pl.)", "ur": "انہوں نے ایمان لایا (ماضی جمع)" },
+        { "en": "they work (pres. pl.)", "ur": "وہ کام کرتے ہیں (حال جمع)" },
+        { "en": "obey! (command pl.)", "ur": "اطاعت کرو! (حکم جمع)" },
+        { "en": "they believe (pres. pl.)", "ur": "وہ ایمان رکھتے ہیں (حال جمع)" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch47-l04-ex05",
+      "mode": "TAP",
+      "sentence_ar": "الْمُسْلِمُونَ ___",
+      "hint": {
+        "en": "The Muslims read the book.",
+        "ur": "مسلمان کتاب پڑھتے ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "يَقْرَأُونَ",
+          "ar_plain": "يقرؤون",
+          "translit": "yaqra'uuna",
+          "en": "they read (raf')",
+          "ur": "وہ پڑھتے ہیں (رفع)"
+        },
+        {
+          "ar": "يَقْرَأُونَ",
+          "ar_plain": "يقرؤون",
+          "translit": "yaqra'yna",
+          "en": "they read (nasb)",
+          "ur": "وہ پڑھتے ہیں (نصب)"
+        },
+        {
+          "ar": "أَقْرَأُ",
+          "ar_plain": "أقرأ",
+          "translit": "aqra'a",
+          "en": "I read (nasb)",
+          "ur": "میں پڑھتا ہوں (نصب)"
+        },
+        {
+          "ar": "تَقْرَأُ",
+          "ar_plain": "تقرأ",
+          "translit": "taqra'u",
+          "en": "you read (raf')",
+          "ur": "تو پڑھتا ہے (رفع)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَقْرَأُونَ",
+        "ar_plain": "يقرؤون",
+        "translit": "yaqra'uuna",
+        "en": "they read (raf')",
+        "ur": "وہ پڑھتے ہیں (رفع)"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch47-l04-ex06",
+      "target_translation": {
+        "en": "Those who believed work righteousness.",
+        "ur": "جنہوں نے ایمان لایا وہ نیکی کرتے ہیں۔"
+      },
+      "tiles": [
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhiina",
+          "en": "those who",
+          "ur": "جو لوگ"
+        },
+        {
+          "ar": "آمَنُوا",
+          "ar_plain": "آمنوا",
+          "translit": "aamanoo",
+          "en": "believed (past pl.)",
+          "ur": "ایمان لائے (ماضی جمع)"
+        },
+        {
+          "ar": "يَعْمَلُونَ",
+          "ar_plain": "يعملون",
+          "translit": "ya'maluuna",
+          "en": "they do (pres. pl.)",
+          "ur": "وہ کرتے ہیں (حال جمع)"
+        },
+        {
+          "ar": "الصَّالِحَاتِ",
+          "ar_plain": "الصالحات",
+          "translit": "as-saalihaati",
+          "en": "righteous deeds",
+          "ur": "نیک اعمال"
+        }
+      ],
+      "correct_order": [0, 1, 2, 3],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch47-l04-ex07",
+      "prompt": {
+        "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا",
+        "ar_plain": "يا أيها الذين آمنوا",
+        "translit": "yaa ayyuhaa alladhiina aamanoo",
+        "en": "O you who believe",
+        "ur": "اے ایمان والو"
+      },
+      "options": [
+        { "en": "O you who believe", "ur": "اے ایمان والو" },
+        { "en": "O those who will believe", "ur": "اے وہ لوگ جو ایمان لائیں گے" },
+        { "en": "O the believers in Allah", "ur": "اے اللہ پر ایمان رکھنے والے" },
+        { "en": "O nation of believers", "ur": "اے مومنین کی قوم" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَا أَيُّهَا is the vocative address (calling out). الَّذِينَ = 'those who.' آمَنُوا = 'believed' (sound masculine plural past). This is the most common address in the Quran, calling out to believers.",
+        "ur": "يَا أَيُّهَا vocative address ہے (پکارنا)۔ الَّذِينَ = 'وہ لوگ جو'۔ آمَنُوا = 'ایمان لائے' (sound masculine plural past)۔ یہ قرآن میں سب سے عام address ہے، مومنین کو مخاطب کر رہا ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Sound masculine plural in the Quran",
+      "ar": "جَمْعُ الْمُذَكَّرِ السَّالِمُ فِي الْقُرْآنِ",
+      "ur": "قرآن میں جمع مذکر سالم"
+    },
+    "ayah": {
+      "surah": 47,
+      "ayah": 33,
+      "label": "Muhammad 47:33",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا أَطِيعُوا اللَّهَ وَأَطِيعُوا الرَّسُولَ",
+      "en": "O you who believe, obey Allah and obey the Messenger.",
+      "ur": "اے ایمان والو! اللہ کی اطاعت کرو اور رسول کی اطاعت کرو۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/muhammad-033-mishary.mp3"
+    },
+    "highlighted_word_indices": [2, 4],
+    "noor_explanation": {
+      "en": "الَّذِينَ آمَنُوا uses sound masculine plural (وُونَ) in raf'. أَطِيعُوا is the plural command (imperative). The Quran speaks to believers directly — and uses the plural form constantly.",
+      "ur": "الَّذِينَ آمَنُوا sound masculine plural (وُونَ) رفع میں استعمال کرتا ہے۔ أَطِيعُوا plural command (imperative) ہے۔ قرآن براہ راست مومنین سے بات کرتا ہے — اور مسلسل plural form استعمال کرتا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Sound masculine plural appears everywhere in the Quran: الَّذِينَ آمَنُوا, أَطِيعُوا اللَّهَ, مُسْلِمُونَ — all of them in raf', nasb, or idafa forms. You can now read them all.",
+      "ur": "جمع مذکر سالم قرآن میں ہر جگہ نظر آتا ہے: الَّذِينَ آمَنُوا، أَطِيعُوا اللَّهَ، مُسْلِمُونَ — سب رفع، نصب، یا اضافت forms میں۔ اب آپ سب کو پڑھ سکتے ہیں۔"
+    }
+  }
+}

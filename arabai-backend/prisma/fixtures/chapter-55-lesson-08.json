@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 55, Lesson 8 — Parsing in action: full analysis of an ayah using I'rab.",
+    "chapter_order": 55,
+    "lesson_order": 8,
+    "chapter_title": "I'rab and Bina",
+    "title": "Full Parsing — تحليل آية",
+    "titleAr": "تَحْلِيلُ آيَةٍ بِالْإِعْرَابِ",
+    "source": "book_6_grammar_science_55_irab_bina.md",
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 59,
+      "ayah": 21,
+      "label": "Al-Hashr 59:21",
+      "ar": "لَوْ أَنْزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ لَرَأَيْتَهُ خَاشِعًا مُتَصَدِّعًا مِنْ خَشْيَةِ اللَّهِ",
+      "en": "If We had sent down this Quran upon a mountain, you would have seen it humble and crumbling from fear of Allah.",
+      "ur": "اگر ہم اس قرآن کو کسی پہاڑ پر نازل کرتے تو تم دیکھتے کہ وہ اللہ کے ڈر سے عاجزی اور ٹوٹتا ہوا ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-hashr-021-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "This ayah is a masterpiece of Arabic grammar. لَوْ is a particle — مَبْنِيّ. أَنْزَلْنَا — the verb. هَٰذَا — demonstrative, مَبْنِيّ. الْقُرْآنَ — direct object, نصب. عَلَىٰ جَبَلٍ — prepositional phrase, جَبَلٍ in جر.",
+      "ur": "یہ آیت عربی گرامر کا شاہکار ہے۔ لَوْ = حرف (مبني)۔ أَنْزَلْنَا = فعل۔ هَٰذَا = اشارہ (مبني)۔ الْقُرْآنَ = مفعول به (نصب)۔ عَلَىٰ جَبَلٍ = حرف جر + اسم (جر)۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Full parsing — the complete analysis of a sentence",
+        "ar": "التَّحْلِيلُ الْكَامِلُ — تَفْسِيرُ كُلِّ لَفْظٍ فِي الْجُمْلَةِ",
+        "ur": "مکمل تجزیہ — جملے میں ہر لفظ کی تشریح"
+      },
+      "explanation": {
+        "en": "Full parsing (تحليل) means identifying every word's role, case, and grammatical category. In this ayah we will identify: particle, verb, subject, object, preposition, and their cases (رفع/نصب/جر).",
+        "ur": "مکمل تجزیہ (تحليل) ہر لفظ کا کردار، case، اور گرامری زمرہ بتانا ہے۔ اس آیت میں ہم پہچانیں گے: حرف، فعل، فاعل، مفعول، حرف جر، اور ان کی cases (رفع/نصب/جر)۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "لَوْ",
+        "ar_plain": "لو",
+        "translit": "law",
+        "en": "if (conditional particle) — مَبْنِيّ",
+        "ur": "اگر (شرطی حرف) — مَبْنِيّ"
+      },
+      "explanation": {
+        "en": "لَوْ is a conditional particle meaning 'if' — it introduces a counterfactual or unreal condition. لَوْ is always مَبْنِيّ — its ending never changes.",
+        "ur": "لَوْ ایک شرطی حرف ہے جس کا مطلب 'اگر' — یہ ایک غیر حقیقی یا ناممکن شرط متعارف کراتا ہے۔ لَوْ ہمیشہ مَبْنِيّ ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "أَنْزَلْنَا",
+        "ar_plain": "انزلنا",
+        "translit": "anzalnaa",
+        "en": "We sent down — فعل ماضٍ, first person plural",
+        "ur": "ہم نے نازل کیا — فعل ماضی، اول جمع"
+      },
+      "explanation": {
+        "en": "أَنْزَلْنَا is the past tense verb from the root ن-ز-ل (to descend/send down). أَنْ = أ (prefix) + نْ (ن is the plurality marker) + زَلْ (root) + نَا (first person plural ending).",
+        "ur": "أَنْزَلْنَا مادہ ن-ز-ل سے ماضی فعل ہے۔ أَنْ = ا (prefix) + نْ (جمع کی علامت) + زَلْ (root) + نَا (اول جمع ending)۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "هَٰذَا",
+        "ar_plain": "هذا",
+        "translit": "haadhaa",
+        "en": "this — demonstrative, always مَبْنِيّ",
+        "ur": "یہ — اشارہ، ہمیشہ مَبْنِيّ"
+      },
+      "explanation": {
+        "en": "هَٰذَا is the demonstrative pronoun 'this' (masculine). It is always مَبْنِيّ — its ending is always fixed. هَٰذَا الْقُرْآنَ = this Quran.",
+        "ur": "هَٰذَا 'یہ' کا اشارہ ضمیر ہے (مذکر)۔ یہ ہمیشہ مَبْنِيّ ہے۔ هَٰذَا الْقُرْآنَ = یہ قرآن۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "خَاشِعًا",
+        "ar_plain": "خاشعا",
+        "translit": "khaashi'an",
+        "en": "humble — صفة (adjective) describing جَبَلٍ, in the accusative (نصب)",
+        "ur": "عاجزی — صفت جو جَبَلٍ کو بیان کرتی ہے، نصب میں"
+      },
+      "explanation": {
+        "en": "خَاشِعًا is a صفة (adjective) describing جَبَلٍ. It is in the accusative (نصب) because جَبَلٍ is in the accusative after لَوْ (unreal condition — see grammar note below).",
+        "ur": "خَاشِعًا ایک صفت ہے جو جَبَلٍ کو بیان کرتی ہے۔ یہ نصب میں ہے کیونکہ جَبَلٍ لَوْ کے بعد نصب میں ہے (غیر حقیقی شرط)۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "خَاشِعًا مُتَصَدِّعًا",
+        "ar_plain": "خاشعا متصدعا",
+        "translit": "khaashi'an mutasaddi'an",
+        "en": "humble and crumbling — two وصف describing the mountain's state",
+        "ur": "عاجزی اور ٹوٹتا ہوا — دو صفات پہاڑ کی حالت بیان کر رہی ہیں"
+      },
+      "explanation": {
+        "en": "Both خَاشِعًا and مُتَصَدِّعًا are in the accusative (نصب) — they describe the state of the mountain. This is الْحَال (the descriptive accusative).",
+        "ur": "خَاشِعًا اور مُتَصَدِّعًا دونوں نصب میں ہیں — یہ پہاڑ کی حالت بیان کر رہی ہیں۔ یہ الْحَال ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "The لَوْ condition and the accusative",
+        "ur": "لو کی شرط اور نصب"
+      },
+      "body": {
+        "en": "After لَوْ (unreal condition), the noun in the condioned clause takes the accusative (نصب) — this is the حَال of the subject being described. جَبَلٍ would normally be مرفوع, but after لَوْ it becomes منصوب as the descriptive state.",
+        "ur": "لَوْ (غیر حقیقی شرط) کے بعد، اسم نصب میں آتا ہے — یہ اس کی حالت ہے۔ جَبَلٍ عام طور پر مرفوع ہوتا، لیکن لَوْ کے بعد وہ منصوب ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "مِنْ خَشْيَةِ اللَّهِ",
+        "ar_plain": "من خشية الله",
+        "translit": "min khashyati allahi",
+        "en": "from fear of Allah",
+        "ur": "اللہ کے ڈر سے"
+      },
+      "explanation": {
+        "en": "مِنْ = preposition (مَبْنِيّ). خَشْيَةِ = مضاف (جر after مِنْ). اللَّهِ = مضاف إليه (جر after خَشْيَةِ). خَشْيَة is from the root خ-ش-ي (to fear).",
+        "ur": "مِنْ = حرف جر (مبني)۔ خَشْيَةِ = مضاف (جر بعد مِنْ)۔ اللَّهِ = مضاف إليه (جر بعد خَشْيَةِ)۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ch55-l08-ex01",
+      "type": "TRUE_FALSE",
+      "statement": {
+        "en": "لَوْ is a مَبْنِيّ particle — its ending never changes.",
+        "ur": "لَوْ ایک مَبْنِيّ حرف ہے — اس کا ending کبھی نہیں بدلتا۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Correct. لَوْ is a شرط particle (مَبْنِيّ) meaning 'if' — it introduces an unreal or counterfactual condition.",
+        "ur": "صحیح۔ لَوْ ایک شرطی حرف (مبني) ہے جو 'اگر' کے معنی میں غیر حقیقی شرط متعارف کراتا ہے۔"
+      }
+    },
+    {
+      "id": "ch55-l08-ex02",
+      "type": "MATCHING",
+      "left_column": [
+        { "ar": "لَوْ", "ar_plain": "لو", "translit": "law", "en": "if (particle)" },
+        { "ar": "أَنْزَلْنَا", "ar_plain": "انزلنا", "translit": "anzalnaa", "en": "We sent down (verb)" },
+        { "ar": "هَٰذَا", "ar_plain": "هذا", "translit": "haadhaa", "en": "this (demonstrative)" },
+        { "ar": "خَاشِعًا", "ar_plain": "خاشعا", "translit": "khaashi'an", "en": "humble (adj.)" }
+      ],
+      "right_column": [
+        { "en": "مَبْنِيّ — particle", "ur": "مبني — حرف" },
+        { "en": "مَبْنِيّ — past tense verb", "ur": "مبني — فعل ماضی" },
+        { "en": "مَبْنِيّ — demonstrative", "ur": "مبني — اشارہ" },
+        { "en": "مُعْرَبٌ — accusative adjective", "ur": "معراب — صفت نصب" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَوْ and أَنْزَلْنَا and هَٰذَا are all مَبْنِيّ. خَاشِعًا is مُعْرَبٌ — an adjective in the accusative (نصب) describing the mountain's state (الْحَال).",
+        "ur": "لَوْ، أَنْزَلْنَا، هَٰذَا سب مَبْنِيّ ہیں۔ خَاشِعًا مُعْرَبٌ ہے — ایک صفت نصب میں جو پہاڑ کی حالت (الْحَال) بیان کر رہی ہے۔"
+      }
+    },
+    {
+      "id": "ch55-l08-ex03",
+      "type": "GRAMMAR_PARSE",
+      "sentence_ar": "لَوْ أَنْزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ",
+      "words": [
+        { "ar": "لَوْ", "ar_plain": "لو", "translit": "law", "en": "if" },
+        { "ar": "أَنْزَلْنَا", "ar_plain": "انزلنا", "translit": "anzalnaa", "en": "We sent down" },
+        { "ar": "هَٰذَا", "ar_plain": "هذا", "translit": "haadhaa", "en": "this" },
+        { "ar": "الْقُرْآنَ", "ar_plain": "القرآن", "translit": "al-qur'aan", "en": "the Quran" },
+        { "ar": "عَلَىٰ", "ar_plain": "على", "translit": "alaa", "en": "upon" },
+        { "ar": "جَبَلٍ", "ar_plain": "جبل", "translit": "jabal", "en": "a mountain" }
+      ],
+      "available_roles": ["SUBJECT", "VERB", "PREPOSITION", "OBJECT", "PARTICLE"],
+      "correct_roles": ["PARTICLE", "VERB", "DEMONSTRATIVE", "OBJECT", "PREPOSITION", "OBJECT"],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَوْ = PARTICLE (مَبْنِيّ). أَنْزَلْنَا = VERB (مَبْنِيّ). هَٰذَا = DEMONSTRATIVE (مَبْنِيّ). الْقُرْآنَ = OBJECT (نصب — مفعول به). عَلَىٰ = PREPOSITION (مَبْنِيّ). جَبَلٍ = OBJECT (جر after عَلَىٰ — مفعول فيه).",
+        "ur": "لَوْ = حرف (مبني)۔ أَنْزَلْنَا = فعل (مبني)۔ هَٰذَا = اشارہ (مبني)۔ الْقُرْآنَ = مفعول (نصب)۔ عَلَىٰ = حرف جر (مبني)۔ جَبَلٍ = مفعول (جر)۔"
+      }
+    },
+    {
+      "id": "ch55-l08-ex04",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "لَوْ أَنْزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ لَرَأَيْتَهُ خَاشِعًا",
+        "ar_plain": "لو انزلنا هذا القرآن على جبل لرايته خاشعا",
+        "translit": "law anzalnaa haadhaa al-qur'aana alaa jabilin la-ra'aytahu khaashi'an",
+        "en": "If We had sent down this Quran upon a mountain, you would have seen it humble."
+      },
+      "options": [
+        { "en": "If We had sent down this Quran upon a mountain, you would have seen it humble.", "ur": "اگر ہم نے یہ قرآن کسی پہاڑ پر نازل کیا ہوتا تو تم دیکھتے کہ وہ عاجز ہے۔" },
+        { "en": "We sent down this Quran on a mountain and you saw it.", "ur": "ہم نے یہ قرآن پہاڑ پر نازل کیا اور تم نے دیکھا۔" },
+        { "en": "If the mountain had sent down the Quran, you would have seen it.", "ur": "اگر پہاڑ نے قرآن نازل کیا ہوتا تو تم دیکھتے۔" },
+        { "en": "The humble mountain saw the Quran.", "ur": "عاجز پہاڑ نے قرآن دیکھا۔" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَوْ = conditional particle. أَنْزَلْنَا = 'We sent down.' هَٰذَا الْقُرْآنَ = 'this Quran' (direct object). عَلَىٰ جَبَلٍ = 'upon a mountain' (prepositional phrase). لَرَأَيْتَهُ = 'you would have seen it.' خَاشِعًا = 'humble' (describing the mountain's state).",
+        "ur": "لَوْ = شرطی حرف۔ أَنْزَلْنَا = 'ہم نے نازل کیا'۔ هَٰذَا الْقُرْآنَ = 'یہ قرآن' (مفعول)۔ عَلَىٰ جَبَلٍ = 'پہاڑ پر'۔ لَرَأَيْتَهُ = 'تم دیکھتے'۔ خَاشِعًا = 'عاجز' (حالت)۔"
+      }
+    },
+    {
+      "id": "ch55-l08-ex05",
+      "type": "BUILD_SENTENCE",
+      "target_translation": {
+        "en": "If We sent down the Quran upon a mountain.",
+        "ur": "اگر ہم نے قرآن کسی پہاڑ پر نازل کیا۔"
+      },
+      "tiles": [
+        { "ar": "لَوْ", "ar_plain": "لو", "translit": "law", "en": "if" },
+        { "ar": "أَنْزَلْنَا", "ar_plain": "انزلنا", "translit": "anzalnaa", "en": "We sent down" },
+        { "ar": "الْقُرْآنَ", "ar_plain": "القرآن", "translit": "al-qur'aan", "en": "the Quran" },
+        { "ar": "عَلَىٰ", "ar_plain": "على", "translit": "alaa", "en": "upon" },
+        { "ar": "جَبَلٍ", "ar_plain": "جبل", "translit": "jabal", "en": "a mountain" },
+        { "ar": "هَٰذَا", "ar_plain": "هذا", "translit": "haadhaa", "en": "this" }
+      ],
+      "correct_order": [0, 1, 5, 2, 3, 4],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The correct order is: لَوْ (if) + أَنْزَلْنَا (We sent down) + هَٰذَا (this) + الْقُرْآنَ (the Quran) + عَلَىٰ (upon) + جَبَلٍ (a mountain). This captures the لَوْ conditional structure correctly.",
+        "ur": "صحیح ترتیب: لَوْ + أَنْزَلْنَا + هَٰذَا + الْقُرْآنَ + عَلَىٰ + جَبَلٍ۔"
+      }
+    },
+    {
+      "id": "ch55-l08-ex06",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "sentence_ar": "مِنْ خَشْيَةِ __",
+      "hint": {
+        "en": "From fear of Allah.",
+        "ur": "اللہ کے ڈر سے۔"
+      },
+      "options": [
+        { "ar": "اللَّهِ", "ar_plain": "الله", "translit": "allaah", "en": "Allah (gen.)", "ur": "اللہ (جر)" },
+        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah (nom.)", "ur": "اللہ (رفع)" },
+        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah (acc.)", "ur": "اللہ (نصب)" },
+        { "ar": "اللَّاهُ", "ar_plain": "اللاه", "translit": "allaahu", "en": "Allah (poss.)", "ur": "اللہ (اضافہ)" }
+      ],
+      "correct_answer": {
+        "ar": "اللَّهِ",
+        "ar_plain": "الله",
+        "translit": "allaah",
+        "en": "Allah (gen.)",
+        "ur": "اللہ (جر)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مِنْ is a preposition (حرف جر). خَشْيَةِ is مضاف and puts اللَّهِ in the genitive (جر) as مضاف إليه. مِنْ also puts خَشْيَةِ in جر.",
+        "ur": "مِنْ ایک حرف جر ہے۔ خَشْيَةِ مضاف ہے اور اللَّهِ کو جر میں رکھتا ہے۔"
+      }
+    },
+    {
+      "id": "ch55-l08-ex07",
+      "type": "TRUE_FALSE",
+      "statement": {
+        "en": "In لَوْ أَنْزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ, جَبَلٍ is in the accusative (نصب) because it is the subject of an unreal conditional clause introduced by لَوْ.",
+        "ur": "لَوْ أَنْزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ میں جَبَلٍ نصب میں ہے کیونکہ یہ لَوْ کی غیر حقیقی شرط کا فاعل ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "جَبَلٍ is actually in the genitive (جر) after the preposition عَلَىٰ. The correct analysis: جَبَلٍ is مفعول فيه (object of the preposition عَلَىٰ), not the subject of the conditional clause. The subject of the conditional clause is not mentioned explicitly.",
+        "ur": "جَبَلٍ actually جر میں ہے حرف جر عَلَىٰ کے بعد۔ جَبَلٍ مفعول فيه ہے، لَوْ کی شرط کا فاعل نہیں۔"
+      }
+    },
+    {
+      "id": "ch55-l08-ex08",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "مِنْ خَشْيَةِ اللَّهِ",
+        "ar_plain": "من خشية الله",
+        "translit": "min khashyati allaah",
+        "en": "From fear of Allah."
+      },
+      "options": [
+        { "en": "From fear of Allah.", "ur": "اللہ کے ڈر سے۔" },
+        { "en": "From the fear of Allah.", "ur": "اللہ کے خوف سے۔" },
+        { "en": "From the fearful Allah.", "ur": "ڈرنے والے اللہ سے۔" },
+        { "en": "From fear, Allah.", "ur": "ڈر سے، اللہ۔" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مِنْ = preposition 'from.' خَشْيَةِ = 'fear' (مضاف), in جر after مِنْ. اللَّهِ = مضاف إليه (جر after خَشْيَةِ). The chain is: مِنْ → خَشْيَةِ → اللَّهِ.",
+        "ur": "مِنْ = حرف جر 'سے'۔ خَشْيَةِ = 'خوف' (مضاف)، جر میں بعد مِنْ۔ اللَّهِ = مضاف إليه (جر بعد خَشْيَةِ)۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Full Parsing — تحليل الآية",
+      "ar": "تَحْلِيلُ الْآيَةِ",
+      "ur": "آیت کا مکمل تجزیہ"
+    },
+    "ayah": {
+      "surah": 59,
+      "ayah": 21,
+      "label": "Al-Hashr 59:21",
+      "ar": "لَوْ أَنْزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ لَرَأَيْتَهُ خَاشِعًا مُتَصَدِّعًا مِنْ خَشْيَةِ اللَّهِ",
+      "en": "If We had sent down this Quran upon a mountain, you would have seen it humble and crumbling from fear of Allah.",
+      "ur": "اگر ہم اس قرآن کو کسی پہاڑ پر نازل کرتے تو تم دیکھتے کہ وہ اللہ کے ڈر سے عاجزی اور ٹوٹتا ہوا ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-hashr-021-mishary.mp3"
+    },
+    "highlighted_word_indices": [2],
+    "noor_explanation": {
+      "en": "This ayah is a grammatical tour de force. Every word is accounted for: لَوْ (مَبْنِيّ particle), أَنْزَلْنَا (مَبْنِيّ verb), هَٰذَا (مَبْنِيّ demonstrative), الْقُرْآنَ (مُعْرَبٌ, نصب as مفعول به), عَلَىٰ (مَبْنِيّ preposition), جَبَلٍ (مُعْرَبٌ, جر after عَلَىٰ), خَاشِعًا and مُتَصَدِّعًا (مُعْرَبٌ, نصب as describing the mountain's حال), مِنْ (مَبْنِيّ preposition), خَشْيَةِ (مضاف, جر after مِنْ), اللَّهِ (مضاف إليه, جر). The whole system is visible in one ayah.",
+      "ur": "یہ آیت گرامری شاہکار ہے۔ ہر لفظ کی پہچان: لَوْ (مبني حرف)، أَنْزَلْنَا (مبني فعل)، هَٰذَا (مبني اشارہ)، الْقُرْآنَ (معراب، نصب)، عَلَىٰ (مبني حرف جر)، جَبَلٍ (معراب، جر)، خَاشِعًا و متصدعا (معراب، نصب)، مِنْ (مبني حرف جر)، خَشْيَةِ (مضاف، جر)، اللَّهِ (مضاف إليه، جر)۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You have just completed the first chapter of the grammar-science apex. Every word in this ayah is now known to you: its role, its case, whether it changes or is fixed. This is the power of i'rab. This is the door to reading Arabic at its deepest level.",
+      "ur": "آپ نے اب گرامر سائنس کی پہلی chapter مکمل کر لی ہے۔ اس آیت میں ہر لفظ اب آپ کے لیے جانا پہچانا ہے: اس کا کردار، اس کی case، کیا یہ بدلتا ہے یا طے شدہ ہے۔ یہ اعراب کی طاقت ہے۔"
+    }
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0",
+  "_meta": {
+    "chapter_order": 71,
+    "lesson_order": 5,
+    "chapter_title": "الحال والتمييز",
+    "title": "Distinguishing الْحَال from التَّمْيِيز",
+    "titleAr": "التمييز بين الحال والتمييز",
+    "source": "arabai-backend/prisma/fixtures",
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 3,
+      "ayah": 41,
+      "label": "Aal Imran 3:41",
+      "ar": "قَالَ رَبِّ اجْعَلْ لِي آيَةً ۚ قَالَ آيَتُكَ أَلَّا تُكَلِّمَ النَّاسَ ثَلَاثَ لَيَالٍ سَوِيًّا",
+      "en": "He said: 'My Lord, make for me a sign.' He said: 'Your sign is that you will not speak to the people for three days except in whispers.'",
+      "ur": "اس نے کہا: 'اے میرے رب، میرے لیے ایک نشانی بنا۔' اس نے کہا: 'تیری نشانی یہ ہے کہ تو تین دن لوگوں سے نہیں بولے گا مگر پوشیدہ طور پر۔'",
+      "audio_url": ""
+    },
+    "noor_intro": {
+      "ar": "This is the key distinction lesson. Both الحال and التمييز are nouns in the accusative, but they do fundamentally different things. Today you will learn the reliable rule for telling them apart.",
+      "en": "This is the key distinction lesson. Both الحال and التمييز are nouns in the accusative, but they do fundamentally different things. Today you will learn the reliable rule for telling them apart.",
+      "ur": "یہ کلیدی تمییز کا سبق ہے۔ الحال اور التمييز دونوں نصب میں ہیں، لیکن وہ بنیادی طور پر مختلف کام کرتے ہیں۔ آج آپ قابل اعتماد قاعدہ سیکھیں گے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "term_ar": "الحال يصف هيئة صاحب الحال عند الفعل",
+      "term_en": "الْحَال describes the state/manner of صاحب الحال during the action",
+      "definition_ar": "الحال = HOW the subject was during the action",
+      "definition_en": "The حال tells us the state, condition, or manner in which the subject performed or experienced the action",
+      "example_ar": "خَرَجَ زيدٌ ضَاحِكًا — Zayd left while laughing (HOW was Zayd when he left? In a laughing state)",
+      "example_en": "خَرَجَ زيدٌ ضَاحِكًا = 'Zayd came out in a laughing state' — the حال tells us Zayd's condition at the time of leaving",
+      "example_ur": "زید ہنستے ہوئے نکلا — حال بتاتی ہے کہ زید کس حالت میں نکلا",
+      "highlight": true
+    },
+    {
+      "term_ar": "التمييز يوضح ويخصص ما قبله",
+      "term_en": "التمييز clarifies and specifies what precedes it",
+      "definition_ar": "التمييز = WHICH / WHAT KIND / HOW MANY of the previous noun",
+      "definition_en": "The تمييز clarifies, specifies, or narrows down the noun that precedes it — answering 'which one, what kind, or how many?'",
+      "example_ar": "جَاءَني رَجَلٌ يَوْمًا — A man came (specifies a time: 'one day'). ليس عن حالة صاحب الحال بل عن كمية أو نوع",
+      "example_en": "Came to me man a day — clarifies the time/unit as 'one day'",
+      "example_ur": "مجھے ایک آدمی ایک دن آیا — وقت/یونٹ کو متعین کرتا ہے 'ایک دن'"
+    },
+    {
+      "term_ar": "التمييز منصوب بالفتحة فقط",
+      "term_en": "تمييز takes only fatha (فتحة) as its case marker",
+      "definition_ar": "الحال may take various case markings depending on context, but التمييز is always منصوب بالفتحة",
+      "definition_en": "The key distinguishing feature: تمييز ALWAYS takes fatha for accusative. الحال may take كسرة or تنوين depending on its form",
+      "example_ar": "ثَلَاثُونَ يَوْمًا — يومًا is منصوب بالفتحة consistently",
+      "example_en": "ثَلَاثُونَ يَوْمًا — يومًا ALWAYS has fatha — this is a reliable تمييز marker",
+      "example_ur": "'تیس دن' میں — یوم پر ہمیشہ فتحہ ہوتا ہے — یہ قابل اعتماد تمييز نشان ہے"
+    },
+    {
+      "term_ar": "الحال له صاحب حال محدد",
+      "term_en": "الْحَال always has a صاحب حال (the noun it describes)",
+      "definition_ar": "لا يوجد حال بدون صاحب حال — التمييز does not require a direct relationship to a noun in the same way",
+      "definition_en": "A حال ALWAYS describes a specific noun (صاحب الحال). A تمييز can clarify an indefinite noun or a number",
+      "example_ar": "في \"خَرَجَ زيدٌ ضَاحِكًا\" — زيدٌ is صاحب الحال, ضَاحِكًا is الحال",
+      "example_en": "In 'Zayd left while laughing', Zayd is the one in the state, and laughing describes Zayd's condition at that moment",
+      "example_ur": "'زید ہنستے ہوئے نکلا' میں — زید صاحب الحال ہے، ہنستے ہوئے زید کی حالت بیان کرتے ہیں"
+    },
+    {
+      "term_ar": "التمييز قد يكون مستقلًا",
+      "term_en": "التمييز can be independent (not tied to a verb's manner)",
+      "definition_ar": "التمييز of numbers and indefinite nouns exists independently — لا يحتاج إلى verb يصف حالة",
+      "definition_en": "Number تمييز and indefinite noun تمييز exist independently — they don't need a verb to describe a manner",
+      "example_ar": "ثَلَاثُونَ يَوْمًا — يومًا is not describing the manner of an action, it's specifying the noun (عدد)",
+      "example_en": "Thirty days — يومًا is specifying what is being counted, not describing a manner",
+      "example_ur": "تیس دن — یوم کیا گنا جا رہا ہے بتاتا ہے، کسی حالت کو نہیں"
+    },
+    {
+      "term_ar": "القاعدة الذهبية",
+      "term_en": "The Golden Rule",
+      "definition_ar": "إذا كان اللفظ يصف HOW = حال. إذا كان يوضح WHICH/WHAT KIND/HOW MANY = تمييز",
+      "definition_en": "Ask: 'Is this describing the manner/state of the subject during the action (HOW)?' → حال. Or 'Is this specifying what kind, which one, or how many (WHAT/WHICH/HOW MANY)?' → تمييز",
+      "example_ar": "ضَاحِكًا = HOW did he come? → حال\nثَلَاثُونَ يَوْمًا = HOW MANY days? → تمييز",
+      "example_en": "'Laughing' = How did he come? → حال\n'Thirty days' = How many? → تمييز",
+      "example_ur": "'ہنستے ہوئے' = اس نے کیسے آیا؟ → حال\n'تیس دن' = کتنے دن؟ → تمييز",
+      "highlight": true
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "instruction": {
+        "ar": "هل هذا حال أم تمييز؟",
+        "en": "Is this a حال or تمييز?"
+      },
+      "prompt": {
+        "ar": "خَرَجَ زيدٌ ضَاحِكًا",
+        "en": "Zayd left while laughing",
+        "ur": "زید ہنستے ہوئے نکلا"
+      },
+      "options": [
+        {
+          "label_ar": "حال",
+          "label_en": "HOW Zayd left — laughing state",
+          "label_ur": "کیسے زید نکلا — ہنستے ہوئے حالت میں",
+          "correct": true
+        },
+        {
+          "label_ar": "تمييز",
+          "label_en": "WHICH one / HOW MANY — not applicable here",
+          "label_ur": "کون سا / کتنا — یہاں لاگو نہیں",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "TRUE_FALSE",
+      "instruction": {
+        "ar": "حدد: صواب أم خطأ",
+        "en": "True or False"
+      },
+      "statement": {
+        "ar": "\"ثَلَاثُونَ يَوْمًا\" — يومًا is a تمييز because it specifies WHAT KIND/HOW MANY",
+        "en": "\"Thirty days\" — يومًا is a تمييز because it specifies WHAT KIND/HOW MANY",
+        "ur": "'تیس دن' — یوم تمييز ہے کیونکہ یہ بتاتا ہے کتنا/کس قسم"
+      },
+      "correct": true
+    },
+    {
+      "type": "FILL_BLANK",
+      "instruction": {
+        "ar": "اكتب: حال أم تمييز؟",
+        "en": "Write: حال or تمييز?"
+      },
+      "items": [
+        {
+          "prompt": { "ar": "جلسَ الطالبُ ___ — جالسًا في حالة التفكير", "en": "The student sat ___ — sitting in a thinking state" },
+          "answer": "حال",
+          "case_sensitive": false
+        },
+        {
+          "prompt": { "ar": "عِشْرُونَ ___ — twenty (of) books", "en": "عِشْرُونَ ___ — twenty (of) books" },
+          "answer": "تمييز",
+          "case_sensitive": false
+        },
+        {
+          "prompt": { "ar": "عادَ المُسافرُ ___ — عادَ في حالة السرور", "en": "The traveler returned ___ — returned in a happy state" },
+          "answer": "حال",
+          "case_sensitive": false
+        }
+      ]
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "instruction": {
+        "ar": "حلّل: حال أم تمييز؟",
+        "en": "Analyze: حال or تمييز?"
+      },
+      "sentences": [
+        {
+          "original": "سافرَ زيدٌ وَحْدَهُ",
+          "analysis": {
+            "النوع": "حال — وَحْدَهُ describes how Zayd traveled (alone)",
+            "صاحب_الحال": "زيدٌ",
+            "الحال": "وَحْدَهُ — منصوب (in a state of being alone)",
+            "الفرق": "وَحْدَهُ tells us Zayd's manner/condition during the travel, not a quantity or specification of the noun. This is why وحده is a حال, not a تمييز."
+          }
+        },
+        {
+          "original": "اشتريتُ عِشْرِينَ كِتَابًا",
+          "analysis": {
+            "النوع": "تمييز — كِتَابًا specifies what we're counting (20 of what? books)",
+            "المُبَيَّن": "عِشْرِينَ (the number being specified)",
+            "التمييز": "كِتَابًا — منصوب بالفتحة كتمييز عدد",
+            "الفرق": "كِتَابًا does not describe HOW the buying happened — it specifies WHAT KIND of quantity. This is why it's تمييز, not حال."
+          }
+        }
+      ]
+    },
+    {
+      "type": "MATCHING",
+      "instruction": {
+        "ar": "طابق الجملة بالنوع",
+        "en": "Match the sentence with its type"
+      },
+      "left_items": [
+        { "id": "1", "text_ar": "مَشَى زيدٌ حَزِينًا" },
+        { "id": "2", "text_ar": "ثَمَانِيَةُ أَفْرَادٍ" },
+        { "id": "3", "text_ar": "صليتُ مُسْتَعْمِرًا" },
+        { "id": "4", "text_ar": "خَمْسَةٌ وَعِشْرُونَ رَجُلًا" }
+      ],
+      "right_items": [
+        { "id": "A", "text_ar": "تمييز عدد: مفرد منصوب" },
+        { "id": "B", "text_ar": "حال — يصف هيئة صاحب الحال" },
+        { "id": "C", "text_ar": "تمييز عدد: معطوف (مضاف إليه)" }
+      ],
+      "matches": [
+        { "left": "1", "right": "B" },
+        { "left": "2", "right": "A" },
+        { "left": "3", "right": "B" },
+        { "left": "4", "right": "C" }
+      ]
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "instruction": {
+        "ar": "ابنِ جملة: حال (يصف هيئة)",
+        "en": "Build: حال sentence (describing manner)"
+      },
+      "elements": [
+        { "text_ar": "جلس", "gloss": "sat" },
+        { "text_ar": "العالم", "gloss": "the scholar" },
+        { "text_ar": "متأملًا", "gloss": "contemplating" }
+      ],
+      "correct_order": [1, 0, 2],
+      "expected_grammar": "العالِمُ جلسَ مُتَأَمِّلًا — The scholar sat contemplating — متأملًا describes the scholar's state during sitting"
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "instruction": {
+        "ar": "ما هو النوع؟",
+        "en": "What type is it?"
+      },
+      "prompt": {
+        "ar": "عادَ الطالبُ وَحْدَهُ",
+        "en": "The student returned alone",
+        "ur": "طالب اکیلا واپس آیا"
+      },
+      "options": [
+        {
+          "label_ar": "حال — يصف حالة العودة",
+          "label_en": "HOW the student returned — in a state of being alone",
+          "label_ur": "کیسے طالب واپس آیا — اکیلے کی حالت میں",
+          "correct": true
+        },
+        {
+          "label_ar": "تمييز عدد",
+          "label_en": "Number specification",
+          "label_ur": "تعداد کی وضاحت",
+          "correct": false
+        },
+        {
+          "label_ar": "صفة",
+          "label_en": "Simple adjective",
+          "label_ur": "سادہ صفت",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "type": "FILL_BLANK",
+      "instruction": {
+        "ar": "املأ: القاعدة الذهبية — إذا يصف HOW = ___ إذا يوضح WHICH/HOW MANY = ___",
+        "en": "Fill: The Golden Rule — if it describes HOW = ___ if it specifies WHICH/HOW MANY = ___",
+        "ur": "بڑا قاعدہ — اگر کیسے بتاتا ہے = ___ اگر کون/کتنا بتاتا ہے = ___"
+      },
+      "answer": "حال تمييز",
+      "case_sensitive": false
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "ar": "الحال vs. التمييز — الفرق الجوهري",
+      "en": "الحال vs. التمييز — The Essential Difference",
+      "ur": "الحال بمقابل التمييز — بنیادی فرق"
+    },
+    "ayah": {
+      "surah": 3,
+      "ayah": 41,
+      "label": "Aal Imran 3:41",
+      "ar": "قَالَ آيَتُكَ أَلَّا تُكَلِّمَ النَّاسَ ثَلَاثَ لَيَالٍ سَوِيًّا",
+      "en": "He said: 'Your sign is that you will not speak to the people for three days except in whispers.'",
+      "ur": "اس نے کہا: 'تیری نشانی یہ ہے کہ تو تین دن لوگوں سے نہیں بولے گا مگر پوشیدہ طور پر۔'"
+    },
+    "highlighted_word_indices": [3],
+    "noor_explanation": {
+      "ar": "في \"ثَلَاثَ لَيَالٍ سَوِيًّا\" — ثَلَاثَ لَيَالٍ هو تمييز عدد (ثلاث ليالٍ), و سَوِيًّا هو حال من الكلام — 'in an even/equal manner' يصف هيئة Zakariyya's silence. لاحظ: حال واحد (سَوِيًّا) يصف هيئة الكلام، وتمييز عدد (ثلاث ليالٍ) يحدد المدة.",
+      "en": "In 'for three days in an even manner' — ثَلَاثَ لَيَالٍ is a number تمييز (three nights), and سَوِيًّا is a حال describing the manner of speaking — 'in an even/equal manner' describing Zakariyya's silence. Notice: one حال (سَوِيًّا) describes the manner of speaking, while the number تمييز (ثلاث ليالٍ) specifies the duration. Both are accusative, both near each other, but doing different jobs.",
+      "ur": "'تین دن برابر طریقے سے' میں — 'تین راتیں' عدد تمييز ہے، اور 'برابر' حال ہے جو کلام کی حالت بیان کرتی ہے۔ نوٹ: ایک حال (برابر) کلام کی کیفیت بیان کرتی ہے، جبکہ عدد تمييز (تین راتیں) مدت متعین کرتی ہے۔ دونوں نصب ہیں، قریب ہیں، لیکن مختلف کام کرتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "ar": "The distinction between الحال and التمييز is now clear in your mind. Ask: 'Is it describing the manner/state of the subject during the action (HOW)?' If yes, it's حال. If it's specifying which one, what kind, or how many, it's تمييز. Tomorrow we tackle advanced constructions with both.",
+      "en": "The distinction between الحال and التمييز is now clear in your mind. Ask: 'Is it describing the manner/state of the subject during the action (HOW)?' If yes, it's حال. If it's specifying which one, what kind, or how many, it's تمييز. Tomorrow we tackle advanced constructions with both.",
+      "ur": "الحال اور التمييز کے درمیان فرق اب آپ کے ذہن میں واضح ہے۔ پوچھیں: 'کیا یہ فاعل کی حالت/کیفیت بیان کر رہا ہے (کیسے)؟' اگر ہاں، تو حال ہے۔ اگر یہ بتا رہا ہے کہ کون سا، کس قسم، یا کتنا، تو تمييز ہے۔ کل ہم دونوں کے ساتھ جدید ساختیں دیکھیں گے۔"
+    }
+  }
+}

@@ -1,0 +1,421 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "chapter_order": 30,
+    "lesson_order": 1,
+    "chapter_title": "Reading Comprehension and Dialogue",
+    "title": "Reading Connected Passages",
+    "titleAr": "قِرَاءَةُ النُّصُوصِ الْمُتَّصِلَةِ",
+    "source": "book3_lesson7_reading_comprehension.md",
+    "estimated_minutes": 8,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 109,
+      "ayah": 1,
+      "label": "Al-Kafirun 109:1",
+      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "en": "Say, O disbelievers.",
+      "ur": "کہہ دیجیے، اے کافرو۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-kafirun-001-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Now you can tell nominal sentences from verbal ones. Let's read longer passages and apply both structures together. Reading is where grammar becomes real understanding.",
+      "ur": "اب آپ nominal sentences کو verbal sentences سے الگ بتا سکتے ہیں۔ لمبے passages پڑھیں اور دونوں structures کو اکٹھا لایجیں۔ پڑھنا وہ جگہ ہے جہاں گرامر سمجھ بنتا ہے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Reading longer Arabic passages",
+        "ar": "قِرَاءَةُ النُّصُوصِ الطَّوِيلَةِ",
+        "ur": "لمبے عربی passages پڑھنا"
+      },
+      "explanation": {
+        "en": "When reading connected Arabic, look for the sentence type first: does it start with a verb (verbal) or a noun/proven noun (nominal)? This tells you how to parse it.",
+        "ur": "مربوط عربی پڑھتے وقت، پہلے sentence type دیکھیں: کیا یہ verb سے شروع ہوتا ہے (verbal) یا noun/proven noun سے (nominal)? اس سے پتہ چلتا ہے کہ اسے کیسے parse کرنا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الطَّالِبُ يَقْرَأُ الْكِتَابَ",
+        "ar_plain": "الطالب يقرأ الكتاب",
+        "translit": "at-taalibu yaqra'u al-kitaaba",
+        "en": "The student reads the book.",
+        "ur": "طالب علم کتاب پڑھتا ہے۔"
+      },
+      "explanation": {
+        "en": "A verbal sentence (يَقْرَأُ is the verb). The subject الطَّالِبُ comes after the verb. يَقْرَأُ = he reads.",
+        "ur": "ایک verbal sentence (يَقْرَأُ verb ہے)۔ فاعل الطَّالِبُ verb کے بعد آتا ہے۔ يَقْرَأُ = وہ پڑھتا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الْكِتَابُ جَدِيدٌ",
+        "ar_plain": "الكتاب جديد",
+        "translit": "al-kitaabu jadiidun",
+        "en": "The book is new.",
+        "ur": "کتاب نئی ہے۔"
+      },
+      "explanation": {
+        "en": "A nominal sentence (no verb). الْكِتَابُ is the subject, جَدِيدٌ is the predicate. Both are definite.",
+        "ur": "ایک nominal sentence (کوئی verb نہیں)۔ الْكِتَابُ subject ہے، جَدِيدٌ predicate ہے۔ دونوں معرفہ ہیں۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "إِنَّ الْمُسْلِمَ مُؤْمِنٌ",
+        "ar_plain": "إن المسلم مؤمن",
+        "translit": "inna al-muslima mu'minun",
+        "en": "Truly, the Muslim is a believer.",
+        "ur": "بے شک، مسلمان مومن ہے۔"
+      },
+      "explanation": {
+        "en": "إِنَّ creates a nominal sentence. The subject is الْمُسْلِمَ ( mansoob), and the predicate is مُؤْمِنٌ (nominative).",
+        "ur": "إِنَّ nominal sentence بناتی ہے۔ subject الْمُسْلِمَ (منصوب) ہے، اور predicate مُؤْمِنٌ (مرفوع) ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "يَقْرَأُ",
+        "ar_plain": "يقرأ",
+        "translit": "yaqra'u",
+        "en": "he reads",
+        "ur": "وہ پڑھتا ہے"
+      },
+      "explanation": {
+        "en": "Present tense verb from the root ق-ر-أ. Prefix يَ indicates third person masculine singular.",
+        "ur": "ق-ر-أ root سے present tense verb۔ Prefix يَ تیسرے person مذکر singular کو ظاہر کرتا ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "الْكِتَابُ",
+        "ar_plain": "الكتاب",
+        "translit": "al-kitaabu",
+        "en": "the book",
+        "ur": "کتاب"
+      },
+      "explanation": {
+        "en": "Definite noun (with ال). Object of the verb يَقْرَأُ — the thing being read.",
+        "ur": "معرفہ noun (ال کے ساتھ)۔ verb يَقْرَأُ کا مفعول — وہ چیز جو پڑھی جا رہی ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Two sentence types in one passage",
+        "ur": "ایک passage میں دو sentence types"
+      },
+      "body": {
+        "en": "Real Arabic passages mix both sentence types freely. إِنَّ can appear inside a verbal sentence's context. Read for meaning first, then identify structure.",
+        "ur": "اصل عربی passages میں دونوں sentence types آزادانہ ملے ہوتے ہیں۔ إِنَّ verbal sentence کے اندر بھی آ سکتی ہے۔ پہلے meaning کے لیے پڑھیں، پھر structure پہچانیں۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch30-l01-ex01",
+      "prompt": {
+        "ar": "الطَّالِبُ يَقْرَأُ الْكِتَابَ",
+        "ar_plain": "الطالب يقرأ الكتاب",
+        "translit": "at-taalibu yaqra'u al-kitaaba",
+        "en": "The student reads the book.",
+        "ur": "طالب علم کتاب پڑھتا ہے۔"
+      },
+      "options": [
+        {
+          "en": "The student reads the book.",
+          "ur": "طالب علم کتاب پڑھتا ہے۔"
+        },
+        {
+          "en": "The book reads the student.",
+          "ur": "کتاب طالب علم کو پڑھتی ہے۔"
+        },
+        {
+          "en": "The student is reading.",
+          "ur": "طالب علم پڑھ رہا ہے۔"
+        },
+        {
+          "en": "The book is new.",
+          "ur": "کتاب نئی ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَقْرَأُ is a present tense verb. The subject is الطَّالِبُ (comes before the verb in this sentence) and الْكِتَابَ is the object.",
+        "ur": "يَقْرَأُ present tense verb ہے۔ subject الطَّالِبُ ہے (اس sentence میں verb سے پہلے آتا ہے) اور الْكِتَابَ object ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch30-l01-ex02",
+      "statement": {
+        "en": "In إِنَّ الْمُسْلِمَ مُؤْمِنٌ, the word مُؤْمِنٌ is in the nominative case (مرفوع).",
+        "ur": "إِنَّ الْمُسْلِمَ مُؤْمِنٌ میں، word مُؤْمِنٌ nominative case (مرفوع) میں ہے۔",
+        "ar_example": {
+          "ar": "إِنَّ الْمُسْلِمَ مُؤْمِنٌ",
+          "ar_plain": "إن المسلم مؤمن",
+          "translit": "inna al-muslima mu'minun",
+          "en": "Truly, the Muslim is a believer.",
+          "ur": "بے شک، مسلمان مومن ہے۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch30-l01-ex03",
+      "mode": "TAP",
+      "sentence_ar": "إِنَّ الطَّالِبَ ___",
+      "hint": {
+        "en": "Truly, the student is diligent.",
+        "ur": "بے شک، طالب علم محنتی ہے۔"
+      },
+      "options": [
+        {
+          "ar": "مُجْتَهِدٌ",
+          "ar_plain": "مجتهد",
+          "translit": "mujtahidun",
+          "en": "diligent",
+          "ur": "محنتی"
+        },
+        {
+          "ar": "مُجْتَهِدٍ",
+          "ar_plain": "مجتهد",
+          "translit": "mujtahidin",
+          "en": "diligent (mansoob)",
+          "ur": "محنتی (منصوب)"
+        },
+        {
+          "ar": "يَقْرَأُ",
+          "ar_plain": "يقرأ",
+          "translit": "yaqra'u",
+          "en": "reads",
+          "ur": "پڑھتا ہے"
+        },
+        {
+          "ar": "كِبَرٌ",
+          "ar_plain": "كبر",
+          "translit": "kibarun",
+          "en": "big",
+          "ur": "بڑا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مُجْتَهِدٌ",
+        "ar_plain": "مجتهد",
+        "translit": "mujtahidun",
+        "en": "diligent",
+        "ur": "محنتی"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch30-l01-ex04",
+      "prompt": {
+        "ar": "الْكِتَابُ جَدِيدٌ",
+        "ar_plain": "الكتاب جديد",
+        "translit": "al-kitaabu jadiidun",
+        "en": "The book is new.",
+        "ur": "کتاب نئی ہے۔"
+      },
+      "options": [
+        {
+          "en": "The book is new.",
+          "ur": "کتاب نئی ہے۔"
+        },
+        {
+          "en": "The new book.",
+          "ur": "نئی کتاب۔"
+        },
+        {
+          "en": "The books are new.",
+          "ur": "کتابیں نئی ہیں۔"
+        },
+        {
+          "en": "A new book.",
+          "ur": "ایک نئی کتاب۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Nominal sentence with no verb. الْكِتَابُ is the subject, جَدِيدٌ is the predicate (both nominative).",
+        "ur": "کوئی verb نہیں۔ الْكِتَابُ subject ہے، جَدِيدٌ predicate ہے (دونوں مرفوع)۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch30-l01-ex05",
+      "left_column": [
+        {
+          "ar": "الطَّالِبُ يَقْرَأُ الْكِتَابَ",
+          "ar_plain": "الطالب يقرأ الكتاب",
+          "translit": "at-taalibu yaqra'u al-kitaaba",
+          "en": "The student reads the book.",
+          "ur": "طالب علم کتاب پڑھتا ہے۔"
+        },
+        {
+          "ar": "إِنَّ الطَّالِبَ مُجْتَهِدٌ",
+          "ar_plain": "إن الطالب مجتهد",
+          "translit": "inna at-taalibi mujtahidun",
+          "en": "Truly, the student is diligent.",
+          "ur": "بے شک، طالب علم محنتی ہے۔"
+        },
+        {
+          "ar": "الْمُسْلِمُونَ صَالِحُونَ",
+          "ar_plain": "المسلمون صالحون",
+          "translit": "al-muslimoona saalihoona",
+          "en": "The Muslims are righteous.",
+          "ur": "مسلمان نیک ہیں۔"
+        },
+        {
+          "ar": "الْبَيْتُ كَبِيرٌ",
+          "ar_plain": "البيت كبير",
+          "translit": "al-baytu kabirun",
+          "en": "The house is big.",
+          "ur": "گھر بڑا ہے۔"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "Verbal sentence",
+          "ur": "فعلی جملہ"
+        },
+        {
+          "en": "Nominal with إِنَّ",
+          "ur": "إِنَّ کے ساتھ اسمی"
+        },
+        {
+          "en": "Human plural (جَمْع الْعَاقِل)",
+          "ur": "انسانی جمع"
+        },
+        {
+          "en": "Nominal sentence",
+          "ur": "اسمی جملہ"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch30-l01-ex06",
+      "target_translation": {
+        "en": "Truly, the house is big.",
+        "ur": "بے شک، گھر بڑا ہے۔"
+      },
+      "tiles": [
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "truly",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "الْبَيْتَ",
+          "ar_plain": "البيت",
+          "translit": "al-bayta",
+          "en": "the house",
+          "ur": "گھر"
+        },
+        {
+          "ar": "كَبِيرٌ",
+          "ar_plain": "كبير",
+          "translit": "kabirun",
+          "en": "big",
+          "ur": "بڑا"
+        },
+        {
+          "ar": "كَبِيرَةٌ",
+          "ar_plain": "كبيرة",
+          "translit": "kabiiratan",
+          "en": "big (fem. sg.)",
+          "ur": "بڑی (مؤنث واحد)"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch30-l01-ex07",
+      "xp_value": 1,
+      "statement": {
+        "en": "Parse: at-taalibu yaqra'u al-kitaaba"
+      },
+      "ar_example": {
+        "ar": "الطَّالِبُ يَقْرَأُ الْكِتَابَ",
+        "en": "at-taalibu yaqra'u al-kitaaba",
+        "ur": ""
+      },
+      "correct_answer": true
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Reading passages: both sentence types together",
+      "ar": "قِرَاءَةُ النُّصُوصِ: جُمْلَةٌ اسْمِيَّة وَفِعْلِيَّةٌ مَعًا",
+      "ur": "passages پڑھنا: دونوں sentence types اکٹھے"
+    },
+    "ayah": {
+      "surah": 109,
+      "ayah": 1,
+      "label": "Al-Kafirun 109:1",
+      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "en": "Say, O disbelievers.",
+      "ur": "کہہ دیجیے، اے کافرو۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-kafirun-001-mishary.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      2
+    ],
+    "noor_explanation": {
+      "en": "قُلْ is a verb. يَا أَيُّهَا is a calling expression. الْكَافِرُونَ is the noun being called. This is a verbal sentence where the verb comes first.",
+      "ur": "قُلْ ایک verb ہے۔ يَا أَيُّهَا calling expression ہے۔ الْكَافِرُونَ وہ noun ہے جسے بلایا جا رہا ہے۔ یہ ایک verbal sentence ہے جہاں verb پہلے آتا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Reading real Arabic means reading both sentence types fluently. Nominal sentences, verbal sentences, إِنَّ sentences — they all flow together in the Quran. Keep reading!",
+      "ur": "اصل عربی پڑھنا دونوں sentence types باہر سے پڑھنا ہے۔ Nominal sentences، verbal sentences، إِنَّ sentences — سب قرآن میں اکٹھے بہتے ہیں۔ پڑھتا رہیں!"
+    }
+  }
+}
