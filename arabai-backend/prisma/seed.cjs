@@ -57,6 +57,15 @@ const ch11L02Content     = require("./fixtures/chapter-11-lesson-02.json");
 const ch11L03Content     = require("./fixtures/chapter-11-lesson-03.json");
 const ch11L04Content     = require("./fixtures/chapter-11-lesson-04.json");
 const ch11L05Content     = require("./fixtures/chapter-11-lesson-05.json");
+const ch12L01Content     = require("./fixtures/chapter-12-lesson-01.json");
+const ch12L02Content     = require("./fixtures/chapter-12-lesson-02.json");
+const ch12L03Content     = require("./fixtures/chapter-12-lesson-03.json");
+const ch12L04Content     = require("./fixtures/chapter-12-lesson-04.json");
+const ch12L05SpokenContent = require("./fixtures/chapter-12-lesson-05-spoken-phrases.json");
+const ch13L01Content     = require("./fixtures/chapter-13-lesson-01.json");
+const ch13L02Content     = require("./fixtures/chapter-13-lesson-02.json");
+const ch13L03Content     = require("./fixtures/chapter-13-lesson-03.json");
+const ch13L04Content     = require("./fixtures/chapter-13-lesson-04.json");
 
 const ACHIEVEMENTS = [
   { key: "first_lesson",           title: "الخُطْوَة الأُولَى",            description: "Complete your very first lesson",                    icon: "footsteps-outline",   xpReward: 25  },
@@ -260,6 +269,8 @@ async function main() {
   const ch9Id  = chapterIdByOrder.get(9);
   const ch10Id = chapterIdByOrder.get(10);
   const ch11Id = chapterIdByOrder.get(11);
+  const ch12Id = chapterIdByOrder.get(12);
+  const ch13Id = chapterIdByOrder.get(13);
 
   const lessons = [
     // Chapter 1
@@ -322,6 +333,17 @@ async function main() {
     { id: "ch11-l03", chapterId: ch11Id, order: 3, title: "In It — فِيهِ",                          titleAr: "فِيهِ — ضَمِيرُ الْمُفْرَدِ الْغَائِب",  template: "STANDARD",    xpReward: ch11L03Content._meta?.xp_reward     ?? 10, content: ch11L03Content },
     { id: "ch11-l04", chapterId: ch11Id, order: 4, title: "In It — فِيهَا",                         titleAr: "فِيهَا — ضَمِيرُ الْمُؤَنَّث",            template: "STANDARD",    xpReward: ch11L04Content._meta?.xp_reward     ?? 10, content: ch11L04Content },
     { id: "ch11-l05", chapterId: ch11Id, order: 5, title: "Home in the Quran — بُيُوتِكُمْ",        titleAr: "بُيُوتِكُمْ فِي الْقُرْآن",               template: "STANDARD",    xpReward: ch11L05Content._meta?.xp_reward     ?? 10, content: ch11L05Content },
+    // Chapter 12
+    { id: "ch12-l01", chapterId: ch12Id, order: 1, title: "What Is Your Name?",                     titleAr: "مَا اسْمُكَ؟",                            template: "STANDARD",        xpReward: ch12L01Content._meta?.xp_reward       ?? 10, content: ch12L01Content },
+    { id: "ch12-l02", chapterId: ch12Id, order: 2, title: "Where Are You From?",                    titleAr: "مِنْ أَيْنَ أَنْتَ؟",                     template: "STANDARD",        xpReward: ch12L02Content._meta?.xp_reward       ?? 10, content: ch12L02Content },
+    { id: "ch12-l03", chapterId: ch12Id, order: 3, title: "Professions",                            titleAr: "الْمِهَن",                                template: "STANDARD",        xpReward: ch12L03Content._meta?.xp_reward       ?? 10, content: ch12L03Content },
+    { id: "ch12-l04", chapterId: ch12Id, order: 4, title: "Past Tense as Vocabulary",               titleAr: "الْفِعْل الْمَاضِي لِلتَّعَرُّف",          template: "STANDARD",        xpReward: ch12L04Content._meta?.xp_reward       ?? 10, content: ch12L04Content },
+    { id: "ch12-l05", chapterId: ch12Id, order: 5, title: "SP3 - Classroom and Halaqa Phrases",      titleAr: "عِبَارَاتُ الدَّرْسِ وَالحَلْقَة",        template: "SPOKEN_PHRASES",  xpReward: ch12L05SpokenContent._meta?.xp_reward ?? 15, content: ch12L05SpokenContent },
+    // Chapter 13
+    { id: "ch13-l01", chapterId: ch13Id, order: 1, title: "Sound Masculine Plural — ونَ",            titleAr: "الْمُذَكَّر السَّالِم",                   template: "STANDARD",        xpReward: ch13L01Content._meta?.xp_reward       ?? 10, content: ch13L01Content },
+    { id: "ch13-l02", chapterId: ch13Id, order: 2, title: "Sound Feminine Plural — ات",              titleAr: "الْمُؤَنَّث السَّالِم",                   template: "STANDARD",        xpReward: ch13L02Content._meta?.xp_reward       ?? 10, content: ch13L02Content },
+    { id: "ch13-l03", chapterId: ch13Id, order: 3, title: "Broken Plurals — Recognition",            titleAr: "الْجَمْع الْمُكَسَّر",                    template: "STANDARD",        xpReward: ch13L03Content._meta?.xp_reward       ?? 10, content: ch13L03Content },
+    { id: "ch13-l04", chapterId: ch13Id, order: 4, title: "Non-Human Plurals — Feminine Treatment",  titleAr: "جَمْع غَيْر الْعَاقِل",                   template: "STANDARD",        xpReward: ch13L04Content._meta?.xp_reward       ?? 10, content: ch13L04Content },
   ];
 
   for (const { id, ...data } of lessons) {

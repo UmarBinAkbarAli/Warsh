@@ -1,6 +1,6 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-05-27 (post-beta-infra-QA review)
+Last updated: 2026-05-28 (local release APK build fixed and verified)
 
 ## Purpose
 
@@ -24,10 +24,10 @@ It should not be treated as a permanent record of:
 - **Chapters 1-8:** fixture-authored and wired into `seed.cjs` — 35 lessons total across these chapters, including SP1 and SP2
 - **SP1:** inserted as `ch03-l05` after Chapter 3 review - basic greetings and introductions
 - **SP2:** inserted as `ch07-l05` after Chapter 7 - simple classroom/lesson questions
-- **Chapters 9-11:** fixture-authored and wired into `seed.cjs` — Ch9: 5 lessons (L01-L04 STANDARD plural nouns + L05 VERB_PATTERN past tense ذَهَبَ), Ch10: 4 lessons (plural pronouns + time expressions), Ch11: 5 lessons (family vocabulary + فِيهِ/فِيهَا)
-- **Chapters 12-72:** chapter metadata seeded, fixture authoring still pending
-- **Current focus:** continue Ch12+ authoring; finish beta infra (EAS APK on device, Google Play Console, Sentry/Mixpanel)
-- **Recommended next milestone:** run `npm run db:seed` to push Ch9-Ch11 to production DB, then download/install EAS preview APK and run 9-item beta gate checklist
+- **Chapters 9-13:** fixture-authored and wired into `seed.cjs` — Ch9: 5 lessons (L01-L04 STANDARD plural nouns + L05 VERB_PATTERN past tense ذَهَبَ), Ch10: 4 lessons (plural pronouns + time expressions), Ch11: 5 lessons (family vocabulary + فِيهِ/فِيهَا), Ch12: 5 lessons (introductions, origin, professions, past-tense recognition + SP3), Ch13: 4 lessons (plural forms introduction)
+- **Chapters 14-72:** chapter metadata seeded, fixture authoring still pending
+- **Current focus:** continue Ch14+ authoring; finish beta infra (EAS APK on device, Google Play Console, Sentry/Mixpanel)
+- **Recommended next milestone:** run `npm run db:seed` to push Ch9-Ch13 to production DB, then download/install EAS preview APK and run 9-item beta gate checklist
 
 **2026-05-26 coordinator correction:** Chapters 1-8 are now fixture-authored and wired into `seed.cjs` (35 lessons total across Chapters 1-8, including SP1 and SP2). Chapters 9-72 still need fixture-authored JSON lessons. Device QA was the next gate at that point; it was run on 2026-05-27.
 
@@ -44,6 +44,10 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 **2026-05-27 Chapter 10-11 agent handoff:** Prepared parallel content-worker lanes for Chapter 10 (4 lessons: plural pronouns and time expressions) and Chapter 11 (5 lessons: home and family). Each worker should own exactly one fixture file under `arabai-backend/prisma/fixtures/`, avoid seed/progress edits, and expect full fixture validation to remain blocked until neighboring parallel-owned files are all reconciled.
 
 **2026-05-27 Chapter 10-11 fixture authoring:** Authored Chapter 10 lessons 1-4 (`chapter-10-lesson-01.json` through `chapter-10-lesson-04.json`) and Chapter 11 lessons 1-5 (`chapter-11-lesson-01.json` through `chapter-11-lesson-05.json`) as STANDARD warsh-content-schema v1.0 fixtures. All nine new files parse as valid JSON. Full `npm run db:validate-fixtures` is still blocked by pre-existing Chapter 9 lesson 1 duplicate/VERB_PATTERN fixture issues; the current validator output names only Ch9-L01 files, not the new Ch10-Ch11 fixtures.
+
+**2026-05-28 Chapter 12 fixture authoring:** Authored Chapter 12 lessons 1-5 (`chapter-12-lesson-01.json` through `chapter-12-lesson-04.json`, plus `chapter-12-lesson-05-spoken-phrases.json`) and wired them into `seed.cjs` as stable IDs `ch12-l01` through `ch12-l05`. Chapter 12 covers introductions and personal questions: name, origin, professions, past-tense recognition, and SP3 classroom/halaqa phrases. `npm run db:validate-fixtures` passes with 54 fixture lessons; `npm run db:validate-seed` passes with 72 chapters and 323 legacy curriculum lessons.
+
+**2026-05-28 Chapter 13 fixture authoring:** Authored Chapter 13 lessons 1-4 (`chapter-13-lesson-01.json` through `chapter-13-lesson-04.json`) and wired them into `seed.cjs` as stable IDs `ch13-l01` through `ch13-l04`. Chapter 13 covers sound masculine plural, sound feminine plural, broken plural recognition, and non-human plural feminine treatment. `npm run db:validate-fixtures` passes with 58 fixture lessons; `npm run db:validate-seed` passes with 72 chapters and 323 legacy curriculum lessons.
 
 **What is DONE (as of 2026-05-27):**
 - All 13 spec files have been implemented to Phase 1 completeness
@@ -62,15 +66,71 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 - All TypeScript checks 0 errors; `npm run db:validate-fixtures` passes (35 fixtures)
 
 **What is LEFT (prioritized):**
-1. **Content authoring: Chapters 12-72** — Ch9-Ch11 are now wired and validate at 0 errors (49 total fixtures); Ch12-Ch72 still need fixture-authored JSON lessons (highest priority)
+1. **Content authoring: Chapters 14-72** — Ch9-Ch13 are now wired and validate at 0 errors (58 total fixtures); Ch14-Ch72 still need fixture-authored JSON lessons (highest priority)
 2. ~~**VERB_PATTERN fixture** — DONE 2026-05-27: `chapter-09-lesson-01-verb-pattern.json` authored, seeded, live as `ch09-l01`~~
 3. ~~**A0 animated splash** — DONE 2026-05-27: `app/index.tsx` rebuilt with full Warsh lockup animation~~
 4. ~~**Pre-beta infrastructure (code side)** — DONE 2026-05-27: package renamed `com.arabai.app` → `com.warsh.app`, scheme updated, checklist written. See `Docs/warsh-beta-infra-readiness-checklist.md` for YOU-items.~~
-5. **QA** — REVIEW XP display in close screen, chapter completion edge case, live IAP sandbox purchase+restore; VERB_PATTERN on device. Run only after EAS APK is installed on test device.
+5. ~~**QA (code-side)** — REVIEW XP display, chapter completion display, VERB_PATTERN font rendering. DONE 2026-05-28 (see below).~~ Live IAP sandbox purchase+restore and on-device VERB_PATTERN verification still pending; need EAS APK on test device first.
 6. ~~**Lesson player direct schema** — DONE 2026-05-27: `mapContent()` removed; player reads warsh-content-schema v1.0 directly~~
 7. **Beta gate checklist** — 9 items in §14 of `Docs/warsh-beta-infra-readiness-checklist.md`; none confirmed yet. Blocked on: EAS APK installation, custom domain (deferred), Google Play Console setup.
 8. **Google Play Console** — not started; blocking IAP sandbox testing and distribution
 9. **Sentry / Mixpanel / UptimeRobot** — partially configured; need proper project setup, DSN wiring, alert creation
+
+---
+
+## Recent Changes (2026-05-28 local release APK build)
+
+### Local `assembleRelease` build fixed (2026-05-28)
+
+Three issues resolved to get a successful `.\gradlew assembleRelease` on the local Windows machine:
+
+1. **NDK 27.1.12297006 corrupted** — only contained `.installer` folder, missing `source.properties`. Fixed by adding `android.ndkVersion=26.1.10909125` to `arabai-app/android/gradle.properties` (NDK 26 was already properly installed).
+
+2. **Sentry org not configured** — `android/sentry.properties` has no `org`/`project`. Fixed by passing `SENTRY_DISABLE_AUTO_UPLOAD=true` at build time. Wire up proper Sentry project when setting up production error tracking.
+
+3. **Google Maven lint JAR download timeout** — `:react-native-iap:extractReleaseAnnotations` downloads `intellij-core-31.11.0.jar` from Google Maven and times out. Fixed by: (a) creating an empty stub `typedefs.txt` at the expected output path, (b) skipping the task with `-x :react-native-iap:extractReleaseAnnotations`. Also added `systemProp.org.gradle.internal.http.socketTimeout=120000` to `gradle.properties`.
+
+**Build command for future local release APKs (run from `arabai-app/android/`):**
+```powershell
+$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
+$env:PATH = "$env:JAVA_HOME\bin;" + $env:PATH
+$env:SENTRY_DISABLE_AUTO_UPLOAD = "true"
+.\gradlew assembleRelease -x ":react-native-iap:extractReleaseAnnotations"
+```
+
+APK output: `arabai-app/android/app/build/outputs/apk/release/app-release.apk`
+
+---
+
+## Recent Changes (2026-05-28 QA bug fixes)
+
+### Code-side QA bug fixes: REVIEW XP, chapter unlock display, VERB_PATTERN font (2026-05-28)
+
+Read `Docs/warsh-spec-00-master-index.md` before starting, per build protocol.
+
+**Bug 1 — REVIEW lesson XP on close screen:**
+
+- `play.tsx` `renderClose()` used `completionResult?.xpEarned ?? lesson?.xpReward ?? 10`. The `??` operator does not fall through on `0`, so replayed lessons (where `xpEarned = 0`) showed `+0 pts` instead of the lesson's XP value.
+- Fix: changed `??` to `||` so `xpEarned === 0` falls back to `lesson.xpReward`.
+- Also: `chapterBonusXp` (50 XP awarded on chapter completion) was in the API response but never captured or displayed. Added `chapterBonusXp` and `chapterJustCompleted` to `CompletionResult` type; `earnedPoints` now includes chapter bonus: `(xpEarned || xpReward || 10) + chapterBonusXp`.
+
+**Bug 2 — Chapter completion unlock display:**
+
+- `chapterJustCompleted` was a local variable in `POST /api/lessons/[id]/complete` that was never included in the JSON response. Frontend had no way to surface a chapter-completion notification.
+- Fix: added `chapterJustCompleted` to the response payload in `route.ts`.
+- Frontend now captures `chapterJustCompleted` and shows a "Next chapter unlocked" badge on the lesson close screen when the last lesson of a chapter is completed.
+- Note: the backend unlock logic (`lib/course.ts` `buildChapterStates()`) was already correct — Ch2 unlocks when all Ch1 lessons are COMPLETED or SKIPPED_BY_PLACEMENT. The home screen re-fetches chapters via `useFocusEffect` on every return from lesson play, so the unlock is reflected immediately.
+
+**Bug 3 — VERB_PATTERN conjugation table font rendering:**
+
+- `verbRootPillText` style was using `Fonts.regular` ("Lora-Regular", a Latin font) for the Arabic root string (e.g. "ذ-ه-ب"). Arabic characters rendered with system fallback, not Scheherazade New.
+- Fix: changed `verbRootPillText.fontFamily` to `"Scheherazade New"` and bumped `fontSize` from 11 to 18.
+- Pattern name (e.g. "Past Tense — فِعْل مَاضٍ") was rendered as a single `Text` with `Fonts.italic` ("Lora-Italic"). The Arabic part was not rendered correctly.
+- Fix: split the pattern name row into separate elements — English prefix (Lora-Italic) and Arabic name from `pattern_name.ar` (via `ArabicText size="sm"`). Added `verbPatternNameRow`, `verbBaseMeaningSep`, `verbPatternNameAr`, and `chapterUnlockedBadge` styles.
+
+**Files changed:**
+- `arabai-backend/app/api/lessons/[id]/complete/route.ts` — added `chapterJustCompleted` to response JSON
+- `arabai-app/app/(app)/lessons/[lessonId]/play.tsx` — `CompletionResult` type, `finishLesson` capture, `renderClose` XP logic, `renderVerbPattern` pattern name rendering, styles
 
 ---
 

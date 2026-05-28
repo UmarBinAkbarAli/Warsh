@@ -25,6 +25,7 @@ export default function ResetPasswordScreen() {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -98,12 +99,19 @@ export default function ResetPasswordScreen() {
           style={styles.input}
           value={confirmPassword}
           onChangeText={setConfirmPassword}
-          secureTextEntry={!showPassword}
+          secureTextEntry={!showConfirmPassword}
           autoCapitalize="none"
           autoCorrect={false}
           placeholder="Confirm new password"
           placeholderTextColor={WarshPalette.subtleBrown}
         />
+        <TouchableOpacity onPress={() => setShowConfirmPassword((v) => !v)} hitSlop={8}>
+          <Ionicons
+            name={showConfirmPassword ? "eye-off-outline" : "eye-outline"}
+            size={20}
+            color={WarshPalette.subtleBrown}
+          />
+        </TouchableOpacity>
       </View>
 
       <BrandButton

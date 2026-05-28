@@ -33,6 +33,7 @@ export default function ChangePasswordScreen() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showCurrent, setShowCurrent] = useState(false);
   const [showNew, setShowNew] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -131,12 +132,19 @@ export default function ChangePasswordScreen() {
             style={styles.input}
             value={confirmPassword}
             onChangeText={setConfirmPassword}
-            secureTextEntry={!showNew}
+            secureTextEntry={!showConfirm}
             autoCapitalize="none"
             autoCorrect={false}
             placeholder="Repeat new password"
             placeholderTextColor={WarshPalette.subtleBrown}
           />
+          <TouchableOpacity onPress={() => setShowConfirm((v) => !v)} hitSlop={8}>
+            <Ionicons
+              name={showConfirm ? "eye-off-outline" : "eye-outline"}
+              size={20}
+              color={WarshPalette.subtleBrown}
+            />
+          </TouchableOpacity>
         </View>
 
         <BrandButton

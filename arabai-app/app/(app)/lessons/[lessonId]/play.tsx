@@ -28,6 +28,8 @@ type RawLesson = {
 
 type CompletionResult = {
   xpEarned: number;
+  chapterBonusXp: number;
+  chapterJustCompleted: boolean;
   totalXp: number;
   currentStreak: number;
   streakCelebration: boolean;
@@ -268,6 +270,8 @@ export default function LessonPlayScreen() {
         const dailyGoalMet = data.dailyGoalXp > 0;
         setCompletionResult({
           xpEarned: data.xpEarned,
+          chapterBonusXp: data.chapterBonusXp ?? 0,
+          chapterJustCompleted: Boolean(data.chapterJustCompleted),
           totalXp: data.totalXp,
           currentStreak: data.currentStreak,
           streakCelebration: Boolean(data.streakCelebration),
@@ -788,7 +792,8 @@ export default function LessonPlayScreen() {
   // ---- Beat 5: CLOSE ----
 
   function renderClose() {
-    const earnedPoints = completionResult?.xpEarned ?? lesson?.xpReward ?? 10;
+    const chapterBonus = completionResult?.chapterBonusXp ?? 0;
+    const earnedPoints = (completionResult?.xpEarned || lesson?.xpReward || 10) + chapterBonus;
     const streak = completionResult?.currentStreak ?? 1;
     const shouldShowStreakCelebration = Boolean(completionResult?.streakCelebration);
     const isSpoken = lesson?.template === "SPOKEN_PHRASES";
@@ -852,6 +857,9 @@ export default function LessonPlayScreen() {
             <View style={styles.noorAvatarDot} />
           </View>
           <ArabicText size="md" style={styles.closeArabic}>بارك الله فيك</ArabicText>
+          {completionResult?.chapterJustCompleted ? (
+            <Text style={styles.chapterUnlockedBadge}>Next chapter unlocked</Text>
+          ) : null}
           {isSpoken && phrasesLearned > 0 ? (
             <Text style={styles.spPhrasesEarned}>
               {phrasesLearned} phrase{phrasesLearned !== 1 ? "s" : ""} learned to say
@@ -1085,7 +1093,10 @@ export default function LessonPlayScreen() {
       );
     }
 
-    const patternName = (table.pattern_name as Record<string, any> | undefined)?.en as string | undefined;
+    const patternNode = table.pattern_name as Record<string, any> | undefined;
+    const patternNameEn = patternNode?.en as string | undefined;
+    const patternNameAr = patternNode?.ar as string | undefined;
+    const patternDisplayEn = patternNameEn?.split("—")[0]?.trim();
 
     return (
       <ScrollView style={styles.verbPatternScreen} contentContainerStyle={[styles.verbPatternContent, screenPadding]} showsVerticalScrollIndicator={false}>
@@ -1100,7 +1111,13 @@ export default function LessonPlayScreen() {
           <Text style={styles.verbBaseForm}>{(rows[0].conjugated as Record<string, any>)?.ar as string}</Text>
         ) : null}
 
-        {patternName ? <Text style={styles.verbBaseMeaning}>{patternName}</Text> : null}
+        {(patternDisplayEn || patternNameAr) ? (
+          <View style={styles.verbPatternNameRow}>
+            {patternDisplayEn ? <Text style={styles.verbBaseMeaning}>{patternDisplayEn}</Text> : null}
+            {patternDisplayEn && patternNameAr ? <Text style={styles.verbBaseMeaningSep}> — </Text> : null}
+            {patternNameAr ? <ArabicText size="sm" style={styles.verbPatternNameAr}>{patternNameAr}</ArabicText> : null}
+          </View>
+        ) : null}
 
         <View style={styles.verbTableCard}>
           {rows.map((row, index) => {
@@ -1849,9 +1866,9 @@ const styles = StyleSheet.create({
   },
   verbRootPillText: {
     color: "#FFFFFF",
-    fontFamily: Fonts.regular,
-    fontSize: 11,
-    lineHeight: 16,
+    fontFamily: "Scheherazade New",
+    fontSize: 18,
+    lineHeight: 26,
     letterSpacing: 0.5,
   },
   verbBaseForm: {
@@ -1923,6 +1940,35 @@ const styles = StyleSheet.create({
     padding: 24,
     backgroundColor: "#EDE8D8",
     alignItems: "center",
+  },
+  verbPatternNameRow: {
+    flexDirection: "row",
+    alignItems: "baseline",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    marginTop: 4,
+    marginBottom: 8,
+  },
+  verbBaseMeaningSep: {
+    fontFamily: Fonts.italic,
+    fontStyle: "italic",
+    fontSize: 13,
+    lineHeight: 20,
+    color: "#5A5240",
+  },
+  verbPatternNameAr: {
+    color: "#5A5240",
+  },
+  chapterUnlockedBadge: {
+    marginTop: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 999,
+    backgroundColor: "#3A5030",
+    color: "#F5F2EA",
+    fontSize: 12,
+    fontWeight: "700",
+    overflow: "hidden",
   },
   verbPatternContinueButton: {
     alignSelf: "stretch",

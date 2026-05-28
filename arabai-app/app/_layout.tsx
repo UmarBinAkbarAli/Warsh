@@ -14,15 +14,28 @@ import { initAnalytics } from "@services/analytics";
 const sentryEnabled = initSentry();
 void initAnalytics();
 
-class ErrorBoundary extends Component<{ children: React.ReactNode }, { hasError: boolean }> {
-  state = { hasError: false };
-  static getDerivedStateFromError() { return { hasError: true }; }
+class ErrorBoundary extends Component<
+  { children: React.ReactNode },
+  { hasError: boolean; errorMessage: string; errorStack: string }
+> {
+  state = { hasError: false, errorMessage: "", errorStack: "" };
+  static getDerivedStateFromError(error: unknown) {
+    const msg = error instanceof Error ? error.message : String(error);
+    const stack = error instanceof Error ? (error.stack ?? "") : "";
+    return { hasError: true, errorMessage: msg, errorStack: stack };
+  }
   render() {
     if (this.state.hasError) {
       return (
         <View style={{ flex: 1, backgroundColor: Colors.bg.primary, alignItems: "center", justifyContent: "center", padding: 24 }}>
           <Text style={{ color: Colors.text.primary, fontSize: 18, fontWeight: "700", marginBottom: 8 }}>Something went wrong</Text>
-          <Text style={{ color: Colors.text.secondary, textAlign: "center" }}>Please close and reopen the app.</Text>
+          <Text style={{ color: Colors.text.secondary, textAlign: "center", marginBottom: 16 }}>Please close and reopen the app.</Text>
+          <Text style={{ color: "#FF6B6B", fontSize: 11, fontFamily: "monospace", textAlign: "left" }} selectable>
+            {this.state.errorMessage}
+          </Text>
+          <Text style={{ color: "#888", fontSize: 10, fontFamily: "monospace", textAlign: "left", marginTop: 8 }} selectable>
+            {this.state.errorStack.slice(0, 400)}
+          </Text>
         </View>
       );
     }

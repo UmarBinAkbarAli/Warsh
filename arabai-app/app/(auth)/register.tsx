@@ -17,6 +17,7 @@ export default function RegisterScreen() {
   const [displayName, setDisplayName] = useState(name);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [emailTouched, setEmailTouched] = useState(false);
@@ -101,7 +102,14 @@ export default function RegisterScreen() {
         onChangeText={(v) => { setPassword(v); setPasswordTouched(true); }}
         onBlur={() => setPasswordTouched(true)}
         mode="outlined"
-        secureTextEntry
+        secureTextEntry={!showPassword}
+        right={
+          <TextInput.Icon
+            icon={showPassword ? "eye-off-outline" : "eye-outline"}
+            onPress={() => setShowPassword((value) => !value)}
+            forceTextInputFocus={false}
+          />
+        }
         error={passwordShort}
         style={styles.input}
       />

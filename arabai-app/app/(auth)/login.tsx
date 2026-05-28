@@ -14,6 +14,7 @@ export default function LoginScreen() {
   const { login } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -53,7 +54,14 @@ export default function LoginScreen() {
         value={password}
         onChangeText={setPassword}
         mode="outlined"
-        secureTextEntry
+        secureTextEntry={!showPassword}
+        right={
+          <TextInput.Icon
+            icon={showPassword ? "eye-off-outline" : "eye-outline"}
+            onPress={() => setShowPassword((value) => !value)}
+            forceTextInputFocus={false}
+          />
+        }
         style={styles.input}
       />
 
