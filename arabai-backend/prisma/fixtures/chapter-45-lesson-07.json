@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 45, Lesson 7 — REVIEW. Three states of المضارع fully mastered: مرفوع (default), منصوب (after أن/لن/كي), مجزوم (after لم/لا الناهية/لام الأمر). Al-Masad Tadabbur unlock #5.",
+    "chapter_order": 45,
+    "lesson_order": 7,
+    "chapter_title": "The Three States of المضارع (Foundation)",
+    "title": "Chapter 45 Review — All Three States",
+    "titleAr": "مُرَاجَعَةُ الْبَابِ 45 — الثَّلَاثُ حَالَاتٌ مُتْقَنَةٌ",
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 111,
+      "ayah": 1,
+      "label": "Al-Masad 111:1",
+      "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+      "en": "May the hands of Abu Lahab be ruined, and ruined is he.",
+      "ur": "ابو لہب کے ہاتھ ٹوٹ جائیں اور وہ ہلاک ہو جائے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-masad-001-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "تَبَّتْ — may they be ruined. The verb تَبَّ is here in a dua-imprecation sense using past tense. Surah Al-Masad is fully parseable now that you know all three states of المضارع. Let us do a final review of Chapter 45.",
+      "ur": "تَبَّتْ — ٹوٹ جائیں۔ فعل تَبَّ یہاں ماضی کے صیغے میں دعا/بددعا کے طور پر ہے۔ سورۃ المسد اب مکمل طور پر قابل parse ہے کیونکہ آپ المضارع کی تینوں حالتیں جانتے ہیں۔ باب 45 کا آخری مراجعہ کریں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Three states — one chart",
+        "ar": "ثَلَاثُ حَالَاتٍ — جَدْوَلٌ وَاحِدٌ",
+        "ur": "تین حالتیں — ایک جدول"
+      },
+      "explanation": {
+        "en": "مَرْفُوع (ضمة / ـُ): default present tense — يَذْهَبُ (he goes). مَنْصُوب (فتحة / ـَ): after أَن، لَن، كَي — أَن يَذْهَبَ (that he goes). مَجْزُوم (سكون / ـْ): after لَمْ، لَا الناهية، لام الأمر — لَمْ يَذْهَبْ (he did not go).",
+        "ur": "مَرْفُوع (ضمة): default مضارع — يَذْهَبُ (وہ جاتا ہے)۔ مَنْصُوب (فتحة): أَن، لَن، كَي کے بعد — أَن يَذْهَبَ (کہ وہ جائے)۔ مَجْزُوم (سکون): لَمْ، لَا الناهية، لام الأمر کے بعد — لَمْ يَذْهَبْ (وہ نہیں گیا)۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يَعْمَلُ — أَن يَعْمَلَ — لَمْ يَعْمَلْ",
+        "ar_plain": "يعمل — ان يعمل — لم يعمل",
+        "translit": "ya'malu — an ya'mala — lam ya'mal",
+        "en": "he works | that he works | he did not work",
+        "ur": "وہ کام کرتا ہے | کہ وہ کام کرے | اس نے کام نہیں کیا"
+      },
+      "explanation": {
+        "en": "The root ع-م-ل in all three states. Watch the final vowel shift: ـُ (marfoo') → ـَ (mansob) → ـْ (majzoom). This shift applies to virtually every regular verb.",
+        "ur": "ع-م-ل کی جڑ تینوں حالتوں میں۔ آخری حرف کی حرکت دیکھیں: ـُ (مرفوع) → ـَ (منصوب) → ـْ (مجزوم)۔ یہ تبدیلی تقریباً ہر باقاعدہ verb پر لاگو ہوتی ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Al-Masad — all verb states in two ayat",
+        "ur": "المسد — دو آیات میں تمام فعلی حالتیں"
+      },
+      "body": {
+        "en": "Surah Al-Masad (111) is five ayat but grammatically rich: تَبَّتْ (past tense dua), يَصْلَى (present — future meaning), حَمَّالَةَ (active participle nominalized). You now have the tools to parse every verb form in this Surah.",
+        "ur": "سورۃ المسد (111) پانچ آیات ہے لیکن grammatically rich: تَبَّتْ (ماضی بطور دعا)، يَصْلَى (مضارع — مستقبل کے معنی)، حَمَّالَةَ (اسم فاعل)۔ اب آپ کے پاس اس سورۃ کے ہر فعل کو parse کرنے کے اوزار ہیں۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch45-l07-ex01",
+      "prompt": {
+        "ar": "أُرِيدُ أَن أَذْهَبَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "اريد ان اذهب الى المسجد",
+        "translit": "uriidu an adhaba ila al-masjid",
+        "en": "I want to go to the mosque.",
+        "ur": "میں مسجد جانا چاہتا ہوں۔"
+      },
+      "options": [
+        { "en": "I want to go to the mosque.", "ur": "میں مسجد جانا چاہتا ہوں۔" },
+        { "en": "I went to the mosque.", "ur": "میں مسجد گیا۔" },
+        { "en": "I did not go to the mosque.", "ur": "میں مسجد نہیں گیا۔" },
+        { "en": "I will not go to the mosque.", "ur": "میں مسجد نہیں جاؤں گا۔" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَن يَذْهَبَ = منصوب after أَن — 'to go.' أُرِيدُ (I want) takes أَن + منصوب as its object clause.",
+        "ur": "أَن يَذْهَبَ = أَن کے بعد منصوب — 'جانا'۔ أُرِيدُ (میں چاہتا ہوں) أَن + منصوب کو مفعول clause کے طور پر لیتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch45-l07-ex02",
+      "statement": {
+        "en": "لَنْ يَعْبُدَ — the verb يَعْبُدَ is in the جزم state because of لَن.",
+        "ur": "لَنْ يَعْبُدَ — فعل يَعْبُدَ لَن کی وجہ سے جزم میں ہے۔",
+        "ar_example": {
+          "ar": "لَن يَعْبُدَ الطَّاغُوتَ الْمُؤْمِنُ",
+          "ar_plain": "لن يعبد الطاغوت المؤمن",
+          "translit": "lan ya'buda at-taaghoota al-mu'minu",
+          "en": "The believer will never worship the false deity.",
+          "ur": "مومن کبھی طاغوت کی عبادت نہیں کرے گا۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch45-l07-ex03",
+      "mode": "TAP",
+      "sentence_ar": "لَمْ يَلِدْ وَلَمْ ___",
+      "hint": {
+        "en": "He neither begets nor is begotten. (Al-Ikhlas 112:3)",
+        "ur": "نہ اس نے کسی کو پیدا کیا اور نہ پیدا ہوا۔ (الاخلاص 112:3)"
+      },
+      "options": [
+        { "ar": "يُولَدْ", "ar_plain": "يولد", "translit": "yoolad", "en": "is begotten", "ur": "پیدا ہوا" },
+        { "ar": "يُولَدُ", "ar_plain": "يولد", "translit": "yooladu", "en": "is begotten (marfoo')", "ur": "پیدا ہوا (مرفوع)" },
+        { "ar": "يُولَدَ", "ar_plain": "يولد", "translit": "yoolada", "en": "is begotten (mansob)", "ur": "پیدا ہوا (منصوب)" },
+        { "ar": "وُلِدَ", "ar_plain": "ولد", "translit": "wulida", "en": "was begotten (past)", "ur": "پیدا ہوا (ماضی)" }
+      ],
+      "correct_answer": { "ar": "يُولَدْ", "ar_plain": "يولد", "translit": "yoolad", "en": "is begotten", "ur": "پیدا ہوا" },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch45-l07-ex04",
+      "left_column": [
+        { "ar": "يَذْهَبُ", "ar_plain": "يذهب", "translit": "yadhhabu", "en": "he goes (default)", "ur": "وہ جاتا ہے (default)" },
+        { "ar": "أَن يَذْهَبَ", "ar_plain": "ان يذهب", "translit": "an yadhaba", "en": "to go (after أن)", "ur": "جانا (أن کے بعد)" },
+        { "ar": "لَمْ يَذْهَبْ", "ar_plain": "لم يذهب", "translit": "lam yadhhab", "en": "he did not go (after لم)", "ur": "وہ نہیں گیا (لم کے بعد)" },
+        { "ar": "لَا تَذْهَبْ", "ar_plain": "لا تذهب", "translit": "laa tadhhab", "en": "do not go! (prohibitive لا)", "ur": "مت جا! (لا ناہیہ)" }
+      ],
+      "right_column": [
+        { "en": "مَجْزُوم — after لَمْ", "ur": "مجزوم — لم کے بعد" },
+        { "en": "مَرْفُوع — default state", "ur": "مرفوع — default حالت" },
+        { "en": "مَجْزُوم — after لَا الناهية", "ur": "مجزوم — لا ناہیہ کے بعد" },
+        { "en": "مَنْصُوب — after أَن", "ur": "منصوب — أَن کے بعد" }
+      ],
+      "correct_pairs": [[0, 1], [1, 3], [2, 0], [3, 2]],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch45-l07-ex05",
+      "target_translation": {
+        "en": "He neither begets nor is begotten.",
+        "ur": "نہ اس نے کسی کو پیدا کیا اور نہ وہ پیدا ہوا۔"
+      },
+      "tiles": [
+        { "ar": "لَمْ", "ar_plain": "لم", "translit": "lam", "en": "not (past neg.)", "ur": "نہیں (ماضی نفی)" },
+        { "ar": "يَلِدْ", "ar_plain": "يلد", "translit": "yalid", "en": "beget", "ur": "پیدا کیا" },
+        { "ar": "وَلَمْ", "ar_plain": "ولم", "translit": "wa lam", "en": "nor", "ur": "اور نہ" },
+        { "ar": "يُولَدْ", "ar_plain": "يولد", "translit": "yoolad", "en": "be begotten", "ur": "پیدا ہوا" }
+      ],
+      "correct_order": [0, 1, 2, 3],
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "The Three States — fully mastered",
+      "ar": "الثَّلَاثُ حَالَاتٌ — مُتْقَنَةٌ تَمَامًا",
+      "ur": "تینوں حالتیں — مکمل مہارت"
+    },
+    "ayah": {
+      "surah": 111,
+      "ayah": 1,
+      "label": "Al-Masad 111:1",
+      "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+      "en": "May the hands of Abu Lahab be ruined, and ruined is he.",
+      "ur": "ابو لہب کے ہاتھ ٹوٹ جائیں اور وہ ہلاک ہو جائے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-masad-001-mishary.mp3"
+    },
+    "highlighted_word_indices": [0],
+    "noor_explanation": {
+      "en": "تَبَّتْ — a past tense form used as an imprecation (dua against). The power of Arabic: even past tense can be a dua. Now you have the full picture of المضارع in all three states. Chapter 46 applies it.",
+      "ur": "تَبَّتْ — ماضی کا صیغہ بطور بددعا۔ عربی کی قوت: ماضی بھی دعا ہو سکتی ہے۔ اب آپ کے پاس المضارع کی تینوں حالتوں کی مکمل تصویر ہے۔ باب 46 اسے apply کرتا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 45 done. Three states: مرفوع, منصوب, مجزوم — all locked in. You can now parse لَمْ يَلِدْ وَلَمْ يُولَدْ and understand why لَمْ requires مجزوم. Chapter 46 is the application chapter.",
+      "ur": "باب 45 مکمل۔ تین حالتیں: مرفوع، منصوب، مجزوم — سب مضبوط۔ اب آپ لَمْ يَلِدْ وَلَمْ يُولَدْ parse کر سکتے ہیں اور سمجھ سکتے ہیں کہ لَمْ مجزوم کیوں مانگتا ہے۔ باب 46 application chapter ہے۔"
+    }
+  }
+}

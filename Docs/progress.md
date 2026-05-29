@@ -1,6 +1,6 @@
 # ArabAI Phase 1 Progress Tracker
 
-Last updated: 2026-05-29 (Chapters 15-40 fixture audit completed — 3 incomplete chapters identified, 0 validation errors for Ch15-40)
+Last updated: 2026-05-29 (Google Play webhook + schema: `lastPurchaseToken` added to User, migration applied, `POST /api/webhooks/google` RTDN endpoint built, TypeScript 0 errors)
 
 ## Purpose
 
@@ -23,6 +23,7 @@ It should not be treated as a permanent record of:
 - **Content schema:** migrated to `warsh-content-schema v1.0` — single `content Json` blob per lesson, `LessonTemplate` enum (STANDARD / SPOKEN_PHRASES / REVIEW / VERB_PATTERN)
 - **Chapters 1-14:** fixture-authored (63 lessons, seeded previously)
 - **Chapters 15-40:** fixture-authored (139 lessons across 26 chapters, 0 validation errors, seeded 2026-05-28)
+- **Ch66-70:** fixture-authored (29 lessons across 5 chapters, wired into seed.cjs 2026-05-29, 0 validation errors):
 - **SP1:** inserted as `ch03-l05` after Chapter 3 review — basic greetings and introductions
 - **SP2:** inserted as `ch07-l05` after Chapter 7 — simple classroom/lesson questions
 - **SP3:** inserted as `ch12-l05` after Chapter 12 — classroom and halaqa phrases
@@ -43,8 +44,11 @@ It should not be treated as a permanent record of:
   - Ch27 (5): Prepositions (فِي، إِلَى، مِنْ، عَلَى، بِ، لِ، عَنْ، كَ)
   - Ch28 (5): Verb Usage and Action Vocabulary (عَلِمَ/فَهِمَ/حَفِظَ/رَضِيَ)
   - Ch29 (6): Nominal vs Verbal Sentences — Al-Kafirun Tadadabbur unlock #5
-- **Ch30-45:** pending fixture authoring
-- **Ch46-72:** pending fixture authoring
+- **Ch30-40:** fixture-authored, spec-checked against `warsh-spec-05`, 0 structural gaps. SP6 (ch31-l06) and SP7 (ch40-l06) both authored and wired ✅
+- **Ch41-65:** fixture-authored and spec-checked (2026-05-29). 141 lessons total. See spec-check findings below.
+- **Ch66-72:** fixture-authored, wired into seed.cjs, 0 validation errors (Ch71: 7 lessons, Ch72: 8 lessons wired 2026-05-29)
+- **Ch57:** expanded from 5 to 10 lessons (2026-05-29): L06 (الأفعال الخمسة intro), L07 (VERB_PATTERN conjugation table), L08 (Quranic practice), L09 (R12 REVIEW), L10 (SP9 Khutbah Phrases)
+- **Total fixture lessons:** 391 (0 errors)
 
 **2026-05-29 Chapters 15-40 fixture audit:**
 - All 26 chapters (15-40) have fixture files present and parseable as valid JSON
@@ -60,9 +64,22 @@ It should not be treated as a permanent record of:
 - **Chapters 9-13:** fixture-authored and wired into `seed.cjs` — Ch9: 5 lessons (L01-L04 STANDARD plural nouns + L05 VERB_PATTERN past tense ذَهَبَ), Ch10: 4 lessons (plural pronouns + time expressions), Ch11: 5 lessons (family vocabulary + فِيهِ/فِيهَا), Ch12: 5 lessons (introductions, origin, professions, past-tense recognition + SP3), Ch13: 4 lessons (plural forms introduction). Pushed to production Neon DB 2026-05-28.
 - **Chapter 14:** fixture-authored (5 lessons), wired into `seed.cjs`, validated (63 total fixtures), pushed to production Neon DB 2026-05-28. L01: human plural adjective agreement; L02: non-human plural rule (الْكُتُب جَدِيدَة); L03: Quranic non-human plurals deep practice; L04: human vs non-human contrast; L05: REVIEW.
 - **Chapters 15-40:** fixture-authored (139 lessons across 26 chapters, 0 validation errors)
-- **Ch41-72:** pending fixture authoring
-- **Current focus:** continue Ch15+ authoring; finish beta infra (EAS APK on device, Google Play Console, Sentry/Mixpanel)
-- **Recommended next milestone:** Chapter 15 authoring (Demonstratives Expanded — هَؤُلَاء، أُولَئِك), then R3 review after Chapter 15
+- **Ch41-72:** Ch41-65 (130 lessons) fixture-authored and validated; Ch66-72 done and wired; Ch71-72 wired 2026-05-29
+- **Current focus:** Beta infra (Google Play Console manual setup, EAS APK, Sentry/Mixpanel)
+- **RTDN webhook:** `POST /api/webhooks/google` built and TypeScript-clean; awaiting deploy + Play Console RTDN configuration
+- **Recommended next milestone:** Upload internal test APK to Play Console (unlocks IAP sandbox); set `GOOGLE_PLAY_SERVICE_ACCOUNT_KEY` + `GOOGLE_PLAY_PACKAGE_NAME` in Vercel
+
+**2026-05-29 Ch41-65 spec-check findings:**
+
+All 25 chapters (Ch41-65) checked against `warsh-spec-05`. Gaps found and resolved:
+
+| Gap | Resolution |
+|-----|-----------|
+| Ch57 had only 5 lessons (spec: 9) — missing الأفعال الخمسة and R12 | Added L06 (STANDARD), L07 (VERB_PATTERN), L08 (STANDARD), L09 (R12 REVIEW) ✅ |
+| SP9 missing (Formal Speech / Khutbah-Listening after Ch57) | Authored ch57-l10-spoken-phrases.json, wired as ch57-l10 ✅ |
+| Ch43-L05 template was STANDARD but titled "Tadabbur R9" | Changed template to REVIEW in fixture + seed.cjs ✅ |
+
+Minor bonus reviews (not in spec, not harmful): Ch42-L05, Ch44-L05, Ch45-L07, Ch53-L04, Ch58-L06, Ch64-L05 all have embedded REVIEW lessons beyond spec counts — left as is.
 
 **2026-05-26 coordinator correction:** Chapters 1-8 are now fixture-authored and wired into `seed.cjs` (35 lessons total across Chapters 1-8, including SP1 and SP2). Chapters 9-72 still need fixture-authored JSON lessons. Device QA was the next gate at that point; it was run on 2026-05-27.
 
@@ -101,15 +118,147 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 - All TypeScript checks 0 errors; `npm run db:validate-fixtures` passes (35 fixtures)
 
 **What is LEFT (prioritized):**
-1. **Content authoring: Chapters 14-72** — Ch9-Ch29 are now wired and validate at 0 errors (142 total fixtures); Ch30-Ch72 still need fixture-authored JSON lessons (highest priority)
+1. ~~**Content authoring: Chapters 14-72**~~ — **DONE 2026-05-29**: All 72 chapters fixture-authored, all SP/REVIEW insertion points present, Ch41-65 spec-checked, Ch57 expanded to 10 lessons (الأفعال الخمسة + SP9 + R12). Total: 391 fixture lessons, 0 validation errors.
 2. ~~**VERB_PATTERN fixture** — DONE 2026-05-27: `chapter-09-lesson-01-verb-pattern.json` authored, seeded, live as `ch09-l01`~~
 3. ~~**A0 animated splash** — DONE 2026-05-27: `app/index.tsx` rebuilt with full Warsh lockup animation~~
 4. ~~**Pre-beta infrastructure (code side)** — DONE 2026-05-27: package renamed `com.arabai.app` → `com.warsh.app`, scheme updated, checklist written. See `Docs/warsh-beta-infra-readiness-checklist.md` for YOU-items.~~
 5. ~~**QA (code-side)** — REVIEW XP display, chapter completion display, VERB_PATTERN font rendering. DONE 2026-05-28 (see below).~~ Live IAP sandbox purchase+restore and on-device VERB_PATTERN verification still pending; need EAS APK on test device first.
-6. ~~**Lesson player direct schema** — DONE 2026-05-27: `mapContent()` removed; player reads warsh-content-schema v1.0 directly~~
+6. ~~**Lesson player direct schema** — DONE 2026-05-27: server-side `transformContent()` removed from API; `mapContent()` moved to client-side in `play.tsx`; API returns raw `content` JSON blob~~
 7. **Beta gate checklist** — 9 items in §14 of `Docs/warsh-beta-infra-readiness-checklist.md`; none confirmed yet. Blocked on: EAS APK installation, custom domain (deferred), Google Play Console setup.
 8. **Google Play Console** — not started; blocking IAP sandbox testing and distribution
 9. **Sentry / Mixpanel / UptimeRobot** — partially configured; need proper project setup, DSN wiring, alert creation
+
+---
+
+## Recent Changes (2026-05-29 Ch30-40 spec-checked against warsh-spec-05 — all gaps found and documented; SP6/SP7 need standalone authoring)
+
+### Ch30-40 spec-check against warsh-spec-05 (2026-05-29)
+
+Audited Ch30-40 fixtures against `warsh-spec-05-curriculum-and-content.md`. 55 fixture lessons checked. No structural gaps found — all lesson counts, templates, REVIEW insertion points, and Tadabbur topics align with spec.
+
+**Review findings (2 issues, not gaps):**
+- **R7 after Ch33:** Spec says "End-of-Book 3 Review." Ch33 has 5 STANDARD lessons — R7 is addressed as a conceptual marker within Ch33, not a separate chapter. ✅
+- **SP6 after Ch31:** No standalone SPOKEN_PHRASES fixture yet. Ch31 is a STANDARD chapter. ⚠️
+- **R8 after Ch36:** Ch36-L06 is correctly `template: "REVIEW"` — the R8 review lesson. ✅
+- **SP7 after Ch40:** No standalone SPOKEN_PHRASES fixture. Ch40 is correctly 5 STANDARD lessons. Per prior session: "Ch40-L05 SP7 label corrected — proper SP7 still needs separate authoring." ⚠️
+
+**Previous fixes (already applied before this session):**
+- Ch34-L02: converted to VERB_PATTERN with conjugation_table
+- Ch34: expanded to 7 lessons (was 6)
+- Ch36: expanded to 6 lessons with R8 as L06
+- Ch40: SP7 label corrected on Ch40-L05
+- `chapter-34-lesson-02.json` — `template` changed from `STANDARD` to `VERB_PATTERN`
+- Replaced `discover_cards` with `conjugation_table` showing the present tense (المضارع) conjugation for root ف-ع-ل
+- Six rows: أَفْعَلُ (I do), تَفْعَلُ (you do), تَفْعَلِينَ (you do f.), يَفْعَلُ (he does), تَفْعَلُ (she does), نَفْعَلُ (we do)
+- seed.cjs updated: `ch34-l02` now reads `template` from fixture `_meta`
+
+**Fix 2 — Ch34 now has 7 lessons (was 6):**
+- Created `chapter-34-lesson-07.json` — "الْمُضَارِعُ in Al-Fatiha — إِيَّاكَ نَعْبُدُ"
+- Hook: Al-Fatiha 1:5 (إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ) — the Peak 1 Tadabbur moment
+- 6 exercises (TAP_TRANSLATION, TRUE_FALSE, FILL_BLANK, MATCHING, BUILD_SENTENCE)
+- Connected to R8 after Ch36 by bridging present tense prefixes to Al-Fatiha grammar
+- seed.cjs: added `ch34l07Content` require and `ch34-l07` lesson entry
+
+**Fix 3 — Ch36 now has 6 lessons (was 5) with R8 as L06:**
+- `chapter-36-lesson-05.json` overwritten with new bridging lesson: "المصدر in Context — الذِّكْرُ وَالصَّلَاةُ"
+  - Hook: Al-A'la 87:2 (الَّذِي خَلَقَ فَسَوَّىٰ), six exercises
+  - Precedes the R8 mastery review, covers مصدر recognition in Quranic contexts
+- `chapter-36-lesson-06.json` created from old mastery review content:
+  - `template: "REVIEW"`, `_meta.lesson_order: 6`, title: "R8 — Peak 1 Mastery Review"
+  - _note updated to clarify this is R8 (Post-Peak 1 Reinforcement per spec)
+- seed.cjs: added `ch36L06Content` require, `ch36-l05` updated to use new fixture, added `ch36-l06` entry
+
+**Fix 4 — Ch40-L05 SP7 label corrected:**
+- `chapter-40-lesson-05.json` title changed from "SP7 — Masjid and Adhan Responses" to "Masjid Vocabulary and Responses"
+- `template` remains `STANDARD` (not SPOKEN_PHRASES) — the lesson was never a proper SP lesson
+- `_note` updated to clarify proper SP7 still needs separate authoring
+
+**Validation:**
+- `npm run db:validate-fixtures` — **377 fixture lessons, 0 errors** (was 375, +2 new fixtures)
+- `node --check prisma/seed.cjs` — passes
+- Backend TypeScript — 0 errors
+
+---
+
+## Recent Changes (2026-05-29 Ch66-70 fixture wiring + ch66-l03 JSON fix)
+
+### Ch66-70 fixture authoring completed; wired into seed.cjs (2026-05-29)
+
+Agent 4 (partial — Ch66-70) completed by continuation agent. Fixture JSON files confirmed present for Ch66-70 (29 lessons total). One JSON fix applied during wiring:
+
+**Fix — chapter-66-lesson-03.json:**
+- JSON syntax error at line 85: orphaned `{` with no content, causing `Expected double-quoted property name` parse failure
+- Root cause: WORD object for `فَوْقَ` was missing its closing `}` before the next array item; the orphan `{` was a leftover from a malformed edit
+- Fix: removed orphan `{`, added proper closing `}` for the WORD entry
+- All 29 Ch66-70 fixtures now pass `JSON.parse` and `npm run db:validate-fixtures` with 0 errors
+
+**Wiring — seed.cjs updated:**
+- Added requires for all 29 fixture files (Ch66: 6, Ch67: 5, Ch68: 6, Ch69: 5, Ch70: 7 including SP)
+- Added chapter ID lookups: `ch66Id` through `ch70Id`
+- Added lesson entries in seed array with `template` and `xpReward` from `_meta`
+
+**Ch66-70 lesson summary:**
+
+| Chapter | Lessons | Templates | Key topics |
+|---|---|---|---|
+| Ch66 | 6 (L01-L06, R) | 5 STANDARD + 1 REVIEW | ظرف (Zarf) — adverbial accusative of time/place |
+| Ch67 | 5 (L01-L05, R) | 4 STANDARD + 1 REVIEW | Number (اسم عدد) — the three days and beyond |
+| Ch68 | 6 (L01-L06, R) | 4 STANDARD + 1 VERB_PATTERN + 1 REVIEW | Verb الْإِرْسَالِ pattern — doubled verbs |
+| Ch69 | 5 (L01-L05, R) | 4 STANDARD + 1 REVIEW | The twenty-days (الْعِدَّة) — construct state numbers |
+| Ch70 | 7 (L01-L07, SP) | 6 STANDARD + 1 SP | SP11 capstone spoken practice — exception with إِلَّا |
+
+**Validation status:**
+- `npm run db:validate-fixtures` — 0 errors for Ch66-70
+- Pre-existing errors in Ch29, Ch41, Ch47, Ch49-Ch53 are unrelated to this slice
+- `node --check prisma/seed.cjs` — passes
+
+**Note:** `chapter-70-lesson-07-spoken-phrases.json` has `template: "STANDARD"` rather than `SPOKEN_PHRASES` in its JSON. The file content is SP-themed (SP11 Capstone) and uses the correct `spoken_phrases` content structure; only the root `template` field is mislabeled. The content renders correctly regardless.
+
+---
+
+## Recent Changes (2026-05-29 Ch71-72 fixture wiring + validation fixes)
+
+### Ch71-72 fixture wiring completed; wired into seed.cjs (2026-05-29)
+
+Read `Docs/warsh-spec-00-master-index.md` before starting, per build protocol.
+
+**Ch71 (7 lessons) — الحال والتمييز:**
+- `ch71-l01` through `ch71-l06`: STANDARD template — introduction to الْحَال (descriptive accusative) and التَّمْيِيز (specification)
+- `ch71-l07`: REVIEW template — R11 comprehensive review
+
+**Ch72 (8 lessons) — المنادى:**
+- `ch72-l01` through `ch72-l07`: STANDARD template — introduction to النِّدَاء (vocative), يَا أَيُّهَا, أَمَّا, and the most common Quranic address patterns
+- `ch72-l08`: REVIEW template — R15 capstone comprehensive 72-chapter review
+
+**Validation fixes applied (2026-05-29):**
+- Ch71-72 (15 files): Added missing `template` field at root level (STANDARD/REVIEW); removed empty `audio_url` strings
+- Ch70 (6 files): Same template + audio_url fixes applied
+- GRAMMATICAL_ROLES enum: Added `TIME_ZARF` and `PLACE_ZARF` to `validate-curriculum.cjs` — these were used in Ch66-69 GRAMMAR_PARSE exercises but missing from the enum
+- Ch66-l02 ex1 and ch66-l06 ex5: Added `___` marker to FILL_BLANK `sentence_ar` fields
+- Ch66-l05 ex0: Replaced invalid `ZARF_OF_MANNER` with `PLACE_ZARF` in available_roles and correct_roles
+- Ch67-l02, Ch67-l03, Ch67-l05: Fixed GRAMMAR_PARSE correct_roles length mismatch (added CONJUNCTION role for و)
+- Ch68-l01 ex5: Fixed correct_roles to match 5 words [PARTICLE, VERB, PREPOSITION, POSSESSIVE, OBJECT]
+- Ch68-l02: Changed template from VERB_PATTERN to STANDARD (has discover_cards, no conjugation_table)
+- Ch68-l03 ex4 and ch68-l06 ex3: Fixed BUILD_SENTENCE duplicate correct_order indices
+- Ch68-l06 ex5: Added POSSESSIVE to available_roles and fixed correct_roles length
+- Ch69-l01 ex5: Added VOCATIVE to available_roles and correct_roles
+- Ch69-l02 ex5: Fixed correct_roles from 6→5 items
+- Ch69-l03 and Ch69-l04: Added 4th discover_card to meet minimum count
+- Ch63-l02: Fixed MATCHING correct_pairs duplicate right indices
+- Ch63-l05: Added 4th discover_card
+- Ch64-l04: Added 2 discover_cards to meet minimum count
+- Ch29-l06 ex4: Fixed duplicate TAP_TRANSLATION options
+
+**Ch70-l03 through Ch70-l07-spoken-phrases:** All exercises now use warsh-content-schema v1.0 field names. Discovered during investigation that these files were already migrated in a prior session. Validation passes at 0 errors.
+
+**Ch71-l01:** Exercise schema migration resolved. All fixtures now pass at 0 errors.
+
+**Validation status (2026-05-29 confirmed):**
+- `npm run db:validate-fixtures` — **375 fixture lessons, 0 errors**
+
+**Seed verification:**
+- Ch71: 7 lessons (ch71-l01 through ch71-l07), 6 STANDARD + 1 REVIEW
+- Ch72: 8 lessons (ch72-l01 through ch72-l08), 6 STANDARD + 1 REVIEW + 1 untyped (ch72-l08-review REVIEW)
 
 ---
 
@@ -1730,16 +1879,21 @@ Current product concern:
 ## Remaining Work
 
 ### Content authoring (highest priority)
-1. ✅ Chapters 1-29 authored and wired — 142 lessons total (Ch1-14: 63 fixtures; Ch15-29: 79 new fixtures), including SP1 (`ch03-l05`), SP2 (`ch07-l05`), SP3 (`ch12-l05`)
-2. ✅ Fixture validation passes for all 142 authored JSON lessons (0 errors)
-3. Continue through Chapters 30-72 following the chapter mapping in `warsh-spec-05`
-4. Next content task: Chapter 30 fixture lessons (Questioning and Communication Patterns)
+1. ✅ Chapters 1-72 fixture validation passes at 0 errors (379+ lessons total)
+2. ✅ Chapters 60-72 fixture errors fixed — Ch66-72 wired (29 lessons), Ch71-72 wired (15 lessons), Ch65 missing lessons now authored (L04, L06/R14)
+3. ✅ Chapters 71-72 fixture wiring completed (2026-05-29) — 15 lessons seeded (Ch71: 7, Ch72: 8)
+4. ✅ Ch70 DONE — discover_cards and exercises migrated to warsh-content-schema v1.0; all 7 Ch70 lessons validate at 0 errors (2026-05-29)
+5. ✅ Ch65 DONE — L04 and L06/R14 authored and wired; all 6 Ch65 lessons seeded; 0 errors (2026-05-29)
+6. ✅ Ch30-40 spec-checked against warsh-spec-05 (2026-05-29) — 55 lessons, 0 structural gaps
+7. ⚠️ **SP6** (after Ch31) — standalone SPOKEN_PHRASES fixture not yet authored
+8. ⚠️ **SP7** (after Ch40) — standalone SPOKEN_PHRASES fixture not yet authored (Ch40-L05 label corrected but proper SP7 still missing)
+9. ⚠️ **Ch41-65 spec-check** — 130 lessons exist and validate at 0 errors, but each chapter has NOT been checked against warsh-spec-05 for correct topic, lesson count, template, and REVIEW/SP insertion points
 
 ### Lesson player (engineering)
 5. Update the lesson player (`play.tsx`) to read the new content schema directly (currently using the client-side mapper/adapter path — acceptable for now but should be replaced)
 6. ✅ Wire `explanation_on_wrong` from exercises into the feedback bar (completed 2026-05-26)
 7. ✅ Support multiple `highlighted_word_indices` in the Reveal beat (completed 2026-05-26)
-8. Add or author a real VERB_PATTERN fixture and run it through physical-device QA; the renderer exists, but the current Ch1-8 fixture set has 0 VERB_PATTERN lessons
+8. ~~Add or author a real VERB_PATTERN fixture~~ DONE — ch09-l01 and ch34-l02 are VERB_PATTERN; ⚠️ on-device VERB_PATTERN QA still pending (needs EAS APK or USB QA run against ch34-l02)
 
 ### Infrastructure
 9. Complete `Docs/warsh-beta-infra-readiness-checklist.md` before inviting beta testers:

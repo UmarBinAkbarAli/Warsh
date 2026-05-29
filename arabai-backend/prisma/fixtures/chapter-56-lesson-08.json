@@ -148,7 +148,7 @@
       "id": "ch56-l08-ex03",
       "type": "FILL_BLANK",
       "mode": "TAP",
-      "sentence_ar": "ذَهَبَ مُوسَى وَالْقَاضِي إِلَى __",
+      "sentence_ar": "ذَهَبَ مُوسَى وَالْقَاضِي إِلَى ___",
       "hint": {
         "en": "Musa and the judge went to the two mosques.",
         "ur": "موسیٰ اور قاضی دو مسجدوں کی طرف گئے۔"
@@ -202,8 +202,8 @@
         { "ar": "هُمَزَةٍ", "ar_plain": "همزة", "translit": "humazatin", "en": "slanderer (gen.)" },
         { "ar": "لُمَزَةٍ", "ar_plain": "لمزة", "translit": "lumazatin", "en": "and mocker (gen.)" }
       ],
-      "available_roles": ["SUBJECT", "OBJECT", "PREPOSITION"],
-      "correct_roles": ["SUBJECT", "PREPOSITION", "OBJECT"],
+      "available_roles": ["SUBJECT", "OBJECT", "PREPOSITION", "ADJECTIVE", "PARTICLE"],
+      "correct_roles": ["SUBJECT", "PREPOSITION", "OBJECT", "ADJECTIVE"],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "وَيْلٌ = مَبْنِيّ (فعل ناقص of grief — مبتدأ). لِ = حرف جر (مَبْنِيّ). كُلِّ = مضاف (جر after لِ). هُمَزَةٍ = مضاف إليه (جر after كُلِّ). لُمَزَةٍ = بدل (apposition) also in جر.",

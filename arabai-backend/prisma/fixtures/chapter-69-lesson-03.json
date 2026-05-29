@@ -66,6 +66,18 @@
         "en": "The particle وا (or هَلْ) is used to call someone. In Quranic Arabic, الندبة is more commonly expressed through structures like يَا أَيُّهَا الَّذِينَ آمَنُوا than through وا alone.",
         "ur": "ذرہ وا (یا هَلْ) کسی کو بلانے کے لیے استعمال ہوتا ہے۔ قرآنی عربی میں، الندبة اکثر وا کے بجائے يَا أَيُّهَا الَّذِينَ آمَنُوا جیسی structures سے ظاہر ہوتا ہے۔"
       }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "الْجَوَابُ الْمُسْتَأْنَف — The Independent Jussive Response",
+        "ar": "الْجَوَابُ الْمُسْتَأْنَفُ",
+        "ur": "جواب متوالیا"
+      },
+      "explanation": {
+        "en": "When someone gives a command (imperative) and another person responds with a verb in the jussive, that response is called الْجَوَابُ الْمُسْتَأْنَف — it is independent, not connected to the command by a conjunction. Example: قُمْ → قُمْ (response).",
+        "ur": "جب کوئی حکم دے (امر) اور دوسرا شخص مجزوم میں فعل سے جواب دے، اسے الْجَوَابُ الْمُسْتَأْنَف کہتے ہیں — یہ آزاد ہے، حرف عطف سے command سے متصل نہیں۔ مثال: قُمْ → قُمْ (جواب)۔"
+      }
     }
   ],
   "exercises": [
@@ -113,11 +125,33 @@
         }
       ],
       "right_column": [
-        { "en": "ندبة — exclamatory noun", "ur": "ندبة — exclamatory noun" },
-        { "en": "ندبة — vocative with يَا", "ur": "ندبة — vocative with يَا" },
-        { "en": "جواب الطلب (conditional)", "ur": "جواب الطلب (شرطی)" }
+        {
+          "en": "ندبة — exclamatory noun",
+          "ur": "ندبة — exclamatory noun"
+        },
+        {
+          "en": "ندبة — vocative with يَا",
+          "ur": "ندبة — vocative with يَا"
+        },
+        {
+          "en": "جواب الطلب (conditional)",
+          "ur": "جواب الطلب (شرطی)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -131,10 +165,22 @@
         "ur": "ہر بدگو اور مکھرے کے لیے ہلاکت ہے۔"
       },
       "options": [
-        { "en": "Woe to every slanderer and mocker.", "ur": "ہر بدگو اور مکھرے کے لیے ہلاکت ہے۔" },
-        { "en": "The slanderers and mockers will be destroyed.", "ur": "بدگو اور مکھرے ہلاک ہوں گے۔" },
-        { "en": "Destruction is for the slanderers.", "ur": "بدگوؤں کے لیے تباہی ہے۔" },
-        { "en": "Woe, the slanderers are mocking.", "ur": "افسوس، بدگو مکھر رہے ہیں۔" }
+        {
+          "en": "Woe to every slanderer and mocker.",
+          "ur": "ہر بدگو اور مکھرے کے لیے ہلاکت ہے۔"
+        },
+        {
+          "en": "The slanderers and mockers will be destroyed.",
+          "ur": "بدگو اور مکھرے ہلاک ہوں گے۔"
+        },
+        {
+          "en": "Destruction is for the slanderers.",
+          "ur": "بدگوؤں کے لیے تباہی ہے۔"
+        },
+        {
+          "en": "Woe, the slanderers are mocking.",
+          "ur": "افسوس، بدگو مکھر رہے ہیں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -199,15 +245,65 @@
         "ur": "اے مومنین! اپنے ایمان کو مضبوطی سے پکڑو اور دھوکے میں مت پڑو۔"
       },
       "tiles": [
-        { "ar": "يَا", "ar_plain": "يا", "translit": "yaa", "en": "O", "ur": "اے" },
-        { "ar": "أَيُّهَا", "ar_plain": "ايها", "translit": "ayyuhaa", "en": "O (vocative)", "ur": "اے (ندا)" },
-        { "ar": "الْمُؤْمِنُونَ", "ar_plain": "المؤمنون", "translit": "al-mu'minuuna", "en": "the believers", "ur": "مومنین" },
-        { "ar": "اعْتَصِمُوا", "ar_plain": "اعتصموا", "translit": "i'tisimu", "en": "hold firmly", "ur": "مضبوطی سے پکڑو" },
-        { "ar": "بِدِينِكُمْ", "ar_plain": "بدينكم", "translit": "bidiinikum", "en": "to your religion", "ur": "اپنے دین سے" },
-        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "do not", "ur": "مت" },
-        { "ar": "تَضِلُّوا", "ar_plain": "تضلوا", "translit": "tadilluu", "en": "you go astray", "ur": "تم گمر ہو" }
+        {
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaa",
+          "en": "O",
+          "ur": "اے"
+        },
+        {
+          "ar": "أَيُّهَا",
+          "ar_plain": "ايها",
+          "translit": "ayyuhaa",
+          "en": "O (vocative)",
+          "ur": "اے (ندا)"
+        },
+        {
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minuuna",
+          "en": "the believers",
+          "ur": "مومنین"
+        },
+        {
+          "ar": "اعْتَصِمُوا",
+          "ar_plain": "اعتصموا",
+          "translit": "i'tisimu",
+          "en": "hold firmly",
+          "ur": "مضبوطی سے پکڑو"
+        },
+        {
+          "ar": "بِدِينِكُمْ",
+          "ar_plain": "بدينكم",
+          "translit": "bidiinikum",
+          "en": "to your religion",
+          "ur": "اپنے دین سے"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "do not",
+          "ur": "مت"
+        },
+        {
+          "ar": "تَضِلُّوا",
+          "ar_plain": "تضلوا",
+          "translit": "tadilluu",
+          "en": "you go astray",
+          "ur": "تم گمر ہو"
+        }
       ],
-      "correct_order": [0, 1, 2, 3, 4, 5, 6],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "xp_value": 1
     },
     {
@@ -220,7 +316,12 @@
         "en": "He destroys you",
         "ur": "وہ تمہیں ہلاک کرتا ہے"
       },
-      "options": ["ه ل ك", "ع ب د", "ن ص ر", "غ ف ر"],
+      "options": [
+        "ه ل ك",
+        "ع ب د",
+        "ن ص ر",
+        "غ ف ر"
+      ],
       "correct_index": 0,
       "xp_value": 1
     }
@@ -240,7 +341,9 @@
       "ur": "اور تمہیں اس کا مال اور اس کے بیٹے تمہیں اللہ کی طرف سے غافل نہ کریں۔ مگر اگر تم چاہو — مگر اگر تم چاہو — تو وہ تمہیں ہلاک کر دے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-fajr-017-mishary.mp3"
     },
-    "highlighted_word_indices": [9],
+    "highlighted_word_indices": [
+      9
+    ],
     "noor_explanation": {
       "en": "تَشَاءَ is مجزوم here after إِلَّا أَنْ — the exception particle. فَيُهْلِكُكَ is the conditional جواب الطلب. الندبة was covered briefly — ويل is the exclamatory noun for lamentation, grammatically independent.",
       "ur": "تَشَاءَ یہاں إِلَّا أَنْ کے بعد مجزوم ہے — exception particle۔ فَيُهْلِكُكَ شرطی جواب الطلب ہے۔ الندبة briefly cover ہوئی — ويل غم کا exclamatory noun ہے، grammatically آزاد۔"

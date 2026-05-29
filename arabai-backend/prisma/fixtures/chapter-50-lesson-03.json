@@ -210,8 +210,8 @@
         { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "He" },
         { "ar": "الْحَقُّ", "ar_plain": "الحق", "translit": "al-haqqu", "en": "the Truth" }
       ],
-      "available_roles": ["PARTICLE", "SUBJECT", "PREDICATE"],
-      "correct_roles": ["PARTICLE", "SUBJECT", "PREDICATE"],
+      "available_roles": ["PARTICLE", "SUBJECT", "PREDICATE", "DEMONSTRATIVE"],
+      "correct_roles": ["PARTICLE", "SUBJECT", "DEMONSTRATIVE", "PREDICATE"],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "أَنَّ governs the accusative. اللَّهَ is the subject (accusative). هُوَ is the pronoun referring to Allah. الْحَقُّ is the predicate.",

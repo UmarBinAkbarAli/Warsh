@@ -53,7 +53,38 @@
         "en": "A nominal sentence begins with a noun or pronoun (مُبْتَدَأٌ) and has a predicate (خَبَرٌ). Both are in the nominative case when both are single words. Example: اللَّهُ غَافِرٌ.",
         "ur": "A nominal sentence noun یا pronoun (مُبْتَدَأٌ) سے شروع ہوتی ہے اور ایک predicate (خَبَرٌ) رکھتی ہے۔ دونوں single words ہونے پر nominative case میں ہوتے ہیں۔ مثال: اللَّهُ غَافِرٌ۔"
       },
-      "introduces_vocab": { "ar_plain": "جملة" }
+      "introduces_vocab": {
+        "ar_plain": "جملة"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "خَبَرٌ",
+        "ar_plain": "خبر",
+        "translit": "khabarun",
+        "en": "predicate of a nominal sentence",
+        "ur": "nominal sentence کا predicate"
+      },
+      "explanation": {
+        "en": "The خَبَر is the predicate of a nominal sentence — it describes or defines the مُبْتَدَأٌ. Example: اللَّهُ غَافِرٌ — here غَافِرٌ is the خَبَر.",
+        "ur": "خَبَر ایک nominal sentence کا predicate ہے — یہ مُبْتَدَأٌ کو بیان یا تعریف کرتا ہے۔ مثال: اللَّهُ غَافِرٌ — یہاں غَافِرٌ خَبَر ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "خبر"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "كانَ وأخواتها — The incomplete/sister verbs",
+        "ar": "كَانَ وَأَخَوَاتُهَا — الأَفْعَالُ النَّاقِصَةُ",
+        "ur": "كَانَ اور اس کی بہنیں — نامکمل افعال"
+      },
+      "explanation": {
+        "en": "كانَ and its sisters (صارَ، أَصْبَحَ، أَمْسَى، ظَلَّ، etc.) are incomplete verbs — they need a subject (in nominative) and a predicate (in accusative). Example: كَانَ اللَّهُ غَافِرًا — subject اللَّهُ is nominative, predicate غَافِرًا is accusative.",
+        "ur": "كَانَ اور اس کی بہنیں (صارَ، أَصْبَحَ، أَمْسَى، ظَلَّ، وغیرہ) نامکمل افعال ہیں — انہیں ایک subject (nominative میں) اور ایک predicate (accusative میں) چاہیئے۔ مثال: كَانَ اللَّهُ غَافِرًا — subject اللَّهُ nominative میں، predicate غَافِرًا accusative میں۔"
+      }
     }
   ],
   "exercises": [
@@ -91,12 +122,41 @@
         }
       ],
       "right_column": [
-        { "en": "predicate", "ur": "predicate" },
-        { "en": "the incomplete verb 'was'", "ur": "نامکمل فعل 'تھا'" },
-        { "en": "subject of nominal sentence", "ur": "nominal sentence کا subject" },
-        { "en": "subject of verbal sentence", "ur": "verbal sentence کا subject" }
+        {
+          "en": "predicate",
+          "ur": "predicate"
+        },
+        {
+          "en": "the incomplete verb 'was'",
+          "ur": "نامکمل فعل 'تھا'"
+        },
+        {
+          "en": "subject of nominal sentence",
+          "ur": "nominal sentence کا subject"
+        },
+        {
+          "en": "subject of verbal sentence",
+          "ur": "verbal sentence کا subject"
+        }
       ],
-      "correct_pairs": [[0, 2], [1, 0], [2, 3], [3, 1]],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -129,7 +189,11 @@
           "ur": "صابر"
         }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1
     },
     {
@@ -214,8 +278,17 @@
           "en": "Forgiving"
         }
       ],
-      "available_roles": ["VERB", "SUBJECT", "OBJECT", "PREDICATE"],
-      "correct_roles": ["VERB", "SUBJECT", "PREDICATE"],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT",
+        "PREDICATE"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "PREDICATE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "كَانَ (incomplete verb), اللَّهُ (subject in nominative), غَافِرًا (predicate in accusative).",
@@ -233,10 +306,22 @@
         "ur": "کتاب میز پر ہے"
       },
       "options": [
-        { "en": "The book is on the desk", "ur": "کتاب میز پر ہے" },
-        { "en": "The book is useful", "ur": "کتاب مفید ہے" },
-        { "en": "The useful book", "ur": "مفید کتاب" },
-        { "en": "The book was on the desk", "ur": "کتاب میز پر تھی" }
+        {
+          "en": "The book is on the desk",
+          "ur": "کتاب میز پر ہے"
+        },
+        {
+          "en": "The book is useful",
+          "ur": "کتاب مفید ہے"
+        },
+        {
+          "en": "The useful book",
+          "ur": "مفید کتاب"
+        },
+        {
+          "en": "The book was on the desk",
+          "ur": "کتاب میز پر تھی"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -289,7 +374,9 @@
       "ur": "بے شک آسمانوں اور زمین کی تخلیق میں اور رات اور دن کے alternate ہونے میں عقل والوں کے لیے نشانیاں ہیں۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-164-mishary.mp3"
     },
-    "highlighted_word_indices": [4],
+    "highlighted_word_indices": [
+      4
+    ],
     "noor_explanation": {
       "en": "لَآيَاتٍ — 'signs.' This is the خَبَر of an implied subject. لِأُولِي الْأَلْبَابِ is a prepositional phrase 'for those of understanding.' This ayah is full of إضاافة chains and nominal structures.",
       "ur": "لَآيَاتٍ — 'نشانیاں'۔ یہ ایک implied subject کا خَبَر ہے۔ لِأُولِي الْأَلْبَابِ ایک prepositional phrase ہے 'عقل والوں کے لیے'۔ یہ آیت إضافہ chains اور nominal structures سے بھری ہوئی ہے۔"

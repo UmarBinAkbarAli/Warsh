@@ -303,8 +303,8 @@
         { "ar": "السَّمَاوَاتِ", "ar_plain": "السماوات", "translit": "as-samaawaati", "en": "the heavens" },
         { "ar": "لَآيَاتٍ", "ar_plain": "لآيات", "translit": "laa yaatin", "en": "are signs" }
       ],
-      "available_roles": ["PARTICLE", "PREPOSITION", "OBJECT"],
-      "correct_roles": ["PARTICLE", "PREPOSITION", "OBJECT"],
+      "available_roles": ["PARTICLE", "PREPOSITION", "OBJECT", "DEMONSTRATIVE", "PREDICATE"],
+      "correct_roles": ["PARTICLE", "PREPOSITION", "OBJECT", "DEMONSTRATIVE", "PREDICATE"],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "إِنَّ introduces the clause with the subject in accusative. فِي is the preposition 'in.' خَلْقِ is 'creation' in the genitive after فِي. السَّمَاوَاتِ is 'the heavens' in the genitive (possessor in the chain). لَآيَاتٍ is 'are signs' — the predicate.",

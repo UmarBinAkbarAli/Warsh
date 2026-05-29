@@ -145,12 +145,41 @@
         }
       ],
       "right_column": [
-        { "en": "لَمْ — past negation → jussive", "ur": "لَمْ — ماضی انکار → مجزوم" },
-        { "en": "لَمَّا — not yet → jussive", "ur": "لَمَّا — ابھی تک نہیں → مجزوم" },
-        { "en": "لَا الناهية — prohibition → jussive", "ur": "لَا الناهية — ممنوعہ → مجزوم" },
-        { "en": "لام الأمر — command → jussive", "ur": "لام الأمر — حکم → مجزوم" }
+        {
+          "en": "لَمْ — past negation → jussive",
+          "ur": "لَمْ — ماضی انکار → مجزوم"
+        },
+        {
+          "en": "لَمَّا — not yet → jussive",
+          "ur": "لَمَّا — ابھی تک نہیں → مجزوم"
+        },
+        {
+          "en": "لَا الناهية — prohibition → jussive",
+          "ur": "لَا الناهية — ممنوعہ → مجزوم"
+        },
+        {
+          "en": "لام الأمر — command → jussive",
+          "ur": "لام الأمر — حکم → مجزوم"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -164,10 +193,22 @@
         "ur": "اس نے انہیں بخشا نہیں اور نہ ان پر رحم کیا۔"
       },
       "options": [
-        { "en": "He did not forgive them and He did not have mercy upon them.", "ur": "اس نے انہیں بخشا نہیں اور نہ ان پر رحم کیا۔" },
-        { "en": "He will not forgive them and will not have mercy upon them.", "ur": "وہ انہیں بخشے گا نہیں اور نہ ان پر رحم کرے گا۔" },
-        { "en": "Do not forgive them and do not have mercy upon them.", "ur": "انہیں مت بخشو اور نہ ان پر رحم کرو۔" },
-        { "en": "They did not forgive them and did not have mercy upon them.", "ur": "انہوں نے انہیں بخشا نہیں اور نہ ان پر رحم کیا۔" }
+        {
+          "en": "He did not forgive them and He did not have mercy upon them.",
+          "ur": "اس نے انہیں بخشا نہیں اور نہ ان پر رحم کیا۔"
+        },
+        {
+          "en": "He will not forgive them and will not have mercy upon them.",
+          "ur": "وہ انہیں بخشے گا نہیں اور نہ ان پر رحم کرے گا۔"
+        },
+        {
+          "en": "Do not forgive them and do not have mercy upon them.",
+          "ur": "انہیں مت بخشو اور نہ ان پر رحم کرو۔"
+        },
+        {
+          "en": "They did not forgive them and did not have mercy upon them.",
+          "ur": "انہوں نے انہیں بخشا نہیں اور نہ ان پر رحم کیا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -249,17 +290,65 @@
         "ur": "غافلوں میں سے مت ہو! کافروں میں سے مت ہو!"
       },
       "tiles": [
-        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "do not", "ur": "مت" },
-        { "ar": "تَكُونُوا", "ar_plain": "تكونوا", "translit": "takuunu", "en": "you be", "ur": "تم ہو" },
-        { "ar": "مِنَ", "ar_plain": "من", "translit": "mina", "en": "from", "ur": "میں سے" },
-        { "ar": "الْغَافِلِينَ", "ar_plain": "الغافلين", "translit": "al-ghaafiliina",
-          "en": "the heedless", "ur": "غافل" },
-        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "do not", "ur": "مت" },
-        { "ar": "مِنَ", "ar_plain": "من", "translit": "mina", "en": "from", "ur": "میں سے" },
-        { "ar": "الْكَافِرِينَ", "ar_plain": "الكافرين", "translit": "al-kaafiriina",
-          "en": "the disbelievers", "ur": "کافر" }
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "do not",
+          "ur": "مت"
+        },
+        {
+          "ar": "تَكُونُوا",
+          "ar_plain": "تكونوا",
+          "translit": "takuunu",
+          "en": "you be",
+          "ur": "تم ہو"
+        },
+        {
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "میں سے"
+        },
+        {
+          "ar": "الْغَافِلِينَ",
+          "ar_plain": "الغافلين",
+          "translit": "al-ghaafiliina",
+          "en": "the heedless",
+          "ur": "غافل"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "do not",
+          "ur": "مت"
+        },
+        {
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "میں سے"
+        },
+        {
+          "ar": "الْكَافِرِينَ",
+          "ar_plain": "الكافرين",
+          "translit": "al-kaafiriina",
+          "en": "the disbelievers",
+          "ur": "کافر"
+        }
       ],
-      "correct_order": [0, 1, 2, 3, 4, 1, 5, 6],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "xp_value": 1
     },
     {
@@ -267,14 +356,55 @@
       "id": "ch68-l03-ex06",
       "sentence_ar": "لَمْ يَغْفِرْ لَهُمْ وَلَمْ يَتَرَحَّمْ عَلَيْهِمْ",
       "words": [
-        { "ar": "لَمْ", "ar_plain": "لم", "translit": "lam", "en": "did not", "ur": "نہیں" },
-        { "ar": "يَغْفِرْ", "ar_plain": "يغفر", "translit": "yaghfir", "en": "he forgives", "ur": "وہ بخشتا ہے" },
-        { "ar": "لَهُمْ", "ar_plain": "لهم", "translit": "lahum", "en": "for them", "ur": "ان کے لیے" },
-        { "ar": "وَلَمْ", "ar_plain": "ولم", "translit": "wa lam", "en": "and did not", "ur": "اور نہیں" },
-        { "ar": "يَتَرَحَّمْ", "ar_plain": "يرحم", "translit": "yarham", "en": "he has mercy", "ur": "وہ رحم کرتا ہے" }
+        {
+          "ar": "لَمْ",
+          "ar_plain": "لم",
+          "translit": "lam",
+          "en": "did not",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "يَغْفِرْ",
+          "ar_plain": "يغفر",
+          "translit": "yaghfir",
+          "en": "he forgives",
+          "ur": "وہ بخشتا ہے"
+        },
+        {
+          "ar": "لَهُمْ",
+          "ar_plain": "لهم",
+          "translit": "lahum",
+          "en": "for them",
+          "ur": "ان کے لیے"
+        },
+        {
+          "ar": "وَلَمْ",
+          "ar_plain": "ولم",
+          "translit": "wa lam",
+          "en": "and did not",
+          "ur": "اور نہیں"
+        },
+        {
+          "ar": "يَتَرَحَّمْ",
+          "ar_plain": "يرحم",
+          "translit": "yarham",
+          "en": "he has mercy",
+          "ur": "وہ رحم کرتا ہے"
+        }
       ],
-      "available_roles": ["PARTICLE", "VERB", "OBJECT", "PREPOSITION"],
-      "correct_roles": ["PARTICLE", "VERB", "OBJECT", "PARTICLE", "VERB"],
+      "available_roles": [
+        "PARTICLE",
+        "VERB",
+        "OBJECT",
+        "PREPOSITION"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VERB",
+        "OBJECT",
+        "PARTICLE",
+        "VERB"
+      ],
       "xp_value": 1
     },
     {
@@ -288,10 +418,22 @@
         "ur": "اور جب وہ اس کے ساتھ کوشش تک پہنچا تو اس نے کہا اے میرے بیٹے! بیشک میں خواب میں دیکھتا ہوں کہ میں تمہیں ذبح کر رہا ہوں۔"
       },
       "options": [
-        { "en": "And when he reached with him his effort, he said, 'O my son, indeed I see in a dream that I am sacrificing you.'", "ur": "اور جب وہ اس کے ساتھ کوشش تک پہنچا تو اس نے کہا اے میرے بیٹے! بیشک میں خواب میں دیکھتا ہوں کہ میں تمہیں ذبح کر رہا ہوں۔" },
-        { "en": "So when he did not reach with him his effort, he said, 'O my son, I see in a dream that I sacrifice you.'", "ur": "تو جب اس نے اس کے ساتھ کوشش تک نہیں پہنچا تو اس نے کہا اے میرے بیٹے! میں خواب میں دیکھتا ہوں کہ میں تمہیں ذبح کرتا ہوں۔" },
-        { "en": "And when he has not yet reached his effort, he says, 'O my son, I see in a dream that I sacrifice you.'", "ur": "اور جب وہ ابھی تک اپنی کوشش تک نہیں پہنچا ہے تو وہ کہتا ہے اے میرے بیٹے! میں خواب میں دیکھتا ہوں کہ میں تمہیں ذبح کرتا ہوں۔" },
-        { "en": "And if he does not reach with him his effort, he says, 'O my son, I see in a dream that I sacrifice you.'", "ur": "اور اگر وہ اس کے ساتھ کوشش تک نہیں پہنچتا تو وہ کہتا ہے اے میرے بیٹے! میں خواب میں دیکھتا ہوں کہ میں تمہیں ذبح کرتا ہوں۔" }
+        {
+          "en": "And when he reached with him his effort, he said, 'O my son, indeed I see in a dream that I am sacrificing you.'",
+          "ur": "اور جب وہ اس کے ساتھ کوشش تک پہنچا تو اس نے کہا اے میرے بیٹے! بیشک میں خواب میں دیکھتا ہوں کہ میں تمہیں ذبح کر رہا ہوں۔"
+        },
+        {
+          "en": "So when he did not reach with him his effort, he said, 'O my son, I see in a dream that I sacrifice you.'",
+          "ur": "تو جب اس نے اس کے ساتھ کوشش تک نہیں پہنچا تو اس نے کہا اے میرے بیٹے! میں خواب میں دیکھتا ہوں کہ میں تمہیں ذبح کرتا ہوں۔"
+        },
+        {
+          "en": "And when he has not yet reached his effort, he says, 'O my son, I see in a dream that I sacrifice you.'",
+          "ur": "اور جب وہ ابھی تک اپنی کوشش تک نہیں پہنچا ہے تو وہ کہتا ہے اے میرے بیٹے! میں خواب میں دیکھتا ہوں کہ میں تمہیں ذبح کرتا ہوں۔"
+        },
+        {
+          "en": "And if he does not reach with him his effort, he says, 'O my son, I see in a dream that I sacrifice you.'",
+          "ur": "اور اگر وہ اس کے ساتھ کوشش تک نہیں پہنچتا تو وہ کہتا ہے اے میرے بیٹے! میں خواب میں دیکھتا ہوں کہ میں تمہیں ذبح کرتا ہوں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -310,7 +452,12 @@
         "en": "he has mercy",
         "ur": "وہ رحم کرتا ہے"
       },
-      "options": ["ر ح م", "ع ف و", "غ ف ر", "ج ن ب"],
+      "options": [
+        "ر ح م",
+        "ع ف و",
+        "غ ف ر",
+        "ج ن ب"
+      ],
       "correct_index": 0,
       "xp_value": 1
     }
@@ -330,7 +477,9 @@
       "ur": "اس نے کہا اے میرے باپ! جو حکم دیا گیا ہے وہ کرو۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/as-saffat-102-mishary.mp3"
     },
-    "highlighted_word_indices": [16],
+    "highlighted_word_indices": [
+      16
+    ],
     "noor_explanation": {
       "en": "تُؤْمَرُ is المضارع مجزوم because لام الأمر (implied before the command) governs it. This is one verb in the complete jussive system. All four triggers — لَمْ, لَمَّا, لَا الناهية, لام الأمر — cause the same grammatical result on the المضارع.",
       "ur": "تُؤْمَرُ لام الأمر (حکم سے پہلے محذوف) کی وجہ سے مجزوم ہے۔ یہ مکمل مجزوم نظام میں ایک فعل ہے۔ چاروں triggers — لَمْ, لَمَّا, لَا الناهية, لام الأمر — المضارع پر وہی grammatical نتیجہ cause کرتے ہیں۔"

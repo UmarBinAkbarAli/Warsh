@@ -55,17 +55,24 @@
     },
     {
       "type": "CONTRAST",
-      "text": {
-        "ar": "مُوسَى (مَقْصُور) ← الْقَاضِي (مَنْقُوص)",
-        "ar_plain": "موسى <> القاضي",
-        "translit": "moosaa <> al-qaadhee",
-        "en": "Maqsur vs Munqas",
-        "ur": "مقصور بمقابلہ منقوص"
-      },
       "explanation": {
         "en": "مُوسَى: the ى is in the root (م-و-س-ى). الْقَاضِي: the ي is the fourth letter (ق-ا-ض-ي). In مُوسَى, the alif stays; in الْقَاضِي, the ي drops in nominative. This is the key distinction between المقصور and المنقوص.",
         "ur": "مُوسَى: ى مادے میں ہے (م-و-س-ى)۔ الْقَاضِي: ي چوتھا حرف ہے (ق-ا-ض-ي)۔ مُوسَى میں الف رہتی ہے؛ الْقَاضِي میں ي رفع میں گر جاتی ہے۔"
-      }
+      },
+      "examples": [
+        {
+          "ar": "مُوسَى (مَقْصُور)",
+          "ar_plain": "موسى",
+          "translit": "moosaa",
+          "en": "Musa — alif maqsura, stays in رفع"
+        },
+        {
+          "ar": "الْقَاضِي (مَنْقُوص)",
+          "ar_plain": "القاضي",
+          "translit": "al-qaadhee",
+          "en": "The judge — ي drops in رفع"
+        }
+      ]
     },
     {
       "type": "EXAMPLE",
@@ -132,12 +139,12 @@
         { "ar": "الْهَادِي (رفع)", "ar_plain": "الهادي", "translit": "al-haadiy", "en": "the guide (nom.)" }
       ],
       "right_column": [
-        { "en": "مَقْصُور — alif stays in رفع", "ur": "مقصور — الف رفع میں رہتی ہے" },
-        { "en": "مَنْقُوص — ي drops in رفع", "ur": "منقوص — ي رفع میں گر جاتی ہے" },
-        { "en": "مَقْصُور — alif stays in رفع", "ur": "مقصور — الف رفع میں رہتی ہے" },
-        { "en": "مَنْقُوص — ي drops in رفع", "ur": "منقوص — ي رفع میں گر جاتی ہے" }
+        { "en": "مُوسَى — alif maqsura stays in رفع", "ur": "مُوسَى — الف مقصورہ رہتی ہے" },
+        { "en": "الْقَاضِي — ي drops in رفع (منقوص)", "ur": "الْقَاضِي — ي گر جاتی ہے (منقوص)" },
+        { "en": "عِيسَى — alif maqsura stays in رفع", "ur": "عِيسَى — الف مقصورہ رہتی ہے" },
+        { "en": "الْهَادِي — ي drops in رفع (منقوص)", "ur": "الْهَادِي — ي گر جاتی ہے (منقوص)" }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 0], [3, 1]],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "مُوسَى and عِيسَى are المقصور (ى is part of the root, alif stays). الْقَاضِي and الْهَادِي are المنقوص (ي is the fourth letter, drops in رفع).",
@@ -148,7 +155,7 @@
       "id": "ch56-l06-ex03",
       "type": "FILL_BLANK",
       "mode": "TAP",
-      "sentence_ar": "رَأَيْتُ مُوسَى وَالْقَاضِيَ فِي __",
+      "sentence_ar": "رَأَيْتُ مُوسَى وَالْقَاضِيَ فِي ___",
       "hint": {
         "en": "I saw Musa and the judge in the house.",
         "ur": "میں نے موسیٰ اور قاضی کو گھر میں دیکھا۔"
@@ -239,7 +246,7 @@
         { "ar": "الْقَاضِي", "ar_plain": "القاضي", "translit": "al-qaadhee", "en": "the judge" },
         { "ar": "مُسْلِمَانِ", "ar_plain": "مسلمان", "translit": "muslimaani", "en": "two Muslims" }
       ],
-      "available_roles": ["SUBJECT", "OBJECT", "ADJECTIVE"],
+      "available_roles": ["SUBJECT", "OBJECT", "ADJECTIVE", "VERB", "CONJUNCTION"],
       "correct_roles": ["SUBJECT", "CONJUNCTION", "SUBJECT", "ADJECTIVE"],
       "xp_value": 1,
       "explanation_on_wrong": {
@@ -285,7 +292,7 @@
       "ur": "اس نے کہا، 'prison میں سے ایک آدمی نے کہا، میں نے دیکھا...'",
       "audio_url": "https://cdn.warsh.app/audio/quran/yusuf-036-mishary.mp3"
     },
-    "highlighted_word_indices": [],
+    "highlighted_word_indices": [0],
     "noor_explanation": {
       "en": "This ayah contains آوَانِ — 'prison' (آوَان is not المقصور or المنقوص; it is a regular noun with the alif as a natural part of the root آ-و-ن). The ayah demonstrates that recognizing مقصور vs منقوص requires knowing the root structure of each word — this comes with practice and exposure to Quranic Arabic.",
       "ur": "یہ آیت آوَانِ (prison) دکھاتی ہے — یہ مقصور یا منقوص نہیں؛ یہ ایک عام noun ہے۔ مقصور اور منقوص کو پہچاننے کے لیے ہر لفظ کی root structure جاننا ضروری ہے۔"

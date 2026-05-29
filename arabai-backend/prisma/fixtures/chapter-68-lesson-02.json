@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "template": "VERB_PATTERN",
+  "template": "STANDARD",
   "_meta": {
     "_note": "Chapter 68, Lesson 2 — VERB_PATTERN: Jussive conjugation for لام الأمر (command particle).",
     "chapter_order": 68,
@@ -82,96 +82,6 @@
       }
     }
   ],
-  "conjugation_table": {
-    "root": "ق ت ل",
-    "pattern_name": {
-      "en": "Command form (لام الأمر) — Jussive",
-      "ar": "فعل الأمر — الْمَجْزُومُ",
-      "ur": "حکم کا فعل — مجزوم"
-    },
-    "rows": [
-      {
-        "pronoun": {
-          "ar": "أَنْتَ",
-          "ar_plain": "انت",
-          "translit": "anta",
-          "en": "you (masc. sing.)",
-          "ur": "تم (مذکر واحد)"
-        },
-        "conjugated": {
-          "ar": "اقْتُلْ",
-          "ar_plain": "اقتل",
-          "translit": "iqtul",
-          "en": "kill!",
-          "ur": "مار!"
-        }
-      },
-      {
-        "pronoun": {
-          "ar": "أَنْتِ",
-          "ar_plain": "انت",
-          "translit": "anti",
-          "en": "you (fem. sing.)",
-          "ur": "تم (مؤنث واحد)"
-        },
-        "conjugated": {
-          "ar": "اقْتُلِي",
-          "ar_plain": "اقتل",
-          "translit": "iqtulii",
-          "en": "kill! (fem.)",
-          "ur": "مار!"
-        }
-      },
-      {
-        "pronoun": {
-          "ar": "أَنْتُمَا",
-          "ar_plain": "انتما",
-          "translit": "antumaa",
-          "en": "you two (dual)",
-          "ur": "تم دو (جفت)"
-        },
-        "conjugated": {
-          "ar": "اقْتُلَا",
-          "ar_plain": "اقتل",
-          "translit": "iqtulaa",
-          "en": "kill! (dual)",
-          "ur": "مارو!"
-        }
-      },
-      {
-        "pronoun": {
-          "ar": "أَنْتُمْ",
-          "ar_plain": "انتم",
-          "translit": "antum",
-          "en": "you (masc. pl.)",
-          "ur": "تم (مذکر جمع)"
-        },
-        "conjugated": {
-          "ar": "اقْتُلُوا",
-          "ar_plain": "اقتلوا",
-          "translit": "iqtuluu",
-          "en": "kill! (pl.)",
-          "ur": "مارو!"
-        }
-      },
-      {
-        "pronoun": {
-          "ar": "أَنْتُمْ",
-          "ar_plain": "انتن",
-          "translit": "antunna",
-          "en": "you (fem. pl.)",
-          "ur": "تم (مؤنث جمع)"
-        },
-        "conjugated": {
-          "ar": "اقْتُلْنَ",
-          "ar_plain": "اقتلن",
-          "translit": "iqtulna",
-          "en": "kill! (fem. pl.)",
-          "ur": "مارو!"
-        }
-      }
-    ]
-  },
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
@@ -184,10 +94,22 @@
         "ur": "اللہ سے ڈرو۔"
       },
       "options": [
-        { "en": "Fear Allah.", "ur": "اللہ سے ڈرو۔" },
-        { "en": "I fear Allah.", "ur": "میں اللہ سے ڈرتا ہوں۔" },
-        { "en": "They fear Allah.", "ur": "وہ اللہ سے ڈرتے ہیں۔" },
-        { "en": "Fear them.", "ur": "ان سے ڈرو۔" }
+        {
+          "en": "Fear Allah.",
+          "ur": "اللہ سے ڈرو۔"
+        },
+        {
+          "en": "I fear Allah.",
+          "ur": "میں اللہ سے ڈرتا ہوں۔"
+        },
+        {
+          "en": "They fear Allah.",
+          "ur": "وہ اللہ سے ڈرتے ہیں۔"
+        },
+        {
+          "en": "Fear them.",
+          "ur": "ان سے ڈرو۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -254,13 +176,49 @@
         }
       ],
       "right_column": [
-        { "en": "أَنْتَ (masc. sing.)", "ur": "أَنْتَ (مذکر واحد)" },
-        { "en": "أَنْتِ (fem. sing.)", "ur": "أَنْتِ (مؤنث واحد)" },
-        { "en": "أَنْتُمَا (dual)", "ur": "أَنْتُمَا (جفت)" },
-        { "en": "أَنْتُمْ (masc. pl.)", "ur": "أَنْتُمْ (مذکر جمع)" },
-        { "en": "أَنْتُنَّ (fem. pl.)", "ur": "أَنْتُنَّ (مؤنث جمع)" }
+        {
+          "en": "أَنْتَ (masc. sing.)",
+          "ur": "أَنْتَ (مذکر واحد)"
+        },
+        {
+          "en": "أَنْتِ (fem. sing.)",
+          "ur": "أَنْتِ (مؤنث واحد)"
+        },
+        {
+          "en": "أَنْتُمَا (dual)",
+          "ur": "أَنْتُمَا (جفت)"
+        },
+        {
+          "en": "أَنْتُمْ (masc. pl.)",
+          "ur": "أَنْتُمْ (مذکر جمع)"
+        },
+        {
+          "en": "أَنْتُنَّ (fem. pl.)",
+          "ur": "أَنْتُنَّ (مؤنث جمع)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3], [4, 4]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -319,14 +277,57 @@
         "ur": "اے مومنین! کافروں کی پیروی مت کرو!"
       },
       "tiles": [
-        { "ar": "يَا", "ar_plain": "يا", "translit": "yaa", "en": "O", "ur": "اے" },
-        { "ar": "أَيُّهَا", "ar_plain": "ايها", "translit": "ayyuhaa", "en": "O (vocative)", "ur": "اے (ندا)" },
-        { "ar": "الْمُؤْمِنُونَ", "ar_plain": "المؤمنون", "translit": "al-mu'minuuna", "en": "the believers", "ur": "مومنین" },
-        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "do not", "ur": "مت" },
-        { "ar": "تَتَّبِعُوا", "ar_plain": "تتبعوا", "translit": "tattabi'u", "en": "you follow", "ur": "تم پیروی کرتے ہو" },
-        { "ar": "الْكَافِرِينَ", "ar_plain": "الكافرين", "translit": "al-kaafiriina", "en": "the disbelievers", "ur": "کافر" }
+        {
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaa",
+          "en": "O",
+          "ur": "اے"
+        },
+        {
+          "ar": "أَيُّهَا",
+          "ar_plain": "ايها",
+          "translit": "ayyuhaa",
+          "en": "O (vocative)",
+          "ur": "اے (ندا)"
+        },
+        {
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minuuna",
+          "en": "the believers",
+          "ur": "مومنین"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "do not",
+          "ur": "مت"
+        },
+        {
+          "ar": "تَتَّبِعُوا",
+          "ar_plain": "تتبعوا",
+          "translit": "tattabi'u",
+          "en": "you follow",
+          "ur": "تم پیروی کرتے ہو"
+        },
+        {
+          "ar": "الْكَافِرِينَ",
+          "ar_plain": "الكافرين",
+          "translit": "al-kaafiriina",
+          "en": "the disbelievers",
+          "ur": "کافر"
+        }
       ],
-      "correct_order": [0, 1, 2, 3, 4, 5],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
       "xp_value": 1
     },
     {
@@ -334,14 +335,56 @@
       "id": "ch68-l02-ex06",
       "sentence_ar": "اتَّقِ اللَّهَ وَلَا تُطِعِ الْكَافِرِينَ",
       "words": [
-        { "ar": "اتَّقِ", "ar_plain": "اتق", "translit": "ittaqi", "en": "fear (command)", "ur": "ڈرو (حکم)" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "Allaha", "en": "Allah", "ur": "اللہ" },
-        { "ar": "وَلَا", "ar_plain": "ولا", "translit": "wa laa", "en": "and do not", "ur": "اور مت" },
-        { "ar": "تُطِعِ", "ar_plain": "تطع", "translit": "tut'i", "en": "you obey", "ur": "تم听话 کرو" },
-        { "ar": "الْكَافِرِينَ", "ar_plain": "الكافرين", "translit": "al-kaafiriina", "en": "the disbelievers", "ur": "کافر" }
+        {
+          "ar": "اتَّقِ",
+          "ar_plain": "اتق",
+          "translit": "ittaqi",
+          "en": "fear (command)",
+          "ur": "ڈرو (حکم)"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "Allaha",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "وَلَا",
+          "ar_plain": "ولا",
+          "translit": "wa laa",
+          "en": "and do not",
+          "ur": "اور مت"
+        },
+        {
+          "ar": "تُطِعِ",
+          "ar_plain": "تطع",
+          "translit": "tut'i",
+          "en": "you obey",
+          "ur": "تم听话 کرو"
+        },
+        {
+          "ar": "الْكَافِرِينَ",
+          "ar_plain": "الكافرين",
+          "translit": "al-kaafiriina",
+          "en": "the disbelievers",
+          "ur": "کافر"
+        }
       ],
-      "available_roles": ["VERB", "SUBJECT", "OBJECT", "PARTICLE", "PREPOSITION"],
-      "correct_roles": ["VERB", "OBJECT", "PARTICLE", "VERB", "OBJECT"],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT",
+        "PARTICLE",
+        "PREPOSITION"
+      ],
+      "correct_roles": [
+        "VERB",
+        "OBJECT",
+        "PARTICLE",
+        "VERB",
+        "OBJECT"
+      ],
       "xp_value": 1
     },
     {
@@ -354,7 +397,12 @@
         "en": "fear (command)",
         "ur": "ڈرو (حکم)"
       },
-      "options": ["و ق ي", "ع ب د", "ش ك ر", "ن ص ر"],
+      "options": [
+        "و ق ي",
+        "ع ب د",
+        "ش ك ر",
+        "ن ص ر"
+      ],
       "correct_index": 0,
       "xp_value": 1
     }
@@ -374,7 +422,9 @@
       "ur": "اے نبی! اللہ سے ڈرو اور کافروں اور منافقوں کی ن听话 نہ کرو۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-ahzab-001-mishary.mp3"
     },
-    "highlighted_word_indices": [4],
+    "highlighted_word_indices": [
+      4
+    ],
     "noor_explanation": {
       "en": "اتَّقِ is the jussive command form. The لام الأمر is implied — [لام الأمر] اتَّقِ → اتَّقِ. The verb takes jussive because لام الأمر (even when invisible) always governs jussive. The paradigm: اقْتُلْ, اقْتُلِي, اقْتُلَا, اقْتُلُوا, اقْتُلْنَ.",
       "ur": "اتَّقِ مجزوم حکم کا روپ ہے۔ لام الأمر محذوف ہے — [لام الأمر] اتَّقِ → اتَّقِ۔ فعل مجزوم ہوتا ہے کیونکہ لام الأمر (خواہ visible ہو یا invisible) ہمیشہ مجزوم govern کرتا ہے۔ paradigm: اقْتُلْ, اقْتُلِي, اقْتُلَا, اقْتُلُوا, اقْتُلْنَ۔"

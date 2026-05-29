@@ -17,8 +17,7 @@
       "label": "Al-Mulk 67:2",
       "ar": "الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًا وَلَهُ الْعِزَّةُ وَلَهُ الْمَثَلُ الْأَعْلَىٰ وَلَهُ الْعِزَّةُ وَلَهُ الْعِزَّةُ وَلَهُ الْعِزَّةُ",
       "en": "He who created death and life so that He may test you — which of you is best in deed. And to Him belongs the might and to Him belongs the supreme example.",
-      "ur": "جس نے موت اور زندگی پیدا کی تاکہ وہ تمہیں آزمائے — تم میں سے کون کارہائے نیک میں بہتر ہے۔ اور اسی کے لیے عزت ہے اور اسی کے لیے بلند وصف ہے۔",
-      "audio_url": ""
+      "ur": "جس نے موت اور زندگی پیدا کی تاکہ وہ تمہیں آزمائے — تم میں سے کون کارہائے نیک میں بہتر ہے۔ اور اسی کے لیے عزت ہے اور اسی کے لیے بلند وصف ہے۔"
     },
     "noor_intro": {
       "ar": "In Arabic, you can describe HOW someone does something by using a special noun in the accusative case — the الْحَال. It answers: 'In what state/ manner?' Today we discover this powerful tool.",
@@ -29,224 +28,353 @@
   },
   "discover_cards": [
     {
-      "term_ar": "الْحَال",
-      "term_en": "The Descriptive Accusative / State",
+      "type": "WORD",
+      "text": {
+        "ar": "الْحَال",
+        "ar_plain": "الحال",
+        "translit": "al-haal",
+        "en": "The Descriptive Accusative / State"
+      },
       "definition_ar": "اسم منصوب يبين هيئة صاحب الحال عند حدوث الفعل",
       "definition_en": "A noun in the accusative that describes the state/condition of the subject when the action occurs",
       "example_ar": "جاء زيدٌ ضَاحِكًا — Zayd came while laughing",
       "example_en": "The accusative ضَاحِكًا tells us HOW Zayd came — in a laughing state",
-      "example_ur": "نصب میں 'ضحکًا' ہمیں بتاتا ہے کہ زید کیسے آیا — ایک ہنستے ہوئے حالت میں",
       "highlight": true
     },
     {
-      "term_ar": "صاحب الْحَال",
-      "term_en": "The Possessor of the State",
-      "definition_ar": "الاسم الذي يتصف بالحال عند حدوث الفعل",
-      "definition_en": "The noun that is described by the حال when the action occurs",
-      "example_ar": "في \"جاء زيدٌ ضَاحِكًا\" — زيدٌ هو صاحب الحال",
-      "example_en": "In 'Zayd came laughing', Zayd is the one in the state (possessor of the state)",
-      "example_ur": "'زید ہنستے ہوئے آیا' میں — زید صاحب الحال ہے"
+      "type": "CONCEPT",
+      "concept": {
+        "ar": "صاحب الْحَال",
+        "en": "The Possessor of the State"
+      },
+      "explanation": {
+        "en": "The noun that is described by the حال when the action occurs",
+        "ar": "الاسم الذي يتصف بالحال عند حدوث الفعل",
+        "example_ar": "في \"جاء زيدٌ ضَاحِكًا\" — زيدٌ هو صاحب الحال"
+      }
     },
     {
-      "term_ar": "هيئة",
-      "term_en": "State / Manner",
-      "definition_ar": "كيفية حدوث الفعل — ما عليه صاحب الحال",
-      "definition_en": "The manner/condition in which the action occurs — what the subject is like during the action",
-      "example_ar": "ضاحكًا = في هيئة الضحك — in the state of laughing",
-      "example_en": "ضاحكًا literally means 'in the manner/state of laughing'",
-      "example_ur": "ضحکًا کا مطلب ہے 'ہنے کی حالت میں'"
+      "type": "CONCEPT",
+      "concept": {
+        "ar": "هيئة",
+        "en": "State / Manner"
+      },
+      "explanation": {
+        "en": "The manner/condition in which the action occurs — what the subject is like during the action",
+        "ar": "كيفية حدوث الفعل — ما عليه صاحب الحال",
+        "example_ar": "ضاحكًا = في هيئة الضحك — in the state of laughing"
+      }
     },
     {
-      "term_ar": "مُؤَكَّد",
-      "term_en": "الحال المؤكد — Emphatic State",
-      "definition_ar": "الحال يؤكد معنى الفعل أو يبين كيفية حصوله",
-      "definition_en": "The حال confirms or clarifies the action's nature",
-      "example_ar": "خرجَ الْمُسْلِمُونَ مُسْتَعْمِرِينَ — The Muslims went out as conquerors/colonizers",
-      "example_en": "The Muslims went out in the state of being conquerors — the حال shows their identity during the exit",
-      "example_ur": "مسلمان بااقتدار نکلے — حال ان کی پہچان دکھاتا ہے"
+      "type": "CONCEPT",
+      "concept": {
+        "ar": "مُؤَكَّد",
+        "en": "الحال المؤكد — Emphatic State"
+      },
+      "explanation": {
+        "en": "The حال confirms or clarifies the action's nature",
+        "ar": "الحال يؤكد معنى الفعل أو يبين كيفية حصوله",
+        "example_ar": "خرجَ الْمُسْلِمُونَ مُسْتَعْمِرِينَ — The Muslims went out as conquerors"
+      }
     },
     {
-      "term_ar": "مُشبَّه",
-      "term_en": "الحال المشبه — Resembled State",
-      "definition_ar": "حال من noun يُشَبَّه بحال أخرى",
-      "definition_en": "A حال derived from a noun that is compared to another state",
-      "example_ar": "جاء زيدٌ lionًا (as a lion) — the حال describes manner/identity",
-      "example_en": "Came as a lion — describes manner of coming",
-      "example_ur": "ایک شیر کی طرح آیا — آنے کا طریقہ بیان کرتا ہے"
+      "type": "CONCEPT",
+      "concept": {
+        "ar": "مُشبَّه",
+        "en": "الحال المشبه — Resembled State"
+      },
+      "explanation": {
+        "en": "A حال derived from a noun that is compared to another state",
+        "ar": "حال من noun يُشَبَّه بحال أخرى",
+        "example_ar": "جاء زيدٌ lionًا (as a lion) — the حال describes manner/identity"
+      }
     },
     {
-      "term_ar": "مُنْفَصِل",
-      "term_en": "Disconnected vs. Connected حال",
-      "definition_ar": "الحال قد يكون منفصلًا (مستقل) أو متصلًا (مرتبطًا بالفعل)",
-      "definition_en": "The حال can be disconnected (independent) or connected (linked to the action)",
-      "example_ar": "منفصل: قَامَ زيدٌ وَحْدَهُ — Zayd stood alone\nمتصل: قَامَ زيدٌ مَاشِيًا — Zayd stood walking",
-      "example_en": "Disconnected: stands alone as a description. Connected: describes manner of standing",
-      "example_ur": "منفصل: وحدہ کے ساتھ کھڑا ہوا — صرف ایک توصیف۔ متصل: چلتے ہوئے کھڑا ہوا — کھڑے ہونے کا طریقہ"
+      "type": "CONCEPT",
+      "concept": {
+        "ar": "مُنْفَصِل",
+        "en": "Disconnected vs. Connected حال"
+      },
+      "explanation": {
+        "en": "The حال can be disconnected (independent) or connected (linked to the action)",
+        "ar": "الحال قد يكون منفصلًا (مستقل) أو متصلًا (مرتبطًا بالفعل)",
+        "example_ar": "منفصل: قَامَ زيدٌ وَحْدَهُ — Zayd stood alone\nمتصل: قَامَ زيدٌ مَاشِيًا — Zayd stood walking"
+      }
     }
   ],
   "exercises": [
     {
+      "id": "ch71l01ex1",
       "type": "TAP_TRANSLATION",
-      "instruction": {
-        "ar": "ما هو الحال في هذه الجملة؟",
-        "en": "What is the حال in this sentence?"
-      },
       "prompt": {
         "ar": "خَرَجَ الضَّيْفُ مَسْرُورًا",
-        "en": "The guest left happy",
-        "ur": "مہمان خوش ہو کر نکلا"
+        "ar_plain": "خرج الضيف مسرورا",
+        "translit": "kharaja al-dayfu masruran",
+        "en": "The guest left happy"
       },
       "options": [
         {
-          "label_ar": "الضيء",
-          "label_en": "The guest (صاحب الحال)",
-          "label_ur": "مہمان (صاحب الحال)",
-          "correct": false
+          "en": "The guest (صاحب الحال)",
+          "ur": "مہمان (صاحب الحال)"
         },
         {
-          "label_ar": "مسرورًا",
-          "label_en": "Happy (الْحَال)",
-          "label_ur": "خوش (الْحَال)",
-          "correct": true
+          "en": "Happy (الْحَال)",
+          "ur": "خوش (الْحَال)"
         },
         {
-          "label_ar": "خرج",
-          "label_en": "Left (الفعل)",
-          "label_ur": "نکلا (فعل)",
-          "correct": false
+          "en": "Left (الفعل)",
+          "ur": "نکلا (فعل)"
+        },
+        {
+          "en": "The door",
+          "ur": "دروازہ"
         }
-      ]
+      ],
+      "correct_index": 1
     },
     {
+      "id": "ch71l01ex2",
       "type": "TRUE_FALSE",
-      "instruction": {
-        "ar": "حدد: صواب أم خطأ",
-        "en": "True or False"
-      },
       "statement": {
         "ar": "في جملة \"جلسَ الطالبُ مُتَأَمِّلًا\" — الطالبُ هو صاحب الحال و متأملًا هو الحال",
-        "en": "In \"The student sat in contemplation\" — the student is the صاحب الحال and متأملًا is the حال",
-        "ur": "طلباء غور و فکر میں بیٹھا — طالب صاحب الحال ہے اور متأملًا حال ہے"
+        "en": "In \"The student sat in contemplation\" — the student is the صاحب الحال and متأملًا is the حال"
       },
-      "correct": true
+      "correct_answer": true
     },
     {
+      "id": "ch71l01ex3",
       "type": "FILL_BLANK",
-      "instruction": {
-        "ar": "املأ الفراغ",
-        "en": "Fill in the blank"
-      },
-      "prompt": {
-        "ar": "عادَ المُسَافِرُ ___ بَعْدَ سَفَرٍ طَوِيلٍ",
-        "en": "The traveler returned ___ after a long journey",
-        "ur": "مسافر لمبے سفر کے بعد ___ واپس آیا"
-      },
-      "answer": "مسرورًا",
-      "hint": "What state was the traveler in upon returning?",
-      "case_sensitive": false
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "instruction": {
-        "ar": "حلّل: من صاحب الحال وما هو الحال؟",
-        "en": "Analyze: Who is صاحب الحال and what is the حال?"
-      },
-      "sentences": [
-        {
-          "original": "عادَ محمدٌ فرِحًا",
-          "analysis": {
-            "صاحب_الحال": "محمدٌ — مرفوع بالفاعلية",
-            "الحال": "فرِحًا — منصوب يصف هيئة محمد عند العود",
-            "نوع_الحال": "مؤكد / وصفي — يوضح حالة صاحب الحال"
-          }
-        },
-        {
-          "original": "يسيرُ الطريقُ مُسْتَقِيمًا",
-          "analysis": {
-            "صاحب_الحال": "الطريقُ — مرفوع بالفاعلية",
-            "الحال": "مُسْتَقِيمًا — منصوب يصف هيئة الطريق أثناء سيره",
-            "نوع_الحال": "مؤكد — حالة استقامة الطريق"
-          }
-        }
-      ]
-    },
-    {
-      "type": "MATCHING",
-      "instruction": {
-        "ar": "طابق الجملة بصاحب الحال",
-        "en": "Match the sentence with صاحب الحال"
-      },
-      "left_items": [
-        { "id": "1", "text_ar": "صليتُ مُسْتَعْمِرًا" },
-        { "id": "2", "text_ar": "نامَ الطفلُ سَاكِتًا" },
-        { "id": "3", "text_ar": "جلسَ العالِمُ مُتَأَمِّلًا" }
-      ],
-      "right_items": [
-        { "id": "A", "text_ar": "الطفلُ" },
-        { "id": "B", "text_ar": "العالِمُ" },
-        { "id": "C", "text_ar": "أنا (المتكلم)" }
-      ],
-      "matches": [
-        { "left": "1", "right": "C" },
-        { "left": "2", "right": "A" },
-        { "left": "3", "right": "B" }
-      ]
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "instruction": {
-        "ar": "ابنِ جملة: حال وصفية",
-        "en": "Build a sentence with a descriptive حال"
-      },
-      "elements": [
-        { "text_ar": "سافر", "gloss": "traveled" },
-        { "text_ar": "الطالب", "gloss": "the student" },
-        { "text_ar": "سعيدًا", "gloss": "happy" }
-      ],
-      "correct_order": [1, 0, 2],
-      "expected_grammar": "الطالبُ سافرَ سعيدًا — The student traveled in a happy state"
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "instruction": {
-        "ar": "ما معنى: جلسَ زيدٌ وَحْدَهُ؟",
-        "en": "What does جلسَ زيدٌ وَحْدَهُ mean?"
+      "mode": "TAP",
+      "sentence_ar": "عادَ المُسَافِرُ ___ بَعْدَ سَفَرٍ طَوِيلٍ",
+      "hint": {
+        "en": "What state was the traveler in upon returning?"
       },
       "options": [
         {
-          "label_ar": "جلسَ وحده في المنزل",
-          "label_en": "Zayd sat alone at home",
-          "label_ur": "زید اکیلا گھر میں بیٹھا",
-          "correct": false
+          "ar": "مسرورًا",
+          "ar_plain": "مسرور",
+          "translit": "masruran",
+          "en": "happy"
         },
         {
-          "label_ar": "زید solo نشسته بود",
-          "label_en": "Zayd sat by himself (الحال describes一个人)",
-          "label_ur": "Zayd اکیلا بیٹھا (الحال اکیلے کی حالت بیان کرتا ہے)",
-          "correct": true
+          "ar": "حزينًا",
+          "ar_plain": "حزين",
+          "translit": "hazinan",
+          "en": "sad"
         },
         {
-          "label_ar": "زید با یک نفر دیگر نشست",
-          "label_en": "Zayd sat with one other person",
-          "label_ur": "زید ایک اور شخص کے ساتھ بیٹھا",
-          "correct": false
+          "ar": "سريعًا",
+          "ar_plain": "سريع",
+          "translit": "sariqan",
+          "en": "quickly"
+        },
+        {
+          "ar": "ببطء",
+          "ar_plain": "ببطء",
+          "translit": "bi-batin",
+          "en": "slowly"
         }
+      ],
+      "correct_answer": {
+        "ar": "مسرورًا",
+        "ar_plain": "مسرور",
+        "translit": "masruran",
+        "en": "happy"
+      }
+    },
+    {
+      "id": "ch71l01ex4",
+      "type": "GRAMMAR_PARSE",
+      "sentence_ar": "عادَ محمدٌ فرِحًا",
+      "words": [
+        {
+          "ar": "عادَ",
+          "ar_plain": "عاد",
+          "translit": "aada",
+          "en": "returned"
+        },
+        {
+          "ar": "محمدٌ",
+          "ar_plain": "محمد",
+          "translit": "muhammadun",
+          "en": "Muhammad"
+        },
+        {
+          "ar": "فرِحًا",
+          "ar_plain": "فرح",
+          "translit": "farihan",
+          "en": "happily"
+        }
+      ],
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "VERB",
+        "OBJECT",
+        "PARTICLE",
+        "PREPOSITION",
+        "POSSESSIVE",
+        "ADJECTIVE",
+        "DEMONSTRATIVE",
+        "RELATIVE_PRONOUN",
+        "PRONOUN"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "ADJECTIVE"
       ]
     },
     {
-      "type": "FILL_BLANK",
-      "instruction": {
-        "ar": "املأ باسم حال مناسب",
-        "en": "Fill with an appropriate حال noun"
+      "id": "ch71l01ex5",
+      "type": "MATCHING",
+      "left_column": [
+        {
+          "ar": "صليتُ مُسْتَعْمِرًا",
+          "ar_plain": "صليت مستعمرا",
+          "translit": "sallaytu mustaghiran",
+          "en": "I prayed as a conqueror"
+        },
+        {
+          "ar": "نامَ الطفلُ سَاكِتًا",
+          "ar_plain": "نام الطفل ساكتا",
+          "translit": "nama al-tiflu sakitan",
+          "en": "The child slept quietly"
+        },
+        {
+          "ar": "جلسَ العالِمُ مُتَأَمِّلًا",
+          "ar_plain": "جلس العالم متأملا",
+          "translit": "jalasa al-alimu mutaammilan",
+          "en": "The scholar sat in contemplation"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "الطفلُ (the child)"
+        },
+        {
+          "en": "العالِمُ (the scholar)"
+        },
+        {
+          "en": "أنا (the speaker)"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "ch71l01ex6",
+      "type": "BUILD_SENTENCE",
+      "target_translation": {
+        "en": "The student traveled in a happy state"
       },
+      "tiles": [
+        {
+          "ar": "سافرَ",
+          "ar_plain": "سفر",
+          "translit": "sahara",
+          "en": "traveled"
+        },
+        {
+          "ar": "الطالبُ",
+          "ar_plain": "الطالب",
+          "translit": "al-talibu",
+          "en": "the student"
+        },
+        {
+          "ar": "سعيدًا",
+          "ar_plain": "سعيد",
+          "translit": "saeidan",
+          "en": "happily"
+        }
+      ],
+      "correct_order": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "ch71l01ex7",
+      "type": "TAP_TRANSLATION",
       "prompt": {
-        "ar": "أكلَ الطفلُ الطَّعامَ ___",
-        "en": "The child ate the food ___",
-        "ur": "بچے نے کھانا ___ کھایا"
+        "ar": "جلسَ زيدٌ وَحْدَهُ",
+        "ar_plain": "جلس زيد وحده",
+        "translit": "jalasa zaydun wahdahu",
+        "en": "Zayd sat by himself"
       },
-      "answer": "مسرورًا",
-      "hint": "How did the child eat? Happy state possible",
-      "case_sensitive": false
+      "options": [
+        {
+          "en": "Zayd sat alone at home",
+          "ur": "زید اکیلا گھر میں بیٹھا"
+        },
+        {
+          "en": "Zayd sat by himself (الحال describes一个人)",
+          "ur": "Zayd اکیلا بیٹھا (الحال اکیلے کی حالت بیان کرتا ہے)"
+        },
+        {
+          "en": "Zayd sat with one other person",
+          "ur": "زید ایک اور شخص کے ساتھ بیٹھا"
+        },
+        {
+          "en": "Zayd sat quietly",
+          "ur": "زید خاموشی سے بیٹھا"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "id": "ch71l01ex8",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "sentence_ar": "أكلَ الطفلُ الطَّعامَ ___",
+      "hint": {
+        "en": "How did the child eat? Happy state possible"
+      },
+      "options": [
+        {
+          "ar": "مسرورًا",
+          "ar_plain": "مسرور",
+          "translit": "masruran",
+          "en": "happily"
+        },
+        {
+          "ar": "حزينًا",
+          "ar_plain": "حزين",
+          "translit": "hazinan",
+          "en": "sadly"
+        },
+        {
+          "ar": "بسرعة",
+          "ar_plain": "بسرعة",
+          "translit": "bi-suraa",
+          "en": "quickly"
+        },
+        {
+          "ar": "ببطء",
+          "ar_plain": "ببطء",
+          "translit": "bi-batin",
+          "en": "slowly"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مسرورًا",
+        "ar_plain": "مسرور",
+        "translit": "masruran",
+        "en": "happily"
+      }
     }
   ],
   "reveal": {
@@ -261,10 +389,11 @@
       "label": "Ash-Shu'ara 26:103",
       "ar": "وَمَا هُمْ بِخَارِجِينَ مِنْهَا ۖ فَلَهُمْ عَذَابٌ مُقِيمٌ",
       "en": "And they will not be coming out of it. So for them is a lasting punishment.",
-      "ur": "اور وہ اس سے باہر نہیں نکل سکیں گے۔ تو ان کے لیے ہے مستقل عذاب۔",
-      "audio_url": ""
+      "ur": "اور وہ اس سے باہر نہیں نکل سکیں گے۔ تو ان کے لیے ہے مستقل عذاب۔"
     },
-    "highlighted_word_indices": [],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "ar": "ملاحظة: هذه الآية ليس فيها حال بالمعنى النحوي — إنها جملة خبرية محضة. ليس كل وصف في العربية هو حال. الحال يرد حيث يكون الوصف حالةً مصاحبةً للفعل.",
       "en": "Note: This ayah does not contain a حال in the grammatical sense — it's a pure declarative sentence. Not every description in Arabic is a حال. The حال appears when the description is a state accompanying the action.",
@@ -277,5 +406,6 @@
       "en": "The حال is one of the most expressive tools in Arabic — it paints a picture of the subject's state during an action. خَرَجَ ضَاحِكًا is infinitely more vivid than simply خَرَجَ. Tomorrow we see how this appears in the Quran.",
       "ur": "الحال عربی کے سب سے تاثیر والے ٹولز میں سے ایک ہے — یہ فاعل کی حالت کا نقشہ پیش کرتا ہے۔ 'خَرَجَ ضَاحِكًا' سادہ 'خَرَجَ' سے کہیں زیادہ واضح ہے۔ کل ہم دیکھیں گے کہ یہ قرآن میں کیسے ظاہر ہوتی ہے۔"
     }
-  }
+  },
+  "template": "STANDARD"
 }

@@ -1,0 +1,267 @@
+{
+  "_meta": {
+    "_note": "Chapter 59, Lesson 1 — Review of I'rab (الإعراب) and Bina (البناء)",
+    "chapter_order": 59,
+    "lesson_order": 1,
+    "chapter_title": "Book 6 Capstone — Integration and Advanced Application",
+    "title": "Review of I'rab and Bina — The Analytical Framework",
+    "titleAr": "مُرَاجَعَةُ الْإِعْرَابِ وَالْبِنَاءِ",
+    "source": "reader_lecture_59_book6_capstone.md",
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "hook": {
+    "ayah": {
+      "surah": 67,
+      "ayah": 1,
+      "label": "Al-Mulk 67:1",
+      "ar": "تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+      "en": "Blessed is He in whose hand is the dominion, and He is over all things competent.",
+      "ur": "بڑی بخت والا وہ ہے جس کے ہاتھ میں حکومت ہے اور وہ ہر چیز پر قادر ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-mulk-67-1-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "تَبَارَكَ — this is a مَبْنِيّ (indeclinable) verb. It does not change its ending regardless of its position in a sentence. Every word in Arabic is either مَبْنِيّ or مُعْرَب — knowing which is which is the foundation of parsing the Quran.",
+      "ur": "تَبَارَكَ — یہ ایک مبنی (بناوٹ والا) فعل ہے۔ اس کا 끝 (ending) sentence میں اس کی position کے regardless تبدیل نہیں ہوتا۔ ہر لفظ عربی میں یا تو مبنی ہے یا معرب۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "I'rab (الإعراب) vs Bina (البناء)",
+        "ar": "الْإِعْرَابُ وَالْبِنَاءُ",
+        "ur": "اعراب اور بناء"
+      },
+      "explanation": {
+        "en": "A مُعْرَب word changes its ending based on its grammatical role in the sentence (e.g., ـٌ، ـٍ، ـً in nominative/genitive/accusative). A مَبْنِيّ word has a fixed ending that never changes regardless of its role. The Arabic sentence is built on knowing which category every word belongs to.",
+        "ur": "معرب لفظ اپنا 끝 (ending) sentence میں its grammatical role کے مطابق تبدیل کرتا ہے۔ مبنی لفظ کا ending طے شدہ ہوتا ہے اور کبھی نہیں بدلتا۔ عربی جملے کی بنیاد ہر لفظ کی یہی پہچان ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "تَبَارَكَ",
+        "ar_plain": "تبارك",
+        "translit": "tabāraka",
+        "en": "Blessed (He) — مَبْنِيّ فعل ماضٍ",
+        "ur": "بڑی بخت والا (وہ) — مبنی ماضی فعل"
+      },
+      "explanation": {
+        "en": "تَبَارَكَ is a مَبْنِيّ فعل ماضٍ — it is fixed on the فتحة (fatḥa) ending because it is a Verb of Praise (فعل تعجب). It never takes kasra oramma regardless of what grammatical situation it is in. This is thelema (ذاتی) building — the ending is inherent to the word.",
+        "ur": "تَبَارَكَ ایک مبنی ماضی فعل ہے — یہ ہمیشہ فتحة پر ثابت رہتا ہے کیونکہ یہ تعجب کے الفاظ میں سے ہے۔ اس کا ending کبھی تبدیل نہیں ہوتا۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "الْمُلْكُ",
+        "ar_plain": "الملك",
+        "translit": "al-mulku",
+        "en": "the dominion — مُعْرَب (مرفوع)",
+        "ur": "حکومت — معرب (مرفوع)"
+      },
+      "explanation": {
+        "en": "الْمُلْكُ is a مُعْرَب noun — its ك part carries the kasra (ـِ) as a sign of الرفع (nominative), because it is the subject (مبتدأ) of a nominal sentence. In a different grammatical position, the ending would change: ملكً in النصب or ملكٍ in الجر.",
+        "ur": "الْمُلْكُ ایک معرب اسم ہے — یہ رفع (نominative) میں ہے کیونکہ یہ ایک nominal sentence کا مبتدأ ہے۔ اور position میں ending بدل جاتی: ملكً (نصب) یا ملكٍ (جر)۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "قَدِيرٌ",
+        "ar_plain": "قدير",
+        "translit": "qadīrun",
+        "en": "competent — مُعْرَب (مرفوع)",
+        "ur": "قادر — معرب (مرفوع)"
+      },
+      "explanation": {
+        "en": "قَدِيرٌ is a مُعْرَب adjective — it follows الْمُلْكُ and agrees with it in case (مرفوع). The doubled ي (يمامة) is the sign of الرفع here. قَدِيرٌ describes الْمُلْكُ — they are a مبتدأ-خبر pair (nominal sentence).",
+        "ur": "قَدِيرٌ ایک معرب صفت ہے — یہ الْمُلْكُ کی توصیف کرتی ہے اور case میں اس سے مطابقت رکھتی ہے (مرفوع)۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "بِيَدِهِ الْمُلْكُ",
+        "ar_plain": "بيده الملك",
+        "translit": "bi-yadihi al-mulku",
+        "en": "in whose hand is the dominion",
+        "ur": "جس کے ہاتھ میں حکومت ہے"
+      },
+      "explanation": {
+        "en": "بِيَدِيه is مبنی على الفتح (fixed fatḥa) because ب is part of the ذet (الذاتية). الْمُلْكُ is the subject (مبتدأ) — مرفوع. This ayah gives us a perfect example of how مبنی and معرب words work together in one sentence.",
+        "ur": "بِيَدِيه مبنی ہے (فتحة پر). الْمُلْكُ مرفوع ہے (مبتدأ). یہ آیت مبنی اور معرب لفظوں کے ایک sentence میں اکٹھے کام کرنے کی اچھی مثال ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ch59-l01-ex01",
+      "type": "TRUE_FALSE",
+      "statement": {
+        "en": "A مَبْنِيّ (indeclinable) word changes its ending based on its grammatical role, while a مُعْرَب (declinable) word has a fixed ending.",
+        "ur": "مبنی (بناوٹ والا) لفظ اپنا ending grammatical role کے مطابق تبدیل کرتا ہے، جبکہ معرب لفظ کا ending طے شدہ ہوتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It is the opposite! مُعْرَب words CHANGE their endings (like ـٌ، ـٍ، ـً for nominative/genitive/accusative). مَبْنِيّ words have a FIXED ending that never changes regardless of their role in the sentence.",
+        "ur": "بالکل الٹ! مُعْرَب لفظ اپنے endings تبدیل کرتے ہیں۔ مبنی لفظ کا ending طے شدہ ہوتا ہے اور کبھی نہیں بدلتا۔"
+      }
+    },
+    {
+      "id": "ch59-l01-ex02",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "الْمُلْكُ لِلَّهِ الْحَقِّ",
+        "ar_plain": "الملك لله الحق",
+        "translit": "al-mulku lillāhi al-ḥaqqi",
+        "en": "The dominion belongs to Allah, the Truth."
+      },
+      "options": [
+        { "en": "The dominion belongs to Allah, the Truth.", "ur": "حکومت اللہ حق کی ہے۔" },
+        { "en": "Allah owns the true dominion.", "ur": "اللہ سچی حکومت کا مالک ہے۔" },
+        { "en": "The dominion is Allah's truth.", "ur": "حکومت اللہ کا سچ ہے۔" },
+        { "en": "The dominion and the Truth are Allah's.", "ur": "حکومت اور سچ اللہ کے ہیں۔" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِلَّهِ = لام + الله (جر — the لام is a حرف جر). الْحَقِّ is نعت (adjective) of الله, both in الجر. The sentence structure is: المالك + فعل + المفعول (implicit: الْحَقَّ is actually منصوب here since it follows a فعل — this is a قَوْل implied).",
+        "ur": "لِلَّهِ = لام (جر) + اللہ (مضاف إلیہ، جر)۔ الْحَقِّ = نعت (جر میں)۔"
+      }
+    },
+    {
+      "id": "ch59-l01-ex03",
+      "type": "GRAMMAR_PARSE",
+      "sentence_ar": "تَبَارَكَ اللَّهُ رَبُّ الْعَالَمِينَ",
+      "words": [
+        { "ar": "تَبَارَكَ", "ar_plain": "تبارك", "translit": "tabāraka", "en": "Blessed (He)" },
+        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allāhu", "en": "Allah" },
+        { "ar": "رَبُّ", "ar_plain": "رب", "translit": "rabbu", "en": "Lord" },
+        { "ar": "الْعَالَمِينَ", "ar_plain": "العالمين", "translit": "al-'ālamīna", "en": "of the worlds" }
+      ],
+      "available_roles": ["SUBJECT", "PREDICATE", "VERB", "PARTICLE", "PREPOSITION", "POSSESSIVE"],
+      "correct_roles": ["VERB", "SUBJECT", "PREDICATE", "POSSESSIVE"],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "تَبَارَكَ = VERB (مبنی ماضی — fixed فتحة). اللَّهُ = SUBJECT (مبتدأ، مرفوع). رَبُّ = PREDICATE (خبر مبتدأ، مرفوع — رَبُّ is the title of Allah). الْعَالَمِينَ = POSSESSIVE (مضاف إليه، جر — رَبُّ الْعَالَمِينَ is an idafa construction).",
+        "ur": "تَبَارَكَ = فعل (مبنی ماضی)۔ اللَّهُ = مبتدأ (رفع)۔ رَبُّ = خبر (رفع)۔ الْعَالَمِينَ = مضاف إليه (جر)۔"
+      }
+    },
+    {
+      "id": "ch59-l01-ex04",
+      "type": "TRUE_FALSE",
+      "statement": {
+        "en": "تَبَارَكَ is مَعْرَب because it is a verb.",
+        "ur": "تَبَارَكَ معرب ہے کیونکہ یہ ایک فعل ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "تَبَارَكَ is مَبْنِيّ — even though it is a verb, it is built on a fixed فتحة (ذاتی building). Verbs are not automatically معرب. Some verbs like أَفْعَلُ (the form that expresses surprise) are مبنی because of their pattern.",
+        "ur": "تَبَارَكَ مبنی ہے — یہ ایک فعل ہونے کے باوجود الفتحة پر بنایا گیا ہے (ذاتی بناء)۔"
+      }
+    },
+    {
+      "id": "ch59-l01-ex05",
+      "type": "MATCHING",
+      "left_column": [
+        { "ar": "تَبَارَكَ", "ar_plain": "تبارك", "translit": "tabāraka", "en": "Blessed (He)" },
+        { "ar": "الْمُلْكُ", "ar_plain": "الملك", "translit": "al-mulku", "en": "the dominion" },
+        { "ar": "قَدِيرٌ", "ar_plain": "قدير", "translit": "qadīrun", "en": "competent" },
+        { "ar": "الْعَالَمِينَ", "ar_plain": "العالمين", "translit": "al-'ālamīna", "en": "the worlds" }
+      ],
+      "right_column": [
+        { "en": "مَبْنِيّ — fixed فتحة", "ur": "مبنی — فتحة پر ثابت" },
+        { "en": "مُعْرَب — مرفوع (kasra sign)", "ur": "معرب — مرفوع (کسرة کی علامت)" },
+        { "en": "مُعْرَب — مرفوع (ya sign)", "ur": "معرب — مرفوع (ی کی علامت)" },
+        { "en": "مُعْرَب — مجرور (ya sign)", "ur": "معرب — مجرور (ی کی علامت)" }
+      ],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "تَبَارَكَ is مبنی (ذاتی). الْمُلْكُ (مرفوع — ي closing), قَدِيرٌ (مرفوع — ي closing), الْعَالَمِينَ (مجرور — ي closing). The ي (يمامة) serves as the sign for both رفع and جر.",
+        "ur": "تَبَارَكَ مبنی ہے۔ الْمُلْكُ (رفع — ی کی علامت)، قَدِيرٌ (رفع — ی کی علامت)، الْعَالَمِينَ (جر — ی کی علامت)۔"
+      }
+    },
+    {
+      "id": "ch59-l01-ex06",
+      "type": "BUILD_SENTENCE",
+      "target_translation": {
+        "en": "He is over all things competent.",
+        "ur": "وہ ہر شے پر قادر ہے۔"
+      },
+      "tiles": [
+        { "ar": "وَهُوَ", "ar_plain": "وهو", "translit": "wa-huwa", "en": "and He" },
+        { "ar": "عَلَىٰ كُلِّ شَيْءٍ", "ar_plain": "على كل شيء", "translit": "'alā kulli shay'in", "en": "over all things" },
+        { "ar": "قَدِيرٌ", "ar_plain": "قدير", "translit": "qadīrun", "en": "competent" }
+      ],
+      "correct_order": [0, 1, 2],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The sentence is: وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ — وَهُوَ (connected pronoun, بدل), عَلَىٰ كُلِّ شَيْءٍ (ظرف مكان، مجرور), قَدِيرٌ (خبر، مرفوع). The structure is: pronoun + prepositional phrase + adjective.",
+        "ur": "جملہ: وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ — وَهُوَ (بدل)، عَلَىٰ كُلِّ شَيْءٍ (ظرف، جر)، قَدِيرٌ (خبر، رفع)۔"
+      }
+    },
+    {
+      "id": "ch59-l01-ex07",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "sentence_ar": "الْمُلْكُ لِلَّهِ الْ___",
+      "hint": {
+        "en": "The dominion belongs to Allah, the Truth.",
+        "ur": "حکومت اللہ حق کی ہے۔"
+      },
+      "options": [
+        { "ar": "حَقٍّ", "ar_plain": "حق", "translit": "haqqin", "en": "truth (gen.)", "ur": "سچ (جر)" },
+        { "ar": "حَقٌّ", "ar_plain": "حق", "translit": "haqqun", "en": "truth (nom.)", "ur": "سچ (رفع)" },
+        { "ar": "حَقًّا", "ar_plain": "حق", "translit": "haqqan", "en": "truth (acc.)", "ur": "سچ (نصب)" },
+        { "ar": "حَقَّ", "ar_plain": "حق", "translit": "haqqa", "en": "truth (مبنى)", "ur": "سچ (مبنی)" }
+      ],
+      "correct_answer": {
+        "ar": "حَقٍّ",
+        "ar_plain": "حق",
+        "translit": "haqqin",
+        "en": "truth (gen.)",
+        "ur": "سچ (جر)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْحَقِّ is نعت (adjective) of لِلَّهِ (which is in the genitive because it follows the preposition ل). Since لِلَّهِ is جر, الْحَقِّ must also be جر — the kasra (ـِ) is the sign.",
+        "ur": "الْحَقِّ لِلَّهِ کی صفت ہے جو جر میں ہے (لام کے ساتھ)۔ لذناً الْحَقِّ بھی جر میں ہے — کسرة (ـِ) علامت ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "I'rab and Bina — The Analytical Framework of Arabic",
+      "ar": "الْإِعْرَابُ وَالْبِنَاءُ",
+      "ur": "اعراب اور بناء — عربی کا تجزیاتی نظام"
+    },
+    "ayah": {
+      "surah": 67,
+      "ayah": 1,
+      "label": "Al-Mulk 67:1",
+      "ar": "تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+      "en": "Blessed is He in whose hand is the dominion, and He is over all things competent.",
+      "ur": "بڑی بخت والا وہ ہے جس کے ہاتھ میں حکومت ہے اور وہ ہر چیز پر قادر ہے۔",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-mulk-67-1-mishary.mp3"
+    },
+    "highlighted_word_indices": [0, 2],
+    "noor_explanation": {
+      "en": "تَبَارَكَ is مَبْنِيّ (fixed فتحة — the word is praising itself, so its form is complete). الْمُلْكُ is مُعْرَب — مرفوع here because it is the مبتدأ. قَدِيرٌ is also مُعْرَب — مرفوع as the خبر. Together they form a nominal sentence (جملة اسمية): الْمُلْكُ قَدِيرٌ. This is the foundation of Quranic parsing: every word is either معرب (changes) or مبنی (stays fixed).",
+      "ur": "تَبَارَكَ مبنی ہے (ثابت فتحة)۔ الْمُلْكُ معرب ہے — مرفوع کیونکہ یہ مبتدأ ہے۔ قَدِيرٌ بھی معرب ہے — خبر ہونے کی وجہ سے مرفوع۔ اکٹھے یہ ایک nominal sentence بناتے ہیں: الْمُلْكُ قَدِيرٌ۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Before you can parse a single Quranic ayah, you must ask of every word: is it معرب or مبنی? This question is your compass through the entire Quran. تَبَارَكَ is fixed (مبنی). الْمُلْكُ and قَدِيرٌ change according to their roles (معرب). Keep this distinction sharp — it is the key to everything in Book 6.",
+      "ur": "کسی بھی قرآنی آیت کو parse کرنے سے پہلے ہر لفظ کے بارے میں پوچھنا ہے: یہ معرب ہے یا مبنی؟ تَبَارَكَ ثابت ہے (مبنی)۔ الْمُلْكُ اور قَدِيرٌ اپنی grammatical roles کے مطابق بدلتے ہیں (معرب)۔"
+    }
+  }
+}

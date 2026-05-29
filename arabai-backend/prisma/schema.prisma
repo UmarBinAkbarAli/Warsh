@@ -24,6 +24,7 @@ model User {
     subscriptionStatus String        @default("trial")
     subscriptionProductId String?
     subscriptionActiveUntil DateTime?
+    lastPurchaseToken String?
     noorOverageBalance Int           @default(0)
     phrasesSpoken  Int               @default(0)
     createdAt      DateTime          @default(now())

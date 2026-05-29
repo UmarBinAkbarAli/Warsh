@@ -96,10 +96,22 @@
         "ur": "اگر ان میں اللہ کے سوا کوئی معبود ہوتا تو دونوں خراب ہو جاتے۔"
       },
       "options": [
-        { "en": "If there were in them gods besides Allah, they would both be ruined.", "ur": "اگر ان میں اللہ کے سوا کوئی معبود ہوتا تو دونوں خراب ہو جاتے۔" },
-        { "en": "There are gods in them besides Allah, and they will be ruined.", "ur": "ان میں اللہ کے سوا معبود ہیں، اور وہ خراب ہو جائیں گے۔" },
-        { "en": "If there are gods besides Allah, they will be ruined.", "ur": "اگر اللہ کے سوا معبود ہیں تو وہ خراب ہو جائیں گے۔" },
-        { "en": "Were there gods besides Allah, they would be ruined.", "ur": "کیا اللہ کے سوا معبود تھے تو وہ خراب ہوتے۔" }
+        {
+          "en": "If there were in them gods besides Allah, they would both be ruined.",
+          "ur": "اگر ان میں اللہ کے سوا کوئی معبود ہوتا تو دونوں خراب ہو جاتے۔"
+        },
+        {
+          "en": "There are gods in them besides Allah, and they will be ruined.",
+          "ur": "ان میں اللہ کے سوا معبود ہیں، اور وہ خراب ہو جائیں گے۔"
+        },
+        {
+          "en": "If there are gods besides Allah, they will be ruined.",
+          "ur": "اگر اللہ کے سوا معبود ہیں تو وہ خراب ہو جائیں گے۔"
+        },
+        {
+          "en": "Were there gods besides Allah, they would be ruined.",
+          "ur": "کیا اللہ کے سوا معبود تھے تو وہ خراب ہوتے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -142,12 +154,41 @@
         }
       ],
       "right_column": [
-        { "en": "past counterfactual with أن", "ur": "ماضی counterfactual أن کے ساتھ" },
-        { "en": "present counterfactual", "ur": "حال counterfactual" },
-        { "en": "negated past counterfactual", "ur": "انکاری ماضی counterfactual" },
-        { "en": "past counterfactual (simple)", "ur": "ماضی counterfactual (simple)" }
+        {
+          "en": "past counterfactual with أن",
+          "ur": "ماضی counterfactual أن کے ساتھ"
+        },
+        {
+          "en": "present counterfactual",
+          "ur": "حال counterfactual"
+        },
+        {
+          "en": "negated past counterfactual",
+          "ur": "انکاری ماضی counterfactual"
+        },
+        {
+          "en": "past counterfactual (simple)",
+          "ur": "ماضی counterfactual (simple)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -175,13 +216,49 @@
         "ur": "کاش انہوں نے لوگوں کو ہدایت کی ہوتی تو وہ جنت میں ہوتے۔"
       },
       "tiles": [
-        { "ar": "لَوْ", "ar_plain": "لو", "translit": "law", "en": "if only", "ur": "کاش" },
-        { "ar": "هَدَوْا", "ar_plain": "هدوا", "translit": "hadoo", "en": "they guided", "ur": "انہوں نے ہدایت کی" },
-        { "ar": "النَّاسَ", "ar_plain": "الناس", "translit": "an-nuusa", "en": "the people", "ur": "لوگ" },
-        { "ar": "لَكَانُوا", "ar_plain": "لكانوا", "translit": "lakaanoo", "en": "then they would have been", "ur": "تو وہ ہوتے" },
-        { "ar": "فِي الْجَنَّةِ", "ar_plain": "في الجنة", "translit": "fii al-jannati", "en": "in Paradise", "ur": "جنت میں" }
+        {
+          "ar": "لَوْ",
+          "ar_plain": "لو",
+          "translit": "law",
+          "en": "if only",
+          "ur": "کاش"
+        },
+        {
+          "ar": "هَدَوْا",
+          "ar_plain": "هدوا",
+          "translit": "hadoo",
+          "en": "they guided",
+          "ur": "انہوں نے ہدایت کی"
+        },
+        {
+          "ar": "النَّاسَ",
+          "ar_plain": "الناس",
+          "translit": "an-nuusa",
+          "en": "the people",
+          "ur": "لوگ"
+        },
+        {
+          "ar": "لَكَانُوا",
+          "ar_plain": "لكانوا",
+          "translit": "lakaanoo",
+          "en": "then they would have been",
+          "ur": "تو وہ ہوتے"
+        },
+        {
+          "ar": "فِي الْجَنَّةِ",
+          "ar_plain": "في الجنة",
+          "translit": "fii al-jannati",
+          "en": "in Paradise",
+          "ur": "جنت میں"
+        }
       ],
-      "correct_order": [0, 2, 1, 3, 4],
+      "correct_order": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ],
       "xp_value": 1
     },
     {
@@ -237,15 +314,65 @@
       "id": "ch67-l05-ex06",
       "sentence_ar": "لَوْ أَنَّ لَنَا كَرَّةً فَنَكُونَ مِنَ الْمُؤْمِنِينَ",
       "words": [
-        { "ar": "لَوْ", "ar_plain": "لو", "translit": "law", "en": "if only", "ur": "کاش" },
-        { "ar": "أَنَّ", "ar_plain": "ان", "translit": "anna", "en": "that", "ur": "کہ" },
-        { "ar": "لَنَا", "ar_plain": "لنا", "translit": "lanaa", "en": "for us", "ur": "ہمارے لیے" },
-        { "ar": "كَرَّةً", "ar_plain": "كرة", "translit": "kuratan", "en": "a return", "ur": "واپسی" },
-        { "ar": "فَنَكُونَ", "ar_plain": "فنكون", "translit": "fanakuna", "en": "so we would be", "ur": "تو ہم ہوں" },
-        { "ar": "مِنَ الْمُؤْمِنِينَ", "ar_plain": "من المؤمنين", "translit": "mina al-mu'miniina", "en": "from the believers", "ur": "مومنین میں سے" }
+        {
+          "ar": "لَوْ",
+          "ar_plain": "لو",
+          "translit": "law",
+          "en": "if only",
+          "ur": "کاش"
+        },
+        {
+          "ar": "أَنَّ",
+          "ar_plain": "ان",
+          "translit": "anna",
+          "en": "that",
+          "ur": "کہ"
+        },
+        {
+          "ar": "لَنَا",
+          "ar_plain": "لنا",
+          "translit": "lanaa",
+          "en": "for us",
+          "ur": "ہمارے لیے"
+        },
+        {
+          "ar": "كَرَّةً",
+          "ar_plain": "كرة",
+          "translit": "kuratan",
+          "en": "a return",
+          "ur": "واپسی"
+        },
+        {
+          "ar": "فَنَكُونَ",
+          "ar_plain": "فنكون",
+          "translit": "fanakuna",
+          "en": "so we would be",
+          "ur": "تو ہم ہوں"
+        },
+        {
+          "ar": "مِنَ الْمُؤْمِنِينَ",
+          "ar_plain": "من المؤمنين",
+          "translit": "mina al-mu'miniina",
+          "en": "from the believers",
+          "ur": "مومنین میں سے"
+        }
       ],
-      "available_roles": ["PARTICLE", "SUBJECT", "OBJECT", "VERB", "PREPOSITION"],
-      "correct_roles": ["PARTICLE", "SUBJECT", "OBJECT", "PARTICLE", "VERB"],
+      "available_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "OBJECT",
+        "VERB",
+        "PREPOSITION",
+        "CONJUNCTION"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "PARTICLE",
+        "SUBJECT",
+        "OBJECT",
+        "CONJUNCTION",
+        "PREPOSITION"
+      ],
       "xp_value": 1
     },
     {
@@ -259,10 +386,22 @@
         "ur": "اور کاش ایسو قرآن ہوتا جس سے پہاڑ ہل جاتے۔"
       },
       "options": [
-        { "en": "And if only a Quran were such that mountains would be moved by it.", "ur": "اور کاش ایسو قرآن ہوتا جس سے پہاڑ ہل جاتے۔" },
-        { "en": "And if a Quran moves mountains, it is this one.", "ur": "اور اگر قرآن پہاڑ ہلاتا ہے تو یہی ہے۔" },
-        { "en": "A Quran was sent and mountains were moved.", "ur": "قرآن بھیجا گیا اور پہاڑ ہل گئے۔" },
-        { "en": "And if there were a Quran, the mountains would be moved.", "ur": "اور اگر قرآن ہوتا تو پہاڑ ہل جاتے۔" }
+        {
+          "en": "And if only a Quran were such that mountains would be moved by it.",
+          "ur": "اور کاش ایسو قرآن ہوتا جس سے پہاڑ ہل جاتے۔"
+        },
+        {
+          "en": "And if a Quran moves mountains, it is this one.",
+          "ur": "اور اگر قرآن پہاڑ ہلاتا ہے تو یہی ہے۔"
+        },
+        {
+          "en": "A Quran was sent and mountains were moved.",
+          "ur": "قرآن بھیجا گیا اور پہاڑ ہل گئے۔"
+        },
+        {
+          "en": "And if there were a Quran, the mountains would be moved.",
+          "ur": "اور اگر قرآن ہوتا تو پہاڑ ہل جاتے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -281,7 +420,12 @@
         "en": "believed",
         "ur": "ایمان لیا"
       },
-      "options": ["أ م ن", "غ ل ب", "ع م ل", "ح س د"],
+      "options": [
+        "أ م ن",
+        "غ ل ب",
+        "ع م ل",
+        "ح س د"
+      ],
       "correct_index": 0,
       "xp_value": 1
     },
@@ -318,7 +462,9 @@
       "ur": "اور اگر وہ اپنے رب پر ایمان لے آتا اور نیکوکاروں میں سے ہوتا۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/az-zumar-008-mishary.mp3"
     },
-    "highlighted_word_indices": [1],
+    "highlighted_word_indices": [
+      1
+    ],
     "noor_explanation": {
       "en": "لَوْ is always counterfactual — 'what if.' أَنَّهُ آمَنَ is the unreal condition. This ayah is the paradigm of لَوْ in the Quran — it expresses regret about a path not taken. إِذَا vs لَوْ — real vs unreal. That distinction is everything.",
       "ur": "لَوْ ہمیشہ counterfactual ہوتا ہے — 'اگر'۔ أَنَّهُ آمَنَ غیر واقع شرط ہے۔ یہ آیت قرآن میں لَوْ کا نمونہ ہے — یہ اس راستے کے بارے میں افسوس ظاہر کرتی ہے جو نہیں اختیار کیا گیا۔ إِذَا vs لَوْ — حقیقی vs غیر حقیقی۔ یہ distinction سب کچھ ہے۔"

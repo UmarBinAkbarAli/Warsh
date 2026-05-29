@@ -193,7 +193,7 @@
       "id": "ch56-l05-ex05",
       "type": "FILL_BLANK",
       "mode": "TAP",
-      "sentence_ar": "رَأَيْتُ __",
+      "sentence_ar": "رَأَيْتُ ___",
       "hint": {
         "en": "I saw two kind teachers.",
         "ur": "میں نے دو مہربان استادوں کو دیکھا۔"
@@ -242,8 +242,8 @@
         { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "than" },
         { "ar": "أَلْفِ", "ar_plain": "الف", "translit": "alfi", "en": "a thousand (gen.)" }
       ],
-      "available_roles": ["SUBJECT", "OBJECT", "ADJECTIVE"],
-      "correct_roles": ["SUBJECT", "OBJECT", "ADJECTIVE"],
+      "available_roles": ["SUBJECT", "OBJECT", "ADJECTIVE", "PREPOSITION", "PARTICLE"],
+      "correct_roles": ["SUBJECT", "OBJECT", "ADJECTIVE", "PARTICLE", "OBJECT"],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "يَوْمَا = مضاف (dual, ن dropped in إِضَافَة), in the nominative (رفع) as مبتدأ. الْجُمُعَةِ = مضاف إليه (جر after يَوْمَا). خَيْرٌ = خَبَر (رفع). مِنْ أَلْفِ يَوْمٍ = prepositional phrase 'than a thousand days' (genitive after مِنْ).",

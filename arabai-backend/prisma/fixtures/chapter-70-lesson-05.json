@@ -16,253 +16,482 @@
       "ayah": 29,
       "label": "Al-Kahf 18:29",
       "ar": "وَقُلِ الْحَقُّ مِنْ رَبِّكُمْ فَمَنْ شَاءَ فَلْيُؤْمِنْ وَمَنْ شَاءَ فَلْيَكْفُرْ إِنَّا أَعْتَدْنَا لِلظَّالِمِينَ نَارًا أَحَاطَ بِهِمْ سُرَادِقُهَا وَإِنْ يَسْتَغِيثُوا يُغَاثُوا بِمَاءٍ كَالْمُهْلِ يَشْوِي الْوُجُوهَ بِئْسَ الشَّرَابُ وَسَاءَتْ مُرْتَعًا",
-      "en": "Say: 'The truth is from your Lord, so whoever wills may believe, and whoever wills may disbelieve.' We have prepared for the wrongdoers a Fire whose walls surround them. And if they beg for water, they will be given water like molten copper which scalds the faces — how terrible a drink, and how terrible a resting place.",
-      "ur": "کہو: 'سچ آپ کے رب کی طرف سے ہے، پس جو چاہے ایمان لے آئے اور جو چاہے کفر کرے۔' ہم نے ظالموں کے لیے آگ تیار کی ہے جس کے گرد دیواریں ہیں۔ اور اگر وہ پانی مانگیں تو انہیں پگھلا ہوا تانبا جیسا پانی دیا جائے گا جو چہرے جلائے گا — کیا برا مشرب اور کیا بری جگہ۔",
-      "audio_url": ""
+      "en": "Say: 'The truth is from your Lord, so whoever wills may believe, and whoever wills may disbelieve.' We have prepared for the wrongdoers a Fire whose walls surround them.",
+      "ur": "کہو: 'سچ آپ کے رب کی طرف سے ہے، پس جو چاہے ایمان لے آئے اور جو چاہے کفر کرے۔' ہم نے ظالموں کے لیے آگ تیار کی ہے جس کے گرد دیواریں ہیں۔"
     },
     "noor_intro": {
       "ar": "Real Quranic sentences don't come with grammar labels. They layer multiple exception patterns, conditionals, and coordinate structures — today we put it all together.",
       "en": "Real Quranic sentences don't come with grammar labels. They layer multiple exception patterns, conditionals, and coordinate structures — today we put it all together.",
-      "ur": "حقیقی قرآنی جملے грамматик لیبلز کے ساتھ نہیں آتے۔ وہ متعدد استثنا نمونے، شرطی، اور معطوف ساختیں اکٹھی کرتے ہیں — آج ہم سب کو ملا کر دیکھتے ہیں۔"
+      "ur": "حقیقی قرآنی جملے gramática لیبلز کے ساتھ نہیں آتے۔ وہ متعدد استثنا نمونے، شرطی، اور معطوف ساختیں اکٹھی کرتے ہیں — آج ہم سب کو ملا کر دیکھتے ہیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "term_ar": "استثناء متصل",
-      "term_en": "Connected Exception (متصل)",
-      "definition_ar": "الاستثناء من لفظ متقدم في المعنى (كل، جميع)",
-      "definition_en": "Exception from a word that precedes it in meaning (كل، جميع)",
-      "example_ar": "كلُّ الناسِ إلَّا زيدًا means: everyone came except Zayd",
-      "example_en": "كلُّ الناسِ إلَّا زيدًا = Everyone except Zayd came",
-      "example_ur": "ہر شخص مگر زید — یعنی سب آئے مگر زید نہیں آیا",
-      "highlight": true
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Connected Exception (متصل)",
+        "ar": "استثناء متصل",
+        "ur": "متصل استثنا"
+      },
+      "explanation": {
+        "en": "الاستثناء من لفظ متقدم في المعنى (كل، جميع) — Exception from a word that precedes it in meaning. The المستثنى منه is explicit and from the same category.",
+        "ur": "استثنا لفظ متقدم سے جس کا مطلب پہلے سے واضح ہو — متصل کیونکہ مستثنى منه بیان کردہ ہے اور اسی زمرے سے تعلق رکھتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "كلُّ الناسِ إلَّا زيدًا",
+          "en": "Everyone came except Zayd — زيد is excluded from كل الناس",
+          "ur": "ہر شخص آیا مگر زید — زید کو所有人 سے نکالا گیا",
+          "ar_plain": "كل الناس إلا زيدا",
+          "translit": "—"
+        }
+      ]
     },
     {
-      "term_ar": "استثناء منقطع",
-      "term_en": "Disconnected Exception (منقطع)",
-      "definition_ar": "الاستثناء من غير اللفظ المتقدم",
-      "definition_en": "Exception from something other than the preceding word",
-      "example_ar": "ما جاءني أحدٌ إلَّا حجرًا — came to me except a stone",
-      "example_en": "No one came to me except a stone — منقطع because حجر isn't related to أحد",
-      "example_ur": "مجھے کوئی نہیں آیا مگر پتھر — منقطع کیونکہ پتھر سے متعلق نہیں",
-      "highlight": true
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Disconnected Exception (منقطع)",
+        "ar": "استثناء منقطع",
+        "ur": "منقطع استثنا"
+      },
+      "explanation": {
+        "en": "الاستثناء من غير اللفظ المتقدم — Exception from something other than the preceding word. The مستثنى is from a different category than the مستثنى منه.",
+        "ur": "استثنا لفظ متقدم سے نہیں بلکہ اس کے علاوہ سے — منقطع کیونکہ مستثنى مستثنى منه کے زمرے سے تعلق نہیں رکھتا۔"
+      },
+      "examples": [
+        {
+          "ar": "ما جاءني أحدٌ إلَّا حجرًا",
+          "en": "No one came to me except a stone — منقطع because حجر isn't related to أحد",
+          "ur": "مجھے کوئی نہیں آیا مگر پتھر — منقطع کیونکہ پتھر 'کوئی' کے زمرے سے تعلق نہیں رکھتا",
+          "ar_plain": "ما جاءني أحد إلا حجرا",
+          "translit": "—"
+        }
+      ]
     },
     {
-      "term_ar": "الاستثناء بغير",
-      "term_en": "Exception using غير",
-      "definition_ar": "غير بمعنى إلَّا في الإخراج",
-      "definition_en": "غير means the same as إِلَّا in terms of exclusion",
-      "example_ar": "جاء القومُ غيرَ زيدٍ = جاء القومُ إلَّا زيدًا",
-      "example_en": "The people came, excluding Zayd — identical meaning to إلَّا",
-      "example_ur": "قوم آئی مگر زید کے سوا — إلَّا کے معنی میں بالکل وہی"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Exception using غير",
+        "ar": "الاستثناء بغير",
+        "ur": "غیر سے استثنا"
+      },
+      "explanation": {
+        "en": "غير بمعنى إلَّا في الإخراج — غير means the same as إِلَّا in terms of exclusion.",
+        "ur": "غیر کا مطلب إِلَّا کی طرح استثنا میں ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "جاء القومُ غيرَ زيدٍ = جاء القومُ إلَّا زيدًا",
+          "en": "The people came, excluding Zayd — identical meaning to إلَّا",
+          "ur": "قوم آئی مگر زید کے سوا — إلَّا کے معنی میں بالکل وہی",
+          "ar_plain": "جاء القوم غير زيد  جاء القوم إلا زيدا",
+          "translit": "—"
+        }
+      ]
     },
     {
-      "term_ar": "الاستثناء بغير وارد",
-      "term_en": "Exception using غير وارد",
-      "definition_ar": "لَا تخص بالواو، بمعنى إلَّا",
-      "definition_en": "لَا preceded by واو, meaning the same as إلَّا",
-      "example_ar": "ما جاءني أحدٌ وَلَا زيدٌ = ما جاءني أحدٌ إلَّا زيدًا",
-      "example_en": "No one came to me, not even Zayd — same as إلَّا exception",
-      "example_ur": "مجھے کوئی نہیں آیا، زید بھی نہیں — إلَّا استثنا کے مترادف"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Exception using سوى",
+        "ar": "الاستثناء بسوى",
+        "ur": "سوى سے استثنا"
+      },
+      "explanation": {
+        "en": "سوى بمعنى إلَّا — في الإثبات والنفي — سوى means إِلَّا — used in both positive and negative sentences.",
+        "ur": "سوى کا مطلب إِلَّا ہے — مثبت اور منفی دونوں میں کام کرتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "ما جاءني أحدٌ سِوى زيدٍ = ما جاءني أحدٌ إلَّا زيدًا",
+          "en": "No one came except Zayd — سواء works just like إلَّا",
+          "ur": "کوئی نہیں آیا مگر زید — سواء بھی إِلَّا کی طرح کام کرتا ہے",
+          "ar_plain": "ما جاءني أحد سوى زيد  ما جاءني أحد إلا زيدا",
+          "translit": "—"
+        }
+      ]
     },
     {
-      "term_ar": "الاستثناء بتام",
-      "term_en": "Exception using سوى",
-      "definition_ar": "سوى بمعنى إلَّا — في الإثبات والنفي",
-      "definition_en": "سوى means إِلَّا — used in both positive and negative",
-      "example_ar": "ما جاءني أحدٌ سِوى زيدٍ = ما جاءني أحدٌ إلَّا زيدًا",
-      "example_en": "No one came except Zayd — سواء works just like إلَّا",
-      "example_ur": "کوئی نہیں آیا مگر زید — سواء بھی إلَّا کی طرح کام کرتا ہے"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Combining Exception Particles",
+        "ar": "الجمع بين أدوات الاستثناء",
+        "ur": "استثنا کے ذروں کا امتزاج"
+      },
+      "explanation": {
+        "en": "يمكن الجمع: غير، سوى، إلَّا، لَا — You can combine exception particles in the same sentence.",
+        "ur": "متعدد استثنا ذرے ایک جملے میں جمع ہو سکتے ہیں: غير، سوى، إلَّا، لَا۔"
+      },
+      "examples": [
+        {
+          "ar": "كلَّ الناسِ غيرَ زيدٍ سوى عمروٍ",
+          "en": "Everyone except Zayd and Amr — multiple exceptions layered",
+          "ur": "ہر شخص مگر زید اور عمرو کے — متعدد استثنا ایک ساتھ",
+          "ar_plain": "كل الناس غير زيد سوى عمرو",
+          "translit": "—"
+        }
+      ]
     },
     {
-      "term_ar": "الجمع بين أدوات الاستثناء",
-      "term_en": "Combining Exception Particles",
-      "definition_ar": "يمكن الجمع: غير، سوى، إلَّا، لَا",
-      "definition_en": "You can combine: غير، سوى، إلَّا، لَا",
-      "example_ar": "كلَّ الناسِ غيرَ زيدٍ سوى عمروٍ — everyone except Zayd and Amr",
-      "example_en": "Everyone except Zayd and Amr — multiple exceptions layered",
-      "example_ur": "ہر شخص مگر زید اور عمرو کے — متعدد استثنا ایک ساتھ"
-    },
-    {
-      "term_ar": "الاستثناء في الجملة الشرطية",
-      "term_en": "Exception in Conditional Sentences",
-      "definition_ar": "إلَّا في جملة جزائية",
-      "definition_en": "إلَّا in a conditional sentence",
-      "example_ar": "لو أتيتني لأعطيتُكَ إلَّا زيدًا — conditional not fulfilled, exception moot",
-      "example_en": "If I had come to you, I would have given you — except Zayd. The condition was never met.",
-      "example_ur": "اگر میں آیا ہوتا تو تجھے دیتا — مگر زید کے سوا۔ شرط پوری نہیں ہوئی، استثنا لاگو نہیں۔"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Exception in Conditional Sentences",
+        "ar": "الاستثناء في الجملة الشرطية",
+        "ur": "شرطی جملے میں استثنا"
+      },
+      "explanation": {
+        "en": "إلَّا in a conditional sentence — if the condition is not fulfilled, the exception is moot.",
+        "ur": "إلَّا شرطی جملے میں — اگر شرط پوری نہیں ہوتی تو استثنا لاگو نہیں ہوتا۔"
+      },
+      "examples": [
+        {
+          "ar": "لو أتيتني لأعطيتُكَ إلَّا زيدًا",
+          "en": "If I had come to you, I would have given you — except Zayd. The condition was never met.",
+          "ur": "اگر میں آیا ہوتا تو تجھے دیتا — مگر زید کے سوا۔ شرط پوری نہیں ہوئی، استثنا لاگو نہیں۔",
+          "ar_plain": "لو أتيتني لأعطيتك إلا زيدا",
+          "translit": "—"
+        }
+      ]
     }
   ],
   "exercises": [
     {
+      "id": "ch70-l05-ex01",
       "type": "TAP_TRANSLATION",
-      "instruction": {
-        "ar": "ما نوع الاستثناء في هذه الجملة؟",
-        "en": "What type of exception is in this sentence?"
-      },
       "prompt": {
         "ar": "كلَّ الناسِ إلَّا زيدًا",
-        "en": "Everyone except Zayd",
-        "ur": "ہر شخص مگر زید کے سوا"
+        "ar_plain": "كل الناس إلا زيدا",
+        "translit": "kulla al-naasi illaa zaydan",
+        "en": "Everyone except Zayd"
       },
       "options": [
         {
-          "label_ar": "متصل",
-          "label_en": "Connected (متصل) — زيد is excluded from كل الناس",
-          "label_ur": "متصل — زید کو كل الناس سے نکالا گیا",
-          "correct": true
+          "en": "Connected (متصل) — زيد is excluded from كل الناس",
+          "ur": "متصل — زید کو所有人 سے نکالا گیا"
         },
         {
-          "label_ar": "منقطع",
-          "label_en": "Disconnected (منقطع) — زيد is from different category than الناس",
-          "label_ur": "منقطع — زید ایک مختلف زمرے سے ہے الناس سے",
-          "correct": false
+          "en": "Disconnected (منقطع) — زيد is from different category than الناس",
+          "ur": "منقطع — زید ایک مختلف زمرے سے ہے الناس سے"
         },
         {
-          "label_ar": "غير منجز",
-          "label_en": "Unfulfilled (غير منجز) — condition not met",
-          "label_ur": "غیر منجز — شرط پوری نہیں ہوئی",
-          "correct": false
+          "en": "Unfulfilled (غير منجز) — condition not met",
+          "ur": "غیر منجز — شرط پوری نہیں ہوئی"
+        },
+        {
+          "en": "Partially negative — زيد is partially excluded",
+          "ur": "جزوی نفی — زید جزوی طور پر مستثنیٰ"
         }
-      ]
-    },
-    {
-      "type": "TRUE_FALSE",
-      "instruction": {
-        "ar": "حدد: صواب أم خطأ",
-        "en": "True or False"
-      },
-      "statement": {
-        "ar": "\"ما جاءني أحدٌ إلَّا حجرًا\" is an example of استثناء متصل",
-        "en": "\"No one came to me except a stone\" is an example of استثناء متصل (connected exception)",
-        "ur": "\"مجھے کوئی نہیں آیا مگر پتھر\" استثنا متصل کی مثال ہے"
-      },
-      "correct": false,
-      "explanation": {
-        "ar": "هذا استثناء منقطع — حجر ليس من جنس أحد، فالإثبات والنفي لا يتصلان",
-        "en": "This is منقطع — حجر (stone) is not from the same category as أحد (anyone). The negation and exception are disconnected.",
-        "ur": "یہ منقطع ہے — پتھر 'کوئی' کے زمرے سے تعلق نہیں رکھتا۔ نفی اور استثنا کا تعلق نہیں۔"
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "This is متصل (connected exception) — زيد is from the same category as كل الناس (people). The exception is directly connected to the preceding noun.",
+        "ur": "یہ متصل (منسلک استثنا) ہے — زید کل الناس (لوگوں) کے زمرے سے ہے۔ استثنا متقدم اسم سے براہ راست جڑی ہے۔"
       }
     },
     {
-      "type": "FILL_BLANK",
-      "instruction": {
-        "ar": "املأ بأداة الاستثناء المناسبة",
-        "en": "Fill with the appropriate exception particle"
+      "id": "ch70-l05-ex02",
+      "type": "TRUE_FALSE",
+      "statement": {
+        "en": "\"No one came to me except a stone\" is an example of استثناء متصل (connected exception)",
+        "ur": "مجھے کوئی نہیں آیا مگر پتھر استثنا متصل کی مثال ہے"
       },
-      "prompt": {
-        "ar": "ما جاءني أحدٌ ___ زيدٍ",
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "This is منقطع — حجر (stone) is not from the same category as أحد (anyone). The negation and exception are disconnected.",
+        "ur": "یہ منقطع ہے — پتھر 'کوئی' کے زمرے سے تعلق نہیں رکھتا۔ نفی اور استثنا کا تعلق نہیں۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "id": "ch70-l05-ex03",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "sentence_ar": "ما جاءني أحدٌ ___ زيدٍ",
+      "hint": {
         "en": "No one came to me ___ Zayd",
         "ur": "مجھے کوئی نہیں آیا ___ زید کے"
       },
-      "answer": "إِلَّا",
-      "hint": "This sentence is منفي تام — كامل النفي + exception that affirms the exception actually came",
-      "case_sensitive": true
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "instruction": {
-        "ar": "حلّل جملة من القرآن",
-        "en": "Parse a Quranic sentence"
-      },
-      "sentences": [
+      "options": [
         {
-          "original": "وَإِنْ يَسْتَغِيثُوا يُغَاثُوا بِمَاءٍ كَالْمُهْلِ يَشْوِي الْوُجُوهَ بِئْسَ الشَّرَابُ",
-          "analysis": {
-            "structure": "جملة شرطية + جملة جوابية",
-            "conditional": "وَإِنْ يَسْتَغِيثُوا — if they beg for water",
-            "response": "يُغَاثُوا بِمَاءٍ — they will be given water",
-            "description": "كَالْمُهْلِ — like molten copper (noun في function of صفة for ماء)",
-            "note": "This sentence has no إِلَّا — it's a normal conditional showing consequences. The exception patterns we've learned apply to specific grammatical constructions."
-          }
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "not",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "غَيْرُ",
+          "ar_plain": "غير",
+          "translit": "ghayr",
+          "en": "other than",
+          "ur": "سوا"
+        },
+        {
+          "ar": "مَعَ",
+          "ar_plain": "مع",
+          "translit": "ma'a",
+          "en": "with",
+          "ur": "ساتھ"
         }
-      ]
+      ],
+      "correct_answer": {
+        "ar": "إِلَّا",
+        "ar_plain": "إلا",
+        "translit": "illaa",
+        "en": "except",
+        "ur": "سوائے"
+      },
+      "xp_value": 1
     },
     {
+      "id": "ch70-l05-ex04",
+      "type": "GRAMMAR_PARSE",
+      "words": [
+        {
+          "ar": "وَإِنْ",
+          "ar_plain": "وإن",
+          "translit": "wa-in",
+          "en": "and if"
+        },
+        {
+          "ar": "يَسْتَغِيثُوا",
+          "ar_plain": "يستغيثوا",
+          "translit": "yastaghiithuu",
+          "en": "they beg for water"
+        },
+        {
+          "ar": "يُغَاثُوا",
+          "ar_plain": "يغاثوا",
+          "translit": "yughaathuu",
+          "en": "they will be given water"
+        },
+        {
+          "ar": "بِمَاءٍ",
+          "ar_plain": "بماء",
+          "translit": "bimaa-in",
+          "en": "with water"
+        },
+        {
+          "ar": "كَالْمُهْلِ",
+          "ar_plain": "كالمهل",
+          "translit": "ka-al-muhl",
+          "en": "like molten copper"
+        }
+      ],
+      "available_roles": [
+        "VERB",
+        "OBJECT",
+        "PARTICLE",
+        "NOUN",
+        "PREPOSITION",
+        "SUBJECT",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VERB",
+        "VERB",
+        "PREPOSITION",
+        "NOUN"
+      ],
+      "analysis": {
+        "structure": "جملة شرطية + جملة جوابية",
+        "conditional": "وَإِنْ يَسْتَغِيثُوا — if they beg for water",
+        "response": "يُغَاثُوا بِمَاءٍ — they will be given water"
+      },
+      "xp_value": 1,
+      "sentence_ar": "وَإِنْ يَسْتَغِيثُوا يُغَاثُوا بِمَاءٍ كَالْمُهْلِ"
+    },
+    {
+      "id": "ch70-l05-ex05",
       "type": "MATCHING",
-      "instruction": {
-        "ar": "طابق أداة الاستثناء بمعناها",
-        "en": "Match exception particles with their meanings"
-      },
-      "left_items": [
-        { "id": "1", "text_ar": "إلَّا" },
-        { "id": "2", "text_ar": "غير" },
-        { "id": "3", "text_ar": "سوى" }
+      "left_column": [
+        {
+          "ar": "إلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "Standard exception particle"
+        },
+        {
+          "ar": "غير",
+          "ar_plain": "غير",
+          "translit": "ghayr",
+          "en": "Other than — negative only"
+        },
+        {
+          "ar": "سوى",
+          "ar_plain": "سوى",
+          "translit": "siwaa",
+          "en": "Except/save — both affirmative and negative"
+        }
       ],
-      "right_items": [
-        { "id": "A", "text_ar": "معناها: استثناء بمعنى الإخراج" },
-        { "id": "B", "text_ar": "معناها: إثبات أو نفي (نفس المعنى)" },
-        { "id": "C", "text_ar": "معناها: بمعنى إلَّا في النفي" }
+      "right_column": [
+        {
+          "ar": "أعرفُ زيدًا سِوى عمروٍ",
+          "en": "I know Zayd except Amr (affirmative)"
+        },
+        {
+          "ar": "ما أعرفُ أحدًا إلَّا زيدًا",
+          "en": "I know no one except Zayd (negative)"
+        },
+        {
+          "ar": "كلَّ الناسِ غيرَ زيدٍ",
+          "en": "Everyone other than Zayd (negative)"
+        }
       ],
-      "matches": [
-        { "left": "1", "right": "A" },
-        { "left": "2", "right": "A" },
-        { "left": "3", "right": "B" }
-      ]
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "xp_value": 1
     },
     {
+      "id": "ch70-l05-ex06",
       "type": "BUILD_SENTENCE",
-      "instruction": {
-        "ar": "ابنِ جملة: استثناء متصل بكل",
-        "en": "Build a sentence: connected exception with كل"
+      "target_translation": {
+        "en": "Every scholar except Ibn Sulaiman",
+        "ur": "ہر عالم مگر ابن سلیمان"
       },
-      "elements": [
-        { "text_ar": "كل", "gloss": "all/every" },
-        { "text_ar": "العلماء", "gloss": "scholars" },
-        { "text_ar": "إلَّا", "gloss": "except" },
-        { "text_ar": "ابن", "gloss": "the son of" },
-        { "text_ar": "سليمان", "gloss": "Sulaiman" }
+      "tiles": [
+        {
+          "ar": "كُلُّ",
+          "ar_plain": "كل",
+          "translit": "kull",
+          "en": "all/every"
+        },
+        {
+          "ar": "الْعُلَمَاءُ",
+          "ar_plain": "العلماء",
+          "translit": "al-'ulamaa",
+          "en": "scholars"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except"
+        },
+        {
+          "ar": "ابْنُ",
+          "ar_plain": "ابن",
+          "translit": "ibn",
+          "en": "the son of"
+        },
+        {
+          "ar": "سُلَيْمَانَ",
+          "ar_plain": "سليمان",
+          "translit": "Sulaiman",
+          "en": "Sulaiman"
+        }
       ],
-      "correct_order": [0, 1, 2, 3, 4],
-      "expected_grammar": "كلُّ العلماءِ except Ibn Sulaiman — connected exception, all scholars except one"
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "xp_value": 1
     },
     {
+      "id": "ch70-l05-ex07",
       "type": "TAP_TRANSLATION",
-      "instruction": {
-        "ar": "ما المعنى؟",
-        "en": "What does this mean?"
-      },
       "prompt": {
         "ar": "سافرنا إلى مكة غيرَ المدينة",
-        "en": "We traveled to Makkah, excluding Madinah",
-        "ur": "ہم مکہ کی طرف سفر کرے، مدینہ کو چھوڑ کر"
+        "ar_plain": "سافرنا إلى مكة غير المدينة",
+        "translit": "safarna ilaa Makkah ghayra al-Madiinah",
+        "en": "We traveled to Makkah, excluding Madinah"
       },
       "options": [
         {
-          "label_ar": "سافرنا إلى مكة ثم إلى المدينة",
-          "label_en": "We traveled to Makkah then to Madinah",
-          "label_ur": "ہم مکہ پھر مدینہ گئے",
-          "correct": false
+          "en": "We traveled to Makkah then to Madinah",
+          "ur": "ہم مکہ پھر مدینہ گئے"
         },
         {
-          "label_ar": "سافرنا إلى مكة ولم نذهب إلى المدينة",
-          "label_en": "We traveled to Makkah and did not go to Madinah",
-          "label_ur": "ہم مکہ گئے اور مدینہ نہیں گئے",
-          "correct": true
+          "en": "We traveled to Makkah and did not go to Madinah",
+          "ur": "ہم مکہ گئے اور مدینہ نہیں گئے"
         },
         {
-          "label_ar": "سافرنا إلى المدينة ثم إلى مكة",
-          "label_en": "We traveled to Madinah then to Makkah",
-          "label_ur": "ہم مدینہ پھر مکہ گئے",
-          "correct": false
+          "en": "We traveled to Madinah then to Makkah",
+          "ur": "ہم مدینہ پھر مکہ گئے"
+        },
+        {
+          "en": "We traveled between Makkah and Madinah",
+          "ur": "ہم مکہ اور مدینہ کے درمیان سفر کیا"
         }
-      ]
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "غيرَ المدينة is a disconnected exception (منقطع) — excluding Madinah from the travel destination list. We went to Makkah, not Madinah.",
+        "ur": "غير المدينة ایک منقطع استثنا ہے — مدینہ کو سفر کے مقصد سے خارج کیا۔ ہم مکہ گئے، مدینہ نہیں۔"
+      }
     },
     {
+      "id": "ch70-l05-ex08",
       "type": "FILL_BLANK",
-      "instruction": {
-        "ar": "استخدم سوى أو غير",
-        "en": "Use سوى or غير"
-      },
-      "prompt": {
-        "ar": "ما أعرفُ أحدًا ___ زيدًا",
+      "mode": "TAP",
+      "sentence_ar": "ما أعرفُ أحدًا ___ زيدًا",
+      "hint": {
         "en": "I don't know anyone ___ Zayd",
         "ur": "میں کسی کو نہیں جانتَا ___ زید کے"
       },
-      "answer": "سوى",
-      "hint": "Both سوى and غير work here as exception particles in negative sentences",
-      "case_sensitive": false
+      "options": [
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "not",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "غَيْرُ",
+          "ar_plain": "غير",
+          "translit": "ghayr",
+          "en": "other than",
+          "ur": "سوا"
+        },
+        {
+          "ar": "مَعَ",
+          "ar_plain": "مع",
+          "translit": "ma'a",
+          "en": "with",
+          "ur": "ساتھ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "إِلَّا",
+        "ar_plain": "إلا",
+        "translit": "illaa",
+        "en": "except",
+        "ur": "سوائے"
+      },
+      "xp_value": 1
     }
   ],
   "reveal": {
@@ -275,15 +504,19 @@
       "surah": 4,
       "ayah": 173,
       "label": "An-Nisa 4:173",
-      "ar": "فَإِنْ تَابُوا وَأَقَامُوا الصَّلَاةَ وَآتَوُا الزَّكَاةَ فَإِخْوَانَكُمْ فِي الدِّينِ وَنُفَصِّلُ الْآيَاتِ لِقَوْمٍ يَعْلَمُونَ",
+      "ar": "فَإِنْ تَابُوا وَأَقَامُوا الصَّلَاةَ وَآتَوُوا الزَّكَاةَ فَإِخْوَانَكُمْ فِي الدِّينِ وَنُفَصِّلُ الْآيَاتِ لِقَوْمٍ يَعْلَمُونَ",
       "en": "But if they repent, establish prayer, and give charity, they are your brothers in faith. And We detail the signs for a people who know.",
-      "ur": "مگر اگر وہ توبہ کریں، نماز قائم کریں، اور زکوٰة دیں تو وہ تمہارے بھائی ہیں ایمان میں۔ اور ہم آیات کو تفصیل سے بیان کرتے ہیں اس قوم کے لیے جو علم رکھتے ہیں۔"
+      "ur": "مگر اگر وہ توبہ کریں، نماز قائم کریں، اور زکوٰة دیں تو وہ تمہارے بھائی ہیں ایمان میں۔"
     },
-    "highlighted_word_indices": [],
+    "highlighted_word_indices": [
+      0,
+      1,
+      2
+    ],
     "noor_explanation": {
-      "ar": "لاحظ: الجملة الشرطية لا تحتاج استثناء — الفاء تفعل العمل. \"فَإِخْوَانَكُمْ\" هو نتيجة طبيعية للتوبة، لا استثناء.",
-      "en": "Note: This conditional sentence doesn't need إِلَّا — the فاء (fa) does the logical work. فَإِخْوَانَكُمْ is the natural consequence of repentance, not an exception to a rule. This is important: not every unusual grammatical structure is an exception pattern — sometimes the grammar just flows differently.",
-      "ur": "نوٹ: یہ شرطی جملہ إِلَّا کی ضرورت نہیں ہے — فاء کام کرتی ہے۔ توبہ کا نتیجہ ہے، قاعدے سے استثنا نہیں۔ ہر غیر معمولی грамматик ساخت استثنا نہیں ہوتی — کبھی грамматика مختلف طریقے سے بہتی ہے۔"
+      "ar": "لاحظ: الجملة الشرطية لا تحتاج استثناء — الفاء تفعل العمل. فَإِخْوَانَكُمْ هو نتيجة طبيعية للتوبة، لا استثناء.",
+      "en": "Note: This conditional sentence doesn't need إِلَّا — the فاء (fa) does the logical work. فَإِخْوَانَكُمْ is the natural consequence of repentance, not an exception to a rule.",
+      "ur": "نوٹ: یہ شرطی جملہ إِلَّا کی ضرورت نہیں ہے — فاء کام کرتی ہے۔ توبہ کا نتیجہ ہے، قاعدے سے استثنا نہیں۔"
     }
   },
   "close": {
@@ -292,5 +525,6 @@
       "en": "You've now mastered all four types of إِلَّا, both exception particles, and the connected vs. disconnected distinction. This chapter closes our exception unit. The next REVIEW will consolidate everything. You're building something solid.",
       "ur": "آپ نے اب إِلَّا کی چاروں قسموں، دونوں استثنا ذروں، اور متصل بمقابل منقطع کی تمییز کو مکمل کر لیا ہے۔ یہ باب استثنا یونٹ کو بند کرتی ہے۔ اگلا REVIEW سب کو ملاے گا۔ آپ کچھ مضبوط بنا رہے ہیں۔"
     }
-  }
+  },
+  "template": "STANDARD"
 }

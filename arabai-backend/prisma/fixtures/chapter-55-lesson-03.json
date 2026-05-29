@@ -157,12 +157,12 @@
         { "ar": "كَرِيمٌ", "ar_plain": "كريم", "translit": "kariimun", "en": "noble" }
       ],
       "right_column": [
-        { "en": "مُبْتَدَأ (subject)", "ur": "مبتدأ" },
-        { "en": "خَبَر (predicate)", "ur": "خبر" },
-        { "en": "مُبْتَدَأ (subject)", "ur": "مبتدأ" },
-        { "en": "خَبَر (predicate)", "ur": "خبر" }
+        { "en": "مُبْتَدَأ (the Muslim — subject)", "ur": "مبتدأ (المسلم)" },
+        { "en": "خَبَر (diligent — predicate)", "ur": "خبر (محنتی)" },
+        { "en": "مُبْتَدَأ (the boy — subject)", "ur": "مبتدأ (الغرام)" },
+        { "en": "خَبَر (noble — predicate)", "ur": "خبر (کریم)" }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 0], [3, 1]],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الْمُسْلِمُ and الْغُلَامُ are both مُبْتَدَأ. مُجْتَهِدٌ and كَرِيمٌ are both خَبَر.",
@@ -187,7 +187,7 @@
       "id": "ch55-l03-ex04",
       "type": "FILL_BLANK",
       "mode": "TAP",
-      "sentence_ar": "الْمُؤْمِنَةُ __",
+      "sentence_ar": "الْمُؤْمِنَةُ ___",
       "hint": {
         "en": "The believing woman is righteous.",
         "ur": "مومنہ عورت نیک ہے۔"

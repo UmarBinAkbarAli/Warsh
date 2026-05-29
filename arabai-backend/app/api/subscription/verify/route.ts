@@ -34,6 +34,7 @@ export async function POST(request: Request) {
       subscriptionStatus: "active",
       subscriptionProductId: verifiedSubscription.productId,
       subscriptionActiveUntil: verifiedSubscription.activeUntil,
+      lastPurchaseToken: purchaseToken ?? null,
     },
     select: { subscriptionStatus: true, subscriptionActiveUntil: true },
   });

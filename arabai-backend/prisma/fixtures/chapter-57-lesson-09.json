@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "R12 — Post-Peak 2 Reinforcement after Chapter 57. Reviews Book 6 content: الإعراب، الأسماء الخمسة، weak verbs, الأفعال الخمسة.",
+    "chapter_order": 57,
+    "lesson_order": 9,
+    "chapter_title": "R12 — Post-Peak 2 Review",
+    "title": "R12 — Peak 2 Mastery: الإعراب and Advanced Verbs",
+    "titleAr": "R12 — إتْقَانُ الذِّرْوَةِ الثَّانِيَةِ",
+    "estimated_minutes": 15,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 56,
+      "ayah": 77,
+      "label": "Al-Waqi'ah 56:77",
+      "ar": "إِنَّهُ لَقُرْآنٌ كَرِيمٌ",
+      "en": "Indeed, it is a noble Quran",
+      "ur": "بے شک یہ ایک کریم قرآن ہے",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-waqiah-077-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "R12 is your Post-Peak 2 consolidation. You have conquered the grammar science of Book 6: الإعراب والبناء, the special noun types, weak verbs, and الأفعال الخمسة. Everything you have learned now makes the Quran more parseable. Let's confirm the mastery.",
+      "ur": "R12 آپ کی Post-Peak 2 consolidation ہے۔ آپ نے Book 6 کی گرامر سائنس فتح کی ہے: الإعراب والبناء، خاص اسم کی اقسام، معتل افعال، اور الأفعال الخمسة۔ آپ نے جو کچھ سیکھا ہے وہ اب قرآن کو زیادہ قابل تجزیہ بناتا ہے۔ آئیں مہارت کی تصدیق کریں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": { "en": "Book 6 in review — four pillars", "ur": "Book 6 جائزہ میں — چار ستون" },
+      "body": {
+        "en": "1. الإعراب والبناء — case-changing (مُعْرَب) vs fixed-ending (مَبْنِيّ) words. 2. Special noun types: الأسماء الخمسة (أَب، أَخ...), المقصور (مُوسَى), المنقوص (الْقَاضِي), المثنى (كِتَابَانِ). 3. Weak verbs: كَانَ، قَالَ، رَأَى — endings change with root letters و/ا/ي. 4. الأفعال الخمسة — ن as state marker.",
+        "ur": "1. الإعراب والبناء — اعرابی تغیر (مُعْرَب) بمقابلہ ثابت اختتام (مَبْنِيّ) الفاظ۔ 2. خاص اسم کی اقسام: الأسماء الخمسة، المقصور، المنقوص، المثنى۔ 3. معتل افعال: كَانَ، قَالَ، رَأَى۔ 4. الأفعال الخمسة — ن بطور حالت کی علامت۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": { "ar": "أَبُو إِبْرَاهِيمَ", "ar_plain": "أبو إبراهيم", "translit": "abuu Ibraahiima", "en": "the father of Ibrahim", "ur": "ابراہیم کے والد" },
+      "explanation": {
+        "en": "الأسماء الخمسة — أَب shows case via و (مرفوع: أَبُو), ا (منصوب: أَبَا), ي (مجرور: أَبِي). This is the same ن-less logic as الأفعال الخمسة: state is shown by a letter, not a diacritic.",
+        "ur": "الأسماء الخمسة — أَب حالت کو و (مرفوع: أَبُو)، ا (منصوب: أَبَا)، ي (مجرور: أَبِي) کے ذریعے ظاہر کرتا ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch57-l09-ex01",
+      "prompt": { "ar": "قَالَ رَبِّي يَعْلَمُ", "ar_plain": "قال ربي يعلم", "translit": "qaala rabbii ya'lamu", "en": "He said: My Lord knows", "ur": "اس نے کہا: میرا رب جانتا ہے" },
+      "options": [
+        { "en": "He said: My Lord knows", "ur": "اس نے کہا: میرا رب جانتا ہے" },
+        { "en": "He said: My Lord knew", "ur": "اس نے کہا: میرے رب نے جانا" },
+        { "en": "He says: My Lord will know", "ur": "وہ کہتا ہے: میرا رب جانے گا" },
+        { "en": "My Lord said: He knows", "ur": "میرے رب نے کہا: وہ جانتا ہے" }
+      ],
+      "correct_index": 0,
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "قَالَ is a weak verb (root: ق-و-ل, middle root letter و). Past tense: قَالَ. يَعْلَمُ is present tense 'he knows' (مرفوع, no triggering particle).",
+        "ur": "قَالَ ایک معتل فعل ہے (جڑ: ق-و-ل، درمیانی حرف و)۔ ماضی: قَالَ۔ يَعْلَمُ مضارع 'وہ جانتا ہے' (مرفوع) ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch57-l09-ex02",
+      "statement": {
+        "en": "الأسماء الخمسة and الأفعال الخمسة both use letters (not diacritics) to show grammatical state.",
+        "ur": "الأسماء الخمسة اور الأفعال الخمسة دونوں اعرابی حالت ظاہر کرنے کے لیے حرکات کی بجائے حروف استعمال کرتے ہیں۔",
+        "ar_example": { "ar": "أَبُو بَكْرٍ / يَعْمَلُونَ", "ar_plain": "أبو بكر / يعملون", "translit": "abuu bakrin / ya'maluuna", "en": "Abu Bakr / they work (مرفوع)", "ur": "ابو بکر / وہ کام کرتے ہیں (مرفوع)" }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch57-l09-ex03",
+      "mode": "TAP",
+      "sentence_ar": "إِنَّهُ لَقُرْآنٌ ___",
+      "hint": { "en": "noble / generous (Al-Waqi'ah 56:77)", "ur": "کریم / شریف (الواقعۃ 56:77)" },
+      "options": [
+        { "ar": "كَرِيمٌ", "ar_plain": "كريم", "translit": "kariimun", "en": "noble (خبر إِنَّ, مرفوع)", "ur": "شریف (إِنَّ کی خبر، مرفوع)" },
+        { "ar": "كَرِيمًا", "ar_plain": "كريما", "translit": "kariiman", "en": "noble (منصوب)", "ur": "شریف (منصوب)" },
+        { "ar": "كَرِيمٍ", "ar_plain": "كريم", "translit": "kariimin", "en": "noble (مجرور)", "ur": "شریف (مجرور)" },
+        { "ar": "الْكَرِيمُ", "ar_plain": "الكريم", "translit": "al-kariim", "en": "the Noble One", "ur": "کریم" }
+      ],
+      "correct_answer": { "ar": "كَرِيمٌ", "ar_plain": "كريم", "translit": "kariimun", "en": "noble (خبر إِنَّ, مرفوع)", "ur": "شریف (إِنَّ کی خبر، مرفوع)" },
+      "xp_value": 2
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch57-l09-ex04",
+      "left_column": [
+        { "ar": "مُعْرَب", "ar_plain": "معرب", "translit": "mu'rab", "en": "case-changing" },
+        { "ar": "مَبْنِيّ", "ar_plain": "مبني", "translit": "mabni", "en": "fixed ending" },
+        { "ar": "معتل", "ar_plain": "معتل", "translit": "mu'tall", "en": "weak verb" },
+        { "ar": "المثنى", "ar_plain": "المثنى", "translit": "al-muthannaa", "en": "the dual" }
+      ],
+      "right_column": [
+        { "en": "كِتَابٌ / كِتَابًا / كِتَابٍ", "ur": "کتاب مرفوع/منصوب/مجرور" },
+        { "en": "هَذَا — never changes ending", "ur": "هَذَا — اختتام کبھی نہیں بدلتا" },
+        { "en": "كَانَ، قَالَ، رَأَى", "ur": "كَانَ، قَالَ، رَأَى" },
+        { "en": "كِتَابَانِ (مرفوع) / كِتَابَيْنِ (منصوب/مجرور)", "ur": "كِتَابَانِ / كِتَابَيْنِ" }
+      ],
+      "correct_pairs": [[0,0],[1,1],[2,2],[3,3]],
+      "xp_value": 2
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch57-l09-ex05",
+      "target_translation": { "en": "Indeed, it is a noble Quran.", "ur": "بے شک یہ ایک کریم قرآن ہے۔" },
+      "tiles": [
+        { "ar": "إِنَّهُ", "ar_plain": "إنه", "translit": "innahu", "en": "Indeed it", "ur": "بے شک یہ" },
+        { "ar": "لَقُرْآنٌ", "ar_plain": "لقرآن", "translit": "laqur'aanun", "en": "is indeed a Quran", "ur": "یقیناً قرآن ہے" },
+        { "ar": "كَرِيمٌ", "ar_plain": "كريم", "translit": "kariimun", "en": "noble", "ur": "کریم" }
+      ],
+      "correct_order": [0,1,2],
+      "xp_value": 1
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch57-l09-ex06",
+      "sentence_ar": "يُؤْمِنُونَ بِاللَّهِ",
+      "sentence": {
+        "ar": "يُؤْمِنُونَ بِاللَّهِ",
+        "ar_plain": "يؤمنون بالله",
+        "translit": "yu'minuuna billaahi",
+        "en": "they believe in Allah",
+        "ur": "وہ اللہ پر ایمان لاتے ہیں"
+      },
+      "words": [
+        { "ar": "يُؤْمِنُونَ", "ar_plain": "يؤمنون", "translit": "yu'minuuna", "en": "they believe (مرفوع)", "ur": "وہ ایمان لاتے ہیں (مرفوع)" },
+        { "ar": "بِ", "ar_plain": "ب", "translit": "bi", "en": "in (preposition)", "ur": "میں" },
+        { "ar": "اللَّهِ", "ar_plain": "الله", "translit": "Allaahi", "en": "Allah (مجرور)", "ur": "اللہ (مجرور)" }
+      ],
+      "available_roles": ["VERB", "PREPOSITION", "NOUN"],
+      "correct_roles": ["VERB", "PREPOSITION", "NOUN"],
+      "xp_value": 2,
+      "explanation_on_wrong": {
+        "en": "يُؤْمِنُونَ is the verb (الأفعال الخمسة, مرفوع — ن present, no triggering particle). بِ is a preposition. اللَّهِ is مجرور (object of the preposition بِ).",
+        "ur": "يُؤْمِنُونَ فعل ہے (الأفعال الخمسة، مرفوع — ن موجود، کوئی triggering particle نہیں)۔ بِ حرف جر ہے۔ اللَّهِ مجرور ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": { "en": "R12 — Post-Peak 2 mastery confirmed", "ar": "R12 — تأكيد إتقان الذروة الثانية", "ur": "R12 — Post-Peak 2 مہارت کی تصدیق" },
+    "ayah": {
+      "surah": 56,
+      "ayah": 77,
+      "label": "Al-Waqi'ah 56:77",
+      "ar": "إِنَّهُ لَقُرْآنٌ كَرِيمٌ",
+      "en": "Indeed, it is a noble Quran",
+      "ur": "بے شک یہ ایک کریم قرآن ہے",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-waqiah-077-mishary.mp3"
+    },
+    "highlighted_word_indices": [1, 2],
+    "noor_explanation": {
+      "en": "إِنَّهُ (إِنَّ + هُ — emphasis particle + attached pronoun) + لَ (lam of emphasis) + قُرْآنٌ (اسم إِنَّ, مرفوع — ن) + كَرِيمٌ (خبر إِنَّ, مرفوع — ن). Every word here reflects الإعراب: tanween on مُعْرَب nouns, مرفوع state for the خبر of إِنَّ. You can now fully parse this ayah.",
+      "ur": "إِنَّهُ (إِنَّ + هُ — تاکیدی حرف + ملحق ضمیر) + لَ (تاکید کا لام) + قُرْآنٌ (إِنَّ کا اسم، مرفوع) + كَرِيمٌ (إِنَّ کی خبر، مرفوع)۔ یہاں ہر لفظ الإعراب کی عکاسی کرتا ہے۔ اب آپ اس آیت کو مکمل طور پر parse کر سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "R12 complete. Book 6 is behind you. الإعراب، الأسماء الخمسة، weak verbs، الأفعال الخمسة — four pillars of Arabic grammar science, all mastered. Book 7 brings this science into real-world applied Arabic. You are ready.",
+      "ur": "R12 مکمل۔ Book 6 آپ کے پیچھے ہے۔ الإعراب، الأسماء الخمسة، معتل افعال، الأفعال الخمسة — عربی گرامر سائنس کے چار ستون، سب mastered۔ Book 7 اس سائنس کو حقیقی دنیا کی applied عربی میں لاتا ہے۔ آپ تیار ہیں۔"
+    }
+  }
+}

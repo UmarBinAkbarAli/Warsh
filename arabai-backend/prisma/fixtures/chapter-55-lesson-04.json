@@ -142,12 +142,12 @@
         { "ar": "شَرِبَ - الْمَاءَ", "ar_plain": "شرب الماء", "translit": "shariba al-maa'a", "en": "drank the water" }
       ],
       "right_column": [
-        { "en": "فَاعِل + مَفْعُول بِهِ", "ur": "فاعل + مفعول به" },
-        { "en": "فَاعِل + مَفْعُول بِهِ", "ur": "فاعل + مفعول به" },
-        { "en": "فَاعِل + مَفْعُول بِهِ", "ur": "فاعل + مفعول به" },
-        { "en": "فَاعِل + مَفْعُول بِهِ", "ur": "فاعل + مفعول به" }
+        { "en": "wrote the book", "ur": "نے کتاب لکھی" },
+        { "en": "saw the father", "ur": "نے باپ کو دیکھا" },
+        { "en": "taught the student", "ur": "نے طالب علم کو پڑھایا" },
+        { "en": "drank the water", "ur": "نے پانی پیا" }
       ],
-      "correct_pairs": [[0, 0], [1, 0], [2, 0], [3, 0]],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "Each of these sentences has a فَاعِل (subject, رفع) and a مَفْعُول بِهِ (direct object, نصب). The pattern is always the same: someone does something to something.",

@@ -68,6 +68,20 @@
         "en": "وَلَا تَقُولَنَّ is 'never say' — the لَا is prohibitive, تَقُولُ is 'you say', نَّ is for emphasis. إِنِّي فَاعِلٌ ذَٰلِكَ is 'indeed I will do that.' غَدًا is 'tomorrow' — the warning is: don't promise future action without knowledge of Allah's will.",
         "ur": "وَلَا تَقُولَنَّ 'مت کہیں' ہے — لَا prohibitive ہے، تَقُولُ 'آپ کہتے ہیں'، نَّ emphasis کے لیے ہے۔ إِنِّي فَاعِلٌ ذَٰلِكَ 'بیشک میں وہ کروں گا' ہے۔ غَدًا 'کل' ہے — warning ہے: اللہ کی مرضی کے بغیر مستقبل کے action کا وعدہ مت کرو۔"
       }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "فَاعِلٌ",
+        "ar_plain": "فاعل",
+        "translit": "faa'ilun",
+        "en": "doing / will do (present participle)",
+        "ur": "کرنے والا"
+      },
+      "explanation": {
+        "en": "فَاعِلٌ is the present participle from the root ع-م-ل (to do). It means 'doing' or 'will do.' Unlike the past tense فَعَلَ, the present participle فَاعِلٌ describes an ongoing or intended action. In إِنِّي فَاعِلٌ, it expresses the speaker's declaration of future intent.",
+        "ur": "فَاعِلٌ root ع-م-ل (کرنا) سے present participle ہے۔ اس کا مطلب 'کرنے والا' یا 'کروں گا' ہے۔ ماضی فَعَلَ کے برعکس، present participle فَاعِلٌ ongoing یا intended action describe کرتی ہے۔ إِنِّي فَاعِلٌ میں، یہ speaker کی future intent کی declaration ہے۔"
+      }
     }
   ],
   "exercises": [
@@ -268,8 +282,8 @@
         { "ar": "ذَٰلِكَ", "ar_plain": "ذلك", "translit": "dhaalika", "en": "that" },
         { "ar": "غَدًا", "ar_plain": "غدا", "translit": "ghadan", "en": "tomorrow" }
       ],
-      "available_roles": ["PARTICLE", "VERB", "OBJECT", "ADVERB"],
-      "correct_roles": ["PARTICLE", "VERB", "OBJECT", "ADVERB"],
+      "available_roles": ["PARTICLE", "VERB", "SUBJECT", "DEMONSTRATIVE"],
+      "correct_roles": ["PARTICLE", "VERB", "SUBJECT", "DEMONSTRATIVE"],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "إِنِّي is 'indeed I' (إِنَّ + ي). فَاعِلٌ is the present participle 'doing/will do.' ذَٰلِكَ is 'that' (demonstrative). غَدًا is 'tomorrow' — an adverb of time in the accusative.",

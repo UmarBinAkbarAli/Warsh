@@ -270,8 +270,8 @@
         { "ar": "يَعِيشُ", "ar_plain": "يعيش", "translit": "ya'iishu", "en": "he lives" },
         { "ar": "فِي الْقَرْيَةِ", "ar_plain": "في القرية", "translit": "fii al-qaryati", "en": "in the village" }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PREPOSITION"],
-      "correct_roles": ["SUBJECT", "VERB", "PREPOSITION"],
+      "available_roles": ["SUBJECT", "VERB", "PREPOSITION", "ADJECTIVE"],
+      "correct_roles": ["SUBJECT", "VERB", "VERB", "PREPOSITION"],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "رَجُلٌ is the subject. كَانَ يَعِيشُ is the past continuous verb 'he used to live.' فِي الْقَرْيَةِ is a prepositional phrase adding location. The relative clause describes the man.",

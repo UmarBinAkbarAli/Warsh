@@ -17,8 +17,7 @@
       "label": "Al-Baqarah 2:185",
       "ar": "شَهْرُ رَمَضَانَ الَّذِي أُنْزِلَ فِيهِ الْقُرْآنُ هُدًى لِّلنَّاسِ وَبَيِّنَاتٍ مِّنَ الْهُدَىٰ وَالْفُرْقَانِ",
       "en": "The month of Ramadan in which the Quran was revealed as guidance for mankind and clear proofs of guidance and the criterion.",
-      "ur": "رمضان کا مہینہ جس میں قرآن نازل ہوا ہدایت کے لیے اور ہدایت اور فرقان کی کھلی دلیلیں۔",
-      "audio_url": ""
+      "ur": "رمضان کا مہینہ جس میں قرآن نازل ہوا ہدایت کے لیے اور ہدایت اور فرقان کی کھلی دلیلیں۔"
     },
     "noor_intro": {
       "ar": "R15 is the final review of your entire 72-chapter journey. We'll test everything — from الحروف to النِّدَاء, from basic sentence structure to Quranic rhetoric. You've earned this.",
@@ -29,213 +28,349 @@
   },
   "discover_cards": [
     {
-      "term_ar": "مراجعة شاملة — 72 فصلاً",
-      "term_en": "Comprehensive Review — 72 Chapters",
-      "definition_ar": "من الحروف إلى المنادى — كل المفاهيم الأساسية",
-      "definition_en": "From الحروف to المنادى — all fundamental concepts",
-      "example_ar": "الأحرف -> الأسماء -> الأفعال -> الجمل -> الإعراب -> الحجج -> الاستثناء -> الحال والتمييز -> النداء\nكل فصل بني على الذي قبله",
-      "example_en": "Letters → Names → Verbs → Sentences → Parsing → Arguments → Exception → حال/تمييز → Vocative\nEach chapter built on the previous one",
-      "example_ur": "حروف → اسمائے → افعال → جملے → تجزیہ → دلائل → استثنا → حال/تمييز → ندا\nہر باب نے پچھلے پر بنایا"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Comprehensive Review — 72 Chapters",
+        "ar": "مراجعة شاملة — 72 فصلاً"
+      },
+      "explanation": {
+        "en": "From الحروف to المنادى — all fundamental concepts. Letters → Names → Verbs → Sentences → Parsing → Arguments → Exception → حال/تمييز → Vocative. Each chapter built on the previous one.",
+        "ar": "من الحروف إلى المنادى — كل المفاهيم الأساسية. كل فصل بني على الذي قبله."
+      },
+      "highlight": true
     },
     {
-      "term_ar": "الذكاء اللغوي",
-      "term_en": "Linguistic Intelligence",
-      "definition_ar": "فهمك الآن للقرآن ليس مجرد حفظ، بل فهم هياكل",
-      "definition_en": "Your understanding of the Quran is now not just memorization — it's structural comprehension",
-      "example_ar": "When you read يَا أَيُّهَا الَّذِينَ آمَنُوا — you know بالضبط what each word does grammatically",
-      "example_en": "When you see يَا أَيُّهَا الَّذِينَ آمَنُوا — you now know exactly what each word does grammatically, what its case is, and why it's there. This is real linguistic intelligence.",
-      "example_ur": "جب آپ 'اے ایمان والو' پڑھتے ہیں — اب آپ بالضبط جانتے ہیں کہ ہر لفظ گرامر کے لحاظ سے کیا کرتا ہے، اس کا کیا case ہے، اور وہ کیوں وہاں ہے۔ یہ حقیقی ذہانت ہے۔"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Linguistic Intelligence",
+        "ar": "الذكاء اللغوي"
+      },
+      "explanation": {
+        "en": "Your understanding of the Quran is now not just memorization — it's structural comprehension. When you see يَا أَيُّهَا الَّذِينَ آمَنُوا — you now know exactly what each word does grammatically, what its case is, and why it's there. This is real linguistic intelligence.",
+        "ar": "فهمك الآن للقرآن ليس مجرد حفظ، بل فهم هياكل. عندما تقرأ 'اے ایمان والو' — الآن تعرف بالضبط ما يفعله كل كلمة نحويًا."
+      }
     }
   ],
   "exercises": [
     {
+      "id": "ch72l08-ex01",
       "type": "MATCHING",
-      "instruction": {
-        "ar": "طابق المفهوم بالفصل",
-        "en": "Match concept with chapter"
-      },
-      "left_items": [
-        { "id": "1", "text_ar": "إِلَّا — الاستثناء" },
-        { "id": "2", "text_ar": "الحال والتمييز" },
-        { "id": "3", "text_ar": "النِّدَاء" },
-        { "id": "4", "text_ar": "الجمل الشرطية" }
+      "left_column": [
+        {
+          "ar": "إِلَّا — الاستثناء",
+          "ar_plain": "إلا",
+          "translit": "illā",
+          "en": "إِلَّا — Exception"
+        },
+        {
+          "ar": "الحال والتمييز",
+          "ar_plain": "الحال والتمييز",
+          "translit": "al-ḥāl wa-t-tamyīz",
+          "en": "Hāl and Tamyīz"
+        },
+        {
+          "ar": "النِّدَاء",
+          "ar_plain": "النداء",
+          "translit": "an-nidāʾ",
+          "en": "النِّدَاء — Vocative"
+        },
+        {
+          "ar": "الجمل الشرطية",
+          "ar_plain": "الجمل الشرطية",
+          "translit": "al-jumal ash-sharṭiyya",
+          "en": "Conditional Sentences"
+        }
       ],
-      "right_items": [
-        { "id": "A", "text_ar": "الفصل 70" },
-        { "id": "B", "text_ar": "الفصل 71" },
-        { "id": "C", "text_ar": "الفصل 72" },
-        { "id": "D", "text_ar": "الفصل 62" }
+      "right_column": [
+        {
+          "en": "الفصل 70"
+        },
+        {
+          "en": "الفصل 71"
+        },
+        {
+          "en": "الفصل 72"
+        },
+        {
+          "en": "الفصل 62"
+        }
       ],
-      "matches": [
-        { "left": "1", "right": "A" },
-        { "left": "2", "right": "B" },
-        { "left": "3", "right": "C" },
-        { "left": "4", "right": "D" }
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
       ]
     },
     {
+      "id": "ch72l08-ex02",
       "type": "GRAMMAR_PARSE",
-      "instruction": {
-        "ar": "حلّل من القرآن: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
-        "en": "Parse from Quran: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ"
-      },
-      "sentences": [
+      "sentence_ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
+      "words": [
         {
-          "original": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
-          "analysis": {
-            "يا": "حرف نداء — particle of vocative, initiates call to believers",
-            "أيها": "اسم بمعنى المدعو — invariable particle, draws attention to group",
-            "الذين": "مضاف إليه — governed by أيها, specifies group",
-            "آمنوا": "فعل ماضٍ — relative clause defining believers as those who believed",
-            "اتقوا": "فعل أمر — command to fear Allah (the core directive)",
-            "الله": "مفعول به منصوب — object of اتقوا",
-            "المعنى": "O believers — fear Allah (this is the Quran's most repeated command)"
-          }
+          "ar": "يا",
+          "ar_plain": "يا",
+          "translit": "yā",
+          "en": "O"
+        },
+        {
+          "ar": "أيها",
+          "ar_plain": "أيها",
+          "translit": "ayyuhā",
+          "en": "those who"
+        },
+        {
+          "ar": "الذين",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "who"
+        },
+        {
+          "ar": "آمنوا",
+          "ar_plain": "آمنوا",
+          "translit": "āmanū",
+          "en": "believed"
+        },
+        {
+          "ar": "اتقوا",
+          "ar_plain": "اتقوا",
+          "translit": "ittaqū",
+          "en": "fear"
+        },
+        {
+          "ar": "الله",
+          "ar_plain": "الله",
+          "translit": "Allāh",
+          "en": "Allah"
         }
-      ]
-    },
-    {
-      "type": "TRUE_FALSE",
-      "instruction": {
-        "ar": "حدد: صواب أم خطأ",
-        "en": "True or False"
-      },
-      "statements": [
-        {
-          "statement": "التمييز يوضح ويخصص ما قبله — الحال يصف هيئة صاحب الحال",
-          "en": "تمييز clarifies/specifies what precedes — الحال describes the manner/state of صاحب الحال",
-          "ur": "تمييز وضاحت کرتی ہے — حال صاحب الحال کی حالت بیان کرتی ہے",
-          "correct": true
-        },
-        {
-          "statement": "في \"ثَلَاثُونَ يَوْمًا\" — يومًا حال",
-          "en": "In 'thirty days' — يومًا is a حال",
-          "ur": "'تیس دن' میں — یوم حال ہے",
-          "correct": false,
-          "explanation": "يومًا is تمييز — it specifies what is being counted (how many days). This is NOT a حال because it does not describe HOW something happened — it specifies WHAT KIND/QUANTITY."
-        },
-        {
-          "statement": "أَيُّهَا ثابت لا يتغير — الذي يتغير هو الاسم بعده",
-          "en": "أَيُّهَا is invariable — it never changes case. What changes is the noun after it.",
-          "ur": "ایہ ثابت ہے — کبھی case نہیں بدلتا۔ بدلنے والا اس کے بعد والا noun ہے",
-          "correct": true
-        }
-      ]
-    },
-    {
-      "type": "FILL_BLANK",
-      "instruction": {
-        "ar": "املأ الفراغ",
-        "en": "Fill in the blank"
-      },
-      "items": [
-        {
-          "prompt": { "ar": "غرض 72 فصلاً هو الوصول إلى ___", "en": "The purpose of 72 chapters is to reach ___" },
-          "answer": "التقوى",
-          "case_sensitive": false
-        },
-        {
-          "prompt": { "ar": "أَيُّهَا + اسم في الجر = نداء ___", "en": "أَيُّهَا + noun in genitive = ___ vocative" },
-          "answer": "مجموعة",
-          "case_sensitive": false
-        },
-        {
-          "prompt": { "ar": "إِلَّا في \"ما شربتُ إلَّا ماءً\" = منفي ___", "en": "إِلَّا in 'I didn't drink except water' = ___ negative" },
-          "answer": "جزئي",
-          "case_sensitive": false
-        }
-      ]
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "instruction": {
-        "ar": "ابنِ: منفي تام مع استثناء",
-        "en": "Build: Fully negative sentence with exception"
-      },
-      "elements": [
-        { "text_ar": "ما", "gloss": "not" },
-        { "text_ar": "أحد", "gloss": "anyone" },
-        { "text_ar": "جاء", "gloss": "came" },
-        { "text_ar": "إلا", "gloss": "except" },
-        { "text_ar": "محمد", "gloss": "Muhammad" }
       ],
-      "correct_order": [0, 2, 1, 3, 4],
-      "expected_grammar": "ما جاء أحد إلا محمد — No one came except Muhammad — منفي تام (full negation) + exception"
+      "available_roles": [
+        "PARTICLE",
+        "VERB",
+        "NOUN",
+        "PREPOSITION",
+        "OBJECT",
+        "RELATIVE_PRONOUN"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "PARTICLE",
+        "RELATIVE_PRONOUN",
+        "VERB",
+        "VERB",
+        "OBJECT"
+      ]
     },
     {
+      "id": "ch72l08-ex03",
+      "type": "TRUE_FALSE",
+      "statement": {
+        "en": "تمييز clarifies/specifies what precedes — حال describes the manner/state of صاحب الحال",
+        "ur": "تمييز وضاحت کرتی ہے — حال صاحب الحال کی حالت بیان کرتی ہے"
+      },
+      "correct_answer": true
+    },
+    {
+      "id": "ch72l08-ex04",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "sentence_ar": "غرض 72 فصلاً هو الوصول إلى ___",
+      "hint": {
+        "en": "The ultimate goal",
+        "ur": "آخری مقصد"
+      },
+      "options": [
+        {
+          "ar": "التقوى",
+          "ar_plain": "التقوى",
+          "translit": "at-taqwā",
+          "en": "التقوى"
+        },
+        {
+          "ar": "النحو",
+          "ar_plain": "النحو",
+          "translit": "an-naḥw",
+          "en": "النحو"
+        },
+        {
+          "ar": "الفهم",
+          "ar_plain": "الفهم",
+          "translit": "al-fahm",
+          "en": "الفهم"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "no/not",
+          "ur": "نہیں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "التقوى",
+        "ar_plain": "التقوى",
+        "translit": "at-taqwā",
+        "en": "التقوى"
+      }
+    },
+    {
+      "id": "ch72l08-ex05",
+      "type": "BUILD_SENTENCE",
+      "target_translation": {
+        "en": "ما جاء أحد إلا محمد — No one came except Muhammad",
+        "ur": "کوئی نہیں آیا مگر محمد"
+      },
+      "tiles": [
+        {
+          "ar": "ما",
+          "ar_plain": "ما",
+          "translit": "mā",
+          "en": "not"
+        },
+        {
+          "ar": "أحد",
+          "ar_plain": "أحد",
+          "translit": "aḥad",
+          "en": "anyone"
+        },
+        {
+          "ar": "جاء",
+          "ar_plain": "جاء",
+          "translit": "jā'a",
+          "en": "came"
+        },
+        {
+          "ar": "إلا",
+          "ar_plain": "إلا",
+          "translit": "illā",
+          "en": "except"
+        },
+        {
+          "ar": "محمد",
+          "ar_plain": "محمد",
+          "translit": "muḥammad",
+          "en": "Muhammad"
+        }
+      ],
+      "correct_order": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "ch72l08-ex06",
       "type": "CONVERSATION_BUILDER",
-      "instruction": {
-        "ar": "اختر الإجابة الصحيحة",
-        "en": "Choose the correct answer"
+      "prompt_line": {
+        "ar": "ما أهم شيء تعلمته من هذه الدورة؟",
+        "ar_plain": "ما أهم شيء تعلمته من هذه الدورة",
+        "translit": "mā ahammu shay' ta'allamtahu min hādhihi ad-dawra?",
+        "en": "What is the most important thing you learned from this course?"
       },
-      "scenario": {
-        "ar": "طالب يسأل أستاذه عن أهم ما تعلمه",
-        "en": "A student asking the teacher about the most important thing learned",
-        "ur": "طالب استاد سے سب سے اہم چیز کے بارے میں پوچھ رہا ہے"
-      },
-      "dialogue": [
+      "response_mode": "PICK",
+      "correct_option_index": 0,
+      "options": [
         {
-          "speaker": "student",
-          "ar": "ما أهم شيء تعلمته من هذه الدورة؟",
-          "en": "What is the most important thing you learned from this course?",
-          "label": "ask_about_learning"
+          "ar": "يا زيد = direct address to one person",
+          "ar_plain": "يا زيد",
+          "translit": "yaa zayd",
+          "en": "Direct address to one person",
+          "ur": "ایک شخص کو براہ راست مخاطب کرنا"
         },
         {
-          "speaker": "teacher",
-          "ar": "تعلمت أن كل كلمة في القرآن لها وظيفة — فهمت النحو لأفهم القرآن، لا لأظهر معلوماتي",
-          "en": "I learned that every word in the Quran has a function — I understood grammar to understand the Quran, not to show off my knowledge",
-          "label": "explain_learning"
-        },
-        {
-          "speaker": "student",
-          "ar": "وهل ستتوقف عن دراسة النحو الآن؟",
-          "en": "Will you stop studying grammar now?",
-          "label": "ask_if_stopping"
-        },
-        {
-          "speaker": "teacher",
-          "ar": "كلا! النحو بوابة — الآن أقرأ القرآن وأفهمه بطريقة مختلفة. التقوى هي البداية لا النهاية.",
-          "en": "No! Grammar is a gateway — now I read the Quran and understand it differently. Taqwa is the beginning, not the end.",
-          "label": "explain_grammar_is_gateway"
+          "ar": "يا أيها زيد = also one person but with identity emphasis",
+          "ar_plain": "يا أيها زيد",
+          "translit": "yaa ayyuhaa zayd",
+          "en": "Also one person but with identity emphasis",
+          "ur": "بھی ایک شخص مگر شناخت پر زور کے ساتھ"
         }
       ]
     },
     {
+      "id": "ch72l08-ex07",
       "type": "TAP_TRANSLATION",
-      "instruction": {
+      "prompt": {
         "ar": "ما هي الخطوة التالية بعد إكمال 72 فصلاً؟",
+        "ar_plain": "ما هي الخطوة التالية بعد إكمال 72 فصلاً",
+        "translit": "mā hiya al-khutuwa al-jāmiḥ ba'da ikmāl 72 faṣlan?",
         "en": "What is the next step after completing 72 chapters?"
       },
       "options": [
         {
-          "label_ar": "دراسة المزيد من القواعد",
-          "label_en": "Study more grammar rules",
-          "label_ur": "مزید قواعد پڑھنا",
-          "correct": false
+          "en": "Study more grammar rules",
+          "ur": "مزید قواعد پڑھنا"
         },
         {
-          "label_ar": "قراءة القرآن مع الفهم",
-          "label_en": "Read the Quran with understanding",
-          "label_ur": "فہم کے ساتھ قرآن پڑھنا",
-          "correct": true
+          "en": "Read the Quran with understanding",
+          "ur": "فہم کے ساتھ قرآن پڑھنا"
         },
         {
-          "label_ar": "نسيان كل ما تعلمته",
-          "label_en": "Forget everything you learned",
-          "label_ur": "سب کچھ بھول جانا",
-          "correct": false
+          "en": "Forget everything you learned",
+          "ur": "سب کچھ بھول جانا"
+        },
+        {
+          "en": "Option 4",
+          "ur": "آپشن 4"
         }
-      ]
+      ],
+      "correct_index": 1
     },
     {
+      "id": "ch72l08-ex08",
       "type": "FILL_BLANK",
-      "instruction": {
-        "ar": "املأ: 72 فصلاً من النحو — الغاية: فهم القرآن والوصول إلى ___",
-        "en": "Fill: 72 chapters of grammar — Goal: understand the Quran and reach ___",
-        "ur": "پورا کریں: 72 ابواب کی گرامر — مقصد: قرآن سمجھنا اور ___ تک پہنچنا"
+      "mode": "TAP",
+      "sentence_ar": "72 فصلاً من النحو — الغاية: فهم القرآن والوصول إلى ___",
+      "hint": {
+        "en": "The goal of taqwa",
+        "ur": "تقویٰ کا مقصد"
       },
-      "answer": "التقوى",
-      "case_sensitive": false
+      "options": [
+        {
+          "ar": "التقوى",
+          "ar_plain": "التقوى",
+          "translit": "at-taqwā",
+          "en": "التقوى"
+        },
+        {
+          "ar": "السعادة",
+          "ar_plain": "السعادة",
+          "translit": "as-saʿāda",
+          "en": "السعادة"
+        },
+        {
+          "ar": "المعرفة",
+          "ar_plain": "المعرفة",
+          "translit": "al-maʿrifa",
+          "en": "المعرفة"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "no/not",
+          "ur": "نہیں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "التقوى",
+        "ar_plain": "التقوى",
+        "translit": "at-taqwā",
+        "en": "التقوى"
+      }
     }
   ],
   "reveal": {
@@ -250,12 +385,13 @@
       "label": "Al-Baqarah 2:2",
       "ar": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ",
       "en": "This is the Book about which there is no doubt, a guidance for those who are conscious of Allah.",
-      "ur": "یہ کتاب ہے جس میں کوئی شک نہیں، متقین کے لیے ہدایت۔",
-      "audio_url": ""
+      "ur": "یہ کتاب ہے جس میں کوئی شک نہیں، متقین کے لیے ہدایت۔"
     },
-    "highlighted_word_indices": [3],
+    "highlighted_word_indices": [
+      3
+    ],
     "noor_explanation": {
-      "ar": "هُدًى لِلْمُتَّقِينَ — 'a guidance for those who are conscious of Allah.' المتقون هم الذين اتقوا الله — الذين听到了 يَا أَيُّهَا الَّذِينَ آمَنُوا واتقوا الله. هذا ليس نهاية — هذا هو البداية. من فهم النص إلى فهم الذات إلى التقوى.",
+      "ar": "هُدًى لِلْمُتَّقِينَ — 'a guidance for those who are conscious of Allah.' المتقون هم الذين اتقوا الله — الذين سمعوا يَا أَيُّهَا الَّذِينَ آمَنُوا واتقوا الله. هذا ليس نهاية — هذا هو البداية. من فهم النص إلى فهم الذات إلى التقوى.",
       "en": "A guidance for those who are conscious of Allah — المتقون are those who feared Allah. Those who heard يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ and acted on it. This is not an ending — this is a beginning. From understanding the text, to understanding the self, to Taqwa.",
       "ur": "متقین — وہ لوگ جنہوں نے 'اے ایمان والو، اللہ سے ڈرو' سنی اور اس پر عمل کیا۔ یہ اختتام نہیں — یہ آغاز ہے۔ متن کی سمجھ سے، نفس کی سمجھ تک، تقویٰ تک۔"
     }
@@ -266,5 +402,6 @@
       "en": "You have completed all 72 chapters of the ArabAI Arabic Grammar Curriculum. This is not an ending — it is a beginning. The grammar you learned is a key that unlocks the Quran's meaning. Now go and read the Quran with new eyes. And remember: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ — this is the purpose of everything you learned. May Allah accept your effort and grant you understanding.",
       "ur": "آپ نے ArabAI عربی گرامر نصاب کے تمام 72 ابواب مکمل کر لیے ہیں۔ یہ اختتام نہیں — یہ آغاز ہے۔ جو گرامر آپ نے سیکھی ہے وہ ایک کنجی ہے جو قرآن کے meaning کو کھولتی ہے۔ اب جاؤ اور نئی آنکھوں سے قرآن پڑھو۔ اور یاد رکھو: 'اے ایمان والو، اللہ سے ڈرو' — یہ ہر چیز کا مقصد ہے جو آپ نے سیکھا۔ اللہ آپ کی کوشش قبول کرے اور آپ کو سمجھ عطا فرمائے۔"
     }
-  }
+  },
+  "template": "REVIEW"
 }

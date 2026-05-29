@@ -17,8 +17,7 @@
       "label": "Al-Ahzab 33:70",
       "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
       "en": "O you who believe, fear Allah and speak a right word.",
-      "ur": "اے ایمان والو، اللہ سے ڈرو اور درست بات کہو۔",
-      "audio_url": ""
+      "ur": "اے ایمان والو، اللہ سے ڈرو اور درست بات کہو۔"
     },
     "noor_intro": {
       "ar": "Welcome to Chapter 72 — the grand finale of our 72-chapter curriculum. Today we begin النِّدَاء, the vocative — the grammatical tool for calling, addressing, and invoking. This is the most common Quranic address.",
@@ -29,214 +28,383 @@
   },
   "discover_cards": [
     {
-      "term_ar": "النِّدَاء",
-      "term_en": "The Vocative / Calling",
-      "definition_ar": "أداة تنادى بها المتكلم من يخاطبه",
-      "definition_en": "A particle the speaker uses to call/address the person being spoken to",
-      "example_ar": "يَا زَيْدُ — O Zayd! يا is the vocative particle calling Zayd's attention",
-      "example_en": "يَا زَيْدُ = 'O Zayd!' — يا is the vocative particle calling Zayd's attention",
-      "example_ur": "یا زید! — 'یا' particles نے زید کی توجہ بلائی",
+      "type": "WORD",
+      "text": {
+        "ar": "النِّدَاء",
+        "ar_plain": "النداء",
+        "translit": "an-nidaa'",
+        "en": "The Vocative / Calling",
+        "ur": "ندا / بلانا"
+      },
+      "definition": {
+        "en": "A particle the speaker uses to call/address the person being spoken to",
+        "ar": "أداة تنادى بها المتكلم من يخاطبه"
+      },
+      "examples": [
+        {
+          "ar": "يَا زَيْدُ",
+          "ar_plain": "يا زيد",
+          "translit": "yā zayd",
+          "en": "O Zayd! (يا is the vocative particle)"
+        }
+      ],
       "highlight": true
     },
     {
-      "term_ar": "أداة النداء",
-      "term_en": "Vocative Particles",
-      "definition_ar": "يا، أَيُّهَا، أَمَّا — particle used to get someone's attention",
-      "definition_en": "The actual word used to initiate the vocative — يا, أَيُّهَا, or أَمَّا",
-      "example_ar": "يَا زَيْدُ = يا + منادى (Zayd in nominative, addressing directly)\nأَمَّا زَيْدٌ = أَمَّا + منادى (calling attention to Zayd specifically)",
-      "example_en": "يَا directly addresses — أَمَّا draws special attention to what follows",
-      "example_ur": "یا براہ راست خطاب کرتا ہے — اما خاص توجہ دلاتا ہے"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Vocative Particles",
+        "ar": "أدوات النداء"
+      },
+      "explanation": {
+        "en": "The actual word used to initiate the vocative — يا, أَيُّهَا, or أَمَّا",
+        "ar": "الكلمة الفعلية المستخدمة لبدء النداء — يا، أَيُّهَا، أو أَمَّا"
+      },
+      "examples": [
+        {
+          "ar": "يَا زَيْدُ",
+          "ar_plain": "يا زيد",
+          "translit": "yā zayd",
+          "en": "يا directly addresses — أَمَّا draws special attention"
+        }
+      ]
     },
     {
-      "term_ar": "المنادى",
-      "term_en": "The Vocative Noun (The One Being Called)",
-      "definition_ar": "الاسم الذي يُنادى به — in nominative case when preceded by يا",
-      "definition_en": "The noun that receives the call — marked as مرفوع when preceded by يا",
-      "example_ar": "في \"يَا زَيْدُ\" — زَيْدٌ is المنادى, مرفوع by يا",
-      "example_en": "In 'O Zayd!' — زيد is the منادى, marked as مرفوع because يا precedes it",
-      "example_ur": "'اے زید!' میں — زید منادى ہے، 'یا' کی وجہ سے مرفوع"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The Vocative Noun (The One Being Called)",
+        "ar": "المنادى"
+      },
+      "explanation": {
+        "en": "The noun that receives the call — marked as مرفوع when preceded by يا",
+        "ar": "الاسم الذي يُنادى به — في حالة الرفع عندما يسبقه يا"
+      }
     },
     {
-      "term_ar": "يا لأ一个人",
-      "term_en": "يا for Direct Address (أبسط形势下)",
-      "definition_ar": "يا directly followed by noun/name in nominative",
-      "definition_en": "The simplest form — يا immediately followed by the noun in nominative case",
-      "example_ar": "يَا رَبِّ — O Lord! (direct address to Allah)\nيَا مُحَمَّدُ — O Muhammad! (direct address to Prophet)",
-      "example_en": "Direct address without any intermediate particles — just يا + name in nominative",
-      "example_ur": "براہ راست خطاب — صرف 'یا' + نام نصب میں"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "يا for Direct Address",
+        "ar": "يا لنداء مباشرة"
+      },
+      "explanation": {
+        "en": "The simplest form — يا immediately followed by the noun in nominative case",
+        "ar": "أبسط شكل — يا متبوع مباشرة بالاسم في حالة الرفع"
+      },
+      "examples": [
+        {
+          "ar": "يَا رَبِّ",
+          "ar_plain": "يا رب",
+          "translit": "yā rabbin",
+          "en": "O Lord! (direct address to Allah)"
+        },
+        {
+          "ar": "يَا مُحَمَّدُ",
+          "ar_plain": "يا محمد",
+          "translit": "yā muḥammad",
+          "en": "O Muhammad! (direct address to Prophet)"
+        }
+      ]
     },
     {
-      "term_ar": "أَيُّهَا для一个男人",
-      "term_en": "أَيُّهَا for Address to Group (الجمع)",
-      "definition_ar": "أَيُّهَا + noun in accusative/follows specific rules",
-      "definition_en": "أَيُّهَا is used when addressing a specific group with a descriptive label",
-      "example_ar": "أَيُّهَا الَّذِينَ آمَنُوا — O those who believe! الَّذِينَ is في منصوب by أَيُّهَا",
-      "example_en": "أَيُّهَا is always followed by a noun in the genitive (مضاف إليه) — 'O those who...'",
-      "example_ur": "'اے وہ لوگو جو ایمان لائے!' — 'الذین' 'ایہ' کے بعد مضاف الیہ ہوتا ہے"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "أَيُّهَا for Address to Group",
+        "ar": "أَيُّهَا لنداء مجموعة"
+      },
+      "explanation": {
+        "en": "أَيُّهَا is used when addressing a specific group with a descriptive label. أَيُّهَا is always followed by a noun in the genitive (مضاف إليه)",
+        "ar": "أَيُّهَا يُستخدم عند مخاطبة مجموعة محددة بوصف. أَيُّهَا يتبعه اسم في حالة الجر (مضاف إليه)"
+      },
+      "examples": [
+        {
+          "ar": "أَيُّهَا الَّذِينَ آمَنُوا",
+          "ar_plain": "أيها الذين آمنوا",
+          "translit": "ayyuhā alladhīna āmanū",
+          "en": "O those who believe! — الَّذِينَ is في منصوب by أَيُّهَا"
+        }
+      ]
     },
     {
-      "term_ar": "مُنَادًى في حالة النصب",
-      "term_en": "Vocative in Accusative (منصوب)",
-      "definition_ar": "المنادى قد ينصب في حالات خاصة",
-      "definition_en": "The منادى can be in accusative under specific grammatical conditions",
-      "example_ar": "يا زيدَ being called (مُنَادًى مُنَصَّب) in particular regulatory contexts",
-      "example_en": "In formal or particular regulatory contexts, the منادى can take نصب instead of مرفوع",
-      "example_ur": "رسمی یا خاص قانونی سیاقوں میں منادى نصب لی سکتا ہے"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Vocative in Accusative (منصوب)",
+        "ar": "المنادى في حالة النصب"
+      },
+      "explanation": {
+        "en": "The منادى can be in accusative under specific grammatical conditions",
+        "ar": "المنادى قد ينصب في حالات خاصة"
+      }
     }
   ],
   "exercises": [
     {
+      "id": "ch72l01-ex01",
       "type": "TAP_TRANSLATION",
-      "instruction": {
+      "prompt": {
         "ar": "ما هو المنادى في: يَا رَبِّ؟",
+        "ar_plain": "ما هو المنادى في يا رب",
+        "translit": "mā huwa al-munādā fī: yā rabbin?",
         "en": "What is the منادى in: يَا رَبِّ?"
       },
       "options": [
         {
-          "label_ar": "يا",
-          "label_en": "يا (particle of calling)",
-          "label_ur": "یا (بلانے کا لفظ)",
-          "correct": false
+          "en": "يا (particle of calling)",
+          "ur": "یا (بلانے کا لفظ)"
         },
         {
-          "label_ar": "رب",
-          "label_en": "رب (Lord — the one being called)",
-          "label_ur": "رب (وہ جسے بلانا ہے)",
-          "correct": true
+          "en": "رب (Lord — the one being called)",
+          "ur": "رب (وہ جسے بلانا ہے)"
         },
         {
-          "label_ar": "لا يوجد منادى",
-          "label_en": "There is no منادى",
-          "label_ur": "کوئی منادى نہیں",
-          "correct": false
+          "en": "There is no منادى",
+          "ur": "کوئی منادى نہیں"
+        },
+        {
+          "en": "الله (the one being called)",
+          "ur": "اللہ (وہ جسے بلانا ہے)"
         }
-      ]
+      ],
+      "correct_index": 1
     },
     {
+      "id": "ch72l01-ex02",
       "type": "TRUE_FALSE",
-      "instruction": {
-        "ar": "حدد: صواب أم خطأ",
-        "en": "True or False"
-      },
       "statement": {
-        "ar": "في \"أَيُّهَا الَّذِينَ آمَنُوا\" — الَّذِينَ منصوب بأَيُّهَا لأنه مضاف إليه",
         "en": "In 'O those who believe' — الَّذِينَ is منصوب by أَيُّهَا because it is مضاف إليه",
         "ur": "'اے وہ لوگو جو ایمان لائے' میں — 'الذین' 'ایہ' کی وجہ سے مضاف الیہ ہے"
       },
-      "correct": true
+      "correct_answer": true
     },
     {
+      "id": "ch72l01-ex03",
       "type": "FILL_BLANK",
-      "instruction": {
-        "ar": "املأ الفراغ",
-        "en": "Fill in the blank"
+      "mode": "TAP",
+      "sentence_ar": "___ زيدُ — يا directly followed by noun in nominative",
+      "hint": {
+        "en": "The vocative particle",
+        "ur": "ندا particle"
       },
-      "prompt": {
-        "ar": "___ زيدُ — يا directly followed by noun in nominative",
-        "en": "___ زيدُ — يا directly followed by noun in nominative",
-        "ur": "___ زید — یا براہ راست مفرد نصب میں"
-      },
-      "answer": "يا",
-      "case_sensitive": true
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "instruction": {
-        "ar": "حلّل: يَا رَبِّ",
-        "en": "Parse: يَا رَبِّ"
-      },
-      "sentences": [
+      "options": [
         {
-          "original": "يَا رَبِّ",
-          "analysis": {
-            "أداة_النداء": "يا — particle calling attention",
-            "المنادى": "رب — مرفوع by يا, in direct address to Allah",
-            "نوع_النداء": "يا directly addresses رب without أَيُّهَا — simplest form of vocative",
-            "ملاحظة": "رب is مرفوع because يا is a حرف نداء that raises the noun. The construction يَا رَبِّ is directly calling upon Allah as Lord.",
-            "الفرق": "If أَيُّهَا were used, it would be: أَيُّهَا رَبُّ — but that would require رب to be in genitive as مضاف إليه, which doesn't fit the spiritual intimacy of direct address يَا رَبِّ"
-          }
+          "ar": "يا",
+          "ar_plain": "يا",
+          "translit": "yā",
+          "en": "يا"
+        },
+        {
+          "ar": "أيها",
+          "ar_plain": "أيها",
+          "translit": "ayyuhā",
+          "en": "أَيُّهَا"
+        },
+        {
+          "ar": "أما",
+          "ar_plain": "أما",
+          "translit": "ammā",
+          "en": "أَمَّا"
+        },
+        {
+          "ar": "من",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "من"
         }
+      ],
+      "correct_answer": {
+        "ar": "يا",
+        "ar_plain": "يا",
+        "translit": "yā",
+        "en": "يا"
+      }
+    },
+    {
+      "id": "ch72l01-ex04",
+      "type": "GRAMMAR_PARSE",
+      "sentence_ar": "يَا رَبِّ",
+      "words": [
+        {
+          "ar": "يا",
+          "ar_plain": "يا",
+          "translit": "yā",
+          "en": "O"
+        },
+        {
+          "ar": "رب",
+          "ar_plain": "رب",
+          "translit": "rabbin",
+          "en": "Lord"
+        }
+      ],
+      "available_roles": [
+        "PARTICLE",
+        "VERB",
+        "NOUN",
+        "POSSESSIVE",
+        "PREPOSITION"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "NOUN"
       ]
     },
     {
+      "id": "ch72l01-ex05",
       "type": "MATCHING",
-      "instruction": {
-        "ar": "طابق الأداة بالاستخدام",
-        "en": "Match the particle with its usage"
-      },
-      "left_items": [
-        { "id": "1", "text_ar": "يا" },
-        { "id": "2", "text_ar": "أَيُّهَا" },
-        { "id": "3", "text_ar": "أَمَّا" }
+      "left_column": [
+        {
+          "ar": "يا",
+          "ar_plain": "يا",
+          "translit": "yā",
+          "en": "يا"
+        },
+        {
+          "ar": "أَيُّهَا",
+          "ar_plain": "أيها",
+          "translit": "ayyuhā",
+          "en": "أَيُّهَا"
+        },
+        {
+          "ar": "أَمَّا",
+          "ar_plain": "أما",
+          "translit": "ammā",
+          "en": "أَمَّا"
+        }
       ],
-      "right_items": [
-        { "id": "A", "text_ar": "نداء مباشرة: يَا زيدُ، يَا رَبِّ" },
-        { "id": "B", "text_ar": "نداء مجموعة بوصف: أَيُّهَا الَّذِينَ آمَنُوا" },
-        { "id": "C", "text_ar": "لفت انتباه خاصة: أَمَّا الَّذِينَ آمَنُوا" }
+      "right_column": [
+        {
+          "en": "Direct address: يَا زيدُ، يَا رَبِّ"
+        },
+        {
+          "en": "Group address: أَيُّهَا الَّذِينَ آمَنُوا"
+        },
+        {
+          "en": "Special attention: أَمَّا الَّذِينَ آمَنُوا"
+        }
       ],
-      "matches": [
-        { "left": "1", "right": "A" },
-        { "left": "2", "right": "B" },
-        { "left": "3", "right": "C" }
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
       ]
     },
     {
+      "id": "ch72l01-ex06",
       "type": "BUILD_SENTENCE",
-      "instruction": {
-        "ar": "ابنِ: جملة نداء بالأداة يا",
-        "en": "Build: Vocative sentence using يا"
+      "target_translation": {
+        "en": "O my friend, listen! يا + noun in nominative + verb",
+        "ur": "اے میرے دوست، سنو!"
       },
-      "elements": [
-        { "text_ar": "يا", "gloss": "O (vocative)" },
-        { "text_ar": "صديقي", "gloss": "my friend" },
-        { "text_ar": "اسمع", "gloss": "listen" }
+      "tiles": [
+        {
+          "ar": "يا",
+          "ar_plain": "يا",
+          "translit": "yā",
+          "en": "O (vocative)"
+        },
+        {
+          "ar": "صديقي",
+          "ar_plain": "صديقي",
+          "translit": "ṣadīqī",
+          "en": "my friend"
+        },
+        {
+          "ar": "اسمع",
+          "ar_plain": "اسمع",
+          "translit": "ismaʿ",
+          "en": "listen"
+        }
       ],
-      "correct_order": [0, 1, 2],
-      "expected_grammar": "يَا صديقيَ اسمَعْ — O my friend, listen! يا + noun in nominative + verb"
+      "correct_order": [
+        0,
+        1,
+        2
+      ]
     },
     {
+      "id": "ch72l01-ex07",
       "type": "TAP_TRANSLATION",
-      "instruction": {
+      "prompt": {
         "ar": "ما الفرق بين يا زيد و أَيُّهَا الَّذِينَ آمَنُوا؟",
+        "ar_plain": "ما الفرق بين يا زيد وأيها الذين آمنوا",
+        "translit": "mā al-farq bayna yā zayd wa-ayyuhā alladhīna āmanū?",
         "en": "What's the difference between يا زيد and أَيُّهَا الَّذِينَ آمَنُوا?"
       },
       "options": [
         {
-          "label_ar": "لا يوجد فرق — كلاهما ي meaning same thing",
-          "label_en": "No difference — both mean the same thing",
-          "label_ur": "کوئی فرق نہیں — دونوں کا مطلب ایک ہے",
-          "correct": false
+          "en": "No difference — both mean the same thing",
+          "ur": "کوئی فرق نہیں — دونوں کا مطلب ایک ہے"
         },
         {
-          "label_ar": "يا directly addresses one person; أَيُّهَا addresses a group with description",
-          "label_en": "يا addresses one person directly; أَيُّهَا addresses a group with a descriptive label",
-          "label_ur": "یا ایک شخص سے براہ راست خطاب کرتا ہے؛ ایہ ایک گروہ کو تفصیل کے ساتھ خطاب کرتا ہے",
-          "correct": true
+          "en": "يا addresses one person directly; أَيُّهَا addresses a group with a descriptive label",
+          "ur": "یا ایک شخص سے براہ راست خطاب کرتا ہے؛ ایہ ایک گروہ کو تفصیل کے ساتھ خطاب کرتا ہے"
         },
         {
-          "label_ar": "أَيُّهَا for formal; يا for informal",
-          "label_en": "أَيُّهَا is formal; يا is informal",
-          "label_ur": "ایہ رسمی ہے؛ یا غیر رسمی ہے",
-          "correct": false
+          "en": "أَيُّهَا is formal; يا is informal",
+          "ur": "ایہ رسمی ہے؛ یا غیر رسمی ہے"
+        },
+        {
+          "en": "يا is for casual address; أيها is for formal address",
+          "ur": "یا casual خطاب کے لیے؛ ایہ رسمی کے لیے"
         }
-      ]
+      ],
+      "correct_index": 1
     },
     {
+      "id": "ch72l01-ex08",
       "type": "FILL_BLANK",
-      "instruction": {
-        "ar": "املأ: المنادى بعد يا يكون في حالة ___",
-        "en": "Fill: The منادى after يا is in the ___ case",
-        "ur": "یا کے بعد منادى ___ case میں ہوتا ہے"
+      "mode": "TAP",
+      "sentence_ar": "المنادى بعد يا يكون في حالة ___",
+      "hint": {
+        "en": "The grammatical case",
+        "ur": "گرامر کیس"
       },
-      "answer": "رفع",
-      "case_sensitive": false
+      "options": [
+        {
+          "ar": "رفع",
+          "ar_plain": "رفع",
+          "translit": "rafʿ",
+          "en": "nominative (رفع)"
+        },
+        {
+          "ar": "نصب",
+          "ar_plain": "نصب",
+          "translit": "naṣb",
+          "en": "accusative (نصب)"
+        },
+        {
+          "ar": "جر",
+          "ar_plain": "جر",
+          "translit": "jar",
+          "en": "genitive (جر)"
+        },
+        {
+          "ar": "جمل",
+          "ar_plain": "جمل",
+          "translit": "jamal",
+          "en": "sentence (جمل)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "رفع",
+        "ar_plain": "رفع",
+        "translit": "rafʿ",
+        "en": "رفع"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "النِّدَاء — أول آية في税法",
       "en": "The Vocative — The First Command in Islam",
-      "ur": "ندا — اسلام میں پہلا حکم"
+      "ar": "النِّدَاء — أول آية في税法"
     },
     "ayah": {
       "surah": 2,
@@ -244,14 +412,16 @@
       "label": "Al-Baqarah 2:21",
       "ar": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ وَالَّذِينَ مِنْ قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ",
       "en": "O mankind, worship your Lord who created you and those before you so that you may become righteous.",
-      "ur": "اے لوگو، اپنے رب کی عبادت کرو جس نے تمہیں اور تم سے پہلے والوں کو پیدا کیا تاکہ تم متقی ہو جاؤ۔",
-      "audio_url": ""
+      "ur": "اے لوگو، اپنے رب کی عبادت کرو جس نے تمہیں اور تم سے پہلے والوں کو پیدا کیا تاکہ تم متقی ہو جاؤ۔"
     },
-    "highlighted_word_indices": [0, 1],
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
     "noor_explanation": {
-      "ar": "في \"يَا أَيُّهَا النَّاسُ\" — يا هو أداة النداء، أَيُّهَا introduces the group, والناس is مضاف إليه (genitive). هذا هو النداء الكامل: أداة + أَيُّهَا + اسم في الجر. لاحظ: أَيُّهَا itself is a particle, not a noun — it doesn't change case. Everything after it is what changes.",
       "en": "In 'O mankind' — يا is the vocative particle, أَيُّهَا introduces the group, and الناس is مضاف إليه (genitive). This is the complete vocative form: particle + أَيُّهَا + noun in genitive. Note: أَيُّهَا itself is invariable — it never changes case. It's the noun after it that changes.",
-      "ur": "'اے لوگو' میں — 'یا' ندا particle ہے، 'ایہ' گروہ متعارف کراتا ہے، اور 'الناس' مضاف الیہ ہے۔ یہ مکمل ندا ہے: particle + ایہ + اسم جر میں۔ نوٹ: 'ایہ' خود unchanged ہے — یہ کبھی case نہیں بدلتا۔ اس کے بعد والا noun بدلتا ہے۔"
+      "ar": "في \"يَا أَيُّهَا النَّاسُ\" — يا هو أداة النداء، أَيُّهَا introduces the group، والناس is مضاف إليه. هذا هو النداء الكامل: أداة + أَيُّهَا + اسم في الجر. لاحظ: أَيُّهَا itself is invariable.",
+      "ur": "'اے لوگو' میں — 'یا' ندا particle ہے، 'ایہ' گروہ متعارف کراتا ہے، اور 'الناس' مضاف الیہ ہے۔ یہ مکمل ندا ہے: particle + ایہ + اسم جر میں۔ نوٹ: 'ایہ' خود unchanged ہے۔"
     }
   },
   "close": {
@@ -260,5 +430,6 @@
       "en": "Chapter 72 begins — the final chapter of our curriculum. النِّدَاء is how the Quran calls to humanity, to believers, to specific people. يَا أَيُّهَا الَّذِينَ آمَنُوا has been heard in every corner of the Muslim world for fourteen centuries. Tomorrow we'll study it in depth.",
       "ur": "باب 72 شروع ہوتا ہے — ہمارے نصاب کا آخری باب۔ النِّدَاء وہ طریقہ ہے جس سے قرآن انسانیت، مومنین، اور خاص لوگوں کو بلاتا ہے۔ 'اے ایمان والو' چودہ صدیوں سے دنیا بھر میں سنی گئی ہے۔ کل ہم اسے گہرائی میں دیکھیں گے۔"
     }
-  }
+  },
+  "template": "STANDARD"
 }

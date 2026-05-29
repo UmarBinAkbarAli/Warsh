@@ -145,12 +145,12 @@
         { "ar": "سَمَاءُ الْأَرْضِ", "ar_plain": "سماء الارض", "translit": "samaa'u al-ardhi", "en": "the heaven of the earth" }
       ],
       "right_column": [
-        { "en": "مضاف + مضاف إليه (جر)", "ur": "مضاف + مضاف إليه (جر)" },
-        { "en": "مضاف + مضاف إليه (جر)", "ur": "مضاف + مضاف إليه (جر)" },
-        { "en": "مضاف + مضاف إليه (جر)", "ur": "مضاف + مضاف إليه (جر)" },
-        { "en": "مضاف + مضاف إليه (جر)", "ur": "مضاف + مضاف إليه (جر)" }
+        { "en": "بَيْتُ رَجُلٍ — house of a man", "ur": "آدمی کا گھر" },
+        { "en": "عِلْمُ الْمُسْلِمِ — knowledge of the Muslim", "ur": "مسلمان کا علم" },
+        { "en": "عَيْنُ الْمَاءِ — spring of water", "ur": "پانی کی چشمہ" },
+        { "en": "سَمَاءُ الْأَرْضِ — heaven of the earth", "ur": "زمین کا آسمان" }
       ],
-      "correct_pairs": [[0, 0], [1, 0], [2, 0], [3, 0]],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "All of these are إِضَافَة constructions — a مضاف followed by a مضاف إليه in the genitive (جر). The first noun governs the second.",
@@ -175,7 +175,7 @@
       "id": "ch55-l07-ex04",
       "type": "FILL_BLANK",
       "mode": "TAP",
-      "sentence_ar": "ذَهَبْتُ إِلَى __",
+      "sentence_ar": "ذَهَبْتُ إِلَى ___",
       "hint": {
         "en": "I went to the brother's house.",
         "ur": "میں بھائی کے گھر گیا۔"
@@ -229,8 +229,8 @@
         { "ar": "بَابِ", "ar_plain": "باب", "translit": "baabi", "en": "door (gen.)" },
         { "ar": "الْجَنَّةِ", "ar_plain": "الجنۃ", "translit": "al-jannati", "en": "the Paradise (gen.)" }
       ],
-      "available_roles": ["PREPOSITION", "OBJECT"],
-      "correct_roles": ["PREPOSITION", "OBJECT"],
+      "available_roles": ["PREPOSITION", "POSSESSIVE"],
+      "correct_roles": ["PREPOSITION", "POSSESSIVE", "POSSESSIVE"],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "مِنْ = PREPOSITION (مَبْنِيّ). بَابِ = مضاف (جر after مِنْ). الْجَنَّةِ = مضاف إليه (جر after بَابِ). 'From the door of Paradise.'",

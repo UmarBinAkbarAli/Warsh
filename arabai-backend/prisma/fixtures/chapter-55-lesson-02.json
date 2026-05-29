@@ -121,7 +121,11 @@
       "explanation": {
         "en": "Key rule: Most nouns and adjectives are مُعْرَبٌ. Most verbs and all particles are مَبْنِيّ. Knowing which category a word belongs to tells you whether to expect a changing ending or a fixed one.",
         "ur": "اہم قاعدہ: زیادہ تر اسم اور صفت مُعْرَبٌ ہیں۔ زیادہ تر فعل اور تمام حروف مَبْنِيّ ہیں۔"
-      }
+      },
+      "examples": [
+        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitaabun", "en": "book — changes ending (مُعْرَبٌ)" },
+        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "haadhaa", "en": "this — fixed ending (مَبْنِيّ)" }
+      ]
     },
     {
       "type": "AYAH_PREVIEW",
@@ -185,12 +189,12 @@
         { "ar": "هَذَا", "ar_plain": "هذا", "translit": "haadhaa", "en": "this (always fixed)" }
       ],
       "right_column": [
-        { "en": "مُعْرَبٌ (declinable)", "ur": "معراب" },
-        { "en": "مَبْنِيّ (indeclinable)", "ur": "مبني" },
-        { "en": "مَبْنِيّ (indeclinable)", "ur": "مبني" },
-        { "en": "مُعْرَبٌ (declinable)", "ur": "معراب" }
+        { "en": "مُعْرَبٌ (book — changes)", "ur": "معراب (بدلتا ہے)" },
+        { "en": "مُعْرَبٌ (the book — changes)", "ur": "معراب (بدلتا ہے)" },
+        { "en": "مَبْنِيّ (Adam — fixed)", "ur": "مبني (طے شدہ)" },
+        { "en": "مَبْنِيّ (this — fixed)", "ur": "مبني (طے شدہ)" }
       ],
-      "correct_pairs": [[0, 0], [1, 0], [2, 1], [3, 1]],
+      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "كِتَابٌ and الْكِتَابُ are مُعْرَبٌ — they change ending. آدَمَ and هَذَا are مَبْنِيّ — fixed endings.",
@@ -201,7 +205,7 @@
       "id": "ch55-l02-ex04",
       "type": "FILL_BLANK",
       "mode": "TAP",
-      "sentence_ar": "ذَهَبْتُ إِلَى __",
+      "sentence_ar": "ذَهَبْتُ إِلَى ___",
       "hint": {
         "en": "I went to the house.",
         "ur": "میں گھر گیا۔"

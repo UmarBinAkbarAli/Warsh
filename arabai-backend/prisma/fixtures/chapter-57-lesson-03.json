@@ -195,7 +195,7 @@
       "id": "ch57-l03-ex05",
       "type": "FILL_BLANK",
       "mode": "TAP",
-      "sentence_ar": "اللَّهُ __ عَلَى كُلِّ شَيْءٍ",
+      "sentence_ar": "اللَّهُ ___ عَلَى كُلِّ شَيْءٍ",
       "hint": {
         "en": "Allah is over all things.",
         "ur": "اللہ ہر چیز پر قادر ہے۔"
@@ -229,8 +229,8 @@
         { "ar": "فِي", "ar_plain": "في", "translit": "fii", "en": "in" },
         { "ar": "الْقُلُوبِ", "ar_plain": "القلوب", "translit": "al-quluubi", "en": "the hearts" }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PREPOSITION"],
-      "correct_roles": ["VERB", "SUBJECT", "PREPOSITION"],
+      "available_roles": ["SUBJECT", "VERB", "PREPOSITION", "OBJECT"],
+      "correct_roles": ["VERB", "SUBJECT", "PREPOSITION", "OBJECT"],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "يَكُونُ = VERB (مُعْرَبٌ — present tense of كَانَ, in رفع here). اللَّهُ = SUBJECT (رفع). فِي = PREPOSITION (مَبْنِيّ). الْقُلُوبِ = مضاف إليه (جر after فِي).",

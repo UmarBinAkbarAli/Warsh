@@ -57,6 +57,8 @@ const GRAMMATICAL_ROLES = new Set([
   "VERB_PHRASE",
   "NOUN",
   "VOCATIVE",
+  "TIME_ZARF",
+  "PLACE_ZARF",
 ]);
 
 const ARABIC_HARAKAT_RE = /[\u064b-\u065f\u0670]/;

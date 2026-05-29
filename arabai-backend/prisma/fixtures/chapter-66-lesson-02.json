@@ -136,10 +136,22 @@
         "ur": "اس دن مجرمین آگ دیکھیں گے"
       },
       "options": [
-        { "en": "on the Day the criminals see the Fire", "ur": "اس دن مجرمین آگ دیکھیں گے" },
-        { "en": "the criminals see the Fire today", "ur": "مجرمین آج آگ دیکھتے ہیں" },
-        { "en": "on a day criminals see fire", "ur": "ایک دن مجرمین آگ دیکھتے ہیں" },
-        { "en": "the Day of the criminals' seeing the Fire", "ur": "مجرموں کی آگ دیکھنے کا دن" }
+        {
+          "en": "on the Day the criminals see the Fire",
+          "ur": "اس دن مجرمین آگ دیکھیں گے"
+        },
+        {
+          "en": "the criminals see the Fire today",
+          "ur": "مجرمین آج آگ دیکھتے ہیں"
+        },
+        {
+          "en": "on a day criminals see fire",
+          "ur": "ایک دن مجرمین آگ دیکھتے ہیں"
+        },
+        {
+          "en": "the Day of the criminals' seeing the Fire",
+          "ur": "مجرموں کی آگ دیکھنے کا دن"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -152,7 +164,7 @@
       "type": "FILL_BLANK",
       "id": "ch66-l02-ex02",
       "mode": "TAP",
-      "sentence_ar": "يَوْمَئِذٍ يَفْرَحُ الْمُؤْمِنُونَ",
+      "sentence_ar": "يَوْمَئِذٍ يَفْرَحُ ___",
       "hint": {
         "en": "On that day, the believers rejoice.",
         "ur": "اس دن مومنین خوش ہوتے ہیں۔"
@@ -247,12 +259,41 @@
         }
       ],
       "right_column": [
-        { "en": "يَوْمَ — time zarf", "ur": "يَوْمَ — وقت کا ظرف" },
-        { "en": "لَيْلًا — time zarf", "ur": "لَيْلًا — وقت کا ظرف" },
-        { "en": "حِينَ — time zarf", "ur": "حِينَ — وقت کا ظرف" },
-        { "en": "صَبَاحًا — time zarf", "ur": "صَبَاحًا — وقت کا ظرف" }
+        {
+          "en": "يَوْمَ — time zarf",
+          "ur": "يَوْمَ — وقت کا ظرف"
+        },
+        {
+          "en": "لَيْلًا — time zarf",
+          "ur": "لَيْلًا — وقت کا ظرف"
+        },
+        {
+          "en": "حِينَ — time zarf",
+          "ur": "حِينَ — وقت کا ظرف"
+        },
+        {
+          "en": "صَبَاحًا — time zarf",
+          "ur": "صَبَاحًا — وقت کا ظرف"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -260,14 +301,58 @@
       "id": "ch66-l02-ex05",
       "sentence_ar": "حِينَ تُسْرِبُونَ وَحِينَ تُمْسُونَ",
       "words": [
-        { "ar": "حِينَ", "ar_plain": "حين", "translit": "hiina", "en": "at the time when", "ur": "اس وقت جب" },
-        { "ar": "تُسْرِبُونَ", "ar_plain": "تسرسون", "translit": "tusriboona", "en": "you (pl.) are at morning", "ur": "تم صبح کوتے ہو" },
-        { "ar": "وَ", "ar_plain": "و", "translit": "wa", "en": "and", "ur": "اور" },
-        { "ar": "حِينَ", "ar_plain": "حين", "translit": "hiina", "en": "at the time when", "ur": "اس وقت جب" },
-        { "ar": "تُمْسُونَ", "ar_plain": "تمسون", "translit": "tumsuna", "en": "you (pl.) are at evening", "ur": "تم شام کوتے ہو" }
+        {
+          "ar": "حِينَ",
+          "ar_plain": "حين",
+          "translit": "hiina",
+          "en": "at the time when",
+          "ur": "اس وقت جب"
+        },
+        {
+          "ar": "تُسْرِبُونَ",
+          "ar_plain": "تسرسون",
+          "translit": "tusriboona",
+          "en": "you (pl.) are at morning",
+          "ur": "تم صبح کوتے ہو"
+        },
+        {
+          "ar": "وَ",
+          "ar_plain": "و",
+          "translit": "wa",
+          "en": "and",
+          "ur": "اور"
+        },
+        {
+          "ar": "حِينَ",
+          "ar_plain": "حين",
+          "translit": "hiina",
+          "en": "at the time when",
+          "ur": "اس وقت جب"
+        },
+        {
+          "ar": "تُمْسُونَ",
+          "ar_plain": "تمسون",
+          "translit": "tumsuna",
+          "en": "you (pl.) are at evening",
+          "ur": "تم شام کوتے ہو"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PARTICLE", "PREPOSITION", "ADJECTIVE", "TIME_ZARF", "PLACE_ZARF"],
-      "correct_roles": ["TIME_ZARF", "VERB", "PARTICLE", "TIME_ZARF", "VERB"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PARTICLE",
+        "PREPOSITION",
+        "ADJECTIVE",
+        "TIME_ZARF",
+        "PLACE_ZARF"
+      ],
+      "correct_roles": [
+        "TIME_ZARF",
+        "VERB",
+        "PARTICLE",
+        "TIME_ZARF",
+        "VERB"
+      ],
       "xp_value": 1
     },
     {
@@ -278,12 +363,40 @@
         "ur": "اس دن سچے نیکی میں ہوں گے۔"
       },
       "tiles": [
-        { "ar": "يَوْمَئِذٍ", "ar_plain": "يومئذ", "translit": "yawma'idhin", "en": "on that day", "ur": "اس دن" },
-        { "ar": "الْمُؤْمِنُونَ", "ar_plain": "المؤمنون", "translit": "al-mu'minoona", "en": "the believers", "ur": "مومنین" },
-        { "ar": "فِي نَعِيمٍ", "ar_plain": "في نعيم", "translit": "fii na'iimin", "en": "in bliss", "ur": "نیکی میں" },
-        { "ar": "يَصِحُّونَ", "ar_plain": "يصحون", "translit": "yasihhoona", "en": "they are truthful", "ur": "وہ سچے ہیں" }
+        {
+          "ar": "يَوْمَئِذٍ",
+          "ar_plain": "يومئذ",
+          "translit": "yawma'idhin",
+          "en": "on that day",
+          "ur": "اس دن"
+        },
+        {
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minoona",
+          "en": "the believers",
+          "ur": "مومنین"
+        },
+        {
+          "ar": "فِي نَعِيمٍ",
+          "ar_plain": "في نعيم",
+          "translit": "fii na'iimin",
+          "en": "in bliss",
+          "ur": "نیکی میں"
+        },
+        {
+          "ar": "يَصِحُّونَ",
+          "ar_plain": "يصحون",
+          "translit": "yasihhoona",
+          "en": "they are truthful",
+          "ur": "وہ سچے ہیں"
+        }
       ],
-      "correct_order": [0, 3, 2],
+      "correct_order": [
+        0,
+        3,
+        2
+      ],
       "xp_value": 1
     },
     {
@@ -297,10 +410,22 @@
         "ur": "فجر کی قسم۔"
       },
       "options": [
-        { "en": "By the dawn.", "ur": "فجر کی قسم۔" },
-        { "en": "And the dawn.", "ur": "اور فجر۔" },
-        { "en": "By the day.", "ur": "دن کی قسم۔" },
-        { "en": "And the morning.", "ur": "اور صبح۔" }
+        {
+          "en": "By the dawn.",
+          "ur": "فجر کی قسم۔"
+        },
+        {
+          "en": "And the dawn.",
+          "ur": "اور فجر۔"
+        },
+        {
+          "en": "By the day.",
+          "ur": "دن کی قسم۔"
+        },
+        {
+          "en": "And the morning.",
+          "ur": "اور صبح۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -319,7 +444,12 @@
         "en": "at the time when",
         "ur": "اس وقت جب"
       },
-      "options": ["ح ي ن", "ز م ن", "ل ي ل", "ن ه ر"],
+      "options": [
+        "ح ي ن",
+        "ز م ن",
+        "ل ي ل",
+        "ن ه ر"
+      ],
       "correct_index": 0,
       "xp_value": 1
     }
@@ -339,7 +469,9 @@
       "ur": "فجر کی قسم۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-fajr-001-mishary.mp3"
     },
-    "highlighted_word_indices": [1],
+    "highlighted_word_indices": [
+      1
+    ],
     "noor_explanation": {
       "en": "فَجْرٍ here is a time expression in an oath. While all ظروف are منصوب, some appear in oaths like وَالْفَجْرِ. In a oath, the noun takes kasra (فَجْرٍ) as the object of the implied oath.",
       "ur": "فَجْرٍ یہاں قسم میں وقت کا اظہار ہے۔ جبکہ تمام ظروف منصوب ہوتے ہیں، کچھ اقسام میں واو کے ساتھ آتے ہیں جیسے وَالْفَجْرِ۔ قسم میں اسم کسرہ لیتا ہے (فَجْرٍ) محذوف قسم کا مفعول ہے۔"

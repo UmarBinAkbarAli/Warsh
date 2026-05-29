@@ -53,7 +53,9 @@
         "en": "مِيزَانُ (scale) + الْقِسْطِ (of justice). مِيزَانُ is مضاف with كسرة understood (the visible كسرة is on الْقِسْطِ). مِيزَانُ الْقِسْطِ is a common Quranic phrase about justice.",
         "ur": "مِيزَانُ (ترازو) + الْقِسْطِ (انصاف کا)۔ مِيزَانُ مضاف ہے كسرة کے ساتھ (صاحب کا visible كسرة الْقِسْطِ پر ہے)۔ مِيزَانُ الْقِسْطِ قرآنی phrase ہے انصاف کے بارے میں۔"
       },
-      "introduces_vocab": { "ar_plain": "ميزان" }
+      "introduces_vocab": {
+        "ar_plain": "ميزان"
+      }
     },
     {
       "type": "WORD",
@@ -68,7 +70,26 @@
         "en": "كَلِمَةُ (word) + اللَّهِ (of Allah). كَلِمَةُ is مضاف. The noun لِّمَة comes from كَلِم (to speak). كَلِمَةُ اللَّهِ refers to divine speech or the Quran.",
         "ur": "كَلِمَةُ (کلمہ) + اللَّهِ (اللہ کا)۔ كَلِمَةُ مضاف ہے۔ noun لِّمَة كَلِم (بولنا) سے آیا ہے۔ كَلِمَةُ اللَّهِ الہی speech یا قرآن کو کہتا ہے۔"
       },
-      "introduces_vocab": { "ar_plain": "كلمة" }
+      "introduces_vocab": {
+        "ar_plain": "كلمة"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "عِبَادُ اللَّهِ",
+        "ar_plain": "عباد الله",
+        "translit": "ibaadu allaahi",
+        "en": "servants of Allah",
+        "ur": "اللہ کے بندے"
+      },
+      "explanation": {
+        "en": "عِبَادُ (servants) + اللَّهِ (of Allah). عِبَادُ is مضاف with كسرة understood. ب is the contracted form of ابْنُ (son) in عِبَادُ — not the plural marker. عِبَادُ is a broken plural (جَمْع تَكْسِير) of عَبْدٌ.",
+        "ur": "عِبَادُ (بندے) + اللَّهِ (اللہ کے)۔ عِبَادُ مضاف ہے كسرة کے ساتھ۔ ب عِبَادُ میں ابْنُ (بیٹا) کی contracted form ہے — plural marker نہیں۔ عِبَادُ عَبْدٌ کا broken plural (جَمْع تَكْسِير) ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "عباد"
+      }
     }
   ],
   "exercises": [
@@ -106,12 +127,41 @@
         }
       ],
       "right_column": [
-        { "en": "dual in إضاافة", "ur": "دوے إضافہ میں" },
-        { "en": "people of the Book", "ur": "اہل کتاب" },
-        { "en": "servants of Allah", "ur": "اللہ کے بندے" },
-        { "en": "sound masc pl in إضاافة", "ur": "صحیح مذکر جمع إضافہ میں" }
+        {
+          "en": "dual in إضاافة",
+          "ur": "دوے إضافہ میں"
+        },
+        {
+          "en": "people of the Book",
+          "ur": "اہل کتاب"
+        },
+        {
+          "en": "servants of Allah",
+          "ur": "اللہ کے بندے"
+        },
+        {
+          "en": "sound masc pl in إضاافة",
+          "ur": "صحیح مذکر جمع إضافہ میں"
+        }
       ],
-      "correct_pairs": [[0, 3], [1, 0], [2, 2], [3, 1]],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -144,7 +194,11 @@
           "ur": "حق"
         }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1
     },
     {
@@ -216,10 +270,22 @@
         "ur": "اس کے گھر والے"
       },
       "options": [
-        { "en": "the people of his house", "ur": "اس کے گھر والے" },
-        { "en": "the family of the house", "ur": "گھر کا خاندان" },
-        { "en": "the owner of the house", "ur": "گھر کا مالک" },
-        { "en": "the servant of the house", "ur": "گھر کا بندہ" }
+        {
+          "en": "the people of his house",
+          "ur": "اس کے گھر والے"
+        },
+        {
+          "en": "the family of the house",
+          "ur": "گھر کا خاندان"
+        },
+        {
+          "en": "the owner of the house",
+          "ur": "گھر کا مالک"
+        },
+        {
+          "en": "the servant of the house",
+          "ur": "گھر کا بندہ"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -252,8 +318,18 @@
           "en": "generous"
         }
       ],
-      "available_roles": ["SUBJECT", "VERB", "OBJECT", "ADJECTIVE", "PREPOSITION"],
-      "correct_roles": ["SUBJECT", "ADJECTIVE", "ADJECTIVE"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "OBJECT",
+        "ADJECTIVE",
+        "PREPOSITION"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "ADJECTIVE",
+        "ADJECTIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "مَلَائِكَةُ (subject), اللَّهِ (possessive/genitive — مضاف إليه), كَرَمِيُّونَ (adjective — 'generous' describing مَلَائِكَةُ).",
@@ -304,7 +380,10 @@
       "ur": "کیا تم نے نہیں دیکھا کہ اللہ نے کیا مثال بیان کی ہے: اچھا کلمہ جیسے اچھا درخت؟",
       "audio_url": "https://cdn.warsh.app/audio/quran/ibrahim-024-mishary.mp3"
     },
-    "highlighted_word_indices": [5, 6],
+    "highlighted_word_indices": [
+      5,
+      6
+    ],
     "noor_explanation": {
       "en": "كَلِمَةً طَيِّبَةً — 'a good word.' كَلِمَةً is the noun, طَيِّبَةً is its adjective. كَلِمَةُ (word) is constructed with اللَّهِ in another context. كَلِمَةُ طَيِّبَةً is an indefinite noun phrase — no ال on طَيِّبَةً.",
       "ur": "كَلِمَةً طَيِّبَةً — 'اچھا کلمہ'۔ كَلِمَةً noun ہے، طَيِّبَةً اس کی صفت ہے۔ كَلِمَةُ (کلمہ) دوسرے context میں اللَّهِ کے ساتھ constructed ہوتا ہے۔ كَلِمَةُ طَيِّبَةً ایک نکرہ noun phrase ہے — طَيِّبَةً پر ال نہیں۔"

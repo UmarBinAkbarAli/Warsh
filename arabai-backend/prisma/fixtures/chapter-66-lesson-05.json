@@ -114,13 +114,51 @@
       "id": "ch66-l05-ex01",
       "sentence_ar": "بِحُسْبَانٍ يَجْرِي الْأَمْرُ",
       "words": [
-        { "ar": "بِ", "ar_plain": "ب", "translit": "bi", "en": "by", "ur": "بمقابلے" },
-        { "ar": "حُسْبَانٍ", "ar_plain": "حسبانا", "translit": "husbaanin", "en": "calculating/measure", "ur": "مقدار/حساب" },
-        { "ar": "يَجْرِي", "ar_plain": "يجري", "translit": "yajrii", "en": "runs/proceeds", "ur": "چلتا ہے" },
-        { "ar": "الْأَمْرُ", "ar_plain": "الامر", "translit": "al-amru", "en": "the command", "ur": "حکم" }
+        {
+          "ar": "بِ",
+          "ar_plain": "ب",
+          "translit": "bi",
+          "en": "by",
+          "ur": "بمقابلے"
+        },
+        {
+          "ar": "حُسْبَانٍ",
+          "ar_plain": "حسبانا",
+          "translit": "husbaanin",
+          "en": "calculating/measure",
+          "ur": "مقدار/حساب"
+        },
+        {
+          "ar": "يَجْرِي",
+          "ar_plain": "يجري",
+          "translit": "yajrii",
+          "en": "runs/proceeds",
+          "ur": "چلتا ہے"
+        },
+        {
+          "ar": "الْأَمْرُ",
+          "ar_plain": "الامر",
+          "translit": "al-amru",
+          "en": "the command",
+          "ur": "حکم"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PARTICLE", "PREPOSITION", "OBJECT", "ZARF_OF_MANNER", "TIME_ZARF", "PLACE_ZARF"],
-      "correct_roles": ["PREPOSITION", "ZARF_OF_MANNER", "VERB", "SUBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PARTICLE",
+        "PREPOSITION",
+        "OBJECT",
+        "PLACE_ZARF",
+        "TIME_ZARF",
+        "PLACE_ZARF"
+      ],
+      "correct_roles": [
+        "PREPOSITION",
+        "PLACE_ZARF",
+        "VERB",
+        "SUBJECT"
+      ],
       "xp_value": 1
     },
     {
@@ -134,10 +172,22 @@
         "ur": "قطار纹身 قطار"
       },
       "options": [
-        { "en": "rank upon rank", "ur": "قطار纹身 قطار" },
-        { "en": "in rows and lines", "ur": "قطاروں اور لکیروں میں" },
-        { "en": "page by page", "ur": "صفحہ بہ صفحہ" },
-        { "en": "group after group", "ur": "گروہ کے بعد گروہ" }
+        {
+          "en": "rank upon rank",
+          "ur": "قطار纹身 قطار"
+        },
+        {
+          "en": "in rows and lines",
+          "ur": "قطاروں اور لکیروں میں"
+        },
+        {
+          "en": "page by page",
+          "ur": "صفحہ بہ صفحہ"
+        },
+        {
+          "en": "group after group",
+          "ur": "گروہ کے بعد گروہ"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -180,12 +230,41 @@
         }
       ],
       "right_column": [
-        { "en": "zarf of manner + بِ", "ur": "ظرف الہیئہ + بِ" },
-        { "en": "repeated zarf of manner", "ur": "دہرایا ہوا ظرف الہیئہ" },
-        { "en": "place zarf + مضاف", "ur": "مکان کا ظرف + مضاف" },
-        { "en": "time zarf", "ur": "وقت کا ظرف" }
+        {
+          "en": "zarf of manner + بِ",
+          "ur": "ظرف الہیئہ + بِ"
+        },
+        {
+          "en": "repeated zarf of manner",
+          "ur": "دہرایا ہوا ظرف الہیئہ"
+        },
+        {
+          "en": "place zarf + مضاف",
+          "ur": "مکان کا ظرف + مضاف"
+        },
+        {
+          "en": "time zarf",
+          "ur": "وقت کا ظرف"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -196,12 +275,41 @@
         "ur": "اس دن فرشتے قطار纹身 قطار آئیں گے۔"
       },
       "tiles": [
-        { "ar": "يَوْمَئِذٍ", "ar_plain": "يومئذ", "translit": "yawma'idhin", "en": "on that day", "ur": "اس دن" },
-        { "ar": "تَجِيءُ", "ar_plain": "تجيء", "translit": "tajii'u", "en": "come", "ur": "آئیں گے" },
-        { "ar": "الْمَلَائِكَةُ", "ar_plain": "الملائكة", "translit": "al-malaa'ikatu", "en": "the angels", "ur": "فرشتے" },
-        { "ar": "صَفًّا صَفًّا", "ar_plain": "صفا صفا", "translit": "saffan saffaa", "en": "rank upon rank", "ur": "قطار纹身 قطار" }
+        {
+          "ar": "يَوْمَئِذٍ",
+          "ar_plain": "يومئذ",
+          "translit": "yawma'idhin",
+          "en": "on that day",
+          "ur": "اس دن"
+        },
+        {
+          "ar": "تَجِيءُ",
+          "ar_plain": "تجيء",
+          "translit": "tajii'u",
+          "en": "come",
+          "ur": "آئیں گے"
+        },
+        {
+          "ar": "الْمَلَائِكَةُ",
+          "ar_plain": "الملائكة",
+          "translit": "al-malaa'ikatu",
+          "en": "the angels",
+          "ur": "فرشتے"
+        },
+        {
+          "ar": "صَفًّا صَفًّا",
+          "ar_plain": "صفا صفا",
+          "translit": "saffan saffaa",
+          "en": "rank upon rank",
+          "ur": "قطار纹身 قطار"
+        }
       ],
-      "correct_order": [0, 2, 1, 3],
+      "correct_order": [
+        0,
+        2,
+        1,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -274,15 +382,66 @@
       "id": "ch66-l05-ex07",
       "sentence_ar": "فَيَوْمَئِذٍ لَا يُسْأَلُ عَنْ ذَنْبِهِ إِنْسٌ وَلَا جَانٌّ",
       "words": [
-        { "ar": "فَ", "ar_plain": "ف", "translit": "fa", "en": "so/and", "ur": "تو/اور" },
-        { "ar": "يَوْمَئِذٍ", "ar_plain": "يومئذ", "translit": "yawma'idhin", "en": "on that day", "ur": "اس دن" },
-        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "not", "ur": "نہیں" },
-        { "ar": "يُسْأَلُ", "ar_plain": "يسأل", "translit": "yus'alu", "en": "is asked", "ur": "پوچھا جاتا ہے" },
-        { "ar": "عَنْ", "ar_plain": "عن", "translit": "an", "en": "about", "ur": "بارے" },
-        { "ar": "ذَنْبِهِ", "ar_plain": "ذنبه", "translit": "dhanbihi", "en": "his sin", "ur": "اس کا گناہ" }
+        {
+          "ar": "فَ",
+          "ar_plain": "ف",
+          "translit": "fa",
+          "en": "so/and",
+          "ur": "تو/اور"
+        },
+        {
+          "ar": "يَوْمَئِذٍ",
+          "ar_plain": "يومئذ",
+          "translit": "yawma'idhin",
+          "en": "on that day",
+          "ur": "اس دن"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "not",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "يُسْأَلُ",
+          "ar_plain": "يسأل",
+          "translit": "yus'alu",
+          "en": "is asked",
+          "ur": "پوچھا جاتا ہے"
+        },
+        {
+          "ar": "عَنْ",
+          "ar_plain": "عن",
+          "translit": "an",
+          "en": "about",
+          "ur": "بارے"
+        },
+        {
+          "ar": "ذَنْبِهِ",
+          "ar_plain": "ذنبه",
+          "translit": "dhanbihi",
+          "en": "his sin",
+          "ur": "اس کا گناہ"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PARTICLE", "PREPOSITION", "TIME_ZARF", "PLACE_ZARF", "OBJECT"],
-      "correct_roles": ["PARTICLE", "TIME_ZARF", "PARTICLE", "VERB", "PREPOSITION", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PARTICLE",
+        "PREPOSITION",
+        "TIME_ZARF",
+        "PLACE_ZARF",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "TIME_ZARF",
+        "PARTICLE",
+        "VERB",
+        "PREPOSITION",
+        "OBJECT"
+      ],
       "xp_value": 1
     },
     {
@@ -295,7 +454,12 @@
         "en": "by precise measure",
         "ur": "مقدار کے مطابق"
       },
-      "options": ["ح س ب", "ع مل", "ق د ر", "ن ق ص"],
+      "options": [
+        "ح س ب",
+        "ع مل",
+        "ق د ر",
+        "ن ق ص"
+      ],
       "correct_index": 0,
       "xp_value": 1
     }
@@ -315,7 +479,9 @@
       "ur": "سورج اور چاند حساب کے مطابق چلتے ہیں۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/ar-rahman-005-mishary.mp3"
     },
-    "highlighted_word_indices": [3],
+    "highlighted_word_indices": [
+      3
+    ],
     "noor_explanation": {
       "en": "بِحُسْبَانٍ — 'by precise measure.' حُسْبَانٍ is a zarf of manner in the genitive after بِ. It tells us HOW the sun and moon move — with perfect calculation. This is what makes the Quranic style so precise.",
       "ur": "بِحُسْبَانٍ — 'مقدار کے مطابق'۔ حُسْبَانٍ جر میں ہے بِ کے بعد۔ یہ بتاتا ہے کہ سورج اور چاند کیسے چلتے ہیں — کامل حساب کے ساتھ۔ یہ قرآنی اسلوب کو اتنا درست بناتا ہے۔"
