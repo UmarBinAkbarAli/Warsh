@@ -22,7 +22,7 @@ These were all `com.arabai.app` / scheme `arabai` — now corrected to `com.wars
 - [x] **[CODE]** `android/app/build.gradle` → `applicationId` and `namespace` = `com.warsh.app` ✓
 - [x] **[CODE]** `android/app/src/main/AndroidManifest.xml` → intent-filter schemes updated to `warsh` and `com.warsh.app` ✓
 - [x] **[CODE]** `android/app/src/main/java/com/warsh/app/` → Kotlin source files moved; package declarations updated ✓
-- [x] **[CODE]** `arabai-backend/app/reset-password/route.ts` → deep link and intent URI updated to `warsh://` and `com.warsh.app` ✓
+- [x] **[CODE]** `warsh-backend/app/reset-password/route.ts` → deep link and intent URI updated to `warsh://` and `com.warsh.app` ✓
 
 > **Note:** After the above package rename, run `npx expo prebuild` (without `--clean`) to let Expo sync any remaining auto-generated files. This is optional before an EAS cloud build but recommended before a local Gradle build.
 
@@ -119,7 +119,7 @@ Repeat the above for the **Preview** environment in Vercel, but point `DATABASE_
 - [ ] **[YOU]** After first Vercel deploy, confirm migrations auto-ran: check Neon → Tables → confirm `User`, `Chapter`, `Lesson` etc. exist.
 - [ ] **[YOU]** Run seed on production DB:
   ```bash
-  DATABASE_URL="<production-url>" node arabai-backend/prisma/seed.cjs
+  DATABASE_URL="<production-url>" node warsh-backend/prisma/seed.cjs
   ```
   This populates all chapters, lessons, vocabulary (585 words), Tadabbur (11 Surahs), achievements.
 - [ ] **[YOU]** Verify Neon auto-backup is enabled (it is by default — just confirm in dashboard).
@@ -197,7 +197,7 @@ _Skip until iOS build is prioritized. Document here for when that time comes._
   ```
 - [ ] **[YOU]** Build the internal beta APK (points to staging API):
   ```bash
-  cd arabai-app
+  cd warsh-app
   eas build --platform android --profile preview
   ```
 - [ ] **[YOU]** Once the build succeeds, download the APK and install on a test device.
@@ -249,8 +249,8 @@ _Skip until iOS build is prioritized. Document here for when that time comes._
 ## 12. Config Hygiene (Final Check)
 
 - [ ] **[YOU]** Confirm no real secrets in any tracked file: `git grep -r "sk-" -- "*.ts" "*.js" "*.json"` — should return nothing sensitive.
-- [ ] **[YOU]** Confirm `arabai-backend/.env.example` has only placeholder values (no real keys).
-- [ ] **[YOU]** Confirm `arabai-app/.env.example` has only `EXPO_PUBLIC_*` values (safe to commit).
+- [ ] **[YOU]** Confirm `warsh-backend/.env.example` has only placeholder values (no real keys).
+- [ ] **[YOU]** Confirm `warsh-app/.env.example` has only `EXPO_PUBLIC_*` values (safe to commit).
 - [ ] **[YOU]** Confirm `DEV_UNLOCK_ALL` is not present in any production Vercel env (or explicitly `false`).
 - [ ] **[CODE]** `EXPO_PUBLIC_API_URL` throws at build time if missing or misconfigured ✓ (enforced in `services/api.ts`)
 

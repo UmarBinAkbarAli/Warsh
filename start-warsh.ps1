@@ -85,7 +85,7 @@ if (-not $prod) {
     Start-Process powershell -ArgumentList @(
         "-NoExit",
         "-Command",
-        "Set-Location '$RepoRoot\arabai-backend'; Write-Host 'Warsh Backend' -ForegroundColor Cyan; npm run dev"
+        "Set-Location '$RepoRoot\warsh-backend'; Write-Host 'Warsh Backend' -ForegroundColor Cyan; npm run dev"
     ) -WindowStyle Normal
 
     Write-OK "Backend window opened"
@@ -122,7 +122,7 @@ Write-Step "Starting Expo Metro (EXPO_PUBLIC_API_URL=$apiUrl)"
 Start-Process powershell -ArgumentList @(
     "-NoExit",
     "-Command",
-    "Set-Location '$RepoRoot\arabai-app'; `$env:EXPO_PUBLIC_API_URL='$apiUrl'; `$env:EXPO_PUBLIC_ENVIRONMENT='$envName'; Write-Host 'Warsh Metro  [$envName]' -ForegroundColor Magenta; npx expo start --localhost --clear"
+    "Set-Location '$RepoRoot\warsh-app'; `$env:EXPO_PUBLIC_API_URL='$apiUrl'; `$env:EXPO_PUBLIC_ENVIRONMENT='$envName'; Write-Host 'Warsh Metro  [$envName]' -ForegroundColor Magenta; npx expo start --localhost --clear"
 ) -WindowStyle Normal
 
 Write-OK "Metro window opened"

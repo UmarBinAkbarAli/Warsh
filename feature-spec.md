@@ -1,4 +1,4 @@
-# ArabAI Feature Spec
+# Warsh Feature Spec
 
 ## Placement and Smart Skip for Early Curriculum
 

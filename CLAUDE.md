@@ -4,10 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-ArabAI is a gamified, AI-powered Arabic language learning mobile app targeting Muslim audiences. The repo is a monorepo with two separate Node projects:
+Warsh is a gamified, AI-powered Arabic language learning mobile app targeting Muslim audiences. The repo is a monorepo with two separate Node projects:
 
-- `arabai-backend/` - Next.js 14 (API Routes only, no pages/SSR) + Prisma + PostgreSQL
-- `arabai-app/` - React Native + Expo (Android-only, SDK 51). The app name in `app.json` is **"Warsh"**, not "ArabAI".
+- `warsh-backend/` - Next.js 14 (API Routes only, no pages/SSR) + Prisma + PostgreSQL
+- `warsh-app/` - React Native + Expo (Android-only, SDK 51). The app name in `app.json` is **"Warsh"**, not "Warsh".
 
 ## Source of Truth
 
@@ -60,7 +60,7 @@ PowerShell script at the repo root — never improvise individual steps:
 **Local dev** does (in order):
 1. Verifies ADB + USB device is connected
 2. Sets ADB reverse tunnels: `tcp:8081` (Metro) and `tcp:3000` (Backend)
-3. Opens a terminal window running the Next.js backend (`npm run dev` in `arabai-backend/`)
+3. Opens a terminal window running the Next.js backend (`npm run dev` in `warsh-backend/`)
 4. Waits until `http://localhost:3000/api/health` returns 200
 5. Opens a terminal window running Expo Metro with `EXPO_PUBLIC_API_URL=http://127.0.0.1:3000`
 
@@ -70,7 +70,7 @@ PowerShell script at the repo root — never improvise individual steps:
 3. Opens a terminal window running Expo Metro with `EXPO_PUBLIC_API_URL=https://warsh-backend.vercel.app`
 
 **No Docker needed** — the database is Neon (cloud Postgres). The backend connects
-to Neon directly via `DATABASE_URL` in `arabai-backend/.env`.
+to Neon directly via `DATABASE_URL` in `warsh-backend/.env`.
 
 **Never hardcode a LAN IP.** Always use `http://127.0.0.1:3000` — the ADB tunnel
 forwards traffic from the phone to the PC's localhost.
@@ -82,7 +82,7 @@ To run the script from the Claude Code terminal:
 
 ## Commands
 
-### Backend (`arabai-backend/`)
+### Backend (`warsh-backend/`)
 
 ```bash
 npm run dev           # Start dev server on port 3000
@@ -95,7 +95,7 @@ npm run db:seed       # Seed initial chapters/lessons/achievements
 npm run db:studio     # Open Prisma Studio GUI
 ```
 
-### Mobile App (`arabai-app/`)
+### Mobile App (`warsh-app/`)
 
 ```bash
 npm start             # Start Expo dev server
@@ -108,7 +108,7 @@ npm run lint          # ESLint
 **Backend** - copy `.env.example` to `.env`:
 
 ```text
-DATABASE_URL="postgresql://arabai:arabai_dev_password@localhost:5432/arabai"
+DATABASE_URL="postgresql://warsh:warsh_dev_password@localhost:5432/warsh_dev"
 JWT_SECRET="min-32-char-secret"
 DEV_UNLOCK_ALL=false
 AI_DAILY_MESSAGE_LIMIT=5
@@ -116,7 +116,7 @@ OPENAI_API_KEY=""
 OPENAI_MODEL="gpt-4o-mini"
 ```
 
-**Mobile** - copy `arabai-app/.env.example` to `arabai-app/.env`:
+**Mobile** - copy `warsh-app/.env.example` to `warsh-app/.env`:
 
 ```text
 EXPO_PUBLIC_API_URL=http://127.0.0.1:3000
@@ -141,7 +141,7 @@ Avoid committing machine-specific LAN IPs. Use `EXPO_PUBLIC_API_URL` for any per
 ```text
 Expo App (Android)
   -> Axios (auto-attaches JWT via interceptor)
-  -> Next.js API Routes (arabai-backend/app/api/)
+  -> Next.js API Routes (warsh-backend/app/api/)
   -> Prisma -> PostgreSQL (Neon cloud)
              -> OpenAI/local fallback (chat endpoint only)
 ```
@@ -205,7 +205,7 @@ Error codes in use: `bad_request`, `unauthorized`, `conflict`, `too_many_request
 
 **Arabic text:** Always use `app/components/ArabicText.tsx` for Arabic strings — it enforces RTL and uses Scheherazade New font. Size variants: `sm | md | lg | xl`. English text uses Amiri font.
 
-**Brand/theme:** Shared UI tokens in `arabai-app/constants/theme.ts` (WarshPalette, Colors, FontSizes, Spacing, Radii, Shadows). Use `app/components/BrandButton.tsx` for CTAs — it has `variant` (`primary | secondary | danger`) and `selected`/`loading`/`disabled` states, min height 52px. All new UI work must follow `Docs/warsh-spec-11-design-system-and-copy.md`.
+**Brand/theme:** Shared UI tokens in `warsh-app/constants/theme.ts` (WarshPalette, Colors, FontSizes, Spacing, Radii, Shadows). Use `app/components/BrandButton.tsx` for CTAs — it has `variant` (`primary | secondary | danger`) and `selected`/`loading`/`disabled` states, min height 52px. All new UI work must follow `Docs/warsh-spec-11-design-system-and-copy.md`.
 
 **Path aliases (mobile only):** `@app/*`, `@components/*`, `@services/*`, `@stores/*`, `@types/*` — configured in `tsconfig.json`.
 
