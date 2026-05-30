@@ -1,0 +1,407 @@
+{
+  "schema_version": "1.0",
+  "_meta": {
+    "chapter_order": 72,
+    "lesson_order": 8,
+    "chapter_title": "المنادى",
+    "title": "R15 — Capstone Comprehensive 72-Chapter Review",
+    "titleAr": "R15 — مراجعة شاملة للفصول ال 72",
+    "source": "Warsh-backend/prisma/fixtures",
+    "estimated_minutes": 10,
+    "xp_reward": 5
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 185,
+      "label": "Al-Baqarah 2:185",
+      "ar": "شَهْرُ رَمَضَانَ الَّذِي أُنْزِلَ فِيهِ الْقُرْآنُ هُدًى لِّلنَّاسِ وَبَيِّنَاتٍ مِّنَ الْهُدَىٰ وَالْفُرْقَانِ",
+      "en": "The month of Ramadan in which the Quran was revealed as guidance for mankind and clear proofs of guidance and the criterion.",
+      "ur": "رمضان کا مہینہ جس میں قرآن نازل ہوا ہدایت کے لیے اور ہدایت اور فرقان کی کھلی دلیلیں۔"
+    },
+    "noor_intro": {
+      "ar": "R15 is the final review of your entire 72-chapter journey. We'll test everything — from الحروف to النِّدَاء, from basic sentence structure to Quranic rhetoric. You've earned this.",
+      "en": "R15 is the final review of your entire 72-chapter journey. We'll test everything — from الحروف to النِّدَاء, from basic sentence structure to Quranic rhetoric. You've earned this.",
+      "ur": "R15 آپ کے پورے 72 ابواب کے سفر کا آخری جائزہ ہے۔ ہم ہر چیز کی جانچ کریں گے — حروف سے لے کر نداء تک، بنیادی جملے کی ساخت سے لے کر قرآنی بلاغت تک۔ آپ نے یہ حاصل کیا ہے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Comprehensive Review — 72 Chapters",
+        "ar": "مراجعة شاملة — 72 فصلاً"
+      },
+      "explanation": {
+        "en": "From الحروف to المنادى — all fundamental concepts. Letters → Names → Verbs → Sentences → Parsing → Arguments → Exception → حال/تمييز → Vocative. Each chapter built on the previous one.",
+        "ar": "من الحروف إلى المنادى — كل المفاهيم الأساسية. كل فصل بني على الذي قبله."
+      },
+      "highlight": true
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Linguistic Intelligence",
+        "ar": "الذكاء اللغوي"
+      },
+      "explanation": {
+        "en": "Your understanding of the Quran is now not just memorization — it's structural comprehension. When you see يَا أَيُّهَا الَّذِينَ آمَنُوا — you now know exactly what each word does grammatically, what its case is, and why it's there. This is real linguistic intelligence.",
+        "ar": "فهمك الآن للقرآن ليس مجرد حفظ، بل فهم هياكل. عندما تقرأ 'اے ایمان والو' — الآن تعرف بالضبط ما يفعله كل كلمة نحويًا."
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ch72l08-ex01",
+      "type": "MATCHING",
+      "left_column": [
+        {
+          "ar": "إِلَّا — الاستثناء",
+          "ar_plain": "إلا",
+          "translit": "illā",
+          "en": "إِلَّا — Exception"
+        },
+        {
+          "ar": "الحال والتمييز",
+          "ar_plain": "الحال والتمييز",
+          "translit": "al-ḥāl wa-t-tamyīz",
+          "en": "Hāl and Tamyīz"
+        },
+        {
+          "ar": "النِّدَاء",
+          "ar_plain": "النداء",
+          "translit": "an-nidāʾ",
+          "en": "النِّدَاء — Vocative"
+        },
+        {
+          "ar": "الجمل الشرطية",
+          "ar_plain": "الجمل الشرطية",
+          "translit": "al-jumal ash-sharṭiyya",
+          "en": "Conditional Sentences"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "الفصل 70"
+        },
+        {
+          "en": "الفصل 71"
+        },
+        {
+          "en": "الفصل 72"
+        },
+        {
+          "en": "الفصل 62"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "id": "ch72l08-ex02",
+      "type": "GRAMMAR_PARSE",
+      "sentence_ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
+      "words": [
+        {
+          "ar": "يا",
+          "ar_plain": "يا",
+          "translit": "yā",
+          "en": "O"
+        },
+        {
+          "ar": "أيها",
+          "ar_plain": "أيها",
+          "translit": "ayyuhā",
+          "en": "those who"
+        },
+        {
+          "ar": "الذين",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "who"
+        },
+        {
+          "ar": "آمنوا",
+          "ar_plain": "آمنوا",
+          "translit": "āmanū",
+          "en": "believed"
+        },
+        {
+          "ar": "اتقوا",
+          "ar_plain": "اتقوا",
+          "translit": "ittaqū",
+          "en": "fear"
+        },
+        {
+          "ar": "الله",
+          "ar_plain": "الله",
+          "translit": "Allāh",
+          "en": "Allah"
+        }
+      ],
+      "available_roles": [
+        "PARTICLE",
+        "VERB",
+        "NOUN",
+        "PREPOSITION",
+        "OBJECT",
+        "RELATIVE_PRONOUN"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "PARTICLE",
+        "RELATIVE_PRONOUN",
+        "VERB",
+        "VERB",
+        "OBJECT"
+      ]
+    },
+    {
+      "id": "ch72l08-ex03",
+      "type": "TRUE_FALSE",
+      "statement": {
+        "en": "تمييز clarifies/specifies what precedes — حال describes the manner/state of صاحب الحال",
+        "ur": "تمييز وضاحت کرتی ہے — حال صاحب الحال کی حالت بیان کرتی ہے"
+      },
+      "correct_answer": true
+    },
+    {
+      "id": "ch72l08-ex04",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "sentence_ar": "غرض 72 فصلاً هو الوصول إلى ___",
+      "hint": {
+        "en": "The ultimate goal",
+        "ur": "آخری مقصد"
+      },
+      "options": [
+        {
+          "ar": "التقوى",
+          "ar_plain": "التقوى",
+          "translit": "at-taqwā",
+          "en": "التقوى"
+        },
+        {
+          "ar": "النحو",
+          "ar_plain": "النحو",
+          "translit": "an-naḥw",
+          "en": "النحو"
+        },
+        {
+          "ar": "الفهم",
+          "ar_plain": "الفهم",
+          "translit": "al-fahm",
+          "en": "الفهم"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "no/not",
+          "ur": "نہیں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "التقوى",
+        "ar_plain": "التقوى",
+        "translit": "at-taqwā",
+        "en": "التقوى"
+      }
+    },
+    {
+      "id": "ch72l08-ex05",
+      "type": "BUILD_SENTENCE",
+      "target_translation": {
+        "en": "ما جاء أحد إلا محمد — No one came except Muhammad",
+        "ur": "کوئی نہیں آیا مگر محمد"
+      },
+      "tiles": [
+        {
+          "ar": "ما",
+          "ar_plain": "ما",
+          "translit": "mā",
+          "en": "not"
+        },
+        {
+          "ar": "أحد",
+          "ar_plain": "أحد",
+          "translit": "aḥad",
+          "en": "anyone"
+        },
+        {
+          "ar": "جاء",
+          "ar_plain": "جاء",
+          "translit": "jā'a",
+          "en": "came"
+        },
+        {
+          "ar": "إلا",
+          "ar_plain": "إلا",
+          "translit": "illā",
+          "en": "except"
+        },
+        {
+          "ar": "محمد",
+          "ar_plain": "محمد",
+          "translit": "muḥammad",
+          "en": "Muhammad"
+        }
+      ],
+      "correct_order": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "ch72l08-ex06",
+      "type": "CONVERSATION_BUILDER",
+      "prompt_line": {
+        "ar": "ما أهم شيء تعلمته من هذه الدورة؟",
+        "ar_plain": "ما أهم شيء تعلمته من هذه الدورة",
+        "translit": "mā ahammu shay' ta'allamtahu min hādhihi ad-dawra?",
+        "en": "What is the most important thing you learned from this course?"
+      },
+      "response_mode": "PICK",
+      "correct_option_index": 0,
+      "options": [
+        {
+          "ar": "يا زيد = direct address to one person",
+          "ar_plain": "يا زيد",
+          "translit": "yaa zayd",
+          "en": "Direct address to one person",
+          "ur": "ایک شخص کو براہ راست مخاطب کرنا"
+        },
+        {
+          "ar": "يا أيها زيد = also one person but with identity emphasis",
+          "ar_plain": "يا أيها زيد",
+          "translit": "yaa ayyuhaa zayd",
+          "en": "Also one person but with identity emphasis",
+          "ur": "بھی ایک شخص مگر شناخت پر زور کے ساتھ"
+        }
+      ]
+    },
+    {
+      "id": "ch72l08-ex07",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "ما هي الخطوة التالية بعد إكمال 72 فصلاً؟",
+        "ar_plain": "ما هي الخطوة التالية بعد إكمال 72 فصلاً",
+        "translit": "mā hiya al-khutuwa al-jāmiḥ ba'da ikmāl 72 faṣlan?",
+        "en": "What is the next step after completing 72 chapters?"
+      },
+      "options": [
+        {
+          "en": "Study more grammar rules",
+          "ur": "مزید قواعد پڑھنا"
+        },
+        {
+          "en": "Read the Quran with understanding",
+          "ur": "فہم کے ساتھ قرآن پڑھنا"
+        },
+        {
+          "en": "Forget everything you learned",
+          "ur": "سب کچھ بھول جانا"
+        },
+        {
+          "en": "Option 4",
+          "ur": "آپشن 4"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "id": "ch72l08-ex08",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "sentence_ar": "72 فصلاً من النحو — الغاية: فهم القرآن والوصول إلى ___",
+      "hint": {
+        "en": "The goal of taqwa",
+        "ur": "تقویٰ کا مقصد"
+      },
+      "options": [
+        {
+          "ar": "التقوى",
+          "ar_plain": "التقوى",
+          "translit": "at-taqwā",
+          "en": "التقوى"
+        },
+        {
+          "ar": "السعادة",
+          "ar_plain": "السعادة",
+          "translit": "as-saʿāda",
+          "en": "السعادة"
+        },
+        {
+          "ar": "المعرفة",
+          "ar_plain": "المعرفة",
+          "translit": "al-maʿrifa",
+          "en": "المعرفة"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "no/not",
+          "ur": "نہیں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "التقوى",
+        "ar_plain": "التقوى",
+        "translit": "at-taqwā",
+        "en": "التقوى"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "ar": "72 فصلاً — من البداية إلى التقوى",
+      "en": "72 Chapters — From Beginning to Taqwa",
+      "ur": "72 ابواب — شروع سے تقویٰ تک"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ",
+      "en": "This is the Book about which there is no doubt, a guidance for those who are conscious of Allah.",
+      "ur": "یہ کتاب ہے جس میں کوئی شک نہیں، متقین کے لیے ہدایت۔"
+    },
+    "highlighted_word_indices": [
+      3
+    ],
+    "noor_explanation": {
+      "ar": "هُدًى لِلْمُتَّقِينَ — 'a guidance for those who are conscious of Allah.' المتقون هم الذين اتقوا الله — الذين سمعوا يَا أَيُّهَا الَّذِينَ آمَنُوا واتقوا الله. هذا ليس نهاية — هذا هو البداية. من فهم النص إلى فهم الذات إلى التقوى.",
+      "en": "A guidance for those who are conscious of Allah — المتقون are those who feared Allah. Those who heard يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ and acted on it. This is not an ending — this is a beginning. From understanding the text, to understanding the self, to Taqwa.",
+      "ur": "متقین — وہ لوگ جنہوں نے 'اے ایمان والو، اللہ سے ڈرو' سنی اور اس پر عمل کیا۔ یہ اختتام نہیں — یہ آغاز ہے۔ متن کی سمجھ سے، نفس کی سمجھ تک، تقویٰ تک۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "ar": "You have completed all 72 chapters of the Warsh Arabic Grammar Curriculum. This is not an ending — it is a beginning. The grammar you learned is a key that unlocks the Quran's meaning. Now go and read the Quran with new eyes. And remember: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ — this is the purpose of everything you learned. May Allah accept your effort and grant you understanding.",
+      "en": "You have completed all 72 chapters of the Warsh Arabic Grammar Curriculum. This is not an ending — it is a beginning. The grammar you learned is a key that unlocks the Quran's meaning. Now go and read the Quran with new eyes. And remember: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ — this is the purpose of everything you learned. May Allah accept your effort and grant you understanding.",
+      "ur": "آپ نے Warsh عربی گرامر نصاب کے تمام 72 ابواب مکمل کر لیے ہیں۔ یہ اختتام نہیں — یہ آغاز ہے۔ جو گرامر آپ نے سیکھی ہے وہ ایک کنجی ہے جو قرآن کے meaning کو کھولتی ہے۔ اب جاؤ اور نئی آنکھوں سے قرآن پڑھو۔ اور یاد رکھو: 'اے ایمان والو، اللہ سے ڈرو' — یہ ہر چیز کا مقصد ہے جو آپ نے سیکھا۔ اللہ آپ کی کوشش قبول کرے اور آپ کو سمجھ عطا فرمائے۔"
+    }
+  },
+  "template": "REVIEW"
+}
