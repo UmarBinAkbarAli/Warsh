@@ -20,6 +20,7 @@ import {
   setupNotificationSchedules,
   cancelAllNotifications,
 } from "@services/notifications";
+import { isSentrySmokeTestEnabled, sendSentrySmokeTest } from "@services/sentry";
 
 // AsyncStorage keys for local preferences
 const PREFS_KEY = "warsh_settings";
@@ -153,6 +154,7 @@ export default function SettingsScreen() {
   const [currentStreak, setCurrentStreak] = useState(0);
   const [userName, setUserName] = useState("friend");
   const [saving, setSaving] = useState(false);
+  const sentrySmokeTestEnabled = isSentrySmokeTestEnabled();
 
   useFocusEffect(
     useCallback(() => {
@@ -226,6 +228,19 @@ export default function SettingsScreen() {
         },
       ]
     );
+  }
+
+  async function handleSentrySmokeTest() {
+    try {
+      const eventId = await sendSentrySmokeTest({ screen: "settings" });
+      if (eventId) {
+        Alert.alert("Sentry test sent", `Event ID: ${eventId}`);
+      } else {
+        Alert.alert("Sentry test disabled", "Build with EXPO_PUBLIC_ENABLE_SENTRY_SMOKE=true to show this test.");
+      }
+    } catch {
+      Alert.alert("Sentry test failed", "Could not send the test event. Check the device connection and Sentry DSN.");
+    }
   }
 
   return (
@@ -371,6 +386,21 @@ export default function SettingsScreen() {
           <View style={styles.divider} />
           <SettingRow icon="chatbubble-outline" label="Send feedback" showChevron />
         </View>
+
+        {sentrySmokeTestEnabled ? (
+          <>
+            <SectionHeader title="Diagnostics" />
+            <View style={styles.card}>
+              <SettingRow
+                icon="bug-outline"
+                label="Send Sentry test event"
+                sublabel="Sends a non-crashing smoke event"
+                onPress={handleSentrySmokeTest}
+                showChevron
+              />
+            </View>
+          </>
+        ) : null}
 
         {/* Legal */}
         <SectionHeader title="Legal" />

@@ -68,6 +68,7 @@ function exPrompt(ex: RawEx): string | undefined {
   if (t === "FILL_BLANK") return (ex.hint as any)?.en as string | undefined;
   if (t === "BUILD_SENTENCE") return (ex.target_translation as any)?.en as string | undefined;
   if (t === "MATCHING") return "Match each Arabic word with its meaning.";
+  if (t === "MATCH_AYAH") return "What does this ayah fragment mean?";
   return undefined;
 }
 
@@ -80,6 +81,7 @@ function exArabicText(ex: RawEx): string | undefined {
   if (t === "TRUE_FALSE") return ((ex.statement as any)?.ar_example as any)?.ar as string | undefined;
   if (t === "FILL_BLANK") return ex.sentence_ar as string | undefined;
   if (t === "SHADOW_REPEAT") return (ex.phrase as any)?.ar as string | undefined;
+  if (t === "MATCH_AYAH") return (ex.ayah_fragment as any)?.ar as string | undefined;
   return undefined;
 }
 
@@ -102,6 +104,10 @@ function exOptions(ex: RawEx): string[] {
     const right = ex.right_column as Array<any> | undefined;
     return right ? right.map((r) => r.en as string) : [];
   }
+  if (t === "MATCH_AYAH") {
+    const opts = ex.options as Array<any> | undefined;
+    return opts ? opts.map((o) => o.en as string) : [];
+  }
   return [];
 }
 
@@ -121,6 +127,12 @@ function exCorrectAnswer(ex: RawEx): string {
     const tiles = ex.tiles as Array<any> | undefined;
     const order = ex.correct_order as number[] | undefined;
     if (tiles && order) return order.map((i) => tiles[i].ar as string).join(" ");
+    return "";
+  }
+  if (t === "MATCH_AYAH") {
+    const opts = ex.options as Array<any> | undefined;
+    const idx = ex.correct_index as number | undefined;
+    if (opts && idx !== undefined) return opts[idx].en as string;
     return "";
   }
   return "";

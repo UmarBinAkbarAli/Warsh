@@ -218,6 +218,55 @@
   gap: 6px;
 }
 
+.builderSection {
+  border: 1px solid #d7c8a6;
+  background: #f4ead3;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.sectionHeader h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #5c4a1e;
+}
+
+.addButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.addBtn {
+  border: 1px solid #c89b31;
+  border-radius: 6px;
+  padding: 5px 10px;
+  background: #fffaf0;
+  color: #8a651f;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.addBtn:hover {
+  background: #f4e8c8;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .jsonGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -249,4 +298,574 @@
     align-items: stretch;
     flex-direction: column;
   }
+}
+
+/* ========================================================================
+   JSON VIEW SECTION — Advanced raw JSON editor
+   ======================================================================== */
+
+.jsonViewSection {
+  border: 1px solid #d7c8a6;
+  background: #fffaf0;
+  border-radius: 8px;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.jsonViewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.jsonViewHeader h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #5c4a1e;
+}
+
+.jsonViewActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.jsonTextarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  border: 1px solid #cbb889;
+  background: #1e211b;
+  color: #e8d5a3;
+  border-radius: 6px;
+  padding: 12px;
+  direction: ltr;
+  text-align: left;
+  min-height: 300px;
+  resize: vertical;
+}
+
+.jsonWarning {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #856404;
+}
+
+.jsonApplyBtn {
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 14px;
+  background: #8a651f;
+  color: #fffaf0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.jsonCancelBtn {
+  border: 1px solid #cbb889;
+  border-radius: 6px;
+  padding: 8px 14px;
+  background: transparent;
+  color: #6f725f;
+  cursor: pointer;
+  font: inherit;
+}
+
+.validateBtn {
+  border: 1px solid #2e7d32;
+  border-radius: 6px;
+  padding: 7px 12px;
+  background: #f0fff0;
+  color: #2e7d32;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.validateBtn:hover {
+  background: #e0f0e0;
+}
+
+/* ========================================================================
+   EDIT FORM PANEL — inline card/exercise editor
+   ======================================================================== */
+
+.editPanel {
+  border: 2px solid #c89b31;
+  border-radius: 8px;
+  background: #fffdf5;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.editPanelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d7c8a6;
+}
+
+.editPanelHeader h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #8a651f;
+}
+
+.editPanelActions {
+  display: flex;
+  gap: 8px;
+}
+
+.cancelBtn {
+  border: 1px solid #cbb889;
+  border-radius: 6px;
+  padding: 7px 14px;
+  background: transparent;
+  color: #6f725f;
+  cursor: pointer;
+  font: inherit;
+}
+
+.saveBtn {
+  border: 0;
+  border-radius: 6px;
+  padding: 7px 14px;
+  background: #8a651f;
+  color: #fffaf0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.fieldGrid label {
+  display: grid;
+  gap: 4px;
+  color: #4b4f3e;
+  font-size: 12px;
+}
+
+.fieldGrid input,
+.fieldGrid select,
+.fieldGrid textarea {
+  border: 1px solid #cbb889;
+  background: #fffaf0;
+  border-radius: 6px;
+  padding: 7px 9px;
+  font: inherit;
+  color: #1e211b;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fieldGrid input[dir="rtl"],
+.fieldGrid textarea[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+.fieldGrid input[type="number"] {
+  width: 100px;
+}
+
+.fieldGrid input[type="checkbox"] {
+  width: auto;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.fieldSection {
+  border-top: 1px solid #e8d9b8;
+  padding-top: 10px;
+}
+
+.fieldSection h5 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #8a651f;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Options editor (4-choice) */
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.optionRow {
+  display: grid;
+  grid-template-columns: 24px 1fr 1fr;
+  gap: 6px;
+  align-items: center;
+}
+
+.optionIndex {
+  font-size: 11px;
+  color: #8a651f;
+  font-weight: 700;
+  text-align: center;
+}
+
+.optionRow input {
+  font-size: 13px;
+  padding: 5px 7px;
+}
+
+/* Tiles editor */
+.tilesList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tileRow {
+  display: grid;
+  grid-template-columns: 24px 1fr 1fr 1fr auto;
+  gap: 6px;
+  align-items: center;
+  background: #f4ead3;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+.tileRow input {
+  font-size: 12px;
+  padding: 4px 6px;
+}
+
+.tileOrder {
+  font-size: 11px;
+  color: #8a651f;
+  font-weight: 700;
+  text-align: center;
+}
+
+.removeTile {
+  background: none;
+  border: none;
+  color: #b04040;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+/* Matching pairs editor */
+.matchingCols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.matchingCol {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.matchingCol h5 {
+  margin: 0 0 4px;
+  font-size: 12px;
+  color: #6f725f;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.matchPairRow {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 6px;
+  align-items: center;
+}
+
+.matchPairRow input {
+  font-size: 12px;
+  padding: 4px 6px;
+}
+
+/* ========================================================================
+   CARD LIST ITEMS — DiscoverCardItem and ExerciseItem
+   ======================================================================== */
+
+.cardItem,
+.cardExerciseItem {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+  background: #fffaf0;
+  border: 1px solid #d7c8a6;
+  border-radius: 6px;
+  padding: 8px 12px;
+  min-width: 0;
+}
+
+.cardSummary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.cardIndex {
+  font-size: 11px;
+  font-weight: 700;
+  color: #8a651f;
+  min-width: 20px;
+  text-align: center;
+}
+
+.cardType {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6f725f;
+  background: #f4ead3;
+  border: 1px solid #d7c8a6;
+  border-radius: 4px;
+  padding: 1px 6px;
+  white-space: nowrap;
+}
+
+.cardTitle {
+  font-size: 13px;
+  color: #1e211b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.cardPrompt {
+  font-size: 12px;
+  color: #6f725f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 160px;
+}
+
+.exerciseId {
+  font-size: 10px;
+  color: #8a651f;
+  background: #f4ead3;
+  border-radius: 4px;
+  padding: 1px 4px;
+  font-family: "Courier New", monospace;
+}
+
+.xpChip {
+  font-size: 10px;
+  font-weight: 700;
+  color: #2e7d32;
+  background: #f0fff0;
+  border: 1px solid #a5d6a7;
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+.cardActions {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.cardActions button {
+  border: 1px solid #d7c8a6;
+  border-radius: 4px;
+  padding: 4px 8px;
+  background: transparent;
+  color: #6f725f;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+}
+
+.cardActions button:hover {
+  background: #f4e8c8;
+}
+
+.cardActions button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Drag handle */
+.dragHandle {
+  cursor: grab;
+  color: #cbb889;
+  font-size: 14px;
+  padding: 2px 4px;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.dragHandle:active {
+  cursor: grabbing;
+}
+
+.cardItem[draggable="true"],
+.cardExerciseItem[draggable="true"] {
+  cursor: grab;
+}
+
+.cardItem.dragOver,
+.cardExerciseItem.dragOver {
+  background: #f4e8c8;
+  border-color: #c89b31;
+}
+
+/* Lesson Preview panel */
+.previewPanel {
+  border: 1px solid #d7c8a6;
+  background: #fffdf5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.previewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #f4ead3;
+  border-bottom: 1px solid #d7c8a6;
+}
+
+.previewHeader h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #5c4a1e;
+}
+
+.previewBody {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.previewSection {
+  display: grid;
+  gap: 8px;
+}
+
+.previewSectionTitle {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a651f;
+  border-bottom: 1px solid #e8d9b8;
+  padding-bottom: 4px;
+}
+
+.previewCard,
+.previewExercise {
+  background: #fffaf0;
+  border: 1px solid #d7c8a6;
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: grid;
+  gap: 4px;
+}
+
+.previewCardType {
+  font-size: 10px;
+  font-weight: 700;
+  color: #6f725f;
+  background: #f4ead3;
+  border: 1px solid #d7c8a6;
+  border-radius: 4px;
+  padding: 1px 6px;
+  width: fit-content;
+}
+
+.previewCardTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e211b;
+  direction: rtl;
+  text-align: right;
+  font-family: Amiri, serif;
+}
+
+.previewCardSubtitle {
+  font-size: 12px;
+  color: #6f725f;
+  direction: ltr;
+}
+
+.previewExerciseMeta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.previewExerciseType {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6f725f;
+  background: #f4ead3;
+  border: 1px solid #d7c8a6;
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+
+.previewExerciseId {
+  font-size: 10px;
+  font-family: "Courier New", monospace;
+  color: #8a651f;
+}
+
+.previewExercisePrompt {
+  font-size: 13px;
+  color: #1e211b;
+}
+
+.previewExerciseOptions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.previewOptionItem {
+  font-size: 12px;
+  color: #4b4f3e;
+  background: #f4ead3;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.noPreviewContent {
+  text-align: center;
+  padding: 24px;
+  color: #8a651f;
+  font-size: 13px;
 }

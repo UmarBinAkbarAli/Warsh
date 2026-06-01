@@ -97,6 +97,7 @@ Set the following for **Production** environment (and where noted, also Staging)
 | `SENTRY_DSN` | From Sentry project settings (backend project) |
 | `SENTRY_ORG` | Your Sentry org slug |
 | `SENTRY_PROJECT` | `warsh-backend` |
+| `SENTRY_AUTH_TOKEN` | Sentry token for production source map uploads |
 | `MIXPANEL_TOKEN` | From Mixpanel project settings |
 
 ### Runtime
@@ -217,8 +218,12 @@ _Skip until iOS build is prioritized. Document here for when that time comes._
 - [ ] **[YOU]** Copy each project's DSN.
 - [ ] **[YOU]** Backend DSN → Vercel env var `SENTRY_DSN` (set in Section 2).
 - [ ] **[YOU]** Mobile DSN → EAS secret `EXPO_PUBLIC_SENTRY_DSN` (set in Section 8).
-- [ ] **[YOU]** Set `SENTRY_ORG` and `SENTRY_PROJECT` in Vercel to match your `next.config.js` values:
-  - Currently hardcoded as `org: "umar-bin-akbar-ali"` and `project: "javascript-nextjs"` — update `next.config.js` to use the correct project name or override via env var.
+- [ ] **[YOU]** Set `SENTRY_ORG`, `SENTRY_PROJECT`, and `SENTRY_AUTH_TOKEN` in Vercel for production source map uploads.
+- [ ] **[YOU]** After `SENTRY_DSN` is set, run the backend smoke test:
+  ```bash
+  cd warsh-backend
+  npm run sentry:smoke
+  ```
 - [ ] **[YOU]** After first production deploy with errors, confirm Sentry receives the event.
 - [ ] **[YOU]** Set up Sentry alert: **Email me when a new issue is detected** (free tier default).
 
@@ -293,4 +298,4 @@ These are documented gaps to address before public launch but not required for c
 - **iOS build:** Deferred until Android beta is stable.
 - **OTA updates:** `updates.url` is set in `app.json` — requires EAS Update to be configured (`eas update:configure`) before OTA pushes work.
 - **Privacy Policy / Terms:** Must be published at `warsh.app/privacy` and `warsh.app/terms` before public launch. Not required for closed beta.
-- **`next.config.js` Sentry config:** Currently uses hardcoded `org` and `project` strings — these should be moved to env vars (`SENTRY_ORG`, `SENTRY_PROJECT`) when the project names are finalized.
+- **Sentry source maps:** Runtime reporting is wired. Source map upload stays disabled unless `SENTRY_ORG`, `SENTRY_PROJECT`, and `SENTRY_AUTH_TOKEN` are set in Vercel.

@@ -84,6 +84,7 @@ model Lesson {
     template    LessonTemplate
     xpReward    Int            @default(10)
     content     Json
+    updatedAt   DateTime       @default(now()) @updatedAt
     progress    Progress[]
 }
 

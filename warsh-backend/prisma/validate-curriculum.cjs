@@ -9,6 +9,13 @@ const { chapters: books7To8Chapters } = require("./curriculum-books7-8.cjs");
 const chapters = [...book1Chapters, ...books2To4Chapters, ...books5To6Chapters, ...books7To8Chapters];
 const fixturesDir = path.join(__dirname, "fixtures");
 
+// For Phase 0b, the fixture validator continues to use its own CJS-compatible
+// validators. The canonical Zod schema in @warsh/lesson-schema is the
+// source of truth for the lesson builder and PATCH route validation.
+// Exercise type sets and rules below intentionally mirror the Zod schemas.
+// TODO(phase-0b): migrate to import { ExerciseSchema } from '../../packages/lesson-schema/dist/index.js'
+// once the validator script is converted to ESM or a dual CJS/ESM runner.
+
 const ALLOWED_LEGACY_EXERCISE_TYPES = new Set([
   "TRUE_FALSE",
   "TAP_TRANSLATION",

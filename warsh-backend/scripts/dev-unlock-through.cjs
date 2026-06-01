@@ -93,29 +93,31 @@ async function main() {
 
     const completedAt = status === PROGRESS_STATUS.COMPLETED ? new Date() : null;
 
-    await prisma.$transaction(
-      lessons.map((lesson) =>
-        prisma.progress.upsert({
-          where: { userId_lessonId: { userId: user.id, lessonId: lesson.id } },
-          create: {
-            userId: user.id,
-            lessonId: lesson.id,
-            completed: status === PROGRESS_STATUS.COMPLETED,
-            status,
-            attempts: status === PROGRESS_STATUS.COMPLETED ? 1 : 0,
-            xpEarned: status === PROGRESS_STATUS.COMPLETED ? lesson.xpReward : 0,
-            completedAt,
-          },
-          update: {
-            completed: status === PROGRESS_STATUS.COMPLETED,
-            status,
-            attempts: status === PROGRESS_STATUS.COMPLETED ? 1 : 0,
-            xpEarned: status === PROGRESS_STATUS.COMPLETED ? lesson.xpReward : 0,
-            completedAt,
-          },
-        })
-      )
-    );
+    for (let i = 0; i < lessons.length; i++) {
+      const lesson = lessons[i];
+      await prisma.progress.upsert({
+        where: { userId_lessonId: { userId: user.id, lessonId: lesson.id } },
+        create: {
+          userId: user.id,
+          lessonId: lesson.id,
+          completed: status === PROGRESS_STATUS.COMPLETED,
+          status,
+          attempts: status === PROGRESS_STATUS.COMPLETED ? 1 : 0,
+          xpEarned: status === PROGRESS_STATUS.COMPLETED ? lesson.xpReward : 0,
+          completedAt,
+        },
+        update: {
+          completed: status === PROGRESS_STATUS.COMPLETED,
+          status,
+          attempts: status === PROGRESS_STATUS.COMPLETED ? 1 : 0,
+          xpEarned: status === PROGRESS_STATUS.COMPLETED ? lesson.xpReward : 0,
+          completedAt,
+        },
+      });
+      if ((i + 1) % 20 === 0 || i + 1 === lessons.length) {
+        process.stdout.write(`  ${i + 1}/${lessons.length} lessons...\r`);
+      }
+    }
 
     const statusLabel = status === PROGRESS_STATUS.COMPLETED ? "completed" : "skipped by placement";
     console.log(`Unlocked through Chapter ${throughChapter} for ${user.email}.`);

@@ -1,10 +1,22 @@
 # Warsh Phase 1 Progress Tracker
 
-Last updated: 2026-05-29 (Backend deployed to Vercel prod — deployment dpl_HyVmxpA7UQEboXw3mmMzNrG6NRGD, alias warsh-backend.vercel.app updated. POST /api/webhooks/google is live (returns 200). Production Neon DB seeded: 72 chapters, 386 lessons, 8 users preserved. Vercel env vars GOOGLE_PLAY_SERVICE_ACCOUNT_KEY + GOOGLE_PLAY_PACKAGE_NAME still need adding via Vercel dashboard.)
+Last updated: 2026-05-31 (OTA update channels wired in eas.json; Priority 2 code tasks fully audited — audio handling, token refresh, and Sentry next.config.js were all already complete.)
 
 ## Purpose
 
 This file is the source of truth for current app progress as reflected in the codebase.
+
+**Latest status (2026-05-31):**
+- Local release APK built without EAS cloud services: `warsh-app/android/app/build/outputs/apk/release/app-release.apk` (SHA-256 `2C38B4C5912A0BD0CE5F8606167D66E819A19611ADAF8DA5885B32169C66FD3E`). Verified package `com.warsh.app`, version `1.0.1` / code `2`, release signing, backend URL `https://warsh-backend.vercel.app`, Mixpanel token, and mobile Sentry DSN in `assets/index.android.bundle`. `https://api.warsh.app` is not live yet and is absent from this APK.
+- Mixpanel project `warsh-production` token set in EAS production + preview. Sentry and Mixpanel are now baked into the locally built release APK; install/smoke-test is the remaining confirmation step.
+- Vercel project root directory corrected from `arabai-backend` → `warsh-backend` via Vercel API (PATCH /v9/projects).
+- `CRON_SECRET` replaced in Vercel production with known value `8a01c73...` (old value set 23d ago was unknown/mismatched).
+- `GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET` added to Vercel production.
+- Backend redeployed (dpl_4mssrc32ZTHbJkohNmASpPEg4xCK) and aliased to `warsh-backend.vercel.app`.
+- `GET /api/health` → 200 ✓, `GET /api/cron/expire-trials` with CRON_SECRET → 200 `{"data":{"expired":0}}` ✓.
+- Custom domains (api.warsh.app) deferred until domain purchase.
+- UptimeRobot pending manual setup by Umar (see §11 of beta infra checklist).
+- IMPORTANT: future CLI deploys must run from repo root `D:\Code\Warsh` (not warsh-backend/) since Vercel rootDirectory is now `warsh-backend`. Use the Vercel API trigger or git push + API to redeploy.
 
 It is intended to track:
 - what is implemented in the repo
@@ -65,9 +77,9 @@ It should not be treated as a permanent record of:
 - **Chapter 14:** fixture-authored (5 lessons), wired into `seed.cjs`, validated (63 total fixtures), pushed to production Neon DB 2026-05-28. L01: human plural adjective agreement; L02: non-human plural rule (الْكُتُب جَدِيدَة); L03: Quranic non-human plurals deep practice; L04: human vs non-human contrast; L05: REVIEW.
 - **Chapters 15-40:** fixture-authored (139 lessons across 26 chapters, 0 validation errors)
 - **Ch41-72:** Ch41-65 (130 lessons) fixture-authored and validated; Ch66-72 done and wired; Ch71-72 wired 2026-05-29
-- **Current focus:** Beta infra (Google Play Console manual setup, EAS APK, Sentry/Mixpanel)
+- **Current focus:** Beta infra (install/smoke-test local release APK, Google Play Console manual setup, local AAB build if Play Console requires bundle format, UptimeRobot)
 - **RTDN webhook:** `POST /api/webhooks/google` built and TypeScript-clean; awaiting deploy + Play Console RTDN configuration
-- **Recommended next milestone:** Upload internal test APK to Play Console (unlocks IAP sandbox); set `GOOGLE_PLAY_SERVICE_ACCOUNT_KEY` + `GOOGLE_PLAY_PACKAGE_NAME` in Vercel
+- **Recommended next milestone:** Install the locally built release APK and confirm app launch/login/lesson flow plus one mobile Sentry event; then build/upload an AAB if Play Console requires bundle format.
 
 **2026-05-29 Ch41-65 spec-check findings:**
 
@@ -116,7 +128,7 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 - Password reset (forgot/reset), change password, edit profile
 - Preview experience A1-A7, onboarding B1-B9 including permissions
 - Token refresh (30-day JWT), Spoken Fus'ha (SHADOW_REPEAT + SPOKEN_PHRASES), Urdu localization
-- Sentry + Mixpanel analytics wired throughout
+- Sentry backend is live-confirmed; mobile Sentry and Mixpanel are baked into the locally built release APK and await on-device confirmation.
 - Content dashboard at `/dashboard`; dev unlock helper script
 - Backend and app TypeScript checks pass; `npm run db:validate-fixtures` passes with 391 fixtures
 
@@ -127,11 +139,23 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 4. ~~**Pre-beta infrastructure (code side)** — DONE 2026-05-27: package renamed `com.Warsh.app` → `com.warsh.app`, scheme updated, checklist written. See `Docs/warsh-beta-infra-readiness-checklist.md` for YOU-items.~~
 5. ~~**QA (code-side)** — REVIEW XP display, chapter completion display, VERB_PATTERN font rendering. DONE 2026-05-28 (see below).~~ Live IAP sandbox purchase+restore and on-device VERB_PATTERN verification still pending; need EAS APK on test device first.
 6. ~~**Lesson player direct schema** — DONE 2026-05-27: server-side `transformContent()` removed from API; `mapContent()` moved to client-side in `play.tsx`; API returns raw `content` JSON blob~~
-7. **Beta gate checklist** — 9 items in §14 of `Docs/warsh-beta-infra-readiness-checklist.md`; none confirmed yet. Blocked on: EAS APK installation, custom domain (deferred), Google Play Console setup.
-8. **Google Play Console** — not started; blocking IAP sandbox testing and distribution
-9. **Sentry / Mixpanel / UptimeRobot** — partially configured; need proper project setup, DSN wiring, alert creation
+7. ~~**EAS Beta APK**~~ — **DONE 2026-05-30**: APK built and currently being tested with real closed-group users on the staging API.
+8. **Beta gate checklist** — 9 items in §14 of `Docs/warsh-beta-infra-readiness-checklist.md`; in progress. EAS APK and staging API confirmed working.
+9. **Google Play Console** — Closed testing track created and pending Google's ~2-week review. IAP products, production publishing, and RTDN fully unblockable until approved. All other setup (Sentry, Mixpanel, custom domain, Vercel env vars) can proceed in parallel.
+10. **Sentry / Mixpanel / UptimeRobot** — Sentry runtime setup is done: backend smoke event sent successfully, Vercel has Sentry env vars, EAS has `EXPO_PUBLIC_SENTRY_DSN` for production/preview, and the local release APK contains the mobile Sentry DSN. Remaining: install APK and confirm mobile event in Sentry, create Sentry alert rule, and finish UptimeRobot.
 
 ---
+
+## Recent Changes (2026-05-31 local release APK build)
+
+- Built local Android release APK without EAS cloud services using `gradlew assembleRelease`.
+- Build env injected at process level only: `EXPO_PUBLIC_API_URL=https://warsh-backend.vercel.app`, `EXPO_PUBLIC_ENVIRONMENT=production`, `EXPO_PUBLIC_SENTRY_DSN`, and `EXPO_PUBLIC_MIXPANEL_TOKEN`.
+- Output: `warsh-app/android/app/build/outputs/apk/release/app-release.apk`
+- SHA-256: `2C38B4C5912A0BD0CE5F8606167D66E819A19611ADAF8DA5885B32169C66FD3E`
+- Verified with `aapt`: package `com.warsh.app`, versionName `1.0.1`, versionCode `2`, minSdk `24`, targetSdk `36`, app label `Warsh`.
+- Verified release signature with `apksigner`; signer DN `CN=Warsh App, OU=Warsh, O=Warsh, L=Karachi, ST=Sindh, C=PK`.
+- Verified `assets/index.android.bundle` contains `https://warsh-backend.vercel.app`, mobile Sentry DSN, production environment marker, and Mixpanel token; `https://api.warsh.app` is absent because that custom domain is not live yet.
+- Next: install the APK on a device, run launch/login/lesson smoke test, and confirm one mobile event in Sentry.
 
 ## Recent Changes (2026-05-29 Ch30-40 spec-checked against warsh-spec-05)
 
@@ -1335,6 +1359,18 @@ L4 (REVIEW) reveal is Al-Baqarah 2:35 — Adam and Eve in الْجَنَّةَ �
 - `npm run db:seed` passed
 
 ## Recent Changes (since 2026-05-22) — historical
+
+### Sentry activation update (2026-05-30)
+
+**Backend:**
+- Vercel project relinked to `umarbinakbarali/warsh`.
+- Vercel env includes `SENTRY_DSN`, `SENTRY_ORG`, `SENTRY_PROJECT`, and `SENTRY_AUTH_TOKEN`.
+- Backend smoke test passed with event ID `2e79df2b6db94cc29c2f966bd99423f9` using `npm run sentry:smoke`.
+
+**Mobile:**
+- EAS project `@umarbinakbarali/Warsh` now has `EXPO_PUBLIC_SENTRY_DSN` for production and preview.
+- Existing installed APKs do not include this newly added env value.
+- Next step: rebuild the APK/AAB and install/upload that artifact, then confirm one mobile Sentry event.
 
 ### Sentry error tracking integration (2026-05-22)
 

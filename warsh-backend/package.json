@@ -14,7 +14,8 @@
     "db:validate-seed": "node prisma/validate-curriculum.cjs --legacy",
     "db:validate-fixtures": "node prisma/validate-curriculum.cjs --fixtures",
     "db:studio": "prisma studio",
-    "dev:unlock-through": "node scripts/dev-unlock-through.cjs"
+    "dev:unlock-through": "node scripts/dev-unlock-through.cjs",
+    "sentry:smoke": "node scripts/sentry-smoke-test.cjs"
   },
   "prisma": {
     "seed": "node prisma/seed.cjs"
@@ -23,6 +24,7 @@
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "@sentry/nextjs": "^10.53.1",
+    "@warsh/lesson-schema": "file:../packages/lesson-schema",
     "bcryptjs": "^2.4.3",
     "dotenv": "^17.4.2",
     "jsonwebtoken": "^9.0.0",

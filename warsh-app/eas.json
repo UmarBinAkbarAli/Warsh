@@ -7,6 +7,7 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal",
+      "channel": "development",
       "env": {
         "EXPO_PUBLIC_ENVIRONMENT": "development",
         "SENTRY_DISABLE_AUTO_UPLOAD": "true",
@@ -15,6 +16,7 @@
     },
     "preview": {
       "distribution": "internal",
+      "channel": "staging",
       "android": {
         "buildType": "apk"
       },
@@ -27,6 +29,7 @@
     },
     "previewProd": {
       "distribution": "internal",
+      "channel": "production",
       "android": {
         "buildType": "apk"
       },
@@ -39,6 +42,7 @@
     },
     "production": {
       "autoIncrement": true,
+      "channel": "production",
       "env": {
         "EXPO_PUBLIC_API_URL": "https://warsh-backend.vercel.app",
         "EXPO_PUBLIC_ENVIRONMENT": "production",

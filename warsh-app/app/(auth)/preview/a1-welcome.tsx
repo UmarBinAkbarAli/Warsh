@@ -1,4 +1,4 @@
-import { Image, Platform, Pressable, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import { Image, Platform, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -20,12 +20,19 @@ const INACTIVE_BORDER = "#DED6C7";
 
 export default function PreviewA1Welcome() {
   const router = useRouter();
-  const { width } = useWindowDimensions();
+  const { width, height } = useWindowDimensions();
   const isWeb = Platform.OS === "web";
   const frameWidth = Math.min(width, 412);
-  const contentWidth = Math.max(0, frameWidth - 56);
-  const heroWidth = Math.min(348, frameWidth - 56);
+  const compactHeight = height < 780;
+  const tightHeight = height < 700;
+  const horizontalGutter = frameWidth < 380 ? 48 : 56;
+  const contentWidth = Math.max(0, frameWidth - horizontalGutter);
+  const heroWidth = Math.min(compactHeight ? 318 : 348, frameWidth - horizontalGutter);
   const scale = heroWidth / 348;
+  const headlineSize = Math.min(compactHeight ? 41 : 48, Math.max(36, heroWidth * 0.128));
+  const headlineLineHeight = headlineSize + (compactHeight ? 3 : 5);
+  const descriptionSize = compactHeight ? 18 : 20;
+  const descriptionLineHeight = compactHeight ? 22 : 24;
 
   return (
     <SafeAreaView edges={["top"]} style={[styles.safeArea, isWeb ? styles.safeAreaWeb : null]}>
@@ -37,59 +44,91 @@ export default function PreviewA1Welcome() {
         <CornerOrnament corner="bottomLeft" />
         <CornerOrnament corner="bottomRight" />
 
-        <View style={[styles.screenContent, { width: contentWidth }, isWeb ? styles.screenContentWeb : null]}>
-          <View style={styles.topBar}>
-            <View>
-              <ProgressRail />
-              <Text style={styles.previewLabel}>3 MINUTE PREVIEW</Text>
+        <ScrollView
+          style={styles.scrollArea}
+          contentContainerStyle={[
+            styles.scrollContent,
+            isWeb ? styles.scrollContentWeb : null,
+            compactHeight ? styles.scrollContentCompact : null,
+            tightHeight ? styles.scrollContentTight : null,
+          ]}
+          showsVerticalScrollIndicator={false}
+          bounces={false}
+        >
+          <View style={[styles.screenContent, { width: contentWidth }]}>
+            <View style={styles.topBar}>
+              <View>
+                <ProgressRail />
+                <Text style={styles.previewLabel}>3 MINUTE PREVIEW</Text>
+              </View>
+
+              <Pressable
+                accessibilityRole="button"
+                onPress={() => router.replace("/(auth)/preview/a7-cta")}
+                hitSlop={14}
+                style={styles.skipButton}
+              >
+                <Text style={styles.skipText}>Skip</Text>
+              </Pressable>
             </View>
+
+            <View style={[styles.brandSection, compactHeight ? styles.brandSectionCompact : null]}>
+              <Image
+                source={LOGO_IMAGE}
+                style={[styles.arabicLogo, compactHeight ? styles.arabicLogoCompact : null]}
+                resizeMode="contain"
+              />
+              <Text style={[styles.wordmark, compactHeight ? styles.wordmarkCompact : null]}>WARSH</Text>
+              <OrnamentDivider width={compactHeight ? 126 : 142} compact={compactHeight} />
+            </View>
+
+            <View style={[styles.heroShell, { width: heroWidth, height: Math.round(heroWidth * 0.678) }]}>
+              <Image source={HERO_IMAGE} style={styles.heroImage} resizeMode="cover" />
+            </View>
+
+            <View style={[styles.headlineBlock, compactHeight ? styles.headlineBlockCompact : null, { width: heroWidth }]}>
+              <Text
+                numberOfLines={1}
+                adjustsFontSizeToFit
+                minimumFontScale={0.82}
+                style={[styles.headlineLine, { fontSize: headlineSize, lineHeight: headlineLineHeight }]}
+              >
+                From Revelation
+              </Text>
+              <Text
+                numberOfLines={1}
+                adjustsFontSizeToFit
+                minimumFontScale={0.82}
+                style={[styles.headlineLine, { fontSize: headlineSize, lineHeight: headlineLineHeight }]}
+              >
+                to Conversation
+              </Text>
+            </View>
+
+            <OrnamentDivider width={98} compact />
+
+            <Text style={[styles.description, { width: heroWidth, fontSize: descriptionSize, lineHeight: descriptionLineHeight }]}>
+              Discover how Warsh helps you understand the Qur'an, speak Arabic naturally, and build confidence one lesson at a time.
+            </Text>
+
+            <JourneyRow compact={compactHeight} />
 
             <Pressable
               accessibilityRole="button"
-              onPress={() => router.replace("/(auth)/preview/a7-cta")}
-              hitSlop={14}
-              style={styles.skipButton}
+              onPress={() => router.push("/(auth)/preview/a2-hook")}
+              style={({ pressed }) => [
+                styles.cta,
+                compactHeight ? styles.ctaCompact : null,
+                { width: heroWidth },
+                pressed ? styles.ctaPressed : null,
+              ]}
             >
-              <Text style={styles.skipText}>Skip</Text>
+              <View style={styles.ctaInnerBorder} pointerEvents="none" />
+              <Text style={[styles.ctaText, { fontSize: Math.min(26, 28 * scale) }]}>Begin the Journey</Text>
+              <Feather name="arrow-right" size={Math.min(25, 27 * scale)} color={GOLD_LIGHT} />
             </Pressable>
           </View>
-
-          <View style={styles.brandSection}>
-            <Image source={LOGO_IMAGE} style={styles.arabicLogo} resizeMode="contain" />
-            <Text style={styles.wordmark}>WARSH</Text>
-            <OrnamentDivider width={142} />
-          </View>
-
-          <View style={[styles.heroShell, { width: heroWidth, height: Math.round(heroWidth * 0.678) }]}>
-            <Image source={HERO_IMAGE} style={styles.heroImage} resizeMode="cover" />
-          </View>
-
-          <View style={[styles.headlineBlock, { width: heroWidth }]}>
-            <Text style={[styles.headlineLine, { fontSize: 52 * scale, lineHeight: 54 * scale }]}>From Revelation</Text>
-            <Text style={[styles.headlineLine, { fontSize: 52 * scale, lineHeight: 54 * scale }]}>to Conversation</Text>
-          </View>
-
-          <OrnamentDivider width={98} compact />
-
-          <Text style={styles.description}>
-            Discover how Warsh helps you{"\n"}
-            understand the Qur'an, speak{"\n"}
-            Arabic naturally, and build{"\n"}
-            confidence one lesson at a time.
-          </Text>
-
-          <JourneyRow />
-
-          <Pressable
-            accessibilityRole="button"
-            onPress={() => router.push("/(auth)/preview/a2-hook")}
-            style={({ pressed }) => [styles.cta, { width: heroWidth }, pressed ? styles.ctaPressed : null]}
-          >
-            <View style={styles.ctaInnerBorder} pointerEvents="none" />
-            <Text style={[styles.ctaText, { fontSize: 28 * scale }]}>Begin the Journey</Text>
-            <Feather name="arrow-right" size={27 * scale} color={GOLD_LIGHT} />
-          </Pressable>
-        </View>
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
@@ -120,7 +159,7 @@ function OrnamentDivider({ width, compact = false }: { width: number; compact?: 
   );
 }
 
-function JourneyRow() {
+function JourneyRow({ compact = false }: { compact?: boolean }) {
   const steps = [
     { label: "Revelation", active: false, icon: "book-open" },
     { label: "Understand", active: false, icon: "geometry" },
@@ -129,7 +168,7 @@ function JourneyRow() {
   ] as const;
 
   return (
-    <View style={styles.journey}>
+    <View style={[styles.journey, compact ? styles.journeyCompact : null]}>
       {steps.map((step, index) => (
         <View key={step.label} style={styles.stepGroup}>
           {index > 0 ? (
@@ -140,10 +179,10 @@ function JourneyRow() {
             </View>
           ) : null}
           <View style={styles.step}>
-            <View style={[styles.stepCircle, step.active ? styles.stepCircleActive : styles.stepCircleInactive]}>
+            <View style={[styles.stepCircle, compact ? styles.stepCircleCompact : null, step.active ? styles.stepCircleActive : styles.stepCircleInactive]}>
               <JourneyIcon name={step.icon} active={step.active} />
             </View>
-            <Text style={styles.stepLabel}>{step.label}</Text>
+            <Text style={[styles.stepLabel, compact ? styles.stepLabelCompact : null]}>{step.label}</Text>
           </View>
         </View>
       ))}
@@ -244,14 +283,28 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.45,
     shadowRadius: 40,
   },
-  screenContent: {
+  scrollArea: {
+    flex: 1,
+    width: "100%",
+  },
+  scrollContent: {
     alignItems: "center",
     paddingTop: 31,
+    paddingBottom: 24,
   },
-  screenContentWeb: {
-    position: "absolute",
-    top: 44,
-    paddingTop: 0,
+  scrollContentWeb: {
+    minHeight: 915,
+    paddingTop: 44,
+  },
+  scrollContentCompact: {
+    paddingTop: 20,
+    paddingBottom: 18,
+  },
+  scrollContentTight: {
+    paddingTop: 14,
+  },
+  screenContent: {
+    alignItems: "center",
   },
   topBar: {
     width: "100%",
@@ -316,9 +369,17 @@ const styles = StyleSheet.create({
     height: 144,
     marginTop: 2,
   },
+  brandSectionCompact: {
+    height: 122,
+    marginTop: -2,
+  },
   arabicLogo: {
     width: 170,
     height: 98,
+  },
+  arabicLogoCompact: {
+    width: 148,
+    height: 84,
   },
   wordmark: {
     marginTop: -8,
@@ -328,6 +389,13 @@ const styles = StyleSheet.create({
     letterSpacing: 12,
     color: "#5C492A",
     paddingLeft: 12,
+  },
+  wordmarkCompact: {
+    marginTop: -9,
+    fontSize: 24,
+    lineHeight: 27,
+    letterSpacing: 10,
+    paddingLeft: 10,
   },
   divider: {
     height: 24,
@@ -382,6 +450,9 @@ const styles = StyleSheet.create({
     marginTop: 20,
     alignItems: "center",
   },
+  headlineBlockCompact: {
+    marginTop: 12,
+  },
   headlineLine: {
     fontFamily: "CormorantGaramond-Bold",
     color: INK,
@@ -404,6 +475,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-start",
     justifyContent: "space-between",
+  },
+  journeyCompact: {
+    height: 62,
+    marginTop: 9,
   },
   stepGroup: {
     flexDirection: "row",
@@ -448,6 +523,11 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 2,
   },
+  stepCircleCompact: {
+    width: 42,
+    height: 42,
+    borderRadius: 21,
+  },
   stepCircleInactive: {
     backgroundColor: INACTIVE,
     borderWidth: 1,
@@ -466,6 +546,11 @@ const styles = StyleSheet.create({
     color: "#191919",
     textAlign: "center",
   },
+  stepLabelCompact: {
+    marginTop: 4,
+    fontSize: 14,
+    lineHeight: 16,
+  },
   cta: {
     height: 56,
     marginTop: 8,
@@ -481,6 +566,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.18,
     shadowRadius: 18,
     elevation: 8,
+  },
+  ctaCompact: {
+    height: 52,
+    marginTop: 4,
+    borderRadius: 14,
   },
   ctaInnerBorder: {
     position: "absolute",
