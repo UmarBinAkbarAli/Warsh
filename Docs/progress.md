@@ -1,6 +1,6 @@
 # Warsh Phase 1 Progress Tracker
 
-Last updated: 2026-06-05 (all 15 exercise types implemented; IAP product IDs corrected; api.warsh.app domain live on Vercel)
+Last updated: 2026-06-05 (all 15 exercise types implemented; IAP product IDs corrected; api.warsh.app domain live on Vercel; open items audited against spec-00)
 
 ## Purpose
 
@@ -163,6 +163,8 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 ### Pre-launch (after domain + Play Console)
 13. ~~**AAB build**~~ ✅ DONE (2026-06-05) — `app-release.aab` (48 MB) built at `warsh-app/android/app/build/outputs/bundle/release/app-release.aab`. Signed. Ready to upload to Play Console once Google approves the closed testing track.
 14. ~~**Production APK rebuild**~~ ✅ DONE (2026-06-05) — APK rebuilt with `api.warsh.app`. Bundle verified. Note: built without `EXPO_PUBLIC_SENTRY_DSN` so mobile Sentry is disabled in this build — rebuild with DSN to restore.
+15. **Rebuild release APK/AAB with `EXPO_PUBLIC_SENTRY_DSN`** — The 2026-06-05 release APK was built without the Sentry DSN env var; mobile crash reporting is disabled. Before soft launch, confirm `EXPO_PUBLIC_SENTRY_DSN` is set in EAS production secrets, then rebuild so Sentry is active in the Play Store build.
+16. **Audio files for AUDIO_RECOGNITION exercises** — All `audio_url` fields in lesson fixtures are empty strings (`""`). The AUDIO_RECOGNITION renderer is built and wired, but cannot play audio without actual MP3 files. Before beta, source human-recited audio (e.g. EveryAyah API, Mishary recitations, or record in-house) and populate the `audio_url` fields in affected fixtures, then re-seed production.
 
 ---
 
