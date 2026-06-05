@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
+import { sendPasswordChangedEmail } from "../../../../lib/email";
 
 export async function POST(request: Request) {
   const userId = getUserIdFromRequest(request);
@@ -31,6 +32,11 @@ export async function POST(request: Request) {
 
   const newHash = bcrypt.hashSync(newPassword, 12);
   await prisma.user.update({ where: { id: userId }, data: { passwordHash: newHash } });
+
+  // Fire and forget — notify user their password was changed
+  sendPasswordChangedEmail(user.email).catch((err) =>
+    console.error("[change-password] Confirmation email failed:", err)
+  );
 
   return NextResponse.json({ data: { success: true } });
 }
