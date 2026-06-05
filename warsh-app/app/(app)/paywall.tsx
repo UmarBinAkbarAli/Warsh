@@ -33,7 +33,7 @@ import {
 
 export const PRODUCT_IDS = {
   monthly: "warsh_monthly",
-  annual: "warsh_annual",
+  annual: "warsh_yearly",
 } as const;
 
 const SKUS = [PRODUCT_IDS.monthly, PRODUCT_IDS.annual];

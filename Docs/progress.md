@@ -1,21 +1,24 @@
 # Warsh Phase 1 Progress Tracker
 
-Last updated: 2026-05-31 (OTA update channels wired in eas.json; Priority 2 code tasks fully audited — audio handling, token refresh, and Sentry next.config.js were all already complete.)
+Last updated: 2026-06-05 (all 15 exercise types implemented; IAP product IDs corrected; api.warsh.app domain live on Vercel)
 
 ## Purpose
 
 This file is the source of truth for current app progress as reflected in the codebase.
 
-**Latest status (2026-05-31):**
-- Local release APK built without EAS cloud services: `warsh-app/android/app/build/outputs/apk/release/app-release.apk` (SHA-256 `2C38B4C5912A0BD0CE5F8606167D66E819A19611ADAF8DA5885B32169C66FD3E`). Verified package `com.warsh.app`, version `1.0.1` / code `2`, release signing, backend URL `https://warsh-backend.vercel.app`, Mixpanel token, and mobile Sentry DSN in `assets/index.android.bundle`. `https://api.warsh.app` is not live yet and is absent from this APK.
-- Mixpanel project `warsh-production` token set in EAS production + preview. Sentry and Mixpanel are now baked into the locally built release APK; install/smoke-test is the remaining confirmation step.
-- Vercel project root directory corrected from `arabai-backend` → `warsh-backend` via Vercel API (PATCH /v9/projects).
-- `CRON_SECRET` replaced in Vercel production with known value `8a01c73...` (old value set 23d ago was unknown/mismatched).
-- `GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET` added to Vercel production.
-- Backend redeployed (dpl_4mssrc32ZTHbJkohNmASpPEg4xCK) and aliased to `warsh-backend.vercel.app`.
+**Latest status (2026-06-05):**
+- **All 15 spec exercise types now have renderers** in `play.tsx`: WRITE_ARABIC, HARAKAH_PLACEMENT, WORD_ORDER, TRANSLATE_TO_ARABIC, IDENTIFY_ROOT, MATCH_AYAH added today; all previous types already present. App TypeScript clean.
+- **IAP product ID corrected**: `warsh_annual` → `warsh_yearly` across all code + spec docs to match the product IDs created in Google Play Console (`warsh_monthly` + `warsh_yearly`).
+- **Domain live**: `api.warsh.app` added to Vercel domains. All `warsh-backend.vercel.app` references replaced in code (eas.json, forgot-password fallback, start-warsh.ps1, CLAUDE.md, AGENTS.md). Next APK build will point to `api.warsh.app`.
+- **Play Console**: `warsh_monthly` and `warsh_yearly` subscription products created. `warsh_noor_pack` consumable not yet created. Closed testing track pending Google's ~2-week review.
+- **Beta gate smoke-test PASSED** (2026-06-04): Release APK installed on physical device. Launch → login → lesson flow confirmed end-to-end. Mobile Sentry event confirmed. UptimeRobot live at 5-min interval.
+- **Noor overage IAP** fully wired end-to-end: `POST /api/noor/purchase-pack`, pack credit consumption in chat route, mobile purchase flow in chat.tsx.
+- **All spec feature gaps resolved** (2026-06-04/05): AUDIO_RECOGNITION renderer, Noor overage IAP, speaking stats (PHRASES_250/500 milestones added), FIRST_NOOR achievement wired in chat route, WoD notification confirmed wired, streak freeze confirmed complete per spec (earned-only, no IAP).
+- Vercel project root directory corrected from `arabai-backend` → `warsh-backend`. Backend live at `warsh-backend.vercel.app`. `CRON_SECRET` and `GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET` set in Vercel production.
+- Content dashboard at `/dashboard` — Warsh-styled Curriculum Studio, fully functional lesson stepper/add/delete. `npm run build` passes.
+- Backend and app TypeScript checks pass; `npm run db:validate-fixtures` passes with 391 fixtures.
 - `GET /api/health` → 200 ✓, `GET /api/cron/expire-trials` with CRON_SECRET → 200 `{"data":{"expired":0}}` ✓.
-- Custom domains (api.warsh.app) deferred until domain purchase.
-- UptimeRobot pending manual setup by Umar (see §11 of beta infra checklist).
+- Custom domain `api.warsh.app` live on Vercel ✅ (attached 2026-06-05).
 - IMPORTANT: future CLI deploys must run from repo root `D:\Code\Warsh` (not warsh-backend/) since Vercel rootDirectory is now `warsh-backend`. Use the Vercel API trigger or git push + API to redeploy.
 
 It is intended to track:
@@ -77,9 +80,9 @@ It should not be treated as a permanent record of:
 - **Chapter 14:** fixture-authored (5 lessons), wired into `seed.cjs`, validated (63 total fixtures), pushed to production Neon DB 2026-05-28. L01: human plural adjective agreement; L02: non-human plural rule (الْكُتُب جَدِيدَة); L03: Quranic non-human plurals deep practice; L04: human vs non-human contrast; L05: REVIEW.
 - **Chapters 15-40:** fixture-authored (139 lessons across 26 chapters, 0 validation errors)
 - **Ch41-72:** Ch41-65 (130 lessons) fixture-authored and validated; Ch66-72 done and wired; Ch71-72 wired 2026-05-29
-- **Current focus:** Beta infra (install/smoke-test local release APK, Google Play Console manual setup, local AAB build if Play Console requires bundle format, UptimeRobot)
-- **RTDN webhook:** `POST /api/webhooks/google` built and TypeScript-clean; awaiting deploy + Play Console RTDN configuration
-- **Recommended next milestone:** Install the locally built release APK and confirm app launch/login/lesson flow plus one mobile Sentry event; then build/upload an AAB if Play Console requires bundle format.
+- **Current focus:** Spec feature gaps — AUDIO_RECOGNITION, speaking stats, Noor overage IAP, streak freeze IAP, Resend email, push notification scheduling (see "What is LEFT" below)
+- **RTDN webhook:** `POST /api/webhooks/google` built and TypeScript-clean; awaiting Play Console approval + RTDN configuration
+- **Recommended next milestone:** Work through spec feature gaps in priority order, starting with AUDIO_RECOGNITION exercise type and Resend email wiring.
 
 **2026-05-29 Ch41-65 spec-check findings:**
 
@@ -113,7 +116,7 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 
 **2026-05-28 Chapter 13 fixture authoring:** Authored Chapter 13 lessons 1-4 (`chapter-13-lesson-01.json` through `chapter-13-lesson-04.json`) and wired them into `seed.cjs` as stable IDs `ch13-l01` through `ch13-l04`. Chapter 13 covers sound masculine plural, sound feminine plural, broken plural recognition, and non-human plural feminine treatment. `npm run db:validate-fixtures` passes with 58 fixture lessons; `npm run db:validate-seed` passes with 72 chapters and 323 legacy curriculum lessons.
 
-**What is DONE (as of 2026-05-29):**
+**What is DONE (as of 2026-06-05):**
 - All 13 spec files have been implemented to Phase 1 completeness
 - A0 animated splash is built; the prior "A0 missing" note is superseded
 - Chapters 1-72 are fixture-authored and wired, including all current SP/REVIEW insertion points
@@ -128,21 +131,94 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 - Password reset (forgot/reset), change password, edit profile
 - Preview experience A1-A7, onboarding B1-B9 including permissions
 - Token refresh (30-day JWT), Spoken Fus'ha (SHADOW_REPEAT + SPOKEN_PHRASES), Urdu localization
-- Sentry backend is live-confirmed; mobile Sentry and Mixpanel are baked into the locally built release APK and await on-device confirmation.
+- Sentry backend is live-confirmed; mobile Sentry confirmed live (event received from release APK on physical device 2026-06-04).
+- Mixpanel baked into release APK; token confirmed in EAS production + preview.
+- UptimeRobot live: `https://api.warsh.app/api/health` monitored every 5 minutes, alert email set.
+- Beta gate smoke-test passed (2026-06-04): launch → login → lesson flow end-to-end on physical device.
 - Content dashboard at `/dashboard`; dev unlock helper script
 - Backend and app TypeScript checks pass; `npm run db:validate-fixtures` passes with 391 fixtures
+- Custom domain `api.warsh.app` live on Vercel; all `warsh-backend.vercel.app` references replaced in codebase ✅
 
-**What is LEFT (prioritized):**
-1. ~~**Content authoring: Chapters 14-72**~~ — **DONE 2026-05-29**: All 72 chapters fixture-authored, all SP/REVIEW insertion points present, Ch41-65 spec-checked, Ch57 expanded to 10 lessons (الأفعال الخمسة + SP9 + R12). Total: 391 fixture lessons, 0 validation errors.
-2. ~~**VERB_PATTERN fixture** — DONE 2026-05-27: `chapter-09-lesson-01-verb-pattern.json` authored, seeded, live as `ch09-l01`~~
-3. ~~**A0 animated splash** — DONE 2026-05-27: `app/index.tsx` rebuilt with full Warsh lockup animation~~
-4. ~~**Pre-beta infrastructure (code side)** — DONE 2026-05-27: package renamed `com.Warsh.app` → `com.warsh.app`, scheme updated, checklist written. See `Docs/warsh-beta-infra-readiness-checklist.md` for YOU-items.~~
-5. ~~**QA (code-side)** — REVIEW XP display, chapter completion display, VERB_PATTERN font rendering. DONE 2026-05-28 (see below).~~ Live IAP sandbox purchase+restore and on-device VERB_PATTERN verification still pending; need EAS APK on test device first.
-6. ~~**Lesson player direct schema** — DONE 2026-05-27: server-side `transformContent()` removed from API; `mapContent()` moved to client-side in `play.tsx`; API returns raw `content` JSON blob~~
-7. ~~**EAS Beta APK**~~ — **DONE 2026-05-30**: APK built and currently being tested with real closed-group users on the staging API.
-8. **Beta gate checklist** — 9 items in §14 of `Docs/warsh-beta-infra-readiness-checklist.md`; in progress. EAS APK and staging API confirmed working.
-9. **Google Play Console** — Closed testing track created and pending Google's ~2-week review. IAP products, production publishing, and RTDN fully unblockable until approved. All other setup (Sentry, Mixpanel, custom domain, Vercel env vars) can proceed in parallel.
-10. **Sentry / Mixpanel / UptimeRobot** — Sentry runtime setup is done: backend smoke event sent successfully, Vercel has Sentry env vars, EAS has `EXPO_PUBLIC_SENTRY_DSN` for production/preview, and the local release APK contains the mobile Sentry DSN. Remaining: install APK and confirm mobile event in Sentry, create Sentry alert rule, and finish UptimeRobot.
+**What is LEFT (as of 2026-06-05):**
+
+### Blocked on Google (~2 weeks)
+- **Google Play Console approval** — closed testing track submitted, Google reviewing. Until approved: IAP sandbox testing, RTDN webhook, and production publishing are all blocked.
+
+### YOU-items (manual, do when ready)
+1. ~~**Domain attachment**~~ ✅ FULLY DONE (2026-06-05) — `api.warsh.app` live on Vercel. `NEXT_PUBLIC_APP_URL` set in Vercel env. Backend redeployed. New APK built with `api.warsh.app` baked in (89 MB, bundle verified).
+2. **`RESEND_API_KEY`** — Set in Vercel production env. Get from resend.com, verify `warsh.app` domain there. Without this, password reset emails silently drop.
+3. **`warsh_noor_pack` consumable** — Create in Google Play Console ($0.99, consumable type) once console allows.
+4. **RTDN webhook** — Once Play Console approved: set topic URL to `https://api.warsh.app/api/webhooks/google` in Play Console → Monetization → Real-time developer notifications.
+5. ~~**`npm run db:seed` on production Neon**~~ ✅ DONE (2026-06-05) — 12 users preserved, 585 vocab words + 11 Tadabbur Surahs refreshed, `phrases_250`/`phrases_500` achievements live.
+6. **Sentry alert rule** — Create "email on new issue" rule in Sentry dashboard (non-blocking).
+
+### On-device QA (do with next APK build)
+7. **VERB_PATTERN rendering** — Tap Ch9-L1 or Ch34-L2, confirm conjugation table displays correctly on device.
+8. **AUDIO_RECOGNITION** — Ch4-L1 has ex9 (كَبِيرٌ) and ex10 (جَدِيدٌ). Confirm audio plays and options tap correctly.
+9. **WRITE_ARABIC / HARAKAH_PLACEMENT** — New renderers need on-device verification (keyboard, RTL input, feedback).
+10. **Paywall after Ch1 completion** — Confirm paywall appears correctly; last unconfirmed beta gate item.
+11. **IAP sandbox purchase + restore** — Blocked on Play Console approval + `warsh_noor_pack` creation.
+12. **Chapters 9–72 spot-check** — Browse a few lessons per book to catch any schema/render issues.
+
+### Pre-launch (after domain + Play Console)
+13. ~~**AAB build**~~ ✅ DONE (2026-06-05) — `app-release.aab` (48 MB) built at `warsh-app/android/app/build/outputs/bundle/release/app-release.aab`. Signed. Ready to upload to Play Console once Google approves the closed testing track.
+14. ~~**Production APK rebuild**~~ ✅ DONE (2026-06-05) — APK rebuilt with `api.warsh.app`. Bundle verified. Note: built without `EXPO_PUBLIC_SENTRY_DSN` so mobile Sentry is disabled in this build — rebuild with DSN to restore.
+
+---
+
+## Recent Changes (2026-06-02) — Dashboard lesson stepper + add/delete lessons
+
+Read `Docs/warsh-curriculum-lesson-builder-prd-v3.md` before starting.
+
+**PRD updated with three new features:**
+
+- **Lesson stepper:** Added to Section 8.1 — horizontal lesson tab bar above the Lesson Builder showing all lessons in a chapter as clickable tabs (lesson number, English title, Arabic title). Active tab highlighted. Switching with unsaved changes triggers a Save/Discard/Cancel guard.
+- **Add lesson:** `+ Lesson` button at end of stepper. Opens dialog for English title, Arabic title, and template. Calls `POST /api/admin/chapters/[id]/lessons`. New lesson appends to chapter and is auto-selected.
+- **Delete lesson:** `×` button on each tab (hidden when only 1 lesson remains). Confirmation dialog showing lesson order and title. Calls `DELETE /api/admin/lessons/[id]/delete`. Blocked if it would leave the chapter empty. After deletion, adjacent lesson is auto-selected.
+
+Also updated Section 12 (UX), Section 13 (Phase 1 rollout), and Section 14 (acceptance criteria) to reflect these additions.
+
+**New API routes:**
+
+| Method | Path | File | Purpose |
+|--------|------|------|---------|
+| POST | `/api/admin/chapters/[id]/lessons` | `app/api/admin/chapters/[id]/lessons/route.ts` | Create lesson in chapter |
+| DELETE | `/api/admin/lessons/[id]/delete` | `app/api/admin/lessons/[id]/delete/route.ts` | Delete lesson (blocked if last in chapter) |
+
+**Dashboard UX changes in `app/dashboard/DashboardClient.tsx`:**
+
+- Added `lessonStepper` section above the Lesson Builder showing all lessons in the selected chapter as `L{n} — Title` tabs
+- Active lesson tab highlighted with `activeTab` CSS class
+- `×` delete button on each tab (hidden when `lessons.length === 1`)
+- `+ Lesson` button appends a new lesson via dialog (EN title, AR title, template selector)
+- Unsaved-changes guard: switching lessons with `dirty` state shows a banner with Save/Discard/Cancel
+- Add and delete operations call their respective API routes and update local chapter state optimistically
+- Confirmation dialogs for both add and delete operations
+
+**TypeScript:** Backend `npx tsc --noEmit` — 0 errors.
+
+---
+
+## Recent Changes (2026-06-02 dashboard UI revamp)
+
+- Revamped `/dashboard` from a plain content editor into a Warsh-styled Curriculum Studio, using the Mobbin-inspired Teachable/Dovetail/Webflow direction selected earlier.
+- Preserved existing dashboard logic for chapter/lesson selection, add/delete lesson, dirty-switch guard, metadata editing, card/exercise editing, preview, JSON apply, validation, and save.
+- Added stronger visual hierarchy: chapter context header, sidebar stats/search, selected lesson board, Builder/Preview/JSON mode tabs, lesson cards with template/XP metadata, sticky save/status strip, and polished editor/preview/JSON/modal states.
+- Replaced `dashboard.module.css` with a responsive parchment/ink/gold/sage admin design system for the dashboard.
+- Fixed the Next.js dynamic route naming conflict by normalizing the add-lesson route to `app/api/admin/chapters/[id]/lessons/route.ts`; the public API remains `POST /api/admin/chapters/:id/lessons`.
+- Verification: `npm run build` passes; local dev `/dashboard` compiled and returned HTTP 200; visual smoke screenshot captured at `dashboard-revamp-smoke.png`.
+- Caveat: `npm run lint` still opens Next.js interactive ESLint setup because lint is not configured in this backend project.
+
+---
+
+## Recent Changes (2026-06-05 local release APK build — api.warsh.app)
+
+- Built local Android release APK with `api.warsh.app` baked in.
+- Build env: `EXPO_PUBLIC_API_URL=https://api.warsh.app`, `EXPO_PUBLIC_ENVIRONMENT=production`, `EXPO_PUBLIC_MIXPANEL_TOKEN` set. No Sentry DSN (optional — Sentry upload disabled).
+- Output: `warsh-app/android/app/build/outputs/apk/release/app-release.apk` (89 MB)
+- Bundle verified: `api.warsh.app` present 1×, `warsh-backend.vercel.app` absent ✅
+- Build time: 14m 18s, 1060 tasks, BUILD SUCCESSFUL.
+- Next: install APK on device → smoke test → confirm it hits `api.warsh.app` (check Vercel logs).
 
 ---
 

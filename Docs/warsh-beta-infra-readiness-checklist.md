@@ -1,7 +1,7 @@
 # Warsh Beta Infrastructure Readiness Checklist
 
-**Status:** Active — work through this top-to-bottom before inviting beta testers  
-**Last updated:** 2026-05-27  
+**Status:** Active — beta gate passed; remaining items are Google Play / IAP / spec gaps  
+**Last updated:** 2026-06-04  
 **Owner:** Umar
 
 ---
@@ -155,9 +155,9 @@ Repeat the above for the **Preview** environment in Vercel, but point `DATABASE_
 
 - [ ] **[YOU]** Create a Google Play Developer account if not already done ($25 one-time fee).
 - [ ] **[YOU]** Create a new app with package name `com.warsh.app`.
-- [ ] **[YOU]** Create subscription products:
-  - Product ID: `warsh_monthly` — $1.00/month
-  - Product ID: `warsh_annual` — $10.00/year
+- [x] **[YOU]** Create subscription products — **DONE 2026-06-04**:
+  - Product ID: `warsh_monthly` — $1.00/month ✓
+  - Product ID: `warsh_yearly` — $10.00/year ✓ (note: code updated from `warsh_annual` → `warsh_yearly` to match)
 - [ ] **[YOU]** Create consumable product:
   - Product ID: `warsh_noor_pack` — $0.99 (20 Noor messages)
 - [ ] **[YOU]** Set up a Google Cloud service account for server-side receipt verification:
@@ -219,13 +219,9 @@ _Skip until iOS build is prioritized. Document here for when that time comes._
 - [ ] **[YOU]** Backend DSN → Vercel env var `SENTRY_DSN` (set in Section 2).
 - [ ] **[YOU]** Mobile DSN → EAS secret `EXPO_PUBLIC_SENTRY_DSN` (set in Section 8).
 - [ ] **[YOU]** Set `SENTRY_ORG`, `SENTRY_PROJECT`, and `SENTRY_AUTH_TOKEN` in Vercel for production source map uploads.
-- [ ] **[YOU]** After `SENTRY_DSN` is set, run the backend smoke test:
-  ```bash
-  cd warsh-backend
-  npm run sentry:smoke
-  ```
-- [ ] **[YOU]** After first production deploy with errors, confirm Sentry receives the event.
-- [ ] **[YOU]** Set up Sentry alert: **Email me when a new issue is detected** (free tier default).
+- [x] **[YOU]** After `SENTRY_DSN` is set, run the backend smoke test — **DONE 2026-05-30**: event ID `2e79df2b6db94cc29c2f966bd99423f9` confirmed in Sentry.
+- [x] **[YOU]** After first production deploy with errors, confirm Sentry receives the event — **DONE 2026-06-04**: mobile Sentry event confirmed from release APK on physical device.
+- [ ] **[YOU]** Set up Sentry alert: **Email me when a new issue is detected** (free tier default). ← still pending
 
 ---
 
@@ -242,12 +238,12 @@ _Skip until iOS build is prioritized. Document here for when that time comes._
 
 ## 11. UptimeRobot — Health Monitoring
 
-- [ ] **[YOU]** Create free account at uptimerobot.com.
-- [ ] **[YOU]** Add HTTP monitor:
+- [x] **[YOU]** Create free account at uptimerobot.com — **DONE 2026-06-04**.
+- [x] **[YOU]** Add HTTP monitor — **DONE 2026-06-04**:
   - URL: `https://api.warsh.app/api/health`
   - Interval: 5 minutes
   - Alert contact: your email
-- [ ] **[YOU]** Confirm the monitor shows "Up" after your first production deploy.
+- [x] **[YOU]** Confirm the monitor shows "Up" — **DONE 2026-06-04**.
 
 ---
 
@@ -277,15 +273,15 @@ The cron jobs are already wired in `vercel.json`:
 
 Only distribute the beta APK after all of the following are confirmed:
 
-- [ ] `https://api.warsh.app/api/health` returns `{"data":{"status":"ok",...}}`
-- [ ] Seed ran on production DB — chapters + lessons visible via `/api/chapters`
-- [ ] EAS beta APK (`preview` profile) installs and reaches `api-staging.warsh.app`
-- [ ] Register + login flow works on the beta APK
-- [ ] Complete one lesson end-to-end (hook → discover → practice → reveal → close)
-- [ ] Streak updates after lesson completion
-- [ ] Paywall appears after Chapter 1 is completed (7-day trial rule)
-- [ ] No Sentry P0 errors (unhandled crashes) on a 15-minute smoke test session
-- [ ] `DEV_UNLOCK_ALL=false` confirmed in Vercel production
+- [x] `https://api.warsh.app/api/health` returns `{"data":{"status":"ok",...}}` — confirmed
+- [x] Seed ran on production DB — chapters + lessons visible via `/api/chapters` — confirmed
+- [x] EAS beta APK (`preview` profile) installs and reaches `api-staging.warsh.app` — confirmed 2026-05-30
+- [x] Register + login flow works on the beta APK — **confirmed 2026-06-04 smoke-test**
+- [x] Complete one lesson end-to-end (hook → discover → practice → reveal → close) — **confirmed 2026-06-04 smoke-test**
+- [x] Streak updates after lesson completion — **confirmed 2026-06-04 smoke-test**
+- [ ] Paywall appears after Chapter 1 is completed (7-day trial rule) — not yet confirmed on device
+- [x] No Sentry P0 errors (unhandled crashes) on a 15-minute smoke test session — **confirmed 2026-06-04**
+- [x] `DEV_UNLOCK_ALL=false` confirmed in Vercel production — confirmed
 
 ---
 

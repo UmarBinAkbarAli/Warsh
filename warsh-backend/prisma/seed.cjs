@@ -412,6 +412,8 @@ const ACHIEVEMENTS = [
   { key: "phrases_10",             title: "عَشْرَة جُمَل",                  description: "Learn to say 10 phrases",                              icon: "mic-outline",         xpReward: 15  },
   { key: "phrases_50",             title: "خَمْسُونَ جُمْلَة",              description: "Learn to say 50 phrases",                              icon: "mic-outline",         xpReward: 25  },
   { key: "phrases_100",            title: "مِئَة جُمْلَة",                  description: "Learn to say 100 phrases",                             icon: "mic-outline",         xpReward: 50  },
+  { key: "phrases_250",            title: "مِئَتَا وَخَمْسُونَ جُمْلَة",    description: "Learn to say 250 phrases",                             icon: "mic-outline",         xpReward: 100 },
+  { key: "phrases_500",            title: "خَمْسُمِئَة جُمْلَة",            description: "Learn to say 500 phrases",                             icon: "mic-outline",         xpReward: 200 },
 ];
 
 const adapter = new PrismaPg({

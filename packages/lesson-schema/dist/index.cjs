@@ -146,7 +146,8 @@ var DiscoverCardSchema = import_zod2.z.discriminatedUnion("type", [
   // CONTRAST
   import_zod2.z.object({
     type: import_zod2.z.literal("CONTRAST"),
-    concept: ConceptSchema,
+    concept: ConceptSchema.optional(),
+    text: ArabicTextSchema.optional(),
     explanation: ExplanationSchema.optional(),
     image_url: import_zod2.z.string().optional(),
     audio_url: import_zod2.z.string().optional(),
@@ -156,11 +157,29 @@ var DiscoverCardSchema = import_zod2.z.discriminatedUnion("type", [
   // AYAH_PREVIEW
   import_zod2.z.object({
     type: import_zod2.z.literal("AYAH_PREVIEW"),
-    concept: ConceptSchema,
+    concept: ConceptSchema.optional(),
+    text: ArabicTextSchema.optional(),
     explanation: ExplanationSchema.optional(),
     image_url: import_zod2.z.string().optional(),
     audio_url: import_zod2.z.string().optional(),
-    examples: import_zod2.z.array(ArabicTextSchema).min(1),
+    examples: import_zod2.z.array(ArabicTextSchema).min(1).optional(),
+    introduces_vocab: VocabRefSchema.optional()
+  }),
+  // Legacy/player-supported card used by existing fixtures.
+  import_zod2.z.object({
+    type: import_zod2.z.literal("GRAMMAR_NOTE"),
+    title: ConceptSchema,
+    body: ExplanationSchema,
+    image_url: import_zod2.z.string().optional(),
+    audio_url: import_zod2.z.string().optional()
+  }),
+  // Legacy/player-supported card used by existing fixtures.
+  import_zod2.z.object({
+    type: import_zod2.z.literal("SENTENCE"),
+    text: ArabicTextSchema,
+    explanation: ExplanationSchema.optional(),
+    image_url: import_zod2.z.string().optional(),
+    audio_url: import_zod2.z.string().optional(),
     introduces_vocab: VocabRefSchema.optional()
   })
 ]);
@@ -254,8 +273,9 @@ var ShadowRepeatExerciseSchema = ExerciseBaseSchema.extend({
 });
 var AudioRecognitionExerciseSchema = ExerciseBaseSchema.extend({
   type: import_zod3.z.literal("AUDIO_RECOGNITION"),
-  audio_url: import_zod3.z.string(),
-  options: import_zod3.z.array(ArabicTextSchema).length(4),
+  arabic_text: import_zod3.z.string().min(1),
+  audio_url: import_zod3.z.string().optional(),
+  options: import_zod3.z.array(import_zod3.z.object({ en: import_zod3.z.string().min(1), ur: import_zod3.z.string().optional() })).length(4),
   correct_index: import_zod3.z.number().int().min(0).max(3)
 });
 var WriteArabicExerciseSchema = ExerciseBaseSchema.extend({
@@ -442,6 +462,20 @@ function createStarterCard(type) {
         ],
         ...base
       };
+    case "GRAMMAR_NOTE":
+      return {
+        type: "GRAMMAR_NOTE",
+        title: { en: "Grammar note", ar: "\xD9\u2026\xD9\u201E\xD8\xA7\xD8\xAD\xD8\xB8\xD8\xA9 \xD9\u2020\xD8\xAD\xD9\u02C6\xD9\u0160\xD8\xA9", ur: "\xDA\xAF\xD8\xB1\xD8\xA7\xD9\u2026\xD8\xB1 \xD9\u2020\xD9\u02C6\xD9\xB9" },
+        body: { en: "Short grammar note.", ur: "\xD9\u2026\xD8\xAE\xD8\xAA\xD8\xB5\xD8\xB1 \xDA\xAF\xD8\xB1\xD8\xA7\xD9\u2026\xD8\xB1 \xD9\u2020\xD9\u02C6\xD9\xB9\xDB\u201D" },
+        ...base
+      };
+    case "SENTENCE":
+      return {
+        type: "SENTENCE",
+        text: { ar: "\xD9\u2021\xD9\u017D\xD8\xB0\xD9\u017D\xD8\xA7 \xD9\u0192\xD9\x90\xD8\xAA\xD9\u017D\xD8\xA7\xD8\xA8\xD9\u0152", ar_plain: "\xD9\u2021\xD8\xB0\xD8\xA7 \xD9\u0192\xD8\xAA\xD8\xA7\xD8\xA8", translit: "hadha kitabun", en: "This is a book.", ur: "\xDB\u0152\xDB\x81 \xD8\xA7\xDB\u0152\xDA\xA9 \xDA\xA9\xD8\xAA\xD8\xA7\xD8\xA8 \xDB\x81\xDB\u2019\xDB\u201D" },
+        explanation: { en: "Short sentence note.", ur: "\xD8\xAC\xD9\u2026\xD9\u201E\xDB\u2019 \xDA\xA9\xDB\u0152 \xD9\u2026\xD8\xAE\xD8\xAA\xD8\xB5\xD8\xB1 \xD9\u02C6\xD8\xB6\xD8\xA7\xD8\xAD\xD8\xAA\xDB\u201D" },
+        ...base
+      };
   }
 }
 function createStarterExercise(type) {
@@ -564,12 +598,12 @@ function createStarterExercise(type) {
       return {
         ...base,
         type: "AUDIO_RECOGNITION",
-        audio_url: "https://cdn.warsh.app/audio/vocab/hadha.mp3",
+        arabic_text: "\u0647\u064E\u0630\u064E\u0627",
         options: [
-          { ar: "\u0647\u064E\u0630\u064E\u0627", ar_plain: "\u0647\u0630\u0627", translit: "hadha", en: "this" },
-          { ar: "\u0630\u0670\u0644\u0650\u0643\u064E", ar_plain: "\u0630\u0644\u0643", translit: "dh\u0101lika", en: "that" },
-          { ar: "\u0645\u064E\u0627", ar_plain: "\u0645\u0627", translit: "ma", en: "what" },
-          { ar: "\u0645\u064E\u0646\u0652", ar_plain: "\u0645\u0646", translit: "man", en: "who" }
+          { en: "this", ur: "\u06CC\u06C1" },
+          { en: "that", ur: "\u0648\u06C1" },
+          { en: "what", ur: "\u06A9\u06CC\u0627" },
+          { en: "who", ur: "\u06A9\u0648\u0646" }
         ],
         correct_index: 0
       };

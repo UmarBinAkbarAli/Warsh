@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextStyle, View } from "react-native";
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import api from "@services/api";
@@ -69,6 +69,12 @@ function exPrompt(ex: RawEx): string | undefined {
   if (t === "BUILD_SENTENCE") return (ex.target_translation as any)?.en as string | undefined;
   if (t === "MATCHING") return "Match each Arabic word with its meaning.";
   if (t === "MATCH_AYAH") return "What does this ayah fragment mean?";
+  if (t === "AUDIO_RECOGNITION") return "Listen carefully — what does this mean?";
+  if (t === "WRITE_ARABIC") return (ex.prompt as any)?.en as string | undefined;
+  if (t === "HARAKAH_PLACEMENT") return "Add the vowel marks (harakat) to this word:";
+  if (t === "WORD_ORDER") return (ex.context as any)?.en as string | undefined;
+  if (t === "TRANSLATE_TO_ARABIC") return (ex.source as any)?.en as string | undefined;
+  if (t === "IDENTIFY_ROOT") return "What is the 3-letter root (الجذر) of this word?";
   return undefined;
 }
 
@@ -82,6 +88,8 @@ function exArabicText(ex: RawEx): string | undefined {
   if (t === "FILL_BLANK") return ex.sentence_ar as string | undefined;
   if (t === "SHADOW_REPEAT") return (ex.phrase as any)?.ar as string | undefined;
   if (t === "MATCH_AYAH") return (ex.ayah_fragment as any)?.ar as string | undefined;
+  if (t === "HARAKAH_PLACEMENT") return ex.word_unvowelled as string | undefined;
+  if (t === "IDENTIFY_ROOT") return (ex.word as any)?.ar as string | undefined;
   return undefined;
 }
 
@@ -108,6 +116,21 @@ function exOptions(ex: RawEx): string[] {
     const opts = ex.options as Array<any> | undefined;
     return opts ? opts.map((o) => o.en as string) : [];
   }
+  if (t === "AUDIO_RECOGNITION") {
+    const opts = ex.options as Array<any> | undefined;
+    return opts ? opts.map((o) => o.en as string) : [];
+  }
+  if (t === "WORD_ORDER") {
+    const tiles = ex.tiles as Array<any> | undefined;
+    return tiles ? tiles.map((t2) => t2.ar as string) : [];
+  }
+  if (t === "TRANSLATE_TO_ARABIC") {
+    const answers = ex.acceptable_answers as Array<any> | undefined;
+    return answers ? answers.map((a) => a.ar as string) : [];
+  }
+  if (t === "IDENTIFY_ROOT") {
+    return (ex.options as string[] | undefined) ?? [];
+  }
   return [];
 }
 
@@ -133,6 +156,32 @@ function exCorrectAnswer(ex: RawEx): string {
     const opts = ex.options as Array<any> | undefined;
     const idx = ex.correct_index as number | undefined;
     if (opts && idx !== undefined) return opts[idx].en as string;
+    return "";
+  }
+  if (t === "AUDIO_RECOGNITION") {
+    const opts = ex.options as Array<any> | undefined;
+    const idx = ex.correct_index as number | undefined;
+    if (opts && idx !== undefined) return opts[idx].en as string;
+    return "";
+  }
+  if (t === "WRITE_ARABIC") return (ex.correct_answer as any)?.ar as string ?? "";
+  if (t === "HARAKAH_PLACEMENT") return ex.correct_vowelled as string ?? "";
+  if (t === "WORD_ORDER") {
+    const tiles = ex.tiles as Array<any> | undefined;
+    const order = ex.correct_order as number[] | undefined;
+    if (tiles && order) return order.map((i) => tiles[i].ar as string).join(" ");
+    return "";
+  }
+  if (t === "TRANSLATE_TO_ARABIC") {
+    const answers = ex.acceptable_answers as Array<any> | undefined;
+    const idx = ex.correct_index as number | undefined;
+    if (answers && idx !== undefined) return answers[idx].ar as string;
+    return "";
+  }
+  if (t === "IDENTIFY_ROOT") {
+    const opts = ex.options as string[] | undefined;
+    const idx = ex.correct_index as number | undefined;
+    if (opts && idx !== undefined) return opts[idx];
     return "";
   }
   return "";
@@ -176,6 +225,10 @@ function normalizeAnswer(value?: string | null) {
   return value?.normalize("NFKD").replace(/[ً-ٰٟ]/g, "").replace(/\s+/g, " ").trim() ?? "";
 }
 
+function normalizeArabicAnswer(value?: string | null) {
+  return normalizeAnswer(value).replace(/[أإآٱ]/g, "ا");
+}
+
 function getSelectedText(selectedAnswer: SelectedAnswer) {
   if (selectedAnswer && !Array.isArray(selectedAnswer) && typeof selectedAnswer === "object") {
     return Object.values(selectedAnswer).join(" ");
@@ -194,6 +247,20 @@ function isAnswerCorrect(ex: RawEx | undefined, selectedAnswer: SelectedAnswer):
   if (exType(ex) === "GRAMMAR_PARSE") {
     if (!selectedAnswer || Array.isArray(selectedAnswer) || typeof selectedAnswer !== "object") return false;
     return exParseTokens(ex).every((token) => normalizeAnswer(selectedAnswer[token.word]) === normalizeAnswer(token.label));
+  }
+
+  // Typed Arabic inputs — normalize harakat and alef variants
+  if (exType(ex) === "WRITE_ARABIC" || exType(ex) === "HARAKAH_PLACEMENT") {
+    const selText = getSelectedText(selectedAnswer) ?? "";
+    const correct = exCorrectAnswer(ex);
+    return normalizeArabicAnswer(selText) === normalizeArabicAnswer(correct);
+  }
+
+  // Any acceptable answer counts as correct
+  if (exType(ex) === "TRANSLATE_TO_ARABIC") {
+    const answers = ex.acceptable_answers as Array<any> | undefined;
+    const selText = getSelectedText(selectedAnswer) ?? "";
+    return answers?.some((a) => normalizeArabicAnswer(a.ar as string) === normalizeArabicAnswer(selText)) ?? false;
   }
 
   const correct = exCorrectAnswer(ex);
@@ -233,6 +300,9 @@ export default function LessonPlayScreen() {
   const [isAnswered, setIsAnswered] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [completionResult, setCompletionResult] = useState<CompletionResult | null>(null);
+
+  // WRITE_ARABIC hint state
+  const [writeHintShown, setWriteHintShown] = useState(false);
 
   // SHADOW_REPEAT / SPOKEN_PHRASES tracking
   const phrasesCompletedRef = useRef(0);
@@ -324,6 +394,7 @@ export default function LessonPlayScreen() {
     setCurrentExerciseIndex((i) => i + 1);
     setSelectedAnswer(null);
     setIsAnswered(false);
+    setWriteHintShown(false);
   }
 
   function answerExercise(answer: SelectedAnswer) {
@@ -447,6 +518,107 @@ export default function LessonPlayScreen() {
           </Pressable>
         ))}
       </View>
+    );
+  }
+
+  // ---- WRITE_ARABIC ----
+
+  function renderWriteArabic() {
+    const correctAr = (currentExercise?.correct_answer as any)?.ar as string | undefined;
+    const hintAvailable = (currentExercise?.hint_available as boolean | undefined) ?? false;
+    const firstLetter = correctAr?.[0];
+    const typedValue = typeof selectedAnswer === "string" ? selectedAnswer : "";
+    const hasInput = typedValue.trim().length > 0;
+
+    return (
+      <>
+        <View style={styles.writeArabicContainer}>
+          <TextInput
+            value={typedValue}
+            onChangeText={(text) => { if (!isAnswered) setSelectedAnswer(text); }}
+            placeholder="اكتب هنا"
+            placeholderTextColor={WarshPalette.subtleBrown}
+            style={styles.writeArabicInput}
+            autoCorrect={false}
+            autoCapitalize="none"
+            editable={!isAnswered}
+            textAlign="right"
+          />
+          {hintAvailable && !writeHintShown && !isAnswered ? (
+            <Pressable onPress={() => setWriteHintShown(true)} style={styles.hintButton} hitSlop={8}>
+              <Text style={styles.hintButtonText}>Show hint</Text>
+            </Pressable>
+          ) : null}
+          {writeHintShown && firstLetter ? (
+            <Text style={styles.hintRevealText}>Starts with: <Text style={styles.hintRevealLetter}>{firstLetter}</Text></Text>
+          ) : null}
+        </View>
+        <BrandButton
+          title="Check"
+          onPress={() => { if (hasInput) answerExercise(typedValue.trim()); }}
+          disabled={isAnswered || !hasInput}
+          style={styles.bottomButton}
+        />
+      </>
+    );
+  }
+
+  // ---- HARAKAH_PLACEMENT ----
+
+  function renderHarakahPlacement() {
+    const hint = (currentExercise?.hint as any)?.en as string | undefined;
+    const typedValue = typeof selectedAnswer === "string" ? selectedAnswer : "";
+    const hasInput = typedValue.trim().length > 0;
+
+    return (
+      <>
+        <View style={styles.writeArabicContainer}>
+          {hint ? <Text style={styles.harakahHintText}>{hint}</Text> : null}
+          <TextInput
+            value={typedValue}
+            onChangeText={(text) => { if (!isAnswered) setSelectedAnswer(text); }}
+            placeholder="أضف الحركات..."
+            placeholderTextColor={WarshPalette.subtleBrown}
+            style={[styles.writeArabicInput, styles.harakahInput]}
+            autoCorrect={false}
+            autoCapitalize="none"
+            editable={!isAnswered}
+            textAlign="right"
+          />
+        </View>
+        <BrandButton
+          title="Check"
+          onPress={() => { if (hasInput) answerExercise(typedValue.trim()); }}
+          disabled={isAnswered || !hasInput}
+          style={styles.bottomButton}
+        />
+      </>
+    );
+  }
+
+  // ---- AUDIO_RECOGNITION ----
+
+  function renderAudioRecognition() {
+    const arabicText = currentExercise?.arabic_text as string | undefined;
+    return (
+      <>
+        <View style={styles.audioRecognitionCenter}>
+          {arabicText ? (
+            <View style={styles.audioRecognitionPlayWrap}>
+              <PlayButton
+                text={arabicText}
+                cacheKey={`ar-${lessonId}-ex${currentExerciseIndex}`}
+                category="lessons"
+                size={48}
+              />
+              <Text style={styles.audioRecognitionHint}>Tap to listen again</Text>
+            </View>
+          ) : (
+            <Text style={styles.hookQuestion}>Audio not available for this exercise.</Text>
+          )}
+        </View>
+        {renderOptionGrid()}
+      </>
     );
   }
 
@@ -732,10 +904,15 @@ export default function LessonPlayScreen() {
         />
       );
     }
-    if (type === "BUILD_SENTENCE")     return renderBuildSentence();
-    if (type === "MATCHING")           return renderMatching();
-    if (type === "GRAMMAR_PARSE")      return renderGrammarParse();
+    if (type === "AUDIO_RECOGNITION")    return renderAudioRecognition();
+    if (type === "WRITE_ARABIC")         return renderWriteArabic();
+    if (type === "HARAKAH_PLACEMENT")    return renderHarakahPlacement();
+    if (type === "WORD_ORDER")           return renderBuildSentence();   // same tile-tap UX
+    if (type === "BUILD_SENTENCE")       return renderBuildSentence();
+    if (type === "MATCHING")             return renderMatching();
+    if (type === "GRAMMAR_PARSE")        return renderGrammarParse();
     if (type === "CONVERSATION_BUILDER") return renderConversationBuilder();
+    // TRANSLATE_TO_ARABIC, IDENTIFY_ROOT, MATCH_AYAH → auto-submit option grid
     return renderOptionGrid();
   }
 
@@ -1342,6 +1519,83 @@ const styles = StyleSheet.create({
     fontSize: 28,
     lineHeight: 40,
     textAlign: "center",
+  },
+  // WRITE_ARABIC / HARAKAH_PLACEMENT
+  writeArabicContainer: {
+    flex: 1,
+    justifyContent: "center",
+    paddingHorizontal: 4,
+    gap: 12,
+  },
+  writeArabicInput: {
+    borderWidth: 1.5,
+    borderColor: WarshPalette.defaultCardBorder,
+    borderRadius: 12,
+    padding: 16,
+    fontSize: 24,
+    fontFamily: "Scheherazade New",
+    color: WarshPalette.ink,
+    backgroundColor: WarshPalette.white,
+    minHeight: 64,
+  },
+  harakahInput: {
+    fontSize: 28,
+  },
+  harakahHintText: {
+    fontFamily: Fonts.regular,
+    fontSize: 14,
+    color: WarshPalette.bodyBrown,
+    textAlign: "center",
+  },
+  hintButton: {
+    alignSelf: "center",
+    paddingVertical: 6,
+    paddingHorizontal: 16,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: WarshPalette.gold,
+  },
+  hintButtonText: {
+    fontFamily: Fonts.regular,
+    fontSize: 13,
+    color: WarshPalette.gold,
+  },
+  hintRevealText: {
+    fontFamily: Fonts.regular,
+    fontSize: 14,
+    color: WarshPalette.bodyBrown,
+    textAlign: "center",
+  },
+  hintRevealLetter: {
+    fontFamily: "Scheherazade New",
+    fontSize: 20,
+    color: WarshPalette.gold,
+  },
+
+  audioRecognitionCenter: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: 8,
+    paddingBottom: 8,
+  },
+  audioRecognitionPlayWrap: {
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: WarshPalette.cream,
+    borderRadius: 80,
+    padding: 28,
+    marginBottom: 8,
+    shadowColor: "#000",
+    shadowOpacity: 0.06,
+    shadowRadius: 8,
+    elevation: 2,
+  },
+  audioRecognitionHint: {
+    marginTop: 8,
+    fontSize: 12,
+    color: WarshPalette.ink,
+    opacity: 0.5,
+    fontFamily: Fonts.regular,
   },
   optionGrid: {
     flex: 1,

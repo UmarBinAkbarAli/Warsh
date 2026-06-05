@@ -159,6 +159,10 @@ export function verifyPurchase(data: { productId: string; purchaseToken?: string
   return api.post("/api/subscription/verify", data);
 }
 
+export function purchaseNoorPack(data: { purchaseToken: string; platform: "android" | "ios" }) {
+  return api.post("/api/noor/purchase-pack", data);
+}
+
 export function getApiErrorMessage(error: unknown, fallback: string) {
   if (!axios.isAxiosError(error)) {
     return fallback;

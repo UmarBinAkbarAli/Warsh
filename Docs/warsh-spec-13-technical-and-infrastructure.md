@@ -144,7 +144,7 @@ EXPO_PUBLIC_API_URL=http://127.0.0.1:3000
 EXPO_PUBLIC_ENVIRONMENT=development
 ```
 
-**Critical:** The current Phase 1 codebase has the API URL hardcoded as a fallback to `https://warsh-backend.vercel.app`. This must be replaced before launch — see Section 9 (Pre-launch Checklist).
+**Note:** All production and previewProd EAS build profiles now use `https://api.warsh.app`. The `warsh-backend.vercel.app` fallback has been replaced in all code paths (eas.json, forgot-password fallback, start-warsh.ps1). ✅
 
 ### 3.2 Backend environment variables
 
@@ -648,7 +648,7 @@ This is the master checklist. Every item must be checked off before launch.
 
 ### Monetization
 
-- [ ] Apple App Store Connect: Subscription products configured (`warsh_monthly`, `warsh_annual`)
+- [ ] Apple App Store Connect: Subscription products configured (`warsh_monthly`, `warsh_yearly`)
 - [ ] Apple App Store Connect: Consumable product configured (`warsh_noor_overage_pack`)
 - [ ] Apple App Store Connect: Subscription group configured
 - [ ] Google Play Console: Subscription products configured

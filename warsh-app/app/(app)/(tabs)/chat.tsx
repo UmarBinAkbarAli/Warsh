@@ -1,21 +1,32 @@
 import { useCallback, useState } from "react";
-import { View, Text, ScrollView, Pressable, ActivityIndicator, Modal, TouchableOpacity, Alert, StyleSheet } from "react-native";
+import { View, Text, ScrollView, Pressable, ActivityIndicator, Modal, Platform, TouchableOpacity, Alert, StyleSheet } from "react-native";
 import { TextInput } from "react-native-paper";
-import { useFocusEffect } from "expo-router";
+import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import api from "@services/api";
+import api, { purchaseNoorPack } from "@services/api";
 import { BrandButton } from "@components/BrandButton";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Shadows, Spacing, WarshPalette } from "../../../constants/theme";
 import { trackNoorMessageSent } from "@services/analytics";
+import {
+  connectIap,
+  endIapConnection,
+  finishConsumableAndroidPurchase,
+  isBillingSupportedEnvironment,
+  isIapUnavailableError,
+  requestConsumablePurchase,
+  type IapSubscriptionPurchase,
+} from "@services/iap";
 
 export default function ChatScreen() {
   const insets = useSafeAreaInsets();
+  const router = useRouter();
   const [messages, setMessages] = useState<any[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
-  const [usage, setUsage] = useState({ used: 0, limit: 5 });
+  const [purchasingPack, setPurchasingPack] = useState(false);
+  const [usage, setUsage] = useState({ used: 0, limit: 5, packBalance: 0 });
   const [error, setError] = useState<string | null>(null);
   const [showOverageModal, setShowOverageModal] = useState(false);
 
@@ -39,6 +50,45 @@ export default function ChatScreen() {
     }, [loadHistory])
   );
 
+  async function handleBuyNoorPack() {
+    if (!isBillingSupportedEnvironment()) {
+      Alert.alert("Purchases unavailable", "In-app purchases are only available in a Play Store build, not Expo Go.");
+      return;
+    }
+    setShowOverageModal(false);
+    setPurchasingPack(true);
+    try {
+      const connected = await connectIap();
+      if (!connected) throw Object.assign(new Error("IAP not available"), { code: "IAP_UNAVAILABLE" });
+
+      const result = await requestConsumablePurchase("warsh_noor_pack");
+      const purchaseRecord = Array.isArray(result) ? result[0] : result;
+      const token = (purchaseRecord as IapSubscriptionPurchase | undefined)?.purchaseToken;
+      if (!token) throw new Error("No purchase token returned from store.");
+
+      const response = await purchaseNoorPack({ purchaseToken: token, platform: Platform.OS as "android" | "ios" });
+      const newBalance: number = response.data.data.noorOverageBalance ?? 0;
+
+      await finishConsumableAndroidPurchase(token);
+
+      setUsage((prev) => ({ ...prev, packBalance: newBalance }));
+      Alert.alert(
+        "20 messages added!",
+        "JazakAllah khair. Noor is ready to help whenever you need.",
+        [{ text: "Continue" }]
+      );
+    } catch (err: any) {
+      if (isIapUnavailableError(err)) {
+        Alert.alert("Purchases unavailable", "In-app purchases are not available on this build.");
+      } else if (err?.code !== "E_USER_CANCELLED") {
+        Alert.alert("Purchase failed", "Something went wrong. Please try again or contact support.");
+      }
+    } finally {
+      setPurchasingPack(false);
+      endIapConnection().catch(() => {});
+    }
+  }
+
   async function sendMessage() {
     if (!input.trim()) return;
     setSending(true);
@@ -51,9 +101,24 @@ export default function ChatScreen() {
         { role: "ASSISTANT", content: response.data.data.reply },
       ]);
       const usedToday = response.data.data.messagesUsedToday;
-      setUsage({ used: usedToday, limit: response.data.data.messagesLimit });
+      setUsage({
+        used: usedToday,
+        limit: response.data.data.messagesLimit,
+        packBalance: response.data.data.noorOverageBalance ?? 0,
+      });
       trackNoorMessageSent(usedToday);
       setInput("");
+      const newAchievement = response.data.data.newAchievement;
+      if (newAchievement) {
+        router.push({
+          pathname: "/(app)/milestone-celebration",
+          params: {
+            achievements: JSON.stringify([newAchievement]),
+            nextRoute: "tabs",
+            streak: "0",
+          },
+        });
+      }
     } catch (err: any) {
       if (err.response?.status === 429) {
         setShowOverageModal(true);
@@ -104,7 +169,10 @@ export default function ChatScreen() {
 
       {/* Usage indicator */}
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.md }}>
-        Chat with your Arabic tutor. {usage.used} of {usage.limit} messages used today.
+        Chat with your Arabic tutor.{" "}
+        {usage.used >= usage.limit && usage.packBalance > 0
+          ? `${usage.packBalance} pack message${usage.packBalance !== 1 ? "s" : ""} remaining.`
+          : `${usage.used} of ${usage.limit} messages used today.`}
       </Text>
 
       {/* Non-429 errors */}
@@ -198,11 +266,10 @@ export default function ChatScreen() {
 
             {/* Purchase CTA */}
             <BrandButton
-              title="Get more messages →"
-              onPress={() => {
-                Alert.alert("Coming soon", "In-app purchase will be available soon.");
-                setShowOverageModal(false);
-              }}
+              title={purchasingPack ? "Processing…" : "Get more messages →"}
+              onPress={handleBuyNoorPack}
+              loading={purchasingPack}
+              disabled={purchasingPack}
             />
 
             {/* Dismiss link */}

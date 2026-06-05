@@ -21,7 +21,7 @@ const lessonUpdateSchema = z.object({
   template: z.enum(["STANDARD", "SPOKEN_PHRASES", "REVIEW", "VERB_PATTERN"]),
   xpReward: z.number().int().min(0).max(500),
   content: jsonValueSchema.refine((v: unknown) => v !== null, "Content cannot be null."),
-  updatedAt: z.number().int().positive().optional(), // Unix ms — for optimistic concurrency
+  updatedAt: z.number().int().positive(), // Unix ms — required for optimistic concurrency
 });
 
 interface Props {
@@ -48,26 +48,24 @@ export async function PATCH(request: Request, { params }: Props) {
   const { content, updatedAt: clientUpdatedAt, ...meta } = parsed.data;
 
   // --- Optimistic concurrency ---
-  if (clientUpdatedAt) {
-    const lesson = await prisma.lesson.findUnique({
-      where: { id: params.id },
-      select: { updatedAt: true },
-    });
-    if (!lesson) {
-      return NextResponse.json({ error: "Lesson not found.", code: "not_found" }, { status: 404 });
-    }
-    const serverMs = lesson.updatedAt.getTime();
-    if (Math.abs(serverMs - clientUpdatedAt) > 1000) {
-      // > 1s drift tolerance
-      return NextResponse.json(
-        {
-          error: "This lesson was changed by another author. Please re-open and re-apply your edits.",
-          code: "conflict",
-          serverUpdatedAt: serverMs,
-        },
-        { status: 409 },
-      );
-    }
+  const lesson = await prisma.lesson.findUnique({
+    where: { id: params.id },
+    select: { updatedAt: true },
+  });
+  if (!lesson) {
+    return NextResponse.json({ error: "Lesson not found.", code: "not_found" }, { status: 404 });
+  }
+  const serverMs = lesson.updatedAt.getTime();
+  if (Math.abs(serverMs - clientUpdatedAt) > 1000) {
+    // > 1s drift tolerance
+    return NextResponse.json(
+      {
+        error: "This lesson was changed by another author. Please re-open and re-apply your edits.",
+        code: "conflict",
+        serverUpdatedAt: serverMs,
+      },
+      { status: 409 },
+    );
   }
 
   // --- Schema validation of content field ---

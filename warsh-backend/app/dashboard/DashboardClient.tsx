@@ -30,6 +30,7 @@ export type DashboardLesson = {
   titleAr: string;
   template: string;
   xpReward: number;
+  updatedAt?: string;
   content: JsonValue;
 };
 
@@ -57,6 +58,30 @@ type LessonDraft = {
 };
 
 const LESSON_TEMPLATES = ["STANDARD", "SPOKEN_PHRASES", "REVIEW", "VERB_PATTERN"];
+
+function toUpdatedAtMs(updatedAt?: string): number | undefined {
+  if (!updatedAt) return undefined;
+  const ms = new Date(updatedAt).getTime();
+  return Number.isFinite(ms) ? ms : undefined;
+}
+
+function getDiscoverCardTitle(card: DiscoverCard): string {
+  const raw = card as unknown as {
+    text?: { ar?: string; en?: string };
+    concept?: { ar?: string; en?: string };
+    title?: { ar?: string; en?: string };
+  };
+
+  return (
+    raw.text?.ar ??
+    raw.text?.en ??
+    raw.concept?.en ??
+    raw.concept?.ar ??
+    raw.title?.en ??
+    raw.title?.ar ??
+    "(no title)"
+  );
+}
 
 // ============================================================================
 // ARABIC TEXT EDITOR
@@ -1051,12 +1076,7 @@ function DiscoverCardItem({
   isDragOver: boolean;
 }) {
   const config = discoverCardFormConfig[card.type];
-  const title =
-    card.type === "WORD"
-      ? card.text?.ar ?? "(no Arabic)"
-      : card.type === "CONCEPT" || card.type === "CONTRAST" || card.type === "AYAH_PREVIEW"
-      ? card.concept?.en ?? card.concept?.ar ?? "(no title)"
-      : card.text?.ar ?? "(no text)";
+  const title = getDiscoverCardTitle(card);
 
   return (
     <div
@@ -1189,6 +1209,23 @@ export default function DashboardClient({
   const [adminToken, setAdminToken] = useState("");
   const [status, setStatus] = useState("Ready");
 
+  // ---- Add lesson dialog ----
+  const [showAddLesson, setShowAddLesson] = useState(false);
+  const [addLessonTitle, setAddLessonTitle] = useState("");
+  const [addLessonTitleAr, setAddLessonTitleAr] = useState("");
+  const [addLessonTemplate, setAddLessonTemplate] = useState("STANDARD");
+  const [addingLesson, setAddingLesson] = useState(false);
+
+  // ---- Delete lesson dialog ----
+  const [deleteTarget, setDeleteTarget] = useState<{ lessonId: string; title: string; order: number } | null>(null);
+  const [deletingLesson, setDeletingLesson] = useState(false);
+
+  // ---- Dirty-switch guard ----
+  const [pendingLessonSwitch, setPendingLessonSwitch] = useState<{
+    lessonId: string;
+    resolve: (v: boolean) => void;
+  } | null>(null);
+
   const [editorState, setEditorState] = useState<EditorState>({
     mode: "view",
     editingIndex: null,
@@ -1208,7 +1245,7 @@ export default function DashboardClient({
           titleAr: selectedLesson.titleAr,
           template: selectedLesson.template,
           xpReward: selectedLesson.xpReward,
-          updatedAt: undefined,
+          updatedAt: toUpdatedAtMs(selectedLesson.updatedAt),
           content: JSON.stringify(selectedLesson.content ?? null, null, 2),
           originalContent: selectedLesson.content,
         }
@@ -1260,7 +1297,7 @@ export default function DashboardClient({
         titleAr: lesson.titleAr,
         template: lesson.template,
         xpReward: lesson.xpReward,
-        updatedAt: undefined,
+        updatedAt: toUpdatedAtMs(lesson.updatedAt),
         content: JSON.stringify(lesson.content ?? null, null, 2),
         originalContent: lesson.content,
       });
@@ -1284,10 +1321,28 @@ export default function DashboardClient({
     );
   }, [chapters, query]);
 
+  function doSwitchLesson(newLessonId: string) {
+    const targetLesson =
+      selectedChapter?.lessons.find((l) => l.id === newLessonId) ??
+      selectedChapter?.lessons[0];
+    if (!targetLesson) return;
+    setSelectedLessonId(newLessonId);
+    resetDraftFromParsed(targetLesson);
+  }
+
   function selectLesson(lesson: DashboardLesson) {
-    if (!lessonDraft?.content) return;
-    setSelectedLessonId(lesson.id);
-    resetDraftFromParsed(lesson);
+    if (lesson.id === selectedLessonId) return;
+    if (editorState.dirty) {
+      setPendingLessonSwitch({
+        lessonId: lesson.id,
+        resolve: (saved) => {
+          if (saved) saveLesson().then(() => doSwitchLesson(lesson.id));
+          else doSwitchLesson(lesson.id);
+        },
+      });
+    } else {
+      doSwitchLesson(lesson.id);
+    }
   }
 
   async function saveLesson() {
@@ -1351,6 +1406,7 @@ export default function DashboardClient({
                         titleAr: updated.titleAr,
                         template: updated.template,
                         xpReward: updated.xpReward,
+                        updatedAt: updated.updatedAt,
                         content: updated.content,
                       }
                     : l
@@ -1375,6 +1431,90 @@ export default function DashboardClient({
       setStatus("Lesson saved ✓");
     } catch {
       setStatus("Network error — is the server running?");
+    }
+  }
+
+  async function handleAddLesson() {
+    if (!selectedChapterId || !addLessonTitle.trim() || !addLessonTitleAr.trim()) return;
+    setAddingLesson(true);
+    try {
+      const res = await fetch(`/api/admin/chapters/${selectedChapterId}/lessons`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          ...(adminToken ? { "x-admin-token": adminToken } : {}),
+        },
+        body: JSON.stringify({
+          title: addLessonTitle.trim(),
+          titleAr: addLessonTitleAr.trim(),
+          template: addLessonTemplate,
+        }),
+      });
+      const payload = await res.json();
+      if (!res.ok) {
+        setStatus(payload.error ?? "Failed to add lesson.");
+        return;
+      }
+      const newLesson = payload.data.lesson;
+      // Add lesson to local chapter
+      setChapters((ch) =>
+        ch.map((c) =>
+          c.id === selectedChapterId
+            ? { ...c, lessons: [...c.lessons, { ...newLesson, updatedAt: newLesson.updatedAt.toISOString() }] }
+            : c
+        )
+      );
+      setSelectedLessonId(newLesson.id);
+      resetDraftFromParsed({ ...newLesson, updatedAt: newLesson.updatedAt.toISOString() });
+      setShowAddLesson(false);
+      setAddLessonTitle("");
+      setAddLessonTitleAr("");
+      setAddLessonTemplate("STANDARD");
+      setStatus("Lesson added ✓");
+    } catch {
+      setStatus("Network error — could not add lesson.");
+    } finally {
+      setAddingLesson(false);
+    }
+  }
+
+  async function handleDeleteLesson() {
+    if (!deleteTarget || !selectedChapter) return;
+    setDeletingLesson(true);
+    try {
+      const res = await fetch(`/api/admin/lessons/${deleteTarget.lessonId}/delete`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          ...(adminToken ? { "x-admin-token": adminToken } : {}),
+        },
+      });
+      const payload = await res.json();
+      if (!res.ok) {
+        setStatus(payload.error ?? "Failed to delete lesson.");
+        return;
+      }
+      // Remove lesson from local state
+      const remainingLessons = selectedChapter.lessons.filter((l) => l.id !== deleteTarget.lessonId);
+      const idx = selectedChapter.lessons.findIndex((l) => l.id === deleteTarget.lessonId);
+      const nextSelection = remainingLessons[Math.min(idx, remainingLessons.length - 1)];
+      setChapters((ch) =>
+        ch.map((c) =>
+          c.id === selectedChapterId
+            ? { ...c, lessons: remainingLessons }
+            : c
+        )
+      );
+      if (nextSelection) {
+        setSelectedLessonId(nextSelection.id);
+        resetDraftFromParsed(nextSelection);
+      }
+      setDeleteTarget(null);
+      setStatus("Lesson deleted ✓");
+    } catch {
+      setStatus("Network error — could not delete lesson.");
+    } finally {
+      setDeletingLesson(false);
     }
   }
 
@@ -1415,14 +1555,20 @@ export default function DashboardClient({
     try {
       const res = await fetch("/api/admin/lessons/validate", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          ...(adminToken ? { "x-admin-token": adminToken } : {}),
+        },
         body: JSON.stringify({ content }),
       });
       const payload = await res.json();
-      if (res.ok) {
+      if (res.ok && payload.data?.valid) {
         setValidationResult({ ok: true });
       } else {
-        setValidationResult({ ok: false, errors: JSON.stringify(payload.details ?? payload.error, null, 2) });
+        setValidationResult({
+          ok: false,
+          errors: JSON.stringify(payload.data?.errors ?? payload.details ?? payload.error, null, 2),
+        });
       }
     } catch {
       // Fallback to local parse using the already-imported parseLenient
@@ -1527,19 +1673,30 @@ export default function DashboardClient({
     );
   }
 
+  const totalLessons = chapters.reduce((s, c) => s + c.lessons.length, 0);
+  const currentLessonPosition = selectedChapter.lessons.findIndex((lesson) => lesson.id === selectedLessonId) + 1;
+  const activeMode = showJsonView ? "json" : showPreview ? "preview" : "builder";
+
   return (
     <main className={styles.shell}>
       {/* ---- SIDEBAR ---- */}
       <aside className={styles.sidebar}>
         <div className={styles.brand}>
-          <span className={styles.brandMark}>Warsh</span>
+          <div>
+            <span className={styles.brandMark}>Warsh</span>
+            <span className={styles.brandSubline}>Curriculum Studio</span>
+          </div>
           <span className={styles.brandArabic}>وَرْش</span>
+        </div>
+        <div className={styles.sidebarStats}>
+          <span>{chapters.length} chapters</span>
+          <span>{totalLessons} lessons</span>
         </div>
         <input
           className={styles.search}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search content"
+          placeholder="Search chapters or lessons"
         />
         <div className={styles.rail}>
           {filteredChapters.map((chapter) => (
@@ -1555,9 +1712,12 @@ export default function DashboardClient({
               }}
               type="button"
             >
-              <span>Ch {chapter.order}</span>
+              <span>Chapter {chapter.order}</span>
               <strong>{chapter.title}</strong>
-              <small>{chapter.lessons.length} lessons</small>
+              <small>
+                {chapter.lessons.length} lessons
+                {chapter.id === selectedChapter.id ? " - selected" : ""}
+              </small>
             </button>
           ))}
         </div>
@@ -1568,13 +1728,14 @@ export default function DashboardClient({
         <header className={styles.header}>
           <div>
             <p className={styles.kicker}>Content Dashboard</p>
-            <h1>Manage Warsh curriculum</h1>
+            <h1>{selectedChapter.title}</h1>
+            <p className={styles.headerSubtitle}>{selectedChapter.titleAr}</p>
           </div>
           <div className={styles.statusGroup}>
-            <span>{chapters.length} chapters</span>
-            <span>
-              {chapters.reduce((s, c) => s + c.lessons.length, 0)} lessons
-            </span>
+            <span>Chapter {selectedChapter.order}</span>
+            <span>{selectedChapter.lessons.length} lessons</span>
+            <span>{draftDiscoverCards.length} cards</span>
+            <span>{draftExercises.length} exercises</span>
           </div>
         </header>
 
@@ -1588,8 +1749,223 @@ export default function DashboardClient({
               type="password"
             />
           </label>
-          <span className={styles.saveStatus}>{status}</span>
+          <div className={styles.modeTabs} aria-label="Dashboard view mode">
+            <button
+              className={activeMode === "builder" ? styles.activeModeTab : ""}
+              onClick={() => {
+                setShowJsonView(false);
+                setShowPreview(false);
+              }}
+              type="button"
+            >
+              Builder
+            </button>
+            <button
+              className={activeMode === "preview" ? styles.activeModeTab : ""}
+              onClick={() => {
+                setShowJsonView(false);
+                setShowPreview(true);
+              }}
+              type="button"
+            >
+              Preview
+            </button>
+            <button
+              className={activeMode === "json" ? styles.activeModeTab : ""}
+              onClick={showJsonView ? () => setShowJsonView(false) : openJsonView}
+              type="button"
+            >
+              JSON
+            </button>
+          </div>
         </div>
+
+        {/* ---- LESSON STEPPER ---- */}
+        <div className={styles.curriculumHeader}>
+          <div>
+            <p className={styles.kicker}>Selected lesson</p>
+            <h2>
+              Lesson {selectedLesson?.order}: {lessonDraft.title}
+            </h2>
+          </div>
+          <span className={styles.lessonCountPill}>
+            {currentLessonPosition || selectedLesson?.order} of {selectedChapter.lessons.length}
+          </span>
+        </div>
+        <div className={styles.lessonStepper}>
+          {(selectedChapter?.lessons ?? []).map((lesson) => (
+            <button
+              key={lesson.id}
+              className={`${styles.lessonTab}${lesson.id === selectedLessonId ? " " + styles.activeTab : ""}`}
+              onClick={() => {
+                if (lesson.id === selectedLessonId) return;
+                if (editorState.dirty) {
+                  setPendingLessonSwitch({
+                    lessonId: lesson.id,
+                    resolve: (saved) => {
+                      if (saved) saveLesson().then(() => doSwitchLesson(lesson.id));
+                      else doSwitchLesson(lesson.id);
+                    },
+                  });
+                } else {
+                  doSwitchLesson(lesson.id);
+                }
+              }}
+              type="button"
+            >
+              <span className={styles.lessonTabNum}>L{lesson.order}</span>
+              <span className={styles.lessonTabTitle} title={lesson.title}>
+                {lesson.title}
+              </span>
+              <span className={styles.lessonTabMeta}>{lesson.template} - {lesson.xpReward} XP</span>
+              {selectedChapter.lessons.length > 1 && (
+                <span
+                  className={styles.lessonTabDelete}
+                  title="Delete lesson"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setDeleteTarget({ lessonId: lesson.id, title: lesson.title, order: lesson.order });
+                  }}
+                >
+                  ×
+                </span>
+              )}
+            </button>
+          ))}
+          <button
+            className={styles.addLessonBtn}
+            onClick={() => setShowAddLesson(true)}
+            type="button"
+          >
+            + Lesson
+          </button>
+        </div>
+
+        {/* ---- DIRTY-SWITCH GUARD ---- */}
+        {pendingLessonSwitch && (
+          <div className={styles.dirtySwitchBanner}>
+            You have unsaved changes. Discard them to switch lessons?
+            <button
+              onClick={() => {
+                const resolve = pendingLessonSwitch.resolve;
+                resolve(true); // save first
+                setPendingLessonSwitch(null);
+              }}
+              type="button"
+            >
+              Save & switch
+            </button>
+            <button
+              onClick={() => {
+                const resolve = pendingLessonSwitch.resolve;
+                resolve(false); // discard
+                setPendingLessonSwitch(null);
+              }}
+              type="button"
+            >
+              Discard
+            </button>
+            <button
+              onClick={() => setPendingLessonSwitch(null)}
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
+        )}
+
+        {/* ---- ADD LESSON DIALOG ---- */}
+        {showAddLesson && (
+          <div className={styles.confirmOverlay}>
+            <div className={styles.addLessonDialog}>
+              <h3>Add new lesson</h3>
+              <div className={styles.addLessonFields}>
+                <label>
+                  English title
+                  <input
+                    value={addLessonTitle}
+                    onChange={(e) => setAddLessonTitle(e.target.value)}
+                    placeholder="e.g. Practice — Demonstratives"
+                    autoFocus
+                  />
+                </label>
+                <label>
+                  Arabic title
+                  <input
+                    dir="rtl"
+                    value={addLessonTitleAr}
+                    onChange={(e) => setAddLessonTitleAr(e.target.value)}
+                    placeholder="e.g. تمارين — أسماء الإشارة"
+                  />
+                </label>
+                <label>
+                  Template
+                  <select
+                    value={addLessonTemplate}
+                    onChange={(e) => setAddLessonTemplate(e.target.value)}
+                  >
+                    <option value="STANDARD">STANDARD</option>
+                    <option value="SPOKEN_PHRASES">SPOKEN_PHRASES</option>
+                    <option value="REVIEW">REVIEW</option>
+                    <option value="VERB_PATTERN">VERB_PATTERN</option>
+                  </select>
+                </label>
+              </div>
+              <div className={styles.addLessonActions}>
+                <button
+                  className={styles.addLessonSubmit}
+                  disabled={addingLesson || !addLessonTitle.trim() || !addLessonTitleAr.trim()}
+                  onClick={handleAddLesson}
+                  type="button"
+                >
+                  {addingLesson ? "Adding..." : "Add lesson"}
+                </button>
+                <button
+                  className={styles.addLessonCancel}
+                  onClick={() => {
+                    setShowAddLesson(false);
+                    setAddLessonTitle("");
+                    setAddLessonTitleAr("");
+                    setAddLessonTemplate("STANDARD");
+                  }}
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ---- DELETE LESSON DIALOG ---- */}
+        {deleteTarget && (
+          <div className={styles.confirmOverlay}>
+            <div className={styles.confirmDialog}>
+              <h3>Delete lesson?</h3>
+              <p>
+                Delete <strong>Lesson {deleteTarget.order}: {deleteTarget.title}</strong>?
+                This cannot be undone.
+              </p>
+              <div className={styles.confirmActions}>
+                <button
+                  className={styles.confirmDanger}
+                  disabled={deletingLesson}
+                  onClick={handleDeleteLesson}
+                  type="button"
+                >
+                  {deletingLesson ? "Deleting..." : "Delete"}
+                </button>
+                <button
+                  className={styles.confirmCancel}
+                  onClick={() => setDeleteTarget(null)}
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* ---- LESSON BUILDER ---- */}
         <section className={styles.panel}>
@@ -1600,9 +1976,9 @@ export default function DashboardClient({
               </p>
               <h2>Lesson Builder</h2>
             </div>
-            <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+            <div className={styles.panelActions}>
               {editorState.dirty && (
-                <span style={{ color: "#b04040", fontSize: 13 }}>
+                <span className={styles.dirtyPill}>
                   Unsaved changes
                 </span>
               )}
@@ -1615,7 +1991,6 @@ export default function DashboardClient({
               </button>
               <button
                 className={styles.cancelBtn}
-                style={{ borderColor: "#8a651f", color: "#8a651f" }}
                 onClick={showJsonView ? () => setShowJsonView(false) : openJsonView}
                 type="button"
               >
@@ -1623,7 +1998,6 @@ export default function DashboardClient({
               </button>
               <button
                 className={styles.cancelBtn}
-                style={{ borderColor: "#2e7d32", color: "#2e7d32" }}
                 onClick={() => setShowPreview((v) => !v)}
                 type="button"
               >
@@ -1637,6 +2011,11 @@ export default function DashboardClient({
                 Save lesson
               </button>
             </div>
+          </div>
+          <div className={styles.saveBar}>
+            <span className={styles.saveStatus}>{status}</span>
+            <span>{editorState.dirty ? "Draft has local edits" : "No unsaved edits"}</span>
+            <span>{lessonDraft.template}</span>
           </div>
 
           {/* ---- ADVANCED JSON VIEW ---- */}
@@ -1731,11 +2110,7 @@ export default function DashboardClient({
                   <div className={styles.previewSection}>
                     <div className={styles.previewSectionTitle}>Discover Cards ({draftDiscoverCards.length})</div>
                     {draftDiscoverCards.map((card, i) => {
-                      const title = card.type === "WORD"
-                        ? card.text?.ar
-                        : card.type === "CONCEPT" || card.type === "CONTRAST" || card.type === "AYAH_PREVIEW"
-                        ? card.concept?.en
-                        : card.text?.ar;
+                      const title = getDiscoverCardTitle(card);
                       return (
                         <div key={i} className={styles.previewCard}>
                           <div style={{ display: "flex", gap: 8, alignItems: "center" }}>

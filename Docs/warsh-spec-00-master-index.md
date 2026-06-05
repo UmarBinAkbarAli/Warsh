@@ -3,7 +3,7 @@
 
 **Status:** Active — Source of Truth
 **Version:** 1.0
-**Last updated:** 2026-05-19
+**Last updated:** 2026-06-05
 
 > This is the master index for the Warsh App Specification. The specification consists of 14 files (this index + 13 specification files) that together define every feature, every screen, every word of copy, every line of the data model, and every operational concern for the Warsh app.
 
@@ -234,6 +234,9 @@ May this app serve the Muslim community well, in shaa Allah.
 ---
 
 ## Changelog
+
+**2026-06-05 — v1.1**
+- `api.warsh.app` custom domain live on Vercel; all `warsh-backend.vercel.app` references replaced throughout codebase and docs
 
 **2026-05-19 — v1.0**
 - Initial complete specification (Files 00–13) drafted and locked

@@ -38,13 +38,14 @@ export async function POST(request: Request) {
   if (!result.success) {
     return NextResponse.json(
       {
-        error: "Lesson content is not valid.",
-        code: "schema_error",
-        details: result.error.flatten(),
+        data: {
+          valid: false,
+          errors: result.error.flatten(),
+        },
       },
       { status: 200 },
     );
   }
 
-  return NextResponse.json({ data: { valid: true } });
+  return NextResponse.json({ data: { valid: true, errors: null } });
 }

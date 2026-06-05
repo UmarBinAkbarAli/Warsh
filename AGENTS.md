@@ -54,7 +54,7 @@ PowerShell script at the repo root — never improvise individual steps:
 
 ```powershell
 .\start-warsh.ps1        # local dev  — runs backend on localhost:3000
-.\start-warsh.ps1 -prod  # production — points app at warsh-backend.vercel.app
+.\start-warsh.ps1 -prod  # production — points app at api.warsh.app
 ```
 
 **Local dev** does (in order):
@@ -67,7 +67,7 @@ PowerShell script at the repo root — never improvise individual steps:
 **Production (`-prod`)** does:
 1. Verifies ADB + USB device is connected
 2. Sets ADB reverse tunnel: `tcp:8081` (Metro only — no local backend)
-3. Opens a terminal window running Expo Metro with `EXPO_PUBLIC_API_URL=https://warsh-backend.vercel.app`
+3. Opens a terminal window running Expo Metro with `EXPO_PUBLIC_API_URL=https://api.warsh.app`
 
 **No Docker needed** — the database is Neon (cloud Postgres). The backend connects
 to Neon directly via `DATABASE_URL` in `warsh-backend/.env`.

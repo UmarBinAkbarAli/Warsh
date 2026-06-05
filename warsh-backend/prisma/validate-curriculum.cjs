@@ -5,16 +5,14 @@ const { chapters: book1Chapters } = require("./curriculum-book1.cjs");
 const { chapters: books2To4Chapters } = require("./curriculum-books2-4.cjs");
 const { chapters: books5To6Chapters } = require("./curriculum-books5-6.cjs");
 const { chapters: books7To8Chapters } = require("./curriculum-books7-8.cjs");
+const { LessonContentSchema } = require("@warsh/lesson-schema");
 
 const chapters = [...book1Chapters, ...books2To4Chapters, ...books5To6Chapters, ...books7To8Chapters];
 const fixturesDir = path.join(__dirname, "fixtures");
 
-// For Phase 0b, the fixture validator continues to use its own CJS-compatible
-// validators. The canonical Zod schema in @warsh/lesson-schema is the
-// source of truth for the lesson builder and PATCH route validation.
-// Exercise type sets and rules below intentionally mirror the Zod schemas.
-// TODO(phase-0b): migrate to import { ExerciseSchema } from '../../packages/lesson-schema/dist/index.js'
-// once the validator script is converted to ESM or a dual CJS/ESM runner.
+// Fixture shape validation uses the same schema package as the lesson builder
+// and PATCH route. This script only adds fixture/catalog checks around it
+// (filename metadata, per-template bounds, and global duplicate IDs).
 
 const ALLOWED_LEGACY_EXERCISE_TYPES = new Set([
   "TRUE_FALSE",
@@ -561,10 +559,14 @@ function validateExercise(exercise, pathLabel, reporter, seenExerciseIds) {
       if (exercise.self_grading !== true) reporter.add(`${pathLabel}.self_grading`, "must be true");
       break;
     case "AUDIO_RECOGNITION":
-      assertString(exercise.audio_url, `${pathLabel}.audio_url`, reporter);
+      assertString(exercise.arabic_text, `${pathLabel}.arabic_text`, reporter);
+      assertOptionalString(exercise.audio_url, `${pathLabel}.audio_url`, reporter);
       if (assertArray(exercise.options, `${pathLabel}.options`, reporter, { exact: 4 })) {
-        exercise.options.forEach((option, index) => validateArabicText(option, `${pathLabel}.options[${index}]`, reporter));
+        exercise.options.forEach((option, index) => validateLocalizedText(option, `${pathLabel}.options[${index}]`, reporter));
         validateOptionIndex(exercise.correct_index, exercise.options, `${pathLabel}.correct_index`, reporter);
+      }
+      if (exercise.explanation_on_wrong !== undefined) {
+        validateLocalizedText(exercise.explanation_on_wrong, `${pathLabel}.explanation_on_wrong`, reporter);
       }
       break;
     case "WRITE_ARABIC":
@@ -685,6 +687,32 @@ function validateFixtureMeta(lesson, pathLabel, reporter, fileInfo) {
   }
 }
 
+function addSchemaErrors(schemaError, pathLabel, reporter) {
+  for (const issue of schemaError.issues) {
+    const issuePath = issue.path.length > 0 ? `${pathLabel}.${issue.path.join(".")}` : pathLabel;
+    reporter.add(issuePath, issue.message);
+  }
+}
+
+function trackExerciseIds(exercises, pathLabel, reporter, globalState) {
+  const seenExerciseIds = new Set();
+  exercises.forEach((exercise, index) => {
+    const exercisePath = `${pathLabel}.exercises[${index}]`;
+    const id = exercise?.id;
+    if (!isNonEmptyString(id)) return;
+    if (seenExerciseIds.has(id)) {
+      reporter.add(`${exercisePath}.id`, `duplicates exercise id "${id}"`);
+      return;
+    }
+    seenExerciseIds.add(id);
+    if (globalState.exerciseIds.has(id)) {
+      reporter.add(`${pathLabel}.exercises`, `exercise id "${id}" is reused in another fixture`);
+      return;
+    }
+    globalState.exerciseIds.add(id);
+  });
+}
+
 function validateLessonFixture(fileName, lesson, reporter, globalState) {
   const pathLabel = fileName;
   const match = fileName.match(FIXTURE_FILE_RE);
@@ -697,12 +725,8 @@ function validateLessonFixture(fileName, lesson, reporter, globalState) {
   }
 
   if (!assertObject(lesson, pathLabel, reporter)) return;
-  if (lesson.schema_version !== "1.0") reporter.add(`${pathLabel}.schema_version`, 'must be "1.0"');
-  if (!LESSON_TEMPLATES.has(lesson.template)) reporter.add(`${pathLabel}.template`, `must be one of ${Array.from(LESSON_TEMPLATES).join(", ")}`);
 
   validateFixtureMeta(lesson, pathLabel, reporter, fileInfo);
-  validateHook(lesson.hook, `${pathLabel}.hook`, reporter);
-  validateClose(lesson.close, `${pathLabel}.close`, reporter);
 
   const explicitId = lesson.id ?? lesson.lesson_id ?? lesson._meta?.id ?? lesson._meta?.lesson_id;
   const stableId = explicitId ?? fileInfo?.derivedId;
@@ -733,21 +757,20 @@ function validateLessonFixture(fileName, lesson, reporter, globalState) {
     globalState.chapterLessonKeys.add(`${lesson._meta.chapter_order}:${lesson._meta.lesson_order}`);
   }
 
+  const schemaResult = LessonContentSchema.safeParse(lesson);
+  if (!schemaResult.success) {
+    addSchemaErrors(schemaResult.error, pathLabel, reporter);
+    return;
+  }
+
   if (["STANDARD", "REVIEW"].includes(lesson.template)) {
     const discoverBounds = lesson.template === "REVIEW" ? { min: 2, max: 15 } : { min: 4, max: 15 };
-    if (assertArray(lesson.discover_cards, `${pathLabel}.discover_cards`, reporter, discoverBounds)) {
-      lesson.discover_cards.forEach((card, index) => validateDiscoverCard(card, `${pathLabel}.discover_cards[${index}]`, reporter));
-    }
+    assertArray(lesson.discover_cards, `${pathLabel}.discover_cards`, reporter, discoverBounds);
     const exerciseBounds = lesson.template === "REVIEW" ? { min: 5, max: 12 } : { min: 5, max: 10 };
     if (assertArray(lesson.exercises, `${pathLabel}.exercises`, reporter, exerciseBounds)) {
-      const seenExerciseIds = new Set();
-      lesson.exercises.forEach((exercise, index) => validateExercise(exercise, `${pathLabel}.exercises[${index}]`, reporter, seenExerciseIds));
-      for (const exerciseId of seenExerciseIds) {
-        if (globalState.exerciseIds.has(exerciseId)) reporter.add(`${pathLabel}.exercises`, `exercise id "${exerciseId}" is reused in another fixture`);
-        globalState.exerciseIds.add(exerciseId);
-      }
+      trackExerciseIds(lesson.exercises, pathLabel, reporter, globalState);
     }
-    validateReveal(lesson.reveal, `${pathLabel}.reveal`, reporter);
+    if (lesson.reveal === undefined) reporter.add(`${pathLabel}.reveal`, `${lesson.template} lessons must include reveal`);
     if (lesson.spoken_phrases !== undefined) reporter.add(`${pathLabel}.spoken_phrases`, `${lesson.template} lessons must not include spoken_phrases`);
   }
 
@@ -756,21 +779,16 @@ function validateLessonFixture(fileName, lesson, reporter, globalState) {
     if (lesson.discover_cards !== undefined) reporter.add(`${pathLabel}.discover_cards`, "VERB_PATTERN lessons use conjugation_table, not discover_cards");
     const vpExerciseBounds = { min: 4, max: 10 };
     if (assertArray(lesson.exercises, `${pathLabel}.exercises`, reporter, vpExerciseBounds)) {
-      const seenExerciseIds = new Set();
-      lesson.exercises.forEach((exercise, index) => validateExercise(exercise, `${pathLabel}.exercises[${index}]`, reporter, seenExerciseIds));
-      for (const exerciseId of seenExerciseIds) {
-        if (globalState.exerciseIds.has(exerciseId)) reporter.add(`${pathLabel}.exercises`, `exercise id "${exerciseId}" is reused in another fixture`);
-        globalState.exerciseIds.add(exerciseId);
-      }
+      trackExerciseIds(lesson.exercises, pathLabel, reporter, globalState);
     }
-    validateReveal(lesson.reveal, `${pathLabel}.reveal`, reporter);
-    validateConjugationTable(lesson.conjugation_table, `${pathLabel}.conjugation_table`, reporter);
+    if (lesson.reveal === undefined) reporter.add(`${pathLabel}.reveal`, "VERB_PATTERN lessons must include reveal");
+    if (lesson.conjugation_table === undefined) reporter.add(`${pathLabel}.conjugation_table`, "VERB_PATTERN lessons must include conjugation_table");
   } else if (lesson.conjugation_table !== undefined) {
     reporter.add(`${pathLabel}.conjugation_table`, "only VERB_PATTERN lessons may include conjugation_table");
   }
 
   if (lesson.template === "SPOKEN_PHRASES") {
-    validateSpokenPhrases(lesson.spoken_phrases, `${pathLabel}.spoken_phrases`, reporter);
+    if (lesson.spoken_phrases === undefined) reporter.add(`${pathLabel}.spoken_phrases`, "SPOKEN_PHRASES lessons must include spoken_phrases");
     for (const field of ["discover_cards", "exercises", "reveal", "conjugation_table"]) {
       if (lesson[field] !== undefined) reporter.add(`${pathLabel}.${field}`, "SPOKEN_PHRASES lessons must not include this beat");
     }

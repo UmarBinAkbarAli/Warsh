@@ -44,7 +44,7 @@ Main goal right now:
 | W-OPS-002 | Operations | Deploy no-cache health route fix | DONE | P1 | None | Deployed to Vercel production 2026-06-01; live endpoint returns `Cache-Control: no-store, max-age=0` and fresh timestamps | Local code change |
 | W-STORE-001 | Google Play | Track closed testing approval status | IN_PROGRESS | P0 | Check Play Console status during daily review | Waiting on Google review window | `progress.md` |
 | W-STORE-002 | Google Play | Build/upload AAB if Play Console requires bundle format | NEXT | P0 | Confirm required artifact type, then build AAB | Depends on Play Console flow | `progress.md` |
-| W-STORE-003 | Google Play | Configure IAP products: `warsh_monthly`, `warsh_annual` | BLOCKED | P0 | Set products once console allows | Blocked until Play setup approval/unlock | `warsh-spec-10` |
+| W-STORE-003 | Google Play | Configure IAP products: `warsh_monthly`, `warsh_yearly` | DONE | P0 | Products created in Play Console 2026-06-04 | Code updated from `warsh_annual` → `warsh_yearly` to match | `warsh-spec-10` |
 | W-STORE-004 | Google Play | Configure RTDN webhook | BLOCKED | P1 | Point RTDN to `POST /api/webhooks/google` | Blocked until Play Console setup | `progress.md` |
 | W-STORE-005 | Monetization QA | Run sandbox purchase and restore tests | BLOCKED | P0 | Test monthly/annual purchase and restore | Depends on IAP products and credentials | `progress.md` |
 | W-DOM-001 | Domain | Purchase production domain, ideally `warsh.app` if available | NEXT | P1 | Check availability and buy chosen domain | User decision/payment needed | `warsh-beta-progress-report.md` |

@@ -161,6 +161,36 @@ export async function getAvailableIapPurchases() {
   return IAP.getAvailablePurchases();
 }
 
+export async function requestConsumablePurchase(productId: string) {
+  const available = await connectIap();
+  const IAP = await getIapModule();
+
+  if (!available || !IAP) {
+    throw new IapUnavailableError();
+  }
+
+  return IAP.requestPurchase({
+    type: "in-app",
+    request: {
+      apple: { sku: productId },
+      google: { skus: [productId] },
+    },
+  });
+}
+
+export async function finishConsumableAndroidPurchase(token: string) {
+  if (Platform.OS !== "android") return;
+  const available = await connectIap();
+  const IAP = await getIapModule();
+  if (!available || !IAP) return;
+  // Tell the billing library the consumable is done so it's available to buy again
+  try {
+    await (IAP as any).consumePurchaseAndroid({ token });
+  } catch {
+    await (IAP as any).acknowledgePurchaseAndroid(token).catch(() => {});
+  }
+}
+
 export async function acknowledgeAndroidPurchase(token: string) {
   if (Platform.OS !== "android") {
     return;

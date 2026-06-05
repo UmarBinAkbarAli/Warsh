@@ -98,8 +98,9 @@ export const ShadowRepeatExerciseSchema = ExerciseBaseSchema.extend({
 // 9. AUDIO_RECOGNITION
 export const AudioRecognitionExerciseSchema = ExerciseBaseSchema.extend({
   type: z.literal("AUDIO_RECOGNITION"),
-  audio_url: z.string(),
-  options: z.array(ArabicTextSchema).length(4),
+  arabic_text: z.string().min(1),
+  audio_url: z.string().optional(),
+  options: z.array(z.object({ en: z.string().min(1), ur: z.string().optional() })).length(4),
   correct_index: z.number().int().min(0).max(3),
 });
 

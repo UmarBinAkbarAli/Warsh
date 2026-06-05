@@ -39,7 +39,8 @@ export const DiscoverCardSchema = z.discriminatedUnion("type", [
   // CONTRAST
   z.object({
     type: z.literal("CONTRAST"),
-    concept: ConceptSchema,
+    concept: ConceptSchema.optional(),
+    text: ArabicTextSchema.optional(),
     explanation: ExplanationSchema.optional(),
     image_url: z.string().optional(),
     audio_url: z.string().optional(),
@@ -49,11 +50,29 @@ export const DiscoverCardSchema = z.discriminatedUnion("type", [
   // AYAH_PREVIEW
   z.object({
     type: z.literal("AYAH_PREVIEW"),
-    concept: ConceptSchema,
+    concept: ConceptSchema.optional(),
+    text: ArabicTextSchema.optional(),
     explanation: ExplanationSchema.optional(),
     image_url: z.string().optional(),
     audio_url: z.string().optional(),
-    examples: z.array(ArabicTextSchema).min(1),
+    examples: z.array(ArabicTextSchema).min(1).optional(),
+    introduces_vocab: VocabRefSchema.optional(),
+  }),
+  // Legacy/player-supported card used by existing fixtures.
+  z.object({
+    type: z.literal("GRAMMAR_NOTE"),
+    title: ConceptSchema,
+    body: ExplanationSchema,
+    image_url: z.string().optional(),
+    audio_url: z.string().optional(),
+  }),
+  // Legacy/player-supported card used by existing fixtures.
+  z.object({
+    type: z.literal("SENTENCE"),
+    text: ArabicTextSchema,
+    explanation: ExplanationSchema.optional(),
+    image_url: z.string().optional(),
+    audio_url: z.string().optional(),
     introduces_vocab: VocabRefSchema.optional(),
   }),
 ]);

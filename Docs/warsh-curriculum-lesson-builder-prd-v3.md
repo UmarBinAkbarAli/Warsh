@@ -421,7 +421,14 @@ Each filled object becomes the return value of the corresponding starter-object 
 
 ### 8.1 Layout
 
-Sections: Lesson Metadata, Hook, Discover Cards, Practice Exercises, Reveal, Close, Advanced JSON. Raw JSON textarea remains available but is no longer the only editing method.
+**Lesson Stepper (within-chapter navigation):**
+Above the Lesson Builder, a horizontal lesson tab bar shows all lessons in the selected chapter. Each tab displays: lesson number, English title, Arabic title. Tabs are clickable — clicking a tab loads that lesson's content into the builder. The active tab is visually distinct (highlighted background/border). When switching lessons with unsaved changes, a confirmation prompt appears.
+
+**Add lesson:** "+ Lesson" button at the end of the tab bar. Opens a dialog to enter English title, Arabic title, and template type. On confirm, calls `POST /api/admin/chapters/:chapterId/lessons` and inserts the new lesson after the last position, then selects it. If the call fails, shows the error.
+
+**Delete lesson:** "×" button on each tab (visible on hover or always visible for clarity). Requires confirmation showing lesson title and order number. On confirm, calls `DELETE /api/admin/lessons/:id` and removes the tab. If the lesson is the last one in the chapter, the delete is blocked with a warning ("A chapter must have at least one lesson"). After successful deletion, the previous (or next) lesson is auto-selected.
+
+**Layout order:** Chapter selector → Lesson stepper → Lesson Metadata → Hook → Discover Cards → Practice Exercises → Reveal → Close → Advanced JSON. Raw JSON textarea remains available but is no longer the only editing method.
 
 **v1 editability:** Discover Cards and Practice Exercises are fully editable. Hook / Reveal / Close are display-only in v1 (rendered read-only from the parsed content) and become editable in a later phase. They are still preserved on save regardless.
 
@@ -500,12 +507,22 @@ Existing admin write protection. Only authorized admins save; read-only viewing 
 
 ## 12. UX
 
-Dense and practical, not marketing-style. Author always knows which lesson is open; unsaved changes are obvious; explicit add/edit/duplicate/delete/move buttons; forms show only fields for the selected type; Arabic inputs are RTL; long cards collapse; validation points to the exact card/exercise and field; save disabled or warned on blocking errors. Layout: left sidebar (chapters/lessons), main area (builder sections), inline panel (selected card/exercise form), status area (validation + save).
+Dense and practical, not marketing-style. Author always knows which chapter and which lesson is open; lesson stepper clearly shows lesson number, English title, and Arabic title on each tab; unsaved changes are obvious; explicit add/edit/duplicate/delete/move buttons; forms show only fields for the selected type; Arabic inputs are RTL; long cards collapse; validation points to the exact card/exercise and field; save disabled or warned on blocking errors.
+
+**Within-chapter lesson navigation:** The lesson stepper bar is the primary way to switch between lessons in the same chapter. It sits directly below the chapter selector, above the lesson builder. Clicking a tab loads that lesson immediately. Tabs display: `Lesson N — "Title" / "Arabic title"`. Active tab is highlighted. Hovering (or always showing) the "×" button on each tab allows deletion. "+ Lesson" button at the end appends a new lesson.
+
+**Unsaved-changes guard:** Switching lessons with dirty state (unsaved discover cards or exercises) prompts the author to save or discard before switching.
+
+**Add lesson UX:** Dialog with English title, Arabic title, template selector. Primary "Add" button, "Cancel" secondary. Dialog closes on success and auto-selects the new lesson.
+
+**Delete lesson UX:** Confirmation dialog showing "Delete Lesson N: [title]? This cannot be undone." Blocked if it would leave the chapter empty. On confirm, API call, tab removed, adjacent lesson selected.
+
+Layout: chapter selector → lesson stepper (tabs + add + delete) → main area (builder sections) → inline panel (selected card/exercise form) → status area (validation + save).
 
 ## 13. Revised Rollout
 
 - **Phase 0 - Shared schema package (prerequisite):** author Zod schemas as the source; infer + export TS types and re-export them from the duplicate schema files (`warsh-backend/lib/content-schema.ts`, `Docs/warsh-content-schema.ts`) instead of hand-maintaining them; ship a dual ESM/CJS build; starter-object factory; formConfig registry with `playerSupported` flags; migrate `validate-curriculum.cjs` to require the compiled package (build it before the validator runs in CI); add `Lesson.updatedAt` with `@default(now())` backfill; fill Section 7 canonical objects; schema unit tests over existing fixtures.
-- **Phase 1 - Builder foundation:** parse content into structured state (lenient); show Hook/Discover/Exercises/Reveal/Close (Hook/Reveal/Close read-only); keep raw JSON; round-trip preservation; dirty tracking; JSON + schema validation.
+- **Phase 1 - Builder foundation + lesson navigation:** parse content into structured state (lenient); show Hook/Discover/Exercises/Reveal/Close (Hook/Reveal/Close read-only); keep raw JSON; round-trip preservation; dirty tracking; JSON + schema validation; **lesson stepper (within-chapter tab navigation)**; add lesson via `POST /api/admin/chapters/:chapterId/lessons`; delete lesson via `DELETE /api/admin/lessons/:id` (blocked if last lesson in chapter); unsaved-changes guard when switching lessons.
 - **Phase 2 - Discover card builder:** list + add/edit/delete/duplicate/move; all 5 card types; reusable Arabic editor with character-set guards.
 - **Phase 3 - Practice exercise builder (5 core types):** `TRUE_FALSE`, `TAP_TRANSLATION`, `FILL_BLANK`, `MATCHING`, `BUILD_SENTENCE`; ID stability + backend-confirmed global uniqueness.
 - **Phase 4 - Validation surfacing:** frontend + backend wired to shared schema; "Validate lesson" button; `409` concurrency handling; blocking vs warning UX.
@@ -517,6 +534,9 @@ Dense and practical, not marketing-style. Author always knows which lesson is op
 - `@warsh/lesson-schema` exists, is the source of types (TS inferred from Zod), and is imported by backend, seeds, dashboard, and the fixture validator.
 - All existing fixture lessons either validate or are listed as known lenient-parse exceptions.
 - Admin can open a lesson; discover cards and exercises show as structured lists.
+- Admin can navigate between lessons within the same chapter via the lesson stepper; switching with unsaved changes prompts to save or discard.
+- Admin can add a new lesson to a chapter ("+ Lesson" button); it appears in the stepper and is immediately selectable.
+- Admin can delete a lesson ("×" on tab); deletion is blocked if it would leave the chapter with zero lessons; successful deletion selects the adjacent lesson.
 - Admin can add/edit/delete/duplicate/reorder discover cards without raw JSON.
 - Admin can add/edit/delete/duplicate/reorder the 5 v1 exercise types without raw JSON; duplicates get fresh IDs; existing IDs never change; the backend rejects id collisions while accepting an exercise's own unchanged id.
 - The Add picker only offers the approved v1 authoring set; and a `playerSupported: false` type introduced via raw JSON is rejected by the backend on save (unchanged pre-existing ones pass with a warning).

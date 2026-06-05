@@ -1,6 +1,6 @@
 import crypto from "crypto";
 
-const VALID_PRODUCT_IDS = new Set(["warsh_monthly", "warsh_annual"]);
+const VALID_PRODUCT_IDS = new Set(["warsh_monthly", "warsh_yearly"]);
 const GOOGLE_ANDROID_PUBLISHER_SCOPE = "https://www.googleapis.com/auth/androidpublisher";
 const GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token";
 const APPLE_PRODUCTION_VERIFY_URL = "https://buy.itunes.apple.com/verifyReceipt";
@@ -63,6 +63,48 @@ interface AppleReceiptResponse {
     in_app?: AppleReceiptTransaction[];
   };
   latest_receipt_info?: AppleReceiptTransaction[] | AppleReceiptTransaction;
+}
+
+export async function verifyGooglePlayConsumable(productId: string, purchaseToken: string): Promise<void> {
+  const token = purchaseToken.trim();
+  if (!token) throw new StoreVerificationError("Missing Google Play purchase token.", 400, "bad_request");
+
+  const packageName = process.env.GOOGLE_PLAY_PACKAGE_NAME?.trim();
+  if (!packageName) throw new StoreVerificationError("Google Play package name is not configured.", 503, "store_not_configured");
+
+  const accessToken = await getGoogleAccessToken();
+
+  const verifyUrl =
+    `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodeURIComponent(packageName)}` +
+    `/purchases/products/${encodeURIComponent(productId)}/tokens/${encodeURIComponent(token)}`;
+
+  const verifyResponse = await fetch(verifyUrl, {
+    method: "GET",
+    headers: { Authorization: `Bearer ${accessToken}`, Accept: "application/json" },
+  });
+
+  if (!verifyResponse.ok) {
+    throw new StoreVerificationError("Google Play rejected the purchase token.", 400, "invalid_purchase");
+  }
+
+  const purchase = (await verifyResponse.json()) as { purchaseState?: number };
+  if (purchase.purchaseState !== 0) {
+    throw new StoreVerificationError("Google Play purchase is not in a purchased state.", 400, "invalid_purchase");
+  }
+
+  // Consume the token server-side so the product can be purchased again
+  const consumeUrl =
+    `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodeURIComponent(packageName)}` +
+    `/purchases/products/${encodeURIComponent(productId)}/tokens/${encodeURIComponent(token)}:consume`;
+
+  const consumeResponse = await fetch(consumeUrl, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${accessToken}`, "Content-Length": "0" },
+  });
+
+  if (!consumeResponse.ok) {
+    console.warn(`[noor-pack] Could not consume Google Play token ${token}: HTTP ${consumeResponse.status}`);
+  }
 }
 
 export async function verifyStoreSubscription(input: VerifySubscriptionInput): Promise<VerifiedStoreSubscription> {

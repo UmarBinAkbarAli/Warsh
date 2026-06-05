@@ -33,7 +33,7 @@ async function sendResetEmail(toEmail: string, resetUrl: string): Promise<void> 
     </div>
   `;
 
-  await fetch("https://api.resend.com/emails", {
+  const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
       "Authorization": `Bearer ${apiKey}`,
@@ -46,6 +46,11 @@ async function sendResetEmail(toEmail: string, resetUrl: string): Promise<void> 
       html,
     }),
   });
+
+  if (!res.ok) {
+    const body = await res.text().catch(() => "(unreadable)");
+    console.error(`[forgot-password] Resend API error ${res.status}: ${body}`);
+  }
 }
 
 export async function POST(request: Request) {
@@ -72,7 +77,7 @@ export async function POST(request: Request) {
       { expiresIn: "1h" }
     );
 
-    const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://warsh-backend.vercel.app";
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://api.warsh.app";
     const resetUrl = `${appUrl}/reset-password?token=${token}`;
 
     // Fire and forget — do not block response on email delivery

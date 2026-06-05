@@ -16,6 +16,7 @@ export async function GET() {
           titleAr: true,
           template: true,
           xpReward: true,
+          updatedAt: true,
           content: true,
         },
       },

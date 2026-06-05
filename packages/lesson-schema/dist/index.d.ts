@@ -552,7 +552,7 @@ declare const DiscoverCardSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     } | undefined;
 }>, z.ZodObject<{
     type: z.ZodLiteral<"CONTRAST">;
-    concept: z.ZodObject<{
+    concept: z.ZodOptional<z.ZodObject<{
         en: z.ZodString;
         ar: z.ZodOptional<z.ZodString>;
         ur: z.ZodOptional<z.ZodString>;
@@ -564,7 +564,26 @@ declare const DiscoverCardSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         en: string;
         ar?: string | undefined;
         ur?: string | undefined;
-    }>;
+    }>>;
+    text: z.ZodOptional<z.ZodObject<{
+        ar: z.ZodString;
+        ar_plain: z.ZodString;
+        translit: z.ZodString;
+        en: z.ZodString;
+        ur: z.ZodOptional<z.ZodString>;
+    }, "strip", z.ZodTypeAny, {
+        ar: string;
+        ar_plain: string;
+        translit: string;
+        en: string;
+        ur?: string | undefined;
+    }, {
+        ar: string;
+        ar_plain: string;
+        translit: string;
+        en: string;
+        ur?: string | undefined;
+    }>>;
     explanation: z.ZodOptional<z.ZodObject<{
         en: z.ZodString;
         ur: z.ZodOptional<z.ZodString>;
@@ -615,12 +634,14 @@ declare const DiscoverCardSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         en: string;
         ur?: string | undefined;
     }[];
-    concept: {
-        en: string;
-        ar?: string | undefined;
-        ur?: string | undefined;
-    };
     audio_url?: string | undefined;
+    text?: {
+        ar: string;
+        ar_plain: string;
+        translit: string;
+        en: string;
+        ur?: string | undefined;
+    } | undefined;
     image_url?: string | undefined;
     explanation?: {
         en: string;
@@ -629,6 +650,11 @@ declare const DiscoverCardSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     introduces_vocab?: {
         ar_plain: string;
         word_id?: string | undefined;
+    } | undefined;
+    concept?: {
+        en: string;
+        ar?: string | undefined;
+        ur?: string | undefined;
     } | undefined;
 }, {
     type: "CONTRAST";
@@ -639,12 +665,14 @@ declare const DiscoverCardSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         en: string;
         ur?: string | undefined;
     }[];
-    concept: {
-        en: string;
-        ar?: string | undefined;
-        ur?: string | undefined;
-    };
     audio_url?: string | undefined;
+    text?: {
+        ar: string;
+        ar_plain: string;
+        translit: string;
+        en: string;
+        ur?: string | undefined;
+    } | undefined;
     image_url?: string | undefined;
     explanation?: {
         en: string;
@@ -653,10 +681,15 @@ declare const DiscoverCardSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     introduces_vocab?: {
         ar_plain: string;
         word_id?: string | undefined;
+    } | undefined;
+    concept?: {
+        en: string;
+        ar?: string | undefined;
+        ur?: string | undefined;
     } | undefined;
 }>, z.ZodObject<{
     type: z.ZodLiteral<"AYAH_PREVIEW">;
-    concept: z.ZodObject<{
+    concept: z.ZodOptional<z.ZodObject<{
         en: z.ZodString;
         ar: z.ZodOptional<z.ZodString>;
         ur: z.ZodOptional<z.ZodString>;
@@ -668,20 +701,8 @@ declare const DiscoverCardSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         en: string;
         ar?: string | undefined;
         ur?: string | undefined;
-    }>;
-    explanation: z.ZodOptional<z.ZodObject<{
-        en: z.ZodString;
-        ur: z.ZodOptional<z.ZodString>;
-    }, "strip", z.ZodTypeAny, {
-        en: string;
-        ur?: string | undefined;
-    }, {
-        en: string;
-        ur?: string | undefined;
     }>>;
-    image_url: z.ZodOptional<z.ZodString>;
-    audio_url: z.ZodOptional<z.ZodString>;
-    examples: z.ZodArray<z.ZodObject<{
+    text: z.ZodOptional<z.ZodObject<{
         ar: z.ZodString;
         ar_plain: z.ZodString;
         translit: z.ZodString;
@@ -699,7 +720,38 @@ declare const DiscoverCardSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         translit: string;
         en: string;
         ur?: string | undefined;
-    }>, "many">;
+    }>>;
+    explanation: z.ZodOptional<z.ZodObject<{
+        en: z.ZodString;
+        ur: z.ZodOptional<z.ZodString>;
+    }, "strip", z.ZodTypeAny, {
+        en: string;
+        ur?: string | undefined;
+    }, {
+        en: string;
+        ur?: string | undefined;
+    }>>;
+    image_url: z.ZodOptional<z.ZodString>;
+    audio_url: z.ZodOptional<z.ZodString>;
+    examples: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        ar: z.ZodString;
+        ar_plain: z.ZodString;
+        translit: z.ZodString;
+        en: z.ZodString;
+        ur: z.ZodOptional<z.ZodString>;
+    }, "strip", z.ZodTypeAny, {
+        ar: string;
+        ar_plain: string;
+        translit: string;
+        en: string;
+        ur?: string | undefined;
+    }, {
+        ar: string;
+        ar_plain: string;
+        translit: string;
+        en: string;
+        ur?: string | undefined;
+    }>, "many">>;
     introduces_vocab: z.ZodOptional<z.ZodObject<{
         word_id: z.ZodOptional<z.ZodString>;
         ar_plain: z.ZodString;
@@ -712,16 +764,169 @@ declare const DiscoverCardSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     }>>;
 }, "strip", z.ZodTypeAny, {
     type: "AYAH_PREVIEW";
-    examples: {
+    audio_url?: string | undefined;
+    text?: {
         ar: string;
         ar_plain: string;
         translit: string;
         en: string;
         ur?: string | undefined;
-    }[];
-    concept: {
+    } | undefined;
+    image_url?: string | undefined;
+    explanation?: {
+        en: string;
+        ur?: string | undefined;
+    } | undefined;
+    examples?: {
+        ar: string;
+        ar_plain: string;
+        translit: string;
+        en: string;
+        ur?: string | undefined;
+    }[] | undefined;
+    introduces_vocab?: {
+        ar_plain: string;
+        word_id?: string | undefined;
+    } | undefined;
+    concept?: {
         en: string;
         ar?: string | undefined;
+        ur?: string | undefined;
+    } | undefined;
+}, {
+    type: "AYAH_PREVIEW";
+    audio_url?: string | undefined;
+    text?: {
+        ar: string;
+        ar_plain: string;
+        translit: string;
+        en: string;
+        ur?: string | undefined;
+    } | undefined;
+    image_url?: string | undefined;
+    explanation?: {
+        en: string;
+        ur?: string | undefined;
+    } | undefined;
+    examples?: {
+        ar: string;
+        ar_plain: string;
+        translit: string;
+        en: string;
+        ur?: string | undefined;
+    }[] | undefined;
+    introduces_vocab?: {
+        ar_plain: string;
+        word_id?: string | undefined;
+    } | undefined;
+    concept?: {
+        en: string;
+        ar?: string | undefined;
+        ur?: string | undefined;
+    } | undefined;
+}>, z.ZodObject<{
+    type: z.ZodLiteral<"GRAMMAR_NOTE">;
+    title: z.ZodObject<{
+        en: z.ZodString;
+        ar: z.ZodOptional<z.ZodString>;
+        ur: z.ZodOptional<z.ZodString>;
+    }, "strip", z.ZodTypeAny, {
+        en: string;
+        ar?: string | undefined;
+        ur?: string | undefined;
+    }, {
+        en: string;
+        ar?: string | undefined;
+        ur?: string | undefined;
+    }>;
+    body: z.ZodObject<{
+        en: z.ZodString;
+        ur: z.ZodOptional<z.ZodString>;
+    }, "strip", z.ZodTypeAny, {
+        en: string;
+        ur?: string | undefined;
+    }, {
+        en: string;
+        ur?: string | undefined;
+    }>;
+    image_url: z.ZodOptional<z.ZodString>;
+    audio_url: z.ZodOptional<z.ZodString>;
+}, "strip", z.ZodTypeAny, {
+    type: "GRAMMAR_NOTE";
+    title: {
+        en: string;
+        ar?: string | undefined;
+        ur?: string | undefined;
+    };
+    body: {
+        en: string;
+        ur?: string | undefined;
+    };
+    audio_url?: string | undefined;
+    image_url?: string | undefined;
+}, {
+    type: "GRAMMAR_NOTE";
+    title: {
+        en: string;
+        ar?: string | undefined;
+        ur?: string | undefined;
+    };
+    body: {
+        en: string;
+        ur?: string | undefined;
+    };
+    audio_url?: string | undefined;
+    image_url?: string | undefined;
+}>, z.ZodObject<{
+    type: z.ZodLiteral<"SENTENCE">;
+    text: z.ZodObject<{
+        ar: z.ZodString;
+        ar_plain: z.ZodString;
+        translit: z.ZodString;
+        en: z.ZodString;
+        ur: z.ZodOptional<z.ZodString>;
+    }, "strip", z.ZodTypeAny, {
+        ar: string;
+        ar_plain: string;
+        translit: string;
+        en: string;
+        ur?: string | undefined;
+    }, {
+        ar: string;
+        ar_plain: string;
+        translit: string;
+        en: string;
+        ur?: string | undefined;
+    }>;
+    explanation: z.ZodOptional<z.ZodObject<{
+        en: z.ZodString;
+        ur: z.ZodOptional<z.ZodString>;
+    }, "strip", z.ZodTypeAny, {
+        en: string;
+        ur?: string | undefined;
+    }, {
+        en: string;
+        ur?: string | undefined;
+    }>>;
+    image_url: z.ZodOptional<z.ZodString>;
+    audio_url: z.ZodOptional<z.ZodString>;
+    introduces_vocab: z.ZodOptional<z.ZodObject<{
+        word_id: z.ZodOptional<z.ZodString>;
+        ar_plain: z.ZodString;
+    }, "strip", z.ZodTypeAny, {
+        ar_plain: string;
+        word_id?: string | undefined;
+    }, {
+        ar_plain: string;
+        word_id?: string | undefined;
+    }>>;
+}, "strip", z.ZodTypeAny, {
+    type: "SENTENCE";
+    text: {
+        ar: string;
+        ar_plain: string;
+        translit: string;
+        en: string;
         ur?: string | undefined;
     };
     audio_url?: string | undefined;
@@ -735,17 +940,12 @@ declare const DiscoverCardSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
         word_id?: string | undefined;
     } | undefined;
 }, {
-    type: "AYAH_PREVIEW";
-    examples: {
+    type: "SENTENCE";
+    text: {
         ar: string;
         ar_plain: string;
         translit: string;
         en: string;
-        ur?: string | undefined;
-    }[];
-    concept: {
-        en: string;
-        ar?: string | undefined;
         ur?: string | undefined;
     };
     audio_url?: string | undefined;
@@ -1547,39 +1747,29 @@ declare const AudioRecognitionExerciseSchema: z.ZodObject<{
     }>>;
 } & {
     type: z.ZodLiteral<"AUDIO_RECOGNITION">;
-    audio_url: z.ZodString;
+    arabic_text: z.ZodString;
+    audio_url: z.ZodOptional<z.ZodString>;
     options: z.ZodArray<z.ZodObject<{
-        ar: z.ZodString;
-        ar_plain: z.ZodString;
-        translit: z.ZodString;
         en: z.ZodString;
         ur: z.ZodOptional<z.ZodString>;
     }, "strip", z.ZodTypeAny, {
-        ar: string;
-        ar_plain: string;
-        translit: string;
         en: string;
         ur?: string | undefined;
     }, {
-        ar: string;
-        ar_plain: string;
-        translit: string;
         en: string;
         ur?: string | undefined;
     }>, "many">;
     correct_index: z.ZodNumber;
 }, "strip", z.ZodTypeAny, {
     options: {
-        ar: string;
-        ar_plain: string;
-        translit: string;
         en: string;
         ur?: string | undefined;
     }[];
     type: "AUDIO_RECOGNITION";
-    audio_url: string;
     id: string;
     correct_index: number;
+    arabic_text: string;
+    audio_url?: string | undefined;
     xp_value?: number | undefined;
     explanation_on_wrong?: {
         en: string;
@@ -1587,16 +1777,14 @@ declare const AudioRecognitionExerciseSchema: z.ZodObject<{
     } | undefined;
 }, {
     options: {
-        ar: string;
-        ar_plain: string;
-        translit: string;
         en: string;
         ur?: string | undefined;
     }[];
     type: "AUDIO_RECOGNITION";
-    audio_url: string;
     id: string;
     correct_index: number;
+    arabic_text: string;
+    audio_url?: string | undefined;
     xp_value?: number | undefined;
     explanation_on_wrong?: {
         en: string;
@@ -2834,39 +3022,29 @@ declare const ExerciseSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     }>>;
 } & {
     type: z.ZodLiteral<"AUDIO_RECOGNITION">;
-    audio_url: z.ZodString;
+    arabic_text: z.ZodString;
+    audio_url: z.ZodOptional<z.ZodString>;
     options: z.ZodArray<z.ZodObject<{
-        ar: z.ZodString;
-        ar_plain: z.ZodString;
-        translit: z.ZodString;
         en: z.ZodString;
         ur: z.ZodOptional<z.ZodString>;
     }, "strip", z.ZodTypeAny, {
-        ar: string;
-        ar_plain: string;
-        translit: string;
         en: string;
         ur?: string | undefined;
     }, {
-        ar: string;
-        ar_plain: string;
-        translit: string;
         en: string;
         ur?: string | undefined;
     }>, "many">;
     correct_index: z.ZodNumber;
 }, "strip", z.ZodTypeAny, {
     options: {
-        ar: string;
-        ar_plain: string;
-        translit: string;
         en: string;
         ur?: string | undefined;
     }[];
     type: "AUDIO_RECOGNITION";
-    audio_url: string;
     id: string;
     correct_index: number;
+    arabic_text: string;
+    audio_url?: string | undefined;
     xp_value?: number | undefined;
     explanation_on_wrong?: {
         en: string;
@@ -2874,16 +3052,14 @@ declare const ExerciseSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<{
     } | undefined;
 }, {
     options: {
-        ar: string;
-        ar_plain: string;
-        translit: string;
         en: string;
         ur?: string | undefined;
     }[];
     type: "AUDIO_RECOGNITION";
-    audio_url: string;
     id: string;
     correct_index: number;
+    arabic_text: string;
+    audio_url?: string | undefined;
     xp_value?: number | undefined;
     explanation_on_wrong?: {
         en: string;
@@ -3807,7 +3983,7 @@ declare const LessonContentSchema: z.ZodObject<{
         } | undefined;
     }>, z.ZodObject<{
         type: z.ZodLiteral<"CONTRAST">;
-        concept: z.ZodObject<{
+        concept: z.ZodOptional<z.ZodObject<{
             en: z.ZodString;
             ar: z.ZodOptional<z.ZodString>;
             ur: z.ZodOptional<z.ZodString>;
@@ -3819,7 +3995,26 @@ declare const LessonContentSchema: z.ZodObject<{
             en: string;
             ar?: string | undefined;
             ur?: string | undefined;
-        }>;
+        }>>;
+        text: z.ZodOptional<z.ZodObject<{
+            ar: z.ZodString;
+            ar_plain: z.ZodString;
+            translit: z.ZodString;
+            en: z.ZodString;
+            ur: z.ZodOptional<z.ZodString>;
+        }, "strip", z.ZodTypeAny, {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }, {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }>>;
         explanation: z.ZodOptional<z.ZodObject<{
             en: z.ZodString;
             ur: z.ZodOptional<z.ZodString>;
@@ -3870,12 +4065,14 @@ declare const LessonContentSchema: z.ZodObject<{
             en: string;
             ur?: string | undefined;
         }[];
-        concept: {
-            en: string;
-            ar?: string | undefined;
-            ur?: string | undefined;
-        };
         audio_url?: string | undefined;
+        text?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
         image_url?: string | undefined;
         explanation?: {
             en: string;
@@ -3884,6 +4081,11 @@ declare const LessonContentSchema: z.ZodObject<{
         introduces_vocab?: {
             ar_plain: string;
             word_id?: string | undefined;
+        } | undefined;
+        concept?: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
         } | undefined;
     }, {
         type: "CONTRAST";
@@ -3894,12 +4096,14 @@ declare const LessonContentSchema: z.ZodObject<{
             en: string;
             ur?: string | undefined;
         }[];
-        concept: {
-            en: string;
-            ar?: string | undefined;
-            ur?: string | undefined;
-        };
         audio_url?: string | undefined;
+        text?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
         image_url?: string | undefined;
         explanation?: {
             en: string;
@@ -3908,10 +4112,15 @@ declare const LessonContentSchema: z.ZodObject<{
         introduces_vocab?: {
             ar_plain: string;
             word_id?: string | undefined;
+        } | undefined;
+        concept?: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
         } | undefined;
     }>, z.ZodObject<{
         type: z.ZodLiteral<"AYAH_PREVIEW">;
-        concept: z.ZodObject<{
+        concept: z.ZodOptional<z.ZodObject<{
             en: z.ZodString;
             ar: z.ZodOptional<z.ZodString>;
             ur: z.ZodOptional<z.ZodString>;
@@ -3923,20 +4132,8 @@ declare const LessonContentSchema: z.ZodObject<{
             en: string;
             ar?: string | undefined;
             ur?: string | undefined;
-        }>;
-        explanation: z.ZodOptional<z.ZodObject<{
-            en: z.ZodString;
-            ur: z.ZodOptional<z.ZodString>;
-        }, "strip", z.ZodTypeAny, {
-            en: string;
-            ur?: string | undefined;
-        }, {
-            en: string;
-            ur?: string | undefined;
         }>>;
-        image_url: z.ZodOptional<z.ZodString>;
-        audio_url: z.ZodOptional<z.ZodString>;
-        examples: z.ZodArray<z.ZodObject<{
+        text: z.ZodOptional<z.ZodObject<{
             ar: z.ZodString;
             ar_plain: z.ZodString;
             translit: z.ZodString;
@@ -3954,7 +4151,38 @@ declare const LessonContentSchema: z.ZodObject<{
             translit: string;
             en: string;
             ur?: string | undefined;
-        }>, "many">;
+        }>>;
+        explanation: z.ZodOptional<z.ZodObject<{
+            en: z.ZodString;
+            ur: z.ZodOptional<z.ZodString>;
+        }, "strip", z.ZodTypeAny, {
+            en: string;
+            ur?: string | undefined;
+        }, {
+            en: string;
+            ur?: string | undefined;
+        }>>;
+        image_url: z.ZodOptional<z.ZodString>;
+        audio_url: z.ZodOptional<z.ZodString>;
+        examples: z.ZodOptional<z.ZodArray<z.ZodObject<{
+            ar: z.ZodString;
+            ar_plain: z.ZodString;
+            translit: z.ZodString;
+            en: z.ZodString;
+            ur: z.ZodOptional<z.ZodString>;
+        }, "strip", z.ZodTypeAny, {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }, {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }>, "many">>;
         introduces_vocab: z.ZodOptional<z.ZodObject<{
             word_id: z.ZodOptional<z.ZodString>;
             ar_plain: z.ZodString;
@@ -3967,16 +4195,169 @@ declare const LessonContentSchema: z.ZodObject<{
         }>>;
     }, "strip", z.ZodTypeAny, {
         type: "AYAH_PREVIEW";
-        examples: {
+        audio_url?: string | undefined;
+        text?: {
             ar: string;
             ar_plain: string;
             translit: string;
             en: string;
             ur?: string | undefined;
-        }[];
-        concept: {
+        } | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        examples?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+        concept?: {
             en: string;
             ar?: string | undefined;
+            ur?: string | undefined;
+        } | undefined;
+    }, {
+        type: "AYAH_PREVIEW";
+        audio_url?: string | undefined;
+        text?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        examples?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+        concept?: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        } | undefined;
+    }>, z.ZodObject<{
+        type: z.ZodLiteral<"GRAMMAR_NOTE">;
+        title: z.ZodObject<{
+            en: z.ZodString;
+            ar: z.ZodOptional<z.ZodString>;
+            ur: z.ZodOptional<z.ZodString>;
+        }, "strip", z.ZodTypeAny, {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        }, {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        }>;
+        body: z.ZodObject<{
+            en: z.ZodString;
+            ur: z.ZodOptional<z.ZodString>;
+        }, "strip", z.ZodTypeAny, {
+            en: string;
+            ur?: string | undefined;
+        }, {
+            en: string;
+            ur?: string | undefined;
+        }>;
+        image_url: z.ZodOptional<z.ZodString>;
+        audio_url: z.ZodOptional<z.ZodString>;
+    }, "strip", z.ZodTypeAny, {
+        type: "GRAMMAR_NOTE";
+        title: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        };
+        body: {
+            en: string;
+            ur?: string | undefined;
+        };
+        audio_url?: string | undefined;
+        image_url?: string | undefined;
+    }, {
+        type: "GRAMMAR_NOTE";
+        title: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        };
+        body: {
+            en: string;
+            ur?: string | undefined;
+        };
+        audio_url?: string | undefined;
+        image_url?: string | undefined;
+    }>, z.ZodObject<{
+        type: z.ZodLiteral<"SENTENCE">;
+        text: z.ZodObject<{
+            ar: z.ZodString;
+            ar_plain: z.ZodString;
+            translit: z.ZodString;
+            en: z.ZodString;
+            ur: z.ZodOptional<z.ZodString>;
+        }, "strip", z.ZodTypeAny, {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }, {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }>;
+        explanation: z.ZodOptional<z.ZodObject<{
+            en: z.ZodString;
+            ur: z.ZodOptional<z.ZodString>;
+        }, "strip", z.ZodTypeAny, {
+            en: string;
+            ur?: string | undefined;
+        }, {
+            en: string;
+            ur?: string | undefined;
+        }>>;
+        image_url: z.ZodOptional<z.ZodString>;
+        audio_url: z.ZodOptional<z.ZodString>;
+        introduces_vocab: z.ZodOptional<z.ZodObject<{
+            word_id: z.ZodOptional<z.ZodString>;
+            ar_plain: z.ZodString;
+        }, "strip", z.ZodTypeAny, {
+            ar_plain: string;
+            word_id?: string | undefined;
+        }, {
+            ar_plain: string;
+            word_id?: string | undefined;
+        }>>;
+    }, "strip", z.ZodTypeAny, {
+        type: "SENTENCE";
+        text: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
             ur?: string | undefined;
         };
         audio_url?: string | undefined;
@@ -3990,17 +4371,12 @@ declare const LessonContentSchema: z.ZodObject<{
             word_id?: string | undefined;
         } | undefined;
     }, {
-        type: "AYAH_PREVIEW";
-        examples: {
+        type: "SENTENCE";
+        text: {
             ar: string;
             ar_plain: string;
             translit: string;
             en: string;
-            ur?: string | undefined;
-        }[];
-        concept: {
-            en: string;
-            ar?: string | undefined;
             ur?: string | undefined;
         };
         audio_url?: string | undefined;
@@ -4789,39 +5165,29 @@ declare const LessonContentSchema: z.ZodObject<{
         }>>;
     } & {
         type: z.ZodLiteral<"AUDIO_RECOGNITION">;
-        audio_url: z.ZodString;
+        arabic_text: z.ZodString;
+        audio_url: z.ZodOptional<z.ZodString>;
         options: z.ZodArray<z.ZodObject<{
-            ar: z.ZodString;
-            ar_plain: z.ZodString;
-            translit: z.ZodString;
             en: z.ZodString;
             ur: z.ZodOptional<z.ZodString>;
         }, "strip", z.ZodTypeAny, {
-            ar: string;
-            ar_plain: string;
-            translit: string;
             en: string;
             ur?: string | undefined;
         }, {
-            ar: string;
-            ar_plain: string;
-            translit: string;
             en: string;
             ur?: string | undefined;
         }>, "many">;
         correct_index: z.ZodNumber;
     }, "strip", z.ZodTypeAny, {
         options: {
-            ar: string;
-            ar_plain: string;
-            translit: string;
             en: string;
             ur?: string | undefined;
         }[];
         type: "AUDIO_RECOGNITION";
-        audio_url: string;
         id: string;
         correct_index: number;
+        arabic_text: string;
+        audio_url?: string | undefined;
         xp_value?: number | undefined;
         explanation_on_wrong?: {
             en: string;
@@ -4829,16 +5195,14 @@ declare const LessonContentSchema: z.ZodObject<{
         } | undefined;
     }, {
         options: {
-            ar: string;
-            ar_plain: string;
-            translit: string;
             en: string;
             ur?: string | undefined;
         }[];
         type: "AUDIO_RECOGNITION";
-        audio_url: string;
         id: string;
         correct_index: number;
+        arabic_text: string;
+        audio_url?: string | undefined;
         xp_value?: number | undefined;
         explanation_on_wrong?: {
             en: string;
@@ -5770,12 +6134,14 @@ declare const LessonContentSchema: z.ZodObject<{
             en: string;
             ur?: string | undefined;
         }[];
-        concept: {
-            en: string;
-            ar?: string | undefined;
-            ur?: string | undefined;
-        };
         audio_url?: string | undefined;
+        text?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
         image_url?: string | undefined;
         explanation?: {
             en: string;
@@ -5785,18 +6151,62 @@ declare const LessonContentSchema: z.ZodObject<{
             ar_plain: string;
             word_id?: string | undefined;
         } | undefined;
+        concept?: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        } | undefined;
     } | {
         type: "AYAH_PREVIEW";
-        examples: {
+        audio_url?: string | undefined;
+        text?: {
             ar: string;
             ar_plain: string;
             translit: string;
             en: string;
             ur?: string | undefined;
-        }[];
-        concept: {
+        } | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        examples?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+        concept?: {
             en: string;
             ar?: string | undefined;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "GRAMMAR_NOTE";
+        title: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        };
+        body: {
+            en: string;
+            ur?: string | undefined;
+        };
+        audio_url?: string | undefined;
+        image_url?: string | undefined;
+    } | {
+        type: "SENTENCE";
+        text: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
             ur?: string | undefined;
         };
         audio_url?: string | undefined;
@@ -5988,16 +6398,14 @@ declare const LessonContentSchema: z.ZodObject<{
         } | undefined;
     } | {
         options: {
-            ar: string;
-            ar_plain: string;
-            translit: string;
             en: string;
             ur?: string | undefined;
         }[];
         type: "AUDIO_RECOGNITION";
-        audio_url: string;
         id: string;
         correct_index: number;
+        arabic_text: string;
+        audio_url?: string | undefined;
         xp_value?: number | undefined;
         explanation_on_wrong?: {
             en: string;
@@ -6299,12 +6707,14 @@ declare const LessonContentSchema: z.ZodObject<{
             en: string;
             ur?: string | undefined;
         }[];
-        concept: {
-            en: string;
-            ar?: string | undefined;
-            ur?: string | undefined;
-        };
         audio_url?: string | undefined;
+        text?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
         image_url?: string | undefined;
         explanation?: {
             en: string;
@@ -6314,18 +6724,62 @@ declare const LessonContentSchema: z.ZodObject<{
             ar_plain: string;
             word_id?: string | undefined;
         } | undefined;
+        concept?: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        } | undefined;
     } | {
         type: "AYAH_PREVIEW";
-        examples: {
+        audio_url?: string | undefined;
+        text?: {
             ar: string;
             ar_plain: string;
             translit: string;
             en: string;
             ur?: string | undefined;
-        }[];
-        concept: {
+        } | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        examples?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+        concept?: {
             en: string;
             ar?: string | undefined;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "GRAMMAR_NOTE";
+        title: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        };
+        body: {
+            en: string;
+            ur?: string | undefined;
+        };
+        audio_url?: string | undefined;
+        image_url?: string | undefined;
+    } | {
+        type: "SENTENCE";
+        text: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
             ur?: string | undefined;
         };
         audio_url?: string | undefined;
@@ -6517,16 +6971,14 @@ declare const LessonContentSchema: z.ZodObject<{
         } | undefined;
     } | {
         options: {
-            ar: string;
-            ar_plain: string;
-            translit: string;
             en: string;
             ur?: string | undefined;
         }[];
         type: "AUDIO_RECOGNITION";
-        audio_url: string;
         id: string;
         correct_index: number;
+        arabic_text: string;
+        audio_url?: string | undefined;
         xp_value?: number | undefined;
         explanation_on_wrong?: {
             en: string;

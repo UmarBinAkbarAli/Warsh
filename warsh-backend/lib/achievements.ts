@@ -17,6 +17,8 @@ export const ACHIEVEMENT_KEYS = {
   PHRASES_10: "phrases_10",
   PHRASES_50: "phrases_50",
   PHRASES_100: "phrases_100",
+  PHRASES_250: "phrases_250",
+  PHRASES_500: "phrases_500",
 } as const;
 
 export const ACHIEVEMENTS_CATALOG = [
@@ -125,6 +127,20 @@ export const ACHIEVEMENTS_CATALOG = [
     icon: "mic-outline",
     xpReward: 50,
   },
+  {
+    key: ACHIEVEMENT_KEYS.PHRASES_250,
+    title: "مِئَتَا وَخَمْسُونَ جُمْلَة",
+    description: "Learn to say 250 phrases",
+    icon: "mic-outline",
+    xpReward: 100,
+  },
+  {
+    key: ACHIEVEMENT_KEYS.PHRASES_500,
+    title: "خَمْسُمِئَة جُمْلَة",
+    description: "Learn to say 500 phrases",
+    icon: "mic-outline",
+    xpReward: 200,
+  },
 ] as const;
 
 type AchievementCheckContext = {
@@ -181,6 +197,8 @@ export async function checkAndAwardAchievements(
     { key: ACHIEVEMENT_KEYS.PHRASES_10, met: (ctx.phrasesSpoken ?? 0) >= 10 },
     { key: ACHIEVEMENT_KEYS.PHRASES_50, met: (ctx.phrasesSpoken ?? 0) >= 50 },
     { key: ACHIEVEMENT_KEYS.PHRASES_100, met: (ctx.phrasesSpoken ?? 0) >= 100 },
+    { key: ACHIEVEMENT_KEYS.PHRASES_250, met: (ctx.phrasesSpoken ?? 0) >= 250 },
+    { key: ACHIEVEMENT_KEYS.PHRASES_500, met: (ctx.phrasesSpoken ?? 0) >= 500 },
   ];
 
   const newlyUnlocked: { key: string; title: string; xpReward: number }[] = [];

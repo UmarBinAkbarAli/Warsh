@@ -66,6 +66,20 @@ export function createStarterCard(type: DiscoverCardType): DiscoverCard {
         ],
         ...base,
       };
+    case "GRAMMAR_NOTE":
+      return {
+        type: "GRAMMAR_NOTE",
+        title: {en: "Grammar note", ar: "Ù…Ù„Ø§Ø­Ø¸Ø© Ù†Ø­ÙˆÙŠØ©", ur: "Ú¯Ø±Ø§Ù…Ø± Ù†ÙˆÙ¹"},
+        body: {en: "Short grammar note.", ur: "Ù…Ø®ØªØµØ± Ú¯Ø±Ø§Ù…Ø± Ù†ÙˆÙ¹Û”"},
+        ...base,
+      };
+    case "SENTENCE":
+      return {
+        type: "SENTENCE",
+        text: {ar: "Ù‡ÙŽØ°ÙŽØ§ ÙƒÙØªÙŽØ§Ø¨ÙŒ", ar_plain: "Ù‡Ø°Ø§ ÙƒØªØ§Ø¨", translit: "hadha kitabun", en: "This is a book.", ur: "ÛŒÛ Ø§ÛŒÚ© Ú©ØªØ§Ø¨ ÛÛ’Û”"},
+        explanation: {en: "Short sentence note.", ur: "Ø¬Ù…Ù„Û’ Ú©ÛŒ Ù…Ø®ØªØµØ± ÙˆØ¶Ø§Ø­ØªÛ”"},
+        ...base,
+      };
   }
 }
 
@@ -194,12 +208,12 @@ export function createStarterExercise(type: ExerciseType): Exercise {
       return {
         ...base,
         type: "AUDIO_RECOGNITION",
-        audio_url: "https://cdn.warsh.app/audio/vocab/hadha.mp3",
+        arabic_text: "هَذَا",
         options: [
-          {ar: "هَذَا", ar_plain: "هذا", translit: "hadha", en: "this"},
-          {ar: "ذٰلِكَ", ar_plain: "ذلك", translit: "dhālika", en: "that"},
-          {ar: "مَا", ar_plain: "ما", translit: "ma", en: "what"},
-          {ar: "مَنْ", ar_plain: "من", translit: "man", en: "who"},
+          {en: "this", ur: "یہ"},
+          {en: "that", ur: "وہ"},
+          {en: "what", ur: "کیا"},
+          {en: "who", ur: "کون"},
         ],
         correct_index: 0,
       };

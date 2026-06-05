@@ -291,12 +291,12 @@ Three IAP products in App Store Connect and Google Play Console:
 | Product ID | Type | Price |
 |---|---|---|
 | `warsh_monthly` | Auto-renewable subscription | $1/month |
-| `warsh_annual` | Auto-renewable subscription | $10/year |
+| `warsh_yearly` | Auto-renewable subscription | $10/year |
 | `warsh_noor_overage_pack` | Consumable | $0.99 for 20 messages |
 
 ### 5.2 Subscription group
 
-iOS: `warsh_monthly` and `warsh_annual` in same Subscription Group, allowing switching.
+iOS: `warsh_monthly` and `warsh_yearly` in same Subscription Group, allowing switching.
 Android: Configured via base plans for plan switching.
 
 ### 5.3 IAP library

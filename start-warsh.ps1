@@ -3,7 +3,7 @@
 #
 # Modes:
 #   .\start-warsh.ps1        - local dev  (backend on localhost:3000)
-#   .\start-warsh.ps1 -prod  - production (backend = https://warsh-backend.vercel.app)
+#   .\start-warsh.ps1 -prod  - production (backend = https://api.warsh.app)
 #
 # Local dev does (in order):
 #   1. Checks adb is available and a device is connected via USB
@@ -15,7 +15,7 @@
 # Production mode does:
 #   1. Checks adb is available and a device is connected via USB
 #   2. Sets ADB reverse tunnel for Metro (8081) only - no local backend needed
-#   3. Starts Expo Metro with EXPO_PUBLIC_API_URL=https://warsh-backend.vercel.app
+#   3. Starts Expo Metro with EXPO_PUBLIC_API_URL=https://api.warsh.app
 #
 # Database: Neon (cloud Postgres) - no local DB needed in either mode.
 #
@@ -37,7 +37,7 @@ function Write-Warn($msg) { Write-Host "    !! $msg"  -ForegroundColor Yellow }
 # mode banner
 if ($prod) {
     Write-Host ""
-    Write-Host "  MODE: PRODUCTION  (warsh-backend.vercel.app)" -ForegroundColor Yellow
+    Write-Host "  MODE: PRODUCTION  (api.warsh.app)" -ForegroundColor Yellow
 } else {
     Write-Host ""
     Write-Host "  MODE: LOCAL DEV   (localhost:3000)" -ForegroundColor Green
@@ -114,7 +114,7 @@ if (-not $prod) {
 }
 
 # 4. Start Expo Metro
-$apiUrl = if ($prod) { "https://warsh-backend.vercel.app" } else { "http://127.0.0.1:3000" }
+$apiUrl = if ($prod) { "https://api.warsh.app" } else { "http://127.0.0.1:3000" }
 $envName = if ($prod) { "production" } else { "development" }
 
 Write-Step "Starting Expo Metro (EXPO_PUBLIC_API_URL=$apiUrl)"
@@ -168,7 +168,7 @@ Write-Host "================================================================" -F
 if ($prod) {
     Write-Host "  Warsh app  ->  PRODUCTION BACKEND" -ForegroundColor Yellow
     Write-Host ""
-    Write-Host "  API      -> https://warsh-backend.vercel.app"
+    Write-Host "  API      -> https://api.warsh.app"
 } else {
     Write-Host "  Warsh dev environment is starting!" -ForegroundColor Green
     Write-Host ""

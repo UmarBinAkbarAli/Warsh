@@ -16,11 +16,20 @@ export default async function DashboardPage() {
           titleAr: true,
           template: true,
           xpReward: true,
+          updatedAt: true,
           content: true,
         },
       },
     },
   });
 
-  return <DashboardClient initialChapters={chapters as DashboardChapter[]} />;
+  const serializedChapters = chapters.map((chapter) => ({
+    ...chapter,
+    lessons: chapter.lessons.map((lesson) => ({
+      ...lesson,
+      updatedAt: lesson.updatedAt.toISOString(),
+    })),
+  }));
+
+  return <DashboardClient initialChapters={serializedChapters as DashboardChapter[]} />;
 }

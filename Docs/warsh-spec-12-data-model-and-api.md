@@ -71,7 +71,7 @@ model User {
   trial_start_at              DateTime?
   trial_expires_at            DateTime?
   subscription_status         String    @default("none") // "none", "trial", "active", "expired", "canceled"
-  subscription_product_id     String?   // "warsh_monthly" or "warsh_annual"
+  subscription_product_id     String?   // "warsh_monthly" or "warsh_yearly"
   subscription_active_until   DateTime?
   subscription_auto_renew     Boolean   @default(false)
   noor_overage_balance        Int       @default(0)
@@ -500,7 +500,7 @@ model IAPReceipt {
   id                String    @id @default(uuid())
   user_id           String
   platform          String    // "ios" or "android"
-  product_id        String    // "warsh_monthly", "warsh_annual", "warsh_noor_overage_pack"
+  product_id        String    // "warsh_monthly", "warsh_yearly", "warsh_noor_overage_pack"
   transaction_id    String    @unique // from Apple/Google
   original_transaction_id String? // for renewals
   purchased_at      DateTime
