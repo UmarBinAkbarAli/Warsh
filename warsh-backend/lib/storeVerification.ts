@@ -1,6 +1,6 @@
 import crypto from "crypto";
 
-const VALID_PRODUCT_IDS = new Set(["warsh_monthly", "warsh_yearly"]);
+const VALID_PRODUCT_IDS = new Set(["warsh_premium"]);
 const GOOGLE_ANDROID_PUBLISHER_SCOPE = "https://www.googleapis.com/auth/androidpublisher";
 const GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token";
 const APPLE_PRODUCTION_VERIFY_URL = "https://buy.itunes.apple.com/verifyReceipt";

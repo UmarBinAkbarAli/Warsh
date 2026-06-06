@@ -10,7 +10,7 @@ export async function POST(request: Request) {
   const body = await request.json();
   const { productId, purchaseToken, receiptData, platform } = body;
 
-  if (!productId || !["warsh_monthly", "warsh_yearly"].includes(productId)) {
+  if (!productId || !["warsh_premium"].includes(productId)) {
     return NextResponse.json({ error: "Invalid product", code: "bad_request" }, { status: 400 });
   }
 

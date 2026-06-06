@@ -31,12 +31,11 @@ import {
   type IapSubscriptionPurchase,
 } from "@services/iap";
 
-export const PRODUCT_IDS = {
-  monthly: "warsh_monthly",
-  annual: "warsh_yearly",
-} as const;
+// Single subscription product with two base plans
+export const SUBSCRIPTION_PRODUCT_ID = "warsh_premium";
+const BASE_PLAN_IDS = { monthly: "monthly", annual: "yearly" } as const;
 
-const SKUS = [PRODUCT_IDS.monthly, PRODUCT_IDS.annual];
+const SKUS = [SUBSCRIPTION_PRODUCT_ID];
 
 // Feature comparison: [label, free, premium]
 const COMPARISON: [string, boolean, boolean][] = [
@@ -88,10 +87,15 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     }, [])
   );
 
-  function getPriceLabel(productId: string) {
-    const product = products.find((p) => getIapProductId(p) === productId);
-    if (!product) return productId === PRODUCT_IDS.annual ? "$10 / year" : "$1 / month";
-    return getIapDisplayPrice(product) ?? (productId === PRODUCT_IDS.annual ? "$10 / year" : "$1 / month");
+  function getPriceLabel(planKey: "monthly" | "annual") {
+    const fallback = planKey === "annual" ? "$10 / year" : "$1 / month";
+    const product = products.find((p) => getIapProductId(p) === SUBSCRIPTION_PRODUCT_ID);
+    if (!product) return fallback;
+    const basePlanId = BASE_PLAN_IDS[planKey];
+    const offers = ((product as any)?.subscriptionOffers ?? []) as Array<any>;
+    const offer = offers.find((o: any) => o.basePlanId === basePlanId);
+    const phase = (offer?.pricingPhases ?? []).find((p: any) => !p.billingCycleCount || p.recurrenceMode === 1);
+    return phase?.formattedPrice ?? getIapDisplayPrice(product) ?? fallback;
   }
 
   async function handlePurchase() {
@@ -101,17 +105,18 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       return;
     }
     setPurchasing(true);
-    const productId = selected === "annual" ? PRODUCT_IDS.annual : PRODUCT_IDS.monthly;
-    const product = products.find((item) => getIapProductId(item) === productId);
+    const productId = SUBSCRIPTION_PRODUCT_ID;
+    const basePlanId = BASE_PLAN_IDS[selected];
+    const product = products.find((item) => getIapProductId(item) === SUBSCRIPTION_PRODUCT_ID);
     try {
-      const purchase = await requestSubscriptionPurchase(productId, product);
+      const purchase = await requestSubscriptionPurchase(productId, product, basePlanId);
       const purchaseRecord = Array.isArray(purchase)
         ? (purchase[0] as IapSubscriptionPurchase)
         : (purchase as IapSubscriptionPurchase);
       const token = purchaseRecord?.purchaseToken;
       const receiptData = (purchaseRecord as { transactionReceipt?: string } | undefined)?.transactionReceipt;
       await verifyPurchase({
-        productId,
+        productId: SUBSCRIPTION_PRODUCT_ID,
         purchaseToken: token ?? undefined,
         receiptData: receiptData ?? undefined,
         platform: Platform.OS as "android" | "ios",
@@ -125,7 +130,8 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       if (isIapUnavailableError(err)) {
         Alert.alert("Purchases unavailable", "In-app purchases are not available on this build.");
       } else if (err?.code !== "E_USER_CANCELLED") {
-        Alert.alert("Purchase failed", "Something went wrong. Please try again or contact support.");
+        console.error("[IAP] Purchase failed:", err?.code, err?.message, JSON.stringify(err));
+        Alert.alert("Purchase failed", `Something went wrong (${err?.code ?? "unknown"}). Please try again or contact support.`);
       }
     } finally {
       setPurchasing(false);
@@ -142,7 +148,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     try {
       const purchases = await getAvailableIapPurchases();
       const activePurchase = purchases.find(
-        (p) => p.productId === PRODUCT_IDS.annual || p.productId === PRODUCT_IDS.monthly
+        (p) => p.productId === SUBSCRIPTION_PRODUCT_ID
       );
       if (!activePurchase) { Alert.alert("No subscription found", "No active subscription was found."); return; }
       await verifyPurchase({
@@ -240,7 +246,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
               {selected === "annual" ? <View style={styles.radioInner} /> : null}
             </View>
             <View style={styles.planText}>
-              <Text style={styles.planPrice}>{getPriceLabel(PRODUCT_IDS.annual)}</Text>
+              <Text style={styles.planPrice}>{getPriceLabel("annual")}</Text>
               <Text style={styles.planSub}>Billed annually</Text>
             </View>
             <View style={styles.saveBadge}>
@@ -257,7 +263,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
               {selected === "monthly" ? <View style={styles.radioInner} /> : null}
             </View>
             <View style={styles.planText}>
-              <Text style={styles.planPrice}>{getPriceLabel(PRODUCT_IDS.monthly)}</Text>
+              <Text style={styles.planPrice}>{getPriceLabel("monthly")}</Text>
               <Text style={styles.planSub}>Billed monthly</Text>
             </View>
           </TouchableOpacity>
@@ -274,7 +280,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
             ? <ActivityIndicator color={WarshPalette.ink} />
             : <Text style={styles.ctaBtnText}>
                 {billingSupported
-                  ? `Try for free, then ${getPriceLabel(selected === "annual" ? PRODUCT_IDS.annual : PRODUCT_IDS.monthly)}`
+                  ? `Try for free, then ${getPriceLabel(selected)}`
                   : "Unavailable in Expo Go"}
               </Text>}
         </TouchableOpacity>

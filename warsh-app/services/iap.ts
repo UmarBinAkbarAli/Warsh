@@ -117,20 +117,18 @@ export function getIapDisplayPrice(product: IapSubscription) {
   return anyProduct.displayPrice ?? anyProduct.localizedPrice;
 }
 
-function getAndroidSubscriptionOffer(product: IapSubscription | undefined) {
-  if (!product) {
-    return undefined;
-  }
-
-  const offer = product?.subscriptionOffers?.find((item) => item.offerTokenAndroid);
-  if (!offer?.offerTokenAndroid) {
-    return undefined;
-  }
-
+function getAndroidSubscriptionOffer(product: IapSubscription | undefined, basePlanId?: string) {
+  if (!product) return undefined;
+  const offers = ((product as any)?.subscriptionOffers ?? []) as Array<any>;
+  // Prefer the offer matching the requested base plan; fall back to first available
+  const offer = basePlanId
+    ? (offers.find((o) => o.basePlanId === basePlanId && o.offerTokenAndroid) ?? offers.find((o) => o.offerTokenAndroid))
+    : offers.find((o) => o.offerTokenAndroid);
+  if (!offer?.offerTokenAndroid) return undefined;
   return [{ sku: product.id, offerToken: offer.offerTokenAndroid }];
 }
 
-export async function requestSubscriptionPurchase(productId: string, product?: IapSubscription) {
+export async function requestSubscriptionPurchase(productId: string, product?: IapSubscription, basePlanId?: string) {
   const available = await connectIap();
   const IAP = await getIapModule();
 
@@ -144,7 +142,7 @@ export async function requestSubscriptionPurchase(productId: string, product?: I
       apple: { sku: productId },
       google: {
         skus: [productId],
-        subscriptionOffers: getAndroidSubscriptionOffer(product),
+        subscriptionOffers: getAndroidSubscriptionOffer(product, basePlanId),
       },
     },
   });

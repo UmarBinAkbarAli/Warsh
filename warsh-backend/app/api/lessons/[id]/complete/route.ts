@@ -32,7 +32,7 @@ export async function POST(request: Request, { params }: Props) {
 
   const [lesson, userExists] = await Promise.all([
     prisma.lesson.findUnique({ where: { id: params.id } }),
-    prisma.user.findUnique({ where: { id: userId }, select: { id: true } }),
+    prisma.user.findUnique({ where: { id: userId }, select: { id: true, subscriptionStatus: true } }),
   ]);
 
   if (!userExists) {
@@ -170,12 +170,14 @@ export async function POST(request: Request, { params }: Props) {
 
   // Add chapter vocabulary words to user's word bank on first lesson completion
   let wordsAdded = 0;
+  let chapterOrder: number | null = null;
   if (firstCompletion) {
     const chapter = await prisma.chapter.findUnique({
       where: { id: lesson.chapterId },
       select: { order: true },
     });
     if (chapter) {
+      chapterOrder = chapter.order;
       const chapterWords = await prisma.vocabularyWord.findMany({
         where: { chapterIntroduced: chapter.order },
         select: { id: true },
@@ -199,6 +201,8 @@ export async function POST(request: Request, { params }: Props) {
       }
     }
   }
+
+  const showPaywall = chapterJustCompleted && chapterOrder === 1 && userExists?.subscriptionStatus === "trial";
 
   // Increment phrasesSpoken if any SHADOW_REPEAT exercises were completed
   let newPhrasesSpoken = 0;
@@ -241,6 +245,7 @@ export async function POST(request: Request, { params }: Props) {
       xpEarned,
       chapterBonusXp,
       chapterJustCompleted,
+      showPaywall,
       dailyGoalXp,
       streakCelebration: firstCompletion && lessonsCompletedTodayBefore === 0,
       totalXp: finalXp,

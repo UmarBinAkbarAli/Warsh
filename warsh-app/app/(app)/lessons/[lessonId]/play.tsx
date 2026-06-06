@@ -30,6 +30,7 @@ type CompletionResult = {
   xpEarned: number;
   chapterBonusXp: number;
   chapterJustCompleted: boolean;
+  showPaywall: boolean;
   totalXp: number;
   currentStreak: number;
   streakCelebration: boolean;
@@ -354,6 +355,7 @@ export default function LessonPlayScreen() {
           xpEarned: data.xpEarned,
           chapterBonusXp: data.chapterBonusXp ?? 0,
           chapterJustCompleted: Boolean(data.chapterJustCompleted),
+          showPaywall: Boolean(data.showPaywall),
           totalXp: data.totalXp,
           currentStreak: data.currentStreak,
           streakCelebration: Boolean(data.streakCelebration),
@@ -930,7 +932,7 @@ export default function LessonPlayScreen() {
           <View style={styles.exerciseArabicCard}>
             <ArabicText size="lg" style={styles.exerciseArabic}>{arabicTxt}</ArabicText>
             <View style={styles.exercisePlayRow}>
-              <PlayButton text={arabicTxt} cacheKey={`${lessonId}-ex${currentExerciseIndex}`} category="lessons" size={20} />
+              <PlayButton key={currentExerciseIndex} text={arabicTxt} cacheKey={`${lessonId}-ex${currentExerciseIndex}`} category="lessons" size={20} autoPlay={true} />
             </View>
           </View>
         ) : null}
@@ -1049,7 +1051,9 @@ export default function LessonPlayScreen() {
           </View>
           <ArabicText size="md" style={styles.closeArabic}>بارك الله فيك</ArabicText>
           {completionResult?.chapterJustCompleted ? (
-            <Text style={styles.chapterUnlockedBadge}>Next chapter unlocked</Text>
+            <Text style={styles.chapterUnlockedBadge}>
+              {completionResult.showPaywall ? "Chapter 1 complete — subscribe to continue" : "Next chapter unlocked"}
+            </Text>
           ) : null}
           {isSpoken && phrasesLearned > 0 ? (
             <Text style={styles.spPhrasesEarned}>
@@ -1067,11 +1071,14 @@ export default function LessonPlayScreen() {
           title="Continue"
           onPress={() => {
             const achievements = completionResult?.newAchievements ?? [];
+            const shouldPaywall = completionResult?.showPaywall ?? false;
             if (achievements.length > 0) {
-              const nextRoute = shouldShowStreakCelebration ? "streak-celebration" : "tabs";
+              const nextRoute = shouldShowStreakCelebration ? "streak-celebration" : shouldPaywall ? "paywall" : "tabs";
               router.push({ pathname: "/(app)/milestone-celebration", params: { achievements: JSON.stringify(achievements), nextRoute, streak: String(streak) } });
             } else if (shouldShowStreakCelebration) {
               router.push({ pathname: "/(app)/streak-celebration", params: { streak: String(streak) } });
+            } else if (shouldPaywall) {
+              router.push("/(app)/paywall");
             } else {
               router.replace("/(app)/(tabs)");
             }
