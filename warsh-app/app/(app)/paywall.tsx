@@ -94,8 +94,12 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     const basePlanId = BASE_PLAN_IDS[planKey];
     const offers = ((product as any)?.subscriptionOffers ?? []) as Array<any>;
     const offer = offers.find((o: any) => o.basePlanId === basePlanId);
-    const phase = (offer?.pricingPhases ?? []).find((p: any) => !p.billingCycleCount || p.recurrenceMode === 1);
-    return phase?.formattedPrice ?? getIapDisplayPrice(product) ?? fallback;
+    // pricingPhases is { pricingPhaseList: [...] } in Billing Library v5; handle both shapes
+    const phaseList: any[] = Array.isArray(offer?.pricingPhases)
+      ? offer.pricingPhases
+      : (offer?.pricingPhases?.pricingPhaseList ?? []);
+    const phase = phaseList.find((p: any) => !p.billingCycleCount || p.recurrenceMode === 1);
+    return phase?.formattedPrice ?? fallback;
   }
 
   async function handlePurchase() {
@@ -161,11 +165,12 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       Alert.alert("Restored!", "Your subscription has been restored.", [
         { text: "Continue", onPress: () => router.replace("/(app)/(tabs)") },
       ]);
-    } catch (err) {
+    } catch (err: any) {
       if (isIapUnavailableError(err)) {
         Alert.alert("Restore unavailable", "In-app purchases are not available on this build.");
       } else {
-        Alert.alert("Restore failed", "Could not restore purchases. Please try again.");
+        console.error("[IAP] Restore failed:", err?.code, err?.message, JSON.stringify(err));
+        Alert.alert("Restore failed", `Could not restore purchases (${err?.code ?? "unknown"}). Please try again.`);
       }
     } finally {
       setRestoring(false);
