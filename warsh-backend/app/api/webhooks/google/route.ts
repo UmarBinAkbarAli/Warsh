@@ -48,6 +48,7 @@ export async function POST(request: Request) {
     const { searchParams } = new URL(request.url);
     const token = searchParams.get("token");
     if (token !== expectedToken) {
+      console.warn("[rtdn] unauthorized request — token mismatch");
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
   }
@@ -56,11 +57,15 @@ export async function POST(request: Request) {
   try {
     body = await request.json() as PubSubMessage;
   } catch {
-    return new NextResponse(null, { status: 200 }); // ack malformed messages
+    console.warn("[rtdn] malformed request body");
+    return new NextResponse(null, { status: 200 });
   }
+
+  console.log("[rtdn] received message id:", body?.message?.messageId ?? "none");
 
   const encodedData = body?.message?.data;
   if (!encodedData) {
+    console.log("[rtdn] no data payload — acking empty message");
     return new NextResponse(null, { status: 200 });
   }
 
@@ -69,10 +74,12 @@ export async function POST(request: Request) {
     const decoded = Buffer.from(encodedData, "base64").toString("utf8");
     notification = JSON.parse(decoded) as DeveloperNotification;
   } catch {
+    console.warn("[rtdn] failed to decode notification payload");
     return new NextResponse(null, { status: 200 });
   }
 
   const { subscriptionNotification, oneTimeProductNotification } = notification;
+  console.log("[rtdn] notification type:", subscriptionNotification ? "subscription" : oneTimeProductNotification ? "one_time" : "unknown");
 
   if (subscriptionNotification) {
     await handleSubscriptionNotification(subscriptionNotification);

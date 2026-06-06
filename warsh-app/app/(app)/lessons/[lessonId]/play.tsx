@@ -606,12 +606,14 @@ export default function LessonPlayScreen() {
           {arabicText ? (
             <View style={styles.audioRecognitionPlayWrap}>
               <PlayButton
+                key={`audio-rec-${currentExerciseIndex}`}
                 text={arabicText}
                 cacheKey={`ar-${lessonId}-ex${currentExerciseIndex}`}
                 category="lessons"
                 size={48}
+                autoPlay={true}
               />
-              <Text style={styles.audioRecognitionHint}>Tap to listen again</Text>
+              <Text style={styles.audioRecognitionHint}>Tap to replay</Text>
             </View>
           ) : (
             <Text style={styles.hookQuestion}>Audio not available for this exercise.</Text>
@@ -864,7 +866,7 @@ export default function LessonPlayScreen() {
             <>
               <ArabicText size="lg" style={styles.discoverArabic}>{arabicText}</ArabicText>
               <View style={styles.discoverPlayRow}>
-                <PlayButton text={arabicText} cacheKey={transliteration ?? arabicText} category="lessons" size={22} />
+                <PlayButton text={arabicText} cacheKey={transliteration ?? arabicText} category="lessons" size={22} autoPlay={true} />
               </View>
             </>
           ) : null}

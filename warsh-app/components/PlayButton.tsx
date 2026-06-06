@@ -11,55 +11,87 @@ type PlayButtonProps = {
   category?: "words" | "phrases" | "lessons";
   size?: number;
   color?: string;
+  autoPlay?: boolean;
 };
 
 type PlayState = "idle" | "loading" | "playing" | "error";
 
-export function PlayButton({ text, cacheKey, category = "words", size = 20, color = WarshPalette.gold }: PlayButtonProps) {
-  const [state, setState] = useState<PlayState>("idle");
+export function PlayButton({ text, cacheKey, category = "words", size = 20, color = WarshPalette.gold, autoPlay = false }: PlayButtonProps) {
+  const [playState, setPlayState] = useState<PlayState>("idle");
   const soundRef = useRef<Audio.Sound | null>(null);
+  const mountedRef = useRef(true);
 
   useEffect(() => {
     return () => {
+      mountedRef.current = false;
       soundRef.current?.unloadAsync().catch(() => undefined);
     };
   }, []);
 
-  const handlePress = useCallback(async () => {
-    if (state === "loading") return;
-
-    if (state === "playing") {
-      await soundRef.current?.stopAsync();
-      await soundRef.current?.unloadAsync();
+  const startPlay = useCallback(async () => {
+    if (!mountedRef.current) return;
+    // Stop any currently playing audio before starting new playback
+    if (soundRef.current) {
+      await soundRef.current.stopAsync().catch(() => undefined);
+      await soundRef.current.unloadAsync().catch(() => undefined);
       soundRef.current = null;
-      setState("idle");
-      return;
     }
-
-    setState("loading");
+    setPlayState("loading");
     try {
       const uri = await getCachedTtsAudioUri({ text, cacheKey, category });
+      if (!mountedRef.current) return;
       await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
       const { sound } = await Audio.Sound.createAsync({ uri });
+      if (!mountedRef.current) { sound.unloadAsync().catch(() => undefined); return; }
       soundRef.current = sound;
-      setState("playing");
-
+      setPlayState("playing");
       sound.setOnPlaybackStatusUpdate((status) => {
         if (status.isLoaded && status.didJustFinish) {
           sound.unloadAsync().catch(() => undefined);
-          soundRef.current = null;
-          setState("idle");
+          if (mountedRef.current) {
+            soundRef.current = null;
+            setPlayState("idle");
+          }
         }
       });
-
       await sound.playAsync();
     } catch {
-      setState("error");
-      setTimeout(() => setState("idle"), 2000);
+      if (mountedRef.current) {
+        setPlayState("error");
+        setTimeout(() => { if (mountedRef.current) setPlayState("idle"); }, 2000);
+      }
     }
-  }, [state, text, cacheKey, category]);
+  }, [text, cacheKey, category]);
 
-  if (state === "loading") {
+  // Auto-play when this card/exercise is shown. Re-fires whenever text changes (new card).
+  useEffect(() => {
+    if (!autoPlay || !text) return;
+    const timer = setTimeout(startPlay, 350);
+    return () => {
+      clearTimeout(timer);
+      // Stop in-progress audio when navigating away from this card
+      if (soundRef.current && mountedRef.current) {
+        soundRef.current.stopAsync().catch(() => undefined);
+        soundRef.current.unloadAsync().catch(() => undefined);
+        soundRef.current = null;
+        setPlayState("idle");
+      }
+    };
+  }, [autoPlay, text, startPlay]);
+
+  const handlePress = useCallback(async () => {
+    if (playState === "loading") return;
+    if (playState === "playing") {
+      await soundRef.current?.stopAsync();
+      await soundRef.current?.unloadAsync();
+      soundRef.current = null;
+      setPlayState("idle");
+      return;
+    }
+    void startPlay();
+  }, [playState, startPlay]);
+
+  if (playState === "loading") {
     return (
       <Pressable style={styles.button} disabled>
         <ActivityIndicator size="small" color={color} />
@@ -70,9 +102,9 @@ export function PlayButton({ text, cacheKey, category = "words", size = 20, colo
   return (
     <Pressable accessibilityRole="button" accessibilityLabel="Play pronunciation" onPress={handlePress} style={styles.button}>
       <Ionicons
-        name={state === "playing" ? "stop-circle-outline" : state === "error" ? "alert-circle-outline" : "volume-medium-outline"}
+        name={playState === "playing" ? "stop-circle-outline" : playState === "error" ? "alert-circle-outline" : "volume-medium-outline"}
         size={size}
-        color={state === "error" ? "#B07070" : color}
+        color={playState === "error" ? "#B07070" : color}
       />
     </Pressable>
   );

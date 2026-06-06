@@ -1,6 +1,6 @@
 # Warsh Phase 1 Progress Tracker
 
-Last updated: 2026-06-05 (all 15 exercise types implemented; IAP product IDs corrected; api.warsh.app domain live on Vercel; open items audited against spec-00)
+Last updated: 2026-06-06 (all YOU-items complete; RTDN live; DATABASE_URL + @warsh/lesson-schema vendor fix; production fully operational)
 
 ## Purpose
 
@@ -139,18 +139,18 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 - Backend and app TypeScript checks pass; `npm run db:validate-fixtures` passes with 391 fixtures
 - Custom domain `api.warsh.app` live on Vercel; all `warsh-backend.vercel.app` references replaced in codebase ✅
 
-**What is LEFT (as of 2026-06-05):**
+**What is LEFT (as of 2026-06-06):**
 
 ### Blocked on Google (~2 weeks)
 - **Google Play Console approval** — closed testing track submitted, Google reviewing. Until approved: IAP sandbox testing, RTDN webhook, and production publishing are all blocked.
 
 ### YOU-items (manual, do when ready)
 1. ~~**Domain attachment**~~ ✅ FULLY DONE (2026-06-05) — `api.warsh.app` live on Vercel. `NEXT_PUBLIC_APP_URL` set in Vercel env. Backend redeployed. New APK built with `api.warsh.app` baked in (89 MB, bundle verified).
-2. **`RESEND_API_KEY`** — Set in Vercel production env. Get from resend.com, verify `warsh.app` domain there. Without this, password reset emails silently drop.
-3. **`warsh_noor_pack` consumable** — Create in Google Play Console ($0.99, consumable type) once console allows.
-4. **RTDN webhook** — Once Play Console approved: set topic URL to `https://api.warsh.app/api/webhooks/google` in Play Console → Monetization → Real-time developer notifications.
+2. ~~**`RESEND_API_KEY`**~~ ✅ DONE (2026-06-06) — Domain `warsh.app` verified on Resend. API key set in Vercel production env. Smoke-tested: `POST /api/auth/forgot-password` returns 200 and delivers email to `umarakbar73456@gmail.com`.
+3. ~~**`warsh_noor_pack` consumable**~~ ✅ DONE (2026-06-06) — Created in Google Play Console ($0.99, consumable type). Product ID `warsh_noor_pack` matches webhook handler and mobile IAP code.
+4. ~~**RTDN webhook**~~ ✅ DONE (2026-06-06) — Pub/Sub topic `warsh-play-notifications` created in GCP project `umar-tools-27994`. Push subscription `warsh-play-push` wired to `https://api.warsh.app/api/webhooks/google?token=...`. Play Console test notification received and logged (message id: 20001680547077152). All subscription and one-time product events now flow to the backend in real time.
 5. ~~**`npm run db:seed` on production Neon**~~ ✅ DONE (2026-06-05) — 12 users preserved, 585 vocab words + 11 Tadabbur Surahs refreshed, `phrases_250`/`phrases_500` achievements live.
-6. **Sentry alert rule** — Create "email on new issue" rule in Sentry dashboard (non-blocking).
+6. ~~**Sentry alert rule**~~ ✅ DONE — Sentry already sends email notifications to `umarakbar73456@gmail.com` for new issues by default. Confirmed working.
 
 ### On-device QA (do with next APK build)
 7. **VERB_PATTERN rendering** — Tap Ch9-L1 or Ch34-L2, confirm conjugation table displays correctly on device.
@@ -163,8 +163,30 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 ### Pre-launch (after domain + Play Console)
 13. ~~**AAB build**~~ ✅ DONE (2026-06-05) — `app-release.aab` (48 MB) built at `warsh-app/android/app/build/outputs/bundle/release/app-release.aab`. Signed. Ready to upload to Play Console once Google approves the closed testing track.
 14. ~~**Production APK rebuild**~~ ✅ DONE (2026-06-05) — APK rebuilt with `api.warsh.app`. Bundle verified. Note: built without `EXPO_PUBLIC_SENTRY_DSN` so mobile Sentry is disabled in this build — rebuild with DSN to restore.
-15. **Rebuild release APK/AAB with `EXPO_PUBLIC_SENTRY_DSN`** — The 2026-06-05 release APK was built without the Sentry DSN env var; mobile crash reporting is disabled. Before soft launch, confirm `EXPO_PUBLIC_SENTRY_DSN` is set in EAS production secrets, then rebuild so Sentry is active in the Play Store build.
-16. **Audio files for AUDIO_RECOGNITION exercises** — All `audio_url` fields in lesson fixtures are empty strings (`""`). The AUDIO_RECOGNITION renderer is built and wired, but cannot play audio without actual MP3 files. Before beta, source human-recited audio (e.g. EveryAyah API, Mishary recitations, or record in-house) and populate the `audio_url` fields in affected fixtures, then re-seed production.
+15. ~~**Rebuild release AAB with `EXPO_PUBLIC_SENTRY_DSN`**~~ ✅ DONE (2026-06-05) — `app-release.aab` (47.8 MB) rebuilt with `EXPO_PUBLIC_SENTRY_DSN` baked in. Bundle verified: `api.warsh.app` present, `sentry.io` present, `warsh-backend.vercel.app` absent. JAVA_HOME: `C:\Users\sysadmin\.gradle\jdks\eclipse_adoptium-17-amd64-windows\jdk-17.0.18+8`. Ready to upload to Play Console.
+16. ~~**Auto-play TTS audio in Discover and AUDIO_RECOGNITION**~~ ✅ DONE (2026-06-05) — `PlayButton` now accepts `autoPlay` prop. When true, plays TTS 350ms after the card/exercise appears; re-fires when text changes (next card); stops cleanly on navigation away. Wired in `renderDiscover()` and `renderAudioRecognition()` (with `key={currentExerciseIndex}` for clean remount). For AUDIO_RECOGNITION the hint changed to "Tap to replay". TypeScript clean.
+17. **Populate `audio_url` fields for AUDIO_RECOGNITION exercises** — All `audio_url` fields in lesson fixtures are empty strings (`""`). AUDIO_RECOGNITION now auto-plays via OpenAI TTS from the `arabic_text` field (no `audio_url` needed for the current renderer). The spec calls for human-recited audio long-term — source MP3s (EveryAyah API, Mishary recitations, or record in-house) and populate `audio_url` fields before a polish release.
+
+---
+
+## Recent Changes (2026-06-06) — Production infrastructure fixes
+
+### DATABASE_URL cleared + @warsh/lesson-schema vendor fix (2026-06-06)
+
+**Issue 1 — DATABASE_URL accidentally cleared in Vercel:**
+- `DATABASE_URL` production env var was accidentally set to empty while adding `RESEND_API_KEY`, causing all DB-touching endpoints (login, lessons, chapters, chat, progress) to return 500.
+- Fix: removed the empty var and re-set it with the correct Neon pooled connection string via Vercel CLI.
+
+**Issue 2 — `@warsh/lesson-schema` unresolvable on Vercel build:**
+- `warsh-backend/package.json` referenced `"@warsh/lesson-schema": "file:../packages/lesson-schema"` — a path outside `warsh-backend/`. Vercel's build environment couldn't resolve it, causing `Module not found: Can't resolve '@warsh/lesson-schema'` and failing the build.
+- Root cause: previous deploys worked only because Vercel's build cache had the package pre-installed from an earlier successful local install.
+- Fix: vendored the package into `warsh-backend/vendor/lesson-schema/` (copied `package.json` + `dist/`), updated `package.json` to `"file:./vendor/lesson-schema"`. Deploys are now self-contained regardless of directory.
+- TypeScript check passed (`npx tsc --noEmit` — 0 errors). Build deployed successfully. `POST /api/auth/forgot-password` smoke-tested: 200 ✓, email delivered ✓.
+
+**Deploy command going forward:** always run from repo root `D:\Code\Warsh`:
+```
+npx vercel --prod
+```
 
 ---
 
