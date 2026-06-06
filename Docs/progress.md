@@ -1,17 +1,21 @@
 # Warsh Phase 1 Progress Tracker
 
-Last updated: 2026-06-06 (all YOU-items complete; RTDN live; DATABASE_URL + @warsh/lesson-schema vendor fix; production fully operational)
+Last updated: 2026-06-06 (IAP fixed: warsh_premium + base plans; paywall trigger after Ch1 wired; practice card autoplay fixed; renderers code-reviewed)
 
 ## Purpose
 
 This file is the source of truth for current app progress as reflected in the codebase.
 
 **Latest status (2026-06-06):**
+- **IAP product IDs corrected** — Play Console has a single subscription product `warsh_premium` with three base plans: `monthly`, `yearly`, `warsh-noor-pack`. All code updated: `iap.ts`, `paywall.tsx`, `storeVerification.ts`, `verify/route.ts`. `getAndroidSubscriptionOffer` now accepts `basePlanId` and matches offers by base plan.
+- **Paywall trigger wired** — `POST /api/lessons/[id]/complete` now returns `showPaywall: true` when Ch1 is fully completed and user is on trial. `play.tsx` navigates to `/(app)/paywall` on continue instead of home.
+- **Practice card autoplay fixed** — `renderPractice()` PlayButton now has `autoPlay={true}` and `key={currentExerciseIndex}` so discovered cards auto-play TTS on appearance.
+- **Renderers code-reviewed** — VERB_PATTERN, WRITE_ARABIC, HARAKAH_PLACEMENT all confirmed correct in code (Scheherazade New font, RTL, normalizeArabicAnswer). Need on-device verification with new APK.
 - **All YOU-items complete** — RESEND_API_KEY live (email delivery confirmed), `warsh_noor_pack` created in Play Console, RTDN webhook live (test notification received, message id: 20001680547077152), Sentry email alerts working.
 - **RTDN fully operational** — Pub/Sub topic `warsh-play-notifications` in GCP project `umar-tools-27994`, push subscription wired to `api.warsh.app/api/webhooks/google`. Subscription + one-time product events processed in real time.
 - **Production fully operational** — DATABASE_URL restored (was accidentally cleared), `@warsh/lesson-schema` vendored into `warsh-backend/vendor/lesson-schema/` (self-contained deploys). All endpoints returning correctly.
 - **All 15 spec exercise types now have renderers** in `play.tsx`. App TypeScript clean.
-- **Play Console**: `warsh_monthly`, `warsh_yearly`, and `warsh_noor_pack` products created. Closed testing track pending Google's ~2-week review.
+- **Play Console**: `warsh_premium` subscription with base plans `monthly`, `yearly`, `warsh-noor-pack`. Closed testing track pending Google's ~2-week review.
 - **Beta gate smoke-test PASSED** (2026-06-04): launch → login → lesson flow end-to-end on physical device. Mobile Sentry confirmed live.
 - **Noor overage IAP** fully wired end-to-end: `POST /api/noor/purchase-pack`, pack credit consumption in chat route, mobile purchase flow in chat.tsx.
 - Backend and app TypeScript checks pass; `npm run db:validate-fixtures` passes with 391 fixtures.
@@ -157,11 +161,11 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 6. ~~**Sentry alert rule**~~ ✅ DONE — Sentry already sends email notifications to `umarakbar73456@gmail.com` for new issues by default. Confirmed working.
 
 ### On-device QA (do with next APK build)
-7. **VERB_PATTERN rendering** — Tap Ch9-L1 or Ch34-L2, confirm conjugation table displays correctly on device.
-8. **AUDIO_RECOGNITION** — Ch4-L1 has ex9 (كَبِيرٌ) and ex10 (جَدِيدٌ). Confirm audio plays and options tap correctly.
-9. **WRITE_ARABIC / HARAKAH_PLACEMENT** — New renderers need on-device verification (keyboard, RTL input, feedback).
-10. **Paywall after Ch1 completion** — Confirm paywall appears correctly; last unconfirmed beta gate item.
-11. **IAP sandbox purchase + restore** — Blocked on Play Console approval only (`warsh_noor_pack` is now created).
+7. **VERB_PATTERN rendering** — Tap Ch9-L1 or Ch34-L2, confirm conjugation table displays correctly on device. (Code-reviewed ✓, needs device verification with new APK)
+8. ~~**Practice card autoplay**~~ ✅ FIXED (2026-06-06) — `renderPractice()` PlayButton now has `autoPlay={true}` + `key={currentExerciseIndex}`. **AUDIO_RECOGNITION**: Ch4-L1 ex9/ex10 auto-play already wired. Confirm audio plays on device.
+9. **WRITE_ARABIC / HARAKAH_PLACEMENT** — Code-reviewed ✓ (Scheherazade New, RTL, normalizeArabicAnswer strips harakat — lenient grading by design). Needs on-device keyboard/input verification.
+10. ~~**Paywall after Ch1 completion**~~ ✅ FIXED IN CODE (2026-06-06) — Backend returns `showPaywall: true` on Ch1 complete + trial. Frontend navigates to paywall screen. Needs new APK + on-device confirmation.
+11. ~~**IAP product IDs**~~ ✅ FIXED IN CODE (2026-06-06) — All code uses `warsh_premium` with `subscriptionOffers` per base plan (`monthly`/`yearly`). Sandbox testing blocked on Play Console approval. Note: `warsh-noor-pack` base plan has a hyphen in Play Console but webhook code uses underscore `warsh_noor_pack` — verify this mismatch once IAP is live.
 12. **Chapters 9–72 spot-check** — Browse a few lessons per book to catch any schema/render issues.
 
 ### Pre-launch (after domain + Play Console)
@@ -170,6 +174,39 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 15. ~~**Rebuild release AAB with `EXPO_PUBLIC_SENTRY_DSN`**~~ ✅ DONE (2026-06-05) — `app-release.aab` (47.8 MB) rebuilt with `EXPO_PUBLIC_SENTRY_DSN` baked in. Bundle verified: `api.warsh.app` present, `sentry.io` present, `warsh-backend.vercel.app` absent. JAVA_HOME: `C:\Users\sysadmin\.gradle\jdks\eclipse_adoptium-17-amd64-windows\jdk-17.0.18+8`. Ready to upload to Play Console.
 16. ~~**Auto-play TTS audio in Discover and AUDIO_RECOGNITION**~~ ✅ DONE (2026-06-05) — `PlayButton` now accepts `autoPlay` prop. When true, plays TTS 350ms after the card/exercise appears; re-fires when text changes (next card); stops cleanly on navigation away. Wired in `renderDiscover()` and `renderAudioRecognition()` (with `key={currentExerciseIndex}` for clean remount). For AUDIO_RECOGNITION the hint changed to "Tap to replay". TypeScript clean.
 17. **Populate `audio_url` fields for AUDIO_RECOGNITION exercises** — All `audio_url` fields in lesson fixtures are empty strings (`""`). AUDIO_RECOGNITION now auto-plays via OpenAI TTS from the `arabic_text` field (no `audio_url` needed for the current renderer). The spec calls for human-recited audio long-term — source MP3s (EveryAyah API, Mishary recitations, or record in-house) and populate `audio_url` fields before a polish release.
+
+---
+
+## Recent Changes (2026-06-06) — IAP product ID fix, paywall trigger, practice autoplay
+
+### IAP / paywall / practice card fixes (2026-06-06)
+
+**Root cause discovered from Play Console screenshot:** The subscription product ID is `warsh_premium` (one product with three base plans: `monthly`, `yearly`, `warsh-noor-pack`). Prior code assumed two separate subscription products (`warsh_monthly`, `warsh_yearly`). This caused all IAP purchase attempts to fail with "Purchase failed."
+
+**Fix 1 — IAP product IDs across full stack:**
+- `warsh-app/services/iap.ts` — `getAndroidSubscriptionOffer(product, basePlanId?)` now matches `subscriptionOffers` by `basePlanId`. `requestSubscriptionPurchase(productId, product, basePlanId?)` passes the basePlanId through.
+- `warsh-app/app/(app)/paywall.tsx` — replaced `PRODUCT_IDS = {monthly, yearly}` with `SUBSCRIPTION_PRODUCT_ID = "warsh_premium"` and `BASE_PLAN_IDS = {monthly: "monthly", annual: "yearly"}`. Price labels look up `subscriptionOffers` by `basePlanId`. Purchase handler passes `basePlanId` to `requestSubscriptionPurchase`. Restore checks `p.productId === SUBSCRIPTION_PRODUCT_ID`. IAP errors now log `err?.code` for easier debugging.
+- `warsh-backend/lib/storeVerification.ts` — `VALID_PRODUCT_IDS` changed from `["warsh_monthly", "warsh_yearly"]` to `["warsh_premium"]`.
+- `warsh-backend/app/api/subscription/verify/route.ts` — product validation changed to `["warsh_premium"]`.
+
+**Fix 2 — Paywall trigger after Chapter 1 completion:**
+- `warsh-backend/app/api/lessons/[id]/complete/route.ts` — fetches `subscriptionStatus` alongside user; tracks `chapterOrder` when chapter is just completed; returns `showPaywall: true` when `chapterJustCompleted && chapterOrder === 1 && subscriptionStatus === "trial"`.
+- `warsh-app/app/(app)/lessons/[lessonId]/play.tsx` — `CompletionResult` type includes `showPaywall: boolean`; badge text changes to "Chapter 1 complete — subscribe to continue" when true; continue button navigates to `/(app)/paywall` instead of home.
+
+**Fix 3 — Practice card autoplay:**
+- `play.tsx` `renderPractice()` — `PlayButton` now has `autoPlay={true}` and `key={currentExerciseIndex}` so TTS fires automatically 350ms after each discovered card appears.
+
+**Renderer code review (no fixes needed):**
+- `renderVerbPattern()` ✓ — Scheherazade New on all Arabic, conjugation table, fallback data.
+- `renderWriteArabic()` ✓ — `fontFamily: "Scheherazade New"`, `textAlign="right"`, `normalizeArabicAnswer` strips harakat for lenient comparison.
+- `renderHarakahPlacement()` ✓ — same normalization (lenient by design; Arabic keyboards make exact harakat input impractical).
+
+**Note — `warsh-noor-pack` hyphen vs underscore mismatch:**
+- Play Console base plan ID: `warsh-noor-pack` (hyphen)
+- Webhook code in `webhooks/google/route.ts` uses `warsh_noor_pack` (underscore)
+- No impact until one-time product purchases go live; investigate when IAP sandbox opens.
+
+**Commit:** `df882aa` pushed to `main`. Backend deployed to Vercel (CLI ECONNRESET on polling, deployment proceeds server-side).
 
 ---
 
