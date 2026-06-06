@@ -6,20 +6,18 @@ Last updated: 2026-06-06 (all YOU-items complete; RTDN live; DATABASE_URL + @war
 
 This file is the source of truth for current app progress as reflected in the codebase.
 
-**Latest status (2026-06-05):**
-- **All 15 spec exercise types now have renderers** in `play.tsx`: WRITE_ARABIC, HARAKAH_PLACEMENT, WORD_ORDER, TRANSLATE_TO_ARABIC, IDENTIFY_ROOT, MATCH_AYAH added today; all previous types already present. App TypeScript clean.
-- **IAP product ID corrected**: `warsh_annual` → `warsh_yearly` across all code + spec docs to match the product IDs created in Google Play Console (`warsh_monthly` + `warsh_yearly`).
-- **Domain live**: `api.warsh.app` added to Vercel domains. All `warsh-backend.vercel.app` references replaced in code (eas.json, forgot-password fallback, start-warsh.ps1, CLAUDE.md, AGENTS.md). Next APK build will point to `api.warsh.app`.
-- **Play Console**: `warsh_monthly` and `warsh_yearly` subscription products created. `warsh_noor_pack` consumable not yet created. Closed testing track pending Google's ~2-week review.
-- **Beta gate smoke-test PASSED** (2026-06-04): Release APK installed on physical device. Launch → login → lesson flow confirmed end-to-end. Mobile Sentry event confirmed. UptimeRobot live at 5-min interval.
+**Latest status (2026-06-06):**
+- **All YOU-items complete** — RESEND_API_KEY live (email delivery confirmed), `warsh_noor_pack` created in Play Console, RTDN webhook live (test notification received, message id: 20001680547077152), Sentry email alerts working.
+- **RTDN fully operational** — Pub/Sub topic `warsh-play-notifications` in GCP project `umar-tools-27994`, push subscription wired to `api.warsh.app/api/webhooks/google`. Subscription + one-time product events processed in real time.
+- **Production fully operational** — DATABASE_URL restored (was accidentally cleared), `@warsh/lesson-schema` vendored into `warsh-backend/vendor/lesson-schema/` (self-contained deploys). All endpoints returning correctly.
+- **All 15 spec exercise types now have renderers** in `play.tsx`. App TypeScript clean.
+- **Play Console**: `warsh_monthly`, `warsh_yearly`, and `warsh_noor_pack` products created. Closed testing track pending Google's ~2-week review.
+- **Beta gate smoke-test PASSED** (2026-06-04): launch → login → lesson flow end-to-end on physical device. Mobile Sentry confirmed live.
 - **Noor overage IAP** fully wired end-to-end: `POST /api/noor/purchase-pack`, pack credit consumption in chat route, mobile purchase flow in chat.tsx.
-- **All spec feature gaps resolved** (2026-06-04/05): AUDIO_RECOGNITION renderer, Noor overage IAP, speaking stats (PHRASES_250/500 milestones added), FIRST_NOOR achievement wired in chat route, WoD notification confirmed wired, streak freeze confirmed complete per spec (earned-only, no IAP).
-- Vercel project root directory corrected from `arabai-backend` → `warsh-backend`. Backend live at `warsh-backend.vercel.app`. `CRON_SECRET` and `GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET` set in Vercel production.
-- Content dashboard at `/dashboard` — Warsh-styled Curriculum Studio, fully functional lesson stepper/add/delete. `npm run build` passes.
 - Backend and app TypeScript checks pass; `npm run db:validate-fixtures` passes with 391 fixtures.
-- `GET /api/health` → 200 ✓, `GET /api/cron/expire-trials` with CRON_SECRET → 200 `{"data":{"expired":0}}` ✓.
-- Custom domain `api.warsh.app` live on Vercel ✅ (attached 2026-06-05).
-- IMPORTANT: future CLI deploys must run from repo root `D:\Code\Warsh` (not warsh-backend/) since Vercel rootDirectory is now `warsh-backend`. Use the Vercel API trigger or git push + API to redeploy.
+- `GET /api/health` → 200 ✓. UptimeRobot monitoring every 5 minutes.
+- Custom domain `api.warsh.app` live on Vercel ✅
+- IMPORTANT: future CLI deploys must run from repo root `D:\Code\Warsh` (rootDirectory is `warsh-backend` in Vercel project settings).
 
 It is intended to track:
 - what is implemented in the repo
@@ -80,9 +78,9 @@ It should not be treated as a permanent record of:
 - **Chapter 14:** fixture-authored (5 lessons), wired into `seed.cjs`, validated (63 total fixtures), pushed to production Neon DB 2026-05-28. L01: human plural adjective agreement; L02: non-human plural rule (الْكُتُب جَدِيدَة); L03: Quranic non-human plurals deep practice; L04: human vs non-human contrast; L05: REVIEW.
 - **Chapters 15-40:** fixture-authored (139 lessons across 26 chapters, 0 validation errors)
 - **Ch41-72:** Ch41-65 (130 lessons) fixture-authored and validated; Ch66-72 done and wired; Ch71-72 wired 2026-05-29
-- **Current focus:** Spec feature gaps — AUDIO_RECOGNITION, speaking stats, Noor overage IAP, streak freeze IAP, Resend email, push notification scheduling (see "What is LEFT" below)
-- **RTDN webhook:** `POST /api/webhooks/google` built and TypeScript-clean; awaiting Play Console approval + RTDN configuration
-- **Recommended next milestone:** Work through spec feature gaps in priority order, starting with AUDIO_RECOGNITION exercise type and Resend email wiring.
+- **Current focus:** On-device QA — VERB_PATTERN, AUDIO_RECOGNITION, WRITE_ARABIC/HARAKAH_PLACEMENT renderers, paywall after Ch1, Chapters 9-72 spot-check.
+- **RTDN webhook:** ✅ Live — `POST /api/webhooks/google` receiving real Play Console notifications.
+- **Recommended next milestone:** Build a new APK and run on-device QA for unverified exercise renderers + paywall flow.
 
 **2026-05-29 Ch41-65 spec-check findings:**
 
@@ -116,7 +114,7 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 
 **2026-05-28 Chapter 13 fixture authoring:** Authored Chapter 13 lessons 1-4 (`chapter-13-lesson-01.json` through `chapter-13-lesson-04.json`) and wired them into `seed.cjs` as stable IDs `ch13-l01` through `ch13-l04`. Chapter 13 covers sound masculine plural, sound feminine plural, broken plural recognition, and non-human plural feminine treatment. `npm run db:validate-fixtures` passes with 58 fixture lessons; `npm run db:validate-seed` passes with 72 chapters and 323 legacy curriculum lessons.
 
-**What is DONE (as of 2026-06-05):**
+**What is DONE (as of 2026-06-06):**
 - All 13 spec files have been implemented to Phase 1 completeness
 - A0 animated splash is built; the prior "A0 missing" note is superseded
 - Chapters 1-72 are fixture-authored and wired, including all current SP/REVIEW insertion points
@@ -131,18 +129,24 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 - Password reset (forgot/reset), change password, edit profile
 - Preview experience A1-A7, onboarding B1-B9 including permissions
 - Token refresh (30-day JWT), Spoken Fus'ha (SHADOW_REPEAT + SPOKEN_PHRASES), Urdu localization
-- Sentry backend is live-confirmed; mobile Sentry confirmed live (event received from release APK on physical device 2026-06-04).
-- Mixpanel baked into release APK; token confirmed in EAS production + preview.
-- UptimeRobot live: `https://api.warsh.app/api/health` monitored every 5 minutes, alert email set.
-- Beta gate smoke-test passed (2026-06-04): launch → login → lesson flow end-to-end on physical device.
+- Sentry backend live-confirmed; mobile Sentry confirmed live (event received from release APK on physical device 2026-06-04)
+- Mixpanel baked into release APK; token confirmed in EAS production + preview
+- UptimeRobot live: `https://api.warsh.app/api/health` monitored every 5 minutes, alert email set
+- Beta gate smoke-test passed (2026-06-04): launch → login → lesson flow end-to-end on physical device
 - Content dashboard at `/dashboard`; dev unlock helper script
 - Backend and app TypeScript checks pass; `npm run db:validate-fixtures` passes with 391 fixtures
 - Custom domain `api.warsh.app` live on Vercel; all `warsh-backend.vercel.app` references replaced in codebase ✅
+- RESEND_API_KEY configured; password reset emails confirmed delivered ✅
+- `warsh_noor_pack` ($0.99 consumable) created in Google Play Console ✅
+- RTDN pipeline live: Pub/Sub topic → push subscription → `api.warsh.app/api/webhooks/google` ✅
+- Sentry email alerts confirmed working (default member notifications) ✅
+- `@warsh/lesson-schema` vendored into `warsh-backend/vendor/lesson-schema/` — Vercel builds now self-contained ✅
+- `GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET` regenerated and set in Vercel production ✅
 
 **What is LEFT (as of 2026-06-06):**
 
 ### Blocked on Google (~2 weeks)
-- **Google Play Console approval** — closed testing track submitted, Google reviewing. Until approved: IAP sandbox testing, RTDN webhook, and production publishing are all blocked.
+- **Google Play Console approval** — closed testing track submitted, Google reviewing. Until approved: IAP sandbox testing and production publishing are blocked. RTDN is now fully set up and will process real events automatically once live purchases start flowing.
 
 ### YOU-items (manual, do when ready)
 1. ~~**Domain attachment**~~ ✅ FULLY DONE (2026-06-05) — `api.warsh.app` live on Vercel. `NEXT_PUBLIC_APP_URL` set in Vercel env. Backend redeployed. New APK built with `api.warsh.app` baked in (89 MB, bundle verified).
@@ -157,7 +161,7 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 8. **AUDIO_RECOGNITION** — Ch4-L1 has ex9 (كَبِيرٌ) and ex10 (جَدِيدٌ). Confirm audio plays and options tap correctly.
 9. **WRITE_ARABIC / HARAKAH_PLACEMENT** — New renderers need on-device verification (keyboard, RTL input, feedback).
 10. **Paywall after Ch1 completion** — Confirm paywall appears correctly; last unconfirmed beta gate item.
-11. **IAP sandbox purchase + restore** — Blocked on Play Console approval + `warsh_noor_pack` creation.
+11. **IAP sandbox purchase + restore** — Blocked on Play Console approval only (`warsh_noor_pack` is now created).
 12. **Chapters 9–72 spot-check** — Browse a few lessons per book to catch any schema/render issues.
 
 ### Pre-launch (after domain + Play Console)
@@ -166,6 +170,20 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 15. ~~**Rebuild release AAB with `EXPO_PUBLIC_SENTRY_DSN`**~~ ✅ DONE (2026-06-05) — `app-release.aab` (47.8 MB) rebuilt with `EXPO_PUBLIC_SENTRY_DSN` baked in. Bundle verified: `api.warsh.app` present, `sentry.io` present, `warsh-backend.vercel.app` absent. JAVA_HOME: `C:\Users\sysadmin\.gradle\jdks\eclipse_adoptium-17-amd64-windows\jdk-17.0.18+8`. Ready to upload to Play Console.
 16. ~~**Auto-play TTS audio in Discover and AUDIO_RECOGNITION**~~ ✅ DONE (2026-06-05) — `PlayButton` now accepts `autoPlay` prop. When true, plays TTS 350ms after the card/exercise appears; re-fires when text changes (next card); stops cleanly on navigation away. Wired in `renderDiscover()` and `renderAudioRecognition()` (with `key={currentExerciseIndex}` for clean remount). For AUDIO_RECOGNITION the hint changed to "Tap to replay". TypeScript clean.
 17. **Populate `audio_url` fields for AUDIO_RECOGNITION exercises** — All `audio_url` fields in lesson fixtures are empty strings (`""`). AUDIO_RECOGNITION now auto-plays via OpenAI TTS from the `arabic_text` field (no `audio_url` needed for the current renderer). The spec calls for human-recited audio long-term — source MP3s (EveryAyah API, Mishary recitations, or record in-house) and populate `audio_url` fields before a polish release.
+
+---
+
+## Recent Changes (2026-06-06) — RTDN webhook live
+
+### Google Play RTDN pipeline configured (2026-06-06)
+
+- **GCP Pub/Sub topic** `warsh-play-notifications` created in project `umar-tools-27994`.
+- **IAM binding** — `google-play-developer-notifications@system.gserviceaccount.com` granted `roles/pubsub.publisher` on the topic.
+- **Push subscription** `warsh-play-push` created with endpoint `https://api.warsh.app/api/webhooks/google?token=<secret>`, ack deadline 30s.
+- **Play Console** configured with topic name `projects/umar-tools-27994/topics/warsh-play-notifications`. Test notification sent and confirmed received (message id: `20001680547077152`).
+- **`GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET`** — old empty value replaced with a new 64-char hex secret in Vercel production.
+- **Webhook logging added** to `app/api/webhooks/google/route.ts` — all incoming messages now log `[rtdn] received message id:` and notification type, making future debugging easy.
+- Backend deployed and health-checked after all changes.
 
 ---
 
