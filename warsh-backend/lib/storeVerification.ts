@@ -140,6 +140,8 @@ async function verifyGooglePlaySubscription(input: VerifySubscriptionInput): Pro
   });
 
   if (!response.ok) {
+    const errBody = await response.text().catch(() => "");
+    console.error(`[verify] Google subscriptionsv2 HTTP ${response.status}: ${errBody}`);
     throw new StoreVerificationError("Google Play rejected the purchase token.", 400, "invalid_purchase");
   }
 
