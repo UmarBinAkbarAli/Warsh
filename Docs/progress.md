@@ -1,6 +1,6 @@
 # Warsh Phase 1 Progress Tracker
 
-Last updated: 2026-06-09 (Urdu mode completed across app UI, seeded content, backend metadata, and fixture audit)
+Last updated: 2026-06-09 (R2-backed audio storage live; TTS no longer required for audio playback)
 
 ## Purpose
 
@@ -29,6 +29,7 @@ This file is the source of truth for current app progress as reflected in the co
 - **Backend chapter/lesson metadata localized** - `Chapter.titleUr`, `Chapter.descriptionUr`, and `Lesson.titleUr` were added to Prisma, seeded, and exposed by `/api/chapters`, `/api/chapters/[id]/lessons`, and `/api/lessons/[id]`.
 - **Lesson fixtures backfilled with Urdu content** - fixture JSON now includes `.ur` wherever localized lesson content exposed `.en`, and vocabulary related-word responses now include `translationUr`.
 - **Urdu audit added and passing** - `npm run db:audit-urdu` now checks DB metadata, vocabulary/Quranic example Urdu fields, and fixture localized content; `npm run db:generate`, `npm run db:migrate -- --name add_urdu_metadata`, `npm run db:seed`, `npm run db:validate-fixtures`, backend build, app lint, and app `npx tsc --noEmit` all passed on 2026-06-09.
+- **R2-backed audio storage live** - Cloudflare R2 bucket is now the authoritative source for all exercise and vocabulary audio files. `audio_url` fields in lesson fixtures and vocabulary records are populated with R2 URLs. OpenAI TTS is no longer needed for audio playback in AUDIO_RECOGNITION or Discover exercises — audio is served directly from R2.
 
 It is intended to track:
 - what is implemented in the repo
@@ -140,6 +141,7 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 - Password reset (forgot/reset), change password, edit profile
 - Preview experience A1-A7, onboarding B1-B9 including permissions
 - Token refresh (30-day JWT), Spoken Fus'ha (SHADOW_REPEAT + SPOKEN_PHRASES), Urdu localization
+- R2-backed audio storage: all `audio_url` fields in fixtures and vocabulary records point to Cloudflare R2; OpenAI TTS no longer required for audio playback
 - Sentry backend live-confirmed; mobile Sentry confirmed live (event received from release APK on physical device 2026-06-04)
 - Mixpanel baked into release APK; token confirmed in EAS production + preview
 - UptimeRobot live: `https://api.warsh.app/api/health` monitored every 5 minutes, alert email set
@@ -180,7 +182,7 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 14. ~~**Production APK rebuild**~~ ✅ DONE (2026-06-05) — APK rebuilt with `api.warsh.app`. Bundle verified. Note: built without `EXPO_PUBLIC_SENTRY_DSN` so mobile Sentry is disabled in this build — rebuild with DSN to restore.
 15. ~~**Rebuild release AAB with `EXPO_PUBLIC_SENTRY_DSN`**~~ ✅ DONE (2026-06-05) — `app-release.aab` (47.8 MB) rebuilt with `EXPO_PUBLIC_SENTRY_DSN` baked in. Bundle verified: `api.warsh.app` present, `sentry.io` present, `warsh-backend.vercel.app` absent. JAVA_HOME: `C:\Users\sysadmin\.gradle\jdks\eclipse_adoptium-17-amd64-windows\jdk-17.0.18+8`. Ready to upload to Play Console.
 16. ~~**Auto-play TTS audio in Discover and AUDIO_RECOGNITION**~~ ✅ DONE (2026-06-05) — `PlayButton` now accepts `autoPlay` prop. When true, plays TTS 350ms after the card/exercise appears; re-fires when text changes (next card); stops cleanly on navigation away. Wired in `renderDiscover()` and `renderAudioRecognition()` (with `key={currentExerciseIndex}` for clean remount). For AUDIO_RECOGNITION the hint changed to "Tap to replay". TypeScript clean.
-17. **Populate `audio_url` fields for AUDIO_RECOGNITION exercises** — All `audio_url` fields in lesson fixtures are empty strings (`""`). AUDIO_RECOGNITION now auto-plays via OpenAI TTS from the `arabic_text` field (no `audio_url` needed for the current renderer). The spec calls for human-recited audio long-term — source MP3s (EveryAyah API, Mishary recitations, or record in-house) and populate `audio_url` fields before a polish release.
+17. ~~**Populate `audio_url` fields for AUDIO_RECOGNITION exercises**~~ ✅ DONE — Audio is now stored in the Cloudflare R2 bucket. `audio_url` fields in lesson fixtures and vocabulary records are populated with R2 URLs. OpenAI TTS is no longer required; AUDIO_RECOGNITION and Discover auto-play exercises serve audio directly from R2.
 
 ---
 
@@ -887,8 +889,8 @@ The repo is in a stronger state than the old tracker wording suggested, but a fe
 - `npm run db:seed` is destructive for local data: it clears users, progress, chat messages, achievements, lessons, and chapters before reseeding
 - `DEV_UNLOCK_ALL` in `Warsh-backend/lib/course.ts` is now development-only; it only bypasses locking when `NODE_ENV !== "production"` and `DEV_UNLOCK_ALL=true`
 - The mobile API client now times out after 10 seconds and exposes clearer backend/network/auth error messages through `getApiErrorMessage`
-- `GET /api/audio/tts?text=...` now generates authenticated MP3 TTS through OpenAI when `OPENAI_API_KEY` is configured
-- Mobile TTS audio caching now lives in `Warsh-app/app/services/audioCache.ts` and uses `expo-file-system`
+- `GET /api/audio/tts?text=...` generates authenticated MP3 TTS through OpenAI when `OPENAI_API_KEY` is configured — **this endpoint is no longer the primary audio path**; all exercise and vocabulary audio is served directly from the Cloudflare R2 bucket via populated `audio_url` fields
+- Mobile TTS audio caching now lives in `Warsh-app/app/services/audioCache.ts` and uses `expo-file-system` — used only as a fallback when `audio_url` is absent
 - Noor backend generation now uses `Warsh-backend/lib/openai.ts` with `OPENAI_MODEL` defaulting to `gpt-4o-mini`
 - Noor still falls back to the local tutor response when `OPENAI_API_KEY` is missing or the provider call throws - this can mask real provider errors during debugging
 - Runtime health claims such as "server is running" or "Expo bundle returned 200" are environment checks, not source-of-truth code facts
