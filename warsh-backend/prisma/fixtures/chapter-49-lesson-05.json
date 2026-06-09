@@ -93,10 +93,22 @@
         "ur": "بیشک اللہ کے لیے آسمانوں اور زمین کی بادشاہی ہے"
       },
       "options": [
-        { "en": "Indeed, to Allah belongs the sovereignty of the heavens and the earth", "ur": "بیشک اللہ کے لیے آسمانوں اور زمین کی بادشاہی ہے" },
-        { "en": "Indeed, Allah owns the heavens and the earth", "ur": "بیشک اللہ آسمانوں اور زمین کا مالک ہے" },
-        { "en": "The sovereignty of Allah is the heavens and the earth", "ur": "اللہ کی بادشاہی آسمان اور زمین ہیں" },
-        { "en": "Allah has power over the heavens and earth", "ur": "اللہ کو آسمانوں اور زمین پر power ہے" }
+        {
+          "en": "Indeed, to Allah belongs the sovereignty of the heavens and the earth",
+          "ur": "بیشک اللہ کے لیے آسمانوں اور زمین کی بادشاہی ہے"
+        },
+        {
+          "en": "Indeed, Allah owns the heavens and the earth",
+          "ur": "بیشک اللہ آسمانوں اور زمین کا مالک ہے"
+        },
+        {
+          "en": "The sovereignty of Allah is the heavens and the earth",
+          "ur": "اللہ کی بادشاہی آسمان اور زمین ہیں"
+        },
+        {
+          "en": "Allah has power over the heavens and earth",
+          "ur": "اللہ کو آسمانوں اور زمین پر power ہے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -197,12 +209,41 @@
         }
       ],
       "right_column": [
-        { "en": "Indeed Allah (acc.)", "ur": "بیشک اللہ (نصب)" },
-        { "en": "sovereignty of the heavens", "ur": "آسمانوں کی بادشاہی" },
-        { "en": "the One in whose hand", "ur": "وہ جس کے ہاتھ میں" },
-        { "en": "to Him belongs sovereignty", "ur": "اس کے لیے بادشاہی ہے" }
+        {
+          "en": "Indeed Allah (acc.)",
+          "ur": "بیشک اللہ (نصب)"
+        },
+        {
+          "en": "sovereignty of the heavens",
+          "ur": "آسمانوں کی بادشاہی"
+        },
+        {
+          "en": "the One in whose hand",
+          "ur": "وہ جس کے ہاتھ میں"
+        },
+        {
+          "en": "to Him belongs sovereignty",
+          "ur": "اس کے لیے بادشاہی ہے"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -249,7 +290,13 @@
           "ur": "آسمان اور زمین"
         }
       ],
-      "correct_order": [0, 1, 2, 3, 4],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
       "xp_value": 1
     },
     {
@@ -257,13 +304,47 @@
       "id": "ch49-l05-ex06",
       "sentence_ar": "تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ",
       "words": [
-        { "ar": "تَبَارَكَ", "ar_plain": "تبارك", "translit": "tabaaraka", "en": "blessed be" },
-        { "ar": "الَّذِي", "ar_plain": "الذي", "translit": "alladhii", "en": "the One who" },
-        { "ar": "بِيَدِهِ", "ar_plain": "بيده", "translit": "bi-yadihi", "en": "in whose hand" },
-        { "ar": "الْمُلْكُ", "ar_plain": "الملك", "translit": "al-mulku", "en": "the sovereignty" }
+        {
+          "ar": "تَبَارَكَ",
+          "ar_plain": "تبارك",
+          "translit": "tabaaraka",
+          "en": "blessed be",
+          "ur": "مبارک ہو"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhii",
+          "en": "the One who",
+          "ur": "وہ جو"
+        },
+        {
+          "ar": "بِيَدِهِ",
+          "ar_plain": "بيده",
+          "translit": "bi-yadihi",
+          "en": "in whose hand",
+          "ur": "جس کے ہاتھ میں"
+        },
+        {
+          "ar": "الْمُلْكُ",
+          "ar_plain": "الملك",
+          "translit": "al-mulku",
+          "en": "the sovereignty",
+          "ur": "خودمختاری"
+        }
       ],
-      "available_roles": ["VERB", "RELATIVE_PRONOUN", "PREPOSITION", "PREDICATE"],
-      "correct_roles": ["VERB", "RELATIVE_PRONOUN", "PREPOSITION", "PREDICATE"],
+      "available_roles": [
+        "VERB",
+        "RELATIVE_PRONOUN",
+        "PREPOSITION",
+        "PREDICATE"
+      ],
+      "correct_roles": [
+        "VERB",
+        "RELATIVE_PRONOUN",
+        "PREPOSITION",
+        "PREDICATE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "تَبَارَكَ is the verb 'blessed/praised be.' الَّذِي is the relative pronoun 'the One who.' بِيَدِهِ is 'in whose hand' — a prepositional phrase inside the relative clause. الْمُلْكُ is the predicate of the relative clause.",
@@ -281,10 +362,22 @@
         "ur": "جس کے ہاتھ میں بادشاہی ہے"
       },
       "options": [
-        { "en": "in whose hand is the sovereignty", "ur": "جس کے ہاتھ میں بادشاہی ہے" },
-        { "en": "with the hand of the king", "ur": "بادشاہ کے ہاتھ سے" },
-        { "en": "in His hand is the kingdom", "ur": "اس کے ہاتھ میں بادشاہی ہے" },
-        { "en": "by the hand of the sovereignty", "ur": "بادشاہی کے ہاتھ سے" }
+        {
+          "en": "in whose hand is the sovereignty",
+          "ur": "جس کے ہاتھ میں بادشاہی ہے"
+        },
+        {
+          "en": "with the hand of the king",
+          "ur": "بادشاہ کے ہاتھ سے"
+        },
+        {
+          "en": "in His hand is the kingdom",
+          "ur": "اس کے ہاتھ میں بادشاہی ہے"
+        },
+        {
+          "en": "by the hand of the sovereignty",
+          "ur": "بادشاہی کے ہاتھ سے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -309,7 +402,9 @@
       "ur": "بڑی برکت ہے اس کے جس کے ہاتھ میں بادشاہی ہے",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-mulk-001-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ — one of the most beautiful openings in the Quran. A verbal sentence (تَبَارَكَ) transitions into a relative clause (الَّذِي بِيَدِهِ الْمُلْكُ). All of this within a single ayah of just four words. This is the power of Arabic.",
       "ur": "تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ — قرآن کی سب سے خوبصورت openings میں سے ایک۔ ایک verbal sentence (تَبَارَكَ) ایک relative clause (الَّذِي بِيَدِهِ الْمُلْكُ) میں transition کرتی ہے۔ یہ سب ایک ہی ayah میں صرف چار لفظوں میں۔ یہ عربی کی power ہے۔"

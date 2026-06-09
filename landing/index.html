@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warsh — Quranic Arabic</title>
+  <meta name="description" content="Learn the Arabic of the Quran through a scholar-validated curriculum, beautiful daily lessons, and your AI tutor Ustaad Noor. 7 days free.">
+  <meta property="og:title" content="Warsh — Quranic Arabic">
+  <meta property="og:description" content="Understand what you recite. Scholar-validated Quranic Arabic for Muslims. 7 days free.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F4EBD0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Scheherazade+New:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:        '#1A1A1A',
+            'ink-soft': '#3D3D3D',
+            'ink-muted':'#5F5F5F',
+            gold:       '#C8A047',
+            'gold-soft':'#E0BC68',
+            'gold-deep':'#9A7D33',
+            parchment:  '#F4EBD0',
+            'parchment-deep':'#EDDFAF',
+            sage:       '#7A8B70',
+            'sage-soft':'#9DAB94',
+            cream:      '#FAF6E9',
+          },
+          fontFamily: {
+            lora:        ['Lora', 'Georgia', 'serif'],
+            arabic:      ['"Scheherazade New"', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background-color: #F4EBD0;
+      color: #1A1A1A;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-arabic { font-family: 'Scheherazade New', serif; }
+
+    /* Parchment star-polygon tile — very subtle */
+    .motif-bg {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cpolygon points='36,4 42,24 63,24 47,37 53,57 36,45 19,57 25,37 9,24 30,24' fill='none' stroke='%23C8A047' stroke-width='0.6' stroke-opacity='0.18'/%3E%3C/svg%3E");
+    }
+    .motif-bg-dark {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cpolygon points='36,4 42,24 63,24 47,37 53,57 36,45 19,57 25,37 9,24 30,24' fill='none' stroke='%23C8A047' stroke-width='0.6' stroke-opacity='0.12'/%3E%3C/svg%3E");
+    }
+
+    /* Navbar scroll state */
+    #navbar { transition: background 0.3s ease, box-shadow 0.3s ease; }
+    #navbar.scrolled {
+      background: rgba(244,235,208,0.96);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 1px 0 rgba(122,139,112,0.2);
+    }
+
+    /* Card hover lift */
+    .card-lift {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .card-lift:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(26,26,26,0.08);
+      border-color: rgba(200,160,71,0.35);
+    }
+
+    /* Gold CTA button */
+    .btn-gold {
+      background: #C8A047;
+      color: #1A1A1A;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+    .btn-gold:hover { background: #E0BC68; }
+    .btn-gold:active { background: #9A7D33; transform: scale(0.98); }
+
+    /* Outline button */
+    .btn-outline {
+      border: 1.5px solid #7A8B70;
+      color: #1A1A1A;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .btn-outline:hover { border-color: #C8A047; background: #FAF6E9; }
+
+    /* Phone glow */
+    .phone-glow {
+      box-shadow: 0 40px 80px rgba(26,26,26,0.28), 0 0 0 1px rgba(200,160,71,0.08);
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Focus visible only for keyboard */
+    :focus:not(:focus-visible) { outline: none; }
+    :focus-visible { outline: 2px solid #C8A047; outline-offset: 2px; border-radius: 4px; }
+
+    /* Smooth fade-in for sections */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 cursor-pointer flex-shrink-0">
+      <span class="font-lora font-bold text-ink text-lg tracking-tight leading-none">Warsh</span>
+      <span class="text-sage-soft text-base leading-none select-none">·</span>
+      <span class="font-arabic font-bold text-gold text-2xl leading-none" dir="rtl">وَرْش</span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#features"    class="font-lora text-sm text-ink-muted hover:text-ink transition-colors duration-200 cursor-pointer">Features</a>
+      <a href="#how-it-works" class="font-lora text-sm text-ink-muted hover:text-ink transition-colors duration-200 cursor-pointer">How it works</a>
+      <a href="#pricing"     class="font-lora text-sm text-ink-muted hover:text-ink transition-colors duration-200 cursor-pointer">Pricing</a>
+    </div>
+
+    <!-- CTA -->
+    <a href="#download"
+       class="btn-gold font-lora font-semibold text-sm px-5 py-2.5 rounded-xl cursor-pointer hidden sm:block">
+      Download free
+    </a>
+
+    <!-- Mobile hamburger -->
+    <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg hover:bg-parchment-deep transition-colors cursor-pointer" aria-label="Open menu" aria-expanded="false">
+      <svg class="w-5 h-5 text-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div id="mobile-menu" class="hidden sm:hidden bg-parchment border-t border-sage-soft/30 px-5 py-4 space-y-3">
+    <a href="#features"     class="block font-lora text-sm text-ink-soft py-2 cursor-pointer">Features</a>
+    <a href="#how-it-works" class="block font-lora text-sm text-ink-soft py-2 cursor-pointer">How it works</a>
+    <a href="#pricing"      class="block font-lora text-sm text-ink-soft py-2 cursor-pointer">Pricing</a>
+    <a href="#download"     class="block btn-gold font-lora font-semibold text-sm text-center py-3 rounded-xl cursor-pointer mt-2">Download free →</a>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="motif-bg min-h-screen flex items-center pt-16 overflow-hidden" style="background-color:#F4EBD0;">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 lg:py-32 w-full">
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+
+      <!-- Text -->
+      <div class="fade-in">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-cream border border-sage-soft/50 rounded-full px-4 py-1.5 mb-8">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
+          <span class="font-lora text-xs text-ink-muted tracking-wide">Scholar-validated · Madinah Reader curriculum</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="font-lora font-bold text-ink text-5xl sm:text-6xl lg:text-7xl leading-[1.1] mb-5">
+          Where Arabic<br>is crafted.
+        </h1>
+
+        <!-- Arabic sub-headline -->
+        <p class="font-arabic text-gold-deep text-2xl sm:text-3xl mb-7 leading-loose" dir="rtl" lang="ar">
+          حَيْثُ تُصْنَعُ الْعَرَبِيَّة
+        </p>
+
+        <p class="font-lora text-ink-soft text-lg leading-relaxed mb-10 max-w-lg">
+          Learn the Arabic of the Quran — structured lessons, a scholar-endorsed curriculum, and Ustaad Noor, your AI tutor, ready whenever you have a question.
+        </p>
+
+        <!-- CTA row -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-10">
+          <a href="#download"
+             class="btn-gold inline-flex items-center justify-center gap-3 font-lora font-semibold text-base px-7 py-4 rounded-2xl cursor-pointer">
+            <!-- Play Store icon -->
+            <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3.18 23.76c.3.17.64.24.98.21l11.56-11.97L3.18.03A1.5 1.5 0 002.5 1.5v21c0 .46.25.9.68 1.26z" opacity=".8"/>
+              <path d="M19.3 9.27L16.2 7.5 13.5 10.5l2.7 2.7 3.1-1.77a1.5 1.5 0 000-2.16z" opacity=".8"/>
+              <path d="M3.18.03L14.22 10.5l1.98-1.98L4.16-.24A1.5 1.5 0 003.18.03z" opacity=".6"/>
+              <path d="M3.18 23.76L16.2 16.5l-1.98-1.98L3.18 23.76z" opacity=".6"/>
+            </svg>
+            <span>Download for Android</span>
+          </a>
+
+          <a href="#how-it-works"
+             class="btn-outline inline-flex items-center justify-center gap-2 font-lora font-semibold text-base px-7 py-4 rounded-2xl bg-transparent cursor-pointer">
+            See how it works
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Trust signals -->
+        <div class="flex flex-wrap gap-5 text-sm text-ink-muted font-lora">
+          <div class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            Scholar-endorsed
+          </div>
+          <div class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            7 days free
+          </div>
+          <div class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
+            </svg>
+            No ads, ever
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone mockup -->
+      <div class="flex justify-center lg:justify-end fade-in" style="transition-delay:0.12s">
+        <div class="relative w-64 sm:w-72 lg:w-80 flex-shrink-0">
+
+          <!-- Ambient glow -->
+          <div class="absolute -inset-6 rounded-[3rem] bg-gold opacity-[0.07] blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+          <!-- Phone shell -->
+          <div class="relative bg-ink rounded-[2.5rem] p-[6px] phone-glow">
+            <!-- Notch bar -->
+            <div class="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-5 bg-ink rounded-full z-10" aria-hidden="true"></div>
+
+            <!-- Screen -->
+            <div class="bg-parchment rounded-[2.2rem] overflow-hidden" style="aspect-ratio:9/19.5;">
+              <!-- App chrome -->
+              <div class="h-full flex flex-col pt-8">
+
+                <!-- Progress bar -->
+                <div class="px-5 mb-3">
+                  <div class="flex items-center justify-between mb-1.5">
+                    <span class="font-lora text-xs text-ink-muted">Lesson 3 of 5</span>
+                    <span class="font-lora text-xs text-gold font-semibold">Discover</span>
+                  </div>
+                  <div class="h-1 bg-parchment-deep rounded-full overflow-hidden">
+                    <div class="h-full rounded-full bg-gold" style="width:44%"></div>
+                  </div>
+                </div>
+
+                <!-- Ayah card -->
+                <div class="mx-5 mb-3 bg-cream rounded-2xl p-4 border border-sage-soft/40">
+                  <p class="font-lora text-xs text-sage text-center mb-2">Al-Ikhlas · 112:1</p>
+                  <p class="font-arabic text-ink text-3xl leading-loose text-center" dir="rtl" lang="ar">
+                    قُلْ هُوَ ٱللَّهُ أَحَدٌ
+                  </p>
+                  <p class="font-lora text-xs text-ink-muted italic text-center mt-2">Say: He is Allah, One.</p>
+                </div>
+
+                <!-- Word reveal card -->
+                <div class="mx-5 mb-3 bg-parchment-deep rounded-2xl p-4 border border-gold/30 text-center">
+                  <p class="font-arabic text-gold text-4xl leading-loose mb-1" dir="rtl" lang="ar">أَحَدٌ</p>
+                  <p class="font-lora text-xs text-sage mb-1">ahad</p>
+                  <p class="font-lora font-semibold text-ink text-sm">One · Unique · Singular</p>
+                  <!-- Audio button -->
+                  <button class="mt-3 w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center mx-auto cursor-pointer hover:bg-gold/30 transition-colors" aria-label="Play pronunciation">
+                    <svg class="w-4 h-4 text-gold-deep" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Progress dots -->
+                <div class="flex justify-center gap-1.5 mb-4">
+                  <div class="w-2 h-2 rounded-full bg-sage-soft" aria-hidden="true"></div>
+                  <div class="w-2 h-2 rounded-full bg-sage-soft" aria-hidden="true"></div>
+                  <div class="w-5 h-2 rounded-full bg-gold" aria-hidden="true"></div>
+                  <div class="w-2 h-2 rounded-full bg-parchment-deep border border-sage-soft" aria-hidden="true"></div>
+                  <div class="w-2 h-2 rounded-full bg-parchment-deep border border-sage-soft" aria-hidden="true"></div>
+                </div>
+
+                <!-- CTA button -->
+                <div class="mx-5">
+                  <div class="btn-gold rounded-xl py-3.5 text-center font-lora font-semibold text-sm cursor-pointer">
+                    Continue →
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating callout: Audio -->
+          <div class="absolute -left-16 top-1/4 bg-cream border border-sage-soft/50 rounded-2xl shadow-sm px-3 py-2.5 flex items-center gap-2 w-36" aria-hidden="true">
+            <div class="w-8 h-8 rounded-xl bg-gold/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-lora text-xs font-semibold text-ink leading-none mb-0.5">Audio</p>
+              <p class="font-lora text-xs text-ink-muted leading-none">Every word</p>
+            </div>
+          </div>
+
+          <!-- Floating callout: Streak -->
+          <div class="absolute -right-14 bottom-1/4 bg-cream border border-sage-soft/50 rounded-2xl shadow-sm px-3 py-2.5 flex items-center gap-2 w-32" aria-hidden="true">
+            <div class="w-8 h-8 rounded-xl bg-gold/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-lora text-xs font-semibold text-ink leading-none mb-0.5">Streak</p>
+              <p class="font-lora text-xs text-ink-muted leading-none">12 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ THE GAP ═══════════════════════════ -->
+<section class="motif-bg-dark py-20 lg:py-28 relative overflow-hidden" style="background-color:#1A1A1A;">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center fade-in">
+    <p class="font-arabic text-gold text-4xl sm:text-5xl mb-8 leading-loose" dir="rtl" lang="ar">
+      بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+    </p>
+    <h2 class="font-lora font-bold text-parchment text-3xl sm:text-4xl lg:text-5xl leading-tight mb-7">
+      You recite it every day.<br>
+      <span class="text-gold">Do you understand it?</span>
+    </h2>
+    <p class="font-lora text-parchment/65 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+      Over a billion Muslims recite the Quran in Salah. Most — including most in Pakistan, South Asia, and the global diaspora — do not understand what they are saying. They have memorized the sounds. The meaning lives behind a language barrier.
+    </p>
+    <p class="font-lora text-parchment text-xl font-semibold italic">
+      Warsh is the journey across that barrier.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ FEATURES ═══════════════════════════ -->
+<section id="features" class="motif-bg py-20 lg:py-28" style="background-color:#F4EBD0;">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center mb-16 fade-in">
+      <p class="font-lora text-sage text-xs tracking-[0.18em] uppercase mb-3">What Warsh teaches</p>
+      <h2 class="font-lora font-bold text-ink text-3xl sm:text-4xl leading-tight">
+        Four dimensions of Arabic mastery
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- Read -->
+      <div class="bg-cream rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in">
+        <div class="w-12 h-12 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+        </div>
+        <h3 class="font-lora font-bold text-ink text-lg mb-2">Read</h3>
+        <p class="font-lora text-ink-muted text-sm leading-relaxed">Classical Arabic word by word. Understand Quran, Hadith, khutbahs, and Islamic scholarship.</p>
+      </div>
+
+      <!-- Understand -->
+      <div class="bg-cream rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in" style="transition-delay:.07s">
+        <div class="w-12 h-12 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+        </div>
+        <h3 class="font-lora font-bold text-ink text-lg mb-2">Understand</h3>
+        <p class="font-lora text-ink-muted text-sm leading-relaxed">The grammar (Nahw) and morphology (Sarf) of Quranic Arabic — taught through the Madinah Reader.</p>
+      </div>
+
+      <!-- Hear -->
+      <div class="bg-cream rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in" style="transition-delay:.14s">
+        <div class="w-12 h-12 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+          </svg>
+        </div>
+        <h3 class="font-lora font-bold text-ink text-lg mb-2">Hear</h3>
+        <p class="font-lora text-ink-muted text-sm leading-relaxed">Native pronunciation for every word and ayah. Human-recited Quranic audio — never synthesized.</p>
+      </div>
+
+      <!-- Speak -->
+      <div class="bg-cream rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in" style="transition-delay:.21s">
+        <div class="w-12 h-12 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+          </svg>
+        </div>
+        <h3 class="font-lora font-bold text-ink text-lg mb-2">Speak</h3>
+        <p class="font-lora text-ink-muted text-sm leading-relaxed">Fus'ha — greetings, du'a, halaqa phrases, and confident conversations with imams and scholars.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
+<section id="how-it-works" class="py-20 lg:py-28" style="background-color:#FAF6E9;">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center mb-14 fade-in">
+      <p class="font-lora text-sage text-xs tracking-[0.18em] uppercase mb-3">The lesson</p>
+      <h2 class="font-lora font-bold text-ink text-3xl sm:text-4xl leading-tight mb-4">Five beats. One revelation.</h2>
+      <p class="font-lora text-ink-soft text-lg max-w-xl mx-auto leading-relaxed">
+        Every lesson opens with a real ayah. You hear it. You discover the words. You practice. Then you see them in revelation — this time, you understand.
+      </p>
+    </div>
+
+    <!-- Beat cards -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+
+      <!-- 1 Hook -->
+      <div class="bg-parchment rounded-2xl p-6 border border-sage-soft/30 fade-in">
+        <div class="w-8 h-8 rounded-full bg-sage-soft/30 flex items-center justify-center mb-4">
+          <span class="font-lora font-bold text-ink-muted text-sm">1</span>
+        </div>
+        <h3 class="font-lora font-bold text-ink text-base mb-2">Hook</h3>
+        <p class="font-lora text-ink-muted text-sm leading-relaxed mb-4">An ayah plays. You listen. The lesson begins in revelation.</p>
+        <div class="bg-cream rounded-xl p-3 text-center border border-sage-soft/30">
+          <p class="font-arabic text-ink text-xl leading-loose" dir="rtl" lang="ar">قُلْ هُوَ ٱللَّهُ أَحَدٌ</p>
+        </div>
+      </div>
+
+      <!-- 2 Discover -->
+      <div class="bg-parchment rounded-2xl p-6 border border-sage-soft/30 fade-in" style="transition-delay:.06s">
+        <div class="w-8 h-8 rounded-full bg-sage-soft/30 flex items-center justify-center mb-4">
+          <span class="font-lora font-bold text-ink-muted text-sm">2</span>
+        </div>
+        <h3 class="font-lora font-bold text-ink text-base mb-2">Discover</h3>
+        <p class="font-lora text-ink-muted text-sm leading-relaxed mb-4">Words appear one by one — with audio, meaning, and context.</p>
+        <div class="bg-cream rounded-xl p-3 text-center border border-sage-soft/30">
+          <p class="font-arabic text-gold text-2xl leading-loose" dir="rtl" lang="ar">أَحَدٌ</p>
+          <p class="font-lora text-xs text-ink-muted italic mt-1">One · Unique</p>
+        </div>
+      </div>
+
+      <!-- 3 Practice -->
+      <div class="bg-parchment rounded-2xl p-6 border border-sage-soft/30 fade-in" style="transition-delay:.12s">
+        <div class="w-8 h-8 rounded-full bg-sage-soft/30 flex items-center justify-center mb-4">
+          <span class="font-lora font-bold text-ink-muted text-sm">3</span>
+        </div>
+        <h3 class="font-lora font-bold text-ink text-base mb-2">Practice</h3>
+        <p class="font-lora text-ink-muted text-sm leading-relaxed mb-4">Exercises — fill-in, matching, recall — that make the knowledge yours.</p>
+        <div class="bg-cream rounded-xl p-3 border border-sage-soft/30">
+          <p class="font-lora text-xs text-ink-muted mb-2">What does أَحَدٌ mean?</p>
+          <div class="grid grid-cols-2 gap-1.5">
+            <div class="bg-gold/20 border border-gold/50 rounded-lg py-1.5 text-center"><span class="font-lora text-xs font-semibold text-ink">One</span></div>
+            <div class="bg-parchment-deep rounded-lg py-1.5 text-center"><span class="font-lora text-xs text-ink-muted">Many</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Reveal (highlighted) -->
+      <div class="bg-parchment rounded-2xl p-6 border border-gold/40 relative fade-in" style="transition-delay:.18s;">
+        <div class="w-8 h-8 rounded-full bg-gold/25 flex items-center justify-center mb-4">
+          <span class="font-lora font-bold text-gold-deep text-sm">4</span>
+        </div>
+        <h3 class="font-lora font-bold text-ink text-base mb-2">Reveal</h3>
+        <p class="font-lora text-ink-muted text-sm leading-relaxed mb-4">See the concept inside a real ayah. It was there all along.</p>
+        <div class="bg-cream rounded-xl p-3 text-center border border-gold/30">
+          <p class="font-arabic text-ink text-xl leading-loose" dir="rtl" lang="ar">
+            قُلْ هُوَ ٱللَّهُ <span class="text-gold">أَحَدٌ</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- 5 Close -->
+      <div class="bg-parchment rounded-2xl p-6 border border-sage-soft/30 fade-in" style="transition-delay:.24s">
+        <div class="w-8 h-8 rounded-full bg-sage-soft/30 flex items-center justify-center mb-4">
+          <span class="font-lora font-bold text-ink-muted text-sm">5</span>
+        </div>
+        <h3 class="font-lora font-bold text-ink text-base mb-2">Close</h3>
+        <p class="font-lora text-ink-muted text-sm leading-relaxed mb-4">Lesson complete. XP earned. Your streak continues. Your Salah changes.</p>
+        <div class="bg-cream rounded-xl p-3 text-center border border-sage-soft/30">
+          <p class="font-arabic text-sage text-sm leading-loose" dir="rtl" lang="ar">بَارَكَ ٱللَّهُ فِيكَ</p>
+          <p class="font-lora font-semibold text-gold text-sm mt-1">+15 XP</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ USTAAD NOOR ═══════════════════════════ -->
+<section class="motif-bg py-20 lg:py-28" style="background-color:#F4EBD0;">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+
+      <!-- Chat preview -->
+      <div class="order-2 lg:order-1 fade-in">
+        <div class="bg-cream rounded-3xl border border-sage-soft/30" style="box-shadow:0 4px 32px rgba(26,26,26,0.07);">
+          <!-- Header -->
+          <div class="flex items-center gap-3 px-6 py-4 border-b border-sage-soft/30">
+            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+              <span class="font-arabic text-gold-deep text-xl font-bold leading-none" aria-hidden="true">ن</span>
+            </div>
+            <div>
+              <p class="font-lora font-semibold text-ink text-sm leading-none mb-0.5">Ustaad Noor</p>
+              <p class="font-lora text-xs text-sage">Your AI tutor</p>
+            </div>
+          </div>
+
+          <!-- Messages -->
+          <div class="px-6 py-5 space-y-4">
+            <div class="flex gap-3">
+              <div class="w-7 h-7 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="font-arabic text-gold-deep text-sm leading-none" aria-hidden="true">ن</span>
+              </div>
+              <div class="bg-parchment rounded-2xl rounded-tl-sm px-4 py-3 max-w-xs">
+                <p class="font-lora text-sm text-ink-soft leading-relaxed">As-salamu alaykum. You asked about إِنَّ — excellent question.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <div class="w-7 h-7 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="font-arabic text-gold-deep text-sm leading-none" aria-hidden="true">ن</span>
+              </div>
+              <div class="bg-parchment rounded-2xl rounded-tl-sm px-4 py-3 max-w-xs">
+                <p class="font-lora text-sm text-ink-soft leading-relaxed mb-2">
+                  إِنَّ is a particle of emphasis. When Allah says
+                  <span class="font-arabic text-gold" dir="rtl" lang="ar">إِنَّا</span>
+                  — He is saying <em>"Truly, We."</em>
+                </p>
+                <p class="font-lora text-sm text-ink-soft leading-relaxed">You were reciting this in Al-Kawthar.</p>
+              </div>
+            </div>
+
+            <div class="flex justify-end">
+              <div class="bg-gold/15 border border-gold/25 rounded-2xl rounded-tr-sm px-4 py-3 max-w-xs">
+                <p class="font-lora text-sm text-ink leading-relaxed">SubhanAllah. Give me an example from the Quran?</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <div class="w-7 h-7 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="font-arabic text-gold-deep text-sm leading-none" aria-hidden="true">ن</span>
+              </div>
+              <div class="bg-parchment rounded-2xl rounded-tl-sm px-4 py-3 max-w-xs">
+                <p class="font-lora text-sm text-ink-soft leading-relaxed mb-2">بَارَكَ ٱللَّهُ فِيكَ. From Al-Fatiha:</p>
+                <p class="font-arabic text-ink text-xl leading-loose" dir="rtl" lang="ar">إِيَّاكَ نَعْبُدُ</p>
+                <p class="font-lora text-xs text-ink-muted italic mt-1">You alone we worship — emphasis through word order.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input -->
+          <div class="px-6 py-4 border-t border-sage-soft/30 flex gap-2">
+            <div class="flex-1 bg-parchment rounded-xl px-4 py-2.5 border border-sage-soft/50">
+              <p class="font-lora text-sm text-ink-muted">Ask Noor anything about Arabic...</p>
+            </div>
+            <button class="w-10 h-10 rounded-xl bg-gold flex items-center justify-center flex-shrink-0 cursor-pointer hover:bg-gold-soft transition-colors" aria-label="Send message">
+              <svg class="w-4 h-4 text-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="order-1 lg:order-2 fade-in" style="transition-delay:.1s">
+        <p class="font-lora text-sage text-xs tracking-[0.18em] uppercase mb-4">Ustaad Noor · اُستاد نُور</p>
+        <h2 class="font-lora font-bold text-ink text-3xl sm:text-4xl leading-tight mb-6">
+          Your teacher.<br>
+          <span class="text-gold">Always present.</span>
+        </h2>
+        <p class="font-lora text-ink-soft text-lg leading-relaxed mb-7">
+          Ustaad Noor is the AI tutor built into Warsh. Warm, patient, scholarly but not academic — the voice of a teacher who loves teaching. Not a chatbot. A character.
+        </p>
+
+        <ul class="space-y-3.5 mb-8">
+          <li class="flex gap-3 items-start">
+            <span class="w-5 h-5 rounded-full bg-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-gold-deep" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+            <p class="font-lora text-ink-soft text-base">Ask anything about Arabic grammar, vocabulary, or your current lesson</p>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span class="w-5 h-5 rounded-full bg-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-gold-deep" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+            <p class="font-lora text-ink-soft text-base">Examples always drawn from the Quran and Islamic contexts</p>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span class="w-5 h-5 rounded-full bg-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-gold-deep" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+            <p class="font-lora text-ink-soft text-base">Constrained to Arabic learning — no distractions, no drift</p>
+          </li>
+          <li class="flex gap-3 items-start">
+            <span class="w-5 h-5 rounded-full bg-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-gold-deep" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+            <p class="font-lora text-ink-soft text-base">5 messages per day included with every subscription</p>
+          </li>
+        </ul>
+
+        <p class="font-lora text-ink-muted text-sm italic">
+          "Ask a scholar for rulings. Ask Noor for Arabic."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ TADABBUR ═══════════════════════════ -->
+<section class="motif-bg-dark py-20 lg:py-28 relative overflow-hidden" style="background-color:#1A1A1A;">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+
+      <!-- Text -->
+      <div class="fade-in">
+        <p class="font-lora text-sage text-xs tracking-[0.18em] uppercase mb-4">Tadabbur · تَدَبُّر</p>
+        <h2 class="font-lora font-bold text-parchment text-3xl sm:text-4xl leading-tight mb-6">
+          Watch the Quran<br>
+          <span class="text-gold">light up.</span>
+        </h2>
+        <p class="font-lora text-parchment/65 text-lg leading-relaxed mb-8">
+          As you learn each word, it illuminates in the Surah. Begin with Al-Fatiha. Then the short Surahs of Juz Amma — one by one, until what you recite becomes what you understand.
+        </p>
+
+        <div class="space-y-3 mb-8">
+          <div class="flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-gold flex-shrink-0" aria-hidden="true"></div>
+            <p class="font-lora text-parchment/75 text-sm">Words you know glow in gold</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-sage flex-shrink-0" aria-hidden="true"></div>
+            <p class="font-lora text-parchment/75 text-sm">Words still to learn rest in sage</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-gold/40 flex-shrink-0" aria-hidden="true"></div>
+            <p class="font-lora text-parchment/75 text-sm">The transition from sage to gold is the moment Warsh is built for</p>
+          </div>
+        </div>
+
+        <p class="font-lora text-parchment/40 text-sm italic">
+          "For the first time, I understood what I was saying in Salah."
+        </p>
+      </div>
+
+      <!-- Surah visualization -->
+      <div class="flex justify-center lg:justify-end fade-in" style="transition-delay:.1s">
+        <div class="bg-ink/40 border border-parchment/10 rounded-3xl p-8 max-w-sm w-full backdrop-blur-sm">
+          <div class="text-center mb-6">
+            <p class="font-lora text-sage text-xs tracking-widest uppercase mb-2">Al-Ikhlas · سورة الإخلاص</p>
+            <div class="inline-flex items-center gap-2">
+              <span class="font-lora text-parchment/55 text-xs">47% understood</span>
+              <div class="w-20 h-1.5 bg-parchment/10 rounded-full overflow-hidden">
+                <div class="h-full bg-gold rounded-full" style="width:47%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Surah display -->
+          <div class="text-center" dir="rtl" lang="ar">
+            <p class="leading-loose mb-1">
+              <span class="font-arabic text-2xl text-gold mx-1">قُلْ</span>
+              <span class="font-arabic text-2xl text-gold mx-1">هُوَ</span>
+              <span class="font-arabic text-2xl text-gold mx-1">ٱللَّهُ</span>
+              <span class="font-arabic text-2xl text-gold mx-1">أَحَدٌ</span>
+            </p>
+            <p class="leading-loose mb-1">
+              <span class="font-arabic text-2xl text-gold mx-1">ٱللَّهُ</span>
+              <span class="font-arabic text-2xl text-sage/50 mx-1">ٱلصَّمَدُ</span>
+            </p>
+            <p class="leading-loose mb-1">
+              <span class="font-arabic text-2xl text-sage/50 mx-1">لَمْ</span>
+              <span class="font-arabic text-2xl text-sage/50 mx-1">يَلِدْ</span>
+              <span class="font-arabic text-2xl text-gold mx-1">وَلَمْ</span>
+              <span class="font-arabic text-2xl text-sage/50 mx-1">يُولَدْ</span>
+            </p>
+            <p class="leading-loose">
+              <span class="font-arabic text-2xl text-sage/50 mx-1">وَلَمْ</span>
+              <span class="font-arabic text-2xl text-sage/50 mx-1">يَكُن</span>
+              <span class="font-arabic text-2xl text-sage/50 mx-1">لَّهُۥ</span>
+              <span class="font-arabic text-2xl text-sage/50 mx-1">كُفُوًا</span>
+              <span class="font-arabic text-2xl text-sage/50 mx-1">أَحَدٌ</span>
+            </p>
+          </div>
+
+          <p class="font-lora text-parchment/35 text-xs text-center mt-6 italic">
+            Gold = understood · Sage = still to learn
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ STATS ═══════════════════════════ -->
+<section style="background-color:#EDDFAF;" class="py-14 border-t border-sage-soft/30 border-b">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center fade-in">
+      <div>
+        <p class="font-lora font-bold text-ink text-4xl sm:text-5xl mb-1.5">72</p>
+        <p class="font-lora text-sage text-sm">Chapters</p>
+      </div>
+      <div>
+        <p class="font-lora font-bold text-ink text-4xl sm:text-5xl mb-1.5">380<span class="text-3xl">+</span></p>
+        <p class="font-lora text-sage text-sm">Lessons</p>
+      </div>
+      <div>
+        <p class="font-lora font-bold text-ink text-4xl sm:text-5xl mb-1.5">600<span class="text-3xl">+</span></p>
+        <p class="font-lora text-sage text-sm">Vocabulary words</p>
+      </div>
+      <div>
+        <p class="font-lora font-bold text-ink text-4xl sm:text-5xl mb-1.5">11</p>
+        <p class="font-lora text-sage text-sm">Surahs in Tadabbur</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ WHY WARSH ═══════════════════════════ -->
+<section class="py-20 lg:py-28" style="background-color:#FAF6E9;">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center mb-14 fade-in">
+      <p class="font-lora text-sage text-xs tracking-[0.18em] uppercase mb-3">Why Warsh</p>
+      <h2 class="font-lora font-bold text-ink text-3xl sm:text-4xl">Not another language app</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-5 mb-12">
+      <div class="bg-parchment rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in">
+        <div class="w-11 h-11 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+        </div>
+        <h3 class="font-lora font-bold text-ink text-lg mb-2">No hearts. No shame.</h3>
+        <p class="font-lora text-ink-muted text-sm leading-relaxed">Wrong answers are met with patience — not penalty. No lives lost. The Warmth Principle governs every word in this app.</p>
+      </div>
+
+      <div class="bg-parchment rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in" style="transition-delay:.08s">
+        <div class="w-11 h-11 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="font-lora font-bold text-ink text-lg mb-2">Scholar-endorsed curriculum</h3>
+        <p class="font-lora text-ink-muted text-sm leading-relaxed">Built on Madinah Arabic Reader and Dr. Hafiz Muhammad Zubair's lectures — 50 years of Islamic language pedagogy, structured for mobile.</p>
+      </div>
+
+      <div class="bg-parchment rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in" style="transition-delay:.16s">
+        <div class="w-11 h-11 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/>
+          </svg>
+        </div>
+        <h3 class="font-lora font-bold text-ink text-lg mb-2">Built for Muslims</h3>
+        <p class="font-lora text-ink-muted text-sm leading-relaxed">English and Urdu interface. No ads, no data selling, no manipulation. A product built with the trust of a Muslim community in mind.</p>
+      </div>
+    </div>
+
+    <!-- Comparison table -->
+    <div class="bg-parchment rounded-3xl p-7 sm:p-10 border border-sage-soft/30 overflow-x-auto fade-in">
+      <h3 class="font-lora font-bold text-ink text-xl mb-6 text-center">How Warsh compares</h3>
+      <table class="w-full min-w-[560px]" role="table">
+        <thead>
+          <tr class="border-b border-sage-soft/30">
+            <th scope="col" class="font-lora text-sm text-ink-muted text-left py-3 pr-4">Feature</th>
+            <th scope="col" class="font-lora text-sm font-bold text-gold text-center py-3 px-4">Warsh</th>
+            <th scope="col" class="font-lora text-sm text-ink-muted text-center py-3 px-4">Duolingo (Arabic)</th>
+            <th scope="col" class="font-lora text-sm text-ink-muted text-center py-3 px-4">Free YouTube</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-sage-soft/20">
+          <tr>
+            <td class="font-lora text-sm text-ink-soft py-3 pr-4">Quranic Arabic focus</td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-gold mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="Yes"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-sage-soft mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="No"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-sage mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="Partial"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd"/></svg></td>
+          </tr>
+          <tr>
+            <td class="font-lora text-sm text-ink-soft py-3 pr-4">Scholar-validated curriculum</td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-gold mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="Yes"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-sage-soft mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="No"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-sage mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="Partial"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd"/></svg></td>
+          </tr>
+          <tr>
+            <td class="font-lora text-sm text-ink-soft py-3 pr-4">AI tutor (Arabic-focused)</td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-gold mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="Yes"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-sage-soft mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="No"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-sage-soft mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="No"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+          </tr>
+          <tr>
+            <td class="font-lora text-sm text-ink-soft py-3 pr-4">No hearts / no punishment</td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-gold mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="Yes"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-sage-soft mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="No"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-gold mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="Yes"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+          </tr>
+          <tr>
+            <td class="font-lora text-sm text-ink-soft py-3 pr-4">Urdu interface</td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-gold mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="Yes"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-sage-soft mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="No"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+            <td class="text-center py-3 px-4"><svg class="w-5 h-5 text-sage-soft mx-auto" fill="currentColor" viewBox="0 0 20 20" aria-label="No"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ PRICING ═══════════════════════════ -->
+<section id="pricing" class="motif-bg py-20 lg:py-28" style="background-color:#F4EBD0;">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8">
+    <div class="text-center mb-12 fade-in">
+      <p class="font-lora text-sage text-xs tracking-[0.18em] uppercase mb-3">Pricing</p>
+      <h2 class="font-lora font-bold text-ink text-3xl sm:text-4xl mb-4">Honest. Simple. Affordable.</h2>
+      <p class="font-lora text-ink-soft text-lg">Seven days free. Then $1/month, or $10/year.</p>
+      <p class="font-lora text-ink-muted italic mt-1">Less than a cup of chai.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5 mb-8">
+
+      <!-- Annual -->
+      <div class="bg-ink rounded-3xl p-8 relative fade-in">
+        <div class="absolute top-5 right-5 bg-gold text-ink font-lora font-semibold text-xs px-3 py-1 rounded-full">
+          Most popular
+        </div>
+        <p class="font-lora text-sage text-sm mb-2">Annual plan</p>
+        <div class="flex items-baseline gap-1.5 mb-1">
+          <span class="font-lora font-bold text-parchment text-5xl">$10</span>
+          <span class="font-lora text-sage text-sm">/ year</span>
+        </div>
+        <p class="font-lora text-sage text-sm mb-7">$0.83 per month · Save 17%</p>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex gap-3"><svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="font-lora text-parchment/80 text-sm">All 72 chapters and lessons</span></li>
+          <li class="flex gap-3"><svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="font-lora text-parchment/80 text-sm">Ustaad Noor — your AI tutor</span></li>
+          <li class="flex gap-3"><svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="font-lora text-parchment/80 text-sm">Tadabbur — Quran word by word</span></li>
+          <li class="flex gap-3"><svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="font-lora text-parchment/80 text-sm">Audio for every word and ayah</span></li>
+          <li class="flex gap-3"><svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="font-lora text-parchment/80 text-sm">Speaking practice and all future updates</span></li>
+        </ul>
+
+        <a href="#download" class="btn-gold block w-full font-lora font-semibold text-base py-4 rounded-2xl text-center cursor-pointer">
+          Start 7-day free trial →
+        </a>
+      </div>
+
+      <!-- Monthly -->
+      <div class="bg-cream rounded-3xl p-8 border border-sage-soft/30 fade-in" style="transition-delay:.1s">
+        <p class="font-lora text-sage text-sm mb-2">Monthly plan</p>
+        <div class="flex items-baseline gap-1.5 mb-1">
+          <span class="font-lora font-bold text-ink text-5xl">$1</span>
+          <span class="font-lora text-sage text-sm">/ month</span>
+        </div>
+        <p class="font-lora text-sage text-sm mb-7">Billed monthly · Cancel anytime</p>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex gap-3"><svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="font-lora text-ink-soft text-sm">Everything included — same full access</span></li>
+          <li class="flex gap-3"><svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="font-lora text-ink-soft text-sm">Flexible — cancel at any time via device settings</span></li>
+        </ul>
+
+        <!-- Free forever note -->
+        <div class="bg-parchment rounded-2xl p-4 mb-7 border border-sage-soft/30 flex gap-2.5">
+          <svg class="w-4 h-4 text-sage flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <p class="font-lora text-ink-muted text-xs leading-relaxed">Vocabulary Bank (600+ words, audio, SRS) remains free forever — whether you subscribe or not.</p>
+        </div>
+
+        <a href="#download" class="btn-outline block w-full bg-transparent font-lora font-semibold text-base py-4 rounded-2xl text-center cursor-pointer">
+          Start 7-day free trial →
+        </a>
+      </div>
+    </div>
+
+    <p class="font-lora text-ink-muted text-sm text-center fade-in">
+      No credit card required for trial. Cancel anytime in your device settings.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ DOWNLOAD CTA ═══════════════════════════ -->
+<section id="download" class="py-20 lg:py-28" style="background-color:#FAF6E9;">
+  <div class="max-w-2xl mx-auto px-5 sm:px-8 text-center fade-in">
+    <!-- Logo -->
+    <div class="flex items-center justify-center gap-3 mb-8">
+      <span class="font-lora font-bold text-ink text-2xl">Warsh</span>
+      <span class="text-sage-soft text-xl select-none">·</span>
+      <span class="font-arabic font-bold text-gold text-4xl leading-none" dir="rtl" lang="ar">وَرْش</span>
+    </div>
+
+    <h2 class="font-lora font-bold text-ink text-3xl sm:text-4xl leading-tight mb-4">
+      Begin your journey.
+    </h2>
+    <p class="font-lora text-ink-soft text-lg mb-2">
+      Seven days free. Then $1/month, or $10/year.
+    </p>
+    <p class="font-lora text-ink-muted italic mb-10">
+      Less than a cup of chai.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+      <!-- Google Play -->
+      <a href="#"
+         class="btn-gold inline-flex items-center justify-center gap-3 font-lora font-semibold px-8 py-4 rounded-2xl cursor-pointer"
+         aria-label="Download Warsh on Google Play">
+        <svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3.18 23.76c.3.17.64.24.98.21l11.56-11.97L3.18.03A1.5 1.5 0 002.5 1.5v21c0 .46.25.9.68 1.26z" opacity=".75"/>
+          <path d="M19.3 9.27L16.2 7.5 13.5 10.5l2.7 2.7 3.1-1.77a1.5 1.5 0 000-2.16z" opacity=".75"/>
+          <path d="M3.18.03L14.22 10.5l1.98-1.98L4.16-.24A1.5 1.5 0 003.18.03z" opacity=".5"/>
+          <path d="M3.18 23.76L16.2 16.5l-1.98-1.98L3.18 23.76z" opacity=".5"/>
+        </svg>
+        <div class="text-left">
+          <div class="text-xs opacity-70 leading-none mb-0.5">Get it on</div>
+          <div class="text-base font-bold leading-none">Google Play</div>
+        </div>
+      </a>
+
+      <!-- iOS coming soon -->
+      <div class="inline-flex items-center justify-center gap-3 bg-parchment border border-sage/30 text-ink-muted font-lora px-8 py-4 rounded-2xl opacity-50 cursor-not-allowed select-none" aria-label="iOS coming soon">
+        <svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.14-2.22 1.3-2.2 3.88.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.56M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        <div class="text-left">
+          <div class="text-xs leading-none mb-0.5">App Store</div>
+          <div class="text-sm font-semibold leading-none">Coming soon</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="font-lora text-ink-muted text-sm">
+      Available on Android · iOS coming, in shaa Allah
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer style="background-color:#1A1A1A;" class="pt-14 pb-8">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <!-- Brand -->
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="font-lora font-bold text-parchment text-lg">Warsh</span>
+          <span class="text-sage/50 select-none">·</span>
+          <span class="font-arabic font-bold text-gold text-2xl leading-none" dir="rtl" lang="ar">وَرْش</span>
+        </div>
+        <p class="font-lora text-parchment/45 text-sm leading-relaxed max-w-xs mb-5">
+          Learn the Arabic of the Quran through a scholar-validated curriculum, beautiful lessons, and Ustaad Noor.
+        </p>
+        <p class="font-lora text-parchment/25 text-xs italic">Made with love in Pakistan</p>
+      </div>
+
+      <!-- App -->
+      <div>
+        <h4 class="font-lora font-semibold text-parchment/60 text-sm mb-4">App</h4>
+        <ul class="space-y-2.5">
+          <li><a href="#features"      class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">Features</a></li>
+          <li><a href="#how-it-works"  class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">How it works</a></li>
+          <li><a href="#pricing"       class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">Pricing</a></li>
+          <li><a href="#download"      class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">Download</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h4 class="font-lora font-semibold text-parchment/60 text-sm mb-4">Legal & Support</h4>
+        <ul class="space-y-2.5">
+          <li><a href="/privacy"              class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">Privacy Policy</a></li>
+          <li><a href="/terms"                class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">Terms of Service</a></li>
+          <li><a href="mailto:support@warsh.app" class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">support@warsh.app</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-parchment/8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="font-lora text-parchment/25 text-xs">&copy; 2026 Warsh. All rights reserved.</p>
+      <p class="font-arabic text-gold/30 text-xl leading-none" dir="rtl" lang="ar" aria-hidden="true">وَرْش</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════ SCRIPTS ═══════════════════════════ -->
+<script>
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 24);
+  }, { passive: true });
+
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => {
+    const open = menu.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', open);
+    // Close on link tap
+    if (open) {
+      menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          menu.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        }, { once: true });
+      });
+    }
+  });
+
+  // Scroll-triggered fade-in (IntersectionObserver)
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  } else {
+    // Skip animation for reduced-motion users
+    document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+  }
+</script>
+
+</body>
+</html>

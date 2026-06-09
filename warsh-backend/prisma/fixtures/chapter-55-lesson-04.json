@@ -117,13 +117,26 @@
         "ar": "كَتَبَ الْوَلَدُ الدَّرْسَ",
         "ar_plain": "كتب الولد الدرس",
         "translit": "kataba al-waladu ad-darsa",
-        "en": "The boy wrote the lesson."
+        "en": "The boy wrote the lesson.",
+        "ur": "لڑکے نے سبق لکھا۔"
       },
       "options": [
-        { "en": "The boy wrote the lesson.", "ur": "لڑکے نے سبق لکھا۔" },
-        { "en": "The lesson wrote the boy.", "ur": "سبق نے لڑکا لکھا۔" },
-        { "en": "The boy is writing the lesson.", "ur": "لڑکا سبق لکھ رہا ہے۔" },
-        { "en": "The boy and the lesson.", "ur": "لڑکا اور سبق۔" }
+        {
+          "en": "The boy wrote the lesson.",
+          "ur": "لڑکے نے سبق لکھا۔"
+        },
+        {
+          "en": "The lesson wrote the boy.",
+          "ur": "سبق نے لڑکا لکھا۔"
+        },
+        {
+          "en": "The boy is writing the lesson.",
+          "ur": "لڑکا سبق لکھ رہا ہے۔"
+        },
+        {
+          "en": "The boy and the lesson.",
+          "ur": "لڑکا اور سبق۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -136,18 +149,71 @@
       "id": "ch55-l04-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "كَتَبَ - الْكِتَابَ", "ar_plain": "كتب الكتاب", "translit": "kataba al-kitaaba", "en": "wrote the book" },
-        { "ar": "رَأَى - الْأَبَ", "ar_plain": "را الاب", "translit": "ra'aa al-aba", "en": "saw the father" },
-        { "ar": "عَلَّمَ - التِّلْمِيذَ", "ar_plain": "علم التلميذ", "translit": "'allama at-tilmidha", "en": "taught the student" },
-        { "ar": "شَرِبَ - الْمَاءَ", "ar_plain": "شرب الماء", "translit": "shariba al-maa'a", "en": "drank the water" }
+        {
+          "ar": "كَتَبَ - الْكِتَابَ",
+          "ar_plain": "كتب الكتاب",
+          "translit": "kataba al-kitaaba",
+          "en": "wrote the book",
+          "ur": "کتاب لکھی"
+        },
+        {
+          "ar": "رَأَى - الْأَبَ",
+          "ar_plain": "را الاب",
+          "translit": "ra'aa al-aba",
+          "en": "saw the father",
+          "ur": "باپ کو دیکھا"
+        },
+        {
+          "ar": "عَلَّمَ - التِّلْمِيذَ",
+          "ar_plain": "علم التلميذ",
+          "translit": "'allama at-tilmidha",
+          "en": "taught the student",
+          "ur": "طالب علم کو سکھایا"
+        },
+        {
+          "ar": "شَرِبَ - الْمَاءَ",
+          "ar_plain": "شرب الماء",
+          "translit": "shariba al-maa'a",
+          "en": "drank the water",
+          "ur": "پانی پیا"
+        }
       ],
       "right_column": [
-        { "en": "wrote the book", "ur": "نے کتاب لکھی" },
-        { "en": "saw the father", "ur": "نے باپ کو دیکھا" },
-        { "en": "taught the student", "ur": "نے طالب علم کو پڑھایا" },
-        { "en": "drank the water", "ur": "نے پانی پیا" }
+        {
+          "en": "wrote the book",
+          "ur": "نے کتاب لکھی"
+        },
+        {
+          "en": "saw the father",
+          "ur": "نے باپ کو دیکھا"
+        },
+        {
+          "en": "taught the student",
+          "ur": "نے طالب علم کو پڑھایا"
+        },
+        {
+          "en": "drank the water",
+          "ur": "نے پانی پیا"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "Each of these sentences has a فَاعِل (subject, رفع) and a مَفْعُول بِهِ (direct object, نصب). The pattern is always the same: someone does something to something.",
@@ -178,10 +244,34 @@
         "ur": "میں نے استاد کو دیکھا۔"
       },
       "options": [
-        { "ar": "الْأُسْتَاذَ", "ar_plain": "الاستاذ", "translit": "al-ustadha", "en": "the teacher (accusative)", "ur": "استاد (نصب)" },
-        { "ar": "الْأُسْتَاذُ", "ar_plain": "الاستاذ", "translit": "al-ustadhu", "en": "the teacher (nominative)", "ur": "استاد (رفع)" },
-        { "ar": "الْأُسْتَاذِ", "ar_plain": "الاستاذ", "translit": "al-ustadhi", "en": "the teacher (genitive)", "ur": "استاد (جر)" },
-        { "ar": "الْأُسْتَاذِينَ", "ar_plain": "الاستاذين", "translit": "al-ustadhayna", "en": "two teachers", "ur": "دو استاد" }
+        {
+          "ar": "الْأُسْتَاذَ",
+          "ar_plain": "الاستاذ",
+          "translit": "al-ustadha",
+          "en": "the teacher (accusative)",
+          "ur": "استاد (نصب)"
+        },
+        {
+          "ar": "الْأُسْتَاذُ",
+          "ar_plain": "الاستاذ",
+          "translit": "al-ustadhu",
+          "en": "the teacher (nominative)",
+          "ur": "استاد (رفع)"
+        },
+        {
+          "ar": "الْأُسْتَاذِ",
+          "ar_plain": "الاستاذ",
+          "translit": "al-ustadhi",
+          "en": "the teacher (genitive)",
+          "ur": "استاد (جر)"
+        },
+        {
+          "ar": "الْأُسْتَاذِينَ",
+          "ar_plain": "الاستاذين",
+          "translit": "al-ustadhayna",
+          "en": "two teachers",
+          "ur": "دو استاد"
+        }
       ],
       "correct_answer": {
         "ar": "الْأُسْتَاذَ",
@@ -204,12 +294,40 @@
         "ur": "استاد نے طالب علم کو پڑھایا۔"
       },
       "tiles": [
-        { "ar": "عَلَّمَ", "ar_plain": "علم", "translit": "'allama", "en": "taught" },
-        { "ar": "الْأُسْتَاذُ", "ar_plain": "الاستاذ", "translit": "al-ustadhu", "en": "the teacher" },
-        { "ar": "التِّلْمِيذَ", "ar_plain": "التلميذ", "translit": "at-tilmidha", "en": "the student (acc.)", "ur": "طالب علم (نصب)" },
-        { "ar": "التِّلْمِيذُ", "ar_plain": "التلميذ", "translit": "at-tilmizu", "en": "the student (nom.)", "ur": "طالب علم (رفع)" }
+        {
+          "ar": "عَلَّمَ",
+          "ar_plain": "علم",
+          "translit": "'allama",
+          "en": "taught",
+          "ur": "سکھایا"
+        },
+        {
+          "ar": "الْأُسْتَاذُ",
+          "ar_plain": "الاستاذ",
+          "translit": "al-ustadhu",
+          "en": "the teacher",
+          "ur": "استاد"
+        },
+        {
+          "ar": "التِّلْمِيذَ",
+          "ar_plain": "التلميذ",
+          "translit": "at-tilmidha",
+          "en": "the student (acc.)",
+          "ur": "طالب علم (نصب)"
+        },
+        {
+          "ar": "التِّلْمِيذُ",
+          "ar_plain": "التلميذ",
+          "translit": "at-tilmizu",
+          "en": "the student (nom.)",
+          "ur": "طالب علم (رفع)"
+        }
       ],
-      "correct_order": [1, 0, 2],
+      "correct_order": [
+        1,
+        0,
+        2
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الْأُسْتَاذُ (subject) + عَلَّمَ (verb) + التِّلْمِيذَ (direct object, accusative). The correct order puts the subject first, then the verb, then the object.",
@@ -221,12 +339,38 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "أَكَلَ الْغُلَامُ التَّمْرَ",
       "words": [
-        { "ar": "أَكَلَ", "ar_plain": "اكل", "translit": "akala", "en": "ate" },
-        { "ar": "الْغُلَامُ", "ar_plain": "الغلام", "translit": "al-ghulaamu", "en": "the boy" },
-        { "ar": "التَّمْرَ", "ar_plain": "التمر", "translit": "at-tamra", "en": "the dates" }
+        {
+          "ar": "أَكَلَ",
+          "ar_plain": "اكل",
+          "translit": "akala",
+          "en": "ate",
+          "ur": "کھایا"
+        },
+        {
+          "ar": "الْغُلَامُ",
+          "ar_plain": "الغلام",
+          "translit": "al-ghulaamu",
+          "en": "the boy",
+          "ur": "لڑکا"
+        },
+        {
+          "ar": "التَّمْرَ",
+          "ar_plain": "التمر",
+          "translit": "at-tamra",
+          "en": "the dates",
+          "ur": "تاریخیں"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "أَكَلَ = VERB (مَبْنِيّ, past). الْغُلَامُ = SUBJECT (رفع). التَّمْرَ = OBJECT (نصب). The dates are what was eaten.",
@@ -257,13 +401,26 @@
         "ar": "دَعَا الْمُدَرِّسُ التِّلْمِيذَ",
         "ar_plain": "دعا المدرس التلميذ",
         "translit": "da'a al-mudarrisu at-tilmidha",
-        "en": "The teacher called the student."
+        "en": "The teacher called the student.",
+        "ur": "استاد نے طالب علم کو بلایا۔"
       },
       "options": [
-        { "en": "The teacher called the student.", "ur": "استاد نے طالب علم کو بلایا۔" },
-        { "en": "The student called the teacher.", "ur": "طالب علم نے استاد کو بلایا۔" },
-        { "en": "The teacher called.", "ur": "استاد نے بلایا۔" },
-        { "en": "The student was called.", "ur": "طالب علم کو بلایا گیا۔" }
+        {
+          "en": "The teacher called the student.",
+          "ur": "استاد نے طالب علم کو بلایا۔"
+        },
+        {
+          "en": "The student called the teacher.",
+          "ur": "طالب علم نے استاد کو بلایا۔"
+        },
+        {
+          "en": "The teacher called.",
+          "ur": "استاد نے بلایا۔"
+        },
+        {
+          "en": "The student was called.",
+          "ur": "طالب علم کو بلایا گیا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -288,7 +445,9 @@
       "ur": "اور انہوں نے پیروی کی اس کی جو شیاطین سلیمان پر پڑھتی تھیں۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-102-mishary.mp3"
     },
-    "highlighted_word_indices": [1],
+    "highlighted_word_indices": [
+      1
+    ],
     "noor_explanation": {
       "en": "مَا is the مَفْعُول بِهِ of تَتْلُو — 'what the devils recited.' It is in the accusative (نصب) because the verb تَتْلُو acts upon it. The relative pronoun مَا itself introduces a clause.",
       "ur": "مَا، تَتْلُو کا مفعول به ہے — 'کیا شیاطین پڑھتی تھیں'۔ یہ نصب میں ہے کیونکہ فعل تَتْلُو نے اس پر اثر کیا۔"

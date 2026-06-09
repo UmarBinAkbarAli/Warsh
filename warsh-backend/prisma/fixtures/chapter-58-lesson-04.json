@@ -131,18 +131,71 @@
       "id": "ch58-l04-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "إِنَّ", "ar_plain": "ان", "translit": "inna", "en": "indeed/surely" },
-        { "ar": "أَنَّ", "ar_plain": "ان", "translit": "anna", "en": "that (emphasized)" },
-        { "ar": "كَأَنَّ", "ar_plain": "كان", "translit": "ka-anna", "en": "as if/like that" },
-        { "ar": "ظَنَّ", "ar_plain": "ظن", "translit": "zanna", "en": "he thought/deemed" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "ان",
+          "translit": "inna",
+          "en": "indeed/surely",
+          "ur": "بے شک/ یقیناً"
+        },
+        {
+          "ar": "أَنَّ",
+          "ar_plain": "ان",
+          "translit": "anna",
+          "en": "that (emphasized)",
+          "ur": "کہ (زور دیا)"
+        },
+        {
+          "ar": "كَأَنَّ",
+          "ar_plain": "كان",
+          "translit": "ka-anna",
+          "en": "as if/like that",
+          "ur": "گویا/اس طرح"
+        },
+        {
+          "ar": "ظَنَّ",
+          "ar_plain": "ظن",
+          "translit": "zanna",
+          "en": "he thought/deemed",
+          "ur": "اس نے سوچا / سمجھا"
+        }
       ],
       "right_column": [
-        { "en": "particle of emphasis (حرف)", "ur": "تَقْوِيَة کا حرف" },
-        { "en": "after verbs of perceiving (حرف)", "ur": "perceiving verbs کے بعد (حرف)" },
-        { "en": "resemblance (حرف)", "ur": "تشبيه (حرف)" },
-        { "en": "verb of assuming (فعل)", "ur": "گمان کا فعل (فعل)" }
+        {
+          "en": "particle of emphasis (حرف)",
+          "ur": "تَقْوِيَة کا حرف"
+        },
+        {
+          "en": "after verbs of perceiving (حرف)",
+          "ur": "perceiving verbs کے بعد (حرف)"
+        },
+        {
+          "en": "resemblance (حرف)",
+          "ur": "تشبيه (حرف)"
+        },
+        {
+          "en": "verb of assuming (فعل)",
+          "ur": "گمان کا فعل (فعل)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "إِنَّ = emphasis particle (حرف). أَنَّ = used after قَالَ-type verbs (حرف). كَأَنَّ = resemblance particle (حرف). ظَنَّ = verb of assuming (فعل). All of them govern the same case pattern: مبتدأ in accusative, خبر in accusative.",
@@ -156,13 +209,26 @@
         "ar": "إِنَّ اللَّهَ غَفُورٌ",
         "ar_plain": "ان الله غفور",
         "translit": "inna allaaha ghafuurun",
-        "en": "Indeed Allah is Forgiving."
+        "en": "Indeed Allah is Forgiving.",
+        "ur": "بے شک اللہ بخشنے والا ہے۔"
       },
       "options": [
-        { "en": "Indeed Allah is Forgiving.", "ur": "بے شک اللہ بخشنے والا ہے۔" },
-        { "en": "Allah is indeed Forgiving.", "ur": "اللہ بے شک بخشنے والا ہے۔" },
-        { "en": "Forgiving is Allah.", "ur": "بخشنے والا اللہ ہے۔" },
-        { "en": "Indeed, the Forgiving is Allah.", "ur": "بے شک، بخشنے والا اللہ ہے۔" }
+        {
+          "en": "Indeed Allah is Forgiving.",
+          "ur": "بے شک اللہ بخشنے والا ہے۔"
+        },
+        {
+          "en": "Allah is indeed Forgiving.",
+          "ur": "اللہ بے شک بخشنے والا ہے۔"
+        },
+        {
+          "en": "Forgiving is Allah.",
+          "ur": "بخشنے والا اللہ ہے۔"
+        },
+        {
+          "en": "Indeed, the Forgiving is Allah.",
+          "ur": "بے شک، بخشنے والا اللہ ہے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -176,13 +242,46 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
       "words": [
-        { "ar": "إِنَّ", "ar_plain": "ان", "translit": "inna", "en": "indeed" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah" },
-        { "ar": "غَفُورٌ", "ar_plain": "غفور", "translit": "ghafuurun", "en": "Forgiving" },
-        { "ar": "رَحِيمٌ", "ar_plain": "رحيم", "translit": "rahiimun", "en": "Merciful" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "ان",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "غَفُورٌ",
+          "ar_plain": "غفور",
+          "translit": "ghafuurun",
+          "en": "Forgiving",
+          "ur": "بخشنے والا"
+        },
+        {
+          "ar": "رَحِيمٌ",
+          "ar_plain": "رحيم",
+          "translit": "rahiimun",
+          "en": "Merciful",
+          "ur": "مہربان"
+        }
       ],
-      "available_roles": ["PARTICLE", "SUBJECT", "PREDICATE"],
-      "correct_roles": ["PARTICLE", "SUBJECT", "PREDICATE", "PREDICATE"],
+      "available_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREDICATE"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREDICATE",
+        "PREDICATE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "إِنَّ = PARTICLE (حرف تَقْوِيَة — not a verb or noun). اللَّهَ = SUBJECT (مبتدأ, in the accusative because إِنَّ governs it). غَفُورٌ = PREDICATE (خبر, in the accusative describing اللَّهَ). رَحِيمٌ = PREDICATE (second خبر, in the accusative, describing غَفُورٌ as a صفة/additional attribute).",
@@ -199,10 +298,34 @@
         "ur": "زید نے (کسی کو) غلام خیال کیا۔"
       },
       "options": [
-        { "ar": "عَبْدًا", "ar_plain": "عبد", "translit": "'abadan", "en": "a servant (acc.)", "ur": "غلام (نصب)" },
-        { "ar": "عَبْدٌ", "ar_plain": "عبد", "translit": "'abduun", "en": "a servant (nom.)", "ur": "غلام (رفع)" },
-        { "ar": "عَبْدٍ", "ar_plain": "عبد", "translit": "'abdin", "en": "a servant (gen.)", "ur": "غلام (جر)" },
-        { "ar": "عَبْدَتَانِ", "ar_plain": "عبدتان", "translit": "'abdataani", "en": "two servants (dual)", "ur": "دو غلام (مثنی)" }
+        {
+          "ar": "عَبْدًا",
+          "ar_plain": "عبد",
+          "translit": "'abadan",
+          "en": "a servant (acc.)",
+          "ur": "غلام (نصب)"
+        },
+        {
+          "ar": "عَبْدٌ",
+          "ar_plain": "عبد",
+          "translit": "'abduun",
+          "en": "a servant (nom.)",
+          "ur": "غلام (رفع)"
+        },
+        {
+          "ar": "عَبْدٍ",
+          "ar_plain": "عبد",
+          "translit": "'abdin",
+          "en": "a servant (gen.)",
+          "ur": "غلام (جر)"
+        },
+        {
+          "ar": "عَبْدَتَانِ",
+          "ar_plain": "عبدتان",
+          "translit": "'abdataani",
+          "en": "two servants (dual)",
+          "ur": "دو غلام (مثنی)"
+        }
       ],
       "correct_answer": {
         "ar": "عَبْدًا",
@@ -225,12 +348,40 @@
         "ur": "بے شک، مومنین صبر کرنے والے ہیں۔"
       },
       "tiles": [
-        { "ar": "إِنَّ", "ar_plain": "ان", "translit": "inna", "en": "indeed" },
-        { "ar": "الْمُؤْمِنِينَ", "ar_plain": "المؤمنين", "translit": "al-mu'miniina", "en": "the believers" },
-        { "ar": "صَابِرِينَ", "ar_plain": "صابرين", "translit": "saabiriina", "en": "patient (acc.)", "ur": "صبر کرنے والے (نصب)" },
-        { "ar": "غَفُورٌ", "ar_plain": "غفور", "translit": "ghafuurun", "en": "forgiving", "ur": "بخشنے والا" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "ان",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "الْمُؤْمِنِينَ",
+          "ar_plain": "المؤمنين",
+          "translit": "al-mu'miniina",
+          "en": "the believers",
+          "ur": "مومنین"
+        },
+        {
+          "ar": "صَابِرِينَ",
+          "ar_plain": "صابرين",
+          "translit": "saabiriina",
+          "en": "patient (acc.)",
+          "ur": "صبر کرنے والے (نصب)"
+        },
+        {
+          "ar": "غَفُورٌ",
+          "ar_plain": "غفور",
+          "translit": "ghafuurun",
+          "en": "forgiving",
+          "ur": "بخشنے والا"
+        }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "إِنَّ takes the مبتدأ in the accusative. إِنَّ الْمُؤْمِنِينَ صَابِرِينَ (Indeed the believers are patient). الْمُؤْمِنِينَ = مبتدأ in the accusative. صَابِرِينَ = خبر in the accusative.",
@@ -258,13 +409,26 @@
         "ar": "قَالَ أَنَّ اللَّهَ رَحِيمٌ",
         "ar_plain": "قال ان الله رحيم",
         "translit": "qaala anna allaaha rahiimun",
-        "en": "He said that indeed Allah is Merciful."
+        "en": "He said that indeed Allah is Merciful.",
+        "ur": "انہوں نے کہا کہ بے شک اللہ رحم کرنے والا ہے۔"
       },
       "options": [
-        { "en": "He said that indeed Allah is Merciful.", "ur": "اس نے کہا کہ بے شک اللہ رحم کرنے والا ہے۔" },
-        { "en": "He said, 'Indeed Allah is Merciful.'", "ur": "اس نے کہا، 'بے شک اللہ رحم کرنے والا ہے'۔" },
-        { "en": "He said about Allah being Merciful.", "ur": "اس نے اللہ کے بارے میں رحم ہونے کی بات کی۔" },
-        { "en": "He said: 'Merciful is Allah.'", "ur": "اس نے کہا: 'رحم کرنے والا اللہ ہے'۔" }
+        {
+          "en": "He said that indeed Allah is Merciful.",
+          "ur": "اس نے کہا کہ بے شک اللہ رحم کرنے والا ہے۔"
+        },
+        {
+          "en": "He said, 'Indeed Allah is Merciful.'",
+          "ur": "اس نے کہا، 'بے شک اللہ رحم کرنے والا ہے'۔"
+        },
+        {
+          "en": "He said about Allah being Merciful.",
+          "ur": "اس نے اللہ کے بارے میں رحم ہونے کی بات کی۔"
+        },
+        {
+          "en": "He said: 'Merciful is Allah.'",
+          "ur": "اس نے کہا: 'رحم کرنے والا اللہ ہے'۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -289,7 +453,10 @@
       "ur": "اس نے موت اور زندگی پیدا کی تاکہ تمہیں آزمائے کہ تم میں سے کون بہتر عمل کرتا ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-mulk-2-mishary.mp3"
     },
-    "highlighted_word_indices": [9, 10],
+    "highlighted_word_indices": [
+      9,
+      10
+    ],
     "noor_explanation": {
       "en": "أَيُّكُمْ أَحْسَنُ عَمَلًا is a nominal sentence without إِنَّ — it uses the interrogative أَيُّ (which) as the مبتدأ, in the nominative. أَحْسَنُ عَمَلًا is the خبر in the nominative (though عَمَلًا is in the accusative because it is the object of the comparative). The structure: [مبتدأ: أَيُّكُمْ (nominative)] + [خبر: أَحْسَنُ عَمَلًا (nominative — with عَمَلًا as the مفعول به in the accusative after the comparative)].",
       "ur": "أَيُّكُمْ أَحْسَنُ عَمَلًا ایک nominal sentence ہے بغیر إِنَّ — یہ interrogative أَيُّ (کون) کو مبتدأ کے طور پر use کرتی ہے، رفع میں۔ أَحْسَنُ عَمَلًا خبر ہے، رفع میں (اگرچہ عَمَلًا comparatives کے بعد نصب میں ہے)۔"

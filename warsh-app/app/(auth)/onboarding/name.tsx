@@ -4,16 +4,18 @@ import { useState } from "react";
 import { Link } from "expo-router";
 import { useOnboardingStore } from "@stores/onboardingStore";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
+import { useT } from "@i18n/index";
 
 export default function OnboardingNameScreen() {
   const [name, setName] = useState("");
   const setNameState = useOnboardingStore((state) => state.setName);
+  const t = useT();
 
   return (
     <View style={styles.screen}>
-      <Text style={styles.heading}>What should Ustaad Noor call you?</Text>
+      <Text style={styles.heading}>{t("onboarding.nameTitle")}</Text>
       <TextInput
-        label="Your name"
+        label={t("onboarding.nameLabel")}
         value={name}
         onChangeText={(value) => {
           setName(value);
@@ -24,7 +26,7 @@ export default function OnboardingNameScreen() {
         style={styles.input}
       />
       <Link href="/(auth)/onboarding/language" style={{ color: Colors.accent.gold, fontWeight: "700" }}>
-        Continue
+        {t("common.continue")}
       </Link>
     </View>
   );

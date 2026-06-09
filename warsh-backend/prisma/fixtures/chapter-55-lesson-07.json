@@ -120,13 +120,26 @@
         "ar": "كِتَابُ الطَّالِبِ",
         "ar_plain": "كتاب الطالب",
         "translit": "kitaabu at-taalibi",
-        "en": "the student's book"
+        "en": "the student's book",
+        "ur": "طالب علم کی کتاب"
       },
       "options": [
-        { "en": "the student's book", "ur": "طالب علم کی کتاب" },
-        { "en": "the book of students", "ur": "طالب علموں کی کتاب" },
-        { "en": "a book and a student", "ur": "ایک کتاب اور ایک طالب علم" },
-        { "en": "the student read the book", "ur": "طالب علم نے کتاب پڑھی" }
+        {
+          "en": "the student's book",
+          "ur": "طالب علم کی کتاب"
+        },
+        {
+          "en": "the book of students",
+          "ur": "طالب علموں کی کتاب"
+        },
+        {
+          "en": "a book and a student",
+          "ur": "ایک کتاب اور ایک طالب علم"
+        },
+        {
+          "en": "the student read the book",
+          "ur": "طالب علم نے کتاب پڑھی"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -139,18 +152,71 @@
       "id": "ch55-l07-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "بَيْتُ رَجُلٍ", "ar_plain": "بيت رجل", "translit": "baytu rajulin", "en": "a man's house" },
-        { "ar": "عِلْمُ الْمُسْلِمِ", "ar_plain": "علم المسلم", "translit": "'ilmu al-muslimi", "en": "the Muslim's knowledge" },
-        { "ar": "عَيْنُ الْمَاءِ", "ar_plain": "عين الماء", "translit": "'aynu al-maa'i", "en": "the spring of water" },
-        { "ar": "سَمَاءُ الْأَرْضِ", "ar_plain": "سماء الارض", "translit": "samaa'u al-ardhi", "en": "the heaven of the earth" }
+        {
+          "ar": "بَيْتُ رَجُلٍ",
+          "ar_plain": "بيت رجل",
+          "translit": "baytu rajulin",
+          "en": "a man's house",
+          "ur": "ایک آدمی کا گھر"
+        },
+        {
+          "ar": "عِلْمُ الْمُسْلِمِ",
+          "ar_plain": "علم المسلم",
+          "translit": "'ilmu al-muslimi",
+          "en": "the Muslim's knowledge",
+          "ur": "مسلمانوں کا علم"
+        },
+        {
+          "ar": "عَيْنُ الْمَاءِ",
+          "ar_plain": "عين الماء",
+          "translit": "'aynu al-maa'i",
+          "en": "the spring of water",
+          "ur": "پانی کا چشمہ"
+        },
+        {
+          "ar": "سَمَاءُ الْأَرْضِ",
+          "ar_plain": "سماء الارض",
+          "translit": "samaa'u al-ardhi",
+          "en": "the heaven of the earth",
+          "ur": "زمین کے آسمان"
+        }
       ],
       "right_column": [
-        { "en": "بَيْتُ رَجُلٍ — house of a man", "ur": "آدمی کا گھر" },
-        { "en": "عِلْمُ الْمُسْلِمِ — knowledge of the Muslim", "ur": "مسلمان کا علم" },
-        { "en": "عَيْنُ الْمَاءِ — spring of water", "ur": "پانی کی چشمہ" },
-        { "en": "سَمَاءُ الْأَرْضِ — heaven of the earth", "ur": "زمین کا آسمان" }
+        {
+          "en": "بَيْتُ رَجُلٍ — house of a man",
+          "ur": "آدمی کا گھر"
+        },
+        {
+          "en": "عِلْمُ الْمُسْلِمِ — knowledge of the Muslim",
+          "ur": "مسلمان کا علم"
+        },
+        {
+          "en": "عَيْنُ الْمَاءِ — spring of water",
+          "ur": "پانی کی چشمہ"
+        },
+        {
+          "en": "سَمَاءُ الْأَرْضِ — heaven of the earth",
+          "ur": "زمین کا آسمان"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "All of these are إِضَافَة constructions — a مضاف followed by a مضاف إليه in the genitive (جر). The first noun governs the second.",
@@ -181,10 +247,34 @@
         "ur": "میں بھائی کے گھر گیا۔"
       },
       "options": [
-        { "ar": "بَيْتِ الْأَخِ", "ar_plain": "بيت الاخ", "translit": "bayti al-akhi", "en": "the brother's house (gen.)", "ur": "بھائی کا گھر (جر)" },
-        { "ar": "بَيْتُ الْأَخُ", "ar_plain": "بيت الاخ", "translit": "baytu al-akhu", "en": "the brother's house (nom.)", "ur": "بھائی کا گھر (رفع)" },
-        { "ar": "الْبَيْتُ الْأَخِ", "ar_plain": "البيت الاخ", "translit": "al-baytu al-akhi", "en": "the house the brother", "ur": "گھر بھائی" },
-        { "ar": "بَيْتٌ الْأَخِ", "ar_plain": "بيت الاخ", "translit": "baytun al-akhi", "en": "a house the brother", "ur": "ایک گھر بھائی" }
+        {
+          "ar": "بَيْتِ الْأَخِ",
+          "ar_plain": "بيت الاخ",
+          "translit": "bayti al-akhi",
+          "en": "the brother's house (gen.)",
+          "ur": "بھائی کا گھر (جر)"
+        },
+        {
+          "ar": "بَيْتُ الْأَخُ",
+          "ar_plain": "بيت الاخ",
+          "translit": "baytu al-akhu",
+          "en": "the brother's house (nom.)",
+          "ur": "بھائی کا گھر (رفع)"
+        },
+        {
+          "ar": "الْبَيْتُ الْأَخِ",
+          "ar_plain": "البيت الاخ",
+          "translit": "al-baytu al-akhi",
+          "en": "the house the brother",
+          "ur": "گھر بھائی"
+        },
+        {
+          "ar": "بَيْتٌ الْأَخِ",
+          "ar_plain": "بيت الاخ",
+          "translit": "baytun al-akhi",
+          "en": "a house the brother",
+          "ur": "ایک گھر بھائی"
+        }
       ],
       "correct_answer": {
         "ar": "بَيْتِ الْأَخِ",
@@ -207,13 +297,48 @@
         "ur": "میں کمرے کے کونے میں بیٹھا۔"
       },
       "tiles": [
-        { "ar": "جَلَسْتُ", "ar_plain": "جلست", "translit": "jalastu", "en": "I sat" },
-        { "ar": "فِي", "ar_plain": "في", "translit": "fii", "en": "in" },
-        { "ar": "زَاوِيَةِ", "ar_plain": "زاوية", "translit": "zaawiyati", "en": "corner (gen.)", "ur": "کونے (جر)" },
-        { "ar": "الْغُرْفَةِ", "ar_plain": "الغرفۃ", "translit": "al-ghurfati", "en": "the room (gen.)", "ur": "کمرے (جر)" },
-        { "ar": "زَاوِيَةٌ", "ar_plain": "زاوية", "translit": "zaawiyatun", "en": "corner (nom.)", "ur": "کونا (رفع)" }
+        {
+          "ar": "جَلَسْتُ",
+          "ar_plain": "جلست",
+          "translit": "jalastu",
+          "en": "I sat",
+          "ur": "میں بیٹھ گیا۔"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fii",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "زَاوِيَةِ",
+          "ar_plain": "زاوية",
+          "translit": "zaawiyati",
+          "en": "corner (gen.)",
+          "ur": "کونے (جر)"
+        },
+        {
+          "ar": "الْغُرْفَةِ",
+          "ar_plain": "الغرفۃ",
+          "translit": "al-ghurfati",
+          "en": "the room (gen.)",
+          "ur": "کمرے (جر)"
+        },
+        {
+          "ar": "زَاوِيَةٌ",
+          "ar_plain": "زاوية",
+          "translit": "zaawiyatun",
+          "en": "corner (nom.)",
+          "ur": "کونا (رفع)"
+        }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "جَلَسْتُ (I sat) + فِي (in) + زَاوِيَةِ (corner — مضاف, جر after فِي) + الْغُرْفَةِ (room — مضاف إليه, جر after زَاوِيَةِ). Double إِضَافَة chain.",
@@ -225,12 +350,37 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "مِنْ بَابِ الْجَنَّةِ",
       "words": [
-        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from" },
-        { "ar": "بَابِ", "ar_plain": "باب", "translit": "baabi", "en": "door (gen.)" },
-        { "ar": "الْجَنَّةِ", "ar_plain": "الجنۃ", "translit": "al-jannati", "en": "the Paradise (gen.)" }
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "بَابِ",
+          "ar_plain": "باب",
+          "translit": "baabi",
+          "en": "door (gen.)",
+          "ur": "دروازہ (جنرل)"
+        },
+        {
+          "ar": "الْجَنَّةِ",
+          "ar_plain": "الجنۃ",
+          "translit": "al-jannati",
+          "en": "the Paradise (gen.)",
+          "ur": "جنت (جنرل)"
+        }
       ],
-      "available_roles": ["PREPOSITION", "POSSESSIVE"],
-      "correct_roles": ["PREPOSITION", "POSSESSIVE", "POSSESSIVE"],
+      "available_roles": [
+        "PREPOSITION",
+        "POSSESSIVE"
+      ],
+      "correct_roles": [
+        "PREPOSITION",
+        "POSSESSIVE",
+        "POSSESSIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "مِنْ = PREPOSITION (مَبْنِيّ). بَابِ = مضاف (جر after مِنْ). الْجَنَّةِ = مضاف إليه (جر after بَابِ). 'From the door of Paradise.'",
@@ -254,13 +404,26 @@
         "ar": "فِي أَقْطَارِ السَّمَاءِ",
         "ar_plain": "في اقطار السماء",
         "translit": "fii aqtaari as-samaa'i",
-        "en": "in the regions of the heaven"
+        "en": "in the regions of the heaven",
+        "ur": "آسمان کے علاقوں میں"
       },
       "options": [
-        { "en": "in the regions of the heaven", "ur": "آسمان کے کناروں میں" },
-        { "en": "from the regions of the heaven", "ur": "آسمان کے کناروں سے" },
-        { "en": "to the regions of the heaven", "ur": "آسمان کے کناروں کی طرف" },
-        { "en": "on the regions of the heaven", "ur": "آسمان کے کناروں پر" }
+        {
+          "en": "in the regions of the heaven",
+          "ur": "آسمان کے کناروں میں"
+        },
+        {
+          "en": "from the regions of the heaven",
+          "ur": "آسمان کے کناروں سے"
+        },
+        {
+          "en": "to the regions of the heaven",
+          "ur": "آسمان کے کناروں کی طرف"
+        },
+        {
+          "en": "on the regions of the heaven",
+          "ur": "آسمان کے کناروں پر"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -285,7 +448,10 @@
       "ur": "آسمانوں اور زمین کے کناروں سے",
       "audio_url": "https://cdn.warsh.app/audio/quran/ar-rahman-033-mishary.mp3"
     },
-    "highlighted_word_indices": [1, 2],
+    "highlighted_word_indices": [
+      1,
+      2
+    ],
     "noor_explanation": {
       "en": "أَقْطَارِ is مضاف, and السَّمَاوَاتِ is مضاف إليه — always in جر, never taking ال. This chain can be extended: أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ — 'regions of the heavens and the earth.' The first noun always governs the second in إِضَافَة.",
       "ur": "أَقْطَارِ مضاف ہے اور السَّمَاوَاتِ مضاف إليه ہے — ہمیشہ جر میں، کبھی ال کے ساتھ نہیں۔ یہ chain بڑھایا جا سکتا ہے۔"

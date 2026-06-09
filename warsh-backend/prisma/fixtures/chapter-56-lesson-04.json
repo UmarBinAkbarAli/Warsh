@@ -120,13 +120,26 @@
         "ar": "كِتَابَانِ جَدِيدَانِ",
         "ar_plain": "كتابان جديدان",
         "translit": "kitaabani jadiidaani",
-        "en": "two new books"
+        "en": "two new books",
+        "ur": "دو نئی کتابیں"
       },
       "options": [
-        { "en": "two new books", "ur": "دو نئی کتابیں" },
-        { "en": "the new book", "ur": "نئی کتاب" },
-        { "en": "new books", "ur": "نئی کتابیں (جمع)" },
-        { "en": "the two books are new", "ur": "دو کتابیں نئی ہیں" }
+        {
+          "en": "two new books",
+          "ur": "دو نئی کتابیں"
+        },
+        {
+          "en": "the new book",
+          "ur": "نئی کتاب"
+        },
+        {
+          "en": "new books",
+          "ur": "نئی کتابیں (جمع)"
+        },
+        {
+          "en": "the two books are new",
+          "ur": "دو کتابیں نئی ہیں"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -139,18 +152,71 @@
       "id": "ch56-l04-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "كِتَابَانِ (رفع)", "ar_plain": "كتابان", "translit": "kitaabani", "en": "two books (nom.)" },
-        { "ar": "كِتَابَيْنِ (نصب/جر)", "ar_plain": "كتابين", "translit": "kitaabayni", "en": "two books (acc./gen.)" },
-        { "ar": "مُسْلِمَانِ (رفع)", "ar_plain": "مسلمان", "translit": "muslimaani", "en": "two Muslims (nom.)" },
-        { "ar": "مُسْلِمَيْنِ (نصب/جر)", "ar_plain": "مسلمين", "translit": "muslimayni", "en": "two Muslims (acc./gen.)" }
+        {
+          "ar": "كِتَابَانِ (رفع)",
+          "ar_plain": "كتابان",
+          "translit": "kitaabani",
+          "en": "two books (nom.)",
+          "ur": "دو کتابیں (نمبر)"
+        },
+        {
+          "ar": "كِتَابَيْنِ (نصب/جر)",
+          "ar_plain": "كتابين",
+          "translit": "kitaabayni",
+          "en": "two books (acc./gen.)",
+          "ur": "دو کتابیں (acc./gen.)"
+        },
+        {
+          "ar": "مُسْلِمَانِ (رفع)",
+          "ar_plain": "مسلمان",
+          "translit": "muslimaani",
+          "en": "two Muslims (nom.)",
+          "ur": "دو مسلمان (نمبر)"
+        },
+        {
+          "ar": "مُسْلِمَيْنِ (نصب/جر)",
+          "ar_plain": "مسلمين",
+          "translit": "muslimayni",
+          "en": "two Muslims (acc./gen.)",
+          "ur": "دو مسلمان (acc./gen.)"
+        }
       ],
       "right_column": [
-        { "en": "dual ending: ـَانِ (رفع)", "ur": "مثنی ending: ـَانِ (رفع)" },
-        { "en": "dual ending: ـَيْنِ (نصب/جر)", "ur": "مثنی ending: ـَيْنِ (نصب/جر)" },
-        { "en": "dual ending: ـَانِ (رفع)", "ur": "مثنی ending: ـَانِ (رفع)" },
-        { "en": "dual ending: ـَيْنِ (نصب/جر)", "ur": "مثنی ending: ـَيْنِ (نصب/جر)" }
+        {
+          "en": "dual ending: ـَانِ (رفع)",
+          "ur": "مثنی ending: ـَانِ (رفع)"
+        },
+        {
+          "en": "dual ending: ـَيْنِ (نصب/جر)",
+          "ur": "مثنی ending: ـَيْنِ (نصب/جر)"
+        },
+        {
+          "en": "dual ending: ـَانِ (رفع)",
+          "ur": "مثنی ending: ـَانِ (رفع)"
+        },
+        {
+          "en": "dual ending: ـَيْنِ (نصب/جر)",
+          "ur": "مثنی ending: ـَيْنِ (نصب/جر)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "Dual nouns: in the nominative (رفع), they end in ـَانِ. In the accusative/genitive (نصب/جر), they end in ـَيْنِ. The ي before the ending is part of the noun itself.",
@@ -181,10 +247,34 @@
         "ur": "میں نے دو مسلمان طالب علموں کو دیکھا۔"
       },
       "options": [
-        { "ar": "طَالِبَيْنِ مُسْلِمَيْنِ", "ar_plain": "طالبين مسلمين", "translit": "taalibayni muslimayni", "en": "two Muslim students (acc.)", "ur": "دو مسلمان طالب علم (نصب)" },
-        { "ar": "طَالِبَانِ مُسْلِمَانِ", "ar_plain": "طالبان مسلمان", "translit": "taalibaani muslimaani", "en": "two Muslim students (nom.)", "ur": "دو مسلمان طالب علم (رفع)" },
-        { "ar": "طُلَّابًا مُسْلِمِينَ", "ar_plain": "طلابا مسلمين", "translit": "tullaaban muslimiina", "en": "Muslim students (plural)", "ur": "مسلمان طالب علم (جمع)" },
-        { "ar": "الطَّالِبُ الْمُسْلِمُ", "ar_plain": "الطالب المسلم", "translit": "at-taalibu al-muslimu", "en": "the Muslim student", "ur": "مسلمان طالب علم (واحد)" }
+        {
+          "ar": "طَالِبَيْنِ مُسْلِمَيْنِ",
+          "ar_plain": "طالبين مسلمين",
+          "translit": "taalibayni muslimayni",
+          "en": "two Muslim students (acc.)",
+          "ur": "دو مسلمان طالب علم (نصب)"
+        },
+        {
+          "ar": "طَالِبَانِ مُسْلِمَانِ",
+          "ar_plain": "طالبان مسلمان",
+          "translit": "taalibaani muslimaani",
+          "en": "two Muslim students (nom.)",
+          "ur": "دو مسلمان طالب علم (رفع)"
+        },
+        {
+          "ar": "طُلَّابًا مُسْلِمِينَ",
+          "ar_plain": "طلابا مسلمين",
+          "translit": "tullaaban muslimiina",
+          "en": "Muslim students (plural)",
+          "ur": "مسلمان طالب علم (جمع)"
+        },
+        {
+          "ar": "الطَّالِبُ الْمُسْلِمُ",
+          "ar_plain": "الطالب المسلم",
+          "translit": "at-taalibu al-muslimu",
+          "en": "the Muslim student",
+          "ur": "مسلمان طالب علم (واحد)"
+        }
       ],
       "correct_answer": {
         "ar": "طَالِبَيْنِ مُسْلِمَيْنِ",
@@ -207,12 +297,40 @@
         "ur": "دو محنتی طالب علم گئے۔"
       },
       "tiles": [
-        { "ar": "ذَهَبَا", "ar_plain": "ذهبا", "translit": "dhahabaa", "en": "they two went", "ur": "وہ دونوں گئے" },
-        { "ar": "طَالِبَانِ", "ar_plain": "طالبان", "translit": "taalibaani", "en": "two students (nom.)", "ur": "دو طالب علم (رفع)" },
-        { "ar": "مُجْتَهِدَانِ", "ar_plain": "مجتهدان", "translit": "mujtahidaani", "en": "diligent (dual)", "ur": "محنتی (مثنی)" },
-        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "he went", "ur": "اس نے گیا" }
+        {
+          "ar": "ذَهَبَا",
+          "ar_plain": "ذهبا",
+          "translit": "dhahabaa",
+          "en": "they two went",
+          "ur": "وہ دونوں گئے"
+        },
+        {
+          "ar": "طَالِبَانِ",
+          "ar_plain": "طالبان",
+          "translit": "taalibaani",
+          "en": "two students (nom.)",
+          "ur": "دو طالب علم (رفع)"
+        },
+        {
+          "ar": "مُجْتَهِدَانِ",
+          "ar_plain": "مجتهدان",
+          "translit": "mujtahidaani",
+          "en": "diligent (dual)",
+          "ur": "محنتی (مثنی)"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "اس نے گیا"
+        }
       ],
-      "correct_order": [1, 2, 0],
+      "correct_order": [
+        1,
+        2,
+        0
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "طَالِبَانِ (dual subject, رفع with ـَانِ) + مُجْتَهِدَانِ (dual adjective, also رفع with ـَانِ) + ذَهَبَا (dual verb). The verb ذَهَبَا is also in the dual form — it matches the dual subject.",
@@ -238,12 +356,38 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "كِتَابَا الطَّالِبِ جَدِيدَانِ",
       "words": [
-        { "ar": "كِتَابَا", "ar_plain": "كتابا", "translit": "kitaabaa", "en": "two books" },
-        { "ar": "الطَّالِبِ", "ar_plain": "الطالب", "translit": "at-taalibi", "en": "the student (gen.)" },
-        { "ar": "جَدِيدَانِ", "ar_plain": "جديدان", "translit": "jadiidaani", "en": "new (dual)" }
+        {
+          "ar": "كِتَابَا",
+          "ar_plain": "كتابا",
+          "translit": "kitaabaa",
+          "en": "two books",
+          "ur": "دو کتابیں"
+        },
+        {
+          "ar": "الطَّالِبِ",
+          "ar_plain": "الطالب",
+          "translit": "at-taalibi",
+          "en": "the student (gen.)",
+          "ur": "طالب علم (جنرل)"
+        },
+        {
+          "ar": "جَدِيدَانِ",
+          "ar_plain": "جديدان",
+          "translit": "jadiidaani",
+          "en": "new (dual)",
+          "ur": "نیا (دوہری)"
+        }
       ],
-      "available_roles": ["SUBJECT", "OBJECT", "ADJECTIVE"],
-      "correct_roles": ["SUBJECT", "OBJECT", "ADJECTIVE"],
+      "available_roles": [
+        "SUBJECT",
+        "OBJECT",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "OBJECT",
+        "ADJECTIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "كِتَابَا = مضاف (dual, رفع — ن dropped in إِضَافَة). الطَّالِبِ = مضاف إليه (جر after كِتَابَا). جَدِيدَانِ = صفة (رفع — matching كِتَابَا in case and number).",
@@ -257,13 +401,26 @@
         "ar": "نَصَرَ الْمُسْلِمَانِ الطَّالِبَيْنِ",
         "ar_plain": "نصر الطالبان الطالبين",
         "translit": "nasara al-muslimaani at-taalibayni",
-        "en": "The two Muslims helped the two students."
+        "en": "The two Muslims helped the two students.",
+        "ur": "دونوں مسلمانوں نے ان دونوں طالب علموں کی مدد کی۔"
       },
       "options": [
-        { "en": "The two Muslims helped the two students.", "ur": "دونوں مسلمانوں نے دونوں طالب علموں کی مدد کی۔" },
-        { "en": "The Muslim helped two students.", "ur": "مسلمان نے دو طالب علموں کی مدد کی۔" },
-        { "en": "Two Muslims are students.", "ur": "دو مسلمان طالب علم ہیں۔" },
-        { "en": "The Muslims helped the student.", "ur": "مسلمانوں نے طالب علم کی مدد کی۔" }
+        {
+          "en": "The two Muslims helped the two students.",
+          "ur": "دونوں مسلمانوں نے دونوں طالب علموں کی مدد کی۔"
+        },
+        {
+          "en": "The Muslim helped two students.",
+          "ur": "مسلمان نے دو طالب علموں کی مدد کی۔"
+        },
+        {
+          "en": "Two Muslims are students.",
+          "ur": "دو مسلمان طالب علم ہیں۔"
+        },
+        {
+          "en": "The Muslims helped the student.",
+          "ur": "مسلمانوں نے طالب علم کی مدد کی۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -288,7 +445,9 @@
       "ur": "اور دن کی قسم جب وہ روشن ہو۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-fajr-006-mishary.mp3"
     },
-    "highlighted_word_indices": [1],
+    "highlighted_word_indices": [
+      1
+    ],
     "noor_explanation": {
       "en": "النَّهَارِ here is singular (one day). But notice the ي in النَّهَارِ — it comes from the root ن-ه-ر and is part of the noun's structure, not a dual marker. The dual form in Arabic is unmistakable once you learn the ـَانِ / ـَيْنِ endings.",
       "ur": "النَّهَارِ یہاں واحد ہے (ایک دن)۔ لیکن عربی میں dual form ـَانِ / ـَيْنِ endings سے پہچانی جاتی ہے۔"

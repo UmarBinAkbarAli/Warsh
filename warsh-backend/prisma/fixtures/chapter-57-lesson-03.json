@@ -120,13 +120,26 @@
         "ar": "يَقُولُ الْمُسْلِمُ خَيْرًا",
         "ar_plain": "يقول المسلم خيرا",
         "translit": "yaquulu al-muslimu khayran",
-        "en": "The Muslim says good."
+        "en": "The Muslim says good.",
+        "ur": "مسلمان کہتا ہے اچھا۔"
       },
       "options": [
-        { "en": "The Muslim says good.", "ur": "مسلمان اچھائی کہتا ہے۔" },
-        { "en": "The Muslims say good.", "ur": "مسلمان اچھائی کہتے ہیں۔" },
-        { "en": "He said good.", "ur": "اس نے اچھائی کہی۔" },
-        { "en": "A good Muslim said.", "ur": "ایک اچھا مسلمان نے کہا۔" }
+        {
+          "en": "The Muslim says good.",
+          "ur": "مسلمان اچھائی کہتا ہے۔"
+        },
+        {
+          "en": "The Muslims say good.",
+          "ur": "مسلمان اچھائی کہتے ہیں۔"
+        },
+        {
+          "en": "He said good.",
+          "ur": "اس نے اچھائی کہی۔"
+        },
+        {
+          "en": "A good Muslim said.",
+          "ur": "ایک اچھا مسلمان نے کہا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -139,18 +152,71 @@
       "id": "ch57-l03-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "يَقُولُ", "ar_plain": "يقول", "translit": "yaquulu", "en": "he says" },
-        { "ar": "يَكُونُ", "ar_plain": "يكون", "translit": "yakuunu", "en": "he is" },
-        { "ar": "يَؤْمِنُ", "ar_plain": "يؤمن", "translit": "yu'minu", "en": "he believes" },
-        { "ar": "يَرَى", "ar_plain": "يرا", "translit": "yaraa", "en": "he sees" }
+        {
+          "ar": "يَقُولُ",
+          "ar_plain": "يقول",
+          "translit": "yaquulu",
+          "en": "he says",
+          "ur": "وہ کہتا ہے"
+        },
+        {
+          "ar": "يَكُونُ",
+          "ar_plain": "يكون",
+          "translit": "yakuunu",
+          "en": "he is",
+          "ur": "وہ ہے"
+        },
+        {
+          "ar": "يَؤْمِنُ",
+          "ar_plain": "يؤمن",
+          "translit": "yu'minu",
+          "en": "he believes",
+          "ur": "وہ مانتا ہے"
+        },
+        {
+          "ar": "يَرَى",
+          "ar_plain": "يرا",
+          "translit": "yaraa",
+          "en": "he sees",
+          "ur": "وہ دیکھتا ہے"
+        }
       ],
       "right_column": [
-        { "en": "present of قَالَ", "ur": "قَالَ کا مضارع" },
-        { "en": "present of كَانَ", "ur": "كَانَ کا مضارع" },
-        { "en": "present of آمَنَ", "ur": "آمَنَ کا مضارع" },
-        { "en": "present of رَأَى", "ur": "رَأَى کا مضارع" }
+        {
+          "en": "present of قَالَ",
+          "ur": "قَالَ کا مضارع"
+        },
+        {
+          "en": "present of كَانَ",
+          "ur": "كَانَ کا مضارع"
+        },
+        {
+          "en": "present of آمَنَ",
+          "ur": "آمَنَ کا مضارع"
+        },
+        {
+          "en": "present of رَأَى",
+          "ur": "رَأَى کا مضارع"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "All four are present tense forms of weak verbs. يَقُولُ (ق-و-ل), يَكُونُ (ك-و-ن), يَؤْمِنُ (ء-م-ن), يَرَى (ر-أ-ي).",
@@ -179,12 +245,40 @@
         "ur": "مومنین اللہ پر ایمان رکھتے ہیں۔"
       },
       "tiles": [
-        { "ar": "يُؤْمِنُونَ", "ar_plain": "يؤمنون", "translit": "yu'minuuna", "en": "they believe (أفعال خمسة)", "ur": "وہ ایمان رکھتے ہیں (أفعال خمسة)" },
-        { "ar": "بِاللَّهِ", "ar_plain": "بالله", "translit": "bi-laahi", "en": "in Allah", "ur": "اللہ میں" },
-        { "ar": "الْمُؤْمِنُونَ", "ar_plain": "المؤمنون", "translit": "al-mu'minuuna", "en": "the believers", "ur": "مومنین" },
-        { "ar": "آمَنُوا", "ar_plain": "آمنوا", "translit": "aamanuu", "en": "they believed (past)", "ur": "انہوں نے ایمان لایا" }
+        {
+          "ar": "يُؤْمِنُونَ",
+          "ar_plain": "يؤمنون",
+          "translit": "yu'minuuna",
+          "en": "they believe (أفعال خمسة)",
+          "ur": "وہ ایمان رکھتے ہیں (أفعال خمسة)"
+        },
+        {
+          "ar": "بِاللَّهِ",
+          "ar_plain": "بالله",
+          "translit": "bi-laahi",
+          "en": "in Allah",
+          "ur": "اللہ میں"
+        },
+        {
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minuuna",
+          "en": "the believers",
+          "ur": "مومنین"
+        },
+        {
+          "ar": "آمَنُوا",
+          "ar_plain": "آمنوا",
+          "translit": "aamanuu",
+          "en": "they believed (past)",
+          "ur": "انہوں نے ایمان لایا"
+        }
       ],
-      "correct_order": [2, 0, 1],
+      "correct_order": [
+        2,
+        0,
+        1
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الْمُؤْمِنُونَ (subject) + يُؤْمِنُونَ (verb — أفعال خمسة, always مَبْنِيّ in رفع) + بِاللَّهِ (prepositional phrase). يُؤْمِنُونَ is the present tense of آمَنَ, third person masculine plural.",
@@ -201,10 +295,34 @@
         "ur": "اللہ ہر چیز پر قادر ہے۔"
       },
       "options": [
-        { "ar": "يُقْدِرُ", "ar_plain": "يقدر", "translit": "yuqdiru", "en": "He is able (present)", "ur": "وہ قادر ہے (مضارع)" },
-        { "ar": "قَادِرٌ", "ar_plain": "قادر", "translit": "qaadirun", "en": "able (noun)", "ur": "قادر (اسم)" },
-        { "ar": "يَقُولُ", "ar_plain": "يقول", "translit": "yaquulu", "en": "he says", "ur": "وہ کہتا ہے" },
-        { "ar": "كَانَ", "ar_plain": "كان", "translit": "kaana", "en": "he was", "ur": "وہ تھا" }
+        {
+          "ar": "يُقْدِرُ",
+          "ar_plain": "يقدر",
+          "translit": "yuqdiru",
+          "en": "He is able (present)",
+          "ur": "وہ قادر ہے (مضارع)"
+        },
+        {
+          "ar": "قَادِرٌ",
+          "ar_plain": "قادر",
+          "translit": "qaadirun",
+          "en": "able (noun)",
+          "ur": "قادر (اسم)"
+        },
+        {
+          "ar": "يَقُولُ",
+          "ar_plain": "يقول",
+          "translit": "yaquulu",
+          "en": "he says",
+          "ur": "وہ کہتا ہے"
+        },
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kaana",
+          "en": "he was",
+          "ur": "وہ تھا"
+        }
       ],
       "correct_answer": {
         "ar": "يُقْدِرُ",
@@ -224,13 +342,47 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "يَكُونُ اللَّهُ فِي الْقُلُوبِ",
       "words": [
-        { "ar": "يَكُونُ", "ar_plain": "يكون", "translit": "yakuunu", "en": "He is" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah" },
-        { "ar": "فِي", "ar_plain": "في", "translit": "fii", "en": "in" },
-        { "ar": "الْقُلُوبِ", "ar_plain": "القلوب", "translit": "al-quluubi", "en": "the hearts" }
+        {
+          "ar": "يَكُونُ",
+          "ar_plain": "يكون",
+          "translit": "yakuunu",
+          "en": "He is",
+          "ur": "وہ ہے۔"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fii",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "الْقُلُوبِ",
+          "ar_plain": "القلوب",
+          "translit": "al-quluubi",
+          "en": "the hearts",
+          "ur": "دلوں"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PREPOSITION", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT", "PREPOSITION", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PREPOSITION",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "PREPOSITION",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "يَكُونُ = VERB (مُعْرَبٌ — present tense of كَانَ, in رفع here). اللَّهُ = SUBJECT (رفع). فِي = PREPOSITION (مَبْنِيّ). الْقُلُوبِ = مضاف إليه (جر after فِي).",
@@ -244,13 +396,26 @@
         "ar": "تَقُولُ الْمَرْأَةُ",
         "ar_plain": "تقول المرأة",
         "translit": "taquulu al-mar'atu",
-        "en": "The woman says."
+        "en": "The woman says.",
+        "ur": "عورت کہتی ہے۔"
       },
       "options": [
-        { "en": "The woman says.", "ur": "عورت کہتی ہے۔" },
-        { "en": "The women say.", "ur": "عورتوں نے کہا۔" },
-        { "en": "The woman said.", "ur": "عورت نے کہا۔" },
-        { "en": "She said to the woman.", "ur": "اس نے عورت سے کہا۔" }
+        {
+          "en": "The woman says.",
+          "ur": "عورت کہتی ہے۔"
+        },
+        {
+          "en": "The women say.",
+          "ur": "عورتوں نے کہا۔"
+        },
+        {
+          "en": "The woman said.",
+          "ur": "عورت نے کہا۔"
+        },
+        {
+          "en": "She said to the woman.",
+          "ur": "اس نے عورت سے کہا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -289,7 +454,10 @@
       "ur": "پس جو کوئی طاغوت کا انکار کرے اور اللہ پر ایمان لائے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-256-mishary.mp3"
     },
-    "highlighted_word_indices": [1, 3],
+    "highlighted_word_indices": [
+      1,
+      3
+    ],
     "noor_explanation": {
       "en": "يَكْفُرْ and يُؤْمِنْ are both in the jussive (جزم) — their ending is dropped because they follow the conditional particle فَمَنْ (whoever). يَكْفُرْ comes from كَفَرَ (weak verb with ف as first letter and ك as middle), and يُؤْمِنْ comes from آمَنَ. In جزم, the final ر takes a sukoon.",
       "ur": "يَكْفُرْ اور يُؤْمِنْ دونوں جزم میں ہیں — ان کا ending گرا کیونکہ وہ particle فَمَنْ (جو کوئی) کے بعد ہیں۔"

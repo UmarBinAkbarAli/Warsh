@@ -130,18 +130,71 @@
       "id": "ch59-l04-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "تَأْمُرُونَ", "ar_plain": "تأمرون", "translit": "ta'murūna", "en": "you (pl.) enjoin" },
-        { "ar": "تَنعَوْنَ", "ar_plain": "تنهون", "translit": "tanhawna", "en": "you (pl.) forbid" },
-        { "ar": "يَعْلَمُونَ", "ar_plain": "يعلمون", "translit": "ya'lamūna", "en": "they know" },
-        { "ar": "تَفْعَلِينَ", "ar_plain": "تفعلين", "translit": "taf'aliina", "en": "you (f. sg.) do" }
+        {
+          "ar": "تَأْمُرُونَ",
+          "ar_plain": "تأمرون",
+          "translit": "ta'murūna",
+          "en": "you (pl.) enjoin",
+          "ur": "آپ (pl.) حکم دیتے ہیں۔"
+        },
+        {
+          "ar": "تَنعَوْنَ",
+          "ar_plain": "تنهون",
+          "translit": "tanhawna",
+          "en": "you (pl.) forbid",
+          "ur": "آپ (pl.) منع کرتے ہیں۔"
+        },
+        {
+          "ar": "يَعْلَمُونَ",
+          "ar_plain": "يعلمون",
+          "translit": "ya'lamūna",
+          "en": "they know",
+          "ur": "وہ جانتے ہیں"
+        },
+        {
+          "ar": "تَفْعَلِينَ",
+          "ar_plain": "تفعلين",
+          "translit": "taf'aliina",
+          "en": "you (f. sg.) do",
+          "ur": "آپ (f. sg.) کرتے ہیں۔"
+        }
       ],
       "right_column": [
-        { "en": "الأفعال الخمسة — ـُونَ, subject: أَنْتُمْ / هُمْ", "ur": "پانچ افعال — ـُونَ، فاعل: أَنْتُمْ / هُمْ" },
-        { "en": "الأفعال الخمسة — ـُونَ, subject: أَنْتُمْ / هُمْ", "ur": "پانچ افعال — ـُونَ، فاعل: أَنْتُمْ / هُمْ" },
-        { "en": "الأفعال الخمسة — ـُونَ, subject: هُمْ", "ur": "پانچ افعال — ـُونَ، فاعل: هُمْ" },
-        { "en": "الأفعال الخمسة — ـِينَ, subject: أَنْتِ / هُنَّ", "ur": "پانچ افعال — ـِينَ، فاعل: أَنْتِ / هُنَّ" }
+        {
+          "en": "الأفعال الخمسة — ـُونَ, subject: أَنْتُمْ / هُمْ",
+          "ur": "پانچ افعال — ـُونَ، فاعل: أَنْتُمْ / هُمْ"
+        },
+        {
+          "en": "الأفعال الخمسة — ـُونَ, subject: أَنْتُمْ / هُمْ",
+          "ur": "پانچ افعال — ـُونَ، فاعل: أَنْتُمْ / هُمْ"
+        },
+        {
+          "en": "الأفعال الخمسة — ـُونَ, subject: هُمْ",
+          "ur": "پانچ افعال — ـُونَ، فاعل: هُمْ"
+        },
+        {
+          "en": "الأفعال الخمسة — ـِينَ, subject: أَنْتِ / هُنَّ",
+          "ur": "پانچ افعال — ـِينَ، فاعل: أَنْتِ / هُنَّ"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "تَأْمُرُونَ (أنتُمْ), تَنعَوْنَ (أنتُمْ), يَعْلَمُونَ (هُمْ), تَفْعَلِينَ (أَنْتِ / هُنَّ) — all are الأفعال الخمسة with their respective five-verb endings.",
@@ -153,13 +206,47 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "تَأْمُرُونَ بِالْمَعْرُوفِ وَتَنْهَوْنَ عَنِ الْمُنكَرِ",
       "words": [
-        { "ar": "تَأْمُرُونَ", "ar_plain": "تأمرون", "translit": "ta'murūna", "en": "you enjoin" },
-        { "ar": "بِالْمَعْرُوفِ", "ar_plain": "بالمعروف", "translit": "bil-ma'rūfi", "en": "to the right" },
-        { "ar": "وَتَنْهَوْنَ", "ar_plain": "تنهون", "translit": "wa-tanhawna", "en": "and you forbid" },
-        { "ar": "عَنِ الْمُنكَرِ", "ar_plain": "عن المنكر", "translit": "'anil-munkari", "en": "from the wrong" }
+        {
+          "ar": "تَأْمُرُونَ",
+          "ar_plain": "تأمرون",
+          "translit": "ta'murūna",
+          "en": "you enjoin",
+          "ur": "آپ حکم دیتے ہیں"
+        },
+        {
+          "ar": "بِالْمَعْرُوفِ",
+          "ar_plain": "بالمعروف",
+          "translit": "bil-ma'rūfi",
+          "en": "to the right",
+          "ur": "دائیں طرف"
+        },
+        {
+          "ar": "وَتَنْهَوْنَ",
+          "ar_plain": "تنهون",
+          "translit": "wa-tanhawna",
+          "en": "and you forbid",
+          "ur": "اور تم منع کرتے ہو۔"
+        },
+        {
+          "ar": "عَنِ الْمُنكَرِ",
+          "ar_plain": "عن المنكر",
+          "translit": "'anil-munkari",
+          "en": "from the wrong",
+          "ur": "غلط سے"
+        }
       ],
-      "available_roles": ["VERB", "PREPOSITION", "OBJECT", "CONJUNCTION"],
-      "correct_roles": ["VERB", "PREPOSITION", "CONJUNCTION", "PREPOSITION"],
+      "available_roles": [
+        "VERB",
+        "PREPOSITION",
+        "OBJECT",
+        "CONJUNCTION"
+      ],
+      "correct_roles": [
+        "VERB",
+        "PREPOSITION",
+        "CONJUNCTION",
+        "PREPOSITION"
+      ],
       "xp_value": 2,
       "explanation_on_wrong": {
         "en": "تَأْمُرُونَ = VERB (الأفعال الخمسة, مبنی على الـُونَ). بِالْمَعْرُوفِ = PREPOSITION (باء + الْمَعْرُوفِ = جر). وَتَنْهَوْنَ = CONJUNCTION + VERB (conjunct). عَنِ الْمُنكَرِ = PREPOSITION + noun (جر after عَنْ). Both verbs are مبنی and both take prepositional objects (بِالْ and عَنِ).",
@@ -188,12 +275,41 @@
         "ur": "وہ اچھی بات کا حکم کرتے ہیں اور بری بات سے روکتے ہیں۔"
       },
       "tiles": [
-        { "ar": "يَأْمُرُونَ", "ar_plain": "يأمرون", "translit": "ya'murūna", "en": "they enjoin" },
-        { "ar": "بِالْخَيْرِ", "ar_plain": "بالخير", "translit": "bil-khayri", "en": "to the good" },
-        { "ar": "وَيَنْهَوْنَ", "ar_plain": "وينهون", "translit": "wa-yanhawna", "en": "and they forbid" },
-        { "ar": "عَنِ الشَّرِّ", "ar_plain": "عن الشر", "translit": "'anish-sharri", "en": "from the evil" }
+        {
+          "ar": "يَأْمُرُونَ",
+          "ar_plain": "يأمرون",
+          "translit": "ya'murūna",
+          "en": "they enjoin",
+          "ur": "وہ حکم دیتے ہیں"
+        },
+        {
+          "ar": "بِالْخَيْرِ",
+          "ar_plain": "بالخير",
+          "translit": "bil-khayri",
+          "en": "to the good",
+          "ur": "اچھے کے لیے"
+        },
+        {
+          "ar": "وَيَنْهَوْنَ",
+          "ar_plain": "وينهون",
+          "translit": "wa-yanhawna",
+          "en": "and they forbid",
+          "ur": "اور وہ منع کرتے ہیں"
+        },
+        {
+          "ar": "عَنِ الشَّرِّ",
+          "ar_plain": "عن الشر",
+          "translit": "'anish-sharri",
+          "en": "from the evil",
+          "ur": "برائی سے"
+        }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "يَأْمُرُونَ (فعل خمسي, مبنی), بِالْخَيْرِ (حرف جر + اسم, جر), وَيَنْهَوْنَ (عطف + فعل خمسي, مبنی), عَنِ الشَّرِّ (حرف جر + اسم, جر). Both verbs take prepositional objects (بِ and عَنِ). The sentence structure mirrors exactly what we see in the Quran's description of the best nation.",
@@ -207,13 +323,26 @@
         "ar": "كُنتُمْ خَيْرَ أُمَّةٍ",
         "ar_plain": "كنتم خير أمة",
         "translit": "kuntum khayra ummatin",
-        "en": "You were the best nation."
+        "en": "You were the best nation.",
+        "ur": "آپ بہترین امت تھے۔"
       },
       "options": [
-        { "en": "You were the best nation.", "ur": "تم بہترین امت تھے۔" },
-        { "en": "They were the best nation.", "ur": "وہ بہترین امت تھے۔" },
-        { "en": "You are the best nation.", "ur": "تم بہترین امت ہو۔" },
-        { "en": "We were the best nation.", "ur": "ہم بہترین امت تھے۔" }
+        {
+          "en": "You were the best nation.",
+          "ur": "تم بہترین امت تھے۔"
+        },
+        {
+          "en": "They were the best nation.",
+          "ur": "وہ بہترین امت تھے۔"
+        },
+        {
+          "en": "You are the best nation.",
+          "ur": "تم بہترین امت ہو۔"
+        },
+        {
+          "en": "We were the best nation.",
+          "ur": "ہم بہترین امت تھے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -232,10 +361,34 @@
         "ur": "مومنین حق کو جانتے ہیں۔"
       },
       "options": [
-        { "ar": "الْحَقَّ", "ar_plain": "الحق", "translit": "al-ḥaqqa", "en": "the truth (acc.)", "ur": "حق (نصب)" },
-        { "ar": "الْحَقُّ", "ar_plain": "الحق", "translit": "al-ḥaqqu", "en": "the truth (nom.)", "ur": "حق (رفع)" },
-        { "ar": "الْحَقِّ", "ar_plain": "الحق", "translit": "al-ḥaqqi", "en": "the truth (gen.)", "ur": "حق (جر)" },
-        { "ar": "الْحَقُّونَ", "ar_plain": "الحقون", "translit": "al-ḥaqqūna", "en": "truthful ones (nom.)", "ur": "سچے لوگ (رفع)" }
+        {
+          "ar": "الْحَقَّ",
+          "ar_plain": "الحق",
+          "translit": "al-ḥaqqa",
+          "en": "the truth (acc.)",
+          "ur": "حق (نصب)"
+        },
+        {
+          "ar": "الْحَقُّ",
+          "ar_plain": "الحق",
+          "translit": "al-ḥaqqu",
+          "en": "the truth (nom.)",
+          "ur": "حق (رفع)"
+        },
+        {
+          "ar": "الْحَقِّ",
+          "ar_plain": "الحق",
+          "translit": "al-ḥaqqi",
+          "en": "the truth (gen.)",
+          "ur": "حق (جر)"
+        },
+        {
+          "ar": "الْحَقُّونَ",
+          "ar_plain": "الحقون",
+          "translit": "al-ḥaqqūna",
+          "en": "truthful ones (nom.)",
+          "ur": "سچے لوگ (رفع)"
+        }
       ],
       "correct_answer": {
         "ar": "الْحَقَّ",
@@ -266,7 +419,11 @@
       "ur": "تم بہترین امت ہو جسے لوگوں کے لیے پیدا کیا گیا ہے۔ تم اچھی بات کا حکم دیتے ہو اور بری بات سے روکتے ہو۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/ali-imran-3-110-mishary.mp3"
     },
-    "highlighted_word_indices": [4, 5, 7],
+    "highlighted_word_indices": [
+      4,
+      5,
+      7
+    ],
     "noor_explanation": {
       "en": "This ayah ties together the entire Book 6 curriculum: كُنتُمْ (كَانَ + أنتم = ناقص verb), خَيْرَ (خبر كَانَ, منصوب), أُمَّةٍ (addition, جر), أُخْرِجَتْ (passive voice, مبنی ماض), تَأْمُرُونَ and تَنعَوْنَ (both الأفعال الخمسة — مبنی على الـُونَ). Every concept from Book 6 is present: معرب/مبنی, المقصور/المنقوص, الأفعال الخمسة, كان وأخواتها, passive voice. This is why it is the capstone ayah of Book 6.",
       "ur": "یہ آیت Book 6 کے پورے curriculum کو اکٹھا کرتی ہے: كُنتُمْ (ناقص)، خَيْرَ (خبر، نصب)، أُمَّةٍ (اضافت، جر)، أُخْرِجَتْ (مجهول، مبنی ماض)، تَأْمُرُونَ اور تَنعَوْنَ (الأفعال الخمسة، مبنی)۔"

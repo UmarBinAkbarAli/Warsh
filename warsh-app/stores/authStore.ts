@@ -20,6 +20,7 @@ interface AuthStore {
   token: string | null;
   isHydrated: boolean;
   setSession: (user: User, token: string) => void;
+  patchUser: (patch: Partial<User>) => void;
   setToken: (token: string) => void;
   clearSession: () => Promise<void>;
   setHydrated: (isHydrated: boolean) => void;
@@ -32,6 +33,7 @@ export const useAuthStore = create<AuthStore>()(
       token: null,
       isHydrated: false,
       setSession: (user, token) => set({ user, token }),
+      patchUser: (patch) => set((state) => ({ user: state.user ? { ...state.user, ...patch } : state.user })),
       setToken: (token) => set({ token }),
       clearSession: async () => {
         set({ user: null, token: null });

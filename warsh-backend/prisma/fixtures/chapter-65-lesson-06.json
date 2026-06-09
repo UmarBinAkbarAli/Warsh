@@ -118,10 +118,22 @@
         "ur": "بے شک اللہ بخشنے والا، بڑا مہربان ہے"
       },
       "options": [
-        { "en": "Indeed Allah is Forgiving, Most Merciful", "ur": "بے شک اللہ بخشنے والا، بڑا مہربان ہے" },
-        { "en": "Allah was Forgiving, Most Merciful", "ur": "اللہ بخشنے والا، بڑا مہربان تھا" },
-        { "en": "Indeed the Forgiving is Allah, Most Merciful", "ur": "بے شک بخشنے والا اللہ، بڑا مہربان ہے" },
-        { "en": "Allah is indeed Forgiving and Merciful", "ur": "اللہ بے شک بخشنے والا اور مہربان ہے" }
+        {
+          "en": "Indeed Allah is Forgiving, Most Merciful",
+          "ur": "بے شک اللہ بخشنے والا، بڑا مہربان ہے"
+        },
+        {
+          "en": "Allah was Forgiving, Most Merciful",
+          "ur": "اللہ بخشنے والا، بڑا مہربان تھا"
+        },
+        {
+          "en": "Indeed the Forgiving is Allah, Most Merciful",
+          "ur": "بے شک بخشنے والا اللہ، بڑا مہربان ہے"
+        },
+        {
+          "en": "Allah is indeed Forgiving and Merciful",
+          "ur": "اللہ بے شک بخشنے والا اور مہربان ہے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -135,13 +147,52 @@
       "id": "ch65-r14-ex02",
       "sentence_ar": "كَانَ رَسُولُ اللَّهِ صَادِقًا",
       "words": [
-        { "ar": "كَانَ", "ar_plain": "كان", "translit": "kaana", "en": "was" },
-        { "ar": "رَسُولُ", "ar_plain": "رسول", "translit": "rasuulu", "en": "messenger" },
-        { "ar": "اللَّهِ", "ar_plain": "الله", "translit": "allaahi", "en": "of Allah" },
-        { "ar": "صَادِقًا", "ar_plain": "صادقا", "translit": "saadiqan", "en": "truthful" }
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kaana",
+          "en": "was",
+          "ur": "تھا"
+        },
+        {
+          "ar": "رَسُولُ",
+          "ar_plain": "رسول",
+          "translit": "rasuulu",
+          "en": "messenger",
+          "ur": "میسنجر"
+        },
+        {
+          "ar": "اللَّهِ",
+          "ar_plain": "الله",
+          "translit": "allaahi",
+          "en": "of Allah",
+          "ur": "اللہ کا"
+        },
+        {
+          "ar": "صَادِقًا",
+          "ar_plain": "صادقا",
+          "translit": "saadiqan",
+          "en": "truthful",
+          "ur": "سچا"
+        }
       ],
-      "available_roles": ["VERB", "SUBJECT", "PREDICATE", "OBJECT", "PARTICLE", "PREPOSITION", "ADJECTIVE", "POSSESSIVE", "RELATIVE_PRONOUN"],
-      "correct_roles": ["VERB", "POSSESSIVE", "SUBJECT", "PREDICATE"],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "PREDICATE",
+        "OBJECT",
+        "PARTICLE",
+        "PREPOSITION",
+        "ADJECTIVE",
+        "POSSESSIVE",
+        "RELATIVE_PRONOUN"
+      ],
+      "correct_roles": [
+        "VERB",
+        "POSSESSIVE",
+        "SUBJECT",
+        "PREDICATE"
+      ],
       "explanation_on_wrong": {
         "en": "كَانَ is the incomplete verb (رَفْع). رَسُولُ اللَّهِ is an إضافة chain (رسول + الله) acting as the اِسْم of كَانَ — both words in the chain take the nominative case as a unit. صَادِقًا is the خَبَر of كَانَ (nominative رَفْع). The addition chain رَسُولُ اللَّهِ stays intact and is never broken.",
         "ur": "كَانَ ناقص فعل ہے (رَفْع)۔ رَسُولُ اللَّهِ ایک إضافة chain ہے (رسول + الله) جو كَانَ کا اِسْم کے طور پر کام کر رہی ہے — chain کے دونوں الفاظ ایک unit کے طور پر nominative case لیتے ہیں۔ صَادِقًا كَانَ کا خَبَر ہے (nominative رَفْع)۔ إضافة chain رَسُولُ اللَّهِ intact رہتی ہے اور کبھی نہیں ٹوٹتی۔"
@@ -192,12 +243,41 @@
         }
       ],
       "right_column": [
-        { "en": "كَانَ family (رَفْع): اِسْم in nominative — كَانَ، أَصْبَحَ، أَمْسَى، صَارَ، أَضْحَى", "ur": "كَانَ family (رَفْع): اِسْم nominative میں — كَانَ، أَصْبَحَ، أَمْسَى، صَارَ، أَضْحَى" },
-        { "en": "إِنَّ family (نَصْب): اِسْم in accusative — إِنَّ، أَنَّ، كَأَنَّ، لَيْتَ، لَعَلَّ، لَكِنَّ", "ur": "إِنَّ family (نَصْب): اِسْم accusative میں — إِنَّ، أَنَّ، كَأَنَّ، لَيْتَ، لَعَلَّ، لَكِنَّ" },
-        { "en": "لَيْسَ family (رَفْع): لَيْسَ is a verb, follows كَانَ pattern (رَفْع + رَفْع)", "ur": "لَيْسَ family (رَفْع): لَيْسَ ایک verb ہے، كَانَ pattern (رَفْع + رَفْع) کی پیروی کرتی ہے" },
-        { "en": "كَانَ with إضافة chain: entire chain as one nominative unit", "ur": "كَانَ کے ساتھ إضافة: پوری chain ایک nominative unit کے طور پر" }
+        {
+          "en": "كَانَ family (رَفْع): اِسْم in nominative — كَانَ، أَصْبَحَ، أَمْسَى، صَارَ، أَضْحَى",
+          "ur": "كَانَ family (رَفْع): اِسْم nominative میں — كَانَ، أَصْبَحَ، أَمْسَى، صَارَ، أَضْحَى"
+        },
+        {
+          "en": "إِنَّ family (نَصْب): اِسْم in accusative — إِنَّ، أَنَّ، كَأَنَّ، لَيْتَ، لَعَلَّ، لَكِنَّ",
+          "ur": "إِنَّ family (نَصْب): اِسْم accusative میں — إِنَّ، أَنَّ، كَأَنَّ، لَيْتَ، لَعَلَّ، لَكِنَّ"
+        },
+        {
+          "en": "لَيْسَ family (رَفْع): لَيْسَ is a verb, follows كَانَ pattern (رَفْع + رَفْع)",
+          "ur": "لَيْسَ family (رَفْع): لَيْسَ ایک verb ہے، كَانَ pattern (رَفْع + رَفْع) کی پیروی کرتی ہے"
+        },
+        {
+          "en": "كَانَ with إضافة chain: entire chain as one nominative unit",
+          "ur": "كَانَ کے ساتھ إضافة: پوری chain ایک nominative unit کے طور پر"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -244,7 +324,12 @@
           "ur": "ایک عالم (nominative)"
         }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -300,13 +385,50 @@
       "id": "ch65-r14-ex07",
       "sentence_ar": "هُوَ اللَّهُ الْعَزِيزُ الْحَكِيمُ",
       "words": [
-        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "He is" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah" },
-        { "ar": "الْعَزِيزُ", "ar_plain": "العزيز", "translit": "al-'aziizu", "en": "the Mighty" },
-        { "ar": "الْحَكِيمُ", "ar_plain": "الحكيم", "translit": "al-hakiimu", "en": "the Wise" }
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "He is",
+          "ur": "وہ ہے۔"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "الْعَزِيزُ",
+          "ar_plain": "العزيز",
+          "translit": "al-'aziizu",
+          "en": "the Mighty",
+          "ur": "غالب"
+        },
+        {
+          "ar": "الْحَكِيمُ",
+          "ar_plain": "الحكيم",
+          "translit": "al-hakiimu",
+          "en": "the Wise",
+          "ur": "عقلمند"
+        }
       ],
-      "available_roles": ["VERB", "SUBJECT", "PREDICATE", "OBJECT", "PARTICLE", "PREPOSITION", "ADJECTIVE"],
-      "correct_roles": ["VERB", "SUBJECT", "ADJECTIVE", "ADJECTIVE"],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "PREDICATE",
+        "OBJECT",
+        "PARTICLE",
+        "PREPOSITION",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "ADJECTIVE",
+        "ADJECTIVE"
+      ],
       "explanation_on_wrong": {
         "en": "هُوَ is the present tense of كَانَ (يَكُونُ). It is ناقص — it needs اِسْم and خَبَر, both in the nominative (رَفْع). اللَّهُ is the اِسْم of هُوَ (nominative). الْعَزِيزُ is the first خَبَر (nominative) and الْحَكِيمُ is a second خَبَر (nominative). هُوَ is a قَلب (emphasizing pronoun) used as the incomplete verb here.",
         "ur": "هُوَ كَانَ کا present tense ہے (يَكُونُ)۔ یہ ناقص ہے — اسے اِسْم اور خَبَر دونوں nominative (رَفْع) میں درکار ہے۔ اللَّهُ هُوَ کا اِسْم ہے (nominative)۔ الْعَزِيزُ پہلا خَبَر ہے (nominative) اور الْحَكِيمُ دوسرا خَبَر ہے (nominative)۔ هُوَ یہاں ایک قَلب (emphasizing pronoun) ہے جو ناقص فعل کے طور پر used ہے۔"
@@ -334,10 +456,22 @@
         "ur": "اندھیر پھیل گیا"
       },
       "options": [
-        { "en": "The darkness became widespread", "ur": "اندھیر پھیل گیا" },
-        { "en": "The widespread darkness", "ur": "پھیلا ہوا اندھیر" },
-        { "en": "The darkness is widespread", "ur": "اندھیر پھیلا ہوا ہے" },
-        { "en": "By midday, the darkness spread", "ur": "دوپہر، اندھیر پھیل گیا" }
+        {
+          "en": "The darkness became widespread",
+          "ur": "اندھیر پھیل گیا"
+        },
+        {
+          "en": "The widespread darkness",
+          "ur": "پھیلا ہوا اندھیر"
+        },
+        {
+          "en": "The darkness is widespread",
+          "ur": "اندھیر پھیلا ہوا ہے"
+        },
+        {
+          "en": "By midday, the darkness spread",
+          "ur": "دوپہر، اندھیر پھیل گیا"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -380,12 +514,41 @@
         }
       ],
       "right_column": [
-        { "en": "is/will be (present-future incomplete)", "ur": "ہے/ہو گا (present-future ناقص)" },
-        { "en": "was (past incomplete)", "ur": "تھا (ماضی ناقص)" },
-        { "en": "Indeed (particle, ناقص)", "ur": "بے شک (particle، ناقص)" },
-        { "en": "Be! (imperative, مَبْنِيّ)", "ur": "ہو! (imperative، مَبْنِيّ)" }
+        {
+          "en": "is/will be (present-future incomplete)",
+          "ur": "ہے/ہو گا (present-future ناقص)"
+        },
+        {
+          "en": "was (past incomplete)",
+          "ur": "تھا (ماضی ناقص)"
+        },
+        {
+          "en": "Indeed (particle, ناقص)",
+          "ur": "بے شک (particle، ناقص)"
+        },
+        {
+          "en": "Be! (imperative, مَبْنِيّ)",
+          "ur": "ہو! (imperative، مَبْنِيّ)"
+        }
       ],
-      "correct_pairs": [[0, 1], [1, 0], [2, 3], [3, 2]],
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
       "xp_value": 1
     }
   ],
@@ -404,7 +567,10 @@
       "ur": "وہ اللہ ہے جس کے سوا کوئی معبود نہیں، وہ غیب اور شہادت والا ہے۔ وہ بڑا مہربان، بڑا رحم کرنے والا ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-hashr-059-mishary.mp3"
     },
-    "highlighted_word_indices": [0, 4],
+    "highlighted_word_indices": [
+      0,
+      4
+    ],
     "noor_explanation": {
       "en": "هُوَ at the start of this ayah is the present-tense incomplete verb (from يَكُونُ). It needs اِسْمٌ (اللَّهُ) and خَبَرٌ (عَالِمُ الْغَيْبِ...). The phrase هُوَ الرَّحْمَٰنُ الرَّحِيمُ shows multiple خَبَر after the same اِسْم — each one nominative. With this R14 review, you now have a complete picture of both incomplete families: the كَانَ family (verbs, رَفْع + رَفْع) and the إِنَّ family (particles, نَصْب + رَفْع). This single distinction unlocks the parsing of thousands of Quranic sentences.",
       "ur": "اس ayah کے شروع میں هُوَ present-tense ناقص فعل ہے (يَكُونُ سے)۔ اسے اِسْمٌ (اللَّهُ) اور خَبَرٌ (عَالِمُ الْغَيْبِ...) درکار ہے۔ phrase هُوَ الرَّحْمَٰنُ الرَّحِيمُ ایک ہی اِسْم کے بعد multiple خَبَر دکھاتا ہے — ہر ایک nominative۔ اس R14 review کے ساتھ، اب آپ کے پاس دونوں ناقص families کی مکمل picture ہے: كَانَ family (verbs, رَفْع + رَفْع) اور إِنَّ family (particles, نَصْب + رَفْع)۔ یہ ایک distinction ہزاروں قرآنی جملوں کے parsing کو کھولتی ہے۔"

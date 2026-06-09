@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  Alert,
   ScrollView,
   StyleSheet,
   Text,
@@ -15,6 +14,7 @@ import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } f
 import api from "@services/api";
 import { useAuthStore } from "@stores/authStore";
 import { BrandButton } from "@components/BrandButton";
+import { useT } from "@i18n/index";
 
 type Lang = "en" | "ur";
 
@@ -22,6 +22,8 @@ export default function EditProfileScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const user = useAuthStore((s) => s.user);
+  const patchUser = useAuthStore((s) => s.patchUser);
+  const t = useT();
 
   const [selectedLang, setSelectedLang] = useState<Lang>(
     (user?.nativeLanguage as Lang) ?? "en"
@@ -37,10 +39,11 @@ export default function EditProfileScreen() {
     setSuccess(false);
     try {
       await api.patch("/api/users/me", { nativeLanguage: selectedLang });
+      patchUser({ nativeLanguage: selectedLang });
       setSuccess(true);
       setTimeout(() => router.back(), 800);
     } catch {
-      setError("Could not save changes. Please try again.");
+      setError(t("editProfile.saveError"));
     } finally {
       setSaving(false);
     }
@@ -53,7 +56,7 @@ export default function EditProfileScreen() {
         <TouchableOpacity onPress={() => router.back()} style={styles.headerSide} hitSlop={8}>
           <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Edit Profile</Text>
+        <Text style={styles.headerTitle}>{t("editProfile.title")}</Text>
         <TouchableOpacity
           onPress={handleSave}
           disabled={saving}
@@ -61,7 +64,7 @@ export default function EditProfileScreen() {
           hitSlop={8}
         >
           <Text style={[styles.saveBtnText, saving ? styles.saveBtnDisabled : null]}>
-            {saving ? "Saving…" : "Save"}
+            {saving ? t("common.saving") : t("common.save")}
           </Text>
         </TouchableOpacity>
       </View>
@@ -75,13 +78,13 @@ export default function EditProfileScreen() {
           <View style={styles.avatarCircle}>
             <Text style={styles.avatarEmoji}>👤</Text>
           </View>
-          <Text style={styles.avatarHint}>Change photo · coming soon</Text>
+          <Text style={styles.avatarHint}>{t("editProfile.changePhotoSoon")}</Text>
         </View>
 
         {/* Feedback banners */}
         {success ? (
           <View style={styles.successBanner}>
-            <Text style={styles.successText}>Saved.</Text>
+            <Text style={styles.successText}>{t("editProfile.saved")}</Text>
           </View>
         ) : null}
         {error ? (
@@ -91,20 +94,20 @@ export default function EditProfileScreen() {
         ) : null}
 
         {/* Personal section */}
-        <Text style={styles.sectionHeader}>Personal</Text>
+        <Text style={styles.sectionHeader}>{t("editProfile.personal")}</Text>
         <View style={styles.card}>
-          <Text style={styles.fieldLabel}>Name</Text>
+          <Text style={styles.fieldLabel}>{t("editProfile.name")}</Text>
           <TextInput
             style={styles.textInput}
             value={user?.name ?? ""}
             editable={false}
             placeholderTextColor={WarshPalette.subtleBrown}
           />
-          <Text style={styles.comingSoonNote}>Name changes coming soon</Text>
+          <Text style={styles.comingSoonNote}>{t("editProfile.nameSoon")}</Text>
         </View>
 
         {/* Language section */}
-        <Text style={styles.sectionHeader}>Language</Text>
+        <Text style={styles.sectionHeader}>{t("editProfile.language")}</Text>
         <View style={styles.langRow}>
           <TouchableOpacity
             style={[
@@ -115,9 +118,9 @@ export default function EditProfileScreen() {
             activeOpacity={0.75}
           >
             <Text style={[styles.langTitle, selectedLang === "en" ? styles.langTitleSelected : null]}>
-              English
+              {t("editProfile.englishLabel")}
             </Text>
-            <Text style={styles.langSubtitle}>UI in English</Text>
+            <Text style={styles.langSubtitle}>{t("editProfile.englishUi")}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -129,16 +132,16 @@ export default function EditProfileScreen() {
             activeOpacity={0.75}
           >
             <Text style={[styles.langTitle, selectedLang === "ur" ? styles.langTitleSelected : null]}>
-              Urdu · اردو
+              {t("editProfile.urduLabel")}
             </Text>
-            <Text style={styles.langSubtitle}>UI in Urdu</Text>
+            <Text style={styles.langSubtitle}>{t("editProfile.urduUi")}</Text>
           </TouchableOpacity>
         </View>
 
         {/* Save button */}
         <View style={styles.saveButtonContainer}>
           <BrandButton
-            title={saving ? "Saving…" : "Save Changes"}
+            title={saving ? t("common.saving") : t("common.saveChanges")}
             onPress={handleSave}
             loading={saving}
             disabled={saving}

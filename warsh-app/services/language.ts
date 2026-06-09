@@ -1,16 +1,27 @@
 import { useAuthStore } from "@stores/authStore";
 import { useOnboardingStore } from "@stores/onboardingStore";
 
-export function useLanguage(): "en" | "ur" {
+export type AppLanguage = "en" | "ur";
+
+export function useLanguage(): AppLanguage {
   const authLang = useAuthStore((s) => s.user?.nativeLanguage);
   const onboardingLang = useOnboardingStore((s) => s.language);
   const lang = authLang ?? onboardingLang ?? "en";
   return lang === "ur" ? "ur" : "en";
 }
 
+export function pickLocalized(
+  enValue: string | null | undefined,
+  urValue: string | null | undefined,
+  language: AppLanguage
+) {
+  if (language === "ur") return urValue ?? enValue ?? "";
+  return enValue ?? urValue ?? "";
+}
+
 export function pickTranslation(
   word: { translationEn: string; translationUr: string },
-  language: "en" | "ur"
+  language: AppLanguage
 ): string {
-  return language === "ur" ? word.translationUr : word.translationEn;
+  return pickLocalized(word.translationEn, word.translationUr, language);
 }

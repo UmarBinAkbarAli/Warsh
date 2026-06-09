@@ -15,6 +15,8 @@ import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
+import { useLanguage, pickLocalized } from "@services/language";
+import { useT } from "@i18n/index";
 import {
   Colors,
   FontSizes,
@@ -27,20 +29,29 @@ import {
 
 // ─── helpers ──────────────────────────────────────────────────────────────────
 
-const LESSON_TYPE_LABELS: Record<string, string> = {
-  FLASHCARD: "Flashcards",
-  FILL_BLANK: "Fill in the blank",
-  MULTIPLE_CHOICE: "Multiple choice",
-  MATCHING: "Matching",
-  LISTENING: "Listening",
-  VOCABULARY: "Vocabulary",
-  VERB_PATTERN: "Verb patterns",
-  AUDIO_LESSON: "Audio lesson",
-  REVIEW: "Review",
-};
-
-function lessonTypeLabel(type: string) {
-  return LESSON_TYPE_LABELS[type] ?? type;
+function lessonTypeLabel(type: string, t: ReturnType<typeof useT>) {
+  switch (type) {
+    case "FLASHCARD":
+      return t("chapter.typeFlashcards");
+    case "FILL_BLANK":
+      return t("chapter.typeFillBlank");
+    case "MULTIPLE_CHOICE":
+      return t("chapter.typeMultipleChoice");
+    case "MATCHING":
+      return t("chapter.typeMatching");
+    case "LISTENING":
+      return t("chapter.typeListening");
+    case "VOCABULARY":
+      return t("chapter.typeVocabulary");
+    case "VERB_PATTERN":
+      return t("chapter.typeVerbPatterns");
+    case "AUDIO_LESSON":
+      return t("chapter.typeAudioLesson");
+    case "REVIEW":
+      return t("chapter.typeReview");
+    default:
+      return type;
+  }
 }
 
 function lessonTypeIcon(type: string): React.ComponentProps<typeof Ionicons>["name"] {
@@ -88,10 +99,12 @@ function LessonPreviewSheet({
   onStart: () => void;
 }) {
   const insets = useSafeAreaInsets();
+  const language = useLanguage();
+  const t = useT();
   if (!lesson) return null;
 
   const ctaLabel =
-    lesson.isCompleted || lesson.isSkippedByPlacement ? "Review Lesson" : "Start Lesson";
+    lesson.isCompleted || lesson.isSkippedByPlacement ? t("chapter.reviewLesson") : t("chapter.startLesson");
 
   return (
     <Modal visible={visible} transparent animationType="slide" onRequestClose={onDismiss}>
@@ -102,37 +115,37 @@ function LessonPreviewSheet({
           {/* Lesson type pill */}
           <View style={styles.typePill}>
             <Ionicons name={lessonTypeIcon(lesson.type)} size={14} color={WarshPalette.gold} />
-            <Text style={styles.typePillText}>{lessonTypeLabel(lesson.type)}</Text>
+            <Text style={styles.typePillText}>{lessonTypeLabel(lesson.type, t)}</Text>
           </View>
 
           {/* Titles */}
           {lesson.titleAr ? (
             <ArabicText size="lg" style={styles.sheetTitleAr}>{lesson.titleAr}</ArabicText>
           ) : null}
-          <Text style={styles.sheetTitleEn}>{lesson.title}</Text>
+          <Text style={styles.sheetTitleEn}>{pickLocalized(lesson.title, lesson.titleUr, language)}</Text>
 
           {/* XP row */}
           <View style={styles.sheetMetaRow}>
             <View style={styles.sheetMetaItem}>
               <Ionicons name="flash-outline" size={16} color={WarshPalette.gold} />
-              <Text style={styles.sheetMetaText}>{lesson.xpReward} XP</Text>
+              <Text style={styles.sheetMetaText}>{t("chapter.xp", { count: lesson.xpReward })}</Text>
             </View>
             {lesson.isCompleted ? (
               <View style={styles.sheetMetaItem}>
                 <Ionicons name="checkmark-circle" size={16} color={WarshPalette.sage} />
-                <Text style={[styles.sheetMetaText, { color: WarshPalette.sage }]}>Completed</Text>
+                <Text style={[styles.sheetMetaText, { color: WarshPalette.sage }]}>{t("chapter.completedStatus")}</Text>
               </View>
             ) : lesson.isSkippedByPlacement ? (
               <View style={styles.sheetMetaItem}>
                 <Ionicons name="play-skip-forward-outline" size={16} color={WarshPalette.subtleBrown} />
-                <Text style={[styles.sheetMetaText, { color: WarshPalette.subtleBrown }]}>Skipped</Text>
+                <Text style={[styles.sheetMetaText, { color: WarshPalette.subtleBrown }]}>{t("chapter.skippedStatus")}</Text>
               </View>
             ) : null}
           </View>
 
           <BrandButton title={ctaLabel} onPress={onStart} style={{ marginTop: Spacing.lg }} />
           <TouchableOpacity style={styles.sheetCancelBtn} onPress={onDismiss}>
-            <Text style={styles.sheetCancelText}>Cancel</Text>
+            <Text style={styles.sheetCancelText}>{t("chapter.cancel")}</Text>
           </TouchableOpacity>
         </View>
       </Pressable>
@@ -146,6 +159,8 @@ export default function ChapterScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { chapterId } = useLocalSearchParams<{ chapterId: string }>();
+  const language = useLanguage();
+  const t = useT();
   const [chapter, setChapter] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -154,7 +169,7 @@ export default function ChapterScreen() {
 
   const loadChapter = useCallback(async () => {
     if (!chapterId) {
-      setError("Invalid chapter.");
+      setError(t("chapter.invalid"));
       setLoading(false);
       return;
     }
@@ -165,15 +180,15 @@ export default function ChapterScreen() {
       setChapter(response.data.data.chapter);
     } catch (err: any) {
       if (err.response?.status === 403) {
-        setError("This chapter is still locked. Complete earlier chapters first.");
+        setError(t("chapter.lockedError"));
       } else {
-        setError("Unable to load chapter lessons.");
+        setError(t("chapter.loadError"));
       }
       setChapter(null);
     } finally {
       setLoading(false);
     }
-  }, [chapterId]);
+  }, [chapterId, t]);
 
   useFocusEffect(
     useCallback(() => {
@@ -205,9 +220,9 @@ export default function ChapterScreen() {
   if (!chapter) {
     return (
       <View style={styles.errorScreen}>
-        <Text style={styles.errorText}>{error ?? "Chapter not found."}</Text>
+        <Text style={styles.errorText}>{error ?? t("chapter.notFound")}</Text>
         <TouchableOpacity onPress={() => router.back()} style={{ marginTop: Spacing.lg }}>
-          <Text style={styles.backLink}>‹ Go back</Text>
+          <Text style={styles.backLink}>‹ {t("common.back")}</Text>
         </TouchableOpacity>
       </View>
     );
@@ -225,23 +240,23 @@ export default function ChapterScreen() {
       >
         {/* Back button */}
         <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
-          <Text style={styles.backBtnText}>‹ Chapters</Text>
+          <Text style={styles.backBtnText}>‹ {t("chapter.backChapters")}</Text>
         </TouchableOpacity>
 
-        {chapter.isSkippedByPlacement ? <StatusBadge label="Skipped" /> : null}
+        {chapter.isSkippedByPlacement ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
 
-        <Text style={styles.chapterTitle}>{chapter.title}</Text>
+        <Text style={styles.chapterTitle}>{pickLocalized(chapter.title, chapter.titleUr, language)}</Text>
         {chapter.titleAr ? (
           <ArabicText size="sm" style={styles.chapterTitleAr}>
             {chapter.titleAr}
           </ArabicText>
         ) : null}
-        <Text style={styles.chapterDesc}>{chapter.description}</Text>
+        <Text style={styles.chapterDesc}>{pickLocalized(chapter.description, chapter.descriptionUr, language)}</Text>
 
         {/* Progress */}
         <View style={styles.progressRow}>
           <Text style={styles.progressLabel}>
-            {chapter.completedLessonCount} / {chapter.lessons.length} lessons completed
+            {t("chapter.lessonsCompleted", { done: chapter.completedLessonCount, total: chapter.lessons.length })}
           </Text>
         </View>
         <View style={styles.progressTrack}>
@@ -260,13 +275,13 @@ export default function ChapterScreen() {
                 onPress={() => handleLessonTap(lesson)}
                 activeOpacity={0.8}
               >
-                {skipped ? <StatusBadge label="Skipped by placement" /> : null}
+                {skipped ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
                 <View style={styles.lessonCardTop}>
                   <View style={styles.lessonIndex}>
                     <Text style={styles.lessonIndexText}>{idx + 1}</Text>
                   </View>
                   <View style={styles.lessonInfo}>
-                    <Text style={styles.lessonTitle}>{lesson.title}</Text>
+                    <Text style={styles.lessonTitle}>{pickLocalized(lesson.title, lesson.titleUr, language)}</Text>
                     {lesson.titleAr ? (
                       <ArabicText size="sm" style={styles.lessonTitleAr}>
                         {lesson.titleAr}
@@ -274,7 +289,7 @@ export default function ChapterScreen() {
                     ) : null}
                     <View style={styles.lessonMeta}>
                       <Ionicons name={lessonTypeIcon(lesson.type)} size={12} color={WarshPalette.gold} />
-                      <Text style={styles.lessonMetaText}>{lessonTypeLabel(lesson.type)}</Text>
+                      <Text style={styles.lessonMetaText}>{lessonTypeLabel(lesson.type, t)}</Text>
                       <Text style={styles.lessonMetaDot}>·</Text>
                       <Text style={styles.lessonMetaText}>{lesson.xpReward} XP</Text>
                     </View>

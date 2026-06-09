@@ -16,7 +16,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
   const relatedWords = word.rootLetters
     ? await prisma.vocabularyWord.findMany({
         where: { rootLetters: word.rootLetters, id: { not: params.id } },
-        select: { id: true, arabic: true, arabicPlain: true, transliteration: true, translationEn: true },
+        select: { id: true, arabic: true, arabicPlain: true, transliteration: true, translationEn: true, translationUr: true },
         take: 6,
       })
     : [];

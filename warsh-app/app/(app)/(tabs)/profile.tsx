@@ -6,14 +6,18 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { useAuth } from "@hooks/useAuth";
+import { useLanguage } from "@services/language";
 import * as Theme from "../../../constants/theme";
 import { BrandButton } from "@components/BrandButton";
 import { ArabicText } from "@components/ArabicText";
+import { useT } from "@i18n/index";
 
 export default function ProfileScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const { user, logout } = useAuth();
+  const language = useLanguage();
+  const t = useT();
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -25,11 +29,11 @@ export default function ProfileScreen() {
       const response = await api.get("/api/progress");
       setData(response.data.data);
     } catch (err) {
-      setError("Unable to load profile data.");
+      setError(t("profile.loadError"));
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [t]);
 
   useFocusEffect(
     useCallback(() => {
@@ -46,13 +50,20 @@ export default function ProfileScreen() {
     );
   }
 
-  const displayName = data?.user?.name ?? user?.name ?? "Student";
+  const displayName = data?.user?.name ?? user?.name ?? t("profile.student");
   const streak = Math.max(0, Math.min(Number(data?.streak ?? 0), 7));
   const xp = Number(data?.xp ?? 0);
   const completedLessons = data?.completedLessons?.length ?? 0;
   const level = data?.level ?? Math.floor(xp / 100) + 1;
   const progressPercent = `${xp % 100}%` as DimensionValue;
   const headerCardStyle = [styles.headerCard, { paddingTop: insets.top + Theme.Spacing.xl }];
+  const memberSince = data?.memberSince
+    ? new Date(data.memberSince).toLocaleDateString(language === "ur" ? "ur-PK" : "en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      })
+    : null;
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
@@ -75,7 +86,7 @@ export default function ProfileScreen() {
             <Ionicons name="create-outline" size={16} color={Theme.WarshPalette.gold} />
           </Pressable>
         </View>
-        <Text style={styles.greeting}>As-salamu alaykum</Text>
+        <Text style={styles.greeting}>{t("profile.greeting")}</Text>
       </View>
 
       {error ? <Text style={styles.errorText}>{error}</Text> : null}
@@ -85,7 +96,7 @@ export default function ProfileScreen() {
           <Pressable style={styles.streakCard} onPress={() => router.push("/(app)/streak-detail")}>
             <View style={styles.streakValueRow}>
               <Text style={styles.streakNumber}>{data.streak}</Text>
-              <Text style={styles.streakLabel}>day streak</Text>
+              <Text style={styles.streakLabel}>{t("profile.dayStreak")}</Text>
               {(data.streakFreezes ?? 0) > 0 ? (
                 <View style={styles.freezeRow}>
                   {Array.from({ length: data.streakFreezes as number }).map((_: unknown, i: number) => (
@@ -102,10 +113,10 @@ export default function ProfileScreen() {
             </View>
             {(data.streakFreezes ?? 0) > 0 ? (
               <Text style={styles.freezeNote}>
-                {data.streakFreezes} streak freeze{data.streakFreezes !== 1 ? "s" : ""} · earns at 7-day and 30-day streaks
+                {t("profile.freezeNote", { count: data.streakFreezes, suffix: data.streakFreezes !== 1 ? "s" : "" })}
               </Text>
             ) : null}
-            <Text style={styles.streakQuote}>The most beloved deed to Allah is the consistent one, even if small.</Text>
+            <Text style={styles.streakQuote}>{t("profile.streakQuote")}</Text>
           </Pressable>
 
           <View style={styles.statsRow}>
@@ -114,7 +125,7 @@ export default function ProfileScreen() {
                 نقاط
               </ArabicText>
               <Text style={styles.statValue}>{data.xp}</Text>
-              <Text style={styles.statSub}>points earned</Text>
+              <Text style={styles.statSub}>{t("profile.pointsEarned")}</Text>
             </View>
 
             <View style={styles.statCard}>
@@ -122,13 +133,13 @@ export default function ProfileScreen() {
                 دروس
               </ArabicText>
               <Text style={styles.statValue}>{completedLessons}</Text>
-              <Text style={styles.statSub}>lessons done</Text>
+              <Text style={styles.statSub}>{t("profile.lessonsDone")}</Text>
             </View>
           </View>
 
           <View style={styles.levelCard}>
             <View style={styles.levelRow}>
-              <Text style={styles.levelLabel}>Level</Text>
+              <Text style={styles.levelLabel}>{t("profile.level")}</Text>
               <Text style={styles.levelValue}>{level}</Text>
             </View>
             <View style={styles.progressTrack}>
@@ -139,8 +150,8 @@ export default function ProfileScreen() {
           {(data.achievements?.length ?? 0) > 0 ? (
             <Pressable style={styles.achievementsCard} onPress={() => router.push("/milestones" as any)}>
               <View style={styles.achievementsHeader}>
-                <Text style={styles.achievementsTitle}>Milestones</Text>
-                <Text style={styles.achievementsCount}>{data.achievements.length} earned ›</Text>
+                <Text style={styles.achievementsTitle}>{t("profile.milestones")}</Text>
+                <Text style={styles.achievementsCount}>{t("profile.earnedCount", { count: data.achievements.length })}</Text>
               </View>
               <View style={styles.achievementsRow}>
                 {(data.achievements as any[]).slice(0, 5).map((a: any) => (
@@ -163,18 +174,18 @@ export default function ProfileScreen() {
               <View style={styles.statCard}>
                 <Ionicons name="book-outline" size={20} color={Theme.WarshPalette.gold} />
                 <Text style={styles.statValue}>{data.vocabTotal}</Text>
-                <Text style={styles.statSub}>words in bank</Text>
+                <Text style={styles.statSub}>{t("profile.wordsInBank")}</Text>
               </View>
               <View style={styles.statCard}>
                 <Ionicons name="star-outline" size={20} color={Theme.WarshPalette.sage} />
                 <Text style={styles.statValue}>{data.vocabMastered ?? 0}</Text>
-                <Text style={styles.statSub}>words mastered</Text>
+                <Text style={styles.statSub}>{t("profile.wordsMastered")}</Text>
               </View>
               {(data.surahsCompleted ?? 0) > 0 ? (
                 <View style={styles.statCard}>
                   <Ionicons name="moon-outline" size={20} color={Theme.WarshPalette.gold} />
                   <Text style={styles.statValue}>{data.surahsCompleted}</Text>
-                  <Text style={styles.statSub}>surahs understood</Text>
+                  <Text style={styles.statSub}>{t("profile.surahsUnderstood")}</Text>
                 </View>
               ) : null}
             </View>
@@ -184,7 +195,7 @@ export default function ProfileScreen() {
             <View style={styles.memberSinceRow}>
               <Ionicons name="calendar-outline" size={14} color={Theme.WarshPalette.subtleBrown} />
               <Text style={styles.memberSinceText}>
-                Member since {new Date(data.memberSince).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
+                {t("profile.memberSince", { date: memberSince ?? "" })}
               </Text>
             </View>
           ) : null}
@@ -193,30 +204,27 @@ export default function ProfileScreen() {
             <View style={styles.speakingCard}>
               <View style={styles.speakingIconRow}>
                 <Ionicons name="mic-outline" size={20} color={Theme.WarshPalette.sage} />
-                <Text style={styles.speakingTitle}>Speaking</Text>
+                <Text style={styles.speakingTitle}>{t("profile.speaking")}</Text>
               </View>
               <Text style={styles.speakingCount}>{data.phrasesSpoken}</Text>
-              <Text style={styles.speakingSub}>phrases you can say</Text>
+              <Text style={styles.speakingSub}>{t("profile.phrasesYouCanSay")}</Text>
             </View>
           ) : null}
 
           <View style={styles.tipCard}>
-            <Text style={styles.tipLabel}>Ustaad Noor</Text>
-            <Text style={styles.tipText}>
-              Keep your streak alive. The Prophet ﷺ said: the most beloved deeds to Allah are those done consistently,
-              even if small. Five minutes of Arabic every day beats five hours once a week.
-            </Text>
+            <Text style={styles.tipLabel}>{t("profile.noor")}</Text>
+            <Text style={styles.tipText}>{t("profile.noorTip")}</Text>
           </View>
         </>
       ) : null}
 
       <BrandButton
-        title="Share my progress"
+        title={t("profile.shareProgress")}
         onPress={() => router.push("/(app)/share-stats")}
         variant="secondary"
         style={styles.shareButton}
       />
-      <BrandButton title="Log Out" onPress={logout} variant="danger" style={styles.logoutButton} />
+      <BrandButton title={t("profile.logOut")} onPress={logout} variant="danger" style={styles.logoutButton} />
     </ScrollView>
   );
 }

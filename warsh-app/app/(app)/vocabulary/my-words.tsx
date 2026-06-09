@@ -12,6 +12,8 @@ import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
+import { useLanguage, pickTranslation } from "@services/language";
+import { useT } from "@i18n/index";
 import {
   WarshPalette,
   Fonts,
@@ -52,16 +54,13 @@ const FILTER_OPTIONS: { key: Filter; label: string }[] = [
   { key: "needs_review", label: "Needs review" },
 ];
 
-const SORT_LABELS: Record<Sort, string> = {
-  date: "Date",
-  alpha: "Alpha",
-  topic: "Topic",
-};
 const SORT_CYCLE: Sort[] = ["date", "alpha", "topic"];
 
 export default function MyWordsScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const language = useLanguage();
+  const t = useT();
 
   const [words, setWords] = useState<MyWord[]>([]);
   const [loading, setLoading] = useState(true);
@@ -105,7 +104,7 @@ export default function MyWordsScreen() {
           <View style={styles.wordLeft}>
             <Text style={styles.arabic}>{item.arabic}</Text>
             <Text style={styles.translit}>{item.transliteration}</Text>
-            <Text style={styles.translation}>{item.translationEn}</Text>
+            <Text style={styles.translation}>{pickTranslation(item, language)}</Text>
           </View>
           {/* Right: icons + badge */}
           <View style={styles.wordRight}>
@@ -116,7 +115,7 @@ export default function MyWordsScreen() {
             />
             {isMastered(item.srs) && (
               <View style={styles.masteredBadge}>
-                <Text style={styles.masteredText}>Mastered</Text>
+                <Text style={styles.masteredText}>{t("vocabulary.filterMastered")}</Text>
               </View>
             )}
           </View>
@@ -135,7 +134,7 @@ export default function MyWordsScreen() {
         >
           <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>My Words · كَلِمَاتُك</Text>
+        <Text style={styles.headerTitle}>{t("vocabulary.myWords")}</Text>
       </View>
 
       {/* Filter chips */}
@@ -154,7 +153,15 @@ export default function MyWordsScreen() {
               style={[styles.chip, selected && styles.chipSelected]}
             >
               <Text style={[styles.chipText, selected && styles.chipTextSelected]}>
-                {opt.label}
+                {t(
+                  opt.key === "all"
+                    ? "vocabulary.filterAll"
+                    : opt.key === "new"
+                      ? "vocabulary.filterNew"
+                      : opt.key === "mastered"
+                        ? "vocabulary.filterMastered"
+                        : "vocabulary.filterNeedsReview"
+                )}
               </Text>
             </TouchableOpacity>
           );
@@ -164,7 +171,16 @@ export default function MyWordsScreen() {
       {/* Sort row */}
       <View style={styles.sortRow}>
         <TouchableOpacity onPress={cycleSort} activeOpacity={0.75}>
-          <Text style={styles.sortLabel}>Sort: {SORT_LABELS[sort]} ▾</Text>
+          <Text style={styles.sortLabel}>
+            {t("vocabulary.sortLabel", {
+              value:
+                sort === "date"
+                  ? t("vocabulary.sortDate")
+                  : sort === "alpha"
+                    ? t("vocabulary.sortAlpha")
+                    : t("vocabulary.sortTopic"),
+            })} ▾
+          </Text>
         </TouchableOpacity>
       </View>
 
@@ -185,7 +201,7 @@ export default function MyWordsScreen() {
           ListEmptyComponent={
             <View style={styles.emptyState}>
               <Text style={styles.emptyText}>
-                {"Words you learn will gather here.\nLike seeds, planted."}
+                {t("vocabulary.myWordsEmpty")}
               </Text>
             </View>
           }

@@ -117,18 +117,71 @@
       "id": "ch57-l02-ex01",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "قَالَ", "ar_plain": "قال", "translit": "qaala", "en": "he said" },
-        { "ar": "قَالَتْ", "ar_plain": "قالت", "translit": "qaalati", "en": "she said" },
-        { "ar": "قُلْتُ", "ar_plain": "قلت", "translit": "qultu", "en": "I said" },
-        { "ar": "قُلْنَا", "ar_plain": "قلنا", "translit": "qulnaa", "en": "we said" }
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qaala",
+          "en": "he said",
+          "ur": "انہوں نے کہا"
+        },
+        {
+          "ar": "قَالَتْ",
+          "ar_plain": "قالت",
+          "translit": "qaalati",
+          "en": "she said",
+          "ur": "اس نے کہا"
+        },
+        {
+          "ar": "قُلْتُ",
+          "ar_plain": "قلت",
+          "translit": "qultu",
+          "en": "I said",
+          "ur": "میں نے کہا"
+        },
+        {
+          "ar": "قُلْنَا",
+          "ar_plain": "قلنا",
+          "translit": "qulnaa",
+          "en": "we said",
+          "ur": "ہم نے کہا"
+        }
       ],
       "right_column": [
-        { "en": "third person singular masculine past", "ur": "تیرا شخص واحد مذکر ماضی" },
-        { "en": "third person singular feminine past", "ur": "تیرا شخص واحد مؤنث ماضی" },
-        { "en": "first person singular past", "ur": "پہلا شخص واحد ماضی" },
-        { "en": "first person plural past", "ur": "پہلا شخص جمع ماضی" }
+        {
+          "en": "third person singular masculine past",
+          "ur": "تیرا شخص واحد مذکر ماضی"
+        },
+        {
+          "en": "third person singular feminine past",
+          "ur": "تیرا شخص واحد مؤنث ماضی"
+        },
+        {
+          "en": "first person singular past",
+          "ur": "پہلا شخص واحد ماضی"
+        },
+        {
+          "en": "first person plural past",
+          "ur": "پہلا شخص جمع ماضی"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "قَالَ conjugates with the و dropping in first and second persons: قُلْتُ (I said), قُلْتَ (you said), but قَالَ (he said) keeps the و.",
@@ -159,10 +212,34 @@
         "ur": "میں مسجد کی طرف گیا۔"
       },
       "options": [
-        { "ar": "ذَهَبْتُ", "ar_plain": "ذهبت", "translit": "dhahabtu", "en": "I went", "ur": "میں گیا" },
-        { "ar": "قُلْتُ", "ar_plain": "قلت", "translit": "qultu", "en": "I said", "ur": "میں نے کہا" },
-        { "ar": "كُنْتُ", "ar_plain": "كنت", "translit": "kuntu", "en": "I was", "ur": "میں تھا" },
-        { "ar": "رَأَيْتُ", "ar_plain": "رايت", "translit": "ra'aytu", "en": "I saw", "ur": "میں نے دیکھا" }
+        {
+          "ar": "ذَهَبْتُ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabtu",
+          "en": "I went",
+          "ur": "میں گیا"
+        },
+        {
+          "ar": "قُلْتُ",
+          "ar_plain": "قلت",
+          "translit": "qultu",
+          "en": "I said",
+          "ur": "میں نے کہا"
+        },
+        {
+          "ar": "كُنْتُ",
+          "ar_plain": "كنت",
+          "translit": "kuntu",
+          "en": "I was",
+          "ur": "میں تھا"
+        },
+        {
+          "ar": "رَأَيْتُ",
+          "ar_plain": "رايت",
+          "translit": "ra'aytu",
+          "en": "I saw",
+          "ur": "میں نے دیکھا"
+        }
       ],
       "correct_answer": {
         "ar": "ذَهَبْتُ",
@@ -185,12 +262,39 @@
         "ur": "میں نے اس سے کہا۔"
       },
       "tiles": [
-        { "ar": "قُلْتُ", "ar_plain": "قلت", "translit": "qultu", "en": "I said" },
-        { "ar": "لَهُ", "ar_plain": "له", "translit": "lahu", "en": "to him" },
-        { "ar": "آمَنْتُ", "ar_plain": "آمنت", "translit": "aamantu", "en": "I believed", "ur": "میں نے ایمان لایا" },
-        { "ar": "كُنْتُ", "ar_plain": "كنت", "translit": "kuntu", "en": "I was", "ur": "میں تھا" }
+        {
+          "ar": "قُلْتُ",
+          "ar_plain": "قلت",
+          "translit": "qultu",
+          "en": "I said",
+          "ur": "میں نے کہا"
+        },
+        {
+          "ar": "لَهُ",
+          "ar_plain": "له",
+          "translit": "lahu",
+          "en": "to him",
+          "ur": "اسے"
+        },
+        {
+          "ar": "آمَنْتُ",
+          "ar_plain": "آمنت",
+          "translit": "aamantu",
+          "en": "I believed",
+          "ur": "میں نے ایمان لایا"
+        },
+        {
+          "ar": "كُنْتُ",
+          "ar_plain": "كنت",
+          "translit": "kuntu",
+          "en": "I was",
+          "ur": "میں تھا"
+        }
       ],
-      "correct_order": [0, 1],
+      "correct_order": [
+        0,
+        1
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "قُلْتُ (I said) + لَهُ (to him). لَهُ = لِ (preposition) + هُ (his). The preposition لِ governs the genitive (جر) on هُ.",
@@ -204,13 +308,26 @@
         "ar": "كُنَّا مُسْلِمِينَ",
         "ar_plain": "كنا مسلمين",
         "translit": "kunnaa muslimiina",
-        "en": "We were Muslims."
+        "en": "We were Muslims.",
+        "ur": "ہم مسلمان تھے۔"
       },
       "options": [
-        { "en": "We were Muslims.", "ur": "ہم مسلمان تھے۔" },
-        { "en": "I was a Muslim.", "ur": "میں مسلمان تھا۔" },
-        { "en": "They were Muslims.", "ur": "وہ مسلمان تھے۔" },
-        { "en": "We are Muslims.", "ur": "ہم مسلمان ہیں۔" }
+        {
+          "en": "We were Muslims.",
+          "ur": "ہم مسلمان تھے۔"
+        },
+        {
+          "en": "I was a Muslim.",
+          "ur": "میں مسلمان تھا۔"
+        },
+        {
+          "en": "They were Muslims.",
+          "ur": "وہ مسلمان تھے۔"
+        },
+        {
+          "en": "We are Muslims.",
+          "ur": "ہم مسلمان ہیں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -224,11 +341,30 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "قَالَتْ أُسْتَاذَتُهُ",
       "words": [
-        { "ar": "قَالَتْ", "ar_plain": "قالت", "translit": "qaalati", "en": "she said" },
-        { "ar": "أُسْتَاذَتُهُ", "ar_plain": "استاذته", "translit": "ustaadhatuhu", "en": "his female teacher" }
+        {
+          "ar": "قَالَتْ",
+          "ar_plain": "قالت",
+          "translit": "qaalati",
+          "en": "she said",
+          "ur": "اس نے کہا"
+        },
+        {
+          "ar": "أُسْتَاذَتُهُ",
+          "ar_plain": "استاذته",
+          "translit": "ustaadhatuhu",
+          "en": "his female teacher",
+          "ur": "اس کی خاتون ٹیچر"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "قَالَتْ = VERB (third person singular feminine past of قَالَ). أُسْتَاذَتُهُ = SUBJECT (رفع — 'his female teacher'). The feminine marker ت at the end of أُسْتَاذَتُهُ marks it as feminine.",
@@ -256,13 +392,26 @@
         "ar": "كُنْتُ فِي الْبَيْتِ",
         "ar_plain": "كنت في البيت",
         "translit": "kuntu fii al-bayti",
-        "en": "I was in the house."
+        "en": "I was in the house.",
+        "ur": "میں گھر میں تھا۔"
       },
       "options": [
-        { "en": "I was in the house.", "ur": "میں گھر میں تھا۔" },
-        { "en": "I went to the house.", "ur": "میں گھر گیا۔" },
-        { "en": "I said in the house.", "ur": "میں نے گھر میں کہا۔" },
-        { "en": "We were in the house.", "ur": "ہم گھر میں تھے۔" }
+        {
+          "en": "I was in the house.",
+          "ur": "میں گھر میں تھا۔"
+        },
+        {
+          "en": "I went to the house.",
+          "ur": "میں گھر گیا۔"
+        },
+        {
+          "en": "I said in the house.",
+          "ur": "میں نے گھر میں کہا۔"
+        },
+        {
+          "en": "We were in the house.",
+          "ur": "ہم گھر میں تھے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -287,7 +436,9 @@
       "ur": "اور اس نے آدم کو تمام نام سکھائے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-031-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "عَلَّمَ is a مُضَعَّف verb (doubled), not a مُعْتَلّ (weak) verb. Its root ع-ل-م has the ل repeated — this is different from weak verbs which have و, ا, or ي as root letters. قَالَ and كَانَ are the primary examples of weak verbs in the Quran.",
       "ur": "عَلَّمَ ایک مُضَعَّف verb ہے (doubled)، weak (مُعْتَلّ) verb نہیں۔ اس کا root ع-ل-م میں ل repeated ہے — یہ weak verbs سے مختلف ہے۔ قَالَ اور كَانَ قرآن میں weak verbs کی primary examples ہیں۔"

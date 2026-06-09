@@ -118,13 +118,26 @@
         "ar": "ذَهَبَا الطَّالِبَانِ",
         "ar_plain": "ذهبا الطالبان",
         "translit": "dhahabaa at-taalibaani",
-        "en": "The two students went."
+        "en": "The two students went.",
+        "ur": "دونوں طالب علم چلے گئے۔"
       },
       "options": [
-        { "en": "The two students went.", "ur": "دونوں طالب علم گئے۔" },
-        { "en": "The student went.", "ur": "طالب علم گیا۔" },
-        { "en": "The students went.", "ur": "طلباء گئے۔" },
-        { "en": "The two students are studying.", "ur": "دونوں طالب علم پڑھ رہے ہیں۔" }
+        {
+          "en": "The two students went.",
+          "ur": "دونوں طالب علم گئے۔"
+        },
+        {
+          "en": "The student went.",
+          "ur": "طالب علم گیا۔"
+        },
+        {
+          "en": "The students went.",
+          "ur": "طلباء گئے۔"
+        },
+        {
+          "en": "The two students are studying.",
+          "ur": "دونوں طالب علم پڑھ رہے ہیں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -151,18 +164,71 @@
       "id": "ch56-l05-ex03",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "يَوْمَانِ", "ar_plain": "يومان", "translit": "yawmaani", "en": "two days" },
-        { "ar": "شَخْصَانِ", "ar_plain": "شخصان", "translit": "shakhsani", "en": "two persons" },
-        { "ar": "سَنَتَانِ", "ar_plain": "سنتان", "translit": "sanatani", "en": "two years" },
-        { "ar": "ساعَتَانِ", "ar_plain": "ساعتان", "translit": "saa'atani", "en": "two hours" }
+        {
+          "ar": "يَوْمَانِ",
+          "ar_plain": "يومان",
+          "translit": "yawmaani",
+          "en": "two days",
+          "ur": "دو دن"
+        },
+        {
+          "ar": "شَخْصَانِ",
+          "ar_plain": "شخصان",
+          "translit": "shakhsani",
+          "en": "two persons",
+          "ur": "دو افراد"
+        },
+        {
+          "ar": "سَنَتَانِ",
+          "ar_plain": "سنتان",
+          "translit": "sanatani",
+          "en": "two years",
+          "ur": "دو سال"
+        },
+        {
+          "ar": "ساعَتَانِ",
+          "ar_plain": "ساعتان",
+          "translit": "saa'atani",
+          "en": "two hours",
+          "ur": "دو گھنٹے"
+        }
       ],
       "right_column": [
-        { "en": "dual of يَوْمٌ (day)", "ur": "یوم کی dual" },
-        { "en": "dual of شَخْصٌ (person)", "ur": "شخص کی dual" },
-        { "en": "dual of سَنَةٌ (year)", "ur": "سنة کی dual" },
-        { "en": "dual of سَاعَةٌ (hour)", "ur": "ساعة کی dual" }
+        {
+          "en": "dual of يَوْمٌ (day)",
+          "ur": "یوم کی dual"
+        },
+        {
+          "en": "dual of شَخْصٌ (person)",
+          "ur": "شخص کی dual"
+        },
+        {
+          "en": "dual of سَنَةٌ (year)",
+          "ur": "سنة کی dual"
+        },
+        {
+          "en": "dual of سَاعَةٌ (hour)",
+          "ur": "ساعة کی dual"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "All of these are dual forms — each takes the ـَانِ ending in the nominative case.",
@@ -177,12 +243,40 @@
         "ur": "دو نئی کتابیں دونوں طالب علموں کے لیے ہیں۔"
       },
       "tiles": [
-        { "ar": "كِتَابَانِ", "ar_plain": "كتابان", "translit": "kitaabani", "en": "two books" },
-        { "ar": "جَدِيدَانِ", "ar_plain": "جديدان", "translit": "jadiidaani", "en": "new (dual)" },
-        { "ar": "لِلطَّالِبَيْنِ", "ar_plain": "للطالبين", "translit": "li-taalibayni", "en": "for the two students" },
-        { "ar": "ذَهَبَا", "ar_plain": "ذهبا", "translit": "dhahabaa", "en": "they two went", "ur": "وہ دونوں گئے" }
+        {
+          "ar": "كِتَابَانِ",
+          "ar_plain": "كتابان",
+          "translit": "kitaabani",
+          "en": "two books",
+          "ur": "دو کتابیں"
+        },
+        {
+          "ar": "جَدِيدَانِ",
+          "ar_plain": "جديدان",
+          "translit": "jadiidaani",
+          "en": "new (dual)",
+          "ur": "نیا (دوہری)"
+        },
+        {
+          "ar": "لِلطَّالِبَيْنِ",
+          "ar_plain": "للطالبين",
+          "translit": "li-taalibayni",
+          "en": "for the two students",
+          "ur": "دو طالب علموں کے لیے"
+        },
+        {
+          "ar": "ذَهَبَا",
+          "ar_plain": "ذهبا",
+          "translit": "dhahabaa",
+          "en": "they two went",
+          "ur": "وہ دونوں گئے"
+        }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "كِتَابَانِ (dual nominative) + جَدِيدَانِ (dual adjective, nominative) + لِلطَّالِبَيْنِ (preposition + dual noun, genitive). This is a complete nominal sentence with a prepositional phrase.",
@@ -199,10 +293,34 @@
         "ur": "میں نے دو مہربان استادوں کو دیکھا۔"
       },
       "options": [
-        { "ar": "أُسْتَاذَيْنِ كَرِيمَيْنِ", "ar_plain": "استاذين كريمين", "translit": "ustadhayni kariimayni", "en": "two kind teachers (acc.)", "ur": "دو مہربان استاد (نصب)" },
-        { "ar": "أُسْتَاذَانِ كَرِيمَانِ", "ar_plain": "استاذان كريمان", "translit": "ustadhaani kariimaani", "en": "two kind teachers (nom.)", "ur": "دو مہربان استاد (رفع)" },
-        { "ar": "الْأُسْتَاذُ الْكَرِيمُ", "ar_plain": "الاستاذ الكريم", "translit": "al-ustadhu al-kariim", "en": "the kind teacher", "ur": "مہربان استاد (واحد)" },
-        { "ar": "أُسْتَاذٌ كَرِيمٌ", "ar_plain": "استاذ كريم", "translit": "ustadhun kariim", "en": "a kind teacher", "ur": "ایک مہربان استاد" }
+        {
+          "ar": "أُسْتَاذَيْنِ كَرِيمَيْنِ",
+          "ar_plain": "استاذين كريمين",
+          "translit": "ustadhayni kariimayni",
+          "en": "two kind teachers (acc.)",
+          "ur": "دو مہربان استاد (نصب)"
+        },
+        {
+          "ar": "أُسْتَاذَانِ كَرِيمَانِ",
+          "ar_plain": "استاذان كريمان",
+          "translit": "ustadhaani kariimaani",
+          "en": "two kind teachers (nom.)",
+          "ur": "دو مہربان استاد (رفع)"
+        },
+        {
+          "ar": "الْأُسْتَاذُ الْكَرِيمُ",
+          "ar_plain": "الاستاذ الكريم",
+          "translit": "al-ustadhu al-kariim",
+          "en": "the kind teacher",
+          "ur": "مہربان استاد (واحد)"
+        },
+        {
+          "ar": "أُسْتَاذٌ كَرِيمٌ",
+          "ar_plain": "استاذ كريم",
+          "translit": "ustadhun kariim",
+          "en": "a kind teacher",
+          "ur": "ایک مہربان استاد"
+        }
       ],
       "correct_answer": {
         "ar": "أُسْتَاذَيْنِ كَرِيمَيْنِ",
@@ -236,14 +354,56 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "يَوْمَا الْجُمُعَةِ خَيْرٌ مِنْ أَلْفِ يَوْمٍ",
       "words": [
-        { "ar": "يَوْمَا", "ar_plain": "يوما", "translit": "yawmaa", "en": "two days" },
-        { "ar": "الْجُمُعَةِ", "ar_plain": "الجمعة", "translit": "al-jum'ati", "en": "the Friday (gen.)" },
-        { "ar": "خَيْرٌ", "ar_plain": "خير", "translit": "khayrun", "en": "better" },
-        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "than" },
-        { "ar": "أَلْفِ", "ar_plain": "الف", "translit": "alfi", "en": "a thousand (gen.)" }
+        {
+          "ar": "يَوْمَا",
+          "ar_plain": "يوما",
+          "translit": "yawmaa",
+          "en": "two days",
+          "ur": "دو دن"
+        },
+        {
+          "ar": "الْجُمُعَةِ",
+          "ar_plain": "الجمعة",
+          "translit": "al-jum'ati",
+          "en": "the Friday (gen.)",
+          "ur": "جمعہ (جنرل)"
+        },
+        {
+          "ar": "خَيْرٌ",
+          "ar_plain": "خير",
+          "translit": "khayrun",
+          "en": "better",
+          "ur": "بہتر"
+        },
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "than",
+          "ur": "سے"
+        },
+        {
+          "ar": "أَلْفِ",
+          "ar_plain": "الف",
+          "translit": "alfi",
+          "en": "a thousand (gen.)",
+          "ur": "ایک ہزار (جنرل)"
+        }
       ],
-      "available_roles": ["SUBJECT", "OBJECT", "ADJECTIVE", "PREPOSITION", "PARTICLE"],
-      "correct_roles": ["SUBJECT", "OBJECT", "ADJECTIVE", "PARTICLE", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "OBJECT",
+        "ADJECTIVE",
+        "PREPOSITION",
+        "PARTICLE"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "OBJECT",
+        "ADJECTIVE",
+        "PARTICLE",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "يَوْمَا = مضاف (dual, ن dropped in إِضَافَة), in the nominative (رفع) as مبتدأ. الْجُمُعَةِ = مضاف إليه (جر after يَوْمَا). خَيْرٌ = خَبَر (رفع). مِنْ أَلْفِ يَوْمٍ = prepositional phrase 'than a thousand days' (genitive after مِنْ).",
@@ -257,13 +417,26 @@
         "ar": "الطَّالِبَانِ ذَهَبَتَا",
         "ar_plain": "الطالبان ذهبتا",
         "translit": "at-taalibaani dhahabataa",
-        "en": "The two female students went."
+        "en": "The two female students went.",
+        "ur": "دونوں طالبات چلی گئیں۔"
       },
       "options": [
-        { "en": "The two female students went.", "ur": "دونوں طالبہ گئیں۔" },
-        { "en": "The two male students went.", "ur": "دونوں طالب علم گئے۔" },
-        { "en": "The students went.", "ur": "طلباء گئے۔" },
-        { "en": "The student went.", "ur": "طالب علم گیا۔" }
+        {
+          "en": "The two female students went.",
+          "ur": "دونوں طالبہ گئیں۔"
+        },
+        {
+          "en": "The two male students went.",
+          "ur": "دونوں طالب علم گئے۔"
+        },
+        {
+          "en": "The students went.",
+          "ur": "طلباء گئے۔"
+        },
+        {
+          "en": "The student went.",
+          "ur": "طالب علم گیا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -288,7 +461,9 @@
       "ur": "اور دن کی قسم جب وہ روشن ہو۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-fajr-006-mishary.mp3"
     },
-    "highlighted_word_indices": [1],
+    "highlighted_word_indices": [
+      1
+    ],
     "noor_explanation": {
       "en": "النَّهَارِ is singular (one day) in this ayah. But we can compare: يَوْمٌ (singular), يَوْمَانِ (dual — two days), أَيَّامٌ (plural — days). The dual form يَوْمَانِ takes ـَانِ in the nominative and ـَيْنِ in the accusative/genitive. When it enters إِضَافَة, the ن is dropped: يَوْمَا الْجُمُعَةِ.",
       "ur": "النَّهَارِ یہاں واحد ہے (ایک دن)۔ لیکن موازنہ: يَوْمٌ (واحد)، يَوْمَانِ (مثنی)، أَيَّامٌ (جمع)۔"

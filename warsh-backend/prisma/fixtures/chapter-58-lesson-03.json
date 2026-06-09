@@ -134,13 +134,26 @@
         "ar": "الْعَزِيزُ اللَّهُ",
         "ar_plain": "العزيز الله",
         "translit": "al-'aziizu allaahu",
-        "en": "The Exalted is Allah."
+        "en": "The Exalted is Allah.",
+        "ur": "اللہ پاک ہے۔"
       },
       "options": [
-        { "en": "The Exalted is Allah.", "ur": "اللہ غالب ہے۔" },
-        { "en": "Allah is the Exalted.", "ur": "غالب اللہ ہے۔" },
-        { "en": "The Exalted and Allah.", "ur": "غالب اور اللہ۔" },
-        { "en": "Allah and the Exalted.", "ur": "اللہ اور غالب۔" }
+        {
+          "en": "The Exalted is Allah.",
+          "ur": "اللہ غالب ہے۔"
+        },
+        {
+          "en": "Allah is the Exalted.",
+          "ur": "غالب اللہ ہے۔"
+        },
+        {
+          "en": "The Exalted and Allah.",
+          "ur": "غالب اور اللہ۔"
+        },
+        {
+          "en": "Allah and the Exalted.",
+          "ur": "اللہ اور غالب۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -173,10 +186,34 @@
         "ur": "اس جملے کی عام (غیر مقدم) ترتیب کیا ہے؟"
       },
       "options": [
-        { "ar": "اللَّهُ غَفُورٌ", "ar_plain": "الله غفور", "translit": "allaahu ghafuurun", "en": "Allah is Forgiving (normal)", "ur": "اللہ بخشنے والا ہے (عام)" },
-        { "ar": "غَفُورٌ اللَّهُ", "ar_plain": "غفور الله", "translit": "ghafuurun allaahu", "en": "Forgiving is Allah (fronted)", "ur": "بخشنے والا ہے اللہ (مقدم)" },
-        { "ar": "غَفُورٌ وَاللَّهُ", "ar_plain": "غفور والله", "translit": "ghafuurun wa allaahu", "en": "Forgiving and Allah", "ur": "بخشنے والا اور اللہ" },
-        { "ar": "اللَّهُ وَغَفُورٌ", "ar_plain": "الله وغفور", "translit": "allaahu wa ghafuurun", "en": "Allah and Forgiving", "ur": "اللہ اور بخشنے والا" }
+        {
+          "ar": "اللَّهُ غَفُورٌ",
+          "ar_plain": "الله غفور",
+          "translit": "allaahu ghafuurun",
+          "en": "Allah is Forgiving (normal)",
+          "ur": "اللہ بخشنے والا ہے (عام)"
+        },
+        {
+          "ar": "غَفُورٌ اللَّهُ",
+          "ar_plain": "غفور الله",
+          "translit": "ghafuurun allaahu",
+          "en": "Forgiving is Allah (fronted)",
+          "ur": "بخشنے والا ہے اللہ (مقدم)"
+        },
+        {
+          "ar": "غَفُورٌ وَاللَّهُ",
+          "ar_plain": "غفور والله",
+          "translit": "ghafuurun wa allaahu",
+          "en": "Forgiving and Allah",
+          "ur": "بخشنے والا اور اللہ"
+        },
+        {
+          "ar": "اللَّهُ وَغَفُورٌ",
+          "ar_plain": "الله وغفور",
+          "translit": "allaahu wa ghafuurun",
+          "en": "Allah and Forgiving",
+          "ur": "اللہ اور بخشنے والا"
+        }
       ],
       "correct_answer": {
         "ar": "اللَّهُ غَفُورٌ",
@@ -199,12 +236,39 @@
         "ur": "حکمت والا ہے اللہ۔"
       },
       "tiles": [
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah" },
-        { "ar": "الْحَكِيمُ", "ar_plain": "الحكيم", "translit": "al-hakiimu", "en": "the Wise" },
-        { "ar": "رَحِيمٌ", "ar_plain": "رحيم", "translit": "rahiimun", "en": "the Merciful" },
-        { "ar": "الْعَزِيزُ", "ar_plain": "العزيز", "translit": "al-'aziizu", "en": "the Exalted" }
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "الْحَكِيمُ",
+          "ar_plain": "الحكيم",
+          "translit": "al-hakiimu",
+          "en": "the Wise",
+          "ur": "عقلمند"
+        },
+        {
+          "ar": "رَحِيمٌ",
+          "ar_plain": "رحيم",
+          "translit": "rahiimun",
+          "en": "the Merciful",
+          "ur": "رحم کرنے والا"
+        },
+        {
+          "ar": "الْعَزِيزُ",
+          "ar_plain": "العزيز",
+          "translit": "al-'aziizu",
+          "en": "the Exalted",
+          "ur": "اعلیٰ"
+        }
       ],
-      "correct_order": [1, 0],
+      "correct_order": [
+        1,
+        0
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "In the fronted predicate construction, the predicate (خبر) is placed first. الْحَكِيمُ = fronted predicate. اللَّهُ = postponed subject (مبتدأ مؤخر). The fronted version الْحَكِيمُ اللَّهُ emphasizes the wisdom of Allah by placing the attribute first.",
@@ -216,11 +280,29 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "الْعَزِيزُ اللَّهُ",
       "words": [
-        { "ar": "الْعَزِيزُ", "ar_plain": "العزيز", "translit": "al-'aziizu", "en": "the Exalted" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah" }
+        {
+          "ar": "الْعَزِيزُ",
+          "ar_plain": "العزيز",
+          "translit": "al-'aziizu",
+          "en": "the Exalted",
+          "ur": "اعلیٰ"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah",
+          "ur": "اللہ"
+        }
       ],
-      "available_roles": ["SUBJECT", "PREDICATE"],
-      "correct_roles": ["PREDICATE", "SUBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE"
+      ],
+      "correct_roles": [
+        "PREDICATE",
+        "SUBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "This is a fronted predicate construction (مبتدأ مؤخر). الْعَزِيزُ = fronted predicate (خبر مقدم — in the nominative as the predicate of a nominal sentence). اللَّهُ = postponed subject (مبتدأ مؤخر — in the nominative as the subject). The sentence means 'The Exalted is Allah.' Normal order would be اللَّهُ الْعَزِيزُ (Allah is the Exalted).",
@@ -248,13 +330,26 @@
         "ar": "هُوَ الْعَزِيزُ الْحَكِيمُ",
         "ar_plain": "هو العزيز الحكيم",
         "translit": "huwa al-'aziizu al-hakiimu",
-        "en": "He is the Exalted, the Wise."
+        "en": "He is the Exalted, the Wise.",
+        "ur": "وہ غالب اور حکمت والا ہے۔"
       },
       "options": [
-        { "en": "He is the Exalted, the Wise (predicate fronted).", "ur": "وہی غالب حکمت والا ہے (خبر مقدم)۔" },
-        { "en": "The Exalted, the Wise is He (subject fronted).", "ur": "غالب حکمت والا وہ ہے (مبتدأ مقدم)۔" },
-        { "en": "He and the Exalted the Wise.", "ur": "وہ اور غالب حکمت والا۔" },
-        { "en": "The Exalted is He, the Wise.", "ur": "غالب وہ ہے، حکمت والا۔" }
+        {
+          "en": "He is the Exalted, the Wise (predicate fronted).",
+          "ur": "وہی غالب حکمت والا ہے (خبر مقدم)۔"
+        },
+        {
+          "en": "The Exalted, the Wise is He (subject fronted).",
+          "ur": "غالب حکمت والا وہ ہے (مبتدأ مقدم)۔"
+        },
+        {
+          "en": "He and the Exalted the Wise.",
+          "ur": "وہ اور غالب حکمت والا۔"
+        },
+        {
+          "en": "The Exalted is He, the Wise.",
+          "ur": "غالب وہ ہے، حکمت والا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -279,7 +374,10 @@
       "ur": "اللہ گواہی دیتا ہے کہ کوئی معبود نہیں سوائے اس کے، غالب حکمت والا۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/aal-imran-18-mishary.mp3"
     },
-    "highlighted_word_indices": [5, 6],
+    "highlighted_word_indices": [
+      5,
+      6
+    ],
     "noor_explanation": {
       "en": "In هُوَ الْعَزِيزُ الْحَكِيمُ, the predicate الْعَزِيزُ الْحَكِيمُ is fronted before هُوَ. هُوَ = the postponed subject (مبتدأ مؤخر). الْعَزِيزُ الْحَكِيمُ = the fronted predicate (خبر مقدم). This fronting emphasizes the attributes — by saying 'the Exalted, the Wise is He' rather than 'He is the Exalted, the Wise', the attributes come first and carry more emotional and rhetorical weight.",
       "ur": "هُوَ الْعَزِيزُ الْحَكِيمُ میں خبر الْعَزِيزُ الْحَكِيمُ هُوَ سے پہلے آیا ہے۔ هُوَ = مؤخر مبتدأ۔ الْعَزِيزُ الْحَكِيمُ = مقدم الخبر۔ یہ تَقْدِيم صفات پر زور دیتی ہے۔"

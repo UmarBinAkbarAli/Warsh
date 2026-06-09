@@ -132,15 +132,67 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "لَوْ أَنزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ",
       "words": [
-        { "ar": "لَوْ", "ar_plain": "لو", "translit": "law", "en": "if (impossible condition)" },
-        { "ar": "أَنزَلْنَا", "ar_plain": "أنزلنا", "translit": "anzalnā", "en": "We sent down" },
-        { "ar": "هَٰذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this" },
-        { "ar": "الْقُرْآنَ", "ar_plain": "القرآن", "translit": "al-qur'āna", "en": "the Quran" },
-        { "ar": "عَلَىٰ", "ar_plain": "على", "translit": "'alā", "en": "upon" },
-        { "ar": "جَبَلٍ", "ar_plain": "جبل", "translit": "jabalin", "en": "a mountain" }
+        {
+          "ar": "لَوْ",
+          "ar_plain": "لو",
+          "translit": "law",
+          "en": "if (impossible condition)",
+          "ur": "اگر (ناممکن حالت)"
+        },
+        {
+          "ar": "أَنزَلْنَا",
+          "ar_plain": "أنزلنا",
+          "translit": "anzalnā",
+          "en": "We sent down",
+          "ur": "ہم نے نازل کیا۔"
+        },
+        {
+          "ar": "هَٰذَا",
+          "ar_plain": "هذا",
+          "translit": "hādhā",
+          "en": "this",
+          "ur": "یہ"
+        },
+        {
+          "ar": "الْقُرْآنَ",
+          "ar_plain": "القرآن",
+          "translit": "al-qur'āna",
+          "en": "the Quran",
+          "ur": "قرآن"
+        },
+        {
+          "ar": "عَلَىٰ",
+          "ar_plain": "على",
+          "translit": "'alā",
+          "en": "upon",
+          "ur": "پر"
+        },
+        {
+          "ar": "جَبَلٍ",
+          "ar_plain": "جبل",
+          "translit": "jabalin",
+          "en": "a mountain",
+          "ur": "ایک پہاڑ"
+        }
       ],
-      "available_roles": ["VERB", "SUBJECT", "OBJECT", "PARTICLE", "PREPOSITION", "POSSESSIVE", "DEMONSTRATIVE", "ADJECTIVE"],
-      "correct_roles": ["PARTICLE", "VERB", "DEMONSTRATIVE", "OBJECT", "PREPOSITION", "POSSESSIVE"],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT",
+        "PARTICLE",
+        "PREPOSITION",
+        "POSSESSIVE",
+        "DEMONSTRATIVE",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VERB",
+        "DEMONSTRATIVE",
+        "OBJECT",
+        "PREPOSITION",
+        "POSSESSIVE"
+      ],
       "xp_value": 2,
       "explanation_on_wrong": {
         "en": "لَوْ = PARTICLE (حرف امتناع). أَنزَلْنَا = VERB (ماضٍ). هَٰذَا = DEMONSTRATIVE (مبتدأ). الْقُرْآنَ = OBJECT (مفعول به، منصوب after the verbal action). عَلَىٰ = PREPOSITION (حرف جر). جَبَلٍ = POSSESSIVE (مضاف إليه، جر after عَلَىٰ).",
@@ -151,18 +203,71 @@
       "id": "ch59-l02-ex03",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "جَبَلٍ", "ar_plain": "جبل", "translit": "jabalin", "en": "mountain" },
-        { "ar": "خَاشِعًا", "ar_plain": "خاشع", "translit": "khāshi'an", "en": "humble" },
-        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from" },
-        { "ar": "خَلْفِهِ", "ar_plain": "خلفه", "translit": "khalfihi", "en": "behind it" }
+        {
+          "ar": "جَبَلٍ",
+          "ar_plain": "جبل",
+          "translit": "jabalin",
+          "en": "mountain",
+          "ur": "پہاڑ"
+        },
+        {
+          "ar": "خَاشِعًا",
+          "ar_plain": "خاشع",
+          "translit": "khāshi'an",
+          "en": "humble",
+          "ur": "عاجز"
+        },
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "خَلْفِهِ",
+          "ar_plain": "خلفه",
+          "translit": "khalfihi",
+          "en": "behind it",
+          "ur": "اس کے پیچھے"
+        }
       ],
       "right_column": [
-        { "en": "الْمَقْصُور — alif maqsura noun, جر", "ur": "مقضور — alif maqsura noun, جر" },
-        { "en": "الْحَال — state accusative, منصوب", "ur": "حال — نصب میں" },
-        { "en": "حَرْف الْجَرّ — preposition", "ur": "حرف جر" },
-        { "en": "مَجْرُور بعد الْجَرّ + إضافة", "ur": "مجرور (جر بعد جر + اضافت)" }
+        {
+          "en": "الْمَقْصُور — alif maqsura noun, جر",
+          "ur": "مقضور — alif maqsura noun, جر"
+        },
+        {
+          "en": "الْحَال — state accusative, منصوب",
+          "ur": "حال — نصب میں"
+        },
+        {
+          "en": "حَرْف الْجَرّ — preposition",
+          "ur": "حرف جر"
+        },
+        {
+          "en": "مَجْرُور بعد الْجَرّ + إضافة",
+          "ur": "مجرور (جر بعد جر + اضافت)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "جَبَلٍ (مقصور, جر after عَلَىٰ), خَاشِعًا (حال, منصوب), مِنْ (حرف جر), خَلْفِهِ (مضاف إليه, جر after مِنْ + ضمیر).",
@@ -176,13 +281,26 @@
         "ar": "لَوْ أَنزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ لَّرَأَيْتَهُ خَاشِعًا مُتَصَدِّرًا",
         "ar_plain": "لو أنزلنا هذا القرآن على جبل لرأيته خاشعا متصدرا",
         "translit": "law anzalnā hādhā al-qur'āna 'alā jabalin la-ra'aytahu khāshi'an mutaṣaddiran",
-        "en": "If We had sent down this Quran upon a mountain, you would have seen it humble and trembling."
+        "en": "If We had sent down this Quran upon a mountain, you would have seen it humble and trembling.",
+        "ur": "اگر ہم اس قرآن کو کسی پہاڑ پر اتارتے تو تم اسے دیکھتے کہ وہ عاجزی اور کانپتا ہے۔"
       },
       "options": [
-        { "en": "If We had sent down this Quran upon a mountain, you would have seen it humble and trembling.", "ur": "اگر ہم نے یہ قرآن پہاڑ پر اتارا تو تم دیکھتے کہ وہ جھکا اور کانپتا ہوا ہے۔" },
-        { "en": "When We sent down this Quran upon a mountain, you saw it humble and trembling.", "ur": "جب ہم نے یہ قرآن پہاڑ پر اتاریا تو تم نے دیکھا کہ وہ جھکا ہوا ہے۔" },
-        { "en": "The Quran was sent down upon a mountain and you saw it humble.", "ur": "قرآن پہاڑ پر اتارا گیا اور تم نے دیکھا کہ وہ جھکا ہوا ہے۔" },
-        { "en": "We will send down this Quran upon a mountain and you will see it humble.", "ur": "ہم یہ قرآن پہاڑ پر اتاریں گے اور تم دیکھو گے کہ وہ جھکا ہوا ہے۔" }
+        {
+          "en": "If We had sent down this Quran upon a mountain, you would have seen it humble and trembling.",
+          "ur": "اگر ہم نے یہ قرآن پہاڑ پر اتارا تو تم دیکھتے کہ وہ جھکا اور کانپتا ہوا ہے۔"
+        },
+        {
+          "en": "When We sent down this Quran upon a mountain, you saw it humble and trembling.",
+          "ur": "جب ہم نے یہ قرآن پہاڑ پر اتاریا تو تم نے دیکھا کہ وہ جھکا ہوا ہے۔"
+        },
+        {
+          "en": "The Quran was sent down upon a mountain and you saw it humble.",
+          "ur": "قرآن پہاڑ پر اتارا گیا اور تم نے دیکھا کہ وہ جھکا ہوا ہے۔"
+        },
+        {
+          "en": "We will send down this Quran upon a mountain and you will see it humble.",
+          "ur": "ہم یہ قرآن پہاڑ پر اتاریں گے اور تم دیکھو گے کہ وہ جھکا ہوا ہے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -201,10 +319,34 @@
         "ur": "میں نے پہاڑ کو کانپتا ہوا دیکھا۔"
       },
       "options": [
-        { "ar": "خَاشِعًا", "ar_plain": "خاشع", "translit": "khāshi'an", "en": "humble (acc.)", "ur": "جھکا ہوا (نصب)" },
-        { "ar": "خَاشِعٌ", "ar_plain": "خاشع", "translit": "khāshi'un", "en": "humble (nom.)", "ur": "جھکا ہوا (رفع)" },
-        { "ar": "خَاشِعٍ", "ar_plain": "خاشع", "translit": "khāshi'in", "en": "humble (gen.)", "ur": "جھکا ہوا (جر)" },
-        { "ar": "خَاشِعَانِ", "ar_plain": "خاشعان", "translit": "khāshi'āni", "en": "humble (dual nom.)", "ur": "جھکے ہوئے دو (مثنی رفع)" }
+        {
+          "ar": "خَاشِعًا",
+          "ar_plain": "خاشع",
+          "translit": "khāshi'an",
+          "en": "humble (acc.)",
+          "ur": "جھکا ہوا (نصب)"
+        },
+        {
+          "ar": "خَاشِعٌ",
+          "ar_plain": "خاشع",
+          "translit": "khāshi'un",
+          "en": "humble (nom.)",
+          "ur": "جھکا ہوا (رفع)"
+        },
+        {
+          "ar": "خَاشِعٍ",
+          "ar_plain": "خاشع",
+          "translit": "khāshi'in",
+          "en": "humble (gen.)",
+          "ur": "جھکا ہوا (جر)"
+        },
+        {
+          "ar": "خَاشِعَانِ",
+          "ar_plain": "خاشعان",
+          "translit": "khāshi'āni",
+          "en": "humble (dual nom.)",
+          "ur": "جھکے ہوئے دو (مثنی رفع)"
+        }
       ],
       "correct_answer": {
         "ar": "خَاشِعًا",
@@ -227,12 +369,41 @@
         "ur": "میں نے پہاڑ کو خوف سے کانپتا ہوا دیکھا۔"
       },
       "tiles": [
-        { "ar": "رَأَيْتُ", "ar_plain": "رأيت", "translit": "ra'aytu", "en": "I saw" },
-        { "ar": "الْجَبَلَ", "ar_plain": "الجبل", "translit": "al-jabala", "en": "the mountain" },
-        { "ar": "مُتَصَدِّدًا", "ar_plain": "متصدرا", "translit": "mutaṣaddiran", "en": "trembling" },
-        { "ar": "مِنْ خَوْفٍ", "ar_plain": "من خوف", "translit": "min khawfin", "en": "from fear" }
+        {
+          "ar": "رَأَيْتُ",
+          "ar_plain": "رأيت",
+          "translit": "ra'aytu",
+          "en": "I saw",
+          "ur": "میں نے دیکھا"
+        },
+        {
+          "ar": "الْجَبَلَ",
+          "ar_plain": "الجبل",
+          "translit": "al-jabala",
+          "en": "the mountain",
+          "ur": "پہاڑ"
+        },
+        {
+          "ar": "مُتَصَدِّدًا",
+          "ar_plain": "متصدرا",
+          "translit": "mutaṣaddiran",
+          "en": "trembling",
+          "ur": "کانپتے ہوئے"
+        },
+        {
+          "ar": "مِنْ خَوْفٍ",
+          "ar_plain": "من خوف",
+          "translit": "min khawfin",
+          "en": "from fear",
+          "ur": "خوف سے"
+        }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "رَأَيْتُ + الْجَبَلَ (direct object, نصب) + مُتَصَدِّرًا (حال, نصب) + مِنْ خَوْفٍ (جار و مجرور). Note: مُتَصَدِّرًا from صَدَّرَ, form two — the mim prefix (مُ) marks it as a participle describing ongoing state.",
@@ -246,9 +417,15 @@
         "ar": "خَاشِعًا",
         "ar_plain": "خاشع",
         "translit": "khāshi'an",
-        "en": "humble, submissive"
+        "en": "humble, submissive",
+        "ur": "عاجز، فرمانبردار"
       },
-      "options": ["خ ش ع", "خ ع و", "ش ع ي", "ح س ن"],
+      "options": [
+        "خ ش ع",
+        "خ ع و",
+        "ش ع ي",
+        "ح س ن"
+      ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
@@ -272,7 +449,12 @@
       "ur": "اگر ہم نے اس قرآن کو کسی پہاڑ پر اتاریا ہوتا تو تم دیکھتے کہ وہ اللہ کے خوف سے جھکا اور کانپتا ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-hashr-59-21-mishary.mp3"
     },
-    "highlighted_word_indices": [5, 6, 9, 10],
+    "highlighted_word_indices": [
+      5,
+      6,
+      9,
+      10
+    ],
     "noor_explanation": {
       "en": "This single ayah contains: لَوْ (impossible past condition), أَنزَلْنَا (فعل ماض), هَٰذَا + الْقُرْآنَ (demonstrative + noun), عَلَىٰ جَبَلٍ (preposition + مقصور noun in جر), رَأَيْتَهُ (فعل ماض + attached pronoun), خَاشِعًا + مُتَصَدِّرًا (two حال together — both منصوب), and مِنْ خَلْفِهِ (جار و مجرور with إضافة). Every tool from Book 6 is here. This is why we studied الإعراب and الْبِنَاء — to read ayat like this.",
       "ur": "ایک ہی آیت میں: لَوْ (امتناع ماضی)، أَنزَلْنَا (ماضی)، هَٰذَا + الْقُرْآنَ (اسم اشارة + اسم)، عَلَىٰ جَبَلٍ (حرف جر + مقصور)، رَأَيْتَهُ (فعل + ضمیر)، خَاشِعًا + مُتَصَدِّرًا (دو حال، دونوں نصب)، اور مِنْ خَلْفِهِ (جار و مجرور)۔ Book 6 کا ہر tool یہاں ہے۔"

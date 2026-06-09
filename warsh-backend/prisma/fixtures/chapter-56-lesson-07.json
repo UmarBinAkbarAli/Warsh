@@ -121,13 +121,26 @@
         "ar": "أَبُوهُ مُسْلِمٌ",
         "ar_plain": "ابوه مسلم",
         "translit": "abuuho muslimun",
-        "en": "His father is a Muslim."
+        "en": "His father is a Muslim.",
+        "ur": "اس کا باپ مسلمان ہے۔"
       },
       "options": [
-        { "en": "His father is a Muslim.", "ur": "اس کا باپ مسلمان ہے۔" },
-        { "en": "The Muslim's father.", "ur": "مسلمان کا باپ۔" },
-        { "en": "His brothers are Muslims.", "ur": "اس کے بھائی مسلمان ہیں۔" },
-        { "en": "A father is Muslim.", "ur": "ایک باپ مسلمان ہے۔" }
+        {
+          "en": "His father is a Muslim.",
+          "ur": "اس کا باپ مسلمان ہے۔"
+        },
+        {
+          "en": "The Muslim's father.",
+          "ur": "مسلمان کا باپ۔"
+        },
+        {
+          "en": "His brothers are Muslims.",
+          "ur": "اس کے بھائی مسلمان ہیں۔"
+        },
+        {
+          "en": "A father is Muslim.",
+          "ur": "ایک باپ مسلمان ہے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -140,18 +153,71 @@
       "id": "ch56-l07-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "أَبُوهُ", "ar_plain": "ابوه", "translit": "abuuho", "en": "his father" },
-        { "ar": "أَخُوهُ", "ar_plain": "اخوه", "translit": "akhuuho", "en": "his brother" },
-        { "ar": "ذُو الْعَرْشِ", "ar_plain": "ذو العرش", "translit": "dhul-'arshi", "en": "Possessor of the Throne" },
-        { "ar": "رَبُّهُ", "ar_plain": "ربه", "translit": "rabbuhu", "en": "his Lord" }
+        {
+          "ar": "أَبُوهُ",
+          "ar_plain": "ابوه",
+          "translit": "abuuho",
+          "en": "his father",
+          "ur": "اس کے والد"
+        },
+        {
+          "ar": "أَخُوهُ",
+          "ar_plain": "اخوه",
+          "translit": "akhuuho",
+          "en": "his brother",
+          "ur": "اس کا بھائی"
+        },
+        {
+          "ar": "ذُو الْعَرْشِ",
+          "ar_plain": "ذو العرش",
+          "translit": "dhul-'arshi",
+          "en": "Possessor of the Throne",
+          "ur": "عرش کا مالک"
+        },
+        {
+          "ar": "رَبُّهُ",
+          "ar_plain": "ربه",
+          "translit": "rabbuhu",
+          "en": "his Lord",
+          "ur": "اس کا رب"
+        }
       ],
       "right_column": [
-        { "en": "from أَبٌ (father)", "ur": "أَبٌ سے (باپ)" },
-        { "en": "from أَخٌ (brother)", "ur": "أَخٌ سے (بھائی)" },
-        { "en": "from ذُو (possessor)", "ur": "ذُو سے (مالک)" },
-        { "en": "normal إضافة (not الخمسة)", "ur": "عام اضافہ (الخمسة نہیں)" }
+        {
+          "en": "from أَبٌ (father)",
+          "ur": "أَبٌ سے (باپ)"
+        },
+        {
+          "en": "from أَخٌ (brother)",
+          "ur": "أَخٌ سے (بھائی)"
+        },
+        {
+          "en": "from ذُو (possessor)",
+          "ur": "ذُو سے (مالک)"
+        },
+        {
+          "en": "normal إضافة (not الخمسة)",
+          "ur": "عام اضافہ (الخمسة نہیں)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "أَبُوهُ and أَخُوهُ are from the الخمسة — the dropped letter returns with a long vowel. ذُو الْعَرْشِ is ذُو + مضاف إليه. رَبُّهُ is normal إضافة (رَبّ + هُ), not one of the الخمسة.",
@@ -182,10 +248,34 @@
         "ur": "میں نے اس کے بھائی کو دیکھا۔"
       },
       "options": [
-        { "ar": "أَخُوهُ", "ar_plain": "اخوه", "translit": "akhhuho", "en": "his brother", "ur": "اس کا بھائی" },
-        { "ar": "أَخٌ", "ar_plain": "اخ", "translit": "akhun", "en": "brother (alone)", "ur": "بھائی (اکیلا)" },
-        { "ar": "أَخُ", "ar_plain": "اخ", "translit": "akh", "en": "brother (idafa)", "ur": "بھائی (اضافہ)" },
-        { "ar": "الْأَخُ", "ar_plain": "الاخ", "translit": "al-akh", "en": "the brother", "ur": "بھائی (معرفہ)" }
+        {
+          "ar": "أَخُوهُ",
+          "ar_plain": "اخوه",
+          "translit": "akhhuho",
+          "en": "his brother",
+          "ur": "اس کا بھائی"
+        },
+        {
+          "ar": "أَخٌ",
+          "ar_plain": "اخ",
+          "translit": "akhun",
+          "en": "brother (alone)",
+          "ur": "بھائی (اکیلا)"
+        },
+        {
+          "ar": "أَخُ",
+          "ar_plain": "اخ",
+          "translit": "akh",
+          "en": "brother (idafa)",
+          "ur": "بھائی (اضافہ)"
+        },
+        {
+          "ar": "الْأَخُ",
+          "ar_plain": "الاخ",
+          "translit": "al-akh",
+          "en": "the brother",
+          "ur": "بھائی (معرفہ)"
+        }
       ],
       "correct_answer": {
         "ar": "أَخُوهُ",
@@ -208,12 +298,40 @@
         "ur": "عرش کا مالک رب ہے۔"
       },
       "tiles": [
-        { "ar": "ذُو", "ar_plain": "ذو", "translit": "dhul", "en": "Possessor of" },
-        { "ar": "الْعَرْشِ", "ar_plain": "العرش", "translit": "al-'arshi", "en": "the Throne (gen.)", "ur": "عرش (جر)" },
-        { "ar": "رَبٌّ", "ar_plain": "رب", "translit": "rabun", "en": "Lord", "ur": "رب" },
-        { "ar": "ذُوالْعَرْشِ", "ar_plain": "ذوالعرش", "translit": "dhul-'arshi", "en": "Possessor of the Throne", "ur": "عرش کا مالک" }
+        {
+          "ar": "ذُو",
+          "ar_plain": "ذو",
+          "translit": "dhul",
+          "en": "Possessor of",
+          "ur": "کا مالک"
+        },
+        {
+          "ar": "الْعَرْشِ",
+          "ar_plain": "العرش",
+          "translit": "al-'arshi",
+          "en": "the Throne (gen.)",
+          "ur": "عرش (جر)"
+        },
+        {
+          "ar": "رَبٌّ",
+          "ar_plain": "رب",
+          "translit": "rabun",
+          "en": "Lord",
+          "ur": "رب"
+        },
+        {
+          "ar": "ذُوالْعَرْشِ",
+          "ar_plain": "ذوالعرش",
+          "translit": "dhul-'arshi",
+          "en": "Possessor of the Throne",
+          "ur": "عرش کا مالک"
+        }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "ذُو (مَبْنِيّ, always on damma) + الْعَرْشِ (genitive after ذُو as مضاف إليه) + رَبٌّ (خَبَر, رفع). This is a nominal sentence: ذُو الْعَرْشِ is the مُبْتَدَأ, رَبٌّ is the خَبَر.",
@@ -239,11 +357,30 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "أَخُوهُ مُسْلِمٌ",
       "words": [
-        { "ar": "أَخُوهُ", "ar_plain": "اخوه", "translit": "akhuuho", "en": "his brother" },
-        { "ar": "مُسْلِمٌ", "ar_plain": "مسلم", "translit": "muslimun", "en": "a Muslim" }
+        {
+          "ar": "أَخُوهُ",
+          "ar_plain": "اخوه",
+          "translit": "akhuuho",
+          "en": "his brother",
+          "ur": "اس کا بھائی"
+        },
+        {
+          "ar": "مُسْلِمٌ",
+          "ar_plain": "مسلم",
+          "translit": "muslimun",
+          "en": "a Muslim",
+          "ur": "ایک مسلمان"
+        }
       ],
-      "available_roles": ["SUBJECT", "OBJECT", "ADJECTIVE"],
-      "correct_roles": ["SUBJECT", "ADJECTIVE"],
+      "available_roles": [
+        "SUBJECT",
+        "OBJECT",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "ADJECTIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "أَخُوهُ = مُبْتَدَأ (رفع — from أَخٌ + ي + هُ, the ي returns as long vowel أَخُو). مُسْلِمٌ = خَبَر (رفع — matching أَخُوهُ in case).",
@@ -257,13 +394,26 @@
         "ar": "أَبُوهُ وَأَخُوهُ مُسْلِمَانِ",
         "ar_plain": "ابوه واخوه مسلمان",
         "translit": "abuuho wa akhhuho muslimaani",
-        "en": "His father and his brother are Muslims."
+        "en": "His father and his brother are Muslims.",
+        "ur": "اس کے والد اور بھائی مسلمان ہیں۔"
       },
       "options": [
-        { "en": "His father and his brother are Muslims.", "ur": "اس کا باپ اور اس کا بھائی مسلمان ہیں۔" },
-        { "en": "His father is a Muslim brother.", "ur": "اس کا باپ ایک مسلمان بھائی ہے۔" },
-        { "en": "A Muslim father and brother.", "ur": "ایک مسلمان باپ اور بھائی۔" },
-        { "en": "His father of the Muslim.", "ur": "مسلمان کا باپ۔" }
+        {
+          "en": "His father and his brother are Muslims.",
+          "ur": "اس کا باپ اور اس کا بھائی مسلمان ہیں۔"
+        },
+        {
+          "en": "His father is a Muslim brother.",
+          "ur": "اس کا باپ ایک مسلمان بھائی ہے۔"
+        },
+        {
+          "en": "A Muslim father and brother.",
+          "ur": "ایک مسلمان باپ اور بھائی۔"
+        },
+        {
+          "en": "His father of the Muslim.",
+          "ur": "مسلمان کا باپ۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -288,7 +438,9 @@
       "ur": "عرش کا مالک، بزرگ۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/ghafir-015-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "ذُو is always مَبْنِيّ (ذُو) and is followed by a noun in the genitive (جر) as مضاف إليه: ذُو + الْعَرْشِ = Possessor of the Throne. The صفة الْمَجِيدُ is also in the nominative (رفع) matching ذُو. When ذُو takes an attached pronoun, it becomes ذُوهُ (his possessor).",
       "ur": "ذُو ہمیشہ مَبْنِيّ ہے (ذُو) اور اس کے بعد مضاف إليه جر میں آتا ہے: ذُو + الْعَرْشِ = عرش کا مالک۔ صفت الْمَجِيدُ بھی رفع میں ہے۔"

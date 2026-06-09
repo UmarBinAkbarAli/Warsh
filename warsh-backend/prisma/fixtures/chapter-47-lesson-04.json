@@ -115,12 +115,38 @@
       "id": "ch47-l04-ex01",
       "sentence_ar": "الَّذِينَ آمَنُوا يَعْمَلُونَ",
       "words": [
-        { "ar": "الَّذِينَ", "ar_plain": "الذين", "translit": "alladhiina", "en": "those who" },
-        { "ar": "آمَنُوا", "ar_plain": "آمنوا", "translit": "aamanoo", "en": "believed" },
-        { "ar": "يَعْمَلُونَ", "ar_plain": "يعملون", "translit": "ya'maluuna", "en": "they do/work" }
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhiina",
+          "en": "those who",
+          "ur": "وہ لوگ جو"
+        },
+        {
+          "ar": "آمَنُوا",
+          "ar_plain": "آمنوا",
+          "translit": "aamanoo",
+          "en": "believed",
+          "ur": "یقین کیا"
+        },
+        {
+          "ar": "يَعْمَلُونَ",
+          "ar_plain": "يعملون",
+          "translit": "ya'maluuna",
+          "en": "they do/work",
+          "ur": "وہ کرتے/کام کرتے ہیں۔"
+        }
       ],
-      "available_roles": ["RELATIVE_PRONOUN", "VERB", "SUBJECT"],
-      "correct_roles": ["RELATIVE_PRONOUN", "VERB", "SUBJECT"],
+      "available_roles": [
+        "RELATIVE_PRONOUN",
+        "VERB",
+        "SUBJECT"
+      ],
+      "correct_roles": [
+        "RELATIVE_PRONOUN",
+        "VERB",
+        "SUBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الَّذِينَ is the relative pronoun (who). آمَنُوا is past tense (they believed). يَعْمَلُونَ is present tense verb (they do) in raf' (وُونَ). Both verbs agree in number (plural).",
@@ -138,10 +164,22 @@
         "ur": "اللہ کی اطاعت کرو اور رسول کی اطاعت کرو۔"
       },
       "options": [
-        { "en": "Obey Allah and obey the Messenger.", "ur": "اللہ کی اطاعت کرو اور رسول کی اطاعت کرو۔" },
-        { "en": "They obeyed Allah and the Messenger.", "ur": "انہوں نے اللہ اور رسول کی اطاعت کی۔" },
-        { "en": "We obey Allah and the Messenger.", "ur": "ہم اللہ اور رسول کی اطاعت کرتے ہیں۔" },
-        { "en": "The believers obey Allah.", "ur": "مومنین اللہ کی اطاعت کرتے ہیں۔" }
+        {
+          "en": "Obey Allah and obey the Messenger.",
+          "ur": "اللہ کی اطاعت کرو اور رسول کی اطاعت کرو۔"
+        },
+        {
+          "en": "They obeyed Allah and the Messenger.",
+          "ur": "انہوں نے اللہ اور رسول کی اطاعت کی۔"
+        },
+        {
+          "en": "We obey Allah and the Messenger.",
+          "ur": "ہم اللہ اور رسول کی اطاعت کرتے ہیں۔"
+        },
+        {
+          "en": "The believers obey Allah.",
+          "ur": "مومنین اللہ کی اطاعت کرتے ہیں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -194,12 +232,41 @@
         }
       ],
       "right_column": [
-        { "en": "they believed (past pl.)", "ur": "انہوں نے ایمان لایا (ماضی جمع)" },
-        { "en": "they work (pres. pl.)", "ur": "وہ کام کرتے ہیں (حال جمع)" },
-        { "en": "obey! (command pl.)", "ur": "اطاعت کرو! (حکم جمع)" },
-        { "en": "they believe (pres. pl.)", "ur": "وہ ایمان رکھتے ہیں (حال جمع)" }
+        {
+          "en": "they believed (past pl.)",
+          "ur": "انہوں نے ایمان لایا (ماضی جمع)"
+        },
+        {
+          "en": "they work (pres. pl.)",
+          "ur": "وہ کام کرتے ہیں (حال جمع)"
+        },
+        {
+          "en": "obey! (command pl.)",
+          "ur": "اطاعت کرو! (حکم جمع)"
+        },
+        {
+          "en": "they believe (pres. pl.)",
+          "ur": "وہ ایمان رکھتے ہیں (حال جمع)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -287,7 +354,12 @@
           "ur": "نیک اعمال"
         }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -301,10 +373,22 @@
         "ur": "اے ایمان والو"
       },
       "options": [
-        { "en": "O you who believe", "ur": "اے ایمان والو" },
-        { "en": "O those who will believe", "ur": "اے وہ لوگ جو ایمان لائیں گے" },
-        { "en": "O the believers in Allah", "ur": "اے اللہ پر ایمان رکھنے والے" },
-        { "en": "O nation of believers", "ur": "اے مومنین کی قوم" }
+        {
+          "en": "O you who believe",
+          "ur": "اے ایمان والو"
+        },
+        {
+          "en": "O those who will believe",
+          "ur": "اے وہ لوگ جو ایمان لائیں گے"
+        },
+        {
+          "en": "O the believers in Allah",
+          "ur": "اے اللہ پر ایمان رکھنے والے"
+        },
+        {
+          "en": "O nation of believers",
+          "ur": "اے مومنین کی قوم"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -329,7 +413,10 @@
       "ur": "اے ایمان والو! اللہ کی اطاعت کرو اور رسول کی اطاعت کرو۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/muhammad-033-mishary.mp3"
     },
-    "highlighted_word_indices": [2, 4],
+    "highlighted_word_indices": [
+      2,
+      4
+    ],
     "noor_explanation": {
       "en": "الَّذِينَ آمَنُوا uses sound masculine plural (وُونَ) in raf'. أَطِيعُوا is the plural command (imperative). The Quran speaks to believers directly — and uses the plural form constantly.",
       "ur": "الَّذِينَ آمَنُوا sound masculine plural (وُونَ) رفع میں استعمال کرتا ہے۔ أَطِيعُوا plural command (imperative) ہے۔ قرآن براہ راست مومنین سے بات کرتا ہے — اور مسلسل plural form استعمال کرتا ہے۔"

@@ -129,11 +129,31 @@
       "id": "ch46-l01-ex01",
       "sentence_ar": "يَذْهَبُ الْمُسْلِمُ",
       "words": [
-        { "ar": "يَذْهَبُ", "ar_plain": "يذهب", "translit": "yadhahabu", "en": "he goes" },
-        { "ar": "الْمُسْلِمُ", "ar_plain": "المسلم", "translit": "al-muslimu", "en": "the Muslim" }
+        {
+          "ar": "يَذْهَبُ",
+          "ar_plain": "يذهب",
+          "translit": "yadhahabu",
+          "en": "he goes",
+          "ur": "وہ جاتا ہے"
+        },
+        {
+          "ar": "الْمُسْلِمُ",
+          "ar_plain": "المسلم",
+          "translit": "al-muslimu",
+          "en": "the Muslim",
+          "ur": "مسلمان"
+        }
       ],
-      "available_roles": ["VERB", "SUBJECT", "OBJECT", "PARTICLE"],
-      "correct_roles": ["VERB", "SUBJECT"],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT",
+        "PARTICLE"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "يَذْهَبُ is the present tense verb (raf' state — no trigger). الْمُسْلِمُ is the subject (فاعل).",
@@ -151,10 +171,22 @@
         "ur": "کہ وہ پڑھے"
       },
       "options": [
-        { "en": "that he reads", "ur": "کہ وہ پڑھے" },
-        { "en": "he reads", "ur": "وہ پڑھتا ہے" },
-        { "en": "that I read", "ur": "کہ میں پڑھوں" },
-        { "en": "he will read", "ur": "وہ پڑھے گا" }
+        {
+          "en": "that he reads",
+          "ur": "کہ وہ پڑھے"
+        },
+        {
+          "en": "he reads",
+          "ur": "وہ پڑھتا ہے"
+        },
+        {
+          "en": "that I read",
+          "ur": "کہ میں پڑھوں"
+        },
+        {
+          "en": "he will read",
+          "ur": "وہ پڑھے گا"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -255,12 +287,41 @@
         }
       ],
       "right_column": [
-        { "en": "he writes (raf')", "ur": "وہ لکھتا ہے (رفع)" },
-        { "en": "that he writes (nasb)", "ur": "کہ وہ لکھے (نصب)" },
-        { "en": "he did not write (jazm)", "ur": "اس نے نہیں لکھا (جزم)" },
-        { "en": "he will never write (nasb)", "ur": "وہ کبھی نہیں لکھے گا (نصب)" }
+        {
+          "en": "he writes (raf')",
+          "ur": "وہ لکھتا ہے (رفع)"
+        },
+        {
+          "en": "that he writes (nasb)",
+          "ur": "کہ وہ لکھے (نصب)"
+        },
+        {
+          "en": "he did not write (jazm)",
+          "ur": "اس نے نہیں لکھا (جزم)"
+        },
+        {
+          "en": "he will never write (nasb)",
+          "ur": "وہ کبھی نہیں لکھے گا (نصب)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -300,7 +361,11 @@
           "ur": "وہ پڑھتا ہے (رفع)"
         }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1
     },
     {
@@ -308,12 +373,38 @@
       "id": "ch46-l01-ex07",
       "sentence_ar": "لَمْ يَغْفِرِ اللَّهُ",
       "words": [
-        { "ar": "لَمْ", "ar_plain": "لم", "translit": "lam", "en": "did not" },
-        { "ar": "يَغْفِرِ", "ar_plain": "يغفر", "translit": "yaghfiri", "en": "he forgives" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah" }
+        {
+          "ar": "لَمْ",
+          "ar_plain": "لم",
+          "translit": "lam",
+          "en": "did not",
+          "ur": "نہیں کیا"
+        },
+        {
+          "ar": "يَغْفِرِ",
+          "ar_plain": "يغفر",
+          "translit": "yaghfiri",
+          "en": "he forgives",
+          "ur": "وہ معاف کرتا ہے"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah",
+          "ur": "اللہ"
+        }
       ],
-      "available_roles": ["PARTICLE", "VERB", "SUBJECT"],
-      "correct_roles": ["PARTICLE", "VERB", "SUBJECT"],
+      "available_roles": [
+        "PARTICLE",
+        "VERB",
+        "SUBJECT"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VERB",
+        "SUBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "لَمْ is the negation particle triggering jazm. يَغْفِرِ is the verb in jazm (note the kasra on the first letter). اللَّهُ is the subject (فاعل).",
@@ -336,7 +427,9 @@
       "ur": "ابی لہب کے ہاتھ تباہ ہوں اور وہ خود بھی تباہ ہو۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-masad-001-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "تَبَّتْ is a past tense verb, not a present tense. Today we focus on parsing present tense verbs in all three states as they appear across the Quran. Al-Masad gives us a moment to breathe before we go deeper.",
       "ur": "تَبَّتْ ماضی tense کا فعل ہے، present tense نہیں۔ آج ہمارا focus ہے قرآن بھر میں تینوں حالتوں میں present tense verbs کو parse کرنا۔ Al-Masad ہمیں گہرائی میں جانے سے پہلے سانس لینے کا موقع دیتی ہے۔"

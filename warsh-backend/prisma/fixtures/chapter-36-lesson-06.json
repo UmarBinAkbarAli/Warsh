@@ -47,7 +47,8 @@
         "ar": "الْمُضَارِعُ",
         "ar_plain": "المضارع",
         "translit": "al-mudaari'u",
-        "en": "present/future tense verb"
+        "en": "present/future tense verb",
+        "ur": "موجودہ/مستقبل کا تناؤ فعل"
       },
       "explanation": {
         "en": "Every present tense verb in Arabic starts with one of four prefixes: أَـ (I), تَـ (you), يَـ (he), نَـ (we). The prefix tells you WHO is doing the action.",
@@ -60,7 +61,8 @@
         "ar": "الْمَصْدَرُ",
         "ar_plain": "المصدر",
         "translit": "al-masdaru",
-        "en": "verbal noun — the noun form of a verb"
+        "en": "verbal noun — the noun form of a verb",
+        "ur": "لفظی اسم - فعل کی اسم شکل"
       },
       "explanation": {
         "en": "The مصدر is the noun derived from a verb — 'the act of doing.' سَبِّحْ → تَسْبِيحٌ (glorify → glorification). ذَكَرَ → ذِكْرٌ (mention → remembrance).",
@@ -105,10 +107,22 @@
         "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔"
       },
       "options": [
-        { "en": "Glorify the name of your Lord, the Most High.", "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔" },
-        { "en": "Remember the name of your Lord, the Most High.", "ur": "اپنے بلند ترین رب کا نام یاد کرو۔" },
-        { "en": "Know the name of your Lord, the Most High.", "ur": "اپنے بلند ترین رب کا نام جانو۔" },
-        { "en": "Believe in the name of your Lord, the Most High.", "ur": "اپنے بلند ترین رب کے نام پر ایمان لاؤ۔" }
+        {
+          "en": "Glorify the name of your Lord, the Most High.",
+          "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔"
+        },
+        {
+          "en": "Remember the name of your Lord, the Most High.",
+          "ur": "اپنے بلند ترین رب کا نام یاد کرو۔"
+        },
+        {
+          "en": "Know the name of your Lord, the Most High.",
+          "ur": "اپنے بلند ترین رب کا نام جانو۔"
+        },
+        {
+          "en": "Believe in the name of your Lord, the Most High.",
+          "ur": "اپنے بلند ترین رب کے نام پر ایمان لاؤ۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -186,18 +200,71 @@
       "type": "MATCHING",
       "id": "ch36-l06-ex04",
       "left_column": [
-        { "ar": "إِيمَانٌ", "ar_plain": "ايمان", "translit": "ii'maanun", "en": "faith", "ur": "ایمان" },
-        { "ar": "تَسْبِيحٌ", "ar_plain": "تسبيح", "translit": "tasbiihun", "en": "glorification", "ur": "تسبیح" },
-        { "ar": "ذِكْرٌ", "ar_plain": "ذكر", "translit": "dhikrun", "en": "remembrance", "ur": "یاد" },
-        { "ar": "تَوْحِيدٌ", "ar_plain": "توحيد", "translit": "tawhiidun", "en": "oneness", "ur": "توحید" }
+        {
+          "ar": "إِيمَانٌ",
+          "ar_plain": "ايمان",
+          "translit": "ii'maanun",
+          "en": "faith",
+          "ur": "ایمان"
+        },
+        {
+          "ar": "تَسْبِيحٌ",
+          "ar_plain": "تسبيح",
+          "translit": "tasbiihun",
+          "en": "glorification",
+          "ur": "تسبیح"
+        },
+        {
+          "ar": "ذِكْرٌ",
+          "ar_plain": "ذكر",
+          "translit": "dhikrun",
+          "en": "remembrance",
+          "ur": "یاد"
+        },
+        {
+          "ar": "تَوْحِيدٌ",
+          "ar_plain": "توحيد",
+          "translit": "tawhiidun",
+          "en": "oneness",
+          "ur": "توحید"
+        }
       ],
       "right_column": [
-        { "en": "remembrance", "ur": "یاد" },
-        { "en": "faith", "ur": "ایمان" },
-        { "en": "oneness", "ur": "توحید" },
-        { "en": "glorification", "ur": "تسبیح" }
+        {
+          "en": "remembrance",
+          "ur": "یاد"
+        },
+        {
+          "en": "faith",
+          "ur": "ایمان"
+        },
+        {
+          "en": "oneness",
+          "ur": "توحید"
+        },
+        {
+          "en": "glorification",
+          "ur": "تسبیح"
+        }
       ],
-      "correct_pairs": [[0, 1], [1, 3], [2, 0], [3, 2]],
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -208,11 +275,33 @@
         "ur": "تسبیح یاد کے ساتھ ہے۔"
       },
       "tiles": [
-        { "ar": "التَّسْبِيحُ", "ar_plain": "التسبيح", "translit": "at-tasbiihu", "en": "the glorification", "ur": "تسبیح" },
-        { "ar": "مَعَ", "ar_plain": "مع", "translit": "ma'a", "en": "with", "ur": "ساتھ" },
-        { "ar": "الذِّكْرِ", "ar_plain": "الذكر", "translit": "adh-dhikri", "en": "the remembrance", "ur": "یاد" }
+        {
+          "ar": "التَّسْبِيحُ",
+          "ar_plain": "التسبيح",
+          "translit": "at-tasbiihu",
+          "en": "the glorification",
+          "ur": "تسبیح"
+        },
+        {
+          "ar": "مَعَ",
+          "ar_plain": "مع",
+          "translit": "ma'a",
+          "en": "with",
+          "ur": "ساتھ"
+        },
+        {
+          "ar": "الذِّكْرِ",
+          "ar_plain": "الذكر",
+          "translit": "adh-dhikri",
+          "en": "the remembrance",
+          "ur": "یاد"
+        }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1
     },
     {
@@ -226,10 +315,22 @@
         "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔"
       },
       "options": [
-        { "en": "You alone we worship and You alone we seek help.", "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔" },
-        { "en": "We worship You and we seek help from You.", "ur": "ہم تمہاری عبادت کرتے ہیں اور ہم تم سے مدد مانگتے ہیں۔" },
-        { "en": "You we worship and help.", "ur": "تمہاری عبادت اور مدد۔" },
-        { "en": "I worship You and seek Your help.", "ur": "میں تجھے پوجتا ہوں اور تیری مدد مانگتا ہوں۔" }
+        {
+          "en": "You alone we worship and You alone we seek help.",
+          "ur": "تجھ ہی کو ہم عبادت کرتے ہیں اور تجھ ہی سے ہم مدد مانگتے ہیں۔"
+        },
+        {
+          "en": "We worship You and we seek help from You.",
+          "ur": "ہم تمہاری عبادت کرتے ہیں اور ہم تم سے مدد مانگتے ہیں۔"
+        },
+        {
+          "en": "You we worship and help.",
+          "ur": "تمہاری عبادت اور مدد۔"
+        },
+        {
+          "en": "I worship You and seek Your help.",
+          "ur": "میں تجھے پوجتا ہوں اور تیری مدد مانگتا ہوں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -263,12 +364,41 @@
         "ur": "ایمان اور خلوص اللہ کی طرف سے ہے۔"
       },
       "tiles": [
-        { "ar": "الْإِيمَانُ", "ar_plain": "الايمان", "translit": "al-ii'maanu", "en": "faith", "ur": "ایمان" },
-        { "ar": "وَالْإِخْلَاصُ", "ar_plain": "والاخلاص", "translit": "wal-ikhlaasu", "en": "and sincerity", "ur": "اور خلوص" },
-        { "ar": "مِنَ", "ar_plain": "من", "translit": "mina", "en": "from", "ur": "سے" },
-        { "ar": "اللَّهِ", "ar_plain": "الله", "translit": "Allahi", "en": "Allah", "ur": "اللہ" }
+        {
+          "ar": "الْإِيمَانُ",
+          "ar_plain": "الايمان",
+          "translit": "al-ii'maanu",
+          "en": "faith",
+          "ur": "ایمان"
+        },
+        {
+          "ar": "وَالْإِخْلَاصُ",
+          "ar_plain": "والاخلاص",
+          "translit": "wal-ikhlaasu",
+          "en": "and sincerity",
+          "ur": "اور خلوص"
+        },
+        {
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "اللَّهِ",
+          "ar_plain": "الله",
+          "translit": "Allahi",
+          "en": "Allah",
+          "ur": "اللہ"
+        }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     }
   ],
@@ -287,7 +417,9 @@
       "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-ala-001-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "Peak 1 ends with Al-A'la 87:1. You have learned: present tense prefixes (أَ- تَ- يَ- نَ-), المضارع conjugation, مصدر recognition, Al-Fatiha structural parsing. R8 confirms mastery. Rest, then return for Peak 2 — where grammar deepens.",
       "ur": "پیک 1 الاعلیٰ 87:1 کے ساتھ ختم ہوتا ہے۔ آپ نے سیکھا: present tense prefixes (أَ- تَ- يَ- نَ-)، المضارع conjugation، مصدر recognition، الفاتحة structural parsing۔ R8 نے مہارت تصدیق کر دی۔ آرام کرو، پھر پیک 2 کے لیے واپس آؤ — جہاں گرامر گہرا ہوتا ہے۔"

@@ -96,10 +96,21 @@
         "ur": "اور کسی چیز کے لیے مت کہہ دیجیے کہ میں کل اسے ضرور کروں گا۔"
       },
       "options": [
-        { "en": "And never say of anything, Indeed I will do that tomorrow.", "ur": "اور کسی چیز کے لیے مت کہہ دیجیے کہ میں کل اسے ضرور کروں گا۔" },
-        { "en": "Do not say that you will do something tomorrow.", "ur": "مت کہیں کہ آپ کل کوئی چیز کروں گے۔" },
-        { "en": "And never promise anything for tomorrow.", "ur": "اور کل کے لیے کوئی وعدہ مت کرو۔" },
-        { "en": "All of the above", "ur": "اوپر سب"
+        {
+          "en": "And never say of anything, Indeed I will do that tomorrow.",
+          "ur": "اور کسی چیز کے لیے مت کہہ دیجیے کہ میں کل اسے ضرور کروں گا۔"
+        },
+        {
+          "en": "Do not say that you will do something tomorrow.",
+          "ur": "مت کہیں کہ آپ کل کوئی چیز کروں گے۔"
+        },
+        {
+          "en": "And never promise anything for tomorrow.",
+          "ur": "اور کل کے لیے کوئی وعدہ مت کرو۔"
+        },
+        {
+          "en": "All of the above",
+          "ur": "اوپر سب"
         }
       ],
       "correct_index": 0,
@@ -153,12 +164,41 @@
         }
       ],
       "right_column": [
-        { "en": "never say (emphatic)", "ur": "مت کہیں (emphasis)" },
-        { "en": "indeed I", "ur": "بیشک میں" },
-        { "en": "tomorrow", "ur": "کل" },
-        { "en": "doing / will do", "ur": "کرنے والا" }
+        {
+          "en": "never say (emphatic)",
+          "ur": "مت کہیں (emphasis)"
+        },
+        {
+          "en": "indeed I",
+          "ur": "بیشک میں"
+        },
+        {
+          "en": "tomorrow",
+          "ur": "کل"
+        },
+        {
+          "en": "doing / will do",
+          "ur": "کرنے والا"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -246,7 +286,12 @@
           "ur": "کل"
         }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -260,10 +305,22 @@
         "ur": "مت کہیں۔"
       },
       "options": [
-        { "en": "Never say.", "ur": "مت کہیں۔" },
-        { "en": "Do not speak.", "ur": "مت بولو۔" },
-        { "en": "They never said.", "ur": "انہوں نے کبھی نہیں کہا۔" },
-        { "en": "And you did not say.", "ur": "اور آپ نے نہیں کہا۔" }
+        {
+          "en": "Never say.",
+          "ur": "مت کہیں۔"
+        },
+        {
+          "en": "Do not speak.",
+          "ur": "مت بولو۔"
+        },
+        {
+          "en": "They never said.",
+          "ur": "انہوں نے کبھی نہیں کہا۔"
+        },
+        {
+          "en": "And you did not say.",
+          "ur": "اور آپ نے نہیں کہا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -277,13 +334,47 @@
       "id": "ch50-l02-ex07",
       "sentence_ar": "إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا",
       "words": [
-        { "ar": "إِنِّي", "ar_plain": "إني", "translit": "innii", "en": "indeed I" },
-        { "ar": "فَاعِلٌ", "ar_plain": "فاعل", "translit": "faa'ilun", "en": "will do" },
-        { "ar": "ذَٰلِكَ", "ar_plain": "ذلك", "translit": "dhaalika", "en": "that" },
-        { "ar": "غَدًا", "ar_plain": "غدا", "translit": "ghadan", "en": "tomorrow" }
+        {
+          "ar": "إِنِّي",
+          "ar_plain": "إني",
+          "translit": "innii",
+          "en": "indeed I",
+          "ur": "واقعی میں"
+        },
+        {
+          "ar": "فَاعِلٌ",
+          "ar_plain": "فاعل",
+          "translit": "faa'ilun",
+          "en": "will do",
+          "ur": "کرے گا"
+        },
+        {
+          "ar": "ذَٰلِكَ",
+          "ar_plain": "ذلك",
+          "translit": "dhaalika",
+          "en": "that",
+          "ur": "کہ"
+        },
+        {
+          "ar": "غَدًا",
+          "ar_plain": "غدا",
+          "translit": "ghadan",
+          "en": "tomorrow",
+          "ur": "کل"
+        }
       ],
-      "available_roles": ["PARTICLE", "VERB", "SUBJECT", "DEMONSTRATIVE"],
-      "correct_roles": ["PARTICLE", "VERB", "SUBJECT", "DEMONSTRATIVE"],
+      "available_roles": [
+        "PARTICLE",
+        "VERB",
+        "SUBJECT",
+        "DEMONSTRATIVE"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VERB",
+        "SUBJECT",
+        "DEMONSTRATIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "إِنِّي is 'indeed I' (إِنَّ + ي). فَاعِلٌ is the present participle 'doing/will do.' ذَٰلِكَ is 'that' (demonstrative). غَدًا is 'tomorrow' — an adverb of time in the accusative.",
@@ -306,7 +397,9 @@
       "ur": "اور کسی چیز کے لیے مت کہہ دیجیے کہ میں کل اسے ضرور کروں گا۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-kahf-023-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "This ayah from Surah Al-Kahf is the source of the famous principle: never say 'I will do it tomorrow' without adding 'Allah willing' (إِنْ شَاءَ اللَّه). The prohibition وَلَا تَقُولَنَّ is absolute — a lesson in humility before Allah's knowledge.",
       "ur": "یہ ayah سورۃ الکہف سے ہے famous principle کا source ہے: 'میں کل کروں گا' مت کہیں بغیر 'اگر اللہ چاہے' (إِنْ شَاءَ اللَّه) شامل کیے۔ Prohibition وَلَا تَقُولَنَّ مطلق ہے — اللہ کے علم کے سامنے عاجزی کا ایک lesson۔"

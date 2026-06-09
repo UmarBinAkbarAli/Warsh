@@ -96,10 +96,22 @@
         "ur": "مبارک ہے وہ جس کے ہاتھ میں بادشاہی ہے"
       },
       "options": [
-        { "en": "Blessed is He in whose hand is the kingdom", "ur": "مبارک ہے وہ جس کے ہاتھ میں بادشاہی ہے" },
-        { "en": "The kingdom is in the hand of the Blessed", "ur": "بادشاہی مبارک کے ہاتھ میں ہے" },
-        { "en": "The blessed hand has the kingdom", "ur": "مبارک ہاتھ میں بادشاہی ہے" },
-        { "en": "He blessed the hand of the kingdom", "ur": "اس نے بادشاہی کے ہاتھ کو مبارک کیا" }
+        {
+          "en": "Blessed is He in whose hand is the kingdom",
+          "ur": "مبارک ہے وہ جس کے ہاتھ میں بادشاہی ہے"
+        },
+        {
+          "en": "The kingdom is in the hand of the Blessed",
+          "ur": "بادشاہی مبارک کے ہاتھ میں ہے"
+        },
+        {
+          "en": "The blessed hand has the kingdom",
+          "ur": "مبارک ہاتھ میں بادشاہی ہے"
+        },
+        {
+          "en": "He blessed the hand of the kingdom",
+          "ur": "اس نے بادشاہی کے ہاتھ کو مبارک کیا"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -113,12 +125,38 @@
       "id": "ch52-l05-ex02",
       "sentence_ar": "بِيَدِهِ الْمُلْكُ",
       "words": [
-        { "ar": "بِ", "ar_plain": "ب", "translit": "bi", "en": "in" },
-        { "ar": "يَدِهِ", "ar_plain": "يده", "translit": "yadihi", "en": "his hand" },
-        { "ar": "الْمُلْكُ", "ar_plain": "الملك", "translit": "al-mulku", "en": "the kingdom" }
+        {
+          "ar": "بِ",
+          "ar_plain": "ب",
+          "translit": "bi",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "يَدِهِ",
+          "ar_plain": "يده",
+          "translit": "yadihi",
+          "en": "his hand",
+          "ur": "اس کا ہاتھ"
+        },
+        {
+          "ar": "الْمُلْكُ",
+          "ar_plain": "الملك",
+          "translit": "al-mulku",
+          "en": "the kingdom",
+          "ur": "بادشاہی"
+        }
       ],
-      "available_roles": ["PREPOSITION", "POSSESSIVE", "SUBJECT"],
-      "correct_roles": ["PREPOSITION", "POSSESSIVE", "SUBJECT"],
+      "available_roles": [
+        "PREPOSITION",
+        "POSSESSIVE",
+        "SUBJECT"
+      ],
+      "correct_roles": [
+        "PREPOSITION",
+        "POSSESSIVE",
+        "SUBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "بِ is the preposition 'in.' يَدِهِ is يَدٌ (hand) + هُ (his) — an idafa chain. الْمُلْكُ is the subject of the الَّذِي clause.",
@@ -143,34 +181,67 @@
           "ar": "تَبَارَكَ",
           "ar_plain": "تبارك",
           "translit": "tabaaraka",
-          "en": "Blessed is (verbal)"
+          "en": "Blessed is (verbal)",
+          "ur": "مبارک ہے (زبانی)"
         },
         {
           "ar": "الْمُلْكُ",
           "ar_plain": "الملك",
           "translit": "al-mulku",
-          "en": "the kingdom (nom.)"
+          "en": "the kingdom (nom.)",
+          "ur": "بادشاہی (nom.)"
         },
         {
           "ar": "قَدِيرٌ",
           "ar_plain": "قدير",
           "translit": "qadiirun",
-          "en": "capable (nom.)"
+          "en": "capable (nom.)",
+          "ur": "قابل (نمبر)"
         },
         {
           "ar": "كُلِّ شَيْءٍ",
           "ar_plain": "كل شيء",
           "translit": "kulli shay'in",
-          "en": "all things (gen.)"
+          "en": "all things (gen.)",
+          "ur": "تمام چیزیں (جنرل)"
         }
       ],
       "right_column": [
-        { "en": "Past tense verb", "ur": "ماضی فعل" },
-        { "en": "Subject (مرفوع)", "ur": "فاعل (مرفوع)" },
-        { "en": "Predicate (مرفوع)", "ur": "خبر (مرفوع)" },
-        { "en": "Genitive (جر)", "ur": "جر" }
+        {
+          "en": "Past tense verb",
+          "ur": "ماضی فعل"
+        },
+        {
+          "en": "Subject (مرفوع)",
+          "ur": "فاعل (مرفوع)"
+        },
+        {
+          "en": "Predicate (مرفوع)",
+          "ur": "خبر (مرفوع)"
+        },
+        {
+          "en": "Genitive (جر)",
+          "ur": "جر"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -210,7 +281,12 @@
           "ur": "بادشاہی (مرفوع)"
         }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -224,10 +300,22 @@
         "ur": "اور وہ ہر چیز پر قادر ہے"
       },
       "options": [
-        { "en": "And He is over all things capable", "ur": "اور وہ ہر چیز پر قادر ہے" },
-        { "en": "And He is capable of all things", "ur": "اور وہ ہر چیز پر قادر ہے" },
-        { "en": "And nothing is capable of Him", "ur": "اور کوئی چیز اس پر قادر نہیں" },
-        { "en": "And all things are capable of Him", "ur": "اور ہر چیز اس پر قادر ہے" }
+        {
+          "en": "And He is over all things capable",
+          "ur": "اور وہ ہر چیز پر قادر ہے"
+        },
+        {
+          "en": "And He is capable of all things",
+          "ur": "اور وہ ہر چیز پر قادر ہے"
+        },
+        {
+          "en": "And nothing is capable of Him",
+          "ur": "اور کوئی چیز اس پر قادر نہیں"
+        },
+        {
+          "en": "And all things are capable of Him",
+          "ur": "اور ہر چیز اس پر قادر ہے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -300,7 +388,10 @@
       "ur": "مبارک ہے وہ جس کے ہاتھ میں بادشاہی ہے اور وہ ہر چیز پر قادر ہے",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-mulk-001-mishary.mp3"
     },
-    "highlighted_word_indices": [0, 3],
+    "highlighted_word_indices": [
+      0,
+      3
+    ],
     "noor_explanation": {
       "en": "تَبَارَكَ الَّذِي — a verbal sentence opening with a past tense verb. بِيَدِهِ الْمُلْكُ — idafa inside a prepositional phrase. وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ — a nominal sentence (هُوَ + predicate). Book 5 grammar fully on display.",
       "ur": "تَبَارَكَ الَّذِي — ایک verbal sentence جو past tense verb سے شروع ہوتی ہے۔ بِيَدِهِ الْمُلْكُ — ایک prepositional phrase کے اندر idafa۔ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ — ایک nominal sentence (هُوَ + predicate)۔ Book 5 grammar fully on display۔"

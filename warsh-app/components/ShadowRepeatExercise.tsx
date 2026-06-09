@@ -8,6 +8,7 @@ import { WaveformBars } from "./WaveformBars";
 import { BrandButton } from "./BrandButton";
 import { getMicPermissionStatus, requestMicPermission } from "@services/micPermission";
 import { WarshPalette, Fonts } from "../constants/theme";
+import { useT } from "@i18n/index";
 
 type Props = {
   arabic: string;
@@ -21,8 +22,6 @@ type Props = {
 type State = "prepare" | "listening" | "ready" | "recording" | "comparison" | "done";
 
 const MAX_RECORDING_MS = 15_000;
-const NOOR_MESSAGES = ["Well spoken", "Keep going", "Barak Allahu feek", "Ma shaa Allah"];
-
 const RECORDING_OPTIONS: Audio.RecordingOptions = {
   android: {
     extension: ".aac",
@@ -48,6 +47,7 @@ const RECORDING_OPTIONS: Audio.RecordingOptions = {
 };
 
 export function ShadowRepeatExercise({ arabic, transliteration, translation, originalAudioUri, onComplete }: Props) {
+  const t = useT();
   const [state, setState] = useState<State>("prepare");
   const [hasListened, setHasListened] = useState(false);
   const [recordingUri, setRecordingUri] = useState<string | null>(null);
@@ -56,7 +56,15 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
   const [userPlaying, setUserPlaying] = useState(false);
   const [showPermissionModal, setShowPermissionModal] = useState(false);
   const [permissionDenied, setPermissionDenied] = useState(false);
-  const [noorMessage] = useState(() => NOOR_MESSAGES[Math.floor(Math.random() * NOOR_MESSAGES.length)]);
+  const [noorMessage] = useState(() => {
+    const messages = [
+      t("shadow.wellSpoken"),
+      t("shadow.keepGoing"),
+      t("shadow.barakAllahuFeek"),
+      t("shadow.mashaAllah"),
+    ];
+    return messages[Math.floor(Math.random() * messages.length)];
+  });
 
   const recordingRef = useRef<Audio.Recording | null>(null);
   const originalSoundRef = useRef<Audio.Sound | null>(null);
@@ -309,22 +317,22 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
         <View style={styles.modalOverlay}>
           <View style={styles.modalCard}>
             <Ionicons name="mic-outline" size={40} color={WarshPalette.gold} style={styles.modalIcon} />
-            <Text style={styles.modalTitle}>Speaking practice</Text>
+            <Text style={styles.modalTitle}>{t("shadow.permissionTitle")}</Text>
             <Text style={styles.modalBody}>
-              To record yourself saying this phrase, Warsh needs access to your microphone.
+              {t("shadow.permissionBody")}
             </Text>
             <Text style={styles.modalPrivacy}>
-              Your recording stays on this device. We don't upload, store, or analyse it.
+              {t("shadow.permissionPrivacy")}
             </Text>
             {permissionDenied ? (
-              <Text style={styles.modalDenied}>Microphone is currently disabled in your device settings.</Text>
+              <Text style={styles.modalDenied}>{t("shadow.permissionDenied")}</Text>
             ) : null}
             <View style={styles.modalActions}>
               {!permissionDenied ? (
-                <BrandButton title="Enable microphone" onPress={() => void handleEnableMic()} style={styles.modalPrimaryBtn} />
+                <BrandButton title={t("shadow.enableMic")} onPress={() => void handleEnableMic()} style={styles.modalPrimaryBtn} />
               ) : null}
               <Pressable onPress={handleSkip} style={styles.modalSkipBtn}>
-                <Text style={styles.modalSkipText}>Skip this exercise</Text>
+                <Text style={styles.modalSkipText}>{t("shadow.skipExercise")}</Text>
               </Pressable>
             </View>
           </View>
@@ -355,7 +363,7 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
             ) : (
               <Ionicons name="volume-medium-outline" size={26} color={WarshPalette.cream} />
             )}
-            <Text style={styles.playBtnLabel}>{hasListened ? "Listen again" : "Listen first"}</Text>
+            <Text style={styles.playBtnLabel}>{hasListened ? t("shadow.listenAgain") : t("shadow.listenFirst")}</Text>
           </Pressable>
 
           <Pressable
@@ -365,15 +373,15 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
           >
             <Ionicons name="mic-outline" size={26} color={micEnabled ? WarshPalette.cream : "#A09888"} />
             <Text style={[styles.speakBtnLabel, !micEnabled ? styles.speakBtnLabelDisabled : null]}>
-              {permissionDenied ? "Enable microphone in Settings" : "Speak"}
+              {permissionDenied ? t("shadow.enableInSettings") : t("shadow.speak")}
             </Text>
           </Pressable>
         </View>
 
         {state === "prepare" ? (
-          <Text style={styles.hint}>Listen to the phrase, then record yourself.</Text>
+          <Text style={styles.hint}>{t("shadow.hintListenRecord")}</Text>
         ) : state === "listening" ? (
-          <Text style={styles.hint}>Now you try</Text>
+          <Text style={styles.hint}>{t("shadow.hintNowYouTry")}</Text>
         ) : null}
       </View>
     );
@@ -394,10 +402,10 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
         <View style={styles.controls}>
           <Pressable onPress={() => void stopRecording()} style={[styles.speakBtn, styles.recordingBtn]}>
             <View style={styles.recordingPulse} />
-            <Text style={styles.speakBtnLabel}>Stop recording</Text>
+            <Text style={styles.speakBtnLabel}>{t("shadow.stopRecording")}</Text>
           </Pressable>
         </View>
-        <Text style={styles.hint}>Tap stop when finished — max 15 seconds</Text>
+        <Text style={styles.hint}>{t("shadow.hintTapStop")}</Text>
       </View>
     );
   }
@@ -413,27 +421,27 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
 
         <View style={styles.comparisonPanel}>
           <Pressable onPress={() => void playOriginal()} style={[styles.audioRow, originalPlaying ? styles.audioRowActive : null]}>
-            <Text style={styles.audioLabel}>Original</Text>
+            <Text style={styles.audioLabel}>{t("shadow.original")}</Text>
             <WaveformBars color={originalPlaying ? WarshPalette.gold : "#C0B890"} height={24} />
             <Ionicons name={originalPlaying ? "stop-circle-outline" : "play-circle-outline"} size={28} color={WarshPalette.gold} />
           </Pressable>
 
           <Pressable onPress={() => void playUserRecording()} style={[styles.audioRow, userPlaying ? styles.audioRowActive : null]}>
-            <Text style={styles.audioLabel}>You</Text>
+            <Text style={styles.audioLabel}>{t("shadow.you")}</Text>
             <WaveformBars color={userPlaying ? WarshPalette.sage : "#90A890"} height={24} />
             <Ionicons name={userPlaying ? "stop-circle-outline" : "play-circle-outline"} size={28} color={WarshPalette.sage} />
           </Pressable>
 
           <Pressable onPress={() => void playCompare()} style={styles.compareBtn}>
-            <Text style={styles.compareBtnText}>Compare</Text>
+            <Text style={styles.compareBtnText}>{t("shadow.compare")}</Text>
           </Pressable>
         </View>
 
         <View style={styles.comparisonActions}>
           <Pressable onPress={() => void reRecord()} style={styles.reRecordBtn}>
-            <Text style={styles.reRecordText}>Record again</Text>
+            <Text style={styles.reRecordText}>{t("shadow.recordAgain")}</Text>
           </Pressable>
-          <BrandButton title="Done" onPress={handleDone} style={styles.doneBtn} />
+          <BrandButton title={t("common.done")} onPress={handleDone} style={styles.doneBtn} />
         </View>
       </View>
     );

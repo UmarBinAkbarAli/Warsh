@@ -110,10 +110,22 @@
         "ur": "ایک آدمی نے کتا مارا۔"
       },
       "options": [
-        { "en": "A man hit the dog.", "ur": "ایک آدمی نے کتا مارا۔" },
-        { "en": "The dog hit a man.", "ur": "کتا نے آدمی مارا۔" },
-        { "en": "A man was hit by the dog.", "ur": "آدمی کتے سے مارا گیا۔" },
-        { "en": "The man and the dog hit.", "ur": "آدمی اور کتا مارا۔" }
+        {
+          "en": "A man hit the dog.",
+          "ur": "ایک آدمی نے کتا مارا۔"
+        },
+        {
+          "en": "The dog hit a man.",
+          "ur": "کتا نے آدمی مارا۔"
+        },
+        {
+          "en": "A man was hit by the dog.",
+          "ur": "آدمی کتے سے مارا گیا۔"
+        },
+        {
+          "en": "The man and the dog hit.",
+          "ur": "آدمی اور کتا مارا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -214,12 +226,41 @@
         }
       ],
       "right_column": [
-        { "en": "hit", "ur": "مارا" },
-        { "en": "heard", "ur": "سنا" },
-        { "en": "knew", "ur": "جانا" },
-        { "en": "wrote", "ur": "لکھا" }
+        {
+          "en": "hit",
+          "ur": "مارا"
+        },
+        {
+          "en": "heard",
+          "ur": "سنا"
+        },
+        {
+          "en": "knew",
+          "ur": "جانا"
+        },
+        {
+          "en": "wrote",
+          "ur": "لکھا"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -259,7 +300,11 @@
           "ur": "ایک کتاب (مرفوع)"
         }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1
     },
     {
@@ -273,10 +318,22 @@
         "ur": "سورج اور اس کی روشنی کی قسم سے"
       },
       "options": [
-        { "en": "By the sun and its brightness", "ur": "سورج اور اس کی روشنی کی قسم سے" },
-        { "en": "And the sun's brightness", "ur": "اور سورج کی روشنی" },
-        { "en": "By the sun or its brightness", "ur": "سورج یا اس کی روشنی کی قسم سے" },
-        { "en": "And the bright sun", "ur": "اور روشن سورج" }
+        {
+          "en": "By the sun and its brightness",
+          "ur": "سورج اور اس کی روشنی کی قسم سے"
+        },
+        {
+          "en": "And the sun's brightness",
+          "ur": "اور سورج کی روشنی"
+        },
+        {
+          "en": "By the sun or its brightness",
+          "ur": "سورج یا اس کی روشنی کی قسم سے"
+        },
+        {
+          "en": "And the bright sun",
+          "ur": "اور روشن سورج"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -290,12 +347,38 @@
       "id": "ch49-l04-ex07",
       "sentence_ar": "ضَرَبَ رَجُلٌ الْكَلْبَ",
       "words": [
-        { "ar": "ضَرَبَ", "ar_plain": "ضرب", "translit": "daraba", "en": "hit" },
-        { "ar": "رَجُلٌ", "ar_plain": "رجل", "translit": "rajulun", "en": "a man" },
-        { "ar": "الْكَلْبَ", "ar_plain": "الكلب", "translit": "al-kalba", "en": "the dog" }
+        {
+          "ar": "ضَرَبَ",
+          "ar_plain": "ضرب",
+          "translit": "daraba",
+          "en": "hit",
+          "ur": "مارو"
+        },
+        {
+          "ar": "رَجُلٌ",
+          "ar_plain": "رجل",
+          "translit": "rajulun",
+          "en": "a man",
+          "ur": "ایک آدمی"
+        },
+        {
+          "ar": "الْكَلْبَ",
+          "ar_plain": "الكلب",
+          "translit": "al-kalba",
+          "en": "the dog",
+          "ur": "کتا"
+        }
       ],
-      "available_roles": ["VERB", "SUBJECT", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT", "OBJECT"],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "ضَرَبَ is the past tense verb. رَجُلٌ is the subject in the nominative (فاعل). الْكَلْبَ is the direct object in the accusative (مفعول به). Standard order: V-S-O.",
@@ -318,7 +401,9 @@
       "ur": "سورج اور اس کی روشنی کی قسم سے",
       "audio_url": "https://cdn.warsh.app/audio/quran/ash-shams-001-mishary.mp3"
     },
-    "highlighted_word_indices": [1],
+    "highlighted_word_indices": [
+      1
+    ],
     "noor_explanation": {
       "en": "وَالشَّمْسِ uses شَمْسٌ which is grammatically feminine (even though the sun is not gendered in reality). This is one of several nouns that are grammatically feminine regardless of physical gender. ضُحَاهَا uses an attached pronoun هَا (its) to refer back to the sun.",
       "ur": "وَالشَّمْسِ میں شَمْسٌ ہے جو گرامر کے لحاظ سے مؤنث ہے (اگرچہ سورج physical طور پر gendered نہیں)۔ یہ ان کئی nouns میں سے ایک ہے جو physical gender کے regardless گرامر کے لحاظ سے مؤنث ہیں۔ ضُحَاهَا نے attached pronoun هَا (اس کا) استعمال کیا ہے سورج کو reference کرنے کے لیے۔"

@@ -115,23 +115,34 @@
           "ar": "إِنَّ",
           "ar_plain": "إن",
           "translit": "inna",
-          "en": "indeed"
+          "en": "indeed",
+          "ur": "بے شک"
         },
         {
           "ar": "الْكِتَابَ",
           "ar_plain": "الكتاب",
           "translit": "al-kitaaba",
-          "en": "the book (subject)"
+          "en": "the book (subject)",
+          "ur": "کتاب (موضوع)"
         },
         {
           "ar": "كَبِيرٌ",
           "ar_plain": "كبير",
           "translit": "kabiirun",
-          "en": "big (predicate)"
+          "en": "big (predicate)",
+          "ur": "بڑا (پیش گوئی)"
         }
       ],
-      "available_roles": ["PARTICLE", "SUBJECT", "PREDICATE"],
-      "correct_roles": ["PARTICLE", "SUBJECT", "PREDICATE"],
+      "available_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREDICATE"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREDICATE"
+      ],
       "xp_value": 1,
       "sentence_ar": "إِنَّ الْكِتَابَ كَبِيرٌ"
     },
@@ -146,10 +157,22 @@
         "ur": "بے شک کتاب بڑی ہے۔"
       },
       "options": [
-        { "en": "Indeed, the book is big.", "ur": "بے شک کتاب بڑی ہے۔" },
-        { "en": "Indeed, a big book.", "ur": "بے شک ایک بڑی کتاب۔" },
-        { "en": "The big book.", "ur": "بڑی کتاب۔" },
-        { "en": "Is the book big?", "ur": "کیا کتاب بڑی ہے؟" }
+        {
+          "en": "Indeed, the book is big.",
+          "ur": "بے شک کتاب بڑی ہے۔"
+        },
+        {
+          "en": "Indeed, a big book.",
+          "ur": "بے شک ایک بڑی کتاب۔"
+        },
+        {
+          "en": "The big book.",
+          "ur": "بڑی کتاب۔"
+        },
+        {
+          "en": "Is the book big?",
+          "ur": "کیا کتاب بڑی ہے؟"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -253,7 +276,11 @@
           "ur": "بڑا"
         }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1
     },
     {
@@ -290,12 +317,41 @@
         }
       ],
       "right_column": [
-        { "en": "Indeed, Allah does not shy away", "ur": "بے شک اللہ شرماتا نہیں" },
-        { "en": "Indeed, the book is big", "ur": "بے شک کتاب بڑی ہے" },
-        { "en": "Indeed, the house is beautiful", "ur": "بے شک گھر خوبصورت ہے" },
-        { "en": "Indeed, the mosque is small", "ur": "بے شک مسجد چھوٹی ہے" }
+        {
+          "en": "Indeed, Allah does not shy away",
+          "ur": "بے شک اللہ شرماتا نہیں"
+        },
+        {
+          "en": "Indeed, the book is big",
+          "ur": "بے شک کتاب بڑی ہے"
+        },
+        {
+          "en": "Indeed, the house is beautiful",
+          "ur": "بے شک گھر خوبصورت ہے"
+        },
+        {
+          "en": "Indeed, the mosque is small",
+          "ur": "بے شک مسجد چھوٹی ہے"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -319,10 +375,22 @@
         "ur": "بے شک گھر خوبصورت ہے۔"
       },
       "options": [
-        { "en": "Indeed, the house is beautiful.", "ur": "بے شک گھر خوبصورت ہے۔" },
-        { "en": "Indeed, a beautiful house.", "ur": "بے شک ایک خوبصورت گھر۔" },
-        { "en": "The beautiful house.", "ur": "خوبصورت گھر۔" },
-        { "en": "The house and the beautiful.", "ur": "گھر اور خوبصورت۔" }
+        {
+          "en": "Indeed, the house is beautiful.",
+          "ur": "بے شک گھر خوبصورت ہے۔"
+        },
+        {
+          "en": "Indeed, a beautiful house.",
+          "ur": "بے شک ایک خوبصورت گھر۔"
+        },
+        {
+          "en": "The beautiful house.",
+          "ur": "خوبصورت گھر۔"
+        },
+        {
+          "en": "The house and the beautiful.",
+          "ur": "گھر اور خوبصورت۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -347,7 +415,10 @@
       "ur": "بے شک ہم نے تمہیں کوثر دیا ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-kawthar-001-mishary.mp3"
     },
-    "highlighted_word_indices": [1, 2],
+    "highlighted_word_indices": [
+      1,
+      2
+    ],
     "noor_explanation": {
       "en": "In إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ, we have إِنَّ + نَا (subject) and أَعْطَيْنَاكَ (verbal predicate). The verbal predicate does not take a case ending the way a noun does, but the structure is the same: إِنَّ + [subject] + [predicate]. We will study أَعْطَى in detail in Lesson 5.",
       "ur": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ میں، ہمارے پاس إِنَّ + نَا (subject) اور أَعْطَيْنَاكَ (فعلی خبر) ہے۔ فعلی خبر اس طرح case ending نہیں لیتی جیسے اسم لیتا ہے، لیکن ساخت وہی ہے: إِنَّ + [subject] + [predicate]۔ ہم أَعْطَى کا تفصیلی مطالعہ Lesson 5 میں کریں گے۔"

@@ -134,13 +134,26 @@
         "ar": "أَبُوهُ مُسْلِمٌ",
         "ar_plain": "ابوه مسلم",
         "translit": "abuuho muslimun",
-        "en": "His father is a Muslim."
+        "en": "His father is a Muslim.",
+        "ur": "اس کا باپ مسلمان ہے۔"
       },
       "options": [
-        { "en": "His father is a Muslim.", "ur": "اس کا باپ مسلمان ہے۔" },
-        { "en": "The Muslim's father.", "ur": "مسلمان کا باپ۔" },
-        { "en": "A father is Muslim.", "ur": "ایک باپ مسلمان ہے۔" },
-        { "en": "His brothers are Muslim.", "ur": "اس کے بھائی مسلمان ہیں۔" }
+        {
+          "en": "His father is a Muslim.",
+          "ur": "اس کا باپ مسلمان ہے۔"
+        },
+        {
+          "en": "The Muslim's father.",
+          "ur": "مسلمان کا باپ۔"
+        },
+        {
+          "en": "A father is Muslim.",
+          "ur": "ایک باپ مسلمان ہے۔"
+        },
+        {
+          "en": "His brothers are Muslim.",
+          "ur": "اس کے بھائی مسلمان ہیں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -153,16 +166,56 @@
       "id": "ch56-l03-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "أَبٌ", "ar_plain": "اب", "translit": "abun", "en": "father" },
-        { "ar": "أَخٌ", "ar_plain": "اخ", "translit": "akhun", "en": "brother" },
-        { "ar": "ذُو", "ar_plain": "ذو", "translit": "dhul", "en": "possessor of" }
+        {
+          "ar": "أَبٌ",
+          "ar_plain": "اب",
+          "translit": "abun",
+          "en": "father",
+          "ur": "باپ"
+        },
+        {
+          "ar": "أَخٌ",
+          "ar_plain": "اخ",
+          "translit": "akhun",
+          "en": "brother",
+          "ur": "بھائی"
+        },
+        {
+          "ar": "ذُو",
+          "ar_plain": "ذو",
+          "translit": "dhul",
+          "en": "possessor of",
+          "ur": "کے مالک"
+        }
       ],
       "right_column": [
-        { "en": "one of the five special nouns", "ur": "پانچ خاص اسم میں سے ایک" },
-        { "en": "one of the five special nouns", "ur": "پانچ خاص اسم میں سے ایک" },
-        { "en": "one of the five special nouns", "ur": "پانچ خاص اسم میں سے ایک" }
+        {
+          "en": "one of the five special nouns",
+          "ur": "پانچ خاص اسم میں سے ایک"
+        },
+        {
+          "en": "one of the five special nouns",
+          "ur": "پانچ خاص اسم میں سے ایک"
+        },
+        {
+          "en": "one of the five special nouns",
+          "ur": "پانچ خاص اسم میں سے ایک"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "All three — أَبٌ, أَخٌ, and ذُو — are part of the الْأَسْمَاءُ الْخَمْسَةُ. They each restore their dropped واو or ي when taking attached pronouns.",
@@ -193,10 +246,34 @@
         "ur": "یہ لڑکے کا بھائی ہے۔"
       },
       "options": [
-        { "ar": "أَخُهُ", "ar_plain": "اخه", "translit": "akhhuho", "en": "his brother (with pronoun)", "ur": "اس کا بھائی (ضمیر کے ساتھ)" },
-        { "ar": "أَخٌ", "ar_plain": "اخ", "translit": "akhun", "en": "brother (alone)", "ur": "بھائی (اکیلا)" },
-        { "ar": "أَخُ", "ar_plain": "اخ", "translit": "akh", "en": "brother (idafa form)", "ur": "بھائی (اضافہ form)" },
-        { "ar": "الْأَخُ", "ar_plain": "الاخ", "translit": "al-akh", "en": "the brother", "ur": "بھائی (معرفہ)" }
+        {
+          "ar": "أَخُهُ",
+          "ar_plain": "اخه",
+          "translit": "akhhuho",
+          "en": "his brother (with pronoun)",
+          "ur": "اس کا بھائی (ضمیر کے ساتھ)"
+        },
+        {
+          "ar": "أَخٌ",
+          "ar_plain": "اخ",
+          "translit": "akhun",
+          "en": "brother (alone)",
+          "ur": "بھائی (اکیلا)"
+        },
+        {
+          "ar": "أَخُ",
+          "ar_plain": "اخ",
+          "translit": "akh",
+          "en": "brother (idafa form)",
+          "ur": "بھائی (اضافہ form)"
+        },
+        {
+          "ar": "الْأَخُ",
+          "ar_plain": "الاخ",
+          "translit": "al-akh",
+          "en": "the brother",
+          "ur": "بھائی (معرفہ)"
+        }
       ],
       "correct_answer": {
         "ar": "أَخُهُ",
@@ -219,12 +296,39 @@
         "ur": "عرش کا مالک۔"
       },
       "tiles": [
-        { "ar": "ذُو", "ar_plain": "ذو", "translit": "dhul", "en": "possessor of" },
-        { "ar": "الْعَرْشِ", "ar_plain": "العرش", "translit": "al-'arshi", "en": "the Throne (gen.)", "ur": "عرش (جر)" },
-        { "ar": "ذُوالْعَرْشِ", "ar_plain": "ذوالعرش", "translit": "dhul-'arshi", "en": "possessor of the Throne", "ur": "عرش کا مالک" },
-        { "ar": "الْعَرْشُ", "ar_plain": "العرش", "translit": "al-'arshu", "en": "the Throne (nom.)", "ur": "عرش (رفع)" }
+        {
+          "ar": "ذُو",
+          "ar_plain": "ذو",
+          "translit": "dhul",
+          "en": "possessor of",
+          "ur": "کے مالک"
+        },
+        {
+          "ar": "الْعَرْشِ",
+          "ar_plain": "العرش",
+          "translit": "al-'arshi",
+          "en": "the Throne (gen.)",
+          "ur": "عرش (جر)"
+        },
+        {
+          "ar": "ذُوالْعَرْشِ",
+          "ar_plain": "ذوالعرش",
+          "translit": "dhul-'arshi",
+          "en": "possessor of the Throne",
+          "ur": "عرش کا مالک"
+        },
+        {
+          "ar": "الْعَرْشُ",
+          "ar_plain": "العرش",
+          "translit": "al-'arshu",
+          "en": "the Throne (nom.)",
+          "ur": "عرش (رفع)"
+        }
       ],
-      "correct_order": [0, 1],
+      "correct_order": [
+        0,
+        1
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "ذُو (possessor — مَبْنِيّ on damma) + الْعَرْشِ (genitive after ذُو as مضاف إليه). This is the إِضَافَة construction for ذُو.",
@@ -250,12 +354,38 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "ذُو الْعَرْشِ الْكَبِيرُ",
       "words": [
-        { "ar": "ذُو", "ar_plain": "ذو", "translit": "dhul", "en": "possessor of" },
-        { "ar": "الْعَرْشِ", "ar_plain": "العرش", "translit": "al-'arshi", "en": "the Throne (gen.)" },
-        { "ar": "الْكَبِيرُ", "ar_plain": "الكبير", "translit": "al-kabiiru", "en": "the great" }
+        {
+          "ar": "ذُو",
+          "ar_plain": "ذو",
+          "translit": "dhul",
+          "en": "possessor of",
+          "ur": "کے مالک"
+        },
+        {
+          "ar": "الْعَرْشِ",
+          "ar_plain": "العرش",
+          "translit": "al-'arshi",
+          "en": "the Throne (gen.)",
+          "ur": "عرش (جنرل)"
+        },
+        {
+          "ar": "الْكَبِيرُ",
+          "ar_plain": "الكبير",
+          "translit": "al-kabiiru",
+          "en": "the great",
+          "ur": "عظیم"
+        }
       ],
-      "available_roles": ["SUBJECT", "OBJECT", "ADJECTIVE"],
-      "correct_roles": ["SUBJECT", "OBJECT", "ADJECTIVE"],
+      "available_roles": [
+        "SUBJECT",
+        "OBJECT",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "OBJECT",
+        "ADJECTIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "ذُو = مَبْنِيّ (always fixed) + مضاف — it puts الْعَرْشِ in the genitive (جر) as مضاف إليه. الْكَبِيرُ = صفة (رفع — matching ذُو in case and gender).",
@@ -269,13 +399,26 @@
         "ar": "أَبُوهُ فِي الْبَيْتِ",
         "ar_plain": "ابوه في البيت",
         "translit": "abuuho fii al-bayti",
-        "en": "His father is in the house."
+        "en": "His father is in the house.",
+        "ur": "اس کا باپ گھر میں ہے۔"
       },
       "options": [
-        { "en": "His father is in the house.", "ur": "اس کا باپ گھر میں ہے۔" },
-        { "en": "His brother is in the house.", "ur": "اس کا بھائی گھر میں ہے۔" },
-        { "en": "The father of the house.", "ur": "گھر کا باپ۔" },
-        { "en": "His father went to the house.", "ur": "اس کا باپ گھر گیا۔" }
+        {
+          "en": "His father is in the house.",
+          "ur": "اس کا باپ گھر میں ہے۔"
+        },
+        {
+          "en": "His brother is in the house.",
+          "ur": "اس کا بھائی گھر میں ہے۔"
+        },
+        {
+          "en": "The father of the house.",
+          "ur": "گھر کا باپ۔"
+        },
+        {
+          "en": "His father went to the house.",
+          "ur": "اس کا باپ گھر گیا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -300,7 +443,9 @@
       "ur": "عرش کا مالک، بزرگ۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/ghafir-015-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "ذُو is مَبْنِيّ — always fixed on damma (ذُو). It is followed by الْعَرْشِ as مضاف إليه (genitive). الْمَجِيدُ is a صفة (adjective) also in the nominative (رفع) matching ذُو. This is one of the most beautiful phrases in the Quran — ذُو الْعَرْشِ الْمَجِيدُ.",
       "ur": "ذُو مَبْنِيّ ہے — ہمیشہ ذُو پر damma کے ساتھ۔ اس کے بعد الْعَرْشِ مضاف إليه (جر) ہے۔ الْمَجِيدُ صفت ہے جو ذُو سے ملتی ہے۔"

@@ -13,6 +13,8 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
+import { useLanguage, pickLocalized } from "@services/language";
+import { useT } from "@i18n/index";
 import {
   WarshPalette,
   Fonts,
@@ -26,8 +28,10 @@ interface Chapter {
   id: string;
   order: number;
   title: string;
+  titleUr?: string | null;
   titleAr: string;
   description: string;
+  descriptionUr?: string | null;
   isLocked: boolean;
   isCompleted: boolean;
   isSkippedByPlacement: boolean;
@@ -38,6 +42,8 @@ interface Chapter {
 export default function ChaptersScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const language = useLanguage();
+  const t = useT();
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -66,7 +72,7 @@ export default function ChaptersScreen() {
         ]}
       >
         <View style={styles.cardHeader}>
-          <Text style={styles.chapterNum}>Chapter {item.order}</Text>
+          <Text style={styles.chapterNum}>{t("chapter.number", { count: item.order })}</Text>
           {item.isCompleted && (
             <Ionicons name="checkmark-circle" size={16} color={WarshPalette.sage} />
           )}
@@ -74,15 +80,15 @@ export default function ChaptersScreen() {
             <Ionicons name="lock-closed-outline" size={16} color={WarshPalette.subtleBrown} />
           )}
           {item.isSkippedByPlacement && (
-            <Text style={styles.skippedBadge}>Skipped</Text>
+            <Text style={styles.skippedBadge}>{t("chapter.skippedStatus")}</Text>
           )}
         </View>
 
-        <Text style={[styles.title, item.isLocked && styles.titleLocked]}>{item.title}</Text>
+        <Text style={[styles.title, item.isLocked && styles.titleLocked]}>{pickLocalized(item.title, item.titleUr, language)}</Text>
         {item.titleAr ? (
           <ArabicText size="sm" style={styles.titleAr}>{item.titleAr}</ArabicText>
         ) : null}
-        <Text style={styles.description} numberOfLines={2}>{item.description}</Text>
+        <Text style={styles.description} numberOfLines={2}>{pickLocalized(item.description, item.descriptionUr, language)}</Text>
 
         <View style={styles.progressRow}>
           <View style={styles.progressTrack}>
@@ -97,7 +103,7 @@ export default function ChaptersScreen() {
             style={({ pressed }) => [styles.cta, pressed && { opacity: 0.8 }]}
           >
             <Text style={styles.ctaText}>
-              {item.isCompleted || item.isSkippedByPlacement ? "Review" : "Open"}
+              {item.isCompleted || item.isSkippedByPlacement ? t("common.review") : t("common.open")}
             </Text>
           </Pressable>
         )}
@@ -114,7 +120,7 @@ export default function ChaptersScreen() {
         >
           <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>All Chapters</Text>
+        <Text style={styles.headerTitle}>{t("learn.allChapters", { count: chapters.length })}</Text>
       </View>
 
       {loading ? (

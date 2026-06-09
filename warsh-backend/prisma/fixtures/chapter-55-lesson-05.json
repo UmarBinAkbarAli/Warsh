@@ -134,13 +134,26 @@
         "ar": "الْكِتَابُ فِي الْحَقِيبَةِ",
         "ar_plain": "الكتاب في الحقيبة",
         "translit": "al-kitaabu fii al-haqiibati",
-        "en": "The book is in the bag."
+        "en": "The book is in the bag.",
+        "ur": "کتاب تھیلے میں ہے۔"
       },
       "options": [
-        { "en": "The book is in the bag.", "ur": "کتاب بوریے میں ہے۔" },
-        { "en": "The book is on the bag.", "ur": "کتاب بوریے پر ہے۔" },
-        { "en": "The bag is in the book.", "ur": "بوریا کتاب میں ہے۔" },
-        { "en": "The book is from the bag.", "ur": "کتاب بوریے سے ہے۔" }
+        {
+          "en": "The book is in the bag.",
+          "ur": "کتاب بوریے میں ہے۔"
+        },
+        {
+          "en": "The book is on the bag.",
+          "ur": "کتاب بوریے پر ہے۔"
+        },
+        {
+          "en": "The bag is in the book.",
+          "ur": "بوریا کتاب میں ہے۔"
+        },
+        {
+          "en": "The book is from the bag.",
+          "ur": "کتاب بوریے سے ہے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -153,20 +166,86 @@
       "id": "ch55-l05-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "فِي", "ar_plain": "في", "translit": "fii", "en": "in" },
-        { "ar": "عَلَى", "ar_plain": "على", "translit": "alaa", "en": "on" },
-        { "ar": "إِلَى", "ar_plain": "الى", "translit": "ilaa", "en": "to" },
-        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from" },
-        { "ar": "بِ", "ar_plain": "ب", "translit": "bi", "en": "with/by" }
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fii",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "عَلَى",
+          "ar_plain": "على",
+          "translit": "alaa",
+          "en": "on",
+          "ur": "پر"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilaa",
+          "en": "to",
+          "ur": "کو"
+        },
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "بِ",
+          "ar_plain": "ب",
+          "translit": "bi",
+          "en": "with/by",
+          "ur": "کے ساتھ/بذریعہ"
+        }
       ],
       "right_column": [
-        { "en": "in / inside", "ur": "میں / اندر" },
-        { "en": "on / upon", "ur": "پر / اوپر" },
-        { "en": "to / toward", "ur": "کی طرف / تک" },
-        { "en": "from", "ur": "سے" },
-        { "en": "with / by", "ur": "ساتھ / ذریعے" }
+        {
+          "en": "in / inside",
+          "ur": "میں / اندر"
+        },
+        {
+          "en": "on / upon",
+          "ur": "پر / اوپر"
+        },
+        {
+          "en": "to / toward",
+          "ur": "کی طرف / تک"
+        },
+        {
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "en": "with / by",
+          "ur": "ساتھ / ذریعے"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3], [4, 4]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "These are the five most common prepositions in Arabic. Each puts the following noun in the genitive (جر).",
@@ -197,10 +276,34 @@
         "ur": "میں مسجد کی طرف گیا۔"
       },
       "options": [
-        { "ar": "إِلَى", "ar_plain": "الى", "translit": "ilaa", "en": "to (preposition)", "ur": "کی طرف (حرف جر)" },
-        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from (preposition)", "ur": "سے (حرف جر)" },
-        { "ar": "فِي", "ar_plain": "في", "translit": "fii", "en": "in (preposition)", "ur": "میں (حرف جر)" },
-        { "ar": "عَلَى", "ar_plain": "على", "translit": "alaa", "en": "on (preposition)", "ur": "پر (حرف جر)" }
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilaa",
+          "en": "to (preposition)",
+          "ur": "کی طرف (حرف جر)"
+        },
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from (preposition)",
+          "ur": "سے (حرف جر)"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fii",
+          "en": "in (preposition)",
+          "ur": "میں (حرف جر)"
+        },
+        {
+          "ar": "عَلَى",
+          "ar_plain": "على",
+          "translit": "alaa",
+          "en": "on (preposition)",
+          "ur": "پر (حرف جر)"
+        }
       ],
       "correct_answer": {
         "ar": "إِلَى",
@@ -223,13 +326,48 @@
         "ur": "طالب علم استاد کے ساتھ بیٹھا۔"
       },
       "tiles": [
-        { "ar": "جَلَسَ", "ar_plain": "جلس", "translit": "jalasa", "en": "sat" },
-        { "ar": "الطَّالِبُ", "ar_plain": "الطالب", "translit": "at-taalibu", "en": "the student" },
-        { "ar": "بِ", "ar_plain": "ب", "translit": "bi", "en": "with" },
-        { "ar": "الْأُسْتَاذِ", "ar_plain": "الاستاذ", "translit": "al-ustadhi", "en": "the teacher (gen.)", "ur": "استاد (جر)" },
-        { "ar": "الْأُسْتَاذُ", "ar_plain": "الاستاذ", "translit": "al-ustadhu", "en": "the teacher (nom.)", "ur": "استاد (رفع)" }
+        {
+          "ar": "جَلَسَ",
+          "ar_plain": "جلس",
+          "translit": "jalasa",
+          "en": "sat",
+          "ur": "بیٹھ گیا"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "at-taalibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        },
+        {
+          "ar": "بِ",
+          "ar_plain": "ب",
+          "translit": "bi",
+          "en": "with",
+          "ur": "کے ساتھ"
+        },
+        {
+          "ar": "الْأُسْتَاذِ",
+          "ar_plain": "الاستاذ",
+          "translit": "al-ustadhi",
+          "en": "the teacher (gen.)",
+          "ur": "استاد (جر)"
+        },
+        {
+          "ar": "الْأُسْتَاذُ",
+          "ar_plain": "الاستاذ",
+          "translit": "al-ustadhu",
+          "en": "the teacher (nom.)",
+          "ur": "استاد (رفع)"
+        }
       ],
-      "correct_order": [1, 0, 2, 3],
+      "correct_order": [
+        1,
+        0,
+        2,
+        3
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الطَّالِبُ (subject) + جَلَسَ (verb) + بِ (preposition) + الْأُسْتَاذِ (genitive). The preposition بِ governs the genitive on الْأُسْتَاذِ.",
@@ -241,13 +379,47 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "نَصَرَ الْجَيْشُ بِالسَّيْفِ",
       "words": [
-        { "ar": "نَصَرَ", "ar_plain": "نصر", "translit": "nasara", "en": "helped/conquered" },
-        { "ar": "الْجَيْشُ", "ar_plain": "الجيش", "translit": "al-jayshu", "en": "the army" },
-        { "ar": "بِ", "ar_plain": "ب", "translit": "bi", "en": "with" },
-        { "ar": "السَّيْفِ", "ar_plain": "السيف", "translit": "as-sayfi", "en": "the sword" }
+        {
+          "ar": "نَصَرَ",
+          "ar_plain": "نصر",
+          "translit": "nasara",
+          "en": "helped/conquered",
+          "ur": "مدد کی / فتح کی۔"
+        },
+        {
+          "ar": "الْجَيْشُ",
+          "ar_plain": "الجيش",
+          "translit": "al-jayshu",
+          "en": "the army",
+          "ur": "فوج"
+        },
+        {
+          "ar": "بِ",
+          "ar_plain": "ب",
+          "translit": "bi",
+          "en": "with",
+          "ur": "کے ساتھ"
+        },
+        {
+          "ar": "السَّيْفِ",
+          "ar_plain": "السيف",
+          "translit": "as-sayfi",
+          "en": "the sword",
+          "ur": "تلوار"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PREPOSITION", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT", "PREPOSITION", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PREPOSITION",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "PREPOSITION",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "نَصَرَ = VERB (مَبْنِيّ). الْجَيْشُ = SUBJECT (رفع). بِ = PREPOSITION (مَبْنِيّ). السَّيْفِ = OBJECT (جر after بِ — the sword was the instrument).",
@@ -271,13 +443,26 @@
         "ar": "خَرَجْتُ مِنَ الْبَيْتِ",
         "ar_plain": "خرجت من البيت",
         "translit": "kharajtu minal-bayti",
-        "en": "I went out from the house."
+        "en": "I went out from the house.",
+        "ur": "میں گھر سے نکل گیا۔"
       },
       "options": [
-        { "en": "I went out from the house.", "ur": "میں گھر سے نکلا۔" },
-        { "en": "I went out to the house.", "ur": "میں گھر کو نکلا۔" },
-        { "en": "I came in from the house.", "ur": "میں گھر سے آیا۔" },
-        { "en": "I went out in the house.", "ur": "میں گھر میں نکلا۔" }
+        {
+          "en": "I went out from the house.",
+          "ur": "میں گھر سے نکلا۔"
+        },
+        {
+          "en": "I went out to the house.",
+          "ur": "میں گھر کو نکلا۔"
+        },
+        {
+          "en": "I came in from the house.",
+          "ur": "میں گھر سے آیا۔"
+        },
+        {
+          "en": "I went out in the house.",
+          "ur": "میں گھر میں نکلا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -302,7 +487,10 @@
       "ur": "مبارک ہے وہ جس کے ہاتھ میں بادشاہت ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-mulk-001-mishary.mp3"
     },
-    "highlighted_word_indices": [1, 2],
+    "highlighted_word_indices": [
+      1,
+      2
+    ],
     "noor_explanation": {
       "en": "بِ is a preposition that puts the following noun in the genitive (جر). يَدِهِ is attached: يَدْ = hand, ہِ = his. The ہِ is مجرور because بِ governs it. This pattern — noun plus attached possessive pronoun — is one of the most common in the entire Quran.",
       "ur": "بِ ایک حرف جر ہے جو اگلے لفظ کو جر میں رکھتا ہے۔ يَدِهِ میں ہِ (اس کا) بِ کی وجہ سے جر میں ہے۔"

@@ -18,7 +18,7 @@ export async function GET(request: Request, { params }: Props) {
     include: {
       lessons: {
         orderBy: { order: "asc" },
-        select: { id: true, title: true, titleAr: true, template: true, xpReward: true }
+        select: { id: true, title: true, titleUr: true, titleAr: true, template: true, xpReward: true }
       }
     }
   });

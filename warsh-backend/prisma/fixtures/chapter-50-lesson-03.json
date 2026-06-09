@@ -96,10 +96,22 @@
         "ur": "کیا اسے معلوم نہیں کہ اللہ ہی روشن حق ہے؟"
       },
       "options": [
-        { "en": "Does he not know that Allah is the clear Truth?", "ur": "کیا اسے معلوم نہیں کہ اللہ ہی روشن حق ہے؟" },
-        { "en": "Does he know that Allah is the truth?", "ur": "کیا اسے معلوم ہے کہ اللہ سچ ہے؟" },
-        { "en": "He knows that Allah is the truth.", "ur": "اسے معلوم ہے کہ اللہ سچ ہے۔" },
-        { "en": "Does he not know the clear truth?", "ur": "کیا اسے روشن سچ معلوم نہیں؟" }
+        {
+          "en": "Does he not know that Allah is the clear Truth?",
+          "ur": "کیا اسے معلوم نہیں کہ اللہ ہی روشن حق ہے؟"
+        },
+        {
+          "en": "Does he know that Allah is the truth?",
+          "ur": "کیا اسے معلوم ہے کہ اللہ سچ ہے؟"
+        },
+        {
+          "en": "He knows that Allah is the truth.",
+          "ur": "اسے معلوم ہے کہ اللہ سچ ہے۔"
+        },
+        {
+          "en": "Does he not know the clear truth?",
+          "ur": "کیا اسے روشن سچ معلوم نہیں؟"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -170,18 +182,71 @@
       "type": "MATCHING",
       "id": "ch50-l03-ex04",
       "left_column": [
-        { "ar": "الْحَقُّ", "ar_plain": "الحق", "translit": "al-haqqu", "en": "the Truth" },
-        { "ar": "الْمُبِينُ", "ar_plain": "المبين", "translit": "al-mubiinu", "en": "the clear" },
-        { "ar": "يَعْلَمْ", "ar_plain": "يعلم", "translit": "ya'alamu", "en": "he knows" },
-        { "ar": "أَلَمْ", "ar_plain": "ألم", "translit": "a-lam", "en": "does he not" }
+        {
+          "ar": "الْحَقُّ",
+          "ar_plain": "الحق",
+          "translit": "al-haqqu",
+          "en": "the Truth",
+          "ur": "سچائی"
+        },
+        {
+          "ar": "الْمُبِينُ",
+          "ar_plain": "المبين",
+          "translit": "al-mubiinu",
+          "en": "the clear",
+          "ur": "واضح"
+        },
+        {
+          "ar": "يَعْلَمْ",
+          "ar_plain": "يعلم",
+          "translit": "ya'alamu",
+          "en": "he knows",
+          "ur": "وہ جانتا ہے"
+        },
+        {
+          "ar": "أَلَمْ",
+          "ar_plain": "ألم",
+          "translit": "a-lam",
+          "en": "does he not",
+          "ur": "کیا وہ نہیں؟"
+        }
       ],
       "right_column": [
-        { "en": "the Truth", "ur": "سچ" },
-        { "en": "the clear", "ur": "روشن" },
-        { "en": "he knows", "ur": "وہ جانتا ہے" },
-        { "en": "does he not", "ur": "کیا نہیں" }
+        {
+          "en": "the Truth",
+          "ur": "سچ"
+        },
+        {
+          "en": "the clear",
+          "ur": "روشن"
+        },
+        {
+          "en": "he knows",
+          "ur": "وہ جانتا ہے"
+        },
+        {
+          "en": "does he not",
+          "ur": "کیا نہیں"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -192,12 +257,41 @@
         "ur": "بیشک اللہ روشن سچ ہے۔"
       },
       "tiles": [
-        { "ar": "إِنَّ", "ar_plain": "إن", "translit": "inna", "en": "indeed", "ur": "بیشک" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah", "ur": "اللہ" },
-        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "He is", "ur": "وہ ہے" },
-        { "ar": "الْحَقُّ", "ar_plain": "الحق", "translit": "al-haqqu", "en": "the Truth", "ur": "سچ" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بیشک"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "He is",
+          "ur": "وہ ہے"
+        },
+        {
+          "ar": "الْحَقُّ",
+          "ar_plain": "الحق",
+          "translit": "al-haqqu",
+          "en": "the Truth",
+          "ur": "سچ"
+        }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -205,13 +299,47 @@
       "id": "ch50-l03-ex06",
       "sentence_ar": "أَنَّ اللَّهَ هُوَ الْحَقُّ",
       "words": [
-        { "ar": "أَنَّ", "ar_plain": "أن", "translit": "anna", "en": "that" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah" },
-        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "He" },
-        { "ar": "الْحَقُّ", "ar_plain": "الحق", "translit": "al-haqqu", "en": "the Truth" }
+        {
+          "ar": "أَنَّ",
+          "ar_plain": "أن",
+          "translit": "anna",
+          "en": "that",
+          "ur": "کہ"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "He",
+          "ur": "وہ"
+        },
+        {
+          "ar": "الْحَقُّ",
+          "ar_plain": "الحق",
+          "translit": "al-haqqu",
+          "en": "the Truth",
+          "ur": "سچائی"
+        }
       ],
-      "available_roles": ["PARTICLE", "SUBJECT", "PREDICATE", "DEMONSTRATIVE"],
-      "correct_roles": ["PARTICLE", "SUBJECT", "DEMONSTRATIVE", "PREDICATE"],
+      "available_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREDICATE",
+        "DEMONSTRATIVE"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "DEMONSTRATIVE",
+        "PREDICATE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "أَنَّ governs the accusative. اللَّهَ is the subject (accusative). هُوَ is the pronoun referring to Allah. الْحَقُّ is the predicate.",
@@ -229,10 +357,22 @@
         "ur": "وہ اللہ بادشاہ، حق ہے"
       },
       "options": [
-        { "en": "He is Allah, the King, the Truth", "ur": "وہ اللہ بادشاہ، حق ہے" },
-        { "en": "He is the true King of Allah", "ur": "وہ اللہ کا سچا بادشاہ ہے" },
-        { "en": "Allah is the King of Truth", "ur": "اللہ سچ کا بادشاہ ہے" },
-        { "en": "He is the King and Allah is truth", "ur": "وہ بادشاہ ہے اور اللہ سچ ہے" }
+        {
+          "en": "He is Allah, the King, the Truth",
+          "ur": "وہ اللہ بادشاہ، حق ہے"
+        },
+        {
+          "en": "He is the true King of Allah",
+          "ur": "وہ اللہ کا سچا بادشاہ ہے"
+        },
+        {
+          "en": "Allah is the King of Truth",
+          "ur": "اللہ سچ کا بادشاہ ہے"
+        },
+        {
+          "en": "He is the King and Allah is truth",
+          "ur": "وہ بادشاہ ہے اور اللہ سچ ہے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -257,7 +397,9 @@
       "ur": "کیا اسے معلوم نہیں کہ اللہ ہی روشن حق ہے؟",
       "audio_url": "https://cdn.warsh.app/audio/quran/az-zumar-009-mishary.mp3"
     },
-    "highlighted_word_indices": [4],
+    "highlighted_word_indices": [
+      4
+    ],
     "noor_explanation": {
       "en": "الْحَقُّ الْمُبِينُ is one of the most beautiful descriptions of Allah in the Quran. It means 'the clear, evident Truth' — the reality that needs no proof. When you read this, remember: Allah is the Truth. Everything else is a test.",
       "ur": "الْحَقُّ الْمُبِينُ قرآن میں اللہ کی سب سے خوبصورت descriptors میں سے ایک ہے۔ اس کا مطلب ہے 'صاف، ظاہر سچ' — حقیقت جو کسی proof کی ضرورت نہیں رکھتی۔ جب آپ یہ پڑھیں، یاد رکھیں: اللہ سچ ہے۔ ہر دوسری چیز ایک امتحان ہے۔"

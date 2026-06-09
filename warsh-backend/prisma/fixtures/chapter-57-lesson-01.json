@@ -145,18 +145,71 @@
       "id": "ch57-l01-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "قَالَ", "ar_plain": "قال", "translit": "qaala", "en": "he said" },
-        { "ar": "كَانَ", "ar_plain": "كان", "translit": "kaana", "en": "he was" },
-        { "ar": "رَأَى", "ar_plain": "راى", "translit": "ra'aa", "en": "he saw" },
-        { "ar": "آمَنَ", "ar_plain": "آمن", "translit": "aamana", "en": "he believed" }
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qaala",
+          "en": "he said",
+          "ur": "انہوں نے کہا"
+        },
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kaana",
+          "en": "he was",
+          "ur": "وہ تھا"
+        },
+        {
+          "ar": "رَأَى",
+          "ar_plain": "راى",
+          "translit": "ra'aa",
+          "en": "he saw",
+          "ur": "اس نے دیکھا"
+        },
+        {
+          "ar": "آمَنَ",
+          "ar_plain": "آمن",
+          "translit": "aamana",
+          "en": "he believed",
+          "ur": "اس نے یقین کیا"
+        }
       ],
       "right_column": [
-        { "en": "weak — و in middle (ق-و-ل)", "ur": "ضعیف — و درمیان (ق-و-ل)" },
-        { "en": "weak — و in middle (ك-و-ن)", "ur": "ضعیف — و درمیان (ك-و-ن)" },
-        { "en": "weak — ي as last letter (ر-أ-ي)", "ur": "ضعیف — ي آخری (ر-أ-ي)" },
-        { "en": "weak — ا as first letter (ء-م-ن)", "ur": "ضعیف — ا پہلی (ء-م-ن)" }
+        {
+          "en": "weak — و in middle (ق-و-ل)",
+          "ur": "ضعیف — و درمیان (ق-و-ل)"
+        },
+        {
+          "en": "weak — و in middle (ك-و-ن)",
+          "ur": "ضعیف — و درمیان (ك-و-ن)"
+        },
+        {
+          "en": "weak — ي as last letter (ر-أ-ي)",
+          "ur": "ضعیف — ي آخری (ر-أ-ي)"
+        },
+        {
+          "en": "weak — ا as first letter (ء-م-ن)",
+          "ur": "ضعیف — ا پہلی (ء-م-ن)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "All four are weak verbs. قَالَ and كَانَ have و as the middle root letter. رَأَى has ي as the last root letter. آمَنَ has ا as the first root letter.",
@@ -170,13 +223,26 @@
         "ar": "كَانَ اللَّهُ غَفُورًا",
         "ar_plain": "كان الله غفورا",
         "translit": "kaana allaahu ghafuuran",
-        "en": "Allah was Forgiving."
+        "en": "Allah was Forgiving.",
+        "ur": "اللہ بخشنے والا تھا۔"
       },
       "options": [
-        { "en": "Allah was Forgiving.", "ur": "اللہ بخشنے والا تھا۔" },
-        { "en": "The forgiver was Allah.", "ur": "بخشنے والا اللہ تھا۔" },
-        { "en": "Allah forgives.", "ur": "اللہ بخشتا ہے۔" },
-        { "en": "Allah is the Forgiver.", "ur": "اللہ بخشنے والا ہے۔" }
+        {
+          "en": "Allah was Forgiving.",
+          "ur": "اللہ بخشنے والا تھا۔"
+        },
+        {
+          "en": "The forgiver was Allah.",
+          "ur": "بخشنے والا اللہ تھا۔"
+        },
+        {
+          "en": "Allah forgives.",
+          "ur": "اللہ بخشتا ہے۔"
+        },
+        {
+          "en": "Allah is the Forgiver.",
+          "ur": "اللہ بخشنے والا ہے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -195,10 +261,34 @@
         "ur": "میں نے ابراہیم کو دیکھا۔"
       },
       "options": [
-        { "ar": "إِبْرَاهِيمَ", "ar_plain": "ابراهيم", "translit": "ibrahiima", "en": "Ibrahim (acc.)", "ur": "ابراہیم (نصب)" },
-        { "ar": "إِبْرَاهِيمُ", "ar_plain": "ابراهيم", "translit": "ibrahiimu", "en": "Ibrahim (nom.)", "ur": "ابراہیم (رفع)" },
-        { "ar": "إِبْرَاهِيمٍ", "ar_plain": "ابراهيم", "translit": "ibrahiimin", "en": "Ibrahim (gen.)", "ur": "ابراہیم (جر)" },
-        { "ar": "إِبْرَاهِيمًا", "ar_plain": "ابراهيم", "translit": "ibrahiimaa", "en": "Ibrahim (dual)", "ur": "ابراہیم (مثنی)" }
+        {
+          "ar": "إِبْرَاهِيمَ",
+          "ar_plain": "ابراهيم",
+          "translit": "ibrahiima",
+          "en": "Ibrahim (acc.)",
+          "ur": "ابراہیم (نصب)"
+        },
+        {
+          "ar": "إِبْرَاهِيمُ",
+          "ar_plain": "ابراهيم",
+          "translit": "ibrahiimu",
+          "en": "Ibrahim (nom.)",
+          "ur": "ابراہیم (رفع)"
+        },
+        {
+          "ar": "إِبْرَاهِيمٍ",
+          "ar_plain": "ابراهيم",
+          "translit": "ibrahiimin",
+          "en": "Ibrahim (gen.)",
+          "ur": "ابراہیم (جر)"
+        },
+        {
+          "ar": "إِبْرَاهِيمًا",
+          "ar_plain": "ابراهيم",
+          "translit": "ibrahiimaa",
+          "en": "Ibrahim (dual)",
+          "ur": "ابراہیم (مثنی)"
+        }
       ],
       "correct_answer": {
         "ar": "إِبْرَاهِيمَ",
@@ -221,12 +311,39 @@
         "ur": "مومنین نے ایمان لایا۔"
       },
       "tiles": [
-        { "ar": "آمَنَ", "ar_plain": "آمن", "translit": "aamana", "en": "he believed" },
-        { "ar": "الْمُؤْمِنُونَ", "ar_plain": "المؤمنون", "translit": "al-mu'minuuna", "en": "the believers" },
-        { "ar": "آمَنُوا", "ar_plain": "آمنوا", "translit": "aamanuu", "en": "they believed (past)", "ur": "انہوں نے ایمان لایا" },
-        { "ar": "يُؤْمِنُونَ", "ar_plain": "يؤمنون", "translit": "yu'minuuna", "en": "they believe (present)", "ur": "وہ ایمان رکھتے ہیں" }
+        {
+          "ar": "آمَنَ",
+          "ar_plain": "آمن",
+          "translit": "aamana",
+          "en": "he believed",
+          "ur": "اس نے یقین کیا"
+        },
+        {
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minuuna",
+          "en": "the believers",
+          "ur": "مومنین"
+        },
+        {
+          "ar": "آمَنُوا",
+          "ar_plain": "آمنوا",
+          "translit": "aamanuu",
+          "en": "they believed (past)",
+          "ur": "انہوں نے ایمان لایا"
+        },
+        {
+          "ar": "يُؤْمِنُونَ",
+          "ar_plain": "يؤمنون",
+          "translit": "yu'minuuna",
+          "en": "they believe (present)",
+          "ur": "وہ ایمان رکھتے ہیں"
+        }
       ],
-      "correct_order": [1, 0],
+      "correct_order": [
+        1,
+        0
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الْمُؤْمِنُونَ (subject) + آمَنَ (past tense verb). In the past tense, آمَنَ conjugates to آمَنُوا for plural (they believed). The subject الْمُؤْمِنُونَ triggers the plural form.",
@@ -252,12 +369,38 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "قَالَ إِبْرَاهِيمُ رَبَّهُ",
       "words": [
-        { "ar": "قَالَ", "ar_plain": "قال", "translit": "qaala", "en": "he said" },
-        { "ar": "إِبْرَاهِيمُ", "ar_plain": "ابراهيم", "translit": "ibrahiimu", "en": "Ibrahim" },
-        { "ar": "رَبَّهُ", "ar_plain": "ربه", "translit": "rabbuhu", "en": "his Lord" }
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qaala",
+          "en": "he said",
+          "ur": "انہوں نے کہا"
+        },
+        {
+          "ar": "إِبْرَاهِيمُ",
+          "ar_plain": "ابراهيم",
+          "translit": "ibrahiimu",
+          "en": "Ibrahim",
+          "ur": "ابراہیم"
+        },
+        {
+          "ar": "رَبَّهُ",
+          "ar_plain": "ربه",
+          "translit": "rabbuhu",
+          "en": "his Lord",
+          "ur": "اس کا رب"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "قَالَ = VERB (weak verb, past tense, مَبْنِيّ). إِبْرَاهِيمُ = SUBJECT (رفع — مقصور noun, the ي carries dhamma). رَبَّهُ = 'his Lord' (رَبّ + هُ — رَبّ is not الخمسة here; it is مضاف and هُ is the attached pronoun).",
@@ -271,13 +414,26 @@
         "ar": "آمَنُوا بِاللَّهِ وَرَسُولِهِ",
         "ar_plain": "آمنوا بالله ورسوله",
         "translit": "aamanuu bi-laahi wa rasuulihi",
-        "en": "They believed in Allah and His Messenger."
+        "en": "They believed in Allah and His Messenger.",
+        "ur": "وہ اللہ اور اس کے رسول پر ایمان رکھتے تھے۔"
       },
       "options": [
-        { "en": "They believed in Allah and His Messenger.", "ur": "انہوں نے اللہ اور اس کے رسول پر ایمان لایا۔" },
-        { "en": "We believed in Allah and His Messenger.", "ur": "ہم نے اللہ اور اس کے رسول پر ایمان لایا۔" },
-        { "en": "He believed in Allah and His Messenger.", "ur": "اس نے اللہ اور اس کے رسول پر ایمان لایا۔" },
-        { "en": "Believe in Allah and His Messenger!", "ur": "اللہ اور اس کے رسول پر ایمان لاو!" }
+        {
+          "en": "They believed in Allah and His Messenger.",
+          "ur": "انہوں نے اللہ اور اس کے رسول پر ایمان لایا۔"
+        },
+        {
+          "en": "We believed in Allah and His Messenger.",
+          "ur": "ہم نے اللہ اور اس کے رسول پر ایمان لایا۔"
+        },
+        {
+          "en": "He believed in Allah and His Messenger.",
+          "ur": "اس نے اللہ اور اس کے رسول پر ایمان لایا۔"
+        },
+        {
+          "en": "Believe in Allah and His Messenger!",
+          "ur": "اللہ اور اس کے رسول پر ایمان لاو!"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -302,7 +458,9 @@
       "ur": "اور جب ابراہیم نے کہا، 'میرے رب! مجھے دکھا کہ تو مُردوں کو کیسے زندہ کرتا ہے۔'",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-260-mishary.mp3"
     },
-    "highlighted_word_indices": [1],
+    "highlighted_word_indices": [
+      1
+    ],
     "noor_explanation": {
       "en": "قَالَ is a weak verb (ق-و-ل) — it has و as the middle root letter. إِبْرَاهِيمُ is a مقصور noun (ends in ي). رَبِّ is رَبّ (Lord) with the attached possessive ي (my). تُحْي is the present tense of ح-ي-ي (to give life) — it begins with ت which marks second person (you). الْمَوْتَى is the plural of مَيِّت (dead person), which is itself related to the weak root م-و-ت.",
       "ur": "قَالَ ایک weak verb ہے (ق-و-ل) — و درمیانی root letter ہے۔ إِبْرَاهِيمُ ایک مقصور noun ہے (ي پر ختم)۔"

@@ -68,10 +68,22 @@
         "ur": "پس جب تم finished ہو جاؤ تو کھڑے ہو جاؤ"
       },
       "options": [
-        { "en": "So when you have finished, then stand up", "ur": "پس جب تم finished ہو جاؤ تو کھڑے ہو جاؤ" },
-        { "en": "And when you stand, then finish", "ur": "اور جب تم کھڑے ہو تو finished کرو" },
-        { "en": "So if you finished, then sit down", "ur": "تو اگر تم finished ہو جاؤ تو بیٹھ جاؤ" },
-        { "en": "When you finished standing, then sit", "ur": "جب تم کھڑے ہونے سے finished ہو تو بیٹھ" }
+        {
+          "en": "So when you have finished, then stand up",
+          "ur": "پس جب تم finished ہو جاؤ تو کھڑے ہو جاؤ"
+        },
+        {
+          "en": "And when you stand, then finish",
+          "ur": "اور جب تم کھڑے ہو تو finished کرو"
+        },
+        {
+          "en": "So if you finished, then sit down",
+          "ur": "تو اگر تم finished ہو جاؤ تو بیٹھ جاؤ"
+        },
+        {
+          "en": "When you finished standing, then sit",
+          "ur": "جب تم کھڑے ہونے سے finished ہو تو بیٹھ"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -94,18 +106,71 @@
       "type": "MATCHING",
       "id": "ch53-review-ex03",
       "left_column": [
-        { "ar": "وَ", "ar_plain": "و", "translit": "wa", "en": "addition or contrast" },
-        { "ar": "فَ", "ar_plain": "ف", "translit": "fa", "en": "result or consequence" },
-        { "ar": "إِلَّا", "ar_plain": "إلا", "translit": "illaa", "en": "exception" },
-        { "ar": "أَمَّا", "ar_plain": "أما", "translit": "amma", "en": "topic introduction" }
+        {
+          "ar": "وَ",
+          "ar_plain": "و",
+          "translit": "wa",
+          "en": "addition or contrast",
+          "ur": "اضافہ یا برعکس"
+        },
+        {
+          "ar": "فَ",
+          "ar_plain": "ف",
+          "translit": "fa",
+          "en": "result or consequence",
+          "ur": "نتیجہ یا نتیجہ"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "exception",
+          "ur": "استثناء"
+        },
+        {
+          "ar": "أَمَّا",
+          "ar_plain": "أما",
+          "translit": "amma",
+          "en": "topic introduction",
+          "ur": "موضوع کا تعارف"
+        }
       ],
       "right_column": [
-        { "en": "Glue type: conjunction", "ur": "Glue type: conjunction" },
-        { "en": "Glue type: result", "ur": "Glue type: result" },
-        { "en": "Glue type: exception", "ur": "Glue type: exception" },
-        { "en": "Glue type: topic shift", "ur": "Glue type: topic shift" }
+        {
+          "en": "Glue type: conjunction",
+          "ur": "Glue type: conjunction"
+        },
+        {
+          "en": "Glue type: result",
+          "ur": "Glue type: result"
+        },
+        {
+          "en": "Glue type: exception",
+          "ur": "Glue type: exception"
+        },
+        {
+          "en": "Glue type: topic shift",
+          "ur": "Glue type: topic shift"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -164,15 +229,65 @@
         "ur": "بیشک انسان نقصان میں ہے، سوائے ان کے جو ایمان لائے۔"
       },
       "tiles": [
-        { "ar": "إِنَّ", "ar_plain": "إن", "translit": "inna", "en": "indeed" },
-        { "ar": "الْإِنْسَانَ", "ar_plain": "الإنسان", "translit": "al-insaana", "en": "mankind" },
-        { "ar": "لَفِي", "ar_plain": "لفي", "translit": "lafii", "en": "is in" },
-        { "ar": "خُسْرٍ", "ar_plain": "خسر", "translit": "khusrin", "en": "loss" },
-        { "ar": "إِلَّا", "ar_plain": "إلا", "translit": "illaa", "en": "except" },
-        { "ar": "الَّذِينَ", "ar_plain": "الذين", "translit": "alladhiina", "en": "those who" },
-        { "ar": "آمَنُوا", "ar_plain": "آمنوا", "translit": "aamanoo", "en": "believed" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "الْإِنْسَانَ",
+          "ar_plain": "الإنسان",
+          "translit": "al-insaana",
+          "en": "mankind",
+          "ur": "بنی نوع انسان"
+        },
+        {
+          "ar": "لَفِي",
+          "ar_plain": "لفي",
+          "translit": "lafii",
+          "en": "is in",
+          "ur": "میں ہے"
+        },
+        {
+          "ar": "خُسْرٍ",
+          "ar_plain": "خسر",
+          "translit": "khusrin",
+          "en": "loss",
+          "ur": "نقصان"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
+        },
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhiina",
+          "en": "those who",
+          "ur": "وہ لوگ جو"
+        },
+        {
+          "ar": "آمَنُوا",
+          "ar_plain": "آمنوا",
+          "translit": "aamanoo",
+          "en": "believed",
+          "ur": "یقین کیا"
+        }
       ],
-      "correct_order": [0, 1, 2, 3, 4, 5, 6],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "xp_value": 1
     },
     {
@@ -180,13 +295,47 @@
       "id": "ch53-review-ex06",
       "sentence_ar": "إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ",
       "words": [
-        { "ar": "إِنَّ", "ar_plain": "إن", "translit": "inna", "en": "indeed" },
-        { "ar": "الْإِنْسَانَ", "ar_plain": "الإنسان", "translit": "al-insaana", "en": "mankind" },
-        { "ar": "لَفِي", "ar_plain": "لفي", "translit": "lafii", "en": "certainly in" },
-        { "ar": "خُسْرٍ", "ar_plain": "خسر", "translit": "khusrin", "en": "loss" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "الْإِنْسَانَ",
+          "ar_plain": "الإنسان",
+          "translit": "al-insaana",
+          "en": "mankind",
+          "ur": "بنی نوع انسان"
+        },
+        {
+          "ar": "لَفِي",
+          "ar_plain": "لفي",
+          "translit": "lafii",
+          "en": "certainly in",
+          "ur": "یقینی طور پر"
+        },
+        {
+          "ar": "خُسْرٍ",
+          "ar_plain": "خسر",
+          "translit": "khusrin",
+          "en": "loss",
+          "ur": "نقصان"
+        }
       ],
-      "available_roles": ["PARTICLE", "SUBJECT", "PREPOSITION", "NOUN"],
-      "correct_roles": ["PARTICLE", "SUBJECT", "PREPOSITION", "NOUN"],
+      "available_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREPOSITION",
+        "NOUN"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREPOSITION",
+        "NOUN"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "إِنَّ opens a nominal sentence. الْإِنْسَانَ is the subject in accusative. لَفِي is 'certainly in' — the لَ is an emphatic particle attached to the preposition. خُسْرٍ is the noun governed by the preposition.",
@@ -204,10 +353,22 @@
         "ur": "سوائے ان لوگوں کے جو ایمان لائے"
       },
       "options": [
-        { "en": "Except those who believed", "ur": "سوائے ان لوگوں کے جو ایمان لائے" },
-        { "en": "And those who believed", "ur": "اور وہ لوگ جو ایمان لائے" },
-        { "en": "Those who believed", "ur": "وہ لوگ جو ایمان لائے" },
-        { "en": "Except if they believe", "ur": "سوائے اگر وہ ایمان لائیں" }
+        {
+          "en": "Except those who believed",
+          "ur": "سوائے ان لوگوں کے جو ایمان لائے"
+        },
+        {
+          "en": "And those who believed",
+          "ur": "اور وہ لوگ جو ایمان لائے"
+        },
+        {
+          "en": "Those who believed",
+          "ur": "وہ لوگ جو ایمان لائے"
+        },
+        {
+          "en": "Except if they believe",
+          "ur": "سوائے اگر وہ ایمان لائیں"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -224,16 +385,73 @@
         "ur": "عصر کی قسم سے۔ انسان نقصان میں ہے، سوائے ان کے جو ایمان لائے اور نیک اعمال کیے۔"
       },
       "tiles": [
-        { "ar": "وَالْعَصْرِ", "ar_plain": "والعصر", "translit": "wa al-'asri", "en": "By the afternoon" },
-        { "ar": "إِنَّ", "ar_plain": "إن", "translit": "inna", "en": "indeed" },
-        { "ar": "الْإِنْسَانَ", "ar_plain": "الإنسان", "translit": "al-insaana", "en": "mankind" },
-        { "ar": "لَفِي", "ar_plain": "لفي", "translit": "lafii", "en": "is in" },
-        { "ar": "خُسْرٍ", "ar_plain": "خسر", "translit": "khusrin", "en": "loss" },
-        { "ar": "إِلَّا", "ar_plain": "إلا", "translit": "illaa", "en": "except" },
-        { "ar": "الَّذِينَ", "ar_plain": "الذين", "translit": "alladhiina", "en": "those who" },
-        { "ar": "آمَنُوا", "ar_plain": "آمنوا", "translit": "aamanoo", "en": "believed" }
+        {
+          "ar": "وَالْعَصْرِ",
+          "ar_plain": "والعصر",
+          "translit": "wa al-'asri",
+          "en": "By the afternoon",
+          "ur": "دوپہر تک"
+        },
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "الْإِنْسَانَ",
+          "ar_plain": "الإنسان",
+          "translit": "al-insaana",
+          "en": "mankind",
+          "ur": "بنی نوع انسان"
+        },
+        {
+          "ar": "لَفِي",
+          "ar_plain": "لفي",
+          "translit": "lafii",
+          "en": "is in",
+          "ur": "میں ہے"
+        },
+        {
+          "ar": "خُسْرٍ",
+          "ar_plain": "خسر",
+          "translit": "khusrin",
+          "en": "loss",
+          "ur": "نقصان"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
+        },
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhiina",
+          "en": "those who",
+          "ur": "وہ لوگ جو"
+        },
+        {
+          "ar": "آمَنُوا",
+          "ar_plain": "آمنوا",
+          "translit": "aamanoo",
+          "en": "believed",
+          "ur": "یقین کیا"
+        }
       ],
-      "correct_order": [0, 1, 2, 3, 4, 5, 6, 7],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
       "xp_value": 1
     }
   ],
@@ -252,7 +470,10 @@
       "ur": "اور وہ نیکی اور تقوی پر ایک دوسرے کو حکم دیتے ہیں",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-asr-003-mishary.mp3"
     },
-    "highlighted_word_indices": [0, 1],
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
     "noor_explanation": {
       "en": "Chapter 53 built your reading fluency. You can now: follow transition words وَ, فَ, بَلْ, أَمَّا; identify sentence types quickly; read paragraphs without stopping at every word; understand the logical flow of meaning.",
       "ur": "Chapter 53 نے آپکی reading fluency بنائی۔ اب آپ کر سکتے ہیں: transition words وَ، فَ، بَلْ، أَمَّا follow کرنا؛ sentence types جلدی identify کرنا؛ paragraphs ہر word پر رکےبغیر پڑھنا؛ meaning کی logical flow سمجھنا۔"

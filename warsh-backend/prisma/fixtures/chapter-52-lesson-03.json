@@ -96,10 +96,22 @@
         "ur": "وہ اللہ پر ایمان لاتے ہیں"
       },
       "options": [
-        { "en": "They believe in Allah", "ur": "وہ اللہ پر ایمان لاتے ہیں" },
-        { "en": "They are believers of Allah", "ur": "وہ اللہ کے مومن ہیں" },
-        { "en": "They trusted Allah", "ur": "انہوں نے اللہ پر بھروسہ کیا" },
-        { "en": "They loved Allah", "ur": "وہ اللہ سے پیار کرتے ہیں" }
+        {
+          "en": "They believe in Allah",
+          "ur": "وہ اللہ پر ایمان لاتے ہیں"
+        },
+        {
+          "en": "They are believers of Allah",
+          "ur": "وہ اللہ کے مومن ہیں"
+        },
+        {
+          "en": "They trusted Allah",
+          "ur": "انہوں نے اللہ پر بھروسہ کیا"
+        },
+        {
+          "en": "They loved Allah",
+          "ur": "وہ اللہ سے پیار کرتے ہیں"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -200,12 +212,41 @@
         }
       ],
       "right_column": [
-        { "en": "فِي (in) + noun gen.", "ur": "فِي (میں) + noun جر" },
-        { "en": "إِلَى (to) + noun gen.", "ur": "إِلَى (طرف) + noun جر" },
-        { "en": "مِنْ (from) + noun gen.", "ur": "مِنْ (سے) + noun جر" },
-        { "en": "عَلَى (on) + noun gen.", "ur": "عَلَى (پر) + noun جر" }
+        {
+          "en": "فِي (in) + noun gen.",
+          "ur": "فِي (میں) + noun جر"
+        },
+        {
+          "en": "إِلَى (to) + noun gen.",
+          "ur": "إِلَى (طرف) + noun جر"
+        },
+        {
+          "en": "مِنْ (from) + noun gen.",
+          "ur": "مِنْ (سے) + noun جر"
+        },
+        {
+          "en": "عَلَى (on) + noun gen.",
+          "ur": "عَلَى (پر) + noun جر"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -238,7 +279,11 @@
           "ur": "مسجد (جر)"
         }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1
     },
     {
@@ -246,12 +291,38 @@
       "id": "ch52-l03-ex06",
       "sentence_ar": "لَنْ نُؤْمِنَ بِكُمْ",
       "words": [
-        { "ar": "لَنْ", "ar_plain": "لن", "translit": "lan", "en": "never (nasb trigger)" },
-        { "ar": "نُؤْمِنَ", "ar_plain": "نؤمن", "translit": "nu'mina", "en": "we believe (nasb)" },
-        { "ar": "بِكُمْ", "ar_plain": "بكم", "translit": "bikum", "en": "in you (pl.)" }
+        {
+          "ar": "لَنْ",
+          "ar_plain": "لن",
+          "translit": "lan",
+          "en": "never (nasb trigger)",
+          "ur": "کبھی نہیں (NASB ٹرگر)"
+        },
+        {
+          "ar": "نُؤْمِنَ",
+          "ar_plain": "نؤمن",
+          "translit": "nu'mina",
+          "en": "we believe (nasb)",
+          "ur": "ہم یقین رکھتے ہیں (nasb)"
+        },
+        {
+          "ar": "بِكُمْ",
+          "ar_plain": "بكم",
+          "translit": "bikum",
+          "en": "in you (pl.)",
+          "ur": "آپ میں (pl.)"
+        }
       ],
-      "available_roles": ["PARTICLE", "VERB", "PREPOSITION"],
-      "correct_roles": ["PARTICLE", "VERB", "PREPOSITION"],
+      "available_roles": [
+        "PARTICLE",
+        "VERB",
+        "PREPOSITION"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VERB",
+        "PREPOSITION"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "لَنْ triggers nasb on the verb — نُؤْمِنَ (Alif ending). بِ is the preposition 'in' governing كُمْ (you-pl) in the genitive. Two separate grammatical facts coexisting.",
@@ -274,7 +345,10 @@
       "ur": "اور جب بندے تم سے رات اور دن کی حقیقت پوچھتے ہیں",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-186-mishary.mp3"
     },
-    "highlighted_word_indices": [1, 2],
+    "highlighted_word_indices": [
+      1,
+      2
+    ],
     "noor_explanation": {
       "en": "طَلَبَةُ is the subject of the verbal sentence سَأَلَهُمْ. اللَّيْلِ وَالنَّهَارِ is a noun phrase governed by the preposition implied in طَلَبَةُ. Two systems working in parallel: prepositions governing nouns, verbs governing their own state.",
       "ur": "طَلَبَةُ verbal sentence سَأَلَهُمْ کا subject ہے۔ اللَّيْلِ وَالنَّهَارِ ایک noun phrase ہے جو implied preposition کے ذریعے طَلَبَةُ سے govern ہوتی ہے۔ دو systems parallel کام کر رہے ہیں: prepositions nouns کو govern کر رہے ہیں، verbs اپنی state govern کر رہے ہیں۔"

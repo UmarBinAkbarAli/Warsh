@@ -120,13 +120,26 @@
         "ar": "الْمُلْكُ لِلَّهِ الْحَقِّ",
         "ar_plain": "الملك لله الحق",
         "translit": "al-mulku lillāhi al-ḥaqqi",
-        "en": "The dominion belongs to Allah, the Truth."
+        "en": "The dominion belongs to Allah, the Truth.",
+        "ur": "بادشاہی اللہ کی ہے جو حق ہے۔"
       },
       "options": [
-        { "en": "The dominion belongs to Allah, the Truth.", "ur": "حکومت اللہ حق کی ہے۔" },
-        { "en": "Allah owns the true dominion.", "ur": "اللہ سچی حکومت کا مالک ہے۔" },
-        { "en": "The dominion is Allah's truth.", "ur": "حکومت اللہ کا سچ ہے۔" },
-        { "en": "The dominion and the Truth are Allah's.", "ur": "حکومت اور سچ اللہ کے ہیں۔" }
+        {
+          "en": "The dominion belongs to Allah, the Truth.",
+          "ur": "حکومت اللہ حق کی ہے۔"
+        },
+        {
+          "en": "Allah owns the true dominion.",
+          "ur": "اللہ سچی حکومت کا مالک ہے۔"
+        },
+        {
+          "en": "The dominion is Allah's truth.",
+          "ur": "حکومت اللہ کا سچ ہے۔"
+        },
+        {
+          "en": "The dominion and the Truth are Allah's.",
+          "ur": "حکومت اور سچ اللہ کے ہیں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -140,13 +153,49 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "تَبَارَكَ اللَّهُ رَبُّ الْعَالَمِينَ",
       "words": [
-        { "ar": "تَبَارَكَ", "ar_plain": "تبارك", "translit": "tabāraka", "en": "Blessed (He)" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allāhu", "en": "Allah" },
-        { "ar": "رَبُّ", "ar_plain": "رب", "translit": "rabbu", "en": "Lord" },
-        { "ar": "الْعَالَمِينَ", "ar_plain": "العالمين", "translit": "al-'ālamīna", "en": "of the worlds" }
+        {
+          "ar": "تَبَارَكَ",
+          "ar_plain": "تبارك",
+          "translit": "tabāraka",
+          "en": "Blessed (He)",
+          "ur": "بابرکت (وہ)"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allāhu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "رَبُّ",
+          "ar_plain": "رب",
+          "translit": "rabbu",
+          "en": "Lord",
+          "ur": "رب"
+        },
+        {
+          "ar": "الْعَالَمِينَ",
+          "ar_plain": "العالمين",
+          "translit": "al-'ālamīna",
+          "en": "of the worlds",
+          "ur": "جہانوں کے"
+        }
       ],
-      "available_roles": ["SUBJECT", "PREDICATE", "VERB", "PARTICLE", "PREPOSITION", "POSSESSIVE"],
-      "correct_roles": ["VERB", "SUBJECT", "PREDICATE", "POSSESSIVE"],
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "VERB",
+        "PARTICLE",
+        "PREPOSITION",
+        "POSSESSIVE"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "PREDICATE",
+        "POSSESSIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "تَبَارَكَ = VERB (مبنی ماضی — fixed فتحة). اللَّهُ = SUBJECT (مبتدأ، مرفوع). رَبُّ = PREDICATE (خبر مبتدأ، مرفوع — رَبُّ is the title of Allah). الْعَالَمِينَ = POSSESSIVE (مضاف إليه، جر — رَبُّ الْعَالَمِينَ is an idafa construction).",
@@ -171,18 +220,71 @@
       "id": "ch59-l01-ex05",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "تَبَارَكَ", "ar_plain": "تبارك", "translit": "tabāraka", "en": "Blessed (He)" },
-        { "ar": "الْمُلْكُ", "ar_plain": "الملك", "translit": "al-mulku", "en": "the dominion" },
-        { "ar": "قَدِيرٌ", "ar_plain": "قدير", "translit": "qadīrun", "en": "competent" },
-        { "ar": "الْعَالَمِينَ", "ar_plain": "العالمين", "translit": "al-'ālamīna", "en": "the worlds" }
+        {
+          "ar": "تَبَارَكَ",
+          "ar_plain": "تبارك",
+          "translit": "tabāraka",
+          "en": "Blessed (He)",
+          "ur": "بابرکت (وہ)"
+        },
+        {
+          "ar": "الْمُلْكُ",
+          "ar_plain": "الملك",
+          "translit": "al-mulku",
+          "en": "the dominion",
+          "ur": "تسلط"
+        },
+        {
+          "ar": "قَدِيرٌ",
+          "ar_plain": "قدير",
+          "translit": "qadīrun",
+          "en": "competent",
+          "ur": "قابل"
+        },
+        {
+          "ar": "الْعَالَمِينَ",
+          "ar_plain": "العالمين",
+          "translit": "al-'ālamīna",
+          "en": "the worlds",
+          "ur": "دنیاؤں"
+        }
       ],
       "right_column": [
-        { "en": "مَبْنِيّ — fixed فتحة", "ur": "مبنی — فتحة پر ثابت" },
-        { "en": "مُعْرَب — مرفوع (kasra sign)", "ur": "معرب — مرفوع (کسرة کی علامت)" },
-        { "en": "مُعْرَب — مرفوع (ya sign)", "ur": "معرب — مرفوع (ی کی علامت)" },
-        { "en": "مُعْرَب — مجرور (ya sign)", "ur": "معرب — مجرور (ی کی علامت)" }
+        {
+          "en": "مَبْنِيّ — fixed فتحة",
+          "ur": "مبنی — فتحة پر ثابت"
+        },
+        {
+          "en": "مُعْرَب — مرفوع (kasra sign)",
+          "ur": "معرب — مرفوع (کسرة کی علامت)"
+        },
+        {
+          "en": "مُعْرَب — مرفوع (ya sign)",
+          "ur": "معرب — مرفوع (ی کی علامت)"
+        },
+        {
+          "en": "مُعْرَب — مجرور (ya sign)",
+          "ur": "معرب — مجرور (ی کی علامت)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "تَبَارَكَ is مبنی (ذاتی). الْمُلْكُ (مرفوع — ي closing), قَدِيرٌ (مرفوع — ي closing), الْعَالَمِينَ (مجرور — ي closing). The ي (يمامة) serves as the sign for both رفع and جر.",
@@ -197,11 +299,33 @@
         "ur": "وہ ہر شے پر قادر ہے۔"
       },
       "tiles": [
-        { "ar": "وَهُوَ", "ar_plain": "وهو", "translit": "wa-huwa", "en": "and He" },
-        { "ar": "عَلَىٰ كُلِّ شَيْءٍ", "ar_plain": "على كل شيء", "translit": "'alā kulli shay'in", "en": "over all things" },
-        { "ar": "قَدِيرٌ", "ar_plain": "قدير", "translit": "qadīrun", "en": "competent" }
+        {
+          "ar": "وَهُوَ",
+          "ar_plain": "وهو",
+          "translit": "wa-huwa",
+          "en": "and He",
+          "ur": "اور وہ"
+        },
+        {
+          "ar": "عَلَىٰ كُلِّ شَيْءٍ",
+          "ar_plain": "على كل شيء",
+          "translit": "'alā kulli shay'in",
+          "en": "over all things",
+          "ur": "تمام چیزوں پر"
+        },
+        {
+          "ar": "قَدِيرٌ",
+          "ar_plain": "قدير",
+          "translit": "qadīrun",
+          "en": "competent",
+          "ur": "قابل"
+        }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "The sentence is: وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ — وَهُوَ (connected pronoun, بدل), عَلَىٰ كُلِّ شَيْءٍ (ظرف مكان، مجرور), قَدِيرٌ (خبر، مرفوع). The structure is: pronoun + prepositional phrase + adjective.",
@@ -218,10 +342,34 @@
         "ur": "حکومت اللہ حق کی ہے۔"
       },
       "options": [
-        { "ar": "حَقٍّ", "ar_plain": "حق", "translit": "haqqin", "en": "truth (gen.)", "ur": "سچ (جر)" },
-        { "ar": "حَقٌّ", "ar_plain": "حق", "translit": "haqqun", "en": "truth (nom.)", "ur": "سچ (رفع)" },
-        { "ar": "حَقًّا", "ar_plain": "حق", "translit": "haqqan", "en": "truth (acc.)", "ur": "سچ (نصب)" },
-        { "ar": "حَقَّ", "ar_plain": "حق", "translit": "haqqa", "en": "truth (مبنى)", "ur": "سچ (مبنی)" }
+        {
+          "ar": "حَقٍّ",
+          "ar_plain": "حق",
+          "translit": "haqqin",
+          "en": "truth (gen.)",
+          "ur": "سچ (جر)"
+        },
+        {
+          "ar": "حَقٌّ",
+          "ar_plain": "حق",
+          "translit": "haqqun",
+          "en": "truth (nom.)",
+          "ur": "سچ (رفع)"
+        },
+        {
+          "ar": "حَقًّا",
+          "ar_plain": "حق",
+          "translit": "haqqan",
+          "en": "truth (acc.)",
+          "ur": "سچ (نصب)"
+        },
+        {
+          "ar": "حَقَّ",
+          "ar_plain": "حق",
+          "translit": "haqqa",
+          "en": "truth (مبنى)",
+          "ur": "سچ (مبنی)"
+        }
       ],
       "correct_answer": {
         "ar": "حَقٍّ",
@@ -252,7 +400,10 @@
       "ur": "بڑی بخت والا وہ ہے جس کے ہاتھ میں حکومت ہے اور وہ ہر چیز پر قادر ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-mulk-67-1-mishary.mp3"
     },
-    "highlighted_word_indices": [0, 2],
+    "highlighted_word_indices": [
+      0,
+      2
+    ],
     "noor_explanation": {
       "en": "تَبَارَكَ is مَبْنِيّ (fixed فتحة — the word is praising itself, so its form is complete). الْمُلْكُ is مُعْرَب — مرفوع here because it is the مبتدأ. قَدِيرٌ is also مُعْرَب — مرفوع as the خبر. Together they form a nominal sentence (جملة اسمية): الْمُلْكُ قَدِيرٌ. This is the foundation of Quranic parsing: every word is either معرب (changes) or مبنی (stays fixed).",
       "ur": "تَبَارَكَ مبنی ہے (ثابت فتحة)۔ الْمُلْكُ معرب ہے — مرفوع کیونکہ یہ مبتدأ ہے۔ قَدِيرٌ بھی معرب ہے — خبر ہونے کی وجہ سے مرفوع۔ اکٹھے یہ ایک nominal sentence بناتے ہیں: الْمُلْكُ قَدِيرٌ۔"

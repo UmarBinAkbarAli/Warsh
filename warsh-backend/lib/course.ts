@@ -12,13 +12,16 @@ type ChapterWithLessons = {
   id: string;
   order: number;
   title: string;
+  titleUr: string | null;
   titleAr: string;
   description: string;
+  descriptionUr: string | null;
   worldMapX: number;
   worldMapY: number;
   lessons: {
     id: string;
     title: string;
+    titleUr: string | null;
     titleAr: string;
     template: string;
     xpReward: number;
@@ -76,7 +79,7 @@ export async function getUserCourseState(userId: string) {
       include: {
         lessons: {
           orderBy: { order: "asc" },
-          select: { id: true, title: true, titleAr: true, template: true, xpReward: true },
+          select: { id: true, title: true, titleUr: true, titleAr: true, template: true, xpReward: true },
         },
       },
     }),

@@ -121,10 +121,22 @@
         "ur": "اس امت کے مسلمان"
       },
       "options": [
-        { "en": "Muslims of this nation", "ur": "اس امت کے مسلمان" },
-        { "en": "The Muslim nation", "ur": "مسلمان قوم" },
-        { "en": "The Muslims are better", "ur": "مسلمان بہتر ہیں" },
-        { "en": "Muslims are this nation", "ur": "مسلمان یہ قوم ہیں" }
+        {
+          "en": "Muslims of this nation",
+          "ur": "اس امت کے مسلمان"
+        },
+        {
+          "en": "The Muslim nation",
+          "ur": "مسلمان قوم"
+        },
+        {
+          "en": "The Muslims are better",
+          "ur": "مسلمان بہتر ہیں"
+        },
+        {
+          "en": "Muslims are this nation",
+          "ur": "مسلمان یہ قوم ہیں"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -225,12 +237,41 @@
         }
       ],
       "right_column": [
-        { "en": "Muslims (subject)", "ur": "مسلمان (فاعل)" },
-        { "en": "Muslims (object)", "ur": "مسلمان (مفعول)" },
-        { "en": "Muslims of (possession)", "ur": "مسلمانوں کے (اضافت)" },
-        { "en": "Muslim women (pl.)", "ur": "مسلمان عورتیں (جمع)" }
+        {
+          "en": "Muslims (subject)",
+          "ur": "مسلمان (فاعل)"
+        },
+        {
+          "en": "Muslims (object)",
+          "ur": "مسلمان (مفعول)"
+        },
+        {
+          "en": "Muslims of (possession)",
+          "ur": "مسلمانوں کے (اضافت)"
+        },
+        {
+          "en": "Muslim women (pl.)",
+          "ur": "مسلمان عورتیں (جمع)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -270,7 +311,12 @@
           "ur": "نیک ہیں (رفع)"
         }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -284,10 +330,22 @@
         "ur": "تم بہترین امت تھے"
       },
       "options": [
-        { "en": "You were the best nation", "ur": "تم بہترین امت تھے" },
-        { "en": "You became the best of nations", "ur": "تم قوموں کی بہترین بن گئے" },
-        { "en": "You are the best of peoples", "ur": "تم لوگوں میں بہترین ہو" },
-        { "en": "You were better than this nation", "ur": "تم اس قوم سے بہتر تھے" }
+        {
+          "en": "You were the best nation",
+          "ur": "تم بہترین امت تھے"
+        },
+        {
+          "en": "You became the best of nations",
+          "ur": "تم قوموں کی بہترین بن گئے"
+        },
+        {
+          "en": "You are the best of peoples",
+          "ur": "تم لوگوں میں بہترین ہو"
+        },
+        {
+          "en": "You were better than this nation",
+          "ur": "تم اس قوم سے بہتر تھے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -301,12 +359,39 @@
       "id": "ch47-l03-ex07",
       "sentence_ar": "مُسْلِمُو هَذِهِ الْأُمَّةِ",
       "words": [
-        { "ar": "مُسْلِمُو", "ar_plain": "مسلموي", "translit": "muslimu", "en": "Muslims of" },
-        { "ar": "هَذِهِ", "ar_plain": "هذه", "translit": "haadhihii", "en": "this" },
-        { "ar": "الْأُمَّةِ", "ar_plain": "الأمة", "translit": "al-ummati", "en": "the nation" }
+        {
+          "ar": "مُسْلِمُو",
+          "ar_plain": "مسلموي",
+          "translit": "muslimu",
+          "en": "Muslims of",
+          "ur": "کے مسلمانوں"
+        },
+        {
+          "ar": "هَذِهِ",
+          "ar_plain": "هذه",
+          "translit": "haadhihii",
+          "en": "this",
+          "ur": "یہ"
+        },
+        {
+          "ar": "الْأُمَّةِ",
+          "ar_plain": "الأمة",
+          "translit": "al-ummati",
+          "en": "the nation",
+          "ur": "قوم"
+        }
       ],
-      "available_roles": ["SUBJECT", "POSSESSIVE", "OBJECT", "DEMONSTRATIVE"],
-      "correct_roles": ["POSSESSIVE", "DEMONSTRATIVE", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "POSSESSIVE",
+        "OBJECT",
+        "DEMONSTRATIVE"
+      ],
+      "correct_roles": [
+        "POSSESSIVE",
+        "DEMONSTRATIVE",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "مُسْلِمُو is in اضافة — the ن is dropped because it is the first element of the possessive chain. هَذِهِ is the demonstrative (this) completing the اضافة with الْأُمَّةِ.",
@@ -329,7 +414,9 @@
       "ur": "تم بہترین امت ہو جو لوگوں کے لیے پیدا کی گئی ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/aal-e-imran-110-mishary.mp3"
     },
-    "highlighted_word_indices": [1],
+    "highlighted_word_indices": [
+      1
+    ],
     "noor_explanation": {
       "en": "خَيْرَ is the predicate in a nominal sentence (كُنْتُمْ + خَيْرَ أُمَّةٍ). أُمَّةٍ is the second element of اضافة with خَيْرَ. This structure — noun + noun in genitive — is the core of اضافة in Arabic.",
       "ur": "خَيْرَ nominal sentence میں predicate ہے (كُنْتُمْ + خَيْرَ أُمَّةٍ)۔ أُمَّةٍ خَيْرَ کے ساتھ اضافت کا دوسرا element ہے۔ یہ structure — noun + genitive میں noun — عربی میں اضافت کا core ہے۔"

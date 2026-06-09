@@ -121,10 +121,22 @@
         "ur": "مسلمان پڑھتے ہیں"
       },
       "options": [
-        { "en": "The Muslims read", "ur": "مسلمان پڑھتے ہیں" },
-        { "en": "The Muslim reads", "ur": "مسلمان پڑھتا ہے" },
-        { "en": "A Muslim reads", "ur": "ایک مسلمان پڑھتا ہے" },
-        { "en": "The Muslims were read", "ur": "مسلمانوں کو پڑھایا گیا" }
+        {
+          "en": "The Muslims read",
+          "ur": "مسلمان پڑھتے ہیں"
+        },
+        {
+          "en": "The Muslim reads",
+          "ur": "مسلمان پڑھتا ہے"
+        },
+        {
+          "en": "A Muslim reads",
+          "ur": "ایک مسلمان پڑھتا ہے"
+        },
+        {
+          "en": "The Muslims were read",
+          "ur": "مسلمانوں کو پڑھایا گیا"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -225,12 +237,41 @@
         }
       ],
       "right_column": [
-        { "en": "Muslims (raf')", "ur": "مسلمان (رفع)" },
-        { "en": "Muslims (nasb/jazm)", "ur": "مسلمان (نصب/جزم)" },
-        { "en": "believers (raf')", "ur": "مومنین (رفع)" },
-        { "en": "believers (nasb/jazm)", "ur": "مومنین (نصب/جزم)" }
+        {
+          "en": "Muslims (raf')",
+          "ur": "مسلمان (رفع)"
+        },
+        {
+          "en": "Muslims (nasb/jazm)",
+          "ur": "مسلمان (نصب/جزم)"
+        },
+        {
+          "en": "believers (raf')",
+          "ur": "مومنین (رفع)"
+        },
+        {
+          "en": "believers (nasb/jazm)",
+          "ur": "مومنین (نصب/جزم)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -270,7 +311,11 @@
           "ur": "مومنین (نصب)"
         }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1
     },
     {
@@ -284,10 +329,22 @@
         "ur": "بیشک اللہ انہیں پیار کرتا ہے جو آپس میں پیار کرتے ہیں۔"
       },
       "options": [
-        { "en": "Indeed, Allah loves those who love each other.", "ur": "بیشک اللہ انہیں پیار کرتا ہے جو آپس میں پیار کرتے ہیں۔" },
-        { "en": "Indeed, Allah loves those who love wealth.", "ur": "بیشک اللہ انہیں پیار کرتا ہے جو مال سے پیار کرتے ہیں۔" },
-        { "en": "Allah truly loves the believers.", "ur": "اللہ واقعی مومنین کو پیار کرتا ہے۔" },
-        { "en": "Indeed, Allah is loved by those who believe.", "ur": "بیشک اللہ کو مومنین پیار کرتے ہیں۔" }
+        {
+          "en": "Indeed, Allah loves those who love each other.",
+          "ur": "بیشک اللہ انہیں پیار کرتا ہے جو آپس میں پیار کرتے ہیں۔"
+        },
+        {
+          "en": "Indeed, Allah loves those who love wealth.",
+          "ur": "بیشک اللہ انہیں پیار کرتا ہے جو مال سے پیار کرتے ہیں۔"
+        },
+        {
+          "en": "Allah truly loves the believers.",
+          "ur": "اللہ واقعی مومنین کو پیار کرتا ہے۔"
+        },
+        {
+          "en": "Indeed, Allah is loved by those who believe.",
+          "ur": "بیشک اللہ کو مومنین پیار کرتے ہیں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -301,12 +358,38 @@
       "id": "ch47-l01-ex07",
       "sentence_ar": "الْمُسْلِمُونَ يَقْرَأُونَ الْكِتَابَ",
       "words": [
-        { "ar": "الْمُسْلِمُونَ", "ar_plain": "المسلمون", "translit": "al-muslimoona", "en": "the Muslims" },
-        { "ar": "يَقْرَأُونَ", "ar_plain": "يقرؤون", "translit": "yaqra'uuna", "en": "they read" },
-        { "ar": "الْكِتَابَ", "ar_plain": "الكتاب", "translit": "al-kitaaba", "en": "the book" }
+        {
+          "ar": "الْمُسْلِمُونَ",
+          "ar_plain": "المسلمون",
+          "translit": "al-muslimoona",
+          "en": "the Muslims",
+          "ur": "مسلمانوں"
+        },
+        {
+          "ar": "يَقْرَأُونَ",
+          "ar_plain": "يقرؤون",
+          "translit": "yaqra'uuna",
+          "en": "they read",
+          "ur": "وہ پڑھتے ہیں"
+        },
+        {
+          "ar": "الْكِتَابَ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitaaba",
+          "en": "the book",
+          "ur": "کتاب"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "OBJECT"],
-      "correct_roles": ["SUBJECT", "VERB", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "VERB",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الْمُسْلِمُونَ is the subject (مرفوع وُونَ). يَقْرَأُونَ is the present tense verb (مرفوع وُونَ). الْكِتَابَ is the direct object (منصوب).",
@@ -329,7 +412,10 @@
       "ur": "بیشک اللہ انہیں پیار کرتا ہے جو اپنے مال سے خوشی خوشی خرچ کرتے ہیں۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-humazah-008-mishary.mp3"
     },
-    "highlighted_word_indices": [2, 3],
+    "highlighted_word_indices": [
+      2,
+      3
+    ],
     "noor_explanation": {
       "en": "يُحَابُّونَ is raf' (وُونَ ending) — the plural verb in the base state. الَّذِينَ is also raf' — the relative pronoun matching the plural verb. This is the grammar of divine love and mutual affection in the Quran.",
       "ur": "يُحَابُّونَ رفع ہے (وُونَ ending) — plural verb base state میں۔ الَّذِينَ بھی رفع ہے — relative pronoun plural verb سے ملتا ہے۔ یہ قرآن میں الٰہی محبت اور باہمی محبت کی grammar ہے۔"

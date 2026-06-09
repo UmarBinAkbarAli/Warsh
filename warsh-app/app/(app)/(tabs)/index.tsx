@@ -8,6 +8,8 @@ import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Shadows, Spacing, WarshPalette } from "../../../constants/theme";
+import { useLanguage, pickTranslation, pickLocalized } from "@services/language";
+import { useT } from "@i18n/index";
 
 const FREEZE_BANNER_KEY = "warsh_freeze_banner_shown";
 const LAST_STREAK_KEY = "warsh_last_streak";
@@ -36,6 +38,8 @@ function ChapterBadge({ label }: { label: string }) {
 export default function HomeScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const language = useLanguage();
+  const t = useT();
   const [chapters, setChapters] = useState<any[]>([]);
   const [tadabburFocus, setTadabburFocus] = useState<{ id: string; nameAr: string; nameEn: string; comprehensionPercent: number } | null>(null);
   const [loading, setLoading] = useState(true);
@@ -48,7 +52,7 @@ export default function HomeScreen() {
   const [subscriptionStatus, setSubscriptionStatus] = useState<string>("trial");
   const [trialBannerDismissed, setTrialBannerDismissed] = useState(false);
   // M4 — streak ended modal
-  const [wordOfDay, setWordOfDay] = useState<{ id: string; arabic: string; transliteration: string; translationEn: string; wordType: string; inWordBank: boolean } | null>(null);
+  const [wordOfDay, setWordOfDay] = useState<{ id: string; arabic: string; transliteration: string; translationEn: string; translationUr: string; wordType: string; inWordBank: boolean } | null>(null);
   const [showStreakEndedModal, setShowStreakEndedModal] = useState(false);
   // M5 — daily goal toast
   const [showDailyGoalToast, setShowDailyGoalToast] = useState(false);
@@ -117,11 +121,11 @@ export default function HomeScreen() {
         setShowDailyGoalToast(true);
       }
     } catch (err) {
-      setError("Unable to load chapters. Please login or try again.");
+      setError(t("learn.loadError"));
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [t]);
 
   async function dismissFreezeBanner() {
     const today = new Date().toISOString().slice(0, 10);
@@ -153,13 +157,13 @@ export default function HomeScreen() {
       <View style={styles.modalOverlay}>
         <View style={styles.modalCard}>
           <Text style={styles.modalEmoji}>🌿</Text>
-          <Text style={styles.modalTitle}>Your streak ended</Text>
+          <Text style={styles.modalTitle}>{t("learn.streakEndedTitle")}</Text>
           <Text style={styles.modalBody}>
-            {"As-salamu alaykum.\n\nYour streak has ended — and that's okay. Every day is a new beginning. The Prophet ﷺ said: \"The most beloved deeds to Allah are the most consistent ones, even if they are small.\""}
+            {t("learn.streakEndedBody")}
           </Text>
-          <Text style={styles.modalHadith}>Rekindle your practice today, in shaa Allah.</Text>
+          <Text style={styles.modalHadith}>{t("learn.streakEndedFooter")}</Text>
           <BrandButton
-            title="Begin again"
+            title={t("learn.beginAgain")}
             onPress={() => setShowStreakEndedModal(false)}
             style={styles.modalCta}
           />
@@ -171,7 +175,7 @@ export default function HomeScreen() {
     {showDailyGoalToast ? (
       <Animated.View style={[styles.dailyGoalToast, { top: insets.top + Spacing.sm, opacity: toastOpacity }]}>
         <Ionicons name="checkmark-circle" size={18} color={WarshPalette.sage} />
-        <Text style={styles.dailyGoalToastText}>Today's goal complete · Barak Allahu feek 🌿</Text>
+        <Text style={styles.dailyGoalToastText}>{t("learn.dailyGoalToast")}</Text>
         <TouchableOpacity onPress={() => {
           if (toastTimer.current) clearTimeout(toastTimer.current);
           setShowDailyGoalToast(false);
@@ -190,7 +194,7 @@ export default function HomeScreen() {
           activeOpacity={0.85}
         >
           <Ionicons name="lock-closed-outline" size={16} color={WarshPalette.white} />
-          <Text style={styles.trialExpiredText}>Your trial has ended. Subscribe to continue</Text>
+          <Text style={styles.trialExpiredText}>{t("learn.trialExpired")}</Text>
         </TouchableOpacity>
       )}
 
@@ -202,14 +206,14 @@ export default function HomeScreen() {
         ]}>
           <Text style={styles.trialBannerText}>
             {trialDaysRemaining === 0
-              ? "Your trial ends today. Don't lose your streak."
+              ? t("learn.trialEndsToday")
               : trialDaysRemaining === 1
-              ? "Your trial ends tomorrow."
-              : `Your trial ends in ${trialDaysRemaining} days.`}
+              ? t("learn.trialEndsTomorrow")
+              : t("learn.trialEndsInDays", { days: trialDaysRemaining })}
           </Text>
           <View style={styles.trialBannerActions}>
             <TouchableOpacity onPress={() => router.push("/(app)/paywall")}>
-              <Text style={styles.trialBannerCta}>Subscribe</Text>
+              <Text style={styles.trialBannerCta}>{t("learn.subscribe")}</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => setTrialBannerDismissed(true)} hitSlop={8}>
               <Ionicons name="close" size={14} color={WarshPalette.bodyBrown} />
@@ -222,8 +226,8 @@ export default function HomeScreen() {
         <View style={styles.freezeBanner}>
           <Ionicons name="shield-checkmark" size={20} color={WarshPalette.sage} />
           <View style={styles.freezeBannerText}>
-            <Text style={styles.freezeBannerTitle}>Streak freeze used</Text>
-            <Text style={styles.freezeBannerBody}>Yesterday is forgiven. Continue today, in shaa Allah.</Text>
+            <Text style={styles.freezeBannerTitle}>{t("learn.freezeUsedTitle")}</Text>
+            <Text style={styles.freezeBannerBody}>{t("learn.freezeUsedBody")}</Text>
           </View>
           <TouchableOpacity onPress={dismissFreezeBanner}>
             <Ionicons name="close" size={18} color={WarshPalette.bodyBrown} />
@@ -234,21 +238,23 @@ export default function HomeScreen() {
       <View style={[styles.goalCard, dailyGoalMet ? styles.goalCardMet : null]}>
         {dailyGoalMet ? (
           <>
-            <Text style={styles.goalMetLabel}>Today's goal complete</Text>
+            <Text style={styles.goalMetLabel}>{t("learn.goalComplete")}</Text>
             <ArabicText size="sm" style={styles.goalMetArabic}>بَارَكَ اللّٰهُ فِيكَ</ArabicText>
           </>
         ) : (
           <>
             <View style={styles.goalTopRow}>
-              <Text style={styles.goalLabel}>Today's goal</Text>
+              <Text style={styles.goalLabel}>{t("learn.goalTitle")}</Text>
               <Text style={styles.goalValue}>
-                {lessonsToday > 0 ? `${lessonsToday} lesson${lessonsToday > 1 ? "s" : ""} done` : `${dailyGoalMinutes} min`}
+                {lessonsToday > 0
+                  ? t("learn.goalLessonsDone", { count: lessonsToday, suffix: lessonsToday > 1 ? "s" : "" })
+                  : t("learn.goalMinutes", { minutes: dailyGoalMinutes })}
               </Text>
             </View>
             <View style={styles.goalTrack}>
               <View style={[styles.goalFill, { width: lessonsToday >= 1 ? "100%" : "0%" }]} />
             </View>
-            <Text style={styles.goalHint}>Complete one lesson to maintain your streak</Text>
+            <Text style={styles.goalHint}>{t("learn.goalHint")}</Text>
           </>
         )}
       </View>
@@ -260,12 +266,12 @@ export default function HomeScreen() {
           onPress={() => router.push(`/(app)/vocabulary/word/${wordOfDay.id}`)}
           activeOpacity={0.85}
         >
-          <Text style={styles.wotdEyebrow}>Word of the day · كَلِمَةُ الْيَوْم</Text>
+          <Text style={styles.wotdEyebrow}>{t("learn.wordOfDay")}</Text>
           <View style={styles.wotdRow}>
             <View style={styles.wotdLeft}>
               <ArabicText size="lg" style={styles.wotdArabic}>{wordOfDay.arabic}</ArabicText>
               <Text style={styles.wotdTranslit}>{wordOfDay.transliteration}</Text>
-              <Text style={styles.wotdTranslation}>{wordOfDay.translationEn}</Text>
+              <Text style={styles.wotdTranslation}>{pickTranslation(wordOfDay, language)}</Text>
             </View>
             <View style={styles.wotdRight}>
               <Text style={styles.wotdType}>{wordOfDay.wordType}</Text>
@@ -294,14 +300,14 @@ export default function HomeScreen() {
             </View>
             <Text style={styles.tadabburPercent}>{tadabburFocus.comprehensionPercent}% understood</Text>
           </View>
-          <Text style={styles.tadabburCta}>Tap to explore</Text>
+          <Text style={styles.tadabburCta}>{t("learn.tapToExplore")}</Text>
         </TouchableOpacity>
       ) : null}
       <Text style={{ color: Colors.text.primary, fontSize: FontSizes.h1, lineHeight: LineHeights.h1, fontWeight: "700", marginBottom: Spacing.sm }}>
-        Your learning path
+        {t("learn.learningPathTitle")}
       </Text>
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
-        Learn Quranic Arabic — one lesson at a time.
+        {t("learn.learningPathBody")}
       </Text>
       {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.lg }}>{error}</Text> : null}
       {chapters.slice(0, 5).map((chapter) => (
@@ -318,16 +324,20 @@ export default function HomeScreen() {
             ...Shadows.card,
           }}
         >
-          {chapter.isSkippedByPlacement ? <ChapterBadge label="Skipped" /> : null}
-          <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontWeight: "700", marginBottom: Spacing.sm }}>{chapter.title}</Text>
+          {chapter.isSkippedByPlacement ? <ChapterBadge label={t("learn.skipped")} /> : null}
+          <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontWeight: "700", marginBottom: Spacing.sm }}>
+            {pickLocalized(chapter.title, chapter.titleUr, language)}
+          </Text>
           {chapter.titleAr ? (
             <ArabicText size="sm" style={{ marginBottom: Spacing.sm, color: Colors.accent.gold }}>
               {chapter.titleAr}
             </ArabicText>
           ) : null}
-          <Text style={{ marginBottom: Spacing.md, color: Colors.text.secondary, lineHeight: LineHeights.bodyL }}>{chapter.description}</Text>
+          <Text style={{ marginBottom: Spacing.md, color: Colors.text.secondary, lineHeight: LineHeights.bodyL }}>
+            {pickLocalized(chapter.description, chapter.descriptionUr, language)}
+          </Text>
           <Text style={{ marginBottom: Spacing.sm, color: Colors.text.primary }}>
-            {chapter.completedLessonCount} / {chapter.lessons.length} lessons completed
+            {t("learn.lessonsCompleted", { done: chapter.completedLessonCount, total: chapter.lessons.length })}
           </Text>
           <View style={{ height: 8, borderRadius: 999, overflow: "hidden", backgroundColor: Colors.border.subtle, marginBottom: Spacing.md }}>
             <View
@@ -338,9 +348,9 @@ export default function HomeScreen() {
               }}
             />
           </View>
-          <Text style={{ marginBottom: Spacing.md, color: Colors.text.secondary }}>{chapter.lessons.length} lessons</Text>
+          <Text style={{ marginBottom: Spacing.md, color: Colors.text.secondary }}>{t("learn.lessonCount", { count: chapter.lessons.length })}</Text>
           {chapter.isLocked ? (
-            <Text style={{ color: Colors.text.muted }}>Locked until all lessons in previous chapters are complete.</Text>
+            <Text style={{ color: Colors.text.muted }}>{t("learn.lockedMessage")}</Text>
           ) : (
             <Pressable
               onPress={() => router.push(`/lessons/${chapter.id}`)}
@@ -352,7 +362,7 @@ export default function HomeScreen() {
               })}
             >
               <Text style={{ color: Colors.bg.primary, textAlign: "center", fontWeight: "700" }}>
-                {chapter.isCompleted || chapter.isSkippedByPlacement ? "Review Chapter" : "Open Chapter"}
+                {chapter.isCompleted || chapter.isSkippedByPlacement ? t("learn.reviewChapter") : t("learn.openChapter")}
               </Text>
             </Pressable>
           )}
@@ -364,7 +374,7 @@ export default function HomeScreen() {
           activeOpacity={0.75}
           style={styles.allChaptersLink}
         >
-          <Text style={styles.allChaptersText}>All {chapters.length} chapters</Text>
+          <Text style={styles.allChaptersText}>{t("learn.allChapters", { count: chapters.length })}</Text>
           <Ionicons name="chevron-forward" size={16} color={WarshPalette.gold} />
         </TouchableOpacity>
       )}

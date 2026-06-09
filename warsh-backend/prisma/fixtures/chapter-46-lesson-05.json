@@ -129,12 +129,39 @@
       "id": "ch46-l05-ex01",
       "sentence_ar": "لَا تُفْنِي مَالَهُ",
       "words": [
-        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "not (no longer)" },
-        { "ar": "تُفْنِي", "ar_plain": "تفني", "translit": "tufnii", "en": "she uses up" },
-        { "ar": "مَالَهُ", "ar_plain": "ماله", "translit": "maalahu", "en": "his wealth" }
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "not (no longer)",
+          "ur": "نہیں (اب نہیں)"
+        },
+        {
+          "ar": "تُفْنِي",
+          "ar_plain": "تفني",
+          "translit": "tufnii",
+          "en": "she uses up",
+          "ur": "وہ استعمال کرتا ہے"
+        },
+        {
+          "ar": "مَالَهُ",
+          "ar_plain": "ماله",
+          "translit": "maalahu",
+          "en": "his wealth",
+          "ur": "اس کی دولت"
+        }
       ],
-      "available_roles": ["PARTICLE", "VERB", "SUBJECT", "OBJECT"],
-      "correct_roles": ["PARTICLE", "VERB", "OBJECT"],
+      "available_roles": [
+        "PARTICLE",
+        "VERB",
+        "SUBJECT",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VERB",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "لَا is النَّاهِيَة triggering jazm on تُفْنِي (jussive state). مَالَهُ is the object (مفعول به) — 'his wealth.' The entire phrase means: his wealth does not use up/burn.",
@@ -152,10 +179,22 @@
         "ur": "نہ اس کا مال اسے فائدہ دے گا اور نہ اس کی کمائی۔"
       },
       "options": [
-        { "en": "Neither his wealth nor his earnings avail him.", "ur": "نہ اس کا مال اسے فائدہ دے گا اور نہ اس کی کمائی۔" },
-        { "en": "His wealth uses up what he earned.", "ur": "اس کا مال اس کی کمائی ختم کر دیتا ہے۔" },
-        { "en": "He does not use up his wealth.", "ur": "وہ اپنا مال ختم نہیں کرتا۔" },
-        { "en": "His wealth is not burned.", "ur": "اس کا مال نہیں جلتا۔" }
+        {
+          "en": "Neither his wealth nor his earnings avail him.",
+          "ur": "نہ اس کا مال اسے فائدہ دے گا اور نہ اس کی کمائی۔"
+        },
+        {
+          "en": "His wealth uses up what he earned.",
+          "ur": "اس کا مال اس کی کمائی ختم کر دیتا ہے۔"
+        },
+        {
+          "en": "He does not use up his wealth.",
+          "ur": "وہ اپنا مال ختم نہیں کرتا۔"
+        },
+        {
+          "en": "His wealth is not burned.",
+          "ur": "اس کا مال نہیں جلتا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -208,12 +247,41 @@
         }
       ],
       "right_column": [
-        { "en": "she uses up (jazm)", "ur": "وہ ختم کرتی ہے (جزم)" },
-        { "en": "his wealth", "ur": "اس کا مال" },
-        { "en": "he earned (past)", "ur": "اس نے کمایا (ماضی)" },
-        { "en": "not / no longer", "ur": "نہیں / اب نہیں" }
+        {
+          "en": "she uses up (jazm)",
+          "ur": "وہ ختم کرتی ہے (جزم)"
+        },
+        {
+          "en": "his wealth",
+          "ur": "اس کا مال"
+        },
+        {
+          "en": "he earned (past)",
+          "ur": "اس نے کمایا (ماضی)"
+        },
+        {
+          "en": "not / no longer",
+          "ur": "نہیں / اب نہیں"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -301,7 +369,12 @@
           "ur": "شعلہ"
         }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -315,10 +388,22 @@
         "ur": "آگ جس کا شعلہ بھڑکتا ہے"
       },
       "options": [
-        { "en": "a Fire of blazing flame", "ur": "آگ جس کا شعلہ بھڑکتا ہے" },
-        { "en": "a fire with flame", "ur": "شعلے والی آگ" },
-        { "en": "the fire of Abu Lahab", "ur": "ابی لہب کی آگ" },
-        { "en": "a burning fire", "ur": "جلنے والی آگ" }
+        {
+          "en": "a Fire of blazing flame",
+          "ur": "آگ جس کا شعلہ بھڑکتا ہے"
+        },
+        {
+          "en": "a fire with flame",
+          "ur": "شعلے والی آگ"
+        },
+        {
+          "en": "the fire of Abu Lahab",
+          "ur": "ابی لہب کی آگ"
+        },
+        {
+          "en": "a burning fire",
+          "ur": "جلنے والی آگ"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -343,7 +428,10 @@
       "ur": "نہ اس کا مال اسے فائدہ دے گا اور نہ اس کی کمائی۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-masad-002-mishary.mp3"
     },
-    "highlighted_word_indices": [0, 1],
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
     "noor_explanation": {
       "en": "لَا تُفْنِي مَالَهُ — two different verb states in one ayah. لَا (النَّاهِيَة) triggers jazm on تُفْنِي. كَسَبَ is a past-tense verb. These mixed states are common in Quranic Arabic. The next lesson finishes Al-Masad.",
       "ur": "لَا تُفْنِي مَالَهُ — ایک ayah میں دو مختلف verb states۔ لَا (النَّاهِيَة) تُفْنِي پر jazm trigger کرتی ہے۔ كَسَبَ ماضی tense کا فعل ہے۔ یہ mixed states قرآنی عربی میں عام ہیں۔ اگلا lesson Al-Masad ختم کرتا ہے۔"

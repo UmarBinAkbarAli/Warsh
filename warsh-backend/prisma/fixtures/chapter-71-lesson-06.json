@@ -33,7 +33,8 @@
         "ar": "جملة حالية متعددة",
         "ar_plain": "جملة حالية متعددة",
         "translit": "jumla haaliya multi",
-        "en": "Multiple-state Describing Sentence"
+        "en": "Multiple-state Describing Sentence",
+        "ur": "متعدد ریاستوں کا بیان کرنے والا جملہ"
       },
       "definition_ar": "جملة واحدة قد تحتوي على حالين أو أكثر لصاحب حال واحد",
       "definition_en": "A single sentence may contain two or more حالة for one صاحب الحال",
@@ -44,60 +45,70 @@
       "type": "CONCEPT",
       "concept": {
         "ar": "الحال وصفة",
-        "en": "حال with descriptive صفة"
+        "en": "حال with descriptive صفة",
+        "ur": "حال وضاحتی صفة کے ساتھ"
       },
       "explanation": {
         "en": "The حال itself can be described by an adjective (صفة)",
         "ar": "الحال may be modified by صفة",
-        "example_ar": "خَرَجَ زيدٌ ضَاحِكًا جَدًّا — Zayd left very happily"
+        "example_ar": "خَرَجَ زيدٌ ضَاحِكًا جَدًّا — Zayd left very happily",
+        "ur": "حال خود کو ایک صفت (صفة) سے بیان کیا جا سکتا ہے"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
         "ar": "تمييز معطوف",
-        "en": "Coordinated تمييز"
+        "en": "Coordinated تمييز",
+        "ur": "مربوط تمييز"
       },
       "explanation": {
         "en": "The تمييز can have a coordinated element (معطوف)",
         "ar": "قد يكون للتمييز معطوف",
-        "example_ar": "ثَلَاثُونَ يَوْمًا وَلَيْلَةً — thirty days and nights"
+        "example_ar": "ثَلَاثُونَ يَوْمًا وَلَيْلَةً — thirty days and nights",
+        "ur": "تمييز میں ایک مربوط عنصر ہوسکتا ہے (معطوف)"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
         "ar": "تمييز عدد مركب",
-        "en": "Compound Number تمييز"
+        "en": "Compound Number تمييز",
+        "ur": "کمپاؤنڈ نمبر تمييز"
       },
       "explanation": {
         "en": "Compound numbers need تمييز in genitive (مضاف)",
         "ar": "أعداد مركبة تحتاج تمييز مضاف",
-        "example_ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا — 25 days"
+        "example_ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا — 25 days",
+        "ur": "مرکب نمبروں کی ضرورت ہے تمييز genitive میں (مضاف)"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
         "ar": "حال مشبه بالمصدر",
-        "en": "Resembled حال (مشبه بالمصدر)"
+        "en": "Resembled حال (مشبه بالمصدر)",
+        "ur": "مشابہ حال (مشبه بالمصدر)"
       },
       "explanation": {
         "en": "The حال can be a word resembling a masdar in meaning",
         "ar": "الحال قد يكون مشبهًا بالمصدر من حيث الدلالة على الحدث",
-        "example_ar": "جَلَسَ زيدٌ اسْتِرَاحَةً — Zayd sat in a resting state"
+        "example_ar": "جَلَسَ زيدٌ اسْتِرَاحَةً — Zayd sat in a resting state",
+        "ur": "حال معنی میں مصدر سے مشابہہ لفظ ہوسکتا ہے۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
         "ar": "الحال والمفعول المطلق",
-        "en": "حال vs. المفعول المطلق"
+        "en": "حال vs. المفعول المطلق",
+        "ur": "حال بمقابلہ المفعول المطلق"
       },
       "explanation": {
         "en": "Don't confuse حال with مفعول مطلق (absolute object)",
         "ar": "لا تخلط بين الحال والمفعول المطلق",
-        "example_ar": "في \"قامَ زيدٌ قِيَامًا\" — قِيَامًا is مفعول مطلق not حال"
+        "example_ar": "في \"قامَ زيدٌ قِيَامًا\" — قِيَامًا is مفعول مطلق not حال",
+        "ur": "حال کے ساتھ مفعول مطلق (مطلق آبجیکٹ) کو الجھائیں مت"
       }
     }
   ],
@@ -109,20 +120,25 @@
         "ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا",
         "ar_plain": "adobe",
         "translit": "khamsa wa-ishrun yawman",
-        "en": "Twenty-five days"
+        "en": "Twenty-five days",
+        "ur": "پچیس دن"
       },
       "options": [
         {
-          "en": "Singular منصوب تمييز (3-10)"
+          "en": "Singular منصوب تمييز (3-10)",
+          "ur": "واحد منصوب تمييز (3-10)"
         },
         {
-          "en": "Coordinated تمييز (مضاف إليه) (11-99)"
+          "en": "Coordinated تمييز (مضاف إليه) (11-99)",
+          "ur": "مربوط تمييز (مضاف إليه) (11-99)"
         },
         {
-          "en": "Indefinite noun تمييز"
+          "en": "Indefinite noun تمييز",
+          "ur": "غیر معینہ اسم تمييز"
         },
         {
-          "en": "Emphatic حال"
+          "en": "Emphatic حال",
+          "ur": "زور دار حال"
         }
       ],
       "correct_index": 1
@@ -132,12 +148,14 @@
       "type": "TRUE_FALSE",
       "statement": {
         "ar": "في \"قامَ زيدٌ قِيَامًا\" — قِيَامًا هو حال",
-        "en": "In 'Zayd stood a standing' — قِيَامًا is a حال"
+        "en": "In 'Zayd stood a standing' — قِيَامًا is a حال",
+        "ur": "زید کھڑے کھڑے تھے - قِيَامًا ایک حال ہے"
       },
       "correct_answer": false,
       "explanation_on_wrong": {
         "en": "قِيَامًا is مفعول مطلق, not حال. The مفعول مطلق emphasizes the verb, while the حال describes the subject's state.",
-        "ar": "قیام مفعول مطلق ہے، حال نہیں۔"
+        "ar": "قیام مفعول مطلق ہے، حال نہیں۔",
+        "ur": "قِيَامًا ہے مفعول مطلق، نہیں حال۔ مفعول مطلق فعل پر زور دیتا ہے، جبکہ حال موضوع کی حالت کو بیان کرتا ہے۔"
       }
     },
     {
@@ -146,39 +164,45 @@
       "mode": "TAP",
       "sentence_ar": "تَرَاهُمْ رُكَّعًا ___ سُجَّدًا",
       "hint": {
-        "en": "This joins two حالة for the same صاحب الحال"
+        "en": "This joins two حالة for the same صاحب الحال",
+        "ur": "یہ ایک ہی صاحب الحال کے لیے دو حالة کو جوڑتا ہے"
       },
       "options": [
         {
           "ar": "و",
           "ar_plain": "و",
           "translit": "wa",
-          "en": "and"
+          "en": "and",
+          "ur": "اور"
         },
         {
           "ar": "ثم",
           "ar_plain": "ثم",
           "translit": "thumma",
-          "en": "then"
+          "en": "then",
+          "ur": "پھر"
         },
         {
           "ar": "لكن",
           "ar_plain": "لكن",
           "translit": "laakin",
-          "en": "but"
+          "en": "but",
+          "ur": "لیکن"
         },
         {
           "ar": "أو",
           "ar_plain": "أو",
           "translit": "aw",
-          "en": "or"
+          "en": "or",
+          "ur": "یا"
         }
       ],
       "correct_answer": {
         "ar": "و",
         "ar_plain": "و",
         "translit": "wa",
-        "en": "and"
+        "en": "and",
+        "ur": "اور"
       }
     },
     {
@@ -190,25 +214,29 @@
           "ar": "تَرَاهُمْ",
           "ar_plain": "تراهم",
           "translit": "tarahum",
-          "en": "you see them"
+          "en": "you see them",
+          "ur": "آپ انہیں دیکھتے ہیں"
         },
         {
           "ar": "رُكَّعًا",
           "ar_plain": "ركعا",
           "translit": "ruka an",
-          "en": "bowing"
+          "en": "bowing",
+          "ur": "جھکنا"
         },
         {
           "ar": "سُجَّدًا",
           "ar_plain": "سجدا",
           "translit": "sujudan",
-          "en": "prostrating"
+          "en": "prostrating",
+          "ur": "سجدہ کرنا"
         },
         {
           "ar": "يَبْتَغُونَ",
           "ar_plain": "يبتغون",
           "translit": "yabtaghun",
-          "en": "seeking"
+          "en": "seeking",
+          "ur": "تلاش کرنا"
         }
       ],
       "available_roles": [
@@ -241,39 +269,47 @@
           "ar": "خمس وعشرون يومًا",
           "ar_plain": "adobe",
           "translit": "khamsa wa-ishrun yawman",
-          "en": "twenty-five days"
+          "en": "twenty-five days",
+          "ur": "پچیس دن"
         },
         {
           "ar": "جلسَ متأملًا",
           "ar_plain": "adobe",
           "translit": "jalasa mutaammilan",
-          "en": "sat contemplating"
+          "en": "sat contemplating",
+          "ur": "سوچنے بیٹھا"
         },
         {
           "ar": "رجع وحده",
           "ar_plain": "adobe",
           "translit": "raj a wahdahu",
-          "en": "returned alone"
+          "en": "returned alone",
+          "ur": "اکیلے واپس آئے"
         },
         {
           "ar": "ثلاثة أفراد",
           "ar_plain": "adobe",
           "translit": "thalaatha afraadin",
-          "en": "three individuals"
+          "en": "three individuals",
+          "ur": "تین افراد"
         }
       ],
       "right_column": [
         {
-          "en": "تمييز عدد: معطوف (مضاف إليه)"
+          "en": "تمييز عدد: معطوف (مضاف إليه)",
+          "ur": "تمييز عدد: معطوف (مضاف إليه)"
         },
         {
-          "en": "حال — يصف هيئة"
+          "en": "حال — يصف هيئة",
+          "ur": "حال — يصف هيئة"
         },
         {
-          "en": "حال — يصف هيئة"
+          "en": "حال — يصف هيئة",
+          "ur": "حال — يصف هيئة"
         },
         {
-          "en": "تمييز عدد: مفرد منصوب"
+          "en": "تمييز عدد: مفرد منصوب",
+          "ur": "تمييز عدد: مفرد منصوب"
         }
       ],
       "correct_pairs": [
@@ -299,32 +335,37 @@
       "id": "ch71l06ex6",
       "type": "BUILD_SENTENCE",
       "target_translation": {
-        "en": "Zayd returned very happily"
+        "en": "Zayd returned very happily",
+        "ur": "زید بہت خوش ہو کر واپس آیا"
       },
       "tiles": [
         {
           "ar": "عاد",
           "ar_plain": "عاد",
           "translit": "aada",
-          "en": "returned"
+          "en": "returned",
+          "ur": "واپس"
         },
         {
           "ar": "زيد",
           "ar_plain": "زيد",
           "translit": "zayd",
-          "en": "Zayd"
+          "en": "Zayd",
+          "ur": "زید"
         },
         {
           "ar": "فرحًا",
           "ar_plain": "فرح",
           "translit": "farihan",
-          "en": "happily"
+          "en": "happily",
+          "ur": "خوشی سے"
         },
         {
           "ar": "جدًا",
           "ar_plain": "جدا",
           "translit": "jaddan",
-          "en": "very"
+          "en": "very",
+          "ur": "بہت"
         }
       ],
       "correct_order": [
@@ -341,20 +382,25 @@
         "ar": "جلسَ زيدٌ وَحْدَهُ",
         "ar_plain": "adobe",
         "translit": "jalasa zaydun wahdahu",
-        "en": "Zayd sat by himself"
+        "en": "Zayd sat by himself",
+        "ur": "زید خود ہی بیٹھ گیا۔"
       },
       "options": [
         {
-          "en": "No difference — both are حال"
+          "en": "No difference — both are حال",
+          "ur": "کوئی فرق نہیں - دونوں حال ہیں"
         },
         {
-          "en": "First is مفعول مطلق, second is حال"
+          "en": "First is مفعول مطلق, second is حال",
+          "ur": "پہلا ہے مفعول مطلق، دوسرا ہے حال"
         },
         {
-          "en": "First is حال, second is صفة"
+          "en": "First is حال, second is صفة",
+          "ur": "پہلا ہے حال، دوسرا ہے صفة"
         },
         {
-          "en": "Both are مفعول مطلق"
+          "en": "Both are مفعول مطلق",
+          "ur": "دونوں مفعول مطلق ہیں"
         }
       ],
       "correct_index": 1
@@ -365,39 +411,45 @@
       "mode": "TAP",
       "sentence_ar": "في الأعداد المركبة (11-99) التمييز يكون ___",
       "hint": {
-        "en": "In compound numbers (11-99) the تمييز is ___"
+        "en": "In compound numbers (11-99) the تمييز is ___",
+        "ur": "مرکب نمبروں میں (11-99) تمييز is ___"
       },
       "options": [
         {
           "ar": "مضافا إليه",
           "ar_plain": "مضافا إليه",
           "translit": "mazufan ilayhi",
-          "en": "genitive (مضاف إليه)"
+          "en": "genitive (مضاف إليه)",
+          "ur": "جینیاتی (مضاف إليه)"
         },
         {
           "ar": "منصوبا",
           "ar_plain": "منصوب",
           "translit": "mansub",
-          "en": "accusative"
+          "en": "accusative",
+          "ur": "الزام لگانے والا"
         },
         {
           "ar": "مرفوعا",
           "ar_plain": "مرفوع",
           "translit": "marfu",
-          "en": "nominative"
+          "en": "nominative",
+          "ur": "نامزد"
         },
         {
           "ar": "مجرورا",
           "ar_plain": "مجرور",
           "translit": "majrur",
-          "en": "genitive"
+          "en": "genitive",
+          "ur": "جینیاتی"
         }
       ],
       "correct_answer": {
         "ar": "مضافا إليه",
         "ar_plain": "مضافا إليه",
         "translit": "mazufan ilayhi",
-        "en": "genitive (مضاف إليه)"
+        "en": "genitive (مضاف إليه)",
+        "ur": "جینیاتی (مضاف إليه)"
       }
     }
   ],

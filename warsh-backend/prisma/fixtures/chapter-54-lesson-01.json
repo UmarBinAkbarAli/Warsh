@@ -93,10 +93,22 @@
         "ur": "بیشک وہ لوگ جو ایمان لائے اور نیک اعمال کیے"
       },
       "options": [
-        { "en": "Indeed those who believed and did righteous deeds", "ur": "بیشک وہ لوگ جو ایمان لائے اور نیک اعمال کیے" },
-        { "en": "Those who believed in righteous deeds", "ur": "وہ لوگ جو نیک اعمال پر ایمان لائے" },
-        { "en": "The believers and doers of righteous deeds", "ur": "مومنین اور نیک اعمال کرنے والے" },
-        { "en": "Indeed, the righteous will believe", "ur": "بیشک نیک لوگ ایمان لائیں گے" }
+        {
+          "en": "Indeed those who believed and did righteous deeds",
+          "ur": "بیشک وہ لوگ جو ایمان لائے اور نیک اعمال کیے"
+        },
+        {
+          "en": "Those who believed in righteous deeds",
+          "ur": "وہ لوگ جو نیک اعمال پر ایمان لائے"
+        },
+        {
+          "en": "The believers and doers of righteous deeds",
+          "ur": "مومنین اور نیک اعمال کرنے والے"
+        },
+        {
+          "en": "Indeed, the righteous will believe",
+          "ur": "بیشک نیک لوگ ایمان لائیں گے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -109,18 +121,71 @@
       "type": "MATCHING",
       "id": "ch54-l01-ex02",
       "left_column": [
-        { "ar": "لَمْ يَذْهَبْ", "ar_plain": "لم يذهب", "translit": "lam yadhhab", "en": "he did not go (jazm)" },
-        { "ar": "لَنْ يَذْهَبَ", "ar_plain": "لن يذهب", "translit": "lan yadhhab", "en": "he will never go (nasb)" },
-        { "ar": "يَذْهَبُ", "ar_plain": "يذهب", "translit": "yadhhabu", "en": "he goes (raf')" },
-        { "ar": "أَنْ يَذْهَبَ", "ar_plain": "أن يذهب", "translit": "an yadhhab", "en": "that he goes (nasb)" }
+        {
+          "ar": "لَمْ يَذْهَبْ",
+          "ar_plain": "لم يذهب",
+          "translit": "lam yadhhab",
+          "en": "he did not go (jazm)",
+          "ur": "وہ نہیں گیا (جازم)"
+        },
+        {
+          "ar": "لَنْ يَذْهَبَ",
+          "ar_plain": "لن يذهب",
+          "translit": "lan yadhhab",
+          "en": "he will never go (nasb)",
+          "ur": "وہ کبھی نہیں جائے گا (ناسب)"
+        },
+        {
+          "ar": "يَذْهَبُ",
+          "ar_plain": "يذهب",
+          "translit": "yadhhabu",
+          "en": "he goes (raf')",
+          "ur": "وہ جاتا ہے (raf')"
+        },
+        {
+          "ar": "أَنْ يَذْهَبَ",
+          "ar_plain": "أن يذهب",
+          "translit": "an yadhhab",
+          "en": "that he goes (nasb)",
+          "ur": "کہ وہ جاتا ہے (nasb)"
+        }
       ],
       "right_column": [
-        { "en": "Jazm — لَمْ trigger", "ur": "جزم — لَمْ trigger" },
-        { "en": "Nasb — لَنْ trigger", "ur": "نصب — لَنْ trigger" },
-        { "en": "Raf' — no trigger", "ur": "رفع — کوئی trigger نہیں" },
-        { "en": "Nasb — أَنْ trigger", "ur": "نصب — أَنْ trigger" }
+        {
+          "en": "Jazm — لَمْ trigger",
+          "ur": "جزم — لَمْ trigger"
+        },
+        {
+          "en": "Nasb — لَنْ trigger",
+          "ur": "نصب — لَنْ trigger"
+        },
+        {
+          "en": "Raf' — no trigger",
+          "ur": "رفع — کوئی trigger نہیں"
+        },
+        {
+          "en": "Nasb — أَنْ trigger",
+          "ur": "نصب — أَنْ trigger"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -189,12 +254,41 @@
         "ur": "بیشک اللہ سچ ہے۔"
       },
       "tiles": [
-        { "ar": "إِنَّ", "ar_plain": "إن", "translit": "inna", "en": "indeed" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah (acc.)" },
-        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "He" },
-        { "ar": "الْحَقُّ", "ar_plain": "الحق", "translit": "al-haqqu", "en": "the Truth" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah (acc.)",
+          "ur": "اللہ (ع)"
+        },
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "He",
+          "ur": "وہ"
+        },
+        {
+          "ar": "الْحَقُّ",
+          "ar_plain": "الحق",
+          "translit": "al-haqqu",
+          "en": "the Truth",
+          "ur": "سچائی"
+        }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -208,10 +302,22 @@
         "ur": "ابھی تک وہ مسجد میں داخل نہیں ہوئے"
       },
       "options": [
-        { "en": "Not yet have they entered the masjid", "ur": "ابھی تک وہ مسجد میں داخل نہیں ہوئے" },
-        { "en": "When they entered the masjid", "ur": "جب وہ مسجد میں داخل ہوئے" },
-        { "en": "They did not enter the masjid", "ur": "وہ مسجد میں داخل نہیں ہوئے" },
-        { "en": "If they enter the masjid", "ur": "اگر وہ مسجد میں داخل ہوں" }
+        {
+          "en": "Not yet have they entered the masjid",
+          "ur": "ابھی تک وہ مسجد میں داخل نہیں ہوئے"
+        },
+        {
+          "en": "When they entered the masjid",
+          "ur": "جب وہ مسجد میں داخل ہوئے"
+        },
+        {
+          "en": "They did not enter the masjid",
+          "ur": "وہ مسجد میں داخل نہیں ہوئے"
+        },
+        {
+          "en": "If they enter the masjid",
+          "ur": "اگر وہ مسجد میں داخل ہوں"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -236,7 +342,10 @@
       "ur": "اور وہ لوگ جو ایمان لاتے ہیں اس پر جو آپ پر اتارا گیا اور جو آپ سے پہلے اتارا گیا",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-004-mishary.mp3"
     },
-    "highlighted_word_indices": [0, 2],
+    "highlighted_word_indices": [
+      0,
+      2
+    ],
     "noor_explanation": {
       "en": "This ayah shows the three major structures from Book 5 together: إِنَّ (nominal sentence), الَّذِينَ يُؤْمِنُونَ (relative clause with present tense), and بِمَا أُنْزِلَ (preposition + passive verb). These are the tools that let you parse the Quran.",
       "ur": "یہ ayah Book 5 کی تین major structures کو ایک ساتھ دکھاتی ہے: إِنَّ (nominal sentence)، الَّذِينَ يُؤْمِنُونَ (relative clause present tense کے ساتھ)، اور بِمَا أُنْزِلَ (preposition + passive verb)۔ یہ tools ہیں جو آپکو قرآن parse کرنے دیتے ہیں۔"

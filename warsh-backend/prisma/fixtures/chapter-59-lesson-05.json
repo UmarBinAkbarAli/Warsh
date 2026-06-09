@@ -87,18 +87,71 @@
       "id": "ch59-l05-ex01",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "مَبْنِيّ", "ar_plain": "مبنی", "translit": "mabniyy", "en": "built/fixed" },
-        { "ar": "مُعْرَب", "ar_plain": "معرب", "translit": "mu'arrab", "en": "declinable" },
-        { "ar": "الْمَقْصُور", "ar_plain": "المقصور", "translit": "al-maqṣūr", "en": "alif maqsura noun" },
-        { "ar": "الْمَنْقُوص", "ar_plain": "المنقوص", "translit": "al-mansūf", "en": "ya maqsura noun" }
+        {
+          "ar": "مَبْنِيّ",
+          "ar_plain": "مبنی",
+          "translit": "mabniyy",
+          "en": "built/fixed",
+          "ur": "بلٹ / فکسڈ"
+        },
+        {
+          "ar": "مُعْرَب",
+          "ar_plain": "معرب",
+          "translit": "mu'arrab",
+          "en": "declinable",
+          "ur": "قابل انکار"
+        },
+        {
+          "ar": "الْمَقْصُور",
+          "ar_plain": "المقصور",
+          "translit": "al-maqṣūr",
+          "en": "alif maqsura noun",
+          "ur": "alif maqsura noun"
+        },
+        {
+          "ar": "الْمَنْقُوص",
+          "ar_plain": "المنقوص",
+          "translit": "al-mansūf",
+          "en": "ya maqsura noun",
+          "ur": "ya maqsura noun"
+        }
       ],
       "right_column": [
-        { "en": "A word with a fixed ending — does not change for case (e.g., إِنَّ, لَوْ, بِ)", "ur": "طے شدہ ending والا — case کے لیے تبدیل نہیں ہوتا" },
-        { "en": "A word that changes ending based on grammatical role (e.g., كِتَابٌ, كِتَابٍ, كِتَابًا)", "ur": "grammar role کے مطابق ending بدلتا ہے" },
-        { "en": "Nouns ending in alif maqsura (ى): مُوسَى, عِيسَى, السَّمَاوَاتِ", "ur": "alif maqsura (ى) پر ختم ہونے والے اسم" },
-        { "en": "Nouns ending in yā (ي): الْقَاضِي, الْهَادِي — tanween is on the ي", "ur": "ی (ي) پر ختم ہونے والے اسم" }
+        {
+          "en": "A word with a fixed ending — does not change for case (e.g., إِنَّ, لَوْ, بِ)",
+          "ur": "طے شدہ ending والا — case کے لیے تبدیل نہیں ہوتا"
+        },
+        {
+          "en": "A word that changes ending based on grammatical role (e.g., كِتَابٌ, كِتَابٍ, كِتَابًا)",
+          "ur": "grammar role کے مطابق ending بدلتا ہے"
+        },
+        {
+          "en": "Nouns ending in alif maqsura (ى): مُوسَى, عِيسَى, السَّمَاوَاتِ",
+          "ur": "alif maqsura (ى) پر ختم ہونے والے اسم"
+        },
+        {
+          "en": "Nouns ending in yā (ي): الْقَاضِي, الْهَادِي — tanween is on the ي",
+          "ur": "ی (ي) پر ختم ہونے والے اسم"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 2,
       "explanation_on_wrong": {
         "en": "مبنی words have fixed endings (إِنَّ, لَوْ). معرب words change their endings based on grammatical role. المقصور ends in alif maqsura (ى). المنقوص ends in ya (ي) and the ي carries the case marker.",
@@ -110,15 +163,66 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ لَآيَاتٍ",
       "words": [
-        { "ar": "إِنَّ", "ar_plain": "إن", "translit": "inna", "en": "indeed/verily" },
-        { "ar": "فِي", "ar_plain": "في", "translit": "fī", "en": "in" },
-        { "ar": "خَلْقِ", "ar_plain": "خلق", "translit": "khalqin", "en": "creation" },
-        { "ar": "السَّمَاوَاتِ", "ar_plain": "السماءوات", "translit": "al-samāwāti", "en": "the heavens" },
-        { "ar": "وَالْأَرْضِ", "ar_plain": "والأرض", "translit": "wa al-arḍi", "en": "and the earth" },
-        { "ar": "لَآيَاتٍ", "ar_plain": "لآيات", "translit": "la-āyātin", "en": "surely signs" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed/verily",
+          "ur": "واقعی / واقعی"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "خَلْقِ",
+          "ar_plain": "خلق",
+          "translit": "khalqin",
+          "en": "creation",
+          "ur": "تخلیق"
+        },
+        {
+          "ar": "السَّمَاوَاتِ",
+          "ar_plain": "السماءوات",
+          "translit": "al-samāwāti",
+          "en": "the heavens",
+          "ur": "آسمان"
+        },
+        {
+          "ar": "وَالْأَرْضِ",
+          "ar_plain": "والأرض",
+          "translit": "wa al-arḍi",
+          "en": "and the earth",
+          "ur": "اور زمین"
+        },
+        {
+          "ar": "لَآيَاتٍ",
+          "ar_plain": "لآيات",
+          "translit": "la-āyātin",
+          "en": "surely signs",
+          "ur": "یقینی طور پر نشانیاں"
+        }
       ],
-      "available_roles": ["PARTICLE", "PREPOSITION", "POSSESSIVE", "SUBJECT", "PREDICATE", "OBJECT", "CONJUNCTION"],
-      "correct_roles": ["PARTICLE", "PREPOSITION", "POSSESSIVE", "POSSESSIVE", "CONJUNCTION", "PREDICATE"],
+      "available_roles": [
+        "PARTICLE",
+        "PREPOSITION",
+        "POSSESSIVE",
+        "SUBJECT",
+        "PREDICATE",
+        "OBJECT",
+        "CONJUNCTION"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "PREPOSITION",
+        "POSSESSIVE",
+        "POSSESSIVE",
+        "CONJUNCTION",
+        "PREDICATE"
+      ],
       "xp_value": 3,
       "explanation_on_wrong": {
         "en": "إِنَّ = PARTICLE (مبنی, takes accusative on its اِسْم). فِي = PREPOSITION (مبنی). خَلْقِ = POSSESSIVE (مضاف إليه, جر after فِي). السَّمَاوَاتِ = POSSESSIVE (جر after خَلْقِ in إضافة). وَالْأَرْضِ = CONJUNCTION + noun (still جر in the same chain). لَآيَاتٍ = PREDICATE (خبر إِنَّ, منصوب by the لام in لَآيَاتٍ — actually ل is the لام of affirmation, not the preposition, so آيَاتٍ is the خبر إِنَّ in the nominative, with the لام of affirmation preceding it).",
@@ -146,9 +250,15 @@
         "ar": "السَّمَاوَاتِ",
         "ar_plain": "السماءوات",
         "translit": "al-samāwāti",
-        "en": "the heavens"
+        "en": "the heavens",
+        "ur": "آسمان"
       },
-      "options": ["س م و", "س ل م", "ش م س", "ت م س"],
+      "options": [
+        "س م و",
+        "س ل م",
+        "ش م س",
+        "ت م س"
+      ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
@@ -160,18 +270,71 @@
       "id": "ch59-l05-ex05",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "كَانَ", "ar_plain": "كان", "translit": "kāna", "en": "he was" },
-        { "ar": "قَالَ", "ar_plain": "قال", "translit": "qāla", "en": "he said" },
-        { "ar": "رَأَى", "ar_plain": "رأى", "translit": "ra'ā", "en": "he saw" },
-        { "ar": "يَقُولُ", "ar_plain": "يقول", "translit": "yaqūlu", "en": "he says" }
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kāna",
+          "en": "he was",
+          "ur": "وہ تھا"
+        },
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qāla",
+          "en": "he said",
+          "ur": "انہوں نے کہا"
+        },
+        {
+          "ar": "رَأَى",
+          "ar_plain": "رأى",
+          "translit": "ra'ā",
+          "en": "he saw",
+          "ur": "اس نے دیکھا"
+        },
+        {
+          "ar": "يَقُولُ",
+          "ar_plain": "يقول",
+          "translit": "yaqūlu",
+          "en": "he says",
+          "ur": "وہ کہتا ہے"
+        }
       ],
       "right_column": [
-        { "en": "الناقص — اِسْم كَانَ + خَبَر كَانَ", "ur": "ناقص — اِسْم + خبر لیتا ہے" },
-        { "en": "الناقص — root ق-و-ل, ا last root letter", "ur": "ناقص — ق-و-ل، آخری letter و" },
-        { "en": "الناقص — root ر-أ-ى, ا/ى last root letter", "ur": "ناقص — ر-أ-ى، آخری letter ا/ى" },
-        { "en": "Present tense of قَالَ — معتل pattern", "ur": "قَالَ کا مضارع — معتل pattern" }
+        {
+          "en": "الناقص — اِسْم كَانَ + خَبَر كَانَ",
+          "ur": "ناقص — اِسْم + خبر لیتا ہے"
+        },
+        {
+          "en": "الناقص — root ق-و-ل, ا last root letter",
+          "ur": "ناقص — ق-و-ل، آخری letter و"
+        },
+        {
+          "en": "الناقص — root ر-أ-ى, ا/ى last root letter",
+          "ur": "ناقص — ر-أ-ى، آخری letter ا/ى"
+        },
+        {
+          "en": "Present tense of قَالَ — معتل pattern",
+          "ur": "قَالَ کا مضارع — معتل pattern"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 2,
       "explanation_on_wrong": {
         "en": "All four are weak (معتل) verbs. كَانَ (مهموز, ا first letter), قَالَ (ناقص, و last), رَأَى (ناقص, ا/ى last), يَقُولُ (present of قَالَ).",
@@ -200,14 +363,57 @@
         "ur": "مومنین جانتے ہیں کہ اللہ حق ہے۔"
       },
       "tiles": [
-        { "ar": "الْمُؤْمِنُونَ", "ar_plain": "المؤمنون", "translit": "al-mu'minūna", "en": "the believers" },
-        { "ar": "يَعْلَمُونَ", "ar_plain": "يعلمون", "translit": "ya'lamūna", "en": "they know" },
-        { "ar": "أَنَّ", "ar_plain": "أن", "translit": "anna", "en": "that (emphatic)" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allāha", "en": "Allah" },
-        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "He" },
-        { "ar": "الْحَقُّ", "ar_plain": "الحق", "translit": "al-ḥaqqu", "en": "the Truth" }
+        {
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minūna",
+          "en": "the believers",
+          "ur": "مومنین"
+        },
+        {
+          "ar": "يَعْلَمُونَ",
+          "ar_plain": "يعلمون",
+          "translit": "ya'lamūna",
+          "en": "they know",
+          "ur": "وہ جانتے ہیں"
+        },
+        {
+          "ar": "أَنَّ",
+          "ar_plain": "أن",
+          "translit": "anna",
+          "en": "that (emphatic)",
+          "ur": "وہ (زور دینے والا)"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allāha",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "He",
+          "ur": "وہ"
+        },
+        {
+          "ar": "الْحَقُّ",
+          "ar_plain": "الحق",
+          "translit": "al-ḥaqqu",
+          "en": "the Truth",
+          "ur": "سچائی"
+        }
       ],
-      "correct_order": [0, 1, 2, 3, 4, 5],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
       "xp_value": 2,
       "explanation_on_wrong": {
         "en": "الْمُؤْمِنُونَ (subject, مرفوع) + يَعْلَمُونَ (الأفعال الخمسة, مبنی) + أَنَّ (حرف توكيد, takes accusative on اِسْم = اللَّهَ) + اللَّهَ (اِسْم أَنَّ, منصوب) + هُوَ (خبر أَنَّ, مرفوع) + الْحَقُّ (بدل or emphasis, مرفوع). The structure: Subject + FiveVerb + إنَّ + Noun(Acc) + Pronoun + Noun(Nom).",
@@ -221,13 +427,26 @@
         "ar": "إِنَّ اللَّهَ لَمْ يَكُنْ لِيَعْفُوَ عَنِ الْكَافِرِينَ",
         "ar_plain": "إن الله لم يكن ليغفر عن الكافرين",
         "translit": "inna allāha lam yakun li-ya'fū 'an al-kāfirīna",
-        "en": "Indeed, Allah would not forgive the disbelievers."
+        "en": "Indeed, Allah would not forgive the disbelievers.",
+        "ur": "بے شک اللہ کافروں کو معاف نہیں کرے گا۔"
       },
       "options": [
-        { "en": "Indeed, Allah would not forgive the disbelievers.", "ur": "بے شک اللہ کافروں کو نہیں بخشے گا۔" },
-        { "en": "The disbelievers were not forgiven by Allah.", "ur": "کافروں کو اللہ نے معاف نہیں کیا۔" },
-        { "en": "Indeed, Allah was never forgiving to the disbelievers.", "ur": "بے شک اللہ کافروں کے لیے کبھی بخشنے والا نہیں تھا۔" },
-        { "en": "Allah does not want to forgive the disbelievers.", "ur": "اللہ کافروں کو معاف کرنا نہیں چاہتا۔" }
+        {
+          "en": "Indeed, Allah would not forgive the disbelievers.",
+          "ur": "بے شک اللہ کافروں کو نہیں بخشے گا۔"
+        },
+        {
+          "en": "The disbelievers were not forgiven by Allah.",
+          "ur": "کافروں کو اللہ نے معاف نہیں کیا۔"
+        },
+        {
+          "en": "Indeed, Allah was never forgiving to the disbelievers.",
+          "ur": "بے شک اللہ کافروں کے لیے کبھی بخشنے والا نہیں تھا۔"
+        },
+        {
+          "en": "Allah does not want to forgive the disbelievers.",
+          "ur": "اللہ کافروں کو معاف کرنا نہیں چاہتا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 2,
@@ -252,7 +471,13 @@
       "ur": "بے شک آسمانوں اور زمین کی پیدائش میں اور رات اور دن کے بدلے میں عقل والوں کے لیے نشانیاں ہیں۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-2-164-mishary.mp3"
     },
-    "highlighted_word_indices": [0, 1, 3, 7, 9],
+    "highlighted_word_indices": [
+      0,
+      1,
+      3,
+      7,
+      9
+    ],
     "noor_explanation": {
       "en": "This ayah is a complete Book 6 exam in a single sentence. إِنَّ (مبنی حرف) + فِي خَلْقِ (جار و مجرور chain) + السَّمَاوَاتِ (مقصور) + وَالْأَرْضِ (جر continues) + واخْتِلَافِ (مصدر, also جر) + اللَّيْلِ وَالنَّهَارِ (both جر) + لَآيَاتٍ (خبر إِنَّ, here with لام affirmation preceding it) + لِأُولِي (لام + أولي = جار و مجرور) + الْأَلْبَابِ (مضاف إليه, جر). If you can parse this ayah, you have mastered Book 6.",
       "ur": "یہ آیت ایک مکمل Book 6 امتحان ہے۔ إِنَّ (مبنی) + فِي خَلْقِ (جار و مجرور) + السَّمَاوَاتِ (مقضور) + واخْتِلَافِ (جر) + اللَّيْلِ وَالنَّهَارِ (جر) + لَآيَاتٍ (خبر) + لِأُولِي (جار و مجرور) + الْأَلْبَابِ (مضاف إليه، جر)۔"

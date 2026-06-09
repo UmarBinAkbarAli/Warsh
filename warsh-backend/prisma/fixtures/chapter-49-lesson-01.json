@@ -122,10 +122,22 @@
         "ur": "بیشک اللہ بہت بخشنے والا، بہت رحم کرنے والا ہے"
       },
       "options": [
-        { "en": "Indeed, Allah is Most Forgiving, Most Merciful", "ur": "بیشک اللہ بہت بخشنے والا، بہت رحم کرنے والا ہے" },
-        { "en": "Allah is truly forgiving and Merciful", "ur": "اللہ واقعی بخشنے والا اور رحم کرنے والا ہے" },
-        { "en": "Indeed, the Forgiving is Allah", "ur": "بیشک بخشنے والا اللہ ہے" },
-        { "en": "Allah loves the forgiving and the merciful", "ur": "اللہ بخشنے والے اور رحم کرنے والے کو پیار کرتا ہے" }
+        {
+          "en": "Indeed, Allah is Most Forgiving, Most Merciful",
+          "ur": "بیشک اللہ بہت بخشنے والا، بہت رحم کرنے والا ہے"
+        },
+        {
+          "en": "Allah is truly forgiving and Merciful",
+          "ur": "اللہ واقعی بخشنے والا اور رحم کرنے والا ہے"
+        },
+        {
+          "en": "Indeed, the Forgiving is Allah",
+          "ur": "بیشک بخشنے والا اللہ ہے"
+        },
+        {
+          "en": "Allah loves the forgiving and the merciful",
+          "ur": "اللہ بخشنے والے اور رحم کرنے والے کو پیار کرتا ہے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -226,12 +238,41 @@
         }
       ],
       "right_column": [
-        { "en": "Indeed Allah (acc.)", "ur": "بیشک اللہ (نصب)" },
-        { "en": "But the Muslim (acc.)", "ur": "لیکن مسلمان (نصب)" },
-        { "en": "As if the speech (acc.)", "ur": "جیسے کلام (نصب)" },
-        { "en": "That knowledge (acc.)", "ur": "کہ علم (نصب)" }
+        {
+          "en": "Indeed Allah (acc.)",
+          "ur": "بیشک اللہ (نصب)"
+        },
+        {
+          "en": "But the Muslim (acc.)",
+          "ur": "لیکن مسلمان (نصب)"
+        },
+        {
+          "en": "As if the speech (acc.)",
+          "ur": "جیسے کلام (نصب)"
+        },
+        {
+          "en": "That knowledge (acc.)",
+          "ur": "کہ علم (نصب)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -271,7 +312,12 @@
           "ur": "مفید ہے"
         }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -279,13 +325,47 @@
       "id": "ch49-l01-ex06",
       "sentence_ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
       "words": [
-        { "ar": "إِنَّ", "ar_plain": "إن", "translit": "inna", "en": "indeed" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah" },
-        { "ar": "غَفُورٌ", "ar_plain": "غفور", "translit": "ghafurun", "en": "Most Forgiving" },
-        { "ar": "رَحِيمٌ", "ar_plain": "رحييم", "translit": "rahiimun", "en": "Most Merciful" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "غَفُورٌ",
+          "ar_plain": "غفور",
+          "translit": "ghafurun",
+          "en": "Most Forgiving",
+          "ur": "سب سے زیادہ معاف کرنے والا"
+        },
+        {
+          "ar": "رَحِيمٌ",
+          "ar_plain": "رحييم",
+          "translit": "rahiimun",
+          "en": "Most Merciful",
+          "ur": "سب سے زیادہ رحم کرنے والا"
+        }
       ],
-      "available_roles": ["PARTICLE", "SUBJECT", "PREDICATE", "ADJECTIVE"],
-      "correct_roles": ["PARTICLE", "SUBJECT", "PREDICATE", "ADJECTIVE"],
+      "available_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREDICATE",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREDICATE",
+        "ADJECTIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "إِنَّ is the emphasis particle. اللَّهَ is the subject in accusative (منصوب) because إِنَّ governs it. غَفُورٌ رَحِيمٌ is the predicate (خبر) — two adjectives describing Allah.",
@@ -303,10 +383,22 @@
         "ur": "لیکن مسلمان صبر والا ہے"
       },
       "options": [
-        { "en": "But the Muslim is patient", "ur": "لیکن مسلمان صبر والا ہے" },
-        { "en": "And the Muslim is patient", "ur": "اور مسلمان صبر والا ہے" },
-        { "en": "But the patient is a Muslim", "ur": "لیکن صبر والا مسلمان ہے" },
-        { "en": "The Muslim will be patient", "ur": "مسلمان صبر کرے گا" }
+        {
+          "en": "But the Muslim is patient",
+          "ur": "لیکن مسلمان صبر والا ہے"
+        },
+        {
+          "en": "And the Muslim is patient",
+          "ur": "اور مسلمان صبر والا ہے"
+        },
+        {
+          "en": "But the patient is a Muslim",
+          "ur": "لیکن صبر والا مسلمان ہے"
+        },
+        {
+          "en": "The Muslim will be patient",
+          "ur": "مسلمان صبر کرے گا"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -331,7 +423,9 @@
       "ur": "انجیر اور زیتون کی قسم سے",
       "audio_url": "https://cdn.warsh.app/audio/quran/at-tin-001-mishary.mp3"
     },
-    "highlighted_word_indices": [1],
+    "highlighted_word_indices": [
+      1
+    ],
     "noor_explanation": {
       "en": "إِنَّ and its sisters (أَنَّ، لَكِنَّ، كَأَنَّ) are the core of complex nominal sentences in Arabic. They all govern the accusative on the subject. إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ — the most repeated phrase of the Quran — shows this pattern perfectly.",
       "ur": "إِنَّ اور اس کی sisters (أَنَّ، لَكِنَّ، كَأَنَّ) عربی میں complex nominal sentences کی core ہیں۔ وہ سب subject پر accusative govern کرتی ہیں۔ إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ — قرآن کی سب سے repeat ہونے والی phrase — اس pattern کو perfectly دکھاتی ہے۔"

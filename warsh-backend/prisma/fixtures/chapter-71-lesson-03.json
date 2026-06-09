@@ -33,7 +33,8 @@
         "ar": "التَّمْيِيز",
         "ar_plain": "التمييز",
         "translit": "at-tamyeez",
-        "en": "Specification / Clarification"
+        "en": "Specification / Clarification",
+        "ur": "تفصیلات / وضاحت"
       },
       "definition_ar": "اسم منصوب يُوضح ويخصص ما قبله",
       "definition_en": "A noun in the accusative that clarifies and specifies what precedes it",
@@ -44,60 +45,70 @@
       "type": "CONCEPT",
       "concept": {
         "ar": "تمييز العدد",
-        "en": "Number Specification"
+        "en": "Number Specification",
+        "ur": "نمبر کی تفصیلات"
       },
       "explanation": {
         "en": "A تمييز that clarifies the number or quantity",
         "ar": "تمييز يوضح العدد أو الكمية",
-        "example_ar": "عِشْرُونَ يَوْمًا — twenty days"
+        "example_ar": "عِشْرُونَ يَوْمًا — twenty days",
+        "ur": "ایک تمييز جو تعداد یا مقدار کو واضح کرتا ہے۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
         "ar": "تمييز النكرة",
-        "en": "Indefinite Noun Specification"
+        "en": "Indefinite Noun Specification",
+        "ur": "غیر معینہ اسم تصریح"
       },
       "explanation": {
         "en": "A تمييز that specifies an indefinite/vague noun",
         "ar": "تمييز يخصص اسمًا نكرة مبهمًا",
-        "example_ar": "اكَتَفْتُ يَدًا — I took a handful"
+        "example_ar": "اكَتَفْتُ يَدًا — I took a handful",
+        "ur": "ایک تمييز جو ایک غیر معینہ/مبہم اسم کی وضاحت کرتا ہے۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
         "ar": "مُبَيَّن",
-        "en": "The Specified"
+        "en": "The Specified",
+        "ur": "مخصوص"
       },
       "explanation": {
         "en": "The noun that the تمييز clarifies",
         "ar": "الاسم الذي يوضحه التمييز",
-        "example_ar": "في \"عِشْرُونَ يَوْمًا\" — يوم is المُبَيَّن"
+        "example_ar": "في \"عِشْرُونَ يَوْمًا\" — يوم is المُبَيَّن",
+        "ur": "وہ اسم جو تمييز واضح کرتا ہے۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
         "ar": "تمييز العَدد المفرد",
-        "en": "Singular Number Specification"
+        "en": "Singular Number Specification",
+        "ur": "واحد نمبر کی تفصیلات"
       },
       "explanation": {
         "en": "Number تمييز from 3 to 10 is singular",
         "ar": "تمييز العدد من 3 إلى 10 يكون مفردًا",
-        "example_ar": "ثَلَاثَةٌ أَفْرَادٍ — three individuals"
+        "example_ar": "ثَلَاثَةٌ أَفْرَادٍ — three individuals",
+        "ur": "نمبر تمييز 3 سے 10 تک واحد ہے۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
         "ar": "تمييز العَدد المعطوف",
-        "en": "Coordinated Number Specification"
+        "en": "Coordinated Number Specification",
+        "ur": "مربوط نمبر کی تفصیلات"
       },
       "explanation": {
         "en": "Number تمييز from 11 to 99 is in the معطوف form",
         "ar": "تمييز العدد من 11 إلى 99 يكون معطوفًا",
-        "example_ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا — 25 days"
+        "example_ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا — 25 days",
+        "ur": "نمبر تمييز 11 سے 99 تک معطوف فارم میں ہے۔"
       }
     }
   ],
@@ -109,20 +120,25 @@
         "ar": "ثَلَاثُونَ يَوْمًا",
         "ar_plain": "ثلاثون يومًا",
         "translit": "thalaathuuna yawman",
-        "en": "Thirty days"
+        "en": "Thirty days",
+        "ur": "تیس دن"
       },
       "options": [
         {
-          "en": "Thirty (the number being specified)"
+          "en": "Thirty (the number being specified)",
+          "ur": "تیس (جو تعداد بتائی جا رہی ہے)"
         },
         {
-          "en": "Days (the تمييز clarifying what is counted)"
+          "en": "Days (the تمييز clarifying what is counted)",
+          "ur": "دن (تمييز یہ واضح کرتا ہے کہ کیا شمار کیا جاتا ہے)"
         },
         {
-          "en": "Three"
+          "en": "Three",
+          "ur": "تین"
         },
         {
-          "en": "Many"
+          "en": "Many",
+          "ur": "بہت سے"
         }
       ],
       "correct_index": 1
@@ -132,12 +148,14 @@
       "type": "TRUE_FALSE",
       "statement": {
         "ar": "تمييز العدد من 3 إلى 10 يكون جمعًا",
-        "en": "Number تمييز from 3 to 10 is plural"
+        "en": "Number تمييز from 3 to 10 is plural",
+        "ur": "نمبر تمييز 3 سے 10 تک جمع ہے۔"
       },
       "correct_answer": false,
       "explanation_on_wrong": {
         "en": "Number تمييز from 3 to 10 is مفرد (singular, منصوب) not جمع. Example: ثَلَاثَةٌ أَفْرَادٍ — أَفْرَاد is مفرد.",
-        "ar": "تمييز العدد من 3 إلى 10 يكون مفردًا (مَنْصُوبًا) bukan جمع."
+        "ar": "تمييز العدد من 3 إلى 10 يكون مفردًا (مَنْصُوبًا) bukan جمع.",
+        "ur": "نمبر تمييز 3 سے 10 تک ہے مفرد (واحد، منصوب) نہیں جمع۔ مثال: ثَلَاثَةٌ أَفْرَادٍ — أَفْرَاد is مفرد."
       }
     },
     {
@@ -146,39 +164,45 @@
       "mode": "TAP",
       "sentence_ar": "اشْتَرَيْتُ خَمْسَةَ ___",
       "hint": {
-        "en": "What's being bought? And what number?"
+        "en": "What's being bought? And what number?",
+        "ur": "کیا خریدا جا رہا ہے؟ اور کون سا نمبر؟"
       },
       "options": [
         {
           "ar": "كتب",
           "ar_plain": "كتب",
           "translit": "kutub",
-          "en": "books"
+          "en": "books",
+          "ur": "کتابیں"
         },
         {
           "ar": "قلم",
           "ar_plain": "قلم",
           "translit": "qalam",
-          "en": "pens"
+          "en": "pens",
+          "ur": "قلم"
         },
         {
           "ar": "مصحف",
           "ar_plain": "مصحف",
           "translit": "mushaf",
-          "en": "Qurans"
+          "en": "Qurans",
+          "ur": "قرآن"
         },
         {
           "ar": "دفتر",
           "ar_plain": "دفتر",
           "translit": "daftar",
-          "en": "notebooks"
+          "en": "notebooks",
+          "ur": "نوٹ بک"
         }
       ],
       "correct_answer": {
         "ar": "كتب",
         "ar_plain": "كتب",
         "translit": "kutub",
-        "en": "books"
+        "en": "books",
+        "ur": "کتابیں"
       }
     },
     {
@@ -190,19 +214,22 @@
           "ar": "خَمْسَةٌ",
           "ar_plain": "خمسة",
           "translit": "khamsa",
-          "en": "five"
+          "en": "five",
+          "ur": "پانچ"
         },
         {
           "ar": "وَعِشْرُونَ",
           "ar_plain": "وعشرون",
           "translit": "wa-ishrun",
-          "en": "and twenty"
+          "en": "and twenty",
+          "ur": "اور بیس"
         },
         {
           "ar": "يَوْمًا",
           "ar_plain": "يوما",
           "translit": "yawman",
-          "en": "days"
+          "en": "days",
+          "ur": "دن"
         }
       ],
       "available_roles": [
@@ -229,39 +256,47 @@
           "ar": "ثَلَاثَةٌ أَفْرَادٍ",
           "ar_plain": "ثلاثة أفراد",
           "translit": "thalaathatu afraadin",
-          "en": "three individuals"
+          "en": "three individuals",
+          "ur": "تین افراد"
         },
         {
           "ar": "خَمْسَةٌ وَعِشْرُونَ يَوْمًا",
           "ar_plain": "خمسة وعشرون يومًا",
           "translit": "khamsata wa-ishrun yawman",
-          "en": "twenty-five days"
+          "en": "twenty-five days",
+          "ur": "پچیس دن"
         },
         {
           "ar": "عِشْرُونَ كِتَابًا",
           "ar_plain": "عشرين كتابًا",
           "translit": "ishriina kitaaban",
-          "en": "twenty books"
+          "en": "twenty books",
+          "ur": "بیس کتابیں"
         },
         {
           "ar": "احْتَلَمْتُ لَيْلَةً",
           "ar_plain": "احتلمت ليلة",
           "translit": "ihtalimtu laylatan",
-          "en": "I dreamed one night"
+          "en": "I dreamed one night",
+          "ur": "میں نے ایک رات خواب دیکھا"
         }
       ],
       "right_column": [
         {
-          "en": "تمييز عدد: مفرد منصوب"
+          "en": "تمييز عدد: مفرد منصوب",
+          "ur": "تمييز عدد: مفرد منصوب"
         },
         {
-          "en": "تمييز عدد: معطوف (مضاف إليه)"
+          "en": "تمييز عدد: معطوف (مضاف إليه)",
+          "ur": "تمييز عدد: معطوف (مضاف إليه)"
         },
         {
-          "en": "تمييز نكرة"
+          "en": "تمييز نكرة",
+          "ur": "تمييز نكرة"
         },
         {
-          "en": "تمييزعدد: مفرد منصوب (alt)"
+          "en": "تمييزعدد: مفرد منصوب (alt)",
+          "ur": "تمييزعدد: مفرد منصوب (alt)"
         }
       ],
       "correct_pairs": [
@@ -287,32 +322,37 @@
       "id": "ch71l03ex6",
       "type": "BUILD_SENTENCE",
       "target_translation": {
-        "en": "Seven students entered the mosque"
+        "en": "Seven students entered the mosque",
+        "ur": "سات طلبہ مسجد میں داخل ہوئے۔"
       },
       "tiles": [
         {
           "ar": "سبعة",
           "ar_plain": "سبعة",
           "translit": "sab'a",
-          "en": "seven"
+          "en": "seven",
+          "ur": "سات"
         },
         {
           "ar": "تلاميذ",
           "ar_plain": "تلاميذ",
           "translit": "tulaamiz",
-          "en": "students"
+          "en": "students",
+          "ur": "طلباء"
         },
         {
           "ar": "دخلوا",
           "ar_plain": "دخلوا",
           "translit": "dakhaluu",
-          "en": "entered"
+          "en": "entered",
+          "ur": "داخل ہوا"
         },
         {
           "ar": "المسجد",
           "ar_plain": "المسجد",
           "translit": "al-masjid",
-          "en": "the mosque"
+          "en": "the mosque",
+          "ur": "مسجد"
         }
       ],
       "correct_order": [
@@ -329,20 +369,25 @@
         "ar": "ثَلَاثُونَ يَوْمًا",
         "ar_plain": "ثلاثون يومًا",
         "translit": "thalaathuuna yawman",
-        "en": "Thirty days"
+        "en": "Thirty days",
+        "ur": "تیس دن"
       },
       "options": [
         {
-          "en": "Three days"
+          "en": "Three days",
+          "ur": "تین دن"
         },
         {
-          "en": "Thirty days"
+          "en": "Thirty days",
+          "ur": "تیس دن"
         },
         {
-          "en": "Third day"
+          "en": "Third day",
+          "ur": "تیسرا دن"
         },
         {
-          "en": "Thirty nights"
+          "en": "Thirty nights",
+          "ur": "تیس راتیں۔"
         }
       ],
       "correct_index": 1
@@ -353,39 +398,45 @@
       "mode": "TAP",
       "sentence_ar": "من العدد ___ إلى ___ التمييز مفرد",
       "hint": {
-        "en": "From number ___ to ___ the تمييز is مفرد"
+        "en": "From number ___ to ___ the تمييز is مفرد",
+        "ur": "نمبر ___ سے ___ تک تمييز ہے مفرد"
       },
       "options": [
         {
           "ar": "3",
           "ar_plain": "3",
           "translit": "3",
-          "en": "3"
+          "en": "3",
+          "ur": "3"
         },
         {
           "ar": "10",
           "ar_plain": "10",
           "translit": "10",
-          "en": "10"
+          "en": "10",
+          "ur": "10"
         },
         {
           "ar": "5",
           "ar_plain": "5",
           "translit": "5",
-          "en": "5"
+          "en": "5",
+          "ur": "5"
         },
         {
           "ar": "11",
           "ar_plain": "11",
           "translit": "11",
-          "en": "11"
+          "en": "11",
+          "ur": "11"
         }
       ],
       "correct_answer": {
         "ar": "3",
         "ar_plain": "3",
         "translit": "3",
-        "en": "3"
+        "en": "3",
+        "ur": "3"
       }
     }
   ],

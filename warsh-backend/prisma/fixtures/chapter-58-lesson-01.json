@@ -131,18 +131,71 @@
       "id": "ch58-l01-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "أَكَلَ", "ar_plain": "أكل", "translit": "akala", "en": "he ate" },
-        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "he went" },
-        { "ar": "عَلِمَ", "ar_plain": "علم", "translit": "alima", "en": "he knew" },
-        { "ar": "صَبَرَ", "ar_plain": "صبر", "translit": "sabara", "en": "he was patient" }
+        {
+          "ar": "أَكَلَ",
+          "ar_plain": "أكل",
+          "translit": "akala",
+          "en": "he ate",
+          "ur": "اس نے کھا لیا"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ چلا گیا"
+        },
+        {
+          "ar": "عَلِمَ",
+          "ar_plain": "علم",
+          "translit": "alima",
+          "en": "he knew",
+          "ur": "وہ جانتا تھا"
+        },
+        {
+          "ar": "صَبَرَ",
+          "ar_plain": "صبر",
+          "translit": "sabara",
+          "en": "he was patient",
+          "ur": "وہ صبر کر رہا تھا"
+        }
       ],
       "right_column": [
-        { "en": "متعدي — takes direct object", "ur": "متعدی — مفعول به لیتا ہے" },
-        { "en": "لازم — no direct object needed", "ur": "لازم — مفعول به کی ضرورت نہیں" },
-        { "en": "متعدي — can take two objects", "ur": "متعدی — دو مفعول به لے سکتا ہے" },
-        { "en": "لازم — no direct object needed", "ur": "لازم — مفعول به کی ضرورت نہیں" }
+        {
+          "en": "متعدي — takes direct object",
+          "ur": "متعدی — مفعول به لیتا ہے"
+        },
+        {
+          "en": "لازم — no direct object needed",
+          "ur": "لازم — مفعول به کی ضرورت نہیں"
+        },
+        {
+          "en": "متعدي — can take two objects",
+          "ur": "متعدی — دو مفعول به لے سکتا ہے"
+        },
+        {
+          "en": "لازم — no direct object needed",
+          "ur": "لازم — مفعول به کی ضرورت نہیں"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "أَكَلَ (transitive, needs an object), ذَهَبَ (intransitive), عَلِمَ (transitive, can take two objects), صَبَرَ (intransitive).",
@@ -156,13 +209,26 @@
         "ar": "عَلِمَ زَيْدٌ الْقُرْآنَ",
         "ar_plain": "علم زيد القرآن",
         "translit": "alima zaydun al-qur'aana",
-        "en": "Zaid knew the Quran."
+        "en": "Zaid knew the Quran.",
+        "ur": "زید قرآن کو جانتا تھا۔"
       },
       "options": [
-        { "en": "Zaid knew the Quran.", "ur": "زید نے قرآن سیکھا۔" },
-        { "en": "The Quran knew Zaid.", "ur": "قرآن نے زید کو جانا۔" },
-        { "en": "Zaid is known to the Quran.", "ur": "زید قرآن کا علم ہے۔" },
-        { "en": "The knowing of Zaid is the Quran.", "ur": "زید کا علم قرآن ہے۔" }
+        {
+          "en": "Zaid knew the Quran.",
+          "ur": "زید نے قرآن سیکھا۔"
+        },
+        {
+          "en": "The Quran knew Zaid.",
+          "ur": "قرآن نے زید کو جانا۔"
+        },
+        {
+          "en": "Zaid is known to the Quran.",
+          "ur": "زید قرآن کا علم ہے۔"
+        },
+        {
+          "en": "The knowing of Zaid is the Quran.",
+          "ur": "زید کا علم قرآن ہے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -181,10 +247,34 @@
         "ur": "زید نے کھجوریں کھائیں۔"
       },
       "options": [
-        { "ar": "تَمْرًا", "ar_plain": "تمر", "translit": "tamran", "en": "dates (acc.)", "ur": "کھجوریں (نصب)" },
-        { "ar": "تَمْرٌ", "ar_plain": "تمر", "translit": "tamrun", "en": "dates (nom.)", "ur": "کھجوریں (رفع)" },
-        { "ar": "تَمْرِ", "ar_plain": "تمر", "translit": "tamrin", "en": "dates (gen.)", "ur": "کھجوریں (جر)" },
-        { "ar": "تَمْرَتَانِ", "ar_plain": "تمرتان", "translit": "tamrataani", "en": "two dates (dual)", "ur": "دو کھجوریں (مثنی)" }
+        {
+          "ar": "تَمْرًا",
+          "ar_plain": "تمر",
+          "translit": "tamran",
+          "en": "dates (acc.)",
+          "ur": "کھجوریں (نصب)"
+        },
+        {
+          "ar": "تَمْرٌ",
+          "ar_plain": "تمر",
+          "translit": "tamrun",
+          "en": "dates (nom.)",
+          "ur": "کھجوریں (رفع)"
+        },
+        {
+          "ar": "تَمْرِ",
+          "ar_plain": "تمر",
+          "translit": "tamrin",
+          "en": "dates (gen.)",
+          "ur": "کھجوریں (جر)"
+        },
+        {
+          "ar": "تَمْرَتَانِ",
+          "ar_plain": "تمرتان",
+          "translit": "tamrataani",
+          "en": "two dates (dual)",
+          "ur": "دو کھجوریں (مثنی)"
+        }
       ],
       "correct_answer": {
         "ar": "تَمْرًا",
@@ -207,12 +297,40 @@
         "ur": "مومنین مسجد کی طرف گئے۔"
       },
       "tiles": [
-        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "he went" },
-        { "ar": "الْمُؤْمِنُونَ", "ar_plain": "المؤمنون", "translit": "al-mu'minuuna", "en": "the believers" },
-        { "ar": "إِلَى الْمَسْجِدِ", "ar_plain": "إلى المسجد", "translit": "ilaa al-masjidi", "en": "to the mosque", "ur": "مسجد کی طرف" },
-        { "ar": "يُؤْمِنُونَ", "ar_plain": "يؤمنون", "translit": "yu'minuuna", "en": "they believe (present)", "ur": "وہ ایمان رکھتے ہیں" }
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ چلا گیا"
+        },
+        {
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minuuna",
+          "en": "the believers",
+          "ur": "مومنین"
+        },
+        {
+          "ar": "إِلَى الْمَسْجِدِ",
+          "ar_plain": "إلى المسجد",
+          "translit": "ilaa al-masjidi",
+          "en": "to the mosque",
+          "ur": "مسجد کی طرف"
+        },
+        {
+          "ar": "يُؤْمِنُونَ",
+          "ar_plain": "يؤمنون",
+          "translit": "yu'minuuna",
+          "en": "they believe (present)",
+          "ur": "وہ ایمان رکھتے ہیں"
+        }
       ],
-      "correct_order": [1, 0, 2],
+      "correct_order": [
+        1,
+        0,
+        2
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "ذَهَبَ is a لازم verb — it does not take a direct object. إِلَى is a preposition (حرف جر), not a direct object. The correct order is: SUBJECT (الْمُؤْمِنُونَ) + VERB (ذَهَبَ) + PREPOSITIONAL PHRASE (إِلَى الْمَسْجِدِ).",
@@ -224,12 +342,38 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "يَعْلَمُ اللَّهُ الْمُؤْمِنِينَ",
       "words": [
-        { "ar": "يَعْلَمُ", "ar_plain": "يعلم", "translit": "ya'lamu", "en": "he knows" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah" },
-        { "ar": "الْمُؤْمِنِينَ", "ar_plain": "المؤمنين", "translit": "al-mu'miniina", "en": "the believers" }
+        {
+          "ar": "يَعْلَمُ",
+          "ar_plain": "يعلم",
+          "translit": "ya'lamu",
+          "en": "he knows",
+          "ur": "وہ جانتا ہے"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "الْمُؤْمِنِينَ",
+          "ar_plain": "المؤمنين",
+          "translit": "al-mu'miniina",
+          "en": "the believers",
+          "ur": "مومنین"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "يَعْلَمُ = VERB (مضارع, مرفوع — no particle affecting it here). اللَّهُ = SUBJECT (مبتدأ, in the nominative because يَعْلَمُ is intransitive in this structure — اللَّهُ is its subject, not its object). الْمُؤْمِنِينَ = OBJECT (مفعول به, in the accusative because يَعْلَمُ is متعدي here). The verb يَعْلَمُ is متعدي and takes الْمُؤْمِنِينَ as its direct object.",
@@ -257,13 +401,26 @@
         "ar": "صَبَرَ الْمُسْلِمُونَ عَلَى الْبَلَاءِ",
         "ar_plain": "صبر المسلمون على البلاء",
         "translit": "sabara al-muslimuuna 'alaa al-balaa'i",
-        "en": "The Muslims were patient during the trial."
+        "en": "The Muslims were patient during the trial.",
+        "ur": "مسلمانوں نے آزمائش کے دوران صبر کیا۔"
       },
       "options": [
-        { "en": "The Muslims were patient during the trial.", "ur": "مسلمانوں نے مصیبت پر صبر کیا۔" },
-        { "en": "The Muslims caused the trial to be patient.", "ur": "مسلمانوں نے مصیبت کو صبرائی بنایا۔" },
-        { "en": "The trial was patient with the Muslims.", "ur": "مصیبت مسلمانوں کے ساتھ صبر کر رہی تھی۔" },
-        { "en": "The Muslims knew the trial.", "ur": "مسلمانوں نے مصیبت کو جان لیا۔" }
+        {
+          "en": "The Muslims were patient during the trial.",
+          "ur": "مسلمانوں نے مصیبت پر صبر کیا۔"
+        },
+        {
+          "en": "The Muslims caused the trial to be patient.",
+          "ur": "مسلمانوں نے مصیبت کو صبرائی بنایا۔"
+        },
+        {
+          "en": "The trial was patient with the Muslims.",
+          "ur": "مصیبت مسلمانوں کے ساتھ صبر کر رہی تھی۔"
+        },
+        {
+          "en": "The Muslims knew the trial.",
+          "ur": "مسلمانوں نے مصیبت کو جان لیا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -288,7 +445,9 @@
       "ur": "اللہ، کوئی معبود نہیں سوائے اس کے، زندہ قائم رکھنے والا۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-255-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "This ayah (Ayat al-Kursi) is a famous nominal sentence (جملة اسمية) — it has no verb at all. But for the verbs we study: أَكَلَ and عَلِمَ are متعدي (need an object), while ذَهَبَ and صَبَرَ are لازم (complete without an object). When you encounter a new verb, ask: does it need something after it, or is its meaning complete? If it needs a noun in the accusative (نصب) without a preposition, it is متعدي.",
       "ur": "یہ آیت (آیت الکرسی) ایک مشہور nominal sentence ہے — اس میں کوئی فعل نہیں۔ لیکن جن verbs کا ہم studied کرتے ہیں: أَكَلَ اور عَلِمَ متعدی ہیں (object چاہیے)، جبکہ ذَهَبَ اور صَبَرَ لازم ہیں (بغیر object مکمل)۔ جدید verb کے ساتھ: کیا اسے کچھ درکار ہے یا اس کا مطلب مکمل ہے؟"

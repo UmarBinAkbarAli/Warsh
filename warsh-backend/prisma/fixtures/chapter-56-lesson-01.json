@@ -134,13 +134,26 @@
         "ar": "مُوسَى كَرِيمٌ",
         "ar_plain": "موسى كريم",
         "translit": "moosaa kariimun",
-        "en": "Musa is noble."
+        "en": "Musa is noble.",
+        "ur": "موسیٰ شریف ہیں۔"
       },
       "options": [
-        { "en": "Musa is noble.", "ur": "موسیٰ شریف ہے۔" },
-        { "en": "A noble Musa.", "ur": "ایک شریف موسیٰ۔" },
-        { "en": "Musa helped.", "ur": "موسیٰ نے مدد کی۔" },
-        { "en": "The noble ones.", "ur": "شریف لوگ۔" }
+        {
+          "en": "Musa is noble.",
+          "ur": "موسیٰ شریف ہے۔"
+        },
+        {
+          "en": "A noble Musa.",
+          "ur": "ایک شریف موسیٰ۔"
+        },
+        {
+          "en": "Musa helped.",
+          "ur": "موسیٰ نے مدد کی۔"
+        },
+        {
+          "en": "The noble ones.",
+          "ur": "شریف لوگ۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -153,16 +166,56 @@
       "id": "ch56-l01-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "مُوسَى", "ar_plain": "موسى", "translit": "moosaa", "en": "Musa" },
-        { "ar": "عِيسَى", "ar_plain": "عيسى", "translit": "'iisaa", "en": "Isa" },
-        { "ar": "الْفَتَى", "ar_plain": "الفتى", "translit": "al-fataa", "en": "the young man" }
+        {
+          "ar": "مُوسَى",
+          "ar_plain": "موسى",
+          "translit": "moosaa",
+          "en": "Musa",
+          "ur": "موسی"
+        },
+        {
+          "ar": "عِيسَى",
+          "ar_plain": "عيسى",
+          "translit": "'iisaa",
+          "en": "Isa",
+          "ur": "عیسیٰ"
+        },
+        {
+          "ar": "الْفَتَى",
+          "ar_plain": "الفتى",
+          "translit": "al-fataa",
+          "en": "the young man",
+          "ur": "نوجوان"
+        }
       ],
       "right_column": [
-        { "en": "مَقْصُور (ends in ى)", "ur": "مقصور (ى پر ختم)" },
-        { "en": "مَقْصُور (ends in ى)", "ur": "مقصور (ى پر ختم)" },
-        { "en": "مَقْصُور (ends in ى)", "ur": "مقصور (ى پر ختم)" }
+        {
+          "en": "مَقْصُور (ends in ى)",
+          "ur": "مقصور (ى پر ختم)"
+        },
+        {
+          "en": "مَقْصُور (ends in ى)",
+          "ur": "مقصور (ى پر ختم)"
+        },
+        {
+          "en": "مَقْصُور (ends in ى)",
+          "ur": "مقصور (ى پر ختم)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "All three end in alif maqsura (ى), making them المقصور nouns. مُوسَى, عِيسَى, and الْفَتَى are all standard المقصور examples.",
@@ -193,10 +246,34 @@
         "ur": "موسیٰ مسجد کی طرف گیا۔"
       },
       "options": [
-        { "ar": "مُوسَى", "ar_plain": "موسى", "translit": "moosaa", "en": "Musa (nom.)", "ur": "موسیٰ (رفع)" },
-        { "ar": "مُوسَيْ", "ar_plain": "موسى", "translit": "moosay", "en": "Musa (acc.)", "ur": "موسیٰ (نصب)" },
-        { "ar": "مُوسَيْه", "ar_plain": "موسيه", "translit": "moosayhi", "en": "Musa (with pronoun)", "ur": "موسیٰ (ضمیر کے ساتھ)" },
-        { "ar": "مُوسٍ", "ar_plain": "موس", "translit": "moosin", "en": "Musa (gen.)", "ur": "موسیٰ (جر)" }
+        {
+          "ar": "مُوسَى",
+          "ar_plain": "موسى",
+          "translit": "moosaa",
+          "en": "Musa (nom.)",
+          "ur": "موسیٰ (رفع)"
+        },
+        {
+          "ar": "مُوسَيْ",
+          "ar_plain": "موسى",
+          "translit": "moosay",
+          "en": "Musa (acc.)",
+          "ur": "موسیٰ (نصب)"
+        },
+        {
+          "ar": "مُوسَيْه",
+          "ar_plain": "موسيه",
+          "translit": "moosayhi",
+          "en": "Musa (with pronoun)",
+          "ur": "موسیٰ (ضمیر کے ساتھ)"
+        },
+        {
+          "ar": "مُوسٍ",
+          "ar_plain": "موس",
+          "translit": "moosin",
+          "en": "Musa (gen.)",
+          "ur": "موسیٰ (جر)"
+        }
       ],
       "correct_answer": {
         "ar": "مُوسَى",
@@ -219,12 +296,39 @@
         "ur": "جوان آدمی ذہین ہے۔"
       },
       "tiles": [
-        { "ar": "الْفَتَى", "ar_plain": "الفتى", "translit": "al-fataa", "en": "the young man" },
-        { "ar": "ذَكِيٌّ", "ar_plain": "ذكي", "translit": "dhakiyyun", "en": "intelligent", "ur": "ذہین" },
-        { "ar": "عِيسَى", "ar_plain": "عيسى", "translit": "'iisaa", "en": "Isa", "ur": "عیسیٰ" },
-        { "ar": "مُوسَى", "ar_plain": "موسى", "translit": "moosaa", "en": "Musa", "ur": "موسیٰ" }
+        {
+          "ar": "الْفَتَى",
+          "ar_plain": "الفتى",
+          "translit": "al-fataa",
+          "en": "the young man",
+          "ur": "نوجوان"
+        },
+        {
+          "ar": "ذَكِيٌّ",
+          "ar_plain": "ذكي",
+          "translit": "dhakiyyun",
+          "en": "intelligent",
+          "ur": "ذہین"
+        },
+        {
+          "ar": "عِيسَى",
+          "ar_plain": "عيسى",
+          "translit": "'iisaa",
+          "en": "Isa",
+          "ur": "عیسیٰ"
+        },
+        {
+          "ar": "مُوسَى",
+          "ar_plain": "موسى",
+          "translit": "moosaa",
+          "en": "Musa",
+          "ur": "موسیٰ"
+        }
       ],
-      "correct_order": [0, 1],
+      "correct_order": [
+        0,
+        1
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الْفَتَى (the young man, مُبْتَدَأ) + ذَكِيٌّ (intelligent, خَبَر). الْفَتَى is المقصور — the ي shows the nominative case.",
@@ -252,13 +356,26 @@
         "ar": "عِيسَى فِي الْكِتَابِ",
         "ar_plain": "عيسى في الكتاب",
         "translit": "'iisaa fii al-kitaabi",
-        "en": "Isa is in the book."
+        "en": "Isa is in the book.",
+        "ur": "عیسیٰ کتاب میں ہے۔"
       },
       "options": [
-        { "en": "Isa is in the book.", "ur": "عیسیٰ کتاب میں ہے۔" },
-        { "en": "Isa wrote the book.", "ur": "عیسیٰ نے کتاب لکھی۔" },
-        { "en": "The book is Isa.", "ur": "کتاب عیسیٰ ہے۔" },
-        { "en": "Isa went to the book.", "ur": "عیسیٰ کتاب کی طرف گیا۔" }
+        {
+          "en": "Isa is in the book.",
+          "ur": "عیسیٰ کتاب میں ہے۔"
+        },
+        {
+          "en": "Isa wrote the book.",
+          "ur": "عیسیٰ نے کتاب لکھی۔"
+        },
+        {
+          "en": "The book is Isa.",
+          "ur": "کتاب عیسیٰ ہے۔"
+        },
+        {
+          "en": "Isa went to the book.",
+          "ur": "عیسیٰ کتاب کی طرف گیا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -272,12 +389,38 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "آمَنَ عِيسَى بِاللَّهِ",
       "words": [
-        { "ar": "آمَنَ", "ar_plain": "آمن", "translit": "aamana", "en": "believed" },
-        { "ar": "عِيسَى", "ar_plain": "عيسى", "translit": "'iisaa", "en": "Isa" },
-        { "ar": "بِاللَّهِ", "ar_plain": "بالله", "translit": "biallaahi", "en": "in Allah" }
+        {
+          "ar": "آمَنَ",
+          "ar_plain": "آمن",
+          "translit": "aamana",
+          "en": "believed",
+          "ur": "یقین کیا"
+        },
+        {
+          "ar": "عِيسَى",
+          "ar_plain": "عيسى",
+          "translit": "'iisaa",
+          "en": "Isa",
+          "ur": "عیسیٰ"
+        },
+        {
+          "ar": "بِاللَّهِ",
+          "ar_plain": "بالله",
+          "translit": "biallaahi",
+          "en": "in Allah",
+          "ur": "اللہ میں"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PREPOSITION"],
-      "correct_roles": ["VERB", "SUBJECT", "PREPOSITION"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PREPOSITION"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "PREPOSITION"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "آمَنَ = VERB (مَبْنِيّ past). عِيسَى = SUBJECT (رفع — المقصور noun, the ي carries dhamma). بِاللَّهِ = PREPOSITION + مضاف إليه (مَعْرَبٌ, جر after بِ).",
@@ -300,7 +443,9 @@
       "ur": "اور اس کا عرش پانی پر تھا۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/maryam-007-mishary.mp3"
     },
-    "highlighted_word_indices": [1],
+    "highlighted_word_indices": [
+      1
+    ],
     "noor_explanation": {
       "en": "This ayah features كَانَ (the incomplete verb), which takes a مبتدأ and خبر. عَرْشُهُ is the subject (رفع), and الْمَاءِ is the predicate in the genitive (جر) after the preposition عَلَىٰ. While الْمَاءِ is not المقصور (it is a standard noun), مُوسَى and عِيسَى from our earlier examples ARE المقصور — their i'rab is shown on the ي before the alif.",
       "ur": "یہ آیت کَانَ (ناقص فعل) دکھاتی ہے جو ایک مبتدأ اور خبر لیتا ہے۔ عَرْشُهُ مبتدأ ہے (رفع) اور الْمَاءِ خبر ہے (جر بعد عَلَىٰ)۔ مُوسَى اور عِيسَى مقصور ہیں — ان کا اعراب الف سے پہلے والے ي پر ہوتا ہے۔"

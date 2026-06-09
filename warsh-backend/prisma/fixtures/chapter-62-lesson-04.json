@@ -53,7 +53,9 @@
         "en": "هَذَا وَذَلِكَ is a common phrase meaning 'this and that' — referring to various things. وَ is the conjunction 'and'. ذَلِكَ references the farther thing.",
         "ur": "هَذَا وَذَلِكَ ایک عام phrase ہے جس کا مطلب ہے 'یہ اور وہ' — مختلف چیزوں کی طرف اشارہ کرتا ہے۔ وَ conjunction 'اور' ہے۔ ذَلِكَ دور کی چیز کو reference کرتا ہے۔"
       },
-      "introduces_vocab": { "ar_plain": "ذلك" }
+      "introduces_vocab": {
+        "ar_plain": "ذلك"
+      }
     },
     {
       "type": "WORD",
@@ -68,7 +70,9 @@
         "en": "أُولَئِكَ وَهَؤُلَاءِ means 'those and these' — contrasting two groups. أُولَئِكَ for the farther group, هَؤُلَاءِ for the nearer group.",
         "ur": "أُولَئِكَ وَهَؤُلَاءِ کا مطلب ہے 'وہ اور یہ' — دو گروہوں کا موازنہ۔ أُولَئِكَ دور کے گروہ کے لیے، هَؤُلَاءِ قریب کے گروہ کے لیے۔"
       },
-      "introduces_vocab": { "ar_plain": "أولئك" }
+      "introduces_vocab": {
+        "ar_plain": "أولئك"
+      }
     },
     {
       "type": "WORD",
@@ -83,7 +87,9 @@
         "en": "هَذِهِ (fem, sg, near) + الْمَرْأَةُ (fem, sg) + الْعَالِمَةُ (fem, sg, adjective). All feminine singular — the demonstrative, the noun, and the adjective all agree.",
         "ur": "هَذِهِ (مؤنث، واحد، قریب) + الْمَرْأَةُ (مؤنث، واحد) + الْعَالِمَةُ (مؤنث، واحد، صفت)۔ سب مؤنث واحد — اشارہ، اسم، اور صفت سب ملتے ہیں۔"
       },
-      "introduces_vocab": { "ar_plain": "عالمة" }
+      "introduces_vocab": {
+        "ar_plain": "عالمة"
+      }
     }
   ],
   "exercises": [
@@ -121,12 +127,41 @@
         }
       ],
       "right_column": [
-        { "en": "that (masc sg, far)", "ur": "وہ (مذکر واحد، دور)" },
-        { "en": "this (fem sg, near)", "ur": "یہ (مؤنث واحد، قریب)" },
-        { "en": "this (masc sg, near)", "ur": "یہ (مذکر واحد، قریب)" },
-        { "en": "that (fem sg, far)", "ur": "وہ (مؤنث واحد، دور)" }
+        {
+          "en": "that (masc sg, far)",
+          "ur": "وہ (مذکر واحد، دور)"
+        },
+        {
+          "en": "this (fem sg, near)",
+          "ur": "یہ (مؤنث واحد، قریب)"
+        },
+        {
+          "en": "this (masc sg, near)",
+          "ur": "یہ (مذکر واحد، قریب)"
+        },
+        {
+          "en": "that (fem sg, far)",
+          "ur": "وہ (مؤنث واحد، دور)"
+        }
       ],
-      "correct_pairs": [[0, 2], [1, 1], [2, 0], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -159,7 +194,11 @@
           "ur": "اللہ کی"
         }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1
     },
     {
@@ -231,10 +270,22 @@
         "ur": "وہ مسلمان مرد"
       },
       "options": [
-        { "en": "those Muslim men", "ur": "وہ مسلمان مرد" },
-        { "en": "this Muslim man", "ur": "یہ مسلمان آدمی" },
-        { "en": "those Muslim women", "ur": "وہ مسلمان عورتیں" },
-        { "en": "this Muslim woman", "ur": "یہ مسلمان عورت" }
+        {
+          "en": "those Muslim men",
+          "ur": "وہ مسلمان مرد"
+        },
+        {
+          "en": "this Muslim man",
+          "ur": "یہ مسلمان آدمی"
+        },
+        {
+          "en": "those Muslim women",
+          "ur": "وہ مسلمان عورتیں"
+        },
+        {
+          "en": "this Muslim woman",
+          "ur": "یہ مسلمان عورت"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -252,23 +303,36 @@
           "ar": "تِلْكَ",
           "ar_plain": "تلك",
           "translit": "tilka",
-          "en": "those (fem)"
+          "en": "those (fem)",
+          "ur": "وہ (خواتین)"
         },
         {
           "ar": "الْآيَاتُ",
           "ar_plain": "الايات",
           "translit": "al-aayaat",
-          "en": "the signs"
+          "en": "the signs",
+          "ur": "نشانیاں"
         },
         {
           "ar": "الْبَيِّنَاتُ",
           "ar_plain": "البيّنات",
           "translit": "al-bayyinaat",
-          "en": "the clear ones"
+          "en": "the clear ones",
+          "ur": "واضح ہیں"
         }
       ],
-      "available_roles": ["SUBJECT", "OBJECT", "ADJECTIVE", "DEMONSTRATIVE", "PARTICLE"],
-      "correct_roles": ["DEMONSTRATIVE", "SUBJECT", "ADJECTIVE"],
+      "available_roles": [
+        "SUBJECT",
+        "OBJECT",
+        "ADJECTIVE",
+        "DEMONSTRATIVE",
+        "PARTICLE"
+      ],
+      "correct_roles": [
+        "DEMONSTRATIVE",
+        "SUBJECT",
+        "ADJECTIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "تِلْكَ (demonstrative), الْآيَاتُ (subject/noun), الْبَيِّنَاتُ (adjective modifying the noun). All feminine singular to agree with each other.",
@@ -319,7 +383,10 @@
       "ur": "لوگوں میں سے بے عقل لوگ کہیں گے: انہیں ان کے قبلے سے جو ان کی پہلی سیدھ تھی کیا موڑا؟",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-142-mishary.mp3"
     },
-    "highlighted_word_indices": [3, 6],
+    "highlighted_word_indices": [
+      3,
+      6
+    ],
     "noor_explanation": {
       "en": "السُّفَهَاءُ مِنَ النَّاسِ — 'the foolish among the people.' الَّتِي كَانُوا عَلَيْهَا — 'the one they used to face.' هَؤُلَاءِ and أُولَئِكَ would be the natural demonstratives for the people being addressed here.",
       "ur": "السُّفَهَاءُ مِنَ النَّاسِ — 'لوگوں میں سے بے عقل'۔ الَّتِي كَانُوا عَلَيْهَا — 'جس کی طرف وہ رخ کرتے تھے'۔ هَؤُلَاءِ اور أُولَئِكَ یہاں addressed لوگوں کے لیے فطری demonstratives ہوں گے۔"

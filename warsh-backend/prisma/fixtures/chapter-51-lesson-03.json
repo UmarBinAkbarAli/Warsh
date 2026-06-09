@@ -29,24 +29,387 @@
     "autoplay": true
   },
   "discover_cards": [
-    { "type": "CONCEPT", "concept": { "en": "Present tense nasb — Alif ending", "ar": "المضارع المنصوب — آخر الفا", "ur": "منصوب مضارع — آخر الفا" }, "explanation": { "en": "After أَنْ, لَنْ, حَتَّى, the present tense verb takes Alif ending instead of Dhamma: يَفْعَلُ → يَفْعَلَ. This is nasb (subjunctive).", "ur": "أَنْ، لَنْ، حَتَّى کے بعد present tense verb Dhamma کی جگہ Alif ending لیتا ہے: يَفْعَلُ → يَفْعَلَ۔ یہ nasb (subjunctive) ہے۔" } },
-    { "type": "EXAMPLE", "text": { "ar": "أَرِيدُ أَنْ يَفْهَمَ", "ar_plain": "أريد أن يفهم", "translit": "ariidu an yafhama", "en": "I want that he understands", "ur": "میں چاہتا ہوں کہ وہ سمجھے" }, "explanation": { "en": "أَنْ triggers nasb. يَفْهَمَ (Alif ending) not يَفْهَمُ (Dhamma). The Alif marks the subjunctive state.", "ur": "أَنْ nasb trigger کرتی ہے۔ يَفْهَمَ (Alif ending) نهین يَفْهَمُ (Dhamma)۔ Alif subjunctive state کو mark کرتی ہے۔" } },
-    { "type": "EXAMPLE", "text": { "ar": "لَنْ يَغْفِرَ", "ar_plain": "لن يغفر", "translit": "lan yaghfira", "en": "he will never forgive", "ur": "وہ کبھی معاف نہیں کرے گا" }, "explanation": { "en": "لَنْ (future negation) triggers nasb. يَغْفِرَ (Alif ending). لَنْ يَغْفِرَ = 'he will never forgive' — absolution future denial.", "ur": "لَنْ (future negation) nasb trigger کرتی ہے۔ يَغْفِرَ (Alif ending)۔ لَنْ يَغْفِرَ = 'وہ کبھی معاف نہیں کرے گا' — مکمل مستقبل کی نفی۔" } },
-    { "type": "WORD", "text": { "ar": "يَغْفِرُ", "ar_plain": "يغفر", "translit": "yaghfiru", "en": "he forgives", "ur": "وہ معاف کرتا ہے" }, "explanation": { "en": "يَغْفِرُ from root غ-ف-ر (to forgive). Present tense with يَ prefix. يَغْفِرَ in nasb = Alif ending.", "ur": "يَغْفِرُ root غ-ف-ر (معاف کرنا) سے۔ يَ prefix کے ساتھ present tense۔ nasb میں يَغْفِرَ = Alif ending۔" } },
-    { "type": "AYAH_PREVIEW", "text": { "ar": "رَبِّ أَجِرْنِي", "ar_plain": "رب أجِرني", "translit": "rabbijirnee", "en": "My Lord, protect me", "ur": "اے میرے رب! مجھے بچا" }, "explanation": { "en": "رَبِّ = My Lord (possessive address). أَجِرْنِي = protect me (command from ج-ر-أ). The root ج-ر-أ relates to protection/refuge.", "ur": "رَبِّ = میرا رب (possessive address)۔ أَجِرْنِي = مجھے بچا (command ج-ر-أ سے)۔ Root ج-ر-أ حفاظت/پناہ سے related ہے۔" } }
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Present tense nasb — Alif ending",
+        "ar": "المضارع المنصوب — آخر الفا",
+        "ur": "منصوب مضارع — آخر الفا"
+      },
+      "explanation": {
+        "en": "After أَنْ, لَنْ, حَتَّى, the present tense verb takes Alif ending instead of Dhamma: يَفْعَلُ → يَفْعَلَ. This is nasb (subjunctive).",
+        "ur": "أَنْ، لَنْ، حَتَّى کے بعد present tense verb Dhamma کی جگہ Alif ending لیتا ہے: يَفْعَلُ → يَفْعَلَ۔ یہ nasb (subjunctive) ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "أَرِيدُ أَنْ يَفْهَمَ",
+        "ar_plain": "أريد أن يفهم",
+        "translit": "ariidu an yafhama",
+        "en": "I want that he understands",
+        "ur": "میں چاہتا ہوں کہ وہ سمجھے"
+      },
+      "explanation": {
+        "en": "أَنْ triggers nasb. يَفْهَمَ (Alif ending) not يَفْهَمُ (Dhamma). The Alif marks the subjunctive state.",
+        "ur": "أَنْ nasb trigger کرتی ہے۔ يَفْهَمَ (Alif ending) نهین يَفْهَمُ (Dhamma)۔ Alif subjunctive state کو mark کرتی ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "لَنْ يَغْفِرَ",
+        "ar_plain": "لن يغفر",
+        "translit": "lan yaghfira",
+        "en": "he will never forgive",
+        "ur": "وہ کبھی معاف نہیں کرے گا"
+      },
+      "explanation": {
+        "en": "لَنْ (future negation) triggers nasb. يَغْفِرَ (Alif ending). لَنْ يَغْفِرَ = 'he will never forgive' — absolution future denial.",
+        "ur": "لَنْ (future negation) nasb trigger کرتی ہے۔ يَغْفِرَ (Alif ending)۔ لَنْ يَغْفِرَ = 'وہ کبھی معاف نہیں کرے گا' — مکمل مستقبل کی نفی۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "يَغْفِرُ",
+        "ar_plain": "يغفر",
+        "translit": "yaghfiru",
+        "en": "he forgives",
+        "ur": "وہ معاف کرتا ہے"
+      },
+      "explanation": {
+        "en": "يَغْفِرُ from root غ-ف-ر (to forgive). Present tense with يَ prefix. يَغْفِرَ in nasb = Alif ending.",
+        "ur": "يَغْفِرُ root غ-ف-ر (معاف کرنا) سے۔ يَ prefix کے ساتھ present tense۔ nasb میں يَغْفِرَ = Alif ending۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "رَبِّ أَجِرْنِي",
+        "ar_plain": "رب أجِرني",
+        "translit": "rabbijirnee",
+        "en": "My Lord, protect me",
+        "ur": "اے میرے رب! مجھے بچا"
+      },
+      "explanation": {
+        "en": "رَبِّ = My Lord (possessive address). أَجِرْنِي = protect me (command from ج-ر-أ). The root ج-ر-أ relates to protection/refuge.",
+        "ur": "رَبِّ = میرا رب (possessive address)۔ أَجِرْنِي = مجھے بچا (command ج-ر-أ سے)۔ Root ج-ر-أ حفاظت/پناہ سے related ہے۔"
+      }
+    }
   ],
   "exercises": [
-    { "type": "TAP_TRANSLATION", "id": "ch51-l03-ex01", "prompt": { "ar": "أَرِيدُ أَنْ يَفْهَمَ", "ar_plain": "أريد أن يفهم", "translit": "ariidu an yafhama", "en": "I want that he understands", "ur": "میں چاہتا ہوں کہ وہ سمجھے" }, "options": [{ "en": "I want that he understands", "ur": "میں چاہتا ہوں کہ وہ سمجھے" }, { "en": "I want him to understand", "ur": "میں چاہتا ہوں اسے سمجھنا" }, { "en": "I understand", "ur": "میں سمجھتا ہوں" }, { "en": "I want to understand", "ur": "میں سمجھنا چاہتا ہوں" }], "correct_index": 0, "xp_value": 1, "explanation_on_wrong": { "en": "أَنْ triggers nasb. يَفْهَمَ not يَفْهَمُ. The Alif ending marks the subjunctive.", "ur": "أَنْ nasb trigger کرتی ہے۔ يَفْهَمَ نهیں يَفْهَمُ۔ Alif ending subjunctive کو mark کرتی ہے۔" } },
-    { "type": "TRUE_FALSE", "id": "ch51-l03-ex02", "statement": { "en": "Present tense nasb takes Alif ending.", "ur": "Present tense nasb Alif ending لیتا ہے۔" }, "correct_answer": true, "xp_value": 1 },
-    { "type": "FILL_BLANK", "id": "ch51-l03-ex03", "mode": "TAP", "sentence_ar": "لَنْ ___", "hint": { "en": "He will never forgive.", "ur": "وہ کبھی معاف نہیں کرے گا۔" }, "options": [{ "ar": "يَغْفِرَ", "ar_plain": "يغفر", "translit": "yaghfira", "en": "he forgives (nasb)", "ur": "وہ معاف کرتا ہے (نصب)" }, { "ar": "يَغْفِرُ", "ar_plain": "يغفر", "translit": "yaghfiru", "en": "he forgives (raf')", "ur": "وہ معاف کرتا ہے (رفع)" }, { "ar": "يَغْفِرْ", "ar_plain": "يغفر", "translit": "yaghfir", "en": "he forgives (jazm)", "ur": "وہ معاف کرے (جزم)" }, { "ar": "أَغْفِرُ", "ar_plain": "أغفر", "translit": "aghfiru", "en": "I forgive", "ur": "میں معاف کرتا ہوں" }], "correct_answer": { "ar": "يَغْفِرَ", "ar_plain": "يغفر", "translit": "yaghfira", "en": "he forgives (nasb)", "ur": "وہ معاف کرتا ہے (نصب)" }, "xp_value": 1 },
-    { "type": "MATCHING", "id": "ch51-l03-ex04", "left_column": [{ "ar": "أَنْ يَفْهَمَ", "ar_plain": "أن يفهم", "translit": "an yafhama", "en": "that he understands (nasb)" }, { "ar": "لَنْ يَفْهَمَ", "ar_plain": "لن يفهم", "translit": "lan yafhama", "en": "he will never understand (nasb)" }, { "ar": "يَفْهَمُ", "ar_plain": "يفهم", "translit": "yafhamu", "en": "he understands (raf')" }, { "ar": "لَمْ يَفْهَمْ", "ar_plain": "لم يفهم", "translit": "lam yafham", "en": "he did not understand (jazm)" }], "right_column": [{ "en": "that he understands (nasb)", "ur": "کہ وہ سمجھے (نصب)" }, { "en": "he will never understand (nasb)", "ur": "وہ کبھی نہیں سمجھے گا (نصب)" }, { "en": "he understands (raf')", "ur": "وہ سمجھتا ہے (رفع)" }, { "en": "he did not understand (jazm)", "ur": "اس نے نہیں سمجھا (جزم)" }], "correct_pairs": [[0,0], [1,1], [2,2], [3,3]], "xp_value": 1 },
-    { "type": "BUILD_SENTENCE", "id": "ch51-l03-ex05", "target_translation": { "en": "I hope that Allah forgives me.", "ur": "میں امید کرتا ہوں کہ اللہ مجھے معاف کرے گا۔" }, "tiles": [{ "ar": "أَرْجُو", "ar_plain": "أرجو", "translit": "arjuu", "en": "I hope" }, { "ar": "أَنْ", "ar_plain": "أن", "translit": "an", "en": "that" }, { "ar": "يَغْفِرَ", "ar_plain": "يغفر", "translit": "yaghfira", "en": "he forgives (nasb)", "ur": "معاف کرے (نصب)" }, { "ar": "لِي", "ar_plain": "لي", "translit": "lii", "en": "for me", "ur": "میرے لیے" }], "correct_order": [0, 1, 2, 3], "xp_value": 1 },
-    { "type": "GRAMMAR_PARSE", "id": "ch51-l03-ex06", "sentence_ar": "أَرِيدُ أَنْ يَفْهَمَ", "words": [{ "ar": "أَرِيدُ", "ar_plain": "أريد", "translit": "ariidu", "en": "I want" }, { "ar": "أَنْ", "ar_plain": "أن", "translit": "an", "en": "that" }, { "ar": "يَفْهَمَ", "ar_plain": "يفهم", "translit": "yafhama", "en": "he understands" }], "available_roles": ["VERB", "PARTICLE", "VERB"], "correct_roles": ["VERB", "PARTICLE", "VERB"], "xp_value": 1, "explanation_on_wrong": { "en": "أَرِيدُ (I want) takes أَنْ + verb in nasb. يَفْهَمَ (Alif ending) = nasb state.", "ur": "أَرِيدُ (میں چاہتا ہوں) أَنْ + nasb میں verb لیتا ہے۔ يَفْهَمَ (Alif ending) = nasb state۔" } },
-    { "type": "TAP_TRANSLATION", "id": "ch51-l03-ex07", "prompt": { "ar": "رَبِّ أَجِرْنِي مِنْ عَذَابِكَ", "ar_plain": "رب أجرني من عذابك", "translit": "rabbijirnee min 'adhaabika", "en": "My Lord, protect me from Your punishment", "ur": "اے میرے رب! مجھے تیرے عذاب سے بچا" }, "options": [{ "en": "My Lord, protect me from Your punishment", "ur": "اے میرے رب! مجھے تیرے عذاب سے بچا" }, { "en": "My Lord, forgive me from Your punishment", "ur": "اے میرے رب! مجھے معاف فرما" }, { "en": "My Rabb, protect them from Your punishment", "ur": "میرے رب! انہیں عذاب سے بچا" }, { "en": "I seek refuge in Your Lord from punishment", "ur": "میں تیرے رب سے عذاب سے پناہ مانگتا ہوں" }], "correct_index": 0, "xp_value": 1 }
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch51-l03-ex01",
+      "prompt": {
+        "ar": "أَرِيدُ أَنْ يَفْهَمَ",
+        "ar_plain": "أريد أن يفهم",
+        "translit": "ariidu an yafhama",
+        "en": "I want that he understands",
+        "ur": "میں چاہتا ہوں کہ وہ سمجھے"
+      },
+      "options": [
+        {
+          "en": "I want that he understands",
+          "ur": "میں چاہتا ہوں کہ وہ سمجھے"
+        },
+        {
+          "en": "I want him to understand",
+          "ur": "میں چاہتا ہوں اسے سمجھنا"
+        },
+        {
+          "en": "I understand",
+          "ur": "میں سمجھتا ہوں"
+        },
+        {
+          "en": "I want to understand",
+          "ur": "میں سمجھنا چاہتا ہوں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَنْ triggers nasb. يَفْهَمَ not يَفْهَمُ. The Alif ending marks the subjunctive.",
+        "ur": "أَنْ nasb trigger کرتی ہے۔ يَفْهَمَ نهیں يَفْهَمُ۔ Alif ending subjunctive کو mark کرتی ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch51-l03-ex02",
+      "statement": {
+        "en": "Present tense nasb takes Alif ending.",
+        "ur": "Present tense nasb Alif ending لیتا ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch51-l03-ex03",
+      "mode": "TAP",
+      "sentence_ar": "لَنْ ___",
+      "hint": {
+        "en": "He will never forgive.",
+        "ur": "وہ کبھی معاف نہیں کرے گا۔"
+      },
+      "options": [
+        {
+          "ar": "يَغْفِرَ",
+          "ar_plain": "يغفر",
+          "translit": "yaghfira",
+          "en": "he forgives (nasb)",
+          "ur": "وہ معاف کرتا ہے (نصب)"
+        },
+        {
+          "ar": "يَغْفِرُ",
+          "ar_plain": "يغفر",
+          "translit": "yaghfiru",
+          "en": "he forgives (raf')",
+          "ur": "وہ معاف کرتا ہے (رفع)"
+        },
+        {
+          "ar": "يَغْفِرْ",
+          "ar_plain": "يغفر",
+          "translit": "yaghfir",
+          "en": "he forgives (jazm)",
+          "ur": "وہ معاف کرے (جزم)"
+        },
+        {
+          "ar": "أَغْفِرُ",
+          "ar_plain": "أغفر",
+          "translit": "aghfiru",
+          "en": "I forgive",
+          "ur": "میں معاف کرتا ہوں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَغْفِرَ",
+        "ar_plain": "يغفر",
+        "translit": "yaghfira",
+        "en": "he forgives (nasb)",
+        "ur": "وہ معاف کرتا ہے (نصب)"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch51-l03-ex04",
+      "left_column": [
+        {
+          "ar": "أَنْ يَفْهَمَ",
+          "ar_plain": "أن يفهم",
+          "translit": "an yafhama",
+          "en": "that he understands (nasb)",
+          "ur": "کہ وہ سمجھتا ہے (ناسب)"
+        },
+        {
+          "ar": "لَنْ يَفْهَمَ",
+          "ar_plain": "لن يفهم",
+          "translit": "lan yafhama",
+          "en": "he will never understand (nasb)",
+          "ur": "وہ کبھی نہیں سمجھے گا (ناسب)"
+        },
+        {
+          "ar": "يَفْهَمُ",
+          "ar_plain": "يفهم",
+          "translit": "yafhamu",
+          "en": "he understands (raf')",
+          "ur": "وہ سمجھتا ہے (raf')"
+        },
+        {
+          "ar": "لَمْ يَفْهَمْ",
+          "ar_plain": "لم يفهم",
+          "translit": "lam yafham",
+          "en": "he did not understand (jazm)",
+          "ur": "وہ نہیں سمجھا (جازم)"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "that he understands (nasb)",
+          "ur": "کہ وہ سمجھے (نصب)"
+        },
+        {
+          "en": "he will never understand (nasb)",
+          "ur": "وہ کبھی نہیں سمجھے گا (نصب)"
+        },
+        {
+          "en": "he understands (raf')",
+          "ur": "وہ سمجھتا ہے (رفع)"
+        },
+        {
+          "en": "he did not understand (jazm)",
+          "ur": "اس نے نہیں سمجھا (جزم)"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch51-l03-ex05",
+      "target_translation": {
+        "en": "I hope that Allah forgives me.",
+        "ur": "میں امید کرتا ہوں کہ اللہ مجھے معاف کرے گا۔"
+      },
+      "tiles": [
+        {
+          "ar": "أَرْجُو",
+          "ar_plain": "أرجو",
+          "translit": "arjuu",
+          "en": "I hope",
+          "ur": "مجھے امید ہے۔"
+        },
+        {
+          "ar": "أَنْ",
+          "ar_plain": "أن",
+          "translit": "an",
+          "en": "that",
+          "ur": "کہ"
+        },
+        {
+          "ar": "يَغْفِرَ",
+          "ar_plain": "يغفر",
+          "translit": "yaghfira",
+          "en": "he forgives (nasb)",
+          "ur": "معاف کرے (نصب)"
+        },
+        {
+          "ar": "لِي",
+          "ar_plain": "لي",
+          "translit": "lii",
+          "en": "for me",
+          "ur": "میرے لیے"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch51-l03-ex06",
+      "sentence_ar": "أَرِيدُ أَنْ يَفْهَمَ",
+      "words": [
+        {
+          "ar": "أَرِيدُ",
+          "ar_plain": "أريد",
+          "translit": "ariidu",
+          "en": "I want",
+          "ur": "میں چاہتا ہوں"
+        },
+        {
+          "ar": "أَنْ",
+          "ar_plain": "أن",
+          "translit": "an",
+          "en": "that",
+          "ur": "کہ"
+        },
+        {
+          "ar": "يَفْهَمَ",
+          "ar_plain": "يفهم",
+          "translit": "yafhama",
+          "en": "he understands",
+          "ur": "وہ سمجھتا ہے"
+        }
+      ],
+      "available_roles": [
+        "VERB",
+        "PARTICLE",
+        "VERB"
+      ],
+      "correct_roles": [
+        "VERB",
+        "PARTICLE",
+        "VERB"
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَرِيدُ (I want) takes أَنْ + verb in nasb. يَفْهَمَ (Alif ending) = nasb state.",
+        "ur": "أَرِيدُ (میں چاہتا ہوں) أَنْ + nasb میں verb لیتا ہے۔ يَفْهَمَ (Alif ending) = nasb state۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch51-l03-ex07",
+      "prompt": {
+        "ar": "رَبِّ أَجِرْنِي مِنْ عَذَابِكَ",
+        "ar_plain": "رب أجرني من عذابك",
+        "translit": "rabbijirnee min 'adhaabika",
+        "en": "My Lord, protect me from Your punishment",
+        "ur": "اے میرے رب! مجھے تیرے عذاب سے بچا"
+      },
+      "options": [
+        {
+          "en": "My Lord, protect me from Your punishment",
+          "ur": "اے میرے رب! مجھے تیرے عذاب سے بچا"
+        },
+        {
+          "en": "My Lord, forgive me from Your punishment",
+          "ur": "اے میرے رب! مجھے معاف فرما"
+        },
+        {
+          "en": "My Rabb, protect them from Your punishment",
+          "ur": "میرے رب! انہیں عذاب سے بچا"
+        },
+        {
+          "en": "I seek refuge in Your Lord from punishment",
+          "ur": "میں تیرے رب سے عذاب سے پناہ مانگتا ہوں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    }
   ],
   "reveal": {
-    "concept_name": { "en": "Present tense nasb — Alif ending", "ar": "المضارع المنصوب — الفا", "ur": "منصوب مضارع — الفا" },
-    "ayah": { "surah": 18, "ayah": 24, "label": "Al-Kahf 18:24", "ar": "قُلْ رَبِّ أَجِرْنِي مِنْ عَذَابِكَ", "en": "Say: My Lord, protect me from Your punishment", "ur": "کہو: اے میرے رب! مجھے تیرے عذاب سے بچا", "audio_url": "https://cdn.warsh.app/audio/quran/al-kahf-024-mishary.mp3" }, "highlighted_word_indices": [1], "noor_explanation": { "en": "رَبِّ is vocative address to one's Lord. أَجِرْنِي is the command 'protect me.' عَذَابِكَ 'Your punishment' in genitive after مِنْ. The du'a itself is the foundation of seeking Allah's protection.", "ur": "رَبِّ اپنے رب کو vocative address ہے۔ أَجِرْنِي command 'مجھے بچا' ہے۔ عَذَابِكَ مِنْ کے بعد genitive میں 'تیرا عذاب'۔ Du'a itself Allah کی حفاظت مانگنے کی بنیاد ہے۔" }
+    "concept_name": {
+      "en": "Present tense nasb — Alif ending",
+      "ar": "المضارع المنصوب — الفا",
+      "ur": "منصوب مضارع — الفا"
+    },
+    "ayah": {
+      "surah": 18,
+      "ayah": 24,
+      "label": "Al-Kahf 18:24",
+      "ar": "قُلْ رَبِّ أَجِرْنِي مِنْ عَذَابِكَ",
+      "en": "Say: My Lord, protect me from Your punishment",
+      "ur": "کہو: اے میرے رب! مجھے تیرے عذاب سے بچا",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-kahf-024-mishary.mp3"
+    },
+    "highlighted_word_indices": [
+      1
+    ],
+    "noor_explanation": {
+      "en": "رَبِّ is vocative address to one's Lord. أَجِرْنِي is the command 'protect me.' عَذَابِكَ 'Your punishment' in genitive after مِنْ. The du'a itself is the foundation of seeking Allah's protection.",
+      "ur": "رَبِّ اپنے رب کو vocative address ہے۔ أَجِرْنِي command 'مجھے بچا' ہے۔ عَذَابِكَ مِنْ کے بعد genitive میں 'تیرا عذاب'۔ Du'a itself Allah کی حفاظت مانگنے کی بنیاد ہے۔"
+    }
   },
-  "close": { "noor_message": { "en": "Present tense nasb: يَفْعَلَ with Alif ending. أَنْ يَفْهَمَ, لَنْ يَفْهَمَ, حَتَّى يَفْهَمَ — all trigger nasb. Remember: nasb = Alif.", "ur": "Present tense nasb: يَفْعَلَ Alif ending کے ساتھ۔ أَنْ يَفْهَمَ، لَنْ يَفْهَمَ، حَتَّى يَفْهَمَ — سب nasb trigger کرتے ہیں۔ یاد رکھیں: nasb = Alif۔" } }
+  "close": {
+    "noor_message": {
+      "en": "Present tense nasb: يَفْعَلَ with Alif ending. أَنْ يَفْهَمَ, لَنْ يَفْهَمَ, حَتَّى يَفْهَمَ — all trigger nasb. Remember: nasb = Alif.",
+      "ur": "Present tense nasb: يَفْعَلَ Alif ending کے ساتھ۔ أَنْ يَفْهَمَ، لَنْ يَفْهَمَ، حَتَّى يَفْهَمَ — سب nasb trigger کرتے ہیں۔ یاد رکھیں: nasb = Alif۔"
+    }
+  }
 }

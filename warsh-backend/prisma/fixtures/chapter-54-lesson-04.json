@@ -68,10 +68,22 @@
         "ur": "اللہ — کوئی معبود نہیں سوائے اس کے"
       },
       "options": [
-        { "en": "Allah — there is no deity except Him", "ur": "اللہ — کوئی معبود نہیں سوائے اس کے" },
-        { "en": "Allah is the only deity", "ur": "اللہ واحد معبود ہے" },
-        { "en": "There is no god but Allah", "ur": "کوئی معبود نہیں مگر اللہ" },
-        { "en": "Allah is the greatest", "ur": "اللہ سب سے بڑا ہے" }
+        {
+          "en": "Allah — there is no deity except Him",
+          "ur": "اللہ — کوئی معبود نہیں سوائے اس کے"
+        },
+        {
+          "en": "Allah is the only deity",
+          "ur": "اللہ واحد معبود ہے"
+        },
+        {
+          "en": "There is no god but Allah",
+          "ur": "کوئی معبود نہیں مگر اللہ"
+        },
+        {
+          "en": "Allah is the greatest",
+          "ur": "اللہ سب سے بڑا ہے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -85,16 +97,74 @@
       "id": "r11-ex02",
       "sentence_ar": "اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
       "words": [
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah (nom.)" },
-        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "no" },
-        { "ar": "إِلَهَ", "ar_plain": "إلها", "translit": "ilaah", "en": "god (acc.)" },
-        { "ar": "إِلَّا", "ar_plain": "إلا", "translit": "illaa", "en": "except" },
-        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "He (nom.)" },
-        { "ar": "الْحَيُّ", "ar_plain": "الحي", "translit": "al-hayyu", "en": "the Ever-Living" },
-        { "ar": "الْقَيُّومُ", "ar_plain": "القيوم", "translit": "al-qayyuumu", "en": "the Sustainer" }
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah (nom.)",
+          "ur": "اللہ (نام)"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "no",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "إِلَهَ",
+          "ar_plain": "إلها",
+          "translit": "ilaah",
+          "en": "god (acc.)",
+          "ur": "خدا (acc.)"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
+        },
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "He (nom.)",
+          "ur": "وہ (نام)"
+        },
+        {
+          "ar": "الْحَيُّ",
+          "ar_plain": "الحي",
+          "translit": "al-hayyu",
+          "en": "the Ever-Living",
+          "ur": "ہمیشہ زندہ رہنے والا"
+        },
+        {
+          "ar": "الْقَيُّومُ",
+          "ar_plain": "القيوم",
+          "translit": "al-qayyuumu",
+          "en": "the Sustainer",
+          "ur": "برقرار رکھنے والا"
+        }
       ],
-      "available_roles": ["SUBJECT", "PARTICLE", "OBJECT", "PARTICLE", "PREDICATE", "ADJECTIVE", "ADJECTIVE"],
-      "correct_roles": ["SUBJECT", "PARTICLE", "OBJECT", "PARTICLE", "PREDICATE", "ADJECTIVE", "ADJECTIVE"],
+      "available_roles": [
+        "SUBJECT",
+        "PARTICLE",
+        "OBJECT",
+        "PARTICLE",
+        "PREDICATE",
+        "ADJECTIVE",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "PARTICLE",
+        "OBJECT",
+        "PARTICLE",
+        "PREDICATE",
+        "ADJECTIVE",
+        "ADJECTIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "لَا negates إِلَهَ. إِلَّا introduces exception. هُوَ is the exception predicate (nominative). الْحَيُّ الْقَيُّومُ are adjectives describing هُوَ.",
@@ -105,18 +175,71 @@
       "type": "MATCHING",
       "id": "r11-ex03",
       "left_column": [
-        { "ar": "لَا إِلَهَ إِلَّا هُوَ", "ar_plain": "لا إله إلا هو", "translit": "laa ilaaha illaa huwa", "en": "exception" },
-        { "ar": "الْحَيُّ الْقَيُّومُ", "ar_plain": "الحي القيوم", "translit": "al-hayyu al-qayyuumu", "en": "adjectives" },
-        { "ar": "لَا تَزِنُ", "ar_plain": "لا تزن", "translit": "laa tazinu", "en": "verbal sentence" },
-        { "ar": "بِشَيْءٍ", "ar_plain": "بشيء", "translit": "bi-shay'in", "en": "preposition + noun" }
+        {
+          "ar": "لَا إِلَهَ إِلَّا هُوَ",
+          "ar_plain": "لا إله إلا هو",
+          "translit": "laa ilaaha illaa huwa",
+          "en": "exception",
+          "ur": "استثناء"
+        },
+        {
+          "ar": "الْحَيُّ الْقَيُّومُ",
+          "ar_plain": "الحي القيوم",
+          "translit": "al-hayyu al-qayyuumu",
+          "en": "adjectives",
+          "ur": "صفت"
+        },
+        {
+          "ar": "لَا تَزِنُ",
+          "ar_plain": "لا تزن",
+          "translit": "laa tazinu",
+          "en": "verbal sentence",
+          "ur": "زبانی جملہ"
+        },
+        {
+          "ar": "بِشَيْءٍ",
+          "ar_plain": "بشيء",
+          "translit": "bi-shay'in",
+          "en": "preposition + noun",
+          "ur": "preposition + noun"
+        }
       ],
       "right_column": [
-        { "en": "لَا + noun + إِلَّا + predicate", "ur": "لَا + noun + إِلَّا + predicate" },
-        { "en": "Describing هُوَ in nominal sentence", "ur": "Nominal sentence میں ہُوَ کو describe کر رہے" },
-        { "en": "Present tense verb (negation)", "ur": "Present tense verb (نفی)" },
-        { "en": "Genitive after بِ + idafa", "ur": "بِ کے بعد genitive + idafa" }
+        {
+          "en": "لَا + noun + إِلَّا + predicate",
+          "ur": "لَا + noun + إِلَّا + predicate"
+        },
+        {
+          "en": "Describing هُوَ in nominal sentence",
+          "ur": "Nominal sentence میں ہُوَ کو describe کر رہے"
+        },
+        {
+          "en": "Present tense verb (negation)",
+          "ur": "Present tense verb (نفی)"
+        },
+        {
+          "en": "Genitive after بِ + idafa",
+          "ur": "بِ کے بعد genitive + idafa"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -185,13 +308,49 @@
         "ur": "بیشک اللہ زندہ ہے، قائم بذات ہے۔"
       },
       "tiles": [
-        { "ar": "إِنَّ", "ar_plain": "إن", "translit": "inna", "en": "indeed" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah (acc.)" },
-        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "He" },
-        { "ar": "الْحَيُّ", "ar_plain": "الحي", "translit": "al-hayyu", "en": "the Ever-Living" },
-        { "ar": "الْقَيُّومُ", "ar_plain": "القيوم", "translit": "al-qayyuumu", "en": "the Sustainer" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah (acc.)",
+          "ur": "اللہ (ع)"
+        },
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "He",
+          "ur": "وہ"
+        },
+        {
+          "ar": "الْحَيُّ",
+          "ar_plain": "الحي",
+          "translit": "al-hayyu",
+          "en": "the Ever-Living",
+          "ur": "ہمیشہ زندہ رہنے والا"
+        },
+        {
+          "ar": "الْقَيُّومُ",
+          "ar_plain": "القيوم",
+          "translit": "al-qayyuumu",
+          "en": "the Sustainer",
+          "ur": "برقرار رکھنے والا"
+        }
       ],
-      "correct_order": [0, 1, 2, 3, 4],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
       "xp_value": 1
     },
     {
@@ -205,10 +364,22 @@
         "ur": "آسمان اور زمین کسی چیز کے مقابلے میں نہیں ہیں"
       },
       "options": [
-        { "en": "The heavens and the earth do not weigh against anything", "ur": "آسمان اور زمین کسی چیز کے مقابلے میں نہیں ہیں" },
-        { "en": "The heavens and earth weigh something", "ur": "آسمان اور زمین کسی چیز کو تولتے ہیں" },
-        { "en": "Nothing weighs the heavens and the earth", "ur": "کوئی چیز آسمان اور زمین کو نہیں تولتی" },
-        { "en": "The heavens are not in the earth", "ur": "آسمان زمین میں نہیں ہے" }
+        {
+          "en": "The heavens and the earth do not weigh against anything",
+          "ur": "آسمان اور زمین کسی چیز کے مقابلے میں نہیں ہیں"
+        },
+        {
+          "en": "The heavens and earth weigh something",
+          "ur": "آسمان اور زمین کسی چیز کو تولتے ہیں"
+        },
+        {
+          "en": "Nothing weighs the heavens and the earth",
+          "ur": "کوئی چیز آسمان اور زمین کو نہیں تولتی"
+        },
+        {
+          "en": "The heavens are not in the earth",
+          "ur": "آسمان زمین میں نہیں ہے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -235,12 +406,41 @@
         "ur": "کوئی معبود نہیں سوائے اللہ کے۔"
       },
       "tiles": [
-        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "no" },
-        { "ar": "إِلَهَ", "ar_plain": "إلها", "translit": "ilaah", "en": "god (acc.)" },
-        { "ar": "إِلَّا", "ar_plain": "إلا", "translit": "illaa", "en": "except" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah (nom.)" }
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "no",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "إِلَهَ",
+          "ar_plain": "إلها",
+          "translit": "ilaah",
+          "en": "god (acc.)",
+          "ur": "خدا (acc.)"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah (nom.)",
+          "ur": "اللہ (نام)"
+        }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     }
   ],
@@ -259,7 +459,9 @@
       "ur": "اللہ — کوئی معبود نہیں سوائے اس کے، زندہ، قائم بذات",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-255-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "Ayat al-Kursi is the test of Book 5. If you can identify the exception لَا...إِلَّا, the nominal sentence الْحَيُّ الْقَيُّومُ, the verbal sentence لَا تَزِنُ, and the prepositional phrase بِشَيْءٍ — you have mastered Book 5. Well done.",
       "ur": "Ayat al-Kursi Book 5 کا test ہے۔ اگر آپ exception لَا...إِلَّا، nominal sentence الْحَيُّ الْقَيُّومُ، verbal sentence لَا تَزِنُ، اور prepositional phrase بِشَيْءٍ identify کر سکتے ہیں — تو آپ Book 5 master کر چکے ہیں۔ بہت اچھا۔"

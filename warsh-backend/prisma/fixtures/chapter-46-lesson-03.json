@@ -136,10 +136,22 @@
         "ur": "جا!"
       },
       "options": [
-        { "en": "Go!", "ur": "جا!" },
-        { "en": "He went", "ur": "وہ گیا" },
-        { "en": "Do not go!", "ur": "مت جاؤ!" },
-        { "en": "I went", "ur": "میں گیا" }
+        {
+          "en": "Go!",
+          "ur": "جا!"
+        },
+        {
+          "en": "He went",
+          "ur": "وہ گیا"
+        },
+        {
+          "en": "Do not go!",
+          "ur": "مت جاؤ!"
+        },
+        {
+          "en": "I went",
+          "ur": "میں گیا"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -236,7 +248,10 @@
           "ur": "وہ ڈرتے ہیں"
         }
       ],
-      "correct_order": [0, 1],
+      "correct_order": [
+        0,
+        1
+      ],
       "xp_value": 1
     },
     {
@@ -273,12 +288,41 @@
         }
       ],
       "right_column": [
-        { "en": "go! (sg.)", "ur": "جا! (واحد)" },
-        { "en": "write! (sg.)", "ur": "لکھ! (واحد)" },
-        { "en": "do not go!", "ur": "مت جاؤ!" },
-        { "en": "do not write!", "ur": "مت لکھو!" }
+        {
+          "en": "go! (sg.)",
+          "ur": "جا! (واحد)"
+        },
+        {
+          "en": "write! (sg.)",
+          "ur": "لکھ! (واحد)"
+        },
+        {
+          "en": "do not go!",
+          "ur": "مت جاؤ!"
+        },
+        {
+          "en": "do not write!",
+          "ur": "مت لکھو!"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -286,11 +330,30 @@
       "id": "ch46-l03-ex06",
       "sentence_ar": "اتَّقُوا اللَّهَ",
       "words": [
-        { "ar": "اتَّقُوا", "ar_plain": "اتقوا", "translit": "ittaquu", "en": "fear! (pl.)" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah" }
+        {
+          "ar": "اتَّقُوا",
+          "ar_plain": "اتقوا",
+          "translit": "ittaquu",
+          "en": "fear! (pl.)",
+          "ur": "خوف! (pl.)"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah",
+          "ur": "اللہ"
+        }
       ],
-      "available_roles": ["VERB", "SUBJECT", "OBJECT"],
-      "correct_roles": ["VERB", "OBJECT"],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "اتَّقُوا is the plural imperative (command) from تَتَّقُونَ (you pl. fear). It is a verb in jazm state. اللَّهَ is the direct object (مفعول به) — the thing feared.",
@@ -308,10 +371,22 @@
         "ur": "اے ایمان والو! اللہ سے ڈرو۔"
       },
       "options": [
-        { "en": "O believers, fear Allah.", "ur": "اے ایمان والو! اللہ سے ڈرو۔" },
-        { "en": "O believers, they fear Allah.", "ur": "اے ایمان والو! وہ اللہ سے ڈرتے ہیں۔" },
-        { "en": "O believers, do not fear Allah.", "ur": "اے ایمان والو! اللہ سے مت ڈرو۔" },
-        { "en": "Believers fear Allah.", "ur": "مومنین اللہ سے ڈرتے ہیں۔" }
+        {
+          "en": "O believers, fear Allah.",
+          "ur": "اے ایمان والو! اللہ سے ڈرو۔"
+        },
+        {
+          "en": "O believers, they fear Allah.",
+          "ur": "اے ایمان والو! وہ اللہ سے ڈرتے ہیں۔"
+        },
+        {
+          "en": "O believers, do not fear Allah.",
+          "ur": "اے ایمان والو! اللہ سے مت ڈرو۔"
+        },
+        {
+          "en": "Believers fear Allah.",
+          "ur": "مومنین اللہ سے ڈرتے ہیں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -336,7 +411,9 @@
       "ur": "اے ایمان والو! اللہ سے ڈرو۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-ahzab-001-mishary.mp3"
     },
-    "highlighted_word_indices": [4],
+    "highlighted_word_indices": [
+      4
+    ],
     "noor_explanation": {
       "en": "اتَّقُوا is the plural command form of وَقَى (to protect/guard). The person addressed is يَا أَيُّهَا الَّذِينَ آمَنُوا — 'O those who have believed.' This command appears over 20 times in the Quran.",
       "ur": "اتَّقُوا وَقَى (بچانا/حفظ کرنا) کی plural command form ہے۔ مخاطب یہ ہے يَا أَيُّهَا الَّذِينَ آمَنُوا — 'اے جنہوں نے ایمان لایا'۔ یہ حکم قرآن میں 20 سے زائد بار آتا ہے۔"

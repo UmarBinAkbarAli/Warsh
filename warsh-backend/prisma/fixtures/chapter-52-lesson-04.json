@@ -87,14 +87,56 @@
       "id": "ch52-l04-ex01",
       "sentence_ar": "اللَّهُ لَا إِلَهَ إِلَّا هُوَ",
       "words": [
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah (nom.)" },
-        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "no (negation)" },
-        { "ar": "إِلَهَ", "ar_plain": "إلها", "translit": "ilaahan", "en": "god (acc.)" },
-        { "ar": "إِلَّا", "ar_plain": "إلا", "translit": "illaa", "en": "except" },
-        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "He (nom.)" }
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah (nom.)",
+          "ur": "اللہ (نام)"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "no (negation)",
+          "ur": "نہیں (نفی)"
+        },
+        {
+          "ar": "إِلَهَ",
+          "ar_plain": "إلها",
+          "translit": "ilaahan",
+          "en": "god (acc.)",
+          "ur": "خدا (acc.)"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
+        },
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "He (nom.)",
+          "ur": "وہ (نام)"
+        }
       ],
-      "available_roles": ["SUBJECT", "PARTICLE", "OBJECT", "PARTICLE", "PREDICATE"],
-      "correct_roles": ["SUBJECT", "PARTICLE", "OBJECT", "PARTICLE", "SUBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "PARTICLE",
+        "OBJECT",
+        "PARTICLE",
+        "PREDICATE"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "PARTICLE",
+        "OBJECT",
+        "PARTICLE",
+        "SUBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "لَا negates إِلَهَ. إِلَّا introduces the exception. هُوَ is nominative (not accusative) because the exception restores the affirmative meaning: 'there is no god EXCEPT He.'",
@@ -112,10 +154,22 @@
         "ur": "وہ زندہ ہے، قائم بذات"
       },
       "options": [
-        { "en": "He is the Ever-Living, the Sustainer of existence", "ur": "وہ زندہ ہے، قائم بذات" },
-        { "en": "The Living is He, the Sustainer", "ur": "زندہ وہ ہے، قائم" },
-        { "en": "He lives forever and ever", "ur": "وہ ہمیشہ زندہ رہتا ہے" },
-        { "en": "The Ever-Living is only He", "ur": "زندہ صرف وہ ہے" }
+        {
+          "en": "He is the Ever-Living, the Sustainer of existence",
+          "ur": "وہ زندہ ہے، قائم بذات"
+        },
+        {
+          "en": "The Living is He, the Sustainer",
+          "ur": "زندہ وہ ہے، قائم"
+        },
+        {
+          "en": "He lives forever and ever",
+          "ur": "وہ ہمیشہ زندہ رہتا ہے"
+        },
+        {
+          "en": "The Ever-Living is only He",
+          "ur": "زندہ صرف وہ ہے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -219,7 +273,12 @@
           "ur": "اللہ (مرفوع)"
         }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -233,10 +292,22 @@
         "ur": "آسمان اور زمین کسی چیز کے مقابلے میں نہیں ہیں"
       },
       "options": [
-        { "en": "The heavens and the earth do not weigh against anything", "ur": "آسمان اور زمین کسی چیز کے مقابلے میں نہیں ہیں" },
-        { "en": "The heavens and the earth are not equal to anything", "ur": "آسمان اور زمین کسی چیز کے برابر نہیں ہیں" },
-        { "en": "Nothing weighs the heavens and the earth", "ur": "کوئی چیز آسمان اور زمین کو نہیں تول سکتی" },
-        { "en": "The heavens are not in the earth", "ur": "آسمان زمین میں نہیں ہے" }
+        {
+          "en": "The heavens and the earth do not weigh against anything",
+          "ur": "آسمان اور زمین کسی چیز کے مقابلے میں نہیں ہیں"
+        },
+        {
+          "en": "The heavens and the earth are not equal to anything",
+          "ur": "آسمان اور زمین کسی چیز کے برابر نہیں ہیں"
+        },
+        {
+          "en": "Nothing weighs the heavens and the earth",
+          "ur": "کوئی چیز آسمان اور زمین کو نہیں تول سکتی"
+        },
+        {
+          "en": "The heavens are not in the earth",
+          "ur": "آسمان زمین میں نہیں ہے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -261,7 +332,11 @@
       "ur": "اللہ — کوئی معبود نہیں سوائے اس کے، زندہ، قائم بذات",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-255-mishary.mp3"
     },
-    "highlighted_word_indices": [0, 2, 4],
+    "highlighted_word_indices": [
+      0,
+      2,
+      4
+    ],
     "noor_explanation": {
       "en": "Ayat al-Kursi contains: negation with لَا, exception with إِلَّا, nominal sentences (هُوَ الْحَيُّ), verbal sentences (لَا تَزِنُ), prepositional phrases (بِشَيْءٍ), and إِضافة. Every tool from Book 5 in one ayah.",
       "ur": "Ayat al-Kursi میں ہے: negation لَا سے، exception إِلَّا سے، nominal sentences (هُوَ الْحَيُّ)، verbal sentences (لَا تَزِنُ)، prepositional phrases (بِشَيْءٍ)، اور إِضافة۔ Book 5 کا ہر tool ایک ayah میں۔"

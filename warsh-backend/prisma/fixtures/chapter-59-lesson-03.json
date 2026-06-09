@@ -116,18 +116,71 @@
       "id": "ch59-l03-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "كَانَ", "ar_plain": "كان", "translit": "kāna", "en": "he was" },
-        { "ar": "قَالَ", "ar_plain": "قال", "translit": "qāla", "en": "he said" },
-        { "ar": "رَأَى", "ar_plain": "رأى", "translit": "ra'ā", "en": "he saw" },
-        { "ar": "يَقُولُ", "ar_plain": "يقول", "translit": "yaqūlu", "en": "he says" }
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kāna",
+          "en": "he was",
+          "ur": "وہ تھا"
+        },
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qāla",
+          "en": "he said",
+          "ur": "انہوں نے کہا"
+        },
+        {
+          "ar": "رَأَى",
+          "ar_plain": "رأى",
+          "translit": "ra'ā",
+          "en": "he saw",
+          "ur": "اس نے دیکھا"
+        },
+        {
+          "ar": "يَقُولُ",
+          "ar_plain": "يقول",
+          "translit": "yaqūlu",
+          "en": "he says",
+          "ur": "وہ کہتا ہے"
+        }
       ],
       "right_column": [
-        { "en": "ناقص — takes اِسْم كَانَ + خَبَر كَانَ", "ur": "ناقص — اِسْم + خبر لیتا ہے" },
-        { "en": "ناقص — root ق-و-ل, last letter و", "ur": "ناقص — ق-و-ل، آخری letter و" },
-        { "en": "ناقص — root ر-أ-ى, last letter ا/ى", "ur": "ناقص — ر-أ-ى، آخری letter ا/ى" },
-        { "en": "معتل — present of قَالَ", "ur": "معتل — قَالَ کا مضارع" }
+        {
+          "en": "ناقص — takes اِسْم كَانَ + خَبَر كَانَ",
+          "ur": "ناقص — اِسْم + خبر لیتا ہے"
+        },
+        {
+          "en": "ناقص — root ق-و-ل, last letter و",
+          "ur": "ناقص — ق-و-ل، آخری letter و"
+        },
+        {
+          "en": "ناقص — root ر-أ-ى, last letter ا/ى",
+          "ur": "ناقص — ر-أ-ى، آخری letter ا/ى"
+        },
+        {
+          "en": "معتل — present of قَالَ",
+          "ur": "معتل — قَالَ کا مضارع"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "كَانَ (ناقص، اِسْم + خبر), قَالَ (ناقص، ق-و-ل), رَأَى (ناقص، ر-أ-ى), يَقُولُ (مضارع of قَالَ, معتل).",
@@ -139,13 +192,49 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "كَانَ اللَّهُ غَفُورًا رَّحِيمًا",
       "words": [
-        { "ar": "كَانَ", "ar_plain": "كان", "translit": "kāna", "en": "he was" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allāhu", "en": "Allah" },
-        { "ar": "غَفُورًا", "ar_plain": "غفور", "translit": "ghafūran", "en": "forgiving" },
-        { "ar": "رَّحِيمًا", "ar_plain": "رحيم", "translit": "raḥīman", "en": "merciful" }
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kāna",
+          "en": "he was",
+          "ur": "وہ تھا"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allāhu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "غَفُورًا",
+          "ar_plain": "غفور",
+          "translit": "ghafūran",
+          "en": "forgiving",
+          "ur": "معاف کرنے والا"
+        },
+        {
+          "ar": "رَّحِيمًا",
+          "ar_plain": "رحيم",
+          "translit": "raḥīman",
+          "en": "merciful",
+          "ur": "رحم کرنے والا"
+        }
       ],
-      "available_roles": ["SUBJECT", "PREDICATE", "VERB", "ADJECTIVE", "PARTICLE", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT", "ADJECTIVE", "ADJECTIVE"],
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "VERB",
+        "ADJECTIVE",
+        "PARTICLE",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "ADJECTIVE",
+        "ADJECTIVE"
+      ],
       "xp_value": 2,
       "explanation_on_wrong": {
         "en": "كَانَ = VERB (الفعل الناقص — incomplete verb, ناقص). اللَّهُ = SUBJECT (اِسْم كَانَ, مرفوع). غَفُورًا = ADJECTIVE (خَبَر كَانَ, منصوب). رَّحِيمًا = ADJECTIVE (second خَبَر كَانَ, منصوب). Note: both خبر are منصوب (the ra of رَّحِيمًا is the accent variant, not a separate case marker — both are نصب).",
@@ -159,13 +248,26 @@
         "ar": "رَأَيْتُ زَيْدًا يَكْتُبُ",
         "ar_plain": "رأيت زيدا يكتب",
         "translit": "ra'aytu zaydan yaktubu",
-        "en": "I saw Zaid writing."
+        "en": "I saw Zaid writing.",
+        "ur": "میں نے زید کو لکھتے دیکھا۔"
       },
       "options": [
-        { "en": "I saw Zaid writing.", "ur": "میں نے زید کو لکھتے ہوئے دیکھا۔" },
-        { "en": "Zaid saw me writing.", "ur": "زید نے مجھے لکھتے ہوئے دیکھا۔" },
-        { "en": "I wrote and saw Zaid.", "ur": "میں نے لکھا اور زید کو دیکھا۔" },
-        { "en": "Zaid was writing and I saw him.", "ur": "زید لکھ رہا تھا اور میں نے اسے دیکھا۔" }
+        {
+          "en": "I saw Zaid writing.",
+          "ur": "میں نے زید کو لکھتے ہوئے دیکھا۔"
+        },
+        {
+          "en": "Zaid saw me writing.",
+          "ur": "زید نے مجھے لکھتے ہوئے دیکھا۔"
+        },
+        {
+          "en": "I wrote and saw Zaid.",
+          "ur": "میں نے لکھا اور زید کو دیکھا۔"
+        },
+        {
+          "en": "Zaid was writing and I saw him.",
+          "ur": "زید لکھ رہا تھا اور میں نے اسے دیکھا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -182,12 +284,41 @@
         "ur": "اور اللہ علم والا حکمت والا تھا۔"
       },
       "tiles": [
-        { "ar": "وَكَانَ", "ar_plain": "وكان", "translit": "wa kāna", "en": "and He was" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allāhu", "en": "Allah" },
-        { "ar": "عَلِيمًا", "ar_plain": "عليما", "translit": "'alīman", "en": "Knowing" },
-        { "ar": "حَكِيمًا", "ar_plain": "حكيما", "translit": "ḥakīman", "en": "Wise" }
+        {
+          "ar": "وَكَانَ",
+          "ar_plain": "وكان",
+          "translit": "wa kāna",
+          "en": "and He was",
+          "ur": "اور وہ تھا"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allāhu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "عَلِيمًا",
+          "ar_plain": "عليما",
+          "translit": "'alīman",
+          "en": "Knowing",
+          "ur": "جاننے والا"
+        },
+        {
+          "ar": "حَكِيمًا",
+          "ar_plain": "حكيما",
+          "translit": "ḥakīman",
+          "en": "Wise",
+          "ur": "عقلمند"
+        }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "وَكَانَ (واو + كَانَ), اللَّهُ (اِسْم كَانَ, مرفوع), عَلِيمًا (first خَبَر كَانَ, منصوب), حَكِيمًا (second خَبَر كَانَ, منصوب). Both خبر are منصوب by the كَانَ rule. This is the exact pattern used throughout the Quran: كَانَ + اِسْم + خَبَر + خَبَر.",
@@ -204,10 +335,34 @@
         "ur": "بندے نے کہا: میرے رب!"
       },
       "options": [
-        { "ar": "رَبِّي", "ar_plain": "ربي", "translit": "rabbī", "en": "my Lord (acc./voc.)", "ur": "میرے رب (نصب/نداء)" },
-        { "ar": "رَبٌّ", "ar_plain": "رب", "translit": "rabbun", "en": "Lord (nom.)", "ur": "رب (رفع)" },
-        { "ar": "رَبَّ", "ar_plain": "رب", "translit": "rabba", "en": "Lord (acc.)", "ur": "رب (نصب)" },
-        { "ar": "رُبِّ", "ar_plain": "رب", "translit": "rubbi", "en": "Lord (gen.)", "ur": "رب (جر)" }
+        {
+          "ar": "رَبِّي",
+          "ar_plain": "ربي",
+          "translit": "rabbī",
+          "en": "my Lord (acc./voc.)",
+          "ur": "میرے رب (نصب/نداء)"
+        },
+        {
+          "ar": "رَبٌّ",
+          "ar_plain": "رب",
+          "translit": "rabbun",
+          "en": "Lord (nom.)",
+          "ur": "رب (رفع)"
+        },
+        {
+          "ar": "رَبَّ",
+          "ar_plain": "رب",
+          "translit": "rabba",
+          "en": "Lord (acc.)",
+          "ur": "رب (نصب)"
+        },
+        {
+          "ar": "رُبِّ",
+          "ar_plain": "رب",
+          "translit": "rubbi",
+          "en": "Lord (gen.)",
+          "ur": "رب (جر)"
+        }
       ],
       "correct_answer": {
         "ar": "رَبِّي",
@@ -252,7 +407,11 @@
       "ur": "اور جب ابراہیم نے کہا: میرے رب! مجھے دکھا کہ تو مردوں کو کیسے زندہ کرتا ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-2-260-mishary.mp3"
     },
-    "highlighted_word_indices": [2, 3, 4],
+    "highlighted_word_indices": [
+      2,
+      3,
+      4
+    ],
     "noor_explanation": {
       "en": "قَالَ is ناقص (last root letter و). إِبْرَاهِيمُ is the subject of قَالَ (فاعل, مرفوع). رَبِّ is منادى (vocative, منصوب). أَرِنِي is the speech that إِبراهيم is requesting — أَرِني is أَرَى + نِي (me, as two separate مفعول). تُحْيِي is the مضارع of حَيَّ with the لام الأمر hidden in the question. The entire ayah is a dialogue — قَالَ introduces the speech, and understanding its weak-verb conjugation is essential for understanding who said what.",
       "ur": "قَالَ ناقص ہے (و آخری letter)۔ إِبْرَاهِيمُ = فاعل (رفع)۔ رَبِّ = منادى (نصب)۔ أَرِنِي = أَرَى + نی (دو مفعول)۔ تُحْيِي = مضارع of حَيَّ۔ پوری آیت ایک گفتگو ہے۔"

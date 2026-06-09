@@ -121,13 +121,26 @@
         "ar": "كَانَ الْغُلَامُ مُجْتَهِدًا",
         "ar_plain": "كان الغلام مجتهدا",
         "translit": "kaana al-ghulaamu mujtahidan",
-        "en": "The boy was diligent."
+        "en": "The boy was diligent.",
+        "ur": "لڑکا محنتی تھا۔"
       },
       "options": [
-        { "en": "The boy was diligent.", "ur": "لڑکا محنتی تھا۔" },
-        { "en": "The diligent boy was.", "ur": "محنتی لڑکا تھا۔" },
-        { "en": "The boy becomes diligent.", "ur": "لڑکا محنتی ہوتا ہے۔" },
-        { "en": "Was the boy diligent?", "ur": "کیا لڑکا محنتی تھا؟" }
+        {
+          "en": "The boy was diligent.",
+          "ur": "لڑکا محنتی تھا۔"
+        },
+        {
+          "en": "The diligent boy was.",
+          "ur": "محنتی لڑکا تھا۔"
+        },
+        {
+          "en": "The boy becomes diligent.",
+          "ur": "لڑکا محنتی ہوتا ہے۔"
+        },
+        {
+          "en": "Was the boy diligent?",
+          "ur": "کیا لڑکا محنتی تھا؟"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -140,18 +153,71 @@
       "id": "ch57-l04-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "كَانَ", "ar_plain": "كان", "translit": "kaana", "en": "was" },
-        { "ar": "أَصْبَحَ", "ar_plain": "اصبح", "translit": "asbaha", "en": "became (morning)" },
-        { "ar": "أَمْسَى", "ar_plain": "امسى", "translit": "amsaa", "en": "became (evening)" },
-        { "ar": "صَارَ", "ar_plain": "صار", "translit": "saara", "en": "became" }
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kaana",
+          "en": "was",
+          "ur": "تھا"
+        },
+        {
+          "ar": "أَصْبَحَ",
+          "ar_plain": "اصبح",
+          "translit": "asbaha",
+          "en": "became (morning)",
+          "ur": "بن گیا (صبح)"
+        },
+        {
+          "ar": "أَمْسَى",
+          "ar_plain": "امسى",
+          "translit": "amsaa",
+          "en": "became (evening)",
+          "ur": "بن گیا (شام)"
+        },
+        {
+          "ar": "صَارَ",
+          "ar_plain": "صار",
+          "translit": "saara",
+          "en": "became",
+          "ur": "بن گیا"
+        }
       ],
       "right_column": [
-        { "en": "أخوات كان — takes نصب on both اسم and خبر", "ur": "كَانَ کی sisters — اسم و خبر دونوں پر نصب لیتی ہیں" },
-        { "en": "أخوات كان — takes نصب on both اسم and خبر", "ur": "كَانَ کی sisters — اسم و خبر دونوں پر نصب لیتی ہیں" },
-        { "en": "أخوات كان — takes نصب on both اسم and خبر", "ur": "كَانَ کی sisters — اسم و خبر دونوں پر نصب لیتی ہیں" },
-        { "en": "أخوات كان — takes نصب on both اسم and خبر", "ur": "كَانَ کی sisters — اسم و خبر دونوں پر نصب لیتی ہیں" }
+        {
+          "en": "أخوات كان — takes نصب on both اسم and خبر",
+          "ur": "كَانَ کی sisters — اسم و خبر دونوں پر نصب لیتی ہیں"
+        },
+        {
+          "en": "أخوات كان — takes نصب on both اسم and خبر",
+          "ur": "كَانَ کی sisters — اسم و خبر دونوں پر نصب لیتی ہیں"
+        },
+        {
+          "en": "أخوات كان — takes نصب on both اسم and خبر",
+          "ur": "كَانَ کی sisters — اسم و خبر دونوں پر نصب لیتی ہیں"
+        },
+        {
+          "en": "أخوات كان — takes نصب on both اسم and خبر",
+          "ur": "كَانَ کی sisters — اسم و خبر دونوں پر نصب لیتی ہیں"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "All four — كَانَ, أَصْبَحَ, أَمْسَى, صَارَ — are incomplete verbs (أفعال ناقصة). They all put the اسم كان in the accusative (نصب) and the خبر كان in the accusative (نصب).",
@@ -182,10 +248,34 @@
         "ur": "پانی ٹھنڈا ہو گیا۔"
       },
       "options": [
-        { "ar": "صَارَ", "ar_plain": "صار", "translit": "saara", "en": "became", "ur": "ہو گیا" },
-        { "ar": "كَانَ", "ar_plain": "كان", "translit": "kaana", "en": "was", "ur": "تھا" },
-        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "went", "ur": "گیا" },
-        { "ar": "رَأَى", "ar_plain": "راى", "translit": "ra'aa", "en": "saw", "ur": "دیکھا" }
+        {
+          "ar": "صَارَ",
+          "ar_plain": "صار",
+          "translit": "saara",
+          "en": "became",
+          "ur": "ہو گیا"
+        },
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kaana",
+          "en": "was",
+          "ur": "تھا"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "گیا"
+        },
+        {
+          "ar": "رَأَى",
+          "ar_plain": "راى",
+          "translit": "ra'aa",
+          "en": "saw",
+          "ur": "دیکھا"
+        }
       ],
       "correct_answer": {
         "ar": "صَارَ",
@@ -208,12 +298,40 @@
         "ur": "دن لمبا ہو گیا۔"
       },
       "tiles": [
-        { "ar": "أَصْبَحَ", "ar_plain": "اصبح", "translit": "asbaha", "en": "became (morning)" },
-        { "ar": "النَّهَارُ", "ar_plain": "النهار", "translit": "an-nahaaru", "en": "the day" },
-        { "ar": "طَوِيلًا", "ar_plain": "طويلا", "translit": "tawiilan", "en": "long (acc.)", "ur": "لمبا (نصب)" },
-        { "ar": "طَوِيلٌ", "ar_plain": "طويل", "translit": "tawiilun", "en": "long (nom.)", "ur": "لمبا (رفع)" }
+        {
+          "ar": "أَصْبَحَ",
+          "ar_plain": "اصبح",
+          "translit": "asbaha",
+          "en": "became (morning)",
+          "ur": "بن گیا (صبح)"
+        },
+        {
+          "ar": "النَّهَارُ",
+          "ar_plain": "النهار",
+          "translit": "an-nahaaru",
+          "en": "the day",
+          "ur": "دن"
+        },
+        {
+          "ar": "طَوِيلًا",
+          "ar_plain": "طويلا",
+          "translit": "tawiilan",
+          "en": "long (acc.)",
+          "ur": "لمبا (نصب)"
+        },
+        {
+          "ar": "طَوِيلٌ",
+          "ar_plain": "طويل",
+          "translit": "tawiilun",
+          "en": "long (nom.)",
+          "ur": "لمبا (رفع)"
+        }
       ],
-      "correct_order": [1, 0, 2],
+      "correct_order": [
+        1,
+        0,
+        2
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "النَّهَارُ (subject) + أَصْبَحَ (incomplete verb — sister of كَانَ) + طَوِيلًا (خبر, accusative). أَصْبَحَ puts its اسم in the accusative (النَّهَارُ) and its خبر in the accusative (طَوِيلًا).",
@@ -239,12 +357,38 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "كَانَ اللَّهُ رَحِيمًا",
       "words": [
-        { "ar": "كَانَ", "ar_plain": "كان", "translit": "kaana", "en": "was" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah" },
-        { "ar": "رَحِيمًا", "ar_plain": "رحيما", "translit": "rahiiman", "en": "Merciful" }
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kaana",
+          "en": "was",
+          "ur": "تھا"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "رَحِيمًا",
+          "ar_plain": "رحيما",
+          "translit": "rahiiman",
+          "en": "Merciful",
+          "ur": "مہربان"
+        }
       ],
-      "available_roles": ["VERB", "SUBJECT", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT", "OBJECT"],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "كَانَ = VERB (ناقص فعل — incomplete verb, always مَعْرَبٌ in present tense but مَبْنِيّ in past tense). اللَّهُ = اسم كان (subject, in النصب because كَانَ). رَحِيمًا = خبر كان (predicate, in النصب because كَانَ).",
@@ -258,13 +402,26 @@
         "ar": "لَيْسَ الْعِلْمُ كَثِيرًا",
         "ar_plain": "ليس العلم كثيرا",
         "translit": "laysa al-'ilmu kathiiran",
-        "en": "Knowledge is not abundant."
+        "en": "Knowledge is not abundant.",
+        "ur": "علم کی فراوانی نہیں ہے۔"
       },
       "options": [
-        { "en": "Knowledge is not abundant.", "ur": "علم زیادہ نہیں ہے۔" },
-        { "en": "The abundant knowledge.", "ur": "زیادہ علم۔" },
-        { "en": "The knowledge was abundant.", "ur": "علم زیادہ تھا۔" },
-        { "en": "Is knowledge abundant?", "ur": "کیا علم زیادہ ہے؟" }
+        {
+          "en": "Knowledge is not abundant.",
+          "ur": "علم زیادہ نہیں ہے۔"
+        },
+        {
+          "en": "The abundant knowledge.",
+          "ur": "زیادہ علم۔"
+        },
+        {
+          "en": "The knowledge was abundant.",
+          "ur": "علم زیادہ تھا۔"
+        },
+        {
+          "en": "Is knowledge abundant?",
+          "ur": "کیا علم زیادہ ہے؟"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -289,7 +446,9 @@
       "ur": "اللہ کی پاکی ہے جو کچھ آسمانوں میں ہے اور جو کچھ زمین میں ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-hadid-001-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "This ayah uses سَبَّحَ (he glorified) — a complete verb (فعل تام), not كَانَ or its sisters. سَبَّحَ does not need an اسم كان or خبر — it gives a complete meaning on its own. For contrast: كَانَ اللَّهُ قَدِيرًا would use the incomplete verb pattern.",
       "ur": "یہ آیت سَبَّحَ (اس نے پاک کیا) استعمال کرتی ہے — یہ ایک مکمل فعل (فعل تام) ہے، كَانَ یا اس کی sisters نہیں۔ سَبَّحَ کو اسم كان یا خبر کی ضرورت نہیں۔"

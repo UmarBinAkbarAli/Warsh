@@ -129,6 +129,7 @@ function validateLegacyExercise(exercise, pathLabel) {
 
 function validateLegacyLesson(lesson, pathLabel) {
   assertLegacyString(lesson.title, `${pathLabel}.title`);
+  assertLegacyString(lesson.titleUr, `${pathLabel}.titleUr`);
   assertLegacyString(lesson.titleAr, `${pathLabel}.titleAr`);
 
   if (lesson.type !== "VOCABULARY") {
@@ -176,8 +177,10 @@ function validateLegacyCurriculum() {
       legacyFail(`chapter ${chapterIndex} must have order ${expectedOrder}`);
     }
     assertLegacyString(chapter.title, `chapters[${chapterIndex}].title`);
+    assertLegacyString(chapter.titleUr, `chapters[${chapterIndex}].titleUr`);
     assertLegacyString(chapter.titleAr, `chapters[${chapterIndex}].titleAr`);
     assertLegacyString(chapter.description, `chapters[${chapterIndex}].description`);
+    assertLegacyString(chapter.descriptionUr, `chapters[${chapterIndex}].descriptionUr`);
     if (!Array.isArray(chapter.lessons) || chapter.lessons.length < 4 || chapter.lessons.length > 9) {
       legacyFail(`chapters[${chapterIndex}].lessons must contain 4-9 lessons`);
     }

@@ -145,18 +145,71 @@
       "id": "ch58-l02-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "أَعْلَمَ", "ar_plain": "أعلم", "translit": "a'lama", "en": "he informed" },
-        { "ar": "سَمَّى", "ar_plain": "سمى", "translit": "sammaa", "en": "he named" },
-        { "ar": "جَعَلَ", "ar_plain": "جعل", "translit": "ja'ala", "en": "he made/appointed" },
-        { "ar": "عَلَّمَ", "ar_plain": "علم", "translit": "allama", "en": "he taught" }
+        {
+          "ar": "أَعْلَمَ",
+          "ar_plain": "أعلم",
+          "translit": "a'lama",
+          "en": "he informed",
+          "ur": "اس نے مطلع کیا"
+        },
+        {
+          "ar": "سَمَّى",
+          "ar_plain": "سمى",
+          "translit": "sammaa",
+          "en": "he named",
+          "ur": "اس نے نام دیا"
+        },
+        {
+          "ar": "جَعَلَ",
+          "ar_plain": "جعل",
+          "translit": "ja'ala",
+          "en": "he made/appointed",
+          "ur": "اس نے بنایا/مقرر کیا۔"
+        },
+        {
+          "ar": "عَلَّمَ",
+          "ar_plain": "علم",
+          "translit": "allama",
+          "en": "he taught",
+          "ur": "اس نے سکھایا"
+        }
       ],
       "right_column": [
-        { "en": "two accusative objects", "ur": "دو مفعول به نصب میں" },
-        { "en": "two accusative objects", "ur": "دو مفعول به نصب میں" },
-        { "en": "two accusative objects", "ur": "دو مفعول به نصب میں" },
-        { "en": "two accusative objects", "ur": "دو مفعول به نصب میں" }
+        {
+          "en": "two accusative objects",
+          "ur": "دو مفعول به نصب میں"
+        },
+        {
+          "en": "two accusative objects",
+          "ur": "دو مفعول به نصب میں"
+        },
+        {
+          "en": "two accusative objects",
+          "ur": "دو مفعول به نصب میں"
+        },
+        {
+          "en": "two accusative objects",
+          "ur": "دو مفعول به نصب میں"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "All four verbs take two objects in the accusative (نصب). أَعْلَمَ (informed), سَمَّى (named), جَعَلَ (made/appointed), عَلَّمَ (taught).",
@@ -168,13 +221,46 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "أَعْلَمَ اللَّهُ زَيْدًا الْقُرْآنَ",
       "words": [
-        { "ar": "أَعْلَمَ", "ar_plain": "أعلم", "translit": "a'lama", "en": "he informed" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah" },
-        { "ar": "زَيْدًا", "ar_plain": "زيد", "translit": "zaydan", "en": "Zaid" },
-        { "ar": "الْقُرْآنَ", "ar_plain": "القرآن", "translit": "al-qur'aana", "en": "the Quran" }
+        {
+          "ar": "أَعْلَمَ",
+          "ar_plain": "أعلم",
+          "translit": "a'lama",
+          "en": "he informed",
+          "ur": "اس نے مطلع کیا"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "زَيْدًا",
+          "ar_plain": "زيد",
+          "translit": "zaydan",
+          "en": "Zaid",
+          "ur": "زید"
+        },
+        {
+          "ar": "الْقُرْآنَ",
+          "ar_plain": "القرآن",
+          "translit": "al-qur'aana",
+          "en": "the Quran",
+          "ur": "قرآن"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT", "OBJECT", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "أَعْلَمَ = VERB (form IV, متعدي to two objects). اللَّهُ = SUBJECT (فاعل, nominative — the one who informed). زَيْدًا = FIRST OBJECT (مفعول به, accusative — the one who was told). الْقُرْآنَ = SECOND OBJECT (مفعول به ثانٍ, accusative — what was told). Both objects are in the accusative with no preposition.",
@@ -189,13 +275,48 @@
         "ur": "اللہ نے مسیح کا نام عیسیٰ رکھا۔"
       },
       "tiles": [
-        { "ar": "سَمَّى", "ar_plain": "سمى", "translit": "sammaa", "en": "he named" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah" },
-        { "ar": "الْمَسِيحَ", "ar_plain": "المسيح", "translit": "al-masiihu", "en": "the Messiah" },
-        { "ar": "عِيسَى", "ar_plain": "عيسى", "translit": "iisaa", "en": "Isa" },
-        { "ar": "نَبِيًّا", "ar_plain": "نبيا", "translit": "nabiyyan", "en": "a prophet" }
+        {
+          "ar": "سَمَّى",
+          "ar_plain": "سمى",
+          "translit": "sammaa",
+          "en": "he named",
+          "ur": "اس نے نام دیا"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "الْمَسِيحَ",
+          "ar_plain": "المسيح",
+          "translit": "al-masiihu",
+          "en": "the Messiah",
+          "ur": "مسیحا"
+        },
+        {
+          "ar": "عِيسَى",
+          "ar_plain": "عيسى",
+          "translit": "iisaa",
+          "en": "Isa",
+          "ur": "عیسیٰ"
+        },
+        {
+          "ar": "نَبِيًّا",
+          "ar_plain": "نبيا",
+          "translit": "nabiyyan",
+          "en": "a prophet",
+          "ur": "ایک نبی"
+        }
       ],
-      "correct_order": [1, 0, 2, 3],
+      "correct_order": [
+        1,
+        0,
+        2,
+        3
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "سَمَّى takes two objects. الْمَسِيحَ = first object (the entity named), عِيسَى = second object (the name given). The correct order is: SUBJECT (اللَّهُ) + VERB (سَمَّى) + FIRST OBJECT (الْمَسِيحَ) + SECOND OBJECT (عِيسَى).",
@@ -212,10 +333,34 @@
         "ur": "اللہ نے کوثر کو اچھا بنایا۔"
       },
       "options": [
-        { "ar": "خَيْرًا", "ar_plain": "خيرا", "translit": "khayran", "en": "good (acc.)", "ur": "اچھا (نصب)" },
-        { "ar": "خَيْرٌ", "ar_plain": "خير", "translit": "khayrun", "en": "good (nom.)", "ur": "اچھا (رفع)" },
-        { "ar": "خَيْرٍ", "ar_plain": "خير", "translit": "khayrin", "en": "good (gen.)", "ur": "اچھا (جر)" },
-        { "ar": "خَيْرَتَانِ", "ar_plain": "خيرتان", "translit": "khayrataani", "en": "two good things", "ur": "دو اچھی چیزیں" }
+        {
+          "ar": "خَيْرًا",
+          "ar_plain": "خيرا",
+          "translit": "khayran",
+          "en": "good (acc.)",
+          "ur": "اچھا (نصب)"
+        },
+        {
+          "ar": "خَيْرٌ",
+          "ar_plain": "خير",
+          "translit": "khayrun",
+          "en": "good (nom.)",
+          "ur": "اچھا (رفع)"
+        },
+        {
+          "ar": "خَيْرٍ",
+          "ar_plain": "خير",
+          "translit": "khayrin",
+          "en": "good (gen.)",
+          "ur": "اچھا (جر)"
+        },
+        {
+          "ar": "خَيْرَتَانِ",
+          "ar_plain": "خيرتان",
+          "translit": "khayrataani",
+          "en": "two good things",
+          "ur": "دو اچھی چیزیں"
+        }
       ],
       "correct_answer": {
         "ar": "خَيْرًا",
@@ -237,13 +382,26 @@
         "ar": "عَلَّمَ الْمُعَلِّمُ الطَّالِبَ الْعِلْمَ",
         "ar_plain": "علم المعلم الطالب العلم",
         "translit": "allama al-mu'allimu at-taliba al-'ilma",
-        "en": "The teacher taught the student knowledge."
+        "en": "The teacher taught the student knowledge.",
+        "ur": "استاد نے طالب علم کو علم سکھایا۔"
       },
       "options": [
-        { "en": "The teacher taught the student knowledge.", "ur": "استاد نے طالب علم کو علم سکھایا۔" },
-        { "en": "The student taught the teacher knowledge.", "ur": "طالب علم نے استاد کو علم سکھایا۔" },
-        { "en": "The teacher learned the student knowledge.", "ur": "استاد نے طالب علم سے علم سیکھا۔" },
-        { "en": "Knowledge taught the student to the teacher.", "ur": "علم نے طالب کو استاد کے پاس سکھایا۔" }
+        {
+          "en": "The teacher taught the student knowledge.",
+          "ur": "استاد نے طالب علم کو علم سکھایا۔"
+        },
+        {
+          "en": "The student taught the teacher knowledge.",
+          "ur": "طالب علم نے استاد کو علم سکھایا۔"
+        },
+        {
+          "en": "The teacher learned the student knowledge.",
+          "ur": "استاد نے طالب علم سے علم سیکھا۔"
+        },
+        {
+          "en": "Knowledge taught the student to the teacher.",
+          "ur": "علم نے طالب کو استاد کے پاس سکھایا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -271,11 +429,30 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "سَمَّيْتُهُ مُحَمَّدًا",
       "words": [
-        { "ar": "سَمَّيْتُهُ", "ar_plain": "سميته", "translit": "sammaytuhu", "en": "I named him" },
-        { "ar": "مُحَمَّدًا", "ar_plain": "محمد", "translit": "muhammadan", "en": "Muhammad" }
+        {
+          "ar": "سَمَّيْتُهُ",
+          "ar_plain": "سميته",
+          "translit": "sammaytuhu",
+          "en": "I named him",
+          "ur": "میں نے اس کا نام لیا۔"
+        },
+        {
+          "ar": "مُحَمَّدًا",
+          "ar_plain": "محمد",
+          "translit": "muhammadan",
+          "en": "Muhammad",
+          "ur": "محمد"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "OBJECT"],
-      "correct_roles": ["VERB", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "سَمَّيْتُهُ = 'I named him' — here سَمَّيْتُ is the verb with attached object هُ (him). سَمَّى takes two objects, so مُحَمَّدًا = second مفعول به ثانٍ (the name given, accusative). The full structure is: I (implied subject) + named him Muhammad.",
@@ -298,7 +475,9 @@
       "ur": "بے شک، اگر وہ ہر نشان دیکھیں تو وہ اس پر ایمان نہیں لائیں گے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-kahf-20-mishary.mp3"
     },
-    "highlighted_word_indices": [4],
+    "highlighted_word_indices": [
+      4
+    ],
     "noor_explanation": {
       "en": "يُؤْمِنُوا بِهَا uses ONE object with a preposition — not the two-object pattern. Compare: أَعْلَمَ زَيْدًا الْقُرْآنَ (two objects, both accusative, no preposition) vs يُؤْمِنُوا بِهَا (one prepositional object). The two-object pattern has no preposition before either object. أَعْلَمَ, سَمَّى, جَعَلَ, عَلَّمَ all work this way.",
       "ur": "يُؤْمِنُوا بِهَا میں ایک object حرف جر کے ساتھ ہے — یہ دو-object pattern نہیں ہے۔ موازنہ: أَعْلَمَ زَیدًا الْقُرْآنَ (دو objects، دونوں نصب، کوئی حرف جر نہیں) vs يُؤْمِنُوا بِهَا (ایک prepositional object)۔"

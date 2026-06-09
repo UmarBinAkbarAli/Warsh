@@ -64,13 +64,15 @@
           "ar": "مُوسَى (مَقْصُور)",
           "ar_plain": "موسى",
           "translit": "moosaa",
-          "en": "Musa — alif maqsura, stays in رفع"
+          "en": "Musa — alif maqsura, stays in رفع",
+          "ur": "موسیٰ - الف مقصورہ، رفع میں رہتا ہے"
         },
         {
           "ar": "الْقَاضِي (مَنْقُوص)",
           "ar_plain": "القاضي",
           "translit": "al-qaadhee",
-          "en": "The judge — ي drops in رفع"
+          "en": "The judge — ي drops in رفع",
+          "ur": "جج - ي ڈراپ رفع میں"
         }
       ]
     },
@@ -133,18 +135,71 @@
       "id": "ch56-l06-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "مُوسَى", "ar_plain": "موسى", "translit": "moosaa", "en": "Musa" },
-        { "ar": "الْقَاضِي (رفع)", "ar_plain": "القاضي", "translit": "al-qaadhee", "en": "the judge (nom.)" },
-        { "ar": "عِيسَى", "ar_plain": "عيسى", "translit": "'iisaa", "en": "Isa" },
-        { "ar": "الْهَادِي (رفع)", "ar_plain": "الهادي", "translit": "al-haadiy", "en": "the guide (nom.)" }
+        {
+          "ar": "مُوسَى",
+          "ar_plain": "موسى",
+          "translit": "moosaa",
+          "en": "Musa",
+          "ur": "موسی"
+        },
+        {
+          "ar": "الْقَاضِي (رفع)",
+          "ar_plain": "القاضي",
+          "translit": "al-qaadhee",
+          "en": "the judge (nom.)",
+          "ur": "جج (نام)"
+        },
+        {
+          "ar": "عِيسَى",
+          "ar_plain": "عيسى",
+          "translit": "'iisaa",
+          "en": "Isa",
+          "ur": "عیسیٰ"
+        },
+        {
+          "ar": "الْهَادِي (رفع)",
+          "ar_plain": "الهادي",
+          "translit": "al-haadiy",
+          "en": "the guide (nom.)",
+          "ur": "گائیڈ (نام)"
+        }
       ],
       "right_column": [
-        { "en": "مُوسَى — alif maqsura stays in رفع", "ur": "مُوسَى — الف مقصورہ رہتی ہے" },
-        { "en": "الْقَاضِي — ي drops in رفع (منقوص)", "ur": "الْقَاضِي — ي گر جاتی ہے (منقوص)" },
-        { "en": "عِيسَى — alif maqsura stays in رفع", "ur": "عِيسَى — الف مقصورہ رہتی ہے" },
-        { "en": "الْهَادِي — ي drops in رفع (منقوص)", "ur": "الْهَادِي — ي گر جاتی ہے (منقوص)" }
+        {
+          "en": "مُوسَى — alif maqsura stays in رفع",
+          "ur": "مُوسَى — الف مقصورہ رہتی ہے"
+        },
+        {
+          "en": "الْقَاضِي — ي drops in رفع (منقوص)",
+          "ur": "الْقَاضِي — ي گر جاتی ہے (منقوص)"
+        },
+        {
+          "en": "عِيسَى — alif maqsura stays in رفع",
+          "ur": "عِيسَى — الف مقصورہ رہتی ہے"
+        },
+        {
+          "en": "الْهَادِي — ي drops in رفع (منقوص)",
+          "ur": "الْهَادِي — ي گر جاتی ہے (منقوص)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "مُوسَى and عِيسَى are المقصور (ى is part of the root, alif stays). الْقَاضِي and الْهَادِي are المنقوص (ي is the fourth letter, drops in رفع).",
@@ -161,10 +216,34 @@
         "ur": "میں نے موسیٰ اور قاضی کو گھر میں دیکھا۔"
       },
       "options": [
-        { "ar": "الْبَيْتِ", "ar_plain": "البيت", "translit": "al-bayti", "en": "the house (gen.)", "ur": "گھر (جر)" },
-        { "ar": "الْبَيْتُ", "ar_plain": "البيت", "translit": "al-baytu", "en": "the house (nom.)", "ur": "گھر (رفع)" },
-        { "ar": "الْبَيْتَ", "ar_plain": "البيت", "translit": "al-bayta", "en": "the house (acc.)", "ur": "گھر (نصب)" },
-        { "ar": "الْبَيْتَانِ", "ar_plain": "البيتين", "translit": "al-baytayni", "en": "two houses", "ur": "دو گھر" }
+        {
+          "ar": "الْبَيْتِ",
+          "ar_plain": "البيت",
+          "translit": "al-bayti",
+          "en": "the house (gen.)",
+          "ur": "گھر (جر)"
+        },
+        {
+          "ar": "الْبَيْتُ",
+          "ar_plain": "البيت",
+          "translit": "al-baytu",
+          "en": "the house (nom.)",
+          "ur": "گھر (رفع)"
+        },
+        {
+          "ar": "الْبَيْتَ",
+          "ar_plain": "البيت",
+          "translit": "al-bayta",
+          "en": "the house (acc.)",
+          "ur": "گھر (نصب)"
+        },
+        {
+          "ar": "الْبَيْتَانِ",
+          "ar_plain": "البيتين",
+          "translit": "al-baytayni",
+          "en": "two houses",
+          "ur": "دو گھر"
+        }
       ],
       "correct_answer": {
         "ar": "الْبَيْتِ",
@@ -187,13 +266,49 @@
         "ur": "موسیٰ اور ہادی مسجد میں ہیں۔"
       },
       "tiles": [
-        { "ar": "مُوسَى", "ar_plain": "موسى", "translit": "moosaa", "en": "Musa" },
-        { "ar": "وَ", "ar_plain": "و", "translit": "wa", "en": "and" },
-        { "ar": "الْهَادِي", "ar_plain": "الهادي", "translit": "al-haadiy", "en": "the guide (nom.)", "ur": "ہادی (رفع)" },
-        { "ar": "فِي", "ar_plain": "في", "translit": "fii", "en": "in" },
-        { "ar": "الْمَسْجِدِ", "ar_plain": "المسجد", "translit": "al-masjidi", "en": "the mosque (gen.)", "ur": "مسجد (جر)" }
+        {
+          "ar": "مُوسَى",
+          "ar_plain": "موسى",
+          "translit": "moosaa",
+          "en": "Musa",
+          "ur": "موسی"
+        },
+        {
+          "ar": "وَ",
+          "ar_plain": "و",
+          "translit": "wa",
+          "en": "and",
+          "ur": "اور"
+        },
+        {
+          "ar": "الْهَادِي",
+          "ar_plain": "الهادي",
+          "translit": "al-haadiy",
+          "en": "the guide (nom.)",
+          "ur": "ہادی (رفع)"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fii",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidi",
+          "en": "the mosque (gen.)",
+          "ur": "مسجد (جر)"
+        }
       ],
-      "correct_order": [0, 1, 2, 3, 4],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "مُوسَى (مُبْتَدَأ, رفع) + وَ (conjunction) + الْهَادِي (مُبْتَدَأ, رفع) + فِي (preposition, مَبْنِيّ) + الْمَسْجِدِ (مضاف إليه, جر after فِي). Notice: الْهَادِي is منقوص in رفع — the ي is dropped.",
@@ -207,13 +322,26 @@
         "ar": "الْقَاضِي وَمُوسَى",
         "ar_plain": "القاضي وموسى",
         "translit": "al-qaadhee wa moosaa",
-        "en": "The judge and Musa."
+        "en": "The judge and Musa.",
+        "ur": "قاضی اور موسیٰ۔"
       },
       "options": [
-        { "en": "The judge and Musa.", "ur": "قاضی اور موسیٰ۔" },
-        { "en": "Musa's judge.", "ur": "قاضی موسیٰ۔" },
-        { "en": "The judge of Musa.", "ur": "موسیٰ کا قاضی۔" },
-        { "en": "Musa and the judge.", "ur": "موسیٰ اور قاضی۔" }
+        {
+          "en": "The judge and Musa.",
+          "ur": "قاضی اور موسیٰ۔"
+        },
+        {
+          "en": "Musa's judge.",
+          "ur": "قاضی موسیٰ۔"
+        },
+        {
+          "en": "The judge of Musa.",
+          "ur": "موسیٰ کا قاضی۔"
+        },
+        {
+          "en": "Musa and the judge.",
+          "ur": "موسیٰ اور قاضی۔"
+        }
       ],
       "correct_index": 1,
       "xp_value": 1,
@@ -241,13 +369,48 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "الْفَتَى وَالْقَاضِي مُسْلِمَانِ",
       "words": [
-        { "ar": "الْفَتَى", "ar_plain": "الفتى", "translit": "al-fataa", "en": "the young man" },
-        { "ar": "وَ", "ar_plain": "و", "translit": "wa", "en": "and" },
-        { "ar": "الْقَاضِي", "ar_plain": "القاضي", "translit": "al-qaadhee", "en": "the judge" },
-        { "ar": "مُسْلِمَانِ", "ar_plain": "مسلمان", "translit": "muslimaani", "en": "two Muslims" }
+        {
+          "ar": "الْفَتَى",
+          "ar_plain": "الفتى",
+          "translit": "al-fataa",
+          "en": "the young man",
+          "ur": "نوجوان"
+        },
+        {
+          "ar": "وَ",
+          "ar_plain": "و",
+          "translit": "wa",
+          "en": "and",
+          "ur": "اور"
+        },
+        {
+          "ar": "الْقَاضِي",
+          "ar_plain": "القاضي",
+          "translit": "al-qaadhee",
+          "en": "the judge",
+          "ur": "جج"
+        },
+        {
+          "ar": "مُسْلِمَانِ",
+          "ar_plain": "مسلمان",
+          "translit": "muslimaani",
+          "en": "two Muslims",
+          "ur": "دو مسلمان"
+        }
       ],
-      "available_roles": ["SUBJECT", "OBJECT", "ADJECTIVE", "VERB", "CONJUNCTION"],
-      "correct_roles": ["SUBJECT", "CONJUNCTION", "SUBJECT", "ADJECTIVE"],
+      "available_roles": [
+        "SUBJECT",
+        "OBJECT",
+        "ADJECTIVE",
+        "VERB",
+        "CONJUNCTION"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "CONJUNCTION",
+        "SUBJECT",
+        "ADJECTIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الْفَتَى = مُبْتَدَأ (رفع — مقصور, alif stays). وَ = حرف عطف (مَبْنِيّ). الْقَاضِي = مُبْتَدَأ (رفع — منقوص, ي dropped). مُسْلِمَانِ = خَبَر (رفع — dual adjective matching both subjects).",
@@ -261,13 +424,26 @@
         "ar": "عِيسَى وَالْفَتَى مُسْلِمَانِ",
         "ar_plain": "عيسى والفتى مسلمان",
         "translit": "'iisaa wal-fataa muslimaani",
-        "en": "Isa and the young man are Muslims."
+        "en": "Isa and the young man are Muslims.",
+        "ur": "عیسیٰ اور نوجوان مسلمان ہیں۔"
       },
       "options": [
-        { "en": "Isa and the young man are Muslims.", "ur": "عیسیٰ اور جوان آدمی مسلمان ہیں۔" },
-        { "en": "Isa's young Muslim.", "ur": "عیسیٰ کا جوان مسلمان۔" },
-        { "en": "The Muslim is Isa and the young man.", "ur": "مسلمان عیسیٰ اور جوان ہے۔" },
-        { "en": "Two Muslim Isa.", "ur": "دو مسلمان عیسیٰ۔" }
+        {
+          "en": "Isa and the young man are Muslims.",
+          "ur": "عیسیٰ اور جوان آدمی مسلمان ہیں۔"
+        },
+        {
+          "en": "Isa's young Muslim.",
+          "ur": "عیسیٰ کا جوان مسلمان۔"
+        },
+        {
+          "en": "The Muslim is Isa and the young man.",
+          "ur": "مسلمان عیسیٰ اور جوان ہے۔"
+        },
+        {
+          "en": "Two Muslim Isa.",
+          "ur": "دو مسلمان عیسیٰ۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -292,7 +468,9 @@
       "ur": "اس نے کہا، 'prison میں سے ایک آدمی نے کہا، میں نے دیکھا...'",
       "audio_url": "https://cdn.warsh.app/audio/quran/yusuf-036-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "This ayah contains آوَانِ — 'prison' (آوَان is not المقصور or المنقوص; it is a regular noun with the alif as a natural part of the root آ-و-ن). The ayah demonstrates that recognizing مقصور vs منقوص requires knowing the root structure of each word — this comes with practice and exposure to Quranic Arabic.",
       "ur": "یہ آیت آوَانِ (prison) دکھاتی ہے — یہ مقصور یا منقوص نہیں؛ یہ ایک عام noun ہے۔ مقصور اور منقوص کو پہچاننے کے لیے ہر لفظ کی root structure جاننا ضروری ہے۔"

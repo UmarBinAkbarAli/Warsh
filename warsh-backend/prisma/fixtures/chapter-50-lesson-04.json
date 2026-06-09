@@ -96,10 +96,22 @@
         "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں"
       },
       "options": [
-        { "en": "Allah bears witness that there is no deity except Him", "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں" },
-        { "en": "Allah knows that there is no god but Him", "ur": "اللہ جانتا ہے کہ اس کے سوا کوئی معبود نہیں" },
-        { "en": "The witness of Allah is that there is no god", "ur": "اللہ کی گواہی ہے کہ کوئی معبود نہیں" },
-        { "en": "Allah and those who bear witness that there is no god", "ur": "اللہ اور وہ لوگ جو گواہی دیتے ہیں کہ کوئی معبود نہیں" }
+        {
+          "en": "Allah bears witness that there is no deity except Him",
+          "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں"
+        },
+        {
+          "en": "Allah knows that there is no god but Him",
+          "ur": "اللہ جانتا ہے کہ اس کے سوا کوئی معبود نہیں"
+        },
+        {
+          "en": "The witness of Allah is that there is no god",
+          "ur": "اللہ کی گواہی ہے کہ کوئی معبود نہیں"
+        },
+        {
+          "en": "Allah and those who bear witness that there is no god",
+          "ur": "اللہ اور وہ لوگ جو گواہی دیتے ہیں کہ کوئی معبود نہیں"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -122,18 +134,71 @@
       "type": "MATCHING",
       "id": "ch50-l04-ex03",
       "left_column": [
-        { "ar": "شَهِدَ", "ar_plain": "شهد", "translit": "shahida", "en": "bore witness" },
-        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "no / not" },
-        { "ar": "إِلَّا", "ar_plain": "إلا", "translit": "illaa", "en": "except" },
-        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "He (Allah)" }
+        {
+          "ar": "شَهِدَ",
+          "ar_plain": "شهد",
+          "translit": "shahida",
+          "en": "bore witness",
+          "ur": "گواہی دی"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "no / not",
+          "ur": "نہیں / نہیں"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
+        },
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "He (Allah)",
+          "ur": "وہ (اللہ)"
+        }
       ],
       "right_column": [
-        { "en": "bore witness", "ur": "گواہی دی" },
-        { "en": "no / not", "ur": "نہیں" },
-        { "en": "except", "ur": "ماسوا" },
-        { "en": "He (Allah)", "ur": "وہ (اللہ)" }
+        {
+          "en": "bore witness",
+          "ur": "گواہی دی"
+        },
+        {
+          "en": "no / not",
+          "ur": "نہیں"
+        },
+        {
+          "en": "except",
+          "ur": "ماسوا"
+        },
+        {
+          "en": "He (Allah)",
+          "ur": "وہ (اللہ)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -144,12 +209,41 @@
         "ur": "اللہ کے سوا کوئی معبود نہیں۔"
       },
       "tiles": [
-        { "ar": "لَا", "ar_plain": "لا", "translit": "laa", "en": "no", "ur": "نہیں" },
-        { "ar": "إِلَهَ", "ar_plain": "إله", "translit": "ilaahun", "en": "god", "ur": "معبود" },
-        { "ar": "إِلَّا", "ar_plain": "إلا", "translit": "illaa", "en": "except", "ur": "ماسوا" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah", "ur": "اللہ" }
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "no",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "إِلَهَ",
+          "ar_plain": "إله",
+          "translit": "ilaahun",
+          "en": "god",
+          "ur": "معبود"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "ماسوا"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah",
+          "ur": "اللہ"
+        }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -157,14 +251,47 @@
       "id": "ch50-l04-ex05",
       "mode": "TAP",
       "sentence_ar": "شَهِدَ ___ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ",
-      "hint": { "en": "Allah bears witness that there is no god except Him.", "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں۔" },
+      "hint": {
+        "en": "Allah bears witness that there is no god except Him.",
+        "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں۔"
+      },
       "options": [
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah", "ur": "اللہ" },
-        { "ar": "رَسُولٌ", "ar_plain": "رسول", "translit": "rasoolun", "en": "a messenger", "ur": "رسول" },
-        { "ar": "مَلَكٌ", "ar_plain": "ملك", "translit": "malakun", "en": "an angel", "ur": "فرشتہ" },
-        { "ar": "عَالِمٌ", "ar_plain": "عالم", "translit": "aalimun", "en": "a scholar", "ur": "عالم" }
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "رَسُولٌ",
+          "ar_plain": "رسول",
+          "translit": "rasoolun",
+          "en": "a messenger",
+          "ur": "رسول"
+        },
+        {
+          "ar": "مَلَكٌ",
+          "ar_plain": "ملك",
+          "translit": "malakun",
+          "en": "an angel",
+          "ur": "فرشتہ"
+        },
+        {
+          "ar": "عَالِمٌ",
+          "ar_plain": "عالم",
+          "translit": "aalimun",
+          "en": "a scholar",
+          "ur": "عالم"
+        }
       ],
-      "correct_answer": { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah", "ur": "اللہ" },
+      "correct_answer": {
+        "ar": "اللَّهَ",
+        "ar_plain": "الله",
+        "translit": "allaahu",
+        "en": "Allah",
+        "ur": "اللہ"
+      },
       "xp_value": 1
     },
     {
@@ -178,10 +305,22 @@
         "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں"
       },
       "options": [
-        { "en": "Allah bears witness that there is no deity except Him", "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں" },
-        { "en": "Allah and the witnesses bear witness that there is no god", "ur": "اللہ اور گواہ اللہ کی گواہی دیتے ہیں کہ کوئی معبود نہیں" },
-        { "en": "The witness of Allah is that there is no god but Him", "ur": "اللہ کی گواہی ہے کہ اس کے سوا کوئی معبود نہیں" },
-        { "en": "Allah bears witness that there is no god", "ur": "اللہ گواہی دیتا ہے کہ کوئی معبود نہیں" }
+        {
+          "en": "Allah bears witness that there is no deity except Him",
+          "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں"
+        },
+        {
+          "en": "Allah and the witnesses bear witness that there is no god",
+          "ur": "اللہ اور گواہ اللہ کی گواہی دیتے ہیں کہ کوئی معبود نہیں"
+        },
+        {
+          "en": "The witness of Allah is that there is no god but Him",
+          "ur": "اللہ کی گواہی ہے کہ اس کے سوا کوئی معبود نہیں"
+        },
+        {
+          "en": "Allah bears witness that there is no god",
+          "ur": "اللہ گواہی دیتا ہے کہ کوئی معبود نہیں"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1
@@ -191,13 +330,47 @@
       "id": "ch50-l04-ex07",
       "sentence_ar": "شَهِدَ اللَّهَ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ",
       "words": [
-        { "ar": "شَهِدَ", "ar_plain": "شهد", "translit": "shahida", "en": "bore witness" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah" },
-        { "ar": "أَنَّهُ", "ar_plain": "أنه", "translit": "annahu", "en": "that He" },
-        { "ar": "لَا إِلَهَ إِلَّا هُوَ", "ar_plain": "لا إله إلا هو", "translit": "laa ilaaha illaa huwa", "en": "no god except Him" }
+        {
+          "ar": "شَهِدَ",
+          "ar_plain": "شهد",
+          "translit": "shahida",
+          "en": "bore witness",
+          "ur": "گواہی دی"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "أَنَّهُ",
+          "ar_plain": "أنه",
+          "translit": "annahu",
+          "en": "that He",
+          "ur": "کہ وہ"
+        },
+        {
+          "ar": "لَا إِلَهَ إِلَّا هُوَ",
+          "ar_plain": "لا إله إلا هو",
+          "translit": "laa ilaaha illaa huwa",
+          "en": "no god except Him",
+          "ur": "اس کے سوا کوئی معبود نہیں۔"
+        }
       ],
-      "available_roles": ["VERB", "SUBJECT", "PARTICLE", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT", "PARTICLE", "OBJECT"],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "PARTICLE",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "PARTICLE",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "شَهِدَ is the verb 'bore witness.' اللَّهَ is the one who bears witness (subject). أَنَّهُ introduces the clause 'that He.' لَا إِلَهَ إِلَّا هُوَ is the object of witnessing.",
@@ -206,7 +379,11 @@
     }
   ],
   "reveal": {
-    "concept_name": { "en": "Tawhid — the core of Islam", "ar": "التَّوْحِيدُ — مَرْكَزُ الْإِسْلَامِ", "ur": "توحید — اسلام کا مرکز" },
+    "concept_name": {
+      "en": "Tawhid — the core of Islam",
+      "ar": "التَّوْحِيدُ — مَرْكَزُ الْإِسْلَامِ",
+      "ur": "توحید — اسلام کا مرکز"
+    },
     "ayah": {
       "surah": 3,
       "ayah": 18,
@@ -216,7 +393,9 @@
       "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں",
       "audio_url": "https://cdn.warsh.app/audio/quran/aal-e-imran-018-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "This ayah contains the entire foundation of Islam in one sentence. لَا إِلَهَ إِلَّا هُوَ is the Shahada in its most precise grammatical form. شَهِدَ اللَّهَ = Allah Himself bears witness to this truth.",
       "ur": "یہ ayah پوری بنیاد کو ایک جملے میں contain کرتی ہے۔ لَا إِلَهَ إِلَّا هُوَ سب سے درست grammatical form میں Shahada ہے۔ شَهِدَ اللَّهَ = اللہ نے خود اس truth کی گواہی دی ہے۔"

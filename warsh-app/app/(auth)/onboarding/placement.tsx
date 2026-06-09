@@ -4,51 +4,33 @@ import { BrandButton } from "@components/BrandButton";
 import { useOnboardingStore } from "@stores/onboardingStore";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
 import { trackOnboardingPlacementSelected } from "@services/analytics";
+import { useT } from "@i18n/index";
 
 export default function OnboardingPlacementScreen() {
   const router = useRouter();
   const { placementType, setPlacementType } = useOnboardingStore();
+  const t = useT();
 
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
       <Text style={{ fontSize: FontSizes.h1, lineHeight: LineHeights.h1, color: Colors.text.primary, fontWeight: "700", marginBottom: Spacing.sm }}>
-        Choose your starting point
+        {t("onboarding.placementTitle")}
       </Text>
       <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.xl, lineHeight: LineHeights.bodyL }}>
-        Ustaad Noor can unlock the early chapters for you if you already know the basics. You can still review any skipped chapter later.
+        {t("onboarding.placementBody")}
       </Text>
-      <BrandButton title="I'm completely new to Arabic" variant="secondary" onPress={() => setPlacementType("BEGINNER")} selected={placementType === "BEGINNER"} />
+      <BrandButton title={t("onboarding.placementBeginner")} variant="secondary" onPress={() => setPlacementType("BEGINNER")} selected={placementType === "BEGINNER"} />
       <View style={{ height: Spacing.md }} />
-      <BrandButton
-        title="I know the Arabic letters"
-        variant="secondary"
-        onPress={() => setPlacementType("KNOWS_LETTERS")}
-        selected={placementType === "KNOWS_LETTERS"}
-      />
+      <BrandButton title={t("onboarding.placementLetters")} variant="secondary" onPress={() => setPlacementType("KNOWS_LETTERS")} selected={placementType === "KNOWS_LETTERS"} />
       <View style={{ height: Spacing.md }} />
-      <BrandButton
-        title="I studied Arabic before but forgot most of it"
-        variant="secondary"
-        onPress={() => setPlacementType("STUDIED_BEFORE")}
-        selected={placementType === "STUDIED_BEFORE"}
-      />
+      <BrandButton title={t("onboarding.placementStudied")} variant="secondary" onPress={() => setPlacementType("STUDIED_BEFORE")} selected={placementType === "STUDIED_BEFORE"} />
       <View style={{ height: Spacing.md }} />
-      <BrandButton
-        title="I can read basic Arabic with vowels"
-        variant="secondary"
-        onPress={() => setPlacementType("CAN_READ_BASIC")}
-        selected={placementType === "CAN_READ_BASIC"}
-      />
+      <BrandButton title={t("onboarding.placementReadBasic")} variant="secondary" onPress={() => setPlacementType("CAN_READ_BASIC")} selected={placementType === "CAN_READ_BASIC"} />
       <View style={{ height: Spacing.xl }} />
       <View style={{ height: Spacing.md }} />
-      <BrandButton
-        title="Skip this - I'll start from the beginning"
-        variant="secondary"
-        onPress={() => { setPlacementType("BEGINNER"); router.push("/(auth)/onboarding/ready"); }}
-        selected={false}
-      />
+      <BrandButton title={t("onboarding.placementSkip")} variant="secondary" onPress={() => { setPlacementType("BEGINNER"); router.push("/(auth)/onboarding/ready"); }} selected={false} />
       <View style={{ height: Spacing.xl }} />
-      <BrandButton title="Continue" onPress={() => { if (placementType) trackOnboardingPlacementSelected(placementType); router.push("/(auth)/onboarding/ready"); }} />
+      <BrandButton title={t("common.continue")} onPress={() => { if (placementType) trackOnboardingPlacementSelected(placementType); router.push("/(auth)/onboarding/ready"); }} />
     </View>
   );
 }

@@ -8,6 +8,7 @@ const { chapters: chapters3 } = require("./curriculum-books5-6.cjs");
 const { chapters: chapters4 } = require("./curriculum-books7-8.cjs");
 const { seedVocabulary } = require("./vocabulary-seed.cjs");
 const { seedTadabbur } = require("./tadabbur-seed.cjs");
+const { localizeMetadata } = require("./urdu-metadata.cjs");
 const ch01L01Content = require("./fixtures/chapter-01-lesson-01.json");
 const ch01L02Content = require("./fixtures/chapter-01-lesson-02.json");
 const ch01L03Content = require("./fixtures/chapter-01-lesson-03.json");
@@ -579,10 +580,15 @@ async function main() {
 
   for (const chapterData of allChapters) {
     const { lessons: _unused, ...chapterFields } = chapterData;
+    const localizedChapterFields = {
+      ...chapterFields,
+      titleUr: chapterFields.titleUr ?? localizeMetadata(chapterFields.title),
+      descriptionUr: chapterFields.descriptionUr ?? localizeMetadata(chapterFields.description),
+    };
     const created = await prisma.chapter.upsert({
       where: { order: chapterFields.order },
-      update: chapterFields,
-      create: chapterFields,
+      update: localizedChapterFields,
+      create: localizedChapterFields,
     });
     chapterIdByOrder.set(created.order, created.id);
   }
@@ -1097,7 +1103,10 @@ async function main() {
     { id: "ch72-l06", chapterId: ch72Id, order: 06, title: ch72L06Content._meta?.title ?? "Lesson 06", titleAr: ch72L06Content._meta?.titleAr ?? "", template: ch72L06Content.template ?? "STANDARD", xpReward: ch72L06Content._meta?.xp_reward ?? 10, content: ch72L06Content },
     { id: "ch72-l07", chapterId: ch72Id, order: 07, title: ch72L07Content._meta?.title ?? "Lesson 07", titleAr: ch72L07Content._meta?.titleAr ?? "", template: ch72L07Content.template ?? "STANDARD", xpReward: ch72L07Content._meta?.xp_reward ?? 10, content: ch72L07Content },
     { id: "ch72-l08", chapterId: ch72Id, order: 08, title: ch72L08Content._meta?.title ?? "R15 Capstone Review", titleAr: ch72L08Content._meta?.titleAr ?? "", template: ch72L08Content.template ?? "REVIEW", xpReward: ch72L08Content._meta?.xp_reward ?? 20, content: ch72L08Content }
-  ];
+  ].map((lesson) => ({
+    ...lesson,
+    titleUr: lesson.content?._meta?.titleUr ?? localizeMetadata(lesson.title),
+  }));
   for (const { id, ...data } of lessons) {
     await prisma.lesson.upsert({
       where: { id },

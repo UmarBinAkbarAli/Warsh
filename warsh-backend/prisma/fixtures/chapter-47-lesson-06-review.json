@@ -80,10 +80,22 @@
         "ur": "اس نے نہیں گیا"
       },
       "options": [
-        { "en": "He did not go", "ur": "اس نے نہیں گیا" },
-        { "en": "He will never go", "ur": "وہ کبھی نہیں جائے گا" },
-        { "en": "He does not go", "ur": "وہ نہیں جاتا" },
-        { "en": "He wants to go", "ur": "وہ جانا چاہتا ہے" }
+        {
+          "en": "He did not go",
+          "ur": "اس نے نہیں گیا"
+        },
+        {
+          "en": "He will never go",
+          "ur": "وہ کبھی نہیں جائے گا"
+        },
+        {
+          "en": "He does not go",
+          "ur": "وہ نہیں جاتا"
+        },
+        {
+          "en": "He wants to go",
+          "ur": "وہ جانا چاہتا ہے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -184,12 +196,41 @@
         }
       ],
       "right_column": [
-        { "en": "he did not go (jazm)", "ur": "اس نے نہیں گیا (جزم)" },
-        { "en": "he will never go (nasb)", "ur": "وہ کبھی نہیں جائے گا (نصب)" },
-        { "en": "he goes (raf')", "ur": "وہ جاتا ہے (رفع)" },
-        { "en": "Muslims (raf')", "ur": "مسلمان (رفع)" }
+        {
+          "en": "he did not go (jazm)",
+          "ur": "اس نے نہیں گیا (جزم)"
+        },
+        {
+          "en": "he will never go (nasb)",
+          "ur": "وہ کبھی نہیں جائے گا (نصب)"
+        },
+        {
+          "en": "he goes (raf')",
+          "ur": "وہ جاتا ہے (رفع)"
+        },
+        {
+          "en": "Muslims (raf')",
+          "ur": "مسلمان (رفع)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -229,7 +270,12 @@
           "ur": "مومنین"
         }
       ],
-      "correct_order": [0, 3, 1, 2],
+      "correct_order": [
+        0,
+        3,
+        1,
+        2
+      ],
       "xp_value": 1
     },
     {
@@ -243,10 +289,22 @@
         "ur": "اس امت کے مسلمان"
       },
       "options": [
-        { "en": "Muslims of this nation", "ur": "اس امت کے مسلمان" },
-        { "en": "The Muslim nation", "ur": "مسلمان قوم" },
-        { "en": "Muslims are better", "ur": "مسلمان بہتر ہیں" },
-        { "en": "This nation's Muslims", "ur": "یہ قوم کے مسلمان" }
+        {
+          "en": "Muslims of this nation",
+          "ur": "اس امت کے مسلمان"
+        },
+        {
+          "en": "The Muslim nation",
+          "ur": "مسلمان قوم"
+        },
+        {
+          "en": "Muslims are better",
+          "ur": "مسلمان بہتر ہیں"
+        },
+        {
+          "en": "This nation's Muslims",
+          "ur": "یہ قوم کے مسلمان"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -260,12 +318,38 @@
       "id": "r10-ex07",
       "sentence_ar": "الْمُسْلِمُونَ يَعْبُدُونَ اللَّهَ",
       "words": [
-        { "ar": "الْمُسْلِمُونَ", "ar_plain": "المسلمون", "translit": "al-muslimoona", "en": "the Muslims" },
-        { "ar": "يَعْبُدُونَ", "ar_plain": "يعبدون", "translit": "ya'buduuna", "en": "they worship" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah" }
+        {
+          "ar": "الْمُسْلِمُونَ",
+          "ar_plain": "المسلمون",
+          "translit": "al-muslimoona",
+          "en": "the Muslims",
+          "ur": "مسلمانوں"
+        },
+        {
+          "ar": "يَعْبُدُونَ",
+          "ar_plain": "يعبدون",
+          "translit": "ya'buduuna",
+          "en": "they worship",
+          "ur": "وہ عبادت کرتے ہیں"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah",
+          "ur": "اللہ"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "OBJECT"],
-      "correct_roles": ["SUBJECT", "VERB", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "VERB",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الْمُسْلِمُونَ (subject, raf' وُونَ). يَعْبُدُونَ (verb, raf' وُونَ). اللَّهَ (object, nasb — fatha on لام). All three in correct states.",
@@ -341,10 +425,22 @@
         "ur": "جھوٹ مت بولو!"
       },
       "options": [
-        { "en": "Do not lie!", "ur": "جھوٹ مت بولو!" },
-        { "en": "He does not lie", "ur": "وہ جھوٹ نہیں بولتا" },
-        { "en": "I do not lie", "ur": "میں جھوٹ نہیں بولتا" },
-        { "en": "You are not lying", "ur": "تم جھوٹ نہیں بول رہے" }
+        {
+          "en": "Do not lie!",
+          "ur": "جھوٹ مت بولو!"
+        },
+        {
+          "en": "He does not lie",
+          "ur": "وہ جھوٹ نہیں بولتا"
+        },
+        {
+          "en": "I do not lie",
+          "ur": "میں جھوٹ نہیں بولتا"
+        },
+        {
+          "en": "You are not lying",
+          "ur": "تم جھوٹ نہیں بول رہے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -387,12 +483,41 @@
         }
       ],
       "right_column": [
-        { "en": "Muslims (subject)", "ur": "مسلمان (فاعل)" },
-        { "en": "Muslims (object)", "ur": "مسلمان (مفعول)" },
-        { "en": "Muslims of", "ur": "مسلمانوں کے" },
-        { "en": "go! (sg.)", "ur": "جا! (واحد)" }
+        {
+          "en": "Muslims (subject)",
+          "ur": "مسلمان (فاعل)"
+        },
+        {
+          "en": "Muslims (object)",
+          "ur": "مسلمان (مفعول)"
+        },
+        {
+          "en": "Muslims of",
+          "ur": "مسلمانوں کے"
+        },
+        {
+          "en": "go! (sg.)",
+          "ur": "جا! (واحد)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -432,7 +557,12 @@
           "ur": "شرمندہ ہو (نصب)"
         }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     }
   ],
@@ -451,7 +581,9 @@
       "ur": "ابی لہب کے ہاتھ تباہ ہوں اور وہ خود بھی تباہ ہو۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-masad-001-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "R10 is complete. Chapters 46 and 47 covered the three states of المضارع and sound masculine plural. These two topics form the core of Quranic grammar. You now have the tools to parse almost any verb or noun in the Quran.",
       "ur": "R10 مکمل ہو گیا۔ Chapters 46 اور 47 نے مضارع کی تین حالتیں اور جمع مذکر سالم کو covered کیا۔ یہ دو topics قرآنی grammar کے core بناتے ہیں۔ اب آپ کے پاس وہ tools ہیں جو تقریباً کوئی بھی verb یا noun قرآن میں parse کرنے کے لیے۔"

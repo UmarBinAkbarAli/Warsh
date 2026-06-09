@@ -98,7 +98,7 @@ const ADDITIONS_3 = [
       ayahNumber: 6, ayahArabic: "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
       wordPosition: 1,
       translationEn: "Guide us to the straight path",
-      translationUر: "ہمیں سیدھا راستہ دکھا",
+      translationUr: "ہمیں سیدھا راستہ دکھا",
     },
   },
   {

@@ -123,8 +123,20 @@
         "ur": "اہم قاعدہ: زیادہ تر اسم اور صفت مُعْرَبٌ ہیں۔ زیادہ تر فعل اور تمام حروف مَبْنِيّ ہیں۔"
       },
       "examples": [
-        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitaabun", "en": "book — changes ending (مُعْرَبٌ)" },
-        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "haadhaa", "en": "this — fixed ending (مَبْنِيّ)" }
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "kitaabun",
+          "en": "book — changes ending (مُعْرَبٌ)",
+          "ur": "کتاب - ختم ہونے والی تبدیلیاں (مُعْرَبٌ)"
+        },
+        {
+          "ar": "هَذَا",
+          "ar_plain": "هذا",
+          "translit": "haadhaa",
+          "en": "this — fixed ending (مَبْنِيّ)",
+          "ur": "یہ - مقررہ اختتام (مَبْنِيّ)"
+        }
       ]
     },
     {
@@ -150,13 +162,26 @@
         "ar": "كِتَابٌ",
         "ar_plain": "كتاب",
         "translit": "kitaabun",
-        "en": "a book"
+        "en": "a book",
+        "ur": "ایک کتاب"
       },
       "options": [
-        { "en": "a book", "ur": "ایک کتاب" },
-        { "en": "the book", "ur": "کتاب (معرفہ)" },
-        { "en": "books", "ur": "کتابیں" },
-        { "en": "in the book", "ur": "کتاب میں" }
+        {
+          "en": "a book",
+          "ur": "ایک کتاب"
+        },
+        {
+          "en": "the book",
+          "ur": "کتاب (معرفہ)"
+        },
+        {
+          "en": "books",
+          "ur": "کتابیں"
+        },
+        {
+          "en": "in the book",
+          "ur": "کتاب میں"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -183,18 +208,71 @@
       "id": "ch55-l02-ex03",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitaabun", "en": "book (nominative)" },
-        { "ar": "الْكِتَابُ", "ar_plain": "الكتاب", "translit": "al-kitaabu", "en": "the book" },
-        { "ar": "آدَمَ", "ar_plain": "آدم", "translit": "aadam", "en": "Adam (always fixed)" },
-        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "haadhaa", "en": "this (always fixed)" }
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "kitaabun",
+          "en": "book (nominative)",
+          "ur": "کتاب (نامزد)"
+        },
+        {
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitaabu",
+          "en": "the book",
+          "ur": "کتاب"
+        },
+        {
+          "ar": "آدَمَ",
+          "ar_plain": "آدم",
+          "translit": "aadam",
+          "en": "Adam (always fixed)",
+          "ur": "آدم (ہمیشہ طے شدہ)"
+        },
+        {
+          "ar": "هَذَا",
+          "ar_plain": "هذا",
+          "translit": "haadhaa",
+          "en": "this (always fixed)",
+          "ur": "یہ (ہمیشہ طے شدہ)"
+        }
       ],
       "right_column": [
-        { "en": "مُعْرَبٌ (book — changes)", "ur": "معراب (بدلتا ہے)" },
-        { "en": "مُعْرَبٌ (the book — changes)", "ur": "معراب (بدلتا ہے)" },
-        { "en": "مَبْنِيّ (Adam — fixed)", "ur": "مبني (طے شدہ)" },
-        { "en": "مَبْنِيّ (this — fixed)", "ur": "مبني (طے شدہ)" }
+        {
+          "en": "مُعْرَبٌ (book — changes)",
+          "ur": "معراب (بدلتا ہے)"
+        },
+        {
+          "en": "مُعْرَبٌ (the book — changes)",
+          "ur": "معراب (بدلتا ہے)"
+        },
+        {
+          "en": "مَبْنِيّ (Adam — fixed)",
+          "ur": "مبني (طے شدہ)"
+        },
+        {
+          "en": "مَبْنِيّ (this — fixed)",
+          "ur": "مبني (طے شدہ)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "كِتَابٌ and الْكِتَابُ are مُعْرَبٌ — they change ending. آدَمَ and هَذَا are مَبْنِيّ — fixed endings.",
@@ -211,10 +289,34 @@
         "ur": "میں گھر گیا۔"
       },
       "options": [
-        { "ar": "الْبَيْتِ", "ar_plain": "البيت", "translit": "al-bayti", "en": "the house (genitive)", "ur": "گھر (جر)" },
-        { "ar": "الْبَيْتُ", "ar_plain": "البيت", "translit": "al-baytu", "en": "the house (nominative)", "ur": "گھر (رفع)" },
-        { "ar": "الْبَيْتَ", "ar_plain": "البيت", "translit": "al-bayta", "en": "the house (accusative)", "ur": "گھر (نصب)" },
-        { "ar": "الْبَيْتَنَا", "ar_plain": "البيتنا", "translit": "al-baytanaa", "en": "our house", "ur": "ہمارا گھر" }
+        {
+          "ar": "الْبَيْتِ",
+          "ar_plain": "البيت",
+          "translit": "al-bayti",
+          "en": "the house (genitive)",
+          "ur": "گھر (جر)"
+        },
+        {
+          "ar": "الْبَيْتُ",
+          "ar_plain": "البيت",
+          "translit": "al-baytu",
+          "en": "the house (nominative)",
+          "ur": "گھر (رفع)"
+        },
+        {
+          "ar": "الْبَيْتَ",
+          "ar_plain": "البيت",
+          "translit": "al-bayta",
+          "en": "the house (accusative)",
+          "ur": "گھر (نصب)"
+        },
+        {
+          "ar": "الْبَيْتَنَا",
+          "ar_plain": "البيتنا",
+          "translit": "al-baytanaa",
+          "en": "our house",
+          "ur": "ہمارا گھر"
+        }
       ],
       "correct_answer": {
         "ar": "الْبَيْتِ",
@@ -236,13 +338,26 @@
         "ar": "هَذَا رَجُلٌ مُسْلِمٌ",
         "ar_plain": "هذا رجل مسلم",
         "translit": "haadhaa rajulun muslimun",
-        "en": "This is a Muslim man."
+        "en": "This is a Muslim man.",
+        "ur": "یہ مسلمان آدمی ہے۔"
       },
       "options": [
-        { "en": "This is a Muslim man.", "ur": "یہ ایک مسلمان آدمی ہے۔" },
-        { "en": "This man is noble.", "ur": "یہ آدمی شریف ہے۔" },
-        { "en": "This is the Muslim man.", "ur": "یہ مسلمان آدمی ہے۔" },
-        { "en": "This Muslim went.", "ur": "یہ مسلمان گیا۔" }
+        {
+          "en": "This is a Muslim man.",
+          "ur": "یہ ایک مسلمان آدمی ہے۔"
+        },
+        {
+          "en": "This man is noble.",
+          "ur": "یہ آدمی شریف ہے۔"
+        },
+        {
+          "en": "This is the Muslim man.",
+          "ur": "یہ مسلمان آدمی ہے۔"
+        },
+        {
+          "en": "This Muslim went.",
+          "ur": "یہ مسلمان گیا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -259,12 +374,39 @@
         "ur": "میں نے ایک کتاب خریدی۔"
       },
       "tiles": [
-        { "ar": "اشْتَرَيْتُ", "ar_plain": "اشتريت", "translit": "ishtaraytu", "en": "I bought" },
-        { "ar": "كِتَابًا", "ar_plain": "كتابا", "translit": "kitaaban", "en": "a book (accusative)", "ur": "ایک کتاب (نصب)" },
-        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitaabun", "en": "a book (nominative)", "ur": "ایک کتاب (رفع)" },
-        { "ar": "مِنَ الْمَكْتَبِ", "ar_plain": "من المكتب", "translit": "mina al-maktabi", "en": "from the office", "ur": "دفتر سے" }
+        {
+          "ar": "اشْتَرَيْتُ",
+          "ar_plain": "اشتريت",
+          "translit": "ishtaraytu",
+          "en": "I bought",
+          "ur": "میں نے خریدا۔"
+        },
+        {
+          "ar": "كِتَابًا",
+          "ar_plain": "كتابا",
+          "translit": "kitaaban",
+          "en": "a book (accusative)",
+          "ur": "ایک کتاب (نصب)"
+        },
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "kitaabun",
+          "en": "a book (nominative)",
+          "ur": "ایک کتاب (رفع)"
+        },
+        {
+          "ar": "مِنَ الْمَكْتَبِ",
+          "ar_plain": "من المكتب",
+          "translit": "mina al-maktabi",
+          "en": "from the office",
+          "ur": "دفتر سے"
+        }
       ],
-      "correct_order": [0, 1],
+      "correct_order": [
+        0,
+        1
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "اشْتَرَيْتُ (I bought) + كِتَابًا (a book, accusative because it is the direct object). The last two tiles are distractors — one has the wrong case, the other adds unnecessary information.",
@@ -290,13 +432,47 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "ذَهَبَ آدَمُ إِلَى الْجَنَّةِ",
       "words": [
-        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "went" },
-        { "ar": "آدَمُ", "ar_plain": "آدم", "translit": "aadamu", "en": "Adam" },
-        { "ar": "إِلَى", "ar_plain": "الى", "translit": "ilaa", "en": "to" },
-        { "ar": "الْجَنَّةِ", "ar_plain": "الجنۃ", "translit": "al-jannati", "en": "the Paradise" }
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "چلا گیا"
+        },
+        {
+          "ar": "آدَمُ",
+          "ar_plain": "آدم",
+          "translit": "aadamu",
+          "en": "Adam",
+          "ur": "آدم"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilaa",
+          "en": "to",
+          "ur": "کو"
+        },
+        {
+          "ar": "الْجَنَّةِ",
+          "ar_plain": "الجنۃ",
+          "translit": "al-jannati",
+          "en": "the Paradise",
+          "ur": "جنت"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PREPOSITION", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT", "PREPOSITION", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PREPOSITION",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "PREPOSITION",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "ذَهَبَ = VERB (مَبْنِيّ). آدَمُ = SUBJECT (مُعْرَبٌ, رفع). إِلَى = PREPOSITION (مَبْنِيّ). الْجَنَّةِ = OBJECT (مُعْرَبٌ, جر after إِلَى). Note: آدَمُ is مَبْنِيّ in ending but still functions as the subject here.",
@@ -319,7 +495,10 @@
       "ur": "اور اس نے آدم کو تمام نام سکھائے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-031-part-mishary.mp3"
     },
-    "highlighted_word_indices": [1, 2],
+    "highlighted_word_indices": [
+      1,
+      2
+    ],
     "noor_explanation": {
       "en": "آدَمَ is always مَبْنِيّ — fixed ending. الْأَسْمَاءَ is مُعْرَبٌ — here it takes نصب because it is the direct object (مفعول بِهِ) of عَلَّمَ. The distinction between مُعْرَبٌ and مَبْنِيّ is the first analytical tool of Arabic grammar.",
       "ur": "آدَمَ ہمیشہ مَبْنِيّ ہے — طے شدہ ending۔ الْأَسْمَاءَ مُعْرَبٌ ہے — یہاں نصب میں ہے کیونکہ یہ عَلَّمَ کا مفعول ہے۔"

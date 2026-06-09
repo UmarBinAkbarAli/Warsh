@@ -156,18 +156,71 @@
       "id": "ch55-l08-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "لَوْ", "ar_plain": "لو", "translit": "law", "en": "if (particle)" },
-        { "ar": "أَنْزَلْنَا", "ar_plain": "انزلنا", "translit": "anzalnaa", "en": "We sent down (verb)" },
-        { "ar": "هَٰذَا", "ar_plain": "هذا", "translit": "haadhaa", "en": "this (demonstrative)" },
-        { "ar": "خَاشِعًا", "ar_plain": "خاشعا", "translit": "khaashi'an", "en": "humble (adj.)" }
+        {
+          "ar": "لَوْ",
+          "ar_plain": "لو",
+          "translit": "law",
+          "en": "if (particle)",
+          "ur": "اگر (ذرہ)"
+        },
+        {
+          "ar": "أَنْزَلْنَا",
+          "ar_plain": "انزلنا",
+          "translit": "anzalnaa",
+          "en": "We sent down (verb)",
+          "ur": "ہم نے اتارا (فعل)"
+        },
+        {
+          "ar": "هَٰذَا",
+          "ar_plain": "هذا",
+          "translit": "haadhaa",
+          "en": "this (demonstrative)",
+          "ur": "یہ (نمائشی)"
+        },
+        {
+          "ar": "خَاشِعًا",
+          "ar_plain": "خاشعا",
+          "translit": "khaashi'an",
+          "en": "humble (adj.)",
+          "ur": "عاجز (صفت)"
+        }
       ],
       "right_column": [
-        { "en": "مَبْنِيّ — particle", "ur": "مبني — حرف" },
-        { "en": "مَبْنِيّ — past tense verb", "ur": "مبني — فعل ماضی" },
-        { "en": "مَبْنِيّ — demonstrative", "ur": "مبني — اشارہ" },
-        { "en": "مُعْرَبٌ — accusative adjective", "ur": "معراب — صفت نصب" }
+        {
+          "en": "مَبْنِيّ — particle",
+          "ur": "مبني — حرف"
+        },
+        {
+          "en": "مَبْنِيّ — past tense verb",
+          "ur": "مبني — فعل ماضی"
+        },
+        {
+          "en": "مَبْنِيّ — demonstrative",
+          "ur": "مبني — اشارہ"
+        },
+        {
+          "en": "مُعْرَبٌ — accusative adjective",
+          "ur": "معراب — صفت نصب"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "لَوْ and أَنْزَلْنَا and هَٰذَا are all مَبْنِيّ. خَاشِعًا is مُعْرَبٌ — an adjective in the accusative (نصب) describing the mountain's state (الْحَال).",
@@ -179,15 +232,65 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "لَوْ أَنْزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ",
       "words": [
-        { "ar": "لَوْ", "ar_plain": "لو", "translit": "law", "en": "if" },
-        { "ar": "أَنْزَلْنَا", "ar_plain": "انزلنا", "translit": "anzalnaa", "en": "We sent down" },
-        { "ar": "هَٰذَا", "ar_plain": "هذا", "translit": "haadhaa", "en": "this" },
-        { "ar": "الْقُرْآنَ", "ar_plain": "القرآن", "translit": "al-qur'aan", "en": "the Quran" },
-        { "ar": "عَلَىٰ", "ar_plain": "على", "translit": "alaa", "en": "upon" },
-        { "ar": "جَبَلٍ", "ar_plain": "جبل", "translit": "jabal", "en": "a mountain" }
+        {
+          "ar": "لَوْ",
+          "ar_plain": "لو",
+          "translit": "law",
+          "en": "if",
+          "ur": "اگر"
+        },
+        {
+          "ar": "أَنْزَلْنَا",
+          "ar_plain": "انزلنا",
+          "translit": "anzalnaa",
+          "en": "We sent down",
+          "ur": "ہم نے نازل کیا۔"
+        },
+        {
+          "ar": "هَٰذَا",
+          "ar_plain": "هذا",
+          "translit": "haadhaa",
+          "en": "this",
+          "ur": "یہ"
+        },
+        {
+          "ar": "الْقُرْآنَ",
+          "ar_plain": "القرآن",
+          "translit": "al-qur'aan",
+          "en": "the Quran",
+          "ur": "قرآن"
+        },
+        {
+          "ar": "عَلَىٰ",
+          "ar_plain": "على",
+          "translit": "alaa",
+          "en": "upon",
+          "ur": "پر"
+        },
+        {
+          "ar": "جَبَلٍ",
+          "ar_plain": "جبل",
+          "translit": "jabal",
+          "en": "a mountain",
+          "ur": "ایک پہاڑ"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PREPOSITION", "OBJECT", "PARTICLE", "DEMONSTRATIVE"],
-      "correct_roles": ["PARTICLE", "VERB", "DEMONSTRATIVE", "OBJECT", "PREPOSITION", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PREPOSITION",
+        "OBJECT",
+        "PARTICLE",
+        "DEMONSTRATIVE"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VERB",
+        "DEMONSTRATIVE",
+        "OBJECT",
+        "PREPOSITION",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "لَوْ = PARTICLE (مَبْنِيّ). أَنْزَلْنَا = VERB (مَبْنِيّ). هَٰذَا = DEMONSTRATIVE (مَبْنِيّ). الْقُرْآنَ = OBJECT (نصب — مفعول به). عَلَىٰ = PREPOSITION (مَبْنِيّ). جَبَلٍ = OBJECT (جر after عَلَىٰ — مفعول فيه).",
@@ -201,13 +304,26 @@
         "ar": "لَوْ أَنْزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ لَرَأَيْتَهُ خَاشِعًا",
         "ar_plain": "لو انزلنا هذا القرآن على جبل لرايته خاشعا",
         "translit": "law anzalnaa haadhaa al-qur'aana alaa jabilin la-ra'aytahu khaashi'an",
-        "en": "If We had sent down this Quran upon a mountain, you would have seen it humble."
+        "en": "If We had sent down this Quran upon a mountain, you would have seen it humble.",
+        "ur": "اگر ہم اس قرآن کو کسی پہاڑ پر اتارتے تو تم اسے عاجزی سے دیکھتے۔"
       },
       "options": [
-        { "en": "If We had sent down this Quran upon a mountain, you would have seen it humble.", "ur": "اگر ہم نے یہ قرآن کسی پہاڑ پر نازل کیا ہوتا تو تم دیکھتے کہ وہ عاجز ہے۔" },
-        { "en": "We sent down this Quran on a mountain and you saw it.", "ur": "ہم نے یہ قرآن پہاڑ پر نازل کیا اور تم نے دیکھا۔" },
-        { "en": "If the mountain had sent down the Quran, you would have seen it.", "ur": "اگر پہاڑ نے قرآن نازل کیا ہوتا تو تم دیکھتے۔" },
-        { "en": "The humble mountain saw the Quran.", "ur": "عاجز پہاڑ نے قرآن دیکھا۔" }
+        {
+          "en": "If We had sent down this Quran upon a mountain, you would have seen it humble.",
+          "ur": "اگر ہم نے یہ قرآن کسی پہاڑ پر نازل کیا ہوتا تو تم دیکھتے کہ وہ عاجز ہے۔"
+        },
+        {
+          "en": "We sent down this Quran on a mountain and you saw it.",
+          "ur": "ہم نے یہ قرآن پہاڑ پر نازل کیا اور تم نے دیکھا۔"
+        },
+        {
+          "en": "If the mountain had sent down the Quran, you would have seen it.",
+          "ur": "اگر پہاڑ نے قرآن نازل کیا ہوتا تو تم دیکھتے۔"
+        },
+        {
+          "en": "The humble mountain saw the Quran.",
+          "ur": "عاجز پہاڑ نے قرآن دیکھا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -224,14 +340,57 @@
         "ur": "اگر ہم نے قرآن کسی پہاڑ پر نازل کیا۔"
       },
       "tiles": [
-        { "ar": "لَوْ", "ar_plain": "لو", "translit": "law", "en": "if" },
-        { "ar": "أَنْزَلْنَا", "ar_plain": "انزلنا", "translit": "anzalnaa", "en": "We sent down" },
-        { "ar": "الْقُرْآنَ", "ar_plain": "القرآن", "translit": "al-qur'aan", "en": "the Quran" },
-        { "ar": "عَلَىٰ", "ar_plain": "على", "translit": "alaa", "en": "upon" },
-        { "ar": "جَبَلٍ", "ar_plain": "جبل", "translit": "jabal", "en": "a mountain" },
-        { "ar": "هَٰذَا", "ar_plain": "هذا", "translit": "haadhaa", "en": "this" }
+        {
+          "ar": "لَوْ",
+          "ar_plain": "لو",
+          "translit": "law",
+          "en": "if",
+          "ur": "اگر"
+        },
+        {
+          "ar": "أَنْزَلْنَا",
+          "ar_plain": "انزلنا",
+          "translit": "anzalnaa",
+          "en": "We sent down",
+          "ur": "ہم نے نازل کیا۔"
+        },
+        {
+          "ar": "الْقُرْآنَ",
+          "ar_plain": "القرآن",
+          "translit": "al-qur'aan",
+          "en": "the Quran",
+          "ur": "قرآن"
+        },
+        {
+          "ar": "عَلَىٰ",
+          "ar_plain": "على",
+          "translit": "alaa",
+          "en": "upon",
+          "ur": "پر"
+        },
+        {
+          "ar": "جَبَلٍ",
+          "ar_plain": "جبل",
+          "translit": "jabal",
+          "en": "a mountain",
+          "ur": "ایک پہاڑ"
+        },
+        {
+          "ar": "هَٰذَا",
+          "ar_plain": "هذا",
+          "translit": "haadhaa",
+          "en": "this",
+          "ur": "یہ"
+        }
       ],
-      "correct_order": [0, 1, 5, 2, 3, 4],
+      "correct_order": [
+        0,
+        1,
+        5,
+        2,
+        3,
+        4
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "The correct order is: لَوْ (if) + أَنْزَلْنَا (We sent down) + هَٰذَا (this) + الْقُرْآنَ (the Quran) + عَلَىٰ (upon) + جَبَلٍ (a mountain). This captures the لَوْ conditional structure correctly.",
@@ -248,10 +407,34 @@
         "ur": "اللہ کے ڈر سے۔"
       },
       "options": [
-        { "ar": "اللَّهِ", "ar_plain": "الله", "translit": "allaah", "en": "Allah (gen.)", "ur": "اللہ (جر)" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "allaahu", "en": "Allah (nom.)", "ur": "اللہ (رفع)" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah (acc.)", "ur": "اللہ (نصب)" },
-        { "ar": "اللَّاهُ", "ar_plain": "اللاه", "translit": "allaahu", "en": "Allah (poss.)", "ur": "اللہ (اضافہ)" }
+        {
+          "ar": "اللَّهِ",
+          "ar_plain": "الله",
+          "translit": "allaah",
+          "en": "Allah (gen.)",
+          "ur": "اللہ (جر)"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah (nom.)",
+          "ur": "اللہ (رفع)"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah (acc.)",
+          "ur": "اللہ (نصب)"
+        },
+        {
+          "ar": "اللَّاهُ",
+          "ar_plain": "اللاه",
+          "translit": "allaahu",
+          "en": "Allah (poss.)",
+          "ur": "اللہ (اضافہ)"
+        }
       ],
       "correct_answer": {
         "ar": "اللَّهِ",
@@ -287,13 +470,26 @@
         "ar": "مِنْ خَشْيَةِ اللَّهِ",
         "ar_plain": "من خشية الله",
         "translit": "min khashyati allaah",
-        "en": "From fear of Allah."
+        "en": "From fear of Allah.",
+        "ur": "اللہ کے خوف سے۔"
       },
       "options": [
-        { "en": "From fear of Allah.", "ur": "اللہ کے ڈر سے۔" },
-        { "en": "From the fear of Allah.", "ur": "اللہ کے خوف سے۔" },
-        { "en": "From the fearful Allah.", "ur": "ڈرنے والے اللہ سے۔" },
-        { "en": "From fear, Allah.", "ur": "ڈر سے، اللہ۔" }
+        {
+          "en": "From fear of Allah.",
+          "ur": "اللہ کے ڈر سے۔"
+        },
+        {
+          "en": "From the fear of Allah.",
+          "ur": "اللہ کے خوف سے۔"
+        },
+        {
+          "en": "From the fearful Allah.",
+          "ur": "ڈرنے والے اللہ سے۔"
+        },
+        {
+          "en": "From fear, Allah.",
+          "ur": "ڈر سے، اللہ۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -318,7 +514,9 @@
       "ur": "اگر ہم اس قرآن کو کسی پہاڑ پر نازل کرتے تو تم دیکھتے کہ وہ اللہ کے ڈر سے عاجزی اور ٹوٹتا ہوا ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-hashr-021-mishary.mp3"
     },
-    "highlighted_word_indices": [2],
+    "highlighted_word_indices": [
+      2
+    ],
     "noor_explanation": {
       "en": "This ayah is a grammatical tour de force. Every word is accounted for: لَوْ (مَبْنِيّ particle), أَنْزَلْنَا (مَبْنِيّ verb), هَٰذَا (مَبْنِيّ demonstrative), الْقُرْآنَ (مُعْرَبٌ, نصب as مفعول به), عَلَىٰ (مَبْنِيّ preposition), جَبَلٍ (مُعْرَبٌ, جر after عَلَىٰ), خَاشِعًا and مُتَصَدِّعًا (مُعْرَبٌ, نصب as describing the mountain's حال), مِنْ (مَبْنِيّ preposition), خَشْيَةِ (مضاف, جر after مِنْ), اللَّهِ (مضاف إليه, جر). The whole system is visible in one ayah.",
       "ur": "یہ آیت گرامری شاہکار ہے۔ ہر لفظ کی پہچان: لَوْ (مبني حرف)، أَنْزَلْنَا (مبني فعل)، هَٰذَا (مبني اشارہ)، الْقُرْآنَ (معراب، نصب)، عَلَىٰ (مبني حرف جر)، جَبَلٍ (معراب، جر)، خَاشِعًا و متصدعا (معراب، نصب)، مِنْ (مبني حرف جر)، خَشْيَةِ (مضاف، جر)، اللَّهِ (مضاف إليه، جر)۔"

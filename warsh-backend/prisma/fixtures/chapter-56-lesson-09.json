@@ -131,18 +131,71 @@
       "id": "ch56-l09-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "يَفْعَلُونَ", "ar_plain": "يفعلون", "translit": "yaf'aluuna", "en": "they do" },
-        { "ar": "تَفْعَلُونَ", "ar_plain": "تفعلون", "translit": "taf'aluuna", "en": "you (m-pl) do" },
-        { "ar": "يَفْعَلُ", "ar_plain": "يفعل", "translit": "yaf'alu", "en": "he does" },
-        { "ar": "أَفْعَلُ", "ar_plain": "افعل", "translit": "af'alu", "en": "I do" }
+        {
+          "ar": "يَفْعَلُونَ",
+          "ar_plain": "يفعلون",
+          "translit": "yaf'aluuna",
+          "en": "they do",
+          "ur": "وہ کرتے ہیں"
+        },
+        {
+          "ar": "تَفْعَلُونَ",
+          "ar_plain": "تفعلون",
+          "translit": "taf'aluuna",
+          "en": "you (m-pl) do",
+          "ur": "آپ (m-pl) کرتے ہیں۔"
+        },
+        {
+          "ar": "يَفْعَلُ",
+          "ar_plain": "يفعل",
+          "translit": "yaf'alu",
+          "en": "he does",
+          "ur": "وہ کرتا ہے"
+        },
+        {
+          "ar": "أَفْعَلُ",
+          "ar_plain": "افعل",
+          "translit": "af'alu",
+          "en": "I do",
+          "ur": "میں کرتا ہوں۔"
+        }
       ],
       "right_column": [
-        { "en": "third person masculine plural", "ur": "تیرا شخص مذکر جمع" },
-        { "en": "second person masculine plural", "ur": "دوسرا شخص مذکر جمع" },
-        { "en": "third person masculine singular", "ur": "تیرا شخص مذکر واحد" },
-        { "en": "first person singular", "ur": "پہلا شخص واحد" }
+        {
+          "en": "third person masculine plural",
+          "ur": "تیرا شخص مذکر جمع"
+        },
+        {
+          "en": "second person masculine plural",
+          "ur": "دوسرا شخص مذکر جمع"
+        },
+        {
+          "en": "third person masculine singular",
+          "ur": "تیرا شخص مذکر واحد"
+        },
+        {
+          "en": "first person singular",
+          "ur": "پہلا شخص واحد"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "All five of the الأفعال الخمسة are مَبْنِيّ in رفع. They cover: أَفْعَلُ (I), تَفْعَلُ (she), يَفْعَلُ (he), تَفْعَلُونَ (you-pl-m), يَفْعَلُونَ (they-m).",
@@ -159,10 +212,34 @@
         "ur": "مسلمان اللہ پر ایمان رکھتے ہیں۔"
       },
       "options": [
-        { "ar": "يُؤْمِنُونَ", "ar_plain": "يؤمنون", "translit": "yu'minuuna", "en": "they believe (أفعال خمسة)", "ur": "وہ ایمان رکھتے ہیں (أفعال خمسة)" },
-        { "ar": "يُؤْمِنُ", "ar_plain": "يؤمن", "translit": "yu'minu", "en": "he believes (normal)", "ur": "وہ ایمان رکھتا ہے (عام)" },
-        { "ar": "آمَنُوا", "ar_plain": "آمنوا", "translit": "aamanuu", "en": "they believed (past)", "ur": "وہ ایمان لائے (ماضی)" },
-        { "ar": "يُؤْمِنُونَ", "ar_plain": "يؤمنون", "translit": "yu'minuuna", "en": "they believe (same)", "ur": "وہ ایمان رکھتے ہیں (وہی)" }
+        {
+          "ar": "يُؤْمِنُونَ",
+          "ar_plain": "يؤمنون",
+          "translit": "yu'minuuna",
+          "en": "they believe (أفعال خمسة)",
+          "ur": "وہ ایمان رکھتے ہیں (أفعال خمسة)"
+        },
+        {
+          "ar": "يُؤْمِنُ",
+          "ar_plain": "يؤمن",
+          "translit": "yu'minu",
+          "en": "he believes (normal)",
+          "ur": "وہ ایمان رکھتا ہے (عام)"
+        },
+        {
+          "ar": "آمَنُوا",
+          "ar_plain": "آمنوا",
+          "translit": "aamanuu",
+          "en": "they believed (past)",
+          "ur": "وہ ایمان لائے (ماضی)"
+        },
+        {
+          "ar": "يُؤْمِنُونَ",
+          "ar_plain": "يؤمنون",
+          "translit": "yu'minuuna",
+          "en": "they believe (same)",
+          "ur": "وہ ایمان رکھتے ہیں (وہی)"
+        }
       ],
       "correct_answer": {
         "ar": "يُؤْمِنُونَ",
@@ -185,12 +262,40 @@
         "ur": "مومنین صدقہ دیتے ہیں۔"
       },
       "tiles": [
-        { "ar": "الْمُؤْمِنُونَ", "ar_plain": "المؤمنون", "translit": "al-mu'minuuna", "en": "the believers" },
-        { "ar": "يُعْطُونَ", "ar_plain": "يعطون", "translit": "yu'tuuna", "en": "they give (أفعال خمسة)", "ur": "وہ دیتے ہیں (أفعال خمسة)" },
-        { "ar": "الزَّكَاةَ", "ar_plain": "الزكاة", "translit": "az-zakaata", "en": "charity (acc.)", "ur": "زکوة (نصب)" },
-        { "ar": "يَعْطُونَ", "ar_plain": "يعطون", "translit": "ya'tuuna", "en": "they give (normal)", "ur": "وہ دیتے ہیں (عام)" }
+        {
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minuuna",
+          "en": "the believers",
+          "ur": "مومنین"
+        },
+        {
+          "ar": "يُعْطُونَ",
+          "ar_plain": "يعطون",
+          "translit": "yu'tuuna",
+          "en": "they give (أفعال خمسة)",
+          "ur": "وہ دیتے ہیں (أفعال خمسة)"
+        },
+        {
+          "ar": "الزَّكَاةَ",
+          "ar_plain": "الزكاة",
+          "translit": "az-zakaata",
+          "en": "charity (acc.)",
+          "ur": "زکوة (نصب)"
+        },
+        {
+          "ar": "يَعْطُونَ",
+          "ar_plain": "يعطون",
+          "translit": "ya'tuuna",
+          "en": "they give (normal)",
+          "ur": "وہ دیتے ہیں (عام)"
+        }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الْمُؤْمِنُونَ (subject) + يُعْطُونَ (أفعال خمسة verb — always مَبْنِيّ) + الزَّكَاةَ (direct object, accusative). يُعْطُونَ is from ع-ط-ي (to give) — third person masculine plural present, following the يَفْعَلُونَ pattern.",
@@ -204,13 +309,26 @@
         "ar": "أَفْعَلُ الْخَيْرَ",
         "ar_plain": "افعل الخير",
         "translit": "af'alu al-khayra",
-        "en": "I do good."
+        "en": "I do good.",
+        "ur": "میں اچھا کرتا ہوں۔"
       },
       "options": [
-        { "en": "I do good.", "ur": "میں اچھائی کرتا ہوں۔" },
-        { "en": "He does good.", "ur": "وہ اچھائی کرتا ہے۔" },
-        { "en": "They do good.", "ur": "وہ اچھائی کرتے ہیں۔" },
-        { "en": "You do good.", "ur": "تم اچھائی کرتے ہو۔" }
+        {
+          "en": "I do good.",
+          "ur": "میں اچھائی کرتا ہوں۔"
+        },
+        {
+          "en": "He does good.",
+          "ur": "وہ اچھائی کرتا ہے۔"
+        },
+        {
+          "en": "They do good.",
+          "ur": "وہ اچھائی کرتے ہیں۔"
+        },
+        {
+          "en": "You do good.",
+          "ur": "تم اچھائی کرتے ہو۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -238,12 +356,38 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "الْمُسْلِمُونَ يُؤْمِنُونَ بِاللَّهِ",
       "words": [
-        { "ar": "الْمُسْلِمُونَ", "ar_plain": "المسلمون", "translit": "al-mu'minuuna", "en": "the Muslims" },
-        { "ar": "يُؤْمِنُونَ", "ar_plain": "يؤمنون", "translit": "yu'minuuna", "en": "they believe" },
-        { "ar": "بِاللَّهِ", "ar_plain": "بالله", "translit": "biallaahi", "en": "in Allah" }
+        {
+          "ar": "الْمُسْلِمُونَ",
+          "ar_plain": "المسلمون",
+          "translit": "al-mu'minuuna",
+          "en": "the Muslims",
+          "ur": "مسلمانوں"
+        },
+        {
+          "ar": "يُؤْمِنُونَ",
+          "ar_plain": "يؤمنون",
+          "translit": "yu'minuuna",
+          "en": "they believe",
+          "ur": "وہ یقین رکھتے ہیں"
+        },
+        {
+          "ar": "بِاللَّهِ",
+          "ar_plain": "بالله",
+          "translit": "biallaahi",
+          "en": "in Allah",
+          "ur": "اللہ میں"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PREPOSITION"],
-      "correct_roles": ["SUBJECT", "VERB", "PREPOSITION"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PREPOSITION"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "VERB",
+        "PREPOSITION"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الْمُسْلِمُونَ = SUBJECT (رفع) — مُعْرَبٌ, in the nominative. يُؤْمِنُونَ = VERB (مَبْنِيّ — one of the الْأَفْعَالُ الْخَمْسَةُ, always in رفع). بِاللَّهِ = PREPOSITION + مضاف إليه (جر after بِ).",
@@ -257,13 +401,26 @@
         "ar": "تَسْأَلُونَنِي",
         "ar_plain": "تسألونني",
         "translit": "tas'alunani",
-        "en": "You (m-pl) ask me."
+        "en": "You (m-pl) ask me.",
+        "ur": "آپ (m-pl) مجھ سے پوچھیں۔"
       },
       "options": [
-        { "en": "You (m-pl) ask me.", "ur": "تم مجھ سے پوچھتے ہو۔" },
-        { "en": "They ask me.", "ur": "وہ مجھ سے پوچھتے ہیں۔" },
-        { "en": "I ask you.", "ur": "میں تم سے پوچھتا ہوں۔" },
-        { "en": "He asks me.", "ur": "وہ مجھ سے پوچھتا ہے۔" }
+        {
+          "en": "You (m-pl) ask me.",
+          "ur": "تم مجھ سے پوچھتے ہو۔"
+        },
+        {
+          "en": "They ask me.",
+          "ur": "وہ مجھ سے پوچھتے ہیں۔"
+        },
+        {
+          "en": "I ask you.",
+          "ur": "میں تم سے پوچھتا ہوں۔"
+        },
+        {
+          "en": "He asks me.",
+          "ur": "وہ مجھ سے پوچھتا ہے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -288,7 +445,9 @@
       "ur": "کون ہے جو اللہ کو اچھا قرض دے گا۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-245-mishary.mp3"
     },
-    "highlighted_word_indices": [2],
+    "highlighted_word_indices": [
+      2
+    ],
     "noor_explanation": {
       "en": "يُقْرِضُ here is NOT one of the الْأَفْعَالُ الْخَمْسَةُ — it is the normal present tense of قَرْضَ (to lend) following the يُفْعِلُ pattern. It takes نَصْب in certain contexts, but in this ayah it is مرفوع because no trigger particle is present. The الأفعال الخمسة (يَفْعَلُونَ, تَفْعَلُونَ, يَفْعَلُ, تَفْعَلُ, أَفْعَلُ) would never change — they are always مَبْنِيّ.",
       "ur": "يُقْرِضُ یہاں الْأَفْعَالُ الْخَمْسَةُ میں سے نہیں ہے — یہ قَرْضَ (قرض دینا) کا عام present tense ہے۔"

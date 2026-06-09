@@ -132,12 +132,38 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "إِنِّي جَاعِلٌ خَلِيفَةً",
       "words": [
-        { "ar": "إِنِّي", "ar_plain": "اني", "translit": "inni", "en": "indeed I" },
-        { "ar": "جَاعِلٌ", "ar_plain": "جاعل", "translit": "jaa'ilun", "en": "making" },
-        { "ar": "خَلِيفَةً", "ar_plain": "خليفة", "translit": "khaliifatan", "en": "a successor" }
+        {
+          "ar": "إِنِّي",
+          "ar_plain": "اني",
+          "translit": "inni",
+          "en": "indeed I",
+          "ur": "واقعی میں"
+        },
+        {
+          "ar": "جَاعِلٌ",
+          "ar_plain": "جاعل",
+          "translit": "jaa'ilun",
+          "en": "making",
+          "ur": "بنانا"
+        },
+        {
+          "ar": "خَلِيفَةً",
+          "ar_plain": "خليفة",
+          "translit": "khaliifatan",
+          "en": "a successor",
+          "ur": "ایک جانشین"
+        }
       ],
-      "available_roles": ["SUBJECT", "PREDICATE", "OBJECT"],
-      "correct_roles": ["SUBJECT", "PREDICATE", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "إِنِّي = PARTICLE (إِنَّ + ي, where ي is the مبتدأ in the accusative). جَاعِلٌ = PREDICATE (خبر of ي, in the accusative). خَلِيفَةً = OBJECT (first مفعول به of جَاعِلٌ, in the accusative). جَاعِلٌ takes two objects — خَلِيفَةً is the first; the second is implicit (إِيَّاهُ = him).",
@@ -148,18 +174,71 @@
       "id": "ch58-l05-ex03",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "إِنِّي", "ar_plain": "اني", "translit": "inni", "en": "indeed I" },
-        { "ar": "جَاعِلٌ", "ar_plain": "جاعل", "translit": "jaa'ilun", "en": "making" },
-        { "ar": "خَلِيفَةً", "ar_plain": "خليفة", "translit": "khaliifatan", "en": "successor" },
-        { "ar": "فِي الْأَرْضِ", "ar_plain": "في الارض", "translit": "fii al-ardi", "en": "upon the earth" }
+        {
+          "ar": "إِنِّي",
+          "ar_plain": "اني",
+          "translit": "inni",
+          "en": "indeed I",
+          "ur": "واقعی میں"
+        },
+        {
+          "ar": "جَاعِلٌ",
+          "ar_plain": "جاعل",
+          "translit": "jaa'ilun",
+          "en": "making",
+          "ur": "بنانا"
+        },
+        {
+          "ar": "خَلِيفَةً",
+          "ar_plain": "خليفة",
+          "translit": "khaliifatan",
+          "en": "successor",
+          "ur": "جانشین"
+        },
+        {
+          "ar": "فِي الْأَرْضِ",
+          "ar_plain": "في الارض",
+          "translit": "fii al-ardi",
+          "en": "upon the earth",
+          "ur": "زمین پر"
+        }
       ],
       "right_column": [
-        { "en": "مبتدأ منصوب after إِنَّ", "ur": "مبتدأ نصب میں بعد إِنَّ" },
-        { "en": "خبر منصوب + متعدي to 2 objects", "ur": "خبر نصب میں + دو مفعول به والا متعدی" },
-        { "en": "مفعول به منصوب", "ur": "پہلا مفعول به نصب میں" },
-        { "en": "حرف جر phrase", "ur": "حرف جر phrase" }
+        {
+          "en": "مبتدأ منصوب after إِنَّ",
+          "ur": "مبتدأ نصب میں بعد إِنَّ"
+        },
+        {
+          "en": "خبر منصوب + متعدي to 2 objects",
+          "ur": "خبر نصب میں + دو مفعول به والا متعدی"
+        },
+        {
+          "en": "مفعول به منصوب",
+          "ur": "پہلا مفعول به نصب میں"
+        },
+        {
+          "en": "حرف جر phrase",
+          "ur": "حرف جر phrase"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "إِنِّي = مبتدأ منصوب (after إِنَّ). جَاعِلٌ = خبر منصوب + متعدي to two objects (خَلِيفَةً is the first object; إِيَّاهُ is implicit second). خَلِيفَةً = first مفعول به منصوب. فِي الْأَرْضِ = حرف جر phrase (فِي = حرف جر، الْأَرْضِ = مضاف إليه in the genitive).",
@@ -190,10 +269,34 @@
         "ur": "بے شک اللہ ... ہے (درست description choose کرو)۔"
       },
       "options": [
-        { "ar": "غَفُورٌ رَحِيمٌ", "ar_plain": "غفور رحيم", "translit": "ghafuurun rahiimun", "en": "Forgiving, Merciful (nominative)", "ur": "بخشنے والا، رحم کرنے والا (رفع)" },
-        { "ar": "غَفُورًا رَحِيمًا", "ar_plain": "غفورا رحيما", "translit": "ghafuuran rahiiman", "en": "Forgiving, Merciful (accusative)", "ur": "بخشنے والا، رحم کرنے والا (نصب)" },
-        { "ar": "الْغَفُورُ الْرَحِيمُ", "ar_plain": "الغفور الرحيم", "translit": "al-ghafuuru al-rahiimu", "en": "the Forgiving, the Merciful (definite)", "ur": "بخشنے والا، رحم کرنے والا (معرفہ)" },
-        { "ar": "غَفُورٍ رَحِيمٍ", "ar_plain": "غفور رحيم", "translit": "ghafuurin rahiimin", "en": "Forgiving, Merciful (genitive)", "ur": "بخشنے والا، رحم کرنے والا (جر)" }
+        {
+          "ar": "غَفُورٌ رَحِيمٌ",
+          "ar_plain": "غفور رحيم",
+          "translit": "ghafuurun rahiimun",
+          "en": "Forgiving, Merciful (nominative)",
+          "ur": "بخشنے والا، رحم کرنے والا (رفع)"
+        },
+        {
+          "ar": "غَفُورًا رَحِيمًا",
+          "ar_plain": "غفورا رحيما",
+          "translit": "ghafuuran rahiiman",
+          "en": "Forgiving, Merciful (accusative)",
+          "ur": "بخشنے والا، رحم کرنے والا (نصب)"
+        },
+        {
+          "ar": "الْغَفُورُ الْرَحِيمُ",
+          "ar_plain": "الغفور الرحيم",
+          "translit": "al-ghafuuru al-rahiimu",
+          "en": "the Forgiving, the Merciful (definite)",
+          "ur": "بخشنے والا، رحم کرنے والا (معرفہ)"
+        },
+        {
+          "ar": "غَفُورٍ رَحِيمٍ",
+          "ar_plain": "غفور رحيم",
+          "translit": "ghafuurin rahiimin",
+          "en": "Forgiving, Merciful (genitive)",
+          "ur": "بخشنے والا، رحم کرنے والا (جر)"
+        }
       ],
       "correct_answer": {
         "ar": "غَفُورًا رَحِيمًا",
@@ -216,12 +319,40 @@
         "ur": "بے شک سب سے زیادہ رحم کرنے والا اللہ ہے۔"
       },
       "tiles": [
-        { "ar": "إِنَّ", "ar_plain": "ان", "translit": "inna", "en": "indeed" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah (acc.)" },
-        { "ar": "الرَّحْمَنُ", "ar_plain": "الرحمن", "translit": "ar-rahmaanu", "en": "the Most Merciful" },
-        { "ar": "رَحِيمٌ", "ar_plain": "رحيم", "translit": "rahiimun", "en": "Merciful" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "ان",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah (acc.)",
+          "ur": "اللہ (ع)"
+        },
+        {
+          "ar": "الرَّحْمَنُ",
+          "ar_plain": "الرحمن",
+          "translit": "ar-rahmaanu",
+          "en": "the Most Merciful",
+          "ur": "سب سے زیادہ رحم کرنے والا"
+        },
+        {
+          "ar": "رَحِيمٌ",
+          "ar_plain": "رحيم",
+          "translit": "rahiimun",
+          "en": "Merciful",
+          "ur": "مہربان"
+        }
       ],
-      "correct_order": [0, 2, 1],
+      "correct_order": [
+        0,
+        2,
+        1
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "إِنَّ الْرَحْمَنِ اللَّهَ = 'Indeed the Most Merciful is Allah.' Here الْرَحْمَنِ is the fronted predicate (خبر مقدم) — it comes BEFORE the postponed subject اللَّهَ (مبتدأ مؤخر). The fronted predicate الْرَحْمَنِ is in the accusative because إِنَّ puts both the مبتدأ and its خبر into the accusative. The meaning: 'The Most Merciful is Allah.'",
@@ -233,12 +364,38 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "إِنَّ الْعَزِيزَ اللَّهَ",
       "words": [
-        { "ar": "إِنَّ", "ar_plain": "ان", "translit": "inna", "en": "indeed" },
-        { "ar": "الْعَزِيزَ", "ar_plain": "العزيز", "translit": "al-'aziiza", "en": "the Exalted" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "ان",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "الْعَزِيزَ",
+          "ar_plain": "العزيز",
+          "translit": "al-'aziiza",
+          "en": "the Exalted",
+          "ur": "اعلیٰ"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah",
+          "ur": "اللہ"
+        }
       ],
-      "available_roles": ["PARTICLE", "SUBJECT", "PREDICATE"],
-      "correct_roles": ["PARTICLE", "PREDICATE", "SUBJECT"],
+      "available_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREDICATE"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "PREDICATE",
+        "SUBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "This is a fronted predicate construction (المبتدأ المؤخر) within an إِنَّ clause. إِنَّ = emphasis particle. الْعَزِيزَ = fronted predicate (خبر مقدم, in the accusative). اللَّهَ = postponed subject (مبتدأ مؤخر, in the accusative after إِنَّ). The fronted predicate الْعَزِيزَ comes before the subject اللَّهَ for emphasis. Normal order would be: إِنَّ اللَّهَ الْعَزِيزَ (Indeed Allah is the Exalted).",
@@ -252,13 +409,26 @@
         "ar": "إِنَّ رَبَّكُمْ لَوَاحِدٌ",
         "ar_plain": "ان ربكم لواحد",
         "translit": "inna rabbakum lawaahidun",
-        "en": "Indeed your Lord is One."
+        "en": "Indeed your Lord is One.",
+        "ur": "بے شک تمہارا رب ایک ہے۔"
       },
       "options": [
-        { "en": "Indeed your Lord is One.", "ur": "بے شک تمہارا رب ایک ہے۔" },
-        { "en": "Indeed One is your Lord.", "ur": "بے شک ایک تمہارا رب ہے۔" },
-        { "en": "Your Lord indeed is One.", "ur": "تمہارا رب بے شک ایک ہے۔" },
-        { "en": "One is indeed your Lord.", "ur": "ایک بے شک تمہارا رب ہے۔" }
+        {
+          "en": "Indeed your Lord is One.",
+          "ur": "بے شک تمہارا رب ایک ہے۔"
+        },
+        {
+          "en": "Indeed One is your Lord.",
+          "ur": "بے شک ایک تمہارا رب ہے۔"
+        },
+        {
+          "en": "Your Lord indeed is One.",
+          "ur": "تمہارا رب بے شک ایک ہے۔"
+        },
+        {
+          "en": "One is indeed your Lord.",
+          "ur": "ایک بے شک تمہارا رب ہے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -283,7 +453,12 @@
       "ur": "اور جب تمہارے رب نے فرشتوں سے کہا کہ بے شک میں زمین میں ایک خلیفہ بنانے والا ہوں۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-30-mishary.mp3"
     },
-    "highlighted_word_indices": [4, 5, 6, 7],
+    "highlighted_word_indices": [
+      4,
+      5,
+      6,
+      7
+    ],
     "noor_explanation": {
       "en": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً — This is the core clause. إِنِّي (إِنَّ + ي = مبتدأ in accusative) + جَاعِلٌ (خبر in accusative, متعدي to two objects) + فِي الْأَرْضِ (حرف جر phrase) + خَلِيفَةً (first مفعول به in accusative). قَالَ (before this clause) is لازم (no direct object needed — لِلْمَلَائِكَةِ is a prepositional addressee, not a direct object). The entire ayah shows how transitive/intransitive, إِنَّ, and prepositional phrases all work together in a single sentence.",
       "ur": "إِنِّي جَاعِلٌ — یہ core clause ہے۔ إِنِّي (مبتدأ نصب میں) + جَاعِلٌ (خبر نصب میں، متعدی دو objects کے ساتھ) + فِي الْأَرْضِ (حرف جر phrase) + خَلِيفَةً (پہلا مفعول به نصب میں)۔ قَالَ (اس clause سے پہلے) لازم ہے (لِلْمَلَائِكَةِ prepositional addressee ہے، direct object نہیں)۔ پورا ayah دکھاتا ہے کہ transitive/intransitive، إِنَّ، اور prepositional phrases ایک ہی جملے میں کیسے کام کرتے ہیں۔"

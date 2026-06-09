@@ -129,13 +129,26 @@
         "ar": "نَصَرَ الْجَيْشُ نَصْرًا مُبِينًا",
         "ar_plain": "نصر الجيش نصرا مبينا",
         "translit": "nasara al-jayshu nasran mubiinan",
-        "en": "The army achieved a clear victory."
+        "en": "The army achieved a clear victory.",
+        "ur": "فوج نے واضح فتح حاصل کی۔"
       },
       "options": [
-        { "en": "The army achieved a clear victory.", "ur": "فوج نے واضح فتح حاصل کی۔" },
-        { "en": "The army helped clearly.", "ur": "فوج نے واضح مدد کی۔" },
-        { "en": "The clear army won.", "ur": "واضح فوج جیت گیا۔" },
-        { "en": "The victory defeated the army.", "ur": "فتح نے فوج کو شکست دی۔" }
+        {
+          "en": "The army achieved a clear victory.",
+          "ur": "فوج نے واضح فتح حاصل کی۔"
+        },
+        {
+          "en": "The army helped clearly.",
+          "ur": "فوج نے واضح مدد کی۔"
+        },
+        {
+          "en": "The clear army won.",
+          "ur": "واضح فوج جیت گیا۔"
+        },
+        {
+          "en": "The victory defeated the army.",
+          "ur": "فتح نے فوج کو شکست دی۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -148,16 +161,56 @@
       "id": "ch55-l06-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "كِتَابًا", "ar_plain": "كتابا", "translit": "kitaaban", "en": "a book (acc.)" },
-        { "ar": "كِتَابَيْنِ", "ar_plain": "كتابين", "translit": "kitaabayni", "en": "two books (acc.)" },
-        { "ar": "كِتَابِيَّ", "ar_plain": "كتابي", "translit": "kitaabiyya", "en": "books (acc. pl.)" }
+        {
+          "ar": "كِتَابًا",
+          "ar_plain": "كتابا",
+          "translit": "kitaaban",
+          "en": "a book (acc.)",
+          "ur": "ایک کتاب (acc.)"
+        },
+        {
+          "ar": "كِتَابَيْنِ",
+          "ar_plain": "كتابين",
+          "translit": "kitaabayni",
+          "en": "two books (acc.)",
+          "ur": "دو کتابیں (acc.)"
+        },
+        {
+          "ar": "كِتَابِيَّ",
+          "ar_plain": "كتابي",
+          "translit": "kitaabiyya",
+          "en": "books (acc. pl.)",
+          "ur": "کتابیں (acc. pl.)"
+        }
       ],
       "right_column": [
-        { "en": "singular — fatHa (َـ)", "ur": "واحد — فتح" },
-        { "en": "dual — alif (َا)", "ur": "مثنی — الف" },
-        { "en": "plural — يًا", "ur": "جمع — يا" }
+        {
+          "en": "singular — fatHa (َـ)",
+          "ur": "واحد — فتح"
+        },
+        {
+          "en": "dual — alif (َا)",
+          "ur": "مثنی — الف"
+        },
+        {
+          "en": "plural — يًا",
+          "ur": "جمع — يا"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "Singular nouns take fatHa (َـ). Dual nouns take alif (َا). Sound masculine plural takes يًا. These are the three signs of the accusative.",
@@ -188,10 +241,34 @@
         "ur": "میں نے خوبصورت قرآن کی تلاوت سنی۔"
       },
       "options": [
-        { "ar": "حَسَنَةً", "ar_plain": "حسنة", "translit": "hasanatan", "en": "beautiful (acc.)", "ur": "خوبصورت (نصب)" },
-        { "ar": "حَسَنٌ", "ar_plain": "حسن", "translit": "hasanun", "en": "beautiful (nom.)", "ur": "خوبصورت (رفع)" },
-        { "ar": "حَسَنٍ", "ar_plain": "حسن", "translit": "hasanin", "en": "beautiful (gen.)", "ur": "خوبصورت (جر)" },
-        { "ar": "حَسَنُونَ", "ar_plain": "حسنون", "translit": "hasanoona", "en": "beautiful (pl.)", "ur": "خوبصورت (جمع)" }
+        {
+          "ar": "حَسَنَةً",
+          "ar_plain": "حسنة",
+          "translit": "hasanatan",
+          "en": "beautiful (acc.)",
+          "ur": "خوبصورت (نصب)"
+        },
+        {
+          "ar": "حَسَنٌ",
+          "ar_plain": "حسن",
+          "translit": "hasanun",
+          "en": "beautiful (nom.)",
+          "ur": "خوبصورت (رفع)"
+        },
+        {
+          "ar": "حَسَنٍ",
+          "ar_plain": "حسن",
+          "translit": "hasanin",
+          "en": "beautiful (gen.)",
+          "ur": "خوبصورت (جر)"
+        },
+        {
+          "ar": "حَسَنُونَ",
+          "ar_plain": "حسنون",
+          "translit": "hasanoona",
+          "en": "beautiful (pl.)",
+          "ur": "خوبصورت (جمع)"
+        }
       ],
       "correct_answer": {
         "ar": "حَسَنَةً",
@@ -214,12 +291,40 @@
         "ur": "اس نے ایک داناہ کلام کہا۔"
       },
       "tiles": [
-        { "ar": "قَالَ", "ar_plain": "قال", "translit": "qaala", "en": "he said" },
-        { "ar": "كَلَامًا", "ar_plain": "كلاما", "translit": "kalaaman", "en": "a word (acc.)", "ur": "ایک کلام (نصب)" },
-        { "ar": "حَكِيمًا", "ar_plain": "حكيما", "translit": "hakiiman", "en": "wise (acc.)", "ur": "داناہ (نصب)" },
-        { "ar": "كَلَامٌ", "ar_plain": "كلام", "translit": "kalamun", "en": "a word (nom.)", "ur": "ایک کلام (رفع)" }
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qaala",
+          "en": "he said",
+          "ur": "انہوں نے کہا"
+        },
+        {
+          "ar": "كَلَامًا",
+          "ar_plain": "كلاما",
+          "translit": "kalaaman",
+          "en": "a word (acc.)",
+          "ur": "ایک کلام (نصب)"
+        },
+        {
+          "ar": "حَكِيمًا",
+          "ar_plain": "حكيما",
+          "translit": "hakiiman",
+          "en": "wise (acc.)",
+          "ur": "داناہ (نصب)"
+        },
+        {
+          "ar": "كَلَامٌ",
+          "ar_plain": "كلام",
+          "translit": "kalamun",
+          "en": "a word (nom.)",
+          "ur": "ایک کلام (رفع)"
+        }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "قَالَ (verb) + كَلَامًا (direct object, accusative) + حَكِيمًا (adjective, accusative). Both كَلَامًا and حَكِيمًا are in the accusative, matching as object and its adjective.",
@@ -231,13 +336,47 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "اشْتَرَى الْمُسْلِمُ ثَوْبًا جَدِيدًا",
       "words": [
-        { "ar": "اشْتَرَى", "ar_plain": "اشترى", "translit": "ishtaraa", "en": "bought" },
-        { "ar": "الْمُسْلِمُ", "ar_plain": "المسلم", "translit": "al-muslimu", "en": "the Muslim" },
-        { "ar": "ثَوْبًا", "ar_plain": "ثوبا", "translit": "sawban", "en": "a garment" },
-        { "ar": "جَدِيدًا", "ar_plain": "جديدا", "translit": "jadiidan", "en": "new" }
+        {
+          "ar": "اشْتَرَى",
+          "ar_plain": "اشترى",
+          "translit": "ishtaraa",
+          "en": "bought",
+          "ur": "خریدا"
+        },
+        {
+          "ar": "الْمُسْلِمُ",
+          "ar_plain": "المسلم",
+          "translit": "al-muslimu",
+          "en": "the Muslim",
+          "ur": "مسلمان"
+        },
+        {
+          "ar": "ثَوْبًا",
+          "ar_plain": "ثوبا",
+          "translit": "sawban",
+          "en": "a garment",
+          "ur": "ایک لباس"
+        },
+        {
+          "ar": "جَدِيدًا",
+          "ar_plain": "جديدا",
+          "translit": "jadiidan",
+          "en": "new",
+          "ur": "نیا"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "OBJECT", "ADJECTIVE"],
-      "correct_roles": ["VERB", "SUBJECT", "OBJECT", "ADJECTIVE"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "OBJECT",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "OBJECT",
+        "ADJECTIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "اشْتَرَى = VERB (مَبْنِيّ). الْمُسْلِمُ = SUBJECT (رفع). ثَوْبًا = OBJECT (نصب). جَدِيدًا = ADJECTIVE (نصب — matching the noun ثَوْبًا in case).",
@@ -261,13 +400,26 @@
         "ar": "أَكَلْتُ تَمْرًا طَازَجًا",
         "ar_plain": "اكلت تمرا طازجا",
         "translit": "akaltu tamran taazijan",
-        "en": "I ate fresh dates."
+        "en": "I ate fresh dates.",
+        "ur": "میں نے تازہ کھجوریں کھائیں۔"
       },
       "options": [
-        { "en": "I ate fresh dates.", "ur": "میں نے تازہ کھجوریں کھائیں۔" },
-        { "en": "I ate fresh date.", "ur": "میں نے ایک تازہ کھجور کھائی۔" },
-        { "en": "Fresh dates ate me.", "ur": "تازہ کھجوریں نے مجھے کھایا۔" },
-        { "en": "I saw fresh dates.", "ur": "میں نے تازہ کھجوریں دیکھیں۔" }
+        {
+          "en": "I ate fresh dates.",
+          "ur": "میں نے تازہ کھجوریں کھائیں۔"
+        },
+        {
+          "en": "I ate fresh date.",
+          "ur": "میں نے ایک تازہ کھجور کھائی۔"
+        },
+        {
+          "en": "Fresh dates ate me.",
+          "ur": "تازہ کھجوریں نے مجھے کھایا۔"
+        },
+        {
+          "en": "I saw fresh dates.",
+          "ur": "میں نے تازہ کھجوریں دیکھیں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -292,7 +444,9 @@
       "ur": "بے شک مشکل کے ساتھ آسانی ہے۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/ash-sharh-005-mishary.mp3"
     },
-    "highlighted_word_indices": [3],
+    "highlighted_word_indices": [
+      3
+    ],
     "noor_explanation": {
       "en": "يُسْرًا is in the accusative — it is المفعول المطلق, derived from the same root ي-س-ر as the implied verb. This is the case of the object and the emphatic absolute object. Notice the fatHa (َـ) ending.",
       "ur": "يُسْرًا نصب میں ہے — یہ المفعول المطلق ہے، اسی مادہ ي-س-ر سے۔ یہ مفعول اور تائیدی مطلق کی case ہے۔"

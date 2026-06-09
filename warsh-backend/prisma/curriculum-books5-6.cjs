@@ -1,5 +1,7 @@
 const LABELS = ["مبتدأ", "خبر", "حرف جر", "مضاف", "مضاف إليه", "فعل", "فاعل", "مفعول"];
 
+const { localizeMetadata } = require("./urdu-metadata.cjs");
+
 function card(arabicText, translation, transliteration = "") {
   return { arabicText, translation, transliteration };
 }
@@ -94,6 +96,7 @@ function makeLesson(spec, lessonIndex, focus) {
 
   return {
     title: focus.title,
+    titleUr: localizeMetadata(focus.title),
     titleAr: focus.titleAr,
     type: "VOCABULARY",
     xpReward: 10,
@@ -125,8 +128,10 @@ function chapter(spec) {
   return {
     order: spec.order,
     title: spec.title,
+    titleUr: localizeMetadata(spec.title),
     titleAr: spec.titleAr,
     description: spec.description,
+    descriptionUr: localizeMetadata(spec.description),
     worldMapX: Number((0.08 + spec.order * 0.055).toFixed(2)),
     worldMapY: Number((0.12 + (spec.order % 5) * 0.14).toFixed(2)),
     isLocked: true,

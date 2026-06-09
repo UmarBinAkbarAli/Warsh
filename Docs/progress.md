@@ -1,6 +1,6 @@
 # Warsh Phase 1 Progress Tracker
 
-Last updated: 2026-06-06 (IAP fixed: warsh_premium + base plans; paywall trigger after Ch1 wired; practice card autoplay fixed; renderers code-reviewed)
+Last updated: 2026-06-09 (Urdu mode completed across app UI, seeded content, backend metadata, and fixture audit)
 
 ## Purpose
 
@@ -22,6 +22,13 @@ This file is the source of truth for current app progress as reflected in the co
 - `GET /api/health` → 200 ✓. UptimeRobot monitoring every 5 minutes.
 - Custom domain `api.warsh.app` live on Vercel ✅
 - IMPORTANT: future CLI deploys must run from repo root `D:\Code\Warsh` (rootDirectory is `warsh-backend` in Vercel project settings).
+
+**Latest status (2026-06-09):**
+- **Urdu mode completed end-to-end** - onboarding, Learn, chapter list, Vocabulary, lesson player, profile/settings, and edit-profile flows now use shared language helpers plus app string dictionaries with English fallback.
+- **Profile language switching fixed** - `PATCH /api/users/me` updates the local auth store immediately, so Urdu applies without logout or app restart.
+- **Backend chapter/lesson metadata localized** - `Chapter.titleUr`, `Chapter.descriptionUr`, and `Lesson.titleUr` were added to Prisma, seeded, and exposed by `/api/chapters`, `/api/chapters/[id]/lessons`, and `/api/lessons/[id]`.
+- **Lesson fixtures backfilled with Urdu content** - fixture JSON now includes `.ur` wherever localized lesson content exposed `.en`, and vocabulary related-word responses now include `translationUr`.
+- **Urdu audit added and passing** - `npm run db:audit-urdu` now checks DB metadata, vocabulary/Quranic example Urdu fields, and fixture localized content; `npm run db:generate`, `npm run db:migrate -- --name add_urdu_metadata`, `npm run db:seed`, `npm run db:validate-fixtures`, backend build, app lint, and app `npx tsc --noEmit` all passed on 2026-06-09.
 
 It is intended to track:
 - what is implemented in the repo
@@ -1260,7 +1267,34 @@ Read `Docs/warsh-spec-00-master-index.md` before starting, per the build protoco
 
 ## Recent Changes (since 2026-05-25) — historical
 
-### Urdu localization wired (2026-05-25)
+### Urdu localization completed end-to-end (2026-06-09)
+
+- App localization foundation is now shared and consistent:
+  - `warsh-app/services/language.ts` exposes `useLanguage()`, `pickLocalized()`, and `pickTranslation()`
+  - `warsh-app/i18n/en.ts`, `warsh-app/i18n/ur.ts`, and `warsh-app/i18n/index.ts` provide app string dictionaries with English fallback
+- UI copy is now language-aware across onboarding, Learn, chapter list, Vocabulary, lesson player, profile, settings, and edit-profile screens.
+- Lesson player no longer reads raw English-only content for prompts, options, explanations, reveal text, spoken phrase meanings, or Noor guidance; it resolves `en`/`ur` content with shared helpers.
+- Learn and chapter views now display `chapter.titleUr`, `chapter.descriptionUr`, and `lesson.titleUr` when Urdu is active while keeping Arabic titles visible as Arabic content.
+- Backend metadata is localized and switch-safe:
+  - Prisma schema now includes `Chapter.titleUr`, `Chapter.descriptionUr`, and `Lesson.titleUr`
+  - seed/curriculum sources populate those fields deterministically
+  - `/api/chapters`, `/api/chapters/[id]/lessons`, and `/api/lessons/[id]` return both English and Urdu fields instead of a single pre-localized value
+- Fixture and vocabulary content now satisfy Urdu-mode requirements:
+  - lesson fixture JSON has `.ur` alongside localized `.en` nodes used by the player
+  - vocabulary related-word payloads include `translationUr`
+  - Quranic example Urdu data is present and audited
+- Profile language switching now applies immediately after `PATCH /api/users/me` via local auth-store patching.
+- Validation completed on 2026-06-09:
+  - `npm run db:generate`
+  - `npm run db:migrate -- --name add_urdu_metadata`
+  - `npm run db:seed`
+  - `npm run db:validate-fixtures`
+  - `npm run db:audit-urdu`
+  - `npm run build` (backend)
+  - `npm run lint -- --quiet` (app)
+  - `npx tsc --noEmit` (app)
+
+### Urdu localization partially wired (2026-05-25)
 
 - Created `Warsh-app/services/language.ts`:
   - `useLanguage()` hook — reads `user.nativeLanguage` from auth store, falls back to onboarding store language, then `"en"`; returns `"en" | "ur"`

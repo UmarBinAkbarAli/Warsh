@@ -132,13 +132,26 @@
         "ar": "الْمُسْلِمُ مُجْتَهِدٌ",
         "ar_plain": "المسلم مجتهد",
         "translit": "al-muslimu mujtahidun",
-        "en": "The Muslim is diligent."
+        "en": "The Muslim is diligent.",
+        "ur": "مسلمان محنتی ہے۔"
       },
       "options": [
-        { "en": "The Muslim is diligent.", "ur": "مسلمان محنتی ہے۔" },
-        { "en": "A diligent Muslim.", "ur": "ایک محنتی مسلمان۔" },
-        { "en": "The diligent Muslim.", "ur": "محنتی مسلمان۔" },
-        { "en": "Muslims are diligent.", "ur": "مسلمان محنتی ہیں۔" }
+        {
+          "en": "The Muslim is diligent.",
+          "ur": "مسلمان محنتی ہے۔"
+        },
+        {
+          "en": "A diligent Muslim.",
+          "ur": "ایک محنتی مسلمان۔"
+        },
+        {
+          "en": "The diligent Muslim.",
+          "ur": "محنتی مسلمان۔"
+        },
+        {
+          "en": "Muslims are diligent.",
+          "ur": "مسلمان محنتی ہیں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -151,18 +164,71 @@
       "id": "ch55-l03-ex02",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "الْمُسْلِمُ", "ar_plain": "المسلم", "translit": "al-muslimu", "en": "the Muslim" },
-        { "ar": "مُجْتَهِدٌ", "ar_plain": "مجتهد", "translit": "mujtahidun", "en": "diligent" },
-        { "ar": "الْغُلَامُ", "ar_plain": "الغلام", "translit": "al-ghulaamu", "en": "the boy" },
-        { "ar": "كَرِيمٌ", "ar_plain": "كريم", "translit": "kariimun", "en": "noble" }
+        {
+          "ar": "الْمُسْلِمُ",
+          "ar_plain": "المسلم",
+          "translit": "al-muslimu",
+          "en": "the Muslim",
+          "ur": "مسلمان"
+        },
+        {
+          "ar": "مُجْتَهِدٌ",
+          "ar_plain": "مجتهد",
+          "translit": "mujtahidun",
+          "en": "diligent",
+          "ur": "محنتی"
+        },
+        {
+          "ar": "الْغُلَامُ",
+          "ar_plain": "الغلام",
+          "translit": "al-ghulaamu",
+          "en": "the boy",
+          "ur": "لڑکا"
+        },
+        {
+          "ar": "كَرِيمٌ",
+          "ar_plain": "كريم",
+          "translit": "kariimun",
+          "en": "noble",
+          "ur": "عظیم"
+        }
       ],
       "right_column": [
-        { "en": "مُبْتَدَأ (the Muslim — subject)", "ur": "مبتدأ (المسلم)" },
-        { "en": "خَبَر (diligent — predicate)", "ur": "خبر (محنتی)" },
-        { "en": "مُبْتَدَأ (the boy — subject)", "ur": "مبتدأ (الغرام)" },
-        { "en": "خَبَر (noble — predicate)", "ur": "خبر (کریم)" }
+        {
+          "en": "مُبْتَدَأ (the Muslim — subject)",
+          "ur": "مبتدأ (المسلم)"
+        },
+        {
+          "en": "خَبَر (diligent — predicate)",
+          "ur": "خبر (محنتی)"
+        },
+        {
+          "en": "مُبْتَدَأ (the boy — subject)",
+          "ur": "مبتدأ (الغرام)"
+        },
+        {
+          "en": "خَبَر (noble — predicate)",
+          "ur": "خبر (کریم)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الْمُسْلِمُ and الْغُلَامُ are both مُبْتَدَأ. مُجْتَهِدٌ and كَرِيمٌ are both خَبَر.",
@@ -193,13 +259,34 @@
         "ur": "مومنہ عورت نیک ہے۔"
       },
       "options": [
-        { "ar": "صَالِحَةٌ", "ar_plain": "صالحۃ", "translit": "saalihatun", "en": "righteous (f)", "ur": "نیک (مؤنث)" },
-        { "ar": "صَالِحٌ", "ar_plain": "صالح", "translit": "saalihun", "en": "righteous (m)",
-          "ur": "نیک (مذکر)" },
-        { "ar": "الْمُؤْمِنُ", "ar_plain": "المؤمن", "translit": "al-mu'minu", "en": "the believer (m)",
-          "ur": "مومن (مذکر)" },
-        { "ar": "مُؤْمِنَةٌ", "ar_plain": "مؤمنۃ", "translit": "mu'minatun", "en": "believing (f)",
-          "ur": "مومنہ" }
+        {
+          "ar": "صَالِحَةٌ",
+          "ar_plain": "صالحۃ",
+          "translit": "saalihatun",
+          "en": "righteous (f)",
+          "ur": "نیک (مؤنث)"
+        },
+        {
+          "ar": "صَالِحٌ",
+          "ar_plain": "صالح",
+          "translit": "saalihun",
+          "en": "righteous (m)",
+          "ur": "نیک (مذکر)"
+        },
+        {
+          "ar": "الْمُؤْمِنُ",
+          "ar_plain": "المؤمن",
+          "translit": "al-mu'minu",
+          "en": "the believer (m)",
+          "ur": "مومن (مذکر)"
+        },
+        {
+          "ar": "مُؤْمِنَةٌ",
+          "ar_plain": "مؤمنۃ",
+          "translit": "mu'minatun",
+          "en": "believing (f)",
+          "ur": "مومنہ"
+        }
       ],
       "correct_answer": {
         "ar": "صَالِحَةٌ",
@@ -219,11 +306,31 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "الْكِتَابُ جَدِيدٌ",
       "words": [
-        { "ar": "الْكِتَابُ", "ar_plain": "الكتاب", "translit": "al-kitaabu", "en": "the book" },
-        { "ar": "جَدِيدٌ", "ar_plain": "جديد", "translit": "jadiidun", "en": "new" }
+        {
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitaabu",
+          "en": "the book",
+          "ur": "کتاب"
+        },
+        {
+          "ar": "جَدِيدٌ",
+          "ar_plain": "جديد",
+          "translit": "jadiidun",
+          "en": "new",
+          "ur": "نیا"
+        }
       ],
-      "available_roles": ["SUBJECT", "PREDICATE", "VERB", "OBJECT"],
-      "correct_roles": ["SUBJECT", "PREDICATE"],
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "VERB",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "PREDICATE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الْكِتَابُ = مُبْتَدَأ (رفع). جَدِيدٌ = خَبَر (رفع). This is a simple nominal sentence with no verb.",
@@ -238,12 +345,39 @@
         "ur": "طالب علم ذہین ہے۔"
       },
       "tiles": [
-        { "ar": "الطَّالِبُ", "ar_plain": "الطالب", "translit": "at-taalibu", "en": "the student" },
-        { "ar": "ذَكِيٌّ", "ar_plain": "ذكي", "translit": "dhakiyyun", "en": "intelligent", "ur": "ذہین" },
-        { "ar": "الْمُسْلِمُ", "ar_plain": "المسلم", "translit": "al-muslimu", "en": "the Muslim", "ur": "مسلمان" },
-        { "ar": "نَجِيدٌ", "ar_plain": "نجيد", "translit": "najiydun", "en": "excellent", "ur": "بہترین" }
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "at-taalibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        },
+        {
+          "ar": "ذَكِيٌّ",
+          "ar_plain": "ذكي",
+          "translit": "dhakiyyun",
+          "en": "intelligent",
+          "ur": "ذہین"
+        },
+        {
+          "ar": "الْمُسْلِمُ",
+          "ar_plain": "المسلم",
+          "translit": "al-muslimu",
+          "en": "the Muslim",
+          "ur": "مسلمان"
+        },
+        {
+          "ar": "نَجِيدٌ",
+          "ar_plain": "نجيد",
+          "translit": "najiydun",
+          "en": "excellent",
+          "ur": "بہترین"
+        }
       ],
-      "correct_order": [0, 1],
+      "correct_order": [
+        0,
+        1
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "الطَّالِبُ (the student, subject) + ذَكِيٌّ (intelligent, predicate). The last two tiles are distractors.",
@@ -274,13 +408,26 @@
         "ar": "ذَهَبَ الْفَتَى إِلَى الْمَكْتَبِ",
         "ar_plain": "ذهب الفتى الى المكتب",
         "translit": "dhahaba al-fataa ilal-maktabi",
-        "en": "The young man went to the office."
+        "en": "The young man went to the office.",
+        "ur": "نوجوان دفتر چلا گیا۔"
       },
       "options": [
-        { "en": "The young man went to the office.", "ur": "جوان آدمی دفتر گیا۔" },
-        { "en": "The young man is in the office.", "ur": "جوان آدمی دفتر میں ہے۔" },
-        { "en": "The office went to the young man.", "ur": "دفتر جوان آدمی کے پاس گیا۔" },
-        { "en": "The young man was at the office.", "ur": "جوان آدمی دفتر پر تھا۔" }
+        {
+          "en": "The young man went to the office.",
+          "ur": "جوان آدمی دفتر گیا۔"
+        },
+        {
+          "en": "The young man is in the office.",
+          "ur": "جوان آدمی دفتر میں ہے۔"
+        },
+        {
+          "en": "The office went to the young man.",
+          "ur": "دفتر جوان آدمی کے پاس گیا۔"
+        },
+        {
+          "en": "The young man was at the office.",
+          "ur": "جوان آدمی دفتر پر تھا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -305,7 +452,9 @@
       "ur": "بے شک آسمانوں اور زمین کی تخلیق میں عقل والوں کے لیے نشانیاں ہیں۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-164-mishary.mp3"
     },
-    "highlighted_word_indices": [7],
+    "highlighted_word_indices": [
+      7
+    ],
     "noor_explanation": {
       "en": "لَآيَاتٍ is the مُبْتَدَأ (subject, رفع). لِأُولِي الْأَلْبَابِ is the خَبَر (predicate, جر by the preposition لِ). The particle إِنَّ puts the subject in the accusative (نصب) — but without إِنَّ, the مُبْتَدَأ would be in the nominative (رفع).",
       "ur": "لَآيَاتٍ مبتدأ ہے (رفع)۔ لِأُولِي الْأَلْبَابِ خبر ہے (جر حرف جر لِ کی وجہ سے)۔"

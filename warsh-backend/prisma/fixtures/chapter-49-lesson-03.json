@@ -108,10 +108,22 @@
         "ur": "وہ کتاب جسے میں نے پڑھا"
       },
       "options": [
-        { "en": "the book that I read", "ur": "وہ کتاب جسے میں نے پڑھا" },
-        { "en": "the book which reads me", "ur": "وہ کتاب جو مجھے پڑھتا ہے" },
-        { "en": "I read the book", "ur": "میں نے کتاب پڑھی" },
-        { "en": "the book of reading", "ur": "پڑھنے کی کتاب" }
+        {
+          "en": "the book that I read",
+          "ur": "وہ کتاب جسے میں نے پڑھا"
+        },
+        {
+          "en": "the book which reads me",
+          "ur": "وہ کتاب جو مجھے پڑھتا ہے"
+        },
+        {
+          "en": "I read the book",
+          "ur": "میں نے کتاب پڑھی"
+        },
+        {
+          "en": "the book of reading",
+          "ur": "پڑھنے کی کتاب"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -212,12 +224,41 @@
         }
       ],
       "right_column": [
-        { "en": "the noble Muslims (pl. m.)", "ur": "شریف مسلمان (جمع مذکر)" },
-        { "en": "the noble Muslim woman (sg. f.)", "ur": "شریف مسلمان عورت (واحد مؤنث)" },
-        { "en": "a new book (sg. m.)", "ur": "ایک نئی کتاب (واحد مذکر)" },
-        { "en": "new books (pl. f.)", "ur": "نئی کتابیں (جمع مؤنث)" }
+        {
+          "en": "the noble Muslims (pl. m.)",
+          "ur": "شریف مسلمان (جمع مذکر)"
+        },
+        {
+          "en": "the noble Muslim woman (sg. f.)",
+          "ur": "شریف مسلمان عورت (واحد مؤنث)"
+        },
+        {
+          "en": "a new book (sg. m.)",
+          "ur": "ایک نئی کتاب (واحد مذکر)"
+        },
+        {
+          "en": "new books (pl. f.)",
+          "ur": "نئی کتابیں (جمع مؤنث)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -257,7 +298,12 @@
           "ur": "بڑا شہر"
         }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -265,13 +311,47 @@
       "id": "ch49-l03-ex06",
       "sentence_ar": "رَجُلٌ كَانَ يَعِيشُ فِي الْقَرْيَةِ",
       "words": [
-        { "ar": "رَجُلٌ", "ar_plain": "رجل", "translit": "rajulun", "en": "a man" },
-        { "ar": "كَانَ", "ar_plain": "كان", "translit": "kaan", "en": "he was" },
-        { "ar": "يَعِيشُ", "ar_plain": "يعيش", "translit": "ya'iishu", "en": "he lives" },
-        { "ar": "فِي الْقَرْيَةِ", "ar_plain": "في القرية", "translit": "fii al-qaryati", "en": "in the village" }
+        {
+          "ar": "رَجُلٌ",
+          "ar_plain": "رجل",
+          "translit": "rajulun",
+          "en": "a man",
+          "ur": "ایک آدمی"
+        },
+        {
+          "ar": "كَانَ",
+          "ar_plain": "كان",
+          "translit": "kaan",
+          "en": "he was",
+          "ur": "وہ تھا"
+        },
+        {
+          "ar": "يَعِيشُ",
+          "ar_plain": "يعيش",
+          "translit": "ya'iishu",
+          "en": "he lives",
+          "ur": "وہ رہتا ہے"
+        },
+        {
+          "ar": "فِي الْقَرْيَةِ",
+          "ar_plain": "في القرية",
+          "translit": "fii al-qaryati",
+          "en": "in the village",
+          "ur": "گاؤں میں"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PREPOSITION", "ADJECTIVE"],
-      "correct_roles": ["SUBJECT", "VERB", "VERB", "PREPOSITION"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PREPOSITION",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "VERB",
+        "VERB",
+        "PREPOSITION"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "رَجُلٌ is the subject. كَانَ يَعِيشُ is the past continuous verb 'he used to live.' فِي الْقَرْيَةِ is a prepositional phrase adding location. The relative clause describes the man.",
@@ -289,10 +369,22 @@
         "ur": "کیا انسان پر کوئی وقت گزرا ہے"
       },
       "options": [
-        { "en": "Has there not come upon the man a period of time", "ur": "کیا انسان پر کوئی وقت گزرا ہے" },
-        { "en": "Did the man come at the time of the age?", "ur": "کیا آدمی عہد کے وقت پر آیا؟" },
-        { "en": "The man came during a time.", "ur": "آدمی کسی وقت پر آیا۔" },
-        { "en": "Has there not come upon a human a long time?", "ur": "کیا انسان پر کوئی لمبا وقت گزرا ہے؟" }
+        {
+          "en": "Has there not come upon the man a period of time",
+          "ur": "کیا انسان پر کوئی وقت گزرا ہے"
+        },
+        {
+          "en": "Did the man come at the time of the age?",
+          "ur": "کیا آدمی عہد کے وقت پر آیا؟"
+        },
+        {
+          "en": "The man came during a time.",
+          "ur": "آدمی کسی وقت پر آیا۔"
+        },
+        {
+          "en": "Has there not come upon a human a long time?",
+          "ur": "کیا انسان پر کوئی لمبا وقت گزرا ہے؟"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -317,7 +409,10 @@
       "ur": "کیا انسان پر کوئی وقت گزرا ہے",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-insan-001-mishary.mp3"
     },
-    "highlighted_word_indices": [2, 3],
+    "highlighted_word_indices": [
+      2,
+      3
+    ],
     "noor_explanation": {
       "en": "حِينٌ مِّنَ الدَّهْرِ is an idafa chain: a period of time. The preposition عَلَى requires the genitive (الْإِنسَانِ). The question form هَلْ asks: has this period of life not come upon every person?",
       "ur": "حِينٌ مِّنَ الدَّهْرِ ایک idafa chain ہے: عہد کی ایک مدت۔ Preposition عَلَى genitive (الْإِنسَانِ) مانگتا ہے۔ Question form هَلْ پوچھتا ہے: کیا یہ زندگی کا period ہر شخص پر نہیں آیا؟"

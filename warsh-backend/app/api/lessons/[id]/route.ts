@@ -16,7 +16,7 @@ export async function GET(request: Request, { params }: Props) {
 
   const lesson = await prisma.lesson.findUnique({
     where: { id: params.id },
-    select: { id: true, title: true, titleAr: true, template: true, xpReward: true, content: true, chapterId: true, chapter: { select: { order: true } } },
+    select: { id: true, title: true, titleUr: true, titleAr: true, template: true, xpReward: true, content: true, chapterId: true, chapter: { select: { order: true } } },
   });
 
   if (!lesson) {
@@ -52,6 +52,7 @@ export async function GET(request: Request, { params }: Props) {
       lesson: {
         id: lesson.id,
         title: lesson.title,
+        titleUr: lesson.titleUr,
         titleAr: lesson.titleAr,
         xpReward: lesson.xpReward,
         template: lesson.template,

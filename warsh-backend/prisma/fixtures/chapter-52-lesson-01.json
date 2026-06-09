@@ -115,13 +115,46 @@
       "id": "ch52-l01-ex01",
       "sentence_ar": "إِنَّ اللَّهَ عَزِيزٌ حَكِيمٌ",
       "words": [
-        { "ar": "إِنَّ", "ar_plain": "إن", "translit": "inna", "en": "indeed" },
-        { "ar": "اللَّهَ", "ar_plain": "الله", "translit": "allaaha", "en": "Allah" },
-        { "ar": "عَزِيزٌ", "ar_plain": "عزيز", "translit": "'aziizun", "en": "mighty" },
-        { "ar": "حَكِيمٌ", "ar_plain": "حكيم", "translit": "hakiimun", "en": "wise" }
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed",
+          "ur": "بے شک"
+        },
+        {
+          "ar": "اللَّهَ",
+          "ar_plain": "الله",
+          "translit": "allaaha",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "عَزِيزٌ",
+          "ar_plain": "عزيز",
+          "translit": "'aziizun",
+          "en": "mighty",
+          "ur": "طاقتور"
+        },
+        {
+          "ar": "حَكِيمٌ",
+          "ar_plain": "حكيم",
+          "translit": "hakiimun",
+          "en": "wise",
+          "ur": "عقلمند"
+        }
       ],
-      "available_roles": ["PARTICLE", "SUBJECT", "PREDICATE"],
-      "correct_roles": ["PARTICLE", "SUBJECT", "PREDICATE", "PREDICATE"],
+      "available_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREDICATE"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "SUBJECT",
+        "PREDICATE",
+        "PREDICATE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "إِنَّ is the particle. اللَّهَ is the subject in accusative (منصوب). عَزِيزٌ حَكِيمٌ is the predicate (خبر) — two adjectives describing Allah.",
@@ -139,10 +172,22 @@
         "ur": "اور اللہ کے رسول (صلی اللہ علیہ وسلم) نے فرمایا..."
       },
       "options": [
-        { "en": "And the Messenger of Allah said...", "ur": "اور اللہ کے رسول (صلی اللہ علیہ وسلم) نے فرمایا..." },
-        { "en": "And the book of Allah says...", "ur": "اور اللہ کی کتاب کہتی ہے..." },
-        { "en": "And the servant of Allah knows...", "ur": "اور اللہ کا بندہ جانتا ہے..." },
-        { "en": "And the sign of Allah is...", "ur": "اور اللہ کی نشانی ہے..." }
+        {
+          "en": "And the Messenger of Allah said...",
+          "ur": "اور اللہ کے رسول (صلی اللہ علیہ وسلم) نے فرمایا..."
+        },
+        {
+          "en": "And the book of Allah says...",
+          "ur": "اور اللہ کی کتاب کہتی ہے..."
+        },
+        {
+          "en": "And the servant of Allah knows...",
+          "ur": "اور اللہ کا بندہ جانتا ہے..."
+        },
+        {
+          "en": "And the sign of Allah is...",
+          "ur": "اور اللہ کی نشانی ہے..."
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -243,12 +288,41 @@
         }
       ],
       "right_column": [
-        { "en": "Nominal sentence", "ur": "اسمی جملہ" },
-        { "en": "Verbal sentence", "ur": "فعلی جملہ" },
-        { "en": "Nominal sentence", "ur": "اسمی جملہ" },
-        { "en": "Verbal sentence", "ur": "فعلی جملہ" }
+        {
+          "en": "Nominal sentence",
+          "ur": "اسمی جملہ"
+        },
+        {
+          "en": "Verbal sentence",
+          "ur": "فعلی جملہ"
+        },
+        {
+          "en": "Nominal sentence",
+          "ur": "اسمی جملہ"
+        },
+        {
+          "en": "Verbal sentence",
+          "ur": "فعلی جملہ"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -288,7 +362,12 @@
           "ur": "عالم"
         }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -302,10 +381,22 @@
         "ur": "بیشک اللہ اسے پیار نہیں کرتا جو مغرور اور ڈھونگا تھا"
       },
       "options": [
-        { "en": "Indeed, Allah does not love the one who was arrogant and boastful", "ur": "بیشک اللہ اسے پیار نہیں کرتا جو مغرور اور ڈھونگا تھا" },
-        { "en": "Indeed, Allah loves the arrogant and boastful person", "ur": "بیشک اللہ مغرور اور ڈھونگے شخص کو پیار کرتا ہے" },
-        { "en": "Allah does not love arrogant people", "ur": "اللہ مغرور لوگوں کو پیار نہیں کرتا" },
-        { "en": "The arrogant person does not love Allah", "ur": "مغرور شخص اللہ کو پیار نہیں کرتا" }
+        {
+          "en": "Indeed, Allah does not love the one who was arrogant and boastful",
+          "ur": "بیشک اللہ اسے پیار نہیں کرتا جو مغرور اور ڈھونگا تھا"
+        },
+        {
+          "en": "Indeed, Allah loves the arrogant and boastful person",
+          "ur": "بیشک اللہ مغرور اور ڈھونگے شخص کو پیار کرتا ہے"
+        },
+        {
+          "en": "Allah does not love arrogant people",
+          "ur": "اللہ مغرور لوگوں کو پیار نہیں کرتا"
+        },
+        {
+          "en": "The arrogant person does not love Allah",
+          "ur": "مغرور شخص اللہ کو پیار نہیں کرتا"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -330,7 +421,10 @@
       "ur": "اور جب آپ کے رب نے فرشتوں سے کہا کہ بیشک میں زمین میں ایک خلیفہ بنانے والا ہوں",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-baqarah-030-mishary.mp3"
     },
-    "highlighted_word_indices": [0, 3],
+    "highlighted_word_indices": [
+      0,
+      3
+    ],
     "noor_explanation": {
       "en": "This ayah perfectly shows both types together. وَقَالَ — verbal sentence (your Lord said). إِنِّي — nominal sentence (Indeed, I...). جَاعِلٌ — the predicate. خَلِيفَةً — the object. Both sentence types on display.",
       "ur": "یہ ayah perfectly دونوں types کو ایک ساتھ دکھاتی ہے۔ وَقَالَ — verbal sentence (آپ کے رب نے کہا)۔ إِنِّي — nominal sentence (بیشک میں...)۔ جَاعِلٌ — predicate۔ خَلِيفَةً — object۔ دونوں sentence types اکٹھے۔"

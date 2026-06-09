@@ -143,13 +143,26 @@
         "ar": "ذَهَبَ الْغُلَامُ إِلَى الْمَدْرَسَةِ",
         "ar_plain": "ذهب الغلام الى المدرسة",
         "translit": "dhahaba al-ghulaamu ilal-madrasati",
-        "en": "The boy went to the school."
+        "en": "The boy went to the school.",
+        "ur": "لڑکا سکول گیا۔"
       },
       "options": [
-        { "en": "The boy went to the school.", "ur": "لڑکا school گیا۔" },
-        { "en": "The school went to the boy.", "ur": "school لڑکے کی طرف گیا۔" },
-        { "en": "The boy came from the school.", "ur": "لڑکا school سے آیا۔" },
-        { "en": "The school came to the boy.", "ur": "school لڑکے کے پاس آئی۔" }
+        {
+          "en": "The boy went to the school.",
+          "ur": "لڑکا school گیا۔"
+        },
+        {
+          "en": "The school went to the boy.",
+          "ur": "school لڑکے کی طرف گیا۔"
+        },
+        {
+          "en": "The boy came from the school.",
+          "ur": "لڑکا school سے آیا۔"
+        },
+        {
+          "en": "The school came to the boy.",
+          "ur": "school لڑکے کے پاس آئی۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -168,10 +181,34 @@
         "ur": "کتاب میز پر ہے۔"
       },
       "options": [
-        { "ar": "الْمَكْتَبِ", "ar_plain": "المكتب", "translit": "al-maktabi", "en": "the desk (genitive)", "ur": "ڈیسک (جر)" },
-        { "ar": "الْمَكْتَبُ", "ar_plain": "المكتب", "translit": "al-maktabu", "en": "the desk (nominative)", "ur": "ڈیسک (رفع)" },
-        { "ar": "الْمَكْتَبَ", "ar_plain": "المكتب", "translit": "al-maktaba", "en": "the desk (accusative)", "ur": "ڈیسک (نصب)" },
-        { "ar": "الْمَكْتَبُونَ", "ar_plain": "المكتبون", "translit": "al-maktaboona", "en": "the desk (plural)", "ur": "ڈیسکیں (جمع)" }
+        {
+          "ar": "الْمَكْتَبِ",
+          "ar_plain": "المكتب",
+          "translit": "al-maktabi",
+          "en": "the desk (genitive)",
+          "ur": "ڈیسک (جر)"
+        },
+        {
+          "ar": "الْمَكْتَبُ",
+          "ar_plain": "المكتب",
+          "translit": "al-maktabu",
+          "en": "the desk (nominative)",
+          "ur": "ڈیسک (رفع)"
+        },
+        {
+          "ar": "الْمَكْتَبَ",
+          "ar_plain": "المكتب",
+          "translit": "al-maktaba",
+          "en": "the desk (accusative)",
+          "ur": "ڈیسک (نصب)"
+        },
+        {
+          "ar": "الْمَكْتَبُونَ",
+          "ar_plain": "المكتبون",
+          "translit": "al-maktaboona",
+          "en": "the desk (plural)",
+          "ur": "ڈیسکیں (جمع)"
+        }
       ],
       "correct_answer": {
         "ar": "الْمَكْتَبِ",
@@ -190,16 +227,56 @@
       "id": "ch55-l01-ex04",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "رَفَعٌ", "ar_plain": "رفع", "translit": "raf'u", "en": "nominative", "ur": "رفع" },
-        { "ar": "نَصَبٌ", "ar_plain": "نصب", "translit": "nasbu", "en": "accusative", "ur": "نصب" },
-        { "ar": "جَرٌّ", "ar_plain": "جر", "translit": "jarr", "en": "genitive", "ur": "جر" }
+        {
+          "ar": "رَفَعٌ",
+          "ar_plain": "رفع",
+          "translit": "raf'u",
+          "en": "nominative",
+          "ur": "رفع"
+        },
+        {
+          "ar": "نَصَبٌ",
+          "ar_plain": "نصب",
+          "translit": "nasbu",
+          "en": "accusative",
+          "ur": "نصب"
+        },
+        {
+          "ar": "جَرٌّ",
+          "ar_plain": "جر",
+          "translit": "jarr",
+          "en": "genitive",
+          "ur": "جر"
+        }
       ],
       "right_column": [
-        { "en": "subject (فَاعِل)", "ur": "فاعل" },
-        { "en": "direct object (مَفْعُول)", "ur": "مفعول" },
-        { "en": "after preposition (حرف جر)", "ur": "حرف جر کے بعد" }
+        {
+          "en": "subject (فَاعِل)",
+          "ur": "فاعل"
+        },
+        {
+          "en": "direct object (مَفْعُول)",
+          "ur": "مفعول"
+        },
+        {
+          "en": "after preposition (حرف جر)",
+          "ur": "حرف جر کے بعد"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "رفع = subject (فاعل). نصب = direct object (مفعول). جر = after prepositions (حروف جر).",
@@ -214,13 +291,48 @@
         "ur": "طالب علم استاد کے پاس گیا۔"
       },
       "tiles": [
-        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "went" },
-        { "ar": "الطَّالِبُ", "ar_plain": "الطالب", "translit": "at-taalibu", "en": "the student" },
-        { "ar": "إِلَى", "ar_plain": "الى", "translit": "ilaa", "en": "to" },
-        { "ar": "الْأُسْتَاذِ", "ar_plain": "الاستاذ", "translit": "al-ustaadhi", "en": "the teacher" },
-        { "ar": "الْمَسْجِدِ", "ar_plain": "المسجد", "translit": "al-masjidi", "en": "the masjid", "ur": "مسجد" }
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "چلا گیا"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "at-taalibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilaa",
+          "en": "to",
+          "ur": "کو"
+        },
+        {
+          "ar": "الْأُسْتَاذِ",
+          "ar_plain": "الاستاذ",
+          "translit": "al-ustaadhi",
+          "en": "the teacher",
+          "ur": "استاد"
+        },
+        {
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidi",
+          "en": "the masjid",
+          "ur": "مسجد"
+        }
       ],
-      "correct_order": [1, 0, 2, 3],
+      "correct_order": [
+        1,
+        0,
+        2,
+        3
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "The sentence structure is: الْطَّالِبُ (subject) + ذَهَبَ (verb) + إِلَى (preposition) + الْأُسْتَاذِ (genitive). The last tile is a distractor.",
@@ -234,13 +346,26 @@
         "ar": "مَا فِي الْبَيْتِ؟",
         "ar_plain": "ما في البيت",
         "translit": "maa fii al-bayti?",
-        "en": "What is in the house?"
+        "en": "What is in the house?",
+        "ur": "گھر میں کیا ہے؟"
       },
       "options": [
-        { "en": "What is in the house?", "ur": "گھر میں کیا ہے؟" },
-        { "en": "Where is the house?", "ur": "گھر کہاں ہے؟" },
-        { "en": "Who is in the house?", "ur": "گھر میں کون ہے؟" },
-        { "en": "What did the house do?", "ur": "گھر نے کیا کیا؟" }
+        {
+          "en": "What is in the house?",
+          "ur": "گھر میں کیا ہے؟"
+        },
+        {
+          "en": "Where is the house?",
+          "ur": "گھر کہاں ہے؟"
+        },
+        {
+          "en": "Who is in the house?",
+          "ur": "گھر میں کون ہے؟"
+        },
+        {
+          "en": "What did the house do?",
+          "ur": "گھر نے کیا کیا؟"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -271,13 +396,47 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "ذَهَبَ الْأَخُ إِلَى الْمَسْجِدِ",
       "words": [
-        { "ar": "ذَهَبَ", "ar_plain": "ذهب", "translit": "dhahaba", "en": "went" },
-        { "ar": "الْأَخُ", "ar_plain": "الاخ", "translit": "al-akhu", "en": "the brother" },
-        { "ar": "إِلَى", "ar_plain": "الى", "translit": "ilaa", "en": "to" },
-        { "ar": "الْمَسْجِدِ", "ar_plain": "المسجد", "translit": "al-masjidi", "en": "the masjid" }
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "چلا گیا"
+        },
+        {
+          "ar": "الْأَخُ",
+          "ar_plain": "الاخ",
+          "translit": "al-akhu",
+          "en": "the brother",
+          "ur": "بھائی"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilaa",
+          "en": "to",
+          "ur": "کو"
+        },
+        {
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidi",
+          "en": "the masjid",
+          "ur": "مسجد"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PREPOSITION", "OBJECT"],
-      "correct_roles": ["VERB", "SUBJECT", "PREPOSITION", "OBJECT"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PREPOSITION",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "PREPOSITION",
+        "OBJECT"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "ذَهَبَ = VERB. الْأَخُ = SUBJECT (nominative). إِلَى = PREPOSITION. الْمَسْجِدِ = OBJECT (genitive after the preposition).",
@@ -300,7 +459,9 @@
       "ur": "اور连续发送的风发誓。",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-mursalat-001-mishary.mp3"
     },
-    "highlighted_word_indices": [1],
+    "highlighted_word_indices": [
+      1
+    ],
     "noor_explanation": {
       "en": "عُقُبًا ends with a fatHa (ًـا) which marks it as مجرور (genitive). This is because وَالْمُرْسَلَاتِ is governed by وَ — the وَ is a حرف جر (preposition), so what follows takes the genitive ending.",
       "ur": "عُقُبًا کا ending ًـا ہے جو اسے مجرور (جر) دکھاتا ہے۔ وَالْمُرْسَلَاتِ کے بعد وَ ایک حرف جر ہے، تو اس کے بعد والا لفظ جر میں آتا ہے۔"

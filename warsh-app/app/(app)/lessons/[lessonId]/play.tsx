@@ -11,6 +11,8 @@ import { Fonts, WarshPalette } from "../../../../constants/theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
 import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
+import { pickLocalized, useLanguage } from "@services/language";
+import { useT } from "@i18n/index";
 
 // ---------------------------------------------------------------------------
 // API response shape — content is the raw warsh-content-schema v1.0 blob
@@ -18,6 +20,7 @@ import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from
 type RawLesson = {
   id: string;
   title: string;
+  titleUr?: string;
   titleAr?: string;
   xpReward: number;
   template: string;
@@ -45,6 +48,8 @@ type SelectedAnswer = string | string[] | Record<string, string> | null;
 // ---------------------------------------------------------------------------
 type MatchingPair = { left: string; right: string };
 type ParseToken   = { word: string; label: string; gloss?: string };
+type LessonLanguage = "en" | "ur";
+type TranslateFn = ReturnType<typeof useT>;
 
 // ---------------------------------------------------------------------------
 // Raw exercise helper functions — read warsh-content-schema v1.0 directly
@@ -53,29 +58,78 @@ type RawEx = Record<string, any>;
 
 function exType(ex: RawEx): string { return ex.type as string; }
 
-function exWrongExpl(ex: RawEx): string | undefined {
-  return ((ex.explanation_on_wrong as any)?.en ?? (ex.explanation as any)?.en) as string | undefined;
+function localizedText(value: any, language: "en" | "ur"): string | undefined {
+  if (!value) return undefined;
+  if (typeof value === "string") return value;
+  return pickLocalized(value.en as string | undefined, value.ur as string | undefined, language) || undefined;
 }
 
-function exPrompt(ex: RawEx): string | undefined {
-  const t = exType(ex);
-  if (t === "TAP_TRANSLATION") {
-    const direction = ex.direction as string | undefined;
-    const prompt = ex.prompt as any;
-    if (direction === "en_to_ar") return `Which Arabic means: "${prompt?.en as string}"?`;
-    return "What does this Arabic mean?";
+function exWrongExpl(ex: RawEx, language: "en" | "ur"): string | undefined {
+  return localizedText(ex.explanation_on_wrong, language) ?? localizedText(ex.explanation, language);
+}
+
+function roleLabel(role: string, t: TranslateFn): string {
+  switch (role) {
+    case "ADJECTIVE":
+      return t("player.roleAdjective");
+    case "CONJUNCTION":
+      return t("player.roleConjunction");
+    case "DEMONSTRATIVE":
+      return t("player.roleDemonstrative");
+    case "INTERJECTION":
+      return t("player.roleInterjection");
+    case "LITERARY_DEVICE":
+      return t("player.roleLiteraryDevice");
+    case "NOUN":
+      return t("player.roleNoun");
+    case "OBJECT":
+      return t("player.roleObject");
+    case "PARTICLE":
+      return t("player.roleParticle");
+    case "PLACE_ZARF":
+      return t("player.rolePlaceZarf");
+    case "POSSESSIVE":
+      return t("player.rolePossessive");
+    case "PREDICATE":
+      return t("player.rolePredicate");
+    case "PREPOSITION":
+      return t("player.rolePreposition");
+    case "PRONOUN":
+      return t("player.rolePronoun");
+    case "RELATIVE_PRONOUN":
+      return t("player.roleRelativePronoun");
+    case "SUBJECT":
+      return t("player.roleSubject");
+    case "TIME_ZARF":
+      return t("player.roleTimeZarf");
+    case "VERB":
+      return t("player.roleVerb");
+    case "VOCATIVE":
+      return t("player.roleVocative");
+    default:
+      return role;
   }
-  if (t === "TRUE_FALSE") return (ex.statement as any)?.en as string | undefined;
-  if (t === "FILL_BLANK") return (ex.hint as any)?.en as string | undefined;
-  if (t === "BUILD_SENTENCE") return (ex.target_translation as any)?.en as string | undefined;
-  if (t === "MATCHING") return "Match each Arabic word with its meaning.";
-  if (t === "MATCH_AYAH") return "What does this ayah fragment mean?";
-  if (t === "AUDIO_RECOGNITION") return "Listen carefully — what does this mean?";
-  if (t === "WRITE_ARABIC") return (ex.prompt as any)?.en as string | undefined;
-  if (t === "HARAKAH_PLACEMENT") return "Add the vowel marks (harakat) to this word:";
-  if (t === "WORD_ORDER") return (ex.context as any)?.en as string | undefined;
-  if (t === "TRANSLATE_TO_ARABIC") return (ex.source as any)?.en as string | undefined;
-  if (t === "IDENTIFY_ROOT") return "What is the 3-letter root (الجذر) of this word?";
+}
+
+function exPrompt(ex: RawEx, language: LessonLanguage, t: TranslateFn): string | undefined {
+  const type = exType(ex);
+  if (type === "TAP_TRANSLATION") {
+    if ((ex.direction as string | undefined) === "en_to_ar") {
+      return t("player.prompt.whichArabicMeans", { value: localizedText(ex.prompt, language) ?? "" });
+    }
+    return t("player.prompt.whatArabicMeans");
+  }
+  if (type === "TRUE_FALSE") return localizedText(ex.statement, language);
+  if (type === "FILL_BLANK") return localizedText(ex.hint, language);
+  if (type === "BUILD_SENTENCE") return localizedText(ex.target_translation, language);
+  if (type === "MATCHING") return t("player.prompt.matchArabicMeaning");
+  if (type === "MATCH_AYAH") return t("player.prompt.matchAyahMeaning");
+  if (type === "AUDIO_RECOGNITION") return t("player.prompt.audioMeaning");
+  if (type === "WRITE_ARABIC") return localizedText(ex.prompt, language);
+  if (type === "HARAKAH_PLACEMENT") return t("player.prompt.harakah");
+  if (type === "WORD_ORDER") return localizedText(ex.context, language);
+  if (type === "TRANSLATE_TO_ARABIC") return localizedText(ex.source, language);
+  if (type === "IDENTIFY_ROOT") return t("player.prompt.identifyRoot");
   return undefined;
 }
 
@@ -94,92 +148,98 @@ function exArabicText(ex: RawEx): string | undefined {
   return undefined;
 }
 
-function exOptions(ex: RawEx): string[] {
-  const t = exType(ex);
-  if (t === "TAP_TRANSLATION") {
+function exOptions(ex: RawEx, language: LessonLanguage, t: TranslateFn): string[] {
+  const type = exType(ex);
+  if (type === "TAP_TRANSLATION") {
     const opts = ex.options as Array<any> | undefined;
-    return opts ? opts.map((o) => o.en as string) : [];
+    if ((ex.direction as string | undefined) === "en_to_ar") {
+      return opts ? opts.map((o) => o.ar as string) : [];
+    }
+    return opts ? opts.map((o) => localizedText(o, language) ?? "") : [];
   }
-  if (t === "TRUE_FALSE") return ["True", "False"];
-  if (t === "FILL_BLANK") {
+  if (type === "TRUE_FALSE") return [t("common.true"), t("common.false")];
+  if (type === "FILL_BLANK") {
     const opts = ex.options as Array<any> | undefined;
     return opts ? opts.map((o) => o.ar as string) : [];
   }
-  if (t === "BUILD_SENTENCE") {
+  if (type === "BUILD_SENTENCE") {
     const tiles = ex.tiles as Array<any> | undefined;
-    return tiles ? tiles.map((t2) => t2.ar as string) : [];
+    return tiles ? tiles.map((tile) => tile.ar as string) : [];
   }
-  if (t === "MATCHING") {
+  if (type === "MATCHING") {
     const right = ex.right_column as Array<any> | undefined;
-    return right ? right.map((r) => r.en as string) : [];
+    return right ? right.map((item) => localizedText(item, language) ?? "") : [];
   }
-  if (t === "MATCH_AYAH") {
+  if (type === "MATCH_AYAH") {
     const opts = ex.options as Array<any> | undefined;
-    return opts ? opts.map((o) => o.en as string) : [];
+    return opts ? opts.map((o) => localizedText(o, language) ?? "") : [];
   }
-  if (t === "AUDIO_RECOGNITION") {
+  if (type === "AUDIO_RECOGNITION") {
     const opts = ex.options as Array<any> | undefined;
-    return opts ? opts.map((o) => o.en as string) : [];
+    return opts ? opts.map((o) => localizedText(o, language) ?? "") : [];
   }
-  if (t === "WORD_ORDER") {
+  if (type === "WORD_ORDER") {
     const tiles = ex.tiles as Array<any> | undefined;
-    return tiles ? tiles.map((t2) => t2.ar as string) : [];
+    return tiles ? tiles.map((tile) => tile.ar as string) : [];
   }
-  if (t === "TRANSLATE_TO_ARABIC") {
+  if (type === "TRANSLATE_TO_ARABIC") {
     const answers = ex.acceptable_answers as Array<any> | undefined;
-    return answers ? answers.map((a) => a.ar as string) : [];
+    return answers ? answers.map((answer) => answer.ar as string) : [];
   }
-  if (t === "IDENTIFY_ROOT") {
+  if (type === "IDENTIFY_ROOT") {
     return (ex.options as string[] | undefined) ?? [];
   }
   return [];
 }
 
-function exCorrectAnswer(ex: RawEx): string {
-  const t = exType(ex);
-  if (t === "TAP_TRANSLATION") {
+function exCorrectAnswer(ex: RawEx, language: LessonLanguage, t: TranslateFn): string {
+  const type = exType(ex);
+  if (type === "TAP_TRANSLATION") {
     const opts = ex.options as Array<any> | undefined;
     const idx = ex.correct_index as number | undefined;
-    if (opts && idx !== undefined) return opts[idx].en as string;
+    if (opts && idx !== undefined) {
+      if ((ex.direction as string | undefined) === "en_to_ar") return opts[idx].ar as string;
+      return localizedText(opts[idx], language) ?? "";
+    }
     return "";
   }
-  if (t === "TRUE_FALSE") {
-    return (ex.correct_answer as boolean | undefined) ? "True" : "False";
+  if (type === "TRUE_FALSE") {
+    return (ex.correct_answer as boolean | undefined) ? t("common.true") : t("common.false");
   }
-  if (t === "FILL_BLANK") return (ex.correct_answer as any)?.ar as string ?? "";
-  if (t === "BUILD_SENTENCE") {
+  if (type === "FILL_BLANK") return (ex.correct_answer as any)?.ar as string ?? "";
+  if (type === "BUILD_SENTENCE") {
     const tiles = ex.tiles as Array<any> | undefined;
     const order = ex.correct_order as number[] | undefined;
     if (tiles && order) return order.map((i) => tiles[i].ar as string).join(" ");
     return "";
   }
-  if (t === "MATCH_AYAH") {
+  if (type === "MATCH_AYAH") {
     const opts = ex.options as Array<any> | undefined;
     const idx = ex.correct_index as number | undefined;
-    if (opts && idx !== undefined) return opts[idx].en as string;
+    if (opts && idx !== undefined) return localizedText(opts[idx], language) ?? "";
     return "";
   }
-  if (t === "AUDIO_RECOGNITION") {
+  if (type === "AUDIO_RECOGNITION") {
     const opts = ex.options as Array<any> | undefined;
     const idx = ex.correct_index as number | undefined;
-    if (opts && idx !== undefined) return opts[idx].en as string;
+    if (opts && idx !== undefined) return localizedText(opts[idx], language) ?? "";
     return "";
   }
-  if (t === "WRITE_ARABIC") return (ex.correct_answer as any)?.ar as string ?? "";
-  if (t === "HARAKAH_PLACEMENT") return ex.correct_vowelled as string ?? "";
-  if (t === "WORD_ORDER") {
+  if (type === "WRITE_ARABIC") return (ex.correct_answer as any)?.ar as string ?? "";
+  if (type === "HARAKAH_PLACEMENT") return ex.correct_vowelled as string ?? "";
+  if (type === "WORD_ORDER") {
     const tiles = ex.tiles as Array<any> | undefined;
     const order = ex.correct_order as number[] | undefined;
     if (tiles && order) return order.map((i) => tiles[i].ar as string).join(" ");
     return "";
   }
-  if (t === "TRANSLATE_TO_ARABIC") {
+  if (type === "TRANSLATE_TO_ARABIC") {
     const answers = ex.acceptable_answers as Array<any> | undefined;
     const idx = ex.correct_index as number | undefined;
     if (answers && idx !== undefined) return answers[idx].ar as string;
     return "";
   }
-  if (t === "IDENTIFY_ROOT") {
+  if (type === "IDENTIFY_ROOT") {
     const opts = ex.options as string[] | undefined;
     const idx = ex.correct_index as number | undefined;
     if (opts && idx !== undefined) return opts[idx];
@@ -188,25 +248,29 @@ function exCorrectAnswer(ex: RawEx): string {
   return "";
 }
 
-function exPairs(ex: RawEx): MatchingPair[] {
-  const left  = ex.left_column  as Array<any> | undefined;
+function exPairs(ex: RawEx, language: LessonLanguage): MatchingPair[] {
+  const left = ex.left_column as Array<any> | undefined;
   const right = ex.right_column as Array<any> | undefined;
   const pairs = ex.correct_pairs as Array<[number, number]> | undefined;
   if (left && right && pairs) {
-    return pairs.map(([l, r]) => ({ left: left[l].ar as string, right: right[r].en as string }));
+    return pairs.map(([l, r]) => ({ left: left[l].ar as string, right: localizedText(right[r], language) ?? "" }));
   }
   return [];
 }
 
-function exParseTokens(ex: RawEx): ParseToken[] {
+function exParseTokens(ex: RawEx, language: LessonLanguage, t: TranslateFn): ParseToken[] {
   const words = ex.words as Array<any> | undefined;
   const roles = ex.correct_roles as string[] | undefined;
   if (!words || !roles) return [];
-  return words.map((w, i) => ({ word: w.ar as string, label: roles[i], gloss: w.en as string }));
+  return words.map((word, index) => ({
+    word: word.ar as string,
+    label: roleLabel(roles[index], t),
+    gloss: localizedText(word, language),
+  }));
 }
 
-function exLabels(ex: RawEx): string[] {
-  return (ex.available_roles as string[] | undefined) ?? [];
+function exLabels(ex: RawEx, t: TranslateFn): string[] {
+  return ((ex.available_roles as string[] | undefined) ?? []).map((role) => roleLabel(role, t));
 }
 
 // ---------------------------------------------------------------------------
@@ -237,44 +301,42 @@ function getSelectedText(selectedAnswer: SelectedAnswer) {
   return Array.isArray(selectedAnswer) ? selectedAnswer.join(" ") : selectedAnswer;
 }
 
-function isAnswerCorrect(ex: RawEx | undefined, selectedAnswer: SelectedAnswer): boolean {
+function isAnswerCorrect(ex: RawEx | undefined, selectedAnswer: SelectedAnswer, language: LessonLanguage, t: TranslateFn): boolean {
   if (!ex) return false;
 
   if (exType(ex) === "MATCHING") {
     if (!selectedAnswer || Array.isArray(selectedAnswer) || typeof selectedAnswer !== "object") return false;
-    return exPairs(ex).every((pair) => normalizeAnswer(selectedAnswer[pair.left]) === normalizeAnswer(pair.right));
+    return exPairs(ex, language).every((pair) => normalizeAnswer(selectedAnswer[pair.left]) === normalizeAnswer(pair.right));
   }
 
   if (exType(ex) === "GRAMMAR_PARSE") {
     if (!selectedAnswer || Array.isArray(selectedAnswer) || typeof selectedAnswer !== "object") return false;
-    return exParseTokens(ex).every((token) => normalizeAnswer(selectedAnswer[token.word]) === normalizeAnswer(token.label));
+    return exParseTokens(ex, language, t).every((token) => normalizeAnswer(selectedAnswer[token.word]) === normalizeAnswer(token.label));
   }
 
-  // Typed Arabic inputs — normalize harakat and alef variants
   if (exType(ex) === "WRITE_ARABIC" || exType(ex) === "HARAKAH_PLACEMENT") {
     const selText = getSelectedText(selectedAnswer) ?? "";
-    const correct = exCorrectAnswer(ex);
+    const correct = exCorrectAnswer(ex, language, t);
     return normalizeArabicAnswer(selText) === normalizeArabicAnswer(correct);
   }
 
-  // Any acceptable answer counts as correct
   if (exType(ex) === "TRANSLATE_TO_ARABIC") {
     const answers = ex.acceptable_answers as Array<any> | undefined;
     const selText = getSelectedText(selectedAnswer) ?? "";
-    return answers?.some((a) => normalizeArabicAnswer(a.ar as string) === normalizeArabicAnswer(selText)) ?? false;
+    return answers?.some((answer) => normalizeArabicAnswer(answer.ar as string) === normalizeArabicAnswer(selText)) ?? false;
   }
 
-  const correct = exCorrectAnswer(ex);
+  const correct = exCorrectAnswer(ex, language, t);
   const selText = getSelectedText(selectedAnswer) ?? "";
   if (containsArabic(selText) || containsArabic(correct)) return selText === correct;
   return normalizeAnswer(selText) === normalizeAnswer(correct);
 }
 
-function getCorrectAnswerDisplay(ex?: RawEx): string {
+function getCorrectAnswerDisplay(ex: RawEx | undefined, language: LessonLanguage, t: TranslateFn): string {
   if (!ex) return "";
-  if (exType(ex) === "MATCHING") return exPairs(ex).map((p) => `${p.left} = ${p.right}`).join(" | ");
-  if (exType(ex) === "GRAMMAR_PARSE") return exParseTokens(ex).map((t) => `${t.word} = ${t.label}`).join(" | ");
-  return exCorrectAnswer(ex);
+  if (exType(ex) === "MATCHING") return exPairs(ex, language).map((pair) => `${pair.left} = ${pair.right}`).join(" | ");
+  if (exType(ex) === "GRAMMAR_PARSE") return exParseTokens(ex, language, t).map((token) => `${token.word} = ${token.label}`).join(" | ");
+  return exCorrectAnswer(ex, language, t);
 }
 
 function renderMaybeArabic(value: string, arabicStyle: TextStyle = styles.optionArabicText, textStyle: TextStyle = styles.optionText) {
@@ -290,6 +352,8 @@ function renderMaybeArabic(value: string, arabicStyle: TextStyle = styles.option
 export default function LessonPlayScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const language = useLanguage();
+  const t = useT();
   const { lessonId } = useLocalSearchParams<{ lessonId: string }>();
   const [lesson, setLesson] = useState<RawLesson | null>(null);
   const [loading, setLoading] = useState(true);
@@ -319,26 +383,26 @@ export default function LessonPlayScreen() {
   const exercises     = (c.exercises ?? []) as Array<RawEx>;
   const currentExercise = exercises[currentExerciseIndex];
   const selectedText  = getSelectedText(selectedAnswer);
-  const answeredCorrectly = isAnswered && isAnswerCorrect(currentExercise, selectedAnswer);
+  const answeredCorrectly = isAnswered && isAnswerCorrect(currentExercise, selectedAnswer, language, t);
   const completedExerciseCount = Math.min(currentExerciseIndex + (isAnswered ? 1 : 0), exercises.length);
   const screenPadding = { paddingTop: insets.top + 16 };
 
   useEffect(() => {
     async function loadLesson() {
-      if (!lessonId) { setError("Invalid lesson."); setLoading(false); return; }
+      if (!lessonId) { setError(t("player.invalidLesson")); setLoading(false); return; }
       try {
         const response = await api.get(`/api/lessons/${lessonId}`);
         const raw = response.data.data.lesson as RawLesson;
         setLesson(raw);
         trackLessonStarted(lessonId, raw.template);
       } catch {
-        setError("Unable to load lesson.");
+        setError(t("player.loadError"));
       } finally {
         setLoading(false);
       }
     }
     void loadLesson();
-  }, [lessonId]);
+  }, [lessonId, t]);
 
   useEffect(() => {
     async function finishLesson() {
@@ -374,16 +438,16 @@ export default function LessonPlayScreen() {
         }
       } catch (err: any) {
         if (err.response?.status === 403) {
-          setError("This lesson is locked until earlier chapters are complete.");
+          setError(t("player.lessonLocked"));
         } else {
-          setError("Unable to complete lesson. Try again.");
+          setError(t("player.completeError"));
         }
       } finally {
         setSubmitting(false);
       }
     }
     void finishLesson();
-  }, [currentBeat, lessonId]);
+  }, [currentBeat, lessonId, lesson?.template, t]);
 
   function goToBeat(beat: number) {
     setCurrentBeat(beat);
@@ -415,7 +479,7 @@ export default function LessonPlayScreen() {
     if (isAnswered) return;
     setSelectedAnswer((current) => {
       const tiles = Array.isArray(current) ? current : [];
-      const expected = splitWords(exCorrectAnswer(currentExercise)).length;
+      const expected = splitWords(exCorrectAnswer(currentExercise, language, t)).length;
       if (tiles.length >= expected) return tiles;
       return [...tiles, option];
     });
@@ -431,7 +495,7 @@ export default function LessonPlayScreen() {
 
   function getOptionStyle(option: string) {
     if (!isAnswered) return styles.optionButton;
-    const correct = exCorrectAnswer(currentExercise);
+    const correct = exCorrectAnswer(currentExercise, language, t);
     const isCorrect = containsArabic(option) || containsArabic(correct)
       ? option === correct
       : normalizeAnswer(option) === normalizeAnswer(correct);
@@ -442,7 +506,7 @@ export default function LessonPlayScreen() {
 
   function getOptionTextStyle(option: string) {
     if (!isAnswered) return containsArabic(option) ? styles.optionArabicText : styles.optionText;
-    const correct = exCorrectAnswer(currentExercise);
+    const correct = exCorrectAnswer(currentExercise, language, t);
     const isCorrect = containsArabic(option) || containsArabic(correct)
       ? option === correct
       : normalizeAnswer(option) === normalizeAnswer(correct);
@@ -463,23 +527,23 @@ export default function LessonPlayScreen() {
 
   function renderFeedback() {
     if (!isAnswered || !currentExercise) return null;
-    const wrongExpl = exWrongExpl(currentExercise);
-    const arabicForDisplay = exArabicText(currentExercise) ?? exCorrectAnswer(currentExercise);
+    const wrongExpl = exWrongExpl(currentExercise, language);
+    const arabicForDisplay = exArabicText(currentExercise) ?? exCorrectAnswer(currentExercise, language, t);
     return (
       <View style={[styles.feedbackBar, answeredCorrectly ? styles.feedbackCorrect : styles.feedbackWrong]}>
         {answeredCorrectly ? (
           <>
             <ArabicText size="sm" style={styles.feedbackArabic}>بارك الله فيك</ArabicText>
-            <Text style={styles.feedbackExplanation}>You recognised the pattern and chose the right answer.</Text>
+            <Text style={styles.feedbackExplanation}>{t("player.feedback.correct")}</Text>
           </>
         ) : (
           <>
-            <Text style={styles.feedbackWrongTitle}>Almost - let's look at this again</Text>
+            <Text style={styles.feedbackWrongTitle}>{t("player.feedback.almost")}</Text>
             {wrongExpl ? <Text style={[styles.feedbackExplanation, styles.feedbackWrongExplanation]}>{wrongExpl}</Text> : null}
             {containsArabic(arabicForDisplay) ? (
-              <ArabicText size="sm" style={styles.feedbackCorrectAnswerArabic}>{getCorrectAnswerDisplay(currentExercise)}</ArabicText>
+              <ArabicText size="sm" style={styles.feedbackCorrectAnswerArabic}>{getCorrectAnswerDisplay(currentExercise, language, t)}</ArabicText>
             ) : (
-              <Text style={styles.feedbackCorrectAnswerText}>{getCorrectAnswerDisplay(currentExercise)}</Text>
+              <Text style={styles.feedbackCorrectAnswerText}>{getCorrectAnswerDisplay(currentExercise, language, t)}</Text>
             )}
           </>
         )}
@@ -505,7 +569,7 @@ export default function LessonPlayScreen() {
   // ---- Option grid (TAP_TRANSLATION, TRUE_FALSE) ----
 
   function renderOptionGrid() {
-    const options = exOptions(currentExercise ?? {});
+    const options = exOptions(currentExercise ?? {}, language, t);
     return (
       <View style={styles.optionGrid}>
         {options.map((option) => (
@@ -538,7 +602,7 @@ export default function LessonPlayScreen() {
           <TextInput
             value={typedValue}
             onChangeText={(text) => { if (!isAnswered) setSelectedAnswer(text); }}
-            placeholder="اكتب هنا"
+            placeholder={t("player.writePlaceholder")}
             placeholderTextColor={WarshPalette.subtleBrown}
             style={styles.writeArabicInput}
             autoCorrect={false}
@@ -548,15 +612,15 @@ export default function LessonPlayScreen() {
           />
           {hintAvailable && !writeHintShown && !isAnswered ? (
             <Pressable onPress={() => setWriteHintShown(true)} style={styles.hintButton} hitSlop={8}>
-              <Text style={styles.hintButtonText}>Show hint</Text>
+              <Text style={styles.hintButtonText}>{t("player.showHint")}</Text>
             </Pressable>
           ) : null}
           {writeHintShown && firstLetter ? (
-            <Text style={styles.hintRevealText}>Starts with: <Text style={styles.hintRevealLetter}>{firstLetter}</Text></Text>
+            <Text style={styles.hintRevealText}>{t("player.startsWith")} <Text style={styles.hintRevealLetter}>{firstLetter}</Text></Text>
           ) : null}
         </View>
         <BrandButton
-          title="Check"
+          title={t("common.check")}
           onPress={() => { if (hasInput) answerExercise(typedValue.trim()); }}
           disabled={isAnswered || !hasInput}
           style={styles.bottomButton}
@@ -568,7 +632,7 @@ export default function LessonPlayScreen() {
   // ---- HARAKAH_PLACEMENT ----
 
   function renderHarakahPlacement() {
-    const hint = (currentExercise?.hint as any)?.en as string | undefined;
+    const hint = localizedText(currentExercise?.hint, language);
     const typedValue = typeof selectedAnswer === "string" ? selectedAnswer : "";
     const hasInput = typedValue.trim().length > 0;
 
@@ -579,7 +643,7 @@ export default function LessonPlayScreen() {
           <TextInput
             value={typedValue}
             onChangeText={(text) => { if (!isAnswered) setSelectedAnswer(text); }}
-            placeholder="أضف الحركات..."
+            placeholder={t("player.harakahPlaceholder")}
             placeholderTextColor={WarshPalette.subtleBrown}
             style={[styles.writeArabicInput, styles.harakahInput]}
             autoCorrect={false}
@@ -589,7 +653,7 @@ export default function LessonPlayScreen() {
           />
         </View>
         <BrandButton
-          title="Check"
+          title={t("common.check")}
           onPress={() => { if (hasInput) answerExercise(typedValue.trim()); }}
           disabled={isAnswered || !hasInput}
           style={styles.bottomButton}
@@ -615,10 +679,10 @@ export default function LessonPlayScreen() {
                 size={48}
                 autoPlay={true}
               />
-              <Text style={styles.audioRecognitionHint}>Tap to replay</Text>
+              <Text style={styles.audioRecognitionHint}>{t("player.audioReplay")}</Text>
             </View>
           ) : (
-            <Text style={styles.hookQuestion}>Audio not available for this exercise.</Text>
+            <Text style={styles.hookQuestion}>{t("player.audioUnavailable")}</Text>
           )}
         </View>
         {renderOptionGrid()}
@@ -630,13 +694,13 @@ export default function LessonPlayScreen() {
 
   function renderBuildSentence() {
     const selectedTiles = Array.isArray(selectedAnswer) ? selectedAnswer : [];
-    const slots = splitWords(exCorrectAnswer(currentExercise ?? {}));
+    const slots = splitWords(exCorrectAnswer(currentExercise ?? {}, language, t));
     const canCheck = selectedTiles.length === slots.length && !isAnswered;
-    const options = exOptions(currentExercise ?? {});
+    const options = exOptions(currentExercise ?? {}, language, t);
 
     return (
       <>
-        <View style={[styles.answerRow, isAnswered ? (answeredCorrectly ? styles.answerRowCorrect : styles.answerRowWrong) : null, containsArabic(exCorrectAnswer(currentExercise ?? {})) ? styles.answerRowRtl : null]}>
+        <View style={[styles.answerRow, isAnswered ? (answeredCorrectly ? styles.answerRowCorrect : styles.answerRowWrong) : null, containsArabic(exCorrectAnswer(currentExercise ?? {}, language, t)) ? styles.answerRowRtl : null]}>
           {slots.map((slot, index) => {
             const tile = selectedTiles[index];
             return (
@@ -665,7 +729,7 @@ export default function LessonPlayScreen() {
             </Pressable>
           ))}
         </View>
-        {canCheck ? <BrandButton title="Check" onPress={checkBuildSentence} style={styles.bottomButton} /> : null}
+        {canCheck ? <BrandButton title={t("common.check")} onPress={checkBuildSentence} style={styles.bottomButton} /> : null}
       </>
     );
   }
@@ -673,8 +737,8 @@ export default function LessonPlayScreen() {
   // ---- MATCHING ----
 
   function renderMatching() {
-    const pairs = exPairs(currentExercise ?? {});
-    const choices = exOptions(currentExercise ?? {});
+    const pairs = exPairs(currentExercise ?? {}, language);
+    const choices = exOptions(currentExercise ?? {}, language, t);
     const selectedMap = !Array.isArray(selectedAnswer) && selectedAnswer && typeof selectedAnswer === "object" ? selectedAnswer : {};
     const canCheck = pairs.length > 0 && pairs.every((pair) => selectedMap[pair.left]) && !isAnswered;
 
@@ -705,7 +769,7 @@ export default function LessonPlayScreen() {
             </View>
           ))}
         </ScrollView>
-        {canCheck ? <BrandButton title="Check" onPress={() => answerExercise(selectedMap)} style={styles.bottomButton} /> : null}
+        {canCheck ? <BrandButton title={t("common.check")} onPress={() => answerExercise(selectedMap)} style={styles.bottomButton} /> : null}
       </>
     );
   }
@@ -713,9 +777,9 @@ export default function LessonPlayScreen() {
   // ---- GRAMMAR_PARSE ----
 
   function renderGrammarParse() {
-    const tokens = exParseTokens(currentExercise ?? {});
-    const labels = exLabels(currentExercise ?? {}).length > 0
-      ? exLabels(currentExercise ?? {})
+    const tokens = exParseTokens(currentExercise ?? {}, language, t);
+    const labels = exLabels(currentExercise ?? {}, t).length > 0
+      ? exLabels(currentExercise ?? {}, t)
       : Array.from(new Set(tokens.map((t) => t.label)));
     const selectedMap = !Array.isArray(selectedAnswer) && selectedAnswer && typeof selectedAnswer === "object" ? selectedAnswer : {};
     const canCheck = tokens.length > 0 && tokens.every((t) => selectedMap[t.word]) && !isAnswered;
@@ -727,7 +791,7 @@ export default function LessonPlayScreen() {
             {tokens.map((token) => (
               <View key={token.word} style={styles.parseToken}>
                 <ArabicText size="sm" style={styles.parseWord}>{token.word}</ArabicText>
-                <Text style={styles.parseGloss}>{selectedMap[token.word] ?? token.gloss ?? "Choose role"}</Text>
+                <Text style={styles.parseGloss}>{selectedMap[token.word] ?? token.gloss ?? t("player.chooseRole")}</Text>
               </View>
             ))}
           </View>
@@ -758,7 +822,7 @@ export default function LessonPlayScreen() {
             </View>
           ))}
         </ScrollView>
-        {canCheck ? <BrandButton title="Check" onPress={() => answerExercise(selectedMap)} style={styles.bottomButton} /> : null}
+        {canCheck ? <BrandButton title={t("common.check")} onPress={() => answerExercise(selectedMap)} style={styles.bottomButton} /> : null}
       </>
     );
   }
@@ -791,7 +855,7 @@ export default function LessonPlayScreen() {
   function renderHook() {
     const hook = c.hook as Record<string, any> | undefined;
     const ayah = hook?.ayah as Record<string, any> | undefined;
-    const noorIntroEn = (hook?.noor_intro as Record<string, any> | undefined)?.en as string | undefined;
+    const noorIntro = localizedText(hook?.noor_intro, language);
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
@@ -799,9 +863,9 @@ export default function LessonPlayScreen() {
           {ayah?.ar ? <ArabicText size="lg" style={styles.hookAyah}>{ayah.ar as string}</ArabicText> : null}
           {ayah?.label ? <Text style={styles.ayahRef}>{ayah.label as string}</Text> : null}
           <View style={styles.divider} />
-          {noorIntroEn ? <Text style={styles.hookQuestion}>{noorIntroEn}</Text> : null}
+          {noorIntro ? <Text style={styles.hookQuestion}>{noorIntro}</Text> : null}
         </View>
-        <BrandButton title="I want to understand this" onPress={() => goToBeat(2)} style={styles.bottomButton} />
+        <BrandButton title={t("player.hookCta")} onPress={() => goToBeat(2)} style={styles.bottomButton} />
       </View>
     );
   }
@@ -829,20 +893,20 @@ export default function LessonPlayScreen() {
 
       if (cardType === "GRAMMAR_NOTE") {
         arabicText    = titleObj?.ar as string | undefined;
-        translation   = titleObj?.en as string | undefined;
-        explanation   = bodyObj?.en  as string | undefined;
+        translation   = localizedText(titleObj, language);
+        explanation   = localizedText(bodyObj, language);
       } else if (cardType === "SENTENCE") {
         arabicText    = text?.ar     as string | undefined;
-        translation   = text?.en     as string | undefined;
+        translation   = localizedText(text, language);
         transliteration = text?.translit as string | undefined;
       } else {
         arabicText    = (text?.ar ?? concept?.ar) as string | undefined;
-        translation   = (text?.en ?? concept?.en) as string | undefined;
+        translation   = localizedText(text ?? concept, language);
         transliteration = text?.translit as string | undefined;
         const exampleLine = !text && examples?.[0]
-          ? `${examples[0].ar as string} — ${examples[0].en as string}`
+          ? `${examples[0].ar as string} — ${localizedText(examples[0], language) ?? ""}`
           : undefined;
-        explanation   = (expl?.en ?? exampleLine) as string | undefined;
+        explanation   = localizedText(expl, language) ?? exampleLine;
       }
     }
 
@@ -859,7 +923,7 @@ export default function LessonPlayScreen() {
           >
             <Text style={styles.backChevron}>‹</Text>
           </Pressable>
-          <Text style={styles.discoverProgress}>{currentCardIndex + 1} of {discoverCards.length}</Text>
+          <Text style={styles.discoverProgress}>{t("player.discoverOf", { current: currentCardIndex + 1, total: discoverCards.length })}</Text>
           <View style={styles.backButtonSpacer} />
         </View>
 
@@ -878,7 +942,7 @@ export default function LessonPlayScreen() {
         </View>
 
         <BrandButton
-          title={isLastCard ? "Start practising" : "Next"}
+          title={isLastCard ? t("player.startPractising") : t("common.next")}
           onPress={() => {
             if (isLastCard) goToBeat(3);
             else setCurrentCardIndex((i) => i + 1);
@@ -900,7 +964,7 @@ export default function LessonPlayScreen() {
         <ShadowRepeatExercise
           arabic={phrase?.ar as string ?? ""}
           transliteration={phrase?.translit as string | undefined}
-          translation={phrase?.en as string | undefined}
+          translation={localizedText(phrase, language)}
           onComplete={(recorded) => {
             if (recorded) phrasesCompletedRef.current += 1;
             goToNextExercise();
@@ -921,7 +985,7 @@ export default function LessonPlayScreen() {
   }
 
   function renderPractice() {
-    const prompt    = exPrompt(currentExercise ?? {});
+    const prompt    = exPrompt(currentExercise ?? {}, language, t);
     const arabicTxt = exArabicText(currentExercise ?? {});
 
     return (
@@ -966,18 +1030,18 @@ export default function LessonPlayScreen() {
   function renderReveal() {
     const reveal    = c.reveal as Record<string, any> | undefined;
     const ayah      = reveal?.ayah as Record<string, any> | undefined;
-    const noorExpl  = (reveal?.noor_explanation as Record<string, any> | undefined)?.en as string | undefined;
+    const noorExpl  = localizedText(reveal?.noor_explanation, language);
 
     return (
       <View style={[styles.fullScreen, screenPadding, styles.revealScreen]}>
         <View style={styles.revealContent}>
-          <Text style={styles.revealHeading}>Without realising it...</Text>
+          <Text style={styles.revealHeading}>{t("player.revealHeading")}</Text>
           {noorExpl ? <Text style={styles.revealText}>{noorExpl}</Text> : null}
           <View style={styles.divider} />
           {renderRevealAyah()}
           {ayah?.label ? <Text style={styles.ayahRef}>{ayah.label as string}</Text> : null}
         </View>
-        <BrandButton title="Continue" onPress={() => goToBeat(5)} style={styles.bottomButton} />
+        <BrandButton title={t("common.continue")} onPress={() => goToBeat(5)} style={styles.bottomButton} />
       </View>
     );
   }
@@ -991,12 +1055,15 @@ export default function LessonPlayScreen() {
     const shouldShowStreakCelebration = Boolean(completionResult?.streakCelebration);
     const isSpoken = lesson?.template === "SPOKEN_PHRASES";
     const phrasesLearned = phrasesCompletedRef.current;
+    const spokenPhraseCount = phrasesLearned > 0 ? phrasesLearned : 1;
 
     const closeBlock = c.close as Record<string, any> | undefined;
     const noorTip = isSpoken
-      ? `Barak Allahu feek.\nYou can now say ${phrasesLearned > 0 ? phrasesLearned : "new"} phrase${phrasesLearned !== 1 ? "s" : ""}.\nSpeak them when you can, in shaa Allah.`
-      : (closeBlock?.noor_message as Record<string, any> | undefined)?.en as string | undefined
-        ?? "Tonight, open the Quran and look for the pattern you learned today. You will see the ayah differently now.";
+      ? t("player.closeSpokenTip", {
+          count: spokenPhraseCount,
+          suffix: spokenPhraseCount !== 1 ? "s" : "",
+        })
+      : localizedText(closeBlock?.noor_message, language) ?? t("player.closeDefaultTip");
 
     const floatingLetters = [
       { char: "أ",  top:  70, left:  30, size: 34, opacity: 0.55, color: "#9A8F6A" },
@@ -1039,8 +1106,8 @@ export default function LessonPlayScreen() {
         <View style={styles.closeCenter}>
           {error ? <Text style={styles.errorText}>{error}</Text> : null}
           <View style={styles.completeCard}>
-            <Text style={styles.completeCardTitle}>Lesson Complete!</Text>
-            <Text style={styles.xpBadge}>+{earnedPoints} pts</Text>
+            <Text style={styles.completeCardTitle}>{t("player.lessonComplete")}</Text>
+            <Text style={styles.xpBadge}>{t("player.pointsEarned", { count: earnedPoints })}</Text>
           </View>
           <View style={styles.noorAvatar}>
             <View style={styles.noorAvatarEyes}>
@@ -1052,12 +1119,12 @@ export default function LessonPlayScreen() {
           <ArabicText size="md" style={styles.closeArabic}>بارك الله فيك</ArabicText>
           {completionResult?.chapterJustCompleted ? (
             <Text style={styles.chapterUnlockedBadge}>
-              {completionResult.showPaywall ? "Chapter 1 complete — subscribe to continue" : "Next chapter unlocked"}
+              {completionResult.showPaywall ? t("player.chapterCompletePaywall") : t("player.nextChapterUnlocked")}
             </Text>
           ) : null}
           {isSpoken && phrasesLearned > 0 ? (
             <Text style={styles.spPhrasesEarned}>
-              {phrasesLearned} phrase{phrasesLearned !== 1 ? "s" : ""} learned to say
+              {t("player.phrasesToSay", { count: phrasesLearned, suffix: phrasesLearned !== 1 ? "s" : "" })}
             </Text>
           ) : null}
         </View>
@@ -1068,7 +1135,7 @@ export default function LessonPlayScreen() {
         </View>
 
         <BrandButton
-          title="Continue"
+          title={t("common.continue")}
           onPress={() => {
             const achievements = completionResult?.newAchievements ?? [];
             const shouldPaywall = completionResult?.showPaywall ?? false;
@@ -1096,17 +1163,18 @@ export default function LessonPlayScreen() {
     const sp    = c.spoken_phrases as Record<string, any> | undefined;
     const scene = sp?.scene as Record<string, any> | undefined;
     const titleAr = scene?.ar as string | undefined;
-    const titleEn = scene?.en as string | undefined;
+    const titleText = localizedText(scene, language);
+    const contextBody = localizedText(sp?.context_body, language);
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
         <View style={styles.centerStack}>
           {titleAr ? <ArabicText size="lg" style={styles.hookAyah}>{titleAr}</ArabicText> : null}
-          {titleEn ? <Text style={styles.spContextTitleEn}>{titleEn}</Text> : null}
+          {titleText ? <Text style={styles.spContextTitleEn}>{titleText}</Text> : null}
           <View style={styles.divider} />
-          {sp?.context_body ? <Text style={styles.hookQuestion}>{sp.context_body as string}</Text> : null}
+          {contextBody ? <Text style={styles.hookQuestion}>{contextBody}</Text> : null}
         </View>
-        <BrandButton title="Begin" onPress={() => goToBeat(2)} style={styles.bottomButton} />
+        <BrandButton title={t("common.begin")} onPress={() => goToBeat(2)} style={styles.bottomButton} />
       </View>
     );
   }
@@ -1139,19 +1207,19 @@ export default function LessonPlayScreen() {
     const phrase = phraseRow?.phrase as Record<string, any> | undefined;
     const arabicPhrase = phrase?.ar as string ?? "";
     const translit     = phrase?.translit as string | undefined;
-    const translation  = phrase?.en as string ?? "";
+    const translation  = localizedText(phrase, language) ?? "";
 
     // Build recognition options: correct translation + up to 3 others from sibling phrases
     const recognitionOptions: string[] = phrases.length >= 2
-      ? [translation, ...phrases.filter((_, i) => i !== spPhraseIdx).map((p) => ((p.phrase as any)?.en as string) ?? "").filter(Boolean)].slice(0, 4)
+      ? [translation, ...phrases.filter((_, i) => i !== spPhraseIdx).map((p) => localizedText(p.phrase, language) ?? "").filter(Boolean)].slice(0, 4)
       : [];
     const hasRecognition = recognitionOptions.length >= 2;
 
     if (!phraseRow) {
       return (
         <View style={[styles.fullScreen, screenPadding]}>
-          <View style={styles.centerStack}><Text style={styles.hookQuestion}>No phrases available.</Text></View>
-          <BrandButton title="Continue" onPress={() => goToBeat(3)} style={styles.bottomButton} />
+          <View style={styles.centerStack}><Text style={styles.hookQuestion}>{t("player.practiceNoPhrases")}</Text></View>
+          <BrandButton title={t("common.continue")} onPress={() => goToBeat(3)} style={styles.bottomButton} />
         </View>
       );
     }
@@ -1159,7 +1227,7 @@ export default function LessonPlayScreen() {
     if (spPhraseStep === "intro") {
       return (
         <View style={[styles.fullScreen, screenPadding]}>
-          <Text style={styles.spPhraseCounter}>{spPhraseIdx + 1} of {total}</Text>
+          <Text style={styles.spPhraseCounter}>{t("player.discoverOf", { current: spPhraseIdx + 1, total })}</Text>
           <View style={styles.spPhraseCard}>
             <ArabicText size="xl" style={styles.spPhraseArabic}>{arabicPhrase}</ArabicText>
             {translit ? <Text style={styles.discoverTransliteration}>{translit}</Text> : null}
@@ -1168,7 +1236,7 @@ export default function LessonPlayScreen() {
               <PlayButton text={arabicPhrase} cacheKey={`sp-${spPhraseIdx}`} category="phrases" size={22} />
             </View>
           </View>
-          <BrandButton title="Now I'll try" onPress={() => setSpPhraseStep("shadow")} style={styles.bottomButton} />
+          <BrandButton title={t("player.nowIllTry")} onPress={() => setSpPhraseStep("shadow")} style={styles.bottomButton} />
         </View>
       );
     }
@@ -1176,7 +1244,7 @@ export default function LessonPlayScreen() {
     if (spPhraseStep === "shadow") {
       return (
         <View style={[styles.fullScreen, screenPadding]}>
-          <Text style={styles.spPhraseCounter}>{spPhraseIdx + 1} of {total} · Speaking</Text>
+          <Text style={styles.spPhraseCounter}>{t("player.discoverOf", { current: spPhraseIdx + 1, total })} · {t("player.speaking")}</Text>
           <ShadowRepeatExercise
             arabic={arabicPhrase}
             transliteration={translit}
@@ -1194,10 +1262,10 @@ export default function LessonPlayScreen() {
     if (spPhraseStep === "recognition") {
       return (
         <View style={[styles.fullScreen, screenPadding]}>
-          <Text style={styles.spPhraseCounter}>{spPhraseIdx + 1} of {total} · Meaning check</Text>
+          <Text style={styles.spPhraseCounter}>{t("player.discoverOf", { current: spPhraseIdx + 1, total })} · {t("player.meaningCheck")}</Text>
           <View style={styles.centerStack}>
             <ArabicText size="lg" style={styles.spPhraseArabic}>{arabicPhrase}</ArabicText>
-            <Text style={[styles.hookQuestion, { marginTop: 16 }]}>What does this mean?</Text>
+            <Text style={[styles.hookQuestion, { marginTop: 16 }]}>{t("player.whatDoesThisMean")}</Text>
           </View>
           <View style={styles.optionGrid}>
             {recognitionOptions.map((opt) => {
@@ -1230,11 +1298,11 @@ export default function LessonPlayScreen() {
       return (
         <View style={[styles.fullScreen, screenPadding]}>
           <View style={styles.centerStack}>
-            <Text style={styles.spPhraseCompleteCount}>{completed} of {total} phrases learned</Text>
+            <Text style={styles.spPhraseCompleteCount}>{t("player.phrasesLearnedCount", { current: completed, total })}</Text>
             <ArabicText size="lg" style={styles.closeArabic}>{arabicPhrase}</ArabicText>
             <Text style={[styles.hookQuestion, { marginTop: 8 }]}>{translation}</Text>
           </View>
-          <BrandButton title={completed < total ? "Next phrase" : "Continue"} onPress={advanceSpPhrase} style={styles.bottomButton} />
+          <BrandButton title={completed < total ? t("player.nextPhrase") : t("common.continue")} onPress={advanceSpPhrase} style={styles.bottomButton} />
         </View>
       );
     }
@@ -1249,12 +1317,12 @@ export default function LessonPlayScreen() {
     const dialogue = (sp?.dialogue as Array<Record<string, any>> | undefined) ?? [];
     const lines = dialogue.map((line) => {
       const phrase = phraseMap.get(line.phrase_id as string);
-      return { speaker: line.speaker as string ?? "", ar: phrase?.ar as string ?? "", en: phrase?.en as string | undefined };
+      return { speaker: line.speaker as string ?? "", ar: phrase?.ar as string ?? "", en: localizedText(phrase, language) };
     });
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
-        <Text style={styles.spContextTitleEn}>Mini-dialogue</Text>
+        <Text style={styles.spContextTitleEn}>{t("player.miniDialogue")}</Text>
         <ScrollView style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
           <View style={styles.dialogueCard}>
             {lines.map((line, i) => (
@@ -1264,10 +1332,10 @@ export default function LessonPlayScreen() {
                 {line.en ? <Text style={styles.discoverTranslation}>{line.en}</Text> : null}
               </View>
             ))}
-            {lines.length === 0 ? <Text style={styles.hookQuestion}>Dialogue coming soon, in shaa Allah.</Text> : null}
+            {lines.length === 0 ? <Text style={styles.hookQuestion}>{t("player.dialogueSoon")}</Text> : null}
           </View>
         </ScrollView>
-        <BrandButton title="Continue" onPress={() => goToBeat(5)} style={styles.bottomButton} />
+        <BrandButton title={t("common.continue")} onPress={() => goToBeat(5)} style={styles.bottomButton} />
       </View>
     );
   }
@@ -1283,18 +1351,18 @@ export default function LessonPlayScreen() {
         <View style={[styles.fullScreen, screenPadding]}>
           <View style={styles.centerStack}>
             <View style={styles.verbPatternFallbackCard}>
-              <Text style={styles.hookQuestion}>Verb pattern content coming soon.</Text>
+              <Text style={styles.hookQuestion}>{t("player.verbPatternSoon")}</Text>
             </View>
           </View>
-          <BrandButton title="Continue" onPress={() => goToBeat(3)} style={styles.bottomButton} />
+          <BrandButton title={t("common.continue")} onPress={() => goToBeat(3)} style={styles.bottomButton} />
         </View>
       );
     }
 
     const patternNode = table.pattern_name as Record<string, any> | undefined;
-    const patternNameEn = patternNode?.en as string | undefined;
+    const patternName = localizedText(patternNode, language);
     const patternNameAr = patternNode?.ar as string | undefined;
-    const patternDisplayEn = patternNameEn?.split("—")[0]?.trim();
+    const patternDisplay = patternName ?? undefined;
 
     return (
       <ScrollView style={styles.verbPatternScreen} contentContainerStyle={[styles.verbPatternContent, screenPadding]} showsVerticalScrollIndicator={false}>
@@ -1309,10 +1377,10 @@ export default function LessonPlayScreen() {
           <Text style={styles.verbBaseForm}>{(rows[0].conjugated as Record<string, any>)?.ar as string}</Text>
         ) : null}
 
-        {(patternDisplayEn || patternNameAr) ? (
+        {(patternDisplay || patternNameAr) ? (
           <View style={styles.verbPatternNameRow}>
-            {patternDisplayEn ? <Text style={styles.verbBaseMeaning}>{patternDisplayEn}</Text> : null}
-            {patternDisplayEn && patternNameAr ? <Text style={styles.verbBaseMeaningSep}> — </Text> : null}
+            {patternDisplay ? <Text style={styles.verbBaseMeaning}>{patternDisplay}</Text> : null}
+            {patternDisplay && patternNameAr ? <Text style={styles.verbBaseMeaningSep}> - </Text> : null}
             {patternNameAr ? <ArabicText size="sm" style={styles.verbPatternNameAr}>{patternNameAr}</ArabicText> : null}
           </View>
         ) : null}
@@ -1325,7 +1393,7 @@ export default function LessonPlayScreen() {
               <View key={`row-${index}`} style={[styles.verbTableRow, index < rows.length - 1 ? styles.verbTableRowBorder : null]}>
                 <View style={styles.verbTableLeft}>
                   <Text style={styles.verbPronounAr}>{pronoun?.ar as string}</Text>
-                  <Text style={styles.verbPronounEn}> ({pronoun?.en as string})</Text>
+                  <Text style={styles.verbPronounEn}> ({localizedText(pronoun, language)})</Text>
                 </View>
                 <Text style={styles.verbConjugatedForm}>{conjugated?.ar as string}</Text>
               </View>
@@ -1333,7 +1401,7 @@ export default function LessonPlayScreen() {
           })}
         </View>
 
-        <BrandButton title="Continue" onPress={() => goToBeat(3)} style={StyleSheet.flatten([styles.bottomButton, styles.verbPatternContinueButton])} />
+        <BrandButton title={t("common.continue")} onPress={() => goToBeat(3)} style={StyleSheet.flatten([styles.bottomButton, styles.verbPatternContinueButton])} />
       </ScrollView>
     );
   }
@@ -1351,7 +1419,7 @@ export default function LessonPlayScreen() {
   if (!lesson) {
     return (
       <View style={styles.loadingScreen}>
-        <Text style={styles.errorText}>{error ?? "Lesson not found."}</Text>
+        <Text style={styles.errorText}>{error ?? t("player.lessonNotFound")}</Text>
       </View>
     );
   }

@@ -21,6 +21,7 @@ import {
   cancelAllNotifications,
 } from "@services/notifications";
 import { isSentrySmokeTestEnabled, sendSentrySmokeTest } from "@services/sentry";
+import { useT } from "@i18n/index";
 
 // AsyncStorage keys for local preferences
 const PREFS_KEY = "warsh_settings";
@@ -148,6 +149,7 @@ export default function SettingsScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const clearSession = useAuthStore((s) => s.clearSession);
+  const t = useT();
 
   const [prefs, setPrefs] = useState<Prefs>(DEFAULT_PREFS);
   const [dailyGoalMinutes, setDailyGoalMinutes] = useState(10);
@@ -209,12 +211,12 @@ export default function SettingsScreen() {
 
   async function handleDeleteAccount() {
     Alert.alert(
-      "Delete account",
-      "This permanently deletes your account, all progress, streaks, and vocabulary data. This cannot be undone.",
+      t("settings.deleteAccountTitle"),
+      t("settings.deleteAccountBody"),
       [
-        { text: "Cancel", style: "cancel" },
+        { text: t("common.cancel"), style: "cancel" },
         {
-          text: "Delete permanently",
+          text: t("settings.deleteAccountConfirm"),
           style: "destructive",
           onPress: async () => {
             try {
@@ -222,7 +224,7 @@ export default function SettingsScreen() {
               await cancelAllNotifications();
               await clearSession();
             } catch {
-              Alert.alert("Error", "Could not delete account. Please try again.");
+              Alert.alert(t("settings.errorTitle"), t("settings.deleteAccountError"));
             }
           },
         },
@@ -234,12 +236,12 @@ export default function SettingsScreen() {
     try {
       const eventId = await sendSentrySmokeTest({ screen: "settings" });
       if (eventId) {
-        Alert.alert("Sentry test sent", `Event ID: ${eventId}`);
+        Alert.alert(t("settings.sentrySent"), `Event ID: ${eventId}`);
       } else {
-        Alert.alert("Sentry test disabled", "Build with EXPO_PUBLIC_ENABLE_SENTRY_SMOKE=true to show this test.");
+        Alert.alert(t("settings.sentryDisabled"), t("settings.sentryDisabledBody"));
       }
     } catch {
-      Alert.alert("Sentry test failed", "Could not send the test event. Check the device connection and Sentry DSN.");
+      Alert.alert(t("settings.sentryFailed"), t("settings.sentryFailedBody"));
     }
   }
 
@@ -247,21 +249,21 @@ export default function SettingsScreen() {
     <View style={[styles.screen, { paddingTop: insets.top }]}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.backBtn}>‹ Back</Text>
+          <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Settings</Text>
+        <Text style={styles.headerTitle}>{t("settings.title")}</Text>
         <View style={{ width: 60 }} />
       </View>
 
       <ScrollView contentContainerStyle={styles.content}>
 
         {/* Notifications */}
-        <SectionHeader title="Notifications" />
+        <SectionHeader title={t("settings.notifications")} />
         <View style={styles.card}>
           <SettingRow
             icon="notifications-outline"
-            label="Daily reminder"
-            sublabel="Morning reminder to study"
+            label={t("settings.dailyReminder")}
+            sublabel={t("settings.dailyReminderSub")}
             right={
               <Switch
                 value={prefs.dailyReminderEnabled}
@@ -274,8 +276,8 @@ export default function SettingsScreen() {
           <View style={styles.divider} />
           <SettingRow
             icon="shield-outline"
-            label="Streak at risk"
-            sublabel="Alert at 8 PM if goal not met"
+            label={t("settings.streakRisk")}
+            sublabel={t("settings.streakRiskSub")}
             right={
               <Switch
                 value={prefs.streakRiskEnabled}
@@ -288,8 +290,8 @@ export default function SettingsScreen() {
           <View style={styles.divider} />
           <SettingRow
             icon="trophy-outline"
-            label="Milestones"
-            sublabel="Celebrate achievements"
+            label={t("settings.milestones")}
+            sublabel={t("settings.milestonesSub")}
             right={
               <Switch
                 value={prefs.milestoneEnabled}
@@ -302,12 +304,12 @@ export default function SettingsScreen() {
         </View>
 
         {/* Audio */}
-        <SectionHeader title="Audio" />
+        <SectionHeader title={t("settings.audio")} />
         <View style={styles.card}>
           <SettingRow
             icon="volume-medium-outline"
-            label="Audio playback"
-            sublabel="TTS audio for Arabic words"
+            label={t("settings.audioPlayback")}
+            sublabel={t("settings.audioPlaybackSub")}
             right={
               <Switch
                 value={prefs.audioEnabled}
@@ -320,8 +322,8 @@ export default function SettingsScreen() {
           <View style={styles.divider} />
           <SettingRow
             icon="play-circle-outline"
-            label="Auto-play in reviews"
-            sublabel="Play word audio automatically"
+            label={t("settings.autoPlayReviews")}
+            sublabel={t("settings.autoPlayReviewsSub")}
             right={
               <Switch
                 value={prefs.srsAudioEnabled}
@@ -334,8 +336,8 @@ export default function SettingsScreen() {
           <View style={styles.divider} />
           <SettingRow
             icon="phone-portrait-outline"
-            label="Haptics"
-            sublabel="Vibration feedback"
+            label={t("settings.haptics")}
+            sublabel={t("settings.hapticsSub")}
             right={
               <Switch
                 value={prefs.hapticsEnabled}
@@ -348,10 +350,10 @@ export default function SettingsScreen() {
         </View>
 
         {/* Vocabulary (SRS) */}
-        <SectionHeader title="Vocabulary review" />
+        <SectionHeader title={t("settings.vocabReview")} />
         <View style={styles.card}>
           <OptionPicker
-            label="Daily review limit"
+            label={t("settings.dailyReviewLimit")}
             options={[
               { value: 5, label: "5" },
               { value: 10, label: "10" },
@@ -364,15 +366,15 @@ export default function SettingsScreen() {
         </View>
 
         {/* Daily goal */}
-        <SectionHeader title="Daily goal" />
+        <SectionHeader title={t("settings.dailyGoal")} />
         <View style={styles.card}>
           <OptionPicker
-            label="Study commitment"
+            label={t("settings.studyCommitment")}
             options={[
-              { value: 5, label: "5 min" },
-              { value: 10, label: "10 min" },
-              { value: 15, label: "15 min" },
-              { value: 30, label: "30 min" },
+              { value: 5, label: t("learn.goalMinutes", { minutes: 5 }) },
+              { value: 10, label: t("learn.goalMinutes", { minutes: 10 }) },
+              { value: 15, label: t("learn.goalMinutes", { minutes: 15 }) },
+              { value: 30, label: t("learn.goalMinutes", { minutes: 30 }) },
             ]}
             value={dailyGoalMinutes}
             onChange={changeDailyGoal}
@@ -380,21 +382,21 @@ export default function SettingsScreen() {
         </View>
 
         {/* Support */}
-        <SectionHeader title="Support" />
+        <SectionHeader title={t("settings.support")} />
         <View style={styles.card}>
-          <SettingRow icon="help-circle-outline" label="Help & FAQ" showChevron />
+          <SettingRow icon="help-circle-outline" label={t("settings.helpFaq")} showChevron />
           <View style={styles.divider} />
-          <SettingRow icon="chatbubble-outline" label="Send feedback" showChevron />
+          <SettingRow icon="chatbubble-outline" label={t("settings.sendFeedback")} showChevron />
         </View>
 
         {sentrySmokeTestEnabled ? (
           <>
-            <SectionHeader title="Diagnostics" />
+            <SectionHeader title={t("settings.diagnostics")} />
             <View style={styles.card}>
               <SettingRow
                 icon="bug-outline"
-                label="Send Sentry test event"
-                sublabel="Sends a non-crashing smoke event"
+                label={t("settings.sentryTest")}
+                sublabel={t("settings.sentryTestSub")}
                 onPress={handleSentrySmokeTest}
                 showChevron
               />
@@ -403,51 +405,51 @@ export default function SettingsScreen() {
         ) : null}
 
         {/* Legal */}
-        <SectionHeader title="Legal" />
+        <SectionHeader title={t("settings.legal")} />
         <View style={styles.card}>
-          <SettingRow icon="document-text-outline" label="Privacy Policy" showChevron />
+          <SettingRow icon="document-text-outline" label={t("settings.privacy")} showChevron />
           <View style={styles.divider} />
-          <SettingRow icon="document-outline" label="Terms of Service" showChevron />
+          <SettingRow icon="document-outline" label={t("settings.terms")} showChevron />
         </View>
 
         {/* About */}
-        <SectionHeader title="About" />
+        <SectionHeader title={t("settings.about")} />
         <View style={styles.card}>
           <SettingRow
             icon="information-circle-outline"
-            label="Warsh · وَرْش"
-            sublabel="Made with love in Pakistan"
+            label={t("settings.aboutApp")}
+            sublabel={t("settings.aboutSub")}
           />
           <View style={styles.divider} />
           <SettingRow
             icon="code-outline"
-            label="Version"
+            label={t("settings.version")}
             right={<Text style={styles.versionText}>1.0.0</Text>}
           />
         </View>
 
         {/* Account */}
-        <SectionHeader title="Account" />
+        <SectionHeader title={t("settings.account")} />
         <View style={styles.card}>
           <SettingRow
             icon="card-outline"
-            label="Manage subscription"
-            sublabel="View plan, billing, and cancellation"
+            label={t("settings.manageSubscription")}
+            sublabel={t("settings.manageSubscriptionSub")}
             onPress={() => router.push("/(app)/paywall")}
             showChevron
           />
           <View style={styles.divider} />
           <SettingRow
             icon="lock-closed-outline"
-            label="Change password"
+            label={t("settings.changePassword")}
             onPress={() => router.push("/(app)/change-password")}
             showChevron
           />
           <View style={styles.divider} />
           <SettingRow
             icon="trash-outline"
-            label="Delete account"
-            sublabel="Permanently removes all your data"
+            label={t("settings.deleteAccount")}
+            sublabel={t("settings.deleteAccountSub")}
             onPress={handleDeleteAccount}
             danger
             showChevron

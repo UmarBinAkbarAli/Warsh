@@ -1,23 +1,400 @@
 {
   "schema_version": "1.0",
   "template": "STANDARD",
-  "_meta": { "_note": "Chapter 51, Lesson 5 — Verb pattern mastery integration.", "chapter_order": 51, "lesson_order": 5, "chapter_title": "Verb Pattern Reinforcement", "title": "Verb Patterns — Mastery Integration", "titleAr": "أنواع الفعل — تمکین", "source": "book5_lesson7_verb_patterns.md", "estimated_minutes": 8, "xp_reward": 10 },
-  "hook": { "ayah": { "surah": 112, "ayah": 1, "label": "Al-Ikhlas 112:1", "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ", "en": "Say: He is Allah, the One", "ur": "کہو: وہی اللہ ایک ہے", "audio_url": "https://cdn.warsh.app/audio/quran/al-ikhlas-001-mishary.mp3" }, "noor_intro": { "en": "Final lesson of Chapter 51. We integrate all three present-tense states and both tenses into full Quranic parsing.", "ur": "Chapter 51 کا آخری lesson۔ ہم تینوں present-tense states اور دونوں tenses کو مکمل قرآنی parsing میں integrate کرتے ہیں۔" }, "autoplay": true },
+  "_meta": {
+    "_note": "Chapter 51, Lesson 5 — Verb pattern mastery integration.",
+    "chapter_order": 51,
+    "lesson_order": 5,
+    "chapter_title": "Verb Pattern Reinforcement",
+    "title": "Verb Patterns — Mastery Integration",
+    "titleAr": "أنواع الفعل — تمکین",
+    "source": "book5_lesson7_verb_patterns.md",
+    "estimated_minutes": 8,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 112,
+      "ayah": 1,
+      "label": "Al-Ikhlas 112:1",
+      "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      "en": "Say: He is Allah, the One",
+      "ur": "کہو: وہی اللہ ایک ہے",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-ikhlas-001-mishary.mp3"
+    },
+    "noor_intro": {
+      "en": "Final lesson of Chapter 51. We integrate all three present-tense states and both tenses into full Quranic parsing.",
+      "ur": "Chapter 51 کا آخری lesson۔ ہم تینوں present-tense states اور دونوں tenses کو مکمل قرآنی parsing میں integrate کرتے ہیں۔"
+    },
+    "autoplay": true
+  },
   "discover_cards": [
-    { "type": "CONCEPT", "concept": { "en": "Full verb paradigm integration", "ar": "اتحاد کامل paradigm verb", "ur": "مکمل verb paradigm کا اتحاد" }, "explanation": { "en": "Past: فَعَلَ, فَعَلْتُ, فَعَلُوا. Present raf': يَفْعَلُ, تَفْعَلُ, يَفْعَلُونَ. Present nasb: يَفْعَلَ, تَفْعَلَ, يَفْعَلَ. Present jazm: يَفْعَلْ, تَفْعَلْ, يَفْعَلْ. Imperative: فَعَلْ! All from one root.", "ur": "Past: فَعَلَ، فَعَلْتُ، فَعَلُوا۔ Present raf': يَفْعَلُ، تَفْعَلُ، يَفْعَلُونَ۔ Present nasb: يَفْعَلَ، تَفْعَلَ، يَفْعَلَ۔ Present jazm: يَفْعَلْ، تَفْعَلْ، يَفْعَلْ۔ Imperative: فَعَلْ! ایک root سے سب۔" } },
-    { "type": "AYAH_PREVIEW", "text": { "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ", "ar_plain": "قل هو الله أحد", "translit": "qul huwa allaahu ahadun", "en": "Say: He is Allah, the One", "ur": "کہو: وہی اللہ ایک ہے" }, "explanation": { "en": "قُلْ is the command 'say.' هُوَ اللَّهُ أَحَدٌ is nominal sentence: 'He is Allah the One.' This Surah defines tauhid.", "ur": "قُلْ command 'کہو' ہے۔ هُوَ اللَّهُ أَحَدٌ nominal sentence ہے: 'وہی اللہ ایک ہے'۔ یہ Surah tauhid کی تشریح کرتی ہے۔" } },
-    { "type": "EXAMPLE", "text": { "ar": "فَعَلَ", "ar_plain": "فعل", "translit": "fa'ala", "en": "he did", "ur": "اس نے کیا" }, "explanation": { "en": "Past tense base form: فَعَلَ. Third-person masculine singular past.", "ur": "ماضی base form: فَعَلَ۔ تیسرا مذکر واحد ماضی۔" } },
-    { "type": "EXAMPLE", "text": { "ar": "يَفْعَلُ", "ar_plain": "يفعل", "translit": "yaf'alu", "en": "he does", "ur": "وہ کرتا ہے" }, "explanation": { "en": "Present tense raf' (indicative) base form: يَفْعَلُ. This is the default present tense state.", "ur": "حال مرفوع base form: يَفْعَلُ۔ یہ default present tense state ہے۔" } }
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Full verb paradigm integration",
+        "ar": "اتحاد کامل paradigm verb",
+        "ur": "مکمل verb paradigm کا اتحاد"
+      },
+      "explanation": {
+        "en": "Past: فَعَلَ, فَعَلْتُ, فَعَلُوا. Present raf': يَفْعَلُ, تَفْعَلُ, يَفْعَلُونَ. Present nasb: يَفْعَلَ, تَفْعَلَ, يَفْعَلَ. Present jazm: يَفْعَلْ, تَفْعَلْ, يَفْعَلْ. Imperative: فَعَلْ! All from one root.",
+        "ur": "Past: فَعَلَ، فَعَلْتُ، فَعَلُوا۔ Present raf': يَفْعَلُ، تَفْعَلُ، يَفْعَلُونَ۔ Present nasb: يَفْعَلَ، تَفْعَلَ، يَفْعَلَ۔ Present jazm: يَفْعَلْ، تَفْعَلْ، يَفْعَلْ۔ Imperative: فَعَلْ! ایک root سے سب۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "text": {
+        "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "ar_plain": "قل هو الله أحد",
+        "translit": "qul huwa allaahu ahadun",
+        "en": "Say: He is Allah, the One",
+        "ur": "کہو: وہی اللہ ایک ہے"
+      },
+      "explanation": {
+        "en": "قُلْ is the command 'say.' هُوَ اللَّهُ أَحَدٌ is nominal sentence: 'He is Allah the One.' This Surah defines tauhid.",
+        "ur": "قُلْ command 'کہو' ہے۔ هُوَ اللَّهُ أَحَدٌ nominal sentence ہے: 'وہی اللہ ایک ہے'۔ یہ Surah tauhid کی تشریح کرتی ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "فَعَلَ",
+        "ar_plain": "فعل",
+        "translit": "fa'ala",
+        "en": "he did",
+        "ur": "اس نے کیا"
+      },
+      "explanation": {
+        "en": "Past tense base form: فَعَلَ. Third-person masculine singular past.",
+        "ur": "ماضی base form: فَعَلَ۔ تیسرا مذکر واحد ماضی۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يَفْعَلُ",
+        "ar_plain": "يفعل",
+        "translit": "yaf'alu",
+        "en": "he does",
+        "ur": "وہ کرتا ہے"
+      },
+      "explanation": {
+        "en": "Present tense raf' (indicative) base form: يَفْعَلُ. This is the default present tense state.",
+        "ur": "حال مرفوع base form: يَفْعَلُ۔ یہ default present tense state ہے۔"
+      }
+    }
   ],
   "exercises": [
-    { "type": "TAP_TRANSLATION", "id": "ch51-l05-ex01", "prompt": { "ar": "فَعَلَ", "ar_plain": "فعل", "translit": "fa'ala", "en": "He did", "ur": "اس نے کیا" }, "options": [{ "en": "He did", "ur": "اس نے کیا" }, { "en": "He does", "ur": "وہ کرتا ہے" }, { "en": "Do it!", "ur": "کرو!" }, { "en": "He will do", "ur": "وہ کرے گا" }], "correct_index": 0, "xp_value": 1 },
-    { "type": "TRUE_FALSE", "id": "ch51-l05-ex02", "statement": { "en": "يَفْعَلُ = present tense raf' (indicative). يَفْعَلَ = present tense nasb (subjunctive). يَفْعَلْ = present tense jazm (jussive).", "ur": "يَفْعَلُ = present tense raf' (indicative)۔ يَفْعَلَ = present tense nasb (subjunctive)۔ يَفْعَلْ = present tense jazm (jussive)۔" }, "correct_answer": true, "xp_value": 1 },
-    { "type": "MATCHING", "id": "ch51-l05-ex03", "left_column": [{ "ar": "فَعَلَ", "ar_plain": "فعل", "translit": "fa'ala", "en": "past (3rd m. sg.)" }, { "ar": "يَفْعَلُ", "ar_plain": "يفعل", "translit": "yaf'alu", "en": "present raf'" }, { "ar": "يَفْعَلَ", "ar_plain": "يفعل", "translit": "yaf'ala", "en": "present nasb" }, { "ar": "يَفْعَلْ", "ar_plain": "يفعل", "translit": "yaf'al", "en": "present jazm" }, { "ar": "فَعَلْ", "ar_plain": "فعل", "translit": "fa'al", "en": "imperative" }], "right_column": [{ "en": "past (3rd m. sg.)", "ur": "ماضی (تیسرا مذکر واحد)" }, { "en": "present raf'", "ur": "حال مرفوع" }, { "en": "present nasb", "ur": "حال منصوب" }, { "en": "present jazm", "ur": "حال مجزوم" }, { "en": "imperative", "ur": "حکم" }], "correct_pairs": [[0,0], [1,1], [2,2], [3,3], [4,4]], "xp_value": 1 },
-    { "type": "BUILD_SENTENCE", "id": "ch51-l05-ex04", "target_translation": { "en": "He did not write.", "ur": "اس نے نہیں لکھا۔" }, "tiles": [{ "ar": "لَمْ", "ar_plain": "لم", "translit": "lam", "en": "did not" }, { "ar": "يَكْتُبْ", "ar_plain": "يكتب", "translit": "yaktub", "en": "he writes (jazm)", "ur": "وہ لکھتا ہے (جزم)" }, { "ar": "الْكِتَابَ", "ar_plain": "الكتاب", "translit": "al-kitaaba", "en": "the book", "ur": "کتاب" }], "correct_order": [0, 1, 2], "xp_value": 1 },
-    { "type": "TAP_TRANSLATION", "id": "ch51-l05-ex05", "prompt": { "ar": "أُرِيدُ أَنْ يَكْتُبَ الْكِتَابَ", "ar_plain": "أريد أن يكتب الكتاب", "translit": "uriidu an yaktuba al-kitaaba", "en": "I want him to write the book", "ur": "میں چاہتا ہوں کہ وہ کتاب لکھے" }, "options": [{ "en": "I want him to write the book", "ur": "میں چاہتا ہوں کہ وہ کتاب لکھے" }, { "en": "I want to write the book", "ur": "میں کتاب لکھنا چاہتا ہوں" }, { "en": "He wants to write the book", "ur": "وہ کتاب لکھنا چاہتا ہے" }, { "en": "I will write the book", "ur": "میں کتاب لکھوں گا" }], "correct_index": 0, "xp_value": 1 },
-    { "type": "GRAMMAR_PARSE", "id": "ch51-l05-ex06", "sentence_ar": "أُرِيدُ أَنْ يَفْهَمَ الْقُرْآنَ", "words": [{ "ar": "أُرِيدُ", "ar_plain": "أريد", "translit": "uriidu", "en": "I want" }, { "ar": "أَنْ", "ar_plain": "أن", "translit": "an", "en": "that" }, { "ar": "يَفْهَمَ", "ar_plain": "يفهم", "translit": "yafhama", "en": "he understands" }, { "ar": "الْقُرْآنَ", "ar_plain": "القرآن", "translit": "al-qur-aana", "en": "the Quran" }], "available_roles": ["VERB", "PARTICLE", "VERB", "OBJECT"], "correct_roles": ["VERB", "PARTICLE", "VERB", "OBJECT"], "xp_value": 1, "explanation_on_wrong": { "en": "أُرِيدُ takes أَنْ + nasb verb۔ يَفْهَمَ nasb state (Alif ending)۔ الْقُرْآنَ object in accusative۔", "ur": "أُرِيدُ أَنْ + nasb verb لیتا ہے۔ يَفْهَمَ nasb state (Alif ending)۔ الْقُرْآنَ accusative میں object ہے۔" } },
-    { "type": "TAP_TRANSLATION", "id": "ch51-l05-ex07", "prompt": { "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ", "ar_plain": "قل هو الله أحد", "translit": "qul huwa allaahu ahadun", "en": "Say: He is Allah, the One", "ur": "کہو: وہی اللہ ایک ہے" }, "options": [{ "en": "Say: He is Allah, the One", "ur": "کہو: وہی اللہ ایک ہے" }, { "en": "Say: He is one Allah", "ur": "کہو: وہ اکیلا اللہ ہے" }, { "en": "He said: Allah is One", "ur": "اس نے کہا: اللہ ایک ہے" }, { "en": "Say: He is the one Allah", "ur": "کہو: وہ اللہ کا ایک ہے" }], "correct_index": 0, "xp_value": 1, "explanation_on_wrong": { "en": "قُلْ command 'say' ہے۔ هُوَ pronoun 'He'۔ اللَّهُ subject۔ أَحَدٌ predicate 'the One'۔ یہ Surah Al-Ikhlas کا پہلا verse ہے۔", "ur": "قُلْ command 'کہو' ہے۔ هُوَ pronoun 'وہ' ہے۔ اللَّهُ subject ہے۔ أَحَدٌ predicate 'ایک' ہے۔ یہ Surah Al-Ikhlas کا پہلا verse ہے۔" } }
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch51-l05-ex01",
+      "prompt": {
+        "ar": "فَعَلَ",
+        "ar_plain": "فعل",
+        "translit": "fa'ala",
+        "en": "He did",
+        "ur": "اس نے کیا"
+      },
+      "options": [
+        {
+          "en": "He did",
+          "ur": "اس نے کیا"
+        },
+        {
+          "en": "He does",
+          "ur": "وہ کرتا ہے"
+        },
+        {
+          "en": "Do it!",
+          "ur": "کرو!"
+        },
+        {
+          "en": "He will do",
+          "ur": "وہ کرے گا"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch51-l05-ex02",
+      "statement": {
+        "en": "يَفْعَلُ = present tense raf' (indicative). يَفْعَلَ = present tense nasb (subjunctive). يَفْعَلْ = present tense jazm (jussive).",
+        "ur": "يَفْعَلُ = present tense raf' (indicative)۔ يَفْعَلَ = present tense nasb (subjunctive)۔ يَفْعَلْ = present tense jazm (jussive)۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch51-l05-ex03",
+      "left_column": [
+        {
+          "ar": "فَعَلَ",
+          "ar_plain": "فعل",
+          "translit": "fa'ala",
+          "en": "past (3rd m. sg.)",
+          "ur": "ماضی (3rd m. sg.)"
+        },
+        {
+          "ar": "يَفْعَلُ",
+          "ar_plain": "يفعل",
+          "translit": "yaf'alu",
+          "en": "present raf'",
+          "ur": "موجودہ raf'"
+        },
+        {
+          "ar": "يَفْعَلَ",
+          "ar_plain": "يفعل",
+          "translit": "yaf'ala",
+          "en": "present nasb",
+          "ur": "موجودہ nasb"
+        },
+        {
+          "ar": "يَفْعَلْ",
+          "ar_plain": "يفعل",
+          "translit": "yaf'al",
+          "en": "present jazm",
+          "ur": "موجودہ جزم"
+        },
+        {
+          "ar": "فَعَلْ",
+          "ar_plain": "فعل",
+          "translit": "fa'al",
+          "en": "imperative",
+          "ur": "ضروری"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "past (3rd m. sg.)",
+          "ur": "ماضی (تیسرا مذکر واحد)"
+        },
+        {
+          "en": "present raf'",
+          "ur": "حال مرفوع"
+        },
+        {
+          "en": "present nasb",
+          "ur": "حال منصوب"
+        },
+        {
+          "en": "present jazm",
+          "ur": "حال مجزوم"
+        },
+        {
+          "en": "imperative",
+          "ur": "حکم"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch51-l05-ex04",
+      "target_translation": {
+        "en": "He did not write.",
+        "ur": "اس نے نہیں لکھا۔"
+      },
+      "tiles": [
+        {
+          "ar": "لَمْ",
+          "ar_plain": "لم",
+          "translit": "lam",
+          "en": "did not",
+          "ur": "نہیں کیا"
+        },
+        {
+          "ar": "يَكْتُبْ",
+          "ar_plain": "يكتب",
+          "translit": "yaktub",
+          "en": "he writes (jazm)",
+          "ur": "وہ لکھتا ہے (جزم)"
+        },
+        {
+          "ar": "الْكِتَابَ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitaaba",
+          "en": "the book",
+          "ur": "کتاب"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch51-l05-ex05",
+      "prompt": {
+        "ar": "أُرِيدُ أَنْ يَكْتُبَ الْكِتَابَ",
+        "ar_plain": "أريد أن يكتب الكتاب",
+        "translit": "uriidu an yaktuba al-kitaaba",
+        "en": "I want him to write the book",
+        "ur": "میں چاہتا ہوں کہ وہ کتاب لکھے"
+      },
+      "options": [
+        {
+          "en": "I want him to write the book",
+          "ur": "میں چاہتا ہوں کہ وہ کتاب لکھے"
+        },
+        {
+          "en": "I want to write the book",
+          "ur": "میں کتاب لکھنا چاہتا ہوں"
+        },
+        {
+          "en": "He wants to write the book",
+          "ur": "وہ کتاب لکھنا چاہتا ہے"
+        },
+        {
+          "en": "I will write the book",
+          "ur": "میں کتاب لکھوں گا"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch51-l05-ex06",
+      "sentence_ar": "أُرِيدُ أَنْ يَفْهَمَ الْقُرْآنَ",
+      "words": [
+        {
+          "ar": "أُرِيدُ",
+          "ar_plain": "أريد",
+          "translit": "uriidu",
+          "en": "I want",
+          "ur": "میں چاہتا ہوں"
+        },
+        {
+          "ar": "أَنْ",
+          "ar_plain": "أن",
+          "translit": "an",
+          "en": "that",
+          "ur": "کہ"
+        },
+        {
+          "ar": "يَفْهَمَ",
+          "ar_plain": "يفهم",
+          "translit": "yafhama",
+          "en": "he understands",
+          "ur": "وہ سمجھتا ہے"
+        },
+        {
+          "ar": "الْقُرْآنَ",
+          "ar_plain": "القرآن",
+          "translit": "al-qur-aana",
+          "en": "the Quran",
+          "ur": "قرآن"
+        }
+      ],
+      "available_roles": [
+        "VERB",
+        "PARTICLE",
+        "VERB",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "PARTICLE",
+        "VERB",
+        "OBJECT"
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أُرِيدُ takes أَنْ + nasb verb۔ يَفْهَمَ nasb state (Alif ending)۔ الْقُرْآنَ object in accusative۔",
+        "ur": "أُرِيدُ أَنْ + nasb verb لیتا ہے۔ يَفْهَمَ nasb state (Alif ending)۔ الْقُرْآنَ accusative میں object ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch51-l05-ex07",
+      "prompt": {
+        "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "ar_plain": "قل هو الله أحد",
+        "translit": "qul huwa allaahu ahadun",
+        "en": "Say: He is Allah, the One",
+        "ur": "کہو: وہی اللہ ایک ہے"
+      },
+      "options": [
+        {
+          "en": "Say: He is Allah, the One",
+          "ur": "کہو: وہی اللہ ایک ہے"
+        },
+        {
+          "en": "Say: He is one Allah",
+          "ur": "کہو: وہ اکیلا اللہ ہے"
+        },
+        {
+          "en": "He said: Allah is One",
+          "ur": "اس نے کہا: اللہ ایک ہے"
+        },
+        {
+          "en": "Say: He is the one Allah",
+          "ur": "کہو: وہ اللہ کا ایک ہے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "قُلْ command 'say' ہے۔ هُوَ pronoun 'He'۔ اللَّهُ subject۔ أَحَدٌ predicate 'the One'۔ یہ Surah Al-Ikhlas کا پہلا verse ہے۔",
+        "ur": "قُلْ command 'کہو' ہے۔ هُوَ pronoun 'وہ' ہے۔ اللَّهُ subject ہے۔ أَحَدٌ predicate 'ایک' ہے۔ یہ Surah Al-Ikhlas کا پہلا verse ہے۔"
+      }
+    }
   ],
-  "reveal": { "concept_name": { "en": "Chapter 51 complete — verb paradigm mastered", "ar": "Chapter 51 مکمل — verb paradigm پر عبور", "ur": "verb paradigm پر complete" }, "ayah": { "surah": 112, "ayah": 1, "label": "Al-Ikhlas 112:1", "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ", "en": "Say: He is Allah, the One", "ur": "کہو: وہ اللہ ایک ہے", "audio_url": "https://cdn.warsh.app/audio/quran/al-ikhlas-001-mishary.mp3" }, "highlighted_word_indices": [0], "noor_explanation": { "en": "قُلْ command ہے۔ یہ ایک command ہے جو Prophet ﷺ کو دیا گیا۔ آپ نے اب verb paradigm مکمل کر لی ہے — ہر صورت، ہر حالت۔", "ur": "قُلْ command ہے۔ یہ ایک command ہے جو Prophet ﷺ کو دیا گیا۔ آپ نے اب verb paradigm مکمل کر لی ہے — ہر صورت، ہر حالت۔" } },
-  "close": { "noor_message": { "en": "Chapter 51 complete. You now know past tense, present tense raf', nasb, and jazm, and imperative — the full verb paradigm. Chapter 52 brings grammar integration.", "ur": "Chapter 51 مکمل۔ اب آپ جانتے ہیں past tense، present tense raf'، nasb، اور jazm، اور imperative — مکمل verb paradigm۔ Chapter 52 grammar integration لاتا ہے۔" } }
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 51 complete — verb paradigm mastered",
+      "ar": "Chapter 51 مکمل — verb paradigm پر عبور",
+      "ur": "verb paradigm پر complete"
+    },
+    "ayah": {
+      "surah": 112,
+      "ayah": 1,
+      "label": "Al-Ikhlas 112:1",
+      "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      "en": "Say: He is Allah, the One",
+      "ur": "کہو: وہ اللہ ایک ہے",
+      "audio_url": "https://cdn.warsh.app/audio/quran/al-ikhlas-001-mishary.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "noor_explanation": {
+      "en": "قُلْ command ہے۔ یہ ایک command ہے جو Prophet ﷺ کو دیا گیا۔ آپ نے اب verb paradigm مکمل کر لی ہے — ہر صورت، ہر حالت۔",
+      "ur": "قُلْ command ہے۔ یہ ایک command ہے جو Prophet ﷺ کو دیا گیا۔ آپ نے اب verb paradigm مکمل کر لی ہے — ہر صورت، ہر حالت۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 51 complete. You now know past tense, present tense raf', nasb, and jazm, and imperative — the full verb paradigm. Chapter 52 brings grammar integration.",
+      "ur": "Chapter 51 مکمل۔ اب آپ جانتے ہیں past tense، present tense raf'، nasb، اور jazm، اور imperative — مکمل verb paradigm۔ Chapter 52 grammar integration لاتا ہے۔"
+    }
+  }
 }

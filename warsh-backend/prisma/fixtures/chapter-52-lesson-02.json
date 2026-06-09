@@ -121,10 +121,22 @@
         "ur": "جہانوں کا رب"
       },
       "options": [
-        { "en": "Lord of the worlds", "ur": "جہانوں کا رب" },
-        { "en": "The great Lord", "ur": "بڑا رب" },
-        { "en": "Lord of all", "ur": "سب کا رب" },
-        { "en": "Creator of the worlds", "ur": "جہانوں کا خالق" }
+        {
+          "en": "Lord of the worlds",
+          "ur": "جہانوں کا رب"
+        },
+        {
+          "en": "The great Lord",
+          "ur": "بڑا رب"
+        },
+        {
+          "en": "Lord of all",
+          "ur": "سب کا رب"
+        },
+        {
+          "en": "Creator of the worlds",
+          "ur": "جہانوں کا خالق"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -225,12 +237,41 @@
         }
       ],
       "right_column": [
-        { "en": "رَبِّ + ي (attached pronoun)", "ur": "رَبِّ + ی (attached pronoun)" },
-        { "en": "رَبِّ + نَا (attached pronoun)", "ur": "رَبِّ + نا (attached pronoun)" },
-        { "en": "رَبِّ + كَ (attached pronoun)", "ur": "رَبِّ + ک (attached pronoun)" },
-        { "en": "رَبِّ + هُ (attached pronoun)", "ur": "رَبِّ + ہ (attached pronoun)" }
+        {
+          "en": "رَبِّ + ي (attached pronoun)",
+          "ur": "رَبِّ + ی (attached pronoun)"
+        },
+        {
+          "en": "رَبِّ + نَا (attached pronoun)",
+          "ur": "رَبِّ + نا (attached pronoun)"
+        },
+        {
+          "en": "رَبِّ + كَ (attached pronoun)",
+          "ur": "رَبِّ + ک (attached pronoun)"
+        },
+        {
+          "en": "رَبِّ + هُ (attached pronoun)",
+          "ur": "رَبِّ + ہ (attached pronoun)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -256,7 +297,10 @@
           "ur": "اللہ (جر)"
         }
       ],
-      "correct_order": [0, 1],
+      "correct_order": [
+        0,
+        1
+      ],
       "xp_value": 1
     },
     {
@@ -264,14 +308,56 @@
       "id": "ch52-l02-ex06",
       "sentence_ar": "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",
       "words": [
-        { "ar": "بِ", "ar_plain": "ب", "translit": "bi", "en": "in" },
-        { "ar": "اسْمِ", "ar_plain": "اسم", "translit": "ismi", "en": "name" },
-        { "ar": "اللَّهِ", "ar_plain": "الله", "translit": "allaahi", "en": "Allah" },
-        { "ar": "الرَّحْمٰنِ", "ar_plain": "الرحمن", "translit": "ar-rahmaani", "en": "the Most Merciful" },
-        { "ar": "الرَّحِيمِ", "ar_plain": "الرحيم", "translit": "ar-rahiimi", "en": "the Especially Merciful" }
+        {
+          "ar": "بِ",
+          "ar_plain": "ب",
+          "translit": "bi",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "اسْمِ",
+          "ar_plain": "اسم",
+          "translit": "ismi",
+          "en": "name",
+          "ur": "نام"
+        },
+        {
+          "ar": "اللَّهِ",
+          "ar_plain": "الله",
+          "translit": "allaahi",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "الرَّحْمٰنِ",
+          "ar_plain": "الرحمن",
+          "translit": "ar-rahmaani",
+          "en": "the Most Merciful",
+          "ur": "سب سے زیادہ رحم کرنے والا"
+        },
+        {
+          "ar": "الرَّحِيمِ",
+          "ar_plain": "الرحيم",
+          "translit": "ar-rahiimi",
+          "en": "the Especially Merciful",
+          "ur": "خاص طور پر رحم کرنے والا"
+        }
       ],
-      "available_roles": ["PREPOSITION", "POSSESSIVE", "POSSESSIVE", "ADJECTIVE", "ADJECTIVE"],
-      "correct_roles": ["PREPOSITION", "POSSESSIVE", "POSSESSIVE", "ADJECTIVE", "ADJECTIVE"],
+      "available_roles": [
+        "PREPOSITION",
+        "POSSESSIVE",
+        "POSSESSIVE",
+        "ADJECTIVE",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "PREPOSITION",
+        "POSSESSIVE",
+        "POSSESSIVE",
+        "ADJECTIVE",
+        "ADJECTIVE"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "بِ is the preposition 'in' governing the entire idafa chain. اسْمِ is مضاف (loses tanween). The entire chain is مضاف إلیه, all nouns in genitive case.",
@@ -289,10 +375,22 @@
         "ur": "لوگوں کا بادشاہ"
       },
       "options": [
-        { "en": "King of mankind", "ur": "لوگوں کا بادشاہ" },
-        { "en": "The people's owner", "ur": "لوگوں کا مالک" },
-        { "en": "Master of humanity", "ur": "انسانیت کا سرپرست" },
-        { "en": "God of all people", "ur": "سب لوگوں کا معبود" }
+        {
+          "en": "King of mankind",
+          "ur": "لوگوں کا بادشاہ"
+        },
+        {
+          "en": "The people's owner",
+          "ur": "لوگوں کا مالک"
+        },
+        {
+          "en": "Master of humanity",
+          "ur": "انسانیت کا سرپرست"
+        },
+        {
+          "en": "God of all people",
+          "ur": "سب لوگوں کا معبود"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -317,7 +415,10 @@
       "ur": "شکر اللہ کا ہے جو تمام جہانوں کا رب ہے",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-fatiha-002-mishary.mp3"
     },
-    "highlighted_word_indices": [2, 3],
+    "highlighted_word_indices": [
+      2,
+      3
+    ],
     "noor_explanation": {
       "en": "رَبِّ الْعَالَمِينَ — two nouns in idafa. رَبِّ loses tanween (it is مضاف). الْعَالَمِينَ also loses nunation (it is مضاف إلیه after a preceding noun in the chain). Both nouns are genitive. Tanween drops; case survives.",
       "ur": "رَبِّ الْعَالَمِينَ — idafa میں دو nouns۔ رَبِّ tanween کھو دیتا ہے (یہ مضاف ہے)۔ الْعَالَمِينَ بھی nunation کھو دیتا ہے (یہ chain میں ایک پیچھے noun کے بعد مضاف إلیه ہے)۔ دونوں nouns genitive ہیں۔ Tanween گرتا ہے؛ case باقی رہتا ہے۔"

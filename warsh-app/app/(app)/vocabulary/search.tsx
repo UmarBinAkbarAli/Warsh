@@ -13,6 +13,8 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import api from "@services/api";
+import { useLanguage, pickTranslation } from "@services/language";
+import { useT } from "@i18n/index";
 import {
   WarshPalette,
   Fonts,
@@ -39,6 +41,8 @@ interface SearchWord {
 export default function VocabularySearchScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const language = useLanguage();
+  const t = useT();
 
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchWord[]>([]);
@@ -124,7 +128,7 @@ export default function VocabularySearchScreen() {
           <View style={styles.wordLeft}>
             <Text style={styles.arabic}>{item.arabic}</Text>
             <Text style={styles.translit}>{item.transliteration}</Text>
-            <Text style={styles.translation}>{item.translationEn}</Text>
+            <Text style={styles.translation}>{pickTranslation(item, language)}</Text>
           </View>
           <Ionicons
             name="volume-medium-outline"
@@ -154,21 +158,21 @@ export default function VocabularySearchScreen() {
           autoFocus
           value={query}
           onChangeText={setQuery}
-          placeholder="Search Arabic, English, or root..."
+          placeholder={t("vocabulary.searchPlaceholder")}
           placeholderTextColor={WarshPalette.subtleBrown}
           style={styles.searchInput}
           returnKeyType="search"
           clearButtonMode="while-editing"
         />
         <TouchableOpacity onPress={() => router.back()} activeOpacity={0.75}>
-          <Text style={styles.cancelBtn}>Cancel</Text>
+          <Text style={styles.cancelBtn}>{t("vocabulary.searchCancel")}</Text>
         </TouchableOpacity>
       </View>
 
       {/* Recent searches */}
       {showRecent && (
         <View>
-          <Text style={styles.recentTitle}>Recent</Text>
+          <Text style={styles.recentTitle}>{t("vocabulary.searchRecent")}</Text>
           {recentSearches.map((term) => (
             <TouchableOpacity
               key={term}
@@ -198,9 +202,7 @@ export default function VocabularySearchScreen() {
       {/* Empty state */}
       {showEmpty && (
         <View style={styles.emptyState}>
-          <Text style={styles.emptyText}>
-            No words match. Try a different spelling.
-          </Text>
+          <Text style={styles.emptyText}>{t("vocabulary.searchNoMatch")}</Text>
         </View>
       )}
 

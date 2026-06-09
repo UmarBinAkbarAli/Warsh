@@ -117,18 +117,71 @@
       "id": "ch57-l05-ex01",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "قَالَ", "ar_plain": "قال", "translit": "qaala", "en": "he said" },
-        { "ar": "جَاءَ", "ar_plain": "جاء", "translit": "jaa'a", "en": "he came" },
-        { "ar": "خَلَقَ", "ar_plain": "خلق", "translit": "khalaqa", "en": "he created" },
-        { "ar": "رَأَى", "ar_plain": "راى", "translit": "ra'aa", "en": "he saw" }
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qaala",
+          "en": "he said",
+          "ur": "انہوں نے کہا"
+        },
+        {
+          "ar": "جَاءَ",
+          "ar_plain": "جاء",
+          "translit": "jaa'a",
+          "en": "he came",
+          "ur": "وہ آیا"
+        },
+        {
+          "ar": "خَلَقَ",
+          "ar_plain": "خلق",
+          "translit": "khalaqa",
+          "en": "he created",
+          "ur": "اس نے پیدا کیا"
+        },
+        {
+          "ar": "رَأَى",
+          "ar_plain": "راى",
+          "translit": "ra'aa",
+          "en": "he saw",
+          "ur": "اس نے دیکھا"
+        }
       ],
       "right_column": [
-        { "en": "weak — ق-و-ل (و in middle)", "ur": "ضعیف — ق-و-ل (و درمیان)" },
-        { "en": "weak — ج-ئ-ء (alif last)", "ur": "ضعیف — ج-ئ-ء (الف آخری)" },
-        { "en": "صحيح — خ-ل-ق (no weak letters)", "ur": "صحیح — خ-ل-ق (کوئی weak letter نہیں)" },
-        { "en": "weak — ر-أ-ي (ي last)", "ur": "ضعیف — ر-أ-ي (ي آخری)" }
+        {
+          "en": "weak — ق-و-ل (و in middle)",
+          "ur": "ضعیف — ق-و-ل (و درمیان)"
+        },
+        {
+          "en": "weak — ج-ئ-ء (alif last)",
+          "ur": "ضعیف — ج-ئ-ء (الف آخری)"
+        },
+        {
+          "en": "صحيح — خ-ل-ق (no weak letters)",
+          "ur": "صحیح — خ-ل-ق (کوئی weak letter نہیں)"
+        },
+        {
+          "en": "weak — ر-أ-ي (ي last)",
+          "ur": "ضعیف — ر-أ-ي (ي آخری)"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "قَالَ and جَاءَ and رَأَى are all weak. خَلَقَ is صحيح — its root خ-ل-ق has no weak letters.",
@@ -157,13 +210,48 @@
         "ur": "لوگ مسجد کی طرف آئے۔"
       },
       "tiles": [
-        { "ar": "جَاءَ", "ar_plain": "جاء", "translit": "jaa'a", "en": "he came" },
-        { "ar": "النَّاسُ", "ar_plain": "الناس", "translit": "an-naasu", "en": "the people" },
-        { "ar": "إِلَى", "ar_plain": "الى", "translit": "ilaa", "en": "to" },
-        { "ar": "الْمَسْجِدِ", "ar_plain": "المسجد", "translit": "al-masjidi", "en": "the mosque (gen.)", "ur": "مسجد (جر)" },
-        { "ar": "قَالَ", "ar_plain": "قال", "translit": "qaala", "en": "he said", "ur": "اس نے کہا" }
+        {
+          "ar": "جَاءَ",
+          "ar_plain": "جاء",
+          "translit": "jaa'a",
+          "en": "he came",
+          "ur": "وہ آیا"
+        },
+        {
+          "ar": "النَّاسُ",
+          "ar_plain": "الناس",
+          "translit": "an-naasu",
+          "en": "the people",
+          "ur": "لوگ"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilaa",
+          "en": "to",
+          "ur": "کو"
+        },
+        {
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidi",
+          "en": "the mosque (gen.)",
+          "ur": "مسجد (جر)"
+        },
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qaala",
+          "en": "he said",
+          "ur": "اس نے کہا"
+        }
       ],
-      "correct_order": [1, 0, 2, 3],
+      "correct_order": [
+        1,
+        0,
+        2,
+        3
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "النَّاسُ (subject) + جَاءَ (weak verb past tense) + إِلَى (preposition) + الْمَسْجِدِ (genitive after إِلَى). جَاءَ conjugates as جَاءُوا for plural, but النَّاسُ is plural so context shows plurality.",
@@ -180,10 +268,34 @@
         "ur": "میں نے ایک ایسے آدمی کو دیکھا جو ایمان لایا۔"
       },
       "options": [
-        { "ar": "آمَنَ", "ar_plain": "آمن", "translit": "aamana", "en": "believed (past)", "ur": "ایمان لایا" },
-        { "ar": "يُؤْمِنُ", "ar_plain": "يؤمن", "translit": "yu'minu", "en": "believes (present)", "ur": "ایمان رکھتا ہے" },
-        { "ar": "مُسْلِمٌ", "ar_plain": "مسلم", "translit": "muslimun", "en": "Muslim (nom.)", "ur": "مسلمان (رفع)" },
-        { "ar": "مُسْلِمًا", "ar_plain": "مسلما", "translit": "musliman", "en": "Muslim (acc.)", "ur": "مسلمان (نصب)" }
+        {
+          "ar": "آمَنَ",
+          "ar_plain": "آمن",
+          "translit": "aamana",
+          "en": "believed (past)",
+          "ur": "ایمان لایا"
+        },
+        {
+          "ar": "يُؤْمِنُ",
+          "ar_plain": "يؤمن",
+          "translit": "yu'minu",
+          "en": "believes (present)",
+          "ur": "ایمان رکھتا ہے"
+        },
+        {
+          "ar": "مُسْلِمٌ",
+          "ar_plain": "مسلم",
+          "translit": "muslimun",
+          "en": "Muslim (nom.)",
+          "ur": "مسلمان (رفع)"
+        },
+        {
+          "ar": "مُسْلِمًا",
+          "ar_plain": "مسلما",
+          "translit": "musliman",
+          "en": "Muslim (acc.)",
+          "ur": "مسلمان (نصب)"
+        }
       ],
       "correct_answer": {
         "ar": "آمَنَ",
@@ -203,12 +315,38 @@
       "type": "GRAMMAR_PARSE",
       "sentence_ar": "جَاءَ الْأَخُ وَقَالَ",
       "words": [
-        { "ar": "جَاءَ", "ar_plain": "جاء", "translit": "jaa'a", "en": "he came" },
-        { "ar": "الْأَخُ", "ar_plain": "الاخ", "translit": "al-akhu", "en": "the brother" },
-        { "ar": "وَقَالَ", "ar_plain": "وقال", "translit": "wa qaala", "en": "and he said" }
+        {
+          "ar": "جَاءَ",
+          "ar_plain": "جاء",
+          "translit": "jaa'a",
+          "en": "he came",
+          "ur": "وہ آیا"
+        },
+        {
+          "ar": "الْأَخُ",
+          "ar_plain": "الاخ",
+          "translit": "al-akhu",
+          "en": "the brother",
+          "ur": "بھائی"
+        },
+        {
+          "ar": "وَقَالَ",
+          "ar_plain": "وقال",
+          "translit": "wa qaala",
+          "en": "and he said",
+          "ur": "اور اس نے کہا"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "CONJUNCTION"],
-      "correct_roles": ["VERB", "SUBJECT", "CONJUNCTION"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "CONJUNCTION"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "CONJUNCTION"
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "جَاءَ = VERB (weak verb past tense, ج-ئ-ء, he came). الْأَخُ = SUBJECT (رفع). وَ = conjunction (حرف عطف, مَبْنِيّ). قَالَ = VERB (weak verb past tense, ق-و-ل, he said).",
@@ -236,13 +374,26 @@
         "ar": "بَلَغَ الرَّسُولُ",
         "ar_plain": "بلغ الرسول",
         "translit": "balagha ar-rasuulu",
-        "en": "The messenger reached."
+        "en": "The messenger reached.",
+        "ur": "قاصد پہنچ گیا۔"
       },
       "options": [
-        { "en": "The messenger reached.", "ur": "رسول نے پہنچا۔" },
-        { "en": "The messenger believed.", "ur": "رسول نے ایمان لایا۔" },
-        { "en": "The messenger came.", "ur": "رسول آیا۔" },
-        { "en": "The messenger said.", "ur": "رسول نے کہا۔" }
+        {
+          "en": "The messenger reached.",
+          "ur": "رسول نے پہنچا۔"
+        },
+        {
+          "en": "The messenger believed.",
+          "ur": "رسول نے ایمان لایا۔"
+        },
+        {
+          "en": "The messenger came.",
+          "ur": "رسول آیا۔"
+        },
+        {
+          "en": "The messenger said.",
+          "ur": "رسول نے کہا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -255,18 +406,71 @@
       "id": "ch57-l05-ex08",
       "type": "MATCHING",
       "left_column": [
-        { "ar": "يَؤْمِنُ", "ar_plain": "يؤمن", "translit": "yu'minu", "en": "he believes" },
-        { "ar": "يَجْرِي", "ar_plain": "يجري", "translit": "yajrii", "en": "he runs" },
-        { "ar": "يَذْهَبُ", "ar_plain": "يذهب", "translit": "yadhhabu", "en": "he goes" },
-        { "ar": "يَقُولُ", "ar_plain": "يقول", "translit": "yaquulu", "en": "he says" }
+        {
+          "ar": "يَؤْمِنُ",
+          "ar_plain": "يؤمن",
+          "translit": "yu'minu",
+          "en": "he believes",
+          "ur": "وہ مانتا ہے"
+        },
+        {
+          "ar": "يَجْرِي",
+          "ar_plain": "يجري",
+          "translit": "yajrii",
+          "en": "he runs",
+          "ur": "وہ دوڑتا ہے"
+        },
+        {
+          "ar": "يَذْهَبُ",
+          "ar_plain": "يذهب",
+          "translit": "yadhhabu",
+          "en": "he goes",
+          "ur": "وہ جاتا ہے"
+        },
+        {
+          "ar": "يَقُولُ",
+          "ar_plain": "يقول",
+          "translit": "yaquulu",
+          "en": "he says",
+          "ur": "وہ کہتا ہے"
+        }
       ],
       "right_column": [
-        { "en": "weak — آمَنَ (ء-م-ن)", "ur": "ضعیف — آمَنَ (ء-م-ن)" },
-        { "en": "weak — جَرَى (ج-ر-ي)", "ur": "ضعیف — جَرَى (ج-ر-ي)" },
-        { "en": "صحيح — ذ-ه-ب", "ur": "صحیح — ذ-ه-ب" },
-        { "en": "weak — ق-و-ل", "ur": "ضعیف — ق-و-ل" }
+        {
+          "en": "weak — آمَنَ (ء-م-ن)",
+          "ur": "ضعیف — آمَنَ (ء-م-ن)"
+        },
+        {
+          "en": "weak — جَرَى (ج-ر-ي)",
+          "ur": "ضعیف — جَرَى (ج-ر-ي)"
+        },
+        {
+          "en": "صحيح — ذ-ه-ب",
+          "ur": "صحیح — ذ-ه-ب"
+        },
+        {
+          "en": "weak — ق-و-ل",
+          "ur": "ضعیف — ق-و-ل"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1,
       "explanation_on_wrong": {
         "en": "يَؤْمِنُ and يَجْرِي and يَقُولُ are weak (آمَنَ, جَرَى, قَالَ). يَذْهَبُ is صحيح — ذ-ه-ب has no weak letters.",
@@ -289,7 +493,9 @@
       "ur": "اور میں نے جن اور انسان کو صرف اس لیے پیدا کیا کہ وہ میری عبادت کریں۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/adh-dhariyat-056-mishary.mp3"
     },
-    "highlighted_word_indices": [4],
+    "highlighted_word_indices": [
+      4
+    ],
     "noor_explanation": {
       "en": "يَعْبُدُونِ is the present tense of عَبَدَ (to worship) — ع-ب-د. It follows the يَفْعَلُونَ pattern (الأفعال الخمسة), so it is always مَبْنِيّ in the nominative. The لام before it (لِيَعْبُدُونِ) is the لام of purpose (in order to).",
       "ur": "يَعْبُدُونِ عَبَدَ (عبادت کرنا) کا مضارع ہے — ع-ب-د۔ یہ يَفْعَلُونَ pattern follow کرتا ہے (الْأَفْعَالُ الْخَمْسَةُ)۔"

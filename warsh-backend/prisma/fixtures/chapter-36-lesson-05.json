@@ -35,7 +35,8 @@
         "ar": "سَبِّحْ",
         "ar_plain": "سبح",
         "translit": "sabbih",
-        "en": "glorify (command — Form II verb)"
+        "en": "glorify (command — Form II verb)",
+        "ur": "تسبیح (حکم - فارم II فعل)"
       },
       "explanation": {
         "en": "سَبِّحْ is a Form II command verb (س-ب-ح). Its مصدر is تَسْبِيحٌ. The command and the مصدر appear together in Al-A'la — one names the action, the other states it as a concept.",
@@ -48,7 +49,8 @@
         "ar": "خَلَقَ",
         "ar_plain": "خلق",
         "translit": "khalaqa",
-        "en": "He created"
+        "en": "He created",
+        "ur": "اس نے پیدا کیا۔"
       },
       "explanation": {
         "en": "Past tense verb — Form I (خ-ل-ق). Its مصدر is خَلْقٌ (creation). The verb names the action; the مصدر states it as an abstract concept.",
@@ -61,7 +63,8 @@
         "ar": "ذِكْرٌ",
         "ar_plain": "ذكر",
         "translit": "dhikrun",
-        "en": "remembrance"
+        "en": "remembrance",
+        "ur": "یاد"
       },
       "explanation": {
         "en": "The مصدر of ذ-ك-ر (to remember). ذِكْرٌ appears in hundreds of Quranic contexts. From it comes تَذْكِيرٌ (reminder) and يَذْكُرُ (he remembers). The root ذ-ك-ر covers both human memory and divine revelation.",
@@ -74,7 +77,8 @@
         "ar": "صَلَاةٌ",
         "ar_plain": "صلاة",
         "translit": "salaatun",
-        "en": "prayer — the verbal noun of ص-ل-و"
+        "en": "prayer — the verbal noun of ص-ل-و",
+        "ur": "دعا - ص-ل-و کا زبانی اسم"
       },
       "explanation": {
         "en": "The مصدر of ص-ل-و — 'to pray / to bless.' صَلَاةٌ is the verbal noun. The related verb يُصَلِّي (he prays) is the present tense form. The five daily prayers are called الصَّلَوَاتُ in the Quran.",
@@ -105,10 +109,22 @@
         "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔"
       },
       "options": [
-        { "en": "Glorify the name of your Lord, the Most High.", "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔" },
-        { "en": "Remember the name of your Lord, the Most High.", "ur": "اپنے بلند ترین رب کا نام یاد کرو۔" },
-        { "en": "Know the name of your Lord, the Most High.", "ur": "اپنے بلند ترین رب کا نام جانو۔" },
-        { "en": "Proclaim the name of your Lord, the Most High.", "ur": "اپنے بلند ترین رب کا نام بیان کرو۔" }
+        {
+          "en": "Glorify the name of your Lord, the Most High.",
+          "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔"
+        },
+        {
+          "en": "Remember the name of your Lord, the Most High.",
+          "ur": "اپنے بلند ترین رب کا نام یاد کرو۔"
+        },
+        {
+          "en": "Know the name of your Lord, the Most High.",
+          "ur": "اپنے بلند ترین رب کا نام جانو۔"
+        },
+        {
+          "en": "Proclaim the name of your Lord, the Most High.",
+          "ur": "اپنے بلند ترین رب کا نام بیان کرو۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -186,18 +202,71 @@
       "type": "MATCHING",
       "id": "ch36-l05-ex04",
       "left_column": [
-        { "ar": "تَسْبِيحٌ", "ar_plain": "تسبيح", "translit": "tasbiihun", "en": "glorification" },
-        { "ar": "خَلْقٌ", "ar_plain": "خلق", "translit": "khalqun", "en": "creation" },
-        { "ar": "ذِكْرٌ", "ar_plain": "ذكر", "translit": "dhikrun", "en": "remembrance" },
-        { "ar": "صَلَاةٌ", "ar_plain": "صلاة", "translit": "salaatun", "en": "prayer" }
+        {
+          "ar": "تَسْبِيحٌ",
+          "ar_plain": "تسبيح",
+          "translit": "tasbiihun",
+          "en": "glorification",
+          "ur": "تسبیح"
+        },
+        {
+          "ar": "خَلْقٌ",
+          "ar_plain": "خلق",
+          "translit": "khalqun",
+          "en": "creation",
+          "ur": "تخلیق"
+        },
+        {
+          "ar": "ذِكْرٌ",
+          "ar_plain": "ذكر",
+          "translit": "dhikrun",
+          "en": "remembrance",
+          "ur": "یاد"
+        },
+        {
+          "ar": "صَلَاةٌ",
+          "ar_plain": "صلاة",
+          "translit": "salaatun",
+          "en": "prayer",
+          "ur": "دعا"
+        }
       ],
       "right_column": [
-        { "en": "س-ب-ح — glorify", "ur": "س-ب-ح — تسبیح کرو" },
-        { "en": "خ-ل-ق — create", "ur": "خ-ل-ق — پیدا کرو" },
-        { "en": "ص-ل-و — pray", "ur": "ص-ل-و — پریں" },
-        { "en": "ذ-ك-ر — remember", "ur": "ذ-ك-ر — یاد کرو" }
+        {
+          "en": "س-ب-ح — glorify",
+          "ur": "س-ب-ح — تسبیح کرو"
+        },
+        {
+          "en": "خ-ل-ق — create",
+          "ur": "خ-ل-ق — پیدا کرو"
+        },
+        {
+          "en": "ص-ل-و — pray",
+          "ur": "ص-ل-و — پریں"
+        },
+        {
+          "en": "ذ-ك-ر — remember",
+          "ur": "ذ-ك-ر — یاد کرو"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 3], [3, 2]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -208,11 +277,33 @@
         "ur": "ذکر اللہ کی طرف سے ہے۔"
       },
       "tiles": [
-        { "ar": "الذِّكْرُ", "ar_plain": "الذكر", "translit": "adh-dhikru", "en": "the remembrance", "ur": "ذکر" },
-        { "ar": "مِنَ", "ar_plain": "من", "translit": "mina", "en": "from", "ur": "سے" },
-        { "ar": "اللَّهِ", "ar_plain": "الله", "translit": "Allahi", "en": "Allah", "ur": "اللہ" }
+        {
+          "ar": "الذِّكْرُ",
+          "ar_plain": "الذكر",
+          "translit": "adh-dhikru",
+          "en": "the remembrance",
+          "ur": "ذکر"
+        },
+        {
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "اللَّهِ",
+          "ar_plain": "الله",
+          "translit": "Allahi",
+          "en": "Allah",
+          "ur": "اللہ"
+        }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1
     },
     {
@@ -226,10 +317,22 @@
         "ur": "بے شک نماز بے حیائی اور برائی سے روکتی ہے۔"
       },
       "options": [
-        { "en": "Indeed, prayer forbids immorality and wrongdoing.", "ur": "بے شک نماز بے حیائی اور برائی سے روکتی ہے۔" },
-        { "en": "Indeed, the prayer is the remembrance of Allah.", "ur": "بے شک نماز اللہ کا ذکر ہے۔" },
-        { "en": "Indeed, Allah forbids prayer and wrongdoing.", "ur": "بے شک اللہ نماز اور برائی سے روکتا ہے۔" },
-        { "en": "Indeed, immorality and wrongdoing are from prayer.", "ur": "بے شک بے حیائی اور برائی نماز سے ہے۔" }
+        {
+          "en": "Indeed, prayer forbids immorality and wrongdoing.",
+          "ur": "بے شک نماز بے حیائی اور برائی سے روکتی ہے۔"
+        },
+        {
+          "en": "Indeed, the prayer is the remembrance of Allah.",
+          "ur": "بے شک نماز اللہ کا ذکر ہے۔"
+        },
+        {
+          "en": "Indeed, Allah forbids prayer and wrongdoing.",
+          "ur": "بے شک اللہ نماز اور برائی سے روکتا ہے۔"
+        },
+        {
+          "en": "Indeed, immorality and wrongdoing are from prayer.",
+          "ur": "بے شک بے حیائی اور برائی نماز سے ہے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -254,7 +357,9 @@
       "ur": "اپنے بلند ترین رب کا نام تسبیح کرو۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-ala-001-mishary.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "سَبِّحْ → تَسْبِيحٌ. The command names the action; the مصدر turns it into a concept. In the Quran, this relationship is everywhere: every command verb has a مصدر that the text will sometimes use in its place. Recognize the pair and the Quranic style opens up.",
       "ur": "سَبِّحْ → تَسْبِيحٌ۔ حکم عمل کو نام دیتا ہے؛ مصدر اسے ایک تصور میں تبدیل کرتا ہے۔ قرآن میں یہ تعلق ہر جگہ ہے: ہر حکم فعل کا ایک مصدر ہوتا ہے جو متن کبھی اس کی جگہ استعمال کرتا ہے۔ جوڑی پہچانو اور قرآنی انداز کھل جاتا ہے۔"
