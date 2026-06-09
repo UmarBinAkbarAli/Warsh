@@ -15,7 +15,9 @@ import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
 import { getVocabularyWords } from "@services/api";
-import { TOPIC_CATALOG } from "../(tabs)/vocabulary";
+import { useLanguage, pickTranslation } from "@services/language";
+import { TOPIC_CATALOG, getTopicLabel } from "../(tabs)/vocabulary";
+import { useT } from "@i18n/index";
 
 interface VocabWord {
   id: string;
@@ -39,6 +41,8 @@ export default function TopicDetailScreen() {
   const { topic } = useLocalSearchParams<{ topic: string }>();
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const language = useLanguage();
+  const t = useT();
 
   const topicMeta = TOPIC_CATALOG.find((t) => t.key === topic);
   const [words, setWords] = useState<VocabWord[]>([]);
@@ -58,7 +62,7 @@ export default function TopicDetailScreen() {
 
   const filtered = query.trim().length >= 2
     ? words.filter((w) =>
-        [w.arabic, w.arabicPlain, w.transliteration, w.translationEn, w.rootLetters ?? ""].some(
+        [w.arabic, w.arabicPlain, w.transliteration, w.translationEn, w.translationUr, w.rootLetters ?? ""].some(
           (f) => f.toLowerCase().includes(query.trim().toLowerCase())
         )
       )
@@ -68,10 +72,10 @@ export default function TopicDetailScreen() {
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary }}>
       {/* Header */}
       <View style={[styles.header, { paddingTop: insets.top + Spacing.md }]}>
-        <Text style={styles.backBtn} onPress={() => router.back()}>‹ Back</Text>
+        <Text style={styles.backBtn} onPress={() => router.back()}>‹ {t("common.back")}</Text>
         <View style={styles.headerTitle}>
           <ArabicText size="md" style={styles.headerAr}>{topicMeta?.labelAr ?? topic}</ArabicText>
-          <Text style={styles.headerEn}>{topicMeta?.labelEn ?? topic}</Text>
+          <Text style={styles.headerEn}>{getTopicLabel(topicMeta?.key ?? topic ?? "", language, t)}</Text>
         </View>
       </View>
 
@@ -80,7 +84,7 @@ export default function TopicDetailScreen() {
         <TextInput
           value={query}
           onChangeText={setQuery}
-          placeholder="Search within topic"
+          placeholder={t("vocabulary.searchWithinTopic")}
           mode="outlined"
           dense
           left={<TextInput.Icon icon="magnify" />}
@@ -103,13 +107,13 @@ export default function TopicDetailScreen() {
                   <View style={styles.topRow}>
                     <View style={styles.arabicRow}>
                       <ArabicText size="md" style={styles.arabic}>{word.arabic}</ArabicText>
-                      <PlayButton text={word.arabic} cacheKey={word.arabicPlain} category="words" size={18} />
+                      <PlayButton text={word.arabic} wordId={word.id} size={18} />
                     </View>
                     {word.rootLetters ? (
-                      <Text style={styles.root}>root: {word.rootLetters}</Text>
+                      <Text style={styles.root}>{t("vocabulary.root", { value: word.rootLetters })}</Text>
                     ) : null}
                   </View>
-                  <Text style={styles.meaning}>{word.translationEn}</Text>
+                  <Text style={styles.meaning}>{pickTranslation(word, language)}</Text>
                   <Text style={styles.translit}>{word.transliteration}</Text>
                   {word.quranicExample ? (
                     <View style={styles.ayahBox}>
@@ -124,12 +128,17 @@ export default function TopicDetailScreen() {
             ))
           ) : (
             <View style={styles.emptyCard}>
-              <Text style={styles.emptyTitle}>No words found</Text>
-              <Text style={styles.emptyCopy}>Try clearing the search filter.</Text>
+              <Text style={styles.emptyTitle}>{t("vocabulary.noWordsFound")}</Text>
+              <Text style={styles.emptyCopy}>{t("vocabulary.clearFilter")}</Text>
             </View>
           )}
 
-          <Text style={styles.countNote}>{filtered.length} word{filtered.length !== 1 ? "s" : ""}</Text>
+          <Text style={styles.countNote}>
+            {t("vocabulary.wordCount", {
+              count: filtered.length,
+              suffix: filtered.length !== 1 ? "s" : "",
+            })}
+          </Text>
         </ScrollView>
       )}
     </View>

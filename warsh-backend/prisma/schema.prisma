@@ -66,8 +66,10 @@ model Chapter {
     id          String   @id @default(cuid())
     order       Int      @unique
     title       String
+    titleUr     String?
     titleAr     String
     description String
+    descriptionUr String?
     worldMapX   Float
     worldMapY   Float
     isLocked    Boolean  @default(true)
@@ -80,6 +82,7 @@ model Lesson {
     chapter     Chapter        @relation(fields: [chapterId], references: [id])
     order       Int
     title       String
+    titleUr     String?
     titleAr     String
     template    LessonTemplate
     xpReward    Int            @default(10)
@@ -163,6 +166,8 @@ model VocabularyWord {
     chapterIntroduced Int     @default(1)
     frequencyInQuran  Int?
     quranicExample   Json?
+    audioUrl         String?
+    imageUrl         String?
     sortOrder        Int      @default(0)
     createdAt        DateTime @default(now())
     userWords        UserVocabularyWord[]

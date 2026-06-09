@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
+  Image,
   ScrollView,
   StyleSheet,
   Text,
@@ -15,6 +16,8 @@ import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../../constants/theme";
 import { getVocabularyWordDetail, updateUserVocabularyWord } from "@services/api";
+import { useLanguage, pickTranslation, pickLocalized } from "@services/language";
+import { useT } from "@i18n/index";
 
 interface QuranicExample {
   surahNumber: number;
@@ -41,6 +44,7 @@ interface VocabWord {
   chapterIntroduced: number;
   frequencyInQuran?: number | null;
   quranicExample?: QuranicExample | null;
+  imageUrl?: string | null;
 }
 
 interface UserWord {
@@ -57,24 +61,8 @@ interface RelatedWord {
   arabicPlain: string;
   transliteration: string;
   translationEn: string;
+  translationUr: string;
 }
-
-const WORD_TYPE_LABELS: Record<string, string> = {
-  NOUN: "Noun",
-  VERB_PAST: "Verb (past)",
-  VERB_PRESENT: "Verb (present)",
-  VERB_IMPERATIVE: "Verb (imperative)",
-  ADJECTIVE: "Adjective",
-  PRONOUN: "Pronoun",
-  DEMONSTRATIVE: "Demonstrative",
-  PREPOSITION: "Preposition",
-  PARTICLE: "Particle",
-  INTERROGATIVE: "Question word",
-  ADVERB: "Adverb",
-  PROPER_NOUN: "Proper noun",
-  NUMBER: "Number",
-  CONJUNCTION: "Conjunction",
-};
 
 function highlightWordInAyah(ayah: string, arabicPlain: string, arabic: string) {
   // Try exact match first, then strip harakat from both for matching
@@ -106,6 +94,8 @@ export default function WordDetailScreen() {
   const { wordId } = useLocalSearchParams<{ wordId: string }>();
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const language = useLanguage();
+  const t = useT();
 
   const [word, setWord] = useState<VocabWord | null>(null);
   const [userWord, setUserWord] = useState<UserWord | null>(null);
@@ -127,6 +117,41 @@ export default function WordDetailScreen() {
         .finally(() => setLoading(false));
     }, [wordId])
   );
+
+  function wordTypeLabel(wordType: string) {
+    switch (wordType) {
+      case "NOUN":
+        return t("vocabulary.typeNoun");
+      case "VERB_PAST":
+        return t("vocabulary.typeVerbPast");
+      case "VERB_PRESENT":
+        return t("vocabulary.typeVerbPresent");
+      case "VERB_IMPERATIVE":
+        return t("vocabulary.typeVerbImperative");
+      case "ADJECTIVE":
+        return t("vocabulary.typeAdjective");
+      case "PRONOUN":
+        return t("vocabulary.typePronoun");
+      case "DEMONSTRATIVE":
+        return t("vocabulary.typeDemonstrative");
+      case "PREPOSITION":
+        return t("vocabulary.typePreposition");
+      case "PARTICLE":
+        return t("vocabulary.typeParticle");
+      case "INTERROGATIVE":
+        return t("vocabulary.typeInterrogative");
+      case "ADVERB":
+        return t("vocabulary.typeAdverb");
+      case "PROPER_NOUN":
+        return t("vocabulary.typeProperNoun");
+      case "NUMBER":
+        return t("vocabulary.typeNumber");
+      case "CONJUNCTION":
+        return t("vocabulary.typeConjunction");
+      default:
+        return wordType;
+    }
+  }
 
   async function toggleFavorite() {
     if (!word || saving) return;
@@ -167,7 +192,7 @@ export default function WordDetailScreen() {
     return (
       <View style={[styles.screen, { paddingTop: insets.top + Spacing.xl }]}>
         <TouchableOpacity onPress={() => router.back()} style={{ paddingHorizontal: Spacing.xl }}>
-          <Text style={styles.backBtn}>‹ Back</Text>
+          <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
         </TouchableOpacity>
         <ActivityIndicator color={WarshPalette.gold} style={{ marginTop: Spacing.xl * 2 }} />
       </View>
@@ -184,7 +209,7 @@ export default function WordDetailScreen() {
       {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.backBtn}>‹ Back</Text>
+          <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={toggleFavorite} disabled={saving}>
           <Ionicons
@@ -198,26 +223,33 @@ export default function WordDetailScreen() {
       <ScrollView contentContainerStyle={styles.content}>
         {/* Main Arabic display */}
         <View style={styles.arabicSection}>
+          {word.imageUrl ? (
+            <Image
+              source={{ uri: word.imageUrl }}
+              style={styles.wordImage}
+              resizeMode="contain"
+            />
+          ) : null}
           <ArabicText size="xl" style={styles.arabicMain}>{word.arabic}</ArabicText>
           <View style={{ marginTop: Spacing.sm }}>
-            <PlayButton text={word.arabic} cacheKey={word.arabicPlain} category="words" size={32} />
+            <PlayButton text={word.arabic} wordId={word.id} size={32} />
           </View>
           <Text style={styles.translit}>{word.transliteration}</Text>
-          <Text style={styles.translation}>{word.translationEn}</Text>
-          <Text style={styles.translationUr}>{word.translationUr}</Text>
+          <Text style={styles.translation}>{pickTranslation(word, language)}</Text>
+          <Text style={styles.translationUr}>{language === "ur" ? word.translationEn : word.translationUr}</Text>
         </View>
 
         {/* Type badge */}
         <View style={styles.badgeRow}>
           <View style={styles.badge}>
             <Text style={styles.badgeText}>
-              {WORD_TYPE_LABELS[word.wordType] ?? word.wordType}
+              {wordTypeLabel(word.wordType)}
               {word.gender ? ` (${word.gender.toLowerCase()})` : ""}
             </Text>
           </View>
           {isMastered ? (
             <View style={[styles.badge, styles.masteredBadge]}>
-              <Text style={[styles.badgeText, styles.masteredBadgeText]}>Mastered</Text>
+              <Text style={[styles.badgeText, styles.masteredBadgeText]}>{t("vocabulary.filterMastered")}</Text>
             </View>
           ) : null}
         </View>
@@ -225,16 +257,16 @@ export default function WordDetailScreen() {
         {/* Grammar info */}
         {(word.pluralForm || word.rootLetters || word.gender) ? (
           <View style={styles.card}>
-            <Text style={styles.cardTitle}>Grammar</Text>
+            <Text style={styles.cardTitle}>{t("vocabulary.grammar")}</Text>
             {word.gender ? (
               <View style={styles.grammarRow}>
-                <Text style={styles.grammarLabel}>Gender</Text>
+                <Text style={styles.grammarLabel}>{t("vocabulary.gender")}</Text>
                 <Text style={styles.grammarValue}>{word.gender}</Text>
               </View>
             ) : null}
             {word.pluralForm ? (
               <View style={styles.grammarRow}>
-                <Text style={styles.grammarLabel}>Plural</Text>
+                <Text style={styles.grammarLabel}>{t("vocabulary.plural")}</Text>
                 <View style={styles.grammarValueRow}>
                   <ArabicText size="sm" style={styles.grammarArabic}>{word.pluralForm}</ArabicText>
                 </View>
@@ -242,7 +274,7 @@ export default function WordDetailScreen() {
             ) : null}
             {word.rootLetters ? (
               <View style={styles.grammarRow}>
-                <Text style={styles.grammarLabel}>Root</Text>
+                <Text style={styles.grammarLabel}>{t("vocabulary.rootLabel")}</Text>
                 <ArabicText size="sm" style={styles.rootText}>{word.rootLetters}</ArabicText>
               </View>
             ) : null}
@@ -252,7 +284,7 @@ export default function WordDetailScreen() {
         {/* Quranic example */}
         {word.quranicExample ? (
           <View style={styles.card}>
-            <Text style={styles.cardTitle}>From the Quran</Text>
+            <Text style={styles.cardTitle}>{t("vocabulary.fromQuran")}</Text>
             <View style={styles.ayahContainer}>
               <Text style={styles.ayahText}>
                 {ayahParts.map((part, i) => (
@@ -273,7 +305,7 @@ export default function WordDetailScreen() {
                 {word.quranicExample.surahNameEn} · {word.quranicExample.surahNumber}:{word.quranicExample.ayahNumber}
               </Text>
             </View>
-            <Text style={styles.ayahTranslation}>{word.quranicExample.translationEn}</Text>
+            <Text style={styles.ayahTranslation}>{pickLocalized(word.quranicExample.translationEn, word.quranicExample.translationUr, language)}</Text>
           </View>
         ) : null}
 
@@ -282,7 +314,10 @@ export default function WordDetailScreen() {
           <View style={styles.frequencyRow}>
             <Ionicons name="book-outline" size={14} color={WarshPalette.gold} />
             <Text style={styles.frequencyText}>
-              Appears {word.frequencyInQuran} time{word.frequencyInQuran !== 1 ? "s" : ""} in the Quran
+              {t("vocabulary.frequency", {
+                count: word.frequencyInQuran,
+                suffix: word.frequencyInQuran !== 1 ? "s" : "",
+              })}
             </Text>
           </View>
         ) : null}
@@ -290,14 +325,14 @@ export default function WordDetailScreen() {
         {/* Chapter introduced */}
         <View style={styles.frequencyRow}>
           <Ionicons name="layers-outline" size={14} color={WarshPalette.subtleBrown} />
-          <Text style={styles.chapterText}>Introduced in Chapter {word.chapterIntroduced}</Text>
+          <Text style={styles.chapterText}>{t("vocabulary.introducedInChapter", { count: word.chapterIntroduced })}</Text>
         </View>
 
         {/* Actions */}
         <View style={styles.actionsCard}>
           <TouchableOpacity style={styles.actionRow} onPress={markForReview} disabled={saving}>
             <Ionicons name="repeat-outline" size={20} color={WarshPalette.sage} />
-            <Text style={styles.actionText}>Mark for review</Text>
+            <Text style={styles.actionText}>{t("vocabulary.markForReview")}</Text>
             <Ionicons name="chevron-forward" size={16} color={WarshPalette.subtleBrown} />
           </TouchableOpacity>
           <View style={styles.actionDivider} />
@@ -308,7 +343,7 @@ export default function WordDetailScreen() {
               color={WarshPalette.bodyBrown}
             />
             <Text style={styles.actionText}>
-              {userWord?.isHidden ? "Unhide from review" : "Hide from review"}
+              {userWord?.isHidden ? t("vocabulary.unhideFromReview") : t("vocabulary.hideFromReview")}
             </Text>
             <Ionicons name="chevron-forward" size={16} color={WarshPalette.subtleBrown} />
           </TouchableOpacity>
@@ -317,7 +352,7 @@ export default function WordDetailScreen() {
         {/* Related words */}
         {relatedWords.length > 0 ? (
           <View style={styles.card}>
-            <Text style={styles.cardTitle}>Same root · {word.rootLetters}</Text>
+            <Text style={styles.cardTitle}>{t("vocabulary.sameRoot")} · {word.rootLetters}</Text>
             {relatedWords.map((rw) => (
               <TouchableOpacity
                 key={rw.id}
@@ -327,7 +362,7 @@ export default function WordDetailScreen() {
               >
                 <ArabicText size="sm" style={styles.relatedArabic}>{rw.arabic}</ArabicText>
                 <View style={styles.relatedRight}>
-                  <Text style={styles.relatedMeaning}>{rw.translationEn}</Text>
+                  <Text style={styles.relatedMeaning}>{pickTranslation(rw, language)}</Text>
                   <Text style={styles.relatedTranslit}>{rw.transliteration}</Text>
                 </View>
                 <Ionicons name="chevron-forward" size={14} color={WarshPalette.subtleBrown} />
@@ -362,6 +397,12 @@ const styles = StyleSheet.create({
   arabicSection: {
     alignItems: "center",
     paddingVertical: Spacing.xl,
+  },
+  wordImage: {
+    width: 160,
+    height: 160,
+    marginBottom: Spacing.lg,
+    borderRadius: Radii.lg,
   },
   arabicMain: { color: WarshPalette.ink, textAlign: "center" },
   translit: {

@@ -82,6 +82,43 @@ export async function getCachedTtsAudioUri(request: TtsAudioRequest) {
   return result.uri;
 }
 
+// Vocabulary word audio: first call generates TTS + saves to R2; subsequent calls
+// return the R2 public URL directly (no OpenAI cost, faster delivery).
+export async function getVocabWordAudioUri(wordId: string, arabicText: string): Promise<string> {
+  const localUri = `${AUDIO_CACHE_DIR}vocabword-${wordId}.mp3`;
+
+  await ensureAudioCacheDir();
+
+  if (await isFreshCachedFile(localUri)) {
+    return localUri;
+  }
+
+  // Ask backend for the R2 URL (generates + uploads on first call)
+  const token = await getToken();
+  const apiUrl = `${API_BASE_URL}/api/vocabulary/words/${wordId}/audio`;
+  const headers: Record<string, string> = token ? { Authorization: `Bearer ${token}` } : {};
+
+  const response = await fetch(apiUrl, { headers });
+  if (!response.ok) {
+    // Backend unavailable — fall back to on-demand TTS
+    return getCachedTtsAudioUri({ text: arabicText, cacheKey: wordId, category: "words" });
+  }
+
+  const json = await response.json() as { data: { audioUrl: string } };
+  const r2Url = json.data.audioUrl;
+
+  // Download from R2 public URL (no auth header — it's a public CDN)
+  const result = await FileSystem.downloadAsync(r2Url, localUri);
+
+  if (result.status < 200 || result.status >= 300) {
+    await FileSystem.deleteAsync(localUri, { idempotent: true });
+    // R2 download failed — fall back to on-demand TTS
+    return getCachedTtsAudioUri({ text: arabicText, cacheKey: wordId, category: "words" });
+  }
+
+  return result.uri;
+}
+
 export async function prefetchTtsAudio(requests: TtsAudioRequest[]) {
   return Promise.all(requests.map((request) => getCachedTtsAudioUri(request)));
 }

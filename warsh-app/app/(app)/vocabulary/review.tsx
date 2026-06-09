@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
+  Image,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -15,6 +16,7 @@ import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } f
 import { getSRSDueWords, submitSRSReview } from "@services/api";
 import { trackSRSReviewCompleted } from "@services/analytics";
 import { useLanguage, pickTranslation } from "@services/language";
+import { useT } from "@i18n/index";
 
 interface QuranicExample {
   surahNameEn: string;
@@ -34,6 +36,7 @@ interface DueWord {
     translationEn: string;
     translationUr: string;
     quranicExample: QuranicExample | null;
+    imageUrl: string | null;
   };
 }
 
@@ -43,6 +46,7 @@ export default function SRSReviewScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const language = useLanguage();
+  const t = useT();
 
   const [stage, setStage] = useState<Stage>("loading");
   const [queue, setQueue] = useState<DueWord[]>([]);
@@ -107,7 +111,7 @@ export default function SRSReviewScreen() {
       <View style={[styles.screen, { paddingTop: insets.top }]}>
         <View style={styles.header}>
           <TouchableOpacity onPress={() => router.back()}>
-            <Text style={styles.backBtn}>‹ Back</Text>
+            <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
           </TouchableOpacity>
         </View>
         <ActivityIndicator color={WarshPalette.gold} style={{ marginTop: Spacing.xl * 3 }} />
@@ -120,17 +124,15 @@ export default function SRSReviewScreen() {
       <View style={[styles.screen, { paddingTop: insets.top }]}>
         <View style={styles.header}>
           <TouchableOpacity onPress={() => router.back()}>
-            <Text style={styles.backBtn}>‹ Back</Text>
+            <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.centerContent}>
           <ArabicText size="xl" style={styles.emptyArabic}>ما شاء الله</ArabicText>
-          <Text style={styles.emptyTitle}>No words to review</Text>
-          <Text style={styles.emptyCopy}>
-            Mark words for review from the word detail screen, or complete lessons to build your vocabulary.
-          </Text>
+          <Text style={styles.emptyTitle}>{t("vocabulary.reviewNoWords")}</Text>
+          <Text style={styles.emptyCopy}>{t("vocabulary.reviewEmptyHelp")}</Text>
           <TouchableOpacity style={styles.doneBtn} onPress={() => router.back()}>
-            <Text style={styles.doneBtnText}>Return to vocabulary</Text>
+            <Text style={styles.doneBtnText}>{t("vocabulary.title")}</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -142,18 +144,16 @@ export default function SRSReviewScreen() {
       <View style={[styles.screen, { paddingTop: insets.top }]}>
         <View style={styles.header}>
           <TouchableOpacity onPress={() => router.back()}>
-            <Text style={styles.backBtn}>‹ Back</Text>
+            <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.centerContent}>
           <ArabicText size="lg" style={styles.preArabic}>مُرَاجَعَة الكَلِمَات</ArabicText>
-          <Text style={styles.preTitle}>Review your words</Text>
-          <Text style={styles.preCount}>{total} word{total !== 1 ? "s" : ""} to review today</Text>
-          <Text style={styles.preCopy}>
-            Words you learned a while ago — let's see if they've stuck.
-          </Text>
+          <Text style={styles.preTitle}>{t("vocabulary.review")}</Text>
+          <Text style={styles.preCount}>{t("vocabulary.reviewReady", { count: total, suffix: total !== 1 ? "s" : "" })}</Text>
+          <Text style={styles.preCopy}>{t("vocabulary.reviewIntro")}</Text>
           <TouchableOpacity style={styles.beginBtn} onPress={() => setStage("front")}>
-            <Text style={styles.beginBtnText}>Begin</Text>
+            <Text style={styles.beginBtnText}>{t("vocabulary.begin")}</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -166,29 +166,29 @@ export default function SRSReviewScreen() {
       <View style={[styles.screen, { paddingTop: insets.top }]}>
         <View style={styles.header}>
           <TouchableOpacity onPress={() => router.back()}>
-            <Text style={styles.backBtn}>‹ Back</Text>
+            <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.centerContent}>
           <ArabicText size="xl" style={styles.doneArabic}>بَارَكَ اللّٰهُ فِيكَ</ArabicText>
-          <Text style={styles.doneTitle}>Review complete</Text>
-          <Text style={styles.doneCount}>{totalReviewed} word{totalReviewed !== 1 ? "s" : ""} reviewed</Text>
+          <Text style={styles.doneTitle}>{t("vocabulary.reviewDone")}</Text>
+          <Text style={styles.doneCount}>{t("vocabulary.wordCount", { count: totalReviewed, suffix: totalReviewed !== 1 ? "s" : "" })}</Text>
           <View style={styles.resultRow}>
             <View style={[styles.resultBox, styles.hardBox]}>
               <Text style={styles.resultNum}>{results.hard}</Text>
-              <Text style={styles.resultLabel}>Hard</Text>
+              <Text style={styles.resultLabel}>{t("vocabulary.reviewHard")}</Text>
             </View>
             <View style={[styles.resultBox, styles.goodBox]}>
               <Text style={styles.resultNum}>{results.good}</Text>
-              <Text style={styles.resultLabel}>Good</Text>
+              <Text style={styles.resultLabel}>{t("vocabulary.reviewGood")}</Text>
             </View>
             <View style={[styles.resultBox, styles.easyBox]}>
               <Text style={styles.resultNum}>{results.easy}</Text>
-              <Text style={styles.resultLabel}>Easy</Text>
+              <Text style={styles.resultLabel}>{t("vocabulary.reviewEasy")}</Text>
             </View>
           </View>
           <TouchableOpacity style={styles.doneBtn} onPress={() => router.back()}>
-            <Text style={styles.doneBtnText}>Done</Text>
+            <Text style={styles.doneBtnText}>{t("common.complete")}</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -201,7 +201,7 @@ export default function SRSReviewScreen() {
       {/* Header with progress */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.backBtn}>‹ Back</Text>
+          <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
         </TouchableOpacity>
         <Text style={styles.progressLabel}>{currentIndex + 1} / {total}</Text>
       </View>
@@ -218,6 +218,14 @@ export default function SRSReviewScreen() {
           onPress={() => stage === "front" && setStage("back")}
           activeOpacity={stage === "front" ? 0.8 : 1}
         >
+          {current?.word.imageUrl ? (
+            <Image
+              source={{ uri: current.word.imageUrl }}
+              style={styles.cardImage}
+              resizeMode="contain"
+            />
+          ) : null}
+
           <ArabicText size="xl" style={styles.cardArabic}>{current?.word.arabic}</ArabicText>
 
           {stage === "back" ? (
@@ -237,7 +245,7 @@ export default function SRSReviewScreen() {
               ) : null}
             </View>
           ) : (
-            <Text style={styles.tapPrompt}>Tap to reveal meaning</Text>
+            <Text style={styles.tapPrompt}>{t("vocabulary.reviewTapToReveal")}</Text>
           )}
         </TouchableOpacity>
 
@@ -245,8 +253,7 @@ export default function SRSReviewScreen() {
           <View style={styles.audioRow}>
             <PlayButton
               text={current?.word.arabic ?? ""}
-              cacheKey={current?.word.arabicPlain ?? ""}
-              category="words"
+              wordId={current?.word.id}
               size={24}
             />
           </View>
@@ -261,21 +268,21 @@ export default function SRSReviewScreen() {
             onPress={() => submitReview(2)}
             disabled={submitting}
           >
-            <Text style={styles.responseBtnText}>Hard</Text>
+            <Text style={styles.responseBtnText}>{t("vocabulary.reviewHard")}</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.responseBtn, styles.goodBtn]}
             onPress={() => submitReview(4)}
             disabled={submitting}
           >
-            <Text style={[styles.responseBtnText, styles.goodBtnText]}>Good</Text>
+            <Text style={[styles.responseBtnText, styles.goodBtnText]}>{t("vocabulary.reviewGood")}</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.responseBtn, styles.easyBtn]}
             onPress={() => submitReview(5)}
             disabled={submitting}
           >
-            <Text style={styles.responseBtnText}>Easy</Text>
+            <Text style={styles.responseBtnText}>{t("vocabulary.reviewEasy")}</Text>
           </TouchableOpacity>
         </View>
       ) : null}
@@ -401,6 +408,12 @@ const styles = StyleSheet.create({
     minHeight: 260,
     alignItems: "center",
     justifyContent: "center",
+  },
+  cardImage: {
+    width: 120,
+    height: 120,
+    marginBottom: Spacing.md,
+    borderRadius: Radii.md,
   },
   cardArabic: { color: WarshPalette.ink, textAlign: "center" },
   tapPrompt: {

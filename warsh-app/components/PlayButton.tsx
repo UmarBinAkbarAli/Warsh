@@ -2,13 +2,15 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Audio } from "expo-av";
-import { getCachedTtsAudioUri } from "@services/audioCache";
+import { getCachedTtsAudioUri, getVocabWordAudioUri } from "@services/audioCache";
 import { WarshPalette } from "../constants/theme";
 
 type PlayButtonProps = {
   text: string;
   cacheKey?: string;
   category?: "words" | "phrases" | "lessons";
+  // When set, uses R2-backed vocab audio (generates once, CDN for all users)
+  wordId?: string;
   size?: number;
   color?: string;
   autoPlay?: boolean;
@@ -16,7 +18,7 @@ type PlayButtonProps = {
 
 type PlayState = "idle" | "loading" | "playing" | "error";
 
-export function PlayButton({ text, cacheKey, category = "words", size = 20, color = WarshPalette.gold, autoPlay = false }: PlayButtonProps) {
+export function PlayButton({ text, cacheKey, category = "words", wordId, size = 20, color = WarshPalette.gold, autoPlay = false }: PlayButtonProps) {
   const [playState, setPlayState] = useState<PlayState>("idle");
   const soundRef = useRef<Audio.Sound | null>(null);
   const mountedRef = useRef(true);
@@ -30,7 +32,6 @@ export function PlayButton({ text, cacheKey, category = "words", size = 20, colo
 
   const startPlay = useCallback(async () => {
     if (!mountedRef.current) return;
-    // Stop any currently playing audio before starting new playback
     if (soundRef.current) {
       await soundRef.current.stopAsync().catch(() => undefined);
       await soundRef.current.unloadAsync().catch(() => undefined);
@@ -38,7 +39,10 @@ export function PlayButton({ text, cacheKey, category = "words", size = 20, colo
     }
     setPlayState("loading");
     try {
-      const uri = await getCachedTtsAudioUri({ text, cacheKey, category });
+      const uri = wordId
+        ? await getVocabWordAudioUri(wordId, text)
+        : await getCachedTtsAudioUri({ text, cacheKey, category });
+
       if (!mountedRef.current) return;
       await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
       const { sound } = await Audio.Sound.createAsync({ uri });
@@ -61,15 +65,13 @@ export function PlayButton({ text, cacheKey, category = "words", size = 20, colo
         setTimeout(() => { if (mountedRef.current) setPlayState("idle"); }, 2000);
       }
     }
-  }, [text, cacheKey, category]);
+  }, [text, cacheKey, category, wordId]);
 
-  // Auto-play when this card/exercise is shown. Re-fires whenever text changes (new card).
   useEffect(() => {
     if (!autoPlay || !text) return;
     const timer = setTimeout(startPlay, 350);
     return () => {
       clearTimeout(timer);
-      // Stop in-progress audio when navigating away from this card
       if (soundRef.current && mountedRef.current) {
         soundRef.current.stopAsync().catch(() => undefined);
         soundRef.current.unloadAsync().catch(() => undefined);

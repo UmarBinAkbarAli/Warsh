@@ -26,6 +26,7 @@ export async function GET(request: Request) {
           translationEn: true,
           translationUr: true,
           quranicExample: true,
+          imageUrl: true,
         },
       },
     },

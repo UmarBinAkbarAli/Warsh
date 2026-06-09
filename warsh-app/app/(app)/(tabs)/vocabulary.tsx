@@ -17,29 +17,73 @@ import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
 import { getVocabularyWords, getWordOfDay, getSRSDueWords } from "@services/api";
 import { useLanguage, pickTranslation } from "@services/language";
+import { useT } from "@i18n/index";
 
 // ─── topic catalog ──────────────────────────────────────────────────────────
 
 export const TOPIC_CATALOG = [
-  { key: "people",      labelAr: "النَّاس",                   labelEn: "People" },
-  { key: "family",      labelAr: "العَائِلَة",                 labelEn: "Family" },
-  { key: "body",        labelAr: "الجِسْم",                   labelEn: "Body" },
-  { key: "home",        labelAr: "البَيْت",                   labelEn: "Home" },
-  { key: "food",        labelAr: "الطَّعَام",                  labelEn: "Food" },
-  { key: "time",        labelAr: "الزَّمَن",                   labelEn: "Time" },
-  { key: "nature",      labelAr: "الطَّبِيعَة",                labelEn: "Nature" },
-  { key: "worship",     labelAr: "العِبَادَة",                 labelEn: "Worship" },
-  { key: "quranic",     labelAr: "مُصْطَلَحَات قُرْآنِيَّة",   labelEn: "Quranic Terms" },
-  { key: "verbs",       labelAr: "الأَفْعَال",                 labelEn: "Verbs" },
-  { key: "travel",      labelAr: "السَّفَر",                   labelEn: "Travel" },
-  { key: "masjid",      labelAr: "المَسْجِد",                  labelEn: "Masjid" },
-  { key: "marketplace", labelAr: "السُّوق",                   labelEn: "Marketplace" },
-  { key: "school",      labelAr: "المَدْرَسَة",                labelEn: "School" },
-  { key: "numbers",     labelAr: "الأَعْدَاد",                 labelEn: "Numbers" },
-  { key: "colors",      labelAr: "الأَلْوَان",                 labelEn: "Colors" },
+  { key: "people",      labelAr: "النَّاس",                   labelEn: "People",         labelUr: "???" },
+  { key: "family",      labelAr: "العَائِلَة",                 labelEn: "Family",         labelUr: "??????" },
+  { key: "body",        labelAr: "الجِسْم",                   labelEn: "Body",           labelUr: "???" },
+  { key: "home",        labelAr: "البَيْت",                   labelEn: "Home",           labelUr: "???" },
+  { key: "food",        labelAr: "الطَّعَام",                  labelEn: "Food",           labelUr: "?????" },
+  { key: "time",        labelAr: "الزَّمَن",                   labelEn: "Time",           labelUr: "???" },
+  { key: "nature",      labelAr: "الطَّبِيعَة",                labelEn: "Nature",         labelUr: "????" },
+  { key: "worship",     labelAr: "العِبَادَة",                 labelEn: "Worship",        labelUr: "?????" },
+  { key: "quranic",     labelAr: "مُصْطَلَحَات قُرْآنِيَّة",   labelEn: "Quranic Terms",  labelUr: "????? ????????" },
+  { key: "verbs",       labelAr: "الأَفْعَال",                 labelEn: "Verbs",          labelUr: "?????" },
+  { key: "travel",      labelAr: "السَّفَر",                   labelEn: "Travel",         labelUr: "???" },
+  { key: "masjid",      labelAr: "المَسْجِد",                  labelEn: "Masjid",         labelUr: "????" },
+  { key: "marketplace", labelAr: "السُّوق",                   labelEn: "Marketplace",    labelUr: "?????" },
+  { key: "school",      labelAr: "المَدْرَسَة",                labelEn: "School",         labelUr: "?????" },
+  { key: "numbers",     labelAr: "الأَعْدَاد",                 labelEn: "Numbers",        labelUr: "?????" },
+  { key: "colors",      labelAr: "الأَلْوَان",                 labelEn: "Colors",         labelUr: "???" },
 ];
 
 // ─── types ───────────────────────────────────────────────────────────────────
+
+export function getTopicLabel(topicKey: string, language: "en" | "ur", t: ReturnType<typeof useT>) {
+  if (language !== "ur") {
+    return TOPIC_CATALOG.find((topic) => topic.key === topicKey)?.labelEn ?? topicKey;
+  }
+
+  switch (topicKey) {
+    case "people":
+      return t("vocabulary.topicPeople");
+    case "family":
+      return t("vocabulary.topicFamily");
+    case "body":
+      return t("vocabulary.topicBody");
+    case "home":
+      return t("vocabulary.topicHome");
+    case "food":
+      return t("vocabulary.topicFood");
+    case "time":
+      return t("vocabulary.topicTime");
+    case "nature":
+      return t("vocabulary.topicNature");
+    case "worship":
+      return t("vocabulary.topicWorship");
+    case "quranic":
+      return t("vocabulary.topicQuranic");
+    case "verbs":
+      return t("vocabulary.topicVerbs");
+    case "travel":
+      return t("vocabulary.topicTravel");
+    case "masjid":
+      return t("vocabulary.topicMasjid");
+    case "marketplace":
+      return t("vocabulary.topicMarketplace");
+    case "school":
+      return t("vocabulary.topicSchool");
+    case "numbers":
+      return t("vocabulary.topicNumbers");
+    case "colors":
+      return t("vocabulary.topicColors");
+    default:
+      return TOPIC_CATALOG.find((topic) => topic.key === topicKey)?.labelEn ?? topicKey;
+  }
+}
 
 interface VocabWord {
   id: string;
@@ -64,15 +108,16 @@ interface VocabWord {
 // ─── word row ─────────────────────────────────────────────────────────────────
 
 function WordRow({ word, language, onPress }: { word: VocabWord; language: "en" | "ur"; onPress?: () => void }) {
+  const t = useT();
   const inner = (
     <View style={styles.wordCard}>
       <View style={styles.wordTopRow}>
         <View style={styles.wordArabicRow}>
           <ArabicText size="md" style={styles.wordArabic}>{word.arabic}</ArabicText>
-          <PlayButton text={word.arabic} cacheKey={word.arabicPlain} category="words" size={18} />
+          <PlayButton text={word.arabic} wordId={word.id} size={18} />
         </View>
         {word.rootLetters ? (
-          <Text style={styles.rootText}>root: {word.rootLetters}</Text>
+          <Text style={styles.rootText}>{t("vocabulary.root", { value: word.rootLetters })}</Text>
         ) : null}
       </View>
       <Text style={styles.meaningText}>{pickTranslation(word, language)}</Text>
@@ -90,13 +135,14 @@ function WordRow({ word, language, onPress }: { word: VocabWord; language: "en" 
 // ─── word of day card ────────────────────────────────────────────────────────
 
 function WordOfDayCard({ word, language, onPress }: { word: VocabWord; language: "en" | "ur"; onPress?: () => void }) {
+  const t = useT();
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={onPress ? 0.8 : 1}>
       <View style={styles.wotdCard}>
-        <Text style={styles.wotdLabel}>Today's Word · كَلِمَة الْيَوْم</Text>
+        <Text style={styles.wotdLabel}>{t("vocabulary.wordOfDay")}</Text>
         <View style={styles.wotdArabicRow}>
           <ArabicText size="xl" style={styles.wotdArabic}>{word.arabic}</ArabicText>
-          <PlayButton text={word.arabic} cacheKey={word.arabicPlain} category="words" size={28} />
+          <PlayButton text={word.arabic} wordId={word.id} size={28} />
         </View>
         <Text style={styles.wotdMeaning}>{pickTranslation(word, language)}</Text>
         <Text style={styles.wotdTranslit}>{word.transliteration}</Text>
@@ -109,7 +155,7 @@ function WordOfDayCard({ word, language, onPress }: { word: VocabWord; language:
           </View>
         ) : null}
         {onPress ? (
-          <Text style={styles.wotdTapHint}>Tap to explore</Text>
+          <Text style={styles.wotdTapHint}>{t("vocabulary.tapToExplore")}</Text>
         ) : null}
       </View>
     </TouchableOpacity>
@@ -118,7 +164,8 @@ function WordOfDayCard({ word, language, onPress }: { word: VocabWord; language:
 
 // ─── topic grid ───────────────────────────────────────────────────────────────
 
-function TopicGrid({ wordCounts, onPress }: { wordCounts: Record<string, number>; onPress: (key: string) => void }) {
+function TopicGrid({ language, wordCounts, onPress }: { language: "en" | "ur"; wordCounts: Record<string, number>; onPress: (key: string) => void }) {
+  const t = useT();
   const pairs = [];
   for (let i = 0; i < TOPIC_CATALOG.length; i += 2) {
     pairs.push(TOPIC_CATALOG.slice(i, i + 2));
@@ -136,9 +183,14 @@ function TopicGrid({ wordCounts, onPress }: { wordCounts: Record<string, number>
               activeOpacity={0.75}
             >
               <ArabicText size="sm" style={styles.topicArabic}>{topic.labelAr}</ArabicText>
-              <Text style={styles.topicEnglish}>{topic.labelEn}</Text>
+              <Text style={styles.topicEnglish}>{getTopicLabel(topic.key, language, t)}</Text>
               {wordCounts[topic.key] != null ? (
-                <Text style={styles.topicCount}>{wordCounts[topic.key]} words</Text>
+                <Text style={styles.topicCount}>
+                  {t("vocabulary.wordCount", {
+                    count: wordCounts[topic.key],
+                    suffix: wordCounts[topic.key] !== 1 ? "s" : "",
+                  })}
+                </Text>
               ) : null}
             </TouchableOpacity>
           ))}
@@ -155,6 +207,7 @@ export default function VocabularyScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const language = useLanguage();
+  const t = useT();
   const [query, setQuery] = useState("");
   const [wordOfDay, setWordOfDay] = useState<VocabWord | null>(null);
   const [searchResults, setSearchResults] = useState<VocabWord[]>([]);
@@ -231,8 +284,8 @@ export default function VocabularyScreen() {
     >
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.eyebrow}>Free forever · مجانيٌّ دائماً</Text>
-        <Text style={styles.title}>Vocabulary</Text>
+        <Text style={styles.eyebrow}>{t("vocabulary.freeForever")}</Text>
+        <Text style={styles.title}>{t("vocabulary.title")}</Text>
         <ArabicText size="md" style={styles.titleAr}>مُفْرَدَات</ArabicText>
       </View>
 
@@ -242,7 +295,7 @@ export default function VocabularyScreen() {
           <TextInput
             value={query}
             onChangeText={setQuery}
-            placeholder="Search Arabic, English, or root"
+            placeholder={t("vocabulary.searchPlaceholder")}
             mode="outlined"
             dense
             editable={false}
@@ -270,8 +323,8 @@ export default function VocabularyScreen() {
             ))
           ) : (
             <View style={styles.emptyCard}>
-              <Text style={styles.emptyTitle}>No words found</Text>
-              <Text style={styles.emptyCopy}>Try a different spelling, English meaning, or root letters.</Text>
+              <Text style={styles.emptyTitle}>{t("vocabulary.noWordsFound")}</Text>
+              <Text style={styles.emptyCopy}>{t("vocabulary.tryDifferentSpelling")}</Text>
             </View>
           )}
         </View>
@@ -298,11 +351,11 @@ export default function VocabularyScreen() {
               <View style={styles.reviewCardLeft}>
                 <Ionicons name="repeat-outline" size={22} color={WarshPalette.sage} />
                 <View style={{ marginLeft: Spacing.sm }}>
-                  <Text style={styles.reviewCardTitle}>Review</Text>
-                  <Text style={styles.reviewCardCount}>{srsDueCount} word{srsDueCount !== 1 ? "s" : ""} ready</Text>
+                  <Text style={styles.reviewCardTitle}>{t("vocabulary.review")}</Text>
+                  <Text style={styles.reviewCardCount}>{t("vocabulary.reviewReady", { count: srsDueCount, suffix: srsDueCount !== 1 ? "s" : "" })}</Text>
                 </View>
               </View>
-              <Text style={styles.reviewCardCta}>Begin</Text>
+              <Text style={styles.reviewCardCta}>{t("vocabulary.begin")}</Text>
             </TouchableOpacity>
           ) : null}
 
@@ -310,11 +363,11 @@ export default function VocabularyScreen() {
           <View style={styles.statsRow}>
             <View style={styles.statBox}>
               <Text style={styles.statValue}>{allWords.length}</Text>
-              <Text style={styles.statLabel}>words in bank</Text>
+              <Text style={styles.statLabel}>{t("vocabulary.wordsInBank")}</Text>
             </View>
             <View style={styles.statBox}>
               <Text style={styles.statValue}>16</Text>
-              <Text style={styles.statLabel}>topics</Text>
+              <Text style={styles.statLabel}>{t("vocabulary.topics")}</Text>
             </View>
           </View>
 
@@ -327,22 +380,23 @@ export default function VocabularyScreen() {
             <View style={styles.myWordsLeft}>
               <Ionicons name="bookmark-outline" size={22} color={WarshPalette.gold} />
               <View style={{ marginLeft: Spacing.sm }}>
-                <Text style={styles.myWordsTitle}>My Words</Text>
-                <Text style={styles.myWordsSub}>Words from your lessons</Text>
+                <Text style={styles.myWordsTitle}>{t("vocabulary.myWords")}</Text>
+                <Text style={styles.myWordsSub}>{t("vocabulary.myWordsSub")}</Text>
               </View>
             </View>
-            <Text style={styles.myWordsCta}>View ›</Text>
+            <Text style={styles.myWordsCta}>{t("common.view")} ›</Text>
           </TouchableOpacity>
 
           {/* Browse by Topic */}
-          <Text style={styles.sectionTitle}>Browse by Topic</Text>
+          <Text style={styles.sectionTitle}>{t("vocabulary.browseByTopic")}</Text>
           <TopicGrid
+            language={language}
             wordCounts={wordCounts}
             onPress={(key) => router.push(`/(app)/vocabulary/${key}`)}
           />
 
           {/* Footer */}
-          <Text style={styles.footer}>Vocabulary stays with you, always.</Text>
+          <Text style={styles.footer}>{t("vocabulary.footer")}</Text>
         </>
       )}
     </ScrollView>
