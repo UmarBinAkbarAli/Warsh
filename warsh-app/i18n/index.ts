@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { useLanguage, type AppLanguage } from "@services/language";
 import { en } from "./en";
 import { ur } from "./ur";
@@ -19,5 +20,5 @@ export function translate(language: AppLanguage, key: string, params?: Params) {
 
 export function useT() {
   const language = useLanguage();
-  return (key: string, params?: Params) => translate(language, key, params);
+  return useCallback((key: string, params?: Params) => translate(language, key, params), [language]);
 }

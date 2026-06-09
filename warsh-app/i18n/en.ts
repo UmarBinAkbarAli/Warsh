@@ -1,4 +1,9 @@
 export const en = {
+  "tabs.learn": "Learn",
+  "tabs.vocabulary": "Vocabulary",
+  "tabs.noor": "Noor",
+  "tabs.profile": "You",
+
   "common.all": "All",
   "common.back": "Back",
   "common.begin": "Begin",

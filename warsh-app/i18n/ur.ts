@@ -1,4 +1,9 @@
 export const ur = {
+  "tabs.learn": "سیکھیں",
+  "tabs.vocabulary": "الفاظ",
+  "tabs.noor": "نور",
+  "tabs.profile": "آپ",
+
   "common.all": "سب",
   "common.back": "واپس",
   "common.begin": "شروع کریں",

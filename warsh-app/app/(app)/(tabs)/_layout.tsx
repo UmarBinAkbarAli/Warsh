@@ -1,9 +1,12 @@
 import { Feather } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { View } from "react-native";
+import { useT } from "@i18n/index";
 import { Colors } from "../../../constants/theme";
 
 export default function TabsLayout() {
+  const t = useT();
+
   return (
     <Tabs
       screenOptions={{
@@ -29,7 +32,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Learn",
+          title: t("tabs.learn"),
           tabBarIcon: ({ color, focused, size }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <Feather name="book-open" color={color} size={size} />
@@ -49,7 +52,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="vocabulary"
         options={{
-          title: "Vocabulary",
+          title: t("tabs.vocabulary"),
           tabBarIcon: ({ color, focused, size }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <Feather name="layers" color={color} size={size} />
@@ -69,7 +72,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="chat"
         options={{
-          title: "Noor",
+          title: t("tabs.noor"),
           tabBarIcon: ({ color, focused, size }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <Feather name="message-circle" color={color} size={size} />
@@ -89,7 +92,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="profile"
         options={{
-          title: "You",
+          title: t("tabs.profile"),
           tabBarIcon: ({ color, focused, size }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <Feather name="user" color={color} size={size} />
