@@ -22,7 +22,7 @@ export default function OnboardingLanguageScreen() {
       <View style={{ height: Spacing.md }} />
       <BrandButton title={t("onboarding.languageEnglish")} variant="secondary" onPress={() => setLanguage("en")} selected={language === "en"} />
       <View style={{ height: Spacing.xl }} />
-      <BrandButton title={t("common.continue")} onPress={() => router.push("/(auth)/onboarding/placement")} />
+      <BrandButton title={t("common.continue")} onPress={() => router.push("/(auth)/register")} />
     </View>
   );
 }

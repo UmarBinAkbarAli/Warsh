@@ -1,6 +1,6 @@
 # Warsh Phase 1 Progress Tracker
 
-Last updated: 2026-06-10 (Vocabulary R2 audio + image infrastructure live; Urdu i18n stability fixes; vocab image audit CSVs exported)
+Last updated: 2026-06-10 (Onboarding simplified — preview→name→language→register→permissions; IAP payment flow fixed end-to-end; A6 word grid RTL corrected)
 
 ## Purpose
 
@@ -37,6 +37,9 @@ This file is the source of truth for current app progress as reflected in the co
 - **Audio prebuild scripts** — `scripts/prebuild-audio.ts` and `scripts/prebuild-audio-parallel.ts` added for bulk pre-generating and uploading all lesson/vocabulary audio to R2 before APK release.
 - **Urdu i18n stability** — Tab labels in `(tabs)/_layout.tsx` now use i18n keys; `en.ts` and `ur.ts` expanded with lesson beat labels (discover, practice, review, close) and other missing strings. Language fallback chain hardened.
 - **Vocab image audit CSVs exported** — `warsh-backend/exports/vocabulary-image-needed.csv` (585 rows, one per vocab word with `imageUrl` status); `warsh-backend/exports/discover-card-vocab-audit.csv` (1,203 rows cross-referencing discover card words vs vocabulary bank, with `discoverImageUrl`, `vocabImageUrl`, and `recommendedImageTarget`) — master lists for bulk illustration sourcing.
+- **IAP payment flow fixed end-to-end** — Three layered bugs resolved: (1) `storeVerification.ts` was filtering `lineItems` by `productId` but Google's `subscriptionsv2` API returns the BASE PLAN ID (`monthly`/`yearly`) there, not the subscription product ID — filter removed; (2) post-purchase navigation crashed because it routed to a non-existent `trial-reminder` screen — fixed to `/(app)/(tabs)`; (3) restore flow never acknowledged the purchase token — `acknowledgeAndroidPurchase` added after successful verify. Backend deployed to Vercel.
+- **Onboarding simplified** — Reduced onboarding to the essential path only. New flow: Preview (A1→A7) → Name → Language → Register → Permissions → Learn tab. Unwired screens (`welcome`, `goal`, `level`, `daily-commitment`, `placement`, `ready`) remain in the codebase and can be re-wired at any time. Store defaults cover the skipped decisions: `goal=QURAN`, `level=BEGINNER`, `language=ur`, `placementType=BEGINNER`, `dailyGoalMinutes=10`.
+- **A6 word grid RTL fixed** — `direction: "rtl"` style was unreliable in this RN version; replaced with `flexDirection: "row-reverse"` so Surah An-Nas words animate correctly from right to left.
 
 It is intended to track:
 - what is implemented in the repo
@@ -192,6 +195,62 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 15. ~~**Rebuild release AAB with `EXPO_PUBLIC_SENTRY_DSN`**~~ ✅ DONE (2026-06-05) — `app-release.aab` (47.8 MB) rebuilt with `EXPO_PUBLIC_SENTRY_DSN` baked in. Bundle verified: `api.warsh.app` present, `sentry.io` present, `warsh-backend.vercel.app` absent. JAVA_HOME: `C:\Users\sysadmin\.gradle\jdks\eclipse_adoptium-17-amd64-windows\jdk-17.0.18+8`. Ready to upload to Play Console.
 16. ~~**Auto-play TTS audio in Discover and AUDIO_RECOGNITION**~~ ✅ DONE (2026-06-05) — `PlayButton` now accepts `autoPlay` prop. When true, plays TTS 350ms after the card/exercise appears; re-fires when text changes (next card); stops cleanly on navigation away. Wired in `renderDiscover()` and `renderAudioRecognition()` (with `key={currentExerciseIndex}` for clean remount). For AUDIO_RECOGNITION the hint changed to "Tap to replay". TypeScript clean.
 17. ~~**Populate `audio_url` fields for AUDIO_RECOGNITION exercises**~~ ✅ DONE — Audio is now stored in the Cloudflare R2 bucket. `audio_url` fields in lesson fixtures and vocabulary records are populated with R2 URLs. OpenAI TTS is no longer required; AUDIO_RECOGNITION and Discover auto-play exercises serve audio directly from R2.
+
+---
+
+## Recent Changes (2026-06-10) — Onboarding simplification + IAP fixes
+
+### Onboarding simplification (2026-06-10)
+
+**Goal:** Reduce new-user friction by removing the multi-step onboarding questionnaire. Unwired screens are preserved in the codebase for future re-wiring.
+
+**New active flow:**
+```
+Preview A1 → A2 → A3 → A4 → A5 → A6 → A7 (Begin)
+  → /(auth)/onboarding/name
+  → /(auth)/onboarding/language
+  → /(auth)/register
+  → /(auth)/onboarding/permissions
+  → /(app)/(tabs)   ← Learn tab
+```
+
+**Files changed:**
+- `warsh-app/app/(auth)/preview/a7-cta.tsx` — "Begin" button now routes to `/(auth)/onboarding/name` (was `/(auth)/onboarding/welcome`)
+- `warsh-app/app/(auth)/onboarding/language.tsx` — Continue now routes to `/(auth)/register` (was `/(auth)/onboarding/placement`)
+- `warsh-app/app/(auth)/preview/a6-tadabbur.tsx` — Word grid container changed from `flexDirection: "row"` + `direction: "rtl"` to `flexDirection: "row-reverse"` for reliable RTL layout; first word قُلْ now appears on the right
+
+**Unwired screens (files kept, not deleted):**
+| Screen file | Route | Purpose | Re-wire point |
+|---|---|---|---|
+| `onboarding/welcome.tsx` | `/(auth)/onboarding/welcome` | Branded welcome | Insert after A7 CTA if A/B testing |
+| `onboarding/goal.tsx` | `/(auth)/onboarding/goal` | QURAN / SALAH / GENERAL goal selection | Insert before `name` |
+| `onboarding/level.tsx` | `/(auth)/onboarding/level` | Self-assessed Arabic level | Insert before `name` |
+| `onboarding/daily-commitment.tsx` | `/(auth)/onboarding/daily-commitment` | Daily goal minutes | Insert before `register` |
+| `onboarding/placement.tsx` | `/(auth)/onboarding/placement` | Placement test | Insert before `register` |
+| `onboarding/ready.tsx` | `/(auth)/onboarding/ready` | "You're ready" transition screen | Insert before `register` |
+
+**Store defaults applied while screens are bypassed** (`warsh-app/stores/onboardingStore.ts`):
+- `goal: "QURAN"`, `level: "BEGINNER"`, `language: "ur"`, `placementType: "BEGINNER"`, `dailyGoalMinutes: 10`
+- These are the store initial values — no code changes needed; the register screen reads them automatically.
+
+### IAP payment flow fixes (2026-06-10)
+
+Three bugs were diagnosed and fixed end-to-end. Backend deployed to Vercel.
+
+**Bug 1 — `storeVerification.ts` lineItems filter (root cause):**
+- Google's `subscriptionsv2` API returns `lineItems[].productId` as the BASE PLAN ID (`"monthly"` / `"yearly"`), not the subscription product ID (`"warsh_premium"`). The old filter matched by `productId === input.productId` and eliminated every line item, so verification always threw.
+- Fix: removed the `productId` filter entirely; instead selects the line item with the latest valid `expiryTime`.
+- Same fix applied to the RTDN renewal handler in `app/api/webhooks/google/route.ts`.
+
+**Bug 2 — Post-purchase navigation crash:**
+- `paywall.tsx` routed to `/(app)/trial-reminder` after a successful purchase. This screen was never registered in `(app)/_layout.tsx` and does not exist, causing an immediate crash.
+- Fix: changed `router.replace("/(app)/trial-reminder")` to `router.replace("/(app)/(tabs)")`.
+
+**Bug 3 — Restore never acknowledged the purchase token:**
+- `handleRestore()` called `verifyPurchase()` but never called `acknowledgeAndroidPurchase()`. Google Play requires acknowledgement within 3 days of purchase; unacknowledged tokens block repurchase with "already purchased."
+- Fix: after successful verify, `acknowledgeAndroidPurchase(restoreToken)` is now called (failures silently swallowed — acknowledgement is best-effort at this point).
+
+**Files changed:** `warsh-backend/lib/storeVerification.ts`, `warsh-backend/app/api/webhooks/google/route.ts`, `warsh-app/app/(app)/paywall.tsx`
 
 ---
 
@@ -792,16 +851,16 @@ The workspace contains two active projects:
 
 - The landing screen routes new users into onboarding before registration
 - The login screen's register link routes into onboarding
-- Onboarding route sequence exists in app code:
-  1. `welcome`
-  2. `goal`
-  3. `level`
-  4. `name`
-  5. `language`
-  6. `placement`
-  7. `ready`
-  8. `register`
-- Onboarding state is persisted in a store
+- **Active onboarding route sequence (2026-06-10):**
+  1. Preview A1-A7 (tap "Begin" on A7)
+  2. `name`
+  3. `language`
+  4. `register` (creates account, applies placement)
+  5. `permissions` (notifications + mic — post-registration)
+  → Learn tab
+- **Unwired screens (files kept in codebase, re-wirable):** `welcome`, `goal`, `level`, `daily-commitment`, `placement`, `ready` — removed from the active flow to reduce friction; can be inserted back at any time
+- Store defaults while bypassed: `goal=QURAN`, `level=BEGINNER`, `language=ur`, `placementType=BEGINNER`, `dailyGoalMinutes=10`
+- Onboarding state is persisted in a Zustand store (`onboardingStore.ts`)
 - Selection-based onboarding screens visibly show chosen state
 - Register screen uses onboarding-collected data and then applies placement
 

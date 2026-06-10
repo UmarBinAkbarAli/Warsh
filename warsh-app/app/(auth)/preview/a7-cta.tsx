@@ -68,7 +68,7 @@ export default function PreviewA7Cta() {
         <View style={{ width: "100%", marginBottom: Spacing.lg }}>
           <BrandButton
             title="Begin"
-            onPress={() => { trackPreviewCompleted(); router.replace("/(auth)/onboarding/welcome"); }}
+            onPress={() => { trackPreviewCompleted(); router.replace("/(auth)/onboarding/name"); }}
           />
         </View>
 
