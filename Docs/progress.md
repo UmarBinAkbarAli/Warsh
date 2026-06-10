@@ -1,6 +1,6 @@
 # Warsh Phase 1 Progress Tracker
 
-Last updated: 2026-06-09 (R2-backed audio storage live; TTS no longer required for audio playback)
+Last updated: 2026-06-10 (Vocabulary R2 audio + image infrastructure live; Urdu i18n stability fixes; vocab image audit CSVs exported)
 
 ## Purpose
 
@@ -30,6 +30,13 @@ This file is the source of truth for current app progress as reflected in the co
 - **Lesson fixtures backfilled with Urdu content** - fixture JSON now includes `.ur` wherever localized lesson content exposed `.en`, and vocabulary related-word responses now include `translationUr`.
 - **Urdu audit added and passing** - `npm run db:audit-urdu` now checks DB metadata, vocabulary/Quranic example Urdu fields, and fixture localized content; `npm run db:generate`, `npm run db:migrate -- --name add_urdu_metadata`, `npm run db:seed`, `npm run db:validate-fixtures`, backend build, app lint, and app `npx tsc --noEmit` all passed on 2026-06-09.
 - **R2-backed audio storage live** - Cloudflare R2 bucket is now the authoritative source for all exercise and vocabulary audio files. `audio_url` fields in lesson fixtures and vocabulary records are populated with R2 URLs. OpenAI TTS is no longer needed for audio playback in AUDIO_RECOGNITION or Discover exercises — audio is served directly from R2.
+
+**Latest status (2026-06-10):**
+- **R2 vocabulary audio + word image infrastructure live** — `GET /api/vocabulary/words/[id]/audio` lazily generates TTS via OpenAI, uploads to R2, saves `audioUrl` on the VocabularyWord record, and returns a public CDN URL on all subsequent calls. `PUT /api/vocabulary/words/[id]/image` accepts an image upload and saves the R2 `imageUrl`. New `audioUrl` + `imageUrl` fields on `VocabularyWord` (2 Prisma migrations). `lib/r2.ts` provides the S3-compatible R2 client.
+- **Mobile vocab audio + images wired** — `PlayButton` now routes vocabulary words through the R2 audio path using a `wordId` prop. `audioCache.getVocabWordAudioUri` calls the audio endpoint, downloads from the public R2 URL, and caches on device for 30 days. SRS review (`review.tsx`) shows word image (120×120) when available; word detail (`word/[wordId].tsx`) shows image at 160×160. `vocabulary.tsx` and `[topic].tsx` pass `wordId` to PlayButton.
+- **Audio prebuild scripts** — `scripts/prebuild-audio.ts` and `scripts/prebuild-audio-parallel.ts` added for bulk pre-generating and uploading all lesson/vocabulary audio to R2 before APK release.
+- **Urdu i18n stability** — Tab labels in `(tabs)/_layout.tsx` now use i18n keys; `en.ts` and `ur.ts` expanded with lesson beat labels (discover, practice, review, close) and other missing strings. Language fallback chain hardened.
+- **Vocab image audit CSVs exported** — `warsh-backend/exports/vocabulary-image-needed.csv` (585 rows, one per vocab word with `imageUrl` status); `warsh-backend/exports/discover-card-vocab-audit.csv` (1,203 rows cross-referencing discover card words vs vocabulary bank, with `discoverImageUrl`, `vocabImageUrl`, and `recommendedImageTarget`) — master lists for bulk illustration sourcing.
 
 It is intended to track:
 - what is implemented in the repo
@@ -142,6 +149,8 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 - Preview experience A1-A7, onboarding B1-B9 including permissions
 - Token refresh (30-day JWT), Spoken Fus'ha (SHADOW_REPEAT + SPOKEN_PHRASES), Urdu localization
 - R2-backed audio storage: all `audio_url` fields in fixtures and vocabulary records point to Cloudflare R2; OpenAI TTS no longer required for audio playback
+- Vocabulary R2 audio + image infrastructure: `GET /api/vocabulary/words/[id]/audio` lazy TTS→R2 caching, `PUT /api/vocabulary/words/[id]/image`, `lib/r2.ts`, `audioUrl`/`imageUrl` on VocabularyWord, PlayButton wired for vocab wordId, images in review + word-detail screens
+- Vocab image audit CSVs: `exports/vocabulary-image-needed.csv` (585 words) and `exports/discover-card-vocab-audit.csv` (1,203 discover card words with image targets) exported for bulk illustration work
 - Sentry backend live-confirmed; mobile Sentry confirmed live (event received from release APK on physical device 2026-06-04)
 - Mixpanel baked into release APK; token confirmed in EAS production + preview
 - UptimeRobot live: `https://api.warsh.app/api/health` monitored every 5 minutes, alert email set
@@ -183,6 +192,46 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 15. ~~**Rebuild release AAB with `EXPO_PUBLIC_SENTRY_DSN`**~~ ✅ DONE (2026-06-05) — `app-release.aab` (47.8 MB) rebuilt with `EXPO_PUBLIC_SENTRY_DSN` baked in. Bundle verified: `api.warsh.app` present, `sentry.io` present, `warsh-backend.vercel.app` absent. JAVA_HOME: `C:\Users\sysadmin\.gradle\jdks\eclipse_adoptium-17-amd64-windows\jdk-17.0.18+8`. Ready to upload to Play Console.
 16. ~~**Auto-play TTS audio in Discover and AUDIO_RECOGNITION**~~ ✅ DONE (2026-06-05) — `PlayButton` now accepts `autoPlay` prop. When true, plays TTS 350ms after the card/exercise appears; re-fires when text changes (next card); stops cleanly on navigation away. Wired in `renderDiscover()` and `renderAudioRecognition()` (with `key={currentExerciseIndex}` for clean remount). For AUDIO_RECOGNITION the hint changed to "Tap to replay". TypeScript clean.
 17. ~~**Populate `audio_url` fields for AUDIO_RECOGNITION exercises**~~ ✅ DONE — Audio is now stored in the Cloudflare R2 bucket. `audio_url` fields in lesson fixtures and vocabulary records are populated with R2 URLs. OpenAI TTS is no longer required; AUDIO_RECOGNITION and Discover auto-play exercises serve audio directly from R2.
+
+---
+
+## Recent Changes (2026-06-09/10) — R2 vocabulary audio + images, Urdu stability
+
+### R2 vocabulary audio + word image infrastructure (2026-06-09)
+
+**New backend endpoints:**
+
+| Method | Path | File | Purpose |
+|--------|------|------|---------|
+| GET | `/api/vocabulary/words/[id]/audio` | `app/api/vocabulary/words/[id]/audio/route.ts` | Lazy TTS → R2: generates OpenAI TTS audio on first request, uploads to R2, saves `audioUrl` on VocabularyWord, returns public CDN URL on all subsequent calls |
+| PUT | `/api/vocabulary/words/[id]/image` | `app/api/vocabulary/words/[id]/image/route.ts` | Upload word illustration to R2, save `imageUrl` on VocabularyWord |
+
+**New backend library:**
+- `lib/r2.ts` — Cloudflare R2 S3-compatible client using `@aws-sdk/client-s3`; exports `uploadToR2(key, buffer, contentType)` and `existsInR2(key)`
+- Added `audioUrl String?` and `imageUrl String?` to `VocabularyWord` Prisma schema (2 migrations)
+- `srs/due/route.ts` — `imageUrl` now included in word select for SRS review
+
+**App changes:**
+- `PlayButton` — new `wordId` prop; when set, routes vocab word audio through `audioCache.getVocabWordAudioUri(wordId)` instead of TTS text synthesis
+- `services/audioCache.ts` — `getVocabWordAudioUri(wordId)` calls `GET /api/vocabulary/words/[id]/audio`, downloads from public R2 URL, caches on device for 30 days
+- `vocabulary/review.tsx` — shows `imageUrl` as 120×120 illustration on SRS card front when available
+- `vocabulary/word/[wordId].tsx` — shows `imageUrl` as 160×160 in word detail header
+- `vocabulary.tsx`, `vocabulary/[topic].tsx` — pass `wordId` to PlayButton
+
+**Audio prebuild scripts (2026-06-09):**
+- `scripts/prebuild-audio.ts` — bulk-generates TTS for all lesson audio fields and uploads to R2
+- `scripts/prebuild-audio-parallel.ts` — parallelized version for faster pre-release audio population
+
+**Urdu i18n stability fixes (2026-06-09):**
+- `(tabs)/_layout.tsx` — tab labels now use `t('tabs.learn')` etc. via i18n instead of hardcoded strings
+- `i18n/en.ts`, `i18n/ur.ts` — added lesson beat labels: `discover`, `practice`, `review`, `close`, plus other missing UI strings
+- `i18n/index.ts` — language fallback chain hardened; missing keys now fall back to English silently
+
+**Vocab image audit CSVs exported (2026-06-09/10):**
+- `warsh-backend/exports/vocabulary-image-needed.csv` (585 rows) — one row per vocabulary word with current `audioUrl`, `imageUrl`, word data, and recommended R2 image target path for bulk illustration upload
+- `warsh-backend/exports/discover-card-vocab-audit.csv` (1,203 rows) — cross-reference of every discover card word appearance in all 391 lesson fixtures vs the vocabulary bank; columns: `scope`, `isInVocabularyWord`, `vocabId`, `discoverImageUrl`, `vocabImageUrl`, `recommendedImageTarget` — used to plan which discover card images need sourcing
+
+**TypeScript:** Backend 0 errors; app 0 errors.
 
 ---
 
@@ -2134,6 +2183,10 @@ Current product concern:
 13. Configure real Apple/Google store secrets and product IDs; run sandbox purchase + restore tests for `warsh_monthly` and `warsh_annual`
 14. Move chat rate limiting from Postgres `ChatMessage` counting to Upstash Redis if load testing shows DB-count latency matters
 
+### Content / assets
+20. **Vocabulary word images** — infrastructure done; need to source and upload illustrations for all 585 vocabulary words. `exports/vocabulary-image-needed.csv` is the master list (585 rows). Use `PUT /api/vocabulary/words/[id]/image` to upload each. Priority: Quranic terms + high-frequency concrete nouns first.
+21. **Discover card images** — `exports/discover-card-vocab-audit.csv` maps 1,203 discover-card word appearances to their vocab record and `recommendedImageTarget` R2 path. Populate `image_url` in lesson fixtures for high-traffic Chapters 1–10 discover cards first.
+
 ### QA still needed
 15. ✅ Physical Android route-load sweep passed for all 35 Chapter 1-8 lessons on TECNO KF8
 16. ✅ Focused physical-device checks passed for SP1, MATCHING, and ch06-l04 GRAMMAR_PARSE
@@ -2143,7 +2196,7 @@ Current product concern:
 
 ## Current Source-Of-Truth Summary
 
-As of 2026-05-29:
+As of 2026-06-10:
 - the codebase implements the full Phase 1 app loop
 - the native Android app is installed and launching on the authorized physical device
 - onboarding, auth, placement, progression, lesson play, chat, and profile flows exist in code
@@ -2154,11 +2207,14 @@ As of 2026-05-29:
 - the SOT is `Docs/warsh-spec-00-master-index.md` + spec-01 through spec-13; `CLAUDE.md` updated to reflect this
 - 72 chapters are seeded with fixture-authored lesson content
 - backend enforces locked progression and placement skipping; `DEV_UNLOCK_ALL=true` in local `.env` for development
-- backend TypeScript check passes with 0 errors after the IAP verification hardening
+- backend TypeScript check passes with 0 errors
 - app TypeScript check passes with 0 errors; app lint has a config and `npm run lint -- --quiet` passes
 - `npm run db:validate-fixtures` passes across 391 authored fixtures
-- bottom tab shell matches spec: `Learn | Vocabulary | Noor | You`
+- `npm run db:audit-urdu` passes; all metadata, fixture `.en`/`.ur` nodes, and vocabulary Urdu fields audited
+- bottom tab shell matches spec: `Learn | Vocabulary | Noor | You`; tab labels are i18n-aware (Urdu + English)
 - Noor backend wiring is OpenAI-only with `gpt-4o-mini` as the default model
+- R2 vocabulary audio + image infrastructure live: lazy TTS→R2 on first audio request, `imageUrl` upload endpoint, images in SRS review and word detail screens
+- Vocab image audit CSVs at `warsh-backend/exports/` provide the master lists for bulk illustration work (585 vocab words + 1,203 discover card word appearances mapped)
 - mobile local networking: USB reverse (`tcp:8081`, `tcp:3000`) + `http://127.0.0.1:3000` is the reliable path
-- the biggest immediate gap is completing `Docs/warsh-beta-infra-readiness-checklist.md`
-- a full UI screen inventory exists at `UI-Design-Screen-list.md` (repo root) — 36 built screens, ~20 unbuilt, each mapped to a spec-02 ID
+- the biggest immediate gaps are (1) sourcing/uploading vocabulary word illustrations, (2) on-device QA for VERB_PATTERN + IAP flow, (3) Google Play Console approval (~2 weeks from 2026-06-06)
+- a full UI screen inventory exists at `UI-Design-Screen-list.md` (repo root) — all 62 spec screens built or accounted for
