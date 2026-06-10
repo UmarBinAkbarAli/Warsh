@@ -58,3 +58,28 @@ export async function r2KeyExists(key: string): Promise<boolean> {
 export function vocabWordAudioKey(wordId: string): string {
   return `audio/words/${wordId}.mp3`;
 }
+
+export function vocabWordImageKey(wordId: string): string {
+  return `images/words/${wordId}.jpg`;
+}
+
+export function discoverImageKey(slug: string): string {
+  return `images/discover/${slug}.png`;
+}
+
+export async function uploadImageToR2(key: string, imageBuffer: Buffer, contentType = "image/png"): Promise<string> {
+  const client = getR2Client();
+  const bucket = getBucketName();
+
+  await client.send(
+    new PutObjectCommand({
+      Bucket: bucket,
+      Key: key,
+      Body: imageBuffer,
+      ContentType: contentType,
+      CacheControl: "public, max-age=31536000, immutable",
+    })
+  );
+
+  return getPublicUrl(key);
+}

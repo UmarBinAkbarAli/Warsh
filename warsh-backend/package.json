@@ -16,7 +16,12 @@
     "db:audit-urdu": "node scripts/audit-urdu-content.cjs",
     "db:studio": "prisma studio",
     "dev:unlock-through": "node scripts/dev-unlock-through.cjs",
-    "sentry:smoke": "node scripts/sentry-smoke-test.cjs"
+    "sentry:smoke": "node scripts/sentry-smoke-test.cjs",
+    "images:patch-fixtures": "node scripts/patch-discover-image-urls.cjs",
+    "images:patch-fixtures:dry": "node scripts/patch-discover-image-urls.cjs --dry-run",
+    "images:upload": "npx tsx scripts/upload-vocab-images.ts",
+    "images:upload:skip": "npx tsx scripts/upload-vocab-images.ts --skip-existing",
+    "images:upload:dry": "npx tsx scripts/upload-vocab-images.ts --dry-run"
   },
   "prisma": {
     "seed": "node prisma/seed.cjs"

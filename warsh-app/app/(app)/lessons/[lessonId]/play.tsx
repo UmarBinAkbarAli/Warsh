@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
+import { ActivityIndicator, Image, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import api from "@services/api";
@@ -883,6 +883,8 @@ export default function LessonPlayScreen() {
     let transliteration: string | undefined;
     let explanation: string | undefined;
 
+    let discoverImageUrl: string | undefined;
+
     if (card) {
       const text    = card.text    as Record<string, any> | undefined;
       const concept = card.concept as Record<string, any> | undefined;
@@ -890,6 +892,11 @@ export default function LessonPlayScreen() {
       const titleObj = card.title  as Record<string, any> | undefined;
       const bodyObj  = card.body   as Record<string, any> | undefined;
       const examples = card.examples as Array<Record<string, any>> | undefined;
+
+      // Only show images on WORD cards (not GRAMMAR_NOTE or SENTENCE)
+      if (cardType === "WORD" || cardType === undefined) {
+        discoverImageUrl = card.image_url as string | undefined;
+      }
 
       if (cardType === "GRAMMAR_NOTE") {
         arabicText    = titleObj?.ar as string | undefined;
@@ -928,6 +935,13 @@ export default function LessonPlayScreen() {
         </View>
 
         <View style={styles.discoverCard}>
+          {discoverImageUrl ? (
+            <Image
+              source={{ uri: discoverImageUrl }}
+              style={styles.discoverImage}
+              resizeMode="contain"
+            />
+          ) : null}
           {arabicText ? (
             <>
               <ArabicText size="lg" style={styles.discoverArabic}>{arabicText}</ArabicText>
@@ -1527,6 +1541,12 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 16,
     backgroundColor: "#EDE8D8",
+  },
+  discoverImage: {
+    width: 96,
+    height: 96,
+    alignSelf: "center",
+    marginBottom: 8,
   },
   discoverArabic: {
     color: "#0F1117",

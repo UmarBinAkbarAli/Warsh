@@ -30,34 +30,64 @@
   "discover_cards": [
     {
       "type": "WORD",
-      "text": { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from", "ur": "سے" },
+      "text": {
+        "ar": "مِنْ",
+        "ar_plain": "من",
+        "translit": "min",
+        "en": "from",
+        "ur": "سے"
+      },
       "explanation": {
         "en": "مِنْ points to origin or starting place: from.",
         "ur": "مِنْ اصل یا شروع ہونے کی جگہ بتاتا ہے: سے۔"
-      }
+      },
+      "image_url": "https://assets.warsh.app/images/discover/min.png"
     },
     {
       "type": "WORD",
-      "text": { "ar": "أَيْنَ", "ar_plain": "اين", "translit": "ayna", "en": "where", "ur": "کہاں" },
+      "text": {
+        "ar": "أَيْنَ",
+        "ar_plain": "اين",
+        "translit": "ayna",
+        "en": "where",
+        "ur": "کہاں"
+      },
       "explanation": {
         "en": "أَيْنَ asks about location: where?",
         "ur": "أَيْنَ جگہ کے بارے میں پوچھتا ہے: کہاں؟"
-      }
+      },
+      "image_url": "https://assets.warsh.app/images/discover/ayna.png"
     },
     {
       "type": "CONCEPT",
-      "concept": { "en": "From where?", "ar": "مِنْ أَيْنَ؟", "ur": "کہاں سے؟" },
+      "concept": {
+        "en": "From where?",
+        "ar": "مِنْ أَيْنَ؟",
+        "ur": "کہاں سے؟"
+      },
       "explanation": {
         "en": "Put مِنْ before أَيْنَ to ask about origin: from where?",
         "ur": "اصل پوچھنے کے لیے أَيْنَ سے پہلے مِنْ لگائیں: کہاں سے؟"
       },
       "examples": [
-        { "ar": "مِنْ أَيْنَ أَنْتَ؟", "ar_plain": "من اين انت", "translit": "min ayna anta?", "en": "Where are you from?", "ur": "آپ کہاں سے ہیں؟" }
+        {
+          "ar": "مِنْ أَيْنَ أَنْتَ؟",
+          "ar_plain": "من اين انت",
+          "translit": "min ayna anta?",
+          "en": "Where are you from?",
+          "ur": "آپ کہاں سے ہیں؟"
+        }
       ]
     },
     {
       "type": "EXAMPLE",
-      "text": { "ar": "أَنَا مِنْ بَاكِسْتَانَ", "ar_plain": "انا من باكستان", "translit": "ana min Bakistana", "en": "I am from Pakistan", "ur": "میں پاکستان سے ہوں" },
+      "text": {
+        "ar": "أَنَا مِنْ بَاكِسْتَانَ",
+        "ar_plain": "انا من باكستان",
+        "translit": "ana min Bakistana",
+        "en": "I am from Pakistan",
+        "ur": "میں پاکستان سے ہوں"
+      },
       "explanation": {
         "en": "Answer with أَنَا مِنْ plus the place name.",
         "ur": "جواب میں أَنَا مِنْ کے بعد جگہ کا نام لگائیں۔"
@@ -65,14 +95,30 @@
     },
     {
       "type": "CONTRAST",
-      "concept": { "en": "أَيْنَ vs مِنْ أَيْنَ", "ar": "أَيْنَ / مِنْ أَيْنَ", "ur": "کہاں / کہاں سے" },
+      "concept": {
+        "en": "أَيْنَ vs مِنْ أَيْنَ",
+        "ar": "أَيْنَ / مِنْ أَيْنَ",
+        "ur": "کہاں / کہاں سے"
+      },
       "explanation": {
         "en": "أَيْنَ asks where something is now. مِنْ أَيْنَ asks the origin: from where?",
         "ur": "أَيْنَ موجودہ جگہ پوچھتا ہے۔ مِنْ أَيْنَ اصل پوچھتا ہے: کہاں سے؟"
       },
       "examples": [
-        { "ar": "أَيْنَ أَنْتَ؟", "ar_plain": "اين انت", "translit": "ayna anta?", "en": "Where are you?", "ur": "آپ کہاں ہیں؟" },
-        { "ar": "مِنْ أَيْنَ أَنْتَ؟", "ar_plain": "من اين انت", "translit": "min ayna anta?", "en": "Where are you from?", "ur": "آپ کہاں سے ہیں؟" }
+        {
+          "ar": "أَيْنَ أَنْتَ؟",
+          "ar_plain": "اين انت",
+          "translit": "ayna anta?",
+          "en": "Where are you?",
+          "ur": "آپ کہاں ہیں؟"
+        },
+        {
+          "ar": "مِنْ أَيْنَ أَنْتَ؟",
+          "ar_plain": "من اين انت",
+          "translit": "min ayna anta?",
+          "en": "Where are you from?",
+          "ur": "آپ کہاں سے ہیں؟"
+        }
       ]
     }
   ],
@@ -80,12 +126,30 @@
     {
       "type": "TAP_TRANSLATION",
       "id": "ch12-l02-ex01",
-      "prompt": { "ar": "مِنْ أَيْنَ؟", "ar_plain": "من اين", "translit": "min ayna?", "en": "from where?", "ur": "کہاں سے؟" },
+      "prompt": {
+        "ar": "مِنْ أَيْنَ؟",
+        "ar_plain": "من اين",
+        "translit": "min ayna?",
+        "en": "from where?",
+        "ur": "کہاں سے؟"
+      },
       "options": [
-        { "en": "from where?", "ur": "کہاں سے؟" },
-        { "en": "where?", "ur": "کہاں؟" },
-        { "en": "who?", "ur": "کون؟" },
-        { "en": "in it", "ur": "اس میں" }
+        {
+          "en": "from where?",
+          "ur": "کہاں سے؟"
+        },
+        {
+          "en": "where?",
+          "ur": "کہاں؟"
+        },
+        {
+          "en": "who?",
+          "ur": "کون؟"
+        },
+        {
+          "en": "in it",
+          "ur": "اس میں"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1
@@ -96,7 +160,13 @@
       "statement": {
         "en": "أَيْنَ asks 'where?', but مِنْ أَيْنَ asks 'from where?'",
         "ur": "أَيْنَ کا مطلب 'کہاں؟' ہے، لیکن مِنْ أَيْنَ کا مطلب 'کہاں سے؟' ہے۔",
-        "ar_example": { "ar": "مِنْ أَيْنَ أَنْتَ؟", "ar_plain": "من اين انت", "translit": "min ayna anta?", "en": "Where are you from?", "ur": "آپ کہاں سے ہیں؟" }
+        "ar_example": {
+          "ar": "مِنْ أَيْنَ أَنْتَ؟",
+          "ar_plain": "من اين انت",
+          "translit": "min ayna anta?",
+          "en": "Where are you from?",
+          "ur": "آپ کہاں سے ہیں؟"
+        }
       },
       "correct_answer": true,
       "xp_value": 1
@@ -106,45 +176,162 @@
       "id": "ch12-l02-ex03",
       "mode": "TAP",
       "sentence_ar": "أَنَا ___ بَاكِسْتَانَ",
-      "hint": { "en": "I am from Pakistan", "ur": "میں پاکستان سے ہوں" },
+      "hint": {
+        "en": "I am from Pakistan",
+        "ur": "میں پاکستان سے ہوں"
+      },
       "options": [
-        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from", "ur": "سے" },
-        { "ar": "أَيْنَ", "ar_plain": "اين", "translit": "ayna", "en": "where", "ur": "کہاں" },
-        { "ar": "فِي", "ar_plain": "في", "translit": "fi", "en": "in", "ur": "میں" },
-        { "ar": "أَنْتَ", "ar_plain": "انت", "translit": "anta", "en": "you", "ur": "آپ" }
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "اين",
+          "translit": "ayna",
+          "en": "where",
+          "ur": "کہاں"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fi",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "أَنْتَ",
+          "ar_plain": "انت",
+          "translit": "anta",
+          "en": "you",
+          "ur": "آپ"
+        }
       ],
-      "correct_answer": { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from", "ur": "سے" },
+      "correct_answer": {
+        "ar": "مِنْ",
+        "ar_plain": "من",
+        "translit": "min",
+        "en": "from",
+        "ur": "سے"
+      },
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch12-l02-ex04",
-      "target_translation": { "en": "Where are you from?", "ur": "آپ کہاں سے ہیں؟" },
+      "target_translation": {
+        "en": "Where are you from?",
+        "ur": "آپ کہاں سے ہیں؟"
+      },
       "tiles": [
-        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from", "ur": "سے" },
-        { "ar": "أَيْنَ", "ar_plain": "اين", "translit": "ayna", "en": "where", "ur": "کہاں" },
-        { "ar": "أَنْتَ؟", "ar_plain": "انت", "translit": "anta?", "en": "you?", "ur": "آپ؟" },
-        { "ar": "فِي", "ar_plain": "في", "translit": "fi", "en": "in", "ur": "میں" }
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "اين",
+          "translit": "ayna",
+          "en": "where",
+          "ur": "کہاں"
+        },
+        {
+          "ar": "أَنْتَ؟",
+          "ar_plain": "انت",
+          "translit": "anta?",
+          "en": "you?",
+          "ur": "آپ؟"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fi",
+          "en": "in",
+          "ur": "میں"
+        }
       ],
-      "correct_order": [0, 1, 2],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
       "xp_value": 1
     },
     {
       "type": "MATCHING",
       "id": "ch12-l02-ex05",
       "left_column": [
-        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from", "ur": "سے" },
-        { "ar": "أَيْنَ", "ar_plain": "اين", "translit": "ayna", "en": "where", "ur": "کہاں" },
-        { "ar": "مِنْ أَيْنَ", "ar_plain": "من اين", "translit": "min ayna", "en": "from where", "ur": "کہاں سے" },
-        { "ar": "أَنَا", "ar_plain": "انا", "translit": "ana", "en": "I", "ur": "میں" }
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "اين",
+          "translit": "ayna",
+          "en": "where",
+          "ur": "کہاں"
+        },
+        {
+          "ar": "مِنْ أَيْنَ",
+          "ar_plain": "من اين",
+          "translit": "min ayna",
+          "en": "from where",
+          "ur": "کہاں سے"
+        },
+        {
+          "ar": "أَنَا",
+          "ar_plain": "انا",
+          "translit": "ana",
+          "en": "I",
+          "ur": "میں"
+        }
       ],
       "right_column": [
-        { "en": "from", "ur": "سے" },
-        { "en": "where", "ur": "کہاں" },
-        { "en": "from where", "ur": "کہاں سے" },
-        { "en": "I", "ur": "میں" }
+        {
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "en": "where",
+          "ur": "کہاں"
+        },
+        {
+          "en": "from where",
+          "ur": "کہاں سے"
+        },
+        {
+          "en": "I",
+          "ur": "میں"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -152,17 +339,48 @@
       "id": "ch12-l02-ex06",
       "sentence_ar": "أَنَا مِنْ بَاكِسْتَانَ",
       "words": [
-        { "ar": "أَنَا", "ar_plain": "انا", "translit": "ana", "en": "I", "ur": "میں" },
-        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from", "ur": "سے" },
-        { "ar": "بَاكِسْتَانَ", "ar_plain": "باكستان", "translit": "Bakistana", "en": "Pakistan", "ur": "پاکستان" }
+        {
+          "ar": "أَنَا",
+          "ar_plain": "انا",
+          "translit": "ana",
+          "en": "I",
+          "ur": "میں"
+        },
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "بَاكِسْتَانَ",
+          "ar_plain": "باكستان",
+          "translit": "Bakistana",
+          "en": "Pakistan",
+          "ur": "پاکستان"
+        }
       ],
-      "available_roles": ["SUBJECT", "PREPOSITION", "PREDICATE", "OBJECT"],
-      "correct_roles": ["SUBJECT", "PREPOSITION", "PREDICATE"],
+      "available_roles": [
+        "SUBJECT",
+        "PREPOSITION",
+        "PREDICATE",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "PREPOSITION",
+        "PREDICATE"
+      ],
       "xp_value": 1
     }
   ],
   "reveal": {
-    "concept_name": { "en": "Origin with مِنْ", "ar": "الأَصْلُ بِـمِنْ", "ur": "مِنْ کے ساتھ اصل" },
+    "concept_name": {
+      "en": "Origin with مِنْ",
+      "ar": "الأَصْلُ بِـمِنْ",
+      "ur": "مِنْ کے ساتھ اصل"
+    },
     "ayah": {
       "surah": 49,
       "ayah": 13,
@@ -172,7 +390,9 @@
       "ur": "اے لوگو، بے شک ہم نے تمہیں ایک مرد اور ایک عورت سے پیدا کیا۔",
       "audio_url": "https://cdn.warsh.app/audio/quran/al-hujurat-013-part-mishary.mp3"
     },
-    "highlighted_word_indices": [5],
+    "highlighted_word_indices": [
+      5
+    ],
     "noor_explanation": {
       "en": "The word مِّن means 'from' in this ayah. In speech, مِنْ أَيْنَ أَنْتَ؟ asks a person about origin: where are you from?",
       "ur": "اس آیت میں مِّن کا مطلب 'سے' ہے۔ گفتگو میں مِنْ أَيْنَ أَنْتَ؟ کسی شخص کی اصل پوچھتا ہے: آپ کہاں سے ہیں؟"
