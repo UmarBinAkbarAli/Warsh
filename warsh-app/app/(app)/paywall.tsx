@@ -133,7 +133,14 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     } catch (err: any) {
       if (isIapUnavailableError(err)) {
         Alert.alert("Purchases unavailable", "In-app purchases are not available on this build.");
-      } else if (err?.code !== "E_USER_CANCELLED") {
+      } else if (err?.code === "E_USER_CANCELLED") {
+        // User cancelled — no alert needed
+      } else if (err?.code === "E_ALREADY_OWNED" || err?.code === "already_owned") {
+        Alert.alert(
+          "Already subscribed",
+          "You already have an active subscription. Tap 'Restore purchases' to link it to your account.",
+        );
+      } else {
         console.error("[IAP] Purchase failed:", err?.code, err?.message, JSON.stringify(err));
         Alert.alert("Purchase failed", `Something went wrong (${err?.code ?? "unknown"}). Please try again or contact support.`);
       }

@@ -69,7 +69,7 @@ export default function LoginScreen() {
       <BrandButton title="Sign In" onPress={handleSubmit} loading={loading} />
       <View style={{ flexDirection: "row", justifyContent: "center", marginTop: Spacing.lg }}>
         <Text style={{ color: Colors.text.secondary }}>Don't have an account? </Text>
-        <Link href="/(auth)/onboarding/welcome" style={{ color: Colors.accent.gold, fontWeight: "700" }}>
+        <Link href="/(auth)/register" style={{ color: Colors.accent.gold, fontWeight: "700" }}>
           Register
         </Link>
       </View>
