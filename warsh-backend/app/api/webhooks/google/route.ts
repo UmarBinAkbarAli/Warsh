@@ -125,6 +125,7 @@ async function handleSubscriptionNotification(notif: SubscriptionNotification) {
       lineItems?: Array<{ productId?: string; expiryTime?: string }>;
     };
 
+    // subscriptionsv2 lineItems[].productId is the BASE PLAN ID — do not filter by subscription ID
     const latestItem = purchase.lineItems
       ?.filter((item) => item.expiryTime)
       .map((item) => ({ ...item, expiryDate: new Date(item.expiryTime as string) }))

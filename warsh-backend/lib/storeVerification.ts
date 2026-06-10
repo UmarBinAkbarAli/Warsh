@@ -150,8 +150,10 @@ async function verifyGooglePlaySubscription(input: VerifySubscriptionInput): Pro
     throw new StoreVerificationError("Google Play subscription is not active.", 402, "subscription_inactive");
   }
 
+  // NOTE: subscriptionsv2 lineItems[].productId is the BASE PLAN ID ("monthly"/"yearly"),
+  // not the subscription product ID ("warsh_premium"). Do not filter by productId here.
   const matchingLineItem = purchase.lineItems
-    ?.filter((item) => item.productId === input.productId && item.expiryTime)
+    ?.filter((item) => item.expiryTime)
     .map((item) => ({ ...item, expiryDate: new Date(item.expiryTime as string) }))
     .filter((item) => Number.isFinite(item.expiryDate.getTime()))
     .sort((a, b) => b.expiryDate.getTime() - a.expiryDate.getTime())[0];

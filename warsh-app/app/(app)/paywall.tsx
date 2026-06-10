@@ -128,7 +128,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       if (token && Platform.OS === "android") await acknowledgeAndroidPurchase(token);
       trackSubscriptionStarted(selected);
       Alert.alert("Subscribed!", "JazakAllah khair. Welcome to Warsh.", [
-        { text: "Continue", onPress: () => router.replace("/(app)/trial-reminder") },
+        { text: "Continue", onPress: () => router.replace("/(app)/(tabs)") },
       ]);
     } catch (err: any) {
       if (isIapUnavailableError(err)) {
@@ -155,12 +155,15 @@ export default function PaywallScreen({ dismissable = true }: Props) {
         (p) => p.productId === SUBSCRIPTION_PRODUCT_ID
       );
       if (!activePurchase) { Alert.alert("No subscription found", "No active subscription was found."); return; }
+      const restoreToken = (activePurchase as IapSubscriptionPurchase).purchaseToken ?? undefined;
       await verifyPurchase({
         productId: activePurchase.productId,
-        purchaseToken: (activePurchase as IapSubscriptionPurchase).purchaseToken ?? undefined,
+        purchaseToken: restoreToken,
         receiptData: (activePurchase as { transactionReceipt?: string }).transactionReceipt ?? undefined,
         platform: Platform.OS as "android" | "ios",
       });
+      // Acknowledge in case the original purchase was never acknowledged (covers the stuck token case)
+      if (restoreToken && Platform.OS === "android") await acknowledgeAndroidPurchase(restoreToken).catch(() => {});
       trackSubscriptionRestored(activePurchase.productId);
       Alert.alert("Restored!", "Your subscription has been restored.", [
         { text: "Continue", onPress: () => router.replace("/(app)/(tabs)") },
