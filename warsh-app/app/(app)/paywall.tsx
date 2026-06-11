@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
@@ -18,8 +18,10 @@ import { ArabicText } from "@components/ArabicText";
 import { trackPaywallViewed, trackSubscriptionStarted, trackSubscriptionRestored } from "@services/analytics";
 import {
   acknowledgeAndroidPurchase,
+  addIapPurchaseListeners,
   connectIap,
   endIapConnection,
+  finishIapTransaction,
   getAvailableIapPurchases,
   getIapDisplayPrice,
   getIapProductId,
@@ -64,6 +66,34 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   const [restoring, setRestoring] = useState(false);
   const [trialDaysRemaining, setTrialDaysRemaining] = useState<number | null>(null);
 
+  // Keep the latest selected plan readable from inside listener callbacks (avoids stale closures).
+  const selectedRef = useRef(selected);
+  useEffect(() => { selectedRef.current = selected; }, [selected]);
+
+  // True only between launching our own billing flow and handling its result.
+  // Gates the global purchase listener so it ignores restores / pending purchases
+  // emitted on mount and only reacts to a purchase the user just initiated here.
+  const purchaseInFlightRef = useRef(false);
+
+  // react-native-iap v14 delivers purchase results through events, not the
+  // `requestPurchase` promise. Register listeners once for the screen's lifetime.
+  useEffect(() => {
+    let mounted = true;
+    let cleanup = () => {};
+
+    (async () => {
+      const remove = await addIapPurchaseListeners(
+        (purchase) => { if (purchaseInFlightRef.current) void handlePurchaseUpdate(purchase); },
+        (error) => { if (purchaseInFlightRef.current) handlePurchaseError(error); },
+      );
+      if (mounted) cleanup = remove;
+      else remove();
+    })();
+
+    return () => { mounted = false; cleanup(); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useFocusEffect(
     useCallback(() => {
       getSubscriptionStatus()
@@ -93,15 +123,19 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     if (!product) return fallback;
     const basePlanId = BASE_PLAN_IDS[planKey];
     const offers = ((product as any)?.subscriptionOffers ?? []) as Array<any>;
-    const offer = offers.find((o: any) => o.basePlanId === basePlanId);
-    // pricingPhases is { pricingPhaseList: [...] } in Billing Library v5; handle both shapes
-    const phaseList: any[] = Array.isArray(offer?.pricingPhases)
-      ? offer.pricingPhases
-      : (offer?.pricingPhases?.pricingPhaseList ?? []);
-    const phase = phaseList.find((p: any) => !p.billingCycleCount || p.recurrenceMode === 1);
-    return phase?.formattedPrice ?? fallback;
+    // v14 field is `basePlanIdAndroid` (not `basePlanId`).
+    const offer = offers.find((o: any) => o.basePlanIdAndroid === basePlanId);
+    if (!offer) return fallback;
+    // Prefer the regular recurring phase from the Android pricing phases; the last
+    // phase is the ongoing price (earlier phases are free-trial / intro offers).
+    const phaseList: any[] = offer?.pricingPhasesAndroid?.pricingPhaseList ?? [];
+    const recurringPhase = [...phaseList].reverse().find((p: any) => p.formattedPrice);
+    return recurringPhase?.formattedPrice ?? offer.displayPrice ?? fallback;
   }
 
+  // Launches the billing flow. The result arrives asynchronously via the purchase
+  // listeners (see effect above) — we must NOT verify here, because on Android this
+  // promise resolves before the user finishes paying (token isn't available yet).
   async function handlePurchase() {
     if (purchasing) return;
     if (!isBillingSupportedEnvironment()) {
@@ -109,44 +143,70 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       return;
     }
     setPurchasing(true);
+    purchaseInFlightRef.current = true;
     const productId = SUBSCRIPTION_PRODUCT_ID;
     const basePlanId = BASE_PLAN_IDS[selected];
     const product = products.find((item) => getIapProductId(item) === SUBSCRIPTION_PRODUCT_ID);
     try {
-      const purchase = await requestSubscriptionPurchase(productId, product, basePlanId);
-      const purchaseRecord = Array.isArray(purchase)
-        ? (purchase[0] as IapSubscriptionPurchase)
-        : (purchase as IapSubscriptionPurchase);
-      const token = purchaseRecord?.purchaseToken;
-      const receiptData = (purchaseRecord as { transactionReceipt?: string } | undefined)?.transactionReceipt;
+      await requestSubscriptionPurchase(productId, product, basePlanId);
+      // Success/failure handled by handlePurchaseUpdate / handlePurchaseError.
+    } catch (err: any) {
+      // Thrown only if the flow couldn't be launched at all.
+      handlePurchaseError(err);
+    }
+  }
+
+  // Called by purchaseUpdatedListener once the purchase actually completes.
+  async function handlePurchaseUpdate(purchase: IapSubscriptionPurchase) {
+    purchaseInFlightRef.current = false;
+    try {
+      const token = purchase?.purchaseToken;
+      const receiptData = (purchase as { transactionReceipt?: string } | undefined)?.transactionReceipt;
       await verifyPurchase({
         productId: SUBSCRIPTION_PRODUCT_ID,
         purchaseToken: token ?? undefined,
         receiptData: receiptData ?? undefined,
         platform: Platform.OS as "android" | "ios",
       });
-      if (token && Platform.OS === "android") await acknowledgeAndroidPurchase(token);
-      trackSubscriptionStarted(selected);
+      // Acknowledge so Google doesn't auto-refund after 3 days.
+      await finishIapTransaction(purchase, false);
+      trackSubscriptionStarted(selectedRef.current);
+      setPurchasing(false);
       Alert.alert("Subscribed!", "JazakAllah khair. Welcome to Warsh.", [
         { text: "Continue", onPress: () => router.replace("/(app)/(tabs)") },
       ]);
     } catch (err: any) {
-      if (isIapUnavailableError(err)) {
-        Alert.alert("Purchases unavailable", "In-app purchases are not available on this build.");
-      } else if (err?.code === "E_USER_CANCELLED") {
-        // User cancelled — no alert needed
-      } else if (err?.code === "E_ALREADY_OWNED" || err?.code === "already_owned") {
-        Alert.alert(
-          "Already subscribed",
-          "You already have an active subscription. Tap 'Restore purchases' to link it to your account.",
-        );
-      } else {
-        console.error("[IAP] Purchase failed:", err?.code, err?.message, JSON.stringify(err));
-        Alert.alert("Purchase failed", `Something went wrong (${err?.code ?? "unknown"}). Please try again or contact support.`);
-      }
-    } finally {
       setPurchasing(false);
+      const code = err?.response?.data?.code ?? err?.code ?? "unknown";
+      console.error("[IAP] Verify failed:", code, err?.message);
+      Alert.alert(
+        "Couldn't confirm subscription",
+        `Your payment may have gone through but we couldn't activate it (${code}). If you were charged, tap "Restore purchases".`,
+      );
     }
+  }
+
+  // Called by purchaseErrorListener (and when launching the flow throws).
+  function handlePurchaseError(err: any) {
+    purchaseInFlightRef.current = false;
+    setPurchasing(false);
+    const code = err?.code;
+    if (code === "E_USER_CANCELLED" || code === "user-cancelled" || code === "USER_CANCELED" || code === "USER_CANCELLED") {
+      return; // User cancelled — no alert needed
+    }
+    if (isIapUnavailableError(err)) {
+      Alert.alert("Purchases unavailable", "In-app purchases are not available on this build.");
+      return;
+    }
+    if (code === "E_ALREADY_OWNED" || code === "already_owned" || code === "ALREADY_OWNED") {
+      Alert.alert(
+        "Already subscribed",
+        "You already have an active subscription. Tap 'Restore purchases' to link it to your account.",
+      );
+      return;
+    }
+    console.error("[IAP] Purchase failed:", code, err?.message, JSON.stringify(err));
+    Alert.alert("Purchase failed", `Something went wrong (${code ?? "unknown"}). Please try again or contact support.`);
   }
 
   async function handleRestore() {

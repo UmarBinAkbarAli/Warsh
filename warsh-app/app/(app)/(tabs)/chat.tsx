@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { View, Text, ScrollView, Pressable, ActivityIndicator, Modal, Platform, TouchableOpacity, Alert, StyleSheet } from "react-native";
 import { TextInput } from "react-native-paper";
 import { useFocusEffect, useRouter } from "expo-router";
@@ -9,6 +9,7 @@ import { BrandButton } from "@components/BrandButton";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Shadows, Spacing, WarshPalette } from "../../../constants/theme";
 import { trackNoorMessageSent } from "@services/analytics";
 import {
+  addIapPurchaseListeners,
   connectIap,
   endIapConnection,
   finishConsumableAndroidPurchase,
@@ -30,6 +31,33 @@ export default function ChatScreen() {
   const [error, setError] = useState<string | null>(null);
   const [showOverageModal, setShowOverageModal] = useState(false);
 
+  // True only between launching the pack purchase and handling its result, so the
+  // global purchase listener ignores any unrelated/pending purchases.
+  const packInFlightRef = useRef(false);
+
+  // react-native-iap v14 delivers purchase results via events, not the
+  // `requestPurchase` promise. Register listeners for the screen's lifetime.
+  useEffect(() => {
+    let mounted = true;
+    let cleanup = () => {};
+
+    (async () => {
+      const remove = await addIapPurchaseListeners(
+        (purchase) => { if (packInFlightRef.current) void handlePackPurchase(purchase); },
+        (error) => { if (packInFlightRef.current) handlePackError(error); },
+      );
+      if (mounted) cleanup = remove;
+      else remove();
+    })();
+
+    return () => {
+      mounted = false;
+      cleanup();
+      endIapConnection().catch(() => {});
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const loadHistory = useCallback(async () => {
     setLoading(true);
     setError(null);
@@ -50,6 +78,9 @@ export default function ChatScreen() {
     }, [loadHistory])
   );
 
+  // Launches the consumable billing flow. The result arrives via the purchase
+  // listeners above (v14 is event-based) — do NOT read the resolved value here,
+  // the purchase token isn't available until the user finishes paying.
   async function handleBuyNoorPack() {
     if (!isBillingSupportedEnvironment()) {
       Alert.alert("Purchases unavailable", "In-app purchases are only available in a Play Store build, not Expo Go.");
@@ -57,36 +88,59 @@ export default function ChatScreen() {
     }
     setShowOverageModal(false);
     setPurchasingPack(true);
+    packInFlightRef.current = true;
     try {
       const connected = await connectIap();
       if (!connected) throw Object.assign(new Error("IAP not available"), { code: "IAP_UNAVAILABLE" });
+      await requestConsumablePurchase("warsh_noor_pack");
+      // Success/failure handled by handlePackPurchase / handlePackError.
+    } catch (err: any) {
+      handlePackError(err);
+    }
+  }
 
-      const result = await requestConsumablePurchase("warsh_noor_pack");
-      const purchaseRecord = Array.isArray(result) ? result[0] : result;
-      const token = (purchaseRecord as IapSubscriptionPurchase | undefined)?.purchaseToken;
+  // Called by purchaseUpdatedListener once the pack purchase completes.
+  async function handlePackPurchase(purchase: IapSubscriptionPurchase) {
+    packInFlightRef.current = false;
+    try {
+      const token = (purchase as IapSubscriptionPurchase | undefined)?.purchaseToken;
       if (!token) throw new Error("No purchase token returned from store.");
 
       const response = await purchaseNoorPack({ purchaseToken: token, platform: Platform.OS as "android" | "ios" });
       const newBalance: number = response.data.data.noorOverageBalance ?? 0;
 
+      // Consume so the pack can be purchased again.
       await finishConsumableAndroidPurchase(token);
 
       setUsage((prev) => ({ ...prev, packBalance: newBalance }));
+      setPurchasingPack(false);
       Alert.alert(
         "20 messages added!",
         "JazakAllah khair. Noor is ready to help whenever you need.",
         [{ text: "Continue" }]
       );
     } catch (err: any) {
-      if (isIapUnavailableError(err)) {
-        Alert.alert("Purchases unavailable", "In-app purchases are not available on this build.");
-      } else if (err?.code !== "E_USER_CANCELLED") {
-        Alert.alert("Purchase failed", "Something went wrong. Please try again or contact support.");
-      }
-    } finally {
       setPurchasingPack(false);
-      endIapConnection().catch(() => {});
+      const code = err?.response?.data?.code ?? err?.code ?? "unknown";
+      console.error("[IAP] Noor pack verify failed:", code, err?.message);
+      Alert.alert("Purchase failed", `We couldn't add the pack (${code}). If you were charged, contact support.`);
     }
+  }
+
+  // Called by purchaseErrorListener (and when launching the flow throws).
+  function handlePackError(err: any) {
+    packInFlightRef.current = false;
+    setPurchasingPack(false);
+    const code = err?.code;
+    if (code === "E_USER_CANCELLED" || code === "user-cancelled" || code === "USER_CANCELED" || code === "USER_CANCELLED") {
+      return; // User cancelled — no alert needed
+    }
+    if (isIapUnavailableError(err)) {
+      Alert.alert("Purchases unavailable", "In-app purchases are not available on this build.");
+      return;
+    }
+    console.error("[IAP] Noor pack failed:", code, err?.message);
+    Alert.alert("Purchase failed", "Something went wrong. Please try again or contact support.");
   }
 
   async function sendMessage() {

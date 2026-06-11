@@ -1,6 +1,6 @@
 # Warsh Phase 1 Progress Tracker
 
-Last updated: 2026-06-10 (Onboarding simplified — preview→name→language→register→permissions; IAP payment flow fixed end-to-end; A6 word grid RTL corrected)
+Last updated: 2026-06-11 (IAP v14 event-based purchase flow fix for subscriptions + Noor pack; yearly-price base-plan bug fixed; image hosting moved off dead assets.warsh.app → r2.dev public URL)
 
 ## Purpose
 
@@ -51,6 +51,15 @@ It should not be treated as a permanent record of:
 - one-off Expo session URLs
 - whether a local server happened to be running on a specific machine
 - whether a specific throwaway test account still exists after reseeding
+
+**Latest status (2026-06-11):**
+- **IAP purchase flow rewritten for react-native-iap v14 (event-based)** — root cause of the "subscribed successfully but error popup appears" bug: in v14 `requestPurchase` resolves when the billing sheet *launches*, NOT when payment completes, so the awaited result has no `purchaseToken`. The paywall was verifying prematurely with an undefined token. Both `paywall.tsx` (subscription) and `chat.tsx` (Noor pack consumable) now launch the flow and handle the real result in `purchaseUpdatedListener`/`purchaseErrorListener`, gated by an in-flight ref. New helpers in `iap.ts`: `addIapPurchaseListeners()`, `finishIapTransaction()`.
+- **Yearly-shows-monthly-price bug fixed** — `getAndroidSubscriptionOffer` and `getPriceLabel` matched offers by `o.basePlanId`, but the v14 `SubscriptionOffer` field is `basePlanIdAndroid`. The match always failed and silently fell back to the first offer (monthly), so the Play sheet always charged/showed the monthly base plan. Fixed field name + price now read from `pricingPhasesAndroid`/`displayPrice`. (The 2026-06-06 note claiming this was already fixed was incomplete — wrong field name.)
+- **Images not showing — root cause was DNS, not app code** — `R2_PUBLIC_URL` was `https://assets.warsh.app`, but that subdomain has **no DNS record** (custom domain not connected yet), so every discover `image_url` and vocab `imageUrl` 404'd. Switched `R2_PUBLIC_URL` and all fixture URLs to the R2 public dev URL `https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev` (verified serving, e.g. `/images/discover/kitab.png` → 200). When the `assets.warsh.app` custom domain is connected, revert with a one-line `.env` change + re-run patch/seed.
+- **Two discover slugs corrected** — `hadha-pointing.png`→`hadha.png`, `dhalika-pointing-far.png`→`dhalika.png` (the upload script keys discover images by the first filename token, so the old slugs matched no R2 object).
+- **Dead `cdn.warsh.app` audio host cleaned up** — 1,049 fixture `audio_url` fields pointed at the unreachable `cdn.warsh.app`. These fields are unused by the app (PlayButton resolves audio via the TTS/vocab API), but were repointed to r2.dev for consistency. Bulk host normalization: **372 fixture files, 1,083 URL replacements, 0 invalid JSON**, all 391 fixtures still pass `db:validate-fixtures`.
+- **Docs refreshed** — `CLAUDE.md` and `AGENTS.md` updated to match the current codebase (Expo SDK 54, Lora/Cormorant fonts, new libs/endpoints, Madinah Books 1–8, etc.).
+- App `npx tsc --noEmit` clean; `db:validate-fixtures` passes (391 fixtures).
 
 ## Current Phase
 
@@ -195,6 +204,54 @@ Read `Docs/warsh-spec-00-master-index.md` and this file end-to-end. Full state s
 15. ~~**Rebuild release AAB with `EXPO_PUBLIC_SENTRY_DSN`**~~ ✅ DONE (2026-06-05) — `app-release.aab` (47.8 MB) rebuilt with `EXPO_PUBLIC_SENTRY_DSN` baked in. Bundle verified: `api.warsh.app` present, `sentry.io` present, `warsh-backend.vercel.app` absent. JAVA_HOME: `C:\Users\sysadmin\.gradle\jdks\eclipse_adoptium-17-amd64-windows\jdk-17.0.18+8`. Ready to upload to Play Console.
 16. ~~**Auto-play TTS audio in Discover and AUDIO_RECOGNITION**~~ ✅ DONE (2026-06-05) — `PlayButton` now accepts `autoPlay` prop. When true, plays TTS 350ms after the card/exercise appears; re-fires when text changes (next card); stops cleanly on navigation away. Wired in `renderDiscover()` and `renderAudioRecognition()` (with `key={currentExerciseIndex}` for clean remount). For AUDIO_RECOGNITION the hint changed to "Tap to replay". TypeScript clean.
 17. ~~**Populate `audio_url` fields for AUDIO_RECOGNITION exercises**~~ ✅ DONE — Audio is now stored in the Cloudflare R2 bucket. `audio_url` fields in lesson fixtures and vocabulary records are populated with R2 URLs. OpenAI TTS is no longer required; AUDIO_RECOGNITION and Discover auto-play exercises serve audio directly from R2.
+
+---
+
+## Recent Changes (2026-06-11) — IAP v14 event flow, yearly price bug, image hosting
+
+### Problem reports (from device testing)
+1. Discover-card and vocabulary images not showing on the latest installed APK.
+2. Subscribing (monthly or yearly) succeeds at Google, but an error popup appears immediately after.
+3. Selecting the **yearly** plan shows the **monthly** price in the Play Store purchase sheet.
+
+### Root causes & fixes
+
+**1. Images — DNS, not app code.** `R2_PUBLIC_URL="https://assets.warsh.app"` and every image URL is built from it, but `assets.warsh.app` has **no DNS record** (`Resolve-DnsName` → "does not exist"; `api.warsh.app`/`warsh.app` resolve fine). All image URLs failed regardless of APK.
+- Switched `R2_PUBLIC_URL` (in `warsh-backend/.env`) and **all fixture URLs** to the R2 public dev URL: `https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev`.
+- Bulk host normalization across fixtures: `assets.warsh.app` (34 image refs) + `cdn.warsh.app` (1,049 audio refs) → r2.dev. 372 files, 1,083 replacements, 0 invalid JSON.
+- Fixed 2 mismatched discover slugs (`hadha-pointing`→`hadha`, `dhalika-pointing-far`→`dhalika`) that matched no uploaded R2 object.
+- Verified r2.dev serves images: `/images/discover/kitab.png` → 200 (1.3 MB PNG). NOTE: some discover PNGs (e.g. `hadha.png`) still 404 — `images:upload` must be re-run to fill gaps.
+
+**2. Post-purchase error popup — react-native-iap v14 is event-based.** `requestPurchase` resolves when the billing sheet *launches*, before payment completes, so the awaited result has no `purchaseToken`. The paywall called `verifyPurchase` immediately with an undefined token → backend rejects → error popup, even though Google completed the subscription.
+- `services/iap.ts`: added `addIapPurchaseListeners(onPurchase, onError)` and `finishIapTransaction(purchase, isConsumable)`; documented the event-based contract on `requestSubscriptionPurchase`.
+- `paywall.tsx`: `handlePurchase` now only launches the flow; verification + acknowledge + success alert happen in `handlePurchaseUpdate` (driven by `purchaseUpdatedListener`), with `handlePurchaseError` for cancel/already-owned/unavailable. Gated by `purchaseInFlightRef` so the listener ignores restores/pending purchases.
+- `chat.tsx` (Noor pack consumable): same event-based rewrite (`handlePackPurchase`/`handlePackError`, `packInFlightRef`).
+
+**3. Yearly shows monthly price — wrong field name.** `getAndroidSubscriptionOffer` and `getPriceLabel` matched offers by `o.basePlanId`, but the v14 `SubscriptionOffer` field is `basePlanIdAndroid`. Match always failed → fell back to the first offer (monthly) → Play always used the monthly offer token/price.
+- Fixed field to `basePlanIdAndroid` in both functions; price now read from `pricingPhasesAndroid.pricingPhaseList` (last/recurring phase) with `displayPrice` fallback.
+
+### Files changed
+- `warsh-app/services/iap.ts`, `warsh-app/app/(app)/paywall.tsx`, `warsh-app/app/(app)/(tabs)/chat.tsx`
+- `warsh-backend/.env` (`R2_PUBLIC_URL`)
+- `warsh-backend/prisma/fixtures/*.json` (372 files — host normalization + 2 slug fixes)
+- `CLAUDE.md`, `AGENTS.md` (codebase doc refresh)
+
+### Verification
+- App `npx tsc --noEmit` → 0 errors.
+- `npm run db:validate-fixtures` → 391 fixtures pass.
+- `curl https://pub-...r2.dev/images/discover/kitab.png` → 200.
+
+### Upload-script enhancement (2026-06-11)
+- `scripts/upload-vocab-images.ts` now uploads the discover image (`images/discover/{slug}.png`) for **unmatched** files too — i.e. particles/demonstratives (هذا/ذلك/ما/من …) that aren't in the vocabulary bank. Previously the discover upload only ran inside the matched-word branch, so those discover cards had no image even though the card referenced one. New `Discover-only` counter in the summary.
+
+### Deploy / release checklist
+- [x] `npm run db:seed` against prod — **done 2026-06-11**. Preserved 25 users/progress; refreshed 585 vocab words + 11 Tadabbur surahs; reloaded lessons from patched fixtures.
+- [x] `npm run images:upload` against prod — **done 2026-06-11**. 224 source PNGs → 198 vocab matches (word + discover) + 31 discover-only, 0 errors. 170/585 vocab words now have `imageUrl`. Verified: discover `hadha.png`/`dhalika.png`/`ma.png`/`man.png`/`kitab.png` → 200; sample word image → 200.
+- [ ] Set `R2_PUBLIC_URL=https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev` in the **production backend env** (Vercel) — still TODO; needed for runtime-generated audio/image URLs (TTS, lazy word audio/image endpoints).
+- [x] Image/data fixes reach the **existing** APK once prod data is updated (app reads lessons from the API at runtime) — no new APK needed for images.
+- [ ] IAP fixes (paywall + Noor pack) require a **new local APK build** and on-device testing on an internal-testing track.
+- [ ] When `assets.warsh.app` custom domain is connected: flip `R2_PUBLIC_URL` back + re-run `images:patch-fixtures` + `db:seed`.
+- Remaining vocab images: only 170/585 words have illustrations (limited by 224 available source PNGs). Sourcing the rest is tracked via `exports/vocabulary-image-needed.csv`.
 
 ---
 

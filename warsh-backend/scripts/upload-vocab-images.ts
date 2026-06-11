@@ -127,6 +127,7 @@ async function main() {
   let skipped   = 0;
   let unmatched = 0;
   let errors    = 0;
+  let discoverOnly = 0;
   const unmatchedFiles: string[] = [];
 
   for (const imgPath of imagePaths) {
@@ -135,6 +136,23 @@ async function main() {
     const candidates      = slugMap.get(normalizedKey);
 
     if (!candidates || candidates.length === 0) {
+      // No vocabulary word for this slug (e.g. particles/demonstratives like
+      // hadha/dhalika/ma/man), but a discover card may still reference
+      // images/discover/{slug}.png — so upload the discover image anyway.
+      const discoverKey = discoverImageKey(fileSlug);
+      if (DRY_RUN) {
+        console.log(`  [DRY]  ${path.basename(imgPath)} (no vocab word) → discover: ${discoverKey}`);
+        discoverOnly++;
+      } else {
+        try {
+          await uploadImageToR2(discoverKey, fs.readFileSync(imgPath));
+          discoverOnly++;
+          console.log(`  [DISC] ${path.basename(imgPath)} → ${discoverKey} (no vocab word)`);
+        } catch (err) {
+          errors++;
+          console.error(`  [FAIL] ${path.basename(imgPath)} → ${discoverKey}: ${err instanceof Error ? err.message : err}`);
+        }
+      }
       unmatched++;
       unmatchedFiles.push(path.basename(imgPath));
       continue;
@@ -190,7 +208,8 @@ async function main() {
 
   // 4. Summary
   console.log("\n" + "─".repeat(60));
-  console.log(`Uploaded:   ${uploaded}`);
+  console.log(`Uploaded:   ${uploaded}  (vocab word imageUrl + discover image)`);
+  console.log(`Discover-only: ${discoverOnly}  (no vocab word; discover image uploaded)`);
   console.log(`Skipped:    ${skipped}  (already had imageUrl)`);
   console.log(`Errors:     ${errors}`);
   console.log(`Unmatched:  ${unmatched}  (no DB word found for slug)`);

@@ -6,8 +6,11 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 Warsh is a gamified, AI-powered Arabic language learning mobile app targeting Muslim audiences. The repo is a monorepo with two separate Node projects:
 
-- `warsh-backend/` - Next.js 14 (API Routes only, no pages/SSR) + Prisma + PostgreSQL
-- `warsh-app/` - React Native + Expo (Android-only, SDK 51). The app name in `app.json` is **"Warsh"**, not "Warsh".
+- `warsh-backend/` - Next.js 14 (API Routes only, no pages/SSR) + Prisma 7 (`@prisma/adapter-pg`) + PostgreSQL (Neon)
+- `warsh-app/` - React Native 0.81 + Expo SDK 54 (React 19). Primary target is Android; `web` is also listed in `app.json` platforms. The app name/slug in `app.json` is **"Warsh"**.
+- `packages/lesson-schema/` - `@warsh/lesson-schema` Zod schema for lesson `content` JSON, built with `tsup`/`vitest`. It is vendored into the backend at `warsh-backend/vendor/lesson-schema` and imported as `@warsh/lesson-schema` (used by `lib/content-schema.ts` to validate lessons).
+
+> **Note:** `CLAUDE.md` at the repo root is a parallel copy of this guidance for Claude Code. Keep the two in sync when you change project-wide facts here.
 
 ## Source of Truth
 
@@ -91,8 +94,17 @@ npm run lint          # ESLint
 
 npm run db:generate   # Regenerate Prisma Client after schema changes
 npm run db:migrate    # Apply pending migrations
-npm run db:seed       # Seed initial chapters/lessons/achievements
+npm run db:seed       # Seed chapters/lessons/vocabulary/tadabbur/achievements
 npm run db:studio     # Open Prisma Studio GUI
+
+npm run db:validate-seed      # Validate legacy curriculum data
+npm run db:validate-fixtures  # Validate lesson fixtures against @warsh/lesson-schema
+npm run db:audit-urdu         # Audit Urdu translation content
+
+npm run images:upload         # Upload vocab images to R2 (tsx script); :skip / :dry variants
+npm run images:patch-fixtures # Patch discover-card image URLs into fixtures; :dry variant
+npm run sentry:smoke          # Sentry smoke test
+node scripts/dev-unlock-through.cjs   # Dev-only: unlock chapters up to N
 ```
 
 ### Mobile App (`warsh-app/`)
@@ -115,6 +127,12 @@ AI_DAILY_MESSAGE_LIMIT=5
 OPENAI_API_KEY=""
 OPENAI_MODEL="gpt-4o-mini"
 ```
+
+Additional integrations read their own env vars (all optional/feature-gated; absence disables that feature, often with a fallback):
+- **Cloudflare R2 / S3** (vocab images, TTS audio) — `R2_ENDPOINT`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, bucket/public-URL vars (`lib/r2.ts`)
+- **Resend** (transactional email: password reset) — `RESEND_API_KEY` (`lib/email.ts`)
+- **Sentry** — `SENTRY_DSN` / `SENTRY_AUTH_TOKEN`
+- **Store verification** (Google Play IAP) — service-account credentials used by `lib/storeVerification.ts` / `lib/subscription.ts`
 
 **Mobile** - copy `warsh-app/.env.example` to `warsh-app/.env`:
 
@@ -153,7 +171,7 @@ All API routes follow a consistent envelope:
 - **Success:** `{ "data": { ... } }` with 200/201
 - **Error:** `{ "error": "Human message", "code": "snake_case_code" }` with 4xx/5xx
 
-Error codes in use: `bad_request`, `unauthorized`, `conflict`, `too_many_requests`, `not_found`, `chapter_locked`.
+Error codes in use: `bad_request`, `invalid_input`, `unauthorized`, `conflict`, `too_many_requests`, `not_found`, `chapter_locked`, `last_lesson`, `subscription_required`, `schema_error`, `duplicate_exercise_id`, `exercise_id_collision`, `tts_unavailable`, `audio_unavailable`.
 
 **JWT auth** - `lib/auth.ts` provides `signToken(userId)`, `verifyToken(token)`, and `getUserIdFromRequest(request)`. Protected routes call `getUserIdFromRequest` and return 401 if null. Tokens expire in 7 days.
 
@@ -168,6 +186,14 @@ Error codes in use: `bad_request`, `unauthorized`, `conflict`, `too_many_request
 **Placement logic** - `lib/placement.ts` maps placement test results to starting chapters:
 - `BEGINNER` → ch1, `KNOWS_LETTERS` → ch4, `STUDIED_BEFORE` → ch6, `CAN_READ_BASIC` → ch8
 - Earlier lessons are given `SKIPPED_BY_PLACEMENT` progress status.
+
+**Lesson content validation** - `lib/content-schema.ts` validates `Lesson.content` JSON against `@warsh/lesson-schema` (the vendored Zod package). Admin lesson endpoints reject invalid content with `schema_error` / `invalid_input` / `duplicate_exercise_id`.
+
+**Storage & media** - `lib/r2.ts` (Cloudflare R2 via the S3 SDK) stores vocab images and generated audio. `lib/tts.ts` generates/serves TTS audio (returns `tts_unavailable` / `audio_unavailable` when not configured).
+
+**Subscription / IAP** - `lib/subscription.ts` + `lib/storeVerification.ts` verify Google Play purchases and manage trial/subscription state. Premium-gated routes return `subscription_required`. `/api/webhooks/google` handles Real-time Developer Notifications; the `cron/expire-trials` and `cron/reset-streaks` routes are invoked on a schedule.
+
+**Other libs** - `lib/achievements.ts` (achievement evaluation), `lib/admin.ts` (admin auth/guards), `lib/tadabbur.ts` (Quran reflection content), `lib/email.ts` (Resend).
 
 ### API Endpoints
 
@@ -186,7 +212,23 @@ Error codes in use: `bad_request`, `unauthorized`, `conflict`, `too_many_request
 | GET | `/api/streak` | ✓ | Current, longest, last active |
 | POST | `/api/chat` | ✓ | Rate-limited by daily limit |
 | GET | `/api/chat/history` | ✓ | Last 50 messages |
+| POST | `/api/noor/purchase-pack` | ✓ | Buy extra AI message pack |
 | POST | `/api/placement/apply` | ✓ | Applies placement, skips lessons |
+| GET | `/api/achievements` | ✓ | Achievement list + unlock state |
+| GET/POST | `/api/streak`, `/api/streak/sync` | ✓ | Streak read + client sync |
+| GET | `/api/vocabulary/words`, `/api/vocabulary/my-words`, `/api/vocabulary/word-of-day` | ✓ | Vocabulary browsing |
+| GET/POST | `/api/vocabulary/srs/due`, `/api/vocabulary/srs/review` | ✓ | Spaced-repetition review |
+| GET | `/api/vocabulary/words/[id]`, `.../audio`, `.../image`, `.../user` | ✓ | Word detail + media + user state |
+| GET | `/api/tadabbur`, `/api/tadabbur/[surahId]` | ✓ | Quran reflection content |
+| POST | `/api/audio/tts` | ✓ | On-demand TTS audio |
+| GET/POST | `/api/subscription/status`, `/api/subscription/verify` | ✓ | IAP subscription state + receipt verify |
+| GET/PUT | `/api/users/me` | ✓ | User profile read/update |
+| POST | `/api/auth/forgot-password`, `/reset-password`, `/change-password` | mixed | Password flows (Resend email) |
+| POST | `/api/webhooks/google` | — | Google Play RTDN webhook |
+| GET | `/api/cron/reset-streaks`, `/api/cron/expire-trials` | — | Scheduled jobs |
+| * | `/api/admin/*` | admin | Chapter/lesson/content authoring + validation |
+
+(Table is representative, not exhaustive — see `warsh-backend/app/api/` for the full set.)
 
 ### Mobile Patterns
 
@@ -200,12 +242,21 @@ Error codes in use: `bad_request`, `unauthorized`, `conflict`, `too_many_request
 - `(auth)` group — login, register, onboarding (welcome → goal → language → level → name → placement → ready)
 - `(app)` — stack wrapper with auth guard
 - `(app)/(tabs)` — 4 bottom-tab destinations: Learn (`index.tsx`), Vocabulary (`vocabulary.tsx`), Noor (`chat.tsx`), You (`profile.tsx`)
-- `(app)/lessons/[lessonId]/` — stack detail screens, not tabs
+- `(app)/lessons/[lessonId]/play.tsx` and `(app)/lessons/[chapterId].tsx` — stack detail screens, not tabs
+- `(app)/vocabulary/*` — vocab search, my-words, SRS review, topic + word detail screens
+- `(app)/` also hosts cross-cutting screens: `paywall.tsx`, `settings.tsx`, `tadabbur.tsx`, `chapters.tsx`, `milestones.tsx`, plus streak/celebration/trial flows
+- `(auth)/preview/*` — marketing/preview onboarding carousel screens
 - Root `app/index.tsx` — branded landing screen
 
-**Arabic text:** Always use `app/components/ArabicText.tsx` for Arabic strings — it enforces RTL and uses Scheherazade New font. Size variants: `sm | md | lg | xl`. English text uses Amiri font.
+**Components:** Shared components live in `warsh-app/components/` (e.g. `ArabicText.tsx`, `BrandButton.tsx`, `PlayButton.tsx`, `WaveformBars.tsx`, `ShadowRepeatExercise.tsx`), imported via the `@components/*` alias. A few screen-local modals live under `warsh-app/app/components/` (`ErrorModal`, `OfflineBar`, `NotificationPermissionModal`).
 
-**Brand/theme:** Shared UI tokens in `warsh-app/constants/theme.ts` (WarshPalette, Colors, FontSizes, Spacing, Radii, Shadows). Use `app/components/BrandButton.tsx` for CTAs — it has `variant` (`primary | secondary | danger`) and `selected`/`loading`/`disabled` states, min height 52px. All new UI work must follow `Docs/warsh-spec-11-design-system-and-copy.md`.
+**Arabic text:** Always use `components/ArabicText.tsx` for Arabic strings — it enforces RTL and uses the **Scheherazade New** font. Size variants: `sm | md | lg | xl`.
+
+**Fonts:** Loaded in `app/_layout.tsx` via `useFonts`. English/UI body = **Lora** (Regular/SemiBold/Bold/Italic); display/headings = **Cormorant Garamond**; Arabic = **Scheherazade New**.
+
+**Brand/theme:** Shared UI tokens in `warsh-app/constants/theme.ts` (WarshPalette, Colors, FontSizes, Spacing, Radii, Shadows). Use `components/BrandButton.tsx` for CTAs — it has `variant` (`primary | secondary | danger`) and `selected`/`loading`/`disabled` states, min height 52px. All new UI work must follow `Docs/warsh-spec-11-design-system-and-copy.md`.
+
+**Services:** `warsh-app/services/` — `api.ts` (Axios + JWT), `iap.ts` (react-native-iap subscriptions/paywall), `analytics.ts` (Mixpanel), `notifications.ts` (expo-notifications), `sentry.ts`, `audioCache.ts` (expo-av playback + caching), `language.ts`, `micPermission.ts`, `storage.ts`.
 
 **Path aliases (mobile only):** `@app/*`, `@components/*`, `@services/*`, `@stores/*`, `@types/*` — configured in `tsconfig.json`.
 
@@ -216,15 +267,14 @@ Error codes in use: `bad_request`, `unauthorized`, `conflict`, `too_many_request
 - `Streak` is 1:1 with `User`; streak logic is timezone-aware (PKT)
 - `Chapter.worldMapX/Y` positions chapters on the in-app world map
 - After any schema change: `npm run db:generate` + `npm run db:migrate`
-- Curriculum data lives in `prisma/curriculum-phase15.cjs`, loaded by `prisma/seed.cjs`
+- Curriculum is the **Madinah Arabic Reader, Books 1–8**, split across `prisma/curriculum-book1.cjs`, `curriculum-books2-4.cjs`, `curriculum-books5-6.cjs`, `curriculum-books7-8.cjs` (plus legacy `curriculum-phase15.cjs`). `prisma/seed.cjs` assembles these and also calls `vocabulary-seed.cjs` and `tadabbur-seed.cjs`. Newer lessons use JSON fixtures under `prisma/fixtures/` validated against `@warsh/lesson-schema`.
 
 ## Current Implementation Status
 
-- **Implemented and working:** register/login/logout, persisted auth session, chapter list with locking, lesson play flow, lesson completion with XP/streak updates, profile progress screen, chat with AI tutor, placement test, branded onboarding flow, tabs + detail-route navigation
+- **Implemented and working:** register/login/logout + password reset, persisted auth session, chapter list with locking, lesson play flow, lesson completion with XP/streak updates, profile progress screen, chat with AI tutor (+ purchasable message packs), placement test, branded onboarding flow, tabs + detail-route navigation, vocabulary browsing + SRS review, Tadabbur, TTS audio, Google Play IAP subscriptions + paywall/trial flow, push notifications, Mixpanel analytics, Sentry, admin content-authoring endpoints
 
 - **Still limited / incomplete:**
-  - Curriculum: 15 chapters / 60 lessons seeded; content still needs manual pedagogy and mobile QA
+  - Curriculum: Madinah Books 1–8 scaffolded; content still needs manual pedagogy and mobile QA
   - Splash/brand assets are placeholder quality
   - Upstash Redis rate limiting not integrated (currently counts DB rows)
   - Token refresh (`/api/auth/refresh`) is a stub
-  - Achievement system: schema exists, not fully wired to lesson completion

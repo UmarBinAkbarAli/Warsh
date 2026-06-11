@@ -120,14 +120,62 @@ export function getIapDisplayPrice(product: IapSubscription) {
 function getAndroidSubscriptionOffer(product: IapSubscription | undefined, basePlanId?: string) {
   if (!product) return undefined;
   const offers = ((product as any)?.subscriptionOffers ?? []) as Array<any>;
-  // Prefer the offer matching the requested base plan; fall back to first available
+  // Prefer the offer matching the requested base plan; fall back to first available.
+  // NOTE: in react-native-iap v14 the field is `basePlanIdAndroid`, NOT `basePlanId`.
+  // Using the wrong name made this match always fail and silently sent the FIRST
+  // offer (monthly), so the Play sheet always showed the monthly price.
   const offer = basePlanId
-    ? (offers.find((o) => o.basePlanId === basePlanId && o.offerTokenAndroid) ?? offers.find((o) => o.offerTokenAndroid))
+    ? (offers.find((o) => o.basePlanIdAndroid === basePlanId && o.offerTokenAndroid) ?? offers.find((o) => o.offerTokenAndroid))
     : offers.find((o) => o.offerTokenAndroid);
   if (!offer?.offerTokenAndroid) return undefined;
   return [{ sku: product.id, offerToken: offer.offerTokenAndroid }];
 }
 
+/**
+ * Subscribe to purchase result events. In react-native-iap v14 `requestPurchase`
+ * is event-based: it resolves once the billing flow is *launched*, NOT when the
+ * purchase completes. The completed purchase (with `purchaseToken`) is delivered
+ * here via `purchaseUpdatedListener`; failures/cancellations via `purchaseErrorListener`.
+ *
+ * Returns a cleanup function that removes both listeners. Safe to call in Expo Go
+ * (returns a no-op cleanup).
+ */
+export async function addIapPurchaseListeners(
+  onPurchase: (purchase: IapSubscriptionPurchase) => void,
+  onError: (error: unknown) => void,
+): Promise<() => void> {
+  const IAP = await getIapModule();
+  if (!IAP) {
+    return () => {};
+  }
+
+  const updateSub = IAP.purchaseUpdatedListener(onPurchase);
+  const errorSub = IAP.purchaseErrorListener(onError);
+
+  return () => {
+    updateSub.remove();
+    errorSub.remove();
+  };
+}
+
+/**
+ * Acknowledge (subscriptions) or consume (consumables) a completed purchase.
+ * This replaces the raw `acknowledgePurchaseAndroid(token)` call for flows where
+ * we hold the full purchase object from a listener.
+ */
+export async function finishIapTransaction(purchase: IapSubscriptionPurchase, isConsumable = false) {
+  const IAP = await getIapModule();
+  if (!IAP) {
+    return;
+  }
+
+  await IAP.finishTransaction({ purchase, isConsumable });
+}
+
+/**
+ * Launches the native billing flow. The resolved value is NOT the purchase —
+ * listen via `addIapPurchaseListeners` for the actual result. See note above.
+ */
 export async function requestSubscriptionPurchase(productId: string, product?: IapSubscription, basePlanId?: string) {
   const available = await connectIap();
   const IAP = await getIapModule();
