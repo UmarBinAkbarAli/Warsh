@@ -39,7 +39,9 @@ import {
 const DRY_RUN        = process.argv.includes("--dry-run");
 const SKIP_EXISTING  = process.argv.includes("--skip-existing");
 
-const BATCHES_DIR = path.join(__dirname, "../exports/image-tests");
+const BATCHES_DIR = process.env.VOCAB_IMAGE_SOURCE_DIR
+  ? path.resolve(process.env.VOCAB_IMAGE_SOURCE_DIR)
+  : path.join(__dirname, "../exports/image-tests");
 
 // ---------------------------------------------------------------------------
 // Slug normalisation

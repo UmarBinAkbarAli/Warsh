@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { Image } from "expo-image";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
@@ -37,6 +38,7 @@ interface Chapter {
   isSkippedByPlacement: boolean;
   completedLessonCount: number;
   lessons: { id: string }[];
+  imageUrl?: string | null;
 }
 
 export default function ChaptersScreen() {
@@ -71,20 +73,33 @@ export default function ChaptersScreen() {
           item.isLocked && styles.cardLocked,
         ]}
       >
-        <View style={styles.cardHeader}>
-          <Text style={styles.chapterNum}>{t("chapter.number", { count: item.order })}</Text>
-          {item.isCompleted && (
-            <Ionicons name="checkmark-circle" size={16} color={WarshPalette.sage} />
-          )}
-          {item.isLocked && (
-            <Ionicons name="lock-closed-outline" size={16} color={WarshPalette.subtleBrown} />
-          )}
-          {item.isSkippedByPlacement && (
-            <Text style={styles.skippedBadge}>{t("chapter.skippedStatus")}</Text>
-          )}
+        <View style={styles.cardTopRow}>
+          {item.imageUrl ? (
+            <Image
+              source={{ uri: item.imageUrl }}
+              style={styles.chapterImage}
+              contentFit="cover"
+              cachePolicy="disk"
+              transition={150}
+            />
+          ) : null}
+          <View style={styles.cardTopRowText}>
+            <View style={styles.cardHeader}>
+              <Text style={styles.chapterNum}>{t("chapter.number", { count: item.order })}</Text>
+              {item.isCompleted && (
+                <Ionicons name="checkmark-circle" size={16} color={WarshPalette.sage} />
+              )}
+              {item.isLocked && (
+                <Ionicons name="lock-closed-outline" size={16} color={WarshPalette.subtleBrown} />
+              )}
+              {item.isSkippedByPlacement && (
+                <Text style={styles.skippedBadge}>{t("chapter.skippedStatus")}</Text>
+              )}
+            </View>
+            <Text style={[styles.title, item.isLocked && styles.titleLocked]}>{pickLocalized(item.title, item.titleUr, language)}</Text>
+          </View>
         </View>
 
-        <Text style={[styles.title, item.isLocked && styles.titleLocked]}>{pickLocalized(item.title, item.titleUr, language)}</Text>
         {item.titleAr ? (
           <ArabicText size="sm" style={styles.titleAr}>{item.titleAr}</ArabicText>
         ) : null}
@@ -173,6 +188,17 @@ const styles = StyleSheet.create({
   },
   cardCompleted: { borderColor: WarshPalette.sage + "99" },
   cardLocked: { opacity: 0.65 },
+  cardTopRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.md,
+  },
+  chapterImage: {
+    width: 56,
+    height: 56,
+    borderRadius: Radii.md,
+  },
+  cardTopRowText: { flex: 1 },
   cardHeader: {
     flexDirection: "row",
     alignItems: "center",

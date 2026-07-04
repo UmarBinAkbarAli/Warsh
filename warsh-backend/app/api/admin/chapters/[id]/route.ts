@@ -9,6 +9,7 @@ const chapterSchema = z.object({
   description: z.string().trim().min(1).max(1000),
   worldMapX: z.number().finite().min(0).max(1),
   worldMapY: z.number().finite().min(0).max(1),
+  imageUrl: z.string().trim().url().max(500).nullable().optional(),
   isLocked: z.boolean(),
 });
 

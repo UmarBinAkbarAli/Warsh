@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { ActivityIndicator, Image, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
+import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import api from "@services/api";
@@ -13,6 +14,7 @@ import { cancelTodayReminders, fireMilestoneNotification } from "@services/notif
 import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
 import { pickLocalized, useLanguage } from "@services/language";
 import { useT } from "@i18n/index";
+import { prefetchTtsAudio } from "@services/audioCache";
 
 // ---------------------------------------------------------------------------
 // API response shape — content is the raw warsh-content-schema v1.0 blob
@@ -66,6 +68,35 @@ function localizedText(value: any, language: "en" | "ur"): string | undefined {
 
 function exWrongExpl(ex: RawEx, language: "en" | "ur"): string | undefined {
   return localizedText(ex.explanation_on_wrong, language) ?? localizedText(ex.explanation, language);
+}
+
+// Extracts just what's needed to prefetch a discover card's image + autoplay audio ahead of time.
+// Mirrors the field extraction in renderDiscover() so the prefetch cache key matches the real play call.
+function discoverCardPrefetchFields(card: Record<string, any> | undefined, language: "en" | "ur") {
+  if (!card) return { imageUrl: undefined, arabicText: undefined, transliteration: undefined };
+  const cardType = card.type as string | undefined;
+  const text    = card.text    as Record<string, any> | undefined;
+  const concept = card.concept as Record<string, any> | undefined;
+  const titleObj = card.title  as Record<string, any> | undefined;
+  const examples = card.examples as Array<Record<string, any>> | undefined;
+
+  const imageUrl = cardType === "WORD" || cardType === undefined
+    ? (card.image_url as string | undefined)
+    : undefined;
+
+  let arabicText: string | undefined;
+  let transliteration: string | undefined;
+  if (cardType === "GRAMMAR_NOTE") {
+    arabicText = titleObj?.ar as string | undefined;
+  } else if (cardType === "SENTENCE") {
+    arabicText = text?.ar as string | undefined;
+    transliteration = text?.translit as string | undefined;
+  } else {
+    arabicText = (text?.ar ?? concept?.ar ?? examples?.[0]?.ar) as string | undefined;
+    transliteration = text?.translit as string | undefined;
+  }
+
+  return { imageUrl, arabicText, transliteration };
 }
 
 function roleLabel(role: string, t: TranslateFn): string {
@@ -386,6 +417,20 @@ export default function LessonPlayScreen() {
   const answeredCorrectly = isAnswered && isAnswerCorrect(currentExercise, selectedAnswer, language, t);
   const completedExerciseCount = Math.min(currentExerciseIndex + (isAnswered ? 1 : 0), exercises.length);
   const screenPadding = { paddingTop: insets.top + 16 };
+
+  // Prefetch the next 1-2 discover cards' image + audio while the current one is
+  // shown, so the autoplay audio and image don't lag on the first-time swipe-through.
+  useEffect(() => {
+    if (currentBeat !== 2 || discoverCards.length === 0) return;
+    const upcoming = discoverCards.slice(currentCardIndex + 1, currentCardIndex + 3);
+    for (const upcomingCard of upcoming) {
+      const { imageUrl, arabicText, transliteration } = discoverCardPrefetchFields(upcomingCard, language);
+      if (imageUrl) Image.prefetch(imageUrl).catch(() => undefined);
+      if (arabicText) {
+        prefetchTtsAudio([{ text: arabicText, cacheKey: transliteration ?? arabicText, category: "lessons" }]).catch(() => undefined);
+      }
+    }
+  }, [currentBeat, currentCardIndex, discoverCards, language]);
 
   useEffect(() => {
     async function loadLesson() {
@@ -939,7 +984,9 @@ export default function LessonPlayScreen() {
             <Image
               source={{ uri: discoverImageUrl }}
               style={styles.discoverImage}
-              resizeMode="contain"
+              contentFit="contain"
+              cachePolicy="disk"
+              transition={150}
             />
           ) : null}
           {arabicText ? (

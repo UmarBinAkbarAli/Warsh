@@ -1,12 +1,12 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   ActivityIndicator,
-  Image,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
+import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -17,6 +17,7 @@ import { getSRSDueWords, submitSRSReview } from "@services/api";
 import { trackSRSReviewCompleted } from "@services/analytics";
 import { useLanguage, pickTranslation } from "@services/language";
 import { useT } from "@i18n/index";
+import { prefetchVocabWordAudio } from "@services/audioCache";
 
 interface QuranicExample {
   surahNameEn: string;
@@ -105,6 +106,18 @@ export default function SRSReviewScreen() {
 
   const current = queue[currentIndex];
   const total = queue.length;
+
+  // Prefetch the next 1-2 cards' image + audio while the current card is shown,
+  // so they're already warm by the time the user swipes forward.
+  useEffect(() => {
+    const upcoming = queue.slice(currentIndex + 1, currentIndex + 3);
+    for (const item of upcoming) {
+      if (item.word.imageUrl) {
+        Image.prefetch(item.word.imageUrl).catch(() => undefined);
+      }
+      prefetchVocabWordAudio(item.word.id, item.word.arabic).catch(() => undefined);
+    }
+  }, [queue, currentIndex]);
 
   if (stage === "loading") {
     return (
@@ -222,7 +235,9 @@ export default function SRSReviewScreen() {
             <Image
               source={{ uri: current.word.imageUrl }}
               style={styles.cardImage}
-              resizeMode="contain"
+              contentFit="contain"
+              cachePolicy="disk"
+              transition={150}
             />
           ) : null}
 

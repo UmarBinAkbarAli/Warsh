@@ -67,6 +67,10 @@ export function discoverImageKey(slug: string): string {
   return `images/discover/${slug}.png`;
 }
 
+export function chapterImageKey(chapterId: string): string {
+  return `images/chapters/${chapterId}.jpg`;
+}
+
 export async function uploadImageToR2(key: string, imageBuffer: Buffer, contentType = "image/png"): Promise<string> {
   const client = getR2Client();
   const bucket = getBucketName();

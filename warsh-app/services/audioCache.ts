@@ -158,6 +158,12 @@ export async function prefetchTtsAudio(requests: TtsAudioRequest[]) {
   return Promise.all(requests.map((request) => getCachedTtsAudioUri(request)));
 }
 
+// Warms the local audio cache for a vocab word ahead of time (e.g. the next
+// card in a review/lesson queue) so playback is instant once the user reaches it.
+export async function prefetchVocabWordAudio(wordId: string, arabicText: string) {
+  return getVocabWordAudioUri(wordId, arabicText);
+}
+
 export function getVocabularyWordAudioUri(word: { arabic: string; transliteration?: string }) {
   return getCachedTtsAudioUri({
     text: word.arabic,

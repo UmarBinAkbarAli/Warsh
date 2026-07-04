@@ -1,13 +1,13 @@
 import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
-  Image,
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
+import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -227,7 +227,9 @@ export default function WordDetailScreen() {
             <Image
               source={{ uri: word.imageUrl }}
               style={styles.wordImage}
-              resizeMode="contain"
+              contentFit="contain"
+              cachePolicy="disk"
+              transition={150}
             />
           ) : null}
           <ArabicText size="xl" style={styles.arabicMain}>{word.arabic}</ArabicText>

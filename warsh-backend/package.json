@@ -22,7 +22,11 @@
     "images:compress": "node scripts/compress-images.cjs",
     "images:upload": "npx tsx scripts/upload-vocab-images.ts",
     "images:upload:skip": "npx tsx scripts/upload-vocab-images.ts --skip-existing",
-    "images:upload:dry": "npx tsx scripts/upload-vocab-images.ts --dry-run"
+    "images:upload:dry": "npx tsx scripts/upload-vocab-images.ts --dry-run",
+    "audio:check": "npx tsx -r dotenv/config scripts/check-audio-count.mjs",
+    "audio:prebuild": "npx tsx -r dotenv/config scripts/prebuild-audio-parallel.ts",
+    "images:sync-chapters": "npx tsx -r dotenv/config scripts/sync-chapter-images.ts",
+    "images:sync-chapters:dry": "npx tsx -r dotenv/config scripts/sync-chapter-images.ts --dry-run"
   },
   "prisma": {
     "seed": "node prisma/seed.cjs"

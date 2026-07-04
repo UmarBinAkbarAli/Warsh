@@ -1,5 +1,6 @@
 import { useCallback, useState, useRef, useEffect } from "react";
 import { View, Text, ScrollView, Pressable, ActivityIndicator, StyleSheet, TouchableOpacity, Modal, Animated, Platform } from "react-native";
+import { Image } from "expo-image";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -326,6 +327,15 @@ export default function HomeScreen() {
           }}
         >
           {chapter.isSkippedByPlacement ? <ChapterBadge label={t("learn.skipped")} /> : null}
+          {chapter.imageUrl ? (
+            <Image
+              source={{ uri: chapter.imageUrl }}
+              style={{ width: "100%", height: 120, borderRadius: Radii.md, marginBottom: Spacing.md }}
+              contentFit="cover"
+              cachePolicy="disk"
+              transition={150}
+            />
+          ) : null}
           <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontWeight: "700", marginBottom: Spacing.sm }}>
             {pickLocalized(chapter.title, chapter.titleUr, language)}
           </Text>
