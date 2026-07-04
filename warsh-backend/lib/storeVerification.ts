@@ -103,7 +103,7 @@ export async function verifyGooglePlayConsumable(productId: string, purchaseToke
   });
 
   if (!consumeResponse.ok) {
-    console.warn(`[noor-pack] Could not consume Google Play token ${token}: HTTP ${consumeResponse.status}`);
+    console.warn(`[noor-pack] Could not consume Google Play token (ending ...${token.slice(-6)}): HTTP ${consumeResponse.status}`);
   }
 }
 
@@ -130,10 +130,17 @@ async function verifyGooglePlaySubscription(input: VerifySubscriptionInput): Pro
     throw new StoreVerificationError("Google Play package name is not configured.", 503, "store_not_configured");
   }
 
-  // No service account key → trust the client (pre-launch / testing mode)
+  // No service account key configured — never trust the client for this.
   const rawKey = process.env.GOOGLE_PLAY_SERVICE_ACCOUNT_KEY?.trim();
   if (!rawKey) {
-    console.warn("[verify] GOOGLE_PLAY_SERVICE_ACCOUNT_KEY not set — granting subscription without server-side verification.");
+    if (process.env.NODE_ENV === "production") {
+      throw new StoreVerificationError(
+        "Google Play verification is not configured.",
+        503,
+        "store_not_configured",
+      );
+    }
+    console.warn("[verify] GOOGLE_PLAY_SERVICE_ACCOUNT_KEY not set — granting subscription without server-side verification (non-production only).");
     return {
       productId: input.productId,
       activeUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
@@ -153,7 +160,9 @@ async function verifyGooglePlaySubscription(input: VerifySubscriptionInput): Pro
 
   if (!response.ok) {
     const errBody = await response.text().catch(() => "");
-    console.error(`[verify] Google subscriptionsv2 HTTP ${response.status}: ${errBody}`);
+    // Truncate — Google's error payloads can be verbose and we don't want to
+    // retain more than needed for debugging in long-lived log storage.
+    console.error(`[verify] Google subscriptionsv2 HTTP ${response.status}: ${errBody.slice(0, 300)}`);
     throw new StoreVerificationError("Google Play rejected the purchase token.", 400, "invalid_purchase");
   }
 

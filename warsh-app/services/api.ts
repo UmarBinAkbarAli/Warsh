@@ -1,4 +1,5 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
+import { Platform } from "react-native";
 import { getToken } from "./storage";
 import { useAuthStore } from "@stores/authStore";
 import { router } from "expo-router";
@@ -10,7 +11,7 @@ interface RetryableConfig extends InternalAxiosRequestConfig {
 type AppEnvironment = "development" | "staging" | "production";
 
 const APP_ENVIRONMENT: AppEnvironment = process.env.EXPO_PUBLIC_ENVIRONMENT ?? "production";
-const API_TIMEOUT_MS = 10000;
+const API_TIMEOUT_MS = 20000;
 
 function getApiBaseUrl() {
   const rawApiUrl = process.env.EXPO_PUBLIC_API_URL?.trim();
@@ -50,7 +51,8 @@ const api = axios.create({
   baseURL: API_BASE_URL,
   timeout: API_TIMEOUT_MS,
   headers: {
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
+    "X-Warsh-Platform": Platform.OS,
   }
 });
 

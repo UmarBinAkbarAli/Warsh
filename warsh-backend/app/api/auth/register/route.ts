@@ -11,6 +11,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Missing required fields", code: "bad_request" }, { status: 400 });
   }
 
+  if (typeof password !== "string" || password.length < 8) {
+    return NextResponse.json({ error: "Password must be at least 8 characters", code: "bad_request" }, { status: 400 });
+  }
+
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return NextResponse.json({ error: "Invalid email address", code: "bad_request" }, { status: 400 });
@@ -21,7 +25,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Email already registered", code: "conflict" }, { status: 409 });
   }
 
-  const passwordHash = bcrypt.hashSync(password, 10);
+  const passwordHash = await bcrypt.hash(password, 10);
   const validGoalMinutes = [5, 10, 15, 30];
   const user = await prisma.user.create({
     data: {

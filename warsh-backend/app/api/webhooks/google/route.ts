@@ -44,7 +44,12 @@ interface DeveloperNotification {
 
 export async function POST(request: Request) {
   const expectedToken = process.env.GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET;
-  if (expectedToken) {
+  if (!expectedToken) {
+    if (process.env.NODE_ENV === "production") {
+      console.error("[rtdn] GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET is not set — rejecting request.");
+      return NextResponse.json({ error: "Webhook is not configured." }, { status: 503 });
+    }
+  } else {
     const { searchParams } = new URL(request.url);
     const token = searchParams.get("token");
     if (token !== expectedToken) {

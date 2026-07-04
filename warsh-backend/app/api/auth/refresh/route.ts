@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { signToken, verifyTokenAllowExpired } from "../../../../lib/auth";
+import { MAX_SESSION_MS, signToken, verifyTokenAllowExpired } from "../../../../lib/auth";
 
 export async function POST(request: Request) {
   const authHeader = request.headers.get("authorization");
@@ -10,6 +10,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  const newToken = signToken(payload.userId);
+  // Tokens signed before this change have no sessionStart — treat their
+  // original iat as the session start so old sessions still expire.
+  const sessionStart = payload.sessionStart ?? payload.iat;
+  if (sessionStart && Date.now() - sessionStart * 1000 > MAX_SESSION_MS) {
+    return NextResponse.json({ error: "Session expired — please log in again.", code: "unauthorized" }, { status: 401 });
+  }
+
+  const newToken = signToken(payload.userId, sessionStart);
   return NextResponse.json({ data: { token: newToken } });
 }

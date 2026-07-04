@@ -26,11 +26,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  if (!bcrypt.compareSync(currentPassword, user.passwordHash)) {
+  if (!(await bcrypt.compare(currentPassword, user.passwordHash))) {
     return NextResponse.json({ error: "Current password is incorrect", code: "unauthorized" }, { status: 401 });
   }
 
-  const newHash = bcrypt.hashSync(newPassword, 12);
+  const newHash = await bcrypt.hash(newPassword, 12);
   await prisma.user.update({ where: { id: userId }, data: { passwordHash: newHash } });
 
   // Fire and forget — notify user their password was changed

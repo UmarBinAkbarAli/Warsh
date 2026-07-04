@@ -1,34 +1,24 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import * as SecureStore from "expo-secure-store";
 
 export const STORAGE_KEYS = {
   auth: "auth-storage",
   onboarding: "onboarding_data"
 };
 
-type PersistedAuthState = {
-  state?: {
-    token?: string | null;
-    user?: string | { id: string; email: string; name: string } | null;
-  };
-};
-
-async function getPersistedAuthState() {
-  const rawAuth = await AsyncStorage.getItem(STORAGE_KEYS.auth);
-  if (!rawAuth) {
-    return null;
-  }
-
-  try {
-    return JSON.parse(rawAuth) as PersistedAuthState;
-  } catch {
-    await AsyncStorage.removeItem(STORAGE_KEYS.auth);
-    return null;
-  }
-}
+// The JWT lives in the OS-encrypted keychain/keystore, not in the plain
+// AsyncStorage blob the rest of the auth store persists to — AsyncStorage
+// is readable without root from a debuggable/rooted device or an
+// unencrypted local backup, and the token now stays valid for up to 90
+// days across refreshes.
+export const TOKEN_KEY = "warsh_auth_token";
 
 export async function getToken() {
-  const authState = await getPersistedAuthState();
-  return authState?.state?.token ?? null;
+  try {
+    return await SecureStore.getItemAsync(TOKEN_KEY);
+  } catch {
+    return null;
+  }
 }
 
 export function setOnboarding(data: string) {
@@ -39,6 +29,7 @@ export function getOnboarding() {
   return AsyncStorage.getItem(STORAGE_KEYS.onboarding);
 }
 
-export function clearAuth() {
-  return AsyncStorage.removeItem(STORAGE_KEYS.auth);
+export async function clearAuth() {
+  await SecureStore.deleteItemAsync(TOKEN_KEY).catch(() => {});
+  await AsyncStorage.removeItem(STORAGE_KEYS.auth);
 }

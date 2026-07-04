@@ -24,9 +24,11 @@ model User {
     subscriptionStatus String        @default("trial")
     subscriptionProductId String?
     subscriptionActiveUntil DateTime?
-    lastPurchaseToken String?
+    lastPurchaseToken String?         @unique
     noorOverageBalance Int           @default(0)
     phrasesSpoken  Int               @default(0)
+    ttsUsageCount   Int              @default(0)
+    ttsUsageResetAt DateTime?
     createdAt      DateTime          @default(now())
     updatedAt      DateTime          @updatedAt
     streak         Streak?

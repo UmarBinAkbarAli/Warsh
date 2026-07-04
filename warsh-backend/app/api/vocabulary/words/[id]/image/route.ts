@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../../../lib/prisma";
-import { getUserIdFromRequest } from "../../../../../../lib/auth";
+import { getAdminWriteError } from "../../../../../../lib/admin";
 import { uploadAudioToR2 } from "../../../../../../lib/r2";
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 
@@ -22,12 +22,10 @@ function vocabWordImageKey(wordId: string): string {
 // PUT /api/vocabulary/words/[id]/image
 // Body: raw image bytes (Content-Type: image/jpeg or image/png)
 // Uploads to R2 and saves imageUrl on the word.
-// Only usable with a valid JWT — run from admin scripts or Prisma Studio.
+// Admin-only — requires X-Admin-Token, run from admin scripts or Prisma Studio.
 export async function PUT(request: Request, { params }: { params: { id: string } }) {
-  const userId = getUserIdFromRequest(request);
-  if (!userId) {
-    return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
-  }
+  const writeError = getAdminWriteError(request);
+  if (writeError) return writeError;
 
   const word = await prisma.vocabularyWord.findUnique({
     where: { id: params.id },
