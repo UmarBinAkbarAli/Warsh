@@ -13,7 +13,9 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "test": "vitest run",
@@ -27,6 +29,6 @@
     "@types/node": "^20.14.2",
     "tsup": "^8.3.0",
     "typescript": "^5.5.4",
-    "vitest": "^2.0.0"
+    "vitest": "^4.1.9"
   }
 }

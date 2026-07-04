@@ -115,6 +115,17 @@ npm run android       # Build and run on Android emulator/device
 npm run lint          # ESLint
 ```
 
+### Lesson Schema (`packages/lesson-schema/`)
+
+This package holds the repo's **only automated test suite** (Vitest); the backend and app have lint but no test runner.
+
+```bash
+npm test              # Run Vitest once (validates the lesson content schema)
+npm run test:watch    # Vitest watch mode
+npm run test -- <pattern>   # Run a single test file/name by pattern
+npm run build         # tsup build (re-vendor into warsh-backend/vendor/lesson-schema after schema changes)
+```
+
 ## Environment Setup
 
 **Backend** - copy `.env.example` to `.env`:
