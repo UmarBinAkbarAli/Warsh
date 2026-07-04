@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Animated, StyleSheet, Text, View } from "react-native";
+import { Animated, Platform, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useAuthStore } from "@stores/authStore";
@@ -29,6 +29,14 @@ export default function Index() {
 
   // Run the splash animation sequence
   useEffect(() => {
+    if (Platform.OS === "web") {
+      latinOpacity.setValue(1);
+      arabicOpacity.setValue(1);
+      taglineOpacity.setValue(1);
+      const timer = setTimeout(() => setReadyToNavigate(true), 250);
+      return () => clearTimeout(timer);
+    }
+
     // Latin + separator fade in over 600ms
     Animated.timing(latinOpacity, {
       toValue: 1,

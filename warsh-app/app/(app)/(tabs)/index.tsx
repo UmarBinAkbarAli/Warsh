@@ -1,5 +1,5 @@
 import { useCallback, useState, useRef, useEffect } from "react";
-import { View, Text, ScrollView, Pressable, ActivityIndicator, StyleSheet, TouchableOpacity, Modal, Animated } from "react-native";
+import { View, Text, ScrollView, Pressable, ActivityIndicator, StyleSheet, TouchableOpacity, Modal, Animated, Platform } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -39,6 +39,7 @@ export default function HomeScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const language = useLanguage();
+  const isWeb = Platform.OS === "web";
   const t = useT();
   const [chapters, setChapters] = useState<any[]>([]);
   const [tadabburFocus, setTadabburFocus] = useState<{ id: string; nameAr: string; nameEn: string; comprehensionPercent: number } | null>(null);
@@ -187,7 +188,7 @@ export default function HomeScreen() {
 
     <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: Spacing.xl, paddingTop: insets.top + 16 }}>
       {/* Trial expired banner — persistent, not dismissable */}
-      {subscriptionStatus === "expired" && (
+      {!isWeb && subscriptionStatus === "expired" && (
         <TouchableOpacity
           style={styles.trialExpiredBanner}
           onPress={() => router.push("/(app)/paywall")}
@@ -199,7 +200,7 @@ export default function HomeScreen() {
       )}
 
       {/* Trial countdown banner — dismissable per day */}
-      {subscriptionStatus === "trial" && trialDaysRemaining !== null && trialDaysRemaining <= 5 && !trialBannerDismissed && (
+      {!isWeb && subscriptionStatus === "trial" && trialDaysRemaining !== null && trialDaysRemaining <= 5 && !trialBannerDismissed && (
         <View style={[
           styles.trialBanner,
           trialDaysRemaining <= 1 ? styles.trialBannerUrgent : trialDaysRemaining <= 2 ? styles.trialBannerWarning : null,

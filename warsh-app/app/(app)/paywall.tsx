@@ -248,6 +248,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   }
 
   const billingSupported = isBillingSupportedEnvironment();
+  const isWeb = Platform.OS === "web";
   const trialCopy = trialDaysRemaining !== null && trialDaysRemaining > 0
     ? `Free trial ends in ${trialDaysRemaining} day${trialDaysRemaining !== 1 ? "s" : ""}.`
     : "Unlock the full Warsh experience.";
@@ -271,7 +272,9 @@ export default function PaywallScreen({ dismissable = true }: Props) {
 
         {/* Hero */}
         <Text style={styles.heroTitle}>Continue your journey.</Text>
-        <Text style={styles.heroSubtitle}>{trialCopy}</Text>
+        <Text style={styles.heroSubtitle}>
+          {isWeb ? "Web browser access is open while Warsh is in beta." : trialCopy}
+        </Text>
 
         {/* Comparison table */}
         <View style={styles.table}>
@@ -346,30 +349,35 @@ export default function PaywallScreen({ dismissable = true }: Props) {
 
         {/* CTA */}
         <TouchableOpacity
-          style={[styles.ctaBtn, (purchasing || !billingSupported) ? styles.ctaBtnDisabled : null]}
-          onPress={handlePurchase}
-          disabled={purchasing || !billingSupported}
+          style={[styles.ctaBtn, (purchasing || (!billingSupported && !isWeb)) ? styles.ctaBtnDisabled : null]}
+          onPress={isWeb ? () => router.replace("/(app)/(tabs)") : handlePurchase}
+          disabled={purchasing || (!billingSupported && !isWeb)}
           activeOpacity={0.85}
         >
           {purchasing
             ? <ActivityIndicator color={WarshPalette.ink} />
             : <Text style={styles.ctaBtnText}>
-                {billingSupported
+                {isWeb
+                  ? "Continue learning"
+                  : billingSupported
                   ? `Try for free, then ${getPriceLabel(selected)}`
                   : "Unavailable in Expo Go"}
               </Text>}
         </TouchableOpacity>
 
         {/* Restore + legal */}
-        <TouchableOpacity onPress={handleRestore} disabled={restoring || !billingSupported} style={styles.restoreBtn}>
-          {restoring
-            ? <ActivityIndicator color={WarshPalette.gold} size="small" />
-            : <Text style={styles.restoreText}>Restore purchases</Text>}
-        </TouchableOpacity>
+        {!isWeb ? (
+          <TouchableOpacity onPress={handleRestore} disabled={restoring || !billingSupported} style={styles.restoreBtn}>
+            {restoring
+              ? <ActivityIndicator color={WarshPalette.gold} size="small" />
+              : <Text style={styles.restoreText}>Restore purchases</Text>}
+          </TouchableOpacity>
+        ) : null}
 
         <Text style={styles.legal}>
-          Subscription auto-renews unless cancelled at least 24 hours before the end of the current period.
-          Payment charged to your Google Play account.
+          {isWeb
+            ? "Subscriptions remain available in the Android app. Browser users can continue learning during beta."
+            : "Subscription auto-renews unless cancelled at least 24 hours before the end of the current period. Payment charged to your Google Play account."}
         </Text>
       </ScrollView>
     </View>
