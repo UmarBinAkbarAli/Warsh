@@ -1,9 +1,11 @@
 import * as FileSystem from "expo-file-system/legacy";
+import { Platform } from "react-native";
 import { API_BASE_URL } from "./api";
 import { getToken } from "./storage";
 
 const AUDIO_CACHE_DIR = `${FileSystem.cacheDirectory ?? ""}warsh-audio/`;
 const AUDIO_CACHE_MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000;
+const webAudioObjectUrls = new Map<string, string>();
 
 type TtsAudioRequest = {
   text: string;
@@ -30,6 +32,10 @@ function hashText(value: string) {
 }
 
 async function ensureAudioCacheDir() {
+  if (Platform.OS === "web") {
+    return;
+  }
+
   if (!FileSystem.cacheDirectory) {
     throw new Error("Audio cache directory is unavailable on this device.");
   }
@@ -50,6 +56,23 @@ async function isFreshCachedFile(uri: string) {
   return Date.now() - modificationTimeMs < AUDIO_CACHE_MAX_AGE_MS;
 }
 
+async function fetchWebAudioUrl(remoteUrl: string, cacheKey: string, headers?: Record<string, string>) {
+  const existing = webAudioObjectUrls.get(cacheKey);
+  if (existing) {
+    return existing;
+  }
+
+  const response = await fetch(remoteUrl, { headers });
+  if (!response.ok) {
+    throw new Error(`Audio request failed with status ${response.status}.`);
+  }
+
+  const blob = await response.blob();
+  const objectUrl = URL.createObjectURL(blob);
+  webAudioObjectUrls.set(cacheKey, objectUrl);
+  return objectUrl;
+}
+
 export function getTtsCacheUri({ text, cacheKey, category = "words" }: TtsAudioRequest) {
   const stablePart = normalizeCachePart(cacheKey || text) || "audio";
   return `${AUDIO_CACHE_DIR}${category}-${stablePart}-${hashText(text)}.mp3`;
@@ -64,12 +87,21 @@ export async function getCachedTtsAudioUri(request: TtsAudioRequest) {
   await ensureAudioCacheDir();
   const localUri = getTtsCacheUri({ ...request, text });
 
+  const token = await getToken();
+  const remoteUrl = `${API_BASE_URL}/api/audio/tts?text=${encodeURIComponent(text)}`;
+
+  if (Platform.OS === "web") {
+    return fetchWebAudioUrl(
+      remoteUrl,
+      localUri,
+      token ? { Authorization: `Bearer ${token}` } : undefined,
+    );
+  }
+
   if (await isFreshCachedFile(localUri)) {
     return localUri;
   }
 
-  const token = await getToken();
-  const remoteUrl = `${API_BASE_URL}/api/audio/tts?text=${encodeURIComponent(text)}`;
   const result = await FileSystem.downloadAsync(remoteUrl, localUri, {
     headers: token ? { Authorization: `Bearer ${token}` } : undefined,
   });
@@ -89,14 +121,14 @@ export async function getVocabWordAudioUri(wordId: string, arabicText: string): 
 
   await ensureAudioCacheDir();
 
-  if (await isFreshCachedFile(localUri)) {
-    return localUri;
-  }
-
   // Ask backend for the R2 URL (generates + uploads on first call)
   const token = await getToken();
   const apiUrl = `${API_BASE_URL}/api/vocabulary/words/${wordId}/audio`;
   const headers: Record<string, string> = token ? { Authorization: `Bearer ${token}` } : {};
+
+  if (Platform.OS !== "web" && await isFreshCachedFile(localUri)) {
+    return localUri;
+  }
 
   const response = await fetch(apiUrl, { headers });
   if (!response.ok) {
@@ -106,6 +138,9 @@ export async function getVocabWordAudioUri(wordId: string, arabicText: string): 
 
   const json = await response.json() as { data: { audioUrl: string } };
   const r2Url = json.data.audioUrl;
+  if (Platform.OS === "web") {
+    return r2Url;
+  }
 
   // Download from R2 public URL (no auth header — it's a public CDN)
   const result = await FileSystem.downloadAsync(r2Url, localUri);
