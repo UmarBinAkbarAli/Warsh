@@ -61,6 +61,12 @@ It should not be treated as a permanent record of:
 - **Docs refreshed** — `CLAUDE.md` and `AGENTS.md` updated to match the current codebase (Expo SDK 54, Lora/Cormorant fonts, new libs/endpoints, Madinah Books 1–8, etc.).
 - App `npx tsc --noEmit` clean; `db:validate-fixtures` passes (391 fixtures).
 
+**Latest status (2026-06-23):**
+- **Warsh character animation pack added** - 34 transparent 24-frame PNG sprite-sheet animations generated from the separated character poses for app scenarios such as lesson reading, thinking, Noor guidance, completion celebration, chapter unlock, locked/protected state, and loading/idle.
+- **Expo playback helper added** - `warsh-app/components/WarshCharacterAnimation.tsx` plays the sprite sheets deterministically; `warsh-app/constants/warshCharacterAnimations.ts` maps animation IDs to static `require()` assets and scenario metadata.
+- **App-ready assets copied** - sprite sheets live under `warsh-app/assets/characters/warsh-animations/spritesheets/`. The external handoff pack remains at `D:\Projects\Warsh\animated-poses`.
+- Focused lint for the new component and generated manifest passes: `npx eslint components/WarshCharacterAnimation.tsx constants/warshCharacterAnimations.ts --ext .ts,.tsx`.
+
 ## Current Phase
 
 - **Phase 1 core app flow:** implemented
