@@ -4,7 +4,7 @@ import { getUserIdFromRequest } from "../../../../lib/auth";
 import { getPKTDateString, isYesterdayPKT, isTodayPKT } from "../../../../lib/date";
 
 export async function POST(request: Request) {
-  const userId = getUserIdFromRequest(request);
+  const userId = await getUserIdFromRequest(request);
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }

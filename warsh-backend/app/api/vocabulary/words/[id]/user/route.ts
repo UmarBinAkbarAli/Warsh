@@ -3,7 +3,7 @@ import { prisma } from "../../../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../../../lib/auth";
 
 export async function PATCH(request: Request, { params }: { params: { id: string } }) {
-  const userId = getUserIdFromRequest(request);
+  const userId = await getUserIdFromRequest(request);
   if (!userId) return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
 
   const word = await prisma.vocabularyWord.findUnique({ where: { id: params.id }, select: { id: true } });

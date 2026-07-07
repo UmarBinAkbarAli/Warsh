@@ -4,7 +4,7 @@ import { getUserIdFromRequest } from "../../../../lib/auth";
 import { StoreVerificationError, verifyStoreSubscription } from "../../../../lib/storeVerification";
 
 export async function POST(request: Request) {
-  const userId = getUserIdFromRequest(request);
+  const userId = await getUserIdFromRequest(request);
   if (!userId) return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
 
   const body = await request.json();
@@ -28,16 +28,32 @@ export async function POST(request: Request) {
     throw error;
   }
 
-  const user = await prisma.user.update({
-    where: { id: userId },
-    data: {
-      subscriptionStatus: "active",
-      subscriptionProductId: verifiedSubscription.productId,
-      subscriptionActiveUntil: verifiedSubscription.activeUntil,
-      lastPurchaseToken: purchaseToken ?? null,
-    },
-    select: { subscriptionStatus: true, subscriptionActiveUntil: true },
-  });
+  let user;
+  try {
+    user = await prisma.user.update({
+      where: { id: userId },
+      data: {
+        subscriptionStatus: "active",
+        subscriptionProductId: verifiedSubscription.productId,
+        subscriptionActiveUntil: verifiedSubscription.activeUntil,
+        lastPurchaseToken: purchaseToken ?? null,
+      },
+      select: { subscriptionStatus: true, subscriptionActiveUntil: true },
+    });
+  } catch (error) {
+    // lastPurchaseToken is unique. If this exact token is already attached to a
+    // different account, surface a clean conflict instead of an unhandled 500.
+    if (
+      error && typeof error === "object" && "code" in error &&
+      (error as { code?: string }).code === "P2002"
+    ) {
+      return NextResponse.json(
+        { error: "This purchase is already linked to another account.", code: "conflict" },
+        { status: 409 },
+      );
+    }
+    throw error;
+  }
 
   return NextResponse.json({ data: { ...user, productId: verifiedSubscription.productId } });
 }

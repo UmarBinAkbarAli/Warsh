@@ -2,12 +2,21 @@ import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 import { prisma } from "../../../../lib/prisma";
 import { sendPasswordResetEmail } from "../../../../lib/email";
+import { hit, clientKey } from "../../../../lib/rateLimit";
 
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 export async function POST(request: Request) {
+  const rl = hit(clientKey(request, "forgot-password"), 5, 60_000);
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { error: "Too many attempts. Please try again shortly.", code: "too_many_requests" },
+      { status: 429, headers: { "Retry-After": String(rl.retryAfterSeconds) } },
+    );
+  }
+
   let body: unknown;
   try {
     body = await request.json();

@@ -38,7 +38,7 @@ function computeNextSRS(
 }
 
 export async function POST(request: Request) {
-  const userId = getUserIdFromRequest(request);
+  const userId = await getUserIdFromRequest(request);
   if (!userId) return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
 
   const body = await request.json();

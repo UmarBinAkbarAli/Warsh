@@ -7,7 +7,7 @@ const NOOR_PACK_PRODUCT_ID = "warsh_noor_pack";
 const NOOR_PACK_MESSAGES = 20;
 
 export async function POST(request: Request) {
-  const userId = getUserIdFromRequest(request);
+  const userId = await getUserIdFromRequest(request);
   if (!userId) return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
 
   let body: unknown;
@@ -36,8 +36,16 @@ export async function POST(request: Request) {
       }
       throw error;
     }
+  } else {
+    // iOS consumable verification (StoreKit 2) is not implemented yet. We must
+    // NOT grant credits on an unverified receipt — doing so let any client send
+    // platform:"ios" with an arbitrary token and mint free AI messages. Reject
+    // until Apple-side verification exists.
+    return NextResponse.json(
+      { error: "iOS purchases are not supported yet.", code: "store_not_configured" },
+      { status: 503 },
+    );
   }
-  // iOS: Apple consumable verification via StoreKit 2 is deferred to v1.1
 
   const user = await prisma.user.update({
     where: { id: userId },

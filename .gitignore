@@ -21,3 +21,10 @@ tsconfig.json.*
 skills-lock.json
 .agents/
 .vercel
+
+# Generated export artifacts (images, CSV audits) — not source
+warsh-backend/exports/
+warsh-app/exports/
+
+# Local design scratch file (not source)
+warsh-app/warsh-app-UI-v2

@@ -14,6 +14,7 @@ import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
+import { useAuthStore } from "@stores/authStore";
 import { BrandButton } from "@components/BrandButton";
 import {
   WarshPalette,
@@ -54,7 +55,13 @@ export default function ChangePasswordScreen() {
 
     setLoading(true);
     try {
-      await api.post("/api/auth/change-password", { currentPassword, newPassword });
+      const res = await api.post("/api/auth/change-password", { currentPassword, newPassword });
+      // Changing the password invalidates every existing token server-side.
+      // Adopt the fresh token so this device stays signed in.
+      const newToken = res?.data?.data?.token;
+      if (newToken) {
+        useAuthStore.getState().setToken(newToken);
+      }
       Alert.alert("Password changed", "Your password has been updated successfully.", [
         { text: "OK", onPress: () => router.back() },
       ]);

@@ -3,7 +3,7 @@ import { getUserIdFromRequest } from "../../../lib/auth";
 import { DEV_UNLOCK_ALL, getUserCourseState } from "../../../lib/course";
 
 export async function GET(request: Request) {
-  const userId = getUserIdFromRequest(request);
+  const userId = await getUserIdFromRequest(request);
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }

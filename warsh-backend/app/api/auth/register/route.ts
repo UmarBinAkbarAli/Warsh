@@ -1,9 +1,18 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "../../../../lib/prisma";
-import { signToken } from "../../../../lib/auth";
+import { signToken, passwordTokenFingerprint } from "../../../../lib/auth";
+import { hit, clientKey } from "../../../../lib/rateLimit";
 
 export async function POST(request: Request) {
+  const rl = hit(clientKey(request, "register"), 5, 60_000);
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { error: "Too many attempts. Please try again shortly.", code: "too_many_requests" },
+      { status: 429, headers: { "Retry-After": String(rl.retryAfterSeconds) } },
+    );
+  }
+
   const body = await request.json();
   const { email, password, name, nativeLanguage, goal, dailyGoalMinutes } = body;
 
@@ -38,7 +47,7 @@ export async function POST(request: Request) {
     }
   });
 
-  const token = signToken(user.id);
+  const token = signToken(user.id, { pwFingerprint: passwordTokenFingerprint(passwordHash) });
 
   return NextResponse.json(
     {

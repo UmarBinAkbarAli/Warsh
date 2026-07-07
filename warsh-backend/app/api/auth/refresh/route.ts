@@ -17,6 +17,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Session expired — please log in again.", code: "unauthorized" }, { status: 401 });
   }
 
-  const newToken = signToken(payload.userId, sessionStart);
+  const newToken = signToken(payload.userId, { sessionStart, pwFingerprint: payload.pv });
   return NextResponse.json({ data: { token: newToken } });
 }

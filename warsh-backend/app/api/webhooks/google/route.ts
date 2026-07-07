@@ -45,7 +45,10 @@ interface DeveloperNotification {
 export async function POST(request: Request) {
   const expectedToken = process.env.GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET;
   if (!expectedToken) {
-    if (process.env.NODE_ENV === "production") {
+    // Fail closed unless a developer has explicitly opted into an unauthenticated
+    // webhook for local testing. Relying on NODE_ENV alone would leave a
+    // misconfigured preview/staging deploy open to forged purchase notifications.
+    if (process.env.ALLOW_UNAUTHENTICATED_WEBHOOK !== "true") {
       console.error("[rtdn] GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET is not set — rejecting request.");
       return NextResponse.json({ error: "Webhook is not configured." }, { status: 503 });
     }
@@ -175,10 +178,41 @@ async function handleOneTimeProductNotification(notif: OneTimeProductNotificatio
 
   if (!user) return;
 
+  // Never grant credits on the notification alone — re-verify the purchase with
+  // Google so a forged/replayed RTDN cannot mint free packs.
+  const verified = await verifyOneTimePurchaseState(purchaseToken, sku);
+  if (!verified) {
+    console.warn("[rtdn] one-time purchase failed re-verification — not crediting");
+    return;
+  }
+
   await prisma.user.update({
     where: { id: user.id },
     data: { noorOverageBalance: { increment: NOOR_PACK_MESSAGE_COUNT } },
   });
+}
+
+// Confirms with Google that the one-time product token is in a PURCHASED state.
+// Read-only (does not consume) — the client's purchase flow consumes the token.
+async function verifyOneTimePurchaseState(purchaseToken: string, sku: string): Promise<boolean> {
+  const accessToken = await getGoogleAccessToken();
+  if (!accessToken) return false;
+
+  const packageName = process.env.GOOGLE_PLAY_PACKAGE_NAME?.trim();
+  if (!packageName) return false;
+
+  const url =
+    `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodeURIComponent(packageName)}` +
+    `/purchases/products/${encodeURIComponent(sku)}/tokens/${encodeURIComponent(purchaseToken)}`;
+
+  const res = await fetch(url, {
+    headers: { Authorization: `Bearer ${accessToken}`, Accept: "application/json" },
+  });
+  if (!res.ok) return false;
+
+  const purchase = (await res.json()) as { purchaseState?: number };
+  // 0 = Purchased (1 = Canceled, 2 = Pending)
+  return purchase.purchaseState === 0;
 }
 
 async function getGoogleAccessToken(): Promise<string | null> {

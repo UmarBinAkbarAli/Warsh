@@ -5,7 +5,7 @@ import { getUserIdFromRequest } from "../../../../lib/auth";
 export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
-  const userId = getUserIdFromRequest(request);
+  const userId = await getUserIdFromRequest(request);
   if (!userId) return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
 
   const words = await prisma.vocabularyWord.findMany({

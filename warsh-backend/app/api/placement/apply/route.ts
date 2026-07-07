@@ -5,7 +5,7 @@ import { getUserCourseState, PROGRESS_STATUS } from "../../../../lib/course";
 import { getStartingChapterOrderForPlacement, VALID_PLACEMENT_TYPES } from "../../../../lib/placement";
 
 export async function POST(request: Request) {
-  const userId = getUserIdFromRequest(request);
+  const userId = await getUserIdFromRequest(request);
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }

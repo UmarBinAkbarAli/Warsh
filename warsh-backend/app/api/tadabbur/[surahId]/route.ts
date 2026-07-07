@@ -4,7 +4,7 @@ import { getUserIdFromRequest } from "../../../../lib/auth";
 import { computeWordStates } from "../../../../lib/tadabbur";
 
 export async function GET(request: Request, { params }: { params: { surahId: string } }) {
-  const userId = getUserIdFromRequest(request);
+  const userId = await getUserIdFromRequest(request);
   if (!userId) return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
 
   const [surah, progress, userWords] = await Promise.all([

@@ -133,14 +133,18 @@ async function verifyGooglePlaySubscription(input: VerifySubscriptionInput): Pro
   // No service account key configured — never trust the client for this.
   const rawKey = process.env.GOOGLE_PLAY_SERVICE_ACCOUNT_KEY?.trim();
   if (!rawKey) {
-    if (process.env.NODE_ENV === "production") {
+    // Fail closed unless a developer has explicitly opted into granting
+    // unverified subscriptions for local testing. NODE_ENV alone is not enough:
+    // a preview/staging deploy that forgets to set it would otherwise hand out
+    // free 1-year subscriptions to anyone.
+    if (process.env.ALLOW_UNVERIFIED_PURCHASES !== "true") {
       throw new StoreVerificationError(
         "Google Play verification is not configured.",
         503,
         "store_not_configured",
       );
     }
-    console.warn("[verify] GOOGLE_PLAY_SERVICE_ACCOUNT_KEY not set — granting subscription without server-side verification (non-production only).");
+    console.warn("[verify] GOOGLE_PLAY_SERVICE_ACCOUNT_KEY not set — granting subscription without server-side verification (ALLOW_UNVERIFIED_PURCHASES opt-in).");
     return {
       productId: input.productId,
       activeUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),

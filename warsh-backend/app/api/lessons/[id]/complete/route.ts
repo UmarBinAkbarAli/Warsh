@@ -16,7 +16,7 @@ interface Props {
 }
 
 export async function POST(request: Request, { params }: Props) {
-  const userId = getUserIdFromRequest(request);
+  const userId = await getUserIdFromRequest(request);
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
@@ -60,6 +60,18 @@ export async function POST(request: Request, { params }: Props) {
   const baseXp = lesson.xpReward;
   const perfectBonus = score === 100 && firstCompletion ? 5 : 0;
   const xpEarned = firstCompletion ? baseXp + perfectBonus : 0;
+
+  // All progress/XP/streak/word-bank mutations for this completion run in a
+  // single transaction so a mid-way failure can't leave partial state (e.g.
+  // progress marked complete but the chapter bonus or seeded words missing).
+  let dailyGoalXp = 0;
+  let chapterBonusXp = 0;
+  let chapterJustCompleted = false;
+  let chapterOrder: number | null = null;
+  let wordsAdded = 0;
+  let newPhrasesSpoken = 0;
+  let firstShadowRepeat = false;
+  let firstSpokenLesson = false;
 
   await prisma.$transaction(async (tx: any) => {
     if (!existingProgress) {
@@ -137,22 +149,20 @@ export async function POST(request: Request, { params }: Props) {
         }
       }
     }
-  });
 
-  // Award daily goal XP (5 XP on first lesson of the day)
-  let dailyGoalXp = 0;
-  if (firstCompletion && lessonsCompletedTodayBefore === 0) {
-    dailyGoalXp = 5;
-    await prisma.user.update({ where: { id: userId }, data: { xp: { increment: 5 } } });
-  }
+    if (!firstCompletion) return;
 
-  // Award chapter completion bonus (50 XP when all lessons in chapter are done/skipped)
-  let chapterBonusXp = 0;
-  let chapterJustCompleted = false;
-  if (firstCompletion) {
+    // Daily goal XP (5 XP on first lesson of the day)
+    if (lessonsCompletedTodayBefore === 0) {
+      dailyGoalXp = 5;
+      await tx.user.update({ where: { id: userId }, data: { xp: { increment: 5 } } });
+    }
+
+    // Chapter completion bonus (50 XP when all lessons in chapter are done/skipped).
+    // The count reads this transaction's own progress write, so it includes this lesson.
     const [totalInChapter, doneInChapter] = await Promise.all([
-      prisma.lesson.count({ where: { chapterId: lesson.chapterId } }),
-      prisma.progress.count({
+      tx.lesson.count({ where: { chapterId: lesson.chapterId } }),
+      tx.progress.count({
         where: {
           userId,
           lesson: { chapterId: lesson.chapterId },
@@ -164,29 +174,25 @@ export async function POST(request: Request, { params }: Props) {
     if (totalInChapter > 0 && doneInChapter === totalInChapter) {
       chapterBonusXp = 50;
       chapterJustCompleted = true;
-      await prisma.user.update({ where: { id: userId }, data: { xp: { increment: 50 } } });
+      await tx.user.update({ where: { id: userId }, data: { xp: { increment: 50 } } });
     }
-  }
 
-  // Add chapter vocabulary words to user's word bank on first lesson completion
-  let wordsAdded = 0;
-  let chapterOrder: number | null = null;
-  if (firstCompletion) {
-    const chapter = await prisma.chapter.findUnique({
+    // Seed chapter vocabulary into the user's word bank
+    const chapter = await tx.chapter.findUnique({
       where: { id: lesson.chapterId },
       select: { order: true },
     });
     if (chapter) {
       chapterOrder = chapter.order;
-      const chapterWords = await prisma.vocabularyWord.findMany({
+      const chapterWords = await tx.vocabularyWord.findMany({
         where: { chapterIntroduced: chapter.order },
         select: { id: true },
       });
       if (chapterWords.length > 0) {
         const tomorrow = new Date();
         tomorrow.setDate(tomorrow.getDate() + 1);
-        const result = await prisma.userVocabularyWord.createMany({
-          data: chapterWords.map((w) => ({
+        const result = await tx.userVocabularyWord.createMany({
+          data: chapterWords.map((w: { id: string }) => ({
             userId,
             wordId: w.id,
             nextReviewDate: tomorrow,
@@ -200,22 +206,19 @@ export async function POST(request: Request, { params }: Props) {
         wordsAdded = result.count;
       }
     }
-  }
+
+    // Increment phrasesSpoken if any SHADOW_REPEAT exercises were completed
+    if (validPhrasesCompleted > 0) {
+      const userBefore = await tx.user.findUnique({ where: { id: userId }, select: { phrasesSpoken: true } });
+      const before = userBefore?.phrasesSpoken ?? 0;
+      firstShadowRepeat = before === 0;
+      firstSpokenLesson = lesson.template === "SPOKEN_PHRASES";
+      await tx.user.update({ where: { id: userId }, data: { phrasesSpoken: { increment: validPhrasesCompleted } } });
+      newPhrasesSpoken = before + validPhrasesCompleted;
+    }
+  });
 
   const showPaywall = chapterJustCompleted && chapterOrder === 1 && userExists?.subscriptionStatus === "trial";
-
-  // Increment phrasesSpoken if any SHADOW_REPEAT exercises were completed
-  let newPhrasesSpoken = 0;
-  let firstShadowRepeat = false;
-  let firstSpokenLesson = false;
-  if (validPhrasesCompleted > 0 && firstCompletion) {
-    const userBefore = await prisma.user.findUnique({ where: { id: userId }, select: { phrasesSpoken: true } });
-    firstShadowRepeat = (userBefore?.phrasesSpoken ?? 0) === 0;
-    firstSpokenLesson = lesson.template === "SPOKEN_PHRASES";
-    await prisma.user.update({ where: { id: userId }, data: { phrasesSpoken: { increment: validPhrasesCompleted } } });
-    const userAfter = await prisma.user.findUnique({ where: { id: userId }, select: { phrasesSpoken: true } });
-    newPhrasesSpoken = userAfter?.phrasesSpoken ?? 0;
-  }
 
   const [user, streak, completedCount] = await Promise.all([
     prisma.user.findUnique({ where: { id: userId } }),

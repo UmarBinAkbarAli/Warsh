@@ -83,6 +83,9 @@ export async function getAssistantReply(
     }
     return getOpenAIReply(message, history, nativeLanguage);
   } catch (error) {
+    // Log so provider outages/misconfig are visible rather than silently
+    // masked as an "offline" fallback reply.
+    console.error("[openai] getAssistantReply failed, using local fallback:", error);
     return getLocalTutorReply(message);
   }
 }

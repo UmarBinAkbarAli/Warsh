@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
+import { prisma } from "./prisma";
 
 function getJwtSecret() {
   const secret = process.env.JWT_SECRET?.trim();
@@ -12,8 +13,18 @@ function getJwtSecret() {
 export interface AuthPayload {
   userId: string;
   sessionStart?: number;
+  // Short fingerprint of the user's password hash at issue time. When the
+  // password changes (reset/change) the fingerprint no longer matches, so every
+  // previously-issued token is rejected — this is how we invalidate sessions.
+  pv?: string;
   iat?: number;
   exp?: number;
+}
+
+// Derives a stable, non-reversible fingerprint of the password hash. Embedded in
+// the token as `pv` and re-checked on every authenticated request.
+export function passwordTokenFingerprint(passwordHash: string): string {
+  return crypto.createHash("sha256").update(passwordHash).digest("hex").slice(0, 16);
 }
 
 // Maximum total session lifetime from original login, regardless of how many
@@ -23,9 +34,17 @@ export const MAX_SESSION_MS = 90 * 24 * 60 * 60 * 1000; // 90 days
 
 // `sessionStart` (unix seconds) is preserved across refreshes so MAX_SESSION_MS
 // is measured from the original login, not reset on every refresh.
-export function signToken(userId: string, sessionStart?: number) {
+// `pwFingerprint` binds the token to the current password hash (see AuthPayload.pv).
+export function signToken(
+  userId: string,
+  opts?: { sessionStart?: number; pwFingerprint?: string },
+) {
   return jwt.sign(
-    { userId, sessionStart: sessionStart ?? Math.floor(Date.now() / 1000) },
+    {
+      userId,
+      sessionStart: opts?.sessionStart ?? Math.floor(Date.now() / 1000),
+      ...(opts?.pwFingerprint ? { pv: opts.pwFingerprint } : {}),
+    },
     getJwtSecret(),
     { expiresIn: "30d" },
   );
@@ -60,9 +79,25 @@ export function timingSafeStringEqual(a: string, b: string): boolean {
   return crypto.timingSafeEqual(bufA, bufB);
 }
 
-export function getUserIdFromRequest(request: Request): string | null {
+export async function getUserIdFromRequest(request: Request): Promise<string | null> {
   const authHeader = request.headers.get("authorization");
   const token = authHeader?.replace("Bearer ", "") ?? "";
   const payload = verifyToken(token);
-  return payload?.userId ?? null;
+  if (!payload?.userId) return null;
+
+  // Tokens carrying a password fingerprint must still match the current hash.
+  // Tokens issued before this feature (no `pv`) are accepted for backward
+  // compatibility and get upgraded on the next login/refresh.
+  if (payload.pv) {
+    const user = await prisma.user.findUnique({
+      where: { id: payload.userId },
+      select: { passwordHash: true },
+    });
+    if (!user) return null;
+    if (!timingSafeStringEqual(passwordTokenFingerprint(user.passwordHash), payload.pv)) {
+      return null;
+    }
+  }
+
+  return payload.userId;
 }

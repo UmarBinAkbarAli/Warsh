@@ -1,9 +1,22 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "../../../../lib/prisma";
-import { signToken } from "../../../../lib/auth";
+import { signToken, passwordTokenFingerprint } from "../../../../lib/auth";
+import { hit, clientKey } from "../../../../lib/rateLimit";
+
+// A fixed valid bcrypt hash used only to spend comparable CPU time when the
+// email is not found, so login timing can't be used to enumerate accounts.
+const DUMMY_PASSWORD_HASH = "$2a$10$6uCUqZ.9hdkxNsQ5GHpRk.IYbw5AKJuukJXiAi3EULbdZSzDs0zAC";
 
 export async function POST(request: Request) {
+  const rl = hit(clientKey(request, "login"), 10, 60_000);
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { error: "Too many attempts. Please try again shortly.", code: "too_many_requests" },
+      { status: 429, headers: { "Retry-After": String(rl.retryAfterSeconds) } },
+    );
+  }
+
   const body = await request.json();
   const { email, password } = body;
 
@@ -12,11 +25,15 @@ export async function POST(request: Request) {
   }
 
   const user = await prisma.user.findUnique({ where: { email } });
-  if (!user || !(await bcrypt.compare(password, user.passwordHash))) {
+  // Always run a bcrypt comparison — even when the user does not exist — so the
+  // response time does not reveal whether an email is registered.
+  const compareHash = user?.passwordHash ?? DUMMY_PASSWORD_HASH;
+  const passwordMatches = await bcrypt.compare(password, compareHash);
+  if (!user || !passwordMatches) {
     return NextResponse.json({ error: "Invalid credentials", code: "unauthorized" }, { status: 401 });
   }
 
-  const token = signToken(user.id);
+  const token = signToken(user.id, { pwFingerprint: passwordTokenFingerprint(user.passwordHash) });
   return NextResponse.json({
     data: {
       user: {

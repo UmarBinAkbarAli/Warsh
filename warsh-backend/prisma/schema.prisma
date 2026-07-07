@@ -55,7 +55,7 @@ enum Level {
 model Streak {
     id                String    @id @default(cuid())
     userId            String    @unique
-    user              User      @relation(fields: [userId], references: [id])
+    user              User      @relation(fields: [userId], references: [id], onDelete: Cascade)
     currentStreak     Int       @default(0)
     longestStreak     Int       @default(0)
     lastActiveDate    DateTime?
@@ -104,7 +104,7 @@ enum LessonTemplate {
 model Progress {
     id          String    @id @default(cuid())
     userId      String
-    user        User      @relation(fields: [userId], references: [id])
+    user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
     lessonId    String
     lesson      Lesson    @relation(fields: [lessonId], references: [id])
     completed   Boolean   @default(false)
@@ -121,7 +121,7 @@ model Progress {
 model ChatMessage {
     id        String      @id @default(cuid())
     userId    String
-    user      User        @relation(fields: [userId], references: [id])
+    user      User        @relation(fields: [userId], references: [id], onDelete: Cascade)
     role      MessageRole
     content   String
     tokens    Int?
@@ -146,7 +146,7 @@ model Achievement {
 model UserAchievement {
     id            String      @id @default(cuid())
     userId        String
-    user          User        @relation(fields: [userId], references: [id])
+    user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
     achievementId String
     achievement   Achievement @relation(fields: [achievementId], references: [id])
     unlockedAt    DateTime    @default(now())
@@ -193,7 +193,7 @@ model TadabburSurah {
 model UserSurahProgress {
     id          String        @id @default(cuid())
     userId      String
-    user        User          @relation(fields: [userId], references: [id])
+    user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
     surahId     String
     surah       TadabburSurah @relation(fields: [surahId], references: [id])
     completedAt DateTime?
@@ -205,7 +205,7 @@ model UserSurahProgress {
 model UserVocabularyWord {
     id                String         @id @default(cuid())
     userId            String
-    user              User           @relation(fields: [userId], references: [id])
+    user              User           @relation(fields: [userId], references: [id], onDelete: Cascade)
     wordId            String
     word              VocabularyWord @relation(fields: [wordId], references: [id])
     easeFactor        Float          @default(2.5)

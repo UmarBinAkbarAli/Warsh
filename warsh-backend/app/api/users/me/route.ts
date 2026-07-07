@@ -5,7 +5,7 @@ import { getUserIdFromRequest } from "../../../../lib/auth";
 const VALID_DAILY_GOALS = [5, 10, 15, 30];
 
 export async function PATCH(request: Request) {
-  const userId = getUserIdFromRequest(request);
+  const userId = await getUserIdFromRequest(request);
   if (!userId) return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
 
   const body = await request.json();
@@ -39,7 +39,7 @@ export async function PATCH(request: Request) {
 }
 
 export async function DELETE(request: Request) {
-  const userId = getUserIdFromRequest(request);
+  const userId = await getUserIdFromRequest(request);
   if (!userId) return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
 
   // Delete all user data in dependency order
