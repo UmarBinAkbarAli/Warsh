@@ -7,7 +7,6 @@ import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import {
   Image,
-  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -39,7 +38,6 @@ const INACTIVE_BORDER = WarshPalette.parchmentCardBorder;
 export default function PreviewA1Welcome() {
   const router = useRouter();
   const { width, height } = useWindowDimensions();
-  const isWeb = Platform.OS === "web";
   const frameWidth = Math.min(width, 412);
   const compactHeight = height < 780;
   const tightHeight = height < 700;
@@ -59,18 +57,9 @@ export default function PreviewA1Welcome() {
   const descriptionLineHeight = compactHeight ? 22 : 24;
 
   return (
-    <SafeAreaView
-      edges={["top"]}
-      style={[styles.safeArea, isWeb ? styles.safeAreaWeb : null]}
-    >
+    <SafeAreaView edges={["top"]} style={styles.safeArea}>
       <StatusBar style="dark" backgroundColor={CREAM} />
-      <View
-        style={[
-          styles.background,
-          isWeb ? styles.backgroundWeb : null,
-          isWeb ? { width: frameWidth } : null,
-        ]}
-      >
+      <View style={styles.background}>
         <ParchmentGrain />
         <CornerOrnament corner="topLeft" />
         <CornerOrnament corner="topRight" />
@@ -81,7 +70,6 @@ export default function PreviewA1Welcome() {
           style={styles.scrollArea}
           contentContainerStyle={[
             styles.scrollContent,
-            isWeb ? styles.scrollContentWeb : null,
             compactHeight ? styles.scrollContentCompact : null,
             tightHeight ? styles.scrollContentTight : null,
           ]}
@@ -415,27 +403,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: CREAM,
   },
-  safeAreaWeb: {
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#111111",
-  },
   background: {
     flex: 1,
     alignItems: "center",
     backgroundColor: CREAM,
     overflow: "hidden",
-  },
-  backgroundWeb: {
-    flexGrow: 0,
-    flexShrink: 0,
-    flexBasis: 915,
-    height: 915,
-    borderRadius: 28,
-    shadowColor: "#000000",
-    shadowOffset: { width: 0, height: 18 },
-    shadowOpacity: 0.45,
-    shadowRadius: 40,
   },
   scrollArea: {
     flex: 1,
@@ -445,10 +417,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingTop: 31,
     paddingBottom: 24,
-  },
-  scrollContentWeb: {
-    minHeight: 915,
-    paddingTop: 44,
   },
   scrollContentCompact: {
     paddingTop: 20,

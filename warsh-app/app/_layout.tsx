@@ -1,15 +1,17 @@
+import * as Sentry from "@sentry/react-native";
+import { initAnalytics } from "@services/analytics";
+import { initSentry } from "@services/sentry";
 import { useFonts } from "expo-font";
-import { Component } from "react";
-import { ActivityIndicator, View, Text } from "react-native";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Component } from "react";
+import { ActivityIndicator, View, Text } from "react-native";
 import { PaperProvider } from "react-native-paper";
-import * as Sentry from "@sentry/react-native";
-import { Colors } from "../constants/theme";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+
+import { WebShell } from "../components/WebShell";
 import { WarshPaperTheme } from "../constants/paperTheme";
-import { initSentry } from "@services/sentry";
-import { initAnalytics } from "@services/analytics";
+import { Colors } from "../constants/theme";
 
 const sentryEnabled = initSentry();
 void initAnalytics();
@@ -27,13 +29,55 @@ class ErrorBoundary extends Component<
   render() {
     if (this.state.hasError) {
       return (
-        <View style={{ flex: 1, backgroundColor: Colors.bg.primary, alignItems: "center", justifyContent: "center", padding: 24 }}>
-          <Text style={{ color: Colors.text.primary, fontSize: 18, fontWeight: "700", marginBottom: 8 }}>Something went wrong</Text>
-          <Text style={{ color: Colors.text.secondary, textAlign: "center", marginBottom: 16 }}>Please close and reopen the app.</Text>
-          <Text style={{ color: "#FF6B6B", fontSize: 11, fontFamily: "monospace", textAlign: "left" }} selectable>
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: Colors.bg.primary,
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 24,
+          }}
+        >
+          <Text
+            style={{
+              color: Colors.text.primary,
+              fontSize: 18,
+              fontWeight: "700",
+              marginBottom: 8,
+            }}
+          >
+            Something went wrong
+          </Text>
+          <Text
+            style={{
+              color: Colors.text.secondary,
+              textAlign: "center",
+              marginBottom: 16,
+            }}
+          >
+            Please close and reopen the app.
+          </Text>
+          <Text
+            style={{
+              color: "#FF6B6B",
+              fontSize: 11,
+              fontFamily: "monospace",
+              textAlign: "left",
+            }}
+            selectable
+          >
             {this.state.errorMessage}
           </Text>
-          <Text style={{ color: "#888", fontSize: 10, fontFamily: "monospace", textAlign: "left", marginTop: 8 }} selectable>
+          <Text
+            style={{
+              color: "#888",
+              fontSize: 10,
+              fontFamily: "monospace",
+              textAlign: "left",
+              marginTop: 8,
+            }}
+            selectable
+          >
             {this.state.errorStack.slice(0, 400)}
           </Text>
         </View>
@@ -64,7 +108,14 @@ function RootLayout() {
 
   if (!fontsLoaded && !fontError) {
     return (
-      <View style={{ flex: 1, backgroundColor: Colors.bg.primary, alignItems: "center", justifyContent: "center" }}>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: Colors.bg.primary,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <ActivityIndicator size="large" color={Colors.accent.gold} />
       </View>
     );
@@ -75,7 +126,9 @@ function RootLayout() {
       <SafeAreaProvider>
         <PaperProvider theme={WarshPaperTheme}>
           <StatusBar style="light" />
-          <Stack screenOptions={{ headerShown: false }} />
+          <WebShell>
+            <Stack screenOptions={{ headerShown: false }} />
+          </WebShell>
         </PaperProvider>
       </SafeAreaProvider>
     </ErrorBoundary>

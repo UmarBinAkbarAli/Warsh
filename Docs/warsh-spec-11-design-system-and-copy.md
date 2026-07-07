@@ -2,8 +2,8 @@
 ## File 11: Design System & Copy
 
 **Status:** Locked
-**Version:** 1.0
-**Last updated:** 2026-05-19
+**Version:** 1.1 — Gold updated to A1-preview gilt `#C49B4D`; Navy `#071B44` added as brand token and primary-CTA surface
+**Last updated:** 2026-07-08
 **Depends on:** File 01 (Identity & Principles), File 02 (Information Architecture)
 
 > This file locks every visual decision in Warsh — colors, typography, spacing, components, animations, illustrations — and provides the complete English copy for every UI string in the app. Urdu translation is a separate content task that produces an `ur.json` file paired with the `en.json` defined here.
@@ -49,14 +49,17 @@ If a design choice contradicts any of these, it's wrong.
 
 ## Part 2 — Color System
 
-### 2.1 The 5 brand tokens
+### 2.1 The 6 brand tokens
 
-Warsh uses **5 color tokens only**. Everything else is derived or restricted to specific micro-uses.
+Warsh uses **6 color tokens only**. Everything else is derived or restricted to specific micro-uses.
+
+> **v1.1 (2026-07-08):** Gold updated to the richer A1-preview gilt (`#C49B4D`, was `#C8A047`) and **Navy** promoted from the preview screens into the brand palette as the high-emphasis CTA surface.
 
 | Token | Hex | Name | Use |
 |---|---|---|---|
 | `--ink` | `#1A1A1A` | Ink | Primary text, headings, primary icons |
-| `--gold` | `#C8A047` | Gold | Accents, active states, highlights, milestones, completion |
+| `--gold` | `#C49B4D` | Gold | Accents, active states, highlights, milestones, completion |
+| `--navy` | `#071B44` | Navy | Primary CTA surface, rare high-emphasis dark surfaces |
 | `--parchment` | `#F4EBD0` | Parchment | Primary background, card backgrounds, container surfaces |
 | `--sage` | `#7A8B70` | Sage | Secondary text, dimmed states, subtle UI, inactive tabs |
 | `--cream` | `#FAF6E9` | Cream | Lighter surfaces, alternate cards, conversation bubbles |
@@ -69,8 +72,9 @@ Only when needed:
 |---|---|---|
 | `--ink-soft` | `#3D3D3D` | Body text where pure Ink is too heavy |
 | `--ink-muted` | `#5F5F5F` | Captions, helper text |
-| `--gold-soft` | `#E0BC68` | Gold hover state, lighter Gold accents |
-| `--gold-deep` | `#9A7D33` | Gold pressed state, important Gold accents |
+| `--gold-soft` | `#D4B06A` | Gold-light: lighter Gold accents, text/icons on Navy surfaces |
+| `--gold-deep` | `#A88648` | Gold pressed state, gold text on light backgrounds |
+| `--navy-deep` | `#04122E` | Navy pressed state |
 | `--sage-soft` | `#9DAB94` | Lighter Sage (for "not yet learned" Tadabbur words) |
 | `--sage-deep` | `#5A6953` | Darker Sage (for confirmation states) |
 | `--parchment-soft` | `#FAF2DD` | Lighter parchment for emphasis cards |
@@ -97,7 +101,7 @@ Only when needed:
 | Captions, helper text | `--ink-muted` |
 | Headings | `--ink` |
 | Arabic text | `--ink` (never colored except in Reveal beat highlights or Tadabbur word states) |
-| Buttons — primary | Background: `--gold`, text: `--ink` |
+| Buttons — primary | Background: `--navy`, border: 2pt `--gold`, text: `--gold-soft` |
 | Buttons — secondary | Background: transparent, border: `--sage`, text: `--ink` |
 | Buttons — tertiary (text link) | Color: `--gold-deep` |
 | Active tab | Icon and label: `--gold` |
@@ -242,13 +246,16 @@ All spacing is in multiples of 4. The base unit is 4pt.
 
 #### Primary Button
 
-- Background: `--gold`
-- Text: `--ink`, SemiBold
+The A1 hero-CTA treatment (v1.1): a navy surface framed in gold.
+
+- Background: `--navy`
+- Border: 2pt `--gold`
+- Text: `--gold-soft`, SemiBold
 - Height: 56pt
 - Padding: 16pt horizontal, vertical centered
 - Border radius: 12pt
-- Subtle pressed state: background darkens to `--gold-deep`
-- Disabled state: `--gold-soft` with 50% opacity
+- Subtle pressed state: background darkens to `--navy-deep`
+- Disabled state: `--navy` at 40% opacity
 
 #### Secondary Button
 
@@ -1557,8 +1564,9 @@ For App Store / Play Store:
 </PrimaryButton>
 
 // Styles:
-// backgroundColor: '#C8A047' (--gold)
-// color: '#1A1A1A' (--ink)
+// backgroundColor: '#071B44' (--navy)
+// borderWidth: 2, borderColor: '#C49B4D' (--gold)
+// color: '#D4B06A' (--gold-soft)
 // height: 56
 // borderRadius: 12
 // paddingHorizontal: 16
