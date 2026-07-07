@@ -1,8 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// The production web app (Expo web build) is served from this origin and must
+// The production web app (Expo web build) is served from these origins and must
 // always be able to reach the API, regardless of how CORS_ALLOWED_ORIGINS is set.
-const ALWAYS_ALLOWED_ORIGINS = ["https://app.warsh.app"];
+// - app.warsh.app: canonical custom domain (once DNS is pointed at the web app)
+// - warsh-web.vercel.app: stable Vercel alias for the web deployment
+const ALWAYS_ALLOWED_ORIGINS = ["https://app.warsh.app", "https://warsh-web.vercel.app"];
 
 // Local Expo web dev server — only trusted outside production.
 const DEV_ALLOWED_ORIGINS = ["http://localhost:8081", "http://127.0.0.1:8081"];
