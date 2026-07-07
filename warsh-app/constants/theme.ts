@@ -1,38 +1,45 @@
+// Spec-11 §2 locked brand palette. Key names kept from the legacy theme
+// (renaming 300+ call sites isn't worth it) but every VALUE now maps to a
+// spec token by role — the spec name is noted on each line.
 export const WarshPalette = {
-  ink: "#0F1117",
-  deep: "#1A1F30",
-  gold: "#9A8F6A",
-  parchment: "#D4C99A",
-  cream: "#E8E0CC",
-  creamBg: "#F5F2EA",
-  parchmentBg: "#EDE8D8",
-  white: "#FFFFFF",
-  defaultCardBorder: "#D8D0BE",
-  parchmentCardBorder: "#C8C0A8",
-  bodyBrown: "#5A5240",
-  subtleBrown: "#9A9080",
-  sage: "#3A5030",
-  mint: "#8FC9A0",
-  wrongBg: "#F9EDED",
-  wrongBorder: "#B07070",
-  wrongBorderSoft: "#C09090",
-  wrongText: "#7A3030",
-  correctBg: "#EAF2E8",
-  correctBorder: "#B8CEAE",
-  sageTintBg: "#EDF5ED",
-  sageTintBorder: "#90B090",
-  sageTintBorderStrong: "#70A870",
-  disabledIcon: "#A09888",
-  disabledText: "#8A8070",
-  waveformGoldIdle: "#C0B890",
-  waveformSageIdle: "#90A890",
-  recordingBg: "#8B3A3A",
-  recordingDot: "#FF5555",
-  deniedText: "#8B4A3A",
-  highlightBg: "#FEF9E7",
-  highlightBorder: "#F0D080",
-  highlightBgSoft: "#FFFBF0",
-  closeBg: "#F8F5EE",
+  ink: "#1A1A1A",             // --ink
+  deep: "#3D3D3D",            // --ink-soft (secondary text / dark surface)
+  gold: "#C8A047",            // --gold
+  goldDeep: "#9A7D33",        // --gold-deep (pressed states)
+  parchment: "#E0BC68",       // --gold-soft (this key is used as the muted-gold accent)
+  cream: "#EDDFAF",           // --parchment-deep (borders, grouping surfaces)
+  creamBg: "#F4EBD0",         // --parchment (primary screen background)
+  parchmentBg: "#FAF6E9",     // --cream (card background)
+  parchmentSoft: "#FAF2DD",   // --parchment-soft (emphasis cards)
+  white: "#FFFFFF",           // --white-pure
+  defaultCardBorder: "#9DAB94",   // --sage-soft (dividers/borders per §2.4)
+  parchmentCardBorder: "#E0BC68", // --gold-soft (emphasis card border per §5.2)
+  bodyBrown: "#3D3D3D",       // --ink-soft (body text)
+  subtleBrown: "#5F5F5F",     // --ink-muted (captions, helper text)
+  sage: "#7A8B70",            // --sage
+  sageSoft: "#9DAB94",        // --sage-soft
+  sageDeep: "#5A6953",        // --sage-deep (confirmation states)
+  mint: "#9DAB94",            // legacy key → --sage-soft
+  wrongBg: "#F7E9E0",         // tint of --warning-soft
+  wrongBorder: "#C8744A",     // --warning-soft (warm terracotta, never harsh red)
+  wrongBorderSoft: "#D99A78", // lighter --warning-soft
+  wrongText: "#9C5432",       // darker --warning-soft for text contrast
+  correctBg: "#EDF1E4",       // tint of --success-soft
+  correctBorder: "#A8BC8F",   // light --success-soft
+  sageTintBg: "#EDF1E4",      // tint of --success-soft
+  sageTintBorder: "#7B9461",  // --success-soft
+  sageTintBorderStrong: "#5A6953", // --sage-deep
+  disabledIcon: "#9DAB94",    // --sage-soft
+  disabledText: "#9B9283",    // warm grey, between ink-muted and sage-soft
+  waveformGoldIdle: "#DCC98F",// desaturated --gold-soft
+  waveformSageIdle: "#9DAB94",// --sage-soft
+  recordingBg: "#944232",     // deep terracotta (live-recording state)
+  recordingDot: "#D9634A",    // vivid --warning-soft (no panic red per §2.3)
+  deniedText: "#9C5432",      // darker --warning-soft
+  highlightBg: "#FBF3DC",     // gold-tinted parchment (selection highlight)
+  highlightBorder: "#E0BC68", // --gold-soft
+  highlightBgSoft: "#FDF8EA", // lighter gold-tinted parchment
+  closeBg: "#FAF2DD",         // --parchment-soft
 } as const;
 
 export const Colors = {
@@ -59,14 +66,15 @@ export const Colors = {
     streak: WarshPalette.sage,
   },
   border: {
-    default: WarshPalette.cream,
+    default: WarshPalette.sageSoft,
     subtle: WarshPalette.cream,
     gold: WarshPalette.gold,
   },
   success: WarshPalette.sage,
   error: WarshPalette.wrongText,
-  warning: WarshPalette.gold,
-  overlay: "rgba(15, 17, 23, 0.72)",
+  warning: WarshPalette.wrongBorder,
+  // Spec-11 §5.6: ink at 60% for confirmation modals
+  overlay: "rgba(26, 26, 26, 0.6)",
 } as const;
 
 export const Fonts: Record<string, string | undefined> = {
@@ -136,12 +144,13 @@ export const Spacing = {
 } as const;
 
 export const Shadows = {
+  // Spec-11 §5.2: very soft shadow — elevation reads through color, not shadow
   card: {
     shadowColor: WarshPalette.ink,
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.12,
+    shadowOpacity: 0.04,
     shadowRadius: 8,
-    elevation: 3,
+    elevation: 1,
   },
   goldGlow: {
     shadowColor: WarshPalette.gold,

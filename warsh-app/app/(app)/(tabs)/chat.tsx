@@ -238,7 +238,7 @@ export default function ChatScreen() {
           <View
             key={`${message.role}-${index}`}
             style={{
-              backgroundColor: message.role === "USER" ? "rgba(212, 168, 71, 0.15)" : Colors.bg.card,
+              backgroundColor: message.role === "USER" ? "rgba(200, 160, 71, 0.15)" : Colors.bg.card,
               padding: Spacing.md,
               borderRadius: Radii.md,
               marginBottom: Spacing.sm,
@@ -344,7 +344,7 @@ export default function ChatScreen() {
 const styles = StyleSheet.create({
   modalBackdrop: {
     flex: 1,
-    backgroundColor: "rgba(15, 17, 23, 0.72)",
+    backgroundColor: "rgba(26, 26, 26, 0.6)",
     justifyContent: "flex-end",
   },
   modalCard: {

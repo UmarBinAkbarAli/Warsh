@@ -45,6 +45,6 @@ export const WarshPaperTheme: MD3Theme = {
     scrim:                WarshPalette.ink,
     surfaceDisabled:      `${WarshPalette.cream}99`,
     onSurfaceDisabled:    `${WarshPalette.subtleBrown}61`,
-    backdrop:             "rgba(15, 17, 23, 0.4)",
+    backdrop:             "rgba(26, 26, 26, 0.4)",
   },
 };

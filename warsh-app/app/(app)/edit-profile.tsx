@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
 
   // Feedback banners
   successBanner: {
-    backgroundColor: "rgba(58, 80, 48, 0.12)",
+    backgroundColor: "rgba(122, 139, 112, 0.12)",
     borderRadius: Radii.sm,
     borderWidth: 1,
     borderColor: WarshPalette.sage,

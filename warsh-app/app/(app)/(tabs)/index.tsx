@@ -577,7 +577,7 @@ const styles = StyleSheet.create({
   // M4 — Streak ended modal
   modalOverlay: {
     flex: 1,
-    backgroundColor: "rgba(15, 17, 23, 0.7)",
+    backgroundColor: "rgba(26, 26, 26, 0.6)",
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: Spacing.xl,
