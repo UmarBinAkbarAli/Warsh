@@ -254,7 +254,7 @@ Error codes in use: `bad_request`, `invalid_input`, `unauthorized`, `conflict`, 
 
 **Fonts:** Loaded in `app/_layout.tsx` via `useFonts`. English/UI body = **Lora** (Regular/SemiBold/Bold/Italic); display/headings = **Cormorant Garamond**; Arabic = **Scheherazade New**.
 
-**Brand/theme:** Shared UI tokens in `warsh-app/constants/theme.ts` (WarshPalette, Colors, FontSizes, Spacing, Radii, Shadows). Use `components/BrandButton.tsx` for CTAs — it has `variant` (`primary | secondary | danger`) and `selected`/`loading`/`disabled` states, min height 52px. All new UI work must follow `Docs/warsh-spec-11-design-system-and-copy.md`.
+**Brand/theme:** Shared UI tokens in `warsh-app/constants/theme.ts` (WarshPalette, Colors, FontSizes, Spacing, Radii, Shadows). Use `components/BrandButton.tsx` for CTAs — it has `variant` (`primary | secondary | danger`) and `selected`/`loading`/`disabled` states, min height 56pt (spec-11 §5.1). All new UI work must follow `Docs/warsh-spec-11-design-system-and-copy.md`.
 
 **Services:** `warsh-app/services/` — `api.ts` (Axios + JWT), `iap.ts` (react-native-iap subscriptions/paywall), `analytics.ts` (Mixpanel), `notifications.ts` (expo-notifications), `sentry.ts`, `audioCache.ts` (expo-av playback + caching), `language.ts`, `micPermission.ts`, `storage.ts`.
 
