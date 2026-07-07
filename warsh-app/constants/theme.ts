@@ -1,51 +1,56 @@
 // Spec-11 §2 locked brand palette. Key names kept from the legacy theme
 // (renaming 300+ call sites isn't worth it) but every VALUE now maps to a
 // spec token by role — the spec name is noted on each line.
+// Gold family + navy come from the A1 preview screen's palette (user decision
+// 2026-07-08), superseding spec-11 §2's gold values — richer gilt, and a deep
+// navy for high-emphasis CTA surfaces.
 export const WarshPalette = {
-  ink: "#1A1A1A",             // --ink
-  deep: "#3D3D3D",            // --ink-soft (secondary text / dark surface)
-  gold: "#C8A047",            // --gold
-  goldDeep: "#9A7D33",        // --gold-deep (pressed states)
-  parchment: "#E0BC68",       // --gold-soft (this key is used as the muted-gold accent)
-  cream: "#EDDFAF",           // --parchment-deep (borders, grouping surfaces)
-  creamBg: "#F4EBD0",         // --parchment (primary screen background)
-  parchmentBg: "#FAF6E9",     // --cream (card background)
-  parchmentSoft: "#FAF2DD",   // --parchment-soft (emphasis cards)
-  white: "#FFFFFF",           // --white-pure
-  defaultCardBorder: "#9DAB94",   // --sage-soft (dividers/borders per §2.4)
-  parchmentCardBorder: "#E0BC68", // --gold-soft (emphasis card border per §5.2)
-  bodyBrown: "#3D3D3D",       // --ink-soft (body text)
-  subtleBrown: "#5F5F5F",     // --ink-muted (captions, helper text)
-  sage: "#7A8B70",            // --sage
-  sageSoft: "#9DAB94",        // --sage-soft
-  sageDeep: "#5A6953",        // --sage-deep (confirmation states)
-  mint: "#9DAB94",            // legacy key → --sage-soft
-  wrongBg: "#F7E9E0",         // tint of --warning-soft
-  wrongBorder: "#C8744A",     // --warning-soft (warm terracotta, never harsh red)
+  ink: "#1A1A1A", // --ink
+  deep: "#3D3D3D", // --ink-soft (secondary text)
+  navy: "#071B44", // brand navy (A1 CTA surface)
+  navyDeep: "#04122E", // navy pressed state
+  gold: "#C49B4D", // --gold (A1 gold)
+  goldDeep: "#A88648", // --gold-deep (pressed states, gold text on light bg)
+  parchment: "#D4B06A", // --gold-soft / A1 gold-light (muted-gold accent, text on navy)
+  cream: "#EDDFAF", // --parchment-deep (borders, grouping surfaces)
+  creamBg: "#F4EBD0", // --parchment (primary screen background)
+  parchmentBg: "#FAF6E9", // --cream (card background)
+  parchmentSoft: "#FAF2DD", // --parchment-soft (emphasis cards)
+  white: "#FFFFFF", // --white-pure
+  defaultCardBorder: "#9DAB94", // --sage-soft (dividers/borders per §2.4)
+  parchmentCardBorder: "#D4B06A", // gold-light (emphasis card border per §5.2)
+  bodyBrown: "#3D3D3D", // --ink-soft (body text)
+  subtleBrown: "#5F5F5F", // --ink-muted (captions, helper text)
+  sage: "#7A8B70", // --sage
+  sageSoft: "#9DAB94", // --sage-soft
+  sageDeep: "#5A6953", // --sage-deep (confirmation states)
+  mint: "#9DAB94", // legacy key → --sage-soft
+  wrongBg: "#F7E9E0", // tint of --warning-soft
+  wrongBorder: "#C8744A", // --warning-soft (warm terracotta, never harsh red)
   wrongBorderSoft: "#D99A78", // lighter --warning-soft
-  wrongText: "#9C5432",       // darker --warning-soft for text contrast
-  correctBg: "#EDF1E4",       // tint of --success-soft
-  correctBorder: "#A8BC8F",   // light --success-soft
-  sageTintBg: "#EDF1E4",      // tint of --success-soft
-  sageTintBorder: "#7B9461",  // --success-soft
+  wrongText: "#9C5432", // darker --warning-soft for text contrast
+  correctBg: "#EDF1E4", // tint of --success-soft
+  correctBorder: "#A8BC8F", // light --success-soft
+  sageTintBg: "#EDF1E4", // tint of --success-soft
+  sageTintBorder: "#7B9461", // --success-soft
   sageTintBorderStrong: "#5A6953", // --sage-deep
-  disabledIcon: "#9DAB94",    // --sage-soft
-  disabledText: "#9B9283",    // warm grey, between ink-muted and sage-soft
-  waveformGoldIdle: "#DCC98F",// desaturated --gold-soft
-  waveformSageIdle: "#9DAB94",// --sage-soft
-  recordingBg: "#944232",     // deep terracotta (live-recording state)
-  recordingDot: "#D9634A",    // vivid --warning-soft (no panic red per §2.3)
-  deniedText: "#9C5432",      // darker --warning-soft
-  highlightBg: "#FBF3DC",     // gold-tinted parchment (selection highlight)
-  highlightBorder: "#E0BC68", // --gold-soft
+  disabledIcon: "#9DAB94", // --sage-soft
+  disabledText: "#9B9283", // warm grey, between ink-muted and sage-soft
+  waveformGoldIdle: "#DCC98F", // desaturated --gold-soft
+  waveformSageIdle: "#9DAB94", // --sage-soft
+  recordingBg: "#944232", // deep terracotta (live-recording state)
+  recordingDot: "#D9634A", // vivid --warning-soft (no panic red per §2.3)
+  deniedText: "#9C5432", // darker --warning-soft
+  highlightBg: "#FBF3DC", // gold-tinted parchment (selection highlight)
+  highlightBorder: "#D4B06A", // gold-light
   highlightBgSoft: "#FDF8EA", // lighter gold-tinted parchment
-  closeBg: "#FAF2DD",         // --parchment-soft
+  closeBg: "#FAF2DD", // --parchment-soft
 } as const;
 
 export const Colors = {
   bg: {
     primary: WarshPalette.creamBg,
-    secondary: WarshPalette.deep,
+    secondary: WarshPalette.navy,
     card: WarshPalette.parchmentBg,
     surface: WarshPalette.cream,
   },

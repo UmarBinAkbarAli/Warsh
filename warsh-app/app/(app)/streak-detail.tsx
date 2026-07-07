@@ -334,7 +334,7 @@ const styles = StyleSheet.create({
     gap: Spacing.sm,
   },
   milestoneRowAchieved: {
-    backgroundColor: "rgba(200, 160, 71, 0.08)",
+    backgroundColor: "rgba(196, 155, 77, 0.08)",
   },
   milestoneEmoji: {
     fontSize: 18,

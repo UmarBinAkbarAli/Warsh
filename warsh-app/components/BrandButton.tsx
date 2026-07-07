@@ -29,8 +29,10 @@ function isDarkColor(hex?: string): boolean {
   return r * 0.299 + g * 0.587 + b * 0.114 < 128;
 }
 
-// Spec-11 §5.1 button system: gold primary (pressed → gold-deep),
-// sage-bordered secondary, transparent terracotta destructive. 56pt tall.
+// Button system: primary uses the A1 hero-CTA treatment (navy surface,
+// gold border, gold-light label — user decision 2026-07-08, supersedes
+// spec-11's gold primary); sage-bordered secondary and transparent
+// terracotta destructive per spec-11 §5.1. 56pt tall.
 export function BrandButton({
   title,
   onPress,
@@ -51,9 +53,13 @@ export function BrandButton({
     const bgFromStyle: string | undefined = flat?.backgroundColor;
     const { backgroundColor: _stripped, ...outerStyle } = flat ?? {};
 
-    const labelColor = isDarkColor(bgFromStyle)
-      ? WarshPalette.parchmentBg
-      : WarshPalette.ink;
+    const labelColor = bgFromStyle
+      ? isDarkColor(bgFromStyle)
+        ? WarshPalette.parchmentBg
+        : WarshPalette.ink
+      : selected
+        ? WarshPalette.ink
+        : WarshPalette.parchment; // gold-light on navy
 
     return (
       <Pressable
@@ -62,14 +68,15 @@ export function BrandButton({
         disabled={isDisabled}
         style={({ pressed }) => [
           styles.base,
+          styles.primary,
           {
             backgroundColor:
               bgFromStyle ??
               (pressed && !isDisabled
-                ? WarshPalette.goldDeep
+                ? WarshPalette.navyDeep
                 : selected
                   ? WarshPalette.highlightBg
-                  : WarshPalette.gold),
+                  : WarshPalette.navy),
           },
           selected ? styles.selectedBorder : null,
           isDisabled ? styles.primaryDisabled : null,
@@ -143,13 +150,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  primary: {
+    borderWidth: 2,
+    borderColor: WarshPalette.gold,
+  },
   selectedBorder: {
     borderWidth: 2,
     borderColor: WarshPalette.gold,
   },
   primaryDisabled: {
-    backgroundColor: WarshPalette.parchment,
-    opacity: 0.5,
+    backgroundColor: WarshPalette.navy,
+    opacity: 0.4,
   },
   secondary: {
     backgroundColor: "transparent",

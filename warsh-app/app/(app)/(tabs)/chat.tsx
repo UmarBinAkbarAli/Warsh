@@ -238,7 +238,7 @@ export default function ChatScreen() {
           <View
             key={`${message.role}-${index}`}
             style={{
-              backgroundColor: message.role === "USER" ? "rgba(200, 160, 71, 0.15)" : Colors.bg.card,
+              backgroundColor: message.role === "USER" ? "rgba(196, 155, 77, 0.15)" : Colors.bg.card,
               padding: Spacing.md,
               borderRadius: Radii.md,
               marginBottom: Spacing.sm,

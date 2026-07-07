@@ -1,22 +1,40 @@
-import { Image, Platform, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
-import { StatusBar } from "expo-status-bar";
+import {
+  Feather,
+  FontAwesome5,
+  MaterialCommunityIcons,
+} from "@expo/vector-icons";
 import { useRouter } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import {
+  Image,
+  Platform,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Feather, FontAwesome5, MaterialCommunityIcons } from "@expo/vector-icons";
+
+import { Colors, WarshPalette } from "../../../constants/theme";
 
 const HERO_IMAGE = require("../../../assets/images/a1-welcome-hero.png");
 const LOGO_IMAGE = require("../../../assets/images/warsh-logo.png");
 
-const GOLD = "#C49B4D";
-const GOLD_TEXT = "#A88648";
-const GOLD_LIGHT = "#D4B06A";
-const NAVY = "#071B44";
-const CREAM = "#F7F1E6";
-const INK = "#0B1630";
-const BODY = "#303030";
-const SAGE = "#6E8A66";
-const INACTIVE = "#EEE8DC";
-const INACTIVE_BORDER = "#DED6C7";
+// This screen's palette was promoted into the design system (2026-07-08):
+// its gold family and navy now live in WarshPalette. Local names kept for
+// readability; every value is a token.
+const GOLD = WarshPalette.gold;
+const GOLD_TEXT = WarshPalette.goldDeep;
+const GOLD_LIGHT = WarshPalette.parchment;
+const NAVY = WarshPalette.navy;
+const CREAM = Colors.bg.primary;
+const INK = WarshPalette.navy;
+const BODY = WarshPalette.bodyBrown;
+const SAGE = WarshPalette.sage;
+const INACTIVE = WarshPalette.cream;
+const INACTIVE_BORDER = WarshPalette.parchmentCardBorder;
 
 export default function PreviewA1Welcome() {
   const router = useRouter();
@@ -27,17 +45,32 @@ export default function PreviewA1Welcome() {
   const tightHeight = height < 700;
   const horizontalGutter = frameWidth < 380 ? 48 : 56;
   const contentWidth = Math.max(0, frameWidth - horizontalGutter);
-  const heroWidth = Math.min(compactHeight ? 318 : 348, frameWidth - horizontalGutter);
+  const heroWidth = Math.min(
+    compactHeight ? 318 : 348,
+    frameWidth - horizontalGutter,
+  );
   const scale = heroWidth / 348;
-  const headlineSize = Math.min(compactHeight ? 41 : 48, Math.max(36, heroWidth * 0.128));
+  const headlineSize = Math.min(
+    compactHeight ? 41 : 48,
+    Math.max(36, heroWidth * 0.128),
+  );
   const headlineLineHeight = headlineSize + (compactHeight ? 3 : 5);
   const descriptionSize = compactHeight ? 18 : 20;
   const descriptionLineHeight = compactHeight ? 22 : 24;
 
   return (
-    <SafeAreaView edges={["top"]} style={[styles.safeArea, isWeb ? styles.safeAreaWeb : null]}>
+    <SafeAreaView
+      edges={["top"]}
+      style={[styles.safeArea, isWeb ? styles.safeAreaWeb : null]}
+    >
       <StatusBar style="dark" backgroundColor={CREAM} />
-      <View style={[styles.background, isWeb ? styles.backgroundWeb : null, isWeb ? { width: frameWidth } : null]}>
+      <View
+        style={[
+          styles.background,
+          isWeb ? styles.backgroundWeb : null,
+          isWeb ? { width: frameWidth } : null,
+        ]}
+      >
         <ParchmentGrain />
         <CornerOrnament corner="topLeft" />
         <CornerOrnament corner="topRight" />
@@ -72,26 +105,62 @@ export default function PreviewA1Welcome() {
               </Pressable>
             </View>
 
-            <View style={[styles.brandSection, compactHeight ? styles.brandSectionCompact : null]}>
+            <View
+              style={[
+                styles.brandSection,
+                compactHeight ? styles.brandSectionCompact : null,
+              ]}
+            >
               <Image
                 source={LOGO_IMAGE}
-                style={[styles.arabicLogo, compactHeight ? styles.arabicLogoCompact : null]}
+                style={[
+                  styles.arabicLogo,
+                  compactHeight ? styles.arabicLogoCompact : null,
+                ]}
                 resizeMode="contain"
               />
-              <Text style={[styles.wordmark, compactHeight ? styles.wordmarkCompact : null]}>WARSH</Text>
-              <OrnamentDivider width={compactHeight ? 126 : 142} compact={compactHeight} />
+              <Text
+                style={[
+                  styles.wordmark,
+                  compactHeight ? styles.wordmarkCompact : null,
+                ]}
+              >
+                WARSH
+              </Text>
+              <OrnamentDivider
+                width={compactHeight ? 126 : 142}
+                compact={compactHeight}
+              />
             </View>
 
-            <View style={[styles.heroShell, { width: heroWidth, height: Math.round(heroWidth * 0.678) }]}>
-              <Image source={HERO_IMAGE} style={styles.heroImage} resizeMode="cover" />
+            <View
+              style={[
+                styles.heroShell,
+                { width: heroWidth, height: Math.round(heroWidth * 0.678) },
+              ]}
+            >
+              <Image
+                source={HERO_IMAGE}
+                style={styles.heroImage}
+                resizeMode="cover"
+              />
             </View>
 
-            <View style={[styles.headlineBlock, compactHeight ? styles.headlineBlockCompact : null, { width: heroWidth }]}>
+            <View
+              style={[
+                styles.headlineBlock,
+                compactHeight ? styles.headlineBlockCompact : null,
+                { width: heroWidth },
+              ]}
+            >
               <Text
                 numberOfLines={1}
                 adjustsFontSizeToFit
                 minimumFontScale={0.82}
-                style={[styles.headlineLine, { fontSize: headlineSize, lineHeight: headlineLineHeight }]}
+                style={[
+                  styles.headlineLine,
+                  { fontSize: headlineSize, lineHeight: headlineLineHeight },
+                ]}
               >
                 From Revelation
               </Text>
@@ -99,7 +168,10 @@ export default function PreviewA1Welcome() {
                 numberOfLines={1}
                 adjustsFontSizeToFit
                 minimumFontScale={0.82}
-                style={[styles.headlineLine, { fontSize: headlineSize, lineHeight: headlineLineHeight }]}
+                style={[
+                  styles.headlineLine,
+                  { fontSize: headlineSize, lineHeight: headlineLineHeight },
+                ]}
               >
                 to Conversation
               </Text>
@@ -107,8 +179,18 @@ export default function PreviewA1Welcome() {
 
             <OrnamentDivider width={98} compact />
 
-            <Text style={[styles.description, { width: heroWidth, fontSize: descriptionSize, lineHeight: descriptionLineHeight }]}>
-              Discover how Warsh helps you understand the Qur'an, speak Arabic naturally, and build confidence one lesson at a time.
+            <Text
+              style={[
+                styles.description,
+                {
+                  width: heroWidth,
+                  fontSize: descriptionSize,
+                  lineHeight: descriptionLineHeight,
+                },
+              ]}
+            >
+              Discover how Warsh helps you understand the Qur'an, speak Arabic
+              naturally, and build confidence one lesson at a time.
             </Text>
 
             <JourneyRow compact={compactHeight} />
@@ -124,8 +206,16 @@ export default function PreviewA1Welcome() {
               ]}
             >
               <View style={styles.ctaInnerBorder} pointerEvents="none" />
-              <Text style={[styles.ctaText, { fontSize: Math.min(26, 28 * scale) }]}>Begin the Journey</Text>
-              <Feather name="arrow-right" size={Math.min(25, 27 * scale)} color={GOLD_LIGHT} />
+              <Text
+                style={[styles.ctaText, { fontSize: Math.min(26, 28 * scale) }]}
+              >
+                Begin the Journey
+              </Text>
+              <Feather
+                name="arrow-right"
+                size={Math.min(25, 27 * scale)}
+                color={GOLD_LIGHT}
+              />
             </Pressable>
           </View>
         </ScrollView>
@@ -140,19 +230,40 @@ function ProgressRail() {
       {[0, 1, 2, 3].map((dot) => (
         <View key={dot} style={styles.progressDotWrap}>
           {dot > 0 ? <View style={styles.progressLine} /> : null}
-          <View style={[styles.progressDot, dot === 0 ? styles.progressDotActive : styles.progressDotInactive]} />
+          <View
+            style={[
+              styles.progressDot,
+              dot === 0 ? styles.progressDotActive : styles.progressDotInactive,
+            ]}
+          />
         </View>
       ))}
     </View>
   );
 }
 
-function OrnamentDivider({ width, compact = false }: { width: number; compact?: boolean }) {
+function OrnamentDivider({
+  width,
+  compact = false,
+}: {
+  width: number;
+  compact?: boolean;
+}) {
   return (
-    <View style={[styles.divider, { width }, compact ? styles.dividerCompact : null]}>
+    <View
+      style={[
+        styles.divider,
+        { width },
+        compact ? styles.dividerCompact : null,
+      ]}
+    >
       <View style={styles.dividerLine} />
       <View style={styles.dividerDot} />
-      <Text style={[styles.dividerMark, compact ? styles.dividerMarkCompact : null]}>✥</Text>
+      <Text
+        style={[styles.dividerMark, compact ? styles.dividerMarkCompact : null]}
+      >
+        ✥
+      </Text>
       <View style={styles.dividerDot} />
       <View style={styles.dividerLine} />
     </View>
@@ -179,10 +290,25 @@ function JourneyRow({ compact = false }: { compact?: boolean }) {
             </View>
           ) : null}
           <View style={styles.step}>
-            <View style={[styles.stepCircle, compact ? styles.stepCircleCompact : null, step.active ? styles.stepCircleActive : styles.stepCircleInactive]}>
+            <View
+              style={[
+                styles.stepCircle,
+                compact ? styles.stepCircleCompact : null,
+                step.active
+                  ? styles.stepCircleActive
+                  : styles.stepCircleInactive,
+              ]}
+            >
               <JourneyIcon name={step.icon} active={step.active} />
             </View>
-            <Text style={[styles.stepLabel, compact ? styles.stepLabelCompact : null]}>{step.label}</Text>
+            <Text
+              style={[
+                styles.stepLabel,
+                compact ? styles.stepLabelCompact : null,
+              ]}
+            >
+              {step.label}
+            </Text>
           </View>
         </View>
       ))}
@@ -190,15 +316,31 @@ function JourneyRow({ compact = false }: { compact?: boolean }) {
   );
 }
 
-function JourneyIcon({ name, active }: { name: "book-open" | "geometry" | "microphone" | "fire"; active: boolean }) {
-  const color = active ? GOLD : name === "fire" ? "#5B6470" : SAGE;
+function JourneyIcon({
+  name,
+  active,
+}: {
+  name: "book-open" | "geometry" | "microphone" | "fire";
+  active: boolean;
+}) {
+  const color = active
+    ? GOLD
+    : name === "fire"
+      ? WarshPalette.subtleBrown
+      : SAGE;
 
   if (name === "book-open") {
     return <FontAwesome5 name="book-open" size={18} color={color} />;
   }
 
   if (name === "geometry") {
-    return <MaterialCommunityIcons name="star-four-points-outline" size={27} color={color} />;
+    return (
+      <MaterialCommunityIcons
+        name="star-four-points-outline"
+        size={27}
+        color={color}
+      />
+    );
   }
 
   if (name === "microphone") {
@@ -229,14 +371,26 @@ function ParchmentGrain() {
   );
 }
 
-function CornerOrnament({ corner }: { corner: "topLeft" | "topRight" | "bottomLeft" | "bottomRight" }) {
+function CornerOrnament({
+  corner,
+}: {
+  corner: "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
+}) {
   const vertical = corner.startsWith("top") ? { top: 82 } : { bottom: 2 };
   const horizontal = corner.endsWith("Left") ? { left: -24 } : { right: -24 };
   const flip = corner.endsWith("Right") ? [{ scaleX: -1 }] : [];
   const rotate = corner.startsWith("bottom") ? [{ rotate: "180deg" }] : [];
 
   return (
-    <View pointerEvents="none" style={[styles.corner, vertical, horizontal, { transform: [...flip, ...rotate] }]}>
+    <View
+      pointerEvents="none"
+      style={[
+        styles.corner,
+        vertical,
+        horizontal,
+        { transform: [...flip, ...rotate] },
+      ]}
+    >
       {Array.from({ length: 16 }).map((_, index) => (
         <View
           key={index}
@@ -337,7 +491,7 @@ const styles = StyleSheet.create({
   progressDotActive: {
     backgroundColor: GOLD,
     borderWidth: 1,
-    borderColor: "#B98A17",
+    borderColor: GOLD_TEXT,
   },
   progressDotInactive: {
     backgroundColor: CREAM,
@@ -387,7 +541,7 @@ const styles = StyleSheet.create({
     fontSize: 27,
     lineHeight: 30,
     letterSpacing: 12,
-    color: "#5C492A",
+    color: GOLD_TEXT,
     paddingLeft: 12,
   },
   wordmarkCompact: {
@@ -435,7 +589,7 @@ const styles = StyleSheet.create({
   heroShell: {
     borderRadius: 21,
     overflow: "hidden",
-    backgroundColor: "#E9DAC4",
+    backgroundColor: WarshPalette.cream,
     shadowColor: "#000000",
     shadowOffset: { width: 0, height: 8 },
     shadowOpacity: 0.1,
@@ -517,7 +671,7 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     alignItems: "center",
     justifyContent: "center",
-    shadowColor: "#7C6A47",
+    shadowColor: GOLD_TEXT,
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.08,
     shadowRadius: 6,
@@ -534,7 +688,7 @@ const styles = StyleSheet.create({
     borderColor: INACTIVE_BORDER,
   },
   stepCircleActive: {
-    backgroundColor: "#FFFDF8",
+    backgroundColor: WarshPalette.white,
     borderWidth: 2,
     borderColor: GOLD,
   },
@@ -543,7 +697,7 @@ const styles = StyleSheet.create({
     fontFamily: "CormorantGaramond-Regular",
     fontSize: 15,
     lineHeight: 18,
-    color: "#191919",
+    color: WarshPalette.ink,
     textAlign: "center",
   },
   stepLabelCompact: {
