@@ -45,7 +45,8 @@ export const Colors = {
   text: {
     primary: WarshPalette.ink,
     secondary: WarshPalette.deep,
-    muted: WarshPalette.gold,
+    // Spec-11 §2.4: captions/helper text use muted ink, never gold.
+    muted: WarshPalette.subtleBrown,
     arabic: WarshPalette.ink,
     danger: WarshPalette.wrongText,
   },
@@ -80,17 +81,18 @@ export const Fonts: Record<string, string | undefined> = {
   urduFallback: "Scheherazade New",
 };
 
+// Spec-11 §3.3 type scale: base body 16/24, screen titles 28/38.
 export const FontSizes = {
-  displayXL: 17,
-  displayL: 15,
-  h1: 15,
-  h2: 14,
-  h3: 13,
-  bodyL: 12,
-  bodyM: 11,
-  caption: 10,
-  label: 9,
-  transliteration: 11,
+  displayXL: 28,
+  displayL: 22,
+  h1: 22,
+  h2: 18,
+  h3: 16,
+  bodyL: 16,
+  bodyM: 14,
+  caption: 12,
+  label: 10,
+  transliteration: 14,
   arabicXL: 52,
   arabicL: 28,
   arabicM: 20,
@@ -98,16 +100,16 @@ export const FontSizes = {
 } as const;
 
 export const LineHeights = {
-  displayXL: 22,
-  displayL: 20,
-  h1: 20,
-  h2: 19,
-  h3: 18,
-  bodyL: 18,
-  bodyM: 16,
-  caption: 14,
-  label: 12,
-  transliteration: 14,
+  displayXL: 38,
+  displayL: 32,
+  h1: 32,
+  h2: 28,
+  h3: 24,
+  bodyL: 24,
+  bodyM: 20,
+  caption: 18,
+  label: 14,
+  transliteration: 20,
   arabicXL: 80,
   arabicL: 48,
   arabicM: 32,
@@ -127,6 +129,7 @@ export const Spacing = {
   sm: 8,
   md: 12,
   lg: 16,
+  gutter: 20, // spec-11 §4.2: screen horizontal padding
   xl: 24,
   xxl: 32,
   xxxl: 48,
