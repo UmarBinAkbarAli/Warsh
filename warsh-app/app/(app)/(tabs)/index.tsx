@@ -200,6 +200,20 @@ export default function HomeScreen() {
         </TouchableOpacity>
       )}
 
+      {/* Web: access ended — direct to the mobile app to subscribe (no web purchase) */}
+      {isWeb && subscriptionStatus === "expired" && (
+        <TouchableOpacity
+          style={styles.trialExpiredBanner}
+          onPress={() => router.push("/(app)/paywall")}
+          activeOpacity={0.85}
+        >
+          <Ionicons name="lock-closed-outline" size={16} color={WarshPalette.white} />
+          <Text style={styles.trialExpiredText}>
+            Your access has ended. Subscribe in the Warsh Android app to continue — then sign in here.
+          </Text>
+        </TouchableOpacity>
+      )}
+
       {/* Trial countdown banner — dismissable per day */}
       {!isWeb && subscriptionStatus === "trial" && trialDaysRemaining !== null && trialDaysRemaining <= 5 && !trialBannerDismissed && (
         <View style={[

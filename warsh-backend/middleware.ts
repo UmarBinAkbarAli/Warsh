@@ -1,16 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const DEFAULT_ALLOWED_ORIGINS = [
-  "http://localhost:8081",
-  "http://127.0.0.1:8081",
-  "https://app.warsh.app",
-];
+// The production web app (Expo web build) is served from this origin and must
+// always be able to reach the API, regardless of how CORS_ALLOWED_ORIGINS is set.
+const ALWAYS_ALLOWED_ORIGINS = ["https://app.warsh.app"];
+
+// Local Expo web dev server — only trusted outside production.
+const DEV_ALLOWED_ORIGINS = ["http://localhost:8081", "http://127.0.0.1:8081"];
 
 function getAllowedOrigins() {
-  return (process.env.CORS_ALLOWED_ORIGINS ?? DEFAULT_ALLOWED_ORIGINS.join(","))
+  const envOrigins = (process.env.CORS_ALLOWED_ORIGINS ?? "")
     .split(",")
     .map((origin) => origin.trim())
     .filter(Boolean);
+
+  // env origins are ADDITIVE to the always-allowed web origin, so a
+  // misconfigured/empty CORS_ALLOWED_ORIGINS can never lock the web app out.
+  const origins = [...ALWAYS_ALLOWED_ORIGINS, ...envOrigins];
+  if (process.env.NODE_ENV !== "production") {
+    origins.push(...DEV_ALLOWED_ORIGINS);
+  }
+  return Array.from(new Set(origins));
 }
 
 function applyCorsHeaders(response: NextResponse, origin: string | null) {

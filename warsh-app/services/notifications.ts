@@ -16,6 +16,11 @@ function isExpoGo() {
 }
 
 async function getNotifications() {
+  // Push notifications are a native-only feature for Warsh. Skip entirely on
+  // web so the browser learning experience never touches unsupported APIs.
+  if (Platform.OS === "web") {
+    return null;
+  }
   if (isExpoGo()) {
     return null;
   }

@@ -1,3 +1,4 @@
+import { Platform } from "react-native";
 import { Mixpanel } from "mixpanel-react-native";
 
 const TOKEN = process.env.EXPO_PUBLIC_MIXPANEL_TOKEN;
@@ -6,9 +7,17 @@ const ENV = process.env.EXPO_PUBLIC_ENVIRONMENT ?? "development";
 let mp: Mixpanel | null = null;
 
 export async function initAnalytics() {
+  // mixpanel-react-native is a native module with no web implementation. Skip on
+  // web so it can't throw/reject; every track()/identify() call already no-ops
+  // while `mp` stays null.
+  if (Platform.OS === "web") return;
   if (!TOKEN || mp) return;
-  mp = new Mixpanel(TOKEN, /* trackAutomaticEvents */ false);
-  await mp.init();
+  try {
+    mp = new Mixpanel(TOKEN, /* trackAutomaticEvents */ false);
+    await mp.init();
+  } catch {
+    mp = null;
+  }
 }
 
 function track(event: string, props?: Record<string, unknown>) {

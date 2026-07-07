@@ -209,6 +209,28 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     Alert.alert("Purchase failed", `Something went wrong (${code ?? "unknown"}). Please try again or contact support.`);
   }
 
+  // Web can't purchase (no IAP). If the user already subscribed on the Android
+  // app, this re-checks their account-level entitlement and lets them in.
+  async function handleWebRefreshAccess() {
+    if (restoring) return;
+    setRestoring(true);
+    try {
+      const res = await getSubscriptionStatus();
+      if (res.data.data?.hasAccess) {
+        router.replace("/(app)/(tabs)");
+      } else {
+        Alert.alert(
+          "No active subscription yet",
+          "We couldn't find an active subscription on this account. Subscribe in the Warsh app on Android, then tap this again.",
+        );
+      }
+    } catch {
+      Alert.alert("Couldn't check access", "Please try again in a moment.");
+    } finally {
+      setRestoring(false);
+    }
+  }
+
   async function handleRestore() {
     if (restoring) return;
     if (!isBillingSupportedEnvironment()) {
@@ -273,7 +295,9 @@ export default function PaywallScreen({ dismissable = true }: Props) {
         {/* Hero */}
         <Text style={styles.heroTitle}>Continue your journey.</Text>
         <Text style={styles.heroSubtitle}>
-          {isWeb ? "Web browser access is open while Warsh is in beta." : trialCopy}
+          {isWeb
+            ? "To unlock all 72 chapters, start your subscription in the Warsh app on Android. It unlocks everything here in your browser too — just sign in with the same account."
+            : trialCopy}
         </Text>
 
         {/* Comparison table */}
@@ -307,13 +331,27 @@ export default function PaywallScreen({ dismissable = true }: Props) {
           ))}
         </View>
 
-        {/* No payment note */}
-        <View style={styles.noPayNote}>
-          <Ionicons name="checkmark-circle-outline" size={16} color={WarshPalette.sage} />
-          <Text style={styles.noPayText}>No payment due now. Cancel anytime.</Text>
-        </View>
+        {/* No payment note — native only (web can't purchase here) */}
+        {!isWeb && (
+          <View style={styles.noPayNote}>
+            <Ionicons name="checkmark-circle-outline" size={16} color={WarshPalette.sage} />
+            <Text style={styles.noPayText}>No payment due now. Cancel anytime.</Text>
+          </View>
+        )}
 
-        {/* Plan selector */}
+        {/* Web instruction card — where to subscribe */}
+        {isWeb && (
+          <View style={styles.webNote}>
+            <Ionicons name="phone-portrait-outline" size={18} color={WarshPalette.sage} />
+            <Text style={styles.webNoteText}>
+              Subscriptions are purchased in the Warsh Android app via Google Play. Once
+              subscribed, return here and refresh to continue on the web.
+            </Text>
+          </View>
+        )}
+
+        {/* Plan selector — native only */}
+        {!isWeb && (
         <View style={styles.planRow}>
           <TouchableOpacity
             style={[styles.planTile, selected === "annual" ? styles.planTileSelected : null]}
@@ -346,37 +384,50 @@ export default function PaywallScreen({ dismissable = true }: Props) {
             </View>
           </TouchableOpacity>
         </View>
+        )}
 
         {/* CTA */}
-        <TouchableOpacity
-          style={[styles.ctaBtn, (purchasing || (!billingSupported && !isWeb)) ? styles.ctaBtnDisabled : null]}
-          onPress={isWeb ? () => router.replace("/(app)/(tabs)") : handlePurchase}
-          disabled={purchasing || (!billingSupported && !isWeb)}
-          activeOpacity={0.85}
-        >
-          {purchasing
-            ? <ActivityIndicator color={WarshPalette.ink} />
-            : <Text style={styles.ctaBtnText}>
-                {isWeb
-                  ? "Continue learning"
-                  : billingSupported
-                  ? `Try for free, then ${getPriceLabel(selected)}`
-                  : "Unavailable in Expo Go"}
-              </Text>}
-        </TouchableOpacity>
-
-        {/* Restore + legal */}
-        {!isWeb ? (
-          <TouchableOpacity onPress={handleRestore} disabled={restoring || !billingSupported} style={styles.restoreBtn}>
-            {restoring
-              ? <ActivityIndicator color={WarshPalette.gold} size="small" />
-              : <Text style={styles.restoreText}>Restore purchases</Text>}
-          </TouchableOpacity>
-        ) : null}
+        {isWeb ? (
+          <>
+            <TouchableOpacity
+              style={[styles.ctaBtn, restoring ? styles.ctaBtnDisabled : null]}
+              onPress={handleWebRefreshAccess}
+              disabled={restoring}
+              activeOpacity={0.85}
+            >
+              {restoring
+                ? <ActivityIndicator color={WarshPalette.ink} />
+                : <Text style={styles.ctaBtnText}>I&apos;ve subscribed — refresh access</Text>}
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => router.replace("/(app)/(tabs)")} style={styles.restoreBtn}>
+              <Text style={styles.restoreText}>Back to free lessons</Text>
+            </TouchableOpacity>
+          </>
+        ) : (
+          <>
+            <TouchableOpacity
+              style={[styles.ctaBtn, (purchasing || !billingSupported) ? styles.ctaBtnDisabled : null]}
+              onPress={handlePurchase}
+              disabled={purchasing || !billingSupported}
+              activeOpacity={0.85}
+            >
+              {purchasing
+                ? <ActivityIndicator color={WarshPalette.ink} />
+                : <Text style={styles.ctaBtnText}>
+                    {billingSupported ? `Try for free, then ${getPriceLabel(selected)}` : "Unavailable in Expo Go"}
+                  </Text>}
+            </TouchableOpacity>
+            <TouchableOpacity onPress={handleRestore} disabled={restoring || !billingSupported} style={styles.restoreBtn}>
+              {restoring
+                ? <ActivityIndicator color={WarshPalette.gold} size="small" />
+                : <Text style={styles.restoreText}>Restore purchases</Text>}
+            </TouchableOpacity>
+          </>
+        )}
 
         <Text style={styles.legal}>
           {isWeb
-            ? "Subscriptions remain available in the Android app. Browser users can continue learning during beta."
+            ? "Subscriptions are available in the Warsh Android app via Google Play. Once subscribed, sign in here with the same account to continue on the web."
             : "Subscription auto-renews unless cancelled at least 24 hours before the end of the current period. Payment charged to your Google Play account."}
         </Text>
       </ScrollView>
@@ -490,6 +541,24 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM,
     color: WarshPalette.sage,
+  },
+  webNote: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: Spacing.sm,
+    padding: Spacing.md,
+    borderRadius: Radii.lg,
+    backgroundColor: WarshPalette.sage + "12",
+    borderWidth: 1,
+    borderColor: WarshPalette.sage + "33",
+    marginBottom: Spacing.lg,
+  },
+  webNoteText: {
+    flex: 1,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    color: WarshPalette.bodyBrown,
+    lineHeight: LineHeights.bodyM,
   },
 
   // Plan selector

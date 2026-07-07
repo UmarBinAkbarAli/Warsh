@@ -1,8 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import * as SecureStore from "expo-secure-store";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import { STORAGE_KEYS, TOKEN_KEY } from "@services/storage";
+import { STORAGE_KEYS, getToken, saveToken, deleteToken } from "@services/storage";
 
 export interface User {
   id: string;
@@ -35,16 +34,16 @@ export const useAuthStore = create<AuthStore>()(
       isHydrated: false,
       setSession: (user, token) => {
         set({ user, token });
-        SecureStore.setItemAsync(TOKEN_KEY, token).catch(() => {});
+        void saveToken(token);
       },
       patchUser: (patch) => set((state) => ({ user: state.user ? { ...state.user, ...patch } : state.user })),
       setToken: (token) => {
         set({ token });
-        SecureStore.setItemAsync(TOKEN_KEY, token).catch(() => {});
+        void saveToken(token);
       },
       clearSession: async () => {
         set({ user: null, token: null });
-        await SecureStore.deleteItemAsync(TOKEN_KEY).catch(() => {});
+        await deleteToken();
         await AsyncStorage.removeItem(STORAGE_KEYS.auth);
       },
       setHydrated: (isHydrated) => set({ isHydrated }),
@@ -64,14 +63,15 @@ export const useAuthStore = create<AuthStore>()(
         // logged out when this version first runs on their device.
         const legacyToken = state?.token ?? null;
 
-        SecureStore.getItemAsync(TOKEN_KEY)
-          .then(async (secureToken) => {
-            if (secureToken) {
-              useAuthStore.setState({ token: secureToken });
+        // getToken() reads from SecureStore on native, AsyncStorage on web.
+        getToken()
+          .then(async (storedToken) => {
+            if (storedToken) {
+              useAuthStore.setState({ token: storedToken });
               return;
             }
             if (legacyToken) {
-              await SecureStore.setItemAsync(TOKEN_KEY, legacyToken).catch(() => {});
+              await saveToken(legacyToken);
               useAuthStore.setState({ token: legacyToken });
             } else {
               useAuthStore.setState({ token: null });
