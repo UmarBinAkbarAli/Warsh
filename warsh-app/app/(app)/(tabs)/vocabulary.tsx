@@ -469,7 +469,7 @@ const styles = StyleSheet.create({
     alignItems: "center", padding: Spacing.md,
     borderRadius: Radii.md, borderWidth: 1,
     borderColor: WarshPalette.sage + "55",
-    backgroundColor: "#EDF5ED",
+    backgroundColor: WarshPalette.sageTintBg,
     marginTop: Spacing.md,
   },
   reviewCardLeft: { flexDirection: "row", alignItems: "center" },

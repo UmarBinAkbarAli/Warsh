@@ -375,7 +375,7 @@ const styles = StyleSheet.create({
   },
   lessonCardDone: {
     borderColor: WarshPalette.sage + "55",
-    backgroundColor: "#EDF5ED",
+    backgroundColor: WarshPalette.sageTintBg,
   },
   lessonCardTop: { flexDirection: "row", alignItems: "center", gap: Spacing.md },
   lessonIndex: {

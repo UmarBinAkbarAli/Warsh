@@ -1,6 +1,7 @@
 import Constants from "expo-constants";
 import * as Device from "expo-device";
 import { Platform } from "react-native";
+import { WarshPalette } from "../constants/theme";
 
 type NotificationsModule = typeof import("expo-notifications");
 
@@ -72,7 +73,7 @@ export async function requestNotificationPermission(): Promise<boolean> {
       name: "Warsh",
       importance: Notifications.AndroidImportance.DEFAULT,
       vibrationPattern: [0, 250],
-      lightColor: "#9A8F6A",
+      lightColor: WarshPalette.gold,
     });
   }
 

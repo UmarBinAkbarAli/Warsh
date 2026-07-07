@@ -193,9 +193,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: Radii.sm,
-    backgroundColor: "#FEF9E7",
+    backgroundColor: WarshPalette.highlightBg,
     borderWidth: 0.5,
-    borderColor: "#F0D080",
+    borderColor: WarshPalette.highlightBorder,
   },
   iconWrapLocked: {
     backgroundColor: WarshPalette.parchmentBg,

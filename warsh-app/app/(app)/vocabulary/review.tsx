@@ -392,9 +392,9 @@ const styles = StyleSheet.create({
     flex: 1, padding: Spacing.md, borderRadius: Radii.md,
     alignItems: "center",
   },
-  hardBox: { backgroundColor: "#F9EDEDED", borderWidth: 1, borderColor: "#C09090" },
+  hardBox: { backgroundColor: WarshPalette.wrongBg, borderWidth: 1, borderColor: WarshPalette.wrongBorderSoft },
   goodBox: { backgroundColor: WarshPalette.parchmentBg, borderWidth: 1, borderColor: WarshPalette.defaultCardBorder },
-  easyBox: { backgroundColor: "#EDF5ED", borderWidth: 1, borderColor: "#90B090" },
+  easyBox: { backgroundColor: WarshPalette.sageTintBg, borderWidth: 1, borderColor: WarshPalette.sageTintBorder },
   resultNum: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
     fontSize: FontSizes.h2, fontWeight: "700",
@@ -474,9 +474,9 @@ const styles = StyleSheet.create({
     borderRadius: Radii.md, borderWidth: 1,
     alignItems: "center",
   },
-  hardBtn: { backgroundColor: "#F9EDED", borderColor: "#B07070" },
+  hardBtn: { backgroundColor: WarshPalette.wrongBg, borderColor: WarshPalette.wrongBorder },
   goodBtn: { backgroundColor: WarshPalette.parchmentBg, borderColor: WarshPalette.defaultCardBorder },
-  easyBtn: { backgroundColor: "#EDF5ED", borderColor: "#70A870" },
+  easyBtn: { backgroundColor: WarshPalette.sageTintBg, borderColor: WarshPalette.sageTintBorderStrong },
   responseBtnText: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
     fontSize: FontSizes.bodyL, fontWeight: "700",

@@ -371,7 +371,7 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
             style={[styles.speakBtn, micEnabled ? styles.speakBtnEnabled : styles.speakBtnDisabled]}
             disabled={!micEnabled}
           >
-            <Ionicons name="mic-outline" size={26} color={micEnabled ? WarshPalette.cream : "#A09888"} />
+            <Ionicons name="mic-outline" size={26} color={micEnabled ? WarshPalette.cream : WarshPalette.disabledIcon} />
             <Text style={[styles.speakBtnLabel, !micEnabled ? styles.speakBtnLabelDisabled : null]}>
               {permissionDenied ? t("shadow.enableInSettings") : t("shadow.speak")}
             </Text>
@@ -422,13 +422,13 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
         <View style={styles.comparisonPanel}>
           <Pressable onPress={() => void playOriginal()} style={[styles.audioRow, originalPlaying ? styles.audioRowActive : null]}>
             <Text style={styles.audioLabel}>{t("shadow.original")}</Text>
-            <WaveformBars color={originalPlaying ? WarshPalette.gold : "#C0B890"} height={24} />
+            <WaveformBars color={originalPlaying ? WarshPalette.gold : WarshPalette.waveformGoldIdle} height={24} />
             <Ionicons name={originalPlaying ? "stop-circle-outline" : "play-circle-outline"} size={28} color={WarshPalette.gold} />
           </Pressable>
 
           <Pressable onPress={() => void playUserRecording()} style={[styles.audioRow, userPlaying ? styles.audioRowActive : null]}>
             <Text style={styles.audioLabel}>{t("shadow.you")}</Text>
-            <WaveformBars color={userPlaying ? WarshPalette.sage : "#90A890"} height={24} />
+            <WaveformBars color={userPlaying ? WarshPalette.sage : WarshPalette.waveformSageIdle} height={24} />
             <Ionicons name={userPlaying ? "stop-circle-outline" : "play-circle-outline"} size={28} color={WarshPalette.sage} />
           </Pressable>
 
@@ -463,21 +463,21 @@ const styles = StyleSheet.create({
   phraseCard: {
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: "#C8C0A8",
+    borderColor: WarshPalette.parchmentCardBorder,
     borderRadius: 12,
     padding: 20,
-    backgroundColor: "#EDE8D8",
+    backgroundColor: WarshPalette.parchmentBg,
     alignItems: "center",
   },
   arabic: {
-    color: "#0F1117",
+    color: WarshPalette.ink,
     fontSize: 32,
     lineHeight: 46,
     textAlign: "center",
   },
   transliteration: {
     marginTop: 6,
-    color: "#9A8F6A",
+    color: WarshPalette.gold,
     fontFamily: Fonts.italic,
     fontSize: 12,
     fontStyle: "italic",
@@ -485,7 +485,7 @@ const styles = StyleSheet.create({
   },
   translation: {
     marginTop: 4,
-    color: "#5A5240",
+    color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
     fontSize: 13,
     lineHeight: 20,
@@ -506,13 +506,13 @@ const styles = StyleSheet.create({
     gap: 8,
     paddingVertical: 14,
     borderRadius: 10,
-    backgroundColor: "#0F1117",
+    backgroundColor: WarshPalette.ink,
   },
   playBtnActive: {
-    backgroundColor: "#3A5030",
+    backgroundColor: WarshPalette.sage,
   },
   playBtnLabel: {
-    color: "#F5F2EA",
+    color: WarshPalette.creamBg,
     fontFamily: Fonts.semiBold,
     fontSize: 14,
     fontWeight: "500",
@@ -526,32 +526,32 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   speakBtnEnabled: {
-    backgroundColor: "#3A5030",
+    backgroundColor: WarshPalette.sage,
   },
   speakBtnDisabled: {
-    backgroundColor: "#C8C0A8",
+    backgroundColor: WarshPalette.parchmentCardBorder,
   },
   speakBtnLabel: {
-    color: "#F5F2EA",
+    color: WarshPalette.creamBg,
     fontFamily: Fonts.semiBold,
     fontSize: 14,
     fontWeight: "500",
   },
   speakBtnLabelDisabled: {
-    color: "#8A8070",
+    color: WarshPalette.disabledText,
   },
   recordingBtn: {
-    backgroundColor: "#8B3A3A",
+    backgroundColor: WarshPalette.recordingBg,
   },
   recordingPulse: {
     width: 12,
     height: 12,
     borderRadius: 6,
-    backgroundColor: "#FF5555",
+    backgroundColor: WarshPalette.recordingDot,
   },
   hint: {
     textAlign: "center",
-    color: "#9A8F6A",
+    color: WarshPalette.gold,
     fontFamily: Fonts.regular,
     fontSize: 11,
     lineHeight: 16,
@@ -565,18 +565,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 10,
     borderWidth: 1,
-    borderColor: "#D8D0BE",
+    borderColor: WarshPalette.defaultCardBorder,
     borderRadius: 10,
     padding: 12,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: WarshPalette.white,
   },
   audioRowActive: {
-    borderColor: "#9A8F6A",
-    backgroundColor: "#FEF9E7",
+    borderColor: WarshPalette.gold,
+    backgroundColor: WarshPalette.highlightBg,
   },
   audioLabel: {
     width: 52,
-    color: "#5A5240",
+    color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
     fontSize: 11,
     lineHeight: 16,
@@ -585,12 +585,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingVertical: 10,
     borderWidth: 1,
-    borderColor: "#C8C0A8",
+    borderColor: WarshPalette.parchmentCardBorder,
     borderRadius: 8,
-    backgroundColor: "#F5F2EA",
+    backgroundColor: WarshPalette.creamBg,
   },
   compareBtnText: {
-    color: "#5A5240",
+    color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
     fontSize: 13,
     lineHeight: 20,
@@ -605,12 +605,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingVertical: 14,
     borderWidth: 1,
-    borderColor: "#D8D0BE",
+    borderColor: WarshPalette.defaultCardBorder,
     borderRadius: 10,
-    backgroundColor: "#F5F2EA",
+    backgroundColor: WarshPalette.creamBg,
   },
   reRecordText: {
-    color: "#5A5240",
+    color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
     fontSize: 13,
     lineHeight: 20,
@@ -623,7 +623,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   noorMessage: {
-    color: "#9A8F6A",
+    color: WarshPalette.gold,
     fontFamily: Fonts.italic,
     fontSize: 18,
     fontStyle: "italic",
@@ -641,14 +641,14 @@ const styles = StyleSheet.create({
     width: "100%",
     borderRadius: 16,
     padding: 24,
-    backgroundColor: "#F5F2EA",
+    backgroundColor: WarshPalette.creamBg,
     alignItems: "center",
   },
   modalIcon: {
     marginBottom: 12,
   },
   modalTitle: {
-    color: "#0F1117",
+    color: WarshPalette.ink,
     fontFamily: Fonts.semiBold,
     fontSize: 18,
     fontWeight: "500",
@@ -657,7 +657,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   modalBody: {
-    color: "#5A5240",
+    color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
     fontSize: 13,
     lineHeight: 20,
@@ -665,7 +665,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   modalPrivacy: {
-    color: "#9A8F6A",
+    color: WarshPalette.gold,
     fontFamily: Fonts.italic,
     fontSize: 11,
     fontStyle: "italic",
@@ -674,7 +674,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   modalDenied: {
-    color: "#8B4A3A",
+    color: WarshPalette.deniedText,
     fontFamily: Fonts.regular,
     fontSize: 12,
     lineHeight: 18,
@@ -693,7 +693,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
   },
   modalSkipText: {
-    color: "#9A8F6A",
+    color: WarshPalette.gold,
     fontFamily: Fonts.regular,
     fontSize: 13,
     lineHeight: 20,

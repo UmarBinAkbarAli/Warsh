@@ -461,7 +461,7 @@ const styles = StyleSheet.create({
     borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.sage + "55",
-    backgroundColor: "#EDF5ED",
+    backgroundColor: WarshPalette.sageTintBg,
     marginBottom: Spacing.md,
   },
   freezeBannerText: { flex: 1 },
@@ -488,7 +488,7 @@ const styles = StyleSheet.create({
   },
   goalCardMet: {
     borderColor: WarshPalette.sage,
-    backgroundColor: "#EAF2E8",
+    backgroundColor: WarshPalette.correctBg,
   },
   goalTopRow: {
     flexDirection: "row",
@@ -528,7 +528,7 @@ const styles = StyleSheet.create({
     lineHeight: LineHeights.caption,
   },
   goalMetLabel: {
-    color: "#3A5030",
+    color: WarshPalette.sage,
     fontFamily: Fonts.display,
     fontSize: FontSizes.bodyL,
     fontWeight: "500",

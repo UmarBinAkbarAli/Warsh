@@ -106,7 +106,7 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, size = 
       <Ionicons
         name={playState === "playing" ? "stop-circle-outline" : playState === "error" ? "alert-circle-outline" : "volume-medium-outline"}
         size={size}
-        color={playState === "error" ? "#B07070" : color}
+        color={playState === "error" ? WarshPalette.wrongBorder : color}
       />
     </Pressable>
   );
