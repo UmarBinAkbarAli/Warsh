@@ -15,7 +15,8 @@
     "android": "expo run:android",
     "web": "expo start --web",
     "lint": "eslint . --ext .ts,.tsx",
-    "ios": "expo run:ios"
+    "ios": "expo run:ios",
+    "deploy:web": "node scripts/deploy-web.mjs"
   },
   "dependencies": {
     "@expo-google-fonts/cormorant-garamond": "^0.4.1",
