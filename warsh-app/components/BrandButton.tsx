@@ -1,6 +1,12 @@
-import { ActivityIndicator, Pressable, StyleSheet, Text, ViewStyle } from "react-native";
-import { Button } from "react-native-paper";
-import { Colors, Fonts, Radii, Shadows, Spacing, WarshPalette } from "../constants/theme";
+import {
+  ActivityIndicator,
+  Pressable,
+  StyleSheet,
+  Text,
+  ViewStyle,
+} from "react-native";
+
+import { Fonts, Radii, Spacing, WarshPalette } from "../constants/theme";
 
 type Variant = "primary" | "secondary" | "danger";
 
@@ -23,6 +29,8 @@ function isDarkColor(hex?: string): boolean {
   return r * 0.299 + g * 0.587 + b * 0.114 < 128;
 }
 
+// Spec-11 §5.1 button system: gold primary (pressed → gold-deep),
+// sage-bordered secondary, transparent terracotta destructive. 56pt tall.
 export function BrandButton({
   title,
   onPress,
@@ -34,33 +42,49 @@ export function BrandButton({
 }: BrandButtonProps) {
   const isDisabled = disabled || loading;
 
-  // Primary: use Paper Button — simple contained CTA, no selection state needed
   if (variant === "primary") {
-    const flat = StyleSheet.flatten(style) as (ViewStyle & { backgroundColor?: string }) | undefined;
+    // Callers may override backgroundColor via style; honor it and pick a
+    // readable label color for dark overrides.
+    const flat = StyleSheet.flatten(style) as
+      | (ViewStyle & { backgroundColor?: string })
+      | undefined;
     const bgFromStyle: string | undefined = flat?.backgroundColor;
     const { backgroundColor: _stripped, ...outerStyle } = flat ?? {};
 
-    const bg = bgFromStyle ?? (selected ? "rgba(212, 175, 55, 0.12)" : WarshPalette.gold);
-    const fg = isDarkColor(bgFromStyle) ? WarshPalette.creamBg : WarshPalette.ink;
+    const labelColor = isDarkColor(bgFromStyle)
+      ? WarshPalette.parchmentBg
+      : WarshPalette.ink;
 
     return (
-      <Button
-        mode="contained"
+      <Pressable
+        accessibilityRole="button"
         onPress={onPress}
         disabled={isDisabled}
-        loading={loading}
-        buttonColor={bg}
-        textColor={fg}
-        style={[styles.primaryBase, selected ? styles.selectedBorder : null, outerStyle]}
-        contentStyle={styles.primaryContent}
-        labelStyle={styles.primaryLabel}
+        style={({ pressed }) => [
+          styles.base,
+          {
+            backgroundColor:
+              bgFromStyle ??
+              (pressed && !isDisabled
+                ? WarshPalette.goldDeep
+                : selected
+                  ? WarshPalette.highlightBg
+                  : WarshPalette.gold),
+          },
+          selected ? styles.selectedBorder : null,
+          isDisabled ? styles.primaryDisabled : null,
+          outerStyle,
+        ]}
       >
-        {title}
-      </Button>
+        {loading ? (
+          <ActivityIndicator color={labelColor} />
+        ) : (
+          <Text style={[styles.label, { color: labelColor }]}>{title}</Text>
+        )}
+      </Pressable>
     );
   }
 
-  // Secondary & danger: Pressable — full control over selection border/bg
   if (variant === "secondary") {
     return (
       <Pressable
@@ -71,21 +95,21 @@ export function BrandButton({
           styles.base,
           styles.secondary,
           selected ? styles.secondarySelected : null,
-          pressed && !isDisabled ? styles.pressed : null,
+          pressed && !isDisabled ? styles.secondaryPressed : null,
           isDisabled ? styles.disabled : null,
           style,
         ]}
       >
-        {loading
-          ? <ActivityIndicator color={Colors.text.primary} />
-          : <Text style={[styles.label, styles.labelSecondary, selected ? styles.labelSecondarySelected : null]}>
-              {title}
-            </Text>}
+        {loading ? (
+          <ActivityIndicator color={WarshPalette.ink} />
+        ) : (
+          <Text style={[styles.label, styles.labelSecondary]}>{title}</Text>
+        )}
       </Pressable>
     );
   }
 
-  // danger
+  // danger — spec-11 destructive: transparent, terracotta text
   return (
     <Pressable
       accessibilityRole="button"
@@ -94,14 +118,16 @@ export function BrandButton({
       style={({ pressed }) => [
         styles.base,
         styles.danger,
-        pressed && !isDisabled ? styles.pressed : null,
+        pressed && !isDisabled ? styles.dangerPressed : null,
         isDisabled ? styles.disabled : null,
         style,
       ]}
     >
-      {loading
-        ? <ActivityIndicator color="#E8A09A" />
-        : <Text style={[styles.label, styles.labelDanger]}>{title}</Text>}
+      {loading ? (
+        <ActivityIndicator color={WarshPalette.wrongBorder} />
+      ) : (
+        <Text style={[styles.label, styles.labelDanger]}>{title}</Text>
+      )}
     </Pressable>
   );
 }
@@ -109,78 +135,53 @@ export function BrandButton({
 // ─── styles ──────────────────────────────────────────────────────────────────
 
 const styles = StyleSheet.create({
-  // Paper Button base (primary only)
-  primaryBase: {
-    borderRadius: Radii.md + 2,
-    minWidth: 0,
-  },
-  primaryContent: {
-    minHeight: 52,
+  base: {
+    minHeight: 56,
+    borderRadius: Radii.md,
     paddingHorizontal: Spacing.lg,
-  },
-  primaryLabel: {
-    fontFamily: Fonts.bold,
-    fontSize: 16,
-    fontWeight: "700",
-    letterSpacing: 0,
+    paddingVertical: Spacing.md,
+    alignItems: "center",
+    justifyContent: "center",
   },
   selectedBorder: {
     borderWidth: 2,
     borderColor: WarshPalette.gold,
   },
-
-  // Pressable base (secondary + danger)
-  base: {
-    minHeight: 52,
-    borderRadius: Radii.md + 2,
-    paddingHorizontal: Spacing.xl,
-    paddingVertical: Spacing.md,
-    alignItems: "center",
-    justifyContent: "center",
+  primaryDisabled: {
+    backgroundColor: WarshPalette.parchment,
+    opacity: 0.5,
   },
   secondary: {
     backgroundColor: "transparent",
-    borderWidth: 1.5,
-    borderColor: Colors.border.default,
+    borderWidth: 1,
+    borderColor: WarshPalette.sage,
+  },
+  secondaryPressed: {
+    backgroundColor: "rgba(157, 171, 148, 0.2)", // sage-soft @ 20% per spec
   },
   secondarySelected: {
     borderWidth: 2,
     borderColor: WarshPalette.gold,
-    backgroundColor: "rgba(154, 143, 106, 0.10)",
+    backgroundColor: WarshPalette.highlightBg,
   },
   danger: {
-    backgroundColor: "rgba(192, 57, 43, 0.15)",
-    borderWidth: 1.5,
-    borderColor: WarshPalette.wrongBorder,
+    backgroundColor: "transparent",
   },
-
-  // Labels
+  dangerPressed: {
+    backgroundColor: "rgba(200, 116, 74, 0.12)", // warning-soft tint
+  },
   label: {
     fontSize: 16,
-    fontWeight: "700",
-    fontFamily: Fonts.bold,
+    fontFamily: Fonts.semiBold,
+    color: WarshPalette.ink,
   },
   labelSecondary: {
-    color: Colors.text.secondary,
-    fontWeight: "600",
-    fontFamily: Fonts.semiBold,
-  },
-  labelSecondarySelected: {
     color: WarshPalette.ink,
-    fontFamily: Fonts.bold,
-    fontWeight: "700",
   },
   labelDanger: {
-    color: "#E8A09A",
-    fontWeight: "600",
-    fontFamily: Fonts.semiBold,
-  },
-
-  // States
-  pressed: {
-    transform: [{ scale: 0.97 }],
+    color: WarshPalette.wrongBorder,
   },
   disabled: {
-    opacity: 0.7,
+    opacity: 0.5,
   },
 });
