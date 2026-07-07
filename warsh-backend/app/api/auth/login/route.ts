@@ -24,7 +24,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Missing email or password", code: "bad_request" }, { status: 400 });
   }
 
-  const user = await prisma.user.findUnique({ where: { email } });
+  // Case-insensitive lookup: new accounts store lowercase emails, but accounts
+  // created before normalization may be mixed-case.
+  const user = await prisma.user.findFirst({
+    where: { email: { equals: String(email).trim(), mode: "insensitive" } },
+  });
   // Always run a bcrypt comparison — even when the user does not exist — so the
   // response time does not reveal whether an email is registered.
   const compareHash = user?.passwordHash ?? DUMMY_PASSWORD_HASH;

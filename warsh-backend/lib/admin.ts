@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { timingSafeStringEqual } from "./auth";
 
 export function getAdminWriteError(request: Request) {
   const configuredToken = process.env.ADMIN_DASHBOARD_TOKEN;
@@ -16,8 +17,8 @@ export function getAdminWriteError(request: Request) {
     );
   }
 
-  const token = request.headers.get("x-admin-token");
-  if (token !== configuredToken) {
+  const token = request.headers.get("x-admin-token") ?? "";
+  if (!timingSafeStringEqual(token, configuredToken)) {
     return NextResponse.json({ error: "Invalid admin token.", code: "forbidden" }, { status: 403 });
   }
 

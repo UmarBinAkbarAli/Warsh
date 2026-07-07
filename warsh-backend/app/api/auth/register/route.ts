@@ -29,7 +29,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid email address", code: "bad_request" }, { status: 400 });
   }
 
-  const existing = await prisma.user.findUnique({ where: { email } });
+  // Normalize so Umar@x.com and umar@x.com can't become two accounts. The
+  // insensitive check also catches pre-normalization rows stored mixed-case.
+  const normalizedEmail = String(email).trim().toLowerCase();
+  const existing = await prisma.user.findFirst({
+    where: { email: { equals: normalizedEmail, mode: "insensitive" } },
+    select: { id: true },
+  });
   if (existing) {
     return NextResponse.json({ error: "Email already registered", code: "conflict" }, { status: 409 });
   }
@@ -38,7 +44,7 @@ export async function POST(request: Request) {
   const validGoalMinutes = [5, 10, 15, 30];
   const user = await prisma.user.create({
     data: {
-      email,
+      email: normalizedEmail,
       passwordHash,
       name,
       nativeLanguage: nativeLanguage ?? "ur",

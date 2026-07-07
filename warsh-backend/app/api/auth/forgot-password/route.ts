@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken";
 import { prisma } from "../../../../lib/prisma";
 import { sendPasswordResetEmail } from "../../../../lib/email";
 import { hit, clientKey } from "../../../../lib/rateLimit";
+import { passwordTokenFingerprint } from "../../../../lib/auth";
 
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -30,12 +31,18 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "A valid email address is required", code: "bad_request" }, { status: 400 });
   }
 
-  const user = await prisma.user.findUnique({ where: { email }, select: { id: true } });
+  const user = await prisma.user.findFirst({
+    where: { email: { equals: email.trim(), mode: "insensitive" } },
+    select: { id: true, passwordHash: true },
+  });
 
   if (user) {
     const secret = process.env.JWT_SECRET!;
+    // `pv` binds the link to the CURRENT password hash, making it single-use:
+    // once the password changes, the fingerprint no longer matches and the
+    // link can't be replayed within its 1h validity window.
     const token = jwt.sign(
-      { sub: user.id, purpose: "password-reset", email },
+      { sub: user.id, purpose: "password-reset", email, pv: passwordTokenFingerprint(user.passwordHash) },
       secret,
       { expiresIn: "1h" }
     );

@@ -173,7 +173,7 @@ All API routes follow a consistent envelope:
 
 Error codes in use: `bad_request`, `invalid_input`, `unauthorized`, `conflict`, `too_many_requests`, `not_found`, `chapter_locked`, `last_lesson`, `subscription_required`, `schema_error`, `duplicate_exercise_id`, `exercise_id_collision`, `tts_unavailable`, `audio_unavailable`.
 
-**JWT auth** - `lib/auth.ts` provides `signToken(userId)`, `verifyToken(token)`, and `getUserIdFromRequest(request)`. Protected routes call `getUserIdFromRequest` and return 401 if null. Tokens expire in 7 days.
+**JWT auth** - `lib/auth.ts` provides `signToken(userId)`, `verifyToken(token)`, and `getUserIdFromRequest(request)`. Protected routes call `getUserIdFromRequest` and return 401 if null. Tokens expire in 30 days; `/api/auth/refresh` rotates them with a 90-day max session, and a password-hash fingerprint (`pv`) in the token invalidates all sessions on password change.
 
 **Prisma singleton** - `lib/prisma.ts` exports a single `prisma` instance using `@prisma/adapter-pg` (direct PG pooling, no Data Proxy). Import from here — never instantiate `PrismaClient` in route files.
 
@@ -202,8 +202,8 @@ Error codes in use: `bad_request`, `invalid_input`, `unauthorized`, `conflict`, 
 | GET | `/api/health` | — | Returns `{ status, timestamp }` |
 | POST | `/api/auth/register` | — | Returns token |
 | POST | `/api/auth/login` | — | Returns token |
-| GET | `/api/auth/me` | ✓ | Stub |
-| POST | `/api/auth/refresh` | ✓ | Stub |
+| GET | `/api/auth/me` | ✓ | Current user profile |
+| POST | `/api/auth/refresh` | ✓ | Token rotation (90-day max session) |
 | GET | `/api/chapters` | ✓ | With lock state and progress |
 | GET | `/api/chapters/[id]/lessons` | ✓ | Lessons in chapter |
 | GET | `/api/lessons/[id]` | ✓ | Single lesson; 403 if chapter locked |
@@ -225,7 +225,7 @@ Error codes in use: `bad_request`, `invalid_input`, `unauthorized`, `conflict`, 
 | GET/PUT | `/api/users/me` | ✓ | User profile read/update |
 | POST | `/api/auth/forgot-password`, `/reset-password`, `/change-password` | mixed | Password flows (Resend email) |
 | POST | `/api/webhooks/google` | — | Google Play RTDN webhook |
-| GET | `/api/cron/reset-streaks`, `/api/cron/expire-trials` | — | Scheduled jobs |
+| GET | `/api/cron/reset-streaks`, `/api/cron/expire-trials` | CRON_SECRET | Scheduled jobs (Bearer secret) |
 | * | `/api/admin/*` | admin | Chapter/lesson/content authoring + validation |
 
 (Table is representative, not exhaustive — see `warsh-backend/app/api/` for the full set.)
@@ -276,5 +276,4 @@ Error codes in use: `bad_request`, `invalid_input`, `unauthorized`, `conflict`, 
 - **Still limited / incomplete:**
   - Curriculum: Madinah Books 1–8 scaffolded; content still needs manual pedagogy and mobile QA
   - Splash/brand assets are placeholder quality
-  - Upstash Redis rate limiting not integrated (currently counts DB rows)
-  - Token refresh (`/api/auth/refresh`) is a stub
+  - Rate limiting is in-memory per-instance (`lib/rateLimit.ts`) — best-effort on serverless; Upstash Redis still recommended for strict cross-instance limits
