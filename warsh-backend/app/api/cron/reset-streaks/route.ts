@@ -7,7 +7,7 @@ import { timingSafeStringEqual } from "../../../../lib/auth";
 export async function GET(request: Request) {
   const secret = request.headers.get("authorization") ?? "";
   if (!process.env.CRON_SECRET || !timingSafeStringEqual(secret, `Bearer ${process.env.CRON_SECRET}`)) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
   const todayStart = get4amPKTBoundary();

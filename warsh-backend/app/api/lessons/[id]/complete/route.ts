@@ -4,6 +4,7 @@ import { getUserIdFromRequest } from "../../../../../lib/auth";
 import { isTodayPKT, isYesterdayPKT, get4amPKTBoundary } from "../../../../../lib/date";
 import { getUserCourseState, PROGRESS_STATUS } from "../../../../../lib/course";
 import { checkAndAwardAchievements } from "../../../../../lib/achievements";
+import { getUserSubscriptionState, requiresSubscription } from "../../../../../lib/subscription";
 
 // Award a freeze at the 7-day milestone and every 30 streaks thereafter, max 2
 function shouldAwardFreeze(newStreak: number, currentFreezes: number): boolean {
@@ -30,17 +31,21 @@ export async function POST(request: Request, { params }: Props) {
     ? Math.min(phrasesCompleted, 100)
     : 0;
 
-  const [lesson, userExists] = await Promise.all([
+  const [lesson, subscriptionState] = await Promise.all([
     prisma.lesson.findUnique({ where: { id: params.id } }),
-    prisma.user.findUnique({ where: { id: userId }, select: { id: true, subscriptionStatus: true } }),
+    getUserSubscriptionState(userId),
   ]);
 
-  if (!userExists) {
+  if (!subscriptionState) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
   if (!lesson) {
     return NextResponse.json({ error: "Lesson not found", code: "not_found" }, { status: 404 });
+  }
+
+  if (requiresSubscription(subscriptionState)) {
+    return NextResponse.json({ error: "Subscription required", code: "subscription_required" }, { status: 402 });
   }
 
   const { chapterStateById } = await getUserCourseState(userId);
@@ -67,7 +72,6 @@ export async function POST(request: Request, { params }: Props) {
   let dailyGoalXp = 0;
   let chapterBonusXp = 0;
   let chapterJustCompleted = false;
-  let chapterOrder: number | null = null;
   let wordsAdded = 0;
   let newPhrasesSpoken = 0;
   let firstShadowRepeat = false;
@@ -183,7 +187,6 @@ export async function POST(request: Request, { params }: Props) {
       select: { order: true },
     });
     if (chapter) {
-      chapterOrder = chapter.order;
       const chapterWords = await tx.vocabularyWord.findMany({
         where: { chapterIntroduced: chapter.order },
         select: { id: true },
@@ -218,8 +221,6 @@ export async function POST(request: Request, { params }: Props) {
     }
   });
 
-  const showPaywall = chapterJustCompleted && chapterOrder === 1 && userExists?.subscriptionStatus === "trial";
-
   const [user, streak, completedCount] = await Promise.all([
     prisma.user.findUnique({ where: { id: userId } }),
     prisma.streak.findUnique({ where: { userId }, select: { currentStreak: true, longestStreak: true, streakFreezes: true, lastFreezeUsedAt: true } }),
@@ -248,7 +249,6 @@ export async function POST(request: Request, { params }: Props) {
       xpEarned,
       chapterBonusXp,
       chapterJustCompleted,
-      showPaywall,
       dailyGoalXp,
       streakCelebration: firstCompletion && lessonsCompletedTodayBefore === 0,
       totalXp: finalXp,

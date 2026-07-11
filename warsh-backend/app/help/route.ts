@@ -140,7 +140,7 @@ export async function GET() {
 
     <div class="faq-item">
       <div class="faq-q">How does the free trial work?</div>
-      <div class="faq-a">Every new account starts with 7 days of free access to all Warsh features. Your trial begins the moment you create an account. After 7 days, or upon completing Chapter 1 (whichever comes first), you will need a paid subscription to continue accessing lessons beyond the free Vocabulary Bank.</div>
+      <div class="faq-a">Every new account starts with 7 full days of free access to all Warsh features. Your trial begins the moment you create an account, and you may explore as much of the 72-chapter course as you can during those 7 days. Chapter progress never ends the trial early. After 7 days, you will need a paid subscription to continue accessing lessons, Noor, and Tadabbur; the Vocabulary Bank remains free.</div>
     </div>
 
     <div class="faq-item">

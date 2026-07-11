@@ -311,7 +311,6 @@ export const en = {
   "player.revealHeading": "Without realising it...",
   "player.lessonComplete": "Lesson Complete!",
   "player.pointsEarned": "+{{count}} pts",
-  "player.chapterCompletePaywall": "Chapter 1 complete - subscribe to continue",
   "player.nextChapterUnlocked": "Next chapter unlocked",
   "player.phrasesToSay": "{{count}} phrase{{suffix}} learned to say",
   "player.closeSpokenTip": "Barak Allahu feek.\nYou can now say {{count}} phrase{{suffix}}.\nSpeak them when you can, in shaa Allah.",

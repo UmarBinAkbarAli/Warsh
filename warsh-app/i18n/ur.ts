@@ -308,7 +308,6 @@ export const ur = {
   "player.revealHeading": "بغیر محسوس کیے...",
   "player.lessonComplete": "سبق مکمل!",
   "player.pointsEarned": "+{{count}} پوائنٹس",
-  "player.chapterCompletePaywall": "باب 1 مکمل - آگے بڑھنے کے لیے سبسکرائب کریں",
   "player.nextChapterUnlocked": "اگلا باب کھل گیا",
   "player.phrasesToSay": "{{count}} جملہ{{suffix}} بولنے کے لیے سیکھ لیا",
   "player.closeSpokenTip": "بارک اللہ فیک۔\nآپ اب {{count}} نیا جملہ{{suffix}} بول سکتے ہیں۔\nموقع ملے تو انہیں بولیں، ان شاء اللہ۔",

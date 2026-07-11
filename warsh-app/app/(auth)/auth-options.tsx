@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { Linking, View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { ArabicText } from "@components/ArabicText";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
+import { API_BASE_URL } from "@services/api";
 
 type Provider = {
   label: string;
@@ -25,28 +26,6 @@ export default function AuthOptionsScreen() {
       bg: WarshPalette.gold,
       text: WarshPalette.ink,
       onPress: () => router.push("/(auth)/register"),
-    },
-    {
-      label: "Continue with Google",
-      icon: "logo-google",
-      bg: WarshPalette.white,
-      text: WarshPalette.ink,
-      border: WarshPalette.defaultCardBorder,
-      onPress: () => {},
-    },
-    {
-      label: "Continue with Apple",
-      icon: "logo-apple",
-      bg: WarshPalette.ink,
-      text: WarshPalette.white,
-      onPress: () => {},
-    },
-    {
-      label: "Continue with Facebook",
-      icon: "logo-facebook",
-      bg: "#1877F2",
-      text: WarshPalette.white,
-      onPress: () => {},
     },
   ];
 
@@ -87,9 +66,9 @@ export default function AuthOptionsScreen() {
       {/* Legal */}
       <Text style={styles.legal}>
         By continuing, you agree to Warsh's{" "}
-        <Text style={styles.legalLink}>Terms of Service</Text>
+        <Text style={styles.legalLink} onPress={() => void Linking.openURL(`${API_BASE_URL}/terms`)}>Terms of Service</Text>
         {" "}and{" "}
-        <Text style={styles.legalLink}>Privacy Policy</Text>.
+        <Text style={styles.legalLink} onPress={() => void Linking.openURL(`${API_BASE_URL}/privacy`)}>Privacy Policy</Text>.
       </Text>
 
       {/* Login link */}

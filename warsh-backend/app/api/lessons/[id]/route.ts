@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
 import { getUserCourseState, PROGRESS_STATUS } from "../../../../lib/course";
-import { getSubscriptionState, requiresSubscription } from "../../../../lib/subscription";
+import { getUserSubscriptionState, requiresSubscription } from "../../../../lib/subscription";
 
 interface Props {
   params: { id: string };
@@ -16,22 +16,19 @@ export async function GET(request: Request, { params }: Props) {
 
   const lesson = await prisma.lesson.findUnique({
     where: { id: params.id },
-    select: { id: true, title: true, titleUr: true, titleAr: true, template: true, xpReward: true, content: true, chapterId: true, chapter: { select: { order: true } } },
+    select: { id: true, title: true, titleUr: true, titleAr: true, template: true, xpReward: true, content: true, chapterId: true },
   });
 
   if (!lesson) {
     return NextResponse.json({ error: "Lesson not found", code: "not_found" }, { status: 404 });
   }
 
-  const [{ chapterStateById }, user] = await Promise.all([
+  const [{ chapterStateById }, subscriptionState] = await Promise.all([
     getUserCourseState(userId),
-    prisma.user.findUnique({
-      where: { id: userId },
-      select: { id: true, trialStartAt: true, trialExpiresAt: true, subscriptionStatus: true, subscriptionActiveUntil: true, subscriptionProductId: true, noorOverageBalance: true },
-    }),
+    getUserSubscriptionState(userId),
   ]);
 
-  if (!user) {
+  if (!subscriptionState) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
@@ -39,8 +36,7 @@ export async function GET(request: Request, { params }: Props) {
     return NextResponse.json({ error: "Chapter is locked", code: "chapter_locked" }, { status: 403 });
   }
 
-  const isChapterOneFree = lesson.chapter?.order === 1;
-  if (!isChapterOneFree && user && requiresSubscription(getSubscriptionState(user))) {
+  if (requiresSubscription(subscriptionState)) {
     return NextResponse.json({ error: "Subscription required", code: "subscription_required" }, { status: 402 });
   }
 

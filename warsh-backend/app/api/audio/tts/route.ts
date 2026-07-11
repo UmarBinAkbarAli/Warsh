@@ -3,6 +3,7 @@ import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
 import { generateTtsMp3 } from "../../../../lib/tts";
 import { getPKTStartOfDay } from "../../../../lib/date";
+import { getSubscriptionState, requiresSubscription } from "../../../../lib/subscription";
 
 const MAX_TTS_TEXT_LENGTH = 160;
 const TTS_DAILY_LIMIT = Number(process.env.TTS_DAILY_LIMIT ?? 50);
@@ -30,10 +31,23 @@ export async function GET(request: Request) {
   const today = getPKTStartOfDay(new Date());
   const user = await prisma.user.findUnique({
     where: { id: userId },
-    select: { ttsUsageCount: true, ttsUsageResetAt: true },
+    select: {
+      ttsUsageCount: true,
+      ttsUsageResetAt: true,
+      trialStartAt: true,
+      trialExpiresAt: true,
+      subscriptionStatus: true,
+      subscriptionActiveUntil: true,
+      subscriptionProductId: true,
+      noorOverageBalance: true,
+    },
   });
   if (!user) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
+  }
+
+  if (requiresSubscription(getSubscriptionState(user))) {
+    return NextResponse.json({ error: "Subscription required", code: "subscription_required" }, { status: 402 });
   }
 
   const needsReset = !user.ttsUsageResetAt || user.ttsUsageResetAt < today;

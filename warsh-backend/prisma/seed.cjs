@@ -231,12 +231,15 @@ const ch44L02Content = require("./fixtures/chapter-44-lesson-02.json");
 const ch44L03Content = require("./fixtures/chapter-44-lesson-03.json");
 const ch44L04Content = require("./fixtures/chapter-44-lesson-04.json");
 const ch44L05Content = require("./fixtures/chapter-44-lesson-05.json");
+const ch44L06Content = require("./fixtures/chapter-44-lesson-06.json");
+const ch44L07Content = require("./fixtures/chapter-44-lesson-07.json");
 const ch45L01Content = require("./fixtures/chapter-45-lesson-01.json");
 const ch45L02Content = require("./fixtures/chapter-45-lesson-02.json");
 const ch45L03Content = require("./fixtures/chapter-45-lesson-03.json");
 const ch45L04Content = require("./fixtures/chapter-45-lesson-04.json");
 const ch45L05Content = require("./fixtures/chapter-45-lesson-05.json");
 const ch45L06Content = require("./fixtures/chapter-45-lesson-06.json");
+const ch45L07Content = require("./fixtures/chapter-45-lesson-07.json");
 const ch46L01Content = require("./fixtures/chapter-46-lesson-01.json");
 const ch46L02Content = require("./fixtures/chapter-46-lesson-02.json");
 const ch46L03Content = require("./fixtures/chapter-46-lesson-03.json");
@@ -314,6 +317,7 @@ const ch58L02Content = require("./fixtures/chapter-58-lesson-02.json");
 const ch58L03Content = require("./fixtures/chapter-58-lesson-03.json");
 const ch58L04Content = require("./fixtures/chapter-58-lesson-04.json");
 const ch58L05Content = require("./fixtures/chapter-58-lesson-05.json");
+const ch58L06Content = require("./fixtures/chapter-58-lesson-06.json");
 const ch59L01Content = require("./fixtures/chapter-59-lesson-01.json");
 const ch59L02Content = require("./fixtures/chapter-59-lesson-02.json");
 const ch59L03Content = require("./fixtures/chapter-59-lesson-03.json");
@@ -346,6 +350,7 @@ const ch64L01Content = require("./fixtures/chapter-64-lesson-01.json");
 const ch64L02Content = require("./fixtures/chapter-64-lesson-02.json");
 const ch64L03Content = require("./fixtures/chapter-64-lesson-03.json");
 const ch64L04Content = require("./fixtures/chapter-64-lesson-04.json");
+const ch64L05Content = require("./fixtures/chapter-64-lesson-05.json");
 const ch65L01Content = require("./fixtures/chapter-65-lesson-01.json");
 const ch65L02Content = require("./fixtures/chapter-65-lesson-02.json");
 const ch65L03Content = require("./fixtures/chapter-65-lesson-03.json");
@@ -920,12 +925,15 @@ async function main() {
     { id: "ch44-l03", chapterId: ch44Id, order: 03, title: ch44L03Content._meta?.title ?? "Lesson 03", titleAr: ch44L03Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch44L03Content._meta?.xp_reward ?? 10, content: ch44L03Content },
     { id: "ch44-l04", chapterId: ch44Id, order: 04, title: ch44L04Content._meta?.title ?? "Lesson 04", titleAr: ch44L04Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch44L04Content._meta?.xp_reward ?? 10, content: ch44L04Content },
     { id: "ch44-l05", chapterId: ch44Id, order: 05, title: ch44L05Content._meta?.title ?? "Lesson 05", titleAr: ch44L05Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch44L05Content._meta?.xp_reward ?? 10, content: ch44L05Content },
+    { id: "ch44-l06", chapterId: ch44Id, order: 06, title: ch44L06Content._meta?.title ?? "Lesson 06", titleAr: ch44L06Content._meta?.titleAr ?? "", template: ch44L06Content.template ?? "STANDARD", xpReward: ch44L06Content._meta?.xp_reward ?? 10, content: ch44L06Content },
+    { id: "ch44-l07", chapterId: ch44Id, order: 07, title: ch44L07Content._meta?.title ?? "Lesson 07", titleAr: ch44L07Content._meta?.titleAr ?? "", template: ch44L07Content.template ?? "STANDARD", xpReward: ch44L07Content._meta?.xp_reward ?? 10, content: ch44L07Content },
     { id: "ch45-l01", chapterId: ch45Id, order: 01, title: ch45L01Content._meta?.title ?? "Lesson 01", titleAr: ch45L01Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch45L01Content._meta?.xp_reward ?? 10, content: ch45L01Content },
     { id: "ch45-l02", chapterId: ch45Id, order: 02, title: ch45L02Content._meta?.title ?? "Lesson 02", titleAr: ch45L02Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch45L02Content._meta?.xp_reward ?? 10, content: ch45L02Content },
     { id: "ch45-l03", chapterId: ch45Id, order: 03, title: ch45L03Content._meta?.title ?? "Lesson 03", titleAr: ch45L03Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch45L03Content._meta?.xp_reward ?? 10, content: ch45L03Content },
     { id: "ch45-l04", chapterId: ch45Id, order: 04, title: ch45L04Content._meta?.title ?? "Lesson 04", titleAr: ch45L04Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch45L04Content._meta?.xp_reward ?? 10, content: ch45L04Content },
     { id: "ch45-l05", chapterId: ch45Id, order: 05, title: ch45L05Content._meta?.title ?? "Lesson 05", titleAr: ch45L05Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch45L05Content._meta?.xp_reward ?? 10, content: ch45L05Content },
     { id: "ch45-l06", chapterId: ch45Id, order: 06, title: ch45L06Content._meta?.title ?? "Lesson 06", titleAr: ch45L06Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch45L06Content._meta?.xp_reward ?? 10, content: ch45L06Content },
+    { id: "ch45-l07", chapterId: ch45Id, order: 07, title: ch45L07Content._meta?.title ?? "Lesson 07", titleAr: ch45L07Content._meta?.titleAr ?? "", template: ch45L07Content.template ?? "REVIEW", xpReward: ch45L07Content._meta?.xp_reward ?? 10, content: ch45L07Content },
     { id: "ch46-l01", chapterId: ch46Id, order: 01, title: ch46L01Content._meta?.title ?? "Lesson 01", titleAr: ch46L01Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch46L01Content._meta?.xp_reward ?? 10, content: ch46L01Content },
     { id: "ch46-l02", chapterId: ch46Id, order: 02, title: ch46L02Content._meta?.title ?? "Lesson 02", titleAr: ch46L02Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch46L02Content._meta?.xp_reward ?? 10, content: ch46L02Content },
     { id: "ch46-l03", chapterId: ch46Id, order: 03, title: ch46L03Content._meta?.title ?? "Lesson 03", titleAr: ch46L03Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch46L03Content._meta?.xp_reward ?? 10, content: ch46L03Content },
@@ -1007,6 +1015,7 @@ async function main() {
     { id: "ch58-l03", chapterId: ch58Id, order: 03, title: ch58L03Content._meta?.title ?? "Lesson 03", titleAr: ch58L03Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch58L03Content._meta?.xp_reward ?? 10, content: ch58L03Content },
     { id: "ch58-l04", chapterId: ch58Id, order: 04, title: ch58L04Content._meta?.title ?? "Lesson 04", titleAr: ch58L04Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch58L04Content._meta?.xp_reward ?? 10, content: ch58L04Content },
     { id: "ch58-l05", chapterId: ch58Id, order: 05, title: ch58L05Content._meta?.title ?? "Lesson 05", titleAr: ch58L05Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch58L05Content._meta?.xp_reward ?? 10, content: ch58L05Content },
+    { id: "ch58-l06", chapterId: ch58Id, order: 06, title: ch58L06Content._meta?.title ?? "Lesson 06", titleAr: ch58L06Content._meta?.titleAr ?? "", template: ch58L06Content.template ?? "REVIEW", xpReward: ch58L06Content._meta?.xp_reward ?? 10, content: ch58L06Content },
     // Chapter 59
     { id: "ch59-l01", chapterId: ch59Id, order: 01, title: ch59L01Content._meta?.title ?? "Lesson 01", titleAr: ch59L01Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch59L01Content._meta?.xp_reward ?? 10, content: ch59L01Content },
     { id: "ch59-l02", chapterId: ch59Id, order: 02, title: ch59L02Content._meta?.title ?? "Lesson 02", titleAr: ch59L02Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch59L02Content._meta?.xp_reward ?? 10, content: ch59L02Content },
@@ -1045,6 +1054,7 @@ async function main() {
     { id: "ch64-l02", chapterId: ch64Id, order: 02, title: ch64L02Content._meta?.title ?? "Lesson 02", titleAr: ch64L02Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch64L02Content._meta?.xp_reward ?? 10, content: ch64L02Content },
     { id: "ch64-l03", chapterId: ch64Id, order: 03, title: ch64L03Content._meta?.title ?? "Lesson 03", titleAr: ch64L03Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch64L03Content._meta?.xp_reward ?? 10, content: ch64L03Content },
     { id: "ch64-l04", chapterId: ch64Id, order: 04, title: ch64L04Content._meta?.title ?? "Lesson 04", titleAr: ch64L04Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch64L04Content._meta?.xp_reward ?? 10, content: ch64L04Content },
+    { id: "ch64-l05", chapterId: ch64Id, order: 05, title: ch64L05Content._meta?.title ?? "Lesson 05", titleAr: ch64L05Content._meta?.titleAr ?? "", template: ch64L05Content.template ?? "REVIEW", xpReward: ch64L05Content._meta?.xp_reward ?? 10, content: ch64L05Content },
     // Chapter 65
     { id: "ch65-l01", chapterId: ch65Id, order: 01, title: ch65L01Content._meta?.title ?? "Lesson 01", titleAr: ch65L01Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch65L01Content._meta?.xp_reward ?? 10, content: ch65L01Content },
     { id: "ch65-l02", chapterId: ch65Id, order: 02, title: ch65L02Content._meta?.title ?? "Lesson 02", titleAr: ch65L02Content._meta?.titleAr ?? "", template: "STANDARD", xpReward: ch65L02Content._meta?.xp_reward ?? 10, content: ch65L02Content },

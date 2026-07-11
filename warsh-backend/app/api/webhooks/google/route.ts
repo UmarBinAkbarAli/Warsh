@@ -50,14 +50,14 @@ export async function POST(request: Request) {
     // misconfigured preview/staging deploy open to forged purchase notifications.
     if (process.env.ALLOW_UNAUTHENTICATED_WEBHOOK !== "true") {
       console.error("[rtdn] GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET is not set — rejecting request.");
-      return NextResponse.json({ error: "Webhook is not configured." }, { status: 503 });
+      return NextResponse.json({ error: "Webhook is not configured.", code: "store_not_configured" }, { status: 503 });
     }
   } else {
     const { searchParams } = new URL(request.url);
     const token = searchParams.get("token");
     if (token !== expectedToken) {
       console.warn("[rtdn] unauthorized request — token mismatch");
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+      return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
     }
   }
 

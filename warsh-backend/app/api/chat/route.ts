@@ -4,6 +4,7 @@ import { getUserIdFromRequest } from "../../../lib/auth";
 import { getAssistantReply } from "../../../lib/openai";
 import { getPKTStartOfDay } from "../../../lib/date";
 import { ACHIEVEMENT_KEYS } from "../../../lib/achievements";
+import { getSubscriptionState, requiresSubscription } from "../../../lib/subscription";
 
 const DAILY_MESSAGE_LIMIT = Number(process.env.AI_DAILY_MESSAGE_LIMIT ?? 5);
 
@@ -28,9 +29,25 @@ export async function POST(request: Request) {
     prisma.chatMessage.count({ where: { userId, role: "USER" } }),
     prisma.user.findUnique({
       where: { id: userId },
-      select: { nativeLanguage: true, noorOverageBalance: true },
+      select: {
+        nativeLanguage: true,
+        noorOverageBalance: true,
+        trialStartAt: true,
+        trialExpiresAt: true,
+        subscriptionStatus: true,
+        subscriptionActiveUntil: true,
+        subscriptionProductId: true,
+      },
     }),
   ]);
+
+  if (!userRecord) {
+    return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
+  }
+
+  if (requiresSubscription(getSubscriptionState(userRecord))) {
+    return NextResponse.json({ error: "Subscription required", code: "subscription_required" }, { status: 402 });
+  }
 
   let usingPackCredit = false;
 
@@ -47,12 +64,13 @@ export async function POST(request: Request) {
     usingPackCredit = true;
   }
 
-  const recentHistory = await prisma.chatMessage.findMany({
+  const recentHistoryNewestFirst = await prisma.chatMessage.findMany({
     where: { userId },
-    orderBy: { createdAt: "asc" },
+    orderBy: { createdAt: "desc" },
     take: 10,
     select: { role: true, content: true },
   });
+  const recentHistory = recentHistoryNewestFirst.reverse();
 
   await prisma.chatMessage.create({ data: { userId, role: "USER", content: message } });
   const reply = await getAssistantReply(message, recentHistory, userRecord?.nativeLanguage ?? undefined);

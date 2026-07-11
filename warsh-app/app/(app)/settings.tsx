@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import {
   Alert,
+  Linking,
   ScrollView,
   StyleSheet,
   Switch,
@@ -13,7 +14,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import api, { updateUserProfile, deleteAccount } from "@services/api";
+import api, { API_BASE_URL, updateUserProfile, deleteAccount } from "@services/api";
 import { useAuthStore } from "@stores/authStore";
 import {
   requestNotificationPermission,
@@ -153,6 +154,12 @@ export default function SettingsScreen() {
 
   const [prefs, setPrefs] = useState<Prefs>(DEFAULT_PREFS);
   const [dailyGoalMinutes, setDailyGoalMinutes] = useState(10);
+
+  function openExternalUrl(url: string) {
+    void Linking.openURL(url).catch(() => {
+      Alert.alert(t("settings.errorTitle"), "Could not open this link. Please try again.");
+    });
+  }
   const [currentStreak, setCurrentStreak] = useState(0);
   const [userName, setUserName] = useState("friend");
   const [saving, setSaving] = useState(false);
@@ -384,9 +391,19 @@ export default function SettingsScreen() {
         {/* Support */}
         <SectionHeader title={t("settings.support")} />
         <View style={styles.card}>
-          <SettingRow icon="help-circle-outline" label={t("settings.helpFaq")} showChevron />
+          <SettingRow
+            icon="help-circle-outline"
+            label={t("settings.helpFaq")}
+            onPress={() => openExternalUrl(`${API_BASE_URL}/help`)}
+            showChevron
+          />
           <View style={styles.divider} />
-          <SettingRow icon="chatbubble-outline" label={t("settings.sendFeedback")} showChevron />
+          <SettingRow
+            icon="chatbubble-outline"
+            label={t("settings.sendFeedback")}
+            onPress={() => openExternalUrl("mailto:support@warsh.app?subject=Warsh%20feedback")}
+            showChevron
+          />
         </View>
 
         {sentrySmokeTestEnabled ? (
@@ -407,9 +424,19 @@ export default function SettingsScreen() {
         {/* Legal */}
         <SectionHeader title={t("settings.legal")} />
         <View style={styles.card}>
-          <SettingRow icon="document-text-outline" label={t("settings.privacy")} showChevron />
+          <SettingRow
+            icon="document-text-outline"
+            label={t("settings.privacy")}
+            onPress={() => openExternalUrl(`${API_BASE_URL}/privacy`)}
+            showChevron
+          />
           <View style={styles.divider} />
-          <SettingRow icon="document-outline" label={t("settings.terms")} showChevron />
+          <SettingRow
+            icon="document-outline"
+            label={t("settings.terms")}
+            onPress={() => openExternalUrl(`${API_BASE_URL}/terms`)}
+            showChevron
+          />
         </View>
 
         {/* About */}
