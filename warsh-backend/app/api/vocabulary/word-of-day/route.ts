@@ -13,7 +13,7 @@ export async function GET(request: Request) {
     select: {
       id: true, arabic: true, arabicPlain: true, transliteration: true,
       translationEn: true, translationUr: true, wordType: true,
-      rootLetters: true, chapterIntroduced: true, quranicExample: true,
+      rootLetters: true, chapterIntroduced: true, quranicExample: true, imageUrl: true,
     },
   });
 

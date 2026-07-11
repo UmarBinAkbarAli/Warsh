@@ -42,7 +42,6 @@ const SKUS = [SUBSCRIPTION_PRODUCT_ID];
 // Feature comparison: [label, free, premium]
 const COMPARISON: [string, boolean, boolean][] = [
   ["Vocabulary Bank (all words)", true,  true],
-  ["First chapter free",          true,  true],
   ["All 72 chapters & lessons",   false, true],
   ["Ustaad Noor — AI tutor",      false, true],
   ["Audio for every word & ayah", false, true],
@@ -65,6 +64,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   const [purchasing, setPurchasing] = useState(false);
   const [restoring, setRestoring] = useState(false);
   const [trialDaysRemaining, setTrialDaysRemaining] = useState<number | null>(null);
+  const [googlePlayVerificationReady, setGooglePlayVerificationReady] = useState<boolean | null>(null);
 
   // Keep the latest selected plan readable from inside listener callbacks (avoids stale closures).
   const selectedRef = useRef(selected);
@@ -99,6 +99,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       getSubscriptionStatus()
         .then((res) => {
           setTrialDaysRemaining(res.data.data.trialDaysRemaining ?? null);
+          setGooglePlayVerificationReady(res.data.data.googlePlayVerificationReady ?? null);
         })
         .catch(() => {});
 
@@ -138,6 +139,13 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   // promise resolves before the user finishes paying (token isn't available yet).
   async function handlePurchase() {
     if (purchasing) return;
+    if (Platform.OS === "android" && googlePlayVerificationReady === false) {
+      Alert.alert(
+        "Purchases temporarily unavailable",
+        "Warsh cannot safely confirm Google Play purchases right now. Please try again later; no payment has been started.",
+      );
+      return;
+    }
     if (!isBillingSupportedEnvironment()) {
       Alert.alert("Purchases unavailable", "Subscriptions can only be tested in a Play Store test build, not Expo Go.");
       return;
@@ -179,6 +187,13 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       setPurchasing(false);
       const code = err?.response?.data?.code ?? err?.code ?? "unknown";
       console.error("[IAP] Verify failed:", code, err?.message);
+      if (code === "store_not_configured") {
+        Alert.alert(
+          "Purchase needs attention",
+          "Google Play completed the purchase, but Warsh's purchase verification is not configured. This is not caused by your test card. Your purchase can be restored after verification is enabled.",
+        );
+        return;
+      }
       Alert.alert(
         "Couldn't confirm subscription",
         `Your payment may have gone through but we couldn't activate it (${code}). If you were charged, tap "Restore purchases".`,
@@ -262,7 +277,13 @@ export default function PaywallScreen({ dismissable = true }: Props) {
         Alert.alert("Restore unavailable", "In-app purchases are not available on this build.");
       } else {
         console.error("[IAP] Restore failed:", err?.code, err?.message, JSON.stringify(err));
-        Alert.alert("Restore failed", `Could not restore purchases (${err?.code ?? "unknown"}). Please try again.`);
+        const code = err?.response?.data?.code ?? err?.code ?? "unknown";
+        Alert.alert(
+          "Restore failed",
+          code === "store_not_configured"
+            ? "Warsh's Google Play verification still needs configuration. This is not caused by your test card; your purchase remains available to restore afterward."
+            : `Could not restore purchases (${code}). Please try again.`,
+        );
       }
     } finally {
       setRestoring(false);
@@ -271,6 +292,8 @@ export default function PaywallScreen({ dismissable = true }: Props) {
 
   const billingSupported = isBillingSupportedEnvironment();
   const isWeb = Platform.OS === "web";
+  const purchaseReady = billingSupported &&
+    (Platform.OS !== "android" || googlePlayVerificationReady === true);
   const trialCopy = trialDaysRemaining !== null && trialDaysRemaining > 0
     ? `Free trial ends in ${trialDaysRemaining} day${trialDaysRemaining !== 1 ? "s" : ""}.`
     : "Unlock the full Warsh experience.";
@@ -280,7 +303,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       {/* Header */}
       <View style={styles.header}>
         {dismissable ? (
-          <TouchableOpacity onPress={() => router.back()} hitSlop={8}>
+          <TouchableOpacity onPress={() => router.replace("/(app)/(tabs)/vocabulary")} hitSlop={8}>
             <Ionicons name="close" size={22} color={WarshPalette.bodyBrown} />
           </TouchableOpacity>
         ) : (
@@ -332,7 +355,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
         </View>
 
         {/* No payment note — native only (web can't purchase here) */}
-        {!isWeb && (
+        {!isWeb && trialDaysRemaining !== null && trialDaysRemaining > 0 && (
           <View style={styles.noPayNote}>
             <Ionicons name="checkmark-circle-outline" size={16} color={WarshPalette.sage} />
             <Text style={styles.noPayText}>No payment due now. Cancel anytime.</Text>
@@ -406,21 +429,35 @@ export default function PaywallScreen({ dismissable = true }: Props) {
         ) : (
           <>
             <TouchableOpacity
-              style={[styles.ctaBtn, (purchasing || !billingSupported) ? styles.ctaBtnDisabled : null]}
+              style={[styles.ctaBtn, (purchasing || !purchaseReady) ? styles.ctaBtnDisabled : null]}
               onPress={handlePurchase}
-              disabled={purchasing || !billingSupported}
+              disabled={purchasing || !purchaseReady}
               activeOpacity={0.85}
             >
               {purchasing
                 ? <ActivityIndicator color={WarshPalette.ink} />
                 : <Text style={styles.ctaBtnText}>
-                    {billingSupported ? `Try for free, then ${getPriceLabel(selected)}` : "Unavailable in Expo Go"}
+                    {!billingSupported
+                      ? "Unavailable in Expo Go"
+                      : googlePlayVerificationReady === null
+                        ? "Checking purchase availability..."
+                      : googlePlayVerificationReady === false
+                        ? "Purchases temporarily unavailable"
+                        : trialDaysRemaining !== null && trialDaysRemaining > 0
+                          ? `Try for free, then ${getPriceLabel(selected)}`
+                          : `Subscribe for ${getPriceLabel(selected)}`}
                   </Text>}
             </TouchableOpacity>
             <TouchableOpacity onPress={handleRestore} disabled={restoring || !billingSupported} style={styles.restoreBtn}>
               {restoring
                 ? <ActivityIndicator color={WarshPalette.gold} size="small" />
                 : <Text style={styles.restoreText}>Restore purchases</Text>}
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => router.replace("/(app)/(tabs)/vocabulary")}
+              style={styles.restoreBtn}
+            >
+              <Text style={styles.freeAccessText}>Continue with free Vocabulary</Text>
             </TouchableOpacity>
           </>
         )}
@@ -633,6 +670,12 @@ const styles = StyleSheet.create({
   restoreText: {
     color: WarshPalette.gold,
     fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    textDecorationLine: "underline",
+  },
+  freeAccessText: {
+    color: WarshPalette.sage,
+    fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
     textDecorationLine: "underline",
   },

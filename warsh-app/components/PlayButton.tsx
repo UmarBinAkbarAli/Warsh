@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Audio } from "expo-av";
-import { getCachedTtsAudioUri, getVocabWordAudioUri } from "@services/audioCache";
+import { getCachedRemoteAudioUri, getCachedTtsAudioUri, getVocabWordAudioUri } from "@services/audioCache";
 import { WarshPalette } from "../constants/theme";
 
 type PlayButtonProps = {
@@ -11,6 +11,7 @@ type PlayButtonProps = {
   category?: "words" | "phrases" | "lessons";
   // When set, uses R2-backed vocab audio (generates once, CDN for all users)
   wordId?: string;
+  audioUrl?: string;
   size?: number;
   color?: string;
   autoPlay?: boolean;
@@ -18,7 +19,7 @@ type PlayButtonProps = {
 
 type PlayState = "idle" | "loading" | "playing" | "error";
 
-export function PlayButton({ text, cacheKey, category = "words", wordId, size = 20, color = WarshPalette.gold, autoPlay = false }: PlayButtonProps) {
+export function PlayButton({ text, cacheKey, category = "words", wordId, audioUrl, size = 20, color = WarshPalette.gold, autoPlay = false }: PlayButtonProps) {
   const [playState, setPlayState] = useState<PlayState>("idle");
   const soundRef = useRef<Audio.Sound | null>(null);
   const mountedRef = useRef(true);
@@ -39,9 +40,20 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, size = 
     }
     setPlayState("loading");
     try {
-      const uri = wordId
-        ? await getVocabWordAudioUri(wordId, text)
-        : await getCachedTtsAudioUri({ text, cacheKey, category });
+      let uri: string;
+      if (audioUrl) {
+        try {
+          uri = await getCachedRemoteAudioUri(audioUrl, cacheKey ?? text, category);
+        } catch {
+          uri = wordId
+            ? await getVocabWordAudioUri(wordId, text)
+            : await getCachedTtsAudioUri({ text, cacheKey, category });
+        }
+      } else {
+        uri = wordId
+          ? await getVocabWordAudioUri(wordId, text)
+          : await getCachedTtsAudioUri({ text, cacheKey, category });
+      }
 
       if (!mountedRef.current) return;
       await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
@@ -65,7 +77,7 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, size = 
         setTimeout(() => { if (mountedRef.current) setPlayState("idle"); }, 2000);
       }
     }
-  }, [text, cacheKey, category, wordId]);
+  }, [text, cacheKey, category, wordId, audioUrl]);
 
   useEffect(() => {
     if (!autoPlay || !text) return;

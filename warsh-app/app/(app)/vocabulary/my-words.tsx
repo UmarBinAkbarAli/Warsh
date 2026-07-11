@@ -11,6 +11,7 @@ import {
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
+import { Image } from "expo-image";
 import api from "@services/api";
 import { useLanguage, pickTranslation } from "@services/language";
 import { useT } from "@i18n/index";
@@ -44,6 +45,7 @@ interface MyWord {
   topicCategories: string[];
   chapterIntroduced: number | null;
   sortOrder: number;
+  imageUrl?: string | null;
   srs: SRSData;
 }
 
@@ -100,6 +102,9 @@ export default function MyWordsScreen() {
     >
       <View style={styles.wordCard}>
         <View style={styles.wordRow}>
+          {item.imageUrl ? (
+            <Image source={{ uri: item.imageUrl }} style={styles.wordImage} contentFit="contain" cachePolicy="disk" />
+          ) : null}
           {/* Left: text content */}
           <View style={styles.wordLeft}>
             <Text style={styles.arabic}>{item.arabic}</Text>
@@ -280,6 +285,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderColor: WarshPalette.defaultCardBorder,
   },
+  wordImage: { width: 64, height: 64, borderRadius: Radii.sm },
   wordRow: {
     flexDirection: "row",
     alignItems: "flex-start",

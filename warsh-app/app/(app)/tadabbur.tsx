@@ -16,7 +16,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import { getTadabbur, getTadabburSurah } from "@services/api";
+import { getTadabbur, getTadabburSurah, isSubscriptionRequiredError } from "@services/api";
 
 // ─── types ────────────────────────────────────────────────────────────────────
 
@@ -183,9 +183,13 @@ export default function TadabburScreen() {
           if (meta) setSurahMeta(meta);
           if (targetId) loadSurahAyat(targetId);
         })
-        .catch(() => {})
+        .catch((loadError) => {
+          if (isSubscriptionRequiredError(loadError)) {
+            router.replace("/(app)/paywall");
+          }
+        })
         .finally(() => setLoading(false));
-    }, [params.surahId])
+    }, [params.surahId, router])
   );
 
   async function loadSurahAyat(surahId: string) {
@@ -212,7 +216,11 @@ export default function TadabburScreen() {
           });
         }
       }
-    } catch {}
+    } catch (loadError) {
+      if (isSubscriptionRequiredError(loadError)) {
+        router.replace("/(app)/paywall");
+      }
+    }
     finally { setLoadingAyat(false); }
   }
 

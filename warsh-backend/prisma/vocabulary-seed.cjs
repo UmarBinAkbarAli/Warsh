@@ -778,9 +778,21 @@ const VOCABULARY_WORDS = [
   ...ADDITIONS_4,
 ];
 
-async function seedVocabulary(prisma) {
+function mediaKey(word) {
+  return `${word.arabicPlain}\u0000${word.transliteration}\u0000${word.sortOrder}`;
+}
+
+async function seedVocabulary(prisma, existingMedia = []) {
+  const mediaByWord = new Map(
+    existingMedia.map((word) => [mediaKey(word), { imageUrl: word.imageUrl, audioUrl: word.audioUrl }])
+  );
+  const wordsWithPreservedMedia = VOCABULARY_WORDS.map((word) => {
+    const media = mediaByWord.get(mediaKey(word));
+    return media ? { ...word, imageUrl: media.imageUrl, audioUrl: media.audioUrl } : word;
+  });
+
   await prisma.vocabularyWord.deleteMany({});
-  await prisma.vocabularyWord.createMany({ data: VOCABULARY_WORDS });
+  await prisma.vocabularyWord.createMany({ data: wordsWithPreservedMedia });
   console.log(`Seeded ${VOCABULARY_WORDS.length} vocabulary words.`);
 }
 

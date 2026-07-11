@@ -545,6 +545,21 @@ async function main() {
   await waitForNeon();
 
   const userCount = await prisma.user.count();
+  const existingVocabularyMedia = await prisma.vocabularyWord.findMany({
+    where: {
+      OR: [
+        { imageUrl: { not: null } },
+        { audioUrl: { not: null } },
+      ],
+    },
+    select: {
+      arabicPlain: true,
+      transliteration: true,
+      sortOrder: true,
+      imageUrl: true,
+      audioUrl: true,
+    },
+  });
 
   if (userCount === 0) {
     // No users — safe to do a full clean reset before seeding
@@ -1127,7 +1142,7 @@ async function main() {
 
   await cleanupObsoleteAuthoredLessons(lessons);
 
-  await seedVocabulary(prisma);
+  await seedVocabulary(prisma, existingVocabularyMedia);
   await seedTadabbur(prisma);
   console.log("Seed data created successfully.");
 }

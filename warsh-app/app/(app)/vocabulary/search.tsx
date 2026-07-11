@@ -11,6 +11,7 @@ import {
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
+import { Image } from "expo-image";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import api from "@services/api";
 import { useLanguage, pickTranslation } from "@services/language";
@@ -36,6 +37,7 @@ interface SearchWord {
   translationEn: string;
   translationUr: string;
   wordType: string;
+  imageUrl?: string | null;
 }
 
 export default function VocabularySearchScreen() {
@@ -125,6 +127,9 @@ export default function VocabularySearchScreen() {
     >
       <View style={styles.wordCard}>
         <View style={styles.wordRow}>
+          {item.imageUrl ? (
+            <Image source={{ uri: item.imageUrl }} style={styles.wordImage} contentFit="contain" cachePolicy="disk" />
+          ) : null}
           <View style={styles.wordLeft}>
             <Text style={styles.arabic}>{item.arabic}</Text>
             <Text style={styles.translit}>{item.transliteration}</Text>
@@ -280,6 +285,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderColor: WarshPalette.defaultCardBorder,
   },
+  wordImage: { width: 64, height: 64, borderRadius: Radii.sm },
   wordRow: {
     flexDirection: "row",
     alignItems: "flex-start",

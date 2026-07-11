@@ -36,6 +36,7 @@ export async function GET(request: Request) {
           topicCategories: true,
           chapterIntroduced: true,
           sortOrder: true,
+          imageUrl: true,
         },
       },
     },

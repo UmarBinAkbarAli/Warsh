@@ -3,7 +3,7 @@ import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, 
 import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import api from "@services/api";
+import api, { isSubscriptionRequiredError } from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { PlayButton } from "@components/PlayButton";
@@ -14,7 +14,7 @@ import { cancelTodayReminders, fireMilestoneNotification } from "@services/notif
 import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
 import { pickLocalized, useLanguage } from "@services/language";
 import { useT } from "@i18n/index";
-import { prefetchTtsAudio } from "@services/audioCache";
+import { prefetchRemoteAudio, prefetchTtsAudio } from "@services/audioCache";
 
 // ---------------------------------------------------------------------------
 // API response shape — content is the raw warsh-content-schema v1.0 blob
@@ -72,16 +72,15 @@ function exWrongExpl(ex: RawEx, language: "en" | "ur"): string | undefined {
 // Extracts just what's needed to prefetch a discover card's image + autoplay audio ahead of time.
 // Mirrors the field extraction in renderDiscover() so the prefetch cache key matches the real play call.
 function discoverCardPrefetchFields(card: Record<string, any> | undefined, language: "en" | "ur") {
-  if (!card) return { imageUrl: undefined, arabicText: undefined, transliteration: undefined };
+  if (!card) return { imageUrl: undefined, audioUrl: undefined, arabicText: undefined, transliteration: undefined };
   const cardType = card.type as string | undefined;
   const text    = card.text    as Record<string, any> | undefined;
   const concept = card.concept as Record<string, any> | undefined;
   const titleObj = card.title  as Record<string, any> | undefined;
   const examples = card.examples as Array<Record<string, any>> | undefined;
 
-  const imageUrl = cardType === "WORD" || cardType === undefined
-    ? (card.image_url as string | undefined)
-    : undefined;
+  const imageUrl = card.image_url as string | undefined;
+  const audioUrl = card.audio_url as string | undefined;
 
   let arabicText: string | undefined;
   let transliteration: string | undefined;
@@ -95,7 +94,7 @@ function discoverCardPrefetchFields(card: Record<string, any> | undefined, langu
     transliteration = text?.translit as string | undefined;
   }
 
-  return { imageUrl, arabicText, transliteration };
+  return { imageUrl, audioUrl, arabicText, transliteration };
 }
 
 function roleLabel(role: string, t: TranslateFn): string {
@@ -417,19 +416,27 @@ export default function LessonPlayScreen() {
   const completedExerciseCount = Math.min(currentExerciseIndex + (isAnswered ? 1 : 0), exercises.length);
   const screenPadding = { paddingTop: insets.top + 16 };
 
-  // Prefetch the next 1-2 discover cards' image + audio while the current one is
-  // shown, so the autoplay audio and image don't lag on the first-time swipe-through.
+  // Start warming every Discovery card as soon as the lesson loads (while the
+  // learner is still on the hook screen). Fixtures usually provide CDN audio;
+  // TTS remains a fallback for older cards without audio_url.
   useEffect(() => {
-    if (currentBeat !== 2 || discoverCards.length === 0) return;
-    const upcoming = discoverCards.slice(currentCardIndex + 1, currentCardIndex + 3);
-    for (const upcomingCard of upcoming) {
-      const { imageUrl, arabicText, transliteration } = discoverCardPrefetchFields(upcomingCard, language);
+    if (!lesson || discoverCards.length === 0) return;
+    for (const upcomingCard of discoverCards) {
+      const { imageUrl, audioUrl, arabicText, transliteration } = discoverCardPrefetchFields(upcomingCard, language);
       if (imageUrl) Image.prefetch(imageUrl).catch(() => undefined);
-      if (arabicText) {
+      if (audioUrl && arabicText) {
+        prefetchRemoteAudio(audioUrl, transliteration ?? arabicText, "lessons")
+          .catch(() => prefetchTtsAudio([{
+            text: arabicText,
+            cacheKey: transliteration ?? arabicText,
+            category: "lessons",
+          }]))
+          .catch(() => undefined);
+      } else if (arabicText) {
         prefetchTtsAudio([{ text: arabicText, cacheKey: transliteration ?? arabicText, category: "lessons" }]).catch(() => undefined);
       }
     }
-  }, [currentBeat, currentCardIndex, discoverCards, language]);
+  }, [discoverCards, language, lesson]);
 
   useEffect(() => {
     async function loadLesson() {
@@ -439,14 +446,18 @@ export default function LessonPlayScreen() {
         const raw = response.data.data.lesson as RawLesson;
         setLesson(raw);
         trackLessonStarted(lessonId, raw.template);
-      } catch {
+      } catch (loadError) {
+        if (isSubscriptionRequiredError(loadError)) {
+          router.replace("/(app)/paywall");
+          return;
+        }
         setError(t("player.loadError"));
       } finally {
         setLoading(false);
       }
     }
     void loadLesson();
-  }, [lessonId, t]);
+  }, [lessonId, router, t]);
 
   useEffect(() => {
     async function finishLesson() {
@@ -936,10 +947,7 @@ export default function LessonPlayScreen() {
       const bodyObj  = card.body   as Record<string, any> | undefined;
       const examples = card.examples as Array<Record<string, any>> | undefined;
 
-      // Only show images on WORD cards (not GRAMMAR_NOTE or SENTENCE)
-      if (cardType === "WORD" || cardType === undefined) {
-        discoverImageUrl = card.image_url as string | undefined;
-      }
+      discoverImageUrl = card.image_url as string | undefined;
 
       if (cardType === "GRAMMAR_NOTE") {
         arabicText    = titleObj?.ar as string | undefined;
@@ -991,7 +999,14 @@ export default function LessonPlayScreen() {
             <>
               <ArabicText size="lg" style={styles.discoverArabic}>{arabicText}</ArabicText>
               <View style={styles.discoverPlayRow}>
-                <PlayButton text={arabicText} cacheKey={transliteration ?? arabicText} category="lessons" size={22} autoPlay={true} />
+                <PlayButton
+                  text={arabicText}
+                  cacheKey={transliteration ?? arabicText}
+                  category="lessons"
+                  audioUrl={card?.audio_url as string | undefined}
+                  size={22}
+                  autoPlay={true}
+                />
               </View>
             </>
           ) : null}

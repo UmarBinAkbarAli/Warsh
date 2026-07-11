@@ -12,6 +12,7 @@ import { useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
+import { Image } from "expo-image";
 import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
@@ -95,6 +96,7 @@ interface VocabWord {
   wordType: string;
   gender?: string | null;
   rootLetters?: string | null;
+  imageUrl?: string | null;
   topicCategories: string[];
   quranicExample?: {
     surahNumber: number;
@@ -111,17 +113,24 @@ function WordRow({ word, language, onPress }: { word: VocabWord; language: "en" 
   const t = useT();
   const inner = (
     <View style={styles.wordCard}>
-      <View style={styles.wordTopRow}>
-        <View style={styles.wordArabicRow}>
-          <ArabicText size="md" style={styles.wordArabic}>{word.arabic}</ArabicText>
-          <PlayButton text={word.arabic} wordId={word.id} size={18} />
-        </View>
-        {word.rootLetters ? (
-          <Text style={styles.rootText}>{t("vocabulary.root", { value: word.rootLetters })}</Text>
+      <View style={styles.wordCardContent}>
+        {word.imageUrl ? (
+          <Image source={{ uri: word.imageUrl }} style={styles.wordImage} contentFit="contain" cachePolicy="disk" />
         ) : null}
+        <View style={styles.wordTextContent}>
+          <View style={styles.wordTopRow}>
+            <View style={styles.wordArabicRow}>
+              <ArabicText size="md" style={styles.wordArabic}>{word.arabic}</ArabicText>
+              <PlayButton text={word.arabic} wordId={word.id} size={18} />
+            </View>
+            {word.rootLetters ? (
+              <Text style={styles.rootText}>{t("vocabulary.root", { value: word.rootLetters })}</Text>
+            ) : null}
+          </View>
+          <Text style={styles.meaningText}>{pickTranslation(word, language)}</Text>
+          <Text style={styles.detailText}>{word.transliteration}</Text>
+        </View>
       </View>
-      <Text style={styles.meaningText}>{pickTranslation(word, language)}</Text>
-      <Text style={styles.detailText}>{word.transliteration}</Text>
     </View>
   );
   if (onPress) {
@@ -140,6 +149,9 @@ function WordOfDayCard({ word, language, onPress }: { word: VocabWord; language:
     <TouchableOpacity onPress={onPress} activeOpacity={onPress ? 0.8 : 1}>
       <View style={styles.wotdCard}>
         <Text style={styles.wotdLabel}>{t("vocabulary.wordOfDay")}</Text>
+        {word.imageUrl ? (
+          <Image source={{ uri: word.imageUrl }} style={styles.wotdImage} contentFit="contain" cachePolicy="disk" />
+        ) : null}
         <View style={styles.wotdArabicRow}>
           <ArabicText size="xl" style={styles.wotdArabic}>{word.arabic}</ArabicText>
           <PlayButton text={word.arabic} wordId={word.id} size={28} />
@@ -557,6 +569,9 @@ const styles = StyleSheet.create({
     borderColor: WarshPalette.parchmentCardBorder,
     backgroundColor: WarshPalette.parchmentBg,
   },
+  wordCardContent: { flexDirection: "row", alignItems: "center", gap: Spacing.md },
+  wordTextContent: { flex: 1, minWidth: 0 },
+  wordImage: { width: 72, height: 72, borderRadius: Radii.sm },
   wordTopRow: {
     flexDirection: "row-reverse", alignItems: "center",
     justifyContent: "space-between", gap: Spacing.sm,
@@ -576,6 +591,7 @@ const styles = StyleSheet.create({
     color: WarshPalette.bodyBrown, fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM, fontStyle: "italic",
   },
+  wotdImage: { width: "100%", height: 150, marginBottom: Spacing.sm },
 
   // Empty
   emptyCard: {

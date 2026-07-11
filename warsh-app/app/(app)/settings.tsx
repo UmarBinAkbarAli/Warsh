@@ -123,8 +123,8 @@ function OptionPicker({
   onChange: (v: number) => void;
 }) {
   return (
-    <View style={styles.row}>
-      <View style={styles.rowLabel}>
+    <View style={styles.optionPicker}>
+      <View>
         <Text style={styles.rowText}>{label}</Text>
       </View>
       <View style={styles.optionPills}>
@@ -553,8 +553,14 @@ const styles = StyleSheet.create({
   },
 
   optionPills: {
-    flexDirection: "row", gap: 6, flexShrink: 1, flexWrap: "wrap",
-    justifyContent: "flex-end",
+    flexDirection: "row", gap: 6, flexWrap: "wrap",
+    justifyContent: "flex-start",
+  },
+  optionPicker: {
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.md,
+    gap: Spacing.sm,
+    minHeight: 52,
   },
   pill: {
     paddingHorizontal: Spacing.sm, paddingVertical: 4,

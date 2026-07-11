@@ -21,5 +21,15 @@ export async function GET(request: Request) {
 
   if (!user) return NextResponse.json({ error: "Not found", code: "not_found" }, { status: 404 });
 
-  return NextResponse.json({ data: getSubscriptionState(user) });
+  const googlePlayVerificationReady = Boolean(
+    process.env.GOOGLE_PLAY_PACKAGE_NAME?.trim() &&
+    process.env.GOOGLE_PLAY_SERVICE_ACCOUNT_KEY?.trim()
+  );
+
+  return NextResponse.json({
+    data: {
+      ...getSubscriptionState(user),
+      googlePlayVerificationReady,
+    },
+  });
 }

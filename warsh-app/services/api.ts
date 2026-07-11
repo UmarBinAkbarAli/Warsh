@@ -2,7 +2,6 @@ import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
 import { Platform } from "react-native";
 import { getToken } from "./storage";
 import { useAuthStore } from "@stores/authStore";
-import { router } from "expo-router";
 
 interface RetryableConfig extends InternalAxiosRequestConfig {
   _retried?: boolean;
@@ -103,15 +102,15 @@ api.interceptors.response.use(
       }
     }
 
-    // Redirect to paywall when subscription is required
-    if (error.response?.status === 402) {
-      router.push("/(app)/paywall");
-      return Promise.reject(error);
-    }
-
     return Promise.reject(error);
   }
 );
+
+export function isSubscriptionRequiredError(error: unknown) {
+  return axios.isAxiosError(error) &&
+    error.response?.status === 402 &&
+    error.response?.data?.code === "subscription_required";
+}
 
 export function getVocabularyWords(params?: { topic?: string; search?: string; page?: number }) {
   return api.get("/api/vocabulary/words", { params });

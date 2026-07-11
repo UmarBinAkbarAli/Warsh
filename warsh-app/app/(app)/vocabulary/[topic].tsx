@@ -8,6 +8,7 @@ import {
   View,
 } from "react-native";
 import { TextInput } from "react-native-paper";
+import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -28,6 +29,7 @@ interface VocabWord {
   translationUr: string;
   wordType: string;
   rootLetters?: string | null;
+  imageUrl?: string | null;
   quranicExample?: {
     surahNameEn: string;
     surahNumber: number;
@@ -104,17 +106,24 @@ export default function TopicDetailScreen() {
                 activeOpacity={0.75}
               >
                 <View style={styles.wordCard}>
-                  <View style={styles.topRow}>
-                    <View style={styles.arabicRow}>
-                      <ArabicText size="md" style={styles.arabic}>{word.arabic}</ArabicText>
-                      <PlayButton text={word.arabic} wordId={word.id} size={18} />
-                    </View>
-                    {word.rootLetters ? (
-                      <Text style={styles.root}>{t("vocabulary.root", { value: word.rootLetters })}</Text>
+                  <View style={styles.wordCardContent}>
+                    {word.imageUrl ? (
+                      <Image source={{ uri: word.imageUrl }} style={styles.wordImage} contentFit="contain" cachePolicy="disk" />
                     ) : null}
+                    <View style={styles.wordTextContent}>
+                      <View style={styles.topRow}>
+                        <View style={styles.arabicRow}>
+                          <ArabicText size="md" style={styles.arabic}>{word.arabic}</ArabicText>
+                          <PlayButton text={word.arabic} wordId={word.id} size={18} />
+                        </View>
+                        {word.rootLetters ? (
+                          <Text style={styles.root}>{t("vocabulary.root", { value: word.rootLetters })}</Text>
+                        ) : null}
+                      </View>
+                      <Text style={styles.meaning}>{pickTranslation(word, language)}</Text>
+                      <Text style={styles.translit}>{word.transliteration}</Text>
+                    </View>
                   </View>
-                  <Text style={styles.meaning}>{pickTranslation(word, language)}</Text>
-                  <Text style={styles.translit}>{word.transliteration}</Text>
                   {word.quranicExample ? (
                     <View style={styles.ayahBox}>
                       <ArabicText size="sm" style={styles.ayahText}>{word.quranicExample.ayahArabic}</ArabicText>
@@ -175,6 +184,9 @@ const styles = StyleSheet.create({
     borderColor: WarshPalette.parchmentCardBorder,
     backgroundColor: WarshPalette.parchmentBg,
   },
+  wordCardContent: { flexDirection: "row", alignItems: "center", gap: Spacing.md },
+  wordTextContent: { flex: 1, minWidth: 0 },
+  wordImage: { width: 76, height: 76, borderRadius: Radii.sm },
   topRow: {
     flexDirection: "row-reverse", alignItems: "center",
     justifyContent: "space-between", gap: Spacing.sm,

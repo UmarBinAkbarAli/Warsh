@@ -38,6 +38,8 @@ import {
 
 const DRY_RUN        = process.argv.includes("--dry-run");
 const SKIP_EXISTING  = process.argv.includes("--skip-existing");
+const ONLY_FILE      = process.argv.find((arg) => arg.startsWith("--file="))?.slice("--file=".length);
+const DISCOVER_ONLY_FILES = new Set(["ma-what-transparent.png"]);
 
 const BATCHES_DIR = process.env.VOCAB_IMAGE_SOURCE_DIR
   ? path.resolve(process.env.VOCAB_IMAGE_SOURCE_DIR)
@@ -101,13 +103,13 @@ async function main() {
   const prisma   = new PrismaClient({ adapter } as ConstructorParameters<typeof PrismaClient>[0]);
 
   const dbWords = await prisma.vocabularyWord.findMany({
-    select: { id: true, transliteration: true, imageUrl: true },
+    select: { id: true, transliteration: true, translationEn: true, imageUrl: true },
     orderBy: { sortOrder: "asc" },
   });
   console.log(`Loaded ${dbWords.length} vocabulary words from DB.\n`);
 
   // Build normalizedSlug → word[] map
-  interface DbWord { id: string; transliteration: string; imageUrl: string | null; }
+  interface DbWord { id: string; transliteration: string; translationEn: string; imageUrl: string | null; }
   const slugMap = new Map<string, DbWord[]>();
   for (const w of dbWords) {
     const key = normalizeSlug(w.transliteration);
@@ -121,7 +123,8 @@ async function main() {
     await prisma.$disconnect();
     process.exit(1);
   }
-  const imagePaths = findTransparentImages(BATCHES_DIR);
+  const imagePaths = findTransparentImages(BATCHES_DIR)
+    .filter((imagePath) => !ONLY_FILE || path.basename(imagePath) === ONLY_FILE);
   console.log(`Found ${imagePaths.length} transparent PNG files.\n`);
 
   // 3. Match and upload
@@ -135,7 +138,21 @@ async function main() {
   for (const imgPath of imagePaths) {
     const fileSlug        = slugFromFilename(imgPath);
     const normalizedKey   = SLUG_OVERRIDES[fileSlug] ?? normalizeSlug(fileSlug);
-    const candidates      = slugMap.get(normalizedKey);
+    const allCandidates   = slugMap.get(normalizedKey);
+    const descriptor      = path.basename(imgPath, "-transparent.png").split("-").slice(1).join(" ");
+    const semanticMatches = allCandidates?.filter((word) =>
+      normalizeSlug(word.translationEn).includes(normalizeSlug(descriptor)) ||
+      normalizeSlug(descriptor).includes(normalizeSlug(word.translationEn))
+    );
+    // The filename meaning disambiguates otherwise identical ASCII slugs such
+    // as maṭar (rain) / maṭār (airport). If a lone transliteration candidate's
+    // meaning does not match (for example ma "what" vs mā' "water"), treat the
+    // asset as Discovery-only instead of attaching the wrong illustration.
+    const candidates = DISCOVER_ONLY_FILES.has(path.basename(imgPath))
+      ? undefined
+      : semanticMatches && semanticMatches.length > 0
+        ? semanticMatches
+        : allCandidates;
 
     if (!candidates || candidates.length === 0) {
       // No vocabulary word for this slug (e.g. particles/demonstratives like

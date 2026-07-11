@@ -4,7 +4,7 @@ import { TextInput } from "react-native-paper";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import api, { purchaseNoorPack } from "@services/api";
+import api, { isSubscriptionRequiredError, purchaseNoorPack } from "@services/api";
 import { BrandButton } from "@components/BrandButton";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Shadows, Spacing, WarshPalette } from "../../../constants/theme";
 import { trackNoorMessageSent } from "@services/analytics";
@@ -65,11 +65,15 @@ export default function ChatScreen() {
       const response = await api.get("/api/chat/history");
       setMessages(response.data.data.messages);
     } catch (err) {
+      if (isSubscriptionRequiredError(err)) {
+        router.replace("/(app)/paywall");
+        return;
+      }
       setError("Unable to load chat history.");
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [router]);
 
   useFocusEffect(
     useCallback(() => {
@@ -174,7 +178,9 @@ export default function ChatScreen() {
         });
       }
     } catch (err: any) {
-      if (err.response?.status === 429) {
+      if (isSubscriptionRequiredError(err)) {
+        router.replace("/(app)/paywall");
+      } else if (err.response?.status === 429) {
         setShowOverageModal(true);
       } else {
         setError("Unable to send message. Try again.");

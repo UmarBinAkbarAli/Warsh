@@ -6,6 +6,8 @@ import { getToken } from "./storage";
 const AUDIO_CACHE_DIR = `${FileSystem.cacheDirectory ?? ""}warsh-audio/`;
 const AUDIO_CACHE_MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000;
 const webAudioObjectUrls = new Map<string, string>();
+const remoteAudioDownloads = new Map<string, Promise<string>>();
+const ttsAudioDownloads = new Map<string, Promise<string>>();
 
 type TtsAudioRequest = {
   text: string;
@@ -86,32 +88,76 @@ export async function getCachedTtsAudioUri(request: TtsAudioRequest) {
 
   await ensureAudioCacheDir();
   const localUri = getTtsCacheUri({ ...request, text });
+  const existingDownload = ttsAudioDownloads.get(localUri);
+  if (existingDownload) return existingDownload;
 
-  const token = await getToken();
-  const remoteUrl = `${API_BASE_URL}/api/audio/tts?text=${encodeURIComponent(text)}`;
+  const download = (async () => {
+    const token = await getToken();
+    const remoteUrl = `${API_BASE_URL}/api/audio/tts?text=${encodeURIComponent(text)}`;
 
-  if (Platform.OS === "web") {
-    return fetchWebAudioUrl(
-      remoteUrl,
-      localUri,
-      token ? { Authorization: `Bearer ${token}` } : undefined,
-    );
+    if (Platform.OS === "web") {
+      return fetchWebAudioUrl(
+        remoteUrl,
+        localUri,
+        token ? { Authorization: `Bearer ${token}` } : undefined,
+      );
+    }
+
+    if (await isFreshCachedFile(localUri)) {
+      return localUri;
+    }
+
+    const result = await FileSystem.downloadAsync(remoteUrl, localUri, {
+      headers: token ? { Authorization: `Bearer ${token}` } : undefined,
+    });
+
+    if (result.status < 200 || result.status >= 300) {
+      await FileSystem.deleteAsync(localUri, { idempotent: true });
+      throw new Error(`TTS audio download failed with status ${result.status}.`);
+    }
+
+    return result.uri;
+  })();
+
+  ttsAudioDownloads.set(localUri, download);
+  try {
+    return await download;
+  } finally {
+    ttsAudioDownloads.delete(localUri);
   }
+}
 
-  if (await isFreshCachedFile(localUri)) {
-    return localUri;
+export async function getCachedRemoteAudioUri(
+  remoteUrl: string,
+  cacheKey: string,
+  category: "words" | "phrases" | "lessons" = "lessons",
+) {
+  const stablePart = normalizeCachePart(cacheKey || remoteUrl) || "audio";
+  const localUri = `${AUDIO_CACHE_DIR}${category}-remote-${stablePart}-${hashText(remoteUrl)}.mp3`;
+  const existingDownload = remoteAudioDownloads.get(localUri);
+  if (existingDownload) return existingDownload;
+
+  const download = (async () => {
+    await ensureAudioCacheDir();
+    if (Platform.OS === "web") {
+      return fetchWebAudioUrl(remoteUrl, localUri);
+    }
+    if (await isFreshCachedFile(localUri)) return localUri;
+
+    const result = await FileSystem.downloadAsync(remoteUrl, localUri);
+    if (result.status < 200 || result.status >= 300) {
+      await FileSystem.deleteAsync(localUri, { idempotent: true });
+      throw new Error(`Remote audio download failed with status ${result.status}.`);
+    }
+    return result.uri;
+  })();
+
+  remoteAudioDownloads.set(localUri, download);
+  try {
+    return await download;
+  } finally {
+    remoteAudioDownloads.delete(localUri);
   }
-
-  const result = await FileSystem.downloadAsync(remoteUrl, localUri, {
-    headers: token ? { Authorization: `Bearer ${token}` } : undefined,
-  });
-
-  if (result.status < 200 || result.status >= 300) {
-    await FileSystem.deleteAsync(localUri, { idempotent: true });
-    throw new Error(`TTS audio download failed with status ${result.status}.`);
-  }
-
-  return result.uri;
 }
 
 // Vocabulary word audio: first call generates TTS + saves to R2; subsequent calls
@@ -156,6 +202,10 @@ export async function getVocabWordAudioUri(wordId: string, arabicText: string): 
 
 export async function prefetchTtsAudio(requests: TtsAudioRequest[]) {
   return Promise.all(requests.map((request) => getCachedTtsAudioUri(request)));
+}
+
+export function prefetchRemoteAudio(remoteUrl: string, cacheKey: string, category: "words" | "phrases" | "lessons" = "lessons") {
+  return getCachedRemoteAudioUri(remoteUrl, cacheKey, category);
 }
 
 // Warms the local audio cache for a vocab word ahead of time (e.g. the next
