@@ -1,5 +1,4 @@
 import {
-  Feather,
   FontAwesome5,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
@@ -8,7 +7,6 @@ import { StatusBar } from "expo-status-bar";
 import {
   Image,
   Pressable,
-  ScrollView,
   StyleSheet,
   Text,
   useWindowDimensions,
@@ -16,7 +14,8 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { Colors, WarshPalette } from "../../../constants/theme";
+import { BrandButton } from "../../../components/BrandButton";
+import { Colors, Fonts, WarshPalette } from "../../../constants/theme";
 
 const HERO_IMAGE = require("../../../assets/images/a1-welcome-hero.png");
 const LOGO_IMAGE = require("../../../assets/images/warsh-logo.png");
@@ -26,8 +25,6 @@ const LOGO_IMAGE = require("../../../assets/images/warsh-logo.png");
 // readability; every value is a token.
 const GOLD = WarshPalette.gold;
 const GOLD_TEXT = WarshPalette.goldDeep;
-const GOLD_LIGHT = WarshPalette.parchment;
-const NAVY = WarshPalette.navy;
 const CREAM = Colors.bg.primary;
 const INK = WarshPalette.navy;
 const BODY = WarshPalette.bodyBrown;
@@ -39,15 +36,14 @@ export default function PreviewA1Welcome() {
   const router = useRouter();
   const { width, height } = useWindowDimensions();
   const frameWidth = Math.min(width, 412);
-  const compactHeight = height < 780;
-  const tightHeight = height < 700;
+  const compactHeight = height < 900;
+  const tightHeight = height < 760;
   const horizontalGutter = frameWidth < 380 ? 48 : 56;
   const contentWidth = Math.max(0, frameWidth - horizontalGutter);
   const heroWidth = Math.min(
-    compactHeight ? 318 : 348,
+    tightHeight ? 264 : compactHeight ? 300 : 328,
     frameWidth - horizontalGutter,
   );
-  const scale = heroWidth / 348;
   const headlineSize = Math.min(
     compactHeight ? 41 : 48,
     Math.max(36, heroWidth * 0.128),
@@ -66,23 +62,15 @@ export default function PreviewA1Welcome() {
         <CornerOrnament corner="bottomLeft" />
         <CornerOrnament corner="bottomRight" />
 
-        <ScrollView
-          style={styles.scrollArea}
-          contentContainerStyle={[
+        <View
+          style={[
             styles.scrollContent,
             compactHeight ? styles.scrollContentCompact : null,
             tightHeight ? styles.scrollContentTight : null,
           ]}
-          showsVerticalScrollIndicator={false}
-          bounces={false}
         >
           <View style={[styles.screenContent, { width: contentWidth }]}>
             <View style={styles.topBar}>
-              <View>
-                <ProgressRail />
-                <Text style={styles.previewLabel}>3 MINUTE PREVIEW</Text>
-              </View>
-
               <Pressable
                 accessibilityRole="button"
                 onPress={() => router.replace("/(auth)/preview/a7-cta")}
@@ -183,50 +171,19 @@ export default function PreviewA1Welcome() {
 
             <JourneyRow compact={compactHeight} />
 
-            <Pressable
-              accessibilityRole="button"
+            <BrandButton
+              title="Begin the Journey"
               onPress={() => router.push("/(auth)/preview/a2-hook")}
-              style={({ pressed }) => [
+              style={StyleSheet.flatten([
                 styles.cta,
                 compactHeight ? styles.ctaCompact : null,
                 { width: heroWidth },
-                pressed ? styles.ctaPressed : null,
-              ]}
-            >
-              <View style={styles.ctaInnerBorder} pointerEvents="none" />
-              <Text
-                style={[styles.ctaText, { fontSize: Math.min(26, 28 * scale) }]}
-              >
-                Begin the Journey
-              </Text>
-              <Feather
-                name="arrow-right"
-                size={Math.min(25, 27 * scale)}
-                color={GOLD_LIGHT}
-              />
-            </Pressable>
+              ])}
+            />
           </View>
-        </ScrollView>
+        </View>
       </View>
     </SafeAreaView>
-  );
-}
-
-function ProgressRail() {
-  return (
-    <View style={styles.progressRail}>
-      {[0, 1, 2, 3].map((dot) => (
-        <View key={dot} style={styles.progressDotWrap}>
-          {dot > 0 ? <View style={styles.progressLine} /> : null}
-          <View
-            style={[
-              styles.progressDot,
-              dot === 0 ? styles.progressDotActive : styles.progressDotInactive,
-            ]}
-          />
-        </View>
-      ))}
-    </View>
   );
 }
 
@@ -260,10 +217,10 @@ function OrnamentDivider({
 
 function JourneyRow({ compact = false }: { compact?: boolean }) {
   const steps = [
-    { label: "Revelation", active: false, icon: "book-open" },
-    { label: "Understand", active: false, icon: "geometry" },
-    { label: "Speak", active: true, icon: "microphone" },
-    { label: "Fluency", active: false, icon: "fire" },
+    { label: "Revelation", icon: "book-open" },
+    { label: "Understand", icon: "geometry" },
+    { label: "Speak", icon: "microphone" },
+    { label: "Fluency", icon: "fire" },
   ] as const;
 
   return (
@@ -282,12 +239,10 @@ function JourneyRow({ compact = false }: { compact?: boolean }) {
               style={[
                 styles.stepCircle,
                 compact ? styles.stepCircleCompact : null,
-                step.active
-                  ? styles.stepCircleActive
-                  : styles.stepCircleInactive,
+                styles.stepCircleInactive,
               ]}
             >
-              <JourneyIcon name={step.icon} active={step.active} />
+              <JourneyIcon name={step.icon} />
             </View>
             <Text
               style={[
@@ -306,16 +261,10 @@ function JourneyRow({ compact = false }: { compact?: boolean }) {
 
 function JourneyIcon({
   name,
-  active,
 }: {
   name: "book-open" | "geometry" | "microphone" | "fire";
-  active: boolean;
 }) {
-  const color = active
-    ? GOLD
-    : name === "fire"
-      ? WarshPalette.subtleBrown
-      : SAGE;
+  const color = SAGE;
 
   if (name === "book-open") {
     return <FontAwesome5 name="book-open" size={18} color={color} />;
@@ -409,11 +358,9 @@ const styles = StyleSheet.create({
     backgroundColor: CREAM,
     overflow: "hidden",
   },
-  scrollArea: {
+  scrollContent: {
     flex: 1,
     width: "100%",
-  },
-  scrollContent: {
     alignItems: "center",
     paddingTop: 31,
     paddingBottom: 24,
@@ -432,59 +379,25 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 38,
     flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-  },
-  progressRail: {
-    width: 121,
-    height: 16,
-    flexDirection: "row",
+    justifyContent: "flex-end",
     alignItems: "center",
-  },
-  progressDotWrap: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  progressLine: {
-    width: 31,
-    height: 1,
-    backgroundColor: GOLD,
-    opacity: 0.75,
-  },
-  progressDot: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
-  },
-  progressDotActive: {
-    backgroundColor: GOLD,
-    borderWidth: 1,
-    borderColor: GOLD_TEXT,
-  },
-  progressDotInactive: {
-    backgroundColor: CREAM,
-    borderWidth: 2,
-    borderColor: GOLD,
-  },
-  previewLabel: {
-    marginTop: 8,
-    fontFamily: "CormorantGaramond-SemiBold",
-    fontSize: 11,
-    lineHeight: 14,
-    letterSpacing: 3,
-    color: GOLD_TEXT,
   },
   skipButton: {
-    minWidth: 48,
-    minHeight: 40,
-    alignItems: "flex-end",
-    justifyContent: "flex-start",
+    minWidth: 66,
+    minHeight: 36,
+    paddingHorizontal: 14,
+    borderRadius: 18,
+    borderWidth: 1,
+    borderColor: WarshPalette.sage,
+    backgroundColor: WarshPalette.parchmentBg,
+    alignItems: "center",
+    justifyContent: "center",
   },
   skipText: {
-    fontFamily: "CormorantGaramond-Regular",
-    fontSize: 20,
-    lineHeight: 25,
-    color: GOLD_TEXT,
+    fontFamily: Fonts.semiBold,
+    fontSize: 14,
+    lineHeight: 20,
+    color: WarshPalette.ink,
   },
   brandSection: {
     alignItems: "center",
@@ -655,11 +568,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: INACTIVE_BORDER,
   },
-  stepCircleActive: {
-    backgroundColor: WarshPalette.white,
-    borderWidth: 2,
-    borderColor: GOLD,
-  },
   stepLabel: {
     marginTop: 6,
     fontFamily: "CormorantGaramond-Regular",
@@ -674,42 +582,10 @@ const styles = StyleSheet.create({
     lineHeight: 16,
   },
   cta: {
-    height: 56,
     marginTop: 8,
-    borderRadius: 16,
-    backgroundColor: NAVY,
-    borderWidth: 2,
-    borderColor: GOLD,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    shadowColor: NAVY,
-    shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.18,
-    shadowRadius: 18,
-    elevation: 8,
   },
   ctaCompact: {
-    height: 52,
     marginTop: 4,
-    borderRadius: 14,
-  },
-  ctaInnerBorder: {
-    position: "absolute",
-    inset: 4,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "rgba(212, 176, 106, 0.45)",
-  },
-  ctaText: {
-    marginRight: 20,
-    fontFamily: "CormorantGaramond-SemiBold",
-    lineHeight: 34,
-    color: GOLD_LIGHT,
-    letterSpacing: 0,
-  },
-  ctaPressed: {
-    transform: [{ scale: 0.985 }],
   },
   grainLayer: {
     ...StyleSheet.absoluteFillObject,
