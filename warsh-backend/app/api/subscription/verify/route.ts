@@ -33,11 +33,14 @@ export async function POST(request: Request) {
     user = await prisma.user.update({
       where: { id: userId },
       data: {
-        subscriptionStatus: "active",
+        // Persist the verified store state (active / canceled-but-in-period /
+        // in_grace) so the app renders the correct status — not a hard-coded "active".
+        subscriptionStatus: verifiedSubscription.storeState,
         // Store the purchased base plan ("monthly"/"yearly") when known so the app
         // can show which plan the user is on. Falls back to the product id (iOS /
         // unverified dev path). The RTDN webhook writes the same field on renewal.
         subscriptionProductId: verifiedSubscription.basePlanId ?? verifiedSubscription.productId,
+        // Real store expiry — never computed by adding a fixed interval.
         subscriptionActiveUntil: verifiedSubscription.activeUntil,
         lastPurchaseToken: purchaseToken ?? null,
       },

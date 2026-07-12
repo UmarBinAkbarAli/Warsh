@@ -22,12 +22,14 @@ import {
   connectIap,
   endIapConnection,
   finishIapTransaction,
+  getActiveSubscriptionToken,
   getAvailableIapPurchases,
   getIapDisplayPrice,
   getIapProductId,
   getSubscriptionProducts,
   isBillingSupportedEnvironment,
   isIapUnavailableError,
+  requestSubscriptionPlanChange,
   requestSubscriptionPurchase,
   type IapSubscription,
   type IapSubscriptionPurchase,
@@ -65,6 +67,14 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   const [restoring, setRestoring] = useState(false);
   const [trialDaysRemaining, setTrialDaysRemaining] = useState<number | null>(null);
   const [googlePlayVerificationReady, setGooglePlayVerificationReady] = useState<boolean | null>(null);
+  // Current subscription (from verified backend state) so we can mark the active
+  // plan and switch instead of creating a duplicate subscription.
+  const [currentBasePlan, setCurrentBasePlan] = useState<string | null>(null);
+  const [subscribedActive, setSubscribedActive] = useState(false);
+
+  // True when the in-flight billing action is a plan switch (vs a first purchase),
+  // so the success handler shows the right message.
+  const planChangeInFlightRef = useRef(false);
 
   // Keep the latest selected plan readable from inside listener callbacks (avoids stale closures).
   const selectedRef = useRef(selected);
@@ -98,8 +108,11 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     useCallback(() => {
       getSubscriptionStatus()
         .then((res) => {
-          setTrialDaysRemaining(res.data.data.trialDaysRemaining ?? null);
-          setGooglePlayVerificationReady(res.data.data.googlePlayVerificationReady ?? null);
+          const d = res.data.data;
+          setTrialDaysRemaining(d.trialDaysRemaining ?? null);
+          setGooglePlayVerificationReady(d.googlePlayVerificationReady ?? null);
+          setSubscribedActive(Boolean(d.subscriptionActive));
+          setCurrentBasePlan(d.subscriptionProductId ?? null);
         })
         .catch(() => {});
 
@@ -152,6 +165,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     }
     setPurchasing(true);
     purchaseInFlightRef.current = true;
+    planChangeInFlightRef.current = false;
     const productId = SUBSCRIPTION_PRODUCT_ID;
     const basePlanId = BASE_PLAN_IDS[selected];
     const product = products.find((item) => getIapProductId(item) === SUBSCRIPTION_PRODUCT_ID);
@@ -164,9 +178,38 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     }
   }
 
+  // Switches the existing subscription to the other base plan via Google Play's
+  // upgrade/downgrade flow (no duplicate subscription). Result arrives via the
+  // purchase listeners, same as a first purchase.
+  async function handleChangePlan() {
+    if (purchasing) return;
+    if (!currentPlanKey || selected === currentPlanKey) return;
+    setPurchasing(true);
+    purchaseInFlightRef.current = true;
+    planChangeInFlightRef.current = true;
+    const productId = SUBSCRIPTION_PRODUCT_ID;
+    const newBasePlanId = BASE_PLAN_IDS[selected];
+    const product = products.find((item) => getIapProductId(item) === SUBSCRIPTION_PRODUCT_ID);
+    try {
+      const oldToken = await getActiveSubscriptionToken(productId);
+      if (!oldToken) {
+        // No existing token found locally — fall back to a normal purchase so the
+        // user isn't stuck; Google will still reconcile to a single subscription.
+        planChangeInFlightRef.current = false;
+        await requestSubscriptionPurchase(productId, product, newBasePlanId);
+      } else {
+        await requestSubscriptionPlanChange(productId, product, newBasePlanId, oldToken);
+      }
+    } catch (err: any) {
+      handlePurchaseError(err);
+    }
+  }
+
   // Called by purchaseUpdatedListener once the purchase actually completes.
   async function handlePurchaseUpdate(purchase: IapSubscriptionPurchase) {
     purchaseInFlightRef.current = false;
+    const wasPlanChange = planChangeInFlightRef.current;
+    planChangeInFlightRef.current = false;
     try {
       const token = purchase?.purchaseToken;
       const receiptData = (purchase as { transactionReceipt?: string } | undefined)?.transactionReceipt;
@@ -180,9 +223,15 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       await finishIapTransaction(purchase, false);
       trackSubscriptionStarted(selectedRef.current);
       setPurchasing(false);
-      Alert.alert("Subscribed!", "JazakAllah khair. Welcome to Warsh.", [
-        { text: "Continue", onPress: () => router.replace("/(app)/(tabs)") },
-      ]);
+      if (wasPlanChange) {
+        Alert.alert("Plan updated", "Your subscription plan has been changed.", [
+          { text: "Done", onPress: () => router.replace("/(app)/manage-subscription") },
+        ]);
+      } else {
+        Alert.alert("Subscribed!", "JazakAllah khair. Welcome to Warsh.", [
+          { text: "Continue", onPress: () => router.replace("/(app)/(tabs)") },
+        ]);
+      }
     } catch (err: any) {
       setPurchasing(false);
       const code = err?.response?.data?.code ?? err?.code ?? "unknown";
@@ -204,6 +253,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   // Called by purchaseErrorListener (and when launching the flow throws).
   function handlePurchaseError(err: any) {
     purchaseInFlightRef.current = false;
+    planChangeInFlightRef.current = false;
     setPurchasing(false);
     const code = err?.code;
     if (code === "E_USER_CANCELLED" || code === "user-cancelled" || code === "USER_CANCELED" || code === "USER_CANCELLED") {
@@ -211,6 +261,13 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     }
     if (isIapUnavailableError(err)) {
       Alert.alert("Purchases unavailable", "In-app purchases are not available on this build.");
+      return;
+    }
+    if (code === "offer_unavailable") {
+      Alert.alert(
+        "Plan unavailable",
+        "This plan couldn't be loaded from Google Play just now. Please try again in a moment.",
+      );
       return;
     }
     if (code === "E_ALREADY_OWNED" || code === "already_owned" || code === "ALREADY_OWNED") {
@@ -297,6 +354,16 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   const trialCopy = trialDaysRemaining !== null && trialDaysRemaining > 0
     ? `Free trial ends in ${trialDaysRemaining} day${trialDaysRemaining !== 1 ? "s" : ""}.`
     : "Unlock the full Warsh experience.";
+
+  // Which plan key the user currently holds (verified backend state), for marking
+  // the "Current plan" and driving switch-vs-purchase.
+  const currentPlanKey: "monthly" | "annual" | null =
+    subscribedActive && currentBasePlan === "yearly" ? "annual"
+    : subscribedActive && currentBasePlan === "monthly" ? "monthly"
+    : null;
+  const selectedIsCurrent = currentPlanKey != null && selected === currentPlanKey;
+  const isSwitching = currentPlanKey != null && !selectedIsCurrent;
+  const ctaOnPress = isSwitching ? handleChangePlan : handlePurchase;
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
@@ -388,9 +455,15 @@ export default function PaywallScreen({ dismissable = true }: Props) {
               <Text style={styles.planPrice}>{getPriceLabel("annual")}</Text>
               <Text style={styles.planSub}>Billed annually</Text>
             </View>
-            <View style={styles.saveBadge}>
-              <Text style={styles.saveText}>Save 17%</Text>
-            </View>
+            {currentPlanKey === "annual" ? (
+              <View style={styles.currentBadge}>
+                <Text style={styles.currentText}>Current plan</Text>
+              </View>
+            ) : (
+              <View style={styles.saveBadge}>
+                <Text style={styles.saveText}>Save 17%</Text>
+              </View>
+            )}
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -405,6 +478,11 @@ export default function PaywallScreen({ dismissable = true }: Props) {
               <Text style={styles.planPrice}>{getPriceLabel("monthly")}</Text>
               <Text style={styles.planSub}>Billed monthly</Text>
             </View>
+            {currentPlanKey === "monthly" ? (
+              <View style={styles.currentBadge}>
+                <Text style={styles.currentText}>Current plan</Text>
+              </View>
+            ) : null}
           </TouchableOpacity>
         </View>
         )}
@@ -429,9 +507,9 @@ export default function PaywallScreen({ dismissable = true }: Props) {
         ) : (
           <>
             <TouchableOpacity
-              style={[styles.ctaBtn, (purchasing || !purchaseReady) ? styles.ctaBtnDisabled : null]}
-              onPress={handlePurchase}
-              disabled={purchasing || !purchaseReady}
+              style={[styles.ctaBtn, (purchasing || !purchaseReady || selectedIsCurrent) ? styles.ctaBtnDisabled : null]}
+              onPress={ctaOnPress}
+              disabled={purchasing || !purchaseReady || selectedIsCurrent}
               activeOpacity={0.85}
             >
               {purchasing
@@ -443,6 +521,10 @@ export default function PaywallScreen({ dismissable = true }: Props) {
                         ? "Checking purchase availability..."
                       : googlePlayVerificationReady === false
                         ? "Purchases temporarily unavailable"
+                      : selectedIsCurrent
+                        ? "Current plan"
+                      : isSwitching
+                        ? `Switch to ${selected === "annual" ? "yearly" : "monthly"} plan`
                         : trialDaysRemaining !== null && trialDaysRemaining > 0
                           ? `Try for free, then ${getPriceLabel(selected)}`
                           : `Subscribe for ${getPriceLabel(selected)}`}
@@ -647,6 +729,20 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.caption,
     fontWeight: "700",
     color: WarshPalette.white,
+  },
+  currentBadge: {
+    paddingHorizontal: Spacing.sm,
+    paddingVertical: 3,
+    borderRadius: Radii.full,
+    borderWidth: 1,
+    borderColor: WarshPalette.gold,
+    backgroundColor: WarshPalette.parchmentBg,
+  },
+  currentText: {
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.caption,
+    fontWeight: "700",
+    color: WarshPalette.gold,
   },
 
   // CTA

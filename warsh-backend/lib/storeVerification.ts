@@ -1,4 +1,9 @@
 import crypto from "crypto";
+import {
+  ACCESS_GRANTING_STORE_STATES,
+  mapGoogleSubscriptionState,
+  type StoreSubscriptionState,
+} from "./subscription";
 
 const VALID_PRODUCT_IDS = new Set(["warsh_premium"]);
 const GOOGLE_ANDROID_PUBLISHER_SCOPE = "https://www.googleapis.com/auth/androidpublisher";
@@ -20,9 +25,15 @@ export interface VerifiedStoreSubscription {
   // The purchased base plan ("monthly" / "yearly") when the store exposes it.
   // On Android this is subscriptionsv2 lineItems[].productId; undefined on iOS.
   basePlanId?: string;
+  // Real expiry / next-billing instant from the store — never computed locally.
   activeUntil: Date;
   platform: StorePlatform;
+  // Raw store state string (e.g. "SUBSCRIPTION_STATE_ACTIVE").
   storeStatus: string;
+  // Normalized state persisted into User.subscriptionStatus.
+  storeState: StoreSubscriptionState;
+  // Whether the store will auto-renew at activeUntil (false once cancelled).
+  autoRenew: boolean;
 }
 
 export class StoreVerificationError extends Error {
@@ -46,6 +57,7 @@ interface GoogleServiceAccountKey {
 interface GoogleSubscriptionLineItem {
   productId?: string;
   expiryTime?: string;
+  autoRenewingPlan?: { autoRenewEnabled?: boolean };
 }
 
 interface GoogleSubscriptionPurchase {
@@ -153,13 +165,63 @@ async function verifyGooglePlaySubscription(input: VerifySubscriptionInput): Pro
       activeUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
       platform: "android",
       storeStatus: "SUBSCRIPTION_STATE_ACTIVE",
+      storeState: "active",
+      autoRenew: true,
     };
   }
 
+  const snapshot = await fetchGooglePlaySubscriptionSnapshot(packageName, token);
+
+  // Grant/refresh access for any state Google still considers entitled
+  // (active, cancelled-but-in-period, grace period) with a future expiry.
+  const hasAccess =
+    ACCESS_GRANTING_STORE_STATES.has(snapshot.storeState) &&
+    snapshot.activeUntil != null &&
+    snapshot.activeUntil > new Date();
+
+  if (!hasAccess) {
+    throw new StoreVerificationError(
+      "Google Play subscription is not active.",
+      402,
+      "subscription_inactive",
+    );
+  }
+
+  return {
+    productId: input.productId,
+    basePlanId: snapshot.basePlanId,
+    activeUntil: snapshot.activeUntil as Date,
+    platform: "android",
+    storeStatus: snapshot.storeStatus,
+    storeState: snapshot.storeState,
+    autoRenew: snapshot.autoRenew,
+  };
+}
+
+export interface GoogleSubscriptionSnapshot {
+  storeState: StoreSubscriptionState;
+  storeStatus: string;
+  basePlanId?: string;
+  autoRenew: boolean;
+  // Real expiry from the store's latest line item; null when none is present.
+  activeUntil: Date | null;
+}
+
+/**
+ * Fetches and normalizes the current state of a Google Play subscription token via
+ * `subscriptionsv2`. Throws StoreVerificationError on config/HTTP failure but does
+ * NOT throw for inactive states — callers decide how to treat them (the verify
+ * endpoint rejects; the RTDN webhook persists them). This is the single source of
+ * truth for plan, expiry, auto-renew and state.
+ */
+export async function fetchGooglePlaySubscriptionSnapshot(
+  packageName: string,
+  purchaseToken: string,
+): Promise<GoogleSubscriptionSnapshot> {
   const accessToken = await getGoogleAccessToken();
   const url =
     `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodeURIComponent(packageName)}` +
-    `/purchases/subscriptionsv2/tokens/${encodeURIComponent(token)}`;
+    `/purchases/subscriptionsv2/tokens/${encodeURIComponent(purchaseToken)}`;
   const response = await fetch(url, {
     method: "GET",
     headers: { Authorization: `Bearer ${accessToken}`, Accept: "application/json" },
@@ -174,28 +236,23 @@ async function verifyGooglePlaySubscription(input: VerifySubscriptionInput): Pro
   }
 
   const purchase = (await response.json()) as GoogleSubscriptionPurchase;
-  if (purchase.subscriptionState !== "SUBSCRIPTION_STATE_ACTIVE") {
-    throw new StoreVerificationError("Google Play subscription is not active.", 402, "subscription_inactive");
-  }
+  const storeState = mapGoogleSubscriptionState(purchase.subscriptionState);
 
   // NOTE: subscriptionsv2 lineItems[].productId is the BASE PLAN ID ("monthly"/"yearly"),
-  // not the subscription product ID ("warsh_premium"). Do not filter by productId here.
-  const matchingLineItem = purchase.lineItems
+  // not the subscription product ID ("warsh_premium"). The expiry is the store's real
+  // next-billing / access-end instant — never computed by adding a fixed interval.
+  const latestLineItem = purchase.lineItems
     ?.filter((item) => item.expiryTime)
     .map((item) => ({ ...item, expiryDate: new Date(item.expiryTime as string) }))
     .filter((item) => Number.isFinite(item.expiryDate.getTime()))
     .sort((a, b) => b.expiryDate.getTime() - a.expiryDate.getTime())[0];
 
-  if (!matchingLineItem || matchingLineItem.expiryDate <= new Date()) {
-    throw new StoreVerificationError("Google Play subscription is expired or does not match this product.", 402, "subscription_inactive");
-  }
-
   return {
-    productId: input.productId,
-    basePlanId: matchingLineItem.productId,
-    activeUntil: matchingLineItem.expiryDate,
-    platform: "android",
-    storeStatus: purchase.subscriptionState,
+    storeState,
+    storeStatus: purchase.subscriptionState ?? "SUBSCRIPTION_STATE_UNSPECIFIED",
+    basePlanId: latestLineItem?.productId,
+    autoRenew: latestLineItem?.autoRenewingPlan?.autoRenewEnabled ?? (storeState === "active"),
+    activeUntil: latestLineItem?.expiryDate ?? null,
   };
 }
 
@@ -309,6 +366,10 @@ async function verifyAppleSubscription(input: VerifySubscriptionInput): Promise<
     activeUntil: matchingTransaction.expiryDate,
     platform: "ios",
     storeStatus: String(result.status),
+    // Apple's /verifyReceipt does not expose auto-renew state without parsing
+    // pending_renewal_info; treat a non-cancelled, unexpired receipt as active.
+    storeState: "active",
+    autoRenew: true,
   };
 }
 

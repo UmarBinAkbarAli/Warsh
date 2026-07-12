@@ -1,7 +1,8 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
+  AppState,
   Linking,
   Platform,
   ScrollView,
@@ -20,12 +21,19 @@ import { useT } from "@i18n/index";
 
 const SUBSCRIPTION_PRODUCT_ID = "warsh_premium";
 
-// Deep link to this subscription's page in the Play Store (cancel / change plan).
+// Deep link to THIS subscription's management page in the Play Store.
 const PLAY_SUBSCRIPTION_URL =
   `https://play.google.com/store/account/subscriptions?sku=${SUBSCRIPTION_PRODUCT_ID}&package=com.warsh.app`;
 
+// Normalized store states persisted by the backend (source of truth).
+type StoreState =
+  | "active" | "canceled" | "in_grace" | "on_hold" | "paused" | "expired" | "pending";
+
 interface SubState {
   subscriptionStatus: string;
+  storeState: StoreState | null;
+  willCancel: boolean;
+  inGracePeriod: boolean;
   trialDaysRemaining: number;
   trialActive: boolean;
   subscriptionActive: boolean;
@@ -46,7 +54,6 @@ export default function ManageSubscriptionScreen() {
   const [error, setError] = useState(false);
 
   const load = useCallback(async () => {
-    setLoading(true);
     setError(false);
     try {
       const res = await getSubscriptionStatus();
@@ -58,12 +65,22 @@ export default function ManageSubscriptionScreen() {
     }
   }, []);
 
+  // Refresh + verify whenever the screen gains focus.
   useFocusEffect(
     useCallback(() => {
       void load();
       return undefined;
     }, [load])
   );
+
+  // Refresh when the app returns to the foreground — e.g. after the user manages
+  // or cancels the subscription over in the Google Play app.
+  useEffect(() => {
+    const sub = AppState.addEventListener("change", (next) => {
+      if (next === "active") void load();
+    });
+    return () => sub.remove();
+  }, [load]);
 
   function planLabel(productId: string | null) {
     switch (productId) {
@@ -95,24 +112,82 @@ export default function ManageSubscriptionScreen() {
 
   const isAndroid = Platform.OS === "android";
 
-  // Derive the display model
+  // Build the view model from verified backend state (never local guesses).
+  const storeState = state?.storeState ?? null;
   const subscriptionActive = state?.subscriptionActive ?? false;
   const trialActive = state?.trialActive ?? false;
-  const activeUntil = formatDate(state?.subscriptionActiveUntil ?? null);
+  const date = formatDate(state?.subscriptionActiveUntil ?? null);
 
-  let statusLabel = t("manageSub.statusNone");
-  let statusTone: "active" | "trial" | "inactive" = "inactive";
-  if (subscriptionActive) {
-    statusLabel = t("manageSub.statusActive");
-    statusTone = "active";
-  } else if (trialActive) {
-    statusLabel = t("manageSub.statusTrial");
-    statusTone = "trial";
+  type Tone = "good" | "warn" | "muted";
+  let statusKey = "manageSub.statusNone";
+  let tone: Tone = "muted";
+  let planName: string | null = null;
+  let dateLine: string | null = null;
+  let bodyLine: string | null = null;
+  let showManage = false; // "Manage or cancel" (has a store subscription)
+  let showChangePlan = false;
+  let showSeePlans = false;
+
+  if (trialActive) {
+    statusKey = "manageSub.statusTrial";
+    tone = "warn";
+    planName = t("manageSub.freeTrial");
+    dateLine = t("manageSub.trialDaysLeft", {
+      count: state?.trialDaysRemaining ?? 0,
+      suffix: (state?.trialDaysRemaining ?? 0) !== 1 ? "s" : "",
+    });
+    showSeePlans = true;
+  } else if (subscriptionActive) {
+    // active / cancelled-but-in-period / grace period — all still have access.
+    planName = planLabel(state?.subscriptionProductId ?? null);
+    showManage = isAndroid;
+    showChangePlan = true;
+    if (state?.inGracePeriod) {
+      statusKey = "manageSub.statusGrace";
+      tone = "warn";
+      dateLine = date ? t("manageSub.graceUntil", { date }) : null;
+      bodyLine = t("manageSub.graceBody");
+    } else if (state?.willCancel) {
+      statusKey = "manageSub.statusActive";
+      tone = "good";
+      dateLine = date ? t("manageSub.cancelsOn", { date }) : null;
+      bodyLine = t("manageSub.cancelBody");
+    } else {
+      statusKey = "manageSub.statusActive";
+      tone = "good";
+      dateLine = date ? t("manageSub.renewsOn", { date }) : null;
+      bodyLine = t("manageSub.manageHint");
+    }
+  } else if (storeState === "on_hold") {
+    statusKey = "manageSub.statusOnHold";
+    tone = "warn";
+    planName = planLabel(state?.subscriptionProductId ?? null);
+    bodyLine = t("manageSub.onHoldBody");
+    showManage = isAndroid;
+  } else if (storeState === "paused") {
+    statusKey = "manageSub.statusPaused";
+    tone = "warn";
+    planName = planLabel(state?.subscriptionProductId ?? null);
+    bodyLine = t("manageSub.pausedBody");
+    showManage = isAndroid;
+  } else if (storeState === "pending") {
+    statusKey = "manageSub.statusPending";
+    tone = "warn";
+    planName = planLabel(state?.subscriptionProductId ?? null);
+    bodyLine = t("manageSub.pendingBody");
+    showManage = isAndroid;
+  } else {
+    // expired / never subscribed
+    statusKey = "manageSub.statusNone";
+    tone = "muted";
+    planName = t("manageSub.noPlan");
+    bodyLine = t("manageSub.noPlanSub");
+    showSeePlans = true;
   }
 
   const toneColor =
-    statusTone === "active" ? WarshPalette.sage
-    : statusTone === "trial" ? WarshPalette.gold
+    tone === "good" ? WarshPalette.sage
+    : tone === "warn" ? WarshPalette.gold
     : WarshPalette.subtleBrown;
 
   return (
@@ -132,7 +207,7 @@ export default function ManageSubscriptionScreen() {
       ) : error ? (
         <View style={styles.centered}>
           <Text style={styles.errorText}>{t("manageSub.loadError")}</Text>
-          <TouchableOpacity onPress={load} style={styles.retryBtn}>
+          <TouchableOpacity onPress={() => { setLoading(true); void load(); }} style={styles.retryBtn}>
             <Text style={styles.retryText}>{t("common.retry")}</Text>
           </TouchableOpacity>
         </View>
@@ -142,33 +217,11 @@ export default function ManageSubscriptionScreen() {
           <View style={styles.statusCard}>
             <View style={styles.statusRow}>
               <View style={[styles.statusDot, { backgroundColor: toneColor }]} />
-              <Text style={[styles.statusLabel, { color: toneColor }]}>{statusLabel}</Text>
+              <Text style={[styles.statusLabel, { color: toneColor }]}>{t(statusKey)}</Text>
             </View>
-
-            {subscriptionActive ? (
-              <>
-                <Text style={styles.planName}>{planLabel(state?.subscriptionProductId ?? null)}</Text>
-                {activeUntil ? (
-                  <Text style={styles.planMeta}>{t("manageSub.activeUntil", { date: activeUntil })}</Text>
-                ) : null}
-                <Text style={styles.planHint}>{t("manageSub.manageHint")}</Text>
-              </>
-            ) : trialActive ? (
-              <>
-                <Text style={styles.planName}>{t("manageSub.freeTrial")}</Text>
-                <Text style={styles.planMeta}>
-                  {t("manageSub.trialDaysLeft", {
-                    count: state?.trialDaysRemaining ?? 0,
-                    suffix: (state?.trialDaysRemaining ?? 0) !== 1 ? "s" : "",
-                  })}
-                </Text>
-              </>
-            ) : (
-              <>
-                <Text style={styles.planName}>{t("manageSub.noPlan")}</Text>
-                <Text style={styles.planMeta}>{t("manageSub.noPlanSub")}</Text>
-              </>
-            )}
+            {planName ? <Text style={styles.planName}>{planName}</Text> : null}
+            {dateLine ? <Text style={styles.planMeta}>{dateLine}</Text> : null}
+            {bodyLine ? <Text style={styles.planHint}>{bodyLine}</Text> : null}
           </View>
 
           {/* Noor balance, if any */}
@@ -183,20 +236,20 @@ export default function ManageSubscriptionScreen() {
 
           {/* Actions */}
           <View style={styles.actions}>
-            {!subscriptionActive ? (
+            {showSeePlans ? (
               <TouchableOpacity style={styles.primaryBtn} onPress={() => router.push("/(app)/paywall")}>
                 <Text style={styles.primaryBtnText}>{t("manageSub.seePlans")}</Text>
               </TouchableOpacity>
             ) : null}
 
-            {isAndroid ? (
+            {showManage ? (
               <TouchableOpacity style={styles.secondaryBtn} onPress={openPlayStore}>
                 <Ionicons name="logo-google-playstore" size={16} color={WarshPalette.ink} />
-                <Text style={styles.secondaryBtnText}>{t("manageSub.manageInPlay")}</Text>
+                <Text style={styles.secondaryBtnText}>{t("manageSub.manageOrCancel")}</Text>
               </TouchableOpacity>
             ) : null}
 
-            {subscriptionActive ? (
+            {showChangePlan ? (
               <TouchableOpacity style={styles.linkBtn} onPress={() => router.push("/(app)/paywall")}>
                 <Text style={styles.linkText}>{t("manageSub.changePlan")}</Text>
               </TouchableOpacity>

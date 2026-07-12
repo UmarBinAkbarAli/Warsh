@@ -120,15 +120,29 @@ export function getIapDisplayPrice(product: IapSubscription) {
 function getAndroidSubscriptionOffer(product: IapSubscription | undefined, basePlanId?: string) {
   if (!product) return undefined;
   const offers = ((product as any)?.subscriptionOffers ?? []) as Array<any>;
-  // Prefer the offer matching the requested base plan; fall back to first available.
   // NOTE: in react-native-iap v14 the field is `basePlanIdAndroid`, NOT `basePlanId`.
-  // Using the wrong name made this match always fail and silently sent the FIRST
-  // offer (monthly), so the Play sheet always showed the monthly price.
+  // When a base plan is requested we ONLY use an offer for that exact base plan and
+  // never substitute another plan's offer. The old fallback to the first offer
+  // silently subscribed the user to monthly when they picked yearly — the root cause
+  // of "yearly gives only one month of access".
   const offer = basePlanId
-    ? (offers.find((o) => o.basePlanIdAndroid === basePlanId && o.offerTokenAndroid) ?? offers.find((o) => o.offerTokenAndroid))
+    ? offers.find((o) => o.basePlanIdAndroid === basePlanId && o.offerTokenAndroid)
     : offers.find((o) => o.offerTokenAndroid);
   if (!offer?.offerTokenAndroid) return undefined;
   return [{ sku: product.id, offerToken: offer.offerTokenAndroid }];
+}
+
+// Google Play Billing numeric replacement mode. WITH_TIME_PRORATION switches the
+// plan immediately and credits unused time; it is valid for both upgrades and
+// downgrades and always emits a completed transaction we can verify.
+const REPLACEMENT_MODE_WITH_TIME_PRORATION = 1;
+
+export class IapOfferUnavailableError extends Error {
+  code = "offer_unavailable";
+  constructor(basePlanId: string) {
+    super(`No Google Play offer is available for the "${basePlanId}" plan.`);
+    this.name = "IapOfferUnavailableError";
+  }
 }
 
 /**
@@ -184,13 +198,59 @@ export async function requestSubscriptionPurchase(productId: string, product?: I
     throw new IapUnavailableError();
   }
 
+  const subscriptionOffers = getAndroidSubscriptionOffer(product, basePlanId);
+  // Never launch a base-plan purchase without the matching offer token — that is
+  // what let a "yearly" tap fall through to the monthly plan.
+  if (Platform.OS === "android" && basePlanId && !subscriptionOffers) {
+    throw new IapOfferUnavailableError(basePlanId);
+  }
+
   return IAP.requestPurchase({
     type: "subs",
     request: {
       apple: { sku: productId },
       google: {
         skus: [productId],
-        subscriptionOffers: getAndroidSubscriptionOffer(product, basePlanId),
+        subscriptionOffers,
+      },
+    },
+  });
+}
+
+/**
+ * Switches an existing subscription to a different base plan through Google Play's
+ * upgrade/downgrade replacement flow (does NOT create a second subscription).
+ * `oldPurchaseToken` is the token of the currently-active subscription.
+ */
+export async function requestSubscriptionPlanChange(
+  productId: string,
+  product: IapSubscription | undefined,
+  newBasePlanId: string,
+  oldPurchaseToken: string,
+) {
+  const available = await connectIap();
+  const IAP = await getIapModule();
+
+  if (!available || !IAP) {
+    throw new IapUnavailableError();
+  }
+
+  const subscriptionOffers = getAndroidSubscriptionOffer(product, newBasePlanId);
+  if (!subscriptionOffers) {
+    throw new IapOfferUnavailableError(newBasePlanId);
+  }
+
+  return IAP.requestPurchase({
+    type: "subs",
+    request: {
+      apple: { sku: productId },
+      google: {
+        skus: [productId],
+        subscriptionOffers,
+        // Passing the existing purchase token turns this into a plan change on the
+        // same subscription rather than a new, duplicate subscription.
+        purchaseToken: oldPurchaseToken,
+        replacementMode: REPLACEMENT_MODE_WITH_TIME_PRORATION,
       },
     },
   });
@@ -205,6 +265,16 @@ export async function getAvailableIapPurchases() {
   }
 
   return IAP.getAvailablePurchases();
+}
+
+/**
+ * Returns the purchase token of the currently-active subscription for `productId`,
+ * needed to drive an upgrade/downgrade. Undefined if none is found.
+ */
+export async function getActiveSubscriptionToken(productId: string): Promise<string | undefined> {
+  const purchases = await getAvailableIapPurchases();
+  const match = purchases.find((p) => p.productId === productId);
+  return (match as { purchaseToken?: string } | undefined)?.purchaseToken ?? undefined;
 }
 
 export async function requestConsumablePurchase(productId: string) {

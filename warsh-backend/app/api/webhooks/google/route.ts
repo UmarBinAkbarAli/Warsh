@@ -1,16 +1,9 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
+import { fetchGooglePlaySubscriptionSnapshot } from "../../../../lib/storeVerification";
 
-// Google Play subscription notification types
-const SUBSCRIPTION_RENEWED = 2;
-const SUBSCRIPTION_CANCELED = 3; // user canceled; still active until period end
-const SUBSCRIPTION_ON_HOLD = 5;  // payment failed, grace period
-const SUBSCRIPTION_GRACE_PERIOD = 6;
-const SUBSCRIPTION_REVOKED = 12; // refund — revoke immediately
-const SUBSCRIPTION_EXPIRED = 13;
-
-const ACTIVE_NOTIFICATION_TYPES = new Set([1, 2, 4, 7]); // recovered, renewed, purchased, restarted
-const EXPIRED_NOTIFICATION_TYPES = new Set([SUBSCRIPTION_REVOKED, SUBSCRIPTION_EXPIRED]);
+// Refund/chargeback — cut access immediately rather than trusting snapshot timing.
+const SUBSCRIPTION_REVOKED = 12;
 
 // One-time product notification types
 const ONE_TIME_PURCHASED = 1;
@@ -105,66 +98,45 @@ async function handleSubscriptionNotification(notif: SubscriptionNotification) {
 
   const user = await prisma.user.findFirst({
     where: { lastPurchaseToken: purchaseToken },
-    select: { id: true, subscriptionStatus: true },
+    select: { id: true },
   });
 
   if (!user) return;
 
-  if (ACTIVE_NOTIFICATION_TYPES.has(notificationType)) {
-    // Renewal/recovery — re-verify with Google to get the new expiry
-    const accessToken = await getGoogleAccessToken();
-    if (!accessToken) return;
-
-    const packageName = process.env.GOOGLE_PLAY_PACKAGE_NAME?.trim();
-    if (!packageName) return;
-
-    const url =
-      `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodeURIComponent(packageName)}` +
-      `/purchases/subscriptionsv2/tokens/${encodeURIComponent(purchaseToken)}`;
-
-    const res = await fetch(url, {
-      headers: { Authorization: `Bearer ${accessToken}`, Accept: "application/json" },
-    });
-
-    if (!res.ok) return;
-
-    const purchase = await res.json() as {
-      subscriptionState?: string;
-      lineItems?: Array<{ productId?: string; expiryTime?: string }>;
-    };
-
-    // subscriptionsv2 lineItems[].productId is the BASE PLAN ID — do not filter by subscription ID
-    const latestItem = purchase.lineItems
-      ?.filter((item) => item.expiryTime)
-      .map((item) => ({ ...item, expiryDate: new Date(item.expiryTime as string) }))
-      .filter((item) => Number.isFinite(item.expiryDate.getTime()))
-      .sort((a, b) => b.expiryDate.getTime() - a.expiryDate.getTime())[0];
-
-    if (!latestItem) return;
-
+  // Refund / revocation: cut access immediately, regardless of what a re-query
+  // might momentarily still report.
+  if (notificationType === SUBSCRIPTION_REVOKED) {
     await prisma.user.update({
       where: { id: user.id },
-      data: {
-        subscriptionStatus: "active",
-        subscriptionActiveUntil: latestItem.expiryDate,
-        subscriptionProductId: latestItem.productId ?? undefined,
-      },
+      data: { subscriptionStatus: "expired", subscriptionActiveUntil: new Date() },
     });
-
-  } else if (notificationType === SUBSCRIPTION_CANCELED) {
-    // User canceled — retain access until period end, just flag auto-renew off
-    // No action needed server-side; expiry will trigger naturally via RTDN EXPIRED
-  } else if (notificationType === SUBSCRIPTION_ON_HOLD || notificationType === SUBSCRIPTION_GRACE_PERIOD) {
-    // Payment failed — keep status as active during grace period; let EXPIRED handle the rest
-  } else if (EXPIRED_NOTIFICATION_TYPES.has(notificationType)) {
-    await prisma.user.update({
-      where: { id: user.id },
-      data: {
-        subscriptionStatus: notificationType === SUBSCRIPTION_REVOKED ? "canceled" : "expired",
-        subscriptionActiveUntil: notificationType === SUBSCRIPTION_REVOKED ? new Date() : undefined,
-      },
-    });
+    return;
   }
+
+  const packageName = process.env.GOOGLE_PLAY_PACKAGE_NAME?.trim();
+  if (!packageName) return;
+
+  // For every other event (renewed, cancelled, grace, on-hold, paused, expired,
+  // recovered, restarted, purchased), re-verify with Google and persist the
+  // authoritative snapshot. Google is the source of truth: the normalized state,
+  // the real expiry, and the base plan all come from the store — never inferred
+  // from the notification type.
+  let snapshot;
+  try {
+    snapshot = await fetchGooglePlaySubscriptionSnapshot(packageName, purchaseToken);
+  } catch (err) {
+    console.warn("[rtdn] subscription snapshot fetch failed:", (err as Error)?.message ?? err);
+    return;
+  }
+
+  await prisma.user.update({
+    where: { id: user.id },
+    data: {
+      subscriptionStatus: snapshot.storeState,
+      subscriptionActiveUntil: snapshot.activeUntil ?? undefined,
+      subscriptionProductId: snapshot.basePlanId ?? undefined,
+    },
+  });
 }
 
 async function handleOneTimeProductNotification(notif: OneTimeProductNotification) {
