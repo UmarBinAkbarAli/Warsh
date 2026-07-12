@@ -462,7 +462,7 @@ export default function SettingsScreen() {
             icon="card-outline"
             label={t("settings.manageSubscription")}
             sublabel={t("settings.manageSubscriptionSub")}
-            onPress={() => router.push("/(app)/paywall")}
+            onPress={() => router.push("/(app)/manage-subscription")}
             showChevron
           />
           <View style={styles.divider} />

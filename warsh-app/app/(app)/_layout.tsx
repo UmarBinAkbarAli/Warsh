@@ -103,6 +103,7 @@ export default function AppLayout() {
       <Stack.Screen name="vocabulary/word/[wordId]" />
       <Stack.Screen name="vocabulary/review" />
       <Stack.Screen name="settings" />
+      <Stack.Screen name="manage-subscription" />
       <Stack.Screen name="paywall" />
       <Stack.Screen name="tadabbur" />
       <Stack.Screen name="milestones" />

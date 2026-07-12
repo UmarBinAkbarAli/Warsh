@@ -34,7 +34,10 @@ export async function POST(request: Request) {
       where: { id: userId },
       data: {
         subscriptionStatus: "active",
-        subscriptionProductId: verifiedSubscription.productId,
+        // Store the purchased base plan ("monthly"/"yearly") when known so the app
+        // can show which plan the user is on. Falls back to the product id (iOS /
+        // unverified dev path). The RTDN webhook writes the same field on renewal.
+        subscriptionProductId: verifiedSubscription.basePlanId ?? verifiedSubscription.productId,
         subscriptionActiveUntil: verifiedSubscription.activeUntil,
         lastPurchaseToken: purchaseToken ?? null,
       },

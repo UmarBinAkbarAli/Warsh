@@ -65,6 +65,18 @@ export default function ProfileScreen() {
       })
     : null;
 
+  const sub = data?.subscription ?? null;
+  const planKey: string | null = sub?.subscriptionProductId ?? null;
+  const planName =
+    planKey === "yearly" ? t("manageSub.planYearly")
+    : planKey === "monthly" ? t("manageSub.planMonthly")
+    : t("manageSub.planPremium");
+  const subBadge = sub?.subscriptionActive
+    ? { label: planName, tone: Theme.WarshPalette.sage }
+    : sub?.trialActive
+      ? { label: t("manageSub.statusTrial"), tone: Theme.WarshPalette.gold }
+      : null;
+
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
       <View style={headerCardStyle}>
@@ -87,6 +99,19 @@ export default function ProfileScreen() {
           </Pressable>
         </View>
         <Text style={styles.greeting}>{t("profile.greeting")}</Text>
+        {subBadge ? (
+          <Pressable
+            style={[styles.subBadge, { borderColor: subBadge.tone }]}
+            onPress={() => router.push("/(app)/manage-subscription")}
+            hitSlop={6}
+          >
+            <Ionicons name="ribbon-outline" size={13} color={subBadge.tone} />
+            <Text style={[styles.subBadgeText, { color: subBadge.tone }]} numberOfLines={1}>
+              {subBadge.label}
+            </Text>
+            <Ionicons name="chevron-forward" size={12} color={subBadge.tone} />
+          </Pressable>
+        ) : null}
       </View>
 
       {error ? <Text style={styles.errorText}>{error}</Text> : null}
@@ -292,6 +317,22 @@ const styles = StyleSheet.create({
     fontSize: Theme.FontSizes.caption,
     fontStyle: "italic",
     lineHeight: Theme.LineHeights.caption,
+  },
+  subBadge: {
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "flex-start",
+    gap: 4,
+    marginTop: Theme.Spacing.sm,
+    paddingVertical: 4,
+    paddingHorizontal: Theme.Spacing.sm,
+    borderRadius: Theme.Radii.full,
+    borderWidth: 1,
+  },
+  subBadgeText: {
+    fontFamily: Theme.Fonts.semiBold,
+    fontSize: Theme.FontSizes.label,
+    fontWeight: "600",
   },
   errorText: {
     marginHorizontal: Theme.Spacing.xl,

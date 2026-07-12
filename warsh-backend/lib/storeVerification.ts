@@ -17,6 +17,9 @@ interface VerifySubscriptionInput {
 
 export interface VerifiedStoreSubscription {
   productId: string;
+  // The purchased base plan ("monthly" / "yearly") when the store exposes it.
+  // On Android this is subscriptionsv2 lineItems[].productId; undefined on iOS.
+  basePlanId?: string;
   activeUntil: Date;
   platform: StorePlatform;
   storeStatus: string;
@@ -189,6 +192,7 @@ async function verifyGooglePlaySubscription(input: VerifySubscriptionInput): Pro
 
   return {
     productId: input.productId,
+    basePlanId: matchingLineItem.productId,
     activeUntil: matchingLineItem.expiryDate,
     platform: "android",
     storeStatus: purchase.subscriptionState,
