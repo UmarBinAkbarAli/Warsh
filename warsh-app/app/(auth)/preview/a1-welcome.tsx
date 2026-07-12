@@ -36,21 +36,24 @@ export default function PreviewA1Welcome() {
   const router = useRouter();
   const { width, height } = useWindowDimensions();
   const frameWidth = Math.min(width, 412);
-  const compactHeight = height < 900;
-  const tightHeight = height < 760;
+  // Scale the whole composition continuously from the available viewport.
+  // 920 keeps the established mobile proportions at common phone heights
+  // while leaving enough room for the journey row + CTA in short browsers.
+  const viewportScale = Math.max(0.55, Math.min(1, height / 920));
+  const compactHeight = viewportScale < 0.94;
   const horizontalGutter = frameWidth < 380 ? 48 : 56;
   const contentWidth = Math.max(0, frameWidth - horizontalGutter);
   const heroWidth = Math.min(
-    tightHeight ? 264 : compactHeight ? 300 : 328,
+    Math.round(328 * viewportScale),
     frameWidth - horizontalGutter,
   );
   const headlineSize = Math.min(
-    compactHeight ? 41 : 48,
-    Math.max(36, heroWidth * 0.128),
+    48,
+    Math.max(28, heroWidth * 0.128),
   );
-  const headlineLineHeight = headlineSize + (compactHeight ? 3 : 5);
-  const descriptionSize = compactHeight ? 18 : 20;
-  const descriptionLineHeight = compactHeight ? 22 : 24;
+  const headlineLineHeight = headlineSize + 3;
+  const descriptionSize = Math.max(14, Math.round(20 * viewportScale));
+  const descriptionLineHeight = Math.max(18, Math.round(24 * viewportScale));
 
   return (
     <SafeAreaView edges={["top"]} style={styles.safeArea}>
@@ -65,8 +68,10 @@ export default function PreviewA1Welcome() {
         <View
           style={[
             styles.scrollContent,
-            compactHeight ? styles.scrollContentCompact : null,
-            tightHeight ? styles.scrollContentTight : null,
+            {
+              paddingTop: Math.max(8, Math.round(31 * viewportScale)),
+              paddingBottom: Math.max(8, Math.round(24 * viewportScale)),
+            },
           ]}
         >
           <View style={[styles.screenContent, { width: contentWidth }]}>
@@ -84,21 +89,33 @@ export default function PreviewA1Welcome() {
             <View
               style={[
                 styles.brandSection,
-                compactHeight ? styles.brandSectionCompact : null,
+                {
+                  height: Math.round(144 * viewportScale),
+                  marginTop: viewportScale < 0.8 ? -4 : 2,
+                },
               ]}
             >
               <Image
                 source={LOGO_IMAGE}
                 style={[
                   styles.arabicLogo,
-                  compactHeight ? styles.arabicLogoCompact : null,
+                  {
+                    width: Math.round(170 * viewportScale),
+                    height: Math.round(98 * viewportScale),
+                  },
                 ]}
                 resizeMode="contain"
               />
               <Text
                 style={[
                   styles.wordmark,
-                  compactHeight ? styles.wordmarkCompact : null,
+                  {
+                    marginTop: Math.round(-8 * viewportScale),
+                    fontSize: Math.max(18, Math.round(27 * viewportScale)),
+                    lineHeight: Math.max(21, Math.round(30 * viewportScale)),
+                    letterSpacing: Math.max(7, Math.round(12 * viewportScale)),
+                    paddingLeft: Math.max(7, Math.round(12 * viewportScale)),
+                  },
                 ]}
               >
                 WARSH
@@ -125,8 +142,10 @@ export default function PreviewA1Welcome() {
             <View
               style={[
                 styles.headlineBlock,
-                compactHeight ? styles.headlineBlockCompact : null,
-                { width: heroWidth },
+                {
+                  width: heroWidth,
+                  marginTop: Math.max(6, Math.round(20 * viewportScale)),
+                },
               ]}
             >
               <Text
@@ -156,6 +175,9 @@ export default function PreviewA1Welcome() {
             <OrnamentDivider width={98} compact />
 
             <Text
+              numberOfLines={3}
+              adjustsFontSizeToFit
+              minimumFontScale={0.78}
               style={[
                 styles.description,
                 {
@@ -169,7 +191,7 @@ export default function PreviewA1Welcome() {
               naturally, and build confidence one lesson at a time.
             </Text>
 
-            <JourneyRow compact={compactHeight} />
+            <JourneyRow compact={compactHeight} scale={viewportScale} />
 
             <BrandButton
               title="Begin the Journey"
@@ -215,7 +237,13 @@ function OrnamentDivider({
   );
 }
 
-function JourneyRow({ compact = false }: { compact?: boolean }) {
+function JourneyRow({
+  compact = false,
+  scale = 1,
+}: {
+  compact?: boolean;
+  scale?: number;
+}) {
   const steps = [
     { label: "Revelation", icon: "book-open" },
     { label: "Understand", icon: "geometry" },
@@ -224,7 +252,13 @@ function JourneyRow({ compact = false }: { compact?: boolean }) {
   ] as const;
 
   return (
-    <View style={[styles.journey, compact ? styles.journeyCompact : null]}>
+    <View
+      style={[
+        styles.journey,
+        compact ? styles.journeyCompact : null,
+        { marginTop: Math.max(4, Math.round(13 * scale)) },
+      ]}
+    >
       {steps.map((step, index) => (
         <View key={step.label} style={styles.stepGroup}>
           {index > 0 ? (
@@ -365,13 +399,6 @@ const styles = StyleSheet.create({
     paddingTop: 31,
     paddingBottom: 24,
   },
-  scrollContentCompact: {
-    paddingTop: 20,
-    paddingBottom: 18,
-  },
-  scrollContentTight: {
-    paddingTop: 14,
-  },
   screenContent: {
     alignItems: "center",
   },
@@ -404,17 +431,9 @@ const styles = StyleSheet.create({
     height: 144,
     marginTop: 2,
   },
-  brandSectionCompact: {
-    height: 122,
-    marginTop: -2,
-  },
   arabicLogo: {
     width: 170,
     height: 98,
-  },
-  arabicLogoCompact: {
-    width: 148,
-    height: 84,
   },
   wordmark: {
     marginTop: -8,
@@ -424,13 +443,6 @@ const styles = StyleSheet.create({
     letterSpacing: 12,
     color: GOLD_TEXT,
     paddingLeft: 12,
-  },
-  wordmarkCompact: {
-    marginTop: -9,
-    fontSize: 24,
-    lineHeight: 27,
-    letterSpacing: 10,
-    paddingLeft: 10,
   },
   divider: {
     height: 24,
@@ -484,9 +496,6 @@ const styles = StyleSheet.create({
   headlineBlock: {
     marginTop: 20,
     alignItems: "center",
-  },
-  headlineBlockCompact: {
-    marginTop: 12,
   },
   headlineLine: {
     fontFamily: "CormorantGaramond-Bold",
