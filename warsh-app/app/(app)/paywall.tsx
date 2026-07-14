@@ -370,7 +370,10 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       {/* Header */}
       <View style={styles.header}>
         {dismissable ? (
-          <TouchableOpacity onPress={() => router.replace("/(app)/(tabs)/vocabulary")} hitSlop={8}>
+          <TouchableOpacity
+            onPress={() => (router.canGoBack() ? router.back() : router.replace("/(app)/(tabs)"))}
+            hitSlop={8}
+          >
             <Ionicons name="close" size={22} color={WarshPalette.bodyBrown} />
           </TouchableOpacity>
         ) : (
