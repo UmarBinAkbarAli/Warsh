@@ -14,6 +14,7 @@ export async function GET(request: Request) {
       email: true,
       name: true,
       nativeLanguage: true,
+      translationLanguage: true,
       goal: true,
       xp: true,
       level: true,

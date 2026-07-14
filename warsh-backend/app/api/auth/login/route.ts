@@ -45,6 +45,7 @@ export async function POST(request: Request) {
         email: user.email,
         name: user.name,
         nativeLanguage: user.nativeLanguage,
+        translationLanguage: user.translationLanguage,
         goal: user.goal,
         level: user.level,
         xp: user.xp,

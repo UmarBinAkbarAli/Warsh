@@ -94,13 +94,13 @@ type HistoryMessage = { role: string; content: string };
 export async function getAssistantReply(
   message: string,
   history: HistoryMessage[] = [],
-  nativeLanguage?: string
+  responseLanguage?: string
 ): Promise<string> {
   try {
     if (!process.env.OPENAI_API_KEY) {
       return getLocalTutorReply(message);
     }
-    return getOpenAIReply(message, history, nativeLanguage);
+    return getOpenAIReply(message, history, responseLanguage);
   } catch (error) {
     // Log so provider outages/misconfig are visible rather than silently
     // masked as an "offline" fallback reply.
@@ -121,11 +121,11 @@ function getLocalTutorReply(message: string): string {
   return "It seems I am currently offline. Please ensure OPENAI_API_KEY is set in the backend .env file and restart the server.";
 }
 
-async function getOpenAIReply(message: string, history: HistoryMessage[], nativeLanguage?: string): Promise<string> {
+async function getOpenAIReply(message: string, history: HistoryMessage[], responseLanguage?: string): Promise<string> {
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   const model = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
-  const langInstruction = nativeLanguage === "ur"
+  const langInstruction = responseLanguage === "ur"
     ? "\n\nIMPORTANT: This student has selected Urdu as their native language. Always respond in Urdu, regardless of what language they write in. Keep all Arabic words in Arabic script."
     : "";
 

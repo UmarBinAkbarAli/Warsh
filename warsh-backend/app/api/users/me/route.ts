@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
+import { isSupportedLanguage } from "../../../../lib/language";
 
 const VALID_DAILY_GOALS = [5, 10, 15, 30];
 
@@ -19,10 +20,17 @@ export async function PATCH(request: Request) {
   }
 
   if (body.nativeLanguage !== undefined) {
-    if (!["en", "ur"].includes(body.nativeLanguage)) {
+    if (!isSupportedLanguage(body.nativeLanguage)) {
       return NextResponse.json({ error: "nativeLanguage must be 'en' or 'ur'", code: "bad_request" }, { status: 400 });
     }
     updateData.nativeLanguage = body.nativeLanguage;
+  }
+
+  if (body.translationLanguage !== undefined) {
+    if (!isSupportedLanguage(body.translationLanguage)) {
+      return NextResponse.json({ error: "translationLanguage must be 'en' or 'ur'", code: "bad_request" }, { status: 400 });
+    }
+    updateData.translationLanguage = body.translationLanguage;
   }
 
   if (Object.keys(updateData).length === 0) {
@@ -32,7 +40,7 @@ export async function PATCH(request: Request) {
   const user = await prisma.user.update({
     where: { id: userId },
     data: updateData,
-    select: { id: true, dailyGoalMinutes: true, nativeLanguage: true },
+    select: { id: true, dailyGoalMinutes: true, nativeLanguage: true, translationLanguage: true },
   });
 
   return NextResponse.json({ data: user });

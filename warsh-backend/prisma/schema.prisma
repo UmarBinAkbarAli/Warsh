@@ -12,6 +12,7 @@ model User {
     passwordHash   String
     name           String
     nativeLanguage String            @default("ur")
+    translationLanguage String       @default("ur")
     goal           Goal              @default(QURAN)
     level          Level             @default(BEGINNER)
     startingChapterOrder Int?

@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs";
 import { prisma } from "../../../../lib/prisma";
 import { signToken, passwordTokenFingerprint } from "../../../../lib/auth";
 import { hit, clientKey } from "../../../../lib/rateLimit";
+import { resolveRegistrationLanguages } from "../../../../lib/language";
 
 export async function POST(request: Request) {
   const rl = hit(clientKey(request, "register"), 5, 60_000);
@@ -14,7 +15,7 @@ export async function POST(request: Request) {
   }
 
   const body = await request.json();
-  const { email, password, name, nativeLanguage, goal, dailyGoalMinutes } = body;
+  const { email, password, name, nativeLanguage, translationLanguage, goal, dailyGoalMinutes } = body;
 
   if (!email || !password || !name) {
     return NextResponse.json({ error: "Missing required fields", code: "bad_request" }, { status: 400 });
@@ -42,12 +43,16 @@ export async function POST(request: Request) {
 
   const passwordHash = await bcrypt.hash(password, 10);
   const validGoalMinutes = [5, 10, 15, 30];
+  // Older clients may omit translationLanguage: fall back to the submitted
+  // nativeLanguage, then "ur". See resolveRegistrationLanguages.
+  const languages = resolveRegistrationLanguages({ nativeLanguage, translationLanguage });
   const user = await prisma.user.create({
     data: {
       email: normalizedEmail,
       passwordHash,
       name,
-      nativeLanguage: nativeLanguage ?? "ur",
+      nativeLanguage: languages.nativeLanguage,
+      translationLanguage: languages.translationLanguage,
       goal: goal ?? "QURAN",
       dailyGoalMinutes: validGoalMinutes.includes(dailyGoalMinutes) ? dailyGoalMinutes : 10,
     }
@@ -63,6 +68,7 @@ export async function POST(request: Request) {
           email: user.email,
           name: user.name,
           nativeLanguage: user.nativeLanguage,
+          translationLanguage: user.translationLanguage,
           goal: user.goal,
           level: user.level,
           xp: user.xp,

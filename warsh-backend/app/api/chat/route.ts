@@ -5,6 +5,7 @@ import { getAssistantReply } from "../../../lib/openai";
 import { getPKTStartOfDay } from "../../../lib/date";
 import { ACHIEVEMENT_KEYS } from "../../../lib/achievements";
 import { getSubscriptionState, requiresSubscription } from "../../../lib/subscription";
+import { resolveContentLanguage } from "../../../lib/language";
 
 const DAILY_MESSAGE_LIMIT = Number(process.env.AI_DAILY_MESSAGE_LIMIT ?? 5);
 
@@ -31,6 +32,7 @@ export async function POST(request: Request) {
       where: { id: userId },
       select: {
         nativeLanguage: true,
+        translationLanguage: true,
         noorOverageBalance: true,
         trialStartAt: true,
         trialExpiresAt: true,
@@ -73,7 +75,9 @@ export async function POST(request: Request) {
   const recentHistory = recentHistoryNewestFirst.reverse();
 
   await prisma.chatMessage.create({ data: { userId, role: "USER", content: message } });
-  const reply = await getAssistantReply(message, recentHistory, userRecord?.nativeLanguage ?? undefined);
+  // Noor replies in the user's translationLanguage, falling back to
+  // nativeLanguage for rows written before that column existed.
+  const reply = await getAssistantReply(message, recentHistory, resolveContentLanguage(userRecord));
   await prisma.chatMessage.create({ data: { userId, role: "ASSISTANT", content: reply, tokens: reply.length } });
 
   // Award FIRST_NOOR on the user's very first message
