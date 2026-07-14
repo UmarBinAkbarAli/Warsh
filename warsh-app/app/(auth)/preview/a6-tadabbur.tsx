@@ -1,190 +1,289 @@
-import { useEffect, useState } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { useEffect, useRef, useState } from "react";
+import { Animated, Text, TouchableOpacity, View } from "react-native";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
-import { Colors, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
+import {
+  Animation,
+  Colors,
+  FontSizes,
+  Fonts,
+  LineHeights,
+  Radii,
+  Spacing,
+  WarshPalette,
+} from "../../../constants/theme";
 
 const AN_NAS_WORDS = [
-  "قُلْ",
-  "أَعُوذُ",
-  "بِرَبِّ",
-  "النَّاسِ",
-  "مَلِكِ",
-  "النَّاسِ",
-  "إِلَٰهِ",
-  "النَّاسِ",
-];
+  { arabic: "قُلْ", en: "Say", ur: "کہہ دیجیے" },
+  { arabic: "أَعُوذُ", en: "I seek refuge", ur: "میں پناہ مانگتا ہوں" },
+  { arabic: "بِرَبِّ", en: "in the Lord", ur: "رب کی" },
+  { arabic: "النَّاسِ", en: "of mankind", ur: "لوگوں کے" },
+] as const;
 
-type WordState = "dim" | "learning" | "mastered";
+const TRANSLATIONS = {
+  en: "Say, I seek refuge in the Lord of mankind.",
+  ur: "کہہ دیجیے: میں لوگوں کے رب کی پناہ مانگتا ہوں۔",
+} as const;
 
 export default function PreviewA6Tadabbur() {
   const router = useRouter();
-  const [wordStates, setWordStates] = useState<WordState[]>(AN_NAS_WORDS.map(() => "dim"));
+  const [language, setLanguage] = useState<"en" | "ur">("en");
+  const [revealedCount, setRevealedCount] = useState(0);
   const [showContinue, setShowContinue] = useState(false);
+  const translationOpacity = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    const timers: ReturnType<typeof setTimeout>[] = [];
+    const timers = AN_NAS_WORDS.map((_, index) =>
+      setTimeout(() => setRevealedCount(index + 1), 550 + index * 650),
+    );
 
-    AN_NAS_WORDS.forEach((_, i) => {
-      // First pass: dim → learning
-      timers.push(
-        setTimeout(() => {
-          setWordStates((prev) => {
-            const next = [...prev];
-            next[i] = "learning";
-            return next;
-          });
-        }, 400 + i * 450)
-      );
-      // Second pass: learning → mastered
-      timers.push(
-        setTimeout(() => {
-          setWordStates((prev) => {
-            const next = [...prev];
-            next[i] = "mastered";
-            return next;
-          });
-        }, 800 + i * 450)
-      );
-    });
-
-    // Show continue after animation completes
-    const totalMs = 800 + AN_NAS_WORDS.length * 450 + 400;
-    timers.push(setTimeout(() => setShowContinue(true), totalMs));
+    timers.push(
+      setTimeout(() => {
+        Animated.timing(translationOpacity, {
+          toValue: 1,
+          duration: Animation.slow,
+          useNativeDriver: true,
+        }).start();
+      }, 550 + AN_NAS_WORDS.length * 650),
+    );
+    timers.push(
+      setTimeout(() => setShowContinue(true), 900 + AN_NAS_WORDS.length * 650),
+    );
 
     return () => timers.forEach(clearTimeout);
-  }, []);
-
-  function wordColor(state: WordState): string {
-    if (state === "mastered") return WarshPalette.gold;
-    if (state === "learning") return WarshPalette.ink;
-    return WarshPalette.subtleBrown;
-  }
-
-  function wordOpacity(state: WordState): number {
-    if (state === "dim") return 0.35;
-    return 1;
-  }
+  }, [translationOpacity]);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.bg.primary }}>
-      <View style={{ height: 48, alignItems: "flex-end", justifyContent: "center", paddingHorizontal: Spacing.lg }}>
+      <View
+        style={{
+          height: 48,
+          alignItems: "flex-end",
+          justifyContent: "center",
+          paddingHorizontal: Spacing.lg,
+        }}
+      >
         <TouchableOpacity
           onPress={() => router.replace("/(auth)/preview/a7-cta")}
           hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
         >
-          <Text style={{ color: Colors.text.muted, fontSize: FontSizes.bodyM }}>Skip preview</Text>
+          <Text style={{ color: Colors.text.muted, fontSize: FontSizes.bodyM }}>
+            Skip preview
+          </Text>
         </TouchableOpacity>
       </View>
 
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: Spacing.xxl, paddingBottom: 60 }}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          paddingHorizontal: Spacing.xl,
+          paddingBottom: Spacing.xl,
+        }}
+      >
+        <Text
+          style={{
+            color: WarshPalette.navy,
+            fontFamily: Fonts.bold,
+            fontSize: FontSizes.displayL,
+            lineHeight: LineHeights.displayL,
+            textAlign: "center",
+            marginBottom: Spacing.xs,
+          }}
+        >
+          From reciting to understanding
+        </Text>
         <Text
           style={{
             color: Colors.text.muted,
             fontSize: FontSizes.bodyM,
-            letterSpacing: 1,
+            lineHeight: LineHeights.bodyM,
             textAlign: "center",
             marginBottom: Spacing.xl,
           }}
         >
-          And here's where you're going.
+          Every lesson unlocks more of the Qur'an.
         </Text>
 
-        {/* Surah label */}
-        <Text
-          style={{
-            color: Colors.text.muted,
-            fontSize: FontSizes.caption,
-            letterSpacing: 1,
-            marginBottom: Spacing.lg,
-          }}
-        >
-          Surah An-Nas · 114
-        </Text>
-
-        {/* Words visualization */}
         <View
           style={{
-            backgroundColor: Colors.bg.card,
-            borderRadius: Radii.xl,
-            borderWidth: 1,
-            borderColor: Colors.border.subtle,
-            padding: Spacing.xl,
-            flexDirection: "row-reverse",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            gap: Spacing.md,
-            marginBottom: Spacing.lg,
             width: "100%",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginBottom: Spacing.md,
           }}
         >
-          {AN_NAS_WORDS.map((word, i) => (
-            <View
-              key={i}
-              style={{
-                backgroundColor:
-                  wordStates[i] === "mastered"
-                    ? `${WarshPalette.gold}20`
-                    : wordStates[i] === "learning"
-                    ? `${WarshPalette.sage}15`
-                    : "transparent",
-                borderRadius: Radii.sm,
-                paddingHorizontal: Spacing.sm,
-                paddingVertical: Spacing.xs,
-              }}
-            >
-              <ArabicText
-                size="md"
-                style={{
-                  color: wordColor(wordStates[i]),
-                  opacity: wordOpacity(wordStates[i]),
-                }}
-              >
-                {word}
-              </ArabicText>
-            </View>
-          ))}
+          <Text
+            style={{
+              color: Colors.text.muted,
+              fontSize: FontSizes.caption,
+              letterSpacing: 1,
+            }}
+          >
+            SURAH AN-NAS · 114:1
+          </Text>
+
+          <View
+            accessibilityRole="tablist"
+            style={{
+              flexDirection: "row",
+              borderWidth: 1,
+              borderColor: Colors.border.gold,
+              borderRadius: Radii.full,
+              padding: 2,
+            }}
+          >
+            {(["en", "ur"] as const).map((option) => {
+              const selected = language === option;
+              return (
+                <TouchableOpacity
+                  key={option}
+                  accessibilityRole="tab"
+                  accessibilityState={{ selected }}
+                  accessibilityLabel={option === "en" ? "Show English meanings" : "Show Urdu meanings"}
+                  onPress={() => setLanguage(option)}
+                  style={{
+                    minHeight: 32,
+                    minWidth: 50,
+                    paddingHorizontal: Spacing.sm,
+                    borderRadius: Radii.full,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: selected ? Colors.accent.gold : "transparent",
+                  }}
+                >
+                  <Text
+                    style={{
+                      color: selected ? Colors.bg.card : Colors.text.muted,
+                      fontFamily: option === "ur" ? Fonts.urduFallback : Fonts.semiBold,
+                      fontSize: option === "ur" ? FontSizes.bodyM : FontSizes.caption,
+                      lineHeight: option === "ur" ? LineHeights.bodyM : LineHeights.caption,
+                    }}
+                  >
+                    {option === "en" ? "English" : "اردو"}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
         </View>
 
-        {/* Legend */}
-        <View style={{ flexDirection: "row", gap: Spacing.lg, marginBottom: Spacing.xl }}>
-          {([["dim", "Not yet"], ["learning", "Learning"], ["mastered", "Mastered"]] as const).map(
-            ([state, label]) => (
-              <View key={state} style={{ flexDirection: "row", alignItems: "center", gap: Spacing.xs }}>
-                <View
+        <ArabicText
+          size="lg"
+          style={{
+            color: Colors.text.primary,
+            textAlign: "center",
+            marginBottom: Spacing.lg,
+          }}
+        >
+          قُلْ أَعُوذُ بِرَبِّ النَّاسِ
+        </ArabicText>
+
+        <View
+          style={{
+            width: "100%",
+            flexDirection: "row-reverse",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            rowGap: Spacing.sm,
+            marginBottom: Spacing.lg,
+          }}
+        >
+          {AN_NAS_WORDS.map((word, index) => {
+            const revealed = index < revealedCount;
+            return (
+              <View
+                key={word.arabic}
+                style={{
+                  width: "48.5%",
+                  minHeight: 104,
+                  backgroundColor: revealed ? `${WarshPalette.gold}18` : Colors.bg.card,
+                  borderWidth: 1,
+                  borderColor: revealed ? Colors.border.gold : Colors.border.subtle,
+                  borderRadius: Radii.lg,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  paddingHorizontal: Spacing.sm,
+                  paddingVertical: Spacing.sm,
+                }}
+              >
+                <ArabicText
+                  size="md"
                   style={{
-                    width: 8,
-                    height: 8,
-                    borderRadius: 4,
-                    backgroundColor: wordColor(state),
-                    opacity: wordOpacity(state),
+                    color: revealed ? Colors.text.primary : Colors.text.muted,
+                    opacity: revealed ? 1 : 0.35,
+                    textAlign: "center",
                   }}
-                />
-                <Text style={{ color: Colors.text.muted, fontSize: FontSizes.label }}>
-                  {label}
+                >
+                  {word.arabic}
+                </ArabicText>
+                <Text
+                  style={{
+                    minHeight: language === "ur" ? 28 : 20,
+                    color: revealed ? Colors.text.secondary : "transparent",
+                    fontFamily: language === "ur" ? Fonts.urduFallback : Fonts.regular,
+                    fontSize: language === "ur" ? FontSizes.bodyM : FontSizes.caption,
+                    lineHeight: language === "ur" ? 24 : LineHeights.caption,
+                    textAlign: "center",
+                    writingDirection: language === "ur" ? "rtl" : "ltr",
+                  }}
+                >
+                  {language === "en" ? word.en : word.ur}
                 </Text>
               </View>
-            )
-          )}
+            );
+          })}
         </View>
+
+        <Animated.View
+          style={{
+            opacity: translationOpacity,
+            width: "100%",
+            backgroundColor: Colors.bg.card,
+            borderLeftWidth: 3,
+            borderLeftColor: Colors.accent.gold,
+            borderRadius: Radii.md,
+            paddingHorizontal: Spacing.lg,
+            paddingVertical: Spacing.md,
+            marginBottom: Spacing.lg,
+          }}
+        >
+          <Text
+            style={{
+              color: Colors.text.primary,
+              fontFamily: language === "ur" ? Fonts.urduFallback : Fonts.italic,
+              fontSize: language === "ur" ? FontSizes.bodyL : FontSizes.bodyM,
+              lineHeight: language === "ur" ? 28 : LineHeights.bodyM,
+              textAlign: language === "ur" ? "right" : "center",
+              writingDirection: language === "ur" ? "rtl" : "ltr",
+            }}
+          >
+            {TRANSLATIONS[language]}
+          </Text>
+        </Animated.View>
 
         <Text
           style={{
             color: Colors.text.secondary,
-            fontSize: FontSizes.bodyL,
-            lineHeight: LineHeights.bodyL,
+            fontSize: FontSizes.bodyM,
+            lineHeight: LineHeights.bodyM,
             textAlign: "center",
-            marginBottom: Spacing.xxxl,
+            marginBottom: Spacing.xl,
           }}
         >
-          Word by word, Surah by Surah, the Quran becomes yours.
+          You already recite it. Warsh helps you understand it.
         </Text>
 
         {showContinue && (
           <View style={{ width: "100%" }}>
-            <BrandButton title="Continue" onPress={() => router.push("/(auth)/preview/a7-cta")} />
+            <BrandButton
+              title="Continue"
+              onPress={() => router.push("/(auth)/preview/a7-cta")}
+            />
           </View>
         )}
       </View>

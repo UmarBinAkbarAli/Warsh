@@ -4,7 +4,7 @@ import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
-import { Colors, FontSizes, LineHeights, Spacing, Animation } from "../../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights, Spacing, Animation } from "../../../constants/theme";
 
 export default function PreviewA3Discover() {
   const router = useRouter();
@@ -90,6 +90,19 @@ export default function PreviewA3Discover() {
               }}
             >
               Indeed, We
+            </Text>
+            <Text
+              style={{
+                color: Colors.text.secondary,
+                fontFamily: Fonts.urduFallback,
+                fontSize: FontSizes.displayL,
+                lineHeight: 38,
+                textAlign: "center",
+                writingDirection: "rtl",
+                marginBottom: Spacing.sm,
+              }}
+            >
+              بے شک ہم
             </Text>
             <Animated.View
               style={{

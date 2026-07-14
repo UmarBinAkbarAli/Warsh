@@ -3,7 +3,7 @@ import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
-import { Colors, FontSizes, LineHeights, Radii, Spacing } from "../../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing } from "../../../constants/theme";
 
 export default function PreviewA4Grammar() {
   const router = useRouter();
@@ -35,6 +35,32 @@ export default function PreviewA4Grammar() {
         <ArabicText size="lg" style={{ textAlign: "center", marginBottom: Spacing.xl }}>
           إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ
         </ArabicText>
+
+        <View style={{ alignItems: "center", marginBottom: Spacing.lg }}>
+          <Text
+            style={{
+              color: Colors.text.secondary,
+              fontSize: FontSizes.bodyM,
+              lineHeight: LineHeights.bodyM,
+              textAlign: "center",
+              marginBottom: Spacing.xs,
+            }}
+          >
+            Indeed, We have given you Al-Kawthar.
+          </Text>
+          <Text
+            style={{
+              color: Colors.text.primary,
+              fontFamily: Fonts.urduFallback,
+              fontSize: FontSizes.arabicM,
+              lineHeight: LineHeights.arabicM,
+              textAlign: "center",
+              writingDirection: "rtl",
+            }}
+          >
+            بے شک ہم نے آپ کو کوثر عطا فرمائی۔
+          </Text>
+        </View>
 
         <View
           style={{

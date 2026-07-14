@@ -1,8 +1,9 @@
 ################################################################################
-# start-warsh.ps1  -  One-command dev launcher for the Warsh app
+# start-warsh.ps1  -  One-command launcher for the Warsh app
 #
 # Modes:
-#   .\start-warsh.ps1        - local dev  (backend on localhost:3000)
+#   .\start-warsh.ps1        - install newest release APK in emulator and launch
+#   .\start-warsh.ps1 -dev   - local dev  (backend on localhost:3000)
 #   .\start-warsh.ps1 -prod  - production (backend = https://api.warsh.app)
 #
 # Local dev does (in order):
@@ -23,11 +24,76 @@
 ################################################################################
 
 param(
+    [switch]$dev,
     [switch]$prod
 )
 
 $ErrorActionPreference = "Stop"
 $RepoRoot = $PSScriptRoot
+
+if ($dev -and $prod) {
+    throw 'Choose either -dev or -prod, not both.'
+}
+
+if (-not $dev -and -not $prod) {
+    $installer = Join-Path $RepoRoot 'install-warsh-apk.ps1'
+    if (-not (Test-Path -LiteralPath $installer)) {
+        throw "APK installer not found: $installer"
+    }
+
+    $appRoot = Join-Path $RepoRoot 'warsh-app'
+    $apkPath = Join-Path $appRoot 'android\app\build\outputs\apk\release\app-release.apk'
+    $sourcePaths = @(
+        (Join-Path $appRoot 'app'),
+        (Join-Path $appRoot 'assets'),
+        (Join-Path $appRoot 'components'),
+        (Join-Path $appRoot 'constants'),
+        (Join-Path $appRoot 'i18n'),
+        (Join-Path $appRoot 'services'),
+        (Join-Path $appRoot 'stores'),
+        (Join-Path $appRoot 'android\app\src'),
+        (Join-Path $appRoot 'app.json'),
+        (Join-Path $appRoot 'babel.config.js'),
+        (Join-Path $appRoot 'metro.config.js'),
+        (Join-Path $appRoot 'package.json'),
+        (Join-Path $appRoot 'package-lock.json')
+    )
+    $newestSource = $sourcePaths |
+        Where-Object { Test-Path -LiteralPath $_ } |
+        ForEach-Object {
+            $item = Get-Item -LiteralPath $_
+            if ($item.PSIsContainer) {
+                Get-ChildItem -LiteralPath $item.FullName -File -Recurse
+            } else {
+                $item
+            }
+        } |
+        Sort-Object LastWriteTime -Descending |
+        Select-Object -First 1
+
+    $releaseApk = Get-Item -LiteralPath $apkPath -ErrorAction SilentlyContinue
+    if (-not $releaseApk -or ($newestSource -and $newestSource.LastWriteTime -gt $releaseApk.LastWriteTime)) {
+        Write-Host 'The release APK is missing or older than the current app source. Building it now...' -ForegroundColor Cyan
+        $env:NODE_ENV = 'production'
+        $env:EXPO_PUBLIC_API_URL = 'https://api.warsh.app'
+        $env:EXPO_PUBLIC_ENVIRONMENT = 'production'
+        $env:SENTRY_DISABLE_AUTO_UPLOAD = 'true'
+        $env:SENTRY_DISABLE_NATIVE_DEBUG_UPLOAD = 'true'
+
+        Push-Location (Join-Path $appRoot 'android')
+        try {
+            & .\gradlew.bat assembleRelease
+            if ($LASTEXITCODE -ne 0) {
+                throw "Release APK build failed with exit code $LASTEXITCODE."
+            }
+        } finally {
+            Pop-Location
+        }
+    }
+
+    & $installer
+    exit $LASTEXITCODE
+}
 
 # helpers
 function Write-Step($msg) { Write-Host "`n==> $msg" -ForegroundColor Cyan }

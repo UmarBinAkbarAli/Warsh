@@ -35,6 +35,14 @@ When the user says “start Warsh app” or a close variant, use the maintained 
 .\start-warsh.ps1
 ```
 
+The default command checks whether the release APK is older than the current app source, rebuilds it with the production API when necessary, starts the `Warsh_API_34` emulator when needed, installs or upgrades the APK, and launches Warsh.
+
+For local Metro/backend development:
+
+```powershell
+.\start-warsh.ps1 -dev
+```
+
 For Metro against the production API:
 
 ```powershell

@@ -286,7 +286,15 @@ When asked to start Warsh, use the root script:
 .\start-warsh.ps1
 ```
 
-It verifies ADB, creates reverse tunnels for Metro/backend, starts the backend, waits for health, and starts Expo with `http://127.0.0.1:3000`.
+By default it checks whether the release APK is older than the current app source, rebuilds it with the production API when necessary, starts the `Warsh_API_34` emulator when needed, installs or upgrades Warsh, and launches the app.
+
+For local Metro/backend development:
+
+```powershell
+.\start-warsh.ps1 -dev
+```
+
+The development mode verifies ADB, creates reverse tunnels for Metro/backend, starts the backend, waits for health, and starts Expo with `http://127.0.0.1:3000`.
 
 For Metro against production:
 
@@ -295,6 +303,20 @@ For Metro against production:
 ```
 
 Do not improvise individual startup steps unless diagnosing the launcher itself.
+
+### Local production-APK testing
+
+The Windows development machine has a dedicated Google Play-enabled Pixel 7 AVD named `Warsh_API_34`. Build an installable APK with the `previewProd` EAS profile; the `production` profile creates the Play Store AAB and cannot be installed directly on an emulator.
+
+After downloading the APK, run from the repository root:
+
+```powershell
+.\install-warsh-apk.ps1 C:\path\to\warsh.apk
+```
+
+The APK path is optional. The helper first checks `warsh-app\android\app\build\outputs\apk\release`, then EAS build folders and `Downloads`. It starts the AVD when necessary, waits for Android to boot, upgrades the installed `com.warsh.app` package, and launches Warsh. Pass `-ResetAppData` only when a clean first-install state is required.
+
+Use this workflow for UI, UX, navigation, API, and general regression checks. It does not replace Play-installed subscription/consumable QA or physical-device checks for microphone, notifications, and device-specific behavior.
 
 ### Manual project commands
 

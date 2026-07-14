@@ -12,7 +12,7 @@
 // and restores .env — even if something fails.
 
 import { execSync } from "node:child_process";
-import { readFileSync, writeFileSync, existsSync, rmSync, readdirSync, statSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, rmSync, readdirSync, statSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve, join } from "node:path";
 
@@ -21,6 +21,10 @@ process.chdir(appDir);
 
 const API_URL = process.env.DEPLOY_API_URL || "https://api.warsh.app";
 const SCOPE = process.env.VERCEL_SCOPE || "team_k0ZT1T5c1VYXVbf8oyV9zU4s";
+// The Vercel project that owns https://app.warsh.app. Without an explicit link,
+// `vercel deploy dist` auto-creates a throwaway project named after the folder
+// ("dist") and app.warsh.app is never updated. Always link dist to warsh-web.
+const PROJECT_ID = process.env.VERCEL_PROJECT_ID || "prj_grtdsJ12m4QcjcdZsSl7fAdhspuR";
 const ENV_PATH = ".env";
 
 const originalEnv = existsSync(ENV_PATH) ? readFileSync(ENV_PATH, "utf8") : "";
@@ -78,7 +82,15 @@ try {
     JSON.stringify({ rewrites: [{ source: "/(.*)", destination: "/index.html" }] }, null, 2) + "\n",
   );
 
-  console.log("[deploy:web] deploying to Vercel (production)…");
+  // Link the export to the warsh-web project so this deploy lands on
+  // app.warsh.app instead of a folder-named throwaway project.
+  mkdirSync("dist/.vercel", { recursive: true });
+  writeFileSync(
+    "dist/.vercel/project.json",
+    JSON.stringify({ projectId: PROJECT_ID, orgId: SCOPE, projectName: "warsh-web" }) + "\n",
+  );
+
+  console.log("[deploy:web] deploying to Vercel (production, project warsh-web)…");
   execSync(`npx vercel deploy dist --prod --yes --archive=tgz --scope ${SCOPE}`, { stdio: "inherit" });
 
   console.log("[deploy:web] done — live at https://app.warsh.app");
