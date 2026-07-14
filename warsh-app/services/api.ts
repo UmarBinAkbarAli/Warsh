@@ -136,7 +136,7 @@ export function submitSRSReview(wordId: string, quality: 2 | 4 | 5) {
   return api.post("/api/vocabulary/srs/review", { wordId, quality });
 }
 
-export function updateUserProfile(data: { dailyGoalMinutes?: number; nativeLanguage?: string }) {
+export function updateUserProfile(data: { dailyGoalMinutes?: number; nativeLanguage?: string; translationLanguage?: string }) {
   return api.patch("/api/users/me", data);
 }
 

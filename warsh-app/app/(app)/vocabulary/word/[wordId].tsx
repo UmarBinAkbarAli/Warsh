@@ -16,7 +16,7 @@ import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../../constants/theme";
 import { getVocabularyWordDetail, updateUserVocabularyWord } from "@services/api";
-import { useLanguage, pickTranslation, pickLocalized } from "@services/language";
+import { useTranslationLanguage, pickTranslation, pickLocalized } from "@services/language";
 import { useT } from "@i18n/index";
 
 interface QuranicExample {
@@ -94,7 +94,7 @@ export default function WordDetailScreen() {
   const { wordId } = useLocalSearchParams<{ wordId: string }>();
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const language = useLanguage();
+  const language = useTranslationLanguage();
   const t = useT();
 
   const [word, setWord] = useState<VocabWord | null>(null);
@@ -238,7 +238,6 @@ export default function WordDetailScreen() {
           </View>
           <Text style={styles.translit}>{word.transliteration}</Text>
           <Text style={styles.translation}>{pickTranslation(word, language)}</Text>
-          <Text style={styles.translationUr}>{language === "ur" ? word.translationEn : word.translationUr}</Text>
         </View>
 
         {/* Type badge */}

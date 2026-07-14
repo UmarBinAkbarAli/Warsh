@@ -17,7 +17,7 @@ import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
 import { getVocabularyWords, getWordOfDay, getSRSDueWords } from "@services/api";
-import { useLanguage, pickTranslation } from "@services/language";
+import { useTranslationLanguage, pickTranslation } from "@services/language";
 import { useT } from "@i18n/index";
 
 // ─── topic catalog ──────────────────────────────────────────────────────────
@@ -218,7 +218,7 @@ function TopicGrid({ language, wordCounts, onPress }: { language: "en" | "ur"; w
 export default function VocabularyScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const language = useLanguage();
+  const language = useTranslationLanguage();
   const t = useT();
   const [query, setQuery] = useState("");
   const [wordOfDay, setWordOfDay] = useState<VocabWord | null>(null);

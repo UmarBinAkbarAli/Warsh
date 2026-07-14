@@ -12,7 +12,7 @@ import { Fonts, WarshPalette } from "../../../../constants/theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
 import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
-import { pickLocalized, useLanguage } from "@services/language";
+import { pickLocalized, useTranslationLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 import { prefetchRemoteAudio, prefetchTtsAudio } from "@services/audioCache";
 
@@ -381,7 +381,7 @@ function renderMaybeArabic(value: string, arabicStyle: TextStyle = styles.option
 export default function LessonPlayScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const language = useLanguage();
+  const language = useTranslationLanguage();
   const t = useT();
   const { lessonId } = useLocalSearchParams<{ lessonId: string }>();
   const [lesson, setLesson] = useState<RawLesson | null>(null);

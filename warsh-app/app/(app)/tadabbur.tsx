@@ -17,6 +17,7 @@ import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 import { getTadabbur, getTadabburSurah, isSubscriptionRequiredError } from "@services/api";
+import { pickLocalized, useTranslationLanguage } from "@services/language";
 
 // ─── types ────────────────────────────────────────────────────────────────────
 
@@ -34,6 +35,7 @@ interface AyahData {
   ayahNumber: number;
   arabic: string;
   translationEn: string;
+  translationUr?: string | null;
   words: WordData[];
 }
 
@@ -68,6 +70,7 @@ function AyahRow({
   surahNumber: number;
   onWordPress: (w: WordData) => void;
 }) {
+  const translationLanguage = useTranslationLanguage();
   return (
     <View style={styles.ayahBlock}>
       <View style={styles.ayahWordWrap}>
@@ -90,7 +93,7 @@ function AyahRow({
         />
         <Text style={styles.ayahRef}>{surahNumber}:{ayah.ayahNumber}</Text>
       </View>
-      <Text style={styles.ayahTranslation}>{ayah.translationEn}</Text>
+      <Text style={styles.ayahTranslation}>{pickLocalized(ayah.translationEn, ayah.translationUr, translationLanguage)}</Text>
     </View>
   );
 }

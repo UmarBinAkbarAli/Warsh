@@ -15,7 +15,7 @@ import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
-import { useLanguage, pickLocalized } from "@services/language";
+import { useTranslationLanguage, pickLocalized } from "@services/language";
 import { useT } from "@i18n/index";
 import {
   Colors,
@@ -99,7 +99,7 @@ function LessonPreviewSheet({
   onStart: () => void;
 }) {
   const insets = useSafeAreaInsets();
-  const language = useLanguage();
+  const language = useTranslationLanguage();
   const t = useT();
   if (!lesson) return null;
 
@@ -159,7 +159,7 @@ export default function ChapterScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { chapterId } = useLocalSearchParams<{ chapterId: string }>();
-  const language = useLanguage();
+  const language = useTranslationLanguage();
   const t = useT();
   const [chapter, setChapter] = useState<any>(null);
   const [loading, setLoading] = useState(true);

@@ -15,7 +15,7 @@ import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
 import { getSRSDueWords, submitSRSReview } from "@services/api";
 import { trackSRSReviewCompleted } from "@services/analytics";
-import { useLanguage, pickTranslation } from "@services/language";
+import { useTranslationLanguage, pickTranslation } from "@services/language";
 import { useT } from "@i18n/index";
 import { prefetchVocabWordAudio } from "@services/audioCache";
 
@@ -46,7 +46,7 @@ type Stage = "loading" | "empty" | "pre" | "front" | "back" | "done";
 export default function SRSReviewScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const language = useLanguage();
+  const language = useTranslationLanguage();
   const t = useT();
 
   const [stage, setStage] = useState<Stage>("loading");

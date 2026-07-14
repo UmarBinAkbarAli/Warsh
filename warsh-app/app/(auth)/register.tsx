@@ -13,7 +13,7 @@ import { trackSignupCompleted } from "@services/analytics";
 export default function RegisterScreen() {
   const router = useRouter();
   const { register, applyPlacement } = useAuth();
-  const { name, language, goal, placementType, dailyGoalMinutes, setName } = useOnboardingStore();
+  const { name, language, translationLanguage, goal, placementType, dailyGoalMinutes, setName } = useOnboardingStore();
   const [displayName, setDisplayName] = useState(name);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -50,7 +50,7 @@ export default function RegisterScreen() {
     setError("");
     try {
       setName(trimmedName);
-      await register(trimmedName, trimmedEmail, password, language, goal, dailyGoalMinutes);
+      await register(trimmedName, trimmedEmail, password, language, translationLanguage, goal, dailyGoalMinutes);
       await applyPlacement(placementType);
       trackSignupCompleted({ goal: goal ?? "", level: "", placement: placementType ?? "BEGINNER", language: language ?? "en" });
       router.replace("/(auth)/onboarding/permissions");

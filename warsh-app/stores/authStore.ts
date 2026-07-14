@@ -8,6 +8,7 @@ export interface User {
   email: string;
   name: string;
   nativeLanguage?: string;
+  translationLanguage?: string;
   goal?: string;
   level?: string;
   xp?: number;

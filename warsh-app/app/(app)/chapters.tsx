@@ -14,7 +14,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
-import { useLanguage, pickLocalized } from "@services/language";
+import { useTranslationLanguage, pickLocalized } from "@services/language";
 import { useT } from "@i18n/index";
 import {
   WarshPalette,
@@ -44,7 +44,7 @@ interface Chapter {
 export default function ChaptersScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const language = useLanguage();
+  const language = useTranslationLanguage();
   const t = useT();
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [loading, setLoading] = useState(true);

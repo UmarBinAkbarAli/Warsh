@@ -1,7 +1,9 @@
 import { useCallback, useState } from "react";
 import {
+  ActivityIndicator,
   Alert,
   Linking,
+  Modal,
   ScrollView,
   StyleSheet,
   Switch,
@@ -23,6 +25,7 @@ import {
 } from "@services/notifications";
 import { isSentrySmokeTestEnabled, sendSentrySmokeTest } from "@services/sentry";
 import { useT } from "@i18n/index";
+import { type AppLanguage } from "@services/language";
 
 // AsyncStorage keys for local preferences
 const PREFS_KEY = "warsh_settings";
@@ -150,6 +153,8 @@ export default function SettingsScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const clearSession = useAuthStore((s) => s.clearSession);
+  const user = useAuthStore((s) => s.user);
+  const patchUser = useAuthStore((s) => s.patchUser);
   const t = useT();
 
   const [prefs, setPrefs] = useState<Prefs>(DEFAULT_PREFS);
@@ -163,6 +168,8 @@ export default function SettingsScreen() {
   const [currentStreak, setCurrentStreak] = useState(0);
   const [userName, setUserName] = useState("friend");
   const [saving, setSaving] = useState(false);
+  const [languageSheet, setLanguageSheet] = useState<"app" | "translation" | null>(null);
+  const [languageSaving, setLanguageSaving] = useState(false);
   const sentrySmokeTestEnabled = isSentrySmokeTestEnabled();
 
   useFocusEffect(
@@ -216,6 +223,23 @@ export default function SettingsScreen() {
     }
   }
 
+  async function changeLanguage(value: AppLanguage) {
+    if (!languageSheet || languageSaving) return;
+    const field = languageSheet === "app" ? "nativeLanguage" : "translationLanguage";
+    const previous = user?.[field] as string | undefined;
+    setLanguageSaving(true);
+    patchUser({ [field]: value });
+    try {
+      await updateUserProfile({ [field]: value });
+      setLanguageSheet(null);
+    } catch {
+      patchUser({ [field]: previous });
+      Alert.alert(t("settings.errorTitle"), t("settings.languageSaveError"));
+    } finally {
+      setLanguageSaving(false);
+    }
+  }
+
   async function handleDeleteAccount() {
     Alert.alert(
       t("settings.deleteAccountTitle"),
@@ -263,6 +287,35 @@ export default function SettingsScreen() {
       </View>
 
       <ScrollView contentContainerStyle={styles.content}>
+
+        <SectionHeader title={t("settings.languageContent")} />
+        <Text style={styles.languageIntro}>{t("settings.languageContentBody")}</Text>
+        <View style={styles.card}>
+          <SettingRow
+            icon="language-outline"
+            label={t("settings.appLanguage")}
+            sublabel={`${t("settings.appLanguageSub")} · ${user?.nativeLanguage === "ur" ? t("language.urdu") : t("language.english")}`}
+            onPress={() => setLanguageSheet("app")}
+            showChevron
+          />
+          <View style={styles.divider} />
+          <SettingRow
+            icon="book-outline"
+            label={t("settings.meaningLanguage")}
+            sublabel={`${t("settings.meaningLanguageSub")} · ${(user?.translationLanguage ?? user?.nativeLanguage) === "ur" ? t("language.urdu") : t("language.english")}`}
+            onPress={() => setLanguageSheet("translation")}
+            showChevron
+          />
+        </View>
+        <View style={styles.languageSummary}>
+          <Ionicons name="sparkles-outline" size={18} color={WarshPalette.gold} />
+          <Text style={styles.languageSummaryText}>
+            {t("language.selectionSummary", {
+              app: user?.nativeLanguage === "ur" ? t("language.urdu") : t("language.english"),
+              meaning: (user?.translationLanguage ?? user?.nativeLanguage) === "ur" ? t("language.urdu") : t("language.english"),
+            })}
+          </Text>
+        </View>
 
         {/* Notifications */}
         <SectionHeader title={t("settings.notifications")} />
@@ -485,6 +538,55 @@ export default function SettingsScreen() {
 
         <View style={{ height: Spacing.xl * 2 }} />
       </ScrollView>
+
+      <Modal transparent visible={languageSheet !== null} animationType="fade" onRequestClose={() => setLanguageSheet(null)}>
+        <View style={styles.sheetOverlay}>
+          <TouchableOpacity style={StyleSheet.absoluteFill} activeOpacity={1} onPress={() => !languageSaving && setLanguageSheet(null)} />
+          <View style={[styles.languageSheet, { paddingBottom: insets.bottom + Spacing.lg }]}>
+            <View style={styles.sheetHandle} />
+            <View style={styles.sheetHeader}>
+              <View>
+                <Text style={styles.sheetEyebrow}>{t("settings.languageContent")}</Text>
+                <Text style={styles.sheetTitle}>
+                  {languageSheet === "app" ? t("settings.chooseAppLanguage") : t("settings.chooseMeaningLanguage")}
+                </Text>
+              </View>
+              {languageSaving ? <ActivityIndicator color={WarshPalette.gold} /> : null}
+            </View>
+            {(["ur", "en"] as AppLanguage[]).map((value) => {
+              const current = languageSheet === "app"
+                ? user?.nativeLanguage
+                : user?.translationLanguage ?? user?.nativeLanguage;
+              const selected = current === value;
+              return (
+                <TouchableOpacity
+                  key={value}
+                  accessibilityRole="radio"
+                  accessibilityState={{ selected, disabled: languageSaving }}
+                  disabled={languageSaving}
+                  activeOpacity={0.8}
+                  onPress={() => changeLanguage(value)}
+                  style={[styles.languageChoice, selected ? styles.languageChoiceSelected : null]}
+                >
+                  <View style={[styles.choiceIcon, selected ? styles.choiceIconSelected : null]}>
+                    <Ionicons name={selected ? "checkmark" : "book-outline"} size={21} color={selected ? WarshPalette.white : WarshPalette.subtleBrown} />
+                  </View>
+                  <View style={styles.choiceCopy}>
+                    <Text style={[styles.choiceTitle, selected ? styles.choiceTitleSelected : null]}>
+                      {value === "ur" ? t("language.urdu") : t("language.english")}
+                    </Text>
+                    <Text style={[styles.choiceBody, selected ? styles.choiceBodySelected : null]}>
+                      {languageSheet === "app"
+                        ? t("settings.appLanguageSub")
+                        : value === "ur" ? t("language.meaningsUrdu") : t("language.meaningsEnglish")}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -511,6 +613,20 @@ const styles = StyleSheet.create({
   },
 
   content: { paddingHorizontal: Spacing.xl, paddingTop: Spacing.md },
+  languageIntro: {
+    color: WarshPalette.subtleBrown, fontFamily: Fonts.regular,
+    fontSize: FontSizes.caption, lineHeight: LineHeights.caption,
+    marginBottom: Spacing.sm, marginHorizontal: 4,
+  },
+  languageSummary: {
+    flexDirection: "row", alignItems: "center", gap: Spacing.sm,
+    marginTop: Spacing.md, padding: Spacing.md,
+    borderRadius: Radii.md, backgroundColor: WarshPalette.navy,
+  },
+  languageSummaryText: {
+    flex: 1, color: WarshPalette.parchment, fontFamily: Fonts.regular,
+    fontSize: FontSizes.caption, lineHeight: LineHeights.caption,
+  },
 
   sectionHeader: {
     color: WarshPalette.gold, fontFamily: Fonts.regular,
@@ -577,4 +693,44 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.caption, fontWeight: "600",
   },
   pillTextSelected: { color: WarshPalette.white },
+  sheetOverlay: {
+    flex: 1, justifyContent: "flex-end", backgroundColor: "rgba(7,27,68,0.48)",
+  },
+  languageSheet: {
+    gap: Spacing.md, paddingHorizontal: Spacing.gutter, paddingTop: Spacing.sm,
+    borderTopLeftRadius: Radii.xl, borderTopRightRadius: Radii.xl,
+    backgroundColor: WarshPalette.parchmentBg,
+  },
+  sheetHandle: {
+    alignSelf: "center", width: 42, height: 4, borderRadius: Radii.full,
+    backgroundColor: WarshPalette.cream,
+  },
+  sheetHeader: {
+    flexDirection: "row", alignItems: "center", justifyContent: "space-between",
+    marginVertical: Spacing.sm,
+  },
+  sheetEyebrow: {
+    color: WarshPalette.goldDeep, fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.label, textTransform: "uppercase", letterSpacing: 0.7,
+  },
+  sheetTitle: {
+    marginTop: 2, color: WarshPalette.navy, fontFamily: Fonts.bold,
+    fontSize: FontSizes.h1, lineHeight: LineHeights.h1,
+  },
+  languageChoice: {
+    minHeight: 74, flexDirection: "row", alignItems: "center", gap: Spacing.md,
+    padding: Spacing.md, borderRadius: Radii.md, borderWidth: 1,
+    borderColor: WarshPalette.cream, backgroundColor: WarshPalette.white,
+  },
+  languageChoiceSelected: { borderColor: WarshPalette.navy, backgroundColor: WarshPalette.navy },
+  choiceIcon: {
+    width: 42, height: 42, alignItems: "center", justifyContent: "center",
+    borderRadius: Radii.full, backgroundColor: WarshPalette.sageTintBg,
+  },
+  choiceIconSelected: { backgroundColor: WarshPalette.gold },
+  choiceCopy: { flex: 1 },
+  choiceTitle: { color: WarshPalette.ink, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyL },
+  choiceTitleSelected: { color: WarshPalette.white },
+  choiceBody: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption, marginTop: 2 },
+  choiceBodySelected: { color: "rgba(255,255,255,0.7)" },
 });
