@@ -1102,19 +1102,54 @@ export default function LessonPlayScreen() {
   }
 
   function renderReveal() {
-    const reveal    = c.reveal as Record<string, any> | undefined;
-    const ayah      = reveal?.ayah as Record<string, any> | undefined;
-    const noorExpl  = localizedText(reveal?.noor_explanation, language);
+    const reveal = c.reveal as Record<string, any> | undefined;
+    const ayah = reveal?.ayah as Record<string, any> | undefined;
+    const hook = c.hook as Record<string, any> | undefined;
+    const hookAyah = hook?.ayah as Record<string, any> | undefined;
+    const ayahAr = ayah?.ar as string | undefined;
+    const indices = (reveal?.highlighted_word_indices as number[] | undefined) ?? [];
+    const learnedWords = splitWords(ayahAr).filter((_, index) => indices.includes(index));
+    const ayahAudioUrl = (ayah?.audio_url ?? hookAyah?.audio_url) as string | undefined;
 
     return (
       <View style={[styles.fullScreen, screenPadding, styles.revealScreen]}>
-        <View style={styles.revealContent}>
+        <ScrollView
+          style={styles.revealScroll}
+          contentContainerStyle={styles.revealContent}
+          showsVerticalScrollIndicator={false}
+        >
+          <Text style={styles.revealEyebrow}>{t("player.quranConnection")}</Text>
           <Text style={styles.revealHeading}>{t("player.revealHeading")}</Text>
-          {noorExpl ? <Text style={styles.revealText}>{noorExpl}</Text> : null}
-          <View style={styles.divider} />
-          {renderRevealAyah()}
-          {ayah?.label ? <Text style={styles.ayahRef}>{ayah.label as string}</Text> : null}
-        </View>
+          <View style={styles.revealAyahCard}>
+            {renderRevealAyah()}
+            {ayah?.label ? <Text style={styles.ayahRef}>{ayah.label as string}</Text> : null}
+            {ayahAr && ayahAudioUrl ? (
+              <View style={styles.revealPlayRow}>
+                <PlayButton
+                  text={ayahAr}
+                  cacheKey={`reveal-${ayah?.label ?? lessonId}`}
+                  category="lessons"
+                  audioUrl={ayahAudioUrl}
+                  size={22}
+                />
+                <Text style={styles.revealListenLabel}>{t("player.listenToAyah")}</Text>
+              </View>
+            ) : null}
+            {learnedWords.length > 0 ? (
+              <View style={styles.revealLearnedSection}>
+                <Text style={styles.revealLearnedLabel}>{t("player.wordsYouRecognised")}</Text>
+                <View style={styles.revealWordChips}>
+                  {learnedWords.map((word, index) => (
+                    <View key={`${word}-${index}`} style={styles.revealWordChip}>
+                      <ArabicText size="sm" style={styles.revealWordChipText}>{word}</ArabicText>
+                    </View>
+                  ))}
+                </View>
+              </View>
+            ) : null}
+          </View>
+          <Text style={styles.revealHighlightNote}>{t("player.revealHighlightNote")}</Text>
+        </ScrollView>
         <BrandButton title={t("common.continue")} onPress={() => goToBeat(5)} style={styles.bottomButton} />
       </View>
     );
@@ -1130,6 +1165,8 @@ export default function LessonPlayScreen() {
     const isSpoken = lesson?.template === "SPOKEN_PHRASES";
     const phrasesLearned = phrasesCompletedRef.current;
     const spokenPhraseCount = phrasesLearned > 0 ? phrasesLearned : 1;
+    const wordsLearned = discoverCards.filter((card) => card.type === "WORD").length;
+    const practiceCount = isSpoken ? spokenPhraseCount : exercises.length;
 
     const closeBlock = c.close as Record<string, any> | undefined;
     const noorTip = isSpoken
@@ -1139,58 +1176,43 @@ export default function LessonPlayScreen() {
         })
       : localizedText(closeBlock?.noor_message, language) ?? t("player.closeDefaultTip");
 
-    const floatingLetters = [
-      { char: "أ",  top:  70, left:  30, size: 34, opacity: 0.55, color: WarshPalette.gold },
-      { char: "ب",  top:  90, right: 45, size: 26, opacity: 0.40, color: WarshPalette.sage },
-      { char: "ق",  top: 140, left:  65, size: 30, opacity: 0.50, color: WarshPalette.parchment },
-      { char: "ر",  top: 110, right: 80, size: 22, opacity: 0.45, color: WarshPalette.gold },
-      { char: "م",  top: 200, left:  20, size: 28, opacity: 0.35, color: WarshPalette.sage },
-      { char: "ل",  top: 170, right: 30, size: 38, opacity: 0.50, color: WarshPalette.parchment },
-      { char: "ن",  top: 260, left:  55, size: 24, opacity: 0.40, color: WarshPalette.gold },
-      { char: "ه",  top: 230, right: 55, size: 32, opacity: 0.45, color: WarshPalette.sage },
-      { char: "و",  top: 310, left:  35, size: 28, opacity: 0.35, color: WarshPalette.parchment },
-      { char: "ي",  top: 340, right: 25, size: 36, opacity: 0.50, color: WarshPalette.gold },
-      { char: "ع",  top: 400, left:  22, size: 24, opacity: 0.40, color: WarshPalette.sage },
-      { char: "ك",  top: 420, right: 60, size: 30, opacity: 0.45, color: WarshPalette.parchment },
-      { char: "ص",  top: 460, left:  70, size: 22, opacity: 0.35, color: WarshPalette.gold },
-      { char: "ف",  top: 500, right: 35, size: 28, opacity: 0.40, color: WarshPalette.sage },
-      { char: "ج",  top: 540, left:  40, size: 32, opacity: 0.45, color: WarshPalette.parchment },
-    ];
-
     return (
       <View style={[styles.fullScreen, screenPadding, styles.closeScreen]}>
-        {floatingLetters.map((l, i) => (
-          <Text
-            key={i}
-            style={{
-              position: "absolute",
-              top: l.top,
-              left: "left" in l ? (l as any).left : undefined,
-              right: "right" in l ? (l as any).right : undefined,
-              fontSize: l.size,
-              opacity: l.opacity,
-              color: l.color,
-              fontFamily: "Scheherazade New",
-            }}
-          >
-            {l.char}
-          </Text>
-        ))}
-
-        <View style={styles.closeCenter}>
+        <ScrollView
+          style={styles.closeScroll}
+          contentContainerStyle={styles.closeScrollContent}
+          showsVerticalScrollIndicator={false}
+        >
           {error ? <Text style={styles.errorText}>{error}</Text> : null}
-          <View style={styles.completeCard}>
-            <Text style={styles.completeCardTitle}>{t("player.lessonComplete")}</Text>
-            <Text style={styles.xpBadge}>{t("player.pointsEarned", { count: earnedPoints })}</Text>
-          </View>
-          <View style={styles.noorAvatar}>
-            <View style={styles.noorAvatarEyes}>
-              <View style={styles.noorEye} />
-              <View style={styles.noorEye} />
+
+          <View style={styles.completionHero}>
+            <Text style={styles.completionKicker}>{t("player.lessonCompleteKicker")}</Text>
+            <View style={styles.noorMonogram}>
+              <ArabicText size="md" style={styles.noorMonogramText}>ن</ArabicText>
             </View>
-            <View style={styles.noorAvatarDot} />
+            <Text style={styles.completeCardTitle}>{t("player.lessonComplete")}</Text>
+            <ArabicText size="md" style={styles.closeArabic}>بَارَكَ اللَّهُ فِيكَ</ArabicText>
           </View>
-          <ArabicText size="md" style={styles.closeArabic}>بارك الله فيك</ArabicText>
+
+          <View style={styles.completionResultsCard}>
+            <View style={styles.completionMetric}>
+              <Text style={styles.completionMetricValue}>+{earnedPoints}</Text>
+              <Text style={styles.completionMetricLabel}>{t("player.completionPoints")}</Text>
+            </View>
+            <View style={styles.completionMetricDivider} />
+            <View style={styles.completionMetric}>
+              <Text style={styles.completionMetricValue}>{wordsLearned > 0 ? wordsLearned : practiceCount}</Text>
+              <Text style={styles.completionMetricLabel}>
+                {wordsLearned > 0 ? t("player.completionWords") : t("player.completionPractice")}
+              </Text>
+            </View>
+            <View style={styles.completionMetricDivider} />
+            <View style={styles.completionMetric}>
+              <Text style={styles.completionMetricValue}>{streak}</Text>
+              <Text style={styles.completionMetricLabel}>{t("player.completionStreak")}</Text>
+            </View>
+          </View>
+
           {completionResult?.chapterJustCompleted ? (
             <Text style={styles.chapterUnlockedBadge}>
               {t("player.nextChapterUnlocked")}
@@ -1201,12 +1223,19 @@ export default function LessonPlayScreen() {
               {t("player.phrasesToSay", { count: phrasesLearned, suffix: phrasesLearned !== 1 ? "s" : "" })}
             </Text>
           ) : null}
-        </View>
 
-        <View style={styles.noorBubble}>
-          <Text style={styles.noorLabel}>Ustaad Noor</Text>
-          <Text style={styles.noorTip}>{noorTip}</Text>
-        </View>
+          <View style={styles.noorRecapCard}>
+            <View style={styles.noorRecapHeader}>
+              <Text style={styles.noorLabel}>{t("profile.noor")}</Text>
+              <Text style={styles.meaningLanguageBadge}>
+                {language === "ur" ? t("player.urduMeanings") : t("player.englishMeanings")}
+              </Text>
+            </View>
+            <Text style={styles.noorTip} numberOfLines={3}>{noorTip}</Text>
+          </View>
+
+          <Text style={styles.nextLessonReady}>{t("player.nextLessonReady")}</Text>
+        </ScrollView>
 
         <BrandButton
           title={t("common.continue")}
@@ -2077,32 +2106,54 @@ const styles = StyleSheet.create({
     lineHeight: 18,
   },
   revealScreen: {
-    backgroundColor: WarshPalette.highlightBg,
+    backgroundColor: WarshPalette.creamBg,
+  },
+  revealScroll: {
+    flex: 1,
   },
   revealContent: {
-    flex: 1,
+    flexGrow: 1,
     justifyContent: "center",
+    paddingTop: 24,
+    paddingBottom: 28,
+  },
+  revealEyebrow: {
+    color: WarshPalette.goldDeep,
+    fontFamily: Fonts.semiBold,
+    fontSize: 10,
+    lineHeight: 14,
+    letterSpacing: 1.4,
+    textAlign: "center",
   },
   revealHeading: {
+    alignSelf: "center",
+    maxWidth: 330,
+    marginTop: 10,
+    marginBottom: 28,
     color: WarshPalette.ink,
-    fontFamily: Fonts.semiBold,
-    fontSize: 13,
-    fontWeight: "500",
-    lineHeight: 20,
-    paddingHorizontal: 20,
+    fontFamily: Fonts.bold,
+    fontSize: 26,
+    fontWeight: "700",
+    lineHeight: 37,
+    textAlign: "center",
   },
-  revealText: {
-    marginTop: 12,
-    color: WarshPalette.bodyBrown,
-    fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 20,
-    paddingHorizontal: 20,
+  revealAyahCard: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: WarshPalette.parchmentCardBorder,
+    borderRadius: 22,
+    paddingHorizontal: 22,
+    paddingVertical: 26,
+    backgroundColor: WarshPalette.parchmentBg,
+    shadowColor: WarshPalette.ink,
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.06,
+    shadowRadius: 18,
+    elevation: 2,
   },
   revealAyah: {
     color: WarshPalette.ink,
-    fontSize: 26,
-    lineHeight: 40,
+    fontSize: 29,
+    lineHeight: 46,
     textAlign: "center",
   },
   revealAyahWord: {
@@ -2111,75 +2162,155 @@ const styles = StyleSheet.create({
   highlightedWord: {
     color: WarshPalette.gold,
   },
-  closeScreen: {
-    backgroundColor: WarshPalette.closeBg,
-  },
-  closeCenter: {
-    flex: 1,
+  revealPlayRow: {
+    alignSelf: "center",
+    flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
-    gap: 16,
-    zIndex: 1,
+    gap: 8,
+    marginTop: 18,
   },
-  completeCard: {
-    backgroundColor: WarshPalette.white,
-    borderRadius: 20,
-    paddingHorizontal: 40,
-    paddingVertical: 20,
-    alignItems: "center",
-    shadowColor: WarshPalette.ink,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.10,
-    shadowRadius: 16,
-    elevation: 4,
+  revealListenLabel: {
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.regular,
+    fontSize: 11,
+    lineHeight: 16,
   },
-  completeCardTitle: {
-    fontFamily: Fonts.bold,
-    fontSize: 22,
-    fontWeight: "700",
-    color: WarshPalette.ink,
-    textAlign: "center",
+  revealLearnedSection: {
+    marginTop: 22,
+    paddingTop: 18,
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderTopColor: WarshPalette.defaultCardBorder,
   },
-  xpBadge: {
-    marginTop: 6,
-    color: WarshPalette.sage,
+  revealLearnedLabel: {
+    color: WarshPalette.subtleBrown,
     fontFamily: Fonts.semiBold,
-    fontSize: 15,
-    fontWeight: "600",
+    fontSize: 10,
+    lineHeight: 14,
     textAlign: "center",
   },
-  noorAvatar: {
-    width: 88,
-    height: 88,
-    borderRadius: 44,
-    backgroundColor: WarshPalette.parchment,
-    borderWidth: 3,
-    borderColor: WarshPalette.gold,
+  revealWordChips: {
+    flexDirection: "row",
+    flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
+    marginTop: 10,
   },
-  noorAvatarEyes: {
-    flexDirection: "row",
-    gap: 14,
+  revealWordChip: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: WarshPalette.highlightBorder,
+    borderRadius: 999,
+    paddingHorizontal: 13,
+    paddingVertical: 4,
+    backgroundColor: WarshPalette.highlightBgSoft,
   },
-  noorEye: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
-    backgroundColor: WarshPalette.ink,
+  revealWordChipText: {
+    color: WarshPalette.goldDeep,
+    fontSize: 20,
+    lineHeight: 28,
   },
-  noorAvatarDot: {
-    width: 6,
-    height: 6,
-    borderRadius: 3,
-    backgroundColor: WarshPalette.gold,
+  revealHighlightNote: {
+    alignSelf: "center",
+    maxWidth: 300,
+    marginTop: 16,
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.regular,
+    fontSize: 11,
+    lineHeight: 17,
+    textAlign: "center",
+  },
+  closeScreen: {
+    backgroundColor: WarshPalette.creamBg,
+  },
+  closeScroll: {
+    flex: 1,
+  },
+  closeScrollContent: {
+    flexGrow: 1,
+    paddingTop: 12,
+    paddingBottom: 24,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  completionHero: {
+    alignSelf: "stretch",
+    alignItems: "center",
+    borderRadius: 24,
+    paddingHorizontal: 24,
+    paddingVertical: 22,
+    backgroundColor: WarshPalette.navy,
+  },
+  completionKicker: {
+    color: WarshPalette.parchment,
+    fontFamily: Fonts.semiBold,
+    fontSize: 9,
+    lineHeight: 13,
+    letterSpacing: 1.6,
+  },
+  noorMonogram: {
+    width: 58,
+    height: 58,
+    marginTop: 14,
+    borderWidth: 1,
+    borderColor: WarshPalette.gold,
+    borderRadius: 29,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: WarshPalette.navyDeep,
+  },
+  noorMonogramText: {
+    color: WarshPalette.parchment,
+    fontSize: 31,
+    lineHeight: 42,
+  },
+  completeCardTitle: {
+    marginTop: 12,
+    fontFamily: Fonts.bold,
+    fontSize: 25,
+    fontWeight: "700",
+    color: WarshPalette.white,
+    textAlign: "center",
   },
   closeArabic: {
-    color: WarshPalette.gold,
-    fontSize: 22,
-    lineHeight: 34,
+    marginTop: 6,
+    color: WarshPalette.parchment,
+    fontSize: 21,
+    lineHeight: 32,
     textAlign: "center",
+  },
+  completionResultsCard: {
+    alignSelf: "stretch",
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 14,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: WarshPalette.parchmentCardBorder,
+    borderRadius: 18,
+    paddingVertical: 15,
+    backgroundColor: WarshPalette.parchmentBg,
+  },
+  completionMetric: {
+    flex: 1,
+    alignItems: "center",
+  },
+  completionMetricValue: {
+    color: WarshPalette.ink,
+    fontFamily: Fonts.bold,
+    fontSize: 19,
+    lineHeight: 25,
+  },
+  completionMetricLabel: {
+    marginTop: 2,
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.regular,
+    fontSize: 9,
+    lineHeight: 13,
+    textAlign: "center",
+  },
+  completionMetricDivider: {
+    width: StyleSheet.hairlineWidth,
+    height: 34,
+    backgroundColor: WarshPalette.defaultCardBorder,
   },
   xpText: {
     color: WarshPalette.sage,
@@ -2189,25 +2320,54 @@ const styles = StyleSheet.create({
     lineHeight: 32,
     textAlign: "center",
   },
-  noorBubble: {
+  noorRecapCard: {
     alignSelf: "stretch",
-    marginTop: 32,
-    borderRadius: 12,
-    padding: 16,
-    backgroundColor: WarshPalette.ink,
+    marginTop: 14,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: WarshPalette.sageSoft,
+    borderRadius: 18,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    backgroundColor: WarshPalette.correctBg,
+  },
+  noorRecapHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: 12,
   },
   noorLabel: {
-    color: WarshPalette.gold,
+    flex: 1,
+    color: WarshPalette.sageDeep,
+    fontFamily: Fonts.semiBold,
+    fontSize: 11,
+    lineHeight: 16,
+  },
+  meaningLanguageBadge: {
+    borderRadius: 999,
+    paddingHorizontal: 9,
+    paddingVertical: 4,
+    overflow: "hidden",
+    color: WarshPalette.sageDeep,
+    backgroundColor: WarshPalette.white,
     fontFamily: Fonts.regular,
-    fontSize: 9,
-    lineHeight: 13,
+    fontSize: 8,
+    lineHeight: 11,
   },
   noorTip: {
     marginTop: 8,
-    color: WarshPalette.parchment,
+    color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 18,
+    fontSize: 11,
+    lineHeight: 17,
+  },
+  nextLessonReady: {
+    marginTop: 15,
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.italic,
+    fontSize: 10,
+    lineHeight: 15,
+    textAlign: "center",
   },
   errorText: {
     color: WarshPalette.wrongText,

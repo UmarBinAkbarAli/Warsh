@@ -9,7 +9,7 @@
       "name": "Learn Home Mobile",
       "clip": true,
       "width": 390,
-      "height": 1160,
+      "height": 1135,
       "fill": "$warsh-cream",
       "cornerRadius": 28,
       "layout": "vertical",
@@ -3804,7 +3804,7 @@
           "name": "Learn Home · English UI + Urdu meanings",
           "clip": true,
           "width": 390,
-          "height": 1160,
+          "height": 960,
           "fill": "$warsh-cream",
           "cornerRadius": 28,
           "layout": "vertical",
@@ -3815,6 +3815,7 @@
             14,
             0
           ],
+          "alignItems": "center",
           "children": [
             {
               "type": "frame",
@@ -4826,6 +4827,1066 @@
           "fontFamily": "Inter",
           "fontSize": 12,
           "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Y0Qhy",
+      "x": 3310,
+      "y": 0,
+      "name": "Lesson · Ayah Reveal · Urdu UI + English Meaning",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$warsh-cream",
+      "cornerRadius": 28,
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "hz7xE",
+          "name": "Status Bar",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            18,
+            22
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "UxY9O",
+              "name": "Time",
+              "fill": "$warsh-ink",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "AYlTF",
+              "name": "System Icons",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "uHpO5",
+                  "name": "Signal",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "signal",
+                  "library": "lucide",
+                  "fill": "$warsh-ink"
+                },
+                {
+                  "type": "icon",
+                  "id": "HOVik",
+                  "name": "WiFi",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "wifi",
+                  "library": "lucide",
+                  "fill": "$warsh-ink"
+                },
+                {
+                  "type": "icon",
+                  "id": "U1zbO",
+                  "name": "Battery",
+                  "width": 20,
+                  "height": 16,
+                  "icon": "battery-full",
+                  "library": "lucide",
+                  "fill": "$warsh-ink"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wBkhm",
+          "name": "Screen Content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            0,
+            20,
+            20,
+            20
+          ],
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "frame",
+              "id": "h4LG0",
+              "name": "Lesson Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "xGgCi",
+                  "name": "Lesson Progress Header",
+                  "width": "fill_container",
+                  "height": 44,
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "CZ04Z",
+                      "name": "Close Button",
+                      "width": 44,
+                      "height": 44,
+                      "fill": "#FFFFFF00",
+                      "cornerRadius": 22,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "J2c3Pp",
+                          "name": "Close Icon",
+                          "width": 22,
+                          "height": 22,
+                          "icon": "x",
+                          "library": "lucide",
+                          "fill": "$warsh-muted"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MmUju",
+                      "name": "Progress Meta",
+                      "layout": "vertical",
+                      "gap": 5,
+                      "alignItems": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "P9GzPV",
+                          "name": "Step Label",
+                          "fill": "$warsh-ink",
+                          "content": "سبق کا آخری مرحلہ",
+                          "fontFamily": "Scheherazade New",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Ocii4",
+                          "name": "Progress Track",
+                          "width": 176,
+                          "height": 5,
+                          "fill": "$warsh-line",
+                          "cornerRadius": 3,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 3,
+                              "id": "wdevN",
+                              "name": "Progress Fill",
+                              "fill": "$warsh-gold",
+                              "width": 176,
+                              "height": 5
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "D9OuK",
+                  "name": "Reveal Heading Block",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "padding": [
+                    8,
+                    0,
+                    14,
+                    0
+                  ],
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "A7FkrZ",
+                      "name": "Quran Connection Label",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "tsIjp",
+                          "name": "Quran Connection Text",
+                          "fill": "$warsh-gold",
+                          "content": "قرآن سے رابطہ",
+                          "fontFamily": "Scheherazade New",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "icon",
+                          "id": "x5271",
+                          "name": "Sparkle Icon",
+                          "width": 15,
+                          "height": 15,
+                          "icon": "sparkles",
+                          "library": "lucide",
+                          "fill": "$warsh-gold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "fFccc",
+                      "name": "Reveal Title",
+                      "fill": "$warsh-ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ماشاءاللہ! اب آپ اس آیت میں آج کے الفاظ پہچان سکتے ہیں",
+                      "lineHeight": 1.25,
+                      "textAlign": "right",
+                      "fontFamily": "Scheherazade New",
+                      "fontSize": 26,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pyZE1",
+                  "name": "Ayah Focus Card",
+                  "width": "fill_container",
+                  "fill": "#F3ECDD",
+                  "cornerRadius": 20,
+                  "stroke": "#E1D2B2",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    18,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "BanFb",
+                      "name": "Ayah Card Header",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "F88rPw",
+                          "name": "Play Ayah",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "$warsh-navy",
+                          "cornerRadius": 20,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "mi8Jq",
+                              "name": "Play Ayah Icon",
+                              "width": 18,
+                              "height": 18,
+                              "icon": "volume-2",
+                              "library": "lucide",
+                              "fill": "$warsh-white"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "uMdrl",
+                          "name": "Ayah Reference",
+                          "fill": "$warsh-gold",
+                          "content": "البقرة · ٢:٢٦",
+                          "fontFamily": "Scheherazade New",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "qnsm4",
+                      "name": "Ayah Text",
+                      "fill": "$warsh-ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "مَاذَا أَرَادَ اللَّهُ بِهَٰذَا مَثَلًا",
+                      "lineHeight": 1.45,
+                      "textAlign": "center",
+                      "fontFamily": "Scheherazade New",
+                      "fontSize": 30,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "XYjIa",
+                      "name": "Learned Words",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "PjZFq",
+                          "name": "Learned Word مَاذَا",
+                          "fill": "#FFFFFF99",
+                          "cornerRadius": 12,
+                          "padding": [
+                            5,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "GTMR7",
+                              "name": "Word مَاذَا",
+                              "fill": "$warsh-gold",
+                              "content": "مَاذَا",
+                              "fontFamily": "Scheherazade New",
+                              "fontSize": 15,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "mAgKT",
+                          "name": "Learned Word اللَّهُ",
+                          "fill": "#FFFFFF99",
+                          "cornerRadius": 12,
+                          "padding": [
+                            5,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "J0VlUV",
+                              "name": "Word اللَّهُ",
+                              "fill": "$warsh-gold",
+                              "content": "اللَّهُ",
+                              "fontFamily": "Scheherazade New",
+                              "fontSize": 15,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "E3Yxfu",
+                          "name": "Learned Word بِهَٰذَا",
+                          "fill": "#FFFFFF99",
+                          "cornerRadius": 12,
+                          "padding": [
+                            5,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "n03vcK",
+                              "name": "Word بِهَٰذَا",
+                              "fill": "$warsh-gold",
+                              "content": "بِهَٰذَا",
+                              "fontFamily": "Scheherazade New",
+                              "fontSize": 15,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cubYr",
+              "name": "Bottom Action Area",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sQlfq",
+                  "name": "Highlight Note",
+                  "fill": "$warsh-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "سنہری الفاظ وہ ہیں جو آپ نے اس سبق میں سیکھے",
+                  "textAlign": "center",
+                  "fontFamily": "Scheherazade New",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "moqTc",
+                  "name": "Continue Button",
+                  "width": "fill_container",
+                  "height": 58,
+                  "fill": "$warsh-navy",
+                  "cornerRadius": 18,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "iLz4N",
+                      "name": "Continue Button Content",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "PYSmI",
+                          "name": "Continue Arrow",
+                          "width": 19,
+                          "height": 19,
+                          "icon": "arrow-left",
+                          "library": "lucide",
+                          "fill": "$warsh-gold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Forb0",
+                          "name": "Continue Label",
+                          "fill": "$warsh-white",
+                          "content": "جاری رکھیں",
+                          "fontFamily": "Scheherazade New",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "jBer5",
+      "x": 3800,
+      "y": 0,
+      "name": "Lesson · Completion · Urdu UI + English Meaning",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$warsh-cream",
+      "cornerRadius": 28,
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "X4yX3",
+          "name": "Status Bar",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            18,
+            22
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "OlRH0",
+              "name": "Time",
+              "fill": "$warsh-ink",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "uSEaL",
+              "name": "System Icons",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "TNraF",
+                  "name": "Signal",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "signal",
+                  "library": "lucide",
+                  "fill": "$warsh-ink"
+                },
+                {
+                  "type": "icon",
+                  "id": "Nvbkr",
+                  "name": "WiFi",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "wifi",
+                  "library": "lucide",
+                  "fill": "$warsh-ink"
+                },
+                {
+                  "type": "icon",
+                  "id": "T8UP4p",
+                  "name": "Battery",
+                  "width": 20,
+                  "height": 16,
+                  "icon": "battery-full",
+                  "library": "lucide",
+                  "fill": "$warsh-ink"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tDvQQ",
+          "name": "Completion Content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Q2Yhib",
+              "layoutPosition": "absolute",
+              "x": 20,
+              "y": 0,
+              "name": "Completion Stack",
+              "width": 350,
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "BEwwt",
+                  "name": "Celebration Stage",
+                  "width": "fill_container",
+                  "height": 282,
+                  "fill": "$warsh-navy",
+                  "cornerRadius": 26,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#071B4428",
+                    "offset": {
+                      "x": 0,
+                      "y": 12
+                    },
+                    "blur": 28
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    18,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "mHoPx",
+                      "name": "Celebration Eyebrow",
+                      "fill": "#FFFFFF12",
+                      "cornerRadius": 14,
+                      "gap": 7,
+                      "padding": [
+                        6,
+                        10
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "Ab5VP",
+                          "name": "Celebration Sparkle",
+                          "width": 14,
+                          "height": 14,
+                          "icon": "sparkles",
+                          "library": "lucide",
+                          "fill": "$warsh-gold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "g5EYhj",
+                          "name": "Completion Kicker",
+                          "fill": "#E8D2A5",
+                          "content": "LESSON 01 · COMPLETE",
+                          "fontFamily": "Inter",
+                          "fontSize": 9,
+                          "fontWeight": "700",
+                          "letterSpacing": 1.3
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "r0Tl4M",
+                      "name": "Ustaad Noor Emblem",
+                      "width": 78,
+                      "height": 78,
+                      "fill": "$warsh-sage",
+                      "cornerRadius": 39,
+                      "stroke": "$warsh-gold",
+                      "strokeWidth": 3,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Fcj5O",
+                          "name": "Noor Monogram",
+                          "fill": "$warsh-navy",
+                          "content": "ن",
+                          "fontFamily": "Scheherazade New",
+                          "fontSize": 32,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "f3Ng0o",
+                      "name": "Completion Title",
+                      "fill": "$warsh-white",
+                      "content": "سبق مکمل!",
+                      "fontFamily": "Scheherazade New",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "SbRFb",
+                      "name": "Completion Blessing",
+                      "fill": "$warsh-gold",
+                      "content": "بَارَكَ اللَّهُ فِيكَ",
+                      "fontFamily": "Scheherazade New",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "E58op",
+                  "name": "Lesson Results",
+                  "width": "fill_container",
+                  "height": 92,
+                  "fill": "$warsh-white",
+                  "cornerRadius": 18,
+                  "stroke": "$warsh-line",
+                  "strokeWidth": 1,
+                  "padding": [
+                    14,
+                    10
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "rJwz1",
+                      "name": "Metric Points",
+                      "width": 100,
+                      "layout": "vertical",
+                      "gap": 3,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Z2fWT",
+                          "name": "Points Header",
+                          "gap": 5,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "xIMjo",
+                              "name": "Points Icon",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "star",
+                              "library": "lucide",
+                              "fill": "$warsh-gold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Dowdq",
+                              "name": "Points Label",
+                              "fill": "$warsh-muted",
+                              "content": "پوائنٹس",
+                              "fontFamily": "Scheherazade New",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "yiDSI",
+                          "name": "Points Value",
+                          "fill": "$warsh-ink",
+                          "content": "+15",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "OUGgx",
+                      "name": "Metric Divider One",
+                      "fill": "$warsh-line",
+                      "width": 1,
+                      "height": 42
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Z05eKQ",
+                      "name": "Metric Words",
+                      "width": 100,
+                      "layout": "vertical",
+                      "gap": 3,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "lA2VD",
+                          "name": "Words Header",
+                          "gap": 5,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "z5GVaf",
+                              "name": "Words Icon",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "book-open",
+                              "library": "lucide",
+                              "fill": "#8AA18D"
+                            },
+                            {
+                              "type": "text",
+                              "id": "x0r7j",
+                              "name": "Words Label",
+                              "fill": "$warsh-muted",
+                              "content": "نئے الفاظ",
+                              "fontFamily": "Scheherazade New",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "Fe6n7",
+                          "name": "Words Value",
+                          "fill": "$warsh-ink",
+                          "content": "10",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "GCljy",
+                      "name": "Metric Divider Two",
+                      "fill": "$warsh-line",
+                      "width": 1,
+                      "height": 42
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lD2lN",
+                      "name": "Metric Streak",
+                      "width": 100,
+                      "layout": "vertical",
+                      "gap": 3,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "D3CNc",
+                          "name": "Streak Header",
+                          "gap": 5,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "h83Od",
+                              "name": "Streak Icon",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "flame",
+                              "library": "lucide",
+                              "fill": "#D4875C"
+                            },
+                            {
+                              "type": "text",
+                              "id": "gBtbh",
+                              "name": "Streak Label",
+                              "fill": "$warsh-muted",
+                              "content": "تسلسل",
+                              "fontFamily": "Scheherazade New",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "JUgQK",
+                          "name": "Streak Value",
+                          "fill": "$warsh-ink",
+                          "content": "1 دن",
+                          "fontFamily": "Scheherazade New",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qxUQk",
+                  "name": "Noor Lesson Recap",
+                  "width": "fill_container",
+                  "fill": "#EEF3EC",
+                  "cornerRadius": 18,
+                  "stroke": "#D7E1D7",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    14,
+                    15
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "uyxzA",
+                      "name": "Noor Recap Header",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "z18Nk4",
+                          "name": "Meaning Language Badge",
+                          "fill": "$warsh-white",
+                          "cornerRadius": 10,
+                          "padding": [
+                            5,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "A8A0BB",
+                              "name": "Meaning Language Badge Text",
+                              "fill": "$warsh-muted",
+                              "content": "ENGLISH MEANING",
+                              "fontFamily": "Inter",
+                              "fontSize": 8,
+                              "fontWeight": "700",
+                              "letterSpacing": 1
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "t7CwW6",
+                          "name": "Noor Identity",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "FGWOJ",
+                              "name": "Noor Name",
+                              "fill": "$warsh-ink",
+                              "content": "استاد نور",
+                              "fontFamily": "Scheherazade New",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "x3QIX8",
+                              "name": "Noor Mini Emblem",
+                              "width": 28,
+                              "height": 28,
+                              "fill": "$warsh-navy",
+                              "cornerRadius": 14,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "rAbBK",
+                                  "name": "Noor Mini Monogram",
+                                  "fill": "$warsh-gold",
+                                  "content": "ن",
+                                  "fontFamily": "Scheherazade New",
+                                  "fontSize": 13,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "ABGdo",
+                      "name": "Noor Recap Text",
+                      "fill": "$warsh-ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Ten words unlocked. You can now recognise هٰذَا, مَاذَا and ذٰلِكَ when you meet them in Al-Baqarah.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Lora",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "x5BQW1",
+                      "name": "View Lesson Summary",
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "CLqh3",
+                          "name": "Summary Icon",
+                          "width": 15,
+                          "height": 15,
+                          "icon": "book-open-text",
+                          "library": "lucide",
+                          "fill": "$warsh-gold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "kM2p5",
+                          "name": "Summary Link",
+                          "fill": "$warsh-gold",
+                          "content": "سبق کا خلاصہ دیکھیں",
+                          "fontFamily": "Scheherazade New",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "S5ZeU",
+              "layoutPosition": "absolute",
+              "x": 20,
+              "y": 668,
+              "name": "Bottom Action Area",
+              "width": 350,
+              "layout": "vertical",
+              "gap": 9,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dNSSr",
+                  "name": "Next Step Note",
+                  "fill": "$warsh-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "آپ کا اگلا سبق تیار ہے",
+                  "textAlign": "center",
+                  "fontFamily": "Scheherazade New",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "atZJl",
+                  "name": "Continue Button",
+                  "width": "fill_container",
+                  "height": 58,
+                  "fill": "$warsh-navy",
+                  "cornerRadius": 18,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Pacpz",
+                      "name": "Continue Button Content",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "ptsHW",
+                          "name": "Continue Arrow",
+                          "width": 19,
+                          "height": 19,
+                          "icon": "arrow-left",
+                          "library": "lucide",
+                          "fill": "$warsh-gold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "b2TEi",
+                          "name": "Continue Label",
+                          "fill": "$warsh-white",
+                          "content": "جاری رکھیں",
+                          "fontFamily": "Scheherazade New",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
