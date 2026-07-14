@@ -63,15 +63,18 @@ export function getSubscriptionState(user: UserSub) {
   const trialDaysRemaining = Math.ceil(
     (user.trialExpiresAt.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)
   );
-  const onTrial = user.subscriptionStatus === "trial";
-  const trialActive = onTrial && trialDaysRemaining > 0;
+  // The trial window is defined solely by trialExpiresAt — NOT by the status
+  // string. A subscription purchase during the trial overwrites subscriptionStatus
+  // off "trial"; that must not shorten the guaranteed trial window.
+  const trialWindowOpen = user.trialExpiresAt.getTime() > now.getTime();
 
-  // Normalized store state for a store-backed subscription (null while on trial /
-  // never subscribed). This is the source of truth persisted from verified
-  // Google/Apple data — never a client-supplied or locally-computed value.
-  const storeState: StoreSubscriptionState | null = onTrial
-    ? null
-    : (user.subscriptionStatus as StoreSubscriptionState);
+  // Normalized store state for a store-backed subscription (null while purely on
+  // the "trial" lifecycle marker). This is persisted from verified Google/Apple
+  // data — never a client-supplied or locally-computed value.
+  const storeState: StoreSubscriptionState | null =
+    user.subscriptionStatus === "trial"
+      ? null
+      : (user.subscriptionStatus as StoreSubscriptionState);
 
   const withinPaidPeriod =
     user.subscriptionActiveUntil != null && user.subscriptionActiveUntil > now;
@@ -83,20 +86,38 @@ export function getSubscriptionState(user: UserSub) {
     ACCESS_GRANTING_STORE_STATES.has(storeState) &&
     withinPaidPeriod;
 
+  // The trial grants full access for the ENTIRE trial window, independent of
+  // subscriptionStatus. If a purchase made during the trial later lapses (test
+  // subscriptions, cancellation, failed payment) while trial days remain, the
+  // user falls back to the remaining trial instead of being locked out. Spec:
+  // the trial is seven full days of access that nothing cuts short early.
+  // (When a purchase is active we surface the subscription rather than the trial.)
+  const trialActive = trialWindowOpen && !subscriptionActive;
+
   const hasAccess = trialActive || subscriptionActive;
 
-  // A finished trial reports as "expired" even before the cron flips the row.
-  const effectiveStatus: SubscriptionStatus =
-    onTrial && !trialActive ? "expired" : (user.subscriptionStatus as SubscriptionStatus);
+  // Reported status keeps every UI surface coherent:
+  //  - an active paid subscription reports its real store state;
+  //  - otherwise an open trial window reports "trial" (so the app shows the trial
+  //    banner, never the expired/locked banner, even after a lapsed purchase);
+  //  - a closed window with no active subscription reports its store state
+  //    (on_hold / paused / pending) or "expired".
+  const effectiveStatus: SubscriptionStatus = subscriptionActive
+    ? (user.subscriptionStatus as SubscriptionStatus)
+    : trialWindowOpen
+      ? "trial"
+      : storeState != null
+        ? (user.subscriptionStatus as SubscriptionStatus)
+        : "expired";
 
   return {
     subscriptionStatus: effectiveStatus,
-    // Normalized store state (null on trial / never subscribed).
+    // Normalized store state (null when never subscribed / purely on trial).
     storeState,
     // True when auto-renew is off but the user still has access until expiry.
-    willCancel: storeState === "canceled",
+    willCancel: storeState === "canceled" && subscriptionActive,
     // Payment is being retried; access retained for now.
-    inGracePeriod: storeState === "in_grace",
+    inGracePeriod: storeState === "in_grace" && subscriptionActive,
     trialDaysRemaining: Math.max(0, trialDaysRemaining),
     trialActive,
     subscriptionActive,
