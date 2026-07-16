@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
+  Linking,
   Platform,
   ScrollView,
   StyleSheet,
@@ -13,8 +14,11 @@ import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import { verifyPurchase, getSubscriptionStatus } from "@services/api";
+import { API_BASE_URL, verifyPurchase, getSubscriptionStatus } from "@services/api";
 import { ArabicText } from "@components/ArabicText";
+import { BrandButton } from "@components/BrandButton";
+import { useT } from "@i18n/index";
+import { useLanguage } from "@services/language";
 import { trackPaywallViewed, trackSubscriptionStarted, trackSubscriptionRestored } from "@services/analytics";
 import {
   acknowledgeAndroidPurchase,
@@ -24,7 +28,6 @@ import {
   finishIapTransaction,
   getActiveSubscriptionToken,
   getAvailableIapPurchases,
-  getIapDisplayPrice,
   getIapProductId,
   getSubscriptionProducts,
   isBillingSupportedEnvironment,
@@ -41,18 +44,6 @@ const BASE_PLAN_IDS = { monthly: "monthly", annual: "yearly" } as const;
 
 const SKUS = [SUBSCRIPTION_PRODUCT_ID];
 
-// Feature comparison: [label, free, premium]
-const COMPARISON: [string, boolean, boolean][] = [
-  ["Vocabulary Bank (all words)", true,  true],
-  ["All 72 chapters & lessons",   false, true],
-  ["Ustaad Noor — AI tutor",      false, true],
-  ["Audio for every word & ayah", false, true],
-  ["Speaking practice",           false, true],
-  ["Tadabbur — Quran deep dive",  false, true],
-  ["Streak protection & freezes", false, true],
-  ["All future content",          false, true],
-];
-
 interface Props {
   dismissable?: boolean;
 }
@@ -60,6 +51,9 @@ interface Props {
 export default function PaywallScreen({ dismissable = true }: Props) {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const t = useT();
+  const language = useLanguage();
+  const isUrdu = language === "ur";
 
   const [selected, setSelected] = useState<"monthly" | "annual">("annual");
   const [products, setProducts] = useState<IapSubscription[]>([]);
@@ -132,7 +126,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   );
 
   function getPriceLabel(planKey: "monthly" | "annual") {
-    const fallback = planKey === "annual" ? "$10 / year" : "$1 / month";
+    const fallback = planKey === "annual" ? "$10" : "$1";
     const product = products.find((p) => getIapProductId(p) === SUBSCRIPTION_PRODUCT_ID);
     if (!product) return fallback;
     const basePlanId = BASE_PLAN_IDS[planKey];
@@ -351,9 +345,14 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   const isWeb = Platform.OS === "web";
   const purchaseReady = billingSupported &&
     (Platform.OS !== "android" || googlePlayVerificationReady === true);
-  const trialCopy = trialDaysRemaining !== null && trialDaysRemaining > 0
-    ? `Free trial ends in ${trialDaysRemaining} day${trialDaysRemaining !== 1 ? "s" : ""}.`
-    : "Unlock the full Warsh experience.";
+  const trialChipText = trialDaysRemaining !== null && trialDaysRemaining > 0
+    ? t("paywall.trialChip", { days: trialDaysRemaining })
+    : t("paywall.premiumChip");
+  const benefitItems = [
+    { icon: "book-outline" as const, label: t("paywall.benefitChapters") },
+    { icon: "sparkles-outline" as const, label: t("paywall.benefitNoor") },
+    { icon: "mic-outline" as const, label: t("paywall.benefitPractice") },
+  ];
 
   // Which plan key the user currently holds (verified backend state), for marking
   // the "Current plan" and driving switch-vs-purchase.
@@ -364,193 +363,173 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   const selectedIsCurrent = currentPlanKey != null && selected === currentPlanKey;
   const isSwitching = currentPlanKey != null && !selectedIsCurrent;
   const ctaOnPress = isSwitching ? handleChangePlan : handlePurchase;
+  const selectedPlanLabel = selected === "annual" ? t("paywall.yearly") : t("paywall.monthly");
+  const primaryCtaTitle = !billingSupported
+    ? t("paywall.unavailableExpo")
+    : googlePlayVerificationReady === null
+      ? t("paywall.checkingAvailability")
+      : googlePlayVerificationReady === false
+        ? t("paywall.temporarilyUnavailable")
+        : selectedIsCurrent
+          ? t("paywall.currentPlan")
+          : isSwitching
+            ? t("paywall.switchPlan", { plan: selectedPlanLabel })
+            : t("paywall.continuePlan", { plan: selectedPlanLabel, price: getPriceLabel(selected) });
+
+  function openLegal(path: "privacy" | "terms") {
+    void Linking.openURL(`${API_BASE_URL}/${path}`).catch(() => {});
+  }
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
-      {/* Header */}
       <View style={styles.header}>
         {dismissable ? (
           <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityLabel={t("paywall.close")}
+            style={styles.closeButton}
             onPress={() => (router.canGoBack() ? router.back() : router.replace("/(app)/(tabs)"))}
             hitSlop={8}
           >
-            <Ionicons name="close" size={22} color={WarshPalette.bodyBrown} />
+            <Ionicons name="close" size={20} color={WarshPalette.ink} />
           </TouchableOpacity>
-        ) : (
-          <View style={{ width: 22 }} />
-        )}
+        ) : null}
         <ArabicText size="sm" style={styles.headerArabic}>وَرْش</ArabicText>
-        <View style={{ width: 22 }} />
       </View>
 
-      <ScrollView contentContainerStyle={[styles.content, { paddingBottom: insets.bottom + Spacing.xl }]}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={[styles.content, { paddingBottom: Math.max(insets.bottom, Spacing.sm) + Spacing.md }]}
+      >
+        <View style={styles.trialChip}>
+          <Ionicons name="timer-outline" size={13} color={WarshPalette.navy} />
+          <Text style={[styles.trialChipText, isUrdu && styles.urduText]}>{trialChipText}</Text>
+        </View>
 
-        {/* Hero */}
-        <Text style={styles.heroTitle}>Continue your journey.</Text>
-        <Text style={styles.heroSubtitle}>
-          {isWeb
-            ? "To unlock all 72 chapters, start your subscription in the Warsh app on Android. It unlocks everything here in your browser too — just sign in with the same account."
-            : trialCopy}
+        <Text style={[styles.heroTitle, isUrdu && styles.urduText]}>{t("paywall.title")}</Text>
+        <Text style={[styles.heroSubtitle, isUrdu && styles.urduText]}>
+          {isWeb ? t("paywall.webHero") : t("paywall.subtitle")}
         </Text>
 
-        {/* Comparison table */}
-        <View style={styles.table}>
-          {/* Column headers */}
-          <View style={styles.tableHeader}>
-            <View style={styles.featureCol} />
-            <View style={styles.colHeader}>
-              <Text style={styles.colHeaderLabel}>Free</Text>
-            </View>
-            <View style={[styles.colHeader, styles.colHeaderPremium]}>
-              <Text style={[styles.colHeaderLabel, styles.colHeaderLabelPremium]}>Premium</Text>
-            </View>
-          </View>
-
-          {/* Rows */}
-          {COMPARISON.map(([label, free, premium], i) => (
-            <View key={label} style={[styles.tableRow, i % 2 === 0 ? styles.tableRowAlt : null]}>
-              <Text style={styles.featureLabel}>{label}</Text>
-              <View style={styles.checkCell}>
-                {free
-                  ? <Ionicons name="checkmark" size={16} color={WarshPalette.bodyBrown} />
-                  : <Text style={styles.dash}>—</Text>}
+        <View style={styles.benefitsCard}>
+          {benefitItems.map((item) => (
+            <View key={item.label} style={[styles.benefitRow, isUrdu && styles.rowRtl]}>
+              <View style={styles.benefitIcon}>
+                <Ionicons name={item.icon} size={15} color={WarshPalette.sageDeep} />
               </View>
-              <View style={[styles.checkCell, styles.premiumCell]}>
-                {premium
-                  ? <Ionicons name="checkmark" size={16} color={WarshPalette.sage} />
-                  : <Text style={styles.dash}>—</Text>}
-              </View>
+              <Text style={[styles.benefitText, isUrdu && styles.urduText]}>{item.label}</Text>
             </View>
           ))}
+          <Text style={[styles.featuresLink, isUrdu && styles.urduText]}>{t("paywall.seeFeatures")}</Text>
         </View>
 
-        {/* No payment note — native only (web can't purchase here) */}
-        {!isWeb && trialDaysRemaining !== null && trialDaysRemaining > 0 && (
-          <View style={styles.noPayNote}>
-            <Ionicons name="checkmark-circle-outline" size={16} color={WarshPalette.sage} />
-            <Text style={styles.noPayText}>No payment due now. Cancel anytime.</Text>
+        {isWeb ? (
+          <View style={[styles.webNote, isUrdu && styles.rowRtl]}>
+            <Ionicons name="phone-portrait-outline" size={18} color={WarshPalette.sageDeep} />
+            <Text style={[styles.webNoteText, isUrdu && styles.urduText]}>{t("paywall.webInstruction")}</Text>
+          </View>
+        ) : (
+          <View accessibilityRole="radiogroup" style={styles.planList}>
+            <TouchableOpacity
+              accessibilityRole="radio"
+              accessibilityState={{ checked: selected === "annual" }}
+              style={[styles.planCard, selected === "annual" && styles.planCardSelected]}
+              onPress={() => setSelected("annual")}
+              activeOpacity={0.82}
+            >
+              <Ionicons
+                name={selected === "annual" ? "radio-button-on" : "radio-button-off"}
+                size={24}
+                color={selected === "annual" ? WarshPalette.gold : WarshPalette.sageSoft}
+              />
+              <View style={styles.planMain}>
+                <Text style={[styles.planTitle, isUrdu && styles.urduText]}>{t("paywall.yearly")}</Text>
+                <Text style={[styles.planMeta, isUrdu && styles.urduText]}>
+                  {t("paywall.yearlyPrice", { price: getPriceLabel("annual") })}
+                </Text>
+              </View>
+              <View style={[styles.valueBadge, currentPlanKey === "annual" && styles.currentBadge]}>
+                <Text style={[styles.valueBadgeText, isUrdu && styles.urduText]}>
+                  {currentPlanKey === "annual" ? t("paywall.currentPlan") : t("paywall.bestValue")}
+                </Text>
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              accessibilityRole="radio"
+              accessibilityState={{ checked: selected === "monthly" }}
+              style={[styles.planCard, selected === "monthly" && styles.planCardSelected]}
+              onPress={() => setSelected("monthly")}
+              activeOpacity={0.82}
+            >
+              <Ionicons
+                name={selected === "monthly" ? "radio-button-on" : "radio-button-off"}
+                size={24}
+                color={selected === "monthly" ? WarshPalette.gold : WarshPalette.sageSoft}
+              />
+              <Text style={[styles.planTitle, styles.planMain, isUrdu && styles.urduText]}>{t("paywall.monthly")}</Text>
+              <Text style={[styles.monthlyPrice, isUrdu && styles.urduText]}>
+                {t("paywall.monthlyPrice", { price: getPriceLabel("monthly") })}
+              </Text>
+            </TouchableOpacity>
           </View>
         )}
 
-        {/* Web instruction card — where to subscribe */}
-        {isWeb && (
-          <View style={styles.webNote}>
-            <Ionicons name="phone-portrait-outline" size={18} color={WarshPalette.sage} />
-            <Text style={styles.webNoteText}>
-              Subscriptions are purchased in the Warsh Android app via Google Play. Once
-              subscribed, return here and refresh to continue on the web.
-            </Text>
-          </View>
-        )}
-
-        {/* Plan selector — native only */}
-        {!isWeb && (
-        <View style={styles.planRow}>
-          <TouchableOpacity
-            style={[styles.planTile, selected === "annual" ? styles.planTileSelected : null]}
-            onPress={() => setSelected("annual")}
-            activeOpacity={0.8}
-          >
-            <View style={styles.radioOuter}>
-              {selected === "annual" ? <View style={styles.radioInner} /> : null}
-            </View>
-            <View style={styles.planText}>
-              <Text style={styles.planPrice}>{getPriceLabel("annual")}</Text>
-              <Text style={styles.planSub}>Billed annually</Text>
-            </View>
-            {currentPlanKey === "annual" ? (
-              <View style={styles.currentBadge}>
-                <Text style={styles.currentText}>Current plan</Text>
-              </View>
-            ) : (
-              <View style={styles.saveBadge}>
-                <Text style={styles.saveText}>Save 17%</Text>
-              </View>
-            )}
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={[styles.planTile, selected === "monthly" ? styles.planTileSelected : null]}
-            onPress={() => setSelected("monthly")}
-            activeOpacity={0.8}
-          >
-            <View style={styles.radioOuter}>
-              {selected === "monthly" ? <View style={styles.radioInner} /> : null}
-            </View>
-            <View style={styles.planText}>
-              <Text style={styles.planPrice}>{getPriceLabel("monthly")}</Text>
-              <Text style={styles.planSub}>Billed monthly</Text>
-            </View>
-            {currentPlanKey === "monthly" ? (
-              <View style={styles.currentBadge}>
-                <Text style={styles.currentText}>Current plan</Text>
-              </View>
-            ) : null}
-          </TouchableOpacity>
-        </View>
-        )}
-
-        {/* CTA */}
         {isWeb ? (
           <>
-            <TouchableOpacity
-              style={[styles.ctaBtn, restoring ? styles.ctaBtnDisabled : null]}
+            <BrandButton
+              title={t("paywall.refreshAccess")}
               onPress={handleWebRefreshAccess}
+              loading={restoring}
               disabled={restoring}
-              activeOpacity={0.85}
-            >
-              {restoring
-                ? <ActivityIndicator color={WarshPalette.ink} />
-                : <Text style={styles.ctaBtnText}>I&apos;ve subscribed — refresh access</Text>}
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => router.replace("/(app)/(tabs)")} style={styles.restoreBtn}>
-              <Text style={styles.restoreText}>Back to free lessons</Text>
+              style={styles.primaryButton}
+            />
+            <TouchableOpacity onPress={() => router.replace("/(app)/(tabs)")} style={styles.textAction}>
+              <Text style={[styles.restoreText, isUrdu && styles.urduText]}>{t("paywall.backToFree")}</Text>
             </TouchableOpacity>
           </>
         ) : (
           <>
-            <TouchableOpacity
-              style={[styles.ctaBtn, (purchasing || !purchaseReady || selectedIsCurrent) ? styles.ctaBtnDisabled : null]}
+            <BrandButton
+              title={primaryCtaTitle}
               onPress={ctaOnPress}
+              loading={purchasing}
               disabled={purchasing || !purchaseReady || selectedIsCurrent}
-              activeOpacity={0.85}
+              style={styles.primaryButton}
+            />
+            <View style={[styles.reassuranceRow, isUrdu && styles.rowRtl]}>
+              <Ionicons name="shield-checkmark-outline" size={13} color={WarshPalette.subtleBrown} />
+              <Text style={[styles.reassuranceText, isUrdu && styles.urduText]}>{t("paywall.playReassurance")}</Text>
+            </View>
+            <TouchableOpacity
+              onPress={handleRestore}
+              disabled={restoring || !billingSupported}
+              style={styles.textAction}
             >
-              {purchasing
-                ? <ActivityIndicator color={WarshPalette.ink} />
-                : <Text style={styles.ctaBtnText}>
-                    {!billingSupported
-                      ? "Unavailable in Expo Go"
-                      : googlePlayVerificationReady === null
-                        ? "Checking purchase availability..."
-                      : googlePlayVerificationReady === false
-                        ? "Purchases temporarily unavailable"
-                      : selectedIsCurrent
-                        ? "Current plan"
-                      : isSwitching
-                        ? `Switch to ${selected === "annual" ? "yearly" : "monthly"} plan`
-                        : trialDaysRemaining !== null && trialDaysRemaining > 0
-                          ? `Try for free, then ${getPriceLabel(selected)}`
-                          : `Subscribe for ${getPriceLabel(selected)}`}
-                  </Text>}
-            </TouchableOpacity>
-            <TouchableOpacity onPress={handleRestore} disabled={restoring || !billingSupported} style={styles.restoreBtn}>
               {restoring
-                ? <ActivityIndicator color={WarshPalette.gold} size="small" />
-                : <Text style={styles.restoreText}>Restore purchases</Text>}
+                ? <ActivityIndicator color={WarshPalette.goldDeep} size="small" />
+                : <Text style={[styles.restoreText, isUrdu && styles.urduText]}>{t("paywall.restore")}</Text>}
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => router.replace("/(app)/(tabs)/vocabulary")}
-              style={styles.restoreBtn}
+              style={styles.textAction}
             >
-              <Text style={styles.freeAccessText}>Continue with free Vocabulary</Text>
+              <Text style={[styles.freeAccessText, isUrdu && styles.urduText]}>{t("paywall.continueVocabulary")}</Text>
             </TouchableOpacity>
           </>
         )}
 
-        <Text style={styles.legal}>
-          {isWeb
-            ? "Subscriptions are available in the Warsh Android app via Google Play. Once subscribed, sign in here with the same account to continue on the web."
-            : "Subscription auto-renews unless cancelled at least 24 hours before the end of the current period. Payment charged to your Google Play account."}
+        <View style={[styles.legalLinks, isUrdu && styles.rowRtl]}>
+          <Text onPress={() => openLegal("terms")} style={[styles.legalLink, isUrdu && styles.urduText]}>
+            {t("paywall.terms")}
+          </Text>
+          <Text style={styles.legalDivider}>·</Text>
+          <Text onPress={() => openLegal("privacy")} style={[styles.legalLink, isUrdu && styles.urduText]}>
+            {t("paywall.privacy")}
+          </Text>
+        </View>
+        <Text style={[styles.legal, isUrdu && styles.urduText]}>
+          {isWeb ? t("paywall.webLegal") : t("paywall.subscriptionLegal")}
         </Text>
       </ScrollView>
     </View>
@@ -558,111 +537,236 @@ export default function PaywallScreen({ dismissable = true }: Props) {
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: Colors.bg.primary },
-  header: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingHorizontal: Spacing.xl,
-    paddingVertical: Spacing.md,
+  screen: {
+    flex: 1,
+    backgroundColor: Colors.bg.primary,
   },
-  headerArabic: { color: WarshPalette.gold },
-  content: { paddingHorizontal: Spacing.xl },
-
+  header: {
+    minHeight: 54,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: Spacing.gutter,
+  },
+  closeButton: {
+    position: "absolute",
+    left: Spacing.gutter,
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1,
+    borderColor: WarshPalette.defaultCardBorder,
+    backgroundColor: WarshPalette.parchmentBg,
+  },
+  headerArabic: {
+    color: WarshPalette.ink,
+    fontSize: 23,
+  },
+  content: {
+    paddingHorizontal: Spacing.gutter,
+  },
+  trialChip: {
+    alignSelf: "center",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 5,
+    paddingHorizontal: Spacing.md,
+    paddingVertical: 5,
+    borderRadius: Radii.full,
+    borderWidth: 1,
+    borderColor: WarshPalette.sageSoft,
+    backgroundColor: WarshPalette.sageTintBg,
+    marginBottom: Spacing.md,
+  },
+  trialChipText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.caption,
+    color: WarshPalette.navy,
+  },
   heroTitle: {
     fontFamily: Fonts.bold,
-    fontSize: FontSizes.displayL,
+    fontSize: 28,
     fontWeight: "700",
     color: WarshPalette.ink,
-    lineHeight: LineHeights.displayL,
-    textAlign: "center",
-    marginBottom: Spacing.xs,
+    lineHeight: 32,
+    marginBottom: 5,
   },
   heroSubtitle: {
     fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyL,
+    fontSize: FontSizes.bodyM,
     color: WarshPalette.bodyBrown,
-    textAlign: "center",
-    lineHeight: LineHeights.bodyL,
-    marginBottom: Spacing.lg,
+    lineHeight: LineHeights.bodyM,
+    marginBottom: Spacing.md,
   },
-
-  // Table
-  table: {
+  urduText: {
+    fontFamily: Fonts.urduFallback,
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  rowRtl: {
+    flexDirection: "row-reverse",
+  },
+  benefitsCard: {
+    paddingHorizontal: Spacing.md,
+    paddingTop: Spacing.md,
+    paddingBottom: Spacing.sm,
+    borderRadius: Radii.xl,
+    borderWidth: 1,
+    borderColor: WarshPalette.defaultCardBorder,
+    backgroundColor: WarshPalette.parchmentBg,
+    marginBottom: Spacing.sm,
+  },
+  benefitRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.sm,
+    minHeight: 36,
+  },
+  benefitIcon: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: WarshPalette.sageTintBg,
+  },
+  benefitText: {
+    flex: 1,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+    color: WarshPalette.ink,
+    lineHeight: LineHeights.bodyM,
+  },
+  featuresLink: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.caption,
+    color: WarshPalette.goldDeep,
+    paddingTop: 4,
+    paddingBottom: 2,
+  },
+  planList: {
+    gap: Spacing.sm,
+    marginBottom: Spacing.md,
+  },
+  planCard: {
+    minHeight: 58,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.sm,
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.sm,
     borderRadius: Radii.lg,
     borderWidth: 1,
     borderColor: WarshPalette.defaultCardBorder,
-    overflow: "hidden",
-    marginBottom: Spacing.md,
-  },
-  tableHeader: {
-    flexDirection: "row",
     backgroundColor: WarshPalette.parchmentBg,
-    borderBottomWidth: 1,
-    borderBottomColor: WarshPalette.defaultCardBorder,
   },
-  featureCol: { flex: 1 },
-  colHeader: {
-    width: 72,
-    paddingVertical: Spacing.sm,
+  planCardSelected: {
+    borderWidth: 2,
+    borderColor: WarshPalette.gold,
+    backgroundColor: WarshPalette.highlightBgSoft,
+  },
+  planMain: {
+    flex: 1,
+  },
+  planTitle: {
+    fontFamily: Fonts.bold,
+    fontSize: FontSizes.h3,
+    fontWeight: "700",
+    color: WarshPalette.ink,
+    lineHeight: LineHeights.h3,
+  },
+  planMeta: {
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.label,
+    color: WarshPalette.subtleBrown,
+    lineHeight: LineHeights.label,
+  },
+  monthlyPrice: {
+    fontFamily: Fonts.bold,
+    fontSize: FontSizes.bodyM,
+    fontWeight: "700",
+    color: WarshPalette.ink,
+  },
+  valueBadge: {
+    maxWidth: 128,
+    paddingHorizontal: Spacing.sm,
+    paddingVertical: 4,
+    borderRadius: Radii.full,
+    borderWidth: 1,
+    borderColor: WarshPalette.sageSoft,
+    backgroundColor: WarshPalette.sageTintBg,
+  },
+  valueBadgeText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.label,
+    color: WarshPalette.navy,
+    textAlign: "center",
+  },
+  currentBadge: {
+    borderColor: WarshPalette.gold,
+    backgroundColor: WarshPalette.highlightBg,
+  },
+  primaryButton: {
+    width: "100%",
+    minHeight: 56,
+    borderRadius: Radii.lg,
+    marginBottom: Spacing.sm,
+  },
+  reassuranceRow: {
+    flexDirection: "row",
     alignItems: "center",
+    justifyContent: "center",
+    gap: 5,
+    marginBottom: 2,
   },
-  colHeaderPremium: {
-    backgroundColor: WarshPalette.sage + "22",
+  reassuranceText: {
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.label,
+    color: WarshPalette.subtleBrown,
+    textAlign: "center",
+    lineHeight: LineHeights.label,
   },
-  colHeaderLabel: {
+  textAction: {
+    minHeight: 32,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  restoreText: {
+    color: WarshPalette.ink,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
-    fontWeight: "600",
-    color: WarshPalette.bodyBrown,
+    textDecorationLine: "underline",
   },
-  colHeaderLabelPremium: {
-    color: WarshPalette.sage,
+  freeAccessText: {
+    color: WarshPalette.sageDeep,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+    textDecorationLine: "underline",
   },
-  tableRow: {
+  legalLinks: {
     flexDirection: "row",
     alignItems: "center",
-    paddingVertical: Spacing.sm,
-    paddingLeft: Spacing.md,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: WarshPalette.defaultCardBorder,
-  },
-  tableRowAlt: {
-    backgroundColor: WarshPalette.white,
-  },
-  featureLabel: {
-    flex: 1,
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM,
-    color: WarshPalette.ink,
-    lineHeight: 18,
-    paddingRight: Spacing.xs,
-  },
-  checkCell: {
-    width: 72,
-    alignItems: "center",
     justifyContent: "center",
+    gap: Spacing.sm,
+    marginTop: 2,
   },
-  premiumCell: {
-    backgroundColor: WarshPalette.sage + "0D",
-  },
-  dash: {
-    color: WarshPalette.defaultCardBorder,
-    fontSize: 14,
-    fontWeight: "700",
-  },
-
-  noPayNote: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: Spacing.xs,
-    justifyContent: "center",
-    marginBottom: Spacing.lg,
-  },
-  noPayText: {
+  legalLink: {
     fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM,
-    color: WarshPalette.sage,
+    fontSize: FontSizes.caption,
+    color: WarshPalette.subtleBrown,
+    textDecorationLine: "underline",
+  },
+  legalDivider: {
+    color: WarshPalette.sageSoft,
+  },
+  legal: {
+    fontFamily: Fonts.regular,
+    fontSize: 9,
+    color: WarshPalette.subtleBrown,
+    textAlign: "center",
+    lineHeight: 13,
+    marginTop: 4,
   },
   webNote: {
     flexDirection: "row",
@@ -670,10 +774,10 @@ const styles = StyleSheet.create({
     gap: Spacing.sm,
     padding: Spacing.md,
     borderRadius: Radii.lg,
-    backgroundColor: WarshPalette.sage + "12",
+    backgroundColor: WarshPalette.sageTintBg,
     borderWidth: 1,
-    borderColor: WarshPalette.sage + "33",
-    marginBottom: Spacing.lg,
+    borderColor: WarshPalette.sageSoft,
+    marginBottom: Spacing.md,
   },
   webNoteText: {
     flex: 1,
@@ -681,109 +785,5 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.bodyM,
     color: WarshPalette.bodyBrown,
     lineHeight: LineHeights.bodyM,
-  },
-
-  // Plan selector
-  planRow: { gap: Spacing.sm, marginBottom: Spacing.md },
-  planTile: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: Spacing.sm,
-    padding: Spacing.md,
-    borderRadius: Radii.lg,
-    borderWidth: 1.5,
-    borderColor: WarshPalette.defaultCardBorder,
-    backgroundColor: WarshPalette.white,
-  },
-  planTileSelected: {
-    borderColor: WarshPalette.gold,
-    backgroundColor: WarshPalette.parchmentBg,
-  },
-  radioOuter: {
-    width: 20, height: 20, borderRadius: 10,
-    borderWidth: 2, borderColor: WarshPalette.gold,
-    alignItems: "center", justifyContent: "center",
-  },
-  radioInner: {
-    width: 10, height: 10, borderRadius: 5,
-    backgroundColor: WarshPalette.gold,
-  },
-  planText: { flex: 1 },
-  planPrice: {
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.h3,
-    fontWeight: "600",
-    color: WarshPalette.ink,
-  },
-  planSub: {
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
-    color: WarshPalette.subtleBrown,
-    marginTop: 2,
-  },
-  saveBadge: {
-    paddingHorizontal: Spacing.sm,
-    paddingVertical: 3,
-    borderRadius: Radii.full,
-    backgroundColor: WarshPalette.sage,
-  },
-  saveText: {
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
-    fontWeight: "700",
-    color: WarshPalette.white,
-  },
-  currentBadge: {
-    paddingHorizontal: Spacing.sm,
-    paddingVertical: 3,
-    borderRadius: Radii.full,
-    borderWidth: 1,
-    borderColor: WarshPalette.gold,
-    backgroundColor: WarshPalette.parchmentBg,
-  },
-  currentText: {
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
-    fontWeight: "700",
-    color: WarshPalette.gold,
-  },
-
-  // CTA
-  ctaBtn: {
-    backgroundColor: WarshPalette.gold,
-    padding: Spacing.lg,
-    borderRadius: Radii.lg,
-    alignItems: "center",
-    marginBottom: Spacing.sm,
-  },
-  ctaBtnDisabled: { opacity: 0.6 },
-  ctaBtnText: {
-    fontFamily: Fonts.bold,
-    fontSize: FontSizes.h3,
-    fontWeight: "700",
-    color: WarshPalette.ink,
-    textAlign: "center",
-  },
-
-  restoreBtn: { alignItems: "center", paddingVertical: Spacing.sm, marginBottom: Spacing.md },
-  restoreText: {
-    color: WarshPalette.gold,
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM,
-    textDecorationLine: "underline",
-  },
-  freeAccessText: {
-    color: WarshPalette.sage,
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.bodyM,
-    textDecorationLine: "underline",
-  },
-  legal: {
-    color: WarshPalette.subtleBrown,
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
-    textAlign: "center",
-    lineHeight: 16,
-    marginBottom: Spacing.md,
   },
 });

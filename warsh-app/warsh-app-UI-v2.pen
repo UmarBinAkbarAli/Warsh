@@ -5889,6 +5889,1503 @@
           ]
         }
       ]
+    },
+    {
+      "type": "text",
+      "id": "IBFSp",
+      "x": 0,
+      "y": 0,
+      "fill": "#000000",
+      "content": "D:\\Code\\Warsh\\warsh-app\\warsh-app-UI-v2.pen",
+      "fontFamily": "Inter",
+      "fontSize": 12,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "frame",
+      "id": "jgc8x",
+      "x": 4270,
+      "y": 0,
+      "name": "Paywall Revamp Section",
+      "width": 860,
+      "height": 910,
+      "fill": "#FAF7F000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "ZZyjW",
+          "x": 0,
+          "y": 0,
+          "name": "Paywall English Label",
+          "fill": "$warsh-navy",
+          "content": "Paywall Revamp · English",
+          "fontFamily": "Inter",
+          "fontSize": 12,
+          "fontWeight": "800"
+        },
+        {
+          "type": "frame",
+          "id": "pcUad",
+          "x": 0,
+          "y": 24,
+          "name": "Paywall Revamp · English",
+          "clip": true,
+          "width": 390,
+          "height": 844,
+          "fill": "$warsh-cream",
+          "cornerRadius": 28,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "S8YePm",
+              "name": "Android Status Bar",
+              "width": 390,
+              "height": 34,
+              "fill": "#FAF7F000",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "RCVZw",
+                  "x": 22,
+                  "y": 10,
+                  "name": "Status Time",
+                  "fill": "$warsh-ink",
+                  "content": "9:41",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "zxQKn",
+                  "x": 302,
+                  "y": 9,
+                  "name": "Status Icons",
+                  "gap": 6,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "XS9qz",
+                      "name": "Signal",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "signal",
+                      "library": "lucide",
+                      "fill": "$warsh-ink"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "I0CxJR",
+                      "name": "Wifi",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "wifi",
+                      "library": "lucide",
+                      "fill": "$warsh-ink"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "DCaOd",
+                      "name": "Battery",
+                      "width": 19,
+                      "height": 19,
+                      "icon": "battery-full",
+                      "library": "lucide",
+                      "fill": "$warsh-ink"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jihOq",
+              "name": "Paywall Header",
+              "width": 390,
+              "height": 64,
+              "fill": "#FAF7F000",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "fWEvm",
+                  "x": 18,
+                  "y": 7,
+                  "name": "Close Button",
+                  "width": 36,
+                  "height": 36,
+                  "fill": "#FFFDF899",
+                  "cornerRadius": 18,
+                  "stroke": "$warsh-line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "FdNN2",
+                      "name": "Close Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "x",
+                      "library": "lucide",
+                      "fill": "$warsh-ink"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "N2y3E",
+                  "x": 154,
+                  "y": 4,
+                  "name": "Warsh Wordmark",
+                  "fill": "$warsh-navy",
+                  "content": "وَرْش",
+                  "fontFamily": "$font-arabic",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "q2Q6F",
+              "name": "Paywall English Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": [
+                0,
+                20
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZBmuO",
+                  "name": "Trial Chip",
+                  "fill": "#E7EEE3",
+                  "cornerRadius": 999,
+                  "stroke": "#C8D3C1",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "padding": [
+                    7,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "PXxfL",
+                      "name": "Timer Icon",
+                      "width": 14,
+                      "height": 14,
+                      "icon": "timer",
+                      "library": "lucide",
+                      "fill": "$warsh-navy"
+                    },
+                    {
+                      "type": "text",
+                      "id": "sWRDj",
+                      "name": "Trial Label",
+                      "fill": "$warsh-navy",
+                      "content": "Chapter 1 · 4 trial days left",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rl6tF",
+                  "name": "Value Hero",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eIAWQ",
+                      "name": "Title",
+                      "fill": "$warsh-ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Continue your Qur'anic Arabic journey",
+                      "lineHeight": 1.12,
+                      "fontFamily": "$font-heading",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JlZxu",
+                      "name": "Support",
+                      "fill": "$warsh-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Keep all 72 chapters, the Noor tutor, and speaking practice going.",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$font-body",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OtFH4",
+                  "name": "Premium Benefits Card",
+                  "width": 350,
+                  "fill": "$warsh-card",
+                  "cornerRadius": 22,
+                  "stroke": "$warsh-line",
+                  "strokeWidth": 1,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#071B4412",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 18
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "A31qi",
+                      "name": "Benefit Row",
+                      "width": "fill_container",
+                      "height": 38,
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "nfddb",
+                          "name": "Benefit Icon Well",
+                          "width": 30,
+                          "height": 30,
+                          "fill": "#E7EEE3",
+                          "cornerRadius": 15,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "J0qlyh",
+                              "name": "Benefit Icon",
+                              "width": 15,
+                              "height": 15,
+                              "icon": "book-open",
+                              "library": "lucide",
+                              "fill": "$warsh-sage"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "BlbCs",
+                          "name": "Benefit Text",
+                          "fill": "$warsh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "All 72 chapters and lessons",
+                          "fontFamily": "$font-body",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HPBqI",
+                      "name": "Benefit Row",
+                      "width": "fill_container",
+                      "height": 38,
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "kZI9M",
+                          "name": "Benefit Icon Well",
+                          "width": 30,
+                          "height": 30,
+                          "fill": "#E7EEE3",
+                          "cornerRadius": 15,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "uE08j",
+                              "name": "Benefit Icon",
+                              "width": 15,
+                              "height": 15,
+                              "icon": "sparkles",
+                              "library": "lucide",
+                              "fill": "$warsh-sage"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "N3MpXP",
+                          "name": "Benefit Text",
+                          "fill": "$warsh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Noor tutor — your AI guide",
+                          "fontFamily": "$font-body",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "I4S3L3",
+                      "name": "Benefit Row",
+                      "width": "fill_container",
+                      "height": 38,
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "AnvvM",
+                          "name": "Benefit Icon Well",
+                          "width": 30,
+                          "height": 30,
+                          "fill": "#E7EEE3",
+                          "cornerRadius": 15,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "b8iWX",
+                              "name": "Benefit Icon",
+                              "width": 15,
+                              "height": 15,
+                              "icon": "mic",
+                              "library": "lucide",
+                              "fill": "$warsh-sage"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "tQUXh",
+                          "name": "Benefit Text",
+                          "fill": "$warsh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Audio, conversation, and reflection",
+                          "fontFamily": "$font-body",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "q05to",
+                      "name": "Included Link English",
+                      "fill": "$warsh-gold",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "See all features",
+                      "fontFamily": "$font-body",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "C1E7L",
+                  "name": "Plan Cards",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "FbY44",
+                      "name": "Yearly Plan Selected",
+                      "width": "fill_container",
+                      "height": 78,
+                      "fill": "$warsh-card",
+                      "cornerRadius": 20,
+                      "stroke": "$warsh-gold",
+                      "strokeWidth": 2,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#C49B4D22",
+                        "offset": {
+                          "x": 0,
+                          "y": 8
+                        },
+                        "blur": 18
+                      },
+                      "gap": 12,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Y9htn",
+                          "name": "Left Group",
+                          "width": "fill_container",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "OTTzy",
+                              "name": "Selected Radio",
+                              "width": 28,
+                              "height": 28,
+                              "fill": "#FFF7E6",
+                              "cornerRadius": 14,
+                              "stroke": "$warsh-gold",
+                              "strokeWidth": 2,
+                              "layout": "vertical",
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "MrOAE",
+                                  "name": "Radio Dot",
+                                  "fill": "$warsh-gold",
+                                  "width": 12,
+                                  "height": 12
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "K0MsN",
+                              "name": "Plan Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "fMYcS",
+                                  "name": "Name Row",
+                                  "width": "fill_container",
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "BoC25",
+                                      "name": "Plan Name",
+                                      "fill": "$warsh-navy",
+                                      "content": "Yearly",
+                                      "fontFamily": "$font-body",
+                                      "fontSize": 18,
+                                      "fontWeight": "700"
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "fN2J7",
+                                      "name": "Best Value Badge",
+                                      "fill": "#E7EEE3",
+                                      "cornerRadius": 999,
+                                      "stroke": "#C8D3C1",
+                                      "strokeWidth": 1,
+                                      "padding": [
+                                        5,
+                                        9
+                                      ],
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "c4WAc8",
+                                          "name": "Badge Text",
+                                          "fill": "$warsh-navy",
+                                          "content": "Best value · 17% off",
+                                          "fontFamily": "$font-body",
+                                          "fontSize": 13,
+                                          "fontWeight": "700"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "phIFN",
+                                  "name": "Price Line",
+                                  "fill": "$warsh-muted",
+                                  "content": "$10 / year · $0.83 / month",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "n0aZWN",
+                      "name": "Monthly Plan",
+                      "width": "fill_container",
+                      "height": 64,
+                      "fill": "#FFFDF8CC",
+                      "cornerRadius": 18,
+                      "stroke": "#C8D3C1",
+                      "strokeWidth": 1,
+                      "gap": 12,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "nGLCn",
+                          "name": "Left Group",
+                          "width": "fill_container",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "EKcKL",
+                              "name": "Monthly Radio",
+                              "fill": "#FAF7F0",
+                              "width": 22,
+                              "height": 22,
+                              "stroke": "#9CA894",
+                              "strokeWidth": 2
+                            },
+                            {
+                              "type": "text",
+                              "id": "wLNEd",
+                              "name": "Plan Name",
+                              "fill": "$warsh-ink",
+                              "content": "Monthly",
+                              "fontFamily": "$font-body",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "OwGps",
+                          "name": "Monthly Price",
+                          "fill": "$warsh-ink",
+                          "content": "$1 / month",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QPjb6",
+                  "name": "Sticky CTA Area",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    10,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "eY1pL",
+                      "name": "Continue Yearly CTA",
+                      "width": "fill_container",
+                      "height": 50,
+                      "fill": "$warsh-navy",
+                      "cornerRadius": 18,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#071B4424",
+                        "offset": {
+                          "x": 0,
+                          "y": 10
+                        },
+                        "blur": 20
+                      },
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Qz8oz",
+                          "name": "CTA Text",
+                          "fill": "$warsh-gold",
+                          "content": "Continue Yearly · $10",
+                          "fontFamily": "$font-body",
+                          "fontSize": 16,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "f8B5Lr",
+                      "name": "Google Play Reassurance",
+                      "fill": "$warsh-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Google Play shows the exact price and date before payment.",
+                      "lineHeight": 1.2,
+                      "textAlign": "center",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "CjpmQ",
+                  "name": "Secondary Actions",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 6,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Qg5Do",
+                      "name": "Restore Purchases",
+                      "fill": "$warsh-navy",
+                      "content": "Restore purchases",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "k0ab6b",
+                      "name": "Continue Free Vocabulary",
+                      "fill": "$warsh-sage",
+                      "content": "Continue with free Vocabulary",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "JhQFA",
+                      "name": "Legal Links",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "LUjSz",
+                          "name": "Terms Link",
+                          "fill": "$warsh-muted",
+                          "content": "Terms",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "ql7xC",
+                          "name": "Legal Dot",
+                          "fill": "$warsh-line",
+                          "width": 3,
+                          "height": 3
+                        },
+                        {
+                          "type": "text",
+                          "id": "LUTJw",
+                          "name": "Privacy Link",
+                          "fill": "$warsh-muted",
+                          "content": "Privacy",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "U698j4",
+          "x": 470,
+          "y": 0,
+          "name": "Paywall Urdu Label",
+          "fill": "$warsh-navy",
+          "content": "Paywall Revamp · Urdu",
+          "fontFamily": "Inter",
+          "fontSize": 12,
+          "fontWeight": "800"
+        },
+        {
+          "type": "frame",
+          "id": "jrQtB",
+          "x": 470,
+          "y": 24,
+          "name": "Paywall Revamp · Urdu",
+          "clip": true,
+          "width": 390,
+          "height": 844,
+          "fill": "$warsh-cream",
+          "cornerRadius": 28,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "v56PL",
+              "name": "Android Status Bar",
+              "width": 390,
+              "height": 34,
+              "fill": "#FAF7F000",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Mpfcx",
+                  "x": 22,
+                  "y": 10,
+                  "name": "Status Time",
+                  "fill": "$warsh-ink",
+                  "content": "9:41",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "lrku7",
+                  "x": 302,
+                  "y": 9,
+                  "name": "Status Icons",
+                  "gap": 6,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "tOsEr",
+                      "name": "Signal",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "signal",
+                      "library": "lucide",
+                      "fill": "$warsh-ink"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "hZTZ0",
+                      "name": "Wifi",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "wifi",
+                      "library": "lucide",
+                      "fill": "$warsh-ink"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "Ai0bj",
+                      "name": "Battery",
+                      "width": 19,
+                      "height": 19,
+                      "icon": "battery-full",
+                      "library": "lucide",
+                      "fill": "$warsh-ink"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Jyjnv",
+              "name": "Paywall Header",
+              "width": 390,
+              "height": 64,
+              "fill": "#FAF7F000",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "aLIRu",
+                  "x": 18,
+                  "y": 7,
+                  "name": "Close Button",
+                  "width": 36,
+                  "height": 36,
+                  "fill": "#FFFDF899",
+                  "cornerRadius": 18,
+                  "stroke": "$warsh-line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "eDPfM",
+                      "name": "Close Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "x",
+                      "library": "lucide",
+                      "fill": "$warsh-ink"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "yfRvE",
+                  "x": 154,
+                  "y": 4,
+                  "name": "Warsh Wordmark",
+                  "fill": "$warsh-navy",
+                  "content": "وَرْش",
+                  "fontFamily": "$font-arabic",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mdqNm",
+              "name": "Paywall Urdu Content",
+              "width": 390,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": [
+                0,
+                20
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "av5Mu",
+                  "name": "Trial Chip",
+                  "fill": "#E7EEE3",
+                  "cornerRadius": 999,
+                  "stroke": "#C8D3C1",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "padding": [
+                    7,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "jjA0m",
+                      "width": 14,
+                      "height": 14,
+                      "icon": "timer",
+                      "library": "lucide",
+                      "fill": "$warsh-navy"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cd5oZ",
+                      "name": "Trial Chip Text",
+                      "fill": "$warsh-navy",
+                      "content": "باب 1 · آزمائش کے 4 دن باقی",
+                      "fontFamily": "$font-arabic",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "GGTus",
+                  "name": "Value Hero",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rqWXj",
+                      "name": "Paywall Title Urdu",
+                      "fill": "$warsh-ink",
+                      "textGrowth": "fixed-width",
+                      "width": 350,
+                      "content": "اپنا قرآنی عربی کا سفر جاری رکھیں",
+                      "lineHeight": 1.12,
+                      "textAlign": "right",
+                      "fontFamily": "$font-arabic",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zlsdk",
+                      "name": "Paywall Support Urdu",
+                      "fill": "$warsh-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 350,
+                      "content": "تمام 72 ابواب، نور استاد اور بولنے کی مشق جاری رکھیں۔",
+                      "lineHeight": 1.25,
+                      "textAlign": "right",
+                      "fontFamily": "$font-arabic",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Z7qbzU",
+                  "name": "Premium Benefits Card",
+                  "width": 350,
+                  "fill": "$warsh-card",
+                  "cornerRadius": 22,
+                  "stroke": "$warsh-line",
+                  "strokeWidth": 1,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#071B4412",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 18
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Xza7K",
+                      "name": "Benefit Row",
+                      "width": 322,
+                      "height": 38,
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "H5FCEK",
+                          "name": "Benefit Text",
+                          "fill": "$warsh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": 278,
+                          "content": "تمام 72 ابواب اور اسباق",
+                          "textAlign": "right",
+                          "fontFamily": "$font-arabic",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "y8uDN",
+                          "name": "Benefit Icon Well",
+                          "width": 30,
+                          "height": 30,
+                          "fill": "#E7EEE3",
+                          "cornerRadius": 15,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "JdwIQ",
+                              "name": "Benefit Icon",
+                              "width": 15,
+                              "height": 15,
+                              "icon": "book-open",
+                              "library": "lucide",
+                              "fill": "$warsh-sage"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Z4e3t",
+                      "name": "Benefit Row",
+                      "width": 322,
+                      "height": 38,
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "OVHWB",
+                          "name": "Benefit Text",
+                          "fill": "$warsh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": 278,
+                          "content": "استاد نور — اے آئی رہنما",
+                          "textAlign": "right",
+                          "fontFamily": "$font-arabic",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "UnYUR",
+                          "name": "Benefit Icon Well",
+                          "width": 30,
+                          "height": 30,
+                          "fill": "#E7EEE3",
+                          "cornerRadius": 15,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "chZhn",
+                              "name": "Benefit Icon",
+                              "width": 15,
+                              "height": 15,
+                              "icon": "sparkles",
+                              "library": "lucide",
+                              "fill": "$warsh-sage"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "J0nfvV",
+                      "name": "Benefit Row",
+                      "width": 322,
+                      "height": 38,
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Edw8g",
+                          "name": "Benefit Text",
+                          "fill": "$warsh-ink",
+                          "textGrowth": "fixed-width",
+                          "width": 278,
+                          "content": "آڈیو، گفتگو اور تدبر",
+                          "textAlign": "right",
+                          "fontFamily": "$font-arabic",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "p0joiD",
+                          "name": "Benefit Icon Well",
+                          "width": 30,
+                          "height": 30,
+                          "fill": "#E7EEE3",
+                          "cornerRadius": 15,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "cWkEm",
+                              "width": 15,
+                              "height": 15,
+                              "icon": "mic",
+                              "library": "lucide",
+                              "fill": "$warsh-sage"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "m2Ns9U",
+                      "name": "Included Link Urdu",
+                      "fill": "$warsh-gold",
+                      "textGrowth": "fixed-width",
+                      "width": 322,
+                      "content": "تمام سہولیات دیکھیں",
+                      "textAlign": "right",
+                      "fontFamily": "$font-arabic",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nBAYT",
+                  "name": "Plan Cards",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "W8sjgp",
+                      "name": "Yearly Plan Selected Urdu",
+                      "width": "fill_container",
+                      "height": 78,
+                      "fill": "$warsh-card",
+                      "cornerRadius": 20,
+                      "stroke": "$warsh-gold",
+                      "strokeWidth": 2,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#C49B4D22",
+                        "offset": {
+                          "x": 0,
+                          "y": 8
+                        },
+                        "blur": 18
+                      },
+                      "gap": 12,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "F7ZdFQ",
+                          "name": "Left Group",
+                          "width": "fill_container",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "uaqE6",
+                              "name": "Selected Radio",
+                              "width": 28,
+                              "height": 28,
+                              "fill": "#FFF7E6",
+                              "cornerRadius": 14,
+                              "stroke": "$warsh-gold",
+                              "strokeWidth": 2,
+                              "layout": "vertical",
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "BBFHv",
+                                  "name": "Radio Dot",
+                                  "fill": "$warsh-gold",
+                                  "width": 12,
+                                  "height": 12
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "HRSBu",
+                              "name": "Plan Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "fOp5p",
+                                  "name": "Name Row",
+                                  "width": "fill_container",
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "cQUlP",
+                                      "name": "Plan Name",
+                                      "fill": "$warsh-navy",
+                                      "content": "سالانہ",
+                                      "fontFamily": "$font-arabic",
+                                      "fontSize": 18,
+                                      "fontWeight": "700"
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "B0SCuj",
+                                      "name": "Best Value Badge",
+                                      "fill": "#E7EEE3",
+                                      "cornerRadius": 999,
+                                      "stroke": "#C8D3C1",
+                                      "strokeWidth": 1,
+                                      "padding": [
+                                        5,
+                                        9
+                                      ],
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "DoplT",
+                                          "name": "Badge Text",
+                                          "fill": "$warsh-navy",
+                                          "content": "بہترین قیمت · 17٪ بچت",
+                                          "fontFamily": "$font-arabic",
+                                          "fontSize": 13,
+                                          "fontWeight": "700"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "GLOXv",
+                                  "name": "Price Line",
+                                  "fill": "$warsh-muted",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "$10 سالانہ · $0.83 ماہانہ",
+                                  "textAlign": "right",
+                                  "fontFamily": "$font-arabic",
+                                  "fontSize": 13,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UKGhP",
+                      "name": "Monthly Plan Urdu",
+                      "width": "fill_container",
+                      "height": 64,
+                      "fill": "#FFFDF8CC",
+                      "cornerRadius": 18,
+                      "stroke": "#C8D3C1",
+                      "strokeWidth": 1,
+                      "gap": 12,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Z1MvMX",
+                          "name": "Left Group",
+                          "width": "fill_container",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "I9n69Z",
+                              "name": "Monthly Radio",
+                              "fill": "#FAF7F0",
+                              "width": 22,
+                              "height": 22,
+                              "stroke": "#9CA894",
+                              "strokeWidth": 2
+                            },
+                            {
+                              "type": "text",
+                              "id": "VeYvO",
+                              "name": "Plan Name",
+                              "fill": "$warsh-ink",
+                              "content": "ماہانہ",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "kvCf1",
+                          "name": "Monthly Price",
+                          "fill": "$warsh-ink",
+                          "content": "$1 ماہانہ",
+                          "fontFamily": "$font-arabic",
+                          "fontSize": 16,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "i6BySM",
+                  "name": "Sticky CTA Area",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    10,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "yziAE",
+                      "name": "Continue Yearly CTA",
+                      "width": 350,
+                      "height": 50,
+                      "fill": "$warsh-navy",
+                      "cornerRadius": 18,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#071B4424",
+                        "offset": {
+                          "x": 0,
+                          "y": 10
+                        },
+                        "blur": 20
+                      },
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "eZLpj",
+                          "name": "CTA Text Urdu",
+                          "fill": "$warsh-gold",
+                          "content": "سالانہ منصوبہ جاری رکھیں · $10",
+                          "fontFamily": "$font-arabic",
+                          "fontSize": 18,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZXlmi",
+                      "name": "Google Play Reassurance Urdu",
+                      "fill": "$warsh-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 350,
+                      "content": "ادائیگی سے پہلے Google Play درست قیمت اور تاریخ دکھائے گا۔",
+                      "lineHeight": 1.2,
+                      "textAlign": "center",
+                      "fontFamily": "$font-arabic",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "POWS7",
+                  "name": "Secondary Actions",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 6,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hhf3a",
+                      "name": "Restore Purchases Urdu",
+                      "fill": "$warsh-navy",
+                      "content": "خریداری بحال کریں",
+                      "fontFamily": "$font-arabic",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "euwcG",
+                      "name": "Continue Free Vocabulary Urdu",
+                      "fill": "$warsh-sage",
+                      "content": "مفت الفاظ کے ساتھ جاری رکھیں",
+                      "fontFamily": "$font-arabic",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "mtAUO",
+                      "name": "Legal Links",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dcwmH",
+                          "name": "Terms Link",
+                          "fill": "$warsh-muted",
+                          "content": "Terms",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "J7Klex",
+                          "name": "Privacy Link",
+                          "fill": "$warsh-muted",
+                          "content": "Privacy",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {
@@ -5906,19 +7403,19 @@
     },
     "warsh-sage": {
       "type": "color",
-      "value": "#DDE7DE"
+      "value": "#7F9477"
     },
     "warsh-ink": {
       "type": "color",
-      "value": "#10213A"
+      "value": "#181714"
     },
     "warsh-muted": {
       "type": "color",
-      "value": "#687385"
+      "value": "#6F7169"
     },
     "warsh-line": {
       "type": "color",
-      "value": "#E8E1D2"
+      "value": "#C8D3C1"
     },
     "warsh-white": {
       "type": "color",
@@ -5935,6 +7432,10 @@
     "font-body": {
       "type": "string",
       "value": "Inter"
+    },
+    "warsh-card": {
+      "type": "color",
+      "value": "#FFFDF8"
     }
   },
   "fileToken": "697ec934-3d41-43ed-a0e1-4313360eeff9"

@@ -79,6 +79,12 @@ The landing page currently links to `/privacy`. Preserving the public landing an
 
 ## Recent verified repository changes
 
+### 2026-07-15
+
+- Rebuilt the Android paywall as one shared English/Urdu layout with a full-width benefits card, vertically stacked monthly/yearly plans, RTL-safe Urdu pricing, localized copy, and the existing purchase/restore/plan-switch behavior preserved.
+- Verified both paywall languages on the `Warsh_API_34` emulator from a production release APK; both fit the phone viewport without clipping, and plan selection updates the selected card and CTA correctly. No live purchase was initiated.
+- Prepared signed production artifacts for release `1.0.3` with Android version code `4`: an emulator-installable APK and a Play Store AAB. Both bundles target `https://api.warsh.app`; live Play-installed IAP sandbox QA remains a launch gate.
+
 ### 2026-07-11
 
 - Trial policy clarified and enforced as seven full days of complete access; chapter progress never ends access early.
