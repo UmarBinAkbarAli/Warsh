@@ -86,6 +86,8 @@ export default function MilestoneCelebrationScreen() {
     }
     if (nextRoute === "streak-celebration") {
       router.replace({ pathname: "/(app)/streak-celebration", params: { streak: streak ?? "1" } });
+    } else if (nextRoute === "chat") {
+      router.replace("/(app)/(tabs)/chat");
     } else {
       router.replace("/(app)/(tabs)");
     }

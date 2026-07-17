@@ -19,7 +19,7 @@
       "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
       "en": "May the hands of Abu Lahab be ruined, and ruined is he.",
       "ur": "ابو لہب کے ہاتھ ٹوٹ جائیں اور وہ ہلاک ہو جائے۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/al-masad-001-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/111001.mp3"
     },
     "noor_intro": {
       "en": "تَبَّتْ — may they be ruined. The verb تَبَّ is here in a dua-imprecation sense using past tense. Surah Al-Masad is fully parseable now that you know all three states of المضارع. Let us do a final review of Chapter 45.",
@@ -78,10 +78,22 @@
         "ur": "میں مسجد جانا چاہتا ہوں۔"
       },
       "options": [
-        { "en": "I want to go to the mosque.", "ur": "میں مسجد جانا چاہتا ہوں۔" },
-        { "en": "I went to the mosque.", "ur": "میں مسجد گیا۔" },
-        { "en": "I did not go to the mosque.", "ur": "میں مسجد نہیں گیا۔" },
-        { "en": "I will not go to the mosque.", "ur": "میں مسجد نہیں جاؤں گا۔" }
+        {
+          "en": "I want to go to the mosque.",
+          "ur": "میں مسجد جانا چاہتا ہوں۔"
+        },
+        {
+          "en": "I went to the mosque.",
+          "ur": "میں مسجد گیا۔"
+        },
+        {
+          "en": "I did not go to the mosque.",
+          "ur": "میں مسجد نہیں گیا۔"
+        },
+        {
+          "en": "I will not go to the mosque.",
+          "ur": "میں مسجد نہیں جاؤں گا۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -117,30 +129,113 @@
         "ur": "نہ اس نے کسی کو پیدا کیا اور نہ پیدا ہوا۔ (الاخلاص 112:3)"
       },
       "options": [
-        { "ar": "يُولَدْ", "ar_plain": "يولد", "translit": "yoolad", "en": "is begotten", "ur": "پیدا ہوا" },
-        { "ar": "يُولَدُ", "ar_plain": "يولد", "translit": "yooladu", "en": "is begotten (marfoo')", "ur": "پیدا ہوا (مرفوع)" },
-        { "ar": "يُولَدَ", "ar_plain": "يولد", "translit": "yoolada", "en": "is begotten (mansob)", "ur": "پیدا ہوا (منصوب)" },
-        { "ar": "وُلِدَ", "ar_plain": "ولد", "translit": "wulida", "en": "was begotten (past)", "ur": "پیدا ہوا (ماضی)" }
+        {
+          "ar": "يُولَدْ",
+          "ar_plain": "يولد",
+          "translit": "yoolad",
+          "en": "is begotten",
+          "ur": "پیدا ہوا"
+        },
+        {
+          "ar": "يُولَدُ",
+          "ar_plain": "يولد",
+          "translit": "yooladu",
+          "en": "is begotten (marfoo')",
+          "ur": "پیدا ہوا (مرفوع)"
+        },
+        {
+          "ar": "يُولَدَ",
+          "ar_plain": "يولد",
+          "translit": "yoolada",
+          "en": "is begotten (mansob)",
+          "ur": "پیدا ہوا (منصوب)"
+        },
+        {
+          "ar": "وُلِدَ",
+          "ar_plain": "ولد",
+          "translit": "wulida",
+          "en": "was begotten (past)",
+          "ur": "پیدا ہوا (ماضی)"
+        }
       ],
-      "correct_answer": { "ar": "يُولَدْ", "ar_plain": "يولد", "translit": "yoolad", "en": "is begotten", "ur": "پیدا ہوا" },
+      "correct_answer": {
+        "ar": "يُولَدْ",
+        "ar_plain": "يولد",
+        "translit": "yoolad",
+        "en": "is begotten",
+        "ur": "پیدا ہوا"
+      },
       "xp_value": 1
     },
     {
       "type": "MATCHING",
       "id": "ch45-l07-ex04",
       "left_column": [
-        { "ar": "يَذْهَبُ", "ar_plain": "يذهب", "translit": "yadhhabu", "en": "he goes (default)", "ur": "وہ جاتا ہے (default)" },
-        { "ar": "أَن يَذْهَبَ", "ar_plain": "ان يذهب", "translit": "an yadhaba", "en": "to go (after أن)", "ur": "جانا (أن کے بعد)" },
-        { "ar": "لَمْ يَذْهَبْ", "ar_plain": "لم يذهب", "translit": "lam yadhhab", "en": "he did not go (after لم)", "ur": "وہ نہیں گیا (لم کے بعد)" },
-        { "ar": "لَا تَذْهَبْ", "ar_plain": "لا تذهب", "translit": "laa tadhhab", "en": "do not go! (prohibitive لا)", "ur": "مت جا! (لا ناہیہ)" }
+        {
+          "ar": "يَذْهَبُ",
+          "ar_plain": "يذهب",
+          "translit": "yadhhabu",
+          "en": "he goes (default)",
+          "ur": "وہ جاتا ہے (default)"
+        },
+        {
+          "ar": "أَن يَذْهَبَ",
+          "ar_plain": "ان يذهب",
+          "translit": "an yadhaba",
+          "en": "to go (after أن)",
+          "ur": "جانا (أن کے بعد)"
+        },
+        {
+          "ar": "لَمْ يَذْهَبْ",
+          "ar_plain": "لم يذهب",
+          "translit": "lam yadhhab",
+          "en": "he did not go (after لم)",
+          "ur": "وہ نہیں گیا (لم کے بعد)"
+        },
+        {
+          "ar": "لَا تَذْهَبْ",
+          "ar_plain": "لا تذهب",
+          "translit": "laa tadhhab",
+          "en": "do not go! (prohibitive لا)",
+          "ur": "مت جا! (لا ناہیہ)"
+        }
       ],
       "right_column": [
-        { "en": "مَجْزُوم — after لَمْ", "ur": "مجزوم — لم کے بعد" },
-        { "en": "مَرْفُوع — default state", "ur": "مرفوع — default حالت" },
-        { "en": "مَجْزُوم — after لَا الناهية", "ur": "مجزوم — لا ناہیہ کے بعد" },
-        { "en": "مَنْصُوب — after أَن", "ur": "منصوب — أَن کے بعد" }
+        {
+          "en": "مَجْزُوم — after لَمْ",
+          "ur": "مجزوم — لم کے بعد"
+        },
+        {
+          "en": "مَرْفُوع — default state",
+          "ur": "مرفوع — default حالت"
+        },
+        {
+          "en": "مَجْزُوم — after لَا الناهية",
+          "ur": "مجزوم — لا ناہیہ کے بعد"
+        },
+        {
+          "en": "مَنْصُوب — after أَن",
+          "ur": "منصوب — أَن کے بعد"
+        }
       ],
-      "correct_pairs": [[0, 1], [1, 3], [2, 0], [3, 2]],
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -151,12 +246,41 @@
         "ur": "نہ اس نے کسی کو پیدا کیا اور نہ وہ پیدا ہوا۔"
       },
       "tiles": [
-        { "ar": "لَمْ", "ar_plain": "لم", "translit": "lam", "en": "not (past neg.)", "ur": "نہیں (ماضی نفی)" },
-        { "ar": "يَلِدْ", "ar_plain": "يلد", "translit": "yalid", "en": "beget", "ur": "پیدا کیا" },
-        { "ar": "وَلَمْ", "ar_plain": "ولم", "translit": "wa lam", "en": "nor", "ur": "اور نہ" },
-        { "ar": "يُولَدْ", "ar_plain": "يولد", "translit": "yoolad", "en": "be begotten", "ur": "پیدا ہوا" }
+        {
+          "ar": "لَمْ",
+          "ar_plain": "لم",
+          "translit": "lam",
+          "en": "not (past neg.)",
+          "ur": "نہیں (ماضی نفی)"
+        },
+        {
+          "ar": "يَلِدْ",
+          "ar_plain": "يلد",
+          "translit": "yalid",
+          "en": "beget",
+          "ur": "پیدا کیا"
+        },
+        {
+          "ar": "وَلَمْ",
+          "ar_plain": "ولم",
+          "translit": "wa lam",
+          "en": "nor",
+          "ur": "اور نہ"
+        },
+        {
+          "ar": "يُولَدْ",
+          "ar_plain": "يولد",
+          "translit": "yoolad",
+          "en": "be begotten",
+          "ur": "پیدا ہوا"
+        }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     }
   ],
@@ -173,9 +297,11 @@
       "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
       "en": "May the hands of Abu Lahab be ruined, and ruined is he.",
       "ur": "ابو لہب کے ہاتھ ٹوٹ جائیں اور وہ ہلاک ہو جائے۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/al-masad-001-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/111001.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "تَبَّتْ — a past tense form used as an imprecation (dua against). The power of Arabic: even past tense can be a dua. Now you have the full picture of المضارع in all three states. Chapter 46 applies it.",
       "ur": "تَبَّتْ — ماضی کا صیغہ بطور بددعا۔ عربی کی قوت: ماضی بھی دعا ہو سکتی ہے۔ اب آپ کے پاس المضارع کی تینوں حالتوں کی مکمل تصویر ہے۔ باب 46 اسے apply کرتا ہے۔"

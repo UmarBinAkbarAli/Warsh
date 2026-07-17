@@ -42,9 +42,14 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, audioUr
     try {
       let uri: string;
       if (audioUrl) {
+        // Quran recitation (open-source reciter on everyayah, or the future
+        // premium R2 `audio/quran/…` files) must play the authentic recording.
+        // If it fails we surface an error — never disguise it with generated TTS.
+        const isRecitation = /everyayah\.com|\/audio\/quran\//.test(audioUrl);
         try {
           uri = await getCachedRemoteAudioUri(audioUrl, cacheKey ?? text, category);
-        } catch {
+        } catch (err) {
+          if (isRecitation) throw err;
           uri = wordId
             ? await getVocabWordAudioUri(wordId, text)
             : await getCachedTtsAudioUri({ text, cacheKey, category });

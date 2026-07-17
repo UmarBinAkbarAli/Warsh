@@ -19,7 +19,7 @@
       "ar": "شَهِدَ اللَّهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ وَالْمَلَائِكَةُ وَأُولُو الْعِلْمِ قَائِمًا بِالْقِسْطِ",
       "en": "Allah witnesses that there is no deity except Him, and so do the angels and those of knowledge — upholding justice.",
       "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں، اور فرشتے اور اہل علم بھی — انصاف کو قائم رکھتے ہوئے۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/aal-imran-018-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003018.mp3"
     },
     "noor_intro": {
       "en": "شَهِدَ اللَّهُ — 'Allah witnesses.' This is a complete verbal sentence with a transitive verb, a noun object (أَنَّهُ clause), and a descriptive حال (قَائِمًا). Every structure from Chapter 58 appears here. Review time.",
@@ -78,10 +78,22 @@
         "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں۔"
       },
       "options": [
-        { "en": "Allah witnesses that there is no deity except Him.", "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں۔" },
-        { "en": "Allah knows that there is no god but He.", "ur": "اللہ جانتا ہے کہ اس کے سوا کوئی معبود نہیں۔" },
-        { "en": "Allah decrees that there is none like Him.", "ur": "اللہ فیصلہ کرتا ہے کہ اس جیسا کوئی نہیں۔" },
-        { "en": "Allah said there is no deity except Him.", "ur": "اللہ نے کہا کہ اس کے سوا کوئی معبود نہیں۔" }
+        {
+          "en": "Allah witnesses that there is no deity except Him.",
+          "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں۔"
+        },
+        {
+          "en": "Allah knows that there is no god but He.",
+          "ur": "اللہ جانتا ہے کہ اس کے سوا کوئی معبود نہیں۔"
+        },
+        {
+          "en": "Allah decrees that there is none like Him.",
+          "ur": "اللہ فیصلہ کرتا ہے کہ اس جیسا کوئی نہیں۔"
+        },
+        {
+          "en": "Allah said there is no deity except Him.",
+          "ur": "اللہ نے کہا کہ اس کے سوا کوئی معبود نہیں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -117,30 +129,113 @@
         "ur": "...اور اہل علم — انصاف کو قائم رکھتے ہوئے۔"
       },
       "options": [
-        { "ar": "بِالْقِسْطِ", "ar_plain": "بالقسط", "translit": "bil-qisti", "en": "with justice", "ur": "انصاف کے ساتھ" },
-        { "ar": "بِالْحَقِّ", "ar_plain": "بالحق", "translit": "bil-haqqi", "en": "with truth", "ur": "حق کے ساتھ" },
-        { "ar": "بِالْعَدْلِ", "ar_plain": "بالعدل", "translit": "bil-'adli", "en": "with equity", "ur": "عدل کے ساتھ" },
-        { "ar": "بِالصِّدْقِ", "ar_plain": "بالصدق", "translit": "bis-sidqi", "en": "with truth", "ur": "سچائی کے ساتھ" }
+        {
+          "ar": "بِالْقِسْطِ",
+          "ar_plain": "بالقسط",
+          "translit": "bil-qisti",
+          "en": "with justice",
+          "ur": "انصاف کے ساتھ"
+        },
+        {
+          "ar": "بِالْحَقِّ",
+          "ar_plain": "بالحق",
+          "translit": "bil-haqqi",
+          "en": "with truth",
+          "ur": "حق کے ساتھ"
+        },
+        {
+          "ar": "بِالْعَدْلِ",
+          "ar_plain": "بالعدل",
+          "translit": "bil-'adli",
+          "en": "with equity",
+          "ur": "عدل کے ساتھ"
+        },
+        {
+          "ar": "بِالصِّدْقِ",
+          "ar_plain": "بالصدق",
+          "translit": "bis-sidqi",
+          "en": "with truth",
+          "ur": "سچائی کے ساتھ"
+        }
       ],
-      "correct_answer": { "ar": "بِالْقِسْطِ", "ar_plain": "بالقسط", "translit": "bil-qisti", "en": "with justice", "ur": "انصاف کے ساتھ" },
+      "correct_answer": {
+        "ar": "بِالْقِسْطِ",
+        "ar_plain": "بالقسط",
+        "translit": "bil-qisti",
+        "en": "with justice",
+        "ur": "انصاف کے ساتھ"
+      },
       "xp_value": 1
     },
     {
       "type": "MATCHING",
       "id": "ch58-l06-ex04",
       "left_column": [
-        { "ar": "شَهِدَ اللَّهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ", "ar_plain": "شهد الله انه لا اله الا هو", "translit": "shahida Allahu annahu laa ilaaha illaa huwa", "en": "Transitive verb + أنَّ clause as object", "ur": "متعدي فعل + أنَّ clause مفعول" },
-        { "ar": "حَسْبُنَا اللَّهُ", "ar_plain": "حسبنا الله", "translit": "hasbunaa Allahu", "en": "Fronted predicate", "ur": "خبر مقدم" },
-        { "ar": "إِنَّ اللَّهَ سَمِيعٌ عَلِيمٌ", "ar_plain": "ان الله سميع عليم", "translit": "inna Allaha samee'un 'aleemun", "en": "إنَّ with accusative subject", "ur": "إنَّ مع مبتدأ منصوب" },
-        { "ar": "قَائِمًا بِالْقِسْطِ", "ar_plain": "قائما بالقسط", "translit": "qaa'iman bil-qist", "en": "Descriptive accusative (حال)", "ur": "وصفی منصوب (حال)" }
+        {
+          "ar": "شَهِدَ اللَّهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ",
+          "ar_plain": "شهد الله انه لا اله الا هو",
+          "translit": "shahida Allahu annahu laa ilaaha illaa huwa",
+          "en": "Transitive verb + أنَّ clause as object",
+          "ur": "متعدي فعل + أنَّ clause مفعول"
+        },
+        {
+          "ar": "حَسْبُنَا اللَّهُ",
+          "ar_plain": "حسبنا الله",
+          "translit": "hasbunaa Allahu",
+          "en": "Fronted predicate",
+          "ur": "خبر مقدم"
+        },
+        {
+          "ar": "إِنَّ اللَّهَ سَمِيعٌ عَلِيمٌ",
+          "ar_plain": "ان الله سميع عليم",
+          "translit": "inna Allaha samee'un 'aleemun",
+          "en": "إنَّ with accusative subject",
+          "ur": "إنَّ مع مبتدأ منصوب"
+        },
+        {
+          "ar": "قَائِمًا بِالْقِسْطِ",
+          "ar_plain": "قائما بالقسط",
+          "translit": "qaa'iman bil-qist",
+          "en": "Descriptive accusative (حال)",
+          "ur": "وصفی منصوب (حال)"
+        }
       ],
       "right_column": [
-        { "en": "Fronted predicate", "ur": "خبر مقدم" },
-        { "en": "Transitive verb + أنَّ clause as object", "ur": "متعدي فعل + أنَّ clause مفعول" },
-        { "en": "Descriptive accusative (حال)", "ur": "وصفی منصوب (حال)" },
-        { "en": "إنَّ with accusative subject", "ur": "إنَّ مع مبتدأ منصوب" }
+        {
+          "en": "Fronted predicate",
+          "ur": "خبر مقدم"
+        },
+        {
+          "en": "Transitive verb + أنَّ clause as object",
+          "ur": "متعدي فعل + أنَّ clause مفعول"
+        },
+        {
+          "en": "Descriptive accusative (حال)",
+          "ur": "وصفی منصوب (حال)"
+        },
+        {
+          "en": "إنَّ with accusative subject",
+          "ur": "إنَّ مع مبتدأ منصوب"
+        }
       ],
-      "correct_pairs": [[0, 1], [1, 0], [2, 3], [3, 2]],
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -151,13 +246,49 @@
         "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں۔"
       },
       "tiles": [
-        { "ar": "شَهِدَ", "ar_plain": "شهد", "translit": "shahida", "en": "witnesses", "ur": "گواہی دیتا ہے" },
-        { "ar": "اللَّهُ", "ar_plain": "الله", "translit": "Allahu", "en": "Allah", "ur": "اللہ" },
-        { "ar": "أَنَّهُ", "ar_plain": "انه", "translit": "annahu", "en": "that He", "ur": "کہ وہ" },
-        { "ar": "لَا إِلَهَ", "ar_plain": "لا اله", "translit": "laa ilaaha", "en": "no deity", "ur": "کوئی معبود نہیں" },
-        { "ar": "إِلَّا هُوَ", "ar_plain": "الا هو", "translit": "illaa huwa", "en": "except Him", "ur": "سوائے اس کے" }
+        {
+          "ar": "شَهِدَ",
+          "ar_plain": "شهد",
+          "translit": "shahida",
+          "en": "witnesses",
+          "ur": "گواہی دیتا ہے"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "Allahu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "أَنَّهُ",
+          "ar_plain": "انه",
+          "translit": "annahu",
+          "en": "that He",
+          "ur": "کہ وہ"
+        },
+        {
+          "ar": "لَا إِلَهَ",
+          "ar_plain": "لا اله",
+          "translit": "laa ilaaha",
+          "en": "no deity",
+          "ur": "کوئی معبود نہیں"
+        },
+        {
+          "ar": "إِلَّا هُوَ",
+          "ar_plain": "الا هو",
+          "translit": "illaa huwa",
+          "en": "except Him",
+          "ur": "سوائے اس کے"
+        }
       ],
-      "correct_order": [0, 1, 2, 3, 4],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
       "xp_value": 1
     }
   ],
@@ -174,9 +305,11 @@
       "ar": "شَهِدَ اللَّهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ وَالْمَلَائِكَةُ وَأُولُو الْعِلْمِ قَائِمًا بِالْقِسْطِ",
       "en": "Allah witnesses that there is no deity except Him, and so do the angels and those of knowledge — upholding justice.",
       "ur": "اللہ گواہی دیتا ہے کہ اس کے سوا کوئی معبود نہیں، اور فرشتے اور اہل علم بھی — انصاف کو قائم رکھتے ہوئے۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/aal-imran-018-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003018.mp3"
     },
-    "highlighted_word_indices": [0],
+    "highlighted_word_indices": [
+      0
+    ],
     "noor_explanation": {
       "en": "You can now parse one of the most powerful ayat of tawheed in the Quran: a transitive verb (شَهِدَ), a noun clause object (أَنَّهُ لَا إِلَهَ إِلَّا هُوَ), and a حال (قَائِمًا). This is Chapter 58 at its fullest.",
       "ur": "اب آپ قرآن کی توحید کی سب سے طاقتور آیات میں سے ایک parse کر سکتے ہیں: متعدي فعل (شَهِدَ)، noun clause مفعول (أَنَّهُ لَا إِلَهَ إِلَّا هُوَ)، اور حال (قَائِمًا)۔ یہ باب 58 اپنی پوری قوت میں ہے۔"

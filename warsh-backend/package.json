@@ -26,6 +26,10 @@
     "images:upload:dry": "npx tsx scripts/upload-vocab-images.ts --dry-run",
     "audio:check": "npx tsx -r dotenv/config scripts/check-audio-count.mjs",
     "audio:prebuild": "npx tsx -r dotenv/config scripts/prebuild-audio-parallel.ts",
+    "audio:prebuild-fixtures": "npx tsx -r dotenv/config scripts/prebuild-fixture-audio.ts",
+    "audio:repoint-ayahs": "node scripts/repoint-ayah-audio-to-everyayah.cjs",
+    "media:check-fixtures": "node scripts/check-fixture-media.cjs",
+    "content:sync": "npx tsx -r dotenv/config scripts/sync-lesson-content.ts",
     "images:sync-chapters": "npx tsx -r dotenv/config scripts/sync-chapter-images.ts",
     "images:sync-chapters:dry": "npx tsx -r dotenv/config scripts/sync-chapter-images.ts --dry-run"
   },

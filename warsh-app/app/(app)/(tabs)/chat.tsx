@@ -63,7 +63,17 @@ export default function ChatScreen() {
     setError(null);
     try {
       const response = await api.get("/api/chat/history");
-      setMessages(response.data.data.messages);
+      const data = response.data.data;
+      setMessages(data.messages);
+      // Sync the counter to server truth on every open so it survives tab
+      // navigation and app restart (not just the current send).
+      if (typeof data.messagesUsedToday === "number") {
+        setUsage({
+          used: data.messagesUsedToday,
+          limit: data.messagesLimit ?? 5,
+          packBalance: data.noorOverageBalance ?? 0,
+        });
+      }
     } catch (err) {
       if (isSubscriptionRequiredError(err)) {
         router.replace("/(app)/paywall");
@@ -172,7 +182,9 @@ export default function ChatScreen() {
           pathname: "/(app)/milestone-celebration",
           params: {
             achievements: JSON.stringify([newAchievement]),
-            nextRoute: "tabs",
+            // Return to Noor so the reply stays visible instead of dumping the
+            // user on the Learn tab.
+            nextRoute: "chat",
             streak: "0",
           },
         });

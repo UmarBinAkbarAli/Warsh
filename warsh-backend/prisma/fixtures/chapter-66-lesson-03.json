@@ -20,7 +20,7 @@
       "ar": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ",
       "en": "Allah — there is no deity except Him, the Ever-Living, the Sustainer of existence. Neither slumber nor sleep overtakes Him. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that will intercede with Him except by His permission?",
       "ur": "اللہ — اس کے سوا کوئی معبود نہیں، وہ زندہ ہے، برقرار رکھنے والا ہے۔ نہ تھکاوٹ اسے پکڑتی ہے نہ نیند۔ آسمانوں اور زمین میں جو ہے سب اسی کا ہے۔ کون ہے جو اس کے پاس شفاعت کرے مگر اس کی اجازت سے؟",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/al-baqarah-255-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
     },
     "noor_intro": {
       "en": "عِنْدَهُ — 'with Him' or 'near Him.' عِنْدَ is a place zarf telling us WHERE. In Arabic, WHERE is also expressed in the accusative.",
@@ -136,10 +136,22 @@
         "ur": "وہ اپنے رب کے پاس بیٹھتے ہیں۔"
       },
       "options": [
-        { "en": "They sit near their Lord.", "ur": "وہ اپنے رب کے پاس بیٹھتے ہیں۔" },
-        { "en": "They sit with their Lord.", "ur": "وہ اپنے رب کے ساتھ بیٹھتے ہیں۔" },
-        { "en": "Their Lord sits with them.", "ur": "ان کا رب ان کے ساتھ بیٹھتا ہے۔" },
-        { "en": "They are near their Lord.", "ur": "وہ اپنے رب کے پاس ہیں۔" }
+        {
+          "en": "They sit near their Lord.",
+          "ur": "وہ اپنے رب کے پاس بیٹھتے ہیں۔"
+        },
+        {
+          "en": "They sit with their Lord.",
+          "ur": "وہ اپنے رب کے ساتھ بیٹھتے ہیں۔"
+        },
+        {
+          "en": "Their Lord sits with them.",
+          "ur": "ان کا رب ان کے ساتھ بیٹھتا ہے۔"
+        },
+        {
+          "en": "They are near their Lord.",
+          "ur": "وہ اپنے رب کے پاس ہیں۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -218,12 +230,42 @@
       "id": "ch66-l03-ex04",
       "sentence_ar": "خَلْفَهُمْ مَلَائِكَةٌ يَحْرُسُونَهُمْ",
       "words": [
-        { "ar": "خَلْفَهُمْ", "ar_plain": "خلفهم", "translit": "khalfahum", "en": "behind them", "ur": "ان کے پیچھے" },
-        { "ar": "مَلَائِكَةٌ", "ar_plain": "ملائكة", "translit": "malaa'ikatu", "en": "angels", "ur": "فرشتے" },
-        { "ar": "يَحْرُسُونَهُمْ", "ar_plain": "يحفظونهم", "translit": "yahfazuunahum", "en": "they guard them", "ur": "وہ انہیں حفاظت کرتے ہیں" }
+        {
+          "ar": "خَلْفَهُمْ",
+          "ar_plain": "خلفهم",
+          "translit": "khalfahum",
+          "en": "behind them",
+          "ur": "ان کے پیچھے"
+        },
+        {
+          "ar": "مَلَائِكَةٌ",
+          "ar_plain": "ملائكة",
+          "translit": "malaa'ikatu",
+          "en": "angels",
+          "ur": "فرشتے"
+        },
+        {
+          "ar": "يَحْرُسُونَهُمْ",
+          "ar_plain": "يحفظونهم",
+          "translit": "yahfazuunahum",
+          "en": "they guard them",
+          "ur": "وہ انہیں حفاظت کرتے ہیں"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PARTICLE", "PREPOSITION", "ADJECTIVE", "TIME_ZARF", "PLACE_ZARF"],
-      "correct_roles": ["PLACE_ZARF", "SUBJECT", "VERB"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PARTICLE",
+        "PREPOSITION",
+        "ADJECTIVE",
+        "TIME_ZARF",
+        "PLACE_ZARF"
+      ],
+      "correct_roles": [
+        "PLACE_ZARF",
+        "SUBJECT",
+        "VERB"
+      ],
       "xp_value": 1
     },
     {
@@ -260,12 +302,41 @@
         }
       ],
       "right_column": [
-        { "en": "عِنْدَ — place zarf", "ur": "عِنْدَ — مکان کا ظرف" },
-        { "en": "فَوْقَ — place zarf", "ur": "فَوْقَ — مکان کا ظرف" },
-        { "en": "تَحْتَ — place zarf", "ur": "تَحْتَ — مکان کا ظرف" },
-        { "en": "أَمَامَ — place zarf", "ur": "أَمَامَ — مکان کا ظرف" }
+        {
+          "en": "عِنْدَ — place zarf",
+          "ur": "عِنْدَ — مکان کا ظرف"
+        },
+        {
+          "en": "فَوْقَ — place zarf",
+          "ur": "فَوْقَ — مکان کا ظرف"
+        },
+        {
+          "en": "تَحْتَ — place zarf",
+          "ur": "تَحْتَ — مکان کا ظرف"
+        },
+        {
+          "en": "أَمَامَ — place zarf",
+          "ur": "أَمَامَ — مکان کا ظرف"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -276,12 +347,41 @@
         "ur": "فرشتے ان کے اوپر ہیں، اپنے رب کی عبادت کر رہے ہیں۔"
       },
       "tiles": [
-        { "ar": "مَلَائِكَةٌ", "ar_plain": "ملائكة", "translit": "malaa'ikatu", "en": "angels", "ur": "فرشتے" },
-        { "ar": "فَوْقَهُمْ", "ar_plain": "فوقهم", "translit": "fawqahum", "en": "above them", "ur": "ان کے اوپر" },
-        { "ar": "يَعْبُدُونَ", "ar_plain": "يعبدون", "translit": "ya'budoona", "en": "they worship", "ur": "وہ عبادت کرتے ہیں" },
-        { "ar": "رَبَّهُمْ", "ar_plain": "ربهم", "translit": "rabbahum", "en": "their Lord", "ur": "ان کا رب" }
+        {
+          "ar": "مَلَائِكَةٌ",
+          "ar_plain": "ملائكة",
+          "translit": "malaa'ikatu",
+          "en": "angels",
+          "ur": "فرشتے"
+        },
+        {
+          "ar": "فَوْقَهُمْ",
+          "ar_plain": "فوقهم",
+          "translit": "fawqahum",
+          "en": "above them",
+          "ur": "ان کے اوپر"
+        },
+        {
+          "ar": "يَعْبُدُونَ",
+          "ar_plain": "يعبدون",
+          "translit": "ya'budoona",
+          "en": "they worship",
+          "ur": "وہ عبادت کرتے ہیں"
+        },
+        {
+          "ar": "رَبَّهُمْ",
+          "ar_plain": "ربهم",
+          "translit": "rabbahum",
+          "en": "their Lord",
+          "ur": "ان کا رب"
+        }
       ],
-      "correct_order": [0, 1, 2, 3],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -295,10 +395,22 @@
         "ur": "عرش کے نیچے پانی ہے۔"
       },
       "options": [
-        { "en": "Below the Throne is water.", "ur": "عرش کے نیچے پانی ہے۔" },
-        { "en": "The water is below the Throne.", "ur": "پانی عرش کے نیچے ہے۔" },
-        { "en": "The Throne is below water.", "ur": "عرش پانی کے نیچے ہے۔" },
-        { "en": "Under the water is the Throne.", "ur": "پانی کے نیچے عرش ہے۔" }
+        {
+          "en": "Below the Throne is water.",
+          "ur": "عرش کے نیچے پانی ہے۔"
+        },
+        {
+          "en": "The water is below the Throne.",
+          "ur": "پانی عرش کے نیچے ہے۔"
+        },
+        {
+          "en": "The Throne is below water.",
+          "ur": "عرش پانی کے نیچے ہے۔"
+        },
+        {
+          "en": "Under the water is the Throne.",
+          "ur": "پانی کے نیچے عرش ہے۔"
+        }
       ],
       "correct_index": 1,
       "xp_value": 1,
@@ -317,7 +429,12 @@
         "en": "in front of",
         "ur": "ساتھ"
       },
-      "options": ["أ م م", "و ق ف", "خ ل ف", "ع ن د"],
+      "options": [
+        "أ م م",
+        "و ق ف",
+        "خ ل ف",
+        "ع ن د"
+      ],
       "correct_index": 0,
       "xp_value": 1
     }
@@ -335,9 +452,11 @@
       "ar": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ",
       "en": "To Him belongs whatever is in the heavens and whatever is on the earth. Who intercedes with Him except by His permission?",
       "ur": "آسمانوں اور زمین میں جو ہے سب اسی کا ہے۔ کون اس کے پاس شفاعت کرے مگر اس کی اجازت سے؟",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/al-baqarah-255-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
     },
-    "highlighted_word_indices": [19],
+    "highlighted_word_indices": [
+      19
+    ],
     "noor_explanation": {
       "en": "عِنْدَهُ — 'with Him' or 'near Him.' عِنْدَ is a place zarf telling us WHERE. It is منصوب as مفعول فيه. Whether time or place, the zarf is always in the accusative.",
       "ur": "عِنْدَهُ — 'اس کے پاس'۔ عِنْدَ مکان کا ظرف ہے جو بتاتا ہے کہ کہاں۔ یہ مفعول فیہ کے طور پر منصوب ہے۔ چہ وقت کا ظرف ہو یا مکان کا، ظرف ہمیشہ نصب میں ہوتا ہے۔"

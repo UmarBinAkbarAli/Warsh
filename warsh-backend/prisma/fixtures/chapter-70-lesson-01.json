@@ -20,7 +20,7 @@
       "ar": "وَالَّذِينَ كَفَرُوا فَهُمْ فِي ضَلَالِهِمْ يَسْعَوْنَ",
       "en": "And those who disbelieved — they are in their misguidance, straying.",
       "ur": "اور جنہوں نے کفر کیا — وہ اپنی گمراہی میں ہیں، بھٹکتے پھرتے ہیں۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/al-baqarah-006-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002006.mp3"
     },
     "noor_intro": {
       "en": "لَا إِلَٰهَ إِلَّا اللَّه — 'there is no god except Allah.' This is the Shahada — the ultimate exception structure with إِلَّا. This chapter is spiritually significant.",
@@ -108,10 +108,22 @@
         "ur": "کوئی معبود نہیں مگر اللہ۔"
       },
       "options": [
-        { "en": "There is no god but Allah.", "ur": "کوئی معبود نہیں مگر اللہ۔" },
-        { "en": "There is a god except Allah.", "ur": "کوئی معبود ہے سوائے اللہ کے۔" },
-        { "en": "Allah is the only god.", "ur": "اللہ واحد معبود ہے۔" },
-        { "en": "There is no god and no Allah.", "ur": "کوئی معبود نہیں اور نہ اللہ ہے۔" }
+        {
+          "en": "There is no god but Allah.",
+          "ur": "کوئی معبود نہیں مگر اللہ۔"
+        },
+        {
+          "en": "There is a god except Allah.",
+          "ur": "کوئی معبود ہے سوائے اللہ کے۔"
+        },
+        {
+          "en": "Allah is the only god.",
+          "ur": "اللہ واحد معبود ہے۔"
+        },
+        {
+          "en": "There is no god and no Allah.",
+          "ur": "کوئی معبود نہیں اور نہ اللہ ہے۔"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -223,12 +235,41 @@
         }
       ],
       "right_column": [
-        { "en": "full negative exception", "ur": "مکمل منفی استثنا" },
-        { "en": "full negative exception", "ur": "مکمل منفی استثنا" },
-        { "en": "full affirmative exception", "ur": "مکمل مثبت استثنا" },
-        { "en": "incomplete negative exception", "ur": "نامکمل منفی استثنا" }
+        {
+          "en": "full negative exception",
+          "ur": "مکمل منفی استثنا"
+        },
+        {
+          "en": "full negative exception",
+          "ur": "مکمل منفی استثنا"
+        },
+        {
+          "en": "full affirmative exception",
+          "ur": "مکمل مثبت استثنا"
+        },
+        {
+          "en": "incomplete negative exception",
+          "ur": "نامکمل منفی استثنا"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -239,14 +280,57 @@
         "ur": "گھر میں کوئی نہیں مگر مومنین۔"
       },
       "tiles": [
-        { "ar": "مَا", "ar_plain": "ما", "translit": "maa", "en": "not", "ur": "نہیں" },
-        { "ar": "أَحَدٌ", "ar_plain": "أحد", "translit": "ahadun", "en": "anyone", "ur": "کوئی" },
-        { "ar": "فِي", "ar_plain": "في", "translit": "fii", "en": "in", "ur": "میں" },
-        { "ar": "الْبَيْتِ", "ar_plain": "البيت", "translit": "al-bayti", "en": "the house", "ur": "گھر" },
-        { "ar": "إِلَّا", "ar_plain": "إلا", "translit": "illaa", "en": "except", "ur": "سوائے" },
-        { "ar": "الْمُؤْمِنُونَ", "ar_plain": "المؤمنون", "translit": "al-mu'minuuna", "en": "the believers", "ur": "مومنین" }
+        {
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "maa",
+          "en": "not",
+          "ur": "نہیں"
+        },
+        {
+          "ar": "أَحَدٌ",
+          "ar_plain": "أحد",
+          "translit": "ahadun",
+          "en": "anyone",
+          "ur": "کوئی"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fii",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "الْبَيْتِ",
+          "ar_plain": "البيت",
+          "translit": "al-bayti",
+          "en": "the house",
+          "ur": "گھر"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
+        },
+        {
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minuuna",
+          "en": "the believers",
+          "ur": "مومنین"
+        }
       ],
-      "correct_order": [0, 1, 2, 3, 4, 5],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
       "xp_value": 1
     },
     {
@@ -259,7 +343,12 @@
         "en": "except",
         "ur": "سوائے"
       },
-      "options": ["إ ل ا", "ع ب د", "ن ص ر", "ك ف ر"],
+      "options": [
+        "إ ل ا",
+        "ع ب د",
+        "ن ص ر",
+        "ك ف ر"
+      ],
       "correct_index": 0,
       "xp_value": 1
     }
@@ -277,9 +366,11 @@
       "ar": "وَالَّذِينَ كَفَرُوا فَهُمْ فِي ضَلَالِهِمْ يَسْعَوْنَ",
       "en": "And those who disbelieved — they are in their misguidance, straying.",
       "ur": "اور جنہوں نے کفر کیا — وہ اپنی گمراہی میں ہیں، بھٹکتے پھرتے ہیں۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/al-baqarah-006-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002006.mp3"
     },
-    "highlighted_word_indices": [3],
+    "highlighted_word_indices": [
+      3
+    ],
     "noor_explanation": {
       "en": "إِلَّا appears in this ayah within كَفَرُوا but not as the exception particle. The chapter on الاستثناء focuses on the grammatically proper use of إِلَّا as the exception particle — لَا إِلَٰهَ إِلَّا اللَّه is the paradigm.",
       "ur": "إِلَّا اس آیت میں كَفَرُوا کے اندر آتا ہے مگر استثنائی ذرہ کے طور پر نہیں۔ الاستثناء پر باب إِلَّا کو استثنائی ذرہ کے طور پر grammatically صحیح استعمال پر focus کرتا ہے — لَا إِلَٰهَ إِلَّا اللَّه نمونہ ہے۔"

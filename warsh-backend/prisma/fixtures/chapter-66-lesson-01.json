@@ -20,7 +20,7 @@
       "ar": "يَا مَعْشَرَ الْجِنِّ وَالْإِنْسِ إِنِ اسْتَطَعْتُمْ أَنْ تَنْفُذُوا مِنْ أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ فَانْفُذُوا لَا تَنْفُذُونَ إِلَّا بِسُلْطَانٍ",
       "en": "O assembly of jinn and humans, if you can pass beyond the regions of the heavens and the earth, then pass beyond. You cannot pass except with power.",
       "ur": "اے جنوں اور انسوں کی جماعت! اگر تم آسمانوں اور زمین کے کناروں سے نكل سکو تو نکل لو۔ طاقت کے بغیر نہیں نکل سکتے۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/ar-rahman-033-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/055033.mp3"
     },
     "noor_intro": {
       "en": "أَقْطَارِ السَّمَاوَاتِ — 'the regions of the heavens.' أَقْطَارِ is a zarf, telling us WHERE. In Arabic, place and time are expressed in the accusative.",
@@ -122,10 +122,22 @@
         "ur": "اس دن جب لوگ جمع ہوں گے"
       },
       "options": [
-        { "en": "on the day when people gather", "ur": "اس دن جب لوگ جمع ہوں گے" },
-        { "en": "on a day of gathering", "ur": "جمع کے دن" },
-        { "en": "the people gather on that day", "ur": "لوگ اس دن جمع ہوتے ہیں" },
-        { "en": "the people will gather today", "ur": "لوگ آج جمع ہوں گے" }
+        {
+          "en": "on the day when people gather",
+          "ur": "اس دن جب لوگ جمع ہوں گے"
+        },
+        {
+          "en": "on a day of gathering",
+          "ur": "جمع کے دن"
+        },
+        {
+          "en": "the people gather on that day",
+          "ur": "لوگ اس دن جمع ہوتے ہیں"
+        },
+        {
+          "en": "the people will gather today",
+          "ur": "لوگ آج جمع ہوں گے"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -204,12 +216,42 @@
       "id": "ch66-l01-ex04",
       "sentence_ar": "عِنْدَ رَبِّكَ يَنْتَظِرُونَ",
       "words": [
-        { "ar": "عِنْدَ", "ar_plain": "عند", "translit": "inda", "en": "at/near", "ur": "پاس" },
-        { "ar": "رَبِّكَ", "ar_plain": "ربك", "translit": "rabbika", "en": "your Lord", "ur": "تمہارا رب" },
-        { "ar": "يَنْتَظِرُونَ", "ar_plain": "ينتظرون", "translit": "yantaziroona", "en": "they wait", "ur": "وہ انتظار کرتے ہیں" }
+        {
+          "ar": "عِنْدَ",
+          "ar_plain": "عند",
+          "translit": "inda",
+          "en": "at/near",
+          "ur": "پاس"
+        },
+        {
+          "ar": "رَبِّكَ",
+          "ar_plain": "ربك",
+          "translit": "rabbika",
+          "en": "your Lord",
+          "ur": "تمہارا رب"
+        },
+        {
+          "ar": "يَنْتَظِرُونَ",
+          "ar_plain": "ينتظرون",
+          "translit": "yantaziroona",
+          "en": "they wait",
+          "ur": "وہ انتظار کرتے ہیں"
+        }
       ],
-      "available_roles": ["SUBJECT", "VERB", "PARTICLE", "PREPOSITION", "ADJECTIVE", "TIME_ZARF", "PLACE_ZARF"],
-      "correct_roles": ["PLACE_ZARF", "PREPOSITION", "VERB"],
+      "available_roles": [
+        "SUBJECT",
+        "VERB",
+        "PARTICLE",
+        "PREPOSITION",
+        "ADJECTIVE",
+        "TIME_ZARF",
+        "PLACE_ZARF"
+      ],
+      "correct_roles": [
+        "PLACE_ZARF",
+        "PREPOSITION",
+        "VERB"
+      ],
       "xp_value": 1
     },
     {
@@ -223,10 +265,22 @@
         "ur": "زمین کے کناروں میں"
       },
       "options": [
-        { "en": "in the regions of the earth", "ur": "زمین کے کناروں میں" },
-        { "en": "on the corners of the earth", "ur": "زمین کے کونوں پر" },
-        { "en": "from the edges of the earth", "ur": "زمین کے کناروں سے" },
-        { "en": "around the earth", "ur": "زمین کے گرد" }
+        {
+          "en": "in the regions of the earth",
+          "ur": "زمین کے کناروں میں"
+        },
+        {
+          "en": "on the corners of the earth",
+          "ur": "زمین کے کونوں پر"
+        },
+        {
+          "en": "from the edges of the earth",
+          "ur": "زمین کے کناروں سے"
+        },
+        {
+          "en": "around the earth",
+          "ur": "زمین کے گرد"
+        }
       ],
       "correct_index": 0,
       "xp_value": 1,
@@ -269,12 +323,41 @@
         }
       ],
       "right_column": [
-        { "en": "time zarf — يَوْمَ", "ur": "وقت کا ظرف — يَوْمَ" },
-        { "en": "place zarf — عِنْدَ", "ur": "مکان کا ظرف — عِنْدَ" },
-        { "en": "place zarf — أَقْطَارِ", "ur": "مکان کا ظرف — أَقْطَارِ" },
-        { "en": "dual time zarf", "ur": "جفت وقت کا ظرف" }
+        {
+          "en": "time zarf — يَوْمَ",
+          "ur": "وقت کا ظرف — يَوْمَ"
+        },
+        {
+          "en": "place zarf — عِنْدَ",
+          "ur": "مکان کا ظرف — عِنْدَ"
+        },
+        {
+          "en": "place zarf — أَقْطَارِ",
+          "ur": "مکان کا ظرف — أَقْطَارِ"
+        },
+        {
+          "en": "dual time zarf",
+          "ur": "جفت وقت کا ظرف"
+        }
       ],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
@@ -285,12 +368,41 @@
         "ur": "اس دن مومنین اپنے رب کو دیکھیں گے۔"
       },
       "tiles": [
-        { "ar": "يَوْمَئِذٍ", "ar_plain": "يومئذ", "translit": "yawma'idhin", "en": "on that day", "ur": "اس دن" },
-        { "ar": "يُرَى", "ar_plain": "يري", "translit": "yuraa", "en": "they see", "ur": "وہ دیکھتے ہیں" },
-        { "ar": "الْمُؤْمِنُونَ", "ar_plain": "المؤمنون", "translit": "al-mu'minoona", "en": "the believers", "ur": "مومنین" },
-        { "ar": "رَبَّهُمْ", "ar_plain": "ربهم", "translit": "rabbahum", "en": "their Lord", "ur": "ان کا رب" }
+        {
+          "ar": "يَوْمَئِذٍ",
+          "ar_plain": "يومئذ",
+          "translit": "yawma'idhin",
+          "en": "on that day",
+          "ur": "اس دن"
+        },
+        {
+          "ar": "يُرَى",
+          "ar_plain": "يري",
+          "translit": "yuraa",
+          "en": "they see",
+          "ur": "وہ دیکھتے ہیں"
+        },
+        {
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minoona",
+          "en": "the believers",
+          "ur": "مومنین"
+        },
+        {
+          "ar": "رَبَّهُمْ",
+          "ar_plain": "ربهم",
+          "translit": "rabbahum",
+          "en": "their Lord",
+          "ur": "ان کا رب"
+        }
       ],
-      "correct_order": [0, 2, 1, 3],
+      "correct_order": [
+        0,
+        2,
+        1,
+        3
+      ],
       "xp_value": 1
     },
     {
@@ -324,9 +436,11 @@
       "ar": "يَا مَعْشَرَ الْجِنِّ وَالْإِنْسِ إِنِ اسْتَطَعْتُمْ أَنْ تَنْفُذُوا مِنْ أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ فَانْفُذُوا لَا تَنْفُذُونَ إِلَّا بِسُلْطَانٍ",
       "en": "O jinn and human assembly — if you can pass beyond the regions of the heavens and earth, pass beyond.",
       "ur": "اے جنوں اور انسوں کی جماعت! اگر تم آسمانوں اور زمین کے کناروں سے نکل سکو تو نکل لو۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/ar-rahman-033-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/055033.mp3"
     },
-    "highlighted_word_indices": [10],
+    "highlighted_word_indices": [
+      10
+    ],
     "noor_explanation": {
       "en": "أَقْطَارِ is a place zarf — 'regions' or 'ends.' It tells us WHERE. All ظروف are مفعول فيه — 'the object in which' the action occurs — and they take the accusative case.",
       "ur": "أَقْطَارِ مکان کا ظرف ہے — 'علاقے' یا 'کنارے'۔ یہ بتاتا ہے کہ کہاں۔ تمام ظروف مفعول فیہ ہیں — 'جس میں' عمل ہوتا ہے — اور یہ نصب کی حالت میں ہوتے ہیں۔"

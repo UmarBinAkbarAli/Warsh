@@ -125,9 +125,11 @@ async function getOpenAIReply(message: string, history: HistoryMessage[], respon
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   const model = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
+  // Always state the target language explicitly. Leaving it implicit let the
+  // model drift into Urdu for Islamic terms even when the student chose English.
   const langInstruction = responseLanguage === "ur"
-    ? "\n\nIMPORTANT: This student has selected Urdu as their native language. Always respond in Urdu, regardless of what language they write in. Keep all Arabic words in Arabic script."
-    : "";
+    ? "\n\nIMPORTANT: This student has selected Urdu as their language. Always respond in Urdu, regardless of what language they write in. Keep all Arabic words in Arabic script."
+    : "\n\nIMPORTANT: This student has selected English as their language. Always respond in English, regardless of what language they write in. Keep all Arabic words in Arabic script.";
 
   const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [
     { role: "system", content: SYSTEM_PROMPT + langInstruction },

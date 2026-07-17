@@ -12,6 +12,7 @@ import {
   View,
 } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
+import Constants from "expo-constants";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
@@ -504,7 +505,7 @@ export default function SettingsScreen() {
           <SettingRow
             icon="code-outline"
             label={t("settings.version")}
-            right={<Text style={styles.versionText}>1.0.0</Text>}
+            right={<Text style={styles.versionText}>{Constants.expoConfig?.version ?? Constants.nativeAppVersion ?? ""}</Text>}
           />
         </View>
 

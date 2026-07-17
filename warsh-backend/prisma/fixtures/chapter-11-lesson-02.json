@@ -16,7 +16,7 @@
       "ar": "إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ",
       "en": "The believers are but brothers.",
       "ur": "بے شک مؤمن آپس میں بھائی ہیں۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/al-hujurat-010-part-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049010.mp3"
     },
     "noor_intro": {
       "en": "The Quran uses family language to describe the believers. Today you build the core family vocabulary.",
@@ -27,24 +27,57 @@
   "discover_cards": [
     {
       "type": "WORD",
-      "text": { "ar": "أَبٌ", "ar_plain": "اب", "translit": "abun", "en": "father", "ur": "والد" }
+      "text": {
+        "ar": "أَبٌ",
+        "ar_plain": "اب",
+        "translit": "abun",
+        "en": "father",
+        "ur": "والد"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "أُمٌّ", "ar_plain": "ام", "translit": "ummun", "en": "mother", "ur": "والدہ" }
+      "text": {
+        "ar": "أُمٌّ",
+        "ar_plain": "ام",
+        "translit": "ummun",
+        "en": "mother",
+        "ur": "والدہ"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "أَخٌ", "ar_plain": "اخ", "translit": "akhun", "en": "brother", "ur": "بھائی" }
+      "text": {
+        "ar": "أَخٌ",
+        "ar_plain": "اخ",
+        "translit": "akhun",
+        "en": "brother",
+        "ur": "بھائی"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "أُخْتٌ", "ar_plain": "اخت", "translit": "ukhtun", "en": "sister", "ur": "بہن" }
+      "text": {
+        "ar": "أُخْتٌ",
+        "ar_plain": "اخت",
+        "translit": "ukhtun",
+        "en": "sister",
+        "ur": "بہن"
+      }
     },
     {
       "type": "EXAMPLE",
-      "text": { "ar": "أَخِي فِي الْبَيْتِ", "ar_plain": "اخي في البيت", "translit": "akhi fi al-bayti", "en": "My brother is in the house", "ur": "میرا بھائی گھر میں ہے" },
-      "explanation": { "en": "The same attached ي pattern makes أَخٌ into أَخِي: my brother.", "ur": "وہی جڑی ہوئی ي أَخٌ کو أَخِي بناتی ہے: میرا بھائی۔" }
+      "text": {
+        "ar": "أَخِي فِي الْبَيْتِ",
+        "ar_plain": "اخي في البيت",
+        "translit": "akhi fi al-bayti",
+        "en": "My brother is in the house",
+        "ur": "میرا بھائی گھر میں ہے"
+      },
+      "explanation": {
+        "en": "The same attached ي pattern makes أَخٌ into أَخِي: my brother.",
+        "ur": "وہی جڑی ہوئی ي أَخٌ کو أَخِي بناتی ہے: میرا بھائی۔"
+      }
     }
   ],
   "exercises": [
@@ -52,28 +85,132 @@
       "type": "MATCHING",
       "id": "ch11-l02-ex01",
       "left_column": [
-        { "ar": "أَبٌ", "ar_plain": "اب", "translit": "abun", "en": "father", "ur": "والد" },
-        { "ar": "أُمٌّ", "ar_plain": "ام", "translit": "ummun", "en": "mother", "ur": "والدہ" },
-        { "ar": "أَخٌ", "ar_plain": "اخ", "translit": "akhun", "en": "brother", "ur": "بھائی" },
-        { "ar": "أُخْتٌ", "ar_plain": "اخت", "translit": "ukhtun", "en": "sister", "ur": "بہن" }
+        {
+          "ar": "أَبٌ",
+          "ar_plain": "اب",
+          "translit": "abun",
+          "en": "father",
+          "ur": "والد"
+        },
+        {
+          "ar": "أُمٌّ",
+          "ar_plain": "ام",
+          "translit": "ummun",
+          "en": "mother",
+          "ur": "والدہ"
+        },
+        {
+          "ar": "أَخٌ",
+          "ar_plain": "اخ",
+          "translit": "akhun",
+          "en": "brother",
+          "ur": "بھائی"
+        },
+        {
+          "ar": "أُخْتٌ",
+          "ar_plain": "اخت",
+          "translit": "ukhtun",
+          "en": "sister",
+          "ur": "بہن"
+        }
       ],
-      "right_column": [{ "en": "father", "ur": "والد" }, { "en": "mother", "ur": "والدہ" }, { "en": "brother", "ur": "بھائی" }, { "en": "sister", "ur": "بہن" }],
-      "correct_pairs": [[0, 0], [1, 1], [2, 2], [3, 3]],
+      "right_column": [
+        {
+          "en": "father",
+          "ur": "والد"
+        },
+        {
+          "en": "mother",
+          "ur": "والدہ"
+        },
+        {
+          "en": "brother",
+          "ur": "بھائی"
+        },
+        {
+          "en": "sister",
+          "ur": "بہن"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
       "xp_value": 1
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch11-l02-ex02",
-      "prompt": { "ar": "أَخٌ", "ar_plain": "اخ", "translit": "akhun", "en": "brother", "ur": "بھائی" },
-      "options": [{ "en": "brother", "ur": "بھائی" }, { "en": "sister", "ur": "بہن" }, { "en": "house", "ur": "گھر" }, { "en": "after", "ur": "بعد" }],
+      "prompt": {
+        "ar": "أَخٌ",
+        "ar_plain": "اخ",
+        "translit": "akhun",
+        "en": "brother",
+        "ur": "بھائی"
+      },
+      "options": [
+        {
+          "en": "brother",
+          "ur": "بھائی"
+        },
+        {
+          "en": "sister",
+          "ur": "بہن"
+        },
+        {
+          "en": "house",
+          "ur": "گھر"
+        },
+        {
+          "en": "after",
+          "ur": "بعد"
+        }
+      ],
       "correct_index": 0,
       "xp_value": 1
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch11-l02-ex03",
-      "prompt": { "ar": "أُخْتٌ", "ar_plain": "اخت", "translit": "ukhtun", "en": "sister", "ur": "بہن" },
-      "options": [{ "en": "sister", "ur": "بہن" }, { "en": "father", "ur": "والد" }, { "en": "students", "ur": "طلبہ" }, { "en": "before", "ur": "پہلے" }],
+      "prompt": {
+        "ar": "أُخْتٌ",
+        "ar_plain": "اخت",
+        "translit": "ukhtun",
+        "en": "sister",
+        "ur": "بہن"
+      },
+      "options": [
+        {
+          "en": "sister",
+          "ur": "بہن"
+        },
+        {
+          "en": "father",
+          "ur": "والد"
+        },
+        {
+          "en": "students",
+          "ur": "طلبہ"
+        },
+        {
+          "en": "before",
+          "ur": "پہلے"
+        }
+      ],
       "correct_index": 0,
       "xp_value": 1
     },
@@ -82,14 +219,47 @@
       "id": "ch11-l02-ex04",
       "mode": "TAP",
       "sentence_ar": "___ فِي الْبَيْتِ",
-      "hint": { "en": "My brother is in the house", "ur": "میرا بھائی گھر میں ہے" },
+      "hint": {
+        "en": "My brother is in the house",
+        "ur": "میرا بھائی گھر میں ہے"
+      },
       "options": [
-        { "ar": "أَخِي", "ar_plain": "اخي", "translit": "akhi", "en": "my brother", "ur": "میرا بھائی" },
-        { "ar": "أُخْتٌ", "ar_plain": "اخت", "translit": "ukhtun", "en": "sister", "ur": "بہن" },
-        { "ar": "فِيهِ", "ar_plain": "فيه", "translit": "fihi", "en": "in it", "ur": "اس میں" },
-        { "ar": "نَحْنُ", "ar_plain": "نحن", "translit": "nahnu", "en": "we", "ur": "ہم" }
+        {
+          "ar": "أَخِي",
+          "ar_plain": "اخي",
+          "translit": "akhi",
+          "en": "my brother",
+          "ur": "میرا بھائی"
+        },
+        {
+          "ar": "أُخْتٌ",
+          "ar_plain": "اخت",
+          "translit": "ukhtun",
+          "en": "sister",
+          "ur": "بہن"
+        },
+        {
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fihi",
+          "en": "in it",
+          "ur": "اس میں"
+        },
+        {
+          "ar": "نَحْنُ",
+          "ar_plain": "نحن",
+          "translit": "nahnu",
+          "en": "we",
+          "ur": "ہم"
+        }
       ],
-      "correct_answer": { "ar": "أَخِي", "ar_plain": "اخي", "translit": "akhi", "en": "my brother", "ur": "میرا بھائی" },
+      "correct_answer": {
+        "ar": "أَخِي",
+        "ar_plain": "اخي",
+        "translit": "akhi",
+        "en": "my brother",
+        "ur": "میرا بھائی"
+      },
       "xp_value": 1
     },
     {
@@ -98,14 +268,24 @@
       "statement": {
         "en": "أُمٌّ means mother.",
         "ur": "أُمٌّ کا مطلب والدہ ہے۔",
-        "ar_example": { "ar": "أُمٌّ", "ar_plain": "ام", "translit": "ummun", "en": "mother", "ur": "والدہ" }
+        "ar_example": {
+          "ar": "أُمٌّ",
+          "ar_plain": "ام",
+          "translit": "ummun",
+          "en": "mother",
+          "ur": "والدہ"
+        }
       },
       "correct_answer": true,
       "xp_value": 1
     }
   ],
   "reveal": {
-    "concept_name": { "en": "Family vocabulary", "ar": "مُفْرَدَاتُ الأُسْرَة", "ur": "خاندانی الفاظ" },
+    "concept_name": {
+      "en": "Family vocabulary",
+      "ar": "مُفْرَدَاتُ الأُسْرَة",
+      "ur": "خاندانی الفاظ"
+    },
     "ayah": {
       "surah": 49,
       "ayah": 10,
@@ -113,15 +293,20 @@
       "ar": "إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ",
       "en": "The believers are but brothers.",
       "ur": "بے شک مؤمن آپس میں بھائی ہیں۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/al-hujurat-010-part-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049010.mp3"
     },
-    "highlighted_word_indices": [2],
+    "highlighted_word_indices": [
+      2
+    ],
     "noor_explanation": {
       "en": "إِخْوَةٌ is the plural family word: brothers. The Quran uses family language to teach the closeness of believers.",
       "ur": "إِخْوَةٌ خاندانی لفظ کی جمع ہے: بھائی۔ قرآن مؤمنوں کی قربت بتانے کے لیے خاندانی زبان استعمال کرتا ہے۔"
     }
   },
   "close": {
-    "noor_message": { "en": "You now have the core family words: father, mother, brother, sister.", "ur": "اب آپ کے پاس بنیادی خاندانی الفاظ ہیں: والد، والدہ، بھائی، بہن۔" }
+    "noor_message": {
+      "en": "You now have the core family words: father, mother, brother, sister.",
+      "ur": "اب آپ کے پاس بنیادی خاندانی الفاظ ہیں: والد، والدہ، بھائی، بہن۔"
+    }
   }
 }

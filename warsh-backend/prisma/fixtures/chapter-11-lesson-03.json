@@ -16,7 +16,7 @@
       "ar": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
       "en": "That is the Book about which there is no doubt.",
       "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/al-baqarah-002-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
     },
     "noor_intro": {
       "en": "You have recited فِيهِ many times in Al-Baqarah: in it. Today you learn how it is built.",
@@ -27,30 +27,84 @@
   "discover_cards": [
     {
       "type": "CONCEPT",
-      "concept": { "en": "In + it masculine", "ar": "فِي + هِ", "ur": "میں + وہ مذکر" },
-      "explanation": { "en": "فِي means in. Add the masculine attached pronoun هِ and it becomes فِيهِ: in it.", "ur": "فِي کا مطلب ہے میں۔ اس کے ساتھ مذکر ضمیر هِ لگے تو فِيهِ بنتا ہے: اس میں۔" }
+      "concept": {
+        "en": "In + it masculine",
+        "ar": "فِي + هِ",
+        "ur": "میں + وہ مذکر"
+      },
+      "explanation": {
+        "en": "فِي means in. Add the masculine attached pronoun هِ and it becomes فِيهِ: in it.",
+        "ur": "فِي کا مطلب ہے میں۔ اس کے ساتھ مذکر ضمیر هِ لگے تو فِيهِ بنتا ہے: اس میں۔"
+      }
     },
     {
       "type": "WORD",
-      "text": { "ar": "فِيهِ", "ar_plain": "فيه", "translit": "fihi", "en": "in it", "ur": "اس میں" }
+      "text": {
+        "ar": "فِيهِ",
+        "ar_plain": "فيه",
+        "translit": "fihi",
+        "en": "in it",
+        "ur": "اس میں"
+      }
     },
     {
       "type": "EXAMPLE",
-      "text": { "ar": "الْقَلَمُ فِي الدَّرْجِ", "ar_plain": "القلم في الدرج", "translit": "al-qalamu fi ad-darji", "en": "The pen is in the drawer", "ur": "قلم دراز میں ہے" },
-      "explanation": { "en": "الدَّرْجِ is treated as masculine here, so the next sentence can say فِيهِ.", "ur": "الدَّرْجِ یہاں مذکر سمجھا جاتا ہے، اس لیے اگلے جملے میں فِيهِ آ سکتا ہے۔" }
+      "text": {
+        "ar": "الْقَلَمُ فِي الدَّرْجِ",
+        "ar_plain": "القلم في الدرج",
+        "translit": "al-qalamu fi ad-darji",
+        "en": "The pen is in the drawer",
+        "ur": "قلم دراز میں ہے"
+      },
+      "explanation": {
+        "en": "الدَّرْجِ is treated as masculine here, so the next sentence can say فِيهِ.",
+        "ur": "الدَّرْجِ یہاں مذکر سمجھا جاتا ہے، اس لیے اگلے جملے میں فِيهِ آ سکتا ہے۔"
+      }
     },
     {
       "type": "EXAMPLE",
-      "text": { "ar": "هُوَ فِيهِ", "ar_plain": "هو فيه", "translit": "huwa fihi", "en": "It is in it", "ur": "وہ اس میں ہے" },
-      "explanation": { "en": "فِيهِ points back to a masculine place or thing.", "ur": "فِيهِ پچھلی مذکر جگہ یا چیز کی طرف واپس اشارہ کرتا ہے۔" }
+      "text": {
+        "ar": "هُوَ فِيهِ",
+        "ar_plain": "هو فيه",
+        "translit": "huwa fihi",
+        "en": "It is in it",
+        "ur": "وہ اس میں ہے"
+      },
+      "explanation": {
+        "en": "فِيهِ points back to a masculine place or thing.",
+        "ur": "فِيهِ پچھلی مذکر جگہ یا چیز کی طرف واپس اشارہ کرتا ہے۔"
+      }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
       "id": "ch11-l03-ex01",
-      "prompt": { "ar": "فِيهِ", "ar_plain": "فيه", "translit": "fihi", "en": "in it", "ur": "اس میں" },
-      "options": [{ "en": "in it", "ur": "اس میں" }, { "en": "in her", "ur": "اس میں مؤنث" }, { "en": "my father", "ur": "میرے والد" }, { "en": "before", "ur": "پہلے" }],
+      "prompt": {
+        "ar": "فِيهِ",
+        "ar_plain": "فيه",
+        "translit": "fihi",
+        "en": "in it",
+        "ur": "اس میں"
+      },
+      "options": [
+        {
+          "en": "in it",
+          "ur": "اس میں"
+        },
+        {
+          "en": "in her",
+          "ur": "اس میں مؤنث"
+        },
+        {
+          "en": "my father",
+          "ur": "میرے والد"
+        },
+        {
+          "en": "before",
+          "ur": "پہلے"
+        }
+      ],
       "correct_index": 0,
       "xp_value": 1
     },
@@ -60,7 +114,13 @@
       "statement": {
         "en": "فِيهِ can refer back to a masculine noun.",
         "ur": "فِيهِ کسی مذکر اسم کی طرف واپس اشارہ کر سکتا ہے۔",
-        "ar_example": { "ar": "الدَّرْجِ — فِيهِ", "ar_plain": "الدرج فيه", "translit": "ad-darji - fihi", "en": "the drawer - in it", "ur": "دراز - اس میں" }
+        "ar_example": {
+          "ar": "الدَّرْجِ — فِيهِ",
+          "ar_plain": "الدرج فيه",
+          "translit": "ad-darji - fihi",
+          "en": "the drawer - in it",
+          "ur": "دراز - اس میں"
+        }
       },
       "correct_answer": true,
       "xp_value": 1
@@ -70,27 +130,90 @@
       "id": "ch11-l03-ex03",
       "mode": "TAP",
       "sentence_ar": "هُوَ ___",
-      "hint": { "en": "It is in it", "ur": "وہ اس میں ہے" },
+      "hint": {
+        "en": "It is in it",
+        "ur": "وہ اس میں ہے"
+      },
       "options": [
-        { "ar": "فِيهِ", "ar_plain": "فيه", "translit": "fihi", "en": "in it masculine", "ur": "اس میں مذکر" },
-        { "ar": "فِيهَا", "ar_plain": "فيها", "translit": "fiha", "en": "in it feminine", "ur": "اس میں مؤنث" },
-        { "ar": "أُمِّي", "ar_plain": "امي", "translit": "ummi", "en": "my mother", "ur": "میری والدہ" },
-        { "ar": "بَعْدَ", "ar_plain": "بعد", "translit": "ba'da", "en": "after", "ur": "بعد" }
+        {
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fihi",
+          "en": "in it masculine",
+          "ur": "اس میں مذکر"
+        },
+        {
+          "ar": "فِيهَا",
+          "ar_plain": "فيها",
+          "translit": "fiha",
+          "en": "in it feminine",
+          "ur": "اس میں مؤنث"
+        },
+        {
+          "ar": "أُمِّي",
+          "ar_plain": "امي",
+          "translit": "ummi",
+          "en": "my mother",
+          "ur": "میری والدہ"
+        },
+        {
+          "ar": "بَعْدَ",
+          "ar_plain": "بعد",
+          "translit": "ba'da",
+          "en": "after",
+          "ur": "بعد"
+        }
       ],
-      "correct_answer": { "ar": "فِيهِ", "ar_plain": "فيه", "translit": "fihi", "en": "in it masculine", "ur": "اس میں مذکر" },
+      "correct_answer": {
+        "ar": "فِيهِ",
+        "ar_plain": "فيه",
+        "translit": "fihi",
+        "en": "in it masculine",
+        "ur": "اس میں مذکر"
+      },
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch11-l03-ex04",
-      "target_translation": { "en": "It is in it", "ur": "وہ اس میں ہے" },
+      "target_translation": {
+        "en": "It is in it",
+        "ur": "وہ اس میں ہے"
+      },
       "tiles": [
-        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "it/he", "ur": "وہ" },
-        { "ar": "فِيهِ", "ar_plain": "فيه", "translit": "fihi", "en": "in it", "ur": "اس میں" },
-        { "ar": "قَبْلَ", "ar_plain": "قبل", "translit": "qabla", "en": "before", "ur": "پہلے" },
-        { "ar": "أَبِي", "ar_plain": "ابي", "translit": "abi", "en": "my father", "ur": "میرے والد" }
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "it/he",
+          "ur": "وہ"
+        },
+        {
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fihi",
+          "en": "in it",
+          "ur": "اس میں"
+        },
+        {
+          "ar": "قَبْلَ",
+          "ar_plain": "قبل",
+          "translit": "qabla",
+          "en": "before",
+          "ur": "پہلے"
+        },
+        {
+          "ar": "أَبِي",
+          "ar_plain": "ابي",
+          "translit": "abi",
+          "en": "my father",
+          "ur": "میرے والد"
+        }
       ],
-      "correct_order": [0, 1],
+      "correct_order": [
+        0,
+        1
+      ],
       "xp_value": 1
     },
     {
@@ -98,16 +221,40 @@
       "id": "ch11-l03-ex05",
       "sentence_ar": "هُوَ فِيهِ",
       "words": [
-        { "ar": "هُوَ", "ar_plain": "هو", "translit": "huwa", "en": "it/he", "ur": "وہ" },
-        { "ar": "فِيهِ", "ar_plain": "فيه", "translit": "fihi", "en": "in it", "ur": "اس میں" }
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "it/he",
+          "ur": "وہ"
+        },
+        {
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fihi",
+          "en": "in it",
+          "ur": "اس میں"
+        }
       ],
-      "available_roles": ["SUBJECT", "PREDICATE", "PREPOSITION", "POSSESSIVE"],
-      "correct_roles": ["SUBJECT", "PREDICATE"],
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "PREPOSITION",
+        "POSSESSIVE"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "PREDICATE"
+      ],
       "xp_value": 1
     }
   ],
   "reveal": {
-    "concept_name": { "en": "In it masculine - فِيهِ", "ar": "فِيهِ", "ur": "اس میں مذکر" },
+    "concept_name": {
+      "en": "In it masculine - فِيهِ",
+      "ar": "فِيهِ",
+      "ur": "اس میں مذکر"
+    },
     "ayah": {
       "surah": 2,
       "ayah": 2,
@@ -115,15 +262,20 @@
       "ar": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
       "en": "That is the Book about which there is no doubt.",
       "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/al-baqarah-002-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
     },
-    "highlighted_word_indices": [4],
+    "highlighted_word_indices": [
+      4
+    ],
     "noor_explanation": {
       "en": "فِيهِ means in it. In this ayah, it refers back to الْكِتَابُ: there is no doubt in it.",
       "ur": "فِيهِ کا مطلب ہے اس میں۔ اس آیت میں یہ الْكِتَابُ کی طرف لوٹتا ہے: اس میں کوئی شک نہیں۔"
     }
   },
   "close": {
-    "noor_message": { "en": "You just unlocked a famous Quranic word: فِيهِ.", "ur": "آپ نے قرآن کا مشہور لفظ سمجھ لیا: فِيهِ۔" }
+    "noor_message": {
+      "en": "You just unlocked a famous Quranic word: فِيهِ.",
+      "ur": "آپ نے قرآن کا مشہور لفظ سمجھ لیا: فِيهِ۔"
+    }
   }
 }

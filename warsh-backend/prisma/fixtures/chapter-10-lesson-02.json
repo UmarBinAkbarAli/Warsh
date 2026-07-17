@@ -16,7 +16,7 @@
       "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
       "en": "It is You we worship and You we ask for help.",
       "ur": "ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/al-fatihah-005-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001005.mp3"
     },
     "noor_intro": {
       "en": "Al-Fatiha teaches us to speak as a worshipping community: we worship, we seek help. Today the word is نَحْنُ.",
@@ -27,16 +27,35 @@
   "discover_cards": [
     {
       "type": "WORD",
-      "text": { "ar": "نَحْنُ", "ar_plain": "نحن", "translit": "nahnu", "en": "we", "ur": "ہم" },
-      "explanation": { "en": "نَحْنُ includes the speaker and at least one other person.", "ur": "نَحْنُ میں بولنے والا اور اس کے ساتھ کم از کم ایک اور شخص شامل ہوتا ہے۔" }
+      "text": {
+        "ar": "نَحْنُ",
+        "ar_plain": "نحن",
+        "translit": "nahnu",
+        "en": "we",
+        "ur": "ہم"
+      },
+      "explanation": {
+        "en": "نَحْنُ includes the speaker and at least one other person.",
+        "ur": "نَحْنُ میں بولنے والا اور اس کے ساتھ کم از کم ایک اور شخص شامل ہوتا ہے۔"
+      }
     },
     {
       "type": "EXAMPLE",
-      "text": { "ar": "نَحْنُ مُسْلِمُونَ", "ar_plain": "نحن مسلمون", "translit": "nahnu muslimoona", "en": "We are Muslims", "ur": "ہم مسلمان ہیں" }
+      "text": {
+        "ar": "نَحْنُ مُسْلِمُونَ",
+        "ar_plain": "نحن مسلمون",
+        "translit": "nahnu muslimoona",
+        "en": "We are Muslims",
+        "ur": "ہم مسلمان ہیں"
+      }
     },
     {
       "type": "CONCEPT",
-      "concept": { "en": "The community voice", "ar": "صَوْتُ الجَمَاعَة", "ur": "جماعت کی آواز" },
+      "concept": {
+        "en": "The community voice",
+        "ar": "صَوْتُ الجَمَاعَة",
+        "ur": "جماعت کی آواز"
+      },
       "explanation": {
         "en": "In worship, Arabic often speaks with نَحْنُ: we. It reminds the learner that Islam is not only private; it is also communal.",
         "ur": "عبادت میں عربی اکثر نَحْنُ یعنی ہم استعمال کرتی ہے۔ یہ یاد دلاتا ہے کہ اسلام صرف فرد کا نہیں، جماعت کا دین بھی ہے۔"
@@ -44,16 +63,48 @@
     },
     {
       "type": "EXAMPLE",
-      "text": { "ar": "نَحْنُ طُلَّابٌ", "ar_plain": "نحن طلاب", "translit": "nahnu tullaabun", "en": "We are students", "ur": "ہم طلبہ ہیں" },
-      "explanation": { "en": "Like هُمْ, نَحْنُ can begin a complete no-verb sentence.", "ur": "هُمْ کی طرح نَحْنُ بھی بغیر فعل کے مکمل جملہ شروع کر سکتا ہے۔" }
+      "text": {
+        "ar": "نَحْنُ طُلَّابٌ",
+        "ar_plain": "نحن طلاب",
+        "translit": "nahnu tullaabun",
+        "en": "We are students",
+        "ur": "ہم طلبہ ہیں"
+      },
+      "explanation": {
+        "en": "Like هُمْ, نَحْنُ can begin a complete no-verb sentence.",
+        "ur": "هُمْ کی طرح نَحْنُ بھی بغیر فعل کے مکمل جملہ شروع کر سکتا ہے۔"
+      }
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
       "id": "ch10-l02-ex01",
-      "prompt": { "ar": "نَحْنُ", "ar_plain": "نحن", "translit": "nahnu", "en": "we", "ur": "ہم" },
-      "options": [{ "en": "we", "ur": "ہم" }, { "en": "they", "ur": "وہ سب" }, { "en": "before", "ur": "پہلے" }, { "en": "in it", "ur": "اس میں" }],
+      "prompt": {
+        "ar": "نَحْنُ",
+        "ar_plain": "نحن",
+        "translit": "nahnu",
+        "en": "we",
+        "ur": "ہم"
+      },
+      "options": [
+        {
+          "en": "we",
+          "ur": "ہم"
+        },
+        {
+          "en": "they",
+          "ur": "وہ سب"
+        },
+        {
+          "en": "before",
+          "ur": "پہلے"
+        },
+        {
+          "en": "in it",
+          "ur": "اس میں"
+        }
+      ],
       "correct_index": 0,
       "xp_value": 1
     },
@@ -63,7 +114,13 @@
       "statement": {
         "en": "نَحْنُ means 'we'.",
         "ur": "نَحْنُ کا مطلب 'ہم' ہے۔",
-        "ar_example": { "ar": "نَحْنُ مُسْلِمُونَ", "ar_plain": "نحن مسلمون", "translit": "nahnu muslimoona", "en": "We are Muslims", "ur": "ہم مسلمان ہیں" }
+        "ar_example": {
+          "ar": "نَحْنُ مُسْلِمُونَ",
+          "ar_plain": "نحن مسلمون",
+          "translit": "nahnu muslimoona",
+          "en": "We are Muslims",
+          "ur": "ہم مسلمان ہیں"
+        }
       },
       "correct_answer": true,
       "xp_value": 1
@@ -73,27 +130,90 @@
       "id": "ch10-l02-ex03",
       "mode": "TAP",
       "sentence_ar": "___ مُسْلِمُونَ",
-      "hint": { "en": "We are Muslims", "ur": "ہم مسلمان ہیں" },
+      "hint": {
+        "en": "We are Muslims",
+        "ur": "ہم مسلمان ہیں"
+      },
       "options": [
-        { "ar": "نَحْنُ", "ar_plain": "نحن", "translit": "nahnu", "en": "we", "ur": "ہم" },
-        { "ar": "هُمْ", "ar_plain": "هم", "translit": "hum", "en": "they", "ur": "وہ سب" },
-        { "ar": "هُنَّ", "ar_plain": "هن", "translit": "hunna", "en": "they feminine", "ur": "وہ سب مؤنث" },
-        { "ar": "بَعْدَ", "ar_plain": "بعد", "translit": "ba'da", "en": "after", "ur": "بعد" }
+        {
+          "ar": "نَحْنُ",
+          "ar_plain": "نحن",
+          "translit": "nahnu",
+          "en": "we",
+          "ur": "ہم"
+        },
+        {
+          "ar": "هُمْ",
+          "ar_plain": "هم",
+          "translit": "hum",
+          "en": "they",
+          "ur": "وہ سب"
+        },
+        {
+          "ar": "هُنَّ",
+          "ar_plain": "هن",
+          "translit": "hunna",
+          "en": "they feminine",
+          "ur": "وہ سب مؤنث"
+        },
+        {
+          "ar": "بَعْدَ",
+          "ar_plain": "بعد",
+          "translit": "ba'da",
+          "en": "after",
+          "ur": "بعد"
+        }
       ],
-      "correct_answer": { "ar": "نَحْنُ", "ar_plain": "نحن", "translit": "nahnu", "en": "we", "ur": "ہم" },
+      "correct_answer": {
+        "ar": "نَحْنُ",
+        "ar_plain": "نحن",
+        "translit": "nahnu",
+        "en": "we",
+        "ur": "ہم"
+      },
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch10-l02-ex04",
-      "target_translation": { "en": "We are students", "ur": "ہم طلبہ ہیں" },
+      "target_translation": {
+        "en": "We are students",
+        "ur": "ہم طلبہ ہیں"
+      },
       "tiles": [
-        { "ar": "نَحْنُ", "ar_plain": "نحن", "translit": "nahnu", "en": "we", "ur": "ہم" },
-        { "ar": "طُلَّابٌ", "ar_plain": "طلاب", "translit": "tullaabun", "en": "students", "ur": "طلبہ" },
-        { "ar": "هُمْ", "ar_plain": "هم", "translit": "hum", "en": "they", "ur": "وہ" },
-        { "ar": "قَبْلَ", "ar_plain": "قبل", "translit": "qabla", "en": "before", "ur": "پہلے" }
+        {
+          "ar": "نَحْنُ",
+          "ar_plain": "نحن",
+          "translit": "nahnu",
+          "en": "we",
+          "ur": "ہم"
+        },
+        {
+          "ar": "طُلَّابٌ",
+          "ar_plain": "طلاب",
+          "translit": "tullaabun",
+          "en": "students",
+          "ur": "طلبہ"
+        },
+        {
+          "ar": "هُمْ",
+          "ar_plain": "هم",
+          "translit": "hum",
+          "en": "they",
+          "ur": "وہ"
+        },
+        {
+          "ar": "قَبْلَ",
+          "ar_plain": "قبل",
+          "translit": "qabla",
+          "en": "before",
+          "ur": "پہلے"
+        }
       ],
-      "correct_order": [0, 1],
+      "correct_order": [
+        0,
+        1
+      ],
       "xp_value": 1
     },
     {
@@ -101,16 +221,40 @@
       "id": "ch10-l02-ex05",
       "sentence_ar": "نَحْنُ مُسْلِمُونَ",
       "words": [
-        { "ar": "نَحْنُ", "ar_plain": "نحن", "translit": "nahnu", "en": "we", "ur": "ہم" },
-        { "ar": "مُسْلِمُونَ", "ar_plain": "مسلمون", "translit": "muslimoona", "en": "Muslims", "ur": "مسلمان" }
+        {
+          "ar": "نَحْنُ",
+          "ar_plain": "نحن",
+          "translit": "nahnu",
+          "en": "we",
+          "ur": "ہم"
+        },
+        {
+          "ar": "مُسْلِمُونَ",
+          "ar_plain": "مسلمون",
+          "translit": "muslimoona",
+          "en": "Muslims",
+          "ur": "مسلمان"
+        }
       ],
-      "available_roles": ["SUBJECT", "PREDICATE", "DEMONSTRATIVE", "ADJECTIVE"],
-      "correct_roles": ["SUBJECT", "PREDICATE"],
+      "available_roles": [
+        "SUBJECT",
+        "PREDICATE",
+        "DEMONSTRATIVE",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "SUBJECT",
+        "PREDICATE"
+      ],
       "xp_value": 1
     }
   ],
   "reveal": {
-    "concept_name": { "en": "We - نَحْنُ", "ar": "نَحْنُ", "ur": "ہم" },
+    "concept_name": {
+      "en": "We - نَحْنُ",
+      "ar": "نَحْنُ",
+      "ur": "ہم"
+    },
     "ayah": {
       "surah": 1,
       "ayah": 5,
@@ -118,15 +262,21 @@
       "ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
       "en": "It is You we worship and You we ask for help.",
       "ur": "ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔",
-      "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/quran/al-fatihah-005-mishary.mp3"
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001005.mp3"
     },
-    "highlighted_word_indices": [1, 3],
+    "highlighted_word_indices": [
+      1,
+      3
+    ],
     "noor_explanation": {
       "en": "نَعْبُدُ and نَسْتَعِينُ both carry the meaning 'we'. نَحْنُ is the clear standalone word for that same community voice.",
       "ur": "نَعْبُدُ اور نَسْتَعِينُ دونوں میں 'ہم' کا معنی ہے۔ نَحْنُ اسی جماعتی آواز کا الگ واضح لفظ ہے۔"
     }
   },
   "close": {
-    "noor_message": { "en": "You can now say نَحْنُ مُسْلِمُونَ with understanding: we are Muslims.", "ur": "اب آپ نَحْنُ مُسْلِمُونَ سمجھ کر کہہ سکتے ہیں: ہم مسلمان ہیں۔" }
+    "noor_message": {
+      "en": "You can now say نَحْنُ مُسْلِمُونَ with understanding: we are Muslims.",
+      "ur": "اب آپ نَحْنُ مُسْلِمُونَ سمجھ کر کہہ سکتے ہیں: ہم مسلمان ہیں۔"
+    }
   }
 }
