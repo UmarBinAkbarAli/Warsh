@@ -1,0 +1,10 @@
+{
+  "projectId": "26695731-b45a-4b1a-a5d5-74c509c34d2e",
+  "shape": "package",
+  "scope": "tokens-only",
+  "note": "Warsh is an Expo/React Native app, not a web design-system library. No Storybook, no consumable component dist (warsh-app/dist is an Expo web export of the whole app). RN components do not render in the Claude Design web runtime. Per user decision 2026-07-18, this sync ships BRAND TOKENS + FONTS only (colors, type scale, spacing, radii, shadows), sourced from warsh-app/constants/theme.ts. No components.",
+  "source": {
+    "tokens": "warsh-app/constants/theme.ts",
+    "fonts": "warsh-app/assets/fonts"
+  }
+}
