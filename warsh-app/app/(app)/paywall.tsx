@@ -2,11 +2,14 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
+  KeyboardAvoidingView,
   Linking,
+  Modal,
   Platform,
   ScrollView,
   StyleSheet,
   Text,
+  TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
@@ -14,7 +17,7 @@ import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import { API_BASE_URL, verifyPurchase, getSubscriptionStatus } from "@services/api";
+import { API_BASE_URL, verifyPurchase, getSubscriptionStatus, redeemPromoCode, getApiErrorMessage } from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { useT } from "@i18n/index";
@@ -61,6 +64,9 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   const [restoring, setRestoring] = useState(false);
   const [trialDaysRemaining, setTrialDaysRemaining] = useState<number | null>(null);
   const [googlePlayVerificationReady, setGooglePlayVerificationReady] = useState<boolean | null>(null);
+  const [promoModalVisible, setPromoModalVisible] = useState(false);
+  const [promoCode, setPromoCode] = useState("");
+  const [redeemingPromo, setRedeemingPromo] = useState(false);
   // Current subscription (from verified backend state) so we can mark the active
   // plan and switch instead of creating a duplicate subscription.
   const [currentBasePlan, setCurrentBasePlan] = useState<string | null>(null);
@@ -341,6 +347,30 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     }
   }
 
+  // Redeems a promo code for free trial days. This is entirely account-level and
+  // independent of Google Play — it works on Android and web alike.
+  async function handleRedeemPromo() {
+    const code = promoCode.trim();
+    if (!code || redeemingPromo) return;
+    setRedeemingPromo(true);
+    try {
+      const res = await redeemPromoCode(code);
+      const days = res.data.data?.trialDaysRemaining ?? res.data.data?.freeDays ?? null;
+      setPromoModalVisible(false);
+      setPromoCode("");
+      setTrialDaysRemaining(days);
+      Alert.alert(
+        t("paywall.promoSuccessTitle"),
+        t("paywall.promoSuccess", { days: days ?? "" }),
+        [{ text: "Continue", onPress: () => router.replace("/(app)/(tabs)") }],
+      );
+    } catch (err) {
+      Alert.alert(t("paywall.promoErrorTitle"), getApiErrorMessage(err, t("paywall.promoError")));
+    } finally {
+      setRedeemingPromo(false);
+    }
+  }
+
   const billingSupported = isBillingSupportedEnvironment();
   const isWeb = Platform.OS === "web";
   const purchaseReady = billingSupported &&
@@ -519,6 +549,14 @@ export default function PaywallScreen({ dismissable = true }: Props) {
           </>
         )}
 
+        <TouchableOpacity
+          onPress={() => setPromoModalVisible(true)}
+          style={styles.textAction}
+          accessibilityRole="button"
+        >
+          <Text style={[styles.promoLink, isUrdu && styles.urduText]}>{t("paywall.promoPrompt")}</Text>
+        </TouchableOpacity>
+
         <View style={[styles.legalLinks, isUrdu && styles.rowRtl]}>
           <Text onPress={() => openLegal("terms")} style={[styles.legalLink, isUrdu && styles.urduText]}>
             {t("paywall.terms")}
@@ -532,6 +570,49 @@ export default function PaywallScreen({ dismissable = true }: Props) {
           {isWeb ? t("paywall.webLegal") : t("paywall.subscriptionLegal")}
         </Text>
       </ScrollView>
+
+      <Modal
+        visible={promoModalVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setPromoModalVisible(false)}
+      >
+        <KeyboardAvoidingView
+          behavior={Platform.OS === "ios" ? "padding" : undefined}
+          style={styles.modalOverlay}
+        >
+          <View style={styles.modalCard}>
+            <Text style={[styles.modalTitle, isUrdu && styles.urduText]}>{t("paywall.promoTitle")}</Text>
+            <TextInput
+              value={promoCode}
+              onChangeText={setPromoCode}
+              placeholder={t("paywall.promoPlaceholder")}
+              placeholderTextColor={WarshPalette.subtleBrown}
+              autoCapitalize="characters"
+              autoCorrect={false}
+              autoFocus
+              editable={!redeemingPromo}
+              onSubmitEditing={handleRedeemPromo}
+              returnKeyType="done"
+              style={[styles.modalInput, isUrdu && styles.urduText]}
+            />
+            <BrandButton
+              title={t("paywall.promoApply")}
+              onPress={handleRedeemPromo}
+              loading={redeemingPromo}
+              disabled={redeemingPromo || !promoCode.trim()}
+              style={styles.primaryButton}
+            />
+            <TouchableOpacity
+              onPress={() => { setPromoModalVisible(false); setPromoCode(""); }}
+              disabled={redeemingPromo}
+              style={styles.textAction}
+            >
+              <Text style={[styles.restoreText, isUrdu && styles.urduText]}>{t("paywall.promoCancel")}</Text>
+            </TouchableOpacity>
+          </View>
+        </KeyboardAvoidingView>
+      </Modal>
     </View>
   );
 }
@@ -743,6 +824,47 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
     textDecorationLine: "underline",
+  },
+  promoLink: {
+    color: WarshPalette.goldDeep,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+    textDecorationLine: "underline",
+  },
+  modalOverlay: {
+    flex: 1,
+    justifyContent: "center",
+    paddingHorizontal: Spacing.gutter,
+    backgroundColor: "rgba(0,0,0,0.45)",
+  },
+  modalCard: {
+    padding: Spacing.lg,
+    borderRadius: Radii.xl,
+    backgroundColor: Colors.bg.primary,
+    borderWidth: 1,
+    borderColor: WarshPalette.defaultCardBorder,
+  },
+  modalTitle: {
+    fontFamily: Fonts.bold,
+    fontSize: FontSizes.h3,
+    fontWeight: "700",
+    color: WarshPalette.ink,
+    marginBottom: Spacing.md,
+    textAlign: "center",
+  },
+  modalInput: {
+    minHeight: 52,
+    paddingHorizontal: Spacing.md,
+    borderRadius: Radii.lg,
+    borderWidth: 1,
+    borderColor: WarshPalette.defaultCardBorder,
+    backgroundColor: WarshPalette.parchmentBg,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.h3,
+    color: WarshPalette.ink,
+    letterSpacing: 2,
+    textAlign: "center",
+    marginBottom: Spacing.md,
   },
   legalLinks: {
     flexDirection: "row",

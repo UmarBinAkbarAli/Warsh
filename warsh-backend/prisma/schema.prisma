@@ -38,6 +38,37 @@ model User {
     achievements   UserAchievement[]
     userWords          UserVocabularyWord[]
     userSurahProgress  UserSurahProgress[]
+    promoRedemptions   PromoRedemption[]
+}
+
+// A promotional code that grants free trial days without a store purchase.
+// Access is granted purely by extending User.trialExpiresAt — no Google Play
+// involvement. `maxRedemptions` is null for unlimited; `redemptionCount` is
+// incremented atomically under a `< maxRedemptions` guard so the cap holds
+// even under concurrent redemptions.
+model PromoCode {
+    id              String            @id @default(cuid())
+    code            String            @unique
+    freeDays        Int               @default(30)
+    maxRedemptions  Int?
+    redemptionCount Int               @default(0)
+    active          Boolean           @default(true)
+    expiresAt       DateTime?
+    createdAt       DateTime          @default(now())
+    updatedAt       DateTime          @updatedAt
+    redemptions     PromoRedemption[]
+}
+
+model PromoRedemption {
+    id          String    @id @default(cuid())
+    promoCodeId String
+    promoCode   PromoCode @relation(fields: [promoCodeId], references: [id], onDelete: Cascade)
+    userId      String
+    user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+    createdAt   DateTime  @default(now())
+
+    // One redemption of a given code per user.
+    @@unique([promoCodeId, userId])
 }
 
 enum Goal {

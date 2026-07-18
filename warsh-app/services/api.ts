@@ -164,6 +164,10 @@ export function purchaseNoorPack(data: { purchaseToken: string; platform: "andro
   return api.post("/api/noor/purchase-pack", data);
 }
 
+export function redeemPromoCode(code: string) {
+  return api.post("/api/subscription/redeem-promo", { code });
+}
+
 export function getApiErrorMessage(error: unknown, fallback: string) {
   if (!axios.isAxiosError(error)) {
     return fallback;
