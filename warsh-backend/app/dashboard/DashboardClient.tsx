@@ -46,6 +46,14 @@ export type DashboardChapter = {
   lessons: DashboardLesson[];
 };
 
+export type PromoCodeStat = {
+  code: string;
+  freeDays: number;
+  maxRedemptions: number | null;
+  redemptionCount: number;
+  active: boolean;
+};
+
 type ChapterDraft = Pick<DashboardChapter, "title" | "titleAr" | "description" | "worldMapX" | "worldMapY" | "isLocked">;
 type LessonDraft = {
   title: string;
@@ -1197,8 +1205,10 @@ interface EditorState {
 
 export default function DashboardClient({
   initialChapters,
+  promoCodes = [],
 }: {
   initialChapters: DashboardChapter[];
+  promoCodes?: PromoCodeStat[];
 }) {
   const [chapters, setChapters] = useState(initialChapters);
   const [query, setQuery] = useState("");
@@ -1738,6 +1748,80 @@ export default function DashboardClient({
             <span>{draftExercises.length} exercises</span>
           </div>
         </header>
+
+        {promoCodes.length > 0 && (
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 12,
+              padding: "12px 16px",
+              margin: "0 0 12px",
+              border: "1px solid #e2ddd0",
+              borderRadius: 10,
+              background: "#faf8f3",
+            }}
+          >
+            <strong style={{ fontSize: 13, color: "#6b6252", alignSelf: "center", marginRight: 4 }}>
+              Promo codes
+            </strong>
+            {promoCodes.map((p) => {
+              const cap = p.maxRedemptions;
+              const remaining = cap == null ? null : Math.max(0, cap - p.redemptionCount);
+              const pct = cap && cap > 0 ? Math.min(100, Math.round((p.redemptionCount / cap) * 100)) : 0;
+              const full = cap != null && p.redemptionCount >= cap;
+              return (
+                <div
+                  key={p.code}
+                  style={{
+                    minWidth: 200,
+                    padding: "8px 12px",
+                    border: "1px solid #e2ddd0",
+                    borderRadius: 8,
+                    background: "#fff",
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                    <code style={{ fontSize: 13, fontWeight: 700 }}>{p.code}</code>
+                    <span style={{ fontSize: 11, color: "#8a7f6a" }}>{p.freeDays}d free</span>
+                    <span
+                      style={{
+                        fontSize: 10,
+                        padding: "1px 6px",
+                        borderRadius: 999,
+                        color: p.active ? "#2f6f4f" : "#9a4040",
+                        background: p.active ? "#e6f2ea" : "#f6e6e6",
+                      }}
+                    >
+                      {p.active ? "active" : "off"}
+                    </span>
+                  </div>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: full ? "#9a4040" : "#2f2a20" }}>
+                    {p.redemptionCount}
+                    {cap != null ? ` / ${cap}` : ""} redeemed
+                    {remaining != null && (
+                      <span style={{ fontSize: 11, fontWeight: 400, color: "#8a7f6a" }}>
+                        {" "}· {remaining} left
+                      </span>
+                    )}
+                  </div>
+                  {cap != null && (
+                    <div style={{ marginTop: 6, height: 6, borderRadius: 999, background: "#eee7d8" }}>
+                      <div
+                        style={{
+                          height: "100%",
+                          width: `${pct}%`,
+                          borderRadius: 999,
+                          background: full ? "#c06b6b" : "#7fae8f",
+                        }}
+                      />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
 
         <div className={styles.topbar}>
           <label>
