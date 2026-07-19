@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { getAdminWriteError } from "../../../../../lib/admin";
+import { getAdminReadError, getAdminWriteError } from "../../../../../lib/admin";
 import { prisma } from "../../../../../lib/prisma";
 import { LessonContentSchema } from "../../../../../lib/content-schema";
 
@@ -26,6 +26,22 @@ const lessonUpdateSchema = z.object({
 
 interface Props {
   params: { id: string };
+}
+
+// GET /api/admin/lessons/[id] — fetch a single lesson's full content on demand
+// (the curriculum editor loads content lazily rather than all lessons at once).
+export async function GET(request: Request, { params }: Props) {
+  const readError = getAdminReadError(request);
+  if (readError) return readError;
+
+  const lesson = await prisma.lesson.findUnique({
+    where: { id: params.id },
+    select: { id: true, order: true, title: true, titleAr: true, template: true, xpReward: true, updatedAt: true, content: true },
+  });
+  if (!lesson) {
+    return NextResponse.json({ error: "Lesson not found.", code: "not_found" }, { status: 404 });
+  }
+  return NextResponse.json({ data: { lesson: { ...lesson, updatedAt: lesson.updatedAt.toISOString() } } });
 }
 
 export async function PATCH(request: Request, { params }: Props) {

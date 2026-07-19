@@ -1,13 +1,13 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { ADMIN_COOKIE_NAME, verifyAdminCookieValue } from "../../lib/admin";
-import OverviewClient from "./OverviewClient";
+import { ADMIN_COOKIE_NAME, verifyAdminCookieValue } from "../../../lib/admin";
+import VocabularyClient from "./VocabularyClient";
 
 export const dynamic = "force-dynamic";
 
-export default function DashboardHome() {
+export default function VocabularyPage() {
   if (!verifyAdminCookieValue(cookies().get(ADMIN_COOKIE_NAME)?.value)) {
     redirect("/dashboard/login");
   }
-  return <OverviewClient />;
+  return <VocabularyClient />;
 }

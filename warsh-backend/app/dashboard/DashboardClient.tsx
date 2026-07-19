@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect } from "react";
 import styles from "./dashboard.module.css";
+import ImageField from "./ImageField";
 import type {
   LessonContent,
   DiscoverCard,
@@ -31,17 +32,21 @@ export type DashboardLesson = {
   template: string;
   xpReward: number;
   updatedAt?: string;
-  content: JsonValue;
+  // Loaded lazily via GET /api/admin/lessons/[id]; `undefined` = not yet fetched.
+  content?: JsonValue;
 };
 
 export type DashboardChapter = {
   id: string;
   order: number;
   title: string;
+  titleUr?: string | null;
   titleAr: string;
   description: string;
+  descriptionUr?: string | null;
   worldMapX: number;
   worldMapY: number;
+  imageUrl?: string | null;
   isLocked: boolean;
   lessons: DashboardLesson[];
 };
@@ -54,7 +59,10 @@ export type PromoCodeStat = {
   active: boolean;
 };
 
-type ChapterDraft = Pick<DashboardChapter, "title" | "titleAr" | "description" | "worldMapX" | "worldMapY" | "isLocked">;
+type ChapterDraft = Pick<
+  DashboardChapter,
+  "title" | "titleUr" | "titleAr" | "description" | "descriptionUr" | "worldMapX" | "worldMapY" | "imageUrl" | "isLocked"
+>;
 type LessonDraft = {
   title: string;
   titleAr: string;
@@ -126,16 +134,21 @@ function CardEditForm({
   index,
   onSave,
   onCancel,
+  adminToken = "",
+  onStatus,
 }: {
   card: DiscoverCard;
   index: number;
   onSave: (updated: DiscoverCard) => void;
   onCancel: () => void;
+  adminToken?: string;
+  onStatus?: (msg: string) => void;
 }) {
   // Cast to any to handle discriminated union where TypeScript can't narrow the
   // union member inside useState / JSX conditional blocks
   const [draft, setDraft] = useState<DiscoverCard>(card as unknown as DiscoverCard);
   const config = discoverCardFormConfig[card.type];
+  const draftRecord = draft as unknown as Record<string, unknown>;
 
   function updateField(path: string, value: unknown) {
     setDraft((prev) => {
@@ -192,10 +205,16 @@ function CardEditForm({
               <span>Urdu</span>
               <input value={(c.text as Record<string, string>)?.ur ?? ""} onChange={(e) => updateField("text.ur", e.target.value)} />
             </label>
-            <label>
-              <span>Image URL</span>
-              <input value={(c.image_url as string) ?? ""} onChange={(e) => updateField("image_url", e.target.value)} />
-            </label>
+            <div className={styles.fullWidth}>
+              <ImageField
+                label="Image"
+                value={(draftRecord.image_url as string) ?? ""}
+                folder="cards"
+                adminToken={adminToken}
+                onChange={(url) => updateField("image_url", url)}
+                onStatus={onStatus}
+              />
+            </div>
             <label>
               <span>Audio URL</span>
               <input value={(c.audio_url as string) ?? ""} onChange={(e) => updateField("audio_url", e.target.value)} />
@@ -1230,6 +1249,14 @@ export default function DashboardClient({
   const [deleteTarget, setDeleteTarget] = useState<{ lessonId: string; title: string; order: number } | null>(null);
   const [deletingLesson, setDeletingLesson] = useState(false);
 
+  // ---- Chapter editor dialog (create + edit) ----
+  const [chapterEditorMode, setChapterEditorMode] = useState<"create" | "edit" | null>(null);
+  const [chapterDraft, setChapterDraft] = useState<ChapterDraft | null>(null);
+  const [savingChapter, setSavingChapter] = useState(false);
+  const [chapterDeleteConfirm, setChapterDeleteConfirm] = useState(false);
+  const [chapterDeleteText, setChapterDeleteText] = useState("");
+  const [deletingChapter, setDeletingChapter] = useState(false);
+
   // ---- Dirty-switch guard ----
   const [pendingLessonSwitch, setPendingLessonSwitch] = useState<{
     lessonId: string;
@@ -1248,19 +1275,10 @@ export default function DashboardClient({
     selectedChapter?.lessons[0];
 
   // ---- Draft state ----
-  const [lessonDraft, setLessonDraft] = useState<LessonDraft | null>(
-    selectedLesson
-      ? {
-          title: selectedLesson.title,
-          titleAr: selectedLesson.titleAr,
-          template: selectedLesson.template,
-          xpReward: selectedLesson.xpReward,
-          updatedAt: toUpdatedAtMs(selectedLesson.updatedAt),
-          content: JSON.stringify(selectedLesson.content ?? null, null, 2),
-          originalContent: selectedLesson.content,
-        }
-      : null
-  );
+  // Starts null; the selected lesson's content is fetched lazily on mount and on
+  // each lesson switch (see loadLesson / resetDraftFromParsed).
+  const [lessonDraft, setLessonDraft] = useState<LessonDraft | null>(null);
+  const [contentLoading, setContentLoading] = useState(true);
 
   // ---- Parsed content ----
   const parsedContent: LessonContent | null = useMemo(() => {
@@ -1286,35 +1304,84 @@ export default function DashboardClient({
   const [dragExerciseIndex, setDragExerciseIndex] = useState<number | null>(null);
   const [dragOverExerciseIndex, setDragOverExerciseIndex] = useState<number | null>(null);
 
-  function applyHRCFromParsed(parsed: LessonContent) {
-    setDraftHRC({
-      hook: parsed.hook,
-      reveal: parsed.reveal,
-      close: parsed.close,
+  // Applies an already-loaded content object to the editing draft (synchronous).
+  const applyLessonToDraft = useCallback((lesson: DashboardLesson, content: JsonValue | null | undefined) => {
+    const parsed = parseLenient(content ?? null) as LessonContent | null;
+    setDraftDiscoverCards(parsed?.discover_cards ?? []);
+    setDraftExercises(parsed?.exercises ?? []);
+    setDraftHRC({ hook: parsed?.hook, reveal: parsed?.reveal, close: parsed?.close });
+    setLessonDraft({
+      title: lesson.title,
+      titleAr: lesson.titleAr,
+      template: lesson.template,
+      xpReward: lesson.xpReward,
+      updatedAt: toUpdatedAtMs(lesson.updatedAt),
+      content: JSON.stringify(content ?? null, null, 2),
+      originalContent: content ?? null,
     });
-  }
+    setEditorState({ mode: "view", editingIndex: null, dirty: false });
+  }, []);
 
-  // When a new lesson is selected, reset draft from parsed content
+  // Fetches one lesson's content on demand and caches it into chapters state.
+  const fetchLessonContent = useCallback(async (lessonId: string): Promise<JsonValue | null> => {
+    try {
+      const res = await fetch(`/api/admin/lessons/${lessonId}`);
+      if (!res.ok) {
+        setStatus("Could not load lesson content.");
+        return null;
+      }
+      const payload = await res.json();
+      const content = payload.data.lesson.content as JsonValue;
+      setChapters((chs) =>
+        chs.map((c) => ({ ...c, lessons: c.lessons.map((l) => (l.id === lessonId ? { ...l, content } : l)) })),
+      );
+      return content;
+    } catch {
+      setStatus("Network error loading lesson content.");
+      return null;
+    }
+  }, []);
+
+  // Selects a lesson: ensures its content is loaded (fetching if needed), then
+  // resets the editing draft. Named resetDraftFromParsed for its existing callers.
   const resetDraftFromParsed = useCallback(
-    (lesson: DashboardLesson) => {
-      const parsed = parseLenient(lesson.content) as LessonContent | null;
-      if (!parsed) return;
-      setDraftDiscoverCards(parsed.discover_cards ?? []);
-      setDraftExercises(parsed.exercises ?? []);
-      applyHRCFromParsed(parsed);
-      setLessonDraft({
-        title: lesson.title,
-        titleAr: lesson.titleAr,
-        template: lesson.template,
-        xpReward: lesson.xpReward,
-        updatedAt: toUpdatedAtMs(lesson.updatedAt),
-        content: JSON.stringify(lesson.content ?? null, null, 2),
-        originalContent: lesson.content,
-      });
-      setEditorState({ mode: "view", editingIndex: null, dirty: false });
+    async (lesson: DashboardLesson | undefined) => {
+      if (!lesson) return;
+      if (lesson.content !== undefined) {
+        applyLessonToDraft(lesson, lesson.content);
+        setContentLoading(false);
+        return;
+      }
+      setContentLoading(true);
+      setStatus("Loading lesson…");
+      const content = await fetchLessonContent(lesson.id);
+      applyLessonToDraft(lesson, content);
+      setContentLoading(false);
+      setStatus("Ready");
     },
-    []
+    [applyLessonToDraft, fetchLessonContent]
   );
+
+  // On mount, load the initially selected lesson (honoring ?chapter=&lesson=).
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const chId = params.get("chapter");
+    const lsId = params.get("lesson");
+    const targetChapter =
+      chapters.find((c) => c.id === chId) ??
+      (lsId ? chapters.find((c) => c.lessons.some((l) => l.id === lsId)) : undefined) ??
+      chapters[0];
+    if (!targetChapter) {
+      setContentLoading(false);
+      return;
+    }
+    const targetLesson = (lsId ? targetChapter.lessons.find((l) => l.id === lsId) : undefined) ?? targetChapter.lessons[0];
+    if (targetChapter.id !== selectedChapterId) setSelectedChapterId(targetChapter.id);
+    if (targetLesson && targetLesson.id !== selectedLessonId) setSelectedLessonId(targetLesson.id);
+    if (targetLesson) resetDraftFromParsed(targetLesson);
+    else setContentLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Filter chapters/lessons
   const filteredChapters = useMemo(() => {
@@ -1528,6 +1595,148 @@ export default function DashboardClient({
     }
   }
 
+  // ---- Chapter create / edit / delete ----
+  function openCreateChapter() {
+    setChapterDraft({
+      title: "",
+      titleUr: "",
+      titleAr: "",
+      description: "",
+      descriptionUr: "",
+      worldMapX: 0.5,
+      worldMapY: 0.5,
+      imageUrl: null,
+      isLocked: true,
+    });
+    setChapterEditorMode("create");
+  }
+
+  function openEditChapter() {
+    if (!selectedChapter) return;
+    setChapterDraft({
+      title: selectedChapter.title,
+      titleUr: selectedChapter.titleUr ?? "",
+      titleAr: selectedChapter.titleAr,
+      description: selectedChapter.description,
+      descriptionUr: selectedChapter.descriptionUr ?? "",
+      worldMapX: selectedChapter.worldMapX,
+      worldMapY: selectedChapter.worldMapY,
+      imageUrl: selectedChapter.imageUrl ?? null,
+      isLocked: selectedChapter.isLocked,
+    });
+    setChapterEditorMode("edit");
+  }
+
+  function updateChapterDraft<K extends keyof ChapterDraft>(key: K, value: ChapterDraft[K]) {
+    setChapterDraft((d) => (d ? { ...d, [key]: value } : d));
+  }
+
+  async function handleSaveChapter() {
+    if (!chapterDraft) return;
+    if (!chapterDraft.title.trim() || !chapterDraft.titleAr.trim() || !chapterDraft.description.trim()) {
+      setStatus("Chapter needs an English title, Arabic title, and description.");
+      return;
+    }
+    setSavingChapter(true);
+    const body = {
+      title: chapterDraft.title.trim(),
+      titleUr: chapterDraft.titleUr?.trim() || null,
+      titleAr: chapterDraft.titleAr.trim(),
+      description: chapterDraft.description.trim(),
+      descriptionUr: chapterDraft.descriptionUr?.trim() || null,
+      worldMapX: chapterDraft.worldMapX,
+      worldMapY: chapterDraft.worldMapY,
+      imageUrl: chapterDraft.imageUrl || null,
+      isLocked: chapterDraft.isLocked,
+    };
+    try {
+      const creating = chapterEditorMode === "create";
+      const url = creating ? "/api/admin/chapters" : `/api/admin/chapters/${selectedChapterId}`;
+      const res = await fetch(url, {
+        method: creating ? "POST" : "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          ...(adminToken ? { "x-admin-token": adminToken } : {}),
+        },
+        body: JSON.stringify(body),
+      });
+      const payload = await res.json();
+      if (!res.ok) {
+        setStatus(payload.error ?? "Failed to save chapter.");
+        return;
+      }
+      const saved = payload.data.chapter as DashboardChapter;
+      if (creating) {
+        const withLessons = { ...saved, lessons: saved.lessons ?? [] };
+        setChapters((ch) => [...ch, withLessons]);
+        setSelectedChapterId(saved.id);
+        setSelectedLessonId("");
+        setStatus("Chapter created ✓ — add its first lesson.");
+        setChapterEditorMode(null);
+        setChapterDraft(null);
+        setShowAddLesson(true);
+        return;
+      } else {
+        setChapters((ch) =>
+          ch.map((c) =>
+            c.id === selectedChapterId ? { ...c, ...saved, lessons: c.lessons } : c
+          )
+        );
+        setStatus("Chapter saved ✓");
+      }
+      setChapterEditorMode(null);
+      setChapterDraft(null);
+    } catch {
+      setStatus("Network error — could not save chapter.");
+    } finally {
+      setSavingChapter(false);
+    }
+  }
+
+  async function handleDeleteChapter() {
+    if (!selectedChapter) return;
+    setDeletingChapter(true);
+    try {
+      const res = await fetch(`/api/admin/chapters/${selectedChapter.id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          ...(adminToken ? { "x-admin-token": adminToken } : {}),
+        },
+        body: JSON.stringify({ confirm: selectedChapter.title }),
+      });
+      const payload = await res.json();
+      if (!res.ok) {
+        setStatus(payload.error ?? "Failed to delete chapter.");
+        setChapterDeleteConfirm(false);
+        return;
+      }
+      const remaining = chapters.filter((c) => c.id !== selectedChapter.id);
+      setChapters(remaining);
+      const next = remaining[0];
+      setSelectedChapterId(next?.id ?? "");
+      setSelectedLessonId(next?.lessons[0]?.id ?? "");
+      if (next?.lessons[0]) resetDraftFromParsed(next.lessons[0]);
+      setChapterDeleteConfirm(false);
+      setChapterDeleteText("");
+      const removed = payload.data?.deletedLessons ?? 0;
+      setStatus(`Chapter deleted ✓${removed ? ` (${removed} lesson${removed === 1 ? "" : "s"} removed)` : ""}`);
+    } catch {
+      setStatus("Network error — could not delete chapter.");
+    } finally {
+      setDeletingChapter(false);
+    }
+  }
+
+  async function handleSignOut() {
+    try {
+      await fetch("/api/admin/session", { method: "DELETE" });
+    } catch {
+      /* ignore */
+    }
+    window.location.href = "/dashboard/login";
+  }
+
   // ---- JSON view state ----
   const [showJsonView, setShowJsonView] = useState(false);
   const [jsonBuffer, setJsonBuffer] = useState("");
@@ -1675,7 +1884,7 @@ export default function DashboardClient({
     setEditorState({ mode: "view", editingIndex: null, dirty: true });
   }
 
-  if (!selectedChapter || !lessonDraft) {
+  if (!selectedChapter) {
     return (
       <main className={styles.empty}>
         No curriculum content. Run the seed first.
@@ -1683,9 +1892,28 @@ export default function DashboardClient({
     );
   }
 
+  if (!lessonDraft) {
+    return (
+      <main className={styles.empty}>
+        {contentLoading ? "Loading lesson…" : "This chapter has no lessons yet."}
+      </main>
+    );
+  }
+
   const totalLessons = chapters.reduce((s, c) => s + c.lessons.length, 0);
   const currentLessonPosition = selectedChapter.lessons.findIndex((lesson) => lesson.id === selectedLessonId) + 1;
   const activeMode = showJsonView ? "json" : showPreview ? "preview" : "builder";
+
+  const chapterBtnStyle: React.CSSProperties = {
+    padding: "4px 10px",
+    borderRadius: 6,
+    border: "1px solid #d8cfb8",
+    background: "#fbf8f0",
+    color: "#5f5844",
+    fontSize: 12,
+    fontWeight: 600,
+    cursor: "pointer",
+  };
 
   return (
     <main className={styles.shell}>
@@ -1731,6 +1959,46 @@ export default function DashboardClient({
             </button>
           ))}
         </div>
+        <button
+          type="button"
+          onClick={openCreateChapter}
+          style={{
+            margin: "10px 0 4px",
+            padding: "10px 12px",
+            borderRadius: 8,
+            border: "1px dashed #b7ac8f",
+            background: "#f3efe2",
+            color: "#5f5844",
+            fontWeight: 600,
+            cursor: "pointer",
+          }}
+        >
+          + New chapter
+        </button>
+        <div style={{ marginTop: 8, paddingTop: 8, borderTop: "1px solid #e2d9c4", display: "grid", gap: 4 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+            {[
+              { href: "/dashboard", label: "Overview" },
+              { href: "/dashboard/vocabulary", label: "Vocabulary" },
+              { href: "/dashboard/tadabbur", label: "Tadabbur" },
+              { href: "/dashboard/achievements", label: "Achievements" },
+              { href: "/dashboard/promo", label: "Promo" },
+              { href: "/dashboard/users", label: "Users" },
+              { href: "/dashboard/health", label: "Health" },
+            ].map((l) => (
+              <a key={l.href} href={l.href} style={{ fontSize: 12.5, color: "#0f766e", fontWeight: 600, textDecoration: "none" }}>
+                {l.label}
+              </a>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={handleSignOut}
+            style={{ marginTop: 2, fontSize: 12.5, color: "#8a7f63", background: "none", border: "none", cursor: "pointer", textAlign: "left", padding: 0 }}
+          >
+            Sign out
+          </button>
+        </div>
       </aside>
 
       {/* ---- MAIN WORKSPACE ---- */}
@@ -1746,6 +2014,20 @@ export default function DashboardClient({
             <span>{selectedChapter.lessons.length} lessons</span>
             <span>{draftDiscoverCards.length} cards</span>
             <span>{draftExercises.length} exercises</span>
+            <button
+              type="button"
+              onClick={openEditChapter}
+              style={chapterBtnStyle}
+            >
+              Edit chapter
+            </button>
+            <button
+              type="button"
+              onClick={() => setChapterDeleteConfirm(true)}
+              style={{ ...chapterBtnStyle, color: "#b04040", borderColor: "#e0b8b8" }}
+            >
+              Delete chapter
+            </button>
           </div>
         </header>
 
@@ -2042,6 +2324,165 @@ export default function DashboardClient({
                 <button
                   className={styles.confirmCancel}
                   onClick={() => setDeleteTarget(null)}
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ---- CHAPTER EDITOR DIALOG ---- */}
+        {chapterEditorMode && chapterDraft && (
+          <div className={styles.confirmOverlay}>
+            <div className={styles.addLessonDialog} style={{ maxWidth: 560, width: "92%" }}>
+              <h3>{chapterEditorMode === "create" ? "New chapter" : `Edit Chapter ${selectedChapter.order}`}</h3>
+              <div className={styles.addLessonFields}>
+                <label>
+                  English title
+                  <input
+                    value={chapterDraft.title}
+                    onChange={(e) => updateChapterDraft("title", e.target.value)}
+                    placeholder="e.g. Attached Pronouns"
+                    autoFocus
+                  />
+                </label>
+                <label>
+                  Urdu title
+                  <input
+                    dir="rtl"
+                    value={chapterDraft.titleUr ?? ""}
+                    onChange={(e) => updateChapterDraft("titleUr", e.target.value)}
+                    placeholder="اردو عنوان"
+                  />
+                </label>
+                <label>
+                  Arabic title
+                  <input
+                    dir="rtl"
+                    value={chapterDraft.titleAr}
+                    onChange={(e) => updateChapterDraft("titleAr", e.target.value)}
+                    placeholder="العنوان بالعربية"
+                  />
+                </label>
+                <label>
+                  Description (English)
+                  <textarea
+                    rows={2}
+                    value={chapterDraft.description}
+                    onChange={(e) => updateChapterDraft("description", e.target.value)}
+                    placeholder="What this chapter teaches"
+                  />
+                </label>
+                <label>
+                  Description (Urdu)
+                  <textarea
+                    rows={2}
+                    dir="rtl"
+                    value={chapterDraft.descriptionUr ?? ""}
+                    onChange={(e) => updateChapterDraft("descriptionUr", e.target.value)}
+                  />
+                </label>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+                  <label>
+                    World map X (0–1)
+                    <input
+                      type="number"
+                      min={0}
+                      max={1}
+                      step={0.01}
+                      value={chapterDraft.worldMapX}
+                      onChange={(e) => updateChapterDraft("worldMapX", parseFloat(e.target.value) || 0)}
+                    />
+                  </label>
+                  <label>
+                    World map Y (0–1)
+                    <input
+                      type="number"
+                      min={0}
+                      max={1}
+                      step={0.01}
+                      value={chapterDraft.worldMapY}
+                      onChange={(e) => updateChapterDraft("worldMapY", parseFloat(e.target.value) || 0)}
+                    />
+                  </label>
+                </div>
+                <ImageField
+                  label="Chapter image"
+                  value={chapterDraft.imageUrl ?? ""}
+                  folder="chapters"
+                  adminToken={adminToken}
+                  onChange={(url) => updateChapterDraft("imageUrl", url || null)}
+                  onStatus={setStatus}
+                />
+                <label style={{ display: "flex", alignItems: "center", gap: 8, flexDirection: "row" }}>
+                  <input
+                    type="checkbox"
+                    checked={chapterDraft.isLocked}
+                    onChange={(e) => updateChapterDraft("isLocked", e.target.checked)}
+                    style={{ width: "auto" }}
+                  />
+                  <span>Locked (users must unlock by progressing)</span>
+                </label>
+              </div>
+              <div className={styles.addLessonActions}>
+                <button
+                  className={styles.addLessonSubmit}
+                  disabled={savingChapter}
+                  onClick={handleSaveChapter}
+                  type="button"
+                >
+                  {savingChapter ? "Saving…" : chapterEditorMode === "create" ? "Create chapter" : "Save chapter"}
+                </button>
+                <button
+                  className={styles.addLessonCancel}
+                  onClick={() => {
+                    setChapterEditorMode(null);
+                    setChapterDraft(null);
+                  }}
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ---- DELETE CHAPTER DIALOG (cascade + typed confirm) ---- */}
+        {chapterDeleteConfirm && (
+          <div className={styles.confirmOverlay}>
+            <div className={styles.confirmDialog}>
+              <h3>Delete chapter?</h3>
+              <p>
+                This permanently deletes <strong>Chapter {selectedChapter.order}: {selectedChapter.title}</strong>
+                {selectedChapter.lessons.length > 0 && (
+                  <> and all <strong>{selectedChapter.lessons.length} of its lessons</strong> (plus any learner progress on them)</>
+                )}. This cannot be undone.
+              </p>
+              <p style={{ fontSize: 13, color: "#6b6252", marginTop: 4 }}>
+                Type the chapter title <strong>{selectedChapter.title}</strong> to confirm:
+              </p>
+              <input
+                value={chapterDeleteText}
+                onChange={(e) => setChapterDeleteText(e.target.value)}
+                placeholder={selectedChapter.title}
+                autoFocus
+                style={{ width: "100%", padding: "8px 10px", borderRadius: 6, border: "1px solid #d8cfb8", marginTop: 4 }}
+              />
+              <div className={styles.confirmActions}>
+                <button
+                  className={styles.confirmDanger}
+                  disabled={deletingChapter || chapterDeleteText.trim() !== selectedChapter.title.trim()}
+                  onClick={handleDeleteChapter}
+                  type="button"
+                >
+                  {deletingChapter ? "Deleting…" : "Delete chapter"}
+                </button>
+                <button
+                  className={styles.confirmCancel}
+                  onClick={() => { setChapterDeleteConfirm(false); setChapterDeleteText(""); }}
                   type="button"
                 >
                   Cancel
@@ -2488,6 +2929,8 @@ export default function DashboardClient({
               onCancel={() =>
                 setEditorState({ mode: "view", editingIndex: null, dirty: true })
               }
+              adminToken={adminToken}
+              onStatus={setStatus}
             />
           )}
 
