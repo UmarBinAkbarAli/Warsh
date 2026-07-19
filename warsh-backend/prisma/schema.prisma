@@ -108,7 +108,17 @@ model Chapter {
     worldMapY   Float
     imageUrl    String?
     isLocked    Boolean  @default(true)
+    status      ContentStatus @default(DRAFT)
+    publishedAt DateTime?
     lessons     Lesson[]
+}
+
+// Publish state for admin-authored content. DRAFT items are never served to
+// the learner app; only PUBLISHED items are. New content starts as DRAFT so it
+// can be staged before going live.
+enum ContentStatus {
+    DRAFT
+    PUBLISHED
 }
 
 model Lesson {
@@ -122,6 +132,8 @@ model Lesson {
     template    LessonTemplate
     xpReward    Int            @default(10)
     content     Json
+    status      ContentStatus  @default(DRAFT)
+    publishedAt DateTime?
     updatedAt   DateTime       @default(now()) @updatedAt
     progress    Progress[]
 }
@@ -172,6 +184,8 @@ model Achievement {
     description String
     icon        String
     xpReward    Int
+    status      ContentStatus     @default(DRAFT)
+    publishedAt DateTime?
     users       UserAchievement[]
 }
 
@@ -204,6 +218,8 @@ model VocabularyWord {
     audioUrl         String?
     imageUrl         String?
     sortOrder        Int      @default(0)
+    status           ContentStatus @default(DRAFT)
+    publishedAt      DateTime?
     createdAt        DateTime @default(now())
     userWords        UserVocabularyWord[]
 }
@@ -218,6 +234,8 @@ model TadabburSurah {
     totalAyat   Int
     // JSON: Array<{ ayahNumber, arabic, translationEn, words: Array<{ pos, arabic, arabicPlain, vocabId: string|null }> }>
     ayatData    Json
+    status      ContentStatus       @default(DRAFT)
+    publishedAt DateTime?
     createdAt   DateTime            @default(now())
     userProgress UserSurahProgress[]
 }

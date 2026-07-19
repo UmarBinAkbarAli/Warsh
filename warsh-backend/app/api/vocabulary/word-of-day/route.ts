@@ -9,6 +9,7 @@ export async function GET(request: Request) {
   if (!userId) return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
 
   const words = await prisma.vocabularyWord.findMany({
+    where: { status: "PUBLISHED" },
     orderBy: { sortOrder: "asc" },
     select: {
       id: true, arabic: true, arabicPlain: true, transliteration: true,

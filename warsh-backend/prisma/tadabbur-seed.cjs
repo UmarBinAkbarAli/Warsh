@@ -224,6 +224,8 @@ async function seedTadabbur(prisma) {
         meaningEn: s.meaningEn,
         totalAyat: s.totalAyat,
         ayatData,
+        status: "PUBLISHED",
+        publishedAt: new Date(),
       },
     });
   }

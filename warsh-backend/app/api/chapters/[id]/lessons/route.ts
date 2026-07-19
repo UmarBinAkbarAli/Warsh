@@ -17,13 +17,15 @@ export async function GET(request: Request, { params }: Props) {
     where: { id: params.id },
     include: {
       lessons: {
+        where: { status: "PUBLISHED" },
         orderBy: { order: "asc" },
         select: { id: true, title: true, titleUr: true, titleAr: true, template: true, xpReward: true }
       }
     }
   });
 
-  if (!chapter) {
+  // Unpublished chapters are hidden from the app; treat them as not found.
+  if (!chapter || chapter.status !== "PUBLISHED") {
     return NextResponse.json({ error: "Chapter not found", code: "not_found" }, { status: 404 });
   }
 

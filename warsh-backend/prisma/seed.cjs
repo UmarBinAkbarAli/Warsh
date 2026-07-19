@@ -590,7 +590,7 @@ async function main() {
     await prisma.achievement.upsert({
       where: { key: achievement.key },
       update: achievement,
-      create: achievement,
+      create: { ...achievement, status: "PUBLISHED", publishedAt: new Date() },
     });
   }
 
@@ -608,7 +608,7 @@ async function main() {
     const created = await prisma.chapter.upsert({
       where: { order: chapterFields.order },
       update: localizedChapterFields,
-      create: localizedChapterFields,
+      create: { ...localizedChapterFields, status: "PUBLISHED", publishedAt: new Date() },
     });
     chapterIdByOrder.set(created.order, created.id);
   }
@@ -1136,7 +1136,10 @@ async function main() {
     await prisma.lesson.upsert({
       where: { id },
       update: data,
-      create: { id, ...data },
+      // Seeded content is canonical/live — publish on first insert. `update`
+      // deliberately omits status so reseeds never override an admin's
+      // publish/unpublish decision on existing rows.
+      create: { id, ...data, status: "PUBLISHED", publishedAt: new Date() },
     });
   }
 

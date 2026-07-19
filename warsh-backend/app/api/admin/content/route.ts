@@ -22,6 +22,8 @@ export async function GET(request: Request) {
           xpReward: true,
           updatedAt: true,
           content: true,
+          status: true,
+          publishedAt: true,
         },
       },
     },

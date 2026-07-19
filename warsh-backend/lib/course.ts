@@ -75,9 +75,13 @@ export function buildChapterStates(chapters: ChapterWithLessons[], progressStatu
 export async function getUserCourseState(userId: string) {
   const [chapters, progressRows] = (await Promise.all([
     prisma.chapter.findMany({
+      // Only PUBLISHED chapters/lessons reach the learner app; drafts stay
+      // hidden until an admin publishes them.
+      where: { status: "PUBLISHED" },
       orderBy: { order: "asc" },
       include: {
         lessons: {
+          where: { status: "PUBLISHED" },
           orderBy: { order: "asc" },
           select: { id: true, title: true, titleUr: true, titleAr: true, template: true, xpReward: true },
         },

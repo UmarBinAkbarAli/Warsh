@@ -3,10 +3,11 @@
 import { useCallback, useEffect, useState } from "react";
 import DashboardNav from "../DashboardNav";
 import ImageField from "../ImageField";
-import { ui } from "../adminUi";
+import { ui, publishContent, type ContentStatus } from "../adminUi";
 
 type Word = {
   id: string;
+  status: ContentStatus;
   arabic: string;
   arabicPlain: string;
   transliteration: string;
@@ -24,7 +25,7 @@ type Word = {
   sortOrder: number;
 };
 
-type Draft = Omit<Word, "id">;
+type Draft = Omit<Word, "id" | "status">;
 
 const EMPTY: Draft = {
   arabic: "", arabicPlain: "", transliteration: "", translationEn: "", translationUr: "",
@@ -74,6 +75,16 @@ export default function VocabularyClient() {
 
   function set<K extends keyof Draft>(k: K, v: Draft[K]) {
     setEditor((ed) => (ed ? { ...ed, draft: { ...ed.draft, [k]: v } } : ed));
+  }
+
+  async function togglePublish(w: Word) {
+    setBusy(true);
+    try {
+      const next = await publishContent("vocabulary", w.id, w.status === "PUBLISHED" ? "unpublish" : "publish");
+      setWords((prev) => prev.map((it) => (it.id === w.id ? { ...it, status: next } : it)));
+      setStatus(next === "PUBLISHED" ? "Published ✓" : "Unpublished ✓");
+    } catch (e) { setStatus(e instanceof Error ? e.message : "Publish failed."); }
+    finally { setBusy(false); }
   }
 
   async function save() {
@@ -151,12 +162,13 @@ export default function VocabularyClient() {
                 <th style={ui.th}>Urdu</th>
                 <th style={ui.th}>Type</th>
                 <th style={{ ...ui.th, textAlign: "right" }}>Ch</th>
+                <th style={ui.th}>Status</th>
                 <th style={{ ...ui.th, textAlign: "right" }}>Actions</th>
               </tr>
             </thead>
             <tbody>
-              {loading && <tr><td colSpan={8} style={ui.emptyCell}>Loading…</td></tr>}
-              {!loading && words.length === 0 && <tr><td colSpan={8} style={ui.emptyCell}>No words found.</td></tr>}
+              {loading && <tr><td colSpan={9} style={ui.emptyCell}>Loading…</td></tr>}
+              {!loading && words.length === 0 && <tr><td colSpan={9} style={ui.emptyCell}>No words found.</td></tr>}
               {!loading && words.map((w) => (
                 <tr key={w.id} style={ui.tr}>
                   <td style={ui.td}>
@@ -171,7 +183,15 @@ export default function VocabularyClient() {
                   <td style={{ ...ui.td, direction: "rtl" }}>{w.translationUr}</td>
                   <td style={ui.td}><span style={ui.code}>{w.wordType}</span></td>
                   <td style={{ ...ui.td, textAlign: "right" }}>{w.chapterIntroduced}</td>
+                  <td style={ui.td}>
+                    <span style={{ ...ui.badge, ...(w.status === "PUBLISHED" ? ui.badgePublished : ui.badgeDraft) }}>
+                      {w.status === "PUBLISHED" ? "Live" : "Draft"}
+                    </span>
+                  </td>
                   <td style={{ ...ui.td, textAlign: "right", whiteSpace: "nowrap" }}>
+                    <button type="button" style={w.status === "PUBLISHED" ? ui.unpublishBtn : ui.publishBtn} disabled={busy} onClick={() => togglePublish(w)}>
+                      {w.status === "PUBLISHED" ? "Unpublish" : "Publish"}
+                    </button>
                     <button type="button" style={ui.smallBtn} onClick={() => setEditor({ mode: "edit", id: w.id, draft: { ...w, gender: w.gender ?? "", pluralForm: w.pluralForm ?? "", rootLetters: w.rootLetters ?? "", audioUrl: w.audioUrl ?? "", imageUrl: w.imageUrl ?? "" } })}>Edit</button>
                     <button type="button" style={ui.smallDanger} onClick={() => setDeleteTarget(w)}>Delete</button>
                   </td>

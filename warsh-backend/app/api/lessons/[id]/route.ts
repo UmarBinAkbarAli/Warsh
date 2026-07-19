@@ -16,10 +16,17 @@ export async function GET(request: Request, { params }: Props) {
 
   const lesson = await prisma.lesson.findUnique({
     where: { id: params.id },
-    select: { id: true, title: true, titleUr: true, titleAr: true, template: true, xpReward: true, content: true, chapterId: true },
+    select: {
+      id: true, title: true, titleUr: true, titleAr: true, template: true, xpReward: true, content: true, chapterId: true,
+      status: true,
+      chapter: { select: { status: true } },
+    },
   });
 
-  if (!lesson) {
+  // Draft lessons — or lessons inside a still-draft chapter — are not served,
+  // even by direct id. Return 404 so unpublished content is indistinguishable
+  // from nonexistent.
+  if (!lesson || lesson.status !== "PUBLISHED" || lesson.chapter.status !== "PUBLISHED") {
     return NextResponse.json({ error: "Lesson not found", code: "not_found" }, { status: 404 });
   }
 

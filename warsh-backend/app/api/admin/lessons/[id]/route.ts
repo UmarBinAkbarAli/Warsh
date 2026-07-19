@@ -36,7 +36,7 @@ export async function GET(request: Request, { params }: Props) {
 
   const lesson = await prisma.lesson.findUnique({
     where: { id: params.id },
-    select: { id: true, order: true, title: true, titleAr: true, template: true, xpReward: true, updatedAt: true, content: true },
+    select: { id: true, order: true, title: true, titleAr: true, template: true, xpReward: true, updatedAt: true, content: true, status: true, publishedAt: true },
   });
   if (!lesson) {
     return NextResponse.json({ error: "Lesson not found.", code: "not_found" }, { status: 404 });

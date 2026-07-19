@@ -29,6 +29,8 @@ export async function GET(request: Request) {
       description: a.description,
       icon: a.icon,
       xpReward: a.xpReward,
+      status: a.status,
+      publishedAt: a.publishedAt,
       unlockedBy: a._count.users,
     })),
   });

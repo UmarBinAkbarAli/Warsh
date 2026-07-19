@@ -14,7 +14,8 @@ export async function GET(request: Request) {
   const page = Math.max(1, parseInt(searchParams.get("page") ?? "1", 10));
   const pageSize = 200;
 
-  const where: any = {};
+  // Only PUBLISHED words are browsable; drafts stay hidden from the app.
+  const where: any = { status: "PUBLISHED" };
 
   if (topic) {
     where.topicCategories = { has: topic };

@@ -15,7 +15,7 @@ export async function GET(request: Request) {
   }
 
   const [surahs, userProgress, userWords] = await Promise.all([
-    prisma.tadabburSurah.findMany({ orderBy: { orderInProg: "asc" } }),
+    prisma.tadabburSurah.findMany({ where: { status: "PUBLISHED" }, orderBy: { orderInProg: "asc" } }),
     prisma.userSurahProgress.findMany({ where: { userId } }),
     prisma.userVocabularyWord.findMany({ where: { userId }, select: { wordId: true, repetitions: true, easeFactor: true } }),
   ]);

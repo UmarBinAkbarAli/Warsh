@@ -19,6 +19,8 @@ export async function GET(request: Request) {
       nameEn: true,
       meaningEn: true,
       totalAyat: true,
+      status: true,
+      publishedAt: true,
       _count: { select: { userProgress: true } },
     },
   });
@@ -32,6 +34,8 @@ export async function GET(request: Request) {
       nameEn: s.nameEn,
       meaningEn: s.meaningEn,
       totalAyat: s.totalAyat,
+      status: s.status,
+      publishedAt: s.publishedAt,
       learners: s._count.userProgress,
     })),
   });

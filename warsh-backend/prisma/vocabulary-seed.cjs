@@ -792,7 +792,10 @@ async function seedVocabulary(prisma, existingMedia = []) {
   });
 
   await prisma.vocabularyWord.deleteMany({});
-  await prisma.vocabularyWord.createMany({ data: wordsWithPreservedMedia });
+  // Seeded vocabulary is canonical/live content — publish it on insert.
+  await prisma.vocabularyWord.createMany({
+    data: wordsWithPreservedMedia.map((word) => ({ ...word, status: "PUBLISHED", publishedAt: new Date() })),
+  });
   console.log(`Seeded ${VOCABULARY_WORDS.length} vocabulary words.`);
 }
 

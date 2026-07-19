@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import DashboardNav from "../DashboardNav";
-import { ui } from "../adminUi";
+import { ui, publishContent, type ContentStatus } from "../adminUi";
 
 type Surah = {
   id: string;
@@ -12,6 +12,7 @@ type Surah = {
   nameEn: string;
   meaningEn: string;
   totalAyat: number;
+  status: ContentStatus;
   learners: number;
 };
 
@@ -76,6 +77,16 @@ export default function TadabburClient() {
 
   function set<K extends keyof Draft>(k: K, v: Draft[K]) {
     setEditor((e) => (e ? { ...e, draft: { ...e.draft, [k]: v } } : e));
+  }
+
+  async function togglePublish(s: Surah) {
+    setBusy(true);
+    try {
+      const next = await publishContent("tadabbur", s.id, s.status === "PUBLISHED" ? "unpublish" : "publish");
+      setItems((prev) => prev.map((it) => (it.id === s.id ? { ...it, status: next } : it)));
+      setStatus(next === "PUBLISHED" ? "Published ✓" : "Unpublished ✓");
+    } catch (e) { setStatus(e instanceof Error ? e.message : "Publish failed."); }
+    finally { setBusy(false); }
   }
 
   async function save() {
@@ -149,12 +160,13 @@ export default function TadabburClient() {
                 <th style={ui.th}>Meaning</th>
                 <th style={{ ...ui.th, textAlign: "right" }}>Ayat</th>
                 <th style={{ ...ui.th, textAlign: "right" }}>Learners</th>
+                <th style={ui.th}>Status</th>
                 <th style={{ ...ui.th, textAlign: "right" }}>Actions</th>
               </tr>
             </thead>
             <tbody>
-              {loading && <tr><td colSpan={8} style={ui.emptyCell}>Loading…</td></tr>}
-              {!loading && items.length === 0 && <tr><td colSpan={8} style={ui.emptyCell}>No surahs yet.</td></tr>}
+              {loading && <tr><td colSpan={9} style={ui.emptyCell}>Loading…</td></tr>}
+              {!loading && items.length === 0 && <tr><td colSpan={9} style={ui.emptyCell}>No surahs yet.</td></tr>}
               {!loading && items.map((s) => (
                 <tr key={s.id} style={ui.tr}>
                   <td style={{ ...ui.td, textAlign: "right" }}>{s.orderInProg}</td>
@@ -164,7 +176,15 @@ export default function TadabburClient() {
                   <td style={{ ...ui.td, color: "#6b6252" }}>{s.meaningEn}</td>
                   <td style={{ ...ui.td, textAlign: "right" }}>{s.totalAyat}</td>
                   <td style={{ ...ui.td, textAlign: "right" }}>{s.learners}</td>
+                  <td style={ui.td}>
+                    <span style={{ ...ui.badge, ...(s.status === "PUBLISHED" ? ui.badgePublished : ui.badgeDraft) }}>
+                      {s.status === "PUBLISHED" ? "Live" : "Draft"}
+                    </span>
+                  </td>
                   <td style={{ ...ui.td, textAlign: "right", whiteSpace: "nowrap" }}>
+                    <button type="button" style={s.status === "PUBLISHED" ? ui.unpublishBtn : ui.publishBtn} disabled={busy} onClick={() => togglePublish(s)}>
+                      {s.status === "PUBLISHED" ? "Unpublish" : "Publish"}
+                    </button>
                     <button type="button" style={ui.smallBtn} onClick={() => openEdit(s)}>Edit</button>
                     <button type="button" style={ui.smallDanger} onClick={() => setDeleteTarget(s)}>Delete</button>
                   </td>

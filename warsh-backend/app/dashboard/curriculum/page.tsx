@@ -28,6 +28,7 @@ export default async function CurriculumPage() {
             template: true,
             xpReward: true,
             updatedAt: true,
+            status: true,
           },
         },
       },

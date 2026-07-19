@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import DashboardNav from "../DashboardNav";
-import { ui } from "../adminUi";
+import { ui, publishContent, type ContentStatus } from "../adminUi";
 
 type Achievement = {
   id: string;
@@ -11,6 +11,7 @@ type Achievement = {
   description: string;
   icon: string;
   xpReward: number;
+  status: ContentStatus;
   unlockedBy: number;
 };
 
@@ -78,6 +79,16 @@ export default function AchievementsClient() {
     setEditor((e) => (e ? { ...e, draft: { ...e.draft, [k]: v } } : e));
   }
 
+  async function togglePublish(a: Achievement) {
+    setBusy(true);
+    try {
+      const next = await publishContent("achievement", a.id, a.status === "PUBLISHED" ? "unpublish" : "publish");
+      setItems((prev) => prev.map((it) => (it.id === a.id ? { ...it, status: next } : it)));
+      setStatus(next === "PUBLISHED" ? "Published ✓" : "Unpublished ✓");
+    } catch (e) { setStatus(e instanceof Error ? e.message : "Publish failed."); }
+    finally { setBusy(false); }
+  }
+
   return (
     <div style={ui.root}>
       <DashboardNav active="/dashboard/achievements" />
@@ -102,23 +113,32 @@ export default function AchievementsClient() {
                 <th style={ui.th}>Title</th>
                 <th style={ui.th}>Key</th>
                 <th style={ui.th}>Description</th>
+                <th style={ui.th}>Status</th>
                 <th style={{ ...ui.th, textAlign: "right" }}>XP</th>
                 <th style={{ ...ui.th, textAlign: "right" }}>Unlocked by</th>
                 <th style={{ ...ui.th, textAlign: "right" }}>Actions</th>
               </tr>
             </thead>
             <tbody>
-              {loading && <tr><td colSpan={7} style={ui.emptyCell}>Loading…</td></tr>}
-              {!loading && items.length === 0 && <tr><td colSpan={7} style={ui.emptyCell}>No achievements yet.</td></tr>}
+              {loading && <tr><td colSpan={8} style={ui.emptyCell}>Loading…</td></tr>}
+              {!loading && items.length === 0 && <tr><td colSpan={8} style={ui.emptyCell}>No achievements yet.</td></tr>}
               {!loading && items.map((a) => (
                 <tr key={a.id} style={ui.tr}>
                   <td style={{ ...ui.td, fontSize: 22 }}>{a.icon}</td>
                   <td style={{ ...ui.td, fontWeight: 600 }}>{a.title}</td>
                   <td style={ui.td}><code style={ui.code}>{a.key}</code></td>
                   <td style={{ ...ui.td, color: "#6b6252", maxWidth: 360 }}>{a.description}</td>
+                  <td style={ui.td}>
+                    <span style={{ ...ui.badge, ...(a.status === "PUBLISHED" ? ui.badgePublished : ui.badgeDraft) }}>
+                      {a.status === "PUBLISHED" ? "Live" : "Draft"}
+                    </span>
+                  </td>
                   <td style={{ ...ui.td, textAlign: "right" }}>{a.xpReward}</td>
                   <td style={{ ...ui.td, textAlign: "right" }}>{a.unlockedBy}</td>
                   <td style={{ ...ui.td, textAlign: "right", whiteSpace: "nowrap" }}>
+                    <button type="button" style={a.status === "PUBLISHED" ? ui.unpublishBtn : ui.publishBtn} disabled={busy} onClick={() => togglePublish(a)}>
+                      {a.status === "PUBLISHED" ? "Unpublish" : "Publish"}
+                    </button>
                     <button type="button" style={ui.smallBtn} onClick={() => setEditor({ mode: "edit", id: a.id, draft: { key: a.key, title: a.title, description: a.description, icon: a.icon, xpReward: a.xpReward } })}>Edit</button>
                     <button type="button" style={ui.smallDanger} onClick={() => setDeleteTarget(a)}>Delete</button>
                   </td>

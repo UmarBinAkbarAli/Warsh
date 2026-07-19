@@ -24,6 +24,8 @@ import {
 
 type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue };
 
+export type ContentStatus = "DRAFT" | "PUBLISHED";
+
 export type DashboardLesson = {
   id: string;
   order: number;
@@ -31,6 +33,7 @@ export type DashboardLesson = {
   titleAr: string;
   template: string;
   xpReward: number;
+  status: ContentStatus;
   updatedAt?: string;
   // Loaded lazily via GET /api/admin/lessons/[id]; `undefined` = not yet fetched.
   content?: JsonValue;
@@ -48,6 +51,7 @@ export type DashboardChapter = {
   worldMapY: number;
   imageUrl?: string | null;
   isLocked: boolean;
+  status: ContentStatus;
   lessons: DashboardLesson[];
 };
 
@@ -79,6 +83,29 @@ function toUpdatedAtMs(updatedAt?: string): number | undefined {
   if (!updatedAt) return undefined;
   const ms = new Date(updatedAt).getTime();
   return Number.isFinite(ms) ? ms : undefined;
+}
+
+function StatusPill({ status, small }: { status: ContentStatus; small?: boolean }) {
+  const live = status === "PUBLISHED";
+  return (
+    <span
+      style={{
+        display: "inline-block",
+        padding: small ? "1px 6px" : "2px 9px",
+        borderRadius: 999,
+        fontSize: small ? 9.5 : 11,
+        fontWeight: 700,
+        letterSpacing: 0.3,
+        textTransform: "uppercase",
+        whiteSpace: "nowrap",
+        background: live ? "#e2efe0" : "#f4ecd6",
+        color: live ? "#2f6f3a" : "#9a7b2e",
+        border: `1px solid ${live ? "#bcdcbd" : "#e3d3a6"}`,
+      }}
+    >
+      {live ? "Live" : "Draft"}
+    </span>
+  );
 }
 
 function getDiscoverCardTitle(card: DiscoverCard): string {
@@ -1728,6 +1755,79 @@ export default function DashboardClient({
     }
   }
 
+  // ---- Publish / unpublish ----
+  const [publishBusy, setPublishBusy] = useState(false);
+
+  async function callPublish(
+    type: "chapter" | "lesson",
+    id: string,
+    action: "publish" | "unpublish",
+    opts?: { cascadeLessons?: boolean },
+  ) {
+    const res = await fetch("/api/admin/publish", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...(adminToken ? { "x-admin-token": adminToken } : {}),
+      },
+      body: JSON.stringify({ type, id, action, ...opts }),
+    });
+    if (res.status === 401 || res.status === 403) {
+      window.location.href = "/dashboard/login";
+      throw new Error("Not authorized.");
+    }
+    const payload = await res.json().catch(() => null);
+    if (!res.ok) throw new Error(payload?.error ?? "Publish failed.");
+    return payload.data.status as ContentStatus;
+  }
+
+  // Publishing a chapter cascades to its lessons so the whole chapter goes live
+  // (or dark) in one action — a published chapter with only draft lessons would
+  // otherwise appear empty in the app.
+  async function handlePublishChapter() {
+    if (!selectedChapter) return;
+    const publish = selectedChapter.status !== "PUBLISHED";
+    setPublishBusy(true);
+    try {
+      const next = await callPublish("chapter", selectedChapter.id, publish ? "publish" : "unpublish", {
+        cascadeLessons: true,
+      });
+      setChapters((chs) =>
+        chs.map((c) =>
+          c.id === selectedChapter.id
+            ? { ...c, status: next, lessons: c.lessons.map((l) => ({ ...l, status: next })) }
+            : c,
+        ),
+      );
+      setStatus(publish ? "Chapter published ✓ (lessons included)" : "Chapter unpublished ✓ (lessons included)");
+    } catch (e) {
+      setStatus(e instanceof Error ? e.message : "Publish failed.");
+    } finally {
+      setPublishBusy(false);
+    }
+  }
+
+  async function handlePublishLesson() {
+    if (!selectedChapter || !selectedLesson) return;
+    const publish = selectedLesson.status !== "PUBLISHED";
+    setPublishBusy(true);
+    try {
+      const next = await callPublish("lesson", selectedLesson.id, publish ? "publish" : "unpublish");
+      setChapters((chs) =>
+        chs.map((c) =>
+          c.id === selectedChapter.id
+            ? { ...c, lessons: c.lessons.map((l) => (l.id === selectedLesson.id ? { ...l, status: next } : l)) }
+            : c,
+        ),
+      );
+      setStatus(publish ? "Lesson published ✓" : "Lesson unpublished ✓");
+    } catch (e) {
+      setStatus(e instanceof Error ? e.message : "Publish failed.");
+    } finally {
+      setPublishBusy(false);
+    }
+  }
+
   async function handleSignOut() {
     try {
       await fetch("/api/admin/session", { method: "DELETE" });
@@ -1950,7 +2050,10 @@ export default function DashboardClient({
               }}
               type="button"
             >
-              <span>Chapter {chapter.order}</span>
+              <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                Chapter {chapter.order}
+                {chapter.status !== "PUBLISHED" && <StatusPill status={chapter.status} small />}
+              </span>
               <strong>{chapter.title}</strong>
               <small>
                 {chapter.lessons.length} lessons
@@ -2014,6 +2117,20 @@ export default function DashboardClient({
             <span>{selectedChapter.lessons.length} lessons</span>
             <span>{draftDiscoverCards.length} cards</span>
             <span>{draftExercises.length} exercises</span>
+            <StatusPill status={selectedChapter.status} />
+            <button
+              type="button"
+              onClick={handlePublishChapter}
+              disabled={publishBusy}
+              style={{
+                ...chapterBtnStyle,
+                color: selectedChapter.status === "PUBLISHED" ? "#9a7b2e" : "#2f6f3a",
+                borderColor: selectedChapter.status === "PUBLISHED" ? "#e3d3a6" : "#bcdcbd",
+              }}
+              title="Publishing a chapter also publishes its lessons"
+            >
+              {selectedChapter.status === "PUBLISHED" ? "Unpublish chapter" : "Publish chapter"}
+            </button>
             <button
               type="button"
               onClick={openEditChapter}
@@ -2154,9 +2271,26 @@ export default function DashboardClient({
               Lesson {selectedLesson?.order}: {lessonDraft.title}
             </h2>
           </div>
-          <span className={styles.lessonCountPill}>
-            {currentLessonPosition || selectedLesson?.order} of {selectedChapter.lessons.length}
-          </span>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            {selectedLesson && <StatusPill status={selectedLesson.status} />}
+            {selectedLesson && (
+              <button
+                type="button"
+                onClick={handlePublishLesson}
+                disabled={publishBusy}
+                style={{
+                  ...chapterBtnStyle,
+                  color: selectedLesson.status === "PUBLISHED" ? "#9a7b2e" : "#2f6f3a",
+                  borderColor: selectedLesson.status === "PUBLISHED" ? "#e3d3a6" : "#bcdcbd",
+                }}
+              >
+                {selectedLesson.status === "PUBLISHED" ? "Unpublish lesson" : "Publish lesson"}
+              </button>
+            )}
+            <span className={styles.lessonCountPill}>
+              {currentLessonPosition || selectedLesson?.order} of {selectedChapter.lessons.length}
+            </span>
+          </div>
         </div>
         <div className={styles.lessonStepper}>
           {(selectedChapter?.lessons ?? []).map((lesson) => (
@@ -2183,7 +2317,12 @@ export default function DashboardClient({
               <span className={styles.lessonTabTitle} title={lesson.title}>
                 {lesson.title}
               </span>
-              <span className={styles.lessonTabMeta}>{lesson.template} - {lesson.xpReward} XP</span>
+              <span className={styles.lessonTabMeta}>
+                {lesson.template} - {lesson.xpReward} XP
+                {lesson.status !== "PUBLISHED" && (
+                  <span style={{ marginLeft: 6 }}><StatusPill status={lesson.status} small /></span>
+                )}
+              </span>
               {selectedChapter.lessons.length > 1 && (
                 <span
                   className={styles.lessonTabDelete}

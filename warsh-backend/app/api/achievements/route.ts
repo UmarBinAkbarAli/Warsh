@@ -9,7 +9,7 @@ export async function GET(request: Request) {
   }
 
   const [all, earned] = await Promise.all([
-    prisma.achievement.findMany({ orderBy: { key: "asc" } }),
+    prisma.achievement.findMany({ where: { status: "PUBLISHED" }, orderBy: { key: "asc" } }),
     prisma.userAchievement.findMany({
       where: { userId },
       include: { achievement: { select: { key: true } } },
