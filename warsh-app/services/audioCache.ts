@@ -8,6 +8,7 @@ const AUDIO_CACHE_MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000;
 const webAudioObjectUrls = new Map<string, string>();
 const remoteAudioDownloads = new Map<string, Promise<string>>();
 const ttsAudioDownloads = new Map<string, Promise<string>>();
+const vocabWordAudioDownloads = new Map<string, Promise<string>>();
 
 type TtsAudioRequest = {
   text: string;
@@ -165,39 +166,54 @@ export async function getCachedRemoteAudioUri(
 export async function getVocabWordAudioUri(wordId: string, arabicText: string): Promise<string> {
   const localUri = `${AUDIO_CACHE_DIR}vocabword-${wordId}.mp3`;
 
-  await ensureAudioCacheDir();
+  // A prefetch and the learner's own tap routinely race for the same word. Without
+  // this guard both would hit the backend and then write the same local file
+  // concurrently, corrupting it and doubling the wait.
+  const existingDownload = vocabWordAudioDownloads.get(localUri);
+  if (existingDownload) return existingDownload;
 
-  // Ask backend for the R2 URL (generates + uploads on first call)
-  const token = await getToken();
-  const apiUrl = `${API_BASE_URL}/api/vocabulary/words/${wordId}/audio`;
-  const headers: Record<string, string> = token ? { Authorization: `Bearer ${token}` } : {};
+  const download = (async () => {
+    await ensureAudioCacheDir();
 
-  if (Platform.OS !== "web" && await isFreshCachedFile(localUri)) {
-    return localUri;
+    if (Platform.OS !== "web" && await isFreshCachedFile(localUri)) {
+      return localUri;
+    }
+
+    // Ask backend for the R2 URL (generates + uploads on first call)
+    const token = await getToken();
+    const apiUrl = `${API_BASE_URL}/api/vocabulary/words/${wordId}/audio`;
+    const headers: Record<string, string> = token ? { Authorization: `Bearer ${token}` } : {};
+
+    const response = await fetch(apiUrl, { headers });
+    if (!response.ok) {
+      // Backend unavailable — fall back to on-demand TTS
+      return getCachedTtsAudioUri({ text: arabicText, cacheKey: wordId, category: "words" });
+    }
+
+    const json = await response.json() as { data: { audioUrl: string } };
+    const r2Url = json.data.audioUrl;
+    if (Platform.OS === "web") {
+      return r2Url;
+    }
+
+    // Download from R2 public URL (no auth header — it's a public CDN)
+    const result = await FileSystem.downloadAsync(r2Url, localUri);
+
+    if (result.status < 200 || result.status >= 300) {
+      await FileSystem.deleteAsync(localUri, { idempotent: true });
+      // R2 download failed — fall back to on-demand TTS
+      return getCachedTtsAudioUri({ text: arabicText, cacheKey: wordId, category: "words" });
+    }
+
+    return result.uri;
+  })();
+
+  vocabWordAudioDownloads.set(localUri, download);
+  try {
+    return await download;
+  } finally {
+    vocabWordAudioDownloads.delete(localUri);
   }
-
-  const response = await fetch(apiUrl, { headers });
-  if (!response.ok) {
-    // Backend unavailable — fall back to on-demand TTS
-    return getCachedTtsAudioUri({ text: arabicText, cacheKey: wordId, category: "words" });
-  }
-
-  const json = await response.json() as { data: { audioUrl: string } };
-  const r2Url = json.data.audioUrl;
-  if (Platform.OS === "web") {
-    return r2Url;
-  }
-
-  // Download from R2 public URL (no auth header — it's a public CDN)
-  const result = await FileSystem.downloadAsync(r2Url, localUri);
-
-  if (result.status < 200 || result.status >= 300) {
-    await FileSystem.deleteAsync(localUri, { idempotent: true });
-    // R2 download failed — fall back to on-demand TTS
-    return getCachedTtsAudioUri({ text: arabicText, cacheKey: wordId, category: "words" });
-  }
-
-  return result.uri;
 }
 
 export async function prefetchTtsAudio(requests: TtsAudioRequest[]) {

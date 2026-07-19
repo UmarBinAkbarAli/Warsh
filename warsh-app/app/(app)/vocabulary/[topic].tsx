@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   ActivityIndicator,
   ScrollView,
@@ -19,6 +19,9 @@ import { getVocabularyWords } from "@services/api";
 import { useTranslationLanguage, pickTranslation } from "@services/language";
 import { TOPIC_CATALOG, getTopicLabel } from "../(tabs)/vocabulary";
 import { useT } from "@i18n/index";
+import { prefetchVocabWordAudio } from "@services/audioCache";
+
+const PREFETCH_WORD_COUNT = 12;
 
 interface VocabWord {
   id: string;
@@ -61,6 +64,18 @@ export default function TopicDetailScreen() {
         .finally(() => setLoading(false));
     }, [topic])
   );
+
+  // Warm the words the learner is most likely to tap first. This list had no
+  // prefetching at all, so every tap paid the full backend → R2 → download chain.
+  // Capped rather than warming the whole topic, which can run to dozens of words.
+  useEffect(() => {
+    for (const word of words.slice(0, PREFETCH_WORD_COUNT)) {
+      if (word.imageUrl) {
+        Image.prefetch(word.imageUrl).catch(() => undefined);
+      }
+      prefetchVocabWordAudio(word.id, word.arabic).catch(() => undefined);
+    }
+  }, [words]);
 
   const filtered = query.trim().length >= 2
     ? words.filter((w) =>

@@ -107,11 +107,14 @@ export default function SRSReviewScreen() {
   const current = queue[currentIndex];
   const total = queue.length;
 
-  // Prefetch the next 1-2 cards' image + audio while the current card is shown,
-  // so they're already warm by the time the user swipes forward.
+  // Warm the current card as well as the next two. The current card matters most:
+  // vocab audio is a three-hop path (backend → R2 URL → download), so leaving it
+  // to the tap is what made the first card feel seconds slower than Discovery.
+  // The in-flight dedupe in getVocabWordAudioUri means a tap that lands mid-warm
+  // joins the same request rather than starting a second one.
   useEffect(() => {
-    const upcoming = queue.slice(currentIndex + 1, currentIndex + 3);
-    for (const item of upcoming) {
+    const window = queue.slice(currentIndex, currentIndex + 3);
+    for (const item of window) {
       if (item.word.imageUrl) {
         Image.prefetch(item.word.imageUrl).catch(() => undefined);
       }

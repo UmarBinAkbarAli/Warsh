@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
 import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -408,8 +408,13 @@ export default function LessonPlayScreen() {
 
   // Shorthand content accessor — avoids casting everywhere
   const c = (lesson?.content ?? {}) as Record<string, any>;
-  const discoverCards = (c.discover_cards ?? []) as Array<Record<string, any>>;
-  const exercises     = (c.exercises ?? []) as Array<RawEx>;
+  // Memoized so the prefetch effects below keep a stable dependency; rebuilding
+  // these arrays each render made the warm-up re-fire on every state change.
+  const discoverCards = useMemo(
+    () => (c.discover_cards ?? []) as Array<Record<string, any>>,
+    [lesson],
+  );
+  const exercises = useMemo(() => (c.exercises ?? []) as Array<RawEx>, [lesson]);
   const currentExercise = exercises[currentExerciseIndex];
   const selectedText  = getSelectedText(selectedAnswer);
   const answeredCorrectly = isAnswered && isAnswerCorrect(currentExercise, selectedAnswer, language, t);
@@ -437,6 +442,23 @@ export default function LessonPlayScreen() {
       }
     }
   }, [discoverCards, language, lesson]);
+
+  // Exercises autoplay their Arabic on mount but had no warming of their own, so
+  // every practice screen paid a cold TTS round-trip. Their cache keys must match
+  // the ones renderPractice passes to PlayButton or the warm-up is wasted.
+  useEffect(() => {
+    if (!lesson || exercises.length === 0) return;
+    const requests = exercises
+      .map((exercise, index) => ({ text: exArabicText(exercise), index }))
+      .filter((entry): entry is { text: string; index: number } => Boolean(entry.text))
+      .map(({ text, index }) => ({
+        text,
+        cacheKey: `${lessonId}-ex${index}`,
+        category: "lessons" as const,
+      }));
+    if (requests.length === 0) return;
+    prefetchTtsAudio(requests).catch(() => undefined);
+  }, [exercises, lesson, lessonId]);
 
   useEffect(() => {
     async function loadLesson() {

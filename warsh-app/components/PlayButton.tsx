@@ -31,6 +31,23 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, audioUr
     };
   }, []);
 
+  const resolveUri = useCallback(async () => {
+    if (audioUrl) {
+      // Quran recitation (open-source reciter on everyayah, or the future
+      // premium R2 `audio/quran/…` files) must play the authentic recording.
+      // If it fails we surface an error — never disguise it with generated TTS.
+      const isRecitation = /everyayah\.com|\/audio\/quran\//.test(audioUrl);
+      try {
+        return await getCachedRemoteAudioUri(audioUrl, cacheKey ?? text, category);
+      } catch (err) {
+        if (isRecitation) throw err;
+      }
+    }
+    return wordId
+      ? getVocabWordAudioUri(wordId, text)
+      : getCachedTtsAudioUri({ text, cacheKey, category });
+  }, [text, cacheKey, category, wordId, audioUrl]);
+
   const startPlay = useCallback(async () => {
     if (!mountedRef.current) return;
     if (soundRef.current) {
@@ -40,25 +57,7 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, audioUr
     }
     setPlayState("loading");
     try {
-      let uri: string;
-      if (audioUrl) {
-        // Quran recitation (open-source reciter on everyayah, or the future
-        // premium R2 `audio/quran/…` files) must play the authentic recording.
-        // If it fails we surface an error — never disguise it with generated TTS.
-        const isRecitation = /everyayah\.com|\/audio\/quran\//.test(audioUrl);
-        try {
-          uri = await getCachedRemoteAudioUri(audioUrl, cacheKey ?? text, category);
-        } catch (err) {
-          if (isRecitation) throw err;
-          uri = wordId
-            ? await getVocabWordAudioUri(wordId, text)
-            : await getCachedTtsAudioUri({ text, cacheKey, category });
-        }
-      } else {
-        uri = wordId
-          ? await getVocabWordAudioUri(wordId, text)
-          : await getCachedTtsAudioUri({ text, cacheKey, category });
-      }
+      const uri = await resolveUri();
 
       if (!mountedRef.current) return;
       await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
@@ -82,10 +81,15 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, audioUr
         setTimeout(() => { if (mountedRef.current) setPlayState("idle"); }, 2000);
       }
     }
-  }, [text, cacheKey, category, wordId, audioUrl]);
+  }, [resolveUri]);
 
   useEffect(() => {
     if (!autoPlay || !text) return;
+    // The 350ms delay exists to let the screen transition settle before sound
+    // starts — but there is no reason to spend it idle. Resolving the URI now
+    // means the download is already in flight (or done) when playback fires; the
+    // in-flight dedupe in audioCache makes startPlay join it rather than refetch.
+    void resolveUri().catch(() => undefined);
     const timer = setTimeout(startPlay, 350);
     return () => {
       clearTimeout(timer);
@@ -96,7 +100,7 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, audioUr
         setPlayState("idle");
       }
     };
-  }, [autoPlay, text, startPlay]);
+  }, [autoPlay, text, startPlay, resolveUri]);
 
   const handlePress = useCallback(async () => {
     if (playState === "loading") return;
