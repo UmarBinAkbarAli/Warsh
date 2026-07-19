@@ -1,3 +1,4 @@
+import { Feather, Ionicons } from "@expo/vector-icons";
 import * as Sentry from "@sentry/react-native";
 import { initAnalytics } from "@services/analytics";
 import { initSentry } from "@services/sentry";
@@ -89,6 +90,11 @@ class ErrorBoundary extends Component<
 
 function RootLayout() {
   const [fontsLoaded, fontError] = useFonts({
+    // Icon fonts must be bundled explicitly so they resolve on the web
+    // export; without this @expo/vector-icons 404s on web and every glyph
+    // renders as a missing-glyph square.
+    ...Feather.font,
+    ...Ionicons.font,
     "Lora-Regular": require("../assets/fonts/Lora-Regular.ttf"),
     "Lora-SemiBold": require("../assets/fonts/Lora-SemiBold.ttf"),
     "Lora-Bold": require("../assets/fonts/Lora-Bold.ttf"),

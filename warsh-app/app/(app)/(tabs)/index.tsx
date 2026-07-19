@@ -23,6 +23,7 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
+import { WEB_MAX_WIDTH } from "../../../components/WebShell";
 import {
   Colors,
   FontSizes,
@@ -106,7 +107,10 @@ export default function HomeScreen() {
   const toastOpacity = useRef(new Animated.Value(0)).current;
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const contentWidth = Math.min(width, 720);
+  // On web `width` is the full browser viewport, but the app is constrained
+  // to the centered WebShell column — cap to the frame width so content fits
+  // instead of overflowing and clipping. Native keeps its wider cap.
+  const contentWidth = Math.min(width, isWeb ? WEB_MAX_WIDTH : 720);
   const pagePadding = contentWidth >= 600 ? Spacing.xxl : Spacing.gutter;
 
   useEffect(() => {
