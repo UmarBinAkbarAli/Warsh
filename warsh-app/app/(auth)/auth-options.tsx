@@ -4,7 +4,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { ArabicText } from "@components/ArabicText";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import { API_BASE_URL } from "@services/api";
+import { WEB_BASE_URL } from "@services/api";
 
 type Provider = {
   label: string;
@@ -66,9 +66,9 @@ export default function AuthOptionsScreen() {
       {/* Legal */}
       <Text style={styles.legal}>
         By continuing, you agree to Warsh's{" "}
-        <Text style={styles.legalLink} onPress={() => void Linking.openURL(`${API_BASE_URL}/terms`)}>Terms of Service</Text>
+        <Text style={styles.legalLink} onPress={() => void Linking.openURL(`${WEB_BASE_URL}/terms`)}>Terms of Service</Text>
         {" "}and{" "}
-        <Text style={styles.legalLink} onPress={() => void Linking.openURL(`${API_BASE_URL}/privacy`)}>Privacy Policy</Text>.
+        <Text style={styles.legalLink} onPress={() => void Linking.openURL(`${WEB_BASE_URL}/privacy`)}>Privacy Policy</Text>.
       </Text>
 
       {/* Login link */}

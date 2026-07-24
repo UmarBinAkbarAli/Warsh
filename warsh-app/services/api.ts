@@ -45,6 +45,7 @@ function getApiBaseUrl() {
 }
 
 export const API_BASE_URL = getApiBaseUrl();
+export const WEB_BASE_URL = "https://warsh.app";
 
 const api = axios.create({
   baseURL: API_BASE_URL,

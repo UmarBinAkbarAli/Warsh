@@ -1,5 +1,5 @@
 import { PUBLIC_SITE_URL } from "../../lib/publicSite";
 
 export async function GET() {
-  return Response.redirect(`${PUBLIC_SITE_URL}/help`, 308);
+  return Response.redirect(`${PUBLIC_SITE_URL}/delete-account`, 308);
 }

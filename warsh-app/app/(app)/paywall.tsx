@@ -17,7 +17,7 @@ import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import { API_BASE_URL, verifyPurchase, getSubscriptionStatus, redeemPromoCode, getApiErrorMessage } from "@services/api";
+import { WEB_BASE_URL, verifyPurchase, getSubscriptionStatus, redeemPromoCode, getApiErrorMessage } from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { useT } from "@i18n/index";
@@ -407,7 +407,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
             : t("paywall.continuePlan", { plan: selectedPlanLabel, price: getPriceLabel(selected) });
 
   function openLegal(path: "privacy" | "terms") {
-    void Linking.openURL(`${API_BASE_URL}/${path}`).catch(() => {});
+    void Linking.openURL(`${WEB_BASE_URL}/${path}`).catch(() => {});
   }
 
   return (

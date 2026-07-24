@@ -17,7 +17,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import api, { API_BASE_URL, updateUserProfile, deleteAccount } from "@services/api";
+import api, { WEB_BASE_URL, updateUserProfile, deleteAccount } from "@services/api";
 import { useAuthStore } from "@stores/authStore";
 import {
   requestNotificationPermission,
@@ -448,7 +448,7 @@ export default function SettingsScreen() {
           <SettingRow
             icon="help-circle-outline"
             label={t("settings.helpFaq")}
-            onPress={() => openExternalUrl(`${API_BASE_URL}/help`)}
+            onPress={() => openExternalUrl(`${WEB_BASE_URL}/help`)}
             showChevron
           />
           <View style={styles.divider} />
@@ -481,14 +481,14 @@ export default function SettingsScreen() {
           <SettingRow
             icon="document-text-outline"
             label={t("settings.privacy")}
-            onPress={() => openExternalUrl(`${API_BASE_URL}/privacy`)}
+            onPress={() => openExternalUrl(`${WEB_BASE_URL}/privacy`)}
             showChevron
           />
           <View style={styles.divider} />
           <SettingRow
             icon="document-outline"
             label={t("settings.terms")}
-            onPress={() => openExternalUrl(`${API_BASE_URL}/terms`)}
+            onPress={() => openExternalUrl(`${WEB_BASE_URL}/terms`)}
             showChevron
           />
         </View>

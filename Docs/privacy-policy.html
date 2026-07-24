@@ -3,75 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Warsh</title>
+  <title>Privacy Policy - Warsh</title>
   <style>
     body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.7; }
     h1 { color: #1a1a1a; }
     h2 { color: #444; margin-top: 32px; }
     p { margin: 12px 0; }
+    li { margin: 8px 0; }
     a { color: #1a73e8; }
   </style>
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p><strong>App Name:</strong> Warsh<br />
+  <p><strong>App:</strong> Warsh<br />
      <strong>Package:</strong> com.warsh.app<br />
-     <strong>Last updated:</strong> May 29, 2026</p>
+     <strong>Developer:</strong> Umar Bin Akbar Ali<br />
+     <strong>Last updated:</strong> July 20, 2026</p>
 
-  <h2>1. Introduction</h2>
-  <p>Warsh ("we", "our", or "us") is an AI-powered Arabic language learning application. This Privacy Policy explains how we collect, use, and protect your information when you use the Warsh mobile app.</p>
+  <h2>1. Scope</h2>
+  <p>This Privacy Policy explains how Warsh ("we", "our", or "us") accesses, collects, uses, shares, retains, and deletes information when you use the Warsh mobile application and related services (the "Service").</p>
 
   <h2>2. Information We Collect</h2>
-  <p>We collect the following information when you register and use the app:</p>
   <ul>
-    <li><strong>Account information:</strong> your name and email address when you register</li>
-    <li><strong>Learning progress:</strong> lessons completed, XP earned, streaks, and quiz results</li>
-    <li><strong>Chat messages:</strong> conversations with our AI tutor (Ustaad Noor) to provide personalised responses</li>
-    <li><strong>Device information:</strong> basic device data for crash reporting and performance monitoring</li>
+    <li><strong>Account and authentication data:</strong> the name and email address you provide, an internal user ID, a securely hashed password, preferred language, learning goal, level, placement choice, and daily goal.</li>
+    <li><strong>Learning and app activity:</strong> lesson progress, answers and scores, XP, streaks, achievements, vocabulary and spaced-repetition history, Tadabbur progress, feature usage, and related app-interaction events.</li>
+    <li><strong>Ustaad Noor messages:</strong> messages you send to the AI tutor and its responses. Recent messages may be used as context so the conversation can continue across sessions.</li>
+    <li><strong>Purchase and entitlement data:</strong> Google Play product IDs, subscription status and expiry, purchase or order identifiers, a purchase-token value used to verify subscriptions, hashed one-time-purchase tokens, quantities, and credits granted. Google processes payment-card details; Warsh does not receive or store your full card number.</li>
+    <li><strong>Diagnostics, analytics, and device data:</strong> app version, operating system and device information, pseudonymous user ID, crash and performance diagnostics, IP/network information processed by hosting providers, and app-interaction events used to operate, secure, troubleshoot, and improve the Service.</li>
+    <li><strong>Support and security communications:</strong> information you include in support requests and records needed to send password-reset or account-security emails.</li>
   </ul>
 
-  <h2>3. How We Use Your Information</h2>
-  <p>We use your information to:</p>
+  <h2>3. Microphone and Voice Recordings</h2>
+  <p>Some speaking exercises request microphone permission after showing an in-app explanation. A voice recording created for shadow-speaking comparison remains in the app's local storage, is used only for playback and comparison on that device, and is deleted when you discard it, restart the exercise, advance, or leave the exercise. Warsh does not upload that raw recording to our servers or analytics providers.</p>
+
+  <h2>4. How We Use Information</h2>
   <ul>
-    <li>Provide and improve the learning experience</li>
-    <li>Track your progress and maintain your streak</li>
-    <li>Power the AI tutor (Ustaad Noor) using OpenAI's API</li>
-    <li>Send optional push notifications for streak reminders</li>
-    <li>Monitor app performance and fix bugs (via Sentry)</li>
+    <li>create and secure your account and provide the Service;</li>
+    <li>personalize lessons and track learning progress;</li>
+    <li>generate and preserve the visible Ustaad Noor conversation;</li>
+    <li>verify Google Play purchases, grant entitlements or Noor credits, prevent duplicate grants, and support purchase restoration;</li>
+    <li>send requested password-reset and account-security messages;</li>
+    <li>measure feature usage, diagnose crashes, monitor performance, prevent abuse, and improve the Service; and</li>
+    <li>comply with legal obligations and enforce our terms.</li>
   </ul>
 
-  <h2>4. Third-Party Services</h2>
-  <p>We use the following third-party services that may process your data:</p>
+  <h2>5. Service Providers and Data Sharing</h2>
+  <p>We do not sell personal information and we do not use it for third-party advertising. We disclose data only as needed to operate the Service, process a user-requested feature, comply with law, or protect the Service. Our processors include:</p>
   <ul>
-    <li><strong>OpenAI</strong> – AI tutor responses (chat messages are sent to OpenAI's API). See <a href="https://openai.com/privacy" target="_blank">OpenAI Privacy Policy</a>.</li>
-    <li><strong>Sentry</strong> – error monitoring and crash reporting. See <a href="https://sentry.io/privacy/" target="_blank">Sentry Privacy Policy</a>.</li>
-    <li><strong>Neon (PostgreSQL)</strong> – cloud database hosting your account and progress data.</li>
-    <li><strong>Google Play</strong> – app distribution and in-app purchase processing.</li>
+    <li><strong>OpenAI:</strong> receives Ustaad Noor message content and recent conversation context to generate tutor responses.</li>
+    <li><strong>Mixpanel:</strong> receives a pseudonymous user ID, app-interaction events, and learning or subscription properties for product analytics. Raw Noor message text and voice recordings are not intentionally sent to Mixpanel.</li>
+    <li><strong>Sentry:</strong> receives a pseudonymous user ID, crash reports, performance traces, app/device context, and scrubbed diagnostic details. Warsh filters common credential, email, token, message, prompt, transcript, and text fields before sending events.</li>
+    <li><strong>Neon and Vercel:</strong> provide database, application hosting, network, and operational-log services.</li>
+    <li><strong>Cloudflare:</strong> provides content delivery and media hosting for lesson and vocabulary assets.</li>
+    <li><strong>Google Play:</strong> distributes the app, processes purchases, and provides purchase and subscription status used for verification.</li>
+    <li><strong>Resend:</strong> sends password-reset and account-security emails when those functions are used.</li>
   </ul>
-
-  <h2>5. Data Storage and Security</h2>
-  <p>Your data is stored on secure cloud servers. We use industry-standard encryption for data in transit (HTTPS) and implement appropriate security measures to protect your personal information.</p>
+  <p>These providers may process technical information such as IP address, device/browser details, and request metadata as part of providing their services. They also apply their own privacy terms where they act independently.</p>
 
   <h2>6. Data Retention</h2>
-  <p>We retain your account and learning data for as long as your account is active. You may request deletion of your account and associated data at any time by contacting us.</p>
+  <p>Account, learning, Ustaad Noor conversation, and Warsh purchase-verification records are generally retained while your account is active so that progress, conversations, credits, and entitlements remain available across sessions. We may keep limited security, fraud-prevention, transaction, backup, or legal records for longer where reasonably necessary or required by law. Third-party providers retain data under their configured retention periods and applicable terms.</p>
+  <p>Local speaking-practice recordings are temporary and are deleted by the app as described in Section 3.</p>
 
-  <h2>7. Children's Privacy</h2>
-  <p>Warsh is designed for users aged 13 and above. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us and we will delete it.</p>
+  <h2>7. Account and Data Deletion</h2>
+  <p>You can delete your Warsh account from within the app at <strong>Settings &rarr; Account &rarr; Delete account</strong>. You can also initiate an external deletion request at <a href="https://warsh.app/delete-account">https://warsh.app/delete-account</a> or contact <a href="mailto:support@warsh.app">support@warsh.app</a>.</p>
+  <p>Deleting your Warsh account deletes the account and associated Warsh database records, including learning progress, vocabulary state, Ustaad Noor messages, achievements, subscription fields, and purchase-verification records. Data already retained independently by Google Play or another provider is governed by that provider's policy. Deleting Warsh does not automatically cancel a Google Play subscription; subscription management remains available through Google Play.</p>
 
-  <h2>8. Your Rights</h2>
-  <p>You have the right to:</p>
-  <ul>
-    <li>Access the personal data we hold about you</li>
-    <li>Request correction of inaccurate data</li>
-    <li>Request deletion of your account and data</li>
-    <li>Opt out of push notifications at any time via your device settings</li>
-  </ul>
+  <h2>8. Security</h2>
+  <p>Warsh uses HTTPS/TLS for data in transit, hashes account passwords, restricts protected API access through authentication, and relies on cloud-provider encryption and access controls for stored data. No electronic system is completely secure, but we apply reasonable technical and organizational safeguards appropriate to the data we handle.</p>
 
-  <h2>9. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. We will notify you of significant changes through the app. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+  <h2>9. Children's Privacy</h2>
+  <p>Warsh is not intended for children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided personal information, contact us so we can investigate and delete it.</p>
 
-  <h2>10. Contact Us</h2>
-  <p>If you have any questions about this Privacy Policy or your data, please contact us at:<br />
-     <a href="mailto:umarakbar73456@gmail.com">umarakbar73456@gmail.com</a></p>
+  <h2>10. Your Choices and Rights</h2>
+  <p>Depending on your location, you may have rights to access, correct, obtain a copy of, object to certain processing of, or delete your personal information. You can disable microphone permission in Android settings and may contact us to exercise a data right.</p>
+
+  <h2>11. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy when the Service or legal requirements change. We will update the date above and provide additional notice for material changes when required.</p>
+
+  <h2>12. Contact</h2>
+  <p>For privacy questions or requests, contact <a href="mailto:support@warsh.app">support@warsh.app</a>.</p>
 </body>
 </html>
