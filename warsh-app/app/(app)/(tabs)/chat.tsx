@@ -4,24 +4,31 @@ import { TextInput } from "react-native-paper";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
+import * as Crypto from "expo-crypto";
 import api, { isSubscriptionRequiredError, purchaseNoorPack } from "@services/api";
 import { BrandButton } from "@components/BrandButton";
+import { useAuthStore } from "@stores/authStore";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Shadows, Spacing, WarshPalette } from "../../../constants/theme";
 import { trackNoorMessageSent } from "@services/analytics";
 import {
   addIapPurchaseListeners,
   connectIap,
   endIapConnection,
-  finishConsumableAndroidPurchase,
+  finishIapTransaction,
+  getConsumableProducts,
+  getIapDisplayPrice,
   isBillingSupportedEnvironment,
   isIapUnavailableError,
   requestConsumablePurchase,
   type IapSubscriptionPurchase,
 } from "@services/iap";
 
+const NOOR_PACK_PRODUCT_ID = "warsh_noor_pack";
+
 export default function ChatScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const user = useAuthStore((state) => state.user);
   const [messages, setMessages] = useState<any[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(true);
@@ -30,10 +37,26 @@ export default function ChatScreen() {
   const [usage, setUsage] = useState({ used: 0, limit: 5, packBalance: 0 });
   const [error, setError] = useState<string | null>(null);
   const [showOverageModal, setShowOverageModal] = useState(false);
+  const [packDisplayPrice, setPackDisplayPrice] = useState<string | null>(null);
+  const [packPriceLoading, setPackPriceLoading] = useState(true);
 
   // True only between launching the pack purchase and handling its result, so the
   // global purchase listener ignores any unrelated/pending purchases.
   const packInFlightRef = useRef(false);
+  const processingPurchaseTokensRef = useRef(new Set<string>());
+
+  const loadNoorPackProduct = useCallback(async () => {
+    if (!isBillingSupportedEnvironment()) {
+      setPackPriceLoading(false);
+      return;
+    }
+
+    setPackPriceLoading(true);
+    const products = await getConsumableProducts([NOOR_PACK_PRODUCT_ID]);
+    const product = products.find((item) => item.id === NOOR_PACK_PRODUCT_ID);
+    setPackDisplayPrice(product ? getIapDisplayPrice(product) ?? null : null);
+    setPackPriceLoading(false);
+  }, []);
 
   // react-native-iap v14 delivers purchase results via events, not the
   // `requestPurchase` promise. Register listeners for the screen's lifetime.
@@ -43,7 +66,9 @@ export default function ChatScreen() {
 
     (async () => {
       const remove = await addIapPurchaseListeners(
-        (purchase) => { if (packInFlightRef.current) void handlePackPurchase(purchase); },
+        (purchase) => {
+          if (purchase.productId === NOOR_PACK_PRODUCT_ID) void handlePackPurchase(purchase);
+        },
         (error) => { if (packInFlightRef.current) handlePackError(error); },
       );
       if (mounted) cleanup = remove;
@@ -57,6 +82,16 @@ export default function ChatScreen() {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    void loadNoorPackProduct();
+  }, [loadNoorPackProduct]);
+
+  useEffect(() => {
+    if (showOverageModal && !packDisplayPrice) {
+      void loadNoorPackProduct();
+    }
+  }, [loadNoorPackProduct, packDisplayPrice, showOverageModal]);
 
   const loadHistory = useCallback(async () => {
     setLoading(true);
@@ -100,13 +135,25 @@ export default function ChatScreen() {
       Alert.alert("Purchases unavailable", "In-app purchases are only available in a Play Store build, not Expo Go.");
       return;
     }
+    if (!user?.id) {
+      Alert.alert("Sign in required", "Please sign in again before making a purchase.");
+      return;
+    }
+    if (!packDisplayPrice) {
+      Alert.alert("Purchase unavailable", "Google Play has not returned a price for this product. Please try again later.");
+      return;
+    }
     setShowOverageModal(false);
     setPurchasingPack(true);
     packInFlightRef.current = true;
     try {
       const connected = await connectIap();
       if (!connected) throw Object.assign(new Error("IAP not available"), { code: "IAP_UNAVAILABLE" });
-      await requestConsumablePurchase("warsh_noor_pack");
+      const storeAccountId = await Crypto.digestStringAsync(
+        Crypto.CryptoDigestAlgorithm.SHA256,
+        user.id,
+      );
+      await requestConsumablePurchase(NOOR_PACK_PRODUCT_ID, storeAccountId);
       // Success/failure handled by handlePackPurchase / handlePackError.
     } catch (err: any) {
       handlePackError(err);
@@ -116,15 +163,22 @@ export default function ChatScreen() {
   // Called by purchaseUpdatedListener once the pack purchase completes.
   async function handlePackPurchase(purchase: IapSubscriptionPurchase) {
     packInFlightRef.current = false;
-    try {
-      const token = (purchase as IapSubscriptionPurchase | undefined)?.purchaseToken;
-      if (!token) throw new Error("No purchase token returned from store.");
+    const token = purchase.purchaseToken;
+    if (!token || processingPurchaseTokensRef.current.has(token)) return;
+    processingPurchaseTokensRef.current.add(token);
 
+    try {
       const response = await purchaseNoorPack({ purchaseToken: token, platform: Platform.OS as "android" | "ios" });
       const newBalance: number = response.data.data.noorOverageBalance ?? 0;
 
-      // Consume so the pack can be purchased again.
-      await finishConsumableAndroidPurchase(token);
+      // Finish only after the server has durably and idempotently granted the
+      // credits. If finishing fails, Play redelivers and the server returns the
+      // already-granted result without incrementing again.
+      try {
+        await finishIapTransaction(purchase, true);
+      } catch (finishError: any) {
+        console.warn("[IAP] Noor pack finish deferred:", finishError?.code ?? finishError?.message);
+      }
 
       setUsage((prev) => ({ ...prev, packBalance: newBalance }));
       setPurchasingPack(false);
@@ -137,7 +191,13 @@ export default function ChatScreen() {
       setPurchasingPack(false);
       const code = err?.response?.data?.code ?? err?.code ?? "unknown";
       console.error("[IAP] Noor pack verify failed:", code, err?.message);
-      Alert.alert("Purchase failed", `We couldn't add the pack (${code}). If you were charged, contact support.`);
+      if (code === "purchase_pending") {
+        Alert.alert("Purchase pending", "Google Play is still processing this purchase. Messages will be added after payment completes.");
+      } else {
+        Alert.alert("Purchase failed", `We couldn't add the pack (${code}). If you were charged, contact support.`);
+      }
+    } finally {
+      processingPurchaseTokensRef.current.delete(token);
     }
   }
 
@@ -327,21 +387,21 @@ export default function ChatScreen() {
 
             {/* Body */}
             <Text style={styles.modalBody}>
-              You've used today's 5 messages with Ustaad Noor. Get 20 additional messages for $0.99 — they don't expire.
+              You've used today's 5 messages with Ustaad Noor. Get 20 additional messages for {packDisplayPrice ?? "the price shown by Google Play"} — they don't expire.
             </Text>
 
             {/* Price display */}
             <View style={styles.priceRow}>
-              <Text style={styles.priceAmount}>$0.99</Text>
+              <Text style={styles.priceAmount}>{packPriceLoading ? "Loading price..." : packDisplayPrice ?? "Unavailable"}</Text>
               <Text style={styles.priceLabel}>for 20 messages</Text>
             </View>
 
             {/* Purchase CTA */}
             <BrandButton
-              title={purchasingPack ? "Processing…" : "Get more messages →"}
+              title={purchasingPack ? "Processing..." : packDisplayPrice ? "Get more messages" : "Purchase unavailable"}
               onPress={handleBuyNoorPack}
               loading={purchasingPack}
-              disabled={purchasingPack}
+              disabled={purchasingPack || !packDisplayPrice}
             />
 
             {/* Dismiss link */}

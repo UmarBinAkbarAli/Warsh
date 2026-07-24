@@ -2,13 +2,9 @@ import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { fetchGooglePlaySubscriptionSnapshot } from "../../../../lib/storeVerification";
 
-// Refund/chargeback — cut access immediately rather than trusting snapshot timing.
+// Refund/chargeback: cut access immediately rather than trusting snapshot timing.
 const SUBSCRIPTION_REVOKED = 12;
-
-// One-time product notification types
-const ONE_TIME_PURCHASED = 1;
 const NOOR_PACK_PRODUCT_ID = "warsh_noor_pack";
-const NOOR_PACK_MESSAGE_COUNT = 20;
 
 interface PubSubMessage {
   message?: {
@@ -38,18 +34,20 @@ interface DeveloperNotification {
 export async function POST(request: Request) {
   const expectedToken = process.env.GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET;
   if (!expectedToken) {
-    // Fail closed unless a developer has explicitly opted into an unauthenticated
-    // webhook for local testing. Relying on NODE_ENV alone would leave a
-    // misconfigured preview/staging deploy open to forged purchase notifications.
+    // Fail closed unless a developer explicitly opts into an unauthenticated
+    // webhook for local testing.
     if (process.env.ALLOW_UNAUTHENTICATED_WEBHOOK !== "true") {
-      console.error("[rtdn] GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET is not set — rejecting request.");
-      return NextResponse.json({ error: "Webhook is not configured.", code: "store_not_configured" }, { status: 503 });
+      console.error("[rtdn] GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET is not set - rejecting request.");
+      return NextResponse.json(
+        { error: "Webhook is not configured.", code: "store_not_configured" },
+        { status: 503 },
+      );
     }
   } else {
     const { searchParams } = new URL(request.url);
     const token = searchParams.get("token");
     if (token !== expectedToken) {
-      console.warn("[rtdn] unauthorized request — token mismatch");
+      console.warn("[rtdn] unauthorized request - token mismatch");
       return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
     }
   }
@@ -62,11 +60,11 @@ export async function POST(request: Request) {
     return new NextResponse(null, { status: 200 });
   }
 
-  console.log("[rtdn] received message id:", body?.message?.messageId ?? "none");
+  console.log("[rtdn] received message id:", body.message?.messageId ?? "none");
 
-  const encodedData = body?.message?.data;
+  const encodedData = body.message?.data;
   if (!encodedData) {
-    console.log("[rtdn] no data payload — acking empty message");
+    console.log("[rtdn] no data payload - acknowledging empty message");
     return new NextResponse(null, { status: 200 });
   }
 
@@ -80,15 +78,19 @@ export async function POST(request: Request) {
   }
 
   const { subscriptionNotification, oneTimeProductNotification } = notification;
-  console.log("[rtdn] notification type:", subscriptionNotification ? "subscription" : oneTimeProductNotification ? "one_time" : "unknown");
+  console.log(
+    "[rtdn] notification type:",
+    subscriptionNotification ? "subscription" : oneTimeProductNotification ? "one_time" : "unknown",
+  );
 
   if (subscriptionNotification) {
     await handleSubscriptionNotification(subscriptionNotification);
   } else if (oneTimeProductNotification) {
-    await handleOneTimeProductNotification(oneTimeProductNotification);
+    handleOneTimeProductNotification(oneTimeProductNotification);
   }
 
-  // Always ACK to Pub/Sub — do not retry
+  // Always acknowledge to Pub/Sub; retries are handled through store snapshots
+  // and the purchase ledger rather than replaying a notification mutation.
   return new NextResponse(null, { status: 200 });
 }
 
@@ -100,11 +102,8 @@ async function handleSubscriptionNotification(notif: SubscriptionNotification) {
     where: { lastPurchaseToken: purchaseToken },
     select: { id: true },
   });
-
   if (!user) return;
 
-  // Refund / revocation: cut access immediately, regardless of what a re-query
-  // might momentarily still report.
   if (notificationType === SUBSCRIPTION_REVOKED) {
     await prisma.user.update({
       where: { id: user.id },
@@ -116,16 +115,11 @@ async function handleSubscriptionNotification(notif: SubscriptionNotification) {
   const packageName = process.env.GOOGLE_PLAY_PACKAGE_NAME?.trim();
   if (!packageName) return;
 
-  // For every other event (renewed, cancelled, grace, on-hold, paused, expired,
-  // recovered, restarted, purchased), re-verify with Google and persist the
-  // authoritative snapshot. Google is the source of truth: the normalized state,
-  // the real expiry, and the base plan all come from the store — never inferred
-  // from the notification type.
   let snapshot;
   try {
     snapshot = await fetchGooglePlaySubscriptionSnapshot(packageName, purchaseToken);
-  } catch (err) {
-    console.warn("[rtdn] subscription snapshot fetch failed:", (err as Error)?.message ?? err);
+  } catch (error) {
+    console.warn("[rtdn] subscription snapshot fetch failed:", (error as Error)?.message ?? error);
     return;
   }
 
@@ -139,95 +133,11 @@ async function handleSubscriptionNotification(notif: SubscriptionNotification) {
   });
 }
 
-async function handleOneTimeProductNotification(notif: OneTimeProductNotification) {
-  const { notificationType, purchaseToken, sku } = notif;
-  if (!purchaseToken || notificationType !== ONE_TIME_PURCHASED || sku !== NOOR_PACK_PRODUCT_ID) return;
+function handleOneTimeProductNotification(notif: OneTimeProductNotification) {
+  if (notif.sku !== NOOR_PACK_PRODUCT_ID) return;
 
-  const user = await prisma.user.findFirst({
-    where: { lastPurchaseToken: purchaseToken },
-    select: { id: true },
-  });
-
-  if (!user) return;
-
-  // Never grant credits on the notification alone — re-verify the purchase with
-  // Google so a forged/replayed RTDN cannot mint free packs.
-  const verified = await verifyOneTimePurchaseState(purchaseToken, sku);
-  if (!verified) {
-    console.warn("[rtdn] one-time purchase failed re-verification — not crediting");
-    return;
-  }
-
-  await prisma.user.update({
-    where: { id: user.id },
-    data: { noorOverageBalance: { increment: NOOR_PACK_MESSAGE_COUNT } },
-  });
-}
-
-// Confirms with Google that the one-time product token is in a PURCHASED state.
-// Read-only (does not consume) — the client's purchase flow consumes the token.
-async function verifyOneTimePurchaseState(purchaseToken: string, sku: string): Promise<boolean> {
-  const accessToken = await getGoogleAccessToken();
-  if (!accessToken) return false;
-
-  const packageName = process.env.GOOGLE_PLAY_PACKAGE_NAME?.trim();
-  if (!packageName) return false;
-
-  const url =
-    `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodeURIComponent(packageName)}` +
-    `/purchases/products/${encodeURIComponent(sku)}/tokens/${encodeURIComponent(purchaseToken)}`;
-
-  const res = await fetch(url, {
-    headers: { Authorization: `Bearer ${accessToken}`, Accept: "application/json" },
-  });
-  if (!res.ok) return false;
-
-  const purchase = (await res.json()) as { purchaseState?: number };
-  // 0 = Purchased (1 = Canceled, 2 = Pending)
-  return purchase.purchaseState === 0;
-}
-
-async function getGoogleAccessToken(): Promise<string | null> {
-  const rawKey = process.env.GOOGLE_PLAY_SERVICE_ACCOUNT_KEY?.trim();
-  if (!rawKey) return null;
-
-  let key: { client_email?: string; private_key?: string; token_uri?: string };
-  try {
-    key = JSON.parse(rawKey) as typeof key;
-  } catch {
-    return null;
-  }
-
-  if (!key.client_email || !key.private_key) return null;
-
-  const { createSign } = await import("crypto");
-  const GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token";
-  const SCOPE = "https://www.googleapis.com/auth/androidpublisher";
-  const now = Math.floor(Date.now() / 1000);
-
-  const header = Buffer.from(JSON.stringify({ alg: "RS256", typ: "JWT" })).toString("base64url");
-  const payload = Buffer.from(JSON.stringify({
-    iss: key.client_email,
-    scope: SCOPE,
-    aud: key.token_uri ?? GOOGLE_TOKEN_URL,
-    iat: now,
-    exp: now + 3600,
-  })).toString("base64url");
-
-  const signingInput = `${header}.${payload}`;
-  const signature = createSign("RSA-SHA256").update(signingInput).sign(key.private_key).toString("base64url");
-  const assertion = `${signingInput}.${signature}`;
-
-  const res = await fetch(key.token_uri ?? GOOGLE_TOKEN_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({
-      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-      assertion,
-    }),
-  });
-
-  if (!res.ok) return null;
-  const data = await res.json() as { access_token?: string };
-  return data.access_token ?? null;
+  // RTDN does not identify the Warsh user for a new one-time token. The
+  // authenticated purchase endpoint owns user association, verification,
+  // atomic granting and idempotency; this handler must never grant separately.
+  console.log("[rtdn] Noor pack notification acknowledged; grant handled by purchase endpoint");
 }

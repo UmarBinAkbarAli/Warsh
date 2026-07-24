@@ -65,6 +65,20 @@ interface GoogleSubscriptionPurchase {
   lineItems?: GoogleSubscriptionLineItem[];
 }
 
+interface GoogleProductPurchase {
+  purchaseState?: number;
+  consumptionState?: number;
+  orderId?: string;
+  productId?: string;
+  quantity?: number;
+  obfuscatedExternalAccountId?: string;
+}
+
+export interface VerifiedGooglePlayConsumable {
+  orderId?: string;
+  quantity: number;
+}
+
 interface AppleReceiptTransaction {
   product_id?: string;
   expires_date_ms?: string;
@@ -80,7 +94,11 @@ interface AppleReceiptResponse {
   latest_receipt_info?: AppleReceiptTransaction[] | AppleReceiptTransaction;
 }
 
-export async function verifyGooglePlayConsumable(productId: string, purchaseToken: string): Promise<void> {
+export async function verifyGooglePlayConsumable(
+  productId: string,
+  purchaseToken: string,
+  expectedObfuscatedAccountId: string,
+): Promise<VerifiedGooglePlayConsumable> {
   const token = purchaseToken.trim();
   if (!token) throw new StoreVerificationError("Missing Google Play purchase token.", 400, "bad_request");
 
@@ -102,24 +120,29 @@ export async function verifyGooglePlayConsumable(productId: string, purchaseToke
     throw new StoreVerificationError("Google Play rejected the purchase token.", 400, "invalid_purchase");
   }
 
-  const purchase = (await verifyResponse.json()) as { purchaseState?: number };
+  const purchase = (await verifyResponse.json()) as GoogleProductPurchase;
+  if (purchase.purchaseState === 2) {
+    throw new StoreVerificationError("Google Play purchase is still pending.", 409, "purchase_pending");
+  }
   if (purchase.purchaseState !== 0) {
-    throw new StoreVerificationError("Google Play purchase is not in a purchased state.", 400, "invalid_purchase");
+    throw new StoreVerificationError("Google Play purchase is canceled or invalid.", 400, "invalid_purchase");
+  }
+  if (purchase.consumptionState !== 0) {
+    throw new StoreVerificationError("Google Play purchase was already consumed.", 409, "purchase_already_consumed");
+  }
+  if (purchase.productId && purchase.productId !== productId) {
+    throw new StoreVerificationError("Google Play purchase does not match this product.", 400, "invalid_purchase");
+  }
+  if (purchase.obfuscatedExternalAccountId !== expectedObfuscatedAccountId) {
+    throw new StoreVerificationError("Google Play purchase does not belong to this account.", 403, "purchase_account_mismatch");
   }
 
-  // Consume the token server-side so the product can be purchased again
-  const consumeUrl =
-    `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodeURIComponent(packageName)}` +
-    `/purchases/products/${encodeURIComponent(productId)}/tokens/${encodeURIComponent(token)}:consume`;
-
-  const consumeResponse = await fetch(consumeUrl, {
-    method: "POST",
-    headers: { Authorization: `Bearer ${accessToken}`, "Content-Length": "0" },
-  });
-
-  if (!consumeResponse.ok) {
-    console.warn(`[noor-pack] Could not consume Google Play token (ending ...${token.slice(-6)}): HTTP ${consumeResponse.status}`);
+  const quantity = purchase.quantity ?? 1;
+  if (!Number.isSafeInteger(quantity) || quantity < 1) {
+    throw new StoreVerificationError("Google Play purchase quantity is invalid.", 400, "invalid_purchase");
   }
+
+  return { orderId: purchase.orderId, quantity };
 }
 
 export async function verifyStoreSubscription(input: VerifySubscriptionInput): Promise<VerifiedStoreSubscription> {

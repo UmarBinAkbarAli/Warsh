@@ -39,6 +39,24 @@ model User {
     userWords          UserVocabularyWord[]
     userSurahProgress  UserSurahProgress[]
     promoRedemptions   PromoRedemption[]
+    storePurchases     StorePurchase[]
+}
+
+// Durable receipt ledger for one-time store purchases. Only a SHA-256 digest of
+// the purchase token is retained; the raw bearer token must not be stored.
+model StorePurchase {
+    id             String   @id @default(cuid())
+    userId         String
+    user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+    platform       String
+    productId      String
+    tokenHash      String   @unique
+    orderId        String?
+    quantity       Int      @default(1)
+    creditsGranted Int
+    createdAt      DateTime @default(now())
+
+    @@index([userId, productId])
 }
 
 // A promotional code that grants free trial days without a store purchase.
