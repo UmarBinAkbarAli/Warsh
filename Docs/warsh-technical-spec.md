@@ -2,7 +2,7 @@
 
 **Status:** Active engineering and operations source of truth
 **Version:** 2.0 consolidated
-**Last updated:** 2026-07-11
+**Last updated:** 2026-07-24
 
 ## Authority and maintenance
 
@@ -16,6 +16,7 @@ Use `Docs/warsh-product-spec.md` for product behavior and `Docs/warsh-status.md`
 Warsh/
 ├── warsh-app/                  Expo SDK 54 / React Native 0.81 client
 ├── warsh-backend/              Next.js 14 API backend
+├── warsh-site/                 Next.js 16 public website and legal/help pages
 ├── packages/lesson-schema/     Canonical Zod lesson-content package
 ├── Docs/                       Active documentation and protected privacy page
 ├── landing/                    Live public landing page source
@@ -24,7 +25,7 @@ Warsh/
 └── CLAUDE.md                   Pointer to AGENTS.md
 ```
 
-The backend and app are separate Node projects with separate lockfiles and commands.
+The backend, app, and public website are separate Node projects with separate lockfiles and commands.
 
 ## 2. Current stack
 
@@ -111,7 +112,9 @@ Refresh tokens are implemented as rotated JWT sessions rather than a separate st
 
 - Local physical device through USB reverse: `http://127.0.0.1:3000`
 - Staging: `https://api-staging.warsh.app`
-- Production: `https://api.warsh.app`
+- Production Android: `https://api.warsh.app`
+- Production web export: `https://app.warsh.app`; Vercel rewrites
+  `/api/*` server-side to `https://api.warsh.app/api/*`
 
 Never commit a machine-specific LAN IP.
 
@@ -121,6 +124,25 @@ Never commit a machine-specific LAN IP.
 - Shared colors, spacing, typography, radii, shadows, and animation values live in `constants/theme.ts`.
 - CTAs use `BrandButton`.
 - Web uses the responsive `WebShell`.
+
+### Android update awareness
+
+- Google Play remains the source of truth for whether a Play-installed tester
+  is eligible for a newer Closed-track version.
+- The Android-only `WarshInAppUpdates` native bridge reads Play Core update
+  availability and version-code information. The root app shell checks at
+  launch and whenever the app returns to the foreground.
+- When a higher eligible version exists, Warsh shows the localized
+  `AppUpdateBanner` and opens the `com.warsh.app` Play listing from its primary
+  action. Dismissing hides only that available version for the current app
+  process, so a later cold launch reminds the tester again.
+- Preview/sideloaded APKs are not Play-owned and therefore do not receive Play
+  update availability. That expected state must remain silent; use the APK for
+  direct QA and the Closed-track AAB for update-flow verification.
+- The first release containing this feature still requires one external
+  message to older testers. Once they install it through Play, later
+  Closed-track releases are detected automatically without a backend version
+  flag.
 
 ## 6. Backend architecture
 
@@ -165,7 +187,12 @@ npm run db:migrate
 
 ### Time
 
-PKT helpers live in `lib/date.ts`. Streak and daily-goal logic must use the defined Pakistan-time boundary consistently.
+PKT helpers live in `lib/date.ts`. A Warsh streak day runs from 04:00 PKT
+through 03:59:59 PKT the following calendar day so late-night study remains
+part of the learner's preceding day. Lesson completion, daily-goal queries,
+freeze handling, and the daily reset cron must use this same boundary. At
+04:00, the cron evaluates the complete day that just ended; it must not reset
+valid activity merely because a new streak day has opened.
 
 ## 7. Authentication and security
 
@@ -247,7 +274,14 @@ Store-console state is external. Always verify products, base plans, tester acce
 ### Email, monitoring, and analytics
 
 - Resend: password-reset mail
-- Sentry: backend/mobile errors and release diagnostics
+- Sentry: backend/mobile errors and release diagnostics. Default PII is disabled,
+  user identity is reduced to the internal pseudonymous ID, request secrets are
+  scrubbed, and browser session replay is disabled. Production source-map
+  uploads require valid `SENTRY_ORG`, `SENTRY_PROJECT`, and
+  `SENTRY_AUTH_TOKEN` values in the build environment. The production project
+  mapping is `warsh-backend` for Vercel and `warsh-mobile` for EAS. Android
+  releases use `com.warsh.app@<version>+<versionCode>` with the version code as
+  the Sentry distribution.
 - Mixpanel: product analytics
 - Uptime monitoring: production health endpoint
 
@@ -275,6 +309,26 @@ Important groups:
 - Client: `EXPO_PUBLIC_API_URL`, environment, Sentry DSN, Mixpanel token
 
 Never duplicate secret values in documentation.
+
+EAS creates its upload archive from the Git/monorepo root even when the command
+is run from `warsh-app/`. Preserve the root `.easignore` as well as the app-local
+file so environment files, native build caches, APK/AAB outputs, and keystores
+cannot enter the ordinary source upload.
+
+The production EAS profile deliberately uses `credentialsSource: local`.
+`warsh-app/credentials.json` points EAS at the established Play upload
+keystore, is ignored by Git, and must remain available only in the secure build
+environment. Do not switch production back to Expo's remote credential unless
+that remote key has first been replaced and its SHA-1 independently verified
+against Play Console.
+
+Local Gradle release builds require the explicit
+`WARSH_UPLOAD_STORE_FILE`, `WARSH_UPLOAD_STORE_PASSWORD`,
+`WARSH_UPLOAD_KEY_ALIAS`, and `WARSH_UPLOAD_KEY_PASSWORD` values. Before any
+AAB is uploaded, run `npm run verify:play-signing -- <path-to-aab>` and
+`npm run check:16kb -- <path-to-aab>`. The signing check must report the Play
+upload certificate SHA-1 ending in `D2:6B`; never commit or disclose the
+keystore or its passwords.
 
 ## 11. Local development
 
@@ -350,8 +404,19 @@ npx tsc --noEmit
 
 - Production backend: Vercel
 - Production API: `https://api.warsh.app`
+- Vercel project: `warsh`
+- The root response is API service metadata. Legacy `/privacy`, `/terms`, `/delete-account`, and `/help` paths permanently redirect through `PUBLIC_SITE_URL`. The current production value temporarily remains the stable `warsh-site` Vercel alias; set it to `https://warsh.app` at the next authenticated Vercel configuration update. Both destinations serve the same dedicated site deployment.
 - Database: Neon PostgreSQL
 - Migrations and seed operations are explicit release actions; never run production seed casually.
+
+### Public website
+
+- Source: `warsh-site/`
+- Vercel project: `warsh-site`
+- Canonical domains: `https://warsh.app` and `https://www.warsh.app`
+- Canonical public routes: `/`, `/privacy`, `/terms`, `/delete-account`, and `/help`
+- DNS remains at Namecheap. The authoritative production records are apex `A 216.198.79.1` and `www CNAME 2eac99eaa82c15f3.vercel-dns-017.com`; preserve the `api`, `app`, email, verification, and other DNS records.
+- `landing/index.html` and `Docs/privacy-policy.html` remain protected legacy release sources. They are retained for traceability and must not be renamed or removed.
 
 ### Android
 
@@ -360,9 +425,14 @@ EAS profiles:
 - `development` — internal development client
 - `preview` — staging APK using `api-staging.warsh.app`
 - `previewProd` — production-API APK
-- `production` — production channel/build submitted to the internal track
+- `production` — production channel/build submitted to the Closed testing `alpha` track
 
 Android identity is `com.warsh.app`.
+
+For update-aware Closed testing, publish a higher version code to the same
+Closed track and wait until Play marks it available to testers. Existing
+Play-installed builds containing `AppUpdateBanner` will discover that eligible
+version on launch/foreground. Do not use a sideloaded APK to certify this flow.
 
 ### Web app
 
@@ -372,7 +442,18 @@ From `warsh-app`:
 npm run deploy:web
 ```
 
-The script builds against the production API, deploys through Vercel, targets `https://app.warsh.app`, and restores the developer's local `.env` afterward.
+The script builds the web client with `https://app.warsh.app` as its API origin,
+writes an `/api/*` rewrite to `https://api.warsh.app/api/*` before the SPA
+fallback, deploys through Vercel, and restores the developer's local `.env`
+afterward. Keeping browser API traffic same-origin avoids cross-origin
+preflights being intercepted by Vercel's Security Checkpoint. Android
+production builds continue to call `https://api.warsh.app` directly.
+
+Expo exports dependency assets under `dist/assets/node_modules`, which Vercel
+CLI excludes from uploads. The deployment script relocates that directory to
+`dist/assets/vendor` and adds a server-side rewrite from the original generated
+URL. Do not rewrite Expo's hashed JavaScript after export: changing its content
+without changing its filename can leave browsers running a stale cached bundle.
 
 Backend CORS always permits the canonical web origin and stable Vercel alias, plus explicitly configured origins.
 

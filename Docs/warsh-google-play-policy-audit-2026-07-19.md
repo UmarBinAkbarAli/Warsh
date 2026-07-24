@@ -2,25 +2,26 @@
 
 - **Audit date:** July 19, 2026
 - **Package:** `com.warsh.app`
-- **Current Play release reviewed:** `4 (1.0.3)`
-- **Production-access application:** Submitted July 11, 2026 at 4:56 PM; still under review when this audit was completed
+- **Current Play release reviewed:** `7 (1.0.6)` submitted to Closed testing - Alpha on July 20, 2026; Play review/automated checks pending
+- **Production-access application:** Submitted July 11, 2026 at 4:56 PM; declined July 20 with a requirement for an additional 14-day Closed test
 
 > [!IMPORTANT]
 > This document is a dated review snapshot and implementation checklist. It is not a fourth active Warsh specification. The active sources of truth remain `warsh-status.md`, `warsh-product-spec.md`, `warsh-technical-spec.md`, and the current code/configuration. Re-check Google Play Console and the linked Google policies before the final production submission because console state and policies can change.
 
 ## 1. Executive summary
 
-Warsh has no policy violations shown in Google Play Console, its required App content declarations are actioned, Android developer verification is registered, its content rating is complete, and its current closed-test release is serving testers. The production-access application appears **pending, not rejected**.
+Warsh has no policy violations shown in Google Play Console, its required App content declarations are actioned, Android developer verification is registered, and its content rating is complete. On July 20, Google **did not grant production access** and required another 14 days of closed testing with real testers before reapplication. Fresh release `7 (1.0.6)` has now been uploaded to Closed testing - Alpha and sent for review; Play has accepted the bundle and is running its automated checks.
 
 However, the app should not be treated as production-ready until the following confirmed issues are resolved:
 
-1. **The current Android bundle contains native libraries that are not compatible with Google's 16 KB page-size requirement.**
-2. **The Noor message-pack purchase is configured as the wrong Play product type and uses a different product ID from the app/backend.**
-3. **The Play Data safety declaration and privacy disclosures do not fully match the app's data collection and processors.**
-4. **The selected 13–17 target audience creates child/minor compliance obligations, but the app has no neutral age screen or age-specific handling.**
-5. **Legal and API pages on `api.warsh.app` have intermittently encountered a Vercel Security Checkpoint, which could make required disclosures or native API calls inaccessible.**
+1. **The Noor message-pack product/configuration is corrected, but the Play-installed purchase, retry, duplicate, cancellation, pending, and repurchase matrix is not yet complete.**
+2. **The Play Data safety declaration and privacy disclosures do not fully match the app's data collection and processors.**
+3. **The selected 13–17 target audience creates child/minor compliance obligations, but the app has no neutral age screen or age-specific handling.**
+4. **Legal and API pages on `api.warsh.app` have intermittently encountered a Vercel Security Checkpoint, which could make required disclosures or native API calls inaccessible.**
 
-The production-access review can continue while these engineering and Console corrections are completed. Do not withdraw or resubmit the production-access application merely because it is taking longer than the usual review window.
+The original 16 KB native-library blocker is closed: the rebuilt bundle passes local alignment checks, runtime smoke tests passed on a 16 KB emulator, and Play Console reports **“Memory page size: Supports 16 KB.”**
+
+Production cannot be used until the additional closed-test requirement is completed and a new production-access application is approved. Continue the policy and engineering corrections during the test period so the reapplication can truthfully describe production readiness.
 
 ## 2. Severity and status legend
 
@@ -37,21 +38,29 @@ The production-access review can continue while these engineering and Console co
 ### Current state
 
 - Application submitted: **July 11, 2026 at 4:56 PM**.
-- Play Console displayed: **“We have your application for production access.”**
-- Play Console also displayed: **“We’re reviewing your application form. We’ll email the account owner with an update. This usually takes 7 days or less, but may occasionally take longer.”**
-- On July 19, the application was beyond the usual seven-day window, but the wording still indicated **review in progress**, not rejection.
+- On July 20, the account owner received **“More testing required to access Google Play production.”**
+- Google stated that tester engagement may have been insufficient and/or testing best practices were not demonstrated through gathering feedback and improving the app.
+- Google explicitly requires **an additional 14 days of closed testing with real testers** before applying again.
 - Production track remained inactive.
-- Closed testing, alpha release `4 (1.0.3)`, was serving from July 15 at 11:40 AM.
+- The latest verified build is release `7 (1.0.6)`. It was uploaded to Closed testing - Alpha at 100% and sent for review on July 20; Publishing overview currently shows **Changes in review** while automated checks run.
+- The previously serving Closed testing release was alpha release `4 (1.0.3)`, serving from July 15 at 11:40 AM. Do not start counting the new qualifying period until release 7 is available to the closed tester group and at least 12 real testers are continuously opted in.
 
-### Required action
+### Required recovery plan
 
-- [ ] Keep the closed test and enrolled testers active while Google reviews the application.
-- [ ] Do not withdraw, recreate, or resubmit the application unless Google Support directs you to do so.
-- [ ] Contact Play Console Support through **Play Console → Help** and ask for a status check because the review has passed the usual seven-day period.
-- [ ] Include package name `com.warsh.app`, the submission date/time, and a screenshot of the pending message. Do not include credentials, signing keys, or service-account secrets.
-- [ ] Monitor the account-owner email address, Play Console Inbox, Policy status, and Testing requirements pages.
+- [ ] Complete Play review for the already submitted release `7 (1.0.6)` and confirm it is available through the existing Closed testing - Alpha track. Do not rely on Internal testing or count review time toward the tester period.
+- [ ] Enroll at least **12 real testers** and keep them continuously opted in for 14 full days. Recruit 15–20 reliable testers as a buffer because any tester who leaves or joins late may delay eligibility.
+- [ ] Ensure each tester installs/updates Warsh through the Play closed-test opt-in/Store flow rather than a sideloaded APK.
+- [ ] Give testers a feature checklist covering onboarding, account creation/login, lessons and audio, Vocabulary, Noor, trial/paywall, settings, legal links, logout, and account deletion where appropriate.
+- [ ] Ask testers to use Warsh naturally in multiple sessions across the period. Do not fabricate activity, feedback, bugs, or reviews.
+- [ ] Provide a clear feedback channel and retain private testing feedback from **Play Console → Ratings and reviews → Testing feedback**, email, or a tester group.
+- [ ] Keep a private test log containing tester opt-in date, device/Android version, features exercised, feedback, issue severity, action taken, and build containing the resolution. Do not put tester email addresses in this repository.
+- [ ] Publish at least one genuine closed-track improvement when feedback identifies a bug or usability/content issue, then document what changed and how it was verified. Do not create meaningless updates solely to influence review.
+- [ ] Review and resolve all actionable Pre-launch report crashes, ANRs, accessibility issues, security warnings, and compatibility findings before reapplying.
+- [ ] Keep the Closed testing track active and testers opted in through the production-access decision.
+- [ ] Reapply only after Play Console shows eligibility following the additional period. If all qualifying testers start on July 20, the earliest 14-day boundary is approximately August 3 at the same time; use August 4 as a safer buffer and rely on the Console indicator rather than calendar counting alone.
+- [ ] In the new application, give specific, truthful answers about tester engagement, features tested, feedback themes, changes shipped, verification performed, target users, app value, and why the current candidate is production-ready.
 
-Google's published production-access criteria for new personal developer accounts include at least 12 opted-in testers continuously for 14 days. Google can require more testing if participation or engagement is insufficient. Before contacting Support, re-confirm that the tester count remained continuously eligible and that testers meaningfully used the app and submitted the required feedback.
+Google's published baseline is at least 12 testers continuously opted in for 14 days, but satisfying the numerical threshold alone does not guarantee approval. Google reviews engagement, the quality of the testing process, feedback, resulting improvements, and the detail and credibility of the reapplication answers.
 
 ## 4. Changes in the supplied Google documents
 
@@ -145,7 +154,7 @@ These declarations require correction/revalidation as described in Finding P0-3.
 
 ## 6. Detailed findings
 
-### P0-1 — Published release AAB fails 16 KB native-library compatibility
+### P0-1 — 16 KB native-library compatibility — CLOSED July 19, 2026
 
 **Evidence**
 
@@ -172,9 +181,22 @@ These declarations require correction/revalidation as described in Finding P0-3.
 - No Expo SDK, React Native, `expo-av`, `react-native-screens`, or IAP dependency upgrade was required for this correction.
 - A permanent cross-platform checker is available through `npm run check:16kb`. Its `-- --merged` mode validates pre-bundle output without signing/Sentry credentials; its default mode validates the actual release AAB.
 
+**Final artifact and Play verification — completed July 19, 2026**
+
+- Built a clean production AAB as release `5 (1.0.4)` with the production API configuration and automatic Sentry uploads intentionally disabled by the existing production build profile.
+- Final AAB: `warsh-app/android/app/build/outputs/bundle/release/app-release.aab`, 44,285,262 bytes, SHA-256 `883F8B400E8582B8225F481655648B4489A41F88D72DC46064784AB25320709B`.
+- The packaged AAB contains 60 native libraries: 20 `armeabi-v7a`, 20 `arm64-v8a`, 20 `x86_64`, and zero obsolete `x86` libraries.
+- `npm run check:16kb -- android/app/build/outputs/bundle/release/app-release.aab` passed every enforced 64-bit library with zero failures.
+- Bundletool reported `PAGE_ALIGNMENT_16K`, package `com.warsh.app`, target SDK 36, version code 5, and version name 1.0.4.
+- Installed the AAB-derived APK set on the Android 15 `Warsh_API_35_16KB` emulator and confirmed `PAGE_SIZE=16384`, API 35, and `x86_64` execution.
+- Cold launch, onboarding, audio playback, navigation, registration, settings, subscription/paywall rendering, restore-failure handling, and account deletion completed without a fatal exception, ANR, missing native library, signal crash, or process death. Real billing success still requires a Play-installed licensed-tester build and remains covered by the separate IAP QA finding.
+- Play Console accepted and published release `5 (1.0.4)` to Internal testing, where it is **Active** and **Available to internal testers**.
+- Play Console's App bundle details explicitly report **“Memory page size: Supports 16 KB.”** The release review showed no 16 KB warning.
+- The two remaining release-review warnings are unrelated to 16 KB: one x86-only phone is no longer supported after the approved x86 removal, and no deobfuscation file is attached while R8/ProGuard minification is disabled.
+
 **Risk**
 
-Google requires 16 KB support for relevant new apps/updates targeting Android 15 or higher. The bundle currently published in closed testing can cause installation failure or native crashes on 16 KB devices and produces a Play Console warning. The source/toolchain correction is verified, but the published artifact remains non-compliant until a new AAB is built, scanned, uploaded, and accepted by Play Console.
+Google requires 16 KB support for relevant new apps/updates targeting Android 15 or higher. Release `4 (1.0.3)` remains historical evidence of the original problem, but the current Internal testing release `5 (1.0.4)` satisfies the technical and Play Console exit conditions. Preserve the alignment checker as a release gate so dependency, React Native, CMake, or NDK changes cannot silently reintroduce the issue.
 
 **Required action**
 
@@ -182,11 +204,11 @@ Google requires 16 KB support for relevant new apps/updates targeting Android 15
 - [x] Remove the NDK 26 override and preserve React Native's flexible page-size configuration.
 - [x] Verify every enforced 64-bit library in merged native output with `npm run check:16kb -- --merged`.
 - [x] Add a permanent release-gating alignment checker.
-- [ ] Supply `SENTRY_ORG`, `SENTRY_PROJECT`, and `SENTRY_AUTH_TOKEN` securely through the release-build environment; never commit them.
-- [ ] Run a clean production AAB build. The clean build should also prove that the removed `x86` ABI is absent.
-- [ ] Run `npm run check:16kb` against the actual release AAB, not only merged native output.
-- [ ] Upload the rebuilt AAB to an internal/closed test and confirm that the Play Console 16 KB warning disappears.
-- [ ] Test installation and the major native flows on a 16 KB Android emulator/device.
+- [x] Build with the production API configuration and the production profile's intentional Sentry-upload disable flags; no Sentry credential is required when upload is disabled.
+- [x] Run a clean production AAB build and prove that the removed `x86` ABI is absent.
+- [x] Run `npm run check:16kb` against the actual release AAB, not only merged native output.
+- [x] Upload and publish the rebuilt AAB to Internal testing and confirm Play reports 16 KB support without a page-size warning.
+- [x] Test installation and the major native flows on a 16 KB Android emulator/device.
 
 **Exit condition**
 
@@ -194,14 +216,24 @@ Every 64-bit native library reports compatible ELF alignment, the bundle passes 
 
 Reference: [Support 16 KB page sizes](https://developer.android.com/guide/practices/page-sizes)
 
-### P0-2 — Noor message-pack product ID and product type do not match
+### P0-2 — Noor message-pack product and exactly-once credit delivery — ENGINEERING COMPLETE; LIVE PLAY QA PENDING
 
 **Evidence**
 
 - The app requests a consumable purchase with ID `warsh_noor_pack` in `warsh-app/app/(app)/(tabs)/chat.tsx`.
 - The backend purchase-pack route expects `warsh_noor_pack` in `warsh-backend/app/api/noor/purchase-pack/route.ts`.
-- Play Console has no one-time products configured.
-- Play Console instead has `warsh-noor-pack` (hyphens) as a **one-month prepaid subscription base plan** under `warsh_premium`.
+- At audit time, Play Console had no one-time product and instead had `warsh-noor-pack` (hyphens) as a **one-month prepaid subscription base plan** under `warsh_premium`.
+
+**Remediation completed July 19, 2026**
+
+- Created and activated the one-time product `warsh_noor_pack` in Play Console.
+- Deactivated the accidental prepaid base plan `warsh-noor-pack`; monthly and yearly subscription base plans remain active.
+- Added a durable `StorePurchase` receipt ledger. Only a SHA-256 purchase-token digest is retained for one-time purchases, and the unique digest makes credit delivery idempotent.
+- Updated the backend to verify one-time products through the Google Play products endpoint, grant 20 credits exactly once, and return a replay-safe result on retries.
+- Updated the app to load the one-time product, show Play's localized price, submit the purchase for server verification, and finish/consume the transaction only after the server confirms the grant.
+- Applied the production database migration, deployed the backend, passed the backend production build and Noor purchase tests, built release `6 (1.0.5)`, and verified all 60 packaged native libraries.
+- Published release `6 (1.0.5)` to Internal testing and enrolled the authenticated developer/tester account. Play reports the release as Active and Available to internal testers.
+- Remaining gate: install the Play-distributed build and execute the licensed-tester success/cancellation/pending/retry/repurchase matrix. The emulator currently requires a one-time Google Play account sign-in before that can run.
 
 **Risk**
 
@@ -211,12 +243,12 @@ The identifiers differ and a prepaid subscription is not a consumable one-time p
 
 The intended Warsh behavior is a consumable Noor message pack, so the simplest correction is:
 
-- [ ] Create and activate a one-time consumable Play product with the exact ID `warsh_noor_pack`.
-- [ ] Configure its countries, price, tax/category details, and activation status.
-- [ ] Remove or deactivate the accidental `warsh-noor-pack` prepaid base plan if it has no intentional separate use. Verify that changing it will not affect real purchasers before doing so.
+- [x] Create and activate a one-time consumable Play product with the exact ID `warsh_noor_pack`.
+- [x] Configure its countries, price, tax/category details, and activation status.
+- [x] Deactivate the accidental `warsh-noor-pack` prepaid base plan after confirming it was accidental.
 - [ ] Confirm the app fetches the one-time product and displays the live localized Play price.
-- [ ] Confirm the backend validates the correct one-time-product purchase token and prevents duplicate grants.
-- [ ] Confirm the purchase is acknowledged/consumed so the same user can buy another pack later.
+- [x] Confirm through automated tests that the backend validates the correct one-time-product purchase token and prevents duplicate grants.
+- [x] Implement finish/consume after server verification so the same user can buy another pack later; live Play confirmation remains part of the matrix below.
 - [ ] Test a successful purchase, cancellation, pending purchase, duplicate token, server failure/retry, and repurchase using a Play license tester.
 
 **Exit condition**
@@ -246,21 +278,46 @@ The Console, Android client, and backend use the exact same product ID and produ
    - No scheduled retention cleanup/job was found. Chat data is deleted during account deletion, but that is not the same as automatic age-based deletion.
 7. **Different contact details are used across policy versions.**
 
+**Implementation and verification update — July 20, 2026**
+
+- The canonical public website and legal/help pages now live in the dedicated `warsh-site/` project. Final Vercel production deployment `dpl_HyEhEGebzEFLZkfGF4yMfuc32NCn` contains `/privacy`, `/terms`, `/delete-account`, and `/help`; responsive landing and legal-page browser tests passed locally and against the production artifact before the automated test source was challenged again.
+- The backend was restored to API-only behavior. Existing `/privacy`, `/terms`, `/delete-account`, and `/help` URLs permanently redirect through `PUBLIC_SITE_URL`, preserving already-distributed builds. The production value temporarily remains the stable `warsh-site` Vercel alias; both it and `warsh.app` serve the same site, and external clean-network checks verified the old app URLs reach the correct privacy/deletion pages. Switch the variable to `https://warsh.app` after refreshing the expired Vercel CLI session.
+- App source now uses `https://warsh.app` for privacy, Terms, and Help. App TypeScript and quiet lint passed.
+- Vercel assigns `warsh.app` and `www.warsh.app` only to the `warsh-site` project. The Namecheap cutover is complete using authoritative apex `A 216.198.79.1` and `www CNAME 2eac99eaa82c15f3.vercel-dns-017.com` records. External clean-network checks returned HTTP 200 from both canonical hosts. The two Play Console URLs still need to be updated; the old `umarakbar.com` policy can remain as a legacy page after Play no longer references it.
+- Attack Challenge Mode was explicitly disabled for both public-site and backend projects. Clean no-cookie checks returned expected HTML/JSON without a mitigation header; a later high-volume parallel test burst retriggered Vercel's system mitigation for this shared automation source. A separate clean external fetch returned HTTP 200 for the landing, privacy, Terms, deletion, and Help pages and the documented JSON for `/api/health`; P0-5 remains open for Play-installed/mobile-network verification and recurrence monitoring.
+- The earlier Sentry source-map blocker is closed as of July 22. The authenticated projects are `warsh-backend` and `warsh-mobile`; Vercel/EAS production variables now point to those projects, default PII and browser replay are disabled, and request/breadcrumb secrets are scrubbed. The backend production deployment uploaded its server/edge/client artifact bundles successfully. EAS build `d3f027fb-2e36-48d6-9741-6a62b4a4a490` completed as `1.0.6 (11)` without Play submission, and the Sentry Source Map Uploads page shows the two-file bundle for release `1.0.6 (11)`, distribution `11`. Synthetic event `34d08e336c144b44a1ece5dbe6bc7676` was accepted and symbolicated from the generated Android bundle to `/services/sentry.ts:109:2` with original TypeScript source context. Sentry production configuration and symbolication are therefore verified; the separate audience/consent decision still governs the broader processor-policy checklist.
+
 **Risk**
 
 Google requires a clear privacy policy in Play Console and inside the app, an accurate Data safety form, prominent disclosure/consent where required, and actual behavior that matches the statements. A false retention claim or undisclosed analytics/AI processing can lead to rejection or enforcement even when the Console currently says “No issues found.”
 
+**Verified data inventory — July 19, 2026**
+
+| Data | Collection point and destination | Purpose | Retention and deletion | Play Data safety implication |
+|---|---|---|---|---|
+| Name, email, internal user ID, password hash, language and onboarding choices | Registration/profile API → Vercel/Neon; email sent through Resend when requested | Account, authentication, personalization, security email | Active account; database records deleted with account, subject to disclosed limited legal/security retention | Declare Name, Email address, User IDs, and relevant Other info |
+| Lesson, quiz, streak, XP, achievement, vocabulary and Tadabbur state | App APIs → Vercel/Neon; selected events/properties → Mixpanel | Core learning features, progress sync, analytics | Active account in Warsh; provider retention applies to analytics | Declare App interactions and relevant User-generated/Other activity |
+| Noor messages and responses | Chat API → Vercel/Neon; recent context → OpenAI | AI tutor response and visible cross-session transcript | Active account; deleted from Warsh database with account | Declare Messages; determine service-provider sharing answer from applicable provider terms |
+| Subscription and Noor purchase verification | Google Play → app/backend → Vercel/Neon | Verify purchase, grant entitlement/credits, restore, stop duplicate grants | Active account; one-time raw token is hashed before ledger storage; Warsh records deleted with account | Declare Purchase history and User IDs; Google handles full payment-card data |
+| Crash, performance and diagnostic context | App/backend → Sentry after scrubbing; hosting operational logs → Vercel | Reliability, debugging, security | Provider/configured retention; user ID is pseudonymous in Sentry | Declare Crash logs, Diagnostics, Device or other IDs as applicable |
+| Product analytics events and properties | App → Mixpanel with pseudonymous user ID; automatic event tracking disabled | Feature measurement and product improvement | Provider/configured retention; analytics identity reset on logout | Declare App interactions and Device or other IDs; no advertising use |
+| Speaking-practice recording | Microphone → temporary local app file only | On-device playback and shadow comparison | Deleted when discarded, restarted, advanced, or unmounted; no upload path found | Do not declare Voice or sound recordings as collected if runtime network capture confirms the code behavior |
+
 **Required action**
 
-- [ ] Inventory each datum, collection point, destination, purpose, retention period, encryption behavior, deletion method, and processor.
-- [ ] Include at least account name, email, user ID, learning progress, purchase history/tokens, Noor messages, diagnostics/crash data, analytics/app interactions, device identifiers, and microphone/audio behavior.
+- [x] Inventory each datum, collection point, destination, purpose, retention period, encryption behavior, deletion method, and processor.
+- [x] Include account name, email, user ID, learning progress, purchase history/tokens, Noor messages, diagnostics/crash data, analytics/app interactions, device identifiers, and microphone/audio behavior.
 - [ ] Determine through runtime/network verification whether raw audio ever leaves the device.
 - [ ] Update the Play Data safety answers to match verified behavior, including Name and the correct Voice recording answer.
-- [ ] Disclose Mixpanel, Sentry, OpenAI, hosting/database providers, Google Play Billing, and any other receiving SDK/provider with an accurate purpose.
+- [x] Disclose Mixpanel, Sentry, OpenAI, hosting/database providers, Google Play Billing, Resend, and their purposes in both policy implementations.
 - [ ] Verify whether each transfer qualifies as service-provider processing before declaring that data is not shared.
-- [ ] Implement an automatic chat-retention cleanup job that enforces the published period, or change the statement to the retention behavior that is actually implemented.
-- [ ] Use one consistent support/privacy contact.
-- [ ] Consolidate the content of the Play-listed and in-app privacy policies while preserving both existing required URLs/routing unless an approved migration is planned.
+- [x] Remove the unenforced 180-day promise and disclose actual active-account retention in both privacy policies and the Terms.
+- [x] Use `support@warsh.app` consistently for privacy and support contact.
+- [x] Consolidate the policy content in the protected legacy source and canonical `warsh-site` implementation.
+- [x] Deploy the corrected privacy, Terms, deletion, and Help resources to the dedicated public-site project; preserve permanent backend redirects for older app builds.
+- [x] Pass automated mobile/desktop browser checks against the corrected local implementation.
+- [x] Complete the two-record Namecheap DNS cutover without changing nameservers or unrelated records.
+- [ ] Update Play Console to `https://warsh.app/privacy` and `https://warsh.app/delete-account`.
 - [ ] Ensure the app's Terms page, privacy page, store-listing policy link, and deletion page are publicly accessible without login, geoblocking, or browser challenges.
 - [ ] Re-review disclosures after every analytics, AI, advertising, authentication, or crash-reporting SDK change.
 
@@ -324,8 +381,12 @@ Reference: [Target audience and content](https://support.google.com/googleplay/a
 - `https://umarakbar.com/Warsh/privacy-policy.html` returned HTTP 200.
 - `https://umarakbar.com/Warsh/account-deletion.html` returned HTTP 200.
 - The app's in-app Privacy Policy and Terms links use `https://api.warsh.app/privacy` and `/terms`.
-- During review, `api.warsh.app/privacy` and `/terms` initially returned a Vercel 403 Security Checkpoint (`X-Vercel-Mitigated: challenge`) and later returned 200 after the browser/IP challenge was resolved.
-- The API health endpoint returned 200 after the challenge was resolved.
+- During the original review, `api.warsh.app/privacy` and `/terms` initially returned a Vercel 403 Security Checkpoint (`X-Vercel-Mitigated: challenge`) and later returned 200 after the browser/IP challenge was resolved.
+- After the July 20 production deployment, clean no-cookie requests to `/api/health`, `/privacy`, `/terms`, and `/delete-account` again returned HTTP 403 with `X-Vercel-Mitigated: challenge`; the challenge also appeared in a fresh Chrome tab.
+- The project configuration was inspected directly: Bot Protection is off, Attack Mode is off, there are no custom or IP blocking rules, and Standard Deployment Protection explicitly excludes production custom domains. The response is therefore a Vercel system mitigation rather than an application response or configurable project challenge rule.
+- Attack Challenge Mode was subsequently disabled explicitly through Vercel's security API for both the backend and dedicated public-site projects. Clean no-cookie requests then returned API JSON and website HTML without `X-Vercel-Mitigated`; a burst of parallel automated browser traffic later retriggered the platform-wide mitigation for this shared test source.
+- A separate external clean-network fetch returned HTTP 200 for the website landing, privacy, Terms, deletion, and Help routes and returned `{"data":{"status":"ok",...}}` from `https://api.warsh.app/api/health`.
+- Public legal/help content is no longer coupled to the native API project. `warsh.app`/`www` are assigned to `warsh-site`, while `api.warsh.app` remains assigned to `warsh`; the Namecheap apex/`www` DNS cutover is complete.
 
 **Risk**
 
@@ -333,9 +394,11 @@ Google reviewers, crawlers, new users, and native clients may not share a previo
 
 **Required action**
 
-- [ ] Review Vercel Firewall/Security Checkpoint rules for `api.warsh.app`.
-- [ ] Exempt required public legal routes and native mobile API routes from interactive browser challenges while retaining appropriate rate limiting and backend authentication.
-- [ ] Test from a clean browser profile, mobile network, external HTTP client with no cookies, and the Play-installed app.
+- [x] Review Vercel Firewall, Bot Management, Attack Mode, custom/IP rules, and Deployment Protection for `api.warsh.app`.
+- [x] Explicitly disable Attack Challenge Mode on both the public-site and backend projects and confirm clean requests can return the expected application responses.
+- [ ] Open a Vercel support case if system mitigation recurs for normal mobile/tester traffic; project-level Bot/Attack/custom rules are off, and Hobby does not expose system-bypass rules.
+- [ ] If Vercel provides a supported exemption, apply it to required public legal routes and native mobile API routes while retaining appropriate rate limiting and backend authentication.
+- [ ] Complete the remaining clean browser-profile, mobile-network, and Play-installed checks; external no-cookie HTTP verification is complete.
 - [ ] Confirm privacy, terms, account-deletion, health, authentication, lesson, Noor, billing verification, and subscription webhook flows do not receive an HTML challenge response.
 
 **Exit condition**
@@ -431,7 +494,8 @@ Play Integrity currently shows 3 of 7 services active. This is not a confirmed l
 
 - [x] Package name is `com.warsh.app`.
 - [x] Current source targets Android API 36 and compiles with API 36.
-- [x] Current reviewed version is `1.0.3` with version code `4`.
+- [x] Current reviewed version is `1.0.4` with version code `5`; it is available to internal testers.
+- [x] Play Console reports that release `5 (1.0.4)` supports 16 KB memory pages.
 - [x] Android developer verification is registered and signing keys are shown.
 - [x] Content-rating questionnaire is complete.
 - [x] Play Console Policy status showed no issues.
@@ -450,6 +514,7 @@ Play Integrity currently shows 3 of 7 services active. This is not a confirmed l
 - [x] Urdu content audit passed: 72 chapters, 391 lessons, 585 words.
 - [x] Backend production build passed.
 - [x] `https://api.warsh.app/api/health` returned HTTP 200 with status `ok` after the Security Checkpoint was resolved.
+- [x] Fresh release `7 (1.0.6)` was built for the production API, signed, and uploaded to Closed testing - Alpha. Its SHA-256 is `82CAEC9B5EC99822880D63475345509511B0F48C497866B65FA9769D524AA525`; Play accepted version code 7 and showed no 16 KB compatibility error during release review.
 
 These results are evidence of current implementation quality, not a guarantee of Google approval. Fixing this report's findings does not replace Play Console declarations, device testing, or Google's review.
 
@@ -457,8 +522,8 @@ These results are evidence of current implementation quality, not a guarantee of
 
 Work through this order to reduce rework:
 
-1. [ ] **16 KB support:** engineering correction and merged-library verification are complete; build and scan the real AAB, upload it, clear the Console warning, and complete 16 KB runtime testing.
-2. [ ] **Noor purchase:** create the exact consumable one-time product and remove/correct the prepaid-plan mismatch.
+1. [x] **16 KB support:** clean AAB build, packaged-library scan, 16 KB runtime test, Play upload, and Console verification are complete.
+2. [ ] **Noor purchase:** product/configuration and idempotent backend handling are corrected; complete the Play-installed live purchase matrix.
 3. [ ] **Data inventory:** verify actual runtime data flows, especially audio, Mixpanel, Sentry, OpenAI, identifiers, and retention.
 4. [ ] **Privacy/Data safety:** reconcile both public policy versions, the Console form, contact details, and actual behavior; implement retention cleanup.
 5. [ ] **Audience decision:** choose 18+ or implement full minor-aware behavior.
@@ -467,7 +532,7 @@ Work through this order to reduce rework:
 8. [ ] **Permissions:** remove overlay and legacy storage permissions if unused.
 9. [ ] **Android UI compatibility:** resolve edge-to-edge and large-screen warnings.
 10. [ ] **Hardening:** expand Play Integrity where it materially protects backend operations.
-11. [ ] **Production-access follow-up:** contact Play Console Support while keeping the closed test active.
+11. [ ] **Production-access recovery:** run the additional evidence-backed 14-day Closed test and reapply only when the Console restores eligibility.
 
 ## 9. Production-launch exit checklist
 
@@ -475,10 +540,10 @@ Do not promote the release until every applicable item is evidenced:
 
 ### Build and device compatibility
 
-- [ ] Final AAB targets API 36 or the then-current required target.
-- [ ] Final AAB has no 16 KB compatibility warning.
-- [ ] Every bundled 64-bit native library passes ELF alignment checks.
-- [ ] 16 KB emulator/device smoke test passes.
+- [x] Final AAB targets API 36 or the then-current required target.
+- [x] Final AAB has no 16 KB compatibility warning.
+- [x] Every bundled 64-bit native library passes ELF alignment checks.
+- [x] 16 KB emulator/device smoke test passes.
 - [ ] Android 15/16, tablet, foldable, rotation/resizing, keyboard, and accessibility smoke tests pass.
 - [ ] Final merged manifest contains only justified permissions.
 
@@ -512,7 +577,8 @@ Do not promote the release until every applicable item is evidenced:
 
 ### Console and review
 
-- [ ] Closed-test eligibility remained continuous until production access was granted.
+- [ ] At least 12 real testers remain continuously opted in throughout the new 14-day Closed test and until the next production-access decision.
+- [ ] Closed-test engagement, feedback, fixes, verification, devices, and release updates are documented truthfully for the reapplication.
 - [ ] Latest release has no new pre-launch report crashes, ANRs, security warnings, or policy alerts.
 - [ ] Policy status still says no issues immediately before rollout.
 - [ ] Production access is approved.
@@ -565,4 +631,4 @@ After the build:
 
 ## 12. Audit boundary
 
-This audit combined the supplied Google policy documents, current Google Play Console state, current Warsh source/configuration, local release-bundle inspection, public endpoint checks, and repository validation. It did not modify app behavior, Play Console configuration, products, policies, or live infrastructure. Each Console-only item must be rechecked immediately before production rollout.
+This audit combined the supplied Google policy documents, current Google Play Console state, current Warsh source/configuration, local release-bundle inspection, 16 KB emulator testing, public endpoint checks, and repository validation. During remediation, releases `5 (1.0.4)` and `6 (1.0.5)` were published to Internal testing, the Noor one-time product was corrected, supporting backend/legal changes were deployed, and release `7 (1.0.6)` was submitted to Closed testing - Alpha. No production rollout was made. Each remaining Console-only item must be rechecked immediately before production rollout.
