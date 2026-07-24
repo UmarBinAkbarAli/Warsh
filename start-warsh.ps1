@@ -56,7 +56,8 @@ if (-not $dev -and -not $prod) {
         (Join-Path $appRoot 'babel.config.js'),
         (Join-Path $appRoot 'metro.config.js'),
         (Join-Path $appRoot 'package.json'),
-        (Join-Path $appRoot 'package-lock.json')
+        (Join-Path $appRoot 'package-lock.json'),
+        (Join-Path $RepoRoot 'start-warsh.ps1')
     )
     $newestSource = $sourcePaths |
         Where-Object { Test-Path -LiteralPath $_ } |
@@ -80,14 +81,46 @@ if (-not $dev -and -not $prod) {
         $env:SENTRY_DISABLE_AUTO_UPLOAD = 'true'
         $env:SENTRY_DISABLE_NATIVE_DEBUG_UPLOAD = 'true'
 
+        # Expo loads warsh-app/.env while bundling JavaScript. That file is
+        # intentionally configured for local development, so temporarily
+        # hide it here; otherwise a release APK can silently ship with
+        # http://127.0.0.1:3000 instead of the production API URL above.
+        $localDotEnv = Join-Path $appRoot '.env'
+        $dotEnvBackup = Join-Path $appRoot ".env.warsh-release-backup-$PID"
+        $dotEnvHidden = $false
+        if (Test-Path -LiteralPath $dotEnvBackup) {
+            throw "A previous release build left a dotenv backup in place: $dotEnvBackup"
+        }
+        if (Test-Path -LiteralPath $localDotEnv) {
+            Move-Item -LiteralPath $localDotEnv -Destination $dotEnvBackup
+            $dotEnvHidden = $true
+        }
+
         Push-Location (Join-Path $appRoot 'android')
         try {
+            # The API URL is compiled into the JS bundle. Remove only the
+            # generated release bundle outputs so Gradle cannot reuse a prior
+            # local-development bundle without paying the cost of a full
+            # Android clean (which can fail when lint has a file lock).
+            $bundleOutputs = @(
+                (Join-Path (Get-Location) 'app\build\generated\assets\createBundleReleaseJsAndAssets'),
+                (Join-Path (Get-Location) 'app\build\generated\res\createBundleReleaseJsAndAssets'),
+                (Join-Path (Get-Location) 'app\build\intermediates\sourcemaps\react\release')
+            )
+            foreach ($bundleOutput in $bundleOutputs) {
+                if (Test-Path -LiteralPath $bundleOutput) {
+                    Remove-Item -LiteralPath $bundleOutput -Recurse -Force
+                }
+            }
             & .\gradlew.bat assembleRelease
             if ($LASTEXITCODE -ne 0) {
                 throw "Release APK build failed with exit code $LASTEXITCODE."
             }
         } finally {
             Pop-Location
+            if ($dotEnvHidden) {
+                Move-Item -LiteralPath $dotEnvBackup -Destination $localDotEnv
+            }
         }
     }
 
