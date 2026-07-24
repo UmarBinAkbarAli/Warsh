@@ -3,6 +3,11 @@ apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
 
 def projectRoot = rootDir.getAbsoluteFile().getParentFile().getAbsolutePath()
+def configuredReactNativeArchitectures =
+    (findProperty('reactNativeArchitectures') ?: 'armeabi-v7a,arm64-v8a,x86_64')
+        .split(',')
+        .collect { it.trim() }
+        .findAll { !it.isEmpty() }
 
 static def versionToNumber(major, minor, patch) {
   return patch * 100 + minor * 10000 + major * 1000000
@@ -24,6 +29,19 @@ def getRNVersion() {
   )
 }
 def rnVersion = getRNVersion()
+def releaseStorePassword = System.getenv('WARSH_UPLOAD_STORE_PASSWORD') ?: findProperty('WARSH_UPLOAD_STORE_PASSWORD')
+def releaseKeyPassword = System.getenv('WARSH_UPLOAD_KEY_PASSWORD') ?: findProperty('WARSH_UPLOAD_KEY_PASSWORD')
+def releaseKeyAlias = System.getenv('WARSH_UPLOAD_KEY_ALIAS') ?: findProperty('WARSH_UPLOAD_KEY_ALIAS')
+def releaseStoreFile = System.getenv('WARSH_UPLOAD_STORE_FILE') ?: findProperty('WARSH_UPLOAD_STORE_FILE') ?: 'warsh-release.keystore'
+def releaseTaskRequested = gradle.startParameter.taskNames.any { it.toLowerCase().contains('release') }
+def releaseSigningManagedByEas = System.getenv('EAS_BUILD') != null
+
+// EAS injects the production profile's configured local Android credentials
+// after evaluating this file. Direct local Gradle release builds must still
+// provide the WARSH_UPLOAD_* values explicitly.
+if (releaseTaskRequested && !releaseSigningManagedByEas && (!releaseStorePassword || !releaseKeyPassword || !releaseKeyAlias)) {
+    throw new GradleException('Release signing requires WARSH_UPLOAD_STORE_PASSWORD, WARSH_UPLOAD_KEY_PASSWORD, and WARSH_UPLOAD_KEY_ALIAS.')
+}
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -116,8 +134,12 @@ android {
         applicationId 'com.warsh.app'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 4
-        versionName "1.0.3"
+        versionCode 14
+        versionName "1.0.6"
+        ndk {
+            // Filter dependency-provided prebuilts as well as app-compiled native code.
+            abiFilters(*configuredReactNativeArchitectures)
+        }
     }
     signingConfigs {
         debug {
@@ -127,10 +149,10 @@ android {
             keyPassword 'android'
         }
         release {
-            storeFile file('warsh-release.keystore')
-            storePassword 'Warsh@Play2026!'
-            keyAlias 'warsh'
-            keyPassword 'Warsh@Play2026!'
+            storeFile file(releaseStoreFile)
+            storePassword releaseStorePassword
+            keyAlias releaseKeyAlias
+            keyPassword releaseKeyPassword
         }
     }
     buildTypes {
@@ -175,6 +197,10 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
+    // Google Play is the source of truth for whether the signed-in tester is
+    // eligible for a newer Closed-track build. Warsh exposes this read-only
+    // availability check to React Native and presents its own update banner.
+    implementation("com.google.android.play:app-update:2.1.0")
 
     def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true";
     def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true";

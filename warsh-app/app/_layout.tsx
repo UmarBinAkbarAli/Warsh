@@ -11,6 +11,7 @@ import { PaperProvider } from "react-native-paper";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { WebShell } from "../components/WebShell";
+import { AppUpdateBanner } from "../components/AppUpdateBanner";
 import { WarshPaperTheme } from "../constants/paperTheme";
 import { Colors } from "../constants/theme";
 
@@ -135,6 +136,7 @@ function RootLayout() {
           <WebShell>
             <Stack screenOptions={{ headerShown: false }} />
           </WebShell>
+          <AppUpdateBanner />
         </PaperProvider>
       </SafeAreaProvider>
     </ErrorBoundary>

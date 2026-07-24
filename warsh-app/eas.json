@@ -41,20 +41,19 @@
       }
     },
     "production": {
+      "credentialsSource": "local",
       "autoIncrement": true,
       "channel": "production",
       "env": {
         "EXPO_PUBLIC_API_URL": "https://api.warsh.app",
-        "EXPO_PUBLIC_ENVIRONMENT": "production",
-        "SENTRY_DISABLE_AUTO_UPLOAD": "true",
-        "SENTRY_DISABLE_NATIVE_DEBUG_UPLOAD": "true"
+        "EXPO_PUBLIC_ENVIRONMENT": "production"
       }
     }
   },
   "submit": {
     "production": {
       "android": {
-        "track": "internal"
+        "track": "alpha"
       }
     }
   }

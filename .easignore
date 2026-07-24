@@ -1,0 +1,56 @@
+# Repository-level EAS archive rules. EAS uploads from the Git root even when
+# commands run inside warsh-app, so app-local rules alone do not protect the
+# monorepo archive.
+.git/
+.agents/
+.claude/
+.codex/
+.design-sync/
+.vercel/
+
+node_modules/
+**/node_modules/
+.expo/
+**/.expo/
+.expo-shared/
+**/.expo-shared/
+.next/
+**/.next/
+
+.env
+.env.*
+!.env.example
+*.log
+*.raw
+*.apk
+*.aab
+*.jks
+*.keystore
+*.tsbuildinfo
+
+# The Android client is self-contained and does not import these workspaces.
+artifacts/
+Docs/
+ds-bundle/
+landing/
+packages/
+tests/
+warsh-backend/
+warsh-site/
+
+# Local app outputs, design files, and native build caches.
+warsh-app/dist/
+warsh-app/exports/
+warsh-app/.web-build/
+warsh-app/apk-inspect/
+warsh-app/warsh-app-UI-v2
+warsh-app/warsh-app-UI-v2.pen
+warsh-app/*.lnk
+warsh-app/android/app/build/
+warsh-app/android/build/
+warsh-app/android/.gradle/
+warsh-app/android/.kotlin/
+warsh-app/android/.cxx/
+warsh-app/android/app/.cxx/
+warsh-app/android/local.properties
+warsh-app/android/app/src/main/assets/

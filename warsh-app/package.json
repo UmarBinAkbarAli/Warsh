@@ -17,7 +17,8 @@
     "lint": "eslint . --ext .ts,.tsx",
     "ios": "expo run:ios",
     "deploy:web": "node scripts/deploy-web.mjs",
-    "check:16kb": "node scripts/check-16kb-alignment.mjs"
+    "check:16kb": "node scripts/check-16kb-alignment.mjs",
+    "verify:play-signing": "node scripts/verify-play-signing.mjs"
   },
   "dependencies": {
     "@expo-google-fonts/cormorant-garamond": "^0.4.1",
