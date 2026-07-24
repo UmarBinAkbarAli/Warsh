@@ -11,11 +11,9 @@ if (shouldInitSentry()) {
   Sentry.init({
     dsn: getSentryDsn(),
     environment: getSentryEnvironment(),
+    sendDefaultPii: false,
     tracesSampleRate: productionSampleRate(),
     enableLogs: process.env.NODE_ENV !== "production",
-    replaysSessionSampleRate: process.env.NODE_ENV === "production" ? 0.0 : 0.1,
-    replaysOnErrorSampleRate: 1.0,
-    integrations: [Sentry.replayIntegration()],
     beforeSend: scrubSentryEvent,
   });
 }

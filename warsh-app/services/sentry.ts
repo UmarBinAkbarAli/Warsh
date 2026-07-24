@@ -26,6 +26,7 @@ const SENSITIVE_KEY_PATTERNS = [
 ];
 
 const EMAIL_PATTERN = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i;
+const BEARER_PATTERN = /\bBearer\s+[A-Za-z0-9._~+\/-]+=*/gi;
 
 export function initSentry() {
   if (!DSN) return false;
@@ -33,6 +34,7 @@ export function initSentry() {
   Sentry.init({
     dsn: DSN,
     environment: ENV,
+    sendDefaultPii: false,
     tracesSampleRate: ENV === "production" ? 0.1 : 1.0,
     debug: false,
     beforeSend(event) {
@@ -43,6 +45,22 @@ export function initSentry() {
 
       if (event.extra) {
         event.extra = scrubValue(event.extra) as typeof event.extra;
+      }
+
+      if (event.request) {
+        event.request.data = scrubValue(event.request.data);
+        event.request.headers = scrubValue(event.request.headers) as typeof event.request.headers;
+        event.request.cookies = undefined;
+        event.request.query_string = undefined;
+        event.request.url = stripUrlQuery(event.request.url);
+      }
+
+      if (event.breadcrumbs) {
+        event.breadcrumbs = event.breadcrumbs.map((breadcrumb) => ({
+          ...breadcrumb,
+          data: scrubValue(breadcrumb.data) as typeof breadcrumb.data,
+          message: breadcrumb.message ? scrubString(breadcrumb.message) : breadcrumb.message,
+        }));
       }
 
       return event;
@@ -95,7 +113,7 @@ function scrubValue(value: unknown, depth = 0): unknown {
   if (depth >= MAX_DEPTH) return "[Truncated]";
 
   if (typeof value === "string") {
-    return EMAIL_PATTERN.test(value) ? FILTERED : value;
+    return scrubString(value);
   }
 
   if (Array.isArray(value)) {
@@ -112,6 +130,16 @@ function scrubValue(value: unknown, depth = 0): unknown {
       isSensitiveKey(key) ? FILTERED : scrubValue(nestedValue, depth + 1),
     ]),
   );
+}
+
+function stripUrlQuery(url: string | undefined) {
+  if (!url) return url;
+  return url.split(/[?#]/, 1)[0];
+}
+
+function scrubString(value: string) {
+  if (EMAIL_PATTERN.test(value)) return FILTERED;
+  return value.replace(BEARER_PATTERN, `Bearer ${FILTERED}`);
 }
 
 function isSensitiveKey(key: string) {

@@ -23,6 +23,7 @@ const SENSITIVE_KEY_PATTERNS = [
 ];
 
 const EMAIL_PATTERN = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i;
+const BEARER_PATTERN = /\bBearer\s+[A-Za-z0-9._~+\/-]+=*/gi;
 
 export function getSentryDsn() {
   return process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.SENTRY_DSN;
@@ -56,15 +57,32 @@ export function scrubSentryEvent<TEvent extends Event>(event: TEvent): TEvent {
     event.user = id ? { id } : undefined;
   }
 
-  if (event.request?.data) {
+  if (event.request) {
     event.request.data = scrubValue(event.request.data);
+    event.request.headers = scrubValue(event.request.headers) as typeof event.request.headers;
+    event.request.cookies = undefined;
+    event.request.query_string = undefined;
+    event.request.url = stripUrlQuery(event.request.url);
   }
 
   if (event.extra) {
     event.extra = scrubValue(event.extra) as Event["extra"];
   }
 
+  if (event.breadcrumbs) {
+    event.breadcrumbs = event.breadcrumbs.map((breadcrumb) => ({
+      ...breadcrumb,
+      data: scrubValue(breadcrumb.data) as typeof breadcrumb.data,
+      message: breadcrumb.message ? scrubString(breadcrumb.message) : breadcrumb.message,
+    }));
+  }
+
   return event;
+}
+
+function stripUrlQuery(url: string | undefined) {
+  if (!url) return url;
+  return url.split(/[?#]/, 1)[0];
 }
 
 function scrubValue(value: unknown, depth = 0): unknown {
@@ -72,7 +90,7 @@ function scrubValue(value: unknown, depth = 0): unknown {
   if (depth >= MAX_DEPTH) return "[Truncated]";
 
   if (typeof value === "string") {
-    return EMAIL_PATTERN.test(value) ? FILTERED : value;
+    return scrubString(value);
   }
 
   if (Array.isArray(value)) {
@@ -89,6 +107,11 @@ function scrubValue(value: unknown, depth = 0): unknown {
       isSensitiveKey(key) ? FILTERED : scrubValue(nestedValue, depth + 1),
     ]),
   );
+}
+
+function scrubString(value: string) {
+  if (EMAIL_PATTERN.test(value)) return FILTERED;
+  return value.replace(BEARER_PATTERN, `Bearer ${FILTERED}`);
 }
 
 function isSensitiveKey(key: string) {

@@ -11,6 +11,7 @@ if (shouldInitSentry()) {
   Sentry.init({
     dsn: getSentryDsn(),
     environment: getSentryEnvironment(),
+    sendDefaultPii: false,
     tracesSampleRate: productionSampleRate(),
     enableLogs: process.env.NODE_ENV !== "production",
     beforeSend: scrubSentryEvent,
