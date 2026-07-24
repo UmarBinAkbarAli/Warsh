@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
-import { get4amPKTBoundary } from "../../../../lib/date";
+import {
+  get4amPKTBoundary,
+  getPrevious4amPKTBoundary,
+} from "../../../../lib/date";
 import { timingSafeStringEqual } from "../../../../lib/auth";
 
 // Vercel cron: runs daily at 23:00 UTC = 04:00 PKT
@@ -10,15 +13,18 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  const todayStart = get4amPKTBoundary();
+  const now = new Date();
+  const currentBoundary = get4amPKTBoundary(now);
+  const previousBoundary = getPrevious4amPKTBoundary(now);
 
-  // Find all streak records where the user was NOT active today
+  // At the start of a new streak day, reset only users who missed the entire
+  // 04:00-to-04:00 day that just ended.
   const staleStreaks = await prisma.streak.findMany({
     where: {
       currentStreak: { gt: 0 },
       OR: [
         { lastActiveDate: null },
-        { lastActiveDate: { lt: todayStart } },
+        { lastActiveDate: { lt: previousBoundary } },
       ],
     },
     select: { id: true, userId: true, currentStreak: true, streakFreezes: true, lastActiveDate: true },
@@ -34,8 +40,11 @@ export async function GET(request: Request) {
         where: { id: streak.id },
         data: {
           streakFreezes: streak.streakFreezes - 1,
-          lastFreezeUsedAt: new Date(),
-          lastActiveDate: new Date(),
+          lastFreezeUsedAt: currentBoundary,
+          // The virtual activity belongs to the missed day, so a lesson in
+          // the newly opened day increments normally without granting an
+          // additional free day.
+          lastActiveDate: previousBoundary,
         },
       });
       frozen++;

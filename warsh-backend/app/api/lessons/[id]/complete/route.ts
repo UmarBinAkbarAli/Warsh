@@ -1,16 +1,11 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../../lib/auth";
-import { isTodayPKT, isYesterdayPKT, get4amPKTBoundary } from "../../../../../lib/date";
+import { get4amPKTBoundary } from "../../../../../lib/date";
+import { calculateLessonStreakUpdate } from "../../../../../lib/streak";
 import { getUserCourseState, PROGRESS_STATUS } from "../../../../../lib/course";
 import { checkAndAwardAchievements } from "../../../../../lib/achievements";
 import { getUserSubscriptionState, requiresSubscription } from "../../../../../lib/subscription";
-
-// Award a freeze at the 7-day milestone and every 30 streaks thereafter, max 2
-function shouldAwardFreeze(newStreak: number, currentFreezes: number): boolean {
-  if (currentFreezes >= 2) return false;
-  return newStreak === 7 || (newStreak > 7 && newStreak % 30 === 0);
-}
 
 interface Props {
   params: { id: string };
@@ -117,41 +112,10 @@ export async function POST(request: Request, { params }: Props) {
         data: { userId, currentStreak: 1, longestStreak: 1, lastActiveDate: now }
       });
     } else {
-      const lastActive = currentStreakRecord.lastActiveDate ? new Date(currentStreakRecord.lastActiveDate) : null;
-      if (lastActive && isTodayPKT(lastActive)) {
-        // Already active today — just refresh timestamp
-        await tx.streak.update({ where: { userId }, data: { lastActiveDate: now } });
-      } else if (lastActive && isYesterdayPKT(lastActive)) {
-        // Consecutive day — increment streak
-        const nextStreak = currentStreakRecord.currentStreak + 1;
-        const freezeAward = shouldAwardFreeze(nextStreak, currentStreakRecord.streakFreezes);
-        await tx.streak.update({
-          where: { userId },
-          data: {
-            currentStreak: nextStreak,
-            longestStreak: Math.max(currentStreakRecord.longestStreak, nextStreak),
-            lastActiveDate: now,
-            ...(freezeAward ? { streakFreezes: Math.min(2, currentStreakRecord.streakFreezes + 1) } : {}),
-          }
-        });
-      } else {
-        // Missed one or more days — try to consume a freeze
-        if (currentStreakRecord.streakFreezes > 0) {
-          await tx.streak.update({
-            where: { userId },
-            data: {
-              streakFreezes: currentStreakRecord.streakFreezes - 1,
-              lastActiveDate: now,
-              lastFreezeUsedAt: now,
-            }
-          });
-        } else {
-          await tx.streak.update({
-            where: { userId },
-            data: { currentStreak: 1, lastActiveDate: now }
-          });
-        }
-      }
+      await tx.streak.update({
+        where: { userId },
+        data: calculateLessonStreakUpdate(currentStreakRecord, now),
+      });
     }
 
     if (!firstCompletion) return;
