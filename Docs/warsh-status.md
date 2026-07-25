@@ -82,6 +82,22 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Recent verified repository changes
 
+### 2026-07-26
+
+- Diagnosed the Closed-testing login outage in Play version `1.0.6 (15)`.
+  The uploaded AAB embedded `http://127.0.0.1:3000` and did not contain
+  `https://api.warsh.app`, so Play-installed devices could not reach the
+  production backend. The failure occurred because that local AAB was built
+  before the release-build API selection fix in commit `ac3f01e`.
+- Built the signed replacement production AAB as `1.0.6 (18)` through the EAS
+  production profile. The finished artifact contains exactly one
+  `https://api.warsh.app` reference and no localhost or staging API reference.
+  Its SHA-256 is
+  `989BFE37B19CC2A8D3A6F2046CA0FF069B58A74819BAA36A1FF5F30D30453B9D`,
+  its upload certificate SHA-1 ends in `D2:6B`, and all 60 native libraries
+  pass the 16 KB alignment gate. Play upload and tester availability remain
+  external release steps.
+
 ### 2026-07-24
 
 - Corrected the Android production signing path after EAS produced version 12
