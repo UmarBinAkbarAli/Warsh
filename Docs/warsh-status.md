@@ -95,8 +95,10 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
   Its SHA-256 is
   `989BFE37B19CC2A8D3A6F2046CA0FF069B58A74819BAA36A1FF5F30D30453B9D`,
   its upload certificate SHA-1 ends in `D2:6B`, and all 60 native libraries
-  pass the 16 KB alignment gate. Play upload and tester availability remain
-  external release steps.
+  pass the 16 KB alignment gate. The bundle was uploaded to the Play Console
+  Closed testing Alpha track at a 100% rollout and submitted for review on
+  July 26, 2026. Google Play currently reports `Changes in review`; tester
+  availability remains pending Play approval and processing.
 
 ### 2026-07-24
 
