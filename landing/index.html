@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Warsh — Quranic Arabic</title>
-  <meta name="description" content="Learn the Arabic of the Quran through a scholar-validated curriculum, beautiful daily lessons, and your AI tutor Ustaad Noor. 7 days free.">
+  <meta name="description" content="Learn the Arabic of the Quran through a scholar-validated curriculum, beautiful daily lessons, and your AI tutor Ustaad Noor. Now in closed beta — free early access.">
   <meta property="og:title" content="Warsh — Quranic Arabic">
-  <meta property="og:description" content="Understand what you recite. Scholar-validated Quranic Arabic for Muslims. 7 days free.">
+  <meta property="og:description" content="Understand what you recite. Scholar-validated Quranic Arabic for Muslims. Join the closed beta free.">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#F4EBD0">
 
@@ -15,6 +15,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Scheherazade+New:wght@400;600;700&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GSAP + ScrollTrigger: the motion engine for this static page -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -49,6 +52,7 @@
       background-color: #F4EBD0;
       color: #1A1A1A;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
     .font-arabic { font-family: 'Scheherazade New', serif; }
 
@@ -58,6 +62,13 @@
     }
     .motif-bg-dark {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cpolygon points='36,4 42,24 63,24 47,37 53,57 36,45 19,57 25,37 9,24 30,24' fill='none' stroke='%23C8A047' stroke-width='0.6' stroke-opacity='0.12'/%3E%3C/svg%3E");
+    }
+
+    /* Scroll progress line */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, #9A7D33, #C8A047, #E0BC68);
+      z-index: 60; will-change: width;
     }
 
     /* Navbar scroll state */
@@ -73,18 +84,18 @@
       transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
     .card-lift:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(26,26,26,0.08);
-      border-color: rgba(200,160,71,0.35);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 34px rgba(26,26,26,0.10);
+      border-color: rgba(200,160,71,0.45);
     }
 
     /* Gold CTA button */
     .btn-gold {
       background: #C8A047;
       color: #1A1A1A;
-      transition: background 0.2s ease, transform 0.1s ease;
+      transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
     }
-    .btn-gold:hover { background: #E0BC68; }
+    .btn-gold:hover { background: #E0BC68; box-shadow: 0 8px 22px rgba(200,160,71,0.35); }
     .btn-gold:active { background: #9A7D33; transform: scale(0.98); }
 
     /* Outline button */
@@ -100,105 +111,137 @@
       box-shadow: 0 40px 80px rgba(26,26,26,0.28), 0 0 0 1px rgba(200,160,71,0.08);
     }
 
+    /* Shimmer sweep across the headline accent word */
+    .shimmer {
+      background: linear-gradient(100deg, #9A7D33 20%, #E0BC68 40%, #C8A047 60%, #9A7D33 80%);
+      background-size: 200% auto;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+      animation: shimmer 5s linear infinite;
+    }
+    @keyframes shimmer { to { background-position: 200% center; } }
+
+    /* Word marquee */
+    .marquee { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+    .marquee:hover { animation-play-state: paused; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* Tadabbur word — starts sage, illuminates to gold via GSAP */
+    .tad-word { color: rgba(122,139,112,0.5); transition: text-shadow .4s ease; }
+    .tad-word.lit { text-shadow: 0 0 18px rgba(200,160,71,0.35); }
+
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
+      .marquee { animation: none; }
     }
 
     /* Focus visible only for keyboard */
     :focus:not(:focus-visible) { outline: none; }
     :focus-visible { outline: 2px solid #C8A047; outline-offset: 2px; border-radius: 4px; }
 
-    /* Smooth fade-in for sections */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: none;
-    }
+    /* GSAP reveal base state (JS adds the animation; fallback keeps content visible) */
+    .reveal { opacity: 1; }
+    .gsap-ready .reveal { opacity: 0; }
   </style>
 </head>
 
 <body>
 
-<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+<!-- Scroll progress -->
+<div id="scroll-progress" aria-hidden="true"></div>
 
-    <!-- Logo -->
-    <a href="/" class="flex items-center gap-2 cursor-pointer flex-shrink-0">
-      <span class="font-lora font-bold text-ink text-lg tracking-tight leading-none">Warsh</span>
-      <span class="text-sage-soft text-base leading-none select-none">·</span>
-      <span class="font-arabic font-bold text-gold text-2xl leading-none" dir="rtl">وَرْش</span>
-    </a>
+<!-- ═══════════════════════════ HEADER (announcement + nav) ═══════════════════════════ -->
+<header class="fixed top-0 left-0 right-0 z-50">
 
-    <!-- Desktop links -->
-    <div class="hidden md:flex items-center gap-8">
-      <a href="#features"    class="font-lora text-sm text-ink-muted hover:text-ink transition-colors duration-200 cursor-pointer">Features</a>
-      <a href="#how-it-works" class="font-lora text-sm text-ink-muted hover:text-ink transition-colors duration-200 cursor-pointer">How it works</a>
-      <a href="#pricing"     class="font-lora text-sm text-ink-muted hover:text-ink transition-colors duration-200 cursor-pointer">Pricing</a>
+  <!-- Closed-beta announcement strip -->
+  <div class="bg-ink text-parchment">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-2 flex items-center justify-center gap-2 text-center">
+      <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0 animate-pulse" aria-hidden="true"></span>
+      <p class="font-lora text-xs sm:text-sm text-parchment/85">
+        <span class="text-gold font-semibold">Closed beta is live</span> — free early access, no payment during testing.
+        <a href="#access" class="underline decoration-gold/50 underline-offset-2 hover:text-gold transition-colors">Join as a tester →</a>
+      </p>
+    </div>
+  </div>
+
+  <nav id="navbar">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 cursor-pointer flex-shrink-0">
+        <span class="font-lora font-bold text-ink text-lg tracking-tight leading-none">Warsh</span>
+        <span class="text-sage-soft text-base leading-none select-none">·</span>
+        <span class="font-arabic font-bold text-gold text-2xl leading-none" dir="rtl">وَرْش</span>
+      </a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#features"    class="font-lora text-sm text-ink-muted hover:text-ink transition-colors duration-200 cursor-pointer">Features</a>
+        <a href="#how-it-works" class="font-lora text-sm text-ink-muted hover:text-ink transition-colors duration-200 cursor-pointer">How it works</a>
+        <a href="#pricing"     class="font-lora text-sm text-ink-muted hover:text-ink transition-colors duration-200 cursor-pointer">Pricing</a>
+      </div>
+
+      <!-- CTA -->
+      <a href="#access"
+         class="btn-gold font-lora font-semibold text-sm px-5 py-2.5 rounded-xl cursor-pointer hidden sm:block">
+        Get free access
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg hover:bg-parchment-deep transition-colors cursor-pointer" aria-label="Open menu" aria-expanded="false">
+        <svg class="w-5 h-5 text-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
 
-    <!-- CTA -->
-    <a href="#download"
-       class="btn-gold font-lora font-semibold text-sm px-5 py-2.5 rounded-xl cursor-pointer hidden sm:block">
-      Download free
-    </a>
-
-    <!-- Mobile hamburger -->
-    <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg hover:bg-parchment-deep transition-colors cursor-pointer" aria-label="Open menu" aria-expanded="false">
-      <svg class="w-5 h-5 text-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile drawer -->
-  <div id="mobile-menu" class="hidden sm:hidden bg-parchment border-t border-sage-soft/30 px-5 py-4 space-y-3">
-    <a href="#features"     class="block font-lora text-sm text-ink-soft py-2 cursor-pointer">Features</a>
-    <a href="#how-it-works" class="block font-lora text-sm text-ink-soft py-2 cursor-pointer">How it works</a>
-    <a href="#pricing"      class="block font-lora text-sm text-ink-soft py-2 cursor-pointer">Pricing</a>
-    <a href="#download"     class="block btn-gold font-lora font-semibold text-sm text-center py-3 rounded-xl cursor-pointer mt-2">Download free →</a>
-  </div>
-</nav>
+    <!-- Mobile drawer -->
+    <div id="mobile-menu" class="hidden sm:hidden bg-parchment border-t border-sage-soft/30 px-5 py-4 space-y-3">
+      <a href="#features"     class="block font-lora text-sm text-ink-soft py-2 cursor-pointer">Features</a>
+      <a href="#how-it-works" class="block font-lora text-sm text-ink-soft py-2 cursor-pointer">How it works</a>
+      <a href="#pricing"      class="block font-lora text-sm text-ink-soft py-2 cursor-pointer">Pricing</a>
+      <a href="#access"       class="block btn-gold font-lora font-semibold text-sm text-center py-3 rounded-xl cursor-pointer mt-2">Get free access →</a>
+    </div>
+  </nav>
+</header>
 
 
 <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
-<section class="motif-bg min-h-screen flex items-center pt-16 overflow-hidden" style="background-color:#F4EBD0;">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 lg:py-32 w-full">
+<section class="motif-bg min-h-screen flex items-center pt-28 sm:pt-24 overflow-hidden" style="background-color:#F4EBD0;">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16 lg:py-24 w-full">
     <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
       <!-- Text -->
-      <div class="fade-in">
+      <div>
         <!-- Badge -->
-        <div class="inline-flex items-center gap-2 bg-cream border border-sage-soft/50 rounded-full px-4 py-1.5 mb-8">
+        <div class="hero-el inline-flex items-center gap-2 bg-cream border border-sage-soft/50 rounded-full px-4 py-1.5 mb-8">
           <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0"></span>
-          <span class="font-lora text-xs text-ink-muted tracking-wide">Scholar-validated · Madinah Reader curriculum</span>
+          <span class="font-lora text-xs text-ink-muted tracking-wide">Free during closed beta · Scholar-validated curriculum</span>
         </div>
 
         <!-- Headline -->
         <h1 class="font-lora font-bold text-ink text-5xl sm:text-6xl lg:text-7xl leading-[1.1] mb-5">
-          Where Arabic<br>is crafted.
+          <span class="hero-el inline-block">Where Arabic</span><br>
+          <span class="hero-el inline-block shimmer">is crafted.</span>
         </h1>
 
         <!-- Arabic sub-headline -->
-        <p class="font-arabic text-gold-deep text-2xl sm:text-3xl mb-7 leading-loose" dir="rtl" lang="ar">
+        <p class="hero-el font-arabic text-gold-deep text-2xl sm:text-3xl mb-7 leading-loose" dir="rtl" lang="ar">
           حَيْثُ تُصْنَعُ الْعَرَبِيَّة
         </p>
 
-        <p class="font-lora text-ink-soft text-lg leading-relaxed mb-10 max-w-lg">
-          Learn the Arabic of the Quran — structured lessons, a scholar-endorsed curriculum, and Ustaad Noor, your AI tutor, ready whenever you have a question.
+        <p class="hero-el font-lora text-ink-soft text-lg leading-relaxed mb-10 max-w-lg">
+          Learn the Arabic of the Quran — structured lessons, a scholar-endorsed curriculum, and Ustaad Noor, your AI tutor, ready whenever you have a question. Join the beta and use everything free while we test.
         </p>
 
         <!-- CTA row -->
-        <div class="flex flex-col sm:flex-row gap-4 mb-10">
-          <a href="#download"
+        <div class="hero-el flex flex-col sm:flex-row gap-4 mb-10">
+          <a href="#access"
              class="btn-gold inline-flex items-center justify-center gap-3 font-lora font-semibold text-base px-7 py-4 rounded-2xl cursor-pointer">
             <!-- Play Store icon -->
             <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -207,7 +250,7 @@
               <path d="M3.18.03L14.22 10.5l1.98-1.98L4.16-.24A1.5 1.5 0 003.18.03z" opacity=".6"/>
               <path d="M3.18 23.76L16.2 16.5l-1.98-1.98L3.18 23.76z" opacity=".6"/>
             </svg>
-            <span>Download for Android</span>
+            <span>Get the app free</span>
           </a>
 
           <a href="#how-it-works"
@@ -220,7 +263,7 @@
         </div>
 
         <!-- Trust signals -->
-        <div class="flex flex-wrap gap-5 text-sm text-ink-muted font-lora">
+        <div class="hero-el flex flex-wrap gap-5 text-sm text-ink-muted font-lora">
           <div class="flex items-center gap-1.5">
             <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
@@ -229,9 +272,9 @@
           </div>
           <div class="flex items-center gap-1.5">
             <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
             </svg>
-            7 days free
+            Free while in beta
           </div>
           <div class="flex items-center gap-1.5">
             <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -243,8 +286,8 @@
       </div>
 
       <!-- Phone mockup -->
-      <div class="flex justify-center lg:justify-end fade-in" style="transition-delay:0.12s">
-        <div class="relative w-64 sm:w-72 lg:w-80 flex-shrink-0">
+      <div class="flex justify-center lg:justify-end">
+        <div id="phone-wrap" class="relative w-64 sm:w-72 lg:w-80 flex-shrink-0">
 
           <!-- Ambient glow -->
           <div class="absolute -inset-6 rounded-[3rem] bg-gold opacity-[0.07] blur-3xl pointer-events-none" aria-hidden="true"></div>
@@ -254,65 +297,156 @@
             <!-- Notch bar -->
             <div class="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-5 bg-ink rounded-full z-10" aria-hidden="true"></div>
 
-            <!-- Screen -->
-            <div class="bg-parchment rounded-[2.2rem] overflow-hidden" style="aspect-ratio:9/19.5;">
-              <!-- App chrome -->
-              <div class="h-full flex flex-col pt-8">
+            <!-- Screen: rotating showcase of app views -->
+            <div class="bg-parchment rounded-[2.2rem] overflow-hidden relative" style="aspect-ratio:9/19.5;">
+              <div id="app-viewport" class="absolute inset-0">
 
-                <!-- Progress bar -->
-                <div class="px-5 mb-3">
-                  <div class="flex items-center justify-between mb-1.5">
-                    <span class="font-lora text-xs text-ink-muted">Lesson 3 of 5</span>
-                    <span class="font-lora text-xs text-gold font-semibold">Discover</span>
+                <!-- ── View 1: Lesson / Discover ── -->
+                <div class="app-screen absolute inset-0 flex flex-col pt-8" data-label="Daily lesson">
+                  <div class="px-5 mb-3">
+                    <div class="flex items-center justify-between mb-1.5">
+                      <span class="font-lora text-xs text-ink-muted">Lesson 3 of 5</span>
+                      <span class="font-lora text-xs text-gold font-semibold">Discover</span>
+                    </div>
+                    <div class="h-1 bg-parchment-deep rounded-full overflow-hidden">
+                      <div class="h-full rounded-full bg-gold" style="width:44%"></div>
+                    </div>
                   </div>
-                  <div class="h-1 bg-parchment-deep rounded-full overflow-hidden">
-                    <div class="h-full rounded-full bg-gold" style="width:44%"></div>
+                  <div class="mx-5 mb-3 bg-cream rounded-2xl p-4 border border-sage-soft/40">
+                    <p class="font-lora text-xs text-sage text-center mb-2">Al-Ikhlas · 112:1</p>
+                    <p class="font-arabic text-ink text-3xl leading-loose text-center" dir="rtl" lang="ar">قُلْ هُوَ ٱللَّهُ أَحَدٌ</p>
+                    <p class="font-lora text-xs text-ink-muted italic text-center mt-2">Say: He is Allah, One.</p>
                   </div>
-                </div>
-
-                <!-- Ayah card -->
-                <div class="mx-5 mb-3 bg-cream rounded-2xl p-4 border border-sage-soft/40">
-                  <p class="font-lora text-xs text-sage text-center mb-2">Al-Ikhlas · 112:1</p>
-                  <p class="font-arabic text-ink text-3xl leading-loose text-center" dir="rtl" lang="ar">
-                    قُلْ هُوَ ٱللَّهُ أَحَدٌ
-                  </p>
-                  <p class="font-lora text-xs text-ink-muted italic text-center mt-2">Say: He is Allah, One.</p>
-                </div>
-
-                <!-- Word reveal card -->
-                <div class="mx-5 mb-3 bg-parchment-deep rounded-2xl p-4 border border-gold/30 text-center">
-                  <p class="font-arabic text-gold text-4xl leading-loose mb-1" dir="rtl" lang="ar">أَحَدٌ</p>
-                  <p class="font-lora text-xs text-sage mb-1">ahad</p>
-                  <p class="font-lora font-semibold text-ink text-sm">One · Unique · Singular</p>
-                  <!-- Audio button -->
-                  <button class="mt-3 w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center mx-auto cursor-pointer hover:bg-gold/30 transition-colors" aria-label="Play pronunciation">
-                    <svg class="w-4 h-4 text-gold-deep" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
-                    </svg>
-                  </button>
-                </div>
-
-                <!-- Progress dots -->
-                <div class="flex justify-center gap-1.5 mb-4">
-                  <div class="w-2 h-2 rounded-full bg-sage-soft" aria-hidden="true"></div>
-                  <div class="w-2 h-2 rounded-full bg-sage-soft" aria-hidden="true"></div>
-                  <div class="w-5 h-2 rounded-full bg-gold" aria-hidden="true"></div>
-                  <div class="w-2 h-2 rounded-full bg-parchment-deep border border-sage-soft" aria-hidden="true"></div>
-                  <div class="w-2 h-2 rounded-full bg-parchment-deep border border-sage-soft" aria-hidden="true"></div>
-                </div>
-
-                <!-- CTA button -->
-                <div class="mx-5">
-                  <div class="btn-gold rounded-xl py-3.5 text-center font-lora font-semibold text-sm cursor-pointer">
-                    Continue →
+                  <div class="mx-5 mb-3 bg-parchment-deep rounded-2xl p-4 border border-gold/30 text-center">
+                    <p class="font-arabic text-gold text-4xl leading-loose mb-1" dir="rtl" lang="ar">أَحَدٌ</p>
+                    <p class="font-lora text-xs text-sage mb-1">ahad</p>
+                    <p class="font-lora font-semibold text-ink text-sm">One · Unique · Singular</p>
+                    <span class="mt-3 w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center mx-auto" aria-hidden="true">
+                      <svg class="w-4 h-4 text-gold-deep" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+                    </span>
+                  </div>
+                  <div class="mt-auto mx-5 mb-5">
+                    <div class="btn-gold rounded-xl py-3.5 text-center font-lora font-semibold text-sm">Continue →</div>
                   </div>
                 </div>
+
+                <!-- ── View 2: Ustaad Noor ── -->
+                <div class="app-screen absolute inset-0 flex flex-col pt-8" data-label="Ustaad Noor · AI tutor" style="opacity:0">
+                  <div class="flex items-center gap-2.5 px-5 pb-3 border-b border-sage-soft/30">
+                    <div class="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                      <span class="font-arabic text-gold-deep text-lg font-bold leading-none" aria-hidden="true">ن</span>
+                    </div>
+                    <div>
+                      <p class="font-lora font-semibold text-ink text-xs leading-none mb-0.5">Ustaad Noor</p>
+                      <p class="font-lora text-[10px] text-sage leading-none">Your AI tutor</p>
+                    </div>
+                  </div>
+                  <div class="px-4 py-4 space-y-3 flex-1">
+                    <div class="flex gap-2">
+                      <div class="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="font-arabic text-gold-deep text-xs" aria-hidden="true">ن</span></div>
+                      <div class="bg-parchment rounded-2xl rounded-tl-sm px-3 py-2 max-w-[80%]">
+                        <p class="font-lora text-xs text-ink-soft leading-relaxed">إِنَّ is a particle of emphasis — <em>"Truly."</em></p>
+                      </div>
+                    </div>
+                    <div class="flex justify-end">
+                      <div class="bg-gold/15 border border-gold/25 rounded-2xl rounded-tr-sm px-3 py-2 max-w-[80%]">
+                        <p class="font-lora text-xs text-ink leading-relaxed">An example from the Quran?</p>
+                      </div>
+                    </div>
+                    <div class="flex gap-2">
+                      <div class="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="font-arabic text-gold-deep text-xs" aria-hidden="true">ن</span></div>
+                      <div class="bg-parchment rounded-2xl rounded-tl-sm px-3 py-2 max-w-[80%]">
+                        <p class="font-lora text-xs text-ink-soft leading-relaxed mb-1">From Al-Fatiha:</p>
+                        <p class="font-arabic text-ink text-lg leading-loose" dir="rtl" lang="ar">إِيَّاكَ نَعْبُدُ</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-4 pb-5 flex gap-2">
+                    <div class="flex-1 bg-parchment rounded-xl px-3 py-2 border border-sage-soft/50"><p class="font-lora text-xs text-ink-muted">Ask Noor anything…</p></div>
+                    <div class="w-9 h-9 rounded-xl bg-gold flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                      <svg class="w-4 h-4 text-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── View 3: Tadabbur ── -->
+                <div class="app-screen absolute inset-0 flex flex-col pt-8" data-label="Tadabbur · Quran lights up" style="opacity:0">
+                  <div class="px-5 mb-4 text-center">
+                    <p class="font-lora text-[10px] text-sage tracking-widest uppercase mb-1">Tadabbur · سورة الإخلاص</p>
+                    <div class="inline-flex items-center gap-2">
+                      <span class="font-lora text-ink-muted text-[10px]">47% understood</span>
+                      <div class="w-16 h-1.5 bg-parchment-deep rounded-full overflow-hidden"><div class="h-full bg-gold rounded-full" style="width:47%"></div></div>
+                    </div>
+                  </div>
+                  <div class="px-4 flex-1 text-center" dir="rtl" lang="ar">
+                    <p class="leading-loose mb-1">
+                      <span class="font-arabic text-2xl text-gold mx-1">قُلْ</span>
+                      <span class="font-arabic text-2xl text-gold mx-1">هُوَ</span>
+                      <span class="font-arabic text-2xl text-gold mx-1">ٱللَّهُ</span>
+                      <span class="font-arabic text-2xl text-gold mx-1">أَحَدٌ</span>
+                    </p>
+                    <p class="leading-loose mb-1">
+                      <span class="font-arabic text-2xl text-gold mx-1">ٱللَّهُ</span>
+                      <span class="font-arabic text-2xl text-sage/50 mx-1">ٱلصَّمَدُ</span>
+                    </p>
+                    <p class="leading-loose mb-1">
+                      <span class="font-arabic text-2xl text-sage/50 mx-1">لَمْ</span>
+                      <span class="font-arabic text-2xl text-sage/50 mx-1">يَلِدْ</span>
+                      <span class="font-arabic text-2xl text-gold mx-1">وَلَمْ</span>
+                      <span class="font-arabic text-2xl text-sage/50 mx-1">يُولَدْ</span>
+                    </p>
+                    <p class="leading-loose">
+                      <span class="font-arabic text-2xl text-sage/50 mx-1">وَلَمْ</span>
+                      <span class="font-arabic text-2xl text-sage/50 mx-1">يَكُن</span>
+                      <span class="font-arabic text-2xl text-sage/50 mx-1">لَّهُۥ</span>
+                      <span class="font-arabic text-2xl text-sage/50 mx-1">كُفُوًا</span>
+                      <span class="font-arabic text-2xl text-sage/50 mx-1">أَحَدٌ</span>
+                    </p>
+                  </div>
+                  <p class="font-lora text-ink-muted/70 text-[10px] text-center pb-5 italic">Gold = understood · Sage = still to learn</p>
+                </div>
+
+                <!-- ── View 4: Vocabulary ── -->
+                <div class="app-screen absolute inset-0 flex flex-col pt-8" data-label="Vocabulary · Word of the Day" style="opacity:0">
+                  <div class="px-5 mb-3">
+                    <p class="font-lora text-[10px] text-sage tracking-widest uppercase">Word of the Day</p>
+                  </div>
+                  <div class="mx-5 mb-3 bg-cream rounded-2xl p-5 border border-gold/30 text-center">
+                    <p class="font-arabic text-gold text-5xl leading-loose mb-2" dir="rtl" lang="ar">نُور</p>
+                    <p class="font-lora text-xs text-sage mb-0.5">noor</p>
+                    <p class="font-lora font-semibold text-ink text-base mb-3">Light</p>
+                    <div class="flex items-center justify-center gap-3 text-[10px] text-ink-muted">
+                      <span>Noun</span><span class="text-sage-soft">·</span><span dir="rtl" class="font-arabic text-sm">ن و ر</span>
+                    </div>
+                  </div>
+                  <div class="mx-5 mb-3 bg-parchment-deep rounded-2xl p-3 text-center border border-sage-soft/30">
+                    <p class="font-arabic text-ink text-base leading-loose" dir="rtl" lang="ar">ٱللَّهُ <span class="text-gold">نُورُ</span> ٱلسَّمَٰوَٰتِ</p>
+                    <p class="font-lora text-[10px] text-ink-muted italic mt-1">An-Nur · 24:35</p>
+                  </div>
+                  <div class="mt-auto mx-5 mb-5 grid grid-cols-3 gap-2">
+                    <div class="bg-parchment border border-sage-soft/40 rounded-lg py-2 text-center"><span class="font-lora text-[11px] text-ink-muted">Hard</span></div>
+                    <div class="bg-sage/15 border border-sage/40 rounded-lg py-2 text-center"><span class="font-lora text-[11px] text-ink-soft font-semibold">Good</span></div>
+                    <div class="bg-gold/20 border border-gold/40 rounded-lg py-2 text-center"><span class="font-lora text-[11px] text-ink font-semibold">Easy</span></div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
 
+          <!-- View switcher: label + tappable dots -->
+          <div class="mt-5 flex flex-col items-center gap-2.5">
+            <p id="view-label" class="font-lora text-xs text-ink-muted tracking-wide h-4">Daily lesson</p>
+            <div id="view-dots" class="flex items-center gap-2">
+              <button type="button" class="h-2 w-5 rounded-full bg-gold transition-all duration-300" aria-label="Show daily lesson"></button>
+              <button type="button" class="h-2 w-2 rounded-full bg-sage-soft transition-all duration-300" aria-label="Show Ustaad Noor"></button>
+              <button type="button" class="h-2 w-2 rounded-full bg-sage-soft transition-all duration-300" aria-label="Show Tadabbur"></button>
+              <button type="button" class="h-2 w-2 rounded-full bg-sage-soft transition-all duration-300" aria-label="Show Vocabulary"></button>
+            </div>
+          </div>
+
           <!-- Floating callout: Audio -->
-          <div class="absolute -left-16 top-1/4 bg-cream border border-sage-soft/50 rounded-2xl shadow-sm px-3 py-2.5 flex items-center gap-2 w-36" aria-hidden="true">
+          <div class="float-callout absolute -left-16 top-1/4 bg-cream border border-sage-soft/50 rounded-2xl shadow-sm px-3 py-2.5 flex items-center gap-2 w-36" aria-hidden="true">
             <div class="w-8 h-8 rounded-xl bg-gold/20 flex items-center justify-center flex-shrink-0">
               <svg class="w-4 h-4 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
@@ -325,7 +459,7 @@
           </div>
 
           <!-- Floating callout: Streak -->
-          <div class="absolute -right-14 bottom-1/4 bg-cream border border-sage-soft/50 rounded-2xl shadow-sm px-3 py-2.5 flex items-center gap-2 w-32" aria-hidden="true">
+          <div class="float-callout absolute -right-14 bottom-1/4 bg-cream border border-sage-soft/50 rounded-2xl shadow-sm px-3 py-2.5 flex items-center gap-2 w-32" aria-hidden="true">
             <div class="w-8 h-8 rounded-xl bg-gold/20 flex items-center justify-center flex-shrink-0">
               <svg class="w-4 h-4 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
@@ -345,20 +479,47 @@
 </section>
 
 
+<!-- ═══════════════════════════ WORD MARQUEE ═══════════════════════════ -->
+<section class="bg-cream border-y border-sage-soft/25 py-5 overflow-hidden" aria-label="Words you will learn">
+  <div class="marquee gap-10 px-5">
+    <!-- Group A -->
+    <div class="flex gap-10 flex-shrink-0" aria-hidden="true">
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">أَحَدٌ</span><span class="font-lora text-sm text-ink-muted">One</span></span>
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">نُور</span><span class="font-lora text-sm text-ink-muted">Light</span></span>
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">رَحْمَة</span><span class="font-lora text-sm text-ink-muted">Mercy</span></span>
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">صَبْر</span><span class="font-lora text-sm text-ink-muted">Patience</span></span>
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">شُكْر</span><span class="font-lora text-sm text-ink-muted">Gratitude</span></span>
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">هُدَى</span><span class="font-lora text-sm text-ink-muted">Guidance</span></span>
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">سَلَام</span><span class="font-lora text-sm text-ink-muted">Peace</span></span>
+    </div>
+    <!-- Group B (duplicate for seamless loop) -->
+    <div class="flex gap-10 flex-shrink-0" aria-hidden="true">
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">أَحَدٌ</span><span class="font-lora text-sm text-ink-muted">One</span></span>
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">نُور</span><span class="font-lora text-sm text-ink-muted">Light</span></span>
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">رَحْمَة</span><span class="font-lora text-sm text-ink-muted">Mercy</span></span>
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">صَبْر</span><span class="font-lora text-sm text-ink-muted">Patience</span></span>
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">شُكْر</span><span class="font-lora text-sm text-ink-muted">Gratitude</span></span>
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">هُدَى</span><span class="font-lora text-sm text-ink-muted">Guidance</span></span>
+      <span class="flex items-baseline gap-2"><span class="font-arabic text-gold text-2xl" dir="rtl">سَلَام</span><span class="font-lora text-sm text-ink-muted">Peace</span></span>
+    </div>
+  </div>
+</section>
+
+
 <!-- ═══════════════════════════ THE GAP ═══════════════════════════ -->
 <section class="motif-bg-dark py-20 lg:py-28 relative overflow-hidden" style="background-color:#1A1A1A;">
-  <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center fade-in">
-    <p class="font-arabic text-gold text-4xl sm:text-5xl mb-8 leading-loose" dir="rtl" lang="ar">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+    <p class="reveal font-arabic text-gold text-4xl sm:text-5xl mb-8 leading-loose" dir="rtl" lang="ar">
       بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </p>
-    <h2 class="font-lora font-bold text-parchment text-3xl sm:text-4xl lg:text-5xl leading-tight mb-7">
+    <h2 class="reveal font-lora font-bold text-parchment text-3xl sm:text-4xl lg:text-5xl leading-tight mb-7">
       You recite it every day.<br>
       <span class="text-gold">Do you understand it?</span>
     </h2>
-    <p class="font-lora text-parchment/65 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+    <p class="reveal font-lora text-parchment/65 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
       Over a billion Muslims recite the Quran in Salah. Most — including most in Pakistan, South Asia, and the global diaspora — do not understand what they are saying. They have memorized the sounds. The meaning lives behind a language barrier.
     </p>
-    <p class="font-lora text-parchment text-xl font-semibold italic">
+    <p class="reveal font-lora text-parchment text-xl font-semibold italic">
       Warsh is the journey across that barrier.
     </p>
   </div>
@@ -368,16 +529,16 @@
 <!-- ═══════════════════════════ FEATURES ═══════════════════════════ -->
 <section id="features" class="motif-bg py-20 lg:py-28" style="background-color:#F4EBD0;">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
-    <div class="text-center mb-16 fade-in">
-      <p class="font-lora text-sage text-xs tracking-[0.18em] uppercase mb-3">What Warsh teaches</p>
-      <h2 class="font-lora font-bold text-ink text-3xl sm:text-4xl leading-tight">
+    <div class="text-center mb-16">
+      <p class="reveal font-lora text-sage text-xs tracking-[0.18em] uppercase mb-3">What Warsh teaches</p>
+      <h2 class="reveal font-lora font-bold text-ink text-3xl sm:text-4xl leading-tight">
         Four dimensions of Arabic mastery
       </h2>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" data-stagger>
       <!-- Read -->
-      <div class="bg-cream rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in">
+      <div class="reveal bg-cream rounded-2xl p-7 border border-sage-soft/30 card-lift">
         <div class="w-12 h-12 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
           <svg class="w-6 h-6 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
@@ -388,7 +549,7 @@
       </div>
 
       <!-- Understand -->
-      <div class="bg-cream rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in" style="transition-delay:.07s">
+      <div class="reveal bg-cream rounded-2xl p-7 border border-sage-soft/30 card-lift">
         <div class="w-12 h-12 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
           <svg class="w-6 h-6 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
@@ -399,7 +560,7 @@
       </div>
 
       <!-- Hear -->
-      <div class="bg-cream rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in" style="transition-delay:.14s">
+      <div class="reveal bg-cream rounded-2xl p-7 border border-sage-soft/30 card-lift">
         <div class="w-12 h-12 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
           <svg class="w-6 h-6 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
@@ -410,7 +571,7 @@
       </div>
 
       <!-- Speak -->
-      <div class="bg-cream rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in" style="transition-delay:.21s">
+      <div class="reveal bg-cream rounded-2xl p-7 border border-sage-soft/30 card-lift">
         <div class="w-12 h-12 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
           <svg class="w-6 h-6 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
@@ -427,19 +588,19 @@
 <!-- ═══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
 <section id="how-it-works" class="py-20 lg:py-28" style="background-color:#FAF6E9;">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
-    <div class="text-center mb-14 fade-in">
-      <p class="font-lora text-sage text-xs tracking-[0.18em] uppercase mb-3">The lesson</p>
-      <h2 class="font-lora font-bold text-ink text-3xl sm:text-4xl leading-tight mb-4">Five beats. One revelation.</h2>
-      <p class="font-lora text-ink-soft text-lg max-w-xl mx-auto leading-relaxed">
+    <div class="text-center mb-14">
+      <p class="reveal font-lora text-sage text-xs tracking-[0.18em] uppercase mb-3">The lesson</p>
+      <h2 class="reveal font-lora font-bold text-ink text-3xl sm:text-4xl leading-tight mb-4">Five beats. One revelation.</h2>
+      <p class="reveal font-lora text-ink-soft text-lg max-w-xl mx-auto leading-relaxed">
         Every lesson opens with a real ayah. You hear it. You discover the words. You practice. Then you see them in revelation — this time, you understand.
       </p>
     </div>
 
     <!-- Beat cards -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4" data-stagger>
 
       <!-- 1 Hook -->
-      <div class="bg-parchment rounded-2xl p-6 border border-sage-soft/30 fade-in">
+      <div class="reveal bg-parchment rounded-2xl p-6 border border-sage-soft/30">
         <div class="w-8 h-8 rounded-full bg-sage-soft/30 flex items-center justify-center mb-4">
           <span class="font-lora font-bold text-ink-muted text-sm">1</span>
         </div>
@@ -451,7 +612,7 @@
       </div>
 
       <!-- 2 Discover -->
-      <div class="bg-parchment rounded-2xl p-6 border border-sage-soft/30 fade-in" style="transition-delay:.06s">
+      <div class="reveal bg-parchment rounded-2xl p-6 border border-sage-soft/30">
         <div class="w-8 h-8 rounded-full bg-sage-soft/30 flex items-center justify-center mb-4">
           <span class="font-lora font-bold text-ink-muted text-sm">2</span>
         </div>
@@ -464,7 +625,7 @@
       </div>
 
       <!-- 3 Practice -->
-      <div class="bg-parchment rounded-2xl p-6 border border-sage-soft/30 fade-in" style="transition-delay:.12s">
+      <div class="reveal bg-parchment rounded-2xl p-6 border border-sage-soft/30">
         <div class="w-8 h-8 rounded-full bg-sage-soft/30 flex items-center justify-center mb-4">
           <span class="font-lora font-bold text-ink-muted text-sm">3</span>
         </div>
@@ -480,7 +641,7 @@
       </div>
 
       <!-- 4 Reveal (highlighted) -->
-      <div class="bg-parchment rounded-2xl p-6 border border-gold/40 relative fade-in" style="transition-delay:.18s;">
+      <div class="reveal bg-parchment rounded-2xl p-6 border border-gold/40 relative">
         <div class="w-8 h-8 rounded-full bg-gold/25 flex items-center justify-center mb-4">
           <span class="font-lora font-bold text-gold-deep text-sm">4</span>
         </div>
@@ -494,7 +655,7 @@
       </div>
 
       <!-- 5 Close -->
-      <div class="bg-parchment rounded-2xl p-6 border border-sage-soft/30 fade-in" style="transition-delay:.24s">
+      <div class="reveal bg-parchment rounded-2xl p-6 border border-sage-soft/30">
         <div class="w-8 h-8 rounded-full bg-sage-soft/30 flex items-center justify-center mb-4">
           <span class="font-lora font-bold text-ink-muted text-sm">5</span>
         </div>
@@ -516,7 +677,7 @@
     <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
       <!-- Chat preview -->
-      <div class="order-2 lg:order-1 fade-in">
+      <div class="reveal order-2 lg:order-1">
         <div class="bg-cream rounded-3xl border border-sage-soft/30" style="box-shadow:0 4px 32px rgba(26,26,26,0.07);">
           <!-- Header -->
           <div class="flex items-center gap-3 px-6 py-4 border-b border-sage-soft/30">
@@ -587,7 +748,7 @@
       </div>
 
       <!-- Text -->
-      <div class="order-1 lg:order-2 fade-in" style="transition-delay:.1s">
+      <div class="reveal order-1 lg:order-2">
         <p class="font-lora text-sage text-xs tracking-[0.18em] uppercase mb-4">Ustaad Noor · اُستاد نُور</p>
         <h2 class="font-lora font-bold text-ink text-3xl sm:text-4xl leading-tight mb-6">
           Your teacher.<br>
@@ -620,7 +781,7 @@
             <span class="w-5 h-5 rounded-full bg-gold/25 flex items-center justify-center flex-shrink-0 mt-0.5">
               <svg class="w-3 h-3 text-gold-deep" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             </span>
-            <p class="font-lora text-ink-soft text-base">5 messages per day included with every subscription</p>
+            <p class="font-lora text-ink-soft text-base">Daily message allowance — plenty to keep your questions flowing</p>
           </li>
         </ul>
 
@@ -639,14 +800,14 @@
     <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
       <!-- Text -->
-      <div class="fade-in">
+      <div class="reveal">
         <p class="font-lora text-sage text-xs tracking-[0.18em] uppercase mb-4">Tadabbur · تَدَبُّر</p>
         <h2 class="font-lora font-bold text-parchment text-3xl sm:text-4xl leading-tight mb-6">
           Watch the Quran<br>
           <span class="text-gold">light up.</span>
         </h2>
         <p class="font-lora text-parchment/65 text-lg leading-relaxed mb-8">
-          As you learn each word, it illuminates in the Surah. Begin with Al-Fatiha. Then the short Surahs of Juz Amma — one by one, until what you recite becomes what you understand.
+          As you learn each word, it illuminates in the Surah. Begin with Al-Fatiha. Then the short Surahs of Juz Amma — one by one, until what you recite becomes what you understand. Scroll on and watch it happen →
         </p>
 
         <div class="space-y-3 mb-8">
@@ -670,42 +831,42 @@
       </div>
 
       <!-- Surah visualization -->
-      <div class="flex justify-center lg:justify-end fade-in" style="transition-delay:.1s">
+      <div class="reveal flex justify-center lg:justify-end">
         <div class="bg-ink/40 border border-parchment/10 rounded-3xl p-8 max-w-sm w-full backdrop-blur-sm">
           <div class="text-center mb-6">
             <p class="font-lora text-sage text-xs tracking-widest uppercase mb-2">Al-Ikhlas · سورة الإخلاص</p>
             <div class="inline-flex items-center gap-2">
-              <span class="font-lora text-parchment/55 text-xs">47% understood</span>
+              <span class="font-lora text-parchment/55 text-xs"><span id="tad-pct">0</span>% understood</span>
               <div class="w-20 h-1.5 bg-parchment/10 rounded-full overflow-hidden">
-                <div class="h-full bg-gold rounded-full" style="width:47%"></div>
+                <div id="tad-bar" class="h-full bg-gold rounded-full" style="width:0%"></div>
               </div>
             </div>
           </div>
 
-          <!-- Surah display -->
-          <div class="text-center" dir="rtl" lang="ar">
+          <!-- Surah display: every word starts sage, GSAP lights them gold on scroll -->
+          <div id="tad-surah" class="text-center" dir="rtl" lang="ar">
             <p class="leading-loose mb-1">
-              <span class="font-arabic text-2xl text-gold mx-1">قُلْ</span>
-              <span class="font-arabic text-2xl text-gold mx-1">هُوَ</span>
-              <span class="font-arabic text-2xl text-gold mx-1">ٱللَّهُ</span>
-              <span class="font-arabic text-2xl text-gold mx-1">أَحَدٌ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">قُلْ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">هُوَ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">ٱللَّهُ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">أَحَدٌ</span>
             </p>
             <p class="leading-loose mb-1">
-              <span class="font-arabic text-2xl text-gold mx-1">ٱللَّهُ</span>
-              <span class="font-arabic text-2xl text-sage/50 mx-1">ٱلصَّمَدُ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">ٱللَّهُ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">ٱلصَّمَدُ</span>
             </p>
             <p class="leading-loose mb-1">
-              <span class="font-arabic text-2xl text-sage/50 mx-1">لَمْ</span>
-              <span class="font-arabic text-2xl text-sage/50 mx-1">يَلِدْ</span>
-              <span class="font-arabic text-2xl text-gold mx-1">وَلَمْ</span>
-              <span class="font-arabic text-2xl text-sage/50 mx-1">يُولَدْ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">لَمْ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">يَلِدْ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">وَلَمْ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">يُولَدْ</span>
             </p>
             <p class="leading-loose">
-              <span class="font-arabic text-2xl text-sage/50 mx-1">وَلَمْ</span>
-              <span class="font-arabic text-2xl text-sage/50 mx-1">يَكُن</span>
-              <span class="font-arabic text-2xl text-sage/50 mx-1">لَّهُۥ</span>
-              <span class="font-arabic text-2xl text-sage/50 mx-1">كُفُوًا</span>
-              <span class="font-arabic text-2xl text-sage/50 mx-1">أَحَدٌ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">وَلَمْ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">يَكُن</span>
+              <span class="tad-word font-arabic text-2xl mx-1">لَّهُۥ</span>
+              <span class="tad-word font-arabic text-2xl mx-1">كُفُوًا</span>
+              <span class="tad-word font-arabic text-2xl mx-1">أَحَدٌ</span>
             </p>
           </div>
 
@@ -722,21 +883,21 @@
 <!-- ═══════════════════════════ STATS ═══════════════════════════ -->
 <section style="background-color:#EDDFAF;" class="py-14 border-t border-sage-soft/30 border-b">
   <div class="max-w-5xl mx-auto px-5 sm:px-8">
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center fade-in">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
       <div>
-        <p class="font-lora font-bold text-ink text-4xl sm:text-5xl mb-1.5">72</p>
+        <p class="font-lora font-bold text-ink text-4xl sm:text-5xl mb-1.5"><span class="count" data-count="72">0</span></p>
         <p class="font-lora text-sage text-sm">Chapters</p>
       </div>
       <div>
-        <p class="font-lora font-bold text-ink text-4xl sm:text-5xl mb-1.5">380<span class="text-3xl">+</span></p>
+        <p class="font-lora font-bold text-ink text-4xl sm:text-5xl mb-1.5"><span class="count" data-count="380">0</span><span class="text-3xl">+</span></p>
         <p class="font-lora text-sage text-sm">Lessons</p>
       </div>
       <div>
-        <p class="font-lora font-bold text-ink text-4xl sm:text-5xl mb-1.5">600<span class="text-3xl">+</span></p>
+        <p class="font-lora font-bold text-ink text-4xl sm:text-5xl mb-1.5"><span class="count" data-count="600">0</span><span class="text-3xl">+</span></p>
         <p class="font-lora text-sage text-sm">Vocabulary words</p>
       </div>
       <div>
-        <p class="font-lora font-bold text-ink text-4xl sm:text-5xl mb-1.5">11</p>
+        <p class="font-lora font-bold text-ink text-4xl sm:text-5xl mb-1.5"><span class="count" data-count="11">0</span></p>
         <p class="font-lora text-sage text-sm">Surahs in Tadabbur</p>
       </div>
     </div>
@@ -747,13 +908,13 @@
 <!-- ═══════════════════════════ WHY WARSH ═══════════════════════════ -->
 <section class="py-20 lg:py-28" style="background-color:#FAF6E9;">
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
-    <div class="text-center mb-14 fade-in">
-      <p class="font-lora text-sage text-xs tracking-[0.18em] uppercase mb-3">Why Warsh</p>
-      <h2 class="font-lora font-bold text-ink text-3xl sm:text-4xl">Not another language app</h2>
+    <div class="text-center mb-14">
+      <p class="reveal font-lora text-sage text-xs tracking-[0.18em] uppercase mb-3">Why Warsh</p>
+      <h2 class="reveal font-lora font-bold text-ink text-3xl sm:text-4xl">Not another language app</h2>
     </div>
 
-    <div class="grid sm:grid-cols-3 gap-5 mb-12">
-      <div class="bg-parchment rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in">
+    <div class="grid sm:grid-cols-3 gap-5 mb-12" data-stagger>
+      <div class="reveal bg-parchment rounded-2xl p-7 border border-sage-soft/30 card-lift">
         <div class="w-11 h-11 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
           <svg class="w-5 h-5 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
@@ -763,7 +924,7 @@
         <p class="font-lora text-ink-muted text-sm leading-relaxed">Wrong answers are met with patience — not penalty. No lives lost. The Warmth Principle governs every word in this app.</p>
       </div>
 
-      <div class="bg-parchment rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in" style="transition-delay:.08s">
+      <div class="reveal bg-parchment rounded-2xl p-7 border border-sage-soft/30 card-lift">
         <div class="w-11 h-11 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
           <svg class="w-5 h-5 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
@@ -773,7 +934,7 @@
         <p class="font-lora text-ink-muted text-sm leading-relaxed">Built on Madinah Arabic Reader and Dr. Hafiz Muhammad Zubair's lectures — 50 years of Islamic language pedagogy, structured for mobile.</p>
       </div>
 
-      <div class="bg-parchment rounded-2xl p-7 border border-sage-soft/30 card-lift fade-in" style="transition-delay:.16s">
+      <div class="reveal bg-parchment rounded-2xl p-7 border border-sage-soft/30 card-lift">
         <div class="w-11 h-11 rounded-2xl bg-gold/15 flex items-center justify-center mb-5">
           <svg class="w-5 h-5 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/>
@@ -785,7 +946,7 @@
     </div>
 
     <!-- Comparison table -->
-    <div class="bg-parchment rounded-3xl p-7 sm:p-10 border border-sage-soft/30 overflow-x-auto fade-in">
+    <div class="reveal bg-parchment rounded-3xl p-7 sm:p-10 border border-sage-soft/30 overflow-x-auto">
       <h3 class="font-lora font-bold text-ink text-xl mb-6 text-center">How Warsh compares</h3>
       <table class="w-full min-w-[560px]" role="table">
         <thead>
@@ -834,20 +995,116 @@
 </section>
 
 
+<!-- ═══════════════════════════ EARLY ACCESS / TESTER SIGNUP ═══════════════════════════ -->
+<section id="access" class="motif-bg-dark py-20 lg:py-28 relative overflow-hidden" style="background-color:#1A1A1A;">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8">
+
+    <div class="text-center mb-12">
+      <div class="reveal inline-flex items-center gap-2 bg-gold/15 border border-gold/30 rounded-full px-4 py-1.5 mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0 animate-pulse"></span>
+        <span class="font-lora text-xs text-gold tracking-wide">Closed beta · Limited spots</span>
+      </div>
+      <h2 class="reveal font-lora font-bold text-parchment text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4">
+        Get in early. <span class="text-gold">Use it free.</span>
+      </h2>
+      <p class="reveal font-lora text-parchment/65 text-lg max-w-xl mx-auto leading-relaxed">
+        Warsh is in Google Play closed testing. Testers get complete access — every chapter, Ustaad Noor, and Tadabbur — with <span class="text-parchment font-semibold">no monthly or yearly payment</span> while we're in beta. Two quick steps.
+      </p>
+    </div>
+
+    <!-- Step 1: Register your Gmail -->
+    <div class="reveal bg-cream rounded-3xl p-7 sm:p-9 border border-parchment/10 mb-6" style="box-shadow:0 20px 50px rgba(0,0,0,0.25);">
+      <div class="flex items-start gap-4 mb-6">
+        <div class="w-9 h-9 rounded-full bg-gold text-ink flex items-center justify-center flex-shrink-0 font-lora font-bold">1</div>
+        <div>
+          <h3 class="font-lora font-bold text-ink text-xl mb-1">Send us your Gmail</h3>
+          <p class="font-lora text-ink-muted text-sm leading-relaxed">
+            Google closed testing needs your Gmail on the tester list before you can install. Enter it below — we'll add you and reply with your access link. Please use the same Gmail signed in on your Android phone.
+          </p>
+        </div>
+      </div>
+
+      <!-- mailto form: opens the user's email client, addressed to trywarshapp@gmail.com -->
+      <form id="tester-form" class="flex flex-col sm:flex-row gap-3">
+        <label for="tester-email" class="sr-only">Your Gmail address</label>
+        <input id="tester-email" type="email" required inputmode="email" autocomplete="email"
+               placeholder="you@gmail.com"
+               class="flex-1 bg-parchment border border-sage-soft/50 rounded-2xl px-5 py-4 font-lora text-ink placeholder:text-ink-muted/60 focus:border-gold outline-none transition-colors">
+        <button type="submit"
+                class="btn-gold font-lora font-semibold text-base px-7 py-4 rounded-2xl cursor-pointer whitespace-nowrap">
+          Request access →
+        </button>
+      </form>
+      <p id="tester-note" class="font-lora text-ink-muted text-xs mt-3 leading-relaxed">
+        This opens your email app with a message ready to send to <span class="font-semibold text-ink-soft">trywarshapp@gmail.com</span>. No account, no spam — we only use it to add you as a tester.
+      </p>
+    </div>
+
+    <!-- Step 2: Download -->
+    <div class="reveal bg-ink/40 border border-parchment/10 rounded-3xl p-7 sm:p-9 backdrop-blur-sm">
+      <div class="flex items-start gap-4 mb-6">
+        <div class="w-9 h-9 rounded-full bg-gold text-ink flex items-center justify-center flex-shrink-0 font-lora font-bold">2</div>
+        <div>
+          <h3 class="font-lora font-bold text-parchment text-xl mb-1">Install the app</h3>
+          <p class="font-lora text-parchment/60 text-sm leading-relaxed">
+            Once you're on the tester list, install Warsh either way. New to closed testing? Opt in on Google Play first, then install.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <!-- Direct APK download -->
+        <!-- TODO: replace href with the hosted signed release APK URL -->
+        <a href="REPLACE_WITH_DIRECT_APK_URL" download
+           class="btn-gold inline-flex items-center justify-center gap-3 font-lora font-semibold px-7 py-4 rounded-2xl cursor-pointer flex-1">
+          <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4m-9 9h10"/>
+          </svg>
+          <div class="text-left">
+            <div class="text-xs opacity-70 leading-none mb-0.5">Direct install</div>
+            <div class="text-base font-bold leading-none">Download APK</div>
+          </div>
+        </a>
+
+        <!-- Google Play closed-test opt-in -->
+        <!-- TODO: replace href with the Play closed-testing opt-in URL (play.google.com/apps/testing/<package>) -->
+        <a href="REPLACE_WITH_PLAY_OPT_IN_URL" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-3 bg-parchment text-ink font-lora font-semibold px-7 py-4 rounded-2xl cursor-pointer flex-1 hover:bg-cream transition-colors border border-parchment/20">
+          <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3.18 23.76c.3.17.64.24.98.21l11.56-11.97L3.18.03A1.5 1.5 0 002.5 1.5v21c0 .46.25.9.68 1.26z" opacity=".8"/>
+            <path d="M19.3 9.27L16.2 7.5 13.5 10.5l2.7 2.7 3.1-1.77a1.5 1.5 0 000-2.16z" opacity=".8"/>
+            <path d="M3.18.03L14.22 10.5l1.98-1.98L4.16-.24A1.5 1.5 0 003.18.03z" opacity=".6"/>
+            <path d="M3.18 23.76L16.2 16.5l-1.98-1.98L3.18 23.76z" opacity=".6"/>
+          </svg>
+          <div class="text-left">
+            <div class="text-xs opacity-60 leading-none mb-0.5">Opt in on</div>
+            <div class="text-base font-bold leading-none">Google Play</div>
+          </div>
+        </a>
+      </div>
+
+      <p class="font-lora text-parchment/40 text-xs mt-5 text-center">
+        Android only for now · iOS coming, in shaa Allah · You may need to allow "install from this source" for the direct APK.
+      </p>
+    </div>
+  </div>
+</section>
+
+
 <!-- ═══════════════════════════ PRICING ═══════════════════════════ -->
 <section id="pricing" class="motif-bg py-20 lg:py-28" style="background-color:#F4EBD0;">
   <div class="max-w-4xl mx-auto px-5 sm:px-8">
-    <div class="text-center mb-12 fade-in">
-      <p class="font-lora text-sage text-xs tracking-[0.18em] uppercase mb-3">Pricing</p>
-      <h2 class="font-lora font-bold text-ink text-3xl sm:text-4xl mb-4">Honest. Simple. Affordable.</h2>
-      <p class="font-lora text-ink-soft text-lg">Seven days free. Then $1/month, or $10/year.</p>
-      <p class="font-lora text-ink-muted italic mt-1">Less than a cup of chai.</p>
+    <div class="text-center mb-12">
+      <p class="reveal font-lora text-sage text-xs tracking-[0.18em] uppercase mb-3">After beta</p>
+      <h2 class="reveal font-lora font-bold text-ink text-3xl sm:text-4xl mb-4">Honest. Simple. Affordable.</h2>
+      <p class="reveal font-lora text-ink-soft text-lg">Free for testers today. After launch: $1/month, or $10/year.</p>
+      <p class="reveal font-lora text-ink-muted italic mt-1">Less than a cup of chai.</p>
     </div>
 
-    <div class="grid sm:grid-cols-2 gap-5 mb-8">
+    <div class="grid sm:grid-cols-2 gap-5 mb-8" data-stagger>
 
       <!-- Annual -->
-      <div class="bg-ink rounded-3xl p-8 relative fade-in">
+      <div class="reveal bg-ink rounded-3xl p-8 relative">
         <div class="absolute top-5 right-5 bg-gold text-ink font-lora font-semibold text-xs px-3 py-1 rounded-full">
           Most popular
         </div>
@@ -866,13 +1123,13 @@
           <li class="flex gap-3"><svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="font-lora text-parchment/80 text-sm">Speaking practice and all future updates</span></li>
         </ul>
 
-        <a href="#download" class="btn-gold block w-full font-lora font-semibold text-base py-4 rounded-2xl text-center cursor-pointer">
-          Start 7-day free trial →
+        <a href="#access" class="btn-gold block w-full font-lora font-semibold text-base py-4 rounded-2xl text-center cursor-pointer">
+          Join the beta free →
         </a>
       </div>
 
       <!-- Monthly -->
-      <div class="bg-cream rounded-3xl p-8 border border-sage-soft/30 fade-in" style="transition-delay:.1s">
+      <div class="reveal bg-cream rounded-3xl p-8 border border-sage-soft/30">
         <p class="font-lora text-sage text-sm mb-2">Monthly plan</p>
         <div class="flex items-baseline gap-1.5 mb-1">
           <span class="font-lora font-bold text-ink text-5xl">$1</span>
@@ -891,70 +1148,14 @@
           <p class="font-lora text-ink-muted text-xs leading-relaxed">Vocabulary Bank (600+ words, audio, SRS) remains free forever — whether you subscribe or not.</p>
         </div>
 
-        <a href="#download" class="btn-outline block w-full bg-transparent font-lora font-semibold text-base py-4 rounded-2xl text-center cursor-pointer">
-          Start 7-day free trial →
+        <a href="#access" class="btn-outline block w-full bg-transparent font-lora font-semibold text-base py-4 rounded-2xl text-center cursor-pointer">
+          Join the beta free →
         </a>
       </div>
     </div>
 
-    <p class="font-lora text-ink-muted text-sm text-center fade-in">
-      No credit card required for trial. Cancel anytime in your device settings.
-    </p>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════ DOWNLOAD CTA ═══════════════════════════ -->
-<section id="download" class="py-20 lg:py-28" style="background-color:#FAF6E9;">
-  <div class="max-w-2xl mx-auto px-5 sm:px-8 text-center fade-in">
-    <!-- Logo -->
-    <div class="flex items-center justify-center gap-3 mb-8">
-      <span class="font-lora font-bold text-ink text-2xl">Warsh</span>
-      <span class="text-sage-soft text-xl select-none">·</span>
-      <span class="font-arabic font-bold text-gold text-4xl leading-none" dir="rtl" lang="ar">وَرْش</span>
-    </div>
-
-    <h2 class="font-lora font-bold text-ink text-3xl sm:text-4xl leading-tight mb-4">
-      Begin your journey.
-    </h2>
-    <p class="font-lora text-ink-soft text-lg mb-2">
-      Seven days free. Then $1/month, or $10/year.
-    </p>
-    <p class="font-lora text-ink-muted italic mb-10">
-      Less than a cup of chai.
-    </p>
-
-    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-      <!-- Google Play -->
-      <a href="#"
-         class="btn-gold inline-flex items-center justify-center gap-3 font-lora font-semibold px-8 py-4 rounded-2xl cursor-pointer"
-         aria-label="Download Warsh on Google Play">
-        <svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M3.18 23.76c.3.17.64.24.98.21l11.56-11.97L3.18.03A1.5 1.5 0 002.5 1.5v21c0 .46.25.9.68 1.26z" opacity=".75"/>
-          <path d="M19.3 9.27L16.2 7.5 13.5 10.5l2.7 2.7 3.1-1.77a1.5 1.5 0 000-2.16z" opacity=".75"/>
-          <path d="M3.18.03L14.22 10.5l1.98-1.98L4.16-.24A1.5 1.5 0 003.18.03z" opacity=".5"/>
-          <path d="M3.18 23.76L16.2 16.5l-1.98-1.98L3.18 23.76z" opacity=".5"/>
-        </svg>
-        <div class="text-left">
-          <div class="text-xs opacity-70 leading-none mb-0.5">Get it on</div>
-          <div class="text-base font-bold leading-none">Google Play</div>
-        </div>
-      </a>
-
-      <!-- iOS coming soon -->
-      <div class="inline-flex items-center justify-center gap-3 bg-parchment border border-sage/30 text-ink-muted font-lora px-8 py-4 rounded-2xl opacity-50 cursor-not-allowed select-none" aria-label="iOS coming soon">
-        <svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.14-2.22 1.3-2.2 3.88.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.56M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-        </svg>
-        <div class="text-left">
-          <div class="text-xs leading-none mb-0.5">App Store</div>
-          <div class="text-sm font-semibold leading-none">Coming soon</div>
-        </div>
-      </div>
-    </div>
-
-    <p class="font-lora text-ink-muted text-sm">
-      Available on Android · iOS coming, in shaa Allah
+    <p class="reveal font-lora text-ink-muted text-sm text-center">
+      During closed testing there is no charge at all. After launch, cancel anytime in your device settings.
     </p>
   </div>
 </section>
@@ -984,7 +1185,7 @@
           <li><a href="#features"      class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">Features</a></li>
           <li><a href="#how-it-works"  class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">How it works</a></li>
           <li><a href="#pricing"       class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">Pricing</a></li>
-          <li><a href="#download"      class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">Download</a></li>
+          <li><a href="#access"        class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">Get free access</a></li>
         </ul>
       </div>
 
@@ -994,7 +1195,7 @@
         <ul class="space-y-2.5">
           <li><a href="https://warsh.app/privacy" class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">Privacy Policy</a></li>
           <li><a href="https://warsh.app/terms"   class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">Terms of Service</a></li>
-          <li><a href="mailto:support@warsh.app" class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">support@warsh.app</a></li>
+          <li><a href="mailto:trywarshapp@gmail.com" class="font-lora text-parchment/45 text-sm hover:text-parchment/75 transition-colors duration-200 cursor-pointer">trywarshapp@gmail.com</a></li>
         </ul>
       </div>
     </div>
@@ -1010,11 +1211,16 @@
 
 <!-- ═══════════════════════════ SCRIPTS ═══════════════════════════ -->
 <script>
-  // Navbar scroll
+  // Navbar scroll state
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
+  const progress = document.getElementById('scroll-progress');
+  function onScroll() {
     navbar.classList.toggle('scrolled', window.scrollY > 24);
-  }, { passive: true });
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
   // Mobile menu toggle
   const btn = document.getElementById('mobile-menu-btn');
@@ -1022,7 +1228,6 @@
   btn.addEventListener('click', () => {
     const open = menu.classList.toggle('hidden') === false;
     btn.setAttribute('aria-expanded', open);
-    // Close on link tap
     if (open) {
       menu.querySelectorAll('a').forEach(a => {
         a.addEventListener('click', () => {
@@ -1033,22 +1238,164 @@
     }
   });
 
-  // Scroll-triggered fade-in (IntersectionObserver)
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!prefersReducedMotion) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  // Tester Gmail form → open mail client addressed to trywarshapp@gmail.com
+  const form = document.getElementById('tester-form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('tester-email').value.trim();
+    if (!email) return;
+    const subject = encodeURIComponent('Warsh beta tester access request');
+    const body = encodeURIComponent(
+      'As-salamu alaykum,\n\n' +
+      'I would like to join the Warsh closed beta as a tester.\n\n' +
+      'My Google (Gmail) account: ' + email + '\n\n' +
+      'Please add me to the tester list and send my access link. JazakAllahu khayran.'
+    );
+    window.location.href = 'mailto:trywarshapp@gmail.com?subject=' + subject + '&body=' + body;
+    const note = document.getElementById('tester-note');
+    note.innerHTML = 'Opening your email app… if nothing happens, email <span class="font-semibold text-ink-soft">trywarshapp@gmail.com</span> with your Gmail: <span class="font-semibold text-ink-soft">' + email + '</span>';
+  });
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  // ─────────── GSAP animations ───────────
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ─────────── Phone showcase: rotate through app views ───────────
+  (function () {
+    const viewport = document.getElementById('app-viewport');
+    if (!viewport) return;
+    const screens = Array.from(viewport.querySelectorAll('.app-screen'));
+    const dots = Array.from(document.querySelectorAll('#view-dots button'));
+    const label = document.getElementById('view-label');
+    const useGsap = !reduced && window.gsap;
+    let idx = 0, timer = null;
+
+    function show(n) {
+      n = (n + screens.length) % screens.length;
+      screens.forEach((s, i) => {
+        const on = i === n;
+        if (useGsap) gsap.to(s, { opacity: on ? 1 : 0, duration: 0.6, ease: 'power2.out' });
+        else s.style.opacity = on ? 1 : 0;
+        s.style.pointerEvents = on ? 'auto' : 'none';
+      });
+      dots.forEach((d, i) => {
+        const on = i === n;
+        d.classList.toggle('bg-gold', on);
+        d.classList.toggle('w-5', on);
+        d.classList.toggle('bg-sage-soft', !on);
+        d.classList.toggle('w-2', !on);
+        d.setAttribute('aria-current', on ? 'true' : 'false');
+      });
+      if (label) label.textContent = screens[n].dataset.label;
+      idx = n;
+    }
+    function start() { if (reduced) return; stop(); timer = setInterval(() => show(idx + 1), 3600); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+    dots.forEach((d, i) => d.addEventListener('click', () => { show(i); start(); }));
+    viewport.addEventListener('mouseenter', stop);
+    viewport.addEventListener('mouseleave', start);
+
+    show(0);
+    start();
+  })();
+
+  if (!reduced && window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+    document.body.classList.add('gsap-ready'); // hide .reveal until animated
+
+    // Hero entrance timeline
+    const heroTL = gsap.timeline({ defaults: { ease: 'power3.out' } })
+      .from('.hero-el', { y: 24, opacity: 0, duration: 0.8, stagger: 0.09 }, 0.15)
+      .from('#phone-wrap', { y: 40, opacity: 0, duration: 1.0 }, 0.25)
+      .from('.float-callout', { scale: 0.85, opacity: 0, duration: 0.6, stagger: 0.15 }, 0.7);
+
+    // Safety net: `from` hides the hero first, so if the tab loads backgrounded
+    // (rAF throttled) and the timeline never finishes, reveal it after a delay.
+    // On a normal foreground load the animation finishes well before this fires.
+    setTimeout(() => {
+      const el = document.querySelector('.hero-el');
+      if (el && parseFloat(getComputedStyle(el).opacity) < 1) heroTL.progress(1);
+    }, 3500);
+
+    // Gentle continuous float on phone + callouts
+    gsap.to('#phone-wrap', { y: -12, duration: 3.2, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+    gsap.to('.float-callout', { y: -8, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1, stagger: 0.4 });
+
+    // Parallax on phone as you scroll the hero
+    gsap.to('#phone-wrap', {
+      yPercent: 12, ease: 'none',
+      scrollTrigger: { trigger: '#phone-wrap', start: 'top center', end: 'bottom top', scrub: true }
+    });
+
+    // Generic reveal for every .reveal element
+    gsap.utils.toArray('.reveal').forEach((el) => {
+      // Skip elements handled by a stagger container
+      if (el.closest('[data-stagger]')) return;
+      gsap.fromTo(el, { y: 28, opacity: 0 }, {
+        y: 0, opacity: 1, duration: 0.8, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 85%' }
+      });
+    });
+
+    // Staggered reveal for grids
+    gsap.utils.toArray('[data-stagger]').forEach((group) => {
+      const items = group.querySelectorAll('.reveal');
+      gsap.fromTo(items, { y: 30, opacity: 0 }, {
+        y: 0, opacity: 1, duration: 0.7, ease: 'power2.out', stagger: 0.12,
+        scrollTrigger: { trigger: group, start: 'top 82%' }
+      });
+    });
+
+    // Count-up stats
+    gsap.utils.toArray('.count').forEach((el) => {
+      const target = +el.dataset.count;
+      const obj = { v: 0 };
+      ScrollTrigger.create({
+        trigger: el, start: 'top 88%', once: true,
+        onEnter: () => gsap.to(obj, {
+          v: target, duration: 1.6, ease: 'power2.out',
+          onUpdate: () => { el.textContent = Math.round(obj.v); }
+        })
+      });
+    });
+
+    // Tadabbur: illuminate words sage → gold, driven by scroll
+    const words = gsap.utils.toArray('#tad-surah .tad-word');
+    const total = words.length;
+    const pctEl = document.getElementById('tad-pct');
+    const barEl = document.getElementById('tad-bar');
+    const litUntil = { i: 0 };
+    ScrollTrigger.create({
+      trigger: '#tad-surah', start: 'top 78%', end: 'bottom 40%', scrub: 0.6,
+      onUpdate: (self) => {
+        const shouldLight = Math.round(self.progress * total);
+        // light or unlight to match progress
+        for (let k = 0; k < total; k++) {
+          const on = k < shouldLight;
+          const w = words[k];
+          if (on && !w.classList.contains('lit')) {
+            gsap.to(w, { color: '#C8A047', duration: 0.3 });
+            w.classList.add('lit');
+          } else if (!on && w.classList.contains('lit')) {
+            gsap.to(w, { color: 'rgba(122,139,112,0.5)', duration: 0.3 });
+            w.classList.remove('lit');
+          }
+        }
+        const pct = Math.round((shouldLight / total) * 100);
+        pctEl.textContent = pct;
+        barEl.style.width = pct + '%';
+      }
+    });
+
   } else {
-    // Skip animation for reduced-motion users
-    document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+    // Reduced motion / no GSAP: make sure everything is visible
+    document.querySelectorAll('.reveal').forEach(el => { el.style.opacity = 1; });
+    document.querySelectorAll('.count').forEach(el => { el.textContent = el.dataset.count; });
+    document.querySelectorAll('#tad-surah .tad-word').forEach((w, i, arr) => {
+      if (i < arr.length * 0.47) w.style.color = '#C8A047';
+    });
+    const p = document.getElementById('tad-pct'); if (p) p.textContent = 47;
+    const b = document.getElementById('tad-bar'); if (b) b.style.width = '47%';
   }
 </script>
 
