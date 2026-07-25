@@ -1288,7 +1288,7 @@
       if (label) label.textContent = screens[n].dataset.label;
       idx = n;
     }
-    function start() { if (reduced) return; stop(); timer = setInterval(() => show(idx + 1), 3600); }
+    function start() { if (reduced) return; stop(); timer = setInterval(() => show(idx + 1), 2000); }
     function stop() { if (timer) { clearInterval(timer); timer = null; } }
 
     dots.forEach((d, i) => d.addEventListener('click', () => { show(i); start(); }));
