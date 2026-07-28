@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs";
 import { prisma } from "../../../../lib/prisma";
 import { signToken, passwordTokenFingerprint } from "../../../../lib/auth";
 import { hit, clientKey } from "../../../../lib/rateLimit";
+import { toAuthUser } from "../../../../lib/authUser";
 
 // A fixed valid bcrypt hash used only to spend comparable CPU time when the
 // email is not found, so login timing can't be used to enumerate accounts.
@@ -31,27 +32,16 @@ export async function POST(request: Request) {
   });
   // Always run a bcrypt comparison — even when the user does not exist — so the
   // response time does not reveal whether an email is registered.
-  const compareHash = user?.passwordHash ?? DUMMY_PASSWORD_HASH;
+  const compareHash = user?.hasPassword ? user.passwordHash : DUMMY_PASSWORD_HASH;
   const passwordMatches = await bcrypt.compare(password, compareHash);
-  if (!user || !passwordMatches) {
+  if (!user || !user.hasPassword || !passwordMatches) {
     return NextResponse.json({ error: "Invalid credentials", code: "unauthorized" }, { status: 401 });
   }
 
   const token = signToken(user.id, { pwFingerprint: passwordTokenFingerprint(user.passwordHash) });
   return NextResponse.json({
     data: {
-      user: {
-        id: user.id,
-        email: user.email,
-        name: user.name,
-        nativeLanguage: user.nativeLanguage,
-        translationLanguage: user.translationLanguage,
-        goal: user.goal,
-        level: user.level,
-        xp: user.xp,
-        placementType: user.placementType,
-        startingChapterOrder: user.startingChapterOrder,
-      },
+      user: toAuthUser(user),
       token,
     },
   });

@@ -10,6 +10,10 @@ model User {
     id             String            @id @default(cuid())
     email          String            @unique
     passwordHash   String
+    hasPassword    Boolean           @default(true)
+    googleSubject  String?           @unique
+    googleEmail    String?
+    googleLinkedAt DateTime?
     name           String
     nativeLanguage String            @default("ur")
     translationLanguage String       @default("ur")

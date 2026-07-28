@@ -20,6 +20,7 @@ export async function GET(request: Request) {
       level: true,
       placementType: true,
       startingChapterOrder: true,
+      hasPassword: true,
     },
     where: { id: userId }
   });

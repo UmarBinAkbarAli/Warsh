@@ -14,6 +14,7 @@ export interface User {
   xp?: number;
   placementType?: string | null;
   startingChapterOrder?: number | null;
+  hasPassword?: boolean;
 }
 
 interface AuthStore {

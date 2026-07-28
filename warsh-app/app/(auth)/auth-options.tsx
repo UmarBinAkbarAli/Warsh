@@ -1,10 +1,13 @@
-import { Linking, View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { Linking, Platform, View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { ArabicText } from "@components/ArabicText";
+import { useT } from "@i18n/index";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 import { WEB_BASE_URL } from "@services/api";
+import { GoogleAuthSection } from "@components/GoogleAuthSection";
+import { useLanguage } from "@services/language";
 
 type Provider = {
   label: string;
@@ -18,10 +21,13 @@ type Provider = {
 export default function AuthOptionsScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const language = useLanguage();
+  const t = useT();
+  const isUrdu = language === "ur";
 
   const providers: Provider[] = [
     {
-      label: "Continue with Email",
+      label: t("auth.continueEmail"),
       icon: "mail-outline",
       bg: WarshPalette.gold,
       text: WarshPalette.ink,
@@ -30,10 +36,18 @@ export default function AuthOptionsScreen() {
   ];
 
   return (
-    <View style={[styles.screen, { paddingTop: insets.top, paddingBottom: insets.bottom }]}>
+    <View
+      style={[
+        styles.screen,
+        {
+          paddingTop: insets.top + (Platform.OS === "web" ? 24 : 0),
+          paddingBottom: insets.bottom,
+        },
+      ]}
+    >
       {/* Back */}
       <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
-        <Ionicons name="chevron-back" size={24} color={WarshPalette.ink} />
+        <Ionicons name={isUrdu ? "chevron-forward" : "chevron-back"} size={24} color={WarshPalette.ink} />
       </TouchableOpacity>
 
       {/* Header */}
@@ -41,11 +55,14 @@ export default function AuthOptionsScreen() {
         <ArabicText size="sm" style={styles.bismillah}>
           بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
         </ArabicText>
-        <Text style={styles.title}>Let's sign you up{"\n"}to continue</Text>
+        <Text style={[styles.title, isUrdu ? styles.urduText : null]}>
+          {t("auth.signupTitle")}
+        </Text>
       </View>
 
       {/* Provider buttons */}
       <View style={styles.providers}>
+        <GoogleAuthSection context="signup" />
         {providers.map((p) => (
           <TouchableOpacity
             key={p.label}
@@ -57,25 +74,39 @@ export default function AuthOptionsScreen() {
             onPress={p.onPress}
             activeOpacity={0.85}
           >
-            <Ionicons name={p.icon as any} size={20} color={p.text} style={styles.providerIcon} />
-            <Text style={[styles.providerLabel, { color: p.text }]}>{p.label}</Text>
+            <Ionicons
+              name={p.icon as any}
+              size={20}
+              color={p.text}
+              style={[styles.providerIcon, isUrdu ? styles.providerIconUrdu : null]}
+            />
+            <Text style={[styles.providerLabel, { color: p.text }, isUrdu ? styles.urduText : null]}>
+              {p.label}
+            </Text>
           </TouchableOpacity>
         ))}
       </View>
 
       {/* Legal */}
-      <Text style={styles.legal}>
-        By continuing, you agree to Warsh's{" "}
-        <Text style={styles.legalLink} onPress={() => void Linking.openURL(`${WEB_BASE_URL}/terms`)}>Terms of Service</Text>
-        {" "}and{" "}
-        <Text style={styles.legalLink} onPress={() => void Linking.openURL(`${WEB_BASE_URL}/privacy`)}>Privacy Policy</Text>.
+      <Text style={[styles.legal, isUrdu ? styles.urduText : null]}>
+        {t("auth.legalPrefix")}{" "}
+        <Text style={styles.legalLink} onPress={() => void Linking.openURL(`${WEB_BASE_URL}/terms`)}>
+          {t("auth.terms")}
+        </Text>
+        {" "}{t("auth.legalAnd")}{" "}
+        <Text style={styles.legalLink} onPress={() => void Linking.openURL(`${WEB_BASE_URL}/privacy`)}>
+          {t("auth.privacy")}
+        </Text>
+        {t("auth.legalSuffix")}
       </Text>
 
       {/* Login link */}
-      <View style={styles.loginRow}>
-        <Text style={styles.loginText}>Already have an account? </Text>
+      <View style={[styles.loginRow, isUrdu ? styles.loginRowUrdu : null]}>
+        <Text style={[styles.loginText, isUrdu ? styles.urduText : null]}>
+          {t("auth.alreadyAccount")}{" "}
+        </Text>
         <TouchableOpacity onPress={() => router.push("/(auth)/login")}>
-          <Text style={styles.loginLink}>Log in</Text>
+          <Text style={[styles.loginLink, isUrdu ? styles.urduText : null]}>{t("auth.logIn")}</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -85,7 +116,7 @@ export default function AuthOptionsScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: Colors.bg.primary,
+    backgroundColor: Colors.bg.emphasis,
     paddingHorizontal: Spacing.xl,
   },
   backBtn: {
@@ -127,6 +158,10 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: Spacing.xl,
   },
+  providerIconUrdu: {
+    left: undefined,
+    right: Spacing.xl,
+  },
   providerLabel: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyL,
@@ -148,6 +183,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+  },
+  loginRowUrdu: {
+    flexDirection: "row-reverse",
+  },
+  urduText: {
+    fontFamily: Fonts.urduFallback,
+    writingDirection: "rtl",
   },
   loginText: {
     color: WarshPalette.bodyBrown,

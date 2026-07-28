@@ -520,13 +520,17 @@ export default function SettingsScreen() {
             showChevron
           />
           <View style={styles.divider} />
-          <SettingRow
-            icon="lock-closed-outline"
-            label={t("settings.changePassword")}
-            onPress={() => router.push("/(app)/change-password")}
-            showChevron
-          />
-          <View style={styles.divider} />
+          {user?.hasPassword !== false ? (
+            <>
+              <SettingRow
+                icon="lock-closed-outline"
+                label={t("settings.changePassword")}
+                onPress={() => router.push("/(app)/change-password")}
+                showChevron
+              />
+              <View style={styles.divider} />
+            </>
+          ) : null}
           <SettingRow
             icon="trash-outline"
             label={t("settings.deleteAccount")}
