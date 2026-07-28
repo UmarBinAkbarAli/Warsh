@@ -106,6 +106,15 @@ Do not reintroduce a hand-maintained lesson schema under `Docs/`.
 
 Refresh tokens are implemented as rotated JWT sessions rather than a separate stored refresh-token model. Password hash fingerprinting invalidates sessions after password changes.
 
+Google sign-in uses the official provider-issued ID token as an identity proof,
+then issues the same Warsh JWT used by password sessions. The backend validates
+the token audience against `GOOGLE_OAUTH_CLIENT_ID`, stores `googleSubject` as
+the durable provider key, and never treats a matching email as sufficient to
+link accounts. Existing password accounts confirm their Warsh password once;
+new Google users receive a non-usable random password hash and
+`hasPassword=false`. Android uses Google Credential Manager through
+`react-native-nitro-google-signin`; web renders Google Identity Services.
+
 ### API configuration
 
 `EXPO_PUBLIC_API_URL` is required and must be environment-appropriate:
@@ -150,20 +159,25 @@ Never commit a machine-specific LAN IP.
 
 Import the singleton from `warsh-backend/lib/prisma.ts`. Do not instantiate `PrismaClient` in route files.
 
-The current schema contains 12 models:
+The current schema contains 17 models:
 
 1. User
-2. Streak
-3. Chapter
-4. Lesson
-5. Progress
-6. ChatMessage
-7. Achievement
-8. UserAchievement
-9. VocabularyWord
-10. TadabburSurah
-11. UserSurahProgress
-12. UserVocabularyWord
+2. StorePurchase
+3. PromoCode
+4. PromoRedemption
+5. Streak
+6. Chapter
+7. Lesson
+8. LessonContentReview
+9. ContentReviewIssue
+10. Progress
+11. ChatMessage
+12. Achievement
+13. UserAchievement
+14. VocabularyWord
+15. TadabburSurah
+16. UserSurahProgress
+17. UserVocabularyWord
 
 After schema changes:
 
@@ -176,6 +190,14 @@ npm run db:migrate
 ### Lesson content
 
 `Lesson.content` is a JSON value validated by `@warsh/lesson-schema`. Admin writes and fixture validation must use the same package. Exercise IDs must remain stable and globally collision-safe according to the implemented validators.
+
+Warsh Studio exposes a protected review-only view at
+`/dashboard/content-review`. `LessonContentReview` stores the reviewer decision
+and overall note, while `ContentReviewIssue` stores the exact JSON path, content
+or media label, issue category, note, optional media URL, and resolution state.
+These records must remain separate from `Lesson.content`; flagging a problem
+must never edit the learner-facing lesson implicitly. Lessons cannot be marked
+`APPROVED` while open review issues remain.
 
 ### Course and completion
 
@@ -212,6 +234,18 @@ valid activity merely because a new streak day has opened.
 - Reset tokens are purpose-bound and time-limited.
 - Resend handles delivery when configured.
 
+### Google identity flow
+
+- `POST /api/auth/google` verifies an ID token and signs in an already linked
+  user, creates a new Warsh user, or returns a short-lived purpose-bound link
+  token when a matching password account exists.
+- `POST /api/auth/google/link` requires that link token and the existing Warsh
+  password before storing the Google subject.
+- Session JWTs issued through Google remain bound to the stored password-hash
+  fingerprint, including the random hash used by social-only accounts.
+- Google OAuth clients must be created only in Google Cloud project
+  `warsh-production` (`Warsh Production`).
+
 ### Admin routes
 
 - Production admin reads/writes require `ADMIN_DASHBOARD_TOKEN`.
@@ -228,7 +262,7 @@ valid activity merely because a new streak day has opened.
 
 ## 8. API surface
 
-The repository currently contains 44 API route files. Major groups are:
+The repository currently contains 68 API route files. Major groups are:
 
 - `/api/auth/*` — register, login, current user, refresh, forgot/reset/change password
 - `/api/chapters*` — course state and chapter lesson lists
@@ -241,6 +275,8 @@ The repository currently contains 44 API route files. Major groups are:
 - `/api/audio/tts`
 - `/api/users/me`
 - `/api/admin/*`
+- `/api/admin/content-review*` — review index, full lesson documents, review
+  decisions, and issue lifecycle
 - `/api/webhooks/google`
 - `/api/cron/*`
 - `/api/health`
@@ -298,7 +334,8 @@ The authoritative inventories are:
 Important groups:
 
 - Database: `DATABASE_URL`, optional `DIRECT_DATABASE_URL`
-- Auth/admin: `JWT_SECRET`, `JWT_EXPIRES_IN`, `ADMIN_DASHBOARD_TOKEN`
+- Auth/admin: `JWT_SECRET`, `JWT_EXPIRES_IN`, `ADMIN_DASHBOARD_TOKEN`,
+  `GOOGLE_OAUTH_CLIENT_ID`
 - Development: `DEV_UNLOCK_ALL`, `ALLOW_UNAUTHENTICATED_ADMIN`
 - AI/TTS: `OPENAI_API_KEY`, model/voice/limit settings
 - R2: endpoint, credentials, bucket, public URL
@@ -306,7 +343,8 @@ Important groups:
 - Cron: `CRON_SECRET`
 - Email: `RESEND_API_KEY`, sender
 - Observability: Sentry and Mixpanel variables
-- Client: `EXPO_PUBLIC_API_URL`, environment, Sentry DSN, Mixpanel token
+- Client: `EXPO_PUBLIC_API_URL`, `EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID`,
+  environment, Sentry DSN, Mixpanel token
 
 Never duplicate secret values in documentation.
 
@@ -371,6 +409,16 @@ After downloading the APK, run from the repository root:
 The APK path is optional. The helper first checks `warsh-app\android\app\build\outputs\apk\release`, then EAS build folders and `Downloads`. It starts the AVD when necessary, waits for Android to boot, upgrades the installed `com.warsh.app` package, and launches Warsh. Pass `-ResetAppData` only when a clean first-install state is required.
 
 Use this workflow for UI, UX, navigation, API, and general regression checks. It does not replace Play-installed subscription/consumable QA or physical-device checks for microphone, notifications, and device-specific behavior.
+
+When investigating a startup crash on an older physical Android device, capture
+the native crash buffer before assuming a JavaScript failure. A RenderThread
+`SIGSEGV` in a vendor Mali/OpenGL library should first be isolated to the
+smallest screen-specific layer. Prefer simplifying that screen's dense
+transforms, texture-like repeated elements, and overlapping elevation before
+considering an app-wide compatibility mode or software renderer. Verify the
+candidate on the affected device with a clean install and repeated
+force-stop/data-clear/launch cycles. Do not add a global rendering fallback
+without evidence that the fault is broader than the isolated screen.
 
 ### Manual project commands
 
