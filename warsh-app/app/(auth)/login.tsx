@@ -8,6 +8,7 @@ import { BrandButton } from "@components/BrandButton";
 import { getApiErrorMessage } from "@services/api";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../constants/theme";
 import { trackLoginCompleted } from "@services/analytics";
+import { GoogleAuthSection } from "@components/GoogleAuthSection";
 
 export default function LoginScreen() {
   const router = useRouter();
@@ -39,6 +40,8 @@ export default function LoginScreen() {
       </ArabicText>
       <Text style={styles.heading}>Welcome back to Warsh</Text>
       <Text style={styles.subheading}>Pick up where you left off. Your next word is waiting.</Text>
+
+      <GoogleAuthSection context="login" />
 
       <TextInput
         label="Email"

@@ -1,9 +1,23 @@
-import { useState, useEffect, useRef } from "react";
-import { View, Text, Animated, StyleSheet, Pressable } from "react-native";
+import type { ComponentProps } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Animated, StyleSheet, Text, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+
+import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
-import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
+import { CelebrationEmblem } from "@components/CelebrationEmblem";
+import {
+  Colors,
+  FontSizes,
+  Fonts,
+  LineHeights,
+  Radii,
+  Shadows,
+  Spacing,
+  WarshPalette,
+} from "../../constants/theme";
 
 type Achievement = {
   key: string;
@@ -12,39 +26,42 @@ type Achievement = {
   xpReward: number;
 };
 
-const BADGE_MAP: Record<string, string> = {
-  first_lesson: "📖",
-  first_chapter: "🌟",
-  streak_3: "🔥",
-  streak_7: "🔥",
-  streak_30: "🏆",
-  streak_100: "🕌",
-  xp_100: "✨",
-  xp_500: "💫",
-  xp_1000: "🌙",
-  lessons_10: "📚",
-  lessons_50: "🎓",
-  lessons_100: "🏅",
-  first_noor: "🌿",
-  first_shadow_repeat: "🎙️",
-  first_spoken_lesson: "🗣️",
-  phrases_10: "💬",
-  phrases_50: "🗣️",
-  phrases_100: "🎖️",
+type IconName = ComponentProps<typeof Ionicons>["name"];
+
+const BADGE_MAP: Record<string, IconName> = {
+  first_lesson: "book-outline",
+  first_chapter: "sparkles-outline",
+  streak_3: "flame-outline",
+  streak_7: "flame-outline",
+  streak_30: "trophy-outline",
+  streak_100: "ribbon-outline",
+  xp_100: "sparkles-outline",
+  xp_500: "star-outline",
+  xp_1000: "moon-outline",
+  lessons_10: "library-outline",
+  lessons_50: "school-outline",
+  lessons_100: "medal-outline",
+  first_noor: "leaf-outline",
+  first_shadow_repeat: "mic-outline",
+  first_spoken_lesson: "chatbubble-ellipses-outline",
+  phrases_10: "chatbubble-outline",
+  phrases_50: "chatbubbles-outline",
+  phrases_100: "ribbon-outline",
 };
 
-function getBadge(key: string) {
-  return BADGE_MAP[key] ?? "🌟";
+function getBadge(key: string): IconName {
+  return BADGE_MAP[key] ?? "sparkles-outline";
 }
 
 export default function MilestoneCelebrationScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { achievements: achievementsParam, nextRoute, streak } = useLocalSearchParams<{
-    achievements: string;
-    nextRoute: string;
-    streak: string;
-  }>();
+  const { achievements: achievementsParam, nextRoute, streak } =
+    useLocalSearchParams<{
+      achievements: string;
+      nextRoute: string;
+      streak: string;
+    }>();
 
   const achievements: Achievement[] = (() => {
     try {
@@ -57,7 +74,6 @@ export default function MilestoneCelebrationScreen() {
   const [index, setIndex] = useState(0);
   const scaleAnim = useRef(new Animated.Value(0)).current;
   const opacityAnim = useRef(new Animated.Value(0)).current;
-
   const current = achievements[index];
   const isLast = index === achievements.length - 1;
 
@@ -67,8 +83,8 @@ export default function MilestoneCelebrationScreen() {
     Animated.parallel([
       Animated.spring(scaleAnim, {
         toValue: 1,
-        friction: 5,
-        tension: 60,
+        friction: 6,
+        tension: 54,
         useNativeDriver: true,
       }),
       Animated.timing(opacityAnim, {
@@ -77,15 +93,18 @@ export default function MilestoneCelebrationScreen() {
         useNativeDriver: true,
       }),
     ]).start();
-  }, [index]);
+  }, [index, opacityAnim, scaleAnim]);
 
   function handleContinue() {
     if (!isLast) {
-      setIndex((i) => i + 1);
+      setIndex((value) => value + 1);
       return;
     }
     if (nextRoute === "streak-celebration") {
-      router.replace({ pathname: "/(app)/streak-celebration", params: { streak: streak ?? "1" } });
+      router.replace({
+        pathname: "/(app)/streak-celebration",
+        params: { streak: streak ?? "1" },
+      });
     } else if (nextRoute === "chat") {
       router.replace("/(app)/(tabs)/chat");
     } else {
@@ -99,58 +118,74 @@ export default function MilestoneCelebrationScreen() {
   }
 
   return (
-    <View style={[styles.screen, { paddingTop: insets.top + Spacing.xl, paddingBottom: insets.bottom + Spacing.xl }]}>
-      {/* Gold radiance */}
-      <View style={styles.radiance} />
+    <View
+      style={[
+        styles.screen,
+        {
+          paddingTop: insets.top + Spacing.lg,
+          paddingBottom: insets.bottom + Spacing.lg,
+        },
+      ]}
+    >
+      <View style={styles.content}>
+        <Text style={styles.eyebrow}>MILESTONE UNLOCKED</Text>
 
-      {/* Badge */}
-      <Animated.View
-        style={[
-          styles.badgeWrap,
-          { transform: [{ scale: scaleAnim }], opacity: opacityAnim },
-        ]}
-      >
-        <View style={styles.badgeCircle}>
-          <Text style={styles.badgeEmoji}>{getBadge(current.key)}</Text>
-        </View>
-      </Animated.View>
+        <Animated.View
+          style={[
+            styles.milestoneCard,
+            { transform: [{ scale: scaleAnim }], opacity: opacityAnim },
+          ]}
+        >
+          <View style={styles.cornerLineLeft} />
+          <View style={styles.cornerLineRight} />
+          <CelebrationEmblem icon={getBadge(current.key)} tone="dark" />
 
-      {/* Title */}
-      <Animated.View style={{ opacity: opacityAnim, alignItems: "center", gap: Spacing.sm }}>
-        {current.titleAr ? (
-          <Text style={styles.arabicTitle}>{current.titleAr}</Text>
+          {current.titleAr ? (
+            <ArabicText size="lg" style={styles.arabicTitle}>
+              {current.titleAr}
+            </ArabicText>
+          ) : null}
+          <Text style={styles.titleEn}>{current.title}</Text>
+          <View style={styles.xpBadge}>
+            <Ionicons name="sparkles" size={14} color={WarshPalette.navy} />
+            <Text style={styles.xpText}>+{current.xpReward} XP</Text>
+          </View>
+        </Animated.View>
+
+        <Animated.View style={[styles.blessingCard, { opacity: opacityAnim }]}>
+          <ArabicText size="md" style={styles.blessingArabic}>
+            بَارَكَ اللهُ فِيكَ
+          </ArabicText>
+          <Text style={styles.encouragement}>May Allah bless your effort.</Text>
+        </Animated.View>
+
+        {achievements.length > 1 ? (
+          <View style={styles.progress}>
+            <Text style={styles.progressLabel}>
+              {index + 1} of {achievements.length}
+            </Text>
+            <View style={styles.dots}>
+              {achievements.map((_, dotIndex) => (
+                <View
+                  key={dotIndex}
+                  style={[
+                    styles.dot,
+                    dotIndex === index ? styles.dotActive : null,
+                  ]}
+                />
+              ))}
+            </View>
+          </View>
         ) : null}
-        <Text style={styles.titleEn}>{current.title}</Text>
-        <View style={styles.xpBadge}>
-          <Text style={styles.xpText}>+{current.xpReward} XP</Text>
-        </View>
-      </Animated.View>
+      </View>
 
-      {/* Encouragement */}
-      <Text style={styles.encouragement}>
-        بَارَكَ اللهُ فِيكَ{"\n"}May Allah bless your effort.
-      </Text>
-
-      {/* Counter dots if multiple */}
-      {achievements.length > 1 ? (
-        <View style={styles.dots}>
-          {achievements.map((_, i) => (
-            <View key={i} style={[styles.dot, i === index ? styles.dotActive : null]} />
-          ))}
-        </View>
-      ) : null}
-
-      <BrandButton
-        title={isLast ? "Continue" : `Next (${index + 1}/${achievements.length})`}
-        onPress={handleContinue}
-        style={styles.cta}
-      />
-
-      {isLast ? (
-        <Pressable onPress={handleContinue} style={styles.skipLink}>
-          <Text style={styles.skipText}>Skip</Text>
-        </Pressable>
-      ) : null}
+      <View style={styles.footer}>
+        <BrandButton
+          title={isLast ? "Continue" : "Next milestone"}
+          onPress={handleContinue}
+          style={styles.cta}
+        />
+      </View>
     </View>
   );
 }
@@ -159,79 +194,121 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: Colors.bg.primary,
-    paddingHorizontal: Spacing.xl,
+    paddingHorizontal: Spacing.gutter,
     alignItems: "center",
     justifyContent: "space-between",
   },
-  radiance: {
-    position: "absolute",
-    top: "25%",
-    alignSelf: "center",
-    width: 260,
-    height: 260,
-    borderRadius: 130,
-    backgroundColor: WarshPalette.parchment,
-    opacity: 0.25,
+  content: {
+    flex: 1,
+    width: "100%",
+    maxWidth: 440,
+    justifyContent: "center",
+    alignItems: "center",
+    gap: Spacing.lg,
   },
-  badgeWrap: {
+  eyebrow: {
+    color: WarshPalette.goldDeep,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.label,
+    lineHeight: LineHeights.label,
+    letterSpacing: 1.7,
+  },
+  milestoneCard: {
+    width: "100%",
+    minHeight: 300,
+    overflow: "hidden",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: Spacing.xl,
-  },
-  badgeCircle: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    backgroundColor: WarshPalette.cream,
-    borderWidth: 3,
+    paddingHorizontal: Spacing.xl,
+    paddingVertical: Spacing.xxl,
+    borderRadius: Radii.xl,
+    borderWidth: 1,
     borderColor: WarshPalette.gold,
-    alignItems: "center",
-    justifyContent: "center",
-    shadowColor: WarshPalette.gold,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.35,
-    shadowRadius: 16,
-    elevation: 8,
+    backgroundColor: WarshPalette.navy,
+    ...Shadows.card,
   },
-  badgeEmoji: {
-    fontSize: 52,
-    textAlign: "center",
+  cornerLineLeft: {
+    position: "absolute",
+    top: 16,
+    left: 16,
+    width: 38,
+    height: 38,
+    borderTopWidth: 1,
+    borderLeftWidth: 1,
+    borderColor: WarshPalette.gold,
+    borderTopLeftRadius: Radii.sm,
+  },
+  cornerLineRight: {
+    position: "absolute",
+    right: 16,
+    bottom: 16,
+    width: 38,
+    height: 38,
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: WarshPalette.gold,
+    borderBottomRightRadius: Radii.sm,
   },
   arabicTitle: {
-    fontFamily: Fonts.arabic,
-    fontSize: FontSizes.arabicL,
-    color: WarshPalette.ink,
+    marginTop: Spacing.lg,
+    color: WarshPalette.parchment,
     textAlign: "center",
-    writingDirection: "rtl",
-    lineHeight: LineHeights.arabicL,
   },
   titleEn: {
+    marginTop: Spacing.sm,
     fontFamily: Fonts.bold,
-    fontSize: FontSizes.h1,
+    fontSize: FontSizes.displayL,
     fontWeight: "700",
-    color: WarshPalette.ink,
+    color: WarshPalette.white,
     textAlign: "center",
-    lineHeight: LineHeights.h1,
+    lineHeight: LineHeights.displayL,
   },
   xpBadge: {
-    backgroundColor: WarshPalette.gold,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.xs,
+    backgroundColor: WarshPalette.parchment,
     paddingHorizontal: Spacing.lg,
-    paddingVertical: Spacing.xs,
+    paddingVertical: Spacing.sm,
     borderRadius: Radii.full,
-    marginTop: Spacing.xs,
+    marginTop: Spacing.lg,
   },
   xpText: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
     fontWeight: "600",
-    color: WarshPalette.white,
+    color: WarshPalette.navy,
+  },
+  blessingCard: {
+    width: "100%",
+    paddingHorizontal: Spacing.lg,
+    paddingVertical: Spacing.md,
+    alignItems: "center",
+    borderRadius: Radii.lg,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: WarshPalette.defaultCardBorder,
+    backgroundColor: WarshPalette.parchmentBg,
+    ...Shadows.card,
+  },
+  blessingArabic: {
+    color: WarshPalette.sageDeep,
+    textAlign: "center",
   },
   encouragement: {
     fontFamily: Fonts.italic,
-    fontSize: FontSizes.bodyL,
+    fontSize: FontSizes.bodyM,
     color: WarshPalette.bodyBrown,
     textAlign: "center",
-    lineHeight: LineHeights.bodyL * 1.6,
+    lineHeight: LineHeights.bodyM,
+  },
+  progress: {
+    alignItems: "center",
+    gap: Spacing.sm,
+  },
+  progressLabel: {
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.caption,
   },
   dots: {
     flexDirection: "row",
@@ -239,27 +316,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   dot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
+    width: 20,
+    height: 3,
+    borderRadius: Radii.full,
     backgroundColor: WarshPalette.cream,
-    borderWidth: 1,
-    borderColor: WarshPalette.defaultCardBorder,
   },
   dotActive: {
     backgroundColor: WarshPalette.gold,
-    borderColor: WarshPalette.gold,
+  },
+  footer: {
+    width: "100%",
+    maxWidth: 440,
   },
   cta: {
     width: "100%",
-  },
-  skipLink: {
-    paddingVertical: Spacing.sm,
-  },
-  skipText: {
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM,
-    color: WarshPalette.subtleBrown,
-    textAlign: "center",
   },
 });

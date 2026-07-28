@@ -4,6 +4,7 @@ import { prisma } from "../../../../lib/prisma";
 import { signToken, passwordTokenFingerprint } from "../../../../lib/auth";
 import { hit, clientKey } from "../../../../lib/rateLimit";
 import { resolveRegistrationLanguages } from "../../../../lib/language";
+import { toAuthUser } from "../../../../lib/authUser";
 
 export async function POST(request: Request) {
   const rl = hit(clientKey(request, "register"), 5, 60_000);
@@ -50,6 +51,7 @@ export async function POST(request: Request) {
     data: {
       email: normalizedEmail,
       passwordHash,
+      hasPassword: true,
       name,
       nativeLanguage: languages.nativeLanguage,
       translationLanguage: languages.translationLanguage,
@@ -63,18 +65,7 @@ export async function POST(request: Request) {
   return NextResponse.json(
     {
       data: {
-        user: {
-          id: user.id,
-          email: user.email,
-          name: user.name,
-          nativeLanguage: user.nativeLanguage,
-          translationLanguage: user.translationLanguage,
-          goal: user.goal,
-          level: user.level,
-          xp: user.xp,
-          placementType: user.placementType,
-          startingChapterOrder: user.startingChapterOrder,
-        },
+        user: toAuthUser(user),
         token,
       },
     },

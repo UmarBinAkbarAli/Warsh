@@ -81,6 +81,14 @@ npm run deploy:web
 ## Implementation rules
 
 - Inspect `git status` before editing and preserve unrelated changes.
+- Use a Pen-first product workflow for every new feature, screen, flow,
+  component, or meaningful UI/UX change:
+  1. Create or update the proposed design in the Warsh Pen file first.
+  2. Review the Pen design with the product owner and obtain explicit approval.
+  3. Only after approval, decide together whether the proposal should be
+     implemented in code.
+  Do not begin implementation before this design-review gate unless the product
+  owner explicitly asks to bypass it for that specific task.
 - For diagnosis-only requests, report the cause before changing code.
 - Verify status against code, validators, builds, and runtime behavior; do not trust historical tracker claims blindly.
 - Import the Prisma singleton from `warsh-backend/lib/prisma.ts`; never instantiate Prisma in routes.

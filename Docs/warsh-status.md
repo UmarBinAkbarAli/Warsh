@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-07-24
+**Last verified:** 2026-07-28
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Beta hardening and launch preparation
 
@@ -46,6 +46,9 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 ### Core product
 
 - Account registration, login, logout, token refresh, password reset, password change, and persisted sessions
+- Google sign-in for Android and web, including backend ID-token verification,
+  new-account creation, secure password-confirmed linking for matching Warsh
+  emails, and English/Urdu entry UI
 - Preview/onboarding flow with English and Urdu support
 - Chapter listing, lesson listing, backend-enforced locking, placement skipping, and progress tracking
 - Lesson playback and completion with XP, streak, daily-goal, chapter-bonus, and achievement updates
@@ -66,11 +69,15 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - The shared lesson contract is implemented in `packages/lesson-schema` and vendored into the backend.
 - Vocabulary records, Urdu metadata, audio URLs, image fields, and R2 upload/playback infrastructure exist.
 - Audit exports exist for 585 vocabulary images and 1,203 discover-card word appearances.
+- The protected Warsh Studio Content Review Desk exposes all 72 chapters and
+  391 lessons as complete review documents, including Arabic, English, Urdu,
+  exercises, correct-answer data, images, and audio. Review status, notes, and
+  exact content-path/media issues are stored separately from learner content.
 
 ### Backend and infrastructure represented in code
 
-- 44 API route files under `warsh-backend/app/api/`
-- 12 Prisma models in the current schema
+- 68 API route files under `warsh-backend/app/api/`
+- 17 Prisma models in the current schema
 - JWT sessions with expiry, refresh rotation, and password-version invalidation
 - Production-only admin protection and explicit dashboard token support
 - Cloudflare R2 integration for audio/images
@@ -82,8 +89,79 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Recent verified repository changes
 
+### 2026-07-28
+
+- Implemented the approved Google sign-in flow in code. The backend verifies
+  Google ID tokens against one Web OAuth client audience, stores Google's
+  durable subject identifier, creates social-only users without exposing a
+  usable password, and requires one Warsh-password confirmation before linking
+  an existing matching email. Android uses Credential Manager through
+  `react-native-nitro-google-signin`; web uses the official Google Identity
+  Services control. English/Urdu auth-option states, TypeScript, lint, the
+  backend production build, and 22 backend tests pass.
+- Completed Google Auth Platform setup in Google Cloud project
+  `warsh-production` (`Warsh Production`): the User Data Policy is accepted,
+  the external audience is in production, and separate Web, Play App Signing
+  Android, and upload-key Android OAuth clients are active. The production
+  database migration, Vercel API environment, backend deployment, and Expo web
+  deployment are live; `app.warsh.app` renders the official Google Identity
+  Services button and its API proxy is healthy. Google branding verification
+  remains pending because `warsh.app` is not yet registered to the project
+  owner in Google Search Console. A signed production Android APK now compiles
+  with the Google native module, production API, Web client ID, and the
+  registered upload-key signature; a real-device Google account test remains
+  required.
+- Built and uploaded Android release `1.0.6 (19)` with Google sign-in to Google
+  Play **Closed testing - Alpha** at a 100% rollout. The 46,216,384-byte AAB has
+  SHA-256
+  `BA02EFC6B26A023589448C7DBC21C9F3C5E2C36A719B3DF3C9AB6442FB0D4665`,
+  embeds `https://api.warsh.app` and the production Google Web OAuth client,
+  contains no localhost API, and is signed by the registered upload
+  certificate with SHA-1 ending in `D2:6B`. All 63 packaged native libraries
+  passed the 16 KB compatibility gate. Play accepted version code 19 with
+  target SDK 36 and no supported-device loss; its only validation warning is
+  the optional missing R8/ProGuard deobfuscation file. Publishing overview
+  reports **Changes in review** while Play runs its quick checks, so tester
+  availability for version 19 remains pending Google processing.
+- Diagnosed the clean-install crash reported on a physical TECNO KF8 running
+  Android 11. Logcat captured a native RenderThread `SIGSEGV` in the vendor
+  Mali OpenGL stack (`libGLES_mali`/`libGLES_meow`) while the A1 welcome screen
+  rendered its dense rotated grain/corner decoration and elevated layers. The
+  approved A1 simplification removes those risky decorative and shadow layers
+  without adding global compatibility mode or a software-rendering fallback.
+  A signed production APK then passed the first clean launch plus five repeated
+  force-stop/data-clear/launch cycles on the same device with no native crash.
+  Live `app.warsh.app` also loaded the authenticated Learn home and lesson
+  content, confirming the production lesson API path remains healthy.
+- Built signed Android release `1.0.6 (20)` from the verified fix and uploaded
+  it to Google Play **Closed testing - Alpha** for a 100% rollout. The
+  46,218,349-byte AAB has SHA-256
+  `BBD822B78598BC6D1C6DA008D001021BDE39252BBFDFAD3632E0040116FE333B`,
+  targets SDK 36, supports API 24+, and embeds only the production API origin.
+  Play accepted the bundle with no device-support loss; its only warning is the
+  optional R8/ProGuard deobfuscation file. Publishing overview reports
+  **Changes in review** while Play runs automated checks, so version 20 is not
+  yet confirmed available to testers.
+- Deployed the matching backend and web client to production. Backend deployment
+  `dpl_Hhcj7CgwejXkATtk9iDxVbKLwCTi` is READY and aliased to
+  `https://api.warsh.app`; its health endpoint returns HTTP 200 and the Google
+  auth route is live. Web deployment `dpl_ociBy7zga6qTYvpJc9zvztYuYewq` is
+  READY and aliased to `https://app.warsh.app`.
+
 ### 2026-07-26
 
+- Added and deployed the protected Warsh Studio Content Review Desk at
+  `https://api.warsh.app/dashboard/content-review`. It provides search and
+  status filters across all 72 chapters and 391 lessons, recursively renders
+  every authored content field, previews images, exposes audio controls and
+  media sources, records exact-path issue categories/notes, and prevents
+  approval while issues remain open. Review data is isolated in
+  `LessonContentReview` and `ContentReviewIssue`; migration
+  `20260726150000_add_content_review` was applied without modifying lesson
+  JSON. Backend build, 19/19 tests, desktop and 390 px browser workflows, live
+  admin authentication, production curriculum/media rendering, and API health
+  passed. Production deployment `dpl_HkeGJZGn5xgYqB6gdgp3aCJh13Kd` is READY
+  and aliased to `https://api.warsh.app`.
 - Diagnosed the Closed-testing login outage in Play version `1.0.6 (15)`.
   The uploaded AAB embedded `http://127.0.0.1:3000` and did not contain
   `https://api.warsh.app`, so Play-installed devices could not reach the

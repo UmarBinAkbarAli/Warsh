@@ -8,7 +8,7 @@ import { BrandButton } from "@components/BrandButton";
 import { useT } from "@i18n/index";
 import { type AppLanguage } from "@services/language";
 import { useOnboardingStore } from "@stores/onboardingStore";
-import { FontSizes, Fonts, LineHeights, Radii, Shadows, Spacing, WarshPalette } from "../../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights, Radii, Shadows, Spacing, WarshPalette } from "../../../constants/theme";
 
 function LanguageOption({
   language,
@@ -91,14 +91,14 @@ export default function TranslationLanguageScreen() {
       </View>
 
       <View style={styles.footer}>
-        <BrandButton title={t("language.finishSetup")} onPress={() => router.push("/(auth)/register")} />
+        <BrandButton title={t("language.finishSetup")} onPress={() => router.push("/(auth)/auth-options")} />
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: WarshPalette.parchmentBg },
+  screen: { flex: 1, backgroundColor: Colors.bg.primary },
   content: { flex: 1, paddingHorizontal: Spacing.gutter, paddingTop: Spacing.xxl },
   eyebrow: { color: WarshPalette.goldDeep, fontFamily: Fonts.semiBold, fontSize: FontSizes.label, letterSpacing: 0.8, textTransform: "uppercase" },
   title: { maxWidth: 330, marginTop: Spacing.sm, color: WarshPalette.navy, fontFamily: Fonts.bold, fontSize: 42, lineHeight: 48 },

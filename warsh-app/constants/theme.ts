@@ -13,8 +13,9 @@ export const WarshPalette = {
   goldDeep: "#A88648", // --gold-deep (pressed states, gold text on light bg)
   parchment: "#D4B06A", // --gold-soft / A1 gold-light (muted-gold accent, text on navy)
   cream: "#EDDFAF", // --parchment-deep (borders, grouping surfaces)
-  creamBg: "#F4EBD0", // --parchment (primary screen background)
-  parchmentBg: "#FAF6E9", // --cream (card background)
+  creamBg: "#FAF7F0", // --screen-bg (primary screen background)
+  parchmentDeep: "#F4EBD0", // --parchment-deep (selected/grouped emphasis)
+  parchmentBg: "#FAF6E9", // --surface-card (card background)
   parchmentSoft: "#FAF2DD", // --parchment-soft (emphasis cards)
   white: "#FFFFFF", // --white-pure
   defaultCardBorder: "#9DAB94", // --sage-soft (dividers/borders per §2.4)
@@ -52,6 +53,7 @@ export const Colors = {
     primary: WarshPalette.creamBg,
     secondary: WarshPalette.navy,
     card: WarshPalette.parchmentBg,
+    emphasis: WarshPalette.parchmentDeep,
     surface: WarshPalette.cream,
   },
   text: {

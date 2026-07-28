@@ -26,12 +26,22 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
+  if (!user.hasPassword) {
+    return NextResponse.json(
+      { error: "Set a Warsh password through Forgot password before changing it.", code: "password_not_set" },
+      { status: 409 },
+    );
+  }
+
   if (!(await bcrypt.compare(currentPassword, user.passwordHash))) {
     return NextResponse.json({ error: "Current password is incorrect", code: "unauthorized" }, { status: 401 });
   }
 
   const newHash = await bcrypt.hash(newPassword, 12);
-  await prisma.user.update({ where: { id: userId }, data: { passwordHash: newHash } });
+  await prisma.user.update({
+    where: { id: userId },
+    data: { passwordHash: newHash, hasPassword: true },
+  });
 
   // Changing the password invalidates every previously-issued token (their `pv`
   // fingerprint no longer matches). Issue a fresh token so the current device

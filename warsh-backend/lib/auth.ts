@@ -21,6 +21,15 @@ export interface AuthPayload {
   exp?: number;
 }
 
+export interface GoogleLinkPayload {
+  purpose: "google-link";
+  googleSubject: string;
+  email: string;
+  name: string;
+  iat?: number;
+  exp?: number;
+}
+
 // Derives a stable, non-reversible fingerprint of the password hash. Embedded in
 // the token as `pv` and re-checked on every authenticated request.
 export function passwordTokenFingerprint(passwordHash: string): string {
@@ -62,6 +71,40 @@ export function verifyToken(token: string): AuthPayload | null {
 export function verifyTokenAllowExpired(token: string): AuthPayload | null {
   try {
     return jwt.verify(token, getJwtSecret(), { ignoreExpiration: true }) as AuthPayload;
+  } catch {
+    return null;
+  }
+}
+
+export function signGoogleLinkToken(identity: {
+  googleSubject: string;
+  email: string;
+  name: string;
+}) {
+  return jwt.sign(
+    {
+      purpose: "google-link",
+      googleSubject: identity.googleSubject,
+      email: identity.email,
+      name: identity.name,
+    },
+    getJwtSecret(),
+    { expiresIn: "10m" },
+  );
+}
+
+export function verifyGoogleLinkToken(token: string): GoogleLinkPayload | null {
+  try {
+    const payload = jwt.verify(token, getJwtSecret()) as GoogleLinkPayload;
+    if (
+      payload.purpose !== "google-link" ||
+      !payload.googleSubject ||
+      !payload.email ||
+      !payload.name
+    ) {
+      return null;
+    }
+    return payload;
   } catch {
     return null;
   }
