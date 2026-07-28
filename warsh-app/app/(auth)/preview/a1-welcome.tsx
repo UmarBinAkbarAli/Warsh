@@ -59,12 +59,6 @@ export default function PreviewA1Welcome() {
     <SafeAreaView edges={["top"]} style={styles.safeArea}>
       <StatusBar style="dark" backgroundColor={CREAM} />
       <View style={styles.background}>
-        <ParchmentGrain />
-        <CornerOrnament corner="topLeft" />
-        <CornerOrnament corner="topRight" />
-        <CornerOrnament corner="bottomLeft" />
-        <CornerOrnament corner="bottomRight" />
-
         <View
           style={[
             styles.scrollContent,
@@ -321,66 +315,6 @@ function JourneyIcon({
   return <MaterialCommunityIcons name="fire" size={24} color={color} />;
 }
 
-function ParchmentGrain() {
-  return (
-    <View pointerEvents="none" style={styles.grainLayer}>
-      {Array.from({ length: 34 }).map((_, index) => (
-        <View
-          key={index}
-          style={[
-            styles.grainMark,
-            {
-              left: `${(index * 37) % 100}%`,
-              top: `${(index * 23) % 100}%`,
-              width: 34 + (index % 5) * 10,
-              transform: [{ rotate: `${(index * 19) % 90}deg` }],
-            },
-          ]}
-        />
-      ))}
-    </View>
-  );
-}
-
-function CornerOrnament({
-  corner,
-}: {
-  corner: "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
-}) {
-  const vertical = corner.startsWith("top") ? { top: 82 } : { bottom: 2 };
-  const horizontal = corner.endsWith("Left") ? { left: -24 } : { right: -24 };
-  const flip = corner.endsWith("Right") ? [{ scaleX: -1 }] : [];
-  const rotate = corner.startsWith("bottom") ? [{ rotate: "180deg" }] : [];
-
-  return (
-    <View
-      pointerEvents="none"
-      style={[
-        styles.corner,
-        vertical,
-        horizontal,
-        { transform: [...flip, ...rotate] },
-      ]}
-    >
-      {Array.from({ length: 16 }).map((_, index) => (
-        <View
-          key={index}
-          style={[
-            styles.cornerTile,
-            {
-              left: (index % 4) * 20,
-              top: Math.floor(index / 4) * 20,
-              opacity: 0.08 + (index % 4) * 0.018,
-            },
-          ]}
-        />
-      ))}
-      <View style={styles.cornerStem} />
-      <View style={styles.cornerStemShort} />
-    </View>
-  );
-}
-
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
@@ -483,11 +417,6 @@ const styles = StyleSheet.create({
     borderRadius: 21,
     overflow: "hidden",
     backgroundColor: WarshPalette.cream,
-    shadowColor: "#000000",
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.1,
-    shadowRadius: 20,
-    elevation: 6,
   },
   heroImage: {
     width: "100%",
@@ -561,11 +490,6 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     alignItems: "center",
     justifyContent: "center",
-    shadowColor: GOLD_TEXT,
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.08,
-    shadowRadius: 6,
-    elevation: 2,
   },
   stepCircleCompact: {
     width: 42,
@@ -595,47 +519,5 @@ const styles = StyleSheet.create({
   },
   ctaCompact: {
     marginTop: 4,
-  },
-  grainLayer: {
-    ...StyleSheet.absoluteFillObject,
-    opacity: 0.45,
-  },
-  grainMark: {
-    position: "absolute",
-    height: 1,
-    backgroundColor: "rgba(124, 89, 35, 0.045)",
-  },
-  corner: {
-    position: "absolute",
-    width: 132,
-    height: 184,
-  },
-  cornerTile: {
-    position: "absolute",
-    width: 30,
-    height: 30,
-    borderWidth: 1,
-    borderColor: GOLD,
-    transform: [{ rotate: "45deg" }],
-  },
-  cornerStem: {
-    position: "absolute",
-    left: 40,
-    top: 5,
-    width: 1,
-    height: 150,
-    backgroundColor: GOLD,
-    opacity: 0.11,
-    transform: [{ rotate: "-28deg" }],
-  },
-  cornerStemShort: {
-    position: "absolute",
-    left: 66,
-    top: 28,
-    width: 1,
-    height: 118,
-    backgroundColor: GOLD,
-    opacity: 0.11,
-    transform: [{ rotate: "-42deg" }],
   },
 });
