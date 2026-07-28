@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -1208,9 +1209,11 @@ export default function LessonPlayScreen() {
           {error ? <Text style={styles.errorText}>{error}</Text> : null}
 
           <View style={styles.completionHero}>
+            <View style={styles.completionCornerTop} />
+            <View style={styles.completionCornerBottom} />
             <Text style={styles.completionKicker}>{t("player.lessonCompleteKicker")}</Text>
             <View style={styles.noorMonogram}>
-              <ArabicText size="md" style={styles.noorMonogramText}>ن</ArabicText>
+              <Ionicons name="checkmark" size={28} color={WarshPalette.parchment} />
             </View>
             <Text style={styles.completeCardTitle}>{t("player.lessonComplete")}</Text>
             <ArabicText size="md" style={styles.closeArabic}>بَارَكَ اللَّهُ فِيكَ</ArabicText>
@@ -2249,18 +2252,43 @@ const styles = StyleSheet.create({
   },
   closeScrollContent: {
     flexGrow: 1,
-    paddingTop: 12,
+    paddingTop: 24,
     paddingBottom: 24,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
   },
   completionHero: {
     alignSelf: "stretch",
     alignItems: "center",
-    borderRadius: 24,
+    overflow: "hidden",
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: WarshPalette.gold,
+    borderRadius: 20,
     paddingHorizontal: 24,
-    paddingVertical: 22,
+    paddingVertical: 24,
     backgroundColor: WarshPalette.navy,
+  },
+  completionCornerTop: {
+    position: "absolute",
+    top: 12,
+    left: 12,
+    width: 32,
+    height: 32,
+    borderTopWidth: 1,
+    borderLeftWidth: 1,
+    borderColor: WarshPalette.gold,
+    borderTopLeftRadius: 6,
+  },
+  completionCornerBottom: {
+    position: "absolute",
+    right: 12,
+    bottom: 12,
+    width: 32,
+    height: 32,
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: WarshPalette.gold,
+    borderBottomRightRadius: 6,
   },
   completionKicker: {
     color: WarshPalette.parchment,
@@ -2270,20 +2298,15 @@ const styles = StyleSheet.create({
     letterSpacing: 1.6,
   },
   noorMonogram: {
-    width: 58,
-    height: 58,
+    width: 56,
+    height: 56,
     marginTop: 14,
     borderWidth: 1,
     borderColor: WarshPalette.gold,
-    borderRadius: 29,
+    borderRadius: 28,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: WarshPalette.navyDeep,
-  },
-  noorMonogramText: {
-    color: WarshPalette.parchment,
-    fontSize: 31,
-    lineHeight: 42,
   },
   completeCardTitle: {
     marginTop: 12,
