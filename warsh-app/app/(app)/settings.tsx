@@ -12,6 +12,7 @@ import {
   View,
 } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
+import * as Application from "expo-application";
 import Constants from "expo-constants";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -30,6 +31,15 @@ import { type AppLanguage } from "@services/language";
 
 // AsyncStorage keys for local preferences
 const PREFS_KEY = "warsh_settings";
+
+const appVersion =
+  Application.nativeApplicationVersion ?? Constants.expoConfig?.version ?? "";
+const appBuildVersion = Application.nativeBuildVersion;
+const displayedAppVersion = appBuildVersion
+  ? appVersion
+    ? `${appVersion} (${appBuildVersion})`
+    : appBuildVersion
+  : appVersion;
 
 interface Prefs {
   dailyReminderEnabled: boolean;
@@ -505,7 +515,7 @@ export default function SettingsScreen() {
           <SettingRow
             icon="code-outline"
             label={t("settings.version")}
-            right={<Text style={styles.versionText}>{Constants.expoConfig?.version ?? Constants.nativeAppVersion ?? ""}</Text>}
+            right={<Text style={styles.versionText}>{displayedAppVersion}</Text>}
           />
         </View>
 
