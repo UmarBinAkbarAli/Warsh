@@ -295,6 +295,10 @@ var LessonContentSchema = z4.object({
       audio_url: z4.string().optional()
     }),
     highlighted_word_indices: z4.array(z4.number().int().min(0)),
+    // Normalized Arabic tokens expected at highlighted_word_indices.
+    // New/corrected lessons should provide this so semantic validation can
+    // detect a valid-but-wrong position, not only an out-of-range position.
+    highlighted_words: z4.array(z4.string().min(1)).optional(),
     noor_explanation: z4.object({ en: z4.string().min(1), ur: z4.string().optional() })
   }).optional(),
   spoken_phrases: z4.object({

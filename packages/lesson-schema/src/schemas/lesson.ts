@@ -27,6 +27,10 @@ export const LessonContentSchema = z.object({
         audio_url: z.string().optional(),
       }),
       highlighted_word_indices: z.array(z.number().int().min(0)),
+      // Normalized Arabic tokens expected at highlighted_word_indices.
+      // New/corrected lessons should provide this so semantic validation can
+      // detect a valid-but-wrong position, not only an out-of-range position.
+      highlighted_words: z.array(z.string().min(1)).optional(),
       noor_explanation: z.object({ en: z.string().min(1), ur: z.string().optional() }),
     })
     .optional(),

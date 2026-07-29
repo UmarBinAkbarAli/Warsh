@@ -216,6 +216,57 @@
       "introduces_vocab": {
         "ar_plain": "سبيل الله"
       }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "رَبِّ النَّاسِ",
+        "ar_plain": "رب الناس",
+        "translit": "rabbin-nās",
+        "en": "Lord of mankind",
+        "ur": "انسانوں کا رب"
+      },
+      "explanation": {
+        "en": "رَبِّ النَّاسِ is an idafa: رَبِّ (Lord of) + النَّاسِ (mankind).",
+        "ur": "رَبِّ النَّاسِ ایک اضافت ہے: رَبِّ (رب) + النَّاسِ (انسانوں کا)۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "رب"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "مَلِكِ النَّاسِ",
+        "ar_plain": "ملك الناس",
+        "translit": "malikin-nās",
+        "en": "King of mankind",
+        "ur": "انسانوں کا بادشاہ"
+      },
+      "explanation": {
+        "en": "مَلِك means king or sovereign. مَلِكِ النَّاسِ is 'King of mankind.'",
+        "ur": "مَلِك کا مطلب بادشاہ یا فرمانروا ہے۔ مَلِكِ النَّاسِ کا مطلب 'انسانوں کا بادشاہ' ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "ملك"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "إِلٰهِ النَّاسِ",
+        "ar_plain": "اله الناس",
+        "translit": "ilāhin-nās",
+        "en": "God of mankind",
+        "ur": "انسانوں کا معبود"
+      },
+      "explanation": {
+        "en": "إِلٰه means a god or one who is worshipped. إِلٰهِ النَّاسِ is 'God of mankind.'",
+        "ur": "إِلٰه کا مطلب معبود ہے۔ إِلٰهِ النَّاسِ کا مطلب 'انسانوں کا معبود' ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "اله"
+      }
     }
   ],
   "exercises": [
@@ -582,6 +633,39 @@
         "en": "لِمَنْ (whose?) + هٰذَا (this) + الْكِتَابُ (the book). The definite article ال is needed since we're asking about a specific book.",
         "ur": "لِمَنْ (کس کا؟) + هٰذَا (یہ) + الْكِتَابُ (کتاب)۔ چونکہ ہم کسی مخصوص کتاب کے بارے میں پوچھ رہے ہیں اس لیے ال ضروری ہے۔"
       }
+    },
+    {
+      "id": "ch03-l02-ex09",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        { "ar": "رَبِّ النَّاسِ", "ar_plain": "رب الناس", "translit": "rabbin-nās", "en": "Lord of mankind", "ur": "انسانوں کا رب" },
+        { "ar": "مَلِكِ النَّاسِ", "ar_plain": "ملك الناس", "translit": "malikin-nās", "en": "King of mankind", "ur": "انسانوں کا بادشاہ" },
+        { "ar": "إِلٰهِ النَّاسِ", "ar_plain": "اله الناس", "translit": "ilāhin-nās", "en": "God of mankind", "ur": "انسانوں کا معبود" }
+      ],
+      "right_column": [
+        { "en": "God of mankind", "ur": "انسانوں کا معبود" },
+        { "en": "Lord of mankind", "ur": "انسانوں کا رب" },
+        { "en": "King of mankind", "ur": "انسانوں کا بادشاہ" }
+      ],
+      "correct_pairs": [[0, 1], [1, 2], [2, 0]]
+    },
+    {
+      "id": "ch03-l02-ex10",
+      "type": "TRUE_FALSE",
+      "xp_value": 1,
+      "statement": {
+        "en": "مَلِكِ النَّاسِ means 'King of mankind.'",
+        "ur": "مَلِكِ النَّاسِ کا مطلب 'انسانوں کا بادشاہ' ہے۔",
+        "ar_example": {
+          "ar": "مَلِكِ النَّاسِ",
+          "ar_plain": "ملك الناس",
+          "translit": "malikin-nās",
+          "en": "King of mankind",
+          "ur": "انسانوں کا بادشاہ"
+        }
+      },
+      "correct_answer": true
     }
   ],
   "reveal": {

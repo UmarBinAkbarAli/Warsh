@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-07-28
+**Last verified:** 2026-07-29
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Beta hardening and launch preparation
 
@@ -88,6 +88,33 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - EAS profiles for development, staging APK, production-preview APK, and production Android builds
 
 ## Recent verified repository changes
+
+### 2026-07-29
+
+- Added an isolated staging-first content workflow. A localhost-only PostgreSQL
+  17 staging database now applies all 26 migrations and refreshes the authored
+  curriculum without touching production. `start-warsh-staging.ps1` preserves
+  this database in Docker, validates its loopback-only port binding, and passes
+  explicit staging database variables to the backend launcher.
+- Completed the first staging QA pass for An-Nas curriculum coverage. All 391
+  fixtures validate, the staging seed contains 595 vocabulary words and all 11
+  Tadabbur surahs, and focused An-Nas coverage checks link every token to taught
+  lesson content and an assessment. Emulator checks confirmed the affected
+  Chapter 2, 3, 13, 16, and 18 lesson integrations. The standalone `بِ` display
+  was corrected after staging exposed clipping.
+- Completed the staging implementation for Al-Falaq. All 23 rendered tokens now
+  link to vocabulary, shared words reuse verified earlier lessons, and the
+  remaining surah-specific words are taught and assessed in Chapter 19 Lesson 6.
+  The former lesson incorrectly treated `رَبِّ` as the possessive `رَبِّي`,
+  called the Quranic speaker a poet, introduced wording absent from the surah,
+  and covered only ayah 1; the replacement accurately covers all five ayat.
+  Emulator QA also caught and corrected an unreadable mixed-direction paragraph,
+  a sentence-builder tile-count failure, and an oversized final exercise.
+- Production promotion is now an explicit gate: validators, isolated staging
+  migration/content refresh, affected-lesson visual QA, and product-owner
+  approval must all pass before a scoped production content update. The
+  configured `api-staging.warsh.app` preview hostname is not currently
+  operational and must not be treated as a live staging service.
 
 ### 2026-07-28
 

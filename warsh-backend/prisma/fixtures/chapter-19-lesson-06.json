@@ -2,15 +2,15 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 19, Lesson 6 - Al-Falaq integration: رَبِّي رَبُّكُمْ رَبُّنَا. Tadabbur unlock #3.",
+    "_note": "Chapter 19, Lesson 6 - Complete Al-Falaq vocabulary integration and Tadabbur unlock #3.",
     "chapter_order": 19,
     "lesson_order": 6,
     "chapter_title": "Attached Pronouns — Possession (Singular)",
-    "title": "Al-Falaq: Lord of the Daybreak",
-    "titleAr": "الفلق: صبح کا رب",
+    "title": "Al-Falaq: Seeking Protection",
+    "titleAr": "الفلق: اللہ کی پناہ",
     "source": "reader_lecture_19_attached_pronouns.md",
-    "estimated_minutes": 8,
-    "xp_reward": 10
+    "estimated_minutes": 12,
+    "xp_reward": 15
   },
   "hook": {
     "ayah": {
@@ -23,8 +23,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
     },
     "noor_intro": {
-      "en": "رَبِّ الْفَلَقِ — 'Lord of the daybreak.' رَبِّ here is 'my Lord' (رَبُّ + ـِي). In Surah Al-Falaq, we see all the possessive forms we learned: رَبِّي, رَبُّكُمْ, رَبُّنَا — my Lord, your Lord, our Lord. This is the Tadabbur surah for this chapter.",
-      "ur": "رَبِّ الْفَلَقِ — 'صبح کا رب'۔ رَبِّ یہاں 'میرا رب' ہے (رَبُّ + ـِي)۔ سورۃ الفلق میں ہم سب ملکیتی شکلیں دیکھتے ہیں جنہیں ہم نے سیکھا: رَبِّي, رَبُّكُمْ, رَبُّنَا — میرا رب، تمہارا رب، ہمارا رب۔ یہ اس باب کی Tadabbur سورت ہے۔"
+      "en": "You already learned qul, a'udhu, bi, rabb, min, sharr, fi, and wa across earlier chapters. Today you learn the remaining Al-Falaq words and practise all five ayat. Notice that rabbi here is rabb in the genitive after bi; it does not contain the possessive suffix -i.",
+      "ur": "آپ پہلے ابواب میں قُلْ، أَعُوذُ، بِ، رَبّ، مِنْ، شَرّ، فِي اور وَ سیکھ چکے ہیں۔ آج آپ سورۃ الفلق کے باقی الفاظ سیکھیں گے اور پانچوں آیات کی مشق کریں گے۔ یاد رکھیں کہ یہاں رَبِّ، بِ کے بعد حالتِ جر میں 'رب' ہے؛ اس میں ملکیتی لاحقہ ـِي شامل نہیں۔"
     },
     "autoplay": true
   },
@@ -32,94 +32,213 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "رَبِّي — 'My Lord' in Al-Falaq",
-        "ar": "رَبِّي — 'میرا رب' الفلق میں",
-        "ur": "رَبِّي — 'میرا رب' الفلق میں"
+        "en": "الْفَلَق — the daybreak",
+        "ar": "الْفَلَق — الصُّبْح",
+        "ur": "الْفَلَق — صبح"
       },
       "explanation": {
-        "en": "In رَبِّ الْفَلَقِ, رَبِّ is رَبُّ + ـِي = 'my Lord.' The poet begins by declaring: I seek refuge in MY Lord. This is the first person singular possessive — ـِي.",
-        "ur": "رَبِّ الْفَلَقِ میں, رَبِّ = رَبُّ + ـِي = 'میرا رب'۔ شاعر شروع کرتا ہے: میں اپنے رب کی پناہ مانگتا ہوں۔ یہ پہلے شخص واحد ملکیت ہے — ـِي۔"
+        "en": "Al-falaq is the daybreak: the moment light splits through darkness. In bi-rabbi al-falaq, the preposition bi puts rabb in the genitive, and al-falaq completes the idafa: 'the Lord of the daybreak.'",
+        "ur": "الْفَلَق صبح کا پھٹنا ہے، جب روشنی اندھیرے کو چیرتی ہے۔ بِرَبِّ الْفَلَقِ میں بِ، رَبِّ کو حالتِ جر دیتا ہے اور الْفَلَقِ اضافت مکمل کرتا ہے: 'صبح کا رب'۔"
+      },
+      "introduces_vocab": {
+        "ar": "الْفَلَق",
+        "ar_plain": "الفلق",
+        "translit": "al-falaq",
+        "en": "the daybreak / dawn",
+        "ur": "صبح / فجر"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
       "text": {
-        "ar": "رَبِّ الْفَلَقِ",
-        "ar_plain": "رب الفلق",
-        "translit": "rabbi al-falaq",
-        "en": "Lord of the daybreak (my Lord of the daybreak)",
-        "ur": "صبح کا رب (میرا صبح کا رب)"
+        "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ، مِنْ شَرِّ مَا خَلَقَ، وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ، وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ، وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+        "ar_plain": "قل اعوذ برب الفلق من شر ما خلق ومن شر غاسق اذا وقب ومن شر النفاثات في العقد ومن شر حاسد اذا حسد",
+        "translit": "qul a'ūdhu bi-rabbi al-falaq, min sharri mā khalaq, wa-min sharri ghāsiqin idhā waqab, wa-min sharri an-naffāthāti fī al-'uqad, wa-min sharri ḥāsidin idhā ḥasad",
+        "en": "Say: I seek refuge in the Lord of daybreak, from the evil of what He created, from the evil of darkness when it settles, from the evil of those who blow on knots, and from the evil of an envier when he envies.",
+        "ur": "کہہ دیجیے: میں صبح کے رب کی پناہ مانگتا ہوں، ہر اس چیز کے شر سے جو اس نے پیدا کی، اندھیرے کے شر سے جب وہ چھا جائے، گرہوں میں پھونکنے والیوں کے شر سے، اور حسد کرنے والے کے شر سے جب وہ حسد کرے۔"
       },
       "explanation": {
-        "en": "رَبِّ = رَبُّ + ـِي. The ya takes kasra because of the attached ـِي. الْفَلَقِ is 'the daybreak' — the split of dawn. So رَبِّ الْفَلَقِ means 'Lord of the daybreak' with the poet's personal connection to that Lord.",
-        "ur": "رَبِّ = رَبُّ + ـِي۔ ی کو کسرہ اس لیے ہے کہ ملحق ـِي لگا ہے۔ الْفَلَقِ 'صباح' ہے — فجر کی کھال۔ تو رَبِّ الْفَلَقِ کا مطلب 'صبح کا رب' شاعر کے ذاتی تعلق کے ساتھ۔"
+        "en": "The surah begins with the refuge formula, then names four sources of harm. The repeated phrase wa-min sharri means 'and from the evil of.'",
+        "ur": "سورت پناہ مانگنے کے جملے سے شروع ہوتی ہے، پھر شر کی چار صورتیں بیان کرتی ہے۔ بار بار آنے والا وَمِنْ شَرِّ یعنی 'اور اس کے شر سے'۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "مِنْ شَرِّ مَا خَلَقَ",
-        "ar_plain": "من شر ما خلق",
-        "translit": "min sharri maa khalaq",
-        "en": "from the evil of what He created",
-        "ur": "اس نے جو پیدا کیا اس کے شر سے"
+        "ar": "مَا",
+        "ar_plain": "ما",
+        "translit": "mā",
+        "en": "what / whatever / that which",
+        "ur": "جو / جو کچھ"
       },
       "explanation": {
-        "en": "مَا خَلَقَ — 'what He created.' Here we see مَا as a relative pronoun 'what/whatever.' خَلَقَ is 'He created.' The possessive pronoun is not attached here — this is a different grammatical structure.",
-        "ur": "مَا خَلَقَ — 'اس نے جو پیدا کیا'۔ یہاں مَا بطور اسم موصول 'جو/جو بھی' ہے۔ خَلَقَ 'اس نے پیدا کیا' ہے۔ یہاں ملحق ضمیر نہیں ہے — یہ مختلف گرامری ساخت ہے۔"
+        "en": "You learned ma as the question word 'what?' Here, ma khalaq means 'what He created' or 'whatever He created.' Context determines its role.",
+        "ur": "آپ نے مَا کو سوالیہ لفظ 'کیا؟' کے طور پر سیکھا تھا۔ یہاں مَا خَلَقَ کا مطلب 'جو اس نے پیدا کیا' یا 'جو کچھ اس نے پیدا کیا' ہے۔"
+      },
+      "introduces_vocab": {
+        "ar": "مَا",
+        "ar_plain": "ما",
+        "translit": "mā",
+        "en": "what / whatever / that which",
+        "ur": "جو / جو کچھ"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "وَمِنْ شَرِّ غَرَاقِي إِذَا وَقَبَ",
-        "ar_plain": "ومن شر غراقي اذا وقب",
-        "translit": "wa-min sharri ghaariqi izaa waqab",
-        "en": "and from the evil of the drowned when he sinks",
-        "ur": "اور ڈوبنے والے کے شر سے جب وہ ڈوبے"
+        "ar": "غَاسِقٍ",
+        "ar_plain": "غاسق",
+        "translit": "ghāsiq",
+        "en": "darkness / a darkening one",
+        "ur": "اندھیرا / تاریک ہونے والا"
       },
       "explanation": {
-        "en": "غَرَاقِي — 'drowned one.' This is غَرِيقٌ (drowned) with the attached possessive ـِي. إِذَا وَقَبَ — 'when he sinks.' This verse uses attached possessives throughout.",
-        "ur": "غَرَاقِي — 'ڈوبنے والا'۔ یہ غَرِيقٌ (ڈوبنے والا) ملحق ملکیت ـِي کے ساتھ ہے۔ إِذَا وَقَبَ — 'جب وہ ڈوبے'۔ اس آیت میں ملحق ملکتیں ہر جگہ ہیں۔"
+        "en": "Ghasiq refers to darkness as it deepens. Its kasra/tanwin ending appears in the phrase min sharri ghasiqin.",
+        "ur": "غَاسِق گہرے ہوتے اندھیرے کو کہتے ہیں۔ مِنْ شَرِّ غَاسِقٍ میں یہ شَرِّ کے بعد حالتِ جر میں آیا ہے۔"
+      },
+      "introduces_vocab": {
+        "ar": "غَاسِق",
+        "ar_plain": "غاسق",
+        "translit": "ghāsiq",
+        "en": "darkness / a darkening one",
+        "ur": "اندھیرا / تاریک ہونے والا"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "رَبَّنَا",
-        "ar_plain": "ربنا",
-        "translit": "rabbanaa",
-        "en": "Our Lord",
-        "ur": "ہمارا رب"
+        "ar": "إِذَا",
+        "ar_plain": "اذا",
+        "translit": "idhā",
+        "en": "when",
+        "ur": "جب"
       },
       "explanation": {
-        "en": "رَبَّنَا = رَبُّ + نَا — 'our Lord.' This is the first person plural possessive. Appears in Al-Fatiha: رَبَّنَا اِهْدِنَا — 'Our Lord, guide us.' Also appears throughout the Quran in supplication.",
-        "ur": "رَبَّنَا = رَبُّ + نَا — 'ہمارا رب'۔ یہ پہلے شخص جمع ملکیت ہے۔ الفاتحہ میں آیا ہے: رَبَّنَا اِهْدِنَا — 'اے ہمارے رب، ہمیں ہدایت دے'۔ قرآن میں دعائیں میں بھی آیا ہے۔"
+        "en": "Idha introduces a time or condition: 'when.' It appears twice in Al-Falaq—when darkness settles and when an envier acts on envy.",
+        "ur": "إِذَا وقت یا شرط کا مفہوم دیتا ہے: 'جب'۔ سورۃ الفلق میں یہ دو بار آتا ہے: جب اندھیرا چھا جائے اور جب حسد کرنے والا حسد کرے۔"
+      },
+      "introduces_vocab": {
+        "ar": "إِذَا",
+        "ar_plain": "اذا",
+        "translit": "idhā",
+        "en": "when",
+        "ur": "جب"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "إِذَا وَقَبَ",
-        "ar_plain": "اذا وقب",
-        "translit": "izaa waqab",
-        "en": "when he sinks",
-        "ur": "جب وہ ڈوبے"
+        "ar": "وَقَبَ",
+        "ar_plain": "وقب",
+        "translit": "waqaba",
+        "en": "it entered / it settled",
+        "ur": "وہ داخل ہوا / وہ چھا گیا"
       },
       "explanation": {
-        "en": "وَقَبَ means 'he sank' or 'he entered.' إِذَا here is a conditional particle 'when.' The lesson of this verse is protection from the harm of those who sink others — jealousy and malice can drown people spiritually.",
-        "ur": "وَقَبَ کا مطلب 'اس نے ڈوبیا' یا 'اس نے داخل ہوا'۔ إِذَا یہاں شرطیہ ہے 'جب'۔ اس آیت کا سبق یہ ہے کہ ان لوگوں کے شر سے بچو جو دوسروں کو ڈبویں — حسد اور کینہ لوگوں کو روحانی طور پر ڈبو سکتا ہے۔"
+        "en": "Waqaba means to enter or settle deeply. With ghasiq, idha waqaba describes darkness when it fully settles.",
+        "ur": "وَقَبَ کا مطلب اندر داخل ہونا یا پوری طرح چھا جانا ہے۔ غَاسِق کے ساتھ إِذَا وَقَبَ یعنی 'جب اندھیرا پوری طرح چھا جائے'۔"
+      },
+      "introduces_vocab": {
+        "ar": "وَقَبَ",
+        "ar_plain": "وقب",
+        "translit": "waqaba",
+        "en": "it entered / it settled",
+        "ur": "وہ داخل ہوا / وہ چھا گیا"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "النَّفَّاثَاتِ",
+        "ar_plain": "النفاثات",
+        "translit": "an-naffāthāt",
+        "en": "those who blow lightly",
+        "ur": "پھونکنے والیاں"
+      },
+      "explanation": {
+        "en": "An-naffathat is a feminine plural form for those who blow or spit lightly. The ayah describes blowing on knots as a harmful occult practice.",
+        "ur": "النَّفَّاثَات مؤنث جمع ہے: ہلکی پھونک مارنے والیاں۔ آیت گرہوں میں پھونکنے کے نقصان دہ جادوئی عمل کا ذکر کرتی ہے۔"
+      },
+      "introduces_vocab": {
+        "ar": "النَّفَّاثَات",
+        "ar_plain": "النفاثات",
+        "translit": "an-naffāthāt",
+        "en": "those who blow lightly",
+        "ur": "پھونکنے والیاں"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "الْعُقَدِ",
+        "ar_plain": "العقد",
+        "translit": "al-'uqad",
+        "en": "the knots",
+        "ur": "گرہیں"
+      },
+      "explanation": {
+        "en": "Al-'uqad is the plural of 'uqdah, 'a knot.' Fi al-'uqad means 'in/on the knots.'",
+        "ur": "الْعُقَد، عُقْدَة یعنی 'گرہ' کی جمع ہے۔ فِي الْعُقَدِ کا مطلب 'گرہوں میں' ہے۔"
+      },
+      "introduces_vocab": {
+        "ar": "الْعُقَد",
+        "ar_plain": "عقد",
+        "translit": "al-'uqad",
+        "en": "the knots",
+        "ur": "گرہیں"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "حَاسِدٍ",
+        "ar_plain": "حاسد",
+        "translit": "ḥāsid",
+        "en": "an envier",
+        "ur": "حسد کرنے والا"
+      },
+      "explanation": {
+        "en": "Hasid is the person who envies. It is the active-participle form from the root h-s-d.",
+        "ur": "حَاسِد وہ شخص ہے جو حسد کرتا ہے۔ یہ مادہ ح س د سے اسمِ فاعل ہے۔"
+      },
+      "introduces_vocab": {
+        "ar": "حَاسِد",
+        "ar_plain": "حاسد",
+        "translit": "ḥāsid",
+        "en": "an envier",
+        "ur": "حسد کرنے والا"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "حَسَدَ",
+        "ar_plain": "حسد",
+        "translit": "ḥasada",
+        "en": "he envied",
+        "ur": "اس نے حسد کیا"
+      },
+      "explanation": {
+        "en": "Hasada is the past-tense verb 'he envied.' Hasid is the doer; hasada is the action.",
+        "ur": "حَسَدَ فعلِ ماضی ہے: 'اس نے حسد کیا'۔ حَاسِد کام کرنے والا شخص ہے اور حَسَدَ اس کا عمل۔"
+      },
+      "introduces_vocab": {
+        "ar": "حَسَدَ",
+        "ar_plain": "حسد",
+        "translit": "ḥasada",
+        "en": "he envied",
+        "ur": "اس نے حسد کیا"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "All possessive forms in one ayah",
-        "ur": "ایک آیت میں سب ملکیتی شکلیں"
+        "en": "رَبِّ is not رَبِّي",
+        "ur": "رَبِّ اور رَبِّي میں فرق"
       },
       "body": {
-        "en": "In Al-Falaq 113:1: رَبِّ الْفَلَقِ — 'my Lord of the daybreak.' رَبِّ = رَبُّ + ـِي. This one ayah contains رَبِّ (my Lord) — the possessive attached to the noun رَبٌّ. In other Quranic verses we also see رَبُّكُمْ (your Lord) and رَبَّنَا (our Lord). These three forms cover first, second, and third person singular and plural.",
-        "ur": "الفلق 113:1 میں: رَبِّ الْفَلَقِ — 'صبح کے میرا رب'۔ رَبِّ = رَبُّ + ـِي۔ یہ ایک آیت میں رَبِّ (میرا رب) ہے — ملکیت اسم رَبٌّ سے ملحق۔ دوسری قرآنی آیات میں ہم رَبُّكُمْ (تمہارا رب) اور رَبَّنَا (ہمارا رب) بھی دیکھتے ہیں۔ یہ تین شکلیں پہلے، دوسرے، اور تیسرے شخص کو covers کرتی ہیں۔"
+        "en": "In bi-rabbi al-falaq, rabb has a short case-ending i because the preposition bi governs it. 'My Lord' is rabbee with a long possessive -ee. A case ending and an attached possessive are different.",
+        "ur": "بِرَبِّ الْفَلَقِ میں رَبِّ صرف رَبّ ہے جس پر حرفِ جر بِ کی وجہ سے کسرہ آیا ہے۔ 'میرا رب' رَبِّي ہوگا جس میں لکھی ہوئی ي موجود ہے۔ اعرابی حرکت اور ملکیتی لاحقہ الگ چیزیں ہیں۔"
       }
     }
   ],
@@ -128,334 +247,229 @@
       "type": "TAP_TRANSLATION",
       "id": "ch19-l06-ex01",
       "prompt": {
-        "ar": "رَبِّي",
-        "ar_plain": "ربي",
-        "translit": "rabbi",
-        "en": "my Lord",
-        "ur": "میرا رب"
+        "ar": "الْفَلَق",
+        "ar_plain": "الفلق",
+        "translit": "al-falaq",
+        "en": "the daybreak",
+        "ur": "صبح"
       },
       "options": [
-        {
-          "en": "my Lord",
-          "ur": "میرا رب"
-        },
-        {
-          "en": "our Lord",
-          "ur": "ہمارا رب"
-        },
-        {
-          "en": "your Lord",
-          "ur": "تمہارا رب"
-        },
-        {
-          "en": "their Lord",
-          "ur": "ان کا رب"
-        }
+        { "en": "the daybreak", "ur": "صبح" },
+        { "en": "the darkness", "ur": "اندھیرا" },
+        { "en": "the knots", "ur": "گرہیں" },
+        { "en": "the envier", "ur": "حسد کرنے والا" }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَبِّي = رَبُّ + ـِي = 'my Lord.' This is the first person singular possessive. رَبَّنَا would be 'our Lord,' رَبُّكُمْ would be 'your Lord (plural).'",
-        "ur": "رَبِّي = رَبُّ + ـِي = 'میرا رب'۔ یہ پہلے شخص واحد ملکیت ہے۔ رَبَّنَا 'ہمارا رب' ہوگا، رَبُّكُمْ 'تمہارا رب (جمع)'۔"
+        "en": "الْفَلَق is the daybreak or dawn—the splitting of light through darkness.",
+        "ur": "الْفَلَق صبح یا فجر ہے، جب روشنی اندھیرے کو چیرتی ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch19-l06-ex02",
       "statement": {
-        "en": "رَبِّ الْفَلَقِ means 'Lord of the daybreak' — and رَبِّ contains the attached pronoun ـِي meaning 'my.'",
-        "ur": "رَبِّ الْفَلَقِ کا مطلب 'صبح کا رب' ہے — اور رَبِّ میں ملحق ضمیر ـِي ہے جس کا مطلب 'میرا'۔"
+        "en": "In بِرَبِّ الْفَلَقِ, رَبِّ means 'Lord' in the genitive after بِ; it does not mean 'my Lord.'",
+        "ur": "بِرَبِّ الْفَلَقِ میں رَبِّ، بِ کے بعد حالتِ جر میں 'رب' ہے؛ اس کا مطلب 'میرا رب' نہیں۔"
       },
       "ar_example": {
-        "ar": "رَبِّ الْفَلَقِ",
-        "ar_plain": "رب الفلق",
-        "translit": "rabbi al-falaq",
-        "en": "Lord of the daybreak (my Lord of the daybreak)",
-        "ur": "صبح کا رب (میرا صبح کا رب)"
+        "ar": "بِرَبِّ الْفَلَقِ",
+        "ar_plain": "برب الفلق",
+        "translit": "bi-rabbi al-falaq",
+        "en": "in the Lord of the daybreak",
+        "ur": "صبح کے رب کی پناہ میں"
       },
       "correct_answer": true,
       "xp_value": 1
     },
     {
-      "type": "FILL_BLANK",
+      "type": "TAP_TRANSLATION",
       "id": "ch19-l06-ex03",
-      "mode": "TAP",
-      "sentence_ar": "قُلْ أَعُوذُ بِرَبِّ ___",
-      "hint": {
-        "en": "'Say: I seek refuge in my Lord of ___.'",
-        "ur": "'کہہ: میں اپنے ___ کے رب کی پناہ مانگتا ہوں۔'"
+      "prompt": {
+        "ar": "مَا خَلَقَ",
+        "ar_plain": "ما خلق",
+        "translit": "mā khalaq",
+        "en": "what He created",
+        "ur": "جو اس نے پیدا کیا"
       },
       "options": [
-        {
-          "ar": "الْفَلَقِ",
-          "ar_plain": "الفلق",
-          "translit": "al-falaq",
-          "en": "the daybreak",
-          "ur": "صبح"
-        },
-        {
-          "ar": "النَّاسِ",
-          "ar_plain": "الناس",
-          "translit": "an-naas",
-          "en": "mankind",
-          "ur": "لوگ"
-        },
-        {
-          "ar": "الْعَالَمِينَ",
-          "ar_plain": "العالمين",
-          "translit": "al-aalameen",
-          "en": "all worlds",
-          "ur": "تمام جہان"
-        },
-        {
-          "ar": "الْكَوْنِ",
-          "ar_plain": "الكون",
-          "translit": "al-kawn",
-          "en": "the universe",
-          "ur": "کائنات"
-        }
+        { "en": "what He created", "ur": "جو اس نے پیدا کیا" },
+        { "en": "when He created", "ur": "جب اس نے پیدا کیا" },
+        { "en": "who created Him", "ur": "جس نے اسے پیدا کیا" },
+        { "en": "the created dawn", "ur": "پیدا کی ہوئی صبح" }
       ],
-      "correct_answer": {
-        "ar": "الْفَلَقِ",
-        "ar_plain": "الفلق",
-        "translit": "al-falaq",
-        "en": "the daybreak",
-        "ur": "صبح"
-      },
-      "xp_value": 1
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Here مَا means 'what/whatever/that which,' and خَلَقَ means 'He created.'",
+        "ur": "یہاں مَا کا مطلب 'جو/جو کچھ' ہے اور خَلَقَ کا مطلب 'اس نے پیدا کیا'۔"
+      }
     },
     {
       "type": "MATCHING",
       "id": "ch19-l06-ex04",
       "left_column": [
-        {
-          "ar": "رَبِّي",
-          "ar_plain": "ربي",
-          "translit": "rabbi",
-          "en": "my Lord",
-          "ur": "میرا رب"
-        },
-        {
-          "ar": "رَبُّكُمْ",
-          "ar_plain": "ربكم",
-          "translit": "rabbukum",
-          "en": "your Lord (pl)",
-          "ur": "تمہارا رب (جمع)"
-        },
-        {
-          "ar": "رَبَّنَا",
-          "ar_plain": "ربنا",
-          "translit": "rabbanaa",
-          "en": "our Lord",
-          "ur": "ہمارا رب"
-        },
-        {
-          "ar": "رَبُّهُ",
-          "ar_plain": "ربه",
-          "translit": "rabbuhu",
-          "en": "his Lord",
-          "ur": "اس کا رب"
-        }
+        { "ar": "غَاسِق", "ar_plain": "غاسق", "translit": "ghāsiq", "en": "darkness", "ur": "اندھیرا" },
+        { "ar": "إِذَا", "ar_plain": "اذا", "translit": "idhā", "en": "when", "ur": "جب" },
+        { "ar": "وَقَبَ", "ar_plain": "وقب", "translit": "waqaba", "en": "it settled", "ur": "وہ چھا گیا" }
       ],
       "right_column": [
-        {
-          "en": "our Lord",
-          "ur": "ہمارا رب"
-        },
-        {
-          "en": "my Lord",
-          "ur": "میرا رب"
-        },
-        {
-          "en": "his Lord",
-          "ur": "اس کا رب"
-        },
-        {
-          "en": "your Lord (pl)",
-          "ur": "تمہارا رب (جمع)"
-        }
+        { "en": "it settled", "ur": "وہ چھا گیا" },
+        { "en": "darkness", "ur": "اندھیرا" },
+        { "en": "when", "ur": "جب" }
       ],
-      "correct_pairs": [
-        [
-          0,
-          1
-        ],
-        [
-          1,
-          3
-        ],
-        [
-          2,
-          0
-        ],
-        [
-          3,
-          2
-        ]
+      "correct_pairs": [[0, 1], [1, 2], [2, 0]],
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch19-l06-ex05",
+      "mode": "TAP",
+      "sentence_ar": "وَمِنْ شَرِّ غَاسِقٍ ___ وَقَبَ",
+      "hint": {
+        "en": "And from the evil of darkness ___ it settles.",
+        "ur": "اور اندھیرے کے شر سے ___ وہ چھا جائے۔"
+      },
+      "options": [
+        { "ar": "إِذَا", "ar_plain": "اذا", "translit": "idhā", "en": "when", "ur": "جب" },
+        { "ar": "فِي", "ar_plain": "في", "translit": "fī", "en": "in", "ur": "میں" },
+        { "ar": "مَا", "ar_plain": "ما", "translit": "mā", "en": "what", "ur": "جو" },
+        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from", "ur": "سے" }
       ],
+      "correct_answer": {
+        "ar": "إِذَا",
+        "ar_plain": "اذا",
+        "translit": "idhā",
+        "en": "when",
+        "ur": "جب"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch19-l06-ex06",
+      "left_column": [
+        { "ar": "النَّفَّاثَات", "ar_plain": "النفاثات", "translit": "an-naffāthāt", "en": "those who blow lightly", "ur": "پھونکنے والیاں" },
+        { "ar": "فِي", "ar_plain": "في", "translit": "fī", "en": "in", "ur": "میں" },
+        { "ar": "الْعُقَد", "ar_plain": "العقد", "translit": "al-'uqad", "en": "the knots", "ur": "گرہیں" }
+      ],
+      "right_column": [
+        { "en": "the knots", "ur": "گرہیں" },
+        { "en": "those who blow lightly", "ur": "پھونکنے والیاں" },
+        { "en": "in", "ur": "میں" }
+      ],
+      "correct_pairs": [[0, 1], [1, 2], [2, 0]],
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch19-l06-ex05",
+      "id": "ch19-l06-ex07",
       "target_translation": {
-        "en": "Our Lord is the Lord of the daybreak.",
-        "ur": "ہمارا رب صبح کا رب ہے۔"
+        "en": "And from the evil of those who blow on knots.",
+        "ur": "اور گرہوں میں پھونکنے والیوں کے شر سے۔"
       },
       "tiles": [
-        {
-          "ar": "رَبِّي",
-          "ar_plain": "ربي",
-          "translit": "rabbi",
-          "en": "my Lord",
-          "ur": "میرا رب"
-        },
-        {
-          "ar": "رَبَّنَا",
-          "ar_plain": "ربنا",
-          "translit": "rabbanaa",
-          "en": "our Lord",
-          "ur": "ہمارا رب"
-        },
-        {
-          "ar": "رَبِّ الْفَلَقِ",
-          "ar_plain": "رب الفلق",
-          "translit": "rabbi al-falaq",
-          "en": "Lord of the daybreak",
-          "ur": "صبح کا رب"
-        },
-        {
-          "ar": "رَبُّكُمْ",
-          "ar_plain": "ربكم",
-          "translit": "rabbukum",
-          "en": "your Lord (pl)",
-          "ur": "تمہارا رب (جمع)"
-        }
+        { "ar": "فِي", "ar_plain": "في", "translit": "fī", "en": "in", "ur": "میں" },
+        { "ar": "وَمِنْ", "ar_plain": "ومن", "translit": "wa-min", "en": "and from", "ur": "اور سے" },
+        { "ar": "الْعُقَدِ", "ar_plain": "العقد", "translit": "al-'uqad", "en": "the knots", "ur": "گرہیں" },
+        { "ar": "شَرِّ", "ar_plain": "شر", "translit": "sharri", "en": "the evil of", "ur": "شر" },
+        { "ar": "النَّفَّاثَاتِ", "ar_plain": "النفاثات", "translit": "an-naffāthāt", "en": "those who blow lightly", "ur": "پھونکنے والیاں" }
       ],
-      "correct_order": [
-        1,
-        2
-      ],
+      "correct_order": [1, 3, 4, 0, 2],
       "xp_value": 1
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch19-l06-ex06",
+      "id": "ch19-l06-ex08",
       "prompt": {
-        "ar": "رَبَّنَا",
-        "ar_plain": "ربنا",
-        "translit": "rabbanaa",
-        "en": "our Lord",
-        "ur": "ہمارا رب"
+        "ar": "حَاسِد",
+        "ar_plain": "حاسد",
+        "translit": "ḥāsid",
+        "en": "an envier",
+        "ur": "حسد کرنے والا"
       },
       "options": [
-        {
-          "en": "our Lord",
-          "ur": "ہمارا رب"
-        },
-        {
-          "en": "my Lord",
-          "ur": "میرا رب"
-        },
-        {
-          "en": "your Lord (m)",
-          "ur": "تمہارا رب (مذکر)"
-        },
-        {
-          "en": "your Lord (pl)",
-          "ur": "تمہارا رب (جمع)"
-        }
+        { "en": "an envier", "ur": "حسد کرنے والا" },
+        { "en": "he envied", "ur": "اس نے حسد کیا" },
+        { "en": "darkness", "ur": "اندھیرا" },
+        { "en": "a knot", "ur": "گرہ" }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَبَّنَا = رَبُّ + نَا = 'our Lord.' The نَا is the first person plural attached pronoun. رَبُّكُمْ would be 'your Lord (plural),' رَبِّي would be 'my Lord.'",
-        "ur": "رَبَّنَا = رَبُّ + نَا = 'ہمارا رب'۔ نَا پہلے شخص جمع ملحق ضمیر ہے۔ رَبُّكُمْ 'تمہارا رب (جمع)' ہوگا، رَبِّي 'میرا رب'۔"
+        "en": "حَاسِد is the person who envies. The verb 'he envied' is حَسَدَ.",
+        "ur": "حَاسِد حسد کرنے والا شخص ہے۔ 'اس نے حسد کیا' کے لیے حَسَدَ آتا ہے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch19-l06-ex07",
-      "statement": {
-        "en": "In Al-Falaq 113:1, the speaker says 'my Lord' using the attached possessive ـِي.",
-        "ur": "الفلق 113:1 میں، بولنے والا 'میرا رب' کہتا ہے ملحق ملکیت ـِي استعمال کرکے۔"
+      "type": "FILL_BLANK",
+      "id": "ch19-l06-ex09",
+      "mode": "TAP",
+      "sentence_ar": "وَمِنْ شَرِّ حَاسِدٍ إِذَا ___",
+      "hint": {
+        "en": "And from the evil of an envier when he ___.",
+        "ur": "اور حسد کرنے والے کے شر سے جب وہ ___۔"
       },
-      "ar_example": {
-        "ar": "رَبِّ الْفَلَقِ",
-        "ar_plain": "رب الفلق",
-        "translit": "rabbi al-falaq",
-        "en": "Lord of the daybreak (my Lord of the daybreak)",
-        "ur": "صبح کا رب (میرا صبح کا رب)"
+      "options": [
+        { "ar": "حَسَدَ", "ar_plain": "حسد", "translit": "ḥasada", "en": "envied", "ur": "حسد کرے" },
+        { "ar": "خَلَقَ", "ar_plain": "خلق", "translit": "khalaqa", "en": "created", "ur": "پیدا کرے" },
+        { "ar": "وَقَبَ", "ar_plain": "وقب", "translit": "waqaba", "en": "settled", "ur": "چھا جائے" },
+        { "ar": "قَالَ", "ar_plain": "قال", "translit": "qāla", "en": "said", "ur": "کہے" }
+      ],
+      "correct_answer": {
+        "ar": "حَسَدَ",
+        "ar_plain": "حسد",
+        "translit": "ḥasada",
+        "en": "envied",
+        "ur": "حسد کرے"
       },
-      "correct_answer": true,
       "xp_value": 1
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch19-l06-ex08",
-      "xp_value": 1,
-      "tiles": [
-        {
-          "ar": "رَبُّكُمْ",
-          "ar_plain": "ربكم",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
-        },
-        {
-          "ar": "وَرَبُّنَا",
-          "ar_plain": "وربنا",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
-        },
-        {
-          "ar": "وَرَبِّي",
-          "ar_plain": "وربي",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "target_translation": {
-        "en": "'Your Lord, our Lord, and my Lord.'",
-        "ur": "'تمہارا رب، ہمارا رب، اور میرا رب۔'"
-      }
+      "type": "TRUE_FALSE",
+      "id": "ch19-l06-ex10",
+      "statement": {
+        "en": "After the opening ayah, Al-Falaq repeatedly uses min sharri—'from the evil of'—to name the harms from which refuge is sought.",
+        "ur": "پہلی آیت کے بعد سورۃ الفلق بار بار مِنْ شَرِّ یعنی 'اس کے شر سے' کہہ کر ان نقصانات کو بیان کرتی ہے جن سے پناہ مانگی جاتی ہے۔"
+      },
+      "ar_example": {
+        "ar": "مِنْ شَرِّ — وَمِنْ شَرِّ",
+        "ar_plain": "من شر ومن شر",
+        "translit": "min sharri — wa-min sharri",
+        "en": "from the evil of — and from the evil of",
+        "ur": "شر سے — اور شر سے"
+      },
+      "correct_answer": true,
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "رَبِّي رَبُّكُمْ رَبُّنَا — my Lord, your Lord, our Lord",
-      "ar": "رَبِّي رَبُّكُمْ رَبُّنَا — میرا رب، تمہارا رب، ہمارا رب",
-      "ur": "رَبِّي رَبُّكُمْ رَبُّنَا — میرا رب، تمہارا رب، ہمارا رب"
+      "en": "Al-Falaq: seeking Allah's protection from every form of harm",
+      "ar": "سُورَةُ الْفَلَق: الِاسْتِعَاذَةُ بِاللَّهِ مِنَ الشَّرِّ",
+      "ur": "سورۃ الفلق: ہر شر سے اللہ کی پناہ"
     },
     "ayah": {
       "surah": 113,
-      "ayah": 1,
-      "label": "Al-Falaq 113:1",
-      "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
-      "en": "Say: I seek refuge in the Lord of the daybreak.",
-      "ur": "کہہ دیجیے: میں صبح کے رب کی پناہ مانگتا ہوں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
+      "ayah": 5,
+      "label": "Al-Falaq 113:5",
+      "ar": "وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+      "en": "And from the evil of an envier when he envies.",
+      "ur": "اور حسد کرنے والے کے شر سے جب وہ حسد کرے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113005.mp3"
     },
-    "highlighted_word_indices": [
-      3,
-      4
-    ],
+    "highlighted_word_indices": [2, 4],
+    "highlighted_words": ["حاسد", "حسد"],
     "noor_explanation": {
-      "en": "رَبِّ الْفَلَقِ — 'Lord of the daybreak.' The poet begins with 'my Lord' (رَبِّ) because seeking refuge requires personal relationship. رَبُّكُمْ 'your Lord' addresses the believers as a group. رَبَّنَا 'our Lord' is the supplication of the community. These three forms together cover every relationship we have with our Lord.",
-      "ur": "رَبِّ الْفَلَقِ — 'صبح کا رب'۔ شاعر 'میرے رب' (رَبِّ) سے شروع کرتا ہے کیونکہ پناہ مانگنا ذاتی تعلق مانگتا ہے۔ رَبُّكُمْ 'تمہارا رب' مومنین کو جماعت کے طور پر مخاطب کرتا ہے۔ رَبَّنَا 'ہمارا رب' جماعت کی دعا ہے۔ یہ تین شکلیں مل کر ہر تعلق کو covers کرتی ہیں جو ہمارے رب کے ساتھ ہے۔"
+      "en": "Hasid is the envier—the person. Hasada is the action—'he envied.' The phrase idha hasada narrows the danger to envy when it is acted upon. Across the surah, the repeated min sharri teaches a single response to visible and hidden harms: seek refuge in the Lord of the daybreak.",
+      "ur": "حَاسِدٍ حسد کرنے والا شخص ہے اور حَسَدَ اس کا عمل: 'اس نے حسد کیا'۔ إِذَا حَسَدَ خطرے کو اس وقت سے جوڑتا ہے جب حسد عمل میں ظاہر ہو۔ پوری سورت میں بار بار مِنْ شَرِّ آتا ہے اور ظاہری و پوشیدہ ہر نقصان کے مقابل ایک ہی راستہ سکھاتا ہے: صبح کے رب کی پناہ۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 19 complete. You have learned all the singular attached possessives: ـِي my, ـُكَ/ـُكِ your, ـُهُ/ـُهَا his/her, and the plurals: نَا our, كُمْ your-pl, هُمْ their. رَبِّي رَبُّكُمْ رَبُّنَا — these words are the foundation of how Arabic expresses ownership and relationship. May Allah make us among those who understand His words. آمين",
-      "ur": "باب 19 مکمل۔ آپ نے سب واحد ملحق ملکتیں سیکھ لیں: ـِي میرا، ـُكَ/ـُكِ تمہارا/تمہاری، ـُهُ/ـُهَا اس کا/اس کی، اور جمعیں: نَا ہمارا، كُمْ تمہارا (جمع)، هُمْ ان کا۔ رَبِّي رَبُّكُمْ رَبُّنَا — یہ الفاظ اس بنیاد ہیں کہ عربی ملکیت اور تعلق کیسے ظاہر کرتی ہے۔ اللہ ہمیں ان لوگوں میں شامل کرے جو اس کے الفاظ کو سمجھتے ہیں۔ آمین۔"
+      "en": "You have now studied and practised the vocabulary across all five ayat of Al-Falaq. You can distinguish rabbi with a case ending from rabbi with a possessive suffix, understand the four repeated min sharri phrases, and recognise the key words for darkness, knots, and envy. Continue reviewing until these words become mastered.",
+      "ur": "اب آپ سورۃ الفلق کی پانچوں آیات کے الفاظ سیکھ اور مشق کر چکے ہیں۔ آپ رَبِّ اور رَبِّي میں فرق، چار بار آنے والے مِنْ شَرِّ کے جملے، اور اندھیرے، گرہوں اور حسد کے اہم الفاظ پہچان سکتے ہیں۔ ان الفاظ کو پختہ ہونے تک دہراتے رہیں۔"
     }
   }
 }

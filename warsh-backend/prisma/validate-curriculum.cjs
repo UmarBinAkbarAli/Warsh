@@ -5,6 +5,10 @@ const { chapters: book1Chapters } = require("./curriculum-book1.cjs");
 const { chapters: books2To4Chapters } = require("./curriculum-books2-4.cjs");
 const { chapters: books5To6Chapters } = require("./curriculum-books5-6.cjs");
 const { chapters: books7To8Chapters } = require("./curriculum-books7-8.cjs");
+const { VOCABULARY_WORDS } = require("./vocabulary-seed.cjs");
+const { SURAHS } = require("./tadabbur-seed.cjs");
+const { AN_NAS_COVERAGE } = require("./tadabbur-coverage-an-nas.cjs");
+const { AL_FALAQ_COVERAGE } = require("./tadabbur-coverage-al-falaq.cjs");
 const { LessonContentSchema } = require("@warsh/lesson-schema");
 
 const chapters = [...book1Chapters, ...books2To4Chapters, ...books5To6Chapters, ...books7To8Chapters];
@@ -374,14 +378,42 @@ function validateReveal(value, pathLabel, reporter) {
   if (!assertObject(value, pathLabel, reporter)) return;
   validateLocalizedText(value.concept_name, `${pathLabel}.concept_name`, reporter);
   validateAyahReference(value.ayah, `${pathLabel}.ayah`, reporter);
+  const ayahWords = isNonEmptyString(value.ayah?.ar)
+    ? value.ayah.ar.trim().split(/\s+/).filter(Boolean)
+    : [];
   if (assertArray(value.highlighted_word_indices, `${pathLabel}.highlighted_word_indices`, reporter, { min: 1 })) {
     value.highlighted_word_indices.forEach((indexValue, index) => {
-      assertInteger(indexValue, `${pathLabel}.highlighted_word_indices[${index}]`, reporter, { min: 0 });
+      assertInteger(indexValue, `${pathLabel}.highlighted_word_indices[${index}]`, reporter, {
+        min: 0,
+        max: Math.max(ayahWords.length - 1, 0),
+      });
     });
     const unique = new Set(value.highlighted_word_indices);
     if (unique.size !== value.highlighted_word_indices.length) {
       reporter.add(`${pathLabel}.highlighted_word_indices`, "must not contain duplicate indices");
     }
+  }
+  if (value.highlighted_words !== undefined &&
+      assertArray(value.highlighted_words, `${pathLabel}.highlighted_words`, reporter, { min: 1 })) {
+    if (Array.isArray(value.highlighted_word_indices) &&
+        value.highlighted_words.length !== value.highlighted_word_indices.length) {
+      reporter.add(`${pathLabel}.highlighted_words`, "must have one expected word per highlighted index");
+    }
+    value.highlighted_words.forEach((expectedWord, index) => {
+      if (!assertString(expectedWord, `${pathLabel}.highlighted_words[${index}]`, reporter)) return;
+      const wordIndex = value.highlighted_word_indices?.[index];
+      const actualWord = Number.isInteger(wordIndex) ? ayahWords[wordIndex] : undefined;
+      const normalize = (word) => word
+        .normalize("NFC")
+        .replace(/[\u064b-\u065f\u0670]/g, "")
+        .replace(/[^\p{Script=Arabic}]/gu, "");
+      if (actualWord !== undefined && normalize(actualWord) !== normalize(expectedWord)) {
+        reporter.add(
+          `${pathLabel}.highlighted_words[${index}]`,
+          `expected "${expectedWord}" at ayah word ${wordIndex}, found "${actualWord}"`
+        );
+      }
+    });
   }
   validateLocalizedText(value.noor_explanation, `${pathLabel}.noor_explanation`, reporter);
 }
@@ -766,6 +798,13 @@ function validateLessonFixture(fileName, lesson, reporter, globalState) {
     return;
   }
 
+  // Corrected lessons opt into semantic reveal validation by declaring the
+  // expected normalized Arabic words. This lets the curriculum migrate
+  // lesson-by-lesson while preventing corrected content from drifting again.
+  if (lesson.reveal?.highlighted_words !== undefined) {
+    validateReveal(lesson.reveal, `${pathLabel}.reveal`, reporter);
+  }
+
   if (["STANDARD", "REVIEW"].includes(lesson.template)) {
     const discoverBounds = lesson.template === "REVIEW" ? { min: 2, max: 15 } : { min: 4, max: 15 };
     assertArray(lesson.discover_cards, `${pathLabel}.discover_cards`, reporter, discoverBounds);
@@ -813,6 +852,101 @@ function readFixture(fileName, reporter) {
   }
 }
 
+function normalizeArabic(value) {
+  return typeof value === "string"
+    ? value
+      .normalize("NFC")
+      .replace(/[\u064b-\u065f\u0670]/g, "")
+      .replace(/[إأآ]/g, "ا")
+      .replace(/[^\p{Script=Arabic}]/gu, "")
+    : "";
+}
+
+function collectStrings(value, output = []) {
+  if (typeof value === "string") {
+    output.push(value);
+  } else if (Array.isArray(value)) {
+    value.forEach((item) => collectStrings(item, output));
+  } else if (isPlainObject(value)) {
+    Object.values(value).forEach((item) => collectStrings(item, output));
+  }
+  return output;
+}
+
+function validateTadabburCoverage(
+  { surahNumber, surahName, expectedAyat, unlockChapter, coverage },
+  fixturesByName,
+  reporter
+) {
+  const pathLabel = `${surahName} coverage`;
+  const vocabularyKeys = new Set(VOCABULARY_WORDS.map((word) => normalizeArabic(word.arabicPlain)));
+  const coverageKeys = new Set(coverage.map((entry) => normalizeArabic(entry.key)));
+  const surah = SURAHS.find((candidate) => candidate.surahNumber === surahNumber);
+
+  if (!surah || surah.ayat.length !== expectedAyat) {
+    reporter.add(pathLabel, `must define all ${expectedAyat} ayat in tadabbur-seed.cjs`);
+    return;
+  }
+
+  const primaryKeys = new Set();
+  surah.ayat.forEach((ayah) => {
+    const ayahWords = ayah.ar.trim().split(/\s+/).filter(Boolean);
+    Object.entries(ayah.ov).forEach(([rawIndex, rawKey]) => {
+      const wordIndex = Number(rawIndex);
+      const key = normalizeArabic(rawKey);
+      if (!ayahWords[wordIndex]) {
+        reporter.add(pathLabel, `ayah ${ayah.n} vocabulary index ${wordIndex} is out of range`);
+      }
+      if (!vocabularyKeys.has(key)) {
+        reporter.add(pathLabel, `ayah ${ayah.n} references missing vocabulary key "${rawKey}"`);
+      }
+      primaryKeys.add(key);
+    });
+  });
+
+  for (const key of primaryKeys) {
+    if (!coverageKeys.has(key)) {
+      reporter.add(pathLabel, `primary vocabulary key "${key}" has no curriculum evidence`);
+    }
+  }
+
+  for (const entry of coverage) {
+    const key = normalizeArabic(entry.key);
+    if (!vocabularyKeys.has(key)) {
+      reporter.add(pathLabel, `coverage key "${entry.key}" is missing from vocabulary seed`);
+    }
+
+    const fixture = fixturesByName.get(entry.lesson);
+    if (!fixture) {
+      reporter.add(pathLabel, `coverage lesson "${entry.lesson}" does not exist`);
+      continue;
+    }
+
+    const chapterMatch = entry.lesson.match(/^chapter-(\d{2})-/);
+    if (!chapterMatch || Number(chapterMatch[1]) > unlockChapter) {
+      reporter.add(pathLabel, `"${entry.key}" must be taught no later than Chapter ${unlockChapter}`);
+    }
+
+    const teachingCard = (fixture.discover_cards ?? []).find(
+      (card) => normalizeArabic(card.introduces_vocab?.ar_plain) === key
+    );
+    if (!teachingCard) {
+      reporter.add(pathLabel, `"${entry.key}" has no introduces_vocab card in ${entry.lesson}`);
+    }
+
+    const exercise = (fixture.exercises ?? []).find((candidate) => candidate.id === entry.exerciseId);
+    if (!exercise) {
+      reporter.add(pathLabel, `"${entry.key}" references missing exercise "${entry.exerciseId}"`);
+      continue;
+    }
+    const exerciseKey = normalizeArabic(entry.exerciseForm ?? entry.key);
+    const exerciseArabic = collectStrings(exercise).map(normalizeArabic).join(" ");
+    if (!exerciseArabic.includes(exerciseKey)) {
+      reporter.add(pathLabel, `exercise "${entry.exerciseId}" does not contain "${entry.key}"`);
+    }
+  }
+}
+
 function validateFixtureCurriculum() {
   const reporter = createFixtureReporter();
   if (!fs.existsSync(fixturesDir)) {
@@ -828,11 +962,37 @@ function validateFixtureCurriculum() {
     exerciseIds: new Set(),
     chapterLessonKeys: new Set(),
   };
+  const fixturesByName = new Map();
 
   for (const fileName of files) {
     const lesson = readFixture(fileName, reporter);
-    if (lesson) validateLessonFixture(fileName, lesson, reporter, globalState);
+    if (lesson) {
+      fixturesByName.set(fileName, lesson);
+      validateLessonFixture(fileName, lesson, reporter, globalState);
+    }
   }
+  validateTadabburCoverage(
+    {
+      surahNumber: 114,
+      surahName: "An-Nas",
+      expectedAyat: 6,
+      unlockChapter: 18,
+      coverage: AN_NAS_COVERAGE,
+    },
+    fixturesByName,
+    reporter
+  );
+  validateTadabburCoverage(
+    {
+      surahNumber: 113,
+      surahName: "Al-Falaq",
+      expectedAyat: 5,
+      unlockChapter: 19,
+      coverage: AL_FALAQ_COVERAGE,
+    },
+    fixturesByName,
+    reporter
+  );
 
   if (reporter.errors.length > 0) {
     const preview = reporter.errors.slice(0, 120).map((error) => `  - ${error}`).join("\n");

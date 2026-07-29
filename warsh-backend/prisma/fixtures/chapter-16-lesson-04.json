@@ -106,6 +106,23 @@
         "ar": "اِفْتَحْ — open! · اِقْرَأْ — read! · اُكْتُبْ — write! · اُنْظُرْ — look! · اُجْلِسْ — sit down! · اُقُمْ — stand up!",
         "ur": "اِفْتَحْ — کھولو! · اِقْرَأْ — پڑھو! · اُكْتُبْ — لکھو! · اُنْظُرْ — دیکھو! · اُجْلِسْ — بیٹھ جاؤ! · اُقُمْ — کھڑے ہو جاؤ!"
       }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "قُلْ",
+        "ar_plain": "قل",
+        "translit": "qul",
+        "en": "say!",
+        "ur": "کہو"
+      },
+      "explanation": {
+        "en": "قُلْ is the command 'say!' In An-Nas, the surah begins قُلْ أَعُوذُ — 'Say: I seek refuge.'",
+        "ur": "قُلْ حکم ہے: 'کہو!' سورۃ الناس قُلْ أَعُوذُ سے شروع ہوتی ہے: 'کہو: میں پناہ مانگتا ہوں۔'"
+      },
+      "introduces_vocab": {
+        "ar_plain": "قل"
+      }
     }
   ],
   "exercises": [
@@ -407,6 +424,25 @@
         "en": "looks",
         "ur": "دیکھتا ہے"
       },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch16-l04-ex09",
+      "prompt": {
+        "ar": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+        "ar_plain": "قل اعوذ برب الناس",
+        "translit": "qul aʿūdhu birabbin-nās",
+        "en": "Say: I seek refuge in the Lord of mankind.",
+        "ur": "کہو: میں انسانوں کے رب کی پناہ مانگتا ہوں۔"
+      },
+      "options": [
+        { "en": "Say: I seek refuge in the Lord of mankind.", "ur": "کہو: میں انسانوں کے رب کی پناہ مانگتا ہوں۔" },
+        { "en": "The Lord of mankind says.", "ur": "انسانوں کا رب کہتا ہے۔" },
+        { "en": "I say to mankind.", "ur": "میں انسانوں سے کہتا ہوں۔" },
+        { "en": "Seek refuge from mankind.", "ur": "انسانوں سے پناہ مانگو۔" }
+      ],
+      "correct_index": 0,
       "xp_value": 1
     }
   ],

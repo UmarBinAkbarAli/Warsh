@@ -102,6 +102,23 @@
       "audio_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/audio/vocab/walad-awlad.mp3"
     },
     {
+      "type": "WORD",
+      "text": {
+        "ar": "صَدْرٌ / صُدُورٌ",
+        "ar_plain": "صدر صدور",
+        "translit": "ṣadrun / ṣudūrun",
+        "en": "a chest / chests",
+        "ur": "ایک سینہ / سینے"
+      },
+      "explanation": {
+        "en": "صُدُور is the broken plural of صَدْر. In An-Nas, فِي صُدُورِ النَّاسِ means 'in the chests of mankind.'",
+        "ur": "صُدُور، صَدْر کی جمع مکسر ہے۔ سورۃ الناس میں فِي صُدُورِ النَّاسِ کا مطلب 'انسانوں کے سینوں میں' ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "صدر"
+      }
+    },
+    {
       "type": "CONTRAST",
       "concept": {
         "en": "Ending plural vs changed-shape plural",
@@ -383,6 +400,25 @@
         "en": "أَوْلَادٌ is a plural from وَلَدٌ.",
         "ur": "أَوْلَادٌ، وَلَدٌ سے بننے والی جمع ہے۔"
       }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch13-l03-ex07",
+      "prompt": {
+        "ar": "فِي صُدُورِ النَّاسِ",
+        "ar_plain": "في صدور الناس",
+        "translit": "fī ṣudūrin-nās",
+        "en": "in the chests of mankind",
+        "ur": "انسانوں کے سینوں میں"
+      },
+      "options": [
+        { "en": "in the chests of mankind", "ur": "انسانوں کے سینوں میں" },
+        { "en": "from the people", "ur": "لوگوں میں سے" },
+        { "en": "in one chest", "ur": "ایک سینے میں" },
+        { "en": "the hearts of the jinn", "ur": "جنات کے دل" }
+      ],
+      "correct_index": 0,
+      "xp_value": 1
     }
   ],
   "reveal": {

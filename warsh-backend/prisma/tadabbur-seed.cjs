@@ -72,12 +72,12 @@ const SURAHS = [
     nameAr: "النَّاس", nameEn: "An-Nas", meaningEn: "Mankind",
     totalAyat: 6,
     ayat: [
-      { n: 1, ar: "قُلْ أَعُوذُ بِرَبِّ النَّاسِ", en: "Say, I seek refuge in the Lord of mankind.", ov: { 3: "رب", 4: "ناس" } },
-      { n: 2, ar: "مَلِكِ النَّاسِ", en: "The Sovereign of mankind.", ov: { 1: "ناس" } },
-      { n: 3, ar: "إِلَٰهِ النَّاسِ", en: "The God of mankind.", ov: { 1: "ناس" } },
-      { n: 4, ar: "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ", en: "From the evil of the retreating whisperer.", ov: {} },
-      { n: 5, ar: "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ", en: "Who whispers into the breasts of mankind.", ov: { 5: "ناس" } },
-      { n: 6, ar: "مِنَ الْجِنَّةِ وَالنَّاسِ", en: "From among the jinn and mankind.", ov: { 2: "ناس" } },
+      { n: 1, ar: "قُلْ أَعُوذُ بِرَبِّ النَّاسِ", en: "Say, I seek refuge in the Lord of mankind.", ov: { 0: "قل", 1: "اعوذ", 2: "رب", 3: "ناس" } },
+      { n: 2, ar: "مَلِكِ النَّاسِ", en: "The Sovereign of mankind.", ov: { 0: "ملك", 1: "ناس" } },
+      { n: 3, ar: "إِلَٰهِ النَّاسِ", en: "The God of mankind.", ov: { 0: "اله", 1: "ناس" } },
+      { n: 4, ar: "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ", en: "From the evil of the retreating whisperer.", ov: { 0: "من", 1: "شر", 2: "وسواس", 3: "خناس" } },
+      { n: 5, ar: "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ", en: "Who whispers into the breasts of mankind.", ov: { 0: "الذي", 1: "يوسوس", 2: "في", 3: "صدر", 4: "ناس" } },
+      { n: 6, ar: "مِنَ الْجِنَّةِ وَالنَّاسِ", en: "From among the jinn and mankind.", ov: { 0: "من", 1: "جنة", 2: "ناس" } },
     ],
   },
   {
@@ -85,11 +85,11 @@ const SURAHS = [
     nameAr: "الْفَلَق", nameEn: "Al-Falaq", meaningEn: "The Daybreak",
     totalAyat: 5,
     ayat: [
-      { n: 1, ar: "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ", en: "Say, I seek refuge in the Lord of daybreak.", ov: { 3: "رب" } },
-      { n: 2, ar: "مِنْ شَرِّ مَا خَلَقَ", en: "From the evil of that which He created.", ov: {} },
-      { n: 3, ar: "وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ", en: "And from the evil of darkness when it settles.", ov: {} },
-      { n: 4, ar: "وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ", en: "And from the evil of those who blow on knots.", ov: {} },
-      { n: 5, ar: "وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ", en: "And from the evil of an envier when he envies.", ov: {} },
+      { n: 1, ar: "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ", en: "Say, I seek refuge in the Lord of daybreak.", ov: { 0: "قل", 1: "اعوذ", 2: "رب", 3: "الفلق" } },
+      { n: 2, ar: "مِنْ شَرِّ مَا خَلَقَ", en: "From the evil of that which He created.", ov: { 0: "من", 1: "شر", 2: "ما", 3: "خلق" } },
+      { n: 3, ar: "وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ", en: "And from the evil of darkness when it settles.", ov: { 0: "من", 1: "شر", 2: "غاسق", 3: "اذا", 4: "وقب" } },
+      { n: 4, ar: "وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ", en: "And from the evil of those who blow on knots.", ov: { 0: "من", 1: "شر", 2: "النفاثات", 3: "في", 4: "عقد" } },
+      { n: 5, ar: "وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ", en: "And from the evil of an envier when he envies.", ov: { 0: "من", 1: "شر", 2: "حاسد", 3: "اذا", 4: "حسد" } },
     ],
   },
   {
@@ -233,4 +233,4 @@ async function seedTadabbur(prisma) {
   console.log(`Seeded ${SURAHS.length} Tadabbur Surahs`);
 }
 
-module.exports = { seedTadabbur };
+module.exports = { seedTadabbur, SURAHS };

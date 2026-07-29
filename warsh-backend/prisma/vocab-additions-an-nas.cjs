@@ -1,0 +1,136 @@
+// Vocabulary required for complete word-level coverage of Surah An-Nas.
+// رَبّ and نَاس already exist in the base vocabulary seed.
+const AN_NAS_VOCABULARY = [
+  {
+    arabic: "قُلْ", arabicPlain: "قل", transliteration: "qul",
+    translationEn: "say!", translationUr: "کہو",
+    wordType: "VERB", gender: null, pluralForm: null,
+    rootLetters: "ق و ل", topicCategories: ["quranic", "verbs"], chapterIntroduced: 16,
+    frequencyInQuran: null, sortOrder: 2001,
+    quranicExample: {
+      surahNumber: 114, surahNameAr: "النَّاس", surahNameEn: "An-Nas",
+      ayahNumber: 1, ayahArabic: "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+      wordPosition: 0, translationEn: "Say: I seek refuge in the Lord of mankind",
+      translationUr: "کہو: میں انسانوں کے رب کی پناہ مانگتا ہوں",
+    },
+  },
+  {
+    arabic: "بِـ", arabicPlain: "ب", transliteration: "bi",
+    translationEn: "with, by, in", translationUr: "کے ساتھ، سے، میں",
+    wordType: "PARTICLE", gender: null, pluralForm: null,
+    rootLetters: null, topicCategories: ["quranic", "grammar"], chapterIntroduced: 2,
+    frequencyInQuran: null, sortOrder: 2003,
+    quranicExample: {
+      surahNumber: 114, surahNameAr: "النَّاس", surahNameEn: "An-Nas",
+      ayahNumber: 1, ayahArabic: "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+      wordPosition: 2, translationEn: "Say: I seek refuge in the Lord of mankind",
+      translationUr: "کہو: میں انسانوں کے رب کی پناہ مانگتا ہوں",
+    },
+  },
+  {
+    arabic: "مِنْ", arabicPlain: "من", transliteration: "min",
+    translationEn: "from", translationUr: "سے",
+    wordType: "PARTICLE", gender: null, pluralForm: null,
+    rootLetters: null, topicCategories: ["quranic", "grammar"], chapterIntroduced: 2,
+    frequencyInQuran: null, sortOrder: 2006,
+    quranicExample: {
+      surahNumber: 114, surahNameAr: "النَّاس", surahNameEn: "An-Nas",
+      ayahNumber: 4, ayahArabic: "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+      wordPosition: 0, translationEn: "From the evil of the lurking whisperer",
+      translationUr: "پیچھے ہٹنے والے وسوسہ ڈالنے والے کے شر سے",
+    },
+  },
+  {
+    arabic: "وَسْوَاس", arabicPlain: "وسواس", transliteration: "waswās",
+    translationEn: "whisperer; whispering", translationUr: "وسوسہ ڈالنے والا؛ وسوسہ",
+    wordType: "NOUN", gender: "MASCULINE", pluralForm: null,
+    rootLetters: "و س و س", topicCategories: ["quranic"], chapterIntroduced: 18,
+    frequencyInQuran: null, sortOrder: 2008,
+    quranicExample: {
+      surahNumber: 114, surahNameAr: "النَّاس", surahNameEn: "An-Nas",
+      ayahNumber: 4, ayahArabic: "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+      wordPosition: 2, translationEn: "From the evil of the lurking whisperer",
+      translationUr: "پیچھے ہٹنے والے وسوسہ ڈالنے والے کے شر سے",
+    },
+  },
+  {
+    arabic: "خَنَّاس", arabicPlain: "خناس", transliteration: "khannās",
+    translationEn: "one who retreats and hides", translationUr: "پیچھے ہٹ کر چھپ جانے والا",
+    wordType: "NOUN", gender: "MASCULINE", pluralForm: null,
+    rootLetters: "خ ن س", topicCategories: ["quranic"], chapterIntroduced: 18,
+    frequencyInQuran: null, sortOrder: 2009,
+    quranicExample: {
+      surahNumber: 114, surahNameAr: "النَّاس", surahNameEn: "An-Nas",
+      ayahNumber: 4, ayahArabic: "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+      wordPosition: 3, translationEn: "From the evil of the lurking whisperer",
+      translationUr: "پیچھے ہٹنے والے وسوسہ ڈالنے والے کے شر سے",
+    },
+  },
+  {
+    arabic: "الَّذِي", arabicPlain: "الذي", transliteration: "alladhī",
+    translationEn: "the one who; who; that", translationUr: "وہ جو؛ جو",
+    wordType: "PRONOUN", gender: "MASCULINE", pluralForm: "الَّذِينَ",
+    rootLetters: null, topicCategories: ["quranic", "grammar"], chapterIntroduced: 6,
+    frequencyInQuran: null, sortOrder: 2010,
+    quranicExample: {
+      surahNumber: 114, surahNameAr: "النَّاس", surahNameEn: "An-Nas",
+      ayahNumber: 5, ayahArabic: "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ",
+      wordPosition: 0, translationEn: "Who whispers into the hearts of mankind",
+      translationUr: "جو انسانوں کے سینوں میں وسوسہ ڈالتا ہے",
+    },
+  },
+  {
+    arabic: "يُوَسْوِسُ", arabicPlain: "يوسوس", transliteration: "yuwaswisu",
+    translationEn: "he whispers", translationUr: "وہ وسوسہ ڈالتا ہے",
+    wordType: "VERB", gender: null, pluralForm: null,
+    rootLetters: "و س و س", topicCategories: ["quranic", "verbs"], chapterIntroduced: 18,
+    frequencyInQuran: null, sortOrder: 2011,
+    quranicExample: {
+      surahNumber: 114, surahNameAr: "النَّاس", surahNameEn: "An-Nas",
+      ayahNumber: 5, ayahArabic: "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ",
+      wordPosition: 1, translationEn: "Who whispers into the hearts of mankind",
+      translationUr: "جو انسانوں کے سینوں میں وسوسہ ڈالتا ہے",
+    },
+  },
+  {
+    arabic: "فِي", arabicPlain: "في", transliteration: "fī",
+    translationEn: "in", translationUr: "میں",
+    wordType: "PARTICLE", gender: null, pluralForm: null,
+    rootLetters: null, topicCategories: ["quranic", "grammar"], chapterIntroduced: 2,
+    frequencyInQuran: null, sortOrder: 2012,
+    quranicExample: {
+      surahNumber: 114, surahNameAr: "النَّاس", surahNameEn: "An-Nas",
+      ayahNumber: 5, ayahArabic: "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ",
+      wordPosition: 2, translationEn: "Who whispers into the hearts of mankind",
+      translationUr: "جو انسانوں کے سینوں میں وسوسہ ڈالتا ہے",
+    },
+  },
+  {
+    arabic: "جِنَّة", arabicPlain: "جنة", transliteration: "jinnah",
+    translationEn: "jinn", translationUr: "جنات",
+    wordType: "COLLECTIVE_NOUN", gender: null, pluralForm: null,
+    rootLetters: "ج ن ن", topicCategories: ["quranic"], chapterIntroduced: 18,
+    frequencyInQuran: null, sortOrder: 2014,
+    quranicExample: {
+      surahNumber: 114, surahNameAr: "النَّاس", surahNameEn: "An-Nas",
+      ayahNumber: 6, ayahArabic: "مِنَ الْجِنَّةِ وَالنَّاسِ",
+      wordPosition: 1, translationEn: "From among jinn and mankind",
+      translationUr: "جنات اور انسانوں میں سے",
+    },
+  },
+  {
+    arabic: "وَ", arabicPlain: "و", transliteration: "wa",
+    translationEn: "and", translationUr: "اور",
+    wordType: "PARTICLE", gender: null, pluralForm: null,
+    rootLetters: null, topicCategories: ["quranic", "grammar"], chapterIntroduced: 2,
+    frequencyInQuran: null, sortOrder: 2015,
+    quranicExample: {
+      surahNumber: 114, surahNameAr: "النَّاس", surahNameEn: "An-Nas",
+      ayahNumber: 6, ayahArabic: "مِنَ الْجِنَّةِ وَالنَّاسِ",
+      wordPosition: 2, translationEn: "From among jinn and mankind",
+      translationUr: "جنات اور انسانوں میں سے",
+    },
+  },
+];
+
+module.exports = { AN_NAS_VOCABULARY };
