@@ -5699,6 +5699,7 @@ declare const LessonContentSchema: z.ZodObject<{
             audio_url?: string | undefined;
         }>;
         highlighted_word_indices: z.ZodArray<z.ZodNumber, "many">;
+        highlighted_words: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
         noor_explanation: z.ZodObject<{
             en: z.ZodString;
             ur: z.ZodOptional<z.ZodString>;
@@ -5729,6 +5730,7 @@ declare const LessonContentSchema: z.ZodObject<{
             en: string;
             ur?: string | undefined;
         };
+        highlighted_words?: string[] | undefined;
     }, {
         ayah: {
             ar: string;
@@ -5749,6 +5751,7 @@ declare const LessonContentSchema: z.ZodObject<{
             en: string;
             ur?: string | undefined;
         };
+        highlighted_words?: string[] | undefined;
     }>>;
     spoken_phrases: z.ZodOptional<z.ZodObject<{
         scene: z.ZodObject<{
@@ -6540,6 +6543,7 @@ declare const LessonContentSchema: z.ZodObject<{
             en: string;
             ur?: string | undefined;
         };
+        highlighted_words?: string[] | undefined;
     } | undefined;
     spoken_phrases?: {
         scene: {
@@ -7113,6 +7117,7 @@ declare const LessonContentSchema: z.ZodObject<{
             en: string;
             ur?: string | undefined;
         };
+        highlighted_words?: string[] | undefined;
     } | undefined;
     spoken_phrases?: {
         scene: {

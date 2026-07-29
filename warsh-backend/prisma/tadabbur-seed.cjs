@@ -72,12 +72,12 @@ const SURAHS = [
     nameAr: "النَّاس", nameEn: "An-Nas", meaningEn: "Mankind",
     totalAyat: 6,
     ayat: [
-      { n: 1, ar: "قُلْ أَعُوذُ بِرَبِّ النَّاسِ", en: "Say, I seek refuge in the Lord of mankind.", ov: { 3: "رب", 4: "ناس" } },
-      { n: 2, ar: "مَلِكِ النَّاسِ", en: "The Sovereign of mankind.", ov: { 1: "ناس" } },
-      { n: 3, ar: "إِلَٰهِ النَّاسِ", en: "The God of mankind.", ov: { 1: "ناس" } },
-      { n: 4, ar: "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ", en: "From the evil of the retreating whisperer.", ov: {} },
-      { n: 5, ar: "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ", en: "Who whispers into the breasts of mankind.", ov: { 5: "ناس" } },
-      { n: 6, ar: "مِنَ الْجِنَّةِ وَالنَّاسِ", en: "From among the jinn and mankind.", ov: { 2: "ناس" } },
+      { n: 1, ar: "قُلْ أَعُوذُ بِرَبِّ النَّاسِ", en: "Say, I seek refuge in the Lord of mankind.", ov: { 0: "قل", 1: "اعوذ", 2: "رب", 3: "ناس" } },
+      { n: 2, ar: "مَلِكِ النَّاسِ", en: "The Sovereign of mankind.", ov: { 0: "ملك", 1: "ناس" } },
+      { n: 3, ar: "إِلَٰهِ النَّاسِ", en: "The God of mankind.", ov: { 0: "اله", 1: "ناس" } },
+      { n: 4, ar: "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ", en: "From the evil of the retreating whisperer.", ov: { 0: "من", 1: "شر", 2: "وسواس", 3: "خناس" } },
+      { n: 5, ar: "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ", en: "Who whispers into the breasts of mankind.", ov: { 0: "الذي", 1: "يوسوس", 2: "في", 3: "صدر", 4: "ناس" } },
+      { n: 6, ar: "مِنَ الْجِنَّةِ وَالنَّاسِ", en: "From among the jinn and mankind.", ov: { 0: "من", 1: "جنة", 2: "ناس" } },
     ],
   },
   {
@@ -233,4 +233,4 @@ async function seedTadabbur(prisma) {
   console.log(`Seeded ${SURAHS.length} Tadabbur Surahs`);
 }
 
-module.exports = { seedTadabbur };
+module.exports = { seedTadabbur, SURAHS };

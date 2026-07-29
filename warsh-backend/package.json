@@ -14,6 +14,7 @@
     "db:seed": "prisma db seed",
     "db:validate-seed": "node prisma/validate-curriculum.cjs --legacy",
     "db:validate-fixtures": "node prisma/validate-curriculum.cjs --fixtures",
+    "db:validate-an-nas": "node prisma/validate-curriculum.cjs --fixtures",
     "db:audit-urdu": "node scripts/audit-urdu-content.cjs",
     "db:studio": "prisma studio",
     "dev:unlock-through": "node scripts/dev-unlock-through.cjs",

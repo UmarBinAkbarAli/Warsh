@@ -219,6 +219,40 @@
       "introduces_vocab": {
         "ar_plain": "المكتب"
       }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "بِ",
+        "ar_plain": "ب",
+        "translit": "bi",
+        "en": "with / by / in",
+        "ur": "کے ساتھ / سے / میں"
+      },
+      "explanation": {
+        "en": "بِـ attaches directly to the next word. In بِرَبِّ النَّاسِ, it connects seeking refuge to رَبِّ النَّاسِ: 'in the Lord of mankind.'",
+        "ur": "بِـ اگلے لفظ کے ساتھ جڑتا ہے۔ بِرَبِّ النَّاسِ میں یہ پناہ مانگنے کو رَبِّ النَّاسِ سے جوڑتا ہے: 'لوگوں کے رب کی پناہ میں'۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "ب"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "وَ",
+        "ar_plain": "و",
+        "translit": "wa",
+        "en": "and",
+        "ur": "اور"
+      },
+      "explanation": {
+        "en": "وَ means 'and' and attaches to the following word. وَالنَّاسِ means 'and mankind.'",
+        "ur": "وَ کا مطلب 'اور' ہے اور یہ اگلے لفظ کے ساتھ جڑتا ہے۔ وَالنَّاسِ کا مطلب 'اور انسان' ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "و"
+      }
     }
   ],
   "exercises": [
@@ -579,6 +613,47 @@
         "en": "It's the opposite. فَوْقَ = above/over. تَحْتَ = under/beneath. Remember: تَجْرِي مِن تَحْتِهَا الأَنْهَارُ — rivers flowing beneath them (Jannah description).",
         "ur": "یہ الٹا ہے۔ فَوْقَ = اوپر۔ تَحْتَ = نیچے/تلے۔ یاد کریں: تَجْرِي مِن تَحْتِهَا الأَنْهارُ — ان کے نیچے نہریں بہتی ہیں (جنت کی تعریف)۔"
       }
+    },
+    {
+      "id": "ch02-l03-ex09",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "xp_value": 1,
+      "sentence_ar": "أَعُوذُ ___رَبِّ النَّاسِ",
+      "hint": {
+        "en": "I seek refuge in the Lord of mankind.",
+        "ur": "میں لوگوں کے رب کی پناہ مانگتا ہوں۔"
+      },
+      "options": [
+        { "ar": "بِ", "ar_plain": "ب", "translit": "bi", "en": "in / with", "ur": "میں / کے ساتھ" },
+        { "ar": "فِي", "ar_plain": "في", "translit": "fī", "en": "in", "ur": "میں" },
+        { "ar": "مِنْ", "ar_plain": "من", "translit": "min", "en": "from", "ur": "سے" },
+        { "ar": "إِلَى", "ar_plain": "إلى", "translit": "ilā", "en": "to", "ur": "کی طرف" }
+      ],
+      "correct_answer": {
+        "ar": "بِ",
+        "ar_plain": "ب",
+        "translit": "bi",
+        "en": "in / with",
+        "ur": "میں / کے ساتھ"
+      }
+    },
+    {
+      "id": "ch02-l03-ex10",
+      "type": "TRUE_FALSE",
+      "xp_value": 1,
+      "statement": {
+        "en": "In مِنَ الْجِنَّةِ وَالنَّاسِ, وَ means 'and.'",
+        "ur": "مِنَ الْجِنَّةِ وَالنَّاسِ میں وَ کا مطلب 'اور' ہے۔",
+        "ar_example": {
+          "ar": "وَالنَّاسِ",
+          "ar_plain": "والناس",
+          "translit": "wan-nās",
+          "en": "and mankind",
+          "ur": "اور انسان"
+        }
+      },
+      "correct_answer": true
     }
   ],
   "reveal": {

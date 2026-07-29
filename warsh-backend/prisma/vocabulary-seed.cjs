@@ -5,6 +5,7 @@ const { ADDITIONS_1 } = require("./vocab-additions-1.cjs");
 const { ADDITIONS_2 } = require("./vocab-additions-2.cjs");
 const { ADDITIONS_3 } = require("./vocab-additions-3.cjs");
 const { ADDITIONS_4 } = require("./vocab-additions-4.cjs");
+const { AN_NAS_VOCABULARY } = require("./vocab-additions-an-nas.cjs");
 
 const VOCABULARY_WORDS_BASE = [
   // ── النَّاس — People ─────────────────────────────────────────────────────────
@@ -776,6 +777,7 @@ const VOCABULARY_WORDS = [
   ...ADDITIONS_2,
   ...ADDITIONS_3,
   ...ADDITIONS_4,
+  ...AN_NAS_VOCABULARY,
 ];
 
 function mediaKey(word) {
@@ -799,4 +801,4 @@ async function seedVocabulary(prisma, existingMedia = []) {
   console.log(`Seeded ${VOCABULARY_WORDS.length} vocabulary words.`);
 }
 
-module.exports = { seedVocabulary };
+module.exports = { seedVocabulary, VOCABULARY_WORDS };

@@ -388,6 +388,49 @@ For local Metro/backend development:
 
 The development mode verifies ADB, creates reverse tunnels for Metro/backend, starts the backend, waits for health, and starts Expo with `http://127.0.0.1:3000`.
 
+### Isolated staging before production
+
+Content and data changes must be verified against staging before any production
+write or deployment. The maintained local staging workflow uses a persistent
+PostgreSQL container bound only to `127.0.0.1:55432`; it never uses the
+production database URL.
+
+```powershell
+# Create/start staging, apply migrations, refresh authored content, then launch
+# the local backend and Metro against that staging database.
+.\start-warsh-staging.ps1 -RefreshContent
+
+# Prepare or validate the staging database without launching the app.
+.\start-warsh-staging.ps1 -RefreshContent -PrepareOnly
+```
+
+Run the debug client once when native app source has changed:
+
+```powershell
+cd warsh-app
+$env:EXPO_PUBLIC_API_URL = 'http://127.0.0.1:3000'
+npm run android -- --no-bundler
+```
+
+For curriculum changes, staging acceptance requires:
+
+1. fixture/schema validators and focused coverage checks pass;
+2. migrations and content refresh succeed only against the staging URL;
+3. affected lessons are visually checked in the emulator in English and Urdu
+   where localized copy changed;
+4. lesson promises, discover cards, exercises, and completion summaries agree;
+5. the product owner explicitly approves production promotion.
+
+After approval, use a scoped production content update and verify the live
+result. Do not run the full production seed as a shortcut. Keep
+`DEV_UNLOCK_ALL=false` in production.
+
+`warsh-app/eas.json` reserves `https://api-staging.warsh.app` for remote preview
+builds, but that hostname is not currently operational. Until a separately
+provisioned remote staging backend/database is live and health-checked, use the
+isolated local staging workflow above. Never point a preview build at the
+production database.
+
 For Metro against production:
 
 ```powershell
