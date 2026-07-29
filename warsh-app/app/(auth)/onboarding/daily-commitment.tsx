@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import { useRouter } from "expo-router";
 import { useOnboardingStore } from "@stores/onboardingStore";
 import { BrandButton } from "@components/BrandButton";
+import { WebOnboardingChoices, useWebOnboardingLayout } from "@components/WebOnboardingChoices";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
 import { trackOnboardingDailyCommitmentSelected } from "@services/analytics";
 import { useT } from "@i18n/index";
@@ -17,6 +18,31 @@ export default function DailyCommitmentScreen() {
   const router = useRouter();
   const { dailyGoalMinutes, setDailyGoalMinutes } = useOnboardingStore();
   const t = useT();
+  const webLayout = useWebOnboardingLayout();
+
+  const continueToName = () => {
+    trackOnboardingDailyCommitmentSelected(dailyGoalMinutes);
+    router.push("/(auth)/onboarding/name");
+  };
+
+  if (webLayout) {
+    return (
+      <WebOnboardingChoices
+        title={t("onboarding.dailyTitle")}
+        body={t("onboarding.dailyBody")}
+        choices={OPTIONS.map((option) => ({
+          value: option.value,
+          label: t(option.labelKey),
+          description: t(option.subtitleKey),
+          icon: "clock",
+        }))}
+        selected={dailyGoalMinutes}
+        onSelect={setDailyGoalMinutes}
+        continueLabel={t("common.continue")}
+        onContinue={continueToName}
+      />
+    );
+  }
 
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
@@ -43,7 +69,7 @@ export default function DailyCommitmentScreen() {
       ))}
 
       <View style={{ height: Spacing.xl }} />
-      <BrandButton title={t("common.continue")} onPress={() => { trackOnboardingDailyCommitmentSelected(dailyGoalMinutes); router.push("/(auth)/onboarding/name"); }} />
+      <BrandButton title={t("common.continue")} onPress={continueToName} />
     </View>
   );
 }

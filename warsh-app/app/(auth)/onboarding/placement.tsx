@@ -1,6 +1,7 @@
 import { View, Text } from "react-native";
 import { useRouter } from "expo-router";
 import { BrandButton } from "@components/BrandButton";
+import { WebOnboardingChoices, useWebOnboardingLayout } from "@components/WebOnboardingChoices";
 import { useOnboardingStore } from "@stores/onboardingStore";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
 import { trackOnboardingPlacementSelected } from "@services/analytics";
@@ -10,6 +11,31 @@ export default function OnboardingPlacementScreen() {
   const router = useRouter();
   const { placementType, setPlacementType } = useOnboardingStore();
   const t = useT();
+  const webLayout = useWebOnboardingLayout();
+
+  const continueToReady = () => {
+    if (placementType) trackOnboardingPlacementSelected(placementType);
+    router.push("/(auth)/onboarding/ready");
+  };
+
+  if (webLayout) {
+    return (
+      <WebOnboardingChoices
+        title={t("onboarding.placementTitle")}
+        body={t("onboarding.placementBody")}
+        choices={[
+          { value: "BEGINNER", label: t("onboarding.placementBeginner"), icon: "sunrise" },
+          { value: "KNOWS_LETTERS", label: t("onboarding.placementLetters"), icon: "type" },
+          { value: "STUDIED_BEFORE", label: t("onboarding.placementStudied"), icon: "book-open" },
+          { value: "CAN_READ_BASIC", label: t("onboarding.placementReadBasic"), icon: "check-circle" },
+        ]}
+        selected={placementType}
+        onSelect={setPlacementType}
+        continueLabel={t("common.continue")}
+        onContinue={continueToReady}
+      />
+    );
+  }
 
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
@@ -30,7 +56,7 @@ export default function OnboardingPlacementScreen() {
       <View style={{ height: Spacing.md }} />
       <BrandButton title={t("onboarding.placementSkip")} variant="secondary" onPress={() => { setPlacementType("BEGINNER"); router.push("/(auth)/onboarding/ready"); }} selected={false} />
       <View style={{ height: Spacing.xl }} />
-      <BrandButton title={t("common.continue")} onPress={() => { if (placementType) trackOnboardingPlacementSelected(placementType); router.push("/(auth)/onboarding/ready"); }} />
+      <BrandButton title={t("common.continue")} onPress={continueToReady} />
     </View>
   );
 }
