@@ -110,6 +110,12 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
   and covered only ayah 1; the replacement accurately covers all five ayat.
   Emulator QA also caught and corrected an unreadable mixed-direction paragraph,
   a sentence-builder tile-count failure, and an oversized final exercise.
+- Promoted the reviewed An-Nas and Al-Falaq release to production through
+  merged PR #5 and backend deployment `dpl_9fBQofLxYsQj53f46ujKSAS7UcDk`.
+  The scoped transaction updated nine lesson records, inserted 18 vocabulary
+  records, and updated both Tadabbur surahs in place without resetting learner
+  progress. Production verification passed at 20/20 linked An-Nas tokens,
+  23/23 linked Al-Falaq tokens, and HTTP 200 on `https://api.warsh.app/api/health`.
 - Production promotion is now an explicit gate: validators, isolated staging
   migration/content refresh, affected-lesson visual QA, and product-owner
   approval must all pass before a scoped production content update. The
