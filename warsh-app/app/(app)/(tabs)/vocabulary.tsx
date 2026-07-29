@@ -1,10 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import {
   ActivityIndicator,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { TextInput } from "react-native-paper";
@@ -217,6 +219,7 @@ function TopicGrid({ language, wordCounts, onPress }: { language: "en" | "ur"; w
 
 export default function VocabularyScreen() {
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
   const router = useRouter();
   const language = useTranslationLanguage();
   const t = useT();
@@ -227,6 +230,7 @@ export default function VocabularyScreen() {
   const [srsDueCount, setSrsDueCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [searching, setSearching] = useState(false);
+  const desktopWeb = Platform.OS === "web" && width >= 960;
 
   useFocusEffect(
     useCallback(() => {
@@ -291,7 +295,11 @@ export default function VocabularyScreen() {
   return (
     <ScrollView
       style={styles.screen}
-      contentContainerStyle={[styles.content, { paddingTop: insets.top + Spacing.xl }]}
+      contentContainerStyle={[
+        styles.content,
+        desktopWeb && styles.webContent,
+        { paddingTop: desktopWeb ? 40 : insets.top + Spacing.xl },
+      ]}
       keyboardShouldPersistTaps="handled"
     >
       {/* Header */}
@@ -420,6 +428,12 @@ export default function VocabularyScreen() {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: Colors.bg.primary },
   content: { paddingHorizontal: Spacing.xl, paddingBottom: Spacing.xl * 2 },
+  webContent: {
+    width: "100%",
+    maxWidth: 980,
+    alignSelf: "center",
+    paddingHorizontal: 40,
+  },
 
   header: { marginBottom: Spacing.lg },
   eyebrow: {

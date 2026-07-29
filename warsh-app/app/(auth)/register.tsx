@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { Platform, View, Text, StyleSheet, useWindowDimensions } from "react-native";
 import { TextInput } from "react-native-paper";
 import { useState } from "react";
 import { Link, useRouter } from "expo-router";
@@ -7,8 +7,9 @@ import { useOnboardingStore } from "@stores/onboardingStore";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { getApiErrorMessage } from "@services/api";
-import { Colors, FontSizes, LineHeights, Spacing } from "../../constants/theme";
+import { Colors, FontSizes, LineHeights, Spacing, WarshPalette } from "../../constants/theme";
 import { trackSignupCompleted } from "@services/analytics";
+import { WebAuthLayout } from "@components/WebAuthLayout";
 
 export default function RegisterScreen() {
   const router = useRouter();
@@ -22,6 +23,8 @@ export default function RegisterScreen() {
   const [error, setError] = useState("");
   const [emailTouched, setEmailTouched] = useState(false);
   const [passwordTouched, setPasswordTouched] = useState(false);
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 900;
 
   const emailInvalid = emailTouched && email.trim().length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
   const passwordShort = passwordTouched && password.length > 0 && password.length < 8;
@@ -61,11 +64,11 @@ export default function RegisterScreen() {
     }
   }
 
-  return (
-    <View style={styles.screen}>
-      <ArabicText size="lg" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
+  const content = (
+    <View style={[styles.screen, desktopWeb ? styles.webScreen : null]}>
+      {!desktopWeb ? <ArabicText size="lg" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
         وَرْش
-      </ArabicText>
+      </ArabicText> : null}
       <Text style={styles.heading}>Create your Warsh account</Text>
       <Text style={styles.subheading}>
         {displayName
@@ -79,7 +82,7 @@ export default function RegisterScreen() {
         onChangeText={setDisplayName}
         mode="outlined"
         autoCapitalize="words"
-        style={styles.input}
+        style={[styles.input, desktopWeb ? styles.webInput : null]}
       />
       <TextInput
         label="Email"
@@ -91,7 +94,7 @@ export default function RegisterScreen() {
         autoCapitalize="none"
         autoComplete="email"
         error={emailInvalid}
-        style={styles.input}
+        style={[styles.input, desktopWeb ? styles.webInput : null]}
       />
       {emailInvalid ? (
         <Text style={styles.fieldError}>Enter a valid email address.</Text>
@@ -111,14 +114,19 @@ export default function RegisterScreen() {
           />
         }
         error={passwordShort}
-        style={styles.input}
+        style={[styles.input, desktopWeb ? styles.webInput : null]}
       />
       {passwordShort ? (
         <Text style={styles.fieldError}>Password must be at least 8 characters.</Text>
       ) : null}
 
       {error ? <Text style={styles.error}>{error}</Text> : null}
-      <BrandButton title="Create Account" onPress={handleSubmit} loading={loading} />
+      <BrandButton
+        title="Create Account"
+        onPress={handleSubmit}
+        loading={loading}
+        style={desktopWeb ? styles.webButton : undefined}
+      />
       <View style={{ flexDirection: "row", justifyContent: "center", marginTop: Spacing.xl }}>
         <Text style={{ color: Colors.text.secondary }}>Already have an account? </Text>
         <Link href="/(auth)/login" style={{ color: Colors.accent.gold, fontWeight: "700" }}>
@@ -127,6 +135,8 @@ export default function RegisterScreen() {
       </View>
     </View>
   );
+
+  return <WebAuthLayout>{content}</WebAuthLayout>;
 }
 
 const styles = StyleSheet.create({
@@ -135,6 +145,13 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.bg.primary,
     padding: Spacing.xl,
     justifyContent: "center",
+  },
+  webScreen: {
+    flex: undefined,
+    width: "100%",
+    padding: 0,
+    justifyContent: "flex-start",
+    backgroundColor: "transparent",
   },
   heading: {
     color: Colors.text.primary,
@@ -153,6 +170,13 @@ const styles = StyleSheet.create({
   input: {
     marginBottom: Spacing.md,
     backgroundColor: Colors.bg.surface,
+  },
+  webInput: {
+    backgroundColor: WarshPalette.white,
+  },
+  webButton: {
+    backgroundColor: WarshPalette.navy,
+    borderColor: WarshPalette.navy,
   },
   fieldError: {
     color: Colors.text.danger,

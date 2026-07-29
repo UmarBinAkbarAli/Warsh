@@ -2,10 +2,12 @@ import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
   FlatList,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { Image } from "expo-image";
@@ -44,10 +46,13 @@ interface Chapter {
 export default function ChaptersScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
   const language = useTranslationLanguage();
   const t = useT();
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [loading, setLoading] = useState(true);
+  const desktopWeb = Platform.OS === "web" && width >= 960;
+  const columnCount = desktopWeb ? (width >= 1180 ? 3 : 2) : 1;
 
   useFocusEffect(
     useCallback(() => {
@@ -69,6 +74,7 @@ export default function ChaptersScreen() {
       <View
         style={[
           styles.card,
+          desktopWeb && styles.webCard,
           item.isCompleted && styles.cardCompleted,
           item.isLocked && styles.cardLocked,
         ]}
@@ -115,7 +121,11 @@ export default function ChaptersScreen() {
         {!item.isLocked && (
           <Pressable
             onPress={() => router.push(`/lessons/${item.id}`)}
-            style={({ pressed }) => [styles.cta, pressed && { opacity: 0.8 }]}
+            style={({ pressed }) => [
+              styles.cta,
+              desktopWeb && styles.webCta,
+              pressed && { opacity: 0.8 },
+            ]}
           >
             <Text style={styles.ctaText}>
               {item.isCompleted || item.isSkippedByPlacement ? t("common.review") : t("common.open")}
@@ -127,14 +137,16 @@ export default function ChaptersScreen() {
   };
 
   return (
-    <View style={[styles.container, { paddingTop: insets.top }]}>
-      <View style={styles.header}>
-        <TouchableOpacity
-          onPress={() => router.back()}
-          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-        >
-          <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
-        </TouchableOpacity>
+    <View style={[styles.container, { paddingTop: desktopWeb ? 0 : insets.top }]}>
+      <View style={[styles.header, desktopWeb && styles.webHeader]}>
+        {!desktopWeb ? (
+          <TouchableOpacity
+            onPress={() => router.back()}
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+          >
+            <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
+          </TouchableOpacity>
+        ) : null}
         <Text style={styles.headerTitle}>{t("learn.allChapters", { count: chapters.length })}</Text>
       </View>
 
@@ -145,10 +157,13 @@ export default function ChaptersScreen() {
         />
       ) : (
         <FlatList
+          key={`chapters-${columnCount}`}
           data={chapters}
           keyExtractor={(item) => item.id}
           renderItem={renderChapter}
-          contentContainerStyle={styles.list}
+          numColumns={columnCount}
+          columnWrapperStyle={columnCount > 1 ? styles.webRow : undefined}
+          contentContainerStyle={[styles.list, desktopWeb && styles.webList]}
         />
       )}
     </View>
@@ -173,11 +188,31 @@ const styles = StyleSheet.create({
     lineHeight: LineHeights.h2,
     color: WarshPalette.ink,
   },
+  webHeader: {
+    width: "100%",
+    maxWidth: 1200,
+    alignSelf: "center",
+    paddingHorizontal: 32,
+    paddingTop: 36,
+    paddingBottom: 16,
+    borderBottomWidth: 0,
+  },
   list: {
     paddingHorizontal: Spacing.xl,
     paddingTop: Spacing.md,
     paddingBottom: Spacing.xl,
     gap: Spacing.md,
+  },
+  webList: {
+    width: "100%",
+    maxWidth: 1200,
+    alignSelf: "center",
+    paddingHorizontal: 32,
+    paddingTop: 8,
+    gap: 16,
+  },
+  webRow: {
+    gap: 16,
   },
   card: {
     backgroundColor: WarshPalette.parchmentBg,
@@ -185,6 +220,13 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderColor: WarshPalette.defaultCardBorder,
     padding: Spacing.lg,
+  },
+  webCard: {
+    flex: 1,
+    minWidth: 0,
+    backgroundColor: WarshPalette.white,
+    borderRadius: 12,
+    padding: 20,
   },
   cardCompleted: { borderColor: WarshPalette.sage + "99" },
   cardLocked: { opacity: 0.65 },
@@ -274,5 +316,8 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.bold,
     fontSize: FontSizes.bodyM,
     color: WarshPalette.white,
+  },
+  webCta: {
+    backgroundColor: WarshPalette.navy,
   },
 });

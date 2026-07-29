@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { Platform, View, Text, StyleSheet, useWindowDimensions } from "react-native";
 import { TextInput } from "react-native-paper";
 import { useState } from "react";
 import { Link, useRouter } from "expo-router";
@@ -6,9 +6,10 @@ import { useAuth } from "@hooks/useAuth";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { getApiErrorMessage } from "@services/api";
-import { Colors, FontSizes, LineHeights, Spacing } from "../../constants/theme";
+import { Colors, FontSizes, LineHeights, Spacing, WarshPalette } from "../../constants/theme";
 import { trackLoginCompleted } from "@services/analytics";
 import { GoogleAuthSection } from "@components/GoogleAuthSection";
+import { WebAuthLayout } from "@components/WebAuthLayout";
 
 export default function LoginScreen() {
   const router = useRouter();
@@ -18,6 +19,8 @@ export default function LoginScreen() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 900;
 
   async function handleSubmit() {
     setLoading(true);
@@ -33,15 +36,15 @@ export default function LoginScreen() {
     }
   }
 
-  return (
-    <View style={styles.screen}>
-      <ArabicText size="sm" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
+  const content = (
+    <View style={[styles.screen, desktopWeb ? styles.webScreen : null]}>
+      {!desktopWeb ? <ArabicText size="sm" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
         بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-      </ArabicText>
+      </ArabicText> : null}
       <Text style={styles.heading}>Welcome back to Warsh</Text>
       <Text style={styles.subheading}>Pick up where you left off. Your next word is waiting.</Text>
 
-      <GoogleAuthSection context="login" />
+      {!desktopWeb ? <GoogleAuthSection context="login" /> : null}
 
       <TextInput
         label="Email"
@@ -50,7 +53,7 @@ export default function LoginScreen() {
         mode="outlined"
         keyboardType="email-address"
         autoCapitalize="none"
-        style={styles.input}
+        style={[styles.input, desktopWeb ? styles.webInput : null]}
       />
       <TextInput
         label="Password"
@@ -65,11 +68,16 @@ export default function LoginScreen() {
             forceTextInputFocus={false}
           />
         }
-        style={styles.input}
+        style={[styles.input, desktopWeb ? styles.webInput : null]}
       />
 
       {error ? <Text style={styles.error}>{error}</Text> : null}
-      <BrandButton title="Sign In" onPress={handleSubmit} loading={loading} />
+      <BrandButton
+        title="Sign In"
+        onPress={handleSubmit}
+        loading={loading}
+        style={desktopWeb ? styles.webButton : undefined}
+      />
       <View style={{ flexDirection: "row", justifyContent: "center", marginTop: Spacing.lg }}>
         <Text style={{ color: Colors.text.secondary }}>Don't have an account? </Text>
         <Link href="/(auth)/register" style={{ color: Colors.accent.gold, fontWeight: "700" }}>
@@ -83,6 +91,8 @@ export default function LoginScreen() {
       </View>
     </View>
   );
+
+  return <WebAuthLayout>{content}</WebAuthLayout>;
 }
 
 const styles = StyleSheet.create({
@@ -91,6 +101,13 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.bg.primary,
     padding: Spacing.xl,
     justifyContent: "center",
+  },
+  webScreen: {
+    flex: undefined,
+    width: "100%",
+    padding: 0,
+    justifyContent: "flex-start",
+    backgroundColor: "transparent",
   },
   heading: {
     color: Colors.text.primary,
@@ -109,6 +126,13 @@ const styles = StyleSheet.create({
   input: {
     marginBottom: Spacing.md,
     backgroundColor: Colors.bg.surface,
+  },
+  webInput: {
+    backgroundColor: WarshPalette.white,
+  },
+  webButton: {
+    backgroundColor: WarshPalette.navy,
+    borderColor: WarshPalette.navy,
   },
   error: {
     color: Colors.text.danger,

@@ -1,4 +1,4 @@
-import { Linking, Platform, View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { Linking, Platform, View, Text, StyleSheet, TouchableOpacity, useWindowDimensions } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
@@ -7,6 +7,7 @@ import { useT } from "@i18n/index";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 import { WEB_BASE_URL } from "@services/api";
 import { GoogleAuthSection } from "@components/GoogleAuthSection";
+import { WebAuthLayout } from "@components/WebAuthLayout";
 import { useLanguage } from "@services/language";
 
 type Provider = {
@@ -24,39 +25,44 @@ export default function AuthOptionsScreen() {
   const language = useLanguage();
   const t = useT();
   const isUrdu = language === "ur";
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 900;
 
   const providers: Provider[] = [
     {
       label: t("auth.continueEmail"),
       icon: "mail-outline",
-      bg: WarshPalette.gold,
-      text: WarshPalette.ink,
+      bg: desktopWeb ? WarshPalette.navy : WarshPalette.gold,
+      text: desktopWeb ? WarshPalette.white : WarshPalette.ink,
       onPress: () => router.push("/(auth)/register"),
     },
   ];
 
-  return (
+  const content = (
     <View
       style={[
         styles.screen,
+        desktopWeb ? styles.webScreen : null,
         {
-          paddingTop: insets.top + (Platform.OS === "web" ? 24 : 0),
+          paddingTop: desktopWeb ? 0 : insets.top + (Platform.OS === "web" ? 24 : 0),
           paddingBottom: insets.bottom,
         },
       ]}
     >
       {/* Back */}
-      <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
-        <Ionicons name={isUrdu ? "chevron-forward" : "chevron-back"} size={24} color={WarshPalette.ink} />
-      </TouchableOpacity>
+      {!desktopWeb ? (
+        <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
+          <Ionicons name={isUrdu ? "chevron-forward" : "chevron-back"} size={24} color={WarshPalette.ink} />
+        </TouchableOpacity>
+      ) : null}
 
       {/* Header */}
       <View style={styles.header}>
-        <ArabicText size="sm" style={styles.bismillah}>
+        {!desktopWeb ? <ArabicText size="sm" style={styles.bismillah}>
           بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-        </ArabicText>
+        </ArabicText> : null}
         <Text style={[styles.title, isUrdu ? styles.urduText : null]}>
-          {t("auth.signupTitle")}
+          {desktopWeb ? "Let’s sign you up to continue" : t("auth.signupTitle")}
         </Text>
       </View>
 
@@ -111,6 +117,8 @@ export default function AuthOptionsScreen() {
       </View>
     </View>
   );
+
+  return <WebAuthLayout>{content}</WebAuthLayout>;
 }
 
 const styles = StyleSheet.create({
@@ -118,6 +126,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.bg.emphasis,
     paddingHorizontal: Spacing.xl,
+  },
+  webScreen: {
+    flex: undefined,
+    width: "100%",
+    paddingHorizontal: 0,
+    backgroundColor: "transparent",
   },
   backBtn: {
     marginTop: Spacing.md,
