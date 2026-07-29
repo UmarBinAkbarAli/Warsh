@@ -6,6 +6,7 @@ const { ADDITIONS_2 } = require("./vocab-additions-2.cjs");
 const { ADDITIONS_3 } = require("./vocab-additions-3.cjs");
 const { ADDITIONS_4 } = require("./vocab-additions-4.cjs");
 const { AN_NAS_VOCABULARY } = require("./vocab-additions-an-nas.cjs");
+const { AL_FALAQ_VOCABULARY } = require("./vocab-additions-al-falaq.cjs");
 
 const VOCABULARY_WORDS_BASE = [
   // ── النَّاس — People ─────────────────────────────────────────────────────────
@@ -778,6 +779,7 @@ const VOCABULARY_WORDS = [
   ...ADDITIONS_3,
   ...ADDITIONS_4,
   ...AN_NAS_VOCABULARY,
+  ...AL_FALAQ_VOCABULARY,
 ];
 
 function mediaKey(word) {

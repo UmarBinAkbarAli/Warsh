@@ -85,11 +85,11 @@ const SURAHS = [
     nameAr: "الْفَلَق", nameEn: "Al-Falaq", meaningEn: "The Daybreak",
     totalAyat: 5,
     ayat: [
-      { n: 1, ar: "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ", en: "Say, I seek refuge in the Lord of daybreak.", ov: { 3: "رب" } },
-      { n: 2, ar: "مِنْ شَرِّ مَا خَلَقَ", en: "From the evil of that which He created.", ov: {} },
-      { n: 3, ar: "وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ", en: "And from the evil of darkness when it settles.", ov: {} },
-      { n: 4, ar: "وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ", en: "And from the evil of those who blow on knots.", ov: {} },
-      { n: 5, ar: "وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ", en: "And from the evil of an envier when he envies.", ov: {} },
+      { n: 1, ar: "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ", en: "Say, I seek refuge in the Lord of daybreak.", ov: { 0: "قل", 1: "اعوذ", 2: "رب", 3: "الفلق" } },
+      { n: 2, ar: "مِنْ شَرِّ مَا خَلَقَ", en: "From the evil of that which He created.", ov: { 0: "من", 1: "شر", 2: "ما", 3: "خلق" } },
+      { n: 3, ar: "وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ", en: "And from the evil of darkness when it settles.", ov: { 0: "من", 1: "شر", 2: "غاسق", 3: "اذا", 4: "وقب" } },
+      { n: 4, ar: "وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ", en: "And from the evil of those who blow on knots.", ov: { 0: "من", 1: "شر", 2: "النفاثات", 3: "في", 4: "عقد" } },
+      { n: 5, ar: "وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ", en: "And from the evil of an envier when he envies.", ov: { 0: "من", 1: "شر", 2: "حاسد", 3: "اذا", 4: "حسد" } },
     ],
   },
   {

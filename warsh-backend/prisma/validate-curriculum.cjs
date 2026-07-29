@@ -8,6 +8,7 @@ const { chapters: books7To8Chapters } = require("./curriculum-books7-8.cjs");
 const { VOCABULARY_WORDS } = require("./vocabulary-seed.cjs");
 const { SURAHS } = require("./tadabbur-seed.cjs");
 const { AN_NAS_COVERAGE } = require("./tadabbur-coverage-an-nas.cjs");
+const { AL_FALAQ_COVERAGE } = require("./tadabbur-coverage-al-falaq.cjs");
 const { LessonContentSchema } = require("@warsh/lesson-schema");
 
 const chapters = [...book1Chapters, ...books2To4Chapters, ...books5To6Chapters, ...books7To8Chapters];
@@ -872,19 +873,23 @@ function collectStrings(value, output = []) {
   return output;
 }
 
-function validateAnNasCoverage(fixturesByName, reporter) {
-  const pathLabel = "An-Nas coverage";
+function validateTadabburCoverage(
+  { surahNumber, surahName, expectedAyat, unlockChapter, coverage },
+  fixturesByName,
+  reporter
+) {
+  const pathLabel = `${surahName} coverage`;
   const vocabularyKeys = new Set(VOCABULARY_WORDS.map((word) => normalizeArabic(word.arabicPlain)));
-  const coverageKeys = new Set(AN_NAS_COVERAGE.map((entry) => normalizeArabic(entry.key)));
-  const anNas = SURAHS.find((surah) => surah.surahNumber === 114);
+  const coverageKeys = new Set(coverage.map((entry) => normalizeArabic(entry.key)));
+  const surah = SURAHS.find((candidate) => candidate.surahNumber === surahNumber);
 
-  if (!anNas || anNas.ayat.length !== 6) {
-    reporter.add(pathLabel, "must define all 6 ayat in tadabbur-seed.cjs");
+  if (!surah || surah.ayat.length !== expectedAyat) {
+    reporter.add(pathLabel, `must define all ${expectedAyat} ayat in tadabbur-seed.cjs`);
     return;
   }
 
   const primaryKeys = new Set();
-  anNas.ayat.forEach((ayah) => {
+  surah.ayat.forEach((ayah) => {
     const ayahWords = ayah.ar.trim().split(/\s+/).filter(Boolean);
     Object.entries(ayah.ov).forEach(([rawIndex, rawKey]) => {
       const wordIndex = Number(rawIndex);
@@ -905,7 +910,7 @@ function validateAnNasCoverage(fixturesByName, reporter) {
     }
   }
 
-  for (const entry of AN_NAS_COVERAGE) {
+  for (const entry of coverage) {
     const key = normalizeArabic(entry.key);
     if (!vocabularyKeys.has(key)) {
       reporter.add(pathLabel, `coverage key "${entry.key}" is missing from vocabulary seed`);
@@ -918,8 +923,8 @@ function validateAnNasCoverage(fixturesByName, reporter) {
     }
 
     const chapterMatch = entry.lesson.match(/^chapter-(\d{2})-/);
-    if (!chapterMatch || Number(chapterMatch[1]) > 18) {
-      reporter.add(pathLabel, `"${entry.key}" must be taught no later than Chapter 18`);
+    if (!chapterMatch || Number(chapterMatch[1]) > unlockChapter) {
+      reporter.add(pathLabel, `"${entry.key}" must be taught no later than Chapter ${unlockChapter}`);
     }
 
     const teachingCard = (fixture.discover_cards ?? []).find(
@@ -966,7 +971,28 @@ function validateFixtureCurriculum() {
       validateLessonFixture(fileName, lesson, reporter, globalState);
     }
   }
-  validateAnNasCoverage(fixturesByName, reporter);
+  validateTadabburCoverage(
+    {
+      surahNumber: 114,
+      surahName: "An-Nas",
+      expectedAyat: 6,
+      unlockChapter: 18,
+      coverage: AN_NAS_COVERAGE,
+    },
+    fixturesByName,
+    reporter
+  );
+  validateTadabburCoverage(
+    {
+      surahNumber: 113,
+      surahName: "Al-Falaq",
+      expectedAyat: 5,
+      unlockChapter: 19,
+      coverage: AL_FALAQ_COVERAGE,
+    },
+    fixturesByName,
+    reporter
+  );
 
   if (reporter.errors.length > 0) {
     const preview = reporter.errors.slice(0, 120).map((error) => `  - ${error}`).join("\n");

@@ -102,6 +102,14 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
   lesson content and an assessment. Emulator checks confirmed the affected
   Chapter 2, 3, 13, 16, and 18 lesson integrations. The standalone `بِ` display
   was corrected after staging exposed clipping.
+- Completed the staging implementation for Al-Falaq. All 23 rendered tokens now
+  link to vocabulary, shared words reuse verified earlier lessons, and the
+  remaining surah-specific words are taught and assessed in Chapter 19 Lesson 6.
+  The former lesson incorrectly treated `رَبِّ` as the possessive `رَبِّي`,
+  called the Quranic speaker a poet, introduced wording absent from the surah,
+  and covered only ayah 1; the replacement accurately covers all five ayat.
+  Emulator QA also caught and corrected an unreadable mixed-direction paragraph,
+  a sentence-builder tile-count failure, and an oversized final exercise.
 - Production promotion is now an explicit gate: validators, isolated staging
   migration/content refresh, affected-lesson visual QA, and product-owner
   approval must all pass before a scoped production content update. The

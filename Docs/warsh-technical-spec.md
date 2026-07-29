@@ -425,6 +425,16 @@ After approval, use a scoped production content update and verify the live
 result. Do not run the full production seed as a shortcut. Keep
 `DEV_UNLOCK_ALL=false` in production.
 
+For the reviewed An-Nas and Al-Falaq release, use the maintained scoped
+promotion command from `warsh-backend/`. It updates only the nine affected
+lesson JSON records, the required vocabulary records, and the two Tadabbur
+surahs in place, preserving learner lesson, vocabulary, and surah progress:
+
+```powershell
+npm run content:promote-tadabbur
+npm run content:promote-tadabbur -- --apply
+```
+
 `warsh-app/eas.json` reserves `https://api-staging.warsh.app` for remote preview
 builds, but that hostname is not currently operational. Until a separately
 provisioned remote staging backend/database is live and health-checked, use the
