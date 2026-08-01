@@ -13,6 +13,7 @@
  *   npm run content:sync                # apply
  *   npm run content:sync -- --content   # sync any changed lesson content
  *   npm run content:sync -- --content --git-changed # limit to edited fixtures
+ *   npm run content:sync -- --content --git-ref=HEAD^ # limit to fixtures changed since a Git revision
  *   npm run content:sync -- --all       # rewrite every lesson's content
  *
  * Matches fixtures to lessons by (chapter.order, lesson.order).
@@ -28,6 +29,8 @@ const DRY_RUN = process.argv.includes("--dry-run");
 const ALL = process.argv.includes("--all");
 const CONTENT = process.argv.includes("--content");
 const GIT_CHANGED = process.argv.includes("--git-changed");
+const GIT_REF = process.argv.find((argument) => argument.startsWith("--git-ref="))?.slice("--git-ref=".length);
+const LIMIT_TO_GIT_CHANGES = GIT_CHANGED || Boolean(GIT_REF);
 
 const FIXTURES_DIR = path.join(__dirname, "../prisma/fixtures");
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL ?? "" });
@@ -58,9 +61,9 @@ function stableJson(value: unknown): string {
 
 function loadFixtures() {
   const map = new Map<string, unknown>();
-  const changedFiles = GIT_CHANGED
+  const changedFiles = LIMIT_TO_GIT_CHANGES
     ? new Set(
-        execFileSync("git", ["diff", "--name-only", "--", "prisma/fixtures"], {
+        execFileSync("git", ["diff", "--name-only", ...(GIT_REF ? [GIT_REF] : []), "--", "prisma/fixtures"], {
           cwd: path.join(__dirname, ".."),
           encoding: "utf8",
         })
@@ -95,7 +98,7 @@ async function main() {
     if (chapterOrder === undefined) continue;
     const fixture = fixtures.get(key(chapterOrder, lesson.order));
     if (!fixture) {
-      if (!GIT_CHANGED) noFixture++;
+      if (!LIMIT_TO_GIT_CHANGES) noFixture++;
       continue;
     }
 
