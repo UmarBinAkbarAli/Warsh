@@ -936,13 +936,28 @@ export default function LessonPlayScreen() {
   function renderHook() {
     const hook = c.hook as Record<string, any> | undefined;
     const ayah = hook?.ayah as Record<string, any> | undefined;
+    const ayahAr = ayah?.ar as string | undefined;
+    const ayahAudioUrl = ayah?.audio_url as string | undefined;
     const noorIntro = localizedText(hook?.noor_intro, language);
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
         <View style={styles.centerStack}>
-          {ayah?.ar ? <ArabicText size="lg" style={styles.hookAyah}>{ayah.ar as string}</ArabicText> : null}
+          {ayahAr ? <ArabicText size="lg" style={styles.hookAyah}>{ayahAr}</ArabicText> : null}
           {ayah?.label ? <Text style={styles.ayahRef}>{ayah.label as string}</Text> : null}
+          {ayahAr && ayahAudioUrl ? (
+            <View style={styles.revealPlayRow}>
+              <PlayButton
+                text={ayahAr}
+                cacheKey={`hook-${ayah?.label ?? lessonId}`}
+                category="lessons"
+                audioUrl={ayahAudioUrl}
+                size={22}
+                autoPlay={hook?.autoplay === true}
+              />
+              <Text style={styles.revealListenLabel}>{t("player.listenToAyah")}</Text>
+            </View>
+          ) : null}
           <View style={styles.divider} />
           {noorIntro ? <Text style={styles.hookQuestion}>{noorIntro}</Text> : null}
         </View>
