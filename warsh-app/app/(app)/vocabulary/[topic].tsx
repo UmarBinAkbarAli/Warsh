@@ -1,10 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import {
   ActivityIndicator,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { TextInput } from "react-native-paper";
@@ -45,6 +47,8 @@ interface VocabWord {
 export default function TopicDetailScreen() {
   const { topic } = useLocalSearchParams<{ topic: string }>();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const router = useRouter();
   const language = useTranslationLanguage();
   const t = useT();
@@ -88,7 +92,7 @@ export default function TopicDetailScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary }}>
       {/* Header */}
-      <View style={[styles.header, { paddingTop: insets.top + Spacing.md }]}>
+      <View style={[styles.header, desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.md }]}>
         <Text style={styles.backBtn} onPress={() => router.back()}>‹ {t("common.back")}</Text>
         <View style={styles.headerTitle}>
           <ArabicText size="md" style={styles.headerAr}>{topicMeta?.labelAr ?? topic}</ArabicText>
@@ -97,7 +101,7 @@ export default function TopicDetailScreen() {
       </View>
 
       {/* Search within topic */}
-      <View style={{ paddingHorizontal: Spacing.xl, paddingBottom: Spacing.md }}>
+      <View style={[{ paddingHorizontal: Spacing.xl, paddingBottom: Spacing.md }, desktopWeb && styles.webRow]}>
         <TextInput
           value={query}
           onChangeText={setQuery}
@@ -112,7 +116,7 @@ export default function TopicDetailScreen() {
       {loading ? (
         <ActivityIndicator color={WarshPalette.gold} style={{ marginTop: Spacing.xl }} />
       ) : (
-        <ScrollView contentContainerStyle={styles.list}>
+        <ScrollView contentContainerStyle={[styles.list, desktopWeb && styles.webRow]}>
           {filtered.length > 0 ? (
             filtered.map((word) => (
               <TouchableOpacity
@@ -175,6 +179,18 @@ const styles = StyleSheet.create({
     paddingBottom: Spacing.md,
     borderBottomWidth: 0.5,
     borderBottomColor: WarshPalette.parchmentCardBorder,
+  },
+  webRow: {
+    width: "100%",
+    maxWidth: 720,
+    alignSelf: "center",
+  },
+  webHeaderRow: {
+    width: "100%",
+    maxWidth: 720,
+    alignSelf: "center",
+    paddingTop: 36,
+    borderBottomWidth: 0,
   },
   backBtn: {
     color: WarshPalette.gold, fontFamily: Fonts.regular,

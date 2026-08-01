@@ -1,6 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { ArabicText } from "@components/ArabicText";
@@ -58,7 +58,7 @@ export default function TranslationLanguageScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top + Spacing.md, paddingBottom: insets.bottom + Spacing.lg }]}>
-      <View style={styles.content}>
+      <ScrollView style={styles.content} contentContainerStyle={styles.contentInner} showsVerticalScrollIndicator={false}>
         <Text style={styles.eyebrow}>{t("language.meaningStep")}</Text>
         <Text style={styles.title}>{t("language.chooseMeaning")}</Text>
         <Text style={styles.body}>{t("language.meaningDescription")}</Text>
@@ -88,7 +88,7 @@ export default function TranslationLanguageScreen() {
             })}
           </Text>
         </View>
-      </View>
+      </ScrollView>
 
       <View style={styles.footer}>
         <BrandButton title={t("language.finishSetup")} onPress={() => router.push("/(auth)/auth-options")} />
@@ -99,7 +99,8 @@ export default function TranslationLanguageScreen() {
 
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: Colors.bg.primary },
-  content: { flex: 1, paddingHorizontal: Spacing.gutter, paddingTop: Spacing.xxl },
+  content: { flex: 1 },
+  contentInner: { paddingHorizontal: Spacing.gutter, paddingTop: Spacing.xxl },
   eyebrow: { color: WarshPalette.goldDeep, fontFamily: Fonts.semiBold, fontSize: FontSizes.label, letterSpacing: 0.8, textTransform: "uppercase" },
   title: { maxWidth: 330, marginTop: Spacing.sm, color: WarshPalette.navy, fontFamily: Fonts.bold, fontSize: 42, lineHeight: 48 },
   body: { marginTop: Spacing.md, color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.bodyL, lineHeight: LineHeights.bodyL },

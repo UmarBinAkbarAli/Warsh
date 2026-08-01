@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
@@ -60,7 +60,11 @@ export default function PermissionsScreen() {
       </View>
 
       {/* Permission cards */}
-      <View style={styles.cardsContainer}>
+      <ScrollView
+        style={styles.cardsContainer}
+        contentContainerStyle={styles.cardsContainerInner}
+        showsVerticalScrollIndicator={false}
+      >
 
         {/* Notifications card */}
         <View style={styles.card}>
@@ -113,7 +117,7 @@ export default function PermissionsScreen() {
             <Text style={styles.deniedText}>Off · change in Settings</Text>
           )}
         </View>
-      </View>
+      </ScrollView>
 
       {/* Begin CTA */}
       <View style={styles.beginContainer}>
@@ -161,6 +165,9 @@ const styles = StyleSheet.create({
   // Cards
   cardsContainer: {
     flex: 1,
+  },
+  cardsContainerInner: {
+    flexGrow: 1,
     justifyContent: "center",
     gap: Spacing.md,
     marginVertical: Spacing.xl,

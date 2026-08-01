@@ -178,6 +178,7 @@ const styles = StyleSheet.create({
   },
   bottomSection: {
     width: "100%",
+    maxWidth: 440,
     alignItems: "center",
     gap: Spacing.md,
   },

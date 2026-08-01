@@ -1,9 +1,11 @@
 import { useCallback, useRef, useState } from "react";
 import {
   ActivityIndicator,
+  Platform,
   StyleSheet,
   Text,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
@@ -42,6 +44,8 @@ const LEVEL_LABEL: Record<string, string> = {
 export default function ShareStatsScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const viewShotRef = useRef<View>(null);
 
   const [stats, setStats] = useState<Stats | null>(null);
@@ -90,7 +94,7 @@ export default function ShareStatsScreen() {
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
       {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
         <TouchableOpacity
           onPress={() => router.back()}
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
@@ -105,7 +109,7 @@ export default function ShareStatsScreen() {
       ) : stats ? (
         <>
           {/* Preview card — ref on inner View, captured via captureRef */}
-          <ViewShot style={styles.cardWrapper}>
+          <ViewShot style={[styles.cardWrapper, desktopWeb && styles.webNarrow]}>
             <View ref={viewShotRef} style={styles.card}>
               {/* Brand header */}
               <View style={styles.cardBrand}>
@@ -154,7 +158,7 @@ export default function ShareStatsScreen() {
 
           {/* Share button */}
           <TouchableOpacity
-            style={[styles.shareBtn, sharing && styles.shareBtnDisabled]}
+            style={[styles.shareBtn, desktopWeb && styles.webNarrow, sharing && styles.shareBtnDisabled]}
             onPress={handleShare}
             activeOpacity={0.8}
             disabled={sharing}
@@ -196,6 +200,18 @@ const styles = StyleSheet.create({
     margin: Spacing.xl,
     borderRadius: Radii.xl,
     overflow: "hidden",
+  },
+  webNarrow: {
+    width: "100%",
+    maxWidth: 420,
+    alignSelf: "center",
+  },
+  webHeaderRow: {
+    width: "100%",
+    maxWidth: 420,
+    alignSelf: "center",
+    borderBottomWidth: 0,
+    paddingTop: 36,
   },
   card: {
     backgroundColor: WarshPalette.ink,

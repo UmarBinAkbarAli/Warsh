@@ -2,11 +2,13 @@ import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
   Modal,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { useFocusEffect, useLocalSearchParams, useRouter } from "expo-router";
@@ -158,6 +160,8 @@ function LessonPreviewSheet({
 export default function ChapterScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const { chapterId } = useLocalSearchParams<{ chapterId: string }>();
   const language = useTranslationLanguage();
   const t = useT();
@@ -232,78 +236,104 @@ export default function ChapterScreen() {
     ? (chapter.completedLessonCount / chapter.lessons.length) * 100
     : 0;
 
+  const progressCard = (
+    <View style={desktopWeb ? styles.progressCard : undefined}>
+      {desktopWeb ? <Text style={styles.progressCardTitle}>{t("chapter.chapterProgress")}</Text> : null}
+      <View style={desktopWeb ? undefined : styles.progressRow}>
+        {desktopWeb ? null : (
+          <Text style={styles.progressLabel}>
+            {t("chapter.lessonsCompleted", { done: chapter.completedLessonCount, total: chapter.lessons.length })}
+          </Text>
+        )}
+      </View>
+      <View style={styles.progressTrack}>
+        <View style={[styles.progressFill, { width: `${progressPct}%` as any }]} />
+      </View>
+      {desktopWeb ? (
+        <Text style={styles.progressCardLabel}>
+          {t("chapter.lessonsCompleted", { done: chapter.completedLessonCount, total: chapter.lessons.length })}
+        </Text>
+      ) : null}
+    </View>
+  );
+
+  const lessonList = (
+    <View style={desktopWeb ? undefined : { marginTop: Spacing.xl }}>
+      {chapter.lessons.map((lesson: any, idx: number) => {
+        const done = lesson.isCompleted;
+        const skipped = lesson.isSkippedByPlacement;
+        return (
+          <TouchableOpacity
+            key={lesson.id}
+            style={[styles.lessonCard, desktopWeb && styles.webLessonCard, done && styles.lessonCardDone]}
+            onPress={() => handleLessonTap(lesson)}
+            activeOpacity={0.8}
+          >
+            {skipped ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
+            <View style={styles.lessonCardTop}>
+              <View style={styles.lessonIndex}>
+                {done ? (
+                  <Ionicons name="checkmark" size={14} color={WarshPalette.sage} />
+                ) : (
+                  <Text style={styles.lessonIndexText}>{idx + 1}</Text>
+                )}
+              </View>
+              <View style={styles.lessonInfo}>
+                <Text style={styles.lessonTitle}>{pickLocalized(lesson.title, lesson.titleUr, language)}</Text>
+                {lesson.titleAr ? (
+                  <ArabicText size="sm" style={styles.lessonTitleAr}>
+                    {lesson.titleAr}
+                  </ArabicText>
+                ) : null}
+                <View style={styles.lessonMeta}>
+                  <Ionicons name={lessonTypeIcon(lesson.type)} size={12} color={WarshPalette.gold} />
+                  <Text style={styles.lessonMetaText}>{lessonTypeLabel(lesson.type, t)}</Text>
+                  <Text style={styles.lessonMetaDot}>·</Text>
+                  <Text style={styles.lessonMetaText}>{lesson.xpReward} XP</Text>
+                </View>
+              </View>
+              <Ionicons
+                name={done ? "checkmark-circle" : "chevron-forward"}
+                size={20}
+                color={done ? WarshPalette.sage : WarshPalette.subtleBrown}
+              />
+            </View>
+          </TouchableOpacity>
+        );
+      })}
+    </View>
+  );
+
   return (
     <View style={styles.screen}>
       <ScrollView
         style={styles.scroll}
-        contentContainerStyle={[styles.content, { paddingTop: insets.top + Spacing.lg }]}
+        contentContainerStyle={[
+          styles.content,
+          desktopWeb ? styles.webContent : { paddingTop: insets.top + Spacing.lg },
+        ]}
       >
-        {/* Back button */}
-        <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
-          <Text style={styles.backBtnText}>‹ {t("chapter.backChapters")}</Text>
-        </TouchableOpacity>
+        <View style={desktopWeb ? styles.webMain : undefined}>
+          {/* Back button */}
+          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+            <Text style={styles.backBtnText}>‹ {t("chapter.backChapters")}</Text>
+          </TouchableOpacity>
 
-        {chapter.isSkippedByPlacement ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
+          {chapter.isSkippedByPlacement ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
 
-        <Text style={styles.chapterTitle}>{pickLocalized(chapter.title, chapter.titleUr, language)}</Text>
-        {chapter.titleAr ? (
-          <ArabicText size="sm" style={styles.chapterTitleAr}>
-            {chapter.titleAr}
-          </ArabicText>
-        ) : null}
-        <Text style={styles.chapterDesc}>{pickLocalized(chapter.description, chapter.descriptionUr, language)}</Text>
+          <Text style={styles.chapterTitle}>{pickLocalized(chapter.title, chapter.titleUr, language)}</Text>
+          {chapter.titleAr ? (
+            <ArabicText size="sm" style={styles.chapterTitleAr}>
+              {chapter.titleAr}
+            </ArabicText>
+          ) : null}
+          <Text style={styles.chapterDesc}>{pickLocalized(chapter.description, chapter.descriptionUr, language)}</Text>
 
-        {/* Progress */}
-        <View style={styles.progressRow}>
-          <Text style={styles.progressLabel}>
-            {t("chapter.lessonsCompleted", { done: chapter.completedLessonCount, total: chapter.lessons.length })}
-          </Text>
-        </View>
-        <View style={styles.progressTrack}>
-          <View style={[styles.progressFill, { width: `${progressPct}%` as any }]} />
+          {desktopWeb ? null : progressCard}
+          {lessonList}
         </View>
 
-        {/* Lesson list */}
-        <View style={{ marginTop: Spacing.xl }}>
-          {chapter.lessons.map((lesson: any, idx: number) => {
-            const done = lesson.isCompleted;
-            const skipped = lesson.isSkippedByPlacement;
-            return (
-              <TouchableOpacity
-                key={lesson.id}
-                style={[styles.lessonCard, done && styles.lessonCardDone]}
-                onPress={() => handleLessonTap(lesson)}
-                activeOpacity={0.8}
-              >
-                {skipped ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
-                <View style={styles.lessonCardTop}>
-                  <View style={styles.lessonIndex}>
-                    <Text style={styles.lessonIndexText}>{idx + 1}</Text>
-                  </View>
-                  <View style={styles.lessonInfo}>
-                    <Text style={styles.lessonTitle}>{pickLocalized(lesson.title, lesson.titleUr, language)}</Text>
-                    {lesson.titleAr ? (
-                      <ArabicText size="sm" style={styles.lessonTitleAr}>
-                        {lesson.titleAr}
-                      </ArabicText>
-                    ) : null}
-                    <View style={styles.lessonMeta}>
-                      <Ionicons name={lessonTypeIcon(lesson.type)} size={12} color={WarshPalette.gold} />
-                      <Text style={styles.lessonMetaText}>{lessonTypeLabel(lesson.type, t)}</Text>
-                      <Text style={styles.lessonMetaDot}>·</Text>
-                      <Text style={styles.lessonMetaText}>{lesson.xpReward} XP</Text>
-                    </View>
-                  </View>
-                  <Ionicons
-                    name={done ? "checkmark-circle" : "chevron-forward"}
-                    size={20}
-                    color={done ? WarshPalette.sage : WarshPalette.subtleBrown}
-                  />
-                </View>
-              </TouchableOpacity>
-            );
-          })}
-        </View>
+        {desktopWeb ? <View style={styles.webRail}>{progressCard}</View> : null}
       </ScrollView>
 
       <LessonPreviewSheet
@@ -322,6 +352,18 @@ const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: Colors.bg.primary },
   scroll: { flex: 1 },
   content: { paddingHorizontal: Spacing.xl, paddingBottom: Spacing.xl * 3 },
+  webContent: {
+    width: "100%",
+    maxWidth: 1180,
+    alignSelf: "center",
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 32,
+    paddingHorizontal: 32,
+    paddingTop: 36,
+  },
+  webMain: { flex: 1, minWidth: 0, maxWidth: 760 },
+  webRail: { width: 320, flexShrink: 0 },
 
   loadingScreen: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: Colors.bg.primary },
   errorScreen: { flex: 1, justifyContent: "center", alignItems: "center", padding: Spacing.xl, backgroundColor: Colors.bg.primary },
@@ -364,6 +406,16 @@ const styles = StyleSheet.create({
   progressLabel: { color: WarshPalette.bodyBrown, fontFamily: Fonts.regular, fontSize: FontSizes.bodyM },
   progressTrack: { height: 6, borderRadius: 3, overflow: "hidden", backgroundColor: WarshPalette.cream },
   progressFill: { height: 6, borderRadius: 3, backgroundColor: WarshPalette.gold },
+  progressCard: {
+    padding: 20,
+    borderRadius: Radii.lg,
+    borderWidth: 1,
+    borderColor: WarshPalette.defaultCardBorder,
+    backgroundColor: WarshPalette.white,
+    gap: Spacing.sm,
+  },
+  progressCardTitle: { color: WarshPalette.ink, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyL, marginBottom: 4 },
+  progressCardLabel: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption },
 
   lessonCard: {
     marginBottom: Spacing.sm,
@@ -372,6 +424,12 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderColor: WarshPalette.parchmentCardBorder,
     backgroundColor: WarshPalette.white,
+  },
+  webLessonCard: {
+    marginBottom: 12,
+    padding: 18,
+    borderRadius: Radii.lg,
+    borderWidth: 1,
   },
   lessonCardDone: {
     borderColor: WarshPalette.sage + "55",

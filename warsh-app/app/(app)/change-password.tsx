@@ -8,6 +8,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { useRouter } from "expo-router";
@@ -28,6 +29,8 @@ import {
 export default function ChangePasswordScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
 
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -78,17 +81,19 @@ export default function ChangePasswordScreen() {
       style={styles.container}
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
-      <View style={[styles.header, { paddingTop: insets.top + Spacing.sm }]}>
-        <TouchableOpacity
-          onPress={() => router.back()}
-          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-        >
-          <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
-        </TouchableOpacity>
+      <View style={[styles.header, desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.sm }]}>
+        {!desktopWeb ? (
+          <TouchableOpacity
+            onPress={() => router.back()}
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+          >
+            <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
+          </TouchableOpacity>
+        ) : null}
         <Text style={styles.headerTitle}>Change Password</Text>
       </View>
 
-      <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
+      <ScrollView contentContainerStyle={[styles.content, desktopWeb && styles.webRow]} keyboardShouldPersistTaps="handled">
         {error ? <Text style={styles.errorText}>{error}</Text> : null}
 
         <Text style={styles.label}>Current password</Text>
@@ -186,6 +191,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.xl,
     paddingTop: Spacing.xl,
     paddingBottom: Spacing.xxl,
+  },
+  webRow: {
+    width: "100%",
+    maxWidth: 560,
+    alignSelf: "center",
+  },
+  webHeaderRow: {
+    width: "100%",
+    maxWidth: 560,
+    alignSelf: "center",
+    borderBottomWidth: 0,
+    paddingTop: 36,
   },
   errorText: {
     fontFamily: Fonts.regular,

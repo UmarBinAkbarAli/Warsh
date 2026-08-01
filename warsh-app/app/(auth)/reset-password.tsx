@@ -7,6 +7,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -15,11 +16,14 @@ import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { BrandButton } from "@components/BrandButton";
 import { ArabicText } from "@components/ArabicText";
+import { WebAuthLayout } from "@components/WebAuthLayout";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 
 export default function ResetPasswordScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 900;
   const { token } = useLocalSearchParams<{ token: string }>();
 
   const [newPassword, setNewPassword] = useState("");
@@ -61,8 +65,12 @@ export default function ResetPasswordScreen() {
   }
 
   return (
+    <WebAuthLayout>
     <KeyboardAvoidingView
-      style={[styles.screen, { paddingTop: insets.top + Spacing.xl, paddingBottom: insets.bottom + Spacing.md }]}
+      style={[
+        styles.screen,
+        desktopWeb ? styles.webScreen : { paddingTop: insets.top + Spacing.xl, paddingBottom: insets.bottom + Spacing.md },
+      ]}
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
       <ArabicText size="sm" style={styles.brandMark}>وَرْش</ArabicText>
@@ -125,6 +133,7 @@ export default function ResetPasswordScreen() {
         <Text style={styles.backLinkText}>Back to login</Text>
       </TouchableOpacity>
     </KeyboardAvoidingView>
+    </WebAuthLayout>
   );
 }
 
@@ -134,6 +143,11 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.bg.primary,
     paddingHorizontal: Spacing.xl,
     justifyContent: "center",
+  },
+  webScreen: {
+    flex: undefined,
+    width: "100%",
+    paddingHorizontal: 0,
   },
   brandMark: {
     textAlign: "center",

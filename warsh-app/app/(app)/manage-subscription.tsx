@@ -9,6 +9,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
@@ -45,6 +46,8 @@ interface SubState {
 
 export default function ManageSubscriptionScreen() {
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const router = useRouter();
   const language = useLanguage();
   const t = useT();
@@ -192,7 +195,7 @@ export default function ManageSubscriptionScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
-      <View style={styles.header}>
+      <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
         <TouchableOpacity onPress={() => router.back()}>
           <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
         </TouchableOpacity>
@@ -212,7 +215,7 @@ export default function ManageSubscriptionScreen() {
           </TouchableOpacity>
         </View>
       ) : (
-        <ScrollView contentContainerStyle={styles.content}>
+        <ScrollView contentContainerStyle={[styles.content, desktopWeb && styles.webRow]}>
           {/* Status card */}
           <View style={styles.statusCard}>
             <View style={styles.statusRow}>
@@ -286,6 +289,18 @@ const styles = StyleSheet.create({
   retryText: { color: WarshPalette.gold, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyL },
 
   content: { paddingHorizontal: Spacing.xl, paddingTop: Spacing.lg, paddingBottom: Spacing.xl * 2 },
+  webRow: {
+    width: "100%",
+    maxWidth: 560,
+    alignSelf: "center",
+  },
+  webHeaderRow: {
+    width: "100%",
+    maxWidth: 560,
+    alignSelf: "center",
+    borderBottomWidth: 0,
+    paddingTop: 36,
+  },
 
   statusCard: {
     padding: Spacing.lg,

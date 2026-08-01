@@ -2,11 +2,13 @@ import { useCallback, useRef, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   Modal,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -159,6 +161,8 @@ function ProgressBar({ percent }: { percent: number }) {
 
 export default function TadabburScreen() {
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const router = useRouter();
   const params = useLocalSearchParams<{ surahId?: string }>();
 
@@ -240,7 +244,7 @@ export default function TadabburScreen() {
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
       {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
         <TouchableOpacity onPress={() => router.back()}>
           <Text style={styles.backBtn}>‹ Back</Text>
         </TouchableOpacity>
@@ -248,7 +252,7 @@ export default function TadabburScreen() {
         <View style={{ width: 60 }} />
       </View>
 
-      <ScrollView contentContainerStyle={styles.content}>
+      <ScrollView contentContainerStyle={[styles.content, desktopWeb && styles.webRow]}>
 
         {/* Current focus Surah header */}
         {surahMeta ? (
@@ -378,6 +382,18 @@ const styles = StyleSheet.create({
   headerTitle: { color: WarshPalette.ink, fontFamily: Fonts.display, fontSize: FontSizes.h3, fontWeight: "700" },
 
   content: { paddingHorizontal: Spacing.xl, paddingBottom: Spacing.xl * 3 },
+  webRow: {
+    width: "100%",
+    maxWidth: 760,
+    alignSelf: "center",
+  },
+  webHeaderRow: {
+    width: "100%",
+    maxWidth: 760,
+    alignSelf: "center",
+    borderBottomWidth: 0,
+    paddingTop: 36,
+  },
 
   // Focus header
   focusHeader: { alignItems: "flex-end", paddingVertical: Spacing.xl },

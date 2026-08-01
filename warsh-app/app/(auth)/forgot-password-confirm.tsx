@@ -1,15 +1,18 @@
-import { View, Text, StyleSheet, TouchableOpacity, Alert } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Alert, Platform, useWindowDimensions } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
+import { WebAuthLayout } from "@components/WebAuthLayout";
 import api from "@services/api";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 
 export default function ForgotPasswordConfirmScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 900;
   const { email } = useLocalSearchParams<{ email: string }>();
   const decodedEmail = email ? decodeURIComponent(email) : "";
 
@@ -23,38 +26,45 @@ export default function ForgotPasswordConfirmScreen() {
   }
 
   return (
-    <View style={[styles.screen, { paddingTop: insets.top + Spacing.xl, paddingBottom: insets.bottom + Spacing.md }]}>
-      {/* Brand mark */}
-      <ArabicText size="sm" style={styles.brandMark}>
-        وَرْش
-      </ArabicText>
+    <WebAuthLayout>
+      <View
+        style={[
+          styles.screen,
+          desktopWeb ? styles.webScreen : { paddingTop: insets.top + Spacing.xl, paddingBottom: insets.bottom + Spacing.md },
+        ]}
+      >
+        {/* Brand mark */}
+        <ArabicText size="sm" style={styles.brandMark}>
+          وَرْش
+        </ArabicText>
 
-      {/* Mail icon */}
-      <View style={styles.iconContainer}>
-        <Ionicons name="mail-outline" size={64} color={WarshPalette.gold} />
+        {/* Mail icon */}
+        <View style={styles.iconContainer}>
+          <Ionicons name="mail-outline" size={64} color={WarshPalette.gold} />
+        </View>
+
+        {/* Title */}
+        <Text style={styles.title}>Check your email.</Text>
+
+        {/* Body */}
+        <Text style={styles.body}>
+          {"We sent a reset link to\n"}
+          <Text style={styles.emailHighlight}>{decodedEmail}</Text>
+          {"\n\nTap the link in the email to set a new password."}
+        </Text>
+
+        {/* Expiry note */}
+        <Text style={styles.note}>The link will expire in 1 hour.</Text>
+
+        {/* Back to login */}
+        <BrandButton title="Back to login →" onPress={() => router.replace("/(auth)/login")} />
+
+        {/* Resend link */}
+        <TouchableOpacity onPress={handleResend} style={styles.resendButton} hitSlop={8}>
+          <Text style={styles.resendText}>Didn't receive it? <Text style={styles.resendAction}>Resend</Text></Text>
+        </TouchableOpacity>
       </View>
-
-      {/* Title */}
-      <Text style={styles.title}>Check your email.</Text>
-
-      {/* Body */}
-      <Text style={styles.body}>
-        {"We sent a reset link to\n"}
-        <Text style={styles.emailHighlight}>{decodedEmail}</Text>
-        {"\n\nTap the link in the email to set a new password."}
-      </Text>
-
-      {/* Expiry note */}
-      <Text style={styles.note}>The link will expire in 1 hour.</Text>
-
-      {/* Back to login */}
-      <BrandButton title="Back to login →" onPress={() => router.replace("/(auth)/login")} />
-
-      {/* Resend link */}
-      <TouchableOpacity onPress={handleResend} style={styles.resendButton} hitSlop={8}>
-        <Text style={styles.resendText}>Didn't receive it? <Text style={styles.resendAction}>Resend</Text></Text>
-      </TouchableOpacity>
-    </View>
+    </WebAuthLayout>
   );
 }
 
@@ -65,6 +75,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.xl,
     alignItems: "center",
     justifyContent: "center",
+  },
+  webScreen: {
+    flex: undefined,
+    width: "100%",
+    paddingHorizontal: 0,
   },
   brandMark: {
     textAlign: "center",

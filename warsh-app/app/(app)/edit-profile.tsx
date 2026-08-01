@@ -1,10 +1,12 @@
 import { useState } from "react";
 import {
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { useRouter } from "expo-router";
@@ -20,6 +22,8 @@ type Lang = "en" | "ur";
 
 export default function EditProfileScreen() {
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const router = useRouter();
   const user = useAuthStore((s) => s.user);
   const patchUser = useAuthStore((s) => s.patchUser);
@@ -52,7 +56,7 @@ export default function EditProfileScreen() {
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
       {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
         <TouchableOpacity onPress={() => router.back()} style={styles.headerSide} hitSlop={8}>
           <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
         </TouchableOpacity>
@@ -70,7 +74,11 @@ export default function EditProfileScreen() {
       </View>
 
       <ScrollView
-        contentContainerStyle={[styles.content, { paddingBottom: insets.bottom + Spacing.xxl }]}
+        contentContainerStyle={[
+          styles.content,
+          desktopWeb && styles.webRow,
+          { paddingBottom: insets.bottom + Spacing.xxl },
+        ]}
         keyboardShouldPersistTaps="handled"
       >
         {/* Avatar */}
@@ -199,6 +207,18 @@ const styles = StyleSheet.create({
   content: {
     paddingHorizontal: Spacing.xl,
     paddingTop: Spacing.xl,
+  },
+  webRow: {
+    width: "100%",
+    maxWidth: 560,
+    alignSelf: "center",
+  },
+  webHeaderRow: {
+    width: "100%",
+    maxWidth: 560,
+    alignSelf: "center",
+    borderBottomWidth: 0,
+    paddingTop: 36,
   },
 
   // Avatar

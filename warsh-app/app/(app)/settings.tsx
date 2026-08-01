@@ -4,11 +4,13 @@ import {
   Alert,
   Linking,
   Modal,
+  Platform,
   ScrollView,
   StyleSheet,
   Switch,
   Text,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
@@ -162,6 +164,8 @@ function OptionPicker({
 
 export default function SettingsScreen() {
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const router = useRouter();
   const clearSession = useAuthStore((s) => s.clearSession);
   const user = useAuthStore((s) => s.user);
@@ -289,7 +293,7 @@ export default function SettingsScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
-      <View style={styles.header}>
+      <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
         <TouchableOpacity onPress={() => router.back()}>
           <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
         </TouchableOpacity>
@@ -297,7 +301,7 @@ export default function SettingsScreen() {
         <View style={{ width: 60 }} />
       </View>
 
-      <ScrollView contentContainerStyle={styles.content}>
+      <ScrollView contentContainerStyle={[styles.content, desktopWeb && styles.webRow]}>
 
         <SectionHeader title={t("settings.languageContent")} />
         <Text style={styles.languageIntro}>{t("settings.languageContentBody")}</Text>
@@ -628,6 +632,18 @@ const styles = StyleSheet.create({
   },
 
   content: { paddingHorizontal: Spacing.xl, paddingTop: Spacing.md },
+  webRow: {
+    width: "100%",
+    maxWidth: 760,
+    alignSelf: "center",
+  },
+  webHeaderRow: {
+    width: "100%",
+    maxWidth: 760,
+    alignSelf: "center",
+    borderBottomWidth: 0,
+    paddingTop: 36,
+  },
   languageIntro: {
     color: WarshPalette.subtleBrown, fontFamily: Fonts.regular,
     fontSize: FontSizes.caption, lineHeight: LineHeights.caption,

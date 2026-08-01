@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
+import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, useWindowDimensions, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -420,7 +420,11 @@ export default function LessonPlayScreen() {
   const selectedText  = getSelectedText(selectedAnswer);
   const answeredCorrectly = isAnswered && isAnswerCorrect(currentExercise, selectedAnswer, language, t);
   const completedExerciseCount = Math.min(currentExerciseIndex + (isAnswered ? 1 : 0), exercises.length);
-  const screenPadding = { paddingTop: insets.top + 16 };
+  const { width: windowWidth } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && windowWidth >= 960;
+  const screenPadding = desktopWeb
+    ? { paddingTop: insets.top + 16, width: "100%" as const, maxWidth: 720, alignSelf: "center" as const }
+    : { paddingTop: insets.top + 16 };
 
   // Start warming every Discovery card as soon as the lesson loads (while the
   // learner is still on the hook screen). Fixtures usually provide CDN audio;

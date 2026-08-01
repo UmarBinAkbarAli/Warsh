@@ -11,6 +11,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
@@ -53,6 +54,8 @@ interface Props {
 
 export default function PaywallScreen({ dismissable = true }: Props) {
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const router = useRouter();
   const t = useT();
   const language = useLanguage();
@@ -429,7 +432,11 @@ export default function PaywallScreen({ dismissable = true }: Props) {
 
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={[styles.content, { paddingBottom: Math.max(insets.bottom, Spacing.sm) + Spacing.md }]}
+        contentContainerStyle={[
+          styles.content,
+          desktopWeb && styles.webContent,
+          { paddingBottom: Math.max(insets.bottom, Spacing.sm) + Spacing.md },
+        ]}
       >
         <View style={styles.trialChip}>
           <Ionicons name="timer-outline" size={13} color={WarshPalette.navy} />
@@ -646,6 +653,11 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingHorizontal: Spacing.gutter,
+  },
+  webContent: {
+    width: "100%",
+    maxWidth: 620,
+    alignSelf: "center",
   },
   trialChip: {
     alignSelf: "center",

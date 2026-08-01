@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Platform, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
@@ -26,6 +26,8 @@ function formatDate(iso: string | null) {
 export default function MilestonesScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const [achievements, setAchievements] = useState<Achievement[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -56,7 +58,13 @@ export default function MilestonesScreen() {
   }
 
   return (
-    <ScrollView style={styles.screen} contentContainerStyle={[styles.content, { paddingTop: insets.top + Spacing.xl }]}>
+    <ScrollView
+      style={styles.screen}
+      contentContainerStyle={[
+        styles.content,
+        desktopWeb ? styles.webRow : { paddingTop: insets.top + Spacing.xl },
+      ]}
+    >
       <View style={styles.header}>
         <Text style={styles.eyebrow}>Your journey</Text>
         <Text style={styles.title}>Milestones</Text>
@@ -123,6 +131,12 @@ const styles = StyleSheet.create({
   content: {
     paddingHorizontal: Spacing.xl,
     paddingBottom: Spacing.xl,
+  },
+  webRow: {
+    width: "100%",
+    maxWidth: 640,
+    alignSelf: "center",
+    paddingTop: 36,
   },
   header: {
     marginBottom: Spacing.lg,
