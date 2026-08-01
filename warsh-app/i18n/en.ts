@@ -177,6 +177,7 @@ export const en = {
   "chapter.cancel": "Cancel",
   "chapter.xp": "{{count}} XP",
   "chapter.lessonsCompleted": "{{done}} / {{total}} lessons completed",
+  "chapter.chapterProgress": "Chapter progress",
 
   "vocabulary.title": "Vocabulary",
   "vocabulary.freeForever": "Free forever",
