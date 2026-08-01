@@ -11,6 +11,8 @@
  * Usage (from warsh-backend/):
  *   npm run content:sync -- --dry-run   # show which lessons would change
  *   npm run content:sync                # apply
+ *   npm run content:sync -- --content   # sync any changed lesson content
+ *   npm run content:sync -- --content --git-changed # limit to edited fixtures
  *   npm run content:sync -- --all       # rewrite every lesson's content
  *
  * Matches fixtures to lessons by (chapter.order, lesson.order).
@@ -18,11 +20,14 @@
 
 import fs from "fs";
 import path from "path";
+import { execFileSync } from "child_process";
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 
 const DRY_RUN = process.argv.includes("--dry-run");
 const ALL = process.argv.includes("--all");
+const CONTENT = process.argv.includes("--content");
+const GIT_CHANGED = process.argv.includes("--git-changed");
 
 const FIXTURES_DIR = path.join(__dirname, "../prisma/fixtures");
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL ?? "" });
@@ -42,9 +47,30 @@ function mediaUrls(node: unknown, out: string[] = []): string[] {
   return out;
 }
 
+function stableJson(value: unknown): string {
+  if (Array.isArray(value)) return `[${value.map(stableJson).join(",")}]`;
+  if (value && typeof value === "object") {
+    const object = value as Record<string, unknown>;
+    return `{${Object.keys(object).sort().map((key) => `${JSON.stringify(key)}:${stableJson(object[key])}`).join(",")}}`;
+  }
+  return JSON.stringify(value);
+}
+
 function loadFixtures() {
   const map = new Map<string, unknown>();
-  for (const f of fs.readdirSync(FIXTURES_DIR).filter((n) => n.endsWith(".json"))) {
+  const changedFiles = GIT_CHANGED
+    ? new Set(
+        execFileSync("git", ["diff", "--name-only", "--", "prisma/fixtures"], {
+          cwd: path.join(__dirname, ".."),
+          encoding: "utf8",
+        })
+          .split(/\r?\n/)
+          .filter(Boolean)
+          .map((file) => path.basename(file)),
+      )
+    : null;
+  for (const f of fs.readdirSync(FIXTURES_DIR).filter((name) =>
+    name.endsWith(".json") && (!changedFiles || changedFiles.has(name)))) {
     const content = JSON.parse(fs.readFileSync(path.join(FIXTURES_DIR, f), "utf8"));
     const co = content?._meta?.chapter_order;
     const lo = content?._meta?.lesson_order;
@@ -69,20 +95,22 @@ async function main() {
     if (chapterOrder === undefined) continue;
     const fixture = fixtures.get(key(chapterOrder, lesson.order));
     if (!fixture) {
-      noFixture++;
+      if (!GIT_CHANGED) noFixture++;
       continue;
     }
 
-    const before = mediaUrls(lesson.content).sort().join("|");
-    const after = mediaUrls(fixture).sort().join("|");
+    const before = CONTENT ? stableJson(lesson.content) : mediaUrls(lesson.content).sort().join("|");
+    const after = CONTENT ? stableJson(fixture) : mediaUrls(fixture).sort().join("|");
     if (!ALL && before === after) {
       unchanged++;
       continue;
     }
 
     changed++;
-    const diff = mediaUrls(fixture).filter((u) => !mediaUrls(lesson.content).includes(u)).length;
-    console.log(`  [${DRY_RUN ? "WOULD UPDATE" : "UPDATE"}] ${lesson.id} (ch${chapterOrder} l${lesson.order}) — ${diff} media URL(s) changed`);
+    const diff = CONTENT
+      ? "lesson content changed"
+      : `${mediaUrls(fixture).filter((u) => !mediaUrls(lesson.content).includes(u)).length} media URL(s) changed`;
+    console.log(`  [${DRY_RUN ? "WOULD UPDATE" : "UPDATE"}] ${lesson.id} (ch${chapterOrder} l${lesson.order}) — ${diff}`);
     if (!DRY_RUN) {
       await prisma.lesson.update({ where: { id: lesson.id }, data: { content: fixture as object } });
     }
