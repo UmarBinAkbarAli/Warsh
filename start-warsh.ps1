@@ -78,6 +78,12 @@ if (-not $dev -and -not $prod) {
         $env:NODE_ENV = 'production'
         $env:EXPO_PUBLIC_API_URL = 'https://api.warsh.app'
         $env:EXPO_PUBLIC_ENVIRONMENT = 'production'
+        $easConfig = Get-Content -Raw (Join-Path $appRoot 'eas.json') | ConvertFrom-Json
+        $googleWebClientId = [string]$easConfig.build.production.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID
+        if ([string]::IsNullOrWhiteSpace($googleWebClientId)) {
+            throw 'The production Google web client ID is missing from warsh-app/eas.json.'
+        }
+        $env:EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID = $googleWebClientId
         $env:SENTRY_DISABLE_AUTO_UPLOAD = 'true'
         $env:SENTRY_DISABLE_NATIVE_DEBUG_UPLOAD = 'true'
 

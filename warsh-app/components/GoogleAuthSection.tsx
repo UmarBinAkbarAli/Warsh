@@ -15,6 +15,7 @@ import { GoogleAuthButton } from "@components/GoogleAuthButton";
 import { useAuth } from "@hooks/useAuth";
 import { useOnboardingStore } from "@stores/onboardingStore";
 import { getApiErrorMessage } from "@services/api";
+import { captureError } from "@services/sentry";
 import { useT } from "@i18n/index";
 import { trackLoginCompleted, trackSignupCompleted } from "@services/analytics";
 import { Colors, FontSizes, Fonts, Radii, Spacing, WarshPalette } from "../constants/theme";
@@ -108,6 +109,10 @@ export function GoogleAuthSection({ context }: Props) {
 
   const handleProviderError = useCallback(
     (providerError: unknown) => {
+      captureError(providerError, {
+        source: "google_sign_in_provider",
+        platform: Platform.OS,
+      });
       setError(getApiErrorMessage(providerError, t("auth.googleError")));
     },
     [t],
