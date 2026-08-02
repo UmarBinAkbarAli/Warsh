@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Platform, useWindowDimensions } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { BrandButton } from "@components/BrandButton";
@@ -8,6 +8,8 @@ import { ArabicText } from "@components/ArabicText";
 export default function TrialReminderScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const { days } = useLocalSearchParams<{ days: string }>();
   const trialDays = parseInt(days ?? "7", 10) || 7;
 
@@ -23,46 +25,48 @@ export default function TrialReminderScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top, paddingBottom: insets.bottom + Spacing.lg }]}>
-      {/* Title */}
-      <View style={styles.header}>
-        <ArabicText size="sm" style={styles.bismillah}>
-          بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-        </ArabicText>
-        <Text style={styles.title}>
-          Try the very best of Warsh.{"\n"}First {trialDays} days on us.
-        </Text>
-      </View>
+      <View style={[styles.body, desktopWeb && styles.webNarrow]}>
+        {/* Title */}
+        <View style={styles.header}>
+          <ArabicText size="sm" style={styles.bismillah}>
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+          </ArabicText>
+          <Text style={styles.title}>
+            Try the very best of Warsh.{"\n"}First {trialDays} days on us.
+          </Text>
+        </View>
 
-      {/* Noor mascot */}
-      <View style={styles.mascotArea}>
-        <View style={styles.mascotOuter}>
-          <View style={styles.mascotInner}>
-            <View style={styles.eyes}>
-              <View style={styles.eye} />
-              <View style={styles.eye} />
+        {/* Noor mascot */}
+        <View style={styles.mascotArea}>
+          <View style={styles.mascotOuter}>
+            <View style={styles.mascotInner}>
+              <View style={styles.eyes}>
+                <View style={styles.eye} />
+                <View style={styles.eye} />
+              </View>
+              <View style={styles.dot} />
             </View>
-            <View style={styles.dot} />
           </View>
         </View>
-      </View>
 
-      {/* Reminder message */}
-      <View style={styles.messageCard}>
-        <Text style={styles.messageText}>
-          In {trialDays - 2} days, we'll remind you by email{"\n"}that your trial is about to end
+        {/* Reminder message */}
+        <View style={styles.messageCard}>
+          <Text style={styles.messageText}>
+            In {trialDays - 2} days, we'll remind you by email{"\n"}that your trial is about to end
+          </Text>
+        </View>
+
+        {/* Fine print */}
+        <Text style={styles.finePrint}>
+          Your subscription starts {endDateStr}. Cancel 24 hours{"\n"}before in Google Play settings.
         </Text>
+
+        <BrandButton
+          title="Continue"
+          onPress={() => router.replace("/(app)/(tabs)")}
+          style={styles.cta}
+        />
       </View>
-
-      {/* Fine print */}
-      <Text style={styles.finePrint}>
-        Your subscription starts {endDateStr}. Cancel 24 hours{"\n"}before in Google Play settings.
-      </Text>
-
-      <BrandButton
-        title="Continue"
-        onPress={() => router.replace("/(app)/(tabs)")}
-        style={styles.cta}
-      />
     </View>
   );
 }
@@ -71,8 +75,16 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: Colors.bg.primary,
+  },
+  body: {
+    flex: 1,
     paddingHorizontal: Spacing.xl,
     justifyContent: "space-between",
+  },
+  webNarrow: {
+    width: "100%",
+    maxWidth: 440,
+    alignSelf: "center",
   },
   header: {
     alignItems: "center",

@@ -6,6 +6,7 @@ import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import {
   Image,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -35,6 +36,7 @@ const INACTIVE_BORDER = WarshPalette.parchmentCardBorder;
 export default function PreviewA1Welcome() {
   const router = useRouter();
   const { width, height } = useWindowDimensions();
+  const responsiveWeb = Platform.OS === "web" && width >= 768;
   const frameWidth = Math.min(width, 412);
   // Scale the whole composition continuously from the available viewport.
   // 920 keeps the established mobile proportions at common phone heights
@@ -54,6 +56,45 @@ export default function PreviewA1Welcome() {
   const headlineLineHeight = headlineSize + 3;
   const descriptionSize = Math.max(14, Math.round(20 * viewportScale));
   const descriptionLineHeight = Math.max(18, Math.round(24 * viewportScale));
+
+  if (responsiveWeb) {
+    return (
+      <SafeAreaView edges={["top"]} style={styles.safeArea}>
+        <StatusBar style="dark" backgroundColor={CREAM} />
+        <View style={styles.webWelcome}>
+          <View style={styles.webTopBar}>
+            <Pressable
+              accessibilityRole="button"
+              onPress={() => router.replace("/(auth)/preview/a7-cta")}
+              hitSlop={14}
+              style={styles.skipButton}
+            >
+              <Text style={styles.skipText}>Skip</Text>
+            </Pressable>
+          </View>
+
+          <View style={styles.webWelcomeContent}>
+            <Text style={styles.webEyebrow}>WELCOME</Text>
+            <Text style={styles.webHeadline}>From Revelation{"\n"}to Conversation</Text>
+            <Text style={styles.webDescription}>
+              Discover how Warsh helps you understand the Qur'an, speak Arabic naturally,
+              and build confidence one lesson at a time.
+            </Text>
+            <View style={styles.webActions}>
+              <BrandButton
+                title="Begin the Journey"
+                onPress={() => router.push("/(auth)/preview/a2-hook")}
+                style={styles.webCta}
+              />
+              <Pressable onPress={() => router.replace("/(auth)/login")} hitSlop={10}>
+                <Text style={styles.webLogin}>I already have an account</Text>
+              </Pressable>
+            </View>
+          </View>
+        </View>
+      </SafeAreaView>
+    );
+  }
 
   return (
     <SafeAreaView edges={["top"]} style={styles.safeArea}>
@@ -519,5 +560,58 @@ const styles = StyleSheet.create({
   },
   ctaCompact: {
     marginTop: 4,
+  },
+  webWelcome: {
+    flex: 1,
+    backgroundColor: CREAM,
+  },
+  webTopBar: {
+    height: 64,
+    alignItems: "flex-end",
+    justifyContent: "center",
+    paddingHorizontal: 40,
+  },
+  webWelcomeContent: {
+    flex: 1,
+    maxWidth: 620,
+    justifyContent: "center",
+    alignSelf: "center",
+    paddingHorizontal: 44,
+    paddingBottom: 70,
+  },
+  webEyebrow: {
+    color: GOLD_TEXT,
+    fontFamily: Fonts.semiBold,
+    fontSize: 11,
+    letterSpacing: 2,
+    marginBottom: 12,
+  },
+  webHeadline: {
+    color: INK,
+    fontFamily: "CormorantGaramond-Bold",
+    fontSize: 52,
+    lineHeight: 56,
+    marginBottom: 20,
+  },
+  webDescription: {
+    maxWidth: 520,
+    color: BODY,
+    fontFamily: Fonts.regular,
+    fontSize: 17,
+    lineHeight: 26,
+  },
+  webActions: {
+    marginTop: 28,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 24,
+  },
+  webCta: {
+    width: 190,
+  },
+  webLogin: {
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: 13,
   },
 });

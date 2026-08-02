@@ -1,7 +1,7 @@
 import { Feather } from "@expo/vector-icons";
 import { useT } from "@i18n/index";
 import { Tabs } from "expo-router";
-import { View } from "react-native";
+import { Platform, useWindowDimensions, View } from "react-native";
 
 import { Colors, Fonts, WarshPalette } from "../../../constants/theme";
 
@@ -35,6 +35,8 @@ function TabIcon({
 
 export default function TabsLayout() {
   const t = useT();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
 
   return (
     <Tabs
@@ -45,6 +47,7 @@ export default function TabsLayout() {
         },
         // Spec-11 §5.5: parchment bar, 1pt sage-soft top border
         tabBarStyle: {
+          display: desktopWeb ? "none" : "flex",
           backgroundColor: Colors.bg.primary,
           borderTopWidth: 1,
           borderTopColor: WarshPalette.sageSoft,

@@ -2,10 +2,12 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import {
   ActivityIndicator,
   FlatList,
+  Platform,
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { useRouter } from "expo-router";
@@ -43,6 +45,8 @@ interface SearchWord {
 export default function VocabularySearchScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const language = useTranslationLanguage();
   const t = useT();
 
@@ -156,7 +160,7 @@ export default function VocabularySearchScreen() {
       <View
         style={[
           styles.header,
-          { paddingTop: insets.top + Spacing.sm },
+          desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.sm },
         ]}
       >
         <TextInput
@@ -176,7 +180,7 @@ export default function VocabularySearchScreen() {
 
       {/* Recent searches */}
       {showRecent && (
-        <View>
+        <View style={desktopWeb && styles.webRow}>
           <Text style={styles.recentTitle}>{t("vocabulary.searchRecent")}</Text>
           {recentSearches.map((term) => (
             <TouchableOpacity
@@ -206,7 +210,7 @@ export default function VocabularySearchScreen() {
 
       {/* Empty state */}
       {showEmpty && (
-        <View style={styles.emptyState}>
+        <View style={[styles.emptyState, desktopWeb && styles.webRow]}>
           <Text style={styles.emptyText}>{t("vocabulary.searchNoMatch")}</Text>
         </View>
       )}
@@ -217,7 +221,7 @@ export default function VocabularySearchScreen() {
           data={results}
           keyExtractor={(item) => item.id}
           renderItem={renderWord}
-          contentContainerStyle={styles.listContent}
+          contentContainerStyle={[styles.listContent, desktopWeb && styles.webRow]}
           keyboardShouldPersistTaps="handled"
         />
       )}
@@ -236,6 +240,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.xl,
     paddingBottom: Spacing.sm,
     gap: Spacing.md,
+  },
+  webRow: {
+    width: "100%",
+    maxWidth: 720,
+    alignSelf: "center",
+  },
+  webHeaderRow: {
+    width: "100%",
+    maxWidth: 720,
+    alignSelf: "center",
+    paddingTop: 36,
   },
   searchInput: {
     flex: 1,

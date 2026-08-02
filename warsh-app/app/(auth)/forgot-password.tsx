@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Platform, useWindowDimensions } from "react-native";
 import { TextInput } from "react-native-paper";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
+import { WebAuthLayout } from "@components/WebAuthLayout";
 import api, { getApiErrorMessage } from "@services/api";
 import { Colors, Fonts, FontSizes, LineHeights, Spacing, WarshPalette } from "../../constants/theme";
 
@@ -16,6 +17,8 @@ function isValidEmail(email: string): boolean {
 export default function ForgotPasswordScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 900;
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -40,40 +43,47 @@ export default function ForgotPasswordScreen() {
   }
 
   return (
-    <View style={[styles.screen, { paddingTop: insets.top + Spacing.md, paddingBottom: insets.bottom + Spacing.md }]}>
-      {/* Back button */}
-      <TouchableOpacity onPress={() => router.back()} style={styles.backButton} hitSlop={8}>
-        <Ionicons name="arrow-back" size={24} color={WarshPalette.ink} />
-      </TouchableOpacity>
+    <WebAuthLayout>
+      <View
+        style={[
+          styles.screen,
+          desktopWeb ? styles.webScreen : { paddingTop: insets.top + Spacing.md, paddingBottom: insets.bottom + Spacing.md },
+        ]}
+      >
+        {/* Back button */}
+        <TouchableOpacity onPress={() => router.back()} style={styles.backButton} hitSlop={8}>
+          <Ionicons name="arrow-back" size={24} color={WarshPalette.ink} />
+        </TouchableOpacity>
 
-      {/* Brand mark */}
-      <ArabicText size="sm" style={styles.brandMark}>
-        وَرْش
-      </ArabicText>
+        {/* Brand mark */}
+        <ArabicText size="sm" style={styles.brandMark}>
+          وَرْش
+        </ArabicText>
 
-      {/* Title */}
-      <Text style={styles.title}>Reset your password</Text>
+        {/* Title */}
+        <Text style={styles.title}>Reset your password</Text>
 
-      {/* Subtitle */}
-      <Text style={styles.subtitle}>Enter your email. We'll send you a reset link.</Text>
+        {/* Subtitle */}
+        <Text style={styles.subtitle}>Enter your email. We'll send you a reset link.</Text>
 
-      {/* Email input */}
-      <TextInput
-        label="Email"
-        value={email}
-        onChangeText={setEmail}
-        mode="outlined"
-        keyboardType="email-address"
-        autoCapitalize="none"
-        style={styles.input}
-      />
+        {/* Email input */}
+        <TextInput
+          label="Email"
+          value={email}
+          onChangeText={setEmail}
+          mode="outlined"
+          keyboardType="email-address"
+          autoCapitalize="none"
+          style={styles.input}
+        />
 
-      {/* Error */}
-      {error ? <Text style={styles.error}>{error}</Text> : null}
+        {/* Error */}
+        {error ? <Text style={styles.error}>{error}</Text> : null}
 
-      {/* Submit */}
-      <BrandButton title="Send reset link →" onPress={handleSubmit} loading={loading} />
-    </View>
+        {/* Submit */}
+        <BrandButton title="Send reset link →" onPress={handleSubmit} loading={loading} />
+      </View>
+    </WebAuthLayout>
   );
 }
 
@@ -82,6 +92,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.bg.primary,
     paddingHorizontal: Spacing.xl,
+  },
+  webScreen: {
+    flex: undefined,
+    width: "100%",
+    paddingHorizontal: 0,
   },
   backButton: {
     alignSelf: "flex-start",

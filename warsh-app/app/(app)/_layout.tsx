@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
-import { Stack, useRouter } from "expo-router";
+import { Stack, usePathname, useRouter } from "expo-router";
+import { Platform, useWindowDimensions, View } from "react-native";
 import { useAuthStore } from "@stores/authStore";
+import { WebAppSidebar } from "@components/WebAppSidebar";
+import { Colors } from "../../constants/theme";
 import {
   addNotificationResponseListener,
   clearNotificationBadge,
@@ -45,6 +48,8 @@ async function initNotifications() {
 
 export default function AppLayout() {
   const router = useRouter();
+  const pathname = usePathname();
+  const { width } = useWindowDimensions();
   const isHydrated = useAuthStore((state) => state.isHydrated);
   const token = useAuthStore((state) => state.token);
   const user = useAuthStore((state) => state.user);
@@ -94,7 +99,7 @@ export default function AppLayout() {
   if (!isHydrated) return null;
   if (!token) return null;
 
-  return (
+  const stack = (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="(tabs)" />
       <Stack.Screen name="lessons/[chapterId]" />
@@ -118,5 +123,28 @@ export default function AppLayout() {
       <Stack.Screen name="change-password" />
       <Stack.Screen name="share-stats" />
     </Stack>
+  );
+
+  const isFocusedExperience =
+    pathname.includes("/play") ||
+    pathname.includes("/review") ||
+    pathname.includes("celebration") ||
+    pathname.includes("/paywall");
+  const desktopWeb =
+    Platform.OS === "web" && width >= 960 && !isFocusedExperience;
+
+  if (!desktopWeb) return stack;
+
+  return (
+    <View
+      style={{
+        flex: 1,
+        flexDirection: "row",
+        backgroundColor: Colors.bg.primary,
+      }}
+    >
+      <WebAppSidebar />
+      <View style={{ flex: 1, minWidth: 0 }}>{stack}</View>
+    </View>
   );
 }

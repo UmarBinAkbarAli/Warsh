@@ -9,7 +9,8 @@
  *   node scripts/check-fixture-media.cjs [--audio] [--images] [--quran-only]
  *
  * With no flags it checks both audio and images. Exit code is non-zero if any
- * URL returns a non-2xx status.
+ * URL returns a non-2xx status, an ayah has no recitation, or an EveryAyah URL
+ * points to a different surah/ayah than its fixture metadata.
  */
 
 const fs = require("fs");
@@ -24,17 +25,36 @@ const CONCURRENCY = 20;
 const FIXTURES_DIR = path.join(__dirname, "../prisma/fixtures");
 
 const urls = new Map(); // url -> "audio" | "image"
+const missingAyahAudio = [];
+const mismatchedAyahAudio = [];
 
-function collect(node) {
-  if (Array.isArray(node)) return node.forEach(collect);
+function collect(node, location) {
+  if (Array.isArray(node)) return node.forEach((item, index) => collect(item, `${location}[${index}]`));
   if (!node || typeof node !== "object") return;
+  const isAyahReference =
+    Number.isFinite(node.surah) &&
+    Number.isFinite(node.ayah) &&
+    (typeof node.ar === "string" || typeof node.arabic === "string");
+
+  if (CHECK_AUDIO && isAyahReference) {
+    if (typeof node.audio_url !== "string" || !node.audio_url.trim()) {
+      missingAyahAudio.push(`${location} (${node.surah}:${node.ayah})`);
+    } else {
+      const match = node.audio_url.match(/\/(\d{3})(\d{3})\.mp3(?:\?|$)/);
+      if (match && (Number(match[1]) !== node.surah || Number(match[2]) !== node.ayah)) {
+        mismatchedAyahAudio.push(
+          `${location} (${node.surah}:${node.ayah}) -> ${node.audio_url}`,
+        );
+      }
+    }
+  }
   if (typeof node.audio_url === "string") urls.set(node.audio_url, "audio");
   if (typeof node.image_url === "string") urls.set(node.image_url, "image");
-  for (const k of Object.keys(node)) collect(node[k]);
+  for (const k of Object.keys(node)) collect(node[k], `${location}.${k}`);
 }
 
 for (const f of fs.readdirSync(FIXTURES_DIR).filter((n) => n.endsWith(".json"))) {
-  collect(JSON.parse(fs.readFileSync(path.join(FIXTURES_DIR, f), "utf8")));
+  collect(JSON.parse(fs.readFileSync(path.join(FIXTURES_DIR, f), "utf8")), f);
 }
 
 let list = [...urls.entries()]
@@ -51,6 +71,16 @@ async function head(url) {
 }
 
 async function main() {
+  if (missingAyahAudio.length) {
+    console.log(`Missing ayah recitation(s): ${missingAyahAudio.length}`);
+    missingAyahAudio.forEach((item) => console.log(`  - ${item}`));
+    console.log("");
+  }
+  if (mismatchedAyahAudio.length) {
+    console.log(`Mismatched ayah recitation(s): ${mismatchedAyahAudio.length}`);
+    mismatchedAyahAudio.forEach((item) => console.log(`  - ${item}`));
+    console.log("");
+  }
   console.log(`Checking ${list.length} unique media URL(s)...\n`);
   const failures = [];
   const queue = [...list];
@@ -73,7 +103,7 @@ async function main() {
   console.log("\n" + "─".repeat(60));
   console.log(`Checked: ${checked}   OK: ${checked - failures.length}   Failed: ${failures.length}`);
   console.log("─".repeat(60));
-  if (failures.length) process.exit(1);
+  if (failures.length || missingAyahAudio.length || mismatchedAyahAudio.length) process.exit(1);
 }
 
 main();

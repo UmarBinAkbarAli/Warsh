@@ -1,5 +1,5 @@
 /**
- * Repoints every Quran ayah `audio_url` in the lesson fixtures to the
+ * Adds or repoints every Quran ayah `audio_url` in the lesson fixtures to the
  * open-source Mishary Alafasy recitation on everyayah.com — the same source the
  * onboarding preview already streams (Alafasy_128kbps/SSSAAA.mp3).
  *
@@ -8,14 +8,15 @@
  * be an authentic human reciter. The R2 `audio/quran/…` path is reserved for the
  * future premium reciter set; until then we use the open-source recording.
  *
- * Ayah number is taken from the object's numeric `surah`/`ayah` fields. A handful
+ * Missing recitations are filled when an object has numeric `surah`/`ayah`
+ * fields plus ayah text. A handful
  * of legacy objects only encode the reference in their filename slug, so those are
  * covered by SLUG_OVERRIDES below.
  *
  * Usage (from warsh-backend/):
  *   node scripts/repoint-ayah-audio-to-everyayah.cjs [--dry-run]
  *
- * After running: re-seed the DB with  npm run db:seed
+ * After running: validate the fixtures, then use the progress-safe content sync.
  */
 
 const fs = require("fs");
@@ -52,7 +53,14 @@ function repoint(obj) {
   if (Array.isArray(obj)) return obj.forEach(repoint);
   if (!obj || typeof obj !== "object") return;
 
-  if (typeof obj.audio_url === "string" && obj.audio_url.includes("/audio/quran/")) {
+  const isAyahReference =
+    Number.isFinite(obj.surah) &&
+    Number.isFinite(obj.ayah) &&
+    (typeof obj.ar === "string" || typeof obj.arabic === "string");
+  const hasLegacyQuranUrl =
+    typeof obj.audio_url === "string" && obj.audio_url.includes("/audio/quran/");
+
+  if (isAyahReference || hasLegacyQuranUrl) {
     let surah = Number.isFinite(obj.surah) ? obj.surah : undefined;
     let ayah = Number.isFinite(obj.ayah) ? obj.ayah : undefined;
 
@@ -104,5 +112,5 @@ if (unresolved.length) {
   process.exitCode = 1;
 }
 if (!DRY_RUN && urlsRewritten > 0) {
-  console.log("\nNext step: run  npm run db:seed  to push changes to the DB.");
+  console.log("\nNext step: validate, then run  npm run content:sync  to push changes safely.");
 }

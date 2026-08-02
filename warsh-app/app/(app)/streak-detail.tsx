@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Platform, ScrollView, StyleSheet, Text, TouchableOpacity, useWindowDimensions, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
@@ -37,6 +37,8 @@ function getTodayDayIndex(): number {
 
 export default function StreakDetailScreen() {
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const router = useRouter();
 
   const [data, setData] = useState<StreakData | null>(null);
@@ -68,7 +70,7 @@ export default function StreakDetailScreen() {
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
       {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
         <TouchableOpacity onPress={() => router.back()} hitSlop={8}>
           <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
         </TouchableOpacity>
@@ -77,7 +79,11 @@ export default function StreakDetailScreen() {
       </View>
 
       <ScrollView
-        contentContainerStyle={[styles.content, { paddingBottom: insets.bottom + Spacing.xxl }]}
+        contentContainerStyle={[
+          styles.content,
+          desktopWeb && styles.webRow,
+          { paddingBottom: insets.bottom + Spacing.xxl },
+        ]}
       >
         {/* Hero */}
         <View style={styles.heroSection}>
@@ -192,6 +198,18 @@ const styles = StyleSheet.create({
   content: {
     paddingHorizontal: Spacing.xl,
     paddingTop: Spacing.xl,
+  },
+  webRow: {
+    width: "100%",
+    maxWidth: 640,
+    alignSelf: "center",
+  },
+  webHeaderRow: {
+    width: "100%",
+    maxWidth: 640,
+    alignSelf: "center",
+    borderBottomWidth: 0,
+    paddingTop: 36,
   },
 
   // Hero

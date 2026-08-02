@@ -1,10 +1,12 @@
 import { useCallback, useState } from "react";
 import {
   ActivityIndicator,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { Image } from "expo-image";
@@ -93,6 +95,8 @@ function highlightWordInAyah(ayah: string, arabicPlain: string, arabic: string) 
 export default function WordDetailScreen() {
   const { wordId } = useLocalSearchParams<{ wordId: string }>();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const router = useRouter();
   const language = useTranslationLanguage();
   const t = useT();
@@ -205,9 +209,9 @@ export default function WordDetailScreen() {
     : [];
 
   return (
-    <View style={[styles.screen, { paddingTop: insets.top }]}>
+    <View style={[styles.screen, { paddingTop: desktopWeb ? 0 : insets.top }]}>
       {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, desktopWeb && styles.webHeader]}>
         <TouchableOpacity onPress={() => router.back()}>
           <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
         </TouchableOpacity>
@@ -220,7 +224,7 @@ export default function WordDetailScreen() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView contentContainerStyle={styles.content}>
+      <ScrollView contentContainerStyle={[styles.content, desktopWeb && styles.webContent]}>
         {/* Main Arabic display */}
         <View style={styles.arabicSection}>
           {word.imageUrl ? (
@@ -394,6 +398,21 @@ const styles = StyleSheet.create({
   },
 
   content: { paddingHorizontal: Spacing.xl, paddingBottom: Spacing.xl * 3 },
+  webHeader: {
+    width: "100%",
+    maxWidth: 680,
+    alignSelf: "center",
+    paddingHorizontal: 0,
+    paddingTop: 36,
+    paddingBottom: Spacing.md,
+    borderBottomWidth: 0,
+  },
+  webContent: {
+    width: "100%",
+    maxWidth: 680,
+    alignSelf: "center",
+    paddingHorizontal: 0,
+  },
 
   arabicSection: {
     alignItems: "center",

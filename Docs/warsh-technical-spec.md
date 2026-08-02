@@ -378,7 +378,7 @@ When asked to start Warsh, use the root script:
 .\start-warsh.ps1
 ```
 
-By default it checks whether the release APK is older than the current app source, rebuilds it with the production API when necessary, starts the `Warsh_API_34` emulator when needed, installs or upgrades Warsh, and launches the app.
+By default it checks whether the release APK is older than the current app source, rebuilds it with the production API and the production Google Web OAuth client ID from `warsh-app/eas.json` when necessary, starts the `Warsh_API_34` emulator when needed, installs or upgrades Warsh, and launches the app.
 
 For local Metro/backend development:
 

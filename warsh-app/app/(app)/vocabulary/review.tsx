@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
 import {
   ActivityIndicator,
+  Platform,
   StyleSheet,
   Text,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { Image } from "expo-image";
@@ -45,6 +47,8 @@ type Stage = "loading" | "empty" | "pre" | "front" | "back" | "done";
 
 export default function SRSReviewScreen() {
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const router = useRouter();
   const language = useTranslationLanguage();
   const t = useT();
@@ -143,7 +147,7 @@ export default function SRSReviewScreen() {
             <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
           </TouchableOpacity>
         </View>
-        <View style={styles.centerContent}>
+        <View style={[styles.centerContent, desktopWeb && styles.webNarrow]}>
           <ArabicText size="xl" style={styles.emptyArabic}>ما شاء الله</ArabicText>
           <Text style={styles.emptyTitle}>{t("vocabulary.reviewNoWords")}</Text>
           <Text style={styles.emptyCopy}>{t("vocabulary.reviewEmptyHelp")}</Text>
@@ -163,7 +167,7 @@ export default function SRSReviewScreen() {
             <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
           </TouchableOpacity>
         </View>
-        <View style={styles.centerContent}>
+        <View style={[styles.centerContent, desktopWeb && styles.webNarrow]}>
           <ArabicText size="lg" style={styles.preArabic}>مُرَاجَعَة الكَلِمَات</ArabicText>
           <Text style={styles.preTitle}>{t("vocabulary.review")}</Text>
           <Text style={styles.preCount}>{t("vocabulary.reviewReady", { count: total, suffix: total !== 1 ? "s" : "" })}</Text>
@@ -185,7 +189,7 @@ export default function SRSReviewScreen() {
             <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
           </TouchableOpacity>
         </View>
-        <View style={styles.centerContent}>
+        <View style={[styles.centerContent, desktopWeb && styles.webNarrow]}>
           <ArabicText size="xl" style={styles.doneArabic}>بَارَكَ اللّٰهُ فِيكَ</ArabicText>
           <Text style={styles.doneTitle}>{t("vocabulary.reviewDone")}</Text>
           <Text style={styles.doneCount}>{t("vocabulary.wordCount", { count: totalReviewed, suffix: totalReviewed !== 1 ? "s" : "" })}</Text>
@@ -230,7 +234,7 @@ export default function SRSReviewScreen() {
       {/* Card */}
       <View style={styles.cardArea}>
         <TouchableOpacity
-          style={styles.flashCard}
+          style={[styles.flashCard, desktopWeb && styles.webNarrow]}
           onPress={() => stage === "front" && setStage("back")}
           activeOpacity={stage === "front" ? 0.8 : 1}
         >
@@ -280,7 +284,7 @@ export default function SRSReviewScreen() {
 
       {/* Response buttons (only in back stage) */}
       {stage === "back" ? (
-        <View style={styles.responseRow}>
+        <View style={[styles.responseRow, desktopWeb && styles.webNarrow]}>
           <TouchableOpacity
             style={[styles.responseBtn, styles.hardBtn]}
             onPress={() => submitReview(2)}
@@ -336,6 +340,11 @@ const styles = StyleSheet.create({
   centerContent: {
     flex: 1, justifyContent: "center", alignItems: "center",
     paddingHorizontal: Spacing.xl * 1.5,
+  },
+  webNarrow: {
+    width: "100%",
+    maxWidth: 660,
+    alignSelf: "center",
   },
 
   // Empty state

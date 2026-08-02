@@ -2,10 +2,12 @@ import { useState, useEffect, useCallback } from "react";
 import {
   ActivityIndicator,
   FlatList,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
+  useWindowDimensions,
   View,
 } from "react-native";
 import { useRouter } from "expo-router";
@@ -61,6 +63,8 @@ const SORT_CYCLE: Sort[] = ["date", "alpha", "topic"];
 export default function MyWordsScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const language = useTranslationLanguage();
   const t = useT();
 
@@ -132,13 +136,15 @@ export default function MyWordsScreen() {
   return (
     <View style={styles.container}>
       {/* Header */}
-      <View style={[styles.header, { paddingTop: insets.top + Spacing.xl }]}>
-        <TouchableOpacity
-          onPress={() => router.back()}
-          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-        >
-          <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
-        </TouchableOpacity>
+      <View style={[styles.header, desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.xl }]}>
+        {!desktopWeb ? (
+          <TouchableOpacity
+            onPress={() => router.back()}
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+          >
+            <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
+          </TouchableOpacity>
+        ) : null}
         <Text style={styles.headerTitle}>{t("vocabulary.myWords")}</Text>
       </View>
 
@@ -146,7 +152,7 @@ export default function MyWordsScreen() {
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.filterRow}
+        contentContainerStyle={[styles.filterRow, desktopWeb && styles.webRow]}
       >
         {FILTER_OPTIONS.map((opt) => {
           const selected = filter === opt.key;
@@ -174,7 +180,7 @@ export default function MyWordsScreen() {
       </ScrollView>
 
       {/* Sort row */}
-      <View style={styles.sortRow}>
+      <View style={[styles.sortRow, desktopWeb && styles.webRow]}>
         <TouchableOpacity onPress={cycleSort} activeOpacity={0.75}>
           <Text style={styles.sortLabel}>
             {t("vocabulary.sortLabel", {
@@ -200,9 +206,10 @@ export default function MyWordsScreen() {
           data={words}
           keyExtractor={(item) => item.id}
           renderItem={renderWord}
-          contentContainerStyle={
-            words.length === 0 ? styles.emptyContainer : styles.listContent
-          }
+          contentContainerStyle={[
+            words.length === 0 ? styles.emptyContainer : styles.listContent,
+            desktopWeb && styles.webRow,
+          ]}
           ListEmptyComponent={
             <View style={styles.emptyState}>
               <Text style={styles.emptyText}>
@@ -227,6 +234,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.xl,
     paddingBottom: Spacing.xl,
     gap: Spacing.md,
+  },
+  webRow: {
+    width: "100%",
+    maxWidth: 720,
+    alignSelf: "center",
+  },
+  webHeaderRow: {
+    width: "100%",
+    maxWidth: 720,
+    alignSelf: "center",
+    paddingTop: 36,
   },
   headerTitle: {
     fontFamily: Fonts.bold,

@@ -174,6 +174,7 @@ export const ur = {
   "chapter.cancel": "منسوخ",
   "chapter.xp": "{{count}} XP",
   "chapter.lessonsCompleted": "{{done}} / {{total}} اسباق مکمل",
+  "chapter.chapterProgress": "باب کی پیش رفت",
 
   "vocabulary.title": "الفاظ",
   "vocabulary.freeForever": "ہمیشہ مفت",

@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import type { DimensionValue } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -15,6 +15,8 @@ import { useT } from "@i18n/index";
 export default function ProfileScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const { user, logout } = useAuth();
   const language = useLanguage();
   const t = useT();
@@ -77,172 +79,213 @@ export default function ProfileScreen() {
       ? { label: t("manageSub.statusTrial"), tone: Theme.WarshPalette.gold }
       : null;
 
-  return (
-    <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
-      <View style={headerCardStyle}>
-        <View style={styles.headerTopRow}>
-          <View style={styles.brandLine}>
-            <Text style={styles.brandEnglish}>Warsh</Text>
-            <Text style={styles.brandSeparator}> · </Text>
-            <ArabicText size="sm" style={styles.brandArabic}>
-              وَرْش
-            </ArabicText>
+  const profileHeader = (
+    <View style={[headerCardStyle, desktopWeb && styles.webHeaderCard]}>
+      <View style={styles.headerTopRow}>
+        <View style={styles.brandLine}>
+          <Text style={styles.brandEnglish}>Warsh</Text>
+          <Text style={styles.brandSeparator}> · </Text>
+          <ArabicText size="sm" style={styles.brandArabic}>
+            وَرْش
+          </ArabicText>
+        </View>
+        <Pressable onPress={() => router.push("/(app)/settings")} hitSlop={8}>
+          <Ionicons name="settings-outline" size={22} color={Theme.WarshPalette.gold} />
+        </Pressable>
+      </View>
+      <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+        <Text style={styles.userName}>{displayName}</Text>
+        <Pressable onPress={() => router.push("/(app)/edit-profile")} hitSlop={8}>
+          <Ionicons name="create-outline" size={16} color={Theme.WarshPalette.gold} />
+        </Pressable>
+      </View>
+      <Text style={styles.greeting}>{t("profile.greeting")}</Text>
+      {subBadge ? (
+        <Pressable
+          style={[styles.subBadge, { borderColor: subBadge.tone }]}
+          onPress={() => router.push("/(app)/manage-subscription")}
+          hitSlop={6}
+        >
+          <Ionicons name="ribbon-outline" size={13} color={subBadge.tone} />
+          <Text style={[styles.subBadgeText, { color: subBadge.tone }]} numberOfLines={1}>
+            {subBadge.label}
+          </Text>
+          <Ionicons name="chevron-forward" size={12} color={subBadge.tone} />
+        </Pressable>
+      ) : null}
+    </View>
+  );
+
+  const streakCard = data ? (
+    <Pressable style={[styles.streakCard, desktopWeb && styles.webStreakCard]} onPress={() => router.push("/(app)/streak-detail")}>
+      <View style={styles.streakValueRow}>
+        <Text style={styles.streakNumber}>{data.streak}</Text>
+        <Text style={styles.streakLabel}>{t("profile.dayStreak")}</Text>
+        {(data.streakFreezes ?? 0) > 0 ? (
+          <View style={styles.freezeRow}>
+            {Array.from({ length: data.streakFreezes as number }).map((_: unknown, i: number) => (
+              <Ionicons key={i} name="shield-checkmark" size={16} color={Theme.WarshPalette.sage} />
+            ))}
           </View>
-          <Pressable onPress={() => router.push("/(app)/settings")} hitSlop={8}>
-            <Ionicons name="settings-outline" size={22} color={Theme.WarshPalette.gold} />
-          </Pressable>
-        </View>
-        <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-          <Text style={styles.userName}>{displayName}</Text>
-          <Pressable onPress={() => router.push("/(app)/edit-profile")} hitSlop={8}>
-            <Ionicons name="create-outline" size={16} color={Theme.WarshPalette.gold} />
-          </Pressable>
-        </View>
-        <Text style={styles.greeting}>{t("profile.greeting")}</Text>
-        {subBadge ? (
-          <Pressable
-            style={[styles.subBadge, { borderColor: subBadge.tone }]}
-            onPress={() => router.push("/(app)/manage-subscription")}
-            hitSlop={6}
-          >
-            <Ionicons name="ribbon-outline" size={13} color={subBadge.tone} />
-            <Text style={[styles.subBadgeText, { color: subBadge.tone }]} numberOfLines={1}>
-              {subBadge.label}
-            </Text>
-            <Ionicons name="chevron-forward" size={12} color={subBadge.tone} />
-          </Pressable>
         ) : null}
       </View>
+      <View style={styles.streakDots}>
+        {Array.from({ length: 7 }).map((_, index) => {
+          const completed = index >= 7 - streak;
+          return <View key={index} style={[styles.streakDot, completed ? styles.streakDotFilled : styles.streakDotEmpty]} />;
+        })}
+      </View>
+      {(data.streakFreezes ?? 0) > 0 ? (
+        <Text style={styles.freezeNote}>
+          {t("profile.freezeNote", { count: data.streakFreezes, suffix: data.streakFreezes !== 1 ? "s" : "" })}
+        </Text>
+      ) : null}
+      <Text style={styles.streakQuote}>{t("profile.streakQuote")}</Text>
+    </Pressable>
+  ) : null;
 
-      {error ? <Text style={styles.errorText}>{error}</Text> : null}
+  const restContent = data ? (
+    <>
+      <View style={[styles.statsRow, desktopWeb && styles.webRow]}>
+        <View style={styles.statCard}>
+          <ArabicText size="sm" style={styles.statArabicLabel}>
+            نقاط
+          </ArabicText>
+          <Text style={styles.statValue}>{data.xp}</Text>
+          <Text style={styles.statSub}>{t("profile.pointsEarned")}</Text>
+        </View>
 
-      {data ? (
-        <>
-          <Pressable style={styles.streakCard} onPress={() => router.push("/(app)/streak-detail")}>
-            <View style={styles.streakValueRow}>
-              <Text style={styles.streakNumber}>{data.streak}</Text>
-              <Text style={styles.streakLabel}>{t("profile.dayStreak")}</Text>
-              {(data.streakFreezes ?? 0) > 0 ? (
-                <View style={styles.freezeRow}>
-                  {Array.from({ length: data.streakFreezes as number }).map((_: unknown, i: number) => (
-                    <Ionicons key={i} name="shield-checkmark" size={16} color={Theme.WarshPalette.sage} />
-                  ))}
-                </View>
-              ) : null}
-            </View>
-            <View style={styles.streakDots}>
-              {Array.from({ length: 7 }).map((_, index) => {
-                const completed = index >= 7 - streak;
-                return <View key={index} style={[styles.streakDot, completed ? styles.streakDotFilled : styles.streakDotEmpty]} />;
-              })}
-            </View>
-            {(data.streakFreezes ?? 0) > 0 ? (
-              <Text style={styles.freezeNote}>
-                {t("profile.freezeNote", { count: data.streakFreezes, suffix: data.streakFreezes !== 1 ? "s" : "" })}
-              </Text>
+        <View style={styles.statCard}>
+          <ArabicText size="sm" style={styles.statArabicLabel}>
+            دروس
+          </ArabicText>
+          <Text style={styles.statValue}>{completedLessons}</Text>
+          <Text style={styles.statSub}>{t("profile.lessonsDone")}</Text>
+        </View>
+      </View>
+
+      <View style={[styles.levelCard, desktopWeb && styles.webRow]}>
+        <View style={styles.levelRow}>
+          <Text style={styles.levelLabel}>{t("profile.level")}</Text>
+          <Text style={styles.levelValue}>{level}</Text>
+        </View>
+        <View style={styles.progressTrack}>
+          <View style={[styles.progressFill, { width: progressPercent }]} />
+        </View>
+      </View>
+
+      {(data.achievements?.length ?? 0) > 0 ? (
+        <Pressable style={[styles.achievementsCard, desktopWeb && styles.webRow]} onPress={() => router.push("/milestones" as any)}>
+          <View style={styles.achievementsHeader}>
+            <Text style={styles.achievementsTitle}>{t("profile.milestones")}</Text>
+            <Text style={styles.achievementsCount}>{t("profile.earnedCount", { count: data.achievements.length })}</Text>
+          </View>
+          <View style={styles.achievementsRow}>
+            {(data.achievements as any[]).slice(0, 5).map((a: any) => (
+              <View key={a.key} style={styles.achievementBadge}>
+                <Ionicons name={a.icon as any} size={22} color={Theme.WarshPalette.gold} />
+                <ArabicText size="sm" style={styles.achievementTitle}>{a.title}</ArabicText>
+              </View>
+            ))}
+            {data.achievements.length > 5 ? (
+              <View style={[styles.achievementBadge, styles.achievementMore]}>
+                <Text style={styles.achievementMoreText}>+{data.achievements.length - 5}</Text>
+              </View>
             ) : null}
-            <Text style={styles.streakQuote}>{t("profile.streakQuote")}</Text>
-          </Pressable>
-
-          <View style={styles.statsRow}>
-            <View style={styles.statCard}>
-              <ArabicText size="sm" style={styles.statArabicLabel}>
-                نقاط
-              </ArabicText>
-              <Text style={styles.statValue}>{data.xp}</Text>
-              <Text style={styles.statSub}>{t("profile.pointsEarned")}</Text>
-            </View>
-
-            <View style={styles.statCard}>
-              <ArabicText size="sm" style={styles.statArabicLabel}>
-                دروس
-              </ArabicText>
-              <Text style={styles.statValue}>{completedLessons}</Text>
-              <Text style={styles.statSub}>{t("profile.lessonsDone")}</Text>
-            </View>
           </View>
-
-          <View style={styles.levelCard}>
-            <View style={styles.levelRow}>
-              <Text style={styles.levelLabel}>{t("profile.level")}</Text>
-              <Text style={styles.levelValue}>{level}</Text>
-            </View>
-            <View style={styles.progressTrack}>
-              <View style={[styles.progressFill, { width: progressPercent }]} />
-            </View>
-          </View>
-
-          {(data.achievements?.length ?? 0) > 0 ? (
-            <Pressable style={styles.achievementsCard} onPress={() => router.push("/milestones" as any)}>
-              <View style={styles.achievementsHeader}>
-                <Text style={styles.achievementsTitle}>{t("profile.milestones")}</Text>
-                <Text style={styles.achievementsCount}>{t("profile.earnedCount", { count: data.achievements.length })}</Text>
-              </View>
-              <View style={styles.achievementsRow}>
-                {(data.achievements as any[]).slice(0, 5).map((a: any) => (
-                  <View key={a.key} style={styles.achievementBadge}>
-                    <Ionicons name={a.icon as any} size={22} color={Theme.WarshPalette.gold} />
-                    <ArabicText size="sm" style={styles.achievementTitle}>{a.title}</ArabicText>
-                  </View>
-                ))}
-                {data.achievements.length > 5 ? (
-                  <View style={[styles.achievementBadge, styles.achievementMore]}>
-                    <Text style={styles.achievementMoreText}>+{data.achievements.length - 5}</Text>
-                  </View>
-                ) : null}
-              </View>
-            </Pressable>
-          ) : null}
-
-          {(data.vocabTotal ?? 0) > 0 ? (
-            <View style={styles.statsRow}>
-              <View style={styles.statCard}>
-                <Ionicons name="book-outline" size={20} color={Theme.WarshPalette.gold} />
-                <Text style={styles.statValue}>{data.vocabTotal}</Text>
-                <Text style={styles.statSub}>{t("profile.wordsInBank")}</Text>
-              </View>
-              <View style={styles.statCard}>
-                <Ionicons name="star-outline" size={20} color={Theme.WarshPalette.sage} />
-                <Text style={styles.statValue}>{data.vocabMastered ?? 0}</Text>
-                <Text style={styles.statSub}>{t("profile.wordsMastered")}</Text>
-              </View>
-              {(data.surahsCompleted ?? 0) > 0 ? (
-                <View style={styles.statCard}>
-                  <Ionicons name="moon-outline" size={20} color={Theme.WarshPalette.gold} />
-                  <Text style={styles.statValue}>{data.surahsCompleted}</Text>
-                  <Text style={styles.statSub}>{t("profile.surahsUnderstood")}</Text>
-                </View>
-              ) : null}
-            </View>
-          ) : null}
-
-          {data.memberSince ? (
-            <View style={styles.memberSinceRow}>
-              <Ionicons name="calendar-outline" size={14} color={Theme.WarshPalette.subtleBrown} />
-              <Text style={styles.memberSinceText}>
-                {t("profile.memberSince", { date: memberSince ?? "" })}
-              </Text>
-            </View>
-          ) : null}
-
-          {(data.phrasesSpoken ?? 0) > 0 ? (
-            <View style={styles.speakingCard}>
-              <View style={styles.speakingIconRow}>
-                <Ionicons name="mic-outline" size={20} color={Theme.WarshPalette.sage} />
-                <Text style={styles.speakingTitle}>{t("profile.speaking")}</Text>
-              </View>
-              <Text style={styles.speakingCount}>{data.phrasesSpoken}</Text>
-              <Text style={styles.speakingSub}>{t("profile.phrasesYouCanSay")}</Text>
-            </View>
-          ) : null}
-
-          <View style={styles.tipCard}>
-            <Text style={styles.tipLabel}>{t("profile.noor")}</Text>
-            <Text style={styles.tipText}>{t("profile.noorTip")}</Text>
-          </View>
-        </>
+        </Pressable>
       ) : null}
 
+      {(data.vocabTotal ?? 0) > 0 ? (
+        <View style={[styles.statsRow, desktopWeb && styles.webRow]}>
+          <View style={styles.statCard}>
+            <Ionicons name="book-outline" size={20} color={Theme.WarshPalette.gold} />
+            <Text style={styles.statValue}>{data.vocabTotal}</Text>
+            <Text style={styles.statSub}>{t("profile.wordsInBank")}</Text>
+          </View>
+          <View style={styles.statCard}>
+            <Ionicons name="star-outline" size={20} color={Theme.WarshPalette.sage} />
+            <Text style={styles.statValue}>{data.vocabMastered ?? 0}</Text>
+            <Text style={styles.statSub}>{t("profile.wordsMastered")}</Text>
+          </View>
+          {(data.surahsCompleted ?? 0) > 0 ? (
+            <View style={styles.statCard}>
+              <Ionicons name="moon-outline" size={20} color={Theme.WarshPalette.gold} />
+              <Text style={styles.statValue}>{data.surahsCompleted}</Text>
+              <Text style={styles.statSub}>{t("profile.surahsUnderstood")}</Text>
+            </View>
+          ) : null}
+        </View>
+      ) : null}
+
+      {data.memberSince ? (
+        <View style={[styles.memberSinceRow, desktopWeb && styles.webRow]}>
+          <Ionicons name="calendar-outline" size={14} color={Theme.WarshPalette.subtleBrown} />
+          <Text style={styles.memberSinceText}>
+            {t("profile.memberSince", { date: memberSince ?? "" })}
+          </Text>
+        </View>
+      ) : null}
+
+      {(data.phrasesSpoken ?? 0) > 0 ? (
+        <View style={[styles.speakingCard, desktopWeb && styles.webRow]}>
+          <View style={styles.speakingIconRow}>
+            <Ionicons name="mic-outline" size={20} color={Theme.WarshPalette.sage} />
+            <Text style={styles.speakingTitle}>{t("profile.speaking")}</Text>
+          </View>
+          <Text style={styles.speakingCount}>{data.phrasesSpoken}</Text>
+          <Text style={styles.speakingSub}>{t("profile.phrasesYouCanSay")}</Text>
+        </View>
+      ) : null}
+
+      <View style={[styles.tipCard, desktopWeb && styles.webRow]}>
+        <Text style={styles.tipLabel}>{t("profile.noor")}</Text>
+        <Text style={styles.tipText}>{t("profile.noorTip")}</Text>
+      </View>
+    </>
+  ) : null;
+
+  const actionButtons = (
+    <>
+      <BrandButton
+        title={t("profile.shareProgress")}
+        onPress={() => router.push("/(app)/share-stats")}
+        variant="secondary"
+        style={StyleSheet.flatten([styles.shareButton, desktopWeb && styles.webRow])}
+      />
+      <BrandButton
+        title={t("profile.logOut")}
+        onPress={logout}
+        variant="danger"
+        style={StyleSheet.flatten([styles.logoutButton, desktopWeb && styles.webRow])}
+      />
+    </>
+  );
+
+  if (desktopWeb) {
+    return (
+      <ScrollView style={styles.screen} contentContainerStyle={styles.webContent}>
+        <View style={styles.webLayout}>
+          <View style={styles.webLeftColumn}>
+            {profileHeader}
+            {streakCard}
+          </View>
+          <View style={styles.webRightColumn}>
+            {error ? <Text style={styles.errorText}>{error}</Text> : null}
+            {restContent}
+            {actionButtons}
+          </View>
+        </View>
+      </ScrollView>
+    );
+  }
+
+  return (
+    <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
+      {profileHeader}
+      {error ? <Text style={styles.errorText}>{error}</Text> : null}
+      {streakCard}
+      {restContent}
       <BrandButton
         title={t("profile.shareProgress")}
         onPress={() => router.push("/(app)/share-stats")}
@@ -267,6 +310,40 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingBottom: Theme.Spacing.xl,
+  },
+  webContent: {
+    paddingBottom: 48,
+  },
+  webLayout: {
+    width: "100%",
+    maxWidth: 1180,
+    alignSelf: "center",
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 32,
+    paddingHorizontal: 32,
+    paddingTop: 36,
+  },
+  webLeftColumn: {
+    width: 400,
+    flexShrink: 0,
+    gap: Theme.Spacing.lg,
+  },
+  webRightColumn: {
+    flex: 1,
+    minWidth: 0,
+    gap: Theme.Spacing.md,
+  },
+  webHeaderCard: {
+    borderRadius: Theme.Radii.lg,
+    paddingTop: Theme.Spacing.xl,
+  },
+  webStreakCard: {
+    margin: 0,
+  },
+  webRow: {
+    marginHorizontal: 0,
+    marginTop: 0,
   },
   headerCard: {
     width: "100%",

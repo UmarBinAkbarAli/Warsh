@@ -97,6 +97,7 @@ export default function HomeScreen() {
   const [currentStreak, setCurrentStreak] = useState(0);
   const [dailyGoalMinutes, setDailyGoalMinutes] = useState(10);
   const [lessonsToday, setLessonsToday] = useState(0);
+  const [xp, setXp] = useState(0);
   const [dailyGoalMet, setDailyGoalMet] = useState(false);
   const [showFreezeBanner, setShowFreezeBanner] = useState(false);
   const [trialDaysRemaining, setTrialDaysRemaining] = useState<number | null>(null);
@@ -110,7 +111,9 @@ export default function HomeScreen() {
   // On web `width` is the full browser viewport, but the app is constrained
   // to the centered WebShell column — cap to the frame width so content fits
   // instead of overflowing and clipping. Native keeps its wider cap.
-  const contentWidth = Math.min(width, isWeb ? WEB_MAX_WIDTH : 720);
+  const desktopWeb = isWeb && width >= 960;
+  const availableWebWidth = desktopWeb ? width - 260 : width;
+  const contentWidth = Math.min(availableWebWidth, isWeb ? WEB_MAX_WIDTH : 720);
   const pagePadding = contentWidth >= 600 ? Spacing.xxl : Spacing.gutter;
 
   useEffect(() => {
@@ -166,6 +169,7 @@ export default function HomeScreen() {
       setCurrentStreak(streak);
       setDailyGoalMinutes(progress.dailyGoalMinutes ?? 10);
       setLessonsToday(progress.lessonsCompletedToday ?? 0);
+      setXp(progress.xp ?? 0);
       setDailyGoalMet(progress.dailyGoalMet ?? false);
 
       if (progress.subscription) {
@@ -255,6 +259,10 @@ export default function HomeScreen() {
   const lessonProgress = activeChapter?.lessons.length
     ? `${Math.min(activeLessonIndex + 1, activeChapter.lessons.length)} ${t("learn.of")} ${activeChapter.lessons.length}`
     : "";
+  const lessonsCompleted = useMemo(
+    () => chapters.reduce((total, chapter) => total + chapter.completedLessonCount, 0),
+    [chapters],
+  );
 
   async function dismissFreezeBanner() {
     const today = new Date().toISOString().slice(0, 10);
@@ -332,7 +340,7 @@ export default function HomeScreen() {
           {
             width: contentWidth,
             paddingHorizontal: pagePadding,
-            paddingTop: insets.top + Spacing.md,
+            paddingTop: desktopWeb ? Spacing.xxxl : insets.top + Spacing.md,
           },
         ]}
         showsVerticalScrollIndicator={false}
@@ -414,7 +422,7 @@ export default function HomeScreen() {
 
         <View style={styles.headerRow}>
           <View style={styles.headerCopy}>
-            <Text style={styles.greeting} numberOfLines={2}>
+            <Text style={[styles.greeting, desktopWeb ? styles.greetingDesktop : null]} numberOfLines={2}>
               {t("learn.greeting", { name: userName || t("learn.learner") })}
             </Text>
             <Text style={styles.greetingSubtitle}>{t("learn.greetingSubtitle")}</Text>
@@ -433,6 +441,8 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </View>
 
+        <View style={desktopWeb ? styles.desktopDashboardGrid : undefined}>
+          <View style={desktopWeb ? styles.desktopPrimaryColumn : undefined}>
         {activeChapter ? (
           <Pressable
             onPress={openActiveLesson}
@@ -542,6 +552,29 @@ export default function HomeScreen() {
               <Text style={styles.wordPlaceholder}>{t("learn.wordUnavailable")}</Text>
             </View>
           )}
+        </View>
+
+          </View>
+          {desktopWeb ? (
+            <View style={styles.desktopRail}>
+              <View style={styles.statCard}>
+                <View style={styles.statTop}>
+                  <Text style={styles.statLabel}>POINTS</Text>
+                  <Ionicons name="sparkles-outline" size={17} color={WarshPalette.goldDeep} />
+                </View>
+                <Text style={styles.statValue}>{xp}</Text>
+                <Text style={styles.statCaption}>points earned</Text>
+              </View>
+              <View style={styles.statCard}>
+                <View style={styles.statTop}>
+                  <Text style={styles.statLabel}>LESSONS</Text>
+                  <Ionicons name="book-outline" size={17} color={WarshPalette.goldDeep} />
+                </View>
+                <Text style={styles.statValue}>{lessonsCompleted}</Text>
+                <Text style={styles.statCaption}>lessons completed</Text>
+              </View>
+            </View>
+          ) : null}
         </View>
 
         {activeChapter && activeLesson ? (
@@ -727,6 +760,12 @@ const styles = StyleSheet.create({
     lineHeight: 31,
     letterSpacing: -0.35,
   },
+  greetingDesktop: {
+    color: WarshPalette.navy,
+    fontFamily: "CormorantGaramond-SemiBold",
+    fontSize: 30,
+    lineHeight: 38,
+  },
   greetingSubtitle: {
     marginTop: 3,
     color: WarshPalette.subtleBrown,
@@ -749,6 +788,52 @@ const styles = StyleSheet.create({
     color: WarshPalette.ink,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.caption,
+  },
+  desktopDashboardGrid: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 40,
+  },
+  desktopPrimaryColumn: {
+    flex: 1,
+    minWidth: 0,
+  },
+  desktopRail: {
+    width: 280,
+    gap: Spacing.lg,
+  },
+  statCard: {
+    minHeight: 150,
+    padding: 22,
+    gap: 8,
+    borderRadius: Radii.lg,
+    borderWidth: 1,
+    borderColor: WarshPalette.sageSoft,
+    backgroundColor: WarshPalette.white,
+    ...Shadows.card,
+  },
+  statTop: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  statLabel: {
+    color: WarshPalette.subtleBrown,
+    fontFamily: "Inter",
+    fontSize: 11,
+    fontWeight: "700",
+    letterSpacing: 1.4,
+  },
+  statValue: {
+    color: WarshPalette.navy,
+    fontFamily: "CormorantGaramond-SemiBold",
+    fontSize: 34,
+    lineHeight: 40,
+  },
+  statCaption: {
+    color: WarshPalette.subtleBrown,
+    fontFamily: "Inter",
+    fontSize: 12,
   },
   heroCard: {
     minHeight: 252,

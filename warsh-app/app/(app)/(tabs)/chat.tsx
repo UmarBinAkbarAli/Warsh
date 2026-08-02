@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { View, Text, ScrollView, Pressable, ActivityIndicator, Modal, Platform, TouchableOpacity, Alert, StyleSheet } from "react-native";
+import { View, Text, ScrollView, Pressable, ActivityIndicator, Modal, Platform, TouchableOpacity, Alert, StyleSheet, useWindowDimensions } from "react-native";
 import { TextInput } from "react-native-paper";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -28,6 +28,8 @@ const NOOR_PACK_PRODUCT_ID = "warsh_noor_pack";
 export default function ChatScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const { width } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && width >= 960;
   const user = useAuthStore((state) => state.user);
   const [messages, setMessages] = useState<any[]>([]);
   const [input, setInput] = useState("");
@@ -271,94 +273,102 @@ export default function ChatScreen() {
   }
 
   return (
-    <View style={{ flex: 1, padding: Spacing.lg, backgroundColor: Colors.bg.primary }}>
-      {/* Header */}
-      <View style={{ flexDirection: "row", alignItems: "center", marginBottom: Spacing.sm, paddingTop: insets.top }}>
-        <View
-          style={{
-            width: 48,
-            height: 48,
-            borderRadius: 24,
-            backgroundColor: Colors.bg.card,
-            borderWidth: 1,
-            borderColor: Colors.accent.gold,
-            alignItems: "center",
-            justifyContent: "center",
-            marginRight: Spacing.md,
-          }}
-        >
-          <Text style={{ color: Colors.accent.gold, fontSize: 18, fontWeight: "700" }}>ن</Text>
-        </View>
-        <View style={{ flex: 1 }}>
-          <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontWeight: "700" }}>
-            Ustaad Noor
-          </Text>
-          <Text style={{ color: Colors.text.secondary }} numberOfLines={1}>
-            Warm, patient, and always ready to help.
-          </Text>
-        </View>
-      </View>
-
-      {/* Usage indicator */}
-      <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.md }}>
-        Chat with your Arabic tutor.{" "}
-        {usage.used >= usage.limit && usage.packBalance > 0
-          ? `${usage.packBalance} pack message${usage.packBalance !== 1 ? "s" : ""} remaining.`
-          : `${usage.used} of ${usage.limit} messages used today.`}
-      </Text>
-
-      {/* Non-429 errors */}
-      {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.md }}>{error}</Text> : null}
-
-      {/* Message list */}
-      <ScrollView style={{ flex: 1, marginBottom: Spacing.md }} contentContainerStyle={{ paddingBottom: Spacing.sm }}>
-        {messages.map((message, index) => (
+    <View style={{ flex: 1, backgroundColor: Colors.bg.primary }}>
+      <View
+        style={
+          desktopWeb
+            ? styles.webColumn
+            : { flex: 1, padding: Spacing.lg }
+        }
+      >
+        {/* Header */}
+        <View style={{ flexDirection: "row", alignItems: "center", marginBottom: Spacing.sm, paddingTop: desktopWeb ? 0 : insets.top }}>
           <View
-            key={`${message.role}-${index}`}
             style={{
-              backgroundColor: message.role === "USER" ? "rgba(196, 155, 77, 0.15)" : Colors.bg.card,
-              padding: Spacing.md,
-              borderRadius: Radii.md,
-              marginBottom: Spacing.sm,
-              alignSelf: message.role === "USER" ? "flex-end" : "flex-start",
-              maxWidth: "88%",
-              borderLeftWidth: message.role === "ASSISTANT" ? 2 : 0,
-              borderLeftColor: Colors.accent.gold,
-              borderWidth: message.role === "USER" ? 0 : 1,
-              borderColor: message.role === "USER" ? "transparent" : Colors.border.subtle,
-              ...Shadows.card,
+              width: 48,
+              height: 48,
+              borderRadius: 24,
+              backgroundColor: Colors.bg.card,
+              borderWidth: 1,
+              borderColor: Colors.accent.gold,
+              alignItems: "center",
+              justifyContent: "center",
+              marginRight: Spacing.md,
             }}
           >
-            <Text style={{ color: Colors.text.primary, lineHeight: LineHeights.bodyL }}>{message.content}</Text>
+            <Text style={{ color: Colors.accent.gold, fontSize: 18, fontWeight: "700" }}>ن</Text>
           </View>
-        ))}
-      </ScrollView>
+          <View style={{ flex: 1 }}>
+            <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontWeight: "700" }}>
+              Ustaad Noor
+            </Text>
+            <Text style={{ color: Colors.text.secondary }} numberOfLines={1}>
+              Warm, patient, and always ready to help.
+            </Text>
+          </View>
+        </View>
 
-      {/* Input row */}
-      <View style={{ flexDirection: "row", gap: Spacing.sm }}>
-        <TextInput
-          value={input}
-          onChangeText={setInput}
-          placeholder="Ask Ustaad Noor"
-          mode="outlined"
-          dense
-          style={{ flex: 1, backgroundColor: Colors.bg.surface }}
-        />
-        <Pressable
-          onPress={sendMessage}
-          disabled={sending}
-          style={({ pressed }) => ({
-            backgroundColor: Colors.accent.gold,
-            borderRadius: Radii.md + 2,
-            paddingHorizontal: Spacing.lg,
-            paddingVertical: Spacing.md,
-            justifyContent: "center",
-            transform: [{ scale: pressed && !sending ? 0.97 : 1 }],
-            opacity: sending ? 0.7 : 1,
-          })}
-        >
-          <Text style={{ color: Colors.bg.primary, fontWeight: "700" }}>{sending ? "Sending" : "Send"}</Text>
-        </Pressable>
+        {/* Usage indicator */}
+        <Text style={{ color: Colors.text.secondary, marginBottom: Spacing.md }}>
+          Chat with your Arabic tutor.{" "}
+          {usage.used >= usage.limit && usage.packBalance > 0
+            ? `${usage.packBalance} pack message${usage.packBalance !== 1 ? "s" : ""} remaining.`
+            : `${usage.used} of ${usage.limit} messages used today.`}
+        </Text>
+
+        {/* Non-429 errors */}
+        {error ? <Text style={{ color: Colors.text.danger, marginBottom: Spacing.md }}>{error}</Text> : null}
+
+        {/* Message list */}
+        <ScrollView style={{ flex: 1, marginBottom: Spacing.md }} contentContainerStyle={{ paddingBottom: Spacing.sm }}>
+          {messages.map((message, index) => (
+            <View
+              key={`${message.role}-${index}`}
+              style={{
+                backgroundColor: message.role === "USER" ? "rgba(196, 155, 77, 0.15)" : Colors.bg.card,
+                padding: Spacing.md,
+                borderRadius: Radii.md,
+                marginBottom: Spacing.sm,
+                alignSelf: message.role === "USER" ? "flex-end" : "flex-start",
+                maxWidth: desktopWeb ? "72%" : "88%",
+                borderLeftWidth: message.role === "ASSISTANT" ? 2 : 0,
+                borderLeftColor: Colors.accent.gold,
+                borderWidth: message.role === "USER" ? 0 : 1,
+                borderColor: message.role === "USER" ? "transparent" : Colors.border.subtle,
+                ...Shadows.card,
+              }}
+            >
+              <Text style={{ color: Colors.text.primary, lineHeight: LineHeights.bodyL }}>{message.content}</Text>
+            </View>
+          ))}
+        </ScrollView>
+
+        {/* Input row */}
+        <View style={{ flexDirection: "row", gap: Spacing.sm }}>
+          <TextInput
+            value={input}
+            onChangeText={setInput}
+            placeholder="Ask Ustaad Noor"
+            mode="outlined"
+            dense
+            style={{ flex: 1, backgroundColor: Colors.bg.surface }}
+          />
+          <Pressable
+            onPress={sendMessage}
+            disabled={sending}
+            style={({ pressed }) => ({
+              backgroundColor: Colors.accent.gold,
+              borderRadius: Radii.md + 2,
+              paddingHorizontal: Spacing.lg,
+              paddingVertical: Spacing.md,
+              justifyContent: "center",
+              transform: [{ scale: pressed && !sending ? 0.97 : 1 }],
+              opacity: sending ? 0.7 : 1,
+            })}
+          >
+            <Text style={{ color: Colors.bg.primary, fontWeight: "700" }}>{sending ? "Sending" : "Send"}</Text>
+          </Pressable>
+        </View>
       </View>
 
       {/* N2 — Overage Modal */}
@@ -420,6 +430,15 @@ export default function ChatScreen() {
 }
 
 const styles = StyleSheet.create({
+  webColumn: {
+    flex: 1,
+    width: "100%",
+    maxWidth: 900,
+    alignSelf: "center",
+    paddingHorizontal: 32,
+    paddingTop: 36,
+    paddingBottom: 28,
+  },
   modalBackdrop: {
     flex: 1,
     backgroundColor: "rgba(26, 26, 26, 0.6)",

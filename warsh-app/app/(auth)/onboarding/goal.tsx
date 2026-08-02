@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import { useRouter } from "expo-router";
 import { useOnboardingStore } from "@stores/onboardingStore";
 import { BrandButton } from "@components/BrandButton";
+import { WebOnboardingChoices, useWebOnboardingLayout } from "@components/WebOnboardingChoices";
 import { Colors, FontSizes, LineHeights, Spacing } from "../../../constants/theme";
 import { trackOnboardingGoalSelected } from "@services/analytics";
 import { useT } from "@i18n/index";
@@ -10,6 +11,30 @@ export default function OnboardingGoalScreen() {
   const router = useRouter();
   const { goal, setGoal } = useOnboardingStore();
   const t = useT();
+  const webLayout = useWebOnboardingLayout();
+
+  const continueToLevel = () => {
+    if (goal) trackOnboardingGoalSelected(goal);
+    router.push("/(auth)/onboarding/level");
+  };
+
+  if (webLayout) {
+    return (
+      <WebOnboardingChoices
+        title={t("onboarding.goalTitle")}
+        body={t("onboarding.goalBody")}
+        choices={[
+          { value: "QURAN", label: t("onboarding.goalQuran"), icon: "book-open" },
+          { value: "TRAVEL", label: t("onboarding.goalTravel"), icon: "map" },
+          { value: "STUDY", label: t("onboarding.goalStudy"), icon: "award" },
+        ]}
+        selected={goal}
+        onSelect={setGoal}
+        continueLabel={t("common.continue")}
+        onContinue={continueToLevel}
+      />
+    );
+  }
 
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary, padding: Spacing.xl, justifyContent: "center" }}>
@@ -25,7 +50,7 @@ export default function OnboardingGoalScreen() {
       <View style={{ height: Spacing.md }} />
       <BrandButton title={t("onboarding.goalStudy")} variant="secondary" onPress={() => setGoal("STUDY")} selected={goal === "STUDY"} />
       <View style={{ height: Spacing.xl }} />
-      <BrandButton title={t("common.continue")} onPress={() => { if (goal) trackOnboardingGoalSelected(goal); router.push("/(auth)/onboarding/level"); }} />
+      <BrandButton title={t("common.continue")} onPress={continueToLevel} />
     </View>
   );
 }

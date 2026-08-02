@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, View } from "react-native";
+import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, useWindowDimensions, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -420,7 +420,11 @@ export default function LessonPlayScreen() {
   const selectedText  = getSelectedText(selectedAnswer);
   const answeredCorrectly = isAnswered && isAnswerCorrect(currentExercise, selectedAnswer, language, t);
   const completedExerciseCount = Math.min(currentExerciseIndex + (isAnswered ? 1 : 0), exercises.length);
-  const screenPadding = { paddingTop: insets.top + 16 };
+  const { width: windowWidth } = useWindowDimensions();
+  const desktopWeb = Platform.OS === "web" && windowWidth >= 960;
+  const screenPadding = desktopWeb
+    ? { paddingTop: insets.top + 16, width: "100%" as const, maxWidth: 720, alignSelf: "center" as const }
+    : { paddingTop: insets.top + 16 };
 
   // Start warming every Discovery card as soon as the lesson loads (while the
   // learner is still on the hook screen). Fixtures usually provide CDN audio;
@@ -932,13 +936,28 @@ export default function LessonPlayScreen() {
   function renderHook() {
     const hook = c.hook as Record<string, any> | undefined;
     const ayah = hook?.ayah as Record<string, any> | undefined;
+    const ayahAr = ayah?.ar as string | undefined;
+    const ayahAudioUrl = ayah?.audio_url as string | undefined;
     const noorIntro = localizedText(hook?.noor_intro, language);
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
         <View style={styles.centerStack}>
-          {ayah?.ar ? <ArabicText size="lg" style={styles.hookAyah}>{ayah.ar as string}</ArabicText> : null}
+          {ayahAr ? <ArabicText size="lg" style={styles.hookAyah}>{ayahAr}</ArabicText> : null}
           {ayah?.label ? <Text style={styles.ayahRef}>{ayah.label as string}</Text> : null}
+          {ayahAr && ayahAudioUrl ? (
+            <View style={styles.revealPlayRow}>
+              <PlayButton
+                text={ayahAr}
+                cacheKey={`hook-${ayah?.label ?? lessonId}`}
+                category="lessons"
+                audioUrl={ayahAudioUrl}
+                size={22}
+                autoPlay={hook?.autoplay === true}
+              />
+              <Text style={styles.revealListenLabel}>{t("player.listenToAyah")}</Text>
+            </View>
+          ) : null}
           <View style={styles.divider} />
           {noorIntro ? <Text style={styles.hookQuestion}>{noorIntro}</Text> : null}
         </View>

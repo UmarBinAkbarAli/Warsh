@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-07-29
+**Last verified:** 2026-07-30
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Beta hardening and launch preparation
 
@@ -88,6 +88,33 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - EAS profiles for development, staging APK, production-preview APK, and production Android builds
 
 ## Recent verified repository changes
+
+### 2026-07-30
+
+- Diagnosed the Google sign-in failure in Play release `1.0.6 (21)`. The
+  Play-installed app certificate matches the registered Play App Signing OAuth
+  client, so the failure is not a Google Cloud fingerprint mismatch. The native
+  Nitro-hosted Google button rendered but its press callback did not reach the
+  app on either the physical Play device or the emulator.
+- Preserved the official Google button appearance while routing interaction
+  through a standard React Native press target. The press now invokes Credential
+  Manager directly, falls back to account creation when no saved credential is
+  available, handles cancellation without a false error, and reports provider
+  failures to Sentry. TypeScript, lint, release APK compilation, installation,
+  and invocation of Android Credential Manager pass. A Google-account
+  end-to-end test on the next Play-signed build remains required.
+- Updated the maintained release launcher to load the production Google Web
+  OAuth client ID from `warsh-app/eas.json`, preventing local release APK tests
+  from silently omitting Google authentication configuration.
+- Built Android release `1.0.6 (22)` with EAS build
+  `529c1769-804e-440f-ac97-4d2049098a9a` and uploaded it to Google Play
+  **Closed testing - Alpha** at a 100% rollout. The signed AAB passed signing,
+  production API/OAuth configuration, 16 KB native-library alignment, TypeScript,
+  lint, backend tests/build, and all 391 lesson-fixture checks. Play reported no
+  supported-device loss and only the optional missing deobfuscation-file warning.
+  The release was sent for review on July 30, 2026; Publishing overview currently
+  shows `Changes in review` while Play runs automated checks. A real Google-account
+  sign-in test is still required after Play makes version 22 available.
 
 ### 2026-07-29
 
