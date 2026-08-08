@@ -44,7 +44,7 @@ export default function LoginScreen() {
       <Text style={styles.heading}>Welcome back to Warsh</Text>
       <Text style={styles.subheading}>Pick up where you left off. Your next word is waiting.</Text>
 
-      {!desktopWeb ? <GoogleAuthSection context="login" /> : null}
+      <GoogleAuthSection context="login" />
 
       <TextInput
         label="Email"
