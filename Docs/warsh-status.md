@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-07-30
+**Last verified:** 2026-08-10
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Beta hardening and launch preparation
 
@@ -88,6 +88,55 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - EAS profiles for development, staging APK, production-preview APK, and production Android builds
 
 ## Recent verified repository changes
+
+### 2026-08-10
+
+- Replaced learner-triggered OpenAI speech generation with a deterministic,
+  prebuilt R2 audio catalogue. The admin materialization job inventoried 2,724
+  unique fixed curriculum/Tadabbur clips plus 603 vocabulary clips and wrote or
+  verified all expected objects. The paginated R2 audit passed at 3,327/3,327
+  objects with zero missing.
+- Production API code is now lookup-only for both `/api/audio/catalog` and the
+  backward-compatible `/api/audio/tts` route. Vocabulary audio is also
+  lookup-only. An automated test scans all production API source files and
+  fails if any route imports the speech generator.
+- Corrected app audio routing: all 82 Spoken Phrase recordings now use their
+  existing R2 URLs; Tadabbur ayahs and vocabulary Quran examples use human
+  EveryAyah recitation; Tadabbur vocabulary words use shared word audio; fixed
+  discovery/practice text resolves through the R2 catalogue; Quran fragments
+  without an exact human clip no longer synthesize recitation.
+- Verification passed: 24 backend tests, 391 fixture validations, backend
+  production build, app TypeScript, app quiet lint, runtime import scan, and R2
+  coverage audit. Diagnosed the prior Vercel CLI deployment failures (timeouts
+  and a `Response Error`): the archive uploaded from the repository root
+  included `artifacts/` (504 MB), `warsh-site/` (341 MB), and `Warsh-images/`
+  (87 MB), none of which belong in the `warsh-backend` deployment. An expanded
+  `.vercelignore` now excludes those paths plus `landing`, `tests`, `ds-bundle`,
+  `.codex`, and `.design-sync`. Deployed successfully as `dpl_2eGezdt5JS2sUemjHi5Bs3CE3Goe`,
+  aliased to `https://api.warsh.app`.
+- Live verification (via browser automation, since direct `curl` triggers
+  Vercel's bot-mitigation checkpoint from this network): `/api/health` returns
+  200. `/api/audio/catalog` and `/api/audio/tts` both return 401 without a
+  token. With a fresh throwaway test account (created and deleted via the
+  self-service endpoints during this check), `/api/vocabulary/words/[id]/audio`
+  returned a real R2 URL that resolves 200; `/api/audio/catalog` for a real
+  fixture exercise text (`الْمَسْجِدُ`) issued a redirect to the matching
+  deterministic `audio/catalog/v1/<sha256>.mp3` object, confirmed to exist on
+  R2; the same text through the legacy `/api/audio/tts` alias redirected
+  identically; and a fabricated, never-cataloged string redirected to a
+  `audio/catalog/v1/<sha256>.mp3` key that returned 404 with no generated
+  fallback. `grep` across `warsh-backend/app` and `warsh-backend/lib` confirms
+  no call site references `generateTtsMp3` outside its own unused definition
+  in `lib/tts.ts`. Runtime TTS cost is eliminated in production.
+- The app-side routing changes (Quran ayahs playing human EveryAyah audio
+  instead of no-op/synthesis, `MATCH_AYAH` exercises no longer attempting
+  Quran TTS, Tadabbur word audio using the stable per-word R2 key) are not
+  yet in the published Android build; the backend's `/api/audio/tts` alias
+  keeps the currently published build cost-safe in the meantime. Built a new
+  signed local release APK (SHA-256 `5ec60facffdf3c1b9c1bb397b48312ed8e3995241d6ad4e07a81e6828e2d7496`)
+  from version `1.0.7 (23)` targeting only `https://api.warsh.app`, confirmed by
+  extracting and grepping the bundled JS; app TypeScript and quiet lint both
+  passed. Not uploaded to Google Play — publishing requires explicit approval.
 
 ### 2026-07-30
 
@@ -339,7 +388,7 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 ### 2026-07-11
 
 - Trial policy clarified and enforced as seven full days of complete access; chapter progress never ends access early.
-- Paid lesson retrieval/completion, Noor, Tadabbur, and general lesson TTS now share backend subscription enforcement; Vocabulary remains free.
+- Paid lesson retrieval/completion, Noor, Tadabbur, and catalogue audio share backend subscription enforcement; Vocabulary remains free.
 - Noor updated for the 72-chapter curriculum with explicit role/safety boundaries and latest-message context.
 - All 391 validated lesson fixtures are now wired into `seed.cjs`.
 - The live Neon database was seeded and verified at 72 chapters, 391 lessons, 585 vocabulary words, and 36 preserved user accounts.

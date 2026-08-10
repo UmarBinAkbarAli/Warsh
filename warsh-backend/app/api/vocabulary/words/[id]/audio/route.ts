@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../../../lib/auth";
-import { generateTtsMp3 } from "../../../../../../lib/tts";
-import { uploadAudioToR2, vocabWordAudioKey } from "../../../../../../lib/r2";
+import { getR2PublicUrl, vocabWordAudioKey } from "../../../../../../lib/r2";
 
 export async function GET(request: Request, { params }: { params: { id: string } }) {
   const userId = await getUserIdFromRequest(request);
@@ -24,20 +23,8 @@ export async function GET(request: Request, { params }: { params: { id: string }
     return NextResponse.json({ data: { audioUrl: word.audioUrl } });
   }
 
-  // First request: generate TTS, upload to R2, persist URL
-  try {
-    const audioBuffer = await generateTtsMp3(word.arabic);
-    const key = vocabWordAudioKey(word.id);
-    const audioUrl = await uploadAudioToR2(key, audioBuffer);
-
-    await prisma.vocabularyWord.update({
-      where: { id: word.id },
-      data: { audioUrl },
-    });
-
-    return NextResponse.json({ data: { audioUrl } });
-  } catch (error) {
-    const message = error instanceof Error ? error.message : "Audio generation failed.";
-    return NextResponse.json({ error: message, code: "audio_unavailable" }, { status: 503 });
-  }
+  // Runtime generation is forbidden. The admin prebuild/audit job guarantees
+  // this stable R2 key exists; a missing object fails closed at R2.
+  const key = vocabWordAudioKey(word.id);
+  return NextResponse.json({ data: { audioUrl: getR2PublicUrl(key) } });
 }

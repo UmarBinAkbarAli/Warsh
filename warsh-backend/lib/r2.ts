@@ -1,4 +1,4 @@
-import { S3Client, PutObjectCommand, HeadObjectCommand } from "@aws-sdk/client-s3";
+import { HeadObjectCommand, ListObjectsV2Command, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 
 function getR2Client() {
   const endpoint = process.env.R2_ENDPOINT?.trim();
@@ -22,7 +22,7 @@ function getBucketName() {
   return name;
 }
 
-function getPublicUrl(key: string) {
+export function getR2PublicUrl(key: string) {
   const base = process.env.R2_PUBLIC_URL?.trim()?.replace(/\/$/, "");
   if (!base) throw new Error("R2_PUBLIC_URL is not set.");
   return `${base}/${key}`;
@@ -42,7 +42,7 @@ export async function uploadAudioToR2(key: string, audioBuffer: Buffer): Promise
     })
   );
 
-  return getPublicUrl(key);
+  return getR2PublicUrl(key);
 }
 
 export async function r2KeyExists(key: string): Promise<boolean> {
@@ -53,6 +53,26 @@ export async function r2KeyExists(key: string): Promise<boolean> {
   } catch {
     return false;
   }
+}
+
+export async function listR2Keys(prefix: string): Promise<string[]> {
+  const client = getR2Client();
+  const keys: string[] = [];
+  let continuationToken: string | undefined;
+
+  do {
+    const page = await client.send(new ListObjectsV2Command({
+      Bucket: getBucketName(),
+      Prefix: prefix,
+      ContinuationToken: continuationToken,
+    }));
+    for (const item of page.Contents ?? []) {
+      if (item.Key) keys.push(item.Key);
+    }
+    continuationToken = page.IsTruncated ? page.NextContinuationToken : undefined;
+  } while (continuationToken);
+
+  return keys;
 }
 
 export function vocabWordAudioKey(wordId: string): string {
@@ -85,5 +105,5 @@ export async function uploadImageToR2(key: string, imageBuffer: Buffer, contentT
     })
   );
 
-  return getPublicUrl(key);
+  return getR2PublicUrl(key);
 }

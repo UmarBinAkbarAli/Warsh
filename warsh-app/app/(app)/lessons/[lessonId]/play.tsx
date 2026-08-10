@@ -15,7 +15,7 @@ import { cancelTodayReminders, fireMilestoneNotification } from "@services/notif
 import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
 import { pickLocalized, useTranslationLanguage } from "@services/language";
 import { useT } from "@i18n/index";
-import { prefetchRemoteAudio, prefetchTtsAudio } from "@services/audioCache";
+import { prefetchCatalogAudio, prefetchRemoteAudio } from "@services/audioCache";
 
 // ---------------------------------------------------------------------------
 // API response shape — content is the raw warsh-content-schema v1.0 blob
@@ -176,6 +176,13 @@ function exArabicText(ex: RawEx): string | undefined {
   if (t === "HARAKAH_PLACEMENT") return ex.word_unvowelled as string | undefined;
   if (t === "IDENTIFY_ROOT") return (ex.word as any)?.ar as string | undefined;
   return undefined;
+}
+
+function exAudioText(ex: RawEx): string | undefined {
+  // MATCH_AYAH contains Quran fragments. Until an exact human recording is
+  // attached, show the text without synthesizing Quran recitation.
+  if (exType(ex) === "MATCH_AYAH") return undefined;
+  return exArabicText(ex);
 }
 
 function exOptions(ex: RawEx, language: LessonLanguage, t: TranslateFn): string[] {
@@ -427,8 +434,8 @@ export default function LessonPlayScreen() {
     : { paddingTop: insets.top + 16 };
 
   // Start warming every Discovery card as soon as the lesson loads (while the
-  // learner is still on the hook screen). Fixtures usually provide CDN audio;
-  // TTS remains a fallback for older cards without audio_url.
+  // learner is still on the hook screen). Cards without an explicit CDN URL
+  // resolve only through the prebuilt R2 text catalogue.
   useEffect(() => {
     if (!lesson || discoverCards.length === 0) return;
     for (const upcomingCard of discoverCards) {
@@ -436,25 +443,25 @@ export default function LessonPlayScreen() {
       if (imageUrl) Image.prefetch(imageUrl).catch(() => undefined);
       if (audioUrl && arabicText) {
         prefetchRemoteAudio(audioUrl, transliteration ?? arabicText, "lessons")
-          .catch(() => prefetchTtsAudio([{
+          .catch(() => prefetchCatalogAudio([{
             text: arabicText,
             cacheKey: transliteration ?? arabicText,
             category: "lessons",
           }]))
           .catch(() => undefined);
       } else if (arabicText) {
-        prefetchTtsAudio([{ text: arabicText, cacheKey: transliteration ?? arabicText, category: "lessons" }]).catch(() => undefined);
+        prefetchCatalogAudio([{ text: arabicText, cacheKey: transliteration ?? arabicText, category: "lessons" }]).catch(() => undefined);
       }
     }
   }, [discoverCards, language, lesson]);
 
-  // Exercises autoplay their Arabic on mount but had no warming of their own, so
-  // every practice screen paid a cold TTS round-trip. Their cache keys must match
+  // Exercises autoplay their Arabic on mount. Warm their prebuilt catalogue
+  // assets so playback is ready; cache keys must match
   // the ones renderPractice passes to PlayButton or the warm-up is wasted.
   useEffect(() => {
     if (!lesson || exercises.length === 0) return;
     const requests = exercises
-      .map((exercise, index) => ({ text: exArabicText(exercise), index }))
+      .map((exercise, index) => ({ text: exAudioText(exercise), index }))
       .filter((entry): entry is { text: string; index: number } => Boolean(entry.text))
       .map(({ text, index }) => ({
         text,
@@ -462,7 +469,7 @@ export default function LessonPlayScreen() {
         category: "lessons" as const,
       }));
     if (requests.length === 0) return;
-    prefetchTtsAudio(requests).catch(() => undefined);
+    prefetchCatalogAudio(requests).catch(() => undefined);
   }, [exercises, lesson, lessonId]);
 
   useEffect(() => {
@@ -757,6 +764,7 @@ export default function LessonPlayScreen() {
                 text={arabicText}
                 cacheKey={`ar-${lessonId}-ex${currentExerciseIndex}`}
                 category="lessons"
+                audioUrl={currentExercise?.audio_url as string | undefined}
                 size={48}
                 autoPlay={true}
               />
@@ -1081,6 +1089,7 @@ export default function LessonPlayScreen() {
           arabic={phrase?.ar as string ?? ""}
           transliteration={phrase?.translit as string | undefined}
           translation={localizedText(phrase, language)}
+          originalAudioUri={currentExercise?.audio_url as string | undefined}
           onComplete={(recorded) => {
             if (recorded) phrasesCompletedRef.current += 1;
             goToNextExercise();
@@ -1103,6 +1112,7 @@ export default function LessonPlayScreen() {
   function renderPractice() {
     const prompt    = exPrompt(currentExercise ?? {}, language, t);
     const arabicTxt = exArabicText(currentExercise ?? {});
+    const arabicAudioTxt = exAudioText(currentExercise ?? {});
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
@@ -1111,9 +1121,11 @@ export default function LessonPlayScreen() {
         {arabicTxt ? (
           <View style={styles.exerciseArabicCard}>
             <ArabicText size="lg" style={styles.exerciseArabic}>{arabicTxt}</ArabicText>
-            <View style={styles.exercisePlayRow}>
-              <PlayButton key={currentExerciseIndex} text={arabicTxt} cacheKey={`${lessonId}-ex${currentExerciseIndex}`} category="lessons" size={20} autoPlay={true} />
-            </View>
+            {arabicAudioTxt ? (
+              <View style={styles.exercisePlayRow}>
+                <PlayButton key={currentExerciseIndex} text={arabicAudioTxt} cacheKey={`${lessonId}-ex${currentExerciseIndex}`} category="lessons" audioUrl={currentExercise?.audio_url as string | undefined} size={20} autoPlay={true} />
+              </View>
+            ) : null}
           </View>
         ) : null}
         {renderCurrentExercise()}
@@ -1377,7 +1389,7 @@ export default function LessonPlayScreen() {
             {translit ? <Text style={styles.discoverTransliteration}>{translit}</Text> : null}
             <Text style={styles.discoverTranslation}>{translation}</Text>
             <View style={styles.discoverPlayRow}>
-              <PlayButton text={arabicPhrase} cacheKey={`sp-${spPhraseIdx}`} category="phrases" size={22} />
+              <PlayButton text={arabicPhrase} cacheKey={`sp-${spPhraseIdx}`} category="phrases" audioUrl={phraseRow?.audio_url as string | undefined} size={22} />
             </View>
           </View>
           <BrandButton title={t("player.nowIllTry")} onPress={() => setSpPhraseStep("shadow")} style={styles.bottomButton} />
@@ -1393,6 +1405,7 @@ export default function LessonPlayScreen() {
             arabic={arabicPhrase}
             transliteration={translit}
             translation={translation}
+            originalAudioUri={phraseRow?.audio_url as string | undefined}
             onComplete={(recorded) => {
               if (recorded) phrasesCompletedRef.current += 1;
               if (hasRecognition) setSpPhraseStep("recognition");

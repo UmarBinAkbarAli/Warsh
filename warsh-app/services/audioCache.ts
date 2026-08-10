@@ -7,10 +7,10 @@ const AUDIO_CACHE_DIR = `${FileSystem.cacheDirectory ?? ""}warsh-audio/`;
 const AUDIO_CACHE_MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000;
 const webAudioObjectUrls = new Map<string, string>();
 const remoteAudioDownloads = new Map<string, Promise<string>>();
-const ttsAudioDownloads = new Map<string, Promise<string>>();
+const catalogAudioDownloads = new Map<string, Promise<string>>();
 const vocabWordAudioDownloads = new Map<string, Promise<string>>();
 
-type TtsAudioRequest = {
+type CatalogAudioRequest = {
   text: string;
   cacheKey?: string;
   category?: "words" | "phrases" | "lessons";
@@ -76,25 +76,25 @@ async function fetchWebAudioUrl(remoteUrl: string, cacheKey: string, headers?: R
   return objectUrl;
 }
 
-export function getTtsCacheUri({ text, cacheKey, category = "words" }: TtsAudioRequest) {
+export function getCatalogAudioCacheUri({ text, cacheKey, category = "words" }: CatalogAudioRequest) {
   const stablePart = normalizeCachePart(cacheKey || text) || "audio";
   return `${AUDIO_CACHE_DIR}${category}-${stablePart}-${hashText(text)}.mp3`;
 }
 
-export async function getCachedTtsAudioUri(request: TtsAudioRequest) {
+export async function getCachedCatalogAudioUri(request: CatalogAudioRequest) {
   const text = request.text.trim();
   if (!text) {
-    throw new Error("Cannot cache TTS audio for empty text.");
+    throw new Error("Cannot cache catalogue audio for empty text.");
   }
 
   await ensureAudioCacheDir();
-  const localUri = getTtsCacheUri({ ...request, text });
-  const existingDownload = ttsAudioDownloads.get(localUri);
+  const localUri = getCatalogAudioCacheUri({ ...request, text });
+  const existingDownload = catalogAudioDownloads.get(localUri);
   if (existingDownload) return existingDownload;
 
   const download = (async () => {
     const token = await getToken();
-    const remoteUrl = `${API_BASE_URL}/api/audio/tts?text=${encodeURIComponent(text)}`;
+    const remoteUrl = `${API_BASE_URL}/api/audio/catalog?text=${encodeURIComponent(text)}`;
 
     if (Platform.OS === "web") {
       return fetchWebAudioUrl(
@@ -114,17 +114,17 @@ export async function getCachedTtsAudioUri(request: TtsAudioRequest) {
 
     if (result.status < 200 || result.status >= 300) {
       await FileSystem.deleteAsync(localUri, { idempotent: true });
-      throw new Error(`TTS audio download failed with status ${result.status}.`);
+      throw new Error(`Catalogue audio download failed with status ${result.status}.`);
     }
 
     return result.uri;
   })();
 
-  ttsAudioDownloads.set(localUri, download);
+  catalogAudioDownloads.set(localUri, download);
   try {
     return await download;
   } finally {
-    ttsAudioDownloads.delete(localUri);
+    catalogAudioDownloads.delete(localUri);
   }
 }
 
@@ -161,8 +161,8 @@ export async function getCachedRemoteAudioUri(
   }
 }
 
-// Vocabulary word audio: first call generates TTS + saves to R2; subsequent calls
-// return the R2 public URL directly (no OpenAI cost, faster delivery).
+// Vocabulary word audio is prepared by an admin job and served from R2. Runtime
+// requests are lookup-only and never invoke a speech provider.
 export async function getVocabWordAudioUri(wordId: string, arabicText: string): Promise<string> {
   const localUri = `${AUDIO_CACHE_DIR}vocabword-${wordId}.mp3`;
 
@@ -179,15 +179,15 @@ export async function getVocabWordAudioUri(wordId: string, arabicText: string): 
       return localUri;
     }
 
-    // Ask backend for the R2 URL (generates + uploads on first call)
+    // Ask the backend for the prebuilt R2 URL.
     const token = await getToken();
     const apiUrl = `${API_BASE_URL}/api/vocabulary/words/${wordId}/audio`;
     const headers: Record<string, string> = token ? { Authorization: `Bearer ${token}` } : {};
 
     const response = await fetch(apiUrl, { headers });
     if (!response.ok) {
-      // Backend unavailable — fall back to on-demand TTS
-      return getCachedTtsAudioUri({ text: arabicText, cacheKey: wordId, category: "words" });
+      // The word-specific lookup failed; try the prebuilt text catalogue.
+      return getCachedCatalogAudioUri({ text: arabicText, cacheKey: wordId, category: "words" });
     }
 
     const json = await response.json() as { data: { audioUrl: string } };
@@ -201,8 +201,8 @@ export async function getVocabWordAudioUri(wordId: string, arabicText: string): 
 
     if (result.status < 200 || result.status >= 300) {
       await FileSystem.deleteAsync(localUri, { idempotent: true });
-      // R2 download failed — fall back to on-demand TTS
-      return getCachedTtsAudioUri({ text: arabicText, cacheKey: wordId, category: "words" });
+      // The word-specific object failed; try the prebuilt text catalogue.
+      return getCachedCatalogAudioUri({ text: arabicText, cacheKey: wordId, category: "words" });
     }
 
     return result.uri;
@@ -216,8 +216,8 @@ export async function getVocabWordAudioUri(wordId: string, arabicText: string): 
   }
 }
 
-export async function prefetchTtsAudio(requests: TtsAudioRequest[]) {
-  return Promise.all(requests.map((request) => getCachedTtsAudioUri(request)));
+export async function prefetchCatalogAudio(requests: CatalogAudioRequest[]) {
+  return Promise.all(requests.map((request) => getCachedCatalogAudioUri(request)));
 }
 
 export function prefetchRemoteAudio(remoteUrl: string, cacheKey: string, category: "words" | "phrases" | "lessons" = "lessons") {
@@ -231,7 +231,7 @@ export async function prefetchVocabWordAudio(wordId: string, arabicText: string)
 }
 
 export function getVocabularyWordAudioUri(word: { arabic: string; transliteration?: string }) {
-  return getCachedTtsAudioUri({
+  return getCachedCatalogAudioUri({
     text: word.arabic,
     cacheKey: word.transliteration || word.arabic,
     category: "words",
@@ -239,7 +239,7 @@ export function getVocabularyWordAudioUri(word: { arabic: string; transliteratio
 }
 
 export function getLessonTextAudioUri(lessonId: string, label: string, text: string) {
-  return getCachedTtsAudioUri({
+  return getCachedCatalogAudioUri({
     text,
     cacheKey: `${lessonId}-${label}`,
     category: "lessons",

@@ -20,6 +20,7 @@ import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } f
 import { getVocabularyWordDetail, updateUserVocabularyWord } from "@services/api";
 import { useTranslationLanguage, pickTranslation, pickLocalized } from "@services/language";
 import { useT } from "@i18n/index";
+import { getEveryAyahAudioUrl } from "@services/quranAudio";
 
 interface QuranicExample {
   surahNumber: number;
@@ -304,6 +305,7 @@ export default function WordDetailScreen() {
                 text={word.quranicExample.ayahArabic}
                 cacheKey={`ayah_${word.quranicExample.surahNumber}_${word.quranicExample.ayahNumber}`}
                 category="lessons"
+                audioUrl={getEveryAyahAudioUrl(word.quranicExample.surahNumber, word.quranicExample.ayahNumber)}
                 size={18}
               />
               <Text style={styles.ayahRef}>

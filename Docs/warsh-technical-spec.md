@@ -272,7 +272,8 @@ The repository currently contains 68 API route files. Major groups are:
 - `/api/tadabbur/*`
 - `/api/chat*`, `/api/noor/purchase-pack`
 - `/api/subscription/*`
-- `/api/audio/tts`
+- `/api/audio/catalog` — authenticated lookup/redirect to prebuilt fixed-text R2 audio
+- `/api/audio/tts` — backward-compatible lookup-only alias for distributed builds; never generates speech
 - `/api/users/me`
 - `/api/admin/*`
 - `/api/admin/content-review*` — review index, full lesson documents, review
@@ -295,9 +296,31 @@ Noor stores chat messages. The history endpoint returns the latest 50 messages i
 
 R2 stores lesson/vocabulary audio and images. Required configuration includes endpoint, access key, secret, bucket, and public URL. Public URL claims must be verified live; code/configuration history contains both custom-domain and `r2.dev` periods.
 
+Fixed learner-facing Arabic audio uses deterministic keys under
+`audio/catalog/v1/<sha256>.mp3`. Runtime routes may only redirect to these
+objects. They must never call the speech provider. Vocabulary uses stable
+`audio/words/<wordId>.mp3` objects and is also runtime lookup-only.
+
+Materialize and audit audio before deployment:
+
+```powershell
+cd warsh-backend
+npm run audio:prebuild-catalog -- --dry-run
+npm run audio:prebuild-catalog
+npm run audio:audit-catalog
+```
+
+`audio:prebuild-catalog` is an admin operation: it may call OpenAI, upload
+missing R2 objects, and align vocabulary `audioUrl` rows. `audio:audit-catalog`
+is read-only and must report zero missing. If a production object is absent,
+playback fails closed; no learner request may generate a replacement.
+
 ### OpenAI
 
-OpenAI supports Noor and on-demand TTS when configured. `lib/openai.ts` deliberately returns a local constrained tutor response if the provider is unavailable; production diagnostics must not mistake the fallback for provider health.
+OpenAI supports Noor at runtime and the explicit admin audio-prebuild job.
+Learner-facing routes do not perform on-demand TTS. `lib/openai.ts` deliberately
+returns a local constrained tutor response if the Noor provider is unavailable;
+production diagnostics must not mistake the fallback for provider health.
 
 Quranic recitation must use human audio rather than synthesized speech.
 
@@ -337,7 +360,7 @@ Important groups:
 - Auth/admin: `JWT_SECRET`, `JWT_EXPIRES_IN`, `ADMIN_DASHBOARD_TOKEN`,
   `GOOGLE_OAUTH_CLIENT_ID`
 - Development: `DEV_UNLOCK_ALL`, `ALLOW_UNAUTHENTICATED_ADMIN`
-- AI/TTS: `OPENAI_API_KEY`, model/voice/limit settings
+- AI/admin audio build: `OPENAI_API_KEY`, model/voice settings
 - R2: endpoint, credentials, bucket, public URL
 - Store verification: Google/Apple package, secrets, and credentials
 - Cron: `CRON_SECRET`
@@ -590,7 +613,7 @@ npx tsc --noEmit
 - Protected course and progress endpoints return expected envelopes.
 - Android and web can load the same production API through their supported origins.
 - Chapter lock and completion rules hold server-side.
-- Trial access lasts seven full days regardless of chapter progress; after expiry, paid lesson retrieval/completion, Noor, Tadabbur, and general lesson TTS return `subscription_required` while vocabulary endpoints remain available.
+- Trial access lasts seven full days regardless of chapter progress; after expiry, paid lesson retrieval/completion, Noor, Tadabbur, and catalogue audio return `subscription_required` while vocabulary endpoints remain available.
 - Media URLs load from the configured public R2 host.
 - IAP is tested from a Play-installed tester build, not a sideload-only build.
 - Purchase, restore, acknowledgement, cancellation, and Noor consumable flows are checked.

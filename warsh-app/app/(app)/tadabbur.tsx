@@ -20,6 +20,7 @@ import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 import { getTadabbur, getTadabburSurah, isSubscriptionRequiredError } from "@services/api";
 import { pickLocalized, useTranslationLanguage } from "@services/language";
+import { getEveryAyahAudioUrl } from "@services/quranAudio";
 
 // ─── types ────────────────────────────────────────────────────────────────────
 
@@ -91,6 +92,7 @@ function AyahRow({
           text={ayah.arabic}
           cacheKey={`ayah_${surahNumber}_${ayah.ayahNumber}`}
           category="lessons"
+          audioUrl={getEveryAyahAudioUrl(surahNumber, ayah.ayahNumber)}
           size={14}
         />
         <Text style={styles.ayahRef}>{surahNumber}:{ayah.ayahNumber}</Text>
@@ -124,7 +126,7 @@ function WordSheet({
                 <ArabicText size="xl" style={StyleSheet.flatten([styles.sheetArabic, { color: wordColor(word.state) }])}>
                   {word.arabic}
                 </ArabicText>
-                <PlayButton text={word.arabic} cacheKey={word.arabicPlain} category="words" size={24} />
+                <PlayButton text={word.arabic} cacheKey={word.arabicPlain} category="words" wordId={word.vocabId ?? undefined} size={24} />
               </View>
               <View style={styles.sheetStateBadge}>
                 <Text style={styles.sheetStateBadgeText}>

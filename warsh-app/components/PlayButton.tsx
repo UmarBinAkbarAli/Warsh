@@ -2,14 +2,14 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Audio } from "expo-av";
-import { getCachedRemoteAudioUri, getCachedTtsAudioUri, getVocabWordAudioUri } from "@services/audioCache";
+import { getCachedCatalogAudioUri, getCachedRemoteAudioUri, getVocabWordAudioUri } from "@services/audioCache";
 import { WarshPalette } from "../constants/theme";
 
 type PlayButtonProps = {
   text: string;
   cacheKey?: string;
   category?: "words" | "phrases" | "lessons";
-  // When set, uses R2-backed vocab audio (generates once, CDN for all users)
+  // When set, uses prebuilt R2-backed vocabulary audio.
   wordId?: string;
   audioUrl?: string;
   size?: number;
@@ -45,7 +45,7 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, audioUr
     }
     return wordId
       ? getVocabWordAudioUri(wordId, text)
-      : getCachedTtsAudioUri({ text, cacheKey, category });
+      : getCachedCatalogAudioUri({ text, cacheKey, category });
   }, [text, cacheKey, category, wordId, audioUrl]);
 
   const startPlay = useCallback(async () => {
