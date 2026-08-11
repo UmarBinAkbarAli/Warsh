@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build:web",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/assets/node_modules/:path*",
+      "destination": "/assets/vendor/:path*"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://api.warsh.app/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
