@@ -41,6 +41,20 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
   hostname's Security Checkpoint from breaking browser CORS preflights.
 - The public website and legal/help routes are deployed through the dedicated Vercel `warsh-site` project at `https://warsh.app` and `https://www.warsh.app`.
 
+## Production ownership transfer
+
+- The target production owner and recovery account is `trywarshapp@gmail.com`.
+- Production ownership must move from personal accounts to that dedicated
+  account across Google Cloud/Google Play, Vercel, Neon, Cloudflare/R2,
+  Resend, Sentry, Mixpanel, Expo/EAS, domains/DNS, and every other service that
+  can deploy, publish, bill, access production data, or recover access.
+- Personal accounts must not remain the sole owner or sole recovery path. They
+  may remain named collaborators only where required and approved.
+- Transfer completion is not claimed here until each service's owner/admin,
+  billing, deployment, OAuth/Play signing, domain/DNS, webhook, environment,
+  and recovery access has been independently verified. Do not put passwords,
+  tokens, or private keys in repository documentation.
+
 ## Implemented in code
 
 ### Core product
@@ -133,10 +147,38 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
   Quran TTS, Tadabbur word audio using the stable per-word R2 key) are not
   yet in the published Android build; the backend's `/api/audio/tts` alias
   keeps the currently published build cost-safe in the meantime. Built a new
-  signed local release APK (SHA-256 `5ec60facffdf3c1b9c1bb397b48312ed8e3995241d6ad4e07a81e6828e2d7496`)
-  from version `1.0.7 (23)` targeting only `https://api.warsh.app`, confirmed by
-  extracting and grepping the bundled JS; app TypeScript and quiet lint both
-  passed. Not uploaded to Google Play — publishing requires explicit approval.
+  signed local release APK from version `1.0.7 (23)` targeting only
+  `https://api.warsh.app`, confirmed by extracting and grepping the bundled
+  JS; app TypeScript and quiet lint both passed. Not uploaded to Google Play —
+  publishing requires explicit approval.
+- Diagnosed a live, unrelated production bug found while pre-upload-checking
+  Google sign-in: `warsh-app/.env` (local, gitignored) was completely empty,
+  so `EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID` was unset in every artifact built from
+  it. `npm run deploy:web` only forces `EXPO_PUBLIC_API_URL`/
+  `EXPO_PUBLIC_ENVIRONMENT` and inherits everything else from `.env`, so the
+  live `https://app.warsh.app` Google button had been throwing
+  `ensureGoogleSignInConfigured()`'s "not configured" error immediately on
+  every page load, before ever requesting Google's script. The local release
+  APK built earlier in this same session inherited the identical empty value.
+  `eas.json` was unaffected — it hardcodes the client ID per build profile, so
+  EAS-built app/Play releases were never affected.
+- Restored `warsh-app/.env` with the standard local-dev defaults from
+  `.env.example` plus the known public Google Web OAuth client ID (the same
+  one already used across all `eas.json` profiles), redeployed
+  `https://app.warsh.app` (`dpl_Bo1U365Hi8vpYTsMeqNPb8DkPjno`), and rebuilt the
+  local release APK (SHA-256
+  `3ffe6d042dbf97d23ef03ad7245649c0ab72b822e6fc52aa6167cb33a11b6431`) — the
+  hash above is now stale. Verified live: on web, the Google button now
+  renders and receives focus/click instead of failing instantly (full OAuth
+  completion couldn't be automated further — Google's Identity Services
+  resists non-human-triggered credential flows). On the `Warsh_API_34`
+  emulator (no Google account configured, so a real credential exchange
+  couldn't be completed either), logcat confirmed the button tap now correctly
+  reaches Android Credential Manager and Google Play Services
+  (`GetGoogleIdOperation`), which cleanly reports no available credential —
+  the expected outcome for an account-less device, and proof the client ID is
+  now wired correctly. A real end-to-end Google sign-in test on a
+  Google-account-signed-in device remains required before Play upload.
 
 ### 2026-07-30
 
