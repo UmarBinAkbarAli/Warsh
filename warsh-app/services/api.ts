@@ -182,13 +182,13 @@ export function getApiErrorMessage(error: unknown, fallback: string) {
     return "Warsh could not reach the backend. Check your connection or local API URL, then try again.";
   }
 
-  if (error.response.status === 401) {
-    return "The email or password was not accepted. Please check them and try again.";
-  }
-
   const serverMessage = error.response.data?.error;
   if (typeof serverMessage === "string" && serverMessage.trim()) {
     return serverMessage;
+  }
+
+  if (error.response.status === 401) {
+    return "The email or password was not accepted. Please check them and try again.";
   }
 
   return fallback;
