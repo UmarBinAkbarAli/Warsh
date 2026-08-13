@@ -346,6 +346,34 @@ Store-console state is external. Always verify products, base plans, tester acce
 
 Absence of optional configuration should disable or degrade the integration safely, except where the production launch checklist makes it mandatory.
 
+### Production ownership and account transfer
+
+Warsh production ownership is being transferred from the founder's personal
+accounts to the dedicated project account `trywarshapp@gmail.com`. This is an
+ownership and access-control requirement, not permission to share personal
+credentials.
+
+- `trywarshapp@gmail.com` must be the owner or organization administrator for
+  production Google Cloud, Google Play Console, Vercel, Neon, Cloudflare/R2,
+  Resend, Sentry, Mixpanel, Expo/EAS, domains/DNS, and any other service that
+  can deploy, bill, publish, access production data, or recover the account.
+- Personal accounts may retain named collaborator or emergency recovery access
+  only when necessary, but must not remain the sole owner or sole recovery path.
+- Each service transfer must preserve the existing project, package name,
+  domains, OAuth clients, Play signing keys, databases, buckets, deployments,
+  billing records, and audit history. Do not create replacement projects unless
+  the migration is explicitly approved and verified.
+- After each transfer, verify owner/admin access, billing, production
+  environment variables, deployment access, domain/DNS control, OAuth and Play
+  signing configuration, webhooks, and recovery methods. Record the service,
+  previous owner, new owner, date, verifier, and any remaining personal access
+  in the private operations record; never record passwords or secret values in
+  this repository.
+- Contributors must stop and report any service that still depends on a
+  personal account before changing production configuration or accepting new
+  terms. Do not accept provider terms or authorize a new business integration
+  under a personal account on Warsh's behalf.
+
 ## 10. Environment variables
 
 The authoritative inventories are:
