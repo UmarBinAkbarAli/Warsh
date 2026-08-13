@@ -90,7 +90,11 @@ export function GoogleAuthSection({ context }: Props) {
             linkToken: responseData.linkToken,
           });
         } else {
-          setError(getApiErrorMessage(authError, t("auth.googleError")));
+          setError(
+            getApiErrorMessage(authError, t("auth.googleError"), {
+              unauthorizedMessage: t("auth.googleError"),
+            }),
+          );
         }
       } finally {
         setLoading(false);
@@ -113,7 +117,11 @@ export function GoogleAuthSection({ context }: Props) {
         source: "google_sign_in_provider",
         platform: Platform.OS,
       });
-      setError(getApiErrorMessage(providerError, t("auth.googleError")));
+      setError(
+        getApiErrorMessage(providerError, t("auth.googleError"), {
+          unauthorizedMessage: t("auth.googleError"),
+        }),
+      );
     },
     [t],
   );

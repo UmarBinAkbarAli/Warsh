@@ -169,7 +169,11 @@ export function redeemPromoCode(code: string) {
   return api.post("/api/subscription/redeem-promo", { code });
 }
 
-export function getApiErrorMessage(error: unknown, fallback: string) {
+export function getApiErrorMessage(
+  error: unknown,
+  fallback: string,
+  options?: { unauthorizedMessage?: string },
+) {
   if (!axios.isAxiosError(error)) {
     return fallback;
   }
@@ -188,7 +192,7 @@ export function getApiErrorMessage(error: unknown, fallback: string) {
   }
 
   if (error.response.status === 401) {
-    return "The email or password was not accepted. Please check them and try again.";
+    return options?.unauthorizedMessage ?? "The email or password was not accepted. Please check them and try again.";
   }
 
   return fallback;

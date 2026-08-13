@@ -14,11 +14,19 @@ function getGoogleClientId() {
   return clientId;
 }
 
+function getGoogleAudienceAllowlist(clientId: string) {
+  const configured = (process.env.GOOGLE_OAUTH_CLIENT_IDS ?? "")
+    .split(",")
+    .map((value) => value.trim())
+    .filter(Boolean);
+  return [...new Set([clientId, ...configured])];
+}
+
 export async function verifyGoogleIdToken(idToken: string): Promise<VerifiedGoogleIdentity> {
   const clientId = getGoogleClientId();
   const ticket = await new OAuth2Client(clientId).verifyIdToken({
     idToken,
-    audience: clientId,
+    audience: getGoogleAudienceAllowlist(clientId),
   });
   const payload = ticket.getPayload();
 
