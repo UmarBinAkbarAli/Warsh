@@ -37,7 +37,10 @@ export async function POST(request: Request) {
   try {
     identity = await verifyGoogleIdToken(idToken);
   } catch (error) {
-    console.error("[google-auth] ID token verification failed:", error);
+    console.error("[google-auth] ID token verification failed:", {
+      message: error instanceof Error ? error.message : String(error),
+      name: error instanceof Error ? error.name : undefined,
+    });
     return NextResponse.json(
       { error: "Google sign-in could not be verified. Please try again.", code: "unauthorized" },
       { status: 401 },

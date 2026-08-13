@@ -29,6 +29,12 @@ export async function verifyGoogleIdToken(idToken: string): Promise<VerifiedGoog
     audience: getGoogleAudienceAllowlist(clientId),
   });
   const payload = ticket.getPayload();
+  console.info("[google-auth] token verified", {
+    subject: payload?.sub,
+    email: payload?.email,
+    audience: payload?.aud,
+    issuer: payload?.iss,
+  });
 
   if (!payload?.sub || !payload.email || payload.email_verified !== true) {
     throw new Error("Google did not return a verified email identity.");
