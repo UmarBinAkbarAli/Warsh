@@ -1,11 +1,92 @@
-# Claude Code Instructions
+# CLAUDE.md
 
-Follow `AGENTS.md` as the repository operating guide.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-The active documentation is limited to:
+Follow `AGENTS.md` as the repository operating guide; it holds the full implementation rules and the Pen-first design-review gate.
 
-- `Docs/warsh-status.md`
-- `Docs/warsh-product-spec.md`
-- `Docs/warsh-technical-spec.md`
+## Active documentation
 
-Do not use files under `Docs/archive/` as current requirements. Do not move, rename, or delete `landing/index.html` or `Docs/privacy-policy.html`; they back live public pages.
+Only these are current requirements:
+
+- `Docs/warsh-status.md` — what is built, verified, blocked, next
+- `Docs/warsh-product-spec.md` — product behavior and locked decisions
+- `Docs/warsh-technical-spec.md` — architecture, env vars, deployment, release gates
+- Current code/config — final evidence
+
+`Docs/archive/` is historical. Do not move, rename, or delete `landing/index.html` or `Docs/privacy-policy.html`; they back live public pages and Play Store contracts.
+
+## Workspaces
+
+Each is a separate npm project with its own `node_modules`; there is no monorepo tool. Run commands from inside the workspace directory.
+
+- `warsh-backend/` — Next.js 14 App Router API (`app/api/`), Prisma 7, PostgreSQL/Neon, plus the token-gated admin dashboard (Warsh Studio) at `/dashboard`
+- `warsh-app/` — Expo SDK 54 / React Native 0.81, expo-router, Android + web
+- `packages/lesson-schema/` — canonical Zod schema for lesson `content` JSON; `warsh-backend/vendor/lesson-schema/` is the built copy the backend installs via `file:`
+- `warsh-site/` — Next 16 public site (`warsh.app`: privacy, terms, help, delete-account routes)
+- `landing/index.html` — static landing page, deployed separately
+
+## Commands
+
+Start the app (do not improvise the startup sequence):
+
+```powershell
+.\start-warsh.ps1              # release APK on the Warsh_API_34 emulator, production API
+.\start-warsh.ps1 -dev         # local backend + Metro via ADB reverse to http://127.0.0.1:3000
+.\start-warsh.ps1 -prod        # Metro against the production API
+.\start-warsh-staging.ps1 -RefreshContent   # isolated local staging DB (127.0.0.1:55432)
+.\install-warsh-apk.ps1 [path] # install/upgrade an already-built APK on the AVD
+```
+
+Backend (`cd warsh-backend`):
+
+```powershell
+npm run dev
+npm run build                  # prisma generate && next build
+npm test                       # tsx --test tests/**/*.test.ts
+npx tsx --test tests/streak.test.ts     # single test file
+npm run db:generate; npm run db:migrate; npm run db:seed
+npm run db:validate-fixtures   # validate prisma/fixtures against @warsh/lesson-schema
+npm run db:audit-urdu
+```
+
+App (`cd warsh-app`):
+
+```powershell
+npm run lint -- --quiet
+npx tsc --noEmit
+npm run android; npm run web
+npm run deploy:web             # Expo web export -> app.warsh.app (Vercel)
+```
+
+Lesson schema (`cd packages/lesson-schema`): `npm run build` (tsup), `npm test` (vitest run), `npx vitest run <file>`.
+
+Pre-release gate is the code-validation block in `Docs/warsh-technical-spec.md` §13: backend `db:generate` + `db:validate-fixtures` + `db:audit-urdu` + `build`, then app `lint` + `tsc --noEmit`.
+
+## Architecture
+
+Request flow: Expo client → Axios (`warsh-app/services/api.ts`) with `Authorization: Bearer <JWT>` and `X-Warsh-Platform` → Next.js route in `warsh-backend/app/api/` → auth/validation/business rules → Prisma singleton → Neon Postgres, with optional OpenAI, R2, Resend, Google Play, Mixpanel/Sentry.
+
+API envelope: success `{ "data": ... }`; expected failure `{ "error": "Human message", "code": "snake_case_code" }`. Protected routes derive the user from the token, never from a client-supplied id.
+
+Backend invariants:
+
+- Import Prisma from `lib/prisma.ts`; never construct `PrismaClient` in a route.
+- `Lesson.content` is JSON validated by `@warsh/lesson-schema` — the same package for admin writes and fixture validation. Never add a second schema (including in `Docs/`).
+- `lib/course.ts` is authoritative for chapter unlocking/completion; locking, trial/subscription access, and admin checks are enforced server-side.
+- Streak days run 04:00 PKT → 03:59:59 PKT via `lib/date.ts`; completion, daily goals, freezes, and the reset cron must all use that boundary.
+- Content review (`LessonContentReview`, `ContentReviewIssue`) stays separate from `Lesson.content`; flagging never edits learner-facing lessons.
+- Google sign-in: provider ID token is identity proof only, then Warsh issues its own JWT; `googleSubject` is the durable key — a matching email alone never links accounts.
+
+App invariants:
+
+- Routes: `app/(auth)` (preview, auth, recovery, onboarding), `app/(app)` (authenticated stack), `app/(app)/(tabs)` = Learn, Vocabulary, Noor, You.
+- `stores/authStore.ts` persists user/token; guards must wait for hydration before redirecting.
+- `EXPO_PUBLIC_API_URL` sets the API origin — never commit a LAN IP. Web export uses `https://app.warsh.app` with a Vercel rewrite of `/api/*` to `api.warsh.app`.
+- Arabic renders through `components/ArabicText.tsx`; CTAs use `components/BrandButton.tsx`; all tokens come from `constants/theme.ts` (no hardcoded hex); web wraps in `WebShell`.
+- Keep `i18n/en.ts` and `i18n/ur.ts` in sync; Arabic learning content stays Arabic in both languages.
+
+Content changes go to the local staging DB first, then a scoped production update (e.g. `npm run content:promote-tadabbur -- --apply`) — never the full production seed. After Prisma schema edits, generate and migrate before verifying.
+
+## Note
+
+This repo has a `.codex/config.toml`. If you want its MCP servers, commands, or instructions imported into Claude Code, reply `/import` to see what is importable, then `/import --yes=<digest>` to apply.
