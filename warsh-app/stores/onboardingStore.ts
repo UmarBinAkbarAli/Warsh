@@ -22,8 +22,10 @@ export const useOnboardingStore = create<OnboardingState>((set) => ({
   goal: "QURAN",
   level: "BEGINNER",
   name: "",
-  language: "ur",
-  translationLanguage: "ur",
+  // English is the pre-auth default; the onboarding language picker sets both
+  // fields together (user decision 2026-08-16).
+  language: "en",
+  translationLanguage: "en",
   placementType: "BEGINNER",
   dailyGoalMinutes: 10,
   setGoal: (goal) => set({ goal }),
@@ -33,5 +35,5 @@ export const useOnboardingStore = create<OnboardingState>((set) => ({
   setTranslationLanguage: (translationLanguage) => set({ translationLanguage }),
   setPlacementType: (placementType) => set({ placementType }),
   setDailyGoalMinutes: (dailyGoalMinutes) => set({ dailyGoalMinutes }),
-  reset: () => set({ goal: "QURAN", level: "BEGINNER", name: "", language: "ur", translationLanguage: "ur", placementType: "BEGINNER", dailyGoalMinutes: 10 }),
+  reset: () => set({ goal: "QURAN", level: "BEGINNER", name: "", language: "en", translationLanguage: "en", placementType: "BEGINNER", dailyGoalMinutes: 10 }),
 }));
