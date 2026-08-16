@@ -56,7 +56,7 @@ export function GoogleAuthSection({ context }: Props) {
           placement: placementType ?? "BEGINNER",
           language: language ?? "en",
         });
-        router.replace("/(auth)/onboarding/permissions");
+        router.replace("/(app)/(tabs)");
         return;
       }
       trackLoginCompleted();

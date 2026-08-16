@@ -1,14 +1,22 @@
 import { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Platform, useWindowDimensions } from "react-native";
-import { TextInput } from "react-native-paper";
+import { Image, KeyboardAvoidingView, Platform, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Ionicons } from "@expo/vector-icons";
-import { ArabicText } from "@components/ArabicText";
+
+import { AuthInput } from "@components/AuthInput";
 import { BrandButton } from "@components/BrandButton";
 import { WebAuthLayout } from "@components/WebAuthLayout";
 import api, { getApiErrorMessage } from "@services/api";
-import { Colors, Fonts, FontSizes, LineHeights, Spacing, WarshPalette } from "../../constants/theme";
+import { useLanguage } from "@services/language";
+import { useT } from "@i18n/index";
+import {
+  Colors,
+  Fonts,
+  FontSizes,
+  LineHeights,
+  Spacing,
+  WarshPalette,
+} from "../../constants/theme";
 
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -17,26 +25,27 @@ function isValidEmail(email: string): boolean {
 export default function ForgotPasswordScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 900;
+  const t = useT();
+  const isUrdu = useLanguage() === "ur";
+
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   async function handleSubmit() {
     setError("");
-
-    if (!email.trim() || !isValidEmail(email.trim())) {
-      setError("Please enter a valid email address.");
+    const trimmed = email.trim();
+    if (!trimmed || !isValidEmail(trimmed)) {
+      setError(t("auth.errorEmail"));
       return;
     }
 
     setLoading(true);
     try {
-      await api.post("/api/auth/forgot-password", { email: email.trim() });
-      router.push(`/(auth)/forgot-password-confirm?email=${encodeURIComponent(email.trim())}`);
+      await api.post("/api/auth/forgot-password", { email: trimmed });
+      router.push(`/(auth)/forgot-password-confirm?email=${encodeURIComponent(trimmed)}`);
     } catch (err) {
-      setError(getApiErrorMessage(err, "Something went wrong. Please try again."));
+      setError(getApiErrorMessage(err, t("auth.errorGeneric")));
     } finally {
       setLoading(false);
     }
@@ -44,94 +53,83 @@ export default function ForgotPasswordScreen() {
 
   return (
     <WebAuthLayout>
-      <View
-        style={[
-          styles.screen,
-          desktopWeb ? styles.webScreen : { paddingTop: insets.top + Spacing.md, paddingBottom: insets.bottom + Spacing.md },
-        ]}
+      <KeyboardAvoidingView
+        style={styles.flex}
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
-        {/* Back button */}
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton} hitSlop={8}>
-          <Ionicons name="arrow-back" size={24} color={WarshPalette.ink} />
-        </TouchableOpacity>
+        <View
+          style={[
+            styles.screen,
+            { paddingTop: insets.top + Spacing.xxxl, paddingBottom: insets.bottom + Spacing.xl },
+          ]}
+        >
+          <Image
+            source={require("../../assets/images/warsh-logo.png")}
+            style={styles.logo}
+            resizeMode="contain"
+            accessibilityLabel="Warsh"
+          />
 
-        {/* Brand mark */}
-        <ArabicText size="sm" style={styles.brandMark}>
-          وَرْش
-        </ArabicText>
+          <Text style={[styles.title, isUrdu ? styles.rtlText : null]}>{t("auth.resetTitle")}</Text>
+          <Text style={[styles.subtitle, isUrdu ? styles.rtlText : null]}>{t("auth.resetBody")}</Text>
 
-        {/* Title */}
-        <Text style={styles.title}>Reset your password</Text>
+          <AuthInput
+            placeholder={t("auth.email")}
+            value={email}
+            onChangeText={setEmail}
+            keyboardType="email-address"
+            textContentType="emailAddress"
+            containerStyle={styles.field}
+          />
 
-        {/* Subtitle */}
-        <Text style={styles.subtitle}>Enter your email. We'll send you a reset link.</Text>
+          {error ? <Text style={styles.error}>{error}</Text> : null}
 
-        {/* Email input */}
-        <TextInput
-          label="Email"
-          value={email}
-          onChangeText={setEmail}
-          mode="outlined"
-          keyboardType="email-address"
-          autoCapitalize="none"
-          style={styles.input}
-        />
-
-        {/* Error */}
-        {error ? <Text style={styles.error}>{error}</Text> : null}
-
-        {/* Submit */}
-        <BrandButton title="Send reset link →" onPress={handleSubmit} loading={loading} />
-      </View>
+          <BrandButton title={t("auth.sendResetLink")} onPress={handleSubmit} loading={loading} />
+        </View>
+      </KeyboardAvoidingView>
     </WebAuthLayout>
   );
 }
 
 const styles = StyleSheet.create({
+  flex: { flex: 1 },
   screen: {
     flex: 1,
     backgroundColor: Colors.bg.primary,
-    paddingHorizontal: Spacing.xl,
+    paddingHorizontal: Spacing.xxl,
   },
-  webScreen: {
-    flex: undefined,
-    width: "100%",
-    paddingHorizontal: 0,
-  },
-  backButton: {
-    alignSelf: "flex-start",
-    marginBottom: Spacing.xl,
-  },
-  brandMark: {
-    textAlign: "center",
-    color: WarshPalette.gold,
-    marginBottom: Spacing.sm,
+  logo: {
+    width: 82,
+    height: 56,
+    alignSelf: "center",
+    marginBottom: Spacing.xxxl,
   },
   title: {
+    fontFamily: Fonts.display,
+    fontSize: FontSizes.display,
+    lineHeight: LineHeights.display,
     color: WarshPalette.ink,
-    fontSize: FontSizes.h1,
-    lineHeight: LineHeights.h1,
-    fontFamily: Fonts.bold,
-    fontWeight: "700",
-    textAlign: "center",
     marginBottom: Spacing.sm,
   },
   subtitle: {
-    color: WarshPalette.bodyBrown,
-    fontSize: FontSizes.bodyM,
-    lineHeight: LineHeights.bodyM * 1.5,
     fontFamily: Fonts.regular,
-    textAlign: "center",
+    fontSize: FontSizes.bodyL,
+    lineHeight: LineHeights.bodyL,
+    color: WarshPalette.bodyBrown,
     marginBottom: Spacing.xl,
   },
-  input: {
-    marginBottom: Spacing.md,
-    backgroundColor: Colors.bg.surface,
+  rtlText: {
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  field: {
+    marginBottom: Spacing.lg,
   },
   error: {
-    color: WarshPalette.wrongText,
-    fontSize: FontSizes.bodyM,
     fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    lineHeight: LineHeights.bodyM,
+    color: WarshPalette.wrongText,
     marginBottom: Spacing.md,
   },
 });

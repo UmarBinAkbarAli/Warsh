@@ -144,15 +144,16 @@ export function BrandButton({
 const styles = StyleSheet.create({
   base: {
     minHeight: 56,
-    borderRadius: Radii.md,
+    borderRadius: Radii.sm,
     paddingHorizontal: Spacing.lg,
     paddingVertical: Spacing.md,
     alignItems: "center",
     justifyContent: "center",
   },
+  // 2026-08 redesign: solid navy, no border. Gold-light label carries the
+  // contrast; the old 2px gold outline read as heavy at 56pt.
   primary: {
-    borderWidth: 2,
-    borderColor: WarshPalette.gold,
+    borderWidth: 0,
   },
   selectedBorder: {
     borderWidth: 2,

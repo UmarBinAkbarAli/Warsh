@@ -1,64 +1,67 @@
 import { useState } from "react";
 import {
   Alert,
+  Image,
   KeyboardAvoidingView,
   Platform,
+  Pressable,
   StyleSheet,
   Text,
-  TextInput,
-  TouchableOpacity,
-  useWindowDimensions,
   View,
 } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Ionicons } from "@expo/vector-icons";
-import api from "@services/api";
+
+import { AuthInput } from "@components/AuthInput";
 import { BrandButton } from "@components/BrandButton";
-import { ArabicText } from "@components/ArabicText";
 import { WebAuthLayout } from "@components/WebAuthLayout";
-import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
+import api from "@services/api";
+import { useLanguage } from "@services/language";
+import { useT } from "@i18n/index";
+import {
+  Colors,
+  Fonts,
+  FontSizes,
+  LineHeights,
+  Spacing,
+  WarshPalette,
+} from "../../constants/theme";
 
 export default function ResetPasswordScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 900;
+  const t = useT();
+  const isUrdu = useLanguage() === "ur";
   const { token } = useLocalSearchParams<{ token: string }>();
 
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   async function handleSubmit() {
     setError(null);
     if (!token) {
-      setError("Invalid or missing reset token. Please request a new link.");
+      setError(t("auth.errorResetToken"));
       return;
     }
     if (!newPassword || newPassword.length < 8) {
-      setError("Password must be at least 8 characters.");
+      setError(t("auth.errorPasswordShort"));
       return;
     }
     if (newPassword !== confirmPassword) {
-      setError("Passwords do not match.");
+      setError(t("auth.errorPasswordMismatch"));
       return;
     }
 
     setLoading(true);
     try {
       await api.post("/api/auth/reset-password", { token, newPassword });
-      Alert.alert(
-        "Password updated",
-        "Your password has been changed. Please log in with your new password.",
-        [{ text: "Log in", onPress: () => router.replace("/(auth)/login") }]
-      );
+      Alert.alert(t("auth.resetDoneTitle"), t("auth.resetDoneBody"), [
+        { text: t("auth.logIn"), onPress: () => router.replace("/(auth)/login") },
+      ]);
     } catch (err: any) {
-      const msg = err?.response?.data?.error ?? "Failed to reset password. The link may have expired.";
-      setError(msg);
+      setError(err?.response?.data?.error ?? t("auth.errorResetFailed"));
     } finally {
       setLoading(false);
     }
@@ -66,143 +69,112 @@ export default function ResetPasswordScreen() {
 
   return (
     <WebAuthLayout>
-    <KeyboardAvoidingView
-      style={[
-        styles.screen,
-        desktopWeb ? styles.webScreen : { paddingTop: insets.top + Spacing.xl, paddingBottom: insets.bottom + Spacing.md },
-      ]}
-      behavior={Platform.OS === "ios" ? "padding" : undefined}
-    >
-      <ArabicText size="sm" style={styles.brandMark}>وَرْش</ArabicText>
-
-      <Text style={styles.title}>Set a new password</Text>
-      <Text style={styles.subtitle}>
-        Choose a strong password — at least 8 characters.
-      </Text>
-
-      {error ? <Text style={styles.errorText}>{error}</Text> : null}
-
-      <View style={styles.inputRow}>
-        <TextInput
-          style={styles.input}
-          value={newPassword}
-          onChangeText={setNewPassword}
-          secureTextEntry={!showPassword}
-          autoCapitalize="none"
-          autoCorrect={false}
-          placeholder="New password"
-          placeholderTextColor={WarshPalette.subtleBrown}
-        />
-        <TouchableOpacity onPress={() => setShowPassword((v) => !v)} hitSlop={8}>
-          <Ionicons
-            name={showPassword ? "eye-off-outline" : "eye-outline"}
-            size={20}
-            color={WarshPalette.subtleBrown}
+      <KeyboardAvoidingView
+        style={styles.flex}
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
+      >
+        <View
+          style={[
+            styles.screen,
+            { paddingTop: insets.top + Spacing.xxxl, paddingBottom: insets.bottom + Spacing.xl },
+          ]}
+        >
+          <Image
+            source={require("../../assets/images/warsh-logo.png")}
+            style={styles.logo}
+            resizeMode="contain"
+            accessibilityLabel="Warsh"
           />
-        </TouchableOpacity>
-      </View>
 
-      <View style={[styles.inputRow, { marginTop: Spacing.md }]}>
-        <TextInput
-          style={styles.input}
-          value={confirmPassword}
-          onChangeText={setConfirmPassword}
-          secureTextEntry={!showConfirmPassword}
-          autoCapitalize="none"
-          autoCorrect={false}
-          placeholder="Confirm new password"
-          placeholderTextColor={WarshPalette.subtleBrown}
-        />
-        <TouchableOpacity onPress={() => setShowConfirmPassword((v) => !v)} hitSlop={8}>
-          <Ionicons
-            name={showConfirmPassword ? "eye-off-outline" : "eye-outline"}
-            size={20}
-            color={WarshPalette.subtleBrown}
+          <Text style={[styles.title, isUrdu ? styles.rtlText : null]}>
+            {t("auth.newPasswordTitle")}
+          </Text>
+          <Text style={[styles.subtitle, isUrdu ? styles.rtlText : null]}>
+            {t("auth.newPasswordBody")}
+          </Text>
+
+          <AuthInput
+            placeholder={t("auth.newPassword")}
+            value={newPassword}
+            onChangeText={setNewPassword}
+            secure
+            textContentType="newPassword"
+            containerStyle={styles.field}
           />
-        </TouchableOpacity>
-      </View>
+          <AuthInput
+            placeholder={t("auth.confirmPassword")}
+            value={confirmPassword}
+            onChangeText={setConfirmPassword}
+            secure
+            textContentType="newPassword"
+            containerStyle={styles.field}
+          />
 
-      <BrandButton
-        title="Update password"
-        onPress={handleSubmit}
-        loading={loading}
-        style={styles.submitBtn}
-      />
+          {error ? <Text style={styles.error}>{error}</Text> : null}
 
-      <TouchableOpacity onPress={() => router.replace("/(auth)/login")} style={styles.backLink} hitSlop={8}>
-        <Text style={styles.backLinkText}>Back to login</Text>
-      </TouchableOpacity>
-    </KeyboardAvoidingView>
+          <BrandButton
+            title={t("auth.updatePassword")}
+            onPress={handleSubmit}
+            loading={loading}
+          />
+
+          <Pressable onPress={() => router.replace("/(auth)/login")} hitSlop={8} style={styles.back}>
+            <Text style={styles.backText}>{t("auth.backToLoginPlain")}</Text>
+          </Pressable>
+        </View>
+      </KeyboardAvoidingView>
     </WebAuthLayout>
   );
 }
 
 const styles = StyleSheet.create({
+  flex: { flex: 1 },
   screen: {
     flex: 1,
     backgroundColor: Colors.bg.primary,
-    paddingHorizontal: Spacing.xl,
-    justifyContent: "center",
+    paddingHorizontal: Spacing.xxl,
   },
-  webScreen: {
-    flex: undefined,
-    width: "100%",
-    paddingHorizontal: 0,
-  },
-  brandMark: {
-    textAlign: "center",
-    color: WarshPalette.gold,
-    marginBottom: Spacing.xl,
+  logo: {
+    width: 82,
+    height: 56,
+    alignSelf: "center",
+    marginBottom: Spacing.xxxl,
   },
   title: {
+    fontFamily: Fonts.display,
+    fontSize: FontSizes.display,
+    lineHeight: LineHeights.display,
     color: WarshPalette.ink,
-    fontFamily: Fonts.bold,
-    fontSize: FontSizes.h1,
-    lineHeight: LineHeights.h1,
-    fontWeight: "700",
-    textAlign: "center",
     marginBottom: Spacing.sm,
   },
   subtitle: {
-    color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM,
-    lineHeight: LineHeights.bodyM,
-    textAlign: "center",
+    fontSize: FontSizes.bodyL,
+    lineHeight: LineHeights.bodyL,
+    color: WarshPalette.bodyBrown,
     marginBottom: Spacing.xl,
   },
-  errorText: {
-    color: WarshPalette.wrongText,
+  rtlText: {
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  field: {
+    marginBottom: Spacing.lg,
+  },
+  error: {
     fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM,
     lineHeight: LineHeights.bodyM,
+    color: WarshPalette.wrongText,
     marginBottom: Spacing.md,
-    textAlign: "center",
   },
-  inputRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: WarshPalette.white,
-    borderWidth: 1,
-    borderColor: WarshPalette.defaultCardBorder,
-    borderRadius: Radii.md,
-    paddingHorizontal: Spacing.md,
-  },
-  input: {
-    flex: 1,
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM,
-    color: WarshPalette.ink,
-    paddingVertical: Spacing.md,
-  },
-  submitBtn: { marginTop: Spacing.xl },
-  backLink: {
+  back: {
     marginTop: Spacing.lg,
     alignItems: "center",
   },
-  backLinkText: {
-    color: WarshPalette.gold,
+  backText: {
     fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM,
+    color: WarshPalette.gold,
   },
 });
