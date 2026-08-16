@@ -1,6 +1,17 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Constructed lazily: the Resend client throws when the key is absent, and doing
+// that at module scope fails `next build` page-data collection on any deployment
+// without RESEND_API_KEY. Every caller below already skips sending when unset.
+let client: Resend | null = null;
+
+function getResend(): Resend {
+  if (!client) {
+    client = new Resend(process.env.RESEND_API_KEY);
+  }
+  return client;
+}
+
 const FROM = process.env.SMTP_FROM_EMAIL ?? "noreply@warsh.app";
 
 export async function sendPasswordResetEmail(toEmail: string, resetUrl: string): Promise<void> {
@@ -9,7 +20,7 @@ export async function sendPasswordResetEmail(toEmail: string, resetUrl: string):
     return;
   }
 
-  const { error } = await resend.emails.send({
+  const { error } = await getResend().emails.send({
     from: `Warsh <${FROM}>`,
     to: [toEmail],
     subject: "Reset your Warsh password",
@@ -40,7 +51,7 @@ export async function sendPasswordResetEmail(toEmail: string, resetUrl: string):
 export async function sendPasswordChangedEmail(toEmail: string): Promise<void> {
   if (!process.env.RESEND_API_KEY) return;
 
-  const { error } = await resend.emails.send({
+  const { error } = await getResend().emails.send({
     from: `Warsh <${FROM}>`,
     to: [toEmail],
     subject: "Your Warsh password was changed",
