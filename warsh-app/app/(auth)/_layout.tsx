@@ -1,13 +1,5 @@
-import { Slot, usePathname } from "expo-router";
-
-import { WebOnboardingLayout } from "../../components/WebOnboardingLayout";
+import { Slot } from "expo-router";
 
 export default function AuthLayout() {
-  const pathname = usePathname();
-
-  return (
-    <WebOnboardingLayout pathname={pathname}>
-      <Slot />
-    </WebOnboardingLayout>
-  );
+  return <Slot />;
 }

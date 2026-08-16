@@ -1,31 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { Animated, Platform, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useAuthStore } from "@stores/authStore";
-import { WarshPalette } from "../constants/theme";
-
-export const PREVIEW_SEEN_KEY = "warsh_preview_seen";
+import { Fonts, WarshPalette } from "../constants/theme";
 
 export default function Index() {
   const router = useRouter();
   const isHydrated = useAuthStore((s) => s.isHydrated);
   const token = useAuthStore((s) => s.token);
-  const [previewChecked, setPreviewChecked] = useState(false);
-  const [hasSeenPreview, setHasSeenPreview] = useState(false);
   const [readyToNavigate, setReadyToNavigate] = useState(false);
 
   // Animation values
   const latinOpacity = useRef(new Animated.Value(0)).current;
   const arabicOpacity = useRef(new Animated.Value(0)).current;
   const taglineOpacity = useRef(new Animated.Value(0)).current;
-
-  useEffect(() => {
-    AsyncStorage.getItem(PREVIEW_SEEN_KEY).then((val) => {
-      setHasSeenPreview(val === "1");
-      setPreviewChecked(true);
-    });
-  }, []);
 
   // Run the splash animation sequence
   useEffect(() => {
@@ -63,16 +51,17 @@ export default function Index() {
     });
   }, []);
 
+  // Every signed-out user gets the same onboarding screen — first launch or
+  // fiftieth (user decision 2026-08-16). The old `warsh_preview_seen` branch
+  // that skipped straight to login is gone.
   useEffect(() => {
-    if (!isHydrated || !previewChecked || !readyToNavigate) return;
+    if (!isHydrated || !readyToNavigate) return;
     if (token) {
       router.replace("/(app)/(tabs)");
-    } else if (hasSeenPreview) {
-      router.replace("/(auth)/login");
     } else {
-      router.replace("/(auth)/preview/a1-welcome");
+      router.replace("/(auth)/auth-options");
     }
-  }, [isHydrated, previewChecked, token, hasSeenPreview, readyToNavigate]);
+  }, [isHydrated, token, readyToNavigate]);
 
   return (
     <View style={styles.container}>
@@ -126,13 +115,13 @@ const styles = StyleSheet.create({
     alignItems: "baseline",
   },
   latinWord: {
-    fontFamily: "Lora-Bold",
+    fontFamily: Fonts.display,
     fontSize: 36,
     color: WarshPalette.ink,
     letterSpacing: 1,
   },
   separator: {
-    fontFamily: "Lora-Regular",
+    fontFamily: Fonts.displayRegular,
     fontSize: 28,
     color: WarshPalette.sage,
   },
@@ -144,7 +133,7 @@ const styles = StyleSheet.create({
     lineHeight: 52,
   },
   tagline: {
-    fontFamily: "Lora-Italic",
+    fontFamily: Fonts.italic,
     fontSize: 14,
     color: WarshPalette.sage,
     letterSpacing: 0.5,
