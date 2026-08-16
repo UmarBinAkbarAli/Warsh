@@ -120,7 +120,7 @@ new Google users receive a non-usable random password hash and
 `EXPO_PUBLIC_API_URL` is required and must be environment-appropriate:
 
 - Local physical device through USB reverse: `http://127.0.0.1:3000`
-- Staging: `https://api-staging.warsh.app`
+- Staging: `https://warsh-git-staging-warshapp-projects.vercel.app`
 - Production Android: `https://api.warsh.app`
 - Production web export: `https://app.warsh.app`; Vercel rewrites
   `/api/*` server-side to `https://api.warsh.app/api/*`
@@ -439,12 +439,48 @@ For local Metro/backend development:
 
 The development mode verifies ADB, creates reverse tunnels for Metro/backend, starts the backend, waits for health, and starts Expo with `http://127.0.0.1:3000`.
 
-### Isolated staging before production
+### Deployed staging environment
 
-Content and data changes must be verified against staging before any production
-write or deployment. The maintained local staging workflow uses a persistent
-PostgreSQL container bound only to `127.0.0.1:55432`; it never uses the
-production database URL.
+The `staging` git branch is the shared staging tier. Pushing to it makes Vercel
+build a Preview deployment of every project from the `warshapp-projects` team:
+
+| Project | Staging URL |
+| --- | --- |
+| `warsh` (API) | `https://warsh-git-staging-warshapp-projects.vercel.app` |
+| `warsh-web` | `https://warsh-web-git-staging-warshapp-projects.vercel.app` |
+| `warsh-site` | `https://warsh-site-git-staging-warshapp-projects.vercel.app` |
+
+Staging runs against the Neon `staging` branch of project `late-fog-22959847`
+(endpoint `ep-gentle-pine-ayycp3ad`), created from `production` by copy-on-write.
+It holds a full copy of production data and is completely isolated: writes there
+can never reach production. Refresh it by deleting and re-branching from
+`production` when staging data drifts too far.
+
+Staging environment variables live on the `warsh` project scoped to
+**Preview + branch `staging`**. They must never be scoped to Production. Staging
+carries its own `JWT_SECRET`, `ADMIN_DASHBOARD_TOKEN`, and `CRON_SECRET`, so a
+staging session or admin token is worthless against production.
+
+Promotion order is local → `staging` → `main`. Merging `staging` into `main`
+deploys production.
+
+Two known hazards:
+
+- The personal `umarbinakbarali` Vercel account also holds projects named
+  `warsh`/`warsh-web`/`warsh-site`. Production lives in **`warshapp-projects`**.
+  Confirm the team before changing any Vercel setting; `.vercel/project.json`
+  points at `warshapp-projects` but the CLI may authenticate as the personal
+  account and silently write to the wrong project.
+- `DIRECT_DATABASE_URL` remains scoped to Production *and* Preview at the
+  environment level. The `staging`-branch value overrides it, but any other
+  preview branch still resolves the production database. Narrow it to Production
+  when convenient.
+
+### Isolated local staging database
+
+For content authoring that should not touch the shared staging tier, the local
+workflow uses a persistent PostgreSQL container bound only to
+`127.0.0.1:55432`; it never uses the production database URL.
 
 ```powershell
 # Create/start staging, apply migrations, refresh authored content, then launch
@@ -486,11 +522,12 @@ npm run content:promote-tadabbur
 npm run content:promote-tadabbur -- --apply
 ```
 
-`warsh-app/eas.json` reserves `https://api-staging.warsh.app` for remote preview
-builds, but that hostname is not currently operational. Until a separately
-provisioned remote staging backend/database is live and health-checked, use the
-isolated local staging workflow above. Never point a preview build at the
-production database.
+`warsh-app/eas.json`'s `preview` profile builds against the deployed staging API
+at `https://warsh-git-staging-warshapp-projects.vercel.app`, which resolves to
+the Neon `staging` branch. The older `api-staging.warsh.app` hostname was never
+provisioned; do not reintroduce it without creating the DNS record and a domain
+alias on the `warsh` project. Never point a preview build at the production
+database.
 
 For Metro against production:
 
@@ -575,7 +612,7 @@ npx tsc --noEmit
 EAS profiles:
 
 - `development` — internal development client
-- `preview` — staging APK using `api-staging.warsh.app`
+- `preview` — staging APK using the `staging` branch preview API
 - `previewProd` — production-API APK
 - `production` — production channel/build submitted to the Closed testing `alpha` track
 
