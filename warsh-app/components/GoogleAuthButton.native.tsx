@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { Pressable, StyleSheet, View } from "react-native";
+import { ActivityIndicator, Image, Pressable, StyleSheet, Text } from "react-native";
 import {
   GoogleOneTapSignIn,
-  GoogleSignInButton,
   isNoSavedCredentialFoundResponse,
   isSuccessResponse,
 } from "react-native-nitro-google-signin";
 import { ensureGoogleSignInConfigured } from "@services/googleSignIn";
+import { useT } from "@i18n/index";
+import { Fonts, FontSizes, Radii, Spacing, WarshPalette } from "../constants/theme";
 
 type Props = {
   loading?: boolean;
@@ -14,7 +15,16 @@ type Props = {
   onError: (error: unknown) => void;
 };
 
+/**
+ * 2026-08 redesign: gold-outlined button matching the onboarding frames.
+ * Previously this rendered the vendor's `GoogleSignInButton`, but that view
+ * was already decorative — `pointerEvents="none"` with a transparent
+ * Pressable on top doing the real work — so swapping the visual changes
+ * nothing about the sign-in path. Google's official "G" mark is kept as
+ * required by their branding terms.
+ */
 export function GoogleAuthButton({ loading = false, onToken, onError }: Props) {
+  const t = useT();
   const [providerLoading, setProviderLoading] = useState(false);
 
   async function handlePress() {
@@ -42,41 +52,52 @@ export function GoogleAuthButton({ loading = false, onToken, onError }: Props) {
   const busy = loading || providerLoading;
 
   return (
-    <View style={styles.container}>
-      <View
-        importantForAccessibility="no-hide-descendants"
-        pointerEvents="none"
-        style={StyleSheet.absoluteFill}
-      >
-        <GoogleSignInButton
-          colorScheme="light"
-          size="wide"
-          contentAlignment="center"
-          signInBehavior="none"
-          loading={busy}
-          disabled={busy}
-          style={styles.nativeButton}
-        />
-      </View>
-      <Pressable
-        accessibilityLabel="Continue with Google"
-        accessibilityRole="button"
-        accessibilityState={{ disabled: busy, busy }}
-        disabled={busy}
-        onPress={() => void handlePress()}
-        style={StyleSheet.absoluteFill}
-      />
-    </View>
+    <Pressable
+      accessibilityLabel={t("auth.continueGoogle")}
+      accessibilityRole="button"
+      accessibilityState={{ disabled: busy, busy }}
+      disabled={busy}
+      onPress={() => void handlePress()}
+      style={({ pressed }) => [styles.button, pressed && !busy ? styles.pressed : null]}
+    >
+      {busy ? (
+        <ActivityIndicator color={WarshPalette.subtleBrown} />
+      ) : (
+        <>
+          <Image
+            source={require("../assets/images/google-g.png")}
+            style={styles.icon}
+            resizeMode="contain"
+          />
+          <Text style={styles.label}>{t("auth.continueGoogle")}</Text>
+        </>
+      )}
+    </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-    height: 54,
+  button: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: Spacing.sm,
+    height: 56,
+    borderWidth: 1,
+    borderColor: WarshPalette.gold,
+    borderRadius: Radii.sm,
   },
-  nativeButton: {
-    width: "100%",
-    height: 54,
+  pressed: {
+    backgroundColor: WarshPalette.highlightBgSoft,
+  },
+  icon: {
+    width: 24,
+    height: 24,
+  },
+  label: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+    fontWeight: "600",
+    color: WarshPalette.subtleBrown,
   },
 });

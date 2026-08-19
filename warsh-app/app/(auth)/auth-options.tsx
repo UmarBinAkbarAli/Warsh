@@ -1,219 +1,288 @@
-import { Linking, Platform, View, Text, StyleSheet, TouchableOpacity, useWindowDimensions } from "react-native";
+import { useRef, useState } from "react";
+import {
+  FlatList,
+  Image,
+  Linking,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
+  Platform,
+  Pressable,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import { ArabicText } from "@components/ArabicText";
-import { useT } from "@i18n/index";
-import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import { WEB_BASE_URL } from "@services/api";
+
 import { GoogleAuthSection } from "@components/GoogleAuthSection";
+import { LanguageSheet } from "@components/LanguageSheet";
 import { WebAuthLayout } from "@components/WebAuthLayout";
+import { useOnboardingStore } from "@stores/onboardingStore";
+import { WEB_BASE_URL } from "@services/api";
 import { useLanguage } from "@services/language";
+import { useT } from "@i18n/index";
+import {
+  Colors,
+  Fonts,
+  FontSizes,
+  LineHeights,
+  Radii,
+  Spacing,
+  WarshPalette,
+} from "../../constants/theme";
 
-type Provider = {
-  label: string;
-  icon: string;
-  bg: string;
-  text: string;
-  border?: string;
-  onPress: () => void;
-};
+// Hero art is a flat illustration exported from Figma at 3x (412 x 348).
+const HERO_ASPECT = 412 / 348;
 
-export default function AuthOptionsScreen() {
+const SLIDES = [
+  { key: "s1", art: require("../../assets/images/onboarding-hero-1.png") },
+  { key: "s2", art: require("../../assets/images/onboarding-hero-2.png") },
+  { key: "s3", art: require("../../assets/images/onboarding-hero-3.png") },
+];
+
+export default function OnboardingScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const language = useLanguage();
   const t = useT();
-  const isUrdu = language === "ur";
   const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 900;
+  const language = useOnboardingStore((s) => s.language);
+  const isUrdu = useLanguage() === "ur";
 
-  const providers: Provider[] = [
-    {
-      label: t("auth.continueEmail"),
-      icon: "mail-outline",
-      bg: desktopWeb ? WarshPalette.navy : WarshPalette.gold,
-      text: desktopWeb ? WarshPalette.white : WarshPalette.ink,
-      onPress: () => router.push("/(auth)/register"),
-    },
-  ];
+  const [index, setIndex] = useState(0);
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const listRef = useRef<FlatList>(null);
 
-  const content = (
-    <View
-      style={[
-        styles.screen,
-        desktopWeb ? styles.webScreen : null,
-        {
-          paddingTop: desktopWeb ? 0 : insets.top + (Platform.OS === "web" ? 24 : 0),
-          paddingBottom: insets.bottom,
-        },
-      ]}
-    >
-      {/* Back */}
-      {!desktopWeb ? (
-        <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
-          <Ionicons name={isUrdu ? "chevron-forward" : "chevron-back"} size={24} color={WarshPalette.ink} />
-        </TouchableOpacity>
-      ) : null}
+  // The slide track is laid out against the rendered content width, which on
+  // web is the phone column rather than the window.
+  const trackWidth = Platform.OS === "web" ? Math.min(width, 480) : width;
 
-      {/* Header */}
-      <View style={styles.header}>
-        {!desktopWeb ? <ArabicText size="sm" style={styles.bismillah}>
-          بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-        </ArabicText> : null}
-        <Text style={[styles.title, isUrdu ? styles.urduText : null]}>
-          {desktopWeb ? "Let’s sign you up to continue" : t("auth.signupTitle")}
-        </Text>
-      </View>
+  function onMomentumEnd(event: NativeSyntheticEvent<NativeScrollEvent>) {
+    const next = Math.round(event.nativeEvent.contentOffset.x / trackWidth);
+    if (next !== index) setIndex(next);
+  }
 
-      {/* Provider buttons */}
-      <View style={styles.providers}>
-        <GoogleAuthSection context="signup" />
-        {providers.map((p) => (
-          <TouchableOpacity
-            key={p.label}
-            style={[
-              styles.providerBtn,
-              { backgroundColor: p.bg },
-              p.border ? { borderWidth: 1, borderColor: p.border } : null,
-            ]}
-            onPress={p.onPress}
-            activeOpacity={0.85}
+  return (
+    <WebAuthLayout>
+      <View style={[styles.screen, { paddingTop: insets.top }]}>
+        {/* Top bar — logo left, language pill right */}
+        <View style={styles.topBar}>
+          <Image
+            source={require("../../assets/images/warsh-logo.png")}
+            style={styles.logo}
+            resizeMode="contain"
+            accessibilityLabel="Warsh"
+          />
+          <Pressable
+            onPress={() => setSheetOpen(true)}
+            accessibilityRole="button"
+            accessibilityLabel={t("language.sheetTitle")}
+            style={styles.langPill}
+            hitSlop={8}
           >
-            <Ionicons
-              name={p.icon as any}
-              size={20}
-              color={p.text}
-              style={[styles.providerIcon, isUrdu ? styles.providerIconUrdu : null]}
-            />
-            <Text style={[styles.providerLabel, { color: p.text }, isUrdu ? styles.urduText : null]}>
-              {p.label}
+            <Ionicons name="globe-outline" size={16} color={WarshPalette.gold} />
+            <Text style={styles.langCode}>{language === "ur" ? "UR" : "EN"}</Text>
+            <Ionicons name="chevron-down" size={13} color={WarshPalette.subtleBrown} />
+          </Pressable>
+        </View>
+
+        {/* Slides — hero art plus its copy move together */}
+        <FlatList
+          ref={listRef}
+          data={SLIDES}
+          keyExtractor={(item) => item.key}
+          horizontal
+          pagingEnabled
+          showsHorizontalScrollIndicator={false}
+          onMomentumScrollEnd={onMomentumEnd}
+          style={styles.track}
+          renderItem={({ item, index: i }) => (
+            <View style={[styles.slide, { width: trackWidth }]}>
+              <Image
+                source={item.art}
+                style={{ width: trackWidth, height: trackWidth / HERO_ASPECT }}
+                resizeMode="contain"
+              />
+              <View style={styles.copy}>
+                <Text style={styles.title}>{t(`onboarding.slide${i + 1}Title`)}</Text>
+                <Text style={styles.body}>{t(`onboarding.slide${i + 1}Body`)}</Text>
+              </View>
+            </View>
+          )}
+        />
+
+        {/* Pager dots */}
+        <View style={styles.pager}>
+          {SLIDES.map((slide, i) => (
+            <View key={slide.key} style={[styles.dot, i === index ? styles.dotActive : null]} />
+          ))}
+        </View>
+
+        {/* Auth choices */}
+        <View style={styles.actions}>
+          <GoogleAuthSection context="signup" />
+          <Pressable
+            onPress={() => router.push("/(auth)/login")}
+            accessibilityRole="button"
+            style={({ pressed }) => [styles.emailBtn, pressed ? styles.emailBtnPressed : null]}
+          >
+            <Ionicons name="mail-outline" size={24} color={WarshPalette.ink} />
+            <Text style={styles.emailLabel}>{t("auth.continueEmail")}</Text>
+          </Pressable>
+        </View>
+
+        {/* Legal */}
+        <View style={[styles.legal, { marginBottom: insets.bottom + Spacing.md }]}>
+          <Text style={styles.legalLine}>{t("auth.legalPrefix")}</Text>
+          <View style={[styles.legalLinks, isUrdu ? styles.legalLinksRtl : null]}>
+            <Text
+              style={styles.legalLink}
+              onPress={() => void Linking.openURL(`${WEB_BASE_URL}/terms`)}
+            >
+              {t("auth.terms")}
             </Text>
-          </TouchableOpacity>
-        ))}
-      </View>
+            <Text style={styles.legalLine}>{t("auth.legalAnd")}</Text>
+            <Text
+              style={styles.legalLink}
+              onPress={() => void Linking.openURL(`${WEB_BASE_URL}/privacy`)}
+            >
+              {t("auth.privacy")}
+            </Text>
+          </View>
+        </View>
 
-      {/* Legal */}
-      <Text style={[styles.legal, isUrdu ? styles.urduText : null]}>
-        {t("auth.legalPrefix")}{" "}
-        <Text style={styles.legalLink} onPress={() => void Linking.openURL(`${WEB_BASE_URL}/terms`)}>
-          {t("auth.terms")}
-        </Text>
-        {" "}{t("auth.legalAnd")}{" "}
-        <Text style={styles.legalLink} onPress={() => void Linking.openURL(`${WEB_BASE_URL}/privacy`)}>
-          {t("auth.privacy")}
-        </Text>
-        {t("auth.legalSuffix")}
-      </Text>
-
-      {/* Login link */}
-      <View style={[styles.loginRow, isUrdu ? styles.loginRowUrdu : null]}>
-        <Text style={[styles.loginText, isUrdu ? styles.urduText : null]}>
-          {t("auth.alreadyAccount")}{" "}
-        </Text>
-        <TouchableOpacity onPress={() => router.push("/(auth)/login")}>
-          <Text style={[styles.loginLink, isUrdu ? styles.urduText : null]}>{t("auth.logIn")}</Text>
-        </TouchableOpacity>
+        <LanguageSheet visible={sheetOpen} onClose={() => setSheetOpen(false)} />
       </View>
-    </View>
+    </WebAuthLayout>
   );
-
-  return <WebAuthLayout>{content}</WebAuthLayout>;
 }
 
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: Colors.bg.emphasis,
-    paddingHorizontal: Spacing.xl,
+    backgroundColor: Colors.bg.primary,
   },
-  webScreen: {
-    flex: undefined,
-    width: "100%",
-    paddingHorizontal: 0,
-    backgroundColor: "transparent",
+  topBar: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: Spacing.xxl,
+    paddingVertical: 6,
+    height: 48,
   },
-  backBtn: {
-    marginTop: Spacing.md,
-    width: 40,
-    height: 40,
-    justifyContent: "center",
+  logo: {
+    width: 41,
+    height: 28,
   },
-  header: {
-    marginTop: Spacing.xl,
-    marginBottom: Spacing.xl,
+  langPill: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.xs,
+    height: 28,
+    paddingHorizontal: Spacing.md,
+    borderRadius: Radii.full,
+    backgroundColor: WarshPalette.neutralChip,
+  },
+  langCode: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.caption,
+    fontWeight: "600",
+    letterSpacing: 0.6,
+    color: WarshPalette.navy,
+  },
+  track: {
+    flexGrow: 0,
+  },
+  slide: {
     alignItems: "center",
   },
-  bismillah: {
-    color: WarshPalette.gold,
-    marginBottom: Spacing.md,
+  copy: {
+    paddingHorizontal: Spacing.xxl,
+    paddingTop: Spacing.xxxl - 8,
+    gap: 10,
+    alignItems: "center",
   },
   title: {
-    fontFamily: Fonts.bold,
-    fontSize: FontSizes.displayL,
-    lineHeight: LineHeights.displayL * 1.3,
+    fontFamily: Fonts.display,
+    fontSize: FontSizes.display,
+    lineHeight: LineHeights.display,
     color: WarshPalette.ink,
-    fontWeight: "700",
     textAlign: "center",
   },
-  providers: {
-    gap: Spacing.md,
-    marginBottom: Spacing.xl,
+  body: {
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    lineHeight: LineHeights.bodyM,
+    color: WarshPalette.bodyBrown,
+    textAlign: "center",
   },
-  providerBtn: {
+  pager: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 6,
+    paddingVertical: Spacing.xl,
+  },
+  dot: {
+    width: 7,
+    height: 7,
+    borderRadius: Radii.full,
+    backgroundColor: "rgba(196, 155, 77, 0.27)", // gold @ 27%
+  },
+  dotActive: {
+    width: 24,
+    backgroundColor: WarshPalette.gold,
+  },
+  actions: {
+    marginTop: "auto",
+    paddingHorizontal: Spacing.xxl,
+    gap: Spacing.sm,
+  },
+  emailBtn: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    height: 54,
-    borderRadius: Radii.full,
-    paddingHorizontal: Spacing.xl,
+    gap: Spacing.sm,
+    height: 56,
+    borderWidth: 1,
+    borderColor: WarshPalette.gold,
+    borderRadius: Radii.sm,
   },
-  providerIcon: {
-    position: "absolute",
-    left: Spacing.xl,
+  emailBtnPressed: {
+    backgroundColor: WarshPalette.highlightBgSoft,
   },
-  providerIconUrdu: {
-    left: undefined,
-    right: Spacing.xl,
-  },
-  providerLabel: {
+  emailLabel: {
     fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.bodyL,
+    fontSize: FontSizes.bodyM,
     fontWeight: "600",
+    color: WarshPalette.subtleBrown,
   },
   legal: {
-    color: WarshPalette.bodyBrown,
+    alignItems: "center",
+    gap: 2,
+    marginTop: Spacing.xl,
+    paddingHorizontal: Spacing.xxl,
+  },
+  legalLine: {
     fontFamily: Fonts.regular,
     fontSize: FontSizes.caption,
+    lineHeight: 17,
+    color: WarshPalette.subtleBrown,
     textAlign: "center",
-    lineHeight: 16,
-    marginBottom: Spacing.lg,
   },
-  legalLink: {
-    color: WarshPalette.gold,
-    textDecorationLine: "underline",
-  },
-  loginRow: {
+  legalLinks: {
     flexDirection: "row",
-    justifyContent: "center",
     alignItems: "center",
+    gap: Spacing.xs,
   },
-  loginRowUrdu: {
+  legalLinksRtl: {
     flexDirection: "row-reverse",
   },
-  urduText: {
-    fontFamily: Fonts.urduFallback,
-    writingDirection: "rtl",
-  },
-  loginText: {
-    color: WarshPalette.bodyBrown,
+  legalLink: {
     fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM,
-  },
-  loginLink: {
-    color: WarshPalette.gold,
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.bodyM,
-    fontWeight: "600",
+    fontSize: FontSizes.caption,
+    lineHeight: 15,
+    color: WarshPalette.goldDeep,
   },
 });

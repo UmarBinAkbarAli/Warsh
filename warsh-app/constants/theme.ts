@@ -13,7 +13,7 @@ export const WarshPalette = {
   goldDeep: "#A88648", // --gold-deep (pressed states, gold text on light bg)
   parchment: "#D4B06A", // --gold-soft / A1 gold-light (muted-gold accent, text on navy)
   cream: "#EDDFAF", // --parchment-deep (borders, grouping surfaces)
-  creamBg: "#FAF7F0", // --screen-bg (primary screen background)
+  creamBg: "#F8F4ED", // --screen-bg (primary screen background; 2026-08 redesign)
   parchmentDeep: "#F4EBD0", // --parchment-deep (selected/grouped emphasis)
   parchmentBg: "#FAF6E9", // --surface-card (card background)
   parchmentSoft: "#FAF2DD", // --parchment-soft (emphasis cards)
@@ -46,6 +46,9 @@ export const WarshPalette = {
   highlightBorder: "#D4B06A", // gold-light
   highlightBgSoft: "#FDF8EA", // lighter gold-tinted parchment
   closeBg: "#FAF2DD", // --parchment-soft
+  // 2026-08 auth redesign
+  neutralChip: "#F2F2F2", // language pill fill on the onboarding top bar
+  googleRed: "#EA4335", // Google brand mark — brand-locked, never re-tint
 } as const;
 
 export const Colors = {
@@ -89,15 +92,22 @@ export const Fonts: Record<string, string | undefined> = {
   arabicBold: "Scheherazade New Bold",
   arabicSemiBold: "Scheherazade New SemiBold",
   arabicMedium: "Scheherazade New Medium",
-  regular: "Lora-Regular",
-  semiBold: "Lora-SemiBold",
-  bold: "Lora-Bold",
-  italic: "Lora-Italic",
+  // UI/body role — Inter (replaced Lora app-wide, user decision 2026-08-16).
+  regular: "Inter-Regular",
+  semiBold: "Inter-SemiBold",
+  bold: "Inter-Bold",
+  italic: "Inter-Italic",
+  // Display role — Cormorant Garamond for screen titles and the wordmark.
+  display: "CormorantGaramond-Bold",
+  displaySemiBold: "CormorantGaramond-SemiBold",
+  displayRegular: "CormorantGaramond-Regular",
   urduFallback: "Scheherazade New",
 };
 
 // Spec-11 §3.3 type scale: base body 16/24, screen titles 28/38.
 export const FontSizes = {
+  // Cormorant Garamond display title, 30/36 (2026-08 auth redesign)
+  display: 30,
   displayXL: 28,
   displayL: 22,
   h1: 22,
@@ -115,6 +125,7 @@ export const FontSizes = {
 } as const;
 
 export const LineHeights = {
+  display: 36,
   displayXL: 38,
   displayL: 32,
   h1: 32,
@@ -132,6 +143,7 @@ export const LineHeights = {
 } as const;
 
 export const Radii = {
+  xs: 4, // text inputs (2026-08 auth redesign)
   sm: 8,
   md: 12,
   lg: 16,

@@ -1,142 +1,205 @@
-import { Platform, View, Text, StyleSheet, useWindowDimensions } from "react-native";
-import { TextInput } from "react-native-paper";
 import { useState } from "react";
+import {
+  Image,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { Link, useRouter } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+
 import { useAuth } from "@hooks/useAuth";
 import { ArabicText } from "@components/ArabicText";
+import { AuthInput } from "@components/AuthInput";
 import { BrandButton } from "@components/BrandButton";
-import { getApiErrorMessage } from "@services/api";
-import { Colors, FontSizes, LineHeights, Spacing, WarshPalette } from "../../constants/theme";
-import { trackLoginCompleted } from "@services/analytics";
-import { GoogleAuthSection } from "@components/GoogleAuthSection";
 import { WebAuthLayout } from "@components/WebAuthLayout";
+import { getApiErrorMessage } from "@services/api";
+import { trackLoginCompleted } from "@services/analytics";
+import { useLanguage } from "@services/language";
+import { useT } from "@i18n/index";
+import {
+  Colors,
+  Fonts,
+  FontSizes,
+  LineHeights,
+  Spacing,
+  WarshPalette,
+} from "../../constants/theme";
 
 export default function LoginScreen() {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
+  const t = useT();
+  const isUrdu = useLanguage() === "ur";
   const { login } = useAuth();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const { width } = useWindowDimensions();
-  const desktopWeb = Platform.OS === "web" && width >= 900;
 
   async function handleSubmit() {
     setLoading(true);
     setError("");
     try {
-      await login(email, password);
+      await login(email.trim(), password);
       trackLoginCompleted();
       router.replace("/(app)");
     } catch (err) {
-      setError(getApiErrorMessage(err, "Unable to sign in. Check your credentials and try again."));
+      setError(getApiErrorMessage(err, t("auth.loginFailed")));
     } finally {
       setLoading(false);
     }
   }
 
-  const content = (
-    <View style={[styles.screen, desktopWeb ? styles.webScreen : null]}>
-      {!desktopWeb ? <ArabicText size="sm" style={{ textAlign: "center", marginBottom: Spacing.sm }}>
-        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-      </ArabicText> : null}
-      <Text style={styles.heading}>Welcome back to Warsh</Text>
-      <Text style={styles.subheading}>Pick up where you left off. Your next word is waiting.</Text>
-
-      <GoogleAuthSection context="login" />
-
-      <TextInput
-        label="Email"
-        value={email}
-        onChangeText={setEmail}
-        mode="outlined"
-        keyboardType="email-address"
-        autoCapitalize="none"
-        style={[styles.input, desktopWeb ? styles.webInput : null]}
-      />
-      <TextInput
-        label="Password"
-        value={password}
-        onChangeText={setPassword}
-        mode="outlined"
-        secureTextEntry={!showPassword}
-        right={
-          <TextInput.Icon
-            icon={showPassword ? "eye-off-outline" : "eye-outline"}
-            onPress={() => setShowPassword((value) => !value)}
-            forceTextInputFocus={false}
+  return (
+    <WebAuthLayout>
+      <KeyboardAvoidingView
+        style={styles.flex}
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
+      >
+        <ScrollView
+          style={styles.flex}
+          contentContainerStyle={[
+            styles.screen,
+            { paddingTop: insets.top + Spacing.xxxl, paddingBottom: insets.bottom + Spacing.xl },
+          ]}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+        >
+          <Image
+            source={require("../../assets/images/warsh-logo.png")}
+            style={styles.logo}
+            resizeMode="contain"
+            accessibilityLabel="Warsh"
           />
-        }
-        style={[styles.input, desktopWeb ? styles.webInput : null]}
-      />
+          <ArabicText size="sm" style={styles.bismillah}>
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+          </ArabicText>
 
-      {error ? <Text style={styles.error}>{error}</Text> : null}
-      <BrandButton
-        title="Sign In"
-        onPress={handleSubmit}
-        loading={loading}
-        style={desktopWeb ? styles.webButton : undefined}
-      />
-      <View style={{ flexDirection: "row", justifyContent: "center", marginTop: Spacing.lg }}>
-        <Text style={{ color: Colors.text.secondary }}>Don't have an account? </Text>
-        <Link href="/(auth)/register" style={{ color: Colors.accent.gold, fontWeight: "700" }}>
-          Register
-        </Link>
-      </View>
-      <View style={{ alignItems: "center", marginTop: Spacing.sm }}>
-        <Link href="/(auth)/forgot-password" style={{ color: Colors.text.secondary, fontFamily: "Lora-Regular", fontSize: FontSizes.bodyM }}>
-          Forgot password?
-        </Link>
-      </View>
-    </View>
+          <Text style={[styles.title, isUrdu ? styles.rtlText : null]}>{t("auth.loginTitle")}</Text>
+          <Text style={[styles.subtitle, isUrdu ? styles.rtlText : null]}>{t("auth.loginBody")}</Text>
+
+          <AuthInput
+            placeholder={t("auth.email")}
+            value={email}
+            onChangeText={setEmail}
+            keyboardType="email-address"
+            textContentType="emailAddress"
+            containerStyle={styles.field}
+          />
+          <AuthInput
+            placeholder={t("auth.passwordLabel")}
+            value={password}
+            onChangeText={setPassword}
+            secure
+            textContentType="password"
+            containerStyle={styles.field}
+          />
+
+          {error ? <Text style={styles.error}>{error}</Text> : null}
+
+          <BrandButton
+            title={t("auth.signIn")}
+            onPress={handleSubmit}
+            loading={loading}
+            style={styles.cta}
+          />
+
+          <View style={[styles.switchRow, isUrdu ? styles.switchRowRtl : null]}>
+            <Text style={styles.switchText}>{t("auth.noAccount")} </Text>
+            <Link href="/(auth)/register" style={styles.switchLink}>
+              {t("auth.register")}
+            </Link>
+          </View>
+
+          <Link
+            href="/(auth)/forgot-password"
+            style={[styles.forgot, isUrdu ? styles.rtlText : null]}
+          >
+            {t("auth.forgotPassword")}
+          </Link>
+        </ScrollView>
+      </KeyboardAvoidingView>
+    </WebAuthLayout>
   );
-
-  return <WebAuthLayout>{content}</WebAuthLayout>;
 }
 
 const styles = StyleSheet.create({
+  flex: { flex: 1 },
   screen: {
-    flex: 1,
+    flexGrow: 1,
     backgroundColor: Colors.bg.primary,
-    padding: Spacing.xl,
-    justifyContent: "center",
+    paddingHorizontal: Spacing.xxl,
   },
-  webScreen: {
-    flex: undefined,
-    width: "100%",
-    padding: 0,
-    justifyContent: "flex-start",
-    backgroundColor: "transparent",
+  logo: {
+    width: 82,
+    height: 56,
+    alignSelf: "center",
   },
-  heading: {
-    color: Colors.text.primary,
-    fontSize: FontSizes.displayL,
-    lineHeight: LineHeights.displayL,
-    fontWeight: "700",
-    fontFamily: "Lora-Bold",
+  bismillah: {
+    textAlign: "center",
+    color: WarshPalette.gold,
+    marginTop: Spacing.lg,
+    marginBottom: Spacing.xxl,
+  },
+  title: {
+    fontFamily: Fonts.display,
+    fontSize: FontSizes.display,
+    lineHeight: LineHeights.display,
+    color: WarshPalette.ink,
     marginBottom: Spacing.sm,
   },
-  subheading: {
-    color: Colors.text.secondary,
-    marginBottom: Spacing.xl,
+  subtitle: {
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyL,
     lineHeight: LineHeights.bodyL,
-    fontFamily: "Lora-Regular",
+    color: WarshPalette.bodyBrown,
+    marginBottom: Spacing.xl,
   },
-  input: {
-    marginBottom: Spacing.md,
-    backgroundColor: Colors.bg.surface,
-  },
-  webInput: {
-    backgroundColor: WarshPalette.white,
-  },
-  webButton: {
-    backgroundColor: WarshPalette.navy,
-    borderColor: WarshPalette.navy,
+  field: {
+    marginBottom: Spacing.lg,
   },
   error: {
-    color: Colors.text.danger,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    lineHeight: LineHeights.bodyM,
+    color: WarshPalette.wrongText,
     marginBottom: Spacing.md,
-    fontFamily: "Lora-Regular",
+  },
+  cta: {
+    marginTop: Spacing.xl,
+  },
+  rtlText: {
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
+  switchRow: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginTop: Spacing.xl,
+  },
+  switchRowRtl: {
+    flexDirection: "row-reverse",
+  },
+  switchText: {
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    color: WarshPalette.bodyBrown,
+  },
+  switchLink: {
+    fontFamily: Fonts.bold,
+    fontSize: FontSizes.bodyM,
+    fontWeight: "700",
+    color: WarshPalette.gold,
+  },
+  forgot: {
+    marginTop: Spacing.lg,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    color: WarshPalette.bodyBrown,
   },
 });
