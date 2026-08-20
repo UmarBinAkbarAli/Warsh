@@ -43,6 +43,24 @@ if (releaseTaskRequested && !releaseSigningManagedByEas && (!releaseStorePasswor
     throw new GradleException('Release signing requires WARSH_UPLOAD_STORE_PASSWORD, WARSH_UPLOAD_KEY_PASSWORD, and WARSH_UPLOAD_KEY_ALIAS.')
 }
 
+// Expo bundles EXPO_PUBLIC_* from the shell first and falls back to warsh-app/.env,
+// which points at the local dev backend. A release built without these exported
+// bakes http://127.0.0.1:3000 into the shipped bundle and every request fails on a
+// real device, so refuse to bundle instead of shipping an unreachable API URL.
+def releaseApiUrl = System.getenv('EXPO_PUBLIC_API_URL')
+def releaseEnvironment = System.getenv('EXPO_PUBLIC_ENVIRONMENT')
+if (releaseTaskRequested && !releaseSigningManagedByEas) {
+    if (!releaseApiUrl || !releaseEnvironment) {
+        throw new GradleException('Release builds require EXPO_PUBLIC_API_URL and EXPO_PUBLIC_ENVIRONMENT to be exported (e.g. https://api.warsh.app / production).')
+    }
+    if (!releaseApiUrl.startsWith('https://')) {
+        throw new GradleException("Release builds require an HTTPS EXPO_PUBLIC_API_URL, got: ${releaseApiUrl}")
+    }
+    if (releaseEnvironment != 'production' && releaseEnvironment != 'staging') {
+        throw new GradleException("Release builds require EXPO_PUBLIC_ENVIRONMENT to be production or staging, got: ${releaseEnvironment}")
+    }
+}
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -134,7 +152,7 @@ android {
         applicationId 'com.warsh.app'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 24
+        versionCode 29
         versionName "1.0.7"
         ndk {
             // Filter dependency-provided prebuilts as well as app-compiled native code.

@@ -78,6 +78,42 @@ npx tsc --noEmit
 npm run deploy:web
 ```
 
+## Release builds (Play Store)
+
+Any Android release build **must** have the production values exported in the
+shell before Gradle runs. Expo reads `EXPO_PUBLIC_*` from the shell first and
+otherwise falls back to `warsh-app/.env`, which points at the local dev backend
+(`http://127.0.0.1:3000`, `ENVIRONMENT=development`). A release built without
+them bakes the localhost URL into the shipped bundle, and every request fails on
+a real device with "Warsh could not reach the backend" — while still working on
+the emulator, where `start-warsh.ps1` sets up ADB reverse. Note the fallback
+also sets `ENVIRONMENT=development`, which disarms the localhost guard in
+`warsh-app/services/api.ts`. This shipped to Play twice (2026-07-26, 2026-08-19).
+
+```powershell
+cd warsh-app\android
+$env:JAVA_HOME = "C:\Program Files\Eclipse Adoptium\jdk-17.0.19.10-hotspot"
+$env:EXPO_PUBLIC_API_URL = "https://api.warsh.app"
+$env:EXPO_PUBLIC_ENVIRONMENT = "production"
+$env:SENTRY_DISABLE_AUTO_UPLOAD = "true"
+$env:SENTRY_DISABLE_NATIVE_DEBUG_UPLOAD = "true"
+.\gradlew bundleRelease --console=plain   # or assembleRelease for an APK
+```
+
+Release signing additionally requires `WARSH_UPLOAD_STORE_PASSWORD`,
+`WARSH_UPLOAD_KEY_PASSWORD`, and `WARSH_UPLOAD_KEY_ALIAS` in the environment.
+`warsh-app/android/app/build.gradle` fails the build if any of the above is
+missing or non-HTTPS, but never ship on that guard alone — verify the artifact:
+
+```powershell
+cd warsh-app
+npm run verify:release-api-url    # inspects the JS bundle inside the AAB/APK
+npm run verify:play-signing
+```
+
+Bump `versionCode` in **both** `warsh-app/android/app/build.gradle` and
+`warsh-app/app.json` before uploading; Play rejects a repeated version code.
+
 ## Implementation rules
 
 - Inspect `git status` before editing and preserve unrelated changes.

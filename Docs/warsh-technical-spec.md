@@ -618,6 +618,38 @@ EAS profiles:
 
 Android identity is `com.warsh.app`.
 
+Direct local Gradle release builds must export the production values before
+Gradle runs. Expo resolves `EXPO_PUBLIC_*` from the shell first and otherwise
+falls back to `warsh-app/.env`, which targets the local dev backend
+(`http://127.0.0.1:3000`, `EXPO_PUBLIC_ENVIRONMENT=development`). A release
+built without them ships the localhost URL inside the JS bundle: every request
+fails on a real device with "Warsh could not reach the backend", while the
+emulator still works because `start-warsh.ps1` sets up ADB reverse. The same
+fallback sets the environment to `development`, which disarms the localhost
+guard in `warsh-app/services/api.ts`, so nothing fails at build time by default.
+This reached production twice (2026-07-26, 2026-08-19).
+
+```powershell
+cd warsh-app\android
+$env:JAVA_HOME = "C:\Program Files\Eclipse Adoptium\jdk-17.0.19.10-hotspot"
+$env:EXPO_PUBLIC_API_URL = "https://api.warsh.app"
+$env:EXPO_PUBLIC_ENVIRONMENT = "production"
+$env:SENTRY_DISABLE_AUTO_UPLOAD = "true"
+$env:SENTRY_DISABLE_NATIVE_DEBUG_UPLOAD = "true"
+.\gradlew bundleRelease --console=plain
+```
+
+Signing additionally requires `WARSH_UPLOAD_STORE_PASSWORD`,
+`WARSH_UPLOAD_KEY_PASSWORD`, and `WARSH_UPLOAD_KEY_ALIAS`. The Sentry flags are
+required locally because no org/project is configured for `sentry-cli`; EAS sets
+them through `eas.json`. `warsh-app/android/app/build.gradle` rejects a release
+task whose `EXPO_PUBLIC_API_URL` is missing or non-HTTPS, or whose
+`EXPO_PUBLIC_ENVIRONMENT` is not `production`/`staging`, but the artifact is
+still verified explicitly before upload — see §13.
+
+Bump `versionCode` in both `warsh-app/android/app/build.gradle` and
+`warsh-app/app.json`; Play rejects a repeated version code.
+
 For update-aware Closed testing, publish a higher version code to the same
 Closed track and wait until Play marks it available to testers. Existing
 Play-installed builds containing `AppUpdateBanner` will discover that eligible
@@ -670,6 +702,21 @@ cd ..\warsh-app
 npm run lint -- --quiet
 npx tsc --noEmit
 ```
+
+### Android artifact validation
+
+Run against the built AAB/APK before any Play upload. Source checks cannot catch
+a bundle built with the wrong environment, so the artifact itself is inspected:
+
+```powershell
+cd warsh-app
+npm run verify:release-api-url    # asserts https://api.warsh.app is baked in
+                                  # and no localhost/LAN URL survives
+npm run verify:play-signing       # asserts the Play upload certificate
+```
+
+Both must pass. `verify:release-api-url` accepts an optional path and defaults to
+`android/app/build/outputs/bundle/release/app-release.aab`.
 
 ### Runtime validation
 

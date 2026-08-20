@@ -19,7 +19,8 @@
     "ios": "expo run:ios",
     "deploy:web": "node scripts/deploy-web.mjs",
     "check:16kb": "node scripts/check-16kb-alignment.mjs",
-    "verify:play-signing": "node scripts/verify-play-signing.mjs"
+    "verify:play-signing": "node scripts/verify-play-signing.mjs",
+    "verify:release-api-url": "node scripts/verify-release-api-url.mjs"
   },
   "dependencies": {
     "@expo-google-fonts/cormorant-garamond": "^0.4.1",
