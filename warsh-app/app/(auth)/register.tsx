@@ -16,6 +16,7 @@ import { useOnboardingStore } from "@stores/onboardingStore";
 import { ArabicText } from "@components/ArabicText";
 import { AuthInput } from "@components/AuthInput";
 import { BrandButton } from "@components/BrandButton";
+import { GoogleAuthSection } from "@components/GoogleAuthSection";
 import { WebAuthLayout } from "@components/WebAuthLayout";
 import { getApiErrorMessage } from "@services/api";
 import { trackSignupCompleted } from "@services/analytics";
@@ -166,6 +167,8 @@ export default function RegisterScreen() {
               {t("auth.logIn")}
             </Link>
           </View>
+
+          <GoogleAuthSection showDivider />
         </ScrollView>
       </KeyboardAvoidingView>
     </WebAuthLayout>

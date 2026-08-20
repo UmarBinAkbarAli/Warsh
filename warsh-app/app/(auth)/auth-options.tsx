@@ -121,7 +121,7 @@ export default function OnboardingScreen() {
 
         {/* Auth choices */}
         <View style={styles.actions}>
-          <GoogleAuthSection context="signup" />
+          <GoogleAuthSection />
           <Pressable
             onPress={() => router.push("/(auth)/login")}
             accessibilityRole="button"

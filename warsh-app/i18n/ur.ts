@@ -526,6 +526,7 @@ export const ur = {
   "shadow.compare": "موازنہ کریں",
   "shadow.recordAgain": "دوبارہ ریکارڈ کریں",
   "auth.orEmail": "یا ای میل کے ساتھ جاری رکھیں",
+  "auth.or": "یا",
   "auth.password": "Warsh پاس ورڈ",
   "auth.googleError": "Google کے ساتھ جاری نہیں رکھا جا سکا۔ دوبارہ کوشش کریں۔",
   "auth.googleLinkTitle": "Google کو اپنے Warsh اکاؤنٹ سے منسلک کریں",

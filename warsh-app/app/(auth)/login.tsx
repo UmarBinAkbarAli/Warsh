@@ -15,6 +15,7 @@ import { useAuth } from "@hooks/useAuth";
 import { ArabicText } from "@components/ArabicText";
 import { AuthInput } from "@components/AuthInput";
 import { BrandButton } from "@components/BrandButton";
+import { GoogleAuthSection } from "@components/GoogleAuthSection";
 import { WebAuthLayout } from "@components/WebAuthLayout";
 import { getApiErrorMessage } from "@services/api";
 import { trackLoginCompleted } from "@services/analytics";
@@ -122,6 +123,8 @@ export default function LoginScreen() {
           >
             {t("auth.forgotPassword")}
           </Link>
+
+          <GoogleAuthSection showDivider />
         </ScrollView>
       </KeyboardAvoidingView>
     </WebAuthLayout>

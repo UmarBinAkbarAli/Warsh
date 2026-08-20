@@ -26,10 +26,10 @@ type LinkRequest = {
 };
 
 type Props = {
-  context: "login" | "signup";
+  showDivider?: boolean;
 };
 
-export function GoogleAuthSection({ context }: Props) {
+export function GoogleAuthSection({ showDivider = false }: Props) {
   const router = useRouter();
   const t = useT();
   const { loginWithGoogle, linkGoogleAccount, applyPlacement } = useAuth();
@@ -145,15 +145,15 @@ export function GoogleAuthSection({ context }: Props) {
   return (
     <>
       <View style={styles.section}>
-        <GoogleAuthButton loading={loading} onToken={handleToken} onError={handleProviderError} />
-        {error ? <Text style={styles.error}>{error}</Text> : null}
-        {context === "login" ? (
+        {showDivider ? (
           <View style={styles.dividerRow}>
             <View style={styles.divider} />
-            <Text style={styles.dividerText}>{t("auth.orEmail")}</Text>
+            <Text style={styles.dividerText}>{t("auth.or")}</Text>
             <View style={styles.divider} />
           </View>
         ) : null}
+        <GoogleAuthButton loading={loading} onToken={handleToken} onError={handleProviderError} />
+        {error ? <Text style={styles.error}>{error}</Text> : null}
       </View>
 
       <Modal
@@ -212,19 +212,20 @@ export function GoogleAuthSection({ context }: Props) {
 const styles = StyleSheet.create({
   section: {
     width: "100%",
-    gap: Spacing.sm,
   },
   error: {
     color: Colors.text.danger,
     fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM,
     textAlign: "center",
+    marginTop: Spacing.sm,
   },
   dividerRow: {
     flexDirection: "row",
     alignItems: "center",
-    gap: Spacing.sm,
-    marginVertical: Spacing.sm,
+    gap: Spacing.xl,
+    marginTop: Spacing.xxl,
+    marginBottom: Spacing.xxl,
   },
   divider: {
     flex: 1,

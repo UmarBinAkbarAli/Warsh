@@ -526,6 +526,7 @@ export const en = {
   "shadow.compare": "Compare",
   "shadow.recordAgain": "Record again",
   "auth.orEmail": "or continue with email",
+  "auth.or": "or",
   "auth.password": "Warsh password",
   "auth.googleError": "Unable to continue with Google. Please try again.",
   "auth.googleLinkTitle": "Link Google to your Warsh account",
