@@ -34,11 +34,15 @@ process.chdir(appDir);
 
 const API_URL = process.env.DEPLOY_API_URL || "https://app.warsh.app";
 const BACKEND_URL = process.env.DEPLOY_BACKEND_URL || "https://api.warsh.app";
-const SCOPE = process.env.VERCEL_SCOPE || "team_k0ZT1T5c1VYXVbf8oyV9zU4s";
+const SCOPE = process.env.VERCEL_SCOPE || "team_oqna7mWJWm55CAJCq2S20H1F";
 // The Vercel project that owns https://app.warsh.app. Without an explicit link,
 // `vercel deploy dist` auto-creates a throwaway project named after the folder
 // ("dist") and app.warsh.app is never updated. Always link dist to warsh-web.
-const PROJECT_ID = process.env.VERCEL_PROJECT_ID || "prj_grtdsJ12m4QcjcdZsSl7fAdhspuR";
+const PROJECT_ID = process.env.VERCEL_PROJECT_ID || "prj_emupueJb307Zkp46An8hzF5gvGES";
+// The warsh-web project is Git-linked with Root Directory "warsh-app", so a
+// prebuilt-artifact `vercel deploy` must nest the export inside a "warsh-app"
+// subfolder or the CLI errors with "the provided path .../warsh-app does not exist".
+const DEPLOY_ROOT_SUBDIR = "warsh-app";
 const ENV_PATH = ".env";
 
 const originalEnv = existsSync(ENV_PATH) ? readFileSync(ENV_PATH, "utf8") : "";
@@ -145,6 +149,12 @@ try {
       2,
     ) + "\n",
   );
+
+  // Nest the export under a "warsh-app" subfolder to match the project's
+  // configured Root Directory before uploading.
+  renameSync("dist", "dist-inner");
+  mkdirSync("dist");
+  renameSync("dist-inner", `dist/${DEPLOY_ROOT_SUBDIR}`);
 
   // Link the export to the warsh-web project so this deploy lands on
   // app.warsh.app instead of a folder-named throwaway project.

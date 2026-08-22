@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react";
-import { ActivityIndicator, StyleSheet, View } from "react-native";
+import { useEffect, useRef, useState } from "react";
+import { ActivityIndicator, Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { ensureGoogleSignInConfigured } from "@services/googleSignIn";
 import { useLanguage } from "@services/language";
-import { WarshPalette } from "../constants/theme";
+import { useT } from "@i18n/index";
+import { Fonts, FontSizes, Radii, Spacing, WarshPalette } from "../constants/theme";
 
 type Props = {
   loading?: boolean;
@@ -45,13 +46,18 @@ function loadGoogleIdentityServices(locale: string) {
   return promise;
 }
 
+// Google Identity Services only renders its own button, which can't be
+// restyled to match the app's brand. So we render that real button invisibly
+// off-screen and forward clicks from our brand-styled Pressable to it — the
+// actual Google auth flow still runs, just triggered via a proxied click.
 export function GoogleAuthButton({ loading = false, onToken, onError }: Props) {
+  const t = useT();
   const containerRef = useRef<unknown>(null);
   const language = useLanguage();
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     let active = true;
-    let localeFallbackTimer: number | undefined;
     try {
       ensureGoogleSignInConfigured();
     } catch (error) {
@@ -75,61 +81,88 @@ export function GoogleAuthButton({ loading = false, onToken, onError }: Props) {
             void onToken(response.credential);
           },
         });
-        const buttonConfig = {
+        window.google.accounts.id.renderButton(container, {
           type: "standard",
           theme: "outline",
           size: "large",
           shape: "pill",
           text: "continue_with",
           locale: language,
-          width: 342,
-        };
-        window.google.accounts.id.renderButton(container, buttonConfig);
-        localeFallbackTimer = window.setTimeout(() => {
-          if (!active || container.childElementCount > 0 || !window.google) return;
-          window.google.accounts.id.renderButton(container, {
-            ...buttonConfig,
-            locale: "en",
-          });
-        }, 300);
+          width: 300,
+        });
+        setReady(true);
       })
       .catch(onError);
 
     return () => {
       active = false;
-      if (localeFallbackTimer !== undefined) {
-        window.clearTimeout(localeFallbackTimer);
-      }
     };
   }, [language, onError, onToken]);
 
-  if (loading) {
-    return (
-      <View style={styles.loading}>
-        <ActivityIndicator color={WarshPalette.gold} />
-      </View>
-    );
+  function handlePress() {
+    const container = containerRef.current as HTMLElement | null;
+    const realButton = container?.querySelector<HTMLElement>('div[role="button"]');
+    realButton?.click();
   }
 
-  return <View ref={containerRef as never} style={styles.container} />;
+  const busy = loading || !ready;
+
+  return (
+    <Pressable
+      accessibilityLabel={t("auth.continueGoogle")}
+      accessibilityRole="button"
+      accessibilityState={{ disabled: busy, busy }}
+      disabled={busy}
+      onPress={handlePress}
+      style={({ pressed }) => [styles.button, pressed && !busy ? styles.pressed : null]}
+    >
+      {busy && loading ? (
+        <ActivityIndicator color={WarshPalette.subtleBrown} />
+      ) : (
+        <>
+          <Image
+            source={require("../assets/images/google-g.png")}
+            style={styles.icon}
+            resizeMode="contain"
+          />
+          <Text style={styles.label}>{t("auth.continueGoogle")}</Text>
+        </>
+      )}
+      <View ref={containerRef as never} style={styles.hiddenRealButton} />
+    </Pressable>
+  );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-    minHeight: 54,
+  button: {
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-  },
-  loading: {
-    width: "100%",
-    height: 54,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 999,
-    backgroundColor: WarshPalette.white,
+    gap: Spacing.sm,
+    height: 56,
     borderWidth: 1,
-    borderColor: WarshPalette.defaultCardBorder,
+    borderColor: WarshPalette.gold,
+    borderRadius: Radii.sm,
+  },
+  pressed: {
+    backgroundColor: WarshPalette.highlightBgSoft,
+  },
+  icon: {
+    width: 24,
+    height: 24,
+  },
+  label: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+    fontWeight: "600",
+    color: WarshPalette.subtleBrown,
+  },
+  hiddenRealButton: {
+    position: "absolute",
+    width: 1,
+    height: 1,
+    overflow: "hidden",
+    opacity: 0,
   },
 });
 

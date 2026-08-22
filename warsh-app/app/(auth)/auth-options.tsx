@@ -18,7 +18,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 import { GoogleAuthSection } from "@components/GoogleAuthSection";
 import { LanguageSheet } from "@components/LanguageSheet";
-import { WebAuthLayout } from "@components/WebAuthLayout";
+import { useIsDesktopWeb, WebAuthLayout } from "@components/WebAuthLayout";
 import { useOnboardingStore } from "@stores/onboardingStore";
 import { WEB_BASE_URL } from "@services/api";
 import { useLanguage } from "@services/language";
@@ -49,6 +49,9 @@ export default function OnboardingScreen() {
   const { width } = useWindowDimensions();
   const language = useOnboardingStore((s) => s.language);
   const isUrdu = useLanguage() === "ur";
+  // The desktop-web left panel (WebAuthLayout) already shows this slider,
+  // so avoid rendering it twice on the right/form side.
+  const desktop = useIsDesktopWeb();
 
   const [index, setIndex] = useState(0);
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -87,37 +90,42 @@ export default function OnboardingScreen() {
           </Pressable>
         </View>
 
-        {/* Slides — hero art plus its copy move together */}
-        <FlatList
-          ref={listRef}
-          data={SLIDES}
-          keyExtractor={(item) => item.key}
-          horizontal
-          pagingEnabled
-          showsHorizontalScrollIndicator={false}
-          onMomentumScrollEnd={onMomentumEnd}
-          style={styles.track}
-          renderItem={({ item, index: i }) => (
-            <View style={[styles.slide, { width: trackWidth }]}>
-              <Image
-                source={item.art}
-                style={{ width: trackWidth, height: trackWidth / HERO_ASPECT }}
-                resizeMode="contain"
-              />
-              <View style={styles.copy}>
-                <Text style={styles.title}>{t(`onboarding.slide${i + 1}Title`)}</Text>
-                <Text style={styles.body}>{t(`onboarding.slide${i + 1}Body`)}</Text>
-              </View>
-            </View>
-          )}
-        />
+        {/* Slides — hero art plus its copy move together. Desktop web shows
+            this in the WebAuthLayout left panel instead. */}
+        {!desktop ? (
+          <>
+            <FlatList
+              ref={listRef}
+              data={SLIDES}
+              keyExtractor={(item) => item.key}
+              horizontal
+              pagingEnabled
+              showsHorizontalScrollIndicator={false}
+              onMomentumScrollEnd={onMomentumEnd}
+              style={styles.track}
+              renderItem={({ item, index: i }) => (
+                <View style={[styles.slide, { width: trackWidth }]}>
+                  <Image
+                    source={item.art}
+                    style={{ width: trackWidth, height: trackWidth / HERO_ASPECT }}
+                    resizeMode="contain"
+                  />
+                  <View style={styles.copy}>
+                    <Text style={styles.title}>{t(`onboarding.slide${i + 1}Title`)}</Text>
+                    <Text style={styles.body}>{t(`onboarding.slide${i + 1}Body`)}</Text>
+                  </View>
+                </View>
+              )}
+            />
 
-        {/* Pager dots */}
-        <View style={styles.pager}>
-          {SLIDES.map((slide, i) => (
-            <View key={slide.key} style={[styles.dot, i === index ? styles.dotActive : null]} />
-          ))}
-        </View>
+            {/* Pager dots */}
+            <View style={styles.pager}>
+              {SLIDES.map((slide, i) => (
+                <View key={slide.key} style={[styles.dot, i === index ? styles.dotActive : null]} />
+              ))}
+            </View>
+          </>
+        ) : null}
 
         {/* Auth choices */}
         <View style={styles.actions}>
