@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ActivityIndicator, Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Image, StyleSheet, Text, View } from "react-native";
 import { ensureGoogleSignInConfigured } from "@services/googleSignIn";
 import { useLanguage } from "@services/language";
 import { useT } from "@i18n/index";
@@ -46,10 +46,12 @@ function loadGoogleIdentityServices(locale: string) {
   return promise;
 }
 
-// Google Identity Services only renders its own button, which can't be
-// restyled to match the app's brand. So we render that real button invisibly
-// off-screen and forward clicks from our brand-styled Pressable to it — the
-// actual Google auth flow still runs, just triggered via a proxied click.
+// Google's `prompt()` (One Tap triggered from a click) is unreliable — it
+// silently no-ops when a prior One Tap was dismissed, with no visible UI and
+// no notification callback. Google's real rendered button doesn't have that
+// problem, but it can't be restyled to match the app's brand, so we stretch
+// it (invisible) to fully cover our brand-styled button beneath it — the
+// real click lands on Google's own element and the account picker opens.
 export function GoogleAuthButton({ loading = false, onToken, onError }: Props) {
   const t = useT();
   const containerRef = useRef<unknown>(null);
@@ -88,8 +90,17 @@ export function GoogleAuthButton({ loading = false, onToken, onError }: Props) {
           shape: "pill",
           text: "continue_with",
           locale: language,
-          width: 300,
+          width: 320,
         });
+        const iframe = container.querySelector("iframe");
+        if (iframe) {
+          iframe.style.position = "absolute";
+          iframe.style.inset = "0";
+          iframe.style.width = "100%";
+          iframe.style.height = "100%";
+          iframe.style.border = "0";
+          iframe.style.opacity = "0";
+        }
         setReady(true);
       })
       .catch(onError);
@@ -99,23 +110,10 @@ export function GoogleAuthButton({ loading = false, onToken, onError }: Props) {
     };
   }, [language, onError, onToken]);
 
-  function handlePress() {
-    const container = containerRef.current as HTMLElement | null;
-    const realButton = container?.querySelector<HTMLElement>('div[role="button"]');
-    realButton?.click();
-  }
-
   const busy = loading || !ready;
 
   return (
-    <Pressable
-      accessibilityLabel={t("auth.continueGoogle")}
-      accessibilityRole="button"
-      accessibilityState={{ disabled: busy, busy }}
-      disabled={busy}
-      onPress={handlePress}
-      style={({ pressed }) => [styles.button, pressed && !busy ? styles.pressed : null]}
-    >
+    <View style={styles.button}>
       {busy && loading ? (
         <ActivityIndicator color={WarshPalette.subtleBrown} />
       ) : (
@@ -128,8 +126,12 @@ export function GoogleAuthButton({ loading = false, onToken, onError }: Props) {
           <Text style={styles.label}>{t("auth.continueGoogle")}</Text>
         </>
       )}
-      <View ref={containerRef as never} style={styles.hiddenRealButton} />
-    </Pressable>
+      <View
+        ref={containerRef as never}
+        pointerEvents={busy ? "none" : "auto"}
+        style={styles.realButtonOverlay}
+      />
+    </View>
   );
 }
 
@@ -143,9 +145,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: WarshPalette.gold,
     borderRadius: Radii.sm,
-  },
-  pressed: {
-    backgroundColor: WarshPalette.highlightBgSoft,
+    cursor: "pointer",
   },
   icon: {
     width: 24,
@@ -157,12 +157,14 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: WarshPalette.subtleBrown,
   },
-  hiddenRealButton: {
+  realButtonOverlay: {
     position: "absolute",
-    width: 1,
-    height: 1,
-    overflow: "hidden",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
     opacity: 0,
+    overflow: "hidden",
   },
 });
 
