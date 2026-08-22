@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-08-10
+**Last verified:** 2026-08-21
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Beta hardening and launch preparation
 
@@ -102,6 +102,18 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - EAS profiles for development, staging APK, production-preview APK, and production Android builds
 
 ## Recent verified repository changes
+
+### 2026-08-21
+
+- Product owner confirmed the following P0/P1 items as done and they were
+  cleared from the active priority queue: production-access recovery (the app
+  is live on the Google Play Store), production security/configuration check,
+  paywall QA, privacy/Data safety alignment, live website verification, and
+  the P1 vocabulary-image and discover-card-image sourcing items. This status
+  is recorded on the owner's word in this conversation; no independent
+  repository or live-environment evidence was gathered in this change, so
+  re-verify from code/live state if these are ever load-bearing for a release
+  decision.
 
 ### 2026-08-10
 
@@ -461,22 +473,20 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ### P0 — launch blockers and required verification
 
-1. **Production-access recovery** — release `7 (1.0.6)` has been submitted to Closed testing - Alpha and is awaiting Play review/automated checks. Once it is available, keep at least 12 real testers continuously opted in for a fresh 14 full days, obtain meaningful feature usage and feedback, ship verified improvements based on that feedback, clear Pre-launch report issues, and reapply with specific evidence. Internal testing does not replace this required closed test.
-2. **Live IAP sandbox QA** — verify monthly and yearly subscription purchase, restore, acknowledgement, and Noor consumable behavior on a Play-installed build.
-3. **Privacy/Data safety alignment** — publish the corrected static privacy file through Namecheap cPanel, clear the Vercel system challenge and verify all legal/deletion URLs from clean networks, capture a microphone exercise network trace, and update the Play Data safety form so Name, analytics/diagnostics, Noor messages, purchases, identifiers, and local-only voice behavior match the verified inventory.
-4. **Target-audience decision** — either select adults only for the simplest launch or implement the required age/minor handling before keeping ages 13–17.
-5. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`, `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
-6. **Paywall QA** — use an expired-trial test account and verify paid lesson, Noor, Tadabbur, product loading, cancellation, restore, and vocabulary-free behavior. Chapter progress must not end a trial early.
-7. **Scholar/content review** — establish a review process for Quranic Arabic accuracy, ayah relevance, pedagogy, repetition, and pacing before public launch.
-8. **Production security/configuration check** — Sentry runtime delivery, privacy hardening, backend/mobile project mapping, production source-map upload, and symbolication are verified. Sentry is complete; separately confirm the remaining live secrets, cron configuration, monitoring alerts, and `DEV_UNLOCK_ALL=false` without exposing secret values.
+1. **Live IAP sandbox QA** — verify monthly and yearly subscription purchase, restore, acknowledgement, and Noor consumable behavior on a Play-installed build.
+2. **Target-audience decision** — either select adults only for the simplest launch or implement the required age/minor handling before keeping ages 13–17.
+3. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`, `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
+4. **Scholar/content review** — establish a review process for Quranic Arabic accuracy, ayah relevance, pedagogy, repetition, and pacing before public launch.
 
 ### P1 — content quality and launch polish
 
 1. Review representative lessons across Chapters 9-72, emphasizing uncommon exercise types and book transitions.
-2. Source and upload priority vocabulary images, beginning with Quranic terms and high-frequency concrete nouns.
-3. Populate high-traffic discover-card images, beginning with Chapters 1-10.
-4. Verify the live website, privacy policy, terms, support, and account-deletion paths from the production user journey.
-5. Reconcile any remaining visual differences against the current gold/navy design tokens.
+2. Reconcile any remaining visual differences against the current gold/navy design tokens.
+3. **Lesson pass/fail requirement (not yet designed or built)** — today `warsh-app/app/(app)/lessons/[lessonId]/play.tsx` auto-advances past every exercise regardless of correctness and `POST /api/lessons/[lessonId]/complete` always sends a hardcoded `score: 100`, so a learner can miss every exercise in a lesson and still complete it with full XP/streak/chapter-unlock credit. Requirement: missing a minimum number of exercises (proposed threshold: 3 wrong) should force a lesson retry instead of completing it. Open decisions before implementation:
+   - Is the threshold an absolute wrong-count or a percentage, given lessons vary in exercise count (5-15+)?
+   - Enforcement must move server-side — the client should send per-exercise results and `complete` should compute score/pass-fail itself, not trust a client-sent score (matches this repo's "never trust client-supplied business data" pattern).
+   - On fail: does the chapter stay locked (via `lib/course.ts`), does XP/streak/daily-goal credit get withheld or still banked for the attempt, and what does the learner see (retry screen vs. normal completion screen)?
+   - Does the rule apply to every lesson template, or only answerable exercise types — `SHADOW_REPEAT`/`SPOKEN_PHRASES` are recording-completion based (`phrasesCompletedRef`), not right/wrong scored, and may need to stay exempt or get their own rule.
 
 ### Later
 
