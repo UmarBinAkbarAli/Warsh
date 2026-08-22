@@ -2,9 +2,10 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
+import { TranslationLanguagePrompt } from "@components/TranslationLanguagePrompt";
 import { useT } from "@i18n/index";
-import api from "@services/api";
-import { pickLocalized, pickTranslation, useLanguage, useTranslationLanguage } from "@services/language";
+import api, { updateUserProfile } from "@services/api";
+import { pickLocalized, pickTranslation, useLanguage, useTranslationLanguage, type AppLanguage } from "@services/language";
 import { useAuthStore } from "@stores/authStore";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -38,6 +39,7 @@ import {
 const FREEZE_BANNER_KEY = "warsh_freeze_banner_shown";
 const LAST_STREAK_KEY = "warsh_last_streak";
 const STREAK_ENDED_SHOWN_KEY = "warsh_streak_ended_shown";
+const TRANSLATION_PROMPT_SHOWN_KEY = "warsh_translation_prompt_shown";
 
 type Lesson = {
   id: string;
@@ -85,6 +87,8 @@ export default function HomeScreen() {
   const language = useLanguage();
   const translationLanguage = useTranslationLanguage();
   const fallbackName = useAuthStore((state) => state.user?.name);
+  const userId = useAuthStore((state) => state.user?.id);
+  const patchUser = useAuthStore((state) => state.patchUser);
   const isWeb = Platform.OS === "web";
   const t = useT();
 
@@ -105,6 +109,8 @@ export default function HomeScreen() {
   const [trialBannerDismissed, setTrialBannerDismissed] = useState(false);
   const [showStreakEndedModal, setShowStreakEndedModal] = useState(false);
   const [showDailyGoalToast, setShowDailyGoalToast] = useState(false);
+  const [showTranslationPrompt, setShowTranslationPrompt] = useState(false);
+  const [translationPromptSaving, setTranslationPromptSaving] = useState(false);
   const toastOpacity = useRef(new Animated.Value(0)).current;
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -136,6 +142,35 @@ export default function HomeScreen() {
       if (toastTimer.current) clearTimeout(toastTimer.current);
     };
   }, [showDailyGoalToast, toastOpacity]);
+
+  useEffect(() => {
+    if (!userId) return undefined;
+    let cancelled = false;
+    const key = `${TRANSLATION_PROMPT_SHOWN_KEY}_${userId}`;
+    AsyncStorage.getItem(key).then((shown) => {
+      if (cancelled || shown) return;
+      setShowTranslationPrompt(true);
+      void AsyncStorage.setItem(key, "1");
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [userId]);
+
+  async function selectTranslationLanguage(value: AppLanguage) {
+    if (translationPromptSaving) return;
+    setTranslationPromptSaving(true);
+    const previous = translationLanguage;
+    patchUser({ translationLanguage: value });
+    try {
+      await updateUserProfile({ translationLanguage: value });
+    } catch {
+      patchUser({ translationLanguage: previous });
+    } finally {
+      setTranslationPromptSaving(false);
+      setShowTranslationPrompt(false);
+    }
+  }
 
   const loadHome = useCallback(async () => {
     setLoading(true);
@@ -310,6 +345,14 @@ export default function HomeScreen() {
           </View>
         </View>
       </Modal>
+
+      <TranslationLanguagePrompt
+        visible={showTranslationPrompt}
+        current={translationLanguage}
+        saving={translationPromptSaving}
+        onSelect={selectTranslationLanguage}
+        onDismiss={() => setShowTranslationPrompt(false)}
+      />
 
       {showDailyGoalToast ? (
         <Animated.View
