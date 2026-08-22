@@ -37,28 +37,7 @@ Start the app (do not improvise the startup sequence):
 .\install-warsh-apk.ps1 [path] # install/upgrade an already-built APK on the AVD
 ```
 
-Backend (`cd warsh-backend`):
-
-```powershell
-npm run dev
-npm run build                  # prisma generate && next build
-npm test                       # tsx --test tests/**/*.test.ts
-npx tsx --test tests/streak.test.ts     # single test file
-npm run db:generate; npm run db:migrate; npm run db:seed
-npm run db:validate-fixtures   # validate prisma/fixtures against @warsh/lesson-schema
-npm run db:audit-urdu
-```
-
-App (`cd warsh-app`):
-
-```powershell
-npm run lint -- --quiet
-npx tsc --noEmit
-npm run android; npm run web
-npm run deploy:web             # Expo web export -> app.warsh.app (Vercel)
-```
-
-Lesson schema (`cd packages/lesson-schema`): `npm run build` (tsup), `npm test` (vitest run), `npx vitest run <file>`.
+Backend commands and invariants: `warsh-backend/CLAUDE.md`. App commands and invariants: `warsh-app/CLAUDE.md`. Lesson schema commands: `packages/lesson-schema/CLAUDE.md`.
 
 Pre-release gate is the code-validation block in `Docs/warsh-technical-spec.md` §13: backend `db:generate` + `db:validate-fixtures` + `db:audit-urdu` + `build`, then app `lint` + `tsc --noEmit`.
 
@@ -67,23 +46,6 @@ Pre-release gate is the code-validation block in `Docs/warsh-technical-spec.md` 
 Request flow: Expo client → Axios (`warsh-app/services/api.ts`) with `Authorization: Bearer <JWT>` and `X-Warsh-Platform` → Next.js route in `warsh-backend/app/api/` → auth/validation/business rules → Prisma singleton → Neon Postgres, with optional OpenAI, R2, Resend, Google Play, Mixpanel/Sentry.
 
 API envelope: success `{ "data": ... }`; expected failure `{ "error": "Human message", "code": "snake_case_code" }`. Protected routes derive the user from the token, never from a client-supplied id.
-
-Backend invariants:
-
-- Import Prisma from `lib/prisma.ts`; never construct `PrismaClient` in a route.
-- `Lesson.content` is JSON validated by `@warsh/lesson-schema` — the same package for admin writes and fixture validation. Never add a second schema (including in `Docs/`).
-- `lib/course.ts` is authoritative for chapter unlocking/completion; locking, trial/subscription access, and admin checks are enforced server-side.
-- Streak days run 04:00 PKT → 03:59:59 PKT via `lib/date.ts`; completion, daily goals, freezes, and the reset cron must all use that boundary.
-- Content review (`LessonContentReview`, `ContentReviewIssue`) stays separate from `Lesson.content`; flagging never edits learner-facing lessons.
-- Google sign-in: provider ID token is identity proof only, then Warsh issues its own JWT; `googleSubject` is the durable key — a matching email alone never links accounts.
-
-App invariants:
-
-- Routes: `app/(auth)` (preview, auth, recovery, onboarding), `app/(app)` (authenticated stack), `app/(app)/(tabs)` = Learn, Vocabulary, Noor, You.
-- `stores/authStore.ts` persists user/token; guards must wait for hydration before redirecting.
-- `EXPO_PUBLIC_API_URL` sets the API origin — never commit a LAN IP. Web export uses `https://app.warsh.app` with a Vercel rewrite of `/api/*` to `api.warsh.app`.
-- Arabic renders through `components/ArabicText.tsx`; CTAs use `components/BrandButton.tsx`; all tokens come from `constants/theme.ts` (no hardcoded hex); web wraps in `WebShell`.
-- Keep `i18n/en.ts` and `i18n/ur.ts` in sync; Arabic learning content stays Arabic in both languages.
 
 Content changes go to the local staging DB first, then a scoped production update (e.g. `npm run content:promote-tadabbur -- --apply`) — never the full production seed. After Prisma schema edits, generate and migrate before verifying.
 
