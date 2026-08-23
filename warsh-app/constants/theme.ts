@@ -119,6 +119,9 @@ export const FontSizes = {
   label: 10,
   transliteration: 14,
   arabicXL: 52,
+  // Discover card headword — sits between arabicL and arabicXL so the word
+  // still dominates the card under the 196pt illustration.
+  arabicDiscover: 44,
   arabicL: 28,
   arabicM: 20,
   arabicS: 18,
@@ -137,6 +140,7 @@ export const LineHeights = {
   label: 14,
   transliteration: 20,
   arabicXL: 80,
+  arabicDiscover: 64,
   arabicL: 48,
   arabicM: 32,
   arabicS: 30,

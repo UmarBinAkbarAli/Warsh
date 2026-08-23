@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ActivityIndicator, Pressable, StyleSheet } from "react-native";
+import { ActivityIndicator, Pressable, StyleSheet, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Audio } from "expo-av";
 import { getCachedCatalogAudioUri, getCachedRemoteAudioUri, getVocabWordAudioUri } from "@services/audioCache";
-import { WarshPalette } from "../constants/theme";
+import { Fonts, FontSizes, Radii, WarshPalette } from "../constants/theme";
 
 type PlayButtonProps = {
   text: string;
@@ -14,12 +14,16 @@ type PlayButtonProps = {
   audioUrl?: string;
   size?: number;
   color?: string;
+  // When set, renders as a labelled navy pill instead of a bare icon — used
+  // where the audio control has to carry its own weight (Discover cards),
+  // rather than sitting as a hint beside text.
+  label?: string;
   autoPlay?: boolean;
 };
 
 type PlayState = "idle" | "loading" | "playing" | "error";
 
-export function PlayButton({ text, cacheKey, category = "words", wordId, audioUrl, size = 20, color = WarshPalette.gold, autoPlay = false }: PlayButtonProps) {
+export function PlayButton({ text, cacheKey, category = "words", wordId, audioUrl, size = 20, color = WarshPalette.gold, label, autoPlay = false }: PlayButtonProps) {
   const [playState, setPlayState] = useState<PlayState>("idle");
   const soundRef = useRef<Audio.Sound | null>(null);
   const mountedRef = useRef(true);
@@ -114,6 +118,30 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, audioUr
     void startPlay();
   }, [playState, startPlay]);
 
+  const iconColor = playState === "error" ? WarshPalette.wrongBorder : color;
+  const icon = (
+    <Ionicons
+      name={playState === "playing" ? "stop-circle-outline" : playState === "error" ? "alert-circle-outline" : "volume-medium-outline"}
+      size={size}
+      color={iconColor}
+    />
+  );
+
+  if (label) {
+    return (
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel={label}
+        onPress={handlePress}
+        disabled={playState === "loading"}
+        style={({ pressed }) => [styles.pill, pressed ? styles.pillPressed : null]}
+      >
+        {playState === "loading" ? <ActivityIndicator size="small" color={color} /> : icon}
+        <Text style={[styles.pillLabel, { color: iconColor }]}>{label}</Text>
+      </Pressable>
+    );
+  }
+
   if (playState === "loading") {
     return (
       <Pressable style={styles.button} disabled>
@@ -124,11 +152,7 @@ export function PlayButton({ text, cacheKey, category = "words", wordId, audioUr
 
   return (
     <Pressable accessibilityRole="button" accessibilityLabel="Play pronunciation" onPress={handlePress} style={styles.button}>
-      <Ionicons
-        name={playState === "playing" ? "stop-circle-outline" : playState === "error" ? "alert-circle-outline" : "volume-medium-outline"}
-        size={size}
-        color={playState === "error" ? WarshPalette.wrongBorder : color}
-      />
+      {icon}
     </Pressable>
   );
 }
@@ -139,5 +163,24 @@ const styles = StyleSheet.create({
     height: 36,
     alignItems: "center",
     justifyContent: "center",
+  },
+  // Labelled variant: navy surface so the gold-light mark reads at full
+  // contrast, and a real 48pt target rather than the 36pt icon box.
+  pill: {
+    minHeight: 48,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 9,
+    paddingHorizontal: 22,
+    borderRadius: Radii.full,
+    backgroundColor: WarshPalette.navy,
+  },
+  pillPressed: {
+    backgroundColor: WarshPalette.navyDeep,
+  },
+  pillLabel: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
   },
 });

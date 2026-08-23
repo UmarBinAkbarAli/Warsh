@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, useWindowDimensions, View } from "react-native";
+import { ActivityIndicator, Animated, BackHandler, Modal, PanResponder, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, useWindowDimensions, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -9,7 +9,7 @@ import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { PlayButton } from "@components/PlayButton";
 import { ShadowRepeatExercise } from "@components/ShadowRepeatExercise";
-import { Fonts, WarshPalette } from "../../../../constants/theme";
+import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../../../constants/theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
 import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
@@ -59,6 +59,12 @@ type TranslateFn = ReturnType<typeof useT>;
 type RawEx = Record<string, any>;
 
 function exType(ex: RawEx): string { return ex.type as string; }
+
+// Discover swipe tuning. Commit on either a quarter-screen drag or a fling;
+// at the ends the card follows the finger at a third speed and springs back.
+const SWIPE_COMMIT_RATIO = 0.25;
+const SWIPE_COMMIT_VELOCITY = 0.3;
+const SWIPE_EDGE_RESISTANCE = 0.35;
 
 function localizedText(value: any, language: "en" | "ur"): string | undefined {
   if (!value) return undefined;
@@ -315,6 +321,16 @@ function exLabels(ex: RawEx, t: TranslateFn): string[] {
 // ---------------------------------------------------------------------------
 const ANSWER_DELAY_MS = 1800;
 
+// Checkpoint resume: once a learner finishes Discover and reaches Practice
+// (or later), leaving and reopening the lesson resumes there instead of
+// replaying the Discover cards. Discover itself is never checkpointed —
+// exiting mid-Discover always restarts from card 1.
+const CHECKPOINT_MIN_BEAT = 3;
+const CHECKPOINT_MAX_BEAT = 4;
+function lessonCheckpointKey(id: string) {
+  return `warsh_lesson_checkpoint_${id}`;
+}
+
 function splitWords(value?: string) {
   return value?.trim().split(/\s+/).filter(Boolean) ?? [];
 }
@@ -402,6 +418,7 @@ export default function LessonPlayScreen() {
   const [isAnswered, setIsAnswered] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [completionResult, setCompletionResult] = useState<CompletionResult | null>(null);
+  const [showExitConfirm, setShowExitConfirm] = useState(false);
 
   // WRITE_ARABIC hint state
   const [writeHintShown, setWriteHintShown] = useState(false);
@@ -480,6 +497,11 @@ export default function LessonPlayScreen() {
         const raw = response.data.data.lesson as RawLesson;
         setLesson(raw);
         trackLessonStarted(lessonId, raw.template);
+        const savedCheckpoint = await AsyncStorage.getItem(lessonCheckpointKey(lessonId)).catch(() => null);
+        const checkpointBeat = savedCheckpoint ? parseInt(savedCheckpoint, 10) : NaN;
+        if (checkpointBeat >= CHECKPOINT_MIN_BEAT && checkpointBeat <= CHECKPOINT_MAX_BEAT) {
+          setCurrentBeat(checkpointBeat);
+        }
       } catch (loadError) {
         if (isSubscriptionRequiredError(loadError)) {
           router.replace("/(app)/paywall");
@@ -537,10 +559,83 @@ export default function LessonPlayScreen() {
     void finishLesson();
   }, [currentBeat, lessonId, lesson?.template, t]);
 
+  // ---- Discover: swipe between cards, close to leave the lesson ----
+  // The gesture is horizontal-only and never exits: swiping right on the first
+  // card rubber-bands. Leaving is always the explicit close button, which
+  // confirms first because mid-lesson progress is not persisted.
+  const swipeX = useRef(new Animated.Value(0)).current;
+  const cardIndexRef = useRef(0);
+  const discoverCountRef = useRef(0);
+  cardIndexRef.current = currentCardIndex;
+  discoverCountRef.current = discoverCards.length;
+
+  const discoverPan = useMemo(
+    () =>
+      PanResponder.create({
+        onMoveShouldSetPanResponder: (_e, g) =>
+          Math.abs(g.dx) > 8 && Math.abs(g.dx) > Math.abs(g.dy) * 1.5,
+        onPanResponderMove: (_e, g) => {
+          const idx = cardIndexRef.current;
+          const atStart = idx === 0 && g.dx > 0;
+          const atEnd = idx >= discoverCountRef.current - 1 && g.dx < 0;
+          swipeX.setValue(atStart || atEnd ? g.dx * SWIPE_EDGE_RESISTANCE : g.dx);
+        },
+        onPanResponderRelease: (_e, g) => {
+          const idx = cardIndexRef.current;
+          const forward = g.dx < 0;
+          const canGo = forward ? idx < discoverCountRef.current - 1 : idx > 0;
+          const committed =
+            Math.abs(g.dx) > windowWidth * SWIPE_COMMIT_RATIO ||
+            Math.abs(g.vx) > SWIPE_COMMIT_VELOCITY;
+
+          if (committed && canGo) {
+            Animated.timing(swipeX, {
+              toValue: forward ? -windowWidth : windowWidth,
+              duration: Animation.fast,
+              useNativeDriver: true,
+            }).start(() => {
+              setCurrentCardIndex((i) => (forward ? i + 1 : i - 1));
+              // Drop the incoming card in on the far side, then settle it.
+              swipeX.setValue(forward ? windowWidth : -windowWidth);
+              Animated.timing(swipeX, {
+                toValue: 0,
+                duration: Animation.fast,
+                useNativeDriver: true,
+              }).start();
+            });
+            return;
+          }
+          Animated.spring(swipeX, { toValue: 0, useNativeDriver: true, bounciness: 0 }).start();
+        },
+        onPanResponderTerminate: () => {
+          Animated.spring(swipeX, { toValue: 0, useNativeDriver: true, bounciness: 0 }).start();
+        },
+      }),
+    [swipeX, windowWidth],
+  );
+
+  // Hardware back on Discover and Practice must agree with the close button —
+  // otherwise one exits silently and the other asks.
+  useEffect(() => {
+    if (Platform.OS !== "android" || (currentBeat !== 2 && currentBeat !== 3)) return;
+    const sub = BackHandler.addEventListener("hardwareBackPress", () => {
+      setShowExitConfirm(true);
+      return true;
+    });
+    return () => sub.remove();
+  }, [currentBeat]);
+
   function goToBeat(beat: number) {
     setCurrentBeat(beat);
     setSelectedAnswer(null);
     setIsAnswered(false);
+    if (!lessonId) return;
+    if (beat >= CHECKPOINT_MIN_BEAT && beat <= CHECKPOINT_MAX_BEAT) {
+      AsyncStorage.setItem(lessonCheckpointKey(lessonId), String(beat)).catch(() => {});
+    } else if (beat > CHECKPOINT_MAX_BEAT) {
+      // Lesson completed — nothing left to resume into.
+      AsyncStorage.removeItem(lessonCheckpointKey(lessonId)).catch(() => {});
+    }
   }
 
   function goToNextExercise() {
@@ -555,7 +650,6 @@ export default function LessonPlayScreen() {
     if (isAnswered) return;
     setSelectedAnswer(answer);
     setIsAnswered(true);
-    setTimeout(goToNextExercise, ANSWER_DELAY_MS);
   }
 
   function checkBuildSentence() {
@@ -707,12 +801,14 @@ export default function LessonPlayScreen() {
             <Text style={styles.hintRevealText}>{t("player.startsWith")} <Text style={styles.hintRevealLetter}>{firstLetter}</Text></Text>
           ) : null}
         </View>
-        <BrandButton
-          title={t("common.check")}
-          onPress={() => { if (hasInput) answerExercise(typedValue.trim()); }}
-          disabled={isAnswered || !hasInput}
-          style={styles.bottomButton}
-        />
+        {!isAnswered ? (
+          <BrandButton
+            title={t("common.check")}
+            onPress={() => { if (hasInput) answerExercise(typedValue.trim()); }}
+            disabled={!hasInput}
+            style={styles.bottomButton}
+          />
+        ) : null}
       </>
     );
   }
@@ -740,12 +836,14 @@ export default function LessonPlayScreen() {
             textAlign="right"
           />
         </View>
-        <BrandButton
-          title={t("common.check")}
-          onPress={() => { if (hasInput) answerExercise(typedValue.trim()); }}
-          disabled={isAnswered || !hasInput}
-          style={styles.bottomButton}
-        />
+        {!isAnswered ? (
+          <BrandButton
+            title={t("common.check")}
+            onPress={() => { if (hasInput) answerExercise(typedValue.trim()); }}
+            disabled={!hasInput}
+            style={styles.bottomButton}
+          />
+        ) : null}
       </>
     );
   }
@@ -1023,47 +1121,85 @@ export default function LessonPlayScreen() {
         <View style={styles.topRow}>
           <Pressable
             accessibilityRole="button"
-            onPress={() => {
-              if (currentCardIndex === 0) goToBeat(1);
-              else setCurrentCardIndex((i) => i - 1);
-            }}
+            accessibilityLabel={t("player.leaveLesson")}
+            onPress={() => setShowExitConfirm(true)}
             style={styles.backButton}
           >
-            <Text style={styles.backChevron}>‹</Text>
+            <Ionicons name="close" size={24} color={WarshPalette.ink} />
           </Pressable>
-          <Text style={styles.discoverProgress}>{t("player.discoverOf", { current: currentCardIndex + 1, total: discoverCards.length })}</Text>
+          <View
+            accessibilityRole="progressbar"
+            accessibilityLabel={t("player.discoverOf", { current: currentCardIndex + 1, total: discoverCards.length })}
+            style={styles.discoverDots}
+          >
+            {discoverCards.map((_, i) => (
+              <View
+                key={i}
+                style={[styles.discoverDot, i <= currentCardIndex ? styles.discoverDotActive : null]}
+              />
+            ))}
+          </View>
           <View style={styles.backButtonSpacer} />
         </View>
 
-        <View style={styles.discoverCard}>
-          {discoverImageUrl ? (
-            <Image
-              source={{ uri: discoverImageUrl }}
-              style={styles.discoverImage}
-              contentFit="contain"
-              cachePolicy="disk"
-              transition={150}
-            />
-          ) : null}
-          {arabicText ? (
-            <>
+        {/* Not a fixed layout: a long explanation, Urdu meanings, or a small
+            device would otherwise push the CTA off the bottom. */}
+        <ScrollView
+          style={styles.discoverScroll}
+          contentContainerStyle={styles.discoverScrollContent}
+          showsVerticalScrollIndicator={false}
+        >
+          <Animated.View style={{ transform: [{ translateX: swipeX }] }} {...discoverPan.panHandlers}>
+            {discoverImageUrl ? (
+              <Image
+                source={{ uri: discoverImageUrl }}
+                style={styles.discoverImage}
+                contentFit="contain"
+                cachePolicy="disk"
+                transition={150}
+              />
+            ) : null}
+
+            {arabicText ? (
               <ArabicText size="lg" style={styles.discoverArabic}>{arabicText}</ArabicText>
+            ) : null}
+            {transliteration ? <Text style={styles.discoverTransliteration}>{transliteration}</Text> : null}
+
+            {arabicText ? (
               <View style={styles.discoverPlayRow}>
                 <PlayButton
+                  key={currentCardIndex}
                   text={arabicText}
                   cacheKey={transliteration ?? arabicText}
                   category="lessons"
                   audioUrl={card?.audio_url as string | undefined}
-                  size={22}
+                  size={20}
+                  color={WarshPalette.parchment}
+                  label={t("player.listen")}
                   autoPlay={true}
                 />
               </View>
-            </>
-          ) : null}
-          {translation   ? <Text style={styles.discoverTranslation}>{translation}</Text> : null}
-          {transliteration ? <Text style={styles.discoverTransliteration}>{transliteration}</Text> : null}
-          {explanation   ? <Text style={styles.discoverTranslation}>{explanation}</Text> : null}
-        </View>
+            ) : null}
+
+            {translation || explanation ? <View style={styles.discoverDivider} /> : null}
+
+            {translation ? (
+              <>
+                <Text style={styles.discoverEyebrow}>{t("player.meaningLabel")}</Text>
+                <Text style={styles.discoverMeaning}>{translation}</Text>
+              </>
+            ) : null}
+
+            {explanation ? (
+              <>
+                <Text style={[styles.discoverEyebrow, translation ? styles.discoverEyebrowSpaced : null]}>
+                  {t("player.whenYoudSayIt")}
+                </Text>
+                <Text style={styles.discoverExplanation}>{explanation}</Text>
+              </>
+            ) : null}
+          </Animated.View>
+        </ScrollView>
 
         <BrandButton
           title={isLastCard ? t("player.startPractising") : t("common.next")}
@@ -1073,7 +1209,51 @@ export default function LessonPlayScreen() {
           }}
           style={styles.bottomButton}
         />
+
+        {renderExitConfirm()}
       </View>
+    );
+  }
+
+  function renderExitConfirm() {
+    // Beat 2 (Discover) is never checkpointed, so leaving mid-Discover still
+    // costs progress — the copy below warns about that. Beat 3+ has already
+    // been saved by goToBeat, so the copy reassures instead of warning.
+    const progressSaved = currentBeat >= CHECKPOINT_MIN_BEAT;
+    return (
+      <Modal
+        visible={showExitConfirm}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setShowExitConfirm(false)}
+      >
+        <View style={styles.exitOverlay}>
+          <Pressable style={StyleSheet.absoluteFill} onPress={() => setShowExitConfirm(false)} />
+          <View style={styles.exitDialog}>
+            <Text style={styles.exitTitle}>
+              {progressSaved ? t("player.leaveLessonSavedTitle") : t("player.leaveLessonTitle")}
+            </Text>
+            <Text style={styles.exitBody}>
+              {progressSaved
+                ? t("player.leaveLessonSavedBody")
+                : t("player.leaveLessonBody", { current: currentCardIndex + 1, total: discoverCards.length })}
+            </Text>
+            <BrandButton
+              title={t("player.keepLearning")}
+              onPress={() => setShowExitConfirm(false)}
+              style={styles.exitPrimary}
+            />
+            <BrandButton
+              title={t("player.leaveLesson")}
+              variant={progressSaved ? "secondary" : "danger"}
+              onPress={() => {
+                setShowExitConfirm(false);
+                router.replace("/(app)/(tabs)");
+              }}
+            />
+          </View>
+        </View>
+      </Modal>
     );
   }
 
@@ -1116,7 +1296,18 @@ export default function LessonPlayScreen() {
 
     return (
       <View style={[styles.fullScreen, screenPadding]}>
-        {renderProgressBar()}
+        <View style={styles.topRow}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t("player.leaveLesson")}
+            onPress={() => setShowExitConfirm(true)}
+            style={styles.backButton}
+          >
+            <Ionicons name="close" size={24} color={WarshPalette.ink} />
+          </Pressable>
+          <View style={styles.practiceProgressWrap}>{renderProgressBar()}</View>
+          <View style={styles.backButtonSpacer} />
+        </View>
         <Text style={styles.exercisePrompt}>{prompt}</Text>
         {arabicTxt ? (
           <View style={styles.exerciseArabicCard}>
@@ -1130,6 +1321,11 @@ export default function LessonPlayScreen() {
         ) : null}
         {renderCurrentExercise()}
         {renderFeedback()}
+        {isAnswered ? (
+          <BrandButton title={t("common.next")} onPress={goToNextExercise} style={styles.bottomButton} />
+        ) : null}
+
+        {renderExitConfirm()}
       </View>
     );
   }
@@ -1666,35 +1862,38 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
   },
-  backChevron: {
-    color: WarshPalette.ink,
-    fontFamily: Fonts.regular,
-    fontSize: 34,
-    lineHeight: 38,
+  discoverDots: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 5,
   },
-  discoverProgress: {
-    color: WarshPalette.subtleBrown,
-    fontFamily: Fonts.regular,
-    fontSize: 10,
-    textAlign: "center",
+  discoverDot: {
+    width: 18,
+    height: 3,
+    borderRadius: 2,
+    backgroundColor: WarshPalette.cream,
   },
-  discoverCard: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: 12,
-    padding: 16,
-    backgroundColor: WarshPalette.parchmentBg,
+  discoverDotActive: {
+    backgroundColor: WarshPalette.ink,
+  },
+  discoverScroll: {
+    flex: 1,
+  },
+  discoverScrollContent: {
+    flexGrow: 1,
+    justifyContent: "center",
+    paddingVertical: Spacing.sm,
   },
   discoverImage: {
-    width: 96,
-    height: 96,
+    width: 196,
+    height: 196,
     alignSelf: "center",
-    marginBottom: 8,
   },
   discoverArabic: {
+    marginTop: Spacing.lg,
     color: WarshPalette.ink,
-    fontSize: 36,
-    lineHeight: 52,
+    fontSize: FontSizes.arabicDiscover,
+    lineHeight: LineHeights.arabicDiscover,
     textAlign: "center",
   },
   discoverTranslation: {
@@ -1705,22 +1904,89 @@ const styles = StyleSheet.create({
     lineHeight: 18,
     textAlign: "center",
   },
+  // Spec-11 §2.4: helper text is muted ink, never gold. This was gold on
+  // parchment (~2.2:1) and effectively unreadable.
   discoverTransliteration: {
-    marginTop: 4,
-    color: WarshPalette.gold,
+    color: WarshPalette.subtleBrown,
     fontFamily: Fonts.italic,
-    fontSize: 10,
+    fontSize: FontSizes.transliteration,
     fontStyle: "italic",
-    lineHeight: 14,
+    lineHeight: LineHeights.transliteration,
     textAlign: "center",
   },
   discoverPlayRow: {
     alignItems: "center",
-    marginTop: 4,
+    marginTop: Spacing.lg,
+  },
+  discoverDivider: {
+    height: 1,
+    marginVertical: Spacing.xl,
+    backgroundColor: WarshPalette.cream,
+  },
+  discoverEyebrow: {
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.label,
+    lineHeight: LineHeights.label,
+    letterSpacing: 1.4,
+  },
+  discoverEyebrowSpaced: {
+    marginTop: Spacing.lg,
+  },
+  discoverMeaning: {
+    marginTop: Spacing.xs,
+    color: WarshPalette.ink,
+    fontFamily: Fonts.displaySemiBold,
+    fontSize: FontSizes.displayL,
+    lineHeight: LineHeights.displayL,
+  },
+  discoverExplanation: {
+    marginTop: Spacing.xs,
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyL,
+    lineHeight: LineHeights.bodyL,
+  },
+  exitOverlay: {
+    flex: 1,
+    justifyContent: "center",
+    paddingHorizontal: Spacing.xl,
+    backgroundColor: Colors.overlay,
+  },
+  exitDialog: {
+    padding: Spacing.xl,
+    borderRadius: Radii.lg,
+    borderWidth: 1,
+    borderColor: WarshPalette.cream,
+    backgroundColor: WarshPalette.parchmentBg,
+  },
+  exitTitle: {
+    color: WarshPalette.ink,
+    fontFamily: Fonts.display,
+    fontSize: FontSizes.displayL,
+    lineHeight: LineHeights.displayL,
+    textAlign: "center",
+  },
+  exitBody: {
+    marginTop: Spacing.sm,
+    color: WarshPalette.bodyBrown,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    lineHeight: LineHeights.bodyM,
+    textAlign: "center",
+  },
+  exitPrimary: {
+    marginTop: Spacing.xl,
+    marginBottom: Spacing.sm,
+    backgroundColor: WarshPalette.ink,
   },
   exercisePlayRow: {
     alignItems: "center",
     marginTop: 4,
+  },
+  practiceProgressWrap: {
+    flex: 1,
+    marginHorizontal: Spacing.md,
   },
   progressTrack: {
     flexDirection: "row",
