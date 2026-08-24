@@ -2,734 +2,234 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 1, Lesson 2 — ذٰلِكَ, مَا, مَنْ + 7 people/person nouns. 10 WORD entries total. Authored against warsh-content-schema.ts v1.0.",
-    "chapter_order": 1,
-    "lesson_order": 2,
-    "estimated_minutes": 10,
-    "xp_reward": 10
+    "_note": "Chapter 1, Lesson 2 — First Encounter with ذَٰلِكَ, plus seven people words for early vocabulary growth. Authored against warsh-content-schema.ts v1.0.",
+    "chapter_order": 1, "lesson_order": 2, "estimated_minutes": 10, "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 2,
-      "label": "Al-Baqarah 2:2",
-      "ar": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+      "surah": 2, "ayah": 2, "label": "Al-Baqarah 2:2",
+      "ar": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
       "en": "That is the Book — no doubt in it — a guidance for those mindful of Allah.",
-      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں، یہ اللہ سے ڈرنے والوں کے لیے ہدایت ہے۔",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں، پرہیزگاروں کے لیے ہدایت ہے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
     },
     "noor_intro": {
-      "en": "You know هَذَا from Lesson 1. Today meet its partner — ذٰلِكَ. You will also learn مَا (what?) and مَنْ (who?) — plus seven words for the people around you.",
-      "ur": "هَذا آپ نے سیکھ لیا۔ آج اس کا ساتھی ملیں — ذٰلِکَ۔ اور مَا (کیا؟) اور مَنْ (کون؟) — اور سات الفاظ آپ کے آس پاس کے لوگوں کے لیے۔"
-    },
-    "autoplay": true
+      "en": "In Lesson 1, you learned هَذَا — 'this' — for something near. Today you will learn ذَٰلِكَ — 'that' — for something masculine and farther away. You will also add seven useful people words to your vocabulary.",
+      "ur": "سبق 1 میں آپ نے هَذَا — 'یہ' — قریب کی چیز کے لیے سیکھا۔ آج آپ ذَٰلِكَ — 'وہ' — کسی مذکر اور دور چیز کے لیے سیکھیں گے۔ آپ اپنی ذخیرۂ الفاظ میں لوگوں کے لیے سات مفید الفاظ بھی شامل کریں گے۔"
+    }, "autoplay": true
   },
   "discover_cards": [
     {
       "type": "WORD",
-      "text": {
-        "ar": "ذٰلِكَ",
-        "ar_plain": "ذلك",
-        "translit": "dhālika",
-        "en": "that (m, far)",
-        "ur": "وہ (مذکر، دور)"
-      },
-      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/dhalika.png",
+      "text": { "ar": "ذَٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that (masculine, far)", "ur": "وہ (مذکر، دور)" },
+      "image_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/images/discover/dhalika-v2.png",
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/dhalika.mp3",
       "explanation": {
-        "en": "ذٰلِكَ means 'that' — pointing at something masculine far from you. هَذَا (near) and ذٰلِكَ (far) are a pair. Both appear throughout the Quran.",
-        "ur": "ذٰلِکَ کا مطلب ہے 'وہ' — کسی دور مذکر چیز کی طرف اشارہ۔ هَذا (قریب) اور ذٰلِکَ (دور) ایک جوڑا ہیں۔"
+        "en": "Use it for 'that' when you point to something masculine that is farther away. Think: that book over there.",
+        "ur": "ذَٰلِكَ کا مطلب 'وہ' ہے جب آپ کسی مذکر اور دور چیز کی طرف اشارہ کریں۔ مثال: وہ کتاب وہاں۔"
       },
-      "introduces_vocab": {
-        "ar_plain": "ذلك"
-      }
+      "introduces_vocab": { "ar_plain": "ذلك" }
     },
     {
       "type": "CONTRAST",
-      "concept": {
-        "en": "Near vs Far — هَذَا and ذٰلِكَ",
-        "ar": "هَذَا وَذٰلِكَ",
-        "ur": "قریب اور دور"
-      },
+      "concept": { "en": "Near and far — هَذَا and ذَٰلِكَ", "ar": "هَذَا وَذَٰلِكَ", "ur": "قریب اور دور — هَذَا اور ذَٰلِكَ" },
       "explanation": {
-        "en": "هَذَا — this, near. ذٰلِكَ — that, far. Same grammar, different distance.\nhَذَا كِتَابٌ (This is a book) · ذٰلِكَ كِتَابٌ (That is a book).",
-        "ur": "هَذا — یہ، قریب۔ ذٰلِکَ — وہ، دور۔ هَذا کِتابٌ (یہ کتاب ہے)۔ ذٰلِکَ کِتابٌ (وہ کتاب ہے)۔"
+        "en": "هَذَا means 'this' for something near. ذَٰلِكَ means 'that' for something farther away. The noun comes after either word.",
+        "ur": "هَذَا قریب کی چیز کے لیے 'یہ' ہے۔ ذَٰلِكَ دور کی چیز کے لیے 'وہ' ہے۔ دونوں کے بعد اسم آتا ہے۔"
       },
       "examples": [
-        {
-          "ar": "هَذَا كِتَابٌ",
-          "ar_plain": "هذا كتاب",
-          "translit": "hādhā kitābun",
-          "en": "This is a book",
-          "ur": "یہ ایک کتاب ہے"
-        },
-        {
-          "ar": "ذٰلِكَ مَسْجِدٌ",
-          "ar_plain": "ذلك مسجد",
-          "translit": "dhālika masjidun",
-          "en": "That is a mosque",
-          "ur": "وہ ایک مسجد ہے"
-        }
+        { "ar": "هَذَا كِتَابٌ", "ar_plain": "هذا كتاب", "translit": "hādhā kitābun", "en": "This is a book", "ur": "یہ ایک کتاب ہے" },
+        { "ar": "ذَٰلِكَ مَسْجِدٌ", "ar_plain": "ذلك مسجد", "translit": "dhālika masjidun", "en": "That is a mosque", "ur": "وہ ایک مسجد ہے" }
       ]
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "مَا",
-        "ar_plain": "ما",
-        "translit": "mā",
-        "en": "what",
-        "ur": "کیا"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ma.mp3",
-      "explanation": {
-        "en": "مَا means 'what' — used to ask about things, not people. مَا هَذَا؟ (What is this?) · مَا ذٰلِكَ؟ (What is that?).",
-        "ur": "مَا کا مطلب 'کیا' — چیزوں کے بارے میں پوچھنے کے لیے، لوگوں کے لیے نہیں۔ مَا هَذا؟ (یہ کیا ہے؟)"
-      },
-      "introduces_vocab": {
-        "ar_plain": "ما"
-      },
-      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/maa.png"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "مَنْ",
-        "ar_plain": "من",
-        "translit": "man",
-        "en": "who",
-        "ur": "کون"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/man.mp3",
-      "explanation": {
-        "en": "مَنْ means 'who' — used to ask about people. مَنْ هَذَا؟ (Who is this?) · مَنْ ذٰلِكَ؟ (Who is that?). مَنْ for people, مَا for things.",
-        "ur": "مَنْ کا مطلب 'کون' — لوگوں کے بارے میں پوچھنے کے لیے۔ مَنْ هَذا؟ (یہ کون ہے؟)۔ مَنْ لوگوں کے لیے، مَا چیزوں کے لیے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "من"
-      },
-      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/man.png"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "أُسْتَاذ",
-        "ar_plain": "أستاذ",
-        "translit": "ustādh",
-        "en": "teacher",
-        "ur": "استاد"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ustaadh.mp3",
-      "explanation": {
-        "en": "مَنْ هَذَا؟ هَذَا أُسْتَاذٌ — 'Who is this? This is a teacher.' You can now ask and answer.",
-        "ur": "مَنْ هَذَا؟ هَذَا أُسْتَاذٌ — 'یہ کون ہے؟ یہ ایک استاد ہے۔' آپ اب پوچھ اور جواب دے سکتے ہیں۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "أستاذ"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "طَالِب",
-        "ar_plain": "طالب",
-        "translit": "ṭālib",
-        "en": "student",
-        "ur": "طالب علم"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/taalib.mp3",
-      "introduces_vocab": {
-        "ar_plain": "طالب"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "مُسْلِم",
-        "ar_plain": "مسلم",
-        "translit": "muslim",
-        "en": "Muslim",
-        "ur": "مسلمان"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/muslim.mp3",
-      "explanation": {
-        "en": "مُسْلِم — one who submits to Allah. From سَلَمَ (peace, submission). هَذَا مُسْلِمٌ — This is a Muslim.",
-        "ur": "مُسْلِم — اللہ کے سامنے سرتسلیم خم کرنے والا۔ سَلَمَ (سلامتی، سپردگی) سے۔ هَذَا مُسْلِمٌ — یہ ایک مسلمان ہے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "مسلم"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "نَبِيّ",
-        "ar_plain": "نبي",
-        "translit": "nabiyy",
-        "en": "prophet",
-        "ur": "نبی"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/nabiyy.mp3",
-      "explanation": {
-        "en": "نَبِيّ — prophet. مَنْ هَذَا؟ هَذَا نَبِيٌّ — 'Who is this? This is a prophet.' Appears many times in the Quran — النَّبِيُّ (the Prophet ﷺ).",
-        "ur": "نَبِيّ — نبی۔ مَنْ هَذَا؟ هَذَا نَبِيٌّ — 'یہ کون ہے؟ یہ ایک نبی ہے۔' قرآن میں بارہا آتا ہے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "نبي"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "أَب",
-        "ar_plain": "أب",
-        "translit": "'ab",
-        "en": "father",
-        "ur": "باپ"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ab.mp3",
-      "explanation": {
-        "en": "أَب — father. مَنْ ذٰلِكَ؟ ذٰلِكَ أَبِي — 'Who is that? That is my father.' One of the most common family words.",
-        "ur": "أَب — باپ۔ مَنْ ذٰلِكَ؟ ذٰلِكَ أَبِي — 'وہ کون ہے؟ وہ میرے ابو ہیں۔'"
-      },
-      "introduces_vocab": {
-        "ar_plain": "أب"
-      },
-      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/ab.png"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "أُمّ",
-        "ar_plain": "أم",
-        "translit": "'umm",
-        "en": "mother",
-        "ur": "ماں"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/umm.mp3",
-      "explanation": {
-        "en": "أُمّ — mother. أُمُّ الْكِتَابِ — 'the Mother of the Book' (Al-Imran 3:7). Also Surah Al-Fatiha is called أُمُّ الْقُرْآنِ — the Mother of the Quran.",
-        "ur": "أُمّ — ماں۔ أُمُّ الْكِتَابِ — 'کتاب کی ماں' (آل عمران 3:7)۔ سورۃ الفاتحہ کو أُمُّ الْقُرْآنِ بھی کہتے ہیں۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "أم"
-      },
-      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/umm.png"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "رَسُول",
-        "ar_plain": "رسول",
-        "translit": "rasūl",
-        "en": "messenger",
-        "ur": "رسول"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/rasool.mp3",
-      "explanation": {
-        "en": "رَسُول — messenger. مُحَمَّدٌ رَسُولُ اللَّهِ — you recite this in every shahada. Now you know the grammar of the word رَسُول.",
-        "ur": "رَسُول — قاصد/رسول۔ مُحَمَّدٌ رَسُولُ اللَّهِ — آپ ہر شہادت میں یہ پڑھتے ہیں۔ اب آپ لفظ رَسُول کی گرامر جانتے ہیں۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "رسول"
-      }
     },
     {
       "type": "CONCEPT",
-      "concept": {
-        "en": "Arabic questions need no inversion",
-        "ar": "السُّؤَال بِلَا قَلْب",
-        "ur": "عربی میں سوال بنانا آسان ہے"
-      },
+      "concept": { "en": "Point farther away", "ar": "ذَٰلِكَ لِلْبَعِيد", "ur": "ذَٰلِكَ دور کی چیز کے لیے" },
       "explanation": {
-        "en": "In English: 'What IS this?' — you move 'is'. In Arabic: مَا هَذَا؟ — you just add مَا at the front. No inversion, no extra words. Same for مَنْ هَذَا؟ (Who is this?).",
-        "ur": "عربی میں سوال بنانا بہت آسان ہے۔ بس مَا یا مَنْ سامنے لگائیں — کوئی ترتیب نہیں بدلنی۔"
+        "en": "Use ذَٰلِكَ when the thing is farther away: that book over there, that mosque in the distance, that door across the room.",
+        "ur": "ذَٰلِكَ تب استعمال کریں جب چیز دور ہو: وہ کتاب وہاں، وہ مسجد فاصلے پر، وہ دروازہ کمرے کے پار۔"
       },
       "examples": [
-        {
-          "ar": "مَا هَذَا؟",
-          "ar_plain": "ما هذا",
-          "translit": "mā hādhā?",
-          "en": "What is this?",
-          "ur": "یہ کیا ہے؟"
-        },
-        {
-          "ar": "مَنْ هَذَا؟",
-          "ar_plain": "من هذا",
-          "translit": "man hādhā?",
-          "en": "Who is this?",
-          "ur": "یہ کون ہے؟"
-        }
+        { "ar": "ذَٰلِكَ كِتَابٌ", "ar_plain": "ذلك كتاب", "translit": "dhālika kitābun", "en": "That is a book", "ur": "وہ ایک کتاب ہے" },
+        { "ar": "ذَٰلِكَ بَابٌ", "ar_plain": "ذلك باب", "translit": "dhālika bābun", "en": "That is a door", "ur": "وہ ایک دروازہ ہے" }
       ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": { "en": "ذَٰلِكَ comes before the noun", "ar": "ذَٰلِكَ قَبْلَ الِاسْم", "ur": "ذَٰلِكَ اسم سے پہلے آتا ہے" },
+      "explanation": {
+        "en": "Put ذَٰلِكَ first, then use a noun. You will now add useful people words to your vocabulary.",
+        "ur": "پہلے ذَٰلِكَ کہیں، پھر اسم۔ اب آپ لوگوں کے لیے مفید الفاظ اپنی ذخیرۂ الفاظ میں شامل کریں گے۔"
+      },
+      "examples": [
+        { "ar": "ذَٰلِكَ قَلَمٌ", "ar_plain": "ذلك قلم", "translit": "dhālika qalāmun", "en": "That is a pen", "ur": "وہ ایک قلم ہے" },
+        { "ar": "ذَٰلِكَ صِرَاطٌ", "ar_plain": "ذلك صراط", "translit": "dhālika ṣirāṭun", "en": "That is a path", "ur": "وہ ایک راستہ ہے" }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "أُسْتَاذ", "ar_plain": "أستاذ", "translit": "ustādh", "en": "teacher", "ur": "استاد" },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ustaadh.mp3",
+      "explanation": { "en": "أُسْتَاذ means teacher — a useful word for the person teaching you.", "ur": "أُسْتَاذ کا مطلب استاد ہے — آپ کو پڑھانے والے شخص کے لیے مفید لفظ۔" },
+      "introduces_vocab": { "ar_plain": "أستاذ" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "طَالِب", "ar_plain": "طالب", "translit": "ṭālib", "en": "student", "ur": "طالب علم" },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/taalib.mp3",
+      "explanation": { "en": "طَالِب means student — a person who seeks knowledge.", "ur": "طَالِب کا مطلب طالب علم ہے — علم حاصل کرنے والا شخص۔" },
+      "introduces_vocab": { "ar_plain": "طالب" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "مُسْلِم", "ar_plain": "مسلم", "translit": "muslim", "en": "Muslim", "ur": "مسلمان" },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/muslim.mp3",
+      "explanation": { "en": "مُسْلِم means Muslim. You will meet this word often in Arabic and Quranic learning.", "ur": "مُسْلِم کا مطلب مسلمان ہے۔ آپ عربی اور قرآنی سیکھنے میں یہ لفظ اکثر دیکھیں گے۔" },
+      "introduces_vocab": { "ar_plain": "مسلم" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "نَبِيّ", "ar_plain": "نبي", "translit": "nabiyy", "en": "prophet", "ur": "نبی" },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/nabiyy.mp3",
+      "explanation": { "en": "نَبِيّ means prophet — an important Quranic word.", "ur": "نَبِيّ کا مطلب نبی ہے — قرآن کا ایک اہم لفظ۔" },
+      "introduces_vocab": { "ar_plain": "نبي" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "أَب", "ar_plain": "أب", "translit": "'ab", "en": "father", "ur": "باپ" },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/ab.png",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ab.mp3",
+      "explanation": { "en": "أَب means father — a foundational family word.", "ur": "أَب کا مطلب باپ ہے — خاندان کا ایک بنیادی لفظ۔" },
+      "introduces_vocab": { "ar_plain": "أب" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "أُمّ", "ar_plain": "أم", "translit": "'umm", "en": "mother", "ur": "ماں" },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/umm.png",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/umm.mp3",
+      "explanation": { "en": "أُمّ means mother — another essential family word.", "ur": "أُمّ کا مطلب ماں ہے — خاندان کا ایک اور بنیادی لفظ۔" },
+      "introduces_vocab": { "ar_plain": "أم" }
+    },
+    {
+      "type": "WORD",
+      "text": { "ar": "رَسُول", "ar_plain": "رسول", "translit": "rasūl", "en": "messenger", "ur": "رسول" },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/rasool.mp3",
+      "explanation": { "en": "رَسُول means messenger — another word you will meet often in the Quran.", "ur": "رَسُول کا مطلب رسول ہے — ایک اور لفظ جو آپ قرآن میں اکثر دیکھیں گے۔" },
+      "introduces_vocab": { "ar_plain": "رسول" }
     }
   ],
   "exercises": [
     {
-      "id": "ch01-l02-ex01",
-      "type": "TAP_TRANSLATION",
-      "xp_value": 1,
-      "prompt": {
-        "ar": "ذٰلِكَ",
-        "ar_plain": "ذلك",
-        "translit": "dhālika",
-        "en": "that (m, far)",
-        "ur": "وہ (م، دور)"
-      },
+      "id": "ch01-l02-ex01", "type": "TAP_TRANSLATION", "xp_value": 1,
+      "prompt": { "ar": "ذَٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that (masculine, far)", "ur": "وہ (مذکر، دور)" },
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/dhalika.mp3",
       "options": [
-        {
-          "en": "this (m)",
-          "ur": "یہ (مذکر)"
-        },
-        {
-          "en": "that (m)",
-          "ur": "وہ (مذکر)"
-        },
-        {
-          "en": "what",
-          "ur": "کیا"
-        },
-        {
-          "en": "who",
-          "ur": "کون"
-        }
-      ],
-      "correct_index": 1,
+        { "en": "this (near)", "ur": "یہ (قریب)" }, { "en": "that (far)", "ur": "وہ (دور)" },
+        { "en": "book", "ur": "کتاب" }, { "en": "mosque", "ur": "مسجد" }
+      ], "correct_index": 1,
       "explanation_on_wrong": {
-        "en": "ذٰلِكَ points far — 'that'. هَذَا (Lesson 1) points near — 'this'.",
-        "ur": "ذٰلِکَ دور کی طرف — 'وہ'۔ هَذا قریب کی طرف — 'یہ'۔"
+        "en": "ذَٰلِكَ points farther away: 'that'. هَذَا from Lesson 1 points near: 'this'.",
+        "ur": "ذَٰلِكَ دور کی طرف اشارہ کرتا ہے: 'وہ'۔ سبق 1 کا هَذَا قریب کی طرف اشارہ کرتا ہے: 'یہ'۔"
       }
     },
     {
-      "id": "ch01-l02-ex02",
-      "type": "TAP_TRANSLATION",
-      "xp_value": 1,
-      "prompt": {
-        "ar": "مَنْ",
-        "ar_plain": "من",
-        "translit": "man",
-        "en": "who",
-        "ur": "کون"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/man.mp3",
+      "id": "ch01-l02-ex04", "type": "FILL_BLANK", "xp_value": 1, "mode": "TAP",
+      "sentence_ar": "___ ٱلْكِتَٰبُ",
+      "hint": { "en": "That is the Book. (Al-Baqarah 2:2)", "ur": "وہ کتاب ہے۔ (البقرہ 2:2)" },
       "options": [
-        {
-          "en": "what",
-          "ur": "کیا"
-        },
-        {
-          "en": "that (m)",
-          "ur": "وہ (مذکر)"
-        },
-        {
-          "en": "who",
-          "ur": "کون"
-        },
-        {
-          "en": "this (m)",
-          "ur": "یہ (مذکر)"
-        }
+        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this", "ur": "یہ" },
+        { "ar": "ذَٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that", "ur": "وہ" },
+        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "book", "ur": "کتاب" },
+        { "ar": "مَسْجِدٌ", "ar_plain": "مسجد", "translit": "masjidun", "en": "mosque", "ur": "مسجد" }
       ],
-      "correct_index": 2,
+      "correct_answer": { "ar": "ذَٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that", "ur": "وہ" },
       "explanation_on_wrong": {
-        "en": "مَنْ asks about people — 'who'. مَا asks about things — 'what'.",
-        "ur": "مَنْ لوگوں کے لیے — 'کون'۔ مَا چیزوں کے لیے — 'کیا'۔"
+        "en": "The Quran says ذَٰلِكَ ٱلْكِتَٰبُ — 'That is the Book.'",
+        "ur": "قرآن میں ہے: ذَٰلِكَ ٱلْكِتَٰبُ — 'وہ کتاب ہے'۔"
       }
     },
     {
-      "id": "ch01-l02-ex03",
-      "type": "TAP_TRANSLATION",
-      "xp_value": 1,
-      "prompt": {
-        "ar": "رَسُول",
-        "ar_plain": "رسول",
-        "translit": "rasūl",
-        "en": "messenger",
-        "ur": "میسنجر"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/rasool.mp3",
-      "options": [
-        {
-          "en": "prophet",
-          "ur": "نبی"
-        },
-        {
-          "en": "messenger",
-          "ur": "رسول"
-        },
-        {
-          "en": "teacher",
-          "ur": "استاد"
-        },
-        {
-          "en": "student",
-          "ur": "طالب علم"
-        }
-      ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch01-l02-ex04",
-      "type": "FILL_BLANK",
-      "xp_value": 1,
-      "mode": "TAP",
-      "sentence_ar": "___ الْكِتَابُ",
-      "hint": {
-        "en": "That is the Book. (Al-Baqarah 2:2)",
-        "ur": "وہ کتاب ہے۔ (البقرہ 2:2)"
-      },
-      "options": [
-        {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "hādhā",
-          "en": "this",
-          "ur": "یہ"
-        },
-        {
-          "ar": "ذٰلِكَ",
-          "ar_plain": "ذلك",
-          "translit": "dhālika",
-          "en": "that",
-          "ur": "کہ"
-        },
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "mā",
-          "en": "what",
-          "ur": "کیا"
-        },
-        {
-          "ar": "مَنْ",
-          "ar_plain": "من",
-          "translit": "man",
-          "en": "who",
-          "ur": "کون"
-        }
-      ],
-      "correct_answer": {
-        "ar": "ذٰلِكَ",
-        "ar_plain": "ذلك",
-        "translit": "dhālika",
-        "en": "that",
-        "ur": "کہ"
-      },
-      "explanation_on_wrong": {
-        "en": "ذٰلِكَ الْكِتَابُ — 'That is the Book' — is how Allah begins describing the Quran in Al-Baqarah. The distance in ذٰلِكَ is a mark of reverence.",
-        "ur": "ذٰلِکَ الْکِتابُ — اللہ اپنی کتاب کو 'وہ کتاب' کہتے ہیں — دوری تعظیم کی علامت ہے۔"
-      }
-    },
-    {
-      "id": "ch01-l02-ex05",
-      "type": "BUILD_SENTENCE",
-      "xp_value": 1,
-      "target_translation": {
-        "en": "Who is this?",
-        "ur": "یہ کون ہے؟"
-      },
+      "id": "ch01-l02-ex05", "type": "BUILD_SENTENCE", "xp_value": 1,
+      "target_translation": { "en": "That is a mosque", "ur": "وہ ایک مسجد ہے" },
       "tiles": [
-        {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "hādhā",
-          "en": "this",
-          "ur": "یہ"
-        },
-        {
-          "ar": "مَنْ",
-          "ar_plain": "من",
-          "translit": "man",
-          "en": "who",
-          "ur": "کون"
-        },
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "mā",
-          "en": "what",
-          "ur": "کیا"
-        },
-        {
-          "ar": "ذٰلِكَ",
-          "ar_plain": "ذلك",
-          "translit": "dhālika",
-          "en": "that (m)",
-          "ur": "وہ (م)"
-        }
-      ],
-      "correct_order": [
-        1,
-        0
-      ],
+        { "ar": "ذَٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that", "ur": "وہ" },
+        { "ar": "مَسْجِدٌ", "ar_plain": "مسجد", "translit": "masjidun", "en": "mosque", "ur": "مسجد" },
+        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this", "ur": "یہ" },
+        { "ar": "كِتَابٌ", "ar_plain": "كتاب", "translit": "kitābun", "en": "book", "ur": "کتاب" }
+      ], "correct_order": [0, 1],
       "explanation_on_wrong": {
-        "en": "In Arabic the question word comes first — مَنْ هَذَا؟ No 'is', no inversion.",
-        "ur": "عربی میں سوالیہ لفظ پہلے آتا ہے — مَنْ هَذا؟"
+        "en": "Put ذَٰلِكَ first, then the noun: ذَٰلِكَ مَسْجِدٌ.",
+        "ur": "پہلے ذَٰلِكَ، پھر اسم: ذَٰلِكَ مَسْجِدٌ۔"
       }
     },
     {
-      "id": "ch01-l02-ex06",
-      "type": "TRUE_FALSE",
-      "xp_value": 1,
+      "id": "ch01-l02-ex06", "type": "TRUE_FALSE", "xp_value": 1,
       "statement": {
-        "en": "مَا is used to ask about people — مَا هَذَا؟ means 'Who is this?'",
-        "ur": "مَا لوگوں کے بارے میں پوچھنے کے لیے استعمال ہوتا ہے۔",
-        "ar_example": {
-          "ar": "مَا هَذَا؟",
-          "ar_plain": "ما هذا",
-          "translit": "mā hādhā?",
-          "en": "What is this?",
-          "ur": "یہ کیا ہے؟"
-        }
-      },
-      "correct_answer": false,
+        "en": "ذَٰلِكَ points to something near you.", "ur": "ذَٰلِكَ قریب کی چیز کی طرف اشارہ کرتا ہے۔",
+        "ar_example": { "ar": "ذَٰلِكَ كِتَابٌ", "ar_plain": "ذلك كتاب", "translit": "dhālika kitābun", "en": "That is a book", "ur": "وہ ایک کتاب ہے" }
+      }, "correct_answer": false,
       "explanation_on_wrong": {
-        "en": "مَا asks about things — 'what'. مَنْ asks about people — 'who'. مَا هَذَا؟ means 'What is this?'",
-        "ur": "مَا چیزوں کے لیے، مَنْ لوگوں کے لیے۔ مَا هَذا؟ کا مطلب 'یہ کیا ہے؟' ہے۔"
+        "en": "ذَٰلِكَ is for something farther away. هَذَا is for something near.",
+        "ur": "ذَٰلِكَ دور کی چیز کے لیے ہے۔ هَذَا قریب کی چیز کے لیے ہے۔"
       }
     },
     {
-      "id": "ch01-l02-ex07",
-      "type": "MATCHING",
-      "xp_value": 1,
+      "id": "ch01-l02-ex07", "type": "MATCHING", "xp_value": 1,
       "left_column": [
-        {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "hādhā",
-          "en": "this (m)",
-          "ur": "یہ (م)"
-        },
-        {
-          "ar": "ذٰلِكَ",
-          "ar_plain": "ذلك",
-          "translit": "dhālika",
-          "en": "that (m)",
-          "ur": "وہ (م)"
-        },
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "mā",
-          "en": "what",
-          "ur": "کیا"
-        },
-        {
-          "ar": "مَنْ",
-          "ar_plain": "من",
-          "translit": "man",
-          "en": "who",
-          "ur": "کون"
-        }
+        { "ar": "هَذَا", "ar_plain": "هذا", "translit": "hādhā", "en": "this", "ur": "یہ" },
+        { "ar": "ذَٰلِكَ", "ar_plain": "ذلك", "translit": "dhālika", "en": "that", "ur": "وہ" }
       ],
-      "right_column": [
-        {
-          "en": "that (m)",
-          "ur": "وہ (مذکر)"
-        },
-        {
-          "en": "who",
-          "ur": "کون"
-        },
-        {
-          "en": "this (m)",
-          "ur": "یہ (مذکر)"
-        },
-        {
-          "en": "what",
-          "ur": "کیا"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          2
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          2,
-          3
-        ],
-        [
-          3,
-          1
-        ]
-      ]
+      "right_column": [{ "en": "far", "ur": "دور" }, { "en": "near", "ur": "قریب" }],
+      "correct_pairs": [[0, 1], [1, 0]]
     },
     {
-      "id": "ch01-l02-ex08",
-      "type": "MATCHING",
-      "xp_value": 1,
+      "id": "ch01-l02-ex08", "type": "MATCHING", "xp_value": 1,
       "left_column": [
-        {
-          "ar": "أُسْتَاذ",
-          "ar_plain": "أستاذ",
-          "translit": "ustādh",
-          "en": "teacher",
-          "ur": "استاد"
-        },
-        {
-          "ar": "طَالِب",
-          "ar_plain": "طالب",
-          "translit": "ṭālib",
-          "en": "student",
-          "ur": "طالب علم"
-        },
-        {
-          "ar": "نَبِيّ",
-          "ar_plain": "نبي",
-          "translit": "nabiyy",
-          "en": "prophet",
-          "ur": "نبی"
-        },
-        {
-          "ar": "رَسُول",
-          "ar_plain": "رسول",
-          "translit": "rasūl",
-          "en": "messenger",
-          "ur": "میسنجر"
-        }
+        { "ar": "أُسْتَاذ", "ar_plain": "أستاذ", "translit": "ustādh", "en": "teacher", "ur": "استاد" },
+        { "ar": "طَالِب", "ar_plain": "طالب", "translit": "ṭālib", "en": "student", "ur": "طالب علم" },
+        { "ar": "مُسْلِم", "ar_plain": "مسلم", "translit": "muslim", "en": "Muslim", "ur": "مسلمان" },
+        { "ar": "نَبِيّ", "ar_plain": "نبي", "translit": "nabiyy", "en": "prophet", "ur": "نبی" }
       ],
       "right_column": [
-        {
-          "en": "prophet",
-          "ur": "نبی"
-        },
-        {
-          "en": "teacher",
-          "ur": "استاد"
-        },
-        {
-          "en": "messenger",
-          "ur": "رسول"
-        },
-        {
-          "en": "student",
-          "ur": "طالب علم"
-        }
+        { "en": "student", "ur": "طالب علم" }, { "en": "prophet", "ur": "نبی" },
+        { "en": "teacher", "ur": "استاد" }, { "en": "Muslim", "ur": "مسلمان" }
       ],
-      "correct_pairs": [
-        [
-          0,
-          1
-        ],
-        [
-          1,
-          3
-        ],
-        [
-          2,
-          0
-        ],
-        [
-          3,
-          2
-        ]
-      ]
+      "correct_pairs": [[0, 2], [1, 0], [2, 3], [3, 1]]
     },
     {
-      "id": "ch01-l02-ex09",
-      "type": "MATCHING",
-      "xp_value": 1,
+      "id": "ch01-l02-ex09", "type": "MATCHING", "xp_value": 1,
       "left_column": [
-        {
-          "ar": "مُسْلِم",
-          "ar_plain": "مسلم",
-          "translit": "muslim",
-          "en": "Muslim",
-          "ur": "مسلمان"
-        },
-        {
-          "ar": "أَب",
-          "ar_plain": "أب",
-          "translit": "'ab",
-          "en": "father",
-          "ur": "باپ"
-        },
-        {
-          "ar": "مَسْجِد",
-          "ar_plain": "مسجد",
-          "translit": "masjid",
-          "en": "mosque",
-          "ur": "مسجد"
-        },
-        {
-          "ar": "كِتَاب",
-          "ar_plain": "كتاب",
-          "translit": "kitāb",
-          "en": "book",
-          "ur": "کتاب"
-        }
+        { "ar": "أَب", "ar_plain": "أب", "translit": "'ab", "en": "father", "ur": "باپ" },
+        { "ar": "أُمّ", "ar_plain": "أم", "translit": "'umm", "en": "mother", "ur": "ماں" },
+        { "ar": "رَسُول", "ar_plain": "رسول", "translit": "rasūl", "en": "messenger", "ur": "رسول" },
+        { "ar": "كِتَاب", "ar_plain": "كتاب", "translit": "kitāb", "en": "book", "ur": "کتاب" }
       ],
       "right_column": [
-        {
-          "en": "book",
-          "ur": "کتاب"
-        },
-        {
-          "en": "Muslim",
-          "ur": "مسلمان"
-        },
-        {
-          "en": "father",
-          "ur": "باپ"
-        },
-        {
-          "en": "mosque",
-          "ur": "مسجد"
-        }
+        { "en": "messenger", "ur": "رسول" }, { "en": "mother", "ur": "ماں" },
+        { "en": "book", "ur": "کتاب" }, { "en": "father", "ur": "باپ" }
       ],
-      "correct_pairs": [
-        [
-          0,
-          1
-        ],
-        [
-          1,
-          2
-        ],
-        [
-          2,
-          3
-        ],
-        [
-          3,
-          0
-        ]
-      ]
+      "correct_pairs": [[0, 3], [1, 1], [2, 0], [3, 2]]
     }
   ],
   "reveal": {
-    "concept_name": {
-      "en": "مَا and هَذَا in the Quran — together",
-      "ar": "مَا وَهَذَا فِي الْقُرْآن",
-      "ur": "قرآن میں مَا اور هَذا ایک ساتھ"
-    },
+    "concept_name": { "en": "ذَٰلِكَ in the Quran", "ar": "ذَٰلِكَ فِي الْقُرْآن", "ur": "قرآن میں ذَٰلِكَ" },
     "ayah": {
-      "surah": 2,
-      "ayah": 26,
-      "label": "Al-Baqarah 2:26",
-      "ar": "مَاذَا أَرَادَ اللَّهُ بِهَٰذَا مَثَلًا",
-      "en": "What has Allah intended by this example?",
-      "ur": "اللہ نے اس مثال سے کیا ارادہ فرمایا؟",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002026.mp3"
+      "surah": 2, "ayah": 2, "label": "Al-Baqarah 2:2",
+      "ar": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+      "en": "That is the Book — no doubt in it — a guidance for those mindful of Allah.",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں، پرہیزگاروں کے لیے ہدایت ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
     },
-    "highlighted_word_indices": [
-      0,
-      2
-    ],
+    "highlighted_word_indices": [0], "highlighted_words": ["ذَٰلِكَ"],
     "noor_explanation": {
-      "en": "مَاذَا — 'what' — is مَا with ذَا (a short form of هَذَا). And بِهَٰذَا is هَذَا with the preposition بِ — 'with this'. In one short phrase, Allah uses both question words you learned today.",
-      "ur": "مَاذَا — یعنی 'کیا' — مَا اور ذَا (هَذا کی مختصر شکل) کا مجموعہ ہے۔ ایک مختصر جملے میں آج کے دونوں الفاظ آ گئے۔"
+      "en": "You learned ذَٰلِكَ — 'that'. In Al-Baqarah, it appears with ٱلْكِتَٰب: ذَٰلِكَ ٱلْكِتَٰبُ — 'That is the Book.'",
+      "ur": "آپ نے ذَٰلِكَ — 'وہ' — سیکھا۔ البقرہ میں یہ ٱلْكِتَٰب کے ساتھ آتا ہے: ذَٰلِكَ ٱلْكِتَٰبُ — 'وہ کتاب ہے'۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Ten words. You can now say 'This is a teacher', 'Who is that prophet?', 'What is this?' — and you can hear ذٰلِكَ الْكِتَابُ in Al-Baqarah and know exactly what Allah means.",
-      "ur": "دس الفاظ۔ اب آپ کہہ سکتے ہیں 'هَذا أُسْتَاذٌ'، 'مَنْ ذٰلِكَ النَّبِيُّ؟'، 'مَا هَذا؟' — اور البقرہ میں ذٰلِکَ الْکِتابُ سمجھ سکتے ہیں۔"
+      "en": "You learned ذَٰلِكَ — 'that' — for something farther away, and added seven useful people words to your vocabulary. You can now read ذَٰلِكَ ٱلْكِتَٰبُ in Al-Baqarah and recognise the first word.",
+      "ur": "آپ نے ذَٰلِكَ — 'وہ' — دور کی چیز کے لیے سیکھا اور اپنی ذخیرۂ الفاظ میں لوگوں کے لیے سات مفید الفاظ شامل کیے۔ اب آپ البقرہ میں ذَٰلِكَ ٱلْكِتَٰبُ پڑھ سکتے ہیں اور پہلا لفظ پہچان سکتے ہیں۔"
     }
   }
 }

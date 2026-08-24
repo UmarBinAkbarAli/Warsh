@@ -692,9 +692,9 @@ async function main() {
   const lessons = [
     // Chapter 1
     { id: "ch01-l01", chapterId: ch1Id, order: 1, title: "First Encounter with هَذَا",           titleAr: "اللقاء الأول مع هَذَا",                    template: "STANDARD", xpReward: ch01L01Content._meta?.xp_reward ?? 10, content: ch01L01Content },
-    { id: "ch01-l02", chapterId: ch1Id, order: 2, title: "That, What, and Who — ذٰلِكَ، مَا، مَنْ", titleAr: "ذٰلِكَ وَمَا وَمَنْ",                        template: "STANDARD", xpReward: ch01L02Content._meta?.xp_reward ?? 10, content: ch01L02Content },
-    { id: "ch01-l03", chapterId: ch1Id, order: 3, title: "Feminine Forms — هَذِهِ and تِلْكَ",      titleAr: "هَذِهِ وَتِلْكَ",                            template: "STANDARD", xpReward: ch01L03Content._meta?.xp_reward ?? 10, content: ch01L03Content },
-    { id: "ch01-l04", chapterId: ch1Id, order: 4, title: "Chapter 1 Review",                      titleAr: "مُرَاجَعَة الفَصْل الأَوَّل",                template: "REVIEW",   xpReward: ch01L04Content._meta?.xp_reward ?? 20, content: ch01L04Content },
+    { id: "ch01-l02", chapterId: ch1Id, order: 2, title: "First Encounter with ذَٰلِكَ",          titleAr: "اللقاء الأول مع ذَٰلِكَ",                  template: "STANDARD", xpReward: ch01L02Content._meta?.xp_reward ?? 10, content: ch01L02Content },
+    { id: "ch01-l03", chapterId: ch1Id, order: 3, title: "First Encounter with هَذِهِ",           titleAr: "اللقاء الأول مع هَذِهِ",                    template: "STANDARD", xpReward: ch01L03Content._meta?.xp_reward ?? 10, content: ch01L03Content },
+    { id: "ch01-l04", chapterId: ch1Id, order: 4, title: "First Encounter with تِلْكَ",           titleAr: "اللقاء الأول مع تِلْكَ",                    template: "STANDARD", xpReward: ch01L04Content._meta?.xp_reward ?? 10, content: ch01L04Content },
     // Chapter 2
     { id: "ch02-l01", chapterId: ch2Id, order: 1, title: "Tanween — The Sound of 'A'",            titleAr: "التَّنْوِين — صَوْتُ النَّكِرَة",            template: "STANDARD", xpReward: ch02L01Content._meta?.xp_reward ?? 10, content: ch02L01Content },
     { id: "ch02-l02", chapterId: ch2Id, order: 2, title: "ال — The Definite Article",              titleAr: "التَّعْرِيف بِالْ",                          template: "STANDARD", xpReward: ch02L02Content._meta?.xp_reward ?? 10, content: ch02L02Content },

@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 1, Lesson 3 — هَذِهِ and تِلْكَ. Feminine demonstratives + 11 feminine nouns. Authored against warsh-content-schema.ts v1.0.",
+    "_note": "Chapter 1, Lesson 3 — هَذِهِ. Near feminine demonstrative + nine early feminine vocabulary words.",
     "chapter_order": 1,
     "lesson_order": 3,
     "estimated_minutes": 10,
@@ -19,8 +19,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012108.mp3"
     },
     "noor_intro": {
-      "en": "هَٰذِهِ سَبِيلِي — 'This is my way.' You recognise هَذِهِ — it looks like هَذَا, but with ِهِ at the end. That small change is the feminine. Today you learn eleven feminine nouns and point at all of them.",
-      "ur": "هَٰذِهِ سَبِيلِي — 'یہ میری راہ ہے۔' هَذِهِ هَذا جیسا لگتا ہے لیکن آخر میں ِهِ ہے۔ یہ چھوٹی سی تبدیلی مؤنث کی علامت ہے۔ آج آپ گیارہ مؤنث اسم سیکھیں گے۔"
+      "en": "This is my way. Today’s new pointing word is hadhihi: use it for a feminine thing that is near. You will also meet nine useful feminine words.",
+      "ur": "هَٰذِهِ سَبِيلِي — ‘یہ میری راہ ہے۔’ آج کا نیا اشارے کا لفظ هَذِهِ ہے: قریب مؤنث چیز کے لیے۔ آپ نو مفید مؤنث الفاظ بھی سیکھیں گے۔"
     },
     "autoplay": true
   },
@@ -72,21 +72,11 @@
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "تِلْكَ",
-        "ar_plain": "تلك",
-        "translit": "tilka",
-        "en": "that (f, far)",
-        "ur": "وہ (مؤنث، دور)"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/tilka.mp3",
+      "type": "CONCEPT",
+      "concept": { "en": "Use هَذِهِ for a near feminine noun", "ar": "هَذِهِ", "ur": "قریب مؤنث اسم کے لیے هَذِهِ" },
       "explanation": {
-        "en": "تِلْكَ is the feminine of ذٰلِكَ. The full set: هَذَا · هَذِهِ · ذٰلِكَ · تِلْكَ. You now know all four pointing words.",
-        "ur": "تِلْکَ، ذٰلِکَ کی مؤنث شکل ہے۔ چاروں اشارے: هَذا · هَذِهِ · ذٰلِکَ · تِلْکَ — آپ نے چاروں سیکھ لیے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "تلك"
+        "en": "Use هَذِهِ with a feminine noun that is near: هَذِهِ شَجَرَةٌ — this is a tree. The farther-away feminine word comes next lesson.",
+        "ur": "قریب مؤنث اسم کے ساتھ هَذِهِ استعمال کریں: هَذِهِ شَجَرَةٌ — یہ ایک درخت ہے۔ دور مؤنث اشارہ اگلے سبق میں آئے گا۔"
       }
     },
     {
@@ -117,10 +107,10 @@
         "en": "garden / paradise",
         "ur": "باغ / جنت"
       },
-      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/hadiqa.png",
+      "image_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/images/discover/janna-v2.png",
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/janna.mp3",
       "explanation": {
-        "en": "جَنَّة — garden / Paradise. It ends in ة so it is feminine: هَذِهِ جَنَّةٌ · تِلْكَ الْجَنَّةُ.",
+        "en": "جَنَّة — garden / Paradise. It ends in ة so it is feminine: هَذِهِ جَنَّةٌ.",
         "ur": "جَنَّة — باغ / جنت۔ ة پر ختم ہوتا ہے، اس لیے مؤنث ہے۔"
       },
       "introduces_vocab": {
@@ -299,36 +289,32 @@
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
       "prompt": {
-        "ar": "تِلْكَ",
-        "ar_plain": "تلك",
-        "translit": "tilka",
-        "en": "that (f, far)",
-        "ur": "وہ (f، دور)"
+        "ar": "آيَة",
+        "ar_plain": "آية",
+        "translit": "āya",
+        "en": "ayah / verse / sign",
+        "ur": "آیت / نشانی"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/tilka.mp3",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/aaya.mp3",
       "options": [
         {
-          "en": "this (f)",
-          "ur": "یہ (مؤنث)"
+          "en": "ayah / verse / sign",
+          "ur": "آیت / نشانی"
         },
         {
-          "en": "that (m)",
-          "ur": "وہ (مذکر)"
+          "en": "mercy",
+          "ur": "رحمت"
         },
         {
-          "en": "that (f)",
-          "ur": "وہ (مؤنث)"
+          "en": "school",
+          "ur": "مدرسہ"
         },
         {
-          "en": "this (m)",
-          "ur": "یہ (مذکر)"
+          "en": "community",
+          "ur": "امت"
         }
       ],
-      "correct_index": 2,
-      "explanation_on_wrong": {
-        "en": "تِلْكَ is the feminine of ذٰلِكَ — both mean 'that (far)', but تِلْكَ is for feminine nouns.",
-        "ur": "تِلْکَ، ذٰلِکَ کی مؤنث شکل ہے۔"
-      }
+      "correct_index": 0
     },
     {
       "id": "ch01-l03-ex03",
@@ -374,11 +360,11 @@
       },
       "options": [
         {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "hādhā",
-          "en": "this (m)",
-          "ur": "یہ (م)"
+          "ar": "شَجَرَة",
+          "ar_plain": "شجرة",
+          "translit": "shajara",
+          "en": "tree",
+          "ur": "درخت"
         },
         {
           "ar": "هَذِهِ",
@@ -388,18 +374,18 @@
           "ur": "یہ (f)"
         },
         {
-          "ar": "ذٰلِكَ",
-          "ar_plain": "ذلك",
-          "translit": "dhālika",
-          "en": "that (m)",
-          "ur": "وہ (م)"
+          "ar": "مَدْرَسَة",
+          "ar_plain": "مدرسة",
+          "translit": "madrasa",
+          "en": "school",
+          "ur": "مدرسہ"
         },
         {
-          "ar": "تِلْكَ",
-          "ar_plain": "تلك",
-          "translit": "tilka",
-          "en": "that (f)",
-          "ur": "وہ (f)"
+          "ar": "جَنَّة",
+          "ar_plain": "جنة",
+          "translit": "janna",
+          "en": "garden; Paradise",
+          "ur": "باغ؛ جنت"
         }
       ],
       "correct_answer": {
@@ -419,8 +405,8 @@
       "type": "BUILD_SENTENCE",
       "xp_value": 1,
       "target_translation": {
-        "en": "That is a garden.",
-        "ur": "وہ ایک باغ ہے۔"
+        "en": "This is a garden.",
+        "ur": "یہ ایک باغ ہے۔"
       },
       "tiles": [
         {
@@ -431,11 +417,11 @@
           "ur": "ایک باغ"
         },
         {
-          "ar": "تِلْكَ",
-          "ar_plain": "تلك",
-          "translit": "tilka",
-          "en": "that (f)",
-          "ur": "وہ (f)"
+          "ar": "هَذِهِ",
+          "ar_plain": "هذه",
+          "translit": "hādhihi",
+          "en": "this (f)",
+          "ur": "یہ (f)"
         },
         {
           "ar": "هَذَا",
@@ -457,8 +443,8 @@
         0
       ],
       "explanation_on_wrong": {
-        "en": "تِلْكَ جَنَّةٌ — 'that (f) + garden'. جَنَّة is feminine so تِلْكَ matches.",
-        "ur": "تِلْکَ جَنَّةٌ — مؤنث اشارہ + باغ۔ جَنَّة مؤنث ہے اس لیے تِلْکَ صحیح ہے۔"
+        "en": "هَذِهِ جَنَّةٌ — ‘this (f) + garden’. جَنَّة is feminine, so هَذِهِ matches.",
+        "ur": "هَذِهِ جَنَّةٌ — مؤنث اشارہ + باغ۔ جَنَّة مؤنث ہے، اس لیے هَذِهِ صحیح ہے۔"
       }
     },
     {
@@ -518,16 +504,16 @@
       ],
       "right_column": [
         {
-          "en": "that (f)",
-          "ur": "وہ (مؤنث)"
+          "en": "garden; Paradise",
+          "ur": "باغ؛ جنت"
         },
         {
-          "en": "this (m)",
-          "ur": "یہ (مذکر)"
+          "en": "tree",
+          "ur": "درخت"
         },
         {
-          "en": "that (m)",
-          "ur": "وہ (مذکر)"
+          "en": "school",
+          "ur": "مدرسہ"
         },
         {
           "en": "this (f)",
@@ -698,32 +684,36 @@
   ],
   "reveal": {
     "concept_name": {
-      "en": "تِلْكَ in the Quran — Paradise revealed",
-      "ar": "تِلْكَ الْجَنَّةُ فِي الْقُرْآن",
-      "ur": "قرآن میں تِلْکَ الْجَنَّةُ"
+      "en": "هَذِهِ الشَّجَرَةُ in the Quran",
+      "ar": "هَٰذِهِ الشَّجَرَةُ فِي الْقُرْآن",
+      "ur": "قرآن میں هَٰذِهِ الشَّجَرَةُ"
     },
     "ayah": {
-      "surah": 43,
-      "ayah": 72,
-      "label": "Az-Zukhruf 43:72",
-      "ar": "وَتِلْكَ الْجَنَّةُ الَّتِي أُورِثْتُمُوهَا بِمَا كُنْتُمْ تَعْمَلُونَ",
-      "en": "And that is the Garden you are made to inherit for what you used to do.",
-      "ur": "اور یہ وہ جنت ہے جو تمہیں اپنے اعمال کی وجہ سے وراثت میں دی گئی۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/043072.mp3"
+      "surah": 2,
+      "ayah": 35,
+      "label": "Al-Baqarah 2:35",
+      "ar": "وَقُلْنَا يَا آدَمُ اسْكُنْ أَنتَ وَزَوْجُكَ الْجَنَّةَ وَكُلَا مِنْهَا رَغَدًا حَيْثُ شِئْتُمَا وَلَا تَقْرَبَا هَٰذِهِ الشَّجَرَةَ فَتَكُونَا مِنَ الظَّالِمِينَ",
+      "en": "And We said: O Adam, dwell, you and your wife, in Paradise and eat therefrom in abundance wherever you will. But do not approach this tree, lest you be among the wrongdoers.",
+      "ur": "اور ہم نے کہا: اے آدم! تم اور تمہاری بیوی جنت میں رہو اور جہاں سے چاہو فراوانی کے ساتھ کھاؤ، مگر اس درخت کے قریب نہ جانا ورنہ تم ظالموں میں سے ہو جاؤ گے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002035.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      1
+      14,
+      15
+    ],
+    "highlighted_words": [
+      "هَٰذِهِ",
+      "الشَّجَرَةَ"
     ],
     "noor_explanation": {
-      "en": "تِلْكَ الْجَنَّةُ — 'That is the Garden.' Allah uses تِلْكَ because الْجَنَّةُ is feminine. You now know all four pointing words: هَذَا · هَذِهِ · ذٰلِكَ · تِلْكَ. And you know eleven feminine nouns to pair them with. They appear hundreds of times in the Quran.",
-      "ur": "تِلْکَ الْجَنَّةُ — 'وہ جنت ہے۔' اللہ تِلْکَ استعمال فرماتے ہیں کیونکہ الْجَنَّةُ مؤنث ہے۔ اب آپ کے پاس چاروں اشارے اور گیارہ مؤنث اسم ہیں۔"
+      "en": "هَٰذِهِ الشَّجَرَةَ means ‘this tree.’ هَذِهِ matches شَجَرَة because tree is feminine. You can now recognise both words in this ayah.",
+      "ur": "هَٰذِهِ الشَّجَرَةَ کا مطلب ‘یہ درخت’ ہے۔ هَذِهِ، شَجَرَة کے ساتھ ملتا ہے کیونکہ درخت مؤنث ہے۔ اب آپ اس آیت میں دونوں الفاظ پہچان سکتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Eleven feminine nouns and all four pointing words. You can now read تِلْكَ الْجَنَّةُ in the Quran and understand every word. May Allah make you among those who inherit it, in shaa Allah.",
-      "ur": "گیارہ مؤنث اسم اور چاروں اشارے۔ اب آپ تِلْکَ الْجَنَّةُ پڑھ کر سمجھ سکتے ہیں۔ اللہ آپ کو اس کا وارث بنائے، ان شاء اللہ۔"
+      "en": "You learned هَذِهِ for a near feminine noun, plus nine useful feminine words. In the next lesson, you will learn تِلْكَ for a feminine noun farther away.",
+      "ur": "آپ نے قریب مؤنث اسم کے لیے هَذِهِ اور نو مفید مؤنث الفاظ سیکھے۔ اگلے سبق میں دور مؤنث اسم کے لیے تِلْكَ سیکھیں گے۔"
     }
   }
 }
