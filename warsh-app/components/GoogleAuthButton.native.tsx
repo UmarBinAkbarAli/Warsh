@@ -38,6 +38,14 @@ export function GoogleAuthButton({ loading = false, onToken, onError }: Props) {
         response = await GoogleOneTapSignIn.createAccount();
       }
       if (!isSuccessResponse(response)) {
+        // Previously a bare `return` here — every non-success outcome (no
+        // account on the device, the user backing out, or Credential
+        // Manager silently cancelling after an account was already picked —
+        // which the native module's own comments flag as the usual symptom
+        // of a release build's SHA-1 not being registered on the Android
+        // OAuth client) landed here with zero feedback: the button just
+        // reset with no explanation. Surface it instead of hiding it.
+        onError(new Error(`google_sign_in_incomplete:${response.type}`));
         return;
       }
 
