@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { BrandButton } from "@components/BrandButton";
 import { CelebrationEmblem } from "@components/CelebrationEmblem";
+import { useAuthStore } from "@stores/authStore";
 import {
   Colors,
   FontSizes,
@@ -18,6 +19,10 @@ import {
 
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const COMMITMENT_KEY = "warsh_streak_commitment_set";
+// Written by the "Getting started" onboarding checklist (and Settings) when
+// the user sets a daily goal — if that already happened, asking for a
+// separate streak-day commitment right after Lesson 1 is redundant.
+const ONBOARDING_GOAL_TOUCHED_KEY = "warsh_onboarding_goal_set";
 
 function getTodayDayIndex() {
   const day = new Date().getDay();
@@ -35,13 +40,17 @@ function getMotivationalCopy(streak: number): string {
 export default function StreakCelebrationScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const userId = useAuthStore((state) => state.user?.id);
   const { streak: streakParam } = useLocalSearchParams<{ streak: string }>();
   const streak = parseInt(streakParam ?? "1", 10) || 1;
   const todayIdx = getTodayDayIndex();
 
   async function handleContinue() {
     const committed = await AsyncStorage.getItem(COMMITMENT_KEY);
-    if (committed) {
+    const goalAlreadySet = userId
+      ? await AsyncStorage.getItem(`${ONBOARDING_GOAL_TOUCHED_KEY}_${userId}`)
+      : null;
+    if (committed || goalAlreadySet) {
       router.replace("/(app)/(tabs)");
     } else {
       router.push("/(app)/streak-commitment");

@@ -2,6 +2,11 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
+import {
+  OnboardingChecklist,
+  type OnboardingStep,
+  type OnboardingStepKey,
+} from "@components/OnboardingChecklist";
 import { TranslationLanguagePrompt } from "@components/TranslationLanguagePrompt";
 import { useT } from "@i18n/index";
 import api, { updateUserProfile } from "@services/api";
@@ -40,6 +45,11 @@ const FREEZE_BANNER_KEY = "warsh_freeze_banner_shown";
 const LAST_STREAK_KEY = "warsh_last_streak";
 const STREAK_ENDED_SHOWN_KEY = "warsh_streak_ended_shown";
 const TRANSLATION_PROMPT_SHOWN_KEY = "warsh_translation_prompt_shown";
+const ONBOARDING_CHECKLIST_DISMISSED_KEY = "warsh_onboarding_checklist_dismissed";
+// Also written from settings.tsx (changeLanguage/changeDailyGoal) — keep the
+// literal in sync there if this ever changes.
+const ONBOARDING_LANG_TOUCHED_KEY = "warsh_onboarding_meaning_lang_set";
+const ONBOARDING_GOAL_TOUCHED_KEY = "warsh_onboarding_goal_set";
 
 type Lesson = {
   id: string;
@@ -111,6 +121,10 @@ export default function HomeScreen() {
   const [showDailyGoalToast, setShowDailyGoalToast] = useState(false);
   const [showTranslationPrompt, setShowTranslationPrompt] = useState(false);
   const [translationPromptSaving, setTranslationPromptSaving] = useState(false);
+  const [isFirstTimeUser, setIsFirstTimeUser] = useState(false);
+  const [checklistDismissed, setChecklistDismissed] = useState(false);
+  const [meaningLanguageChosen, setMeaningLanguageChosen] = useState(false);
+  const [dailyGoalChosen, setDailyGoalChosen] = useState(false);
   const toastOpacity = useRef(new Animated.Value(0)).current;
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -164,6 +178,10 @@ export default function HomeScreen() {
     patchUser({ translationLanguage: value });
     try {
       await updateUserProfile({ translationLanguage: value });
+      if (userId) {
+        await AsyncStorage.setItem(`${ONBOARDING_LANG_TOUCHED_KEY}_${userId}`, "1");
+      }
+      setMeaningLanguageChosen(true);
     } catch {
       patchUser({ translationLanguage: previous });
     } finally {
@@ -186,6 +204,9 @@ export default function HomeScreen() {
         lastStreakRaw,
         streakEndedShownDate,
         dailyGoalToastFlag,
+        checklistDismissedFlag,
+        langTouchedFlag,
+        goalTouchedFlag,
       ] = await Promise.all([
         api.get("/api/chapters"),
         api.get("/api/progress"),
@@ -195,6 +216,9 @@ export default function HomeScreen() {
         AsyncStorage.getItem(LAST_STREAK_KEY),
         AsyncStorage.getItem(STREAK_ENDED_SHOWN_KEY),
         AsyncStorage.getItem(`warsh_daily_goal_toast_${today}`),
+        userId ? AsyncStorage.getItem(`${ONBOARDING_CHECKLIST_DISMISSED_KEY}_${userId}`) : null,
+        userId ? AsyncStorage.getItem(`${ONBOARDING_LANG_TOUCHED_KEY}_${userId}`) : null,
+        userId ? AsyncStorage.getItem(`${ONBOARDING_GOAL_TOUCHED_KEY}_${userId}`) : null,
       ]);
 
       setChapters(chaptersResponse.data.data.chapters);
@@ -206,6 +230,12 @@ export default function HomeScreen() {
       setLessonsToday(progress.lessonsCompletedToday ?? 0);
       setXp(progress.xp ?? 0);
       setDailyGoalMet(progress.dailyGoalMet ?? false);
+
+      const completedLessonsCount = progress.completedLessons?.length ?? 0;
+      setIsFirstTimeUser((progress.xp ?? 0) === 0 && completedLessonsCount === 0 && streak === 0);
+      setChecklistDismissed(!!checklistDismissedFlag);
+      setMeaningLanguageChosen(!!langTouchedFlag);
+      setDailyGoalChosen(!!goalTouchedFlag);
 
       if (progress.subscription) {
         setTrialDaysRemaining(progress.subscription.trialDaysRemaining ?? null);
@@ -249,7 +279,7 @@ export default function HomeScreen() {
     } finally {
       setLoading(false);
     }
-  }, [fallbackName, t]);
+  }, [fallbackName, t, userId]);
 
   useFocusEffect(
     useCallback(() => {
@@ -310,6 +340,43 @@ export default function HomeScreen() {
       router.push(`/lessons/${activeLesson.id}/play`);
     } else if (activeChapter) {
       router.push(`/lessons/${activeChapter.id}`);
+    }
+  }
+
+  const showOnboardingChecklist = isFirstTimeUser && !checklistDismissed;
+
+  const onboardingSteps: OnboardingStep[] = useMemo(
+    () => [
+      { key: "account", done: true, meta: t("onboardingChecklist.stepAccountMeta") },
+      { key: "language", done: meaningLanguageChosen },
+      { key: "goal", done: dailyGoalChosen },
+      { key: "firstLesson", done: lessonsCompleted > 0 },
+    ],
+    [meaningLanguageChosen, dailyGoalChosen, lessonsCompleted, t],
+  );
+
+  async function dismissOnboardingChecklist() {
+    if (userId) {
+      await AsyncStorage.setItem(`${ONBOARDING_CHECKLIST_DISMISSED_KEY}_${userId}`, "1");
+    }
+    setChecklistDismissed(true);
+  }
+
+  useEffect(() => {
+    if (!showOnboardingChecklist) return;
+    if (onboardingSteps.every((step) => step.done)) {
+      void dismissOnboardingChecklist();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showOnboardingChecklist, onboardingSteps]);
+
+  function handleOnboardingStepPress(key: OnboardingStepKey) {
+    if (key === "language") {
+      router.push({ pathname: "/(app)/settings", params: { open: "meaningLanguage" } });
+    } else if (key === "goal") {
+      router.push({ pathname: "/(app)/settings", params: { open: "dailyGoal" } });
+    } else if (key === "firstLesson") {
+      openActiveLesson();
     }
   }
 
@@ -484,8 +551,22 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </View>
 
+        {showOnboardingChecklist ? (
+          <OnboardingChecklist
+            steps={onboardingSteps}
+            onSkip={dismissOnboardingChecklist}
+            onStepPress={handleOnboardingStepPress}
+          />
+        ) : null}
+
         <View style={desktopWeb ? styles.desktopDashboardGrid : undefined}>
           <View style={desktopWeb ? styles.desktopPrimaryColumn : undefined}>
+        {showOnboardingChecklist && activeChapter && lessonsCompleted === 0 ? (
+          <View style={styles.coachMarkBubble}>
+            <Ionicons name="information-circle-outline" size={16} color={WarshPalette.white} />
+            <Text style={styles.coachMarkText}>{t("onboardingChecklist.coachMark")}</Text>
+          </View>
+        ) : null}
         {activeChapter ? (
           <Pressable
             onPress={openActiveLesson}
@@ -877,6 +958,22 @@ const styles = StyleSheet.create({
     color: WarshPalette.subtleBrown,
     fontFamily: "Inter",
     fontSize: 12,
+  },
+  coachMarkBubble: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: Spacing.sm,
+    padding: Spacing.md,
+    borderRadius: Radii.md,
+    backgroundColor: WarshPalette.ink,
+    marginBottom: Spacing.sm,
+  },
+  coachMarkText: {
+    flex: 1,
+    color: WarshPalette.white,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.caption,
+    lineHeight: LineHeights.caption,
   },
   heroCard: {
     minHeight: 252,

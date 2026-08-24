@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
@@ -13,7 +13,7 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
-import { useFocusEffect, useRouter } from "expo-router";
+import { useFocusEffect, useLocalSearchParams, useRouter } from "expo-router";
 import * as Application from "expo-application";
 import Constants from "expo-constants";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -33,6 +33,10 @@ import { type AppLanguage } from "@services/language";
 
 // AsyncStorage keys for local preferences
 const PREFS_KEY = "warsh_settings";
+// Also written/read from app/(app)/(tabs)/index.tsx's onboarding checklist —
+// keep these literals in sync if they ever change.
+const ONBOARDING_LANG_TOUCHED_KEY = "warsh_onboarding_meaning_lang_set";
+const ONBOARDING_GOAL_TOUCHED_KEY = "warsh_onboarding_goal_set";
 
 const appVersion =
   Application.nativeApplicationVersion ?? Constants.expoConfig?.version ?? "";
@@ -186,6 +190,10 @@ export default function SettingsScreen() {
   const [languageSheet, setLanguageSheet] = useState<"app" | "translation" | null>(null);
   const [languageSaving, setLanguageSaving] = useState(false);
   const sentrySmokeTestEnabled = isSentrySmokeTestEnabled();
+  const { open } = useLocalSearchParams<{ open?: string }>();
+  const scrollViewRef = useRef<ScrollView>(null);
+  const dailyGoalOffsetRef = useRef<number | null>(null);
+  const pendingScrollToGoalRef = useRef(false);
 
   useFocusEffect(
     useCallback(() => {
@@ -198,7 +206,17 @@ export default function SettingsScreen() {
           setUserName(d.userName ?? "friend");
         })
         .catch(() => {});
-    }, [])
+
+      if (open === "meaningLanguage") {
+        setLanguageSheet("translation");
+      } else if (open === "dailyGoal") {
+        if (dailyGoalOffsetRef.current !== null) {
+          scrollViewRef.current?.scrollTo({ y: dailyGoalOffsetRef.current, animated: true });
+        } else {
+          pendingScrollToGoalRef.current = true;
+        }
+      }
+    }, [open])
   );
 
   const NOTIFICATION_PREFS: (keyof Prefs)[] = ["dailyReminderEnabled", "streakRiskEnabled", "milestoneEnabled"];
@@ -231,6 +249,9 @@ export default function SettingsScreen() {
     setSaving(true);
     try {
       await updateUserProfile({ dailyGoalMinutes: minutes });
+      if (user?.id) {
+        await AsyncStorage.setItem(`${ONBOARDING_GOAL_TOUCHED_KEY}_${user.id}`, "1");
+      }
     } catch {
       // silently revert on failure
     } finally {
@@ -246,6 +267,9 @@ export default function SettingsScreen() {
     patchUser({ [field]: value });
     try {
       await updateUserProfile({ [field]: value });
+      if (languageSheet === "translation" && user?.id) {
+        await AsyncStorage.setItem(`${ONBOARDING_LANG_TOUCHED_KEY}_${user.id}`, "1");
+      }
       setLanguageSheet(null);
     } catch {
       patchUser({ [field]: previous });
@@ -301,7 +325,10 @@ export default function SettingsScreen() {
         <View style={{ width: 60 }} />
       </View>
 
-      <ScrollView contentContainerStyle={[styles.content, desktopWeb && styles.webRow]}>
+      <ScrollView
+        ref={scrollViewRef}
+        contentContainerStyle={[styles.content, desktopWeb && styles.webRow]}
+      >
 
         <SectionHeader title={t("settings.languageContent")} />
         <Text style={styles.languageIntro}>{t("settings.languageContentBody")}</Text>
@@ -441,19 +468,29 @@ export default function SettingsScreen() {
         </View>
 
         {/* Daily goal */}
-        <SectionHeader title={t("settings.dailyGoal")} />
-        <View style={styles.card}>
-          <OptionPicker
-            label={t("settings.studyCommitment")}
-            options={[
-              { value: 5, label: t("learn.goalMinutes", { minutes: 5 }) },
-              { value: 10, label: t("learn.goalMinutes", { minutes: 10 }) },
-              { value: 15, label: t("learn.goalMinutes", { minutes: 15 }) },
-              { value: 30, label: t("learn.goalMinutes", { minutes: 30 }) },
-            ]}
-            value={dailyGoalMinutes}
-            onChange={changeDailyGoal}
-          />
+        <View
+          onLayout={(e) => {
+            dailyGoalOffsetRef.current = e.nativeEvent.layout.y;
+            if (pendingScrollToGoalRef.current) {
+              pendingScrollToGoalRef.current = false;
+              scrollViewRef.current?.scrollTo({ y: e.nativeEvent.layout.y, animated: true });
+            }
+          }}
+        >
+          <SectionHeader title={t("settings.dailyGoal")} />
+          <View style={styles.card}>
+            <OptionPicker
+              label={t("settings.studyCommitment")}
+              options={[
+                { value: 5, label: t("learn.goalMinutes", { minutes: 5 }) },
+                { value: 10, label: t("learn.goalMinutes", { minutes: 10 }) },
+                { value: 15, label: t("learn.goalMinutes", { minutes: 15 }) },
+                { value: 30, label: t("learn.goalMinutes", { minutes: 30 }) },
+              ]}
+              value={dailyGoalMinutes}
+              onChange={changeDailyGoal}
+            />
+          </View>
         </View>
 
         {/* Support */}
