@@ -94,7 +94,6 @@ export default function AboutPage() {
           <div className="wa-wrap">
             <p className="wa-mark">
               <span className="wa-mark__ar">وَرْش</span>
-              <span>Warsh</span>
             </p>
 
             <h1 id="about-title" className="wa-h1" data-sc-cue="0 1 0 0.08" data-sc-kinetic="lines">
@@ -116,11 +115,11 @@ export default function AboutPage() {
           sits on a wrapper, never on the type itself. */}
       <section className="wa-act" data-sc-act="flow" aria-label="What already exists">
         <div className="wa-wrap">
-          <div data-sc-reveal="left" data-sc-reveal-at="0.14 0.46">
+          <div>
             <h2 className="wa-line wa-line--soft">A course that asks you for years.</h2>
           </div>
 
-          <div className="wa-trail" data-sc-reveal="right" data-sc-reveal-at="0.28 0.6">
+          <div className="wa-trail">
             <p className="wa-line wa-line--soft">
               Or an app that teaches words and never reaches an ayah.
             </p>
@@ -189,18 +188,14 @@ export default function AboutPage() {
           <ul className="wa-nots">
             {boundaries.map((item) => (
               <li key={item.text}>
-                <div data-sc-reveal="up" data-sc-reveal-at={item.at}>
-                  <p className="wa-not">{item.text}</p>
-                </div>
+                <p className="wa-not">{item.text}</p>
               </li>
             ))}
           </ul>
 
-          <div data-sc-reveal="up" data-sc-reveal-at="0.48 0.76">
-            <h2 className="wa-line" style={{ marginTop: 'clamp(2rem, 4vw, 3.5rem)' }}>
-              It teaches the Arabic itself.
-            </h2>
-          </div>
+          <h2 className="wa-line" style={{ marginTop: 'clamp(2rem, 4vw, 3.5rem)' }}>
+            It teaches the Arabic itself.
+          </h2>
 
           <p className="wa-small">
             One word and one pattern at a time, across 72 chapters, and the first thing it teaches

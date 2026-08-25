@@ -33,8 +33,7 @@ export function Nav() {
     >
       <div className="mx-auto flex w-full max-w-container items-center justify-between px-6 py-4 md:px-8">
         <Link href="/" className="flex items-center gap-2" aria-label="Warsh home">
-          <Image src="/images/warsh-logo.png" alt="" width={44} height={30} priority />
-          <span className="font-display text-2xl font-semibold text-navy">Warsh</span>
+          <Image src="/images/warsh-logo.png" alt="Warsh" width={44} height={30} priority />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
