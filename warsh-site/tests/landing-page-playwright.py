@@ -25,7 +25,9 @@ def main() -> None:
     failures: list[str] = []
 
     with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=True)
+        # Match legal-pages-playwright.py: drive the installed system Chrome rather
+        # than a Playwright-managed build.
+        browser = playwright.chromium.launch(channel="chrome", headless=True)
 
         for label, width, height in (
             ("mobile", 390, 844),
@@ -57,13 +59,17 @@ def main() -> None:
 
             response = page.goto(BASE_URL, wait_until="networkidle", timeout=90_000)
             assert response is not None and response.status == 200
-            assert page.title() == "Warsh — Understand the Arabic of the Quran"
-            assert page.get_by_role("heading", name="Understand what you recite.").count() == 1
-            assert page.get_by_text("Closed Android beta underway", exact=True).count() == 1
-            assert page.get_by_role("link", name="Open web app").count() == 1
-            assert page.get_by_role("link", name="Request beta access").count() == 1
+            assert page.title() == "Understand the Arabic of the Quran"
+            assert page.get_by_role("heading", name="Where Arabic is crafted.").count() == 1
+            # The app is publicly installable (open beta) — the download CTA must not
+            # read as gated access.
+            assert page.get_by_role("link", name="Download on Google Play").count() >= 1
+            # Appears twice by design: the closing CTA and the footer product link.
+            assert page.get_by_role("link", name="Open Warsh Web").count() >= 1
+            assert page.get_by_text("beta", exact=False).count() == 0
             assert page.locator("main[role='main']").count() == 1
             assert page.locator("footer[role='contentinfo']").count() == 1
+            assert page.locator("nav[aria-label='Primary']").count() == 1
 
             hrefs = page.locator("a[href]").evaluate_all(
                 "elements => elements.map(element => element.getAttribute('href'))"
@@ -84,7 +90,11 @@ def main() -> None:
             )
             context.close()
 
-        legal_pages = {
+        content_pages = {
+            "/features": "A structured path, not a shortcut",
+            "/pricing": "Honest. Simple. Affordable.",
+            "/about": "Built to close one specific gap",
+            "/blog": "Notes on Quranic Arabic",
             "/privacy": "Privacy Policy",
             "/terms": "Terms of Service",
             "/delete-account": "Delete your Warsh account",
@@ -93,7 +103,7 @@ def main() -> None:
         context = browser.new_context(viewport={"width": 390, "height": 844})
         page = context.new_page()
         page.set_default_navigation_timeout(90_000)
-        for path, heading in legal_pages.items():
+        for path, heading in content_pages.items():
             response = page.goto(
                 f"{BASE_URL}{path}", wait_until="networkidle", timeout=90_000
             )
@@ -110,6 +120,11 @@ def main() -> None:
         sitemap_text = sitemap_response.text()
         for canonical_url in (
             "https://warsh.app",
+            "https://warsh.app/features",
+            "https://warsh.app/pricing",
+            "https://warsh.app/about",
+            "https://warsh.app/blog",
+            "https://warsh.app/blog/understanding-al-fatiha",
             "https://warsh.app/privacy",
             "https://warsh.app/terms",
             "https://warsh.app/delete-account",

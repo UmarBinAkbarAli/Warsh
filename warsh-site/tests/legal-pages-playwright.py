@@ -44,7 +44,7 @@ def run() -> None:
 
             page.goto(f"{BASE_URL}/privacy")
             page.wait_for_load_state("networkidle")
-            assert page.title() == "Privacy Policy - Warsh"
+            assert page.title() == "Privacy Policy · Warsh"
             assert page.get_by_role("heading", name="Privacy Policy", exact=True).is_visible()
             assert page.get_by_text("Mixpanel:", exact=False).is_visible()
             assert page.get_by_text("OpenAI:", exact=False).is_visible()
@@ -61,7 +61,7 @@ def run() -> None:
 
             page.goto(f"{BASE_URL}/delete-account")
             page.wait_for_load_state("networkidle")
-            assert page.title() == "Delete Your Warsh Account"
+            assert page.title() == "Delete Your Account · Warsh"
             assert page.get_by_role("heading", name="Delete your Warsh account", exact=True).is_visible()
             delete_link = page.get_by_role("link", name="Email deletion request")
             assert delete_link.get_attribute("href", timeout=5000).startswith(

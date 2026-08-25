@@ -1,0 +1,877 @@
+/* ============================================================================
+   warsh-home: chaptered editorial
+   ----------------------------------------------------------------------------
+   Themes the scrollcraft floor (public/scrollcraft.css) to the Warsh palette and
+   adds this page's own composition classes. Everything here is prefixed `wh-`
+   so it cannot collide with the rest of the site or with the engine's
+   [data-sc-*] mechanism, which is never restyled.
+
+   Palette mirrors tailwind.config.ts, which mirrors warsh-app/constants/theme.ts.
+   ========================================================================== */
+
+/* The :root token override and the engine-teardown contract live in
+   scrollcraft-theme.css, shared with every other page that mounts the engine. */
+
+#warsh-home {
+  /* --- the six colour roles, paper stop (the page default) ---------------- */
+  --sc-canvas: #faf6e9;
+  --sc-surface: #f4ebd0;
+  --sc-ink: #1a1a1a;
+  --sc-ink-soft: #5f5f5f;
+  --sc-accent: #a88648;
+  --sc-accent-ink: #faf6e9;
+
+  --sc-font-display: var(--font-cormorant), Georgia, serif;
+  --sc-font-text: var(--font-inter), system-ui, sans-serif;
+
+  /* Editorial wants a tighter measure and a smaller radius scale than the
+     engine default. One radius scale, held across the page. */
+  --sc-measure: 58ch;
+  --sc-r-sm: 2px;
+  --sc-r-md: 3px;
+  --sc-r-lg: 4px;
+
+  /* Shadows tint to the navy hue rather than to neutral black, so raised
+     surfaces on parchment read warm instead of dirty. */
+  --sc-shadow-color: 220 82% 15%;
+
+  --wh-rule: color-mix(in oklab, #071b44 16%, transparent);
+  --wh-folio: 4.5rem;
+
+  background: var(--sc-canvas);
+  color: var(--sc-ink);
+  font-family: var(--sc-font-text);
+}
+
+/* --------------------------------------------------------------- chapters --
+   Chaptered editorial takes hard cuts, not drift: each chapter paints its own
+   opaque ground and the change lands on an edge. devices.md section 10 prefers
+   this explicitly for chaptered pages, so no act carries data-sc-drift.
+   -------------------------------------------------------------------------- */
+
+.wh-ch {
+  position: relative;
+  background: var(--wh-ground, var(--sc-canvas));
+  color: var(--sc-ink);
+}
+
+.wh-ch--paper {
+  --wh-ground: #faf6e9;
+}
+.wh-ch--paper-deep {
+  --wh-ground: #f4ebd0;
+  --sc-surface: #faf6e9;
+}
+.wh-ch--paper-light {
+  --wh-ground: #f8f4ed;
+}
+
+/* The two dark chapters. Redefining --sc-ink does NOT re-ink inherited text,
+   so `color` is restated on the same subtree (taste.md, colour). The accent
+   takes its second lightness stop here: one hue, two lightnesses, keyed to the
+   ground. That is the licensed exception for a page that hard-cuts grounds. */
+.wh-ch--ink {
+  --wh-ground: #04122e;
+  --sc-ink: #f8f4ed;
+  --sc-ink-soft: #b9c2d4;
+  --sc-accent: #c49b4d;
+  --sc-accent-ink: #04122e;
+  --sc-surface: #071b44;
+  --wh-rule: color-mix(in oklab, #eddfaf 22%, transparent);
+  color: var(--sc-ink);
+}
+
+.wh-ch--ink-soft {
+  --wh-ground: #071b44;
+  --sc-ink: #f8f4ed;
+  --sc-ink-soft: #b9c2d4;
+  --sc-accent: #c49b4d;
+  --sc-accent-ink: #04122e;
+  --sc-surface: #04122e;
+  --wh-rule: color-mix(in oklab, #eddfaf 20%, transparent);
+  color: var(--sc-ink);
+}
+
+/* ------------------------------------------------------------------ spread --
+   The editorial grid. A folio column in the margin, then the text column.
+   Asymmetric on purpose: a symmetric grid is a document, not a spread.
+   -------------------------------------------------------------------------- */
+
+.wh-spread {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 4.5rem);
+  padding-block: clamp(4rem, 8vw, 9rem);
+}
+
+.wh-spread--tight {
+  padding-block: clamp(2.5rem, 5vw, 5rem);
+}
+
+.wh-cols {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+@media (min-width: 62rem) {
+  .wh-cols--title {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    align-items: center;
+  }
+  .wh-cols--argument {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+  .wh-cols--offset {
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+    align-items: start;
+  }
+}
+
+/* ---------------------------------------------------------------- the folio --
+   The grammar's chrome: no fixed bar, a folio in the margin that names the
+   chapter as chapters pass. It is set in the running-head idiom of a printed
+   feature, not as navigation, and it never numbers the chapters decoratively.
+   -------------------------------------------------------------------------- */
+
+.wh-folio-rail {
+  position: fixed;
+  top: 50%;
+  right: clamp(0.75rem, 2vw, 1.75rem);
+  z-index: 40;
+  display: none;
+  transform: translateY(-50%);
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+@media (min-width: 75rem) and (prefers-reduced-motion: no-preference) {
+  .wh-folio-rail {
+    display: flex;
+  }
+}
+
+.wh-folio {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, currentColor 45%, transparent);
+  transition:
+    color var(--sc-d-base) var(--sc-ease-out),
+    opacity var(--sc-d-base) var(--sc-ease-out);
+}
+
+.wh-folio__mark {
+  width: 1.75rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+  transform-origin: right center;
+  transform: scaleX(0.4);
+  transition: transform var(--sc-d-slow) var(--sc-ease-out);
+}
+
+.wh-folio[data-active='true'] {
+  color: #a88648;
+}
+
+.wh-folio[data-active='true'] .wh-folio__mark {
+  transform: scaleX(1);
+}
+
+/* The rail sits over both paper and ink chapters, so it takes its colour from
+   whichever chapter is currently under it. */
+.wh-folio-rail[data-ground='ink'] .wh-folio {
+  color: color-mix(in oklab, #f8f4ed 50%, transparent);
+}
+.wh-folio-rail[data-ground='ink'] .wh-folio[data-active='true'] {
+  color: #c49b4d;
+}
+
+/* ------------------------------------------------------------- typography -- */
+
+.wh-title {
+  font-family: var(--sc-font-display);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: var(--sc-track-tight);
+  text-wrap: balance;
+  margin: 0;
+  font-size: clamp(2.9rem, 1.8rem + 5.4vw, 6.4rem);
+}
+
+.wh-h {
+  font-family: var(--sc-font-display);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: var(--sc-track-snug);
+  text-wrap: balance;
+  margin: 0;
+  font-size: clamp(2rem, 1.4rem + 2.6vw, 3.5rem);
+}
+
+.wh-h--sm {
+  font-size: clamp(1.4rem, 1.2rem + 1vw, 2rem);
+  line-height: 1.12;
+}
+
+/* Drop figure: the printed-page signal that a chapter has opened. Reveal is put
+   on a wrapper, never on the figure itself, because clip-path is relative to
+   the border box and type set this tight loses its ascenders to the wipe. */
+.wh-drop {
+  float: left;
+  font-family: var(--sc-font-display);
+  font-weight: 600;
+  font-size: 3.6em;
+  line-height: 0.82;
+  padding: 0.08em 0.14em 0 0;
+  color: var(--sc-accent);
+}
+
+.wh-lede {
+  font-size: clamp(1.1rem, 1rem + 0.45vw, 1.4rem);
+  line-height: 1.55;
+  max-width: 46ch;
+  color: var(--sc-ink);
+  text-wrap: pretty;
+  margin: 0;
+}
+
+.wh-p {
+  font-size: 1.0625rem;
+  line-height: 1.68;
+  max-width: var(--sc-measure);
+  color: var(--sc-ink-soft);
+  text-wrap: pretty;
+  margin: 0;
+}
+
+/* Light type on a dark ground is compensated on three axes: more leading, more
+   tracking, one step more weight. Without it, dark-mode type set with
+   light-mode metrics reads thin and blurry. */
+.wh-ch--ink .wh-p,
+.wh-ch--ink-soft .wh-p {
+  line-height: 1.78;
+  letter-spacing: 0.006em;
+  font-weight: 400;
+  color: var(--sc-ink-soft);
+}
+
+.wh-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sc-accent);
+  margin: 0 0 1.25rem;
+}
+
+.wh-caption {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: color-mix(in oklab, var(--sc-ink-soft) 88%, transparent);
+  margin: 0.9rem 0 0;
+  max-width: 34ch;
+}
+
+.wh-ar {
+  font-family: var(--font-scheherazade), serif;
+  direction: rtl;
+  unicode-bidi: isolate;
+  line-height: 1.9;
+}
+
+.wh-rule {
+  border: 0;
+  border-top: 1px solid var(--wh-rule);
+  margin: 0;
+}
+
+/* ------------------------------------------------------------- ch1 · plate --
+   The app render sits in its own column with a caption. It does not bleed, and
+   no type is laid over it: that is the grammar's rule for media, applied one
+   chapter earlier than default because the plate was specifically requested in
+   the first fold.
+   -------------------------------------------------------------------------- */
+
+.wh-plate {
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.wh-plate__frame {
+  position: relative;
+  width: 100%;
+  max-width: 21rem;
+  /* The supplied render carries a small nested screenshot whose text is clipped
+     mid-word. Masking the lower third to the paper hides that artefact and
+     leaves the device, the wordmark and the headline, which are clean. */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 58%,
+    rgba(0, 0, 0, 0.55) 72%,
+    transparent 88%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 58%,
+    rgba(0, 0, 0, 0.55) 72%,
+    transparent 88%
+  );
+}
+
+.wh-plate__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Edge light and a tinted, offset shadow. A real raised thing catches light on
+   its lip; a zero-offset halo is decoration, not depth. */
+.wh-plate__glow {
+  position: absolute;
+  inset: 12% -14% -6%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    color-mix(in oklab, #c49b4d 26%, transparent) 0%,
+    transparent 70%
+  );
+  filter: blur(28px);
+}
+
+.wh-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.82rem;
+  color: var(--sc-ink-soft);
+}
+
+.wh-meta li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.wh-meta li + li::before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--sc-accent);
+  opacity: 0.7;
+}
+
+/* ------------------------------------------------------------ ch2 · ledger --
+   The tension chapter. A real count on the left, and the column beside it that
+   should hold the meaning stays empty. The emptiness is the argument, so it is
+   authored, not accidental.
+   -------------------------------------------------------------------------- */
+
+.wh-ledger {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--wh-rule);
+}
+
+.wh-ledger__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.35rem 2rem;
+  padding-block: clamp(1.1rem, 2vw, 1.6rem);
+  border-bottom: 1px solid var(--wh-rule);
+}
+
+@media (min-width: 48rem) {
+  .wh-ledger__row {
+    grid-template-columns: 9rem minmax(0, 1fr) minmax(0, 1fr);
+    align-items: baseline;
+  }
+}
+
+.wh-ledger__n {
+  font-family: var(--sc-font-display);
+  font-size: clamp(2rem, 1.6rem + 1.6vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--sc-accent);
+  margin: 0;
+}
+
+.wh-ledger__label {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--sc-ink);
+  margin: 0;
+}
+
+.wh-ledger__blank {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: color-mix(in oklab, var(--sc-ink-soft) 62%, transparent);
+  font-style: italic;
+  margin: 0;
+}
+
+/* ------------------------------------------------------------- ch3 · PEAK --
+   Al-Fatiha decoding itself. The stage holds while meaning arrives, word by
+   word, right to left. Everything below is driven off the act's own --sc-p,
+   which the engine publishes on the section element.
+   -------------------------------------------------------------------------- */
+
+.wh-peak {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding-inline: clamp(1.25rem, 5vw, 4.5rem);
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.wh-peak__inner {
+  position: relative;
+  width: 100%;
+  max-width: 60rem;
+  text-align: center;
+}
+
+/* Illumination. The gold light behind the line grows with the act's own
+   progress, so the frame is continuously alive across the whole peak rather
+   than holding still between one word resolving and the next. It is also the
+   chapter's argument made visual: understanding as light arriving on a page. */
+.wh-peak__light {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  z-index: -1;
+  width: min(52rem, 92vw);
+  aspect-ratio: 1.6;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    color-mix(in oklab, #c49b4d 34%, transparent) 0%,
+    color-mix(in oklab, #c49b4d 12%, transparent) 45%,
+    transparent 72%
+  );
+  filter: blur(46px);
+  opacity: calc(0.1 + var(--sc-p, 0) * 0.9);
+  transform: translate(-50%, -50%) scale(calc(0.45 + var(--sc-p, 0) * 0.72));
+  will-change: opacity, transform;
+}
+
+/* The signature move at full scale: a rule under the line that fills right to
+   left as the meaning arrives. */
+.wh-peak__underline {
+  position: relative;
+  display: block;
+  width: min(46rem, 88%);
+  height: 2px;
+  margin: clamp(1.5rem, 3vw, 2.5rem) auto 0;
+  background: color-mix(in oklab, var(--sc-ink) 14%, transparent);
+  overflow: hidden;
+}
+
+.wh-peak__underline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    var(--sc-accent),
+    color-mix(in oklab, var(--sc-accent) 55%, transparent)
+  );
+  transform-origin: right center;
+  transform: scaleX(var(--sc-p, 0));
+}
+
+/* The ground: present from p = 0 so the pinned stage is never an empty screen
+   while it slides into view. */
+.wh-peak__line {
+  font-family: var(--font-scheherazade), serif;
+  direction: rtl;
+  unicode-bidi: isolate;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.2em 0.45em;
+  font-size: clamp(2.2rem, 1.2rem + 4.4vw, 5.2rem);
+  line-height: 1.5;
+  color: var(--sc-ink);
+  margin: 0;
+  /* A slow settle across the act. Small on purpose: it keeps the frame alive
+     between one word resolving and the next, which is what stops the peak
+     reading as a still photograph held for three viewport-heights. */
+  transform: translateY(calc((0.5 - var(--sc-p, 0)) * 2.5rem));
+  will-change: transform;
+}
+
+.wh-word {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  /* Arabic kasra and other marks sit below the em box, so a tight gap here puts
+     the gloss straight through them. This is clearance for the ink, not for the
+     line box. */
+  gap: 0.42em;
+}
+
+.wh-word__ar {
+  display: block;
+  transition: color var(--sc-d-slow) var(--sc-ease-out);
+  /* Unlit, but still measured against the ink ground at better than 3:1, which
+     is the floor for text this size. An unlit word is quiet, not invisible. */
+  color: color-mix(in oklab, var(--sc-ink) 45%, transparent);
+}
+
+.wh-word[data-lit='true'] .wh-word__ar {
+  color: var(--sc-ink);
+}
+
+/* The gloss resolves beneath its own word. It rises from behind a mask so it
+   enters from a clean edge, and the mask reserves room for descenders. */
+.wh-word__gloss {
+  display: block;
+  overflow: hidden;
+  font-family: var(--sc-font-text);
+  direction: ltr;
+  font-size: clamp(0.6rem, 0.5rem + 0.4vw, 0.82rem);
+  line-height: 1.9;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--sc-accent);
+  height: 1.9em;
+}
+
+.wh-word__gloss span {
+  display: block;
+  transform: translateY(105%);
+  opacity: 0;
+  transition:
+    transform var(--sc-d-slow) var(--sc-ease-out),
+    opacity var(--sc-d-base) var(--sc-ease-out);
+}
+
+.wh-word[data-lit='true'] .wh-word__gloss span {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.wh-peak__whole {
+  margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+  max-width: 40ch;
+  font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem);
+  line-height: 1.6;
+  color: var(--sc-ink);
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition:
+    opacity var(--sc-d-slow) var(--sc-ease-out),
+    transform var(--sc-d-slow) var(--sc-ease-out);
+}
+
+.wh-peak__whole[data-lit='true'] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wh-peak__note {
+  margin: 1.25rem 0 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--sc-ink-soft) 75%, transparent);
+}
+
+/* ---------------------------------------------------- signature · RTL axis --
+   The page's one bespoke move. On the Arabic chapters the motion axis flips:
+   content arrives from the RIGHT rather than from below, and the folio rail
+   fills right to left. It is written here against the engine's published
+   --sc-p and this page's own data attributes. The engine is not touched.
+   -------------------------------------------------------------------------- */
+
+[data-warsh-rtl] {
+  --wh-enter: calc((1 - var(--sc-p, 0)) * 1);
+}
+
+[data-warsh-rtl-item] {
+  opacity: 0;
+  transform: translateX(2.5rem);
+  transition:
+    opacity 620ms var(--sc-ease-out),
+    transform 620ms var(--sc-ease-out);
+}
+
+[data-warsh-rtl-item].wh-arrived {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.wh-axis {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--sc-accent) 85%, transparent);
+}
+
+.wh-axis__track {
+  position: relative;
+  flex: 1;
+  max-width: 14rem;
+  height: 1px;
+  background: var(--wh-rule);
+  overflow: hidden;
+}
+
+/* Fills right to left. transform only, so it stays on the compositor. */
+.wh-axis__fill {
+  position: absolute;
+  inset: 0;
+  background: var(--sc-accent);
+  transform-origin: right center;
+  transform: scaleX(var(--sc-p, 0));
+}
+
+/* ------------------------------------------------------------ ch4 · skills --
+   Not four equal cards. An asymmetric spread: the first skill carries weight,
+   the rest are set as running entries under a hairline.
+   -------------------------------------------------------------------------- */
+
+.wh-skills {
+  display: grid;
+  gap: 0;
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+}
+
+.wh-skill {
+  display: grid;
+  gap: 0.5rem 2.5rem;
+  padding-block: clamp(1.4rem, 2.5vw, 2.2rem);
+  border-top: 1px solid var(--wh-rule);
+}
+
+@media (min-width: 56rem) {
+  .wh-skill {
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+    align-items: baseline;
+  }
+}
+
+.wh-skill__name {
+  font-family: var(--sc-font-display);
+  font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  margin: 0;
+  color: var(--sc-ink);
+}
+
+.wh-skill__ar {
+  font-family: var(--font-scheherazade), serif;
+  direction: rtl;
+  unicode-bidi: isolate;
+  font-size: 0.85em;
+  color: var(--sc-accent);
+  margin-inline-start: 0.5rem;
+}
+
+/* ------------------------------------------------------------- ch5 · shape --
+   The lesson shape and the curriculum's real size, in a media column with a
+   parallax layer inside it. Depth from differential movement, kept subtle: past
+   roughly 200px of travel it stops reading as depth.
+   -------------------------------------------------------------------------- */
+
+.wh-shape {
+  counter-reset: wh-step;
+  margin: clamp(2rem, 4vw, 3rem) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0;
+}
+
+.wh-step {
+  counter-increment: wh-step;
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  gap: 0.25rem 1.25rem;
+  padding-block: clamp(0.9rem, 1.8vw, 1.4rem);
+  border-top: 1px solid var(--wh-rule);
+  align-items: baseline;
+}
+
+.wh-step::before {
+  content: counter(wh-step, decimal-leading-zero);
+  font-family: var(--sc-font-display);
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--sc-accent);
+  grid-row: span 2;
+}
+
+.wh-step__name {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--sc-ink);
+  margin: 0;
+}
+
+.wh-step__body {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--sc-ink-soft);
+  margin: 0;
+  max-width: 46ch;
+}
+
+.wh-figures {
+  display: grid;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+@media (min-width: 40rem) {
+  .wh-figures {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.wh-figure__n {
+  font-family: var(--sc-font-display);
+  font-size: clamp(2.4rem, 1.8rem + 2.6vw, 4rem);
+  font-weight: 600;
+  line-height: 0.95;
+  font-variant-numeric: tabular-nums;
+  color: var(--sc-ink);
+  margin: 0;
+}
+
+.wh-figure__label {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--sc-ink-soft);
+  margin: 0.4rem 0 0;
+  max-width: 26ch;
+}
+
+.wh-parallax-col {
+  position: relative;
+  isolation: isolate;
+}
+
+/* ---------------------------------------------------------- ch6 · colophon --
+   The close is the shared site footer (components/site-footer.css), rendered
+   inside this page's root so it still takes the chapter ground and the
+   entrance. Its type and grid live with the component so every other route
+   closes on exactly the same plate.
+   -------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------ links -- */
+
+.wh-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--sc-ink);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--sc-accent);
+  transition:
+    color var(--sc-d-fast) var(--sc-ease-out),
+    gap var(--sc-d-fast) var(--sc-ease-out);
+}
+
+.wh-link:hover {
+  color: var(--sc-accent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .wh-link:hover {
+    gap: 0.8rem;
+  }
+}
+
+.wh-link:focus-visible {
+  outline: 2px solid var(--sc-accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.wh-link:active {
+  transform: translateY(1px);
+}
+
+.wh-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  margin-top: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
+/* ------------------------------------------------------- reduced motion ---
+   Fewer and gentler, not zero: the opacity that carries comprehension stays,
+   every position change goes. The peak's glosses are shown outright, because
+   under reduced motion nothing will drive them.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  [data-warsh-rtl-item] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .wh-word__ar {
+    color: var(--sc-ink);
+  }
+
+  .wh-word__gloss span,
+  .wh-peak__whole {
+    transform: none;
+    opacity: 1;
+  }
+
+  .wh-peak {
+    min-height: 0;
+  }
+
+  /* Nothing drives --sc-p here, so the light and the rule are shown resolved
+     rather than left parked at zero. */
+  .wh-peak__light {
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .wh-peak__underline::after {
+    transform: scaleX(1);
+  }
+
+  .wh-peak__line {
+    transform: none;
+  }
+}

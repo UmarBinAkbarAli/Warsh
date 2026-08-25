@@ -1,0 +1,395 @@
+/* ============================================================================
+   warsh-features: gallery / catalog
+   ----------------------------------------------------------------------------
+   A different grammar from the homepage on purpose. The homepage is a printed
+   feature with chapters and an argument; this page is a walkable collection of
+   objects, each carrying the SAME label schema, because the schema is what
+   makes it a collection rather than a grid.
+
+   `pan` is the spine here, not one act among many. Prefixed `wf-`.
+   ========================================================================== */
+
+#warsh-features {
+  --sc-canvas: #faf6e9;
+  --sc-surface: #f8f4ed;
+  --sc-ink: #1a1a1a;
+  --sc-ink-soft: #5f5f5f;
+  --sc-accent: #a88648;
+  --sc-accent-ink: #faf6e9;
+
+  --sc-font-display: var(--font-cormorant), Georgia, serif;
+  --sc-font-text: var(--font-inter), system-ui, sans-serif;
+
+  --wf-rule: color-mix(in oklab, #071b44 18%, transparent);
+  --wf-rule-soft: color-mix(in oklab, #071b44 10%, transparent);
+
+  background: var(--sc-canvas);
+  color: var(--sc-ink);
+  font-family: var(--sc-font-text);
+}
+
+/* ------------------------------------------------------------------ stage -- */
+
+.wf-stage {
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  overflow: hidden;
+}
+
+/* The rail. The engine measures scrollWidth against the viewport and travels
+   exactly the overflow, so the last plate lands flush at the right edge. */
+.wf-rail {
+  display: flex;
+  align-items: stretch;
+  gap: clamp(1.25rem, 2.4vw, 2.5rem);
+  padding-inline: clamp(1.25rem, 5vw, 4.5rem);
+  will-change: transform;
+}
+
+.wf-item {
+  flex: 0 0 auto;
+  width: clamp(17rem, 25vw, 23rem);
+  display: flex;
+  flex-direction: column;
+  /* An exhibition label occupies its wall. Without a height the labels bunch
+     into a thin strip with a dead band above and below them, which reads as the
+     content having failed to load rather than as air. */
+  min-height: min(62vh, 34rem);
+}
+
+/* Staggered settle. Lateral travel alone reads as a slideshow on rails; items
+   that arrive in sequence read as a drawer being pulled. The opacity floors at
+   0.55 so a not-yet-settled label reads as arriving rather than as failing to
+   load, and the first plate is exempt because a pan act needs its opening
+   content already present. Gated so the reduced-motion scroll-region fallback
+   does not inherit a rail of half-faded items. */
+@media (prefers-reduced-motion: no-preference) {
+  html.warsh-sc-active .wf-item {
+    --wf-settle: clamp(0, calc((var(--sc-p, 0) - (var(--wf-i, 0) * 0.062)) * 11), 1);
+    opacity: calc(0.55 + var(--wf-settle) * 0.45);
+    transform: translateY(calc((1 - var(--wf-settle)) * 0.85rem));
+  }
+}
+
+/* ------------------------------------------------------------- the label --
+   Identical for every object, no exceptions. Fact, not pitch: a label reads
+   "SM-2 review model. Hard, Good, Easy." and never "review that really sticks".
+   -------------------------------------------------------------------------- */
+
+.wf-label {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 1rem;
+  border-top: 2px solid var(--sc-ink);
+}
+
+.wf-label__cat {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  font-variant-numeric: tabular-nums;
+  color: var(--sc-accent);
+  margin: 0 0 0.9rem;
+}
+
+.wf-label__name {
+  font-family: var(--sc-font-display);
+  font-size: clamp(1.5rem, 1.3rem + 0.9vw, 2.1rem);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  color: var(--sc-ink);
+  margin: 0;
+  /* Card copy is read while cropped for most of its life, so names stay to one
+     or two short words and must survive being half-visible. */
+  text-wrap: balance;
+}
+
+.wf-label__ar {
+  display: block;
+  font-family: var(--font-scheherazade), serif;
+  direction: rtl;
+  unicode-bidi: isolate;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--sc-accent);
+  margin-top: 0.35rem;
+}
+
+.wf-label__what {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--sc-ink);
+  margin: 1.1rem 0 0;
+  text-wrap: pretty;
+}
+
+/* The spec rows. A definition list, because that is what this is. */
+.wf-specs {
+  /* Pushed to the foot of the label, so the name sits at the top of the plate
+     and the specs sit at the bottom, the way a real wall label is set. */
+  margin: auto 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 1rem;
+  row-gap: 0.55rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  border-top: 1px solid var(--wf-rule-soft);
+  padding-top: 1rem;
+}
+
+.wf-specs dt {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--sc-ink-soft) 85%, transparent);
+  padding-top: 0.14em;
+  white-space: nowrap;
+}
+
+.wf-specs dd {
+  margin: 0;
+  color: var(--sc-ink-soft);
+  text-wrap: pretty;
+}
+
+/* The honesty row. Every object states what it does not do, which is the
+   product's own tone and keeps the schema from reading as a feature pitch. */
+.wf-specs dt.wf-not,
+.wf-specs dd.wf-not {
+  color: color-mix(in oklab, #944232 88%, transparent);
+}
+
+.wf-label__foot {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+/* ------------------------------------------------------------- the plates --
+   The first and last rail items. Both earn their place: the opening plate
+   stops the collection competing with fixed chrome and carries the page's
+   heading, the closing plate is the ask, typeset exactly like a label so it
+   reads as part of the collection rather than as an advert bolted to the end.
+   -------------------------------------------------------------------------- */
+
+.wf-item--plate {
+  width: clamp(18rem, 32vw, 30rem);
+  justify-content: center;
+}
+
+.wf-plate__title {
+  font-family: var(--sc-font-display);
+  font-size: clamp(2.2rem, 1.5rem + 3vw, 4rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--sc-ink);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.wf-plate__body {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--sc-ink-soft);
+  margin: 1.5rem 0 0;
+  max-width: 34ch;
+  text-wrap: pretty;
+}
+
+.wf-item--close .wf-label {
+  border-top-color: var(--sc-accent);
+}
+
+/* ------------------------------------------------------------- the index --
+   The grammar's nav: an index of objects, and it JUMPS. That jump is this
+   page's signature move, because it lands in lateral space: the entry resolves
+   to the scroll position at which its object sits centred in the pan.
+   -------------------------------------------------------------------------- */
+
+.wf-index {
+  position: fixed;
+  transition: opacity 280ms var(--sc-ease-out, ease);
+  left: clamp(1rem, 2.2vw, 2rem);
+  top: 50%;
+  z-index: 40;
+  transform: translateY(-50%);
+  display: none;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* The collection is behind the reader: the shared footer is on screen and the
+   index retires rather than sitting on top of the colophon. The footer
+   publishes that flag on the document element (components/SiteFooter.tsx). */
+:root[data-warsh-footer-in-view] .wf-index {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (min-width: 78rem) and (prefers-reduced-motion: no-preference) {
+  .wf-index {
+    display: flex;
+  }
+
+  /* The index is fixed, so the rail travels underneath it. The gutter keeps the
+     FIRST plate clear, but every object after it still slides through the index
+     as the rail pans, and both become unreadable at exactly the moment the
+     reader is using them.
+
+     The mask goes on the stage, not on the rail: the rail is the element the
+     engine transforms, so a mask there would travel with it instead of holding
+     still at the left edge of the viewport. Objects now dissolve as they leave
+     the room rather than colliding with the index. */
+  .wf-rail {
+    padding-left: 17.5rem;
+  }
+
+  /* Fully transparent across the whole index column (which ends near 12rem),
+     so nothing ghosts behind the entries, and opaque again before the first
+     object's own column begins. */
+  .wf-stage {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      transparent 12.5rem,
+      #000 16.5rem
+    );
+    mask-image: linear-gradient(to right, transparent 0, transparent 12.5rem, #000 16.5rem);
+  }
+}
+
+.wf-index__btn {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.3rem 0.2rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--sc-ink-soft) 62%, transparent);
+  transition: color var(--sc-d-fast, 160ms) var(--sc-ease-out, ease);
+}
+
+.wf-index__n {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.62rem;
+  opacity: 0.75;
+}
+
+.wf-index__btn:hover {
+  color: var(--sc-ink);
+}
+
+.wf-index__btn:focus-visible {
+  outline: 2px solid var(--sc-accent);
+  outline-offset: 2px;
+}
+
+.wf-index__btn[aria-current='true'] {
+  color: var(--sc-accent);
+}
+
+/* ------------------------------------------------------------------ links -- */
+
+.wf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--sc-ink);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--sc-accent);
+  transition:
+    color 160ms var(--sc-ease-out, ease),
+    gap 160ms var(--sc-ease-out, ease);
+}
+
+.wf-link:hover {
+  color: var(--sc-accent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .wf-link:hover {
+    gap: 0.8rem;
+  }
+}
+
+.wf-link:focus-visible {
+  outline: 2px solid var(--sc-accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.wf-link:active {
+  transform: translateY(1px);
+}
+
+/* --------------------------------------------------------- reduced motion --
+   The rail's transform is navigation, not decoration, so it cannot simply be
+   zeroed: that would park the act on its first screenful and make every object
+   past the fold unreachable. The engine turns the stage into a native
+   overflow-x scroll region; this relays it as a readable grid instead, which
+   suits a catalog better than a horizontal scroller does.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  /* Two things have to be beaten here, and neither is beaten by a plain class
+     rule. scrollcraft.css is injected at runtime, so it is LAST in the cascade
+     and wins every equal-specificity tie: hence the `html.warsh-sc-active`
+     prefix. And the act's height is an inline `height: 1000vh` written by the
+     engine, which only an !important author rule can override.
+
+     Without the height override the reader gets ten viewport-heights of
+     vertical scroll past a stage that no longer moves, which is a worse
+     experience than the motion was. */
+  html.warsh-sc-active .wf-act {
+    height: auto !important;
+  }
+
+  html.warsh-sc-active .wf-stage {
+    display: block !important;
+    min-height: 0;
+    overflow: visible !important;
+  }
+
+  html.warsh-sc-active .wf-rail {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: clamp(1.75rem, 3vw, 3rem);
+    padding-block: clamp(3rem, 6vw, 5rem);
+    padding-left: clamp(1.25rem, 5vw, 4.5rem);
+    transform: none !important;
+  }
+
+  html.warsh-sc-active .wf-item,
+  html.warsh-sc-active .wf-item--plate {
+    width: auto;
+    min-height: 0;
+    opacity: 1;
+    transform: none;
+  }
+
+  html.warsh-sc-active .wf-item--plate {
+    grid-column: 1 / -1;
+  }
+
+  /* The specs no longer need to sit at the foot of a tall plate. */
+  html.warsh-sc-active .wf-specs {
+    margin-top: 1.4rem;
+  }
+}

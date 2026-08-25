@@ -1,0 +1,159 @@
+/* ============================================================================
+   Site footer — the colophon plate
+   ----------------------------------------------------------------------------
+   One footer for every route. Ported from the homepage close (home.css ch6) and
+   made self-contained: every token it needs is declared here, so it renders the
+   same on the scroll pages that mount the engine and on the plain legal pages
+   that do not. Prefixed `wsf-` so it cannot collide with the per-page `wh-`,
+   `wp-`, `wa-` and `wf-` compositions.
+   ========================================================================== */
+
+.wsf {
+  /* The ink-soft ground: the darker of the two dark stops, so the close reads
+     as a plate the page lands on rather than another chapter. */
+  --wsf-ground: #071b44;
+  --wsf-ink: #f8f4ed;
+  --wsf-ink-soft: #b9c2d4;
+  --wsf-accent: #c49b4d;
+  --wsf-accent-lift: #eddfaf;
+  --wsf-rule: color-mix(in oklab, #eddfaf 20%, transparent);
+  --wsf-ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+
+  position: relative;
+  background: var(--wsf-ground);
+  color: var(--wsf-ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.wsf__spread {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 4.5rem);
+  padding-block: clamp(2.5rem, 5vw, 5rem);
+}
+
+.wsf__grid {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4rem);
+}
+
+@media (min-width: 56rem) {
+  .wsf__grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: start;
+  }
+}
+
+.wsf__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--wsf-accent);
+  margin: 0 0 1.5rem;
+}
+
+/* The ask is set as a line of running text rather than a button island. */
+.wsf__ask {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.4rem);
+  line-height: 1.32;
+  font-weight: 400;
+  color: var(--wsf-ink);
+  max-width: 26ch;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.wsf__ask a {
+  color: var(--wsf-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: color 160ms var(--wsf-ease);
+}
+
+.wsf__ask a:hover {
+  color: var(--wsf-accent-lift);
+}
+
+.wsf__ask a:focus-visible {
+  outline: 2px solid var(--wsf-accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.wsf__cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 1.75rem 1.5rem;
+}
+
+.wsf__cols h3 {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--wsf-ink-soft) 80%, transparent);
+  margin: 0 0 0.75rem;
+}
+
+.wsf__cols ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.wsf__cols li a {
+  font-size: 0.88rem;
+  color: var(--wsf-ink-soft);
+  text-decoration: none;
+  transition: color 160ms var(--wsf-ease);
+}
+
+.wsf__cols li a:hover {
+  color: var(--wsf-ink);
+}
+
+.wsf__cols li a:focus-visible {
+  outline: 2px solid var(--wsf-accent);
+  outline-offset: 3px;
+}
+
+.wsf__imprint {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--wsf-rule);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  font-size: 0.78rem;
+  color: color-mix(in oklab, var(--wsf-ink-soft) 82%, transparent);
+}
+
+.wsf__imprint a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 160ms var(--wsf-ease);
+}
+
+.wsf__imprint a:hover {
+  color: var(--wsf-ink);
+}
+
+.wsf__imprint a:focus-visible {
+  outline: 2px solid var(--wsf-accent);
+  outline-offset: 3px;
+}
+
+.wsf__ar {
+  font-family: var(--font-scheherazade), serif;
+  direction: rtl;
+  unicode-bidi: isolate;
+  line-height: 1.9;
+}

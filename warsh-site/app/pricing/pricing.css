@@ -1,0 +1,567 @@
+/* ============================================================================
+   warsh-pricing: split stage
+   ----------------------------------------------------------------------------
+   A third grammar, distinct from the homepage (chaptered editorial) and the
+   features page (gallery / catalog). Two columns are held in tension for the
+   whole page and the scroll resolves them, because this page carries a genuine
+   two-sided fact: the Vocabulary Bank is free forever, everything else is one
+   subscription. The comparison IS the honesty pitch.
+
+   Neither column is decorative. Both carry real content the whole way down.
+   Prefixed `wp-`.
+   ========================================================================== */
+
+#warsh-pricing {
+  --sc-canvas: #faf6e9;
+  --sc-surface: #f8f4ed;
+  --sc-ink: #1a1a1a;
+  --sc-ink-soft: #5f5f5f;
+  --sc-accent: #a88648;
+  --sc-accent-ink: #faf6e9;
+
+  --sc-font-display: var(--font-cormorant), Georgia, serif;
+  --sc-font-text: var(--font-inter), system-ui, sans-serif;
+
+  --wp-rule: color-mix(in oklab, #071b44 20%, transparent);
+  --wp-rule-soft: color-mix(in oklab, #071b44 10%, transparent);
+
+  /* Two grounds, one per side, and they hold. This grammar bans `drift`: the
+     split is the page's continuity, so an interpolating ground would be a
+     second, competing one. */
+  --wp-ground-free: #f4ebd0;
+  --wp-ground-paid: #faf6e9;
+
+  /* ---- the signature move, in one number --------------------------------
+     `--wp-tip` runs 0 to 1 and is written on this element by PricingMotion,
+     hoisted from the peak act's published `--sc-p`. Everything that has to
+     agree about where the divider is reads `--wp-split`, so the rule, the
+     fixed chrome and every stage move as one.
+
+     It stops at `50% - 36%`, not at zero. The free column is squeezed and then
+     refuses to leave, which is the argument this page is making. */
+  --wp-tip: 0;
+  --wp-travel: 36%;
+  --wp-split: calc(50% - var(--wp-tip, 0) * var(--wp-travel));
+
+  background: var(--sc-canvas);
+  color: var(--sc-ink);
+  font-family: var(--sc-font-text);
+}
+
+/* ------------------------------------------------------------------ stage --
+   Every stage is full-bleed and shares one column ruler, so the rule on the
+   second column reads as a single divider running the height of the document
+   rather than as six separate borders.
+   -------------------------------------------------------------------------- */
+
+.wp-stage {
+  display: grid;
+  grid-template-columns: var(--wp-split) minmax(0, 1fr);
+  align-items: stretch;
+  min-height: 100svh;
+}
+
+/* The argument tips ONCE, at the peak. The acts that argue at 50/50 pin the tip
+   to zero locally, so the driven value on the root reaches only the peak and
+   the two acts after it.
+
+   This is load-bearing, not tidiness. Without it the tip narrows the free
+   column of every act on the page, including the two whose free columns hold
+   real prose: they re-wrap into tall strips and the document grows 7336px to
+   8619px WHILE the reader is scrolling, so the close act is pushed down faster
+   than they can reach it and the page has no reachable ending. Scrolling back
+   up returns the peak's progress to 0, which returns this to 50/50, so the
+   divider and the columns never disagree. */
+.wp-act--even {
+  /* `--wp-split` is redeclared here, not just `--wp-tip`. A custom property's
+     var() references are substituted at the element that DECLARES it, so
+     `--wp-split` arrives already carrying the root's tip and re-pointing the
+     tip further down the tree does nothing to it. The tip is still reset for
+     anything that reads it directly, such as the standing line's rotation. */
+  --wp-tip: 0;
+  --wp-split: 50%;
+}
+
+/* A flow act has no `.sc-stage` from the engine, so it carries its own height
+   floor rather than inheriting the sticky one. */
+.wp-act--flow .wp-stage {
+  min-height: 0;
+}
+
+.wp-side {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2.5rem, 5vw, 5rem) clamp(1.25rem, 3.4vw, 3.25rem);
+  min-width: 0;
+}
+
+.wp-side--free {
+  background: var(--wp-ground-free);
+  /* Trailing edge, so the copy sits away from the divider it is arguing with. */
+  align-items: flex-start;
+}
+
+.wp-side--paid {
+  background: var(--wp-ground-paid);
+  border-left: 1px solid var(--wp-rule);
+}
+
+/* The reduced padding a flow section takes when it follows a pinned act: the
+   pinned stage already needs a full viewport to scroll off, and full padding on
+   top of that delays the first content by another screen. */
+.wp-act--after-pin .wp-side {
+  padding-top: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+/* -------------------------------------------------------------- act 1: the
+   establishing split. Both headlines readable at once at exactly 50/50, and
+   the two sides travel in from their own outer edges to form the divider, so
+   the format is understood before it is ever asked to tip.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  html.warsh-sc-active .wp-converge {
+    --wp-c: clamp(0, calc(var(--sc-p, 0) * 2.4), 1);
+    opacity: calc(0.35 + var(--wp-c) * 0.65);
+  }
+
+  html.warsh-sc-active .wp-side--free .wp-converge {
+    transform: translate3d(calc((1 - var(--wp-c)) * -2.5rem), 0, 0);
+  }
+
+  html.warsh-sc-active .wp-side--paid .wp-converge {
+    transform: translate3d(calc((1 - var(--wp-c)) * 2.5rem), 0, 0);
+  }
+}
+
+.wp-kicker {
+  margin: 0 0 1.1rem;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sc-accent);
+}
+
+.wp-h1,
+.wp-h2 {
+  font-family: var(--sc-font-display);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: var(--sc-ink);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.wp-h1 {
+  font-size: clamp(2.4rem, 1.2rem + 4.4vw, 5.4rem);
+}
+
+.wp-h2 {
+  font-size: clamp(1.9rem, 1.1rem + 3vw, 3.9rem);
+}
+
+.wp-lede {
+  margin: 1.4rem 0 0;
+  max-width: 30ch;
+  font-size: clamp(0.92rem, 0.85rem + 0.25vw, 1.05rem);
+  line-height: 1.62;
+  color: var(--sc-ink-soft);
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------- act 2: figures --
+   Only numbers that appear in Docs/warsh-product-spec.md. A counter is a truth
+   claim with motion attached, so an invented one is a liability.
+
+   `data-sc-reveal` sits on the WRAPPER, never on the numeral: clip-path is
+   relative to the border box, and display figures set tight have a box shorter
+   than their own ink, so a wipe on the numeral itself shears the digits.
+   -------------------------------------------------------------------------- */
+
+.wp-figures {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 3vw, 2.75rem);
+  width: 100%;
+}
+
+.wp-figure {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: clamp(0.85rem, 1.6vw, 1.6rem);
+}
+
+.wp-figure__n {
+  font-family: var(--sc-font-display);
+  font-size: clamp(2.6rem, 1.4rem + 4vw, 5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  font-variant-numeric: tabular-nums;
+  color: var(--sc-accent);
+  /* Room for the wipe to clear the ink rather than the line box. */
+  padding-block: 0.06em;
+}
+
+.wp-figure__t {
+  font-size: clamp(0.82rem, 0.76rem + 0.22vw, 0.95rem);
+  line-height: 1.5;
+  color: var(--sc-ink-soft);
+  text-wrap: pretty;
+}
+
+.wp-figure__t strong {
+  display: block;
+  font-weight: 600;
+  color: var(--sc-ink);
+}
+
+/* ------------------------------------------------------- act 3: inventory --
+   Hairline rows, not cards. A card here would be a container doing a job that
+   proximity and a rule already do.
+   -------------------------------------------------------------------------- */
+
+.wp-label {
+  margin: 0 0 1.4rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid var(--sc-ink);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sc-ink);
+  width: 100%;
+}
+
+.wp-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.wp-list li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--wp-rule-soft);
+  font-size: clamp(0.88rem, 0.82rem + 0.22vw, 1rem);
+  line-height: 1.5;
+  color: var(--sc-ink);
+  text-wrap: pretty;
+}
+
+.wp-list li:last-child {
+  border-bottom: 0;
+}
+
+.wp-note {
+  margin: 1.5rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--sc-ink-soft);
+  max-width: 34ch;
+}
+
+/* ------------------------------------------------------------ act 4: PEAK --
+   The squeeze, refused.
+
+   The free column's line does not fade and is not replaced. It ROTATES, from
+   horizontal to vertical, interpolated on the same value that narrows the
+   column, so the words physically stand up rather than disappear. It is one
+   element, real selectable text, and it holds through the close.
+   -------------------------------------------------------------------------- */
+
+.wp-stamp {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(calc(var(--wp-tip, 0) * -90deg));
+  white-space: nowrap;
+  font-family: var(--sc-font-display);
+  font-size: clamp(0.95rem, 0.6rem + 1vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--sc-ink);
+}
+
+.wp-stamp__dot {
+  color: var(--sc-accent);
+  padding-inline: 0.35em;
+}
+
+/* The peak's paid column. Cue windows overlap by roughly 15% of the act, so the
+   outgoing line is still fading while the next arrives and the reader never
+   faces empty space. */
+/* The four states stack in ONE grid cell rather than in absolutely positioned
+   boxes, so each line stays a normal block and its inline content stays inline.
+   A flex or grid container here would promote every text run and every <em> to
+   a separate item and lay the sentence out as a row of shrinking fragments,
+   which is what it did on the first verification pass. */
+.wp-turn {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  min-height: 12rem;
+}
+
+.wp-turn > p {
+  grid-area: 1 / 1;
+  margin: 0;
+  font-family: var(--sc-font-display);
+  font-size: clamp(1.35rem, 0.9rem + 1.9vw, 2.85rem);
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+  color: var(--sc-ink);
+  max-width: 26ch;
+  text-wrap: balance;
+}
+
+/* The peak has to be the largest visual change on the page, and on a page with
+   no imagery the only instrument for that is scale. The price is the thing the
+   act exists to say, so it is the biggest type on the site. */
+.wp-turn > p em {
+  font-style: normal;
+  font-size: 1.4em;
+  letter-spacing: -0.04em;
+  color: var(--sc-accent);
+}
+
+/* -------------------------------------------------------- act 5: questions --
+   Administrative content, so it is compressed: a flow section at short stagger
+   rather than a pinned act with dwell. Spending scroll here spends the reader's
+   patience on the part they will not remember.
+   -------------------------------------------------------------------------- */
+
+.wp-q {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--wp-rule-soft);
+}
+
+.wp-q:last-of-type {
+  border-bottom: 0;
+}
+
+.wp-q dt {
+  font-weight: 600;
+  font-size: clamp(0.9rem, 0.84rem + 0.22vw, 1.02rem);
+  color: var(--sc-ink);
+}
+
+.wp-q dd {
+  margin: 0.4rem 0 0;
+  font-size: clamp(0.84rem, 0.79rem + 0.2vw, 0.94rem);
+  line-height: 1.6;
+  color: var(--sc-ink-soft);
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+
+.wp-faq {
+  margin: 0;
+  width: 100%;
+}
+
+/* ------------------------------------------------------------ act 6: close --
+   The collapse. The divider has travelled toward the free side, the paid column
+   holds the dominant width, and the CTA lives in it. The free column is still
+   there, standing on its end.
+
+   The shared site footer is suppressed on this route, so the close carries the
+   small print itself rather than letting the page trail off into a second
+   ending.
+   -------------------------------------------------------------------------- */
+
+.wp-close__price {
+  margin: 1.25rem 0 0;
+  font-size: clamp(0.9rem, 0.84rem + 0.22vw, 1.02rem);
+  line-height: 1.6;
+  color: var(--sc-ink-soft);
+  max-width: 42ch;
+}
+
+.wp-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.75rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 3px;
+  background: #071b44;
+  color: #faf6e9;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 160ms var(--sc-ease-out, ease),
+    transform 140ms var(--sc-ease-out, ease);
+}
+
+.wp-cta:hover {
+  background: #04122e;
+}
+
+.wp-cta:focus-visible {
+  outline: 2px solid var(--sc-accent);
+  outline-offset: 3px;
+}
+
+.wp-cta:active {
+  transform: translateY(1px);
+}
+
+/* ------------------------------------------------------- the divider chrome --
+   This grammar takes no bar. The divider is the chrome: it names both sides and
+   it reports how far the argument has got. It is a label cluster set clear of
+   the rule, so a sub-pixel difference between a fixed element's percentage and
+   a grid track's percentage cannot read as a broken line.
+   -------------------------------------------------------------------------- */
+
+.wp-divider {
+  position: fixed;
+  transition: opacity 280ms var(--sc-ease-out, ease);
+  top: 0;
+  bottom: 0;
+  left: var(--wp-split);
+  z-index: 30;
+  width: 0;
+  pointer-events: none;
+  display: none;
+}
+
+@media (min-width: 60rem) and (prefers-reduced-motion: no-preference) {
+  .wp-divider {
+    display: block;
+  }
+}
+
+/* The argument is over: the shared footer is on screen and the chrome retires
+   rather than ruling through the colophon. The footer publishes that flag on
+   the document element (components/SiteFooter.tsx). */
+:root[data-warsh-footer-in-view] .wp-divider {
+  opacity: 0;
+}
+
+.wp-divider__fill {
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 2px;
+  height: calc(var(--wp-doc, 0) * 100%);
+  background: var(--sc-accent);
+  opacity: 0.85;
+}
+
+.wp-divider__side {
+  position: absolute;
+  top: 50%;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--sc-ink-soft) 70%, transparent);
+  white-space: nowrap;
+}
+
+.wp-divider__side--free {
+  right: 1.1rem;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.wp-divider__side--paid {
+  left: 1.1rem;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%);
+}
+
+/* --------------------------------------------------------------- mobile --
+   Acts 1 to 3 carry real prose on both sides, and two columns of prose on a
+   390px screen is unreadable, so they stack there with each side keeping its
+   own ground and label. Acts 4 to 6 keep the split, because by then the free
+   side is a single standing line and the paid side is short: the signature
+   move stays alive on a phone rather than becoming a desktop-only flourish.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 60rem) {
+  #warsh-pricing {
+    --wp-travel: 24%;
+  }
+
+  .wp-act--even .wp-stage {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .wp-act--even .wp-side--paid {
+    border-left: 0;
+    border-top: 1px solid var(--wp-rule);
+  }
+
+  .wp-h1 {
+    font-size: clamp(2.1rem, 1.4rem + 3.6vw, 3rem);
+  }
+
+  .wp-turn > p {
+    font-size: clamp(1.1rem, 0.8rem + 1.6vw, 1.6rem);
+  }
+}
+
+/* --------------------------------------------------------- reduced motion --
+   The split is layout, not motion, so it is kept: zeroing it would destroy the
+   comparison the page exists to make. What is dropped is the travel. The tip is
+   frozen at 0 for the acts that argue at 50/50 and at 1 for the acts that are
+   supposed to be resolved, so a reader who never sees the divider move still
+   arrives at the same page state.
+
+   scrollcraft.css is injected at runtime, so it is last in the cascade and wins
+   every equal-specificity tie: hence the html.warsh-sc-active prefixes. The
+   pinned acts' heights are inline styles written by the engine, which only an
+   !important author rule can override.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html.warsh-sc-active .wp-act--pin {
+    height: auto !important;
+  }
+
+  html.warsh-sc-active .wp-act--pin .wp-stage {
+    position: static !important;
+    height: auto !important;
+    min-height: 0;
+    overflow: visible !important;
+  }
+
+  /* The peak and the acts after it resolve rather than animating: the divider
+     is already tipped and the line is already standing. Both properties are
+     restated for the same substitution reason as `.wp-act--even`. */
+  html.warsh-sc-active .wp-act--held,
+  html.warsh-sc-active .wp-act--peak {
+    --wp-tip: 1;
+    --wp-split: calc(50% - var(--wp-travel));
+  }
+
+  html.warsh-sc-active .wp-converge {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Overlapping cue windows are a scroll mechanism. Without the pin they would
+     stack four absolutely positioned lines on top of each other, so the turn
+     relays as a plain sequence. */
+  html.warsh-sc-active .wp-turn {
+    min-height: 0;
+  }
+
+  html.warsh-sc-active .wp-turn > p {
+    grid-area: auto;
+    opacity: 1 !important;
+    transform: none !important;
+    margin-bottom: 1.1rem;
+    font-size: clamp(1.1rem, 0.9rem + 1vw, 1.6rem);
+  }
+}

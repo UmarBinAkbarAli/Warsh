@@ -4,7 +4,17 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
-      allow: ['/', '/privacy', '/terms', '/delete-account', '/help'],
+      allow: [
+        '/',
+        '/features',
+        '/pricing',
+        '/about',
+        '/blog',
+        '/privacy',
+        '/terms',
+        '/delete-account',
+        '/help',
+      ],
       disallow: ['/api/', '/dashboard/', '/reset-password'],
     },
     sitemap: 'https://warsh.app/sitemap.xml',

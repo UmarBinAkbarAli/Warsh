@@ -1,10 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --font-lora: Georgia, serif;
-  --font-arabic: serif;
 }
 
 * {
@@ -18,7 +20,8 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: #f4ebd0;
+  background: #f8f4ed;
+  color: #1a1a1a;
 }
 
 button,
@@ -37,11 +40,15 @@ a {
   background: #d4b06a;
 }
 
+.font-arabic {
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-
   *,
   *::before,
   *::after {
@@ -50,4 +57,68 @@ a {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Blog post body — rendered from HTML authored in Warsh Studio's rich-text
+   editor (sanitized server-side, see warsh-backend/lib/blogSanitize.ts). Plain
+   CSS rather than per-element Tailwind classes since the markup comes from the
+   editor, not from JSX we control. */
+.prose-warsh {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #3D3D3D;
+}
+.prose-warsh > * + * {
+  margin-top: 1.25em;
+}
+.prose-warsh h2 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #071B44;
+  margin-top: 1.75em;
+}
+.prose-warsh h3 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #071B44;
+  margin-top: 1.5em;
+}
+.prose-warsh ul,
+.prose-warsh ol {
+  padding-left: 1.4em;
+}
+.prose-warsh li + li {
+  margin-top: 0.4em;
+}
+.prose-warsh a {
+  color: #A88648;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose-warsh img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(7, 27, 68, 0.1);
+}
+.prose-warsh iframe {
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(7, 27, 68, 0.1);
+}
+.prose-warsh video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+.prose-warsh blockquote {
+  border-left: 3px solid #D4B06A;
+  padding-left: 1em;
+  color: #5F5F5F;
+  font-style: italic;
 }

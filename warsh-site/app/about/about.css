@@ -1,0 +1,384 @@
+/* ============================================================================
+   warsh-about: typographic poster
+   ----------------------------------------------------------------------------
+   A fourth grammar, distinct from the homepage (chaptered editorial), the
+   features page (gallery / catalog) and the pricing page (split stage).
+
+   Type is the imagery here. There are no assets and generating eight plausible
+   forgettable frames would weaken the page rather than support it, which is
+   exactly the case this grammar exists for. Rhythm comes from scale, not
+   motion: a word at 18vw, then a paragraph at 16px, then silence.
+
+   The display cap in taste.md lifts because the whole page is one continuous
+   hero moment. The tracking rules tighten in exchange: at these sizes default
+   tracking is a visible defect. Prefixed `wa-`.
+   ========================================================================== */
+
+#warsh-about {
+  --sc-canvas: #faf6e9;
+  --sc-surface: #f4ebd0;
+  --sc-ink: #1a1a1a;
+  --sc-ink-soft: #5f5f5f;
+  --sc-accent: #a88648;
+  --sc-accent-ink: #faf6e9;
+
+  --sc-font-display: var(--font-cormorant), Georgia, serif;
+  --sc-font-text: var(--font-inter), system-ui, sans-serif;
+
+  --wa-rule: color-mix(in oklab, #071b44 18%, transparent);
+
+  /* How far the peak's words scatter, and how much larger they start. Both are
+     multipliers on the per-word values authored in page.tsx, so the whole move
+     is retuned from one place per breakpoint.
+
+     Horizontal and vertical are separate because the constraint is: the stage
+     clips its overflow, and a scattered word is displaced from its natural
+     position AND grown about its own centre, so the two combine at the edges.
+     Vertically there is a whole viewport of room; horizontally the sentence
+     already fills most of the measure, so the outermost words (You, mean.) were
+     being cut in half by the frame and reading as broken rather than as
+     scattered. The vertical spread therefore stays near full and the horizontal
+     one is pulled in, hard on a phone. */
+  --wa-spread-x: 0.75;
+  --wa-spread-y: 1;
+  --wa-grow: 0.7;
+
+  background: var(--sc-canvas);
+  color: var(--sc-ink);
+  font-family: var(--sc-font-text);
+}
+
+/* Grounds are painted per act and land on a hard edge rather than drifting.
+   Several short flow acts can be part-way through at the same time here, and
+   `drift` scopes to the first of them, so an interpolated ground would show a
+   colour belonging to an act the reader left a screen ago. */
+.wa-act {
+  background: var(--sc-canvas);
+}
+
+.wa-wrap {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 7rem) clamp(1.25rem, 5vw, 4.5rem);
+}
+
+.wa-act--pin .wa-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-block: clamp(2rem, 4vw, 4rem);
+}
+
+/* ------------------------------------------------------------- act 1: hero --
+   One line at extreme scale filling the viewport, with a real h1 behind it. The
+   wordmark is part of the composition at composition scale, not a 14px item in
+   a bar: this grammar has no persistent nav at all.
+   -------------------------------------------------------------------------- */
+
+.wa-mark {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(0.6rem, 1.4vw, 1.4rem);
+  margin: 0 0 clamp(1.5rem, 4vw, 3.5rem);
+  font-family: var(--sc-font-display);
+  font-size: clamp(2rem, 0.9rem + 4vw, 5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: color-mix(in oklab, var(--sc-ink) 26%, transparent);
+}
+
+.wa-mark__ar {
+  font-family: var(--font-scheherazade), serif;
+  direction: rtl;
+  unicode-bidi: isolate;
+  font-size: 0.82em;
+  line-height: 1.6;
+  color: color-mix(in oklab, var(--sc-accent) 60%, transparent);
+}
+
+.wa-h1 {
+  margin: 0;
+  font-family: var(--sc-font-display);
+  font-size: clamp(4.2rem, 1rem + 15vw, 17rem);
+  font-weight: 600;
+  /* Tracking tightens as size grows. At this scale the default is loose enough
+     to read as amateur, and one bad fit is the whole page. */
+  letter-spacing: -0.055em;
+  /* Kinetic line masks reserve room for descenders, but a mask clipped to a
+     line box shears the tail off the g and the p. The extra leading and the
+     padding are that clearance, measured against the ink rather than the box. */
+  line-height: 0.94;
+  padding-bottom: 0.06em;
+  color: var(--sc-ink);
+}
+
+.wa-h1 em {
+  font-style: normal;
+  color: var(--sc-accent);
+}
+
+/* The counterweight: the smallest thing on the screen sitting directly under
+   the largest. Scale contrast is doing the job photography would have done. */
+.wa-hero__body {
+  margin: clamp(2rem, 5vw, 4rem) 0 0;
+  max-width: 44ch;
+  font-size: clamp(0.95rem, 0.88rem + 0.28vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--sc-ink-soft);
+  text-wrap: pretty;
+}
+
+/* -------------------------------------------------------- acts 2 and 4: the
+   big lines. `reveal` is a change of state, which is what these beats are, and
+   a wipe that runs edge to edge across a full line is a transition where a wipe
+   on a small element is a fidget.
+
+   Every wipe sits on a WRAPPER. clip-path is relative to the border box, and
+   display type set at a line-height below 1 has a box shorter than its own ink,
+   so a reveal on the type itself shears the ascenders and descenders off and
+   renders each line as a plain bar.
+   -------------------------------------------------------------------------- */
+
+.wa-line {
+  margin: 0;
+  padding-block: 0.08em;
+  font-family: var(--sc-font-display);
+  font-size: clamp(1.9rem, 0.7rem + 4.4vw, 5rem);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--sc-ink);
+  max-width: 24ch;
+  text-wrap: balance;
+}
+
+.wa-line--soft {
+  color: color-mix(in oklab, var(--sc-ink) 34%, transparent);
+}
+
+.wa-line + .wa-line {
+  margin-top: clamp(1.5rem, 3vw, 3rem);
+}
+
+/* Anchors vary act to act rather than everything sitting centred.
+   No measure here: `ch` on this wrapper would resolve against the inherited
+   16px body font rather than against the display size of the line inside it,
+   which caps the line at about 190px and sets it one word per row. The measure
+   belongs on `.wa-line`, where `ch` means what it looks like it means. */
+.wa-trail {
+  width: fit-content;
+  margin-left: auto;
+  text-align: right;
+}
+
+.wa-small {
+  margin: clamp(2.25rem, 5vw, 4rem) 0 0;
+  max-width: 52ch;
+  font-size: clamp(0.92rem, 0.86rem + 0.24vw, 1.05rem);
+  line-height: 1.7;
+  color: var(--sc-ink-soft);
+  text-wrap: pretty;
+}
+
+.wa-small a {
+  color: var(--sc-ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--sc-accent);
+}
+
+.wa-small a:hover {
+  color: var(--sc-accent);
+}
+
+.wa-small a:focus-visible {
+  outline: 2px solid var(--sc-accent);
+  outline-offset: 3px;
+}
+
+/* The boundaries, act 4. A list of negations set at line scale, each one
+   wiping in, with the affirmative left standing at the end. */
+.wa-nots {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wa-nots li {
+  padding-block: clamp(0.7rem, 1.4vw, 1.15rem);
+  border-bottom: 1px solid var(--wa-rule);
+}
+
+.wa-nots li:first-child {
+  border-top: 1px solid var(--wa-rule);
+}
+
+.wa-not {
+  margin: 0;
+  font-family: var(--sc-font-display);
+  font-size: clamp(1.4rem, 0.8rem + 2.4vw, 3.1rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: color-mix(in oklab, var(--sc-ink) 40%, transparent);
+}
+
+/* ------------------------------------------------------------ act 3: PEAK --
+   The measure closes.
+
+   The sentence is on screen for the whole act. It is never revealed and never
+   hidden: only its setting changes. Each word starts at poster scale, far from
+   where it belongs, so the reader has all the parts and no sentence. Scroll
+   interpolates every word back to its natural inline position and to reading
+   size, and comprehension arrives purely from typographic compression.
+
+   Transform and opacity only. Font size, tracking and leading are never
+   animated: those cost layout on every frame, and the same effect is available
+   from a scale that does not.
+   -------------------------------------------------------------------------- */
+
+.wa-act--peak {
+  /* The one near-white ground on a page of parchment, so the peak is the
+     largest visual change on the contact sheet and wins the squint test. */
+  background: #fdfcf7;
+}
+
+.wa-gather {
+  margin: 0 auto;
+  max-width: 26ch;
+  text-align: center;
+  font-family: var(--sc-font-display);
+  font-size: clamp(1.6rem, 0.8rem + 3.2vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.032em;
+  color: var(--sc-ink);
+}
+
+.wa-w {
+  display: inline-block;
+  will-change: transform;
+}
+
+.wa-w em {
+  font-style: normal;
+  color: var(--sc-accent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html.warsh-sc-active .wa-w {
+    /* Per-word gather, staggered by index. Word 0 starts at p = 0.12, which is
+       the authored silence at the head of the act, and the last word has
+       settled by p ≈ 0.74, leaving a quarter of the act for the sentence to be
+       held and read. */
+    --wa-g: clamp(0, calc((var(--sc-p, 0) - 0.12 - var(--wa-i, 0) * 0.04) * 3.2), 1);
+    transform: translate3d(
+        calc((1 - var(--wa-g)) * var(--wa-x, 0vw) * var(--wa-spread-x)),
+        calc((1 - var(--wa-g)) * var(--wa-y, 0vh) * var(--wa-spread-y)),
+        0
+      )
+      rotate(calc((1 - var(--wa-g)) * var(--wa-r, 0deg)))
+      scale(calc(1 + (1 - var(--wa-g)) * var(--wa-s, 1) * var(--wa-grow)));
+    /* Floored well above zero: a scattered word has to read as present and
+       waiting, not as content that failed to load. */
+    opacity: calc(0.42 + var(--wa-g) * 0.58);
+  }
+}
+
+/* --------------------------------------------------------------- act 5: the
+   close. The page inverts: the smallest type on the site, one continuous line
+   of running text, and the ask as a plain underlined link rather than a button
+   island. The shared site footer is suppressed on this route, because a footer
+   arriving after this would overwrite the quietest thing on the page.
+   -------------------------------------------------------------------------- */
+
+.wa-act--close {
+  background: var(--sc-surface);
+  border-top: 1px solid var(--wa-rule);
+}
+
+.wa-close {
+  margin: 0;
+  max-width: 60ch;
+  font-size: 0.8rem;
+  line-height: 2;
+  color: var(--sc-ink-soft);
+  text-wrap: pretty;
+}
+
+.wa-close a {
+  color: var(--sc-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.wa-close a:hover {
+  color: var(--sc-accent);
+}
+
+.wa-close a:focus-visible {
+  outline: 2px solid var(--sc-accent);
+  outline-offset: 2px;
+}
+
+.wa-close strong {
+  color: var(--sc-ink);
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------- phone type --
+   The display floor in the ramp is a desktop floor. Left alone it wraps the
+   hero to six lines on a 390px screen, which is the portrait crop of the type
+   and it is missed more often than the portrait crop of an image.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 44rem) {
+  #warsh-about {
+    --wa-spread-x: 0.32;
+    --wa-spread-y: 0.9;
+    --wa-grow: 0.26;
+  }
+
+  .wa-h1 {
+    font-size: clamp(3.4rem, 1rem + 13vw, 5.4rem);
+    letter-spacing: -0.045em;
+  }
+
+  .wa-line,
+  .wa-gather {
+    letter-spacing: -0.025em;
+  }
+
+  .wa-trail {
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
+/* --------------------------------------------------------- reduced motion --
+   Fewer and gentler, not zero. The sentence is shown already gathered, which is
+   its meaning, and the act stops being ten viewport-heights of scroll past a
+   stage that no longer moves.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html.warsh-sc-active .wa-act--pin {
+    height: auto !important;
+  }
+
+  html.warsh-sc-active .wa-act--pin .wa-stage {
+    position: static !important;
+    height: auto !important;
+    min-height: 0;
+    overflow: visible !important;
+  }
+
+  html.warsh-sc-active .wa-w {
+    transform: none;
+    opacity: 1;
+  }
+}

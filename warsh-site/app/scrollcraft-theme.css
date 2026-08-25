@@ -1,0 +1,41 @@
+/* ============================================================================
+   The shared scrollcraft floor, themed to Warsh.
+   ----------------------------------------------------------------------------
+   scrollcraft.css styles `body`, `::selection`, `:focus-visible` and the
+   scrollbar from :root tokens whose defaults are a near-black ground and a lime
+   accent. Any page that mounts the engine must therefore re-point those tokens
+   at the Warsh palette at :root level, not just inside its own container.
+
+   `useScrollCraft` adds `warsh-sc-active` to <html> while such a page is
+   mounted and removes it, with the stylesheet, on the way out. That keeps the
+   override off every route that does not mount the engine.
+
+   Palette mirrors tailwind.config.ts, which mirrors warsh-app/constants/theme.ts.
+   ========================================================================== */
+
+html.warsh-sc-active,
+html.warsh-sc-active body {
+  --sc-canvas: #faf6e9;
+  --sc-surface: #f4ebd0;
+  --sc-ink: #1a1a1a;
+  --sc-ink-soft: #5f5f5f;
+  --sc-accent: #a88648;
+  --sc-accent-ink: #faf6e9;
+
+  --sc-font-display: var(--font-cormorant), Georgia, serif;
+  --sc-font-text: var(--font-inter), system-ui, sans-serif;
+
+  /* Editorial wants a tighter measure and a smaller radius scale than the
+     engine default. One radius scale, held across the site. */
+  --sc-measure: 58ch;
+  --sc-r-sm: 2px;
+  --sc-r-md: 3px;
+  --sc-r-lg: 4px;
+
+  /* Shadows tint to the navy hue rather than to neutral black, so raised
+     surfaces on parchment read warm instead of dirty. */
+  --sc-shadow-color: 220 82% 15%;
+
+  background: #faf6e9;
+  color: #1a1a1a;
+}
