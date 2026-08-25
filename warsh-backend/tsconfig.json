@@ -18,6 +18,11 @@
     "module": "ESNext",
     "jsx": "preserve",
     "incremental": true,
+    "paths": {
+      "sharp": [
+        "./node_modules/sharp/lib/index.d.ts"
+      ]
+    },
     "plugins": [
       {
         "name": "next"

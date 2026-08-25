@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { prisma } from "../../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../../lib/auth";
 import { get4amPKTBoundary } from "../../../../../lib/date";
@@ -11,20 +12,27 @@ interface Props {
   params: { id: string };
 }
 
+const completeSchema = z.object({
+  score: z.number().int().min(0).max(100),
+  phrasesCompleted: z.number().int().min(0).max(100).optional().default(0),
+});
+
 export async function POST(request: Request, { params }: Props) {
   const userId = await getUserIdFromRequest(request);
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  const body = await request.json();
-  const { score, phrasesCompleted = 0 } = body;
-  if (typeof score !== "number") {
-    return NextResponse.json({ error: "Missing score", code: "bad_request" }, { status: 400 });
+  // `typeof score === "number"` alone admitted NaN, Infinity and out-of-range
+  // values, all of which were persisted to Progress.score.
+  const parsed = completeSchema.safeParse(await request.json().catch(() => null));
+  if (!parsed.success) {
+    return NextResponse.json(
+      { error: "score must be an integer between 0 and 100.", code: "bad_request" },
+      { status: 400 },
+    );
   }
-  const validPhrasesCompleted = typeof phrasesCompleted === "number" && phrasesCompleted > 0
-    ? Math.min(phrasesCompleted, 100)
-    : 0;
+  const { score, phrasesCompleted: validPhrasesCompleted } = parsed.data;
 
   const [lesson, subscriptionState] = await Promise.all([
     prisma.lesson.findUnique({ where: { id: params.id } }),

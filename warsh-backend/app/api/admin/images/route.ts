@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import crypto from "crypto";
+import sharp from "sharp";
 import { getAdminWriteError } from "../../../../lib/admin";
 import { uploadImageToR2 } from "../../../../lib/r2";
 
@@ -9,6 +10,15 @@ const ALLOWED: Record<string, string> = {
   "image/jpg": "jpg",
   "image/webp": "webp",
   "image/gif": "gif",
+};
+
+// What sharp must report after decoding, per declared extension. Guards against
+// a PNG-labelled JPEG as well as a PNG-labelled ZIP.
+const SHARP_FORMAT: Record<string, string> = {
+  png: "png",
+  jpg: "jpeg",
+  webp: "webp",
+  gif: "gif",
 };
 
 const MAX_BYTES = 5 * 1024 * 1024; // 5 MB
@@ -50,15 +60,35 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Image exceeds the 5 MB limit.", code: "too_large" }, { status: 413 });
   }
 
+  // The Content-Type header above is client-declared. Decode the bytes to prove
+  // they really are the image type they claim, then re-encode: that strips EXIF
+  // and any non-image payload riding along in a polyglot file. A decode failure
+  // or a format/header mismatch is rejected rather than stored.
+  let normalized: Buffer;
+  try {
+    const image = sharp(buffer, { limitInputPixels: 50_000_000, animated: ext === "gif" });
+    const format = (await image.metadata()).format;
+    if (format !== SHARP_FORMAT[ext]) {
+      throw new Error(`declared ${contentType} but decoded as ${format ?? "unknown"}`);
+    }
+    normalized = await image.rotate().toBuffer();
+  } catch (err) {
+    console.warn("[admin-images] rejected upload that did not decode as a valid image:", err);
+    return NextResponse.json(
+      { error: "File is not a valid image.", code: "unsupported_type" },
+      { status: 415 },
+    );
+  }
+
   const key = `images/admin/${folder}/${Date.now()}-${crypto.randomUUID()}.${ext}`;
 
   try {
-    const imageUrl = await uploadImageToR2(key, buffer, contentType === "image/jpg" ? "image/jpeg" : contentType);
+    const imageUrl = await uploadImageToR2(key, normalized, contentType === "image/jpg" ? "image/jpeg" : contentType);
     return NextResponse.json({ data: { imageUrl } });
   } catch (err) {
-    return NextResponse.json(
-      { error: err instanceof Error ? err.message : "Upload failed.", code: "upload_failed" },
-      { status: 500 },
-    );
+    // R2/S3 errors name the bucket and endpoint — keep them in the logs, not in
+    // the response body.
+    console.error("[admin-images] R2 upload failed:", err);
+    return NextResponse.json({ error: "Upload failed.", code: "upload_failed" }, { status: 500 });
   }
 }

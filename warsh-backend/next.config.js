@@ -1,7 +1,23 @@
 const { withSentryConfig } = require("@sentry/nextjs");
 
+// Baseline hardening for every response this origin serves. api.warsh.app also
+// serves Warsh Studio and the password-reset page, so framing is denied outright
+// and HSTS is preloaded. No CSP here yet: Studio styles components inline, and a
+// script-src would also have to cover the Sentry tunnel at /monitoring.
+const SECURITY_HEADERS = [
+  { key: "X-Frame-Options", value: "DENY" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+  { key: "Permissions-Policy", value: "camera=(), geolocation=(), microphone=(), interest-cohort=()" },
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+];
+
 const nextConfig = {
   reactStrictMode: true,
+  async headers() {
+    return [{ source: "/:path*", headers: SECURITY_HEADERS }];
+  },
   env: {
     NEXT_PUBLIC_SENTRY_DSN: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.SENTRY_DSN || "",
     NEXT_PUBLIC_SENTRY_ENVIRONMENT:

@@ -13,7 +13,7 @@ import { resolveRegistrationLanguages } from "../../../../lib/language";
 import { toAuthUser } from "../../../../lib/authUser";
 
 export async function POST(request: Request) {
-  const rl = hit(clientKey(request, "google-auth"), 10, 60_000);
+  const rl = await hit(clientKey(request, "google-auth"), 10, 60_000);
   if (!rl.allowed) {
     return NextResponse.json(
       { error: "Too many attempts. Please try again shortly.", code: "too_many_requests" },

@@ -10,7 +10,7 @@ function isValidEmail(email: string): boolean {
 }
 
 export async function POST(request: Request) {
-  const rl = hit(clientKey(request, "forgot-password"), 5, 60_000);
+  const rl = await hit(clientKey(request, "forgot-password"), 5, 60_000);
   if (!rl.allowed) {
     return NextResponse.json(
       { error: "Too many attempts. Please try again shortly.", code: "too_many_requests" },

@@ -83,8 +83,10 @@ export async function POST(request: Request, { params }: Props) {
     await sendPasswordResetEmail(user.email, resetUrl);
     return NextResponse.json({ data: { ok: true, sentTo: user.email } });
   } catch (err) {
+    // Resend errors carry sending-domain and account detail — log, don't echo.
+    console.error("[admin-user-actions] reset email failed:", err);
     return NextResponse.json(
-      { error: err instanceof Error ? err.message : "Failed to send reset email.", code: "email_failed" },
+      { error: "Failed to send reset email.", code: "email_failed" },
       { status: 502 },
     );
   }

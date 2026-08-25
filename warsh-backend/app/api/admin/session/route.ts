@@ -11,7 +11,7 @@ export async function POST(request: Request) {
   // Deliberately tighter than user login: ADMIN_DASHBOARD_TOKEN is a single
   // shared secret with no second factor guarding every admin route, so
   // legitimate use is a handful of attempts a day, not a handful a minute.
-  const rl = hit(clientKey(request, "admin-session"), 5, 15 * 60_000);
+  const rl = await hit(clientKey(request, "admin-session"), 5, 15 * 60_000);
   if (!rl.allowed) {
     return NextResponse.json(
       { error: "Too many attempts. Please try again later.", code: "too_many_requests" },

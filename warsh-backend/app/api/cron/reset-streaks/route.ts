@@ -6,6 +6,11 @@ import {
 } from "../../../../lib/date";
 import { timingSafeStringEqual } from "../../../../lib/auth";
 
+// Cron endpoints mutate rows on GET (Vercel Cron only issues GET), so no cache
+// layer may ever serve or replay this response.
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 // Vercel cron: runs daily at 23:00 UTC = 04:00 PKT
 export async function GET(request: Request) {
   const secret = request.headers.get("authorization") ?? "";

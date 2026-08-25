@@ -10,7 +10,7 @@ import { toAuthUser } from "../../../../lib/authUser";
 const DUMMY_PASSWORD_HASH = "$2a$10$6uCUqZ.9hdkxNsQ5GHpRk.IYbw5AKJuukJXiAi3EULbdZSzDs0zAC";
 
 export async function POST(request: Request) {
-  const rl = hit(clientKey(request, "login"), 10, 60_000);
+  const rl = await hit(clientKey(request, "login"), 10, 60_000);
   if (!rl.allowed) {
     return NextResponse.json(
       { error: "Too many attempts. Please try again shortly.", code: "too_many_requests" },

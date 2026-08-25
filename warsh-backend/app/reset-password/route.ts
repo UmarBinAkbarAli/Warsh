@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server";
+import { asSafeJwtParam, toInlineScriptJson } from "../../lib/inlineScript";
 
 // Web landing page for password reset links.
 // Email → clicks link → opens this page → page opens warsh:// deep link → app handles it.
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const token = searchParams.get("token") ?? "";
+  // Anything that is not JWT-shaped never reaches the page; what does reach it
+  // is still escaped for inline-script context below.
+  const token = asSafeJwtParam(searchParams.get("token"));
 
   const encodedToken = encodeURIComponent(token);
   const deepLink = `warsh://reset-password?token=${encodedToken}`;
@@ -101,10 +104,10 @@ export async function GET(request: Request) {
   <script>
     // Auto-open the app on page load
     (function() {
-      var token = ${JSON.stringify(token)};
+      var token = ${toInlineScriptJson(token)};
       if (!token) return;
-      var deepLink = ${JSON.stringify(deepLink)};
-      var intentUri = ${JSON.stringify(intentUri)};
+      var deepLink = ${toInlineScriptJson(deepLink)};
+      var intentUri = ${toInlineScriptJson(intentUri)};
 
       // Try the intent URI first (Android), fall back to scheme
       var isAndroid = /android/i.test(navigator.userAgent);
@@ -121,6 +124,17 @@ export async function GET(request: Request) {
 </html>`;
 
   return new NextResponse(html, {
-    headers: { "Content-Type": "text/html; charset=utf-8" },
+    headers: {
+      "Content-Type": "text/html; charset=utf-8",
+      // The reset JWT is in this page's URL: keep it out of Referer headers and
+      // out of any shared cache, and forbid framing/sniffing of the page itself.
+      // This deliberately tightens the origin-wide strict-origin-when-cross-origin
+      // set in next.config.js; per spec the last Referrer-Policy delivered wins,
+      // and this handler's header is emitted after the config's.
+      "Referrer-Policy": "no-referrer",
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "DENY",
+      "Cache-Control": "no-store, max-age=0",
+    },
   });
 }

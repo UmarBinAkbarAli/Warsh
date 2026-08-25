@@ -2,6 +2,11 @@ import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { timingSafeStringEqual } from "../../../../lib/auth";
 
+// Cron endpoints mutate rows on GET (Vercel Cron only issues GET), so no cache
+// layer may ever serve or replay this response.
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 // Vercel cron: runs every 6 hours
 export async function GET(request: Request) {
   const secret = request.headers.get("authorization") ?? "";
