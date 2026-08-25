@@ -39,3 +39,9 @@ warsh-app/warsh-app-UI-v2
 
 # design-sync build artifact
 ds-bundle/
+.env*
+!**/.env.example
+.vercel-token
+
+# scrollcraft verification output (regenerable screenshot sheets)
+scrollcraft/builds/*/lab/
