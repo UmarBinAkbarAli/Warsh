@@ -35,6 +35,13 @@ export async function POST(request: Request) {
   const folderParam = new URL(request.url).searchParams.get("folder") ?? "misc";
   const folder = ALLOWED_FOLDERS.has(folderParam) ? folderParam : "misc";
 
+  // Reject on the declared length before materializing the body — the guard
+  // below only fires once the whole upload is already resident in memory.
+  const declaredLength = Number(request.headers.get("content-length") ?? 0);
+  if (declaredLength > MAX_BYTES) {
+    return NextResponse.json({ error: "Image exceeds the 5 MB limit.", code: "too_large" }, { status: 413 });
+  }
+
   const buffer = Buffer.from(await request.arrayBuffer());
   if (buffer.length === 0) {
     return NextResponse.json({ error: "Empty image body.", code: "bad_request" }, { status: 400 });

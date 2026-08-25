@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { prisma } from "../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../lib/auth";
 import { getAssistantReply } from "../../../lib/openai";
@@ -9,17 +10,27 @@ import { resolveContentLanguage } from "../../../lib/language";
 
 const DAILY_MESSAGE_LIMIT = Number(process.env.AI_DAILY_MESSAGE_LIMIT ?? 5);
 
+// A tutoring question is a few sentences. The daily quota bounds how MANY calls
+// reach OpenAI, but nothing bounded their SIZE — so one user could spend five
+// multi-megabyte prompts a day against an unbounded input-token bill.
+const chatSchema = z.object({
+  message: z.string().trim().min(1).max(2000),
+});
+
 export async function POST(request: Request) {
   const userId = await getUserIdFromRequest(request);
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  const body = await request.json();
-  const { message } = body;
-  if (!message || typeof message !== "string") {
-    return NextResponse.json({ error: "Missing message", code: "bad_request" }, { status: 400 });
+  const parsed = chatSchema.safeParse(await request.json().catch(() => null));
+  if (!parsed.success) {
+    return NextResponse.json(
+      { error: "Message must be between 1 and 2000 characters.", code: "bad_request" },
+      { status: 400 },
+    );
   }
+  const message = parsed.data.message;
 
   const today = getPKTStartOfDay(new Date());
 

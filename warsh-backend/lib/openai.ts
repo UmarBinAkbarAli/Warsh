@@ -110,15 +110,21 @@ export async function getAssistantReply(
 }
 
 function getLocalTutorReply(message: string): string {
+  // Operators get the diagnostic in the logs; the user-facing copy must not
+  // disclose the provider, the env var name, or the deployment model.
+  if (!process.env.OPENAI_API_KEY) {
+    console.error("[openai] OPENAI_API_KEY is not set - serving offline fallback reply.");
+  }
+
   const normalized = message.toLowerCase();
   if (
     normalized.includes("salam") ||
     normalized.includes("hello") ||
     normalized.includes("hi")
   ) {
-    return "السلام عليكم. I am Ustaad Noor. It seems I am currently offline — please check that the AI provider is configured. In the meantime, try asking me about any part of the 72-chapter Warsh curriculum when I am back.";
+    return "السلام عليكم. I am Ustaad Noor. I am unavailable at the moment — please try again shortly, ان شاء الله.";
   }
-  return "It seems I am currently offline. Please ensure OPENAI_API_KEY is set in the backend .env file and restart the server.";
+  return "I am unavailable at the moment. Please try again shortly, ان شاء الله.";
 }
 
 async function getOpenAIReply(message: string, history: HistoryMessage[], responseLanguage?: string): Promise<string> {

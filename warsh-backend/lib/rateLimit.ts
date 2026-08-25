@@ -48,9 +48,19 @@ export function hit(key: string, limit: number, windowMs: number): RateLimitResu
   return { allowed: true, retryAfterSeconds: 0 };
 }
 
-// Best-effort client key from proxy headers (Vercel sets x-forwarded-for).
+// Client key from proxy headers. Prefer x-real-ip: the Vercel edge sets it from
+// the actual TCP peer and a caller cannot forge it. Fall back to the RIGHTMOST
+// x-forwarded-for entry, which is the hop appended by our own trusted proxy —
+// never the leftmost, which is whatever the caller chose to send and would let
+// an attacker mint a fresh bucket per request.
 export function clientKey(request: Request, scope: string): string {
-  const fwd = request.headers.get("x-forwarded-for") ?? "";
-  const ip = fwd.split(",")[0]?.trim() || "unknown";
+  const realIp = request.headers.get("x-real-ip")?.trim();
+  if (realIp) return `${scope}:${realIp}`;
+
+  const parts = (request.headers.get("x-forwarded-for") ?? "")
+    .split(",")
+    .map((part) => part.trim())
+    .filter(Boolean);
+  const ip = parts[parts.length - 1] || "unknown";
   return `${scope}:${ip}`;
 }

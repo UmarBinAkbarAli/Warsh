@@ -26,6 +26,9 @@ module.exports = withSentryConfig(nextConfig, {
   tunnelRoute: "/monitoring",
   sourcemaps: {
     disable: !hasSentrySourceMapConfig,
+    // Upload maps to Sentry for readable stack traces, then strip them from the
+    // deployed bundle so they are never publicly fetchable.
+    deleteSourcemapsAfterUpload: true,
   },
   webpack: {
     automaticVercelMonitors: true,
