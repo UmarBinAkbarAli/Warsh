@@ -8,7 +8,7 @@ import { prisma } from "../../../../lib/prisma";
 // stamping) live in exactly one spot rather than being duplicated across each
 // content type's PATCH handler.
 const schema = z.object({
-  type: z.enum(["chapter", "lesson", "vocabulary", "tadabbur", "achievement"]),
+  type: z.enum(["chapter", "lesson", "vocabulary", "tadabbur", "achievement", "blog"]),
   id: z.string().trim().min(1),
   action: z.enum(["publish", "unpublish"]),
   // Chapters only: also apply the same action to every lesson in the chapter,
@@ -16,7 +16,7 @@ const schema = z.object({
   cascadeLessons: z.boolean().optional(),
 });
 
-// Maps each content type to its Prisma delegate. All five models share the
+// Maps each content type to its Prisma delegate. All six models share the
 // `status` / `publishedAt` shape added by the add_content_status migration.
 const DELEGATES = {
   chapter: () => prisma.chapter,
@@ -24,6 +24,7 @@ const DELEGATES = {
   vocabulary: () => prisma.vocabularyWord,
   tadabbur: () => prisma.tadabburSurah,
   achievement: () => prisma.achievement,
+  blog: () => prisma.blogPost,
 } as const;
 
 export async function POST(request: Request) {

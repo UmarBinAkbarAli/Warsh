@@ -9,6 +9,7 @@ const LINKS = [
   { href: "/dashboard/vocabulary", label: "Vocabulary" },
   { href: "/dashboard/tadabbur", label: "Tadabbur" },
   { href: "/dashboard/achievements", label: "Achievements" },
+  { href: "/dashboard/blog", label: "Blog" },
   { href: "/dashboard/promo", label: "Promo" },
   { href: "/dashboard/users", label: "Users" },
   { href: "/dashboard/health", label: "Health" },

@@ -336,3 +336,27 @@ model UserVocabularyWord {
 
     @@unique([userId, wordId])
 }
+
+// Marketing blog posts for warsh.app/blog. Authored in Warsh Studio and read by
+// warsh-site over the public /api/blog routes, replacing the hardcoded
+// content/blog.ts array. `body` is the same markdown-lite the site already
+// renders: blank-line paragraphs, "## " headings, "- " list items.
+model BlogPost {
+    id            String        @id @default(cuid())
+    slug          String        @unique
+    title         String
+    excerpt       String
+    body          String
+    coverImageUrl String?
+    authorName    String        @default("Warsh")
+    // Estimated reading time in minutes; auto-derived from the body on save
+    // unless the author overrides it.
+    readingMinutes Int          @default(1)
+    status        ContentStatus @default(DRAFT)
+    // Doubles as the post's public date once it goes live.
+    publishedAt   DateTime?
+    createdAt     DateTime      @default(now())
+    updatedAt     DateTime      @updatedAt
+
+    @@index([status, publishedAt])
+}

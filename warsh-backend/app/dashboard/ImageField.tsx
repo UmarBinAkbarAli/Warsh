@@ -14,7 +14,7 @@ export default function ImageField({
 }: {
   label: string;
   value: string;
-  folder: "chapters" | "cards" | "discover" | "misc";
+  folder: "chapters" | "cards" | "discover" | "blog" | "misc";
   adminToken?: string;
   onChange: (url: string) => void;
   onStatus?: (msg: string) => void;

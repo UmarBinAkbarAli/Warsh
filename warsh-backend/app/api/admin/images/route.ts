@@ -12,7 +12,7 @@ const ALLOWED: Record<string, string> = {
 };
 
 const MAX_BYTES = 5 * 1024 * 1024; // 5 MB
-const ALLOWED_FOLDERS = new Set(["chapters", "cards", "discover", "misc"]);
+const ALLOWED_FOLDERS = new Set(["chapters", "cards", "discover", "blog", "misc"]);
 
 // POST /api/admin/images?folder=cards
 // Body: raw image bytes, Content-Type: image/png | image/jpeg | image/webp | image/gif

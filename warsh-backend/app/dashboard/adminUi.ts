@@ -49,7 +49,7 @@ export const ui: Record<string, CSSProperties> = {
 };
 
 export type ContentStatus = "DRAFT" | "PUBLISHED";
-export type PublishType = "chapter" | "lesson" | "vocabulary" | "tadabbur" | "achievement";
+export type PublishType = "chapter" | "lesson" | "vocabulary" | "tadabbur" | "achievement" | "blog";
 
 // Flip an item's publish state via the shared /api/admin/publish endpoint.
 // Returns the resulting status on success, or throws with a readable message.
