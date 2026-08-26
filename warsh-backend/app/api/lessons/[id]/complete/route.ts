@@ -7,13 +7,14 @@ import { calculateLessonStreakUpdate } from "../../../../../lib/streak";
 import { getUserCourseState, PROGRESS_STATUS } from "../../../../../lib/course";
 import { checkAndAwardAchievements } from "../../../../../lib/achievements";
 import { getUserSubscriptionState, requiresSubscription } from "../../../../../lib/subscription";
+import { calculateLessonScore } from "../../../../../lib/lessonScoring";
 
 interface Props {
   params: { id: string };
 }
 
 const completeSchema = z.object({
-  score: z.number().int().min(0).max(100),
+  exerciseResults: z.array(z.boolean()).max(200).optional().default([]),
   phrasesCompleted: z.number().int().min(0).max(100).optional().default(0),
 });
 
@@ -23,16 +24,16 @@ export async function POST(request: Request, { params }: Props) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  // `typeof score === "number"` alone admitted NaN, Infinity and out-of-range
-  // values, all of which were persisted to Progress.score.
+  // The client only reports what happened per exercise; scoring and pass/fail
+  // are computed here so a modified client can't grant itself credit.
   const parsed = completeSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) {
     return NextResponse.json(
-      { error: "score must be an integer between 0 and 100.", code: "bad_request" },
+      { error: "exerciseResults must be an array of booleans.", code: "bad_request" },
       { status: 400 },
     );
   }
-  const { score, phrasesCompleted: validPhrasesCompleted } = parsed.data;
+  const { exerciseResults, phrasesCompleted: validPhrasesCompleted } = parsed.data;
 
   const [lesson, subscriptionState] = await Promise.all([
     prisma.lesson.findUnique({ where: { id: params.id } }),
@@ -54,6 +55,11 @@ export async function POST(request: Request, { params }: Props) {
   const { chapterStateById } = await getUserCourseState(userId);
   if (chapterStateById.get(lesson.chapterId)?.isLocked) {
     return NextResponse.json({ error: "Chapter is locked", code: "chapter_locked" }, { status: 403 });
+  }
+
+  const { passed, score, correctCount, totalScored, threshold } = calculateLessonScore(exerciseResults);
+  if (!passed) {
+    return NextResponse.json({ data: { passed: false, correctCount, totalScored, threshold } });
   }
 
   const todayStart = get4amPKTBoundary();
@@ -218,6 +224,8 @@ export async function POST(request: Request, { params }: Props) {
 
   return NextResponse.json({
     data: {
+      passed: true,
+      score,
       xpEarned,
       chapterBonusXp,
       chapterJustCompleted,

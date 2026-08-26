@@ -139,7 +139,7 @@ function OptionPicker({
 }: {
   label: string;
   options: { value: number; label: string }[];
-  value: number;
+  value: number | null;
   onChange: (v: number) => void;
 }) {
   return (
@@ -178,6 +178,7 @@ export default function SettingsScreen() {
 
   const [prefs, setPrefs] = useState<Prefs>(DEFAULT_PREFS);
   const [dailyGoalMinutes, setDailyGoalMinutes] = useState(10);
+  const [streakGoalDays, setStreakGoalDays] = useState<number | null>(null);
 
   function openExternalUrl(url: string) {
     void Linking.openURL(url).catch(() => {
@@ -202,6 +203,7 @@ export default function SettingsScreen() {
         .then((res) => {
           const d = res.data.data;
           setDailyGoalMinutes(d.dailyGoalMinutes ?? 10);
+          setStreakGoalDays(d.streakGoalDays ?? null);
           setCurrentStreak(d.streak ?? 0);
           setUserName(d.userName ?? "friend");
         })
@@ -237,7 +239,8 @@ export default function SettingsScreen() {
             milestoneEnabled: updated.milestoneEnabled,
           },
           userName,
-          currentStreak
+          currentStreak,
+          streakGoalDays
         );
       }
     }
@@ -252,6 +255,19 @@ export default function SettingsScreen() {
       if (user?.id) {
         await AsyncStorage.setItem(`${ONBOARDING_GOAL_TOUCHED_KEY}_${user.id}`, "1");
       }
+    } catch {
+      // silently revert on failure
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function changeStreakGoal(days: number) {
+    if (saving) return;
+    setStreakGoalDays(days);
+    setSaving(true);
+    try {
+      await updateUserProfile({ streakGoalDays: days });
     } catch {
       // silently revert on failure
     } finally {
@@ -491,6 +507,22 @@ export default function SettingsScreen() {
               onChange={changeDailyGoal}
             />
           </View>
+        </View>
+
+        {/* Streak goal */}
+        <SectionHeader title={t("settings.streakGoal")} />
+        <View style={styles.card}>
+          <OptionPicker
+            label={t("settings.streakGoalCommitment")}
+            options={[
+              { value: 3, label: t("settings.streakGoalDays", { days: 3 }) },
+              { value: 7, label: t("settings.streakGoalDays", { days: 7 }) },
+              { value: 14, label: t("settings.streakGoalDays", { days: 14 }) },
+              { value: 30, label: t("settings.streakGoalDays", { days: 30 }) },
+            ]}
+            value={streakGoalDays}
+            onChange={changeStreakGoal}
+          />
         </View>
 
         {/* Support */}

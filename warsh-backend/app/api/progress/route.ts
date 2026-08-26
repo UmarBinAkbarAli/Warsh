@@ -20,7 +20,7 @@ export async function GET(request: Request) {
   const todayStart = get4amPKTBoundary();
 
   const [user, progress, streak, earnedAchievements, todayProgress, vocabTotal, vocabMastered, surahsCompleted] = await Promise.all([
-    prisma.user.findUnique({ where: { id: userId }, select: { xp: true, level: true, dailyGoalMinutes: true, name: true, createdAt: true, trialStartAt: true, trialExpiresAt: true, subscriptionStatus: true, subscriptionActiveUntil: true, subscriptionProductId: true, noorOverageBalance: true, phrasesSpoken: true } }),
+    prisma.user.findUnique({ where: { id: userId }, select: { xp: true, level: true, dailyGoalMinutes: true, streakGoalDays: true, name: true, createdAt: true, trialStartAt: true, trialExpiresAt: true, subscriptionStatus: true, subscriptionActiveUntil: true, subscriptionProductId: true, noorOverageBalance: true, phrasesSpoken: true } }),
     prisma.progress.findMany({ where: { userId, status: PROGRESS_STATUS.COMPLETED }, select: { lessonId: true } }),
     prisma.streak.findUnique({ where: { userId }, select: { currentStreak: true, longestStreak: true, lastActiveDate: true, streakFreezes: true, lastFreezeUsedAt: true } }),
     prisma.userAchievement.findMany({
@@ -54,6 +54,7 @@ export async function GET(request: Request) {
       completedLessons: progress.map((item: any) => item.lessonId),
       fatihaPercent,
       dailyGoalMinutes,
+      streakGoalDays: user?.streakGoalDays ?? null,
       lessonsCompletedToday: todayProgress,
       dailyGoalMet,
       phrasesSpoken: user?.phrasesSpoken ?? 0,

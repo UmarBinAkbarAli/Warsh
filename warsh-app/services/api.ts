@@ -137,7 +137,7 @@ export function submitSRSReview(wordId: string, quality: 2 | 4 | 5) {
   return api.post("/api/vocabulary/srs/review", { wordId, quality });
 }
 
-export function updateUserProfile(data: { dailyGoalMinutes?: number; nativeLanguage?: string; translationLanguage?: string }) {
+export function updateUserProfile(data: { dailyGoalMinutes?: number; nativeLanguage?: string; translationLanguage?: string; streakGoalDays?: number | null }) {
   return api.patch("/api/users/me", data);
 }
 

@@ -1,5 +1,5 @@
 {
-  "version": "2.15",
+  "version": "2.17",
   "children": [
     {
       "type": "frame",
@@ -92732,11 +92732,11 @@
     {
       "type": "frame",
       "id": "rRO3K",
-      "x": 39110,
-      "y": 9,
+      "x": 39126,
+      "y": 1233,
       "name": "14 — Celebration Screens · Confirmed Design",
       "clip": true,
-      "width": 1880,
+      "width": 2668,
       "fill": "#E9E0C9",
       "cornerRadius": 24,
       "layout": "vertical",
@@ -94826,6 +94826,1096 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "frame",
+              "id": "cGX5A",
+              "name": "Lesson Retry Proposed Wrap",
+              "width": 390,
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wf1Lz",
+                  "name": "Lesson Completion Label",
+                  "fill": "$warsh-navy",
+                  "content": "05  LESSON RETRY · PROPOSED",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "800",
+                  "letterSpacing": 1.2
+                },
+                {
+                  "type": "frame",
+                  "id": "D0mJgx",
+                  "name": "Lesson Retry · Proposed Redesign",
+                  "clip": true,
+                  "width": 390,
+                  "height": 844,
+                  "fill": "$warsh-cream",
+                  "cornerRadius": 28,
+                  "stroke": "$sage-soft",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "j0akR",
+                      "name": "Status Bar",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#00000000",
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "OUpsX",
+                          "x": 22,
+                          "y": 12,
+                          "name": "Status Time",
+                          "fill": "$ink",
+                          "content": "9:41",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "wJnTe",
+                          "x": 302,
+                          "y": 11,
+                          "name": "Status Icons",
+                          "gap": 6,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "FznaJ",
+                              "name": "Signal Icon",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "signal-high",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "vSgAI",
+                              "name": "Wifi Icon",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "wifi",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "ZhCCc",
+                              "name": "Battery Icon",
+                              "width": 20,
+                              "height": 16,
+                              "icon": "battery-full",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "J713d8",
+                      "name": "Lesson Completion Body",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "layout": "vertical",
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "kn6zH",
+                          "name": "Completion Content",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "layout": "vertical",
+                          "gap": 14,
+                          "justifyContent": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "LImLs",
+                              "name": "Completion Hero",
+                              "width": "fill_container",
+                              "height": 232,
+                              "fill": "$error-tint",
+                              "cornerRadius": 20,
+                              "stroke": "$terracotta",
+                              "strokeWidth": 1,
+                              "layout": "vertical",
+                              "gap": 8,
+                              "padding": [
+                                22,
+                                24
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "N85rk9",
+                                  "name": "Completion Eyebrow",
+                                  "fill": "$terracotta-text",
+                                  "content": "KEEP PRACTICING",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 10,
+                                  "fontWeight": "700",
+                                  "letterSpacing": 1.8
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "nOj7c",
+                                  "name": "Completion Emblem",
+                                  "width": 56,
+                                  "height": 56,
+                                  "fill": "$pure-white",
+                                  "cornerRadius": 28,
+                                  "stroke": "$terracotta",
+                                  "strokeWidth": 1,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "jmPkX",
+                                      "name": "Completion Check",
+                                      "width": 27,
+                                      "height": 27,
+                                      "icon": "repeat",
+                                      "library": "lucide",
+                                      "fill": "$terracotta"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "YdlCZ",
+                                  "name": "Completion Title",
+                                  "fill": "$ink",
+                                  "content": "Not Quite Yet",
+                                  "fontFamily": "$font-heading",
+                                  "fontSize": 26,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "d9iW1",
+                                  "name": "Completion Arabic",
+                                  "fill": "$terracotta-text",
+                                  "content": "حاول مرة أخرى",
+                                  "fontFamily": "$font-arabic",
+                                  "fontSize": 24,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "NMJ9M",
+                              "name": "Completion Metrics",
+                              "width": "fill_container",
+                              "height": 86,
+                              "fill": "$surface-card",
+                              "cornerRadius": 16,
+                              "stroke": "$terracotta",
+                              "strokeWidth": 1,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "NMXPL",
+                                  "name": "Metric 1",
+                                  "width": "fill_container",
+                                  "height": "fill_container",
+                                  "layout": "vertical",
+                                  "gap": 2,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "Tsi2P",
+                                      "name": "Metric Value 1",
+                                      "fill": "$ink",
+                                      "content": "4",
+                                      "fontFamily": "$font-heading",
+                                      "fontSize": 20,
+                                      "fontWeight": "700"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "TduTN",
+                                      "name": "Metric Label 1",
+                                      "fill": "$ink-muted",
+                                      "content": "correct",
+                                      "fontFamily": "$font-text",
+                                      "fontSize": 10,
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "id": "nifNC",
+                                  "name": "Metric Divider 1",
+                                  "fill": "$sage-soft",
+                                  "width": 1,
+                                  "height": 34
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "CfJzQ",
+                                  "name": "Metric 2",
+                                  "width": "fill_container",
+                                  "height": "fill_container",
+                                  "layout": "vertical",
+                                  "gap": 2,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "o3Khdj",
+                                      "name": "Metric Value 2",
+                                      "fill": "$ink",
+                                      "content": "8",
+                                      "fontFamily": "$font-heading",
+                                      "fontSize": 20,
+                                      "fontWeight": "700"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "RzIEK",
+                                      "name": "Metric Label 2",
+                                      "fill": "$ink-muted",
+                                      "content": "needed to pass",
+                                      "fontFamily": "$font-text",
+                                      "fontSize": 10,
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "id": "PzcVI",
+                                  "name": "Metric Divider 2",
+                                  "fill": "$sage-soft",
+                                  "width": 1,
+                                  "height": 34
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "UQlrg",
+                                  "name": "Metric 3",
+                                  "width": "fill_container",
+                                  "height": "fill_container",
+                                  "layout": "vertical",
+                                  "gap": 2,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "XNAps",
+                                      "name": "Metric Value 3",
+                                      "fill": "$ink",
+                                      "content": "0",
+                                      "fontFamily": "$font-heading",
+                                      "fontSize": 20,
+                                      "fontWeight": "700"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "JaXag",
+                                      "name": "Metric Label 3",
+                                      "fill": "$ink-muted",
+                                      "content": "XP earned",
+                                      "fontFamily": "$font-text",
+                                      "fontSize": 10,
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "IX6Hy",
+                              "name": "Noor Recap",
+                              "width": "fill_container",
+                              "fill": "$error-tint",
+                              "cornerRadius": 16,
+                              "stroke": "$terracotta",
+                              "strokeWidth": 1,
+                              "layout": "vertical",
+                              "gap": 8,
+                              "padding": [
+                                14,
+                                16
+                              ],
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "t4suLM",
+                                  "name": "Noor Recap Header",
+                                  "width": "fill_container",
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "EOars",
+                                      "name": "Noor Label",
+                                      "fill": "$terracotta-text",
+                                      "content": "USTAAD NOOR",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 10,
+                                      "fontWeight": "700",
+                                      "letterSpacing": 1.1
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "U3rRf",
+                                      "x": 234,
+                                      "y": 0,
+                                      "name": "Meaning Badge",
+                                      "enabled": false,
+                                      "fill": "$pure-white",
+                                      "cornerRadius": 12,
+                                      "padding": [
+                                        4,
+                                        10
+                                      ],
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "pVZ59",
+                                          "name": "Meaning Badge Label",
+                                          "fill": "$sage-deep",
+                                          "content": "Urdu meanings",
+                                          "fontFamily": "$font-text",
+                                          "fontSize": 9,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "SnTj5",
+                                  "name": "Noor Message",
+                                  "fill": "$ink-secondary",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "لا بأس، راجع إجاباتك ثم حاول مرة أخرى.",
+                                  "lineHeight": 1.45,
+                                  "textAlign": "right",
+                                  "fontFamily": "$font-arabic",
+                                  "fontSize": 16,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "fQ6nz",
+                              "name": "Next Lesson Note",
+                              "fill": "$ink-muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "You'll restart from the first exercise.",
+                              "textAlign": "center",
+                              "fontFamily": "$font-text",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "fontStyle": "italic"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ZeL2U",
+                          "name": "Continue Button",
+                          "width": "fill_container",
+                          "height": 56,
+                          "fill": "$navy-deep",
+                          "cornerRadius": 12,
+                          "stroke": "$gold",
+                          "strokeWidth": 2,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "IqwSe",
+                              "name": "Continue Label",
+                              "fill": "$gold-muted",
+                              "content": "Try Again",
+                              "fontFamily": "$font-heading",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "w1Skq",
+              "name": "Streak & Pace Commitment Proposed Wrap",
+              "width": 390,
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "h7ibQN",
+                  "name": "Streak Commitment Label",
+                  "fill": "$warsh-navy",
+                  "content": "06  STREAK & PACE COMMITMENT · PROPOSED",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "800",
+                  "letterSpacing": 1.2
+                },
+                {
+                  "type": "frame",
+                  "id": "K2eOwM",
+                  "name": "Streak Commitment · Proposed Redesign",
+                  "clip": true,
+                  "width": 390,
+                  "height": 844,
+                  "fill": "$warsh-cream",
+                  "cornerRadius": 28,
+                  "stroke": "$sage-soft",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "P40gI",
+                      "name": "Status Bar",
+                      "width": "fill_container",
+                      "height": 40,
+                      "fill": "#00000000",
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dvvlw",
+                          "x": 22,
+                          "y": 12,
+                          "name": "Status Time",
+                          "fill": "$ink",
+                          "content": "9:41",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "A5OP9L",
+                          "x": 302,
+                          "y": 11,
+                          "name": "Status Icons",
+                          "gap": 6,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "ImzYF",
+                              "name": "Signal Icon",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "signal-high",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "EtlzJ",
+                              "name": "Wifi Icon",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "wifi",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "P2XIu4",
+                              "name": "Battery Icon",
+                              "width": 20,
+                              "height": 16,
+                              "icon": "battery-full",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "BIQsC",
+                      "name": "Commitment Body",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "layout": "vertical",
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "OwB8n",
+                          "name": "Commitment Content",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "layout": "vertical",
+                          "gap": 16,
+                          "justifyContent": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "bqCZX",
+                              "name": "Commitment Header",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 7,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "o9rWQI",
+                                  "name": "Commitment Emblem",
+                                  "width": 64,
+                                  "height": 64,
+                                  "fill": "$parchment-soft",
+                                  "cornerRadius": 32,
+                                  "stroke": "$gold",
+                                  "strokeWidth": 1,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "tDOLO",
+                                      "name": "Commitment Emblem Inner",
+                                      "width": 54,
+                                      "height": 54,
+                                      "cornerRadius": 27,
+                                      "stroke": "$gold-muted",
+                                      "strokeWidth": 1,
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "icon",
+                                          "id": "OUcl3",
+                                          "name": "Commitment Flame",
+                                          "width": 28,
+                                          "height": 28,
+                                          "icon": "flame",
+                                          "library": "lucide",
+                                          "fill": "$gold-deep"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "KNSHH",
+                                  "name": "Commitment Eyebrow",
+                                  "fill": "$gold-deep",
+                                  "content": "CHOOSE YOUR PACE",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 10,
+                                  "fontWeight": "700",
+                                  "letterSpacing": 1.6
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "J3DwFZ",
+                                  "name": "Commitment Title",
+                                  "fill": "$ink",
+                                  "content": "Your daily rhythm",
+                                  "fontFamily": "$font-heading",
+                                  "fontSize": 27,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "V9ARXi",
+                                  "name": "Commitment Subtitle",
+                                  "fill": "$ink-secondary",
+                                  "textGrowth": "fixed-width",
+                                  "width": 330,
+                                  "content": "Set your pace and a streak goal — small promises kept daily.",
+                                  "lineHeight": 1.4,
+                                  "textAlign": "center",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "rqJ5e",
+                              "name": "Pace & Goals Card",
+                              "width": "fill_container",
+                              "fill": "$surface-card",
+                              "cornerRadius": 18,
+                              "stroke": "$sage-soft",
+                              "strokeWidth": 1,
+                              "layout": "vertical",
+                              "gap": 16,
+                              "padding": 14,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "twf6H",
+                                  "name": "MINUTES A DAY Group",
+                                  "width": "fill_container",
+                                  "layout": "vertical",
+                                  "gap": 8,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "EI6nq",
+                                      "name": "MINUTES A DAY Label",
+                                      "fill": "$sage-deep",
+                                      "content": "MINUTES A DAY",
+                                      "fontFamily": "$font-body",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "letterSpacing": 1
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "zMHxy",
+                                      "name": "MINUTES A DAY Row",
+                                      "width": "fill_container",
+                                      "gap": 10,
+                                      "children": [
+                                        {
+                                          "type": "frame",
+                                          "id": "c3W2iy",
+                                          "name": "5 min Pill",
+                                          "width": "fill_container",
+                                          "height": 56,
+                                          "fill": "$pure-white",
+                                          "cornerRadius": "$radius-md",
+                                          "stroke": "$warsh-line",
+                                          "strokeWidth": 1,
+                                          "layout": "vertical",
+                                          "gap": 2,
+                                          "justifyContent": "center",
+                                          "alignItems": "center",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "NCRT5",
+                                              "name": "Value",
+                                              "fill": "$ink",
+                                              "content": "5",
+                                              "fontFamily": "$font-heading",
+                                              "fontSize": 18,
+                                              "fontWeight": "700"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "id": "Nj6IX",
+                                              "name": "Unit",
+                                              "fill": "$ink-muted",
+                                              "content": "min",
+                                              "fontFamily": "$font-body",
+                                              "fontSize": 10,
+                                              "fontWeight": "600"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "frame",
+                                          "id": "fDVsa",
+                                          "name": "10 min Pill",
+                                          "width": "fill_container",
+                                          "height": 56,
+                                          "fill": "$parchment-deep",
+                                          "cornerRadius": "$radius-md",
+                                          "stroke": "$gold",
+                                          "strokeWidth": 2,
+                                          "layout": "vertical",
+                                          "gap": 2,
+                                          "justifyContent": "center",
+                                          "alignItems": "center",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "Mn0RJ",
+                                              "name": "Value",
+                                              "fill": "$navy-deep",
+                                              "content": "10",
+                                              "fontFamily": "$font-heading",
+                                              "fontSize": 18,
+                                              "fontWeight": "700"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "id": "BhBNi",
+                                              "name": "Unit",
+                                              "fill": "$sage-deep",
+                                              "content": "min",
+                                              "fontFamily": "$font-body",
+                                              "fontSize": 10,
+                                              "fontWeight": "600"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "frame",
+                                          "id": "wMhYB",
+                                          "name": "15 min Pill",
+                                          "width": "fill_container",
+                                          "height": 56,
+                                          "fill": "$pure-white",
+                                          "cornerRadius": "$radius-md",
+                                          "stroke": "$warsh-line",
+                                          "strokeWidth": 1,
+                                          "layout": "vertical",
+                                          "gap": 2,
+                                          "justifyContent": "center",
+                                          "alignItems": "center",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "W3IbDf",
+                                              "name": "Value",
+                                              "fill": "$ink",
+                                              "content": "15",
+                                              "fontFamily": "$font-heading",
+                                              "fontSize": 18,
+                                              "fontWeight": "700"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "id": "uGaIa",
+                                              "name": "Unit",
+                                              "fill": "$ink-muted",
+                                              "content": "min",
+                                              "fontFamily": "$font-body",
+                                              "fontSize": 10,
+                                              "fontWeight": "600"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "frame",
+                                          "id": "KUQJ3",
+                                          "name": "20 min Pill",
+                                          "width": "fill_container",
+                                          "height": 56,
+                                          "fill": "$pure-white",
+                                          "cornerRadius": "$radius-md",
+                                          "stroke": "$warsh-line",
+                                          "strokeWidth": 1,
+                                          "layout": "vertical",
+                                          "gap": 2,
+                                          "justifyContent": "center",
+                                          "alignItems": "center",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "R1f9k",
+                                              "name": "Value",
+                                              "fill": "$ink",
+                                              "content": "20",
+                                              "fontFamily": "$font-heading",
+                                              "fontSize": 18,
+                                              "fontWeight": "700"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "id": "TYKd0",
+                                              "name": "Unit",
+                                              "fill": "$ink-muted",
+                                              "content": "min",
+                                              "fontFamily": "$font-body",
+                                              "fontSize": 10,
+                                              "fontWeight": "600"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "nEQxA",
+                                  "name": "STREAK GOAL Group",
+                                  "width": "fill_container",
+                                  "layout": "vertical",
+                                  "gap": 8,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "G4R7D1",
+                                      "name": "STREAK GOAL Label",
+                                      "fill": "$sage-deep",
+                                      "content": "STREAK GOAL",
+                                      "fontFamily": "$font-body",
+                                      "fontSize": 11,
+                                      "fontWeight": "700",
+                                      "letterSpacing": 1
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "Skyns",
+                                      "name": "STREAK GOAL Row",
+                                      "width": "fill_container",
+                                      "gap": 10,
+                                      "children": [
+                                        {
+                                          "type": "frame",
+                                          "id": "sb4L2",
+                                          "name": "3 days Pill",
+                                          "width": "fill_container",
+                                          "height": 56,
+                                          "fill": "$pure-white",
+                                          "cornerRadius": "$radius-md",
+                                          "stroke": "$warsh-line",
+                                          "strokeWidth": 1,
+                                          "layout": "vertical",
+                                          "gap": 2,
+                                          "justifyContent": "center",
+                                          "alignItems": "center",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "KBnoz",
+                                              "name": "Value",
+                                              "fill": "$ink",
+                                              "content": "3",
+                                              "fontFamily": "$font-heading",
+                                              "fontSize": 18,
+                                              "fontWeight": "700"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "id": "WKYIl",
+                                              "name": "Unit",
+                                              "fill": "$ink-muted",
+                                              "content": "days",
+                                              "fontFamily": "$font-body",
+                                              "fontSize": 10,
+                                              "fontWeight": "600"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "frame",
+                                          "id": "XG3gA",
+                                          "name": "7 days Pill",
+                                          "width": "fill_container",
+                                          "height": 56,
+                                          "fill": "$parchment-deep",
+                                          "cornerRadius": "$radius-md",
+                                          "stroke": "$gold",
+                                          "strokeWidth": 2,
+                                          "layout": "vertical",
+                                          "gap": 2,
+                                          "justifyContent": "center",
+                                          "alignItems": "center",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "Yi1bj",
+                                              "name": "Value",
+                                              "fill": "$navy-deep",
+                                              "content": "7",
+                                              "fontFamily": "$font-heading",
+                                              "fontSize": 18,
+                                              "fontWeight": "700"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "id": "hNfd2",
+                                              "name": "Unit",
+                                              "fill": "$sage-deep",
+                                              "content": "days",
+                                              "fontFamily": "$font-body",
+                                              "fontSize": 10,
+                                              "fontWeight": "600"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "frame",
+                                          "id": "yZFQM",
+                                          "name": "14 days Pill",
+                                          "width": "fill_container",
+                                          "height": 56,
+                                          "fill": "$pure-white",
+                                          "cornerRadius": "$radius-md",
+                                          "stroke": "$warsh-line",
+                                          "strokeWidth": 1,
+                                          "layout": "vertical",
+                                          "gap": 2,
+                                          "justifyContent": "center",
+                                          "alignItems": "center",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "wlAij",
+                                              "name": "Value",
+                                              "fill": "$ink",
+                                              "content": "14",
+                                              "fontFamily": "$font-heading",
+                                              "fontSize": 18,
+                                              "fontWeight": "700"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "id": "k0akR",
+                                              "name": "Unit",
+                                              "fill": "$ink-muted",
+                                              "content": "days",
+                                              "fontFamily": "$font-body",
+                                              "fontSize": 10,
+                                              "fontWeight": "600"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "frame",
+                                          "id": "LvAt6",
+                                          "name": "30 days Pill",
+                                          "width": "fill_container",
+                                          "height": 56,
+                                          "fill": "$pure-white",
+                                          "cornerRadius": "$radius-md",
+                                          "stroke": "$warsh-line",
+                                          "strokeWidth": 1,
+                                          "layout": "vertical",
+                                          "gap": 2,
+                                          "justifyContent": "center",
+                                          "alignItems": "center",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "id": "jRO7i",
+                                              "name": "Value",
+                                              "fill": "$ink",
+                                              "content": "30",
+                                              "fontFamily": "$font-heading",
+                                              "fontSize": 18,
+                                              "fontWeight": "700"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "id": "S0oYOg",
+                                              "name": "Unit",
+                                              "fill": "$ink-muted",
+                                              "content": "days",
+                                              "fontFamily": "$font-body",
+                                              "fontSize": 10,
+                                              "fontWeight": "600"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Be02K",
+                              "name": "Commitment Tip",
+                              "width": "fill_container",
+                              "fill": "$success-tint",
+                              "cornerRadius": 12,
+                              "gap": 10,
+                              "padding": [
+                                11,
+                                12
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "Lu0Ft",
+                                  "name": "Tip Check",
+                                  "width": 20,
+                                  "height": 20,
+                                  "icon": "circle-check",
+                                  "library": "lucide",
+                                  "fill": "$sage-deep"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "ybPX7",
+                                  "name": "Tip Copy",
+                                  "fill": "$ink-secondary",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "You can adjust both anytime in Settings.",
+                                  "lineHeight": 1.4,
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "PhBVG",
+                          "name": "Commit Button",
+                          "width": "fill_container",
+                          "height": 56,
+                          "fill": "$navy-deep",
+                          "cornerRadius": 12,
+                          "stroke": "$gold",
+                          "strokeWidth": 2,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "QyFAm",
+                              "name": "Commit Button Label",
+                              "fill": "$gold-muted",
+                              "content": "I'm committed",
+                              "fontFamily": "$font-heading",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -94834,11 +95924,11 @@
     {
       "type": "frame",
       "id": "L0x3yH",
-      "x": 41136,
-      "y": 9,
+      "x": 39126,
+      "y": -44,
       "name": "15 — Celebration Screens · Alternative B · Not Selected",
       "clip": true,
-      "width": 1880,
+      "width": 2346,
       "fill": "#E6E1D5",
       "cornerRadius": 24,
       "layout": "vertical",
@@ -103144,8 +104234,8 @@
     {
       "type": "frame",
       "id": "WIxxZ",
-      "x": 43136,
-      "y": 0,
+      "x": 43113,
+      "y": 1355,
       "name": "A1 Welcome · Safe Rendering Proposal",
       "width": 390,
       "layout": "vertical",

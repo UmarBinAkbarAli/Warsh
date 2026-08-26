@@ -7,6 +7,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { BrandButton } from "@components/BrandButton";
 import { CelebrationEmblem } from "@components/CelebrationEmblem";
+import { updateUserProfile } from "@services/api";
 import {
   Colors,
   FontSizes,
@@ -35,6 +36,7 @@ export default function StreakCommitmentScreen() {
   async function handleCommit() {
     if (selected === null) return;
     await AsyncStorage.setItem(COMMITMENT_KEY, String(selected));
+    updateUserProfile({ streakGoalDays: selected }).catch(() => {});
     router.replace("/(app)/(tabs)");
   }
 

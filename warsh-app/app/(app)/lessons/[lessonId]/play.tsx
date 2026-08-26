@@ -43,6 +43,12 @@ type CompletionResult = {
   dailyGoalMet: boolean;
 };
 
+type FailResult = {
+  correctCount: number;
+  totalScored: number;
+  threshold: number;
+};
+
 type SelectedAnswer = string | string[] | Record<string, string> | null;
 
 // ---------------------------------------------------------------------------
@@ -418,6 +424,7 @@ export default function LessonPlayScreen() {
   const [isAnswered, setIsAnswered] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [completionResult, setCompletionResult] = useState<CompletionResult | null>(null);
+  const [failResult, setFailResult] = useState<FailResult | null>(null);
   const [showExitConfirm, setShowExitConfirm] = useState(false);
 
   // WRITE_ARABIC hint state
@@ -426,6 +433,9 @@ export default function LessonPlayScreen() {
   // SHADOW_REPEAT / SPOKEN_PHRASES tracking
   const phrasesCompletedRef = useRef(0);
   const completionFiredRef = useRef(false);
+  // One boolean per answered scored exercise (SHADOW_REPEAT excluded — it has
+  // no right/wrong answer). Sent to /complete so the server computes pass/fail.
+  const exerciseResultsRef = useRef<boolean[]>([]);
   const [spPhraseIdx, setSpPhraseIdx] = useState(0);
   const [spPhraseStep, setSpPhraseStep] = useState<"intro" | "shadow" | "recognition" | "phraseComplete">("intro");
   const [spRecognitionAnswer, setSpRecognitionAnswer] = useState<string | null>(null);
@@ -522,8 +532,15 @@ export default function LessonPlayScreen() {
       setSubmitting(true);
       setError(null);
       try {
-        const response = await api.post(`/api/lessons/${lessonId}/complete`, { score: 100, phrasesCompleted: phrasesCompletedRef.current });
+        const response = await api.post(`/api/lessons/${lessonId}/complete`, {
+          exerciseResults: exerciseResultsRef.current,
+          phrasesCompleted: phrasesCompletedRef.current,
+        });
         const data = response.data.data;
+        if (data.passed === false) {
+          setFailResult({ correctCount: data.correctCount, totalScored: data.totalScored, threshold: data.threshold });
+          return;
+        }
         const achievements = Array.isArray(data.newAchievements) ? data.newAchievements : [];
         const dailyGoalMet = data.dailyGoalXp > 0;
         setCompletionResult({
@@ -650,6 +667,7 @@ export default function LessonPlayScreen() {
     if (isAnswered) return;
     setSelectedAnswer(answer);
     setIsAnswered(true);
+    exerciseResultsRef.current.push(isAnswerCorrect(currentExercise, answer, language, t));
   }
 
   function checkBuildSentence() {
@@ -1407,6 +1425,60 @@ export default function LessonPlayScreen() {
 
   // ---- Beat 5: CLOSE ----
 
+  function handleRetry() {
+    exerciseResultsRef.current = [];
+    phrasesCompletedRef.current = 0;
+    completionFiredRef.current = false;
+    setFailResult(null);
+    setCurrentExerciseIndex(0);
+    goToBeat(3);
+  }
+
+  function renderRetry() {
+    const correctCount = failResult?.correctCount ?? 0;
+    const totalScored = failResult?.totalScored ?? exercises.length;
+    const threshold = failResult?.threshold ?? 3;
+    const neededToPass = Math.max(totalScored - threshold + 1, 0);
+
+    return (
+      <View style={[styles.fullScreen, screenPadding, styles.closeScreen]}>
+        <ScrollView
+          style={styles.closeScroll}
+          contentContainerStyle={styles.closeScrollContent}
+          showsVerticalScrollIndicator={false}
+        >
+          <View style={[styles.completionHero, styles.retryHero]}>
+            <Text style={[styles.completionKicker, styles.retryKicker]}>{t("player.retryKicker")}</Text>
+            <View style={[styles.noorMonogram, styles.retryMonogram]}>
+              <Ionicons name="refresh" size={26} color={WarshPalette.wrongBorder} />
+            </View>
+            <Text style={[styles.completeCardTitle, styles.retryTitleText]}>{t("player.retryTitle")}</Text>
+            <ArabicText size="md" style={StyleSheet.flatten([styles.closeArabic, styles.retryArabicText])}>حاول مرة أخرى</ArabicText>
+          </View>
+
+          <View style={[styles.completionResultsCard, styles.retryResultsCard]}>
+            <View style={styles.completionMetric}>
+              <Text style={styles.completionMetricValue}>{correctCount}</Text>
+              <Text style={styles.completionMetricLabel}>{t("player.retryCorrect")}</Text>
+            </View>
+            <View style={styles.completionMetricDivider} />
+            <View style={styles.completionMetric}>
+              <Text style={styles.completionMetricValue}>{neededToPass}</Text>
+              <Text style={styles.completionMetricLabel}>{t("player.retryNeeded")}</Text>
+            </View>
+          </View>
+
+          <View style={[styles.noorRecapCard, styles.retryRecapCard]}>
+            <Text style={styles.noorLabel}>{t("profile.noor")}</Text>
+            <Text style={styles.noorTip}>{t("player.retryTip")}</Text>
+          </View>
+        </ScrollView>
+
+        <BrandButton title={t("player.tryAgain")} onPress={handleRetry} style={styles.bottomButton} />
+      </View>
+    );
+  }
+
   function renderClose() {
     const chapterBonus = completionResult?.chapterBonusXp ?? 0;
     const earnedPoints = (completionResult?.xpEarned || lesson?.xpReward || 10) + chapterBonus;
@@ -1791,6 +1863,7 @@ export default function LessonPlayScreen() {
   }
   if (currentBeat === 3) return renderPractice();
   if (currentBeat === 4) return renderReveal();
+  if (failResult) return renderRetry();
   return renderClose();
 }
 
@@ -2565,6 +2638,30 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingVertical: 24,
     backgroundColor: WarshPalette.navy,
+  },
+  retryHero: {
+    borderColor: WarshPalette.wrongBorder,
+    backgroundColor: WarshPalette.wrongBg,
+  },
+  retryKicker: {
+    color: WarshPalette.wrongText,
+  },
+  retryMonogram: {
+    borderColor: WarshPalette.wrongBorder,
+    backgroundColor: WarshPalette.white,
+  },
+  retryTitleText: {
+    color: WarshPalette.ink,
+  },
+  retryArabicText: {
+    color: WarshPalette.wrongText,
+  },
+  retryResultsCard: {
+    borderColor: WarshPalette.wrongBorderSoft,
+  },
+  retryRecapCard: {
+    borderColor: WarshPalette.wrongBorderSoft,
+    backgroundColor: WarshPalette.wrongBg,
   },
   completionCornerTop: {
     position: "absolute",

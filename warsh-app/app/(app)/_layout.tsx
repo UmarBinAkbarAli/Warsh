@@ -30,6 +30,7 @@ async function initNotifications() {
     const progress = progressRes.data.data;
     const userName = progress.userName ?? "friend";
     const currentStreak = progress.streak ?? 0;
+    const streakGoalDays = progress.streakGoalDays ?? null;
 
     await setupNotificationSchedules(
       {
@@ -39,7 +40,8 @@ async function initNotifications() {
         wordOfDayEnabled: prefs.wordOfDayEnabled !== false,
       },
       userName,
-      currentStreak
+      currentStreak,
+      streakGoalDays
     );
   } catch {
     // Non-critical — don't block the app

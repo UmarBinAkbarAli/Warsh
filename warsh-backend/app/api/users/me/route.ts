@@ -4,6 +4,7 @@ import { getUserIdFromRequest } from "../../../../lib/auth";
 import { isSupportedLanguage } from "../../../../lib/language";
 
 const VALID_DAILY_GOALS = [5, 10, 15, 30];
+const VALID_STREAK_GOALS = [3, 7, 14, 30];
 
 export async function PATCH(request: Request) {
   const userId = await getUserIdFromRequest(request);
@@ -33,6 +34,13 @@ export async function PATCH(request: Request) {
     updateData.translationLanguage = body.translationLanguage;
   }
 
+  if (body.streakGoalDays !== undefined) {
+    if (body.streakGoalDays !== null && !VALID_STREAK_GOALS.includes(body.streakGoalDays)) {
+      return NextResponse.json({ error: "streakGoalDays must be 3, 7, 14, or 30", code: "bad_request" }, { status: 400 });
+    }
+    updateData.streakGoalDays = body.streakGoalDays;
+  }
+
   if (Object.keys(updateData).length === 0) {
     return NextResponse.json({ error: "No valid fields to update", code: "bad_request" }, { status: 400 });
   }
@@ -40,7 +48,7 @@ export async function PATCH(request: Request) {
   const user = await prisma.user.update({
     where: { id: userId },
     data: updateData,
-    select: { id: true, dailyGoalMinutes: true, nativeLanguage: true, translationLanguage: true },
+    select: { id: true, dailyGoalMinutes: true, nativeLanguage: true, translationLanguage: true, streakGoalDays: true },
   });
 
   return NextResponse.json({ data: user });

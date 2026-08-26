@@ -24,6 +24,7 @@ model User {
     xp             Int               @default(0)
     gems           Int               @default(0)
     dailyGoalMinutes Int             @default(10)
+    streakGoalDays Int?
     trialStartAt   DateTime          @default(now())
     trialExpiresAt DateTime          @default(dbgenerated("now() + interval '7 days'"))
     subscriptionStatus String        @default("trial")

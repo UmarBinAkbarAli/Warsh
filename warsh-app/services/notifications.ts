@@ -120,7 +120,8 @@ export interface NotificationPrefs {
 export async function setupNotificationSchedules(
   prefs: NotificationPrefs,
   userName: string,
-  currentStreak: number
+  currentStreak: number,
+  streakGoalDays?: number | null
 ): Promise<void> {
   const Notifications = await getNotifications();
   if (!Notifications) return;
@@ -142,12 +143,17 @@ export async function setupNotificationSchedules(
   }
 
   if (prefs.streakRiskEnabled && currentStreak >= 3) {
+    const daysToGoal = streakGoalDays ? streakGoalDays - currentStreak : 0;
+    const streakRiskBody =
+      streakGoalDays && daysToGoal > 0
+        ? `${daysToGoal} day${daysToGoal === 1 ? "" : "s"} left to reach your ${streakGoalDays}-day goal. Don't stop now.`
+        : "One lesson keeps it going. In shaa Allah.";
     await scheduleDailyAt(
       IDS.streakRisk(),
       20,
       0,
       `Your streak of ${currentStreak} days is at risk.`,
-      "One lesson keeps it going. In shaa Allah.",
+      streakRiskBody,
       { screen: "learn" }
     );
   }
