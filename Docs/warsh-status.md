@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-08-21
+**Last verified:** 2026-08-26
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Beta hardening and launch preparation
 
@@ -103,6 +103,15 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Recent verified repository changes
 
+### 2026-08-26 (admin)
+
+- Added a delete-account action to Warsh Studio's user pages: a
+  confirm-by-typing-email gate on the user detail page, plus a quick Delete
+  link on the users list for clearing out expired/dead accounts in bulk.
+  Mirrors the learner's own `DELETE /api/users/me` and relies on the existing
+  `onDelete: Cascade` in `schema.prisma`. This sits alongside the existing
+  revoke-access action rather than replacing it.
+
 ### 2026-08-26 (later)
 
 - The Chapter 1 restructure and `discover_cards[].image_url` fixes described
@@ -151,6 +160,70 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
   production build, and TypeScript clean. Note for future runs: pulling all 391
   `Lesson.content` rows from Neon takes roughly 195 seconds from this machine
   (4.2 MB), so `content:check` and `content:export` are slow by nature, not hung.
+
+### 2026-08-26 (security)
+
+- Fixed a reflected XSS on `api.warsh.app/reset-password` (HIGH): the `?token=`
+  parameter reached an inline `<script>` through a bare `JSON.stringify`, which
+  escapes for JS-string context but not for the HTML parser, so a crafted
+  token could inject markup. That origin also serves Warsh Studio and its
+  admin cookie, so an admin clicking a crafted link would have handed over
+  every `/api/admin/*` route. Fixed via `lib/inlineScript.ts`
+  (`toInlineScriptJson` + `asSafeJwtParam`, JWT-shape gated, `< > U+2028
+  U+2029` escaped, covered by `tests/inline-script.test.ts`), plus
+  `Referrer-Policy: no-referrer` and `Cache-Control: no-store` on the page.
+- Untracked `.codex/config.toml` and added `.codex/` to `.gitignore`. It held
+  a live MiniMax API token committed 2026-06-05 and still present at
+  `origin/main` HEAD 82 days later on this **public** repository. **The token
+  itself still needs revocation and the file still needs purging from git
+  history** — untracking only stopped it spreading further; it remains
+  retrievable from old commits. Carried into the active priority queue below.
+- Added security headers (`X-Frame-Options`, `X-Content-Type-Options`,
+  `Referrer-Policy`, HSTS, `Permissions-Policy`) to both `warsh-backend` and
+  `warsh-site`, plus a full CSP on `warsh-site` (which renders Studio-authored
+  HTML via `dangerouslySetInnerHTML`); `script-src` keeps `'unsafe-inline'`
+  because the App Router emits inline hydration scripts. Live-reverified today:
+  `curl` against `https://api.warsh.app/api/health` and `https://warsh.app/`
+  both return the full header set, and the CSP is present on `warsh.app`.
+- Fixed session-refresh trust: `/api/auth/refresh` now re-derives the
+  password-version fingerprint from the live user row instead of inheriting
+  `pv` from the presented token, closing a gap where a session predating the
+  fingerprint feature stayed exempt from password-change invalidation for the
+  rest of its 90-day window. Also rejects tokens whose user no longer exists.
+- The Play RTDN webhook now verifies Pub/Sub's OIDC identity token when
+  `GOOGLE_PLAY_PUBSUB_{AUDIENCE,SERVICE_ACCOUNT}` are set; the `?token=`
+  shared-secret fallback is now compared in constant time.
+- Rate limiting can now be backed by Upstash Redis when
+  `UPSTASH_REDIS_REST_*` are set, replacing the previous per-instance memory
+  buckets — on Vercel the real ceiling had been limit × instance count, reset
+  on every deploy, including for `POST /api/admin/session`. That endpoint is
+  now also explicitly rate-limited (5 per 15 min) and the rate-limit client
+  key is derived from `x-real-ip` / the rightmost `x-forwarded-for` hop
+  instead of the caller-supplied leftmost entry, which previously let an
+  attacker mint a fresh bucket per request and bypass every limit in the
+  codebase.
+- Lower severity: bounded `POST /api/chat` message length to 2000 chars via
+  Zod; admin image upload now checks `Content-Length` before buffering and
+  decodes/re-encodes with `sharp` instead of trusting client `Content-Type`
+  (strips EXIF, rejects polyglots); lesson-completion score is now
+  Zod-validated (previously accepted `NaN`/`Infinity`/out-of-range); admin
+  clients no longer see raw R2/Resend error messages; both cron routes are
+  marked `force-dynamic`; the Noor offline fallback no longer names
+  `OPENAI_API_KEY` or the `.env` deployment model to end users; Sentry
+  sourcemaps are stripped from the deployed bundle after upload.
+- Dependency fixes: `warsh-site` Next 16.2.10 → 16.3.3 plus a `nanoid`
+  override (4 high advisories → 0); `warsh-backend` `npm audit fix` plus
+  glob/esbuild overrides (20 findings, 15 high → 9, 8 high; the remainder
+  needs a Next 14 → 16 major bump, deferred as its own change); the vendored
+  `lesson-schema` manifest was synced to vitest `^4.1.9` to match the source
+  package, closing the critical `GHSA-5xrq-8626-4rwp` advisory that the stale
+  `^2.0.0` pin had left open.
+- Verification: 39/39 backend tests, `db:validate-fixtures` (391 lessons),
+  `db:audit-urdu` (72 chapters), backend build, `tsc --noEmit` over `app/` and
+  `lib/` (0 errors), `warsh-site` build. The XSS fix was confirmed end to end
+  against a running server with the live payload, and re-confirmed live today:
+  a crafted `<script>` payload in `?token=` on the production
+  `/reset-password` route is not reflected.
 
 ### 2026-08-21
 
@@ -526,6 +599,7 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 2. **Target-audience decision** — either select adults only for the simplest launch or implement the required age/minor handling before keeping ages 13–17.
 3. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`, `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
 4. **Scholar/content review** — establish a review process for Quranic Arabic accuracy, ayah relevance, pedagogy, repetition, and pacing before public launch.
+5. **Leaked MiniMax API token still live in git history** — `.codex/config.toml` was untracked on 2026-08-26 (`f260be5`), but the token it held was committed 2026-06-05 and is still retrievable from that old commit on this **public** repository. The token itself has not been confirmed revoked, and the file has not been purged from history (e.g. via a history rewrite). Do not consider this closed until both are done.
 
 ### P1 — content quality and launch polish
 
@@ -547,7 +621,12 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - Automatic pronunciation scoring
 - Persistent Noor memory
 - Social profiles, leaderboards, or family accounts
-- Redis-backed rate limiting unless production load demonstrates the need
+
+Redis-backed rate limiting is no longer purely deferred: as of 2026-08-26
+(`f260be5`), `lib/rateLimit.ts` uses Upstash Redis when
+`UPSTASH_REDIS_REST_*` are configured, falling back to the in-process limiter
+otherwise. Confirming `UPSTASH_REDIS_REST_*` is actually set in production
+remains unverified.
 
 ## Current risks
 
@@ -557,6 +636,7 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - **Tracker drift risk:** historical documents contain outdated product IDs, platform assumptions, SDK versions, URLs, and completed tasks.
 - **Asset risk:** image infrastructure exists, but illustration coverage remains incomplete.
 - **Rate-limit risk:** Noor limits rely on database message counting; this is acceptable for current scale but should be measured under load.
+- **Secret-exposure risk:** the repo is public. A MiniMax API token committed 2026-06-05 in `.codex/config.toml` was untracked 2026-08-26 but remains readable from that commit in git history; see P0 item 5. `Docs/warsh-status.md` prior history also records at least one earlier real secret leak found the same way.
 
 ## Verification commands
 
