@@ -35,7 +35,8 @@ export default function UserDetailClient({ userId }: { userId: string }) {
   const [busy, setBusy] = useState(false);
   const [grantOpen, setGrantOpen] = useState(false);
   const [grantDays, setGrantDays] = useState(30);
-  const [confirm, setConfirm] = useState<null | "revoke" | "reset">(null);
+  const [confirm, setConfirm] = useState<null | "revoke" | "reset" | "delete">(null);
+  const [deleteEmailInput, setDeleteEmailInput] = useState("");
 
   const load = useCallback(async () => {
     try {
@@ -62,6 +63,18 @@ export default function UserDetailClient({ userId }: { userId: string }) {
     finally { setBusy(false); }
   }
 
+  async function doDelete() {
+    setBusy(true); setStatus("Deleting…");
+    try {
+      const res = await fetch(`/api/admin/users/${userId}/actions`, {
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "delete" }),
+      });
+      const payload = await res.json();
+      if (!res.ok) { setStatus(payload.error ?? "Delete failed."); setBusy(false); return; }
+      window.location.href = "/dashboard/users";
+    } catch { setStatus("Network error."); setBusy(false); }
+  }
+
   if (error) return (
     <div style={ui.root}><DashboardNav active="/dashboard/users" /><main style={ui.page}><div style={{ ...ui.statusBar, color: "#b04040" }}>{error}</div></main></div>
   );
@@ -86,6 +99,7 @@ export default function UserDetailClient({ userId }: { userId: string }) {
             <button type="button" style={ui.primary} onClick={() => { setGrantDays(30); setGrantOpen(true); }}>Grant free days</button>
             <button type="button" style={ui.ghost} onClick={() => setConfirm("reset")}>Send reset email</button>
             <button type="button" style={ui.danger} onClick={() => setConfirm("revoke")}>Revoke access</button>
+            <button type="button" style={ui.danger} onClick={() => { setDeleteEmailInput(""); setConfirm("delete"); }}>Delete account</button>
           </div>
         </header>
 
@@ -188,6 +202,41 @@ export default function UserDetailClient({ userId }: { userId: string }) {
             <p style={{ color: "#6b6252", fontSize: 14 }}>This expires {d.user.email}&apos;s trial and clears any manual paid period — they lose access immediately. A real store subscription would restore access on next verification.</p>
             <div style={ui.modalActions}>
               <button type="button" style={ui.danger} disabled={busy} onClick={() => act({ action: "revoke" }, "Access revoked ✓")}>{busy ? "Working…" : "Revoke access"}</button>
+              <button type="button" style={ui.ghost} onClick={() => setConfirm(null)}>Cancel</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {confirm === "delete" && (
+        <div style={ui.overlay}>
+          <div style={ui.modal}>
+            <h3 style={ui.modalTitle}>Delete account?</h3>
+            <p style={{ color: "#6b6252", fontSize: 14 }}>
+              This permanently deletes <strong>{d.user.email}</strong> and all associated data —
+              progress, streaks, achievements, Noor messages, and promo redemptions. This cannot be
+              undone. It does not cancel a Google Play subscription.
+            </p>
+            <label style={{ ...ui.label, marginTop: 8 }}>
+              <span>Type the email to confirm</span>
+              <input
+                type="text"
+                style={ui.input}
+                value={deleteEmailInput}
+                onChange={(e) => setDeleteEmailInput(e.target.value)}
+                placeholder={d.user.email}
+                autoComplete="off"
+              />
+            </label>
+            <div style={ui.modalActions}>
+              <button
+                type="button"
+                style={ui.danger}
+                disabled={busy || deleteEmailInput.trim().toLowerCase() !== d.user.email.toLowerCase()}
+                onClick={doDelete}
+              >
+                {busy ? "Deleting…" : "Delete permanently"}
+              </button>
               <button type="button" style={ui.ghost} onClick={() => setConfirm(null)}>Cancel</button>
             </div>
           </div>

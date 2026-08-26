@@ -10,6 +10,7 @@ const schema = z.discriminatedUnion("action", [
   z.object({ action: z.literal("grant_days"), days: z.number().int().min(1).max(3650) }),
   z.object({ action: z.literal("revoke") }),
   z.object({ action: z.literal("send_reset") }),
+  z.object({ action: z.literal("delete") }),
 ]);
 
 interface Props {
@@ -64,6 +65,13 @@ export async function POST(request: Request, { params }: Props) {
       data: { trialExpiresAt: now, subscriptionActiveUntil: null, subscriptionStatus: "expired" },
     });
     return NextResponse.json({ data: { ok: true } });
+  }
+
+  if (parsed.data.action === "delete") {
+    // Same effect as the learner's own Settings → Delete account: cascades
+    // (schema.prisma onDelete: Cascade) remove every related row on user delete.
+    await prisma.user.delete({ where: { id: user.id } });
+    return NextResponse.json({ data: { ok: true, deleted: true } });
   }
 
   // send_reset — reuse the same stateless reset token + email as forgot-password.

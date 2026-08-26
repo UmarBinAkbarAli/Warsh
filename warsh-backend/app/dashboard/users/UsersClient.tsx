@@ -44,6 +44,7 @@ export default function UsersClient() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [exporting, setExporting] = useState(false);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
 
   const load = useCallback(async (query: string, statusFilter: string, pageNum: number) => {
     setLoading(true);
@@ -110,6 +111,32 @@ export default function UsersClient() {
     }
   }
 
+  async function deleteUser(u: AdminUser) {
+    const typed = window.prompt(
+      `This permanently deletes ${u.email} and all their data — progress, streaks, achievements, Noor messages. This cannot be undone and does not cancel a Google Play subscription.\n\nType the email to confirm:`,
+    );
+    if (typed === null) return;
+    if (typed.trim().toLowerCase() !== u.email.toLowerCase()) {
+      setError("Email didn't match — delete cancelled.");
+      return;
+    }
+    setDeletingId(u.id);
+    try {
+      const res = await fetch(`/api/admin/users/${u.id}/actions`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "delete" }),
+      });
+      const payload = await res.json();
+      if (!res.ok) { setError(payload.error ?? "Delete failed."); return; }
+      load(q, status, page);
+    } catch {
+      setError("Network error — delete failed.");
+    } finally {
+      setDeletingId(null);
+    }
+  }
+
   const totalPages = data ? Math.max(1, Math.ceil(data.matched / data.pageSize)) : 1;
 
   return (
@@ -169,14 +196,15 @@ export default function UsersClient() {
               <th style={s.th}>Access until</th>
               <th style={{ ...s.th, textAlign: "right" }}>XP</th>
               <th style={{ ...s.th, textAlign: "right" }}></th>
+              <th style={{ ...s.th, textAlign: "right" }}></th>
             </tr>
           </thead>
           <tbody>
             {loading && (
-              <tr><td colSpan={7} style={s.emptyCell}>Loading…</td></tr>
+              <tr><td colSpan={8} style={s.emptyCell}>Loading…</td></tr>
             )}
             {!loading && data && data.users.length === 0 && (
-              <tr><td colSpan={7} style={s.emptyCell}>No users found.</td></tr>
+              <tr><td colSpan={8} style={s.emptyCell}>No users found.</td></tr>
             )}
             {!loading && data?.users.map((u) => {
               const c = STATUS_COLORS[u.subscriptionStatus] ?? { bg: "#eee", fg: "#555" };
@@ -193,6 +221,16 @@ export default function UsersClient() {
                   <td style={{ ...s.td, textAlign: "right", fontVariantNumeric: "tabular-nums" }}>{u.xp}</td>
                   <td style={{ ...s.td, textAlign: "right" }}>
                     <a href={`/dashboard/users/${u.id}`} onClick={(e) => e.stopPropagation()} style={{ color: "#0f766e", fontWeight: 600, textDecoration: "none" }}>View →</a>
+                  </td>
+                  <td style={{ ...s.td, textAlign: "right" }}>
+                    <button
+                      type="button"
+                      disabled={deletingId === u.id}
+                      onClick={(e) => { e.stopPropagation(); deleteUser(u); }}
+                      style={{ background: "none", border: "none", color: "#9a4040", fontWeight: 600, cursor: "pointer", fontSize: 13, padding: 0 }}
+                    >
+                      {deletingId === u.id ? "Deleting…" : "Delete"}
+                    </button>
                   </td>
                 </tr>
               );
