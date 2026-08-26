@@ -6,17 +6,27 @@
  *
  *   npm run audio:prebuild-catalog -- --dry-run
  *   npm run audio:prebuild-catalog -- --fixtures-only
+ *   npm run audio:prebuild-catalog -- --from-db   # read lessons from the DB
+ *   npm run audio:prebuild-catalog -- --from-db --audit   # report gaps only
  *   npm run audio:prebuild-catalog
+ *
+ * Lesson text is authored in Warsh Studio, so --from-db is the mode that
+ * matches what learners are actually served; the fixture mode remains for
+ * generating against a Git checkout.
  */
 import fs from "fs";
 import path from "path";
 import { catalogAudioKey, normalizeCatalogAudioText } from "../lib/audioCatalog";
+import { lessonAudioTargets } from "../lib/audioTargets";
 import { generateTtsMp3 } from "../lib/tts";
 import { getR2PublicUrl, listR2Keys, r2KeyExists, uploadAudioToR2, vocabWordAudioKey } from "../lib/r2";
 
 const DRY_RUN = process.argv.includes("--dry-run");
 const FORCE = process.argv.includes("--force");
 const FIXTURES_ONLY = process.argv.includes("--fixtures-only");
+// Studio is the authoring surface, so the database — not the fixture mirror —
+// holds the newest lesson text. --from-db reads lessons from there instead.
+const FROM_DB = process.argv.includes("--from-db");
 const AUDIT = process.argv.includes("--audit");
 const ONLY_KEYS = new Set(
   process.argv.filter((arg) => arg.startsWith("--key=")).map((arg) => arg.slice("--key=".length)),
@@ -45,37 +55,33 @@ function addCatalogueText(text: unknown, source: string) {
   else catalogue.set(key, { text: normalized, key, sources: new Set([source]) });
 }
 
-function discoverAudioText(card: Record<string, any>): string | undefined {
-  if (card.type === "GRAMMAR_NOTE") return card.title?.ar;
-  if (card.type === "SENTENCE") return card.text?.ar;
-  return card.text?.ar ?? card.concept?.ar ?? card.examples?.[0]?.ar;
-}
-
-function exerciseAudioText(exercise: Record<string, any>): string | undefined {
-  switch (exercise.type) {
-    case "TAP_TRANSLATION":
-      return exercise.direction === "en_to_ar" ? undefined : exercise.prompt?.ar;
-    case "TRUE_FALSE": return exercise.statement?.ar_example?.ar;
-    case "FILL_BLANK": return exercise.sentence_ar;
-    case "SHADOW_REPEAT": return exercise.phrase?.ar;
-    case "HARAKAH_PLACEMENT": return exercise.word_unvowelled;
-    case "IDENTIFY_ROOT": return exercise.word?.ar;
-    // Quran fragments require exact human audio, never synthesized catalogue audio.
-    case "MATCH_AYAH": return undefined;
-    default: return undefined;
+/**
+ * Which strings a lesson needs is defined once in lib/audioTargets so this
+ * generator and the content-health dashboard can never disagree about it.
+ */
+function collectLessonTargets(content: unknown, label: string) {
+  for (const target of lessonAudioTargets(content)) {
+    addCatalogueText(target.text, `${label}:${target.source}`);
   }
 }
 
 function collectFixtures() {
   for (const filename of fs.readdirSync(FIXTURES_DIR).filter((name) => name.endsWith(".json"))) {
     const lesson = JSON.parse(fs.readFileSync(path.join(FIXTURES_DIR, filename), "utf8"));
-    for (const [index, card] of (lesson.discover_cards ?? []).entries()) {
-      if (!card.audio_url) addCatalogueText(discoverAudioText(card), `${filename}:discover:${index}`);
-    }
-    for (const [index, exercise] of (lesson.exercises ?? []).entries()) {
-      if (!exercise.audio_url) addCatalogueText(exerciseAudioText(exercise), `${filename}:exercise:${index}`);
-    }
+    collectLessonTargets(lesson, filename);
   }
+}
+
+/** Same collection, but from the live lessons the learner apps actually serve. */
+async function collectDatabaseLessons() {
+  const prisma = await getPrisma();
+  const lessons = await prisma.lesson.findMany({
+    select: { id: true, order: true, title: true, chapter: { select: { order: true } }, content: true },
+  });
+  for (const lesson of lessons) {
+    collectLessonTargets(lesson.content, `ch${lesson.chapter.order}-l${lesson.order}`);
+  }
+  console.log(`Collected audio targets from ${lessons.length} database lessons.`);
 }
 
 async function collectDatabaseAudio(): Promise<VocabularyItem[]> {
@@ -120,7 +126,9 @@ function errorDetails(error: unknown): string {
 }
 
 async function main() {
-  collectFixtures();
+  if (FROM_DB) await collectDatabaseLessons();
+  else collectFixtures();
+
   const vocabulary = FIXTURES_ONLY || (DRY_RUN && !process.env.DATABASE_URL)
     ? []
     : await collectDatabaseAudio();

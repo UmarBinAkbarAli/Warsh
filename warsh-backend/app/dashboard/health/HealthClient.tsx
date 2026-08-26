@@ -5,7 +5,15 @@ import DashboardNav from "../DashboardNav";
 import { ui } from "../adminUi";
 
 type Item = { label: string; detail?: string; href: string };
-type Category = { key: string; label: string; severity: "high" | "medium" | "low"; count: number; items: Item[] };
+type Category = {
+  key: string;
+  label: string;
+  severity: "high" | "medium" | "low";
+  count: number;
+  items: Item[];
+  unavailable?: string;
+  hint?: string;
+};
 type Health = {
   summary: { totalChapters: number; totalLessons: number; totalWords: number; issueCount: number; cleanCategories: number };
   categories: Category[];
@@ -66,29 +74,44 @@ export default function HealthClient() {
               {data.categories.map((c) => {
                 const sev = SEV[c.severity];
                 const isOpen = open[c.key];
-                const clean = c.count === 0;
+                // An unscannable category must never render as a clean zero.
+                const clean = c.count === 0 && !c.unavailable;
+                const expandable = c.count > 0 || Boolean(c.unavailable);
                 return (
                   <section key={c.key} style={{ background: "#fbf8f0", border: "1px solid #e2d9c4", borderRadius: 12, overflow: "hidden" }}>
                     <button
                       type="button"
-                      onClick={() => !clean && setOpen((o) => ({ ...o, [c.key]: !o[c.key] }))}
+                      onClick={() => expandable && setOpen((o) => ({ ...o, [c.key]: !o[c.key] }))}
                       style={{
                         width: "100%", display: "flex", alignItems: "center", gap: 12, padding: "14px 18px",
-                        background: "none", border: "none", cursor: clean ? "default" : "pointer", textAlign: "left",
+                        background: "none", border: "none", cursor: expandable ? "pointer" : "default", textAlign: "left",
                       }}
                     >
-                      <span style={{ fontSize: 18 }}>{clean ? "✓" : "!"}</span>
+                      <span style={{ fontSize: 18 }}>{c.unavailable ? "?" : clean ? "✓" : "!"}</span>
                       <span style={{ flex: 1, fontWeight: 600, color: clean ? "#5f6b5a" : "#3a352a" }}>{c.label}</span>
                       <span style={{ padding: "2px 10px", borderRadius: 999, fontSize: 11, fontWeight: 600, background: sev.bg, color: sev.fg }}>{sev.label}</span>
                       <span style={{
                         minWidth: 40, textAlign: "center", fontWeight: 700,
-                        color: clean ? "#2f6f4f" : "#9a4040",
-                      }}>{clean ? "0" : c.count}</span>
-                      {!clean && <span style={{ color: "#8a7f63", width: 16 }}>{isOpen ? "▲" : "▼"}</span>}
+                        color: c.unavailable ? "#8a7f63" : clean ? "#2f6f4f" : "#9a4040",
+                      }}>{c.unavailable ? "—" : clean ? "0" : c.count}</span>
+                      {expandable && <span style={{ color: "#8a7f63", width: 16 }}>{isOpen ? "▲" : "▼"}</span>}
                     </button>
 
-                    {isOpen && !clean && (
+                    {isOpen && expandable && (
                       <div style={{ borderTop: "1px solid #efe8d8", padding: "6px 0" }}>
+                        {c.unavailable && (
+                          <div style={{ padding: "10px 18px", fontSize: 13, color: "#9a4040" }}>
+                            Could not scan this category: {c.unavailable}
+                          </div>
+                        )}
+                        {c.hint && !c.unavailable && (
+                          <div style={{
+                            padding: "10px 18px", fontSize: 12.5, color: "#6b6250",
+                            background: "#f6f1e4", borderBottom: "1px solid #efe8d8",
+                          }}>
+                            {c.hint}
+                          </div>
+                        )}
                         {c.items.map((it, i) => (
                           <a key={i} href={it.href} style={{
                             display: "flex", justifyContent: "space-between", gap: 12, padding: "8px 18px",

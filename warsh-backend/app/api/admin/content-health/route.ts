@@ -2,11 +2,23 @@ import { NextResponse } from "next/server";
 import { getAdminReadError } from "../../../../lib/admin";
 import { prisma } from "../../../../lib/prisma";
 import { LessonContentSchema } from "../../../../lib/content-schema";
+import { lessonAudioTargets } from "../../../../lib/audioTargets";
+import { listR2Keys } from "../../../../lib/r2";
 
 export const dynamic = "force-dynamic";
 
 type Item = { label: string; detail?: string; href: string };
-type Category = { key: string; label: string; severity: "high" | "medium" | "low"; count: number; items: Item[] };
+type Category = {
+  key: string;
+  label: string;
+  severity: "high" | "medium" | "low";
+  count: number;
+  items: Item[];
+  /** Set when a category could not be scanned, so zero doesn't read as clean. */
+  unavailable?: string;
+  /** Operator hint shown under the category, e.g. the command that fixes it. */
+  hint?: string;
+};
 
 const CAP = 60; // max items reported per category (count still reflects the true total)
 
@@ -38,6 +50,14 @@ export async function GET(request: Request) {
     hook_missing_audio: { key: "hook_missing_audio", label: "Lesson hooks with an ayah but no audio", severity: "medium", count: 0, items: [] },
     card_missing_image: { key: "card_missing_image", label: "Word cards missing an image", severity: "low", count: 0, items: [] },
     card_missing_urdu: { key: "card_missing_urdu", label: "Cards missing Urdu translation", severity: "medium", count: 0, items: [] },
+    audio_missing: {
+      key: "audio_missing",
+      label: "Lessons whose Arabic text has no recorded audio",
+      severity: "medium",
+      count: 0,
+      items: [],
+      hint: "Editing Arabic text changes the clip it points at. Generate the new clips with: npm run audio:prebuild-catalog -- --from-db",
+    },
     vocab_missing_urdu: { key: "vocab_missing_urdu", label: "Vocabulary words missing Urdu", severity: "medium", count: 0, items: [] },
     vocab_missing_image: { key: "vocab_missing_image", label: "Vocabulary words missing an image", severity: "low", count: 0, items: [] },
     vocab_missing_audio: { key: "vocab_missing_audio", label: "Vocabulary words missing audio", severity: "low", count: 0, items: [] },
@@ -50,6 +70,7 @@ export async function GET(request: Request) {
   }
 
   let totalLessons = 0;
+  const audioByLesson: { label: string; href: string; keys: string[] }[] = [];
 
   for (const ch of chapters) {
     if (ch.lessons.length === 0) {
@@ -102,7 +123,32 @@ export async function GET(request: Request) {
       }
       if (cardImgMissing > 0) push("card_missing_image", { label, detail: `${cardImgMissing} word card(s)`, href });
       if (cardUrduMissing > 0) push("card_missing_urdu", { label, detail: `${cardUrduMissing} card(s)`, href });
+
+      // Audio is keyed by a hash of the Arabic text and runtime lookup has no
+      // generation fallback, so any text edit silently orphans its clip. The
+      // R2 comparison happens once, after the whole library is walked.
+      try {
+        const targets = lessonAudioTargets(content);
+        if (targets.length > 0) audioByLesson.push({ label, href, keys: targets.map((t) => t.key) });
+      } catch {
+        // A malformed lesson is already reported as schema_invalid; it should
+        // not take the whole health scan down with it.
+      }
     }
+  }
+
+  // One paginated R2 listing for the entire library rather than a HEAD per clip.
+  try {
+    const present = new Set(await listR2Keys("audio/catalog/v1/"));
+    for (const lesson of audioByLesson) {
+      const missing = lesson.keys.filter((key) => !present.has(key)).length;
+      if (missing > 0) {
+        push("audio_missing", { label: lesson.label, detail: `${missing} clip(s) to generate`, href: lesson.href });
+      }
+    }
+  } catch (error) {
+    // R2 unconfigured or unreachable: say so rather than reporting a clean zero.
+    cats.audio_missing.unavailable = error instanceof Error ? error.message : "R2 could not be reached.";
   }
 
   for (const w of words) {
@@ -126,7 +172,7 @@ export async function GET(request: Request) {
         totalLessons,
         totalWords: words.length,
         issueCount,
-        cleanCategories: categories.filter((c) => c.count === 0).length,
+        cleanCategories: categories.filter((c) => c.count === 0 && !c.unavailable).length,
       },
       categories,
     },

@@ -103,6 +103,44 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Recent verified repository changes
 
+### 2026-08-26
+
+- Warsh Studio is now the designated authoring surface for chapter/lesson
+  content, so the database is the source of truth for `Lesson.content` and
+  `warsh-backend/prisma/fixtures/` is its versioned mirror. Added
+  `content:export` (database to fixtures), `content:check` (release-gate drift
+  report), and `content:baseline`, backed by
+  `warsh-backend/prisma/lesson-sync-baseline.json`, which records the hash of
+  each lesson at the last point the two sides agreed. That baseline is what
+  lets the tooling distinguish a Studio edit (export required) from a Git edit
+  (safe to publish) from both sides moving at once (a conflict). `content:sync`
+  now refuses to push fixtures over the database while unexported database-side
+  work exists, and `--all` requires `--force`.
+- Measured against the production database on this date: 391 lessons across 72
+  chapters, of which **233 differ from the fixture mirror, with Git ahead of
+  production, not the reverse**. The maximum `Lesson.updatedAt` in production is
+  2026-08-03, so no Studio edit has touched lesson content since then, while the
+  fixtures were committed later in `68e365a` (2026-08-13 R2 repoint) and
+  `0962a70` (2026-08-24 Chapter 1 restructure). Sampled diffs match those two
+  commits: 218 `discover_cards[].image_url` changes plus wholesale Chapter 1
+  rewrites. Live learners are therefore still served the pre-restructure
+  Chapter 1 and the old image URLs. Publishing it is
+  `npm run content:sync -- --content --git-changed`; this has **not** been run,
+  because it changes what live users see and needs owner approval.
+- Content Health now reports lessons whose Arabic text has no recorded audio.
+  Audio is keyed by a sha256 of the text and runtime lookup has no generation
+  fallback, so editing Arabic silently orphans its clip. The rule for which
+  strings need audio moved to `warsh-backend/lib/audioTargets.ts` and is shared
+  by the generator and the dashboard scan; the refactor was confirmed
+  behaviour-preserving (2,616 clips / 69,874 characters, identical before and
+  after). A live R2 audit found 2,609/2,616 present and 7 missing, all of them
+  new text from the unshipped Chapter 1 restructure. Regenerate with
+  `npm run audio:prebuild-catalog -- --from-db`.
+- Verification: 50 backend tests pass (21 new), 391 fixture validations, backend
+  production build, and TypeScript clean. Note for future runs: pulling all 391
+  `Lesson.content` rows from Neon takes roughly 195 seconds from this machine
+  (4.2 MB), so `content:check` and `content:export` are slow by nature, not hung.
+
 ### 2026-08-21
 
 - Product owner confirmed the following P0/P1 items as done and they were

@@ -703,6 +703,24 @@ npm run lint -- --quiet
 npx tsc --noEmit
 ```
 
+### Content mirror validation
+
+Warsh Studio writes lesson content straight to the database, so Git only holds a
+backup if somebody exported it. Run this before any release that carries content,
+and after any Studio editing session:
+
+```powershell
+cd warsh-backend
+npm run content:check      # exits 1 while Studio edits are missing from Git
+npm run content:export     # pull them into prisma/fixtures, then commit
+```
+
+`prisma/lesson-sync-baseline.json` records the hash of each lesson at the last
+point the database and the fixture mirror agreed. That baseline is what lets the
+tooling tell a Studio edit (export needed) from a Git edit (safe to publish with
+`content:sync`) from both sides moving at once (a conflict a human resolves).
+`npm run content:sync` refuses to run while the database holds unexported work.
+
 ### Android artifact validation
 
 Run against the built AAB/APK before any Play upload. Source checks cannot catch
