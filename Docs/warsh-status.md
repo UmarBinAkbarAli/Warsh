@@ -103,6 +103,17 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Recent verified repository changes
 
+### 2026-08-26 (later)
+
+- The Chapter 1 restructure and `discover_cards[].image_url` fixes described
+  below were published to production. Verified live: `content:check` reports
+  391/391 lessons in sync (0 differences) against the production database, all
+  391 `Lesson.updatedAt` values now read ~01:42 UTC today, and
+  `audio:prebuild-catalog -- --from-db --audit` reports 3327/3327 R2 audio
+  clips present (0 missing) — the 7 previously-missing clips for the new
+  Chapter 1 text are generated. Learners are now served the restructured
+  Chapter 1 and corrected image URLs.
+
 ### 2026-08-26
 
 - Warsh Studio is now the designated authoring surface for chapter/lesson
