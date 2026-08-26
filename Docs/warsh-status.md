@@ -173,11 +173,12 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
   U+2029` escaped, covered by `tests/inline-script.test.ts`), plus
   `Referrer-Policy: no-referrer` and `Cache-Control: no-store` on the page.
 - Untracked `.codex/config.toml` and added `.codex/` to `.gitignore`. It held
-  a live MiniMax API token committed 2026-06-05 and still present at
-  `origin/main` HEAD 82 days later on this **public** repository. **The token
-  itself still needs revocation and the file still needs purging from git
-  history** — untracking only stopped it spreading further; it remains
-  retrievable from old commits. Carried into the active priority queue below.
+  a MiniMax API token committed 2026-06-05 and still present at `origin/main`
+  HEAD 82 days later on this **public** repository. The owner confirmed the
+  MiniMax account/key was already revoked/closed, so the exposure is not
+  live; the file remains retrievable from that old commit in git history if
+  it is ever worth a history rewrite for hygiene, but this is not a launch
+  blocker.
 - Added security headers (`X-Frame-Options`, `X-Content-Type-Options`,
   `Referrer-Policy`, HSTS, `Permissions-Policy`) to both `warsh-backend` and
   `warsh-site`, plus a full CSP on `warsh-site` (which renders Studio-authored
@@ -599,7 +600,6 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 2. **Target-audience decision** — either select adults only for the simplest launch or implement the required age/minor handling before keeping ages 13–17.
 3. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`, `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
 4. **Scholar/content review** — establish a review process for Quranic Arabic accuracy, ayah relevance, pedagogy, repetition, and pacing before public launch.
-5. **Leaked MiniMax API token still live in git history** — `.codex/config.toml` was untracked on 2026-08-26 (`f260be5`), but the token it held was committed 2026-06-05 and is still retrievable from that old commit on this **public** repository. The token itself has not been confirmed revoked, and the file has not been purged from history (e.g. via a history rewrite). Do not consider this closed until both are done.
 
 ### P1 — content quality and launch polish
 
@@ -636,7 +636,7 @@ remains unverified.
 - **Tracker drift risk:** historical documents contain outdated product IDs, platform assumptions, SDK versions, URLs, and completed tasks.
 - **Asset risk:** image infrastructure exists, but illustration coverage remains incomplete.
 - **Rate-limit risk:** Noor limits rely on database message counting; this is acceptable for current scale but should be measured under load.
-- **Secret-exposure risk:** the repo is public. A MiniMax API token committed 2026-06-05 in `.codex/config.toml` was untracked 2026-08-26 but remains readable from that commit in git history; see P0 item 5. `Docs/warsh-status.md` prior history also records at least one earlier real secret leak found the same way.
+- **Secret-exposure risk:** the repo is public, and this has surfaced at least two real leaked secrets over the project's history that were found this way — treat any credential ever committed as compromised on discovery, even after the file is untracked.
 
 ## Verification commands
 
