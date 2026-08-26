@@ -31,6 +31,13 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 - Warsh is a Quranic Arabic learning product for Android and web.
 - The primary launch platform remains Android through Google Play.
+- The Android app is live in full **Production** release on Google Play as of
+  2026-08-26 (owner-confirmed in conversation; not independently verified via
+  Play Console, which this session cannot log into) — not open/closed testing.
+  It is publicly discoverable and installable by anyone. This changelog's
+  historical entries below still narrate the closed/open-testing upload
+  history that preceded this; treat the release-track state in those entries
+  as historical, not current.
 - The Expo application explicitly supports `android` and `web`.
 - The mobile application uses four tabs: Learn, Vocabulary, Noor, and You.
 - The backend is a Next.js API connected through Prisma to PostgreSQL.
@@ -596,7 +603,7 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ### P0 — launch blockers and required verification
 
-1. **Live IAP sandbox QA** — verify monthly and yearly subscription purchase, restore, acknowledgement, and Noor consumable behavior on a Play-installed build.
+1. **Live IAP sandbox QA** — verify monthly and yearly subscription purchase, restore, acknowledgement, and Noor consumable behavior on a Play-installed build. No real charge is required: add the test Gmail account under Play Console → Monetize setup → License testing, sign into that account on the test device, and purchases against the (now-production) listing are served as no-charge test transactions with accelerated renewal/expiry for testing that behavior too.
 2. **Target-audience decision** — either select adults only for the simplest launch or implement the required age/minor handling before keeping ages 13–17.
 3. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`, `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
 4. **Scholar/content review** — establish a review process for Quranic Arabic accuracy, ayah relevance, pedagogy, repetition, and pacing before public launch.
