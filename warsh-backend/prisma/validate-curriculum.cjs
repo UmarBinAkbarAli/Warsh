@@ -805,7 +805,16 @@ function validateLessonFixture(fileName, lesson, reporter, globalState) {
     validateReveal(lesson.reveal, `${pathLabel}.reveal`, reporter);
   }
 
-  if (["STANDARD", "REVIEW"].includes(lesson.template)) {
+  const isChapterTest = lesson.assessment?.type === "CHAPTER_TEST";
+
+  if (isChapterTest) {
+    if (lesson.template !== "REVIEW") reporter.add(`${pathLabel}.template`, "chapter tests must use the REVIEW template");
+    if (lesson._meta?.chapter_order !== lesson.assessment.chapter_order) {
+      reporter.add(`${pathLabel}.assessment.chapter_order`, "must match _meta.chapter_order");
+    }
+    if ((lesson.discover_cards?.length ?? 0) > 0) reporter.add(`${pathLabel}.discover_cards`, "chapter tests must not teach new material");
+    if ((lesson.exercises?.length ?? 0) > 0) reporter.add(`${pathLabel}.exercises`, "chapter tests use assessment.questions, not lesson exercises");
+  } else if (["STANDARD", "REVIEW"].includes(lesson.template)) {
     const discoverBounds = lesson.template === "REVIEW" ? { min: 2, max: 15 } : { min: 4, max: 15 };
     assertArray(lesson.discover_cards, `${pathLabel}.discover_cards`, reporter, discoverBounds);
     const exerciseBounds = lesson.template === "REVIEW" ? { min: 5, max: 12 } : { min: 5, max: 10 };

@@ -13,6 +13,7 @@ const ch01L01Content = require("./fixtures/chapter-01-lesson-01.json");
 const ch01L02Content = require("./fixtures/chapter-01-lesson-02.json");
 const ch01L03Content = require("./fixtures/chapter-01-lesson-03.json");
 const ch01L04Content = require("./fixtures/chapter-01-lesson-04.json");
+const ch01TestContent = require("./fixtures/chapter-01-lesson-05-final-test.json");
 const ch02L01Content = require("./fixtures/chapter-02-lesson-01.json");
 const ch02L02Content = require("./fixtures/chapter-02-lesson-02.json");
 const ch02L03Content = require("./fixtures/chapter-02-lesson-03.json");
@@ -695,6 +696,7 @@ async function main() {
     { id: "ch01-l02", chapterId: ch1Id, order: 2, title: "First Encounter with ذَٰلِكَ",          titleAr: "اللقاء الأول مع ذَٰلِكَ",                  template: "STANDARD", xpReward: ch01L02Content._meta?.xp_reward ?? 10, content: ch01L02Content },
     { id: "ch01-l03", chapterId: ch1Id, order: 3, title: "First Encounter with هَذِهِ",           titleAr: "اللقاء الأول مع هَذِهِ",                    template: "STANDARD", xpReward: ch01L03Content._meta?.xp_reward ?? 10, content: ch01L03Content },
     { id: "ch01-l04", chapterId: ch1Id, order: 4, title: "First Encounter with تِلْكَ",           titleAr: "اللقاء الأول مع تِلْكَ",                    template: "STANDARD", xpReward: ch01L04Content._meta?.xp_reward ?? 10, content: ch01L04Content },
+    { id: "ch01-test", chapterId: ch1Id, order: 5, title: "Chapter 1 Final Test", titleUr: "باب 1 کا آخری امتحان", titleAr: "اخْتِبَارُ الْفَصْلِ الْأَوَّلِ", template: "REVIEW", xpReward: ch01TestContent._meta?.xp_reward ?? 20, content: ch01TestContent },
     // Chapter 2
     { id: "ch02-l01", chapterId: ch2Id, order: 1, title: "Tanween — The Sound of 'A'",            titleAr: "التَّنْوِين — صَوْتُ النَّكِرَة",            template: "STANDARD", xpReward: ch02L01Content._meta?.xp_reward ?? 10, content: ch02L01Content },
     { id: "ch02-l02", chapterId: ch2Id, order: 2, title: "ال — The Definite Article",              titleAr: "التَّعْرِيف بِالْ",                          template: "STANDARD", xpReward: ch02L02Content._meta?.xp_reward ?? 10, content: ch02L02Content },

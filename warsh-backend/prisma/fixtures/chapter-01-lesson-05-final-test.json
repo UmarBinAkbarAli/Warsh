@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 1 final test. Assesses only هَذَا، ذَٰلِكَ، هَذِهِ، تِلْكَ, taught vocabulary, gender, and the Quranic phrases used in Lessons 1–4.",
+    "chapter_order": 1,
+    "lesson_order": 5,
+    "estimated_minutes": 8,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 36,
+      "ayah": 61,
+      "label": "Ya-Sin 36:61",
+      "ar": "وَأَنِ اعْبُدُونِي هَذَا صِرَاطٌ مُسْتَقِيمٌ",
+      "en": "And worship Me. This is a straight path.",
+      "ur": "اور میری عبادت کرو۔ یہی سیدھا راستہ ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/036061.mp3"
+    },
+    "noor_intro": {
+      "en": "You have completed the four Chapter 1 lessons. Now check your understanding of the four demonstratives and the words you learned with them.",
+      "ur": "آپ باب 1 کے چاروں اسباق مکمل کر چکے ہیں۔ اب چاروں اسمائے اشارہ اور ان کے ساتھ سیکھے گئے الفاظ کی سمجھ آزمائیں۔"
+    },
+    "autoplay": false
+  },
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 1,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch01-test-q01",
+        "topic": { "en": "Demonstratives", "ur": "اسمائے اشارہ" },
+        "prompt": { "en": "Choose the word for a nearby masculine object.", "ur": "قریب مذکر چیز کے لیے درست لفظ منتخب کریں۔" },
+        "options": [
+          { "en": "this (masculine)", "ur": "یہ (مذکر)", "arabic": "هَذَا" },
+          { "en": "that (masculine)", "ur": "وہ (مذکر)", "arabic": "ذَٰلِكَ" },
+          { "en": "this (feminine)", "ur": "یہ (مؤنث)", "arabic": "هَذِهِ" },
+          { "en": "that (feminine)", "ur": "وہ (مؤنث)", "arabic": "تِلْكَ" }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch01-test-q02",
+        "topic": { "en": "Demonstratives", "ur": "اسمائے اشارہ" },
+        "prompt": { "en": "Choose the word for a far masculine object.", "ur": "دور مذکر چیز کے لیے درست لفظ منتخب کریں۔" },
+        "options": [
+          { "en": "this (masculine)", "ur": "یہ (مذکر)", "arabic": "هَذَا" },
+          { "en": "this (feminine)", "ur": "یہ (مؤنث)", "arabic": "هَذِهِ" },
+          { "en": "that (masculine)", "ur": "وہ (مذکر)", "arabic": "ذَٰلِكَ" },
+          { "en": "that (feminine)", "ur": "وہ (مؤنث)", "arabic": "تِلْكَ" }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch01-test-q03",
+        "topic": { "en": "Demonstratives", "ur": "اسمائے اشارہ" },
+        "prompt": { "en": "Choose the word for a nearby feminine object.", "ur": "قریب مؤنث چیز کے لیے درست لفظ منتخب کریں۔" },
+        "options": [
+          { "en": "that (feminine)", "ur": "وہ (مؤنث)", "arabic": "تِلْكَ" },
+          { "en": "this (feminine)", "ur": "یہ (مؤنث)", "arabic": "هَذِهِ" },
+          { "en": "this (masculine)", "ur": "یہ (مذکر)", "arabic": "هَذَا" },
+          { "en": "that (masculine)", "ur": "وہ (مذکر)", "arabic": "ذَٰلِكَ" }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch01-test-q04",
+        "topic": { "en": "Demonstratives", "ur": "اسمائے اشارہ" },
+        "prompt": { "en": "Choose the word for a far feminine object.", "ur": "دور مؤنث چیز کے لیے درست لفظ منتخب کریں۔" },
+        "options": [
+          { "en": "this (feminine)", "ur": "یہ (مؤنث)", "arabic": "هَذِهِ" },
+          { "en": "that (masculine)", "ur": "وہ (مذکر)", "arabic": "ذَٰلِكَ" },
+          { "en": "this (masculine)", "ur": "یہ (مذکر)", "arabic": "هَذَا" },
+          { "en": "that (feminine)", "ur": "وہ (مؤنث)", "arabic": "تِلْكَ" }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch01-test-q05",
+        "topic": { "en": "Meaning", "ur": "معنی" },
+        "prompt": { "en": "What does this sentence mean?", "ur": "اس جملے کا کیا مطلب ہے؟" },
+        "arabic": "هَذَا بَيْتٌ",
+        "options": [
+          { "en": "That is a house.", "ur": "وہ ایک گھر ہے۔" },
+          { "en": "This is a house.", "ur": "یہ ایک گھر ہے۔" },
+          { "en": "This is a door.", "ur": "یہ ایک دروازہ ہے۔" },
+          { "en": "That is a book.", "ur": "وہ ایک کتاب ہے۔" }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch01-test-q06",
+        "topic": { "en": "Meaning", "ur": "معنی" },
+        "prompt": { "en": "What does this sentence mean?", "ur": "اس جملے کا کیا مطلب ہے؟" },
+        "arabic": "ذَٰلِكَ كِتَابٌ",
+        "options": [
+          { "en": "This is a book.", "ur": "یہ ایک کتاب ہے۔" },
+          { "en": "That is a mosque.", "ur": "وہ ایک مسجد ہے۔" },
+          { "en": "That is a book.", "ur": "وہ ایک کتاب ہے۔" },
+          { "en": "This is a house.", "ur": "یہ ایک گھر ہے۔" }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch01-test-q07",
+        "topic": { "en": "Meaning", "ur": "معنی" },
+        "prompt": { "en": "What does this sentence mean?", "ur": "اس جملے کا کیا مطلب ہے؟" },
+        "arabic": "هَذِهِ شَجَرَةٌ",
+        "options": [
+          { "en": "This is a tree.", "ur": "یہ ایک درخت ہے۔" },
+          { "en": "That is a tree.", "ur": "وہ ایک درخت ہے۔" },
+          { "en": "This is a garden.", "ur": "یہ ایک باغ ہے۔" },
+          { "en": "That is a school.", "ur": "وہ ایک مدرسہ ہے۔" }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch01-test-q08",
+        "topic": { "en": "Meaning", "ur": "معنی" },
+        "prompt": { "en": "What does this sentence mean?", "ur": "اس جملے کا کیا مطلب ہے؟" },
+        "arabic": "تِلْكَ جَنَّةٌ",
+        "options": [
+          { "en": "This is Paradise.", "ur": "یہ جنت ہے۔" },
+          { "en": "That is a tree.", "ur": "وہ ایک درخت ہے۔" },
+          { "en": "This is a school.", "ur": "یہ ایک مدرسہ ہے۔" },
+          { "en": "That is a garden.", "ur": "وہ ایک باغ ہے۔" }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch01-test-q09",
+        "topic": { "en": "Gender", "ur": "مذکر و مؤنث" },
+        "prompt": { "en": "Which noun is feminine?", "ur": "کون سا اسم مؤنث ہے؟" },
+        "options": [
+          { "en": "house", "ur": "گھر", "arabic": "بَيْتٌ" },
+          { "en": "book", "ur": "کتاب", "arabic": "كِتَابٌ" },
+          { "en": "school", "ur": "مدرسہ", "arabic": "مَدْرَسَةٌ" },
+          { "en": "door", "ur": "دروازہ", "arabic": "بَابٌ" }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch01-test-q10",
+        "topic": { "en": "Gender", "ur": "مذکر و مؤنث" },
+        "prompt": { "en": "Complete the sentence for a nearby door.", "ur": "قریب دروازے کے لیے جملہ مکمل کریں۔" },
+        "arabic": "___ بَابٌ",
+        "options": [
+          { "en": "this (feminine)", "ur": "یہ (مؤنث)", "arabic": "هَذِهِ" },
+          { "en": "this (masculine)", "ur": "یہ (مذکر)", "arabic": "هَذَا" },
+          { "en": "that (feminine)", "ur": "وہ (مؤنث)", "arabic": "تِلْكَ" },
+          { "en": "that (masculine)", "ur": "وہ (مذکر)", "arabic": "ذَٰلِكَ" }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch01-test-q11",
+        "topic": { "en": "Quranic phrase", "ur": "قرآنی ترکیب" },
+        "prompt": { "en": "What does the highlighted phrase mean?", "ur": "اس قرآنی ترکیب کا کیا مطلب ہے؟" },
+        "arabic": "هَذَا صِرَاطٌ",
+        "options": [
+          { "en": "That is a path.", "ur": "وہ ایک راستہ ہے۔" },
+          { "en": "This is a book.", "ur": "یہ ایک کتاب ہے۔" },
+          { "en": "This is a path.", "ur": "یہ ایک راستہ ہے۔" },
+          { "en": "That is Paradise.", "ur": "وہ جنت ہے۔" }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch01-test-q12",
+        "topic": { "en": "Quranic phrase", "ur": "قرآنی ترکیب" },
+        "prompt": { "en": "What does this Quranic phrase mean?", "ur": "اس قرآنی ترکیب کا کیا مطلب ہے؟" },
+        "arabic": "تِلْكَ الْجَنَّةُ",
+        "options": [
+          { "en": "That is Paradise.", "ur": "وہ جنت ہے۔" },
+          { "en": "This is Paradise.", "ur": "یہ جنت ہے۔" },
+          { "en": "That is a tree.", "ur": "وہ ایک درخت ہے۔" },
+          { "en": "This is a garden.", "ur": "یہ ایک باغ ہے۔" }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "discover_cards": [],
+  "exercises": [],
+  "reveal": {
+    "concept_name": {
+      "en": "هَذَا in the Quran",
+      "ar": "هَذَا فِي الْقُرْآن",
+      "ur": "قرآن میں هَذَا"
+    },
+    "ayah": {
+      "surah": 36,
+      "ayah": 61,
+      "label": "Ya-Sin 36:61",
+      "ar": "وَأَنِ ٱعْبُدُونِى ۚ هَـٰذَا صِرَٰطٌ مُّسْتَقِيمٌۭ",
+      "en": "And worship Me. This is a straight path.",
+      "ur": "اور میری عبادت کرو۔ یہی سیدھا راستہ ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/036061.mp3"
+    },
+    "highlighted_word_indices": [3],
+    "highlighted_words": ["هَـٰذَا"],
+    "noor_explanation": {
+      "en": "هَذَا صِرَاطٌ means: This is a path.",
+      "ur": "هَذَا صِرَاطٌ کا مطلب ہے: یہ ایک راستہ ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can now distinguish the four demonstratives by distance and gender and understand them in familiar Quranic phrases.",
+      "ur": "اب آپ فاصلے اور جنس کے لحاظ سے چاروں اسمائے اشارہ میں فرق اور مانوس قرآنی تراکیب میں ان کا مطلب سمجھ سکتے ہیں۔"
+    }
+  }
+}

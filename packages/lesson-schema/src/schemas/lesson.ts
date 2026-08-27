@@ -3,6 +3,20 @@ import { HookBeatSchema, CloseBeatSchema } from "./primitives";
 import { DiscoverCardSchema } from "./discover-cards";
 import { ExerciseSchema } from "./exercises";
 
+const LocalizedAssessmentTextSchema = z.object({
+  en: z.string().min(1),
+  ur: z.string().min(1),
+});
+
+const ChapterTestQuestionSchema = z.object({
+  id: z.string().min(1),
+  topic: LocalizedAssessmentTextSchema,
+  prompt: LocalizedAssessmentTextSchema,
+  arabic: z.string().min(1).optional(),
+  options: z.array(LocalizedAssessmentTextSchema.extend({ arabic: z.string().min(1).optional() })).min(2).max(6),
+  correct_index: z.number().int().min(0),
+});
+
 // ============================================================================
 // LESSON CONTENT — top-level schema
 // ============================================================================
@@ -14,6 +28,34 @@ export const LessonContentSchema = z.object({
   close: CloseBeatSchema,
   discover_cards: z.array(DiscoverCardSchema).optional(),
   exercises: z.array(ExerciseSchema).optional(),
+  assessment: z
+    .object({
+      type: z.literal("CHAPTER_TEST"),
+      chapter_order: z.number().int().min(1),
+      pass_score_percent: z.number().int().min(1).max(100),
+      questions: z.array(ChapterTestQuestionSchema).min(1).max(50),
+    })
+    .superRefine((assessment, ctx) => {
+      const ids = new Set<string>();
+      assessment.questions.forEach((question, index) => {
+        if (question.correct_index >= question.options.length) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ["questions", index, "correct_index"],
+            message: "correct_index must point to an available option",
+          });
+        }
+        if (ids.has(question.id)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ["questions", index, "id"],
+            message: "chapter-test question IDs must be unique",
+          });
+        }
+        ids.add(question.id);
+      });
+    })
+    .optional(),
   reveal: z
     .object({
       concept_name: z.object({ en: z.string().min(1), ar: z.string().optional(), ur: z.string().optional() }),

@@ -337,6 +337,18 @@ function isExercise(value) {
 
 // src/schemas/lesson.ts
 var import_zod4 = require("zod");
+var LocalizedAssessmentTextSchema = import_zod4.z.object({
+  en: import_zod4.z.string().min(1),
+  ur: import_zod4.z.string().min(1)
+});
+var ChapterTestQuestionSchema = import_zod4.z.object({
+  id: import_zod4.z.string().min(1),
+  topic: LocalizedAssessmentTextSchema,
+  prompt: LocalizedAssessmentTextSchema,
+  arabic: import_zod4.z.string().min(1).optional(),
+  options: import_zod4.z.array(LocalizedAssessmentTextSchema.extend({ arabic: import_zod4.z.string().min(1).optional() })).min(2).max(6),
+  correct_index: import_zod4.z.number().int().min(0)
+});
 var LessonContentSchema = import_zod4.z.object({
   schema_version: import_zod4.z.literal("1.0"),
   template: import_zod4.z.enum(["STANDARD", "SPOKEN_PHRASES", "REVIEW", "VERB_PATTERN"]),
@@ -344,6 +356,31 @@ var LessonContentSchema = import_zod4.z.object({
   close: CloseBeatSchema,
   discover_cards: import_zod4.z.array(DiscoverCardSchema).optional(),
   exercises: import_zod4.z.array(ExerciseSchema).optional(),
+  assessment: import_zod4.z.object({
+    type: import_zod4.z.literal("CHAPTER_TEST"),
+    chapter_order: import_zod4.z.number().int().min(1),
+    pass_score_percent: import_zod4.z.number().int().min(1).max(100),
+    questions: import_zod4.z.array(ChapterTestQuestionSchema).min(1).max(50)
+  }).superRefine((assessment, ctx) => {
+    const ids = /* @__PURE__ */ new Set();
+    assessment.questions.forEach((question, index) => {
+      if (question.correct_index >= question.options.length) {
+        ctx.addIssue({
+          code: import_zod4.z.ZodIssueCode.custom,
+          path: ["questions", index, "correct_index"],
+          message: "correct_index must point to an available option"
+        });
+      }
+      if (ids.has(question.id)) {
+        ctx.addIssue({
+          code: import_zod4.z.ZodIssueCode.custom,
+          path: ["questions", index, "id"],
+          message: "chapter-test question IDs must be unique"
+        });
+      }
+      ids.add(question.id);
+    });
+  }).optional(),
   reveal: import_zod4.z.object({
     concept_name: import_zod4.z.object({ en: import_zod4.z.string().min(1), ar: import_zod4.z.string().optional(), ur: import_zod4.z.string().optional() }),
     ayah: import_zod4.z.object({

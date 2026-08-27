@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-08-26
+**Last verified:** 2026-08-27
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Beta hardening and launch preparation
 
@@ -73,6 +73,9 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - Preview/onboarding flow with English and Urdu support
 - Chapter listing, lesson listing, backend-enforced locking, placement skipping, and progress tracking
 - Lesson playback and completion with XP, streak, daily-goal, chapter-bonus, and achievement updates
+- Chapter final-test flow with prerequisite locking, backend-authoritative
+  grading, retry/pass results, and next-chapter unlocking; Chapter 1 is the
+  implemented pilot
 - Four lesson templates: `STANDARD`, `SPOKEN_PHRASES`, `REVIEW`, and `VERB_PATTERN`
 - Renderers for all 15 current exercise types
 - Vocabulary browsing, search, word detail, favorites/hidden state, Word of the Day, and SM-2-style SRS review
@@ -86,7 +89,7 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 ### Curriculum and content
 
 - 72 curriculum chapters are represented in the authored fixture set.
-- `warsh-backend/prisma/fixtures/` contains 391 JSON lesson fixtures, and all 391 are referenced by the production seed assembly.
+- `warsh-backend/prisma/fixtures/` contains 392 JSON lesson fixtures, and all 392 are referenced by the seed assembly.
 - The shared lesson contract is implemented in `packages/lesson-schema` and vendored into the backend.
 - Vocabulary records, Urdu metadata, audio URLs, image fields, and R2 upload/playback infrastructure exist.
 - Audit exports exist for 585 vocabulary images and 1,203 discover-card word appearances.
@@ -109,6 +112,32 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - EAS profiles for development, staging APK, production-preview APK, and production Android builds
 
 ## Recent verified repository changes
+
+### 2026-08-27 (Chapter 1 final test pilot)
+
+- Implemented the approved Chapter 1 final test as a separate fifth card after
+  the four teaching lessons. The chapter lesson progress remains `4/4`; the test
+  shows 12 questions and requires 10 correct answers (80%) to pass.
+- The test assesses only `هَذَا`, `ذَٰلِكَ`, `هَذِهِ`, `تِلْكَ`, vocabulary and
+  gender already taught in Lessons 1-4, plus their reviewed Quranic phrases.
+  It introduces no new grammar or vocabulary.
+- The backend locks the test until all four regular lessons are complete,
+  validates one answer per question, calculates the score itself, records failed
+  attempts without rewards, and awards lesson/chapter XP and unlocks Chapter 2
+  only after a pass.
+- Verified with the isolated staging database and Android development emulator:
+  locked/unlocked test card, intro, question, 3/12 retry, and 12/12 pass screens;
+  the passing response awarded the 50 XP chapter bonus and returned Chapter 2
+  as the next unlocked chapter.
+- Fixed ambiguous mobile submission failures: when the completion request times
+  out after the backend has already saved a pass, the app now polls the lesson's
+  server-authoritative completion state and shows a confirmed successful result
+  instead of the generic submission error. Recovery is read-only, so it cannot
+  duplicate XP or chapter rewards.
+- Verification passed: 392 fixture validations, Quran audit of 775 entries with
+  zero reference/text failures, 58 backend tests, backend production build,
+  app TypeScript, and app lint. This is staged locally only; it has not been
+  deployed to production.
 
 ### 2026-08-26 (IAP fix)
 

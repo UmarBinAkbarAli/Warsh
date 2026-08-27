@@ -202,6 +202,11 @@ export default function ChapterScreen() {
   );
 
   function handleLessonTap(lesson: any) {
+    if (lesson.isLocked) return;
+    if (lesson.isChapterTest) {
+      router.push(`/chapter-test/${lesson.id}`);
+      return;
+    }
     setPreviewLesson(lesson);
     setSheetVisible(true);
   }
@@ -232,8 +237,11 @@ export default function ChapterScreen() {
     );
   }
 
-  const progressPct = chapter.lessons.length
-    ? (chapter.completedLessonCount / chapter.lessons.length) * 100
+  const regularLessons = chapter.lessons.filter((lesson: any) => !lesson.isChapterTest);
+  const chapterTest = chapter.lessons.find((lesson: any) => lesson.isChapterTest);
+  const lessonCount = chapter.lessonCount ?? regularLessons.length;
+  const progressPct = lessonCount
+    ? (chapter.completedLessonCount / lessonCount) * 100
     : 0;
 
   const progressCard = (
@@ -242,7 +250,7 @@ export default function ChapterScreen() {
       <View style={desktopWeb ? undefined : styles.progressRow}>
         {desktopWeb ? null : (
           <Text style={styles.progressLabel}>
-            {t("chapter.lessonsCompleted", { done: chapter.completedLessonCount, total: chapter.lessons.length })}
+            {t("chapter.lessonsCompleted", { done: chapter.completedLessonCount, total: lessonCount })}
           </Text>
         )}
       </View>
@@ -251,7 +259,7 @@ export default function ChapterScreen() {
       </View>
       {desktopWeb ? (
         <Text style={styles.progressCardLabel}>
-          {t("chapter.lessonsCompleted", { done: chapter.completedLessonCount, total: chapter.lessons.length })}
+          {t("chapter.lessonsCompleted", { done: chapter.completedLessonCount, total: lessonCount })}
         </Text>
       ) : null}
     </View>
@@ -259,7 +267,7 @@ export default function ChapterScreen() {
 
   const lessonList = (
     <View style={desktopWeb ? undefined : { marginTop: Spacing.xl }}>
-      {chapter.lessons.map((lesson: any, idx: number) => {
+      {regularLessons.map((lesson: any, idx: number) => {
         const done = lesson.isCompleted;
         const skipped = lesson.isSkippedByPlacement;
         return (
@@ -301,6 +309,40 @@ export default function ChapterScreen() {
           </TouchableOpacity>
         );
       })}
+      {chapterTest ? (
+        <TouchableOpacity
+          style={[
+            styles.chapterTestCard,
+            desktopWeb && styles.webLessonCard,
+            chapterTest.isLocked && styles.chapterTestCardLocked,
+            chapterTest.isCompleted && styles.chapterTestCardCompleted,
+          ]}
+          onPress={() => handleLessonTap(chapterTest)}
+          activeOpacity={chapterTest.isLocked ? 1 : 0.8}
+          accessibilityState={{ disabled: chapterTest.isLocked }}
+        >
+          <View style={[styles.chapterTestIcon, chapterTest.isLocked && styles.chapterTestIconLocked]}>
+            <Ionicons
+              name={chapterTest.isCompleted ? "trophy-outline" : chapterTest.isLocked ? "lock-closed-outline" : "clipboard-outline"}
+              size={20}
+              color={chapterTest.isLocked ? WarshPalette.disabledText : WarshPalette.navy}
+            />
+          </View>
+          <View style={styles.lessonInfo}>
+            <Text style={[styles.chapterTestTitle, chapterTest.isLocked && styles.chapterTestTextLocked]}>
+              {pickLocalized(chapterTest.title, chapterTest.titleUr, language)}
+            </Text>
+            <Text style={[styles.chapterTestMeta, chapterTest.isLocked && styles.chapterTestTextLocked]}>
+              {chapterTest.isLocked
+                ? t("chapterTest.locked")
+                : t("chapterTest.questionsToPass", { count: chapterTest.questionCount, required: chapterTest.requiredCorrect })}
+            </Text>
+          </View>
+          {!chapterTest.isLocked ? (
+            <Ionicons name={chapterTest.isCompleted ? "checkmark-circle" : "chevron-forward"} size={20} color={chapterTest.isCompleted ? WarshPalette.sage : WarshPalette.white} />
+          ) : null}
+        </TouchableOpacity>
+      ) : null}
     </View>
   );
 
@@ -453,6 +495,28 @@ const styles = StyleSheet.create({
   lessonMeta: { flexDirection: "row", alignItems: "center", gap: 4, marginTop: 4 },
   lessonMetaText: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption },
   lessonMetaDot: { color: WarshPalette.subtleBrown, fontSize: FontSizes.caption },
+  chapterTestCard: {
+    minHeight: 76,
+    marginTop: Spacing.sm,
+    marginBottom: Spacing.sm,
+    padding: Spacing.lg,
+    borderRadius: Radii.lg,
+    backgroundColor: WarshPalette.navy,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.md,
+  },
+  chapterTestCardLocked: {
+    backgroundColor: WarshPalette.parchmentBg,
+    borderWidth: 1,
+    borderColor: WarshPalette.defaultCardBorder,
+  },
+  chapterTestCardCompleted: { borderWidth: 1, borderColor: WarshPalette.gold },
+  chapterTestIcon: { width: 38, height: 38, borderRadius: 19, backgroundColor: WarshPalette.gold, alignItems: "center", justifyContent: "center" },
+  chapterTestIconLocked: { backgroundColor: WarshPalette.cream },
+  chapterTestTitle: { color: WarshPalette.white, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyL },
+  chapterTestMeta: { color: WarshPalette.parchment, fontFamily: Fonts.regular, fontSize: FontSizes.caption, marginTop: 3 },
+  chapterTestTextLocked: { color: WarshPalette.disabledText },
 
   // Bottom sheet
   sheetOverlay: { flex: 1, justifyContent: "flex-end", backgroundColor: "rgba(0,0,0,0.45)" },

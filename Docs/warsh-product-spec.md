@@ -182,6 +182,10 @@ The current shared schema defines 15 exercise types:
 - Wrong-answer feedback should explain rather than punish.
 - Replaying completed lessons must not create repeat completion rewards.
 - Chapter locking is enforced by the backend, not only by the interface.
+- A chapter final test is a distinct `REVIEW` lesson with an `assessment` payload.
+  It unlocks after all regular lessons in that chapter are complete, is graded
+  by the backend, permits unlimited retries, and controls chapter completion
+  and the chapter-completion bonus. Chapter 1 is the first implemented pilot.
 - Audio is a core content dimension.
 - Quran recitation uses human-recorded audio, not TTS.
 

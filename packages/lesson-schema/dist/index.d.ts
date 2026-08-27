@@ -5659,6 +5659,172 @@ declare const LessonContentSchema: z.ZodObject<{
             ur?: string | undefined;
         } | undefined;
     }>]>, "many">>;
+    assessment: z.ZodOptional<z.ZodEffects<z.ZodObject<{
+        type: z.ZodLiteral<"CHAPTER_TEST">;
+        chapter_order: z.ZodNumber;
+        pass_score_percent: z.ZodNumber;
+        questions: z.ZodArray<z.ZodObject<{
+            id: z.ZodString;
+            topic: z.ZodObject<{
+                en: z.ZodString;
+                ur: z.ZodString;
+            }, "strip", z.ZodTypeAny, {
+                en: string;
+                ur: string;
+            }, {
+                en: string;
+                ur: string;
+            }>;
+            prompt: z.ZodObject<{
+                en: z.ZodString;
+                ur: z.ZodString;
+            }, "strip", z.ZodTypeAny, {
+                en: string;
+                ur: string;
+            }, {
+                en: string;
+                ur: string;
+            }>;
+            arabic: z.ZodOptional<z.ZodString>;
+            options: z.ZodArray<z.ZodObject<{
+                en: z.ZodString;
+                ur: z.ZodString;
+            } & {
+                arabic: z.ZodOptional<z.ZodString>;
+            }, "strip", z.ZodTypeAny, {
+                en: string;
+                ur: string;
+                arabic?: string | undefined;
+            }, {
+                en: string;
+                ur: string;
+                arabic?: string | undefined;
+            }>, "many">;
+            correct_index: z.ZodNumber;
+        }, "strip", z.ZodTypeAny, {
+            options: {
+                en: string;
+                ur: string;
+                arabic?: string | undefined;
+            }[];
+            id: string;
+            prompt: {
+                en: string;
+                ur: string;
+            };
+            correct_index: number;
+            topic: {
+                en: string;
+                ur: string;
+            };
+            arabic?: string | undefined;
+        }, {
+            options: {
+                en: string;
+                ur: string;
+                arabic?: string | undefined;
+            }[];
+            id: string;
+            prompt: {
+                en: string;
+                ur: string;
+            };
+            correct_index: number;
+            topic: {
+                en: string;
+                ur: string;
+            };
+            arabic?: string | undefined;
+        }>, "many">;
+    }, "strip", z.ZodTypeAny, {
+        type: "CHAPTER_TEST";
+        chapter_order: number;
+        pass_score_percent: number;
+        questions: {
+            options: {
+                en: string;
+                ur: string;
+                arabic?: string | undefined;
+            }[];
+            id: string;
+            prompt: {
+                en: string;
+                ur: string;
+            };
+            correct_index: number;
+            topic: {
+                en: string;
+                ur: string;
+            };
+            arabic?: string | undefined;
+        }[];
+    }, {
+        type: "CHAPTER_TEST";
+        chapter_order: number;
+        pass_score_percent: number;
+        questions: {
+            options: {
+                en: string;
+                ur: string;
+                arabic?: string | undefined;
+            }[];
+            id: string;
+            prompt: {
+                en: string;
+                ur: string;
+            };
+            correct_index: number;
+            topic: {
+                en: string;
+                ur: string;
+            };
+            arabic?: string | undefined;
+        }[];
+    }>, {
+        type: "CHAPTER_TEST";
+        chapter_order: number;
+        pass_score_percent: number;
+        questions: {
+            options: {
+                en: string;
+                ur: string;
+                arabic?: string | undefined;
+            }[];
+            id: string;
+            prompt: {
+                en: string;
+                ur: string;
+            };
+            correct_index: number;
+            topic: {
+                en: string;
+                ur: string;
+            };
+            arabic?: string | undefined;
+        }[];
+    }, {
+        type: "CHAPTER_TEST";
+        chapter_order: number;
+        pass_score_percent: number;
+        questions: {
+            options: {
+                en: string;
+                ur: string;
+                arabic?: string | undefined;
+            }[];
+            id: string;
+            prompt: {
+                en: string;
+                ur: string;
+            };
+            correct_index: number;
+            topic: {
+                en: string;
+                ur: string;
+            };
+            arabic?: string | undefined;
+        }[];
+    }>>;
     reveal: z.ZodOptional<z.ZodObject<{
         concept_name: z.ZodObject<{
             en: z.ZodString;
@@ -6523,6 +6689,29 @@ declare const LessonContentSchema: z.ZodObject<{
             ur?: string | undefined;
         } | undefined;
     })[] | undefined;
+    assessment?: {
+        type: "CHAPTER_TEST";
+        chapter_order: number;
+        pass_score_percent: number;
+        questions: {
+            options: {
+                en: string;
+                ur: string;
+                arabic?: string | undefined;
+            }[];
+            id: string;
+            prompt: {
+                en: string;
+                ur: string;
+            };
+            correct_index: number;
+            topic: {
+                en: string;
+                ur: string;
+            };
+            arabic?: string | undefined;
+        }[];
+    } | undefined;
     reveal?: {
         ayah: {
             ar: string;
@@ -7097,6 +7286,29 @@ declare const LessonContentSchema: z.ZodObject<{
             ur?: string | undefined;
         } | undefined;
     })[] | undefined;
+    assessment?: {
+        type: "CHAPTER_TEST";
+        chapter_order: number;
+        pass_score_percent: number;
+        questions: {
+            options: {
+                en: string;
+                ur: string;
+                arabic?: string | undefined;
+            }[];
+            id: string;
+            prompt: {
+                en: string;
+                ur: string;
+            };
+            correct_index: number;
+            topic: {
+                en: string;
+                ur: string;
+            };
+            arabic?: string | undefined;
+        }[];
+    } | undefined;
     reveal?: {
         ayah: {
             ar: string;

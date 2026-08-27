@@ -8,6 +8,7 @@ import { getUserCourseState, PROGRESS_STATUS } from "../../../../../lib/course";
 import { checkAndAwardAchievements } from "../../../../../lib/achievements";
 import { getUserSubscriptionState, requiresSubscription } from "../../../../../lib/subscription";
 import { calculateLessonScore } from "../../../../../lib/lessonScoring";
+import { gradeChapterTest, isChapterTestContent, isChapterTestUnlocked } from "../../../../../lib/chapterTests";
 
 interface Props {
   params: { id: string };
@@ -15,6 +16,10 @@ interface Props {
 
 const completeSchema = z.object({
   exerciseResults: z.array(z.boolean()).max(200).optional().default([]),
+  assessmentAnswers: z.array(z.object({
+    questionId: z.string().min(1),
+    selectedIndex: z.number().int().min(0).max(20),
+  })).max(50).optional().default([]),
   phrasesCompleted: z.number().int().min(0).max(100).optional().default(0),
 });
 
@@ -33,7 +38,7 @@ export async function POST(request: Request, { params }: Props) {
       { status: 400 },
     );
   }
-  const { exerciseResults, phrasesCompleted: validPhrasesCompleted } = parsed.data;
+  const { exerciseResults, assessmentAnswers, phrasesCompleted: validPhrasesCompleted } = parsed.data;
 
   const [lesson, subscriptionState] = await Promise.all([
     prisma.lesson.findUnique({ where: { id: params.id } }),
@@ -57,9 +62,51 @@ export async function POST(request: Request, { params }: Props) {
     return NextResponse.json({ error: "Chapter is locked", code: "chapter_locked" }, { status: 403 });
   }
 
-  const { passed, score, correctCount, totalScored, threshold } = calculateLessonScore(exerciseResults);
+
+  if (!(await isChapterTestUnlocked(userId, lesson))) {
+    return NextResponse.json({ error: "Complete the chapter lessons before taking the final test.", code: "chapter_test_locked" }, { status: 403 });
+  }
+
+  const isChapterTest = isChapterTestContent(lesson.content);
+  let scoring: {
+    passed: boolean;
+    score: number;
+    correctCount: number;
+    totalScored: number;
+    threshold?: number;
+    requiredCorrect?: number;
+  };
+  try {
+    scoring = isChapterTest
+      ? gradeChapterTest(lesson.content, assessmentAnswers)
+      : calculateLessonScore(exerciseResults);
+  } catch {
+    return NextResponse.json(
+      { error: "Submit one valid answer for every chapter-test question.", code: "invalid_assessment_answers" },
+      { status: 400 },
+    );
+  }
+  const { passed, score, correctCount, totalScored, threshold, requiredCorrect } = scoring;
   if (!passed) {
-    return NextResponse.json({ data: { passed: false, correctCount, totalScored, threshold } });
+    if (isChapterTest) {
+      await prisma.progress.upsert({
+        where: { userId_lessonId: { userId, lessonId: lesson.id } },
+        create: {
+          userId,
+          lessonId: lesson.id,
+          completed: false,
+          status: PROGRESS_STATUS.NOT_STARTED,
+          score,
+          attempts: 1,
+          xpEarned: 0,
+        },
+        update: {
+          score,
+          attempts: { increment: 1 },
+        },
+      });
+    }
+    return NextResponse.json({ data: { passed: false, score, correctCount, totalScored, threshold, requiredCorrect } });
   }
 
   const todayStart = get4amPKTBoundary();
@@ -221,11 +268,24 @@ export async function POST(request: Request, { params }: Props) {
   const finalXp = newAchievements.length > 0
     ? (await prisma.user.findUnique({ where: { id: userId }, select: { xp: true } }))?.xp ?? user?.xp ?? 0
     : user?.xp ?? 0;
+  const nextChapter = isChapterTest
+    ? await prisma.chapter.findFirst({
+        where: {
+          order: { gt: (lesson.content as any)?.assessment?.chapter_order ?? 0 },
+          status: "PUBLISHED",
+        },
+        orderBy: { order: "asc" },
+        select: { id: true },
+      })
+    : null;
 
   return NextResponse.json({
     data: {
       passed: true,
       score,
+      correctCount,
+      totalScored,
+      requiredCorrect,
       xpEarned,
       chapterBonusXp,
       chapterJustCompleted,
@@ -239,6 +299,7 @@ export async function POST(request: Request, { params }: Props) {
       streakFreezes: streak?.streakFreezes ?? 0,
       phrasesSpoken: newPhrasesSpoken,
       wordsAdded,
+      nextChapterId: nextChapter?.id ?? null,
     },
   });
 }

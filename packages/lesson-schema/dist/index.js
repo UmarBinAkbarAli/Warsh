@@ -276,6 +276,18 @@ function isExercise(value) {
 
 // src/schemas/lesson.ts
 import { z as z4 } from "zod";
+var LocalizedAssessmentTextSchema = z4.object({
+  en: z4.string().min(1),
+  ur: z4.string().min(1)
+});
+var ChapterTestQuestionSchema = z4.object({
+  id: z4.string().min(1),
+  topic: LocalizedAssessmentTextSchema,
+  prompt: LocalizedAssessmentTextSchema,
+  arabic: z4.string().min(1).optional(),
+  options: z4.array(LocalizedAssessmentTextSchema.extend({ arabic: z4.string().min(1).optional() })).min(2).max(6),
+  correct_index: z4.number().int().min(0)
+});
 var LessonContentSchema = z4.object({
   schema_version: z4.literal("1.0"),
   template: z4.enum(["STANDARD", "SPOKEN_PHRASES", "REVIEW", "VERB_PATTERN"]),
@@ -283,6 +295,31 @@ var LessonContentSchema = z4.object({
   close: CloseBeatSchema,
   discover_cards: z4.array(DiscoverCardSchema).optional(),
   exercises: z4.array(ExerciseSchema).optional(),
+  assessment: z4.object({
+    type: z4.literal("CHAPTER_TEST"),
+    chapter_order: z4.number().int().min(1),
+    pass_score_percent: z4.number().int().min(1).max(100),
+    questions: z4.array(ChapterTestQuestionSchema).min(1).max(50)
+  }).superRefine((assessment, ctx) => {
+    const ids = /* @__PURE__ */ new Set();
+    assessment.questions.forEach((question, index) => {
+      if (question.correct_index >= question.options.length) {
+        ctx.addIssue({
+          code: z4.ZodIssueCode.custom,
+          path: ["questions", index, "correct_index"],
+          message: "correct_index must point to an available option"
+        });
+      }
+      if (ids.has(question.id)) {
+        ctx.addIssue({
+          code: z4.ZodIssueCode.custom,
+          path: ["questions", index, "id"],
+          message: "chapter-test question IDs must be unique"
+        });
+      }
+      ids.add(question.id);
+    });
+  }).optional(),
   reveal: z4.object({
     concept_name: z4.object({ en: z4.string().min(1), ar: z4.string().optional(), ur: z4.string().optional() }),
     ayah: z4.object({
