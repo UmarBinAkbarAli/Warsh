@@ -239,10 +239,14 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       setPurchasing(false);
       const code = err?.response?.data?.code ?? err?.code ?? "unknown";
       console.error("[IAP] Verify failed:", code, err?.message);
-      if (code === "store_not_configured") {
+      // store_not_configured / store_unavailable are OUR faults, not the buyer's.
+      // The purchase is deliberately left unacknowledged here: Google auto-refunds
+      // an unacknowledged subscription after three days, so the customer is never
+      // charged for access they did not get while we recover.
+      if (code === "store_not_configured" || code === "store_unavailable") {
         Alert.alert(
-          "Purchase needs attention",
-          "Google Play completed the purchase, but Warsh's purchase verification is not configured. This is not caused by your test card. Your purchase can be restored after verification is enabled.",
+          "We couldn't confirm your purchase yet",
+          "Google Play took your payment, but Warsh couldn't verify it right now. This is a problem on our side, not with your payment method. Reopen this screen and tap \"Restore purchases\" shortly — if it still fails, you will not be charged.",
         );
         return;
       }

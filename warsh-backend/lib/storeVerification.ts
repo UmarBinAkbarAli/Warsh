@@ -48,6 +48,104 @@ export class StoreVerificationError extends Error {
   }
 }
 
+/**
+ * Google reports server-side configuration failures (unlinked Cloud project,
+ * revoked service-account access, wrong package name) with ordinary HTTP error
+ * codes on the same endpoint that rejects genuinely bad purchase tokens.
+ * Collapsing them all into `invalid_purchase` told a charged customer that THEIR
+ * purchase was invalid when the fault was entirely ours, and made the failure
+ * look final to the client instead of retryable. Classify before throwing.
+ */
+function classifyGoogleApiFailure(status: number, reason: string | undefined) {
+  // "No application was found for the given package name" and friends: nothing
+  // about the token is wrong, so the purchase must stay recoverable.
+  const configReasons = new Set([
+    "applicationNotFound",
+    "projectNotLinked",
+    "accessNotConfigured",
+    "forbidden",
+    "permissionDenied",
+    "unauthorized",
+  ]);
+
+  if (reason && configReasons.has(reason)) {
+    return {
+      message: "Google Play verification is temporarily unavailable.",
+      status: 503,
+      code: "store_unavailable",
+    };
+  }
+
+  // 401/403 -> our credentials. 404 without a token-specific reason -> almost
+  // always package/app resolution. 5xx and 429 -> Google-side, retry later.
+  if (status === 401 || status === 403 || status === 404 || status === 429 || status >= 500) {
+    return {
+      message: "Google Play verification is temporarily unavailable.",
+      status: 503,
+      code: "store_unavailable",
+    };
+  }
+
+  // Everything else (notably a 400 naming the token) really is a bad purchase.
+  return {
+    message: "Google Play rejected the purchase token.",
+    status: 400,
+    code: "invalid_purchase",
+  };
+}
+
+function extractGoogleErrorReason(body: string): string | undefined {
+  try {
+    const parsed = JSON.parse(body) as {
+      error?: { status?: string; errors?: Array<{ reason?: string }> };
+    };
+    return parsed.error?.errors?.[0]?.reason ?? parsed.error?.status ?? undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * Non-secret fingerprint of the configured package name. The value itself is not
+ * a credential, but the *shape* is what actually breaks: a copy/paste that keeps
+ * surrounding quotes or a trailing newline produces a package name Google cannot
+ * resolve while looking identical in a dashboard that masks the value.
+ */
+export function describePackageNameConfig() {
+  const raw = process.env.GOOGLE_PLAY_PACKAGE_NAME;
+  if (raw == null) return { configured: false as const };
+  const trimmed = raw.trim();
+  return {
+    configured: true as const,
+    value: trimmed,
+    rawLength: raw.length,
+    trimmedLength: trimmed.length,
+    hasSurroundingQuotes: /^["'].*["']$/.test(trimmed),
+    hasWhitespace: /\s/.test(trimmed),
+    differsAfterTrim: raw !== trimmed,
+  };
+}
+
+/** Service-account identity actually presented to Google. Email only — never key material. */
+export function describeServiceAccountConfig() {
+  const rawKey = process.env.GOOGLE_PLAY_SERVICE_ACCOUNT_KEY?.trim();
+  if (!rawKey) return { configured: false as const };
+  try {
+    const key = JSON.parse(rawKey) as GoogleServiceAccountKey & { project_id?: string; private_key_id?: string };
+    return {
+      configured: true as const,
+      clientEmail: key.client_email,
+      projectId: key.project_id,
+      // Identifies WHICH key is deployed without revealing it, so a rotation can
+      // be confirmed against the key list in Google Cloud.
+      privateKeyId: key.private_key_id,
+      parsed: true as const,
+    };
+  } catch {
+    return { configured: true as const, parsed: false as const };
+  }
+}
+
 interface GoogleServiceAccountKey {
   client_email?: string;
   private_key?: string;
@@ -117,7 +215,12 @@ export async function verifyGooglePlayConsumable(
   });
 
   if (!verifyResponse.ok) {
-    throw new StoreVerificationError("Google Play rejected the purchase token.", 400, "invalid_purchase");
+    const errBody = await verifyResponse.text().catch(() => "");
+    const reason = extractGoogleErrorReason(errBody);
+    console.error(`[verify] Google products HTTP ${verifyResponse.status}: ${errBody.slice(0, 300)}`);
+    logGooglePlayConfigContext(reason);
+    const { message, status, code } = classifyGoogleApiFailure(verifyResponse.status, reason);
+    throw new StoreVerificationError(message, status, code);
   }
 
   const purchase = (await verifyResponse.json()) as GoogleProductPurchase;
@@ -143,6 +246,102 @@ export async function verifyGooglePlayConsumable(
   }
 
   return { orderId: purchase.orderId, quantity };
+}
+
+/**
+ * Emits the configuration context alongside a Google API failure. Without this
+ * the logs record Google's complaint but not what we actually sent, which is the
+ * single hardest part of diagnosing an `applicationNotFound`.
+ */
+function logGooglePlayConfigContext(reason: string | undefined) {
+  const pkg = describePackageNameConfig();
+  const sa = describeServiceAccountConfig();
+  console.error(
+    "[verify] google play config context:",
+    JSON.stringify({
+      reason: reason ?? null,
+      packageName: pkg.configured
+        ? {
+            value: pkg.value,
+            trimmedLength: pkg.trimmedLength,
+            hasSurroundingQuotes: pkg.hasSurroundingQuotes,
+            hasWhitespace: pkg.hasWhitespace,
+            differsAfterTrim: pkg.differsAfterTrim,
+          }
+        : null,
+      serviceAccount: sa.configured && sa.parsed
+        ? { clientEmail: sa.clientEmail, projectId: sa.projectId, privateKeyId: sa.privateKeyId }
+        : { configured: sa.configured, parsed: sa.configured ? sa.parsed : false },
+    }),
+  );
+}
+
+export interface GooglePlayDiagnostics {
+  packageName: ReturnType<typeof describePackageNameConfig>;
+  serviceAccount: ReturnType<typeof describeServiceAccountConfig>;
+  oauth: { ok: boolean; error?: string };
+  applicationResolves: { ok: boolean; httpStatus?: number; reason?: string; body?: string; error?: string };
+}
+
+/**
+ * Live self-test of the Google Play verification path, independent of any real
+ * purchase. Authenticates, then probes the package with a deliberately invalid
+ * token: a reachable, correctly-linked app answers with a token-specific 400,
+ * whereas a configuration fault answers 404 `applicationNotFound` regardless of
+ * the token. That distinction is exactly what a purchase-driven failure cannot
+ * show you, because a real purchase confounds the two.
+ */
+export async function runGooglePlayDiagnostics(): Promise<GooglePlayDiagnostics> {
+  const packageName = describePackageNameConfig();
+  const serviceAccount = describeServiceAccountConfig();
+
+  const result: GooglePlayDiagnostics = {
+    packageName,
+    serviceAccount,
+    oauth: { ok: false },
+    applicationResolves: { ok: false },
+  };
+
+  let accessToken: string;
+  try {
+    accessToken = await getGoogleAccessToken();
+    result.oauth = { ok: true };
+  } catch (error) {
+    result.oauth = { ok: false, error: (error as Error)?.message ?? "unknown" };
+    return result;
+  }
+
+  if (!packageName.configured) {
+    result.applicationResolves = { ok: false, error: "GOOGLE_PLAY_PACKAGE_NAME is not set" };
+    return result;
+  }
+
+  // Intentionally invalid token — this probe must never touch a real purchase.
+  const probeToken = "warsh-diagnostic-probe-token";
+  const url =
+    `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodeURIComponent(packageName.value)}` +
+    `/purchases/subscriptionsv2/tokens/${encodeURIComponent(probeToken)}`;
+
+  try {
+    const response = await fetch(url, {
+      method: "GET",
+      headers: { Authorization: `Bearer ${accessToken}`, Accept: "application/json" },
+    });
+    const body = await response.text().catch(() => "");
+    const reason = extractGoogleErrorReason(body);
+    result.applicationResolves = {
+      // The app resolved if Google got far enough to complain about the token
+      // rather than about the application itself.
+      ok: response.status !== 404 || (reason != null && reason !== "applicationNotFound"),
+      httpStatus: response.status,
+      reason,
+      body: body.slice(0, 500),
+    };
+  } catch (error) {
+    result.applicationResolves = { ok: false, error: (error as Error)?.message ?? "unknown" };
+  }
+
+  return result;
 }
 
 export async function verifyStoreSubscription(input: VerifySubscriptionInput): Promise<VerifiedStoreSubscription> {
@@ -252,10 +451,13 @@ export async function fetchGooglePlaySubscriptionSnapshot(
 
   if (!response.ok) {
     const errBody = await response.text().catch(() => "");
+    const reason = extractGoogleErrorReason(errBody);
     // Truncate — Google's error payloads can be verbose and we don't want to
     // retain more than needed for debugging in long-lived log storage.
     console.error(`[verify] Google subscriptionsv2 HTTP ${response.status}: ${errBody.slice(0, 300)}`);
-    throw new StoreVerificationError("Google Play rejected the purchase token.", 400, "invalid_purchase");
+    logGooglePlayConfigContext(reason);
+    const { message, status, code } = classifyGoogleApiFailure(response.status, reason);
+    throw new StoreVerificationError(message, status, code);
   }
 
   const purchase = (await response.json()) as GoogleSubscriptionPurchase;
