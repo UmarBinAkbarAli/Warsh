@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import crypto from "crypto";
 import { getAdminReadError } from "../../../../lib/admin";
 import { prisma } from "../../../../lib/prisma";
+import { refreshLapsedStoreSubscription } from "../../../../lib/subscriptionRefresh";
 import {
   fetchGooglePlaySubscriptionSnapshot,
   runGooglePlayDiagnostics,
@@ -33,8 +34,15 @@ export async function GET(request: Request) {
     diagnostics.oauth.ok &&
     diagnostics.applicationResolves.ok;
 
-  const email = new URL(request.url).searchParams.get("email")?.trim();
-  const subscriber = email ? await inspectSubscriber(email, diagnostics.packageName) : undefined;
+  const params = new URL(request.url).searchParams;
+  const email = params.get("email")?.trim();
+  // ?refresh=1 additionally applies the same lapsed-subscription refresh the app
+  // triggers, so support (and QA) can heal a stale row without waiting for the
+  // user to open the app. Read-only without it.
+  const applyRefresh = params.get("refresh") === "1";
+  const subscriber = email
+    ? await inspectSubscriber(email, diagnostics.packageName, applyRefresh)
+    : undefined;
 
   return NextResponse.json({ data: { healthy, ...diagnostics, ...(subscriber ? { subscriber } : {}) } });
 }
@@ -42,6 +50,7 @@ export async function GET(request: Request) {
 async function inspectSubscriber(
   email: string,
   packageName: Awaited<ReturnType<typeof runGooglePlayDiagnostics>>["packageName"],
+  applyRefresh: boolean,
 ) {
   const user = await prisma.user.findUnique({
     where: { email: email.toLowerCase() },
@@ -57,7 +66,8 @@ async function inspectSubscriber(
 
   if (!user) return { found: false as const, email };
 
-  const { lastPurchaseToken, ...stored } = user;
+  const refreshed = applyRefresh ? await refreshLapsedStoreSubscription(user) : user;
+  const { lastPurchaseToken, ...stored } = refreshed;
   const base = {
     found: true as const,
     stored,
