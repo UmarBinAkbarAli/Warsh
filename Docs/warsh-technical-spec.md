@@ -322,11 +322,59 @@ Learner-facing routes do not perform on-demand TTS. `lib/openai.ts` deliberately
 returns a local constrained tutor response if the Noor provider is unavailable;
 production diagnostics must not mistake the fallback for provider health.
 
+#### Noor production account and billing lock (verified 2026-08-29)
+
+- The production API secret is stored only as the encrypted Vercel production
+  variable `OPENAI_API_KEY` on the `warshapp-projects/warsh` project. Never put
+  the secret, a masked-key suffix, or a copied `.env` value in Git or this file.
+- The intended production OpenAI owner is `trywarshapp@gmail.com`. In the
+  OpenAI Platform, the visible organization is `Personal Organization` and it
+  had an API credit balance of $3.43 when checked on 2026-08-29; this is API
+  billing, separate from a ChatGPT subscription.
+- `OPENAI_MODEL`, `AI_PROVIDER`, and `AI_DAILY_MESSAGE_LIMIT` are production
+  settings. Do not change them, rotate `OPENAI_API_KEY`, or move the key to a
+  different OpenAI organization without the production owner approving the
+  exact target organization/project and recording a live Noor test afterward.
+- **Exception recorded 2026-08-29:** `AI_DAILY_MESSAGE_LIMIT` was reset to `5`
+  without prior approval because the value it held was not a number. Both chat
+  routes parsed it with `Number(...)`, so the cap evaluated to `NaN`, every
+  `used >= limit` comparison was false, and the daily Noor cap did not exist —
+  unbounded OpenAI spend per user, and an unsellable Noor pack (the overage
+  modal is only reachable from the `429` the cap raises). `5` is the documented
+  default and matches the user-facing copy. `lib/noorLimit.ts` now fails closed
+  on that default and logs whenever the environment value is unusable, so this
+  cannot silently recur. Confirm the intended number with the production owner.
+- Noor answered every request during the 2026-08-29 QA run with the
+  "I am unavailable at the moment" fallback while still consuming the user's
+  daily quota. The most likely cause is the OpenAI credit balance noted above;
+  the quota accounting on a failed reply is a separate defect.
+- The Vercel secret is encrypted and cannot be mapped to an OpenAI organization
+  from the repository. To verify ownership, update the Vercel production key
+  from the OpenAI Platform project owned by `trywarshapp@gmail.com`, then send
+  one authenticated Noor message and confirm an assistant reply plus a new
+  OpenAI usage event. Do not use a local key unless OpenAI accepts it and its
+  project is independently confirmed as the funded production project.
+- Noor user messages are currently persisted and counted before provider reply
+  generation. A provider failure can therefore leave an unanswered message and
+  consume one daily allowance; this is a separate follow-up hardening item.
+- The provider call in `lib/openai.ts` must remain awaited so provider errors
+  are caught by the local fallback. Without `await`, a rejected OpenAI promise
+  bypasses that `try/catch` and becomes the generic Noor send error.
+
 Quranic recitation must use human audio rather than synthesized speech.
 
 ### Google Play
 
 Google Play verification uses service-account credentials and package `com.warsh.app`. The backend accepts only configured valid products and processes RTDN at `/api/webhooks/google`.
+
+**RTDN delivery (configured 2026-08-29; before that date nothing was ever delivered).** Play publishes to `projects/umar-tools-27994/topics/warsh-play-notifications`, which is consumed by push subscription `warsh-play-notifications-push` in the same project, pointed at `https://api.warsh.app/api/webhooks/google`. Authentication is **OIDC**, not the `?token=` shared secret: the push runs as the dedicated, key-less service account `warsh-rtdn-push@umar-tools-27994.iam.gserviceaccount.com`, and production must carry the matching pair
+
+- `GOOGLE_PLAY_PUBSUB_AUDIENCE=https://api.warsh.app/api/webhooks/google`
+- `GOOGLE_PLAY_PUBSUB_SERVICE_ACCOUNT=warsh-rtdn-push@umar-tools-27994.iam.gserviceaccount.com`
+
+When both are set the handler ignores `GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET`, which is kept only as a fallback. Four settings on that subscription are load-bearing and must not be reverted: expiration is **never expire** (the 31-day-inactivity default would silently delete the subscription during a quiet month and restore the original bug), payload unwrapping is **off** (the handler expects the Pub/Sub envelope), retry is exponential backoff 10–600s, and the ack deadline is 60s because the handler calls Google and writes to the database before answering. Health check: the subscription's `push_request_count` metric should show only an `ack_200` series, with `oldest_unacked_message_age` at 0.
+
+Not yet consumed: `voidedPurchaseNotification`. Refunded subscriptions and refunded Noor packs are not clawed back.
 
 Store-console state is external. Always verify products, base plans, tester access, and Play-installed build availability before IAP QA.
 
