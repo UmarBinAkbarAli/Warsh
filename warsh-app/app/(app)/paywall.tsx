@@ -107,6 +107,48 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Re-entitlement without asking the user to know the word "restore".
+  // After a reinstall (or a purchase whose verification never reached us because
+  // the app was killed mid-flow) Google still holds the subscription while our
+  // account row does not, and the user lands here on a paywall they already paid
+  // for. Anyone who owns a purchase for this product gets it re-linked silently;
+  // the manual Restore button remains for the cases this cannot see.
+  const autoRestoreAttemptedRef = useRef(false);
+
+  async function reconcileEntitlementSilently() {
+    if (autoRestoreAttemptedRef.current) return;
+    autoRestoreAttemptedRef.current = true;
+    if (!isBillingSupportedEnvironment()) return;
+    try {
+      const purchases = await getAvailableIapPurchases();
+      const owned = purchases.find((p) => p.productId === SUBSCRIPTION_PRODUCT_ID);
+      if (!owned) return;
+      const token = (owned as IapSubscriptionPurchase).purchaseToken ?? undefined;
+      const res = await verifyPurchase({
+        productId: SUBSCRIPTION_PRODUCT_ID,
+        purchaseToken: token,
+        receiptData: (owned as { transactionReceipt?: string }).transactionReceipt ?? undefined,
+        platform: Platform.OS as "android" | "ios",
+      });
+      // Acknowledge too: a purchase that reaches us this way is often one that was
+      // never acknowledged, which Google refunds after three days.
+      if (token && Platform.OS === "android") await acknowledgeAndroidPurchase(token).catch(() => {});
+      // The verify response reports the verified base plan ("monthly"/"yearly").
+      const restoredPlan = res?.data?.data?.basePlanId ?? null;
+      setSubscribedActive(true);
+      setCurrentBasePlan(restoredPlan);
+      trackSubscriptionRestored(SUBSCRIPTION_PRODUCT_ID);
+      Alert.alert("Subscription restored", "We found your existing subscription and linked it to this account.", [
+        { text: "Continue", onPress: () => router.replace("/(app)/(tabs)") },
+      ]);
+    } catch (err: any) {
+      // Silent by design. A user with no purchase, a purchase linked to another
+      // account, or a temporarily unreachable store must simply see the paywall.
+      const code = err?.response?.data?.code ?? err?.code ?? "unknown";
+      if (code !== "unknown") console.log("[IAP] Silent re-entitlement skipped:", code);
+    }
+  }
+
   useFocusEffect(
     useCallback(() => {
       getSubscriptionStatus()
@@ -116,6 +158,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
           setGooglePlayVerificationReady(d.googlePlayVerificationReady ?? null);
           setSubscribedActive(Boolean(d.subscriptionActive));
           setCurrentBasePlan(d.subscriptionProductId ?? null);
+          if (!d.subscriptionActive) void reconcileEntitlementSilently();
         })
         .catch(() => {});
 
@@ -222,8 +265,16 @@ export default function PaywallScreen({ dismissable = true }: Props) {
         receiptData: receiptData ?? undefined,
         platform: Platform.OS as "android" | "ios",
       });
-      // Acknowledge so Google doesn't auto-refund after 3 days.
-      await finishIapTransaction(purchase, false);
+      // Acknowledge so Google doesn't auto-refund after 3 days. The server also
+      // acknowledges during verification, so this is the second of two attempts —
+      // and it must NOT sit inside the verification try/catch: a failure here once
+      // told a user whose purchase was verified and activated that we "couldn't
+      // confirm" it, and sent them to Restore for no reason.
+      try {
+        await finishIapTransaction(purchase, false);
+      } catch (ackErr: any) {
+        console.error("[IAP] Acknowledge failed (server-side ack is the fallback):", ackErr?.code, ackErr?.message);
+      }
       trackSubscriptionStarted(selectedRef.current);
       setPurchasing(false);
       if (wasPlanChange) {

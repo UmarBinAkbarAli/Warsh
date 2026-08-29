@@ -61,5 +61,23 @@ export async function POST(request: Request) {
     throw error;
   }
 
-  return NextResponse.json({ data: { ...user, productId: verifiedSubscription.productId } });
+  // Surfaced so the client (and device QA) can see whether the purchase is safe
+  // from Google's three-day auto-refund without reading Play Console. The server
+  // acknowledges during verification; false here means it could not, and the
+  // client's own finishTransaction is the remaining safety net.
+  if (verifiedSubscription.platform === "android" && verifiedSubscription.acknowledged === false) {
+    console.error("[verify] purchase verified but NOT acknowledged - at risk of auto-refund", {
+      userId,
+      basePlanId: verifiedSubscription.basePlanId ?? null,
+    });
+  }
+
+  return NextResponse.json({
+    data: {
+      ...user,
+      productId: verifiedSubscription.productId,
+      basePlanId: verifiedSubscription.basePlanId ?? null,
+      acknowledged: verifiedSubscription.acknowledged ?? null,
+    },
+  });
 }

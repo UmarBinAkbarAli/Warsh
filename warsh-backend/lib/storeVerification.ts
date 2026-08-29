@@ -34,6 +34,11 @@ export interface VerifiedStoreSubscription {
   storeState: StoreSubscriptionState;
   // Whether the store will auto-renew at activeUntil (false once cancelled).
   autoRenew: boolean;
+  // Google's acknowledgement state at verification time. An unacknowledged
+  // subscription is auto-refunded by Google after three days even though the
+  // payment succeeded, so this is entitlement-critical, not cosmetic.
+  // Undefined on iOS (Apple has no equivalent step).
+  acknowledged?: boolean;
 }
 
 export class StoreVerificationError extends Error {
@@ -161,6 +166,12 @@ interface GoogleSubscriptionLineItem {
 interface GoogleSubscriptionPurchase {
   subscriptionState?: string;
   lineItems?: GoogleSubscriptionLineItem[];
+  // "ACKNOWLEDGEMENT_STATE_PENDING" | "ACKNOWLEDGEMENT_STATE_ACKNOWLEDGED"
+  acknowledgementState?: string;
+  // Present when this subscription replaced an earlier one (plan change,
+  // re-subscribe, restore after reinstall). The old token stops receiving
+  // notifications, so any record still keyed to it is stale.
+  linkedPurchaseToken?: string;
 }
 
 interface GoogleProductPurchase {
@@ -409,6 +420,16 @@ async function verifyGooglePlaySubscription(input: VerifySubscriptionInput): Pro
     );
   }
 
+  // Acknowledge server-side. The client also calls finishTransaction, but that
+  // only runs if the app survives long enough to do it: a crash, a kill, or a
+  // dropped connection between paying and acknowledging leaves Google refunding
+  // a customer we already marked active. Doing it here makes acknowledgement a
+  // property of a verified purchase rather than of a lucky app lifecycle.
+  let acknowledged = snapshot.acknowledged;
+  if (!acknowledged) {
+    acknowledged = await acknowledgeGooglePlaySubscription(packageName, input.productId, token);
+  }
+
   return {
     productId: input.productId,
     basePlanId: snapshot.basePlanId,
@@ -417,6 +438,7 @@ async function verifyGooglePlaySubscription(input: VerifySubscriptionInput): Pro
     storeStatus: snapshot.storeStatus,
     storeState: snapshot.storeState,
     autoRenew: snapshot.autoRenew,
+    acknowledged,
   };
 }
 
@@ -427,6 +449,70 @@ export interface GoogleSubscriptionSnapshot {
   autoRenew: boolean;
   // Real expiry from the store's latest line item; null when none is present.
   activeUntil: Date | null;
+  // Raw acknowledgement state string as Google reported it.
+  acknowledgementState: string;
+  // True once Google considers the purchase acknowledged. Until it is, Google
+  // will refund the buyer after three days and revoke access, regardless of what
+  // our own database says.
+  acknowledged: boolean;
+  // Token this subscription superseded, when Google reports one.
+  linkedPurchaseToken?: string;
+}
+
+/**
+ * Acknowledges a Google Play subscription purchase (Android Publisher v3
+ * `purchases.subscriptions:acknowledge`). Google auto-refunds and revokes any
+ * purchase left unacknowledged for three days, so this is the step that actually
+ * keeps a paid subscriber subscribed.
+ *
+ * Never throws: acknowledgement failing must not turn a successfully verified
+ * purchase into an error for the buyer. Returns whether the purchase is now
+ * acknowledged. A 400 here means Google refuses the transition — in practice an
+ * already-acknowledged token — which is reported as acknowledged, since the
+ * caller only reaches this path when the snapshot said otherwise.
+ */
+export async function acknowledgeGooglePlaySubscription(
+  packageName: string,
+  subscriptionId: string,
+  purchaseToken: string,
+): Promise<boolean> {
+  let accessToken: string;
+  try {
+    accessToken = await getGoogleAccessToken();
+  } catch (error) {
+    console.error("[verify] acknowledge skipped - no access token:", (error as Error)?.message ?? error);
+    return false;
+  }
+
+  const url =
+    `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodeURIComponent(packageName)}` +
+    `/purchases/subscriptions/${encodeURIComponent(subscriptionId)}/tokens/${encodeURIComponent(purchaseToken)}:acknowledge`;
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: "{}",
+    });
+
+    if (response.ok) return true;
+
+    const errBody = await response.text().catch(() => "");
+    const reason = extractGoogleErrorReason(errBody);
+    console.error(
+      `[verify] acknowledge HTTP ${response.status} (reason: ${reason ?? "none"}): ${errBody.slice(0, 300)}`,
+    );
+    // Google answers an already-acknowledged token with a 400 "not in a valid
+    // state" rather than a distinct code. Treating that as success is correct and
+    // safe; every other status means the purchase is still at refund risk.
+    return response.status === 400;
+  } catch (error) {
+    console.error("[verify] acknowledge request failed:", (error as Error)?.message ?? error);
+    return false;
+  }
 }
 
 /**
@@ -472,12 +558,17 @@ export async function fetchGooglePlaySubscriptionSnapshot(
     .filter((item) => Number.isFinite(item.expiryDate.getTime()))
     .sort((a, b) => b.expiryDate.getTime() - a.expiryDate.getTime())[0];
 
+  const acknowledgementState = purchase.acknowledgementState ?? "ACKNOWLEDGEMENT_STATE_UNSPECIFIED";
+
   return {
     storeState,
     storeStatus: purchase.subscriptionState ?? "SUBSCRIPTION_STATE_UNSPECIFIED",
     basePlanId: latestLineItem?.productId,
     autoRenew: latestLineItem?.autoRenewingPlan?.autoRenewEnabled ?? (storeState === "active"),
     activeUntil: latestLineItem?.expiryDate ?? null,
+    acknowledgementState,
+    acknowledged: acknowledgementState === "ACKNOWLEDGEMENT_STATE_ACKNOWLEDGED",
+    linkedPurchaseToken: purchase.linkedPurchaseToken,
   };
 }
 
