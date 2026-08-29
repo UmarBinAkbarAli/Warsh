@@ -3,8 +3,9 @@ import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
 import { getUserSubscriptionState, requiresSubscription } from "../../../../lib/subscription";
 import { getPKTStartOfDay } from "../../../../lib/date";
+import { resolveDailyMessageLimit } from "../../../../lib/noorLimit";
 
-const DAILY_MESSAGE_LIMIT = Number(process.env.AI_DAILY_MESSAGE_LIMIT ?? 5);
+const DAILY_MESSAGE_LIMIT = resolveDailyMessageLimit();
 
 export async function GET(request: Request) {
   const userId = await getUserIdFromRequest(request);

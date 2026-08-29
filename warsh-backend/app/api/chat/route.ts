@@ -7,8 +7,9 @@ import { getPKTStartOfDay } from "../../../lib/date";
 import { ACHIEVEMENT_KEYS } from "../../../lib/achievements";
 import { getSubscriptionState, requiresSubscription } from "../../../lib/subscription";
 import { resolveContentLanguage } from "../../../lib/language";
+import { resolveDailyMessageLimit } from "../../../lib/noorLimit";
 
-const DAILY_MESSAGE_LIMIT = Number(process.env.AI_DAILY_MESSAGE_LIMIT ?? 5);
+const DAILY_MESSAGE_LIMIT = resolveDailyMessageLimit();
 
 // A tutoring question is a few sentences. The daily quota bounds how MANY calls
 // reach OpenAI, but nothing bounded their SIZE — so one user could spend five
