@@ -136,14 +136,25 @@ export async function getUserSubscriptionState(userId: string) {
   const user = await prisma.user.findUnique({
     where: { id: userId },
     select: {
+      id: true,
       trialStartAt: true,
       trialExpiresAt: true,
       subscriptionStatus: true,
       subscriptionActiveUntil: true,
       subscriptionProductId: true,
       noorOverageBalance: true,
+      lastPurchaseToken: true,
     },
   });
 
-  return user ? getSubscriptionState(user) : null;
+  if (!user) return null;
+
+  // A stored period that has elapsed is a cache miss, not proof the subscription
+  // ended: the renewal notification may never have reached us. Re-read it from
+  // the store before locking a paying subscriber out. Imported dynamically
+  // because the refresh needs storeVerification, which depends on this module.
+  const { refreshLapsedStoreSubscription } = await import("./subscriptionRefresh");
+  const refreshed = await refreshLapsedStoreSubscription(user);
+
+  return getSubscriptionState(refreshed);
 }

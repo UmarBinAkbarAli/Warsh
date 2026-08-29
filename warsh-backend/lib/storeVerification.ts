@@ -158,9 +158,12 @@ interface GoogleServiceAccountKey {
 }
 
 interface GoogleSubscriptionLineItem {
+  // The SUBSCRIPTION product id ("warsh_premium") — not the base plan.
   productId?: string;
   expiryTime?: string;
   autoRenewingPlan?: { autoRenewEnabled?: boolean };
+  // Where the purchased base plan ("monthly" / "yearly") actually lives.
+  offerDetails?: { basePlanId?: string; offerId?: string; offerTags?: string[] };
 }
 
 interface GoogleSubscriptionPurchase {
@@ -445,7 +448,12 @@ async function verifyGooglePlaySubscription(input: VerifySubscriptionInput): Pro
 export interface GoogleSubscriptionSnapshot {
   storeState: StoreSubscriptionState;
   storeStatus: string;
+  // Purchased base plan ("monthly" / "yearly") from offerDetails.
   basePlanId?: string;
+  // Subscription product the line item belongs to ("warsh_premium").
+  storeProductId?: string;
+  // Introductory/promotional offer applied to this base plan, when any.
+  offerId?: string;
   autoRenew: boolean;
   // Real expiry from the store's latest line item; null when none is present.
   activeUntil: Date | null;
@@ -549,9 +557,13 @@ export async function fetchGooglePlaySubscriptionSnapshot(
   const purchase = (await response.json()) as GoogleSubscriptionPurchase;
   const storeState = mapGoogleSubscriptionState(purchase.subscriptionState);
 
-  // NOTE: subscriptionsv2 lineItems[].productId is the BASE PLAN ID ("monthly"/"yearly"),
-  // not the subscription product ID ("warsh_premium"). The expiry is the store's real
-  // next-billing / access-end instant — never computed by adding a fixed interval.
+  // NOTE: subscriptionsv2 lineItems[].productId is the SUBSCRIPTION product id
+  // ("warsh_premium"). The purchased base plan ("monthly"/"yearly") is in
+  // offerDetails.basePlanId — reading productId as the plan (as this once did)
+  // stored "warsh_premium" as the plan, so the app could never tell which plan a
+  // subscriber was on and offered "Subscribe" to people who already had. The
+  // expiry is the store's real next-billing / access-end instant — never computed
+  // by adding a fixed interval.
   const latestLineItem = purchase.lineItems
     ?.filter((item) => item.expiryTime)
     .map((item) => ({ ...item, expiryDate: new Date(item.expiryTime as string) }))
@@ -563,7 +575,9 @@ export async function fetchGooglePlaySubscriptionSnapshot(
   return {
     storeState,
     storeStatus: purchase.subscriptionState ?? "SUBSCRIPTION_STATE_UNSPECIFIED",
-    basePlanId: latestLineItem?.productId,
+    basePlanId: latestLineItem?.offerDetails?.basePlanId,
+    storeProductId: latestLineItem?.productId,
+    offerId: latestLineItem?.offerDetails?.offerId,
     autoRenew: latestLineItem?.autoRenewingPlan?.autoRenewEnabled ?? (storeState === "active"),
     activeUntil: latestLineItem?.expiryDate ?? null,
     acknowledgementState,

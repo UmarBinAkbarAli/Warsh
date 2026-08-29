@@ -24,7 +24,13 @@ function subscriptionBody(overrides: Record<string, unknown> = {}) {
     subscriptionState: "SUBSCRIPTION_STATE_ACTIVE",
     acknowledgementState: "ACKNOWLEDGEMENT_STATE_PENDING",
     lineItems: [
-      { productId: "yearly", expiryTime: FUTURE, autoRenewingPlan: { autoRenewEnabled: true } },
+      {
+        // Google reports the SUBSCRIPTION id here; the plan is in offerDetails.
+        productId: "warsh_premium",
+        expiryTime: FUTURE,
+        autoRenewingPlan: { autoRenewEnabled: true },
+        offerDetails: { basePlanId: "yearly" },
+      },
     ],
     ...overrides,
   });
@@ -80,10 +86,13 @@ async function withGooglePlay(
   }
 }
 
-test("the yearly base plan is read from the line item, not assumed from the product", async () => {
+test("the yearly base plan is read from offerDetails, never from the product id", async () => {
   await withGooglePlay({}, async () => {
     const snapshot = await fetchGooglePlaySubscriptionSnapshot("com.warsh.app", "token");
+    // Reading lineItems[].productId here stored "warsh_premium" as the plan in
+    // production, which is why the app could not tell monthly from yearly.
     assert.equal(snapshot.basePlanId, "yearly");
+    assert.equal(snapshot.storeProductId, "warsh_premium");
     assert.equal(snapshot.storeState, "active");
     assert.equal(snapshot.autoRenew, true);
     // The expiry must be the store's own instant — a yearly plan that reported a
@@ -95,8 +104,18 @@ test("the yearly base plan is read from the line item, not assumed from the prod
 test("after a plan change the furthest-out line item wins", async () => {
   const body = subscriptionBody({
     lineItems: [
-      { productId: "monthly", expiryTime: NEARER_FUTURE, autoRenewingPlan: { autoRenewEnabled: false } },
-      { productId: "yearly", expiryTime: FUTURE, autoRenewingPlan: { autoRenewEnabled: true } },
+      {
+        productId: "warsh_premium",
+        expiryTime: NEARER_FUTURE,
+        autoRenewingPlan: { autoRenewEnabled: false },
+        offerDetails: { basePlanId: "monthly" },
+      },
+      {
+        productId: "warsh_premium",
+        expiryTime: FUTURE,
+        autoRenewingPlan: { autoRenewEnabled: true },
+        offerDetails: { basePlanId: "yearly" },
+      },
     ],
     linkedPurchaseToken: "superseded-monthly-token",
   });
