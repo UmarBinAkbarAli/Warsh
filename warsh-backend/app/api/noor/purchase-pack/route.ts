@@ -2,7 +2,11 @@ import { NextResponse } from "next/server";
 import { Prisma } from "@prisma/client";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
-import { StoreVerificationError, verifyGooglePlayConsumable } from "../../../../lib/storeVerification";
+import {
+  consumeGooglePlayProduct,
+  StoreVerificationError,
+  verifyGooglePlayConsumable,
+} from "../../../../lib/storeVerification";
 import {
   getNoorPackCredits,
   getStoreAccountId,
@@ -57,8 +61,17 @@ export async function POST(request: Request) {
     if (!user) {
       return NextResponse.json({ error: "User not found", code: "not_found" }, { status: 404 });
     }
+    // The credits are already banked, but the purchase may still be unconsumed
+    // (server consume failed, or the client died before finishTransaction). Play
+    // redelivers such a purchase on every launch, which is what lands here. Retry
+    // the consume so it stops being refund-eligible and stops blocking the next
+    // pack purchase.
+    const consumed = platform === "android"
+      ? await consumeNoorPackPurchase(normalizedToken)
+      : undefined;
+
     return NextResponse.json({
-      data: { noorOverageBalance: user.noorOverageBalance, alreadyGranted: true },
+      data: { noorOverageBalance: user.noorOverageBalance, alreadyGranted: true, consumed },
     });
   }
 
@@ -113,8 +126,15 @@ export async function POST(request: Request) {
       });
     });
 
+    // Only now that the ledger row and the balance are committed is it safe to
+    // consume: consuming first would release the entitlement for a purchase we
+    // might then fail to record, leaving the buyer with neither the money nor the
+    // messages. A failed consume is not an error for the buyer - the client's own
+    // finishTransaction and the already-granted retry above both cover it.
+    const consumed = await consumeNoorPackPurchase(normalizedToken);
+
     return NextResponse.json({
-      data: { noorOverageBalance: user.noorOverageBalance, alreadyGranted: false },
+      data: { noorOverageBalance: user.noorOverageBalance, alreadyGranted: false, consumed },
     });
   } catch (error) {
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") {
@@ -128,8 +148,9 @@ export async function POST(request: Request) {
           select: { noorOverageBalance: true },
         });
         if (user) {
+          const consumed = await consumeNoorPackPurchase(normalizedToken);
           return NextResponse.json({
-            data: { noorOverageBalance: user.noorOverageBalance, alreadyGranted: true },
+            data: { noorOverageBalance: user.noorOverageBalance, alreadyGranted: true, consumed },
           });
         }
       }
@@ -140,4 +161,15 @@ export async function POST(request: Request) {
     }
     throw error;
   }
+}
+
+/**
+ * Consumes the Play purchase behind a granted Noor pack. Returns undefined when
+ * the package name is not configured, so a missing config reads as "unknown"
+ * rather than a false "not consumed".
+ */
+async function consumeNoorPackPurchase(purchaseToken: string): Promise<boolean | undefined> {
+  const packageName = process.env.GOOGLE_PLAY_PACKAGE_NAME?.trim();
+  if (!packageName) return undefined;
+  return consumeGooglePlayProduct(packageName, NOOR_PACK_PRODUCT_ID, purchaseToken);
 }

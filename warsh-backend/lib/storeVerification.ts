@@ -720,3 +720,71 @@ async function postAppleReceipt(url: string, receiptData: string, sharedSecret: 
 
   return response.json() as Promise<AppleReceiptResponse>;
 }
+
+/**
+ * Consumes a Google Play one-time product purchase (Android Publisher v3
+ * `purchases.products:consume`).
+ *
+ * This is the consumable counterpart of `acknowledgeGooglePlaySubscription`, and
+ * it exists for the same reason: Google auto-refunds and revokes any purchase
+ * left unacknowledged for three days. Consuming a product both acknowledges it
+ * and releases the entitlement so the buyer can purchase the pack again — an
+ * unconsumed product stays owned, and Play refuses to sell a second copy of it.
+ *
+ * Leaving this to the client alone meant that any kill, crash or dropped
+ * connection between the server granting the credits and the app calling
+ * `finishTransaction` produced the worst possible outcome: the user keeps the
+ * granted messages, Google refunds the money three days later, and the still-owned
+ * purchase blocks every future pack purchase for that account.
+ *
+ * MUST be called only after the credits are durably granted. Consuming first
+ * would drop the entitlement for a purchase we might then fail to record,
+ * leaving the buyer with neither the money nor the messages.
+ *
+ * Never throws: a failed consume must not turn a successfully granted pack into
+ * an error for the buyer. The client's own `finishTransaction` and the retry on
+ * the already-granted path are the remaining safety nets.
+ */
+export async function consumeGooglePlayProduct(
+  packageName: string,
+  productId: string,
+  purchaseToken: string,
+): Promise<boolean> {
+  let accessToken: string;
+  try {
+    accessToken = await getGoogleAccessToken();
+  } catch (error) {
+    console.error("[verify] consume skipped - no access token:", (error as Error)?.message ?? error);
+    return false;
+  }
+
+  const url =
+    `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodeURIComponent(packageName)}` +
+    `/purchases/products/${encodeURIComponent(productId)}/tokens/${encodeURIComponent(purchaseToken)}:consume`;
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: "{}",
+    });
+
+    if (response.ok) return true;
+
+    const errBody = await response.text().catch(() => "");
+    const reason = extractGoogleErrorReason(errBody);
+    console.error(
+      `[verify] consume HTTP ${response.status} (reason: ${reason ?? "none"}): ${errBody.slice(0, 300)}`,
+    );
+    // As with acknowledgement, Google answers an already-consumed token with a
+    // 400 rather than a distinct code. That is the desired end state, so report
+    // it as consumed; every other status leaves the purchase at refund risk.
+    return response.status === 400;
+  } catch (error) {
+    console.error("[verify] consume request failed:", (error as Error)?.message ?? error);
+    return false;
+  }
+}
