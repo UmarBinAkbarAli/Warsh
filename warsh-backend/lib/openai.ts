@@ -100,7 +100,7 @@ export async function getAssistantReply(
     if (!process.env.OPENAI_API_KEY) {
       return getLocalTutorReply(message);
     }
-    return getOpenAIReply(message, history, responseLanguage);
+    return await getOpenAIReply(message, history, responseLanguage);
   } catch (error) {
     // Log so provider outages/misconfig are visible rather than silently
     // masked as an "offline" fallback reply.

@@ -65,6 +65,22 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
   provider promise, allowing the documented local fallback to catch OpenAI
   quota, billing, authentication, model, and outage errors instead of leaking
   a rejected promise into the generic 500-style UI error.
+- **That fix is now live and observably working (2026-08-29, later the same
+  day).** It had been left uncommitted in the working tree and went to
+  production with that day's later deploys (Vercel ships the working directory,
+  not `git HEAD`); it is now committed. Confirmed live on device: roughly thirty
+  Noor requests across the QA run all returned the graceful
+  "I am unavailable at the moment — please try again shortly" fallback, and none
+  produced the previous `Unable to send message. Try again.` failure. The
+  fallback firing on every request is also independent evidence that the
+  provider call is still failing, consistent with the unfunded/incorrect key
+  below.
+- **New defect found during that run: a failed reply still consumes the user's
+  daily Noor allowance.** The request is counted before the provider is called,
+  so a user hitting an OpenAI outage or a billing failure burns their whole
+  5-message day and receives no answers. Not yet fixed; it needs a decision on
+  whether to refund the count on a fallback reply or to not count until a real
+  assistant message is produced.
 - Remaining production configuration action: an owner must set Vercel
   Production `OPENAI_API_KEY` to a newly created key from the funded official
   OpenAI project, redeploy, and verify one authenticated Noor message returns an
@@ -105,7 +121,7 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - Vocabulary browsing, search, word detail, favorites/hidden state, Word of the Day, and SM-2-style SRS review
 - Tadabbur content and progression screens
 - Ustaad Noor chat with daily limits and consumable overage credits
-- Subscription/paywall, purchase verification, restore flow, and Google RTDN webhook code
+- Subscription/paywall, purchase verification, restore flow, and Google RTDN webhook code (the webhook is now actually *reached*: a Pub/Sub push subscription was created 2026-08-29; before that the code existed but no notification had ever been delivered)
 - Notifications, Mixpanel analytics, and Sentry integrations
 - English and Urdu UI modes with Arabic content retained in Arabic script
 - Responsive Expo web shell and production web deployment workflow
@@ -136,6 +152,53 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - EAS profiles for development, staging APK, production-preview APK, and production Android builds
 
 ## Recent verified repository changes
+
+### 2026-08-29 (RTDN delivery, Noor pack, IAP lifecycle close-out)
+
+Commits `277476a`, `8c715bb`, `0fdb0a0`, `3d1cbdb`, plus one infrastructure
+change in the owner's Google Cloud project and three Vercel production
+environment changes. Full detail and evidence live under P0-1; this is the
+index of what changed.
+
+**Infrastructure (Google Cloud project `umar-tools-27994`):**
+
+- Created push subscription `warsh-play-notifications-push` on topic
+  `warsh-play-notifications`, delivering to
+  `https://api.warsh.app/api/webhooks/google`. The topic previously had **no
+  subscription at all**, so no Real-Time Developer Notification had ever been
+  delivered since launch.
+- Created the key-less service account `warsh-rtdn-push@umar-tools-27994.iam.gserviceaccount.com`
+  as the OIDC push identity, rather than reusing the existing
+  `firebase-adminsdk` account; the console granted
+  `roles/iam.serviceAccountTokenCreator` on it to the Pub/Sub service agent.
+
+**Vercel production environment:**
+
+- Added `GOOGLE_PLAY_PUBSUB_AUDIENCE` and `GOOGLE_PLAY_PUBSUB_SERVICE_ACCOUNT`,
+  switching the webhook from the `?token=` shared secret to OIDC (the mode the
+  handler already preferred). `GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET` is
+  retained but now unused.
+- Reset `AI_DAILY_MESSAGE_LIMIT` to `5`. It held a non-numeric value; see the
+  fix below and the exception recorded in the technical spec.
+
+**Code:**
+
+- `feat(admin)` `277476a` — `GET /api/admin/play-diagnostics?...&refresh=1`
+  applies the same lapsed-subscription refresh the app triggers, so a stale row
+  can be healed from support/QA without waiting for the user to open the app.
+  Read-only without the flag. (This was written in the previous session but had
+  been left uncommitted in the working tree.)
+- `fix(iap)` `8c715bb` — Noor pack purchases are now consumed server-side via
+  `purchases.products:consume`, after the ledger row and balance commit and
+  never before. The already-granted and raced paths retry the consume.
+- `fix(noor)` `0fdb0a0` — new `warsh-backend/lib/noorLimit.ts`; both chat routes
+  now resolve the daily cap through it and fail closed on the documented default
+  of 5 instead of evaluating to `NaN`.
+- `docs` `3d1cbdb` — this file and the technical spec.
+
+**Deployed and verified live on production**, not inferred: RTDN delivery
+confirmed three independent ways, the daily cap confirmed enforcing at `429`,
+and the Noor consumable and cancellation/expiry paths confirmed on device.
 
 ### 2026-08-27 (Chapter 1 final test pilot)
 
@@ -688,8 +751,8 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ### P0 — launch blockers and required verification
 
-1. **Live IAP sandbox QA** — remaining: hard lockout once the trial window ALSO closes, and refund/voided-purchase clawback (both below). Monthly, yearly, restore/re-entitlement after reinstall, acknowledgement, the Noor consumable path, and cancellation/expiry were all verified on device 2026-08-29. The server-side verification blocker that previously made this impossible (below) is now fixed.
-   - **Partially cleared 2026-08-29 — a real Play purchase now verifies end to end.** Owner completed a purchase from a license-tester account on a Play-installed build and the app accepted it. Independently confirmed live against production, not taken on report: `GET /api/admin/play-diagnostics` returns `healthy: true` (`packageName com.warsh.app`, `trimmedLength 13`, OAuth ok, `applicationResolves.ok true` with a token-specific `400 invalid` for the probe token), and `GET /api/admin/users?status=active` shows exactly one active subscriber — `saad@umarbinakbarali.com`, `subscriptionStatus active`, `subscriptionActiveUntil 2026-08-29T07:28:56Z`, i.e. a ~5-minute entitlement window, which is Google's accelerated **monthly** license-test duration. That proves the whole chain: Play purchase → `POST /api/subscription/verify` → Google `subscriptionsv2` accepted the real token → user row flipped to `active`. **Still unverified:** the yearly base plan, restore/re-entitlement on reinstall, acknowledgement behavior, the Noor consumable path, and expiry/downgrade when the accelerated test window lapses. No real charge is required: add the test Gmail account under Play Console → Monetize setup → License testing, sign into that account on the test device, and purchases against the (now-production) listing are served as no-charge test transactions with accelerated renewal/expiry for testing that behavior too.
+1. **Live IAP sandbox QA — substantially CLEARED 2026-08-29.** Monthly, yearly, restore/re-entitlement after reinstall, acknowledgement, the Noor consumable path (including the crash window), and cancellation/expiry are all verified on a Play-installed build against production, each confirmed against live Google data rather than read off the phone. Real-Time Developer Notifications now reach the backend for the first time since launch. What is left has been split out as items 2 and 3 below: refund/voided-purchase handling, and hard lockout once the trial window also closes. The server-side verification blocker that previously made any of this impossible is fixed.
+   - **Partially cleared 2026-08-29 — a real Play purchase now verifies end to end.** Owner completed a purchase from a license-tester account on a Play-installed build and the app accepted it. Independently confirmed live against production, not taken on report: `GET /api/admin/play-diagnostics` returns `healthy: true` (`packageName com.warsh.app`, `trimmedLength 13`, OAuth ok, `applicationResolves.ok true` with a token-specific `400 invalid` for the probe token), and `GET /api/admin/users?status=active` shows exactly one active subscriber — `saad@umarbinakbarali.com`, `subscriptionStatus active`, `subscriptionActiveUntil 2026-08-29T07:28:56Z`, i.e. a ~5-minute entitlement window, which is Google's accelerated **monthly** license-test duration. That proves the whole chain: Play purchase → `POST /api/subscription/verify` → Google `subscriptionsv2` accepted the real token → user row flipped to `active`. **Still unverified _at that point in the day_ (all five were cleared later on 2026-08-29; kept for history):** the yearly base plan, restore/re-entitlement on reinstall, acknowledgement behavior, the Noor consumable path, and expiry/downgrade when the accelerated test window lapses. No real charge is required: add the test Gmail account under Play Console → Monetize setup → License testing, sign into that account on the test device, and purchases against the (now-production) listing are served as no-charge test transactions with accelerated renewal/expiry for testing that behavior too.
    - **2026-08-29 — three further faults found and fixed while working P0-1 (commits `c879c37`, `35db241`).** All three were found in live Google data, not in review, and all are deployed to production:
      1. **The stored base plan was always `warsh_premium`.** `subscriptionsv2` `lineItems[].productId` is the SUBSCRIPTION id; the purchased plan is `lineItems[].offerDetails.basePlanId`. Because the wrong field was read, the paywall's monthly/yearly comparison never matched, so it could not mark a subscriber's current plan and offered "Subscribe" to people who already had a subscription instead of the upgrade/downgrade flow. Now verified live: the tester's subscription reports `basePlanId: yearly`.
      2. **Acknowledgement was client-only.** The app called `finishTransaction` after verification; any kill, crash or dropped connection in between left the purchase unacknowledged, and Google refunds and revokes an unacknowledged subscription after three days while our row still said active. The server now acknowledges during verification (`purchases.subscriptions:acknowledge`), reports `acknowledged` on the verify response, and the paywall no longer reports a failed acknowledgement as a failed verification — a path that told users with a working subscription that we "couldn't confirm" it.
@@ -714,10 +777,13 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
      - **Noor's OpenAI fallback still consumes the user's daily quota.** Throughout this run every reply was the "I am unavailable at the moment" fallback, yet each request still counted against the 5/day cap. A user hitting an OpenAI outage burns their whole day's allowance for no answers. Not investigated further; the fallback itself may have its own cause worth checking.
    - **QA tooling added:** `GET /api/admin/play-diagnostics?email=<user>` reports what Google says about that user's token right now — base plan, expiry, state, acknowledgement, superseded token — beside what the database believes; `&refresh=1` applies the same lapsed-subscription refresh the app triggers. Purchase tokens are only ever returned as digests.
    - **Play Console change 2026-08-29 (approved by the owner):** `trywarshapp@gmail.com`, the Google account signed into the `Warsh_API_34` emulator, was added to the "License Testers" email list (now 2 addresses, alongside `umarakbar73456@gmail.com`) so device QA runs as no-charge test purchases. The "Early Testers" list (42 addresses) is still NOT selected for license testing.
-2. **Target-audience decision** — either select adults only for the simplest launch or implement the required age/minor handling before keeping ages 13–17.
-3. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`, `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
-4. **Scholar/content review** — establish a review process for Quranic Arabic accuracy, ayah relevance, pedagogy, repetition, and pacing before public launch.
-5. **RESOLVED 2026-08-27 — Google Play Payments profile is now set up.** Owner completed enrollment and Google confirmed the bank account by email. Independently reconfirmed live via Play Console → Settings → Payments profile on 2026-08-27: "How you get paid" now shows a verified bank account (PK•• •••• •••• •••• 0743, Umar Akbar) under "Manage payment methods." This closes out the 2026-08-26 finding below (kept for history): at that time the page showed no business/bank info, only a promotional "enroll" card, consistent with $0.00 lifetime revenue. Also reconfirmed live: License Testing is configured (an "Early Testers" email list, 42 addresses, active, `RESPOND_NORMALLY`), and the owner's own account (`umarakbar73456@gmail.com`) is on that list.
+2. **Refund / voided-purchase handling is not implemented.** The RTDN handler parses `subscriptionNotification` and `oneTimeProductNotification` but not `voidedPurchaseNotification`, and `handleOneTimeProductNotification` is deliberately a no-op. A refunded subscription keeps access until the stored period lapses and the lazy refresh notices; a refunded Noor pack keeps its 20 granted messages permanently. Play Console's "Notification content" is set to "Subscriptions and voided purchases only", which *does* include voided one-time products, so these notifications now arrive and are simply not consumed. Needs a decision before it can be built: when the refunded credits are already spent, does the balance go negative or floor at zero? `SUBSCRIPTION_REVOKED` (type 12) is already handled and cuts access immediately.
+3. **Hard lockout after the trial window also closes has not been exercised.** Cancellation and expiry are verified, but the tested account fell back to its still-open 7-day trial, which is the specified behaviour. The genuine no-access branch is the same `getSubscriptionState` path with `trialWindowOpen` false; it cannot be reached on an account whose trial started the same day, and there is no supported way to backdate `trialExpiresAt` in production. Check it against a staging account with an already-expired trial.
+4. **A failed Noor reply still consumes the user's daily allowance** (see the Noor/OpenAI incident above). Compounding this, production `OPENAI_API_KEY` still needs to be pointed at the funded project — until it is, every user burns 5 messages a day for fallback text.
+5. **Target-audience decision** — either select adults only for the simplest launch or implement the required age/minor handling before keeping ages 13–17.
+6. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`, `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
+7. **Scholar/content review** — establish a review process for Quranic Arabic accuracy, ayah relevance, pedagogy, repetition, and pacing before public launch.
+8. **RESOLVED 2026-08-27 — Google Play Payments profile is now set up.** Owner completed enrollment and Google confirmed the bank account by email. Independently reconfirmed live via Play Console → Settings → Payments profile on 2026-08-27: "How you get paid" now shows a verified bank account (PK•• •••• •••• •••• 0743, Umar Akbar) under "Manage payment methods." This closes out the 2026-08-26 finding below (kept for history): at that time the page showed no business/bank info, only a promotional "enroll" card, consistent with $0.00 lifetime revenue. Also reconfirmed live: License Testing is configured (an "Early Testers" email list, 42 addresses, active, `RESPOND_NORMALLY`), and the owner's own account (`umarakbar73456@gmail.com`) is on that list.
    - **RESOLVED 2026-08-29 — `applicationNotFound` root-caused and fixed.** The Vercel production env var `GOOGLE_PLAY_PACKAGE_NAME` held an 11-character value instead of the 13-character `com.warsh.app`. Google's Android Publisher API resolves the package *before* the purchase token, so every `subscriptionsv2` call returned `404 applicationNotFound` regardless of which token was presented — which is why the 2026-08-27 bogus-token probe failed identically to a real purchase. Everything previously suspected was healthy and verified this session: service account `warsh-play-verifier@warsh-production.iam.gserviceaccount.com` (Active, Admin), Google Cloud project `warsh-production`, Android Publisher API enabled, and the rotated key `cec5b7d8898403a6dc376bb3b94c3b6adf906deb` (created 2026-08-26) correctly deployed. The 2026-08-27 'transient propagation delay' hypothesis was wrong; the value had been incorrect for ~17 days and only surfaced when this path was exercised again. **Fix:** env var corrected in Vercel and redeployed. **Evidence:** the same bogus-token probe against `https://api.warsh.app` moved from `503 store_unavailable` (`reason: applicationNotFound`) to `400 invalid_purchase` (`reason: invalid`), and production logs now report `packageName.value = com.warsh.app`, `trimmedLength 13`. A token-specific rejection for a fake token is the correct response and proves package resolution works. The diagnostic account was deleted via `DELETE /api/users/me` immediately after. **Limitation:** this proves package resolution only — a real Play-installed purchase has NOT yet been verified end to end (still item 1 above). Test with `umarakbar73456@gmail.com`, now the only license tester; every other account is charged real money. **Hardening shipped in the same commit (`7f3abd5`):** Google API failures are now classified rather than collapsed into `invalid_purchase` (config/auth/5xx → `503 store_unavailable`, retryable and clearly our fault), applied to both the subscription and consumable paths; failures log Google's reason, the service-account identity and key id, and a non-secret package-name fingerprint (this is what found the wrong value); the paywall no longer tells a charged customer their purchase was invalid for our misconfiguration; and admin-gated `GET /api/admin/play-diagnostics` performs a live self-test of package resolution without touching a real purchase.
 
 ### P1 — content quality and launch polish
@@ -751,7 +817,9 @@ remains unverified.
 
 - **Content risk:** fixture validation proves structure, not scholarly or pedagogical correctness.
 - **Store risk:** repository code cannot establish current Google Play approval or sandbox-product availability.
-- **IAP risk:** billing code has changed since the last device report and still requires end-to-end Play-installed verification. The trial is seven days of full access; Chapter 1 completion is not a paywall trigger.
+- **IAP risk:** the purchase, restore, acknowledgement, consumable and cancellation/expiry paths are now verified end to end on a Play-installed build (2026-08-29). What remains is **refund handling**: `voidedPurchaseNotification` is not parsed, so a refunded subscription or a refunded Noor pack keeps its entitlement until the next lazy refresh, and refunded pack credits are never clawed back. The trial is seven days of full access; Chapter 1 completion is not a paywall trigger.
+- **Config-value risk:** production environment variables are consumed with no validation in several places, and a bad value can disable a control silently rather than fail loudly. `AI_DAILY_MESSAGE_LIMIT` held a non-numeric value and removed the daily Noor cap entirely for every user, undetected, until it was exercised on device on 2026-08-29. Only that one variable has been hardened; the same bare-`Number()`/bare-string pattern elsewhere has not been audited.
+- **Deploy-drift risk:** `vercel --prod` ships the working tree, not `git HEAD`, so any uncommitted local edit reaches production silently. This actually happened on 2026-08-29 with the `lib/openai.ts` fix. Commit before deploying, and check `git status` when production behaviour does not match the committed code.
 - **Tracker drift risk:** historical documents contain outdated product IDs, platform assumptions, SDK versions, URLs, and completed tasks.
 - **Asset risk:** image infrastructure exists, but illustration coverage remains incomplete.
 - **Rate-limit risk:** Noor limits rely on database message counting; this is acceptable for current scale but should be measured under load.
