@@ -367,6 +367,13 @@ Quranic recitation must use human audio rather than synthesized speech.
 
 Google Play verification uses service-account credentials and package `com.warsh.app`. The backend accepts only configured valid products and processes RTDN at `/api/webhooks/google`.
 
+A subscription replacement (plan change, re-subscribe, restore) gets a NEW purchase token and the old
+one goes silent, so `lib/subscriptionNotification.ts` follows the replacement's `linkedPurchaseToken`
+back to the superseded row and re-keys `User.lastPurchaseToken` onto the live token. Purchases are bound
+to an account by an obfuscated account id (`sha256(userId)`): required for consumables, and for
+subscriptions enforced only when Google reports one, since subscriptions bought before the client sent
+it have none and rejecting those would lock out existing subscribers.
+
 **RTDN delivery (configured 2026-08-29; consolidated into `warsh-production` 2026-08-31).** Play publishes to `projects/warsh-production/topics/warsh-play-notifications`, which is consumed by push subscription `warsh-play-notifications-push` in the same project, pointed at `https://api.warsh.app/api/webhooks/google`. Authentication is **OIDC**, not the `?token=` shared secret: the push runs as the dedicated, key-less service account `warsh-rtdn-push@warsh-production.iam.gserviceaccount.com`, and production must carry the matching pair
 
 - `GOOGLE_PLAY_PUBSUB_AUDIENCE=https://api.warsh.app/api/webhooks/google`

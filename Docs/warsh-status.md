@@ -90,6 +90,31 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Production ownership transfer
 
+- **RESOLVED 2026-08-31 — the last three payment-module audit findings, fixed and
+  deployed.** (a) **Plan changes were invisible to RTDN.** Google issues a NEW purchase
+  token whenever a subscription is replaced (upgrade, downgrade, re-subscribe, restore)
+  and the old token stops receiving notifications; the webhook looked users up by
+  `lastPurchaseToken` only, so every notification for the live subscription missed and
+  was dropped until the app happened to verify the new token, while
+  `refreshLapsedStoreSubscription` kept polling the dead one. `lib/subscriptionNotification.ts`
+  now follows the replacement's `linkedPurchaseToken` back to the superseded row and
+  re-keys it onto the live token, so a miss self-heals. (b) **`/api/chat` was the only
+  gated route** reading the stored subscription row directly, so a subscriber whose
+  renewal notification never arrived got 402 there while every other screen let them in;
+  it now refreshes a lapsed period first, as `/api/subscription/status` does. (c)
+  **Subscription verification did not bind a purchase to an account**, unlike the
+  consumable path beside it. New purchases send an obfuscated account id and the server
+  rejects a token Google attributes to a different Warsh account — deliberately asymmetric
+  with consumables in that an ABSENT id is accepted, because every subscription bought
+  before this change has none and requiring it would lock out existing subscribers.
+  **Evidence:** 7 new tests (92/92 backend pass), backend `build` and
+  `db:validate-fixtures` green, app `tsc` clean and `lint` at 0 errors; deployed, and a
+  synthetic replacement notification published to the live topic produced
+  `[rtdn] snapshot fetch failed while resolving user: Google Play rejected the purchase
+  token` — a string that exists only in the new resolver, proving the re-key path is live.
+  **Client half pending a release:** the obfuscated account id is only sent by builds
+  containing this change, so it takes effect for new Android purchases on the next APK/AAB.
+
 - **RESOLVED 2026-08-31 — three ways a paid Noor message went missing, fixed and
   deployed.** (a) The pack credit was debited *before* the OpenAI call, so a failed
   or timed-out reply burned a message the user had paid for with no refund path; the
