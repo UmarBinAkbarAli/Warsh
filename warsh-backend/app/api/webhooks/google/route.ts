@@ -22,11 +22,26 @@ const pubSubOidcClient = new OAuth2Client();
  */
 type PushAuthResult = "authorized" | "unauthorized" | "not_configured";
 
+/**
+ * The push identities we accept, from GOOGLE_PLAY_PUBSUB_SERVICE_ACCOUNT.
+ *
+ * Comma-separated so a push subscription can be migrated between Cloud projects
+ * without a delivery gap: the old and new identities are both accepted for the
+ * length of the cutover, then the retired one is removed. A single value is the
+ * normal steady state. Mirrors GOOGLE_OAUTH_CLIENT_IDS in lib/googleAuth.ts.
+ */
+function getAllowedPushServiceAccounts(): string[] {
+  return (process.env.GOOGLE_PLAY_PUBSUB_SERVICE_ACCOUNT ?? "")
+    .split(",")
+    .map((value) => value.trim())
+    .filter(Boolean);
+}
+
 async function authorizePush(request: Request): Promise<PushAuthResult> {
   const audience = process.env.GOOGLE_PLAY_PUBSUB_AUDIENCE?.trim();
-  const serviceAccount = process.env.GOOGLE_PLAY_PUBSUB_SERVICE_ACCOUNT?.trim();
+  const serviceAccounts = getAllowedPushServiceAccounts();
 
-  if (audience && serviceAccount) {
+  if (audience && serviceAccounts.length > 0) {
     const bearer = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "").trim() ?? "";
     if (!bearer) {
       console.warn("[rtdn] OIDC push configured but request carried no bearer token");
@@ -39,7 +54,9 @@ async function authorizePush(request: Request): Promise<PushAuthResult> {
       const ticket = await pubSubOidcClient.verifyIdToken({ idToken: bearer, audience });
       const payload = ticket.getPayload();
       const ok = Boolean(
-        payload?.email && payload.email === serviceAccount && payload.email_verified !== false,
+        payload?.email &&
+          serviceAccounts.includes(payload.email) &&
+          payload.email_verified !== false,
       );
       if (!ok) console.warn("[rtdn] OIDC token did not match the expected push service account");
       return ok ? "authorized" : "unauthorized";
