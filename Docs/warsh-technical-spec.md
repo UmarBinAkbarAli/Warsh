@@ -367,10 +367,10 @@ Quranic recitation must use human audio rather than synthesized speech.
 
 Google Play verification uses service-account credentials and package `com.warsh.app`. The backend accepts only configured valid products and processes RTDN at `/api/webhooks/google`.
 
-**RTDN delivery (configured 2026-08-29; before that date nothing was ever delivered).** Play publishes to `projects/umar-tools-27994/topics/warsh-play-notifications`, which is consumed by push subscription `warsh-play-notifications-push` in the same project, pointed at `https://api.warsh.app/api/webhooks/google`. Authentication is **OIDC**, not the `?token=` shared secret: the push runs as the dedicated, key-less service account `warsh-rtdn-push@umar-tools-27994.iam.gserviceaccount.com`, and production must carry the matching pair
+**RTDN delivery (configured 2026-08-29; consolidated into `warsh-production` 2026-08-31).** Play publishes to `projects/warsh-production/topics/warsh-play-notifications`, which is consumed by push subscription `warsh-play-notifications-push` in the same project, pointed at `https://api.warsh.app/api/webhooks/google`. Authentication is **OIDC**, not the `?token=` shared secret: the push runs as the dedicated, key-less service account `warsh-rtdn-push@warsh-production.iam.gserviceaccount.com`, and production must carry the matching pair
 
 - `GOOGLE_PLAY_PUBSUB_AUDIENCE=https://api.warsh.app/api/webhooks/google`
-- `GOOGLE_PLAY_PUBSUB_SERVICE_ACCOUNT=warsh-rtdn-push@umar-tools-27994.iam.gserviceaccount.com`
+- `GOOGLE_PLAY_PUBSUB_SERVICE_ACCOUNT=warsh-rtdn-push@warsh-production.iam.gserviceaccount.com` (comma-separated; multiple identities are accepted so a push subscription can move projects without a delivery gap)
 
 When both are set the handler ignores `GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET`, which is kept only as a fallback. Four settings on that subscription are load-bearing and must not be reverted: expiration is **never expire** (the 31-day-inactivity default would silently delete the subscription during a quiet month and restore the original bug), payload unwrapping is **off** (the handler expects the Pub/Sub envelope), retry is exponential backoff 10–600s, and the ack deadline is 60s because the handler calls Google and writes to the database before answering. Health check: the subscription's `push_request_count` metric should show only an `ack_200` series, with `oldest_unacked_message_age` at 0.
 
@@ -395,6 +395,19 @@ Store-console state is external. Always verify products, base plans, tester acce
 Absence of optional configuration should disable or degrade the integration safely, except where the production launch checklist makes it mandatory.
 
 ### Production ownership and account transfer
+
+**Single-project rule (established 2026-08-31).** Every Google-side resource for
+Warsh lives in Cloud project `warsh-production` (project number `695435119958`).
+That project already owns the Google Sign-In OAuth client
+`695435119958-...apps.googleusercontent.com`, the Play verification service
+account `warsh-play-verifier@warsh-production.iam.gserviceaccount.com`, and — since
+2026-08-31 — the RTDN topic, push subscription and push identity. Do not create
+Warsh resources in a personal project: RTDN spent its first two days in
+`umar-tools-27994`, where `trywarshapp@gmail.com` had no access at all, making a
+personal account the sole recovery path for every renewal, cancellation and refund
+notification. An OAuth client cannot be moved between projects, so a resource put
+in the wrong project is not always recoverable — get it right at creation. If push
+notifications are ever enabled, the Firebase/FCM project must be created here too.
 
 Warsh production ownership is being transferred from the founder's personal
 accounts to the dedicated project account `trywarshapp@gmail.com`. This is an

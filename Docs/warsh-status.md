@@ -90,6 +90,40 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Production ownership transfer
 
+- **RESOLVED 2026-08-31 — RTDN consolidated into `warsh-production`; the Google
+  side is now a single project.** RTDN had been built in `umar-tools-27994`
+  ("Umar Tools", project number 269972336658), a personal project whose only human
+  principal was `umarakbar73456@gmail.com` as Owner — `trywarshapp@gmail.com` had
+  no access to it whatsoever, so a personal account was the sole recovery path for
+  every renewal, cancellation, refund and revocation notification. Verified live in
+  IAM. Purchase verification meanwhile ran from `warsh-production` (695435119958),
+  where BOTH accounts are already Owner. **Direction was forced, not chosen:** the
+  Google Sign-In OAuth client is `695435119958-...`, i.e. owned by
+  `warsh-production`, and an OAuth client cannot be moved between projects without
+  issuing a new client ID that every installed APK would fail against.
+  **Migration:** created topic `projects/warsh-production/topics/warsh-play-notifications`,
+  granted `google-play-developer-notifications@system.gserviceaccount.com` the
+  `pubsub.publisher` role on it, created key-less SA
+  `warsh-rtdn-push@warsh-production.iam.gserviceaccount.com` with
+  `serviceAccountTokenCreator` for the Pub/Sub service agent, and created push
+  subscription `warsh-play-notifications-push` with the same four load-bearing
+  settings as before (never expire, ack 60s, retry 10-600s, wrapper on) — all
+  confirmed by `gcloud pubsub subscriptions describe`. To avoid a delivery gap the
+  handler was first changed (`344475c`) to accept a comma-separated
+  `GOOGLE_PLAY_PUBSUB_SERVICE_ACCOUNT`, mirroring `GOOGLE_OAUTH_CLIENT_IDS`, so both
+  identities were valid across the cutover. **Evidence, three stages:** (a) a message
+  published by hand to the new topic before Play was repointed produced
+  `[rtdn] received message id: 21526047340766042`, proving the new
+  topic->subscription->OIDC->handler chain independently; (b) after the Play Console
+  topic was repointed, Play's own "Send test notification" produced
+  `[rtdn] received message id: 21434977043674052`, proving the Play->topic half;
+  (c) after the old identity was dropped from the env and production redeployed, a
+  third test produced `[rtdn] received message id: 21628496291447995`, proving the
+  final single-identity steady state. **Cleanup:** the old subscription was confirmed
+  at `num_undelivered_messages: 0` via the Monitoring API before removal; the old
+  subscription, topic and service account in `umar-tools-27994` are deleted. Nothing
+  belonging to Warsh remains in that project.
+
 - The target production owner and recovery account is `trywarshapp@gmail.com`.
 - Production ownership must move from personal accounts to that dedicated
   account across Google Cloud/Google Play, Vercel, Neon, Cloudflare/R2,
