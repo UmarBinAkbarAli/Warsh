@@ -374,7 +374,12 @@ Google Play verification uses service-account credentials and package `com.warsh
 
 When both are set the handler ignores `GOOGLE_PLAY_NOTIFICATION_WEBHOOK_SECRET`, which is kept only as a fallback. Four settings on that subscription are load-bearing and must not be reverted: expiration is **never expire** (the 31-day-inactivity default would silently delete the subscription during a quiet month and restore the original bug), payload unwrapping is **off** (the handler expects the Pub/Sub envelope), retry is exponential backoff 10–600s, and the ack deadline is 60s because the handler calls Google and writes to the database before answering. Health check: the subscription's `push_request_count` metric should show only an `ack_200` series, with `oldest_unacked_message_age` at 0.
 
-Not yet consumed: `voidedPurchaseNotification`. Refunded subscriptions and refunded Noor packs are not clawed back.
+`voidedPurchaseNotification` is consumed (`lib/voidedPurchase.ts`): a refunded Noor pack has its
+credits clawed back and a refunded subscription loses access immediately. The clawback is idempotent
+on `StorePurchase.voidedAt` because Play redelivers a notification until it is acked, and is floored
+at a zero balance so a pack whose messages were already spent cannot leave a negative balance that
+silently taxes the next purchase. Partial refunds (`refundType != 1`) are logged for manual review
+rather than guessed at, since Google does not say how much of the quantity was returned.
 
 Store-console state is external. Always verify products, base plans, tester access, and Play-installed build availability before IAP QA.
 

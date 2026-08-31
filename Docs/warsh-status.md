@@ -90,6 +90,28 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Production ownership transfer
 
+- **RESOLVED 2026-08-31 — three ways a paid Noor message went missing, fixed and
+  deployed.** (a) The pack credit was debited *before* the OpenAI call, so a failed
+  or timed-out reply burned a message the user had paid for with no refund path; the
+  claim is now returned when the reply fails, and the user's message is persisted only
+  on success so a failure no longer consumes a daily quota slot either. (b) The balance
+  was read and then decremented unconditionally — two concurrent sends against a balance
+  of 1 both saw 1, both decremented, and the balance went to -1 permanently, making the
+  next purchased pack worth one message less than it cost; the `gt: 0` guard now lives in
+  the WHERE clause (`lib/noorCredits.ts`) so the claim is the check. (c) Google's
+  `voidedPurchaseNotification` was never consumed, so a refunded Noor pack returned the
+  money and kept the credits; `lib/voidedPurchase.ts` now claws them back, idempotently on
+  `StorePurchase.voidedAt` (Play redelivers until acked), floored at zero, with partial
+  refunds surfaced for review and voided subscriptions revoked. **Evidence:** 10 new unit
+  tests covering the race, the refund-on-failure, double-delivery, the zero floor and the
+  partial-refund hold (85/85 backend tests pass); migration
+  `20260831120000_add_store_purchase_voided_at` applied to production *before* deploy; and a
+  synthetic voided-purchase notification published to the live topic produced
+  `[rtdn] notification type: voided_purchase` / `voided purchase does not match any recorded
+  purchase` with `num_undelivered_messages` flat at 0 — proving the new branch is live, the
+  new column exists in the database production actually uses, and the push was acked 200
+  rather than retried.
+
 - **RESOLVED 2026-08-31 — RTDN consolidated into `warsh-production`; the Google
   side is now a single project.** RTDN had been built in `umar-tools-27994`
   ("Umar Tools", project number 269972336658), a personal project whose only human
