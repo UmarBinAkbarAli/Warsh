@@ -60,6 +60,11 @@ model StorePurchase {
     quantity       Int      @default(1)
     creditsGranted Int
     createdAt      DateTime @default(now())
+    // Set when Google reports the purchase refunded/charged back via RTDN
+    // voidedPurchaseNotification. Presence is what makes the clawback idempotent:
+    // Play redelivers a void notification until it is acked, and the credits must
+    // only ever be removed once.
+    voidedAt       DateTime?
 
     @@index([userId, productId])
 }

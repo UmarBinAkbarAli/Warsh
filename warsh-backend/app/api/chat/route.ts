@@ -8,6 +8,7 @@ import { ACHIEVEMENT_KEYS } from "../../../lib/achievements";
 import { getSubscriptionState, requiresSubscription } from "../../../lib/subscription";
 import { resolveContentLanguage } from "../../../lib/language";
 import { resolveDailyMessageLimit } from "../../../lib/noorLimit";
+import { claimNoorPackCredit, refundNoorPackCredit } from "../../../lib/noorCredits";
 
 const DAILY_MESSAGE_LIMIT = resolveDailyMessageLimit();
 
@@ -66,15 +67,11 @@ export async function POST(request: Request) {
   let usingPackCredit = false;
 
   if (messagesUsedToday >= DAILY_MESSAGE_LIMIT) {
-    const packBalance = userRecord?.noorOverageBalance ?? 0;
-    if (packBalance <= 0) {
+    // Atomic: see lib/noorCredits. A read-then-decrement let concurrent sends
+    // drive the balance negative, so the claim itself is the check.
+    if (!(await claimNoorPackCredit(userId))) {
       return NextResponse.json({ error: "daily_limit_reached", code: "too_many_requests" }, { status: 429 });
     }
-    // Consume one pack credit
-    await prisma.user.update({
-      where: { id: userId },
-      data: { noorOverageBalance: { decrement: 1 } },
-    });
     usingPackCredit = true;
   }
 
@@ -86,10 +83,27 @@ export async function POST(request: Request) {
   });
   const recentHistory = recentHistoryNewestFirst.reverse();
 
-  await prisma.chatMessage.create({ data: { userId, role: "USER", content: message } });
   // Noor replies in the user's translationLanguage, falling back to
   // nativeLanguage for rows written before that column existed.
-  const reply = await getAssistantReply(message, recentHistory, resolveContentLanguage(userRecord));
+  //
+  // Nothing is charged until this succeeds. The credit was claimed above to stop
+  // concurrent sends from overspending it, but a failed reply delivers nothing,
+  // so it is handed straight back — a paid message must not evaporate because
+  // OpenAI timed out. The user's message is likewise persisted only after a
+  // successful reply, so a failure does not burn a daily quota slot either.
+  let reply: string;
+  try {
+    reply = await getAssistantReply(message, recentHistory, resolveContentLanguage(userRecord));
+  } catch (error) {
+    if (usingPackCredit) await refundNoorPackCredit(userId);
+    console.error("[chat] assistant reply failed:", (error as Error)?.message ?? error);
+    return NextResponse.json(
+      { error: "Noor is unavailable right now. Please try again.", code: "assistant_unavailable" },
+      { status: 503 },
+    );
+  }
+
+  await prisma.chatMessage.create({ data: { userId, role: "USER", content: message } });
   await prisma.chatMessage.create({ data: { userId, role: "ASSISTANT", content: reply, tokens: reply.length } });
 
   // Award FIRST_NOOR on the user's very first message
@@ -108,8 +122,16 @@ export async function POST(request: Request) {
     }
   }
 
+  // Re-read after a claim rather than subtracting from the value we read before
+  // it: under concurrent sends the pre-claim number is already stale, and this is
+  // the balance the app renders back to a user who just spent real money.
   const remainingPackBalance = usingPackCredit
-    ? (userRecord?.noorOverageBalance ?? 1) - 1
+    ? (
+        await prisma.user.findUnique({
+          where: { id: userId },
+          select: { noorOverageBalance: true },
+        })
+      )?.noorOverageBalance ?? 0
     : (userRecord?.noorOverageBalance ?? 0);
 
   return NextResponse.json({

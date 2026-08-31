@@ -3,6 +3,10 @@ import { OAuth2Client } from "google-auth-library";
 import { prisma } from "../../../../lib/prisma";
 import { timingSafeStringEqual } from "../../../../lib/auth";
 import { fetchGooglePlaySubscriptionSnapshot } from "../../../../lib/storeVerification";
+import {
+  applyVoidedPurchase,
+  type VoidedPurchaseNotification,
+} from "../../../../lib/voidedPurchase";
 
 // Reused across invocations so Google's certs are cached rather than refetched
 // on every notification.
@@ -106,6 +110,7 @@ interface DeveloperNotification {
   packageName?: string;
   subscriptionNotification?: SubscriptionNotification;
   oneTimeProductNotification?: OneTimeProductNotification;
+  voidedPurchaseNotification?: VoidedPurchaseNotification;
 }
 
 export async function POST(request: Request) {
@@ -145,13 +150,22 @@ export async function POST(request: Request) {
     return new NextResponse(null, { status: 200 });
   }
 
-  const { subscriptionNotification, oneTimeProductNotification } = notification;
+  const { subscriptionNotification, oneTimeProductNotification, voidedPurchaseNotification } =
+    notification;
   console.log(
     "[rtdn] notification type:",
-    subscriptionNotification ? "subscription" : oneTimeProductNotification ? "one_time" : "unknown",
+    voidedPurchaseNotification
+      ? "voided_purchase"
+      : subscriptionNotification
+        ? "subscription"
+        : oneTimeProductNotification
+          ? "one_time"
+          : "unknown",
   );
 
-  if (subscriptionNotification) {
+  if (voidedPurchaseNotification) {
+    await applyVoidedPurchase(voidedPurchaseNotification);
+  } else if (subscriptionNotification) {
     await handleSubscriptionNotification(subscriptionNotification);
   } else if (oneTimeProductNotification) {
     handleOneTimeProductNotification(oneTimeProductNotification);
