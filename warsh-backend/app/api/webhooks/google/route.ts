@@ -2,7 +2,11 @@ import { NextResponse } from "next/server";
 import { OAuth2Client } from "google-auth-library";
 import { prisma } from "../../../../lib/prisma";
 import { timingSafeStringEqual } from "../../../../lib/auth";
-import { fetchGooglePlaySubscriptionSnapshot } from "../../../../lib/storeVerification";
+import {
+  applySubscriptionNotification,
+  SUBSCRIPTION_REVOKED,
+  type SubscriptionNotification,
+} from "../../../../lib/subscriptionNotification";
 import {
   applyVoidedPurchase,
   type VoidedPurchaseNotification,
@@ -83,8 +87,6 @@ async function authorizePush(request: Request): Promise<PushAuthResult> {
   return timingSafeStringEqual(token, expectedToken) ? "authorized" : "unauthorized";
 }
 
-// Refund/chargeback: cut access immediately rather than trusting snapshot timing.
-const SUBSCRIPTION_REVOKED = 12;
 const NOOR_PACK_PRODUCT_ID = "warsh_noor_pack";
 
 interface PubSubMessage {
@@ -92,12 +94,6 @@ interface PubSubMessage {
     data?: string;
     messageId?: string;
   };
-}
-
-interface SubscriptionNotification {
-  notificationType?: number;
-  purchaseToken?: string;
-  subscriptionId?: string;
 }
 
 interface OneTimeProductNotification {
@@ -166,7 +162,7 @@ export async function POST(request: Request) {
   if (voidedPurchaseNotification) {
     await applyVoidedPurchase(voidedPurchaseNotification);
   } else if (subscriptionNotification) {
-    await handleSubscriptionNotification(subscriptionNotification);
+    await applySubscriptionNotification(subscriptionNotification);
   } else if (oneTimeProductNotification) {
     handleOneTimeProductNotification(oneTimeProductNotification);
   }
@@ -174,45 +170,6 @@ export async function POST(request: Request) {
   // Always acknowledge to Pub/Sub; retries are handled through store snapshots
   // and the purchase ledger rather than replaying a notification mutation.
   return new NextResponse(null, { status: 200 });
-}
-
-async function handleSubscriptionNotification(notif: SubscriptionNotification) {
-  const { notificationType, purchaseToken } = notif;
-  if (!purchaseToken || notificationType == null) return;
-
-  const user = await prisma.user.findFirst({
-    where: { lastPurchaseToken: purchaseToken },
-    select: { id: true },
-  });
-  if (!user) return;
-
-  if (notificationType === SUBSCRIPTION_REVOKED) {
-    await prisma.user.update({
-      where: { id: user.id },
-      data: { subscriptionStatus: "expired", subscriptionActiveUntil: new Date() },
-    });
-    return;
-  }
-
-  const packageName = process.env.GOOGLE_PLAY_PACKAGE_NAME?.trim();
-  if (!packageName) return;
-
-  let snapshot;
-  try {
-    snapshot = await fetchGooglePlaySubscriptionSnapshot(packageName, purchaseToken);
-  } catch (error) {
-    console.warn("[rtdn] subscription snapshot fetch failed:", (error as Error)?.message ?? error);
-    return;
-  }
-
-  await prisma.user.update({
-    where: { id: user.id },
-    data: {
-      subscriptionStatus: snapshot.storeState,
-      subscriptionActiveUntil: snapshot.activeUntil ?? undefined,
-      subscriptionProductId: snapshot.basePlanId ?? undefined,
-    },
-  });
 }
 
 function handleOneTimeProductNotification(notif: OneTimeProductNotification) {

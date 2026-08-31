@@ -6,6 +6,7 @@ import { getAssistantReply } from "../../../lib/openai";
 import { getPKTStartOfDay } from "../../../lib/date";
 import { ACHIEVEMENT_KEYS } from "../../../lib/achievements";
 import { getSubscriptionState, requiresSubscription } from "../../../lib/subscription";
+import { refreshLapsedStoreSubscription } from "../../../lib/subscriptionRefresh";
 import { resolveContentLanguage } from "../../../lib/language";
 import { resolveDailyMessageLimit } from "../../../lib/noorLimit";
 import { claimNoorPackCredit, refundNoorPackCredit } from "../../../lib/noorCredits";
@@ -44,9 +45,11 @@ export async function POST(request: Request) {
     prisma.user.findUnique({
       where: { id: userId },
       select: {
+        id: true,
         nativeLanguage: true,
         translationLanguage: true,
         noorOverageBalance: true,
+        lastPurchaseToken: true,
         trialStartAt: true,
         trialExpiresAt: true,
         subscriptionStatus: true,
@@ -60,7 +63,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  if (requiresSubscription(getSubscriptionState(userRecord))) {
+  // Re-read a lapsed period from the store before refusing, exactly as
+  // /api/subscription/status does. This was the only gated route reading the
+  // stored row directly, so a paying subscriber whose renewal notification never
+  // arrived got "subscription required" here while every other screen let them in.
+  const refreshed = await refreshLapsedStoreSubscription(userRecord);
+  if (requiresSubscription(getSubscriptionState(refreshed))) {
     return NextResponse.json({ error: "Subscription required", code: "subscription_required" }, { status: 402 });
   }
 
@@ -93,7 +101,7 @@ export async function POST(request: Request) {
   // successful reply, so a failure does not burn a daily quota slot either.
   let reply: string;
   try {
-    reply = await getAssistantReply(message, recentHistory, resolveContentLanguage(userRecord));
+    reply = await getAssistantReply(message, recentHistory, resolveContentLanguage(refreshed));
   } catch (error) {
     if (usingPackCredit) await refundNoorPackCredit(userId);
     console.error("[chat] assistant reply failed:", (error as Error)?.message ?? error);

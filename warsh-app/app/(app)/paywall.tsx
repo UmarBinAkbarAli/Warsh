@@ -16,6 +16,8 @@ import {
 } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import * as Crypto from "expo-crypto";
+import { useAuthStore } from "@stores/authStore";
 import { Ionicons } from "@expo/vector-icons";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 import { WEB_BASE_URL, verifyPurchase, getSubscriptionStatus, redeemPromoCode, getApiErrorMessage } from "@services/api";
@@ -59,6 +61,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   const router = useRouter();
   const t = useT();
   const language = useLanguage();
+  const user = useAuthStore((state) => state.user);
   const isUrdu = language === "ur";
 
   const [selected, setSelected] = useState<"monthly" | "annual">("annual");
@@ -193,6 +196,14 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     return recurringPhase?.formattedPrice ?? offer.displayPrice ?? fallback;
   }
 
+
+  // sha256(userId) — the same value the server derives, binding the purchase to
+  // this Warsh account so a token cannot be claimed by a different one. Google
+  // accepts up to 64 characters and a hex digest is exactly 64.
+  async function getStoreAccountId() {
+    if (!user?.id) return undefined;
+    return Crypto.digestStringAsync(Crypto.CryptoDigestAlgorithm.SHA256, user.id);
+  }
   // Launches the billing flow. The result arrives asynchronously via the purchase
   // listeners (see effect above) — we must NOT verify here, because on Android this
   // promise resolves before the user finishes paying (token isn't available yet).
@@ -216,7 +227,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     const basePlanId = BASE_PLAN_IDS[selected];
     const product = products.find((item) => getIapProductId(item) === SUBSCRIPTION_PRODUCT_ID);
     try {
-      await requestSubscriptionPurchase(productId, product, basePlanId);
+      await requestSubscriptionPurchase(productId, product, basePlanId, await getStoreAccountId());
       // Success/failure handled by handlePurchaseUpdate / handlePurchaseError.
     } catch (err: any) {
       // Thrown only if the flow couldn't be launched at all.
@@ -242,9 +253,9 @@ export default function PaywallScreen({ dismissable = true }: Props) {
         // No existing token found locally — fall back to a normal purchase so the
         // user isn't stuck; Google will still reconcile to a single subscription.
         planChangeInFlightRef.current = false;
-        await requestSubscriptionPurchase(productId, product, newBasePlanId);
+        await requestSubscriptionPurchase(productId, product, newBasePlanId, await getStoreAccountId());
       } else {
-        await requestSubscriptionPlanChange(productId, product, newBasePlanId, oldToken);
+        await requestSubscriptionPlanChange(productId, product, newBasePlanId, oldToken, await getStoreAccountId());
       }
     } catch (err: any) {
       handlePurchaseError(err);

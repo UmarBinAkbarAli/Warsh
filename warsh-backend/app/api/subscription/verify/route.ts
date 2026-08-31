@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
 import { StoreVerificationError, verifyStoreSubscription } from "../../../../lib/storeVerification";
+import { getStoreAccountId } from "../../../../lib/noorPackPurchase";
 
 export async function POST(request: Request) {
   const userId = await getUserIdFromRequest(request);
@@ -20,7 +21,13 @@ export async function POST(request: Request) {
 
   let verifiedSubscription;
   try {
-    verifiedSubscription = await verifyStoreSubscription({ productId, purchaseToken, receiptData, platform });
+    verifiedSubscription = await verifyStoreSubscription({
+      productId,
+      purchaseToken,
+      receiptData,
+      platform,
+      expectedObfuscatedAccountId: getStoreAccountId(userId),
+    });
   } catch (error) {
     if (error instanceof StoreVerificationError) {
       return NextResponse.json({ error: error.message, code: error.code }, { status: error.status });

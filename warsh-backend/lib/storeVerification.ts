@@ -18,6 +18,8 @@ interface VerifySubscriptionInput {
   productId: string;
   purchaseToken?: string;
   receiptData?: string;
+  // sha256(userId), matching what the client sends to Play at purchase time.
+  expectedObfuscatedAccountId?: string;
 }
 
 export interface VerifiedStoreSubscription {
@@ -168,6 +170,9 @@ interface GoogleSubscriptionLineItem {
 
 interface GoogleSubscriptionPurchase {
   subscriptionState?: string;
+  // Set only when the buying client passed an obfuscated account id at purchase
+  // time. Absent for every subscription bought before we started sending one.
+  externalAccountIdentifiers?: { obfuscatedExternalAccountId?: string };
   lineItems?: GoogleSubscriptionLineItem[];
   // "ACKNOWLEDGEMENT_STATE_PENDING" | "ACKNOWLEDGEMENT_STATE_ACKNOWLEDGED"
   acknowledgementState?: string;
@@ -408,6 +413,25 @@ async function verifyGooglePlaySubscription(input: VerifySubscriptionInput): Pro
 
   const snapshot = await fetchGooglePlaySubscriptionSnapshot(packageName, token);
 
+  // Reject a subscription Google says belongs to a different Warsh account.
+  //
+  // Deliberately asymmetric with the consumable path, which requires the id: every
+  // subscription bought before the client started sending one has no identifier at
+  // all, and demanding it would lock out existing paying subscribers. So an absent
+  // id is accepted (uniqueness on lastPurchaseToken remains the backstop) while a
+  // PRESENT id that does not match is refused.
+  if (
+    input.expectedObfuscatedAccountId &&
+    snapshot.obfuscatedExternalAccountId &&
+    snapshot.obfuscatedExternalAccountId !== input.expectedObfuscatedAccountId
+  ) {
+    throw new StoreVerificationError(
+      "This subscription belongs to a different Warsh account.",
+      403,
+      "purchase_account_mismatch",
+    );
+  }
+
   // Grant/refresh access for any state Google still considers entitled
   // (active, cancelled-but-in-period, grace period) with a future expiry.
   const hasAccess =
@@ -465,6 +489,8 @@ export interface GoogleSubscriptionSnapshot {
   acknowledged: boolean;
   // Token this subscription superseded, when Google reports one.
   linkedPurchaseToken?: string;
+  // The obfuscated account id the buyer's client sent at purchase time, when any.
+  obfuscatedExternalAccountId?: string;
 }
 
 /**
@@ -583,6 +609,7 @@ export async function fetchGooglePlaySubscriptionSnapshot(
     acknowledgementState,
     acknowledged: acknowledgementState === "ACKNOWLEDGEMENT_STATE_ACKNOWLEDGED",
     linkedPurchaseToken: purchase.linkedPurchaseToken,
+    obfuscatedExternalAccountId: purchase.externalAccountIdentifiers?.obfuscatedExternalAccountId,
   };
 }
 

@@ -208,7 +208,12 @@ export async function finishIapTransaction(purchase: IapSubscriptionPurchase, is
  * Launches the native billing flow. The resolved value is NOT the purchase —
  * listen via `addIapPurchaseListeners` for the actual result. See note above.
  */
-export async function requestSubscriptionPurchase(productId: string, product?: IapSubscription, basePlanId?: string) {
+export async function requestSubscriptionPurchase(
+  productId: string,
+  product?: IapSubscription,
+  basePlanId?: string,
+  obfuscatedAccountId?: string,
+) {
   const available = await connectIap();
   const IAP = await getIapModule();
 
@@ -230,6 +235,9 @@ export async function requestSubscriptionPurchase(productId: string, product?: I
       google: {
         skus: [productId],
         subscriptionOffers,
+        // Binds the purchase to this Warsh account so the server can reject a
+        // token presented by a different one. Consumables already do this.
+        obfuscatedAccountId,
       },
     },
   });
@@ -245,6 +253,7 @@ export async function requestSubscriptionPlanChange(
   product: IapSubscription | undefined,
   newBasePlanId: string,
   oldPurchaseToken: string,
+  obfuscatedAccountId?: string,
 ) {
   const available = await connectIap();
   const IAP = await getIapModule();
@@ -269,6 +278,7 @@ export async function requestSubscriptionPlanChange(
         // same subscription rather than a new, duplicate subscription.
         purchaseToken: oldPurchaseToken,
         replacementMode: REPLACEMENT_MODE_WITH_TIME_PRORATION,
+        obfuscatedAccountId,
       },
     },
   });
