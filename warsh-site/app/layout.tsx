@@ -68,11 +68,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: '/',
-    types: {
-      // Declared site-wide so a reader's autodiscovery finds the feed from any
-      // page, not only from /blog.
-      'application/rss+xml': [{ url: '/blog/rss.xml', title: 'Warsh — Notes on Quranic Arabic' }],
-    },
   },
   openGraph: {
     type: 'website',
@@ -149,6 +144,19 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       className={`${inter.variable} ${cormorant.variable} ${scheherazade.variable}`}
     >
       <head>
+        {/*
+          Feed autodiscovery is rendered here rather than declared through
+          `metadata.alternates.types`, because Next replaces the whole
+          `alternates` object per route instead of merging into it: every page
+          here sets its own `canonical`, which silently dropped the layout's
+          feed entry from all of them. Rendered into <head> it is unconditional.
+        */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Warsh — Notes on Quranic Arabic"
+          href="/blog/rss.xml"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
