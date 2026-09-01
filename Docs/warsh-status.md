@@ -234,6 +234,39 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Recent verified repository changes
 
+### 2026-09-01 (warsh.app SEO remediation, part 4)
+
+Deployed and verified live.
+
+- **Physical address published as "Karachi, Pakistan"** — owner's choice, city
+  and country only. Rendered in the footer imprint as an hCard `adr` and as
+  `PostalAddress{addressLocality, addressCountry}` on the Organization schema.
+  It matches what the Facebook page already states, so the two agree. No street
+  line was invented to satisfy the audit.
+- **`/about` gained a closing "The record" section** — Our Story, Who We Are,
+  What We Do, What You Can Rely On. Added *beneath* the typographic poster
+  rather than replacing it: the poster acts make the argument, this section is
+  the part a reader checks. Clears four of the About Us checks plus "Trusted
+  Source Statement" without dismantling the page's design. Every claim is
+  sourced from `content/faq.tsx` or `warsh-backend/lib/openai.ts`.
+- **DMCA badge** — skipped, confirmed by the owner.
+
+**Still open:**
+
+- **Authors/Team page — not built.** This was named in the first triage, then
+  silently dropped when the seven-item batch-2 plan was written, and the gap
+  was only caught on a later verification pass. `/team` 404s. It needs real
+  names, roles, and in particular who reviews the Arabic; for a Quranic Arabic
+  product this is the page where invented content would be worst.
+- **Twitter/X, YouTube, TikTok** — the owner says these accounts exist but has
+  not supplied URLs. `SOCIAL_LINKS` in `content/site.ts` takes them in one edit
+  and they flow to both the footer and Organization `sameAs`.
+- **Social proof** — the owner twice asked for invented reviews. Declined both
+  times: publishing fabricated testimonials as genuine Google Play feedback is
+  deceptive and a Play policy risk. The real listing shows **10+ downloads and
+  no ratings-and-reviews section at all**. The "Trusted Source Statement" need
+  is met instead by the factual "What you can rely on" block on `/about`.
+
 ### 2026-09-01 (warsh.app SEO audit remediation, part 3 — close-out)
 
 Commit `bea7feb`, deployed and verified live.
