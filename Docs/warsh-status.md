@@ -234,6 +234,71 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Recent verified repository changes
 
+### 2026-09-01 (warsh.app SEO audit remediation, part 2)
+
+Commit `f550fee`, deployed to the `warsh-site` Vercel project and verified
+against live `https://warsh.app` through a browser (see the note on the Vercel
+challenge below).
+
+**Shipped and verified live:**
+
+- `/contact` — three routes (product support, content corrections, account and
+  data), each with what to include and its response time, plus the "who we are"
+  section. Carries `ContactPage` schema using schema.org's controlled
+  `contactType` vocabulary.
+- `/sitemap` — the HTML sitemap. `content/routes.ts` is now the single route
+  table behind both it and `sitemap.xml`, so the human- and machine-readable
+  sitemaps cannot drift.
+- Client-side search over the blog and the 19 help answers, on `/blog` and
+  `/help`, grouped by source. No index, no third-party service, no network call
+  (the CSP allows `connect-src` to nothing but the Warsh API). The FAQ moved to
+  `content/faq.tsx` so `/blog` can index it without importing a route module.
+- `SearchAction` added to the WebSite node, held back deliberately in `578a90c`
+  until a search route existed. It targets `/help?q=` and `SiteSearch` reads
+  that param, so the sitelinks-searchbox URL genuinely searches.
+- Back-to-top button, appearing after one viewport and retiring over the footer.
+- Footer social row, plus Organization `sameAs` and `telephone`.
+
+**Business values supplied by the owner and verified before publishing:**
+
+- Phone `+92 318 104 6756`, published on `/contact` and as Organization
+  `telephone`.
+- Instagram `warsh.app`, Facebook `trywarshapp`, LinkedIn `warshapp`. All three
+  were opened in a browser and confirmed live and owned before being linked.
+  **Two are empty** (Instagram 0 posts, LinkedIn 0 posts) and the Instagram bio
+  says "learn Arabic through playful acts", which contradicts the site's
+  positioning; Facebook lists `info@warsh.app` where the site uses
+  `support@warsh.app`. Google reads `sameAs` profiles for entity consistency, so
+  both are worth correcting on the profiles themselves.
+
+**Two bugs found by observing the running page, not by reading the code:**
+
+- The back-to-top button originally read the footer's
+  `data-warsh-footer-in-view` attribute. That attribute never reached the
+  component and the disc sat on the colophon at full scroll — navy on navy, so
+  only a floating arrow showed. It now measures the footer's own rect.
+- `scrollTo` used `behavior: 'auto'` as its fallback. `'auto'` does not mean
+  "jump"; it means "defer to CSS", and `globals.css` sets
+  `scroll-behavior: smooth` on `html`. On a browser with smooth scrolling
+  disabled the control was completely dead. Now `'instant'`, with a 120 ms
+  guard that jumps if the smooth scroll never starts.
+
+**Still outstanding (not built, awaiting the owner):**
+
+- `/editorial-guidelines` — drafted and designed, but it describes a review
+  process ("reviewed before publication", "a lesson does not ship until that
+  check is recorded") that has not been confirmed against what the curriculum
+  team actually does. It is a public commitment about religious content and must
+  not ship unverified.
+- Play Store social proof — needs the real rating and three to five real
+  reviews. No invented figures.
+
+**Environment note:** `api.warsh.app` and `warsh.app` both served Vercel's
+Security Checkpoint 403 to this machine's IP throughout this work, which makes
+`curl` verification useless and caused a local build to prerender an empty blog
+search index. It is per-IP and self-clearing; a real browser passes the
+challenge, and production was unaffected. See [[vercel-transient-challenge-403]].
+
 ### 2026-09-01 (warsh.app SEO audit remediation, part 1)
 
 Commits `578a90c`, `1338acb`. Both deployed to the `warsh-site` Vercel project
