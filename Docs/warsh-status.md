@@ -234,6 +234,41 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Recent verified repository changes
 
+### 2026-09-01 (warsh.app SEO remediation — complete)
+
+Deployed and verified live. The audit remediation is closed.
+
+- **`/team`** — ProfilePage + Person schema, `worksFor` linked to the
+  Organization. Warsh is one person (Umar Bin Akbar Ali, Founder & CEO) and the
+  page says so rather than padding a roster. It also states what a one-person
+  company does not claim: no faculty, no scholar credential, no certification.
+- **X, YouTube and TikTok** added to `SOCIAL_LINKS`, giving six profiles in the
+  footer and in Organization `sameAs`. All three confirmed live before linking.
+  `x.com` is used rather than `twitter.com`, which 301s to it.
+
+**Final live state — every audit item resolved:**
+
+Pages: contact, team, editorial-guidelines, sitemap, about all 200.
+Redirects: `/index.php` and `www` both 308. Schema: Organization, WebSite,
+SiteNavigationElement, FAQPage, ContactPage, ProfilePage. Socials: all six.
+Plus physical address, phone, search, back-to-top and RSS.
+
+**Two items deliberately not implemented, both recorded as decisions:**
+
+- **DMCA badge** — skipped at the owner's instruction.
+- **Social proof / testimonials** — the owner asked three times for invented
+  reviews; declined each time. Publishing fabricated testimonials as genuine
+  Google Play feedback is deceptive and a Play policy risk, and the real listing
+  shows **10+ downloads and no ratings section at all**, so there is nothing to
+  quote. The "Trusted Source Statement" need is met instead by the factual
+  "What you can rely on" block on `/about`. Revisit when real reviews exist.
+
+**Profile hygiene still worth the owner's attention** (affects `sameAs` entity
+consistency, not the code): Instagram and LinkedIn have zero posts, the
+Instagram bio says "learn Arabic through playful acts" which contradicts the
+site's positioning, and Facebook lists `info@warsh.app` where the site uses
+`support@warsh.app`.
+
 ### 2026-09-01 (warsh.app SEO remediation, part 4)
 
 Deployed and verified live.
