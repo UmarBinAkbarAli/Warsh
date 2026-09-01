@@ -46,6 +46,27 @@ const nextConfig = {
   async headers() {
     return [{ source: "/:path*", headers: SECURITY_HEADERS }];
   },
+  async redirects() {
+    return [
+      // One canonical origin. Vercel serves www.warsh.app and warsh.app as the
+      // same deployment, so without this both hosts returned 200 with byte-identical
+      // HTML — two indexable copies of every page, and a split of any link equity
+      // between them. The canonical tag pointed at the apex already; this makes the
+      // server agree with it.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.warsh.app" }],
+        destination: "https://warsh.app/:path*",
+        permanent: true,
+      },
+      // Legacy index filenames. Nothing here ever served PHP, but crawlers and
+      // old inbound links probe these, and an unhandled probe returns Vercel's
+      // 403 rather than a clean signal. Send them to the homepage.
+      { source: "/index.php", destination: "/", permanent: true },
+      { source: "/index.html", destination: "/", permanent: true },
+      { source: "/index.htm", destination: "/", permanent: true },
+    ];
+  },
 };
 
 module.exports = nextConfig;

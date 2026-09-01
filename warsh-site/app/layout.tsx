@@ -3,7 +3,13 @@ import localFont from 'next/font/local';
 import './globals.css';
 import { Nav } from './components/Nav';
 import { FooterGate } from './components/FooterGate';
-import { SITE_URL } from '@/content/site';
+import {
+  NAV_LINKS,
+  PLAY_STORE_URL,
+  SITE_URL,
+  SOCIAL_LINKS,
+  SUPPORT_EMAIL,
+} from '@/content/site';
 
 const inter = localFont({
   src: [
@@ -62,6 +68,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: '/',
+    types: {
+      // Declared site-wide so a reader's autodiscovery finds the feed from any
+      // page, not only from /blog.
+      'application/rss+xml': [{ url: '/blog/rss.xml', title: 'Warsh — Notes on Quranic Arabic' }],
+    },
   },
   openGraph: {
     type: 'website',
@@ -84,13 +95,51 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * One `@graph` rather than several stray blocks, so the nodes can reference each
+ * other by `@id` and a crawler reads them as one description of one site instead
+ * of three unrelated fragments.
+ *
+ * `SearchAction` is deliberately absent from the WebSite node. Declaring one
+ * without a working search endpoint tells Google to surface a sitelinks
+ * searchbox that would 404, which is worse than not claiming search at all — add
+ * it in the same commit that ships the search route, never before.
+ */
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Warsh',
-  url: SITE_URL,
-  logo: `${SITE_URL}/images/warsh-logo.png`,
-  sameAs: ['https://play.google.com/store/apps/details?id=com.warsh.app'],
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'Warsh',
+      url: SITE_URL,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/warsh-logo.png`,
+        width: 1048,
+        height: 712,
+      },
+      description:
+        'Warsh teaches the Arabic of the Quran through a structured 72-chapter course, vocabulary practice, Tadabbur, and Ustaad Noor, an AI tutor.',
+      email: SUPPORT_EMAIL,
+      sameAs: [PLAY_STORE_URL, ...SOCIAL_LINKS.map((link) => link.href)],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: 'Warsh',
+      description: 'Understand the Arabic of the Quran.',
+      inLanguage: 'en',
+      publisher: { '@id': `${SITE_URL}/#organization` },
+    },
+    {
+      '@type': 'SiteNavigationElement',
+      '@id': `${SITE_URL}/#navigation`,
+      name: NAV_LINKS.map((link) => link.label),
+      url: NAV_LINKS.map((link) => `${SITE_URL}${link.href}`),
+    },
+  ],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

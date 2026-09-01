@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Section } from '../components/Section';
-import { Faq, type FaqSection } from '../components/Faq';
-import { SUPPORT_EMAIL } from '@/content/site';
+import { Faq } from '../components/Faq';
+import { faqPlainAnswer, type FaqSection } from '../components/faq-content';
+import { SITE_URL, SUPPORT_EMAIL } from '@/content/site';
 
 export const metadata: Metadata = {
   title: 'Help & FAQ',
@@ -41,6 +42,8 @@ const sections: FaqSection[] = [
             with the email address registered to your account and we will investigate.
           </>
         ),
+        plain:
+          'First, try tapping "Restore purchases" on the subscription paywall screen in the app. If that does not work, email us at support@warsh.app with the email address registered to your account and we will investigate.',
       },
     ],
   },
@@ -109,6 +112,8 @@ const sections: FaqSection[] = [
             with your device model, OS version, and the lesson you were trying to open.
           </>
         ),
+        plain:
+          'First, check that you have a stable internet connection. If the problem persists, try closing and reopening the app. If the issue continues, email us at support@warsh.app with your device model, OS version, and the lesson you were trying to open.',
       },
       {
         q: "The audio doesn't play. What should I do?",
@@ -130,14 +135,44 @@ const sections: FaqSection[] = [
             with the chapter, lesson number, and a description of the issue.
           </>
         ),
+        plain:
+          'If you find a mistake in a lesson, vocabulary entry, or any Arabic text, please email us at support@warsh.app with the chapter, lesson number, and a description of the issue.',
       },
     ],
   },
 ];
 
+/**
+ * FAQPage structured data, built from the same `sections` the page renders so the
+ * two can never disagree — Google penalises markup that describes answers a
+ * reader cannot actually see on the page.
+ */
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${SITE_URL}/help#faq`,
+  mainEntity: sections.flatMap((section) =>
+    section.items.flatMap((item) => {
+      const answer = faqPlainAnswer(item);
+      if (!answer) return [];
+      return [
+        {
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: { '@type': 'Answer', text: answer },
+        },
+      ];
+    }),
+  ),
+};
+
 export default function HelpPage() {
   return (
     <Section padded={false} className="pb-24 pt-14 md:pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="mx-auto max-w-prose">
         <h1 className="font-display text-3xl font-semibold text-navy sm:text-4xl">Help &amp; FAQ</h1>
         <p className="mt-3 text-base leading-relaxed text-deep">

@@ -1,11 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import type { FaqSection } from './faq-content';
 
-export type FaqSection = {
-  label: string;
-  items: { q: string; a: React.ReactNode }[];
-};
+export type { FaqItem, FaqSection } from './faq-content';
 
 export function Faq({ sections }: { sections: FaqSection[] }) {
   const [openKey, setOpenKey] = useState<string | null>(null);
