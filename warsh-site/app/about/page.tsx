@@ -5,7 +5,7 @@ import Link from 'next/link';
 import '../scrollcraft-theme.css';
 import './about.css';
 import { AboutMotion } from './AboutMotion';
-import { PLAY_STORE_URL, SUPPORT_EMAIL } from '@/content/site';
+import { ADDRESS, PLAY_STORE_URL, SUPPORT_EMAIL } from '@/content/site';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -205,6 +205,67 @@ export default function AboutPage() {
             and the four skills are put together is set out on the{' '}
             <Link href="/features">features page</Link>, and what any of it costs is on the{' '}
             <Link href="/pricing">pricing page</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* 4b · THE RECORD. Plain prose, deliberately unstyled next to the poster
+          above it, because this is the part a reader checks rather than reads:
+          who we are, what we do, where we are, and what is actually true about
+          the product. The acts above make the argument; this section is the
+          evidence, and mixing the two would weaken both. */}
+      <section className="wa-act" data-sc-act="flow" aria-labelledby="about-record">
+        <div className="wa-wrap">
+          <h2 id="about-record" className="wa-line" style={{ marginBottom: '0.6em' }}>
+            The record.
+          </h2>
+
+          <div className="wa-record">
+            <div>
+              <h3>Our story</h3>
+              <p>
+                Warsh began with one gap: a billion people recite the Quran in Salah, and most
+                cannot say, word for word, what they are saying. Existing options asked for years
+                of study or taught vocabulary that never reached an ayah. Warsh was built to close
+                that specific gap in a few focused minutes a day.
+              </p>
+            </div>
+
+            <div>
+              <h3>Who we are</h3>
+              <p>
+                A small independent team based in {ADDRESS.display}, building for Pakistan and the
+                wider South Asian and global Muslim diaspora first &mdash; communities where Salah
+                is daily practice and formal Arabic education is often out of reach. Warsh is not
+                backed by, endorsed by, or affiliated with any institution.
+              </p>
+            </div>
+
+            <div>
+              <h3>What we do</h3>
+              <p>
+                We teach the Arabic of the Quran across a 72-chapter course, beginning with
+                Al-Fatiha. Alongside the lessons: a Vocabulary Bank of 600+ words with audio and
+                spaced repetition, Tadabbur for reading real ayat word by word, and Ustaad Noor, an
+                AI tutor that answers Arabic questions and refers religious rulings to qualified
+                scholars.
+              </p>
+            </div>
+
+            <div>
+              <h3>What you can rely on</h3>
+              <p>
+                The Vocabulary Bank is free permanently, including after a subscription ends. Every
+                account starts with 7 days of full access. Warsh runs on Android 8 and later, and
+                is publicly available on Google Play. How our lessons are written and reviewed, and
+                the limits we hold ourselves to, are set out in our{' '}
+                <Link href="/editorial-guidelines">editorial guidelines</Link>.
+              </p>
+            </div>
+          </div>
+
+          <p className="wa-small" style={{ marginTop: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
+            Questions, corrections, or press: see the <Link href="/contact">contact page</Link>.
           </p>
         </div>
       </section>

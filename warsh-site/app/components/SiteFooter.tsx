@@ -4,7 +4,9 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import './site-footer.css';
 import {
+  ADDRESS,
   FOOTER_LINKS,
+  PHONE,
   PLAY_STORE_URL,
   SOCIAL_LINKS,
   SUPPORT_EMAIL,
@@ -88,7 +90,14 @@ export function SiteFooter({ reveal = false }: { reveal?: boolean }) {
         <div className="wsf__imprint">
           <span>
             &copy; {new Date().getFullYear()} Warsh. All rights reserved.{' '}
-            <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
+            {/*
+              Marked up as an hCard adr so the locality is machine-readable next
+              to the Organization schema's PostalAddress, rather than being just
+              two more words in the copyright line.
+            */}
+            <span className="adr">{ADDRESS.display}</span>.{' '}
+            <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>{' '}
+            <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a>
           </span>
           <span className="wsf__ar" style={{ letterSpacing: 0 }}>
             حَيْثُ تُصْنَعُ الْعَرَبِيَّة

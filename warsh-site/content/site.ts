@@ -32,6 +32,22 @@ export const PHONE = {
   display: '+92 318 104 6756',
 } as const;
 
+/**
+ * Where Warsh is made.
+ *
+ * City and country only — that is what the owner chose to publish, and it is
+ * what the Facebook page already states, so the two agree. Deliberately not
+ * dressed up as a full postal address: schema.org's PostalAddress is happy with
+ * locality and country alone, and inventing a street line to satisfy an audit
+ * checkbox would be worse than a short honest one.
+ */
+export const ADDRESS = {
+  locality: 'Karachi',
+  country: 'Pakistan',
+  countryCode: 'PK',
+  display: 'Karachi, Pakistan',
+} as const;
+
 export const NAV_LINKS = [
   { href: '/features', label: 'Features' },
   { href: '/pricing', label: 'Pricing' },

@@ -5,6 +5,7 @@ import { Nav } from './components/Nav';
 import { FooterGate } from './components/FooterGate';
 import { BackToTop } from './components/BackToTop';
 import {
+  ADDRESS,
   NAV_LINKS,
   PHONE,
   PLAY_STORE_URL,
@@ -119,6 +120,11 @@ const jsonLd = {
         'Warsh teaches the Arabic of the Quran through a structured 72-chapter course, vocabulary practice, Tadabbur, and Ustaad Noor, an AI tutor.',
       email: SUPPORT_EMAIL,
       telephone: PHONE.tel,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: ADDRESS.locality,
+        addressCountry: ADDRESS.countryCode,
+      },
       sameAs: [PLAY_STORE_URL, ...SOCIAL_LINKS.map((link) => link.href)],
     },
     {
