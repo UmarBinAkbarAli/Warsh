@@ -234,6 +234,31 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Recent verified repository changes
 
+### 2026-09-01 (warsh.app SEO audit remediation, part 3 — close-out)
+
+Commit `bea7feb`, deployed and verified live.
+
+- `/editorial-guidelines` published, clearing the last EEAT Pages check. The
+  owner approved publishing it as-is after the accuracy concern was raised.
+  The Ustaad Noor section is taken from the guardrails actually enforced in
+  `warsh-backend/lib/openai.ts`, so it describes real behaviour rather than
+  aspiration. One sentence from the reviewed design was deliberately dropped:
+  "a lesson does not ship until that check is recorded" described an internal
+  control that was invented during drafting and never confirmed. If a recorded
+  review gate does exist, that stronger wording can go back in.
+- Registered in `content/routes.ts`, so it reaches `sitemap.xml`, `/sitemap`,
+  `robots.txt` and the footer from the one route table. sitemap.xml now carries
+  15 URLs.
+
+**Social proof (audit item "Social Proof Displayed") is closed as not
+actionable.** The owner asked for invented reviews; that was declined, and the
+real Play Store listing was checked instead: `com.warsh.app` currently shows
+**10+ downloads and no ratings-and-reviews section at all** — there are zero
+reviews to display. Nothing was built. Revisit once real reviews exist; the
+design for the section is in the review artifact and can be filled in then.
+Note the mockup's placeholder figures (4.8, "1,000+ installs") were never real
+and bear no relation to the actual listing.
+
 ### 2026-09-01 (warsh.app SEO audit remediation, part 2)
 
 Commit `f550fee`, deployed to the `warsh-site` Vercel project and verified
