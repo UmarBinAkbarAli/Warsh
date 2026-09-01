@@ -234,6 +234,56 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Recent verified repository changes
 
+### 2026-09-01 (warsh.app SEO audit remediation, part 1)
+
+Commits `578a90c`, `1338acb`. Both deployed to the `warsh-site` Vercel project
+and verified against live `https://warsh.app`.
+
+An external SEO scan of warsh.app returned ~30 failed checks. This is the first
+of two batches: everything with no design surface, so it did not need the
+Pen-first gate in `AGENTS.md`. The remaining items are new pages and UI
+components (Contact, Editorial Guidelines, HTML sitemap, blog search,
+back-to-top, footer social row, social proof) and are awaiting a Pen design.
+
+**Shipped and verified live:**
+
+- `www.warsh.app` now 308-redirects to the apex. Vercel served both hosts from
+  the same deployment, so every page returned 200 with byte-identical HTML on
+  two indexable origins while the canonical tag claimed only one.
+- `/index.php`, `/index.html`, `/index.htm` redirect to `/` instead of
+  returning Vercel's 403 to crawler probes.
+- The lone `Organization` JSON-LD block is now an `@graph` with `Organization`,
+  `WebSite` and `SiteNavigationElement` cross-referenced by `@id`.
+- `FAQPage` markup on `/help`, 19 questions, generated from the same `sections`
+  array the page renders so markup and page cannot diverge.
+- A default social card at `/opengraph-image`, generated via `ImageResponse`
+  from the site's own palette and fonts. The site previously declared
+  `twitter:card: summary_large_image` and `og:title` but shipped **no image**,
+  so every share rendered as a bare text row. Not flagged by the audit.
+- `/favicon.ico` and `/apple-icon.png`, both previously 404.
+- RSS feed at `/blog/rss.xml` off the Studio blog API, with autodiscovery.
+
+**Deliberately not done:**
+
+- No `SearchAction` on the `WebSite` node until a search route exists to answer
+  it; claiming a sitelinks searchbox that 404s is worse than claiming none.
+- `SOCIAL_LINKS` in `content/site.ts` is the single source for both the footer
+  row and `sameAs`, and is intentionally **empty** — a dead social link is a
+  worse trust signal than an absent one. Awaiting real profile URLs.
+- The audit's "About Us Page 0 of 9" is not being treated as a defect. `/about`
+  is a deliberate typographic poster (rationale in `app/about/page.tsx`), and
+  the scanner's about-page detector simply failed to recognise it; the page
+  returns 200 with 367 words. The `Our Story / Who We Are / What We Do` content
+  the checklist wants is planned for the new Contact page instead.
+- The audit's "2 broken images found" is a false positive: the crawler read the
+  `&amp;`-escaped `/_next/image?...&amp;w=96` URLs literally, which 400s. Both
+  images return 200 in a browser.
+
+**Gotcha recorded:** `metadata.alternates.types` in the root layout emitted
+nothing, because Next replaces the whole `alternates` object per route rather
+than merging into it, and every page here sets its own `canonical`. The RSS
+`<link>` is rendered directly into `<head>` instead. Fixed in `1338acb`.
+
 ### 2026-08-29 (RTDN delivery, Noor pack, IAP lifecycle close-out)
 
 Commits `277476a`, `8c715bb`, `0fdb0a0`, `3d1cbdb`, plus one infrastructure
