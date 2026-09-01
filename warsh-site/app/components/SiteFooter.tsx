@@ -3,7 +3,13 @@
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import './site-footer.css';
-import { FOOTER_LINKS, PLAY_STORE_URL, SUPPORT_EMAIL, WEB_APP_URL } from '@/content/site';
+import {
+  FOOTER_LINKS,
+  PLAY_STORE_URL,
+  SOCIAL_LINKS,
+  SUPPORT_EMAIL,
+  WEB_APP_URL,
+} from '@/content/site';
 
 /**
  * The one footer the whole site closes on: the homepage's colophon plate,
@@ -68,6 +74,8 @@ export function SiteFooter({ reveal = false }: { reveal?: boolean }) {
               </a>
               .
             </p>
+
+            <SocialRow />
           </div>
 
           <nav className="wsf__cols" aria-label="Site">
@@ -88,6 +96,26 @@ export function SiteFooter({ reveal = false }: { reveal?: boolean }) {
         </div>
       </div>
     </footer>
+  );
+}
+
+/**
+ * Rendered only when a profile is actually listed, so an empty SOCIAL_LINKS
+ * leaves no orphan row of nothing behind it.
+ */
+function SocialRow() {
+  if (SOCIAL_LINKS.length === 0) return null;
+
+  return (
+    <ul className="wsf__social" aria-label="Warsh on social media">
+      {SOCIAL_LINKS.map((social) => (
+        <li key={social.href}>
+          <a href={social.href} target="_blank" rel="noreferrer me">
+            {social.label}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }
 

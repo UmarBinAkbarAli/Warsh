@@ -1,25 +1,26 @@
 import type { MetadataRoute } from 'next';
 import { getBlogPosts } from '@/content/blog';
+import { SITE_ROUTES } from '@/content/routes';
+import { SITE_URL } from '@/content/site';
 
+/**
+ * The XML sitemap, generated from the shared route table in `content/routes.ts`
+ * so it always lists exactly what the HTML sitemap at /sitemap lists. Blog posts
+ * are appended from the live Studio API rather than hard-coded.
+ */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogPosts = await getBlogPosts();
-  const siteModified = new Date('2026-08-25T00:00:00.000Z');
-  const legalModified = new Date('2026-07-20T00:00:00.000Z');
 
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: 'https://warsh.app', lastModified: siteModified, changeFrequency: 'weekly', priority: 1 },
-    { url: 'https://warsh.app/features', lastModified: siteModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: 'https://warsh.app/pricing', lastModified: siteModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: 'https://warsh.app/about', lastModified: siteModified, changeFrequency: 'monthly', priority: 0.6 },
-    { url: 'https://warsh.app/blog', lastModified: siteModified, changeFrequency: 'weekly', priority: 0.6 },
-    { url: 'https://warsh.app/privacy', lastModified: legalModified, changeFrequency: 'monthly', priority: 0.3 },
-    { url: 'https://warsh.app/terms', lastModified: legalModified, changeFrequency: 'monthly', priority: 0.3 },
-    { url: 'https://warsh.app/delete-account', lastModified: legalModified, changeFrequency: 'monthly', priority: 0.3 },
-    { url: 'https://warsh.app/help', lastModified: legalModified, changeFrequency: 'monthly', priority: 0.5 },
-  ];
+  const staticPages: MetadataRoute.Sitemap = SITE_ROUTES.map((route) => ({
+    // The homepage is the bare origin; every other path appends to it.
+    url: route.path === '/' ? SITE_URL : `${SITE_URL}${route.path}`,
+    lastModified: new Date(route.lastModified),
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `https://warsh.app/blog/${post.slug}`,
+    url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: 'monthly',
     priority: 0.5,

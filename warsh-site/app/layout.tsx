@@ -3,8 +3,10 @@ import localFont from 'next/font/local';
 import './globals.css';
 import { Nav } from './components/Nav';
 import { FooterGate } from './components/FooterGate';
+import { BackToTop } from './components/BackToTop';
 import {
   NAV_LINKS,
+  PHONE,
   PLAY_STORE_URL,
   SITE_URL,
   SOCIAL_LINKS,
@@ -95,10 +97,9 @@ export const metadata: Metadata = {
  * other by `@id` and a crawler reads them as one description of one site instead
  * of three unrelated fragments.
  *
- * `SearchAction` is deliberately absent from the WebSite node. Declaring one
- * without a working search endpoint tells Google to surface a sitelinks
- * searchbox that would 404, which is worse than not claiming search at all — add
- * it in the same commit that ships the search route, never before.
+ * The `SearchAction` points at /help, which renders the search field and the
+ * full help index server-side, so the URL a sitelinks searchbox sends someone to
+ * is a real page whether or not its JavaScript runs.
  */
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -117,6 +118,7 @@ const jsonLd = {
       description:
         'Warsh teaches the Arabic of the Quran through a structured 72-chapter course, vocabulary practice, Tadabbur, and Ustaad Noor, an AI tutor.',
       email: SUPPORT_EMAIL,
+      telephone: PHONE.tel,
       sameAs: [PLAY_STORE_URL, ...SOCIAL_LINKS.map((link) => link.href)],
     },
     {
@@ -127,6 +129,14 @@ const jsonLd = {
       description: 'Understand the Arabic of the Quran.',
       inLanguage: 'en',
       publisher: { '@id': `${SITE_URL}/#organization` },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${SITE_URL}/help?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
     },
     {
       '@type': 'SiteNavigationElement',
@@ -166,6 +176,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Nav />
         <main role="main">{children}</main>
         <FooterGate />
+        <BackToTop />
       </body>
     </html>
   );

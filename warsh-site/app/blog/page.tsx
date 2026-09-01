@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Section, Eyebrow } from '../components/Section';
 import { getBlogPosts } from '@/content/blog';
+import { buildSearchIndex } from '@/content/search';
+import { SiteSearch } from '../components/SiteSearch';
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -10,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogIndexPage() {
-  const blogPosts = await getBlogPosts();
+  const [blogPosts, searchIndex] = await Promise.all([getBlogPosts(), buildSearchIndex()]);
 
   return (
     <Section padded={false} className="pb-16 pt-14 md:pb-24 md:pt-20">
@@ -21,6 +23,10 @@ export default async function BlogIndexPage() {
       <p className="mt-6 max-w-2xl text-lg leading-relaxed text-deep">
         Short, honest pieces on learning Quranic Arabic and how Warsh's curriculum is built.
       </p>
+
+      <div className="mt-8">
+        <SiteSearch items={searchIndex} />
+      </div>
 
       {blogPosts.length === 0 && (
         <p className="mt-14 text-base text-deep">New posts are on the way &mdash; check back soon.</p>

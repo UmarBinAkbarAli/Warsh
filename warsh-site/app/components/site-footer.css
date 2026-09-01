@@ -157,3 +157,37 @@
   unicode-bidi: isolate;
   line-height: 1.9;
 }
+
+/*
+ * Social row. Set as small caps-height labels rather than icon glyphs: the
+ * colophon is the quietest surface on the site, and three brand icons would be
+ * the loudest thing on it. Labels also stay legible at this size and need no
+ * accessible-name workaround.
+ */
+.wsf__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  margin: 1.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wsf__social a {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--wsf-ink-soft) 88%, transparent);
+  text-decoration: none;
+  transition: color 160ms var(--wsf-ease);
+}
+
+.wsf__social a:hover {
+  color: var(--wsf-accent-lift);
+}
+
+.wsf__social a:focus-visible {
+  outline: 2px solid var(--wsf-accent);
+  outline-offset: 3px;
+}

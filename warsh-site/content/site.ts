@@ -8,12 +8,29 @@ export const SUPPORT_EMAIL = 'support@warsh.app';
  *
  * This is the single source for the footer row and for the `sameAs` array on
  * the Organization schema, so a profile is either published in both places or
- * in neither. Deliberately empty until a profile is live: a dead social link is
- * a worse trust signal to a reader — and to Google — than an absent one, so add
- * an entry only once the URL resolves to a real, populated profile.
+ * in neither. Only add a URL that resolves to a live profile Warsh owns — a
+ * dead or unclaimed social link is a worse trust signal to a reader, and to
+ * Google, than an absent one. All three below were opened and confirmed.
  */
 export type SocialLink = { href: string; label: string };
-export const SOCIAL_LINKS: readonly SocialLink[] = [] as const;
+export const SOCIAL_LINKS: readonly SocialLink[] = [
+  { href: 'https://www.instagram.com/warsh.app/', label: 'Instagram' },
+  { href: 'https://www.facebook.com/trywarshapp/', label: 'Facebook' },
+  { href: 'https://www.linkedin.com/company/warshapp/', label: 'LinkedIn' },
+] as const;
+
+/**
+ * Published contact number, for press and partnership enquiries.
+ *
+ * Two forms because they are read by different things: `tel` is what a dialler
+ * and schema.org need (E.164, no spaces), `display` is what a person reads.
+ * Support stays email-first — an email carries the account address, device and
+ * lesson number that a phone call does not.
+ */
+export const PHONE = {
+  tel: '+923181046756',
+  display: '+92 318 104 6756',
+} as const;
 
 export const NAV_LINKS = [
   { href: '/features', label: 'Features' },
@@ -30,6 +47,7 @@ export const FOOTER_LINKS = {
   ],
   company: [
     { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' },
     { href: '/blog', label: 'Blog' },
   ],
   legal: [
@@ -37,5 +55,6 @@ export const FOOTER_LINKS = {
     { href: '/terms', label: 'Terms' },
     { href: '/help', label: 'Help' },
     { href: '/delete-account', label: 'Delete Account' },
+    { href: '/sitemap', label: 'Sitemap' },
   ],
 } as const;
