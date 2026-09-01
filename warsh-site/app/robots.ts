@@ -10,6 +10,7 @@ export default function robots(): MetadataRoute.Robots {
         '/pricing',
         '/about',
         '/contact',
+        '/editorial-guidelines',
         '/blog',
         '/privacy',
         '/terms',

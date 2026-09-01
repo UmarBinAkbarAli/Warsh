@@ -48,6 +48,7 @@ export const FOOTER_LINKS = {
   company: [
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
+    { href: '/editorial-guidelines', label: 'Editorial Guidelines' },
     { href: '/blog', label: 'Blog' },
   ],
   legal: [
