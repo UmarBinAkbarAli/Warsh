@@ -38,6 +38,8 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
     group: 'Company', lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.6 },
   { path: '/contact', label: 'Contact', blurb: 'Support, content corrections, account and data',
     group: 'Company', lastModified: CONTENT_UPDATED, changeFrequency: 'monthly', priority: 0.6 },
+  { path: '/team', label: 'Team', blurb: 'Who builds Warsh',
+    group: 'Company', lastModified: CONTENT_UPDATED, changeFrequency: 'monthly', priority: 0.4 },
   { path: '/editorial-guidelines', label: 'Editorial guidelines',
     blurb: 'How our lessons are written and reviewed, and the limits we hold to',
     group: 'Company', lastModified: CONTENT_UPDATED, changeFrequency: 'monthly', priority: 0.4 },
