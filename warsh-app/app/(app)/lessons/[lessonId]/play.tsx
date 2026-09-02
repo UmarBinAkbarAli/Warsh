@@ -16,6 +16,7 @@ import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from
 import { pickLocalized, useTranslationLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 import { prefetchCatalogAudio, prefetchRemoteAudio } from "@services/audioCache";
+import { prefetchChapter } from "@services/chapterPrefetch";
 
 // ---------------------------------------------------------------------------
 // API response shape — content is the raw warsh-content-schema v1.0 blob
@@ -36,6 +37,7 @@ type CompletionResult = {
   xpEarned: number;
   chapterBonusXp: number;
   chapterJustCompleted: boolean;
+  nextChapterId?: string | null;
   totalXp: number;
   currentStreak: number;
   streakCelebration: boolean;
@@ -566,12 +568,20 @@ export default function LessonPlayScreen() {
           xpEarned: data.xpEarned,
           chapterBonusXp: data.chapterBonusXp ?? 0,
           chapterJustCompleted: Boolean(data.chapterJustCompleted),
+          nextChapterId: data.nextChapterId ?? null,
           totalXp: data.totalXp,
           currentStreak: data.currentStreak,
           streakCelebration: Boolean(data.streakCelebration),
           newAchievements: achievements,
           dailyGoalMet,
         });
+        // Finishing a chapter is the clearest signal that the next one is
+        // coming, and the learner is parked on the results screen while it
+        // downloads. Silent and WiFi-only; failure just means the next chapter
+        // warms when they open the Learn tab instead.
+        if (data.chapterJustCompleted && data.nextChapterId) {
+          void prefetchChapter(data.nextChapterId as string);
+        }
         trackLessonCompleted({ lessonId, lessonType: lesson?.template, xpEarned: data.xpEarned, currentStreak: data.currentStreak, dailyGoalMet });
         if (dailyGoalMet) {
           cancelTodayReminders().catch(() => {});

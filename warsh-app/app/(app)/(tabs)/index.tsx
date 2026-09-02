@@ -10,6 +10,7 @@ import {
 import { TranslationLanguagePrompt } from "@components/TranslationLanguagePrompt";
 import { useT } from "@i18n/index";
 import api, { updateUserProfile } from "@services/api";
+import { prefetchChapter } from "@services/chapterPrefetch";
 import { pickLocalized, pickTranslation, useLanguage, useTranslationLanguage, type AppLanguage } from "@services/language";
 import { useAuthStore } from "@stores/authStore";
 import { useFocusEffect, useRouter } from "expo-router";
@@ -299,6 +300,15 @@ export default function HomeScreen() {
       null
     );
   }, [chapters]);
+
+  // Warm the chapter the learner is about to work through, on WiFi only, once
+  // per chapter. Doing it here rather than at sign-up means it fires on real
+  // intent: plenty of people create an account and never open a lesson, and at
+  // sign-up they are mid-flow and as likely as not on mobile data.
+  useEffect(() => {
+    if (!activeChapter) return;
+    void prefetchChapter(activeChapter.id);
+  }, [activeChapter]);
 
   const activeLessonIndex = useMemo(() => {
     if (!activeChapter) return -1;
