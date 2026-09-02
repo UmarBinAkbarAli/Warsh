@@ -463,11 +463,20 @@ export default function LessonPlayScreen() {
   // Start warming every Discovery card as soon as the lesson loads (while the
   // learner is still on the hook screen). Cards without an explicit CDN URL
   // resolve only through the prebuilt R2 text catalogue.
+  //
+  // Card 1 is fetched to completion before the rest start. Firing all of them
+  // at once split the connection every way at the one moment that matters: the
+  // hook screen is a single tap, so the learner reaches card 1 about a second
+  // in, and card 1's image was queued behind cards they would not see for
+  // another half-minute. Ordering it first is what keeps the first card from
+  // arriving late; the others have the whole Discovery beat to catch up.
   useEffect(() => {
     if (!lesson || discoverCards.length === 0) return;
-    for (const upcomingCard of discoverCards) {
-      const { imageUrl, audioUrl, arabicText, transliteration } = discoverCardPrefetchFields(upcomingCard, language);
-      if (imageUrl) Image.prefetch(imageUrl).catch(() => undefined);
+    let cancelled = false;
+
+    function warmCard(card: Record<string, any>) {
+      const { imageUrl, audioUrl, arabicText, transliteration } = discoverCardPrefetchFields(card, language);
+      const image = imageUrl ? Image.prefetch(imageUrl).catch(() => undefined) : Promise.resolve();
       if (audioUrl && arabicText) {
         prefetchRemoteAudio(audioUrl, transliteration ?? arabicText, "lessons")
           .catch(() => prefetchCatalogAudio([{
@@ -479,7 +488,17 @@ export default function LessonPlayScreen() {
       } else if (arabicText) {
         prefetchCatalogAudio([{ text: arabicText, cacheKey: transliteration ?? arabicText, category: "lessons" }]).catch(() => undefined);
       }
+      return image;
     }
+
+    void (async () => {
+      const [firstCard, ...restCards] = discoverCards;
+      await warmCard(firstCard);
+      if (cancelled) return;
+      for (const upcomingCard of restCards) warmCard(upcomingCard);
+    })();
+
+    return () => { cancelled = true; };
   }, [discoverCards, language, lesson]);
 
   // Exercises autoplay their Arabic on mount. Warm their prebuilt catalogue
@@ -1173,7 +1192,10 @@ export default function LessonPlayScreen() {
                 source={{ uri: discoverImageUrl }}
                 style={styles.discoverImage}
                 contentFit="contain"
-                cachePolicy="disk"
+                // Image.prefetch above warms "memory-disk". Asking for "disk"
+                // here threw away the in-memory half of that warm-up and made
+                // every card pay a disk read and decode on the way in.
+                cachePolicy="memory-disk"
                 transition={150}
               />
             ) : null}

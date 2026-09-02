@@ -24,6 +24,15 @@ const SHARP_FORMAT: Record<string, string> = {
 const MAX_BYTES = 5 * 1024 * 1024; // 5 MB
 const ALLOWED_FOLDERS = new Set(["chapters", "cards", "discover", "blog", "misc"]);
 
+// Discover cards render at 196pt, chapter art not much larger — 768px covers a
+// 3x screen with room to spare. Uploads used to land at whatever the artwork
+// happened to be: the original Chapter 1 set was 1254x1254 PNGs averaging
+// 1.1 MB, which is 4.5x more pixel area than the phone can show and made the
+// first Discovery card visibly pop in seconds late. WebP at this size holds the
+// same set to ~76 KB. Animated GIFs keep their frames and are left alone.
+const MAX_DIMENSION = 768;
+const WEBP_QUALITY = 82;
+
 // POST /api/admin/images?folder=cards
 // Body: raw image bytes, Content-Type: image/png | image/jpeg | image/webp | image/gif
 // Uploads to R2 under a unique key and returns the public URL. A unique key per
@@ -65,13 +74,30 @@ export async function POST(request: Request) {
   // and any non-image payload riding along in a polyglot file. A decode failure
   // or a format/header mismatch is rejected rather than stored.
   let normalized: Buffer;
+  // What actually gets stored. Everything but an animated GIF is downscaled and
+  // re-encoded to WebP, so the extension and content type follow the output
+  // rather than whatever the uploader sent.
+  let storedExt = ext;
+  let storedContentType = contentType === "image/jpg" ? "image/jpeg" : contentType;
   try {
     const image = sharp(buffer, { limitInputPixels: 50_000_000, animated: ext === "gif" });
     const format = (await image.metadata()).format;
     if (format !== SHARP_FORMAT[ext]) {
       throw new Error(`declared ${contentType} but decoded as ${format ?? "unknown"}`);
     }
-    normalized = await image.rotate().toBuffer();
+    if (ext === "gif") {
+      // Resizing an animated GIF through sharp is lossy in ways the content
+      // team would not expect, so these pass through re-encoded but unresized.
+      normalized = await image.rotate().toBuffer();
+    } else {
+      normalized = await image
+        .rotate()
+        .resize(MAX_DIMENSION, MAX_DIMENSION, { fit: "inside", withoutEnlargement: true })
+        .webp({ quality: WEBP_QUALITY })
+        .toBuffer();
+      storedExt = "webp";
+      storedContentType = "image/webp";
+    }
   } catch (err) {
     console.warn("[admin-images] rejected upload that did not decode as a valid image:", err);
     return NextResponse.json(
@@ -80,10 +106,10 @@ export async function POST(request: Request) {
     );
   }
 
-  const key = `images/admin/${folder}/${Date.now()}-${crypto.randomUUID()}.${ext}`;
+  const key = `images/admin/${folder}/${Date.now()}-${crypto.randomUUID()}.${storedExt}`;
 
   try {
-    const imageUrl = await uploadImageToR2(key, normalized, contentType === "image/jpg" ? "image/jpeg" : contentType);
+    const imageUrl = await uploadImageToR2(key, normalized, storedContentType);
     return NextResponse.json({ data: { imageUrl } });
   } catch (err) {
     // R2/S3 errors name the bucket and endpoint — keep them in the logs, not in
