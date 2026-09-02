@@ -47,12 +47,16 @@ module.exports = withSentryConfig(nextConfig, {
     deleteSourcemapsAfterUpload: true,
   },
   webpack: {
-    automaticVercelMonitors: true,
+    // Off deliberately. This upserted one Sentry monitor per entry in
+    // vercel.json — two — into an organisation whose plan carries a single
+    // monitor seat, so the quota sat permanently exceeded, incoming check-ins
+    // were dropped, and every night produced a "Cron failure" issue for a job
+    // that had in fact run. 79 alerts, none of them real. The one cron worth
+    // watching now checks in explicitly from its own route, with a window that
+    // matches when the platform actually fires it.
+    automaticVercelMonitors: false,
     treeshake: {
       removeDebugLogging: true,
     },
-  },
-  _experimental: {
-    vercelCronsMonitoring: true,
   },
 });

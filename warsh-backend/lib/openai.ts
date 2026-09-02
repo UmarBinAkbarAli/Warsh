@@ -1,4 +1,5 @@
 import OpenAI from "openai";
+import * as Sentry from "@sentry/nextjs";
 
 const SYSTEM_PROMPT = `You are Ustaad Noor — the AI tutor inside Warsh, 
 an Arabic learning app for Muslims who want to understand the Quran 
@@ -97,13 +98,21 @@ export async function getAssistantReply(
   responseLanguage?: string
 ): Promise<string> {
   try {
-    if (!process.env.OPENAI_API_KEY) {
+    if (!getOpenAIApiKey()) {
+      Sentry.captureMessage("[openai] OPENAI_API_KEY is not set — Noor is serving the offline reply", "error");
       return getLocalTutorReply(message);
     }
     return await getOpenAIReply(message, history, responseLanguage);
   } catch (error) {
-    // Log so provider outages/misconfig are visible rather than silently
-    // masked as an "offline" fallback reply.
+    // The catch is what keeps a provider outage from 503-ing the student, but
+    // it also hides the cause: with a rejected API key every conversation
+    // quietly became "I am unavailable at the moment" and nothing reached
+    // Sentry, because a fallback reply is a successful response. Report it here
+    // so a bad key is an alert rather than something only the logs know.
+    Sentry.captureException(error, {
+      level: "error",
+      tags: { subsystem: "openai", degraded: "offline_fallback" },
+    });
     console.error("[openai] getAssistantReply failed, using local fallback:", error);
     return getLocalTutorReply(message);
   }
@@ -112,7 +121,7 @@ export async function getAssistantReply(
 function getLocalTutorReply(message: string): string {
   // Operators get the diagnostic in the logs; the user-facing copy must not
   // disclose the provider, the env var name, or the deployment model.
-  if (!process.env.OPENAI_API_KEY) {
+  if (!getOpenAIApiKey()) {
     console.error("[openai] OPENAI_API_KEY is not set - serving offline fallback reply.");
   }
 
@@ -127,8 +136,16 @@ function getLocalTutorReply(message: string): string {
   return "I am unavailable at the moment. Please try again shortly, ان شاء الله.";
 }
 
+/**
+ * Trimmed, because a key pasted into the dashboard with a trailing newline is
+ * indistinguishable from a revoked one in OpenAI's 401 and costs an afternoon.
+ */
+function getOpenAIApiKey(): string {
+  return process.env.OPENAI_API_KEY?.trim() ?? "";
+}
+
 async function getOpenAIReply(message: string, history: HistoryMessage[], responseLanguage?: string): Promise<string> {
-  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  const client = new OpenAI({ apiKey: getOpenAIApiKey() });
   const model = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
   // Always state the target language explicitly. Leaving it implicit let the

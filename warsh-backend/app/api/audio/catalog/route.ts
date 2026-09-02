@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import * as Sentry from "@sentry/nextjs";
 import { getUserIdFromRequest } from "../../../../lib/auth";
 import { catalogAudioUrl, normalizeCatalogAudioText } from "../../../../lib/audioCatalog";
 import { getUserSubscriptionState, requiresSubscription } from "../../../../lib/subscription";
@@ -30,5 +31,22 @@ export async function GET(request: Request) {
   // The admin audit proves catalogue completeness before deployment. Runtime
   // requests redirect directly to the deterministic public object; if an asset
   // is ever removed, R2 returns 404 and no generation fallback exists.
-  return NextResponse.redirect(catalogAudioUrl(text), 307);
+  //
+  // A missing or non-absolute R2_PUBLIC_URL used to surface as an unhandled
+  // "URL is malformed" crash out of NextResponse.redirect — an opaque 500 for
+  // the client and a stack trace naming Next internals for the operator. Report
+  // it as the configuration fault it is, and answer with the standard envelope.
+  let target: string;
+  try {
+    target = catalogAudioUrl(text);
+  } catch (error) {
+    Sentry.captureException(error, { tags: { misconfiguration: "R2_PUBLIC_URL" } });
+    console.error("[audio/catalog] cannot build the catalogue URL:", (error as Error)?.message ?? error);
+    return NextResponse.json(
+      { error: "Audio is unavailable right now.", code: "audio_unavailable" },
+      { status: 503 },
+    );
+  }
+
+  return NextResponse.redirect(target, 307);
 }

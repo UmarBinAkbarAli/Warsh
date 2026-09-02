@@ -25,6 +25,13 @@ function getBucketName() {
 export function getR2PublicUrl(key: string) {
   const base = process.env.R2_PUBLIC_URL?.trim()?.replace(/\/$/, "");
   if (!base) throw new Error("R2_PUBLIC_URL is not set.");
+  // A bare host ("pub-xxxx.r2.dev") reads fine in the dashboard but is not a
+  // URL, and /api/audio/catalog hands this straight to NextResponse.redirect —
+  // which threw "URL is malformed" and 500'd every audio request for as long as
+  // the value stayed that way. Fail on the misconfiguration itself, naming it.
+  if (!/^https?:\/\//i.test(base)) {
+    throw new Error("R2_PUBLIC_URL must be an absolute http(s) URL, e.g. https://cdn.example.com.");
+  }
   return `${base}/${key}`;
 }
 
