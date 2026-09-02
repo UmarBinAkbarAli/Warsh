@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-08-27
+**Last verified:** 2026-09-02
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Beta hardening and launch preparation
 
@@ -233,6 +233,71 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - EAS profiles for development, staging APK, production-preview APK, and production Android builds
 
 ## Recent verified repository changes
+
+### 2026-09-02 (Sentry backlog — six backend issues closed, deployed)
+
+Every unresolved Sentry issue in `warsh-backend` was triaged against the code.
+Six issues, four causes. Fixed in `1801908`, deployed to production from `main`
+(GitHub deployment `6217318446`, state success), all six marked resolved in
+Sentry.
+
+- **Cron jobs died on a sleeping database** (`WARSH-BACKEND-H`, `-J`). Neon
+  suspends its compute when idle; both crons run at 04:00 and 05:00 PKT, when
+  no traffic has kept it awake. The first query hit a suspended endpoint,
+  Prisma reported `P1000 Authentication failed against the database server`,
+  and the run died. **12 of the 21 reset-streaks runs in August failed this
+  way — more than half the month's streaks were never reset.** `lib/dbRetry.ts`
+  retries connection failures only; both jobs are safe to re-run because their
+  selection predicates exclude rows already written. Both routes also carry
+  `maxDuration = 60` now to cover the retry budget.
+- **79 false "Cron failure" alerts** (`WARSH-BACKEND-A`). Sentry's
+  `automaticVercelMonitors` upserted one monitor per `vercel.json` cron — two —
+  into an organisation on the Developer plan, which carries **one** monitor
+  seat. The quota stayed exceeded, check-ins were dropped, and every night
+  produced an alert for a job that had run. The default one-minute window would
+  have failed regardless: Vercel treats a daily schedule as "some time inside
+  that hour" and observed check-ins landed anywhere from :02 to :50. The
+  auto-upsert is off; `reset-streaks` now checks in explicitly via
+  `Sentry.withMonitor` with a 55-minute margin, and the `apicronexpire-trials`
+  monitor is disabled so the single seat is free.
+- **`/api/progress` exhausted the connection pool** (`WARSH-BACKEND-E`).
+  node-postgres defaults to ten connections per pool; a lambda can use one, but
+  every warm instance held ten open. Pool is three now (`DATABASE_POOL_MAX`
+  overrides), and the Prisma client is cached on `global` in production too so
+  a second module evaluation cannot open a second pool.
+- **`/api/audio/catalog` 500'd on a non-absolute `R2_PUBLIC_URL`**
+  (`WARSH-BACKEND-F`). `NextResponse.redirect` threw "URL is malformed" with a
+  stack naming only Next internals. `getR2PublicUrl` now rejects the value and
+  the route answers with the standard envelope. Already latent in production —
+  `R2_PUBLIC_URL` was corrected on 2026-08-13 and the crashes stopped — so this
+  is regression cover, not a live fix.
+- **Noor degrades silently on a bad OpenAI key** (`WARSH-BACKEND-G`). The 401s
+  stopped reaching Sentry on 2026-08-31, when `getAssistantReply` started
+  awaiting its call — but only because the fallback reply is a *successful*
+  response. A rejected key means every student gets "I am unavailable at the
+  moment" and nothing sees it. That path now reports to Sentry, and the key is
+  trimmed, because a trailing newline and a revoked key are the same 401.
+
+**Open:** production `OPENAI_API_KEY` has not been changed since 2026-08-11,
+the day the first 401 appeared, and the three 401 bursts (08-11, 08-24, 08-28)
+all predate the `await` fix that made later failures invisible. Whether Noor is
+currently answering or serving the canned fallback is unconfirmed. Send one
+Noor message on production: a reply beginning "I am unavailable at the moment"
+means the key is dead and needs replacing in Vercel. With this deploy live, a
+bad key now raises a Sentry issue on the first message either way.
+
+`WARSH-MOBILE-5` is left unresolved deliberately: one user on one Tecno KF8
+(Android 11) hit `GoogleSignInException [28404] Failed to retrieve an ID
+token`. It is already caught, reported on purpose, and shown to the user, who
+still has the email/password path. No code change; a real device-side failure
+should stay visible.
+
+Release gates run before deploy: `db:generate`, `db:validate-fixtures` (392
+lessons), `db:audit-urdu` (72 chapters, 391 lessons, 603 words), `npm test`
+(100 pass, including seven new `tests/db-retry.test.ts` cases), `next build`.
+The pre-existing `tests/google-auth.test.ts(44,16)` `tsc` error is unchanged
+and unrelated.
+
 
 ### 2026-09-01 (warsh.app SEO remediation — complete)
 
