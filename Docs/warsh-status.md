@@ -279,10 +279,33 @@ for this site: the homepage ships 49 KB of images total, a pre-sized WebP with
 `priority` and explicit dimensions. The reported TTFB of "0 ms" was never
 measured; the real figure is ~210 ms on a Vercel cache hit.
 
-**Still open, deliberately not taken here:** `useScrollCraft.ts` injects
-`/scrollcraft.css` after hydration, where the preload scanner cannot see it.
-That is the likeliest remaining driver of the 6.8 s Speed Index, but it changes
-render behaviour and wants its own change.
+**Follow-up, phones only (`ce72995`, deployed and verified live).** The
+runtime injection turned out to be worse than a late stylesheet.
+`scrollcraft.css` is what *hides* flow-reveal content (`[data-sc-in]
+{ opacity: 0 }`), and on the live homepage it lands at 1,805-1,904 ms — a
+second after the hero image finished at 840 ms. So a phone painted the hero,
+blanked it, then faded it back when the engine mounted at 2,041 ms. Eight
+blocks did this, one of them the figure holding the LCP image; on a throttled
+connection that blank window is seconds wide, and if the stylesheet ever beats
+the image the LCP element is `opacity: 0` when it decodes and stops counting as
+a paint at all.
+
+Below the engine's own 860px breakpoint the reveal is now skipped, so the first
+paint is the final one. Nothing is unloaded — pin, pan and `--sc-p` still run
+and the pinned sections are unchanged; what phones lose is the 620 ms fade-up.
+**Desktop is untouched**: the change is one `@media (max-width: 860px)` block in
+`scrollcraft-theme.css`, verified inert at desktop width. Specificity (0,2,1)
+beats the engine's base rule and its `.sc-in` reveal without `!important`, so
+the inline transforms the engine writes each frame still win and the parallax
+child keeps moving.
+
+**Still open:** `[data-sc-cue]` — the `/about` `<h1>`, that page's LCP element —
+has the same problem, but the engine drives cue opacity inline every frame, so
+skipping it needs `!important` and would fight the animation instead of
+bypassing it. Wants its own change. Separately, moving the engine stylesheet
+into the build (so the preload scanner sees it instead of discovering it after
+hydration) would help both desktop and mobile, and was left out here because it
+cannot be scoped to phones.
 
 ### 2026-09-03 (warsh.app — the recurring "physical address not found" finding)
 
