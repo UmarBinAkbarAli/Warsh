@@ -435,3 +435,78 @@
   outline: 2px solid var(--sc-accent);
   outline-offset: 3px;
 }
+
+/*
+ * The trust statement and the profile list that lets a reader leave and verify
+ * it. Both sit inside the record, so they inherit its reference register: same
+ * gold small-caps label, same reading size, no card and no border, because a
+ * boxed "trust badge" is exactly the shape a reader has learned to discount.
+ * A rule above each block is enough separation at this scale.
+ */
+.wa-trust,
+.wa-elsewhere {
+  border-top: 1px solid color-mix(in srgb, var(--sc-ink) 12%, transparent);
+  margin-top: clamp(1.75rem, 4vw, 2.75rem);
+  padding-top: clamp(1.25rem, 3vw, 2rem);
+}
+
+.wa-trust h3,
+.wa-elsewhere h3 {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--wa-accent, #a88648);
+  margin: 0 0 0.7rem;
+}
+
+.wa-trust p,
+.wa-elsewhere p {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.72;
+  margin: 0;
+  max-width: 62ch;
+}
+
+.wa-trust p + p {
+  margin-top: 0.9em;
+}
+
+/* The profiles read as a row of links rather than a bulleted list: seven of
+   them stacked would look like a second navigation, which this is not. */
+.wa-elsewhere ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem clamp(1rem, 3vw, 1.75rem);
+  list-style: none;
+  margin: clamp(0.9rem, 2vw, 1.25rem) 0 0;
+  padding: 0;
+}
+
+.wa-elsewhere li {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.wa-trust a,
+.wa-elsewhere a {
+  color: var(--sc-ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--sc-accent);
+}
+
+.wa-trust a:hover,
+.wa-elsewhere a:hover {
+  color: var(--sc-accent);
+}
+
+.wa-trust a:focus-visible,
+.wa-elsewhere a:focus-visible {
+  outline: 2px solid var(--sc-accent);
+  outline-offset: 3px;
+}

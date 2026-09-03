@@ -5,7 +5,15 @@ import Link from 'next/link';
 import '../scrollcraft-theme.css';
 import './about.css';
 import { AboutMotion } from './AboutMotion';
-import { ADDRESS, PLAY_STORE_URL, SUPPORT_EMAIL } from '@/content/site';
+import {
+  ADDRESS,
+  PHONE,
+  PLAY_STORE_URL,
+  SITE_URL,
+  SOCIAL_LINKS,
+  SUPPORT_EMAIL,
+  TEAM,
+} from '@/content/site';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -75,9 +83,51 @@ const boundaries = [
   { text: 'Not a replacement for a qualified teacher.', at: '0.34 0.58' },
 ];
 
+/**
+ * `AboutPage`, tied by `@id` to the Organization declared once in the root
+ * layout rather than restating it — one entity described in two places is how a
+ * crawler ends up believing in two entities. The `sameAs` array repeats here on
+ * purpose: this is the page a reader (or an answer engine) lands on asking who
+ * is behind Warsh, and the profiles that answer it should be machine-readable
+ * from this URL and not only from the homepage.
+ */
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': `${SITE_URL}/about#page`,
+  url: `${SITE_URL}/about`,
+  name: 'About Warsh',
+  description:
+    'Why Warsh exists, what it teaches, who builds it, and the things it deliberately does not claim to be.',
+  mainEntity: {
+    '@id': `${SITE_URL}/#organization`,
+    '@type': 'Organization',
+    name: 'Warsh',
+    founder: TEAM.map((member) => ({
+      '@type': 'Person',
+      name: member.name,
+      jobTitle: member.role,
+    })),
+    email: SUPPORT_EMAIL,
+    telephone: PHONE.tel,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: ADDRESS.locality,
+      addressRegion: ADDRESS.region,
+      addressCountry: ADDRESS.countryCode,
+    },
+    sameAs: [PLAY_STORE_URL, ...SOCIAL_LINKS.map((link) => link.href)],
+  },
+};
+
 export default function AboutPage() {
   return (
     <div id="warsh-about">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <AboutMotion />
 
       {/* 1 · RECOGNITION. The hero is one line at extreme scale filling the
@@ -262,6 +312,72 @@ export default function AboutPage() {
                 <Link href="/editorial-guidelines">editorial guidelines</Link>.
               </p>
             </div>
+          </div>
+
+          {/* The trust statement, stated as such and in one place.
+
+              A reader deciding whether to believe an app that teaches the
+              Arabic of the Quran is not served by an adjective; they are served
+              by facts they can go and check, and by the claims we refuse to
+              make. So every sentence here is either verifiable off-site (a
+              named person, a published listing, a working address) or is a
+              limit we hold ourselves to. Nothing here asserts authority. */}
+          <div className="wa-trust">
+            <h3>Why you can trust Warsh</h3>
+            <p>
+              Every claim on this page is checkable, and we would rather you checked. Warsh is
+              published by a named person &mdash; {TEAM[0].name}, {TEAM[0].role}, working from{' '}
+              {ADDRESS.display} &mdash; not an anonymous storefront, and both{' '}
+              <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> and{' '}
+              <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a> reach him. The app is listed
+              publicly on{' '}
+              <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
+                Google Play
+              </a>{' '}
+              as com.warsh.app, where its rating, its reviews and its update history are published
+              by Google rather than by us.
+            </p>
+            <p>
+              What we decline to claim matters as much. Warsh awards no certification, is not
+              backed by or affiliated with any institution, and does not present its founder as a
+              scholar of Arabic or of the Quran; Ustaad Noor refers every question of fiqh to a
+              qualified scholar instead of answering it. How lessons are written, reviewed and
+              corrected is written down in our{' '}
+              <Link href="/editorial-guidelines">editorial guidelines</Link>, what we do with your
+              data is in the <Link href="/privacy">privacy policy</Link>, and the person behind all
+              of it is named on the <Link href="/team">team page</Link>. If a lesson is wrong, tell
+              us and it reaches him directly.
+            </p>
+          </div>
+
+          {/* Where else Warsh exists.
+
+              A trust claim a reader cannot leave the page to verify is worth
+              little, so this is the exit: the store listing and every profile
+              Warsh actually runs, each one live and confirmed. The list is
+              generated from SOCIAL_LINKS so it can never drift from the footer
+              or from the `sameAs` array above it. */}
+          <div className="wa-elsewhere">
+            <h3>Warsh elsewhere on the web</h3>
+            <p>
+              These are the official Warsh presences, and the fastest way to see what we publish
+              and how we answer people. Anything using our name that is not linked here is not
+              ours.
+            </p>
+            <ul>
+              <li>
+                <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
+                  Warsh on Google Play
+                </a>
+              </li>
+              {SOCIAL_LINKS.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    Warsh on {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <p className="wa-small" style={{ marginTop: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
