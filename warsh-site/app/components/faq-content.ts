@@ -36,3 +36,37 @@ export function faqPlainAnswer(item: FaqItem): string | null {
   if (typeof item.a === 'string') return item.a;
   return item.plain ?? null;
 }
+
+/**
+ * FAQPage structured data for a set of sections, built from the same data the
+ * page renders so the two can never disagree — Google discounts markup that
+ * describes answers a reader cannot actually see on the page.
+ *
+ * Shared rather than hand-rolled per route: /, /pricing and /help all carry a
+ * visible FAQ, and three copies of this object would be three chances for one
+ * of them to drift away from what its page renders.
+ *
+ * `id` scopes the node to its page (`${SITE_URL}/pricing#faq`), so three
+ * FAQPage nodes across the site stay three distinct entities rather than one
+ * entity a crawler sees described three different ways.
+ */
+export function buildFaqJsonLd(sections: FaqSection[], id: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': id,
+    mainEntity: sections.flatMap((section) =>
+      section.items.flatMap((item) => {
+        const answer = faqPlainAnswer(item);
+        if (!answer) return [];
+        return [
+          {
+            '@type': 'Question',
+            name: item.q,
+            acceptedAnswer: { '@type': 'Answer', text: answer },
+          },
+        ];
+      }),
+    ),
+  };
+}

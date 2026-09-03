@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Section } from '../components/Section';
 import { Faq } from '../components/Faq';
-import { faqPlainAnswer } from '../components/faq-content';
+import { buildFaqJsonLd } from '../components/faq-content';
 import { FAQ_SECTIONS } from '@/content/faq';
 import { SiteSearch } from '../components/SiteSearch';
 import { buildSearchIndex } from '@/content/search';
@@ -15,28 +15,11 @@ export const metadata: Metadata = {
 
 
 /**
- * FAQPage structured data, built from the same `sections` the page renders so the
- * two can never disagree — Google penalises markup that describes answers a
- * reader cannot actually see on the page.
+ * FAQPage structured data, built from the same `FAQ_SECTIONS` the page renders
+ * so the two can never disagree. The builder is shared with /pricing and the
+ * homepage — see `buildFaqJsonLd`.
  */
-const faqJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  '@id': `${SITE_URL}/help#faq`,
-  mainEntity: FAQ_SECTIONS.flatMap((section) =>
-    section.items.flatMap((item) => {
-      const answer = faqPlainAnswer(item);
-      if (!answer) return [];
-      return [
-        {
-          '@type': 'Question',
-          name: item.q,
-          acceptedAnswer: { '@type': 'Answer', text: answer },
-        },
-      ];
-    }),
-  ),
-};
+const faqJsonLd = buildFaqJsonLd(FAQ_SECTIONS, `${SITE_URL}/help#faq`);
 
 export default async function HelpPage() {
   const searchIndex = await buildSearchIndex();

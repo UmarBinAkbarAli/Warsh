@@ -5,7 +5,9 @@ import './scrollcraft-theme.css';
 import './home.css';
 import { HomeMotion } from './components/HomeMotion';
 import { SiteFooter } from './components/SiteFooter';
-import { PLAY_STORE_URL } from '@/content/site';
+import { buildFaqJsonLd } from './components/faq-content';
+import { HOME_FAQ_SECTIONS } from '@/content/faq';
+import { PLAY_STORE_URL, SITE_URL } from '@/content/site';
 
 export const metadata: Metadata = {
   title: 'Understand the Arabic of the Quran',
@@ -27,6 +29,7 @@ const chapters = [
   { id: 'al-fatiha', label: 'Al-Fatiha', ground: 'ink' },
   { id: 'four-skills', label: 'Four skills', ground: 'paper' },
   { id: 'the-shape', label: 'The shape', ground: 'paper' },
+  { id: 'questions', label: 'Questions', ground: 'paper' },
   { id: 'colophon', label: 'Colophon', ground: 'ink' },
 ] as const;
 
@@ -69,6 +72,14 @@ const lessonShape = [
   { name: 'Reveal', body: 'Where this piece fits in the ayah or phrase you already know by heart.' },
   { name: 'Close', body: 'A brief review that locks in what you just learned before you leave.' },
 ];
+
+/**
+ * FAQPage structured data for the questions chapter below. Built from
+ * `HOME_FAQ_SECTIONS` rather than restated here, and the chapter renders every
+ * answer as visible prose, so the markup describes text a reader can actually
+ * read on the page — the condition Google attaches to FAQPage.
+ */
+const faqJsonLd = buildFaqJsonLd(HOME_FAQ_SECTIONS, `${SITE_URL}/#faq`);
 
 export default function HomePage() {
   return (
@@ -391,6 +402,54 @@ export default function HomePage() {
       </section>
 
       {/* ---------------------------------------------------------------- 6 --
+          Questions. The last chapter before the colophon answers what a reader
+          who has come this far is still holding back on. Set as a document, not
+          an accordion: every answer is visible prose under a hairline, in the
+          ch4 idiom, which is also what lets the FAQPage markup above be honest.
+          The questions arrive from the right, the page's signature move. */}
+      <section
+        id="faq"
+        className="wh-ch wh-ch--paper-light"
+        data-sc-act="flow"
+        data-warsh-chapter="questions"
+        data-warsh-ground="paper"
+        aria-labelledby="faq-title"
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+        <div className="wh-spread">
+          <div data-sc-in>
+            <p className="wh-eyebrow">Before you start</p>
+            <h2 id="faq-title" className="wh-h" style={{ maxWidth: '16ch' }}>
+              The questions people ask first.
+            </h2>
+          </div>
+
+          <div className="wh-faq">
+            {HOME_FAQ_SECTIONS[0].items.map((item, i) => (
+              <div
+                className="wh-faq__item"
+                key={item.q}
+                data-warsh-rtl-item
+                data-warsh-delay={i * 80}
+              >
+                <h3 className="wh-faq__q">{item.q}</h3>
+                <p className="wh-faq__a">{item.a}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="wh-actions">
+            <Link className="wh-link" href="/help">
+              Read the full help centre
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------------------- 7 --
           The colophon. Smallest type on the site, the ask set as a line of
           running text rather than a button island. It is the shared site
           footer, rendered here rather than from the layout so it sits inside

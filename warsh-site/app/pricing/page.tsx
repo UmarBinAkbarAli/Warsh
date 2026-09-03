@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Section } from '../components/Section';
 import { Faq, type FaqSection } from '../components/Faq';
-import { PLAY_STORE_URL } from '@/content/site';
+import { buildFaqJsonLd } from '../components/faq-content';
+import { PLAY_STORE_URL, SITE_URL } from '@/content/site';
 
 export const metadata: Metadata = {
   title: 'Pricing',
@@ -52,9 +53,20 @@ const faqSections: FaqSection[] = [
   },
 ];
 
+/**
+ * The visible FAQ below is the only FAQ this page has, so its structured data is
+ * built from the same array rather than restated: a crawler and a reader get the
+ * identical four answers.
+ */
+const faqJsonLd = buildFaqJsonLd(faqSections, `${SITE_URL}/pricing#faq`);
+
 export default function PricingPage() {
   return (
     <Section padded={false} className="pb-24 pt-14 md:pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="mx-auto max-w-3xl text-center">
         <h1 className="font-display text-3xl font-semibold text-navy sm:text-4xl">
           Simple, honest pricing.

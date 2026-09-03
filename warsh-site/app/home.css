@@ -782,7 +782,53 @@
   isolation: isolate;
 }
 
-/* ---------------------------------------------------------- ch6 · colophon --
+/* --------------------------------------------------------- ch6 · questions --
+   The FAQ set as a document rather than an accordion. Every answer stays
+   visible: this chapter is what the page's FAQPage markup describes, and a
+   panel that only exists after a click is text a crawler never sees. It borrows
+   ch4's asymmetric hairline spread so the two reference chapters read as one
+   pair, with the question in the narrow column.
+   -------------------------------------------------------------------------- */
+
+.wh-faq {
+  display: grid;
+  gap: 0;
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+}
+
+.wh-faq__item {
+  display: grid;
+  gap: 0.5rem 2.5rem;
+  padding-block: clamp(1.4rem, 2.5vw, 2.2rem);
+  border-top: 1px solid var(--wh-rule);
+}
+
+@media (min-width: 56rem) {
+  .wh-faq__item {
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+    align-items: baseline;
+  }
+}
+
+.wh-faq__q {
+  font-family: var(--sc-font-display);
+  font-size: clamp(1.15rem, 1.05rem + 0.6vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1.12;
+  text-wrap: balance;
+  color: var(--sc-ink);
+  margin: 0;
+}
+
+.wh-faq__a {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--sc-ink-soft);
+  margin: 0;
+  max-width: 58ch;
+}
+
+/* ---------------------------------------------------------- ch7 · colophon --
    The close is the shared site footer (components/site-footer.css), rendered
    inside this page's root so it still takes the chapter ground and the
    entrance. Its type and grid live with the component so every other route

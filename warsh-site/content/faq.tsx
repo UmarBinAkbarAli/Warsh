@@ -138,3 +138,41 @@ export const FAQ_SECTIONS: FaqSection[] = [
     ],
   },
 ];
+
+/**
+ * The homepage's five questions. Deliberately a different set from
+ * `FAQ_SECTIONS`: the help centre answers a reader who already has the app and
+ * hit a problem, while these answer the one still deciding whether to install
+ * it. Keeping them distinct also keeps the two FAQPage nodes from describing
+ * the same questions at two URLs.
+ *
+ * Every answer here is a plain string, because the homepage renders them as
+ * running prose rather than through the `Faq` accordion.
+ */
+export const HOME_FAQ_SECTIONS: FaqSection[] = [
+  {
+    label: 'Questions',
+    items: [
+      {
+        q: 'What is Warsh?',
+        a: 'Warsh is an Android app for learning the Arabic of the Quran. It holds a 72-chapter curriculum taken in order, a Vocabulary Bank of over 600 words with recited audio, Tadabbur for reading real ayat word by word, and Ustaad Noor, an AI tutor that knows the curriculum and answers questions in context.',
+      },
+      {
+        q: 'Which Arabic does Warsh teach?',
+        a: "Classical Fus'ha, the Arabic the Quran is written in, rather than a modern spoken dialect. The curriculum is organized around the Quran itself, so the vocabulary and grammar you learn are the vocabulary and grammar you already recite in Salah.",
+      },
+      {
+        q: 'Do I need to know any Arabic to start?',
+        a: 'No. Warsh is built for complete beginners, starting from the letters. If you already read some Arabic, a placement test can start you at Chapter 4, 6, or 8 instead, so you are not made to repeat what you know.',
+      },
+      {
+        q: 'What does Warsh cost?',
+        a: 'Every new account gets 7 full days of everything, free. After that one subscription covers the whole app, about $1 a month or about $10 a year, with the exact price set by Google Play for your region. The Vocabulary Bank stays free forever, subscription or not, and there are no ads.',
+      },
+      {
+        q: 'Which devices can I use Warsh on?',
+        a: 'Android 8 or later, from Google Play. Your progress, streak, and subscription sync across every device you sign in on. iOS support is planned for a future release.',
+      },
+    ],
+  },
+];
