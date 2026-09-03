@@ -31,6 +31,7 @@ const jsonLd = {
     address: {
       '@type': 'PostalAddress',
       addressLocality: ADDRESS.locality,
+      addressRegion: ADDRESS.region,
       addressCountry: ADDRESS.countryCode,
     },
     sameAs: SOCIAL_LINKS.map((link) => link.href),

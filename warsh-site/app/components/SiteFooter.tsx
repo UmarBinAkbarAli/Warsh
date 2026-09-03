@@ -95,7 +95,12 @@ export function SiteFooter({ reveal = false }: { reveal?: boolean }) {
               to the Organization schema's PostalAddress, rather than being just
               two more words in the copyright line.
             */}
-            <span className="adr">{ADDRESS.display}</span>.{' '}
+            <span className="adr">
+              <span className="locality">{ADDRESS.locality}</span>,{' '}
+              <span className="region">{ADDRESS.region}</span>,{' '}
+              <span className="country-name">{ADDRESS.country}</span>
+            </span>
+            .{' '}
             <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>{' '}
             <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a>
           </span>

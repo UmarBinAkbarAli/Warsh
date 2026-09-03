@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Section, Eyebrow } from '../components/Section';
-import { PHONE, SITE_URL, SUPPORT_EMAIL } from '@/content/site';
+import { ADDRESS, PHONE, SITE_URL, SUPPORT_EMAIL } from '@/content/site';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -25,6 +25,12 @@ const jsonLd = {
   name: 'Contact Warsh',
   mainEntity: {
     '@id': `${SITE_URL}/#organization`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: ADDRESS.locality,
+      addressRegion: ADDRESS.region,
+      addressCountry: ADDRESS.countryCode,
+    },
     contactPoint: [
       {
         '@type': 'ContactPoint',
@@ -153,6 +159,24 @@ export default function ContactPage() {
             For press and partnership enquiries. Support is email-first, because an email carries
             the account address, device and lesson number we need to actually fix something &mdash;
             a call usually ends with us asking you to send one.
+          </p>
+        </div>
+      </div>
+
+      <hr className="mt-16 border-navy/10" />
+
+      <div className="mt-16 grid gap-6 md:grid-cols-[minmax(0,16rem)_1fr] md:gap-14">
+        <h2 className="font-display text-2xl font-semibold text-navy sm:text-3xl">Where we are</h2>
+        <div className="max-w-prose space-y-4 text-base leading-relaxed text-deep">
+          <address className="adr font-display text-2xl font-semibold not-italic text-navy">
+            <span className="locality">{ADDRESS.locality}</span>,{' '}
+            <span className="region">{ADDRESS.region}</span>,{' '}
+            <span className="country-name">{ADDRESS.country}</span>
+          </address>
+          <p>
+            Warsh is built here. We do not keep a public walk-in office &mdash; the team is small
+            and works remotely &mdash; so email and phone are the ways to reach us, and both are
+            answered by the people who build the product.
           </p>
         </div>
       </div>

@@ -22,6 +22,7 @@ export const SOCIAL_LINKS: readonly SocialLink[] = [
   { href: 'https://www.tiktok.com/@warsh.app', label: 'TikTok' },
   { href: 'https://www.facebook.com/trywarshapp/', label: 'Facebook' },
   { href: 'https://www.linkedin.com/company/warshapp/', label: 'LinkedIn' },
+  { href: 'https://www.pinterest.com/warshapp/', label: 'Pinterest' },
 ] as const;
 
 /**
@@ -64,6 +65,7 @@ export const PHONE = {
  */
 export const ADDRESS = {
   locality: 'Karachi',
+  region: 'Sindh',
   country: 'Pakistan',
   countryCode: 'PK',
   display: 'Karachi, Pakistan',

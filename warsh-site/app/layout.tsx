@@ -123,6 +123,7 @@ const jsonLd = {
       address: {
         '@type': 'PostalAddress',
         addressLocality: ADDRESS.locality,
+        addressRegion: ADDRESS.region,
         addressCountry: ADDRESS.countryCode,
       },
       sameAs: [PLAY_STORE_URL, ...SOCIAL_LINKS.map((link) => link.href)],
