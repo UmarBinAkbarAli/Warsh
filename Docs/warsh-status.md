@@ -234,6 +234,31 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 
 ## Recent verified repository changes
 
+### 2026-09-03 (warsh.app — the recurring "physical address not found" finding)
+
+Fixed in `bb99aaa`, deployed to production and verified live.
+
+The address had been published twice (`19f39ee`, `6992a2e`) and the audit kept
+reporting it missing. Cause: the footer and `/contact` both wrote the line as
+three sibling spans, so React's serializer emitted a `<!-- -->` marker between
+each part and the served HTML read
+`Karachi<!-- -->, <!-- -->Sindh<!-- -->, <!-- -->Pakistan`. Any crawler that
+extracts text nodes saw three unrelated words, never an address. Both surfaces
+now render a real `<address>` element holding one text node
+(`ADDRESS.full`), with `PostalAddress` microdata on `<meta>` children beside
+the existing JSON-LD. No street line was invented; the published fact is
+unchanged.
+
+**The companion "some external links do not open in a new tab" finding is a
+false positive.** Every one of the 16 live pages was scanned: every anchor with
+an `http(s)` href to a host other than `warsh.app` already carries
+`target="_blank" rel="noopener noreferrer"`. The only anchors on the site
+without a target are `mailto:support@warsh.app` and `tel:+923181046756`, which
+the auditor appears to count as external. Neither should open in a new tab — a
+`mailto:` with `target="_blank"` strands a blank tab when no mail handler is
+registered — so nothing was changed. Re-verify by scanning for external
+anchors missing `target` before acting on this check again.
+
 ### 2026-09-02 (Sentry backlog — six backend issues closed, deployed)
 
 Every unresolved Sentry issue in `warsh-backend` was triaged against the code.
