@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Regenerate the subsetted WOFF2 faces that app/layout.tsx loads.
 
-Masters live in assets/fonts (not served); the .woff2 built from them land in
-public/fonts and are the only font files a browser ever sees. Two masters are
-load-bearing beyond this script: app/opengraph-image.tsx reads Inter-Regular.ttf
-and CormorantGaramond-SemiBold.ttf at build time, because satori parses TTF/OTF
-and not WOFF2.
+Masters and their .woff2 both live in assets/fonts, outside the served tree:
+next/font emits the copies the browser loads into /_next/static, so a build
+product under public/ would only ship a second copy nobody requests. Two
+masters are load-bearing beyond this script: app/opengraph-image.tsx reads
+Inter-Regular.ttf and CormorantGaramond-SemiBold.ttf at build time, because
+satori parses TTF/OTF and not WOFF2.
 
 Usage:
     pip install "fonttools[woff]"
@@ -24,7 +25,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 MASTER_DIR = ROOT / "assets" / "fonts"
-OUT_DIR = ROOT / "public" / "fonts"
+OUT_DIR = MASTER_DIR  # side by side with the masters; neither is served
 
 # Latin + Latin Extended, punctuation and currency. Deliberately wider than the
 # copy currently on the site: blog bodies are authored in Warsh Studio, so the

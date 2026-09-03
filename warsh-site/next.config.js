@@ -64,10 +64,9 @@ const nextConfig = {
   async headers() {
     return [
       { source: "/:path*", headers: SECURITY_HEADERS },
-      // The fonts are the exception: their names carry no hash either, but the
-      // subsets only change when scripts/build-fonts.py is rerun, and they are
-      // the largest thing on the critical path.
-      { source: "/fonts/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000" }] },
+      // No rule for the fonts: next/font copies them into /_next/static, which
+      // is content-hashed and already served immutable. Nothing font-shaped is
+      // under /public at all — see assets/fonts.
       { source: "/images/:path*", headers: [PUBLIC_ASSET_CACHE] },
       { source: "/scrollcraft.:ext(css|js)", headers: [PUBLIC_ASSET_CACHE] },
     ];

@@ -38,10 +38,10 @@ import {
  */
 const inter = localFont({
   src: [
-    { path: '../public/fonts/Inter-Regular.woff2', weight: '400', style: 'normal' },
-    { path: '../public/fonts/Inter-Italic.woff2', weight: '400', style: 'italic' },
-    { path: '../public/fonts/Inter-SemiBold.woff2', weight: '600', style: 'normal' },
-    { path: '../public/fonts/Inter-Bold.woff2', weight: '700', style: 'normal' },
+    { path: '../assets/fonts/Inter-Regular.woff2', weight: '400', style: 'normal' },
+    { path: '../assets/fonts/Inter-Italic.woff2', weight: '400', style: 'italic' },
+    { path: '../assets/fonts/Inter-SemiBold.woff2', weight: '600', style: 'normal' },
+    { path: '../assets/fonts/Inter-Bold.woff2', weight: '700', style: 'normal' },
   ],
   variable: '--font-inter',
   display: 'swap',
@@ -53,8 +53,8 @@ const inter = localFont({
 // the queue. Inter is the body face and stays preloaded.
 const cormorant = localFont({
   src: [
-    { path: '../public/fonts/CormorantGaramond-Regular.woff2', weight: '400', style: 'normal' },
-    { path: '../public/fonts/CormorantGaramond-SemiBold.woff2', weight: '600', style: 'normal' },
+    { path: '../assets/fonts/CormorantGaramond-Regular.woff2', weight: '400', style: 'normal' },
+    { path: '../assets/fonts/CormorantGaramond-SemiBold.woff2', weight: '600', style: 'normal' },
   ],
   variable: '--font-cormorant',
   display: 'swap',
@@ -63,8 +63,8 @@ const cormorant = localFont({
 
 const scheherazade = localFont({
   src: [
-    { path: '../public/fonts/ScheherazadeNew-Regular.woff2', weight: '400', style: 'normal' },
-    { path: '../public/fonts/ScheherazadeNew-SemiBold.woff2', weight: '600', style: 'normal' },
+    { path: '../assets/fonts/ScheherazadeNew-Regular.woff2', weight: '400', style: 'normal' },
+    { path: '../assets/fonts/ScheherazadeNew-SemiBold.woff2', weight: '600', style: 'normal' },
   ],
   variable: '--font-scheherazade',
   display: 'swap',

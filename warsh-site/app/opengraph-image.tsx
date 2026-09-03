@@ -26,11 +26,11 @@ const GOLD = '#C49B4D';
 const CREAM = '#EDDFAF';
 
 export default async function OpengraphImage() {
-  // assets/fonts, not public/fonts: these are the unsubsetted TTF masters, kept
-  // out of the served tree so a 3.5 MB font nobody requests is not deployed
-  // alongside the WOFF2 the browser actually loads. Still TTF because satori
-  // parses TTF/OTF and cannot read WOFF2. next.config.js traces this directory
-  // into the route's bundle.
+  // The unsubsetted TTF masters. Still TTF because satori parses TTF/OTF and
+  // cannot read WOFF2, and read from assets/ because nothing font-shaped is
+  // served from public/ — next/font emits the browser's copies into
+  // /_next/static itself. next.config.js traces this directory into the
+  // route's bundle.
   const [cormorant, inter] = await Promise.all([
     readFile(path.join(process.cwd(), 'assets/fonts/CormorantGaramond-SemiBold.ttf')),
     readFile(path.join(process.cwd(), 'assets/fonts/Inter-Regular.ttf')),
