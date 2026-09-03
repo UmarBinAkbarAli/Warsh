@@ -32,8 +32,23 @@ export function Nav() {
       }
     >
       <div className="mx-auto flex w-full max-w-container items-center justify-between px-6 py-4 md:px-8">
-        <Link href="/" className="flex items-center gap-2" aria-label="Warsh home">
-          <Image src="/images/warsh-logo.png" alt="Warsh" width={44} height={30} priority />
+        <Link href="/" className="site-logo flex items-center gap-2" aria-label="Warsh home">
+          {/*
+           * Served straight from /images rather than through the optimizer: a
+           * plain `.png` URL with "logo" in the filename is what brand/entity
+           * crawlers look for, and /_next/image?url=... reads as an untyped
+           * endpoint to them. The asset is pre-sized to 3x, so skipping the
+           * optimizer costs about a kilobyte.
+           */}
+          <Image
+            src="/images/warsh-logo-header.png"
+            alt="Warsh logo"
+            className="site-logo__mark"
+            width={44}
+            height={30}
+            priority
+            unoptimized
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
