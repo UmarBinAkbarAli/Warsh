@@ -14,36 +14,61 @@ import {
   SUPPORT_EMAIL,
 } from '@/content/site';
 
+/*
+ * These were eleven full-range TTFs, and next/font preloads every face it is
+ * given: 1.86 MB of font hit the wire ahead of the hero image on every page
+ * load, which is where the 11.4 s mobile LCP came from. Three things fixed it.
+ *
+ * WOFF2, not TTF. Same outlines, but the format brotli-preprocesses glyph data
+ * rather than compressing a TTF as an opaque blob (-84% on Inter, -90% on
+ * Cormorant).
+ *
+ * Subset to the scripts actually rendered. The originals carried Greek,
+ * Cyrillic and Vietnamese for a site that writes Latin and Arabic. The
+ * Scheherazade subsets keep every OpenType shaping feature the originals
+ * defined (ccmp/init/medi/fina/rlig/liga/mark/mkmk) — Arabic is unshapeable
+ * without them — and cover every Arabic codepoint in the source.
+ *
+ * Only the faces that render. A computed-style audit across all fourteen routes
+ * found Cormorant used at 400/600 only and Scheherazade at 400/600 only, so
+ * Cormorant-Bold and Scheherazade-Medium/Bold were dropped. Inter keeps 700:
+ * `<strong>` in the legal and blog prose reaches it.
+ *
+ * Regenerate with scripts/build-fonts.py after changing any source .ttf.
+ */
 const inter = localFont({
   src: [
-    { path: '../public/fonts/Inter-Regular.ttf', weight: '400', style: 'normal' },
-    { path: '../public/fonts/Inter-Italic.ttf', weight: '400', style: 'italic' },
-    { path: '../public/fonts/Inter-SemiBold.ttf', weight: '600', style: 'normal' },
-    { path: '../public/fonts/Inter-Bold.ttf', weight: '700', style: 'normal' },
+    { path: '../public/fonts/Inter-Regular.woff2', weight: '400', style: 'normal' },
+    { path: '../public/fonts/Inter-Italic.woff2', weight: '400', style: 'italic' },
+    { path: '../public/fonts/Inter-SemiBold.woff2', weight: '600', style: 'normal' },
+    { path: '../public/fonts/Inter-Bold.woff2', weight: '700', style: 'normal' },
   ],
   variable: '--font-inter',
   display: 'swap',
 });
 
+// preload: false on both of these. They are `display: swap` already, so the
+// first paint uses the fallback either way; preloading them only bought a
+// slightly earlier swap at the cost of putting them ahead of the LCP image in
+// the queue. Inter is the body face and stays preloaded.
 const cormorant = localFont({
   src: [
-    { path: '../public/fonts/CormorantGaramond-Regular.ttf', weight: '400', style: 'normal' },
-    { path: '../public/fonts/CormorantGaramond-SemiBold.ttf', weight: '600', style: 'normal' },
-    { path: '../public/fonts/CormorantGaramond-Bold.ttf', weight: '700', style: 'normal' },
+    { path: '../public/fonts/CormorantGaramond-Regular.woff2', weight: '400', style: 'normal' },
+    { path: '../public/fonts/CormorantGaramond-SemiBold.woff2', weight: '600', style: 'normal' },
   ],
   variable: '--font-cormorant',
   display: 'swap',
+  preload: false,
 });
 
 const scheherazade = localFont({
   src: [
-    { path: '../public/fonts/ScheherazadeNew-Regular.ttf', weight: '400', style: 'normal' },
-    { path: '../public/fonts/ScheherazadeNew-Medium.ttf', weight: '500', style: 'normal' },
-    { path: '../public/fonts/ScheherazadeNew-SemiBold.ttf', weight: '600', style: 'normal' },
-    { path: '../public/fonts/ScheherazadeNew-Bold.ttf', weight: '700', style: 'normal' },
+    { path: '../public/fonts/ScheherazadeNew-Regular.woff2', weight: '400', style: 'normal' },
+    { path: '../public/fonts/ScheherazadeNew-SemiBold.woff2', weight: '600', style: 'normal' },
   ],
   variable: '--font-scheherazade',
   display: 'swap',
+  preload: false,
 });
 
 export const viewport: Viewport = {

@@ -41,10 +41,36 @@ const SECURITY_HEADERS = [
   { key: "Permissions-Policy", value: "camera=(), geolocation=(), microphone=(), interest-cohort=()" },
 ];
 
+// Everything under /public is served by Vercel as `max-age=0, must-revalidate`
+// unless a rule says otherwise, so the logo, the hero WebP and the scrollcraft
+// engine were revalidated on every navigation. Unlike /_next/static these
+// filenames are not content-hashed, so `immutable` would be wrong — a week of
+// caching with a background revalidate gets the repeat-visit win without
+// stranding anyone on a stale asset after a deploy.
+const PUBLIC_ASSET_CACHE = {
+  key: "Cache-Control",
+  value: "public, max-age=604800, stale-while-revalidate=86400",
+};
+
 const nextConfig = {
   reactStrictMode: true,
+  // opengraph-image reads its two TTF masters with fs.readFile, from a path the
+  // bundler cannot see. The route prerenders today, so the read happens at build
+  // time and this changes nothing; it is here so the route does not start
+  // 500-ing if it ever becomes dynamic.
+  outputFileTracingIncludes: {
+    "/opengraph-image": ["./assets/fonts/*.ttf"],
+  },
   async headers() {
-    return [{ source: "/:path*", headers: SECURITY_HEADERS }];
+    return [
+      { source: "/:path*", headers: SECURITY_HEADERS },
+      // The fonts are the exception: their names carry no hash either, but the
+      // subsets only change when scripts/build-fonts.py is rerun, and they are
+      // the largest thing on the critical path.
+      { source: "/fonts/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000" }] },
+      { source: "/images/:path*", headers: [PUBLIC_ASSET_CACHE] },
+      { source: "/scrollcraft.:ext(css|js)", headers: [PUBLIC_ASSET_CACHE] },
+    ];
   },
   async redirects() {
     return [
