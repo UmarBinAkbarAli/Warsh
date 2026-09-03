@@ -39,3 +39,37 @@ html.warsh-sc-active body {
   background: #faf6e9;
   color: #1a1a1a;
 }
+
+/* ----------------------------------------------------------- phones only --
+   The engine's stylesheet is injected after hydration, and it is the thing
+   that HIDES flow-reveal content: `[data-sc-in] { opacity: 0 }`. Measured on
+   the live homepage, it lands ~1.9s after the hero image has already painted
+   at 840ms, so a phone shows the hero, blanks it a second later, then fades it
+   back when scrollcraft.js mounts at ~2.0s. Eight blocks do this, one of them
+   the figure holding the LCP image. Show-then-hide-then-show is what Speed
+   Index punishes, and on a throttled connection the blank window is seconds
+   wide rather than milliseconds.
+
+   Below the engine's own mobile breakpoint the reveal is simply skipped: these
+   elements start and stay in their revealed state, so the first paint is the
+   final one. Nothing is unloaded — pin, pan and the --sc-p progress variable
+   all still run, so the pinned sections behave exactly as before.
+
+   Specificity is doing deliberate work here. At (0,2,1) this beats both the
+   engine's base rule and its `.sc-in` reveal, but it is not !important, so the
+   inline transforms the engine writes each frame still win — the parallax
+   child inside .wh-parallax-col keeps moving.
+
+   Not extended to [data-sc-cue] (the /about h1): the engine drives cue opacity
+   inline every frame, so overriding it would need !important and would fight
+   the animation rather than skip it. That one needs its own change.
+
+   Desktop is untouched: this whole block is inert above 860px. */
+@media (max-width: 860px) {
+  html.warsh-sc-active [data-sc-in],
+  html.warsh-sc-active [data-sc-stagger] > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
