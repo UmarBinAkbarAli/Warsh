@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-09-02
+**Last verified:** 2026-09-03
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Beta hardening and launch preparation
 
@@ -233,6 +233,56 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - EAS profiles for development, staging APK, production-preview APK, and production Android builds
 
 ## Recent verified repository changes
+
+### 2026-09-03 (warsh.app — mobile LCP, 1.9 MB of font off the critical path)
+
+Fixed in `ab157fb` and `2e3828b`, deployed to production and verified live.
+
+A third-party speed test (seosignalx) reported an 11.4 s mobile LCP against a
+0 ms TBT and 0 CLS. Those three together say the main thread was never blocked
+and the network was saturated. `next/font` had been given eleven raw `.ttf`
+faces and preloads every face it is given, so **1,906 KB of font was fetched
+ahead of the hero image on every page load** — 88% of the page, roughly ten
+seconds on Lighthouse's mobile throttle. Three changes, in order of effect:
+
+- **WOFF2, not TTF.** Same outlines; the format brotli-preprocesses glyph data
+  instead of compressing the TTF as an opaque blob (-84% Inter, -90% Cormorant).
+- **Subset to Latin and Arabic.** The masters carried Greek, Cyrillic and
+  Vietnamese. The Scheherazade subsets keep every OpenType feature the masters
+  define and cover every Arabic codepoint in the source; shaping and the harakat
+  were checked rendering, not assumed.
+- **Dropped three faces, and stopped preloading the two display families.** A
+  `getComputedStyle` walk over all fourteen routes found Cormorant used at
+  400/600 only and Scheherazade at 400/600 only. Inter keeps 700 — `<strong>`
+  in the legal and blog prose reaches it.
+
+Critical path **1,906 KB → 217 KB (-89%)**; all eight faces total 574 KB.
+Masters and their subsets both live in `warsh-site/assets/fonts` (outside the
+served tree — `next/font` emits the browser's copies into `/_next/static`), and
+`scripts/build-fonts.py` regenerates them. `app/opengraph-image.tsx` still reads
+two `.ttf` masters because satori cannot parse WOFF2;
+`outputFileTracingIncludes` keeps that working if the route ever stops
+prerendering. OG card verified still rendering at 1200x630.
+
+Two further fixes found by measuring rather than reported by the test:
+everything under `public/` was served `max-age=0, must-revalidate`, so the logo,
+the hero WebP and the scrollcraft engine revalidated on every navigation (now
+`max-age=604800, stale-while-revalidate=86400`); and
+`public/images/app-onboarding.png` was a 1.8 MB master nothing had referenced
+since the 47 KB WebP replaced it.
+
+**Three of the test's findings do not hold, and should not be re-actioned.**
+"Minify CSS" (4 KiB) and "Minify JavaScript" (11 KiB) are false — both bundles
+already ship minified; this is Lighthouse's known false positive on
+already-minified output. "Properly size and compress images" (29 KiB) is false
+for this site: the homepage ships 49 KB of images total, a pre-sized WebP with
+`priority` and explicit dimensions. The reported TTFB of "0 ms" was never
+measured; the real figure is ~210 ms on a Vercel cache hit.
+
+**Still open, deliberately not taken here:** `useScrollCraft.ts` injects
+`/scrollcraft.css` after hydration, where the preload scanner cannot see it.
+That is the likeliest remaining driver of the 6.8 s Speed Index, but it changes
+render behaviour and wants its own change.
 
 ### 2026-09-03 (warsh.app — the recurring "physical address not found" finding)
 
