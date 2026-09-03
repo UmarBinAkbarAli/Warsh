@@ -69,6 +69,13 @@ export const ADDRESS = {
   country: 'Pakistan',
   countryCode: 'PK',
   display: 'Karachi, Pakistan',
+  // The full line, pre-joined on purpose. Rendered as one expression it becomes
+  // a single text node; assembled from three JSX children it becomes three,
+  // separated by React's `<!-- -->` markers, and an extractor reading text
+  // nodes sees "Karachi", "Sindh" and "Pakistan" as unrelated words rather than
+  // an address. Machine-readability is carried by the PostalAddress microdata
+  // and JSON-LD instead of by splitting the visible string.
+  full: 'Karachi, Sindh, Pakistan',
 } as const;
 
 export const NAV_LINKS = [

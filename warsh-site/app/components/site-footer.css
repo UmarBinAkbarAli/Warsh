@@ -136,6 +136,15 @@
   color: color-mix(in oklab, var(--wsf-ink-soft) 82%, transparent);
 }
 
+/*
+ * The imprint's <address> sits mid-sentence in the copyright line, so it has to
+ * behave like the words around it: inline flow, upright, no browser italics.
+ */
+.wsf__adr {
+  display: inline;
+  font-style: normal;
+}
+
 .wsf__imprint a {
   color: inherit;
   text-decoration: none;

@@ -89,22 +89,29 @@ export function SiteFooter({ reveal = false }: { reveal?: boolean }) {
         </div>
 
         <div className="wsf__imprint">
-          <span>
+          <div>
             &copy; {new Date().getFullYear()} Warsh. All rights reserved.{' '}
             {/*
-              Marked up as an hCard adr so the locality is machine-readable next
-              to the Organization schema's PostalAddress, rather than being just
-              two more words in the copyright line.
+              A real <address> element holding one unbroken string, with the
+              parts carried by PostalAddress microdata on <meta> children. The
+              earlier hCard version split the line across three spans, so the
+              served HTML read "Karachi<!-- -->, <!-- -->Sindh..." and every
+              crawler that extracts text nodes came away with no address at all.
             */}
-            <span className="adr">
-              <span className="locality">{ADDRESS.locality}</span>,{' '}
-              <span className="region">{ADDRESS.region}</span>,{' '}
-              <span className="country-name">{ADDRESS.country}</span>
-            </span>
+            <address
+              className="wsf__adr"
+              itemScope
+              itemType="https://schema.org/PostalAddress"
+            >
+              <meta itemProp="addressLocality" content={ADDRESS.locality} />
+              <meta itemProp="addressRegion" content={ADDRESS.region} />
+              <meta itemProp="addressCountry" content={ADDRESS.countryCode} />
+              {ADDRESS.full}
+            </address>
             .{' '}
             <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>{' '}
             <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a>
-          </span>
+          </div>
           <span className="wsf__ar" style={{ letterSpacing: 0 }}>
             حَيْثُ تُصْنَعُ الْعَرَبِيَّة
           </span>

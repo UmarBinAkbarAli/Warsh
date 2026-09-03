@@ -168,10 +168,20 @@ export default function ContactPage() {
       <div className="mt-16 grid gap-6 md:grid-cols-[minmax(0,16rem)_1fr] md:gap-14">
         <h2 className="font-display text-2xl font-semibold text-navy sm:text-3xl">Where we are</h2>
         <div className="max-w-prose space-y-4 text-base leading-relaxed text-deep">
-          <address className="adr font-display text-2xl font-semibold not-italic text-navy">
-            <span className="locality">{ADDRESS.locality}</span>,{' '}
-            <span className="region">{ADDRESS.region}</span>,{' '}
-            <span className="country-name">{ADDRESS.country}</span>
+          {/*
+            One text node, not three spans: see ADDRESS.full in content/site.ts.
+            The parts stay machine-readable through the PostalAddress microdata
+            below and the ContactPage schema above.
+          */}
+          <address
+            className="font-display text-2xl font-semibold not-italic text-navy"
+            itemScope
+            itemType="https://schema.org/PostalAddress"
+          >
+            <meta itemProp="addressLocality" content={ADDRESS.locality} />
+            <meta itemProp="addressRegion" content={ADDRESS.region} />
+            <meta itemProp="addressCountry" content={ADDRESS.countryCode} />
+            {ADDRESS.full}
           </address>
           <p>
             Warsh is built here. We do not keep a public walk-in office &mdash; the team is small
