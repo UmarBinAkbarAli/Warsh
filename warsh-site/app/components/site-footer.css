@@ -191,3 +191,86 @@
   outline: 2px solid var(--wsf-accent);
   outline-offset: 3px;
 }
+
+/*
+ * Colophon search. Set as one quiet rule-and-field rather than a boxed widget:
+ * the footer is the lowest-contrast surface on the site, and a bordered card
+ * here would outrank the ask above it. The row is a real GET form, so the
+ * button is a submit and not an ornament.
+ */
+.wsf__search {
+  margin-top: 2rem;
+  max-width: 24rem;
+}
+
+.wsf__search-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--wsf-ink-soft) 80%, transparent);
+  margin-bottom: 0.6rem;
+}
+
+.wsf__search-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--wsf-rule);
+  padding-bottom: 0.4rem;
+  transition: border-color 160ms var(--wsf-ease);
+}
+
+.wsf__search-row:focus-within {
+  border-bottom-color: var(--wsf-accent);
+}
+
+.wsf__search-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  padding: 0.25rem 0;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--wsf-ink);
+  outline: none;
+}
+
+.wsf__search-input::placeholder {
+  color: color-mix(in oklab, var(--wsf-ink-soft) 62%, transparent);
+}
+
+/* The clear affordance Safari and Chrome draw for type="search" is dark on a
+   dark ground, so it is inverted rather than removed. */
+.wsf__search-input::-webkit-search-cancel-button {
+  filter: invert(1);
+  opacity: 0.55;
+  cursor: pointer;
+}
+
+.wsf__search-btn {
+  flex: 0 0 auto;
+  background: transparent;
+  border: 0;
+  padding: 0.25rem 0;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--wsf-accent);
+  cursor: pointer;
+  transition: color 160ms var(--wsf-ease);
+}
+
+.wsf__search-btn:hover {
+  color: var(--wsf-accent-lift);
+}
+
+.wsf__search-btn:focus-visible {
+  outline: 2px solid var(--wsf-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}

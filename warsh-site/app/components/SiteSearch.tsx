@@ -58,7 +58,13 @@ export function SiteSearch({ items }: { items: SearchItem[] }) {
   const total = grouped?.reduce((sum, entry) => sum + entry.hits.length, 0) ?? 0;
 
   return (
-    <div className="w-full max-w-xl">
+    /*
+     * A real search form around the live filter, not a bare input: `role
+     * search` and a `q` field are what assistive tech and crawlers look for,
+     * and submitting falls back to /help?q=... — the SearchAction URL — for
+     * anyone whose JavaScript never ran.
+     */
+    <form role="search" action="/help" method="get" className="w-full max-w-xl">
       <label htmlFor="site-search" className="sr-only">
         Search posts and help
       </label>
@@ -80,6 +86,7 @@ export function SiteSearch({ items }: { items: SearchItem[] }) {
         <input
           id="site-search"
           ref={inputRef}
+          name="q"
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
@@ -138,7 +145,7 @@ export function SiteSearch({ items }: { items: SearchItem[] }) {
           )}
         </div>
       )}
-    </div>
+    </form>
   );
 }
 

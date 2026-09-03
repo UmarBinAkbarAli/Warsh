@@ -227,12 +227,12 @@ export default function FeaturesPage() {
                 </dl>
 
                 <div className="wf-label__foot">
-                  <a className="wf-link" href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
+                  <a className="wf-link" href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
                     Download on Google Play
                   </a>
                 </div>
                 <div className="wf-label__foot" style={{ paddingTop: '0.75rem' }}>
-                  <a className="wf-link" href={WEB_APP_URL} target="_blank" rel="noreferrer">
+                  <a className="wf-link" href={WEB_APP_URL} target="_blank" rel="noopener noreferrer">
                     Open Warsh on the web
                   </a>
                 </div>

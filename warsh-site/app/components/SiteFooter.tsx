@@ -67,17 +67,18 @@ export function SiteFooter({ reveal = false }: { reveal?: boolean }) {
             <p className="wsf__ask">
               Warsh is free to download and publicly available on Google Play. Begin with the
               seven ayat you already recite:{' '}
-              <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
+              <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
                 download on Google Play
               </a>
               , or{' '}
-              <a href={WEB_APP_URL} target="_blank" rel="noreferrer">
+              <a href={WEB_APP_URL} target="_blank" rel="noopener noreferrer">
                 open Warsh on the web
               </a>
               .
             </p>
 
             <SocialRow />
+            <FooterSearch />
           </div>
 
           <nav className="wsf__cols" aria-label="Site">
@@ -114,6 +115,38 @@ export function SiteFooter({ reveal = false }: { reveal?: boolean }) {
 }
 
 /**
+ * Site-wide search, as a plain GET form rather than a JavaScript widget.
+ *
+ * It submits to /help?q=..., which is the same URL the WebSite schema's
+ * SearchAction advertises and the same one <SiteSearch> reads on mount, so the
+ * three agree by construction. Two things follow: search is reachable from
+ * every page instead of only /help and /blog, and it still works with
+ * JavaScript off, because the browser does the navigating.
+ */
+function FooterSearch() {
+  return (
+    <form role="search" action="/help" method="get" className="wsf__search">
+      <label htmlFor="wsf-search" className="wsf__search-label">
+        Search Warsh
+      </label>
+      <div className="wsf__search-row">
+        <input
+          type="search"
+          id="wsf-search"
+          name="q"
+          placeholder="Help answers and articles"
+          className="wsf__search-input"
+          autoComplete="off"
+        />
+        <button type="submit" className="wsf__search-btn">
+          Search
+        </button>
+      </div>
+    </form>
+  );
+}
+
+/**
  * Rendered only when a profile is actually listed, so an empty SOCIAL_LINKS
  * leaves no orphan row of nothing behind it.
  */
@@ -124,7 +157,7 @@ function SocialRow() {
     <ul className="wsf__social" aria-label="Warsh on social media">
       {SOCIAL_LINKS.map((social) => (
         <li key={social.href}>
-          <a href={social.href} target="_blank" rel="noreferrer me">
+          <a href={social.href} target="_blank" rel="noopener noreferrer me">
             {social.label}
           </a>
         </li>
@@ -149,7 +182,7 @@ function FooterColumn({
         {links.map((link) => (
           <li key={link.href}>
             {isExternal(link.href) ? (
-              <a href={link.href} target="_blank" rel="noreferrer">
+              <a href={link.href} target="_blank" rel="noopener noreferrer">
                 {link.label}
               </a>
             ) : (

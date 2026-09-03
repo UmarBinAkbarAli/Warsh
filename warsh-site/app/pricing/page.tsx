@@ -113,7 +113,7 @@ export default function PricingPage() {
           <a
             href={PLAY_STORE_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="mt-8 inline-flex items-center justify-center rounded-md bg-gold px-6 py-3 text-sm font-semibold text-navy transition-colors duration-fast hover:bg-gold-deep"
           >
             Download on Google Play

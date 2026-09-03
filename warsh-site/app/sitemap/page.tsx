@@ -53,7 +53,7 @@ export default function SitemapPage() {
                       // Same-origin feed stays in the tab; the web app is a
                       // different origin and follows the site's external-link rule.
                       {...(link.href.startsWith('http')
-                        ? { target: '_blank', rel: 'noreferrer' }
+                        ? { target: '_blank', rel: 'noopener noreferrer' }
                         : {})}
                     >
                       <span className="text-base text-navy group-hover:underline group-hover:underline-offset-4">

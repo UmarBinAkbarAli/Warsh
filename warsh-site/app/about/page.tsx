@@ -284,7 +284,7 @@ export default function AboutPage() {
             tutor can certify. If something in a lesson felt wrong, write to{' '}
             <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>; we read every email. The app is
             free to download,{' '}
-            <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
+            <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
               on Google Play
             </a>
             .

@@ -115,7 +115,7 @@ export default function HomePage() {
               </p>
 
               <div className="wh-actions">
-                <a className="wh-link" href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
+                <a className="wh-link" href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
                   Download on Google Play
                 </a>
                 <Link className="wh-link" href="/features">
@@ -137,14 +137,24 @@ export default function HomePage() {
             <figure className="wh-plate" data-sc-in>
               <div className="wh-plate__frame">
                 <span className="wh-plate__glow" aria-hidden="true" />
+                {/*
+                 * Pre-sized to 2x the largest slot this plate ever occupies
+                 * (21rem on desktop, 70vw on a phone) and served straight from
+                 * /images rather than through the optimizer. Two reasons: the
+                 * master PNG is 1.8 MB where 47 KB of WebP is indistinguishable
+                 * here, and an optimizer URL carries its width in a query
+                 * string that anything reading the raw HTML has to entity-decode
+                 * first — crawlers that skip that step request a `w`-less URL
+                 * and record the image as broken.
+                 */}
                 <Image
                   className="wh-plate__img"
-                  src="/images/app-onboarding.png"
+                  src="/images/app-onboarding-672.webp"
                   alt="The Warsh app open on its welcome screen, showing a lesson card and a recitation waveform."
-                  width={1158}
-                  height={2374}
+                  width={672}
+                  height={1378}
                   priority
-                  sizes="(min-width: 62rem) 21rem, 70vw"
+                  unoptimized
                 />
               </div>
             </figure>
