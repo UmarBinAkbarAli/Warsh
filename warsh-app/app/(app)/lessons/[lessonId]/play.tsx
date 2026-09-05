@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import api, { isSubscriptionRequiredError } from "@services/api";
+import api, { API_BASE_URL, isSubscriptionRequiredError } from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { PlayButton } from "@components/PlayButton";
@@ -17,6 +17,7 @@ import { pickLocalized, useTranslationLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 import { prefetchCatalogAudio, prefetchRemoteAudio } from "@services/audioCache";
 import { prefetchChapter } from "@services/chapterPrefetch";
+import { useAuthStore } from "@stores/authStore";
 
 // ---------------------------------------------------------------------------
 // API response shape — content is the raw warsh-content-schema v1.0 blob
@@ -30,6 +31,7 @@ type RawLesson = {
   template: string;
   content: Record<string, unknown> | null;
   isCompleted?: boolean;
+  isChapterTest?: boolean;
   isSkippedByPlacement?: boolean;
 };
 
@@ -94,7 +96,7 @@ function discoverCardPrefetchFields(card: Record<string, any> | undefined, langu
   const titleObj = card.title  as Record<string, any> | undefined;
   const examples = card.examples as Array<Record<string, any>> | undefined;
 
-  const imageUrl = card.image_url as string | undefined;
+  const imageUrl = resolveDiscoverImage(card.image_url as string | undefined);
   const audioUrl = card.audio_url as string | undefined;
 
   let arabicText: string | undefined;
@@ -335,8 +337,12 @@ const ANSWER_DELAY_MS = 1800;
 // exiting mid-Discover always restarts from card 1.
 const CHECKPOINT_MIN_BEAT = 3;
 const CHECKPOINT_MAX_BEAT = 4;
-function lessonCheckpointKey(id: string) {
-  return `warsh_lesson_checkpoint_${id}`;
+function resolveDiscoverImage(url?: string) {
+  return url?.startsWith("/") ? `${API_BASE_URL}${url}` : url;
+}
+
+function lessonCheckpointKey(userId: string, id: string) {
+  return `warsh_lesson_checkpoint_v2_${userId}_${id}`;
 }
 
 function splitWords(value?: string) {
@@ -416,6 +422,7 @@ export default function LessonPlayScreen() {
   const language = useTranslationLanguage();
   const t = useT();
   const { lessonId } = useLocalSearchParams<{ lessonId: string }>();
+  const userId = useAuthStore((state) => state.user?.id);
   const [lesson, setLesson] = useState<RawLesson | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -526,9 +533,13 @@ export default function LessonPlayScreen() {
       try {
         const response = await api.get(`/api/lessons/${lessonId}`);
         const raw = response.data.data.lesson as RawLesson;
+        if (raw.isChapterTest || (raw.content?.assessment as { type?: string } | undefined)?.type === "CHAPTER_TEST") {
+          router.replace(`/chapter-test/${lessonId}`);
+          return;
+        }
         setLesson(raw);
         trackLessonStarted(lessonId, raw.template);
-        const savedCheckpoint = await AsyncStorage.getItem(lessonCheckpointKey(lessonId)).catch(() => null);
+        const savedCheckpoint = userId ? await AsyncStorage.getItem(lessonCheckpointKey(userId, lessonId)).catch(() => null) : null;
         const checkpointBeat = savedCheckpoint ? parseInt(savedCheckpoint, 10) : NaN;
         if (checkpointBeat >= CHECKPOINT_MIN_BEAT && checkpointBeat <= CHECKPOINT_MAX_BEAT) {
           setCurrentBeat(checkpointBeat);
@@ -544,7 +555,7 @@ export default function LessonPlayScreen() {
       }
     }
     void loadLesson();
-  }, [lessonId, router, t]);
+  }, [lessonId, userId, router, t]);
 
   useEffect(() => {
     async function finishLesson() {
@@ -675,12 +686,12 @@ export default function LessonPlayScreen() {
     setCurrentBeat(beat);
     setSelectedAnswer(null);
     setIsAnswered(false);
-    if (!lessonId) return;
+    if (!lessonId || !userId) return;
     if (beat >= CHECKPOINT_MIN_BEAT && beat <= CHECKPOINT_MAX_BEAT) {
-      AsyncStorage.setItem(lessonCheckpointKey(lessonId), String(beat)).catch(() => {});
+      AsyncStorage.setItem(lessonCheckpointKey(userId, lessonId), String(beat)).catch(() => {});
     } else if (beat > CHECKPOINT_MAX_BEAT) {
       // Lesson completed — nothing left to resume into.
-      AsyncStorage.removeItem(lessonCheckpointKey(lessonId)).catch(() => {});
+      AsyncStorage.removeItem(lessonCheckpointKey(userId, lessonId)).catch(() => {});
     }
   }
 
@@ -1142,7 +1153,7 @@ export default function LessonPlayScreen() {
       const bodyObj  = card.body   as Record<string, any> | undefined;
       const examples = card.examples as Array<Record<string, any>> | undefined;
 
-      discoverImageUrl = card.image_url as string | undefined;
+      discoverImageUrl = resolveDiscoverImage(card.image_url as string | undefined);
 
       if (cardType === "GRAMMAR_NOTE") {
         arabicText    = titleObj?.ar as string | undefined;
