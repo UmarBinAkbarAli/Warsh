@@ -1,0 +1,399 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 2, Lesson 16 — Review.",
+    "chapter_order": 2,
+    "lesson_order": 16,
+    "estimated_minutes": 8,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+      "en": "That is the Book — no doubt in it — a guidance for those mindful of Allah.",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں، پرہیزگاروں کے لیے ہدایت ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
+    },
+    "noor_intro": {
+      "en": "Review the Chapter 2 words and sentence patterns before the final test.",
+      "ur": "امتحان سے پہلے باب 2 کے الفاظ اور جملوں کے نمونوں کا جائزہ لیں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The big picture — نَكِرَة vs مَعْرِفَة",
+        "ar": "النَّكِرَة وَالْمَعْرِفَة",
+        "ur": "بڑی تصویر — نکرہ اور معرفہ"
+      },
+      "explanation": {
+        "en": "Every Arabic noun is either نَكِرَة (indefinite — 'a') or مَعْرِفَة (definite — 'the'). Tanween (ٌ) = نَكِرَة. ال at the front = مَعْرِفَة. These two categories are the foundation of every sentence you'll ever read in Arabic.",
+        "ur": "ہر عربی اسم یا تو نکرہ ('ایک') ہے یا معرفہ ('وہ')۔ تنوین (ٌ) = نکرہ۔ آگے ال = معرفہ۔ یہ دو قسمیں ہر اس جملے کی بنیاد ہیں جو آپ عربی میں پڑھیں گے۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابٌ ← الْكِتَابُ",
+          "ar_plain": "كتاب ← الكتاب",
+          "translit": "kitābun → al-kitābu",
+          "en": "a book → the book",
+          "ur": "ایک کتاب → وہ کتاب"
+        },
+        {
+          "ar": "بَيْتٌ ← الْبَيْتُ",
+          "ar_plain": "بيت ← البيت",
+          "translit": "baytun → al-baytu",
+          "en": "a house → the house",
+          "ur": "ایک گھر → وہ گھر"
+        },
+        {
+          "ar": "مَسْجِدٌ ← الْمَسْجِدُ",
+          "ar_plain": "مسجد ← المسجد",
+          "translit": "masjidun → al-masjidu",
+          "en": "a mosque → the mosque",
+          "ur": "ایک مسجد → وہ مسجد"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Sentences — definite subject + indefinite predicate",
+        "ar": "الْمُبْتَدَأُ وَالْخَبَرُ",
+        "ur": "جملے — معرفہ مبتدأ + نکرہ خبر"
+      },
+      "explanation": {
+        "en": "The most common Arabic sentence: the subject is definite (with ال), the predicate is indefinite (with tanween). The predicate can be a noun or an adjective. No word for 'is'.",
+        "ur": "سب سے عام عربی جملہ: مبتدأ معرفہ (ال کے ساتھ)، خبر نکرہ (تنوین کے ساتھ)۔ خبر اسم یا صفت ہو سکتی ہے۔ 'ہے' کے لیے کوئی لفظ نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "الْكِتَابُ جَدِيدٌ",
+          "ar_plain": "الكتاب جديد",
+          "translit": "al-kitābu jadīdun",
+          "en": "The book is new",
+          "ur": "وہ کتاب نئی ہے"
+        },
+        {
+          "ar": "الْبَيْتُ كَبِيرٌ",
+          "ar_plain": "البيت كبير",
+          "translit": "al-baytu kabīrun",
+          "en": "The house is big",
+          "ur": "وہ گھر بڑا ہے"
+        },
+        {
+          "ar": "الْمَسْجِدُ قَدِيمٌ",
+          "ar_plain": "المسجد قديم",
+          "translit": "al-masjidu qadīmun",
+          "en": "The mosque is old",
+          "ur": "وہ مسجد پرانی ہے"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ch02-l04-ex01",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 5,
+      "prompt": {
+        "ar": "الْمَسْجِدُ",
+        "ar_plain": "المسجد",
+        "translit": "al-masjidu",
+        "en": "the mosque",
+        "ur": "مسجد"
+      },
+      "options": [
+        {
+          "en": "a mosque",
+          "ur": "ایک مسجد"
+        },
+        {
+          "en": "the mosque",
+          "ur": "وہ مسجد"
+        },
+        {
+          "en": "the house",
+          "ur": "وہ گھر"
+        },
+        {
+          "en": "the book",
+          "ur": "وہ کتاب"
+        }
+      ],
+      "correct_index": 1,
+      "explanation_on_wrong": {
+        "en": "الْمَسْجِدُ has ال — definite — 'the mosque'. مَسْجِدٌ (with tanween, no ال) means 'a mosque'.",
+        "ur": "الْمَسْجِدُ میں ال ہے — معرفہ — 'وہ مسجد'۔ مَسْجِدٌ (تنوین کے ساتھ، بغیر ال) = 'ایک مسجد'۔"
+      }
+    },
+    {
+      "id": "ch02-l04-ex02",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 5,
+      "prompt": {
+        "ar": "الْكِتَابُ جَدِيدٌ",
+        "ar_plain": "الكتاب جديد",
+        "translit": "al-kitābu jadīdun",
+        "en": "The book is new",
+        "ur": "کتاب نئی ہے۔"
+      },
+      "options": [
+        {
+          "en": "A new book",
+          "ur": "ایک نئی کتاب"
+        },
+        {
+          "en": "The book is old",
+          "ur": "وہ کتاب پرانی ہے"
+        },
+        {
+          "en": "The book is new",
+          "ur": "وہ کتاب نئی ہے"
+        },
+        {
+          "en": "A book is new",
+          "ur": "ایک کتاب نئی ہے"
+        }
+      ],
+      "correct_index": 2
+    },
+    {
+      "id": "ch02-l04-ex03",
+      "type": "FILL_BLANK",
+      "xp_value": 5,
+      "mode": "TAP",
+      "sentence_ar": "الْقَلَمُ ___ الْمَكْتَبِ",
+      "hint": {
+        "en": "The pen is on the desk.",
+        "ur": "وہ قلم میز پر ہے۔"
+      },
+      "options": [
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where",
+          "ur": "کہاں"
+        },
+        {
+          "ar": "عَلَى",
+          "ar_plain": "على",
+          "translit": "ʿalā",
+          "en": "on",
+          "ur": "پر"
+        },
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from",
+          "ur": "سے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "عَلَى",
+        "ar_plain": "على",
+        "translit": "ʿalā",
+        "en": "on",
+        "ur": "پر"
+      },
+      "explanation_on_wrong": {
+        "en": "عَلَى = on/upon. The pen rests on top of the desk, not inside it — so عَلَى, not فِي.",
+        "ur": "عَلَى = پر/اوپر۔ قلم میز کے اوپر رکھا ہے، اندر نہیں — اس لیے عَلَى، فِي نہیں۔"
+      }
+    },
+    {
+      "id": "ch02-l04-ex04",
+      "type": "FILL_BLANK",
+      "xp_value": 5,
+      "mode": "TAP",
+      "sentence_ar": "الْبَيْتُ ___",
+      "hint": {
+        "en": "The house is big.",
+        "ur": "وہ گھر بڑا ہے۔"
+      },
+      "options": [
+        {
+          "ar": "قَدِيمٌ",
+          "ar_plain": "قديم",
+          "translit": "qadīmun",
+          "en": "old",
+          "ur": "پرانا"
+        },
+        {
+          "ar": "كَبِيرٌ",
+          "ar_plain": "كبير",
+          "translit": "kabīrun",
+          "en": "big",
+          "ur": "بڑا"
+        },
+        {
+          "ar": "جَدِيدٌ",
+          "ar_plain": "جديد",
+          "translit": "jadīdun",
+          "en": "new",
+          "ur": "نیا"
+        },
+        {
+          "ar": "الْكَبِيرُ",
+          "ar_plain": "الكبير",
+          "translit": "al-kabīru",
+          "en": "the big",
+          "ur": "بڑا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كَبِيرٌ",
+        "ar_plain": "كبير",
+        "translit": "kabīrun",
+        "en": "big",
+        "ur": "بڑا"
+      },
+      "explanation_on_wrong": {
+        "en": "The predicate must be indefinite (tanween). كَبِيرٌ is correct — indefinite adjective meaning 'big'. الْكَبِيرُ (with ال) would be a different grammatical structure.",
+        "ur": "خبر نکرہ (تنوین کے ساتھ) ہونی چاہیے۔ كَبِيرٌ درست ہے — نکرہ صفت 'بڑا'۔ الْكَبِيرُ (ال کے ساتھ) ایک مختلف گرامر کا ڈھانچہ ہوگا۔"
+      }
+    },
+    {
+      "id": "ch02-l04-ex05",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 5,
+      "target_translation": {
+        "en": "Where is the book?",
+        "ur": "وہ کتاب کہاں ہے؟"
+      },
+      "tiles": [
+        {
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitābu",
+          "en": "the book",
+          "ur": "کتاب"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where?",
+          "ur": "کہاں"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "الْبَيْتُ",
+          "ar_plain": "البيت",
+          "translit": "al-baytu",
+          "en": "the house",
+          "ur": "گھر"
+        }
+      ],
+      "correct_order": [
+        1,
+        0
+      ],
+      "explanation_on_wrong": {
+        "en": "أَيْنَ الْكِتَابُ؟ — question word first (أَيْنَ), then the noun you're asking about (الْكِتَابُ). This is only the question, not the answer.",
+        "ur": "أَيْنَ الْكِتابُ؟ — پہلے سوالیہ لفظ (أَيْنَ)، پھر وہ اسم جس کے بارے میں پوچھ رہے ہیں (الْكِتابُ)۔ یہ صرف سوال ہے، جواب نہیں۔"
+      }
+    },
+    {
+      "id": "ch02-l04-ex06",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 5,
+      "target_translation": {
+        "en": "The mosque is old.",
+        "ur": "وہ مسجد پرانی ہے۔"
+      },
+      "tiles": [
+        {
+          "ar": "الْمَسْجِدُ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidu",
+          "en": "the mosque",
+          "ur": "مسجد"
+        },
+        {
+          "ar": "قَدِيمٌ",
+          "ar_plain": "قديم",
+          "translit": "qadīmun",
+          "en": "old",
+          "ur": "پرانا"
+        },
+        {
+          "ar": "كَبِيرٌ",
+          "ar_plain": "كبير",
+          "translit": "kabīrun",
+          "en": "big",
+          "ur": "بڑا"
+        },
+        {
+          "ar": "الْبَيْتُ",
+          "ar_plain": "البيت",
+          "translit": "al-baytu",
+          "en": "the house",
+          "ur": "گھر"
+        }
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "explanation_on_wrong": {
+        "en": "الْمَسْجِدُ قَدِيمٌ — definite subject first (الْمَسْجِدُ), then indefinite predicate (قَدِيمٌ). This pattern — ال noun + tanween adjective — means 'the X is Y'.",
+        "ur": "الْمَسْجِدُ قَدِيمٌ — پہلے معرفہ مبتدأ (الْمَسْجِدُ)، پھر نکرہ خبر (قَدِيمٌ)۔ یہ نمونہ — ال اسم + تنوین صفت — مطلب ہے 'وہ X ہے Y'۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 2 review",
+      "ar": "مُرَاجَعَةُ الْفَصْلِ الثَّانِي",
+      "ur": "باب 2 کا جائزہ"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+      "en": "That is the Book — no doubt in it — a guidance for those mindful of Allah.",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں، پرہیزگاروں کے لیے ہدایت ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "ذَٰلِكَ",
+      "ٱلْكِتَٰبُ"
+    ],
+    "noor_explanation": {
+      "en": "Review the forms and meanings before the final test.",
+      "ur": "آخری امتحان سے پہلے شکلوں اور معانی کا جائزہ لیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 2 review is complete. Take the final test.",
+      "ur": "باب 2 کا جائزہ مکمل ہے۔ اب آخری امتحان دیں۔"
+    }
+  }
+}

@@ -17,7 +17,20 @@ const ch01TestContent = require("./fixtures/chapter-01-lesson-05-final-test.json
 const ch02L01Content = require("./fixtures/chapter-02-lesson-01.json");
 const ch02L02Content = require("./fixtures/chapter-02-lesson-02.json");
 const ch02L03Content = require("./fixtures/chapter-02-lesson-03.json");
-const ch02L04Content = require("./fixtures/chapter-02-lesson-04.json");
+const ch02L16Content = require("./fixtures/chapter-02-lesson-04.json");
+const ch02L04Content = require("./fixtures/chapter-02-lesson-16-review.json");
+const ch02L05Content = require("./fixtures/chapter-02-lesson-05.json");
+const ch02L06Content = require("./fixtures/chapter-02-lesson-06.json");
+const ch02L07Content = require("./fixtures/chapter-02-lesson-07.json");
+const ch02L08Content = require("./fixtures/chapter-02-lesson-08.json");
+const ch02L09Content = require("./fixtures/chapter-02-lesson-09.json");
+const ch02L10Content = require("./fixtures/chapter-02-lesson-10.json");
+const ch02L11Content = require("./fixtures/chapter-02-lesson-11.json");
+const ch02L12Content = require("./fixtures/chapter-02-lesson-12.json");
+const ch02L13Content = require("./fixtures/chapter-02-lesson-13.json");
+const ch02L14Content = require("./fixtures/chapter-02-lesson-14.json");
+const ch02L15Content = require("./fixtures/chapter-02-lesson-15.json");
+const ch02L17TestContent = require("./fixtures/chapter-02-lesson-17-final-test.json");
 const ch03L01Content = require("./fixtures/chapter-03-lesson-01.json");
 const ch03L02Content = require("./fixtures/chapter-03-lesson-02.json");
 const ch03L03Content = require("./fixtures/chapter-03-lesson-03.json");
@@ -701,7 +714,20 @@ async function main() {
     { id: "ch02-l01", chapterId: ch2Id, order: 1, title: "Tanween — The Sound of 'A'",            titleAr: "التَّنْوِين — صَوْتُ النَّكِرَة",            template: "STANDARD", xpReward: ch02L01Content._meta?.xp_reward ?? 10, content: ch02L01Content },
     { id: "ch02-l02", chapterId: ch2Id, order: 2, title: "ال — The Definite Article",              titleAr: "التَّعْرِيف بِالْ",                          template: "STANDARD", xpReward: ch02L02Content._meta?.xp_reward ?? 10, content: ch02L02Content },
     { id: "ch02-l03", chapterId: ch2Id, order: 3, title: "أَيْنَ — Where?",                        titleAr: "أَيْنَ وَحُرُوف الْجَرّ",                    template: "STANDARD", xpReward: ch02L03Content._meta?.xp_reward ?? 10, content: ch02L03Content },
-    { id: "ch02-l04", chapterId: ch2Id, order: 4, title: "Chapter 2 Review",                      titleAr: "مُرَاجَعَة الفَصْل الثَّانِي",               template: "REVIEW",   xpReward: ch02L04Content._meta?.xp_reward ?? 20, content: ch02L04Content },
+    { id: "ch02-l16", chapterId: ch2Id, order: 4, title: "Nominal Sentences",                       titleAr: "الْجُمْلَةُ الاسْمِيَّةُ",                    template: "STANDARD", xpReward: ch02L16Content._meta?.xp_reward ?? 10, content: ch02L16Content },
+    { id: "ch02-l05", chapterId: ch2Id, order: 5, title: "فِي — In",                               titleAr: "فِي",                                          template: "STANDARD", xpReward: ch02L05Content._meta?.xp_reward ?? 10, content: ch02L05Content },
+    { id: "ch02-l06", chapterId: ch2Id, order: 6, title: "عَلَى — On",                             titleAr: "عَلَى",                                        template: "STANDARD", xpReward: ch02L06Content._meta?.xp_reward ?? 10, content: ch02L06Content },
+    { id: "ch02-l07", chapterId: ch2Id, order: 7, title: "مِنْ — From",                            titleAr: "مِنْ",                                         template: "STANDARD", xpReward: ch02L07Content._meta?.xp_reward ?? 10, content: ch02L07Content },
+    { id: "ch02-l08", chapterId: ch2Id, order: 8, title: "إِلَى — To",                             titleAr: "إِلَى",                                        template: "STANDARD", xpReward: ch02L08Content._meta?.xp_reward ?? 10, content: ch02L08Content },
+    { id: "ch02-l09", chapterId: ch2Id, order: 9, title: "أَمَامَ — In Front Of",                 titleAr: "أَمَامَ",                                       template: "STANDARD", xpReward: ch02L09Content._meta?.xp_reward ?? 10, content: ch02L09Content },
+    { id: "ch02-l10", chapterId: ch2Id, order: 10, title: "خَلْفَ — Behind",                       titleAr: "خَلْفَ",                                        template: "STANDARD", xpReward: ch02L10Content._meta?.xp_reward ?? 10, content: ch02L10Content },
+    { id: "ch02-l11", chapterId: ch2Id, order: 11, title: "فَوْقَ — Above",                        titleAr: "فَوْقَ",                                        template: "STANDARD", xpReward: ch02L11Content._meta?.xp_reward ?? 10, content: ch02L11Content },
+    { id: "ch02-l12", chapterId: ch2Id, order: 12, title: "تَحْتَ — Under",                        titleAr: "تَحْتَ",                                        template: "STANDARD", xpReward: ch02L12Content._meta?.xp_reward ?? 10, content: ch02L12Content },
+    { id: "ch02-l13", chapterId: ch2Id, order: 13, title: "مَعَ — With",                            titleAr: "مَعَ",                                          template: "STANDARD", xpReward: ch02L13Content._meta?.xp_reward ?? 10, content: ch02L13Content },
+    { id: "ch02-l14", chapterId: ch2Id, order: 14, title: "بِـ — With / By",                        titleAr: "بِـ",                                           template: "STANDARD", xpReward: ch02L14Content._meta?.xp_reward ?? 10, content: ch02L14Content },
+    { id: "ch02-l15", chapterId: ch2Id, order: 15, title: "وَ — And",                              titleAr: "وَ",                                            template: "STANDARD", xpReward: ch02L15Content._meta?.xp_reward ?? 10, content: ch02L15Content },
+    { id: "ch02-l04", chapterId: ch2Id, order: 16, title: "Chapter 2 Review",                      titleAr: "مُرَاجَعَة الفَصْل الثَّانِي",               template: "REVIEW",   xpReward: ch02L04Content._meta?.xp_reward ?? 20, content: ch02L04Content },
+    { id: "ch02-test", chapterId: ch2Id, order: 17, title: "Chapter 2 Final Test",                 titleAr: "اخْتِبَارُ الْفَصْلِ الثَّانِي",             template: "REVIEW",   xpReward: ch02L17TestContent._meta?.xp_reward ?? 20, content: ch02L17TestContent },
     // Chapter 3
     { id: "ch03-l01", chapterId: ch3Id, order: 1, title: "The Idafa Construction — Possession",   titleAr: "الإِضَافَة — الْمِلْكِيَّة",                 template: "STANDARD", xpReward: ch03L01Content._meta?.xp_reward ?? 10, content: ch03L01Content },
     { id: "ch03-l02", chapterId: ch3Id, order: 2, title: "Whose? and O! — لِمَنْ and يَا",         titleAr: "لِمَنْ وَيَا",                               template: "STANDARD", xpReward: ch03L02Content._meta?.xp_reward ?? 10, content: ch03L02Content },

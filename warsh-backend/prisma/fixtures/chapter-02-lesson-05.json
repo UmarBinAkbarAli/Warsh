@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 2, Lesson 5 — فِي — in.",
+    "chapter_order": 2,
+    "lesson_order": 5,
+    "estimated_minutes": 5,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 255,
+      "label": "Ayat al-Kursi — Al-Baqarah 2:255",
+      "ar": "لَهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ",
+      "en": "To Him belongs whatever is in the heavens and whatever is in the earth.",
+      "ur": "اسی کا ہے جو کچھ آسمانوں میں ہے اور جو کچھ زمین میں ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
+    },
+    "noor_intro": {
+      "en": "Learn فِي — in in one focused lesson.",
+      "ur": "فِي — in کو ایک مرکوز سبق میں سیکھیں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "فِي",
+        "ar_plain": "في",
+        "translit": "fī",
+        "en": "in",
+        "ur": "میں"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/fi.mp3",
+      "introduces_vocab": {
+        "ar_plain": "في"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "فِي — in",
+        "ar": "فِي",
+        "ur": "میں"
+      },
+      "explanation": {
+        "en": "فِي means “in”. Use it with a noun in a short phrase.",
+        "ur": "فِي کا مطلب “میں” ہے۔ اسے اسم کے ساتھ مختصر جملے میں استعمال کریں۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": { "en": "Short practice phrase", "ar": "فِي", "ur": "میں" },
+      "explanation": { "en": "Use this word in a short phrase with a noun.", "ur": "اس لفظ کو اسم کے ساتھ مختصر جملے میں استعمال کریں۔" }
+    },
+    {
+      "type": "EXAMPLE",
+      "example": { "ar": "فِي الْبَيْتِ", "ar_plain": "في البيت", "translit": "fī al-bayti", "en": "in the house", "ur": "گھر میں" }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ch02-l05-ex01",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "فِي",
+        "ar_plain": "في",
+        "translit": "fī",
+        "en": "in",
+        "ur": "میں"
+      },
+      "options": [
+        {
+          "en": "in",
+          "ur": "in"
+        },
+        {
+          "en": "where?",
+          "ur": "where?"
+        },
+        {
+          "en": "a book",
+          "ur": "a book"
+        },
+        {
+          "en": "a house",
+          "ur": "a house"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "id": "ch02-l05-ex02",
+      "type": "TRUE_FALSE",
+      "xp_value": 1,
+      "statement": {
+        "en": "فِي means “in”.",
+        "ur": "فِي means “in”."
+      },
+      "correct_answer": true
+    },
+    {
+      "id": "ch02-l05-ex03",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Use in with the mosque.",
+        "ur": "میں مسجد کے ساتھ استعمال کریں۔"
+      },
+      "tiles": [
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "الْمَسْجِدُ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidu",
+          "en": "the mosque",
+          "ur": "مسجد"
+        }
+      ],
+      "correct_order": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "ch02-l05-ex04",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "xp_value": 1,
+      "sentence_ar": "الْمَسْجِدِ ___",
+      "hint": {
+        "en": "Use in",
+        "ur": "میں"
+      },
+      "options": [
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where?",
+          "ur": "کہاں؟"
+        },
+        {
+          "ar": "بِ",
+          "ar_plain": "ب",
+          "translit": "bi",
+          "en": "with / by",
+          "ur": "کے ساتھ"
+        },
+        {
+          "ar": "وَ",
+          "ar_plain": "و",
+          "translit": "wa",
+          "en": "and",
+          "ur": "اور"
+        }
+      ],
+      "correct_answer": {
+        "ar": "فِي",
+        "ar_plain": "في",
+        "translit": "fī",
+        "en": "in",
+        "ur": "میں"
+      }
+    },
+    {
+      "id": "ch02-l05-ex05",
+      "type": "TRUE_FALSE",
+      "xp_value": 1,
+      "statement": {
+        "en": "فِي is the focus of this lesson.",
+        "ur": "فِي اس سبق کا مرکزی لفظ ہے۔"
+      },
+      "correct_answer": true
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "فِي — in",
+      "ar": "فِي",
+      "ur": "میں"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 255,
+      "label": "Ayat al-Kursi — Al-Baqarah 2:255",
+      "ar": "لَهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ",
+      "en": "To Him belongs whatever is in the heavens and whatever is in the earth.",
+      "ur": "اسی کا ہے جو کچھ آسمانوں میں ہے اور جو کچھ زمین میں ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
+    },
+    "highlighted_word_indices": [],
+    "noor_explanation": {
+      "en": "The focus is in.",
+      "ur": "مرکزی معنی میں ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can now recognise فِي — in.",
+      "ur": "اب آپ فِي — in کو پہچان سکتے ہیں۔"
+    }
+  }
+}

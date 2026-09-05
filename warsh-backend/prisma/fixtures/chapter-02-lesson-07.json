@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 2, Lesson 7 — مِنْ — from.",
+    "chapter_order": 2,
+    "lesson_order": 7,
+    "estimated_minutes": 5,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+      "en": "That is the Book — no doubt in it — a guidance for those mindful of Allah.",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں، پرہیزگاروں کے لیے ہدایت ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
+    },
+    "noor_intro": {
+      "en": "Learn مِنْ — from in one focused lesson.",
+      "ur": "مِنْ — from کو ایک مرکوز سبق میں سیکھیں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "مِنْ",
+        "ar_plain": "من",
+        "translit": "min",
+        "en": "from",
+        "ur": "سے"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/min.mp3",
+      "introduces_vocab": {
+        "ar_plain": "من"
+      },
+      "image_url": "https://pub-3da71e4264044cce9d5935f98c79c78c.r2.dev/images/discover/min.webp"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "مِنْ — from",
+        "ar": "مِنْ",
+        "ur": "سے"
+      },
+      "explanation": {
+        "en": "مِنْ means “from”. Use it with a noun in a short phrase.",
+        "ur": "مِنْ کا مطلب “سے” ہے۔ اسے اسم کے ساتھ مختصر جملے میں استعمال کریں۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Short practice phrase",
+        "ar": "مِنْ",
+        "ur": "سے"
+      },
+      "explanation": {
+        "en": "Use this word in a short phrase with a noun.",
+        "ur": "اس لفظ کو اسم کے ساتھ مختصر جملے میں استعمال کریں۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "example": { "ar": "مِنْ الْبَيْتِ", "ar_plain": "من البيت", "translit": "min al-bayti", "en": "from the house", "ur": "سے گھر" }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ch02-l07-ex01",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "مِنْ",
+        "ar_plain": "من",
+        "translit": "min",
+        "en": "from",
+        "ur": "سے"
+      },
+      "options": [
+        {
+          "en": "from",
+          "ur": "from"
+        },
+        {
+          "en": "where?",
+          "ur": "where?"
+        },
+        {
+          "en": "a book",
+          "ur": "a book"
+        },
+        {
+          "en": "a house",
+          "ur": "a house"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "id": "ch02-l07-ex02",
+      "type": "TRUE_FALSE",
+      "xp_value": 1,
+      "statement": {
+        "en": "مِنْ means “from”.",
+        "ur": "مِنْ means “from”."
+      },
+      "correct_answer": true
+    },
+    {
+      "id": "ch02-l07-ex03",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Use from with the mosque.",
+        "ur": "سے مسجد کے ساتھ استعمال کریں۔"
+      },
+      "tiles": [
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "الْمَسْجِدُ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidu",
+          "en": "the mosque",
+          "ur": "مسجد"
+        }
+      ],
+      "correct_order": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "ch02-l07-ex04",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "xp_value": 1,
+      "sentence_ar": "الْمَسْجِدِ ___",
+      "hint": {
+        "en": "Use from",
+        "ur": "سے"
+      },
+      "options": [
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where?",
+          "ur": "کہاں؟"
+        },
+        {
+          "ar": "بِ",
+          "ar_plain": "ب",
+          "translit": "bi",
+          "en": "with / by",
+          "ur": "کے ساتھ"
+        },
+        {
+          "ar": "وَ",
+          "ar_plain": "و",
+          "translit": "wa",
+          "en": "and",
+          "ur": "اور"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مِنْ",
+        "ar_plain": "من",
+        "translit": "min",
+        "en": "from",
+        "ur": "سے"
+      }
+    },
+    {
+      "id": "ch02-l07-ex05",
+      "type": "TRUE_FALSE",
+      "xp_value": 1,
+      "statement": {
+        "en": "مِنْ is the focus of this lesson.",
+        "ur": "مِنْ اس سبق کا مرکزی لفظ ہے۔"
+      },
+      "correct_answer": true
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "مِنْ — from",
+      "ar": "مِنْ",
+      "ur": "سے"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 2,
+      "label": "Al-Baqarah 2:2",
+      "ar": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+      "en": "That is the Book — no doubt in it — a guidance for those mindful of Allah.",
+      "ur": "یہ وہ کتاب ہے جس میں کوئی شک نہیں، پرہیزگاروں کے لیے ہدایت ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
+    },
+    "highlighted_word_indices": [],
+    "noor_explanation": {
+      "en": "The focus is from.",
+      "ur": "مرکزی معنی سے ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can now recognise مِنْ — from.",
+      "ur": "اب آپ مِنْ — from کو پہچان سکتے ہیں۔"
+    }
+  }
+}
