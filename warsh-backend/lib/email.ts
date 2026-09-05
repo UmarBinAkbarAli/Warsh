@@ -13,18 +13,29 @@ function getResend(): Resend {
   return client;
 }
 
-// Vercel stores an environment value verbatim, so a value pasted straight out
-// of a .env file keeps its surrounding quotes. That turned the header into
-// `Warsh <"noreply@warsh.app">`, which Resend rejects with a 422
-// validation_error — every password reset failed on it. Strip quotes and
-// whitespace rather than trusting the value to be clean, and treat an empty
-// result as unset so the default still applies.
-function cleanAddress(value: string | undefined): string | undefined {
-  const cleaned = value?.trim().replace(/^["']+|["']+$/g, "").trim();
-  return cleaned || undefined;
+const DEFAULT_FROM = "Warsh <noreply@warsh.app>";
+
+// Every password reset failed on a Resend 422, "Invalid `from` field", because
+// SMTP_FROM_EMAIL was interpolated into `Warsh <${...}>` and trusted to be a
+// bare address. Vercel stores a value verbatim, so one pasted out of a .env
+// file keeps its quotes, and one that already carries a display name gets a
+// second one wrapped around it — both produce a header Resend rejects.
+//
+// Build the header from whatever shape the value is actually in, and fall back
+// to the default rather than sending something invalid: a misconfigured
+// variable should cost us the display name, not the whole email.
+function resolveFrom(): string {
+  const raw = process.env.SMTP_FROM_EMAIL?.trim().replace(/^["']+|["']+$/g, "").trim();
+  if (!raw) return DEFAULT_FROM;
+  // Already a complete `Name <address>` header.
+  if (/^[^<>]*<[^<>@\s]+@[^<>@\s]+>$/.test(raw)) return raw;
+  // A bare address — give it the display name.
+  if (/^[^<>@\s]+@[^<>@\s]+$/.test(raw)) return `Warsh <${raw}>`;
+  console.warn(`[email] SMTP_FROM_EMAIL is not a usable address, falling back to ${DEFAULT_FROM}`);
+  return DEFAULT_FROM;
 }
 
-const FROM = cleanAddress(process.env.SMTP_FROM_EMAIL) ?? "noreply@warsh.app";
+const FROM = resolveFrom();
 
 // Resend returns delivery failures in the response body, not as a thrown error,
 // and every caller here is fire-and-forget behind a 200 — so a rejected key or
@@ -55,7 +66,7 @@ export async function sendPasswordResetEmail(toEmail: string, resetUrl: string):
   }
 
   const { error } = await getResend().emails.send({
-    from: `Warsh <${FROM}>`,
+    from: FROM,
     to: [toEmail],
     subject: "Reset your Warsh password",
     html: `
@@ -89,7 +100,7 @@ export async function sendPasswordChangedEmail(toEmail: string): Promise<void> {
   }
 
   const { error } = await getResend().emails.send({
-    from: `Warsh <${FROM}>`,
+    from: FROM,
     to: [toEmail],
     subject: "Your Warsh password was changed",
     html: `
