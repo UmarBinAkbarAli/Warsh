@@ -13,7 +13,18 @@ function getResend(): Resend {
   return client;
 }
 
-const FROM = process.env.SMTP_FROM_EMAIL ?? "noreply@warsh.app";
+// Vercel stores an environment value verbatim, so a value pasted straight out
+// of a .env file keeps its surrounding quotes. That turned the header into
+// `Warsh <"noreply@warsh.app">`, which Resend rejects with a 422
+// validation_error — every password reset failed on it. Strip quotes and
+// whitespace rather than trusting the value to be clean, and treat an empty
+// result as unset so the default still applies.
+function cleanAddress(value: string | undefined): string | undefined {
+  const cleaned = value?.trim().replace(/^["']+|["']+$/g, "").trim();
+  return cleaned || undefined;
+}
+
+const FROM = cleanAddress(process.env.SMTP_FROM_EMAIL) ?? "noreply@warsh.app";
 
 // Resend returns delivery failures in the response body, not as a thrown error,
 // and every caller here is fire-and-forget behind a 200 — so a rejected key or
