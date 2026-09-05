@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import * as Sentry from "@sentry/nextjs";
 
 // Constructed lazily: the Resend client throws when the key is absent, and doing
 // that at module scope fails `next build` page-data collection on any deployment
@@ -14,9 +15,31 @@ function getResend(): Resend {
 
 const FROM = process.env.SMTP_FROM_EMAIL ?? "noreply@warsh.app";
 
+// Resend returns delivery failures in the response body, not as a thrown error,
+// and every caller here is fire-and-forget behind a 200 — so a rejected key or
+// an unverified sending domain produced no error anywhere, and the password
+// reset simply never arrived. Report it so a broken mail path is an alert
+// rather than something nobody learns until a user complains.
+function reportEmailFailure(kind: string, toEmail: string, error: unknown): void {
+  Sentry.captureException(error instanceof Error ? error : new Error(JSON.stringify(error)), {
+    level: "error",
+    tags: { subsystem: "email", email_kind: kind },
+    extra: { recipientDomain: toEmail.split("@")[1] ?? "unknown" },
+  });
+  console.error(`[email] ${kind} send failed:`, error);
+}
+
+function reportMissingKey(kind: string): void {
+  Sentry.captureMessage(`[email] RESEND_API_KEY not set — ${kind} not sent`, {
+    level: "error",
+    tags: { subsystem: "email", email_kind: kind },
+  });
+  console.warn(`[email] RESEND_API_KEY not set — skipping ${kind}`);
+}
+
 export async function sendPasswordResetEmail(toEmail: string, resetUrl: string): Promise<void> {
   if (!process.env.RESEND_API_KEY) {
-    console.warn("[email] RESEND_API_KEY not set — skipping email send");
+    reportMissingKey("password-reset");
     return;
   }
 
@@ -44,12 +67,15 @@ export async function sendPasswordResetEmail(toEmail: string, resetUrl: string):
   });
 
   if (error) {
-    console.error("[email] Resend error:", error);
+    reportEmailFailure("password-reset", toEmail, error);
   }
 }
 
 export async function sendPasswordChangedEmail(toEmail: string): Promise<void> {
-  if (!process.env.RESEND_API_KEY) return;
+  if (!process.env.RESEND_API_KEY) {
+    reportMissingKey("password-changed");
+    return;
+  }
 
   const { error } = await getResend().emails.send({
     from: `Warsh <${FROM}>`,
@@ -71,6 +97,6 @@ export async function sendPasswordChangedEmail(toEmail: string): Promise<void> {
   });
 
   if (error) {
-    console.error("[email] Resend error:", error);
+    reportEmailFailure("password-changed", toEmail, error);
   }
 }
