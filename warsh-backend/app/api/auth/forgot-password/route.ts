@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { waitUntil } from "@vercel/functions";
 import jwt from "jsonwebtoken";
 import { prisma } from "../../../../lib/prisma";
 import { sendPasswordResetEmail } from "../../../../lib/email";
@@ -50,9 +51,16 @@ export async function POST(request: Request) {
     const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://api.warsh.app";
     const resetUrl = `${appUrl}/reset-password?token=${token}`;
 
-    // Fire and forget — do not block response on email delivery
-    sendPasswordResetEmail(email, resetUrl).catch((err) =>
-      console.error("[forgot-password] Email send failed:", err)
+    // Do not block the response on email delivery — the 200 below has to land
+    // in the same time whether or not the account exists, or its latency
+    // becomes an account-enumeration oracle. But a bare floating promise is
+    // dropped when the function returns: the request to Resend never even left
+    // the instance, so every reset email was silently lost. `waitUntil` keeps
+    // the invocation alive for the send without holding up the response.
+    waitUntil(
+      sendPasswordResetEmail(email, resetUrl).catch((err) =>
+        console.error("[forgot-password] Email send failed:", err)
+      )
     );
   }
 

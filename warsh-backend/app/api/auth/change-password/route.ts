@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { waitUntil } from "@vercel/functions";
 import bcrypt from "bcryptjs";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest, signToken, passwordTokenFingerprint } from "../../../../lib/auth";
@@ -49,8 +50,12 @@ export async function POST(request: Request) {
   const token = signToken(userId, { pwFingerprint: passwordTokenFingerprint(newHash) });
 
   // Fire and forget — notify user their password was changed
-  sendPasswordChangedEmail(user.email).catch((err) =>
-    console.error("[change-password] Confirmation email failed:", err)
+  // See forgot-password: a floating promise is dropped when the function
+  // returns, so this notification never actually went out.
+  waitUntil(
+    sendPasswordChangedEmail(user.email).catch((err) =>
+      console.error("[change-password] Confirmation email failed:", err)
+    )
   );
 
   return NextResponse.json({ data: { success: true, token } });
