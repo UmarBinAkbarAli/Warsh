@@ -120,9 +120,10 @@ export default function HomePage() {
                 الْعَرَبِيَّةُ الْفُصْحَى
               </p>
               <p className="wh-lede" style={{ marginTop: '1.75rem' }}>
-                Start with the Arabic you already recite, then build the vocabulary, grammar,
-                reading, listening, and speaking skills needed to understand the Quran and progress
-                into wider formal Arabic, with guidance in English or Urdu.
+                Warsh is a Quran-first Fusha Arabic learning app. Start with the Arabic you already
+                recite, then build the vocabulary, grammar, reading, listening, and speaking skills
+                needed to understand the Quran and progress into wider formal Arabic, with guidance
+                in English or Urdu.
               </p>
 
               <div className="wh-actions">
