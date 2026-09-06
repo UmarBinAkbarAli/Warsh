@@ -27,9 +27,9 @@ const SITE_UPDATED = '2026-08-25T00:00:00.000Z';
 const LEGAL_UPDATED = '2026-07-20T00:00:00.000Z';
 
 export const SITE_ROUTES: readonly SiteRoute[] = [
-  { path: '/', label: 'Home', blurb: 'Understand the Arabic of the Quran',
+  { path: '/', label: 'Home', blurb: 'Begin with the Quran. Build your Fusha',
     group: 'Product', lastModified: SITE_UPDATED, changeFrequency: 'weekly', priority: 1 },
-  { path: '/features', label: 'Features', blurb: 'The 72-chapter course and the four skills',
+  { path: '/features', label: 'Features', blurb: 'The 72-chapter Fusha course and the four skills',
     group: 'Product', lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
   { path: '/pricing', label: 'Pricing', blurb: 'What Warsh costs, and what stays free',
     group: 'Product', lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
@@ -43,7 +43,7 @@ export const SITE_ROUTES: readonly SiteRoute[] = [
   { path: '/editorial-guidelines', label: 'Editorial guidelines',
     blurb: 'How our lessons are written and reviewed, and the limits we hold to',
     group: 'Company', lastModified: CONTENT_UPDATED, changeFrequency: 'monthly', priority: 0.4 },
-  { path: '/blog', label: 'Blog', blurb: 'Notes on Quranic Arabic and how the curriculum is built',
+  { path: '/blog', label: 'Blog', blurb: 'Notes on Quran-first Fusha and how the curriculum is built',
     group: 'Company', lastModified: SITE_UPDATED, changeFrequency: 'weekly', priority: 0.6 },
 
   { path: '/help', label: 'Help & FAQ', blurb: 'Answers on billing, accounts, and learning',

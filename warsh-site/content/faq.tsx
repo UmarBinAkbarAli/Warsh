@@ -66,11 +66,11 @@ export const FAQ_SECTIONS: FaqSection[] = [
     items: [
       {
         q: 'How is Warsh different from other Arabic learning apps?',
-        a: "Warsh follows a structured, 72-chapter curriculum built specifically to teach classical Fus'ha Arabic — the Arabic of the Quran — rather than modern dialect or random vocabulary. Lessons are organized around the Quran itself, and Ustaad Noor, an AI tutor, knows the curriculum and can answer your questions in context.",
+        a: 'Warsh teaches Quran-first Fusha Arabic. It begins with the Arabic Muslims already recite, then builds vocabulary, grammar, reading, listening, and speaking through a structured 72-chapter path. It is neither a regional dialect course nor a list of disconnected Quranic words.',
       },
       {
         q: 'What level of Arabic do I need to start?',
-        a: 'None. Warsh is designed for complete beginners who want to learn the Arabic of the Quran from scratch. Our placement test ensures you start at the right chapter for your level.',
+        a: 'None. Warsh is designed for complete beginners who want to learn Fusha through the Quran. A placement test helps learners who already know some Arabic begin at an appropriate early chapter.',
       },
       {
         q: 'I already know some Arabic. Is Warsh still for me?',
@@ -78,11 +78,15 @@ export const FAQ_SECTIONS: FaqSection[] = [
       },
       {
         q: 'What is Ustaad Noor?',
-        a: 'Ustaad Noor is our AI-powered Arabic tutor inside the app. You can ask him anything about Arabic grammar, vocabulary, or the Quranic context of a word. He knows the Warsh curriculum deeply. You get 5 free messages with him per day; additional message packs can be purchased inside the app.',
+        a: 'Ustaad Noor is an AI tutor focused on Arabic vocabulary, grammar, and lesson questions. Noor is available during an active trial or subscription, with five included messages per day and optional additional message packs. Noor is not a scholar and does not answer questions of Islamic law.',
       },
       {
         q: 'Does Warsh teach speaking Arabic?',
-        a: 'Yes. Warsh includes speaking practice lessons where you listen to native pronunciation and practice saying it yourself. While Warsh does not currently use speech recognition for pronunciation grading, audio playback and shadow practice help build spoken Fus\'ha fluency over time.',
+        a: 'Yes. Warsh includes speaking practice where you listen to carefully produced Arabic, record yourself, compare the two, and practise again. It develops Fusha pronunciation and spoken recall, but does not currently provide automated pronunciation grading.',
+      },
+      {
+        q: 'Will Warsh help me with Islamic books and modern formal Arabic?',
+        a: 'Warsh builds Quranic and Classical Arabic foundations that transfer into wider Fusha. Islamic literature and contemporary news also require specialized vocabulary and continued exposure, so Warsh does not claim that Quranic vocabulary alone produces complete reading fluency.',
       },
       {
         q: 'What is the Vocabulary Bank?',
@@ -155,11 +159,11 @@ export const HOME_FAQ_SECTIONS: FaqSection[] = [
     items: [
       {
         q: 'What is Warsh?',
-        a: 'Warsh is an Android app for learning the Arabic of the Quran. It holds a 72-chapter curriculum taken in order, a Vocabulary Bank of over 600 words with recited audio, Tadabbur for reading real ayat word by word, and Ustaad Noor, an AI tutor that knows the curriculum and answers questions in context.',
+        a: 'Warsh is a Quran-first Fusha Arabic learning app. It begins with the Arabic Muslims already recite and develops vocabulary, grammar, reading, listening, and speaking through a structured 72-chapter curriculum, a free Vocabulary Bank, Tadabbur, and Ustaad Noor.',
       },
       {
         q: 'Which Arabic does Warsh teach?',
-        a: "Classical Fus'ha, the Arabic the Quran is written in, rather than a modern spoken dialect. The curriculum is organized around the Quran itself, so the vocabulary and grammar you learn are the vocabulary and grammar you already recite in Salah.",
+        a: 'Warsh teaches Fusha, the formal Arabic tradition that includes Classical Arabic—the language of the Quran and traditional Islamic literature—and Modern Standard Arabic used in books, education, news, and formal communication. The current curriculum begins with Quranic and Classical foundations rather than a regional dialect.',
       },
       {
         q: 'Do I need to know any Arabic to start?',

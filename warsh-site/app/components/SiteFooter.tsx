@@ -63,10 +63,10 @@ export function SiteFooter({ reveal = false }: { reveal?: boolean }) {
       <div className="wsf__spread">
         <div className="wsf__grid" {...revealProps}>
           <div>
-            <h2 className="wsf__eyebrow">Start today</h2>
+            <h2 className="wsf__eyebrow">Quran-First Fusha Arabic</h2>
             <p className="wsf__ask">
-              Warsh is free to download and publicly available on Google Play. Begin with the
-              seven ayat you already recite:{' '}
+              Begin with Al-Fatiha. Build your understanding one word, one pattern, and one lesson
+              at a time, then carry that foundation into the wider world of Fusha.{' '}
               <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
                 download on Google Play
               </a>
@@ -113,7 +113,7 @@ export function SiteFooter({ reveal = false }: { reveal?: boolean }) {
             <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a>
           </div>
           <span className="wsf__ar" style={{ letterSpacing: 0 }}>
-            حَيْثُ تُصْنَعُ الْعَرَبِيَّة
+            الْعَرَبِيَّةُ الْفُصْحَى
           </span>
         </div>
       </div>

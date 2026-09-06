@@ -79,15 +79,22 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Warsh — Understand the Arabic of the Quran',
+    default: 'Warsh — Learn Fusha Arabic Through the Quran',
     template: '%s · Warsh',
   },
   description:
-    'A calm, structured path into Quranic Arabic with guided lessons, vocabulary practice, Tadabbur, and Ustaad Noor — your AI tutor. Free to start on Google Play.',
+    'Learn Quran-first Fusha Arabic through structured lessons, vocabulary, listening, speaking, and guidance in English or Urdu. Begin free with Warsh.',
   applicationName: 'Warsh',
   keywords: [
     'Quranic Arabic',
     'learn Quranic Arabic',
+    'Fusha Arabic',
+    'learn Fusha Arabic',
+    'Quran-first Arabic',
+    'Classical Arabic',
+    'Modern Standard Arabic',
+    'Arabic for Islamic studies',
+    'spoken Fusha',
     'Arabic for Quran',
     'understand the Quran',
     'Quran Arabic app',
@@ -101,16 +108,16 @@ export const metadata: Metadata = {
     type: 'website',
     url: SITE_URL,
     siteName: 'Warsh',
-    title: 'Warsh — Understand the Arabic of the Quran',
+    title: 'Warsh — Begin With the Quran. Build Your Fusha.',
     description:
-      'Guided Quranic Arabic lessons, vocabulary practice, Tadabbur, and a focused AI tutor. Free to start.',
+      'Build Quranic and Classical Arabic foundations for wider Fusha through structured lessons, vocabulary practice, and guided learning.',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Warsh — Understand the Arabic of the Quran',
+    title: 'Warsh — Begin With the Quran. Build Your Fusha.',
     description:
-      'Guided Quranic Arabic lessons, vocabulary practice, Tadabbur, and a focused AI tutor.',
+      'Quran-first Fusha lessons for reading, understanding, listening, and speaking.',
   },
   robots: {
     index: true,
@@ -142,7 +149,7 @@ const jsonLd = {
         height: 712,
       },
       description:
-        'Warsh teaches the Arabic of the Quran through a structured 72-chapter course, vocabulary practice, Tadabbur, and Ustaad Noor, an AI tutor.',
+        'Warsh teaches Quran-first Fusha Arabic through a structured 72-chapter course, vocabulary practice, Tadabbur, speaking practice, and Ustaad Noor, an AI tutor.',
       email: SUPPORT_EMAIL,
       telephone: PHONE.tel,
       address: {
@@ -158,7 +165,7 @@ const jsonLd = {
       '@id': `${SITE_URL}/#website`,
       url: SITE_URL,
       name: 'Warsh',
-      description: 'Understand the Arabic of the Quran.',
+      description: 'Begin with the Quran. Build your Fusha.',
       inLanguage: 'en',
       publisher: { '@id': `${SITE_URL}/#organization` },
       potentialAction: {
@@ -196,7 +203,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="Warsh — Notes on Quranic Arabic"
+          title="Warsh — Notes on Quran-First Fusha"
           href="/blog/rss.xml"
         />
         <script

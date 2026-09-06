@@ -16,7 +16,7 @@ import path from 'node:path';
  * so `وَرْش` would render as disjoint unshaped glyphs here, and the Arabic
  * wordmark is deliberately left to the pages themselves.
  */
-export const alt = 'Warsh — Understand the Arabic of the Quran';
+export const alt = 'Warsh — Begin with the Quran. Build your Fusha.';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -74,7 +74,7 @@ export default async function OpengraphImage() {
               maxWidth: 900,
             }}
           >
-            Understand the Arabic of the Quran.
+            Begin with the Quran. Build your Fusha.
           </div>
           <div
             style={{
@@ -87,7 +87,7 @@ export default async function OpengraphImage() {
               maxWidth: 820,
             }}
           >
-            A 72-chapter course, vocabulary practice, Tadabbur, and Ustaad Noor — your AI tutor.
+            Quran-first lessons for understanding, reading, hearing, and expressing formal Arabic.
           </div>
         </div>
 

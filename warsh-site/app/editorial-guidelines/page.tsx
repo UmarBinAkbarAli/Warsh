@@ -6,7 +6,7 @@ import { SITE_URL, SUPPORT_EMAIL } from '@/content/site';
 export const metadata: Metadata = {
   title: 'Editorial Guidelines',
   description:
-    'How Warsh writes and reviews its Quranic Arabic lessons, what Ustaad Noor will and will not answer, what Warsh does not claim, and how to report an error.',
+    'How Warsh writes and reviews its Quran-first Fusha lessons, what Ustaad Noor will and will not answer, what Warsh does not claim, and how to report an error.',
   alternates: { canonical: '/editorial-guidelines' },
 };
 
@@ -17,7 +17,7 @@ const jsonLd = {
   url: `${SITE_URL}/editorial-guidelines`,
   name: 'Editorial Guidelines',
   description:
-    'How Warsh writes and reviews its Quranic Arabic lessons, and the limits it holds itself to.',
+    'How Warsh writes and reviews its Quran-first Fusha lessons, and the limits it holds itself to.',
   publisher: { '@id': `${SITE_URL}/#organization` },
 };
 
@@ -34,9 +34,9 @@ export default function EditorialGuidelinesPage() {
         How Warsh&rsquo;s content is made.
       </h1>
       <p className="mt-6 max-w-2xl text-lg leading-relaxed text-deep">
-        Warsh teaches the Arabic of the Quran. That places an obligation on us to be exact about
-        what we claim, careful about what we teach, and honest about the limits of both. This page
-        sets out the standards we hold ourselves to.
+        Warsh teaches Fusha through the Quran. That starting point places an obligation on us to be
+        exact about what we claim, careful about what we teach, and honest about the limits of the
+        current curriculum. This page sets out the standards we hold ourselves to.
       </p>
 
       <div className="mt-16 flex flex-col gap-14">

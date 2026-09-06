@@ -6,8 +6,9 @@ import { buildSearchIndex } from '@/content/search';
 import { SiteSearch } from '../components/SiteSearch';
 
 export const metadata: Metadata = {
-  title: 'Blog',
-  description: 'Notes on Quranic Arabic, curriculum design, and building Warsh honestly.',
+  title: 'Fusha Arabic Learning Notes',
+  description:
+    'Practical guidance on Quranic and Classical Arabic, vocabulary, grammar, and building foundations for a lasting Fusha learning practice.',
   alternates: { canonical: '/blog' },
 };
 
@@ -16,12 +17,13 @@ export default async function BlogIndexPage() {
 
   return (
     <Section padded={false} className="pb-16 pt-14 md:pb-24 md:pt-20">
-      <Eyebrow>Blog</Eyebrow>
+      <Eyebrow>Quran-first Fusha</Eyebrow>
       <h1 className="font-display text-4xl font-semibold text-navy sm:text-5xl">
-        Notes on Quranic Arabic
+        Notes on Quran-first Fusha
       </h1>
       <p className="mt-6 max-w-2xl text-lg leading-relaxed text-deep">
-        Short, honest pieces on learning Quranic Arabic and how Warsh's curriculum is built.
+        Practical pieces on understanding the Quran, building Classical Arabic foundations, and
+        carrying them into wider reading, listening, and formal expression.
       </p>
 
       <div className="mt-8">

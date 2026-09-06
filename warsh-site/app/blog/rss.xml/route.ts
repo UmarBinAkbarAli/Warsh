@@ -16,9 +16,9 @@ import { SITE_URL } from '@/content/site';
  */
 export const revalidate = 60;
 
-const FEED_TITLE = 'Warsh — Notes on Quranic Arabic';
+const FEED_TITLE = 'Warsh — Notes on Quran-First Fusha';
 const FEED_DESCRIPTION =
-  'Short, honest pieces on learning Quranic Arabic and how Warsh’s curriculum is built.';
+  'Practical pieces on Quranic and Classical Arabic, wider Fusha foundations, and how Warsh’s curriculum is built.';
 
 function escapeXml(value: string): string {
   return value

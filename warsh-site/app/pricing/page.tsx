@@ -6,9 +6,9 @@ import { buildFaqJsonLd } from '../components/faq-content';
 import { PLAY_STORE_URL, SITE_URL } from '@/content/site';
 
 export const metadata: Metadata = {
-  title: 'Pricing',
+  title: 'Pricing — Learn Fusha With Warsh',
   description:
-    'The Vocabulary Bank is free forever. Everything else is one subscription, about $1 a month or $10 a year, after seven full days of complete access.',
+    'Try Warsh with seven days of complete access. Continue with one subscription while keeping the complete Vocabulary Bank free forever.',
   alternates: { canonical: '/pricing' },
 };
 
@@ -18,12 +18,12 @@ const freeThings = [
   'Arabic, transliteration, English and Urdu, root, and a Quranic example',
   'Audio playback on every word',
   'Saved words, and SM-2 review with Hard, Good and Easy',
-  'Five Ustaad Noor messages a day',
 ];
 
 const paidThings = [
   'All 72 curriculum chapters, in order',
-  'Ustaad Noor beyond the daily five',
+  'Quran-first Fusha lessons',
+  'Ustaad Noor, with five included messages a day',
   'Tadabbur, starting at Al-Fatiha',
   'Speaking practice inside lessons',
   'Paid lesson media',
@@ -35,7 +35,7 @@ const faqSections: FaqSection[] = [
     items: [
       {
         q: 'What happens after the seven days?',
-        a: 'Paid lessons, Ustaad Noor beyond the daily five, and Tadabbur are gated. The Vocabulary Bank carries on working exactly as it did, including your saved words and your review queue.',
+        a: 'Lessons, Ustaad Noor, Tadabbur, speaking practice, and subscription media require an active subscription. The Vocabulary Bank carries on working, including your saved words and review queue.',
       },
       {
         q: 'Is the price the same everywhere?',
@@ -48,6 +48,10 @@ const faqSections: FaqSection[] = [
       {
         q: 'Is there a tier above this one?',
         a: 'No. There is one subscription. The only other thing you can buy is a consumable pack of 20 extra Ustaad Noor messages, if you want more than five in a single day.',
+      },
+      {
+        q: 'Is Ustaad Noor free forever?',
+        a: 'No. Noor is available during the seven-day trial and with an active subscription. Five messages are included each day, and optional packs provide additional messages.',
       },
     ],
   },
@@ -69,11 +73,11 @@ export default function PricingPage() {
       />
       <div className="mx-auto max-w-3xl text-center">
         <h1 className="font-display text-3xl font-semibold text-navy sm:text-4xl">
-          Simple, honest pricing.
+          One learning path. One simple subscription.
         </h1>
         <p className="mt-3 text-base leading-relaxed text-deep">
-          The Vocabulary Bank is free forever. Everything else is one subscription, after
-          seven full days of complete access.
+          Begin with seven full days of access to the curriculum, Ustaad Noor, Tadabbur, and
+          speaking practice. After the trial, subscribe or continue with the free Vocabulary Bank.
         </p>
       </div>
 
@@ -84,7 +88,8 @@ export default function PricingPage() {
           </p>
           <p className="mt-4 font-display text-3xl font-semibold text-navy">Free forever</p>
           <p className="mt-2 text-sm leading-relaxed text-deep">
-            Not a trial of it, and not a sample of it. All of it, for as long as Warsh exists.
+            Not a temporary sample. Keep the Vocabulary Bank, saved words, and review queue
+            whether or not you subscribe.
           </p>
           <ul className="mt-6 flex flex-1 flex-col gap-3 text-sm text-deep">
             {freeThings.map((thing) => (
@@ -103,14 +108,14 @@ export default function PricingPage() {
         </div>
 
         <div className="flex flex-col rounded-lg border border-navy bg-navy p-8 text-cream-bg">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">One tier</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Complete Warsh access</p>
           <p className="mt-4 font-display text-3xl font-semibold">
             About $1<span className="text-lg font-normal text-cream-bg/70"> / month</span>
           </p>
           <p className="mt-1 text-sm text-cream-bg/70">or about $10 / year</p>
           <p className="mt-3 text-sm leading-relaxed text-cream-bg/80">
-            Seven full days of complete access first, from the day you create your account.
-            There is no level above it to be upgraded to later.
+            One subscription unlocks the complete structured learning experience after your
+            seven-day trial. There is no higher tier waiting behind it.
           </p>
           <ul className="mt-6 flex flex-1 flex-col gap-3 text-sm text-cream-bg/90">
             {paidThings.map((thing) => (
@@ -128,7 +133,7 @@ export default function PricingPage() {
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center justify-center rounded-md bg-gold px-6 py-3 text-sm font-semibold text-navy transition-colors duration-fast hover:bg-gold-deep"
           >
-            Download on Google Play
+            Begin your seven-day trial
           </a>
           <p className="mt-3 text-xs leading-relaxed text-cream-bg/60">
             Prices are Google Play&rsquo;s reference prices and vary by region; the price you

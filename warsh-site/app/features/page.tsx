@@ -6,9 +6,9 @@ import { FeaturesMotion } from './FeaturesMotion';
 import { PLAY_STORE_URL, WEB_APP_URL } from '@/content/site';
 
 export const metadata: Metadata = {
-  title: 'Features — How Warsh Teaches Quranic Arabic',
+  title: 'Features — Quran-First Fusha Arabic Learning',
   description:
-    'A 72-chapter curriculum, speaking practice, a free-forever Vocabulary Bank with spaced review, Ustaad Noor, Tadabbur, and a full Urdu interface. What Warsh actually gives you.',
+    'Explore Warsh’s 72-chapter Fusha curriculum, Quranic vocabulary, speaking practice, spaced review, Tadabbur, Ustaad Noor, and English or Urdu guidance.',
   alternates: { canonical: '/features' },
 };
 
@@ -42,74 +42,74 @@ const objects: CatalogObject[] = [
   {
     name: 'Curriculum',
     ar: 'مَنْهَج',
-    what: 'Seventy-two chapters in order, each one built on the chapter before it.',
+    what: 'A structured 72-chapter path through Quranic and Classical Arabic foundations.',
     access: 'Subscription',
     where: 'Learn tab',
-    detail: 'Begins with Al-Fatiha and the final surahs of Juz Amma',
-    not: 'Not a dialect course.',
+    detail: 'Begins with Al-Fatiha and develops vocabulary, grammar, and sentence structure progressively',
+    not: 'Not a regional dialect course.',
   },
   {
     name: 'Speaking practice',
     ar: 'نُطْق',
-    what: 'Listen to a recitation, record yourself, compare the two, and try again.',
+    what: 'Listen to carefully produced Arabic, record yourself, compare the two, and practise again.',
     access: 'Subscription',
     where: 'Inside lessons',
-    detail: 'Recordings stay on your device and are never uploaded',
-    not: 'No automated pronunciation scoring.',
+    detail: 'Builds pronunciation and spoken recall; recordings stay on your device',
+    not: 'No automated pronunciation score.',
   },
   {
     name: 'Vocabulary Bank',
     ar: 'مُفْرَدَات',
-    what: 'A searchable library of Quranic words, each with audio and a clear meaning.',
+    what: 'A searchable collection of Arabic words with meanings, audio, roots, and Quranic examples.',
     access: 'Free forever',
     where: 'Vocabulary tab',
     detail: 'Arabic, transliteration, English and Urdu, root, and a Quranic example',
-    not: 'No image-only flashcards.',
+    not: 'Word memorization is not presented as complete comprehension.',
   },
   {
     name: 'Spaced review',
     ar: 'مُرَاجَعَة',
-    what: 'Saved words come back for review shortly before you would have forgotten them.',
+    what: 'Learned words return for review when they are most useful to practise again.',
     access: 'Free forever',
     where: 'Vocabulary tab',
     detail: 'An SM-2 review model with Hard, Good and Easy',
-    not: 'Hidden words stay out of the queue.',
+    not: 'No punitive lives or public comparison.',
   },
   {
     name: 'Ustaad Noor',
     ar: 'أُسْتَاذ نُور',
-    what: 'An AI tutor that answers questions about a word, a root, or why a sentence is built the way it is.',
-    access: 'Five messages a day, free',
+    what: 'An AI tutor for focused questions about Arabic words, roots, grammar, and lesson content.',
+    access: 'Trial or subscription; five messages a day',
     where: 'Noor tab',
     detail: 'Packs of twenty further messages are available',
-    not: 'No rulings on Islamic law, and no memory between sessions.',
+    not: 'Not a scholar, mufti, or general-purpose assistant.',
   },
   {
     name: 'Tadabbur',
     ar: 'تَدَبُّر',
-    what: 'A guided path to recognizing every word and structure in a surah you already recite.',
+    what: 'A guided path to recognizing learned vocabulary and structures inside Quranic passages.',
     access: 'Subscription',
     where: 'Learn tab',
     detail: 'Unlocks follow the vocabulary and grammar you have learned',
-    not: 'Not a tafsir authority.',
+    not: 'A language-comprehension experience, not a tafsir authority.',
   },
   {
     name: 'Streaks',
     ar: 'مُثَابَرَة',
-    what: 'A daily goal, and milestones that mark progress you actually made.',
+    what: 'Daily goals and milestones that support a sustainable learning rhythm.',
     access: 'Included',
     where: 'You tab',
     detail: 'Missed days restart gently, and freezes are explained plainly',
-    not: 'No leaderboards, and no public profiles.',
+    not: 'No public leaderboards, shame mechanics, or social comparison.',
   },
   {
-    name: 'Urdu interface',
+    name: 'English and Urdu guidance',
     ar: 'اُردُو',
-    what: 'The entire app in Urdu or in English, switchable whenever you like.',
+    what: 'Learn through English or Urdu while keeping Arabic at the center of every lesson.',
     access: 'Included',
     where: 'Settings',
-    detail: 'The Arabic learning content is identical in both',
-    not: 'Not a translation of the Quran.',
+    detail: 'Interface and explanation languages can be selected independently',
+    not: 'The supporting language explains Arabic; it does not replace it.',
   },
 ];
 
@@ -155,11 +155,11 @@ export default function FeaturesPage() {
             >
               <div>
                 <h1 id="catalog-title" className="wf-plate__title">
-                  What Warsh actually gives you.
+                  What your Fusha journey includes.
                 </h1>
                 <p className="wf-plate__body">
-                  Eight things, each listed with what it costs, where it lives, and what it does
-                  not do. The four skills the curriculum is built around are set out{' '}
+                  Eight connected parts of one learning system, each listed with what it costs,
+                  where it lives, and the boundaries it keeps. The four skills are set out{' '}
                   <Link className="wf-link" href="/">
                     on the home page
                   </Link>
@@ -208,11 +208,11 @@ export default function FeaturesPage() {
               <div className="wf-label">
                 <p className="wf-label__cat">Warsh</p>
                 <h2 className="wf-label__name">
-                  All eight, in one app.{' '}
+                  One app. One Quran-first path into Fusha.{' '}
                   <span className="wf-label__ar">وَرْش</span>
                 </h2>
                 <p className="wf-label__what">
-                  Free to download, and publicly available on Google Play.
+                  Begin with seven days of complete access, while keeping the Vocabulary Bank free permanently.
                 </p>
 
                 <dl className="wf-specs">

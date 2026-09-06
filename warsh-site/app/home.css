@@ -41,6 +41,7 @@
   background: var(--sc-canvas);
   color: var(--sc-ink);
   font-family: var(--sc-font-text);
+  overflow-x: clip;
 }
 
 /* --------------------------------------------------------------- chapters --
@@ -307,6 +308,7 @@
   margin: 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .wh-plate__frame {

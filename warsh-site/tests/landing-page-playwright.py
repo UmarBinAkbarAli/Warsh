@@ -59,8 +59,8 @@ def main() -> None:
 
             response = page.goto(BASE_URL, wait_until="networkidle", timeout=90_000)
             assert response is not None and response.status == 200
-            assert page.title() == "Understand the Arabic of the Quran"
-            assert page.get_by_role("heading", name="Where Arabic is crafted.").count() == 1
+            assert page.title() == "Learn Fusha Arabic Through the Quran"
+            assert page.get_by_role("heading", name="Begin with the Quran. Build your Fusha.").count() == 1
             # The app is publicly installable (open beta) — the download CTA must not
             # read as gated access.
             assert page.get_by_role("link", name="Download on Google Play").count() >= 1
@@ -91,10 +91,10 @@ def main() -> None:
             context.close()
 
         content_pages = {
-            "/features": "A structured path, not a shortcut",
-            "/pricing": "Honest. Simple. Affordable.",
-            "/about": "Built to close one specific gap",
-            "/blog": "Notes on Quranic Arabic",
+            "/features": "What your Fusha journey includes.",
+            "/pricing": "One learning path. One simple subscription.",
+            "/about": "The Quran is the beginning.",
+            "/blog": "Notes on Quran-first Fusha",
             "/privacy": "Privacy Policy",
             "/terms": "Terms of Service",
             "/delete-account": "Delete your Warsh account",

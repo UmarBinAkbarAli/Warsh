@@ -10,9 +10,9 @@ import { HOME_FAQ_SECTIONS } from '@/content/faq';
 import { PLAY_STORE_URL, SITE_URL } from '@/content/site';
 
 export const metadata: Metadata = {
-  title: 'Understand the Arabic of the Quran',
+  title: 'Learn Fusha Arabic Through the Quran',
   description:
-    'A calm, structured path into Quranic Arabic. Guided lessons, vocabulary practice, Tadabbur, and Ustaad Noor, your AI tutor. Free to start on Google Play.',
+    'Begin with the Arabic you already recite. Build your Fusha through structured lessons, vocabulary, listening, speaking, and guidance in English or Urdu.',
   alternates: { canonical: '/' },
 };
 
@@ -46,31 +46,31 @@ const skills = [
   {
     name: 'Read',
     ar: 'قِرَاءَة',
-    body: 'Recognize the shape of Quranic Arabic on the page: root letters, word patterns, and the grammar that ties a sentence together.',
+    body: 'Recognize Arabic words, roots, patterns, and sentence structures in the Quran and other formal texts.',
   },
   {
     name: 'Understand',
     ar: 'فَهْم',
-    body: 'Know what a word or ayah means in context, without reaching for a translation first. Built word by word through guided lessons and the Vocabulary Bank.',
+    body: 'Understand how vocabulary and grammar carry meaning, without depending on a complete translation for every sentence.',
   },
   {
     name: 'Hear',
     ar: 'سَمْع',
-    body: 'Recognize spoken Quranic Arabic at natural speed. Every word and ayah is paired with real recited audio, never a synthesized voice.',
+    body: 'Train your ear to recognize familiar vocabulary and structures in recitation, lessons, and carefully spoken Fusha.',
   },
   {
     name: 'Speak',
     ar: 'نُطْق',
-    body: 'Produce Quranic Arabic yourself, turning passive recognition into active recall through short guided practice.',
+    body: 'Practise producing formal Arabic sounds, phrases, and sentences so that understanding develops into expression.',
   },
 ];
 
 const lessonShape = [
-  { name: 'Hook', body: 'A short, real moment from the Quran or from daily life that sets up the lesson.' },
-  { name: 'Discover', body: 'The new word, root, or pattern, introduced in the context you already recite it in.' },
-  { name: 'Practice', body: 'Short, focused exercises that build recognition and then recall.' },
-  { name: 'Reveal', body: 'Where this piece fits in the ayah or phrase you already know by heart.' },
-  { name: 'Close', body: 'A brief review that locks in what you just learned before you leave.' },
+  { name: 'Encounter', body: 'Meet a real word, phrase, ayah, or Fusha structure in context.' },
+  { name: 'Discover', body: 'Understand its meaning, root, pattern, or grammatical function.' },
+  { name: 'Practice', body: 'Build recognition and recall through short, focused exercises.' },
+  { name: 'Connect', body: 'See how Quranic roots and structures support wider formal Arabic.' },
+  { name: 'Express', body: 'Use what you learned through reading, listening, or guided speaking practice.' },
 ];
 
 /**
@@ -112,33 +112,33 @@ export default function HomePage() {
         <div className="wh-spread">
           <div className="wh-cols wh-cols--title">
             <div data-sc-in data-sc-stagger="70">
-              <p className="wh-eyebrow">Quranic Arabic, taught with care</p>
+              <p className="wh-eyebrow">Quran-First Fusha Arabic</p>
               <h1 id="opening-title" className="wh-title">
-                Where Arabic is crafted.
+                Begin with the Quran. Build your Fusha.
               </h1>
               <p className="wh-ar" style={{ fontSize: 'clamp(1.4rem, 1rem + 1.6vw, 2.2rem)', color: '#a88648', margin: '1.25rem 0 0' }}>
-                حَيْثُ تُصْنَعُ الْعَرَبِيَّة
+                الْعَرَبِيَّةُ الْفُصْحَى
               </p>
               <p className="wh-lede" style={{ marginTop: '1.75rem' }}>
-                Learn the Arabic of the Quran through structured lessons, a carefully designed
-                72-chapter curriculum, and Ustaad Noor, your AI tutor, ready whenever you have a
-                question.
+                Start with the Arabic you already recite, then build the vocabulary, grammar,
+                reading, listening, and speaking skills needed to understand the Quran and progress
+                into wider formal Arabic, with guidance in English or Urdu.
               </p>
 
               <div className="wh-actions">
                 <a className="wh-link" href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
-                  Download on Google Play
+                  Begin with Al-Fatiha
                 </a>
                 <Link className="wh-link" href="/features">
-                  See how it works
+                  Explore the learning path
                 </Link>
               </div>
 
               <hr className="wh-rule" style={{ margin: '2.5rem 0 1.25rem' }} />
 
               <ul className="wh-meta">
-                <li>Free to start</li>
-                <li>No ads, ever</li>
+                <li>7 days of complete access</li>
+                <li>English and Urdu guidance</li>
                 <li>Vocabulary Bank free forever</li>
               </ul>
             </div>
@@ -194,14 +194,13 @@ export default function HomePage() {
 
             <div data-sc-in data-sc-stagger="60">
               <h2 id="gap-title" className="wh-h">
-                You recite it every day. Do you understand it?
+                The Arabic you recite is already the beginning.
               </h2>
               <p className="wh-p" style={{ marginTop: '1.5rem' }}>
-                <span className="wh-drop">O</span>ver a billion Muslims recite the Quran in Salah.
-                Most of them, including most in Pakistan, South Asia, and the global diaspora, do
-                not understand what they are saying, word for word. The repetition builds fluency
-                in sound but not in meaning. The words become familiar the way a song&rsquo;s chorus
-                becomes familiar: you can produce it perfectly and still not know what it says.
+                <span className="wh-drop">Y</span>ou may have recited Al-Fatiha thousands of times.
+                Its sounds are familiar, but its words, patterns, and sentence structures may still
+                feel distant. Warsh begins there because the Quran gives Muslim learners the most
+                familiar and meaningful place to begin learning Fusha.
               </p>
 
               <div className="wh-ledger" style={{ marginTop: 'clamp(2rem, 4vw, 3rem)' }}>
@@ -226,8 +225,9 @@ export default function HomePage() {
               </div>
 
               <p className="wh-p" style={{ marginTop: '2rem' }}>
-                Warsh is a structured, honest path across that gap. It does not teach tafsir and it
-                is not a substitute for scholars. It teaches the Arabic itself.
+                You learn what the words mean, how they work together, and how the same roots and
+                structures form a foundation for Islamic literature and formal Arabic. Warsh does
+                not teach tafsir or issue religious rulings; it teaches the language itself.
               </p>
             </div>
           </div>
@@ -304,13 +304,12 @@ export default function HomePage() {
         <div className="wh-spread">
           <div data-sc-in>
             <h2 id="skills-title" className="wh-h" style={{ maxWidth: '18ch' }}>
-              Four skills, and most methods train only one.
+              One Fusha journey. Four connected skills.
             </h2>
             <p className="wh-p" style={{ marginTop: '1.5rem' }}>
-              Reading a translation, memorizing vocabulary lists, listening to recitation without
-              decoding it: each is useful alone, and none of them alone gets you to the point where
-              the Arabic makes sense as you hear it in Salah. Warsh&rsquo;s curriculum is organized
-              around four skills that reinforce each other.
+              Memorizing translations develops recognition. Grammar develops analysis. Listening
+              develops familiarity. Speaking develops recall. Warsh connects all four so Arabic
+              becomes language you can increasingly understand and use.
             </p>
           </div>
 
@@ -335,7 +334,7 @@ export default function HomePage() {
 
           <div className="wh-actions">
             <Link className="wh-link" href="/features">
-              Explore the full curriculum
+              See how Warsh teaches Fusha
             </Link>
           </div>
         </div>
@@ -357,7 +356,7 @@ export default function HomePage() {
           <div className="wh-cols wh-cols--argument">
             <div data-sc-in>
               <h2 id="shape-title" className="wh-h" style={{ maxWidth: '16ch' }}>
-                Every lesson follows the same honest shape.
+                Every lesson moves from recognition to use.
               </h2>
               <ol className="wh-shape">
                 {lessonShape.map((step) => (
@@ -372,17 +371,17 @@ export default function HomePage() {
             <div className="wh-parallax-col" data-sc-in>
               <div data-sc-parallax="0.9">
                 <h3 className="wh-h wh-h--sm" style={{ maxWidth: '16ch' }}>
-                  Less than a cup of chai.
+                  One path. One clear subscription.
                 </h3>
                 <p className="wh-p" style={{ marginTop: '1.25rem' }}>
-                  One subscription, with a 7-day free trial of everything. The Vocabulary Bank stays
-                  free forever, whether you subscribe or not.
+                  Begin with seven days of complete access. One subscription continues the full
+                  learning path, while the Vocabulary Bank stays free forever.
                 </p>
 
                 <div className="wh-figures">
                   <div>
                     <p className="wh-figure__n">72</p>
-                    <p className="wh-figure__label">chapters in the curriculum, built in order.</p>
+                    <p className="wh-figure__label">chapters in a progressive Fusha learning path.</p>
                   </div>
                   <div>
                     <p className="wh-figure__n">~$1</p>
@@ -392,7 +391,7 @@ export default function HomePage() {
 
                 <div className="wh-actions">
                   <Link className="wh-link" href="/pricing">
-                    See pricing
+                    View pricing and access
                   </Link>
                 </div>
               </div>

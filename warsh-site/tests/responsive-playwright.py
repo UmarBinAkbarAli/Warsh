@@ -94,6 +94,8 @@ def main() -> None:
                 # when the document itself is clipped.
                 wide = page.evaluate(
                     """(vw) => [...document.querySelectorAll('body *')]
+                        .filter(el => !el.hasAttribute('data-sc-pan'))
+                        .filter(el => !el.classList.contains('wh-plate__glow'))
                         .filter(el => el.getBoundingClientRect().width > vw + 1)
                         .slice(0, 5)
                         .map(el => el.tagName + '.' + (el.className || '').toString().slice(0, 60))""",

@@ -16,9 +16,9 @@ import {
 } from '@/content/site';
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'About Warsh — Why We Teach Fusha Through the Quran',
   description:
-    'Why Warsh exists, what it teaches, and the things it deliberately does not claim to be.',
+    'Warsh begins with a familiar gap—reciting the Quran without understanding—and turns that beginning into a wider journey through Fusha Arabic.',
   alternates: { canonical: '/about' },
 };
 
@@ -68,19 +68,20 @@ const sentence: GatherWord[] = [
   { t: 'the', x: '21vw', y: '7vh', r: '-6deg', s: 0.5 },
   { t: 'words', x: '-22vw', y: '5vh', r: '4deg', s: 1.4 },
   { t: 'sound.', x: '8vw', y: '26vh', r: '-9deg', s: 1.2 },
-  { t: 'Warsh', x: '20vw', y: '-11vh', r: '6deg', s: 1.3, accent: true },
-  { t: 'is', x: '-16vw', y: '27vh', r: '-4deg', s: 0.6 },
-  { t: 'about', x: '13vw', y: '-19vh', r: '7deg', s: 0.9 },
-  { t: 'what', x: '-21vw', y: '14vh', r: '-8deg', s: 0.8 },
-  { t: 'they', x: '3vw', y: '-28vh', r: '3deg', s: 0.7 },
-  { t: 'mean.', x: '17vw', y: '21vh', r: '-5deg', s: 1.5, accent: true },
+  { t: 'Understand', x: '20vw', y: '-11vh', r: '6deg', s: 1.3, accent: true },
+  { t: 'them,', x: '-16vw', y: '27vh', r: '-4deg', s: 0.6 },
+  { t: 'then', x: '13vw', y: '-19vh', r: '7deg', s: 0.9 },
+  { t: 'carry', x: '-21vw', y: '14vh', r: '-8deg', s: 0.8 },
+  { t: 'the', x: '3vw', y: '-28vh', r: '3deg', s: 0.7 },
+  { t: 'language', x: '17vw', y: '21vh', r: '-5deg', s: 1.5, accent: true },
+  { t: 'further.', x: '-8vw', y: '18vh', r: '4deg', s: 1.1, accent: true },
 ];
 
 const boundaries = [
-  { text: 'Not a memorisation app.', at: '0.10 0.34' },
+  { text: 'Not a memorisation or recitation course.', at: '0.10 0.34' },
   { text: 'Not a Quran translation reader.', at: '0.18 0.42' },
-  { text: 'Not a madrasah, and not a certification.', at: '0.26 0.50' },
-  { text: 'Not a replacement for a qualified teacher.', at: '0.34 0.58' },
+  { text: 'Not a regional dialect course.', at: '0.26 0.50' },
+  { text: 'Not a madrasah, certification, or replacement for a qualified teacher.', at: '0.34 0.58' },
 ];
 
 /**
@@ -98,7 +99,7 @@ const jsonLd = {
   url: `${SITE_URL}/about`,
   name: 'About Warsh',
   description:
-    'Why Warsh exists, what it teaches, who builds it, and the things it deliberately does not claim to be.',
+    'Why Warsh teaches Quran-first Fusha, who builds it, and the things it deliberately does not claim to be.',
   mainEntity: {
     '@id': `${SITE_URL}/#organization`,
     '@type': 'Organization',
@@ -147,13 +148,13 @@ export default function AboutPage() {
             </p>
 
             <h1 id="about-title" className="wa-h1" data-sc-cue="0 1 0 0.08" data-sc-kinetic="lines">
-              One gap.
+              The Quran is the beginning.
             </h1>
 
             <p className="wa-hero__body" data-sc-cue="0 1 0 0.08">
-              Over a billion Muslims recite the Quran in Salah. Most do not understand, word for
-              word, what they are saying. Warsh exists to close that specific gap. Nothing more,
-              and nothing less.
+              Warsh began with a familiar experience: Muslims recite Arabic every day, yet many
+              cannot understand the words directly. Closing that gap is our first responsibility.
+              Building a wider foundation in Fusha is where the journey continues.
             </p>
           </div>
         </div>
@@ -166,19 +167,19 @@ export default function AboutPage() {
       <section className="wa-act" data-sc-act="flow" aria-label="What already exists">
         <div className="wa-wrap">
           <div>
-            <h2 className="wa-line wa-line--soft">A course that asks you for years.</h2>
+            <h2 className="wa-line wa-line--soft">A Quran app that stops at translation.</h2>
           </div>
 
           <div className="wa-trail">
             <p className="wa-line wa-line--soft">
-              Or an app that teaches words and never reaches an ayah.
+              Or an Arabic course that ignores the language you already know.
             </p>
           </div>
 
           <p className="wa-small">
-            Those are the two things on offer, and neither matches how most people actually have
-            time to learn: a few focused minutes a day, building steadily toward one specific and
-            honest goal.
+            Warsh takes a different path. It begins with familiar Quranic Arabic, teaches the
+            vocabulary and grammar underneath it, and develops those foundations toward wider
+            Fusha understanding and expression.
           </p>
         </div>
       </section>
@@ -244,15 +245,15 @@ export default function AboutPage() {
           </ul>
 
           <h2 className="wa-line" style={{ marginTop: 'clamp(2rem, 4vw, 3.5rem)' }}>
-            It teaches the Arabic itself.
+            It teaches Fusha from its strongest foundation.
           </h2>
 
           <p className="wa-small">
-            One word and one pattern at a time, across 72 chapters, and the first thing it teaches
-            you to understand is Al-Fatiha, because that is the passage you already recite every
-            day. Ustaad Noor is built to teach Arabic and not to issue religious rulings, so
-            questions of fiqh are redirected to qualified scholars every time. How the chapters
-            and the four skills are put together is set out on the{' '}
+            Warsh begins with Al-Fatiha because it is already part of the learner&rsquo;s life. From
+            there, 72 chapters develop vocabulary, roots, sentence structures, listening, and
+            speaking. The Quran gives the journey its foundation; wider Fusha gives that foundation
+            room to grow. Ustaad Noor supports Arabic learning and redirects questions of fiqh to
+            qualified scholars. See how the chapters and four skills work on the{' '}
             <Link href="/features">features page</Link>, and what any of it costs is on the{' '}
             <Link href="/pricing">pricing page</Link>.
           </p>
@@ -274,10 +275,10 @@ export default function AboutPage() {
             <div>
               <h3>Our story</h3>
               <p>
-                Warsh began with one gap: a billion people recite the Quran in Salah, and most
-                cannot say, word for word, what they are saying. Existing options asked for years
-                of study or taught vocabulary that never reached an ayah. Warsh was built to close
-                that specific gap in a few focused minutes a day.
+                Warsh began with a simple observation: many Muslims have spent years reciting Arabic
+                without being given an accessible path into understanding it. The answer was not
+                another translation reader or a collection of disconnected videos, but a structured
+                language journey beginning with words learners already recognize.
               </p>
             </div>
 
@@ -294,11 +295,11 @@ export default function AboutPage() {
             <div>
               <h3>What we do</h3>
               <p>
-                We teach the Arabic of the Quran across a 72-chapter course, beginning with
-                Al-Fatiha. Alongside the lessons: a Vocabulary Bank of 600+ words with audio and
-                spaced repetition, Tadabbur for reading real ayat word by word, and Ustaad Noor, an
-                AI tutor that answers Arabic questions and refers religious rulings to qualified
-                scholars.
+                We teach Quran-first Fusha through a 72-chapter course beginning with Al-Fatiha.
+                The current curriculum is strongest in Quranic and Classical Arabic foundations,
+                supported by a Vocabulary Bank, spaced review, Tadabbur, speaking practice, and
+                Ustaad Noor. Contemporary formal Arabic requires additional vocabulary and exposure,
+                and we do not claim otherwise.
               </p>
             </div>
 

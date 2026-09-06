@@ -126,10 +126,11 @@ export default function ContactPage() {
             formal Arabic education is often out of reach.
           </p>
           <p>
-            We teach one thing: the Arabic of the Quran, word by word, across 72 chapters,
-            beginning with Al-Fatiha because it is the passage you already recite every day. We are
-            not a madrasah, we do not certify anyone, and Ustaad Noor redirects questions of fiqh to
-            qualified scholars every time. What the course covers is set out on the{' '}
+            Warsh teaches Fusha Arabic through a 72-chapter path that begins with the Quran and
+            Al-Fatiha, the passage many learners already recite every day. The current curriculum
+            builds Quranic and Classical Arabic foundations for wider formal reading and speaking.
+            We are not a madrasah, we do not certify anyone, and Ustaad Noor redirects questions of
+            fiqh to qualified scholars every time. What the course covers is set out on the{' '}
             <Link href="/features" className="font-semibold text-navy underline underline-offset-4">
               features page
             </Link>
