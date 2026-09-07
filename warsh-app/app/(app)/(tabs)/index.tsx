@@ -91,6 +91,15 @@ type TadabburFocus = {
   comprehensionPercent: number;
 };
 
+interface Core500Summary {
+  coveragePercent: number;
+  knownCount: number;
+  totalCount: number;
+  completedSetCount: number;
+  nextSetNumber: number | null;
+  wordsLeftInNextSet: number;
+}
+
 export default function HomeScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
@@ -105,6 +114,7 @@ export default function HomeScreen() {
 
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [tadabburFocus, setTadabburFocus] = useState<TadabburFocus | null>(null);
+  const [core500, setCore500] = useState<Core500Summary | null>(null);
   const [wordOfDay, setWordOfDay] = useState<WordOfDay | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -201,6 +211,7 @@ export default function HomeScreen() {
         progressResponse,
         shownDate,
         tadabburResponse,
+        core500Response,
         wordOfDayResponse,
         lastStreakRaw,
         streakEndedShownDate,
@@ -213,6 +224,7 @@ export default function HomeScreen() {
         api.get("/api/progress"),
         AsyncStorage.getItem(FREEZE_BANNER_KEY),
         api.get("/api/tadabbur").catch(() => null),
+        api.get("/api/core500").catch(() => null),
         api.get("/api/vocabulary/word-of-day").catch(() => null),
         AsyncStorage.getItem(LAST_STREAK_KEY),
         AsyncStorage.getItem(STREAK_ENDED_SHOWN_KEY),
@@ -254,6 +266,23 @@ export default function HomeScreen() {
             comprehensionPercent: focus.comprehensionPercent,
           });
         }
+      }
+
+      if (core500Response?.data?.data) {
+        const core = core500Response.data.data;
+        const nextSet = core.sets?.find(
+          (set: { setNumber: number }) => set.setNumber === core.nextSetNumber,
+        );
+        setCore500({
+          coveragePercent: core.coveragePercent ?? 0,
+          knownCount: core.knownCount ?? 0,
+          totalCount: core.totalCount ?? 0,
+          completedSetCount: core.completedSetCount ?? 0,
+          nextSetNumber: core.nextSetNumber ?? null,
+          wordsLeftInNextSet: nextSet
+            ? (nextSet.wordCount ?? 0) - (nextSet.knownCount ?? 0)
+            : 0,
+        });
       }
 
       if (wordOfDayResponse?.data?.data) {
@@ -846,6 +875,56 @@ export default function HomeScreen() {
           </View>
         ) : null}
 
+        {/* Quranic Core 500 — free for everyone, so no subscription gate here.
+            Progress reads as Quran coverage rather than a word count: the top
+            words are frequent enough that a few sets move it a long way. */}
+        {core500 ? (
+          <View style={styles.core500Section}>
+            <Text style={styles.sectionTitle}>{t("learn.core500")}</Text>
+            <Pressable
+              onPress={() => router.push("/(app)/core-500")}
+              style={({ pressed }) => [styles.core500Card, pressed && styles.cardPressed]}
+            >
+              <View style={styles.core500Badge}>
+                <ArabicText size="sm" style={styles.core500BadgeText}>
+                  ٥٠٠
+                </ArabicText>
+              </View>
+              <View style={styles.tadabburCopy}>
+                <Text style={styles.tadabburTitle}>{t("learn.core500Title")}</Text>
+                {core500.knownCount > 0 ? (
+                  <>
+                    <Text style={styles.tadabburBody} numberOfLines={1}>
+                      {t("learn.core500Progress", {
+                        set: core500.nextSetNumber ?? core500.completedSetCount,
+                        words: core500.wordsLeftInNextSet,
+                      })}
+                    </Text>
+                    <View style={styles.tadabburProgressRow}>
+                      <View style={styles.tadabburProgressTrack}>
+                        <View
+                          style={[
+                            styles.tadabburProgressFill,
+                            { width: `${Math.min(100, core500.coveragePercent)}%` },
+                          ]}
+                        />
+                      </View>
+                      <Text style={styles.tadabburPercent}>
+                        {t("learn.core500Coverage", { percent: core500.coveragePercent })}
+                      </Text>
+                    </View>
+                  </>
+                ) : (
+                  <Text style={styles.tadabburBody} numberOfLines={2}>
+                    {t("learn.core500Body")}
+                  </Text>
+                )}
+              </View>
+              <Ionicons name="chevron-forward" size={20} color={WarshPalette.parchment} />
+            </Pressable>
+          </View>
+        ) : null}
+
         {error ? <Text style={styles.errorText}>{error}</Text> : null}
 
         <TouchableOpacity
@@ -936,6 +1015,24 @@ const styles = StyleSheet.create({
     width: 280,
     gap: Spacing.lg,
   },
+  core500Section: { marginTop: Spacing.xl, gap: Spacing.md },
+  core500Card: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.md,
+    backgroundColor: WarshPalette.navy,
+    borderRadius: Radii.lg,
+    padding: Spacing.lg,
+  },
+  core500Badge: {
+    width: 44,
+    height: 44,
+    borderRadius: Radii.full,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: WarshPalette.highlightBorder,
+  },
+  core500BadgeText: { color: WarshPalette.navy },
   statCard: {
     minHeight: 150,
     padding: 22,

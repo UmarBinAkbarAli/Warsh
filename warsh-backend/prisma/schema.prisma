@@ -45,6 +45,7 @@ model User {
     userSurahProgress  UserSurahProgress[]
     promoRedemptions   PromoRedemption[]
     storePurchases     StorePurchase[]
+    coreSetProgress    UserCoreSetProgress[]
 }
 
 // Durable receipt ledger for one-time store purchases. Only a SHA-256 digest of
@@ -290,10 +291,36 @@ model VocabularyWord {
     audioUrl         String?
     imageUrl         String?
     sortOrder        Int      @default(0)
+    // Quranic Core 500. `quranicRank` is the word's position in the frequency
+    // list (1 = most common); words outside the 500 leave it null. Sets hold
+    // five words each, so set N covers ranks (N-1)*5+1 .. N*5.
+    quranicRank      Int?     @unique
+    coreSetNumber    Int?
+    // The five bare prefixes (لِ بِ وَ فَ أَ) are taught together as the
+    // "how words join" set rather than as standalone flashcards.
+    isCorePrefix     Boolean  @default(false)
     status           ContentStatus @default(DRAFT)
     publishedAt      DateTime?
     createdAt        DateTime @default(now())
     userWords        UserVocabularyWord[]
+
+    @@index([coreSetNumber])
+}
+
+// One row per user per Core 500 set. Coverage and "words you know" are derived
+// from UserVocabularyWord; this exists so set completion has a timestamp the
+// streak can key off, and so a partly-done set survives app restarts.
+model UserCoreSetProgress {
+    id          String   @id @default(cuid())
+    userId      String
+    user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+    setNumber   Int
+    startedAt   DateTime @default(now())
+    completedAt DateTime?
+    updatedAt   DateTime @updatedAt
+
+    @@unique([userId, setNumber])
+    @@index([userId])
 }
 
 model TadabburSurah {

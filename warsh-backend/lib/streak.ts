@@ -87,3 +87,41 @@ export function calculateLessonStreakUpdate(
     lastActiveDate: now,
   };
 }
+
+// Minimal shape of the transactional client the streak write needs. Keeping it
+// structural avoids importing Prisma's generated transaction type here.
+interface StreakWriteClient {
+  streak: {
+    findUnique(args: { where: { userId: string } }): Promise<StreakSnapshot | null>;
+    create(args: { data: Record<string, unknown> }): Promise<unknown>;
+    update(args: { where: { userId: string }; data: StreakUpdate }): Promise<unknown>;
+  };
+}
+
+/**
+ * Advance the user's streak for one day's completed activity.
+ *
+ * Both lesson completion and Quranic Core 500 set completion call this, so a
+ * learner who only does their five Core 500 words today still keeps the streak
+ * (product decision 2026-09-07). Same-day repeats only move `lastActiveDate`,
+ * so doing a lesson AND a Core 500 set cannot double-count.
+ */
+export async function applyStreakForActivity(
+  tx: StreakWriteClient,
+  userId: string,
+  now: Date,
+): Promise<void> {
+  const current = await tx.streak.findUnique({ where: { userId } });
+
+  if (!current) {
+    await tx.streak.create({
+      data: { userId, currentStreak: 1, longestStreak: 1, lastActiveDate: now },
+    });
+    return;
+  }
+
+  await tx.streak.update({
+    where: { userId },
+    data: calculateLessonStreakUpdate(current, now),
+  });
+}

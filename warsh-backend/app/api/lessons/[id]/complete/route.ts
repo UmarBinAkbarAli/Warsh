@@ -3,7 +3,7 @@ import { z } from "zod";
 import { prisma } from "../../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../../lib/auth";
 import { get4amPKTBoundary } from "../../../../../lib/date";
-import { calculateLessonStreakUpdate } from "../../../../../lib/streak";
+import { applyStreakForActivity } from "../../../../../lib/streak";
 import { getUserCourseState, PROGRESS_STATUS } from "../../../../../lib/course";
 import { checkAndAwardAchievements } from "../../../../../lib/achievements";
 import { getUserSubscriptionState, requiresSubscription } from "../../../../../lib/subscription";
@@ -165,19 +165,7 @@ export async function POST(request: Request, { params }: Props) {
       await tx.user.update({ where: { id: userId }, data: { xp: { increment: xpEarned } } });
     }
 
-    const currentStreakRecord = await tx.streak.findUnique({ where: { userId } });
-    const now = new Date();
-
-    if (!currentStreakRecord) {
-      await tx.streak.create({
-        data: { userId, currentStreak: 1, longestStreak: 1, lastActiveDate: now }
-      });
-    } else {
-      await tx.streak.update({
-        where: { userId },
-        data: calculateLessonStreakUpdate(currentStreakRecord, now),
-      });
-    }
+    await applyStreakForActivity(tx, userId, new Date());
 
     if (!firstCompletion) return;
 

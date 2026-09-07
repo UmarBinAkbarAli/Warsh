@@ -133,6 +133,26 @@ export function getSRSDueWords() {
   return api.get("/api/vocabulary/srs/due");
 }
 
+// ─── Quranic Core 500 ───────────────────────────────────────────────────────
+// Free for every signed-in user, so none of these go through the paywall.
+
+export function getCore500Overview() {
+  return api.get("/api/core500");
+}
+
+export function getCore500Set(setNumber: number) {
+  return api.get(`/api/core500/sets/${setNumber}`);
+}
+
+/** Completing a full set also advances the daily streak, server-side. */
+export function completeCore500Set(setNumber: number, knownWordIds: string[]) {
+  return api.post(`/api/core500/sets/${setNumber}/complete`, { knownWordIds });
+}
+
+export function getCore500Words(filter: "known" | "all" = "known") {
+  return api.get("/api/core500/words", { params: { filter } });
+}
+
 export function submitSRSReview(wordId: string, quality: 2 | 4 | 5) {
   return api.post("/api/vocabulary/srs/review", { wordId, quality });
 }

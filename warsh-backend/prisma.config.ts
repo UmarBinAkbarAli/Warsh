@@ -14,6 +14,10 @@ export default defineConfig({
     seed: "node prisma/seed.cjs"
   },
   datasource: {
-    url: datasourceUrl
+    url: datasourceUrl,
+    // Only needed by `prisma migrate diff/dev`, which builds a throwaway copy of
+    // the schema to compare against. Left undefined in deployments, which never
+    // run migrations against a shadow database.
+    shadowDatabaseUrl: process.env.SHADOW_DATABASE_URL
   }
 });
