@@ -30,3 +30,11 @@ warsh-backend/.vercel
 warsh-backend/.next
 warsh-backend/node_modules
 warsh-backend/exports
+
+# Local leftovers that must never be uploaded. The QA recovery copy alone is
+# 422 MB and pushed the deploy past Vercel's 100 MB limit (2026-09-07).
+builds
+output
+.vercel_site_tmp
+.vercel_site_deploy_*
+warsh-backend/.next-*

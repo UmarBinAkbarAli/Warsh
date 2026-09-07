@@ -236,14 +236,23 @@ async function main() {
     return;
   }
 
-  await prisma.$transaction(async (tx) => {
-    for (const { id, data } of toUpdate) {
-      await tx.vocabularyWord.update({ where: { id }, data });
-    }
-    for (const data of toCreate) {
-      await tx.vocabularyWord.create({ data: data as never });
-    }
-  });
+  // 500 individual creates blow past Prisma's interactive transaction timeout,
+  // so creates go in as bulk chunks and the whole run gets a generous budget.
+  const CHUNK = 100;
+  await prisma.$transaction(
+    async (tx) => {
+      for (const { id, data } of toUpdate) {
+        await tx.vocabularyWord.update({ where: { id }, data });
+      }
+      for (let i = 0; i < toCreate.length; i += CHUNK) {
+        await tx.vocabularyWord.createMany({
+          data: toCreate.slice(i, i + CHUNK) as never,
+          skipDuplicates: true,
+        });
+      }
+    },
+    { timeout: 120_000, maxWait: 20_000 },
+  );
 
   const tagged = await prisma.vocabularyWord.count({ where: { quranicRank: { not: null } } });
   console.log(`\nDone. Words carrying a quranicRank: ${tagged} (expected ${CORE_WORD_COUNT}).`);
