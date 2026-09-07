@@ -18,6 +18,7 @@
     "db:audit-urdu": "node scripts/audit-urdu-content.cjs",
     "db:studio": "prisma studio",
     "dev:unlock-through": "node scripts/dev-unlock-through.cjs",
+    "progress:backfill-skipped": "node scripts/backfill-skipped-progress.cjs",
     "sentry:smoke": "node scripts/sentry-smoke-test.cjs",
     "images:patch-fixtures": "node scripts/patch-discover-image-urls.cjs",
     "images:patch-fixtures:dry": "node scripts/patch-discover-image-urls.cjs --dry-run",
