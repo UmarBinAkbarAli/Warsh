@@ -43,6 +43,9 @@ const ch04L01Content = require("./fixtures/chapter-04-lesson-01.json");
 const ch04L02Content = require("./fixtures/chapter-04-lesson-02.json");
 const ch04L03Content = require("./fixtures/chapter-04-lesson-03.json");
 const ch04L04Content = require("./fixtures/chapter-04-lesson-04.json");
+const ch04L05Content = require("./fixtures/chapter-04-lesson-05-phrase-vs-sentence.json");
+const ch04L06Content = require("./fixtures/chapter-04-lesson-06-quranic-adjectives.json");
+const ch04L07TestContent = require("./fixtures/chapter-04-lesson-07-final-test.json");
 const ch05L01Content = require("./fixtures/chapter-05-lesson-01.json");
 const ch05L02Content = require("./fixtures/chapter-05-lesson-02.json");
 const ch05L03Content = require("./fixtures/chapter-05-lesson-03.json");
@@ -743,8 +746,11 @@ async function main() {
     // Chapter 4
     { id: "ch04-l01", chapterId: ch4Id, order: 1, title: "Adjective Follows Noun",                titleAr: "الصِّفَة بَعْدَ الْمَوْصُوف",                template: "STANDARD", xpReward: ch04L01Content._meta?.xp_reward ?? 10, content: ch04L01Content },
     { id: "ch04-l02", chapterId: ch4Id, order: 2, title: "Definite Agreement — الْبَيْتُ الْكَبِيرُ", titleAr: "الصِّفَة الْمَعْرِفَة",                  template: "STANDARD", xpReward: ch04L02Content._meta?.xp_reward ?? 10, content: ch04L02Content },
-    { id: "ch04-l03", chapterId: ch4Id, order: 3, title: "Feminine Agreement — كَلِمَةٌ طَيِّبَةٌ",  titleAr: "الصِّفَة الْمُؤَنَّثَة",                   template: "STANDARD", xpReward: ch04L03Content._meta?.xp_reward ?? 10, content: ch04L03Content },
-    { id: "ch04-l04", chapterId: ch4Id, order: 4, title: "Chapter 4 Review",                      titleAr: "مُرَاجَعَة الْفَصْل الرَّابِع",              template: "REVIEW",   xpReward: ch04L04Content._meta?.xp_reward ?? 20, content: ch04L04Content },
+    { id: "ch04-l05", chapterId: ch4Id, order: 3, title: "Adjective Phrase or Complete Sentence?", titleAr: "التَّرْكِيبُ الْوَصْفِيُّ وَالْجُمْلَةُ", template: "STANDARD", xpReward: ch04L05Content._meta?.xp_reward ?? 10, content: ch04L05Content },
+    { id: "ch04-l03", chapterId: ch4Id, order: 4, title: "Feminine Agreement — كَلِمَةٌ طَيِّبَةٌ", titleAr: "الصِّفَة الْمُؤَنَّثَة",                 template: "STANDARD", xpReward: ch04L03Content._meta?.xp_reward ?? 10, content: ch04L03Content },
+    { id: "ch04-l06", chapterId: ch4Id, order: 5, title: "Adjectives in Quranic Phrases",          titleAr: "الصِّفَةُ فِي التَّرَاكِيبِ الْقُرْآنِيَّةِ", template: "STANDARD", xpReward: ch04L06Content._meta?.xp_reward ?? 10, content: ch04L06Content },
+    { id: "ch04-l04", chapterId: ch4Id, order: 6, title: "Chapter 4 Review",                       titleAr: "مُرَاجَعَة الْفَصْل الرَّابِع",           template: "REVIEW", xpReward: ch04L04Content._meta?.xp_reward ?? 20, content: ch04L04Content },
+    { id: "ch04-test", chapterId: ch4Id, order: 7, title: "Chapter 4 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الرَّابِعِ",          template: "REVIEW", xpReward: ch04L07TestContent._meta?.xp_reward ?? 20, content: ch04L07TestContent },
     // Chapter 5
     { id: "ch05-l01", chapterId: ch5Id, order: 1, title: "This Feminine — هَٰذِهِ",                 titleAr: "هَٰذِهِ لِلْمُؤَنَّثِ الْقَرِيب",                       template: "STANDARD", xpReward: ch05L01Content._meta?.xp_reward ?? 10, content: ch05L01Content },
     { id: "ch05-l02", chapterId: ch5Id, order: 2, title: "That Feminine — تِلْكَ",                 titleAr: "تِلْكَ لِلْمُؤَنَّثِ الْبَعِيد",                        template: "STANDARD", xpReward: ch05L02Content._meta?.xp_reward ?? 10, content: ch05L02Content },
