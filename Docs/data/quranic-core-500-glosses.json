@@ -1,0 +1,3552 @@
+{
+  "note": "Warsh-authored English + Urdu glosses for the Quranic Core 500. Nothing here is taken from hafiz-quran.com: that page's English is broken (a bad find-and-replace ate the letters 'go') and most of its glosses translate one ayah rather than defining the word. headword is the dictionary form we store; where it differs from the source list, sourceForm records what the source had. Verbs are glossed as English infinitives. Merge with Docs/data/quranic-core-500.json (rank, freq, pos, flags) to build seed rows.",
+  "status": "COMPLETE - all 500 English + Urdu glosses written, awaiting review in Warsh Studio",
+  "glosses": [
+    {
+      "rank": 1,
+      "headword": "مِن",
+      "translit": "min",
+      "en": "from, of",
+      "ur": "سے"
+    },
+    {
+      "rank": 2,
+      "headword": "اللَّه",
+      "translit": "Allāh",
+      "en": "Allah, God",
+      "ur": "اللہ"
+    },
+    {
+      "rank": 3,
+      "headword": "ما",
+      "translit": "mā",
+      "en": "what; not",
+      "ur": "کیا، جو؛ نہیں"
+    },
+    {
+      "rank": 4,
+      "headword": "فِي",
+      "translit": "fī",
+      "en": "in, within",
+      "ur": "میں"
+    },
+    {
+      "rank": 5,
+      "headword": "لا",
+      "translit": "lā",
+      "en": "no, not",
+      "ur": "نہیں"
+    },
+    {
+      "rank": 6,
+      "headword": "إِنَّ",
+      "translit": "inna",
+      "en": "indeed, truly",
+      "ur": "بےشک"
+    },
+    {
+      "rank": 7,
+      "headword": "قالَ",
+      "translit": "qāla",
+      "en": "to say",
+      "ur": "کہنا"
+    },
+    {
+      "rank": 8,
+      "headword": "الَّذِي",
+      "translit": "alladhī",
+      "en": "who, which, the one that",
+      "ur": "جو"
+    },
+    {
+      "rank": 9,
+      "headword": "عَلَى",
+      "translit": "ʿalā",
+      "en": "on, upon, over",
+      "ur": "پر"
+    },
+    {
+      "rank": 10,
+      "headword": "كانَ",
+      "translit": "kāna",
+      "en": "to be",
+      "ur": "ہونا"
+    },
+    {
+      "rank": 11,
+      "headword": "لِ",
+      "translit": "li",
+      "en": "for, to, belonging to",
+      "ur": "کے لیے",
+      "isPrefix": true
+    },
+    {
+      "rank": 12,
+      "headword": "ذا",
+      "translit": "dhā",
+      "en": "this",
+      "ur": "یہ"
+    },
+    {
+      "rank": 13,
+      "headword": "رَبّ",
+      "translit": "rabb",
+      "en": "lord, master, sustainer",
+      "ur": "رب، پالنے والا"
+    },
+    {
+      "rank": 14,
+      "headword": "مَن",
+      "translit": "man",
+      "en": "who, whoever",
+      "ur": "کون، جو"
+    },
+    {
+      "rank": 15,
+      "headword": "إِلَى",
+      "translit": "ilā",
+      "en": "to, towards",
+      "ur": "کی طرف"
+    },
+    {
+      "rank": 16,
+      "headword": "إِن",
+      "translit": "in",
+      "en": "if",
+      "ur": "اگر"
+    },
+    {
+      "rank": 17,
+      "headword": "إِلَّا",
+      "translit": "illā",
+      "en": "except, unless",
+      "ur": "سوائے، مگر"
+    },
+    {
+      "rank": 18,
+      "headword": "أَن",
+      "translit": "an",
+      "en": "that, to (before a verb)",
+      "ur": "کہ"
+    },
+    {
+      "rank": 19,
+      "headword": "آمَنَ",
+      "translit": "āmana",
+      "en": "to believe, to have faith",
+      "ur": "ایمان لانا"
+    },
+    {
+      "rank": 20,
+      "headword": "بِ",
+      "translit": "bi",
+      "en": "with, by, in",
+      "ur": "ساتھ، سے",
+      "isPrefix": true
+    },
+    {
+      "rank": 21,
+      "headword": "وَ",
+      "translit": "wa",
+      "en": "and",
+      "ur": "اور",
+      "isPrefix": true
+    },
+    {
+      "rank": 22,
+      "headword": "يَوْم",
+      "translit": "yawm",
+      "en": "day",
+      "ur": "دن"
+    },
+    {
+      "rank": 23,
+      "headword": "عَن",
+      "translit": "ʿan",
+      "en": "from, about, away from",
+      "ur": "سے، کے بارے میں"
+    },
+    {
+      "rank": 24,
+      "headword": "أَرْض",
+      "translit": "arḍ",
+      "en": "earth, land",
+      "ur": "زمین"
+    },
+    {
+      "rank": 25,
+      "headword": "إِذا",
+      "translit": "idhā",
+      "en": "when, whenever",
+      "ur": "جب"
+    },
+    {
+      "rank": 26,
+      "headword": "قَد",
+      "translit": "qad",
+      "en": "indeed, already",
+      "ur": "یقیناً، بےشک"
+    },
+    {
+      "rank": 27,
+      "headword": "قَوْم",
+      "translit": "qawm",
+      "en": "people, folk, nation",
+      "ur": "قوم"
+    },
+    {
+      "rank": 28,
+      "headword": "عَلِمَ",
+      "translit": "ʿalima",
+      "en": "to know",
+      "ur": "جاننا"
+    },
+    {
+      "rank": 29,
+      "headword": "آيَة",
+      "translit": "āya",
+      "en": "sign, verse",
+      "ur": "نشانی، آیت"
+    },
+    {
+      "rank": 30,
+      "headword": "أَنَّ",
+      "translit": "anna",
+      "en": "that",
+      "ur": "کہ"
+    },
+    {
+      "rank": 31,
+      "headword": "كُلّ",
+      "translit": "kull",
+      "en": "all, every, each",
+      "ur": "ہر، سب"
+    },
+    {
+      "rank": 32,
+      "headword": "لَم",
+      "translit": "lam",
+      "en": "did not",
+      "ur": "نہیں"
+    },
+    {
+      "rank": 33,
+      "headword": "جَعَلَ",
+      "translit": "jaʿala",
+      "en": "to make, to place",
+      "ur": "بنانا، رکھنا"
+    },
+    {
+      "rank": 34,
+      "headword": "ثُمَّ",
+      "translit": "thumma",
+      "en": "then, afterwards",
+      "ur": "پھر"
+    },
+    {
+      "rank": 35,
+      "headword": "رَسُول",
+      "translit": "rasūl",
+      "en": "messenger",
+      "ur": "رسول"
+    },
+    {
+      "rank": 36,
+      "headword": "عَذاب",
+      "translit": "ʿadhāb",
+      "en": "punishment, torment",
+      "ur": "عذاب"
+    },
+    {
+      "rank": 37,
+      "headword": "سَماء",
+      "translit": "samāʾ",
+      "en": "sky, heaven",
+      "ur": "آسمان"
+    },
+    {
+      "rank": 38,
+      "headword": "نَفْس",
+      "translit": "nafs",
+      "en": "soul, self, person",
+      "ur": "نفس، جان"
+    },
+    {
+      "rank": 39,
+      "headword": "كَفَرَ",
+      "translit": "kafara",
+      "en": "to disbelieve, to reject faith",
+      "ur": "کفر کرنا"
+    },
+    {
+      "rank": 40,
+      "headword": "شَيْء",
+      "translit": "shayʾ",
+      "en": "thing",
+      "ur": "چیز"
+    },
+    {
+      "rank": 41,
+      "headword": "أَو",
+      "translit": "aw",
+      "en": "or",
+      "ur": "یا"
+    },
+    {
+      "rank": 42,
+      "headword": "جاءَ",
+      "translit": "jāʾa",
+      "en": "to come",
+      "ur": "آنا"
+    },
+    {
+      "rank": 43,
+      "headword": "عَمِلَ",
+      "translit": "ʿamila",
+      "en": "to do, to act, to work",
+      "ur": "عمل کرنا"
+    },
+    {
+      "rank": 44,
+      "headword": "آتَى",
+      "translit": "ātā",
+      "en": "to give, to bring",
+      "ur": "دینا"
+    },
+    {
+      "rank": 45,
+      "headword": "رَأَى",
+      "translit": "raʾā",
+      "en": "to see",
+      "ur": "دیکھنا"
+    },
+    {
+      "rank": 46,
+      "headword": "بَيْن",
+      "translit": "bayn",
+      "en": "between, among",
+      "ur": "درمیان"
+    },
+    {
+      "rank": 47,
+      "headword": "أَتَى",
+      "translit": "atā",
+      "en": "to come, to arrive",
+      "ur": "آنا"
+    },
+    {
+      "rank": 48,
+      "headword": "كِتاب",
+      "translit": "kitāb",
+      "en": "book, scripture",
+      "ur": "کتاب"
+    },
+    {
+      "rank": 49,
+      "headword": "حَقّ",
+      "translit": "ḥaqq",
+      "en": "truth, right, due",
+      "ur": "حق، سچ"
+    },
+    {
+      "rank": 50,
+      "headword": "قَبْل",
+      "translit": "qabl",
+      "en": "before",
+      "ur": "پہلے"
+    },
+    {
+      "rank": 51,
+      "headword": "ناس",
+      "translit": "nās",
+      "en": "people, mankind",
+      "ur": "لوگ"
+    },
+    {
+      "rank": 52,
+      "headword": "إِذ",
+      "translit": "idh",
+      "en": "when (in the past)",
+      "ur": "جب"
+    },
+    {
+      "rank": 53,
+      "headword": "شاءَ",
+      "translit": "shāʾa",
+      "en": "to will, to wish",
+      "ur": "چاہنا"
+    },
+    {
+      "rank": 54,
+      "headword": "أَيّ",
+      "translit": "ayy",
+      "en": "which, whichever",
+      "ur": "کون سا"
+    },
+    {
+      "rank": 55,
+      "headword": "مُؤْمِن",
+      "translit": "muʾmin",
+      "en": "believer",
+      "ur": "مومن"
+    },
+    {
+      "rank": 56,
+      "headword": "لَو",
+      "translit": "law",
+      "en": "if (were it so)",
+      "ur": "اگر"
+    },
+    {
+      "rank": 57,
+      "headword": "بَعْد",
+      "translit": "baʿd",
+      "en": "after",
+      "ur": "بعد"
+    },
+    {
+      "rank": 58,
+      "headword": "عِند",
+      "translit": "ʿind",
+      "en": "with, near, in the sight of",
+      "ur": "پاس، نزدیک"
+    },
+    {
+      "rank": 59,
+      "headword": "خَلَقَ",
+      "translit": "khalaqa",
+      "en": "to create",
+      "ur": "پیدا کرنا"
+    },
+    {
+      "rank": 60,
+      "headword": "أَنزَلَ",
+      "translit": "anzala",
+      "en": "to send down, to reveal",
+      "ur": "نازل کرنا"
+    },
+    {
+      "rank": 61,
+      "headword": "خَيْر",
+      "translit": "khayr",
+      "en": "good, goodness; better",
+      "ur": "بھلائی، بہتر"
+    },
+    {
+      "rank": 62,
+      "headword": "كَذَّبَ",
+      "translit": "kadhdhaba",
+      "en": "to deny, to call a lie",
+      "ur": "جھٹلانا"
+    },
+    {
+      "rank": 63,
+      "headword": "سَبِيل",
+      "translit": "sabīl",
+      "en": "way, path",
+      "ur": "راستہ"
+    },
+    {
+      "rank": 64,
+      "headword": "دَعا",
+      "translit": "daʿā",
+      "en": "to call, to supplicate",
+      "ur": "پکارنا، دعا کرنا"
+    },
+    {
+      "rank": 65,
+      "headword": "اتَّقَى",
+      "translit": "ittaqā",
+      "en": "to be mindful of God, to fear Him",
+      "ur": "تقویٰ اختیار کرنا، ڈرنا"
+    },
+    {
+      "rank": 66,
+      "headword": "أَمْر",
+      "translit": "amr",
+      "en": "matter, affair, command",
+      "ur": "معاملہ، حکم"
+    },
+    {
+      "rank": 67,
+      "headword": "لَمّا",
+      "translit": "lammā",
+      "en": "when; not yet",
+      "ur": "جب؛ ابھی نہیں"
+    },
+    {
+      "rank": 68,
+      "headword": "مَعَ",
+      "translit": "maʿa",
+      "en": "with, together with",
+      "ur": "ساتھ"
+    },
+    {
+      "rank": 69,
+      "headword": "عَلِيم",
+      "translit": "ʿalīm",
+      "en": "all-knowing",
+      "ur": "سب جاننے والا"
+    },
+    {
+      "rank": 70,
+      "headword": "بَعْض",
+      "translit": "baʿḍ",
+      "en": "some, part of, one another",
+      "ur": "بعض، کچھ"
+    },
+    {
+      "rank": 71,
+      "headword": "كافِر",
+      "translit": "kāfir",
+      "en": "disbeliever",
+      "ur": "کافر"
+    },
+    {
+      "rank": 72,
+      "headword": "ذُو",
+      "translit": "dhū",
+      "en": "possessor of, owner of",
+      "ur": "والا، مالک"
+    },
+    {
+      "rank": 73,
+      "headword": "آخِر",
+      "translit": "ākhir",
+      "en": "last, final; the hereafter",
+      "ur": "آخری، آخرت"
+    },
+    {
+      "rank": 74,
+      "headword": "غَيْر",
+      "translit": "ghayr",
+      "en": "other than, without",
+      "ur": "کے سوا، بغیر"
+    },
+    {
+      "rank": 75,
+      "headword": "جَنَّة",
+      "translit": "janna",
+      "en": "garden, paradise",
+      "ur": "جنت، باغ"
+    },
+    {
+      "rank": 76,
+      "headword": "إِلٰه",
+      "translit": "ilāh",
+      "en": "god, deity",
+      "ur": "معبود"
+    },
+    {
+      "rank": 77,
+      "headword": "نار",
+      "translit": "nār",
+      "en": "fire",
+      "ur": "آگ"
+    },
+    {
+      "rank": 78,
+      "headword": "هَدَى",
+      "translit": "hadā",
+      "en": "to guide",
+      "ur": "ہدایت دینا"
+    },
+    {
+      "rank": 79,
+      "headword": "دُون",
+      "translit": "dūn",
+      "en": "besides, other than, short of",
+      "ur": "سوا، کے علاوہ"
+    },
+    {
+      "rank": 80,
+      "headword": "حَتَّى",
+      "translit": "ḥattā",
+      "en": "until, so that",
+      "ur": "یہاں تک کہ"
+    },
+    {
+      "rank": 81,
+      "headword": "أَرادَ",
+      "translit": "arāda",
+      "en": "to want, to intend",
+      "ur": "ارادہ کرنا، چاہنا"
+    },
+    {
+      "rank": 82,
+      "headword": "أَم",
+      "translit": "am",
+      "en": "or (in questions)",
+      "ur": "یا"
+    },
+    {
+      "rank": 83,
+      "headword": "مُوسَى",
+      "translit": "Mūsā",
+      "en": "Moses",
+      "ur": "موسیٰ"
+    },
+    {
+      "rank": 84,
+      "headword": "اتَّبَعَ",
+      "translit": "ittabaʿa",
+      "en": "to follow",
+      "ur": "پیروی کرنا"
+    },
+    {
+      "rank": 85,
+      "headword": "قَلْب",
+      "translit": "qalb",
+      "en": "heart",
+      "ur": "دل"
+    },
+    {
+      "rank": 86,
+      "headword": "عَبْد",
+      "translit": "ʿabd",
+      "en": "servant, slave, worshipper",
+      "ur": "بندہ"
+    },
+    {
+      "rank": 87,
+      "headword": "أَرْسَلَ",
+      "translit": "arsala",
+      "en": "to send",
+      "ur": "بھیجنا"
+    },
+    {
+      "rank": 88,
+      "headword": "لَعَلَّ",
+      "translit": "laʿalla",
+      "en": "so that, perhaps",
+      "ur": "تاکہ، شاید"
+    },
+    {
+      "rank": 89,
+      "headword": "ظالِم",
+      "translit": "ẓālim",
+      "en": "wrongdoer, oppressor",
+      "ur": "ظالم"
+    },
+    {
+      "rank": 90,
+      "headword": "أَخَذَ",
+      "translit": "akhadha",
+      "en": "to take, to seize",
+      "ur": "لینا، پکڑنا"
+    },
+    {
+      "rank": 91,
+      "headword": "بَل",
+      "translit": "bal",
+      "en": "rather, on the contrary",
+      "ur": "بلکہ"
+    },
+    {
+      "rank": 92,
+      "headword": "أَهْل",
+      "translit": "ahl",
+      "en": "people of, family, folk",
+      "ur": "اہل، والے"
+    },
+    {
+      "rank": 93,
+      "headword": "اتَّخَذَ",
+      "translit": "ittakhadha",
+      "en": "to take for oneself, to adopt",
+      "ur": "بنا لینا"
+    },
+    {
+      "rank": 94,
+      "headword": "عَبَدَ",
+      "translit": "ʿabada",
+      "en": "to worship, to serve",
+      "ur": "عبادت کرنا"
+    },
+    {
+      "rank": 95,
+      "headword": "يَد",
+      "translit": "yad",
+      "en": "hand",
+      "ur": "ہاتھ"
+    },
+    {
+      "rank": 96,
+      "headword": "مُبِين",
+      "translit": "mubīn",
+      "en": "clear, manifest",
+      "ur": "واضح، کھلا"
+    },
+    {
+      "rank": 97,
+      "headword": "رَحِيم",
+      "translit": "raḥīm",
+      "en": "most merciful",
+      "ur": "رحم کرنے والا"
+    },
+    {
+      "rank": 98,
+      "headword": "دُنْيا",
+      "translit": "dunyā",
+      "en": "world, worldly life",
+      "ur": "دنیا"
+    },
+    {
+      "rank": 99,
+      "headword": "رَحْمَة",
+      "translit": "raḥma",
+      "en": "mercy",
+      "ur": "رحمت"
+    },
+    {
+      "rank": 100,
+      "headword": "ظَلَمَ",
+      "translit": "ẓalama",
+      "en": "to wrong, to oppress",
+      "ur": "ظلم کرنا"
+    },
+    {
+      "rank": 101,
+      "headword": "عَظِيم",
+      "translit": "ʿaẓīm",
+      "en": "great, mighty",
+      "ur": "عظیم، بڑا"
+    },
+    {
+      "rank": 102,
+      "headword": "سَأَلَ",
+      "translit": "saʾala",
+      "en": "to ask",
+      "ur": "پوچھنا، سوال کرنا"
+    },
+    {
+      "rank": 103,
+      "headword": "وَجَدَ",
+      "translit": "wajada",
+      "en": "to find",
+      "ur": "پانا"
+    },
+    {
+      "rank": 104,
+      "headword": "عِلْم",
+      "translit": "ʿilm",
+      "en": "knowledge",
+      "ur": "علم"
+    },
+    {
+      "rank": 105,
+      "headword": "أَجْر",
+      "translit": "ajr",
+      "en": "reward, wage",
+      "ur": "اجر، بدلہ"
+    },
+    {
+      "rank": 106,
+      "headword": "لَن",
+      "translit": "lan",
+      "en": "will never",
+      "ur": "ہرگز نہیں"
+    },
+    {
+      "rank": 107,
+      "headword": "فَ",
+      "translit": "fa",
+      "en": "then, so",
+      "ur": "پس، تو",
+      "isPrefix": true,
+      "sourceForm": "ف"
+    },
+    {
+      "rank": 108,
+      "headword": "عَزِيز",
+      "translit": "ʿazīz",
+      "en": "almighty, mighty, precious",
+      "ur": "غالب، زبردست"
+    },
+    {
+      "rank": 109,
+      "headword": "أَخْرَجَ",
+      "translit": "akhraja",
+      "en": "to bring out, to expel",
+      "ur": "نکالنا"
+    },
+    {
+      "rank": 110,
+      "headword": "حَكِيم",
+      "translit": "ḥakīm",
+      "en": "all-wise",
+      "ur": "حکمت والا"
+    },
+    {
+      "rank": 111,
+      "headword": "أَكَلَ",
+      "translit": "akala",
+      "en": "to eat",
+      "ur": "کھانا"
+    },
+    {
+      "rank": 112,
+      "headword": "هَل",
+      "translit": "hal",
+      "en": "is? do? (question word)",
+      "ur": "کیا؟"
+    },
+    {
+      "rank": 113,
+      "headword": "دِين",
+      "translit": "dīn",
+      "en": "religion, way of life; judgement",
+      "ur": "دین"
+    },
+    {
+      "rank": 114,
+      "headword": "قَوْل",
+      "translit": "qawl",
+      "en": "word, saying, speech",
+      "ur": "قول، بات"
+    },
+    {
+      "rank": 115,
+      "headword": "غَفُور",
+      "translit": "ghafūr",
+      "en": "oft-forgiving",
+      "ur": "بخشنے والا"
+    },
+    {
+      "rank": 116,
+      "headword": "لَيْسَ",
+      "translit": "laysa",
+      "en": "to not be",
+      "ur": "نہیں ہے"
+    },
+    {
+      "rank": 117,
+      "headword": "شَيْطان",
+      "translit": "shayṭān",
+      "en": "Satan, devil",
+      "ur": "شیطان"
+    },
+    {
+      "rank": 118,
+      "headword": "مَثَل",
+      "translit": "mathal",
+      "en": "example, parable, likeness",
+      "ur": "مثال"
+    },
+    {
+      "rank": 119,
+      "headword": "فَعَلَ",
+      "translit": "faʿala",
+      "en": "to do",
+      "ur": "کرنا"
+    },
+    {
+      "rank": 120,
+      "headword": "مَلَك",
+      "translit": "malak",
+      "en": "angel",
+      "ur": "فرشتہ"
+    },
+    {
+      "rank": 121,
+      "headword": "نَظَرَ",
+      "translit": "naẓara",
+      "en": "to look, to see",
+      "ur": "دیکھنا"
+    },
+    {
+      "rank": 122,
+      "headword": "وَلِيّ",
+      "translit": "walī",
+      "en": "protector, ally, guardian",
+      "ur": "دوست، مددگار، ولی",
+      "sourceTranslit": "walīī"
+    },
+    {
+      "rank": 123,
+      "headword": "مال",
+      "translit": "māl",
+      "en": "wealth, property",
+      "ur": "مال، دولت"
+    },
+    {
+      "rank": 124,
+      "headword": "هُدًى",
+      "translit": "hudan",
+      "en": "guidance",
+      "ur": "ہدایت",
+      "sourceTranslit": "hudanā"
+    },
+    {
+      "rank": 125,
+      "headword": "ذَكَرَ",
+      "translit": "dhakara",
+      "en": "to remember, to mention",
+      "ur": "یاد کرنا، ذکر کرنا"
+    },
+    {
+      "rank": 126,
+      "headword": "فَضْل",
+      "translit": "faḍl",
+      "en": "bounty, grace, favour",
+      "ur": "فضل"
+    },
+    {
+      "rank": 127,
+      "headword": "لَيْل",
+      "translit": "layl",
+      "en": "night",
+      "ur": "رات"
+    },
+    {
+      "rank": 128,
+      "headword": "صَلاة",
+      "translit": "ṣalāh",
+      "en": "prayer",
+      "ur": "نماز"
+    },
+    {
+      "rank": 129,
+      "headword": "كَيْف",
+      "translit": "kayf",
+      "en": "how",
+      "ur": "کیسے"
+    },
+    {
+      "rank": 130,
+      "headword": "قَتَلَ",
+      "translit": "qatala",
+      "en": "to kill",
+      "ur": "قتل کرنا"
+    },
+    {
+      "rank": 131,
+      "headword": "خافَ",
+      "translit": "khāfa",
+      "en": "to fear",
+      "ur": "ڈرنا"
+    },
+    {
+      "rank": 132,
+      "headword": "أَوَّل",
+      "translit": "awwal",
+      "en": "first, former",
+      "ur": "پہلا"
+    },
+    {
+      "rank": 133,
+      "headword": "بُنَيّ",
+      "translit": "bunayy",
+      "en": "my dear son (affectionate)",
+      "ur": "میرے بیٹے",
+      "sourceForm": "بُنَىّ"
+    },
+    {
+      "rank": 134,
+      "headword": "أَكْثَر",
+      "translit": "akthar",
+      "en": "most, the majority",
+      "ur": "اکثر، زیادہ تر"
+    },
+    {
+      "rank": 135,
+      "headword": "رَجَعَ",
+      "translit": "rajaʿa",
+      "en": "to return",
+      "ur": "لوٹنا"
+    },
+    {
+      "rank": 136,
+      "headword": "أَصْحاب",
+      "translit": "aṣḥāb",
+      "en": "companions, people of",
+      "ur": "ساتھی، والے"
+    },
+    {
+      "rank": 137,
+      "headword": "تَوَلَّى",
+      "translit": "tawallā",
+      "en": "to turn away; to take charge of",
+      "ur": "منہ پھیرنا"
+    },
+    {
+      "rank": 138,
+      "headword": "سَمِعَ",
+      "translit": "samiʿa",
+      "en": "to hear",
+      "ur": "سننا"
+    },
+    {
+      "rank": 139,
+      "headword": "أَمَرَ",
+      "translit": "amara",
+      "en": "to command, to order",
+      "ur": "حکم دینا"
+    },
+    {
+      "rank": 140,
+      "headword": "جَهَنَّم",
+      "translit": "jahannam",
+      "en": "Hell",
+      "ur": "جہنم"
+    },
+    {
+      "rank": 141,
+      "headword": "زَوْج",
+      "translit": "zawj",
+      "en": "spouse, pair, mate",
+      "ur": "جوڑا، بیوی یا شوہر"
+    },
+    {
+      "rank": 142,
+      "headword": "دَخَلَ",
+      "translit": "dakhala",
+      "en": "to enter",
+      "ur": "داخل ہونا"
+    },
+    {
+      "rank": 143,
+      "headword": "حَياة",
+      "translit": "ḥayāh",
+      "en": "life",
+      "ur": "زندگی"
+    },
+    {
+      "rank": 144,
+      "headword": "ذِكْر",
+      "translit": "dhikr",
+      "en": "remembrance, reminder",
+      "ur": "ذکر، یاد"
+    },
+    {
+      "rank": 145,
+      "headword": "مِثْل",
+      "translit": "mithl",
+      "en": "like, similar to",
+      "ur": "جیسا، مانند"
+    },
+    {
+      "rank": 146,
+      "headword": "نَبِيّ",
+      "translit": "nabī",
+      "en": "prophet",
+      "ur": "نبی",
+      "sourceTranslit": "nabīī"
+    },
+    {
+      "rank": 147,
+      "headword": "لَوْلا",
+      "translit": "lawlā",
+      "en": "if not, were it not for",
+      "ur": "اگر نہ ہوتا"
+    },
+    {
+      "rank": 148,
+      "headword": "أَخ",
+      "translit": "akh",
+      "en": "brother",
+      "ur": "بھائی"
+    },
+    {
+      "rank": 149,
+      "headword": "خالِد",
+      "translit": "khālid",
+      "en": "abiding forever, eternal",
+      "ur": "ہمیشہ رہنے والا"
+    },
+    {
+      "rank": 150,
+      "headword": "فِرْعَوْن",
+      "translit": "Firʿawn",
+      "en": "Pharaoh",
+      "ur": "فرعون"
+    },
+    {
+      "rank": 151,
+      "headword": "صالِح",
+      "translit": "ṣāliḥ",
+      "en": "righteous, good",
+      "ur": "نیک"
+    },
+    {
+      "rank": 152,
+      "headword": "أَحَد",
+      "translit": "aḥad",
+      "en": "one, anyone",
+      "ur": "ایک، کوئی"
+    },
+    {
+      "rank": 153,
+      "headword": "عالَم",
+      "translit": "ʿālam",
+      "en": "world, realm",
+      "ur": "جہان، عالم"
+    },
+    {
+      "rank": 154,
+      "headword": "جَزَى",
+      "translit": "jazā",
+      "en": "to recompense, to repay",
+      "ur": "بدلہ دینا"
+    },
+    {
+      "rank": 155,
+      "headword": "أَلِيم",
+      "translit": "alīm",
+      "en": "painful",
+      "ur": "دردناک"
+    },
+    {
+      "rank": 156,
+      "headword": "وَجْه",
+      "translit": "wajh",
+      "en": "face",
+      "ur": "چہرہ"
+    },
+    {
+      "rank": 157,
+      "headword": "أَطاعَ",
+      "translit": "aṭāʿa",
+      "en": "to obey",
+      "ur": "اطاعت کرنا"
+    },
+    {
+      "rank": 158,
+      "headword": "أَوْحَى",
+      "translit": "awḥā",
+      "en": "to reveal, to inspire",
+      "ur": "وحی کرنا"
+    },
+    {
+      "rank": 159,
+      "headword": "إِنسان",
+      "translit": "insān",
+      "en": "human being, mankind",
+      "ur": "انسان"
+    },
+    {
+      "rank": 160,
+      "headword": "بَيِّنَة",
+      "translit": "bayyinah",
+      "en": "clear proof, evidence",
+      "ur": "کھلی دلیل"
+    },
+    {
+      "rank": 161,
+      "headword": "أَشْرَكَ",
+      "translit": "ashraka",
+      "en": "to associate partners with God",
+      "ur": "شرک کرنا"
+    },
+    {
+      "rank": 162,
+      "headword": "عَمَل",
+      "translit": "ʿamal",
+      "en": "deed, action, work",
+      "ur": "عمل"
+    },
+    {
+      "rank": 163,
+      "headword": "أَلْقَى",
+      "translit": "alqā",
+      "en": "to throw, to cast",
+      "ur": "ڈالنا، پھینکنا"
+    },
+    {
+      "rank": 164,
+      "headword": "قَلِيل",
+      "translit": "qalīl",
+      "en": "few, little",
+      "ur": "تھوڑا"
+    },
+    {
+      "rank": 165,
+      "headword": "قِيامَة",
+      "translit": "qiyāmah",
+      "en": "resurrection",
+      "ur": "قیامت",
+      "sourceTranslit": "qīāmaa"
+    },
+    {
+      "rank": 166,
+      "headword": "آخَر",
+      "translit": "ākhar",
+      "en": "another, other",
+      "ur": "دوسرا"
+    },
+    {
+      "rank": 167,
+      "headword": "قُرْآن",
+      "translit": "Qurʾān",
+      "en": "the Quran, the recitation",
+      "ur": "قرآن"
+    },
+    {
+      "rank": 168,
+      "headword": "وَعَدَ",
+      "translit": "waʿada",
+      "en": "to promise",
+      "ur": "وعدہ کرنا"
+    },
+    {
+      "rank": 169,
+      "headword": "إِبْراهِيم",
+      "translit": "Ibrāhīm",
+      "en": "Abraham",
+      "ur": "ابراہیم"
+    },
+    {
+      "rank": 170,
+      "headword": "أَنفَقَ",
+      "translit": "anfaqa",
+      "en": "to spend (in charity)",
+      "ur": "خرچ کرنا"
+    },
+    {
+      "rank": 171,
+      "headword": "لٰكِن",
+      "translit": "lākin",
+      "en": "but, however",
+      "ur": "لیکن"
+    },
+    {
+      "rank": 172,
+      "headword": "غَفَرَ",
+      "translit": "ghafara",
+      "en": "to forgive",
+      "ur": "بخشنا"
+    },
+    {
+      "rank": 173,
+      "headword": "لٰكِنَّ",
+      "translit": "lākinna",
+      "en": "but (emphatic)",
+      "ur": "لیکن"
+    },
+    {
+      "rank": 174,
+      "headword": "بَيْت",
+      "translit": "bayt",
+      "en": "house, home",
+      "ur": "گھر"
+    },
+    {
+      "rank": 175,
+      "headword": "يَمِين",
+      "translit": "yamīn",
+      "en": "right hand; oath",
+      "ur": "دایاں ہاتھ؛ قسم"
+    },
+    {
+      "rank": 176,
+      "headword": "أَضَلَّ",
+      "translit": "aḍalla",
+      "en": "to lead astray",
+      "ur": "گمراہ کرنا"
+    },
+    {
+      "rank": 177,
+      "headword": "أُمَّة",
+      "translit": "ummah",
+      "en": "community, nation",
+      "ur": "امت"
+    },
+    {
+      "rank": 178,
+      "headword": "آباء",
+      "translit": "ābāʾ",
+      "en": "fathers, forefathers",
+      "ur": "آباء، باپ دادا"
+    },
+    {
+      "rank": 179,
+      "headword": "أَصابَ",
+      "translit": "aṣāba",
+      "en": "to befall, to strike",
+      "ur": "پہنچنا، آ پڑنا"
+    },
+    {
+      "rank": 180,
+      "headword": "أَحَبَّ",
+      "translit": "aḥabba",
+      "en": "to love",
+      "ur": "محبت کرنا",
+      "sourceForm": "أَحْبَبْ"
+    },
+    {
+      "rank": 181,
+      "headword": "ماء",
+      "translit": "māʾ",
+      "en": "water",
+      "ur": "پانی",
+      "sourceTranslit": "mā"
+    },
+    {
+      "rank": 182,
+      "headword": "كَثِير",
+      "translit": "kathīr",
+      "en": "many, much",
+      "ur": "بہت"
+    },
+    {
+      "rank": 183,
+      "headword": "تابَ",
+      "translit": "tāba",
+      "en": "to repent, to turn back",
+      "ur": "توبہ کرنا"
+    },
+    {
+      "rank": 184,
+      "headword": "ابْن",
+      "translit": "ibn",
+      "en": "son",
+      "ur": "بیٹا"
+    },
+    {
+      "rank": 185,
+      "headword": "نَزَّلَ",
+      "translit": "nazzala",
+      "en": "to send down (gradually)",
+      "ur": "نازل کرنا"
+    },
+    {
+      "rank": 186,
+      "headword": "صالِحَة",
+      "translit": "ṣāliḥah",
+      "en": "righteous (feminine); good deed",
+      "ur": "نیک عمل"
+    },
+    {
+      "rank": 187,
+      "headword": "كَسَبَ",
+      "translit": "kasaba",
+      "en": "to earn, to acquire",
+      "ur": "کمانا"
+    },
+    {
+      "rank": 188,
+      "headword": "رَزَقَ",
+      "translit": "razaqa",
+      "en": "to provide, to give sustenance",
+      "ur": "رزق دینا"
+    },
+    {
+      "rank": 189,
+      "headword": "تَلا",
+      "translit": "talā",
+      "en": "to recite; to follow",
+      "ur": "تلاوت کرنا",
+      "sourceForm": "تَلَى"
+    },
+    {
+      "rank": 190,
+      "headword": "صادِق",
+      "translit": "ṣādiq",
+      "en": "truthful",
+      "ur": "سچا"
+    },
+    {
+      "rank": 191,
+      "headword": "نَصَرَ",
+      "translit": "naṣara",
+      "en": "to help, to give victory",
+      "ur": "مدد کرنا"
+    },
+    {
+      "rank": 192,
+      "headword": "نِساء",
+      "translit": "nisāʾ",
+      "en": "women",
+      "ur": "عورتیں"
+    },
+    {
+      "rank": 193,
+      "headword": "قَضَى",
+      "translit": "qaḍā",
+      "en": "to decree, to decide, to complete",
+      "ur": "فیصلہ کرنا"
+    },
+    {
+      "rank": 194,
+      "headword": "صَبَرَ",
+      "translit": "ṣabara",
+      "en": "to be patient, to endure",
+      "ur": "صبر کرنا"
+    },
+    {
+      "rank": 195,
+      "headword": "سَيِّئَة",
+      "translit": "sayyiʾah",
+      "en": "evil deed, bad thing",
+      "ur": "برائی"
+    },
+    {
+      "rank": 196,
+      "headword": "نَذِير",
+      "translit": "nadhīr",
+      "en": "warner",
+      "ur": "ڈرانے والا"
+    },
+    {
+      "rank": 197,
+      "headword": "رَحْمٰن",
+      "translit": "raḥmān",
+      "en": "the most gracious",
+      "ur": "رحمٰن، بڑا مہربان"
+    },
+    {
+      "rank": 198,
+      "headword": "جَرَى",
+      "translit": "jarā",
+      "en": "to flow, to run",
+      "ur": "بہنا",
+      "sourceForm": "جَرَيْ"
+    },
+    {
+      "rank": 199,
+      "headword": "قَرْيَة",
+      "translit": "qaryah",
+      "en": "town, village",
+      "ur": "بستی"
+    },
+    {
+      "rank": 200,
+      "headword": "عَيْن",
+      "translit": "ʿayn",
+      "en": "eye; spring",
+      "ur": "آنکھ؛ چشمہ"
+    },
+    {
+      "rank": 201,
+      "headword": "نَهار",
+      "translit": "nahār",
+      "en": "daytime",
+      "ur": "دن"
+    },
+    {
+      "rank": 202,
+      "headword": "شَهِيد",
+      "translit": "shahīd",
+      "en": "witness",
+      "ur": "گواہ"
+    },
+    {
+      "rank": 203,
+      "headword": "مَسَّ",
+      "translit": "massa",
+      "en": "to touch, to afflict",
+      "ur": "چھونا، پہنچنا"
+    },
+    {
+      "rank": 204,
+      "headword": "وَلَد",
+      "translit": "walad",
+      "en": "child, son",
+      "ur": "بچہ، بیٹا"
+    },
+    {
+      "rank": 205,
+      "headword": "شَدِيد",
+      "translit": "shadīd",
+      "en": "severe, intense",
+      "ur": "سخت"
+    },
+    {
+      "rank": 206,
+      "headword": "رِزْق",
+      "translit": "rizq",
+      "en": "provision, sustenance",
+      "ur": "رزق"
+    },
+    {
+      "rank": 207,
+      "headword": "ضَرَبَ",
+      "translit": "ḍaraba",
+      "en": "to strike; to set forth (an example)",
+      "ur": "مارنا؛ مثال بیان کرنا"
+    },
+    {
+      "rank": 208,
+      "headword": "أَمّا",
+      "translit": "ammā",
+      "en": "as for",
+      "ur": "رہا، جہاں تک"
+    },
+    {
+      "rank": 209,
+      "headword": "أَقامَ",
+      "translit": "aqāma",
+      "en": "to establish, to uphold",
+      "ur": "قائم کرنا"
+    },
+    {
+      "rank": 210,
+      "headword": "نَهَر",
+      "translit": "nahar",
+      "en": "river",
+      "ur": "نہر، دریا"
+    },
+    {
+      "rank": 211,
+      "headword": "قاتَلَ",
+      "translit": "qātala",
+      "en": "to fight",
+      "ur": "لڑنا، جنگ کرنا"
+    },
+    {
+      "rank": 212,
+      "headword": "جَمِيع",
+      "translit": "jamīʿ",
+      "en": "all, altogether",
+      "ur": "سب، تمام"
+    },
+    {
+      "rank": 213,
+      "headword": "خَرَجَ",
+      "translit": "kharaja",
+      "en": "to go out, to leave",
+      "ur": "نکلنا"
+    },
+    {
+      "rank": 214,
+      "headword": "ضَلَّ",
+      "translit": "ḍalla",
+      "en": "to go astray, to stray",
+      "ur": "گمراہ ہونا، بھٹکنا"
+    },
+    {
+      "rank": 215,
+      "headword": "بَعَثَ",
+      "translit": "baʿatha",
+      "en": "to send, to raise up",
+      "ur": "بھیجنا، اٹھانا"
+    },
+    {
+      "rank": 216,
+      "headword": "خَلْق",
+      "translit": "khalq",
+      "en": "creation",
+      "ur": "خلق، پیدائش"
+    },
+    {
+      "rank": 217,
+      "headword": "أَجَل",
+      "translit": "ajal",
+      "en": "appointed term, fixed time",
+      "ur": "مقررہ مدت"
+    },
+    {
+      "rank": 218,
+      "headword": "مُجْرِم",
+      "translit": "mujrim",
+      "en": "criminal, sinner",
+      "ur": "مجرم"
+    },
+    {
+      "rank": 219,
+      "headword": "تَحْت",
+      "translit": "taḥt",
+      "en": "under, beneath",
+      "ur": "نیچے"
+    },
+    {
+      "rank": 220,
+      "headword": "أَحْيا",
+      "translit": "aḥyā",
+      "en": "to give life, to revive",
+      "ur": "زندہ کرنا"
+    },
+    {
+      "rank": 221,
+      "headword": "بَصِير",
+      "translit": "baṣīr",
+      "en": "all-seeing",
+      "ur": "دیکھنے والا"
+    },
+    {
+      "rank": 222,
+      "headword": "أَهْلَكَ",
+      "translit": "ahlaka",
+      "en": "to destroy",
+      "ur": "ہلاک کرنا"
+    },
+    {
+      "rank": 223,
+      "headword": "تَذَكَّرَ",
+      "translit": "tadhakkara",
+      "en": "to take heed, to recollect",
+      "ur": "نصیحت پکڑنا"
+    },
+    {
+      "rank": 224,
+      "headword": "مَوْت",
+      "translit": "mawt",
+      "en": "death",
+      "ur": "موت"
+    },
+    {
+      "rank": 225,
+      "headword": "عَدُوّ",
+      "translit": "ʿaduww",
+      "en": "enemy",
+      "ur": "دشمن",
+      "sourceTranslit": "ʿadūū"
+    },
+    {
+      "rank": 226,
+      "headword": "نِعْمَة",
+      "translit": "niʿmah",
+      "en": "blessing, favour",
+      "ur": "نعمت"
+    },
+    {
+      "rank": 227,
+      "headword": "سُوء",
+      "translit": "sūʾ",
+      "en": "evil, harm",
+      "ur": "برائی"
+    },
+    {
+      "rank": 228,
+      "headword": "افْتَرَى",
+      "translit": "iftarā",
+      "en": "to fabricate, to invent (a lie)",
+      "ur": "جھوٹ گھڑنا"
+    },
+    {
+      "rank": 229,
+      "headword": "مُتَّقِي",
+      "translit": "muttaqī",
+      "en": "God-conscious one, the righteous",
+      "ur": "پرہیزگار، متقی",
+      "sourceForm": "مُتَّقي"
+    },
+    {
+      "rank": 230,
+      "headword": "غَيْب",
+      "translit": "ghayb",
+      "en": "the unseen",
+      "ur": "غیب"
+    },
+    {
+      "rank": 231,
+      "headword": "زادَ",
+      "translit": "zāda",
+      "en": "to increase, to add",
+      "ur": "بڑھنا، بڑھانا"
+    },
+    {
+      "rank": 232,
+      "headword": "عَقَلَ",
+      "translit": "ʿaqala",
+      "en": "to reason, to understand",
+      "ur": "عقل سے کام لینا، سمجھنا",
+      "sourceForm": "عَقَلُ"
+    },
+    {
+      "rank": 233,
+      "headword": "كَتَبَ",
+      "translit": "kataba",
+      "en": "to write; to prescribe",
+      "ur": "لکھنا؛ فرض کرنا"
+    },
+    {
+      "rank": 234,
+      "headword": "أَعْلَم",
+      "translit": "aʿlam",
+      "en": "most knowing",
+      "ur": "خوب جاننے والا"
+    },
+    {
+      "rank": 235,
+      "headword": "وَعْد",
+      "translit": "waʿd",
+      "en": "promise",
+      "ur": "وعدہ"
+    },
+    {
+      "rank": 236,
+      "headword": "بَصَر",
+      "translit": "baṣar",
+      "en": "sight, vision",
+      "ur": "نگاہ، بینائی"
+    },
+    {
+      "rank": 237,
+      "headword": "دار",
+      "translit": "dār",
+      "en": "home, abode",
+      "ur": "گھر، ٹھکانہ"
+    },
+    {
+      "rank": 238,
+      "headword": "مُلْك",
+      "translit": "mulk",
+      "en": "dominion, sovereignty",
+      "ur": "بادشاہت، ملک"
+    },
+    {
+      "rank": 239,
+      "headword": "ساعَة",
+      "translit": "sāʿah",
+      "en": "hour; the Hour",
+      "ur": "گھڑی؛ قیامت"
+    },
+    {
+      "rank": 240,
+      "headword": "ظَنَّ",
+      "translit": "ẓanna",
+      "en": "to think, to assume",
+      "ur": "گمان کرنا، سمجھنا"
+    },
+    {
+      "rank": 241,
+      "headword": "سَمِيع",
+      "translit": "samīʿ",
+      "en": "all-hearing",
+      "ur": "سننے والا"
+    },
+    {
+      "rank": 242,
+      "headword": "شَكَرَ",
+      "translit": "shakara",
+      "en": "to be grateful, to thank",
+      "ur": "شکر کرنا"
+    },
+    {
+      "rank": 243,
+      "headword": "نَبَّأَ",
+      "translit": "nabbaʾa",
+      "en": "to inform, to tell",
+      "ur": "خبر دینا، بتانا"
+    },
+    {
+      "rank": 244,
+      "headword": "أَب",
+      "translit": "ab",
+      "en": "father",
+      "ur": "باپ"
+    },
+    {
+      "rank": 245,
+      "headword": "صِراط",
+      "translit": "ṣirāṭ",
+      "en": "path, way",
+      "ur": "راستہ"
+    },
+    {
+      "rank": 246,
+      "headword": "قَدِير",
+      "translit": "qadīr",
+      "en": "all-powerful",
+      "ur": "قدرت والا"
+    },
+    {
+      "rank": 247,
+      "headword": "إِيمان",
+      "translit": "īmān",
+      "en": "faith, belief",
+      "ur": "ایمان"
+    },
+    {
+      "rank": 248,
+      "headword": "حَكَمَ",
+      "translit": "ḥakama",
+      "en": "to judge, to rule",
+      "ur": "فیصلہ کرنا"
+    },
+    {
+      "rank": 249,
+      "headword": "يَذَر",
+      "translit": "yadhar",
+      "en": "to leave, to forsake",
+      "ur": "چھوڑنا",
+      "sourceForm": "يَذَرَ"
+    },
+    {
+      "rank": 250,
+      "headword": "خَبِير",
+      "translit": "khabīr",
+      "en": "all-aware",
+      "ur": "باخبر"
+    },
+    {
+      "rank": 251,
+      "headword": "أَنذَرَ",
+      "translit": "andhara",
+      "en": "to warn",
+      "ur": "ڈرانا، خبردار کرنا"
+    },
+    {
+      "rank": 252,
+      "headword": "شَهِدَ",
+      "translit": "shahida",
+      "en": "to bear witness, to testify",
+      "ur": "گواہی دینا"
+    },
+    {
+      "rank": 253,
+      "headword": "مُشْرِك",
+      "translit": "mushrik",
+      "en": "one who associates partners with God",
+      "ur": "مشرک"
+    },
+    {
+      "rank": 254,
+      "headword": "حَسِبَ",
+      "translit": "ḥasiba",
+      "en": "to think, to reckon",
+      "ur": "سمجھنا، گمان کرنا"
+    },
+    {
+      "rank": 255,
+      "headword": "صَدْر",
+      "translit": "ṣadr",
+      "en": "chest, breast",
+      "ur": "سینہ"
+    },
+    {
+      "rank": 256,
+      "headword": "نادَى",
+      "translit": "nādā",
+      "en": "to call out",
+      "ur": "پکارنا"
+    },
+    {
+      "rank": 257,
+      "headword": "مَلَكَ",
+      "translit": "malaka",
+      "en": "to own, to possess",
+      "ur": "مالک ہونا",
+      "sourceForm": "مَلَكَتْ"
+    },
+    {
+      "rank": 258,
+      "headword": "حَمْد",
+      "translit": "ḥamd",
+      "en": "praise",
+      "ur": "حمد، تعریف"
+    },
+    {
+      "rank": 259,
+      "headword": "نُور",
+      "translit": "nūr",
+      "en": "light",
+      "ur": "نور، روشنی"
+    },
+    {
+      "rank": 260,
+      "headword": "إِسْرائِيل",
+      "translit": "Isrāʾīl",
+      "en": "Israel",
+      "ur": "اسرائیل"
+    },
+    {
+      "rank": 261,
+      "headword": "نُوح",
+      "translit": "Nūḥ",
+      "en": "Noah",
+      "ur": "نوح"
+    },
+    {
+      "rank": 262,
+      "headword": "سَبَّحَ",
+      "translit": "sabbaḥa",
+      "en": "to glorify, to declare God free of fault",
+      "ur": "تسبیح کرنا"
+    },
+    {
+      "rank": 263,
+      "headword": "كَلِمَة",
+      "translit": "kalimah",
+      "en": "word",
+      "ur": "کلمہ، بات"
+    },
+    {
+      "rank": 264,
+      "headword": "جَزاء",
+      "translit": "jazāʾ",
+      "en": "reward, recompense",
+      "ur": "بدلہ، جزا"
+    },
+    {
+      "rank": 265,
+      "headword": "اسْتَطاعَ",
+      "translit": "istaṭāʿa",
+      "en": "to be able to",
+      "ur": "قدرت رکھنا، کر سکنا"
+    },
+    {
+      "rank": 266,
+      "headword": "أَدْخَلَ",
+      "translit": "adkhala",
+      "en": "to admit, to cause to enter",
+      "ur": "داخل کرنا",
+      "sourceForm": "أُدْخِلَ"
+    },
+    {
+      "rank": 267,
+      "headword": "سَوْف",
+      "translit": "sawfa",
+      "en": "will, shall (future)",
+      "ur": "عنقریب"
+    },
+    {
+      "rank": 268,
+      "headword": "سَلام",
+      "translit": "salām",
+      "en": "peace",
+      "ur": "سلامتی"
+    },
+    {
+      "rank": 269,
+      "headword": "فَوْق",
+      "translit": "fawq",
+      "en": "above, over",
+      "ur": "اوپر"
+    },
+    {
+      "rank": 270,
+      "headword": "عَلَّمَ",
+      "translit": "ʿallama",
+      "en": "to teach",
+      "ur": "سکھانا"
+    },
+    {
+      "rank": 271,
+      "headword": "سُبْحان",
+      "translit": "subḥān",
+      "en": "glory be to (God)",
+      "ur": "پاکی ہے"
+    },
+    {
+      "rank": 272,
+      "headword": "بَحْر",
+      "translit": "baḥr",
+      "en": "sea",
+      "ur": "سمندر"
+    },
+    {
+      "rank": 273,
+      "headword": "حَمَلَ",
+      "translit": "ḥamala",
+      "en": "to carry, to bear",
+      "ur": "اٹھانا، بوجھ اٹھانا"
+    },
+    {
+      "rank": 274,
+      "headword": "عَذَّبَ",
+      "translit": "ʿadhdhaba",
+      "en": "to punish, to torment",
+      "ur": "عذاب دینا"
+    },
+    {
+      "rank": 275,
+      "headword": "تَرَكَ",
+      "translit": "taraka",
+      "en": "to leave, to abandon",
+      "ur": "چھوڑنا"
+    },
+    {
+      "rank": 276,
+      "headword": "اسْتَكْبَرَ",
+      "translit": "istakbara",
+      "en": "to be arrogant",
+      "ur": "تکبر کرنا"
+    },
+    {
+      "rank": 277,
+      "headword": "اهْتَدَى",
+      "translit": "ihtadā",
+      "en": "to be guided, to find the way",
+      "ur": "ہدایت پانا"
+    },
+    {
+      "rank": 278,
+      "headword": "أَرَى",
+      "translit": "arā",
+      "en": "to show",
+      "ur": "دکھانا",
+      "sourceForm": "أَرَيْ"
+    },
+    {
+      "rank": 279,
+      "headword": "وَيْل",
+      "translit": "wayl",
+      "en": "woe",
+      "ur": "ہلاکت، خرابی"
+    },
+    {
+      "rank": 280,
+      "headword": "بِئْسَ",
+      "translit": "biʾsa",
+      "en": "how wretched is, evil is",
+      "ur": "برا ہے"
+    },
+    {
+      "rank": 281,
+      "headword": "خَشِيَ",
+      "translit": "khashiya",
+      "en": "to fear, to be in awe of",
+      "ur": "ڈرنا"
+    },
+    {
+      "rank": 282,
+      "headword": "بَلَغَ",
+      "translit": "balagha",
+      "en": "to reach, to attain",
+      "ur": "پہنچنا"
+    },
+    {
+      "rank": 283,
+      "headword": "اسْتَغْفَرَ",
+      "translit": "istaghfara",
+      "en": "to seek forgiveness",
+      "ur": "مغفرت مانگنا"
+    },
+    {
+      "rank": 284,
+      "headword": "كَبِير",
+      "translit": "kabīr",
+      "en": "great, big",
+      "ur": "بڑا"
+    },
+    {
+      "rank": 285,
+      "headword": "تَوَكَّلَ",
+      "translit": "tawakkala",
+      "en": "to put one's trust (in God)",
+      "ur": "بھروسہ کرنا، توکل کرنا",
+      "sourceForm": "تَوَكَّلْ"
+    },
+    {
+      "rank": 286,
+      "headword": "شَرِيك",
+      "translit": "sharīk",
+      "en": "partner, associate",
+      "ur": "شریک، ساجھی"
+    },
+    {
+      "rank": 287,
+      "headword": "اسْم",
+      "translit": "ism",
+      "en": "name",
+      "ur": "نام"
+    },
+    {
+      "rank": 288,
+      "headword": "أَلا",
+      "translit": "alā",
+      "en": "behold, unquestionably",
+      "ur": "خبردار، سن لو"
+    },
+    {
+      "rank": 289,
+      "headword": "إِذْن",
+      "translit": "idhn",
+      "en": "permission, leave",
+      "ur": "اجازت"
+    },
+    {
+      "rank": 290,
+      "headword": "مُسْلِم",
+      "translit": "muslim",
+      "en": "one who submits to God, Muslim",
+      "ur": "مسلمان"
+    },
+    {
+      "rank": 291,
+      "headword": "ماتَ",
+      "translit": "māta",
+      "en": "to die",
+      "ur": "مرنا"
+    },
+    {
+      "rank": 292,
+      "headword": "حَرَّمَ",
+      "translit": "ḥarrama",
+      "en": "to forbid, to make unlawful",
+      "ur": "حرام کرنا"
+    },
+    {
+      "rank": 293,
+      "headword": "حِساب",
+      "translit": "ḥisāb",
+      "en": "account, reckoning",
+      "ur": "حساب"
+    },
+    {
+      "rank": 294,
+      "headword": "جَبَل",
+      "translit": "jabal",
+      "en": "mountain",
+      "ur": "پہاڑ"
+    },
+    {
+      "rank": 295,
+      "headword": "بَشَّرَ",
+      "translit": "bashshara",
+      "en": "to give glad tidings",
+      "ur": "خوشخبری دینا",
+      "sourceForm": "بُشِّرَ"
+    },
+    {
+      "rank": 296,
+      "headword": "مَيِّت",
+      "translit": "mayyit",
+      "en": "dead",
+      "ur": "مردہ"
+    },
+    {
+      "rank": 297,
+      "headword": "مُحْسِن",
+      "translit": "muḥsin",
+      "en": "doer of good",
+      "ur": "نیکی کرنے والا"
+    },
+    {
+      "rank": 298,
+      "headword": "رَضِيَ",
+      "translit": "raḍiya",
+      "en": "to be pleased, to be content",
+      "ur": "راضی ہونا"
+    },
+    {
+      "rank": 299,
+      "headword": "مَعْرُوف",
+      "translit": "maʿrūf",
+      "en": "what is right, honourable, kind",
+      "ur": "نیکی، بھلی بات"
+    },
+    {
+      "rank": 300,
+      "headword": "ضَلال",
+      "translit": "ḍalāl",
+      "en": "error, misguidance",
+      "ur": "گمراہی"
+    },
+    {
+      "rank": 301,
+      "headword": "مُسْتَقِيم",
+      "translit": "mustaqīm",
+      "en": "straight, upright",
+      "ur": "سیدھا"
+    },
+    {
+      "rank": 302,
+      "headword": "فاسِق",
+      "translit": "fāsiq",
+      "en": "defiantly disobedient, transgressor",
+      "ur": "نافرمان، فاسق"
+    },
+    {
+      "rank": 303,
+      "headword": "حَزِنَ",
+      "translit": "ḥazina",
+      "en": "to grieve, to be sad",
+      "ur": "غمگین ہونا",
+      "sourceForm": "يَحْزُن"
+    },
+    {
+      "rank": 304,
+      "headword": "نَجَّى",
+      "translit": "najjā",
+      "en": "to save, to deliver",
+      "ur": "نجات دینا، بچانا"
+    },
+    {
+      "rank": 305,
+      "headword": "عَصا",
+      "translit": "ʿaṣā",
+      "en": "staff, stick",
+      "ur": "لاٹھی، عصا",
+      "note": "source flagged this as a verb; it is a noun"
+    },
+    {
+      "rank": 306,
+      "headword": "كُفْر",
+      "translit": "kufr",
+      "en": "disbelief",
+      "ur": "کفر"
+    },
+    {
+      "rank": 307,
+      "headword": "حَشَرَ",
+      "translit": "ḥashara",
+      "en": "to gather, to assemble",
+      "ur": "جمع کرنا"
+    },
+    {
+      "rank": 308,
+      "headword": "ذَنْب",
+      "translit": "dhanb",
+      "en": "sin, fault",
+      "ur": "گناہ"
+    },
+    {
+      "rank": 309,
+      "headword": "نَعَم",
+      "translit": "naʿam",
+      "en": "cattle, livestock",
+      "ur": "مویشی، چوپائے"
+    },
+    {
+      "rank": 310,
+      "headword": "بَشَر",
+      "translit": "bashar",
+      "en": "human being, mortal",
+      "ur": "بشر، انسان"
+    },
+    {
+      "rank": 311,
+      "headword": "صَدَّ",
+      "translit": "ṣadda",
+      "en": "to turn away, to hinder",
+      "ur": "روکنا"
+    },
+    {
+      "rank": 312,
+      "headword": "سُلْطان",
+      "translit": "sulṭān",
+      "en": "authority, warrant",
+      "ur": "دلیل، اختیار"
+    },
+    {
+      "rank": 313,
+      "headword": "رَدَّ",
+      "translit": "radda",
+      "en": "to return, to turn back",
+      "ur": "لوٹانا، پھیرنا"
+    },
+    {
+      "rank": 314,
+      "headword": "أَحْسَن",
+      "translit": "aḥsan",
+      "en": "best, finest",
+      "ur": "بہترین"
+    },
+    {
+      "rank": 315,
+      "headword": "ذاقَ",
+      "translit": "dhāqa",
+      "en": "to taste",
+      "ur": "چکھنا",
+      "sourceForm": "ذاقُ"
+    },
+    {
+      "rank": 316,
+      "headword": "ذَهَبَ",
+      "translit": "dhahaba",
+      "en": "to go, to depart",
+      "ur": "جانا"
+    },
+    {
+      "rank": 317,
+      "headword": "اسْتَوَى",
+      "translit": "istawā",
+      "en": "to be equal; to settle, to rise over",
+      "ur": "برابر ہونا؛ قائم ہونا"
+    },
+    {
+      "rank": 318,
+      "headword": "سَجَدَ",
+      "translit": "sajada",
+      "en": "to prostrate",
+      "ur": "سجدہ کرنا"
+    },
+    {
+      "rank": 319,
+      "headword": "مَتاع",
+      "translit": "matāʿ",
+      "en": "provision, enjoyment, goods",
+      "ur": "سامان، فائدہ"
+    },
+    {
+      "rank": 320,
+      "headword": "حِين",
+      "translit": "ḥīn",
+      "en": "time, while",
+      "ur": "وقت، مدت"
+    },
+    {
+      "rank": 321,
+      "headword": "نَسِيَ",
+      "translit": "nasiya",
+      "en": "to forget",
+      "ur": "بھولنا"
+    },
+    {
+      "rank": 322,
+      "headword": "بَيَّنَ",
+      "translit": "bayyana",
+      "en": "to make clear, to explain",
+      "ur": "واضح کرنا، بیان کرنا",
+      "sourceForm": "بَيَّنُ"
+    },
+    {
+      "rank": 323,
+      "headword": "إِثْم",
+      "translit": "ithm",
+      "en": "sin",
+      "ur": "گناہ"
+    },
+    {
+      "rank": 324,
+      "headword": "نَصِير",
+      "translit": "naṣīr",
+      "en": "helper",
+      "ur": "مددگار"
+    },
+    {
+      "rank": 325,
+      "headword": "اخْتَلَفَ",
+      "translit": "ikhtalafa",
+      "en": "to differ, to disagree",
+      "ur": "اختلاف کرنا"
+    },
+    {
+      "rank": 326,
+      "headword": "مُرْسَل",
+      "translit": "mursal",
+      "en": "one who is sent, messenger",
+      "ur": "بھیجا ہوا، رسول"
+    },
+    {
+      "rank": 327,
+      "headword": "مَرْيَم",
+      "translit": "Maryam",
+      "en": "Mary",
+      "ur": "مریم"
+    },
+    {
+      "rank": 328,
+      "headword": "فِتْنَة",
+      "translit": "fitnah",
+      "en": "trial, temptation, persecution",
+      "ur": "آزمائش، فتنہ"
+    },
+    {
+      "rank": 329,
+      "headword": "ابْتَغَى",
+      "translit": "ibtaghā",
+      "en": "to seek, to desire",
+      "ur": "تلاش کرنا، چاہنا"
+    },
+    {
+      "rank": 330,
+      "headword": "أُمّ",
+      "translit": "umm",
+      "en": "mother",
+      "ur": "ماں"
+    },
+    {
+      "rank": 331,
+      "headword": "آلاء",
+      "translit": "ālāʾ",
+      "en": "favours, bounties",
+      "ur": "نعمتیں"
+    },
+    {
+      "rank": 332,
+      "headword": "قامَ",
+      "translit": "qāma",
+      "en": "to stand, to rise",
+      "ur": "کھڑا ہونا"
+    },
+    {
+      "rank": 333,
+      "headword": "فَرِيق",
+      "translit": "farīq",
+      "en": "party, group",
+      "ur": "گروہ"
+    },
+    {
+      "rank": 334,
+      "headword": "حَرام",
+      "translit": "ḥarām",
+      "en": "forbidden; sacred",
+      "ur": "حرام؛ محترم"
+    },
+    {
+      "rank": 335,
+      "headword": "شَمْس",
+      "translit": "shams",
+      "en": "sun",
+      "ur": "سورج"
+    },
+    {
+      "rank": 336,
+      "headword": "كَذِب",
+      "translit": "kadhib",
+      "en": "lie, falsehood",
+      "ur": "جھوٹ"
+    },
+    {
+      "rank": 337,
+      "headword": "كَلّا",
+      "translit": "kallā",
+      "en": "no indeed, by no means",
+      "ur": "ہرگز نہیں"
+    },
+    {
+      "rank": 338,
+      "headword": "خاسِر",
+      "translit": "khāsir",
+      "en": "loser",
+      "ur": "نقصان اٹھانے والا"
+    },
+    {
+      "rank": 339,
+      "headword": "زَكاة",
+      "translit": "zakāh",
+      "en": "zakat, purifying charity",
+      "ur": "زکوٰۃ"
+    },
+    {
+      "rank": 340,
+      "headword": "ذُرِّيَّة",
+      "translit": "dhurriyyah",
+      "en": "offspring, descendants",
+      "ur": "اولاد، نسل",
+      "sourceTranslit": "dhurrīīaa"
+    },
+    {
+      "rank": 341,
+      "headword": "كَفَى",
+      "translit": "kafā",
+      "en": "to suffice, to be enough",
+      "ur": "کافی ہونا"
+    },
+    {
+      "rank": 342,
+      "headword": "كاذِب",
+      "translit": "kādhib",
+      "en": "liar",
+      "ur": "جھوٹا"
+    },
+    {
+      "rank": 343,
+      "headword": "نَهَى",
+      "translit": "nahā",
+      "en": "to forbid, to prohibit",
+      "ur": "روکنا، منع کرنا"
+    },
+    {
+      "rank": 344,
+      "headword": "عاقِبَة",
+      "translit": "ʿāqibah",
+      "en": "outcome, final end",
+      "ur": "انجام"
+    },
+    {
+      "rank": 345,
+      "headword": "أَعْرَضَ",
+      "translit": "aʿraḍa",
+      "en": "to turn away, to shun",
+      "ur": "منہ پھیرنا"
+    },
+    {
+      "rank": 346,
+      "headword": "حَيْث",
+      "translit": "ḥayth",
+      "en": "where, wherever",
+      "ur": "جہاں"
+    },
+    {
+      "rank": 347,
+      "headword": "أَشَدّ",
+      "translit": "ashadd",
+      "en": "stronger, more severe",
+      "ur": "زیادہ سخت"
+    },
+    {
+      "rank": 348,
+      "headword": "نَفَعَ",
+      "translit": "nafaʿa",
+      "en": "to benefit, to profit",
+      "ur": "فائدہ دینا"
+    },
+    {
+      "rank": 349,
+      "headword": "إِذًا",
+      "translit": "idhan",
+      "en": "then, in that case",
+      "ur": "پھر، تب",
+      "sourceTranslit": "idhanā"
+    },
+    {
+      "rank": 350,
+      "headword": "حَسَنَة",
+      "translit": "ḥasanah",
+      "en": "good deed, good thing",
+      "ur": "نیکی، بھلائی"
+    },
+    {
+      "rank": 351,
+      "headword": "واحِدَة",
+      "translit": "wāḥidah",
+      "en": "one (feminine), single",
+      "ur": "ایک"
+    },
+    {
+      "rank": 352,
+      "headword": "طَيِّبَة",
+      "translit": "ṭayyibah",
+      "en": "good, pure, wholesome (feminine)",
+      "ur": "پاکیزہ، اچھی"
+    },
+    {
+      "rank": 353,
+      "headword": "واحِد",
+      "translit": "wāḥid",
+      "en": "one, single",
+      "ur": "ایک"
+    },
+    {
+      "rank": 354,
+      "headword": "قُوَّة",
+      "translit": "quwwah",
+      "en": "strength, power",
+      "ur": "قوت، طاقت",
+      "sourceTranslit": "qūūaa"
+    },
+    {
+      "rank": 355,
+      "headword": "وَلَّى",
+      "translit": "wallā",
+      "en": "to turn, to turn away",
+      "ur": "پھیرنا، منہ موڑنا"
+    },
+    {
+      "rank": 356,
+      "headword": "عاد",
+      "translit": "ʿĀd",
+      "en": "Aad (an ancient people)",
+      "ur": "قومِ عاد"
+    },
+    {
+      "rank": 357,
+      "headword": "عَسَى",
+      "translit": "ʿasā",
+      "en": "perhaps, it may be",
+      "ur": "شاید، امید ہے"
+    },
+    {
+      "rank": 358,
+      "headword": "شَرّ",
+      "translit": "sharr",
+      "en": "evil, harm",
+      "ur": "شر، برائی"
+    },
+    {
+      "rank": 359,
+      "headword": "مَلَأ",
+      "translit": "malaʾ",
+      "en": "chiefs, notables, assembly",
+      "ur": "سردار، اشرافیہ"
+    },
+    {
+      "rank": 360,
+      "headword": "لَبِثَ",
+      "translit": "labitha",
+      "en": "to remain, to stay",
+      "ur": "ٹھہرنا، رہنا"
+    },
+    {
+      "rank": 361,
+      "headword": "حُكْم",
+      "translit": "ḥukm",
+      "en": "judgement, wisdom, authority",
+      "ur": "حکم، فیصلہ، حکمت"
+    },
+    {
+      "rank": 362,
+      "headword": "ساءَ",
+      "translit": "sāʾa",
+      "en": "to be evil, to be bad",
+      "ur": "برا ہونا"
+    },
+    {
+      "rank": 363,
+      "headword": "كَرِيم",
+      "translit": "karīm",
+      "en": "noble, generous",
+      "ur": "کریم، بزرگ"
+    },
+    {
+      "rank": 364,
+      "headword": "أَبْصَرَ",
+      "translit": "abṣara",
+      "en": "to see, to perceive",
+      "ur": "دیکھنا"
+    },
+    {
+      "rank": 365,
+      "headword": "عَهْد",
+      "translit": "ʿahd",
+      "en": "covenant, pledge",
+      "ur": "عہد، وعدہ"
+    },
+    {
+      "rank": 366,
+      "headword": "كَأَنَّ",
+      "translit": "kaʾanna",
+      "en": "as if, as though",
+      "ur": "گویا، جیسے"
+    },
+    {
+      "rank": 367,
+      "headword": "رِيح",
+      "translit": "rīḥ",
+      "en": "wind",
+      "ur": "ہوا"
+    },
+    {
+      "rank": 368,
+      "headword": "جُنْد",
+      "translit": "jund",
+      "en": "host, army, troops",
+      "ur": "لشکر، فوج"
+    },
+    {
+      "rank": 369,
+      "headword": "عَرْش",
+      "translit": "ʿarsh",
+      "en": "throne",
+      "ur": "عرش"
+    },
+    {
+      "rank": 370,
+      "headword": "رَجُل",
+      "translit": "rajul",
+      "en": "man",
+      "ur": "مرد، آدمی"
+    },
+    {
+      "rank": 371,
+      "headword": "نَبَأ",
+      "translit": "nabaʾ",
+      "en": "news, tiding",
+      "ur": "خبر"
+    },
+    {
+      "rank": 372,
+      "headword": "أَبَدًا",
+      "translit": "abadan",
+      "en": "ever, forever",
+      "ur": "کبھی، ہمیشہ",
+      "sourceTranslit": "abadanā"
+    },
+    {
+      "rank": 373,
+      "headword": "سِحْر",
+      "translit": "siḥr",
+      "en": "magic, sorcery",
+      "ur": "جادو"
+    },
+    {
+      "rank": 374,
+      "headword": "مَسْجِد",
+      "translit": "masjid",
+      "en": "mosque, place of prostration",
+      "ur": "مسجد"
+    },
+    {
+      "rank": 375,
+      "headword": "مَصِير",
+      "translit": "maṣīr",
+      "en": "destination, final return",
+      "ur": "ٹھکانہ، انجام"
+    },
+    {
+      "rank": 376,
+      "headword": "أَصْلَحَ",
+      "translit": "aṣlaḥa",
+      "en": "to set right, to reform, to reconcile",
+      "ur": "اصلاح کرنا، درست کرنا"
+    },
+    {
+      "rank": 377,
+      "headword": "مَغْفِرَة",
+      "translit": "maghfirah",
+      "en": "forgiveness",
+      "ur": "مغفرت، بخشش"
+    },
+    {
+      "rank": 378,
+      "headword": "اسْتَجابَ",
+      "translit": "istajāba",
+      "en": "to respond, to answer (a call)",
+      "ur": "قبول کرنا، جواب دینا"
+    },
+    {
+      "rank": 379,
+      "headword": "مُؤْمِنَة",
+      "translit": "muʾminah",
+      "en": "believing woman",
+      "ur": "مومن عورت"
+    },
+    {
+      "rank": 380,
+      "headword": "أَنَّى",
+      "translit": "annā",
+      "en": "how, from where",
+      "ur": "کیسے، کہاں سے"
+    },
+    {
+      "rank": 381,
+      "headword": "رِجال",
+      "translit": "rijāl",
+      "en": "men",
+      "ur": "مرد"
+    },
+    {
+      "rank": 382,
+      "headword": "رَحِمَ",
+      "translit": "raḥima",
+      "en": "to have mercy on",
+      "ur": "رحم کرنا"
+    },
+    {
+      "rank": 383,
+      "headword": "أَغْنَى",
+      "translit": "aghnā",
+      "en": "to avail, to enrich, to suffice",
+      "ur": "کام آنا، بےنیاز کرنا",
+      "sourceForm": "أَغْنَتْ"
+    },
+    {
+      "rank": 384,
+      "headword": "أَصْبَحَ",
+      "translit": "aṣbaḥa",
+      "en": "to become; to enter upon morning",
+      "ur": "ہو جانا؛ صبح کرنا"
+    },
+    {
+      "rank": 385,
+      "headword": "حَدِيث",
+      "translit": "ḥadīth",
+      "en": "speech, statement, account",
+      "ur": "بات، حدیث"
+    },
+    {
+      "rank": 386,
+      "headword": "سَواء",
+      "translit": "sawāʾ",
+      "en": "equal, alike; the same",
+      "ur": "برابر، یکساں"
+    },
+    {
+      "rank": 387,
+      "headword": "عَفا",
+      "translit": "ʿafā",
+      "en": "to pardon, to excuse",
+      "ur": "معاف کرنا"
+    },
+    {
+      "rank": 388,
+      "headword": "باب",
+      "translit": "bāb",
+      "en": "door, gate",
+      "ur": "دروازہ"
+    },
+    {
+      "rank": 389,
+      "headword": "غافِل",
+      "translit": "ghāfil",
+      "en": "heedless, unaware",
+      "ur": "غافل، بےخبر"
+    },
+    {
+      "rank": 390,
+      "headword": "قَدَّمَ",
+      "translit": "qaddama",
+      "en": "to send forth, to put forward",
+      "ur": "آگے بھیجنا، پیش کرنا"
+    },
+    {
+      "rank": 391,
+      "headword": "أَفْلَحَ",
+      "translit": "aflaḥa",
+      "en": "to succeed, to prosper",
+      "ur": "کامیاب ہونا"
+    },
+    {
+      "rank": 392,
+      "headword": "جاهَدَ",
+      "translit": "jāhada",
+      "en": "to strive, to struggle",
+      "ur": "جہاد کرنا، کوشش کرنا"
+    },
+    {
+      "rank": 393,
+      "headword": "مَكان",
+      "translit": "makān",
+      "en": "place",
+      "ur": "جگہ"
+    },
+    {
+      "rank": 394,
+      "headword": "مُنافِق",
+      "translit": "munāfiq",
+      "en": "hypocrite",
+      "ur": "منافق"
+    },
+    {
+      "rank": 395,
+      "headword": "قَمَر",
+      "translit": "qamar",
+      "en": "moon",
+      "ur": "چاند"
+    },
+    {
+      "rank": 396,
+      "headword": "يُوسُف",
+      "translit": "Yūsuf",
+      "en": "Joseph",
+      "ur": "یوسف"
+    },
+    {
+      "rank": 397,
+      "headword": "لُوط",
+      "translit": "Lūṭ",
+      "en": "Lot",
+      "ur": "لوط"
+    },
+    {
+      "rank": 398,
+      "headword": "ماذا",
+      "translit": "mādhā",
+      "en": "what",
+      "ur": "کیا"
+    },
+    {
+      "rank": 399,
+      "headword": "خَوْف",
+      "translit": "khawf",
+      "en": "fear",
+      "ur": "خوف، ڈر"
+    },
+    {
+      "rank": 400,
+      "headword": "باطِل",
+      "translit": "bāṭil",
+      "en": "falsehood, vain",
+      "ur": "باطل، جھوٹ"
+    },
+    {
+      "rank": 401,
+      "headword": "آل",
+      "translit": "āl",
+      "en": "family of, people of",
+      "ur": "آل، خاندان"
+    },
+    {
+      "rank": 402,
+      "headword": "جَحِيم",
+      "translit": "jaḥīm",
+      "en": "the blazing fire, Hellfire",
+      "ur": "جہنم، بھڑکتی آگ"
+    },
+    {
+      "rank": 403,
+      "headword": "شَهادَة",
+      "translit": "shahādah",
+      "en": "testimony, witnessing",
+      "ur": "گواہی، شہادت"
+    },
+    {
+      "rank": 404,
+      "headword": "أَجْمَع",
+      "translit": "ajmaʿ",
+      "en": "all together",
+      "ur": "سب کے سب"
+    },
+    {
+      "rank": 405,
+      "headword": "قَرِيب",
+      "translit": "qarīb",
+      "en": "near, close",
+      "ur": "قریب"
+    },
+    {
+      "rank": 406,
+      "headword": "زَيَّنَ",
+      "translit": "zayyana",
+      "en": "to adorn, to make attractive",
+      "ur": "خوبصورت بنانا، آراستہ کرنا"
+    },
+    {
+      "rank": 407,
+      "headword": "امْرَأَة",
+      "translit": "imraʾah",
+      "en": "woman, wife",
+      "ur": "عورت، بیوی",
+      "sourceForm": "امْرَأَت"
+    },
+    {
+      "rank": 408,
+      "headword": "كَيْد",
+      "translit": "kayd",
+      "en": "plot, scheme",
+      "ur": "چال، سازش"
+    },
+    {
+      "rank": 409,
+      "headword": "ثَمُود",
+      "translit": "Thamūd",
+      "en": "Thamud (an ancient people)",
+      "ur": "قومِ ثمود"
+    },
+    {
+      "rank": 410,
+      "headword": "شَعَرَ",
+      "translit": "shaʿara",
+      "en": "to perceive, to be aware",
+      "ur": "شعور رکھنا، محسوس کرنا",
+      "sourceForm": "يَشْعُرُ"
+    },
+    {
+      "rank": 411,
+      "headword": "خَلا",
+      "translit": "khalā",
+      "en": "to pass away, to be gone",
+      "ur": "گزر جانا"
+    },
+    {
+      "rank": 412,
+      "headword": "مِيثاق",
+      "translit": "mīthāq",
+      "en": "covenant, solemn pledge",
+      "ur": "پختہ عہد"
+    },
+    {
+      "rank": 413,
+      "headword": "آدَم",
+      "translit": "Ādam",
+      "en": "Adam",
+      "ur": "آدم"
+    },
+    {
+      "rank": 414,
+      "headword": "عِيسَى",
+      "translit": "ʿĪsā",
+      "en": "Jesus",
+      "ur": "عیسیٰ"
+    },
+    {
+      "rank": 415,
+      "headword": "جُناح",
+      "translit": "junāḥ",
+      "en": "blame, sin",
+      "ur": "گناہ، حرج"
+    },
+    {
+      "rank": 416,
+      "headword": "بَعِيد",
+      "translit": "baʿīd",
+      "en": "far, distant",
+      "ur": "دور"
+    },
+    {
+      "rank": 417,
+      "headword": "بَأْس",
+      "translit": "baʾs",
+      "en": "might, force; punishment",
+      "ur": "زور، سختی، عذاب"
+    },
+    {
+      "rank": 418,
+      "headword": "قَدَرَ",
+      "translit": "qadara",
+      "en": "to decree, to measure; to restrict",
+      "ur": "اندازہ کرنا، تنگ کرنا"
+    },
+    {
+      "rank": 419,
+      "headword": "لِسان",
+      "translit": "lisān",
+      "en": "tongue, language",
+      "ur": "زبان"
+    },
+    {
+      "rank": 420,
+      "headword": "بَغَى",
+      "translit": "baghā",
+      "en": "to seek; to transgress",
+      "ur": "چاہنا؛ زیادتی کرنا"
+    },
+    {
+      "rank": 421,
+      "headword": "جادَلَ",
+      "translit": "jādala",
+      "en": "to dispute, to argue",
+      "ur": "جھگڑنا، بحث کرنا",
+      "sourceForm": "جادَلُ"
+    },
+    {
+      "rank": 422,
+      "headword": "إِيّا",
+      "translit": "iyyā",
+      "en": "(object pronoun base: him, them, you)",
+      "ur": "(ضمیرِ مفعول کی بنیاد)"
+    },
+    {
+      "rank": 423,
+      "headword": "كادَ",
+      "translit": "kāda",
+      "en": "to almost, to be on the point of",
+      "ur": "قریب ہونا، تقریباً"
+    },
+    {
+      "rank": 424,
+      "headword": "طَعام",
+      "translit": "ṭaʿām",
+      "en": "food",
+      "ur": "کھانا"
+    },
+    {
+      "rank": 425,
+      "headword": "وَراء",
+      "translit": "warāʾ",
+      "en": "behind, beyond",
+      "ur": "پیچھے"
+    },
+    {
+      "rank": 426,
+      "headword": "أَ",
+      "translit": "a",
+      "en": "(turns a sentence into a question)",
+      "ur": "کیا؟ (سوالیہ)",
+      "isPrefix": true,
+      "sourceForm": "أ"
+    },
+    {
+      "rank": 427,
+      "headword": "حَيّ",
+      "translit": "ḥayy",
+      "en": "living, alive",
+      "ur": "زندہ"
+    },
+    {
+      "rank": 428,
+      "headword": "أُنثَى",
+      "translit": "unthā",
+      "en": "female",
+      "ur": "مادہ، عورت"
+    },
+    {
+      "rank": 429,
+      "headword": "أَكْبَر",
+      "translit": "akbar",
+      "en": "greater, greatest",
+      "ur": "بڑا، سب سے بڑا"
+    },
+    {
+      "rank": 430,
+      "headword": "تَوَفَّى",
+      "translit": "tawaffā",
+      "en": "to take in full; to cause to die",
+      "ur": "پورا لینا؛ وفات دینا"
+    },
+    {
+      "rank": 431,
+      "headword": "غَنِيّ",
+      "translit": "ghanī",
+      "en": "free of need, self-sufficient, rich",
+      "ur": "بےنیاز، غنی",
+      "sourceTranslit": "ghanīī"
+    },
+    {
+      "rank": 432,
+      "headword": "طائِفَة",
+      "translit": "ṭāʾifah",
+      "en": "group, party",
+      "ur": "گروہ، جماعت"
+    },
+    {
+      "rank": 433,
+      "headword": "وَكِيل",
+      "translit": "wakīl",
+      "en": "trustee, disposer of affairs",
+      "ur": "کارساز، وکیل"
+    },
+    {
+      "rank": 434,
+      "headword": "لِقاء",
+      "translit": "liqāʾ",
+      "en": "meeting, encounter",
+      "ur": "ملاقات"
+    },
+    {
+      "rank": 435,
+      "headword": "ظُلْمَة",
+      "translit": "ẓulmah",
+      "en": "darkness",
+      "ur": "اندھیرا",
+      "sourceForm": "ظُلُمَة"
+    },
+    {
+      "rank": 436,
+      "headword": "سَبْع",
+      "translit": "sabʿ",
+      "en": "seven",
+      "ur": "سات"
+    },
+    {
+      "rank": 437,
+      "headword": "إِمّا",
+      "translit": "immā",
+      "en": "either, or; if",
+      "ur": "یا تو، خواہ"
+    },
+    {
+      "rank": 438,
+      "headword": "أَنجَى",
+      "translit": "anjā",
+      "en": "to rescue, to deliver",
+      "ur": "نجات دینا، بچانا"
+    },
+    {
+      "rank": 439,
+      "headword": "ساجِد",
+      "translit": "sājid",
+      "en": "one prostrating",
+      "ur": "سجدہ کرنے والا"
+    },
+    {
+      "rank": 440,
+      "headword": "بَدَّلَ",
+      "translit": "baddala",
+      "en": "to change, to substitute",
+      "ur": "بدلنا"
+    },
+    {
+      "rank": 441,
+      "headword": "يَتِيم",
+      "translit": "yatīm",
+      "en": "orphan",
+      "ur": "یتیم"
+    },
+    {
+      "rank": 442,
+      "headword": "مِسْكِين",
+      "translit": "miskīn",
+      "en": "poor person, needy",
+      "ur": "مسکین، محتاج"
+    },
+    {
+      "rank": 443,
+      "headword": "لَعَنَ",
+      "translit": "laʿana",
+      "en": "to curse",
+      "ur": "لعنت کرنا"
+    },
+    {
+      "rank": 444,
+      "headword": "فُلْك",
+      "translit": "fulk",
+      "en": "ship",
+      "ur": "کشتی، جہاز"
+    },
+    {
+      "rank": 445,
+      "headword": "أَذِنَ",
+      "translit": "adhina",
+      "en": "to permit, to give leave",
+      "ur": "اجازت دینا"
+    },
+    {
+      "rank": 446,
+      "headword": "فَتَنَ",
+      "translit": "fatana",
+      "en": "to test, to try, to tempt",
+      "ur": "آزمانا، فتنے میں ڈالنا",
+      "sourceForm": "فَتَنُ"
+    },
+    {
+      "rank": 447,
+      "headword": "قَرْن",
+      "translit": "qarn",
+      "en": "generation, century",
+      "ur": "زمانہ، نسل"
+    },
+    {
+      "rank": 448,
+      "headword": "ذِكْرَى",
+      "translit": "dhikrā",
+      "en": "reminder, admonition",
+      "ur": "نصیحت، یاد دہانی"
+    },
+    {
+      "rank": 449,
+      "headword": "سَمْع",
+      "translit": "samʿ",
+      "en": "hearing",
+      "ur": "سماعت، سننا"
+    },
+    {
+      "rank": 450,
+      "headword": "رَفَعَ",
+      "translit": "rafaʿa",
+      "en": "to raise, to lift",
+      "ur": "بلند کرنا، اٹھانا"
+    },
+    {
+      "rank": 451,
+      "headword": "خَلْف",
+      "translit": "khalf",
+      "en": "behind, after",
+      "ur": "پیچھے"
+    },
+    {
+      "rank": 452,
+      "headword": "بَلَى",
+      "translit": "balā",
+      "en": "yes indeed (contradicting a negative)",
+      "ur": "کیوں نہیں، ضرور"
+    },
+    {
+      "rank": 453,
+      "headword": "أَسْلَمَ",
+      "translit": "aslama",
+      "en": "to submit (to God)",
+      "ur": "سپرد کرنا، اسلام لانا"
+    },
+    {
+      "rank": 454,
+      "headword": "دُعاء",
+      "translit": "duʿāʾ",
+      "en": "supplication, call",
+      "ur": "دعا، پکار"
+    },
+    {
+      "rank": 455,
+      "headword": "نَصْر",
+      "translit": "naṣr",
+      "en": "help, victory",
+      "ur": "مدد، فتح"
+    },
+    {
+      "rank": 456,
+      "headword": "رَجا",
+      "translit": "rajā",
+      "en": "to hope, to expect",
+      "ur": "امید رکھنا",
+      "sourceForm": "يَرْجُوا۟"
+    },
+    {
+      "rank": 457,
+      "headword": "وَهَبَ",
+      "translit": "wahaba",
+      "en": "to grant, to bestow",
+      "ur": "عطا کرنا، بخشنا"
+    },
+    {
+      "rank": 458,
+      "headword": "جَمَعَ",
+      "translit": "jamaʿa",
+      "en": "to gather, to collect",
+      "ur": "جمع کرنا"
+    },
+    {
+      "rank": 459,
+      "headword": "لَدَى",
+      "translit": "ladā",
+      "en": "with, at, in the presence of",
+      "ur": "پاس، نزدیک"
+    },
+    {
+      "rank": 460,
+      "headword": "مَكَرَ",
+      "translit": "makara",
+      "en": "to plot, to scheme",
+      "ur": "چال چلنا، سازش کرنا"
+    },
+    {
+      "rank": 461,
+      "headword": "مَأْوَى",
+      "translit": "maʾwā",
+      "en": "refuge, abode",
+      "ur": "ٹھکانہ، پناہ"
+    },
+    {
+      "rank": 462,
+      "headword": "بَرّ",
+      "translit": "barr",
+      "en": "land, dry land",
+      "ur": "خشکی"
+    },
+    {
+      "rank": 463,
+      "headword": "أَذاقَ",
+      "translit": "adhāqa",
+      "en": "to make someone taste",
+      "ur": "چکھانا"
+    },
+    {
+      "rank": 464,
+      "headword": "جِنّ",
+      "translit": "jinn",
+      "en": "jinn",
+      "ur": "جن"
+    },
+    {
+      "rank": 465,
+      "headword": "ساحِر",
+      "translit": "sāḥir",
+      "en": "magician, sorcerer",
+      "ur": "جادوگر"
+    },
+    {
+      "rank": 466,
+      "headword": "سَخَّرَ",
+      "translit": "sakhkhara",
+      "en": "to subject, to make serviceable",
+      "ur": "مسخر کرنا، کام میں لگانا"
+    },
+    {
+      "rank": 467,
+      "headword": "مُفْسِد",
+      "translit": "mufsid",
+      "en": "corrupter, one who spreads corruption",
+      "ur": "فساد کرنے والا"
+    },
+    {
+      "rank": 468,
+      "headword": "اسْتَهْزَأَ",
+      "translit": "istahzaʾa",
+      "en": "to mock, to ridicule",
+      "ur": "مذاق اڑانا",
+      "sourceForm": "اسْتُهْزِئَ"
+    },
+    {
+      "rank": 469,
+      "headword": "اشْتَرَى",
+      "translit": "ishtarā",
+      "en": "to buy, to trade away",
+      "ur": "خریدنا، سودا کرنا"
+    },
+    {
+      "rank": 470,
+      "headword": "أَعْمَى",
+      "translit": "aʿmā",
+      "en": "blind",
+      "ur": "اندھا"
+    },
+    {
+      "rank": 471,
+      "headword": "مَشَى",
+      "translit": "mashā",
+      "en": "to walk",
+      "ur": "چلنا",
+      "sourceForm": "مَشَ"
+    },
+    {
+      "rank": 472,
+      "headword": "أَماتَ",
+      "translit": "amāta",
+      "en": "to cause to die",
+      "ur": "موت دینا"
+    },
+    {
+      "rank": 473,
+      "headword": "كَتَمَ",
+      "translit": "katama",
+      "en": "to conceal, to hide",
+      "ur": "چھپانا"
+    },
+    {
+      "rank": 474,
+      "headword": "رُوح",
+      "translit": "rūḥ",
+      "en": "spirit, soul",
+      "ur": "روح"
+    },
+    {
+      "rank": 475,
+      "headword": "شَهْر",
+      "translit": "shahr",
+      "en": "month",
+      "ur": "مہینہ"
+    },
+    {
+      "rank": 476,
+      "headword": "أَحْسَنَ",
+      "translit": "aḥsana",
+      "en": "to do good, to do well",
+      "ur": "احسان کرنا، اچھا کرنا"
+    },
+    {
+      "rank": 477,
+      "headword": "نَصِيب",
+      "translit": "naṣīb",
+      "en": "share, portion",
+      "ur": "حصہ"
+    },
+    {
+      "rank": 478,
+      "headword": "كَم",
+      "translit": "kam",
+      "en": "how many, how much",
+      "ur": "کتنے، کتنا"
+    },
+    {
+      "rank": 479,
+      "headword": "حَسَن",
+      "translit": "ḥasan",
+      "en": "good, fair",
+      "ur": "اچھا، بھلا"
+    },
+    {
+      "rank": 480,
+      "headword": "مُسَمًّى",
+      "translit": "musamman",
+      "en": "named, appointed, specified",
+      "ur": "مقرر، معین",
+      "sourceTranslit": "musammanā"
+    },
+    {
+      "rank": 481,
+      "headword": "وَضَعَ",
+      "translit": "waḍaʿa",
+      "en": "to put down, to lay; to give birth",
+      "ur": "رکھنا، اتارنا؛ جنم دینا"
+    },
+    {
+      "rank": 482,
+      "headword": "شاهِد",
+      "translit": "shāhid",
+      "en": "witness",
+      "ur": "گواہ"
+    },
+    {
+      "rank": 483,
+      "headword": "مُكَذِّب",
+      "translit": "mukadhdhib",
+      "en": "denier, one who calls it a lie",
+      "ur": "جھٹلانے والا"
+    },
+    {
+      "rank": 484,
+      "headword": "ظَنّ",
+      "translit": "ẓann",
+      "en": "assumption, conjecture",
+      "ur": "گمان، خیال"
+    },
+    {
+      "rank": 485,
+      "headword": "أَعَدَّ",
+      "translit": "aʿadda",
+      "en": "to prepare",
+      "ur": "تیار کرنا"
+    },
+    {
+      "rank": 486,
+      "headword": "أَوْفَى",
+      "translit": "awfā",
+      "en": "to fulfil, to give in full",
+      "ur": "پورا کرنا"
+    },
+    {
+      "rank": 487,
+      "headword": "عَرَفَ",
+      "translit": "ʿarafa",
+      "en": "to know, to recognise",
+      "ur": "پہچاننا، جاننا"
+    },
+    {
+      "rank": 488,
+      "headword": "سَعَى",
+      "translit": "saʿā",
+      "en": "to strive, to hasten, to run",
+      "ur": "کوشش کرنا، دوڑنا"
+    },
+    {
+      "rank": 489,
+      "headword": "كَلَّمَ",
+      "translit": "kallama",
+      "en": "to speak to, to address",
+      "ur": "بات کرنا، کلام کرنا"
+    },
+    {
+      "rank": 490,
+      "headword": "حِكْمَة",
+      "translit": "ḥikmah",
+      "en": "wisdom",
+      "ur": "حکمت، دانائی"
+    },
+    {
+      "rank": 491,
+      "headword": "صابِر",
+      "translit": "ṣābir",
+      "en": "patient one, steadfast",
+      "ur": "صبر کرنے والا"
+    },
+    {
+      "rank": 492,
+      "headword": "بَلا",
+      "translit": "balā",
+      "en": "to test, to try",
+      "ur": "آزمانا",
+      "sourceForm": "بَلَوْ"
+    },
+    {
+      "rank": 493,
+      "headword": "أَحَلَّ",
+      "translit": "aḥalla",
+      "en": "to make lawful, to permit",
+      "ur": "حلال کرنا"
+    },
+    {
+      "rank": 494,
+      "headword": "أَمِنَ",
+      "translit": "amina",
+      "en": "to be safe, to feel secure",
+      "ur": "امن میں ہونا، بےخوف ہونا"
+    },
+    {
+      "rank": 495,
+      "headword": "عِقاب",
+      "translit": "ʿiqāb",
+      "en": "penalty, retribution",
+      "ur": "سزا، عذاب"
+    },
+    {
+      "rank": 496,
+      "headword": "مَرَّة",
+      "translit": "marrah",
+      "en": "time, occasion",
+      "ur": "بار، دفعہ"
+    },
+    {
+      "rank": 497,
+      "headword": "هارُون",
+      "translit": "Hārūn",
+      "en": "Aaron",
+      "ur": "ہارون"
+    },
+    {
+      "rank": 498,
+      "headword": "ظُلْم",
+      "translit": "ẓulm",
+      "en": "wrongdoing, injustice",
+      "ur": "ظلم، ناانصافی"
+    },
+    {
+      "rank": 499,
+      "headword": "قَصَّ",
+      "translit": "qaṣṣa",
+      "en": "to narrate, to relate",
+      "ur": "بیان کرنا، قصہ سنانا"
+    },
+    {
+      "rank": 500,
+      "headword": "أَقْسَمَ",
+      "translit": "aqsama",
+      "en": "to swear an oath",
+      "ur": "قسم کھانا",
+      "sourceForm": "أَقْسَمُ"
+    }
+  ]
+}
