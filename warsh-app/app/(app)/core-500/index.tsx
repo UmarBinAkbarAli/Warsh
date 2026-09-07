@@ -38,6 +38,7 @@ interface CoreSet {
 }
 
 interface Overview {
+  ready: boolean;
   coveragePercent: number;
   knownCount: number;
   totalCount: number;
@@ -85,6 +86,15 @@ export default function Core500Screen() {
     return (
       <View style={[styles.container, styles.centered]}>
         <ActivityIndicator color={WarshPalette.gold} />
+      </View>
+    );
+  }
+
+  // Reachable by deep link before the content review is finished.
+  if (overview && !overview.ready) {
+    return (
+      <View style={[styles.container, styles.centered]}>
+        <Text style={styles.errorText}>{t("core500.notReady")}</Text>
       </View>
     );
   }

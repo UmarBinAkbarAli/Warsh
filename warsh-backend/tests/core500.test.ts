@@ -168,3 +168,14 @@ test("the shared helper writes exactly what the lesson rule computes", () => {
   assert.equal(update.currentStreak, 7);
   assert.equal(update.longestStreak, 7);
 });
+
+test("the feature reports itself ready only when all 500 are published", () => {
+  // Mirrors app/api/core500/route.ts: a partial publish must not switch the
+  // feature on, or the set list is sparse and Continue points at nothing.
+  const readyFor = (publishedCount: number) => publishedCount === CORE_WORD_COUNT;
+
+  assert.equal(readyFor(0), false, "nothing published");
+  assert.equal(readyFor(194), false, "only the words already in the curriculum");
+  assert.equal(readyFor(499), false, "one still awaiting review");
+  assert.equal(readyFor(CORE_WORD_COUNT), true);
+});

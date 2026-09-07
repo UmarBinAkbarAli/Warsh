@@ -92,6 +92,7 @@ type TadabburFocus = {
 };
 
 interface Core500Summary {
+  ready: boolean;
   coveragePercent: number;
   knownCount: number;
   totalCount: number;
@@ -274,6 +275,7 @@ export default function HomeScreen() {
           (set: { setNumber: number }) => set.setNumber === core.nextSetNumber,
         );
         setCore500({
+          ready: core.ready === true,
           coveragePercent: core.coveragePercent ?? 0,
           knownCount: core.knownCount ?? 0,
           totalCount: core.totalCount ?? 0,
@@ -878,7 +880,7 @@ export default function HomeScreen() {
         {/* Quranic Core 500 — free for everyone, so no subscription gate here.
             Progress reads as Quran coverage rather than a word count: the top
             words are frequent enough that a few sets move it a long way. */}
-        {core500 ? (
+        {core500?.ready ? (
           <View style={styles.core500Section}>
             <Text style={styles.sectionTitle}>{t("learn.core500")}</Text>
             <Pressable

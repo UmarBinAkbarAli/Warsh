@@ -5,6 +5,7 @@ import {
   CORE_KNOWN_MIN_REPETITIONS,
   CORE_SET_COUNT,
   CORE_SET_SIZE,
+  CORE_WORD_COUNT,
   coveragePercent,
   isSetUnlocked,
   nextSetNumber,
@@ -96,8 +97,15 @@ export async function GET(request: Request) {
       };
     });
 
+  // The 500 load as DRAFT and are published only once a reviewer has approved
+  // them in Studio. Until every one is live the sets are sparse and "Continue"
+  // would point at a set that does not exist, so the feature reports itself as
+  // not ready and the client hides its entry point entirely.
+  const ready = words.length === CORE_WORD_COUNT;
+
   return NextResponse.json({
     data: {
+      ready,
       coveragePercent: coveragePercent(knownFrequencySum),
       knownCount,
       totalCount: words.length,

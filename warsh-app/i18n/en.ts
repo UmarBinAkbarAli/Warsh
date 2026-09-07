@@ -189,6 +189,7 @@ export const en = {
   "core500.prefixIntro": "Five of the commonest things in the Quran are not words you can hold on their own — they attach to the front of another word. Learn them once, here.",
   "core500.prefixFootnote": "These five carry 19,543 of the 103,162 occurrences the Core 500 covers — about a fifth of the whole set.",
   "core500.loadFailed": "Could not load the Core 500. Pull down to try again.",
+  "core500.notReady": "The Core 500 is not available yet. It is coming soon, in shaa Allah.",
   "learn.understoodPercent": "{{percent}}% understood",
   "learn.tapToExplore": "Tap to explore",
   "learn.learningPathTitle": "Your learning path",
