@@ -36,6 +36,9 @@ const ch03L02Content = require("./fixtures/chapter-03-lesson-02.json");
 const ch03L03Content = require("./fixtures/chapter-03-lesson-03.json");
 const ch03L04Content = require("./fixtures/chapter-03-lesson-04.json");
 const ch03L05SpokenContent = require("./fixtures/chapter-03-lesson-05-spoken-phrases.json");
+const ch03L06IdafaContent = require("./fixtures/chapter-03-lesson-06-idafa-usage.json");
+const ch03L07YaContent = require("./fixtures/chapter-03-lesson-07-ya.json");
+const ch03L08TestContent = require("./fixtures/chapter-03-lesson-08-final-test.json");
 const ch04L01Content = require("./fixtures/chapter-04-lesson-01.json");
 const ch04L02Content = require("./fixtures/chapter-04-lesson-02.json");
 const ch04L03Content = require("./fixtures/chapter-04-lesson-03.json");
@@ -729,11 +732,14 @@ async function main() {
     { id: "ch02-l04", chapterId: ch2Id, order: 16, title: "Chapter 2 Review",                      titleAr: "مُرَاجَعَة الفَصْل الثَّانِي",               template: "REVIEW",   xpReward: ch02L04Content._meta?.xp_reward ?? 20, content: ch02L04Content },
     { id: "ch02-test", chapterId: ch2Id, order: 17, title: "Chapter 2 Final Test",                 titleAr: "اخْتِبَارُ الْفَصْلِ الثَّانِي",             template: "REVIEW",   xpReward: ch02L17TestContent._meta?.xp_reward ?? 20, content: ch02L17TestContent },
     // Chapter 3
-    { id: "ch03-l01", chapterId: ch3Id, order: 1, title: "The Idafa Construction — Possession",   titleAr: "الإِضَافَة — الْمِلْكِيَّة",                 template: "STANDARD", xpReward: ch03L01Content._meta?.xp_reward ?? 10, content: ch03L01Content },
-    { id: "ch03-l02", chapterId: ch3Id, order: 2, title: "Whose? and O! — لِمَنْ and يَا",         titleAr: "لِمَنْ وَيَا",                               template: "STANDARD", xpReward: ch03L02Content._meta?.xp_reward ?? 10, content: ch03L02Content },
-    { id: "ch03-l03", chapterId: ch3Id, order: 3, title: "Basmalah Unlocked — بِسْمِ اللَّهِ",     titleAr: "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",     template: "STANDARD", xpReward: ch03L03Content._meta?.xp_reward ?? 10, content: ch03L03Content },
-    { id: "ch03-l04", chapterId: ch3Id, order: 4, title: "Chapter 3 Review",                      titleAr: "مُرَاجَعَة الفَصْل الثَّالِث",               template: "REVIEW",   xpReward: ch03L04Content._meta?.xp_reward ?? 20, content: ch03L04Content },
-    { id: "ch03-l05", chapterId: ch3Id, order: 5, title: "SP1 — Greetings and Introductions",      titleAr: "السَّلَامُ وَالتَّعَارُف",                    template: "SPOKEN_PHRASES", xpReward: ch03L05SpokenContent._meta?.xp_reward ?? 15, content: ch03L05SpokenContent },
+    { id: "ch03-l01", chapterId: ch3Id, order: 1, title: "Idafa Foundations — Possession",         titleAr: "أُسُسُ الإِضَافَة",                           template: "STANDARD", xpReward: ch03L01Content._meta?.xp_reward ?? 10, content: ch03L01Content },
+    { id: "ch03-l06", chapterId: ch3Id, order: 2, title: "Idafa in Useful and Quranic Phrases",    titleAr: "الإِضَافَةُ فِي التَّرَاكِيب",                template: "STANDARD", xpReward: ch03L06IdafaContent._meta?.xp_reward ?? 10, content: ch03L06IdafaContent },
+    { id: "ch03-l02", chapterId: ch3Id, order: 3, title: "Whose? — لِمَنْ",                        titleAr: "لِمَنْ؟",                                     template: "STANDARD", xpReward: ch03L02Content._meta?.xp_reward ?? 10, content: ch03L02Content },
+    { id: "ch03-l07", chapterId: ch3Id, order: 4, title: "Calling Someone — يَا",                  titleAr: "يَا النِّدَاء",                               template: "STANDARD", xpReward: ch03L07YaContent._meta?.xp_reward ?? 10, content: ch03L07YaContent },
+    { id: "ch03-l03", chapterId: ch3Id, order: 5, title: "Basmalah Unlocked — بِسْمِ اللَّهِ",     titleAr: "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",     template: "STANDARD", xpReward: ch03L03Content._meta?.xp_reward ?? 10, content: ch03L03Content },
+    { id: "ch03-l05", chapterId: ch3Id, order: 6, title: "SP1 — Greetings and Introductions",      titleAr: "السَّلَامُ وَالتَّعَارُف",                    template: "SPOKEN_PHRASES", xpReward: ch03L05SpokenContent._meta?.xp_reward ?? 15, content: ch03L05SpokenContent },
+    { id: "ch03-l04", chapterId: ch3Id, order: 7, title: "Chapter 3 Review",                       titleAr: "مُرَاجَعَة الفَصْل الثَّالِث",               template: "REVIEW",   xpReward: ch03L04Content._meta?.xp_reward ?? 20, content: ch03L04Content },
+    { id: "ch03-test", chapterId: ch3Id, order: 8, title: "Chapter 3 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الثَّالِث",             template: "REVIEW",   xpReward: ch03L08TestContent._meta?.xp_reward ?? 20, content: ch03L08TestContent },
     // Chapter 4
     { id: "ch04-l01", chapterId: ch4Id, order: 1, title: "Adjective Follows Noun",                titleAr: "الصِّفَة بَعْدَ الْمَوْصُوف",                template: "STANDARD", xpReward: ch04L01Content._meta?.xp_reward ?? 10, content: ch04L01Content },
     { id: "ch04-l02", chapterId: ch4Id, order: 2, title: "Definite Agreement — الْبَيْتُ الْكَبِيرُ", titleAr: "الصِّفَة الْمَعْرِفَة",                  template: "STANDARD", xpReward: ch04L02Content._meta?.xp_reward ?? 10, content: ch04L02Content },

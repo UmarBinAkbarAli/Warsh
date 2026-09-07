@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 3, Lesson 2 — Whose? (لِمَنْ) and O! (يَا). Question of ownership, vocative particle, and more idafa with names. 11 vocabulary items. Authored against warsh-content-schema.ts v1.0.",
+    "_note": "Chapter 3, Lesson 3 — لِمَنْ for asking and answering about ownership.",
     "chapter_order": 3,
     "lesson_order": 2,
     "estimated_minutes": 10,
@@ -19,8 +19,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/040016.mp3"
     },
     "noor_intro": {
-      "en": "لِمَنِ الْمُلْكُ الْيَوْمَ — 'Whose is the dominion today?' Allah asks this question on the Day of Judgement — and answers it Himself. Today you learn to ask لِمَنْ (whose?), use يَا to call someone, and build more idafa phrases.",
-      "ur": "لِمَنِ الْمُلْكُ الْيَوْمَ — 'آج بادشاہت کس کی ہے؟' اللہ قیامت کے دن یہ سوال پوچھتا ہے — اور خود جواب دیتا ہے۔ آج آپ لِمَنْ (کس کا؟) پوچھنا، يَا سے کسی کو بلانا، اور مزید اضافی ترکیبیں سیکھیں گے۔"
+      "en": "لِمَنْ asks who something belongs to. Learn one clear question pattern and answer it with the Idafa you already know.",
+      "ur": "لِمَنْ سے پوچھا جاتا ہے کہ کوئی چیز کس کی ہے۔ ایک واضح سوالی نمونہ سیکھیں اور پہلے سے سیکھی ہوئی اضافت کے ذریعے جواب دیں۔"
     },
     "autoplay": true
   },
@@ -63,68 +63,6 @@
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/hadha-kitab-altaalib.mp3",
       "introduces_vocab": {
         "ar_plain": "هذا كتاب الطالب"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "يَا — O! (Vocative)",
-        "ar": "يَا — حرف النداء",
-        "ur": "يَا — اے! (ندا)"
-      },
-      "explanation": {
-        "en": "يَا is used to call or address someone directly — like 'O!' or 'Hey!'.\n\nيَا رَبِّ = O my Lord!\nyَا مُحَمَّدُ = O Muhammad!\n\nImportant: When يَا precedes a name, the tanween disappears from that name.",
-        "ur": "يَا کسی کو بلانے یا مخاطب کرنے کے لیے ہوتا ہے — جیسے 'اے!' یا 'یا!'۔\n\nيَا رَبِّ = اے میرے رب!\nyَا مُحَمَّدُ = اے محمد!\n\nاہم: جب يَا کسی نام سے پہلے آتا ہے تو اس نام کی تنوین ختم ہو جاتی ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَا رَبِّ",
-        "ar_plain": "يا رب",
-        "translit": "yā rabbi",
-        "en": "O my Lord!",
-        "ur": "اے میرے رب!"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ya-rabbi.mp3",
-      "explanation": {
-        "en": "يَا + رَبِّ (my Lord — ي attached = my). One of the most common duas in the Quran and in our speech.",
-        "ur": "يَا + رَبِّ (میرا رب — ي لگا = میرا)۔ قرآن اور ہماری بولچال میں سب سے عام دعاؤں میں سے ایک۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "يا رب"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَا أُسْتَاذُ",
-        "ar_plain": "يا أستاذ",
-        "translit": "yā ustādhu",
-        "en": "O Teacher!",
-        "ur": "اے استاد!"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ya-ustaadh.mp3",
-      "explanation": {
-        "en": "أُسْتَاذٌ (a teacher) → يَا أُسْتَاذُ (O Teacher!). Tanween ٌ disappears after يَا.",
-        "ur": "أُسْتَاذٌ (ایک استاد) → يَا أُسْتَاذُ (اے استاد!)۔ يَا کے بعد تنوین ٌ غائب ہو جاتی ہے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "يا أستاذ"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَا وَلَدُ",
-        "ar_plain": "يا ولد",
-        "translit": "yā waladu",
-        "en": "O boy! / O child!",
-        "ur": "اے لڑکے!"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ya-walad.mp3",
-      "introduces_vocab": {
-        "ar_plain": "يا ولد"
       }
     },
     {
@@ -302,273 +240,156 @@
       "correct_index": 0
     },
     {
-      "id": "ch3-l2-ex2",
+      "id": "ch03-l02-ex02",
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
       "prompt": {
-        "ar": "يَا رَبِّ",
-        "ar_plain": "يا رب",
-        "translit": "yā rabbi",
-        "en": "O my Lord!",
-        "ur": "اے میرے رب!"
+        "ar": "لِمَنْ هٰذَا؟",
+        "ar_plain": "لمن هذا؟",
+        "translit": "liman hādhā",
+        "en": "Whose is this?",
+        "ur": "یہ کس کا ہے؟"
       },
       "options": [
         {
-          "en": "O my Lord!",
-          "ur": "اے میرے رب!"
+          "en": "Whose is this?",
+          "ur": "یہ کس کا ہے؟"
         },
         {
-          "en": "لِمَنْ رَبٌّ",
-          "ur": "لِمَنْ رَبٌّ"
+          "en": "What is this?",
+          "ur": "یہ کیا ہے؟"
         },
         {
-          "en": "هٰذَا رَبٌّ",
-          "ur": "هٰذَا رَبٌّ"
+          "en": "Who is this?",
+          "ur": "یہ کون ہے؟"
         },
         {
-          "en": "يَا مَلِكُ",
-          "ur": "يَا مَلِكُ"
+          "en": "Where is this?",
+          "ur": "یہ کہاں ہے؟"
         }
       ],
       "correct_index": 0
     },
     {
-      "id": "ch3-l2-ex3",
-      "type": "TAP_TRANSLATION",
-      "xp_value": 1,
-      "prompt": {
-        "ar": "أَهْلُ الْجَنَّةِ",
-        "ar_plain": "أهل الجنة",
-        "translit": "'ahlu-l-jannati",
-        "en": "the people of Paradise",
-        "ur": "جنت والے"
-      },
-      "options": [
-        {
-          "en": "the people of Paradise",
-          "ur": "اہل جنت"
-        },
-        {
-          "en": "the path to Paradise",
-          "ur": "جنت کا راستہ"
-        },
-        {
-          "en": "the day of Paradise",
-          "ur": "جنت کا دن"
-        },
-        {
-          "en": "the light of the sky",
-          "ur": "آسمان کی روشنی"
-        }
-      ],
-      "correct_index": 0
-    },
-    {
+      "id": "ch03-l02-ex03",
       "type": "TRUE_FALSE",
-      "id": "ch3-l2-ex4",
-      "statement": {
-        "en": "After يَا, the tanween of a noun disappears.",
-        "ar": "بعد يَا يختفي تنوين الاسم.",
-        "ur": "يَا کے بعد اسم کی تنوین غائب ہو جاتی ہے۔"
-      },
       "xp_value": 1,
+      "statement": {
+        "ar": "لِمَنْ لِلْمِلْكِيَّةِ",
+        "en": "لِمَنْ asks about ownership.",
+        "ur": "لِمَنْ ملکیت کے بارے میں پوچھتا ہے۔"
+      },
       "correct_answer": true,
       "explanation_on_wrong": {
-        "en": "Correct — أُسْتَاذٌ (tanween) → يَا أُسْتَاذُ (no tanween, just a plain -u ending).",
-        "ur": "درست — أُسْتَاذٌ (تنوین) → يَا أُسْتَاذُ (بغیر تنوین، صرف -u آخر میں)۔"
+        "en": "Correct: لِمَنْ means 'whose?'.",
+        "ur": "درست: لِمَنْ کا مطلب ’کس کا؟‘ ہے۔"
       }
     },
     {
-      "id": "ch3-l2-ex5",
+      "id": "ch03-l02-ex04",
       "type": "FILL_BLANK",
       "xp_value": 1,
       "mode": "TAP",
-      "sentence_ar": "يَوْمُ ___",
+      "sentence_ar": "___ هٰذَا الْكِتَابُ؟",
       "hint": {
-        "en": "the Day of Resurrection",
-        "ur": "قیامت کا دن"
+        "en": "Whose is this book?",
+        "ur": "یہ کتاب کس کی ہے؟"
       },
       "options": [
         {
-          "ar": "الْقِيَامَةِ",
-          "ar_plain": "القيامة",
-          "translit": "—",
-          "en": "الْقِيَامَةِ",
-          "ur": "الْقِيَامَةِ"
+          "ar": "لِمَنْ",
+          "ar_plain": "لمن",
+          "translit": "liman",
+          "en": "whose",
+          "ur": "کس کا"
         },
         {
-          "ar": "الْقِيَامَةُ",
-          "ar_plain": "القيامة",
-          "translit": "—",
-          "en": "الْقِيَامَةُ",
-          "ur": "الْقِيَامَةُ"
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "mā",
+          "en": "what",
+          "ur": "کیا"
         },
         {
-          "ar": "قِيَامَةٌ",
-          "ar_plain": "قيامة",
-          "translit": "—",
-          "en": "قِيَامَةٌ",
-          "ur": "قِيَامَةٌ"
+          "ar": "مَنْ",
+          "ar_plain": "من",
+          "translit": "man",
+          "en": "who",
+          "ur": "کون"
         },
         {
-          "ar": "الْقِيَامَةَ",
-          "ar_plain": "القيامة",
-          "translit": "—",
-          "en": "الْقِيَامَةَ",
-          "ur": "الْقِيَامَةَ"
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
         }
       ],
       "correct_answer": {
-        "ar": "الْقِيَامَةِ",
-        "ar_plain": "القيامة",
-        "translit": "—",
-        "en": "الْقِيَامَةِ",
-        "ur": "الْقِيَامَةِ"
+        "ar": "لِمَنْ",
+        "ar_plain": "لمن",
+        "translit": "liman",
+        "en": "whose",
+        "ur": "کس کا"
       },
       "explanation_on_wrong": {
-        "en": "مضاف إليه always takes kasra → الْقِيَامَةِ.",
-        "ur": "مضاف إليه ہمیشہ کسرہ لیتا ہے → الْقِيَامَةِ۔"
+        "en": "Use لِمَنْ to ask about ownership.",
+        "ur": "ملکیت پوچھنے کے لیے لِمَنْ استعمال کریں۔"
       }
     },
     {
-      "id": "ch3-l2-ex6",
+      "id": "ch03-l02-ex05",
       "type": "MATCHING",
       "xp_value": 1,
       "left_column": [
         {
-          "ar": "يَا وَلَدُ",
-          "ar_plain": "يا ولد",
-          "translit": "yā waladu",
-          "en": "O boy! / O child!",
-          "ur": "اے لڑکے!"
+          "ar": "لِمَنْ هٰذَا؟",
+          "ar_plain": "لمن هذا؟",
+          "translit": "liman hādhā",
+          "en": "Whose is this?",
+          "ur": "یہ کس کا ہے؟"
         },
         {
-          "ar": "الْمُلْكُ",
-          "ar_plain": "الملك",
-          "translit": "al-mulku",
-          "en": "the dominion / the kingdom",
-          "ur": "بادشاہت / سلطنت"
+          "ar": "كِتَابُ الطَّالِبِ",
+          "ar_plain": "كتاب الطالب",
+          "translit": "kitābuṭ-ṭālibi",
+          "en": "the student's book",
+          "ur": "طالب کی کتاب"
         },
         {
-          "ar": "سَبِيلُ اللَّهِ",
-          "ar_plain": "سبيل الله",
-          "translit": "sabīlu-l-lāhi",
-          "en": "the path of Allah",
-          "ur": "اللہ کا راستہ"
-        },
-        {
-          "ar": "الْيَوْمُ",
-          "ar_plain": "اليوم",
-          "translit": "al-yawmu",
-          "en": "the day / today",
-          "ur": "دن / آج"
+          "ar": "بَيْتُ الرَّجُلِ",
+          "ar_plain": "بيت الرجل",
+          "translit": "baytur-rajuli",
+          "en": "the man's house",
+          "ur": "آدمی کا گھر"
         }
       ],
       "right_column": [
         {
-          "en": "the dominion",
-          "ur": "تسلط"
+          "en": "the man's house",
+          "ur": "آدمی کا گھر"
         },
         {
-          "en": "the path of Allah",
-          "ur": "اللہ کا راستہ"
+          "en": "Whose is this?",
+          "ur": "یہ کس کا ہے؟"
         },
         {
-          "en": "today / the day",
-          "ur": "آج / دن"
-        },
-        {
-          "en": "O boy!",
-          "ur": "اے لڑکا!"
+          "en": "the student's book",
+          "ur": "طالب کی کتاب"
         }
       ],
       "correct_pairs": [
         [
           0,
-          3
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          2,
           1
         ],
         [
-          3,
-          2
-        ]
-      ]
-    },
-    {
-      "id": "ch3-l2-ex7",
-      "type": "MATCHING",
-      "xp_value": 1,
-      "left_column": [
-        {
-          "ar": "لِمَنْ هٰذَا الْكِتَابُ؟",
-          "ar_plain": "لمن هذا الكتاب؟",
-          "translit": "—",
-          "en": "Whose is this book?",
-          "ur": "یہ کتاب کس کی ہے؟"
-        },
-        {
-          "ar": "هٰذَا كِتَابُ الطَّالِبِ",
-          "ar_plain": "هذا كتاب الطالب",
-          "translit": "hādhā kitābu-t-tālibi",
-          "en": "This is the student's book.",
-          "ur": "یہ طالب کی کتاب ہے۔"
-        },
-        {
-          "ar": "يَا أُسْتَاذُ",
-          "ar_plain": "يا أستاذ",
-          "translit": "yā ustādhu",
-          "en": "O Teacher!",
-          "ur": "اے استاد!"
-        },
-        {
-          "ar": "أَهْلُ الْجَنَّةِ",
-          "ar_plain": "أهل الجنة",
-          "translit": "'ahlu-l-jannati",
-          "en": "the people of Paradise",
-          "ur": "جنت والے"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "This is the student's book.",
-          "ur": "یہ طالب علم کی کتاب ہے۔"
-        },
-        {
-          "en": "O Teacher!",
-          "ur": "اے استاد!"
-        },
-        {
-          "en": "the people of Paradise",
-          "ur": "اہل جنت"
-        },
-        {
-          "en": "Whose is this book?",
-          "ur": "یہ کتاب کس کی ہے؟"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          3
-        ],
-        [
           1,
-          0
+          2
         ],
         [
           2,
-          1
-        ],
-        [
-          3,
-          2
+          0
         ]
       ]
     },
@@ -639,16 +460,56 @@
       "type": "MATCHING",
       "xp_value": 1,
       "left_column": [
-        { "ar": "رَبِّ النَّاسِ", "ar_plain": "رب الناس", "translit": "rabbin-nās", "en": "Lord of mankind", "ur": "انسانوں کا رب" },
-        { "ar": "مَلِكِ النَّاسِ", "ar_plain": "ملك الناس", "translit": "malikin-nās", "en": "King of mankind", "ur": "انسانوں کا بادشاہ" },
-        { "ar": "إِلٰهِ النَّاسِ", "ar_plain": "اله الناس", "translit": "ilāhin-nās", "en": "God of mankind", "ur": "انسانوں کا معبود" }
+        {
+          "ar": "رَبِّ النَّاسِ",
+          "ar_plain": "رب الناس",
+          "translit": "rabbin-nās",
+          "en": "Lord of mankind",
+          "ur": "انسانوں کا رب"
+        },
+        {
+          "ar": "مَلِكِ النَّاسِ",
+          "ar_plain": "ملك الناس",
+          "translit": "malikin-nās",
+          "en": "King of mankind",
+          "ur": "انسانوں کا بادشاہ"
+        },
+        {
+          "ar": "إِلٰهِ النَّاسِ",
+          "ar_plain": "اله الناس",
+          "translit": "ilāhin-nās",
+          "en": "God of mankind",
+          "ur": "انسانوں کا معبود"
+        }
       ],
       "right_column": [
-        { "en": "God of mankind", "ur": "انسانوں کا معبود" },
-        { "en": "Lord of mankind", "ur": "انسانوں کا رب" },
-        { "en": "King of mankind", "ur": "انسانوں کا بادشاہ" }
+        {
+          "en": "God of mankind",
+          "ur": "انسانوں کا معبود"
+        },
+        {
+          "en": "Lord of mankind",
+          "ur": "انسانوں کا رب"
+        },
+        {
+          "en": "King of mankind",
+          "ur": "انسانوں کا بادشاہ"
+        }
       ],
-      "correct_pairs": [[0, 1], [1, 2], [2, 0]]
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ]
     },
     {
       "id": "ch03-l02-ex10",
@@ -693,8 +554,8 @@
   },
   "close": {
     "noor_message": {
-      "en": "You have completed this lesson on idafa (the possessive construction). Review what you learned and continue.",
-      "ur": "آپ نے اضافہ (ملکیتی ترکیب) پر یہ سبق مکمل کیا۔ سیکھی ہوئی باتیں دہرائیں اور آگے بڑھیں۔"
+      "en": "You can ask لِمَنْ هٰذَا؟ and answer with an Idafa phrase such as هٰذَا كِتَابُ الطَّالِبِ.",
+      "ur": "اب آپ لِمَنْ هٰذَا؟ سے ملکیت پوچھ سکتے ہیں اور هٰذَا كِتَابُ الطَّالِبِ جیسی اضافی ترکیب سے جواب دے سکتے ہیں۔"
     }
   }
 }
