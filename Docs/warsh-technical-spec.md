@@ -762,66 +762,9 @@ Their public URLs are required website/store contracts. Any routing change requi
 
 ## 13. Validation and release gates
 
-### Code validation
-
-```powershell
-cd warsh-backend
-npm run db:generate
-npm run db:validate-fixtures
-npm run db:audit-urdu
-npm run build
-
-cd ..\warsh-app
-npm run lint -- --quiet
-npx tsc --noEmit
-```
-
-### Content mirror validation
-
-Warsh Studio writes lesson content straight to the database, so Git only holds a
-backup if somebody exported it. Run this before any release that carries content,
-and after any Studio editing session:
-
-```powershell
-cd warsh-backend
-npm run content:check      # exits 1 while Studio edits are missing from Git
-npm run content:export     # pull them into prisma/fixtures, then commit
-```
-
-`prisma/lesson-sync-baseline.json` records the hash of each lesson at the last
-point the database and the fixture mirror agreed. That baseline is what lets the
-tooling tell a Studio edit (export needed) from a Git edit (safe to publish with
-`content:sync`) from both sides moving at once (a conflict a human resolves).
-`npm run content:sync` refuses to run while the database holds unexported work.
-
-### Android artifact validation
-
-Run against the built AAB/APK before any Play upload. Source checks cannot catch
-a bundle built with the wrong environment, so the artifact itself is inspected:
-
-```powershell
-cd warsh-app
-npm run verify:release-api-url    # asserts https://api.warsh.app is baked in
-                                  # and no localhost/LAN URL survives
-npm run verify:play-signing       # asserts the Play upload certificate
-```
-
-Both must pass. `verify:release-api-url` accepts an optional path and defaults to
-`android/app/build/outputs/bundle/release/app-release.aab`.
-
-### Runtime validation
-
-- Backend health returns 200.
-- Register/login/refresh/password-reset flows work.
-- Protected course and progress endpoints return expected envelopes.
-- Android and web can load the same production API through their supported origins.
-- Chapter lock and completion rules hold server-side.
-- Trial access lasts seven full days regardless of chapter progress; after expiry, paid lesson retrieval/completion, Noor, Tadabbur, and catalogue audio return `subscription_required` while vocabulary endpoints remain available.
-- Media URLs load from the configured public R2 host.
-- IAP is tested from a Play-installed tester build, not a sideload-only build.
-- Purchase, restore, acknowledgement, cancellation, and Noor consumable flows are checked.
-- Latest Android build covers uncommon lesson renderers.
-- Privacy, terms, support, and account-deletion paths are reachable.
+The full release gate — code validation, content-mirror validation, Android
+artifact validation, and the runtime checklist — lives in `AGENTS.md` under
+**Release gate**, next to the commands it runs. It is not duplicated here.
 
 ## 14. Scaling and deferred infrastructure
 
