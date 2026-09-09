@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-09-03
+**Last verified:** 2026-09-09
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Beta hardening and launch preparation
 
@@ -233,6 +233,105 @@ The canonical public implementation now lives in `warsh-site/`. The protected le
 - EAS profiles for development, staging APK, production-preview APK, and production Android builds
 
 ## Recent verified repository changes
+
+### 2026-09-09 (Sentry triage — two of the three open incidents are a duplicate Vercel project)
+
+Investigated the four unresolved `warsh-backend` issues against source, Git, the
+live deployment, Sentry history and the Resend delivery log. Only one was a
+production defect; the other two are a second deployment nobody is watching.
+
+- **The password reset is genuinely fixed, and the proof is a delivered email.**
+  Issue `7713481593` (Resend 422, `POST /api/auth/forgot-password`) holds three
+  events, all on 2026-09-05, none since. Its event carries `release cfaaf29bd77b`
+  — the deploy that had only the *reporting* half of the fix — so it predates
+  `3f58f25`. Resend (account `trywarshapp`) shows `Reset your Warsh password`
+  **Sent and Delivered 2026-09-05 3:38 PM** with `From: Warsh <noreply@warsh.app>`,
+  five minutes after `3f58f25`. That is end-to-end production evidence, not a
+  green build. Note the volume: two emails in fifteen days, so "no 422 since" on
+  its own would have proved nothing.
+- **The two cron `P1000`s are not coming from `api.warsh.app`.** Issues
+  `7708485552` (`/api/cron/expire-trials`) and `7708434104`
+  (`/api/cron/reset-streaks`) each hold seven events, and the `url` tag across
+  **all fourteen** resolves to one of five `warsh-*-umarbinakbarali.vercel.app`
+  hosts. Not one event comes from `warshapp-projects` or `api.warsh.app`. This is
+  the hazard already recorded in the technical spec: the personal
+  `umarbinakbarali` account still holds a `warsh` project, it still builds this
+  repo (last night's failures ran `release 646c8026247a`), and its Cron Jobs are
+  still enabled. Its `/api/health` answers `302` — Deployment Protection — so it
+  serves no users; Vercel's own cron invoker reaches it anyway.
+- **The `apicronreset-streaks` monitor sees two jobs, not one.** Its check-in
+  history shows a pair every night: one at ~23:13 UTC finishing **Okay in 1
+  second**, and one at ~23:36 UTC **Failing after 11 seconds** — 11 s being the
+  full `[1s, 3s, 6s]` retry budget spent and the fourth attempt still refused.
+  The 23:36 lane matches the shadow project's event timestamps and URL exactly;
+  the 23:13 lane is therefore the canonical production, which has both crons
+  enabled. Because both projects check in under the same slug, this monitor can
+  no longer be read as a statement about the real job's health — the shadow's
+  failure is even filed as "Early" against the *next* day's window.
+- **The monitor alert is a consequence, not a second defect.** Issue
+  `7708433628` shares trace `c39392f30003ff5fe9ca3454c27aaa57` with the Prisma
+  error and reports "an error check-in was detected" — `Sentry.withMonitor`
+  faithfully relaying the throw. This is a different failure from the August
+  storm: `automaticVercelMonitors: false` held, and the 79 missed-check-in alerts
+  have not returned.
+
+**Correction to the 2026-09-02 entry below: the surviving cron failures are not
+a sleeping Neon compute.** They are deterministic — every night, all four
+attempts, ~11 seconds — while a run on the same schedule succeeds in one second
+from the other project. That is a stale or invalid `DATABASE_URL` credential in
+the shadow project, most likely left behind by the ownership transfer. The
+`1801908` retry logic is correctly built for a cold start and cannot fix a bad
+credential. It does still do its job on the canonical side; nothing about it
+needs changing.
+
+**Fixed in this pass:** production `SMTP_FROM_EMAIL` was still the quoted value
+pasted in 29 days ago and had never been corrected — `lib/email.ts` was simply
+repairing it on every send. It is now stored as a bare `noreply@warsh.app`, and
+`.env.example` says why it must stay unquoted. `resolveFrom()` is exported and
+covered by eight new cases in `tests/email-from.test.ts` (quoted, bare, full
+header, quoted-full-header, whitespace, unset, junk, and a guard against the
+`Warsh <Warsh <...>>` double-wrap), closing the gap where the fix that ended a
+three-week outage had no test at all. 118/118 backend tests pass.
+
+**Not fixed — needs the owner.** The duplicate project lives in a Vercel account
+this machine cannot reach: the CLI and browser both authenticate as `warshapp`,
+which owns exactly one team (`warshapp projects`). Signing into
+`umarbinakbarali` and disabling that project's Cron Jobs — or deleting the
+project — clears both live incidents at once and makes the monitor readable
+again. Nothing in this repository can do it, because both projects build the
+same code.
+
+**Still unverified.** Whether the canonical `/api/cron/expire-trials` succeeds:
+it carries no `Sentry.withMonitor` wrapper by design (to leave the single
+monitor seat free), so it has no success signal anywhere, and Vercel Hobby keeps
+runtime logs for one hour. And on 2026-09-04 and 2026-09-08 the healthy
+`reset-streaks` check-in started but never completed ("Timed Out / Incomplete"),
+which is unexplained; whether streaks actually reset on those two nights needs a
+read-only query against production.
+
+### 2026-09-05 (password reset — three stacked bugs, dead since 2026-08-11)
+
+Fixed in `cfaaf29`, `87beef7` and `3f58f25`, deployed and verified live by a
+delivered email (see the 2026-09-09 entry above for the evidence).
+
+The flow had been silently dead for three weeks and nothing anywhere said so.
+Three faults in series: (a) Vercel held a `RESEND_API_KEY` belonging to a
+different Resend account, one where `warsh.app` is not a verified sending
+domain, so every send came back 403; (b) Resend reports delivery failures in the
+response body rather than throwing, and the caller is fire-and-forget behind an
+unconditional 200, so the 403 reached no user, no log and no alert; (c) with the
+key corrected, every send then returned 422 "Invalid `from` field", because
+`SMTP_FROM_EMAIL` was interpolated into `Warsh <${...}>` and trusted to be a
+bare address — the stored value carried the quotes it was pasted with, producing
+`Warsh <"noreply@warsh.app">`.
+
+`lib/email.ts` now reports send failures and a missing key to Sentry tagged by
+email kind, and builds the header from whatever shape the value is in: a
+complete `Name <address>` passes through, a bare address gets the display name,
+anything else falls back to `Warsh <noreply@warsh.app>` with a warning. A
+misconfigured variable should cost us the display name, not the whole email.
+Same class as the `AI_DAILY_MESSAGE_LIMIT` failure — an environment value taken
+at face value and failing far from where it was defined.
 
 ### 2026-09-03 (warsh.app — mobile LCP, 1.9 MB of font off the critical path)
 
@@ -1271,6 +1370,7 @@ remains unverified.
 - **Store risk:** repository code cannot establish current Google Play approval or sandbox-product availability.
 - **IAP risk:** the purchase, restore, acknowledgement, consumable and cancellation/expiry paths are now verified end to end on a Play-installed build (2026-08-29). What remains is **refund handling**: `voidedPurchaseNotification` is not parsed, so a refunded subscription or a refunded Noor pack keeps its entitlement until the next lazy refresh, and refunded pack credits are never clawed back. The trial is seven days of full access; Chapter 1 completion is not a paywall trigger.
 - **Config-value risk:** production environment variables are consumed with no validation in several places, and a bad value can disable a control silently rather than fail loudly. `AI_DAILY_MESSAGE_LIMIT` held a non-numeric value and removed the daily Noor cap entirely for every user, undetected, until it was exercised on device on 2026-08-29. Only that one variable has been hardened; the same bare-`Number()`/bare-string pattern elsewhere has not been audited.
+- **Duplicate-deployment risk:** the personal `umarbinakbarali` Vercel account holds a second `warsh` project that builds this same repository and has its Cron Jobs enabled. It serves no users (Deployment Protection answers 302) but its nightly cron runs still reach Sentry, still fail `P1000` on what look like stale database credentials, and still check in under the shared `apicronreset-streaks` monitor slug — so the canonical job's health is unreadable from that monitor. Confirmed live on 2026-09-09: all fourteen cron error events over seven days came from that account, none from `api.warsh.app`. Production is `warshapp-projects`; treat any alert whose `url` tag ends in `-umarbinakbarali.vercel.app` as coming from the duplicate, not from production.
 - **Deploy-drift risk:** `vercel --prod` ships the working tree, not `git HEAD`, so any uncommitted local edit reaches production silently. This actually happened on 2026-08-29 with the `lib/openai.ts` fix. Commit before deploying, and check `git status` when production behaviour does not match the committed code.
 - **Tracker drift risk:** historical documents contain outdated product IDs, platform assumptions, SDK versions, URLs, and completed tasks.
 - **Asset risk:** image infrastructure exists, but illustration coverage remains incomplete.

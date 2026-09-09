@@ -24,7 +24,7 @@ const DEFAULT_FROM = "Warsh <noreply@warsh.app>";
 // Build the header from whatever shape the value is actually in, and fall back
 // to the default rather than sending something invalid: a misconfigured
 // variable should cost us the display name, not the whole email.
-function resolveFrom(): string {
+export function resolveFrom(): string {
   const raw = process.env.SMTP_FROM_EMAIL?.trim().replace(/^["']+|["']+$/g, "").trim();
   if (!raw) return DEFAULT_FROM;
   // Already a complete `Name <address>` header.
