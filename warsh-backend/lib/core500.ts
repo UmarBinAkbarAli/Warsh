@@ -7,7 +7,9 @@
  * for roughly 37% of the words in the Quran, which is far more motivating than
  * "25 of 500" and is literally true.
  *
- * Source data and the frequency verification live in `Docs/quranic-core-500.md`.
+ * Source data lives in `Docs/data/quranic-core-500.json` (ranks, frequency, part
+ * of speech, verified against the Quranic Arabic Corpus) and
+ * `Docs/data/quranic-core-500-glosses.json` (Warsh-authored English + Urdu).
  */
 
 /** Words per set. Matches the five-word groups the product spec settled on. */
