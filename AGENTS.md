@@ -139,6 +139,11 @@ npx vitest run <file>
   R2. This has already happened at least twice: recover with
   `content:restore-curriculum`, `audio:prebuild-catalog:db`, `images:upload`, then
   `media:prune-orphans`.
+  The same run also deletes `tadabburSurah` (and `userSurahProgress`) up front and
+  only re-seeds them at the very end, so an interrupted seed leaves the Tadabbur
+  card missing from the Learn tab with no error anywhere. Recover with
+  `content:restore-tadabbur`, and run it **after** any vocabulary restore — word
+  links are resolved against the current `VocabularyWord` ids at insert time.
 
 ## Backend invariants
 

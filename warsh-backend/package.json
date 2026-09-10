@@ -49,6 +49,7 @@
     "images:sync-chapters:dry": "npx tsx -r dotenv/config scripts/sync-chapter-images.ts --dry-run",
     "content:publish-vocabulary": "node scripts/publish-vocabulary.cjs",
     "content:restore-curriculum": "node scripts/restore-curriculum-vocabulary.cjs",
+    "content:restore-tadabbur": "node scripts/restore-tadabbur-surahs.cjs",
     "media:prune-orphans": "npx tsx scripts/prune-orphan-vocab-media.ts"
   },
   "prisma": {

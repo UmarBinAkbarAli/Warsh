@@ -98,7 +98,14 @@ files remain release evidence.
 - Renderers for all 15 current exercise types
 - Vocabulary browsing, search, word detail, favorites/hidden state, Word of the Day,
   and SM-2-style SRS review
-- Tadabbur content and progression screens
+- Tadabbur content and progression screens. The 11 Surahs were restored to
+  production on 2026-09-10 with `content:restore-tadabbur`: `TadabburSurah` held
+  zero rows, so `/api/tadabbur` returned an empty list with a null `focusSurahId`
+  and the Learn tab's Tadabbur card silently stopped rendering. Same cause as the
+  vocabulary loss below — `prisma/seed.cjs` deletes `tadabburSurah` early and
+  re-seeds at the very end, and `content:restore-curriculum` does not cover it.
+  61 of 68 declared word links resolve; 7 keys (`الرحمن`, `الرحيم`, `اله`, `اذا`)
+  have no `VocabularyWord` row and were already unlinked before the wipe.
 - Ustaad Noor chat with daily limits and consumable overage credits
 - Subscription/paywall, purchase verification, restore flow, and the Google RTDN
   webhook, which has been reached by live notifications since 2026-08-29
