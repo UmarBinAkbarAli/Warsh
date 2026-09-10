@@ -144,6 +144,11 @@ npx vitest run <file>
   card missing from the Learn tab with no error anywhere. Recover with
   `content:restore-tadabbur`, and run it **after** any vocabulary restore — word
   links are resolved against the current `VocabularyWord` ids at insert time.
+  For Surahs already in the database, `content:restore-tadabbur -- --relink`
+  rewrites those ids in place. A `vocabKey` there must equal
+  `VocabularyWord.arabicPlain` exactly — stripping harakat folds neither the
+  definite article nor the hamza, so a near-miss key reads as an unlinked word
+  rather than an error.
 
 ## Backend invariants
 

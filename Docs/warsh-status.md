@@ -104,8 +104,14 @@ files remain release evidence.
   and the Learn tab's Tadabbur card silently stopped rendering. Same cause as the
   vocabulary loss below — `prisma/seed.cjs` deletes `tadabburSurah` early and
   re-seeds at the very end, and `content:restore-curriculum` does not cover it.
-  61 of 68 declared word links resolve; 7 keys (`الرحمن`, `الرحيم`, `اله`, `اذا`)
-  have no `VocabularyWord` row and were already unlinked before the wipe.
+  All 68 declared word links now resolve. Seven had been dead since before the
+  wipe because the seed spelled the key differently from the column it is looked
+  up against — `الرحمن`/`الرحيم` carried the definite article where the rows are
+  `رحمن`/`رحيم`, and `اله`/`اذا` dropped the hamza of `إله`/`إذا`. Stripping
+  harakat folds neither, so each one silently resolved to null. Keys corrected in
+  `prisma/tadabbur-seed.cjs` and the live rows repaired with
+  `content:restore-tadabbur -- --relink --apply`, which rewrites `vocabId` on
+  existing Surahs and leaves their text, order and publish state untouched.
 - Ustaad Noor chat with daily limits and consumable overage credits
 - Subscription/paywall, purchase verification, restore flow, and the Google RTDN
   webhook, which has been reached by live notifications since 2026-08-29
