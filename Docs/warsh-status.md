@@ -36,6 +36,12 @@ files remain release evidence.
 - The Android app is live in full **Production** on Google Play as of 2026-08-26
   (confirmed live in Play Console via browser automation on 2026-08-27). It is
   publicly discoverable and installable by anyone.
+- **Version 1.0.8 (versionCode 32) was submitted to Production on 2026-09-10** at a
+  100% staged rollout and is in Google review. The live build until it is approved
+  is versionCode 30 (1.0.7) — versionCode 31 was built on 2026-09-02 but never
+  published, so 1.0.8 carries everything since 30. Play reported zero devices lost
+  and a 855 KB smaller install; its only warning is the missing R8 deobfuscation
+  file, which is expected while Sentry upload is disabled during the release build.
 - The Expo application supports `android` and `web`. Four tabs: Learn, Vocabulary,
   Noor, You.
 - The backend is a Next.js API connected through Prisma to PostgreSQL (Neon).
