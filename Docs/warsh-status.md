@@ -104,6 +104,11 @@ files remain release evidence.
   webhook, which has been reached by live notifications since 2026-08-29
 - Quranic Core 500 — shipped 2026-09-07, published live 2026-09-10 (all 500 words
   `PUBLISHED`, each with generated audio in R2)
+- Vocabulary in production is 920 published words: the Core 500 plus 420 curriculum
+  words restored on 2026-09-10. The curriculum set had been absent — `prisma/seed.cjs`
+  calls `vocabularyWord.deleteMany()` before re-seeding, and every Core 500 row shares
+  a single `createdAt` of 2026-09-07 16:51, meaning the table was empty when
+  `load-core-500.ts` ran. Restore with `content:restore-curriculum`.
 - Chapter prefetch: chapters warm images and audio on WiFi, 12 MB cap
 - Notifications, Mixpanel analytics, and Sentry integrations
 - English and Urdu UI modes with Arabic content retained in Arabic script
@@ -214,13 +219,9 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
 
 ### P1 — content quality and launch polish
 
-1. **Vocabulary coverage in production is the Core 500 only.** The Quranic Core 500
-   was published on 2026-09-10 (500 rows, all with generated audio), which is what
-   the Vocabulary tab, Word of the Day and the Core 500 screen now serve. The 603
-   curriculum seed words in `prisma/vocabulary-seed.cjs` are a largely separate body
-   — 417 of them (family, household, body, place words) do not exist in production
-   at all. Decide whether they are promoted, and review them first if so. None of
-   the 500 published words has an `imageUrl`.
+1. **No vocabulary word has an image.** All 920 published words carry generated
+   audio; `imageUrl` is null on every one of them. `images:upload` exists but there
+   are no source files for this set.
 2. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
    types and book transitions.
 3. Reconcile any remaining visual differences against the current gold/navy design
