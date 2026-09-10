@@ -1,604 +1,417 @@
 {
-  "schema_version": "1.0",
-  "template": "STANDARD",
-  "_meta": {
-    "_note": "Chapter 4, display lesson 4 — beginner feminine singular adjective agreement.",
-    "chapter_order": 4,
-    "lesson_order": 3,
-    "estimated_minutes": 10,
-    "xp_reward": 10
-  },
   "hook": {
     "ayah": {
-      "surah": 14,
-      "ayah": 24,
-      "label": "Ibrahim 14:24",
-      "ar": "أَلَمْ تَرَ كَيْفَ ضَرَبَ اللَّهُ مَثَلًا كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ",
-      "en": "Do you not see how Allah has set forth a parable — a good word is like a good tree.",
-      "ur": "کیا آپ نے نہیں دیکھا کہ اللہ نے ایک مثال بیان کی — ایک پاکیزہ بات ایک پاکیزہ درخت کی مثل ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/014024.mp3"
+      "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "en": "Guide us to the straight path.",
+      "ur": "ہمیں سیدھے راستے کی ہدایت دے۔",
+      "ayah": 6,
+      "label": "Al-Fatiha 1:6",
+      "surah": 1,
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001006.mp3"
     },
+    "autoplay": true,
     "noor_intro": {
-      "en": "كَلِمَةً طَيِّبَةً means 'a good word'. In this familiar pattern, the feminine noun and its adjective both use the feminine form. Learn the pattern without assuming every feminine noun ends in ة.",
-      "ur": "كَلِمَةً طَيِّبَةً کا مطلب ’ایک پاکیزہ بات‘ ہے۔ اس مانوس نمونے میں مؤنث اسم اور اس کی صفت دونوں مؤنث صورت میں آتے ہیں۔ یہ سمجھے بغیر نمونہ سیکھیں کہ ہر مؤنث اسم ة پر ختم ہوتا ہے۔"
-    },
-    "autoplay": true
-  },
-  "discover_cards": [
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "مُطَابَقَةُ الْمُفْرَدِ الْمُؤَنَّثِ",
-        "en": "Feminine singular agreement",
-        "ur": "واحد مؤنث کی ہم آہنگی"
-      },
-      "explanation": {
-        "en": "For the familiar ة-ending nouns in this lesson, the adjective also takes its feminine ة form.",
-        "ur": "اس سبق کے مانوس ة والے اسموں کے ساتھ صفت بھی اپنی مؤنث ة والی صورت میں آتی ہے۔"
-      },
-      "image_url": "/images/discover/ch04-feminine-agreement-v1.png"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "مَدِينَةٌ جَمِيلَةٌ",
-        "ar_plain": "مدينة جميلة",
-        "translit": "madīnatun jamīlatun",
-        "en": "a beautiful city",
-        "ur": "ایک خوبصورت شہر"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/madinah-jamilah.mp3",
-      "explanation": {
-        "en": "مَدِينَةٌ (a city — feminine, ends in ة) → the adjective جَمِيلَةٌ also takes ة. Masculine would be جَمِيلٌ.",
-        "ur": "مَدِينَةٌ (ایک شہر — مؤنث، ة پر ختم) → صفت جَمِيلَةٌ کو بھی ة ملتی ہے۔ مذکر ہوتا: جَمِيلٌ۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "مدينة جميلة"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "مَدْرَسَةٌ كَبِيرَةٌ",
-        "ar_plain": "مدرسة كبيرة",
-        "translit": "madrasatun kabīratun",
-        "en": "a big school",
-        "ur": "ایک بڑا اسکول / مدرسہ"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/madrasah-kabirah.mp3",
-      "introduces_vocab": {
-        "ar_plain": "مدرسة كبيرة"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "غُرْفَةٌ صَغِيرَةٌ",
-        "ar_plain": "غرفة صغيرة",
-        "translit": "ghurfatun ṣaghīratun",
-        "en": "a small room",
-        "ur": "ایک چھوٹا کمرہ"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ghurfah-saghirah.mp3",
-      "introduces_vocab": {
-        "ar_plain": "غرفة صغيرة"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "امْرَأَةٌ صَالِحَةٌ",
-        "ar_plain": "امرأة صالحة",
-        "translit": "imraʾatun ṣāliḥatun",
-        "en": "a righteous woman",
-        "ur": "ایک نیک عورت"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/imraah-salihah.mp3",
-      "introduces_vocab": {
-        "ar_plain": "امرأة صالحة"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "جَنَّةٌ وَاسِعَةٌ",
-        "ar_plain": "جنة واسعة",
-        "translit": "jannatun wāsiʿatun",
-        "en": "a vast garden (paradise)",
-        "ur": "ایک وسیع باغ (جنت)"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/jannah-wasiiah.mp3",
-      "explanation": {
-        "en": "جَنَّةٌ (paradise / garden — feminine) + وَاسِعَةٌ (vast — feminine adjective). وَاسِعٌ is the masculine form; وَاسِعَةٌ adds ة for the feminine noun.",
-        "ur": "جَنَّةٌ (جنت / باغ — مؤنث) + وَاسِعَةٌ (وسیع — مؤنث صفت)۔ وَاسِعٌ مذکر ہے؛ وَاسِعَةٌ مؤنث اسم کے لیے ة لیتی ہے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "جنة واسعة"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "كَلِمَةٌ طَيِّبَةٌ",
-        "ar_plain": "كلمة طيبة",
-        "translit": "kalimatun ṭayyibatun",
-        "en": "a good / pure word",
-        "ur": "ایک اچھی / پاکیزہ بات"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/kalimah-tayyibah.mp3",
-      "explanation": {
-        "en": "From Ibrahim 14:24 — كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ. A good word is like a good tree. Both كَلِمَة and شَجَرَة are feminine — both adjectives take ة.",
-        "ur": "ابراہیم 14:24 سے — كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ۔ اچھی بات پاکیزہ درخت کی مثل ہے۔ كَلِمَة اور شَجَرَة دونوں مؤنث — دونوں صفتوں کو ة ملتی ہے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "كلمة طيبة"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "رَحْمَةٌ وَاسِعَةٌ",
-        "ar_plain": "رحمة واسعة",
-        "translit": "raḥmatun wāsiʿatun",
-        "en": "a vast mercy",
-        "ur": "ایک وسیع رحمت"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/rahmah-wasiiah.mp3",
-      "explanation": {
-        "en": "رَحْمَةٌ (mercy — feminine) + وَاسِعَةٌ (vast — feminine adjective). رَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ — 'My mercy encompasses all things' (Al-A'raf 7:156). Allah's mercy is vast.",
-        "ur": "رَحْمَةٌ (رحمت — مؤنث) + وَاسِعَةٌ (وسیع — مؤنث صفت)۔ رَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ — 'میری رحمت ہر چیز کو محیط ہے' (اعراف 7:156)۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "رحمة واسعة"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "نِعْمَةٌ عَظِيمَةٌ",
-        "ar_plain": "نعمة عظيمة",
-        "translit": "niʿmatun ʿaẓīmatun",
-        "en": "a great blessing",
-        "ur": "ایک عظیم نعمت"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/nimah-azimah.mp3",
-      "introduces_vocab": {
-        "ar_plain": "نعمة عظيمة"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "سُورَةٌ كَرِيمَةٌ",
-        "ar_plain": "سورة كريمة",
-        "translit": "sūratun karīmatun",
-        "en": "a noble surah",
-        "ur": "ایک شریف/معزز سورت"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/surah-karimah.mp3",
-      "introduces_vocab": {
-        "ar_plain": "سورة كريمة"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "صَلَاةٌ خَاشِعَةٌ",
-        "ar_plain": "صلاة خاشعة",
-        "translit": "ṣalātun khāshiʿatun",
-        "en": "a humble / focused prayer",
-        "ur": "ایک خشوع والی نماز"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/salah-khashiah.mp3",
-      "explanation": {
-        "en": "صَلَاةٌ (prayer — feminine) + خَاشِعَةٌ (humble/focused — feminine adjective). الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ — 'those who are humble in their prayers' (Al-Mu'minun 23:2).",
-        "ur": "صَلَاةٌ (نماز — مؤنث) + خَاشِعَةٌ (خشوع والی — مؤنث صفت)۔ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ — 'جو اپنی نمازوں میں خشوع رکھتے ہیں' (مؤمنون 23:2)۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "صلاة خاشعة"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Three Rules of Adjective Agreement",
-        "ar": "ثَلَاثَة قَوَاعِد اتِّفَاق الصِّفَة",
-        "ur": "صفت کی ہم آہنگی کے تین اصول"
-      },
-      "body": {
-        "en": "An adjective agrees with its noun in gender, definiteness, number, and case. This beginner chapter focuses on singular gender and definiteness; number and fuller case patterns come later.\n\nرَجُلٌ كَرِيمٌ ↔ اِمْرَأَةٌ كَرِيمَةٌ\nبَيْتٌ كَبِيرٌ ↔ الْبَيْتُ الْكَبِيرُ",
-        "ur": "صفت اپنے اسم کے ساتھ جنس، معرفہ و نکرہ، عدد اور اعراب میں مطابقت رکھتی ہے۔ یہ ابتدائی باب واحد کی جنس اور معرفہ و نکرہ پر مرکوز ہے؛ عدد اور اعراب کی مزید صورتیں بعد میں آئیں گی۔\n\nرَجُلٌ كَرِيمٌ ↔ اِمْرَأَةٌ كَرِيمَةٌ\nبَيْتٌ كَبِيرٌ ↔ الْبَيْتُ الْكَبِيرُ"
-      }
+      "en": "You learned رَجُلٌ كَرِيمٌ. Now compare it with الرَّجُلُ الْكَرِيمُ. When this noun phrase is definite, both the noun and its adjective carry ال.",
+      "ur": "آپ نے رَجُلٌ كَرِيمٌ سیکھا۔ اب اس کا الرَّجُلُ الْكَرِيمُ سے موازنہ کریں۔ جب یہ اسمی ترکیب معرفہ ہو تو اسم اور صفت دونوں پر ال آتا ہے۔"
     }
-  ],
+  },
+  "_meta": {
+    "_note": "Chapter 4, display lesson 3 — adjective phrase versus nominal sentence.",
+    "xp_reward": 10,
+    "lesson_order": 3,
+    "chapter_order": 4,
+    "estimated_minutes": 9
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can now distinguish a definite adjective phrase from a simple nominal sentence.",
+      "ur": "اب آپ معرفہ صفتی ترکیب اور سادہ جملہ اسمیہ میں فرق کر سکتے ہیں۔"
+    }
+  },
+  "reveal": {
+    "ayah": {
+      "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "en": "Guide us to the straight path.",
+      "ur": "ہمیں سیدھے راستے کی ہدایت دے۔",
+      "ayah": 6,
+      "label": "Al-Fatiha 1:6",
+      "surah": 1,
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001006.mp3"
+    },
+    "concept_name": {
+      "ar": "الصِّفَة فِي الْقُرْآن",
+      "en": "الصِّفَة in the Quran",
+      "ur": "قرآن میں صفت"
+    },
+    "noor_explanation": {
+      "en": "الصِّرَاطَ الْمُسْتَقِيمَ — both words carry ال. They are not a sentence — they are a noun phrase. A phrase that carries all of your hope. The difference between الصِّرَاطُ مُسْتَقِيمٌ ('the path is straight') and الصِّرَاطُ الْمُسْتَقِيمُ ('the straight path') is two letters — ال — and all the meaning in the world.",
+      "ur": "الصِّرَاطَ الْمُسْتَقِيمَ — دونوں پر ال۔ یہ جملہ نہیں — اسمی ترکیب ہے۔ ایسی ترکیب جو آپ کی تمام امیدیں سموئے ہوئے ہے۔ الصِّرَاطُ مُسْتَقِيمٌ ('راستہ سیدھا ہے') اور الصِّرَاطُ الْمُسْتَقِيمُ ('سیدھا راستہ') میں فرق صرف دو حروف — ال — کا ہے۔"
+    },
+    "highlighted_word_indices": [
+      1,
+      2
+    ]
+  },
+  "template": "STANDARD",
   "exercises": [
     {
-      "id": "ch4-l3-ex1",
+      "id": "ch04-l05-ex01",
       "type": "TAP_TRANSLATION",
-      "xp_value": 1,
       "prompt": {
-        "ar": "مَدِينَةٌ جَمِيلَةٌ",
-        "ar_plain": "مدينة جميلة",
-        "translit": "madīnatun jamīlatun",
-        "en": "a beautiful city",
-        "ur": "ایک خوبصورت شہر"
+        "ar": "الْبَيْتُ الْكَبِيرُ",
+        "en": "the big house",
+        "ur": "بڑا گھر",
+        "ar_plain": "البيت الكبير",
+        "translit": "al-baytu al-kabīru"
       },
       "options": [
         {
-          "en": "a beautiful city",
-          "ur": "ایک خوبصورت شہر"
+          "en": "the big house",
+          "ur": "بڑا گھر"
         },
         {
-          "en": "a beautiful man",
-          "ur": "ایک خوبصورت آدمی"
+          "en": "the house is big",
+          "ur": "گھر بڑا ہے"
         },
         {
-          "en": "the beautiful city",
-          "ur": "خوبصورت شہر"
+          "en": "a big house",
+          "ur": "ایک بڑا گھر"
         },
         {
-          "en": "a vast paradise",
-          "ur": "ایک وسیع جنت"
+          "en": "the new house",
+          "ur": "نیا گھر"
         }
       ],
+      "xp_value": 1,
       "correct_index": 0
     },
     {
-      "id": "ch4-l3-ex2",
+      "id": "ch04-l05-ex02",
       "type": "TAP_TRANSLATION",
-      "xp_value": 1,
       "prompt": {
-        "ar": "كَلِمَةٌ طَيِّبَةٌ",
-        "ar_plain": "كلمة طيبة",
-        "translit": "kalimatun ṭayyibatun",
-        "en": "a good / pure word",
-        "ur": "ایک اچھی / پاکیزہ بات"
+        "ar": "الْبَيْتُ كَبِيرٌ",
+        "en": "the house is big",
+        "ur": "گھر بڑا ہے",
+        "ar_plain": "البيت كبير",
+        "translit": "al-baytu kabīrun"
       },
       "options": [
         {
-          "en": "a good / pure word",
-          "ur": "ایک اچھا / خالص لفظ"
+          "en": "the big house",
+          "ur": "بڑا گھر"
         },
         {
-          "en": "a good tree",
-          "ur": "ایک اچھا درخت"
+          "en": "the house is big",
+          "ur": "گھر بڑا ہے"
         },
         {
-          "en": "a noble surah",
-          "ur": "ایک عظیم سورہ"
+          "en": "a big house",
+          "ur": "ایک بڑا گھر"
         },
         {
-          "en": "a vast mercy",
-          "ur": "ایک وسیع رحمت"
+          "en": "the house is new",
+          "ur": "گھر نیا ہے"
         }
       ],
-      "correct_index": 0
-    },
-    {
-      "id": "ch4-l3-ex3",
-      "type": "TAP_TRANSLATION",
       "xp_value": 1,
-      "prompt": {
-        "ar": "نِعْمَةٌ عَظِيمَةٌ",
-        "ar_plain": "نعمة عظيمة",
-        "translit": "niʿmatun ʿaẓīmatun",
-        "en": "a great blessing",
-        "ur": "ایک عظیم نعمت"
-      },
-      "options": [
-        {
-          "en": "a great blessing",
-          "ur": "ایک عظیم نعمت"
-        },
-        {
-          "en": "نِعْمَةٌ عَظِيمٌ",
-          "ur": "نِعْمَةٌ عَظِيمٌ"
-        },
-        {
-          "en": "رَجُلٌ عَظِيمٌ",
-          "ur": "رَجُلٌ عَظِيمٌ"
-        },
-        {
-          "en": "نَبِيٌّ عَظِيمٌ",
-          "ur": "نَبِيٌّ عَظِيمٌ"
-        }
-      ],
-      "correct_index": 0
+      "correct_index": 1
     },
     {
+      "id": "ch04-l05-ex03",
       "type": "TRUE_FALSE",
-      "id": "ch4-l3-ex4",
-      "statement": {
-        "en": "The correct Arabic for 'a vast mercy' is رَحْمَةٌ وَاسِعٌ.",
-        "ar": "الصحيح في العربية لـ 'رحمة واسعة' هو رَحْمَةٌ وَاسِعٌ.",
-        "ur": "'ایک وسیع رحمت' کے لیے درست عربی رَحْمَةٌ وَاسِعٌ ہے۔"
-      },
       "xp_value": 1,
-      "correct_answer": false,
+      "statement": {
+        "ar": "الْكِتَابُ الْجَدِيدُ تَرْكِيبٌ وَصْفِيٌّ",
+        "en": "الْكِتَابُ الْجَدِيدُ is a noun phrase, not a complete sentence.",
+        "ur": "الْكِتَابُ الْجَدِيدُ اسمی ترکیب ہے، مکمل جملہ نہیں۔"
+      },
+      "correct_answer": true,
       "explanation_on_wrong": {
-        "en": "False — رَحْمَةٌ is feminine (ends in ة), so the adjective must also be feminine: وَاسِعَةٌ (not وَاسِعٌ which is masculine). Correct: رَحْمَةٌ وَاسِعَةٌ.",
-        "ur": "غلط — رَحْمَةٌ مؤنث ہے (ة پر ختم)، اس لیے صفت بھی مؤنث ہونی چاہیے: وَاسِعَةٌ (نہ کہ مذکر وَاسِعٌ)۔ درست: رَحْمَةٌ وَاسِعَةٌ۔"
+        "en": "Both words carry ال, so they form one definite phrase.",
+        "ur": "دونوں لفظوں پر ال ہے، اس لیے یہ ایک معرفہ ترکیب ہے۔"
       }
     },
     {
-      "id": "ch4-l3-ex5",
-      "type": "FILL_BLANK",
-      "xp_value": 1,
-      "mode": "TAP",
-      "sentence_ar": "صَلَاةٌ ___",
+      "id": "ch04-l05-ex04",
       "hint": {
-        "en": "a humble prayer (صَلَاة is feminine)",
-        "ur": "خشوع والی نماز (صَلَاة مؤنث ہے)"
+        "en": "The book is new.",
+        "ur": "کتاب نئی ہے۔"
       },
+      "mode": "TAP",
+      "type": "FILL_BLANK",
       "options": [
         {
-          "ar": "خَاشِعَةٌ",
-          "ar_plain": "خاشعة",
-          "translit": "—",
-          "en": "خَاشِعَةٌ",
-          "ur": "خَاشِعَةٌ"
+          "ar": "جَدِيدٌ",
+          "en": "new",
+          "ur": "نئی",
+          "ar_plain": "جديد",
+          "translit": "jadīdun"
         },
         {
-          "ar": "خَاشِعٌ",
-          "ar_plain": "خاشع",
-          "translit": "—",
-          "en": "خَاشِعٌ",
-          "ur": "خَاشِعٌ"
+          "ar": "الْجَدِيدُ",
+          "en": "the new",
+          "ur": "نئی",
+          "ar_plain": "الجديد",
+          "translit": "al-jadīdu"
         },
         {
-          "ar": "خَاشِعًا",
-          "ar_plain": "خاشعا",
-          "translit": "—",
-          "en": "خَاشِعًا",
-          "ur": "خَاشِعًا"
+          "ar": "جَدِيدًا",
+          "en": "new",
+          "ur": "نئی",
+          "ar_plain": "جديدا",
+          "translit": "jadīdan"
         },
         {
-          "ar": "الْخَاشِعَةُ",
-          "ar_plain": "الخاشعة",
-          "translit": "—",
-          "en": "الْخَاشِعَةُ",
-          "ur": "الْخَاشِعَةُ"
+          "ar": "الْكَبِيرُ",
+          "en": "the big",
+          "ur": "بڑی",
+          "ar_plain": "الكبير",
+          "translit": "al-kabīru"
         }
       ],
+      "xp_value": 1,
+      "sentence_ar": "الْكِتَابُ ___",
       "correct_answer": {
-        "ar": "خَاشِعَةٌ",
-        "ar_plain": "خاشعة",
-        "translit": "—",
-        "en": "خَاشِعَةٌ",
-        "ur": "خَاشِعَةٌ"
+        "ar": "جَدِيدٌ",
+        "en": "new",
+        "ur": "نئی",
+        "ar_plain": "جديد",
+        "translit": "jadīdun"
       },
       "explanation_on_wrong": {
-        "en": "صَلَاةٌ is feminine (ends in ة) → adjective must be feminine too: خَاشِعَةٌ. The masculine form خَاشِعٌ would be wrong here.",
-        "ur": "صَلَاةٌ مؤنث ہے (ة پر ختم) → صفت بھی مؤنث ہونی چاہیے: خَاشِعَةٌ۔ مذکر خَاشِعٌ یہاں غلط ہوگا۔"
+        "en": "A predicate here is indefinite: جَدِيدٌ.",
+        "ur": "یہاں خبر نکرہ ہوگی: جَدِيدٌ۔"
       }
     },
     {
-      "id": "ch4-l3-ex6",
+      "id": "ch04-l05-ex05",
       "type": "MATCHING",
       "xp_value": 1,
       "left_column": [
         {
-          "ar": "مَدِينَةٌ جَمِيلَةٌ",
-          "ar_plain": "مدينة جميلة",
-          "translit": "madīnatun jamīlatun",
-          "en": "a beautiful city",
-          "ur": "ایک خوبصورت شہر"
+          "ar": "الْمَسْجِدُ الْقَرِيبُ",
+          "en": "the nearby mosque",
+          "ur": "قریبی مسجد",
+          "ar_plain": "المسجد القريب",
+          "translit": "al-masjidu al-qarību"
         },
         {
-          "ar": "مَدْرَسَةٌ كَبِيرَةٌ",
-          "ar_plain": "مدرسة كبيرة",
-          "translit": "madrasatun kabīratun",
-          "en": "a big school",
-          "ur": "ایک بڑا اسکول / مدرسہ"
+          "ar": "الْمَسْجِدُ قَرِيبٌ",
+          "en": "the mosque is near",
+          "ur": "مسجد قریب ہے",
+          "ar_plain": "المسجد قريب",
+          "translit": "al-masjidu qarībun"
         },
         {
-          "ar": "امْرَأَةٌ صَالِحَةٌ",
-          "ar_plain": "امرأة صالحة",
-          "translit": "imraʾatun ṣāliḥatun",
-          "en": "a righteous woman",
-          "ur": "ایک نیک عورت"
-        },
-        {
-          "ar": "جَنَّةٌ وَاسِعَةٌ",
-          "ar_plain": "جنة واسعة",
-          "translit": "jannatun wāsiʿatun",
-          "en": "a vast garden (paradise)",
-          "ur": "ایک وسیع باغ (جنت)"
+          "ar": "الرَّجُلُ الْكَرِيمُ",
+          "en": "the generous man",
+          "ur": "سخی آدمی",
+          "ar_plain": "الرجل الكريم",
+          "translit": "ar-rajulu al-karīmu"
         }
       ],
       "right_column": [
         {
-          "en": "a big school",
-          "ur": "ایک بڑا سکول"
+          "en": "the generous man",
+          "ur": "سخی آدمی"
         },
         {
-          "en": "a righteous woman",
-          "ur": "ایک نیک عورت"
+          "en": "the mosque is near",
+          "ur": "مسجد قریب ہے"
         },
         {
-          "en": "a vast paradise",
-          "ur": "ایک وسیع جنت"
-        },
-        {
-          "en": "a beautiful city",
-          "ur": "ایک خوبصورت شہر"
+          "en": "the nearby mosque",
+          "ur": "قریبی مسجد"
         }
       ],
       "correct_pairs": [
         [
           0,
-          3
+          2
         ],
         [
           1,
-          0
-        ],
-        [
-          2,
           1
         ],
         [
-          3,
-          2
+          2,
+          0
         ]
       ]
     },
     {
-      "id": "ch4-l3-ex7",
-      "type": "MATCHING",
-      "xp_value": 1,
-      "left_column": [
-        {
-          "ar": "كَلِمَةٌ طَيِّبَةٌ",
-          "ar_plain": "كلمة طيبة",
-          "translit": "kalimatun ṭayyibatun",
-          "en": "a good / pure word",
-          "ur": "ایک اچھی / پاکیزہ بات"
-        },
-        {
-          "ar": "رَحْمَةٌ وَاسِعَةٌ",
-          "ar_plain": "رحمة واسعة",
-          "translit": "raḥmatun wāsiʿatun",
-          "en": "a vast mercy",
-          "ur": "ایک وسیع رحمت"
-        },
-        {
-          "ar": "نِعْمَةٌ عَظِيمَةٌ",
-          "ar_plain": "نعمة عظيمة",
-          "translit": "niʿmatun ʿaẓīmatun",
-          "en": "a great blessing",
-          "ur": "ایک عظیم نعمت"
-        },
-        {
-          "ar": "صَلَاةٌ خَاشِعَةٌ",
-          "ar_plain": "صلاة خاشعة",
-          "translit": "ṣalātun khāshiʿatun",
-          "en": "a humble / focused prayer",
-          "ur": "ایک خشوع والی نماز"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "a vast mercy",
-          "ur": "ایک وسیع رحمت"
-        },
-        {
-          "en": "a great blessing",
-          "ur": "ایک عظیم نعمت"
-        },
-        {
-          "en": "a humble prayer",
-          "ur": "ایک عاجزانہ دعا"
-        },
-        {
-          "en": "a good word",
-          "ur": "ایک اچھا لفظ"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          3
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          2,
-          1
-        ],
-        [
-          3,
-          2
-        ]
-      ]
-    },
-    {
-      "id": "ch4-l3-ex8",
+      "id": "ch04-l05-ex06",
       "type": "BUILD_SENTENCE",
-      "xp_value": 1,
-      "target_translation": {
-        "en": "Build: 'a small room' (feminine)",
-        "ur": "جملہ بنائیں: 'ایک چھوٹا کمرہ' (مؤنث)"
-      },
       "tiles": [
         {
-          "ar": "غُرْفَةٌ",
-          "ar_plain": "غرفة",
-          "translit": "—",
-          "en": "غُرْفَةٌ",
-          "ur": "غُرْفَةٌ"
+          "ar": "الْبَيْتُ",
+          "en": "the house",
+          "ur": "گھر",
+          "ar_plain": "البيت",
+          "translit": "al-baytu"
         },
         {
-          "ar": "صَغِيرَةٌ",
-          "ar_plain": "صغيرة",
-          "translit": "—",
-          "en": "صَغِيرَةٌ",
-          "ur": "صَغِيرَةٌ"
+          "ar": "كَبِيرٌ",
+          "en": "is big",
+          "ur": "بڑا ہے",
+          "ar_plain": "كبير",
+          "translit": "kabīrun"
         },
         {
-          "ar": "صَغِيرٌ",
-          "ar_plain": "صغير",
-          "translit": "—",
-          "en": "صَغِيرٌ",
-          "ur": "صَغِيرٌ"
+          "ar": "الْكَبِيرُ",
+          "en": "the big",
+          "ur": "بڑا",
+          "ar_plain": "الكبير",
+          "translit": "al-kabīru"
         },
         {
-          "ar": "كَبِيرَةٌ",
-          "ar_plain": "كبيرة",
-          "translit": "—",
-          "en": "كَبِيرَةٌ",
-          "ur": "كَبِيرَةٌ"
-        },
-        {
-          "ar": "الْغُرْفَةُ",
-          "ar_plain": "الغرفة",
-          "translit": "—",
-          "en": "الْغُرْفَةُ",
-          "ur": "الْغُرْفَةُ"
+          "ar": "بَيْتٌ",
+          "en": "a house",
+          "ur": "ایک گھر",
+          "ar_plain": "بيت",
+          "translit": "baytun"
         }
       ],
+      "xp_value": 1,
       "correct_order": [
         0,
         1
       ],
+      "target_translation": {
+        "en": "Build: the house is big",
+        "ur": "بنائیں: گھر بڑا ہے"
+      },
       "explanation_on_wrong": {
-        "en": "غُرْفَةٌ (a room — feminine, has ة) + صَغِيرَةٌ (small — feminine adjective, also ة). صَغِيرٌ would be wrong because the noun is feminine.",
-        "ur": "غُرْفَةٌ (ایک کمرہ — مؤنث، ة ہے) + صَغِيرَةٌ (چھوٹا — مؤنث صفت، ة بھی)۔ صَغِيرٌ غلط ہوتا کیونکہ اسم مؤنث ہے۔"
+        "en": "Use الْبَيْتُ + كَبِيرٌ for a complete sentence.",
+        "ur": "مکمل جملے کے لیے الْبَيْتُ + كَبِيرٌ استعمال کریں۔"
       }
     }
   ],
-  "reveal": {
-    "concept_name": {
-      "en": "الصِّفَة in the Quran",
-      "ar": "الصِّفَة فِي الْقُرْآن",
-      "ur": "قرآن میں صفت"
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "ar": "تَرْكِيبٌ أَمْ جُمْلَةٌ؟",
+        "en": "Phrase or complete sentence?",
+        "ur": "ترکیب یا مکمل جملہ؟"
+      },
+      "explanation": {
+        "en": "A definite adjective has ال: الْبَيْتُ الْكَبِيرُ means 'the big house'. Without ال on the second word, الْبَيْتُ كَبِيرٌ means 'the house is big'.",
+        "ur": "معرفہ صفت پر ال آتا ہے: الْبَيْتُ الْكَبِيرُ کا مطلب ’بڑا گھر‘ ہے۔ دوسرے لفظ پر ال نہ ہو تو الْبَيْتُ كَبِيرٌ کا مطلب ’گھر بڑا ہے‘ بنتا ہے۔"
+      }
     },
-    "ayah": {
-      "surah": 14,
-      "ayah": 24,
-      "label": "Ibrahim 14:24",
-      "ar": "كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ",
-      "en": "A good word is like a good tree.",
-      "ur": "ایک پاکیزہ بات ایک پاکیزہ درخت کی مثل ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/014024.mp3"
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "ar": "الْبَيْتُ الْكَبِيرُ / الْبَيْتُ كَبِيرٌ",
+        "en": "The big house / The house is big",
+        "ur": "بڑا گھر / گھر بڑا ہے"
+      },
+      "examples": [
+        {
+          "ar": "الْبَيْتُ الْكَبِيرُ",
+          "en": "the big house",
+          "ur": "بڑا گھر",
+          "ar_plain": "البيت الكبير",
+          "translit": "al-baytu al-kabīru"
+        },
+        {
+          "ar": "الْبَيْتُ كَبِيرٌ",
+          "en": "the house is big",
+          "ur": "گھر بڑا ہے",
+          "ar_plain": "البيت كبير",
+          "translit": "al-baytu kabīrun"
+        }
+      ],
+      "explanation": {
+        "en": "Watch the adjective: الْكَبِيرُ continues the phrase; كَبِيرٌ completes a sentence.",
+        "ur": "صفت کو دیکھیں: الْكَبِيرُ ترکیب کو جاری رکھتا ہے؛ كَبِيرٌ جملہ مکمل کرتا ہے۔"
+      }
     },
-    "highlighted_word_indices": [
-      0,
-      1,
-      2,
-      3
-    ],
-    "noor_explanation": {
-      "en": "كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ — 'A good word is like a good tree.' Allah pairs two feminine nouns — كَلِمَة and شَجَرَة — each with the same feminine adjective طَيِّبَةٌ. If you had written طَيِّبٌ (masculine), the grammar would break. Allah's words are exact. Now so is your reading.",
-      "ur": "كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ — 'ایک پاکیزہ بات ایک پاکیزہ درخت کی مثل ہے'۔ اللہ دو مؤنث اسموں — كَلِمَة اور شَجَرَة — کو ایک ہی مؤنث صفت طَيِّبَةٌ کے ساتھ جوڑتا ہے۔ اگر طَيِّبٌ (مذکر) لکھتے تو گرامر ٹوٹ جاتی۔ اللہ کے الفاظ بالکل درست ہیں۔ اب آپ کی پڑھائی بھی۔"
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "ar": "الْكِتَابُ الْجَدِيدُ / الْكِتَابُ جَدِيدٌ",
+        "en": "The new book / The book is new",
+        "ur": "نئی کتاب / کتاب نئی ہے"
+      },
+      "examples": [
+        {
+          "ar": "الْكِتَابُ الْجَدِيدُ",
+          "en": "the new book",
+          "ur": "نئی کتاب",
+          "ar_plain": "الكتاب الجديد",
+          "translit": "al-kitābu al-jadīdu"
+        },
+        {
+          "ar": "الْكِتَابُ جَدِيدٌ",
+          "en": "the book is new",
+          "ur": "کتاب نئی ہے",
+          "ar_plain": "الكتاب جديد",
+          "translit": "al-kitābu jadīdun"
+        }
+      ],
+      "explanation": {
+        "en": "The same difference works with other adjective pairs.",
+        "ur": "یہی فرق دوسری صفتی ترکیبوں میں بھی ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "ar": "الرَّجُلُ الْكَرِيمُ / الرَّجُلُ كَرِيمٌ",
+        "en": "The generous man / The man is generous",
+        "ur": "سخی آدمی / آدمی سخی ہے"
+      },
+      "examples": [
+        {
+          "ar": "الرَّجُلُ الْكَرِيمُ",
+          "en": "the generous man",
+          "ur": "سخی آدمی",
+          "ar_plain": "الرجل الكريم",
+          "translit": "ar-rajulu al-karīmu"
+        },
+        {
+          "ar": "الرَّجُلُ كَرِيمٌ",
+          "en": "the man is generous",
+          "ur": "آدمی سخی ہے",
+          "ar_plain": "الرجل كريم",
+          "translit": "ar-rajulu karīmun"
+        }
+      ],
+      "explanation": {
+        "en": "Both forms are correct, but they communicate different meanings.",
+        "ur": "دونوں صورتیں درست ہیں، مگر ان کے معنی مختلف ہیں۔"
+      }
+    },
+    {
+      "body": {
+        "en": "If both words carry ال, read them together as one definite noun phrase. If only the first carries ال, read the second as information about it: a nominal sentence.",
+        "ur": "اگر دونوں لفظوں پر ال ہو تو انہیں ایک معرفہ صفتی ترکیب سمجھیں۔ اگر صرف پہلے لفظ پر ال ہو تو دوسرا لفظ اس کے بارے میں خبر دیتا ہے: یہ جملہ اسمیہ ہے۔"
+      },
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "ar": "اِخْتِبَارٌ سَرِيعٌ",
+        "en": "A quick reading test",
+        "ur": "فوری پہچان"
+      },
+      "examples": [
+        {
+          "ar": "الْمَسْجِدُ الْقَرِيبُ",
+          "en": "the nearby mosque",
+          "ur": "قریبی مسجد",
+          "ar_plain": "المسجد القريب",
+          "translit": "al-masjidu al-qarību"
+        },
+        {
+          "ar": "الْمَسْجِدُ قَرِيبٌ",
+          "en": "the mosque is near",
+          "ur": "مسجد قریب ہے",
+          "ar_plain": "المسجد قريب",
+          "translit": "al-masjidu qarībun"
+        }
+      ]
     }
-  },
-  "close": {
-    "noor_message": {
-      "en": "You can now match a familiar feminine singular noun with a feminine singular adjective.",
-      "ur": "اب آپ مانوس واحد مؤنث اسم کے ساتھ واحد مؤنث صفت ملا سکتے ہیں۔"
-    }
-  }
+  ],
+  "schema_version": "1.0"
 }

@@ -5,7 +5,7 @@ const AL_FALAQ_COVERAGE = [
   { key: "قل", lesson: "chapter-16-lesson-04.json", exerciseId: "ch16-l04-ex09" },
   { key: "اعوذ", lesson: "chapter-18-lesson-06.json", exerciseId: "ch18-l06-ex09" },
   { key: "ب", lesson: "chapter-02-lesson-14.json", exerciseId: "ch02-l14-ex01", componentOf: "برب" },
-  { key: "رب", lesson: "chapter-03-lesson-02.json", exerciseId: "ch03-l02-ex09" },
+  { key: "رب", lesson: "chapter-03-lesson-03.json", exerciseId: "ch03-l02-ex09" },
   { key: "الفلق", lesson: "chapter-19-lesson-06.json", exerciseId: "ch19-l06-ex01" },
   { key: "من", lesson: "chapter-02-lesson-07.json", exerciseId: "ch02-l07-ex01" },
   { key: "شر", lesson: "chapter-18-lesson-06.json", exerciseId: "ch18-l06-ex09" },

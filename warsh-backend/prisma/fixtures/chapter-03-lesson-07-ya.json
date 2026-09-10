@@ -1,427 +1,504 @@
 {
-  "schema_version": "1.0",
-  "template": "STANDARD",
-  "_meta": {
-    "_note": "Chapter 3, Lesson 4 — beginner vocative particle يَا.",
-    "chapter_order": 3,
-    "lesson_order": 7,
-    "estimated_minutes": 9,
-    "xp_reward": 10
-  },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 21,
-      "label": "Al-Baqarah 2:21",
-      "ar": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ",
-      "en": "O humanity! Worship your Lord who created you.",
-      "ur": "اے لوگو! اپنے رب کی عبادت کرو جس نے تمہیں پیدا کیا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002021.mp3"
+      "ar": "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",
+      "en": "In the name of Allah, the Most Gracious, the Most Merciful.",
+      "ur": "اللہ کے نام سے جو بڑا مہربان، نہایت رحم کرنے والا ہے۔",
+      "ayah": 1,
+      "label": "Al-Fatiha 1:1",
+      "surah": 1,
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001001.mp3"
     },
+    "autoplay": false,
     "noor_intro": {
-      "en": "يَا is the Arabic word used to call or address someone directly.",
-      "ur": "عربی میں کسی کو براہِ راست پکارنے کے لیے يَا استعمال ہوتا ہے۔"
-    },
-    "autoplay": true
-  },
-  "discover_cards": [
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "يَا — O! (Vocative)",
-        "ar": "يَا — حرف النداء",
-        "ur": "يَا — اے! (ندا)"
-      },
-      "explanation": {
-        "en": "يَا is used to call or address someone directly — like 'O!' or 'Hey!'.\n\nيَا رَبِّ = O my Lord!\nyَا مُحَمَّدُ = O Muhammad!\n\nImportant: When يَا precedes a name, the tanween disappears from that name.",
-        "ur": "يَا کسی کو بلانے یا مخاطب کرنے کے لیے ہوتا ہے — جیسے 'اے!' یا 'یا!'۔\n\nيَا رَبِّ = اے میرے رب!\nyَا مُحَمَّدُ = اے محمد!\n\nاہم: جب يَا کسی نام سے پہلے آتا ہے تو اس نام کی تنوین ختم ہو جاتی ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَا رَبِّ",
-        "ar_plain": "يا رب",
-        "translit": "yā rabbi",
-        "en": "O my Lord!",
-        "ur": "اے میرے رب!"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ya-rabbi.mp3",
-      "explanation": {
-        "en": "يَا + رَبِّ (my Lord — ي attached = my). One of the most common duas in the Quran and in our speech.",
-        "ur": "يَا + رَبِّ (میرا رب — ي لگا = میرا)۔ قرآن اور ہماری بولچال میں سب سے عام دعاؤں میں سے ایک۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "يا رب"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَا أُسْتَاذُ",
-        "ar_plain": "يا أستاذ",
-        "translit": "yā ustādhu",
-        "en": "O Teacher!",
-        "ur": "اے استاد!"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ya-ustaadh.mp3",
-      "explanation": {
-        "en": "أُسْتَاذٌ (a teacher) → يَا أُسْتَاذُ (O Teacher!). Tanween ٌ disappears after يَا.",
-        "ur": "أُسْتَاذٌ (ایک استاد) → يَا أُسْتَاذُ (اے استاد!)۔ يَا کے بعد تنوین ٌ غائب ہو جاتی ہے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "يا أستاذ"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَا وَلَدُ",
-        "ar_plain": "يا ولد",
-        "translit": "yā waladu",
-        "en": "O boy! / O child!",
-        "ur": "اے لڑکے!"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ya-walad.mp3",
-      "introduces_vocab": {
-        "ar_plain": "يا ولد"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَا أَبِي",
-        "ar_plain": "يا أبي",
-        "translit": "yā abī",
-        "en": "O my father!",
-        "ur": "اے میرے والد!"
-      },
-      "explanation": {
-        "en": "Use يَا before the person you are calling.",
-        "ur": "جس شخص کو پکارنا ہو اس سے پہلے يَا استعمال کریں۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَا أُمِّي",
-        "ar_plain": "يا أمي",
-        "translit": "yā ummī",
-        "en": "O my mother!",
-        "ur": "اے میری والدہ!"
-      },
-      "explanation": {
-        "en": "The calling particle stays يَا.",
-        "ur": "پکارنے کا حرف يَا ہی رہتا ہے۔"
-      }
-    },
-    {
-      "type": "CONTRAST",
-      "concept": {
-        "ar": "قَبْلَ يَا وَبَعْدَهَا",
-        "en": "Before and after يَا",
-        "ur": "يَا سے پہلے اور بعد"
-      },
-      "explanation": {
-        "en": "When directly calling this noun with يَا, its tanween disappears.",
-        "ur": "اس اسم کو يَا کے ساتھ براہِ راست پکارتے وقت اس کی تنوین ختم ہو جاتی ہے۔"
-      },
-      "examples": [
-        {
-          "ar": "أُسْتَاذٌ",
-          "ar_plain": "أستاذ",
-          "translit": "ustādhun",
-          "en": "a teacher",
-          "ur": "ایک استاد"
-        },
-        {
-          "ar": "يَا أُسْتَاذُ",
-          "ar_plain": "يا أستاذ",
-          "translit": "yā ustādhu",
-          "en": "O teacher!",
-          "ur": "اے استاد!"
-        }
-      ]
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "ar": "قَاعِدَةٌ مُبَسَّطَةٌ",
-        "en": "A beginner rule",
-        "ur": "ابتدائی اصول"
-      },
-      "body": {
-        "en": "For these familiar singular examples, place يَا before the person and remove tanween. More vocative patterns come later.",
-        "ur": "ان مانوس واحد مثالوں میں شخص سے پہلے يَا لگائیں اور تنوین ہٹا دیں۔ ندا کے مزید اصول بعد میں آئیں گے۔"
-      },
-      "examples": [
-        {
-          "ar": "يَا أُسْتَاذُ",
-          "ar_plain": "يا أستاذ",
-          "translit": "yā ustādhu",
-          "en": "O teacher!",
-          "ur": "اے استاد!"
-        }
-      ]
+      "en": "Review the two Idafa lessons, ownership questions with لِمَنْ, direct calling with يَا, and the structure of بِسْمِ اللَّهِ.",
+      "ur": "اضافت کے دونوں اسباق، لِمَنْ کے ساتھ ملکیت کے سوال، يَا کے ساتھ ندا، اور بِسْمِ اللَّهِ کی ساخت دہرائیں۔"
     }
-  ],
+  },
+  "_meta": {
+    "_note": "Chapter 3, Lesson 7 — cumulative review of Idafa, لِمَنْ, يَا, and بِسْمِ اللَّهِ.",
+    "xp_reward": 20,
+    "lesson_order": 7,
+    "chapter_order": 3,
+    "estimated_minutes": 12
+  },
+  "close": {
+    "noor_message": {
+      "en": "You reviewed Idafa, لِمَنْ, يَا, and بِسْمِ اللَّهِ. You are ready for the Chapter 3 final test.",
+      "ur": "آپ نے اضافت، لِمَنْ، يَا، اور بِسْمِ اللَّهِ دہرایا۔ اب آپ باب 3 کے آخری امتحان کے لیے تیار ہیں۔"
+    }
+  },
+  "reveal": {
+    "ayah": {
+      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "en": "All praise is for Allah, Lord of all the worlds.",
+      "ur": "تمام تعریف اللہ کے لیے ہے جو سارے جہانوں کا رب ہے۔",
+      "ayah": 2,
+      "label": "Al-Fatiha 1:2",
+      "surah": 1,
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
+    },
+    "concept_name": {
+      "ar": "الإِضَافَة فِي الْقُرْآن",
+      "en": "الإضافة in the Quran",
+      "ur": "قرآن میں اضافہ"
+    },
+    "noor_explanation": {
+      "en": "رَبِّ الْعَالَمِينَ is an Idafa: رَبِّ is the first noun and الْعَالَمِينَ is the second. This review confirms the Chapter 3 patterns without claiming grammar not yet taught.",
+      "ur": "رَبِّ الْعَالَمِينَ ایک اضافت ہے: رَبِّ پہلا اسم اور الْعَالَمِينَ دوسرا اسم ہے۔ یہ جائزہ صرف باب 3 میں سکھائے گئے نمونوں کی تصدیق کرتا ہے۔"
+    },
+    "highlighted_word_indices": [
+      2
+    ]
+  },
+  "template": "REVIEW",
   "exercises": [
     {
-      "id": "ch03-l07-ex01",
+      "id": "ch3-l4-ex1",
       "type": "TAP_TRANSLATION",
-      "xp_value": 1,
       "prompt": {
-        "ar": "يَا رَبِّ",
-        "ar_plain": "يا رب",
-        "translit": "yā rabbi",
-        "en": "O my Lord!",
-        "ur": "اے میرے رب!"
+        "ar": "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",
+        "en": "In the name of Allah, the Most Gracious, the Most Merciful.",
+        "ur": "اللہ کے نام سے جو بڑا مہربان، نہایت رحم کرنے والا ہے۔",
+        "ar_plain": "بسم الله الرحمن الرحيم",
+        "translit": "—"
       },
       "options": [
         {
-          "en": "O my Lord!",
-          "ur": "اے میرے رب!"
+          "en": "In the name of Allah, the Most Gracious, the Most Merciful.",
+          "ur": "اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے۔"
         },
         {
-          "en": "my Lord",
-          "ur": "میرا رب"
+          "en": "In the name of Allah, the Lord of worlds.",
+          "ur": "اللہ کے نام سے جو تمام جہانوں کا رب ہے۔"
         },
         {
-          "en": "whose Lord?",
-          "ur": "کس کا رب؟"
+          "en": "Praise be to Allah, the Most Gracious.",
+          "ur": "حمد اللہ کے لیے ہے جو بڑا مہربان ہے۔"
         },
         {
-          "en": "the Lord",
-          "ur": "رب"
+          "en": "With the mercy of Allah, the Most Merciful.",
+          "ur": "اللہ کی رحمت سے جو سب سے زیادہ رحم کرنے والا ہے۔"
         }
       ],
+      "xp_value": 5,
       "correct_index": 0
     },
     {
-      "id": "ch03-l07-ex02",
+      "id": "ch3-l4-ex2",
       "type": "TAP_TRANSLATION",
-      "xp_value": 1,
       "prompt": {
-        "ar": "يَا أُسْتَاذُ",
-        "ar_plain": "يا أستاذ",
-        "translit": "yā ustādhu",
-        "en": "O teacher!",
-        "ur": "اے استاد!"
+        "ar": "أَهْلُ الْجَنَّةِ",
+        "en": "the people of Paradise",
+        "ur": "جنت والے",
+        "ar_plain": "أهل الجنة",
+        "translit": "—"
       },
       "options": [
         {
-          "en": "a teacher",
-          "ur": "ایک استاد"
+          "en": "أَهْلُ الْجَنَّةِ",
+          "ur": "أَهْلُ الْجَنَّةِ"
         },
         {
-          "en": "O teacher!",
-          "ur": "اے استاد!"
+          "en": "أَهْلُ الدُّنْيَا",
+          "ur": "أَهْلُ الدُّنْيَا"
         },
         {
-          "en": "the teacher's",
-          "ur": "استاد کا"
+          "en": "سَبِيلُ الْجَنَّةِ",
+          "ur": "سَبِيلُ الْجَنَّةِ"
         },
         {
-          "en": "whose teacher?",
-          "ur": "کس کا استاد؟"
+          "en": "بَابُ الْجَنَّةِ",
+          "ur": "بَابُ الْجَنَّةِ"
         }
       ],
-      "correct_index": 1
+      "xp_value": 5,
+      "correct_index": 0
     },
     {
-      "id": "ch03-l07-ex03",
-      "type": "TRUE_FALSE",
-      "xp_value": 1,
-      "statement": {
-        "ar": "يَا لِلنِّدَاءِ",
-        "en": "يَا is used when directly calling someone.",
-        "ur": "يَا کسی کو براہِ راست پکارنے کے لیے استعمال ہوتا ہے۔"
+      "id": "ch3-l4-ex3",
+      "hint": {
+        "en": "the student's book",
+        "ur": "طالب کی کتاب"
       },
-      "correct_answer": true,
+      "mode": "TAP",
+      "type": "FILL_BLANK",
+      "options": [
+        {
+          "ar": "الطَّالِبِ",
+          "en": "الطَّالِبِ",
+          "ur": "الطَّالِبِ",
+          "ar_plain": "الطالب",
+          "translit": "—"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "en": "الطَّالِبُ",
+          "ur": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "—"
+        },
+        {
+          "ar": "طَالِبٌ",
+          "en": "طَالِبٌ",
+          "ur": "طَالِبٌ",
+          "ar_plain": "طالب",
+          "translit": "—"
+        },
+        {
+          "ar": "الطَّالِبَ",
+          "en": "الطَّالِبَ",
+          "ur": "الطَّالِبَ",
+          "ar_plain": "الطالب",
+          "translit": "—"
+        }
+      ],
+      "xp_value": 5,
+      "sentence_ar": "In idafa: كِتَابُ ___",
+      "correct_answer": {
+        "ar": "الطَّالِبِ",
+        "en": "الطَّالِبِ",
+        "ur": "الطَّالِبِ",
+        "ar_plain": "الطالب",
+        "translit": "—"
+      },
       "explanation_on_wrong": {
-        "en": "Correct: يَا introduces a direct call.",
-        "ur": "درست: يَا براہِ راست پکارنے کے لیے آتا ہے۔"
+        "en": "مضاف إليه (second noun of idafa) ALWAYS takes kasra → الطَّالِبِ.",
+        "ur": "مضاف إليه (اضافہ کا دوسرا اسم) ہمیشہ کسرہ لیتا ہے → الطَّالِبِ۔"
       }
     },
     {
-      "id": "ch03-l07-ex04",
-      "type": "FILL_BLANK",
-      "xp_value": 1,
-      "mode": "TAP",
-      "sentence_ar": "___ أُسْتَاذُ",
+      "id": "ch3-l4-ex4",
       "hint": {
-        "en": "O teacher!",
-        "ur": "اے استاد!"
+        "en": "O Teacher! (choose the right form after يَا)",
+        "ur": "اے استاد! (يَا کے بعد صحیح شکل چنیں)"
       },
+      "mode": "TAP",
+      "type": "FILL_BLANK",
       "options": [
         {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
-          "ur": "اے"
+          "ar": "أُسْتَاذُ",
+          "en": "أُسْتَاذُ",
+          "ur": "أُسْتَاذُ",
+          "ar_plain": "أستاذ",
+          "translit": "—"
         },
         {
+          "ar": "أُسْتَاذٌ",
+          "en": "أُسْتَاذٌ",
+          "ur": "أُسْتَاذٌ",
+          "ar_plain": "أستاذ",
+          "translit": "—"
+        },
+        {
+          "ar": "الأُسْتَاذُ",
+          "en": "الأُسْتَاذُ",
+          "ur": "الأُسْتَاذُ",
+          "ar_plain": "الأستاذ",
+          "translit": "—"
+        },
+        {
+          "ar": "أُسْتَاذَ",
+          "en": "أُسْتَاذَ",
+          "ur": "أُسْتَاذَ",
+          "ar_plain": "أستاذ",
+          "translit": "—"
+        }
+      ],
+      "xp_value": 5,
+      "sentence_ar": "يَا ___",
+      "correct_answer": {
+        "ar": "أُسْتَاذُ",
+        "en": "أُسْتَاذُ",
+        "ur": "أُسْتَاذُ",
+        "ar_plain": "أستاذ",
+        "translit": "—"
+      },
+      "explanation_on_wrong": {
+        "en": "After يَا, tanween disappears: أُسْتَاذٌ → يَا أُسْتَاذُ.",
+        "ur": "يَا کے بعد تنوین غائب: أُسْتَاذٌ → يَا أُسْتَاذُ۔"
+      }
+    },
+    {
+      "id": "ch3-l4-ex5",
+      "type": "BUILD_SENTENCE",
+      "tiles": [
+        {
           "ar": "لِمَنْ",
+          "en": "لِمَنْ",
+          "ur": "لِمَنْ",
           "ar_plain": "لمن",
-          "translit": "liman",
-          "en": "whose",
-          "ur": "کس کا"
+          "translit": "—"
         },
         {
           "ar": "هٰذَا",
+          "en": "هٰذَا",
+          "ur": "هٰذَا",
           "ar_plain": "هذا",
-          "translit": "hādhā",
-          "en": "this",
-          "ur": "یہ"
+          "translit": "—"
         },
         {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fī",
-          "en": "in",
-          "ur": "میں"
+          "ar": "الْمَسْجِدُ",
+          "en": "الْمَسْجِدُ",
+          "ur": "الْمَسْجِدُ",
+          "ar_plain": "المسجد",
+          "translit": "—"
+        },
+        {
+          "ar": "أَيْنَ",
+          "en": "أَيْنَ",
+          "ur": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "—"
+        },
+        {
+          "ar": "مَسْجِدٌ",
+          "en": "مَسْجِدٌ",
+          "ur": "مَسْجِدٌ",
+          "ar_plain": "مسجد",
+          "translit": "—"
+        },
+        {
+          "ar": "مَنْ",
+          "en": "مَنْ",
+          "ur": "مَنْ",
+          "ar_plain": "من",
+          "translit": "—"
         }
       ],
-      "correct_answer": {
-        "ar": "يَا",
-        "ar_plain": "يا",
-        "translit": "yā",
-        "en": "O",
-        "ur": "اے"
+      "xp_value": 5,
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "target_translation": {
+        "en": "Build: 'Whose is this mosque?'",
+        "ur": "بنائیں: 'یہ مسجد کس کی ہے؟'"
       },
       "explanation_on_wrong": {
-        "en": "Use يَا to call the teacher.",
-        "ur": "استاد کو پکارنے کے لیے يَا استعمال کریں۔"
+        "en": "لِمَنْ (whose?) + هٰذَا (this) + الْمَسْجِدُ (the mosque). الْمَسْجِدُ is definite because it's a specific mosque.",
+        "ur": "لِمَنْ (کس کا؟) + هٰذَا (یہ) + الْمَسْجِدُ (مسجد)۔ الْمَسْجِدُ معرفہ ہے کیونکہ مخصوص مسجد مراد ہے۔"
       }
     },
     {
-      "id": "ch03-l07-ex05",
+      "id": "ch3-l4-ex6",
+      "type": "BUILD_SENTENCE",
+      "tiles": [
+        {
+          "ar": "رَحْمَةُ",
+          "en": "رَحْمَةُ",
+          "ur": "رَحْمَةُ",
+          "ar_plain": "رحمة",
+          "translit": "—"
+        },
+        {
+          "ar": "اللَّهِ",
+          "en": "اللَّهِ",
+          "ur": "اللَّهِ",
+          "ar_plain": "الله",
+          "translit": "—"
+        },
+        {
+          "ar": "رَحْمَةٌ",
+          "en": "رَحْمَةٌ",
+          "ur": "رَحْمَةٌ",
+          "ar_plain": "رحمة",
+          "translit": "—"
+        },
+        {
+          "ar": "اللَّهُ",
+          "en": "اللَّهُ",
+          "ur": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "—"
+        },
+        {
+          "ar": "مِنَ",
+          "en": "مِنَ",
+          "ur": "مِنَ",
+          "ar_plain": "من",
+          "translit": "—"
+        },
+        {
+          "ar": "فَضْلُ",
+          "en": "فَضْلُ",
+          "ur": "فَضْلُ",
+          "ar_plain": "فضل",
+          "translit": "—"
+        }
+      ],
+      "xp_value": 5,
+      "correct_order": [
+        0,
+        1
+      ],
+      "target_translation": {
+        "en": "Build the idafa: 'the mercy of Allah'",
+        "ur": "اضافہ بنائیں: 'اللہ کی رحمت'"
+      },
+      "explanation_on_wrong": {
+        "en": "رَحْمَةُ (mercy of — no tanween, مضاف) + اللَّهِ (Allah — kasra, مضاف إليه).",
+        "ur": "رَحْمَةُ (رحمت — بغیر تنوین، مضاف) + اللَّهِ (اللہ — کسرہ، مضاف إليه)۔"
+      }
+    },
+    {
+      "id": "ch3-l4-ex7",
+      "type": "TRUE_FALSE",
+      "xp_value": 5,
+      "statement": {
+        "ar": "في بِسْمِ اللَّهِ، البِ حرف جر بمعنى 'في'.",
+        "en": "In بِسْمِ اللَّهِ, the بِ is a preposition meaning 'in'.",
+        "ur": "بِسْمِ اللَّهِ میں بِ حرف جر ہے جس کا مطلب 'میں' ہے۔"
+      },
+      "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "Correct — بِ means 'in/with'. So بِسْمِ اللَّهِ = in (بِ) + name (اسْمِ, مضاف) + of Allah (اللَّهِ, مضاف إليه).",
+        "ur": "درست — بِ کا مطلب 'میں/کے ساتھ' ہے۔ لہذا بِسْمِ اللَّهِ = میں (بِ) + نام (اسْمِ، مضاف) + اللہ کا (اللَّهِ، مضاف إليه)۔"
+      }
+    },
+    {
+      "id": "ch3-l4-ex8",
       "type": "MATCHING",
-      "xp_value": 1,
+      "xp_value": 5,
       "left_column": [
         {
-          "ar": "يَا رَبِّ",
-          "ar_plain": "يا رب",
-          "translit": "yā rabbi",
-          "en": "O my Lord!",
-          "ur": "اے میرے رب!"
+          "ar": "يَوْمُ الْقِيَامَةِ",
+          "en": "Day of Resurrection",
+          "ur": "قیامت کا دن",
+          "ar_plain": "يوم القيامة",
+          "translit": "—"
         },
         {
-          "ar": "يَا أُسْتَاذُ",
-          "ar_plain": "يا أستاذ",
-          "translit": "yā ustādhu",
-          "en": "O teacher!",
-          "ur": "اے استاد!"
+          "ar": "مَلِكُ النَّاسِ",
+          "en": "King of mankind",
+          "ur": "بنی نوع انسان کا بادشاہ",
+          "ar_plain": "ملك الناس",
+          "translit": "—"
         },
         {
-          "ar": "يَا وَلَدُ",
-          "ar_plain": "يا ولد",
-          "translit": "yā waladu",
-          "en": "O boy!",
-          "ur": "اے لڑکے!"
+          "ar": "فَضْلُ اللَّهِ",
+          "en": "the grace of Allah",
+          "ur": "اللہ کا فضل",
+          "ar_plain": "فضل الله",
+          "translit": "—"
+        },
+        {
+          "ar": "نُورُ السَّمَاءِ",
+          "en": "the light of the sky",
+          "ur": "آسمان کی روشنی",
+          "ar_plain": "نور السماء",
+          "translit": "—"
+        },
+        {
+          "ar": "عَبْدُ اللَّهِ",
+          "en": "servant of Allah",
+          "ur": "اللہ کا بندہ",
+          "ar_plain": "عبد الله",
+          "translit": "—"
+        },
+        {
+          "ar": "أَهْلُ الْجَنَّةِ",
+          "en": "people of Paradise",
+          "ur": "جنت کے لوگ",
+          "ar_plain": "أهل الجنة",
+          "translit": "—"
         }
       ],
       "right_column": [
         {
-          "en": "O boy!",
-          "ur": "اے لڑکے!"
+          "en": "King of mankind",
+          "ur": "بنی نوع انسان کا بادشاہ"
         },
         {
-          "en": "O my Lord!",
-          "ur": "اے میرے رب!"
+          "en": "the grace of Allah",
+          "ur": "اللہ کا فضل"
         },
         {
-          "en": "O teacher!",
-          "ur": "اے استاد!"
+          "en": "the light of the sky",
+          "ur": "آسمان کی روشنی"
+        },
+        {
+          "en": "servant of Allah",
+          "ur": "اللہ کا بندہ"
+        },
+        {
+          "en": "people of Paradise",
+          "ur": "جنت کے لوگ"
+        },
+        {
+          "en": "Day of Resurrection",
+          "ur": "قیامت کا دن"
         }
       ],
       "correct_pairs": [
         [
           0,
-          1
+          5
         ],
         [
           1,
-          2
+          0
         ],
         [
           2,
-          0
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          4
         ]
       ]
+    }
+  ],
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "ar": "الفصل الثالث — القواعد الأساسية",
+        "en": "Chapter 3 — Key Rules",
+        "ur": "فصل 3 — اہم اصول"
+      },
+      "explanation": {
+        "en": "1. IDAFA (الإضافة): Two nouns. First (مضاف) loses tanween. Second (مضاف إليه) takes kasra.\n   كِتَابُ الطَّالِبِ | بَيْتُ اللَّهِ | رَبُّ الْعَالَمِينَ\n\n2. لِمَنْ = 'Whose?' — asks about ownership\n   لِمَنْ هٰذَا الْكِتَابُ؟ — Whose is this book?\n\n3. يَا = 'O!' — vocative; tanween disappears after يَا\n   يَا رَبِّ | يَا أُسْتَاذُ\n\n4. بِسْمِ اللَّهِ = بِ (in) + اسْمِ (name, مضاف) + اللَّهِ (Allah, مضاف إليه)",
+        "ur": "1. اضافہ: دو اسم۔ پہلا (مضاف) تنوین کھوتا ہے۔ دوسرا (مضاف إليه) کسرہ لیتا ہے۔\n2. لِمَنْ = 'کس کا؟' — ملکیت کے بارے میں پوچھتا ہے\n3. يَا = 'اے!' — ندا؛ يَا کے بعد تنوین ختم\n4. بِسْمِ اللَّهِ = بِ + اسْمِ (مضاف) + اللَّهِ (مضاف إليه)"
+      }
     },
     {
-      "id": "ch03-l07-ex06",
-      "type": "BUILD_SENTENCE",
-      "xp_value": 1,
-      "target_translation": {
-        "en": "Build: O teacher!",
-        "ur": "بنائیں: اے استاد!"
+      "body": {
+        "en": "مضاف (first noun): No tanween. Ends in -u, -i, or -a depending on sentence role.\nمضاف إليه (second noun): ALWAYS ends in kasra ِ.\n\nExamples from the Quran:\n• رَبُّ الْعَالَمِينَ — Lord of the worlds\n• مَلِكِ النَّاسِ — King of mankind\n• كَلَامُ اللَّهِ — the speech of Allah\n• يَوْمُ الْقِيَامَةِ — Day of Resurrection\n• سَبِيلُ اللَّهِ — path of Allah\n• أَهْلُ الْجَنَّةِ — people of Paradise",
+        "ur": "مضاف (پہلا اسم): تنوین نہیں۔ جملے میں کردار کے مطابق -u, -i یا -a پر ختم ہوتا ہے۔\nمضاف إليه (دوسرا اسم): ہمیشہ کسرہ ِ پر ختم ہوتا ہے۔"
       },
-      "tiles": [
-        {
-          "ar": "يَا",
-          "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
-          "ur": "اے"
-        },
-        {
-          "ar": "أُسْتَاذُ",
-          "ar_plain": "أستاذ",
-          "translit": "ustādhu",
-          "en": "teacher",
-          "ur": "استاد"
-        },
-        {
-          "ar": "لِمَنْ",
-          "ar_plain": "لمن",
-          "translit": "liman",
-          "en": "whose",
-          "ur": "کس کا"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "explanation_on_wrong": {
-        "en": "The call begins with يَا: يَا أُسْتَاذُ.",
-        "ur": "ندا يَا سے شروع ہوتی ہے: يَا أُسْتَاذُ۔"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "ar": "الإضافة — مرجع سريع",
+        "en": "Idafa Quick Reference",
+        "ur": "اضافہ — فوری حوالہ"
+      }
+    },
+    {
+      "text": {
+        "ar": "لِمَنِ الْمُلْكُ الْيَوْمَ؟ لِلَّهِ الْوَاحِدِ الْقَهَّارِ",
+        "en": "Whose is the dominion today? It belongs to Allah, the One, the Overpowering.",
+        "ur": "آج بادشاہت کس کی ہے؟ اللہ واحد و قہار کی۔",
+        "ar_plain": "لمن الملك اليوم للله الواحد القهار",
+        "translit": "—"
+      },
+      "type": "SENTENCE",
+      "source": {
+        "ayah": 16,
+        "label": "Ghafir 40:16",
+        "surah": 40
       }
     }
   ],
-  "reveal": {
-    "concept_name": {
-      "ar": "يَا فِي الْقُرْآن",
-      "en": "يَا in the Quran",
-      "ur": "قرآن میں يَا"
-    },
-    "ayah": {
-      "surah": 2,
-      "ayah": 21,
-      "label": "Al-Baqarah 2:21",
-      "ar": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ",
-      "en": "O humanity! Worship your Lord who created you.",
-      "ur": "اے لوگو! اپنے رب کی عبادت کرو جس نے تمہیں پیدا کیا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002021.mp3"
-    },
-    "highlighted_word_indices": [
-      0
-    ],
-    "highlighted_words": [
-      "يَا"
-    ],
-    "noor_explanation": {
-      "en": "The ayah begins with يَا because people are being addressed directly.",
-      "ur": "آیت يَا سے شروع ہوتی ہے کیونکہ لوگوں کو براہِ راست مخاطب کیا گیا ہے۔"
-    }
-  },
-  "close": {
-    "noor_message": {
-      "en": "You can now use يَا to call or address someone directly.",
-      "ur": "اب آپ کسی کو براہِ راست پکارنے یا مخاطب کرنے کے لیے يَا استعمال کر سکتے ہیں۔"
-    }
-  }
+  "schema_version": "1.0"
 }

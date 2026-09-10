@@ -1,598 +1,153 @@
 {
-  "schema_version": "1.0",
-  "template": "STANDARD",
-  "_meta": {
-    "_note": "Chapter 3, display lesson 2 — Idafa application in useful and Quranic phrases.",
-    "chapter_order": 3,
-    "lesson_order": 6,
-    "estimated_minutes": 11,
-    "xp_reward": 10
-  },
   "hook": {
     "ayah": {
-      "surah": 1,
-      "ayah": 2,
-      "label": "Al-Fatiha 1:2",
-      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
-      "en": "All praise is for Allah, Lord of all the worlds.",
-      "ur": "تمام تعریف اللہ کے لیے ہے جو سارے جہانوں کا رب ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
+      "ar": "فَسَلِّمُوا عَلَىٰ أَنْفُسِكُمْ تَحِيَّةً مِّنْ عِندِ اللَّهِ",
+      "en": "Then greet one another with a greeting from Allah.",
+      "ur": "پس اپنے لوگوں کو سلام کرو، اللہ کی طرف سے ایک مبارک سلام۔",
+      "ayah": 61,
+      "label": "An-Nur 24:61",
+      "surah": 24,
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/024061.mp3"
     },
+    "autoplay": true,
     "noor_intro": {
-      "en": "You know the structure. Now recognize Idafa in phrases you read in the Quran: Lord of the worlds, King of mankind, and the mercy of Allah.",
-      "ur": "آپ اضافت کی ساخت جانتے ہیں۔ اب اسے قرآنی ترکیبوں میں پہچانیں: جہانوں کا رب، انسانوں کا بادشاہ، اور اللہ کی رحمت۔"
-    },
-    "autoplay": true
+      "en": "Your first spoken lesson begins with the greeting Allah taught this Ummah to love: السلام عليكم.",
+      "ur": "آپ کا پہلا بولنے والا درس اس سلام سے شروع ہوتا ہے جس سے اللہ نے اس امت کو محبت دی: السلام عليكم۔"
+    }
   },
-  "discover_cards": [
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "ar": "الإِضَافَة فِي العِبَارَات",
-        "en": "Idafa in useful phrases",
-        "ur": "مفید ترکیبوں میں اضافت"
-      },
-      "explanation": {
-        "en": "The same two-noun rule appears in daily and Quranic phrases. Read each phrase as one connected meaning.",
-        "ur": "یہی دو اسموں کا اصول روزمرہ اور قرآنی ترکیبوں میں آتا ہے۔ ہر ترکیب کو ایک مربوط معنی کے طور پر پڑھیں۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "رَبُّ الْعَالَمِينَ",
-        "ar_plain": "رب العالمين",
-        "translit": "rabbu-l-'ālamīna",
-        "en": "Lord of the worlds",
-        "ur": "جہانوں کا رب"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/rabb-al-aalameen.mp3",
-      "explanation": {
-        "en": "This is in Al-Fatiha 1:2 — رَبِّ الْعَالَمِينَ. رَبّ (Lord) is in idafa with الْعَالَمِينَ (the worlds). The same pattern you just learned.",
-        "ur": "یہ الفاتحہ 1:2 میں ہے — رَبِّ الْعَالَمِينَ۔ رَبّ (رب) الْعَالَمِينَ (جہانوں) کے ساتھ اضافہ میں ہے۔ وہی نمونہ جو آپ نے ابھی سیکھا۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "رب العالمين"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "مَلِكُ النَّاسِ",
-        "ar_plain": "ملك الناس",
-        "translit": "maliku-n-nāsi",
-        "en": "King of mankind",
-        "ur": "انسانوں کا بادشاہ"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/malik-alnaas.mp3",
-      "explanation": {
-        "en": "From Surah An-Nas (114:2) — مَلِكِ النَّاسِ. Another idafa in the Quran you already know.",
-        "ur": "سورۃ الناس (114:2) سے — مَلِكِ النَّاسِ۔ ایک اور قرآنی اضافہ جو آپ پہلے سے جانتے ہیں۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "ملك الناس"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "نُورُ السَّمَاءِ",
-        "ar_plain": "نور السماء",
-        "translit": "nūru-s-samā'i",
-        "en": "the light of the sky",
-        "ur": "آسمان کی روشنی"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/noor-alsamaa.mp3",
-      "introduces_vocab": {
-        "ar_plain": "نور السماء"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "رَحْمَةُ اللَّهِ",
-        "ar_plain": "رحمة الله",
-        "translit": "rahmatu-l-lāhi",
-        "en": "the mercy of Allah",
-        "ur": "اللہ کی رحمت"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/rahmat-allah.mp3",
-      "explanation": {
-        "en": "رَحْمَةُ اللَّهِ — another idafa. رَحْمَةُ (mercy of, مضاف — no tanween) + اللَّهِ (Allah, مضاف إليه — kasra). وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ is how we end the salaam.",
-        "ur": "رَحْمَةُ اللَّهِ — ایک اور اضافہ۔ رَحْمَةُ (رحمت، مضاف — بغیر تنوین) + اللَّهِ (اللہ، مضاف إليه — کسرہ)۔ السلام کے آخر میں وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ کہتے ہیں۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "رحمة الله"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "نِعْمَةُ اللَّهِ",
-        "ar_plain": "نعمة الله",
-        "translit": "ni'matu-l-lāhi",
-        "en": "the blessing of Allah",
-        "ur": "اللہ کی نعمت"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/nima-allah.mp3",
-      "explanation": {
-        "en": "وَإِن تَعُدُّوا نِعْمَةَ اللَّهِ لَا تُحْصُوهَا — 'If you count the blessings of Allah, you cannot enumerate them.' (Ibrahim 14:34). نِعْمَةُ اللَّهِ — idafa again.",
-        "ur": "وَإِن تَعُدُّوا نِعْمَةَ اللَّهِ لَا تُحْصُوهَا — 'اگر اللہ کی نعمتیں گنو تو گن نہیں سکتے'۔ (ابراہیم 14:34)۔ نِعْمَةُ اللَّهِ — پھر اضافہ۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "نعمة الله"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "فَضْلُ اللَّهِ",
-        "ar_plain": "فضل الله",
-        "translit": "fadlu-l-lāhi",
-        "en": "the grace/favour of Allah",
-        "ur": "اللہ کا فضل"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/fadl-allah.mp3",
-      "explanation": {
-        "en": "ذَٰلِكَ فَضْلُ اللَّهِ يُؤْتِيهِ مَن يَشَاءُ — 'That is the grace of Allah; He gives it to whom He wills.' فَضْلُ اللَّهِ — idafa.",
-        "ur": "ذَٰلِكَ فَضْلُ اللَّهِ يُؤْتِيهِ مَن يَشَاءُ — 'یہ اللہ کا فضل ہے، وہ جسے چاہے دے'۔ فَضْلُ اللَّهِ — اضافہ۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "فضل الله"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "عَبْدُ اللَّهِ",
-        "ar_plain": "عبد الله",
-        "translit": "'abdu-l-lāhi",
-        "en": "servant/slave of Allah",
-        "ur": "اللہ کا بندہ"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/abd-allah.mp3",
-      "explanation": {
-        "en": "عَبْدُ اللَّهِ is one of the most beloved names to Allah — Abdullah. عَبْدٌ (servant) in idafa with اللَّهِ. Also: عَبْدُ الرَّحْمٰنِ, عَبْدُ الرَّحِيمِ — all idafa with divine names.",
-        "ur": "عَبْدُ اللَّهِ اللہ کو سب سے پیارے ناموں میں سے ایک ہے — عبداللہ۔ عَبْدٌ (بندہ) اللَّهِ کے ساتھ اضافہ میں۔ عَبْدُ الرَّحْمٰنِ، عَبْدُ الرَّحِيمِ — سب الہی ناموں کے ساتھ اضافہ ہے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "عبد الله"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "مَدِينَةُ النَّبِيِّ",
-        "ar_plain": "مدينة النبي",
-        "translit": "madīnatu-n-nabiyyi",
-        "en": "the city of the Prophet",
-        "ur": "نبی کا شہر"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/madinah-alnabbi.mp3",
-      "explanation": {
-        "en": "مَدِينَةُ النَّبِيِّ — the City of the Prophet. You know this phrase — it is Al-Madinah. Now you know its grammar.",
-        "ur": "مَدِينَةُ النَّبِيِّ — نبی کا شہر۔ آپ یہ جملہ جانتے ہیں — یہ المدینہ ہے۔ اب آپ اس کی گرامر بھی جانتے ہیں۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "مدينة النبي"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "بَيْتُ اللَّهِ",
-        "ar_plain": "بيت الله",
-        "translit": "baytu-l-lāhi",
-        "en": "the House of Allah",
-        "ur": "اللہ کا گھر"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/bayt-allah.mp3",
-      "explanation": {
-        "en": "بَيْتُ اللَّهِ — the Ka'bah. The sacred house. بَيْتٌ (a house) → بَيْتُ (house of). اللَّهِ = of Allah.",
-        "ur": "بَيْتُ اللَّهِ — کعبہ۔ مقدس گھر۔ بَيْتٌ (ایک گھر) → بَيْتُ (گھر کا)۔ اللَّهِ = اللہ کا۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "بيت الله"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "The Idafa Rule — Summary",
-        "ar": "قاعدة الإضافة",
-        "ur": "اضافے کا اصول"
-      },
-      "body": {
-        "en": "1. First noun (مضاف): LOSES its tanween. Becomes -u/-i/-a at the end (depending on position).\n2. Second noun (مضاف إليه): ALWAYS takes kasra (ِ) ending.\n3. No word for 'of' is used — the two nouns together express it.\n\nكِتَابٌ → كِتَابُ الطَّالِبِ\nbَيْتٌ → بَيْتُ اللَّهِ",
-        "ur": "1. پہلا اسم (مضاف): تنوین کھو دیتا ہے۔ آخر میں -u/-i/-a بن جاتا ہے۔\n2. دوسرا اسم (مضاف إليه): ہمیشہ کسرہ (ِ) لیتا ہے۔\n3. 'کا/کی/کے' کے لیے کوئی الگ لفظ نہیں — دونوں اسم مل کر یہ معنی دیتے ہیں۔"
-      }
-    }
-  ],
-  "exercises": [
-    {
-      "id": "ch03-l06-ex01",
-      "type": "TAP_TRANSLATION",
-      "xp_value": 1,
-      "prompt": {
-        "ar": "كِتَابُ الطَّالِبِ",
-        "ar_plain": "كتاب الطالب",
-        "translit": "kitābu-t-tālibi",
-        "en": "the student's book",
-        "ur": "طالب کی کتاب"
-      },
-      "options": [
-        {
-          "en": "the student's book",
-          "ur": "طالب علم کی کتاب"
-        },
-        {
-          "en": "a student book",
-          "ur": "ایک طالب علم کی کتاب"
-        },
-        {
-          "en": "the teacher's pen",
-          "ur": "استاد کا قلم"
-        },
-        {
-          "en": "a book in the mosque",
-          "ur": "مسجد میں ایک کتاب"
-        }
-      ],
-      "correct_index": 0
-    },
-    {
-      "id": "ch03-l06-ex02",
-      "type": "TAP_TRANSLATION",
-      "xp_value": 1,
-      "prompt": {
-        "ar": "بَيْتُ اللَّهِ",
-        "ar_plain": "بيت الله",
-        "translit": "baytu-l-lāhi",
-        "en": "the House of Allah",
-        "ur": "اللہ کا گھر"
-      },
-      "options": [
-        {
-          "en": "the House of Allah",
-          "ur": "اللہ کا گھر"
-        },
-        {
-          "en": "a house near Allah",
-          "ur": "اللہ کے نزدیک گھر"
-        },
-        {
-          "en": "the man's house",
-          "ur": "آدمی کے گھر"
-        },
-        {
-          "en": "Lord of the worlds",
-          "ur": "جہانوں کا رب"
-        }
-      ],
-      "correct_index": 0
-    },
-    {
-      "id": "ch03-l06-ex03",
-      "type": "TAP_TRANSLATION",
-      "xp_value": 1,
-      "prompt": {
-        "ar": "مَدِينَةُ النَّبِيِّ",
-        "ar_plain": "مدينة النبي",
-        "translit": "madīnatu-n-nabiyyi",
-        "en": "the city of the Prophet",
-        "ur": "نبی کا شہر"
-      },
-      "options": [
-        {
-          "en": "the city of the Prophet",
-          "ur": "نبی کا شہر"
-        },
-        {
-          "en": "مَدِينَةٌ كَبِيرَةٌ",
-          "ur": "مَدِينَةٌ كَبِيرَةٌ"
-        },
-        {
-          "en": "بَيْتُ النَّبِيِّ",
-          "ur": "بَيْتُ النَّبِيِّ"
-        },
-        {
-          "en": "the light of the sky",
-          "ur": "آسمان کی روشنی"
-        }
-      ],
-      "correct_index": 0
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch03-l06-ex04",
-      "statement": {
-        "en": "In idafa, the first noun (مضاف) keeps its tanween.",
-        "ar": "في الإضافة، المضاف يحتفظ بتنوينه.",
-        "ur": "اضافہ میں مضاف اپنی تنوین رکھتا ہے۔"
-      },
-      "xp_value": 1,
-      "correct_answer": false,
-      "explanation_on_wrong": {
-        "en": "False — the first noun (مضاف) LOSES its tanween in idafa. كِتَابٌ → كِتَابُ الطَّالِبِ.",
-        "ur": "غلط — مضاف اضافہ میں اپنی تنوین کھو دیتا ہے۔ كِتَابٌ → كِتَابُ الطَّالِبِ۔"
-      }
-    },
-    {
-      "id": "ch03-l06-ex05",
-      "type": "FILL_BLANK",
-      "xp_value": 1,
-      "mode": "TAP",
-      "sentence_ar": "بَابُ ___",
-      "hint": {
-        "en": "the door of the mosque",
-        "ur": "مسجد کا دروازہ"
-      },
-      "options": [
-        {
-          "ar": "الْمَسْجِدِ",
-          "ar_plain": "المسجد",
-          "translit": "—",
-          "en": "الْمَسْجِدِ",
-          "ur": "الْمَسْجِدِ"
-        },
-        {
-          "ar": "الْمَسْجِدُ",
-          "ar_plain": "المسجد",
-          "translit": "—",
-          "en": "الْمَسْجِدُ",
-          "ur": "الْمَسْجِدُ"
-        },
-        {
-          "ar": "مَسْجِدٌ",
-          "ar_plain": "مسجد",
-          "translit": "—",
-          "en": "مَسْجِدٌ",
-          "ur": "مَسْجِدٌ"
-        },
-        {
-          "ar": "الْمَسْجِدَ",
-          "ar_plain": "المسجد",
-          "translit": "—",
-          "en": "الْمَسْجِدَ",
-          "ur": "الْمَسْجِدَ"
-        }
-      ],
-      "correct_answer": {
-        "ar": "الْمَسْجِدِ",
-        "ar_plain": "المسجد",
-        "translit": "—",
-        "en": "الْمَسْجِدِ",
-        "ur": "الْمَسْجِدِ"
-      },
-      "explanation_on_wrong": {
-        "en": "The second noun (مضاف إليه) must take kasra → الْمَسْجِدِ.",
-        "ur": "دوسرا اسم (مضاف إليه) کسرہ لیتا ہے → الْمَسْجِدِ۔"
-      }
-    },
-    {
-      "id": "ch03-l06-ex06",
-      "type": "MATCHING",
-      "xp_value": 1,
-      "left_column": [
-        {
-          "ar": "كَلَامُ اللَّهِ",
-          "ar_plain": "كلام الله",
-          "translit": "kalāmu-l-lāhi",
-          "en": "the speech of Allah",
-          "ur": "اللہ کا کلام"
-        },
-        {
-          "ar": "قَلَمُ الأُسْتَاذِ",
-          "ar_plain": "قلم الأستاذ",
-          "translit": "qalamu-l-ustādhi",
-          "en": "the teacher's pen",
-          "ur": "استاد کا قلم"
-        },
-        {
-          "ar": "رَبُّ الْعَالَمِينَ",
-          "ar_plain": "رب العالمين",
-          "translit": "rabbu-l-'ālamīna",
-          "en": "Lord of the worlds",
-          "ur": "جہانوں کا رب"
-        },
-        {
-          "ar": "أُمُّ الْوَلَدِ",
-          "ar_plain": "أم الولد",
-          "translit": "'ummu-l-waladi",
-          "en": "the mother of the child",
-          "ur": "بچے کی ماں"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "the teacher's pen",
-          "ur": "استاد کا قلم"
-        },
-        {
-          "en": "Lord of the worlds",
-          "ur": "جہانوں کا رب"
-        },
-        {
-          "en": "the mother of the child",
-          "ur": "بچے کی ماں"
-        },
-        {
-          "en": "the speech of Allah",
-          "ur": "اللہ کا کلام"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          3
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          2,
-          1
-        ],
-        [
-          3,
-          2
-        ]
-      ]
-    },
-    {
-      "id": "ch03-l06-ex07",
-      "type": "MATCHING",
-      "xp_value": 1,
-      "left_column": [
-        {
-          "ar": "بَيْتُ الرَّجُلِ",
-          "ar_plain": "بيت الرجل",
-          "translit": "baytu-r-rajuli",
-          "en": "the man's house",
-          "ur": "آدمی کا گھر"
-        },
-        {
-          "ar": "مَلِكُ النَّاسِ",
-          "ar_plain": "ملك الناس",
-          "translit": "maliku-n-nāsi",
-          "en": "King of mankind",
-          "ur": "انسانوں کا بادشاہ"
-        },
-        {
-          "ar": "نُورُ السَّمَاءِ",
-          "ar_plain": "نور السماء",
-          "translit": "nūru-s-samā'i",
-          "en": "the light of the sky",
-          "ur": "آسمان کی روشنی"
-        },
-        {
-          "ar": "مَدِينَةُ النَّبِيِّ",
-          "ar_plain": "مدينة النبي",
-          "translit": "madīnatu-n-nabiyyi",
-          "en": "the city of the Prophet",
-          "ur": "نبی کا شہر"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "King of mankind",
-          "ur": "بنی نوع انسان کا بادشاہ"
-        },
-        {
-          "en": "the light of the sky",
-          "ur": "آسمان کی روشنی"
-        },
-        {
-          "en": "the city of the Prophet",
-          "ur": "نبی کا شہر"
-        },
-        {
-          "en": "the man's house",
-          "ur": "آدمی کے گھر"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          3
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          2,
-          1
-        ],
-        [
-          3,
-          2
-        ]
-      ]
-    },
-    {
-      "id": "ch03-l06-ex08",
-      "type": "BUILD_SENTENCE",
-      "xp_value": 1,
-      "target_translation": {
-        "en": "Build the idafa phrase: 'the door of the mosque'",
-        "ur": "اضافی ترکیب بنائیں: 'مسجد کا دروازہ'"
-      },
-      "tiles": [
-        {
-          "ar": "بَابُ",
-          "ar_plain": "باب",
-          "translit": "—",
-          "en": "بَابُ",
-          "ur": "بَابُ"
-        },
-        {
-          "ar": "الْمَسْجِدِ",
-          "ar_plain": "المسجد",
-          "translit": "—",
-          "en": "الْمَسْجِدِ",
-          "ur": "الْمَسْجِدِ"
-        },
-        {
-          "ar": "بَابٌ",
-          "ar_plain": "باب",
-          "translit": "—",
-          "en": "بَابٌ",
-          "ur": "بَابٌ"
-        },
-        {
-          "ar": "مَسْجِدٌ",
-          "ar_plain": "مسجد",
-          "translit": "—",
-          "en": "مَسْجِدٌ",
-          "ur": "مَسْجِدٌ"
-        },
-        {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "—",
-          "en": "فِي",
-          "ur": "فِي"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "explanation_on_wrong": {
-        "en": "بَابُ (door of — no tanween) + الْمَسْجِدِ (the mosque — kasra ending). Together: 'the door of the mosque.'",
-        "ur": "بَابُ (دروازہ — بغیر تنوین) + الْمَسْجِدِ (مسجد — کسرہ کے ساتھ)۔ مل کر: 'مسجد کا دروازہ'۔"
-      }
-    }
-  ],
-  "reveal": {
-    "concept_name": {
-      "en": "الإضافة in the Quran",
-      "ar": "الإِضَافَة فِي الْقُرْآن",
-      "ur": "قرآن میں اضافہ"
-    },
-    "ayah": {
-      "surah": 1,
-      "ayah": 2,
-      "label": "Al-Fatiha 1:2",
-      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
-      "en": "All praise is for Allah, Lord of all the worlds.",
-      "ur": "تمام تعریف اللہ کے لیے ہے جو سارے جہانوں کا رب ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
-    },
-    "highlighted_word_indices": [
-      2
-    ],
-    "noor_explanation": {
-      "en": "رَبِّ الْعَالَمِينَ — another idafa. رَبِّ (Lord of — مضاف, no tanween) + الْعَالَمِينَ (the worlds — مضاف إليه). The very first phrase most of us ever memorized in Arabic — and it is an idafa. You now know the grammar of every word in the first three ayahs of Al-Fatiha.",
-      "ur": "رَبِّ الْعَالَمِينَ — ایک اور اضافہ۔ رَبِّ (رب — مضاف، بغیر تنوین) + الْعَالَمِينَ (جہانوں — مضاف إليه)۔ پہلا جملہ جو ہم میں سے اکثر نے عربی میں حفظ کیا — اور یہ ایک اضافہ ہے۔ اب آپ الفاتحہ کی پہلی تین آیات کے ہر لفظ کی گرامر جانتے ہیں۔"
-    }
+  "_meta": {
+    "_note": "SP1 after Chapter 3 — Basic greetings and introductions. Classical Fus'ha only, no dialect. Authored for current mobile SPOKEN_PHRASES renderer.",
+    "xp_reward": 15,
+    "lesson_order": 6,
+    "chapter_order": 3,
+    "estimated_minutes": 8
   },
   "close": {
     "noor_message": {
-      "en": "You can now recognize Idafa in useful Quranic phrases without moving into advanced Idafa chains.",
-      "ur": "اب آپ مفید قرآنی ترکیبوں میں اضافت پہچان سکتے ہیں، جبکہ پیچیدہ اضافی سلسلے بعد کے ابواب میں آئیں گے۔"
+      "en": "You can now greet and introduce yourself in simple Fus'ha. Keep it gentle and clear.",
+      "ur": "آپ اب سادہ فصحیٰ میں سلام اور تعارف کر سکتے ہیں۔ اسے نرم اور صاف رکھیں۔"
     }
+  },
+  "template": "SPOKEN_PHRASES",
+  "schema_version": "1.0",
+  "spoken_phrases": {
+    "scene": {
+      "en": "Greetings and Introductions",
+      "ur": "سلام اور تعارف"
+    },
+    "phrases": [
+      {
+        "id": "sp1-p1",
+        "phrase": {
+          "ar": "السَّلَامُ عَلَيْكُمْ",
+          "en": "Peace be upon you",
+          "ur": "السلام علیکم",
+          "ar_plain": "السلام عليكم",
+          "translit": "as-salāmu ʿalaykum"
+        },
+        "context": {
+          "en": "Islamic greeting",
+          "ur": "اسلامی سلام"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p1.mp3"
+      },
+      {
+        "id": "sp1-p2",
+        "phrase": {
+          "ar": "وَعَلَيْكُمُ السَّلَامُ",
+          "en": "And upon you be peace",
+          "ur": "وعلیکم السلام",
+          "ar_plain": "وعليكم السلام",
+          "translit": "wa ʿalaykumu s-salām"
+        },
+        "context": {
+          "en": "Response to the greeting",
+          "ur": "سلام کا جواب"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p2.mp3"
+      },
+      {
+        "id": "sp1-p3",
+        "phrase": {
+          "ar": "مَا اسْمُكَ؟",
+          "en": "What is your name?",
+          "ur": "آپ کا نام کیا ہے؟",
+          "ar_plain": "ما اسمك",
+          "translit": "mā ismuka?"
+        },
+        "context": {
+          "en": "Asking for someone's name",
+          "ur": "نام پوچھنا"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p3.mp3"
+      },
+      {
+        "id": "sp1-p4",
+        "phrase": {
+          "ar": "اسْمِي عُمَرُ",
+          "en": "My name is Umar",
+          "ur": "میرا نام عمر ہے",
+          "ar_plain": "اسمي عمر",
+          "translit": "ismī ʿUmaru"
+        },
+        "context": {
+          "en": "Introducing yourself",
+          "ur": "اپنا تعارف"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p4.mp3"
+      },
+      {
+        "id": "sp1-p5",
+        "phrase": {
+          "ar": "أَنَا طَالِبٌ",
+          "en": "I am a student",
+          "ur": "میں طالب علم ہوں",
+          "ar_plain": "أنا طالب",
+          "translit": "anā ṭālibun"
+        },
+        "context": {
+          "en": "Describing your role",
+          "ur": "اپنا کردار بیان کرنا"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p5.mp3"
+      },
+      {
+        "id": "sp1-p6",
+        "phrase": {
+          "ar": "أَهْلًا وَسَهْلًا",
+          "en": "Welcome",
+          "ur": "خوش آمدید",
+          "ar_plain": "أهلا وسهلا",
+          "translit": "ahlan wa sahlan"
+        },
+        "context": {
+          "en": "Welcoming someone",
+          "ur": "خیرمقدم"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p6.mp3"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "A",
+        "phrase_id": "sp1-p1"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "sp1-p2"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "sp1-p3"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "sp1-p4"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "sp1-p6"
+      }
+    ]
   }
 }

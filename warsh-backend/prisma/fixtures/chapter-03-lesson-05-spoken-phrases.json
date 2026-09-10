@@ -1,153 +1,608 @@
 {
-  "schema_version": "1.0",
-  "template": "SPOKEN_PHRASES",
-  "_meta": {
-    "_note": "SP1 after Chapter 3 — Basic greetings and introductions. Classical Fus'ha only, no dialect. Authored for current mobile SPOKEN_PHRASES renderer.",
-    "chapter_order": 3,
-    "lesson_order": 5,
-    "estimated_minutes": 8,
-    "xp_reward": 15
-  },
   "hook": {
     "ayah": {
-      "surah": 24,
-      "ayah": 61,
-      "label": "An-Nur 24:61",
-      "ar": "فَسَلِّمُوا عَلَىٰ أَنْفُسِكُمْ تَحِيَّةً مِّنْ عِندِ اللَّهِ",
-      "en": "Then greet one another with a greeting from Allah.",
-      "ur": "پس اپنے لوگوں کو سلام کرو، اللہ کی طرف سے ایک مبارک سلام۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/024061.mp3"
+      "ar": "إِنَّهُ مِن سُلَيْمَانَ وَإِنَّهُ بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "en": "Indeed, it is from Solomon, and indeed, it reads: In the name of Allah, the Most Gracious, the Most Merciful.",
+      "ur": "بے شک یہ سلیمان کی طرف سے ہے اور بے شک یہ ہے: اللہ کے نام سے جو بڑا مہربان، نہایت رحم کرنے والا ہے۔",
+      "ayah": 30,
+      "label": "An-Naml 27:30",
+      "surah": 27,
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/027030.mp3"
     },
+    "autoplay": true,
     "noor_intro": {
-      "en": "Your first spoken lesson begins with the greeting Allah taught this Ummah to love: السلام عليكم.",
-      "ur": "آپ کا پہلا بولنے والا درس اس سلام سے شروع ہوتا ہے جس سے اللہ نے اس امت کو محبت دی: السلام عليكم۔"
-    },
-    "autoplay": true
+      "en": "Apply the Idafa you know to بِسْمِ اللَّهِ, then recognize الرَّحْمٰنِ and الرَّحِيمِ as words describing Allah in this phrase.",
+      "ur": "سیکھی ہوئی اضافت کو بِسْمِ اللَّهِ پر لاگو کریں، پھر اس ترکیب میں الرَّحْمٰنِ اور الرَّحِيمِ کو اللہ کی صفات کے طور پر پہچانیں۔"
+    }
   },
-  "spoken_phrases": {
-    "scene": {
-      "en": "Greetings and Introductions",
-      "ur": "سلام اور تعارف"
-    },
-    "phrases": [
-      {
-        "id": "sp1-p1",
-        "phrase": {
-          "ar": "السَّلَامُ عَلَيْكُمْ",
-          "ar_plain": "السلام عليكم",
-          "translit": "as-salāmu ʿalaykum",
-          "en": "Peace be upon you",
-          "ur": "السلام علیکم"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p1.mp3",
-        "context": {
-          "en": "Islamic greeting",
-          "ur": "اسلامی سلام"
-        }
-      },
-      {
-        "id": "sp1-p2",
-        "phrase": {
-          "ar": "وَعَلَيْكُمُ السَّلَامُ",
-          "ar_plain": "وعليكم السلام",
-          "translit": "wa ʿalaykumu s-salām",
-          "en": "And upon you be peace",
-          "ur": "وعلیکم السلام"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p2.mp3",
-        "context": {
-          "en": "Response to the greeting",
-          "ur": "سلام کا جواب"
-        }
-      },
-      {
-        "id": "sp1-p3",
-        "phrase": {
-          "ar": "مَا اسْمُكَ؟",
-          "ar_plain": "ما اسمك",
-          "translit": "mā ismuka?",
-          "en": "What is your name?",
-          "ur": "آپ کا نام کیا ہے؟"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p3.mp3",
-        "context": {
-          "en": "Asking for someone's name",
-          "ur": "نام پوچھنا"
-        }
-      },
-      {
-        "id": "sp1-p4",
-        "phrase": {
-          "ar": "اسْمِي عُمَرُ",
-          "ar_plain": "اسمي عمر",
-          "translit": "ismī ʿUmaru",
-          "en": "My name is Umar",
-          "ur": "میرا نام عمر ہے"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p4.mp3",
-        "context": {
-          "en": "Introducing yourself",
-          "ur": "اپنا تعارف"
-        }
-      },
-      {
-        "id": "sp1-p5",
-        "phrase": {
-          "ar": "أَنَا طَالِبٌ",
-          "ar_plain": "أنا طالب",
-          "translit": "anā ṭālibun",
-          "en": "I am a student",
-          "ur": "میں طالب علم ہوں"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p5.mp3",
-        "context": {
-          "en": "Describing your role",
-          "ur": "اپنا کردار بیان کرنا"
-        }
-      },
-      {
-        "id": "sp1-p6",
-        "phrase": {
-          "ar": "أَهْلًا وَسَهْلًا",
-          "ar_plain": "أهلا وسهلا",
-          "translit": "ahlan wa sahlan",
-          "en": "Welcome",
-          "ur": "خوش آمدید"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p6.mp3",
-        "context": {
-          "en": "Welcoming someone",
-          "ur": "خیرمقدم"
-        }
-      }
-    ],
-    "dialogue": [
-      {
-        "speaker": "A",
-        "phrase_id": "sp1-p1"
-      },
-      {
-        "speaker": "B",
-        "phrase_id": "sp1-p2"
-      },
-      {
-        "speaker": "A",
-        "phrase_id": "sp1-p3"
-      },
-      {
-        "speaker": "B",
-        "phrase_id": "sp1-p4"
-      },
-      {
-        "speaker": "A",
-        "phrase_id": "sp1-p6"
-      }
-    ]
+  "_meta": {
+    "_note": "Chapter 3, Lesson 5 — بِسْمِ اللَّهِ: بِـ, اسم, Idafa, and the two familiar divine attributes.",
+    "xp_reward": 10,
+    "lesson_order": 5,
+    "chapter_order": 3,
+    "estimated_minutes": 10
   },
   "close": {
     "noor_message": {
-      "en": "You can now greet and introduce yourself in simple Fus'ha. Keep it gentle and clear.",
-      "ur": "آپ اب سادہ فصحیٰ میں سلام اور تعارف کر سکتے ہیں۔ اسے نرم اور صاف رکھیں۔"
+      "en": "You can now identify بِـ, the Idafa بِسْمِ اللَّهِ, and the two describing words الرَّحْمٰنِ الرَّحِيمِ.",
+      "ur": "اب آپ بِـ، اضافی ترکیب بِسْمِ اللَّهِ، اور دو صفات الرَّحْمٰنِ الرَّحِيمِ پہچان سکتے ہیں۔"
     }
-  }
+  },
+  "reveal": {
+    "ayah": {
+      "ar": "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",
+      "en": "In the name of Allah, the Most Gracious, the Most Merciful.",
+      "ur": "اللہ کے نام سے جو بڑا مہربان، نہایت رحم کرنے والا ہے۔",
+      "ayah": 1,
+      "label": "Al-Fatiha 1:1",
+      "surah": 1,
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001001.mp3"
+    },
+    "concept_name": {
+      "ar": "الإِضَافَة فِي الْقُرْآن",
+      "en": "الإضافة in the Quran",
+      "ur": "قرآن میں اضافہ"
+    },
+    "noor_explanation": {
+      "en": "Three words. Three grammatical layers. بِ (preposition: in) + اسْمِ (name, مضاف — no tanween) + اللَّهِ (Allah, مضاف إليه — kasra). الرَّحْمٰنِ and الرَّحِيمِ are adjectives describing اللَّهِ, both in kasra because they follow their noun. You recite this every day. Now you understand every layer.",
+      "ur": "تین الفاظ۔ گرامر کی تین پرتیں۔ بِ (حرف جر: میں) + اسْمِ (نام، مضاف — بغیر تنوین) + اللَّهِ (اللہ، مضاف إليه — کسرہ)۔ الرَّحْمٰنِ اور الرَّحِيمِ اللَّهِ کی صفتیں ہیں، دونوں کسرہ کے ساتھ کیونکہ وہ اپنے اسم کے بعد آتی ہیں۔ آپ یہ روزانہ پڑھتے ہیں۔ اب آپ ہر پرت سمجھتے ہیں۔"
+    },
+    "highlighted_word_indices": [
+      0
+    ]
+  },
+  "template": "STANDARD",
+  "exercises": [
+    {
+      "id": "ch3-l3-ex1",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "رَحْمَةُ اللَّهِ",
+        "en": "the mercy of Allah",
+        "ur": "اللہ کی رحمت",
+        "ar_plain": "رحمة الله",
+        "translit": "rahmatu-l-lāhi"
+      },
+      "options": [
+        {
+          "en": "the mercy of Allah",
+          "ur": "اللہ کی رحمت"
+        },
+        {
+          "en": "the name of Allah",
+          "ur": "اللہ کا نام"
+        },
+        {
+          "en": "the grace of Allah",
+          "ur": "اللہ کا فضل"
+        },
+        {
+          "en": "the blessing of mankind",
+          "ur": "انسانیت کی نعمت"
+        }
+      ],
+      "xp_value": 1,
+      "correct_index": 0
+    },
+    {
+      "id": "ch3-l3-ex2",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "عَبْدُ اللَّهِ",
+        "en": "servant/slave of Allah",
+        "ur": "اللہ کا بندہ",
+        "ar_plain": "عبد الله",
+        "translit": "'abdu-l-lāhi"
+      },
+      "options": [
+        {
+          "en": "servant/slave of Allah",
+          "ur": "اللہ کا بندہ/ بندہ"
+        },
+        {
+          "en": "عَبْدٌ كَرِيمٌ",
+          "ur": "عَبْدٌ كَرِيمٌ"
+        },
+        {
+          "en": "the blessing of Allah",
+          "ur": "اللہ کی نعمت"
+        },
+        {
+          "en": "فَضْلُ النَّاسِ",
+          "ur": "فَضْلُ النَّاسِ"
+        }
+      ],
+      "xp_value": 1,
+      "correct_index": 0
+    },
+    {
+      "id": "ch3-l3-ex3",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "الرَّحْمٰنُ الرَّحِيمُ",
+        "en": "the Most Gracious, the Most Merciful",
+        "ur": "انتہائی مہربان، نہایت رحم کرنے والا",
+        "ar_plain": "الرحمن الرحيم",
+        "translit": "—"
+      },
+      "options": [
+        {
+          "en": "the Most Gracious, the Most Merciful",
+          "ur": "سب سے زیادہ رحم کرنے والا، سب سے زیادہ رحم کرنے والا"
+        },
+        {
+          "en": "the Most Gracious, the Lord of worlds",
+          "ur": "سب سے زیادہ مہربان، تمام جہانوں کا رب"
+        },
+        {
+          "en": "the King, the Most Merciful",
+          "ur": "بادشاہ، سب سے زیادہ رحم کرنے والا"
+        },
+        {
+          "en": "the One, the All-Powerful",
+          "ur": "ایک، تمام طاقتور"
+        }
+      ],
+      "xp_value": 1,
+      "correct_index": 0
+    },
+    {
+      "id": "ch3-l3-ex4",
+      "type": "TRUE_FALSE",
+      "xp_value": 1,
+      "statement": {
+        "ar": "في بِسْمِ اللَّهِ، كلمة اسم هي المضاف.",
+        "en": "In بِسْمِ اللَّهِ, the word اسم is the مضاف (first noun of idafa).",
+        "ur": "بِسْمِ اللَّهِ میں لفظ اسم مضاف ہے (اضافہ کا پہلا اسم)۔"
+      },
+      "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "Correct — اسم (name) is the مضاف. It loses tanween: اسْمٌ → اسْمِ. اللَّهِ is the مضاف إليه with kasra.",
+        "ur": "درست — اسم (نام) مضاف ہے۔ تنوین کھو دیتا ہے: اسْمٌ → اسْمِ۔ اللَّهِ کسرہ کے ساتھ مضاف إليه ہے۔"
+      }
+    },
+    {
+      "id": "ch3-l3-ex5",
+      "hint": {
+        "en": "the grace of Allah",
+        "ur": "اللہ کا فضل"
+      },
+      "mode": "TAP",
+      "type": "FILL_BLANK",
+      "options": [
+        {
+          "ar": "اللَّهِ",
+          "en": "Allah",
+          "ur": "اللہ",
+          "ar_plain": "الله",
+          "translit": "allāhu"
+        },
+        {
+          "ar": "اللَّهُ",
+          "en": "Allah",
+          "ur": "اللہ",
+          "ar_plain": "الله",
+          "translit": "allāhu"
+        },
+        {
+          "ar": "اللَّهَ",
+          "en": "Allah",
+          "ur": "اللہ",
+          "ar_plain": "الله",
+          "translit": "allāhu"
+        },
+        {
+          "ar": "اللَّهٌ",
+          "en": "Allah",
+          "ur": "اللہ",
+          "ar_plain": "الله",
+          "translit": "allāhu"
+        }
+      ],
+      "xp_value": 1,
+      "sentence_ar": "فَضْلُ ___",
+      "correct_answer": {
+        "ar": "اللَّهِ",
+        "en": "Allah",
+        "ur": "اللہ",
+        "ar_plain": "الله",
+        "translit": "allāhu"
+      },
+      "explanation_on_wrong": {
+        "en": "مضاف إليه always takes kasra → اللَّهِ.",
+        "ur": "مضاف إليه ہمیشہ کسرہ لیتا ہے → اللَّهِ۔"
+      }
+    },
+    {
+      "id": "ch3-l3-ex6",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        {
+          "ar": "الرَّحْمٰنُ",
+          "en": "the Most Gracious / the Entirely Merciful",
+          "ur": "انتہائی مہربان / کل کا رحمن",
+          "ar_plain": "الرحمن",
+          "translit": "ar-rahmānu"
+        },
+        {
+          "ar": "الرَّحِيمُ",
+          "en": "the Most Merciful / the Especially Merciful",
+          "ur": "نہایت رحم کرنے والا / خاص رحمت والا",
+          "ar_plain": "الرحيم",
+          "translit": "ar-rahīmu"
+        },
+        {
+          "ar": "اسْمٌ",
+          "en": "a name",
+          "ur": "ایک نام",
+          "ar_plain": "اسم",
+          "translit": "ismun"
+        },
+        {
+          "ar": "عَبْدُ اللَّهِ",
+          "en": "servant/slave of Allah",
+          "ur": "اللہ کا بندہ",
+          "ar_plain": "عبد الله",
+          "translit": "'abdu-l-lāhi"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "the Most Merciful",
+          "ur": "سب سے زیادہ رحم کرنے والا"
+        },
+        {
+          "en": "a name",
+          "ur": "ایک نام"
+        },
+        {
+          "en": "servant of Allah",
+          "ur": "اللہ کا بندہ"
+        },
+        {
+          "en": "the Most Gracious",
+          "ur": "سب سے زیادہ مہربان"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "id": "ch3-l3-ex7",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        {
+          "ar": "نِعْمَةُ اللَّهِ",
+          "en": "the blessing of Allah",
+          "ur": "اللہ کی نعمت",
+          "ar_plain": "نعمة الله",
+          "translit": "ni'matu-l-lāhi"
+        },
+        {
+          "ar": "فَضْلُ اللَّهِ",
+          "en": "the grace/favour of Allah",
+          "ur": "اللہ کا فضل",
+          "ar_plain": "فضل الله",
+          "translit": "fadlu-l-lāhi"
+        },
+        {
+          "ar": "رَحْمَةُ اللَّهِ",
+          "en": "the mercy of Allah",
+          "ur": "اللہ کی رحمت",
+          "ar_plain": "رحمة الله",
+          "translit": "rahmatu-l-lāhi"
+        },
+        {
+          "ar": "بِحَمْدِهِ",
+          "en": "with His praise",
+          "ur": "اس کی تعریف کے ساتھ",
+          "ar_plain": "بحمده",
+          "translit": "bi-hamdihi"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "the grace of Allah",
+          "ur": "اللہ کا فضل"
+        },
+        {
+          "en": "the mercy of Allah",
+          "ur": "اللہ کی رحمت"
+        },
+        {
+          "en": "with His praise",
+          "ur": "اس کی تعریف کے ساتھ"
+        },
+        {
+          "en": "the blessing of Allah",
+          "ur": "اللہ کی نعمت"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "id": "ch3-l3-ex8",
+      "type": "BUILD_SENTENCE",
+      "tiles": [
+        {
+          "ar": "فَضْلُ",
+          "en": "فَضْلُ",
+          "ur": "فَضْلُ",
+          "ar_plain": "فضل",
+          "translit": "—"
+        },
+        {
+          "ar": "اللَّهِ",
+          "en": "Allah",
+          "ur": "اللہ",
+          "ar_plain": "الله",
+          "translit": "allāhu"
+        },
+        {
+          "ar": "فَضْلٌ",
+          "en": "فَضْلٌ",
+          "ur": "فَضْلٌ",
+          "ar_plain": "فضل",
+          "translit": "—"
+        },
+        {
+          "ar": "اللَّهُ",
+          "en": "Allah",
+          "ur": "اللہ",
+          "ar_plain": "الله",
+          "translit": "allāhu"
+        },
+        {
+          "ar": "مِنَ",
+          "en": "مِنَ",
+          "ur": "مِنَ",
+          "ar_plain": "من",
+          "translit": "—"
+        }
+      ],
+      "xp_value": 1,
+      "correct_order": [
+        0,
+        1
+      ],
+      "target_translation": {
+        "en": "Build: 'the grace of Allah' (idafa)",
+        "ur": "بنائیں: 'اللہ کا فضل' (اضافہ)"
+      },
+      "explanation_on_wrong": {
+        "en": "فَضْلُ (grace of — no tanween, مضاف) + اللَّهِ (Allah — kasra, مضاف إليه).",
+        "ur": "فَضْلُ (فضل — بغیر تنوین، مضاف) + اللَّهِ (اللہ — کسرہ، مضاف إليه)۔"
+      }
+    }
+  ],
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "ar": "بِسْمِ — ثلاثة طبقات نحوية",
+        "en": "بِسْمِ — Three Layers in One Word",
+        "ur": "بِسْمِ — ایک لفظ میں تین پرتیں"
+      },
+      "explanation": {
+        "en": "بِسْمِ = بِ + اسم\n\nLayer 1: بِ is a preposition meaning 'in' or 'with'.\nLayer 2: اسم means 'name' — it is the مضاف (first noun of idafa), so its tanween is gone.\nLayer 3: اللَّهِ is the مضاف إليه (second noun of idafa) — it ends in kasra.\n\nSo: بِ (in) + اسم (name of) + اللَّهِ (Allah) = 'in the name of Allah'.",
+        "ur": "بِسْمِ = بِ + اسم\n\nپرت 1: بِ حرف جر ہے — مطلب 'میں' یا 'کے ساتھ'۔\nپرت 2: اسم کا مطلب 'نام' — یہ مضاف ہے، اس لیے بغیر تنوین ہے۔\nپرت 3: اللَّهِ مضاف إليه ہے — کسرہ کے ساتھ ختم ہوتا ہے۔\n\nلہذا: بِ (میں) + اسم (نام) + اللَّهِ (اللہ) = 'اللہ کے نام سے'۔"
+      }
+    },
+    {
+      "text": {
+        "ar": "اسْمٌ",
+        "en": "a name",
+        "ur": "ایک نام",
+        "ar_plain": "اسم",
+        "translit": "ismun"
+      },
+      "type": "WORD",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ism.mp3",
+      "explanation": {
+        "en": "اسْمٌ = a name. In بِسْمِ اللَّهِ, اسم becomes اسْمِ (no tanween, kasra) because it is مضاف in an idafa with اللَّهِ.",
+        "ur": "اسْمٌ = ایک نام۔ بِسْمِ اللَّهِ میں اسم بن جاتا ہے اسْمِ (بغیر تنوین، کسرہ) کیونکہ یہ اللَّهِ کے ساتھ اضافہ میں مضاف ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "اسم"
+      }
+    },
+    {
+      "text": {
+        "ar": "اللَّهُ",
+        "en": "Allah",
+        "ur": "اللہ",
+        "ar_plain": "الله",
+        "translit": "allāhu"
+      },
+      "type": "WORD",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/allah.mp3",
+      "explanation": {
+        "en": "اللَّهُ is the proper name of Allah — the only name that has never referred to anyone else. In idafa it becomes اللَّهِ (kasra).",
+        "ur": "اللَّهُ اللہ کا ذاتی نام ہے — وہ واحد نام جو کبھی کسی اور کو نہیں دیا گیا۔ اضافہ میں اللَّهِ (کسرہ) بن جاتا ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "الله"
+      }
+    },
+    {
+      "text": {
+        "ar": "الرَّحْمٰنُ",
+        "en": "the Most Gracious / the Entirely Merciful",
+        "ur": "انتہائی مہربان / کل کا رحمن",
+        "ar_plain": "الرحمن",
+        "translit": "ar-rahmānu"
+      },
+      "type": "WORD",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/arrahman.mp3",
+      "explanation": {
+        "en": "الرَّحْمٰنُ — from رَحِمَ (mercy). It describes Allah's vast, all-encompassing mercy that extends to all creation in this world. Surah 55 is named الرَّحْمٰن.",
+        "ur": "الرَّحْمٰنُ — رَحِمَ (رحمت) سے۔ یہ اللہ کی وسیع رحمت کو بیان کرتا ہے جو اس دنیا میں تمام مخلوق تک پھیلی ہوئی ہے۔ سورۃ 55 کا نام الرَّحْمٰن ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "الرحمن"
+      }
+    },
+    {
+      "text": {
+        "ar": "الرَّحِيمُ",
+        "en": "the Most Merciful / the Especially Merciful",
+        "ur": "نہایت رحم کرنے والا / خاص رحمت والا",
+        "ar_plain": "الرحيم",
+        "translit": "ar-rahīmu"
+      },
+      "type": "WORD",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/arraheem.mp3",
+      "explanation": {
+        "en": "الرَّحِيمُ — also from رَحِمَ. It describes Allah's special mercy specifically for the believers in the Hereafter. الرَّحْمٰن is for all; الرَّحِيمُ is for the believers.",
+        "ur": "الرَّحِيمُ — بھی رَحِمَ سے۔ یہ آخرت میں مومنوں کے لیے اللہ کی خاص رحمت بیان کرتا ہے۔ الرَّحْمٰن سب کے لیے؛ الرَّحِيمُ مومنوں کے لیے خاص ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "الرحيم"
+      }
+    },
+    {
+      "text": {
+        "ar": "بِحَمْدِهِ",
+        "en": "with His praise",
+        "ur": "اس کی تعریف کے ساتھ",
+        "ar_plain": "بحمده",
+        "translit": "bi-hamdihi"
+      },
+      "type": "WORD",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/bihamdih.mp3",
+      "explanation": {
+        "en": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ — Glory be to Allah and with His praise. بِ (with) + حَمْد (praise) + هِ (his). Three morphemes, one powerful phrase.",
+        "ur": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ — اللہ پاک ہے اور اس کی تعریف کے ساتھ۔ بِ (ساتھ) + حَمْد (تعریف) + هِ (اس کی)۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "بحمده"
+      }
+    },
+    {
+      "text": {
+        "ar": "رَحْمَةُ اللَّهِ",
+        "en": "the mercy of Allah",
+        "ur": "اللہ کی رحمت",
+        "ar_plain": "رحمة الله",
+        "translit": "rahmatu-l-lāhi"
+      },
+      "type": "WORD",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/rahmat-allah.mp3",
+      "explanation": {
+        "en": "رَحْمَةُ اللَّهِ — another idafa. رَحْمَةُ (mercy of, مضاف — no tanween) + اللَّهِ (Allah, مضاف إليه — kasra). وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ is how we end the salaam.",
+        "ur": "رَحْمَةُ اللَّهِ — ایک اور اضافہ۔ رَحْمَةُ (رحمت، مضاف — بغیر تنوین) + اللَّهِ (اللہ، مضاف إليه — کسرہ)۔ السلام کے آخر میں وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ کہتے ہیں۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "رحمة الله"
+      }
+    },
+    {
+      "text": {
+        "ar": "نِعْمَةُ اللَّهِ",
+        "en": "the blessing of Allah",
+        "ur": "اللہ کی نعمت",
+        "ar_plain": "نعمة الله",
+        "translit": "ni'matu-l-lāhi"
+      },
+      "type": "WORD",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/nima-allah.mp3",
+      "explanation": {
+        "en": "وَإِن تَعُدُّوا نِعْمَةَ اللَّهِ لَا تُحْصُوهَا — 'If you count the blessings of Allah, you cannot enumerate them.' (Ibrahim 14:34). نِعْمَةُ اللَّهِ — idafa again.",
+        "ur": "وَإِن تَعُدُّوا نِعْمَةَ اللَّهِ لَا تُحْصُوهَا — 'اگر اللہ کی نعمتیں گنو تو گن نہیں سکتے'۔ (ابراہیم 14:34)۔ نِعْمَةُ اللَّهِ — پھر اضافہ۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "نعمة الله"
+      }
+    },
+    {
+      "text": {
+        "ar": "فَضْلُ اللَّهِ",
+        "en": "the grace/favour of Allah",
+        "ur": "اللہ کا فضل",
+        "ar_plain": "فضل الله",
+        "translit": "fadlu-l-lāhi"
+      },
+      "type": "WORD",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/fadl-allah.mp3",
+      "explanation": {
+        "en": "ذَٰلِكَ فَضْلُ اللَّهِ يُؤْتِيهِ مَن يَشَاءُ — 'That is the grace of Allah; He gives it to whom He wills.' فَضْلُ اللَّهِ — idafa.",
+        "ur": "ذَٰلِكَ فَضْلُ اللَّهِ يُؤْتِيهِ مَن يَشَاءُ — 'یہ اللہ کا فضل ہے، وہ جسے چاہے دے'۔ فَضْلُ اللَّهِ — اضافہ۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "فضل الله"
+      }
+    },
+    {
+      "text": {
+        "ar": "عَبْدُ اللَّهِ",
+        "en": "servant/slave of Allah",
+        "ur": "اللہ کا بندہ",
+        "ar_plain": "عبد الله",
+        "translit": "'abdu-l-lāhi"
+      },
+      "type": "WORD",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/abd-allah.mp3",
+      "explanation": {
+        "en": "عَبْدُ اللَّهِ is one of the most beloved names to Allah — Abdullah. عَبْدٌ (servant) in idafa with اللَّهِ. Also: عَبْدُ الرَّحْمٰنِ, عَبْدُ الرَّحِيمِ — all idafa with divine names.",
+        "ur": "عَبْدُ اللَّهِ اللہ کو سب سے پیارے ناموں میں سے ایک ہے — عبداللہ۔ عَبْدٌ (بندہ) اللَّهِ کے ساتھ اضافہ میں۔ عَبْدُ الرَّحْمٰنِ، عَبْدُ الرَّحِيمِ — سب الہی ناموں کے ساتھ اضافہ ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "عبد الله"
+      }
+    },
+    {
+      "text": {
+        "ar": "بِاسْمِ اللَّهِ",
+        "en": "in the name of Allah",
+        "ur": "اللہ کے نام سے",
+        "ar_plain": "باسم الله",
+        "translit": "bi-smi-l-lāhi"
+      },
+      "type": "WORD",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/bismillah.mp3",
+      "explanation": {
+        "en": "بِسْمِ اللَّهِ written in full: بِاسْمِ اللَّهِ. The hamza of اسم drops in connected speech — that is why we hear 'bismillah' not 'bi-ismillah'.",
+        "ur": "بِسْمِ اللَّهِ مکمل لکھا تو: بِاسْمِ اللَّهِ۔ ملی ہوئی بولچال میں اسم کا ہمزہ گر جاتا ہے — اس لیے 'بسملہ' سنتے ہیں، 'بِإسملہ' نہیں۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "باسم الله"
+      }
+    }
+  ],
+  "schema_version": "1.0"
 }
