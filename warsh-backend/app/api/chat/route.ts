@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../lib/auth";
-import { getAssistantReply } from "../../../lib/openai";
+import { AssistantUnavailableError, getAssistantReply } from "../../../lib/openai";
 import { getPKTStartOfDay } from "../../../lib/date";
 import { ACHIEVEMENT_KEYS } from "../../../lib/achievements";
 import { getSubscriptionState, requiresSubscription } from "../../../lib/subscription";
@@ -99,12 +99,18 @@ export async function POST(request: Request) {
   // so it is handed straight back — a paid message must not evaporate because
   // OpenAI timed out. The user's message is likewise persisted only after a
   // successful reply, so a failure does not burn a daily quota slot either.
+  //
+  // This only actually holds because getAssistantReply throws. While it answered
+  // a dead API key with a canned "I am unavailable" string, every one of those
+  // turns looked like a success here: it was stored, it counted, and it spent a
+  // purchased credit. Do not reintroduce a fallback reply return value.
   let reply: string;
   try {
     reply = await getAssistantReply(message, recentHistory, resolveContentLanguage(refreshed));
   } catch (error) {
     if (usingPackCredit) await refundNoorPackCredit(userId);
-    console.error("[chat] assistant reply failed:", (error as Error)?.message ?? error);
+    const reason = error instanceof AssistantUnavailableError ? error.reason : "unknown";
+    console.error(`[chat] assistant reply failed (${reason}):`, (error as Error)?.message ?? error);
     return NextResponse.json(
       { error: "Noor is unavailable right now. Please try again.", code: "assistant_unavailable" },
       { status: 503 },

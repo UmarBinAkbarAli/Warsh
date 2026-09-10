@@ -92,48 +92,69 @@ into a ruling.`;
 
 type HistoryMessage = { role: string; content: string };
 
+export type AssistantUnavailableReason = "missing_api_key" | "empty_reply" | "provider_error";
+
+/**
+ * Raised when Noor cannot produce a real answer.
+ *
+ * This used to return a canned "I am unavailable at the moment" string instead,
+ * which the caller could not tell apart from a real reply — so /api/chat stored
+ * it, counted it against the student's daily allowance, and kept any Noor pack
+ * credit it had claimed. A dead API key therefore charged every user, every
+ * message, for nothing, and the only trace was a Sentry event nobody was
+ * watching. Failing loudly is what lets the route hand the quota and the credit
+ * back; the student sees a retryable error with their question still typed.
+ */
+export class AssistantUnavailableError extends Error {
+  readonly reason: AssistantUnavailableReason;
+
+  constructor(reason: AssistantUnavailableReason, cause?: unknown) {
+    super(`Noor assistant unavailable: ${reason}`);
+    this.name = "AssistantUnavailableError";
+    this.reason = reason;
+    // Assigned rather than passed to super(): the backend's TS lib target
+    // predates the ErrorOptions overload.
+    if (cause !== undefined) (this as { cause?: unknown }).cause = cause;
+  }
+}
+
 export async function getAssistantReply(
   message: string,
   history: HistoryMessage[] = [],
   responseLanguage?: string
 ): Promise<string> {
+  if (!getOpenAIApiKey()) {
+    // Operators get the diagnostic; the user-facing copy stays in the route and
+    // never discloses the provider, the env var name, or the deployment model.
+    Sentry.captureMessage("[openai] OPENAI_API_KEY is not set — Noor cannot answer", "error");
+    console.error("[openai] OPENAI_API_KEY is not set.");
+    throw new AssistantUnavailableError("missing_api_key");
+  }
+
+  let reply: string;
   try {
-    if (!getOpenAIApiKey()) {
-      Sentry.captureMessage("[openai] OPENAI_API_KEY is not set — Noor is serving the offline reply", "error");
-      return getLocalTutorReply(message);
-    }
-    return await getOpenAIReply(message, history, responseLanguage);
+    reply = await getOpenAIReply(message, history, responseLanguage);
   } catch (error) {
-    // The catch is what keeps a provider outage from 503-ing the student, but
-    // it also hides the cause: with a rejected API key every conversation
-    // quietly became "I am unavailable at the moment" and nothing reached
-    // Sentry, because a fallback reply is a successful response. Report it here
-    // so a bad key is an alert rather than something only the logs know.
+    // Report it here so a rejected key is an alert rather than something only
+    // the logs know — a degraded reply is otherwise a successful response and
+    // reaches no error monitor at all.
     Sentry.captureException(error, {
       level: "error",
-      tags: { subsystem: "openai", degraded: "offline_fallback" },
+      tags: { subsystem: "openai", degraded: "assistant_unavailable" },
     });
-    console.error("[openai] getAssistantReply failed, using local fallback:", error);
-    return getLocalTutorReply(message);
-  }
-}
-
-function getLocalTutorReply(message: string): string {
-  // Operators get the diagnostic in the logs; the user-facing copy must not
-  // disclose the provider, the env var name, or the deployment model.
-  if (!getOpenAIApiKey()) {
-    console.error("[openai] OPENAI_API_KEY is not set - serving offline fallback reply.");
+    console.error("[openai] getAssistantReply failed:", error);
+    throw new AssistantUnavailableError("provider_error", error);
   }
 
-  const normalized = message.toLowerCase();
-  if (
-    normalized.includes("salam") ||
-    normalized.includes("hello") ||
-    normalized.includes("hi")
-  ) {
-    return "السلام عليكم. I am Ustaad Noor. I am unavailable at the moment — please try again shortly, ان شاء الله.";
+  // An empty completion is a failure wearing a 200. Persisting it would bank a
+  // blank turn against the student's quota exactly like the old fallback did.
+  if (!reply.trim()) {
+    Sentry.captureMessage("[openai] model returned an empty completion", "error");
+    console.error("[openai] model returned an empty completion.");
+    throw new AssistantUnavailableError("empty_reply");
   }
-  return "I am unavailable at the moment. Please try again shortly, ان شاء الله.";
+
+  return reply;
 }
 
 /**
