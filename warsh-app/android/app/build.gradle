@@ -152,8 +152,8 @@ android {
         applicationId 'com.warsh.app'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 31
-        versionName "1.0.7"
+        versionCode 32
+        versionName "1.0.8"
         ndk {
             // Filter dependency-provided prebuilts as well as app-compiled native code.
             abiFilters(*configuredReactNativeArchitectures)
