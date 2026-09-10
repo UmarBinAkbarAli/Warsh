@@ -105,10 +105,18 @@ files remain release evidence.
 - Quranic Core 500 — shipped 2026-09-07, published live 2026-09-10 (all 500 words
   `PUBLISHED`, each with generated audio in R2)
 - Vocabulary in production is 920 published words: the Core 500 plus 420 curriculum
-  words restored on 2026-09-10. The curriculum set had been absent — `prisma/seed.cjs`
-  calls `vocabularyWord.deleteMany()` before re-seeding, and every Core 500 row shares
-  a single `createdAt` of 2026-09-07 16:51, meaning the table was empty when
-  `load-core-500.ts` ran. Restore with `content:restore-curriculum`.
+  words restored on 2026-09-10. Every one carries generated audio. The curriculum set
+  had been absent — `prisma/seed.cjs` calls `vocabularyWord.deleteMany()` before
+  re-seeding and re-creates every row with a new id, and all 500 Core rows share a
+  single `createdAt` of 2026-09-07 16:51, meaning the table was empty when
+  `load-core-500.ts` ran. Recovery path, in order: `content:restore-curriculum`,
+  `audio:prebuild-catalog:db`, `images:upload`, `content:publish-vocabulary`,
+  `media:prune-orphans`.
+- Noor was restored on 2026-09-10. It had served only its offline fallback since
+  2026-08-11 because production `OPENAI_MODEL` held an id OpenAI answers with
+  `400 invalid model ID`. A fallback reply no longer costs the user a daily message
+  or a purchased credit — `getAssistantReply` throws instead of returning canned
+  text, so `/api/chat` refunds and persists nothing.
 - Chapter prefetch: chapters warm images and audio on WiFi, 12 MB cap
 - Notifications, Mixpanel analytics, and Sentry integrations
 - English and Urdu UI modes with Arabic content retained in Arabic script
@@ -219,14 +227,21 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
 
 ### P1 — content quality and launch polish
 
-1. **No vocabulary word has an image.** All 920 published words carry generated
-   audio; `imageUrl` is null on every one of them. `images:upload` exists but there
-   are no source files for this set.
-2. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
+1. **Vocabulary images have no coverage target.** Word illustrations were restored
+   on 2026-09-10 by re-running `images:upload` against
+   `exports/image-tests-compressed`, which matches a source file to a word by
+   `transliteration`. Roughly 200 of the 920 published words have no source image at
+   all and will render without one; 47 source files match no word. Decide whether
+   the gap is filled, and with what.
+2. **R2 holds media that no row can reach.** `audio/words/` and `images/words/` are
+   keyed by `VocabularyWord.id`, and every past `db:seed` re-created those rows with
+   new ids. Prune with `npm run media:prune-orphans`; it never touches
+   `images/discover/` (keyed by slug) or `audio/catalog/`.
+3. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
    types and book transitions.
-3. Reconcile any remaining visual differences against the current gold/navy design
+4. Reconcile any remaining visual differences against the current gold/navy design
    tokens.
-4. **Streak-commitment screen has no real backend effect (not designed or built).**
+5. **Streak-commitment screen has no real backend effect (not designed or built).**
    `warsh-app/app/(app)/streak-commitment.tsx` (shown once after first lesson
    completion, via `streak-celebration.tsx`) lets a user pick a 3/7/14/30-day streak
    goal, but the selection is only written to a local AsyncStorage flag
@@ -243,7 +258,7 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    - A decision on whether the checklist's daily-goal step (minutes/day) and this
      streak-day-count commitment stay two separate concepts or merge into one
      onboarding commitment moment.
-5. **Lesson pass/fail requirement (not designed or built).** Today
+6. **Lesson pass/fail requirement (not designed or built).** Today
    `warsh-app/app/(app)/lessons/[lessonId]/play.tsx` auto-advances past every
    exercise regardless of correctness and `POST /api/lessons/[lessonId]/complete`
    always sends a hardcoded `score: 100`, so a learner can miss every exercise and

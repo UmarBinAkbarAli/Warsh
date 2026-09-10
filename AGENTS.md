@@ -87,6 +87,10 @@ npm run content:check          # is the fixture mirror behind the database?
 npm run content:export         # pull Studio edits back into prisma/fixtures
 npm run content:sync           # publish fixture edits to the database
 npm run content:baseline       # adopt the current DB state as the agreed baseline
+
+npm run content:restore-curriculum          # re-insert missing curriculum vocabulary
+npm run content:publish-vocabulary -- --scope=core500|curriculum|all
+npm run media:prune-orphans                 # delete R2 word media no row can reach
 ```
 
 ### App (`cd warsh-app`)
@@ -129,6 +133,12 @@ npx vitest run <file>
 - Do not run the production seed casually. Content changes go to the local staging
   DB first, then a scoped production update (e.g.
   `npm run content:promote-tadabbur -- --apply`) — never the full production seed.
+  `prisma/seed.cjs` opens with `vocabularyWord.deleteMany()` and re-creates every
+  row with a **new id**, so a seed run against production drops the curriculum
+  vocabulary and strands every `audio/words/{id}` and `images/words/{id}` object in
+  R2. This has already happened at least twice: recover with
+  `content:restore-curriculum`, `audio:prebuild-catalog:db`, `images:upload`, then
+  `media:prune-orphans`.
 
 ## Backend invariants
 
