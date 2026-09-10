@@ -184,13 +184,23 @@ files remain release evidence.
    cannot be reached on an account whose trial started the same day, and there is no
    supported way to backdate `trialExpiresAt` in production. Check it against a
    staging account with an already-expired trial.
-3. **Target-audience decision** — either select adults only for the simplest launch,
+3. **Nothing detects a silent production outage.** Three separate ones were found by
+   hand on 2026-09-10, each having run unnoticed for days or weeks: Noor answered
+   every message with its offline fallback since 2026-08-11, the Vocabulary tab
+   served nothing because all 500 words were `DRAFT`, and the Tadabbur Surahs were
+   missing. None produced a 5xx, a Sentry event, or an alert — a degraded reply and
+   an empty list are both successful responses. `GET /api/admin/content-health`
+   already reports totals and issue counts. Give it a scheduled check with a
+   threshold, or a daily authenticated smoke run over `/api/chat`,
+   `/api/vocabulary/words` and `/api/core500` that fails loudly on an empty or
+   fallback answer.
+4. **Target-audience decision** — either select adults only for the simplest launch,
    or implement the required age/minor handling before keeping ages 13–17.
-4. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
+5. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
    `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
-5. **Scholar/content review** — establish a review process for Quranic Arabic
+6. **Scholar/content review** — establish a review process for Quranic Arabic
    accuracy, ayah relevance, pedagogy, repetition, and pacing.
-6. **One manual register-then-login check, typed by hand.** During the 2026-08-29 QA
+7. **One manual register-then-login check, typed by hand.** During the 2026-08-29 QA
    run an account registered through the app's own register screen (driven by
    synthetic ADB keystrokes) afterwards rejected the password typed into it, while an
    account created through `POST /api/auth/register` signed in normally on the same
@@ -342,8 +352,15 @@ configured, falling back to the in-process limiter otherwise. Whether
 - **Cron reliability risk:** Neon suspends its compute overnight, so the 04:00/05:00
   PKT crons can hit a sleeping database and die with `P1000`. Half of August's
   streak resets never ran.
-- **Asset risk:** image infrastructure exists, but illustration coverage remains
-  incomplete.
+- **Asset risk:** illustration coverage is 582 of 920 published words (2026-09-10).
+  The gap is concentrated in the Core 500 — 179 of 500 — because the artwork was
+  drawn for the curriculum vocabulary, and particles like `مِن` and `أَنَّ` have no
+  natural illustration.
+- **Media-key risk:** `audio/words/{id}` and `images/words/{id}` are keyed by
+  `VocabularyWord.id`, which `prisma/seed.cjs` changes on every run. A seed against
+  production therefore silently unlinks every word's audio and image even when the
+  objects themselves survive, and strands them in R2. 3,634 such objects were pruned
+  on 2026-09-10. Re-link with `images:upload` and `audio:prebuild-catalog:db`.
 - **Rate-limit risk:** Noor limits rely on database message counting; acceptable at
   current scale but should be measured under load.
 - **Secret-exposure risk:** the repo is public, and this has surfaced at least two
