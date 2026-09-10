@@ -28,10 +28,10 @@ import { listR2Keys } from "../lib/r2";
 const APPLY = process.argv.includes("--apply");
 
 // Keyed by VocabularyWord.id, so a wiped-and-reseeded table strands them.
-const PREFIXES = [
-  { prefix: "audio/words/", suffix: ".mp3" },
-  { prefix: "images/words/", suffix: ".jpg" },
-];
+// Extension-agnostic on purpose: images/words/ holds .jpg from the current
+// uploader and .webp from an older one, and both generations go stale the same
+// way. The database only ever references .jpg here, verified before pruning.
+const PREFIXES = ["audio/words/", "images/words/"];
 
 // R2/S3 DeleteObjects accepts at most 1000 keys per call.
 const DELETE_BATCH = 1000;
@@ -64,15 +64,30 @@ async function main() {
     const liveIds = new Set(words.map((word) => word.id));
     console.log(`Live vocabulary words: ${liveIds.size}`);
 
-    for (const { prefix, suffix } of PREFIXES) {
+    for (const prefix of PREFIXES) {
       const keys = await listR2Keys(prefix);
-      const stale = keys.filter((key) => {
-        const id = key.slice(prefix.length, key.length - suffix.length);
-        // Only judge keys that actually look like `<prefix><id><suffix>`;
-        // anything else is not ours to delete.
-        return key.startsWith(prefix) && key.endsWith(suffix) && id.length > 0 && !liveIds.has(id);
-      });
-      console.log(`${prefix.padEnd(16)} ${keys.length} objects, ${keys.length - stale.length} live, ${stale.length} orphaned`);
+      let live = 0;
+      let skipped = 0;
+      const stale: string[] = [];
+
+      for (const key of keys) {
+        const rest = key.slice(prefix.length);
+        // Only judge flat `<prefix><id>.<ext>` keys. A nested path or a name
+        // with no extension is some other scheme and is left alone.
+        const dot = rest.lastIndexOf(".");
+        if (rest.includes("/") || dot <= 0) {
+          skipped++;
+          continue;
+        }
+        const id = rest.slice(0, dot);
+        if (liveIds.has(id)) live++;
+        else stale.push(key);
+      }
+
+      console.log(
+        `${prefix.padEnd(16)} ${keys.length} objects, ${live} reachable, ${stale.length} orphaned` +
+          (skipped > 0 ? `, ${skipped} left alone (unrecognised shape)` : ""),
+      );
       orphans = orphans.concat(stale);
     }
   } finally {

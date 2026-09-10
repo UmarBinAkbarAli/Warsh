@@ -118,7 +118,10 @@ files remain release evidence.
   single `createdAt` of 2026-09-07 16:51, meaning the table was empty when
   `load-core-500.ts` ran. Recovery path, in order: `content:restore-curriculum`,
   `audio:prebuild-catalog:db`, `images:upload`, `content:publish-vocabulary`,
-  `media:prune-orphans`.
+  `media:prune-orphans`. 582 of the 920 carry an illustration.
+- R2 vocabulary media was pruned on 2026-09-10: 3,634 objects stranded by earlier
+  seed cycles were deleted, leaving `audio/words/` at exactly 920 reachable objects
+  and `images/words/` at 582. Word illustrations are now 768px and under 100 KB.
 - Noor was restored on 2026-09-10. It had served only its offline fallback since
   2026-08-11 because production `OPENAI_MODEL` held an id OpenAI answers with
   `400 invalid model ID`. A fallback reply no longer costs the user a daily message
@@ -234,21 +237,17 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
 
 ### P1 — content quality and launch polish
 
-1. **Vocabulary images have no coverage target.** Word illustrations were restored
-   on 2026-09-10 by re-running `images:upload` against
-   `exports/image-tests-compressed`, which matches a source file to a word by
-   `transliteration`. Roughly 200 of the 920 published words have no source image at
-   all and will render without one; 47 source files match no word. Decide whether
-   the gap is filled, and with what.
-2. **R2 holds media that no row can reach.** `audio/words/` and `images/words/` are
-   keyed by `VocabularyWord.id`, and every past `db:seed` re-created those rows with
-   new ids. Prune with `npm run media:prune-orphans`; it never touches
-   `images/discover/` (keyed by slug) or `audio/catalog/`.
-3. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
+1. **338 of the 920 published words have no illustration.** Word images were
+   restored on 2026-09-10 by re-running `images:upload` against
+   `exports/image-tests-compressed`; it matches a source file to a word by
+   `transliteration` and covered 582 words. The remaining 338 have no source file at
+   all and render without one, and 47 source files match no word. Decide whether the
+   gap is filled, and with what.
+2. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
    types and book transitions.
-4. Reconcile any remaining visual differences against the current gold/navy design
+3. Reconcile any remaining visual differences against the current gold/navy design
    tokens.
-5. **Streak-commitment screen has no real backend effect (not designed or built).**
+4. **Streak-commitment screen has no real backend effect (not designed or built).**
    `warsh-app/app/(app)/streak-commitment.tsx` (shown once after first lesson
    completion, via `streak-celebration.tsx`) lets a user pick a 3/7/14/30-day streak
    goal, but the selection is only written to a local AsyncStorage flag
@@ -265,7 +264,7 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    - A decision on whether the checklist's daily-goal step (minutes/day) and this
      streak-day-count commitment stay two separate concepts or merge into one
      onboarding commitment moment.
-6. **Lesson pass/fail requirement (not designed or built).** Today
+5. **Lesson pass/fail requirement (not designed or built).** Today
    `warsh-app/app/(app)/lessons/[lessonId]/play.tsx` auto-advances past every
    exercise regardless of correctness and `POST /api/lessons/[lessonId]/complete`
    always sends a hardcoded `score: 100`, so a learner can miss every exercise and

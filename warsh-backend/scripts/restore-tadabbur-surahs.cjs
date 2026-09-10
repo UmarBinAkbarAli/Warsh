@@ -24,8 +24,15 @@
  * Surahs are created as PUBLISHED: they are static reference content with no
  * generated media to wait on, and they were PUBLISHED before the wipe.
  *
- *   npm run content:restore-tadabbur                # dry run
- *   npm run content:restore-tadabbur -- --apply     # insert missing surahs
+ * `--relink` rewrites the `vocabId` on surahs that already exist, leaving their
+ * text, order and publish state alone. That is the repair pass after a
+ * vocabulary restore hands every word a new id, and after a correction to a
+ * `vocabKey` in the seed.
+ *
+ *   npm run content:restore-tadabbur                       # dry run
+ *   npm run content:restore-tadabbur -- --apply            # insert missing surahs
+ *   npm run content:restore-tadabbur -- --relink           # preview relinking
+ *   npm run content:restore-tadabbur -- --relink --apply   # rewrite vocabIds
  */
 
 require("dotenv/config");
@@ -35,6 +42,7 @@ const { PrismaPg } = require("@prisma/adapter-pg");
 const { SURAHS } = require("../prisma/tadabbur-seed.cjs");
 
 const APPLY = process.argv.includes("--apply");
+const RELINK = process.argv.includes("--relink");
 
 function stripHarakat(text) {
   return String(text).replace(/[ً-ٰٟ]/g, "").trim();
@@ -44,13 +52,74 @@ function tokenize(arabic) {
   return String(arabic).trim().split(/\s+/).filter(Boolean);
 }
 
+/**
+ * Rewrite `vocabId` on the surahs already in the database from the current
+ * vocabulary, keeping every other field — including learner-visible text and
+ * publish state — exactly as it is.
+ */
+async function relink(prisma, vocabMap) {
+  const rows = await prisma.tadabburSurah.findMany({
+    select: { id: true, surahNumber: true, nameEn: true, ayatData: true },
+    orderBy: { orderInProg: "asc" },
+  });
+  const seedByNumber = new Map(SURAHS.map((s) => [s.surahNumber, s]));
+
+  let changedSurahs = 0;
+  let changedWords = 0;
+  let declared = 0;
+  let resolved = 0;
+
+  for (const row of rows) {
+    const seed = seedByNumber.get(row.surahNumber);
+    if (!seed) {
+      console.log(`  ? ${row.nameEn} (Surah ${row.surahNumber}) has no seed entry — skipped`);
+      continue;
+    }
+
+    let surahChanged = false;
+    const ayatData = (row.ayatData ?? []).map((ayah) => {
+      const seedAyah = seed.ayat.find((a) => a.n === ayah.ayahNumber);
+      const words = (ayah.words ?? []).map((word) => {
+        const vocabKey = seedAyah?.ov?.[word.pos] ?? null;
+        if (vocabKey) declared += 1;
+        const vocabId = vocabKey ? (vocabMap[vocabKey] ?? null) : null;
+        if (vocabId) resolved += 1;
+        if (vocabId !== (word.vocabId ?? null)) {
+          surahChanged = true;
+          changedWords += 1;
+        }
+        return { ...word, vocabId };
+      });
+      return { ...ayah, words };
+    });
+
+    if (!surahChanged) continue;
+    changedSurahs += 1;
+    console.log(`  ~ ${row.nameEn} (Surah ${row.surahNumber})`);
+    if (APPLY) {
+      await prisma.tadabburSurah.update({ where: { id: row.id }, data: { ayatData } });
+    }
+  }
+
+  console.log(
+    `\n${changedWords} word link(s) across ${changedSurahs} Surah(s) would change. ` +
+      `${resolved}/${declared} declared keys resolve.`,
+  );
+  if (!APPLY) console.log("\nDry run. Re-run with --relink --apply to write.");
+}
+
 async function main() {
   const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL ?? "", max: 3 });
   const prisma = new PrismaClient({ adapter });
 
   try {
+    // Some words exist twice under one arabicPlain — the Core 500 row and a
+    // curriculum row that says the same thing (رحمن, إذا). Order by quranicRank so
+    // the Core 500 row always wins and the link is stable across runs: that is the
+    // row a learner actually drills, so it is the one whose mastery should count.
     const allVocab = await prisma.vocabularyWord.findMany({
-      select: { id: true, arabicPlain: true },
+      select: { id: true, arabicPlain: true, quranicRank: true },
+      orderBy: [{ quranicRank: { sort: "asc", nulls: "last" } }, { sortOrder: "asc" }],
     });
     const vocabMap = {};
     for (const v of allVocab) {
@@ -63,6 +132,11 @@ async function main() {
     });
     const existingNumbers = new Set(existing.map((s) => s.surahNumber));
     console.log(`Existing Tadabbur Surahs: ${existing.length}`);
+
+    if (RELINK) {
+      await relink(prisma, vocabMap);
+      return;
+    }
 
     const missing = SURAHS.filter((s) => !existingNumbers.has(s.surahNumber));
     if (missing.length === 0) {

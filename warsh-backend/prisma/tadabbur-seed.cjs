@@ -24,6 +24,9 @@ function words(arabic, overrides = {}) {
 
 // The 11 Surahs in progression order.
 // vocabKey values map to VocabularyWord.arabicPlain (looked up at seed time).
+// They must match that column EXACTLY — stripping harakat does not fold the
+// definite article or normalise hamza, so "الرحمن" and "اذا" silently resolve to
+// null where "رحمن" and "إذا" are the rows that exist.
 const SURAHS = [
   {
     orderInProg: 1, surahNumber: 1,
@@ -33,7 +36,7 @@ const SURAHS = [
       {
         n: 1, ar: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
         en: "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
-        ov: { 1: "الله", 2: "الرحمن", 3: "الرحيم" },
+        ov: { 1: "الله", 2: "رحمن", 3: "رحيم" },
       },
       {
         n: 2, ar: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
@@ -43,7 +46,7 @@ const SURAHS = [
       {
         n: 3, ar: "الرَّحْمَٰنِ الرَّحِيمِ",
         en: "The Entirely Merciful, the Especially Merciful.",
-        ov: { 0: "الرحمن", 1: "الرحيم" },
+        ov: { 0: "رحمن", 1: "رحيم" },
       },
       {
         n: 4, ar: "مَالِكِ يَوْمِ الدِّينِ",
@@ -74,7 +77,7 @@ const SURAHS = [
     ayat: [
       { n: 1, ar: "قُلْ أَعُوذُ بِرَبِّ النَّاسِ", en: "Say, I seek refuge in the Lord of mankind.", ov: { 0: "قل", 1: "اعوذ", 2: "رب", 3: "ناس" } },
       { n: 2, ar: "مَلِكِ النَّاسِ", en: "The Sovereign of mankind.", ov: { 0: "ملك", 1: "ناس" } },
-      { n: 3, ar: "إِلَٰهِ النَّاسِ", en: "The God of mankind.", ov: { 0: "اله", 1: "ناس" } },
+      { n: 3, ar: "إِلَٰهِ النَّاسِ", en: "The God of mankind.", ov: { 0: "إله", 1: "ناس" } },
       { n: 4, ar: "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ", en: "From the evil of the retreating whisperer.", ov: { 0: "من", 1: "شر", 2: "وسواس", 3: "خناس" } },
       { n: 5, ar: "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ", en: "Who whispers into the breasts of mankind.", ov: { 0: "الذي", 1: "يوسوس", 2: "في", 3: "صدر", 4: "ناس" } },
       { n: 6, ar: "مِنَ الْجِنَّةِ وَالنَّاسِ", en: "From among the jinn and mankind.", ov: { 0: "من", 1: "جنة", 2: "ناس" } },
@@ -87,9 +90,9 @@ const SURAHS = [
     ayat: [
       { n: 1, ar: "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ", en: "Say, I seek refuge in the Lord of daybreak.", ov: { 0: "قل", 1: "اعوذ", 2: "رب", 3: "الفلق" } },
       { n: 2, ar: "مِنْ شَرِّ مَا خَلَقَ", en: "From the evil of that which He created.", ov: { 0: "من", 1: "شر", 2: "ما", 3: "خلق" } },
-      { n: 3, ar: "وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ", en: "And from the evil of darkness when it settles.", ov: { 0: "من", 1: "شر", 2: "غاسق", 3: "اذا", 4: "وقب" } },
+      { n: 3, ar: "وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ", en: "And from the evil of darkness when it settles.", ov: { 0: "من", 1: "شر", 2: "غاسق", 3: "إذا", 4: "وقب" } },
       { n: 4, ar: "وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ", en: "And from the evil of those who blow on knots.", ov: { 0: "من", 1: "شر", 2: "النفاثات", 3: "في", 4: "عقد" } },
-      { n: 5, ar: "وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ", en: "And from the evil of an envier when he envies.", ov: { 0: "من", 1: "شر", 2: "حاسد", 3: "اذا", 4: "حسد" } },
+      { n: 5, ar: "وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ", en: "And from the evil of an envier when he envies.", ov: { 0: "من", 1: "شر", 2: "حاسد", 3: "إذا", 4: "حسد" } },
     ],
   },
   {
