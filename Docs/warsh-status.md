@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-09-09
+**Last verified:** 2026-09-10
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
@@ -58,7 +58,7 @@ files remain release evidence.
 - The target production owner and recovery account is `trywarshapp@gmail.com`.
 - Production ownership must move from personal accounts to that dedicated account
   across Google Cloud/Google Play, Vercel, Neon, Cloudflare/R2, Resend, Sentry,
-  Mixpanel, Expo/EAS, domains/DNS, and every other service that can deploy,
+  Mixpanel, Expo/EAS, OpenAI, domains/DNS, and every other service that can deploy,
   publish, bill, access production data, or recover access.
 - Personal accounts must not remain the sole owner or sole recovery path. They may
   remain named collaborators only where required and approved.
@@ -98,8 +98,8 @@ files remain release evidence.
 - Ustaad Noor chat with daily limits and consumable overage credits
 - Subscription/paywall, purchase verification, restore flow, and the Google RTDN
   webhook, which has been reached by live notifications since 2026-08-29
-- Quranic Core 500 — shipped 2026-09-07, dormant until all 500 words are published
-  in Studio
+- Quranic Core 500 — shipped 2026-09-07, published live 2026-09-10 (all 500 words
+  `PUBLISHED`, each with generated audio in R2)
 - Chapter prefetch: chapters warm images and audio on WiFi, 12 MB cap
 - Notifications, Mixpanel analytics, and Sentry integrations
 - English and Urdu UI modes with Arabic content retained in Arabic script
@@ -151,21 +151,18 @@ files remain release evidence.
    cannot be reached on an account whose trial started the same day, and there is no
    supported way to backdate `trialExpiresAt` in production. Check it against a
    staging account with an already-expired trial.
-3. **Production `OPENAI_API_KEY` still needs to point at the funded project.** Until
-   it does, every Noor request returns the graceful fallback and every user burns
-   their daily allowance for no answers. The key has been unverified since
-   2026-08-11. A failed reply consuming the daily allowance is itself unfixed: it
-   needs a decision on whether to refund the count on a fallback reply, or not count
-   until a real assistant message is produced.
-4. **Production has zero `VocabularyWord` rows** despite the Vocabulary tab being
-   live. The ~604 seed words exist only locally.
-5. **Target-audience decision** — either select adults only for the simplest launch,
+3. **The production OpenAI key is on a personal org.** Noor was restored on
+   2026-09-10 with the key now in Vercel production, verified end to end against
+   `api.warsh.app`. That key reports `openai-organization: personal-kpx1ub`, so it
+   is a personal credential in production and belongs in the ownership transfer
+   below — OpenAI is currently missing from that service list entirely.
+4. **Target-audience decision** — either select adults only for the simplest launch,
    or implement the required age/minor handling before keeping ages 13–17.
-6. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
+5. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
    `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
-7. **Scholar/content review** — establish a review process for Quranic Arabic
+6. **Scholar/content review** — establish a review process for Quranic Arabic
    accuracy, ayah relevance, pedagogy, repetition, and pacing.
-8. **One manual register-then-login check, typed by hand.** During the 2026-08-29 QA
+7. **One manual register-then-login check, typed by hand.** During the 2026-08-29 QA
    run an account registered through the app's own register screen (driven by
    synthetic ADB keystrokes) afterwards rejected the password typed into it, while an
    account created through `POST /api/auth/register` signed in normally on the same
@@ -218,11 +215,18 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
 
 ### P1 — content quality and launch polish
 
-1. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
+1. **Vocabulary coverage in production is the Core 500 only.** The Quranic Core 500
+   was published on 2026-09-10 (500 rows, all with generated audio), which is what
+   the Vocabulary tab, Word of the Day and the Core 500 screen now serve. The 603
+   curriculum seed words in `prisma/vocabulary-seed.cjs` are a largely separate body
+   — 417 of them (family, household, body, place words) do not exist in production
+   at all. Decide whether they are promoted, and review them first if so. None of
+   the 500 published words has an `imageUrl`.
+2. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
    types and book transitions.
-2. Reconcile any remaining visual differences against the current gold/navy design
+3. Reconcile any remaining visual differences against the current gold/navy design
    tokens.
-3. **Streak-commitment screen has no real backend effect (not designed or built).**
+4. **Streak-commitment screen has no real backend effect (not designed or built).**
    `warsh-app/app/(app)/streak-commitment.tsx` (shown once after first lesson
    completion, via `streak-celebration.tsx`) lets a user pick a 3/7/14/30-day streak
    goal, but the selection is only written to a local AsyncStorage flag
@@ -239,7 +243,7 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    - A decision on whether the checklist's daily-goal step (minutes/day) and this
      streak-day-count commitment stay two separate concepts or merge into one
      onboarding commitment moment.
-4. **Lesson pass/fail requirement (not designed or built).** Today
+5. **Lesson pass/fail requirement (not designed or built).** Today
    `warsh-app/app/(app)/lessons/[lessonId]/play.tsx` auto-advances past every
    exercise regardless of correctness and `POST /api/lessons/[lessonId]/complete`
    always sends a hardcoded `score: 100`, so a learner can miss every exercise and
@@ -286,7 +290,16 @@ configured, falling back to the in-process limiter otherwise. Whether
   rather than fail loudly. `AI_DAILY_MESSAGE_LIMIT` held a non-numeric value and
   removed the daily Noor cap entirely for every user, undetected, until it was
   exercised on device on 2026-08-29. Only that one variable has been hardened; the
-  same bare-`Number()` pattern elsewhere has not been audited.
+  same bare-`Number()` pattern elsewhere has not been audited. The Noor outage
+  found on 2026-09-10 was the same class of fault: production `OPENAI_MODEL` held a
+  model id OpenAI answers with `400 invalid model ID`, and because a bad model is
+  indistinguishable from a bad key from outside, it read for a month as a key
+  problem. Every Vercel production variable is sensitivity-flagged and cannot be
+  read back, so a wrong value can only be found by exercising the path.
+- **Local-environment risk:** `warsh-backend/.env` `DATABASE_URL` points at the
+  **production** Neon database, not a local or staging one. Any command run from
+  that directory that writes — `npm run db:seed` above all — writes to production.
+  Verify what a script targets before running it.
 - **Duplicate-deployment risk:** the personal `umarbinakbarali` Vercel account holds
   a second `warsh` project that builds this same repository with its Cron Jobs
   enabled. It serves no users (Deployment Protection answers 302) but its nightly

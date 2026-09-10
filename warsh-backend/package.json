@@ -46,7 +46,8 @@
     "content:promote-chapter-three": "node scripts/promote-chapter-three.cjs",
     "content:promote-chapter-four": "node scripts/promote-chapter-four.cjs",
     "images:sync-chapters": "npx tsx -r dotenv/config scripts/sync-chapter-images.ts",
-    "images:sync-chapters:dry": "npx tsx -r dotenv/config scripts/sync-chapter-images.ts --dry-run"
+    "images:sync-chapters:dry": "npx tsx -r dotenv/config scripts/sync-chapter-images.ts --dry-run",
+    "content:publish-core500": "node scripts/publish-core500-vocabulary.cjs"
   },
   "prisma": {
     "seed": "node prisma/seed.cjs"
