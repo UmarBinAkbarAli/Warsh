@@ -66,6 +66,10 @@ files remain release evidence.
   billing, deployment, OAuth/Play signing, domain/DNS, webhook, environment, and
   recovery access has been independently verified. Never put passwords, tokens, or
   private keys in repository documentation.
+- **OpenAI is a deliberate exception (2026-09-10).** There is only one OpenAI
+  account for Warsh and the owner confirmed it is the account to use, including in
+  production. Its key reports `openai-organization: personal-kpx1ub`. This is not a
+  pending transfer item; revisit only if a Warsh-owned OpenAI org is ever created.
 - **Google side is consolidated (2026-08-31).** Every Warsh resource now lives in
   Cloud project `warsh-production` (`695435119958`), where both accounts are Owner.
   RTDN was migrated out of the personal `umar-tools-27994` project and nothing
@@ -151,18 +155,13 @@ files remain release evidence.
    cannot be reached on an account whose trial started the same day, and there is no
    supported way to backdate `trialExpiresAt` in production. Check it against a
    staging account with an already-expired trial.
-3. **The production OpenAI key is on a personal org.** Noor was restored on
-   2026-09-10 with the key now in Vercel production, verified end to end against
-   `api.warsh.app`. That key reports `openai-organization: personal-kpx1ub`, so it
-   is a personal credential in production and belongs in the ownership transfer
-   below — OpenAI is currently missing from that service list entirely.
-4. **Target-audience decision** — either select adults only for the simplest launch,
+3. **Target-audience decision** — either select adults only for the simplest launch,
    or implement the required age/minor handling before keeping ages 13–17.
-5. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
+4. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
    `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
-6. **Scholar/content review** — establish a review process for Quranic Arabic
+5. **Scholar/content review** — establish a review process for Quranic Arabic
    accuracy, ayah relevance, pedagogy, repetition, and pacing.
-7. **One manual register-then-login check, typed by hand.** During the 2026-08-29 QA
+6. **One manual register-then-login check, typed by hand.** During the 2026-08-29 QA
    run an account registered through the app's own register screen (driven by
    synthetic ADB keystrokes) afterwards rejected the password typed into it, while an
    account created through `POST /api/auth/register` signed in normally on the same
