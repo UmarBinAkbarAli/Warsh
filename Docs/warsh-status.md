@@ -235,12 +235,21 @@ and `warsh-qa-issues-2026-07-16.md`. Both documents were retired on 2026-09-09: 
 were written to win Production access, which was granted 2026-08-26, and their
 remaining checkboxes were either achieved, superseded, or reduced to the list below.
 
-1. **Android permissions are over-declared.** `AndroidManifest.xml` still requests
-   `SYSTEM_ALERT_WINDOW`, `READ_EXTERNAL_STORAGE`, and `WRITE_EXTERNAL_STORAGE`.
-   Trace each to a real production feature, remove the overlay and legacy storage
-   permissions if unused, inspect the **merged release manifest** rather than the
-   source, and retest microphone, downloaded content, sharing, import/export,
-   notifications, and media playback afterwards.
+1. **Over-declared Android permissions removed (2026-09-11, not yet shipped).**
+   `SYSTEM_ALERT_WINDOW` came only from Warsh's own manifest (an Expo dev-overlay
+   leftover); `READ_/WRITE_EXTERNAL_STORAGE` came from ours plus `expo-file-system`
+   and `expo-image`. Nothing in the app touches shared storage — the audio cache and
+   recordings live in `FileSystem.cacheDirectory`, sharing goes through
+   `react-native-view-shot` → cache → `expo-sharing` FileProvider, and there is no
+   picker or media library. All three are now stripped with `tools:node="remove"`
+   and mirrored in `app.json` `android.blockedPermissions`. Verified on a fresh
+   production release build: the merged manifest and `aapt dump permissions` on the
+   APK carry none of them; lesson audio played and the share sheet rendered the
+   captured card on the emulator with no storage errors. Ships with the next Play
+   upload (bump `versionCode`). Mic recording could not be exercised: no lesson in
+   the current content uses `SHADOW_REPEAT`, and `SPOKEN_PHRASES` starts at
+   Chapter 3 — it records to the same app-private cache dir, so no permission
+   dependency exists, but it stays on the physical-device list below.
 2. **Play Data safety answers are not proven against runtime behavior.** Determine
    through runtime/network verification whether raw audio ever leaves the device,
    then reconcile the Console form with measured behavior for Name, Voice recording,

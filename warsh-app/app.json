@@ -31,6 +31,11 @@
         "RECEIVE_BOOT_COMPLETED",
         "VIBRATE"
       ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ],
       "versionCode": 32
     },
     "plugins": [
