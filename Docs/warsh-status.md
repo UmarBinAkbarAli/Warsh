@@ -164,6 +164,9 @@ files remain release evidence.
 - Resend password-reset email integration
 - Google Play purchase verification and RTDN endpoint
 - Cron endpoints for trial expiration and streak reset
+- Daily voided-purchase reconciliation (`/api/cron/reconcile-voided-purchases`,
+  03:30 UTC, 2026-09-11): replays Google's last seven days of refunds through
+  `applyVoidedPurchase` in case the RTDN void was dropped.
 - Daily production probe (`/api/cron/production-probe`, 03:00 UTC, 2026-09-11):
   asserts published-word, Core 500, Tadabbur and lesson counts stay above floors,
   HEADs one real R2 media URL, and round-trips a prompt through the real Noor path.
@@ -178,11 +181,17 @@ files remain release evidence.
 
 ### P0 — required verification and open gaps
 
-1. **Refund / voided-purchase handling for subscriptions is not implemented.**
-   `lib/voidedPurchase.ts` claws back refunded Noor pack credits idempotently
-   (2026-08-31), but a refunded *subscription* keeps access until the stored period
-   lapses and the lazy refresh notices. `SUBSCRIPTION_REVOKED` (type 12) is handled
-   and cuts access immediately.
+1. **Refund handling is implemented for both packs and subscriptions, with a
+   daily pull-side backstop (2026-09-11).** `lib/voidedPurchase.ts` (2026-08-31)
+   already expired a voided subscription and clawed back voided Noor credits on
+   the RTDN `voidedPurchaseNotification`; the earlier note that subscriptions
+   were unhandled was stale. What remained was the push itself being droppable.
+   `/api/cron/reconcile-voided-purchases` (03:30 UTC) now lists the last seven
+   days of Google's `purchases.voidedpurchases` and replays each through the
+   same idempotent handler; a manual run from the Vercel dashboard authenticated
+   against Play and returned `found: 0` (no refunds in the window). Failures raise
+   a Sentry error. Not yet exercised with a real refund — the next test-track
+   refund should be watched through both paths.
 2. **Hard lockout after the trial window also closes has not been exercised.**
    Cancellation and expiry are verified, but the tested account fell back to its
    still-open 7-day trial, which is the specified behavior. The genuine no-access
