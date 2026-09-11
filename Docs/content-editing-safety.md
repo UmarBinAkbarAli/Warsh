@@ -93,18 +93,41 @@ work, so you can take as long as you need.
 Each publish shifts the denominator, so a trickle of publishes means repeated
 lock/unlock churn for live users.
 
-**4. Backfill immediately after publishing.** For every user who had already
-completed the chapter, insert `SKIPPED_BY_PLACEMENT` progress rows for the newly
-published lessons. That status counts toward `isSatisfiedForProgression` but not
-toward `isCompleted`, so the chapter stays unlocked and the new lessons stay
-available to anyone who wants them.
+**4. Backfill immediately after publishing.**
 
-`warsh-backend/scripts/backfill-skipped-progress.cjs` does exactly this — but
-**one account at a time** (`--email` / `--user-id`), which is fine for your own
-test accounts and not for a live rollout. See "Known gap" below.
+```powershell
+cd warsh-backend
+npm run content:backfill-new-lessons -- --lesson-ids ch06-l09,ch06-l10
+npm run content:backfill-new-lessons -- --lesson-ids ch06-l09,ch06-l10 --apply
+```
+
+`scripts/backfill-new-lesson-progress.cjs` inserts `SKIPPED_BY_PLACEMENT` rows
+for the batch, but only for users who had satisfied every lesson the chapter
+held *before* it. That status counts toward `isSatisfiedForProgression` and not
+toward `isCompleted`, so nobody is re-locked, the chapter honestly reads 8/9,
+and the new lesson stays available to them.
+
+It is dry-run by default and safe to re-run. `--chapter <order> --published-after
+<date>` works too, though explicit `--lesson-ids` is safer: `publishedAt` is
+re-stamped on every publish (`app/api/admin/publish/route.ts:47`), so
+re-publishing an old lesson would pull it into a date-based batch.
+
+Do not confuse it with `scripts/backfill-skipped-progress.cjs`, which marks
+*every* missing lesson in the course for a single account. That one exists to
+open the whole curriculum for the test user and must never be aimed at a real
+learner — it would unlock the rest of the course for them.
 
 Steps 3 and 4 must be close together. The window between them is the window in
 which real users see their map re-locked.
+
+### The in-app safety net
+
+If a batch ever ships without the backfill, `services/courseContinuity.ts`
+detects the resulting break from the learner's own progress — completed lessons
+past the first unsatisfied chapter can only happen if that chapter was satisfied
+when they passed it — and `components/NewLessonsPrompt.tsx` tells them their
+work is safe and links to the lesson that restores the map. It is a net, not a
+substitute for step 4: it still leaves them locked until they act.
 
 ## Removing lessons — unpublish, never delete
 
@@ -173,13 +196,8 @@ correctly — media is fetched live on miss — but the first play of a new card
 be slow on existing installs. Not a correctness bug, and not worth blocking a
 release.
 
-## Known gap
+## Related
 
-There is no all-users backfill. `backfill-skipped-progress.cjs` handles one
-account, and a naive "mark every missing lesson skipped for everyone" would
-wrongly unlock content for users mid-chapter. The correct rule is per chapter:
-only backfill users who had completed **every previously published lesson in
-that chapter**, and only for the lessons published in this batch.
-
-Until that script exists, adding lessons to chapters that live users have
-already completed will re-lock their map.
+- `AGENTS.md` — repository invariants, release gate, and recovery paths
+- `warsh-backend/lib/course.ts` — authoritative locking and completion rules
+- `warsh-app/services/courseContinuity.ts` — in-app detection of a broken map
