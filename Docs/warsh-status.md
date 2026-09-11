@@ -190,14 +190,17 @@ files remain release evidence.
    cannot be reached on an account whose trial started the same day, and there is no
    supported way to backdate `trialExpiresAt` in production. Check it against a
    staging account with an already-expired trial.
-3. **Silent-outage detection now exists but has not yet been seen to fire.** Three
-   outages found by hand on 2026-09-10 (Noor on its offline fallback since
-   2026-08-11, all 500 words `DRAFT`, Tadabbur Surahs missing) produced no 5xx, no
-   Sentry event and no alert. `/api/cron/production-probe` (2026-09-11) checks all
-   three surfaces plus media and lesson counts daily and raises a Sentry error on
-   failure. It passed against production data locally on 2026-09-11. Remaining:
-   confirm the first scheduled run lands in Vercel's cron log, and that a Sentry
-   alert rule actually routes `subsystem: probe` events to email.
+3. **Silent-outage detection is live and verified (2026-09-11).** Three outages
+   found by hand on 2026-09-10 (Noor on its offline fallback since 2026-08-11, all
+   500 words `DRAFT`, Tadabbur Surahs missing) produced no 5xx, no Sentry event and
+   no alert. `/api/cron/production-probe` now checks all three surfaces plus media
+   and lesson counts daily and raises a Sentry error on failure. Verified in the
+   consoles: the cron is registered in Vercel and a manual Run from the dashboard
+   returned 200 in 4.6 s with outbound calls to R2 and OpenAI; Sentry's
+   `warsh-backend` project alert "Send a notification for high priority issues"
+   emails on every new high-priority issue (last fired 2026-09-05), which an
+   error-level probe event creates. Caveat: an identical failure repeating daily
+   reuses one issue and emails only on the first day and on regression.
 4. **Target-audience decision** — either select adults only for the simplest launch,
    or implement the required age/minor handling before keeping ages 13–17.
 5. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
