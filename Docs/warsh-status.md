@@ -312,7 +312,11 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
      (`setUseIpAddressForGeolocation(false)`, `f42a0e5`); until that build ships,
      the live 1.0.8 build still does it. Mixpanel, Sentry and OpenAI are
      processors acting on Warsh's behalf, so "no data shared" stands.
-   Console edits not applied yet — owner to confirm.
+   All four applied in the Console and submitted for review on 2026-09-11
+   (owner-approved): Name added (App functionality, Account management), Other
+   info added for date of birth (App functionality, Fraud prevention/security/
+   compliance), Voice or sound recordings removed, OAuth ticked. Play's review
+   typically completes within seven days; check Publishing overview.
 3. **Published retention periods are not automatically enforced.**
 4. **Account deletion verified end to end on staging (2026-09-11).** A test
    account was given rows in every user-linked table (streak, progress, chat,
