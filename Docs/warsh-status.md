@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-09-10
+**Last verified:** 2026-09-11
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
@@ -164,6 +164,12 @@ files remain release evidence.
 - Resend password-reset email integration
 - Google Play purchase verification and RTDN endpoint
 - Cron endpoints for trial expiration and streak reset
+- Daily production probe (`/api/cron/production-probe`, 03:00 UTC, 2026-09-11):
+  asserts published-word, Core 500, Tadabbur and lesson counts stay above floors,
+  HEADs one real R2 media URL, and round-trips a prompt through the real Noor path.
+  Any failure emits a Sentry error event tagged `subsystem: probe` and answers 500,
+  so Vercel's cron log records a failed run too. Logic lives in
+  `lib/productionProbe.ts` and is covered by `tests/production-probe.test.ts`.
 - Backend CORS allow-list with stable web origins
 - EAS profiles for development, staging APK, production-preview APK, and production
   Android builds
@@ -184,16 +190,14 @@ files remain release evidence.
    cannot be reached on an account whose trial started the same day, and there is no
    supported way to backdate `trialExpiresAt` in production. Check it against a
    staging account with an already-expired trial.
-3. **Nothing detects a silent production outage.** Three separate ones were found by
-   hand on 2026-09-10, each having run unnoticed for days or weeks: Noor answered
-   every message with its offline fallback since 2026-08-11, the Vocabulary tab
-   served nothing because all 500 words were `DRAFT`, and the Tadabbur Surahs were
-   missing. None produced a 5xx, a Sentry event, or an alert — a degraded reply and
-   an empty list are both successful responses. `GET /api/admin/content-health`
-   already reports totals and issue counts. Give it a scheduled check with a
-   threshold, or a daily authenticated smoke run over `/api/chat`,
-   `/api/vocabulary/words` and `/api/core500` that fails loudly on an empty or
-   fallback answer.
+3. **Silent-outage detection now exists but has not yet been seen to fire.** Three
+   outages found by hand on 2026-09-10 (Noor on its offline fallback since
+   2026-08-11, all 500 words `DRAFT`, Tadabbur Surahs missing) produced no 5xx, no
+   Sentry event and no alert. `/api/cron/production-probe` (2026-09-11) checks all
+   three surfaces plus media and lesson counts daily and raises a Sentry error on
+   failure. It passed against production data locally on 2026-09-11. Remaining:
+   confirm the first scheduled run lands in Vercel's cron log, and that a Sentry
+   alert rule actually routes `subsystem: probe` events to email.
 4. **Target-audience decision** — either select adults only for the simplest launch,
    or implement the required age/minor handling before keeping ages 13–17.
 5. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
