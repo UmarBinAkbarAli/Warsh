@@ -71,6 +71,14 @@ export const en = {
   "language.meaningsSeparateBody": "You can keep the app in English and choose Urdu for Quranic meanings and explanations.",
   "language.meaningStep": "Meaning language 02",
   "language.chooseMeaning": "Choose meaning language",
+
+  // New lessons published into a chapter the learner had already finished.
+  "continuity.titleSingle": "A new lesson was added",
+  "continuity.titleMultiple": "{{count}} new lessons were added",
+  "continuity.body": "We added new material to {{chapter}}. Finish it to pick up exactly where you left off.",
+  "continuity.reassurance": "Nothing you have done is lost. Your work in the {{count}} chapters ahead is saved and returns as soon as this chapter is complete.",
+  "continuity.resume": "Complete it now",
+  "continuity.later": "Maybe later",
   "language.meaningDescription": "Meanings and lesson explanations can be different from the app interface. Arabic learning text stays Arabic.",
   "language.meaningsUrdu": "Meanings and explanations in Urdu",
   "language.meaningsEnglish": "Meanings and explanations in English",

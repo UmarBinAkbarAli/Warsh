@@ -7,6 +7,7 @@ import {
   type OnboardingStep,
   type OnboardingStepKey,
 } from "@components/OnboardingChecklist";
+import { NewLessonsPrompt } from "@components/NewLessonsPrompt";
 import { TranslationLanguagePrompt } from "@components/TranslationLanguagePrompt";
 import { useT } from "@i18n/index";
 import api, { updateUserProfile } from "@services/api";
@@ -15,6 +16,7 @@ import { pickLocalized, pickTranslation, useLanguage, useTranslationLanguage, ty
 import { useAuthStore } from "@stores/authStore";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { findCourseContinuityBreak } from "@services/courseContinuity";
 import {
   ActivityIndicator,
   Animated,
@@ -132,6 +134,7 @@ export default function HomeScreen() {
   const [showStreakEndedModal, setShowStreakEndedModal] = useState(false);
   const [showDailyGoalToast, setShowDailyGoalToast] = useState(false);
   const [showTranslationPrompt, setShowTranslationPrompt] = useState(false);
+  const [continuityDismissed, setContinuityDismissed] = useState(false);
   const [translationPromptSaving, setTranslationPromptSaving] = useState(false);
   const [isFirstTimeUser, setIsFirstTimeUser] = useState(false);
   const [checklistDismissed, setChecklistDismissed] = useState(false);
@@ -370,6 +373,30 @@ export default function HomeScreen() {
     [chapters],
   );
 
+  // A chapter the learner already finished can be re-locked when new lessons
+  // are published into it, which silently collapses the map back. Detect that
+  // from their own progress and explain it rather than leaving them stranded.
+  const continuityBreak = useMemo(
+    () => findCourseContinuityBreak(chapters),
+    [chapters],
+  );
+  const showContinuityPrompt =
+    !loading &&
+    !continuityDismissed &&
+    !showTranslationPrompt &&
+    !showStreakEndedModal &&
+    continuityBreak !== null;
+
+  function resumeFromContinuityBreak() {
+    if (!continuityBreak) return;
+    setContinuityDismissed(true);
+    if (continuityBreak.resumeLessonId) {
+      router.push(`/lessons/${continuityBreak.resumeLessonId}/play`);
+    } else {
+      router.push(`/lessons/${continuityBreak.chapterId}`);
+    }
+  }
+
   async function dismissFreezeBanner() {
     const today = new Date().toISOString().slice(0, 10);
     await AsyncStorage.setItem(FREEZE_BANNER_KEY, today);
@@ -453,6 +480,20 @@ export default function HomeScreen() {
           </View>
         </View>
       </Modal>
+
+      {continuityBreak ? (
+        <NewLessonsPrompt
+          visible={showContinuityPrompt}
+          info={continuityBreak}
+          chapterTitle={pickLocalized(
+            continuityBreak.chapterTitle,
+            continuityBreak.chapterTitleUr,
+            translationLanguage,
+          )}
+          onResume={resumeFromContinuityBreak}
+          onDismiss={() => setContinuityDismissed(true)}
+        />
+      ) : null}
 
       <TranslationLanguagePrompt
         visible={showTranslationPrompt}

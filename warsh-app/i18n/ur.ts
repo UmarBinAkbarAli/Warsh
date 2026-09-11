@@ -69,6 +69,14 @@ export const ur = {
   "language.meaningsSeparateBody": "آپ ایپ انگریزی میں رکھ کر قرآنی معانی اور وضاحت کے لیے اردو منتخب کر سکتے ہیں۔",
   "language.meaningStep": "معانی کی زبان 02",
   "language.chooseMeaning": "معانی کی زبان منتخب کریں",
+
+  // New lessons published into a chapter the learner had already finished.
+  "continuity.titleSingle": "ایک نیا سبق شامل کیا گیا ہے",
+  "continuity.titleMultiple": "{{count}} نئے اسباق شامل کیے گئے ہیں",
+  "continuity.body": "ہم نے {{chapter}} میں نیا مواد شامل کیا ہے۔ اسے مکمل کریں تاکہ آپ وہیں سے آگے بڑھ سکیں جہاں آپ تھے۔",
+  "continuity.reassurance": "آپ کی کوئی محنت ضائع نہیں ہوئی۔ آگے کے {{count}} ابواب میں آپ کا کام محفوظ ہے اور یہ باب مکمل ہوتے ہی واپس آ جائے گا۔",
+  "continuity.resume": "ابھی مکمل کریں",
+  "continuity.later": "بعد میں",
   "language.meaningDescription": "معانی اور سبق کی وضاحت ایپ کی زبان سے مختلف ہو سکتی ہے۔ عربی تعلیمی متن ہمیشہ عربی میں رہے گا۔",
   "language.meaningsUrdu": "معانی اور وضاحتیں اردو میں",
   "language.meaningsEnglish": "معانی اور وضاحتیں انگریزی میں",
