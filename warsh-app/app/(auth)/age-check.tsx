@@ -19,7 +19,7 @@ import { useOnboardingStore } from "@stores/onboardingStore";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { WebAuthLayout } from "@components/WebAuthLayout";
-import { deleteAccount, getApiErrorCode, getApiErrorMessage, updateUserProfile } from "@services/api";
+import api, { deleteAccount, getApiErrorCode, getApiErrorMessage, updateUserProfile } from "@services/api";
 import { trackAccountDeleted, trackSignupCompleted } from "@services/analytics";
 import { cancelAllNotifications } from "@services/notifications";
 import { useLanguage } from "@services/language";
@@ -176,7 +176,16 @@ export default function AgeCheckScreen() {
       if (code === "age_not_permitted") {
         setRefused(true);
       } else if (code === "date_of_birth_locked") {
-        // Already answered elsewhere (another device); nothing left to do here.
+        // Already answered elsewhere (another device). The persisted user still
+        // carries dateOfBirth: null, which is what routed us here, so pull the
+        // real value before leaving or the authenticated layout bounces straight
+        // back to this screen.
+        try {
+          const me = await api.get("/api/auth/me");
+          patchUser(me.data.data.user);
+        } catch {
+          patchUser({ dateOfBirth: iso });
+        }
         router.replace("/(app)/(tabs)");
       } else if (code === "bad_request") {
         setError(t("ageCheck.errorInvalid"));
