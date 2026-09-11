@@ -118,10 +118,25 @@ export class AssistantUnavailableError extends Error {
   }
 }
 
+export type AssistantOptions = {
+  /** True for a learner the backend knows to be under 18 (see lib/age.ts). */
+  minor?: boolean;
+};
+
+// Appended to the system prompt for learners aged 13–17. Warsh is declared for
+// teens on Google Play, and Noor is the one surface that generates free text.
+const MINOR_SAFETY_INSTRUCTION =
+  "\n\nSAFETY: This student is a teenager (under 18). Keep every reply suitable for a young learner: " +
+  "stay on Quranic Arabic and its meanings, never ask for or discuss personal details (age, school, " +
+  "location, contact information), never give medical, legal, financial or relationship advice, and " +
+  "if the student raises distress, self-harm or abuse, respond kindly, keep it brief, and encourage " +
+  "them to speak with a trusted adult right away.";
+
 export async function getAssistantReply(
   message: string,
   history: HistoryMessage[] = [],
-  responseLanguage?: string
+  responseLanguage?: string,
+  options: AssistantOptions = {}
 ): Promise<string> {
   if (!getOpenAIApiKey()) {
     // Operators get the diagnostic; the user-facing copy stays in the route and
@@ -133,7 +148,7 @@ export async function getAssistantReply(
 
   let reply: string;
   try {
-    reply = await getOpenAIReply(message, history, responseLanguage);
+    reply = await getOpenAIReply(message, history, responseLanguage, options);
   } catch (error) {
     // Report it here so a rejected key is an alert rather than something only
     // the logs know — a degraded reply is otherwise a successful response and
@@ -165,7 +180,12 @@ function getOpenAIApiKey(): string {
   return process.env.OPENAI_API_KEY?.trim() ?? "";
 }
 
-async function getOpenAIReply(message: string, history: HistoryMessage[], responseLanguage?: string): Promise<string> {
+async function getOpenAIReply(
+  message: string,
+  history: HistoryMessage[],
+  responseLanguage?: string,
+  options: AssistantOptions = {}
+): Promise<string> {
   const client = new OpenAI({ apiKey: getOpenAIApiKey() });
   const model = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -176,7 +196,10 @@ async function getOpenAIReply(message: string, history: HistoryMessage[], respon
     : "\n\nIMPORTANT: This student has selected English as their language. Always respond in English, regardless of what language they write in. Keep all Arabic words in Arabic script.";
 
   const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [
-    { role: "system", content: SYSTEM_PROMPT + langInstruction },
+    {
+      role: "system",
+      content: SYSTEM_PROMPT + langInstruction + (options.minor ? MINOR_SAFETY_INSTRUCTION : ""),
+    },
     ...history.map((m) => ({
       role: (m.role === "USER" ? "user" : "assistant") as "user" | "assistant",
       content: m.content,

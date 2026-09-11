@@ -112,7 +112,7 @@ export default function LoginScreen() {
 
           <View style={[styles.switchRow, isUrdu ? styles.switchRowRtl : null]}>
             <Text style={styles.switchText}>{t("auth.noAccount")} </Text>
-            <Link href="/(auth)/register" style={styles.switchLink}>
+            <Link href="/(auth)/age-check" style={styles.switchLink}>
               {t("auth.register")}
             </Link>
           </View>

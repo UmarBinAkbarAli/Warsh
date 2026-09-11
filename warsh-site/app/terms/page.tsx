@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalLayout title="Terms of Service" meta="Last updated: July 20, 2026">
+    <LegalLayout title="Terms of Service" meta="Last updated: September 11, 2026">
       <P>
         Welcome to Warsh. By using the Warsh mobile application and related services (the
         &ldquo;Service&rdquo;), you agree to the following terms. Please read them carefully.
@@ -39,9 +39,17 @@ export default function TermsPage() {
       <H2>3. Your Account</H2>
       <P>
         You are responsible for keeping your account credentials secure. You must be at least 13
-        years old to create an account. You are responsible for all activity that occurs under
-        your account. If you believe your account has been compromised, notify us immediately at{' '}
+        years old to create an account, and you must give your true date of birth when asked;
+        accounts created with a false date of birth may be closed. You are responsible for all
+        activity that occurs under your account. If you believe your account has been
+        compromised, notify us immediately at{' '}
         <A href="mailto:support@warsh.app">support@warsh.app</A>.
+      </P>
+      <P>
+        If you are between 13 and 17, you may use Warsh with the understanding that Warsh
+        applies the younger-learner protections described in our{' '}
+        <A href="/privacy">Privacy Policy</A>, and a parent or guardian may ask us to delete
+        your account at any time.
       </P>
       <P>
         Warsh reserves the right to suspend or terminate accounts that violate these Terms,

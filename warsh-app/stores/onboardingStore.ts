@@ -8,6 +8,11 @@ interface OnboardingState {
   translationLanguage: string;
   placementType: string;
   dailyGoalMinutes: number;
+  // ISO YYYY-MM-DD from the age-check step; empty until answered.
+  dateOfBirth: string;
+  // A Google ID token the backend answered with age_check_required; the
+  // age-check screen retries sign-up with it once a date of birth is chosen.
+  pendingGoogleIdToken: string;
   setGoal: (goal: string) => void;
   setLevel: (level: string) => void;
   setName: (name: string) => void;
@@ -15,6 +20,8 @@ interface OnboardingState {
   setTranslationLanguage: (language: string) => void;
   setPlacementType: (placementType: string) => void;
   setDailyGoalMinutes: (minutes: number) => void;
+  setDateOfBirth: (dateOfBirth: string) => void;
+  setPendingGoogleIdToken: (idToken: string) => void;
   reset: () => void;
 }
 
@@ -28,6 +35,8 @@ export const useOnboardingStore = create<OnboardingState>((set) => ({
   translationLanguage: "en",
   placementType: "BEGINNER",
   dailyGoalMinutes: 10,
+  dateOfBirth: "",
+  pendingGoogleIdToken: "",
   setGoal: (goal) => set({ goal }),
   setLevel: (level) => set({ level }),
   setName: (name) => set({ name }),
@@ -35,5 +44,7 @@ export const useOnboardingStore = create<OnboardingState>((set) => ({
   setTranslationLanguage: (translationLanguage) => set({ translationLanguage }),
   setPlacementType: (placementType) => set({ placementType }),
   setDailyGoalMinutes: (dailyGoalMinutes) => set({ dailyGoalMinutes }),
-  reset: () => set({ goal: "QURAN", level: "BEGINNER", name: "", language: "en", translationLanguage: "en", placementType: "BEGINNER", dailyGoalMinutes: 10 }),
+  setDateOfBirth: (dateOfBirth) => set({ dateOfBirth }),
+  setPendingGoogleIdToken: (pendingGoogleIdToken) => set({ pendingGoogleIdToken }),
+  reset: () => set({ goal: "QURAN", level: "BEGINNER", name: "", language: "en", translationLanguage: "en", placementType: "BEGINNER", dailyGoalMinutes: 10, dateOfBirth: "", pendingGoogleIdToken: "" }),
 }));

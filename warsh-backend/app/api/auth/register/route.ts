@@ -5,6 +5,7 @@ import { signToken, passwordTokenFingerprint } from "../../../../lib/auth";
 import { hit, clientKey } from "../../../../lib/rateLimit";
 import { resolveRegistrationLanguages } from "../../../../lib/language";
 import { toAuthUser } from "../../../../lib/authUser";
+import { ageCheckError, evaluateSignupAge } from "../../../../lib/age";
 
 export async function POST(request: Request) {
   const rl = await hit(clientKey(request, "register"), 5, 60_000);
@@ -16,7 +17,7 @@ export async function POST(request: Request) {
   }
 
   const body = await request.json();
-  const { email, password, name, nativeLanguage, translationLanguage, goal, dailyGoalMinutes } = body;
+  const { email, password, name, nativeLanguage, translationLanguage, goal, dailyGoalMinutes, dateOfBirth } = body;
 
   if (!email || !password || !name) {
     return NextResponse.json({ error: "Missing required fields", code: "bad_request" }, { status: 400 });
@@ -29,6 +30,14 @@ export async function POST(request: Request) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return NextResponse.json({ error: "Invalid email address", code: "bad_request" }, { status: 400 });
+  }
+
+  // Age check runs before the email lookup so an under-13 attempt leaves no
+  // trace — not even a "this email exists" signal.
+  const age = evaluateSignupAge(request, dateOfBirth);
+  if (age.kind !== "ok" && age.kind !== "legacy") {
+    const { status, body: errorBody } = ageCheckError(age);
+    return NextResponse.json(errorBody, { status });
   }
 
   // Normalize so Umar@x.com and umar@x.com can't become two accounts. The
@@ -57,6 +66,7 @@ export async function POST(request: Request) {
       translationLanguage: languages.translationLanguage,
       goal: goal ?? "QURAN",
       dailyGoalMinutes: validGoalMinutes.includes(dailyGoalMinutes) ? dailyGoalMinutes : 10,
+      dateOfBirth: age.dateOfBirth,
     }
   });
 

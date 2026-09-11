@@ -1,5 +1,6 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
 import { Platform } from "react-native";
+import Constants from "expo-constants";
 import { getToken } from "./storage";
 import { useAuthStore } from "@stores/authStore";
 
@@ -53,6 +54,9 @@ const api = axios.create({
   headers: {
     "Content-Type": "application/json",
     "X-Warsh-Platform": Platform.OS,
+    // Tells the backend this build has the age-check step, so it may require a
+    // date of birth at sign-up. Builds without the header are treated as legacy.
+    "X-Warsh-App-Version": Constants.expoConfig?.version ?? "unknown",
   }
 });
 
@@ -157,7 +161,7 @@ export function submitSRSReview(wordId: string, quality: 2 | 4 | 5) {
   return api.post("/api/vocabulary/srs/review", { wordId, quality });
 }
 
-export function updateUserProfile(data: { dailyGoalMinutes?: number; nativeLanguage?: string; translationLanguage?: string; streakGoalDays?: number | null }) {
+export function updateUserProfile(data: { dailyGoalMinutes?: number; nativeLanguage?: string; translationLanguage?: string; streakGoalDays?: number | null; dateOfBirth?: string }) {
   return api.patch("/api/users/me", data);
 }
 
@@ -187,6 +191,13 @@ export function purchaseNoorPack(data: { purchaseToken: string; platform: "andro
 
 export function redeemPromoCode(code: string) {
   return api.post("/api/subscription/redeem-promo", { code });
+}
+
+/** The backend's snake_case error code, or null when the failure was not an API envelope. */
+export function getApiErrorCode(error: unknown): string | null {
+  if (!axios.isAxiosError(error)) return null;
+  const code = error.response?.data?.code;
+  return typeof code === "string" ? code : null;
 }
 
 export function getApiErrorMessage(

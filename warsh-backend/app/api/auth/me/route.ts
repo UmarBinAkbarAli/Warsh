@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
+import { toAuthUser } from "../../../../lib/authUser";
 
 export async function GET(request: Request) {
   const userId = await getUserIdFromRequest(request);
@@ -21,6 +22,7 @@ export async function GET(request: Request) {
       placementType: true,
       startingChapterOrder: true,
       hasPassword: true,
+      dateOfBirth: true,
     },
     where: { id: userId }
   });
@@ -29,5 +31,5 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
   }
 
-  return NextResponse.json({ data: { user } });
+  return NextResponse.json({ data: { user: toAuthUser(user) } });
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Image,
   KeyboardAvoidingView,
@@ -18,7 +18,7 @@ import { AuthInput } from "@components/AuthInput";
 import { BrandButton } from "@components/BrandButton";
 import { GoogleAuthSection } from "@components/GoogleAuthSection";
 import { WebAuthLayout } from "@components/WebAuthLayout";
-import { getApiErrorMessage } from "@services/api";
+import { getApiErrorCode, getApiErrorMessage } from "@services/api";
 import { trackSignupCompleted } from "@services/analytics";
 import { useLanguage } from "@services/language";
 import { useT } from "@i18n/index";
@@ -41,8 +41,15 @@ export default function RegisterScreen() {
   const t = useT();
   const isUrdu = useLanguage() === "ur";
   const { register, applyPlacement } = useAuth();
-  const { name, language, translationLanguage, goal, placementType, dailyGoalMinutes, setName } =
+  const { name, language, translationLanguage, goal, placementType, dailyGoalMinutes, dateOfBirth, setName } =
     useOnboardingStore();
+
+  // The age-check step always precedes this form (Pen section 21). Landing
+  // here without an answer — a stale deep link, a reload on web — sends the
+  // learner back to it rather than letting the backend reject the sign-up.
+  useEffect(() => {
+    if (!dateOfBirth) router.replace("/(auth)/age-check");
+  }, [dateOfBirth]);
 
   const [displayName, setDisplayName] = useState(name);
   const [email, setEmail] = useState("");
@@ -71,24 +78,32 @@ export default function RegisterScreen() {
     setError("");
     try {
       setName(trimmedName);
-      await register(
+      const created = await register(
         trimmedName,
         trimmedEmail,
         password,
         language,
         translationLanguage,
         goal,
-        dailyGoalMinutes
+        dailyGoalMinutes,
+        dateOfBirth
       );
       await applyPlacement(placementType);
-      trackSignupCompleted({
-        goal: goal ?? "",
-        level: "",
-        placement: placementType ?? "BEGINNER",
-        language: language ?? "en",
-      });
+      if (!created.user?.isMinor) {
+        trackSignupCompleted({
+          goal: goal ?? "",
+          level: "",
+          placement: placementType ?? "BEGINNER",
+          language: language ?? "en",
+        });
+      }
       router.replace("/(app)/(tabs)");
     } catch (err) {
+      if (getApiErrorCode(err) === "age_not_permitted") {
+        // The backend is the authority on the threshold (its clock, PKT day).
+        router.replace({ pathname: "/(auth)/age-check", params: { refused: "1" } });
+        return;
+      }
       setError(getApiErrorMessage(err, t("auth.errorSignup")));
     } finally {
       setLoading(false);

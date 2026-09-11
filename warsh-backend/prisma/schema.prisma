@@ -25,6 +25,9 @@ model User {
     gems           Int               @default(0)
     dailyGoalMinutes Int             @default(10)
     streakGoalDays Int?
+    // Date only (no time zone) — collected once by the neutral age-check step.
+    // Null means a legacy account that has not answered yet; the app prompts.
+    dateOfBirth    DateTime?         @db.Date
     trialStartAt   DateTime          @default(now())
     trialExpiresAt DateTime          @default(dbgenerated("now() + interval '7 days'"))
     subscriptionStatus String        @default("trial")

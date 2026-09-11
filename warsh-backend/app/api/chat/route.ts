@@ -3,6 +3,7 @@ import { z } from "zod";
 import { prisma } from "../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../lib/auth";
 import { AssistantUnavailableError, getAssistantReply } from "../../../lib/openai";
+import { isMinor } from "../../../lib/age";
 import { getPKTStartOfDay } from "../../../lib/date";
 import { ACHIEVEMENT_KEYS } from "../../../lib/achievements";
 import { getSubscriptionState, requiresSubscription } from "../../../lib/subscription";
@@ -55,6 +56,7 @@ export async function POST(request: Request) {
         subscriptionStatus: true,
         subscriptionActiveUntil: true,
         subscriptionProductId: true,
+        dateOfBirth: true,
       },
     }),
   ]);
@@ -106,7 +108,9 @@ export async function POST(request: Request) {
   // purchased credit. Do not reintroduce a fallback reply return value.
   let reply: string;
   try {
-    reply = await getAssistantReply(message, recentHistory, resolveContentLanguage(refreshed));
+    reply = await getAssistantReply(message, recentHistory, resolveContentLanguage(refreshed), {
+      minor: isMinor(userRecord.dateOfBirth) === true,
+    });
   } catch (error) {
     if (usingPackCredit) await refundNoorPackCredit(userId);
     const reason = error instanceof AssistantUnavailableError ? error.reason : "unknown";

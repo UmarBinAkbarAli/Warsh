@@ -11,7 +11,7 @@ export default function PrivacyPage() {
   return (
     <LegalLayout
       title="Privacy Policy"
-      meta="App: Warsh · Package: com.warsh.app · Developer: Umar Bin Akbar Ali · Last updated: July 20, 2026"
+      meta="App: Warsh · Package: com.warsh.app · Developer: Umar Bin Akbar Ali · Last updated: September 11, 2026"
     >
       <H2>1. Scope</H2>
       <P>
@@ -26,6 +26,11 @@ export default function PrivacyPage() {
           <strong>Account and authentication data:</strong> the name and email address you
           provide, an internal user ID, a securely hashed password, preferred language, learning
           goal, level, placement choice, and daily goal.
+        </LI>
+        <LI>
+          <strong>Date of birth:</strong> asked once when you create an account (or on first
+          launch for older accounts) so we can confirm you are old enough to use Warsh and apply
+          the protections described in Section 9. It is never shown to other learners.
         </LI>
         <LI>
           <strong>Learning and app activity:</strong> lesson progress, answers and scores, XP,
@@ -161,11 +166,21 @@ export default function PrivacyPage() {
         reasonable technical and organizational safeguards appropriate to the data we handle.
       </P>
 
-      <H2>9. Children&rsquo;s Privacy</H2>
+      <H2>9. Children&rsquo;s Privacy and Younger Learners</H2>
       <P>
-        Warsh is not intended for children under 13, and we do not knowingly collect personal
-        information from children under 13. If you believe a child under 13 has provided
-        personal information, contact us so we can investigate and delete it.
+        Warsh is for learners aged 13 and older. We ask everyone for their date of birth once,
+        before an account is created, and we refuse to create an account for anyone under 13
+        without storing anything they entered. If you believe a child under 13 has an account,
+        contact us so we can investigate and delete it.
+      </P>
+      <P>
+        For learners aged 13 to 17, Warsh applies additional protections: product analytics
+        (Mixpanel) are switched off entirely, Ustaad Noor is instructed to keep every reply
+        suitable for a young learner and never to ask for personal details, and the only
+        emails we send are the account and password messages you request. Crash reporting
+        (Sentry) remains on with personal data removed. Parents or guardians can ask us to
+        delete a teen&rsquo;s account at any time from{' '}
+        <A href="/delete-account">warsh.app/delete-account</A>.
       </P>
 
       <H2>10. Your Choices and Rights</H2>

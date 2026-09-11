@@ -15,6 +15,10 @@ export interface User {
   placementType?: string | null;
   startingChapterOrder?: number | null;
   hasPassword?: boolean;
+  // ISO YYYY-MM-DD. `null` = the age check has not been answered; `undefined`
+  // = a session persisted before the field existed, so it must be fetched.
+  dateOfBirth?: string | null;
+  isMinor?: boolean | null;
 }
 
 interface AuthStore {

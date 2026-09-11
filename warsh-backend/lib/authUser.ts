@@ -1,3 +1,5 @@
+import { formatDateOfBirth, isMinor } from "./age";
+
 type AuthUser = {
   id: string;
   email: string;
@@ -10,6 +12,7 @@ type AuthUser = {
   placementType: string | null;
   startingChapterOrder: number | null;
   hasPassword: boolean;
+  dateOfBirth?: Date | null;
 };
 
 export function toAuthUser(user: AuthUser) {
@@ -25,5 +28,9 @@ export function toAuthUser(user: AuthUser) {
     placementType: user.placementType,
     startingChapterOrder: user.startingChapterOrder,
     hasPassword: user.hasPassword,
+    // Both derived server-side; the client only ever displays them. `null`
+    // means the age check has not been answered yet and the app must ask.
+    dateOfBirth: formatDateOfBirth(user.dateOfBirth),
+    isMinor: isMinor(user.dateOfBirth),
   };
 }

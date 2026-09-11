@@ -11,6 +11,7 @@ import { verifyGoogleIdToken } from "../../../../lib/googleAuth";
 import { hit, clientKey } from "../../../../lib/rateLimit";
 import { resolveRegistrationLanguages } from "../../../../lib/language";
 import { toAuthUser } from "../../../../lib/authUser";
+import { ageCheckError, evaluateSignupAge } from "../../../../lib/age";
 
 export async function POST(request: Request) {
   const rl = await hit(clientKey(request, "google-auth"), 10, 60_000);
@@ -91,6 +92,16 @@ export async function POST(request: Request) {
     );
   }
 
+  // New Google identity: the account is only created once the client has
+  // supplied a date of birth. The token is identity proof only, so nothing is
+  // written for a missing or under-13 answer and the client may retry with the
+  // same token after the age-check step.
+  const age = evaluateSignupAge(request, body.dateOfBirth);
+  if (age.kind !== "ok" && age.kind !== "legacy") {
+    const { status, body: errorBody } = ageCheckError(age);
+    return NextResponse.json(errorBody, { status });
+  }
+
   const validGoalMinutes = [5, 10, 15, 30];
   const languages = resolveRegistrationLanguages({
     nativeLanguage: body.nativeLanguage,
@@ -112,6 +123,7 @@ export async function POST(request: Request) {
       dailyGoalMinutes: validGoalMinutes.includes(Number(body.dailyGoalMinutes))
         ? Number(body.dailyGoalMinutes)
         : 10,
+      dateOfBirth: age.dateOfBirth,
     },
   });
 

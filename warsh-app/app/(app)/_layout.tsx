@@ -11,7 +11,7 @@ import {
   setupNotificationSchedules,
 } from "@services/notifications";
 import { setSentryUser, clearSentryUser } from "@services/sentry";
-import { identifyUser, resetAnalytics } from "@services/analytics";
+import { identifyUser, resetAnalytics, setAnalyticsSuppressed } from "@services/analytics";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import api from "@services/api";
 
@@ -55,6 +55,7 @@ export default function AppLayout() {
   const isHydrated = useAuthStore((state) => state.isHydrated);
   const token = useAuthStore((state) => state.token);
   const user = useAuthStore((state) => state.user);
+  const patchUser = useAuthStore((state) => state.patchUser);
   const responseListener = useRef<{ remove: () => void } | null>(null);
 
   useEffect(() => {
@@ -63,11 +64,35 @@ export default function AppLayout() {
     }
   }, [isHydrated, token]);
 
-  // Attach/detach error tracking + analytics identity on login/logout
+  // Age check for accounts created before it existed (Pen section 21).
+  // `undefined` means this session was persisted before the field was in the
+  // envelope, so refresh the profile once; `null` means the account has never
+  // answered and must before anything else.
+  const dateOfBirth = user?.dateOfBirth;
+  useEffect(() => {
+    if (!token || !user) return;
+    if (dateOfBirth === undefined) {
+      api
+        .get("/api/auth/me")
+        .then((response) => patchUser(response.data.data.user))
+        .catch(() => {});
+      return;
+    }
+    if (dateOfBirth === null) {
+      router.replace({ pathname: "/(auth)/age-check", params: { mode: "existing" } });
+    }
+  }, [token, user?.id, dateOfBirth]);
+
+  // Attach/detach error tracking + analytics identity on login/logout. Minors
+  // get Sentry (no PII) but no analytics identity or events at all.
   useEffect(() => {
     if (token && user) {
       setSentryUser(user.id);
-      identifyUser(user.id, { goal: user.goal, level: user.level, native_language: user.nativeLanguage });
+      const minor = user.isMinor === true;
+      setAnalyticsSuppressed(minor);
+      if (!minor) {
+        identifyUser(user.id, { goal: user.goal, level: user.level, native_language: user.nativeLanguage });
+      }
     } else {
       clearSentryUser();
       resetAnalytics();

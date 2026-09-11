@@ -32,7 +32,7 @@ function applyCorsHeaders(response: NextResponse, origin: string | null) {
   response.headers.set("Access-Control-Allow-Origin", origin);
   response.headers.set("Access-Control-Allow-Credentials", "false");
   response.headers.set("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
-  response.headers.set("Access-Control-Allow-Headers", "Content-Type,Authorization,X-Warsh-Platform");
+  response.headers.set("Access-Control-Allow-Headers", "Content-Type,Authorization,X-Warsh-Platform,X-Warsh-App-Version");
   response.headers.set("Access-Control-Max-Age", "86400");
   response.headers.append("Vary", "Origin");
 

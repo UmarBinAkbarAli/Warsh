@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
 import { isSupportedLanguage } from "../../../../lib/language";
+import { formatDateOfBirth, isAgePermitted, isMinor, parseDateOfBirth } from "../../../../lib/age";
 
 const VALID_DAILY_GOALS = [5, 10, 15, 30];
 const VALID_STREAK_GOALS = [3, 7, 14, 30];
@@ -41,6 +42,24 @@ export async function PATCH(request: Request) {
     updateData.streakGoalDays = body.streakGoalDays;
   }
 
+  // Legacy accounts answer the age check here. It can be set once and never
+  // cleared or changed afterwards; an under-13 answer is refused without
+  // storing anything, and the app then offers deletion.
+  if (body.dateOfBirth !== undefined) {
+    const dateOfBirth = parseDateOfBirth(body.dateOfBirth);
+    if (!dateOfBirth) {
+      return NextResponse.json({ error: "dateOfBirth must be a valid YYYY-MM-DD date", code: "bad_request" }, { status: 400 });
+    }
+    const current = await prisma.user.findUnique({ where: { id: userId }, select: { dateOfBirth: true } });
+    if (current?.dateOfBirth) {
+      return NextResponse.json({ error: "Date of birth is already set", code: "date_of_birth_locked" }, { status: 409 });
+    }
+    if (!isAgePermitted(dateOfBirth)) {
+      return NextResponse.json({ error: "Warsh is for learners aged 13 and older", code: "age_not_permitted" }, { status: 403 });
+    }
+    updateData.dateOfBirth = dateOfBirth;
+  }
+
   if (Object.keys(updateData).length === 0) {
     return NextResponse.json({ error: "No valid fields to update", code: "bad_request" }, { status: 400 });
   }
@@ -48,10 +67,16 @@ export async function PATCH(request: Request) {
   const user = await prisma.user.update({
     where: { id: userId },
     data: updateData,
-    select: { id: true, dailyGoalMinutes: true, nativeLanguage: true, translationLanguage: true, streakGoalDays: true },
+    select: { id: true, dailyGoalMinutes: true, nativeLanguage: true, translationLanguage: true, streakGoalDays: true, dateOfBirth: true },
   });
 
-  return NextResponse.json({ data: user });
+  return NextResponse.json({
+    data: {
+      ...user,
+      dateOfBirth: formatDateOfBirth(user.dateOfBirth),
+      isMinor: isMinor(user.dateOfBirth),
+    },
+  });
 }
 
 export async function DELETE(request: Request) {

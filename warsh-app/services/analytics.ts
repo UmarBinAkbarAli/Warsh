@@ -20,15 +20,25 @@ export async function initAnalytics() {
   }
 }
 
+// Learners the backend knows to be under 18 get no analytics at all: no
+// identify, no people properties, no events. Set from the authenticated layout
+// as soon as the profile is known.
+let suppressed = false;
+
+export function setAnalyticsSuppressed(value: boolean) {
+  suppressed = value;
+  if (value && mp) mp.reset();
+}
+
 function track(event: string, props?: Record<string, unknown>) {
-  if (!mp) return;
+  if (!mp || suppressed) return;
   mp.track(event, { environment: ENV, ...props });
 }
 
 // ─── Identity ─────────────────────────────────────────────────────────────────
 
 export function identifyUser(userId: string, peopleProps?: Record<string, unknown>) {
-  if (!mp) return;
+  if (!mp || suppressed) return;
   mp.identify(userId);
   if (peopleProps) {
     mp.getPeople().set(peopleProps);
@@ -41,7 +51,7 @@ export function resetAnalytics() {
 }
 
 export function setPeopleProps(props: Record<string, unknown>) {
-  if (!mp) return;
+  if (!mp || suppressed) return;
   mp.getPeople().set(props);
 }
 

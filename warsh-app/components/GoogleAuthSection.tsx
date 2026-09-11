@@ -13,6 +13,7 @@ import { TextInput } from "react-native-paper";
 import { useRouter } from "expo-router";
 import { GoogleAuthButton } from "@components/GoogleAuthButton";
 import { useAuth } from "@hooks/useAuth";
+import { useAuthStore } from "@stores/authStore";
 import { useOnboardingStore } from "@stores/onboardingStore";
 import { getApiErrorMessage } from "@services/api";
 import { captureError } from "@services/sentry";
@@ -39,6 +40,8 @@ export function GoogleAuthSection({ showDivider = false }: Props) {
     goal,
     placementType,
     dailyGoalMinutes,
+    dateOfBirth,
+    setPendingGoogleIdToken,
   } = useOnboardingStore();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -50,12 +53,14 @@ export function GoogleAuthSection({ showDivider = false }: Props) {
     async (created: boolean) => {
       if (created) {
         await applyPlacement(placementType);
-        trackSignupCompleted({
-          goal: goal ?? "",
-          level: "",
-          placement: placementType ?? "BEGINNER",
-          language: language ?? "en",
-        });
+        if (!useAuthStore.getState().user?.isMinor) {
+          trackSignupCompleted({
+            goal: goal ?? "",
+            level: "",
+            placement: placementType ?? "BEGINNER",
+            language: language ?? "en",
+          });
+        }
         router.replace("/(app)/(tabs)");
         return;
       }
@@ -75,11 +80,18 @@ export function GoogleAuthSection({ showDivider = false }: Props) {
           translationLanguage,
           goal,
           dailyGoalMinutes,
+          dateOfBirth: dateOfBirth || undefined,
         });
         await finishGoogleSession(Boolean(data.created));
       } catch (authError: any) {
         const responseData = authError?.response?.data;
-        if (
+        if (responseData?.code === "age_check_required") {
+          // A new Google identity: the backend creates nothing until the
+          // learner has answered the age-check step, which retries with this
+          // same token (Pen section 21).
+          setPendingGoogleIdToken(idToken);
+          router.push("/(auth)/age-check");
+        } else if (
           responseData?.code === "google_link_required" &&
           typeof responseData.linkToken === "string" &&
           typeof responseData.email === "string"
@@ -102,10 +114,13 @@ export function GoogleAuthSection({ showDivider = false }: Props) {
     },
     [
       dailyGoalMinutes,
+      dateOfBirth,
       finishGoogleSession,
       goal,
       language,
       loginWithGoogle,
+      router,
+      setPendingGoogleIdToken,
       t,
       translationLanguage,
     ],
