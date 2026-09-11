@@ -221,9 +221,12 @@ files remain release evidence.
    Mixpanel/Sentry/OpenAI/email, teen-appropriate Terms and privacy wording, and a
    per-launch-country decision on parental consent (GDPR Art. 8 puts the digital
    consent age at 13–16 depending on the member state). Owner decision
-   2026-09-11: no parental-consent flow; instead restrict Play distribution to
-   Pakistan and countries where 13 is the digital consent age, and exclude any
-   country that would require parental consent for 13–15s. Pen design first.
+   2026-09-11: no parental-consent flow, and no geographic restriction for now —
+   the production track stays at all 177 countries (verified in the Console).
+   Minors get no analytics and only service-necessary processing, which is the
+   substantive protection. Revisit exclusion of the EU/EEA, South Korea and
+   Vietnam if EU sign-ups become meaningful or EU marketing is planned. Pen design
+   first.
 5. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
    `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
 6. **Scholar/content review** — establish a review process for Quranic Arabic
