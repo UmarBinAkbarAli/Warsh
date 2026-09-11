@@ -207,14 +207,14 @@ files remain release evidence.
    `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
 6. **Scholar/content review** — establish a review process for Quranic Arabic
    accuracy, ayah relevance, pedagogy, repetition, and pacing.
-7. **One manual register-then-login check, typed by hand.** During the 2026-08-29 QA
-   run an account registered through the app's own register screen (driven by
-   synthetic ADB keystrokes) afterwards rejected the password typed into it, while an
-   account created through `POST /api/auth/register` signed in normally on the same
-   build. `register.tsx` and `login.tsx` both send the raw, untrimmed password, so
-   nothing in the code explains a mismatch and the likely culprit is synthetic text
-   entry into a `secureTextEntry` field. Never proven either way; a real mismatch
-   here would lock out every new signup.
+7. **Register-then-login through the soft keyboard: verified, no mismatch
+   (2026-09-11).** The 2026-08-29 suspicion (an account registered via synthetic
+   ADB keystrokes later rejecting its password) was retested on the current release
+   APK against production with the password entered key by key on Gboard — shift,
+   letters and digits, masked field — for both register and login. Registration
+   succeeded, `POST /api/auth/login` with the same string returned 200, the app's
+   login screen signed in, and a one-character variation returned 401. The earlier
+   failure was the synthetic text injection, not the app. QA account deleted.
 
 ### P0 — carried over from the retired Play policy and QA audits
 
