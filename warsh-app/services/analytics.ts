@@ -15,6 +15,10 @@ export async function initAnalytics() {
   try {
     mp = new Mixpanel(TOKEN, /* trackAutomaticEvents */ false);
     await mp.init();
+    // Off by default Mixpanel geolocates every event from the sender's IP,
+    // which Play's Data safety form counts as "approximate location". Warsh
+    // never reads it, so don't collect it.
+    mp.setUseIpAddressForGeolocation(false);
   } catch {
     mp = null;
   }
