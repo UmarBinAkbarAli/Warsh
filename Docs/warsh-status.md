@@ -336,20 +336,22 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    copy ("N days left to reach your 7-day goal"). Still open: the onboarding
    checklist's daily-goal step (minutes/day) and this streak-day commitment remain
    two separate concepts; decide whether they merge into one commitment moment.
-5. **Lesson pass/fail is enforced server-side (shipped 2026-08-26, `3979af2`;
-   the earlier "not designed or built" note was stale).** The client sends one
-   boolean per answerable exercise in `exerciseResults`; `lib/lessonScoring.ts`
-   computes score and pass/fail (`LESSON_FAIL_THRESHOLD = 3` wrong, absolute, not
-   a percentage), so a client-sent score is never trusted. `SHADOW_REPEAT` /
-   `SPOKEN_PHRASES` are excluded, and a lesson with no scored exercises cannot
-   fail. On fail the route returns `passed: false` with `correctCount`,
-   `totalScored`, `threshold`; no progress row, XP, streak or daily-goal credit is
-   written (chapter tests additionally record `attempts`), so the chapter stays
-   locked via `lib/course.ts`. The app shows the retry screen (Pen "Lesson Retry ·
-   Proposed Redesign") and restarts the lesson from the beginning. Unit-tested in
-   `tests/lessonScoring.test.ts`. Still open: whether a fixed 3-wrong threshold
-   is right for lessons that range from 5 to 15+ exercises, and whether a failed
-   attempt should bank any XP for effort — both are product decisions, not gaps.
+5. **Lesson pass/fail is enforced server-side; pass mark is 70% (owner decision
+   2026-09-11).** The client sends one boolean per answerable exercise in
+   `exerciseResults`; `lib/lessonScoring.ts` computes score and pass/fail
+   (`LESSON_PASS_PERCENT = 70`, `requiredCorrect = ceil(0.7 × totalScored)` —
+   the same shape `lib/chapterTests.ts` already used), so a client-sent score is
+   never trusted. Originally shipped 2026-08-26 (`3979af2`) with a fixed 3-wrong
+   cutoff; switched to a percentage so 5- and 15-exercise lessons are held to the
+   same standard. `SHADOW_REPEAT` / `SPOKEN_PHRASES` are excluded, and a lesson
+   with no scored exercises cannot fail. On fail the route returns
+   `passed: false` with `correctCount`, `totalScored`, `requiredCorrect`; no
+   progress row, XP, streak or daily-goal credit is written (chapter tests
+   additionally record `attempts`), so the chapter stays locked via
+   `lib/course.ts`. XP stays at zero until the lesson is actually passed — a failed
+   attempt banks nothing. The app shows the retry screen (Pen "Lesson Retry ·
+   Proposed Redesign") with the server's `requiredCorrect` and restarts the lesson
+   from the beginning. Unit-tested in `tests/lessonScoring.test.ts`.
 
 ### Later
 

@@ -73,8 +73,7 @@ export async function POST(request: Request, { params }: Props) {
     score: number;
     correctCount: number;
     totalScored: number;
-    threshold?: number;
-    requiredCorrect?: number;
+    requiredCorrect: number;
   };
   try {
     scoring = isChapterTest
@@ -86,7 +85,7 @@ export async function POST(request: Request, { params }: Props) {
       { status: 400 },
     );
   }
-  const { passed, score, correctCount, totalScored, threshold, requiredCorrect } = scoring;
+  const { passed, score, correctCount, totalScored, requiredCorrect } = scoring;
   if (!passed) {
     if (isChapterTest) {
       await prisma.progress.upsert({
@@ -106,7 +105,7 @@ export async function POST(request: Request, { params }: Props) {
         },
       });
     }
-    return NextResponse.json({ data: { passed: false, score, correctCount, totalScored, threshold, requiredCorrect } });
+    return NextResponse.json({ data: { passed: false, score, correctCount, totalScored, requiredCorrect } });
   }
 
   const todayStart = get4amPKTBoundary();

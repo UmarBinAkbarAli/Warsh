@@ -50,7 +50,7 @@ type CompletionResult = {
 type FailResult = {
   correctCount: number;
   totalScored: number;
-  threshold: number;
+  requiredCorrect: number;
 };
 
 type SelectedAnswer = string | string[] | Record<string, string> | null;
@@ -570,7 +570,7 @@ export default function LessonPlayScreen() {
         });
         const data = response.data.data;
         if (data.passed === false) {
-          setFailResult({ correctCount: data.correctCount, totalScored: data.totalScored, threshold: data.threshold });
+          setFailResult({ correctCount: data.correctCount, totalScored: data.totalScored, requiredCorrect: data.requiredCorrect });
           return;
         }
         const achievements = Array.isArray(data.newAchievements) ? data.newAchievements : [];
@@ -1480,8 +1480,8 @@ export default function LessonPlayScreen() {
   function renderRetry() {
     const correctCount = failResult?.correctCount ?? 0;
     const totalScored = failResult?.totalScored ?? exercises.length;
-    const threshold = failResult?.threshold ?? 3;
-    const neededToPass = Math.max(totalScored - threshold + 1, 0);
+    // Server-computed pass mark (70% of scored exercises, rounded up).
+    const neededToPass = failResult?.requiredCorrect ?? Math.ceil(totalScored * 0.7);
 
     return (
       <View style={[styles.fullScreen, screenPadding, styles.closeScreen]}>
