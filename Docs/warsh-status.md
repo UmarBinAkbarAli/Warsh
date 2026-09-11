@@ -192,13 +192,16 @@ files remain release evidence.
    against Play and returned `found: 0` (no refunds in the window). Failures raise
    a Sentry error. Not yet exercised with a real refund — the next test-track
    refund should be watched through both paths.
-2. **Hard lockout after the trial window also closes has not been exercised.**
-   Cancellation and expiry are verified, but the tested account fell back to its
-   still-open 7-day trial, which is the specified behavior. The genuine no-access
-   branch is the same `getSubscriptionState` path with `trialWindowOpen` false. It
-   cannot be reached on an account whose trial started the same day, and there is no
-   supported way to backdate `trialExpiresAt` in production. Check it against a
-   staging account with an already-expired trial.
+2. **Hard lockout after trial expiry: verified on staging (2026-09-11).** The
+   staging account's trial had lapsed naturally on 2026-08-30 with the row still
+   `trial`. Against the current backend: `/api/subscription/status` reported
+   `expired`, `hasAccess: false`; lesson GET, lesson complete, `/api/chat`,
+   `/api/chat/history`, `/api/tadabbur` and `/api/audio/catalog` all returned
+   `402 subscription_required` (the gate runs before parameter validation), while
+   `/api/vocabulary/words`, `/api/core500`, `/api/vocabulary/word-of-day` and the
+   chapter map stayed 200. Running `expire-trials` flipped the row to `expired`
+   with identical results, and moving `trialExpiresAt` one hour ahead restored
+   access immediately — the window is decided by the timestamp, not the status.
 3. **Silent-outage detection is live and verified (2026-09-11).** Three outages
    found by hand on 2026-09-10 (Noor on its offline fallback since 2026-08-11, all
    500 words `DRAFT`, Tadabbur Surahs missing) produced no 5xx, no Sentry event and
