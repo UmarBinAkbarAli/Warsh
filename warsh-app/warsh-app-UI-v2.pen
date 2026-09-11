@@ -132912,6 +132912,2713 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "CGgMs",
+      "x": 55156,
+      "y": -44,
+      "name": "21 — Age Check · Proposed Flow",
+      "clip": true,
+      "width": 2678,
+      "fill": "#E9E0C9",
+      "cornerRadius": 24,
+      "layout": "vertical",
+      "gap": 40,
+      "padding": 64,
+      "children": [
+        {
+          "type": "frame",
+          "id": "Yyxrm",
+          "name": "Proposal Header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 10,
+          "children": [
+            {
+              "type": "text",
+              "id": "qR8Yi",
+              "name": "Eyebrow",
+              "fill": "#A88648",
+              "content": "SECTION 21 · PRODUCT PROPOSAL",
+              "fontFamily": "Lora",
+              "fontSize": 13,
+              "fontWeight": "700",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "dP3h0",
+              "name": "Title",
+              "fill": "#1A1A1A",
+              "content": "Age Check · Neutral Date-of-Birth Step",
+              "fontFamily": "Cormorant Garamond",
+              "fontSize": 38,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "FHKPQ",
+              "name": "Description",
+              "fill": "#3D3D3D",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Warsh is declared for ages 13–17 and adults on Google Play, so the app must know a learner's age before it creates an account. Google sign-in does not provide a birthday, so one neutral date-of-birth step (day, month, year) sits between “Create account” and both sign-up paths. It never mentions a threshold, has no pre-selected values, and refuses under-13s without storing anything. Existing accounts are asked the same question once on their next launch. Review and approve before implementation.",
+              "lineHeight": 1.5,
+              "fontFamily": "Lora",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Ajd3R",
+          "name": "Proposed Screens",
+          "width": "fill_container",
+          "gap": 50,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Vos9D",
+              "name": "EN Row",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "fH0ag",
+                  "name": "EN Screens",
+                  "gap": 40,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "uhtMO",
+                      "name": "Age Check · EN · Empty",
+                      "clip": true,
+                      "width": 390,
+                      "height": 844,
+                      "fill": "#F4EBD0",
+                      "cornerRadius": 14,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "oFhMf",
+                          "name": "Status Bar",
+                          "width": "fill_container",
+                          "height": 40,
+                          "padding": [
+                            12,
+                            22
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Qx3O7",
+                              "name": "Time",
+                              "fill": "#1A1A1A",
+                              "content": "9:41",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "xLeZK",
+                              "name": "Icons",
+                              "gap": 6,
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "NAbyP",
+                                  "name": "signal",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "signal",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "s0Kk0N",
+                                  "name": "wifi",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "wifi",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "uEOCN",
+                                  "name": "battery-full",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "battery-full",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "tHcLE",
+                          "name": "Content",
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            12,
+                            24,
+                            24,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "QBQ6A",
+                              "name": "Back",
+                              "width": "fill_container",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "KNuKZ",
+                                  "name": "Back Button",
+                                  "width": 40,
+                                  "height": 40,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "USBts",
+                                      "name": "chevron",
+                                      "width": 24,
+                                      "height": 24,
+                                      "icon": "chevron-left",
+                                      "library": "lucide",
+                                      "fill": "#1A1A1A"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "r67LWs",
+                              "name": "Header",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 12,
+                              "padding": [
+                                24,
+                                0
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "ay2tV",
+                                  "name": "bism",
+                                  "fill": "#C49B4D",
+                                  "content": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+                                  "textAlign": "center",
+                                  "fontFamily": "Scheherazade New",
+                                  "fontSize": 19,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "xGlk8",
+                                  "name": "title",
+                                  "fill": "#1A1A1A",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "When were you born?",
+                                  "lineHeight": 1.3,
+                                  "textAlign": "center",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 22,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "c8bXX",
+                                  "name": "sub",
+                                  "fill": "#3D3D3D",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Everyone is asked this once. Your date of birth is private and is never shown to other learners.",
+                                  "lineHeight": 1.45,
+                                  "textAlign": "center",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Z5kAcf",
+                              "name": "Fields",
+                              "width": "fill_container",
+                              "height": 68,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "i4xcze",
+                                  "x": 0,
+                                  "y": 12,
+                                  "name": "Day",
+                                  "width": 107,
+                                  "height": 56,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 6,
+                                  "stroke": "#9DAB94",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    8,
+                                    14
+                                  ],
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "iBp4t",
+                                      "name": "Text",
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "P44rp",
+                                          "name": "l",
+                                          "fill": "#5F5F5F",
+                                          "content": "Day",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 10,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "TRvW0",
+                                          "name": "v",
+                                          "fill": "#9A8F7A",
+                                          "content": "—",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 15,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "QDFYc",
+                                      "name": "chev",
+                                      "width": 18,
+                                      "height": 18,
+                                      "icon": "chevron-down",
+                                      "library": "lucide",
+                                      "fill": "#5F5F5F"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "c6qRm",
+                                  "x": 118,
+                                  "y": 12,
+                                  "name": "Month",
+                                  "width": 107,
+                                  "height": 56,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 6,
+                                  "stroke": "#9DAB94",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    8,
+                                    14
+                                  ],
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "LDDHC",
+                                      "name": "Text",
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "AIKCm",
+                                          "name": "l",
+                                          "fill": "#5F5F5F",
+                                          "content": "Month",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 10,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "qqmiJ",
+                                          "name": "v",
+                                          "fill": "#9A8F7A",
+                                          "content": "—",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 15,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "w6UxAx",
+                                      "name": "chev",
+                                      "width": 18,
+                                      "height": 18,
+                                      "icon": "chevron-down",
+                                      "library": "lucide",
+                                      "fill": "#5F5F5F"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "szBVH",
+                                  "x": 235,
+                                  "y": 12,
+                                  "name": "Year",
+                                  "width": 107,
+                                  "height": 56,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 6,
+                                  "stroke": "#9DAB94",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    8,
+                                    14
+                                  ],
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "d2C43X",
+                                      "name": "Text",
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "zMdBb",
+                                          "name": "l",
+                                          "fill": "#5F5F5F",
+                                          "content": "Year",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 10,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "cvHRR",
+                                          "name": "v",
+                                          "fill": "#9A8F7A",
+                                          "content": "—",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 15,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "ijITl",
+                                      "name": "chev",
+                                      "width": 18,
+                                      "height": 18,
+                                      "icon": "chevron-down",
+                                      "library": "lucide",
+                                      "fill": "#5F5F5F"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "HAVSj",
+                              "name": "Helper Wrap",
+                              "width": "fill_container",
+                              "padding": [
+                                10,
+                                0,
+                                0,
+                                0
+                              ],
+                              "justifyContent": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "SVNZx",
+                                  "name": "helper",
+                                  "fill": "#5F5F5F",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Choose your day, month and year to continue.",
+                                  "lineHeight": 1.4,
+                                  "textAlign": "center",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "GpWR7",
+                              "name": "Spacer",
+                              "width": "fill_container",
+                              "height": "fill_container"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "zz6mP",
+                              "name": "CTA",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 14,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "mS70P",
+                                  "name": "Continue",
+                                  "opacity": 0.45,
+                                  "width": "fill_container",
+                                  "height": 54,
+                                  "fill": "#C49B4D",
+                                  "cornerRadius": 999,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "l0DUw",
+                                      "name": "label",
+                                      "fill": "#1A1A1A",
+                                      "content": "Continue",
+                                      "fontFamily": "Lora",
+                                      "fontSize": 16,
+                                      "fontWeight": "600"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "QhqVH",
+                                  "name": "why",
+                                  "fill": "#C49B4D",
+                                  "content": "Why do we ask?",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 13,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rxnkv",
+                      "name": "Age Check · EN · Filled",
+                      "clip": true,
+                      "width": 390,
+                      "height": 844,
+                      "fill": "#F4EBD0",
+                      "cornerRadius": 14,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ZmRiK",
+                          "name": "Status Bar",
+                          "width": "fill_container",
+                          "height": 40,
+                          "padding": [
+                            12,
+                            22
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "AmARw",
+                              "name": "Time",
+                              "fill": "#1A1A1A",
+                              "content": "9:41",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "a77hc",
+                              "name": "Icons",
+                              "gap": 6,
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "IVZ8I",
+                                  "name": "signal",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "signal",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "Dzf2T",
+                                  "name": "wifi",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "wifi",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "cEqgx",
+                                  "name": "battery-full",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "battery-full",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "yypCY",
+                          "name": "Content",
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            12,
+                            24,
+                            24,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "AjFJP",
+                              "name": "Back",
+                              "width": "fill_container",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "tUWgc",
+                                  "name": "Back Button",
+                                  "width": 40,
+                                  "height": 40,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "B1UBCX",
+                                      "name": "chevron",
+                                      "width": 24,
+                                      "height": 24,
+                                      "icon": "chevron-left",
+                                      "library": "lucide",
+                                      "fill": "#1A1A1A"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "cDTnC",
+                              "name": "Header",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 12,
+                              "padding": [
+                                24,
+                                0
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "opfpx",
+                                  "name": "bism",
+                                  "fill": "#C49B4D",
+                                  "content": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+                                  "textAlign": "center",
+                                  "fontFamily": "Scheherazade New",
+                                  "fontSize": 19,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "S7siZ",
+                                  "name": "title",
+                                  "fill": "#1A1A1A",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "When were you born?",
+                                  "lineHeight": 1.3,
+                                  "textAlign": "center",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 22,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "E2RpV3",
+                                  "name": "sub",
+                                  "fill": "#3D3D3D",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Everyone is asked this once. Your date of birth is private and is never shown to other learners.",
+                                  "lineHeight": 1.45,
+                                  "textAlign": "center",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "DILhE",
+                              "name": "Fields",
+                              "width": "fill_container",
+                              "height": 68,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "UCOyM",
+                                  "x": 0,
+                                  "y": 12,
+                                  "name": "Day",
+                                  "width": 107,
+                                  "height": 56,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 6,
+                                  "stroke": "#9DAB94",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    8,
+                                    14
+                                  ],
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "BQrs8",
+                                      "name": "Text",
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "XpMye",
+                                          "name": "l",
+                                          "fill": "#5F5F5F",
+                                          "content": "Day",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 10,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "P7MGJC",
+                                          "name": "v",
+                                          "fill": "#1A1A1A",
+                                          "content": "14",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 15,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "ksKZ0",
+                                      "name": "chev",
+                                      "width": 18,
+                                      "height": 18,
+                                      "icon": "chevron-down",
+                                      "library": "lucide",
+                                      "fill": "#5F5F5F"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "J1SWxn",
+                                  "x": 118,
+                                  "y": 12,
+                                  "name": "Month",
+                                  "width": 107,
+                                  "height": 56,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 6,
+                                  "stroke": "#9DAB94",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    8,
+                                    14
+                                  ],
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "auQcS",
+                                      "name": "Text",
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "YMnJC",
+                                          "name": "l",
+                                          "fill": "#5F5F5F",
+                                          "content": "Month",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 10,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "h1uCIi",
+                                          "name": "v",
+                                          "fill": "#1A1A1A",
+                                          "content": "March",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 15,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "nwkGM",
+                                      "name": "chev",
+                                      "width": 18,
+                                      "height": 18,
+                                      "icon": "chevron-down",
+                                      "library": "lucide",
+                                      "fill": "#5F5F5F"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "mjKnx",
+                                  "x": 235,
+                                  "y": 12,
+                                  "name": "Year",
+                                  "width": 107,
+                                  "height": 56,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 6,
+                                  "stroke": "#9DAB94",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    8,
+                                    14
+                                  ],
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "NfzKK",
+                                      "name": "Text",
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "fgqDC",
+                                          "name": "l",
+                                          "fill": "#5F5F5F",
+                                          "content": "Year",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 10,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "i2TMEC",
+                                          "name": "v",
+                                          "fill": "#1A1A1A",
+                                          "content": "2011",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 15,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "L2NhI",
+                                      "name": "chev",
+                                      "width": 18,
+                                      "height": 18,
+                                      "icon": "chevron-down",
+                                      "library": "lucide",
+                                      "fill": "#5F5F5F"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "I9w1UK",
+                              "name": "Helper Wrap",
+                              "width": "fill_container",
+                              "padding": [
+                                10,
+                                0,
+                                0,
+                                0
+                              ],
+                              "justifyContent": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "b9bZiz",
+                                  "name": "helper",
+                                  "fill": "#5F5F5F",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Choose your day, month and year to continue.",
+                                  "lineHeight": 1.4,
+                                  "textAlign": "center",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "nlwGv",
+                              "name": "Spacer",
+                              "width": "fill_container",
+                              "height": "fill_container"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "AzNQn",
+                              "name": "CTA",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 14,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "YXFbd",
+                                  "name": "Continue",
+                                  "width": "fill_container",
+                                  "height": 54,
+                                  "fill": "#C49B4D",
+                                  "cornerRadius": 999,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "jOWIb",
+                                      "name": "label",
+                                      "fill": "#1A1A1A",
+                                      "content": "Continue",
+                                      "fontFamily": "Lora",
+                                      "fontSize": 16,
+                                      "fontWeight": "600"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "F2iqN",
+                                  "name": "why",
+                                  "fill": "#C49B4D",
+                                  "content": "Why do we ask?",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 13,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "S9TijO",
+                      "name": "Under 13 · EN",
+                      "clip": true,
+                      "width": 390,
+                      "height": 844,
+                      "fill": "#F4EBD0",
+                      "cornerRadius": 14,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "zZ7A7",
+                          "name": "Status Bar",
+                          "width": "fill_container",
+                          "height": 40,
+                          "padding": [
+                            12,
+                            22
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "L95Z3M",
+                              "name": "Time",
+                              "fill": "#1A1A1A",
+                              "content": "9:41",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "vdVSc",
+                              "name": "Icons",
+                              "gap": 6,
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "BKVMb",
+                                  "name": "signal",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "signal",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "StzWO",
+                                  "name": "wifi",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "wifi",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "QOwLV",
+                                  "name": "battery-full",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "battery-full",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "CmqYZ",
+                          "name": "Content",
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            12,
+                            24,
+                            24,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "HR5ku",
+                              "name": "Body",
+                              "width": "fill_container",
+                              "height": "fill_container",
+                              "layout": "vertical",
+                              "gap": 16,
+                              "padding": [
+                                0,
+                                8
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "Uhh6X",
+                                  "name": "Seal",
+                                  "width": 88,
+                                  "height": 88,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 999,
+                                  "stroke": "#C49B4D",
+                                  "strokeWidth": 1,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "NaFHp",
+                                      "name": "letter",
+                                      "fill": "#C49B4D",
+                                      "content": "و",
+                                      "fontFamily": "Scheherazade New",
+                                      "fontSize": 44,
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "VCHKa",
+                                  "name": "title",
+                                  "fill": "#1A1A1A",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Thank you for your interest in Warsh",
+                                  "lineHeight": 1.3,
+                                  "textAlign": "center",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 22,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "p6GNE",
+                                  "name": "sub",
+                                  "fill": "#3D3D3D",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Warsh is made for learners aged 13 and older, so we can't create an account today. Nothing you entered has been saved.",
+                                  "lineHeight": 1.5,
+                                  "textAlign": "center",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 15,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "JX99T",
+                                  "name": "note",
+                                  "fill": "#5F5F5F",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "A parent or teacher is welcome to learn alongside you with their own account.",
+                                  "lineHeight": 1.45,
+                                  "textAlign": "center",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "juE2R",
+                              "name": "CTA",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 12,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "u3VsJ",
+                                  "name": "Back",
+                                  "width": "fill_container",
+                                  "height": 54,
+                                  "fill": "#C49B4D",
+                                  "cornerRadius": 999,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "xMHav",
+                                      "name": "label",
+                                      "fill": "#1A1A1A",
+                                      "content": "Back to start",
+                                      "fontFamily": "Lora",
+                                      "fontSize": 16,
+                                      "fontWeight": "600"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "f1uNV",
+                      "name": "Existing Account Prompt · EN",
+                      "clip": true,
+                      "width": 390,
+                      "height": 844,
+                      "fill": "#F4EBD0",
+                      "cornerRadius": 14,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "XqHxW",
+                          "name": "Status Bar",
+                          "width": "fill_container",
+                          "height": 40,
+                          "padding": [
+                            12,
+                            22
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "QWAmK",
+                              "name": "Time",
+                              "fill": "#1A1A1A",
+                              "content": "9:41",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "vmS8M",
+                              "name": "Icons",
+                              "gap": 6,
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "xUdcK",
+                                  "name": "signal",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "signal",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "QXun0",
+                                  "name": "wifi",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "wifi",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "kGBDj",
+                                  "name": "battery-full",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "battery-full",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "AVfU1",
+                          "name": "Content",
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            12,
+                            24,
+                            24,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "GxBj0",
+                              "name": "Top Spacer",
+                              "width": "fill_container",
+                              "height": 40
+                            },
+                            {
+                              "type": "frame",
+                              "id": "KupLU",
+                              "name": "Header",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 12,
+                              "padding": [
+                                24,
+                                0
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "AWmKX",
+                                  "name": "bism",
+                                  "fill": "#C49B4D",
+                                  "content": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+                                  "textAlign": "center",
+                                  "fontFamily": "Scheherazade New",
+                                  "fontSize": 19,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "e382sn",
+                                  "name": "title",
+                                  "fill": "#1A1A1A",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "One quick question",
+                                  "lineHeight": 1.3,
+                                  "textAlign": "center",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 22,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "vlCi5",
+                                  "name": "sub",
+                                  "fill": "#3D3D3D",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "To keep Warsh right for every learner, please confirm when you were born. You will only be asked once.",
+                                  "lineHeight": 1.45,
+                                  "textAlign": "center",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "QizZR",
+                              "name": "Fields",
+                              "width": "fill_container",
+                              "height": 68,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "Nvr0A",
+                                  "x": 0,
+                                  "y": 12,
+                                  "name": "Day",
+                                  "width": 107,
+                                  "height": 56,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 6,
+                                  "stroke": "#9DAB94",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    8,
+                                    14
+                                  ],
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "AFnmP",
+                                      "name": "Text",
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "vRpwS",
+                                          "name": "l",
+                                          "fill": "#5F5F5F",
+                                          "content": "Day",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 10,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "z72ao",
+                                          "name": "v",
+                                          "fill": "#9A8F7A",
+                                          "content": "—",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 15,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "H2JKS8",
+                                      "name": "chev",
+                                      "width": 18,
+                                      "height": 18,
+                                      "icon": "chevron-down",
+                                      "library": "lucide",
+                                      "fill": "#5F5F5F"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "p4wRN",
+                                  "x": 118,
+                                  "y": 12,
+                                  "name": "Month",
+                                  "width": 107,
+                                  "height": 56,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 6,
+                                  "stroke": "#9DAB94",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    8,
+                                    14
+                                  ],
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "izG5x",
+                                      "name": "Text",
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "jlcdb",
+                                          "name": "l",
+                                          "fill": "#5F5F5F",
+                                          "content": "Month",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 10,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "lBjf8",
+                                          "name": "v",
+                                          "fill": "#9A8F7A",
+                                          "content": "—",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 15,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "xCj2D",
+                                      "name": "chev",
+                                      "width": 18,
+                                      "height": 18,
+                                      "icon": "chevron-down",
+                                      "library": "lucide",
+                                      "fill": "#5F5F5F"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "eyaPA",
+                                  "x": 235,
+                                  "y": 12,
+                                  "name": "Year",
+                                  "width": 107,
+                                  "height": 56,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 6,
+                                  "stroke": "#9DAB94",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    8,
+                                    14
+                                  ],
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "x4g1Ej",
+                                      "name": "Text",
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "iRiYJ",
+                                          "name": "l",
+                                          "fill": "#5F5F5F",
+                                          "content": "Year",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 10,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "zvrVG",
+                                          "name": "v",
+                                          "fill": "#9A8F7A",
+                                          "content": "—",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 15,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "G7SRO0",
+                                      "name": "chev",
+                                      "width": 18,
+                                      "height": 18,
+                                      "icon": "chevron-down",
+                                      "library": "lucide",
+                                      "fill": "#5F5F5F"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "XVcex",
+                              "name": "Helper Wrap",
+                              "width": "fill_container",
+                              "padding": [
+                                10,
+                                0,
+                                0,
+                                0
+                              ],
+                              "justifyContent": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "TWLGw",
+                                  "name": "helper",
+                                  "fill": "#5F5F5F",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Choose your day, month and year to continue.",
+                                  "lineHeight": 1.4,
+                                  "textAlign": "center",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "M2f5o",
+                              "name": "Spacer",
+                              "width": "fill_container",
+                              "height": "fill_container"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Z3PTq",
+                              "name": "CTA",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 14,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "PqN9H",
+                                  "name": "Continue",
+                                  "opacity": 0.45,
+                                  "width": "fill_container",
+                                  "height": 54,
+                                  "fill": "#C49B4D",
+                                  "cornerRadius": 999,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "xWsJr",
+                                      "name": "label",
+                                      "fill": "#1A1A1A",
+                                      "content": "Continue",
+                                      "fontFamily": "Lora",
+                                      "fontSize": 16,
+                                      "fontWeight": "600"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "VEaBE",
+                                  "name": "why",
+                                  "fill": "#C49B4D",
+                                  "content": "Why do we ask?",
+                                  "fontFamily": "Lora",
+                                  "fontSize": 13,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NVCfb",
+                  "name": "Proposed Behavior EN",
+                  "width": 1680,
+                  "fill": "#FBF7EC",
+                  "cornerRadius": 12,
+                  "stroke": "#9DAB94",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Wkajj",
+                      "name": "Behavior Heading",
+                      "fill": "#A88648",
+                      "content": "PROPOSED BEHAVIOR",
+                      "fontFamily": "Lora",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "wYj4L",
+                      "name": "Where it sits",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 8,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "zqVHr",
+                          "name": "New Google user Title",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Where it sits",
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "G89ALX",
+                          "name": "New Google user Detail",
+                          "fill": "#5F5F5F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Shown after “Create account” on the welcome screen, before Google or email is offered. Both paths carry the same date of birth to the backend; the account cannot be created without it.",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "d4oTCg",
+                      "name": "Neutral by design",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 8,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "X7uZl8",
+                          "name": "New Google user Title",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Neutral by design",
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dxRm7",
+                          "name": "New Google user Detail",
+                          "fill": "#5F5F5F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Day, month and year, no preselected values, no mention of a minimum age, Continue disabled until all three are chosen. Nothing in the copy hints at what answer is “right”.",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L76TUw",
+                      "name": "Under 13",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 8,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "b8RtBY",
+                          "name": "New Google user Title",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Under 13",
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "IRIht",
+                          "name": "New Google user Detail",
+                          "fill": "#5F5F5F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "A calm refusal, no account and no row written anywhere. Back returns to the welcome screen. Re-entering a different date on the same device is allowed; the backend re-checks every time.",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "O6XzQ",
+                      "name": "13–17",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 8,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pc8iq",
+                          "name": "New Google user Title",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "13–17",
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "CM3PS",
+                          "name": "New Google user Detail",
+                          "fill": "#5F5F5F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Account is created normally. The backend derives isMinor and turns Mixpanel off for the account; Noor gets a teen-safety line in its system prompt; only transactional email is ever sent.",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LnCgb",
+                      "name": "Existing accounts",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 8,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "e2TrlP",
+                          "name": "New Google user Title",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Existing accounts",
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "hde84",
+                          "name": "New Google user Detail",
+                          "fill": "#5F5F5F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Users without a date of birth get the in-app variant once on next launch (no back button, cannot be dismissed). Under-13 answers lead to the existing delete-account flow.",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "nhVzx",
+                      "name": "Why do we ask?",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 8,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "MmJTJ",
+                          "name": "New Google user Title",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Why do we ask?",
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "C8vvM",
+                          "name": "New Google user Detail",
+                          "fill": "#5F5F5F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Opens a short sheet: “Warsh asks everyone their age once so we can meet the rules for younger learners. It is never shown to others and you can delete your account at any time.”",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "b3ld6",
+              "name": "UR Row",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "IKFsK",
+                  "name": "UR Screens",
+                  "gap": 40,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "EbyDD",
+                      "name": "Age Check · UR · Empty",
+                      "clip": true,
+                      "width": 390,
+                      "height": 844,
+                      "fill": "#F4EBD0",
+                      "cornerRadius": 14,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "RKvri",
+                          "name": "Status Bar",
+                          "width": "fill_container",
+                          "height": 40,
+                          "padding": [
+                            12,
+                            22
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "R8dOMz",
+                              "name": "Time",
+                              "fill": "#1A1A1A",
+                              "content": "9:41",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "grCWI",
+                              "name": "Icons",
+                              "gap": 6,
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "NUbsx",
+                                  "name": "signal",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "signal",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "F77YxZ",
+                                  "name": "wifi",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "wifi",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "R0RNP",
+                                  "name": "battery-full",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "battery-full",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Q2QrU",
+                          "name": "Content",
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            12,
+                            24,
+                            24,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "oYcTf",
+                              "name": "Back",
+                              "width": "fill_container",
+                              "justifyContent": "end",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "cfCvC",
+                                  "name": "Back Button",
+                                  "width": 40,
+                                  "height": 40,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "z7XhKg",
+                                      "name": "chevron",
+                                      "width": 24,
+                                      "height": 24,
+                                      "icon": "chevron-right",
+                                      "library": "lucide",
+                                      "fill": "#1A1A1A"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "r8zSzq",
+                              "name": "Header",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 10,
+                              "padding": [
+                                20,
+                                0
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "xG2Qr",
+                                  "name": "bism",
+                                  "fill": "#C49B4D",
+                                  "content": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+                                  "textAlign": "center",
+                                  "fontFamily": "Scheherazade New",
+                                  "fontSize": 19,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "cN53g",
+                                  "name": "title",
+                                  "fill": "#1A1A1A",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "آپ کی پیدائش کب ہوئی؟",
+                                  "lineHeight": 1.9,
+                                  "textAlign": "center",
+                                  "fontFamily": "Noto Nastaliq Urdu",
+                                  "fontSize": 20,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "LAxeC",
+                                  "name": "sub",
+                                  "fill": "#3D3D3D",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "یہ سوال ہر ایک سے صرف ایک بار پوچھا جاتا ہے۔ آپ کی تاریخِ پیدائش نجی ہے اور کسی دوسرے سیکھنے والے کو نہیں دکھائی جاتی۔",
+                                  "lineHeight": 2,
+                                  "textAlign": "center",
+                                  "fontFamily": "Noto Nastaliq Urdu",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "lRTX3",
+                              "name": "Fields",
+                              "width": "fill_container",
+                              "height": 72,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "NkswU",
+                                  "x": 0,
+                                  "y": 12,
+                                  "name": "Year",
+                                  "width": 107,
+                                  "height": 60,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 6,
+                                  "stroke": "#9DAB94",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    6,
+                                    14
+                                  ],
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "pQ52y",
+                                      "name": "chev",
+                                      "width": 18,
+                                      "height": 18,
+                                      "icon": "chevron-down",
+                                      "library": "lucide",
+                                      "fill": "#5F5F5F"
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "AaT99",
+                                      "name": "Text",
+                                      "layout": "vertical",
+                                      "alignItems": "end",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "sEoB0",
+                                          "name": "l",
+                                          "fill": "#5F5F5F",
+                                          "content": "سال",
+                                          "fontFamily": "Noto Nastaliq Urdu",
+                                          "fontSize": 10,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "L8j00h",
+                                          "name": "v",
+                                          "fill": "#9A8F7A",
+                                          "content": "—",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 15,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "L6CzQ",
+                                  "x": 118,
+                                  "y": 12,
+                                  "name": "Month",
+                                  "width": 107,
+                                  "height": 60,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 6,
+                                  "stroke": "#9DAB94",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    6,
+                                    14
+                                  ],
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "ru2fa",
+                                      "name": "chev",
+                                      "width": 18,
+                                      "height": 18,
+                                      "icon": "chevron-down",
+                                      "library": "lucide",
+                                      "fill": "#5F5F5F"
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "GXRVp",
+                                      "name": "Text",
+                                      "layout": "vertical",
+                                      "alignItems": "end",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "hJM6p",
+                                          "name": "l",
+                                          "fill": "#5F5F5F",
+                                          "content": "مہینہ",
+                                          "fontFamily": "Noto Nastaliq Urdu",
+                                          "fontSize": 10,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "mgFDX",
+                                          "name": "v",
+                                          "fill": "#9A8F7A",
+                                          "content": "—",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 15,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "wPUha",
+                                  "x": 235,
+                                  "y": 12,
+                                  "name": "Day",
+                                  "width": 107,
+                                  "height": 60,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 6,
+                                  "stroke": "#9DAB94",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    6,
+                                    14
+                                  ],
+                                  "justifyContent": "space_between",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "YFFp7",
+                                      "name": "chev",
+                                      "width": 18,
+                                      "height": 18,
+                                      "icon": "chevron-down",
+                                      "library": "lucide",
+                                      "fill": "#5F5F5F"
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "P1PBU",
+                                      "name": "Text",
+                                      "layout": "vertical",
+                                      "alignItems": "end",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "IENtd",
+                                          "name": "l",
+                                          "fill": "#5F5F5F",
+                                          "content": "دن",
+                                          "fontFamily": "Noto Nastaliq Urdu",
+                                          "fontSize": 10,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "DPrOu",
+                                          "name": "v",
+                                          "fill": "#9A8F7A",
+                                          "content": "—",
+                                          "fontFamily": "Lora",
+                                          "fontSize": 15,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "IlN1Z",
+                              "name": "Helper Wrap",
+                              "width": "fill_container",
+                              "padding": [
+                                10,
+                                0,
+                                0,
+                                0
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "EhJ7V",
+                                  "name": "helper",
+                                  "fill": "#5F5F5F",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "جاری رکھنے کے لیے دن، مہینہ اور سال منتخب کریں۔",
+                                  "lineHeight": 2,
+                                  "textAlign": "center",
+                                  "fontFamily": "Noto Nastaliq Urdu",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "JF2X5",
+                              "name": "Spacer",
+                              "width": "fill_container",
+                              "height": "fill_container"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "sUWTb",
+                              "name": "CTA",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 12,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "mUlS8",
+                                  "name": "Continue",
+                                  "opacity": 0.45,
+                                  "width": "fill_container",
+                                  "height": 54,
+                                  "fill": "#C49B4D",
+                                  "cornerRadius": 999,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "frVOT",
+                                      "name": "label",
+                                      "fill": "#1A1A1A",
+                                      "content": "جاری رکھیں",
+                                      "fontFamily": "Noto Nastaliq Urdu",
+                                      "fontSize": 16,
+                                      "fontWeight": "600"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "kaSF7",
+                                  "name": "why",
+                                  "fill": "#C49B4D",
+                                  "content": "ہم یہ کیوں پوچھتے ہیں؟",
+                                  "fontFamily": "Noto Nastaliq Urdu",
+                                  "fontSize": 13,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Fr7kE",
+                      "name": "Under 13 · UR",
+                      "clip": true,
+                      "width": 390,
+                      "height": 844,
+                      "fill": "#F4EBD0",
+                      "cornerRadius": 14,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "R9PH2x",
+                          "name": "Status Bar",
+                          "width": "fill_container",
+                          "height": 40,
+                          "padding": [
+                            12,
+                            22
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "a4W15o",
+                              "name": "Time",
+                              "fill": "#1A1A1A",
+                              "content": "9:41",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "oFiln",
+                              "name": "Icons",
+                              "gap": 6,
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "KSvv3",
+                                  "name": "signal",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "signal",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "bZd41",
+                                  "name": "wifi",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "wifi",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "aeRRN",
+                                  "name": "battery-full",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "battery-full",
+                                  "library": "lucide",
+                                  "fill": "#1A1A1A"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "YbqPB",
+                          "name": "Content",
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            12,
+                            24,
+                            24,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "fMT5H",
+                              "name": "Body",
+                              "width": "fill_container",
+                              "height": "fill_container",
+                              "layout": "vertical",
+                              "gap": 14,
+                              "padding": [
+                                0,
+                                8
+                              ],
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "hvuwj",
+                                  "name": "Seal",
+                                  "width": 88,
+                                  "height": 88,
+                                  "fill": "#EDDFAF",
+                                  "cornerRadius": 999,
+                                  "stroke": "#C49B4D",
+                                  "strokeWidth": 1,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "h8DTs9",
+                                      "name": "letter",
+                                      "fill": "#C49B4D",
+                                      "content": "و",
+                                      "fontFamily": "Scheherazade New",
+                                      "fontSize": 44,
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "giJcL",
+                                  "name": "title",
+                                  "fill": "#1A1A1A",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "ورش میں دلچسپی کا شکریہ",
+                                  "lineHeight": 1.9,
+                                  "textAlign": "center",
+                                  "fontFamily": "Noto Nastaliq Urdu",
+                                  "fontSize": 20,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "rgeSI",
+                                  "name": "sub",
+                                  "fill": "#3D3D3D",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "ورش 13 سال اور اس سے زیادہ عمر کے سیکھنے والوں کے لیے ہے، اس لیے آج ہم اکاؤنٹ نہیں بنا سکتے۔ آپ کی درج کردہ کوئی معلومات محفوظ نہیں کی گئی۔",
+                                  "lineHeight": 2,
+                                  "textAlign": "center",
+                                  "fontFamily": "Noto Nastaliq Urdu",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "Zvjub",
+                                  "name": "note",
+                                  "fill": "#5F5F5F",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "والدین یا استاد اپنے اکاؤنٹ سے آپ کے ساتھ سیکھ سکتے ہیں۔",
+                                  "lineHeight": 2,
+                                  "textAlign": "center",
+                                  "fontFamily": "Noto Nastaliq Urdu",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "pdDXQ",
+                              "name": "CTA",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "c1yIms",
+                                  "name": "Back",
+                                  "width": "fill_container",
+                                  "height": 54,
+                                  "fill": "#C49B4D",
+                                  "cornerRadius": 999,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "iEgAc",
+                                      "name": "label",
+                                      "fill": "#1A1A1A",
+                                      "content": "شروع پر واپس جائیں",
+                                      "fontFamily": "Noto Nastaliq Urdu",
+                                      "fontSize": 16,
+                                      "fontWeight": "600"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "S9651",
+                  "name": "Proposed Behavior UR",
+                  "width": 820,
+                  "fill": "#FBF7EC",
+                  "cornerRadius": 12,
+                  "stroke": "#9DAB94",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 14,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "a0n1ck",
+                      "name": "Behavior Heading",
+                      "fill": "#A88648",
+                      "content": "URDU NOTES",
+                      "fontFamily": "Lora",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HzObH",
+                      "name": "Mirroring",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 8,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jrBVL",
+                          "name": "New Google user Title",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Mirroring",
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "x11v5",
+                          "name": "New Google user Detail",
+                          "fill": "#5F5F5F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Full RTL: back chevron on the right, fields read Year · Month · Day right-to-left, text right-aligned inside fields. Nastaliq at 13 px with 2.0 line height as in the rest of the Urdu UI.",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CgbUn",
+                      "name": "Digits",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 8,
+                      "stroke": "#9DAB94",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 5,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "rzyX0",
+                          "name": "New Google user Title",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Digits",
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "YQzHv",
+                          "name": "New Google user Detail",
+                          "fill": "#5F5F5F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Days and years stay in Western digits (14 · 2011) to match the rest of the app and the Play listing. Month names use the Urdu calendar names already in ur.ts.",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Lora",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "E12YzD",
+          "name": "Implementation Contract",
+          "width": "fill_container",
+          "fill": "#071B44",
+          "cornerRadius": 14,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": 18,
+          "children": [
+            {
+              "type": "text",
+              "id": "Ry1iy",
+              "name": "Contract Title",
+              "fill": "#D4B06A",
+              "content": "Implementation contract after approval",
+              "fontFamily": "Lora",
+              "fontSize": 15,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "G1zGJ",
+              "name": "Contract Body",
+              "fill": "#FFFFFF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "New (auth)/age-check route stores dateOfBirth in onboardingStore; /api/auth/register and /api/auth/google require it and refuse under-13 with 403 age_not_permitted before any row is written. User.dateOfBirth (Prisma migration, date only) plus a server-derived isMinor in the profile envelope; age is computed from the full date in PKT. Minors: no Mixpanel identify or events, Noor system prompt gains the teen-safety line, marketing email is off. Existing users with a null dateOfBirth get the in-app prompt from the authenticated layout. Copy is added to en.ts and ur.ts together; Privacy and Terms gain a short “Younger learners” section.",
+              "lineHeight": 1.5,
+              "fontFamily": "Lora",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {
