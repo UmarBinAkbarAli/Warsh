@@ -230,7 +230,10 @@ files remain release evidence.
    prompted (Urdu RTL), backend rules by curl. Privacy and Terms carry a
    younger-learners section (live on warsh.app). Not exercised live: the
    Google-sign-up retry (needs a Google account on a device); it shares the
-   register code path. **Compatibility:** builds without the version header
+   register code path. Fixed 2026-09-11 (`e51801d`): a session whose persisted
+   user still had `dateOfBirth: null` after the date was set from another device
+   got `409 date_of_birth_locked` and bounced between the tabs and the age check
+   forever; the screen now refreshes the profile before leaving. **Compatibility:** builds without the version header
    (≤ 1.0.8, still the Play build) may still sign up without a date and are
    prompted after updating — flip `ALLOW_LEGACY_SIGNUP_WITHOUT_DOB` in
    `lib/age.ts` once 1.0.8 is retired. Ships in the app with the next Play
@@ -271,11 +274,45 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    the current content uses `SHADOW_REPEAT`, and `SPOKEN_PHRASES` starts at
    Chapter 3 — it records to the same app-private cache dir, so no permission
    dependency exists, but it stays on the physical-device list below.
-2. **Play Data safety answers are not proven against runtime behavior.** Determine
-   through runtime/network verification whether raw audio ever leaves the device,
-   then reconcile the Console form with measured behavior for Name, Voice recording,
-   Mixpanel, Sentry, OpenAI, identifiers, and retention. Re-review after every SDK
-   change.
+2. **Raw audio never leaves the device — proven on the wire (2026-09-11); the
+   Data safety form has three discrepancies to fix.** Emulator run with the
+   emulator's own packet capture (`-tcpdump`, Wi-Fi disabled so traffic crossed
+   the captured `eth0` path), debug APK against the local staging backend over
+   `10.0.2.2:3000` (plain HTTP, so request bodies are readable), Chapter 3
+   `SPOKEN_PHRASES` lesson `ch03-l05`, all six phrases recorded. Findings:
+   - Each recording is an AAC file in app-private `cache/Audio/` (60–122 KB),
+     played back locally and deleted on "Done"; the directory is empty
+     afterwards. Between Speak and Done the only flows were an R2 *download* of
+     the original clip (841 B out) and the Metro dev websocket (absent in
+     release). Nothing outbound approached the recording's size.
+   - `POST /api/lessons/ch03-l05/complete` body on the wire was 43 bytes:
+     `{"exerciseResults":[],"phrasesCompleted":6}`.
+   - Code agrees: `ShadowRepeatExercise.tsx` makes no network call, and no
+     backend route accepts client audio (`/api/audio/catalog` is GET-only; the
+     admin upload routes are Studio-only).
+   - The in-app mic prompt already states "Your recording stays on this device.
+     We don't upload, store, or analyse it." — now backed by measurement.
+
+   Published form (read from the Console the same day): collects Email, User
+   IDs, Purchase history, Other in-app messages, Voice or sound recordings, Crash
+   logs, Diagnostics, App interactions, Device or other IDs; no data shared;
+   encrypted in transit; account creation "Username and password"; delete URL
+   `https://warsh.app/delete-account`. Discrepancies against measured behaviour:
+   - **Name is collected but not declared** — `/api/auth/register` stores
+     `name`; add "Name" (App functionality, Account management).
+   - **Date of birth is collected but not declared** — the age check (P0 #4)
+     stores `dateOfBirth`; add "Other info" (App functionality, Fraud
+     prevention/security/compliance).
+   - **Voice or sound recordings is declared but never transmitted** — Play's
+     "collected" means sent off the device; on-device-only processing is exempt.
+     Remove it, or keep as a deliberate over-declaration.
+   - **Account creation should also tick "OAuth"** — Google sign-in exists.
+   - Mixpanel was geolocating events from the IP (its default), which is
+     "approximate location". Disabled in `services/analytics.ts`
+     (`setUseIpAddressForGeolocation(false)`, `f42a0e5`); until that build ships,
+     the live 1.0.8 build still does it. Mixpanel, Sentry and OpenAI are
+     processors acting on Warsh's behalf, so "no data shared" stands.
+   Console edits not applied yet — owner to confirm.
 3. **Published retention periods are not automatically enforced.**
 4. **Account deletion verified end to end on staging (2026-09-11).** A test
    account was given rows in every user-linked table (streak, progress, chat,
@@ -292,7 +329,9 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    and `ur.ts` (ships with the next build). Not covered: whether OpenAI, Mixpanel
    or Sentry retain anything server-side after deletion; that is a policy
    disclosure, not a Warsh deletion step.
-5. **Physical-device QA never run for:** microphone/speaking exercises, notification
+5. **Physical-device QA never run for:** microphone/speaking exercises (the full
+   `SPOKEN_PHRASES` record → compare → done loop was exercised on the emulator on
+   2026-09-11, so only real-hardware mic behaviour remains), notification
    permission + scheduling + delivery, and Android sharing to a controlled test
    destination.
 6. **Android 15/16 and large-screen compatibility.** Resolve edge-to-edge/inset
