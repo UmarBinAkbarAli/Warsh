@@ -213,8 +213,14 @@ files remain release evidence.
    emails on every new high-priority issue (last fired 2026-09-05), which an
    error-level probe event creates. Caveat: an identical failure repeating daily
    reuses one issue and emails only on the first day and on regression.
-4. **Target-audience decision** — either select adults only for the simplest launch,
-   or implement the required age/minor handling before keeping ages 13–17.
+4. **Target audience locked: ages 13–17 and adults (owner decision 2026-09-11).**
+   The Play Console already declares 13–15, 16–17 and 18+, and the Terms already
+   require age 13. What is missing is the age-aware handling that selection
+   obliges: a neutral age screen at registration with under-13 refused, an
+   age field on `User` so the backend knows who is a minor, minor treatment for
+   Mixpanel/Sentry/OpenAI/email, teen-appropriate Terms and privacy wording, and a
+   per-launch-country decision on parental consent (GDPR Art. 8 puts the digital
+   consent age at 13–16 depending on the member state). Pen design first.
 5. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
    `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
 6. **Scholar/content review** — establish a review process for Quranic Arabic

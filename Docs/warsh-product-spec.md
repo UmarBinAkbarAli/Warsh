@@ -19,7 +19,7 @@ When changing a locked product decision, update this document and add a dated de
 - Product: **Warsh · وَرْش**
 - AI tutor: **Ustaad Noor · اُستاد نور**
 - Primary category: Quranic Arabic learning
-- Initial audience and market: Muslim adult learners, initially focused on Pakistan
+- Initial audience and market: Muslim learners aged 13 and up (teens 13–17 and adults), initially focused on Pakistan. Under-13 accounts are refused.
 - UI languages: English and Urdu
 - Teaching language: Fus'ha/Quranic Arabic; no dialect curriculum
 
