@@ -274,10 +274,17 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    and `https://warsh.app/delete-account`. All four public legal routes returned 200
    on 2026-09-09.
 8. **Remaining IAP lifecycle gaps:** plan switching and proration/replacement
-   behavior, grace period and account hold, and duplicate-token /
-   token-owned-by-another-account protection. Purchase (monthly and yearly), restore
+   behavior, grace period and account hold. Purchase (monthly and yearly), restore
    after reinstall, acknowledgement, the Noor consumable, cancellation, and expiry
-   are all verified on a Play-installed build (2026-08-29).
+   are all verified on a Play-installed build (2026-08-29). Duplicate-token and
+   token-owned-by-another-account protection verified 2026-09-11 against the
+   staging DB: a subscription token already linked to account A returns
+   `409 conflict` for account B (`lastPurchaseToken` is unique) while A's own retry
+   is idempotent; a Noor pack token already in `StorePurchase` returns
+   `409 purchase_token_in_use` for another account before any Google call; and a
+   token Google attributes to a different obfuscated account id is refused with
+   `403 purchase_account_mismatch` (unit-tested for both product types). The pack
+   route has no unverified opt-in and fails closed (503) without a service key.
 
 ### P1 — content quality and launch polish
 
