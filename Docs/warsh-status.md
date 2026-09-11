@@ -213,20 +213,29 @@ files remain release evidence.
    emails on every new high-priority issue (last fired 2026-09-05), which an
    error-level probe event creates. Caveat: an identical failure repeating daily
    reuses one issue and emails only on the first day and on regression.
-4. **Target audience locked: ages 13–17 and adults (owner decision 2026-09-11).**
-   The Play Console already declares 13–15, 16–17 and 18+, and the Terms already
-   require age 13. What is missing is the age-aware handling that selection
-   obliges: a neutral age screen at registration with under-13 refused, an
-   age field on `User` so the backend knows who is a minor, minor treatment for
-   Mixpanel/Sentry/OpenAI/email, teen-appropriate Terms and privacy wording, and a
-   per-launch-country decision on parental consent (GDPR Art. 8 puts the digital
-   consent age at 13–16 depending on the member state). Owner decision
-   2026-09-11: no parental-consent flow, and no geographic restriction for now —
-   the production track stays at all 177 countries (verified in the Console).
-   Minors get no analytics and only service-necessary processing, which is the
-   substantive protection. Revisit exclusion of the EU/EEA, South Korea and
-   Vietnam if EU sign-ups become meaningful or EU marketing is planned. Pen design
-   first.
+4. **Age check shipped: ages 13–17 and adults (owner decision 2026-09-11,
+   implemented and deployed the same day).** Pen section 21 was approved and
+   built. Backend (`api.warsh.app`, migration applied to production):
+   `User.dateOfBirth`, `lib/age.ts` (13 minimum, minor under 18, PKT calendar
+   day), `/api/auth/register` and `/api/auth/google` refuse under-13 with
+   `403 age_not_permitted` before writing a row, a new Google identity without
+   a date gets `400 age_check_required` and the client retries with the same
+   token, `PATCH /api/users/me` accepts the date once for legacy accounts, and
+   Noor's system prompt carries a teen-safety line for minors. App: neutral
+   `(auth)/age-check` (day/month/year, no defaults, threshold never shown),
+   refusal state, in-app prompt for accounts with no date on next launch,
+   Mixpanel fully suppressed for minors; every request now sends
+   `X-Warsh-App-Version`. Verified on the emulator against the staging DB:
+   under-13 refusal, 15-year-old sign-up with `isMinor: true`, legacy account
+   prompted (Urdu RTL), backend rules by curl. Privacy and Terms carry a
+   younger-learners section (live on warsh.app). Not exercised live: the
+   Google-sign-up retry (needs a Google account on a device); it shares the
+   register code path. **Compatibility:** builds without the version header
+   (≤ 1.0.8, still the Play build) may still sign up without a date and are
+   prompted after updating — flip `ALLOW_LEGACY_SIGNUP_WITHOUT_DOB` in
+   `lib/age.ts` once 1.0.8 is retired. Ships in the app with the next Play
+   upload. Play distribution stays worldwide (177 countries); revisit
+   EU/EEA, South Korea and Vietnam exclusion if EU sign-ups become meaningful.
 5. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
    `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
 6. **Scholar/content review** — establish a review process for Quranic Arabic
