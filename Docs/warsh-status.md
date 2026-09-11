@@ -403,7 +403,14 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    surfaces it, and `services/notifications.ts` uses it for streak-risk reminder
    copy ("N days left to reach your 7-day goal"). Still open: the onboarding
    checklist's daily-goal step (minutes/day) and this streak-day commitment remain
-   two separate concepts; decide whether they merge into one commitment moment.
+   two separate concepts. **Pen section 22 ("One Commitment", 2026-09-12) proposes
+   the merge and awaits owner review.** Option A (recommended): one screen, one
+   number — the streak goal in days — with the daily unit fixed at one lesson,
+   which is what `dailyGoalMet` already measures (`todayProgress >= 1`; the minutes
+   value never changes it). Reached from checklist step 3 and, once, after the
+   first streak celebration; Settings collapses to one "Commitment" section; no
+   schema change. Option B keeps both numbers on one screen (section 14's earlier
+   "Streak & Pace" design). Not implemented; the design-review gate applies.
 5. **Lesson pass/fail is enforced server-side; pass mark is 70% (owner decision
    2026-09-11).** The client sends one boolean per answerable exercise in
    `exerciseResults`; `lib/lessonScoring.ts` computes score and pass/fail
