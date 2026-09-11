@@ -328,41 +328,28 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    types and book transitions.
 3. Reconcile any remaining visual differences against the current gold/navy design
    tokens.
-4. **Streak-commitment screen has no real backend effect (not designed or built).**
-   `warsh-app/app/(app)/streak-commitment.tsx` (shown once after first lesson
-   completion, via `streak-celebration.tsx`) lets a user pick a 3/7/14/30-day streak
-   goal, but the selection is only written to a local AsyncStorage flag
-   (`warsh_streak_commitment_set`) and never sent to the backend or read anywhere
-   else — it exists only to gate "don't ask again." As of 2026-08-24
-   `streak-celebration.tsx` skips straight to the tabs when the user already set a
-   daily goal via the onboarding checklist's `warsh_onboarding_goal_set_${userId}`
-   flag, but that is a client-only patch. The real fix needs its own plan:
-   - A real Prisma field (e.g. `streakGoalDays` on `User`) plus migration, and a
-     write path from `streak-commitment.tsx` via `updateUserProfile`.
-   - Wiring the committed value into the existing `streakRiskEnabled` notification
-     logic (`warsh-app/services/notifications.ts` / settings) so it drives reminder
-     copy and urgency.
-   - A decision on whether the checklist's daily-goal step (minutes/day) and this
-     streak-day-count commitment stay two separate concepts or merge into one
-     onboarding commitment moment.
-5. **Lesson pass/fail requirement (not designed or built).** Today
-   `warsh-app/app/(app)/lessons/[lessonId]/play.tsx` auto-advances past every
-   exercise regardless of correctness and `POST /api/lessons/[lessonId]/complete`
-   always sends a hardcoded `score: 100`, so a learner can miss every exercise and
-   still complete the lesson with full XP/streak/chapter-unlock credit. Requirement:
-   missing a minimum number of exercises (proposed threshold: 3 wrong) should force a
-   retry. Open decisions:
-   - Is the threshold an absolute wrong-count or a percentage, given lessons vary
-     from 5 to 15+ exercises?
-   - Enforcement must move server-side — the client sends per-exercise results and
-     `complete` computes score and pass/fail itself, never trusting a client-sent
-     score.
-   - On fail: does the chapter stay locked (via `lib/course.ts`), is XP/streak/
-     daily-goal credit withheld or still banked for the attempt, and does the learner
-     see a retry screen or the normal completion screen?
-   - Does the rule apply to every template, or only to answerable exercise types?
-     `SHADOW_REPEAT`/`SPOKEN_PHRASES` are recording-completion based
-     (`phrasesCompletedRef`), not right/wrong scored, and may need to stay exempt.
+4. **Streak-goal commitment is wired end to end (shipped 2026-08-26, `3979af2`;
+   the earlier "no backend effect" note was stale).** `User.streakGoalDays`
+   (3/7/14/30, nullable) exists in Prisma, `PATCH /api/users/me` validates and
+   stores it, `streak-commitment.tsx` writes it via `updateUserProfile`, Settings
+   surfaces it, and `services/notifications.ts` uses it for streak-risk reminder
+   copy ("N days left to reach your 7-day goal"). Still open: the onboarding
+   checklist's daily-goal step (minutes/day) and this streak-day commitment remain
+   two separate concepts; decide whether they merge into one commitment moment.
+5. **Lesson pass/fail is enforced server-side (shipped 2026-08-26, `3979af2`;
+   the earlier "not designed or built" note was stale).** The client sends one
+   boolean per answerable exercise in `exerciseResults`; `lib/lessonScoring.ts`
+   computes score and pass/fail (`LESSON_FAIL_THRESHOLD = 3` wrong, absolute, not
+   a percentage), so a client-sent score is never trusted. `SHADOW_REPEAT` /
+   `SPOKEN_PHRASES` are excluded, and a lesson with no scored exercises cannot
+   fail. On fail the route returns `passed: false` with `correctCount`,
+   `totalScored`, `threshold`; no progress row, XP, streak or daily-goal credit is
+   written (chapter tests additionally record `attempts`), so the chapter stays
+   locked via `lib/course.ts`. The app shows the retry screen (Pen "Lesson Retry ·
+   Proposed Redesign") and restarts the lesson from the beginning. Unit-tested in
+   `tests/lessonScoring.test.ts`. Still open: whether a fixed 3-wrong threshold
+   is right for lessons that range from 5 to 15+ exercises, and whether a failed
+   attempt should bank any XP for effort — both are product decisions, not gaps.
 
 ### Later
 
