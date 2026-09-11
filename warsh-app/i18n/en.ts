@@ -392,7 +392,7 @@ export const en = {
   "settings.deleteAccount": "Delete account",
   "settings.deleteAccountSub": "Permanently removes all your data",
   "settings.deleteAccountTitle": "Delete account",
-  "settings.deleteAccountBody": "This permanently deletes your account, all progress, streaks, and vocabulary data. This cannot be undone.",
+  "settings.deleteAccountBody": "This permanently deletes your account, all progress, streaks, chat history, and vocabulary data. This cannot be undone. It does not cancel a Google Play subscription — manage that separately in Google Play.",
   "settings.deleteAccountConfirm": "Delete permanently",
   "settings.errorTitle": "Error",
   "settings.deleteAccountError": "Could not delete account. Please try again.",

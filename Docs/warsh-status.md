@@ -256,12 +256,21 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    Mixpanel, Sentry, OpenAI, identifiers, and retention. Re-review after every SDK
    change.
 3. **Published retention periods are not automatically enforced.**
-4. **Account deletion has not been dynamically tested end to end.** Use a disposable
-   QA account holding learning progress, chat history, analytics identity, and a test
-   subscription. Verify server records are actually removed/anonymized, that logout
-   clears local credentials and cache, that the external deletion-request path works
-   without installing the app, and that the copy explains deletion does not cancel a
-   Google Play subscription.
+4. **Account deletion verified end to end on staging (2026-09-11).** A test
+   account was given rows in every user-linked table (streak, progress, chat,
+   achievements, 361 vocabulary rows, Core 500 set, Surah progress, a
+   `StorePurchase`, a `PromoRedemption`, a linked subscription token).
+   `DELETE /api/users/me` left zero rows in all nine tables plus the `User` row
+   (password-reset fields live on it); the old JWT then returned 401 on every
+   protected route, login returned 401, and the email could be re-registered.
+   Client: `clearSession` wipes the SecureStore token and AsyncStorage auth blob,
+   and the authenticated layout clears the Sentry user and resets Mixpanel when
+   the token disappears. The external path `warsh.app/delete-account` is a
+   `mailto:support@warsh.app` request and states that deletion does not cancel a
+   Play subscription; the in-app confirmation dialog did not — added to `en.ts`
+   and `ur.ts` (ships with the next build). Not covered: whether OpenAI, Mixpanel
+   or Sentry retain anything server-side after deletion; that is a policy
+   disclosure, not a Warsh deletion step.
 5. **Physical-device QA never run for:** microphone/speaking exercises, notification
    permission + scheduling + delivery, and Android sharing to a controlled test
    destination.

@@ -389,7 +389,7 @@ export const ur = {
   "settings.deleteAccount": "اکاؤنٹ حذف کریں",
   "settings.deleteAccountSub": "آپ کا تمام ڈیٹا مستقل طور پر حذف ہو جائے گا",
   "settings.deleteAccountTitle": "اکاؤنٹ حذف کریں",
-  "settings.deleteAccountBody": "یہ آپ کا اکاؤنٹ، تمام پیش رفت، اسٹریک، اور الفاظ کا ڈیٹا مستقل طور پر حذف کر دے گا۔ اسے واپس نہیں لایا جا سکتا۔",
+  "settings.deleteAccountBody": "یہ آپ کا اکاؤنٹ، تمام پیش رفت، اسٹریک، چیٹ کی تاریخ، اور الفاظ کا ڈیٹا مستقل طور پر حذف کر دے گا۔ اسے واپس نہیں لایا جا سکتا۔ اس سے Google Play سبسکرپشن منسوخ نہیں ہوتی — اسے Google Play میں الگ سے منظم کریں۔",
   "settings.deleteAccountConfirm": "ہمیشہ کے لیے حذف کریں",
   "settings.errorTitle": "خرابی",
   "settings.deleteAccountError": "اکاؤنٹ حذف نہیں ہو سکا۔ دوبارہ کوشش کریں۔",
