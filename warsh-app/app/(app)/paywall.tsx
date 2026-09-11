@@ -647,6 +647,8 @@ export default function PaywallScreen({ dismissable = true }: Props) {
       <Modal
         visible={promoModalVisible}
         transparent
+        statusBarTranslucent
+        navigationBarTranslucent
         animationType="fade"
         onRequestClose={() => setPromoModalVisible(false)}
       >

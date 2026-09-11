@@ -173,6 +173,8 @@ export function GoogleAuthSection({ showDivider = false }: Props) {
 
       <Modal
         transparent
+        statusBarTranslucent
+        navigationBarTranslucent
         visible={linkRequest !== null}
         animationType="fade"
         onRequestClose={() => !linking && setLinkRequest(null)}

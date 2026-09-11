@@ -338,11 +338,36 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    2026-09-11, so only real-hardware mic behaviour remains), notification
    permission + scheduling + delivery, and Android sharing to a controlled test
    destination.
-6. **Android 15/16 and large-screen compatibility.** Resolve edge-to-edge/inset
-   warnings (identify whether they originate in Warsh code or Expo/RN dependencies),
-   and test tablet, foldable, split screen, landscape, and font/display scaling. The
-   fuller plan is `Docs/proposals/android-quality-2027-implementation-plan.md`;
-   Play enforcement begins February 2027.
+6. **Android 15 edge-to-edge: Play warning traced to dependencies; three real
+   inset defects fixed (2026-09-11, ships with the next build).** Play's
+   "deprecated APIs or parameters for edge-to-edge" recommendation on release 32
+   lists `Window.get/setStatusBarColor`, `Window.get/setNavigationBarColor` and
+   `LAYOUT_IN_DISPLAY_CUTOUT_MODE_{DEFAULT,SHORT_EDGES}`. Disassembling the
+   release APK's DEX shows every caller is a library — React Native 0.81
+   (`WindowUtilKt`, `StatusBarModule`), react-native-screens
+   (`ScreenWindowTraits`), expo-modules-core, AndroidX `activity`/`core`/
+   `splashscreen` (Google's own `EdgeToEdge` helpers) and Material — all behind
+   `SDK_INT` guards that Play's static scan cannot see; zero references under
+   `com.warsh.app`. It is a recommendation with no deadline and cannot be cleared
+   at app level while these libraries support Android < 15, so it is accepted.
+   Running the release APK on the Android 15 AVD (`Warsh_API_35_16KB`) did find
+   real defects, now fixed: (a) `StatusBar style="light"` painted white icons on
+   the cream screens — invisible clock/battery everywhere except the You tab;
+   root is now `dark` and the You tab flips to `light` while focused; (b) the tab
+   bar's fixed `height: 64` discarded React Navigation's bottom inset, so labels
+   sat under the gesture pill and, with 3-button navigation, the system buttons
+   covered the tabs entirely — `insets.bottom` is added back; (c) none of the 16
+   transparent `Modal`s set `navigationBarTranslucent`, so scrims stopped short
+   of the status and navigation bars — all now set both, and the three bottom
+   sheets that lacked it pad by `insets.bottom`. Verified on the Android 15 AVD in
+   gesture and 3-button modes via Metro against production. Still open: tablet,
+   foldable, split screen and landscape (portrait is locked — a product decision
+   per plan §D2), and font/display scaling. Dev-only observation: any
+   configuration change (font scale, nav-mode switch) recreates the activity and
+   React Navigation logs "configured linking in multiple places"; reproduced
+   without these changes, silent in release. The fuller plan is
+   `Docs/proposals/android-quality-2027-implementation-plan.md`; DEX-optimization
+   enforcement begins February 2027.
 7. **Confirm Play Console privacy and deletion URLs** are `https://warsh.app/privacy`
    and `https://warsh.app/delete-account`. All four public legal routes returned 200
    on 2026-09-09.

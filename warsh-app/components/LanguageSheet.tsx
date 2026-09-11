@@ -48,9 +48,10 @@ export function LanguageSheet({ visible, onClose }: LanguageSheetProps) {
     <Modal
       visible={visible}
       transparent
+      statusBarTranslucent
+      navigationBarTranslucent
       animationType="slide"
       onRequestClose={onClose}
-      statusBarTranslucent
     >
       <Pressable style={styles.scrim} onPress={onClose} accessibilityRole="button" />
       <View style={[styles.sheet, { paddingBottom: insets.bottom + Spacing.xl }]}>

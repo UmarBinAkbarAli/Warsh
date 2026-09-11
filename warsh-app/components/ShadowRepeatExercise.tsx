@@ -313,7 +313,7 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
 
   function renderPermissionModal() {
     return (
-      <Modal transparent animationType="fade" visible={showPermissionModal} onRequestClose={() => setShowPermissionModal(false)}>
+      <Modal statusBarTranslucent navigationBarTranslucent transparent animationType="fade" visible={showPermissionModal} onRequestClose={() => setShowPermissionModal(false)}>
         <View style={styles.modalOverlay}>
           <View style={styles.modalCard}>
             <Ionicons name="mic-outline" size={40} color={WarshPalette.gold} style={styles.modalIcon} />

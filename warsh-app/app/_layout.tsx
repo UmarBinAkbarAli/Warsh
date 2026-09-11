@@ -132,7 +132,8 @@ function RootLayout() {
     <ErrorBoundary>
       <SafeAreaProvider>
         <PaperProvider theme={WarshPaperTheme}>
-          <StatusBar style="light" />
+          {/* Every screen is cream at the top except the You tab, which flips this while focused. */}
+          <StatusBar style="dark" />
           <WebShell>
             <Stack screenOptions={{ headerShown: false }} />
           </WebShell>

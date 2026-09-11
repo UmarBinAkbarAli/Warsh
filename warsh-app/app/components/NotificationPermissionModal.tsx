@@ -1,4 +1,5 @@
 import { Modal, View, Text, StyleSheet, Pressable } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { BrandButton } from "@components/BrandButton";
 import { requestNotificationPermission } from "@services/notifications";
@@ -18,6 +19,7 @@ type Props = {
 };
 
 export function NotificationPermissionModal({ visible, onGranted, onDismiss }: Props) {
+  const insets = useSafeAreaInsets();
   async function handleAllow() {
     await requestNotificationPermission();
     onGranted();
@@ -27,12 +29,13 @@ export function NotificationPermissionModal({ visible, onGranted, onDismiss }: P
     <Modal
       visible={visible}
       transparent
-      animationType="slide"
       statusBarTranslucent
+      navigationBarTranslucent
+      animationType="slide"
       onRequestClose={onDismiss}
     >
       <View style={styles.overlay}>
-        <View style={styles.sheet}>
+        <View style={[styles.sheet, { paddingBottom: Spacing.xxl + insets.bottom }]}>
           {/* Handle bar */}
           <View style={styles.handle} />
 

@@ -375,6 +375,8 @@ export default function ChatScreen() {
       <Modal
         visible={showOverageModal}
         transparent
+        statusBarTranslucent
+        navigationBarTranslucent
         animationType="slide"
         onRequestClose={() => setShowOverageModal(false)}
       >
@@ -385,7 +387,11 @@ export default function ChatScreen() {
           onPress={() => setShowOverageModal(false)}
         >
           {/* Bottom-anchored card — block tap propagation so the card itself doesn't dismiss */}
-          <TouchableOpacity activeOpacity={1} style={styles.modalCard} onPress={() => {}}>
+          <TouchableOpacity
+            activeOpacity={1}
+            style={[styles.modalCard, { paddingBottom: Spacing.xxl + insets.bottom }]}
+            onPress={() => {}}
+          >
             {/* Handle bar */}
             <View style={styles.handleBar} />
 

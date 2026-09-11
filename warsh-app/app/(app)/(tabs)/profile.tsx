@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import { ActivityIndicator, Platform, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import type { DimensionValue } from "react-native";
 import { useFocusEffect, useRouter } from "expo-router";
+import { setStatusBarStyle } from "expo-status-bar";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
@@ -42,6 +43,15 @@ export default function ProfileScreen() {
       void loadProgress();
       return undefined;
     }, [loadProgress])
+  );
+
+  // The ink header card sits under the status bar, so this tab needs light icons
+  // while every other screen (root layout default) needs dark ones.
+  useFocusEffect(
+    useCallback(() => {
+      setStatusBarStyle("light");
+      return () => setStatusBarStyle("dark");
+    }, [])
   );
 
   if (loading) {

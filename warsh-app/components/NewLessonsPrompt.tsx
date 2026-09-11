@@ -52,6 +52,8 @@ export function NewLessonsPrompt({
     <Modal
       visible={visible}
       transparent
+      statusBarTranslucent
+      navigationBarTranslucent
       animationType="fade"
       onRequestClose={onDismiss}
     >

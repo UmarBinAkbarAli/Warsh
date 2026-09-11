@@ -386,9 +386,10 @@ export default function AgeCheckScreen() {
       <Modal
         visible={open !== null}
         transparent
+        statusBarTranslucent
+        navigationBarTranslucent
         animationType="slide"
         onRequestClose={() => setOpen(null)}
-        statusBarTranslucent
       >
         <Pressable style={styles.scrim} onPress={() => setOpen(null)} accessibilityRole="button" />
         <View style={[styles.sheet, { paddingBottom: insets.bottom + Spacing.lg }]}>
@@ -427,9 +428,10 @@ export default function AgeCheckScreen() {
       <Modal
         visible={whyOpen}
         transparent
+        statusBarTranslucent
+        navigationBarTranslucent
         animationType="fade"
         onRequestClose={() => setWhyOpen(false)}
-        statusBarTranslucent
       >
         <Pressable style={styles.scrim} onPress={() => setWhyOpen(false)} accessibilityRole="button" />
         <View style={[styles.sheet, { paddingBottom: insets.bottom + Spacing.xl }]}>

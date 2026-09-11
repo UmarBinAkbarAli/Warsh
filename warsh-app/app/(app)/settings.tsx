@@ -627,7 +627,7 @@ export default function SettingsScreen() {
         <View style={{ height: Spacing.xl * 2 }} />
       </ScrollView>
 
-      <Modal transparent visible={languageSheet !== null} animationType="fade" onRequestClose={() => setLanguageSheet(null)}>
+      <Modal statusBarTranslucent navigationBarTranslucent transparent visible={languageSheet !== null} animationType="fade" onRequestClose={() => setLanguageSheet(null)}>
         <View style={styles.sheetOverlay}>
           <TouchableOpacity style={StyleSheet.absoluteFill} activeOpacity={1} onPress={() => !languageSaving && setLanguageSheet(null)} />
           <View style={[styles.languageSheet, { paddingBottom: insets.bottom + Spacing.lg }]}>

@@ -1285,6 +1285,8 @@ export default function LessonPlayScreen() {
       <Modal
         visible={showExitConfirm}
         transparent
+        statusBarTranslucent
+        navigationBarTranslucent
         animationType="fade"
         onRequestClose={() => setShowExitConfirm(false)}
       >

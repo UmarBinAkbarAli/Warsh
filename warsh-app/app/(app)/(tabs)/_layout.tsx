@@ -2,6 +2,7 @@ import { Feather } from "@expo/vector-icons";
 import { useT } from "@i18n/index";
 import { Tabs } from "expo-router";
 import { Platform, useWindowDimensions, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Colors, Fonts, WarshPalette } from "../../../constants/theme";
 
@@ -36,6 +37,7 @@ function TabIcon({
 export default function TabsLayout() {
   const t = useT();
   const { width } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const desktopWeb = Platform.OS === "web" && width >= 960;
 
   return (
@@ -45,15 +47,18 @@ export default function TabsLayout() {
         sceneStyle: {
           backgroundColor: Colors.bg.primary,
         },
-        // Spec-11 §5.5: parchment bar, 1pt sage-soft top border
+        // Spec-11 §5.5: parchment bar, 1pt sage-soft top border.
+        // A custom height replaces React Navigation's own inset handling, so the
+        // system navigation bar inset is added back here — without it the labels
+        // sit under the gesture pill / 3-button bar on edge-to-edge Android.
         tabBarStyle: {
           display: desktopWeb ? "none" : "flex",
           backgroundColor: Colors.bg.primary,
           borderTopWidth: 1,
           borderTopColor: WarshPalette.sageSoft,
-          height: 64,
+          height: 64 + insets.bottom,
           paddingTop: 6,
-          paddingBottom: 6,
+          paddingBottom: 6 + insets.bottom,
         },
         tabBarActiveTintColor: Colors.accent.gold,
         tabBarInactiveTintColor: WarshPalette.sage,

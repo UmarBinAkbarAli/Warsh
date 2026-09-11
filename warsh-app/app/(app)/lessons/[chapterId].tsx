@@ -109,7 +109,7 @@ function LessonPreviewSheet({
     lesson.isCompleted || lesson.isSkippedByPlacement ? t("chapter.reviewLesson") : t("chapter.startLesson");
 
   return (
-    <Modal visible={visible} transparent animationType="slide" onRequestClose={onDismiss}>
+    <Modal statusBarTranslucent navigationBarTranslucent visible={visible} transparent animationType="slide" onRequestClose={onDismiss}>
       <Pressable style={styles.sheetOverlay} onPress={onDismiss}>
         <View style={[styles.sheetContainer, { paddingBottom: insets.bottom + Spacing.xl }]}>
           <View style={styles.sheetHandle} />

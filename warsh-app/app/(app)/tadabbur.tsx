@@ -115,10 +115,11 @@ function WordSheet({
   onDismiss: () => void;
   onViewDetail: () => void;
 }) {
+  const insets = useSafeAreaInsets();
   return (
-    <Modal visible={visible} transparent animationType="slide" onRequestClose={onDismiss}>
+    <Modal statusBarTranslucent navigationBarTranslucent visible={visible} transparent animationType="slide" onRequestClose={onDismiss}>
       <Pressable style={styles.sheetOverlay} onPress={onDismiss}>
-        <View style={styles.sheetContainer}>
+        <View style={[styles.sheetContainer, { paddingBottom: Spacing.xl * 2 + insets.bottom }]}>
           <View style={styles.sheetHandle} />
           {word ? (
             <>

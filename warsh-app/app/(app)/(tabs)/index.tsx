@@ -461,6 +461,8 @@ export default function HomeScreen() {
       <Modal
         visible={showStreakEndedModal}
         transparent
+        statusBarTranslucent
+        navigationBarTranslucent
         animationType="fade"
         onRequestClose={() => setShowStreakEndedModal(false)}
       >

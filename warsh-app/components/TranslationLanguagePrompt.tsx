@@ -50,6 +50,8 @@ export function TranslationLanguagePrompt({
     <Modal
       visible={visible}
       transparent
+      statusBarTranslucent
+      navigationBarTranslucent
       animationType="fade"
       onRequestClose={onDismiss}
     >

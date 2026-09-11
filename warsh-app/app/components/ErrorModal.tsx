@@ -25,8 +25,9 @@ export function ErrorModal({ visible, message, onRetry, onDismiss }: ErrorModalP
     <Modal
       visible={visible}
       transparent
-      animationType="fade"
       statusBarTranslucent
+      navigationBarTranslucent
+      animationType="fade"
       onRequestClose={onDismiss}
     >
       <View style={styles.overlay}>
