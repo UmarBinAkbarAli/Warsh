@@ -220,7 +220,10 @@ files remain release evidence.
    age field on `User` so the backend knows who is a minor, minor treatment for
    Mixpanel/Sentry/OpenAI/email, teen-appropriate Terms and privacy wording, and a
    per-launch-country decision on parental consent (GDPR Art. 8 puts the digital
-   consent age at 13–16 depending on the member state). Pen design first.
+   consent age at 13–16 depending on the member state). Owner decision
+   2026-09-11: no parental-consent flow; instead restrict Play distribution to
+   Pakistan and countries where 13 is the digital consent age, and exclude any
+   country that would require parental consent for 13–15s. Pen design first.
 5. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
    `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
 6. **Scholar/content review** — establish a review process for Quranic Arabic
