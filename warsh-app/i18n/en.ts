@@ -73,10 +73,15 @@ export const en = {
   "language.chooseMeaning": "Choose meaning language",
 
   // New lessons published into a chapter the learner had already finished.
+  "continuity.chapterLabel": "Chapter {{order}}",
   "continuity.titleSingle": "A new lesson was added",
   "continuity.titleMultiple": "{{count}} new lessons were added",
-  "continuity.body": "We added new material to {{chapter}}. Finish it to pick up exactly where you left off.",
-  "continuity.reassurance": "Nothing you have done is lost. Your work in the {{count}} chapters ahead is saved and returns as soon as this chapter is complete.",
+  "continuity.body": "We added new material to this chapter. Finish it to pick up exactly where you left off.",
+  "continuity.progressLabel": "Chapter progress",
+  "continuity.progressCount": "{{done}} of {{total}} lessons",
+  "continuity.progressNoteSingle": "The gold step is the new lesson.",
+  "continuity.progressNoteMultiple": "The gold steps are the new lessons.",
+  "continuity.reassurance": "Nothing you have done is lost. Your work in the {{count}} chapters ahead is saved and returns the moment this chapter is complete.",
   "continuity.resume": "Complete it now",
   "continuity.later": "Maybe later",
   "language.meaningDescription": "Meanings and lesson explanations can be different from the app interface. Arabic learning text stays Arabic.",

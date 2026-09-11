@@ -71,9 +71,14 @@ export const ur = {
   "language.chooseMeaning": "معانی کی زبان منتخب کریں",
 
   // New lessons published into a chapter the learner had already finished.
+  "continuity.chapterLabel": "باب {{order}}",
   "continuity.titleSingle": "ایک نیا سبق شامل کیا گیا ہے",
   "continuity.titleMultiple": "{{count}} نئے اسباق شامل کیے گئے ہیں",
-  "continuity.body": "ہم نے {{chapter}} میں نیا مواد شامل کیا ہے۔ اسے مکمل کریں تاکہ آپ وہیں سے آگے بڑھ سکیں جہاں آپ تھے۔",
+  "continuity.body": "ہم نے اس باب میں نیا مواد شامل کیا ہے۔ اسے مکمل کریں تاکہ آپ وہیں سے آگے بڑھ سکیں جہاں آپ تھے۔",
+  "continuity.progressLabel": "باب کی پیش رفت",
+  "continuity.progressCount": "{{total}} میں سے {{done}} اسباق",
+  "continuity.progressNoteSingle": "سنہری خانہ نیا سبق ہے۔",
+  "continuity.progressNoteMultiple": "سنہری خانے نئے اسباق ہیں۔",
   "continuity.reassurance": "آپ کی کوئی محنت ضائع نہیں ہوئی۔ آگے کے {{count}} ابواب میں آپ کا کام محفوظ ہے اور یہ باب مکمل ہوتے ہی واپس آ جائے گا۔",
   "continuity.resume": "ابھی مکمل کریں",
   "continuity.later": "بعد میں",
