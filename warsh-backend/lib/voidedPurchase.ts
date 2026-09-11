@@ -37,11 +37,12 @@ export async function applyVoidedPurchase(notif: VoidedPurchaseNotification) {
   // A voided subscription loses access immediately; the paid period is irrelevant
   // once the money is returned.
   if (notif.productType === VOIDED_PRODUCT_TYPE_SUBSCRIPTION) {
-    const revoked = await prisma.user.updateMany({
-      where: { lastPurchaseToken: purchaseToken },
-      data: { subscriptionStatus: "expired", subscriptionActiveUntil: new Date() },
-    });
-    console.log("[rtdn] voided subscription; access revoked for", revoked.count, "user(s)");
+    const revoked = await revokeSubscriptionByToken(purchaseToken);
+    if (revoked > 0) {
+      console.log("[rtdn] voided subscription; access revoked for", revoked, "user(s)");
+    } else {
+      console.log("[rtdn] voided subscription token already expired or unknown; nothing to revoke");
+    }
     return;
   }
 
@@ -53,14 +54,11 @@ export async function applyVoidedPurchase(notif: VoidedPurchaseNotification) {
   // Not a purchase we recorded. A subscription token can arrive here when Google
   // omits productType, so fall back to the subscription path rather than dropping it.
   if (!purchase) {
-    const revoked = await prisma.user.updateMany({
-      where: { lastPurchaseToken: purchaseToken },
-      data: { subscriptionStatus: "expired", subscriptionActiveUntil: new Date() },
-    });
-    if (revoked.count > 0) {
+    const revoked = await revokeSubscriptionByToken(purchaseToken);
+    if (revoked > 0) {
       console.log("[rtdn] voided purchase matched a subscription token; access revoked");
     } else {
-      console.warn("[rtdn] voided purchase does not match any recorded purchase");
+      console.log("[rtdn] voided purchase matches no pack and no live subscription; nothing to do");
     }
     return;
   }
@@ -114,4 +112,21 @@ export async function applyVoidedPurchase(notif: VoidedPurchaseNotification) {
       }),
     );
   });
+}
+
+/**
+ * Expires the subscription that `purchaseToken` bought, once.
+ *
+ * The `NOT expired` guard is what makes the daily voided-purchase reconciliation
+ * safe to re-run over the same thirty-day window: a token that has already been
+ * revoked matches nothing, so its `subscriptionActiveUntil` is stamped exactly
+ * once, at the moment the refund was first seen, rather than nudged forward
+ * every morning.
+ */
+async function revokeSubscriptionByToken(purchaseToken: string): Promise<number> {
+  const revoked = await prisma.user.updateMany({
+    where: { lastPurchaseToken: purchaseToken, NOT: { subscriptionStatus: "expired" } },
+    data: { subscriptionStatus: "expired", subscriptionActiveUntil: new Date() },
+  });
+  return revoked.count;
 }

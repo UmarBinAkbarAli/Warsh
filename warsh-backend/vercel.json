@@ -18,6 +18,10 @@
     {
       "path": "/api/cron/production-probe",
       "schedule": "0 3 * * *"
+    },
+    {
+      "path": "/api/cron/reconcile-voided-purchases",
+      "schedule": "30 3 * * *"
     }
   ]
 }

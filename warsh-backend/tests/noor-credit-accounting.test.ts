@@ -207,6 +207,26 @@ test("a voided subscription revokes access without touching the pack ledger", as
   });
 });
 
+test("revoking a voided subscription is guarded so a daily replay is a no-op", async () => {
+  // The reconciliation cron re-reads a seven-day window every morning, so the
+  // same token is applied again and again. Only a still-live row may be stamped.
+  await withVoidStub({ purchase: pack(), balance: 20 }, async (harness) => {
+    await applyVoidedPurchase({ purchaseToken: "tok", productType: 1 });
+    const revoke = harness.userUpdateMany[0] as { where: Record<string, unknown> };
+    assert.deepEqual(revoke.where, { lastPurchaseToken: "tok", NOT: { subscriptionStatus: "expired" } });
+  });
+});
+
+test("a voided token with no productType falls through pack lookup to the subscription", async () => {
+  // Google's voided-purchases list never labels the product type.
+  await withVoidStub({ purchase: null, balance: 20 }, async (harness) => {
+    await applyVoidedPurchase({ purchaseToken: "sub-tok" });
+    const revoke = harness.userUpdateMany[0] as { where: { lastPurchaseToken: string } };
+    assert.equal(revoke.where.lastPurchaseToken, "sub-tok");
+    assert.equal(harness.purchaseUpdates.length, 0);
+  });
+});
+
 test("the ledger is looked up by token hash, never the raw token", async () => {
   assert.equal(hashPurchaseToken("tok").length, 64);
   assert.notEqual(hashPurchaseToken("tok"), "tok");

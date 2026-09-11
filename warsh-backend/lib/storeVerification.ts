@@ -613,6 +613,79 @@ export async function fetchGooglePlaySubscriptionSnapshot(
   };
 }
 
+/**
+ * One entry from Google's voided-purchases list. `productType` is absent: the
+ * list mixes subscriptions and one-time products without labelling them, so
+ * the consumer has to resolve the token against its own ledger.
+ */
+export interface GoogleVoidedPurchase {
+  purchaseToken: string;
+  orderId?: string;
+  voidedTimeMillis?: string;
+  voidedSource?: number;
+  voidedReason?: number;
+  voidedQuantity?: number;
+}
+
+interface GoogleVoidedPurchasesPage {
+  voidedPurchases?: GoogleVoidedPurchase[];
+  tokenPagination?: { nextPageToken?: string };
+}
+
+/**
+ * Lists every purchase Google voided (refund, chargeback, cancellation) since
+ * `since`. Google keeps this list for thirty days; anything earlier is clipped.
+ *
+ * Pull-side complement to the RTDN `voidedPurchaseNotification`: the push can
+ * be dropped, and when it is the money goes back while the credits or the
+ * subscription stay. Follows `tokenPagination` to the end so a busy refund day
+ * is not truncated to the first page.
+ */
+export async function fetchGooglePlayVoidedPurchases(
+  packageName: string,
+  since: Date,
+): Promise<GoogleVoidedPurchase[]> {
+  const accessToken = await getGoogleAccessToken();
+  const base =
+    `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${encodeURIComponent(packageName)}` +
+    `/purchases/voidedpurchases`;
+
+  const results: GoogleVoidedPurchase[] = [];
+  let pageToken: string | undefined;
+  do {
+    const params = new URLSearchParams({
+      startTime: String(since.getTime()),
+      // 1 = subscriptions as well as one-time products; 0 would hide refunds
+      // of the thing that matters most.
+      type: "1",
+      maxResults: "1000",
+    });
+    if (pageToken) params.set("token", pageToken);
+
+    const response = await fetch(`${base}?${params.toString()}`, {
+      method: "GET",
+      headers: { Authorization: `Bearer ${accessToken}`, Accept: "application/json" },
+    });
+
+    if (!response.ok) {
+      const errBody = await response.text().catch(() => "");
+      const reason = extractGoogleErrorReason(errBody);
+      console.error(`[verify] Google voidedpurchases HTTP ${response.status}: ${errBody.slice(0, 300)}`);
+      logGooglePlayConfigContext(reason);
+      const { message, status, code } = classifyGoogleApiFailure(response.status, reason);
+      throw new StoreVerificationError(message, status, code);
+    }
+
+    const page = (await response.json()) as GoogleVoidedPurchasesPage;
+    for (const item of page.voidedPurchases ?? []) {
+      if (item.purchaseToken) results.push(item);
+    }
+    pageToken = page.tokenPagination?.nextPageToken || undefined;
+  } while (pageToken);
+
+  return results;
+}
+
 async function getGoogleAccessToken() {
   const rawKey = process.env.GOOGLE_PLAY_SERVICE_ACCOUNT_KEY?.trim();
   if (!rawKey) {
