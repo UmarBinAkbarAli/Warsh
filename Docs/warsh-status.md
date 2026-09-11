@@ -430,8 +430,15 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
 
 Redis-backed rate limiting is no longer purely deferred: as of 2026-08-26
 (`f260be5`), `lib/rateLimit.ts` uses Upstash Redis when `UPSTASH_REDIS_REST_*` are
-configured, falling back to the in-process limiter otherwise. Whether
-`UPSTASH_REDIS_REST_*` is actually set in production remains unverified.
+configured, falling back to the in-process limiter otherwise. **Verified
+2026-09-11 (`vercel env ls production`): neither `UPSTASH_REDIS_REST_URL` nor
+`UPSTASH_REDIS_REST_TOKEN` is set, so production runs the in-process fallback.**
+Login, register, forgot/reset-password, Google sign-in/link and the admin session
+route are therefore limited per serverless instance, not globally: the effective
+ceiling is `limit × concurrent instances`, and a cold start resets the count.
+Acceptable at the current traffic level; turning on the shared limiter needs an
+Upstash database (owner-created, in the Warsh-owned account) and the two
+variables added to the Vercel project — no code change.
 
 ## Current risks
 
