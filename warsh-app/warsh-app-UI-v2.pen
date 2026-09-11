@@ -130007,6 +130007,2911 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "hRhhw",
+      "x": 53746,
+      "y": -44,
+      "name": "20 — New Lessons Prompt · Proposed Flow",
+      "clip": true,
+      "width": 1330,
+      "fill": "$parchment",
+      "cornerRadius": 24,
+      "layout": "vertical",
+      "gap": 28,
+      "padding": 64,
+      "children": [
+        {
+          "type": "frame",
+          "id": "kF3f4",
+          "name": "Header",
+          "width": 1100,
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "type": "text",
+              "id": "YviHc",
+              "name": "Eyebrow",
+              "fill": "$warsh-gold",
+              "content": "PROPOSED · LEARN",
+              "fontFamily": "$font-body",
+              "fontSize": 11,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "TavzH",
+              "name": "Title",
+              "fill": "$warsh-ink",
+              "content": "New lessons added to a finished chapter",
+              "fontFamily": "$font-heading",
+              "fontSize": 32,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "r8lQu",
+              "name": "Sub",
+              "fill": "$warsh-muted",
+              "textGrowth": "fixed-width",
+              "width": 1100,
+              "content": "Publishing a lesson into a chapter a learner already completed re-locks every chapter after it. Nothing is deleted, but the map collapses with no explanation. This sheet says their work is safe and hands them the one lesson that restores it.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-body",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Yl7JN",
+          "name": "Screens Row",
+          "gap": 48,
+          "children": [
+            {
+              "type": "frame",
+              "id": "F3Nnm",
+              "name": "EN Variant",
+              "layout": "vertical",
+              "gap": 14,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yLkqL",
+                  "name": "EN Caption",
+                  "fill": "$warsh-muted",
+                  "content": "English UI",
+                  "fontFamily": "$font-body",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "SPy3R",
+                  "name": "New Lessons Sheet · EN",
+                  "clip": true,
+                  "width": 390,
+                  "height": 844,
+                  "fill": "$warsh-cream",
+                  "cornerRadius": 28,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Y2hnX7",
+                      "name": "Dimmed Learn Backdrop",
+                      "opacity": 0.3,
+                      "width": 390,
+                      "layout": "vertical",
+                      "gap": 17,
+                      "padding": [
+                        0,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "j0sAm3",
+                          "name": "Greeting Header",
+                          "width": 354,
+                          "height": 70,
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "WoVVR",
+                              "x": 0,
+                              "y": 0,
+                              "name": "Greeting Copy",
+                              "width": 236,
+                              "layout": "vertical",
+                              "gap": 3,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "HtFVf",
+                                  "name": "Greeting",
+                                  "fill": "$warsh-ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Assalamu alaikum, Abdullah",
+                                  "lineHeight": 1.18,
+                                  "fontFamily": "$font-heading",
+                                  "fontSize": 22,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "w4FaS",
+                                  "name": "Sub Greeting",
+                                  "fill": "$warsh-muted",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "A small, steady reading for today.",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "cnof2",
+                              "x": 274,
+                              "y": 19,
+                              "name": "7 Day Streak Chip",
+                              "fill": "$warsh-sage",
+                              "cornerRadius": 999,
+                              "stroke": "#C8D7C9",
+                              "strokeWidth": 1,
+                              "gap": 6,
+                              "padding": [
+                                8,
+                                10
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "Paa7V",
+                                  "name": "Streak Flame Icon",
+                                  "width": 15,
+                                  "height": 15,
+                                  "icon": "flame",
+                                  "library": "lucide",
+                                  "fill": "$warsh-gold"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "NQHl9",
+                                  "name": "Streak Text",
+                                  "fill": "$warsh-navy",
+                                  "content": "7 days",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "I8tME",
+                          "name": "Continue Learning Hero",
+                          "width": 354,
+                          "fill": "$warsh-navy",
+                          "cornerRadius": 24,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "#071B4426",
+                            "offset": {
+                              "x": 0,
+                              "y": 14
+                            },
+                            "blur": 28
+                          },
+                          "layout": "vertical",
+                          "gap": 15,
+                          "padding": [
+                            20,
+                            18
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "jwnyX",
+                              "name": "Hero Meta Row",
+                              "width": 318,
+                              "height": 20,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "GDpOb",
+                                  "x": 0,
+                                  "y": 2,
+                                  "name": "Chapter Lesson",
+                                  "fill": "#EFE5D1",
+                                  "content": "Chapter 2 · Lesson 3",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "Ye8cK",
+                                  "x": 298,
+                                  "y": 0,
+                                  "name": "Book Open Icon",
+                                  "width": 20,
+                                  "height": 20,
+                                  "icon": "book-open",
+                                  "library": "lucide",
+                                  "fill": "$warsh-gold"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "Bqijc",
+                              "name": "Arabic Lesson Title",
+                              "fill": "$warsh-white",
+                              "textGrowth": "fixed-width",
+                              "width": 318,
+                              "content": "هَذَا بَيْتِي",
+                              "lineHeight": 1.08,
+                              "textAlign": "right",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 44,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "k23EED",
+                              "name": "Lesson Subtitle",
+                              "fill": "#E7D9BD",
+                              "textGrowth": "fixed-width",
+                              "width": 318,
+                              "content": "This is my home · یہ میرا گھر ہے",
+                              "lineHeight": 1.35,
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "e0D1V",
+                              "name": "Hero Progress Row",
+                              "width": 318,
+                              "layout": "vertical",
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "Z1K5R",
+                                  "name": "Progress Text Row",
+                                  "width": 318,
+                                  "height": 15,
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "DNyNp",
+                                      "x": 0,
+                                      "y": 0,
+                                      "name": "Progress Label",
+                                      "fill": "#C9D0DE",
+                                      "content": "Current lesson",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "normal"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "ae7jw",
+                                      "x": 285,
+                                      "y": 0,
+                                      "name": "Progress Count",
+                                      "fill": "$warsh-white",
+                                      "content": "3 of 7",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "ScVAT",
+                                  "name": "Progress Track",
+                                  "clip": true,
+                                  "width": 318,
+                                  "height": 7,
+                                  "fill": "#FFFFFF24",
+                                  "cornerRadius": 999,
+                                  "children": [
+                                    {
+                                      "type": "rectangle",
+                                      "cornerRadius": 999,
+                                      "id": "oqHWw",
+                                      "name": "Progress Fill",
+                                      "fill": "$warsh-gold",
+                                      "width": 146,
+                                      "height": "fill_container"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "nGsVN",
+                              "name": "Hero CTA Row",
+                              "width": 318,
+                              "height": 38,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "A21gxv",
+                                  "x": 0,
+                                  "y": 10,
+                                  "name": "Hero Support Copy",
+                                  "fill": "#BFC8D9",
+                                  "content": "Listen, understand, then practise.",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "rle9p",
+                                  "x": 209,
+                                  "y": 0,
+                                  "name": "Continue CTA",
+                                  "fill": "$warsh-gold",
+                                  "cornerRadius": 999,
+                                  "gap": 7,
+                                  "padding": [
+                                    11,
+                                    14
+                                  ],
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "QHEd9",
+                                      "name": "Continue CTA Label",
+                                      "fill": "$warsh-navy",
+                                      "content": "Continue",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 13,
+                                      "fontWeight": "800"
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "kVKvW",
+                                      "name": "Continue Arrow",
+                                      "width": 15,
+                                      "height": 15,
+                                      "icon": "arrow-right",
+                                      "library": "lucide",
+                                      "fill": "$warsh-navy"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "P3MkB",
+                          "name": "Today Section",
+                          "width": 354,
+                          "layout": "vertical",
+                          "gap": 11,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Ojukv",
+                              "name": "Today Title",
+                              "fill": "$warsh-ink",
+                              "content": "Today",
+                              "fontFamily": "$font-heading",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "fPUIr",
+                              "name": "Today Cards Row",
+                              "width": 354,
+                              "gap": 12,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "qD25t",
+                                  "name": "Today's Goal Card",
+                                  "width": 171,
+                                  "height": 128,
+                                  "fill": "$warsh-white",
+                                  "cornerRadius": 20,
+                                  "stroke": "$warsh-line",
+                                  "strokeWidth": 1,
+                                  "effect": {
+                                    "type": "shadow",
+                                    "shadowType": "outer",
+                                    "color": "#071B4412",
+                                    "offset": {
+                                      "x": 0,
+                                      "y": 8
+                                    },
+                                    "blur": 18
+                                  },
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "poQNN",
+                                      "x": 14,
+                                      "y": 18,
+                                      "name": "Goal Copy",
+                                      "width": 100,
+                                      "layout": "vertical",
+                                      "gap": 7,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "HtsiN",
+                                          "name": "Goal Label",
+                                          "fill": "$warsh-muted",
+                                          "content": "TODAY'S GOAL",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 11,
+                                          "fontWeight": "700"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "r4txqb",
+                                          "name": "Goal Value",
+                                          "fill": "$warsh-ink",
+                                          "content": "1 lesson",
+                                          "fontFamily": "$font-heading",
+                                          "fontSize": 24,
+                                          "fontWeight": "600"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "Upa9n",
+                                          "name": "Goal Urdu",
+                                          "fill": "$warsh-muted",
+                                          "textGrowth": "fixed-width",
+                                          "width": 83,
+                                          "content": "آج کا ہدف",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "L30SrQ",
+                                      "x": 109,
+                                      "y": 40,
+                                      "name": "Goal Progress Ring",
+                                      "width": 48,
+                                      "height": 48,
+                                      "layout": "none",
+                                      "children": [
+                                        {
+                                          "type": "ellipse",
+                                          "id": "o25N3w",
+                                          "x": 0,
+                                          "y": 0,
+                                          "name": "Goal Ring Base",
+                                          "innerRadius": 0.74,
+                                          "fill": "#DDE7DE",
+                                          "width": 48,
+                                          "height": 48
+                                        },
+                                        {
+                                          "type": "ellipse",
+                                          "id": "PiiuF",
+                                          "x": 0,
+                                          "y": 0,
+                                          "name": "Goal Ring Progress",
+                                          "innerRadius": 0.74,
+                                          "startAngle": -90,
+                                          "sweepAngle": 252,
+                                          "fill": "$warsh-gold",
+                                          "width": 48,
+                                          "height": 48
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "JgUPw",
+                                          "x": 13,
+                                          "y": 16,
+                                          "name": "Goal Ring Text",
+                                          "fill": "$warsh-navy",
+                                          "content": "70%",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 11,
+                                          "fontWeight": "800"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "JPPyq",
+                                  "name": "Word of the Day Card",
+                                  "width": 171,
+                                  "height": 128,
+                                  "fill": "$warsh-sage",
+                                  "cornerRadius": 20,
+                                  "stroke": "#C8D7C9",
+                                  "strokeWidth": 1,
+                                  "effect": {
+                                    "type": "shadow",
+                                    "shadowType": "outer",
+                                    "color": "#071B4410",
+                                    "offset": {
+                                      "x": 0,
+                                      "y": 8
+                                    },
+                                    "blur": 18
+                                  },
+                                  "layout": "vertical",
+                                  "gap": 7,
+                                  "padding": 14,
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "rWm0f",
+                                      "name": "Word Card Top",
+                                      "width": 143,
+                                      "gap": 8,
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "icon",
+                                          "id": "kwUPG",
+                                          "name": "Word Icon",
+                                          "width": 16,
+                                          "height": 16,
+                                          "icon": "sparkles",
+                                          "library": "lucide",
+                                          "fill": "$warsh-gold"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "uEk2Y",
+                                          "name": "Word Label",
+                                          "fill": "$warsh-navy",
+                                          "content": "WORD OF THE DAY",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 11,
+                                          "fontWeight": "700"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "a5yW4",
+                                      "name": "Word Arabic",
+                                      "fill": "$warsh-navy",
+                                      "textGrowth": "fixed-width",
+                                      "width": 143,
+                                      "content": "أَنَا",
+                                      "lineHeight": 1.05,
+                                      "textAlign": "right",
+                                      "fontFamily": "$font-arabic",
+                                      "fontSize": 38,
+                                      "fontWeight": "normal"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "hMpmi",
+                                      "name": "Word Meaning",
+                                      "fill": "$warsh-ink",
+                                      "content": "I · میں",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 13,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "cKDxW",
+                          "name": "Chapter Journey Section",
+                          "width": 354,
+                          "layout": "vertical",
+                          "gap": 11,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "B9NZWh",
+                              "name": "Journey Title",
+                              "fill": "$warsh-ink",
+                              "content": "Chapter journey",
+                              "fontFamily": "$font-heading",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "GxLZR",
+                              "name": "Journey Card",
+                              "width": 354,
+                              "height": 202,
+                              "fill": "$warsh-white",
+                              "cornerRadius": 22,
+                              "stroke": "$warsh-line",
+                              "strokeWidth": 1,
+                              "effect": {
+                                "type": "shadow",
+                                "shadowType": "outer",
+                                "color": "#071B4412",
+                                "offset": {
+                                  "x": 0,
+                                  "y": 8
+                                },
+                                "blur": 20
+                              },
+                              "layout": "vertical",
+                              "gap": 10,
+                              "padding": [
+                                16,
+                                14
+                              ],
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "iZYIM",
+                                  "name": "Current Lesson Row",
+                                  "width": 326,
+                                  "height": 80,
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "Vv8fc",
+                                      "x": 0,
+                                      "y": 16,
+                                      "name": "Current Lesson Mark",
+                                      "width": 34,
+                                      "height": 34,
+                                      "fill": "#C49B4D",
+                                      "cornerRadius": 17,
+                                      "layout": "vertical",
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "icon",
+                                          "id": "JgcJ9",
+                                          "name": "Current Lesson Icon",
+                                          "width": 16,
+                                          "height": 16,
+                                          "icon": "circle-play",
+                                          "library": "lucide",
+                                          "fill": "$warsh-navy"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "r2ED9P",
+                                      "x": 45,
+                                      "y": 0,
+                                      "name": "Current Lesson Copy",
+                                      "width": 271,
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "djgkR",
+                                          "name": "Current Lesson Label",
+                                          "fill": "$warsh-gold",
+                                          "content": "CURRENT",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 10,
+                                          "fontWeight": "800"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "Lq8ze",
+                                          "name": "Current Arabic",
+                                          "fill": "$warsh-ink",
+                                          "textGrowth": "fixed-width",
+                                          "width": 271,
+                                          "content": "هَذَا بَيْتِي",
+                                          "lineHeight": 1.05,
+                                          "textAlign": "right",
+                                          "fontFamily": "$font-arabic",
+                                          "fontSize": 23,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "y5V2I4",
+                                          "name": "Current Meaning",
+                                          "fill": "$warsh-muted",
+                                          "textGrowth": "fixed-width",
+                                          "width": 271,
+                                          "content": "This is my home · یہ میرا گھر ہے",
+                                          "lineHeight": 1.25,
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "BJgpH",
+                                  "name": "Next Lesson Row",
+                                  "width": 326,
+                                  "height": 80,
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "aINEq",
+                                      "x": 0,
+                                      "y": 16,
+                                      "name": "Next Lesson Mark",
+                                      "width": 34,
+                                      "height": 34,
+                                      "fill": "#9BA5B3",
+                                      "cornerRadius": 17,
+                                      "layout": "vertical",
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "icon",
+                                          "id": "QRrSH",
+                                          "name": "Next Lesson Icon",
+                                          "width": 16,
+                                          "height": 16,
+                                          "icon": "lock",
+                                          "library": "lucide",
+                                          "fill": "$warsh-white"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "mqkeF",
+                                      "x": 45,
+                                      "y": 0,
+                                      "name": "Next Lesson Copy",
+                                      "width": 271,
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "KE8VF",
+                                          "name": "Next Lesson Label",
+                                          "fill": "$warsh-muted",
+                                          "content": "NEXT",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 10,
+                                          "fontWeight": "800"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "AZAh8",
+                                          "name": "Next Arabic",
+                                          "fill": "$warsh-ink",
+                                          "textGrowth": "fixed-width",
+                                          "width": 271,
+                                          "content": "أَيْنَ الْمَطْبَخُ؟",
+                                          "lineHeight": 1.05,
+                                          "textAlign": "right",
+                                          "fontFamily": "$font-arabic",
+                                          "fontSize": 23,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "W6ZhX",
+                                          "name": "Next Meaning",
+                                          "fill": "$warsh-muted",
+                                          "textGrowth": "fixed-width",
+                                          "width": 271,
+                                          "content": "Where is the kitchen? · باورچی خانہ کہاں ہے؟",
+                                          "lineHeight": 1.25,
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ltXth",
+                          "name": "Tadabbur Reflection Section",
+                          "width": 354,
+                          "layout": "vertical",
+                          "gap": 11,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Pg9TI",
+                              "name": "Tadabbur Title",
+                              "fill": "$warsh-ink",
+                              "content": "Tadabbur",
+                              "fontFamily": "$font-heading",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "n4n965",
+                              "name": "Reflection Card",
+                              "width": 354,
+                              "height": 132,
+                              "fill": "$warsh-navy",
+                              "cornerRadius": 22,
+                              "effect": {
+                                "type": "shadow",
+                                "shadowType": "outer",
+                                "color": "#071B4422",
+                                "offset": {
+                                  "x": 0,
+                                  "y": 10
+                                },
+                                "blur": 22
+                              },
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "k9pfNV",
+                                  "x": 14,
+                                  "y": 36,
+                                  "name": "Reflection Icon Well",
+                                  "width": 38,
+                                  "height": 38,
+                                  "fill": "#FAF7F018",
+                                  "cornerRadius": 19,
+                                  "layout": "vertical",
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "HRmhe",
+                                      "name": "Reflection Moon Icon",
+                                      "width": 20,
+                                      "height": 20,
+                                      "icon": "moon-star",
+                                      "library": "lucide",
+                                      "fill": "$warsh-gold"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "XcEqt",
+                                  "x": 64,
+                                  "y": 16,
+                                  "name": "Reflection Copy",
+                                  "width": 276,
+                                  "layout": "vertical",
+                                  "gap": 5,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "LFeX0",
+                                      "name": "Reflection Insight",
+                                      "fill": "$warsh-white",
+                                      "textGrowth": "fixed-width",
+                                      "width": 276,
+                                      "content": "Every home begins with remembrance.",
+                                      "lineHeight": 1.25,
+                                      "fontFamily": "$font-heading",
+                                      "fontSize": 16,
+                                      "fontWeight": "600"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "Vws4O",
+                                      "name": "Reflection Bilingual",
+                                      "fill": "#E7D9BD",
+                                      "textGrowth": "fixed-width",
+                                      "width": 276,
+                                      "content": "Say Bismillah before you enter · گھر میں داخل ہوتے وقت بسم اللہ",
+                                      "lineHeight": 1.35,
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "FE0aD",
+                      "layoutPosition": "absolute",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Sheet Dim Overlay",
+                      "fill": "#071B4455",
+                      "width": 390,
+                      "height": 844
+                    },
+                    {
+                      "type": "frame",
+                      "id": "b7O8LK",
+                      "layoutPosition": "absolute",
+                      "x": 0,
+                      "y": 395,
+                      "name": "New Lessons Sheet",
+                      "width": 390,
+                      "fill": "$warsh-white",
+                      "cornerRadius": 28,
+                      "effect": [
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#071B4412",
+                          "offset": {
+                            "x": 0,
+                            "y": -2
+                          },
+                          "blur": 8
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#071B4422",
+                          "offset": {
+                            "x": 0,
+                            "y": -18
+                          },
+                          "blur": 36
+                        }
+                      ],
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": [
+                        10,
+                        20,
+                        22,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "h9zV5R",
+                          "name": "Sheet Handle Area",
+                          "width": "fill_container",
+                          "height": 14,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 8,
+                              "id": "Q54Y1m",
+                              "name": "Sheet Handle",
+                              "fill": "$warsh-line",
+                              "width": 44,
+                              "height": 4
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qz77R",
+                          "name": "Sheet Header",
+                          "width": "fill_container",
+                          "gap": 14,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "e5rXZi",
+                              "name": "Sheet Badge",
+                              "width": 44,
+                              "height": 44,
+                              "fill": "$warsh-navy",
+                              "cornerRadius": 22,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "WeJGv",
+                                  "name": "Badge Icon",
+                                  "width": 20,
+                                  "height": 20,
+                                  "icon": "sparkles",
+                                  "library": "lucide",
+                                  "fill": "$warsh-gold"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "M71x97",
+                              "name": "Sheet Header Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 4,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "o1tllA",
+                                  "name": "Sheet Eyebrow",
+                                  "fill": "$warsh-gold",
+                                  "content": "CHAPTER 6 · THIS, THAT, WHO",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "vAr9s",
+                                  "name": "Sheet Title",
+                                  "fill": "$warsh-ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "A new lesson was added",
+                                  "lineHeight": 1.2,
+                                  "fontFamily": "$font-heading",
+                                  "fontSize": 24,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "Y3xpW",
+                          "name": "Sheet Body",
+                          "fill": "$ink-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "We added new material to this chapter. Finish it to pick up exactly where you left off.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "f9oKxK",
+                          "name": "Chapter Progress",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 9,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "CRNJZ",
+                              "name": "Progress Labels",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "o52Tag",
+                                  "name": "Progress Label",
+                                  "fill": "$warsh-muted",
+                                  "content": "CHAPTER PROGRESS",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "J2Yr8",
+                                  "name": "Progress Count",
+                                  "fill": "$warsh-ink",
+                                  "content": "8 of 9 lessons",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "aU1Zg",
+                              "name": "Progress Segments",
+                              "width": "fill_container",
+                              "height": 8,
+                              "gap": 4,
+                              "children": [
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "c6m6B",
+                                  "name": "Segment Done 1",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "imuB9",
+                                  "name": "Segment Done 2",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "BTcdA",
+                                  "name": "Segment Done 3",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "xMuva",
+                                  "name": "Segment Done 4",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "kHhcm",
+                                  "name": "Segment Done 5",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "MdSiy",
+                                  "name": "Segment Done 6",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "j8eeU",
+                                  "name": "Segment Done 7",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "M0t4h",
+                                  "name": "Segment Done 8",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "I3VJnc",
+                                  "name": "Segment New",
+                                  "fill": "#C49B4D33",
+                                  "width": "fill_container",
+                                  "height": 8,
+                                  "stroke": "$warsh-gold",
+                                  "strokeWidth": 1
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "B7U9P",
+                              "name": "Progress Note",
+                              "fill": "$warsh-muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "The gold step is the new lesson.",
+                              "lineHeight": 1.4,
+                              "fontFamily": "$font-body",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "b7M4L",
+                          "name": "Reassurance",
+                          "width": "fill_container",
+                          "fill": "$success-tint",
+                          "cornerRadius": 16,
+                          "gap": 11,
+                          "padding": [
+                            13,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "uJBpU",
+                              "name": "Reassurance Icon",
+                              "width": 19,
+                              "height": 19,
+                              "icon": "shield-check",
+                              "library": "lucide",
+                              "fill": "$sage-deep"
+                            },
+                            {
+                              "type": "text",
+                              "id": "x3dVB",
+                              "name": "Reassurance Text",
+                              "fill": "$sage-deep",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Nothing you have done is lost. Your work in the 9 chapters ahead is saved and returns the moment this chapter is complete.",
+                              "lineHeight": 1.45,
+                              "fontFamily": "$font-body",
+                              "fontSize": 12.5,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "W0ZxNl",
+                          "name": "Sheet Actions",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "mZ0z3",
+                              "name": "Primary CTA",
+                              "width": "fill_container",
+                              "height": 52,
+                              "fill": "$warsh-navy",
+                              "cornerRadius": 16,
+                              "gap": 8,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "a2yC2",
+                                  "name": "Primary CTA Label",
+                                  "fill": "$cream",
+                                  "content": "Complete it now",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 15,
+                                  "fontWeight": "800"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "gCdLu",
+                                  "name": "CTA Arrow",
+                                  "width": 17,
+                                  "height": 17,
+                                  "icon": "arrow-right",
+                                  "library": "lucide",
+                                  "fill": "$cream"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "S1IlW",
+                              "name": "Later Button",
+                              "width": "fill_container",
+                              "height": 44,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "iRsNz",
+                                  "name": "Later Label",
+                                  "fill": "$warsh-muted",
+                                  "content": "Maybe later",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 13,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "PzPAy",
+              "name": "UR Variant",
+              "layout": "vertical",
+              "gap": 14,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "T8vDow",
+                  "name": "UR Caption",
+                  "fill": "$warsh-muted",
+                  "content": "Urdu UI (RTL)",
+                  "fontFamily": "$font-body",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "jeVF6",
+                  "name": "New Lessons Sheet · UR",
+                  "clip": true,
+                  "width": 390,
+                  "height": 844,
+                  "fill": "$warsh-cream",
+                  "cornerRadius": 28,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "DlEJ3",
+                      "name": "Dimmed Learn Backdrop",
+                      "opacity": 0.3,
+                      "width": 390,
+                      "layout": "vertical",
+                      "gap": 17,
+                      "padding": [
+                        0,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "OQUDA",
+                          "name": "Greeting Header",
+                          "width": 354,
+                          "height": 70,
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "kz9Vf",
+                              "x": 0,
+                              "y": 0,
+                              "name": "Greeting Copy",
+                              "width": 236,
+                              "layout": "vertical",
+                              "gap": 3,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "uCkQp",
+                                  "name": "Greeting",
+                                  "fill": "$warsh-ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Assalamu alaikum, Abdullah",
+                                  "lineHeight": 1.18,
+                                  "fontFamily": "$font-heading",
+                                  "fontSize": 22,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "oXRzi",
+                                  "name": "Sub Greeting",
+                                  "fill": "$warsh-muted",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "A small, steady reading for today.",
+                                  "lineHeight": 1.25,
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "H1QNYm",
+                              "x": 274,
+                              "y": 19,
+                              "name": "7 Day Streak Chip",
+                              "fill": "$warsh-sage",
+                              "cornerRadius": 999,
+                              "stroke": "#C8D7C9",
+                              "strokeWidth": 1,
+                              "gap": 6,
+                              "padding": [
+                                8,
+                                10
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "UOY4L",
+                                  "name": "Streak Flame Icon",
+                                  "width": 15,
+                                  "height": 15,
+                                  "icon": "flame",
+                                  "library": "lucide",
+                                  "fill": "$warsh-gold"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "L3rEr",
+                                  "name": "Streak Text",
+                                  "fill": "$warsh-navy",
+                                  "content": "7 days",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "OuS1t",
+                          "name": "Continue Learning Hero",
+                          "width": 354,
+                          "fill": "$warsh-navy",
+                          "cornerRadius": 24,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "#071B4426",
+                            "offset": {
+                              "x": 0,
+                              "y": 14
+                            },
+                            "blur": 28
+                          },
+                          "layout": "vertical",
+                          "gap": 15,
+                          "padding": [
+                            20,
+                            18
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "xM9YD",
+                              "name": "Hero Meta Row",
+                              "width": 318,
+                              "height": 20,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "ZfsX6",
+                                  "x": 0,
+                                  "y": 2,
+                                  "name": "Chapter Lesson",
+                                  "fill": "#EFE5D1",
+                                  "content": "Chapter 2 · Lesson 3",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "D6wAlc",
+                                  "x": 298,
+                                  "y": 0,
+                                  "name": "Book Open Icon",
+                                  "width": 20,
+                                  "height": 20,
+                                  "icon": "book-open",
+                                  "library": "lucide",
+                                  "fill": "$warsh-gold"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "AoDPD",
+                              "name": "Arabic Lesson Title",
+                              "fill": "$warsh-white",
+                              "textGrowth": "fixed-width",
+                              "width": 318,
+                              "content": "هَذَا بَيْتِي",
+                              "lineHeight": 1.08,
+                              "textAlign": "right",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 44,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "bIcbe",
+                              "name": "Lesson Subtitle",
+                              "fill": "#E7D9BD",
+                              "textGrowth": "fixed-width",
+                              "width": 318,
+                              "content": "This is my home · یہ میرا گھر ہے",
+                              "lineHeight": 1.35,
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "njP1k",
+                              "name": "Hero Progress Row",
+                              "width": 318,
+                              "layout": "vertical",
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "nXY9B",
+                                  "name": "Progress Text Row",
+                                  "width": 318,
+                                  "height": 15,
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "Frd98",
+                                      "x": 0,
+                                      "y": 0,
+                                      "name": "Progress Label",
+                                      "fill": "#C9D0DE",
+                                      "content": "Current lesson",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "normal"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "y2Yn1",
+                                      "x": 285,
+                                      "y": 0,
+                                      "name": "Progress Count",
+                                      "fill": "$warsh-white",
+                                      "content": "3 of 7",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "fAZwj",
+                                  "name": "Progress Track",
+                                  "clip": true,
+                                  "width": 318,
+                                  "height": 7,
+                                  "fill": "#FFFFFF24",
+                                  "cornerRadius": 999,
+                                  "children": [
+                                    {
+                                      "type": "rectangle",
+                                      "cornerRadius": 999,
+                                      "id": "FwfFT",
+                                      "name": "Progress Fill",
+                                      "fill": "$warsh-gold",
+                                      "width": 146,
+                                      "height": "fill_container"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "E2dpB",
+                              "name": "Hero CTA Row",
+                              "width": 318,
+                              "height": 38,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "T4iArN",
+                                  "x": 0,
+                                  "y": 10,
+                                  "name": "Hero Support Copy",
+                                  "fill": "#BFC8D9",
+                                  "content": "Listen, understand, then practise.",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "ufGWg",
+                                  "x": 209,
+                                  "y": 0,
+                                  "name": "Continue CTA",
+                                  "fill": "$warsh-gold",
+                                  "cornerRadius": 999,
+                                  "gap": 7,
+                                  "padding": [
+                                    11,
+                                    14
+                                  ],
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "ZfxzB",
+                                      "name": "Continue CTA Label",
+                                      "fill": "$warsh-navy",
+                                      "content": "Continue",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 13,
+                                      "fontWeight": "800"
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "N4rP7e",
+                                      "name": "Continue Arrow",
+                                      "width": 15,
+                                      "height": 15,
+                                      "icon": "arrow-right",
+                                      "library": "lucide",
+                                      "fill": "$warsh-navy"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "IJ44d",
+                          "name": "Today Section",
+                          "width": 354,
+                          "layout": "vertical",
+                          "gap": 11,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "F7o5ss",
+                              "name": "Today Title",
+                              "fill": "$warsh-ink",
+                              "content": "Today",
+                              "fontFamily": "$font-heading",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "GkEPe",
+                              "name": "Today Cards Row",
+                              "width": 354,
+                              "gap": 12,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "MkDvU",
+                                  "name": "Today's Goal Card",
+                                  "width": 171,
+                                  "height": 128,
+                                  "fill": "$warsh-white",
+                                  "cornerRadius": 20,
+                                  "stroke": "$warsh-line",
+                                  "strokeWidth": 1,
+                                  "effect": {
+                                    "type": "shadow",
+                                    "shadowType": "outer",
+                                    "color": "#071B4412",
+                                    "offset": {
+                                      "x": 0,
+                                      "y": 8
+                                    },
+                                    "blur": 18
+                                  },
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "xUFJ0",
+                                      "x": 14,
+                                      "y": 18,
+                                      "name": "Goal Copy",
+                                      "width": 100,
+                                      "layout": "vertical",
+                                      "gap": 7,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "X1A5jn",
+                                          "name": "Goal Label",
+                                          "fill": "$warsh-muted",
+                                          "content": "TODAY'S GOAL",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 11,
+                                          "fontWeight": "700"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "Wk3jZ",
+                                          "name": "Goal Value",
+                                          "fill": "$warsh-ink",
+                                          "content": "1 lesson",
+                                          "fontFamily": "$font-heading",
+                                          "fontSize": 24,
+                                          "fontWeight": "600"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "D7y1V",
+                                          "name": "Goal Urdu",
+                                          "fill": "$warsh-muted",
+                                          "textGrowth": "fixed-width",
+                                          "width": 83,
+                                          "content": "آج کا ہدف",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "s2GyuA",
+                                      "x": 109,
+                                      "y": 40,
+                                      "name": "Goal Progress Ring",
+                                      "width": 48,
+                                      "height": 48,
+                                      "layout": "none",
+                                      "children": [
+                                        {
+                                          "type": "ellipse",
+                                          "id": "EH6g8",
+                                          "x": 0,
+                                          "y": 0,
+                                          "name": "Goal Ring Base",
+                                          "innerRadius": 0.74,
+                                          "fill": "#DDE7DE",
+                                          "width": 48,
+                                          "height": 48
+                                        },
+                                        {
+                                          "type": "ellipse",
+                                          "id": "c8RDCd",
+                                          "x": 0,
+                                          "y": 0,
+                                          "name": "Goal Ring Progress",
+                                          "innerRadius": 0.74,
+                                          "startAngle": -90,
+                                          "sweepAngle": 252,
+                                          "fill": "$warsh-gold",
+                                          "width": 48,
+                                          "height": 48
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "DvZjd",
+                                          "x": 13,
+                                          "y": 16,
+                                          "name": "Goal Ring Text",
+                                          "fill": "$warsh-navy",
+                                          "content": "70%",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 11,
+                                          "fontWeight": "800"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "Y5D1li",
+                                  "name": "Word of the Day Card",
+                                  "width": 171,
+                                  "height": 128,
+                                  "fill": "$warsh-sage",
+                                  "cornerRadius": 20,
+                                  "stroke": "#C8D7C9",
+                                  "strokeWidth": 1,
+                                  "effect": {
+                                    "type": "shadow",
+                                    "shadowType": "outer",
+                                    "color": "#071B4410",
+                                    "offset": {
+                                      "x": 0,
+                                      "y": 8
+                                    },
+                                    "blur": 18
+                                  },
+                                  "layout": "vertical",
+                                  "gap": 7,
+                                  "padding": 14,
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "Gb1Hh",
+                                      "name": "Word Card Top",
+                                      "width": 143,
+                                      "gap": 8,
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "icon",
+                                          "id": "CsnPL",
+                                          "name": "Word Icon",
+                                          "width": 16,
+                                          "height": 16,
+                                          "icon": "sparkles",
+                                          "library": "lucide",
+                                          "fill": "$warsh-gold"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "UKL73",
+                                          "name": "Word Label",
+                                          "fill": "$warsh-navy",
+                                          "content": "WORD OF THE DAY",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 11,
+                                          "fontWeight": "700"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "fAslu",
+                                      "name": "Word Arabic",
+                                      "fill": "$warsh-navy",
+                                      "textGrowth": "fixed-width",
+                                      "width": 143,
+                                      "content": "أَنَا",
+                                      "lineHeight": 1.05,
+                                      "textAlign": "right",
+                                      "fontFamily": "$font-arabic",
+                                      "fontSize": 38,
+                                      "fontWeight": "normal"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "T6yhBD",
+                                      "name": "Word Meaning",
+                                      "fill": "$warsh-ink",
+                                      "content": "I · میں",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 13,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "fQqQY",
+                          "name": "Chapter Journey Section",
+                          "width": 354,
+                          "layout": "vertical",
+                          "gap": 11,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "IVbGk",
+                              "name": "Journey Title",
+                              "fill": "$warsh-ink",
+                              "content": "Chapter journey",
+                              "fontFamily": "$font-heading",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "BiG3h",
+                              "name": "Journey Card",
+                              "width": 354,
+                              "height": 202,
+                              "fill": "$warsh-white",
+                              "cornerRadius": 22,
+                              "stroke": "$warsh-line",
+                              "strokeWidth": 1,
+                              "effect": {
+                                "type": "shadow",
+                                "shadowType": "outer",
+                                "color": "#071B4412",
+                                "offset": {
+                                  "x": 0,
+                                  "y": 8
+                                },
+                                "blur": 20
+                              },
+                              "layout": "vertical",
+                              "gap": 10,
+                              "padding": [
+                                16,
+                                14
+                              ],
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "lqNDJ",
+                                  "name": "Current Lesson Row",
+                                  "width": 326,
+                                  "height": 80,
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "j0Stz",
+                                      "x": 0,
+                                      "y": 16,
+                                      "name": "Current Lesson Mark",
+                                      "width": 34,
+                                      "height": 34,
+                                      "fill": "#C49B4D",
+                                      "cornerRadius": 17,
+                                      "layout": "vertical",
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "icon",
+                                          "id": "RzWKK",
+                                          "name": "Current Lesson Icon",
+                                          "width": 16,
+                                          "height": 16,
+                                          "icon": "circle-play",
+                                          "library": "lucide",
+                                          "fill": "$warsh-navy"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "cLr1h",
+                                      "x": 45,
+                                      "y": 0,
+                                      "name": "Current Lesson Copy",
+                                      "width": 271,
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "VdOUG",
+                                          "name": "Current Lesson Label",
+                                          "fill": "$warsh-gold",
+                                          "content": "CURRENT",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 10,
+                                          "fontWeight": "800"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "H4FEKm",
+                                          "name": "Current Arabic",
+                                          "fill": "$warsh-ink",
+                                          "textGrowth": "fixed-width",
+                                          "width": 271,
+                                          "content": "هَذَا بَيْتِي",
+                                          "lineHeight": 1.05,
+                                          "textAlign": "right",
+                                          "fontFamily": "$font-arabic",
+                                          "fontSize": 23,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "Z9M2X",
+                                          "name": "Current Meaning",
+                                          "fill": "$warsh-muted",
+                                          "textGrowth": "fixed-width",
+                                          "width": 271,
+                                          "content": "This is my home · یہ میرا گھر ہے",
+                                          "lineHeight": 1.25,
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "jIUpX",
+                                  "name": "Next Lesson Row",
+                                  "width": 326,
+                                  "height": 80,
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "AjYVw",
+                                      "x": 0,
+                                      "y": 16,
+                                      "name": "Next Lesson Mark",
+                                      "width": 34,
+                                      "height": 34,
+                                      "fill": "#9BA5B3",
+                                      "cornerRadius": 17,
+                                      "layout": "vertical",
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "icon",
+                                          "id": "T4WGmk",
+                                          "name": "Next Lesson Icon",
+                                          "width": 16,
+                                          "height": 16,
+                                          "icon": "lock",
+                                          "library": "lucide",
+                                          "fill": "$warsh-white"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "r3oNVn",
+                                      "x": 45,
+                                      "y": 0,
+                                      "name": "Next Lesson Copy",
+                                      "width": 271,
+                                      "layout": "vertical",
+                                      "gap": 2,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "JkARV",
+                                          "name": "Next Lesson Label",
+                                          "fill": "$warsh-muted",
+                                          "content": "NEXT",
+                                          "fontFamily": "Inter",
+                                          "fontSize": 10,
+                                          "fontWeight": "800"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "gHsmE",
+                                          "name": "Next Arabic",
+                                          "fill": "$warsh-ink",
+                                          "textGrowth": "fixed-width",
+                                          "width": 271,
+                                          "content": "أَيْنَ الْمَطْبَخُ؟",
+                                          "lineHeight": 1.05,
+                                          "textAlign": "right",
+                                          "fontFamily": "$font-arabic",
+                                          "fontSize": 23,
+                                          "fontWeight": "normal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "id": "t1OjM1",
+                                          "name": "Next Meaning",
+                                          "fill": "$warsh-muted",
+                                          "textGrowth": "fixed-width",
+                                          "width": 271,
+                                          "content": "Where is the kitchen? · باورچی خانہ کہاں ہے؟",
+                                          "lineHeight": 1.25,
+                                          "fontFamily": "Inter",
+                                          "fontSize": 12,
+                                          "fontWeight": "normal"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "g8rpmf",
+                          "name": "Tadabbur Reflection Section",
+                          "width": 354,
+                          "layout": "vertical",
+                          "gap": 11,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "rdSQ1",
+                              "name": "Tadabbur Title",
+                              "fill": "$warsh-ink",
+                              "content": "Tadabbur",
+                              "fontFamily": "$font-heading",
+                              "fontSize": 18,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Ii54F",
+                              "name": "Reflection Card",
+                              "width": 354,
+                              "height": 132,
+                              "fill": "$warsh-navy",
+                              "cornerRadius": 22,
+                              "effect": {
+                                "type": "shadow",
+                                "shadowType": "outer",
+                                "color": "#071B4422",
+                                "offset": {
+                                  "x": 0,
+                                  "y": 10
+                                },
+                                "blur": 22
+                              },
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "t8owU",
+                                  "x": 14,
+                                  "y": 36,
+                                  "name": "Reflection Icon Well",
+                                  "width": 38,
+                                  "height": 38,
+                                  "fill": "#FAF7F018",
+                                  "cornerRadius": 19,
+                                  "layout": "vertical",
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "PF0Oe",
+                                      "name": "Reflection Moon Icon",
+                                      "width": 20,
+                                      "height": 20,
+                                      "icon": "moon-star",
+                                      "library": "lucide",
+                                      "fill": "$warsh-gold"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "t4n3G",
+                                  "x": 64,
+                                  "y": 16,
+                                  "name": "Reflection Copy",
+                                  "width": 276,
+                                  "layout": "vertical",
+                                  "gap": 5,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "HSEum",
+                                      "name": "Reflection Insight",
+                                      "fill": "$warsh-white",
+                                      "textGrowth": "fixed-width",
+                                      "width": 276,
+                                      "content": "Every home begins with remembrance.",
+                                      "lineHeight": 1.25,
+                                      "fontFamily": "$font-heading",
+                                      "fontSize": 16,
+                                      "fontWeight": "600"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "CgPVd",
+                                      "name": "Reflection Bilingual",
+                                      "fill": "#E7D9BD",
+                                      "textGrowth": "fixed-width",
+                                      "width": 276,
+                                      "content": "Say Bismillah before you enter · گھر میں داخل ہوتے وقت بسم اللہ",
+                                      "lineHeight": 1.35,
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "TbHRH",
+                      "layoutPosition": "absolute",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Sheet Dim Overlay",
+                      "fill": "#071B4455",
+                      "width": 390,
+                      "height": 844
+                    },
+                    {
+                      "type": "frame",
+                      "id": "P7Cwe",
+                      "layoutPosition": "absolute",
+                      "x": 0,
+                      "y": 341,
+                      "name": "New Lessons Sheet",
+                      "width": 390,
+                      "fill": "$warsh-white",
+                      "cornerRadius": 28,
+                      "effect": [
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#071B4412",
+                          "offset": {
+                            "x": 0,
+                            "y": -2
+                          },
+                          "blur": 8
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#071B4422",
+                          "offset": {
+                            "x": 0,
+                            "y": -18
+                          },
+                          "blur": 36
+                        }
+                      ],
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": [
+                        10,
+                        20,
+                        22,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "l3pX70",
+                          "name": "Sheet Handle Area",
+                          "width": "fill_container",
+                          "height": 14,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 8,
+                              "id": "yt9uQ",
+                              "name": "Sheet Handle",
+                              "fill": "$warsh-line",
+                              "width": 44,
+                              "height": 4
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "bgWD0",
+                          "name": "Sheet Header",
+                          "width": "fill_container",
+                          "gap": 14,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "b7GBo",
+                              "name": "Sheet Header Text",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 4,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "bnuN6",
+                                  "name": "Sheet Eyebrow",
+                                  "fill": "$warsh-gold",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "باب ۶ · یہ، وہ، کون",
+                                  "textAlign": "right",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "a1XOo",
+                                  "name": "Sheet Title",
+                                  "fill": "$warsh-ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "ایک نیا سبق شامل کیا گیا ہے",
+                                  "lineHeight": 1.2,
+                                  "textAlign": "right",
+                                  "fontFamily": "$font-heading",
+                                  "fontSize": 24,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "cVXE7",
+                              "name": "Sheet Badge",
+                              "width": 44,
+                              "height": 44,
+                              "fill": "$warsh-navy",
+                              "cornerRadius": 22,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "SDQLV",
+                                  "name": "Badge Icon",
+                                  "width": 20,
+                                  "height": 20,
+                                  "icon": "sparkles",
+                                  "library": "lucide",
+                                  "fill": "$warsh-gold"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "GK0Uu",
+                          "name": "Sheet Body",
+                          "fill": "$ink-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "ہم نے اس باب میں نیا مواد شامل کیا ہے۔ اسے مکمل کریں تاکہ آپ وہیں سے آگے بڑھ سکیں جہاں آپ تھے۔",
+                          "lineHeight": 1.5,
+                          "textAlign": "right",
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "GD2Gz",
+                          "name": "Chapter Progress",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 9,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "q4emlg",
+                              "name": "Progress Labels",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "v2OLcc",
+                                  "name": "Progress Count",
+                                  "fill": "$warsh-ink",
+                                  "content": "۹ میں سے ۸ اسباق",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "jQxyn",
+                                  "name": "Progress Label",
+                                  "fill": "$warsh-muted",
+                                  "content": "باب کی پیش رفت",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 10,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "ED52d",
+                              "name": "Progress Segments",
+                              "width": "fill_container",
+                              "height": 8,
+                              "gap": 4,
+                              "children": [
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "D1Ce3",
+                                  "name": "Segment New",
+                                  "fill": "#C49B4D33",
+                                  "width": "fill_container",
+                                  "height": 8,
+                                  "stroke": "$warsh-gold",
+                                  "strokeWidth": 1
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "pNFss",
+                                  "name": "Segment Done 1",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "RYzjU",
+                                  "name": "Segment Done 2",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "zMTPo",
+                                  "name": "Segment Done 3",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "yj7o0",
+                                  "name": "Segment Done 4",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "rctH8",
+                                  "name": "Segment Done 5",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "tVPds",
+                                  "name": "Segment Done 6",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "KshjN",
+                                  "name": "Segment Done 7",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 4,
+                                  "id": "aFt8W",
+                                  "name": "Segment Done 8",
+                                  "fill": "$warsh-sage",
+                                  "width": "fill_container",
+                                  "height": 8
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "EpTjs",
+                              "name": "Progress Note",
+                              "fill": "$warsh-muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "سنہری خانہ نیا سبق ہے۔",
+                              "lineHeight": 1.4,
+                              "textAlign": "right",
+                              "fontFamily": "$font-body",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "fNYpr",
+                          "name": "Reassurance",
+                          "width": "fill_container",
+                          "fill": "$success-tint",
+                          "cornerRadius": 16,
+                          "gap": 11,
+                          "padding": [
+                            13,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Apvek",
+                              "name": "Reassurance Text",
+                              "fill": "$sage-deep",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "آپ کی کوئی محنت ضائع نہیں ہوئی۔ آگے کے ۹ ابواب میں آپ کا کام محفوظ ہے اور یہ باب مکمل ہوتے ہی واپس آ جائے گا۔",
+                              "lineHeight": 1.45,
+                              "textAlign": "right",
+                              "fontFamily": "$font-body",
+                              "fontSize": 12.5,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "s9UIu",
+                              "name": "Reassurance Icon",
+                              "width": 19,
+                              "height": 19,
+                              "icon": "shield-check",
+                              "library": "lucide",
+                              "fill": "$sage-deep"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ihUK6",
+                          "name": "Sheet Actions",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "PSedQ",
+                              "name": "Primary CTA",
+                              "width": "fill_container",
+                              "height": 52,
+                              "fill": "$warsh-navy",
+                              "cornerRadius": 16,
+                              "gap": 8,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "MC39E",
+                                  "name": "CTA Arrow",
+                                  "width": 17,
+                                  "height": 17,
+                                  "icon": "arrow-left",
+                                  "library": "lucide",
+                                  "fill": "$cream"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "eva0e",
+                                  "name": "Primary CTA Label",
+                                  "fill": "$cream",
+                                  "content": "ابھی مکمل کریں",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 15,
+                                  "fontWeight": "800"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "SCRyK",
+                              "name": "Later Button",
+                              "width": "fill_container",
+                              "height": 44,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "m8MdfY",
+                                  "name": "Later Label",
+                                  "fill": "$warsh-muted",
+                                  "content": "بعد میں",
+                                  "fontFamily": "$font-body",
+                                  "fontSize": 13,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "H1lUDK",
+              "name": "Behaviour Notes",
+              "width": 300,
+              "fill": "$warsh-white",
+              "cornerRadius": 20,
+              "stroke": "$warsh-line",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "RzPVs",
+                  "name": "Notes Eyebrow",
+                  "fill": "$warsh-gold",
+                  "content": "BEHAVIOUR",
+                  "fontFamily": "$font-body",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "j4kq4",
+                  "name": "Notes Title",
+                  "fill": "$warsh-ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "When this appears",
+                  "fontFamily": "$font-heading",
+                  "fontSize": 19,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "Ih3Ug",
+                  "name": "Note Trigger",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "C0QxFj",
+                      "name": "Note Key Trigger",
+                      "fill": "$warsh-navy",
+                      "content": "Trigger",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "om1vZ",
+                      "name": "Note Val Trigger",
+                      "fill": "$warsh-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Only when the learner has completed lessons in a chapter after the first unsatisfied one. That can only happen if the chapter was satisfied when they passed it.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JbRsn",
+                  "name": "Note Not shown",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fWWlM",
+                      "name": "Note Key Not shown",
+                      "fill": "$warsh-navy",
+                      "content": "Not shown",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zwwl5",
+                      "name": "Note Val Not shown",
+                      "fill": "$warsh-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Mid-chapter learners, new users, and placement-skipped chapters. Those are ordinary states, not a regression.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K5HKB",
+                  "name": "Note Primary action",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ryjgH",
+                      "name": "Note Key Primary action",
+                      "fill": "$warsh-navy",
+                      "content": "Primary action",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hFiSP",
+                      "name": "Note Val Primary action",
+                      "fill": "$warsh-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Opens the first outstanding lesson in the blocking chapter.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jfX7e",
+                  "name": "Note Maybe later",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "f5Dww",
+                      "name": "Note Key Maybe later",
+                      "fill": "$warsh-navy",
+                      "content": "Maybe later",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "KbqRW",
+                      "name": "Note Val Maybe later",
+                      "fill": "$warsh-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Dismisses for the session. Returns on next launch while the chapter is still incomplete, because it is still blocking them.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "b8XGZ",
+                  "name": "Note Self-clearing",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MQzFU",
+                      "name": "Note Key Self-clearing",
+                      "fill": "$warsh-navy",
+                      "content": "Self-clearing",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "z1qdM4",
+                      "name": "Note Val Self-clearing",
+                      "fill": "$warsh-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Completing the lesson satisfies the chapter and the condition stops being true. No flag to reset.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "j5sjkr",
+                  "name": "Note Safety net only",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "G0xtT",
+                      "name": "Note Key Safety net only",
+                      "fill": "$warsh-navy",
+                      "content": "Safety net only",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Z2w5D",
+                      "name": "Note Val Safety net only",
+                      "fill": "$warsh-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "The backfill script should prevent this from ever firing. This sheet is what catches a batch that shipped without it.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {
