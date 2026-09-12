@@ -141,3 +141,56 @@ test("an unreachable store leaves the stored state untouched", async () => {
     assert.equal(harness.updates.length, 0);
   });
 });
+
+test("a suspended subscription is left alone on the gated routes", async () => {
+  await withStore({ status: 200, body: googleBody("SUBSCRIPTION_STATE_ACTIVE", RENEWED) }, async (harness) => {
+    for (const subscriptionStatus of ["on_hold", "paused", "pending"]) {
+      const refreshed = await refreshLapsedStoreSubscription(lapsedUser({ subscriptionStatus }), NOW);
+      assert.equal(refreshed.subscriptionStatus, subscriptionStatus);
+    }
+    assert.equal(harness.googleCalls, 0);
+    assert.equal(harness.updates.length, 0);
+  });
+});
+
+test("a recovery from account hold we were never notified about is picked up on the status read", async () => {
+  await withStore(
+    { status: 200, body: googleBody("SUBSCRIPTION_STATE_ACTIVE", RENEWED, "monthly") },
+    async (harness) => {
+      const refreshed = await refreshLapsedStoreSubscription(
+        lapsedUser({ subscriptionStatus: "on_hold" }),
+        NOW,
+        { includeSuspended: true },
+      );
+      assert.equal(refreshed.subscriptionStatus, "active");
+      assert.equal(refreshed.subscriptionActiveUntil?.toISOString(), RENEWED.toISOString());
+      assert.equal(harness.updates.length, 1);
+    },
+  );
+});
+
+test("a subscription still on hold is re-read but not rewritten", async () => {
+  await withStore(
+    { status: 200, body: googleBody("SUBSCRIPTION_STATE_ON_HOLD", LAPSED, "monthly") },
+    async (harness) => {
+      const user = lapsedUser({ subscriptionStatus: "on_hold" });
+      const refreshed = await refreshLapsedStoreSubscription(user, NOW, { includeSuspended: true });
+      assert.equal(harness.googleCalls, 1);
+      assert.equal(harness.updates.length, 0);
+      assert.equal(refreshed.subscriptionStatus, "on_hold");
+    },
+  );
+});
+
+test("a paused subscription with no stored expiry survives the status read", async () => {
+  await withStore(
+    { status: 200, body: googleBody("SUBSCRIPTION_STATE_PAUSED", LAPSED, "monthly") },
+    async (harness) => {
+      const user = lapsedUser({ subscriptionStatus: "paused", subscriptionActiveUntil: null });
+      const refreshed = await refreshLapsedStoreSubscription(user, NOW, { includeSuspended: true });
+      assert.equal(refreshed.subscriptionStatus, "paused");
+      assert.equal(refreshed.subscriptionActiveUntil?.toISOString(), LAPSED.toISOString());
+      assert.equal(harness.updates.length, 1);
+    },
+  );
+});

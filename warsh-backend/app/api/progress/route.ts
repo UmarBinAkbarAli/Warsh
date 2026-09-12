@@ -4,6 +4,7 @@ import { getUserIdFromRequest } from "../../../lib/auth";
 import { PROGRESS_STATUS } from "../../../lib/course";
 import { get4amPKTBoundary, isYesterdayPKT } from "../../../lib/date";
 import { getSubscriptionState } from "../../../lib/subscription";
+import { refreshLapsedStoreSubscription } from "../../../lib/subscriptionRefresh";
 
 function getLevel(xp: number) {
   if (xp >= 2001) return "INTERMEDIATE";
@@ -20,7 +21,7 @@ export async function GET(request: Request) {
   const todayStart = get4amPKTBoundary();
 
   const [user, progress, streak, earnedAchievements, todayProgress, vocabTotal, vocabMastered, surahsCompleted] = await Promise.all([
-    prisma.user.findUnique({ where: { id: userId }, select: { xp: true, level: true, dailyGoalMinutes: true, streakGoalDays: true, name: true, createdAt: true, trialStartAt: true, trialExpiresAt: true, subscriptionStatus: true, subscriptionActiveUntil: true, subscriptionProductId: true, noorOverageBalance: true, phrasesSpoken: true } }),
+    prisma.user.findUnique({ where: { id: userId }, select: { id: true, xp: true, level: true, dailyGoalMinutes: true, streakGoalDays: true, name: true, createdAt: true, trialStartAt: true, trialExpiresAt: true, subscriptionStatus: true, subscriptionActiveUntil: true, subscriptionProductId: true, noorOverageBalance: true, lastPurchaseToken: true, phrasesSpoken: true } }),
     prisma.progress.findMany({ where: { userId, status: PROGRESS_STATUS.COMPLETED }, select: { lessonId: true } }),
     prisma.streak.findUnique({ where: { userId }, select: { currentStreak: true, longestStreak: true, lastActiveDate: true, streakFreezes: true, lastFreezeUsedAt: true } }),
     prisma.userAchievement.findMany({
@@ -39,7 +40,11 @@ export async function GET(request: Request) {
   const dailyGoalMinutes = user?.dailyGoalMinutes ?? 10;
   const dailyGoalMet = todayProgress >= 1;
 
-  const subState = user ? getSubscriptionState(user) : null;
+  // The Learn tab takes its locked/unlocked banner from this response, so a
+  // renewal whose notification never reached us must be re-read from the store
+  // here too — otherwise the banner says "expired" until the user happens to
+  // open the paywall. Only a lapsed row costs a Google call.
+  const subState = user ? getSubscriptionState(await refreshLapsedStoreSubscription(user)) : null;
 
   return NextResponse.json({
     data: {

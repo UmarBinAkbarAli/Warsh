@@ -26,8 +26,11 @@ export async function GET(request: Request) {
 
   // The store, not our row, decides whether a lapsed period actually ended. See
   // refreshLapsedStoreSubscription: a missed renewal notification must not read
-  // as an expired subscription to the app.
-  const user = await refreshLapsedStoreSubscription(stored);
+  // as an expired subscription to the app. This is the one read the app makes
+  // when it shows the subscription, so it also re-checks suspended rows (on
+  // hold / paused / pending): a recovery Google told us about only through a
+  // dropped push must not keep a paying subscriber locked out.
+  const user = await refreshLapsedStoreSubscription(stored, new Date(), { includeSuspended: true });
 
   const googlePlayVerificationReady = Boolean(
     process.env.GOOGLE_PLAY_PACKAGE_NAME?.trim() &&

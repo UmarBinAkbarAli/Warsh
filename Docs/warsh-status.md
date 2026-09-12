@@ -317,7 +317,11 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    info added for date of birth (App functionality, Fraud prevention/security/
    compliance), Voice or sound recordings removed, OAuth ticked. Play's review
    typically completes within seven days; check Publishing overview.
-3. **Published retention periods are not automatically enforced.**
+3. **Retention: nothing to enforce (checked 2026-09-12).** The published
+   policy (`Docs/privacy-policy.html` §6) commits to no fixed period — records
+   are "retained while your account is active" and deleted with the account,
+   which the verified deletion path (#4) already honours. No retention job is
+   owed until the policy publishes a period.
 4. **Account deletion verified end to end on staging (2026-09-11).** A test
    account was given rows in every user-linked table (streak, progress, chat,
    achievements, 361 vocabulary rows, Core 500 set, Surah progress, a
@@ -371,8 +375,29 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
 7. **Confirm Play Console privacy and deletion URLs** are `https://warsh.app/privacy`
    and `https://warsh.app/delete-account`. All four public legal routes returned 200
    on 2026-09-09.
-8. **Remaining IAP lifecycle gaps:** plan switching and proration/replacement
-   behavior, grace period and account hold. Purchase (monthly and yearly), restore
+8. **IAP lifecycle: grace period, account hold and pause are handled in code
+   (reviewed 2026-09-12); only the live Play exercise remains.** Backend:
+   `mapGoogleSubscriptionState` covers every `subscriptionsv2` state, access is
+   `active`/`canceled`/`in_grace` inside the paid period only (Google extends
+   `expiryTime` through the grace window), and `on_hold`/`paused`/`pending`
+   never grant access. Every RTDN type other than `REVOKED` re-reads the
+   snapshot, so `RECOVERED`, `RESTARTED` and `IN_GRACE_PERIOD` need no special
+   casing. Gap closed the same day: `refreshLapsedStoreSubscription` only
+   re-read rows that still claimed access, so a recovery whose push was dropped
+   left an on-hold/paused subscriber locked out until they happened to reach the
+   paywall's auto-restore. `/api/subscription/status` now also re-reads
+   suspended rows (`includeSuspended`, bounded to that one read), and
+   `/api/progress` — which the Learn tab takes its lock banner from — now runs
+   the lapsed refresh too, so a missed renewal no longer shows "expired" on the
+   Learn tab. Unit-tested in `tests/subscription-refresh.test.ts`. Still open:
+   (a) the app surfaces grace/hold/pause only inside Manage subscription — the
+   Learn tab shows no warning during the grace period (the one window where a
+   "fix your payment method" prompt matters) and no lock banner for on-hold/
+   paused/pending, whose lesson taps 402 into the paywall instead; a banner
+   design needs the Pen gate. (b) Plan switching/proration replacement
+   (`linkedPurchaseToken` re-keying is implemented and unit-tested, not
+   exercised live), grace period and account hold have not been driven from a
+   Play test account. Purchase (monthly and yearly), restore
    after reinstall, acknowledgement, the Noor consumable, cancellation, and expiry
    are all verified on a Play-installed build (2026-08-29). Duplicate-token and
    token-owned-by-another-account protection verified 2026-09-11 against the

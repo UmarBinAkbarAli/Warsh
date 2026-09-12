@@ -1,5 +1,9 @@
 import { prisma } from "./prisma";
 import { ACCESS_GRANTING_STORE_STATES } from "./subscription";
+
+// Store states Google can return to "active" without a new purchase, so nothing
+// on the client ever re-verifies them.
+const SUSPENDED_STORE_STATES: ReadonlySet<string> = new Set(["on_hold", "paused", "pending"]);
 import { fetchGooglePlaySubscriptionSnapshot } from "./storeVerification";
 
 /**
@@ -32,17 +36,34 @@ export interface RefreshableSubscription {
  * renewal pushes the expiry forward, a real ending writes "expired" — so a lapsed
  * subscriber costs one Google call, not one per request.
  *
+ * The suspended states — on hold, paused, pending — are the mirror image: Google
+ * moves them back to active on its own (a fixed payment method, a resumed pause,
+ * a completed pending purchase) and tells us only through the same droppable
+ * push, and nothing in the app re-verifies that token because no purchase
+ * happened. A stored expiry that has elapsed is normal for these states, so the
+ * lapsed rule above can never fire for them and they would stay locked out until
+ * the user stumbled onto the paywall's auto-restore. `includeSuspended` opts a
+ * caller into refreshing them too; it is meant for the explicit status read the
+ * app makes when it shows the subscription, not for every gated route, because a
+ * suspended row stays suspended for weeks and would otherwise cost a Google call
+ * per request.
+ *
  * Never throws: a store that cannot be reached leaves the stored state untouched,
  * which fails closed to whatever access the user already had.
  */
 export async function refreshLapsedStoreSubscription<T extends RefreshableSubscription>(
   user: T,
   now: Date = new Date(),
+  options: { includeSuspended?: boolean } = {},
 ): Promise<T> {
   if (!user.lastPurchaseToken) return user;
-  if (!ACCESS_GRANTING_STORE_STATES.has(user.subscriptionStatus)) return user;
-  if (user.subscriptionActiveUntil == null) return user;
-  if (user.subscriptionActiveUntil.getTime() > now.getTime()) return user;
+
+  if (ACCESS_GRANTING_STORE_STATES.has(user.subscriptionStatus)) {
+    if (user.subscriptionActiveUntil == null) return user;
+    if (user.subscriptionActiveUntil.getTime() > now.getTime()) return user;
+  } else if (!(options.includeSuspended && SUSPENDED_STORE_STATES.has(user.subscriptionStatus))) {
+    return user;
+  }
 
   const packageName = process.env.GOOGLE_PLAY_PACKAGE_NAME?.trim();
   if (!packageName) return user;
@@ -60,10 +81,10 @@ export async function refreshLapsedStoreSubscription<T extends RefreshableSubscr
   const subscriptionProductId = snapshot.basePlanId ?? user.subscriptionProductId;
 
   // Nothing changed (the subscription really did end at the stored instant and
-  // Google already agreed) — skip the write.
+  // Google already agreed, or it is still suspended) — skip the write.
   if (
     subscriptionStatus === user.subscriptionStatus &&
-    subscriptionActiveUntil.getTime() === user.subscriptionActiveUntil.getTime() &&
+    subscriptionActiveUntil?.getTime() === user.subscriptionActiveUntil?.getTime() &&
     subscriptionProductId === user.subscriptionProductId
   ) {
     return user;
@@ -76,8 +97,8 @@ export async function refreshLapsedStoreSubscription<T extends RefreshableSubscr
 
   console.log("[subscription] refreshed lapsed subscription from Google", {
     userId: user.id,
-    from: { status: user.subscriptionStatus, activeUntil: user.subscriptionActiveUntil.toISOString() },
-    to: { status: subscriptionStatus, activeUntil: subscriptionActiveUntil.toISOString() },
+    from: { status: user.subscriptionStatus, activeUntil: user.subscriptionActiveUntil?.toISOString() ?? null },
+    to: { status: subscriptionStatus, activeUntil: subscriptionActiveUntil?.toISOString() ?? null },
   });
 
   return { ...user, subscriptionStatus, subscriptionActiveUntil, subscriptionProductId };
