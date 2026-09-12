@@ -1,13 +1,21 @@
-import { useState } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { useEffect, useState } from "react";
+import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useRouter } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { BrandButton } from "@components/BrandButton";
 import { CelebrationEmblem } from "@components/CelebrationEmblem";
+import { useT } from "@i18n/index";
+import { trackCommitmentSet } from "@services/analytics";
 import { updateUserProfile } from "@services/api";
+import { useAuthStore } from "@stores/authStore";
+import {
+  COMMITMENT_PROMPT_SHOWN_KEY,
+  DAILY_UNIT_MINUTES,
+  type CommitmentSource,
+} from "../../constants/commitment";
 import {
   Colors,
   FontSizes,
@@ -19,25 +27,51 @@ import {
   WarshPalette,
 } from "../../constants/theme";
 
-const COMMITMENT_KEY = "warsh_streak_commitment_set";
-
 const GOALS = [
-  { days: 3, label: "3 days", sublabel: "Baby steps" },
-  { days: 7, label: "7 days", sublabel: "Strong start" },
-  { days: 14, label: "14 days", sublabel: "Committed" },
-  { days: 30, label: "30 days", sublabel: "Unstoppable" },
+  { days: 3, sublabelKey: "commitment.goal3" },
+  { days: 7, sublabelKey: "commitment.goal7" },
+  { days: 14, sublabelKey: "commitment.goal14" },
+  { days: 30, sublabelKey: "commitment.goal30" },
 ];
 
 export default function StreakCommitmentScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const t = useT();
+  const userId = useAuthStore((state) => state.user?.id);
+  const { source: sourceParam } = useLocalSearchParams<{ source?: string }>();
+  const source: CommitmentSource = sourceParam === "celebration" ? "celebration" : "checklist";
   const [selected, setSelected] = useState<number | null>(null);
+  const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    if (source === "celebration" && userId) {
+      void AsyncStorage.setItem(`${COMMITMENT_PROMPT_SHOWN_KEY}_${userId}`, "1");
+    }
+  }, [source, userId]);
+
+  function leave() {
+    if (source === "celebration") {
+      router.replace("/(app)/(tabs)");
+    } else if (router.canGoBack()) {
+      router.back();
+    } else {
+      router.replace("/(app)/(tabs)");
+    }
+  }
 
   async function handleCommit() {
-    if (selected === null) return;
-    await AsyncStorage.setItem(COMMITMENT_KEY, String(selected));
-    updateUserProfile({ streakGoalDays: selected }).catch(() => {});
-    router.replace("/(app)/(tabs)");
+    if (selected === null || saving) return;
+    setSaving(true);
+    try {
+      await updateUserProfile({ streakGoalDays: selected });
+      trackCommitmentSet(selected, source);
+      leave();
+    } catch {
+      Alert.alert(t("settings.errorTitle"), t("commitment.saveError"));
+    } finally {
+      setSaving(false);
+    }
   }
 
   return (
@@ -53,15 +87,26 @@ export default function StreakCommitmentScreen() {
       <View style={styles.content}>
         <View style={styles.header}>
           <CelebrationEmblem icon="flame-outline" />
-          <Text style={styles.eyebrow}>BUILD A RHYTHM</Text>
-          <Text style={styles.title}>Choose your streak goal</Text>
-          <Text style={styles.subtitle}>
-            A small promise to return to the Qur&apos;an, one lesson at a time.
-          </Text>
+          <Text style={styles.eyebrow}>{t("commitment.eyebrow")}</Text>
+          <Text style={styles.title}>{t("commitment.title")}</Text>
+          <Text style={styles.subtitle}>{t("commitment.subtitle")}</Text>
+        </View>
+
+        <View style={styles.dailyUnitCard}>
+          <View style={styles.dailyUnitIcon}>
+            <Ionicons name="book-outline" size={20} color={WarshPalette.navy} />
+          </View>
+          <View style={styles.dailyUnitCopy}>
+            <Text style={styles.dailyUnitEyebrow}>{t("commitment.eachDay")}</Text>
+            <Text style={styles.dailyUnitValue}>
+              {t("commitment.dailyUnit", { minutes: DAILY_UNIT_MINUTES })}
+            </Text>
+            <Text style={styles.dailyUnitHint}>{t("commitment.dailyUnitHint")}</Text>
+          </View>
         </View>
 
         <View style={styles.goalsCard}>
-          <Text style={styles.groupLabel}>I want to practise for</Text>
+          <Text style={styles.groupLabel}>{t("commitment.keepGoing")}</Text>
           <View style={styles.goals}>
             {GOALS.map((goal) => {
               const isSelected = selected === goal.days;
@@ -84,7 +129,7 @@ export default function StreakCommitmentScreen() {
                         isSelected ? styles.goalLabelSelected : null,
                       ]}
                     >
-                      {goal.label}
+                      {t("settings.streakGoalDays", { days: goal.days })}
                     </Text>
                     <Text
                       style={[
@@ -92,7 +137,7 @@ export default function StreakCommitmentScreen() {
                         isSelected ? styles.goalSublabelSelected : null,
                       ]}
                     >
-                      {goal.sublabel}
+                      {t(goal.sublabelKey)}
                     </Text>
                   </View>
                   <View
@@ -126,19 +171,25 @@ export default function StreakCommitmentScreen() {
             color={WarshPalette.sageDeep}
           />
           <Text style={styles.tip}>
-            {selected !== null
-              ? "Your goal is set. You can still learn beyond it whenever you like."
-              : "Choose a pace that feels realistic. Consistency matters more than speed."}
+            {selected !== null ? t("commitment.tipSelected") : t("commitment.tipEmpty")}
           </Text>
         </View>
       </View>
 
-      <BrandButton
-        title="I'm committed"
-        onPress={handleCommit}
-        disabled={selected === null}
-        style={styles.cta}
-      />
+      <View style={styles.footer}>
+        <BrandButton
+          title={t("commitment.cta")}
+          onPress={handleCommit}
+          disabled={selected === null}
+          loading={saving}
+          style={styles.cta}
+        />
+        {source === "celebration" ? (
+          <Pressable onPress={leave} hitSlop={8} accessibilityRole="button" style={styles.laterButton}>
+            <Text style={styles.laterText}>{t("commitment.maybeLater")}</Text>
+          </Pressable>
+        ) : null}
+      </View>
     </View>
   );
 }
@@ -156,11 +207,12 @@ const styles = StyleSheet.create({
     width: "100%",
     maxWidth: 440,
     justifyContent: "center",
-    gap: Spacing.lg,
+    gap: Spacing.md,
   },
   header: {
     alignItems: "center",
     gap: Spacing.sm,
+    marginBottom: Spacing.xs,
   },
   eyebrow: {
     marginTop: Spacing.sm,
@@ -186,6 +238,49 @@ const styles = StyleSheet.create({
     lineHeight: LineHeights.bodyM,
     textAlign: "center",
   },
+  dailyUnitCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.md,
+    width: "100%",
+    paddingVertical: Spacing.md,
+    paddingHorizontal: Spacing.lg,
+    borderRadius: Radii.lg,
+    borderWidth: 1,
+    borderColor: WarshPalette.gold,
+    backgroundColor: WarshPalette.highlightBg,
+  },
+  dailyUnitIcon: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: WarshPalette.parchment,
+  },
+  dailyUnitCopy: {
+    flex: 1,
+    gap: 2,
+  },
+  dailyUnitEyebrow: {
+    color: WarshPalette.goldDeep,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.label,
+    letterSpacing: 1.2,
+  },
+  dailyUnitValue: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyL,
+    fontWeight: "600",
+    color: WarshPalette.navy,
+    lineHeight: LineHeights.bodyL,
+  },
+  dailyUnitHint: {
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.caption,
+    color: WarshPalette.bodyBrown,
+    lineHeight: LineHeights.caption,
+  },
   goalsCard: {
     width: "100%",
     padding: Spacing.md,
@@ -199,14 +294,15 @@ const styles = StyleSheet.create({
     marginHorizontal: Spacing.xs,
     marginBottom: Spacing.sm,
     color: WarshPalette.subtleBrown,
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.label,
+    letterSpacing: 1.2,
   },
   goals: {
     gap: Spacing.sm,
   },
   goalRow: {
-    minHeight: 64,
+    minHeight: 60,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -274,9 +370,23 @@ const styles = StyleSheet.create({
     color: WarshPalette.bodyBrown,
     lineHeight: LineHeights.caption,
   },
-  cta: {
+  footer: {
     width: "100%",
     maxWidth: 440,
+    alignItems: "center",
+    gap: Spacing.sm,
     marginTop: Spacing.sm,
+  },
+  cta: {
+    width: "100%",
+  },
+  laterButton: {
+    paddingVertical: Spacing.xs,
+    paddingHorizontal: Spacing.md,
+  },
+  laterText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+    color: WarshPalette.subtleBrown,
   },
 });

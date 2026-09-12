@@ -12,7 +12,7 @@ import {
   WarshPalette,
 } from "../constants/theme";
 
-export type OnboardingStepKey = "account" | "language" | "goal" | "firstLesson";
+export type OnboardingStepKey = "account" | "language" | "commitment" | "firstLesson";
 
 export type OnboardingStep = {
   key: OnboardingStepKey;
@@ -29,14 +29,14 @@ type OnboardingChecklistProps = {
 const STEP_ICON: Record<OnboardingStepKey, keyof typeof Ionicons.glyphMap> = {
   account: "person-outline",
   language: "language-outline",
-  goal: "flag-outline",
+  commitment: "flag-outline",
   firstLesson: "book-outline",
 };
 
 const STEP_TITLE_KEY: Record<OnboardingStepKey, string> = {
   account: "onboardingChecklist.stepAccount",
   language: "onboardingChecklist.stepLanguage",
-  goal: "onboardingChecklist.stepGoal",
+  commitment: "onboardingChecklist.stepCommitment",
   firstLesson: "onboardingChecklist.stepFirstLesson",
 };
 

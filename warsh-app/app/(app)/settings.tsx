@@ -28,15 +28,16 @@ import {
   cancelAllNotifications,
 } from "@services/notifications";
 import { isSentrySmokeTestEnabled, sendSentrySmokeTest } from "@services/sentry";
+import { trackCommitmentSet } from "@services/analytics";
+import { DAILY_UNIT_MINUTES, STREAK_GOAL_OPTIONS } from "../../constants/commitment";
 import { useT } from "@i18n/index";
 import { type AppLanguage } from "@services/language";
 
 // AsyncStorage keys for local preferences
 const PREFS_KEY = "warsh_settings";
 // Also written/read from app/(app)/(tabs)/index.tsx's onboarding checklist —
-// keep these literals in sync if they ever change.
+// keep this literal in sync if it ever changes.
 const ONBOARDING_LANG_TOUCHED_KEY = "warsh_onboarding_meaning_lang_set";
-const ONBOARDING_GOAL_TOUCHED_KEY = "warsh_onboarding_goal_set";
 
 const appVersion =
   Application.nativeApplicationVersion ?? Constants.expoConfig?.version ?? "";
@@ -177,7 +178,6 @@ export default function SettingsScreen() {
   const t = useT();
 
   const [prefs, setPrefs] = useState<Prefs>(DEFAULT_PREFS);
-  const [dailyGoalMinutes, setDailyGoalMinutes] = useState(10);
   const [streakGoalDays, setStreakGoalDays] = useState<number | null>(null);
 
   function openExternalUrl(url: string) {
@@ -193,8 +193,6 @@ export default function SettingsScreen() {
   const sentrySmokeTestEnabled = isSentrySmokeTestEnabled();
   const { open } = useLocalSearchParams<{ open?: string }>();
   const scrollViewRef = useRef<ScrollView>(null);
-  const dailyGoalOffsetRef = useRef<number | null>(null);
-  const pendingScrollToGoalRef = useRef(false);
 
   useFocusEffect(
     useCallback(() => {
@@ -202,7 +200,6 @@ export default function SettingsScreen() {
       api.get("/api/progress")
         .then((res) => {
           const d = res.data.data;
-          setDailyGoalMinutes(d.dailyGoalMinutes ?? 10);
           setStreakGoalDays(d.streakGoalDays ?? null);
           setCurrentStreak(d.streak ?? 0);
           setUserName(d.userName ?? "friend");
@@ -211,12 +208,6 @@ export default function SettingsScreen() {
 
       if (open === "meaningLanguage") {
         setLanguageSheet("translation");
-      } else if (open === "dailyGoal") {
-        if (dailyGoalOffsetRef.current !== null) {
-          scrollViewRef.current?.scrollTo({ y: dailyGoalOffsetRef.current, animated: true });
-        } else {
-          pendingScrollToGoalRef.current = true;
-        }
       }
     }, [open])
   );
@@ -246,30 +237,16 @@ export default function SettingsScreen() {
     }
   }
 
-  async function changeDailyGoal(minutes: number) {
-    if (saving) return;
-    setDailyGoalMinutes(minutes);
-    setSaving(true);
-    try {
-      await updateUserProfile({ dailyGoalMinutes: minutes });
-      if (user?.id) {
-        await AsyncStorage.setItem(`${ONBOARDING_GOAL_TOUCHED_KEY}_${user.id}`, "1");
-      }
-    } catch {
-      // silently revert on failure
-    } finally {
-      setSaving(false);
-    }
-  }
-
   async function changeStreakGoal(days: number) {
     if (saving) return;
+    const previous = streakGoalDays;
     setStreakGoalDays(days);
     setSaving(true);
     try {
       await updateUserProfile({ streakGoalDays: days });
+      trackCommitmentSet(days, "settings");
     } catch {
-      // silently revert on failure
+      setStreakGoalDays(previous);
     } finally {
       setSaving(false);
     }
@@ -483,47 +460,27 @@ export default function SettingsScreen() {
           />
         </View>
 
-        {/* Daily goal */}
-        <View
-          onLayout={(e) => {
-            dailyGoalOffsetRef.current = e.nativeEvent.layout.y;
-            if (pendingScrollToGoalRef.current) {
-              pendingScrollToGoalRef.current = false;
-              scrollViewRef.current?.scrollTo({ y: e.nativeEvent.layout.y, animated: true });
-            }
-          }}
-        >
-          <SectionHeader title={t("settings.dailyGoal")} />
-          <View style={styles.card}>
-            <OptionPicker
-              label={t("settings.studyCommitment")}
-              options={[
-                { value: 5, label: t("learn.goalMinutes", { minutes: 5 }) },
-                { value: 10, label: t("learn.goalMinutes", { minutes: 10 }) },
-                { value: 15, label: t("learn.goalMinutes", { minutes: 15 }) },
-                { value: 30, label: t("learn.goalMinutes", { minutes: 30 }) },
-              ]}
-              value={dailyGoalMinutes}
-              onChange={changeDailyGoal}
-            />
-          </View>
-        </View>
-
-        {/* Streak goal */}
-        <SectionHeader title={t("settings.streakGoal")} />
+        {/* Commitment: the daily unit is fixed at one lesson (informational);
+            the streak goal in days is the one number the learner chooses. */}
+        <SectionHeader title={t("settings.commitment")} />
         <View style={styles.card}>
+          <SettingRow
+            icon="book-outline"
+            label={t("settings.commitmentDailyUnit")}
+            sublabel={t("settings.commitmentDailyUnitHint", { minutes: DAILY_UNIT_MINUTES })}
+          />
+          <View style={styles.divider} />
           <OptionPicker
-            label={t("settings.streakGoalCommitment")}
-            options={[
-              { value: 3, label: t("settings.streakGoalDays", { days: 3 }) },
-              { value: 7, label: t("settings.streakGoalDays", { days: 7 }) },
-              { value: 14, label: t("settings.streakGoalDays", { days: 14 }) },
-              { value: 30, label: t("settings.streakGoalDays", { days: 30 }) },
-            ]}
+            label={t("settings.commitmentKeepGoing")}
+            options={STREAK_GOAL_OPTIONS.map((days) => ({
+              value: days,
+              label: t("settings.streakGoalDays", { days }),
+            }))}
             value={streakGoalDays}
             onChange={changeStreakGoal}
           />
         </View>
+        <Text style={styles.sectionFootnote}>{t("settings.commitmentFootnote")}</Text>
 
         {/* Support */}
         <SectionHeader title={t("settings.support")} />
@@ -761,6 +718,11 @@ const styles = StyleSheet.create({
   rowSub: {
     color: WarshPalette.subtleBrown, fontFamily: Fonts.regular,
     fontSize: FontSizes.caption, marginTop: 1,
+  },
+  sectionFootnote: {
+    color: WarshPalette.subtleBrown, fontFamily: Fonts.regular,
+    fontSize: FontSizes.caption, lineHeight: LineHeights.caption,
+    marginTop: Spacing.sm, marginHorizontal: 4,
   },
   dangerText: { color: WarshPalette.wrongText },
   versionText: {

@@ -5,7 +5,9 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { BrandButton } from "@components/BrandButton";
 import { CelebrationEmblem } from "@components/CelebrationEmblem";
+import api from "@services/api";
 import { useAuthStore } from "@stores/authStore";
+import { COMMITMENT_PROMPT_SHOWN_KEY } from "../../constants/commitment";
 import {
   Colors,
   FontSizes,
@@ -18,11 +20,6 @@ import {
 } from "../../constants/theme";
 
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-const COMMITMENT_KEY = "warsh_streak_commitment_set";
-// Written by the "Getting started" onboarding checklist (and Settings) when
-// the user sets a daily goal — if that already happened, asking for a
-// separate streak-day commitment right after Lesson 1 is redundant.
-const ONBOARDING_GOAL_TOUCHED_KEY = "warsh_onboarding_goal_set";
 
 function getTodayDayIndex() {
   const day = new Date().getDay();
@@ -45,15 +42,23 @@ export default function StreakCelebrationScreen() {
   const streak = parseInt(streakParam ?? "1", 10) || 1;
   const todayIdx = getTodayDayIndex();
 
+  // The commitment screen is normally reached from the Learn checklist. This
+  // is the fallback: shown once, after the first streak, to anyone who has no
+  // streak goal on the server yet — and never again after that.
   async function handleContinue() {
-    const committed = await AsyncStorage.getItem(COMMITMENT_KEY);
-    const goalAlreadySet = userId
-      ? await AsyncStorage.getItem(`${ONBOARDING_GOAL_TOUCHED_KEY}_${userId}`)
-      : null;
-    if (committed || goalAlreadySet) {
+    const [promptShown, goalOnServer] = await Promise.all([
+      userId ? AsyncStorage.getItem(`${COMMITMENT_PROMPT_SHOWN_KEY}_${userId}`) : null,
+      api
+        .get("/api/progress")
+        .then((res) => res.data.data.streakGoalDays ?? null)
+        .catch(() => undefined),
+    ]);
+    // A failed profile read is treated as "unknown": don't nag on a bad
+    // connection, the checklist step still offers the screen.
+    if (promptShown || goalOnServer !== null) {
       router.replace("/(app)/(tabs)");
     } else {
-      router.push("/(app)/streak-commitment");
+      router.push({ pathname: "/(app)/streak-commitment", params: { source: "celebration" } });
     }
   }
 

@@ -43,6 +43,7 @@ import {
   Spacing,
   WarshPalette,
 } from "../../../constants/theme";
+import { DAILY_UNIT_MINUTES } from "../../../constants/commitment";
 
 const FREEZE_BANNER_KEY = "warsh_freeze_banner_shown";
 const LAST_STREAK_KEY = "warsh_last_streak";
@@ -52,7 +53,6 @@ const ONBOARDING_CHECKLIST_DISMISSED_KEY = "warsh_onboarding_checklist_dismissed
 // Also written from settings.tsx (changeLanguage/changeDailyGoal) — keep the
 // literal in sync there if this ever changes.
 const ONBOARDING_LANG_TOUCHED_KEY = "warsh_onboarding_meaning_lang_set";
-const ONBOARDING_GOAL_TOUCHED_KEY = "warsh_onboarding_goal_set";
 
 type Lesson = {
   id: string;
@@ -123,7 +123,6 @@ export default function HomeScreen() {
   const [error, setError] = useState<string | null>(null);
   const [userName, setUserName] = useState(fallbackName ?? "");
   const [currentStreak, setCurrentStreak] = useState(0);
-  const [dailyGoalMinutes, setDailyGoalMinutes] = useState(10);
   const [lessonsToday, setLessonsToday] = useState(0);
   const [xp, setXp] = useState(0);
   const [dailyGoalMet, setDailyGoalMet] = useState(false);
@@ -139,7 +138,7 @@ export default function HomeScreen() {
   const [isFirstTimeUser, setIsFirstTimeUser] = useState(false);
   const [checklistDismissed, setChecklistDismissed] = useState(false);
   const [meaningLanguageChosen, setMeaningLanguageChosen] = useState(false);
-  const [dailyGoalChosen, setDailyGoalChosen] = useState(false);
+  const [commitmentMade, setCommitmentMade] = useState(false);
   const toastOpacity = useRef(new Animated.Value(0)).current;
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -222,7 +221,6 @@ export default function HomeScreen() {
         dailyGoalToastFlag,
         checklistDismissedFlag,
         langTouchedFlag,
-        goalTouchedFlag,
       ] = await Promise.all([
         api.get("/api/chapters"),
         api.get("/api/progress"),
@@ -235,7 +233,6 @@ export default function HomeScreen() {
         AsyncStorage.getItem(`warsh_daily_goal_toast_${today}`),
         userId ? AsyncStorage.getItem(`${ONBOARDING_CHECKLIST_DISMISSED_KEY}_${userId}`) : null,
         userId ? AsyncStorage.getItem(`${ONBOARDING_LANG_TOUCHED_KEY}_${userId}`) : null,
-        userId ? AsyncStorage.getItem(`${ONBOARDING_GOAL_TOUCHED_KEY}_${userId}`) : null,
       ]);
 
       setChapters(chaptersResponse.data.data.chapters);
@@ -243,7 +240,6 @@ export default function HomeScreen() {
       const streak = progress.streak ?? progress.currentStreak ?? 0;
       setUserName(progress.userName ?? fallbackName ?? "");
       setCurrentStreak(streak);
-      setDailyGoalMinutes(progress.dailyGoalMinutes ?? 10);
       setLessonsToday(progress.lessonsCompletedToday ?? 0);
       setXp(progress.xp ?? 0);
       setDailyGoalMet(progress.dailyGoalMet ?? false);
@@ -252,7 +248,9 @@ export default function HomeScreen() {
       setIsFirstTimeUser((progress.xp ?? 0) === 0 && completedLessonsCount === 0 && streak === 0);
       setChecklistDismissed(!!checklistDismissedFlag);
       setMeaningLanguageChosen(!!langTouchedFlag);
-      setDailyGoalChosen(!!goalTouchedFlag);
+      // The commitment step is done when the server holds a streak goal, so it
+      // survives reinstalls and agrees across devices.
+      setCommitmentMade(progress.streakGoalDays != null);
 
       if (progress.subscription) {
         setTrialDaysRemaining(progress.subscription.trialDaysRemaining ?? null);
@@ -417,10 +415,14 @@ export default function HomeScreen() {
     () => [
       { key: "account", done: true, meta: t("onboardingChecklist.stepAccountMeta") },
       { key: "language", done: meaningLanguageChosen },
-      { key: "goal", done: dailyGoalChosen },
+      {
+        key: "commitment",
+        done: commitmentMade,
+        meta: commitmentMade ? undefined : t("onboardingChecklist.stepCommitmentMeta"),
+      },
       { key: "firstLesson", done: lessonsCompleted > 0 },
     ],
-    [meaningLanguageChosen, dailyGoalChosen, lessonsCompleted, t],
+    [meaningLanguageChosen, commitmentMade, lessonsCompleted, t],
   );
 
   async function dismissOnboardingChecklist() {
@@ -441,8 +443,8 @@ export default function HomeScreen() {
   function handleOnboardingStepPress(key: OnboardingStepKey) {
     if (key === "language") {
       router.push({ pathname: "/(app)/settings", params: { open: "meaningLanguage" } });
-    } else if (key === "goal") {
-      router.push({ pathname: "/(app)/settings", params: { open: "dailyGoal" } });
+    } else if (key === "commitment") {
+      router.push({ pathname: "/(app)/streak-commitment", params: { source: "checklist" } });
     } else if (key === "firstLesson") {
       openActiveLesson();
     }
@@ -725,7 +727,7 @@ export default function HomeScreen() {
                 <Text style={styles.goalHint} numberOfLines={2}>
                   {dailyGoalMet
                     ? "بَارَكَ اللّٰهُ فِيكَ"
-                    : t("learn.goalMinutes", { minutes: dailyGoalMinutes })}
+                    : t("learn.goalAboutMinutes", { minutes: DAILY_UNIT_MINUTES })}
                 </Text>
               </View>
               <View style={[styles.goalRing, dailyGoalMet && styles.goalRingComplete]}>

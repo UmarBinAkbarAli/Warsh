@@ -14,6 +14,9 @@ export async function PATCH(request: Request) {
   const body = await request.json();
   const updateData: Record<string, unknown> = {};
 
+  // Kept only for app 1.0.8 and earlier, whose Settings still edit minutes.
+  // Newer clients never send it: the daily unit is fixed at one lesson and
+  // streakGoalDays is the single commitment (Pen section 22, Option A).
   if (body.dailyGoalMinutes !== undefined) {
     if (!VALID_DAILY_GOALS.includes(body.dailyGoalMinutes)) {
       return NextResponse.json({ error: "dailyGoalMinutes must be 5, 10, 15, or 30", code: "bad_request" }, { status: 400 });

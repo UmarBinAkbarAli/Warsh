@@ -421,21 +421,27 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    types and book transitions.
 3. Reconcile any remaining visual differences against the current gold/navy design
    tokens.
-4. **Streak-goal commitment is wired end to end (shipped 2026-08-26, `3979af2`;
-   the earlier "no backend effect" note was stale).** `User.streakGoalDays`
-   (3/7/14/30, nullable) exists in Prisma, `PATCH /api/users/me` validates and
-   stores it, `streak-commitment.tsx` writes it via `updateUserProfile`, Settings
-   surfaces it, and `services/notifications.ts` uses it for streak-risk reminder
-   copy ("N days left to reach your 7-day goal"). Still open: the onboarding
-   checklist's daily-goal step (minutes/day) and this streak-day commitment remain
-   two separate concepts. **Pen section 22 ("One Commitment", 2026-09-12) proposes
-   the merge and awaits owner review.** Option A (recommended): one screen, one
-   number — the streak goal in days — with the daily unit fixed at one lesson,
-   which is what `dailyGoalMet` already measures (`todayProgress >= 1`; the minutes
-   value never changes it). Reached from checklist step 3 and, once, after the
-   first streak celebration; Settings collapses to one "Commitment" section; no
-   schema change. Option B keeps both numbers on one screen (section 14's earlier
-   "Streak & Pace" design). Not implemented; the design-review gate applies.
+4. **One commitment moment — shipped 2026-09-12 (Pen section 22, Option A,
+   owner-approved).** The onboarding checklist's "Set a daily goal" (minutes/day)
+   and the post-streak "Choose your streak goal" (days) were two commitments to two
+   numbers, and the first was hollow: `dailyGoalMet` is `todayProgress >= 1`
+   whatever the minutes said. Now there is one screen, `streak-commitment.tsx`
+   ("Make your commitment"): the daily unit is shown as fixed information ("One
+   lesson · about 10 minutes", `constants/commitment.ts`) and the learner picks
+   only `streakGoalDays` (3/7/14/30). Reached from checklist step 3 (renamed,
+   opens the screen directly; done = server `streakGoalDays != null`, replacing
+   the local "goal touched" flag) and, as a fallback, once after a streak
+   celebration for anyone with no goal on the server, with "Maybe later"
+   (`warsh_commitment_prompt_shown_<userId>` guarantees it is never shown twice).
+   Settings collapsed to one "Commitment" section (informational daily-unit row +
+   streak-days picker); the Today card reads "1 lesson · about 10 min".
+   `updateUserProfile` no longer accepts `dailyGoalMinutes`; the column and the
+   `/api/progress` field stay so 1.0.8 clients keep working, and `PATCH
+   /api/users/me` still validates it for them. Analytics: `commitment_set`
+   `{days, source: checklist|celebration|settings}`. Streak-risk reminder copy is
+   unchanged. Verified on the emulator against the local staging DB in English and
+   Urdu: checklist → screen → step done; Today card; Settings; celebration →
+   "Maybe later" → no second prompt.
 5. **Lesson pass/fail is enforced server-side; pass mark is 70% (owner decision
    2026-09-11).** The client sends one boolean per answerable exercise in
    `exerciseResults`; `lib/lessonScoring.ts` computes score and pass/fail

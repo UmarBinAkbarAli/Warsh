@@ -77,8 +77,10 @@ export function trackOnboardingPlacementSelected(placement: string) {
   track("onboarding_placement_selected", { placement });
 }
 
-export function trackOnboardingDailyCommitmentSelected(minutes: number) {
-  track("onboarding_daily_commitment_selected", { minutes });
+// The single commitment moment: a streak goal in days, from the Learn
+// checklist, the once-only post-celebration prompt, or Settings.
+export function trackCommitmentSet(days: number, source: "checklist" | "celebration" | "settings") {
+  track("commitment_set", { days, source });
 }
 
 export function trackSignupCompleted(props: { goal: string; level: string; placement: string; language: string }) {

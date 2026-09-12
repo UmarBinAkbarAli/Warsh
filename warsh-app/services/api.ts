@@ -161,7 +161,9 @@ export function submitSRSReview(wordId: string, quality: 2 | 4 | 5) {
   return api.post("/api/vocabulary/srs/review", { wordId, quality });
 }
 
-export function updateUserProfile(data: { dailyGoalMinutes?: number; nativeLanguage?: string; translationLanguage?: string; streakGoalDays?: number | null; dateOfBirth?: string }) {
+// dailyGoalMinutes is deliberately absent: the daily unit is fixed at one lesson
+// and the streak goal is the only commitment a learner edits.
+export function updateUserProfile(data: { nativeLanguage?: string; translationLanguage?: string; streakGoalDays?: number | null; dateOfBirth?: string }) {
   return api.patch("/api/users/me", data);
 }
 
