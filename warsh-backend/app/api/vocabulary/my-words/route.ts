@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
+import { parseIntParam } from "../../../../lib/env";
 
 export async function GET(request: Request) {
   const userId = await getUserIdFromRequest(request);
@@ -11,8 +12,8 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const filter = searchParams.get("filter") ?? "all"; // "all" | "new" | "mastered" | "needs_review"
   const sort = searchParams.get("sort") ?? "date";    // "date" | "alpha" | "topic"
-  const limit = Math.min(200, Math.max(1, parseInt(searchParams.get("limit") ?? "50", 10)));
-  const offset = Math.max(0, parseInt(searchParams.get("offset") ?? "0", 10));
+  const limit = parseIntParam(searchParams.get("limit"), 50, { min: 1, max: 200 });
+  const offset = parseIntParam(searchParams.get("offset"), 0, { min: 0 });
 
   const orderBy =
     sort === "alpha"

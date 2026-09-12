@@ -1,3 +1,5 @@
+import { readIntEnv } from "./env";
+
 export const DEFAULT_DAILY_MESSAGE_LIMIT = 5;
 
 /**
@@ -15,17 +17,5 @@ export const DEFAULT_DAILY_MESSAGE_LIMIT = 5;
  * number, and say so loudly in the logs.
  */
 export function resolveDailyMessageLimit(): number {
-  const raw = process.env.AI_DAILY_MESSAGE_LIMIT?.trim();
-  if (!raw) return DEFAULT_DAILY_MESSAGE_LIMIT;
-
-  const parsed = Number(raw);
-  if (!Number.isFinite(parsed) || parsed < 0) {
-    console.error(
-      `[chat] AI_DAILY_MESSAGE_LIMIT is not a usable number (length ${raw.length}); ` +
-        `falling back to ${DEFAULT_DAILY_MESSAGE_LIMIT}.`,
-    );
-    return DEFAULT_DAILY_MESSAGE_LIMIT;
-  }
-
-  return Math.floor(parsed);
+  return readIntEnv("AI_DAILY_MESSAGE_LIMIT", DEFAULT_DAILY_MESSAGE_LIMIT, { min: 0, scope: "[chat]" });
 }

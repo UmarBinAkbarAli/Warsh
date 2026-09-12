@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-09-11
+**Last verified:** 2026-09-12
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
@@ -514,8 +514,17 @@ variables added to the Vercel project — no code change.
   validation in several places, and a bad value can disable a control silently
   rather than fail loudly. `AI_DAILY_MESSAGE_LIMIT` held a non-numeric value and
   removed the daily Noor cap entirely for every user, undetected, until it was
-  exercised on device on 2026-08-29. Only that one variable has been hardened; the
-  same bare-`Number()` pattern elsewhere has not been audited. The Noor outage
+  exercised on device on 2026-08-29. **Numeric parsing audited 2026-09-12:** the
+  backend reads exactly two numeric variables, `AI_DAILY_MESSAGE_LIMIT` and
+  `DATABASE_POOL_MAX`; both now go through `lib/env.ts` `readIntEnv`, which
+  rejects anything that is not an integer inside a documented range, falls back
+  to the default and logs the variable name (never its value). The same NaN
+  path in three query-param parses (`/api/vocabulary/words` page,
+  `/api/vocabulary/my-words` limit/offset) is closed by `parseIntParam`. Every
+  boolean flag (`ALLOW_UNAUTHENTICATED_ADMIN`, `ALLOW_UNVERIFIED_PURCHASES`,
+  `ALLOW_UNAUTHENTICATED_WEBHOOK`, `DEV_UNLOCK_ALL`) compares strictly against
+  `"true"` and fails closed. What remains unvalidated is string values (model
+  ids, URLs, keys), which only the production probe can catch. The Noor outage
   found on 2026-09-10 was the same class of fault: production `OPENAI_MODEL` held a
   model id OpenAI answers with `400 invalid model ID`, and because a bad model is
   indistinguishable from a bad key from outside, it read for a month as a key

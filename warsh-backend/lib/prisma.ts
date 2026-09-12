@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
+import { readIntEnv } from "./env";
 
 const globalForPrisma = global as unknown as { prisma?: PrismaClient };
 
@@ -10,10 +11,11 @@ const globalForPrisma = global as unknown as { prisma?: PrismaClient };
 // Three is enough for the routes that fan out with Promise.all and small enough
 // that a burst of instances stays well inside Neon's ceiling. Requests queue for
 // a connection rather than racing to open one, and give up rather than hanging
-// past the function's own deadline.
+// past the function's own deadline. DATABASE_POOL_MAX overrides the three;
+// anything that is not a small positive integer is ignored, not trusted.
 const adapter = new PrismaPg({
   connectionString: process.env.DATABASE_URL ?? "",
-  max: Number.parseInt(process.env.DATABASE_POOL_MAX ?? "", 10) || 3,
+  max: readIntEnv("DATABASE_POOL_MAX", 3, { min: 1, max: 20, scope: "[prisma]" }),
   idleTimeoutMillis: 10_000,
   connectionTimeoutMillis: 10_000,
 });

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
+import { parseIntParam } from "../../../../lib/env";
 
 export async function GET(request: Request) {
   const userId = await getUserIdFromRequest(request);
@@ -11,7 +12,7 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const topic = searchParams.get("topic");
   const search = searchParams.get("search")?.trim();
-  const page = Math.max(1, parseInt(searchParams.get("page") ?? "1", 10));
+  const page = parseIntParam(searchParams.get("page"), 1, { min: 1 });
   const pageSize = 200;
 
   // Only PUBLISHED words are browsable; drafts stay hidden from the app.
