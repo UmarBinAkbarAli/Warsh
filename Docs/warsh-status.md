@@ -364,14 +364,38 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    transparent `Modal`s set `navigationBarTranslucent`, so scrims stopped short
    of the status and navigation bars — all now set both, and the three bottom
    sheets that lacked it pad by `insets.bottom`. Verified on the Android 15 AVD in
-   gesture and 3-button modes via Metro against production. Still open: tablet,
-   foldable, split screen and landscape (portrait is locked — a product decision
-   per plan §D2), and font/display scaling. Dev-only observation: any
-   configuration change (font scale, nav-mode switch) recreates the activity and
-   React Navigation logs "configured linking in multiple places"; reproduced
-   without these changes, silent in release. The fuller plan is
+   gesture and 3-button modes via Metro against production. **Large-screen and
+   scaling pass done on emulators (2026-09-12)** — 7.6" fold-in foldable and
+   Pixel Tablet AVDs on Android 15, plus the Pixel 7 AVD at "largest" display
+   size (540 dpi) and 130 %/200 % font scale, debug build against the local
+   staging DB. Three real defects, all fixed and verified in the same run:
+   (a) folding, unfolding or entering split screen changed `smallestScreenSize`,
+   which was not in the activity's `configChanges`, so Android recreated the
+   activity, React Native mounted a fresh root and the learner was thrown out of
+   a running lesson onto the Learn tab — `smallestScreenSize` is now handled
+   in-process (`AndroidManifest.xml`) and the lesson survives fold → unfold →
+   split screen with the layout reflowing; (b) the preview screen's hero art
+   kept its full height and the horizontal slide list, the only shrinkable
+   child, swallowed the slide title and body on short windows (large display
+   size, small phones) — the art now yields the height the copy needs
+   (`auth-options.tsx`); (c) an English discover explanation that opens with the
+   Arabic word ("هَذَا means 'this'…") was laid out right-to-left by Android's
+   first-strong rule, stranding the full stop on the left — the paragraph
+   direction now follows the meaning language via a Unicode direction mark
+   (`writingDirection` is iOS-only). Observed and accepted: on tablets and in
+   split screen the portrait lock letterboxes the app in a centred column with
+   Android's own "See and do more" tip (plan §D2, product decision); a font-scale
+   or display-size change still recreates the activity, which resets navigation
+   (rare mid-lesson, left as is); at 200 % on the folded 884-px width the
+   discover beat needs a scroll to reach Next. Not reproduced: one SIGSEGV in
+   ART on the first launch after switching to 200 %, gone on every relaunch.
+   Emulator notes: fresh AVDs on the Android 17 (API 37) image never reach `adb`
+   on this host, so the pass ran on API 35; Metro's file watcher misses edits
+   under `app/(app)/lessons/[lessonId]/` and needs a restart per change. Landscape
+   remains locked (plan §D2). The fuller plan is
    `Docs/proposals/android-quality-2027-implementation-plan.md`; DEX-optimization
-   enforcement begins February 2027.
+   enforcement begins February 2027. All three fixes ship with the next Play
+   upload.
 7. **Play Console privacy and deletion URLs confirmed (2026-09-12).** App content →
    Privacy policy holds `https://warsh.app/privacy` (last edited 2026-08-19) and the
    Data safety form's "Delete account URL" holds `https://warsh.app/delete-account`;

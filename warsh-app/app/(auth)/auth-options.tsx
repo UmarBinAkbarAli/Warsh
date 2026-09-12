@@ -5,6 +5,7 @@ import {
   Linking,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  PixelRatio,
   Platform,
   Pressable,
   StyleSheet,
@@ -47,7 +48,7 @@ export default function OnboardingScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const t = useT();
-  const { width } = useWindowDimensions();
+  const { width, height } = useWindowDimensions();
   const language = useOnboardingStore((s) => s.language);
   const isUrdu = useLanguage() === "ur";
   // The desktop-web left panel (WebAuthLayout) already shows this slider,
@@ -61,6 +62,27 @@ export default function OnboardingScreen() {
   // The slide track is laid out against the rendered content width, which on
   // web is the phone column rather than the window.
   const trackWidth = Platform.OS === "web" ? Math.min(width, 480) : width;
+
+  // The screen is not scrollable, and the horizontal FlatList is the only
+  // child that shrinks, so on a short window (large display size, a small
+  // phone, a big font scale) it used to swallow the slide copy while the hero
+  // art kept its full size. Give the art whatever height is left after the
+  // copy, pager, buttons and legal line have been reserved, and let it be the
+  // thing that gets smaller.
+  const fontScale = PixelRatio.getFontScale();
+  const reservedHeight =
+    insets.top +
+    insets.bottom +
+    48 + // top bar
+    (LineHeights.display * 2 + LineHeights.bodyM * 3) * fontScale + // slide title (two lines) and body (three on a narrow phone)
+    Spacing.xxxl + 10 + // copy padding and gap
+    Spacing.xl * 2 + 7 + // pager
+    56 * 2 + Spacing.sm + // the two auth buttons
+    LineHeights.caption * 2 * fontScale + Spacing.md + Spacing.xl; // legal lines and their margins
+  const heroHeight = Math.max(
+    140,
+    Math.min(trackWidth / HERO_ASPECT, height - reservedHeight),
+  );
 
   function onMomentumEnd(event: NativeSyntheticEvent<NativeScrollEvent>) {
     const next = Math.round(event.nativeEvent.contentOffset.x / trackWidth);
@@ -108,7 +130,7 @@ export default function OnboardingScreen() {
                 <View style={[styles.slide, { width: trackWidth }]}>
                   <Image
                     source={item.art}
-                    style={{ width: trackWidth, height: trackWidth / HERO_ASPECT }}
+                    style={{ width: trackWidth, height: heroHeight }}
                     resizeMode="contain"
                   />
                   <View style={styles.copy}>

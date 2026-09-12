@@ -86,6 +86,12 @@ function exWrongExpl(ex: RawEx, language: "en" | "ur"): string | undefined {
   return localizedText(ex.explanation_on_wrong, language) ?? localizedText(ex.explanation, language);
 }
 
+/** Prefix prose with a Unicode direction mark so the paragraph direction follows the
+ *  meaning language rather than whichever script happens to come first. */
+function withDirectionMark(text: string, language: "en" | "ur"): string {
+  return (language === "ur" ? "‏" : "‎") + text;
+}
+
 // Extracts just what's needed to prefetch a discover card's image + autoplay audio ahead of time.
 // Mirrors the field extraction in renderDiscover() so the prefetch cache key matches the real play call.
 function discoverCardPrefetchFields(card: Record<string, any> | undefined, language: "en" | "ur") {
@@ -1247,7 +1253,9 @@ export default function LessonPlayScreen() {
             {translation ? (
               <>
                 <Text style={styles.discoverEyebrow}>{t("player.meaningLabel")}</Text>
-                <Text style={styles.discoverMeaning}>{translation}</Text>
+                <Text style={[styles.discoverMeaning, language === "ur" ? styles.discoverProseRtl : styles.discoverProseLtr]}>
+                {withDirectionMark(translation, language)}
+              </Text>
               </>
             ) : null}
 
@@ -1256,7 +1264,14 @@ export default function LessonPlayScreen() {
                 <Text style={[styles.discoverEyebrow, translation ? styles.discoverEyebrowSpaced : null]}>
                   {t("player.whenYoudSayIt")}
                 </Text>
-                <Text style={styles.discoverExplanation}>{explanation}</Text>
+                {/* An English explanation often opens with the Arabic word ("هَذَا means
+                  'this'…"); Android's first-strong heuristic then lays the whole
+                  paragraph out right-to-left and strands the full stop on the left.
+                  `writingDirection` is iOS-only, so the direction mark does the job
+                  on Android. */}
+              <Text style={[styles.discoverExplanation, language === "ur" ? styles.discoverProseRtl : styles.discoverProseLtr]}>
+                {withDirectionMark(explanation, language)}
+              </Text>
               </>
             ) : null}
           </Animated.View>
@@ -2000,7 +2015,9 @@ const styles = StyleSheet.create({
   discoverScrollContent: {
     flexGrow: 1,
     justifyContent: "center",
-    paddingVertical: Spacing.sm,
+    paddingTop: Spacing.sm,
+    // Room under the last line so it does not sit on the Next button at large font scales.
+    paddingBottom: Spacing.md,
   },
   discoverImage: {
     width: 196,
@@ -2064,6 +2081,14 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyL,
     lineHeight: LineHeights.bodyL,
+  },
+  discoverProseLtr: {
+    textAlign: "left",
+    writingDirection: "ltr",
+  },
+  discoverProseRtl: {
+    textAlign: "right",
+    writingDirection: "rtl",
   },
   exitOverlay: {
     flex: 1,
