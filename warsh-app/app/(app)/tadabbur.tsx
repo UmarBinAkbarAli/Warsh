@@ -17,7 +17,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
-import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha } from "../../constants/theme";
 import { getTadabbur, getTadabburSurah, isSubscriptionRequiredError } from "@services/api";
 import { pickLocalized, useTranslationLanguage } from "@services/language";
 import { getEveryAyahAudioUrl } from "@services/quranAudio";
@@ -449,7 +449,7 @@ const styles = StyleSheet.create({
   footer: { textAlign: "center", color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption, fontStyle: "italic", marginTop: Spacing.lg },
 
   // Word sheet
-  sheetOverlay: { flex: 1, justifyContent: "flex-end", backgroundColor: "rgba(0,0,0,0.4)" },
+  sheetOverlay: { flex: 1, justifyContent: "flex-end", backgroundColor: WarshAlpha.sheetScrim },
   sheetContainer: {
     backgroundColor: WarshPalette.white, borderTopLeftRadius: 24, borderTopRightRadius: 24,
     padding: Spacing.xl, paddingBottom: Spacing.xl * 2,

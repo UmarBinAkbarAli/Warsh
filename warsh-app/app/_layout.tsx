@@ -61,7 +61,7 @@ class ErrorBoundary extends Component<
           </Text>
           <Text
             style={{
-              color: "#FF6B6B",
+              color: Colors.text.danger,
               fontSize: 11,
               fontFamily: "monospace",
               textAlign: "left",
@@ -72,7 +72,7 @@ class ErrorBoundary extends Component<
           </Text>
           <Text
             style={{
-              color: "#888",
+              color: Colors.text.muted,
               fontSize: 10,
               fontFamily: "monospace",
               textAlign: "left",

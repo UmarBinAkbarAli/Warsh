@@ -12,7 +12,7 @@ import {
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha } from "../../constants/theme";
 import api from "@services/api";
 import { useAuthStore } from "@stores/authStore";
 import { BrandButton } from "@components/BrandButton";
@@ -249,7 +249,7 @@ const styles = StyleSheet.create({
 
   // Feedback banners
   successBanner: {
-    backgroundColor: "rgba(122, 139, 112, 0.12)",
+    backgroundColor: WarshAlpha.sageTint,
     borderRadius: Radii.sm,
     borderWidth: 1,
     borderColor: WarshPalette.sage,

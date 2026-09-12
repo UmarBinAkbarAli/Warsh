@@ -426,8 +426,16 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    gap is filled, and with what.
 2. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
    types and book transitions.
-3. Reconcile any remaining visual differences against the current gold/navy design
-   tokens.
+3. **Token reconciliation done (2026-09-12).** Every colour literal outside
+   `constants/theme.ts` is gone: 30 `rgba()`/hex values across 20 files now route
+   through a new role-named `WarshAlpha` set (scrims, gold washes, on-navy tints,
+   sage/warning tints) or the palette. Modal scrims are unified at ink 60% (spec-11
+   §5.6) and bottom sheets at ink 45%. Six styles used `fontFamily: "Inter"`, a
+   name that is not registered with `expo-font` (only `Inter-Regular/SemiBold/Bold`
+   are), so they were silently falling back to the system font on Android — the
+   Learn stat labels, the desktop-web greeting and the web sidebar; all font
+   families now come from `Fonts`. Only the crash screen's `monospace` remains, by
+   design.
 4. **One commitment moment — shipped 2026-09-12 (Pen section 22, Option A,
    owner-approved).** The onboarding checklist's "Set a daily goal" (minutes/day)
    and the post-streak "Choose your streak goal" (days) were two commitments to two

@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     gap: 36,
     backgroundColor: WarshPalette.white,
     borderRightWidth: 1,
-    borderRightColor: "#E8DFC8",
+    borderRightColor: WarshPalette.cream,
   },
   brand: {
     flexDirection: "row",
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   },
   wordmark: {
     color: WarshPalette.navy,
-    fontFamily: "Inter",
+    fontFamily: Fonts.bold,
     fontSize: 15,
     fontWeight: "700",
     letterSpacing: 3,
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
   },
   navLabel: {
     color: WarshPalette.bodyBrown,
-    fontFamily: "Inter",
+    fontFamily: Fonts.semiBold,
     fontSize: 14,
     fontWeight: "600",
   },
@@ -210,13 +210,13 @@ const styles = StyleSheet.create({
   },
   footerName: {
     color: WarshPalette.ink,
-    fontFamily: "Inter",
+    fontFamily: Fonts.semiBold,
     fontSize: 13,
     fontWeight: "600",
   },
   footerMeta: {
     color: WarshPalette.subtleBrown,
-    fontFamily: "Inter",
+    fontFamily: Fonts.regular,
     fontSize: 11,
   },
 });

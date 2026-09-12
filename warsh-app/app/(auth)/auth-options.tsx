@@ -25,11 +25,12 @@ import { useLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 import {
   Colors,
-  Fonts,
   FontSizes,
+  Fonts,
   LineHeights,
   Radii,
   Spacing,
+  WarshAlpha,
   WarshPalette,
 } from "../../constants/theme";
 
@@ -236,7 +237,7 @@ const styles = StyleSheet.create({
     width: 7,
     height: 7,
     borderRadius: Radii.full,
-    backgroundColor: "rgba(196, 155, 77, 0.27)", // gold @ 27%
+    backgroundColor: WarshAlpha.goldTint
   },
   dotActive: {
     width: 24,

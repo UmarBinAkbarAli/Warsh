@@ -26,6 +26,7 @@ import {
   LineHeights,
   Radii,
   Spacing,
+  WarshAlpha,
   WarshPalette,
 } from "../../../constants/theme";
 
@@ -519,7 +520,7 @@ const styles = StyleSheet.create({
   chapterTestTextLocked: { color: WarshPalette.disabledText },
 
   // Bottom sheet
-  sheetOverlay: { flex: 1, justifyContent: "flex-end", backgroundColor: "rgba(0,0,0,0.45)" },
+  sheetOverlay: { flex: 1, justifyContent: "flex-end", backgroundColor: WarshAlpha.sheetScrim },
   sheetContainer: {
     backgroundColor: WarshPalette.white,
     borderTopLeftRadius: 24,

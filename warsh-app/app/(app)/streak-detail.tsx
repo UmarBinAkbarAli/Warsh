@@ -3,7 +3,7 @@ import { Platform, ScrollView, StyleSheet, Text, TouchableOpacity, useWindowDime
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha } from "../../constants/theme";
 import api from "@services/api";
 
 interface StreakData {
@@ -352,7 +352,7 @@ const styles = StyleSheet.create({
     gap: Spacing.sm,
   },
   milestoneRowAchieved: {
-    backgroundColor: "rgba(196, 155, 77, 0.08)",
+    backgroundColor: WarshAlpha.goldWash,
   },
   milestoneEmoji: {
     fontSize: 18,

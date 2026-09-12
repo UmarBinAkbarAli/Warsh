@@ -6,7 +6,7 @@ import {
   ViewStyle,
 } from "react-native";
 
-import { Fonts, Radii, Spacing, WarshPalette } from "../constants/theme";
+import { Fonts, Radii, Spacing, WarshPalette, WarshAlpha } from "../constants/theme";
 
 type Variant = "primary" | "secondary" | "danger";
 
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     borderColor: WarshPalette.sage,
   },
   secondaryPressed: {
-    backgroundColor: "rgba(157, 171, 148, 0.2)", // sage-soft @ 20% per spec
+    backgroundColor: WarshAlpha.sageSoftTint
   },
   secondarySelected: {
     borderWidth: 2,
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
   },
   dangerPressed: {
-    backgroundColor: "rgba(200, 116, 74, 0.12)", // warning-soft tint
+    backgroundColor: WarshAlpha.warningTint
   },
   label: {
     fontSize: 16,

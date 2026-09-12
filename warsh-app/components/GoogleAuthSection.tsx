@@ -19,7 +19,7 @@ import { getApiErrorMessage } from "@services/api";
 import { captureError } from "@services/sentry";
 import { useT } from "@i18n/index";
 import { trackLoginCompleted, trackSignupCompleted } from "@services/analytics";
-import { Colors, FontSizes, Fonts, Radii, Spacing, WarshPalette } from "../constants/theme";
+import { Colors, FontSizes, Fonts, Radii, Spacing, WarshPalette, WarshAlpha } from "../constants/theme";
 
 type LinkRequest = {
   email: string;
@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: Spacing.xl,
-    backgroundColor: "rgba(7, 27, 68, 0.55)",
+    backgroundColor: WarshAlpha.scrim,
   },
   modalCard: {
     width: "100%",

@@ -2,7 +2,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Image, Platform, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 
 import { useT } from "@i18n/index";
-import { Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../constants/theme";
+import { Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha } from "../constants/theme";
 
 export const DESKTOP_WEB_BREAKPOINT = 900;
 
@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
     width: 7,
     height: 7,
     borderRadius: Radii.full,
-    backgroundColor: "rgba(196, 155, 77, 0.27)",
+    backgroundColor: WarshAlpha.goldTint,
   },
   dotActive: {
     width: 24,

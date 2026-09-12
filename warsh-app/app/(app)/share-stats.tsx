@@ -16,12 +16,13 @@ import * as Sharing from "expo-sharing";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import {
-  WarshPalette,
-  Fonts,
   FontSizes,
+  Fonts,
   LineHeights,
-  Spacing,
   Radii,
+  Spacing,
+  WarshAlpha,
+  WarshPalette,
 } from "../../constants/theme";
 
 interface Stats {
@@ -283,7 +284,7 @@ const styles = StyleSheet.create({
   },
   statBox: {
     width: "47%",
-    backgroundColor: "rgba(255,255,255,0.06)",
+    backgroundColor: WarshAlpha.onNavySurfaceFaint,
     borderRadius: Radii.md,
     padding: Spacing.md,
   },

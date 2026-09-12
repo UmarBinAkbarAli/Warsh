@@ -7,7 +7,7 @@ import { ArabicText } from "./ArabicText";
 import { WaveformBars } from "./WaveformBars";
 import { BrandButton } from "./BrandButton";
 import { getMicPermissionStatus, requestMicPermission } from "@services/micPermission";
-import { WarshPalette, Fonts } from "../constants/theme";
+import { WarshPalette, Fonts, WarshAlpha } from "../constants/theme";
 import { useT } from "@i18n/index";
 
 type Props = {
@@ -632,7 +632,7 @@ const styles = StyleSheet.create({
   // Permission modal
   modalOverlay: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.5)",
+    backgroundColor: WarshAlpha.scrim,
     alignItems: "center",
     justifyContent: "center",
     padding: 32,

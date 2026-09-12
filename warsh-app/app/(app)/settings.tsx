@@ -19,7 +19,7 @@ import Constants from "expo-constants";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
-import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha } from "../../constants/theme";
 import api, { WEB_BASE_URL, updateUserProfile, deleteAccount } from "@services/api";
 import { useAuthStore } from "@stores/authStore";
 import {
@@ -756,7 +756,7 @@ const styles = StyleSheet.create({
   },
   pillTextSelected: { color: WarshPalette.white },
   sheetOverlay: {
-    flex: 1, justifyContent: "flex-end", backgroundColor: "rgba(7,27,68,0.48)",
+    flex: 1, justifyContent: "flex-end", backgroundColor: WarshAlpha.sheetScrim,
   },
   languageSheet: {
     gap: Spacing.md, paddingHorizontal: Spacing.gutter, paddingTop: Spacing.sm,
@@ -794,5 +794,5 @@ const styles = StyleSheet.create({
   choiceTitle: { color: WarshPalette.ink, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyL },
   choiceTitleSelected: { color: WarshPalette.white },
   choiceBody: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption, marginTop: 2 },
-  choiceBodySelected: { color: "rgba(255,255,255,0.7)" },
+  choiceBodySelected: { color: WarshAlpha.onNavyMuted },
 });

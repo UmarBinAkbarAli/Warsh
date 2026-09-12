@@ -8,7 +8,7 @@ import * as Crypto from "expo-crypto";
 import api, { isSubscriptionRequiredError, purchaseNoorPack } from "@services/api";
 import { BrandButton } from "@components/BrandButton";
 import { useAuthStore } from "@stores/authStore";
-import { Colors, Fonts, FontSizes, LineHeights, Radii, Shadows, Spacing, WarshPalette } from "../../../constants/theme";
+import { Colors, Fonts, FontSizes, LineHeights, Radii, Shadows, Spacing, WarshPalette, WarshAlpha } from "../../../constants/theme";
 import { trackNoorMessageSent } from "@services/analytics";
 import {
   addIapPurchaseListeners,
@@ -325,7 +325,7 @@ export default function ChatScreen() {
             <View
               key={`${message.role}-${index}`}
               style={{
-                backgroundColor: message.role === "USER" ? "rgba(196, 155, 77, 0.15)" : Colors.bg.card,
+                backgroundColor: message.role === "USER" ? WarshAlpha.goldTintSoft : Colors.bg.card,
                 padding: Spacing.md,
                 borderRadius: Radii.md,
                 marginBottom: Spacing.sm,
@@ -447,7 +447,7 @@ const styles = StyleSheet.create({
   },
   modalBackdrop: {
     flex: 1,
-    backgroundColor: "rgba(26, 26, 26, 0.6)",
+    backgroundColor: WarshAlpha.scrim,
     justifyContent: "flex-end",
   },
   modalCard: {

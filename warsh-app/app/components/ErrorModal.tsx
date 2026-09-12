@@ -7,6 +7,7 @@ import {
   LineHeights,
   Radii,
   Spacing,
+  WarshAlpha,
   WarshPalette,
 } from "../../constants/theme";
 
@@ -65,7 +66,7 @@ export function ErrorModal({ visible, message, onRetry, onDismiss }: ErrorModalP
 const styles = StyleSheet.create({
   overlay: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.6)",
+    backgroundColor: WarshAlpha.scrim,
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: Spacing.xl,

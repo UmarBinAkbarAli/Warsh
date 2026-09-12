@@ -51,6 +51,29 @@ export const WarshPalette = {
   googleRed: "#EA4335", // Google brand mark — brand-locked, never re-tint
 } as const;
 
+// Translucent tints derived from the palette above. Every rgba() in the app
+// comes from here so the alpha steps stay consistent; the base colour is the
+// palette token named in the comment.
+export const WarshAlpha = {
+  // Scrims
+  scrim: "rgba(26, 26, 26, 0.6)", // ink @ 60% — confirmation/permission modals (spec-11 §5.6)
+  sheetScrim: "rgba(26, 26, 26, 0.45)", // ink @ 45% — bottom sheets and pickers
+  // Gold washes on light surfaces
+  goldWash: "rgba(196, 155, 77, 0.08)", // gold @ 8% — quiet emphasis background
+  goldTintSoft: "rgba(196, 155, 77, 0.13)", // gold @ 13% — chips, user bubbles
+  goldTint: "rgba(196, 155, 77, 0.27)", // gold @ 27% — decorative bands
+  goldBorder: "rgba(196, 155, 77, 0.45)", // gold @ 45% — hairline on navy
+  goldLightBorder: "rgba(212, 176, 106, 0.45)", // parchment @ 45% — hairline on navy
+  // On navy surfaces
+  onNavyMuted: "rgba(255, 255, 255, 0.7)", // secondary text on navy
+  onNavySurface: "rgba(255, 255, 255, 0.16)", // pill/icon backing on navy
+  onNavySurfaceFaint: "rgba(255, 255, 255, 0.06)", // stat boxes on navy
+  // Sage / warning tints
+  sageTint: "rgba(122, 139, 112, 0.12)", // sage @ 12%
+  sageSoftTint: "rgba(157, 171, 148, 0.2)", // sage-soft @ 20% — disabled CTA
+  warningTint: "rgba(200, 116, 74, 0.12)", // warning-soft @ 12% — danger CTA
+} as const;
+
 export const Colors = {
   bg: {
     primary: WarshPalette.creamBg,
@@ -84,7 +107,7 @@ export const Colors = {
   error: WarshPalette.wrongText,
   warning: WarshPalette.wrongBorder,
   // Spec-11 §5.6: ink at 60% for confirmation modals
-  overlay: "rgba(26, 26, 26, 0.6)",
+  overlay: WarshAlpha.scrim,
 } as const;
 
 export const Fonts: Record<string, string | undefined> = {

@@ -41,6 +41,7 @@ import {
   Radii,
   Shadows,
   Spacing,
+  WarshAlpha,
   WarshPalette,
 } from "../../../constants/theme";
 import { DAILY_UNIT_MINUTES } from "../../../constants/commitment";
@@ -1022,7 +1023,7 @@ const styles = StyleSheet.create({
   },
   greetingDesktop: {
     color: WarshPalette.navy,
-    fontFamily: "CormorantGaramond-SemiBold",
+    fontFamily: Fonts.displaySemiBold,
     fontSize: 30,
     lineHeight: 38,
   },
@@ -1097,20 +1098,20 @@ const styles = StyleSheet.create({
   },
   statLabel: {
     color: WarshPalette.subtleBrown,
-    fontFamily: "Inter",
+    fontFamily: Fonts.bold,
     fontSize: 11,
     fontWeight: "700",
     letterSpacing: 1.4,
   },
   statValue: {
     color: WarshPalette.navy,
-    fontFamily: "CormorantGaramond-SemiBold",
+    fontFamily: Fonts.displaySemiBold,
     fontSize: 34,
     lineHeight: 40,
   },
   statCaption: {
     color: WarshPalette.subtleBrown,
-    fontFamily: "Inter",
+    fontFamily: Fonts.regular,
     fontSize: 12,
   },
   coachMarkBubble: {
@@ -1160,7 +1161,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: Radii.full,
     borderWidth: 1,
-    borderColor: "rgba(212,176,106,0.45)",
+    borderColor: WarshAlpha.goldLightBorder,
   },
   heroArabic: {
     color: WarshPalette.white,
@@ -1191,7 +1192,7 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   heroMeta: {
-    color: "rgba(255,255,255,0.72)",
+    color: WarshAlpha.onNavyMuted,
     fontFamily: Fonts.regular,
     fontSize: FontSizes.caption,
   },
@@ -1204,7 +1205,7 @@ const styles = StyleSheet.create({
     height: 6,
     overflow: "hidden",
     borderRadius: Radii.full,
-    backgroundColor: "rgba(255,255,255,0.16)",
+    backgroundColor: WarshAlpha.onNavySurface,
   },
   heroProgressFill: {
     height: "100%",
@@ -1221,7 +1222,7 @@ const styles = StyleSheet.create({
   },
   heroHint: {
     flex: 1,
-    color: "rgba(255,255,255,0.68)",
+    color: WarshAlpha.onNavyMuted,
     fontFamily: Fonts.regular,
     fontSize: 11,
     lineHeight: 16,
@@ -1452,9 +1453,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: Radii.full,
-    backgroundColor: "rgba(196,155,77,0.13)",
+    backgroundColor: WarshAlpha.goldTintSoft,
     borderWidth: 1,
-    borderColor: "rgba(196,155,77,0.45)",
+    borderColor: WarshAlpha.goldBorder,
   },
   tadabburCopy: { flex: 1, minWidth: 0 },
   tadabburTitle: {
@@ -1465,7 +1466,7 @@ const styles = StyleSheet.create({
   },
   tadabburBody: {
     marginTop: 2,
-    color: "rgba(255,255,255,0.68)",
+    color: WarshAlpha.onNavyMuted,
     fontFamily: Fonts.regular,
     fontSize: 11,
     lineHeight: 16,
@@ -1487,7 +1488,7 @@ const styles = StyleSheet.create({
     height: 4,
     overflow: "hidden",
     borderRadius: Radii.full,
-    backgroundColor: "rgba(255,255,255,0.16)",
+    backgroundColor: WarshAlpha.onNavySurface,
   },
   tadabburProgressFill: {
     height: "100%",

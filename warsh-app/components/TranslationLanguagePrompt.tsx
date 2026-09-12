@@ -14,11 +14,12 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import {
   Colors,
-  Fonts,
   FontSizes,
+  Fonts,
   LineHeights,
   Radii,
   Spacing,
+  WarshAlpha,
   WarshPalette,
 } from "../constants/theme";
 
@@ -221,5 +222,5 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.caption,
     marginTop: 2,
   },
-  choiceBodySelected: { color: "rgba(255,255,255,0.7)" },
+  choiceBodySelected: { color: WarshAlpha.onNavyMuted },
 });

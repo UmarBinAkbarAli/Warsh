@@ -19,7 +19,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import * as Crypto from "expo-crypto";
 import { useAuthStore } from "@stores/authStore";
 import { Ionicons } from "@expo/vector-icons";
-import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
+import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha } from "../../constants/theme";
 import { WEB_BASE_URL, verifyPurchase, getSubscriptionStatus, redeemPromoCode, getApiErrorMessage } from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
@@ -915,7 +915,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     paddingHorizontal: Spacing.gutter,
-    backgroundColor: "rgba(0,0,0,0.45)",
+    backgroundColor: WarshAlpha.scrim,
   },
   modalCard: {
     padding: Spacing.lg,

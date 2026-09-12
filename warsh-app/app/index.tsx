@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   sealMotif: {
     position: "absolute",
     fontSize: 320,
-    fontFamily: "Scheherazade New Bold",
+    fontFamily: Fonts.arabicBold,
     color: WarshPalette.parchment,
     opacity: 0.35,
     letterSpacing: 0,
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     color: WarshPalette.sage,
   },
   arabicWord: {
-    fontFamily: "Scheherazade New Bold",
+    fontFamily: Fonts.arabicBold,
     fontSize: 42,
     color: WarshPalette.gold,
     // The Arabic glyph sits slightly lower by default — align with baseline
