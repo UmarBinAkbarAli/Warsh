@@ -393,8 +393,10 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    (a) the app surfaces grace/hold/pause only inside Manage subscription — the
    Learn tab shows no warning during the grace period (the one window where a
    "fix your payment method" prompt matters) and no lock banner for on-hold/
-   paused/pending, whose lesson taps 402 into the paywall instead; a banner
-   design needs the Pen gate. (b) Plan switching/proration replacement
+   paused/pending, whose lesson taps 402 into the paywall instead. **Pen
+   section 23 ("Subscription Health", 2026-09-12) proposes one banner slot
+   with four tones and a single "Update payment" action into Google Play;
+   awaits owner review — not implemented.** (b) Plan switching/proration replacement
    (`linkedPurchaseToken` re-keying is implemented and unit-tested, not
    exercised live), grace period and account hold have not been driven from a
    Play test account. Purchase (monthly and yearly), restore
