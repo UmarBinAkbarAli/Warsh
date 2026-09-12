@@ -8,8 +8,10 @@ import {
   type OnboardingStepKey,
 } from "@components/OnboardingChecklist";
 import { NewLessonsPrompt } from "@components/NewLessonsPrompt";
+import { SubscriptionBanner } from "@components/SubscriptionBanner";
 import { TranslationLanguagePrompt } from "@components/TranslationLanguagePrompt";
 import { useT } from "@i18n/index";
+import { trackSubscriptionBannerCta, trackSubscriptionBannerShown } from "@services/analytics";
 import api, { updateUserProfile } from "@services/api";
 import { prefetchChapter } from "@services/chapterPrefetch";
 import { pickLocalized, pickTranslation, useLanguage, useTranslationLanguage, type AppLanguage } from "@services/language";
@@ -45,6 +47,11 @@ import {
   WarshPalette,
 } from "../../../constants/theme";
 import { DAILY_UNIT_MINUTES } from "../../../constants/commitment";
+import {
+  isPremiumSuspended,
+  toSubscriptionHealthState,
+  type SubscriptionHealthState,
+} from "../../../constants/subscription";
 
 const FREEZE_BANNER_KEY = "warsh_freeze_banner_shown";
 const LAST_STREAK_KEY = "warsh_last_streak";
@@ -130,6 +137,7 @@ export default function HomeScreen() {
   const [showFreezeBanner, setShowFreezeBanner] = useState(false);
   const [trialDaysRemaining, setTrialDaysRemaining] = useState<number | null>(null);
   const [subscriptionStatus, setSubscriptionStatus] = useState("trial");
+  const [subscriptionActiveUntil, setSubscriptionActiveUntil] = useState<string | null>(null);
   const [trialBannerDismissed, setTrialBannerDismissed] = useState(false);
   const [showStreakEndedModal, setShowStreakEndedModal] = useState(false);
   const [showDailyGoalToast, setShowDailyGoalToast] = useState(false);
@@ -256,6 +264,7 @@ export default function HomeScreen() {
       if (progress.subscription) {
         setTrialDaysRemaining(progress.subscription.trialDaysRemaining ?? null);
         setSubscriptionStatus(progress.subscription.subscriptionStatus ?? "trial");
+        setSubscriptionActiveUntil(progress.subscription.subscriptionActiveUntil ?? null);
       }
 
       if (tadabburResponse) {
@@ -402,7 +411,21 @@ export default function HomeScreen() {
     setShowFreezeBanner(false);
   }
 
+  // Google has suspended a PAYING subscriber (account hold / paused): lessons
+  // are locked server-side, but the fix is a payment method, not the paywall.
+  const premiumSuspended = isPremiumSuspended(subscriptionStatus);
+  // The Learn tab's one banner slot. "expired" keeps its own banner below.
+  const healthState: SubscriptionHealthState | null = toSubscriptionHealthState(subscriptionStatus);
+
+  useEffect(() => {
+    if (healthState) trackSubscriptionBannerShown(healthState);
+  }, [healthState]);
+
   function openActiveLesson() {
+    if (premiumSuspended) {
+      router.push("/(app)/manage-subscription");
+      return;
+    }
     if (activeLesson) {
       router.push(`/lessons/${activeLesson.id}/play`);
     } else if (activeChapter) {
@@ -542,6 +565,14 @@ export default function HomeScreen() {
         ]}
         showsVerticalScrollIndicator={false}
       >
+        {healthState ? (
+          <SubscriptionBanner
+            state={healthState}
+            activeUntil={subscriptionActiveUntil}
+            onCtaPress={trackSubscriptionBannerCta}
+          />
+        ) : null}
+
         {!isWeb && subscriptionStatus === "expired" ? (
           <TouchableOpacity
             style={styles.trialExpiredBanner}
@@ -669,7 +700,11 @@ export default function HomeScreen() {
                 })}
               </Text>
               <View style={styles.heroBookIcon}>
-                <Ionicons name="book-outline" size={19} color={WarshPalette.parchment} />
+                <Ionicons
+                  name={premiumSuspended ? "lock-closed-outline" : "book-outline"}
+                  size={19}
+                  color={WarshPalette.parchment}
+                />
               </View>
             </View>
 
@@ -698,10 +733,19 @@ export default function HomeScreen() {
               <Text style={styles.heroHint} numberOfLines={2}>
                 {t("learn.heroHint")}
               </Text>
-              <View style={styles.continueButton}>
-                <Text style={styles.continueButtonText}>{t("learn.continue")}</Text>
-                <Ionicons name="arrow-forward" size={16} color={WarshPalette.navy} />
-              </View>
+              {premiumSuspended ? (
+                <View style={[styles.continueButton, styles.continueButtonLocked]}>
+                  <Text style={[styles.continueButtonText, styles.continueButtonTextLocked]}>
+                    {t("learn.premiumSuspendedContinue")}
+                  </Text>
+                  <Ionicons name="lock-closed-outline" size={14} color={WarshPalette.disabledText} />
+                </View>
+              ) : (
+                <View style={styles.continueButton}>
+                  <Text style={styles.continueButtonText}>{t("learn.continue")}</Text>
+                  <Ionicons name="arrow-forward" size={16} color={WarshPalette.navy} />
+                </View>
+              )}
             </View>
           </Pressable>
         ) : null}
@@ -869,13 +913,17 @@ export default function HomeScreen() {
           </View>
         ) : null}
 
-        {tadabburFocus || subscriptionStatus === "expired" ? (
+        {tadabburFocus || subscriptionStatus === "expired" || premiumSuspended ? (
           <View style={styles.tadabburSection}>
             <Text style={styles.sectionTitle}>{t("learn.tadabbur")}</Text>
             <Pressable
               onPress={() =>
                 router.push(
-                  subscriptionStatus === "expired" ? "/(app)/paywall" : "/(app)/tadabbur",
+                  premiumSuspended
+                    ? "/(app)/manage-subscription"
+                    : subscriptionStatus === "expired"
+                      ? "/(app)/paywall"
+                      : "/(app)/tadabbur",
                 )
               }
               style={({ pressed }) => [styles.tadabburCard, pressed && styles.cardPressed]}
@@ -885,14 +933,16 @@ export default function HomeScreen() {
               </View>
               <View style={styles.tadabburCopy}>
                 <Text style={styles.tadabburTitle}>
-                  {subscriptionStatus === "expired"
+                  {subscriptionStatus === "expired" || premiumSuspended
                     ? t("learn.tadabburLockedTitle")
                     : t("learn.tadabburPrompt")}
                 </Text>
                 <Text style={styles.tadabburBody} numberOfLines={2}>
-                  {subscriptionStatus === "expired"
-                    ? t("learn.tadabburLockedBody")
-                    : t("learn.tadabburBody", { surah: tadabburFocus?.nameEn ?? "" })}
+                  {premiumSuspended
+                    ? t("learn.tadabburSuspendedBody")
+                    : subscriptionStatus === "expired"
+                      ? t("learn.tadabburLockedBody")
+                      : t("learn.tadabburBody", { surah: tadabburFocus?.nameEn ?? "" })}
                 </Text>
                 {tadabburFocus ? (
                   <View style={styles.tadabburProgressRow}>
@@ -912,7 +962,7 @@ export default function HomeScreen() {
                   </View>
                 ) : null}
               </View>
-              {tadabburFocus ? (
+              {tadabburFocus && !premiumSuspended ? (
                 <ArabicText size="md" style={styles.tadabburArabic}>
                   {tadabburFocus.nameAr}
                 </ArabicText>
@@ -1235,6 +1285,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.lg,
     borderRadius: Radii.full,
     backgroundColor: WarshPalette.gold,
+  },
+  continueButtonLocked: {
+    backgroundColor: WarshPalette.navyDeep,
+  },
+  continueButtonTextLocked: {
+    color: WarshPalette.disabledText,
   },
   continueButtonText: {
     color: WarshPalette.navy,

@@ -20,11 +20,7 @@ import { getSubscriptionStatus } from "@services/api";
 import { useLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 
-const SUBSCRIPTION_PRODUCT_ID = "warsh_premium";
-
-// Deep link to THIS subscription's management page in the Play Store.
-const PLAY_SUBSCRIPTION_URL =
-  `https://play.google.com/store/account/subscriptions?sku=${SUBSCRIPTION_PRODUCT_ID}&package=com.warsh.app`;
+import { PLAY_SUBSCRIPTION_URL } from "../../constants/subscription";
 
 // Normalized store states persisted by the backend (source of truth).
 type StoreState =

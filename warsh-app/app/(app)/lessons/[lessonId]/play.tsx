@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import api, { API_BASE_URL, isSubscriptionRequiredError } from "@services/api";
+import api, { API_BASE_URL, isSubscriptionRequiredError, subscriptionRequiredRoute } from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { PlayButton } from "@components/PlayButton";
@@ -546,7 +546,7 @@ export default function LessonPlayScreen() {
         }
       } catch (loadError) {
         if (isSubscriptionRequiredError(loadError)) {
-          router.replace("/(app)/paywall");
+          router.replace(await subscriptionRequiredRoute());
           return;
         }
         setError(t("player.loadError"));

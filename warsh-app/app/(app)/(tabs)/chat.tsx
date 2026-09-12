@@ -5,7 +5,7 @@ import { useFocusEffect, useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import * as Crypto from "expo-crypto";
-import api, { isSubscriptionRequiredError, purchaseNoorPack } from "@services/api";
+import api, { isSubscriptionRequiredError, subscriptionRequiredRoute, purchaseNoorPack } from "@services/api";
 import { BrandButton } from "@components/BrandButton";
 import { useAuthStore } from "@stores/authStore";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Shadows, Spacing, WarshPalette, WarshAlpha } from "../../../constants/theme";
@@ -113,7 +113,7 @@ export default function ChatScreen() {
       }
     } catch (err) {
       if (isSubscriptionRequiredError(err)) {
-        router.replace("/(app)/paywall");
+        router.replace(await subscriptionRequiredRoute());
         return;
       }
       setError("Unable to load chat history.");
@@ -253,7 +253,7 @@ export default function ChatScreen() {
       }
     } catch (err: any) {
       if (isSubscriptionRequiredError(err)) {
-        router.replace("/(app)/paywall");
+        router.replace(await subscriptionRequiredRoute());
       } else if (err.response?.status === 429) {
         setShowOverageModal(true);
       } else {

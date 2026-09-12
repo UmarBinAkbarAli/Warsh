@@ -394,14 +394,20 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    suspended rows (`includeSuspended`, bounded to that one read), and
    `/api/progress` — which the Learn tab takes its lock banner from — now runs
    the lapsed refresh too, so a missed renewal no longer shows "expired" on the
-   Learn tab. Unit-tested in `tests/subscription-refresh.test.ts`. Still open:
-   (a) the app surfaces grace/hold/pause only inside Manage subscription — the
-   Learn tab shows no warning during the grace period (the one window where a
-   "fix your payment method" prompt matters) and no lock banner for on-hold/
-   paused/pending, whose lesson taps 402 into the paywall instead. **Pen
-   section 23 ("Subscription Health", 2026-09-12) proposes one banner slot
-   with four tones and a single "Update payment" action into Google Play;
-   awaits owner review — not implemented.** (b) Plan switching/proration replacement
+   Learn tab. Unit-tested in `tests/subscription-refresh.test.ts`. **Learn-tab
+   subscription health banners shipped (Pen section 23 approved and built
+   2026-09-12).** `components/SubscriptionBanner.tsx` shows one banner for
+   `in_grace` (warm, with the date Google stops retrying), `on_hold` (dark
+   lock), `paused` (sage) and `pending` (quiet, no CTA); the CTA opens Play's
+   subscription page via the deep link shared with Manage subscription
+   (`constants/subscription.ts`). On hold/paused the Continue card, journey
+   row and Tadabbur card lock and route to Manage subscription, and every
+   402 handler (lesson, Tadabbur, Noor) now asks `subscriptionRequiredRoute()`
+   so a suspended paying subscriber lands on Manage subscription, not the
+   paywall. "expired" is unchanged. Verified on the emulator against the
+   staging DB in Urdu RTL for all four states plus the hold → Manage
+   subscription routing from the hero and from Noor's 402. Ships with the
+   next Play upload. Still open: (b) Plan switching/proration replacement
    (`linkedPurchaseToken` re-keying is implemented and unit-tested, not
    exercised live), grace period and account hold have not been driven from a
    Play test account. Purchase (monthly and yearly), restore

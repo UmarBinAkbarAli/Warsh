@@ -1,4 +1,5 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
+import { isPremiumSuspended } from "../constants/subscription";
 import { Platform } from "react-native";
 import Constants from "expo-constants";
 import { getToken } from "./storage";
@@ -181,6 +182,20 @@ export function getTadabburSurah(surahId: string) {
 
 export function getSubscriptionStatus() {
   return api.get("/api/subscription/status");
+}
+
+// Where a 402 `subscription_required` should send the learner. A paying
+// subscriber Google has suspended (account hold / paused) needs their payment
+// method fixed in Google Play, not the paywall — Manage subscription says so and
+// links there. Falls back to the paywall when the status cannot be read.
+export async function subscriptionRequiredRoute(): Promise<"/(app)/paywall" | "/(app)/manage-subscription"> {
+  try {
+    const res = await getSubscriptionStatus();
+    if (isPremiumSuspended(res.data?.data?.subscriptionStatus)) return "/(app)/manage-subscription";
+  } catch {
+    // fall through
+  }
+  return "/(app)/paywall";
 }
 
 export function verifyPurchase(data: { productId: string; purchaseToken?: string; receiptData?: string; platform: "android" | "ios" }) {

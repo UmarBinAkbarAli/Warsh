@@ -159,6 +159,16 @@ export function trackSubscriptionRestored(productId: string) {
   mp?.getPeople().set({ subscription_status: "active" });
 }
 
+// Learn-tab subscription health banner (Pen section 23). `state` is the
+// normalized store state the backend reported: in_grace | on_hold | paused | pending.
+export function trackSubscriptionBannerShown(state: string) {
+  track("subscription_banner_shown", { state });
+}
+
+export function trackSubscriptionBannerCta(state: string) {
+  track("subscription_banner_cta", { state });
+}
+
 // ─── Account ──────────────────────────────────────────────────────────────────
 
 export function trackAccountDeleted() {
