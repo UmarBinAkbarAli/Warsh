@@ -534,15 +534,19 @@ variables added to the Vercel project — no code change.
   **production** Neon database, not a local or staging one. Any command run from
   that directory that writes — `npm run db:seed` above all — writes to production.
   Verify what a script targets before running it.
-- **Duplicate-deployment risk:** the personal `umarbinakbarali` Vercel account holds
-  a second `warsh` project that builds this same repository with its Cron Jobs
-  enabled. It serves no users (Deployment Protection answers 302) but its nightly
-  cron runs still reach Sentry, still fail `P1000` on stale database credentials, and
-  still check in under the shared `apicronreset-streaks` monitor slug — so the
-  canonical job's health is unreadable from that monitor. Confirmed live on
-  2026-09-09: all fourteen cron error events over seven days came from that account,
-  none from `api.warsh.app`. Production is `warshapp-projects`; treat any alert whose
-  `url` tag ends in `-umarbinakbarali.vercel.app` as coming from the duplicate.
+- **Duplicate deployment removed (2026-09-12).** The personal `umarbinakbarali`
+  Vercel account used to hold a second `warsh` project building this repository
+  with Cron Jobs enabled; its nightly runs failed `P1000` on stale database
+  credentials, reached Sentry, and checked in under the shared
+  `apicronreset-streaks` monitor slug, so the canonical job's health was
+  unreadable there. The owner deleted that project. Verified in Sentry the same
+  day: the last event tagged `-umarbinakbarali.vercel.app` is from 2026-09-08,
+  the monitor has three consecutive `Okay` check-ins from `api.warsh.app`
+  (2026-09-09 to 2026-09-11) and its "Cron failure" issue auto-resolved; the
+  three duplicate-origin `PrismaClientKnownRequestError` issues were resolved by
+  hand. The monitor now reflects production alone. Production is
+  `warshapp-projects`; the Vercel CLI and browser session both authenticate as
+  `warshapp`, which cannot see the personal account.
 - **Deploy-drift risk:** `vercel --prod` ships the working tree, not `git HEAD`, so
   any uncommitted local edit reaches production silently. This happened on
   2026-08-29 with the `lib/openai.ts` fix.

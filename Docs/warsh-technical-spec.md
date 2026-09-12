@@ -539,11 +539,12 @@ deploys production.
 
 Two known hazards:
 
-- The personal `umarbinakbarali` Vercel account also holds projects named
-  `warsh`/`warsh-web`/`warsh-site`. Production lives in **`warshapp-projects`**.
-  Confirm the team before changing any Vercel setting; `.vercel/project.json`
-  points at `warshapp-projects` but the CLI may authenticate as the personal
-  account and silently write to the wrong project.
+- Production lives in **`warshapp-projects`**. The personal `umarbinakbarali`
+  Vercel account once held a duplicate `warsh` project that built this repository
+  with its own crons; it was deleted on 2026-09-12. Still confirm the team before
+  changing any Vercel setting (`vercel whoami` should print `warshapp`);
+  `.vercel/project.json` points at `warshapp-projects`, but a CLI authenticated
+  as another account writes silently to whatever project it resolves.
 - `DIRECT_DATABASE_URL` remains scoped to Production *and* Preview at the
   environment level. The `staging`-branch value overrides it, but any other
   preview branch still resolves the production database. Narrow it to Production
