@@ -372,9 +372,14 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    without these changes, silent in release. The fuller plan is
    `Docs/proposals/android-quality-2027-implementation-plan.md`; DEX-optimization
    enforcement begins February 2027.
-7. **Confirm Play Console privacy and deletion URLs** are `https://warsh.app/privacy`
-   and `https://warsh.app/delete-account`. All four public legal routes returned 200
-   on 2026-09-09.
+7. **Play Console privacy and deletion URLs confirmed (2026-09-12).** App content →
+   Privacy policy holds `https://warsh.app/privacy` (last edited 2026-08-19) and the
+   Data safety form's "Delete account URL" holds `https://warsh.app/delete-account`;
+   account-creation methods are declared as username+password and OAuth, which
+   matches the app. All four public legal routes returned 200 on 2026-09-09. Note:
+   the Console is showing an account-level notice, "Ensure your apps are registered
+   for Android developer verification by Sep 30, 2026" — owner action in the
+   Console, not a code change.
 8. **IAP lifecycle: grace period, account hold and pause are handled in code
    (reviewed 2026-09-12); only the live Play exercise remains.** Backend:
    `mapGoogleSubscriptionState` covers every `subscriptionsv2` state, access is
