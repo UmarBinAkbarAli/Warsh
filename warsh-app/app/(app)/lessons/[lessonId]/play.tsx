@@ -998,7 +998,9 @@ export default function LessonPlayScreen() {
 
     return (
       <>
-        <ScrollView style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
+        {/* Keyed so back-to-back matching exercises get a fresh scroller: React would
+            otherwise reuse the native view and open the next one scrolled down. */}
+        <ScrollView key={`matching-${currentExerciseIndex}`} style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
           {pairs.map((pair) => (
             <View key={pair.left} style={styles.matchingRow}>
               <View style={styles.matchingLeft}>{renderMaybeArabic(pair.left, styles.matchingArabic, styles.matchingText)}</View>
@@ -1040,7 +1042,7 @@ export default function LessonPlayScreen() {
 
     return (
       <>
-        <ScrollView style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
+        <ScrollView key={`parse-${currentExerciseIndex}`} style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
           <View style={styles.parseSentence}>
             {tokens.map((token) => (
               <View key={token.word} style={styles.parseToken}>
@@ -1544,7 +1546,9 @@ export default function LessonPlayScreen() {
 
   function renderClose() {
     const chapterBonus = completionResult?.chapterBonusXp ?? 0;
-    const earnedPoints = (completionResult?.xpEarned || lesson?.xpReward || 10) + chapterBonus;
+    // ?? not ||: a server-reported 0 (replay, or a lesson skipped by placement)
+    // must not fall through to the lesson's nominal reward and show "+10".
+    const earnedPoints = (completionResult?.xpEarned ?? lesson?.xpReward ?? 10) + chapterBonus;
     const streak = completionResult?.currentStreak ?? 1;
     const shouldShowStreakCelebration = Boolean(completionResult?.streakCelebration);
     const isSpoken = lesson?.template === "SPOKEN_PHRASES";

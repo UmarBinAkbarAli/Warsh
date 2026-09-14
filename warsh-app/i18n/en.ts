@@ -128,6 +128,7 @@ export const en = {
   "learn.greeting": "Assalamu alaikum, {{name}}",
   "learn.learner": "learner",
   "learn.greetingSubtitle": "A small, steady reading for today.",
+  "learn.streakDay": "{{count}} day",
   "learn.streakDays": "{{count}} days",
   "learn.chapterLesson": "Chapter {{chapter}} · Lesson {{lesson}}",
   "learn.progress": "Current lesson",

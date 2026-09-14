@@ -6,7 +6,7 @@ import * as FileSystem from "expo-file-system/legacy";
 import { ArabicText } from "./ArabicText";
 import { WaveformBars } from "./WaveformBars";
 import { BrandButton } from "./BrandButton";
-import { getMicPermissionStatus, requestMicPermission } from "@services/micPermission";
+import { recheckMicPermission, requestMicPermission } from "@services/micPermission";
 import { WarshPalette, Fonts, WarshAlpha } from "../constants/theme";
 import { useT } from "@i18n/index";
 
@@ -149,7 +149,8 @@ export function ShadowRepeatExercise({ arabic, transliteration, translation, ori
   }
 
   async function handleSpeakPress() {
-    const permStatus = await getMicPermissionStatus();
+    // Ask the OS, not the cache: a revoked grant must re-prompt, not skip the phrase.
+    const permStatus = await recheckMicPermission();
     if (permStatus === "granted") {
       await startRecording();
     } else if (permStatus === "denied_permanent") {

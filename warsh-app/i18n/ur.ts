@@ -125,6 +125,7 @@ export const ur = {
   "learn.greeting": "السلام علیکم، {{name}}",
   "learn.learner": "طالب علم",
   "learn.greetingSubtitle": "آج کے لیے ایک مختصر اور مسلسل مطالعہ۔",
+  "learn.streakDay": "{{count}} دن",
   "learn.streakDays": "{{count}} دن",
   "learn.chapterLesson": "باب {{chapter}} · سبق {{lesson}}",
   "learn.progress": "موجودہ سبق",

@@ -45,7 +45,15 @@ export async function recheckMicPermission(): Promise<MicPermissionStatus> {
       await AsyncStorage.setItem(KEY, "granted");
       return "granted";
     }
-    return getMicPermissionStatus();
+    const stored = await getMicPermissionStatus();
+    if (stored === "granted") {
+      // Android auto-revokes permissions of apps unused for months. A cached
+      // "granted" that the OS no longer honours would make recording throw and
+      // the phrase get skipped with no prompt — ask again instead.
+      await AsyncStorage.setItem(KEY, "not_asked");
+      return "not_asked";
+    }
+    return stored;
   } catch {
     return getMicPermissionStatus();
   }

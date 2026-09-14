@@ -37,6 +37,13 @@ export type ProbeDeps = {
   countLessons: () => Promise<number>;
   /** One media URL a learner would actually load, or null when none exists. */
   sampleMediaUrl: () => Promise<string | null>;
+  /**
+   * Catalogue clips the most recently edited lesson depends on, as the public
+   * URLs /api/audio/catalog redirects to. Word media above is stored in the
+   * database, so it cannot notice R2_PUBLIC_URL pointing at a bucket the
+   * generator never uploaded to; these URLs are built from that variable.
+   */
+  sampleCatalogAudioUrls: () => Promise<string[]>;
   /** HTTP status of a HEAD against that URL. */
   headMedia: (url: string) => Promise<number>;
   /** Round-trips a trivial prompt through the real Noor path; throws when it cannot answer. */
@@ -93,6 +100,19 @@ export async function runProductionProbe(deps: ProbeDeps): Promise<ProbeReport> 
     if (!url) return { ok: false, detail: "no published word carries a media URL" };
     const status = await deps.headMedia(url);
     return { ok: status >= 200 && status < 300, detail: `HEAD ${url} → ${status}` };
+  });
+
+  await check("catalog_audio", async () => {
+    const urls = await deps.sampleCatalogAudioUrls();
+    if (urls.length === 0) return { ok: false, detail: "no lesson carries catalogue audio" };
+    const statuses = await Promise.all(urls.map(async (url) => ({ url, status: await deps.headMedia(url) })));
+    const missing = statuses.filter((s) => s.status < 200 || s.status >= 300);
+    return {
+      ok: missing.length === 0,
+      detail: missing.length === 0
+        ? `${urls.length} clips resolve`
+        : missing.map((m) => `HEAD ${m.url} → ${m.status}`).join("; "),
+    };
   });
 
   await check("noor", async () => {

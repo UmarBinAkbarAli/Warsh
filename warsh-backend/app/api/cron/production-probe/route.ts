@@ -5,11 +5,13 @@ import { timingSafeStringEqual } from "../../../../lib/auth";
 import { withDbRetry } from "../../../../lib/dbRetry";
 import { getAssistantReply } from "../../../../lib/openai";
 import { runProductionProbe } from "../../../../lib/productionProbe";
+import { catalogAudioUrl } from "../../../../lib/audioCatalog";
+import { lessonAudioTargets } from "../../../../lib/audioTargets";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-// Five database reads with a cold-Neon retry budget, one HEAD against R2 and one
+// Six database reads with a cold-Neon retry budget, a few HEADs against R2 and one
 // real OpenAI completion — comfortably inside a minute, far outside the default.
 export const maxDuration = 60;
 
@@ -44,6 +46,19 @@ export async function GET(request: Request) {
         }),
       );
       return word?.audioUrl ?? null;
+    },
+    sampleCatalogAudioUrls: async () => {
+      // The newest edit is the clip most likely to be missing from the bucket.
+      const lesson = await withDbRetry("probe/catalog", () =>
+        prisma.lesson.findFirst({
+          where: { status: "PUBLISHED" },
+          orderBy: { updatedAt: "desc" },
+          select: { content: true },
+        }),
+      );
+      return lessonAudioTargets(lesson?.content)
+        .slice(0, 5)
+        .map((target) => catalogAudioUrl(target.text));
     },
     headMedia: async (url) => {
       const response = await fetch(url, { method: "HEAD", cache: "no-store" });

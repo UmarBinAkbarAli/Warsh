@@ -31,6 +31,8 @@ export function exerciseAudioText(exercise: AnyRecord): string | undefined {
       return exercise.direction === "en_to_ar" ? undefined : exercise.prompt?.ar;
     case "TRUE_FALSE": return exercise.statement?.ar_example?.ar;
     case "FILL_BLANK": return exercise.sentence_ar;
+    // The whole exercise is the clip: without it the learner can only guess.
+    case "AUDIO_RECOGNITION": return exercise.arabic_text;
     case "SHADOW_REPEAT": return exercise.phrase?.ar;
     case "HARAKAH_PLACEMENT": return exercise.word_unvowelled;
     case "IDENTIFY_ROOT": return exercise.word?.ar;

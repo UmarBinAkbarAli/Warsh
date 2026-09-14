@@ -116,7 +116,9 @@ export async function POST(request: Request, { params }: Props) {
   ]);
 
   const existingStatus = existingProgress?.status || (existingProgress?.completed ? PROGRESS_STATUS.COMPLETED : PROGRESS_STATUS.NOT_STARTED);
-  const firstCompletion = existingStatus === PROGRESS_STATUS.NOT_STARTED;
+  // A lesson skipped by placement has never been completed, so coming back to
+  // it earns the reward like any first completion; only a real replay earns 0.
+  const firstCompletion = existingStatus !== PROGRESS_STATUS.COMPLETED;
   const baseXp = lesson.xpReward;
   const perfectBonus = score === 100 && firstCompletion ? 5 : 0;
   const xpEarned = firstCompletion ? baseXp + perfectBonus : 0;

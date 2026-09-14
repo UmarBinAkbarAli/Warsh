@@ -660,11 +660,11 @@ export default function HomeScreen() {
             onPress={() => router.push("/(app)/streak-detail")}
             activeOpacity={0.78}
             accessibilityRole="button"
-            accessibilityLabel={t("learn.streakDays", { count: currentStreak })}
+            accessibilityLabel={t(currentStreak === 1 ? "learn.streakDay" : "learn.streakDays", { count: currentStreak })}
           >
             <Ionicons name="flame-outline" size={17} color={WarshPalette.goldDeep} />
             <Text style={styles.streakText}>
-              {t("learn.streakDays", { count: currentStreak })}
+              {t(currentStreak === 1 ? "learn.streakDay" : "learn.streakDays", { count: currentStreak })}
             </Text>
           </TouchableOpacity>
         </View>
@@ -766,7 +766,7 @@ export default function HomeScreen() {
             </View>
             <View style={styles.goalContentRow}>
               <View style={styles.goalCopy}>
-                <Text style={styles.goalValue}>
+                <Text style={styles.goalValue} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.75}>
                   {dailyGoalMet ? t("learn.goalCompleteShort") : t("learn.oneLesson")}
                 </Text>
                 <Text style={styles.goalHint} numberOfLines={2}>

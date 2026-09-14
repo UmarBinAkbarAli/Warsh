@@ -15,6 +15,7 @@ function healthyDeps(overrides: Partial<ProbeDeps> = {}): ProbeDeps {
     countPublishedSurahs: async () => 12,
     countLessons: async () => 411,
     sampleMediaUrl: async () => "https://assets.warsh.app/audio/words/abc.mp3",
+    sampleCatalogAudioUrls: async () => ["https://assets.warsh.app/audio/catalog/v1/abc.mp3"],
     headMedia: async () => 200,
     askNoor: async () => "ready",
     ...overrides,
@@ -25,7 +26,7 @@ test("a healthy production passes every check", async () => {
   const report = await runProductionProbe(healthyDeps());
   assert.equal(report.ok, true);
   assert.deepEqual(report.failures, []);
-  assert.equal(report.checks.length, 6);
+  assert.equal(report.checks.length, 7);
 });
 
 test("all vocabulary words left DRAFT fails the words and Core 500 checks", async () => {
@@ -57,7 +58,7 @@ test("Noor unable to answer fails the probe without hiding the other checks", as
     }),
   );
   assert.equal(report.ok, false);
-  assert.equal(report.checks.length, 6);
+  assert.equal(report.checks.length, 7);
   assert.deepEqual(report.failures, ["noor: threw: Noor assistant unavailable: provider_error"]);
 });
 
@@ -89,7 +90,7 @@ test("a database that cannot be reached fails the affected checks, not the run",
     healthyDeps({ countPublishedWords: unreachable, countLessons: unreachable }),
   );
   assert.equal(report.ok, false);
-  assert.equal(report.checks.length, 6);
+  assert.equal(report.checks.length, 7);
   assert.deepEqual(
     report.checks.filter((c) => !c.ok).map((c) => c.name),
     ["published_words", "lessons"],
@@ -106,4 +107,17 @@ test("thresholds are floors, so ordinary editing never trips them", async () => 
     }),
   );
   assert.equal(report.ok, true);
+});
+
+test("a catalogue clip missing from the redirect host fails the probe", async () => {
+  // 2026-09-14: R2_PUBLIC_URL pointed at the Warsh bucket while every local
+  // upload since 2026-08-13 had gone to the old one, so 34 lesson clips 404ed on
+  // a real phone with no error anywhere. Word media (stored URLs) still passed.
+  const report = await runProductionProbe(
+    healthyDeps({
+      headMedia: async (url) => (url.includes("/audio/catalog/") ? 404 : 200),
+    }),
+  );
+  assert.equal(report.ok, false);
+  assert.deepEqual(report.checks.filter((c) => !c.ok).map((c) => c.name), ["catalog_audio"]);
 });
