@@ -96,14 +96,15 @@ files remain release evidence.
   - Cloudflare — the only R2 bucket is in the Warsh account (`f1a41ae5…`); the
     personal account's bucket was deleted the same day.
   - Sentry — org `umar-bin-akbar-ali` (a display slug only): `trywarshapp` is the
-    sole member and Owner; projects `warsh-backend` and `warsh-mobile`. 2FA is
-    **not** enabled.
+    sole member and Owner; projects `warsh-backend` and `warsh-mobile`. 2FA
+    enabled by the owner 2026-09-14.
   - Resend — team `trywarshapp`: sole member, Admin, MFA on; `warsh.app` verified.
-  - Mixpanel — org "Camera Lens World" (a leftover name from another project):
-    `trywarshapp` sole Owner; projects `warsh - production` (4026851) and
-    `warsh - Dev`, plus an unrelated `CLW-Project`. 2FA not set up.
+  - Mixpanel — org "Warsh" (renamed from the leftover "Camera Lens World" on
+    2026-09-14): `trywarshapp` sole Owner; projects `warsh - production`
+    (4026851) and `warsh - Dev`, plus an unrelated `CLW-Project`. 2FA enabled by
+    the owner 2026-09-14.
   - Expo — org `warshapp`: `trywarshapp` Owner, personal Admin; project "Warsh"
-    lives there. No 2FA on either account. Android signing is local
+    lives there. 2FA enabled by the owner 2026-09-14. Android signing is local
     (`WARSH_UPLOAD_*`), not in EAS.
   - Domain `warsh.app` — nameservers are `registrar-servers.com`, i.e. Namecheap
     holds registration and DNS. **Owner decision 2026-09-14: it stays in the
@@ -111,9 +112,8 @@ files remain release evidence.
     pending transfer item; revisit only if a Warsh-owned registrar account is
     ever created.
   - Personal-only by design: OpenAI (see above) and Namecheap.
-  **The ownership-transfer verification is complete.**
-  Recommended follow-up, all owner-side: enable 2FA on `trywarshapp@gmail.com` at
-  Sentry, Mixpanel and Expo; rename the Mixpanel org.
+  **The ownership-transfer verification is complete**, and its follow-ups (2FA
+  at Sentry, Mixpanel and Expo; Mixpanel org renamed) are done.
 - **Found during the sweep: the Play build reports nothing to Sentry or Mixpanel.**
   `warsh - production` in Mixpanel has 0 events lifetime, and `warsh-mobile` in
   Sentry last heard from release 1.0.7 (29) on 2026-08-22. Inspecting the built
