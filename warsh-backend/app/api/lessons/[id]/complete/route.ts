@@ -195,14 +195,17 @@ export async function POST(request: Request, { params }: Props) {
       await tx.user.update({ where: { id: userId }, data: { xp: { increment: 50 } } });
     }
 
-    // Seed chapter vocabulary into the user's word bank
+    // Seed chapter vocabulary into the user's word bank. Core 500 words are
+    // excluded: they carry chapterIntroduced = 1 only because the column is not
+    // nullable, and they enter the bank through their own set-complete route.
+    // Without the filter one Chapter 1 lesson banked 511 "words learned".
     const chapter = await tx.chapter.findUnique({
       where: { id: lesson.chapterId },
       select: { order: true },
     });
     if (chapter) {
       const chapterWords = await tx.vocabularyWord.findMany({
-        where: { chapterIntroduced: chapter.order },
+        where: { chapterIntroduced: chapter.order, coreSetNumber: null },
         select: { id: true },
       });
       if (chapterWords.length > 0) {
