@@ -138,6 +138,28 @@ if (!bundle.includes(EXPECTED_API_URL)) {
   failures.push(`bundle does not contain the production API URL: ${EXPECTED_API_URL}`);
 }
 
+// A release without these is silent, not broken: no crash report and no
+// analytics event ever leaves a device, and nothing on the backend notices.
+// 1.0.9 shipped that way. The values live in the gitignored
+// warsh-app/.env.release; the exact strings must appear in the bundle.
+const releaseEnvPath = resolve(process.cwd(), ".env.release");
+if (!existsSync(releaseEnvPath)) {
+  failures.push("warsh-app/.env.release is missing, so the Sentry DSN and Mixpanel token cannot be verified");
+} else {
+  const releaseEnv = Object.fromEntries(
+    readFileSync(releaseEnvPath, "utf8")
+      .split(/\r?\n/)
+      .map((line) => line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/))
+      .filter(Boolean)
+      .map(([, key, value]) => [key, value]),
+  );
+  for (const key of ["EXPO_PUBLIC_SENTRY_DSN", "EXPO_PUBLIC_MIXPANEL_TOKEN"]) {
+    const value = releaseEnv[key];
+    if (!value) failures.push(`${key} is not defined in warsh-app/.env.release`);
+    else if (!bundle.includes(value)) failures.push(`bundle does not contain ${key} (it was not exported before the build)`);
+  }
+}
+
 if (failures.length > 0) {
   console.error("RELEASE API URL CHECK FAILED");
   console.error(`Archive: ${archivePath}`);
@@ -147,6 +169,7 @@ if (failures.length > 0) {
   console.error("Rebuild with the production values exported, e.g.:");
   console.error('  $env:EXPO_PUBLIC_API_URL = "https://api.warsh.app"');
   console.error('  $env:EXPO_PUBLIC_ENVIRONMENT = "production"');
+  console.error("  plus EXPO_PUBLIC_SENTRY_DSN and EXPO_PUBLIC_MIXPANEL_TOKEN from warsh-app/.env.release");
   process.exit(1);
 }
 

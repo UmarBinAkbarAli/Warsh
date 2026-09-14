@@ -88,6 +88,45 @@ files remain release evidence.
   Sign-In OAuth client is owned by `warsh-production`, and an OAuth client cannot
   move between projects without a new client ID that every installed APK would fail
   against.
+- **Non-Google services verified in each console (2026-09-14):**
+  - Vercel — team `warshapp-projects`, Hobby: `trywarshapp@gmail.com` is the sole
+    member and Owner. `warsh.app` is listed there as "Third Party" (registered
+    elsewhere).
+  - Neon — org "Warsh" (Free): `trywarshapp` Admin, personal account Editor.
+  - Cloudflare — the only R2 bucket is in the Warsh account (`f1a41ae5…`); the
+    personal account's bucket was deleted the same day.
+  - Sentry — org `umar-bin-akbar-ali` (a display slug only): `trywarshapp` is the
+    sole member and Owner; projects `warsh-backend` and `warsh-mobile`. 2FA is
+    **not** enabled.
+  - Resend — team `trywarshapp`: sole member, Admin, MFA on; `warsh.app` verified.
+  - Mixpanel — org "Camera Lens World" (a leftover name from another project):
+    `trywarshapp` sole Owner; projects `warsh - production` (4026851) and
+    `warsh - Dev`, plus an unrelated `CLW-Project`. 2FA not set up.
+  - Expo — org `warshapp`: `trywarshapp` Owner, personal Admin; project "Warsh"
+    lives there. No 2FA on either account. Android signing is local
+    (`WARSH_UPLOAD_*`), not in EAS.
+  - Domain `warsh.app` — nameservers are `registrar-servers.com`, i.e. Namecheap
+    holds registration and DNS. **Which Namecheap account owns it is not yet
+    verified** (console not reachable from the automation session).
+  - Still personal-only by design: OpenAI (see above).
+  Recommended follow-up, all owner-side: enable 2FA on `trywarshapp@gmail.com` at
+  Sentry, Mixpanel and Expo; rename the Mixpanel org.
+- **Found during the sweep: the Play build reports nothing to Sentry or Mixpanel.**
+  `warsh - production` in Mixpanel has 0 events lifetime, and `warsh-mobile` in
+  Sentry last heard from release 1.0.7 (29) on 2026-08-22. Inspecting the built
+  artifacts proved it: neither the Sep 12 AAB (1.0.9) nor the Sep 14 APK contains
+  a Sentry DSN or the Mixpanel token. `eas.json`, `start-warsh.ps1` and the
+  AGENTS.md recipe export API URL, environment and the Google client ID — never
+  `EXPO_PUBLIC_SENTRY_DSN` or `EXPO_PUBLIC_MIXPANEL_TOKEN` — and `warsh-app/.env`
+  holds both blank (an interrupted Jul 24 build left the only copy in
+  `.env.warsh-release-backup-38232`). So the app's crash reporting and analytics
+  have been silently off in production; the backend's Sentry is unaffected.
+  Fixed for the next build: the two client keys now live in the gitignored
+  `warsh-app/.env.release`, `start-warsh.ps1` exports them (and refuses to build
+  without the file), the AGENTS.md recipe does the same, and
+  `verify:release-api-url` fails any bundle that does not contain the exact
+  values — it fails on the current 1.0.9 AAB, as it should. Ships with the next
+  Play upload.
 
 ## Implemented in code
 

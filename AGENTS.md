@@ -235,6 +235,12 @@ cd warsh-app\android
 $env:JAVA_HOME = "C:\Program Files\Eclipse Adoptium\jdk-17.0.19.10-hotspot"
 $env:EXPO_PUBLIC_API_URL = "https://api.warsh.app"
 $env:EXPO_PUBLIC_ENVIRONMENT = "production"
+# Sentry DSN + Mixpanel token come from the gitignored warsh-app/.env.release
+# (client keys, not secrets). 1.0.9 shipped with neither, so no crash report or
+# analytics event ever left a production device; the verifier below now fails a
+# bundle that lacks them.
+Get-Content ..\.env.release | Where-Object { $_ -match "^(EXPO_PUBLIC_[A-Z_]+)=(.+)$" } |
+  ForEach-Object { Set-Item -Path "env:$($Matches[1])" -Value $Matches[2] }
 $env:SENTRY_DISABLE_AUTO_UPLOAD = "true"
 $env:SENTRY_DISABLE_NATIVE_DEBUG_UPLOAD = "true"
 .\gradlew bundleRelease --console=plain   # or assembleRelease for an APK
@@ -270,8 +276,9 @@ cd ..\warsh-app
 npm run lint -- --quiet
 npx tsc --noEmit
 
-npm run verify:release-api-url    # asserts https://api.warsh.app is baked in
-                                  # and no localhost/LAN URL survives
+npm run verify:release-api-url    # asserts https://api.warsh.app is baked in,
+                                  # no localhost/LAN URL survives, and the Sentry
+                                  # DSN + Mixpanel token from .env.release are present
 npm run verify:play-signing       # asserts the Play upload certificate
 ```
 

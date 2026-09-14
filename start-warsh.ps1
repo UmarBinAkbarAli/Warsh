@@ -84,6 +84,25 @@ if (-not $dev -and -not $prod) {
             throw 'The production Google web client ID is missing from warsh-app/eas.json.'
         }
         $env:EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID = $googleWebClientId
+
+        # Sentry DSN and Mixpanel token live only in the gitignored
+        # warsh-app/.env.release. Without them a release build is silent:
+        # 1.0.9 shipped to Play with neither, so no crash nor analytics event
+        # ever left a production device (found 2026-09-14).
+        $releaseEnvPath = Join-Path $appRoot '.env.release'
+        if (-not (Test-Path -LiteralPath $releaseEnvPath)) {
+            throw "warsh-app/.env.release is missing; it must define EXPO_PUBLIC_SENTRY_DSN and EXPO_PUBLIC_MIXPANEL_TOKEN."
+        }
+        $releaseEnv = @{}
+        foreach ($line in Get-Content -LiteralPath $releaseEnvPath) {
+            if ($line -match '^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$') { $releaseEnv[$Matches[1]] = $Matches[2] }
+        }
+        foreach ($name in @('EXPO_PUBLIC_SENTRY_DSN', 'EXPO_PUBLIC_MIXPANEL_TOKEN')) {
+            if ([string]::IsNullOrWhiteSpace($releaseEnv[$name])) {
+                throw "warsh-app/.env.release does not define $name."
+            }
+            Set-Item -Path "env:$name" -Value $releaseEnv[$name]
+        }
         $env:SENTRY_DISABLE_AUTO_UPLOAD = 'true'
         $env:SENTRY_DISABLE_NATIVE_DEBUG_UPLOAD = 'true'
 
