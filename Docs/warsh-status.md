@@ -299,10 +299,28 @@ files remain release evidence.
    future uploads land where production reads. Nothing was deleted from the
    personal bucket; it is no longer referenced and can be retired whenever the
    owner chooses (its API token was replaced, so this machine can no longer list
-   it — a full listing needs the owner's old token or the dashboard). The
-   Warsh bucket also still holds unreferenced objects (e.g. 1,775 word audio
-   files for 920 words); `media:prune-orphans` can clean those in a separate,
-   deliberate step.
+   it — a full listing needs the owner's old token or the dashboard).
+7. **Warsh bucket pruned to 170 MB (2026-09-14, owner target: stay well under
+   the R2 free tier).** Before: 8,665 objects, 1,325 MB, of which only 4,440
+   objects / 168 MB were referenced by any DB column, fixture, or catalogue key.
+   Deleted 4,082 objects (1,154 MB): 1,237 stale-id word images (824 MB, from
+   pre-seed generations), 595 raw 1–2 MB `images/discover/*.png` mirrors (268 MB)
+   that `images:upload` wrote but nothing read — the live Discover refs are the
+   23 `.webp` — 475 May-2026 beta octagon cards (36 MB), and 1,775 stale-id word
+   clips (26 MB). Every deleted image was first proven byte-identical (MD5 =
+   R2 ETag) to a file under `warsh-backend/exports/image-tests/` (the 738
+   transparent PNG originals, 944 MB, plus `card-calligraphy-upload-ready/`),
+   except 180 small re-encoded word JPGs that were downloaded to
+   `exports/r2-words-orphans-2026-09-14/` (15 MB) before deletion. After: 4,583
+   objects, 170.5 MB; all 4,440 referenced keys still listed and every word
+   image/audio URL (1,164) HEADs 200. Left alone on purpose: 125 catalogue
+   clips + 17 vocab clips (2.4 MB) no current lesson text hashes to, because
+   `/api/audio/catalog` serves any text by hash. `images:upload` no longer
+   mirrors to `images/discover/` and refuses a source over 200 KB, so re-running
+   it against the raw originals cannot re-inflate the bucket.
+   The high-quality originals live only on this machine (`exports/` is
+   gitignored) — they are the source for any future re-upload, and must never go
+   into R2 uncompressed.
 
 7. **Register-then-login through the soft keyboard: verified, no mismatch
    (2026-09-11).** The 2026-08-29 suspicion (an account registered via synthetic
@@ -565,7 +583,14 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    `exports/image-tests-compressed`; it matches a source file to a word by
    `transliteration` and covered 582 words. The remaining 338 have no source file at
    all and render without one, and 47 source files match no word. Decide whether the
-   gap is filled, and with what.
+   gap is filled, and with what. Checked again 2026-09-14 after the R2 prune: all 582
+   links resolve; no earlier bucket generation held an image for any of the 338
+   (every old object was a re-encode of a local source). Twelve of the 338 share an
+   ASCII slug with a source file for a *different* word (nahar day/river, shay
+   tea/thing, alim scholar/painful, …) and are correctly left blank. Three are
+   duplicate entries of a word that does have an image — `jā'a` (he came) vs
+   `jāʾa` (to come), `qāma` ×2, `ātā` (to give) vs `a'ṭā` (he gave) — and could
+   reuse the twin's illustration if the owner wants; not done, content decision.
 2. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
    types and book transitions.
 3. **Token reconciliation done (2026-09-12).** Every colour literal outside

@@ -7,9 +7,16 @@
  *   (The old CSV-based approach broke after every db:seed run because seed
  *    deletes+recreates vocabulary words with new IDs each time.)
  *
- * For each match the image is uploaded to TWO R2 paths:
- *   1. images/words/{wordId}.jpg  →  VocabularyWord.imageUrl saved to DB
- *   2. images/discover/{slug}.png →  fixture image_url refs resolve automatically
+ * For each match the image is uploaded to images/words/{wordId}.jpg and
+ * VocabularyWord.imageUrl is saved to the DB.
+ *
+ * It no longer mirrors sources to images/discover/{slug}.png: Discover cards
+ * reference hand-placed .webp objects, nothing ever read the .png mirror, and
+ * 595 raw 1–2 MB copies of it were 20% of the bucket before the 2026-09-14 prune.
+ *
+ * Point it at the compressed set (exports/image-tests-compressed or
+ * VOCAB_IMAGE_SOURCE_DIR). A source over MAX_SOURCE_BYTES is refused so the raw
+ * 944 MB originals cannot be uploaded by accident; the bucket must stay small.
  *
  * Usage (from warsh-backend/):
  *   npx tsx scripts/upload-vocab-images.ts [--dry-run] [--skip-existing]
@@ -26,11 +33,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
-import {
-  uploadImageToR2,
-  vocabWordImageKey,
-  discoverImageKey,
-} from "../lib/r2";
+import { uploadImageToR2, vocabWordImageKey } from "../lib/r2";
 
 // ---------------------------------------------------------------------------
 // Config
@@ -40,6 +43,9 @@ const DRY_RUN        = process.argv.includes("--dry-run");
 const SKIP_EXISTING  = process.argv.includes("--skip-existing");
 const ONLY_FILE      = process.argv.find((arg) => arg.startsWith("--file="))?.slice("--file=".length);
 const DISCOVER_ONLY_FILES = new Set(["ma-what-transparent.png"]);
+// Word illustrations ship at 768px / ≤100 KB; anything larger is an uncompressed
+// original and belongs on disk, not in R2.
+const MAX_SOURCE_BYTES = 200 * 1024;
 
 const BATCHES_DIR = process.env.VOCAB_IMAGE_SOURCE_DIR
   ? path.resolve(process.env.VOCAB_IMAGE_SOURCE_DIR)
@@ -132,7 +138,6 @@ async function main() {
   let skipped   = 0;
   let unmatched = 0;
   let errors    = 0;
-  let discoverOnly = 0;
   const unmatchedFiles: string[] = [];
 
   for (const imgPath of imagePaths) {
@@ -156,22 +161,8 @@ async function main() {
 
     if (!candidates || candidates.length === 0) {
       // No vocabulary word for this slug (e.g. particles/demonstratives like
-      // hadha/dhalika/ma/man), but a discover card may still reference
-      // images/discover/{slug}.png — so upload the discover image anyway.
-      const discoverKey = discoverImageKey(fileSlug);
-      if (DRY_RUN) {
-        console.log(`  [DRY]  ${path.basename(imgPath)} (no vocab word) → discover: ${discoverKey}`);
-        discoverOnly++;
-      } else {
-        try {
-          await uploadImageToR2(discoverKey, fs.readFileSync(imgPath));
-          discoverOnly++;
-          console.log(`  [DISC] ${path.basename(imgPath)} → ${discoverKey} (no vocab word)`);
-        } catch (err) {
-          errors++;
-          console.error(`  [FAIL] ${path.basename(imgPath)} → ${discoverKey}: ${err instanceof Error ? err.message : err}`);
-        }
-      }
+      // hadha/dhalika/ma/man). Nothing to upload: Discover cards no longer
+      // resolve images by slug.
       unmatched++;
       unmatchedFiles.push(path.basename(imgPath));
       continue;
@@ -191,13 +182,19 @@ async function main() {
         continue;
       }
 
-      const wordKey    = vocabWordImageKey(word.id);
-      const discoverKey = discoverImageKey(fileSlug);
+      const wordKey = vocabWordImageKey(word.id);
+      const sourceBytes = fs.statSync(imgPath).size;
+      if (sourceBytes > MAX_SOURCE_BYTES) {
+        errors++;
+        console.error(
+          `  [FAIL] ${path.basename(imgPath)} is ${Math.round(sourceBytes / 1024)} KB — ` +
+          `over ${MAX_SOURCE_BYTES / 1024} KB; run scripts/compress-images.cjs and upload the compressed copy.`
+        );
+        continue;
+      }
 
       if (DRY_RUN) {
-        console.log(`  [DRY]  ${path.basename(imgPath)}`);
-        console.log(`         → vocab:    ${wordKey}`);
-        console.log(`         → discover: ${discoverKey}`);
+        console.log(`  [DRY]  ${path.basename(imgPath)} → ${wordKey}`);
         uploaded++;
         continue;
       }
@@ -206,7 +203,6 @@ async function main() {
         const imageBuffer = fs.readFileSync(imgPath);
 
         const vocabUrl = await uploadImageToR2(wordKey, imageBuffer);
-        await uploadImageToR2(discoverKey, imageBuffer);
 
         await prisma.vocabularyWord.update({
           where: { id: word.id },
@@ -227,8 +223,7 @@ async function main() {
 
   // 4. Summary
   console.log("\n" + "─".repeat(60));
-  console.log(`Uploaded:   ${uploaded}  (vocab word imageUrl + discover image)`);
-  console.log(`Discover-only: ${discoverOnly}  (no vocab word; discover image uploaded)`);
+  console.log(`Uploaded:   ${uploaded}  (vocab word imageUrl)`);
   console.log(`Skipped:    ${skipped}  (already had imageUrl)`);
   console.log(`Errors:     ${errors}`);
   console.log(`Unmatched:  ${unmatched}  (no DB word found for slug)`);
