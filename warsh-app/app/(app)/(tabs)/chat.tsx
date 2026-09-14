@@ -10,6 +10,7 @@ import { BrandButton } from "@components/BrandButton";
 import { useAuthStore } from "@stores/authStore";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Shadows, Spacing, WarshPalette, WarshAlpha } from "../../../constants/theme";
 import { trackNoorMessageSent } from "@services/analytics";
+import { useTranslationLanguage } from "@services/language";
 import {
   addIapPurchaseListeners,
   connectIap,
@@ -26,12 +27,22 @@ import {
 
 const NOOR_PACK_PRODUCT_ID = "warsh_noor_pack";
 
+/** Prefix prose with a Unicode direction mark so the paragraph direction follows the
+ *  reply language rather than Android's first-strong character. */
+function withDirectionMark(text: string, language: "en" | "ur"): string {
+  // Android resolves direction per paragraph, so the mark has to follow every
+  // line break too, not just open the string.
+  const mark = language === "ur" ? "‏" : "‎";
+  return mark + text.replace(/\n/g, `\n${mark}`);
+}
+
 export default function ChatScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const { width } = useWindowDimensions();
   const desktopWeb = Platform.OS === "web" && width >= 960;
   const user = useAuthStore((state) => state.user);
+  const language = useTranslationLanguage();
   const [messages, setMessages] = useState<any[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(true);
@@ -346,7 +357,20 @@ export default function ChatScreen() {
                 ...Shadows.card,
               }}
             >
-              <Text style={{ color: Colors.text.primary, lineHeight: LineHeights.bodyL }}>{message.content}</Text>
+              {/* Noor often opens an English reply with an Arabic greeting
+                  ("السلام عليكم. How can I help…"); Android's first-strong rule
+                  then lays the whole bubble out right-to-left and strands the
+                  question mark on the left. Same fix as discover prose: a
+                  direction mark for the reply language (`writingDirection` is
+                  iOS-only). The learner's own bubble is left alone. */}
+              <Text
+                style={[
+                  { color: Colors.text.primary, lineHeight: LineHeights.bodyL },
+                  message.role === "ASSISTANT" ? (language === "ur" ? styles.proseRtl : styles.proseLtr) : null,
+                ]}
+              >
+                {message.role === "ASSISTANT" ? withDirectionMark(message.content, language) : message.content}
+              </Text>
             </View>
           ))}
         </ScrollView>
@@ -444,6 +468,14 @@ export default function ChatScreen() {
 }
 
 const styles = StyleSheet.create({
+  proseLtr: {
+    textAlign: "left",
+    writingDirection: "ltr",
+  },
+  proseRtl: {
+    textAlign: "right",
+    writingDirection: "rtl",
+  },
   webColumn: {
     flex: 1,
     width: "100%",

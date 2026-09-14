@@ -89,7 +89,10 @@ function exWrongExpl(ex: RawEx, language: "en" | "ur"): string | undefined {
 /** Prefix prose with a Unicode direction mark so the paragraph direction follows the
  *  meaning language rather than whichever script happens to come first. */
 function withDirectionMark(text: string, language: "en" | "ur"): string {
-  return (language === "ur" ? "‏" : "‎") + text;
+  // Android resolves direction per paragraph, so the mark has to follow every
+  // line break too, not just open the string.
+  const mark = language === "ur" ? "‏" : "‎";
+  return mark + text.replace(/\n/g, `\n${mark}`);
 }
 
 // Extracts just what's needed to prefetch a discover card's image + autoplay audio ahead of time.
