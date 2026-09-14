@@ -263,8 +263,43 @@ files remain release evidence.
    `400 age_check_required`; existing dateless accounts are still prompted on
    next launch. Play distribution stays worldwide (177 countries); revisit
    EU/EEA, South Korea and Vietnam exclusion if EU sign-ups become meaningful.
-5. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
-   `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
+5. **Physical-device QA run (2026-09-14) on a Tecno KF8, Android 11, 720×1600
+   at 320 dpi, the Play-installed 1.0.9, production API, owner account.**
+   `VERB_PATTERN` (ch09-l05) and `AUDIO_RECOGNITION` (ch04-l01) render, grade
+   and complete server-side; `WRITE_ARABIC` and `HARAKAH_PLACEMENT` exist in the
+   schema only — no published lesson uses either, so there is nothing to test
+   until content does. Defects found, all fixed in `17abf0c`: (a) both
+   `AUDIO_RECOGNITION` clips 404 — `lib/audioTargets.ts` had no case for the
+   type, so the generator never made them and content-health never missed them;
+   (b) back-to-back `MATCHING` exercises opened scrolled down with the first card
+   hidden (native ScrollView reused across exercises); (c) the completion screen
+   showed "+10 points" when the server awarded 0, and a lesson skipped by
+   placement earned nothing when completed later; (d) on a 360 dp phone the goal
+   card broke "Complete" mid-word and the streak pill read "1 days". Content
+   observations for the owner's review, not changed: the ch09-l05 conjugation
+   table's Urdu glosses are inconsistent (`آپ (ایم)` / `آپ (f)`, `هِيَ` → "وہ چلا
+   گیا"), and its rows carry per-row `audio_url`s the table never plays; SP1's
+   context screen is almost empty because the scene has no Arabic title or
+   `context_body`. The share card reads "511 words learned" for an account with
+   one lesson done — check what that number counts.
+6. **Production audio lives in two R2 buckets, and the local tooling writes to
+   the wrong one (found 2026-09-14, needs the owner).** Production
+   `R2_PUBLIC_URL` has pointed at the Warsh-owned bucket
+   (`pub-66b79e…r2.dev`) since the 2026-08-13 repoint (`68e365a`, Vercel vars
+   updated the same day), but `warsh-backend/.env` still holds the personal
+   bucket (`pub-3da71e…`), so every upload since — `images:upload` and
+   `audio:prebuild-catalog:db` on 2026-09-10, the discover-image compression in
+   `b6efb75`, today's clip — landed in the old bucket. Measured: 34 of the 2,633
+   catalogue clips published lessons need are 404 on the production host
+   (Chapters 1–4 included, list in the session log), while all 920 word images
+   and word audio URLs in the database, and 32 discover-image URLs in fixtures,
+   point at the personal bucket. The app works only because both buckets are
+   still public. The probe now HEADs catalogue URLs built from `R2_PUBLIC_URL`
+   so this class of drift alerts. To close: put the Warsh bucket's R2
+   credentials, bucket name and public URL into the local `.env` (owner holds
+   them), re-run `audio:prebuild-catalog:db` (uploads only the missing 34),
+   `images:upload` and `audio:prebuild-catalog` for words, re-point the 32
+   fixture URLs, and `content:sync`; then the personal bucket can be retired.
 6. **Scholar/content review** — establish a review process for Quranic Arabic
    accuracy, ayah relevance, pedagogy, repetition, and pacing.
 7. **Register-then-login through the soft keyboard: verified, no mismatch
@@ -362,11 +397,20 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    and `ur.ts` (ships with the next build). Not covered: whether OpenAI, Mixpanel
    or Sentry retain anything server-side after deletion; that is a policy
    disclosure, not a Warsh deletion step.
-5. **Physical-device QA never run for:** microphone/speaking exercises (the full
-   `SPOKEN_PHRASES` record → compare → done loop was exercised on the emulator on
-   2026-09-11, so only real-hardware mic behaviour remains), notification
-   permission + scheduling + delivery, and Android sharing to a controlled test
-   destination.
+5. **Physical-device mic, notifications and sharing verified (2026-09-14, same
+   Tecno KF8 run as P0 #5 above).** Mic: the SP1 record → level meter → playback
+   → compare → done loop works on real hardware. One defect fixed (`17abf0c`):
+   Android 11 had auto-revoked `RECORD_AUDIO`, the app trusted its cached
+   "granted" flag, `startRecording()` threw and Speak skipped the phrase with no
+   prompt; it now asks the OS first and re-prompts. Notifications: no runtime
+   permission on Android 11; `dumpsys alarm` shows the 20:00 daily reminder and
+   09:00 word-of-day alarms scheduled, the expo alarm fired at 09:00 today and
+   yesterday, and `dumpsys notification` records one Warsh post on each day —
+   delivery works. Polish left open: the app never creates a named channel, so
+   Android settings list it as "Miscellaneous", and the reminder copy is English
+   for Urdu users. Sharing: the system chooser opened with the rendered stats
+   card previewed (the FileProvider URI resolves from another process); not sent
+   to any contact.
 6. **Android 15 edge-to-edge: Play warning traced to dependencies; three real
    inset defects fixed (2026-09-11, ships with the next build).** Play's
    "deprecated APIs or parameters for edge-to-edge" recommendation on release 32
@@ -643,6 +687,9 @@ variables added to the Vercel project — no code change.
 - **Cron reliability risk:** Neon suspends its compute overnight, so the 04:00/05:00
   PKT crons can hit a sleeping database and die with `P1000`. Half of August's
   streak resets never ran.
+- **Bucket-split risk:** production reads catalogue audio from the Warsh R2
+  bucket but the local tooling uploads to the personal one (P0 #6 above); until
+  the local `.env` is repointed, every media regeneration widens the gap.
 - **Asset risk:** illustration coverage is 582 of 920 published words (2026-09-10).
   The gap is concentrated in the Core 500 — 179 of 500 — because the artwork was
   drawn for the curriculum vocabulary, and particles like `مِن` and `أَنَّ` have no
