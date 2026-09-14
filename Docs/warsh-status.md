@@ -106,9 +106,12 @@ files remain release evidence.
     lives there. No 2FA on either account. Android signing is local
     (`WARSH_UPLOAD_*`), not in EAS.
   - Domain `warsh.app` — nameservers are `registrar-servers.com`, i.e. Namecheap
-    holds registration and DNS. **Which Namecheap account owns it is not yet
-    verified** (console not reachable from the automation session).
-  - Still personal-only by design: OpenAI (see above).
+    holds registration and DNS. **Owner decision 2026-09-14: it stays in the
+    personal Namecheap account, a deliberate exception like OpenAI.** Not a
+    pending transfer item; revisit only if a Warsh-owned registrar account is
+    ever created.
+  - Personal-only by design: OpenAI (see above) and Namecheap.
+  **The ownership-transfer verification is complete.**
   Recommended follow-up, all owner-side: enable 2FA on `trywarshapp@gmail.com` at
   Sentry, Mixpanel and Expo; rename the Mixpanel org.
 - **Found during the sweep: the Play build reports nothing to Sentry or Mixpanel.**
