@@ -161,10 +161,17 @@ function getAndroidSubscriptionOffer(product: IapSubscription | undefined, baseP
   return [{ sku: product.id, offerToken: offer.offerTokenAndroid }];
 }
 
-// Google Play Billing numeric replacement mode. WITH_TIME_PRORATION switches the
-// plan immediately and credits unused time; it is valid for both upgrades and
-// downgrades and always emits a completed transaction we can verify.
-const REPLACEMENT_MODE_WITH_TIME_PRORATION = 1;
+// Google Play Billing numeric replacement mode (BillingFlowParams
+// .SubscriptionUpdateParams.ReplacementMode). Monthly and yearly are base plans
+// of the SAME subscription product, and for a switch within one subscription
+// Play accepts only CHARGE_FULL_PRICE (5) and WITHOUT_PRORATION (3) — any other
+// mode fails the flow with DEVELOPER_ERROR "Invalid arguments provided to the
+// API" before the Play sheet even opens. WITH_TIME_PRORATION (1) did exactly
+// that on the 2026-09-14 lifecycle run, so plan switching had never worked.
+// WITHOUT_PRORATION starts the new plan at the next billing date with no
+// immediate charge, which is also the base plans' Console default ("Charge at
+// next billing date"), so the app and the Play Store switch behave alike.
+const REPLACEMENT_MODE_WITHOUT_PRORATION = 3;
 
 export class IapOfferUnavailableError extends Error {
   code = "offer_unavailable";
@@ -288,7 +295,7 @@ export async function requestSubscriptionPlanChange(
         // Passing the existing purchase token turns this into a plan change on the
         // same subscription rather than a new, duplicate subscription.
         purchaseToken: oldPurchaseToken,
-        replacementMode: REPLACEMENT_MODE_WITH_TIME_PRORATION,
+        replacementMode: REPLACEMENT_MODE_WITHOUT_PRORATION,
         obfuscatedAccountId,
       },
     },
