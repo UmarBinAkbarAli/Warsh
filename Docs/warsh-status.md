@@ -651,7 +651,12 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    `jāʾa` (to come), `qāma` ×2, `ātā` (to give) vs `a'ṭā` (he gave) — and could
    reuse the twin's illustration — done 2026-09-14 on the owner's instruction
    (object copied to the word's own key, all three HEAD 200), so coverage is
-   585 of 920.
+   585 of 920. **Owner is drawing the rest (2026-09-14):** the full list — 335
+   words, 16 curriculum + 319 Core 500, with an exact filename per word and the
+   database id — is `Docs/vocabulary-illustrations-needed.md` (+ `.csv`). When
+   the PNGs arrive: compress with `scripts/compress-images.cjs` to the ≤100 KB
+   set, upload keyed by the CSV's `word_id` (not by slug matching — two pairs
+   share a slug and meaning), HEAD every new URL, then update this count.
 2. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
    types and book transitions.
 3. **Token reconciliation done (2026-09-12).** Every colour literal outside
