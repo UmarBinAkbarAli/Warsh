@@ -72,12 +72,13 @@ export function isMinor(dateOfBirth: Date | null | undefined, now = new Date()):
 
 /**
  * Builds with the age-check step send `X-Warsh-App-Version`. Older installs
- * (≤ 1.0.8) cannot supply a date of birth, and refusing them would break every
- * new sign-up on a build that is still rolling out on Play. They are allowed
- * through without one and are prompted in-app after they update. Flip this to
- * `false` once 1.0.8 is no longer a supported build.
+ * (≤ 1.0.8) cannot supply a date of birth. While 1.0.8 was still the live Play
+ * build they were allowed through without one and prompted in-app after
+ * updating; 1.0.9 replaced it on 2026-09-12, so a sign-up without a date is now
+ * refused with `400 age_check_required` regardless of client. Existing
+ * dateless accounts are still prompted on next launch via `PATCH /api/users/me`.
  */
-export const ALLOW_LEGACY_SIGNUP_WITHOUT_DOB = true;
+export const ALLOW_LEGACY_SIGNUP_WITHOUT_DOB = false;
 
 export function isLegacyClient(request: Request): boolean {
   return !request.headers.get("x-warsh-app-version");

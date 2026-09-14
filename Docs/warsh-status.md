@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-09-12
+**Last verified:** 2026-09-14
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
@@ -36,10 +36,11 @@ files remain release evidence.
 - The Android app is live in full **Production** on Google Play as of 2026-08-26
   (confirmed live in Play Console via browser automation on 2026-08-27). It is
   publicly discoverable and installable by anyone.
-- **Version 1.0.9 (versionCode 33) was submitted to Production on 2026-09-12** at a
-  100% rollout and is in Google review. The live build until it is approved is
-  versionCode 32 (1.0.8), which went live on 2026-09-10. 1.0.9 carries every app
-  change since 1.0.8: the neutral age check, the 70% lesson pass mark, the merged
+- **Version 1.0.9 (versionCode 33) is live in Production** — submitted 2026-09-12
+  at a 100% rollout and published by Google the same day (submission #20,
+  confirmed in the Console on 2026-09-14: "Latest release: 33 (1.0.9)", 177
+  countries). It replaced versionCode 32 (1.0.8, live 2026-09-10). 1.0.9 carries
+  every app change since 1.0.8: the neutral age check, the 70% lesson pass mark, the merged
   daily/streak goal, subscription health banners, Android 15 edge-to-edge insets,
   fold/split-screen survival, and the dropped overlay/storage permissions. Play
   reported zero devices lost and 34 → 32 permissions (`SYSTEM_ALERT_WINDOW` and
@@ -239,11 +240,12 @@ files remain release evidence.
    register code path. Fixed 2026-09-11 (`e51801d`): a session whose persisted
    user still had `dateOfBirth: null` after the date was set from another device
    got `409 date_of_birth_locked` and bounced between the tabs and the age check
-   forever; the screen now refreshes the profile before leaving. **Compatibility:** builds without the version header
-   (≤ 1.0.8, still the Play build) may still sign up without a date and are
-   prompted after updating — flip `ALLOW_LEGACY_SIGNUP_WITHOUT_DOB` in
-   `lib/age.ts` once 1.0.8 is retired. Ships in the app with the next Play
-   upload. Play distribution stays worldwide (177 countries); revisit
+   forever; the screen now refreshes the profile before leaving. **Legacy window closed (2026-09-14):** while 1.0.8 was the live
+   build, requests without the version header could sign up without a date.
+   1.0.9 went live on 2026-09-12, so `ALLOW_LEGACY_SIGNUP_WITHOUT_DOB` in
+   `lib/age.ts` is now `false` — every sign-up without a date is refused with
+   `400 age_check_required`; existing dateless accounts are still prompted on
+   next launch. Play distribution stays worldwide (177 countries); revisit
    EU/EEA, South Korea and Vietnam exclusion if EU sign-ups become meaningful.
 5. **Latest-build device QA** — verify `VERB_PATTERN`, `AUDIO_RECOGNITION`,
    `WRITE_ARABIC`, and `HARAKAH_PLACEMENT` on a physical Android device.
@@ -321,8 +323,9 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    All four applied in the Console and submitted for review on 2026-09-11
    (owner-approved): Name added (App functionality, Account management), Other
    info added for date of birth (App functionality, Fraud prevention/security/
-   compliance), Voice or sound recordings removed, OAuth ticked. Play's review
-   typically completes within seven days; check Publishing overview.
+   compliance), Voice or sound recordings removed, OAuth ticked. **Published**
+   (submission #19 "App Content", status Published — confirmed in Submission
+   activity on 2026-09-14). The Data safety form now matches measured behaviour.
 3. **Retention: nothing to enforce (checked 2026-09-12).** The published
    policy (`Docs/privacy-policy.html` §6) commits to no fixed period — records
    are "retained while your account is active" and deleted with the account,
@@ -406,10 +409,13 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    Privacy policy holds `https://warsh.app/privacy` (last edited 2026-08-19) and the
    Data safety form's "Delete account URL" holds `https://warsh.app/delete-account`;
    account-creation methods are declared as username+password and OAuth, which
-   matches the app. All four public legal routes returned 200 on 2026-09-09. Note:
-   the Console is showing an account-level notice, "Ensure your apps are registered
-   for Android developer verification by Sep 30, 2026" — owner action in the
-   Console, not a code change.
+   matches the app. All four public legal routes returned 200 on 2026-09-09. The
+   account-level notice "Ensure your apps are registered for Android developer
+   verification by Sep 30, 2026" needs no action: the Android developer
+   verification page shows `com.warsh.app` **Registered** (2 keys, since
+   2026-05-29) and the Identity tab populated from the developer account
+   (checked 2026-09-14). The notice is Google's blanket reminder to every
+   account.
 8. **IAP lifecycle: grace period, account hold and pause are handled in code
    (reviewed 2026-09-12); only the live Play exercise remains.** Backend:
    `mapGoogleSubscriptionState` covers every `subscriptionsv2` state, access is

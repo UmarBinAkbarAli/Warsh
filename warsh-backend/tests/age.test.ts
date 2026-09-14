@@ -55,8 +55,8 @@ test("evaluateSignupAge refuses a missing date from a current client", () => {
   assert.equal(formatDateOfBirth(ok.kind === "ok" ? ok.dateOfBirth : null), "2011-03-14");
 });
 
-test("evaluateSignupAge lets a legacy client through without a date but never under 13", () => {
+test("evaluateSignupAge no longer lets a legacy client through without a date (1.0.8 retired)", () => {
   const legacy = req();
-  assert.deepEqual(evaluateSignupAge(legacy, undefined, NOW), { kind: "legacy", dateOfBirth: null });
+  assert.deepEqual(evaluateSignupAge(legacy, undefined, NOW), { kind: "missing" });
   assert.deepEqual(evaluateSignupAge(legacy, "2015-01-01", NOW), { kind: "too_young" });
 });
