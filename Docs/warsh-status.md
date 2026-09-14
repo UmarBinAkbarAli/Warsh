@@ -49,6 +49,10 @@ files remain release evidence.
   missing R8 deobfuscation file, expected while Sentry upload is disabled during
   the release build. The APK was smoke-tested on the emulator against the
   production API before upload.
+- **Queued for the next Play upload (committed 2026-09-14, not yet built for
+  Play):** the plan-switch replacement-mode fix, the declined-card purchase
+  copy, and Noor reply bubbles laid out in the reply language (an English
+  reply opening with an Arabic greeting was rendered right-to-left).
 - The Expo application supports `android` and `web`. Four tabs: Learn, Vocabulary,
   Noor, You.
 - The backend is a Next.js API connected through Prisma to PostgreSQL (Neon).
@@ -197,8 +201,20 @@ files remain release evidence.
    days of Google's `purchases.voidedpurchases` and replays each through the
    same idempotent handler; a manual run from the Vercel dashboard authenticated
    against Play and returned `found: 0` (no refunds in the window). Failures raise
-   a Sentry error. Not yet exercised with a real refund — the next test-track
-   refund should be watched through both paths.
+   a Sentry error. **Exercised with real voids on 2026-09-14 (license-tester
+   account, production API):** (a) a yearly renewal order refunded from Order
+   management with "Remove entitlement" — Google sent a `subscription` RTDN
+   that expired the row within ~1 s of the refund and then a `voided_purchase`
+   RTDN that the handler treated as an idempotent no-op ("already expired");
+   (b) a Noor pack bought with the "Test card, approves then charges back"
+   instrument — the chargeback arrived ~8 min later as a `voided_purchase` and
+   the handler clawed back `balanceFrom: 18 → balanceTo: 0` (floored, the two
+   spent credits were not charged against the next pack); (c) the reconcile
+   cron run by hand afterwards reported `found: 1, applied: 1` and the replay
+   was a no-op on the already-expired row. Both push and pull paths hold.
+   Cosmetic: the cron request shows at `error` level in Vercel logs only
+   because `pg` prints its SSL-mode deprecation warning to stderr; the
+   response is 200.
 2. **Hard lockout after trial expiry: verified on staging (2026-09-11).** The
    staging account's trial had lapsed naturally on 2026-08-30 with the row still
    `trial`. Against the current backend: `/api/subscription/status` reported
@@ -442,11 +458,49 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    so a suspended paying subscriber lands on Manage subscription, not the
    paywall. "expired" is unchanged. Verified on the emulator against the
    staging DB in Urdu RTL for all four states plus the hold → Manage
-   subscription routing from the hero and from Noor's 402. Ships with the
-   next Play upload. Still open: (b) Plan switching/proration replacement
-   (`linkedPurchaseToken` re-keying is implemented and unit-tested, not
-   exercised live), grace period and account hold have not been driven from a
-   Play test account. Purchase (monthly and yearly), restore
+   subscription routing from the hero and from Noor's 402. Shipped in 1.0.9.
+   **Full lifecycle driven from a Play license-tester account on 2026-09-14**
+   (emulator `Warsh_API_34`, release APK, production API, tester
+   `trywarshapp@gmail.com`, throwaway Warsh account deleted afterwards; every
+   state confirmed against Google via `play-diagnostics` and against the Vercel
+   RTDN log, not read off the phone):
+   - *Grace → hold → recovery.* Buying with "Test card, always approves" and
+     then switching the subscription's payment method in the Play Store to
+     "always declines" made the 5-minute test renewal fail: `in_grace` RTDN at
+     +5 min, `on_hold` at +10 min, each landing within ~5 s and each written to
+     the row by push alone (no `refresh=1`). Fixing the card in Play produced
+     `RECOVERED` → `active` within a minute, including from a row the admin
+     "revoke" action had set to `expired` (the paywall's auto-restore cannot do
+     that one: Play's `queryPurchases` never returns an on-hold subscription).
+     Server gating on hold: lesson, chat, Tadabbur and audio catalogue 402,
+     vocabulary 200. App: grace banner with the retry date, hold banner with
+     the hero locked, Noor's 402 lands on Manage subscription showing ON HOLD.
+   - *Pause.* "Pause payments" in Play → `paused` at the next renewal, sage
+     banner, "Resume in Google Play" deep link → resumed early → `active`.
+   - *Plan switch — was broken, fixed.* "Change plan" → "Switch to Yearly"
+     failed with `DEVELOPER_ERROR` "Invalid arguments provided to the API"
+     before the Play sheet opened. Google only accepts `CHARGE_FULL_PRICE` and
+     `WITHOUT_PRORATION` for a base-plan switch *within one subscription*;
+     the app sent `WITH_TIME_PRORATION`, so plan switching had never worked.
+     `services/iap.ts` now uses `WITHOUT_PRORATION` (3), which is also the
+     base plans' Console default. Verified on the rebuilt APK: Play sheet shows
+     "first charge will occur on <next billing date>", new token acknowledged,
+     row re-keyed to `yearly`, `supersededToken` = the monthly token.
+   - *Declined card — wrong copy, fixed.* Play returns `BILLING_UNAVAILABLE`
+     for a declined payment; both purchase handlers folded it into "In-app
+     purchases are not available on this build". They now say the payment did
+     not go through and point at the Play Store payment method.
+   - *Cancel* → `canceled`, `willCancel: true`; *expiry* (Google's test-renewal
+     cap) → `expired` by RTDN.
+   - Observed, by design: while the seven-day trial window is still open a
+     suspended store state is masked — `subscriptionStatus` reports `trial`,
+     access stays, no banner (`lib/subscription.ts`: nothing cuts the trial
+     short). It cannot happen with real 30-day renewals; it only showed here
+     because test renewals are five minutes.
+   - Observed trap: bursts of API polling from one IP trip Vercel's System
+     Mitigations (Security Checkpoint 403) for ~14 min; the app on that IP
+     shows "Could not load your subscription" meanwhile.
+   Still open: none of the lifecycle. Purchase (monthly and yearly), restore
    after reinstall, acknowledgement, the Noor consumable, cancellation, and expiry
    are all verified on a Play-installed build (2026-08-29). Duplicate-token and
    token-owned-by-another-account protection verified 2026-09-11 against the
