@@ -282,26 +282,28 @@ files remain release evidence.
    context screen is almost empty because the scene has no Arabic title or
    `context_body`. The share card reads "511 words learned" for an account with
    one lesson done — check what that number counts.
-6. **Production audio lives in two R2 buckets, and the local tooling writes to
-   the wrong one (found 2026-09-14, needs the owner).** Production
-   `R2_PUBLIC_URL` has pointed at the Warsh-owned bucket
-   (`pub-66b79e…r2.dev`) since the 2026-08-13 repoint (`68e365a`, Vercel vars
-   updated the same day), but `warsh-backend/.env` still holds the personal
-   bucket (`pub-3da71e…`), so every upload since — `images:upload` and
-   `audio:prebuild-catalog:db` on 2026-09-10, the discover-image compression in
-   `b6efb75`, today's clip — landed in the old bucket. Measured: 34 of the 2,633
-   catalogue clips published lessons need are 404 on the production host
-   (Chapters 1–4 included, list in the session log), while all 920 word images
-   and word audio URLs in the database, and 32 discover-image URLs in fixtures,
-   point at the personal bucket. The app works only because both buckets are
-   still public. The probe now HEADs catalogue URLs built from `R2_PUBLIC_URL`
-   so this class of drift alerts. To close: put the Warsh bucket's R2
-   credentials, bucket name and public URL into the local `.env` (owner holds
-   them), re-run `audio:prebuild-catalog:db` (uploads only the missing 34),
-   `images:upload` and `audio:prebuild-catalog` for words, re-point the 32
-   fixture URLs, and `content:sync`; then the personal bucket can be retired.
-6. **Scholar/content review** — establish a review process for Quranic Arabic
-   accuracy, ayah relevance, pedagogy, repetition, and pacing.
+6. **R2 consolidated onto the Warsh bucket (2026-09-14).** Production
+   `R2_PUBLIC_URL` had pointed at the Warsh-owned bucket (`pub-66b79e…r2.dev`)
+   since the 2026-08-13 repoint (`68e365a`), but `warsh-backend/.env` still held
+   the personal bucket (`pub-3da71e…`), so every local upload since — the
+   2026-09-10 word-media restore, the discover-image compression, today's clip —
+   had landed in the old bucket: 34 lesson clips 404ed in production and all
+   word media URLs pointed at the personal bucket. Fixed the same day with the
+   owner's Warsh-bucket credentials: `scripts/r2-consolidate.ts` copied the
+   1,561 referenced objects old → Warsh (local copy kept in
+   `warsh-backend/exports/r2-personal-backup-2026-09-14/`, 53 MB, gitignored),
+   re-pointed 920 word audio + 582 word image URLs, 17 lessons and 17 fixtures,
+   and a HEAD sweep of all 4,440 media URLs production now references — every
+   database reference plus every catalogue clip — returned 200 on the Warsh
+   host. `content:check` passes. Local `.env` now targets the Warsh bucket, so
+   future uploads land where production reads. Nothing was deleted from the
+   personal bucket; it is no longer referenced and can be retired whenever the
+   owner chooses (its API token was replaced, so this machine can no longer list
+   it — a full listing needs the owner's old token or the dashboard). The
+   Warsh bucket also still holds unreferenced objects (e.g. 1,775 word audio
+   files for 920 words); `media:prune-orphans` can clean those in a separate,
+   deliberate step.
+
 7. **Register-then-login through the soft keyboard: verified, no mismatch
    (2026-09-11).** The 2026-08-29 suspicion (an account registered via synthetic
    ADB keystrokes later rejecting its password) was retested on the current release
@@ -687,9 +689,6 @@ variables added to the Vercel project — no code change.
 - **Cron reliability risk:** Neon suspends its compute overnight, so the 04:00/05:00
   PKT crons can hit a sleeping database and die with `P1000`. Half of August's
   streak resets never ran.
-- **Bucket-split risk:** production reads catalogue audio from the Warsh R2
-  bucket but the local tooling uploads to the personal one (P0 #6 above); until
-  the local `.env` is repointed, every media regeneration widens the gap.
 - **Asset risk:** illustration coverage is 582 of 920 published words (2026-09-10).
   The gap is concentrated in the Core 500 — 179 of 500 — because the artwork was
   drawn for the curriculum vocabulary, and particles like `مِن` and `أَنَّ` have no
