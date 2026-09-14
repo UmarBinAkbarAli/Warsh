@@ -309,12 +309,14 @@ files remain release evidence.
    personal bucket; it is no longer referenced and can be retired whenever the
    owner chooses (its API token was replaced, so this machine can no longer list
    it — a full listing needs the owner's old token or the dashboard).
-   Retirement attempted 2026-09-14: the Chrome session is signed in as
-   `trywarshapp@gmail.com`, whose only Cloudflare account is the Warsh one, so the
-   personal bucket is not reachable from this machine. Emptying and deleting it
-   needs either a sign-in to the personal Cloudflare account or an R2 API token
-   from it. Cloudflare's billing card for the Warsh account shows "$0.00 — no
-   billable usage" at 1.33 GB, confirming the free tier covers the current size.
+   **Retired 2026-09-14.** Before deletion: zero production rows in any text/json
+   column and no repo file (other than `scripts/r2-consolidate.ts`'s own
+   constant) referenced `pub-3da71e`. The owner signed into the personal
+   Cloudflare account (`e408f8cd…`) and the bucket was deleted there; the
+   account's R2 overview now lists no buckets and 0 B, and the old public host
+   answers 401 while the Warsh host still serves the same key 200. Cloudflare's
+   own overview text confirms the free tier: 10 GB storage, 1M Class A and 10M
+   Class B operations per month; both accounts show "$0.00 — no billable usage".
 7. **Warsh bucket pruned to 170 MB (2026-09-14, owner target: stay well under
    the R2 free tier).** Before: 8,665 objects, 1,325 MB, of which only 4,440
    objects / 168 MB were referenced by any DB column, fixture, or catalogue key.
