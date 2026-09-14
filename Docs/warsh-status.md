@@ -280,8 +280,17 @@ files remain release evidence.
    table's Urdu glosses are inconsistent (`آپ (ایم)` / `آپ (f)`, `هِيَ` → "وہ چلا
    گیا"), and its rows carry per-row `audio_url`s the table never plays; SP1's
    context screen is almost empty because the scene has no Arabic title or
-   `context_body`. The share card reads "511 words learned" for an account with
-   one lesson done — check what that number counts.
+   `context_body`. The share card's "511 words learned" after one lesson is
+   fixed (2026-09-14, `cc0900a`, deployed): every Core 500 word carries
+   `chapterIntroduced = 1` because the column is not nullable, and lesson
+   completion seeded the whole chapter's words into the bank, so the first
+   Chapter 1 lesson banked all 500 Core words plus the 11 curriculum ones.
+   Seeding now excludes Core words (they enter through their set-complete route,
+   whose upsert would otherwise have found a pre-seeded row and never marked
+   them known). The 1,000 placeholder rows on the two affected accounts — none
+   ever reviewed or favourited — were deleted from production; the owner's bank
+   now reads 11. The word-detail screen still says "Introduced in Chapter 1" for
+   a Core word; cosmetic, untouched.
 6. **R2 consolidated onto the Warsh bucket (2026-09-14).** Production
    `R2_PUBLIC_URL` had pointed at the Warsh-owned bucket (`pub-66b79e…r2.dev`)
    since the 2026-08-13 repoint (`68e365a`), but `warsh-backend/.env` still held
@@ -300,6 +309,12 @@ files remain release evidence.
    personal bucket; it is no longer referenced and can be retired whenever the
    owner chooses (its API token was replaced, so this machine can no longer list
    it — a full listing needs the owner's old token or the dashboard).
+   Retirement attempted 2026-09-14: the Chrome session is signed in as
+   `trywarshapp@gmail.com`, whose only Cloudflare account is the Warsh one, so the
+   personal bucket is not reachable from this machine. Emptying and deleting it
+   needs either a sign-in to the personal Cloudflare account or an R2 API token
+   from it. Cloudflare's billing card for the Warsh account shows "$0.00 — no
+   billable usage" at 1.33 GB, confirming the free tier covers the current size.
 7. **Warsh bucket pruned to 170 MB (2026-09-14, owner target: stay well under
    the R2 free tier).** Before: 8,665 objects, 1,325 MB, of which only 4,440
    objects / 168 MB were referenced by any DB column, fixture, or catalogue key.
@@ -590,7 +605,9 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    tea/thing, alim scholar/painful, …) and are correctly left blank. Three are
    duplicate entries of a word that does have an image — `jā'a` (he came) vs
    `jāʾa` (to come), `qāma` ×2, `ātā` (to give) vs `a'ṭā` (he gave) — and could
-   reuse the twin's illustration if the owner wants; not done, content decision.
+   reuse the twin's illustration — done 2026-09-14 on the owner's instruction
+   (object copied to the word's own key, all three HEAD 200), so coverage is
+   585 of 920.
 2. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
    types and book transitions.
 3. **Token reconciliation done (2026-09-12).** Every colour literal outside
