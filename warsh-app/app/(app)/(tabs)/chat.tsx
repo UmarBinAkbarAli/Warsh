@@ -18,6 +18,7 @@ import {
   getConsumableProducts,
   getIapDisplayPrice,
   isBillingSupportedEnvironment,
+  isBillingDeclinedError,
   isIapUnavailableError,
   requestConsumablePurchase,
   type IapSubscriptionPurchase,
@@ -210,6 +211,13 @@ export default function ChatScreen() {
     const code = err?.code;
     if (code === "E_USER_CANCELLED" || code === "user-cancelled" || code === "USER_CANCELED" || code === "USER_CANCELLED") {
       return; // User cancelled — no alert needed
+    }
+    if (isBillingDeclinedError(err)) {
+      Alert.alert(
+        "Payment didn't go through",
+        "Google Play couldn't take the payment. Check your payment method in the Play Store and try again — you haven't been charged.",
+      );
+      return;
     }
     if (isIapUnavailableError(err)) {
       Alert.alert("Purchases unavailable", "In-app purchases are not available on this build.");

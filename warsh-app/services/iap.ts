@@ -28,6 +28,17 @@ export function isIapUnavailableError(error: unknown) {
   return code === "IAP_UNAVAILABLE" || code === "E_IAP_NOT_AVAILABLE" || code === "iap-not-available" || code === "billing-unavailable";
 }
 
+// Play answers BILLING_UNAVAILABLE (`billing-unavailable`) from inside a
+// purchase flow when it could not take the payment — a declined card, no
+// payment method, an unsupported country, or a signed-out Play Store — not
+// because billing is missing on the device. Observed 2026-09-14 with the
+// "Test card, always declines" instrument: the decline surfaced in-app as
+// "not available on this build". Check this before isIapUnavailableError in a
+// purchase error handler; the connect path keeps the build-level meaning.
+export function isBillingDeclinedError(error: unknown) {
+  return (error as { code?: string } | null)?.code === "billing-unavailable";
+}
+
 async function getIapModule() {
   if (!isBillingSupportedEnvironment()) {
     return null;
