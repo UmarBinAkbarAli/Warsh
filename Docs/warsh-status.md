@@ -36,18 +36,37 @@ files remain release evidence.
 - The Android app is live in full **Production** on Google Play as of 2026-08-26
   (confirmed live in Play Console via browser automation on 2026-08-27). It is
   publicly discoverable and installable by anyone.
-- **Version 1.0.10 (versionCode 34) submitted to Production on 2026-09-15** at a
-  100% rollout (`4f9eaf2`; Play Console shows "Changes in review"). It carries every
+- **Version 1.0.10 (versionCode 34) is live in Production (published by Google
+  on 2026-09-15, same day as submission).** Confirmed in the Play Console via
+  browser automation: "Latest release: 34 (1.0.10)", Active, 177 countries, 24
+  installs within the first hour. Sentry `warsh-mobile` shows release
+  `com.warsh.app@1.0.10+34` receiving events from a Play-delivered install
+  (`Split APKs: true`; the device is Google's pre-launch crawler, a virtual
+  OnePlus8Pro on Android 11 that backed out of the Google sign-in sheet — the one
+  issue, `google_sign_in_incomplete:cancelled`, is that cancellation captured as a
+  handled error, so a user dismissing the Google sheet now files a High-priority
+  Sentry issue; downgrade it to a breadcrumb or drop it). Mixpanel
+  `warsh - production` shows `login_completed` → `lesson_started` from the
+  owner's Tecno KF8 on 1.0.10 (34), `environment: production`, so analytics reach
+  Mixpanel from a real production device for the first time. Play's release
+  dashboard still lists the edge-to-edge recommendation on 34 with the same five
+  library APIs — expected, it cannot clear at app level (P0 #6 below) — and adds
+  a new "DEX code optimization is below our threshold (Obfuscation 1%), fix by
+  Feb 2027" issue: `minifyEnabled` is off in the release build
+  (`android.enableProguardInReleaseBuilds` unset), so R8 never runs; enabling it
+  needs a keep-rules pass and a Sentry source-map upload before it ships.
+  Still to verify on the Tecno with this build: the named "Reminders"
+  notification channel and localized reminder copy, the Speak mic re-prompt, the
+  delete-account dialog, and the Android 15 inset fixes (Tecno is Android 11, so
+  the inset fixes can only be re-checked on the API 35 AVD).
+- Submitted to Production on 2026-09-15 at a 100% rollout (`4f9eaf2`). It carries every
   app change since 1.0.9: the Sentry DSN and Mixpanel token baked into the release
   bundle (`verify:release-api-url` confirmed both in the AAB and the APK), the mic
   permission re-prompt for Speak, audio-recognition clips, per-paragraph direction
   in Noor replies, the working monthly/yearly plan switch, and the honest "payment
   declined" message. Release gate passed in full; the APK was smoke-tested on the
   emulator against production. Play reported zero devices lost and only the
-  expected missing-deobfuscation-file warning. Confirm "Latest release: 34
-  (1.0.10)" in the Console once Google publishes it, then check that
-  `warsh-mobile` in Sentry and `warsh - production` in Mixpanel start receiving
-  events from release 1.0.10.
+  expected missing-deobfuscation-file warning.
 - **Version 1.0.9 (versionCode 33) was live in Production** — submitted 2026-09-12
   at a 100% rollout and published by Google the same day (submission #20,
   confirmed in the Console on 2026-09-14: "Latest release: 33 (1.0.9)", 177
@@ -136,8 +155,9 @@ files remain release evidence.
   `warsh-app/.env.release`, `start-warsh.ps1` exports them (and refuses to build
   without the file), the AGENTS.md recipe does the same, and
   `verify:release-api-url` fails any bundle that does not contain the exact
-  values — it fails on the current 1.0.9 AAB, as it should. Ships with the next
-  Play upload.
+  values — it fails on the 1.0.9 AAB, as it should. Shipped in 1.0.10 (34) and
+  confirmed live on 2026-09-15: Sentry has the release's first events from a
+  Play install and Mixpanel has the owner's Tecno KF8 session on 1.0.10.
 
 ## Implemented in code
 
