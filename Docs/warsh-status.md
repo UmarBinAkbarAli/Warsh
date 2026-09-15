@@ -36,7 +36,19 @@ files remain release evidence.
 - The Android app is live in full **Production** on Google Play as of 2026-08-26
   (confirmed live in Play Console via browser automation on 2026-08-27). It is
   publicly discoverable and installable by anyone.
-- **Version 1.0.9 (versionCode 33) is live in Production** — submitted 2026-09-12
+- **Version 1.0.10 (versionCode 34) submitted to Production on 2026-09-15** at a
+  100% rollout (`4f9eaf2`; Play Console shows "Changes in review"). It carries every
+  app change since 1.0.9: the Sentry DSN and Mixpanel token baked into the release
+  bundle (`verify:release-api-url` confirmed both in the AAB and the APK), the mic
+  permission re-prompt for Speak, audio-recognition clips, per-paragraph direction
+  in Noor replies, the working monthly/yearly plan switch, and the honest "payment
+  declined" message. Release gate passed in full; the APK was smoke-tested on the
+  emulator against production. Play reported zero devices lost and only the
+  expected missing-deobfuscation-file warning. Confirm "Latest release: 34
+  (1.0.10)" in the Console once Google publishes it, then check that
+  `warsh-mobile` in Sentry and `warsh - production` in Mixpanel start receiving
+  events from release 1.0.10.
+- **Version 1.0.9 (versionCode 33) was live in Production** — submitted 2026-09-12
   at a 100% rollout and published by Google the same day (submission #20,
   confirmed in the Console on 2026-09-14: "Latest release: 33 (1.0.9)", 177
   countries). It replaced versionCode 32 (1.0.8, live 2026-09-10). 1.0.9 carries
