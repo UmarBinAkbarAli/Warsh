@@ -186,7 +186,7 @@ export default function SettingsScreen() {
     });
   }
   const [currentStreak, setCurrentStreak] = useState(0);
-  const [userName, setUserName] = useState("friend");
+  const [userName, setUserName] = useState("");
   const [saving, setSaving] = useState(false);
   const [languageSheet, setLanguageSheet] = useState<"app" | "translation" | null>(null);
   const [languageSaving, setLanguageSaving] = useState(false);
@@ -202,7 +202,7 @@ export default function SettingsScreen() {
           const d = res.data.data;
           setStreakGoalDays(d.streakGoalDays ?? null);
           setCurrentStreak(d.streak ?? 0);
-          setUserName(d.userName ?? "friend");
+          setUserName(d.userName ?? "");
         })
         .catch(() => {});
 
@@ -221,20 +221,23 @@ export default function SettingsScreen() {
 
     // Re-schedule notifications whenever a notification pref changes
     if (NOTIFICATION_PREFS.includes(key as keyof Prefs)) {
-      const granted = await requestNotificationPermission();
-      if (granted) {
-        await setupNotificationSchedules(
-          {
-            dailyReminderEnabled: updated.dailyReminderEnabled,
-            streakRiskEnabled: updated.streakRiskEnabled,
-            milestoneEnabled: updated.milestoneEnabled,
-          },
-          userName,
-          currentStreak,
-          streakGoalDays
-        );
-      }
+      await rescheduleNotifications(updated);
     }
+  }
+
+  async function rescheduleNotifications(current: Prefs) {
+    const granted = await requestNotificationPermission();
+    if (!granted) return;
+    await setupNotificationSchedules(
+      {
+        dailyReminderEnabled: current.dailyReminderEnabled,
+        streakRiskEnabled: current.streakRiskEnabled,
+        milestoneEnabled: current.milestoneEnabled,
+      },
+      userName,
+      currentStreak,
+      streakGoalDays
+    );
   }
 
   async function changeStreakGoal(days: number) {
@@ -262,6 +265,11 @@ export default function SettingsScreen() {
       await updateUserProfile({ [field]: value });
       if (languageSheet === "translation" && user?.id) {
         await AsyncStorage.setItem(`${ONBOARDING_LANG_TOUCHED_KEY}_${user.id}`, "1");
+      }
+      // Reminder copy and the Android channel name follow the interface
+      // language, so rebuild the schedules instead of waiting for next launch.
+      if (languageSheet === "app") {
+        void rescheduleNotifications(prefs);
       }
       setLanguageSheet(null);
     } catch {

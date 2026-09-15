@@ -28,7 +28,7 @@ async function initNotifications() {
     ]);
     const prefs = rawPrefs ? JSON.parse(rawPrefs) : {};
     const progress = progressRes.data.data;
-    const userName = progress.userName ?? "friend";
+    const userName = progress.userName ?? "";
     const currentStreak = progress.streak ?? 0;
     const streakGoalDays = progress.streakGoalDays ?? null;
 

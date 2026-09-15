@@ -2,6 +2,9 @@ import Constants from "expo-constants";
 import * as Device from "expo-device";
 import { Platform } from "react-native";
 import { WarshPalette } from "../constants/theme";
+import { translate } from "../i18n";
+import { useAuthStore } from "../stores/authStore";
+import type { AppLanguage } from "./language";
 
 type NotificationsModule = typeof import("expo-notifications");
 
@@ -58,6 +61,34 @@ const IDS = {
   wordOfDay: "warsh-word-of-day",
 };
 
+// Same id the app has always used, so devices that already have the channel
+// get it renamed in place instead of a second entry in Android settings.
+const REMINDER_CHANNEL_ID = "default";
+
+// Notifications are scheduled outside React, so read the interface language
+// straight from the store rather than through `useLanguage()`.
+function currentLanguage(): AppLanguage {
+  return useAuthStore.getState().user?.nativeLanguage === "ur" ? "ur" : "en";
+}
+
+function t(key: string, params?: Record<string, string | number>) {
+  return translate(currentLanguage(), key, params);
+}
+
+// Android drops any notification without a channel into a system channel it
+// labels "Miscellaneous" in settings. Create ours on every scheduling path,
+// not only when asking for permission, so it exists even when permission was
+// granted earlier (reinstall, or granted at first launch).
+async function ensureReminderChannel(Notifications: NotificationsModule) {
+  if (Platform.OS !== "android") return;
+  await Notifications.setNotificationChannelAsync(REMINDER_CHANNEL_ID, {
+    name: t("notifications.channelName"),
+    importance: Notifications.AndroidImportance.DEFAULT,
+    vibrationPattern: [0, 250],
+    lightColor: WarshPalette.gold,
+  }).catch(() => {});
+}
+
 export async function requestNotificationPermission(): Promise<boolean> {
   if (!Device.isDevice) return false;
 
@@ -68,14 +99,7 @@ export async function requestNotificationPermission(): Promise<boolean> {
   if (existing === "granted") return true;
   if (existing === "denied") return false;
 
-  if (Platform.OS === "android") {
-    await Notifications.setNotificationChannelAsync("default", {
-      name: "Warsh",
-      importance: Notifications.AndroidImportance.DEFAULT,
-      vibrationPattern: [0, 250],
-      lightColor: WarshPalette.gold,
-    });
-  }
+  await ensureReminderChannel(Notifications);
 
   const { status } = await Notifications.requestPermissionsAsync();
   return status === "granted";
@@ -106,7 +130,12 @@ async function scheduleDailyAt(
   await Notifications.scheduleNotificationAsync({
     identifier,
     content: { title, body, data: data ?? {}, sound: false },
-    trigger: { type: Notifications.SchedulableTriggerInputTypes.DAILY, hour, minute },
+    trigger: {
+      type: Notifications.SchedulableTriggerInputTypes.DAILY,
+      hour,
+      minute,
+      channelId: REMINDER_CHANNEL_ID,
+    },
   });
 }
 
@@ -129,13 +158,15 @@ export async function setupNotificationSchedules(
   const permitted = await getNotificationPermissionStatus();
   if (permitted !== "granted") return;
 
+  await ensureReminderChannel(Notifications);
+
   if (prefs.dailyReminderEnabled) {
     await scheduleDailyAt(
       IDS.dailyReminder,
       20,
       0,
-      `Time for today's lesson, ${userName}.`,
-      "Even 5 minutes brings you closer. In shaa Allah.",
+      t("notifications.dailyTitle", { name: userName.trim() || t("notifications.friend") }),
+      t("notifications.dailyBody"),
       { screen: "learn" }
     );
   } else {
@@ -146,13 +177,16 @@ export async function setupNotificationSchedules(
     const daysToGoal = streakGoalDays ? streakGoalDays - currentStreak : 0;
     const streakRiskBody =
       streakGoalDays && daysToGoal > 0
-        ? `${daysToGoal} day${daysToGoal === 1 ? "" : "s"} left to reach your ${streakGoalDays}-day goal. Don't stop now.`
-        : "One lesson keeps it going. In shaa Allah.";
+        ? t(daysToGoal === 1 ? "notifications.streakBodyGoalOne" : "notifications.streakBodyGoal", {
+            left: daysToGoal,
+            goal: streakGoalDays,
+          })
+        : t("notifications.streakBody");
     await scheduleDailyAt(
       IDS.streakRisk(),
       20,
       0,
-      `Your streak of ${currentStreak} days is at risk.`,
+      t("notifications.streakTitle", { count: currentStreak }),
       streakRiskBody,
       { screen: "learn" }
     );
@@ -163,8 +197,8 @@ export async function setupNotificationSchedules(
       IDS.wordOfDay,
       9,
       0,
-      "Today's word is ready.",
-      "Open Warsh to see today's Arabic word.",
+      t("notifications.wordTitle"),
+      t("notifications.wordBody"),
       { screen: "vocabulary" }
     );
   } else {
@@ -189,14 +223,17 @@ export async function fireMilestoneNotification(milestoneTitle: string): Promise
   const permitted = await getNotificationPermissionStatus();
   if (permitted !== "granted") return;
 
+  await ensureReminderChannel(Notifications);
   await Notifications.scheduleNotificationAsync({
     content: {
-      title: `Milestone unlocked: ${milestoneTitle}`,
-      body: "Open Warsh to see your achievement.",
+      title: t("notifications.milestoneTitle", { title: milestoneTitle }),
+      body: t("notifications.milestoneBody"),
       data: { screen: "milestones" },
       sound: false,
     },
-    trigger: null,
+    // On Android a bare `null` trigger also lands in "Miscellaneous";
+    // a channel-only trigger still fires immediately.
+    trigger: Platform.OS === "android" ? { channelId: REMINDER_CHANNEL_ID } : null,
   });
 }
 

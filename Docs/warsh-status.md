@@ -493,9 +493,15 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    permission on Android 11; `dumpsys alarm` shows the 20:00 daily reminder and
    09:00 word-of-day alarms scheduled, the expo alarm fired at 09:00 today and
    yesterday, and `dumpsys notification` records one Warsh post on each day —
-   delivery works. Polish left open: the app never creates a named channel, so
-   Android settings list it as "Miscellaneous", and the reminder copy is English
-   for Urdu users. Sharing: the system chooser opened with the rendered stats
+   delivery works. Polish fixed 2026-09-15 (ships with the next build): the
+   channel was only created inside the permission prompt, so any device that had
+   already granted skipped it and Android filed the reminders under
+   "Miscellaneous"; `services/notifications.ts` now (re)creates the named
+   `Reminders` channel on every scheduling path and every alarm targets it, and
+   all reminder/milestone copy goes through `notifications.*` i18n keys (rebuilt
+   on an interface-language change). Not re-verified on hardware yet:
+   `expo-device` reports the emulator as not a device, so the whole notification
+   path is skipped there — check on the Tecno with the next build. Sharing: the system chooser opened with the rendered stats
    card previewed (the FileProvider URI resolves from another process); not sent
    to any contact.
 6. **Android 15 edge-to-edge: Play warning traced to dependencies; three real
