@@ -501,7 +501,8 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    the token disappears. The external path `warsh.app/delete-account` is a
    `mailto:support@warsh.app` request and states that deletion does not cancel a
    Play subscription; the in-app confirmation dialog did not — added to `en.ts`
-   and `ur.ts` (ships with the next build). Not covered: whether OpenAI, Mixpanel
+   and `ur.ts` (shipped in 1.0.10; dialog text confirmed on the Tecno
+   2026-09-15). Not covered: whether OpenAI, Mixpanel
    or Sentry retain anything server-side after deletion; that is a policy
    disclosure, not a Warsh deletion step.
 5. **Physical-device mic, notifications and sharing verified (2026-09-14, same
@@ -519,13 +520,18 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    "Miscellaneous"; `services/notifications.ts` now (re)creates the named
    `Reminders` channel on every scheduling path and every alarm targets it, and
    all reminder/milestone copy goes through `notifications.*` i18n keys (rebuilt
-   on an interface-language change). Not re-verified on hardware yet:
-   `expo-device` reports the emulator as not a device, so the whole notification
-   path is skipped there — check on the Tecno with the next build. Sharing: the system chooser opened with the rendered stats
+   on an interface-language change). **Not in 1.0.10** — the bundle was built
+   at 11:33 on 2026-09-15 and the fix (`8d3b5e1`) landed at 12:04; confirmed on
+   the Tecno the same evening, where the Play-installed 1.0.10 still registers
+   only the `Miscellaneous` fallback channel while both alarms (09:00, 20:00)
+   are scheduled. Ships with 1.0.11; verify the `Reminders` channel on the Tecno
+   then (`expo-device` skips the whole path on the emulator). Sharing: the system chooser opened with the rendered stats
    card previewed (the FileProvider URI resolves from another process); not sent
    to any contact.
 6. **Android 15 edge-to-edge: Play warning traced to dependencies; three real
-   inset defects fixed (2026-09-11, ships with the next build).** Play's
+   inset defects fixed (2026-09-11, shipped in 1.0.10; verified on the Tecno
+   KF8 2026-09-15 — dark status icons on cream, light on the You tab, tab bar
+   clear of the gesture area, sheet scrim reaching the status bar).** Play's
    "deprecated APIs or parameters for edge-to-edge" recommendation on release 32
    lists `Window.get/setStatusBarColor`, `Window.get/setNavigationBarColor` and
    `LAYOUT_IN_DISPLAY_CUTOUT_MODE_{DEFAULT,SHORT_EDGES}`. Disassembling the
