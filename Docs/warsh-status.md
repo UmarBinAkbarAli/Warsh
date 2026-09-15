@@ -714,17 +714,20 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
 - Persistent Noor memory
 - Social profiles, leaderboards, or family accounts
 
-Redis-backed rate limiting is no longer purely deferred: as of 2026-08-26
-(`f260be5`), `lib/rateLimit.ts` uses Upstash Redis when `UPSTASH_REDIS_REST_*` are
-configured, falling back to the in-process limiter otherwise. **Verified
-2026-09-11 (`vercel env ls production`): neither `UPSTASH_REDIS_REST_URL` nor
-`UPSTASH_REDIS_REST_TOKEN` is set, so production runs the in-process fallback.**
-Login, register, forgot/reset-password, Google sign-in/link and the admin session
-route are therefore limited per serverless instance, not globally: the effective
-ceiling is `limit × concurrent instances`, and a cold start resets the count.
-Acceptable at the current traffic level; turning on the shared limiter needs an
-Upstash database (owner-created, in the Warsh-owned account) and the two
-variables added to the Vercel project — no code change.
+Redis-backed rate limiting is **live in production (2026-09-15)**. `lib/rateLimit.ts`
+(`f260be5`, 2026-08-26) uses Upstash Redis when credentials are present and falls
+back to the in-process limiter otherwise. The Upstash database `warsh-rate-limit`
+(Vercel Marketplace, free plan, `iad1`, eviction off, auto-upgrade off) was created
+in the `warshapp-projects` team on 2026-09-15 and connected to the `warsh` project
+for Production and Preview. The marketplace injects the credentials as
+`KV_REST_API_URL` / `KV_REST_API_TOKEN`, so `41dc4a8` made the limiter accept
+those names alongside `UPSTASH_REDIS_REST_*`. Verified after deploy: 13 bad
+logins from one browser returned `401 ×10` then `429` with `Retry-After: 45`, and
+the `warsh-rl:10:60000:login:<ip>` sliding-window key was present in the Upstash
+database — the count is global, not per serverless instance. Login, register,
+forgot/reset-password, Google sign-in/link and the admin session route all share
+it. Redis being unreachable logs an error and degrades to the in-process limiter
+rather than failing open.
 
 ## Current risks
 
