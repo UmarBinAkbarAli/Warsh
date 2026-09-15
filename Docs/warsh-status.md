@@ -55,10 +55,11 @@ files remain release evidence.
   Feb 2027" issue: `minifyEnabled` is off in the release build
   (`android.enableProguardInReleaseBuilds` unset), so R8 never runs; enabling it
   needs a keep-rules pass and a Sentry source-map upload before it ships.
-  Still to verify on the Tecno with this build: the named "Reminders"
-  notification channel and localized reminder copy, the Speak mic re-prompt, the
-  delete-account dialog, and the Android 15 inset fixes (Tecno is Android 11, so
-  the inset fixes can only be re-checked on the API 35 AVD).
+  Verified on the Tecno 2026-09-15: the delete-account dialog copy and the
+  inset fixes (status-icon contrast, tab-bar clearance, sheet scrims). The named
+  "Reminders" channel is **not** in this build (committed after the bundle was
+  cut) and ships with 1.0.11. Still to check on the Tecno: the Speak mic
+  re-prompt after Android revokes `RECORD_AUDIO`.
 - Submitted to Production on 2026-09-15 at a 100% rollout (`4f9eaf2`). It carries every
   app change since 1.0.9: the Sentry DSN and Mixpanel token baked into the release
   bundle (`verify:release-api-url` confirmed both in the AAB and the APK), the mic
@@ -346,11 +347,10 @@ files remain release evidence.
    showed "+10 points" when the server awarded 0, and a lesson skipped by
    placement earned nothing when completed later; (d) on a 360 dp phone the goal
    card broke "Complete" mid-word and the streak pill read "1 days". Content
-   observations for the owner's review, not changed: the ch09-l05 conjugation
-   table's Urdu glosses are inconsistent (`آپ (ایم)` / `آپ (f)`, `هِيَ` → "وہ چلا
-   گیا"), and its rows carry per-row `audio_url`s the table never plays; SP1's
-   context screen is almost empty because the scene has no Arabic title or
-   `context_body`. The share card's "511 words learned" after one lesson is
+   observations (ch09-l05 Urdu gloss inconsistencies and unplayed per-row
+   `audio_url`s; SP1's empty context screen) are folded into the owner's
+   curriculum rebuild (P1 #2) and will be handled when it reaches Chapter 9.
+   The share card's "511 words learned" after one lesson is
    fixed (2026-09-14, `cc0900a`, deployed): every Core 500 word carries
    `chapterIntroduced = 1` because the column is not nullable, and lesson
    completion seeded the whole chapter's words into the bank, so the first
@@ -703,8 +703,12 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    `images:upload --manifest=../Docs/vocabulary-illustrations-needed.csv`
    (the new flag keys on `word_id`; slug matching hit rajā/rajā' three ways).
    All 16 URLs HEAD 200; coverage is now 601 of 920. Remaining: 319 Core 500.
-2. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
-   types and book transitions.
+2. **Curriculum rebuild in progress (owner, in Studio).** The owner is
+   rebuilding the curriculum chapter by chapter from Chapter 1; Chapters 1–4 are
+   done and Chapter 5 is in progress as of 2026-09-15. The Chapter 9–72 review
+   and the QA content observations above are absorbed into this pass. After each
+   Studio session: `content:check` → `content:export` → commit, and regenerate
+   audio for any edited Arabic (`audio:prebuild-catalog -- --from-db`).
 3. **Token reconciliation done (2026-09-12).** Every colour literal outside
    `constants/theme.ts` is gone: 30 `rgba()`/hex values across 20 files now route
    through a new role-named `WarshAlpha` set (scrims, gold washes, on-navy tints,

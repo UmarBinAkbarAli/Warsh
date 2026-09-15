@@ -1,6 +1,6 @@
 # Chapter 1 Final Test — Review Material
 
-**Status:** Approved, implemented, and verified in isolated staging on 2026-08-27; not deployed to production
+**Status:** Approved and implemented; live in production (`chapter-01-lesson-05-final-test.json` is in the fixture mirror, which matches the database as of 2026-09-15)
 
 **Purpose:** Confirm that the learner can use the four demonstratives and the vocabulary taught in Lessons 1–4.
 
