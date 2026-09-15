@@ -61,10 +61,6 @@ files remain release evidence.
   missing R8 deobfuscation file, expected while Sentry upload is disabled during
   the release build. The APK was smoke-tested on the emulator against the
   production API before upload.
-- **Queued for the next Play upload (committed 2026-09-14, not yet built for
-  Play):** the plan-switch replacement-mode fix, the declined-card purchase
-  copy, and Noor reply bubbles laid out in the reply language (an English
-  reply opening with an Arabic greeting was rendered right-to-left).
 - The Expo application supports `android` and `web`. Four tabs: Learn, Vocabulary,
   Noor, You.
 - The backend is a Next.js API connected through Prisma to PostgreSQL (Neon).
@@ -409,7 +405,7 @@ and `warsh-qa-issues-2026-07-16.md`. Both documents were retired on 2026-09-09: 
 were written to win Production access, which was granted 2026-08-26, and their
 remaining checkboxes were either achieved, superseded, or reduced to the list below.
 
-1. **Over-declared Android permissions removed (2026-09-11, not yet shipped).**
+1. **Over-declared Android permissions removed (2026-09-11, shipped in 1.0.9).**
    `SYSTEM_ALERT_WINDOW` came only from Warsh's own manifest (an Expo dev-overlay
    leftover); `READ_/WRITE_EXTERNAL_STORAGE` came from ours plus `expo-file-system`
    and `expo-image`. Nothing in the app touches shared storage — the audio cache and
