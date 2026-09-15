@@ -1,7 +1,11 @@
 # Vocabulary illustrations needed
 
-Generated 2026-09-14 from the production database. **335 published words** have no
+Generated 2026-09-14 from the production database. **335 published words** had no
 illustration: 16 curriculum words (Chapters 1–5) and 319 Core 500 words.
+
+**2026-09-15: the 16 curriculum illustrations are delivered and live** (all URLs
+HEAD 200; coverage 601/920). The Curriculum sections below are kept for the
+record. **319 Core 500 words remain.**
 The companion `vocabulary-illustrations-needed.csv` carries the same rows plus the
 database `word_id`, which is what the upload step keys on.
 
@@ -15,7 +19,16 @@ database `word_id`, which is what the upload step keys on.
    so send the full-quality original (it also becomes the local master copy).
 3. Drop them all in **one folder** (sub-folders are fine) and say where it is.
 4. Then Claude runs the compress + upload step, which sets each word's `imageUrl`,
-   re-checks every URL, and reports coverage.
+   re-checks every URL, and reports coverage:
+   ```powershell
+   cd warsh-backend
+   node scripts/compress-images.cjs --input <folder> --output exports/image-tests-compressed/<name> --target 100kb
+   $env:VOCAB_IMAGE_SOURCE_DIR = "exports/image-tests-compressed/<name>"
+   npm run images:upload -- --dry-run --manifest=../Docs/vocabulary-illustrations-needed.csv
+   npm run images:upload -- --manifest=../Docs/vocabulary-illustrations-needed.csv
+   ```
+   `--manifest` keys on `word_id`; without it the uploader slug-matches and
+   `raja-hope` would overwrite three words.
 
 **Particles and abstract verbs** (`مِن`, `أَنَّ`, `لَعَلَّ`, "to know", …) have no
 natural picture. Options: draw a symbolic scene, or leave those rows out — a word

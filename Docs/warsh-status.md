@@ -185,7 +185,7 @@ files remain release evidence.
   single `createdAt` of 2026-09-07 16:51, meaning the table was empty when
   `load-core-500.ts` ran. Recovery path, in order: `content:restore-curriculum`,
   `audio:prebuild-catalog:db`, `images:upload`, `content:publish-vocabulary`,
-  `media:prune-orphans`. 582 of the 920 carry an illustration.
+  `media:prune-orphans`. 601 of the 920 carry an illustration (2026-09-15).
 - R2 vocabulary media was pruned on 2026-09-10: 3,634 objects stranded by earlier
   seed cycles were deleted, leaving `audio/words/` at exactly 920 reachable objects
   and `images/words/` at 582. Word illustrations are now 768px and under 100 KB.
@@ -651,7 +651,8 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
 
 ### P1 — content quality and launch polish
 
-1. **338 of the 920 published words have no illustration.** Word images were
+1. **319 of the 920 published words have no illustration — all Core 500; the
+   curriculum is fully covered (420/420, 2026-09-15).** Word images were
    restored on 2026-09-10 by re-running `images:upload` against
    `exports/image-tests-compressed`; it matches a source file to a word by
    `transliteration` and covered 582 words. The remaining 338 have no source file at
@@ -671,6 +672,11 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    the PNGs arrive: compress with `scripts/compress-images.cjs` to the ≤100 KB
    set, upload keyed by the CSV's `word_id` (not by slug matching — two pairs
    share a slug and meaning), HEAD every new URL, then update this count.
+   **2026-09-15: the 16 curriculum PNGs arrived** in
+   `exports/image-tests/curriculum-chapters-1-5/` and shipped via
+   `images:upload --manifest=../Docs/vocabulary-illustrations-needed.csv`
+   (the new flag keys on `word_id`; slug matching hit rajā/rajā' three ways).
+   All 16 URLs HEAD 200; coverage is now 601 of 920. Remaining: 319 Core 500.
 2. Review representative lessons across Chapters 9–72, emphasizing uncommon exercise
    types and book transitions.
 3. **Token reconciliation done (2026-09-12).** Every colour literal outside
@@ -797,8 +803,8 @@ rather than failing open.
 - **Cron reliability risk:** Neon suspends its compute overnight, so the 04:00/05:00
   PKT crons can hit a sleeping database and die with `P1000`. Half of August's
   streak resets never ran.
-- **Asset risk:** illustration coverage is 582 of 920 published words (2026-09-10).
-  The gap is concentrated in the Core 500 — 179 of 500 — because the artwork was
+- **Asset risk:** illustration coverage is 601 of 920 published words (2026-09-15).
+  The whole gap is in the Core 500 — 319 of 500 — because the artwork was
   drawn for the curriculum vocabulary, and particles like `مِن` and `أَنَّ` have no
   natural illustration.
 - **Media-key risk:** `audio/words/{id}` and `images/words/{id}` are keyed by

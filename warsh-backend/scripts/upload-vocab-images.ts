@@ -19,11 +19,17 @@
  * 944 MB originals cannot be uploaded by accident; the bucket must stay small.
  *
  * Usage (from warsh-backend/):
- *   npx tsx scripts/upload-vocab-images.ts [--dry-run] [--skip-existing]
+ *   npx tsx scripts/upload-vocab-images.ts [--dry-run] [--skip-existing] [--manifest=<csv>]
  *
  * Flags:
  *   --dry-run       Print what would be uploaded without touching R2 or DB.
  *   --skip-existing Skip words that already have an imageUrl in the DB.
+ *   --manifest=CSV  Key each file on the `word_id` column of a delivery CSV
+ *                   (Docs/vocabulary-illustrations-needed.csv) instead of slug
+ *                   matching. Use it whenever a slug is ambiguous — "raja-hope"
+ *                   slug-matches rajā, rajā' and a second rajā and would
+ *                   overwrite all three. Files missing from the manifest are
+ *                   reported as unmatched, never slug-matched.
  */
 
 import * as dotenv from "dotenv";
@@ -42,6 +48,7 @@ import { uploadImageToR2, vocabWordImageKey } from "../lib/r2";
 const DRY_RUN        = process.argv.includes("--dry-run");
 const SKIP_EXISTING  = process.argv.includes("--skip-existing");
 const ONLY_FILE      = process.argv.find((arg) => arg.startsWith("--file="))?.slice("--file=".length);
+const MANIFEST_PATH  = process.argv.find((arg) => arg.startsWith("--manifest="))?.slice("--manifest=".length);
 const DISCOVER_ONLY_FILES = new Set(["ma-what-transparent.png"]);
 // Word illustrations ship at 768px / ≤100 KB; anything larger is an uncompressed
 // original and belongs on disk, not in R2.
@@ -92,6 +99,20 @@ function findTransparentImages(dir: string): string[] {
   return results;
 }
 
+/**
+ * Read a delivery CSV (`filename,word_id,...`) into filename → word_id. Only the
+ * first two columns are used; later columns can carry quoted commas.
+ */
+function readManifest(manifestPath: string): Map<string, string> {
+  const map = new Map<string, string>();
+  const lines = fs.readFileSync(manifestPath, "utf8").replace(/^\uFEFF/, "").split(/\r?\n/);
+  for (const line of lines.slice(1)) {
+    const [filename, wordId] = line.split(",");
+    if (filename && wordId) map.set(filename.trim(), wordId.trim());
+  }
+  return map;
+}
+
 /** rajul-man-transparent.png → "rajul" */
 function slugFromFilename(filepath: string): string {
   return path.basename(filepath, "-transparent.png").split("-")[0];
@@ -133,6 +154,10 @@ async function main() {
     .filter((imagePath) => !ONLY_FILE || path.basename(imagePath) === ONLY_FILE);
   console.log(`Found ${imagePaths.length} transparent PNG files.\n`);
 
+  const manifest = MANIFEST_PATH ? readManifest(path.resolve(MANIFEST_PATH)) : null;
+  if (manifest) console.log(`Manifest: ${MANIFEST_PATH} (${manifest.size} rows) — matching by word_id.\n`);
+  const byId = new Map(dbWords.map((w) => [w.id, w]));
+
   // 3. Match and upload
   let uploaded  = 0;
   let skipped   = 0;
@@ -153,11 +178,14 @@ async function main() {
     // as maṭar (rain) / maṭār (airport). If a lone transliteration candidate's
     // meaning does not match (for example ma "what" vs mā' "water"), treat the
     // asset as Discovery-only instead of attaching the wrong illustration.
-    const candidates = DISCOVER_ONLY_FILES.has(path.basename(imgPath))
-      ? undefined
-      : semanticMatches && semanticMatches.length > 0
-        ? semanticMatches
-        : allCandidates;
+    const manifestWord = manifest ? byId.get(manifest.get(path.basename(imgPath)) ?? "") : undefined;
+    const candidates = manifest
+      ? (manifestWord ? [manifestWord] : undefined)
+      : DISCOVER_ONLY_FILES.has(path.basename(imgPath))
+        ? undefined
+        : semanticMatches && semanticMatches.length > 0
+          ? semanticMatches
+          : allCandidates;
 
     if (!candidates || candidates.length === 0) {
       // No vocabulary word for this slug (e.g. particles/demonstratives like
