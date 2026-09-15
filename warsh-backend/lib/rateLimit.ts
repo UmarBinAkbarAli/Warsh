@@ -9,7 +9,9 @@
 // shared secret with no second factor.
 //
 // Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN to get true
-// cross-instance limits. Nothing else needs to change: `hit()` keeps the same
+// cross-instance limits. The Vercel Marketplace install of Upstash injects the
+// same credentials as KV_REST_API_URL / KV_REST_API_TOKEN instead, so those are
+// accepted as a fallback. Nothing else needs to change: `hit()` keeps the same
 // signature and transparently upgrades.
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
@@ -52,13 +54,10 @@ function hitInMemory(key: string, limit: number, windowMs: number): RateLimitRes
   return { allowed: true, retryAfterSeconds: 0 };
 }
 
-const redis =
-  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
-    ? new Redis({
-        url: process.env.UPSTASH_REDIS_REST_URL,
-        token: process.env.UPSTASH_REDIS_REST_TOKEN,
-      })
-    : null;
+const redisUrl = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
+const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+
+const redis = redisUrl && redisToken ? new Redis({ url: redisUrl, token: redisToken }) : null;
 
 // One Ratelimit instance per (limit, window) pair, built lazily and reused so
 // the sliding-window script is only registered once per shape.
