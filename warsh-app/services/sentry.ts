@@ -85,6 +85,17 @@ export function captureError(error: unknown, context?: Record<string, unknown>) 
   );
 }
 
+// For expected, user-driven outcomes that still help read a later crash
+// (a dismissed sign-in sheet, say): kept on the event trail, never an issue.
+export function addBreadcrumb(message: string, data?: Record<string, unknown>) {
+  Sentry.addBreadcrumb({
+    category: "warsh",
+    level: "info",
+    message,
+    data: data ? (scrubValue(data) as Record<string, unknown>) : undefined,
+  });
+}
+
 export function isSentrySmokeTestEnabled() {
   return Boolean(DSN) && SMOKE_TEST_ENABLED;
 }

@@ -16,7 +16,7 @@ import { useAuth } from "@hooks/useAuth";
 import { useAuthStore } from "@stores/authStore";
 import { useOnboardingStore } from "@stores/onboardingStore";
 import { getApiErrorMessage } from "@services/api";
-import { captureError } from "@services/sentry";
+import { addBreadcrumb, captureError } from "@services/sentry";
 import { useT } from "@i18n/index";
 import { trackLoginCompleted, trackSignupCompleted } from "@services/analytics";
 import { Colors, FontSizes, Fonts, Radii, Spacing, WarshPalette, WarshAlpha } from "../constants/theme";
@@ -128,6 +128,14 @@ export function GoogleAuthSection({ showDivider = false }: Props) {
 
   const handleProviderError = useCallback(
     (providerError: unknown) => {
+      // Backing out of the Google account sheet is a choice, not a failure:
+      // Play's pre-launch crawler did exactly that on 1.0.10 and filed a
+      // High-priority Sentry issue. Leave a breadcrumb and clear the button.
+      if (providerError instanceof Error && providerError.message === "google_sign_in_incomplete:cancelled") {
+        addBreadcrumb("google_sign_in_cancelled", { platform: Platform.OS });
+        setError("");
+        return;
+      }
       captureError(providerError, {
         source: "google_sign_in_provider",
         platform: Platform.OS,
