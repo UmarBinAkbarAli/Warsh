@@ -206,7 +206,7 @@ files remain release evidence.
   single `createdAt` of 2026-09-07 16:51, meaning the table was empty when
   `load-core-500.ts` ran. Recovery path, in order: `content:restore-curriculum`,
   `audio:prebuild-catalog:db`, `images:upload`, `content:publish-vocabulary`,
-  `media:prune-orphans`. 802 of the 920 carry an illustration (2026-09-16).
+  `media:prune-orphans`. All 920 carry an illustration (2026-09-16).
 - R2 vocabulary media was pruned on 2026-09-10: 3,634 objects stranded by earlier
   seed cycles were deleted, leaving `audio/words/` at exactly 920 reachable objects
   and `images/words/` at 582. Word illustrations are now 768px and under 100 KB.
@@ -677,8 +677,8 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
 
 ### P1 — content quality and launch polish
 
-1. **118 of the 920 published words have no illustration — all Core 500 Sets
-   71–100; the curriculum is fully covered (420/420, 2026-09-15).** Word images were
+1. **Illustration coverage is complete: 920 of 920 published words (2026-09-16).**
+   History of how the gap closed, kept for the record. Word images were
    restored on 2026-09-10 by re-running `images:upload` against
    `exports/image-tests-compressed`; it matches a source file to a word by
    `transliteration` and covered 582 words. The remaining 338 have no source file at
@@ -707,8 +707,12 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    `exports/image-tests/core-500-sets-*/`, gathered into
    `core-500-sets-1-70-src/`), compressed to
    `exports/image-tests-compressed/core-500-sets-1-70/` (all ≤100 KB) and
-   shipped the same way. All 201 URLs HEAD 200; coverage is now 802 of 920.
-   Remaining: 118 Core 500 words, Sets 71–100.
+   shipped the same way. All 201 URLs HEAD 200; coverage was then 802 of 920.
+   **2026-09-16 (later): Core 500 Sets 71–100 arrived** (118 PNGs, 1254 px, in
+   `exports/image-tests/core-500-sets-71-100/`), compressed to
+   `exports/image-tests-compressed/core-500-sets-71-100/` (203 MB → 9 MB, all
+   ≤100 KB) and shipped the same way. All 118 URLs HEAD 200; every published
+   word now has an illustration — 920 of 920. Nothing remains on this item.
 2. **Curriculum rebuild in progress (owner, in Studio).** The owner is
    rebuilding the curriculum chapter by chapter from Chapter 1; Chapters 1–4 are
    done. **Chapter 5 is implemented in isolated staging (2026-09-16)** from
@@ -851,10 +855,10 @@ rather than failing open.
 - **Cron reliability risk:** Neon suspends its compute overnight, so the 04:00/05:00
   PKT crons can hit a sleeping database and die with `P1000`. Half of August's
   streak resets never ran.
-- **Asset risk:** illustration coverage is 802 of 920 published words (2026-09-16).
-  The whole gap is in the Core 500 — 319 of 500 — because the artwork was
-  drawn for the curriculum vocabulary, and particles like `مِن` and `أَنَّ` have no
-  natural illustration.
+- **Asset risk (closed 2026-09-16):** illustration coverage is 920 of 920
+  published words. The owner drew the remaining 335 (16 curriculum + 319 Core
+  500) across 2026-09-15/16; each batch was compressed and uploaded keyed by
+  `word_id` from `Docs/vocabulary-illustrations-needed.csv`.
 - **Media-key risk:** `audio/words/{id}` and `images/words/{id}` are keyed by
   `VocabularyWord.id`, which `prisma/seed.cjs` changes on every run. A seed against
   production therefore silently unlinks every word's audio and image even when the

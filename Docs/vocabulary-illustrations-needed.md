@@ -5,9 +5,10 @@ illustration: 16 curriculum words (Chapters 1–5) and 319 Core 500 words.
 
 **2026-09-15: the 16 curriculum illustrations are delivered and live** (all URLs
 HEAD 200; coverage 601/920). **2026-09-16: Core 500 Sets 1–70 (201 words)
-delivered and live** (all URLs HEAD 200; coverage 802/920). The delivered
-sections below are kept for the record. **118 Core 500 words remain: Sets
-71–100.**
+delivered and live** (all URLs HEAD 200; coverage 802/920). **2026-09-16:
+Core 500 Sets 71–100 (118 words) delivered and live** (all URLs HEAD 200;
+coverage 920/920). **Nothing remains — every published word has an
+illustration.** The sections below are kept for the record.
 The companion `vocabulary-illustrations-needed.csv` carries the same rows plus the
 database `word_id`, which is what the upload step keys on.
 
