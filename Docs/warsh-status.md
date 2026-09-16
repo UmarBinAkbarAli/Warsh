@@ -306,9 +306,16 @@ Everything below this list is either done and verified, or one of these:
 6. To discuss with the owner (carried, not yet decided):
    - Play's edge-to-edge recommendation (library-level; cannot clear at app
      level while React Native / AndroidX support Android < 15).
-   - Refunded *subscriptions* keep entitlement until the next lazy refresh
-     (RTDN plus the daily reconcile close the window; nothing forces an
-     immediate refresh on the device).
+   - ~~Refunded *subscriptions* keep entitlement until the next lazy refresh~~
+     — settled 2026-09-16, no code change. The device caches no entitlement:
+     every gated route checks the row per request and the Learn tab re-reads
+     status on each load, so a refund is enforced on the next tap once the
+     RTDN lands (~1 s, verified 2026-09-14). The only remaining window is a
+     push Pub/Sub never delivers, bounded by the daily reconcile at ≤24 h.
+     Closing that needs either hourly crons (Vercel Pro; the team is on
+     Hobby, which caps crons at once a day) or a `subscriptionVerifiedAt`
+     column with per-subscriber Google polling — both judged more than the
+     exposure is worth. Revisit only if a refund abuse case actually appears.
    - ~~Noor rate limits rely on database message counting~~ — settled
      2026-09-16: `/api/chat` now has a burst limit (`068508b`, see the
      rate-limiting paragraph below). A global spend ceiling is deliberately
