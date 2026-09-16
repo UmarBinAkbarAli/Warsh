@@ -720,9 +720,11 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    order (`ch05-l01/l02/l03`, new `ch05-l06`, `ch05-l04`, new `ch05-l07`,
    `ch05-l05`, new `ch05-test`), fixtures validated, Quran/Urdu audits clean,
    36 new catalogue clips generated, every lesson and the 12-question test
-   completed on the emulator in English and spot-checked in Urdu. Production is
-   untouched; promote with `npm run content:promote-chapter-five -- --apply`
-   after owner approval, then `npm run content:baseline`. Deviations from the
+   completed on the emulator in English and spot-checked in Urdu. **Promoted to
+   production on 2026-09-16** (`content:promote-chapter-five -- --apply`: 4 updates,
+   4 creates, learner progress untouched), `content:check` shows 414/414 in sync,
+   baseline recorded, and the R2 audio audit reports 3677/3677 clips present, 0
+   missing. Chapter 5 is live. Deviations from the
    proposal (file numbering = display order, STANDARD instead of VERB_PATTERN,
    PLACE_ZARF for "destination", six illustrations still owner-owned) are listed
    at the end of the proposal. The same pass fixed `seed.cjs`, which still loaded
