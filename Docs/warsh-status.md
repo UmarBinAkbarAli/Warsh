@@ -60,9 +60,13 @@ files remain release evidence.
   "Reminders" channel is **not** in this build (committed after the bundle was
   cut) and ships with 1.0.11. Still to check on the Tecno: the Speak mic
   re-prompt after Android revokes `RECORD_AUDIO`.
-- **Version 1.0.11 (versionCode 35) is uploaded to Production and in Google's
-  review (submitted 2026-09-16 14:53 UTC, full rollout, all 177 countries; no
-  device-support change: 12,454 phones, 6,657 tablets, 0 dropped).** It is the first
+- **Version 1.0.11 (versionCode 35) is live in Production (published by Google
+  on 2026-09-16, the day of submission — Play Console: "App update published",
+  bundle 35 Active, 18.4 MB new-install size, 5.26 MB update size).** Submitted
+  2026-09-16 14:53 UTC, full rollout, all 177 countries; no device-support
+  change: 12,454 phones, 6,657 tablets, 0 dropped. The owner's Tecno KF8
+  received it from Play the same evening (`installerPackageName=
+  com.android.vending`, `versionCode=35`, updated 21:42 PKT). It is the first
   release built with R8 (Play's "DEX code optimization" requirement) and the
   first with Android Restore Credentials (Zero-Tap Sign-In); it also carries
   the named `Reminders` notification channel and stops filing a dismissed
@@ -287,18 +291,37 @@ files remain release evidence.
 
 Everything below this list is either done and verified, or one of these:
 
-1. **1.0.11 (35) is in Play review.** After it publishes: re-read the bundle's
-   Optimization / Shrinking percentages (Obfuscation is already 75 %); if they
-   still show "–", plan the AGP 9 upgrade Play recommends.
+1. **1.0.11 (35) published 2026-09-16; the R8 figures were re-read after
+   publishing and the two dashes persist.** Bundle explorer for 35 now shows
+   Optimization percentage "–" and Shrinking percentage "–" each with a red
+   warning icon, Obfuscation 75 %, App optimization Medium, R8 Full Mode +
+   Resource Shrinking ticked, "Resource Shrinking Optimized" and "Repackage
+   Classes" unticked, and "Upgrade to AGP version 9.0 to get the best
+   performance". The app builds with AGP 8.11.0, pinned by React Native 0.81's
+   Gradle plugin (`@react-native/gradle-plugin/gradle/libs.versions.toml`), so
+   the fix is not a one-line bump: it arrives with the Expo SDK 55 / RN 0.82
+   upgrade. Decision needed: take that upgrade as its own workstream, or accept
+   "Medium" (the DEX requirement itself is met — 34.7 → 10.6 MB) until then.
 2. **Curriculum rebuild, Chapters 6 onward** (owner, in Studio); Chapter 5's six
    composite-scene illustrations; the "whose is this?" note at the end of the
    Chapter 5 proposal.
-3. **On the Tecno KF8, once 1.0.11 is installed from Play:** the `Reminders`
-   channel appears under App notifications, and Speak re-prompts after Android
-   revokes the mic (both verified on the emulator, below).
-4. **Restore Credentials on real hardware:** a cloud-backed key (the emulator
-   has no end-to-end-encrypted backup, so only the device-only fallback ran) and
-   a real device-to-device transfer - see P0 #10.
+3. **Tecno KF8 on the Play-installed 1.0.11 (2026-09-16 evening):** the
+   `Reminders` channel is registered (`dumpsys notification`: channel
+   `default` / "Reminders", importance 3, alongside the expo fallback), and
+   both reminder alarms are scheduled (09:00 and 20:00 PKT the next day) —
+   the 1.0.10 gap is closed on hardware. The Speak mic re-prompt could not be
+   exercised: the first Speak step is Chapter 3 · Lesson 6 and the owner's
+   account is on Chapter 2, which locks Chapter 3 server-side; the emulator
+   verification of the same 1.0.11 code stands. Check on the Tecno when the
+   owner reaches Ch 3 L6.
+4. **Restore Credentials on real hardware — cloud-backed key confirmed
+   (2026-09-16):** the Tecno registered a production `RestoreCredential` at
+   21:43 PKT (one minute after the Play install) with `cloudBackup: true`
+   and transports `internal, hybrid` — the E2EE path Credential Manager
+   documents, not the device-only fallback the emulator took. The owner's
+   sign-out at 22:07 set `revokedAt` and the re-sign-in registered a fresh
+   key, so revocation holds on hardware too. Still open: a real
+   device-to-device transfer (needs a second phone) - see P0 #10.
 5. **Memory thresholds (Workstream B):** Play Console still shows no memory
    or bitmap data for Warsh; the local profile of the optimized build is far
    under every threshold - see P0 #11. Re-read Android vitals after 1.0.11 has
