@@ -309,8 +309,10 @@ Everything below this list is either done and verified, or one of these:
    - Refunded *subscriptions* keep entitlement until the next lazy refresh
      (RTDN plus the daily reconcile close the window; nothing forces an
      immediate refresh on the device).
-   - Noor rate limits rely on database message counting - fine at current
-     scale, unmeasured under load.
+   - ~~Noor rate limits rely on database message counting~~ — settled
+     2026-09-16: `/api/chat` now has a burst limit (`068508b`, see the
+     rate-limiting paragraph below). A global spend ceiling is deliberately
+     not added until real traffic shows it is needed.
 
 ### P0 — required verification and open gaps
 
@@ -939,6 +941,21 @@ database — the count is global, not per serverless instance. Login, register,
 forgot/reset-password, Google sign-in/link and the admin session route all share
 it. Redis being unreachable logs an error and degrades to the in-process limiter
 rather than failing open.
+
+`/api/chat` joined it on 2026-09-16 (`068508b`) with a burst limit distinct
+from the daily quota: 15 messages/min per user and 60/min per IP, checked
+before body parsing and any database or OpenAI work. The daily quota bounds
+how many calls one account sends to OpenAI per day; nothing had bounded how
+fast they arrived, so a credit-pack holder or a script minting throwaway
+accounts could saturate the OpenAI concurrency for everyone. The per-IP
+ceiling is loose on purpose because Pakistani carriers put many users behind
+one CGNAT address. The response is `429` with code `rate_limited`, not the
+quota's `too_many_requests`, and the chat screen shows a "too quickly" error
+for it instead of the buy-credits modal (an app-side change, so installed
+builds before the next release show the modal on a burst — rare, since the
+client awaits each reply). Verified on production after deploy with a
+throwaway account (deleted afterwards): 15 × `400` then `429 rate_limited`
+with `Retry-After: 10`. `tests/noor-burst-limit.test.ts` covers both keys.
 
 ## Current risks
 
