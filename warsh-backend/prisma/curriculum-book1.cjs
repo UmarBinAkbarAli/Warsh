@@ -131,7 +131,7 @@ function chapter(spec) {
   return {
     order: spec.order,
     title: spec.title,
-    titleUr: localizeMetadata(spec.title),
+    titleUr: spec.titleUr ?? localizeMetadata(spec.title),
     titleAr: spec.titleAr,
     description: spec.description,
     descriptionUr: localizeMetadata(spec.description),
@@ -268,7 +268,8 @@ const specs = [
   {
     order: 5,
     sourceFile: "reader_lecture_05_haadhihi_tilka_dhahaba.md",
-    title: "Feminine Pointing and First Verbs",
+    title: "Putting Arabic Together — Possession and First Actions",
+    titleUr: "عربی کو جوڑنا — ملکیت اور پہلا عمل",
     titleAr: "هٰذِهِ وَتِلْكَ وَأَوَّل فِعْل",
     description: "Pointing to feminine nouns, lam of possession, and your first past-tense verb.",
     hook: { ayahAr: "هٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً", ayahRef: "Al-A'raf 7:73", highlightedWord: "هٰذِهِ" },

@@ -2,7 +2,8 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 5, Lesson 1 — هٰذِهِ for near feminine nouns. Quranic hook: هٰذِهِ نَاقَةُ اللَّهِ. Authored against warsh-content-schema.ts v1.0.",
+    "_note": "Chapter 5, display lesson 1 (ch05-l01) — هَٰذِهِ applied to feminine nouns, adjectives, and Idafa. Quran hook: هَٰذِهِ نَاقَةُ اللَّهِ (7:73).",
+    "titleUr": "هَٰذِهِ — صفت اور اضافت کے ساتھ",
     "chapter_order": 5,
     "lesson_order": 1,
     "estimated_minutes": 9,
@@ -19,8 +20,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/007073.mp3"
     },
     "noor_intro": {
-      "en": "Allah says هَٰذِهِ نَاقَةُ اللَّهِ — 'This is the she-camel of Allah.' You already know هَٰذَا for masculine nouns. Today you learn هَٰذِهِ, the near pointer for feminine nouns.",
-      "ur": "اللہ فرماتا ہے: هَٰذِهِ نَاقَةُ اللَّهِ — 'یہ اللہ کی اونٹنی ہے۔' آپ مذکر کے لیے هَٰذَا جانتے ہیں۔ آج آپ مؤنث قریب کے لیے هَٰذِهِ سیکھیں گے۔"
+      "en": "You already know هَٰذِهِ. Today you will use it — with a feminine noun, a feminine adjective, and an Idafa phrase. Allah says هَٰذِهِ نَاقَةُ اللَّهِ: 'This is Allah's she-camel.'",
+      "ur": "آپ هَٰذِهِ پہلے سے جانتے ہیں۔ آج آپ اسے استعمال کریں گے — مؤنث اسم، مؤنث صفت اور اضافت کی ترکیب کے ساتھ۔ اللہ فرماتا ہے: هَٰذِهِ نَاقَةُ اللَّهِ — 'یہ اللہ کی اونٹنی ہے۔'"
     },
     "autoplay": true
   },
@@ -28,14 +29,15 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Near Feminine Pointer — هَٰذِهِ",
-        "ar": "اسْمُ إِشَارَةٍ لِلْمُؤَنَّثِ الْقَرِيب",
-        "ur": "قریب مؤنث اشارہ — هَٰذِهِ"
+        "en": "Recall the pointer",
+        "ar": "هَٰذِهِ",
+        "ur": "اشارہ یاد کریں"
       },
       "explanation": {
-        "en": "هَٰذَا points to a near masculine noun. هَٰذِهِ points to a near feminine noun.\n\nهَٰذَا بَيْتٌ — this is a house\nهَٰذِهِ مَدْرَسَةٌ — this is a school\n\nThe pointer agrees with the noun's gender.",
-        "ur": "هَٰذَا قریب مذکر اسم کی طرف اشارہ کرتا ہے۔ هَٰذِهِ قریب مؤنث اسم کی طرف اشارہ کرتا ہے۔\n\nهَٰذَا بَيْتٌ — یہ گھر ہے\nهَٰذِهِ مَدْرَسَةٌ — یہ مدرسہ ہے\n\nاشارہ اسم کی جنس کے مطابق آتا ہے۔"
-      }
+        "en": "هَٰذِهِ = this, for a nearby feminine noun.",
+        "ur": "هَٰذِهِ قریب موجود مؤنث اسم کے لیے “یہ” ہے۔"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/hadhihi.mp3"
     },
     {
       "type": "WORD",
@@ -43,38 +45,91 @@
         "ar": "هَٰذِهِ مَدْرَسَةٌ",
         "ar_plain": "هذه مدرسة",
         "translit": "hādhihi madrasatun",
-        "en": "this is a school",
-        "ur": "یہ مدرسہ ہے"
+        "en": "This is a school.",
+        "ur": "یہ ایک مدرسہ ہے۔"
       },
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/hadhihi-madrasah.mp3",
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/madrasa.webp",
+      "explanation": {
+        "en": "Use it before a feminine noun. هَٰذِهِ مَدْرَسَةٌ — This is a school.",
+        "ur": "اسے مؤنث اسم سے پہلے لائیں۔ هَٰذِهِ مَدْرَسَةٌ — یہ ایک مدرسہ ہے۔"
+      },
       "introduces_vocab": {
         "ar_plain": "مدرسة"
       }
     },
     {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "A feminine noun may show ة",
+        "ur": "مؤنث اسم پر ة ہو سکتی ہے"
+      },
+      "explanation": {
+        "en": "مَدْرَسَةٌ، شَجَرَةٌ، كَلِمَةٌ، نَاقَةٌ\n\nReminder: ة is a common feminine sign, not a rule without exceptions.",
+        "ur": "مَدْرَسَةٌ، شَجَرَةٌ، كَلِمَةٌ، نَاقَةٌ\n\nیاد رہے: ة مؤنث کی ایک عام علامت ہے، بے استثنا قاعدہ نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "مَدْرَسَةٌ",
+          "ar_plain": "مدرسة",
+          "translit": "madrasatun",
+          "en": "school",
+          "ur": "مدرسہ"
+        },
+        {
+          "ar": "شَجَرَةٌ",
+          "ar_plain": "شجرة",
+          "translit": "shajaratun",
+          "en": "tree",
+          "ur": "درخت"
+        },
+        {
+          "ar": "كَلِمَةٌ",
+          "ar_plain": "كلمة",
+          "translit": "kalimatun",
+          "en": "word",
+          "ur": "لفظ / بات"
+        },
+        {
+          "ar": "نَاقَةٌ",
+          "ar_plain": "ناقة",
+          "translit": "nāqatun",
+          "en": "she-camel",
+          "ur": "اونٹنی"
+        }
+      ]
+    },
+    {
       "type": "WORD",
       "text": {
-        "ar": "هَٰذِهِ مَدِينَةٌ",
-        "ar_plain": "هذه مدينة",
-        "translit": "hādhihi madīnatun",
-        "en": "this is a city",
-        "ur": "یہ شہر ہے"
+        "ar": "هَٰذِهِ شَجَرَةٌ كَبِيرَةٌ",
+        "ar_plain": "هذه شجرة كبيرة",
+        "translit": "hādhihi shajaratun kabīratun",
+        "en": "This is a big tree.",
+        "ur": "یہ ایک بڑا درخت ہے۔"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/hadhihi-madinah.mp3",
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/shajara.webp",
+      "explanation": {
+        "en": "Add a feminine adjective. The adjective follows the noun and matches its feminine form.",
+        "ur": "مؤنث صفت لگائیں۔ صفت اسم کے بعد آتی ہے اور اس کی مؤنث صورت سے مطابقت رکھتی ہے۔"
+      },
       "introduces_vocab": {
-        "ar_plain": "مدينة"
+        "ar_plain": "شجرة"
       }
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "هَٰذِهِ كَلِمَةٌ",
-        "ar_plain": "هذه كلمة",
-        "translit": "hādhihi kalimatun",
-        "en": "this is a word",
-        "ur": "یہ لفظ ہے"
+        "ar": "هَٰذِهِ كَلِمَةٌ طَيِّبَةٌ",
+        "ar_plain": "هذه كلمة طيبة",
+        "translit": "hādhihi kalimatun ṭayyibatun",
+        "en": "This is a good word.",
+        "ur": "یہ ایک اچھی بات / اچھا لفظ ہے۔"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/hadhihi-kalimah.mp3",
+      "explanation": {
+        "en": "Another description: هَٰذِهِ كَلِمَةٌ طَيِّبَةٌ — This is a good word.",
+        "ur": "ایک اور توصیف: هَٰذِهِ كَلِمَةٌ طَيِّبَةٌ — یہ ایک اچھی بات / اچھا لفظ ہے۔"
+      },
       "introduces_vocab": {
         "ar_plain": "كلمة"
       }
@@ -82,27 +137,16 @@
     {
       "type": "WORD",
       "text": {
-        "ar": "هَٰذِهِ آيَةٌ",
-        "ar_plain": "هذه آية",
-        "translit": "hādhihi āyatun",
-        "en": "this is a sign / verse",
-        "ur": "یہ نشانی / آیت ہے"
+        "ar": "نَاقَةُ اللَّهِ",
+        "ar_plain": "ناقة الله",
+        "translit": "nāqatu llāh",
+        "en": "Allah's she-camel / the she-camel of Allah",
+        "ur": "اللہ کی اونٹنی"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/hadhihi-ayah.mp3",
-      "introduces_vocab": {
-        "ar_plain": "آية"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "هَٰذِهِ نَاقَةٌ",
-        "ar_plain": "هذه ناقة",
-        "translit": "hādhihi nāqatun",
-        "en": "this is a she-camel",
-        "ur": "یہ اونٹنی ہے"
+      "explanation": {
+        "en": "Recall Idafa: نَاقَةُ اللَّهِ — Allah's she-camel / the she-camel of Allah.",
+        "ur": "اضافت یاد کریں: نَاقَةُ اللَّهِ — اللہ کی اونٹنی۔"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/hadhihi-naqah.mp3",
       "introduces_vocab": {
         "ar_plain": "ناقة"
       }
@@ -110,28 +154,83 @@
     {
       "type": "WORD",
       "text": {
-        "ar": "هَٰذِهِ جَنَّةٌ",
-        "ar_plain": "هذه جنة",
-        "translit": "hādhihi jannatun",
-        "en": "this is a garden",
-        "ur": "یہ باغ / جنت ہے"
+        "ar": "هَٰذِهِ نَاقَةُ اللَّهِ",
+        "ar_plain": "هذه ناقة الله",
+        "translit": "hādhihi nāqatu llāh",
+        "en": "This is Allah's she-camel.",
+        "ur": "یہ اللہ کی اونٹنی ہے۔"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/hadhihi-jannah.mp3",
-      "introduces_vocab": {
-        "ar_plain": "جنة"
+      "explanation": {
+        "en": "Point to a whole Idafa phrase. هَٰذِهِ points to نَاقَةُ, while اللَّهِ tells whose she-camel it is.",
+        "ur": "پوری اضافت کی ترکیب کی طرف اشارہ کریں۔ هَٰذِهِ نَاقَةُ کی طرف اشارہ کرتا ہے، جبکہ اللَّهِ بتاتا ہے کہ اونٹنی کس کی ہے۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Quick Gender Test",
-        "ar": "اختبار التذكير والتأنيث",
-        "ur": "جنس کی تیز پہچان"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Do not add الـ automatically",
+        "ar": "هَٰذِهِ مَدْرَسَةٌ / هَٰذِهِ الْمَدْرَسَةُ",
+        "ur": "الـ خود بخود نہ لگائیں"
       },
-      "body": {
-        "en": "Many feminine nouns end with ة:\nمَدْرَسَةٌ · مَدِينَةٌ · كَلِمَةٌ · نَاقَةٌ · جَنَّةٌ\n\nSo they use هَٰذِهِ, not هَٰذَا.",
-        "ur": "بہت سے مؤنث اسم ة پر ختم ہوتے ہیں:\nمَدْرَسَةٌ · مَدِينَةٌ · كَلِمَةٌ · نَاقَةٌ · جَنَّةٌ\n\nاس لیے ان کے ساتھ هَٰذِهِ آتا ہے، هَٰذَا نہیں۔"
+      "examples": [
+        {
+          "ar": "هَٰذِهِ مَدْرَسَةٌ",
+          "ar_plain": "هذه مدرسة",
+          "translit": "hādhihi madrasatun",
+          "en": "This is a school.",
+          "ur": "یہ ایک مدرسہ ہے۔"
+        },
+        {
+          "ar": "هَٰذِهِ الْمَدْرَسَةُ",
+          "ar_plain": "هذه المدرسة",
+          "translit": "hādhihi l-madrasatu",
+          "en": "this (particular) school",
+          "ur": "یہ (خاص) مدرسہ"
+        }
+      ],
+      "explanation": {
+        "en": "هَٰذِهِ مَدْرَسَةٌ introduces an indefinite school.\nهَٰذِهِ الْمَدْرَسَةُ points to a particular known school.",
+        "ur": "هَٰذِهِ مَدْرَسَةٌ ایک غیر معین (نکرہ) مدرسہ متعارف کراتا ہے۔\nهَٰذِهِ الْمَدْرَسَةُ ایک خاص جانے پہچانے مدرسے کی طرف اشارہ کرتا ہے۔"
       }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Read the Quranic phrase in parts",
+        "ar": "هَٰذِهِ نَاقَةُ اللَّهِ",
+        "ur": "قرآنی ترکیب کو حصوں میں پڑھیں"
+      },
+      "explanation": {
+        "en": "هَٰذِهِ | نَاقَةُ | اللَّهِ\nthis | she-camel | of Allah",
+        "ur": "هَٰذِهِ | نَاقَةُ | اللَّهِ\nیہ | اونٹنی | اللہ کی"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Checkpoint",
+        "ur": "جانچ"
+      },
+      "explanation": {
+        "en": "Use هَٰذِهِ with a feminine noun; then add either an adjective or an Idafa owner.",
+        "ur": "هَٰذِهِ کو مؤنث اسم کے ساتھ استعمال کریں؛ پھر یا تو صفت لگائیں یا اضافت کا مالک۔"
+      },
+      "examples": [
+        {
+          "ar": "هَٰذِهِ شَجَرَةٌ كَبِيرَةٌ",
+          "ar_plain": "هذه شجرة كبيرة",
+          "translit": "hādhihi shajaratun kabīratun",
+          "en": "This is a big tree.",
+          "ur": "یہ ایک بڑا درخت ہے۔"
+        },
+        {
+          "ar": "هَٰذِهِ نَاقَةُ اللَّهِ",
+          "ar_plain": "هذه ناقة الله",
+          "translit": "hādhihi nāqatu llāh",
+          "en": "This is Allah's she-camel.",
+          "ur": "یہ اللہ کی اونٹنی ہے۔"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -143,83 +242,39 @@
         "ar": "هَٰذِهِ مَدْرَسَةٌ",
         "ar_plain": "هذه مدرسة",
         "translit": "hādhihi madrasatun",
-        "en": "this is a school",
-        "ur": "یہ مدرسہ ہے"
+        "en": "This is a school.",
+        "ur": "یہ ایک مدرسہ ہے۔"
       },
       "options": [
         {
-          "en": "this is a school",
-          "ur": "یہ ایک سکول ہے"
+          "en": "This is a school.",
+          "ur": "یہ ایک مدرسہ ہے۔"
         },
         {
-          "en": "this is a house",
-          "ur": "یہ ایک گھر ہے"
+          "en": "That is a school.",
+          "ur": "وہ ایک مدرسہ ہے۔"
         },
         {
-          "en": "that is a city",
-          "ur": "یہ ایک شہر ہے"
+          "en": "This is a tree.",
+          "ur": "یہ ایک درخت ہے۔"
         },
         {
-          "en": "this is a book",
-          "ur": "یہ ایک کتاب ہے"
+          "en": "This is a word.",
+          "ur": "یہ ایک لفظ ہے۔"
         }
       ],
-      "correct_index": 0
+      "correct_index": 0,
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/hadhihi-madrasah.mp3"
     },
     {
       "id": "ch05-l01-ex02",
-      "type": "TAP_TRANSLATION",
-      "xp_value": 1,
-      "prompt": {
-        "ar": "هَٰذِهِ مَدِينَةٌ",
-        "ar_plain": "هذه مدينة",
-        "translit": "hādhihi madīnatun",
-        "en": "this is a city",
-        "ur": "یہ شہر ہے"
-      },
-      "options": [
-        {
-          "en": "this is a city",
-          "ur": "یہ ایک شہر ہے"
-        },
-        {
-          "en": "هَٰذَا بَيْتٌ",
-          "ur": "هَٰذَا بَيْتٌ"
-        },
-        {
-          "en": "تِلْكَ مَدِينَةٌ",
-          "ur": "تِلْكَ مَدِينَةٌ"
-        },
-        {
-          "en": "this is a word",
-          "ur": "یہ ایک لفظ ہے"
-        }
-      ],
-      "correct_index": 0
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch05-l01-ex03",
-      "statement": {
-        "en": "هَٰذِهِ is used for near feminine nouns.",
-        "ur": "هَٰذِهِ قریب مؤنث اسموں کے لیے استعمال ہوتا ہے۔"
-      },
-      "xp_value": 1,
-      "correct_answer": true,
-      "explanation_on_wrong": {
-        "en": "True — هَٰذِهِ points to a near feminine noun, such as مَدْرَسَةٌ or نَاقَةٌ.",
-        "ur": "درست — هَٰذِهِ قریب مؤنث اسم کے لیے ہے، جیسے مَدْرَسَةٌ یا نَاقَةٌ۔"
-      }
-    },
-    {
-      "id": "ch05-l01-ex04",
       "type": "FILL_BLANK",
       "xp_value": 1,
       "mode": "TAP",
-      "sentence_ar": "___ نَاقَةٌ",
+      "sentence_ar": "___ شَجَرَةٌ كَبِيرَةٌ",
       "hint": {
-        "en": "this is a she-camel",
-        "ur": "یہ اونٹنی ہے"
+        "en": "This is a big tree.",
+        "ur": "یہ ایک بڑا درخت ہے۔"
       },
       "options": [
         {
@@ -237,18 +292,18 @@
           "ur": "هَٰذَا"
         },
         {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "—",
+          "en": "تِلْكَ",
+          "ur": "تِلْكَ"
+        },
+        {
           "ar": "ذَٰلِكَ",
           "ar_plain": "ذلك",
           "translit": "—",
           "en": "ذَٰلِكَ",
           "ur": "ذَٰلِكَ"
-        },
-        {
-          "ar": "مَنْ",
-          "ar_plain": "من",
-          "translit": "—",
-          "en": "مَنْ",
-          "ur": "مَنْ"
         }
       ],
       "correct_answer": {
@@ -259,88 +314,17 @@
         "ur": "هَٰذِهِ"
       },
       "explanation_on_wrong": {
-        "en": "نَاقَةٌ is feminine, so the near pointer is هَٰذِهِ.",
-        "ur": "نَاقَةٌ مؤنث ہے، اس لیے قریب اشارہ هَٰذِهِ ہے۔"
+        "en": "The noun شَجَرَةٌ is a nearby feminine noun, so the pointer is هَٰذِهِ.",
+        "ur": "شَجَرَةٌ قریب کا مؤنث اسم ہے، اس لیے اشارہ هَٰذِهِ ہے۔"
       }
     },
     {
-      "id": "ch05-l01-ex05",
-      "type": "MATCHING",
-      "xp_value": 1,
-      "left_column": [
-        {
-          "ar": "هَٰذِهِ مَدْرَسَةٌ",
-          "ar_plain": "هذه مدرسة",
-          "translit": "hādhihi madrasatun",
-          "en": "this is a school",
-          "ur": "یہ مدرسہ ہے"
-        },
-        {
-          "ar": "هَٰذِهِ كَلِمَةٌ",
-          "ar_plain": "هذه كلمة",
-          "translit": "hādhihi kalimatun",
-          "en": "this is a word",
-          "ur": "یہ لفظ ہے"
-        },
-        {
-          "ar": "هَٰذِهِ آيَةٌ",
-          "ar_plain": "هذه آية",
-          "translit": "hādhihi āyatun",
-          "en": "this is a sign / verse",
-          "ur": "یہ نشانی / آیت ہے"
-        },
-        {
-          "ar": "هَٰذِهِ جَنَّةٌ",
-          "ar_plain": "هذه جنة",
-          "translit": "hādhihi jannatun",
-          "en": "this is a garden",
-          "ur": "یہ باغ / جنت ہے"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "this is a word",
-          "ur": "یہ ایک لفظ ہے"
-        },
-        {
-          "en": "this is a sign / verse",
-          "ur": "یہ ایک نشانی / آیت ہے۔"
-        },
-        {
-          "en": "this is a garden",
-          "ur": "یہ ایک باغ ہے"
-        },
-        {
-          "en": "this is a school",
-          "ur": "یہ ایک سکول ہے"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          3
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          2,
-          1
-        ],
-        [
-          3,
-          2
-        ]
-      ]
-    },
-    {
-      "id": "ch05-l01-ex06",
+      "id": "ch05-l01-ex03",
       "type": "BUILD_SENTENCE",
       "xp_value": 1,
       "target_translation": {
-        "en": "Build: 'this is a word'",
-        "ur": "بنائیں: 'یہ لفظ ہے'"
+        "en": "Build: 'This is a good word.'",
+        "ur": "جملہ بنائیں: 'یہ ایک اچھی بات ہے۔'"
       },
       "tiles": [
         {
@@ -358,31 +342,243 @@
           "ur": "كَلِمَةٌ"
         },
         {
+          "ar": "طَيِّبَةٌ",
+          "ar_plain": "طيبة",
+          "translit": "—",
+          "en": "طَيِّبَةٌ",
+          "ur": "طَيِّبَةٌ"
+        },
+        {
+          "ar": "طَيِّبٌ",
+          "ar_plain": "طيب",
+          "translit": "—",
+          "en": "طَيِّبٌ",
+          "ur": "طَيِّبٌ"
+        },
+        {
           "ar": "هَٰذَا",
           "ar_plain": "هذا",
           "translit": "—",
           "en": "هَٰذَا",
           "ur": "هَٰذَا"
-        },
-        {
-          "ar": "كِتَابٌ",
-          "ar_plain": "كتاب",
-          "translit": "—",
-          "en": "كِتَابٌ",
-          "ur": "كِتَابٌ"
         }
       ],
       "correct_order": [
         0,
-        1
+        1,
+        2
       ],
       "explanation_on_wrong": {
-        "en": "كَلِمَةٌ is feminine, so it uses هَٰذِهِ.",
-        "ur": "كَلِمَةٌ مؤنث ہے، اس لیے اس کے ساتھ هَٰذِهِ آئے گا۔"
+        "en": "Order: هَٰذِهِ (this, feminine) + كَلِمَةٌ (a word) + طَيِّبَةٌ (good, feminine). The adjective matches the feminine noun.",
+        "ur": "هَٰذِهِ (یہ، مؤنث) + كَلِمَةٌ (ایک لفظ) + طَيِّبَةٌ (اچھی، مؤنث)۔ صفت مؤنث اسم سے مطابقت رکھتی ہے۔"
+      }
+    },
+    {
+      "id": "ch05-l01-ex04",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        {
+          "ar": "مَدْرَسَةٌ",
+          "ar_plain": "مدرسة",
+          "translit": "madrasatun",
+          "en": "school",
+          "ur": "مدرسہ"
+        },
+        {
+          "ar": "شَجَرَةٌ",
+          "ar_plain": "شجرة",
+          "translit": "shajaratun",
+          "en": "tree",
+          "ur": "درخت"
+        },
+        {
+          "ar": "كَلِمَةٌ",
+          "ar_plain": "كلمة",
+          "translit": "kalimatun",
+          "en": "word",
+          "ur": "لفظ / بات"
+        },
+        {
+          "ar": "نَاقَةٌ",
+          "ar_plain": "ناقة",
+          "translit": "nāqatun",
+          "en": "she-camel",
+          "ur": "اونٹنی"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "word",
+          "ur": "لفظ / بات"
+        },
+        {
+          "en": "school",
+          "ur": "مدرسہ"
+        },
+        {
+          "en": "she-camel",
+          "ur": "اونٹنی"
+        },
+        {
+          "en": "tree",
+          "ur": "درخت"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "id": "ch05-l01-ex05",
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "هَٰذِهِ شَجَرَةٌ ___",
+      "hint": {
+        "en": "This is a big tree. Choose the matching adjective.",
+        "ur": "یہ ایک بڑا درخت ہے۔ مطابق صفت چنیں۔"
+      },
+      "options": [
+        {
+          "ar": "كَبِيرَةٌ",
+          "ar_plain": "كبيرة",
+          "translit": "—",
+          "en": "كَبِيرَةٌ",
+          "ur": "كَبِيرَةٌ"
+        },
+        {
+          "ar": "كَبِيرٌ",
+          "ar_plain": "كبير",
+          "translit": "—",
+          "en": "كَبِيرٌ",
+          "ur": "كَبِيرٌ"
+        },
+        {
+          "ar": "جَدِيدَةٌ",
+          "ar_plain": "جديدة",
+          "translit": "—",
+          "en": "جَدِيدَةٌ",
+          "ur": "جَدِيدَةٌ"
+        },
+        {
+          "ar": "جَدِيدٌ",
+          "ar_plain": "جديد",
+          "translit": "—",
+          "en": "جَدِيدٌ",
+          "ur": "جَدِيدٌ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كَبِيرَةٌ",
+        "ar_plain": "كبيرة",
+        "translit": "—",
+        "en": "كَبِيرَةٌ",
+        "ur": "كَبِيرَةٌ"
+      },
+      "explanation_on_wrong": {
+        "en": "The noun شَجَرَةٌ is feminine, so the adjective must be كَبِيرَةٌ, not كَبِيرٌ.",
+        "ur": "شَجَرَةٌ مؤنث ہے، اس لیے صفت كَبِيرَةٌ ہو گی، كَبِيرٌ نہیں۔"
+      }
+    },
+    {
+      "id": "ch05-l01-ex06",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Build: 'This is Allah's she-camel.'",
+        "ur": "جملہ بنائیں: 'یہ اللہ کی اونٹنی ہے۔'"
+      },
+      "tiles": [
+        {
+          "ar": "هَٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "—",
+          "en": "هَٰذِهِ",
+          "ur": "هَٰذِهِ"
+        },
+        {
+          "ar": "نَاقَةُ",
+          "ar_plain": "ناقة",
+          "translit": "—",
+          "en": "نَاقَةُ",
+          "ur": "نَاقَةُ"
+        },
+        {
+          "ar": "اللَّهِ",
+          "ar_plain": "الله",
+          "translit": "—",
+          "en": "اللَّهِ",
+          "ur": "اللَّهِ"
+        },
+        {
+          "ar": "نَاقَةٌ",
+          "ar_plain": "ناقة",
+          "translit": "—",
+          "en": "نَاقَةٌ",
+          "ur": "نَاقَةٌ"
+        },
+        {
+          "ar": "هَٰذَا",
+          "ar_plain": "هذا",
+          "translit": "—",
+          "en": "هَٰذَا",
+          "ur": "هَٰذَا"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "explanation_on_wrong": {
+        "en": "Order: هَٰذِهِ + نَاقَةُ اللَّهِ. In the Idafa the first noun has no tanween (نَاقَةُ), and اللَّهِ tells whose it is.",
+        "ur": "هَٰذِهِ + نَاقَةُ اللَّهِ۔ اضافت میں پہلے اسم پر تنوین نہیں ہوتی (نَاقَةُ)، اور اللَّهِ بتاتا ہے کہ کس کی ہے۔"
+      }
+    },
+    {
+      "id": "ch05-l01-ex07",
+      "type": "TRUE_FALSE",
+      "xp_value": 1,
+      "statement": {
+        "en": "In the phrase هَٰذِهِ نَاقَةُ اللَّهِ, the word اللَّهِ identifies the owner.",
+        "ur": "هَٰذِهِ نَاقَةُ اللَّهِ میں اللَّهِ مالک کی نشاندہی کرتا ہے۔",
+        "ar_example": {
+          "ar": "هَٰذِهِ نَاقَةُ اللَّهِ",
+          "ar_plain": "هذه ناقة الله",
+          "translit": "hādhihi nāqatu llāh",
+          "en": "This is Allah's she-camel.",
+          "ur": "یہ اللہ کی اونٹنی ہے۔"
+        }
+      },
+      "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True — نَاقَةُ اللَّهِ is an Idafa: the she-camel of Allah. اللَّهِ is the owner.",
+        "ur": "درست — نَاقَةُ اللَّهِ اضافت ہے: اللہ کی اونٹنی۔ اللَّهِ مالک ہے۔"
       }
     }
   ],
   "reveal": {
+    "concept_name": {
+      "en": "الإشارة in the Quran",
+      "ar": "أسماء الإشارة فِي الْقُرْآن",
+      "ur": "قرآن میں اسمائے اشارہ"
+    },
     "ayah": {
       "surah": 7,
       "ayah": 73,
@@ -393,22 +589,24 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/007073.mp3"
     },
     "highlighted_word_indices": [
-      0
+      0,
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "هَٰذِهِ",
+      "نَاقَةُ",
+      "اللَّهِ"
     ],
     "noor_explanation": {
-      "en": "هَٰذِهِ points to نَاقَةُ, a feminine noun. The Quran is not only giving a story here; it is using the same pointing system you now know: masculine/feminine, near/far. Today you unlocked the feminine near pointer.",
-      "ur": "هَٰذِهِ نَاقَةُ کی طرف اشارہ کر رہا ہے، جو مؤنث اسم ہے۔ قرآن یہاں صرف واقعہ نہیں بتا رہا؛ وہ وہی اشارہ نظام استعمال کر رہا ہے جو آپ سیکھ رہے ہیں: مذکر/مؤنث، قریب/دور۔ آج آپ نے مؤنث قریب اشارہ کھول لیا۔"
-    },
-    "concept_name": {
-      "en": "الإشارة in the Quran",
-      "ar": "أسماء الإشارة فِي الْقُرْآن",
-      "ur": "قرآن میں اسمائے اشارہ"
+      "en": "هَٰذِهِ | نَاقَةُ | اللَّهِ — this | she-camel | of Allah. هَٰذِهِ points to the feminine noun نَاقَةُ, and اللَّهِ tells whose she-camel it is. One pointer, one feminine noun, one Idafa — and you can now read all three.",
+      "ur": "هَٰذِهِ | نَاقَةُ | اللَّهِ — یہ | اونٹنی | اللہ کی۔ هَٰذِهِ مؤنث اسم نَاقَةُ کی طرف اشارہ کرتا ہے، اور اللَّهِ بتاتا ہے کہ اونٹنی کس کی ہے۔ ایک اشارہ، ایک مؤنث اسم، ایک اضافت — اور اب آپ تینوں پڑھ سکتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You now know هَٰذِهِ — this, for a near feminine noun. When you see words like مَدْرَسَةٌ, مَدِينَةٌ, كَلِمَةٌ, نَاقَةٌ, and جَنَّةٌ, your mind should reach for هَٰذِهِ.",
-      "ur": "آپ اب هَٰذِهِ جانتے ہیں — قریب مؤنث اسم کے لیے 'یہ'۔ جب آپ مَدْرَسَةٌ، مَدِينَةٌ، كَلِمَةٌ، نَاقَةٌ، اور جَنَّةٌ دیکھیں تو ذہن فوراً هَٰذِهِ تک پہنچے۔"
+      "en": "You did not merely recall هَٰذِهِ; you used it with a noun, an adjective, and an Idafa phrase.",
+      "ur": "آپ نے هَٰذِهِ صرف یاد نہیں کیا؛ آپ نے اسے اسم، صفت اور اضافت کی ترکیب کے ساتھ استعمال کیا۔"
     }
   }
 }

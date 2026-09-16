@@ -1,6 +1,6 @@
 # Chapter 5 — Complete Content Proposal
 
-**Status:** Proposed for product-owner review; not yet implemented  
+**Status:** Implemented in isolated local staging on 2026-09-16 (see *Implementation notes* at the end); production unchanged, awaiting owner approval for `npm run content:promote-chapter-five -- --apply`  
 **Chapter position:** Chapter 5  
 **Working chapter title:** **Putting Arabic Together — Possession and First Actions**  
 **Urdu title:** **عربی کو جوڑنا — ملکیت اور پہلا عمل**
@@ -19,12 +19,17 @@ It will then introduce a new possession pattern with `لِـ` and the learner’
 After Chapter 5, the learner should be able to:
 
 1. Understand and build phrases such as `هَٰذِهِ كَلِمَةٌ طَيِّبَةٌ` and `تِلْكَ آيَاتُ اللَّهِ`.
-2. Distinguish `لِي، لَكَ، لَهُ، لَهَا، لَكُمْ`.
+2. Distinguish `لِي، لَكَ، لَكِ، لَهُ، لَهَا، لَكُمْ`.
 3. Understand that `لِي كِتَابٌ` naturally means “I have a book.”
 4. Recognize `ذَهَبَ` as “he went.”
 5. Identify the action and doer in `ذَهَبَ الطَّالِبُ`.
 6. Build a basic movement sentence such as `ذَهَبَ الطَّالِبُ إِلَى الْمَسْجِدِ`.
 7. Pass a 12-question chapter test covering only taught material.
+
+### Later-curriculum overlap decision
+
+- `لَكِ` appears inside the Quran text of Chapter 28, Lesson 3 (`أَنَّىٰ لَكِ هَٰذَا`) but is not taught there as a possession pattern. No later lesson currently provides a dedicated, beginner-friendly lesson for `لَكِ`; therefore it is added here beside `لَكَ`.
+- `ذَهَبُوا` is actively taught later in Chapter 17, Lesson 6. Chapter 5 will not teach it actively; Lesson 6 only labels it as recognition of the same root family while production remains singular `ذَهَبَ`.
 
 ## 2. Final chapter structure
 
@@ -32,14 +37,31 @@ After Chapter 5, the learner should be able to:
 |---|---|---|---|---:|---:|
 | 1 | `ch05-l01` | `هَٰذِهِ` with description and Idafa | Apply the near-feminine pointer | 10 | 7 |
 | 2 | `ch05-l02` | `تِلْكَ` in useful Quranic phrases | Apply the far-feminine pointer | 10 | 7 |
-| 3 | `ch05-l03` | `لِي` and `لَكَ` | Express “I have / you have” | 10 | 7 |
+| 3 | `ch05-l03` | `لِي، لَكَ، لَكِ` | Express “I have / you have” | 10 | 7 |
 | 4 | `ch05-l06` | `لَهُ، لَهَا، لَكُمْ` | Express “he/she/you all have” | 11 | 8 |
 | 5 | `ch05-l04` | `ذَهَبَ` — first past-tense verb | Recognize and use “he went” | 10 | 7 |
 | 6 | `ch05-l07` | Action, doer, and destination | Build a three-part verbal sentence | 11 | 8 |
-| 7 | `ch05-l05` | R1 cumulative review | Consolidate Chapters 1–5 | 8 | 10 |
+| 7 | `ch05-l05` | R1 cumulative review | Consolidate Chapters 1–5 | 8 | 11 |
 | 8 | `ch05-test` | Chapter 5 final test | Prove mastery and unlock Chapter 6 | — | 12 |
 
 Existing IDs remain stable to preserve learner progress. New topics receive new IDs.
+
+### Implementation identity map (important)
+
+The **filename number** and the **learner display order** are separate fields. The filename number must stay sequential because fixture validation reads it from `_meta.lesson_order`; the database `order` field controls what learners see.
+
+| Fixture file | Stable ID | `_meta.lesson_order` | Database display `order` | Learner item |
+|---|---|---:|---:|---|
+| `chapter-05-lesson-01.json` | `ch05-l01` | 1 | 1 | `هَٰذِهِ` |
+| `chapter-05-lesson-02.json` | `ch05-l02` | 2 | 2 | `تِلْكَ` |
+| `chapter-05-lesson-03.json` | `ch05-l03` | 3 | 3 | `لِي، لَكَ، لَكِ` |
+| `chapter-05-lesson-04.json` | `ch05-l04` | 4 | 5 | `ذَهَبَ` |
+| `chapter-05-lesson-05.json` | `ch05-l05` | 5 | 7 | R1 review |
+| `chapter-05-lesson-06.json` | `ch05-l06` | 6 | 4 | `لَهُ، لَهَا، لَكُمْ` |
+| `chapter-05-lesson-07.json` | `ch05-l07` | 7 | 6 | action, doer, destination |
+| `chapter-05-lesson-08-final-test.json` | `ch05-test` | 8 | 8 | final test |
+
+In simple terms: `lesson-04` is still the fourth file for validators, but it appears as the fifth learning item because the possession lesson is inserted before it. This preserves the existing IDs and learner progress.
 
 ---
 
@@ -196,11 +218,11 @@ You can now apply `تِلْكَ` in ordinary descriptions and recognize `تِل�
 
 ---
 
-# Lesson 3 — `لِي` and `لَكَ`
+# Lesson 3 — `لِي`, `لَكَ`, and `لَكِ`
 
 **Template:** `STANDARD`  
 **Estimated time:** 9–11 minutes  
-**Objective:** Express “I have” and “you have” using `لِي` and `لَكَ`.  
+**Objective:** Express “I have” and “you have” using `لِي`, `لَكَ` (one male), and `لَكِ` (one female).  
 **Scope boundary:** This is possession with `لِـ`; Chapter 7 will separately teach attached noun suffixes such as `كِتَابِي`.
 
 ## Quran hook
@@ -226,26 +248,29 @@ You can now apply `تِلْكَ` in ordinary descriptions and recognize `تِل�
 4. **More useful vocabulary**  
    `لِي قَلَمٌ` — I have a pen.
 
-5. **`لَكَ`**  
-   `لَكَ` = for you / belonging to you / you have, addressing one male learner.
+5. **`لَكَ` and `لَكِ`**  
+   `لَكَ` = for you / belonging to you / you have, addressing one male.  
+   `لَكِ` = for you / belonging to you / you have, addressing one female.
 
 6. **Second complete phrase**  
-   `لَكَ كِتَابٌ` — You have a book.  
+   `لَكَ كِتَابٌ` — You (male) have a book.  
+   `لَكِ كِتَابٌ` — You (female) have a book.  
    Urdu: تمہارے / آپ کے پاس ایک کتاب ہے۔
 
 7. **Contrast**  
    `لِي قَلَمٌ` — I have a pen.  
-   `لَكَ قَلَمٌ` — You have a pen.
+   `لَكَ قَلَمٌ` — You (male) have a pen.  
+   `لَكِ قَلَمٌ` — You (female) have a pen.
 
 8. **Question and answer pattern**  
-   `لِمَنْ هَذَا؟` is reserved for a later dedicated question lesson. Here, answer patterns only: `لِي` and `لَكَ`.
+   `لِمَنْ هَذَا؟` is reserved for a later dedicated question lesson. Here, answer patterns only: `لِي`, `لَكَ`, and `لَكِ`.
 
 9. **Do not confuse two possession tools**  
    `كِتَابُ الطَّالِبِ` = the student’s book (Idafa).  
    `لِلطَّالِبِ كِتَابٌ` = the student has a book (`لِـ` possession).
 
 10. **Checkpoint**  
-    Speaker owns it → `لِي`; the person addressed owns it → `لَكَ`.
+    Speaker owns it → `لِي`; a male person addressed owns it → `لَكَ`; a female person addressed owns it → `لَكِ`.
 
 ## Vocabulary retained or added
 
@@ -253,21 +278,21 @@ You can now apply `تِلْكَ` in ordinary descriptions and recognize `تِل�
 
 ## Illustration
 
-One text-free generated split scene: a learner holding a book on the “me” side and handing/pointing to a pen on the “you” side. The UI overlays `لِي` and `لَكَ` outside the image.
+One text-free generated split scene: a learner holding a book on the “me” side and two addressed learners (male and female) on the “you” side. The UI overlays `لِي`, `لَكَ`, and `لَكِ` outside the image.
 
 ## Exercises
 
 1. **Tap translation:** `لِي كِتَابٌ` → “I have a book.”
-2. **Tap translation:** `لَكَ قَلَمٌ` → “You have a pen.”
+2. **Tap translation:** `لَكَ قَلَمٌ` → “You (male) have a pen.”
 3. **Fill blank:** “I have a key” → `___ مِفْتَاحٌ` → `لِي`.
-4. **Fill blank:** “You have a house” → `___ بَيْتٌ` → `لَكَ`.
+4. **Fill blank:** “You (female) have a house” → `___ بَيْتٌ` → `لَكِ`.
 5. **Build sentence:** I have a pen → `لِي قَلَمٌ`.
-6. **Matching:** `لِي / لَكَ / كِتَابٌ / مِفْتَاحٌ` with exact meanings.
+6. **Matching:** `لِي / لَكَ / لَكِ / كِتَابٌ / مِفْتَاحٌ` with exact meanings.
 7. **Choose the owner:** In `لِي كِتَابٌ`, who has the book? → the speaker / me.
 
 ## Completion message
 
-You can now say what you have and what the person in front of you has: `لِي` and `لَكَ`.
+You can now say what you have and what either a male or female person in front of you has: `لِي`, `لَكَ`, and `لَكِ`.
 
 ---
 
@@ -288,7 +313,7 @@ Focus excerpt: `لَهُ مَا فِي السَّمَاوَاتِ وَمَا ف�
 ## Discovery cards
 
 1. **Recall**  
-   `لِي` = I have; `لَكَ` = you have.
+   `لِي` = I have; `لَكَ` = you (male) have; `لَكِ` = you (female) have.
 
 2. **`لَهُ`**  
    `لَهُ` = for him / belonging to him / he has.
@@ -315,7 +340,7 @@ Focus excerpt: `لَهُ مَا فِي السَّمَاوَاتِ وَمَا ف�
    `لَهُ مَا فِي السَّمَاوَاتِ` — to Him belongs whatever is in the heavens.
 
 10. **Full possession table**  
-    `لِي` me, `لَكَ` you, `لَهُ` him, `لَهَا` her, `لَكُمْ` you all.
+    `لِي` me, `لَكَ` you (male), `لَكِ` you (female), `لَهُ` him, `لَهَا` her, `لَكُمْ` you all.
 
 11. **Checkpoint**  
     Identify the owner from the ending; do not choose from the gender of the owned object.
@@ -335,13 +360,13 @@ One text-free generated possession diagram: three people with clearly separated 
 3. **Fill blank:** “She has a pen” → `___ قَلَمٌ` → `لَهَا`.
 4. **Fill blank:** “He has a house” → `___ بَيْتٌ` → `لَهُ`.
 5. **Fill blank:** “For you all is a sign” → `___ آيَةٌ` → `لَكُمْ`.
-6. **Matching:** all five forms `لِي، لَكَ، لَهُ، لَهَا، لَكُمْ` with exact owners.
+6. **Matching:** all six forms `لِي، لَكَ، لَكِ، لَهُ، لَهَا، لَكُمْ` with exact owners.
 7. **Build Quranic phrase:** `لَهُ مَا فِي السَّمَاوَاتِ`.
 8. **True/false:** `لَهَا` refers to a female owner, not necessarily a feminine owned object. → True.
 
 ## Completion message
 
-You can identify five owners through one compact Arabic pattern: `لِي، لَكَ، لَهُ، لَهَا، لَكُمْ`.
+You can identify six owners through one compact Arabic pattern: `لِي، لَكَ، لَكِ، لَهُ، لَهَا، لَكُمْ`.
 
 ---
 
@@ -430,6 +455,7 @@ Focus excerpt: `فَلَمَّا ذَهَبُوا بِهِ`
 
 - Recognition only: `ذَهَبُوا` is a later plural form from the same `ذ-ه-ب` family.
 - Active production remains `ذَهَبَ`; learners are not asked to conjugate `ذَهَبُوا`.
+- `ذَهَبُوا` is taught actively later in Chapter 17, Lesson 6, so it is not a second Chapter 5 production target. It remains here only as a root-family recognition hook.
 
 ## Discovery cards
 
@@ -519,7 +545,7 @@ The copy must say “Earlier this phrase may have felt like recitation; now you 
 3. Idafa: `كِتَابُ الطَّالِبِ`.
 4. Masculine adjective agreement: `بَيْتٌ كَبِيرٌ`.
 5. Feminine adjective agreement: `كَلِمَةٌ طَيِّبَةٌ`.
-6. Possession table: `لِي، لَكَ، لَهُ، لَهَا، لَكُمْ`.
+6. Possession table: `لِي، لَكَ، لَكِ، لَهُ، لَهَا، لَكُمْ`.
 7. First verb: `ذَهَبَ الطَّالِبُ`.
 8. Full movement: `ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ`.
 
@@ -531,7 +557,8 @@ The copy must say “Earlier this phrase may have felt like recitation; now you 
 4. Identify the Idafa owner in `نَاقَةُ اللَّهِ`.
 5. Translate `لِي كِتَابٌ`.
 6. Select `لَهَا` for “she has.”
-7. Match all five possession forms with exact meanings.
+7. Select `لَكِ` for “you (female) have.”
+8. Match all six possession forms with exact meanings.
 8. Parse `ذَهَبَ الطَّالِبُ` as verb + doer.
 9. Fill `إِلَى` in a movement sentence.
 10. Build `ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ`.
@@ -560,11 +587,11 @@ R1 complete. You have connected pointing words, gender, descriptions, Idafa, pos
 | 3 | Adjective agreement | Complete `هَٰذِهِ كَلِمَةٌ ___` | `طَيِّبَةٌ` |
 | 4 | Idafa recognition | Identify meaning of `آيَاتُ اللَّهِ` | the signs/verses of Allah |
 | 5 | First-person possession | Translate `لِي قَلَمٌ` | I have a pen |
-| 6 | Second-person possession | Fill “You have a book” | `لَكَ كِتَابٌ` |
-| 7 | Third-person possession | Match `لَهُ / لَهَا` | he has / she has |
-| 8 | Plural addressee | Fill `___ آيَةٌ` = for you all is a sign | `لَكُمْ` |
-| 9 | Verb meaning | Translate `ذَهَبَ` | he went |
-| 10 | Verb/doer parse | Parse `ذَهَبَ الطَّالِبُ` | VERB + SUBJECT |
+| 6 | Second-person masculine possession | Fill “You (male) have a book” | `لَكَ كِتَابٌ` |
+| 7 | Second-person feminine possession | Fill “You (female) have a book” | `لَكِ كِتَابٌ` |
+| 8 | Third-person possession | Match `لَهُ / لَهَا` | he has / she has |
+| 9 | Plural addressee | Fill `___ آيَةٌ` = for you all is a sign | `لَكُمْ` |
+| 10 | Verb meaning and parse | Parse `ذَهَبَ الطَّالِبُ` | VERB + SUBJECT |
 | 11 | Destination word | Fill `ذَهَبَ الْوَلَدُ ___ الْبَيْتِ` | `إِلَى` |
 | 12 | Cumulative production | Build “The man went to the mosque” | `ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ` |
 
@@ -598,6 +625,7 @@ Vocabulary is retained and expanded; it is not removed merely because a grammar 
 | `جَدِيدَةٌ` | new, feminine | نئی | adjective |
 | `لِي` | for me / I have | میرے لیے / میرے پاس | possession |
 | `لَكَ` | for you / you have | تمہارے لیے / تمہارے پاس | possession |
+| `لَكِ` | for you (female) / you have | تمہارے لیے / تمہارے پاس، مؤنث مخاطب | possession |
 | `لَهُ` | for him / he has | اس کے لیے / اس کے پاس | possession |
 | `لَهَا` | for her / she has | اس کے لیے / اس کے پاس، مؤنث مالک | possession |
 | `لَكُمْ` | for you all | تم سب کے لیے / تم سب کے پاس | possession |
@@ -654,4 +682,50 @@ Implementation is complete only when all of the following are true:
 - [ ] Approve exercise coverage and 12-question final test.
 - [ ] Approve the six image briefs.
 - [ ] Authorize implementation in isolated staging.
+
+---
+
+# Implementation notes (2026-09-16)
+
+Built as `warsh-backend/prisma/fixtures/chapter-05-lesson-0[1-8]*.json`, promoted
+to the isolated staging DB, and every lesson plus the final test was completed on
+the `Warsh_API_34` emulator against staging. Deviations from the text above, each
+forced by the runtime or the pipeline rather than by preference:
+
+1. **Fixture identity map.** `content:export`/`content:sync` key each fixture on
+   the database display `order`, and the validator requires `_meta.lesson_order`
+   to equal the filename number — so filename number **must** equal display
+   order (this is how Chapters 3 and 4 ended up after their rebuilds). The map is
+   therefore: `lesson-04.json` = `ch05-l06` (display 4), `lesson-05.json` =
+   `ch05-l04` (display 5), `lesson-06.json` = `ch05-l07` (display 6),
+   `lesson-07.json` = `ch05-l05` (display 7), `lesson-08-final-test.json` =
+   `ch05-test`. Stable IDs, learner order, and progress are preserved exactly as
+   specified; only the file numbering differs from the table in §2.
+2. **Lessons 5 and 6 use `STANDARD`, not `VERB_PATTERN`.** The validator rejects
+   `VERB_PATTERN` + `discover_cards`, and the player replaces the Discover beat
+   with a conjugation table for that template — so the ten/eleven discovery cards
+   and the "masculine singular only" scope could not both hold. `STANDARD` shows
+   every card as written; the template can be switched later if the app gains a
+   card-plus-table verb beat.
+3. **Grammar-parse "DESTINATION" role** does not exist in the schema; the unit
+   `إِلَى الْمَدْرَسَةِ` uses `PLACE_ZARF` (shown to the learner as "Place adverb").
+4. **Test blueprint rows that were fill/match/build tasks** are rendered as the
+   chapter-test multiple-choice format (the only format `assessment.questions`
+   supports), with the exact answers from the blueprint as the correct option.
+5. **Illustrations.** The six new briefs in the media plan are not generated;
+   existing approved discover assets are reused where the word matches exactly
+   (`madrasa`, `shajara` — the Chapter 1 distant tree, `kitab`, `qalam`,
+   `dhahaba`, `ila`, `masjid`, `bayt`). The six composite scenes remain owner
+   deliverables; cards without one render without an image.
+6. **Chapter-wide vocabulary table** is carried by the lesson cards; no
+   `VocabularyWord` rows were added or changed.
+7. **Rendering-safety rewording.** English strings that the player does not wrap
+   in a direction mark (hook intro, exercise statements, feedback, test options)
+   were rephrased to begin with a Latin word, and the three lesson titles that
+   begin with an Arabic word carry a leading LTR mark, so the chapter list and
+   prompts do not flip right-to-left. Meaning is unchanged.
+8. **Content note for the owner:** Lesson 3 card 8 says `لِمَنْ هَذَا؟` is
+   "reserved for a later dedicated question lesson", but Chapter 3 lesson
+   `ch03-l02` ("Whose? — لِمَنْ") already teaches it. Implemented as written;
+   flagging for the review pass.
 

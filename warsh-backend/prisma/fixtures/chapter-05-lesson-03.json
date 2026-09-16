@@ -2,7 +2,8 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 5, Lesson 3 — لام الملكية with لي، لك، له، لها. Quranic reveal: لَهُ مَا فِي السَّمَاوَاتِ. Authored against warsh-content-schema.ts v1.0.",
+    "_note": "Chapter 5, display lesson 3 (ch05-l03) — لِـ possession with لِي، لَكَ، لَكِ. Quran hook: لَكُمْ دِينُكُمْ وَلِيَ دِينِ (109:6).",
+    "titleUr": "لِي، لَكَ، لَكِ",
     "chapter_order": 5,
     "lesson_order": 3,
     "estimated_minutes": 10,
@@ -10,17 +11,17 @@
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 255,
-      "label": "Al-Baqarah 2:255",
-      "ar": "لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",
-      "en": "To Him belongs whatever is in the heavens and whatever is on the earth.",
-      "ur": "اسی کا ہے جو کچھ آسمانوں میں ہے اور جو کچھ زمین میں ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
+      "surah": 109,
+      "ayah": 6,
+      "label": "Al-Kafirun 109:6",
+      "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+      "en": "For you is your religion, and for me is my religion.",
+      "ur": "تمہارے لیے تمہارا دین اور میرے لیے میرا دین۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
     },
     "noor_intro": {
-      "en": "Arabic often says possession as 'to me is...' instead of 'I have...' Today you learn لِي, لَكَ, لَهُ, and لَهَا — a small door into phrases like لَهُ مَا فِي السَّمَاوَاتِ.",
-      "ur": "عربی میں ملکیت اکثر 'میرے لیے ہے...' کے انداز میں آتی ہے، 'میرے پاس ہے...' نہیں۔ آج آپ لِي، لَكَ، لَهُ، اور لَهَا سیکھیں گے — وہ چھوٹا دروازہ جو لَهُ مَا فِي السَّمَاوَاتِ جیسے جملوں تک لے جاتا ہے۔"
+      "en": "Arabic can say 'to me is a book' where natural English says 'I have a book.' In this ayah, notice لَكُمْ and لِيَ — the same ownership/association pattern. لَكُمْ is previewed only here; the next lesson teaches it directly.",
+      "ur": "عربی 'میرے لیے کتاب ہے' کہتی ہے جہاں فطری اردو 'میرے پاس کتاب ہے' کہتی ہے۔ اس آیت میں لَكُمْ اور لِيَ پر غور کریں — وہی ملکیت / نسبت کا نمونہ۔ لَكُمْ یہاں صرف جھلک ہے؛ اگلا سبق اسے براہِ راست سکھائے گا۔"
     },
     "autoplay": true
   },
@@ -28,13 +29,27 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "The لِ of Possession",
+        "en": "Arabic possession pattern",
         "ar": "لَامُ الْمِلْكِيَّة",
-        "ur": "ملکیت کا لِ"
+        "ur": "عربی میں ملکیت کا نمونہ"
       },
       "explanation": {
-        "en": "لِ means 'for/to'. When it attaches to a pronoun, Arabic can express possession:\n\nلِي كِتَابٌ — to me is a book — I have a book\nلَكَ قَلَمٌ — to you is a pen — you have a pen\nلَهُ بَيْتٌ — to him is a house — he has a house",
-        "ur": "لِ کا معنی 'کے لیے / کو' ہے۔ جب یہ ضمیر سے جڑتا ہے تو عربی ملکیت بتا سکتی ہے:\n\nلِي كِتَابٌ — میرے لیے کتاب ہے — میرے پاس کتاب ہے\nلَكَ قَلَمٌ — تمہارے لیے قلم ہے — تمہارے پاس قلم ہے\nلَهُ بَيْتٌ — اس کے لیے گھر ہے — اس کے پاس گھر ہے"
+        "en": "Arabic can say “to me is a book” where natural English/Urdu says “I have a book.”",
+        "ur": "عربی “میرے لیے کتاب ہے” کہہ سکتی ہے جہاں فطری اردو “میرے پاس کتاب ہے” کہتی ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "لِي",
+        "ar_plain": "لي",
+        "translit": "lī",
+        "en": "for me / belonging to me / I have",
+        "ur": "میرے لیے / میرے پاس"
+      },
+      "explanation": {
+        "en": "لِي = for me / belonging to me / I have.",
+        "ur": "لِي = میرے لیے / میرا / میرے پاس ہے۔"
       }
     },
     {
@@ -43,70 +58,223 @@
         "ar": "لِي كِتَابٌ",
         "ar_plain": "لي كتاب",
         "translit": "lī kitābun",
-        "en": "I have a book",
-        "ur": "میرے پاس کتاب ہے"
+        "en": "I have a book.",
+        "ur": "میرے پاس ایک کتاب ہے۔"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/li-kitab.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "لَكَ قَلَمٌ",
-        "ar_plain": "لك قلم",
-        "translit": "laka qalamun",
-        "en": "you have a pen",
-        "ur": "تمہارے پاس قلم ہے"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/laka-qalam.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "لَهُ بَيْتٌ",
-        "ar_plain": "له بيت",
-        "translit": "lahu baytun",
-        "en": "he has a house",
-        "ur": "اس کے پاس گھر ہے"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/lahu-bayt.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "لَهَا مَدْرَسَةٌ",
-        "ar_plain": "لها مدرسة",
-        "translit": "lahā madrasatun",
-        "en": "she has a school",
-        "ur": "اس کے پاس مدرسہ ہے"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/laha-madrasah.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "لَكُمْ آيَةٌ",
-        "ar_plain": "لكم آية",
-        "translit": "lakum āyatun",
-        "en": "for you is a sign",
-        "ur": "تمہارے لیے نشانی ہے"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/lakum-ayah.mp3",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/li-kitab.mp3",
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/kitab.webp",
       "explanation": {
-        "en": "You saw لَكُمْ in the Chapter 5 opening ayah: هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً — for you, a sign.",
-        "ur": "آپ نے باب 5 کی پہلی آیت میں لَكُمْ دیکھا: هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً — تمہارے لیے نشانی۔"
+        "en": "First complete phrase: لِي كِتَابٌ — I have a book.",
+        "ur": "پہلی مکمل ترکیب: لِي كِتَابٌ — میرے پاس ایک کتاب ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "كتاب"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Possession Without 'Have'",
-        "ar": "الْمِلْكِيَّة بِدُونِ فِعْل",
-        "ur": "'have' کے بغیر ملکیت"
+      "type": "WORD",
+      "text": {
+        "ar": "لِي قَلَمٌ",
+        "ar_plain": "لي قلم",
+        "translit": "lī qalamun",
+        "en": "I have a pen.",
+        "ur": "میرے پاس ایک قلم ہے۔"
       },
-      "body": {
-        "en": "Arabic does not need a verb like 'have' here. It says:\n\nلِي كِتَابٌ\nliterally: to me, a book.\nmeaning: I have a book.\n\nThis is normal, elegant Arabic.",
-        "ur": "عربی کو یہاں 'have' جیسا فعل نہیں چاہیے۔ وہ کہتی ہے:\n\nلِي كِتَابٌ\nلفظی: میرے لیے، کتاب۔\nمعنی: میرے پاس کتاب ہے۔\n\nیہ عام اور خوبصورت عربی ہے۔"
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/qalam.webp",
+      "explanation": {
+        "en": "More useful vocabulary: لِي قَلَمٌ — I have a pen.",
+        "ur": "مزید مفید الفاظ: لِي قَلَمٌ — میرے پاس ایک قلم ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "قلم"
       }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "لَكَ and لَكِ",
+        "ar": "لَكَ / لَكِ",
+        "ur": "لَكَ اور لَكِ"
+      },
+      "examples": [
+        {
+          "ar": "لَكَ",
+          "ar_plain": "لك",
+          "translit": "laka",
+          "en": "for you / belonging to you / you have — addressing one male",
+          "ur": "تمہارے لیے / تمہارے پاس — ایک مذکر مخاطب"
+        },
+        {
+          "ar": "لَكِ",
+          "ar_plain": "لك",
+          "translit": "laki",
+          "en": "for you / belonging to you / you have — addressing one female",
+          "ur": "تمہارے لیے / تمہارے پاس — ایک مؤنث مخاطب"
+        }
+      ],
+      "explanation": {
+        "en": "لَكَ = for you / belonging to you / you have, addressing one male.\nلَكِ = for you / belonging to you / you have, addressing one female.",
+        "ur": "لَكَ = تمہارے لیے / تمہارا / تمہارے پاس ہے، ایک مذکر مخاطب کے لیے۔\nلَكِ = تمہارے لیے / تمہارا / تمہارے پاس ہے، ایک مؤنث مخاطب کے لیے۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Second complete phrase",
+        "ar": "لَكَ كِتَابٌ / لَكِ كِتَابٌ",
+        "ur": "دوسری مکمل ترکیب"
+      },
+      "examples": [
+        {
+          "ar": "لَكَ كِتَابٌ",
+          "ar_plain": "لك كتاب",
+          "translit": "laka kitābun",
+          "en": "You (male) have a book.",
+          "ur": "تمہارے پاس ایک کتاب ہے۔ (مذکر مخاطب)"
+        },
+        {
+          "ar": "لَكِ كِتَابٌ",
+          "ar_plain": "لك كتاب",
+          "translit": "laki kitābun",
+          "en": "You (female) have a book.",
+          "ur": "تمہارے پاس ایک کتاب ہے۔ (مؤنث مخاطب)"
+        }
+      ],
+      "explanation": {
+        "en": "لَكَ كِتَابٌ — You (male) have a book.\nلَكِ كِتَابٌ — You (female) have a book.",
+        "ur": "لَكَ كِتَابٌ — تمہارے پاس ایک کتاب ہے۔ (مذکر مخاطب)\nلَكِ كِتَابٌ — تمہارے پاس ایک کتاب ہے۔ (مؤنث مخاطب)\nاردو: تمہارے / آپ کے پاس ایک کتاب ہے۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Contrast",
+        "ar": "لِي / لَكَ / لَكِ",
+        "ur": "موازنہ"
+      },
+      "examples": [
+        {
+          "ar": "لِي قَلَمٌ",
+          "ar_plain": "لي قلم",
+          "translit": "lī qalamun",
+          "en": "I have a pen.",
+          "ur": "میرے پاس ایک قلم ہے۔"
+        },
+        {
+          "ar": "لَكَ قَلَمٌ",
+          "ar_plain": "لك قلم",
+          "translit": "laka qalamun",
+          "en": "You (male) have a pen.",
+          "ur": "تمہارے پاس ایک قلم ہے۔ (مذکر مخاطب)"
+        },
+        {
+          "ar": "لَكِ قَلَمٌ",
+          "ar_plain": "لك قلم",
+          "translit": "laki qalamun",
+          "en": "You (female) have a pen.",
+          "ur": "تمہارے پاس ایک قلم ہے۔ (مؤنث مخاطب)"
+        }
+      ],
+      "explanation": {
+        "en": "لِي قَلَمٌ — I have a pen.\nلَكَ قَلَمٌ — You (male) have a pen.\nلَكِ قَلَمٌ — You (female) have a pen.",
+        "ur": "لِي قَلَمٌ — میرے پاس ایک قلم ہے۔\nلَكَ قَلَمٌ — تمہارے پاس ایک قلم ہے۔ (مذکر مخاطب)\nلَكِ قَلَمٌ — تمہارے پاس ایک قلم ہے۔ (مؤنث مخاطب)"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Question and answer pattern",
+        "ur": "سوال و جواب کا نمونہ"
+      },
+      "explanation": {
+        "en": "لِمَنْ هَذَا؟ is reserved for a later dedicated question lesson. Here, answer patterns only: لِي, لَكَ, and لَكِ.",
+        "ur": "لِمَنْ هَذَا؟ بعد کے ایک مخصوص سوالیہ سبق کے لیے رکھا گیا ہے۔ یہاں صرف جواب کے نمونے: لِي، لَكَ اور لَكِ۔"
+      },
+      "examples": [
+        {
+          "ar": "لِي",
+          "ar_plain": "لي",
+          "translit": "lī",
+          "en": "for me / belonging to me / I have",
+          "ur": "میرے لیے / میرے پاس"
+        },
+        {
+          "ar": "لَكَ",
+          "ar_plain": "لك",
+          "translit": "laka",
+          "en": "for you / belonging to you / you have — addressing one male",
+          "ur": "تمہارے لیے / تمہارے پاس — ایک مذکر مخاطب"
+        },
+        {
+          "ar": "لَكِ",
+          "ar_plain": "لك",
+          "translit": "laki",
+          "en": "for you / belonging to you / you have — addressing one female",
+          "ur": "تمہارے لیے / تمہارے پاس — ایک مؤنث مخاطب"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Do not confuse two possession tools",
+        "ar": "كِتَابُ الطَّالِبِ / لِلطَّالِبِ كِتَابٌ",
+        "ur": "ملکیت کے دو ذرائع کو خلط نہ کریں"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابُ الطَّالِبِ",
+          "ar_plain": "كتاب الطالب",
+          "translit": "kitābu ṭ-ṭālibi",
+          "en": "the student's book (Idafa)",
+          "ur": "طالب علم کی کتاب (اضافت)"
+        },
+        {
+          "ar": "لِلطَّالِبِ كِتَابٌ",
+          "ar_plain": "للطالب كتاب",
+          "translit": "liṭ-ṭālibi kitābun",
+          "en": "the student has a book (لِـ possession)",
+          "ur": "طالب علم کے پاس ایک کتاب ہے (لِـ ملکیت)"
+        }
+      ],
+      "explanation": {
+        "en": "كِتَابُ الطَّالِبِ = the student's book (Idafa).\nلِلطَّالِبِ كِتَابٌ = the student has a book (لِـ possession).",
+        "ur": "كِتَابُ الطَّالِبِ = طالب علم کی کتاب (اضافت)۔\nلِلطَّالِبِ كِتَابٌ = طالب علم کے پاس ایک کتاب ہے (لِـ ملکیت)۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Checkpoint",
+        "ur": "جانچ"
+      },
+      "explanation": {
+        "en": "Speaker owns it → لِي; a male person addressed owns it → لَكَ; a female person addressed owns it → لَكِ.",
+        "ur": "بولنے والے کی ملکیت → لِي؛ مذکر مخاطب کی ملکیت → لَكَ؛ مؤنث مخاطب کی ملکیت → لَكِ۔"
+      },
+      "examples": [
+        {
+          "ar": "لِي",
+          "ar_plain": "لي",
+          "translit": "lī",
+          "en": "for me / belonging to me / I have",
+          "ur": "میرے لیے / میرے پاس"
+        },
+        {
+          "ar": "لَكَ",
+          "ar_plain": "لك",
+          "translit": "laka",
+          "en": "for you / belonging to you / you have — addressing one male",
+          "ur": "تمہارے لیے / تمہارے پاس — ایک مذکر مخاطب"
+        },
+        {
+          "ar": "لَكِ",
+          "ar_plain": "لك",
+          "translit": "laki",
+          "en": "for you / belonging to you / you have — addressing one female",
+          "ur": "تمہارے لیے / تمہارے پاس — ایک مؤنث مخاطب"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -118,28 +286,29 @@
         "ar": "لِي كِتَابٌ",
         "ar_plain": "لي كتاب",
         "translit": "lī kitābun",
-        "en": "I have a book",
-        "ur": "میرے پاس کتاب ہے"
+        "en": "I have a book.",
+        "ur": "میرے پاس ایک کتاب ہے۔"
       },
       "options": [
         {
-          "en": "I have a book",
+          "en": "I have a book.",
           "ur": "میرے پاس ایک کتاب ہے۔"
         },
         {
-          "en": "you have a pen",
-          "ur": "آپ کے پاس قلم ہے۔"
+          "en": "You (male) have a book.",
+          "ur": "تمہارے پاس ایک کتاب ہے۔ (مذکر مخاطب)"
         },
         {
-          "en": "he has a house",
-          "ur": "اس کے پاس ایک گھر ہے"
+          "en": "You (female) have a book.",
+          "ur": "تمہارے پاس ایک کتاب ہے۔ (مؤنث مخاطب)"
         },
         {
-          "en": "this is a book",
-          "ur": "یہ ایک کتاب ہے"
+          "en": "the student's book",
+          "ur": "طالب علم کی کتاب"
         }
       ],
-      "correct_index": 0
+      "correct_index": 0,
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/li-kitab.mp3"
     },
     {
       "id": "ch05-l03-ex02",
@@ -149,61 +318,41 @@
         "ar": "لَكَ قَلَمٌ",
         "ar_plain": "لك قلم",
         "translit": "laka qalamun",
-        "en": "you have a pen",
-        "ur": "تمہارے پاس قلم ہے"
+        "en": "You (male) have a pen.",
+        "ur": "تمہارے پاس ایک قلم ہے۔ (مذکر مخاطب)"
       },
       "options": [
         {
-          "en": "you have a pen",
-          "ur": "آپ کے پاس قلم ہے۔"
+          "en": "You (male) have a pen.",
+          "ur": "تمہارے پاس ایک قلم ہے۔ (مذکر مخاطب)"
         },
         {
-          "en": "لِي قَلَمٌ",
-          "ur": "لِي قَلَمٌ"
+          "en": "You (female) have a pen.",
+          "ur": "تمہارے پاس ایک قلم ہے۔ (مؤنث مخاطب)"
         },
         {
-          "en": "he has a house",
-          "ur": "اس کے پاس ایک گھر ہے"
+          "en": "I have a pen.",
+          "ur": "میرے پاس ایک قلم ہے۔"
         },
         {
-          "en": "هَٰذَا قَلَمٌ",
-          "ur": "هَٰذَا قَلَمٌ"
+          "en": "I have a book.",
+          "ur": "میرے پاس ایک کتاب ہے۔"
         }
       ],
-      "correct_index": 0
+      "correct_index": 0,
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/laka-qalam.mp3"
     },
     {
-      "type": "TRUE_FALSE",
       "id": "ch05-l03-ex03",
-      "statement": {
-        "en": "لَهُ can mean 'he has' or 'to him belongs', depending on context.",
-        "ur": "لَهُ سیاق کے مطابق 'اس کے پاس ہے' یا 'اسی کا ہے' ہو سکتا ہے۔"
-      },
-      "xp_value": 1,
-      "correct_answer": true,
-      "explanation_on_wrong": {
-        "en": "True — لَهُ literally means 'to him / for him'. In Quranic context it often means 'to Him belongs'.",
-        "ur": "درست — لَهُ کا لفظی معنی 'اس کے لیے / اس کو' ہے۔ قرآنی سیاق میں یہ اکثر 'اسی کا ہے' کے معنی دیتا ہے۔"
-      }
-    },
-    {
-      "id": "ch05-l03-ex04",
       "type": "FILL_BLANK",
       "xp_value": 1,
       "mode": "TAP",
-      "sentence_ar": "___ بَيْتٌ",
+      "sentence_ar": "___ مِفْتَاحٌ",
       "hint": {
-        "en": "he has a house",
-        "ur": "اس کے پاس گھر ہے"
+        "en": "I have a key.",
+        "ur": "میرے پاس ایک چابی ہے۔"
       },
       "options": [
-        {
-          "ar": "لَهُ",
-          "ar_plain": "له",
-          "translit": "—",
-          "en": "لَهُ",
-          "ur": "لَهُ"
-        },
         {
           "ar": "لِي",
           "ar_plain": "لي",
@@ -219,118 +368,56 @@
           "ur": "لَكَ"
         },
         {
-          "ar": "لَهَا",
-          "ar_plain": "لها",
+          "ar": "لَكِ",
+          "ar_plain": "لك",
           "translit": "—",
-          "en": "لَهَا",
-          "ur": "لَهَا"
-        }
-      ],
-      "correct_answer": {
-        "ar": "لَهُ",
-        "ar_plain": "له",
-        "translit": "—",
-        "en": "لَهُ",
-        "ur": "لَهُ"
-      },
-      "explanation_on_wrong": {
-        "en": "لَهُ means 'to him / for him' — he has.",
-        "ur": "لَهُ کا معنی 'اس کے لیے' — یعنی اس کے پاس ہے۔"
-      }
-    },
-    {
-      "id": "ch05-l03-ex05",
-      "type": "MATCHING",
-      "xp_value": 1,
-      "left_column": [
-        {
-          "ar": "لِي كِتَابٌ",
-          "ar_plain": "لي كتاب",
-          "translit": "lī kitābun",
-          "en": "I have a book",
-          "ur": "میرے پاس کتاب ہے"
+          "en": "لَكِ",
+          "ur": "لَكِ"
         },
-        {
-          "ar": "لَكَ قَلَمٌ",
-          "ar_plain": "لك قلم",
-          "translit": "laka qalamun",
-          "en": "you have a pen",
-          "ur": "تمہارے پاس قلم ہے"
-        },
-        {
-          "ar": "لَهُ بَيْتٌ",
-          "ar_plain": "له بيت",
-          "translit": "lahu baytun",
-          "en": "he has a house",
-          "ur": "اس کے پاس گھر ہے"
-        },
-        {
-          "ar": "لَهَا مَدْرَسَةٌ",
-          "ar_plain": "لها مدرسة",
-          "translit": "lahā madrasatun",
-          "en": "she has a school",
-          "ur": "اس کے پاس مدرسہ ہے"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "you have a pen",
-          "ur": "آپ کے پاس قلم ہے۔"
-        },
-        {
-          "en": "he has a house",
-          "ur": "اس کے پاس ایک گھر ہے"
-        },
-        {
-          "en": "she has a school",
-          "ur": "اس کے پاس ایک اسکول ہے۔"
-        },
-        {
-          "en": "I have a book",
-          "ur": "میرے پاس ایک کتاب ہے۔"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          3
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          2,
-          1
-        ],
-        [
-          3,
-          2
-        ]
-      ]
-    },
-    {
-      "id": "ch05-l03-ex06",
-      "type": "BUILD_SENTENCE",
-      "xp_value": 1,
-      "target_translation": {
-        "en": "Build: 'for you is a sign'",
-        "ur": "بنائیں: 'تمہارے لیے نشانی ہے'"
-      },
-      "tiles": [
         {
           "ar": "لَكُمْ",
           "ar_plain": "لكم",
           "translit": "—",
           "en": "لَكُمْ",
           "ur": "لَكُمْ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لِي",
+        "ar_plain": "لي",
+        "translit": "—",
+        "en": "لِي",
+        "ur": "لِي"
+      },
+      "explanation_on_wrong": {
+        "en": "The speaker owns it, so لِي: لِي مِفْتَاحٌ — I have a key.",
+        "ur": "بولنے والے کی ملکیت ہے، اس لیے لِي: لِي مِفْتَاحٌ — میرے پاس ایک چابی ہے۔"
+      }
+    },
+    {
+      "id": "ch05-l03-ex04",
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "___ بَيْتٌ",
+      "hint": {
+        "en": "You (female) have a house.",
+        "ur": "تمہارے پاس ایک گھر ہے۔ (مؤنث مخاطب)"
+      },
+      "options": [
+        {
+          "ar": "لَكِ",
+          "ar_plain": "لك",
+          "translit": "—",
+          "en": "لَكِ",
+          "ur": "لَكِ"
         },
         {
-          "ar": "آيَةٌ",
-          "ar_plain": "آية",
+          "ar": "لَكَ",
+          "ar_plain": "لك",
           "translit": "—",
-          "en": "آيَةٌ",
-          "ur": "آيَةٌ"
+          "en": "لَكَ",
+          "ur": "لَكَ"
         },
         {
           "ar": "لِي",
@@ -340,6 +427,56 @@
           "ur": "لِي"
         },
         {
+          "ar": "لَكُمْ",
+          "ar_plain": "لكم",
+          "translit": "—",
+          "en": "لَكُمْ",
+          "ur": "لَكُمْ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لَكِ",
+        "ar_plain": "لك",
+        "translit": "—",
+        "en": "لَكِ",
+        "ur": "لَكِ"
+      },
+      "explanation_on_wrong": {
+        "en": "One female is addressed, so لَكِ: لَكِ بَيْتٌ — you (female) have a house.",
+        "ur": "ایک مؤنث مخاطب ہے، اس لیے لَكِ: لَكِ بَيْتٌ — تمہارے پاس ایک گھر ہے۔"
+      }
+    },
+    {
+      "id": "ch05-l03-ex05",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Build: 'I have a pen.'",
+        "ur": "جملہ بنائیں: 'میرے پاس ایک قلم ہے۔'"
+      },
+      "tiles": [
+        {
+          "ar": "لِي",
+          "ar_plain": "لي",
+          "translit": "—",
+          "en": "لِي",
+          "ur": "لِي"
+        },
+        {
+          "ar": "قَلَمٌ",
+          "ar_plain": "قلم",
+          "translit": "—",
+          "en": "قَلَمٌ",
+          "ur": "قَلَمٌ"
+        },
+        {
+          "ar": "لَكَ",
+          "ar_plain": "لك",
+          "translit": "—",
+          "en": "لَكَ",
+          "ur": "لَكَ"
+        },
+        {
           "ar": "كِتَابٌ",
           "ar_plain": "كتاب",
           "translit": "—",
@@ -347,11 +484,11 @@
           "ur": "كِتَابٌ"
         },
         {
-          "ar": "هَٰذِهِ",
-          "ar_plain": "هذه",
+          "ar": "لَكِ",
+          "ar_plain": "لك",
           "translit": "—",
-          "en": "هَٰذِهِ",
-          "ur": "هَٰذِهِ"
+          "en": "لَكِ",
+          "ur": "لَكِ"
         }
       ],
       "correct_order": [
@@ -359,38 +496,165 @@
         1
       ],
       "explanation_on_wrong": {
-        "en": "لَكُمْ آيَةٌ means 'for you is a sign.' You saw it in Al-A'raf 7:73.",
-        "ur": "لَكُمْ آيَةٌ کا معنی ہے: 'تمہارے لیے نشانی ہے۔' آپ نے اسے الاعراف 7:73 میں دیکھا۔"
+        "en": "Order: لِي (I have) + قَلَمٌ (a pen). Arabic needs no separate word for 'have'.",
+        "ur": "لِي (میرے پاس) + قَلَمٌ (ایک قلم)۔ عربی کو 'have' کے لیے الگ لفظ نہیں چاہیے۔"
+      }
+    },
+    {
+      "id": "ch05-l03-ex06",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        {
+          "ar": "لِي",
+          "ar_plain": "لي",
+          "translit": "lī",
+          "en": "I have — for me",
+          "ur": "میرے پاس — میرے لیے"
+        },
+        {
+          "ar": "لَكَ",
+          "ar_plain": "لك",
+          "translit": "laka",
+          "en": "you (male) have",
+          "ur": "تمہارے پاس (مذکر مخاطب)"
+        },
+        {
+          "ar": "لَكِ",
+          "ar_plain": "لك",
+          "translit": "laki",
+          "en": "you (female) have",
+          "ur": "تمہارے پاس (مؤنث مخاطب)"
+        },
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "kitābun",
+          "en": "a book",
+          "ur": "ایک کتاب"
+        },
+        {
+          "ar": "مِفْتَاحٌ",
+          "ar_plain": "مفتاح",
+          "translit": "miftāḥun",
+          "en": "a key",
+          "ur": "ایک چابی"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "a book",
+          "ur": "ایک کتاب"
+        },
+        {
+          "en": "you (male) have",
+          "ur": "تمہارے پاس (مذکر مخاطب)"
+        },
+        {
+          "en": "a key",
+          "ur": "ایک چابی"
+        },
+        {
+          "en": "I have — for me",
+          "ur": "میرے پاس — میرے لیے"
+        },
+        {
+          "en": "you (female) have",
+          "ur": "تمہارے پاس (مؤنث مخاطب)"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "id": "ch05-l03-ex07",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "لِي كِتَابٌ",
+        "ar_plain": "لي كتاب",
+        "translit": "lī kitābun",
+        "en": "Who has the book?",
+        "ur": "کتاب کس کے پاس ہے؟"
+      },
+      "options": [
+        {
+          "en": "I — the speaker — have the book.",
+          "ur": "میرے پاس — بولنے والے کے پاس — کتاب ہے۔"
+        },
+        {
+          "en": "You (male) have the book.",
+          "ur": "تمہارے پاس کتاب ہے۔ (مذکر مخاطب)"
+        },
+        {
+          "en": "You (female) have the book.",
+          "ur": "تمہارے پاس کتاب ہے۔ (مؤنث مخاطب)"
+        },
+        {
+          "en": "The student has the book.",
+          "ur": "طالب علم کے پاس کتاب ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/li-kitab.mp3",
+      "explanation_on_wrong": {
+        "en": "The word لِي = for me. In لِي كِتَابٌ the speaker (me) has the book.",
+        "ur": "لِي = میرے لیے۔ لِي كِتَابٌ میں بولنے والے (میرے) کے پاس کتاب ہے۔"
       }
     }
   ],
   "reveal": {
+    "concept_name": {
+      "en": "لَامُ الْمِلْكِيَّة in the Quran",
+      "ar": "لَامُ الْمِلْكِيَّة فِي الْقُرْآن",
+      "ur": "قرآن میں ملکیت کا لام"
+    },
     "ayah": {
-      "surah": 2,
-      "ayah": 255,
-      "label": "Al-Baqarah 2:255",
-      "ar": "لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",
-      "en": "To Him belongs whatever is in the heavens and whatever is on the earth.",
-      "ur": "اسی کا ہے جو کچھ آسمانوں میں ہے اور جو کچھ زمین میں ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002255.mp3"
+      "surah": 109,
+      "ayah": 6,
+      "label": "Al-Kafirun 109:6",
+      "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+      "en": "For you is your religion, and for me is my religion.",
+      "ur": "تمہارے لیے تمہارا دین اور میرے لیے میرا دین۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
     },
     "highlighted_word_indices": [
-      0
+      0,
+      2
+    ],
+    "highlighted_words": [
+      "لَكُمْ",
+      "وَلِيَ"
     ],
     "noor_explanation": {
-      "en": "لَهُ here is not ordinary ownership. It means everything in the heavens and earth belongs to Allah. The same small structure you practiced — لِي, لَكَ, لَهُ — opens one of the greatest ayat Muslims recite: Ayat al-Kursi.",
-      "ur": "یہاں لَهُ عام ملکیت نہیں۔ اس کا معنی ہے کہ آسمانوں اور زمین کی ہر چیز اللہ ہی کی ہے۔ وہی چھوٹی ساخت جو آپ نے مشق کی — لِي، لَكَ، لَهُ — آیت الکرسی جیسے عظیم مقام کو کھولتی ہے۔"
-    },
-    "concept_name": {
-      "en": "الإشارة in the Quran",
-      "ar": "أسماء الإشارة فِي الْقُرْآن",
-      "ur": "قرآن میں اسمائے اشارہ"
+      "en": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ — for you is your religion, and for me is my religion. لِيَ is the same لِي you practiced, and لَكُمْ is its 'for you all' form — previewed here, taught directly in the next lesson.",
+      "ur": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ — تمہارے لیے تمہارا دین اور میرے لیے میرا دین۔ لِيَ وہی لِي ہے جس کی آپ نے مشق کی، اور لَكُمْ اس کی 'تم سب کے لیے' والی صورت ہے — یہاں صرف جھلک، اگلے سبق میں براہِ راست۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You learned how Arabic says possession without a separate 'have' verb: لِي, لَكَ, لَهُ, لَهَا. Small words, very large Quranic reach.",
-      "ur": "آپ نے سیکھا کہ عربی الگ 'have' فعل کے بغیر ملکیت کیسے بتاتی ہے: لِي، لَكَ، لَهُ، لَهَا۔ چھوٹے الفاظ، مگر قرآن میں بہت وسیع رسائی۔"
+      "en": "You can now say what you have and what either a male or female person in front of you has: لِي, لَكَ, and لَكِ.",
+      "ur": "اب آپ بتا سکتے ہیں کہ آپ کے پاس کیا ہے اور آپ کے سامنے موجود مذکر یا مؤنث شخص کے پاس کیا ہے: لِي، لَكَ اور لَكِ۔"
     }
   }
 }

@@ -1,26 +1,27 @@
 {
   "schema_version": "1.0",
-  "template": "REVIEW",
+  "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 5, Lesson 5 — R1 REVIEW after Chapter 5. Reviews demonstratives, feminine pointers, adjective agreement, possession, and first verb. Authored against warsh-content-schema.ts v1.0.",
+    "_note": "Chapter 5, display lesson 5 (ch05-l04) — first past-tense verb ذَهَبَ; verb versus noun; فِعْل and فَاعِل recognition. Quran hook: إِذْ ذَهَبَ مُغَاضِبًا (21:87).",
+    "titleUr": "ذَهَبَ — پہلا ماضی فعل",
     "chapter_order": 5,
     "lesson_order": 5,
     "estimated_minutes": 10,
-    "xp_reward": 20
+    "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 7,
-      "ayah": 73,
-      "label": "Al-A'raf 7:73",
-      "ar": "هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً",
-      "en": "This is the she-camel of Allah, as a sign for you.",
-      "ur": "یہ اللہ کی اونٹنی ہے، تمہارے لیے نشانی۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/007073.mp3"
+      "surah": 21,
+      "ayah": 87,
+      "label": "Al-Anbiya 21:87",
+      "ar": "وَذَا النُّونِ إِذ ذَّهَبَ مُغَاضِبًا فَظَنَّ أَن لَّن نَّقْدِرَ عَلَيْهِ فَنَادَىٰ فِي الظُّلُمَاتِ أَن لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
+      "en": "And [mention] the man of the fish [i.e., Jonah], when he went off in anger and thought that We would not decree [anything] upon him. And he called out within the darknesses, \"There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.\"",
+      "ur": "اور ذوالنون (کو یاد کرو) جب وہ (اپنی قوم سے ناراض ہو کر) غصے کی حالت میں چل دیئے اور خیال کیا کہ ہم ان پر قابو نہیں پاسکیں گے۔ آخر اندھیرے میں (خدا کو) پکارنے لگے کہ تیرے سوا کوئی معبود نہیں۔ تو پاک ہے (اور) بےشک میں قصوروار ہوں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/021087.mp3"
     },
     "noor_intro": {
-      "en": "This is R1, the first locked review milestone. You now know demonstratives, gender, adjective agreement, idafa, possession, and your first verb. No new grammar today — only consolidation.",
-      "ur": "یہ R1 ہے، پہلا مقررہ مراجعہ سنگ میل۔ آپ اشارے، جنس، صفت کی ہم آہنگی، اضافت، ملکیت، اور پہلا فعل جانتے ہیں۔ آج نئی گرامر نہیں — صرف مضبوطی۔"
+      "en": "So far, most of your Arabic has named things. Today movement enters the language: ذَهَبَ means 'he went' — your first past-tense verb. In this ayah: إِذْ ذَهَبَ مُغَاضِبًا — 'when he went away in anger.'",
+      "ur": "اب تک آپ کی زیادہ تر عربی چیزوں کے نام بتاتی تھی۔ آج زبان میں حرکت داخل ہوتی ہے: ذَهَبَ کا معنی ہے 'وہ گیا' — آپ کا پہلا ماضی فعل۔ اس آیت میں: إِذْ ذَهَبَ مُغَاضِبًا — 'جب وہ غصے میں چل دیا۔'"
     },
     "autoplay": true
   },
@@ -28,283 +29,336 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Pointing Table",
-        "ar": "جَدْوَلُ أَسْمَاءِ الإِشَارَة",
-        "ur": "اشاروں کا جدول"
+        "en": "Arabic now moves",
+        "ar": "فِعْلٌ",
+        "ur": "اب عربی حرکت کرتی ہے"
       },
       "explanation": {
-        "en": "هَٰذَا — this masculine\nذَٰلِكَ — that masculine\nهَٰذِهِ — this feminine\nتِلْكَ — that feminine\n\nDistance and gender both matter.",
-        "ur": "هَٰذَا — یہ مذکر\nذَٰلِكَ — وہ مذکر\nهَٰذِهِ — یہ مؤنث\nتِلْكَ — وہ مؤنث\n\nفاصلہ اور جنس دونوں اہم ہیں۔"
+        "en": "A verb expresses an action. Arabic calls it فِعْلٌ.",
+        "ur": "فعل عمل ظاہر کرتا ہے۔ عربی اسے فِعْلٌ کہتی ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "ذَهَبَ",
+        "ar_plain": "ذهب",
+        "translit": "dhahaba",
+        "en": "he went",
+        "ur": "وہ گیا"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/dhahaba.mp3",
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/dhahaba.webp",
+      "explanation": {
+        "en": "First verb: ذَهَبَ = he went.",
+        "ur": "پہلا فعل: ذَهَبَ = وہ گیا۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "ذهب"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Adjective Agreement",
-        "ar": "مُطَابَقَةُ الصِّفَة",
-        "ur": "صفت کی ہم آہنگی"
+        "en": "Completed action",
+        "ar": "ذَهَبَ",
+        "ur": "مکمل شدہ عمل"
       },
       "explanation": {
-        "en": "The adjective follows the noun and agrees with it:\n\nرَجُلٌ كَرِيمٌ — masculine indefinite\nالْبَيْتُ الْكَبِيرُ — definite + definite\nكَلِمَةٌ طَيِّبَةٌ — feminine + feminine",
-        "ur": "صفت اسم کے بعد آتی ہے اور اس سے ہم آہنگ ہوتی ہے:\n\nرَجُلٌ كَرِيمٌ — مذکر نکرہ\nالْبَيْتُ الْكَبِيرُ — معرفہ + معرفہ\nكَلِمَةٌ طَيِّبَةٌ — مؤنث + مؤنث"
+        "en": "ذَهَبَ describes an action completed in the past.",
+        "ur": "ذَهَبَ ماضی میں مکمل ہو چکے عمل کو بیان کرتا ہے۔"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/dhahaba.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Do not add an unnecessary pronoun",
+        "ur": "غیر ضروری ضمیر نہ لگائیں"
+      },
+      "explanation": {
+        "en": "The form already carries 'he'; ذَهَبَ can mean 'he went.'",
+        "ur": "اس صورت میں 'وہ' پہلے سے موجود ہے؛ ذَهَبَ کا معنی 'وہ گیا' ہو سکتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "ذَهَبَ الطَّالِبُ",
+        "ar_plain": "ذهب الطالب",
+        "translit": "dhahaba ṭ-ṭālibu",
+        "en": "The student went.",
+        "ur": "طالب علم گیا۔"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/dhahaba-attalib.mp3",
+      "explanation": {
+        "en": "Use a named doer: ذَهَبَ الطَّالِبُ — The student went.",
+        "ur": "نامزد فاعل استعمال کریں: ذَهَبَ الطَّالِبُ — طالب علم گیا۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "طالب"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Idafa and Possession",
-        "ar": "الإِضَافَة وَلَامُ الْمِلْكِيَّة",
-        "ur": "اضافت اور ملکیت کا لام"
+        "en": "Verb comes first in this pattern",
+        "ar": "ذَهَبَ الطَّالِبُ",
+        "ur": "اس نمونے میں فعل پہلے آتا ہے"
       },
       "explanation": {
-        "en": "كِتَابُ الطَّالِبِ — the student's book\nلِي كِتَابٌ — I have a book\nلَهُ مَا فِي السَّمَاوَاتِ — to Him belongs what is in the heavens",
-        "ur": "كِتَابُ الطَّالِبِ — طالب علم کی کتاب\nلِي كِتَابٌ — میرے پاس کتاب ہے\nلَهُ مَا فِي السَّمَاوَاتِ — اسی کا ہے جو آسمانوں میں ہے"
+        "en": "ذَهَبَ | الطَّالِبُ = went | the student.",
+        "ur": "ذَهَبَ | الطَّالِبُ = گیا | طالب علم۔"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/dhahaba-attalib.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "ذَهَبَ الْوَلَدُ",
+        "ar_plain": "ذهب الولد",
+        "translit": "dhahaba l-waladu",
+        "en": "The boy went.",
+        "ur": "لڑکا گیا۔"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/dhahaba-alwalad.mp3",
+      "explanation": {
+        "en": "Another known doer: ذَهَبَ الْوَلَدُ — The boy went.",
+        "ur": "ایک اور جانا پہچانا فاعل: ذَهَبَ الْوَلَدُ — لڑکا گیا۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "ولد"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Verb versus noun",
+        "ar": "ذَهَبَ / الطَّالِبُ",
+        "ur": "فعل بمقابلہ اسم"
+      },
+      "examples": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "گیا"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        }
+      ],
+      "explanation": {
+        "en": "ذَهَبَ is an action; الطَّالِبُ is a person.",
+        "ur": "ذَهَبَ ایک عمل ہے؛ الطَّالِبُ ایک شخص ہے۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "First Verb",
-        "ar": "أَوَّلُ فِعْل",
-        "ur": "پہلا فعل"
+        "en": "Quran recognition",
+        "ur": "قرآن میں پہچان"
       },
       "explanation": {
-        "en": "ذَهَبَ الطَّالِبُ\n\nذَهَبَ = فِعْل — went\nالطَّالِبُ = فَاعِل — the doer\n\nArabic can begin with action.",
-        "ur": "ذَهَبَ الطَّالِبُ\n\nذَهَبَ = فِعْل — گیا\nالطَّالِبُ = فَاعِل — کرنے والا\n\nعربی عمل سے شروع ہو سکتی ہے۔"
+        "en": "Find ذَهَبَ inside إِذْ ذَهَبَ مُغَاضِبًا — 'when he went away in anger.' مُغَاضِبًا (in anger) is for recognition only.",
+        "ur": "إِذْ ذَهَبَ مُغَاضِبًا — 'جب وہ غصے میں چل دیا' — میں ذَهَبَ تلاش کریں۔ مُغَاضِبًا (غصے میں) صرف پہچان کے لیے ہے۔"
       }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Checkpoint",
+        "ur": "جانچ"
+      },
+      "explanation": {
+        "en": "When you see ذَهَبَ, first recognize 'he went'; do not attempt the later conjugation table yet.",
+        "ur": "جب آپ ذَهَبَ دیکھیں تو پہلے 'وہ گیا' پہچانیں؛ ابھی بعد والے گردان کے جدول کی کوشش نہ کریں۔"
+      },
+      "examples": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        }
+      ]
     }
   ],
   "exercises": [
     {
-      "id": "ch05-l05-ex01",
+      "id": "ch05-l04-ex01",
       "type": "TAP_TRANSLATION",
-      "xp_value": 5,
+      "xp_value": 1,
       "prompt": {
-        "ar": "هَٰذِهِ نَاقَةٌ",
-        "ar_plain": "هذه ناقة",
-        "translit": "hādhihi nāqatun",
-        "en": "this is a she-camel",
-        "ur": "یہ اونٹنی ہے۔"
+        "ar": "ذَهَبَ",
+        "ar_plain": "ذهب",
+        "translit": "dhahaba",
+        "en": "he went",
+        "ur": "وہ گیا"
       },
       "options": [
         {
-          "en": "this is a she-camel",
-          "ur": "یہ اونٹنی ہے"
+          "en": "he went",
+          "ur": "وہ گیا"
         },
         {
-          "en": "that is a she-camel",
-          "ur": "وہ اونٹنی ہے"
+          "en": "he came",
+          "ur": "وہ آیا"
         },
         {
-          "en": "this is a house",
-          "ur": "یہ گھر ہے"
+          "en": "the student",
+          "ur": "طالب علم"
         },
         {
-          "en": "he has a camel",
-          "ur": "اس کے پاس اونٹ ہے"
+          "en": "the boy",
+          "ur": "لڑکا"
         }
       ],
       "correct_index": 0,
-      "explanation_on_wrong": {
-        "en": "هَٰذِهِ is the near feminine pointer, and نَاقَةٌ is feminine.",
-        "ur": "هَٰذِهِ قریب مؤنث اشارہ ہے، اور نَاقَةٌ مؤنث ہے۔"
-      }
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/dhahaba.mp3"
     },
     {
-      "id": "ch05-l05-ex02",
-      "type": "FILL_BLANK",
-      "xp_value": 5,
-      "mode": "TAP",
-      "sentence_ar": "___ مَدِينَةٌ",
-      "hint": {
-        "en": "'That is a city' — choose the far feminine pointer.",
-        "ur": "'وہ شہر ہے' — دور مؤنث اشارہ چنیں۔"
-      },
-      "options": [
-        {
-          "ar": "تِلْكَ",
-          "ar_plain": "تلك",
-          "translit": "tilka",
-          "en": "that (fem.)",
-          "ur": "وہ (عورت)"
-        },
-        {
-          "ar": "هَٰذِهِ",
-          "ar_plain": "هذه",
-          "translit": "hādhihi",
-          "en": "this (fem.)",
-          "ur": "یہ (خواتین)"
-        },
-        {
-          "ar": "هَٰذَا",
-          "ar_plain": "هذا",
-          "translit": "hādhā",
-          "en": "this (masc.)",
-          "ur": "یہ (masc.)"
-        },
-        {
-          "ar": "ذَٰلِكَ",
-          "ar_plain": "ذلك",
-          "translit": "dhālika",
-          "en": "that (masc.)",
-          "ur": "وہ (masc.)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "تِلْكَ",
-        "ar_plain": "تلك",
-        "translit": "tilka",
-        "en": "that (fem.)",
-        "ur": "وہ (عورت)"
-      },
-      "explanation_on_wrong": {
-        "en": "مَدِينَةٌ is feminine, and 'that' is far: تِلْكَ.",
-        "ur": "مَدِينَةٌ مؤنث ہے، اور 'وہ' دور ہے: تِلْكَ۔"
-      }
-    },
-    {
-      "id": "ch05-l05-ex03",
-      "type": "BUILD_SENTENCE",
-      "xp_value": 5,
-      "target_translation": {
-        "en": "this is a good word",
-        "ur": "یہ اچھی بات / اچھا لفظ ہے"
-      },
-      "tiles": [
-        {
-          "ar": "هَٰذِهِ",
-          "ar_plain": "هذه",
-          "translit": "hādhihi",
-          "en": "this (fem.)",
-          "ur": "یہ (خواتین)"
-        },
-        {
-          "ar": "كَلِمَةٌ",
-          "ar_plain": "كلمة",
-          "translit": "kalimatun",
-          "en": "a word",
-          "ur": "ایک لفظ"
-        },
-        {
-          "ar": "طَيِّبَةٌ",
-          "ar_plain": "طيبة",
-          "translit": "ṭayyibatun",
-          "en": "good (fem.)",
-          "ur": "اچھا (عورت)"
-        },
-        {
-          "ar": "طَيِّبٌ",
-          "ar_plain": "طيب",
-          "translit": "ṭayyibun",
-          "en": "good (masc.)",
-          "ur": "اچھا (masc.)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "explanation_on_wrong": {
-        "en": "كَلِمَةٌ is feminine, so it uses هَٰذِهِ and the feminine adjective طَيِّبَةٌ.",
-        "ur": "كَلِمَةٌ مؤنث ہے، اس لیے هَٰذِهِ اور مؤنث صفت طَيِّبَةٌ آئے گی۔"
-      }
-    },
-    {
-      "id": "ch05-l05-ex04",
-      "type": "TAP_TRANSLATION",
-      "xp_value": 5,
-      "prompt": {
-        "ar": "لِي كِتَابٌ",
-        "ar_plain": "لي كتاب",
-        "translit": "lī kitābun",
-        "en": "I have a book",
-        "ur": "میرے پاس ایک کتاب ہے۔"
-      },
-      "options": [
-        {
-          "en": "I have a book",
-          "ur": "میرے پاس کتاب ہے"
-        },
-        {
-          "en": "you have a pen",
-          "ur": "تمہارے پاس قلم ہے"
-        },
-        {
-          "en": "this is a book",
-          "ur": "یہ کتاب ہے"
-        },
-        {
-          "en": "the student's book",
-          "ur": "طالب علم کی کتاب"
-        }
-      ],
-      "correct_index": 0
-    },
-    {
-      "id": "ch05-l05-ex05",
-      "type": "FILL_BLANK",
-      "xp_value": 5,
-      "mode": "TAP",
-      "sentence_ar": "___ قَلَمٌ",
-      "hint": {
-        "en": "'You have a pen' — choose the possession phrase.",
-        "ur": "'تمہارے پاس قلم ہے' — ملکیت ترکیب چنیں۔"
-      },
-      "options": [
-        {
-          "ar": "لَكَ",
-          "ar_plain": "لك",
-          "translit": "laka",
-          "en": "to you / you have",
-          "ur": "آپ کو / آپ کے پاس ہے۔"
-        },
-        {
-          "ar": "لِي",
-          "ar_plain": "لي",
-          "translit": "lī",
-          "en": "to me / I have",
-          "ur": "میرے پاس / میرے پاس ہے۔"
-        },
-        {
-          "ar": "لَهُ",
-          "ar_plain": "له",
-          "translit": "lahu",
-          "en": "to him / he has",
-          "ur": "اس کے پاس / اس کے پاس ہے۔"
-        },
-        {
-          "ar": "تِلْكَ",
-          "ar_plain": "تلك",
-          "translit": "tilka",
-          "en": "that (fem.)",
-          "ur": "وہ (عورت)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "لَكَ",
-        "ar_plain": "لك",
-        "translit": "laka",
-        "en": "to you / you have",
-        "ur": "آپ کو / آپ کے پاس ہے۔"
-      }
-    },
-    {
-      "id": "ch05-l05-ex06",
+      "id": "ch05-l04-ex02",
       "type": "GRAMMAR_PARSE",
-      "xp_value": 5,
+      "xp_value": 1,
+      "sentence_ar": "ذَهَبَ",
       "words": [
         {
           "ar": "ذَهَبَ",
           "ar_plain": "ذهب",
-          "translit": "—",
+          "translit": "dhahaba",
           "en": "went",
-          "ur": "چلا گیا"
+          "ur": "گیا"
+        }
+      ],
+      "available_roles": [
+        "VERB",
+        "NOUN"
+      ],
+      "correct_roles": [
+        "VERB"
+      ],
+      "explanation_on_wrong": {
+        "en": "The word ذَهَبَ is a verb — an action word: he went.",
+        "ur": "ذَهَبَ فعل ہے — عمل کا لفظ: وہ گیا۔"
+      }
+    },
+    {
+      "id": "ch05-l04-ex03",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "ذَهَبَ الطَّالِبُ",
+        "ar_plain": "ذهب الطالب",
+        "translit": "dhahaba ṭ-ṭālibu",
+        "en": "The student went.",
+        "ur": "طالب علم گیا۔"
+      },
+      "options": [
+        {
+          "en": "The student went.",
+          "ur": "طالب علم گیا۔"
+        },
+        {
+          "en": "The boy went.",
+          "ur": "لڑکا گیا۔"
+        },
+        {
+          "en": "the student's book",
+          "ur": "طالب علم کی کتاب"
+        },
+        {
+          "en": "This is a student.",
+          "ur": "یہ ایک طالب علم ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/dhahaba-attalib.mp3"
+    },
+    {
+      "id": "ch05-l04-ex04",
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "___ الطَّالِبُ",
+      "hint": {
+        "en": "Choose the verb: 'The student went.'",
+        "ur": "فعل چنیں: 'طالب علم گیا۔'"
+      },
+      "options": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "—",
+          "en": "ذَهَبَ",
+          "ur": "ذَهَبَ"
         },
         {
           "ar": "الطَّالِبُ",
           "ar_plain": "الطالب",
           "translit": "—",
+          "en": "الطَّالِبُ",
+          "ur": "الطَّالِبُ"
+        },
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "—",
+          "en": "كِتَابٌ",
+          "ur": "كِتَابٌ"
+        },
+        {
+          "ar": "مَدْرَسَةٌ",
+          "ar_plain": "مدرسة",
+          "translit": "—",
+          "en": "مَدْرَسَةٌ",
+          "ur": "مَدْرَسَةٌ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "ذَهَبَ",
+        "ar_plain": "ذهب",
+        "translit": "—",
+        "en": "ذَهَبَ",
+        "ur": "ذَهَبَ"
+      },
+      "explanation_on_wrong": {
+        "en": "Only ذَهَبَ is a verb (an action). الطَّالِبُ, كِتَابٌ and مَدْرَسَةٌ are nouns.",
+        "ur": "صرف ذَهَبَ فعل (عمل) ہے۔ الطَّالِبُ، كِتَابٌ اور مَدْرَسَةٌ اسم ہیں۔"
+      }
+    },
+    {
+      "id": "ch05-l04-ex05",
+      "type": "GRAMMAR_PARSE",
+      "xp_value": 1,
+      "sentence_ar": "ذَهَبَ الطَّالِبُ",
+      "words": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "گیا"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
           "en": "the student",
           "ur": "طالب علم"
         }
@@ -317,131 +371,148 @@
         "VERB",
         "SUBJECT"
       ],
-      "sentence_ar": "ذَهَبَ الطَّالِبُ"
-    },
-    {
-      "id": "ch05-l05-ex07",
-      "type": "MATCHING",
-      "xp_value": 5,
-      "left_column": [
-        {
-          "ar": "هَٰذَا بَيْتٌ",
-          "ar_plain": "هذا بيت",
-          "translit": "hādhā baytun",
-          "en": "this is a house",
-          "ur": "یہ ایک گھر ہے"
-        },
-        {
-          "ar": "تِلْكَ مَدْرَسَةٌ",
-          "ar_plain": "تلك مدرسة",
-          "translit": "tilka madrasatun",
-          "en": "that is a school",
-          "ur": "یہ ایک سکول ہے"
-        },
-        {
-          "ar": "كَلِمَةٌ طَيِّبَةٌ",
-          "ar_plain": "كلمة طيبة",
-          "translit": "kalimatun ṭayyibatun",
-          "en": "a good word",
-          "ur": "ایک اچھا لفظ"
-        },
-        {
-          "ar": "ذَهَبَ الْوَلَدُ",
-          "ar_plain": "ذهب الولد",
-          "translit": "dhahaba al-waladu",
-          "en": "the boy went",
-          "ur": "لڑکا چلا گیا"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "a good word",
-          "ur": "اچھی بات / اچھا لفظ"
-        },
-        {
-          "en": "the boy went",
-          "ur": "لڑکا گیا"
-        },
-        {
-          "en": "that is a school",
-          "ur": "وہ مدرسہ ہے"
-        },
-        {
-          "en": "this is a house",
-          "ur": "یہ گھر ہے"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          3
-        ],
-        [
-          1,
-          2
-        ],
-        [
-          2,
-          0
-        ],
-        [
-          3,
-          1
-        ]
-      ]
-    },
-    {
-      "id": "ch05-l05-ex08",
-      "type": "TRUE_FALSE",
-      "xp_value": 5,
-      "statement": {
-        "en": "In ذَهَبَ الْوَلَدُ, the verb comes first and the doer comes after it.",
-        "ur": "ذَهَبَ الْوَلَدُ میں فعل پہلے آتا ہے اور فاعل بعد میں۔",
-        "ar_example": {
-          "ar": "ذَهَبَ الْوَلَدُ",
-          "ar_plain": "ذهب الولد",
-          "translit": "dhahaba al-waladu",
-          "en": "the boy went",
-          "ur": "لڑکا چلا گیا"
-        }
-      },
-      "correct_answer": true,
       "explanation_on_wrong": {
-        "en": "True — ذَهَبَ is the verb and الْوَلَدُ is the doer.",
-        "ur": "درست — ذَهَبَ فعل ہے اور الْوَلَدُ فاعل ہے۔"
+        "en": "Roles: ذَهَبَ = VERB (the action); الطَّالِبُ = SUBJECT (the doer).",
+        "ur": "ذَهَبَ = فعل (عمل)؛ الطَّالِبُ = فاعل (کرنے والا)۔"
+      }
+    },
+    {
+      "id": "ch05-l04-ex06",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Build: 'The boy went.'",
+        "ur": "جملہ بنائیں: 'لڑکا گیا۔'"
+      },
+      "tiles": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "—",
+          "en": "ذَهَبَ",
+          "ur": "ذَهَبَ"
+        },
+        {
+          "ar": "الْوَلَدُ",
+          "ar_plain": "الولد",
+          "translit": "—",
+          "en": "الْوَلَدُ",
+          "ur": "الْوَلَدُ"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "—",
+          "en": "الطَّالِبُ",
+          "ur": "الطَّالِبُ"
+        },
+        {
+          "ar": "هَٰذَا",
+          "ar_plain": "هذا",
+          "translit": "—",
+          "en": "هَٰذَا",
+          "ur": "هَٰذَا"
+        },
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "—",
+          "en": "كِتَابٌ",
+          "ur": "كِتَابٌ"
+        }
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "explanation_on_wrong": {
+        "en": "Verb first, doer after: ذَهَبَ الْوَلَدُ — the boy went.",
+        "ur": "پہلے فعل، بعد میں فاعل: ذَهَبَ الْوَلَدُ — لڑکا گیا۔"
+      }
+    },
+    {
+      "id": "ch05-l04-ex07",
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "إِذْ ___ مُغَاضِبًا",
+      "hint": {
+        "en": "Al-Anbiya 21:87 — 'when he went away in anger.' Select ذَهَبَ.",
+        "ur": "الانبیاء 21:87 — 'جب وہ غصے میں چل دیا۔' ذَهَبَ چنیں۔"
+      },
+      "options": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "—",
+          "en": "ذَهَبَ",
+          "ur": "ذَهَبَ"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "—",
+          "en": "الطَّالِبُ",
+          "ur": "الطَّالِبُ"
+        },
+        {
+          "ar": "هَٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "—",
+          "en": "هَٰذِهِ",
+          "ur": "هَٰذِهِ"
+        },
+        {
+          "ar": "لَهُ",
+          "ar_plain": "له",
+          "translit": "—",
+          "en": "لَهُ",
+          "ur": "لَهُ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "ذَهَبَ",
+        "ar_plain": "ذهب",
+        "translit": "—",
+        "en": "ذَهَبَ",
+        "ur": "ذَهَبَ"
+      },
+      "explanation_on_wrong": {
+        "en": "The phrase إِذْ ذَهَبَ مُغَاضِبًا — ذَهَبَ is the completed action 'he went'.",
+        "ur": "إِذْ ذَهَبَ مُغَاضِبًا — ذَهَبَ مکمل شدہ عمل 'وہ گیا' ہے۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "R1 — Mid-Book 1 Consolidation",
-      "ar": "المراجعة الأولى — تثبيت منتصف الكتاب الأول",
-      "ur": "R1 — کتاب اول کے وسط کی مضبوطی"
+      "en": "الفِعْل in the Quran",
+      "ar": "الْفِعْلُ فِي الْقُرْآن",
+      "ur": "قرآن میں فعل"
     },
     "ayah": {
-      "surah": 7,
-      "ayah": 73,
-      "label": "Al-A'raf 7:73",
-      "ar": "هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً",
-      "en": "This is the she-camel of Allah, as a sign for you.",
-      "ur": "یہ اللہ کی اونٹنی ہے، تمہارے لیے نشانی۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/007073.mp3"
+      "surah": 21,
+      "ayah": 87,
+      "label": "Al-Anbiya 21:87",
+      "ar": "وَذَا النُّونِ إِذ ذَّهَبَ مُغَاضِبًا فَظَنَّ أَن لَّن نَّقْدِرَ عَلَيْهِ فَنَادَىٰ فِي الظُّلُمَاتِ أَن لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
+      "en": "And [mention] the man of the fish [i.e., Jonah], when he went off in anger and thought that We would not decree [anything] upon him. And he called out within the darknesses, \"There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.\"",
+      "ur": "اور ذوالنون (کو یاد کرو) جب وہ (اپنی قوم سے ناراض ہو کر) غصے کی حالت میں چل دیئے اور خیال کیا کہ ہم ان پر قابو نہیں پاسکیں گے۔ آخر اندھیرے میں (خدا کو) پکارنے لگے کہ تیرے سوا کوئی معبود نہیں۔ تو پاک ہے (اور) بےشک میں قصوروار ہوں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/021087.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      1,
-      2,
       3
     ],
+    "highlighted_words": [
+      "ذَّهَبَ"
+    ],
     "noor_explanation": {
-      "en": "Look how much grammar is inside one short phrase:\n\nهَٰذِهِ — this, feminine near\nنَاقَةُ اللَّهِ — idafa: the she-camel of Allah\nلَكُمْ — for you\nآيَةً — a sign\n\nFive chapters ago this was just recitation. Now it has structure.",
-      "ur": "دیکھیں ایک چھوٹے جملے میں کتنی گرامر ہے:\n\nهَٰذِهِ — یہ، مؤنث قریب\nنَاقَةُ اللَّهِ — اضافت: اللہ کی اونٹنی\nلَكُمْ — تمہارے لیے\nآيَةً — نشانی\n\nپانچ ابواب پہلے یہ صرف تلاوت تھی۔ اب اس کی ساخت نظر آ رہی ہے۔"
+      "en": "ذَهَبَ is your first doorway into Arabic verbs, and the Quran uses exactly this form here: إِذْ ذَهَبَ مُغَاضِبًا — when he went away in anger. Recognize the completed action; the person who went is understood from the story.",
+      "ur": "ذَهَبَ عربی افعال کا آپ کا پہلا دروازہ ہے، اور قرآن یہاں بالکل یہی صورت استعمال کرتا ہے: إِذْ ذَهَبَ مُغَاضِبًا — جب وہ غصے میں چل دیا۔ مکمل شدہ عمل پہچانیں؛ جانے والا واقعے سے سمجھ میں آتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "R1 complete. You have consolidated the first foundation: pointing words, gender, adjective agreement, idafa, possession, and your first verb. Chapter 6 can now build richer descriptions on top of this.",
-      "ur": "R1 مکمل۔ آپ نے پہلی بنیاد مضبوط کر لی: اشارے، جنس، صفت کی ہم آہنگی، اضافت، ملکیت، اور پہلا فعل۔ باب 6 اب اسی بنیاد پر زیادہ گہری توصیفات بنائے گا۔"
+      "en": "You have opened the door to Arabic actions: ذَهَبَ is a completed action, and the person after it can tell you who went.",
+      "ur": "آپ نے عربی افعال کا دروازہ کھول دیا: ذَهَبَ ایک مکمل شدہ عمل ہے، اور اس کے بعد آنے والا شخص بتاتا ہے کہ کون گیا۔"
     }
   }
 }

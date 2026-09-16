@@ -711,7 +711,19 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    Remaining: 118 Core 500 words, Sets 71–100.
 2. **Curriculum rebuild in progress (owner, in Studio).** The owner is
    rebuilding the curriculum chapter by chapter from Chapter 1; Chapters 1–4 are
-   done and Chapter 5 is in progress as of 2026-09-15. The Chapter 9–72 review
+   done. **Chapter 5 is implemented in isolated staging (2026-09-16)** from
+   `Docs/proposals/chapter-05-content-proposal.md`: eight items in the approved
+   order (`ch05-l01/l02/l03`, new `ch05-l06`, `ch05-l04`, new `ch05-l07`,
+   `ch05-l05`, new `ch05-test`), fixtures validated, Quran/Urdu audits clean,
+   36 new catalogue clips generated, every lesson and the 12-question test
+   completed on the emulator in English and spot-checked in Urdu. Production is
+   untouched; promote with `npm run content:promote-chapter-five -- --apply`
+   after owner approval, then `npm run content:baseline`. Deviations from the
+   proposal (file numbering = display order, STANDARD instead of VERB_PATTERN,
+   PLACE_ZARF for "destination", six illustrations still owner-owned) are listed
+   at the end of the proposal. The same pass fixed `seed.cjs`, which still loaded
+   Chapters 3–4 by their pre-rebuild filenames and would have scrambled titles
+   against content on any seeded (staging) database. The Chapter 9–72 review
    and the QA content observations above are absorbed into this pass. After each
    Studio session: `content:check` → `content:export` → commit, and regenerate
    audio for any edited Arabic (`audio:prebuild-catalog -- --from-db`).

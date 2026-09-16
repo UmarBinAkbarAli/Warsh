@@ -31,26 +31,32 @@ const ch02L13Content = require("./fixtures/chapter-02-lesson-13.json");
 const ch02L14Content = require("./fixtures/chapter-02-lesson-14.json");
 const ch02L15Content = require("./fixtures/chapter-02-lesson-15.json");
 const ch02L17TestContent = require("./fixtures/chapter-02-lesson-17-final-test.json");
-const ch03L01Content = require("./fixtures/chapter-03-lesson-01.json");
-const ch03L02Content = require("./fixtures/chapter-03-lesson-02.json");
-const ch03L03Content = require("./fixtures/chapter-03-lesson-03.json");
-const ch03L04Content = require("./fixtures/chapter-03-lesson-04.json");
-const ch03L05SpokenContent = require("./fixtures/chapter-03-lesson-05-spoken-phrases.json");
-const ch03L06IdafaContent = require("./fixtures/chapter-03-lesson-06-idafa-usage.json");
-const ch03L07YaContent = require("./fixtures/chapter-03-lesson-07-ya.json");
-const ch03L08TestContent = require("./fixtures/chapter-03-lesson-08-final-test.json");
-const ch04L01Content = require("./fixtures/chapter-04-lesson-01.json");
-const ch04L02Content = require("./fixtures/chapter-04-lesson-02.json");
-const ch04L03Content = require("./fixtures/chapter-04-lesson-03.json");
-const ch04L04Content = require("./fixtures/chapter-04-lesson-04.json");
-const ch04L05Content = require("./fixtures/chapter-04-lesson-05-phrase-vs-sentence.json");
-const ch04L06Content = require("./fixtures/chapter-04-lesson-06-quranic-adjectives.json");
-const ch04L07TestContent = require("./fixtures/chapter-04-lesson-07-final-test.json");
-const ch05L01Content = require("./fixtures/chapter-05-lesson-01.json");
-const ch05L02Content = require("./fixtures/chapter-05-lesson-02.json");
-const ch05L03Content = require("./fixtures/chapter-05-lesson-03.json");
-const ch05L04Content = require("./fixtures/chapter-05-lesson-04.json");
-const ch05L05Content = require("./fixtures/chapter-05-lesson-05.json");
+// Chapters 3–5: fixture file number == database display order (content:export
+// keys the mirror by `order`), so each stable ID loads the file at its display
+// position. The slugs in the Chapter 3/4 filenames are stale labels.
+const ch03L01Content = require("./fixtures/chapter-03-lesson-01.json");        // ch03-l01, order 1
+const ch03L06IdafaContent = require("./fixtures/chapter-03-lesson-02.json");   // ch03-l06, order 2
+const ch03L02Content = require("./fixtures/chapter-03-lesson-03.json");        // ch03-l02, order 3
+const ch03L07YaContent = require("./fixtures/chapter-03-lesson-04.json");      // ch03-l07, order 4
+const ch03L03Content = require("./fixtures/chapter-03-lesson-05-spoken-phrases.json"); // ch03-l03, order 5
+const ch03L05SpokenContent = require("./fixtures/chapter-03-lesson-06-idafa-usage.json"); // ch03-l05, order 6
+const ch03L04Content = require("./fixtures/chapter-03-lesson-07-ya.json");     // ch03-l04, order 7
+const ch03L08TestContent = require("./fixtures/chapter-03-lesson-08-final-test.json"); // ch03-test, order 8
+const ch04L01Content = require("./fixtures/chapter-04-lesson-01.json");        // ch04-l01, order 1
+const ch04L02Content = require("./fixtures/chapter-04-lesson-02.json");        // ch04-l02, order 2
+const ch04L05Content = require("./fixtures/chapter-04-lesson-03.json");        // ch04-l05, order 3
+const ch04L03Content = require("./fixtures/chapter-04-lesson-04.json");        // ch04-l03, order 4
+const ch04L06Content = require("./fixtures/chapter-04-lesson-05-phrase-vs-sentence.json"); // ch04-l06, order 5
+const ch04L04Content = require("./fixtures/chapter-04-lesson-06-quranic-adjectives.json"); // ch04-l04, order 6
+const ch04L07TestContent = require("./fixtures/chapter-04-lesson-07-final-test.json"); // ch04-test, order 7
+const ch05L01Content = require("./fixtures/chapter-05-lesson-01.json");        // ch05-l01, order 1
+const ch05L02Content = require("./fixtures/chapter-05-lesson-02.json");        // ch05-l02, order 2
+const ch05L03Content = require("./fixtures/chapter-05-lesson-03.json");        // ch05-l03, order 3
+const ch05L06Content = require("./fixtures/chapter-05-lesson-04.json");        // ch05-l06, order 4
+const ch05L04Content = require("./fixtures/chapter-05-lesson-05.json");        // ch05-l04, order 5
+const ch05L07Content = require("./fixtures/chapter-05-lesson-06.json");        // ch05-l07, order 6
+const ch05L05Content = require("./fixtures/chapter-05-lesson-07.json");        // ch05-l05, order 7
+const ch05TestContent = require("./fixtures/chapter-05-lesson-08-final-test.json"); // ch05-test, order 8
 const ch06L01Content = require("./fixtures/chapter-06-lesson-01.json");
 const ch06L02Content = require("./fixtures/chapter-06-lesson-02.json");
 const ch06L03Content = require("./fixtures/chapter-06-lesson-03.json");
@@ -751,12 +757,17 @@ async function main() {
     { id: "ch04-l06", chapterId: ch4Id, order: 5, title: "Adjectives in Quranic Phrases",          titleAr: "الصِّفَةُ فِي التَّرَاكِيبِ الْقُرْآنِيَّةِ", template: "STANDARD", xpReward: ch04L06Content._meta?.xp_reward ?? 10, content: ch04L06Content },
     { id: "ch04-l04", chapterId: ch4Id, order: 6, title: "Chapter 4 Review",                       titleAr: "مُرَاجَعَة الْفَصْل الرَّابِع",           template: "REVIEW", xpReward: ch04L04Content._meta?.xp_reward ?? 20, content: ch04L04Content },
     { id: "ch04-test", chapterId: ch4Id, order: 7, title: "Chapter 4 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الرَّابِعِ",          template: "REVIEW", xpReward: ch04L07TestContent._meta?.xp_reward ?? 20, content: ch04L07TestContent },
-    // Chapter 5
-    { id: "ch05-l01", chapterId: ch5Id, order: 1, title: "This Feminine — هَٰذِهِ",                 titleAr: "هَٰذِهِ لِلْمُؤَنَّثِ الْقَرِيب",                       template: "STANDARD", xpReward: ch05L01Content._meta?.xp_reward ?? 10, content: ch05L01Content },
-    { id: "ch05-l02", chapterId: ch5Id, order: 2, title: "That Feminine — تِلْكَ",                 titleAr: "تِلْكَ لِلْمُؤَنَّثِ الْبَعِيد",                        template: "STANDARD", xpReward: ch05L02Content._meta?.xp_reward ?? 10, content: ch05L02Content },
-    { id: "ch05-l03", chapterId: ch5Id, order: 3, title: "Possession — لِي، لَكَ، لَهُ",           titleAr: "لَامُ الْمِلْكِيَّة",                                  template: "STANDARD", xpReward: ch05L03Content._meta?.xp_reward ?? 10, content: ch05L03Content },
-    { id: "ch05-l04", chapterId: ch5Id, order: 4, title: "First Verb — ذَهَبَ",                    titleAr: "أَوَّلُ فِعْلٍ — ذَهَبَ",                              template: "STANDARD", xpReward: ch05L04Content._meta?.xp_reward ?? 10, content: ch05L04Content },
-    { id: "ch05-l05", chapterId: ch5Id, order: 5, title: "R1 Review — Mid-Book 1",                 titleAr: "المُرَاجَعَةُ الأُولَى — مُنْتَصَفُ الكِتَابِ الأَوَّل",  template: "REVIEW",   xpReward: ch05L05Content._meta?.xp_reward ?? 20, content: ch05L05Content },
+    // Chapter 5 — display order per Docs/proposals/chapter-05-content-proposal.md;
+    // stable IDs preserved, three new IDs (ch05-l06, ch05-l07, ch05-test).
+    { id: "ch05-l01", chapterId: ch5Id, order: 1, title: "‎هَٰذِهِ with Description and Idafa",  titleAr: "هَٰذِهِ مَعَ الصِّفَةِ وَالإِضَافَة",   template: "STANDARD", xpReward: ch05L01Content._meta?.xp_reward ?? 10, content: ch05L01Content },
+    { id: "ch05-l02", chapterId: ch5Id, order: 2, title: "‎تِلْكَ in Useful Quranic Phrases",     titleAr: "تِلْكَ فِي تَرَاكِيبَ قُرْآنِيَّة",       template: "STANDARD", xpReward: ch05L02Content._meta?.xp_reward ?? 10, content: ch05L02Content },
+    { id: "ch05-l03", chapterId: ch5Id, order: 3, title: "لِي، لَكَ، لَكِ",                       titleAr: "لِي، لَكَ، لَكِ",                        template: "STANDARD", xpReward: ch05L03Content._meta?.xp_reward ?? 10, content: ch05L03Content },
+    { id: "ch05-l06", chapterId: ch5Id, order: 4, title: "لَهُ، لَهَا، لَكُمْ",                    titleAr: "لَهُ، لَهَا، لَكُمْ",                     template: "STANDARD", xpReward: ch05L06Content._meta?.xp_reward ?? 10, content: ch05L06Content },
+    { id: "ch05-l04", chapterId: ch5Id, order: 5, title: "‎ذَهَبَ — First Past-Tense Verb",        titleAr: "ذَهَبَ — أَوَّلُ فِعْلٍ مَاضٍ",           template: "STANDARD", xpReward: ch05L04Content._meta?.xp_reward ?? 10, content: ch05L04Content },
+    { id: "ch05-l07", chapterId: ch5Id, order: 6, title: "Action, Doer, and Destination",          titleAr: "الْفِعْلُ وَالْفَاعِلُ وَإِلَى",          template: "STANDARD", xpReward: ch05L07Content._meta?.xp_reward ?? 10, content: ch05L07Content },
+    { id: "ch05-l05", chapterId: ch5Id, order: 7, title: "R1 Cumulative Review",                   titleAr: "المُرَاجَعَةُ الأُولَى",                  template: "REVIEW",   xpReward: ch05L05Content._meta?.xp_reward ?? 20, content: ch05L05Content },
+    { id: "ch05-test", chapterId: ch5Id, order: 8, title: "Chapter 5 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الْخَامِسِ",        template: "REVIEW",   xpReward: ch05TestContent._meta?.xp_reward ?? 20, content: ch05TestContent },
+
     // Chapter 6
     { id: "ch06-l01", chapterId: ch6Id, order: 1, title: "Described Subject — الرَّجُلُ الْكَرِيمُ", titleAr: "المُبْتَدَأ المَوْصُوف",                   template: "STANDARD", xpReward: ch06L01Content._meta?.xp_reward ?? 10, content: ch06L01Content },
     { id: "ch06-l02", chapterId: ch6Id, order: 2, title: "الَّذِي — Who, That, Which",              titleAr: "الَّذِي — اسْمٌ مَوْصُول",                 template: "STANDARD", xpReward: ch06L02Content._meta?.xp_reward ?? 10, content: ch06L02Content },

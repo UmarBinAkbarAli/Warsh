@@ -1,0 +1,756 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 5, display lesson 7 (ch05-l05) — R1 cumulative review of Chapters 1–5: demonstratives, agreement, Idafa, لِـ possession, first verb, movement sentence. No new grammar.",
+    "titleUr": "R1 جامع مراجعہ",
+    "chapter_order": 5,
+    "lesson_order": 7,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 7,
+      "ayah": 73,
+      "label": "Al-A'raf 7:73",
+      "ar": "هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً",
+      "en": "This is the she-camel of Allah, as a sign for you.",
+      "ur": "یہ اللہ کی اونٹنی ہے، تمہارے لیے نشانی۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/007073.mp3"
+    },
+    "noor_intro": {
+      "en": "This is R1, the first cumulative review. هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً now combines هَٰذِهِ (near feminine pointer), نَاقَةُ اللَّهِ (Idafa), لَكُمْ (for you all) and آيَةً (a sign). No new grammar today — only consolidation.",
+      "ur": "یہ R1 ہے، پہلا جامع مراجعہ۔ هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً اب هَٰذِهِ (قریب مؤنث اشارہ)، نَاقَةُ اللَّهِ (اضافت)، لَكُمْ (تم سب کے لیے) اور آيَةً (نشانی) کو جوڑتا ہے۔ آج نئی گرامر نہیں — صرف مضبوطی۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Demonstrative table",
+        "ar": "هَٰذَا، ذَٰلِكَ، هَٰذِهِ، تِلْكَ",
+        "ur": "اشاروں کا جدول"
+      },
+      "explanation": {
+        "en": "هَٰذَا — this, masculine\nذَٰلِكَ — that, masculine\nهَٰذِهِ — this, feminine\nتِلْكَ — that, feminine",
+        "ur": "هَٰذَا — یہ، مذکر\nذَٰلِكَ — وہ، مذکر\nهَٰذِهِ — یہ، مؤنث\nتِلْكَ — وہ، مؤنث"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Near/far and masculine/feminine decision",
+        "ur": "قریب/دور اور مذکر/مؤنث کا فیصلہ"
+      },
+      "explanation": {
+        "en": "First ask: is the noun masculine or feminine? Then: is it near or far? The two answers choose the pointer.",
+        "ur": "پہلے پوچھیں: اسم مذکر ہے یا مؤنث؟ پھر: قریب ہے یا دور؟ دونوں جواب اشارہ چنتے ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "هَٰذِهِ مَدْرَسَةٌ",
+          "ar_plain": "هذه مدرسة",
+          "translit": "hādhihi madrasatun",
+          "en": "This is a school.",
+          "ur": "یہ ایک مدرسہ ہے۔"
+        },
+        {
+          "ar": "تِلْكَ مَدْرَسَةٌ",
+          "ar_plain": "تلك مدرسة",
+          "translit": "tilka madrasatun",
+          "en": "That is a school.",
+          "ur": "وہ ایک مدرسہ ہے۔"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "كِتَابُ الطَّالِبِ",
+        "ar_plain": "كتاب الطالب",
+        "translit": "kitābu ṭ-ṭālibi",
+        "en": "the student's book",
+        "ur": "طالب علم کی کتاب"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/kitab-altaalib.mp3",
+      "explanation": {
+        "en": "Idafa: كِتَابُ الطَّالِبِ — the student's book.",
+        "ur": "اضافت: كِتَابُ الطَّالِبِ — طالب علم کی کتاب۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "بَيْتٌ كَبِيرٌ",
+        "ar_plain": "بيت كبير",
+        "translit": "baytun kabīrun",
+        "en": "a big house",
+        "ur": "ایک بڑا گھر"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/bayt-kabir.mp3",
+      "explanation": {
+        "en": "Masculine adjective agreement: بَيْتٌ كَبِيرٌ — a big house.",
+        "ur": "مذکر صفت کی مطابقت: بَيْتٌ كَبِيرٌ — ایک بڑا گھر۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "كَلِمَةٌ طَيِّبَةٌ",
+        "ar_plain": "كلمة طيبة",
+        "translit": "kalimatun ṭayyibatun",
+        "en": "a good word",
+        "ur": "ایک اچھی بات"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/kalimah-tayyibah.mp3",
+      "explanation": {
+        "en": "Feminine adjective agreement: كَلِمَةٌ طَيِّبَةٌ — a good word.",
+        "ur": "مؤنث صفت کی مطابقت: كَلِمَةٌ طَيِّبَةٌ — ایک اچھی بات۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Possession table",
+        "ar": "لَامُ الْمِلْكِيَّة",
+        "ur": "ملکیت کا جدول"
+      },
+      "body": {
+        "en": "لِي — me (I have)\nلَكَ — you (male)\nلَكِ — you (female)\nلَهُ — him (he has)\nلَهَا — her (she has)\nلَكُمْ — you all",
+        "ur": "لِي — میں (میرے پاس)\nلَكَ — تم (مذکر مخاطب)\nلَكِ — تم (مؤنث مخاطب)\nلَهُ — وہ (مذکر مالک)\nلَهَا — وہ (مؤنث مالک)\nلَكُمْ — تم سب"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "ذَهَبَ الطَّالِبُ",
+        "ar_plain": "ذهب الطالب",
+        "translit": "dhahaba ṭ-ṭālibu",
+        "en": "The student went.",
+        "ur": "طالب علم گیا۔"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/dhahaba-attalib.mp3",
+      "explanation": {
+        "en": "First verb: ذَهَبَ الطَّالِبُ — ذَهَبَ (went) + الطَّالِبُ (the doer).",
+        "ur": "پہلا فعل: ذَهَبَ الطَّالِبُ — ذَهَبَ (گیا) + الطَّالِبُ (فاعل)۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ",
+        "ar_plain": "ذهب الطالب إلى المدرسة",
+        "translit": "dhahaba ṭ-ṭālibu ilā l-madrasati",
+        "en": "The student went to the school.",
+        "ur": "طالب علم مدرسے کی طرف گیا۔"
+      },
+      "explanation": {
+        "en": "Full movement: ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ — action, doer, destination.",
+        "ur": "مکمل حرکت: ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ — عمل، فاعل، منزل۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ch05-l05-ex01",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "هَٰذِهِ نَاقَةٌ",
+        "ar_plain": "هذه ناقة",
+        "translit": "hādhihi nāqatun",
+        "en": "This is a she-camel.",
+        "ur": "یہ ایک اونٹنی ہے۔"
+      },
+      "options": [
+        {
+          "en": "This is a she-camel.",
+          "ur": "یہ ایک اونٹنی ہے۔"
+        },
+        {
+          "en": "That is a she-camel.",
+          "ur": "وہ ایک اونٹنی ہے۔"
+        },
+        {
+          "en": "This is Allah's she-camel.",
+          "ur": "یہ اللہ کی اونٹنی ہے۔"
+        },
+        {
+          "en": "This is a school.",
+          "ur": "یہ ایک مدرسہ ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/hadhihi-naqah.mp3"
+    },
+    {
+      "id": "ch05-l05-ex02",
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "___ مَدْرَسَةٌ",
+      "hint": {
+        "en": "That is a school — the school is far away.",
+        "ur": "وہ ایک مدرسہ ہے — مدرسہ دور ہے۔"
+      },
+      "options": [
+        {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "—",
+          "en": "تِلْكَ",
+          "ur": "تِلْكَ"
+        },
+        {
+          "ar": "هَٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "—",
+          "en": "هَٰذِهِ",
+          "ur": "هَٰذِهِ"
+        },
+        {
+          "ar": "ذَٰلِكَ",
+          "ar_plain": "ذلك",
+          "translit": "—",
+          "en": "ذَٰلِكَ",
+          "ur": "ذَٰلِكَ"
+        },
+        {
+          "ar": "هَٰذَا",
+          "ar_plain": "هذا",
+          "translit": "—",
+          "en": "هَٰذَا",
+          "ur": "هَٰذَا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "تِلْكَ",
+        "ar_plain": "تلك",
+        "translit": "—",
+        "en": "تِلْكَ",
+        "ur": "تِلْكَ"
+      },
+      "explanation_on_wrong": {
+        "en": "Far + feminine → تِلْكَ.",
+        "ur": "دور + مؤنث → تِلْكَ۔"
+      }
+    },
+    {
+      "id": "ch05-l05-ex03",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Build: 'This is a good word.'",
+        "ur": "جملہ بنائیں: 'یہ ایک اچھی بات ہے۔'"
+      },
+      "tiles": [
+        {
+          "ar": "هَٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "—",
+          "en": "هَٰذِهِ",
+          "ur": "هَٰذِهِ"
+        },
+        {
+          "ar": "كَلِمَةٌ",
+          "ar_plain": "كلمة",
+          "translit": "—",
+          "en": "كَلِمَةٌ",
+          "ur": "كَلِمَةٌ"
+        },
+        {
+          "ar": "طَيِّبَةٌ",
+          "ar_plain": "طيبة",
+          "translit": "—",
+          "en": "طَيِّبَةٌ",
+          "ur": "طَيِّبَةٌ"
+        },
+        {
+          "ar": "طَيِّبٌ",
+          "ar_plain": "طيب",
+          "translit": "—",
+          "en": "طَيِّبٌ",
+          "ur": "طَيِّبٌ"
+        },
+        {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "—",
+          "en": "تِلْكَ",
+          "ur": "تِلْكَ"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "explanation_on_wrong": {
+        "en": "The phrase هَٰذِهِ كَلِمَةٌ طَيِّبَةٌ — feminine pointer, feminine noun, feminine adjective.",
+        "ur": "هَٰذِهِ كَلِمَةٌ طَيِّبَةٌ — مؤنث اشارہ، مؤنث اسم، مؤنث صفت۔"
+      }
+    },
+    {
+      "id": "ch05-l05-ex04",
+      "type": "GRAMMAR_PARSE",
+      "xp_value": 1,
+      "sentence_ar": "نَاقَةُ اللَّهِ",
+      "words": [
+        {
+          "ar": "نَاقَةُ",
+          "ar_plain": "ناقة",
+          "translit": "nāqatu",
+          "en": "she-camel",
+          "ur": "اونٹنی"
+        },
+        {
+          "ar": "اللَّهِ",
+          "ar_plain": "الله",
+          "translit": "allāhi",
+          "en": "of Allah — the owner",
+          "ur": "اللہ کی — مالک"
+        }
+      ],
+      "available_roles": [
+        "NOUN",
+        "POSSESSIVE"
+      ],
+      "correct_roles": [
+        "NOUN",
+        "POSSESSIVE"
+      ],
+      "explanation_on_wrong": {
+        "en": "In the Idafa نَاقَةُ اللَّهِ, اللَّهِ is the owner (POSSESSIVE).",
+        "ur": "اضافت نَاقَةُ اللَّهِ میں اللَّهِ مالک ہے۔"
+      }
+    },
+    {
+      "id": "ch05-l05-ex05",
+      "type": "TAP_TRANSLATION",
+      "xp_value": 1,
+      "prompt": {
+        "ar": "لِي كِتَابٌ",
+        "ar_plain": "لي كتاب",
+        "translit": "lī kitābun",
+        "en": "I have a book.",
+        "ur": "میرے پاس ایک کتاب ہے۔"
+      },
+      "options": [
+        {
+          "en": "I have a book.",
+          "ur": "میرے پاس ایک کتاب ہے۔"
+        },
+        {
+          "en": "He has a book.",
+          "ur": "اس (مذکر) کے پاس ایک کتاب ہے۔"
+        },
+        {
+          "en": "You (male) have a book.",
+          "ur": "تمہارے پاس ایک کتاب ہے۔ (مذکر مخاطب)"
+        },
+        {
+          "en": "the student's book",
+          "ur": "طالب علم کی کتاب"
+        }
+      ],
+      "correct_index": 0,
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/li-kitab.mp3"
+    },
+    {
+      "id": "ch05-l05-ex06",
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "___ مَدْرَسَةٌ",
+      "hint": {
+        "en": "She has a school.",
+        "ur": "اس (مؤنث) کے پاس ایک مدرسہ ہے۔"
+      },
+      "options": [
+        {
+          "ar": "لَهَا",
+          "ar_plain": "لها",
+          "translit": "—",
+          "en": "لَهَا",
+          "ur": "لَهَا"
+        },
+        {
+          "ar": "لَهُ",
+          "ar_plain": "له",
+          "translit": "—",
+          "en": "لَهُ",
+          "ur": "لَهُ"
+        },
+        {
+          "ar": "لَكِ",
+          "ar_plain": "لك",
+          "translit": "—",
+          "en": "لَكِ",
+          "ur": "لَكِ"
+        },
+        {
+          "ar": "لِي",
+          "ar_plain": "لي",
+          "translit": "—",
+          "en": "لِي",
+          "ur": "لِي"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لَهَا",
+        "ar_plain": "لها",
+        "translit": "—",
+        "en": "لَهَا",
+        "ur": "لَهَا"
+      },
+      "explanation_on_wrong": {
+        "en": "A female owner → لَهَا.",
+        "ur": "مؤنث مالک → لَهَا۔"
+      }
+    },
+    {
+      "id": "ch05-l05-ex07",
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "___ كِتَابٌ",
+      "hint": {
+        "en": "You (female) have a book.",
+        "ur": "تمہارے پاس ایک کتاب ہے۔ (مؤنث مخاطب)"
+      },
+      "options": [
+        {
+          "ar": "لَكِ",
+          "ar_plain": "لك",
+          "translit": "—",
+          "en": "لَكِ",
+          "ur": "لَكِ"
+        },
+        {
+          "ar": "لَكَ",
+          "ar_plain": "لك",
+          "translit": "—",
+          "en": "لَكَ",
+          "ur": "لَكَ"
+        },
+        {
+          "ar": "لَهَا",
+          "ar_plain": "لها",
+          "translit": "—",
+          "en": "لَهَا",
+          "ur": "لَهَا"
+        },
+        {
+          "ar": "لَكُمْ",
+          "ar_plain": "لكم",
+          "translit": "—",
+          "en": "لَكُمْ",
+          "ur": "لَكُمْ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لَكِ",
+        "ar_plain": "لك",
+        "translit": "—",
+        "en": "لَكِ",
+        "ur": "لَكِ"
+      },
+      "explanation_on_wrong": {
+        "en": "One female addressed → لَكِ.",
+        "ur": "ایک مؤنث مخاطب → لَكِ۔"
+      }
+    },
+    {
+      "id": "ch05-l05-ex08",
+      "type": "MATCHING",
+      "xp_value": 1,
+      "left_column": [
+        {
+          "ar": "لِي",
+          "ar_plain": "لي",
+          "translit": "lī",
+          "en": "me — I have",
+          "ur": "میں — میرے پاس"
+        },
+        {
+          "ar": "لَكَ",
+          "ar_plain": "لك",
+          "translit": "laka",
+          "en": "you (male)",
+          "ur": "تم (مذکر مخاطب)"
+        },
+        {
+          "ar": "لَكِ",
+          "ar_plain": "لك",
+          "translit": "laki",
+          "en": "you (female)",
+          "ur": "تم (مؤنث مخاطب)"
+        },
+        {
+          "ar": "لَهُ",
+          "ar_plain": "له",
+          "translit": "lahu",
+          "en": "him — he has",
+          "ur": "وہ (مذکر) — اس کے پاس"
+        },
+        {
+          "ar": "لَهَا",
+          "ar_plain": "لها",
+          "translit": "lahā",
+          "en": "her — she has",
+          "ur": "وہ (مؤنث) — اس کے پاس"
+        },
+        {
+          "ar": "لَكُمْ",
+          "ar_plain": "لكم",
+          "translit": "lakum",
+          "en": "you all",
+          "ur": "تم سب"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "you (female)",
+          "ur": "تم (مؤنث مخاطب)"
+        },
+        {
+          "en": "her — she has",
+          "ur": "وہ (مؤنث) — اس کے پاس"
+        },
+        {
+          "en": "me — I have",
+          "ur": "میں — میرے پاس"
+        },
+        {
+          "en": "you all",
+          "ur": "تم سب"
+        },
+        {
+          "en": "you (male)",
+          "ur": "تم (مذکر مخاطب)"
+        },
+        {
+          "en": "him — he has",
+          "ur": "وہ (مذکر) — اس کے پاس"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    {
+      "id": "ch05-l05-ex09",
+      "type": "GRAMMAR_PARSE",
+      "xp_value": 1,
+      "sentence_ar": "ذَهَبَ الطَّالِبُ",
+      "words": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "گیا"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        }
+      ],
+      "available_roles": [
+        "VERB",
+        "SUBJECT"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT"
+      ],
+      "explanation_on_wrong": {
+        "en": "Roles: ذَهَبَ = VERB; الطَّالِبُ = SUBJECT (the doer).",
+        "ur": "ذَهَبَ = فعل؛ الطَّالِبُ = فاعل۔"
+      }
+    },
+    {
+      "id": "ch05-l05-ex10",
+      "type": "FILL_BLANK",
+      "xp_value": 1,
+      "mode": "TAP",
+      "sentence_ar": "ذَهَبَ الْوَلَدُ ___ الْمَدْرَسَةِ",
+      "hint": {
+        "en": "The boy went to the school.",
+        "ur": "لڑکا مدرسے کی طرف گیا۔"
+      },
+      "options": [
+        {
+          "ar": "إِلَى",
+          "ar_plain": "إلى",
+          "translit": "—",
+          "en": "إِلَى",
+          "ur": "إِلَى"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "—",
+          "en": "فِي",
+          "ur": "فِي"
+        },
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "—",
+          "en": "مِنْ",
+          "ur": "مِنْ"
+        },
+        {
+          "ar": "عَلَى",
+          "ar_plain": "على",
+          "translit": "—",
+          "en": "عَلَى",
+          "ur": "عَلَى"
+        }
+      ],
+      "correct_answer": {
+        "ar": "إِلَى",
+        "ar_plain": "إلى",
+        "translit": "—",
+        "en": "إِلَى",
+        "ur": "إِلَى"
+      },
+      "explanation_on_wrong": {
+        "en": "The word إِلَى introduces the destination.",
+        "ur": "إِلَى منزل کو متعارف کراتا ہے۔"
+      }
+    },
+    {
+      "id": "ch05-l05-ex11",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Build: 'The man went to the mosque.'",
+        "ur": "جملہ بنائیں: 'آدمی مسجد کی طرف گیا۔'"
+      },
+      "tiles": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "—",
+          "en": "ذَهَبَ",
+          "ur": "ذَهَبَ"
+        },
+        {
+          "ar": "الرَّجُلُ",
+          "ar_plain": "الرجل",
+          "translit": "—",
+          "en": "الرَّجُلُ",
+          "ur": "الرَّجُلُ"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "إلى",
+          "translit": "—",
+          "en": "إِلَى",
+          "ur": "إِلَى"
+        },
+        {
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "—",
+          "en": "الْمَسْجِدِ",
+          "ur": "الْمَسْجِدِ"
+        },
+        {
+          "ar": "الْوَلَدُ",
+          "ar_plain": "الولد",
+          "translit": "—",
+          "en": "الْوَلَدُ",
+          "ur": "الْوَلَدُ"
+        },
+        {
+          "ar": "الْبَيْتِ",
+          "ar_plain": "البيت",
+          "translit": "—",
+          "en": "الْبَيْتِ",
+          "ur": "الْبَيْتِ"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation_on_wrong": {
+        "en": "The sentence ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ — action, doer, إِلَى destination.",
+        "ur": "ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ — عمل، فاعل، إِلَى منزل۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "R1 — Chapters 1–5 Consolidation",
+      "ar": "المُرَاجَعَةُ الأُولَى",
+      "ur": "R1 — ابواب 1 تا 5 کی مضبوطی"
+    },
+    "ayah": {
+      "surah": 7,
+      "ayah": 73,
+      "label": "Al-A'raf 7:73",
+      "ar": "هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً",
+      "en": "This is the she-camel of Allah, as a sign for you.",
+      "ur": "یہ اللہ کی اونٹنی ہے، تمہارے لیے نشانی۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/007073.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "highlighted_words": [
+      "هَٰذِهِ",
+      "نَاقَةُ",
+      "اللَّهِ",
+      "لَكُمْ",
+      "آيَةً"
+    ],
+    "noor_explanation": {
+      "en": "Look how much grammar is inside one short phrase:\n\nهَٰذِهِ — this, near feminine pointer\nنَاقَةُ اللَّهِ — Idafa: the she-camel of Allah\nلَكُمْ — for you all\nآيَةً — a sign\n\nEarlier this phrase may have felt like recitation; now you can see its structure.",
+      "ur": "دیکھیں ایک چھوٹی سی ترکیب میں کتنی گرامر ہے:\n\nهَٰذِهِ — یہ، قریب مؤنث اشارہ\nنَاقَةُ اللَّهِ — اضافت: اللہ کی اونٹنی\nلَكُمْ — تم سب کے لیے\nآيَةً — نشانی\n\nپہلے یہ ترکیب شاید محض تلاوت لگتی تھی؛ اب آپ اس کی ساخت دیکھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "R1 complete. You have connected pointing words, gender, descriptions, Idafa, possession, and your first action sentence.",
+      "ur": "R1 مکمل۔ آپ نے اشارے، جنس، توصیف، اضافت، ملکیت اور اپنا پہلا فعلی جملہ آپس میں جوڑ لیا۔"
+    }
+  }
+}
