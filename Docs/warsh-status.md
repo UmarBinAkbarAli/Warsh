@@ -303,9 +303,13 @@ Everything below this list is either done and verified, or one of these:
    or bitmap data for Warsh; the local profile of the optimized build is far
    under every threshold - see P0 #11. Re-read Android vitals after 1.0.11 has
    been in the field a month.
-6. To discuss with the owner (carried, not yet decided):
-   - Play's edge-to-edge recommendation (library-level; cannot clear at app
-     level while React Native / AndroidX support Android < 15).
+6. Discussion items — all three settled with the owner on 2026-09-16:
+   - ~~Play's edge-to-edge recommendation~~ — accepted as permanent noise.
+     The inset defects were fixed in 1.0.10 and verified on the Tecno; the
+     remaining Play warning names APIs called only inside React Native,
+     react-native-screens, Expo and AndroidX (see P0 #6), which cannot be
+     cleared at app level while those libraries support Android < 15. No
+     deadline, does not block releases. Revisit only if Play attaches one.
    - ~~Refunded *subscriptions* keep entitlement until the next lazy refresh~~
      — settled 2026-09-16, no code change. The device caches no entitlement:
      every gated route checks the row per request and the Learn tab re-reads
