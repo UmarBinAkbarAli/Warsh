@@ -243,8 +243,23 @@ Get-Content ..\.env.release | Where-Object { $_ -match "^(EXPO_PUBLIC_[A-Z_]+)=(
   ForEach-Object { Set-Item -Path "env:$($Matches[1])" -Value $Matches[2] }
 $env:SENTRY_DISABLE_AUTO_UPLOAD = "true"
 $env:SENTRY_DISABLE_NATIVE_DEBUG_UPLOAD = "true"
-.\gradlew bundleRelease --console=plain   # or assembleRelease for an APK
+# R8 runs on every release build (gradle.properties). The Sentry Android Gradle
+# plugin uploads the mapping only when this org token is present; it lives in
+# the build machine's user environment, never in the repo or .env files.
+$env:SENTRY_AUTH_TOKEN = [Environment]::GetEnvironmentVariable('SENTRY_AUTH_TOKEN', 'User')
+.\gradlew bundleRelease --console=plain   # then assembleRelease for the APK —
+                                          # separate invocations; one Gradle run
+                                          # doing both exhausted the JVM metaspace
 ```
+
+R8 keep rules live in `warsh-app/android/app/proguard-rules.pro`. Expo's Kotlin
+runtime (`expo.modules.**`) must stay unminified: it builds records through
+kotlin-reflect, and the first optimised build drew no illustrations. Any new
+native module that is reached by reflection or JNI needs a rule there, and the
+release APK must be walked through the regression matrix in
+`Docs/proposals/android-quality-2027-implementation-plan.md` §A3 before upload.
+`verify:release-api-url` fails a bundle whose R8 mapping or Sentry ProGuard UUID
+is missing.
 
 Release signing additionally requires `WARSH_UPLOAD_STORE_PASSWORD`,
 `WARSH_UPLOAD_KEY_PASSWORD`, and `WARSH_UPLOAD_KEY_ALIAS` in the environment.

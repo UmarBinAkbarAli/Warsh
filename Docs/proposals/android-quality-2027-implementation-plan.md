@@ -1,6 +1,10 @@
 # Android Quality 2027 Implementation Plan
 
-**Status:** Proposed implementation plan  
+**Status:** Proposed implementation plan — Workstreams A (R8) and C (Restore
+Credentials) implemented 2026-09-16 and shipped in the 1.0.11 (35) build;
+Workstream B has its local baseline and awaits Play data; D1 accepted as a
+library-level recommendation, D2 decided (portrait stays). Current evidence
+lives in `Docs/warsh-status.md` (P0 #9–#11).  
 **Created:** 2026-08-28  
 **Scope:** Google Play memory, DEX optimization, and Zero-Tap Sign-In requirements announced on 2026-08-26, plus the two related recommendations currently shown for Warsh release `30 (1.0.7)`  
 **Current production package:** `com.warsh.app`

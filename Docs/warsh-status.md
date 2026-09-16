@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-09-14
+**Last verified:** 2026-09-16
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
@@ -60,6 +60,20 @@ files remain release evidence.
   "Reminders" channel is **not** in this build (committed after the bundle was
   cut) and ships with 1.0.11. Still to check on the Tecno: the Speak mic
   re-prompt after Android revokes `RECORD_AUDIO`.
+- **Version 1.0.11 (versionCode 35) is built, gated and smoke-tested; the
+  Play upload is the one step still waiting (2026-09-16).** It is the first
+  release built with R8 (Play's "DEX code optimization" requirement) and the
+  first with Android Restore Credentials (Zero-Tap Sign-In); it also carries
+  the named `Reminders` notification channel and stops filing a dismissed
+  Google account sheet as a Sentry issue. The backend for it
+  (`/api/auth/restore/*`, the `RestoreCredential` migration) is already live in
+  production and `app.warsh.app` is redeployed. Artifacts:
+  `warsh-app/android/app/build/outputs/bundle/release/app-release.aab` (43.7 MB)
+  and the matching APK; `verify:release-api-url` (now also asserting the R8
+  mapping and the Sentry ProGuard UUID `ac0d0ac6-…`), `verify:play-signing`,
+  the 16 KB check, backend build/validators and `content:check` all pass.
+  Once uploaded, read the bundle's optimization/obfuscation/shrinking
+  percentages on the Play release page (all three must be >= 25 %).
 - Submitted to Production on 2026-09-15 at a 100% rollout (`4f9eaf2`). It carries every
   app change since 1.0.9: the Sentry DSN and Mixpanel token baked into the release
   bundle (`verify:release-api-url` confirmed both in the AAB and the APK), the mic
@@ -260,6 +274,35 @@ files remain release evidence.
   Android builds
 
 ## Active priority queue
+
+### Open items (2026-09-16)
+
+Everything below this list is either done and verified, or one of these:
+
+1. **Upload 1.0.11 (35) to Play Production** and record the bundle's three
+   optimization percentages (owner action or explicit go-ahead; the artifact is
+   gated and ready).
+2. **Curriculum rebuild, Chapters 6 onward** (owner, in Studio); Chapter 5's six
+   composite-scene illustrations; the "whose is this?" note at the end of the
+   Chapter 5 proposal.
+3. **On the Tecno KF8, once 1.0.11 is installed from Play:** the `Reminders`
+   channel appears under App notifications, and Speak re-prompts after Android
+   revokes the mic (both verified on the emulator, below).
+4. **Restore Credentials on real hardware:** a cloud-backed key (the emulator
+   has no end-to-end-encrypted backup, so only the device-only fallback ran) and
+   a real device-to-device transfer - see P0 #10.
+5. **Memory thresholds (Workstream B):** Play Console still shows no memory
+   or bitmap data for Warsh; the local profile of the optimized build is far
+   under every threshold - see P0 #11. Re-read Android vitals after 1.0.11 has
+   been in the field a month.
+6. To discuss with the owner (carried, not yet decided):
+   - Play's edge-to-edge recommendation (library-level; cannot clear at app
+     level while React Native / AndroidX support Android < 15).
+   - Refunded *subscriptions* keep entitlement until the next lazy refresh
+     (RTDN plus the daily reconcile close the window; nothing forces an
+     immediate refresh on the device).
+   - Noor rate limits rely on database message counting - fine at current
+     scale, unmeasured under load.
 
 ### P0 — required verification and open gaps
 
@@ -525,7 +568,12 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    the Tecno the same evening, where the Play-installed 1.0.10 still registers
    only the `Miscellaneous` fallback channel while both alarms (09:00, 20:00)
    are scheduled. Ships with 1.0.11; verify the `Reminders` channel on the Tecno
-   then (`expo-device` skips the whole path on the emulator). Sharing: the system chooser opened with the rendered stats
+   then (`expo-device` skips the whole path on the emulator). **Mic re-prompt
+   verified on the emulator 2026-09-16** (debug build against staging, SP1
+   `ch03-l05`): with `RECORD_AUDIO` granted, Speak records; after
+   `pm revoke`, reopening the lesson and tapping Speak shows the "Speaking
+   practice - Enable microphone" sheet, then the system prompt, then recording
+   resumes - the phrase is never skipped. Sharing: the system chooser opened with the rendered stats
    card previewed (the FileProvider URI resolves from another process); not sent
    to any contact.
 6. **Android 15 edge-to-edge: Play warning traced to dependencies; three real
@@ -674,6 +722,86 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    token Google attributes to a different obfuscated account id is refused with
    `403 purchase_account_mismatch` (unit-tested for both product types). The pack
    route has no unverified opt-in and fails closed (503) without a service key.
+
+9. **R8 release optimisation shipped in the 1.0.11 build (Workstream A,
+   2026-09-16).** `android.enableProguardInReleaseBuilds=true` +
+   `enableShrinkResourcesInReleaseBuilds=true` with
+   `proguard-android-optimize.txt`. Keep rules (`app/proguard-rules.pro`) are
+   limited to what broke or cannot be traced: the whole Expo Kotlin runtime
+   (`expo.modules.**` - records are built through kotlin-reflect, and the
+   first R8 build rendered every expo-image prop as "Cannot create a record of
+   the type 'expo.modules.image.records.ImageTransition?'", so no illustration
+   drew), Nitro core (`com.margelo.nitro.**`, JNI-instantiated), Sentry and
+   `com.warsh.app.**`; everything else relies on the libraries' consumer rules
+   (React Native, Hermes, expo-image/Glide, react-native-iap,
+   nitro-google-signin, Play Core, kotlin-reflect). Gradle needed
+   `-Xmx4096m -XX:MaxMetaspaceSize=1024m` (R8 + lint-vital exhausted 512 m).
+   The Sentry Android Gradle plugin (5.8.0, auto-installation off) uploads the
+   mapping to `warsh-mobile`; it needs `SENTRY_AUTH_TOKEN` in the shell (an
+   org token created 2026-09-16, stored as a user environment variable on the
+   build machine, never in Git), and `verify:release-api-url` now fails any
+   bundle without the R8 mapping in `BUNDLE-METADATA/` or without the ProGuard
+   UUID in `assets/sentry-debug-meta.properties`. Regression matrix on the
+   optimized APK against production (emulator, 2026-09-16): cold/warm launch,
+   password login, Google account sheet (Nitro), lesson with illustrations and
+   ayah/word audio, exercises, Vocabulary, Noor reply + milestone, Settings,
+   subscription screen with live Play prices (react-native-iap), sign-out - no
+   `ClassNotFound`/`NoSuchMethod`, no Expo record errors. `start-warsh.ps1` now
+   rebuilds when `build.gradle`, `proguard-rules.pro` or `gradle.properties`
+   change. Play's percentages are read after upload (open item #1).
+10. **Restore Credentials / Zero-Tap Sign-In implemented (Workstream C,
+   2026-09-16; Play enforcement April 2027).** Design: a restore key is a FIDO2
+   credential the device creates silently after sign-in; Google Backup or a
+   device-to-device transfer carries it to the next phone, where the app signs
+   the server's challenge on the splash, before routing, and receives an
+   ordinary Warsh JWT - nothing about the token is backed up (it stays in
+   SecureStore, which does not transfer). Backend: `RestoreCredential` (one row
+   per device, `revokedAt` kept for audit) and `RestoreChallenge` (one-time,
+   5-minute) tables; `lib/restoreCredential.ts` on `@simplewebauthn/server`
+   with rpId `warsh.app` and the calling app as origin
+   (`android:apk-key-hash:` of the Play app-signing, upload and debug
+   certificates - no Digital Asset Links needed for restore keys);
+   `POST /api/auth/restore/register/options` + `/register` (authenticated),
+   `POST /api/auth/restore/options` + `/verify` (unauthenticated, rate-limited
+   20/10 per minute), `DELETE /api/auth/restore` (sign-out revocation);
+   password change and reset revoke every device's key alongside the JWTs;
+   account deletion cascades. Unit tests (`tests/restore-credential.test.ts`, a
+   software ES256 authenticator): success, challenge replay, expiry, wrong
+   purpose/user, unknown key, revoked key, deleted account, wrong challenge,
+   unknown signing certificate, cloned-key counter replay, cross-account claim.
+   Android: `RestoreCredentialsModule.kt` over Credential Manager 1.6.0
+   (cloud key first, documented `E2eeUnavailableException` fallback to a
+   device-only key, `NoCredentialException` -> "none");
+   `services/restoreCredentials.ts` registers once per device from the app
+   layout, attempts the silent restore from `app/index.tsx` with an 8 s cap,
+   and `clearSession` revokes server-side then clears the local key (every
+   sign-out path - You tab, Settings delete, age-check, dead session - goes
+   through it). Verified on staging (debug build, emulator): sign in -> key
+   registered (device-only, the AVD has no E2EE backup); wipe SecureStore +
+   AsyncStorage, relaunch -> signed in silently on the Learn tab
+   (`/api/auth/restore/verify 200`); sign out -> `DELETE` revokes, Block Store
+   cleared, next launch stays on onboarding. On production the release APK
+   registered a key for the QA account and the account's deletion cascaded it.
+   Migration applied to staging and production (`20260916120000`). Still owner
+   hardware only: a cloud-backed key and a real device transfer (open item #4).
+   Digital Asset Links, a BackupAgent tier and any new screen were not needed
+   (silent flow, existing login as fallback), so the Pen gate was not triggered.
+11. **Memory thresholds (Workstream B) - local baseline taken, Play data still
+   absent (2026-09-16).** Play Console -> Android vitals -> Memory shows "-" for
+   anonymous RSS + swap and bitmap P50/P90 (install base too small), so the
+   official status stays unverified per the plan. Local profile of the 1.0.11
+   optimized APK against production on the API 34 AVD (`/proc/<pid>/status`
+   RssAnon + VmSwap, `dumpsys meminfo`): cold launch signed out 106 MB; Learn
+   tab 119; Vocabulary 134 (115 after scrolling the list); Noor with a reply
+   124; subscription and plans screens 129-130; backgrounded 126; cached after
+   `am kill-all` 125. Java heap never exceeded 24 MB and native heap 50 MB, so
+   bitmap memory is trivially under 200 MB. Google's thresholds are 2 GB
+   foreground / 1 GB background on the 4 GB tier and 200 MB / 400 MB for
+   bitmaps in background / cached - Warsh sits at roughly 6 % of them. A
+   `Warsh_API_34_4GB` AVD (Pixel 7, 4096 MB, Play Store image) was created for
+   repeat runs. Large-screen (D2): the owner's decision to keep portrait locked
+   stands and is recorded as final; Play's "remove resizability and orientation
+   restrictions" line remains a recommendation with no deadline.
 
 ### P1 — content quality and launch polish
 
