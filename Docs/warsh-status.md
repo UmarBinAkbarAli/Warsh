@@ -60,8 +60,9 @@ files remain release evidence.
   "Reminders" channel is **not** in this build (committed after the bundle was
   cut) and ships with 1.0.11. Still to check on the Tecno: the Speak mic
   re-prompt after Android revokes `RECORD_AUDIO`.
-- **Version 1.0.11 (versionCode 35) is built, gated and smoke-tested; the
-  Play upload is the one step still waiting (2026-09-16).** It is the first
+- **Version 1.0.11 (versionCode 35) is uploaded to Production and in Google's
+  review (submitted 2026-09-16 14:53 UTC, full rollout, all 177 countries; no
+  device-support change: 12,454 phones, 6,657 tablets, 0 dropped).** It is the first
   release built with R8 (Play's "DEX code optimization" requirement) and the
   first with Android Restore Credentials (Zero-Tap Sign-In); it also carries
   the named `Reminders` notification channel and stops filing a dismissed
@@ -72,8 +73,15 @@ files remain release evidence.
   and the matching APK; `verify:release-api-url` (now also asserting the R8
   mapping and the Sentry ProGuard UUID `ac0d0ac6-…`), `verify:play-signing`,
   the 16 KB check, backend build/validators and `content:check` all pass.
-  Once uploaded, read the bundle's optimization/obfuscation/shrinking
-  percentages on the Play release page (all three must be >= 25 %).
+  Play's App bundle explorer for 35: App optimization **Medium**, Obfuscation
+  **75 %** (was 1 % on 34), total uncompressed DEX **10.6 MB** (was 34.7 MB), R8
+  "Full Mode" with resource shrinking, "ReTrace mapping file" attached.
+  Optimization and Shrinking percentages still read "–" an hour after upload;
+  the bundle does embed `BUNDLE-METADATA/com.android.tools/r8.json` (AGP
+  8.11.0) whose own stats are 58.4 % obfuscated / 58.0 % optimized / 58.2 %
+  shrunk, all above the 25 % floor, and Play's panel suggests "Upgrade to AGP
+  version 9.0" and "Repackage Classes" as the next steps. Re-read the panel
+  after review; if the two dashes persist, the AGP 9 upgrade is the fix.
 - Submitted to Production on 2026-09-15 at a 100% rollout (`4f9eaf2`). It carries every
   app change since 1.0.9: the Sentry DSN and Mixpanel token baked into the release
   bundle (`verify:release-api-url` confirmed both in the AAB and the APK), the mic
@@ -279,9 +287,9 @@ files remain release evidence.
 
 Everything below this list is either done and verified, or one of these:
 
-1. **Upload 1.0.11 (35) to Play Production** and record the bundle's three
-   optimization percentages (owner action or explicit go-ahead; the artifact is
-   gated and ready).
+1. **1.0.11 (35) is in Play review.** After it publishes: re-read the bundle's
+   Optimization / Shrinking percentages (Obfuscation is already 75 %); if they
+   still show "–", plan the AGP 9 upgrade Play recommends.
 2. **Curriculum rebuild, Chapters 6 onward** (owner, in Studio); Chapter 5's six
    composite-scene illustrations; the "whose is this?" note at the end of the
    Chapter 5 proposal.
@@ -748,7 +756,8 @@ remaining checkboxes were either achieved, superseded, or reduced to the list be
    subscription screen with live Play prices (react-native-iap), sign-out - no
    `ClassNotFound`/`NoSuchMethod`, no Expo record errors. `start-warsh.ps1` now
    rebuilds when `build.gradle`, `proguard-rules.pro` or `gradle.properties`
-   change. Play's percentages are read after upload (open item #1).
+   change. Play's report for the uploaded bundle: Obfuscation 75 %, DEX 10.6 MB,
+   Optimization/Shrinking not yet computed (open item #1).
 10. **Restore Credentials / Zero-Tap Sign-In implemented (Workstream C,
    2026-09-16; Play enforcement April 2027).** Design: a restore key is a FIDO2
    credential the device creates silently after sign-in; Google Backup or a
