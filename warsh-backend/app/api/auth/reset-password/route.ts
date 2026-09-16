@@ -4,6 +4,7 @@ import bcrypt from "bcryptjs";
 import { prisma } from "../../../../lib/prisma";
 import { passwordTokenFingerprint, timingSafeStringEqual } from "../../../../lib/auth";
 import { hit, clientKey } from "../../../../lib/rateLimit";
+import { revokeAllCredentials } from "../../../../lib/restoreCredential";
 
 export async function POST(request: Request) {
   const rl = await hit(clientKey(request, "reset-password"), 10, 60_000);
@@ -62,6 +63,10 @@ export async function POST(request: Request) {
     where: { id: user.id },
     data: { passwordHash: newHash, hasPassword: true },
   });
+
+  // A reset is a security event: no device may silently restore this account
+  // until it signs in again and registers a fresh restore key.
+  await revokeAllCredentials(user.id);
 
   return NextResponse.json({ data: { success: true } });
 }

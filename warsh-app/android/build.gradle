@@ -18,6 +18,9 @@ buildscript {
         classpath('com.android.tools.build:gradle')
         classpath('com.facebook.react:react-native-gradle-plugin')
         classpath('org.jetbrains.kotlin:kotlin-gradle-plugin')
+    // Uploads the R8 mapping file to Sentry (warsh-mobile) so native stack
+    // traces from release builds deobfuscate. Configured in app/build.gradle.
+    classpath('io.sentry:sentry-android-gradle-plugin:5.8.0')
     }
 }
 

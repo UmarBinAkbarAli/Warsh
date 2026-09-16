@@ -4,6 +4,7 @@ import bcrypt from "bcryptjs";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest, signToken, passwordTokenFingerprint } from "../../../../lib/auth";
 import { sendPasswordChangedEmail } from "../../../../lib/email";
+import { revokeAllCredentials } from "../../../../lib/restoreCredential";
 
 export async function POST(request: Request) {
   const userId = await getUserIdFromRequest(request);
@@ -48,6 +49,9 @@ export async function POST(request: Request) {
   // fingerprint no longer matches). Issue a fresh token so the current device
   // stays signed in while all other sessions are logged out.
   const token = signToken(userId, { pwFingerprint: passwordTokenFingerprint(newHash) });
+  // Restore keys on every device are revoked with the sessions; the current
+  // device re-registers one on its next launch.
+  await revokeAllCredentials(userId);
 
   // Fire and forget — notify user their password was changed
   // See forgot-password: a floating promise is dropped when the function

@@ -2,6 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { STORAGE_KEYS, getToken, saveToken, deleteToken } from "@services/storage";
+import { forgetRestoreCredential } from "@services/restoreCredentials";
 
 export interface User {
   id: string;
@@ -34,7 +35,7 @@ interface AuthStore {
 
 export const useAuthStore = create<AuthStore>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       user: null,
       token: null,
       isHydrated: false,
@@ -48,6 +49,10 @@ export const useAuthStore = create<AuthStore>()(
         void saveToken(token);
       },
       clearSession: async () => {
+        // Revoke this device's Android restore key first, while the token
+        // still authenticates the call; otherwise a backup taken after
+        // sign-out could restore the session on another phone.
+        await forgetRestoreCredential(get().user?.id ?? null, get().token);
         set({ user: null, token: null });
         await deleteToken();
         await AsyncStorage.removeItem(STORAGE_KEYS.auth);

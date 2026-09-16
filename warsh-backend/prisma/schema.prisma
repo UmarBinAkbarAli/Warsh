@@ -49,6 +49,48 @@ model User {
     promoRedemptions   PromoRedemption[]
     storePurchases     StorePurchase[]
     coreSetProgress    UserCoreSetProgress[]
+    restoreCredentials RestoreCredential[]
+}
+
+// Android Restore Credentials (Credential Manager restore keys). A restore key
+// is a FIDO2 public-key credential the device creates silently after sign-in
+// and carries to a new device through Google Backup or device-to-device
+// transfer; on first launch there the app signs the server's challenge with it
+// and receives a normal Warsh session. It is separate from passwords and Google
+// identities, is never a user-visible passkey, and one row exists per device.
+// `revokedAt` (sign-out, password change, security reset) keeps the row for
+// audit while refusing any further assertion.
+model RestoreCredential {
+    id           String    @id @default(cuid())
+    userId       String
+    user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+    // WebAuthn credential id, base64url. Unique across users by construction.
+    credentialId String    @unique
+    // COSE public key, base64url.
+    publicKey    String
+    counter      BigInt    @default(0)
+    transports   String[]  @default([])
+    cloudBackup  Boolean   @default(true)
+    createdAt    DateTime  @default(now())
+    lastUsedAt   DateTime?
+    revokedAt    DateTime?
+
+    @@index([userId])
+}
+
+// One-time WebAuthn challenge for restore-key registration (userId set) or
+// assertion (userId null). Consumed on first use and expired after a few
+// minutes so a captured challenge cannot be replayed.
+model RestoreChallenge {
+    id        String    @id @default(cuid())
+    challenge String    @unique
+    purpose   String
+    userId    String?
+    expiresAt DateTime
+    usedAt    DateTime?
+    createdAt DateTime  @default(now())
+
+    @@index([expiresAt])
 }
 
 // Durable receipt ledger for one-time store purchases. Only a SHA-256 digest of

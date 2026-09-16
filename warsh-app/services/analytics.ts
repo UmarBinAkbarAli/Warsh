@@ -83,6 +83,17 @@ export function trackCommitmentSet(days: number, source: "checklist" | "celebrat
   track("commitment_set", { days, source });
 }
 
+// Android restore keys (Zero-Tap Sign-In). Created once per device after
+// sign-in; `restore_sign_in` fires when a new device signed in silently with
+// a key carried over by backup or device-to-device transfer.
+export function trackRestoreCredentialCreated(cloudBackup: boolean) {
+  track("restore_credential_created", { cloud_backup: cloudBackup });
+}
+
+export function trackRestoreSignIn() {
+  track("restore_sign_in");
+}
+
 export function trackSignupCompleted(props: { goal: string; level: string; placement: string; language: string }) {
   track("signup_completed", props);
   mp?.getPeople().setOnce({ signup_date: new Date().toISOString(), ...props });

@@ -4,49 +4,15 @@ import { Platform } from "react-native";
 import Constants from "expo-constants";
 import { getToken } from "./storage";
 import { useAuthStore } from "@stores/authStore";
+import { API_BASE_URL } from "./apiBaseUrl";
+
+export { API_BASE_URL };
 
 interface RetryableConfig extends InternalAxiosRequestConfig {
   _retried?: boolean;
 }
 
-type AppEnvironment = "development" | "staging" | "production";
-
-const APP_ENVIRONMENT: AppEnvironment = process.env.EXPO_PUBLIC_ENVIRONMENT ?? "production";
 const API_TIMEOUT_MS = 20000;
-
-function getApiBaseUrl() {
-  const rawApiUrl = process.env.EXPO_PUBLIC_API_URL?.trim();
-
-  if (!rawApiUrl) {
-    throw new Error(`EXPO_PUBLIC_API_URL must be set for ${APP_ENVIRONMENT} builds.`);
-  }
-
-  let parsedUrl: URL;
-  try {
-    parsedUrl = new URL(rawApiUrl);
-  } catch {
-    throw new Error("EXPO_PUBLIC_API_URL must be a valid absolute URL.");
-  }
-
-  const hostname = parsedUrl.hostname.toLowerCase();
-  const isLocalHost =
-    hostname === "localhost" ||
-    hostname === "127.0.0.1" ||
-    hostname === "10.0.2.2" ||
-    hostname.endsWith(".local");
-
-  if (APP_ENVIRONMENT !== "development" && parsedUrl.protocol !== "https:") {
-    throw new Error("EXPO_PUBLIC_API_URL must use HTTPS outside development.");
-  }
-
-  if (APP_ENVIRONMENT !== "development" && isLocalHost) {
-    throw new Error("EXPO_PUBLIC_API_URL cannot point to a local host outside development.");
-  }
-
-  return parsedUrl.toString().replace(/\/$/, "");
-}
-
-export const API_BASE_URL = getApiBaseUrl();
 export const WEB_BASE_URL = "https://warsh.app";
 
 const api = axios.create({

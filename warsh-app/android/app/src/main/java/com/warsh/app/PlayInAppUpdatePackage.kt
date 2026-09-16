@@ -8,7 +8,10 @@ import com.facebook.react.uimanager.ViewManager
 class PlayInAppUpdatePackage : ReactPackage {
   override fun createNativeModules(
     reactContext: ReactApplicationContext
-  ): List<NativeModule> = listOf(PlayInAppUpdateModule(reactContext))
+  ): List<NativeModule> = listOf(
+    PlayInAppUpdateModule(reactContext),
+    RestoreCredentialsModule(reactContext),
+  )
 
   override fun createViewManagers(
     reactContext: ReactApplicationContext

@@ -12,6 +12,7 @@ import {
 } from "@services/notifications";
 import { setSentryUser, clearSentryUser } from "@services/sentry";
 import { identifyUser, resetAnalytics, setAnalyticsSuppressed } from "@services/analytics";
+import { ensureRestoreCredential } from "@services/restoreCredentials";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import api from "@services/api";
 
@@ -98,6 +99,13 @@ export default function AppLayout() {
       resetAnalytics();
     }
   }, [token, user]);
+
+  // Android restore key for Zero-Tap Sign-In: registered once per device
+  // after sign-in (or on the first launch of a build that has it).
+  useEffect(() => {
+    if (!token || !user) return;
+    void ensureRestoreCredential(user.id, token);
+  }, [token, user?.id]);
 
   useEffect(() => {
     if (!token) return;

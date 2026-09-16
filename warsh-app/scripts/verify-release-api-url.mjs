@@ -160,6 +160,36 @@ if (!existsSync(releaseEnvPath)) {
   }
 }
 
+// R8 must have run (Play's DEX optimization requirement, enforced February
+// 2027) and Sentry must be able to deobfuscate what it produced. An AAB built
+// with R8 carries the mapping under BUNDLE-METADATA/ and the Sentry Gradle
+// plugin stamps the upload's UUID into sentry-debug-meta.properties; an APK
+// only carries the latter. Either missing means the build ran without
+// android.enableProguardInReleaseBuilds or without SENTRY_AUTH_TOKEN.
+const isBundle = archivePath.toLowerCase().endsWith(".aab");
+let mappingEntry = null;
+let sentryMetaEntry = null;
+try {
+  if (isBundle) {
+    mappingEntry = readZipEntry(archive, (name) =>
+      name.replace(/\\/g, "/").startsWith("BUNDLE-METADATA/com.android.tools.build.obfuscation/"),
+    );
+  }
+  sentryMetaEntry = readZipEntry(archive, (name) =>
+    name.replace(/\\/g, "/").endsWith("assets/sentry-debug-meta.properties"),
+  );
+} catch (error) {
+  failures.push(`could not inspect the archive for R8/Sentry metadata: ${error.message}`);
+}
+if (isBundle && !mappingEntry) {
+  failures.push("bundle carries no R8 mapping (BUNDLE-METADATA/com.android.tools.build.obfuscation): release was built unminified");
+}
+const sentryMeta = sentryMetaEntry ? sentryMetaEntry.data.toString("utf8") : "";
+const proguardUuid = sentryMeta.match(/io\.sentry\.ProguardUuids=([0-9a-f-]{36})/i)?.[1];
+if (!proguardUuid) {
+  failures.push("no Sentry ProGuard UUID in assets/sentry-debug-meta.properties: the mapping was not uploaded (SENTRY_AUTH_TOKEN missing when Gradle ran)");
+}
+
 if (failures.length > 0) {
   console.error("RELEASE API URL CHECK FAILED");
   console.error(`Archive: ${archivePath}`);
@@ -177,3 +207,4 @@ console.log("RELEASE API URL CHECK PASSED");
 console.log(`Archive: ${archivePath}`);
 console.log(`Entry:   ${entry.name}`);
 console.log(`API URL: ${EXPECTED_API_URL}`);
+console.log(`R8 mapping: ${isBundle ? mappingEntry.name : "(APK: not bundled)"}; Sentry ProGuard UUID ${proguardUuid}`);

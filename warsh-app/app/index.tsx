@@ -2,13 +2,19 @@ import { useEffect, useRef, useState } from "react";
 import { Animated, Platform, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useAuthStore } from "@stores/authStore";
+import { attemptRestoreSignIn } from "@services/restoreCredentials";
 import { Fonts, WarshPalette } from "../constants/theme";
 
 export default function Index() {
   const router = useRouter();
   const isHydrated = useAuthStore((s) => s.isHydrated);
   const token = useAuthStore((s) => s.token);
+  const setSession = useAuthStore((s) => s.setSession);
   const [readyToNavigate, setReadyToNavigate] = useState(false);
+  // Android Zero-Tap Sign-In: a device restored from backup or a phone
+  // transfer has the user's restore key but no token. Try it once, silently,
+  // before deciding where a signed-out launch goes.
+  const [restoreChecked, setRestoreChecked] = useState(false);
 
   // Animation values
   const latinOpacity = useRef(new Animated.Value(0)).current;
@@ -55,13 +61,32 @@ export default function Index() {
   // fiftieth (user decision 2026-08-16). The old `warsh_preview_seen` branch
   // that skipped straight to login is gone.
   useEffect(() => {
-    if (!isHydrated || !readyToNavigate) return;
+    if (!isHydrated || restoreChecked) return;
+    if (token) {
+      setRestoreChecked(true);
+      return;
+    }
+    let cancelled = false;
+    attemptRestoreSignIn()
+      .then((session) => {
+        if (session && !cancelled) setSession(session.user, session.token);
+      })
+      .finally(() => {
+        if (!cancelled) setRestoreChecked(true);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [isHydrated]);
+
+  useEffect(() => {
+    if (!isHydrated || !readyToNavigate || !restoreChecked) return;
     if (token) {
       router.replace("/(app)/(tabs)");
     } else {
       router.replace("/(auth)/auth-options");
     }
-  }, [isHydrated, token, readyToNavigate]);
+  }, [isHydrated, token, readyToNavigate, restoreChecked]);
 
   return (
     <View style={styles.container}>

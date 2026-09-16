@@ -140,6 +140,28 @@ def enableProguardInReleaseBuilds = (findProperty('android.enableProguardInRelea
 def jscFlavor = 'org.webkit:android-jsc:+'
 
 apply from: new File(["node", "--print", "require('path').dirname(require.resolve('@sentry/react-native/package.json'))"].execute().text.trim(), "sentry.gradle")
+apply plugin: "io.sentry.android.gradle"
+
+// R8 runs on release builds (gradle.properties), so Play and Sentry each need
+// the mapping file: Play gets it inside the AAB automatically, Sentry through
+// this plugin. The upload needs SENTRY_AUTH_TOKEN in the environment (an org
+// token, kept out of Git); without it the release still builds, with the
+// Sentry-side mapping missing, and the release gate flags the gap. The SDK
+// itself comes from @sentry/react-native, so auto-installation stays off.
+def sentryAuthToken = System.getenv('SENTRY_AUTH_TOKEN')
+sentry {
+    org = "umar-bin-akbar-ali"
+    projectName = "warsh-mobile"
+    authToken = sentryAuthToken
+    autoInstallation { enabled = false }
+    tracingInstrumentation { enabled = false }
+    includeProguardMapping = true
+    autoUploadProguardMapping = sentryAuthToken != null && !sentryAuthToken.isEmpty()
+    uploadNativeSymbols = false
+    includeSourceContext = false
+    ignoredBuildTypes = ["debug"]
+    telemetry = false
+}
 
 android {
     ndkVersion rootProject.ext.ndkVersion
@@ -152,8 +174,8 @@ android {
         applicationId 'com.warsh.app'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 34
-        versionName "1.0.10"
+        versionCode 35
+        versionName "1.0.11"
         ndk {
             // Filter dependency-provided prebuilts as well as app-compiled native code.
             abiFilters(*configuredReactNativeArchitectures)
@@ -181,7 +203,7 @@ android {
             signingConfig signingConfigs.release
             shrinkResources (findProperty('android.enableShrinkResourcesInReleaseBuilds')?.toBoolean() ?: false)
             minifyEnabled enableProguardInReleaseBuilds
-            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             crunchPngs (findProperty('android.enablePngCrunchInReleaseBuilds')?.toBoolean() ?: true)
         }
     }
@@ -219,6 +241,10 @@ dependencies {
     // eligible for a newer Closed-track build. Warsh exposes this read-only
     // availability check to React Native and presents its own update banner.
     implementation("com.google.android.play:app-update:2.1.0")
+    // Restore Credentials (Zero-Tap Sign-In). Same versions nitro-google-signin
+    // already pulls in, pinned here so the app module compiles on its own.
+    implementation("androidx.credentials:credentials:1.6.0")
+    implementation("androidx.credentials:credentials-play-services-auth:1.6.0")
 
     def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true";
     def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true";
