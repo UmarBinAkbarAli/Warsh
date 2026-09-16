@@ -11,8 +11,20 @@ import { refreshLapsedStoreSubscription } from "../../../lib/subscriptionRefresh
 import { resolveContentLanguage } from "../../../lib/language";
 import { resolveDailyMessageLimit } from "../../../lib/noorLimit";
 import { claimNoorPackCredit, refundNoorPackCredit } from "../../../lib/noorCredits";
+import { hit, clientKey } from "../../../lib/rateLimit";
 
 const DAILY_MESSAGE_LIMIT = resolveDailyMessageLimit();
+
+// Burst limits, separate from the daily quota. The quota bounds how many calls
+// one account can send to OpenAI per day; nothing bounded how FAST they arrive,
+// so a paid user with a credit pack, or a script minting throwaway accounts,
+// could saturate the OpenAI concurrency for everyone. The client awaits each
+// reply (several seconds), so a real user cannot exceed ~12/min sequentially.
+// The per-IP ceiling is deliberately loose: Pakistani carriers put many users
+// behind one CGNAT address, and it only needs to bound scripted sign-ups.
+const BURST_PER_USER = 15;
+const BURST_PER_IP = 60;
+const BURST_WINDOW_MS = 60_000;
 
 // A tutoring question is a few sentences. The daily quota bounds how MANY calls
 // reach OpenAI, but nothing bounded their SIZE — so one user could spend five
@@ -25,6 +37,21 @@ export async function POST(request: Request) {
   const userId = await getUserIdFromRequest(request);
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized", code: "unauthorized" }, { status: 401 });
+  }
+
+  // Checked before any DB or OpenAI work so a burst costs nothing. The code is
+  // `rate_limited`, not `too_many_requests`: the app shows the credit-pack
+  // modal for the daily quota, and a slowed-down user must not be sold credits.
+  const [userBurst, ipBurst] = await Promise.all([
+    hit(`chat:user:${userId}`, BURST_PER_USER, BURST_WINDOW_MS),
+    hit(clientKey(request, "chat:ip"), BURST_PER_IP, BURST_WINDOW_MS),
+  ]);
+  const burst = !userBurst.allowed ? userBurst : !ipBurst.allowed ? ipBurst : null;
+  if (burst) {
+    return NextResponse.json(
+      { error: "You're sending messages too quickly. Please wait a moment.", code: "rate_limited" },
+      { status: 429, headers: { "Retry-After": String(burst.retryAfterSeconds) } },
+    );
   }
 
   const parsed = chatSchema.safeParse(await request.json().catch(() => null));

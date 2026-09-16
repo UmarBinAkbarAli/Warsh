@@ -273,6 +273,9 @@ export default function ChatScreen() {
     } catch (err: any) {
       if (isSubscriptionRequiredError(err)) {
         router.replace(await subscriptionRequiredRoute());
+      } else if (err.response?.status === 429 && err.response?.data?.code === "rate_limited") {
+        // Burst limit, not the daily quota — don't offer to sell credits.
+        setError("You're sending messages too quickly. Wait a moment and try again.");
       } else if (err.response?.status === 429) {
         setShowOverageModal(true);
       } else {
