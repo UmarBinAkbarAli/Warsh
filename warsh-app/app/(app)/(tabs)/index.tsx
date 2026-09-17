@@ -53,6 +53,9 @@ import {
   type SubscriptionHealthState,
 } from "../../../constants/subscription";
 
+// Streak and freeze memory is per account, like the onboarding keys below:
+// a device-global "last streak" made a fresh account on the same phone open to
+// the "Your streak ended" modal after the previous account had a streak.
 const FREEZE_BANNER_KEY = "warsh_freeze_banner_shown";
 const LAST_STREAK_KEY = "warsh_last_streak";
 const STREAK_ENDED_SHOWN_KEY = "warsh_streak_ended_shown";
@@ -233,12 +236,12 @@ export default function HomeScreen() {
       ] = await Promise.all([
         api.get("/api/chapters"),
         api.get("/api/progress"),
-        AsyncStorage.getItem(FREEZE_BANNER_KEY),
+        AsyncStorage.getItem(`${FREEZE_BANNER_KEY}_${userId}`),
         api.get("/api/tadabbur").catch(() => null),
         api.get("/api/core500").catch(() => null),
         api.get("/api/vocabulary/word-of-day").catch(() => null),
-        AsyncStorage.getItem(LAST_STREAK_KEY),
-        AsyncStorage.getItem(STREAK_ENDED_SHOWN_KEY),
+        AsyncStorage.getItem(`${LAST_STREAK_KEY}_${userId}`),
+        AsyncStorage.getItem(`${STREAK_ENDED_SHOWN_KEY}_${userId}`),
         AsyncStorage.getItem(`warsh_daily_goal_toast_${today}`),
         userId ? AsyncStorage.getItem(`${ONBOARDING_CHECKLIST_DISMISSED_KEY}_${userId}`) : null,
         userId ? AsyncStorage.getItem(`${ONBOARDING_LANG_TOUCHED_KEY}_${userId}`) : null,
@@ -309,9 +312,9 @@ export default function HomeScreen() {
       const lastStreak = lastStreakRaw ? Number.parseInt(lastStreakRaw, 10) : null;
       if (streak === 0 && lastStreak !== null && lastStreak > 0 && streakEndedShownDate !== today) {
         setShowStreakEndedModal(true);
-        await AsyncStorage.setItem(STREAK_ENDED_SHOWN_KEY, today);
+        await AsyncStorage.setItem(`${STREAK_ENDED_SHOWN_KEY}_${userId}`, today);
       }
-      await AsyncStorage.setItem(LAST_STREAK_KEY, String(streak));
+      await AsyncStorage.setItem(`${LAST_STREAK_KEY}_${userId}`, String(streak));
 
       if (dailyGoalToastFlag) {
         await AsyncStorage.removeItem(`warsh_daily_goal_toast_${today}`);
@@ -407,7 +410,7 @@ export default function HomeScreen() {
 
   async function dismissFreezeBanner() {
     const today = new Date().toISOString().slice(0, 10);
-    await AsyncStorage.setItem(FREEZE_BANNER_KEY, today);
+    await AsyncStorage.setItem(`${FREEZE_BANNER_KEY}_${userId}`, today);
     setShowFreezeBanner(false);
   }
 

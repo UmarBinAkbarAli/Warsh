@@ -7,6 +7,9 @@ import { resolveRegistrationLanguages } from "../../../../lib/language";
 import { toAuthUser } from "../../../../lib/authUser";
 import { ageCheckError, evaluateSignupAge } from "../../../../lib/age";
 
+// Mirrors `enum Goal` in prisma/schema.prisma.
+const VALID_GOALS = ["QURAN", "TRAVEL", "STUDY", "GENERAL"];
+
 export async function POST(request: Request) {
   const rl = await hit(clientKey(request, "register"), 5, 60_000);
   if (!rl.allowed) {
@@ -49,6 +52,12 @@ export async function POST(request: Request) {
   });
   if (existing) {
     return NextResponse.json({ error: "Email already registered", code: "conflict" }, { status: 409 });
+  }
+
+  // `goal` is a Prisma enum: an unknown value used to reach the insert and
+  // surface as a bare 500 instead of a validation error.
+  if (goal !== undefined && goal !== null && !VALID_GOALS.includes(goal)) {
+    return NextResponse.json({ error: "Invalid goal", code: "bad_request" }, { status: 400 });
   }
 
   const passwordHash = await bcrypt.hash(password, 10);
