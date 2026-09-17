@@ -60,6 +60,24 @@ files remain release evidence.
   "Reminders" channel is **not** in this build (committed after the bundle was
   cut) and ships with 1.0.11. Still to check on the Tecno: the Speak mic
   re-prompt after Android revokes `RECORD_AUDIO`.
+- **Version 1.0.12 (versionCode 36) submitted to Production on 2026-09-17,
+  full rollout, all countries — "Changes in review" in Play Console.** A
+  JS-only release carrying the two app fixes queued since 1.0.11: streak /
+  freeze AsyncStorage keys scoped per account (`971b720`) and the Noor
+  burst-limit "too quickly" error copy (`068508b`). Gate: fixtures, Urdu
+  audit, `content:check`, backend build, app lint + tsc,
+  `verify:release-api-url` (AAB and APK: `https://api.warsh.app`, Sentry DSN
+  and Mixpanel token present, R8 mapping + Sentry ProGuard UUID `ac0d0ac6-…`,
+  identical to 1.0.11 because no native code changed) and
+  `verify:play-signing` all passed. Smoke-tested the matching APK on the
+  API 34 AVD against production with a throwaway account (deleted after):
+  login, Learn tab without the spurious streak modal, lesson intro with
+  ayah audio, Vocabulary with the word-of-day illustration rendering, Noor.
+  Play's device diff: 12,454 → 12,454, no device changes. Release notes
+  (en-US): streak reminders stay with your own account on a shared phone;
+  clearer message when Noor is asked too many questions at once; small
+  fixes. Check the Play review outcome and re-read the bundle explorer
+  before calling it live.
 - **Version 1.0.11 (versionCode 35) is live in Production (published by Google
   on 2026-09-16, the day of submission — Play Console: "App update published",
   bundle 35 Active, 18.4 MB new-install size, 5.26 MB update size).** Submitted
