@@ -716,7 +716,8 @@ forced by the runtime or the pipeline rather than by preference:
    existing approved discover assets are reused where the word matches exactly
    (`madrasa`, `shajara` — the Chapter 1 distant tree, `kitab`, `qalam`,
    `dhahaba`, `ila`, `masjid`, `bayt`). The six composite scenes remain owner
-   deliverables; cards without one render without an image.
+   deliverables, tracked card by card in `Docs/lesson-illustrations-needed.md`;
+   cards without one render without an image.
 6. **Chapter-wide vocabulary table** is carried by the lesson cards; no
    `VocabularyWord` rows were added or changed.
 7. **Rendering-safety rewording.** English strings that the player does not wrap
@@ -727,5 +728,5 @@ forced by the runtime or the pipeline rather than by preference:
 8. **Content note for the owner:** Lesson 3 card 8 says `لِمَنْ هَذَا؟` is
    "reserved for a later dedicated question lesson", but Chapter 3 lesson
    `ch03-l02` ("Whose? — لِمَنْ") already teaches it. Implemented as written;
-   flagging for the review pass.
+   flagged for the review pass — owner decision 2026-09-17: leave as is.
 
