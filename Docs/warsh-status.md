@@ -321,13 +321,15 @@ Everything below this list is either done and verified, or one of these:
    level meter - the phrase was never skipped. The throwaway was deleted
    (`DELETE /api/users/me` -> 200, its token 401 afterwards) and the app
    dropped cleanly to the login screen. The `Reminders` channel and both
-   reminder alarms were already confirmed on 2026-09-16. Two side
-   observations from the run, neither blocking: a brand-new account was
-   greeted with the "Your streak ended" modal on first Learn-tab load
-   (probably stale local streak state from the previous account on the same
-   device - check `clearSession` clears it); and `/api/auth/register` does
-   not validate `goal` against the `Goal` enum, so an invalid value 500s
-   instead of 400s.
+   reminder alarms were already confirmed on 2026-09-16. Two side findings
+   from the run, both fixed in `971b720` the same day: a brand-new account
+   was greeted with the "Your streak ended" modal on first Learn-tab load
+   because `warsh_last_streak` / `warsh_streak_ended_shown` /
+   `warsh_freeze_banner_shown` were device-global (now suffixed with the
+   user id like the onboarding keys; ships with the next Android build, live
+   on app.warsh.app); and `/api/auth/register` let an unknown `goal` reach
+   the Prisma enum insert and 500 (now 400 `bad_request`, verified on
+   production after deploy).
 4. **Restore Credentials on real hardware — cloud-backed key confirmed
    (2026-09-16):** the Tecno registered a production `RestoreCredential` at
    21:43 PKT (one minute after the Play install) with `cloudBackup: true`
