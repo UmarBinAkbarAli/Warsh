@@ -61,6 +61,8 @@ const ch06L01Content = require("./fixtures/chapter-06-lesson-01.json");
 const ch06L02Content = require("./fixtures/chapter-06-lesson-02.json");
 const ch06L03Content = require("./fixtures/chapter-06-lesson-03.json");
 const ch06L04Content = require("./fixtures/chapter-06-lesson-04.json");
+const ch06L05Content = require("./fixtures/chapter-06-lesson-05.json");        // ch06-l05, review
+const ch06TestContent = require("./fixtures/chapter-06-lesson-06-final-test.json"); // ch06-test, order 6
 const ch07L01Content = require("./fixtures/chapter-07-lesson-01.json");
 const ch07L02Content = require("./fixtures/chapter-07-lesson-02.json");
 const ch07L03Content = require("./fixtures/chapter-07-lesson-03.json");
@@ -768,11 +770,14 @@ async function main() {
     { id: "ch05-l05", chapterId: ch5Id, order: 7, title: "R1 Cumulative Review",                   titleAr: "المُرَاجَعَةُ الأُولَى",                  template: "REVIEW",   xpReward: ch05L05Content._meta?.xp_reward ?? 20, content: ch05L05Content },
     { id: "ch05-test", chapterId: ch5Id, order: 8, title: "Chapter 5 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الْخَامِسِ",        template: "REVIEW",   xpReward: ch05TestContent._meta?.xp_reward ?? 20, content: ch05TestContent },
 
-    // Chapter 6
-    { id: "ch06-l01", chapterId: ch6Id, order: 1, title: "Described Subject — الرَّجُلُ الْكَرِيمُ", titleAr: "المُبْتَدَأ المَوْصُوف",                   template: "STANDARD", xpReward: ch06L01Content._meta?.xp_reward ?? 10, content: ch06L01Content },
-    { id: "ch06-l02", chapterId: ch6Id, order: 2, title: "الَّذِي — Who, That, Which",              titleAr: "الَّذِي — اسْمٌ مَوْصُول",                 template: "STANDARD", xpReward: ch06L02Content._meta?.xp_reward ?? 10, content: ch06L02Content },
-    { id: "ch06-l03", chapterId: ch6Id, order: 3, title: "الَّذِي with Place Phrases",             titleAr: "الَّذِي مَعَ عِبَارَاتِ المَكَان",          template: "STANDARD", xpReward: ch06L03Content._meta?.xp_reward ?? 10, content: ch06L03Content },
-    { id: "ch06-l04", chapterId: ch6Id, order: 4, title: "الَّذِي in Al-A'la",                     titleAr: "الَّذِي فِي سُورَةِ الأَعْلَى",             template: "STANDARD", xpReward: ch06L04Content._meta?.xp_reward ?? 10, content: ch06L04Content },
+    // Chapter 6 — Docs/proposals/chapter-06-content-proposal.md. Titles that open
+    // with an Arabic word carry a leading LTR mark (‎) like Chapter 5.
+    { id: "ch06-l01", chapterId: ch6Id, order: 1, title: "A Described Subject",                     titleAr: "الْمَوْصُوفُ فَاعِلًا",                     template: "STANDARD", xpReward: ch06L01Content._meta?.xp_reward ?? 10, content: ch06L01Content },
+    { id: "ch06-l02", chapterId: ch6Id, order: 2, title: "‎الَّذِي — Who, That, Which",       titleAr: "الَّذِي — اسْمٌ مَوْصُول",                 template: "STANDARD", xpReward: ch06L02Content._meta?.xp_reward ?? 10, content: ch06L02Content },
+    { id: "ch06-l03", chapterId: ch6Id, order: 3, title: "‎الَّذِي with Place and Tool Phrases", titleAr: "الَّذِي مَعَ عِبَارَاتِ الْمَكَانِ وَالأَدَاة", template: "STANDARD", xpReward: ch06L03Content._meta?.xp_reward ?? 10, content: ch06L03Content },
+    { id: "ch06-l04", chapterId: ch6Id, order: 4, title: "‎الَّذِي in a Quranic Action Chain", titleAr: "الَّذِي فِي سِلْسِلَةِ أَفْعَالٍ قُرْآنِيَّة", template: "STANDARD", xpReward: ch06L04Content._meta?.xp_reward ?? 10, content: ch06L04Content },
+    { id: "ch06-l05", chapterId: ch6Id, order: 5, title: "Chapter 6 Review",                        titleAr: "مُرَاجَعَةُ الْفَصْلِ السَّادِس",           template: "REVIEW",   xpReward: ch06L05Content._meta?.xp_reward ?? 20, content: ch06L05Content },
+    { id: "ch06-test", chapterId: ch6Id, order: 6, title: "Chapter 6 Final Test",                   titleAr: "اخْتِبَارُ الْفَصْلِ السَّادِسِ",          template: "REVIEW",   xpReward: ch06TestContent._meta?.xp_reward ?? 20, content: ch06TestContent },
     // Chapter 7
     { id: "ch07-l01", chapterId: ch7Id, order: 1, title: "My — attached ي",                         titleAr: "كِتَابِي — يَاءُ المُتَكَلِّم",              template: "STANDARD", xpReward: ch07L01Content._meta?.xp_reward ?? 10, content: ch07L01Content },
     { id: "ch07-l02", chapterId: ch7Id, order: 2, title: "Your — attached كَ and كِ",               titleAr: "كِتَابُكَ — كَافُ الخِطَاب",                template: "STANDARD", xpReward: ch07L02Content._meta?.xp_reward ?? 10, content: ch07L02Content },

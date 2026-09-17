@@ -2,7 +2,8 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 6, Lesson 1 — Definite noun + definite adjective as a fuller sentence subject. Authored against warsh-content-schema.ts v1.0.",
+    "_note": "Chapter 6, display lesson 1 (ch06-l01) — definite noun + definite adjective as a described subject, followed by the known action ذَهَبَ. Quran hook: الصِّرَاطَ الْمُسْتَقِيمَ (1:6). الَّذِي is not introduced yet.",
+    "titleUr": "موصوف فاعل کے طور پر",
     "chapter_order": 6,
     "lesson_order": 1,
     "estimated_minutes": 9,
@@ -10,17 +11,17 @@
   },
   "hook": {
     "ayah": {
-      "surah": 87,
-      "ayah": 2,
-      "label": "Al-A'la 87:2",
-      "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
-      "en": "Who created and proportioned.",
-      "ur": "جس نے پیدا کیا، پھر درست بنایا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087002.mp3"
+      "surah": 1,
+      "ayah": 6,
+      "label": "Al-Fatiha 1:6",
+      "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "en": "Guide us to the straight path.",
+      "ur": "ہمیں سیدھے راستے کی ہدایت دے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001006.mp3"
     },
     "noor_intro": {
-      "en": "Before الَّذِي, we strengthen what Chapter 4 taught: a definite noun can carry a definite adjective, then the sentence can continue.",
-      "ur": "الَّذِي سے پہلے ہم باب 4 کی بات مضبوط کرتے ہیں: معرفہ اسم کے ساتھ معرفہ صفت آ سکتی ہے، پھر جملہ آگے چلتا ہے۔"
+      "en": "'Guide us to the straight path' — الصِّرَاطَ الْمُسْتَقِيمَ is a definite noun followed by a definite adjective, exactly the pattern you learned in Chapter 4. Today you will keep such a phrase in mind and connect it to a known action.",
+      "ur": "'ہمیں سیدھے راستے کی ہدایت دے' — الصِّرَاطَ الْمُسْتَقِيمَ ایک معرفہ اسم ہے جس کے بعد معرفہ صفت آئی ہے، بالکل وہی نمونہ جو آپ نے باب 4 میں سیکھا۔ آج آپ ایسی ترکیب کو ذہن میں رکھ کر ایک جانے پہچانے عمل سے جوڑیں گے۔"
     },
     "autoplay": true
   },
@@ -28,59 +29,172 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "A Described Subject",
-        "ar": "مُبْتَدَأ مَوْصُوف",
-        "ur": "صفت والا مبتدا"
+        "en": "Recall the described noun",
+        "ar": "الصِّرَاطَ الْمُسْتَقِيمَ",
+        "ur": "موصوف اسم یاد کریں"
       },
       "explanation": {
-        "en": "الرَّجُلُ الْكَرِيمُ ذَهَبَ\n\nالرَّجُلُ = the man\nالْكَرِيمُ = the generous\nذَهَبَ = went\n\nThe subject can be more than one word before the sentence completes.",
-        "ur": "الرَّجُلُ الْكَرِيمُ ذَهَبَ\n\nالرَّجُلُ = آدمی\nالْكَرِيمُ = سخی\nذَهَبَ = گیا\n\nجملہ مکمل ہونے سے پہلے مبتدا ایک سے زیادہ لفظوں پر مشتمل ہو سکتا ہے۔"
+        "en": "الصِّرَاطَ الْمُسْتَقِيمَ = the straight path. Both words are definite and masculine.",
+        "ur": "الصِّرَاطَ الْمُسْتَقِيمَ = سیدھا راستہ۔ دونوں لفظ معرفہ اور مذکر ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "الصِّرَاطَ الْمُسْتَقِيمَ",
+          "ar_plain": "الصراط المستقيم",
+          "translit": "aṣ-ṣirāṭa l-mustaqīma",
+          "en": "the straight path",
+          "ur": "سیدھا راستہ"
+        }
+      ],
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/sirat-mustaqim.webp"
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "الرَّجُلُ الْكَرِيمُ",
+        "ar_plain": "الرجل الكريم",
+        "translit": "ar-rajulu l-karīmu",
+        "en": "the generous man",
+        "ur": "سخی آدمی"
+      },
+      "explanation": {
+        "en": "A complete noun phrase: الرَّجُلُ الْكَرِيمُ = the generous man. الْكَرِيمُ describes الرَّجُلُ.",
+        "ur": "ایک مکمل اسمی ترکیب: الرَّجُلُ الْكَرِيمُ = سخی آدمی۔ الْكَرِيمُ، الرَّجُلُ کی صفت ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/rajul.webp",
+      "introduces_vocab": {
+        "ar_plain": "كريم"
       }
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "الرَّجُلُ الْكَرِيمُ ذَهَبَ",
-        "ar_plain": "الرجل الكريم ذهب",
-        "translit": "ar-rajulu al-karīmu dhahaba",
-        "en": "the generous man went",
-        "ur": "سخی آدمی گیا"
+        "ar": "الطَّالِبُ الْمُجْتَهِدُ",
+        "ar_plain": "الطالب المجتهد",
+        "translit": "aṭ-ṭālibu l-mujtahidu",
+        "en": "the hardworking student",
+        "ur": "محنتی طالب علم"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/arrajul-alkarim-dhahaba.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "الطَّالِبُ الْمُجْتَهِدُ ذَهَبَ",
-        "ar_plain": "الطالب المجتهد ذهب",
-        "translit": "aṭ-ṭālibu al-mujtahidu dhahaba",
-        "en": "the hardworking student went",
-        "ur": "محنتی طالب علم گیا"
+      "explanation": {
+        "en": "Another masculine description: الطَّالِبُ الْمُجْتَهِدُ = the hardworking student.",
+        "ur": "ایک اور مذکر توصیف: الطَّالِبُ الْمُجْتَهِدُ = محنتی طالب علم۔"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/attalib-almujtahid-dhahaba.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "الْوَلَدُ الصَّالِحُ ذَهَبَ",
-        "ar_plain": "الولد الصالح ذهب",
-        "translit": "al-waladu aṣ-ṣāliḥu dhahaba",
-        "en": "the righteous boy went",
-        "ur": "نیک لڑکا گیا"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/alwalad-assalih-dhahaba.mp3"
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Do not stop too early",
-        "ar": "لَا تَقِفْ مُبَكِّرًا",
-        "ur": "جلدی نہ رکیں"
-      },
-      "body": {
-        "en": "الرَّجُلُ الْكَرِيمُ is one described noun phrase. ذَهَبَ completes the idea.",
-        "ur": "الرَّجُلُ الْكَرِيمُ ایک صفت والی اسمی ترکیب ہے۔ ذَهَبَ بات مکمل کرتا ہے۔"
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/talib.webp",
+      "introduces_vocab": {
+        "ar_plain": "طالب"
       }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "ذَهَبَ الرَّجُلُ الْكَرِيمُ",
+        "ar_plain": "ذهب الرجل الكريم",
+        "translit": "dhahaba r-rajulu l-karīmu",
+        "en": "The generous man went.",
+        "ur": "سخی آدمی گیا۔"
+      },
+      "explanation": {
+        "en": "Add the known action: ذَهَبَ الرَّجُلُ الْكَرِيمُ = the generous man went.",
+        "ur": "جانا پہچانا عمل لگائیں: ذَهَبَ الرَّجُلُ الْكَرِيمُ = سخی آدمی گیا۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/dhahaba.webp"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Read the parts",
+        "ar": "ذَهَبَ | الرَّجُلُ الْكَرِيمُ",
+        "ur": "حصے پڑھیں"
+      },
+      "explanation": {
+        "en": "ذَهَبَ = went; الرَّجُلُ الْكَرِيمُ = the generous man.",
+        "ur": "ذَهَبَ = گیا؛ الرَّجُلُ الْكَرِيمُ = سخی آدمی۔"
+      },
+      "examples": [
+        {
+          "ar": "ذَهَبَ الرَّجُلُ الْكَرِيمُ",
+          "ar_plain": "ذهب الرجل الكريم",
+          "translit": "dhahaba r-rajulu l-karīmu",
+          "en": "The generous man went.",
+          "ur": "سخی آدمی گیا۔"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "ذَهَبَ الطَّالِبُ الْمُجْتَهِدُ",
+        "ar_plain": "ذهب الطالب المجتهد",
+        "translit": "dhahaba ṭ-ṭālibu l-mujtahidu",
+        "en": "The hardworking student went.",
+        "ur": "محنتی طالب علم گیا۔"
+      },
+      "explanation": {
+        "en": "A second action sentence: ذَهَبَ الطَّالِبُ الْمُجْتَهِدُ = the hardworking student went.",
+        "ur": "دوسرا عمل والا جملہ: ذَهَبَ الطَّالِبُ الْمُجْتَهِدُ = محنتی طالب علم گیا۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Agreement reminder",
+        "ar": "الطَّالِبُ الْمُجْتَهِدُ",
+        "ur": "مطابقت کی یاد دہانی"
+      },
+      "explanation": {
+        "en": "الطَّالِبُ and الْمُجْتَهِدُ are both masculine and definite. The adjective follows the noun.",
+        "ur": "الطَّالِبُ اور الْمُجْتَهِدُ دونوں مذکر اور معرفہ ہیں۔ صفت اسم کے بعد آتی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "الطَّالِبُ الْمُجْتَهِدُ",
+          "ar_plain": "الطالب المجتهد",
+          "translit": "aṭ-ṭālibu l-mujtahidu",
+          "en": "the hardworking student",
+          "ur": "محنتی طالب علم"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Do not stop at the adjective",
+        "ar": "الرَّجُلُ الْكَرِيمُ + ذَهَبَ",
+        "ur": "صفت پر نہ رکیں"
+      },
+      "explanation": {
+        "en": "A noun phrase can be part of a longer sentence. الرَّجُلُ الْكَرِيمُ identifies who; ذَهَبَ tells what happened.",
+        "ur": "اسمی ترکیب ایک لمبے جملے کا حصہ ہو سکتی ہے۔ الرَّجُلُ الْكَرِيمُ بتاتا ہے کون؛ ذَهَبَ بتاتا ہے کیا ہوا۔"
+      },
+      "examples": [
+        {
+          "ar": "ذَهَبَ الرَّجُلُ الْكَرِيمُ",
+          "ar_plain": "ذهب الرجل الكريم",
+          "translit": "dhahaba r-rajulu l-karīmu",
+          "en": "The generous man went.",
+          "ur": "سخی آدمی گیا۔"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Checkpoint",
+        "ur": "جانچ"
+      },
+      "explanation": {
+        "en": "First identify the noun and its adjective; then identify the action. الَّذِي is not required for this simple description.",
+        "ur": "پہلے اسم اور اس کی صفت پہچانیں؛ پھر عمل پہچانیں۔ اس سادہ توصیف کے لیے الَّذِي کی ضرورت نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "ذَهَبَ الطَّالِبُ الْمُجْتَهِدُ",
+          "ar_plain": "ذهب الطالب المجتهد",
+          "translit": "dhahaba ṭ-ṭālibu l-mujtahidu",
+          "en": "The hardworking student went.",
+          "ur": "محنتی طالب علم گیا۔"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -89,75 +203,90 @@
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
       "prompt": {
-        "ar": "الرَّجُلُ الْكَرِيمُ ذَهَبَ",
-        "ar_plain": "الرجل الكريم ذهب",
-        "translit": "ar-rajulu al-karīmu dhahaba",
-        "en": "the generous man went",
-        "ur": "سخی آدمی گیا"
+        "ar": "الصِّرَاطَ الْمُسْتَقِيمَ",
+        "ar_plain": "الصراط المستقيم",
+        "translit": "aṣ-ṣirāṭa l-mustaqīma",
+        "en": "the straight path",
+        "ur": "سیدھا راستہ"
       },
       "options": [
         {
-          "en": "the generous man went",
-          "ur": "سخی آدمی چلا گیا"
+          "en": "the straight path",
+          "ur": "سیدھا راستہ"
         },
         {
-          "en": "the man is generous",
-          "ur": "آدمی سخی ہے"
+          "en": "the generous man",
+          "ur": "سخی آدمی"
         },
         {
-          "en": "a generous man",
-          "ur": "ایک سخی آدمی"
+          "en": "a straight path",
+          "ur": "ایک سیدھا راستہ"
         },
         {
-          "en": "the teacher went",
-          "ur": "استاد چلا گیا"
+          "en": "the hardworking student",
+          "ur": "محنتی طالب علم"
         }
       ],
-      "correct_index": 0
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "الصِّرَاطَ الْمُسْتَقِيمَ = the straight path — both words are definite.",
+        "ur": "الصِّرَاطَ الْمُسْتَقِيمَ = سیدھا راستہ — دونوں لفظ معرفہ ہیں۔"
+      }
     },
     {
       "id": "ch06-l01-ex02",
       "type": "TAP_TRANSLATION",
       "xp_value": 1,
       "prompt": {
-        "ar": "الطَّالِبُ الْمُجْتَهِدُ ذَهَبَ",
-        "ar_plain": "الطالب المجتهد ذهب",
-        "translit": "aṭ-ṭālibu al-mujtahidu dhahaba",
-        "en": "the hardworking student went",
-        "ur": "محنتی طالب علم گیا"
+        "ar": "ذَهَبَ الرَّجُلُ الْكَرِيمُ",
+        "ar_plain": "ذهب الرجل الكريم",
+        "translit": "dhahaba r-rajulu l-karīmu",
+        "en": "The generous man went.",
+        "ur": "سخی آدمی گیا۔"
       },
       "options": [
         {
-          "en": "the hardworking student went",
-          "ur": "محنتی طالب علم چلا گیا۔"
+          "en": "The generous man went.",
+          "ur": "سخی آدمی گیا۔"
         },
         {
-          "en": "طَالِبٌ مُجْتَهِدٌ",
-          "ur": "طَالِبٌ مُجْتَهِدٌ"
+          "en": "The hardworking student went.",
+          "ur": "محنتی طالب علم گیا۔"
         },
         {
-          "en": "ذَهَبَ الْوَلَدُ",
-          "ur": "ذَهَبَ الْوَلَدُ"
+          "en": "The man is generous.",
+          "ur": "آدمی سخی ہے۔"
         },
         {
-          "en": "لِي كِتَابٌ",
-          "ur": "لِي كِتَابٌ"
+          "en": "The generous man read.",
+          "ur": "سخی آدمی نے پڑھا۔"
         }
       ],
-      "correct_index": 0
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "ذَهَبَ = went; الرَّجُلُ الْكَرِيمُ = the generous man.",
+        "ur": "ذَهَبَ = گیا؛ الرَّجُلُ الْكَرِيمُ = سخی آدمی۔"
+      }
     },
     {
-      "type": "TRUE_FALSE",
       "id": "ch06-l01-ex03",
-      "statement": {
-        "en": "In الرَّجُلُ الْكَرِيمُ ذَهَبَ, الْكَرِيمُ describes الرَّجُلُ.",
-        "ur": "الرَّجُلُ الْكَرِيمُ ذَهَبَ میں الْكَرِيمُ، الرَّجُلُ کی صفت ہے۔"
-      },
+      "type": "TRUE_FALSE",
       "xp_value": 1,
+      "statement": {
+        "en": "In الرَّجُلُ الْكَرِيمُ, the word الْكَرِيمُ describes الرَّجُلُ.",
+        "ur": "الرَّجُلُ الْكَرِيمُ میں لفظ الْكَرِيمُ، الرَّجُلُ کی صفت ہے۔",
+        "ar_example": {
+          "ar": "الرَّجُلُ الْكَرِيمُ",
+          "ar_plain": "الرجل الكريم",
+          "translit": "ar-rajulu l-karīmu",
+          "en": "the generous man",
+          "ur": "سخی آدمی"
+        }
+      },
       "correct_answer": true,
       "explanation_on_wrong": {
-        "en": "True — both are definite and masculine, so الْكَرِيمُ is the adjective.",
-        "ur": "درست — دونوں معرفہ اور مذکر ہیں، اس لیے الْكَرِيمُ صفت ہے۔"
+        "en": "True — both are definite and masculine, so الْكَرِيمُ is the adjective of الرَّجُلُ.",
+        "ur": "درست — دونوں معرفہ اور مذکر ہیں، اس لیے الْكَرِيمُ، الرَّجُلُ کی صفت ہے۔"
       }
     },
     {
@@ -165,47 +294,51 @@
       "type": "FILL_BLANK",
       "xp_value": 1,
       "mode": "TAP",
-      "sentence_ar": "الْوَلَدُ ___ ذَهَبَ",
+      "sentence_ar": "ذَهَبَ الطَّالِبُ ___",
       "hint": {
-        "en": "the righteous boy went",
-        "ur": "نیک لڑکا گیا"
+        "en": "The hardworking student went. Choose the adjective.",
+        "ur": "محنتی طالب علم گیا۔ صفت چنیں۔"
       },
       "options": [
         {
-          "ar": "الصَّالِحُ",
-          "ar_plain": "الصالح",
+          "ar": "الْمُجْتَهِدُ",
+          "ar_plain": "المجتهد",
           "translit": "—",
-          "en": "الصَّالِحُ",
-          "ur": "الصَّالِحُ"
+          "en": "الْمُجْتَهِدُ",
+          "ur": "الْمُجْتَهِدُ"
         },
         {
-          "ar": "صَالِحٌ",
-          "ar_plain": "صالح",
+          "ar": "الْكَرِيمُ",
+          "ar_plain": "الكريم",
           "translit": "—",
-          "en": "صَالِحٌ",
-          "ur": "صَالِحٌ"
+          "en": "الْكَرِيمُ",
+          "ur": "الْكَرِيمُ"
         },
         {
-          "ar": "صَالِحَةٌ",
-          "ar_plain": "صالحة",
+          "ar": "الْمُسْتَقِيمَ",
+          "ar_plain": "المستقيم",
           "translit": "—",
-          "en": "صَالِحَةٌ",
-          "ur": "صَالِحَةٌ"
+          "en": "الْمُسْتَقِيمَ",
+          "ur": "الْمُسْتَقِيمَ"
         },
         {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
+          "ar": "الرَّجُلُ",
+          "ar_plain": "الرجل",
           "translit": "—",
-          "en": "ذَهَبَ",
-          "ur": "ذَهَبَ"
+          "en": "الرَّجُلُ",
+          "ur": "الرَّجُلُ"
         }
       ],
       "correct_answer": {
-        "ar": "الصَّالِحُ",
-        "ar_plain": "الصالح",
+        "ar": "الْمُجْتَهِدُ",
+        "ar_plain": "المجتهد",
         "translit": "—",
-        "en": "الصَّالِحُ",
-        "ur": "الصَّالِحُ"
+        "en": "الْمُجْتَهِدُ",
+        "ur": "الْمُجْتَهِدُ"
+      },
+      "explanation_on_wrong": {
+        "en": "The adjective for 'hardworking' is الْمُجْتَهِدُ: ذَهَبَ الطَّالِبُ الْمُجْتَهِدُ.",
+        "ur": "'محنتی' کے لیے صفت الْمُجْتَهِدُ ہے: ذَهَبَ الطَّالِبُ الْمُجْتَهِدُ۔"
       }
     },
     {
@@ -214,39 +347,39 @@
       "xp_value": 1,
       "left_column": [
         {
-          "ar": "الرَّجُلُ الْكَرِيمُ ذَهَبَ",
-          "ar_plain": "الرجل الكريم ذهب",
-          "translit": "ar-rajulu al-karīmu dhahaba",
-          "en": "the generous man went",
-          "ur": "سخی آدمی گیا"
+          "ar": "الرَّجُلُ الْكَرِيمُ",
+          "ar_plain": "الرجل الكريم",
+          "translit": "ar-rajulu l-karīmu",
+          "en": "the generous man",
+          "ur": "سخی آدمی"
         },
         {
-          "ar": "الطَّالِبُ الْمُجْتَهِدُ ذَهَبَ",
-          "ar_plain": "الطالب المجتهد ذهب",
-          "translit": "aṭ-ṭālibu al-mujtahidu dhahaba",
-          "en": "the hardworking student went",
-          "ur": "محنتی طالب علم گیا"
+          "ar": "الطَّالِبُ الْمُجْتَهِدُ",
+          "ar_plain": "الطالب المجتهد",
+          "translit": "aṭ-ṭālibu l-mujtahidu",
+          "en": "the hardworking student",
+          "ur": "محنتی طالب علم"
         },
         {
-          "ar": "الْوَلَدُ الصَّالِحُ ذَهَبَ",
-          "ar_plain": "الولد الصالح ذهب",
-          "translit": "al-waladu aṣ-ṣāliḥu dhahaba",
-          "en": "the righteous boy went",
-          "ur": "نیک لڑکا گیا"
+          "ar": "الصِّرَاطَ الْمُسْتَقِيمَ",
+          "ar_plain": "الصراط المستقيم",
+          "translit": "aṣ-ṣirāṭa l-mustaqīma",
+          "en": "the straight path",
+          "ur": "سیدھا راستہ"
         }
       ],
       "right_column": [
         {
-          "en": "the hardworking student went",
-          "ur": "محنتی طالب علم چلا گیا۔"
+          "en": "the hardworking student",
+          "ur": "محنتی طالب علم"
         },
         {
-          "en": "the righteous boy went",
-          "ur": "نیک لڑکا چلا گیا"
+          "en": "the straight path",
+          "ur": "سیدھا راستہ"
         },
         {
-          "en": "the generous man went",
-          "ur": "سخی آدمی چلا گیا"
+          "en": "the generous man",
+          "ur": "سخی آدمی"
         }
       ],
       "correct_pairs": [
@@ -265,72 +398,136 @@
       ]
     },
     {
-      "type": "GRAMMAR_PARSE",
       "id": "ch06-l01-ex06",
+      "type": "GRAMMAR_PARSE",
+      "xp_value": 1,
+      "sentence_ar": "ذَهَبَ الرَّجُلُ الْكَرِيمُ",
       "words": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
         {
           "ar": "الرَّجُلُ",
           "ar_plain": "الرجل",
-          "translit": "—",
+          "translit": "ar-rajulu",
           "en": "the man",
           "ur": "آدمی"
         },
         {
           "ar": "الْكَرِيمُ",
           "ar_plain": "الكريم",
-          "translit": "—",
-          "en": "generous",
-          "ur": "فیاض"
-        },
+          "translit": "al-karīmu",
+          "en": "the generous",
+          "ur": "سخی"
+        }
+      ],
+      "available_roles": [
+        "VERB",
+        "SUBJECT",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "VERB",
+        "SUBJECT",
+        "ADJECTIVE"
+      ],
+      "explanation_on_wrong": {
+        "en": "Roles: ذَهَبَ = VERB; الرَّجُلُ = SUBJECT (doer); الْكَرِيمُ = ADJECTIVE describing the doer.",
+        "ur": "ذَهَبَ = فعل؛ الرَّجُلُ = فاعل؛ الْكَرِيمُ = فاعل کی صفت۔"
+      }
+    },
+    {
+      "id": "ch06-l01-ex07",
+      "type": "BUILD_SENTENCE",
+      "xp_value": 1,
+      "target_translation": {
+        "en": "Build: 'The hardworking student went.'",
+        "ur": "جملہ بنائیں: 'محنتی طالب علم گیا۔'"
+      },
+      "tiles": [
         {
           "ar": "ذَهَبَ",
           "ar_plain": "ذهب",
           "translit": "—",
-          "en": "went",
-          "ur": "چلا گیا"
+          "en": "ذَهَبَ",
+          "ur": "ذَهَبَ"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "—",
+          "en": "الطَّالِبُ",
+          "ur": "الطَّالِبُ"
+        },
+        {
+          "ar": "الْمُجْتَهِدُ",
+          "ar_plain": "المجتهد",
+          "translit": "—",
+          "en": "الْمُجْتَهِدُ",
+          "ur": "الْمُجْتَهِدُ"
+        },
+        {
+          "ar": "الرَّجُلُ",
+          "ar_plain": "الرجل",
+          "translit": "—",
+          "en": "الرَّجُلُ",
+          "ur": "الرَّجُلُ"
+        },
+        {
+          "ar": "الْكَرِيمُ",
+          "ar_plain": "الكريم",
+          "translit": "—",
+          "en": "الْكَرِيمُ",
+          "ur": "الْكَرِيمُ"
         }
       ],
-      "available_roles": [
-        "SUBJECT",
-        "ADJECTIVE",
-        "PREDICATE"
+      "correct_order": [
+        0,
+        1,
+        2
       ],
-      "correct_roles": [
-        "SUBJECT",
-        "ADJECTIVE",
-        "PREDICATE"
-      ],
-      "xp_value": 1,
-      "sentence_ar": "الرَّجُلُ الْكَرِيمُ ذَهَبَ"
+      "explanation_on_wrong": {
+        "en": "Action → noun → adjective: ذَهَبَ الطَّالِبُ الْمُجْتَهِدُ.",
+        "ur": "عمل → اسم → صفت: ذَهَبَ الطَّالِبُ الْمُجْتَهِدُ۔"
+      }
     }
   ],
   "reveal": {
+    "concept_name": {
+      "en": "The described noun in the Quran",
+      "ar": "الْمَوْصُوفُ فِي الْقُرْآن",
+      "ur": "قرآن میں موصوف اسم"
+    },
     "ayah": {
-      "surah": 87,
-      "ayah": 2,
-      "label": "Al-A'la 87:2",
-      "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
-      "en": "Who created and proportioned.",
-      "ur": "جس نے پیدا کیا، پھر درست بنایا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087002.mp3"
+      "surah": 1,
+      "ayah": 6,
+      "label": "Al-Fatiha 1:6",
+      "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "en": "Guide us to the straight path.",
+      "ur": "ہمیں سیدھے راستے کی ہدایت دے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001006.mp3"
     },
     "highlighted_word_indices": [
-      0
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "الصِّرَاطَ",
+      "الْمُسْتَقِيمَ"
     ],
     "noor_explanation": {
-      "en": "Today you prepared for الَّذِي by learning to hold a longer noun phrase in your mind before the sentence completes.",
-      "ur": "آج آپ نے الَّذِي کی تیاری کی: جملہ مکمل ہونے سے پہلے لمبی اسمی ترکیب کو ذہن میں رکھنا۔"
-    },
-    "concept_name": {
-      "en": "الصِّفَة in the Quran",
-      "ar": "الصِّفَة فِي الْقُرْآن",
-      "ur": "قرآن میں صفت"
+      "en": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ — الصِّرَاطَ is the noun, الْمُسْتَقِيمَ the adjective that follows it. You now hold the whole described noun in mind before the phrase ends.",
+      "ur": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ — الصِّرَاطَ اسم ہے، الْمُسْتَقِيمَ اس کے بعد آنے والی صفت۔ اب آپ ترکیب ختم ہونے سے پہلے پورا موصوف اسم ذہن میں رکھتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now read a described subject followed by an action: الرَّجُلُ الْكَرِيمُ ذَهَبَ.",
-      "ur": "آپ اب صفت والے مبتدا کے بعد فعل پڑھ سکتے ہیں: الرَّجُلُ الْكَرِيمُ ذَهَبَ۔"
+      "en": "You can now hold a complete noun phrase in your mind and connect it to a known action. Next, Arabic will show how الَّذِي opens an even longer description.",
+      "ur": "اب آپ ایک مکمل اسمی ترکیب ذہن میں رکھ کر اسے جانے پہچانے عمل سے جوڑ سکتے ہیں۔ آگے عربی دکھائے گی کہ الَّذِي اس سے بھی لمبی توصیف کیسے کھولتا ہے۔"
     }
   }
 }

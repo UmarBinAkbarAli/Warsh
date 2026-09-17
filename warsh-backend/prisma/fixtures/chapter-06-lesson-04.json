@@ -2,10 +2,11 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 6, Lesson 4 — الَّذِي in Al-A'la with consecutive verbs.",
+    "_note": "Chapter 6, display lesson 4 (ch06-l04) — one الَّذِي followed by connected Quranic actions; وَ and فَ as simple connectors only. Quran hook: الَّذِي خَلَقَ فَسَوَّىٰ (87:2), all three words highlighted; 87:3 recognized on a card.",
+    "titleUr": "الَّذِي قرآنی اعمال کی کڑی میں",
     "chapter_order": 6,
     "lesson_order": 4,
-    "estimated_minutes": 10,
+    "estimated_minutes": 11,
     "xp_reward": 10
   },
   "hook": {
@@ -19,8 +20,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087002.mp3"
     },
     "noor_intro": {
-      "en": "Now return to the ayah. الَّذِي is followed by actions of Allah: خَلَقَ, فَسَوَّىٰ, قَدَّرَ, فَهَدَىٰ.",
-      "ur": "اب آیت کی طرف واپس آئیں۔ الَّذِي کے بعد اللہ کے افعال آتے ہیں: خَلَقَ، فَسَوَّىٰ، قَدَّرَ، فَهَدَىٰ۔"
+      "en": "'Who created and proportioned' — one الَّذِي, then two actions joined by فَ. Today you follow the connector through a short Quranic chain, and meet وَ 'and' and فَ 'then' as simple links.",
+      "ur": "'جس نے پیدا کیا، پھر درست بنایا' — ایک الَّذِي، پھر دو عمل جو فَ سے جڑے ہیں۔ آج آپ جوڑنے والے لفظ کے ساتھ ایک مختصر قرآنی کڑی پڑھیں گے، اور وَ 'اور' اور فَ 'پھر' کو سادہ ربط کے طور پر جانیں گے۔"
     },
     "autoplay": true
   },
@@ -28,47 +29,227 @@
     {
       "type": "WORD",
       "text": {
-        "ar": "الَّذِي خَلَقَ",
-        "ar_plain": "الذي خلق",
-        "translit": "alladhī khalaqa",
-        "en": "Who created",
-        "ur": "جس نے پیدا کیا"
+        "ar": "الَّذِي",
+        "ar_plain": "الذي",
+        "translit": "alladhī",
+        "en": "who / that / which (masculine singular)",
+        "ur": "جو / جس نے (مذکر واحد)"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/alladhi-khalaqa.mp3"
+      "explanation": {
+        "en": "Return to the connector: الَّذِي opens the description.",
+        "ur": "جوڑنے والے لفظ کی طرف واپس: الَّذِي توصیف کھولتا ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "خَلَقَ",
+        "ar_plain": "خلق",
+        "translit": "khalaqa",
+        "en": "he created",
+        "ur": "اس نے پیدا کیا"
+      },
+      "explanation": {
+        "en": "First action: خَلَقَ = he created.",
+        "ur": "پہلا عمل: خَلَقَ = اس نے پیدا کیا۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "خلق"
+      }
     },
     {
       "type": "WORD",
       "text": {
         "ar": "فَسَوَّىٰ",
         "ar_plain": "فسوى",
-        "translit": "fasawwā",
-        "en": "then proportioned",
-        "ur": "پھر درست بنایا"
+        "translit": "fa-sawwā",
+        "en": "then he proportioned",
+        "ur": "پھر اس نے درست بنایا"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/fasawwa.mp3"
+      "explanation": {
+        "en": "Then: فَسَوَّىٰ = then he proportioned / made balanced.",
+        "ur": "پھر: فَسَوَّىٰ = پھر اس نے درست بنایا / متوازن کیا۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Read the chain",
+        "ar": "الَّذِي | خَلَقَ | فَسَوَّىٰ",
+        "ur": "کڑی پڑھیں"
+      },
+      "explanation": {
+        "en": "الَّذِي | خَلَقَ | فَسَوَّىٰ\nwho | created | then proportioned",
+        "ur": "الَّذِي | خَلَقَ | فَسَوَّىٰ\nجس نے | پیدا کیا | پھر درست بنایا"
+      },
+      "examples": [
+        {
+          "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
+          "ar_plain": "الذي خلق فسوى",
+          "translit": "alladhī khalaqa fa-sawwā",
+          "en": "Who created and proportioned",
+          "ur": "جس نے پیدا کیا پھر درست بنایا"
+        }
+      ]
     },
     {
       "type": "WORD",
       "text": {
         "ar": "وَالَّذِي قَدَّرَ فَهَدَىٰ",
         "ar_plain": "والذي قدر فهدى",
-        "translit": "wa alladhī qaddara fahadā",
-        "en": "and Who measured, then guided",
-        "ur": "اور جس نے اندازہ مقرر کیا، پھر ہدایت دی"
+        "translit": "wa-lladhī qaddara fa-hadā",
+        "en": "And Who measured, then guided",
+        "ur": "اور جس نے اندازہ مقرر کیا پھر ہدایت دی"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/walladhi-qaddara-fahada.mp3"
+      "explanation": {
+        "en": "The next Quranic line, Al-A'la 87:3: وَالَّذِي قَدَّرَ فَهَدَىٰ = and Who measured / decreed, then guided.",
+        "ur": "اگلی قرآنی سطر، الأعلى 87:3: وَالَّذِي قَدَّرَ فَهَدَىٰ = اور جس نے اندازہ مقرر کیا، پھر ہدایت دی۔"
+      }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "One connector, many actions",
-        "ar": "اسْمٌ مَوْصُول وَأَفْعَال",
-        "ur": "ایک موصول، کئی افعال"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "وَالَّذِي",
+        "ar": "وَ + الَّذِي",
+        "ur": "وَالَّذِي"
       },
-      "body": {
-        "en": "الَّذِي can be followed by one action or a chain of actions. In Al-A'la, the chain describes Allah's creating, proportioning, measuring, and guiding.",
-        "ur": "الَّذِي کے بعد ایک فعل بھی آ سکتا ہے اور افعال کی لڑی بھی۔ سورۃ الاعلیٰ میں یہ لڑی اللہ کی تخلیق، درستگی، تقدیر، اور ہدایت بیان کرتی ہے۔"
+      "examples": [
+        {
+          "ar": "وَ",
+          "ar_plain": "و",
+          "translit": "wa",
+          "en": "and",
+          "ur": "اور"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who / that / which (masculine singular)",
+          "ur": "جو / جس نے (مذکر واحد)"
+        }
+      ],
+      "explanation": {
+        "en": "وَ adds 'and'; الَّذِي remains the same masculine-singular relative pronoun.",
+        "ur": "وَ 'اور' لگاتا ہے؛ الَّذِي وہی مذکر واحد اسم موصول رہتا ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "و"
       }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "فَهَدَىٰ",
+        "ar": "فَ + هَدَىٰ",
+        "ur": "فَهَدَىٰ"
+      },
+      "examples": [
+        {
+          "ar": "فَ",
+          "ar_plain": "ف",
+          "translit": "fa",
+          "en": "then",
+          "ur": "پھر"
+        },
+        {
+          "ar": "هَدَىٰ",
+          "ar_plain": "هدى",
+          "translit": "hadā",
+          "en": "he guided",
+          "ur": "اس نے ہدایت دی"
+        }
+      ],
+      "explanation": {
+        "en": "فَ adds 'then'; هَدَىٰ = he guided.",
+        "ur": "فَ 'پھر' لگاتا ہے؛ هَدَىٰ = اس نے ہدایت دی۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "ف"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "One connector, several actions",
+        "ar": "الَّذِي ... فَ ...",
+        "ur": "ایک جوڑنے والا لفظ، کئی عمل"
+      },
+      "explanation": {
+        "en": "A relative description can contain more than one connected action.",
+        "ur": "ایک موصولی توصیف میں ایک سے زیادہ جڑے ہوئے عمل ہو سکتے ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
+          "ar_plain": "الذي خلق فسوى",
+          "translit": "alladhī khalaqa fa-sawwā",
+          "en": "Who created and proportioned",
+          "ur": "جس نے پیدا کیا پھر درست بنایا"
+        },
+        {
+          "ar": "وَالَّذِي قَدَّرَ فَهَدَىٰ",
+          "ar_plain": "والذي قدر فهدى",
+          "translit": "wa-lladhī qaddara fa-hadā",
+          "en": "And Who measured, then guided",
+          "ur": "اور جس نے اندازہ مقرر کیا پھر ہدایت دی"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Do not confuse the forms",
+        "ar": "الَّذِي / الَّتِي / الَّذِينَ",
+        "ur": "صورتوں کو گڈمڈ نہ کریں"
+      },
+      "examples": [
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who / that / which (masculine singular)",
+          "ur": "جو / جس نے (مذکر واحد)"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who / that / which — feminine singular (later chapter)",
+          "ur": "جو / جس نے — مؤنث واحد (بعد کا باب)"
+        },
+        {
+          "ar": "الَّذِينَ",
+          "ar_plain": "الذين",
+          "translit": "alladhīna",
+          "en": "those who — masculine plural (later chapter)",
+          "ur": "وہ لوگ جو — مذکر جمع (بعد کا باب)"
+        }
+      ],
+      "explanation": {
+        "en": "الَّذِي = who / that / which; الَّتِي = feminine singular form; الَّذِينَ = masculine plural form. Only الَّذِي is active here.",
+        "ur": "الَّذِي = جو / جس نے؛ الَّتِي = مؤنث واحد صورت؛ الَّذِينَ = مذکر جمع صورت۔ یہاں صرف الَّذِي زیر استعمال ہے۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Checkpoint",
+        "ur": "جانچ"
+      },
+      "explanation": {
+        "en": "Find the connector, each action, and the simple 'and / then' links.",
+        "ur": "جوڑنے والا لفظ، ہر عمل، اور سادہ 'اور / پھر' ربط تلاش کریں۔"
+      },
+      "examples": [
+        {
+          "ar": "وَالَّذِي قَدَّرَ فَهَدَىٰ",
+          "ar_plain": "والذي قدر فهدى",
+          "translit": "wa-lladhī qaddara fa-hadā",
+          "en": "And Who measured, then guided",
+          "ur": "اور جس نے اندازہ مقرر کیا پھر ہدایت دی"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -86,22 +267,26 @@
       "options": [
         {
           "en": "Who created",
-          "ur": "جس نے پیدا کیا۔"
+          "ur": "جس نے پیدا کیا"
         },
         {
-          "en": "the boy who went",
-          "ur": "وہ لڑکا جو گیا"
+          "en": "Who guided",
+          "ur": "جس نے ہدایت دی"
         },
         {
-          "en": "this is a sign",
-          "ur": "یہ ایک نشانی ہے"
+          "en": "Who proportioned",
+          "ur": "جس نے درست بنایا"
         },
         {
-          "en": "the pen that is on the desk",
-          "ur": "وہ قلم جو میز پر ہے۔"
+          "en": "Who read",
+          "ur": "جس نے پڑھا"
         }
       ],
-      "correct_index": 0
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "خَلَقَ = he created; الَّذِي خَلَقَ = Who created.",
+        "ur": "خَلَقَ = اس نے پیدا کیا؛ الَّذِي خَلَقَ = جس نے پیدا کیا۔"
+      }
     },
     {
       "id": "ch06-l04-ex02",
@@ -110,39 +295,54 @@
       "prompt": {
         "ar": "فَسَوَّىٰ",
         "ar_plain": "فسوى",
-        "translit": "fasawwā",
-        "en": "then proportioned",
-        "ur": "پھر درست بنایا"
+        "translit": "fa-sawwā",
+        "en": "then he proportioned",
+        "ur": "پھر اس نے درست بنایا"
       },
       "options": [
         {
           "en": "then proportioned",
-          "ur": "پھر متناسب"
+          "ur": "پھر درست بنایا"
         },
         {
-          "en": "then went",
-          "ur": "پھر چلا گیا"
+          "en": "and created",
+          "ur": "اور پیدا کیا"
         },
         {
-          "en": "who created",
-          "ur": "جس نے پیدا کیا"
+          "en": "then guided",
+          "ur": "پھر ہدایت دی"
         },
         {
-          "en": "for you",
-          "ur": "آپ کے لیے"
+          "en": "then measured",
+          "ur": "پھر اندازہ مقرر کیا"
         }
       ],
-      "correct_index": 0
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "فَ = then; سَوَّىٰ = he proportioned: فَسَوَّىٰ = then proportioned.",
+        "ur": "فَ = پھر؛ سَوَّىٰ = اس نے درست بنایا: فَسَوَّىٰ = پھر درست بنایا۔"
+      }
     },
     {
-      "type": "TRUE_FALSE",
       "id": "ch06-l04-ex03",
-      "statement": {
-        "en": "In Al-A'la 87:2, الَّذِي is followed by verbs describing Allah's actions.",
-        "ur": "سورۃ الاعلیٰ 87:2 میں الَّذِي کے بعد اللہ کے افعال آتے ہیں۔"
-      },
+      "type": "TRUE_FALSE",
       "xp_value": 1,
-      "correct_answer": true
+      "statement": {
+        "en": "In Al-A'la 87:2, the word الَّذِي is followed by actions.",
+        "ur": "الأعلى 87:2 میں لفظ الَّذِي کے بعد عمل آتے ہیں۔",
+        "ar_example": {
+          "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
+          "ar_plain": "الذي خلق فسوى",
+          "translit": "alladhī khalaqa fa-sawwā",
+          "en": "Who created and proportioned",
+          "ur": "جس نے پیدا کیا پھر درست بنایا"
+        }
+      },
+      "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True — الَّذِي is followed by خَلَقَ and فَسَوَّىٰ, two connected actions.",
+        "ur": "درست — الَّذِي کے بعد خَلَقَ اور فَسَوَّىٰ، دو جڑے ہوئے عمل آتے ہیں۔"
+      }
     },
     {
       "id": "ch06-l04-ex04",
@@ -151,8 +351,8 @@
       "mode": "TAP",
       "sentence_ar": "الَّذِي ___ فَسَوَّىٰ",
       "hint": {
-        "en": "Who created and proportioned",
-        "ur": "جس نے پیدا کیا، پھر درست بنایا"
+        "en": "Who created, then proportioned. Choose the first action.",
+        "ur": "جس نے پیدا کیا، پھر درست بنایا۔ پہلا عمل چنیں۔"
       },
       "options": [
         {
@@ -163,6 +363,13 @@
           "ur": "خَلَقَ"
         },
         {
+          "ar": "قَدَّرَ",
+          "ar_plain": "قدر",
+          "translit": "—",
+          "en": "قَدَّرَ",
+          "ur": "قَدَّرَ"
+        },
+        {
           "ar": "ذَهَبَ",
           "ar_plain": "ذهب",
           "translit": "—",
@@ -170,18 +377,11 @@
           "ur": "ذَهَبَ"
         },
         {
-          "ar": "لَهُ",
-          "ar_plain": "له",
+          "ar": "هَدَىٰ",
+          "ar_plain": "هدى",
           "translit": "—",
-          "en": "لَهُ",
-          "ur": "لَهُ"
-        },
-        {
-          "ar": "هَٰذِهِ",
-          "ar_plain": "هذه",
-          "translit": "—",
-          "en": "هَٰذِهِ",
-          "ur": "هَٰذِهِ"
+          "en": "هَدَىٰ",
+          "ur": "هَدَىٰ"
         }
       ],
       "correct_answer": {
@@ -190,6 +390,10 @@
         "translit": "—",
         "en": "خَلَقَ",
         "ur": "خَلَقَ"
+      },
+      "explanation_on_wrong": {
+        "en": "The first action in 87:2 is خَلَقَ: الَّذِي خَلَقَ فَسَوَّىٰ.",
+        "ur": "87:2 میں پہلا عمل خَلَقَ ہے: الَّذِي خَلَقَ فَسَوَّىٰ۔"
       }
     },
     {
@@ -200,66 +404,66 @@
         {
           "ar": "خَلَقَ",
           "ar_plain": "خلق",
-          "translit": "—",
-          "en": "created",
-          "ur": "پیدا کیا"
+          "translit": "khalaqa",
+          "en": "he created",
+          "ur": "اس نے پیدا کیا"
         },
         {
           "ar": "فَسَوَّىٰ",
           "ar_plain": "فسوى",
-          "translit": "fasawwā",
-          "en": "then proportioned",
-          "ur": "پھر درست بنایا"
+          "translit": "fa-sawwā",
+          "en": "then he proportioned",
+          "ur": "پھر اس نے درست بنایا"
         },
         {
           "ar": "قَدَّرَ",
           "ar_plain": "قدر",
-          "translit": "—",
-          "en": "measured / decreed",
-          "ur": "ماپا / فیصلہ"
+          "translit": "qaddara",
+          "en": "he measured / decreed",
+          "ur": "اس نے اندازہ مقرر کیا"
         },
         {
           "ar": "فَهَدَىٰ",
           "ar_plain": "فهدى",
-          "translit": "—",
-          "en": "then guided",
-          "ur": "پھر ہدایت کی"
+          "translit": "fa-hadā",
+          "en": "then he guided",
+          "ur": "پھر اس نے ہدایت دی"
         }
       ],
       "right_column": [
         {
-          "en": "proportioned",
-          "ur": "متناسب"
+          "en": "then he guided",
+          "ur": "پھر اس نے ہدایت دی"
         },
         {
-          "en": "measured / decreed",
-          "ur": "ماپا / فیصلہ"
+          "en": "he created",
+          "ur": "اس نے پیدا کیا"
         },
         {
-          "en": "then guided",
-          "ur": "پھر ہدایت کی"
+          "en": "he measured / decreed",
+          "ur": "اس نے اندازہ مقرر کیا"
         },
         {
-          "en": "created",
-          "ur": "پیدا کیا"
+          "en": "then he proportioned",
+          "ur": "پھر اس نے درست بنایا"
         }
       ],
       "correct_pairs": [
         [
           0,
-          3
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          2,
           1
         ],
         [
-          3,
+          1,
+          3
+        ],
+        [
+          2,
           2
+        ],
+        [
+          3,
+          0
         ]
       ]
     },
@@ -268,8 +472,8 @@
       "type": "BUILD_SENTENCE",
       "xp_value": 1,
       "target_translation": {
-        "en": "Build: 'Who created and proportioned'",
-        "ur": "بنائیں: 'جس نے پیدا کیا، پھر درست بنایا'"
+        "en": "Build: 'Who created, then proportioned' (Al-A'la 87:2)",
+        "ur": "ترکیب بنائیں: 'جس نے پیدا کیا، پھر درست بنایا' (الأعلى 87:2)"
       },
       "tiles": [
         {
@@ -289,55 +493,61 @@
         {
           "ar": "فَسَوَّىٰ",
           "ar_plain": "فسوى",
-          "translit": "fasawwā",
-          "en": "then proportioned",
-          "ur": "پھر درست بنایا"
+          "translit": "—",
+          "en": "فَسَوَّىٰ",
+          "ur": "فَسَوَّىٰ"
         },
         {
-          "ar": "الْوَلَدُ",
-          "ar_plain": "الولد",
+          "ar": "فَهَدَىٰ",
+          "ar_plain": "فهدى",
           "translit": "—",
-          "en": "الْوَلَدُ",
-          "ur": "الْوَلَدُ"
+          "en": "فَهَدَىٰ",
+          "ur": "فَهَدَىٰ"
         },
         {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
+          "ar": "قَدَّرَ",
+          "ar_plain": "قدر",
           "translit": "—",
-          "en": "ذَهَبَ",
-          "ur": "ذَهَبَ"
+          "en": "قَدَّرَ",
+          "ur": "قَدَّرَ"
         }
       ],
       "correct_order": [
         0,
         1,
         2
-      ]
+      ],
+      "explanation_on_wrong": {
+        "en": "Connector → first action → فَ second action: الَّذِي خَلَقَ فَسَوَّىٰ.",
+        "ur": "جوڑنے والا لفظ → پہلا عمل → فَ دوسرا عمل: الَّذِي خَلَقَ فَسَوَّىٰ۔"
+      }
     },
     {
-      "type": "GRAMMAR_PARSE",
       "id": "ch06-l04-ex07",
+      "type": "GRAMMAR_PARSE",
+      "xp_value": 1,
+      "sentence_ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
       "words": [
         {
           "ar": "الَّذِي",
           "ar_plain": "الذي",
-          "translit": "—",
-          "en": "who",
-          "ur": "کون"
+          "translit": "alladhī",
+          "en": "who / that / which (masculine singular)",
+          "ur": "جو / جس نے (مذکر واحد)"
         },
         {
           "ar": "خَلَقَ",
           "ar_plain": "خلق",
-          "translit": "—",
-          "en": "created",
-          "ur": "پیدا کیا"
+          "translit": "khalaqa",
+          "en": "he created",
+          "ur": "اس نے پیدا کیا"
         },
         {
           "ar": "فَسَوَّىٰ",
           "ar_plain": "فسوى",
-          "translit": "—",
-          "en": "then proportioned",
-          "ur": "پھر متناسب"
+          "translit": "fa-sawwā",
+          "en": "then he proportioned",
+          "ur": "پھر اس نے درست بنایا"
         }
       ],
       "available_roles": [
@@ -350,11 +560,53 @@
         "VERB",
         "VERB"
       ],
+      "explanation_on_wrong": {
+        "en": "Roles: الَّذِي = RELATIVE PRONOUN; خَلَقَ = VERB; فَسَوَّىٰ = VERB (with فَ 'then').",
+        "ur": "الَّذِي = اسم موصول؛ خَلَقَ = فعل؛ فَسَوَّىٰ = فعل (فَ 'پھر' کے ساتھ)۔"
+      }
+    },
+    {
+      "id": "ch06-l04-ex08",
+      "type": "TAP_TRANSLATION",
       "xp_value": 1,
-      "sentence_ar": "الَّذِي خَلَقَ فَسَوَّىٰ"
+      "prompt": {
+        "ar": "وَ",
+        "ar_plain": "و",
+        "translit": "wa",
+        "en": "and",
+        "ur": "اور"
+      },
+      "options": [
+        {
+          "en": "and — it adds a second description",
+          "ur": "اور — یہ دوسری توصیف جوڑتا ہے"
+        },
+        {
+          "en": "then — it orders two actions",
+          "ur": "پھر — یہ دو عملوں کو ترتیب دیتا ہے"
+        },
+        {
+          "en": "in — a place phrase",
+          "ur": "میں — جگہ کی ترکیب"
+        },
+        {
+          "en": "who — a relative pronoun",
+          "ur": "جو — اسم موصول"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "وَ = and, as in وَالَّذِي; فَ = then, as in فَسَوَّىٰ.",
+        "ur": "وَ = اور، جیسے وَالَّذِي میں؛ فَ = پھر، جیسے فَسَوَّىٰ میں۔"
+      }
     }
   ],
   "reveal": {
+    "concept_name": {
+      "en": "A relative chain in the Quran",
+      "ar": "سِلْسِلَةُ الَّذِي فِي الْقُرْآن",
+      "ur": "قرآن میں الَّذِي کی کڑی"
+    },
     "ayah": {
       "surah": 87,
       "ayah": 2,
@@ -369,20 +621,20 @@
       1,
       2
     ],
+    "highlighted_words": [
+      "الَّذِي",
+      "خَلَقَ",
+      "فَسَوَّىٰ"
+    ],
     "noor_explanation": {
-      "en": "You can now read the structure: الَّذِي opens the description; خَلَقَ and فَسَوَّىٰ are the actions. The ayah is short, but its grammar is alive.",
-      "ur": "آپ اب ساخت پڑھ سکتے ہیں: الَّذِي صفت کھولتا ہے؛ خَلَقَ اور فَسَوَّىٰ افعال ہیں۔ آیت مختصر ہے، مگر اس کی گرامر زندہ ہے۔"
-    },
-    "concept_name": {
-      "en": "الصِّفَة in the Quran",
-      "ar": "الصِّفَة فِي الْقُرْآن",
-      "ur": "قرآن میں صفت"
+      "en": "الَّذِي خَلَقَ فَسَوَّىٰ — the connector opens the description, خَلَقَ is the first action, and فَسَوَّىٰ adds the next with فَ 'then'. The following ayah continues the same chain: وَالَّذِي قَدَّرَ فَهَدَىٰ.",
+      "ur": "الَّذِي خَلَقَ فَسَوَّىٰ — جوڑنے والا لفظ توصیف کھولتا ہے، خَلَقَ پہلا عمل ہے، اور فَسَوَّىٰ فَ 'پھر' کے ساتھ اگلا عمل جوڑتا ہے۔ اگلی آیت وہی کڑی جاری رکھتی ہے: وَالَّذِي قَدَّرَ فَهَدَىٰ۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 6 complete. You can now follow الَّذِي into a description, whether that description is an action, a place phrase, or a Quranic chain of verbs.",
-      "ur": "باب 6 مکمل۔ آپ اب الَّذِي کے بعد صفت کو سمجھ سکتے ہیں، چاہے وہ فعل ہو، جگہ کی ترکیب ہو، یا قرآنی افعال کی لڑی۔"
+      "en": "You can now follow الَّذِي through a Quranic chain: the connector opens the description, and the verbs show the connected actions.",
+      "ur": "اب آپ قرآنی کڑی میں الَّذِي کا پیچھا کر سکتے ہیں: جوڑنے والا لفظ توصیف کھولتا ہے، اور افعال جڑے ہوئے عمل دکھاتے ہیں۔"
     }
   }
 }

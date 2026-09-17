@@ -58,6 +58,20 @@ Briefs are the ones approved in `proposals/chapter-05-content-proposal.md`
 `ch05-l06` and `ch05-l07` are the two new lessons (display positions 4 and 6);
 `ch05-l05` is the R1 review at display position 7.
 
+## Chapter 6 — open (4 scenes)
+
+Briefs from `proposals/chapter-06-content-proposal.md` (media plan). Cards whose
+word has an approved asset already show one (`rajul`, `walad`, `talib`,
+`qalam`, `kitab`, `masjid`, `dhahaba`, `fi`, `alladhi`, `khalaqa`,
+`sirat-mustaqim` — the last six copied from the dictionary set on 2026-09-17).
+
+| # | Filename | Cards | Arabic on the card | Brief |
+|---|---|---|---|---|
+| 1 | `ch06-described-person-action.png` | `ch06-l01` card 8 | الرَّجُلُ الْكَرِيمُ + ذَهَبَ | A man and a student, each visually tied to a quality (generous / hardworking), both moving forward. |
+| 2 | `ch06-person-connected-action.png` | `ch06-l02` cards 3, 6 | الْوَلَدُ الَّذِي ذَهَبَ | Visual bridge: a boy connected by a visible path to a going-away scene — person linked to action. |
+| 3 | `ch06-place-tool-panels.png` | `ch06-l03` cards 4, 6 | الْكِتَابُ الَّذِي فِي الْبَيْتِ · بِالْقَلَمِ | Three separate panels: a pen on a desk; a book inside a house; an abstract "taught by the pen" teaching scene. |
+| 4 | `ch06-creation-chain.png` | `ch06-l04` cards 4, 8 · `ch06-l05` card 7 | الَّذِي خَلَقَ فَسَوَّىٰ | Four connected stages left to right: creation, balance, measure, guidance — abstract objects only, no depiction of the Divine. |
+
 ## Delivered
 
 _Nothing yet._

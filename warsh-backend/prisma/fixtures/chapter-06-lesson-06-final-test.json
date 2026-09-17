@@ -1,0 +1,453 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 6 final test (ch06-test). Blueprint rows that are fill/build/parse tasks in the proposal render as the chapter-test multiple-choice format with the exact blueprint answer as the correct option.",
+    "titleUr": "باب 6 کا آخری امتحان",
+    "chapter_order": 6,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 87,
+      "ayah": 2,
+      "label": "Al-A'la 87:2",
+      "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
+      "en": "Who created and proportioned.",
+      "ur": "جس نے پیدا کیا، پھر درست بنایا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087002.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 6.",
+      "ur": "باب 6 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "exercises": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 6,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch06-test-q01",
+        "topic": {
+          "en": "Adjective phrase",
+          "ur": "صفت کی ترکیب"
+        },
+        "prompt": {
+          "en": "What does الرَّجُلُ الْكَرِيمُ mean?",
+          "ur": "الرَّجُلُ الْكَرِيمُ کا کیا مطلب ہے؟"
+        },
+        "options": [
+          {
+            "en": "the generous man",
+            "ur": "سخی آدمی"
+          },
+          {
+            "en": "the man who went",
+            "ur": "وہ آدمی جو گیا"
+          },
+          {
+            "en": "a generous man",
+            "ur": "ایک سخی آدمی"
+          },
+          {
+            "en": "the hardworking student",
+            "ur": "محنتی طالب علم"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch06-test-q02",
+        "topic": {
+          "en": "Described subject + action",
+          "ur": "موصوف فاعل + عمل"
+        },
+        "prompt": {
+          "en": "Which sentence means 'the hardworking student went'?",
+          "ur": "کون سا جملہ 'محنتی طالب علم گیا' کے معنی دیتا ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "ذَهَبَ الطَّالِبُ الْمُجْتَهِدُ",
+            "en": "action + noun + adjective",
+            "ur": "عمل + اسم + صفت"
+          },
+          {
+            "arabic": "الطَّالِبُ الَّذِي ذَهَبَ",
+            "en": "the student who went",
+            "ur": "وہ طالب علم جو گیا"
+          },
+          {
+            "arabic": "ذَهَبَ الرَّجُلُ الْكَرِيمُ",
+            "en": "the generous man went",
+            "ur": "سخی آدمی گیا"
+          },
+          {
+            "arabic": "الطَّالِبُ الْمُجْتَهِدُ",
+            "en": "the hardworking student",
+            "ur": "محنتی طالب علم"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch06-test-q03",
+        "topic": {
+          "en": "Relative-pronoun meaning",
+          "ur": "اسم موصول کا مطلب"
+        },
+        "prompt": {
+          "en": "What does الَّذِي mean?",
+          "ur": "الَّذِي کا کیا مطلب ہے؟"
+        },
+        "options": [
+          {
+            "en": "who / that / which — masculine singular",
+            "ur": "جو / جس نے — مذکر واحد"
+          },
+          {
+            "en": "this — near masculine",
+            "ur": "یہ — قریب مذکر"
+          },
+          {
+            "en": "who / that / which — feminine singular",
+            "ur": "جو / جس نے — مؤنث واحد"
+          },
+          {
+            "en": "to / toward",
+            "ur": "کی طرف"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch06-test-q04",
+        "topic": {
+          "en": "Basic relative phrase",
+          "ur": "بنیادی موصولی ترکیب"
+        },
+        "prompt": {
+          "en": "What does الْوَلَدُ الَّذِي ذَهَبَ mean?",
+          "ur": "الْوَلَدُ الَّذِي ذَهَبَ کا کیا مطلب ہے؟"
+        },
+        "options": [
+          {
+            "en": "the boy went",
+            "ur": "لڑکا گیا"
+          },
+          {
+            "en": "the boy who went",
+            "ur": "وہ لڑکا جو گیا"
+          },
+          {
+            "en": "the boy who read",
+            "ur": "وہ لڑکا جس نے پڑھا"
+          },
+          {
+            "en": "the man who went",
+            "ur": "وہ آدمی جو گیا"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch06-test-q05",
+        "topic": {
+          "en": "Relative-pronoun selection",
+          "ur": "اسم موصول کا انتخاب"
+        },
+        "prompt": {
+          "en": "Complete: الطَّالِبُ ___ قَرَأَ (the student who read)",
+          "ur": "مکمل کریں: الطَّالِبُ ___ قَرَأَ (وہ طالب علم جس نے پڑھا)"
+        },
+        "options": [
+          {
+            "arabic": "الَّتِي",
+            "en": "feminine singular form",
+            "ur": "مؤنث واحد صورت"
+          },
+          {
+            "arabic": "الَّذِي",
+            "en": "masculine singular form",
+            "ur": "مذکر واحد صورت"
+          },
+          {
+            "arabic": "هَٰذَا",
+            "en": "this — near masculine",
+            "ur": "یہ — قریب مذکر"
+          },
+          {
+            "arabic": "إِلَى",
+            "en": "to / toward",
+            "ur": "کی طرف"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch06-test-q06",
+        "topic": {
+          "en": "Relative phrase parsing",
+          "ur": "موصولی ترکیب کی تحلیل"
+        },
+        "prompt": {
+          "en": "In الْوَلَدُ الَّذِي ذَهَبَ, what are the roles of the three words in order?",
+          "ur": "الْوَلَدُ الَّذِي ذَهَبَ میں تینوں لفظوں کے کردار ترتیب سے کیا ہیں؟"
+        },
+        "options": [
+          {
+            "en": "VERB / SUBJECT / ADJECTIVE",
+            "ur": "فعل / فاعل / صفت"
+          },
+          {
+            "en": "NOUN / ADJECTIVE / VERB",
+            "ur": "اسم / صفت / فعل"
+          },
+          {
+            "en": "NOUN / RELATIVE PRONOUN / VERB",
+            "ur": "اسم / اسم موصول / فعل"
+          },
+          {
+            "en": "RELATIVE PRONOUN / VERB / VERB",
+            "ur": "اسم موصول / فعل / فعل"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch06-test-q07",
+        "topic": {
+          "en": "Place phrase",
+          "ur": "جگہ کی ترکیب"
+        },
+        "prompt": {
+          "en": "Complete: الْمَسْجِدُ الَّذِي ___ الْمَدِينَةِ (the mosque that is in the city)",
+          "ur": "مکمل کریں: الْمَسْجِدُ الَّذِي ___ الْمَدِينَةِ (وہ مسجد جو شہر میں ہے)"
+        },
+        "options": [
+          {
+            "arabic": "عَلَى",
+            "en": "on",
+            "ur": "پر"
+          },
+          {
+            "arabic": "إِلَى",
+            "en": "to / toward",
+            "ur": "کی طرف"
+          },
+          {
+            "arabic": "مِنْ",
+            "en": "from",
+            "ur": "سے"
+          },
+          {
+            "arabic": "فِي",
+            "en": "in",
+            "ur": "میں"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch06-test-q08",
+        "topic": {
+          "en": "Place phrase translation",
+          "ur": "جگہ کی ترکیب کا ترجمہ"
+        },
+        "prompt": {
+          "en": "What does الْقَلَمُ الَّذِي عَلَى الْمَكْتَبِ mean?",
+          "ur": "الْقَلَمُ الَّذِي عَلَى الْمَكْتَبِ کا کیا مطلب ہے؟"
+        },
+        "options": [
+          {
+            "en": "the pen that is in the house",
+            "ur": "وہ قلم جو گھر میں ہے"
+          },
+          {
+            "en": "the pen that is on the desk",
+            "ur": "وہ قلم جو میز پر ہے"
+          },
+          {
+            "en": "the book that is on the desk",
+            "ur": "وہ کتاب جو میز پر ہے"
+          },
+          {
+            "en": "the desk that is on the pen",
+            "ur": "وہ میز جو قلم پر ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch06-test-q09",
+        "topic": {
+          "en": "Tool phrase",
+          "ur": "آلے کی ترکیب"
+        },
+        "prompt": {
+          "en": "In الَّذِي عَلَّمَ بِالْقَلَمِ, what does بِالْقَلَمِ mean?",
+          "ur": "الَّذِي عَلَّمَ بِالْقَلَمِ میں بِالْقَلَمِ کا کیا مطلب ہے؟"
+        },
+        "options": [
+          {
+            "en": "on the pen",
+            "ur": "قلم پر"
+          },
+          {
+            "en": "to the pen",
+            "ur": "قلم کی طرف"
+          },
+          {
+            "en": "by / with the pen",
+            "ur": "قلم کے ذریعے"
+          },
+          {
+            "en": "the pen taught",
+            "ur": "قلم نے سکھایا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch06-test-q10",
+        "topic": {
+          "en": "Quranic action",
+          "ur": "قرآنی عمل"
+        },
+        "prompt": {
+          "en": "Complete Al-A'la 87:2: الَّذِي ___ فَسَوَّىٰ",
+          "ur": "الأعلى 87:2 مکمل کریں: الَّذِي ___ فَسَوَّىٰ"
+        },
+        "options": [
+          {
+            "arabic": "خَلَقَ",
+            "en": "he created",
+            "ur": "اس نے پیدا کیا"
+          },
+          {
+            "arabic": "قَدَّرَ",
+            "en": "he measured / decreed",
+            "ur": "اس نے اندازہ مقرر کیا"
+          },
+          {
+            "arabic": "هَدَىٰ",
+            "en": "he guided",
+            "ur": "اس نے ہدایت دی"
+          },
+          {
+            "arabic": "ذَهَبَ",
+            "en": "he went",
+            "ur": "وہ گیا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch06-test-q11",
+        "topic": {
+          "en": "Connectors",
+          "ur": "ربط کے حروف"
+        },
+        "prompt": {
+          "en": "In فَسَوَّىٰ, what does the connector فَ mean?",
+          "ur": "فَسَوَّىٰ میں ربط کا حرف فَ کیا معنی دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "and",
+            "ur": "اور"
+          },
+          {
+            "en": "then",
+            "ur": "پھر"
+          },
+          {
+            "en": "in",
+            "ur": "میں"
+          },
+          {
+            "en": "who",
+            "ur": "جو"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch06-test-q12",
+        "topic": {
+          "en": "Cumulative production",
+          "ur": "مجموعی تشکیل"
+        },
+        "prompt": {
+          "en": "Which phrase means 'the book that is in the house'?",
+          "ur": "کون سی ترکیب 'وہ کتاب جو گھر میں ہے' کے معنی دیتی ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "الْكِتَابُ الَّذِي عَلَى الْمَكْتَبِ",
+            "en": "the book that is on the desk",
+            "ur": "وہ کتاب جو میز پر ہے"
+          },
+          {
+            "arabic": "الْبَيْتُ الَّذِي فِي الْمَدِينَةِ",
+            "en": "the house that is in the city",
+            "ur": "وہ گھر جو شہر میں ہے"
+          },
+          {
+            "arabic": "الْكِتَابُ الَّذِي فِي الْبَيْتِ",
+            "en": "the book that is in the house",
+            "ur": "وہ کتاب جو گھر میں ہے"
+          },
+          {
+            "arabic": "الْكِتَابُ فِي الْبَيْتِ",
+            "en": "the book is in the house",
+            "ur": "کتاب گھر میں ہے"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "الَّذِي in the Quran",
+      "ar": "الَّذِي فِي الْقُرْآن",
+      "ur": "قرآن میں الَّذِي"
+    },
+    "ayah": {
+      "surah": 87,
+      "ayah": 2,
+      "label": "Al-A'la 87:2",
+      "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
+      "en": "Who created and proportioned.",
+      "ur": "جس نے پیدا کیا، پھر درست بنایا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087002.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "الَّذِي",
+      "خَلَقَ",
+      "فَسَوَّىٰ"
+    ],
+    "noor_explanation": {
+      "en": "الَّذِي خَلَقَ فَسَوَّىٰ — the connector, the first action, and the then-action. Everything Chapter 6 tested lives inside this one ayah.",
+      "ur": "الَّذِي خَلَقَ فَسَوَّىٰ — جوڑنے والا لفظ، پہلا عمل، اور پھر والا عمل۔ باب 6 نے جو کچھ پرکھا وہ سب اسی ایک آیت میں موجود ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 6 complete: you can read a described noun, connect it with الَّذِي to an action, a place, or a tool, and follow a short Quranic chain.",
+      "ur": "باب 6 مکمل: اب آپ موصوف اسم پڑھ سکتے ہیں، اسے الَّذِي کے ذریعے عمل، جگہ یا آلے سے جوڑ سکتے ہیں، اور مختصر قرآنی کڑی کا پیچھا کر سکتے ہیں۔"
+    }
+  }
+}

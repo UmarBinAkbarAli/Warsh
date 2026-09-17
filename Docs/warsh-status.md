@@ -323,7 +323,17 @@ Everything below this list is either done and verified, or one of these:
    across the R8 keep rules, native modules and the illustration pipeline —
    not worth it for a dashboard label. Do not list this as open again; take
    the upgrade when a feature needs it or SDK 54 loses support.
-2. **Curriculum rebuild, Chapters 6 onward** (owner, in Studio). Chapter 5's
+2. **Curriculum rebuild, Chapters 7 onward** (owner, in Studio). **Chapter 6 is
+   implemented in isolated staging (2026-09-17)** from
+   `Docs/proposals/chapter-06-content-proposal.md`: `ch06-l01..l04` rewritten in
+   place, `ch06-l05` review and `ch06-test` added, fixtures/Urdu/Quran audits
+   clean, 29 catalogue clips generated, verified on the emulator (Lesson 1 end
+   to end in Urdu, every card of Lessons 2–5 and the test in English) and
+   through the API (test gated, chapter completes, Chapter 7 unlocks).
+   **Awaiting owner approval to run `content:promote-chapter-six -- --apply`
+   against production**; deviations are listed at the end of the proposal.
+   `Docs/proposals/chapter-07-content-proposal.md` exists (owner draft, not yet
+   evaluated). Chapter 5's
    six composite-scene illustrations are owner deliverables tracked in
    `Docs/lesson-illustrations-needed.md` (+ `.csv` manifest; delivery lands via
    `npm run images:upload-lessons`, added 2026-09-17). From now on every chapter
