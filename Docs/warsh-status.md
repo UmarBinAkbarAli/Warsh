@@ -309,15 +309,25 @@ Everything below this list is either done and verified, or one of these:
 2. **Curriculum rebuild, Chapters 6 onward** (owner, in Studio); Chapter 5's six
    composite-scene illustrations; the "whose is this?" note at the end of the
    Chapter 5 proposal.
-3. **Tecno KF8 on the Play-installed 1.0.11 (2026-09-16 evening):** the
-   `Reminders` channel is registered (`dumpsys notification`: channel
-   `default` / "Reminders", importance 3, alongside the expo fallback), and
-   both reminder alarms are scheduled (09:00 and 20:00 PKT the next day) —
-   the 1.0.10 gap is closed on hardware. The Speak mic re-prompt could not be
-   exercised: the first Speak step is Chapter 3 · Lesson 6 and the owner's
-   account is on Chapter 2, which locks Chapter 3 server-side; the emulator
-   verification of the same 1.0.11 code stands. Check on the Tecno when the
-   owner reaches Ch 3 L6.
+3. ~~**Speak mic re-prompt on the Tecno**~~ — **verified on hardware
+   2026-09-17** on the Play-installed 1.0.11. The owner's account is on
+   Chapter 2, so the check used a throwaway production account placed at
+   `KNOWS_LETTERS` (Chapters 1-3 skipped by placement, which leaves Ch 3
+   lessons openable as "Review lesson"), deep-linked via
+   `warsh://lessons/ch03-l05/play`. With `RECORD_AUDIO` revoked by `pm
+   revoke`, Listen first -> Speak showed the "Speaking practice - Enable
+   microphone" sheet, then the system "Allow Warsh to record audio?" prompt,
+   and after "While using the app" recording started at once with the live
+   level meter - the phrase was never skipped. The throwaway was deleted
+   (`DELETE /api/users/me` -> 200, its token 401 afterwards) and the app
+   dropped cleanly to the login screen. The `Reminders` channel and both
+   reminder alarms were already confirmed on 2026-09-16. Two side
+   observations from the run, neither blocking: a brand-new account was
+   greeted with the "Your streak ended" modal on first Learn-tab load
+   (probably stale local streak state from the previous account on the same
+   device - check `clearSession` clears it); and `/api/auth/register` does
+   not validate `goal` against the `Goal` enum, so an invalid value 500s
+   instead of 400s.
 4. **Restore Credentials on real hardware — cloud-backed key confirmed
    (2026-09-16):** the Tecno registered a production `RestoreCredential` at
    21:43 PKT (one minute after the Play install) with `cloudBackup: true`
@@ -325,11 +335,16 @@ Everything below this list is either done and verified, or one of these:
    documents, not the device-only fallback the emulator took. The owner's
    sign-out at 22:07 set `revokedAt` and the re-sign-in registered a fresh
    key, so revocation holds on hardware too. Still open: a real
-   device-to-device transfer (needs a second phone) - see P0 #10.
+   device-to-device transfer - needs a second phone, nothing else can close
+   it (re-confirmed 2026-09-17) - see P0 #10.
 5. **Memory thresholds (Workstream B):** Play Console still shows no memory
-   or bitmap data for Warsh; the local profile of the optimized build is far
-   under every threshold - see P0 #11. Re-read Android vitals after 1.0.11 has
-   been in the field a month.
+   or bitmap data for Warsh (re-read 2026-09-17: anonymous RSS+swap and bitmap
+   P50/P90 all "-", crash/ANR/LMK "-", installed audience 20); the local
+   profile of the optimized build is far under every threshold - see P0 #11.
+   The two "Memory usage" action cards on release 35 are static-scan
+   recommendations (the bitmap one lists Glide/expo-image internals; the
+   other is the R8/AGP 9 item settled in #1). Re-read Android vitals in
+   mid-October, once 1.0.11 has been in the field a month.
 6. Discussion items — all three settled with the owner on 2026-09-16:
    - ~~Play's edge-to-edge recommendation~~ — accepted as permanent noise.
      The inset defects were fixed in 1.0.10 and verified on the Tecno; the
