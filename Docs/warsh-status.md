@@ -84,8 +84,8 @@ files remain release evidence.
   the bundle does embed `BUNDLE-METADATA/com.android.tools/r8.json` (AGP
   8.11.0) whose own stats are 58.4 % obfuscated / 58.0 % optimized / 58.2 %
   shrunk, all above the 25 % floor, and Play's panel suggests "Upgrade to AGP
-  version 9.0" and "Repackage Classes" as the next steps. Re-read the panel
-  after review; if the two dashes persist, the AGP 9 upgrade is the fix.
+  version 9.0" and "Repackage Classes" as the next steps. The dashes persisted
+  after review; accepted as-is on 2026-09-17 (see Open items #1).
 - Submitted to Production on 2026-09-15 at a 100% rollout (`4f9eaf2`). It carries every
   app change since 1.0.9: the Sentry DSN and Mixpanel token baked into the release
   bundle (`verify:release-api-url` confirmed both in the AAB and the APK), the mic
@@ -287,21 +287,25 @@ files remain release evidence.
 
 ## Active priority queue
 
-### Open items (2026-09-16)
+### Open items (2026-09-17)
 
 Everything below this list is either done and verified, or one of these:
 
-1. **1.0.11 (35) published 2026-09-16; the R8 figures were re-read after
-   publishing and the two dashes persist.** Bundle explorer for 35 now shows
-   Optimization percentage "–" and Shrinking percentage "–" each with a red
-   warning icon, Obfuscation 75 %, App optimization Medium, R8 Full Mode +
-   Resource Shrinking ticked, "Resource Shrinking Optimized" and "Repackage
-   Classes" unticked, and "Upgrade to AGP version 9.0 to get the best
-   performance". The app builds with AGP 8.11.0, pinned by React Native 0.81's
-   Gradle plugin (`@react-native/gradle-plugin/gradle/libs.versions.toml`), so
-   the fix is not a one-line bump: it arrives with the Expo SDK 55 / RN 0.82
-   upgrade. Decision needed: take that upgrade as its own workstream, or accept
-   "Medium" (the DEX requirement itself is met — 34.7 → 10.6 MB) until then.
+1. ~~**R8 "–" percentages in Play Console**~~ — settled 2026-09-17: accept
+   "App optimization: Medium" until the Expo SDK 55 / RN 0.82 upgrade happens
+   for its own reasons. Bundle explorer for 35 shows Optimization and
+   Shrinking as "–" with a warning, Obfuscation 75 %, R8 Full Mode + Resource
+   Shrinking ticked, and "Upgrade to AGP version 9.0". The bundle's own
+   `BUNDLE-METADATA/com.android.tools/r8.json` reports 58 % optimized / 58 %
+   shrunk and the DEX went 34.7 → 10.6 MB, so the work is done and Play simply
+   cannot read AGP 8.11 metadata for those two figures. "Medium" is a
+   recommendation with no deadline; the DEX size requirement itself is met.
+   AGP 9 is pinned out by React Native 0.81's Gradle plugin
+   (`@react-native/gradle-plugin/gradle/libs.versions.toml`), so the fix is the
+   SDK 55 / RN 0.82 upgrade — a multi-day workstream with regression risk
+   across the R8 keep rules, native modules and the illustration pipeline —
+   not worth it for a dashboard label. Do not list this as open again; take
+   the upgrade when a feature needs it or SDK 54 loses support.
 2. **Curriculum rebuild, Chapters 6 onward** (owner, in Studio); Chapter 5's six
    composite-scene illustrations; the "whose is this?" note at the end of the
    Chapter 5 proposal.
