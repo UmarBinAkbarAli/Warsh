@@ -323,9 +323,12 @@ Everything below this list is either done and verified, or one of these:
    across the R8 keep rules, native modules and the illustration pipeline —
    not worth it for a dashboard label. Do not list this as open again; take
    the upgrade when a feature needs it or SDK 54 loses support.
-2. **Curriculum rebuild, Chapters 6 onward** (owner, in Studio); Chapter 5's six
-   composite-scene illustrations; the "whose is this?" note at the end of the
-   Chapter 5 proposal.
+2. **Curriculum rebuild, Chapters 6 onward** (owner, in Studio). Chapter 5's
+   six composite-scene illustrations are owner deliverables tracked in
+   `Docs/lesson-illustrations-needed.md` (+ `.csv` manifest; delivery lands via
+   `npm run images:upload-lessons`, added 2026-09-17). From now on every chapter
+   rebuild adds its missing card scenes to that file. The `لِمَنْ هَذَا؟` note at
+   the end of the Chapter 5 proposal is settled 2026-09-17: stays as written.
 3. ~~**Speak mic re-prompt on the Tecno**~~ — **verified on hardware
    2026-09-17** on the Play-installed 1.0.11. The owner's account is on
    Chapter 2, so the check used a throwaway production account placed at

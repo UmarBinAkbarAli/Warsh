@@ -48,6 +48,7 @@
     "content:promote-chapter-five": "node scripts/promote-chapter-five.cjs",
     "images:sync-chapters": "npx tsx -r dotenv/config scripts/sync-chapter-images.ts",
     "images:sync-chapters:dry": "npx tsx -r dotenv/config scripts/sync-chapter-images.ts --dry-run",
+    "images:upload-lessons": "npx tsx -r dotenv/config scripts/upload-lesson-images.ts",
     "content:publish-vocabulary": "node scripts/publish-vocabulary.cjs",
     "content:backfill-new-lessons": "node scripts/backfill-new-lesson-progress.cjs",
     "content:restore-curriculum": "node scripts/restore-curriculum-vocabulary.cjs",
