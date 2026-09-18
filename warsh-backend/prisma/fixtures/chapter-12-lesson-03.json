@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 12, Lesson 3 - asking about professions with مَا مِهْنَتُكَ؟ and answering أَنَا ...",
+    "_note": "Chapter 12, Lesson 3 (ch12-l03) — مَا مِهْنَتُكَ؟ and the four professions طَبِيبٌ، مُعَلِّمٌ، مُهَنْدِسٌ، تَاجِرٌ, answered as a full sentence أَنَا ..., with the feminine forms and مَا مِهْنَتُكِ؟ at recognition level. Quran checkpoint moved from Al-Hujurat 49:13 (النَّاسُ was presented as if it taught profession words) to At-Tawbah 9:105, a work-themed excerpt whose declared target عَمَلَكُمْ, 'your work', mirrors the noun + attached pronoun shape of مِهْنَتُكَ. Rebuilt 2026-09-19 from Docs/proposals/chapter-12-content-proposal.md.",
+    "titleUr": "پیشے — مَا مِهْنَتُكَ؟",
     "chapter_order": 12,
     "lesson_order": 3,
-    "chapter_title": "Introductions and Personal Questions",
-    "title": "Professions",
-    "titleAr": "الْمِهَن",
-    "source": "reader_lecture_12_ta'aruf.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 49,
-      "ayah": 13,
-      "label": "Al-Hujurat 49:13",
-      "ar": "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ",
-      "en": "O mankind, indeed We created you from male and female.",
-      "ur": "اے لوگو، بے شک ہم نے تمہیں ایک مرد اور ایک عورت سے پیدا کیا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049013.mp3"
+      "surah": 9,
+      "ayah": 105,
+      "label": "At-Tawbah 9:105",
+      "ar": "وَقُلِ اعْمَلُوا فَسَيَرَى اللَّهُ عَمَلَكُمْ",
+      "en": "And say, 'Do [as you will], for Allah will see your deeds.'",
+      "ur": "اور کہہ دو کہ عمل کیے جاؤ، اللہ تمہارے عمل کو دیکھ لے گا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009105.mp3"
     },
     "noor_intro": {
-      "en": "People have names, families, and work. Today you learn to ask gently: what is your profession?",
-      "ur": "لوگوں کے نام، خاندان اور کام ہوتے ہیں۔ آج آپ نرمی سے پوچھنا سیکھیں گے: آپ کا پیشہ کیا ہے؟"
+      "en": "وَقُلِ اعْمَلُوا: say, work. Allah sees عَمَلَكُمْ, your work. Everyone you meet does some kind of work. Today you learn to ask about it, مَا مِهْنَتُكَ؟, and to answer with four professions.",
+      "ur": "وَقُلِ اعْمَلُوا: کہہ دو، عمل کرو۔ اللہ عَمَلَكُمْ، تمہارا عمل، دیکھتا ہے۔ آپ جس سے بھی ملیں، وہ کوئی نہ کوئی کام کرتا ہے۔ آج آپ اس کے بارے میں پوچھنا سیکھیں گے، مَا مِهْنَتُكَ؟، اور چار پیشوں سے جواب دینا۔"
     },
     "autoplay": true
   },
@@ -32,13 +29,32 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Asking about profession",
+        "en": "Asking about a profession",
         "ar": "مَا مِهْنَتُكَ؟",
         "ur": "پیشے کے بارے میں پوچھنا"
       },
       "explanation": {
-        "en": "مَا asks what. مِهْنَتُكَ means your profession. Together: what is your profession?",
-        "ur": "مَا کا مطلب ہے کیا۔ مِهْنَتُكَ کا مطلب ہے آپ کا پیشہ۔ مل کر معنی بنتا ہے: آپ کا پیشہ کیا ہے؟"
+        "en": "مِهْنَةٌ is a profession. When كَ attaches, the ة opens into a ت: مِهْنَتُكَ, your profession. With مَا in front: مَا مِهْنَتُكَ؟, what is your profession?",
+        "ur": "مِهْنَةٌ پیشہ ہے۔ جب كَ جڑتا ہے تو ة کھل کر ت بن جاتی ہے: مِهْنَتُكَ، آپ کا پیشہ۔ آگے مَا لگائیں: مَا مِهْنَتُكَ؟، آپ کا پیشہ کیا ہے؟"
+      },
+      "examples": [
+        {
+          "ar": "مِهْنَةٌ",
+          "ar_plain": "مهنة",
+          "translit": "mihnatun",
+          "en": "a profession",
+          "ur": "پیشہ"
+        },
+        {
+          "ar": "مِهْنَتُكَ",
+          "ar_plain": "مهنتك",
+          "translit": "mihnatuka",
+          "en": "your profession (to a man)",
+          "ur": "آپ کا پیشہ (مرد سے)"
+        }
+      ],
+      "introduces_vocab": {
+        "ar_plain": "مهنة"
       }
     },
     {
@@ -46,30 +62,31 @@
       "text": {
         "ar": "طَبِيبٌ",
         "ar_plain": "طبيب",
-        "translit": "tabibun",
+        "translit": "ṭabībun",
         "en": "a doctor",
         "ur": "ڈاکٹر"
       },
       "explanation": {
         "en": "طَبِيبٌ is a doctor, someone who treats the sick.",
-        "ur": "طَبِيبٌ ڈاکٹر کو کہتے ہیں، جو بیماروں کا علاج کرتا ہے۔"
+        "ur": "طَبِيبٌ ڈاکٹر ہے، جو بیماروں کا علاج کرتا ہے۔"
       },
       "introduces_vocab": {
         "ar_plain": "طبيب"
-      }
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/tabib.webp"
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "مُعَلِّمٌ",
+        "ar": "مُعَلِّمٌ",
         "ar_plain": "معلم",
-        "translit": "mu'allimun",
+        "translit": "muʿallimun",
         "en": "a teacher",
         "ur": "استاد"
       },
       "explanation": {
-        "en": "مُعَلِّمٌ is a teacher, someone who teaches knowledge.",
-        "ur": "مُعَلِّمٌ استاد کو کہتے ہیں، جو علم سکھاتا ہے۔"
+        "en": "مُعَلِّمٌ is a teacher, someone who passes on knowledge.",
+        "ur": "مُعَلِّمٌ استاد ہے، جو علم آگے پہنچاتا ہے۔"
       },
       "introduces_vocab": {
         "ar_plain": "معلم"
@@ -85,8 +102,8 @@
         "ur": "انجینئر"
       },
       "explanation": {
-        "en": "مُهَنْدِسٌ is an engineer, someone who designs or builds with skill.",
-        "ur": "مُهَنْدِسٌ انجینئر کو کہتے ہیں، جو مہارت سے ڈیزائن یا تعمیر کرتا ہے۔"
+        "en": "مُهَنْدِسٌ is an engineer, someone who designs and builds with skill.",
+        "ur": "مُهَنْدِسٌ انجینئر ہے، جو مہارت سے ڈیزائن اور تعمیر کرتا ہے۔"
       },
       "introduces_vocab": {
         "ar_plain": "مهندس"
@@ -97,31 +114,118 @@
       "text": {
         "ar": "تَاجِرٌ",
         "ar_plain": "تاجر",
-        "translit": "tajirun",
+        "translit": "tājirun",
         "en": "a merchant",
         "ur": "تاجر"
       },
       "explanation": {
-        "en": "تَاجِرٌ is a merchant or trader, someone who buys and sells.",
-        "ur": "تَاجِرٌ تاجر کو کہتے ہیں، جو خرید و فروخت کرتا ہے۔"
+        "en": "تَاجِرٌ is a merchant, someone who buys and sells.",
+        "ur": "تَاجِرٌ تاجر ہے، جو خرید و فروخت کرتا ہے۔"
       },
       "introduces_vocab": {
         "ar_plain": "تاجر"
-      }
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/tajir.webp"
     },
     {
       "type": "EXAMPLE",
       "text": {
         "ar": "أَنَا طَبِيبٌ",
         "ar_plain": "انا طبيب",
-        "translit": "ana tabibun",
-        "en": "I am a doctor",
-        "ur": "میں ڈاکٹر ہوں"
+        "translit": "anā ṭabībun",
+        "en": "I am a doctor.",
+        "ur": "میں ڈاکٹر ہوں۔"
       },
       "explanation": {
-        "en": "Answer with أَنَا, I am, then the profession: أَنَا مُعَلِّمٌ, I am a teacher.",
-        "ur": "جواب میں أَنَا کہیں، یعنی میں ہوں، پھر پیشہ بولیں: أَنَا مُعَلِّمٌ، میں استاد ہوں۔"
-      }
+        "en": "Answer as a full sentence: أَنَا, then the profession. أَنَا مُعَلِّمٌ, I am a teacher. No 'am' is needed.",
+        "ur": "پورے جملے میں جواب دیں: أَنَا، پھر پیشہ۔ أَنَا مُعَلِّمٌ، میں استاد ہوں۔ 'ہوں' کی ضرورت نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "أَنَا مُعَلِّمٌ",
+          "ar_plain": "انا معلم",
+          "translit": "anā muʿallimun",
+          "en": "I am a teacher.",
+          "ur": "میں استاد ہوں۔"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A woman's profession",
+        "ar": "طَبِيبٌ / طَبِيبَةٌ",
+        "ur": "عورت کا پیشہ"
+      },
+      "explanation": {
+        "en": "Add ة and the profession is a woman's: طَبِيبَةٌ, مُعَلِّمَةٌ, مُهَنْدِسَةٌ, تَاجِرَةٌ. And a woman is asked مَا مِهْنَتُكِ؟ with kasrah. Recognise these forms; the exercises practise the masculine ones.",
+        "ur": "ة لگائیں تو پیشہ عورت کا ہو جاتا ہے: طَبِيبَةٌ، مُعَلِّمَةٌ، مُهَنْدِسَةٌ، تَاجِرَةٌ۔ اور عورت سے کسرہ کے ساتھ مَا مِهْنَتُكِ؟ پوچھا جاتا ہے۔ ان صورتوں کو پہچانیں؛ مشقیں مذکر صورتوں کی ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "طَبِيبٌ",
+          "ar_plain": "طبيب",
+          "translit": "ṭabībun",
+          "en": "a doctor",
+          "ur": "ڈاکٹر"
+        },
+        {
+          "ar": "طَبِيبَةٌ",
+          "ar_plain": "طبيبة",
+          "translit": "ṭabībatun",
+          "en": "a doctor (female)",
+          "ur": "ڈاکٹر (خاتون)"
+        },
+        {
+          "ar": "مُعَلِّمٌ",
+          "ar_plain": "معلم",
+          "translit": "muʿallimun",
+          "en": "a teacher",
+          "ur": "استاد"
+        },
+        {
+          "ar": "مُعَلِّمَةٌ",
+          "ar_plain": "معلمة",
+          "translit": "muʿallimatun",
+          "en": "a teacher (female)",
+          "ur": "استانی"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "عَمَلَكُمْ",
+        "ar_plain": "عملكم",
+        "translit": "ʿamalakum",
+        "en": "your work",
+        "ur": "تمہارا عمل"
+      },
+      "explanation": {
+        "en": "Find عَمَلَكُمْ, your work: عَمَل, work, with كُمْ, 'your' to a group, the same كُمْ you saw in بُيُوتِكُمْ. It is the same shape as مِهْنَتُكَ, a noun with 'your' attached. The ayah is about work in general; your four profession words are today's vocabulary, not the Quran's.",
+        "ur": "عَمَلَكُمْ، تمہارا عمل، تلاش کریں: عَمَل، عمل، کے ساتھ كُمْ، جماعت سے 'تمہارا'، وہی كُمْ جو آپ نے بُيُوتِكُمْ میں دیکھا۔ یہ مِهْنَتُكَ جیسی ساخت ہے، اسم کے ساتھ 'آپ کا' جڑا ہوا۔ آیت عمومی عمل کے بارے میں ہے؛ آپ کے چار پیشوں کے الفاظ آج کی لغت ہیں، قرآن کے نہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009105.mp3",
+      "examples": [
+        {
+          "ar": "عَمَلٌ",
+          "ar_plain": "عمل",
+          "translit": "ʿamalun",
+          "en": "work",
+          "ur": "عمل"
+        },
+        {
+          "ar": "عَمَلَكُمْ",
+          "ar_plain": "عملكم",
+          "translit": "ʿamalakum",
+          "en": "your work (to a group)",
+          "ur": "تمہارا عمل (جماعت سے)"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -131,9 +235,9 @@
       "prompt": {
         "ar": "مَا مِهْنَتُكَ؟",
         "ar_plain": "ما مهنتك",
-        "translit": "maa mihnatuka?",
-        "en": "What is your profession?",
-        "ur": "آپ کا پیشہ کیا ہے؟"
+        "translit": "mā mihnatuka?",
+        "en": "What is your profession? (to a man)",
+        "ur": "آپ کا پیشہ کیا ہے؟ (مرد سے)"
       },
       "options": [
         {
@@ -145,15 +249,19 @@
           "ur": "آپ کا نام کیا ہے؟"
         },
         {
-          "en": "I am a doctor",
-          "ur": "میں ڈاکٹر ہوں"
+          "en": "I am a doctor.",
+          "ur": "میں ڈاکٹر ہوں۔"
         },
         {
-          "en": "This is a teacher",
-          "ur": "یہ استاد ہے"
+          "en": "Where are you from?",
+          "ur": "آپ کہاں سے ہیں؟"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "مِهْنَتُكَ is 'your profession', so مَا مِهْنَتُكَ؟ asks what your profession is.",
+        "ur": "مِهْنَتُكَ 'آپ کا پیشہ' ہے، تو مَا مِهْنَتُكَ؟ پوچھتا ہے کہ آپ کا پیشہ کیا ہے۔"
+      },
       "xp_value": 1
     },
     {
@@ -163,14 +271,14 @@
         {
           "ar": "طَبِيبٌ",
           "ar_plain": "طبيب",
-          "translit": "tabibun",
+          "translit": "ṭabībun",
           "en": "a doctor",
           "ur": "ڈاکٹر"
         },
         {
-          "ar": "مُعَلِّمٌ",
+          "ar": "مُعَلِّمٌ",
           "ar_plain": "معلم",
-          "translit": "mu'allimun",
+          "translit": "muʿallimun",
           "en": "a teacher",
           "ur": "استاد"
         },
@@ -184,7 +292,7 @@
         {
           "ar": "تَاجِرٌ",
           "ar_plain": "تاجر",
-          "translit": "tajirun",
+          "translit": "tājirun",
           "en": "a merchant",
           "ur": "تاجر"
         }
@@ -225,23 +333,31 @@
           3
         ]
       ],
+      "explanation_on_wrong": {
+        "en": "طَبِيبٌ treats the sick, مُعَلِّمٌ teaches, مُهَنْدِسٌ designs and builds, تَاجِرٌ buys and sells.",
+        "ur": "طَبِيبٌ بیماروں کا علاج کرتا ہے، مُعَلِّمٌ پڑھاتا ہے، مُهَنْدِسٌ ڈیزائن اور تعمیر کرتا ہے، تَاجِرٌ خرید و فروخت کرتا ہے۔"
+      },
       "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch12-l03-ex03",
       "statement": {
-        "en": "أَنَا طَبِيبٌ means I am a doctor.",
-        "ur": "أَنَا طَبِيبٌ کا مطلب ہے: میں ڈاکٹر ہوں۔",
+        "en": "مُعَلِّمَةٌ, with ة at the end, is the word for a female teacher.",
+        "ur": "مُعَلِّمَةٌ، آخر میں ة کے ساتھ، خاتون استاد کا لفظ ہے۔",
         "ar_example": {
-          "ar": "أَنَا طَبِيبٌ",
-          "ar_plain": "انا طبيب",
-          "translit": "ana tabibun",
-          "en": "I am a doctor",
-          "ur": "میں ڈاکٹر ہوں"
+          "ar": "مُعَلِّمَةٌ",
+          "ar_plain": "معلمة",
+          "translit": "muʿallimatun",
+          "en": "a teacher (female)",
+          "ur": "استانی"
         }
       },
       "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "This is true: the ة marks the feminine form. مُعَلِّمٌ is a male teacher, مُعَلِّمَةٌ a female one.",
+        "ur": "یہ درست ہے: ة مؤنث صورت کی علامت ہے۔ مُعَلِّمٌ مرد استاد ہے، مُعَلِّمَةٌ خاتون استاد۔"
+      },
       "xp_value": 1
     },
     {
@@ -250,21 +366,21 @@
       "mode": "TAP",
       "sentence_ar": "أَنَا ___",
       "hint": {
-        "en": "I am a teacher",
-        "ur": "میں استاد ہوں"
+        "en": "I am a teacher.",
+        "ur": "میں استاد ہوں۔"
       },
       "options": [
         {
-          "ar": "مُعَلِّمٌ",
+          "ar": "مُعَلِّمٌ",
           "ar_plain": "معلم",
-          "translit": "mu'allimun",
+          "translit": "muʿallimun",
           "en": "a teacher",
           "ur": "استاد"
         },
         {
           "ar": "مَا",
           "ar_plain": "ما",
-          "translit": "maa",
+          "translit": "mā",
           "en": "what?",
           "ur": "کیا؟"
         },
@@ -272,23 +388,27 @@
           "ar": "مِهْنَتُكَ",
           "ar_plain": "مهنتك",
           "translit": "mihnatuka",
-          "en": "your profession",
-          "ur": "آپ کا پیشہ"
+          "en": "your profession (to a man)",
+          "ur": "آپ کا پیشہ (مرد سے)"
         },
         {
           "ar": "اِسْمُكَ",
           "ar_plain": "اسمك",
           "translit": "ismuka",
-          "en": "your name",
-          "ur": "آپ کا نام"
+          "en": "your name (to a man)",
+          "ur": "آپ کا نام (مرد سے)"
         }
       ],
       "correct_answer": {
-        "ar": "مُعَلِّمٌ",
+        "ar": "مُعَلِّمٌ",
         "ar_plain": "معلم",
-        "translit": "mu'allimun",
+        "translit": "muʿallimun",
         "en": "a teacher",
         "ur": "استاد"
+      },
+      "explanation_on_wrong": {
+        "en": "After أَنَا comes the profession itself: أَنَا مُعَلِّمٌ. مِهْنَتُكَ and اِسْمُكَ are 'your profession' and 'your name'.",
+        "ur": "أَنَا کے بعد خود پیشہ آتا ہے: أَنَا مُعَلِّمٌ۔ مِهْنَتُكَ اور اِسْمُكَ 'آپ کا پیشہ' اور 'آپ کا نام' ہیں۔"
       },
       "xp_value": 1
     },
@@ -296,16 +416,16 @@
       "type": "BUILD_SENTENCE",
       "id": "ch12-l03-ex05",
       "target_translation": {
-        "en": "I am an engineer",
-        "ur": "میں انجینئر ہوں"
+        "en": "I am an engineer.",
+        "ur": "میں انجینئر ہوں۔"
       },
       "tiles": [
         {
           "ar": "أَنَا",
           "ar_plain": "انا",
-          "translit": "ana",
-          "en": "I am",
-          "ur": "میں ہوں"
+          "translit": "anā",
+          "en": "I",
+          "ur": "میں"
         },
         {
           "ar": "مُهَنْدِسٌ",
@@ -317,14 +437,14 @@
         {
           "ar": "مَا",
           "ar_plain": "ما",
-          "translit": "maa",
+          "translit": "mā",
           "en": "what?",
           "ur": "کیا؟"
         },
         {
           "ar": "تَاجِرٌ",
           "ar_plain": "تاجر",
-          "translit": "tajirun",
+          "translit": "tājirun",
           "en": "a merchant",
           "ur": "تاجر"
         }
@@ -333,6 +453,10 @@
         0,
         1
       ],
+      "explanation_on_wrong": {
+        "en": "Two words: أَنَا, I, then مُهَنْدِسٌ, an engineer. تَاجِرٌ would make it 'I am a merchant'.",
+        "ur": "دو لفظ: أَنَا، میں، پھر مُهَنْدِسٌ، انجینئر۔ تَاجِرٌ سے 'میں تاجر ہوں' بن جاتا۔"
+      },
       "xp_value": 1
     },
     {
@@ -341,72 +465,114 @@
       "prompt_line": {
         "ar": "مَا مِهْنَتُكَ؟",
         "ar_plain": "ما مهنتك",
-        "translit": "maa mihnatuka?",
-        "en": "What is your profession?",
-        "ur": "آپ کا پیشہ کیا ہے؟"
+        "translit": "mā mihnatuka?",
+        "en": "What is your profession? (to a man)",
+        "ur": "آپ کا پیشہ کیا ہے؟ (مرد سے)"
       },
       "response_mode": "PICK",
       "options": [
         {
           "ar": "أَنَا طَبِيبٌ",
           "ar_plain": "انا طبيب",
-          "translit": "ana tabibun",
-          "en": "I am a doctor",
-          "ur": "میں ڈاکٹر ہوں"
+          "translit": "anā ṭabībun",
+          "en": "I am a doctor.",
+          "ur": "میں ڈاکٹر ہوں۔"
         },
         {
-          "ar": "مَا اِسْمُكَ؟",
+          "ar": "اِسْمِي عُمَرُ",
+          "ar_plain": "اسمي عمر",
+          "translit": "ismī ʿUmaru",
+          "en": "My name is Umar.",
+          "ur": "میرا نام عمر ہے۔"
+        },
+        {
+          "ar": "أَنَا مِنْ بَاكِسْتَانَ",
+          "ar_plain": "انا من باكستان",
+          "translit": "anā min Bākistāna",
+          "en": "I am from Pakistan.",
+          "ur": "میں پاکستان سے ہوں۔"
+        },
+        {
+          "ar": "مَا اسْمُكَ؟",
           "ar_plain": "ما اسمك",
-          "translit": "maa ismuka?",
-          "en": "What is your name?",
-          "ur": "آپ کا نام کیا ہے؟"
-        },
-        {
-          "ar": "هَذَا بَيْتٌ",
-          "ar_plain": "هذا بيت",
-          "translit": "hadha baytun",
-          "en": "This is a house",
-          "ur": "یہ گھر ہے"
-        },
-        {
-          "ar": "فِي الْبَيْتِ",
-          "ar_plain": "في البيت",
-          "translit": "fi al-bayti",
-          "en": "in the house",
-          "ur": "گھر میں"
+          "translit": "mā ismuka?",
+          "en": "What is your name? (to a man)",
+          "ur": "آپ کا نام کیا ہے؟ (مرد سے)"
         }
       ],
       "correct_option_index": 0,
+      "explanation_on_wrong": {
+        "en": "The question is about your profession, so answer with أَنَا and a profession: أَنَا طَبِيبٌ. The other lines answer a name or an origin question.",
+        "ur": "سوال آپ کے پیشے کے بارے میں ہے، تو أَنَا اور پیشے سے جواب دیں: أَنَا طَبِيبٌ۔ باقی جملے نام یا اصل کے سوال کا جواب ہیں۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch12-l03-ex07",
+      "prompt": {
+        "ar": "مَا مِهْنَتُكِ؟",
+        "ar_plain": "ما مهنتك",
+        "translit": "mā mihnatuki?",
+        "en": "What is your profession? (to a woman)",
+        "ur": "آپ کا پیشہ کیا ہے؟ (عورت سے)"
+      },
+      "options": [
+        {
+          "en": "What is your profession? (to a woman)",
+          "ur": "آپ کا پیشہ کیا ہے؟ (عورت سے)"
+        },
+        {
+          "en": "What is your profession? (to a man)",
+          "ur": "آپ کا پیشہ کیا ہے؟ (مرد سے)"
+        },
+        {
+          "en": "What is your name? (to a woman)",
+          "ur": "آپ کا نام کیا ہے؟ (عورت سے)"
+        },
+        {
+          "en": "I am a doctor (female).",
+          "ur": "میں ڈاکٹر ہوں (خاتون)۔"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The kasrah of كِ tells you the listener is a woman, and مِهْنَة is profession, not name.",
+        "ur": "كِ کا کسرہ بتاتا ہے کہ سننے والی عورت ہے، اور مِهْنَة پیشہ ہے، نام نہیں۔"
+      },
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "People and professions",
-      "ar": "النَّاسُ وَالْمِهَنُ",
-      "ur": "لوگ اور پیشے"
+      "en": "Work and professions",
+      "ar": "الْعَمَلُ وَالْمِهَنُ",
+      "ur": "کام اور پیشے"
     },
     "ayah": {
-      "surah": 49,
-      "ayah": 13,
-      "label": "Al-Hujurat 49:13",
-      "ar": "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ",
-      "en": "O mankind, indeed We created you from male and female.",
-      "ur": "اے لوگو، بے شک ہم نے تمہیں ایک مرد اور ایک عورت سے پیدا کیا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049013.mp3"
+      "surah": 9,
+      "ayah": 105,
+      "label": "At-Tawbah 9:105",
+      "ar": "وَقُلِ اعْمَلُوا فَسَيَرَى اللَّهُ عَمَلَكُمْ",
+      "en": "And say, 'Do [as you will], for Allah will see your deeds.'",
+      "ur": "اور کہہ دو کہ عمل کیے جاؤ، اللہ تمہارے عمل کو دیکھ لے گا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009105.mp3"
     },
     "highlighted_word_indices": [
-      2
+      4
+    ],
+    "highlighted_words": [
+      "عَمَلَكُمْ"
     ],
     "noor_explanation": {
-      "en": "النَّاسُ means the people. When you meet people, Arabic lets you ask about their work with adab: مَا مِهْنَتُكَ؟",
-      "ur": "النَّاسُ کا مطلب ہے لوگ۔ جب آپ لوگوں سے ملتے ہیں تو عربی میں ادب کے ساتھ ان کے کام کے بارے میں پوچھ سکتے ہیں: مَا مِهْنَتُكَ؟"
+      "en": "عَمَلَكُمْ is 'your work': عَمَل with كُمْ attached, the same shape as مِهْنَتُكَ. Allah sees the work of every doctor, teacher, engineer and merchant. This ayah is your reading target for work in general; the profession words themselves are today's vocabulary.",
+      "ur": "عَمَلَكُمْ 'تمہارا عمل' ہے: عَمَل کے ساتھ كُمْ جڑا ہوا، مِهْنَتُكَ جیسی ساخت۔ اللہ ہر ڈاکٹر، استاد، انجینئر اور تاجر کا کام دیکھتا ہے۔ یہ آیت عمومی عمل کے لیے آپ کا پڑھنے کا ہدف ہے؛ پیشوں کے الفاظ آج کی لغت ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now ask and answer about work: مَا مِهْنَتُكَ؟ أَنَا مُعَلِّمٌ.",
-      "ur": "اب آپ کام کے بارے میں پوچھ اور جواب دے سکتے ہیں: مَا مِهْنَتُكَ؟ أَنَا مُعَلِّمٌ۔"
+      "en": "You can now ask مَا مِهْنَتُكَ؟, answer with a full sentence such as أَنَا طَبِيبٌ, and recognise the feminine forms when you meet them.",
+      "ur": "اب آپ مَا مِهْنَتُكَ؟ پوچھ سکتے ہیں، أَنَا طَبِيبٌ جیسے پورے جملے سے جواب دے سکتے ہیں، اور مؤنث صورتیں سامنے آئیں تو پہچان سکتے ہیں۔"
     }
   }
 }

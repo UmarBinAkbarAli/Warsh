@@ -149,6 +149,21 @@ that carries an image uses an approved asset: `ab`, `umm`, `bayt`, `kitab`,
 proposal does not require an illustration on every card, so no composite
 scenes are requested.
 
+## Chapter 12 — open (2 scenes)
+
+Rebuilt 2026-09-19 from `proposals/chapter-12-content-proposal.md`. Cards
+whose word has an approved asset show one: `ism`, `min`, `ayna`, `dhahaba`,
+`rajaa`, `masjid` and `dars` from the discover set, and `tabib` and `tajir`
+copied from the dictionary word images on 2026-09-19. Note for the owner: the
+dictionary image filed under مُعَلِّم is a shop-counter scene, so it is used
+here for تَاجِرٌ; the تَاجِر and خَلَقَ dictionary assets are calligraphy badges
+and were not used. The review reuses no images.
+
+| # | Filename | Cards | Arabic on the card | Brief |
+|---|---|---|---|---|
+| 1 | `ch12-muallim-teacher.png` | `ch12-l03` card 3 | مُعَلِّمٌ | A teacher at a low desk or lectern with an open book and a small class in front, seen from the side; realistic soft 3D; no lettering. |
+| 2 | `ch12-muhandis-engineer.png` | `ch12-l03` card 4 | مُهَنْدِسٌ | An engineer's drawing board with a rolled plan, a set square and a small model of an arch or bridge; no lettering. |
+
 ## Delivered
 
 _Nothing yet._

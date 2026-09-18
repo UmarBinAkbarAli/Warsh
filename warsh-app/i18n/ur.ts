@@ -525,6 +525,7 @@ export const ur = {
   "player.prompt.audioMeaning": "غور سے سنیں - اس کا کیا مطلب ہے؟",
   "player.prompt.harakah": "اس لفظ پر حرکات لگائیں:",
   "player.prompt.identifyRoot": "اس لفظ کا تین حرفی روٹ (الجذر) کیا ہے؟",
+  "player.prompt.conversationReply": "کوئی آپ سے یہ کہتا ہے۔ آپ کیا جواب دیں گے؟",
   "player.feedback.correct": "آپ نے نمونہ پہچان لیا اور درست جواب چن لیا۔",
   "player.feedback.almost": "قریب تھے - اسے دوبارہ دیکھتے ہیں",
   "player.writePlaceholder": "یہاں لکھیں",

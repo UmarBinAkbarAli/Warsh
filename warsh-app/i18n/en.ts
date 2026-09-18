@@ -528,6 +528,7 @@ export const en = {
   "player.prompt.audioMeaning": "Listen carefully - what does this mean?",
   "player.prompt.harakah": "Add the vowel marks (harakat) to this word:",
   "player.prompt.identifyRoot": "What is the 3-letter root (الجذر) of this word?",
+  "player.prompt.conversationReply": "Someone says this to you. How do you reply?",
   "player.feedback.correct": "You recognised the pattern and chose the right answer.",
   "player.feedback.almost": "Almost - let's look at this again",
   "player.writePlaceholder": "اكتب هنا",

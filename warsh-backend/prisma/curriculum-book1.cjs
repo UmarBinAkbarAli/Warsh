@@ -502,32 +502,41 @@ const specs = [
   },
 
   // ── Ch12 ── Introductions and Personal Questions ──────────────────────────
+  // Docs/proposals/chapter-12-content-proposal.md (2026-09-19): مَا اسْمُكَ؟ /
+  // اِسْمِي with Al-Hujurat 49:13 excerpted at لِتَعَارَفُوا, مِنْ أَيْنَ with the
+  // origin question of Abasa 80:18, professions with عَمَلَكُمْ in At-Tawbah
+  // 9:105, and ذَهَبَ / رَجَعَ / خَلَقَ with the exact form خَلَقَ in Al-Alaq 96:2.
+  // Feminine address forms are recognition only; the spoken lesson is
+  // listening only.
   {
     order: 12,
     sourceFile: "reader_lecture_12_ta'aruf.md",
     title: "Introductions and Personal Questions",
+    titleUr: "تعارف اور ذاتی سوالات",
     titleAr: "التَّعَارُف وَالأَسْئِلَة الشَّخْصِيَّة",
-    description: "Asking and answering about name, nationality, and profession — and meeting past-tense verbs.",
-    hook: { ayahAr: "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ", ayahRef: "Al-Hujurat 49:13", highlightedWord: "النَّاسُ" },
+    description: "Asking and answering about name, origin and profession; ذَهَبَ, رَجَعَ and خَلَقَ as recognition words; classroom phrases.",
+    descriptionUr: "نام، اصل اور پیشے کے بارے میں پوچھنا اور بتانا؛ ذَهَبَ، رَجَعَ اور خَلَقَ بطور پہچان کے الفاظ؛ درس گاہ کے جملے۔",
+    hook: { ayahAr: "وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا", ayahRef: "Al-Hujurat 49:13", highlightedWord: "لِتَعَارَفُوا" },
     examples: [
-      card("مَا اسْمُكَ؟ — اسْمِي أَحْمَدُ", "What is your name? — My name is Ahmad", "maa ismuka — ismee ahmad"),
-      card("مِنْ أَيْنَ أَنْتَ؟ — أَنَا مِنْ بَاكِسْتَان", "Where are you from? — I am from Pakistan", "min ayna anta — anaa min baakistaan"),
+      card("مَا اسْمُكَ؟ — اِسْمِي أَحْمَدُ", "What is your name? — My name is Ahmad", "maa ismuka — ismee ahmad"),
+      card("مِنْ أَيْنَ أَنْتَ؟ — أَنَا مِنْ بَاكِسْتَانَ", "Where are you from? — I am from Pakistan", "min ayna anta — anaa min baakistaan"),
       card("مَا مِهْنَتُكَ؟ — أَنَا طَبِيبٌ", "What is your profession? — I am a doctor", "maa mihnatuka — anaa tabeeb"),
-      card("ذَهَبَ وَرَجَعَ", "He went and returned", "dhahaba wa raja'a"),
+      card("ذَهَبَ إِلَى الْمَسْجِدِ", "He went to the mosque", "dhahaba ilal-masjid"),
     ],
-    parseText: "مَا اسْمُكَ؟",
-    parseTokens: [token("مَا", "مبتدأ", "what"), token("اسْمُكَ", "خبر", "your name")],
-    conversation: ["مَا اسْمُكَ؟", "اسْمِي عُمَرُ"],
+    parseText: "أَنَا مِنْ بَاكِسْتَانَ",
+    parseTokens: [token("أَنَا", "مبتدأ", "I"), token("مِنْ", "حرف جر", "from"), token("بَاكِسْتَانَ", "خبر", "Pakistan")],
+    conversation: ["مَا اسْمُكَ؟", "اِسْمِي عُمَرُ"],
     conversationDistractor: "أَبِي فِي الْبَيْتِ",
     distractor: "My father is in the house",
     blankDistractor: "مِهْنَتُهُ",
-    noorTip: "يَا أَيُّهَا النَّاسُ — 'O Mankind' — Allah addresses all people. النَّاسُ is the collective noun for humanity.",
-    noorTipUr: "یَا أَیُّهَا النَّاسُ — اللہ تمام انسانیت کو مخاطب کرتے ہیں۔ النَّاسُ اسم جمع ہے۔",
+    noorTip: "لِتَعَارَفُوا — that you may know one another — is the purpose Al-Hujurat gives for peoples and tribes; asking a name is its first step.",
+    noorTipUr: "لِتَعَارَفُوا — تاکہ تم ایک دوسرے کو پہچانو — الحجرات قوموں اور قبیلوں کا یہی مقصد بتاتی ہے؛ نام پوچھنا اس کا پہلا قدم ہے۔",
     focuses: [
-      { title: "What Is Your Name?", titleAr: "مَا اسْمُكَ؟", grammarTerm: "جملة استفهامية", reveal: "You asked 'what is your name?' — مَا opens the question, اسْمُكَ is the subject (your name).", hookQuestion: "In مَا اسْمُكَ؟, which word is the subject of the question?" },
-      { title: "Where Are You From?", titleAr: "مِنْ أَيْنَ أَنْتَ؟", grammarTerm: "استفهام عن المكان", reveal: "مِنْ (from) + أَيْنَ (where) = where from? — asking about origin.", hookQuestion: "How is مِنْ أَيْنَ different from just أَيْنَ?" },
-      { title: "Professions", titleAr: "الْمِهَن", grammarTerm: "مفردات", reveal: "You learned the core professions: طَبِيبٌ (doctor), مُعَلِّمٌ (teacher), مُهَنْدِسٌ (engineer), تَاجِرٌ (merchant).", hookQuestion: "What is the profession of أُسْتَاذٌ?" },
-      { title: "Past Tense as Vocabulary", titleAr: "الْفِعْل الْمَاضِي لِلتَّعَرُّف", grammarTerm: "فعل ماض للتعارف", reveal: "You recognised ذَهَبَ and رَجَعَ as past-tense verbs — used here as recognition vocabulary. Full conjugation comes in Book 4.", hookQuestion: "What is the difference between ذَهَبَ and رَجَعَ in meaning?" },
+      { title: "What Is Your Name?", titleAr: "مَا اسْمُكَ؟", grammarTerm: "جملة استفهامية", reveal: "مَا opens the question and اِسْمُكَ, your name, follows it; the answer is اِسْمِي and the name. مَا اسْمُكِ؟ addresses a woman.", hookQuestion: "In مَا اسْمُكَ؟, which word carries 'your'?" },
+      { title: "Where Are You From?", titleAr: "مِنْ أَيْنَ أَنْتَ؟", grammarTerm: "استفهام عن الأصل", reveal: "مِنْ (from) + أَيْنَ (where) asks about origin; أَيْنَ alone asks about location. Answer أَنَا مِنْ and the place.", hookQuestion: "How is مِنْ أَيْنَ different from just أَيْنَ?" },
+      { title: "Professions", titleAr: "الْمِهَن", grammarTerm: "مفردات", reveal: "مَا مِهْنَتُكَ؟ and four answers: طَبِيبٌ, مُعَلِّمٌ, مُهَنْدِسٌ, تَاجِرٌ, each as a full sentence with أَنَا; add ة for a woman.", hookQuestion: "What changes when the doctor is a woman?" },
+      { title: "Past-Tense Recognition", titleAr: "تَعَرُّفُ الْفِعْلِ الْمَاضِي", grammarTerm: "فعل ماض للتعارف", reveal: "ذَهَبَ, رَجَعَ and خَلَقَ are recognised as whole words; خَلَقَ opens Al-Alaq 96:2 in exactly that form. Conjugation comes later.", hookQuestion: "Which word in خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ is the verb?" },
+      { title: "Classroom and Halaqa Phrases", titleAr: "عِبَارَاتُ الدَّرْسِ وَالْحَلْقَةِ", grammarTerm: "عبارات مسموعة", reveal: "Twelve halaqa phrases for listening and recognition, from اِفْتَحُوا الْكُتُبَ to جَزَاكَ اللهُ خَيْرًا يَا أُسْتَاذُ; no grammar is assessed.", hookQuestion: "How does a learner politely begin a question to the teacher?" },
     ],
   },
 

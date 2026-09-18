@@ -439,6 +439,46 @@ Everything below this list is either done and verified, or one of these:
    0 XP. `media:check-fixtures` reports three pre-existing Chapter 4
    relative-path image URLs (`/images/discover/ch04-*-v1.png`) that it cannot
    HEAD; they are not part of this work.
+   **Chapter 12 (`Docs/proposals/chapter-12-content-proposal.md`,
+   introductions: مَا اسْمُكَ؟, مِنْ أَيْنَ أَنْتَ؟, مَا مِهْنَتُكَ؟, past-tense
+   recognition, classroom phrases) is built and staging-verified 2026-09-19;
+   production promotion pending the owner's go-ahead** with
+   `content:promote-chapter-twelve -- --apply`, then
+   `content:backfill-new-lessons -- --lesson-ids ch12-l06,ch12-test --apply`,
+   `progress:backfill-skipped` for the owner's account, `content:baseline`,
+   `content:check`. `ch12-l01..l04` are rewritten in place (8 cards / 7–8
+   exercises, IDs and display orders unchanged); `ch12-l05` keeps its phrases
+   and audio and only gains the recognition-only scope note, plain phrase
+   contexts, a natural dialogue order and a clean title; `ch12-l06` (review,
+   8 cards / 10 exercises) and `ch12-test` (12 MC, 80 %) are new. Quran
+   checkpoints now carry declared targets: 49:13 at لِتَعَارَفُوا (Lesson 1,
+   review, test), Abasa 80:18 at مِنْ (Lesson 2), At-Tawbah 9:105 at
+   عَمَلَكُمْ (Lesson 3), Al-Alaq 96:2 at the exact خَلَقَ (Lesson 4); the
+   خَلَقْنَاكُم fill-in is gone and the bridge is one recognition-only CONTRAST
+   card. Feminine address and profession forms are recognition only. The stale
+   `reader_lecture_12_ta'aruf.md` source field was dropped. Fixture/Quran/Urdu
+   audits pass; 16 catalogue clips generated; `tabib` and `tajir` discover
+   images copied from the dictionary set (the dictionary asset under مُعَلِّم is
+   a shop scene — flagged for the owner; teacher and engineer scenes listed in
+   `lesson-illustrations-needed.md`). Verified on the API 34 emulator against
+   staging: chapter card and lesson list, every card of Lessons 1–4 and the
+   review with images and audio, Lesson 1 end to end with all seven exercise
+   types (wrong-answer explanation included), the spoken lesson's scope note;
+   through the API on a fresh account: test locked until the six lessons are
+   complete, answer key stripped, 0/12 and 9/12 fail, 10/12 passes with the
+   chapter bonus and unlocks Chapter 13, two repeat passes earn 0 XP, dialogue
+   order A:p01 A:p02 A:p09 B:p08 B:p10 B:p12.
+   **Found and fixed on the way (app):** `CONVERSATION_BUILDER` was never
+   implemented for the schema-v1.0 shape — the player read only a legacy
+   `conversation` field, so the exercise rendered blank with no options and
+   no way forward. This is live today in production Chapter 12 Lesson 3
+   (`ex06`) and Chapters 22, 60, 61, 71, 72. `play.tsx` now renders the
+   opening line as the Arabic prompt with audio and the replies as an Arabic
+   option grid (BUILD mode uses the tile builder); `lib/audioTargets.ts` counts
+   the opening line as a catalogue clip (10 opening-line clips for Chapters
+   22/60/61/71/72 generated so content-health stays clean); new i18n key
+   `player.prompt.conversationReply` in en/ur. Verified on the emulator. Ships
+   with the next Android release; the web export needs a redeploy.
    Fixed 2026-09-18 alongside the promotion: (a) `GET /api/lessons/{id}` no
    longer returns `assessment.questions[].correct_index` — the server graded
    already and the app never read it, but the answer key was visible to anyone

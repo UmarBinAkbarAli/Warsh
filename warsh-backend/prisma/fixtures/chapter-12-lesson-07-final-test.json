@@ -1,0 +1,461 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 12 final test (ch12-test, new). Twelve multiple-choice questions covering the chapter outcomes: مَا in مَا اسْمُكَ؟, the correct reply to it, اِسْمُكَ versus اِسْمِي, أَيْنَ versus مِنْ أَيْنَ, أَنَا مِنْ بَاكِسْتَانَ, مِنْ أَيْنَ أَنْتِ؟ as the feminine address, مَا مِهْنَتُكَ؟, a profession reply, one feminine profession form, the meanings of ذَهَبَ / رَجَعَ / خَلَقَ, the exact taught form خَلَقَ against خَلَقْنَاكُمْ, and one classroom phrase. Excludes full past-tense conjugation, case terminology and any feminine production task. Pass mark 80 % (10 of 12) to match Chapters 3–11. Added 2026-09-19 from Docs/proposals/chapter-12-content-proposal.md.",
+    "titleUr": "باب 12 کا آخری امتحان",
+    "chapter_order": 12,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 49,
+      "ayah": 13,
+      "label": "Al-Hujurat 49:13",
+      "ar": "وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا",
+      "en": "And made you peoples and tribes that you may know one another.",
+      "ur": "اور تمہاری قومیں اور قبیلے بنائے تاکہ تم ایک دوسرے کو پہچانو۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049013.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 12.",
+      "ur": "باب 12 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "exercises": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 12,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch12-test-q01",
+        "topic": {
+          "en": "The question word",
+          "ur": "سوال کا لفظ"
+        },
+        "prompt": {
+          "en": "In مَا اسْمُكَ؟, what does مَا mean?",
+          "ur": "مَا اسْمُكَ؟ میں مَا کا کیا مطلب ہے؟"
+        },
+        "arabic": "مَا اسْمُكَ؟",
+        "options": [
+          {
+            "en": "what?",
+            "ur": "کیا؟"
+          },
+          {
+            "en": "where?",
+            "ur": "کہاں؟"
+          },
+          {
+            "en": "from",
+            "ur": "سے"
+          },
+          {
+            "en": "my",
+            "ur": "میرا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch12-test-q02",
+        "topic": {
+          "en": "Answering a name question",
+          "ur": "نام کے سوال کا جواب"
+        },
+        "prompt": {
+          "en": "Which is the correct reply to مَا اسْمُكَ؟",
+          "ur": "مَا اسْمُكَ؟ کا درست جواب کون سا ہے؟"
+        },
+        "arabic": "مَا اسْمُكَ؟",
+        "options": [
+          {
+            "en": "I am from Pakistan.",
+            "ur": "میں پاکستان سے ہوں۔",
+            "arabic": "أَنَا مِنْ بَاكِسْتَانَ"
+          },
+          {
+            "en": "My name is Ahmad.",
+            "ur": "میرا نام احمد ہے۔",
+            "arabic": "اِسْمِي أَحْمَدُ"
+          },
+          {
+            "en": "I am a doctor.",
+            "ur": "میں ڈاکٹر ہوں۔",
+            "arabic": "أَنَا طَبِيبٌ"
+          },
+          {
+            "en": "Your name is Ahmad.",
+            "ur": "آپ کا نام احمد ہے۔",
+            "arabic": "اِسْمُكَ أَحْمَدُ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch12-test-q03",
+        "topic": {
+          "en": "Your name, my name",
+          "ur": "آپ کا نام، میرا نام"
+        },
+        "prompt": {
+          "en": "Which word means 'my name'?",
+          "ur": "کون سے لفظ کا مطلب 'میرا نام' ہے؟"
+        },
+        "options": [
+          {
+            "en": "your name",
+            "ur": "آپ کا نام",
+            "arabic": "اِسْمُكَ"
+          },
+          {
+            "en": "a name",
+            "ur": "نام",
+            "arabic": "اِسْمٌ"
+          },
+          {
+            "en": "my name",
+            "ur": "میرا نام",
+            "arabic": "اِسْمِي"
+          },
+          {
+            "en": "your name (to a woman)",
+            "ur": "آپ کا نام (عورت سے)",
+            "arabic": "اِسْمُكِ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch12-test-q04",
+        "topic": {
+          "en": "Where, or from where",
+          "ur": "کہاں، یا کہاں سے"
+        },
+        "prompt": {
+          "en": "What does مِنْ أَيْنَ أَنْتَ؟ ask?",
+          "ur": "مِنْ أَيْنَ أَنْتَ؟ کیا پوچھتا ہے؟"
+        },
+        "arabic": "مِنْ أَيْنَ أَنْتَ؟",
+        "options": [
+          {
+            "en": "Where are you now?",
+            "ur": "آپ اب کہاں ہیں؟"
+          },
+          {
+            "en": "Where are you from?",
+            "ur": "آپ کہاں سے ہیں؟"
+          },
+          {
+            "en": "What is your name?",
+            "ur": "آپ کا نام کیا ہے؟"
+          },
+          {
+            "en": "Who are you?",
+            "ur": "آپ کون ہیں؟"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch12-test-q05",
+        "topic": {
+          "en": "I am from Pakistan",
+          "ur": "میں پاکستان سے ہوں"
+        },
+        "prompt": {
+          "en": "Which sentence means 'I am from Pakistan'?",
+          "ur": "کون سے جملے کا مطلب 'میں پاکستان سے ہوں' ہے؟"
+        },
+        "options": [
+          {
+            "en": "I am in Pakistan.",
+            "ur": "میں پاکستان میں ہوں۔",
+            "arabic": "أَنَا فِي بَاكِسْتَانَ"
+          },
+          {
+            "en": "Where are you from?",
+            "ur": "آپ کہاں سے ہیں؟",
+            "arabic": "مِنْ أَيْنَ أَنْتَ؟"
+          },
+          {
+            "en": "I am from Pakistan.",
+            "ur": "میں پاکستان سے ہوں۔",
+            "arabic": "أَنَا مِنْ بَاكِسْتَانَ"
+          },
+          {
+            "en": "Pakistan is a country.",
+            "ur": "پاکستان ایک ملک ہے۔",
+            "arabic": "بَاكِسْتَانُ بَلَدٌ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch12-test-q06",
+        "topic": {
+          "en": "Addressing a woman",
+          "ur": "عورت سے خطاب"
+        },
+        "prompt": {
+          "en": "Who is being asked in مِنْ أَيْنَ أَنْتِ؟",
+          "ur": "مِنْ أَيْنَ أَنْتِ؟ میں کس سے پوچھا جا رہا ہے؟"
+        },
+        "arabic": "مِنْ أَيْنَ أَنْتِ؟",
+        "options": [
+          {
+            "en": "a man",
+            "ur": "ایک مرد"
+          },
+          {
+            "en": "a woman",
+            "ur": "ایک عورت"
+          },
+          {
+            "en": "a group",
+            "ur": "ایک جماعت"
+          },
+          {
+            "en": "the speaker",
+            "ur": "خود بولنے والا"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch12-test-q07",
+        "topic": {
+          "en": "Asking a profession",
+          "ur": "پیشہ پوچھنا"
+        },
+        "prompt": {
+          "en": "What does مَا مِهْنَتُكَ؟ mean?",
+          "ur": "مَا مِهْنَتُكَ؟ کا کیا مطلب ہے؟"
+        },
+        "arabic": "مَا مِهْنَتُكَ؟",
+        "options": [
+          {
+            "en": "What is your name?",
+            "ur": "آپ کا نام کیا ہے؟"
+          },
+          {
+            "en": "Where are you from?",
+            "ur": "آپ کہاں سے ہیں؟"
+          },
+          {
+            "en": "What is your profession?",
+            "ur": "آپ کا پیشہ کیا ہے؟"
+          },
+          {
+            "en": "Are you a doctor?",
+            "ur": "کیا آپ ڈاکٹر ہیں؟"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch12-test-q08",
+        "topic": {
+          "en": "Answering a profession question",
+          "ur": "پیشے کے سوال کا جواب"
+        },
+        "prompt": {
+          "en": "Which is a correct reply to مَا مِهْنَتُكَ؟",
+          "ur": "مَا مِهْنَتُكَ؟ کا درست جواب کون سا ہے؟"
+        },
+        "arabic": "مَا مِهْنَتُكَ؟",
+        "options": [
+          {
+            "en": "I am a teacher.",
+            "ur": "میں استاد ہوں۔",
+            "arabic": "أَنَا مُعَلِّمٌ"
+          },
+          {
+            "en": "My name is Umar.",
+            "ur": "میرا نام عمر ہے۔",
+            "arabic": "اِسْمِي عُمَرُ"
+          },
+          {
+            "en": "I am from Egypt.",
+            "ur": "میں مصر سے ہوں۔",
+            "arabic": "أَنَا مِنْ مِصْرَ"
+          },
+          {
+            "en": "Where are you?",
+            "ur": "آپ کہاں ہیں؟",
+            "arabic": "أَيْنَ أَنْتَ؟"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch12-test-q09",
+        "topic": {
+          "en": "A woman's profession",
+          "ur": "عورت کا پیشہ"
+        },
+        "prompt": {
+          "en": "Which form means 'a doctor' when the doctor is a woman?",
+          "ur": "جب ڈاکٹر عورت ہو تو 'ڈاکٹر' کے لیے کون سی صورت ہے؟"
+        },
+        "options": [
+          {
+            "en": "a doctor (male)",
+            "ur": "ڈاکٹر (مرد)",
+            "arabic": "طَبِيبٌ"
+          },
+          {
+            "en": "a doctor (female)",
+            "ur": "ڈاکٹر (خاتون)",
+            "arabic": "طَبِيبَةٌ"
+          },
+          {
+            "en": "a teacher (female)",
+            "ur": "استانی",
+            "arabic": "مُعَلِّمَةٌ"
+          },
+          {
+            "en": "your profession",
+            "ur": "آپ کا پیشہ",
+            "arabic": "مِهْنَتُكَ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch12-test-q10",
+        "topic": {
+          "en": "Past-tense words",
+          "ur": "فعلِ ماضی کے الفاظ"
+        },
+        "prompt": {
+          "en": "What does رَجَعَ mean?",
+          "ur": "رَجَعَ کا کیا مطلب ہے؟"
+        },
+        "arabic": "رَجَعَ",
+        "options": [
+          {
+            "en": "he went",
+            "ur": "وہ گیا"
+          },
+          {
+            "en": "He created",
+            "ur": "اس نے پیدا کیا"
+          },
+          {
+            "en": "he returned",
+            "ur": "وہ واپس آیا"
+          },
+          {
+            "en": "after",
+            "ur": "کے بعد"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch12-test-q11",
+        "topic": {
+          "en": "The exact taught form",
+          "ur": "بالکل سکھائی گئی صورت"
+        },
+        "prompt": {
+          "en": "Which word is exactly the form you learned for 'He created'?",
+          "ur": "کون سا لفظ بالکل وہی صورت ہے جو آپ نے 'اس نے پیدا کیا' کے لیے سیکھی؟"
+        },
+        "options": [
+          {
+            "en": "He created",
+            "ur": "اس نے پیدا کیا",
+            "arabic": "خَلَقَ"
+          },
+          {
+            "en": "We created you — a different conjugated form",
+            "ur": "ہم نے تمہیں پیدا کیا — ایک مختلف گردانی صورت",
+            "arabic": "خَلَقْنَاكُمْ"
+          },
+          {
+            "en": "he went",
+            "ur": "وہ گیا",
+            "arabic": "ذَهَبَ"
+          },
+          {
+            "en": "he returned",
+            "ur": "وہ واپس آیا",
+            "arabic": "رَجَعَ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch12-test-q12",
+        "topic": {
+          "en": "In the halaqa",
+          "ur": "حلقے میں"
+        },
+        "prompt": {
+          "en": "What does هَلْ عِنْدَكُمْ أَسْئِلَةٌ؟ mean?",
+          "ur": "هَلْ عِنْدَكُمْ أَسْئِلَةٌ؟ کا کیا مطلب ہے؟"
+        },
+        "arabic": "هَلْ عِنْدَكُمْ أَسْئِلَةٌ؟",
+        "options": [
+          {
+            "en": "Open the books.",
+            "ur": "کتابیں کھولیں۔"
+          },
+          {
+            "en": "Do you have questions?",
+            "ur": "کیا آپ لوگوں کے پاس سوالات ہیں؟"
+          },
+          {
+            "en": "Read the lesson.",
+            "ur": "سبق پڑھیں۔"
+          },
+          {
+            "en": "The students are present.",
+            "ur": "طلبہ حاضر ہیں۔"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 12 — introductions and personal questions",
+      "ar": "التَّعَارُفُ وَالأَسْئِلَةُ الشَّخْصِيَّةُ",
+      "ur": "باب 12 — تعارف اور ذاتی سوالات"
+    },
+    "ayah": {
+      "surah": 49,
+      "ayah": 13,
+      "label": "Al-Hujurat 49:13",
+      "ar": "وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا",
+      "en": "And made you peoples and tribes that you may know one another.",
+      "ur": "اور تمہاری قومیں اور قبیلے بنائے تاکہ تم ایک دوسرے کو پہچانو۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049013.mp3"
+    },
+    "highlighted_word_indices": [
+      3
+    ],
+    "highlighted_words": [
+      "لِتَعَارَفُوا"
+    ],
+    "noor_explanation": {
+      "en": "لِتَعَارَفُوا, that you may know one another: name, origin, profession. You can now ask and answer all three in Arabic.",
+      "ur": "لِتَعَارَفُوا، تاکہ تم ایک دوسرے کو پہچانو: نام، اصل، پیشہ۔ اب آپ تینوں عربی میں پوچھ اور بتا سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 12 complete. You can introduce yourself, ask about a person's name, origin and profession, recognise ذَهَبَ, رَجَعَ and خَلَقَ, and follow a halaqa with adab.",
+      "ur": "باب 12 مکمل۔ اب آپ اپنا تعارف کرا سکتے ہیں، کسی کا نام، اصل اور پیشہ پوچھ سکتے ہیں، ذَهَبَ، رَجَعَ اور خَلَقَ پہچان سکتے ہیں، اور ادب کے ساتھ حلقے میں شریک ہو سکتے ہیں۔"
+    }
+  }
+}

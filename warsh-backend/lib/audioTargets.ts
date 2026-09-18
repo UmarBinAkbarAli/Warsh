@@ -36,6 +36,8 @@ export function exerciseAudioText(exercise: AnyRecord): string | undefined {
     case "SHADOW_REPEAT": return exercise.phrase?.ar;
     case "HARAKAH_PLACEMENT": return exercise.word_unvowelled;
     case "IDENTIFY_ROOT": return exercise.word?.ar;
+    // The opening line is what the learner hears before choosing a reply.
+    case "CONVERSATION_BUILDER": return exercise.prompt_line?.ar;
     // Quran fragments require exact human recitation, never synthesized audio.
     case "MATCH_AYAH": return undefined;
     default: return undefined;

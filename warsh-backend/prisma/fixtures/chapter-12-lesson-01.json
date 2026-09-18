@@ -2,14 +2,11 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 12, Lesson 1 - asking and answering names with مَا اسْمُكَ؟ and اسْمِي ...",
+    "_note": "Chapter 12, Lesson 1 (ch12-l01) — مَا اسْمُكَ؟ / اِسْمِي: the question word مَا, اِسْمٌ, the attached كَ recalled from Chapter 7 and the ي of 'my' from Chapter 11, with مَا اسْمُكِ؟ (to a woman) at recognition level. Quran checkpoint is Al-Hujurat 49:13, now excerpted at لِتَعَارَفُوا, 'that you may know one another', instead of highlighting النَّاسُ as a vocabulary source for names. Rebuilt 2026-09-19 from Docs/proposals/chapter-12-content-proposal.md; the earlier 'source' path reader_lecture_12_ta'aruf.md is not in the repository and was dropped.",
+    "titleUr": "آپ کا نام کیا ہے؟ — مَا اسْمُكَ؟",
     "chapter_order": 12,
     "lesson_order": 1,
-    "chapter_title": "Introductions and Personal Questions",
-    "title": "What Is Your Name?",
-    "titleAr": "مَا اسْمُكَ؟",
-    "source": "reader_lecture_12_ta'aruf.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
@@ -17,30 +14,18 @@
       "surah": 49,
       "ayah": 13,
       "label": "Al-Hujurat 49:13",
-      "ar": "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ",
-      "en": "O mankind, indeed We created you from male and female.",
-      "ur": "اے لوگو، بے شک ہم نے تمہیں ایک مرد اور ایک عورت سے پیدا کیا۔",
+      "ar": "وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا",
+      "en": "And made you peoples and tribes that you may know one another.",
+      "ur": "اور تمہاری قومیں اور قبیلے بنائے تاکہ تم ایک دوسرے کو پہچانو۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049013.mp3"
     },
     "noor_intro": {
-      "en": "Allah speaks to all people together. When people meet, one of the first gentle questions is: what is your name?",
-      "ur": "اللہ تمام لوگوں سے خطاب فرماتا ہے۔ جب لوگ ملتے ہیں تو پہلا نرم سوال ہوتا ہے: آپ کا نام کیا ہے؟"
+      "en": "In Al-Hujurat, Allah says He made us peoples and tribes لِتَعَارَفُوا, so that you may know one another. Knowing one another begins with a name. Today you ask مَا اسْمُكَ؟, what is your name, and answer اِسْمِي, my name is.",
+      "ur": "الحجرات میں اللہ فرماتا ہے کہ اس نے ہمیں قومیں اور قبیلے بنایا لِتَعَارَفُوا، تاکہ تم ایک دوسرے کو پہچانو۔ ایک دوسرے کو جاننا نام سے شروع ہوتا ہے۔ آج آپ پوچھیں گے مَا اسْمُكَ؟، آپ کا نام کیا ہے، اور جواب دیں گے اِسْمِي، میرا نام ہے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Question word: what?",
-        "ar": "مَا؟",
-        "ur": "سوال کا لفظ: کیا؟"
-      },
-      "explanation": {
-        "en": "مَا asks about a thing: what? In مَا اسْمُكَ؟ it asks, what is your name?",
-        "ur": "مَا کسی چیز کے بارے میں پوچھتا ہے: کیا؟ مَا اسْمُكَ؟ میں مطلب ہے: آپ کا نام کیا ہے؟"
-      }
-    },
     {
       "type": "WORD",
       "text": {
@@ -51,12 +36,34 @@
         "ur": "نام"
       },
       "explanation": {
-        "en": "اِسْمٌ means a name. You will see it inside the question and answer.",
-        "ur": "اِسْمٌ کا مطلب نام ہے۔ یہ سوال اور جواب دونوں میں آئے گا۔"
+        "en": "اِسْمٌ is a name. This is the base word you will see inside both the question and the answer.",
+        "ur": "اِسْمٌ نام ہے۔ یہی بنیادی لفظ آپ کو سوال اور جواب دونوں کے اندر نظر آئے گا۔"
       },
       "introduces_vocab": {
         "ar_plain": "اسم"
-      }
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/ism.webp"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Question word: what?",
+        "ar": "مَا؟",
+        "ur": "سوال کا لفظ: کیا؟"
+      },
+      "explanation": {
+        "en": "مَا asks 'what?'. It stands at the front of the question, and the thing you are asking about comes straight after it.",
+        "ur": "مَا 'کیا؟' پوچھتا ہے۔ یہ سوال کے شروع میں آتا ہے، اور جس چیز کے بارے میں پوچھ رہے ہیں وہ اس کے فوراً بعد آتی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "mā",
+          "en": "what?",
+          "ur": "کیا؟"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
@@ -66,22 +73,45 @@
         "ur": "آپ کا نام"
       },
       "explanation": {
-        "en": "اِسْمُكَ joins اِسْمُ with كَ. Together it means your name.",
-        "ur": "اِسْمُكَ میں اِسْمُ کے ساتھ كَ جڑا ہے۔ مل کر معنی بنتا ہے: آپ کا نام۔"
-      }
+        "en": "اِسْمُكَ is اِسْمُ with كَ attached: 'your', spoken to a man or boy, the same كَ you met in Chapter 7. The tanween of اِسْمٌ is gone, because the name now belongs to someone.",
+        "ur": "اِسْمُكَ دراصل اِسْمُ کے ساتھ كَ جڑا ہوا ہے: 'آپ کا'، مرد یا لڑکے سے، وہی كَ جو آپ نے باب 7 میں دیکھا۔ اِسْمٌ کی تنوین ہٹ گئی، کیونکہ اب نام کسی کا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "اِسْمُكَ",
+          "ar_plain": "اسمك",
+          "translit": "ismuka",
+          "en": "your name (to a man)",
+          "ur": "آپ کا نام (مرد سے)"
+        }
+      ]
     },
     {
       "type": "EXAMPLE",
       "text": {
         "ar": "مَا اسْمُكَ؟",
         "ar_plain": "ما اسمك",
-        "translit": "maa ismuka?",
-        "en": "What is your name?",
-        "ur": "آپ کا نام کیا ہے؟"
+        "translit": "mā ismuka?",
+        "en": "What is your name? (to a man)",
+        "ur": "آپ کا نام کیا ہے؟ (مرد سے)"
       },
       "explanation": {
-        "en": "مَا is the question. اِسْمُكَ is the thing being asked about: your name.",
-        "ur": "مَا سوال ہے۔ اِسْمُكَ وہ چیز ہے جس کے بارے میں پوچھا جا رہا ہے: آپ کا نام۔"
+        "en": "مَا is the question, اِسْمُكَ is the thing being asked about. No verb 'is' is needed: two words make the whole question.",
+        "ur": "مَا سوال ہے، اِسْمُكَ وہ چیز ہے جس کے بارے میں پوچھا جا رہا ہے۔ 'ہے' کے لیے کوئی فعل نہیں چاہیے: دو لفظ پورا سوال بنا دیتے ہیں۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "اِسْمِي",
+        "ar_plain": "اسمي",
+        "translit": "ismī",
+        "en": "my name",
+        "ur": "میرا نام"
+      },
+      "explanation": {
+        "en": "اِسْمِي is 'my name': اِسْمُ with the ي of 'my' at the end, the same ي that made أَبِي and أُمِّي in Chapter 11.",
+        "ur": "اِسْمِي 'میرا نام' ہے: اِسْمُ کے آخر میں 'میرا' والی ي، وہی ي جس نے باب 11 میں أَبِي اور أُمِّي بنائے۔"
       }
     },
     {
@@ -89,14 +119,70 @@
       "text": {
         "ar": "اِسْمِي عُمَرُ",
         "ar_plain": "اسمي عمر",
-        "translit": "ismii Umaru",
-        "en": "My name is Umar",
-        "ur": "میرا نام عمر ہے"
+        "translit": "ismī ʿUmaru",
+        "en": "My name is Umar.",
+        "ur": "میرا نام عمر ہے۔"
       },
       "explanation": {
-        "en": "To answer, say اِسْمِي, my name, then your name.",
-        "ur": "جواب میں اِسْمِي کہیں، یعنی میرا نام، پھر اپنا نام کہیں۔"
+        "en": "To answer, say اِسْمِي and then your name. Again there is no 'is': اِسْمِي عُمَرُ, my name is Umar.",
+        "ur": "جواب کے لیے اِسْمِي کہیں اور پھر اپنا نام۔ یہاں بھی 'ہے' نہیں: اِسْمِي عُمَرُ، میرا نام عمر ہے۔"
       }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Asking a man or a woman",
+        "ar": "اِسْمُكَ / اِسْمُكِ",
+        "ur": "مرد یا عورت سے پوچھنا"
+      },
+      "explanation": {
+        "en": "كَ with fathah speaks to a man; كِ with kasrah speaks to a woman. So مَا اسْمُكِ؟ asks a woman her name. In this chapter you practise the masculine form; recognise the feminine one when you hear it.",
+        "ur": "فتحہ والا كَ مرد سے بات کرتا ہے؛ کسرہ والا كِ عورت سے۔ تو مَا اسْمُكِ؟ کسی عورت سے اس کا نام پوچھتا ہے۔ اس باب میں آپ مذکر صورت کی مشق کرتے ہیں؛ مؤنث صورت سن کر پہچان لیں۔"
+      },
+      "examples": [
+        {
+          "ar": "مَا اسْمُكَ؟",
+          "ar_plain": "ما اسمك",
+          "translit": "mā ismuka?",
+          "en": "What is your name? (to a man)",
+          "ur": "آپ کا نام کیا ہے؟ (مرد سے)"
+        },
+        {
+          "ar": "مَا اسْمُكِ؟",
+          "ar_plain": "ما اسمك",
+          "translit": "mā ismuki?",
+          "en": "What is your name? (to a woman)",
+          "ur": "آپ کا نام کیا ہے؟ (عورت سے)"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "لِتَعَارَفُوا",
+        "ar_plain": "لتعارفوا",
+        "translit": "li-taʿārafū",
+        "en": "that you may know one another",
+        "ur": "تاکہ تم ایک دوسرے کو پہچانو"
+      },
+      "explanation": {
+        "en": "Find لِتَعَارَفُوا at the end of the excerpt. Its root, ع ر ف, means to know. Allah made peoples and tribes so that they would get to know one another, and asking a name is the first step of that التَّعَارُف.",
+        "ur": "اقتباس کے آخر میں لِتَعَارَفُوا تلاش کریں۔ اس کا مادہ ع ر ف ہے، جاننا۔ اللہ نے قومیں اور قبیلے اس لیے بنائے کہ وہ ایک دوسرے کو جانیں، اور نام پوچھنا اسی التَّعَارُف کا پہلا قدم ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049013.mp3",
+      "examples": [
+        {
+          "ar": "وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا",
+          "ar_plain": "وجعلناكم شعوبا وقبائل لتعارفوا",
+          "translit": "wa-jaʿalnākum shuʿūban wa-qabāʾila li-taʿārafū",
+          "en": "and made you peoples and tribes that you may know one another",
+          "ur": "اور تمہاری قومیں اور قبیلے بنائے تاکہ تم ایک دوسرے کو پہچانو"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -106,7 +192,7 @@
       "prompt": {
         "ar": "مَا",
         "ar_plain": "ما",
-        "translit": "maa",
+        "translit": "mā",
         "en": "what?",
         "ur": "کیا؟"
       },
@@ -124,11 +210,15 @@
           "ur": "آپ کا نام"
         },
         {
-          "en": "people",
-          "ur": "لوگ"
+          "en": "where?",
+          "ur": "کہاں؟"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "مَا is the question word 'what?'. It opens مَا اسْمُكَ؟.",
+        "ur": "مَا سوال کا لفظ 'کیا؟' ہے۔ اسی سے مَا اسْمُكَ؟ شروع ہوتا ہے۔"
+      },
       "xp_value": 1
     },
     {
@@ -151,32 +241,40 @@
           "ur": "میرا نام"
         },
         {
-          "en": "what?",
-          "ur": "کیا؟"
+          "en": "a name",
+          "ur": "نام"
         },
         {
-          "en": "student",
-          "ur": "طالب علم"
+          "en": "what?",
+          "ur": "کیا؟"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The attached كَ means 'your': اِسْمُكَ is your name. 'My name' would end in ي: اِسْمِي.",
+        "ur": "جڑا ہوا كَ 'آپ کا' ہے: اِسْمُكَ آپ کا نام ہے۔ 'میرا نام' ي پر ختم ہوتا: اِسْمِي۔"
+      },
       "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch12-l01-ex03",
       "statement": {
-        "en": "In مَا اسْمُكَ؟, مَا means what?",
-        "ur": "مَا اسْمُكَ؟ میں مَا کا مطلب کیا؟ ہے۔",
+        "en": "مَا اسْمُكِ؟, with kasrah under the ك, is the form you use when speaking to a man.",
+        "ur": "مَا اسْمُكِ؟، ك کے نیچے کسرہ کے ساتھ، وہ صورت ہے جو مرد سے بات کرتے ہوئے استعمال ہوتی ہے۔",
         "ar_example": {
-          "ar": "مَا اسْمُكَ؟",
+          "ar": "مَا اسْمُكِ؟",
           "ar_plain": "ما اسمك",
-          "translit": "maa ismuka?",
-          "en": "What is your name?",
-          "ur": "آپ کا نام کیا ہے؟"
+          "translit": "mā ismuki?",
+          "en": "What is your name? (to a woman)",
+          "ur": "آپ کا نام کیا ہے؟ (عورت سے)"
         }
       },
-      "correct_answer": true,
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "Kasrah under the ك, كِ, addresses a woman. To a man you say مَا اسْمُكَ؟ with fathah.",
+        "ur": "ك کے نیچے کسرہ، كِ، عورت سے خطاب ہے۔ مرد سے فتحہ کے ساتھ مَا اسْمُكَ؟ کہتے ہیں۔"
+      },
       "xp_value": 1
     },
     {
@@ -185,45 +283,49 @@
       "mode": "TAP",
       "sentence_ar": "مَا ___؟",
       "hint": {
-        "en": "What is your name?",
-        "ur": "آپ کا نام کیا ہے؟"
+        "en": "What is your name? (to a man)",
+        "ur": "آپ کا نام کیا ہے؟ (مرد سے)"
       },
       "options": [
         {
           "ar": "اِسْمُكَ",
           "ar_plain": "اسمك",
           "translit": "ismuka",
-          "en": "your name",
-          "ur": "آپ کا نام"
+          "en": "your name (to a man)",
+          "ur": "آپ کا نام (مرد سے)"
         },
         {
           "ar": "اِسْمِي",
           "ar_plain": "اسمي",
-          "translit": "ismii",
+          "translit": "ismī",
           "en": "my name",
           "ur": "میرا نام"
         },
         {
-          "ar": "النَّاسُ",
-          "ar_plain": "الناس",
-          "translit": "an-naasu",
-          "en": "the people",
-          "ur": "لوگ"
+          "ar": "اِسْمٌ",
+          "ar_plain": "اسم",
+          "translit": "ismun",
+          "en": "a name",
+          "ur": "نام"
         },
         {
-          "ar": "طَالِبٌ",
-          "ar_plain": "طالب",
-          "translit": "taalibun",
-          "en": "a student",
-          "ur": "طالب علم"
+          "ar": "النَّاسُ",
+          "ar_plain": "الناس",
+          "translit": "an-nāsu",
+          "en": "the people",
+          "ur": "لوگ"
         }
       ],
       "correct_answer": {
         "ar": "اِسْمُكَ",
         "ar_plain": "اسمك",
         "translit": "ismuka",
-        "en": "your name",
-        "ur": "آپ کا نام"
+        "en": "your name (to a man)",
+        "ur": "آپ کا نام (مرد سے)"
+      },
+      "explanation_on_wrong": {
+        "en": "The question asks about 'your name', so the word with كَ attached: مَا اسْمُكَ؟",
+        "ur": "سوال 'آپ کے نام' کے بارے میں ہے، اس لیے كَ جڑا ہوا لفظ: مَا اسْمُكَ؟"
       },
       "xp_value": 1
     },
@@ -234,7 +336,7 @@
         {
           "ar": "مَا",
           "ar_plain": "ما",
-          "translit": "maa",
+          "translit": "mā",
           "en": "what?",
           "ur": "کیا؟"
         },
@@ -249,13 +351,13 @@
           "ar": "اِسْمُكَ",
           "ar_plain": "اسمك",
           "translit": "ismuka",
-          "en": "your name",
-          "ur": "آپ کا نام"
+          "en": "your name (to a man)",
+          "ur": "آپ کا نام (مرد سے)"
         },
         {
           "ar": "اِسْمِي",
           "ar_plain": "اسمي",
-          "translit": "ismii",
+          "translit": "ismī",
           "en": "my name",
           "ur": "میرا نام"
         }
@@ -296,34 +398,38 @@
           3
         ]
       ],
+      "explanation_on_wrong": {
+        "en": "Read the ending: plain اِسْمٌ is 'a name', كَ makes it 'your name', ي makes it 'my name'. مَا is the question word.",
+        "ur": "آخر دیکھیں: سادہ اِسْمٌ 'نام' ہے، كَ اسے 'آپ کا نام' بناتا ہے، ي 'میرا نام'۔ مَا سوال کا لفظ ہے۔"
+      },
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch12-l01-ex06",
       "target_translation": {
-        "en": "My name is Umar",
-        "ur": "میرا نام عمر ہے"
+        "en": "My name is Umar.",
+        "ur": "میرا نام عمر ہے۔"
       },
       "tiles": [
         {
           "ar": "اِسْمِي",
           "ar_plain": "اسمي",
-          "translit": "ismii",
+          "translit": "ismī",
           "en": "my name",
           "ur": "میرا نام"
         },
         {
           "ar": "عُمَرُ",
           "ar_plain": "عمر",
-          "translit": "Umaru",
+          "translit": "ʿUmaru",
           "en": "Umar",
           "ur": "عمر"
         },
         {
           "ar": "مَا",
           "ar_plain": "ما",
-          "translit": "maa",
+          "translit": "mā",
           "en": "what?",
           "ur": "کیا؟"
         },
@@ -331,44 +437,99 @@
           "ar": "اِسْمُكَ",
           "ar_plain": "اسمك",
           "translit": "ismuka",
-          "en": "your name",
-          "ur": "آپ کا نام"
+          "en": "your name (to a man)",
+          "ur": "آپ کا نام (مرد سے)"
         }
       ],
       "correct_order": [
         0,
         1
       ],
+      "explanation_on_wrong": {
+        "en": "The answer is two words: اِسْمِي, my name, then the name itself: اِسْمِي عُمَرُ. مَا and اِسْمُكَ belong to the question.",
+        "ur": "جواب دو لفظ ہے: اِسْمِي، میرا نام، پھر خود نام: اِسْمِي عُمَرُ۔ مَا اور اِسْمُكَ سوال کا حصہ ہیں۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch12-l01-ex07",
+      "prompt_line": {
+        "ar": "مَا اسْمُكَ؟",
+        "ar_plain": "ما اسمك",
+        "translit": "mā ismuka?",
+        "en": "What is your name? (to a man)",
+        "ur": "آپ کا نام کیا ہے؟ (مرد سے)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "اِسْمِي عُمَرُ",
+          "ar_plain": "اسمي عمر",
+          "translit": "ismī ʿUmaru",
+          "en": "My name is Umar.",
+          "ur": "میرا نام عمر ہے۔"
+        },
+        {
+          "ar": "اِسْمُكَ عُمَرُ",
+          "ar_plain": "اسمك عمر",
+          "translit": "ismuka ʿUmaru",
+          "en": "Your name is Umar.",
+          "ur": "آپ کا نام عمر ہے۔"
+        },
+        {
+          "ar": "مَا اسْمُكِ؟",
+          "ar_plain": "ما اسمك",
+          "translit": "mā ismuki?",
+          "en": "What is your name? (to a woman)",
+          "ur": "آپ کا نام کیا ہے؟ (عورت سے)"
+        },
+        {
+          "ar": "أَبِي فِي الْبَيْتِ",
+          "ar_plain": "ابي في البيت",
+          "translit": "abī fī l-bayti",
+          "en": "My father is in the house.",
+          "ur": "میرے والد گھر میں ہیں۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "explanation_on_wrong": {
+        "en": "When someone asks your name, answer with اِسْمِي, my name: اِسْمِي عُمَرُ. اِسْمُكَ would be talking about their name.",
+        "ur": "جب کوئی آپ کا نام پوچھے تو اِسْمِي، میرا نام، سے جواب دیں: اِسْمِي عُمَرُ۔ اِسْمُكَ ان کے نام کی بات ہوتی۔"
+      },
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Introductions and names",
-      "ar": "التَّعَارُفُ وَالأَسْمَاءُ",
-      "ur": "تعارف اور نام"
+      "en": "Introductions — knowing one another",
+      "ar": "التَّعَارُفُ",
+      "ur": "تعارف — ایک دوسرے کو جاننا"
     },
     "ayah": {
       "surah": 49,
       "ayah": 13,
       "label": "Al-Hujurat 49:13",
-      "ar": "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ",
-      "en": "O mankind, indeed We created you from male and female.",
-      "ur": "اے لوگو، بے شک ہم نے تمہیں ایک مرد اور ایک عورت سے پیدا کیا۔",
+      "ar": "وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا",
+      "en": "And made you peoples and tribes that you may know one another.",
+      "ur": "اور تمہاری قومیں اور قبیلے بنائے تاکہ تم ایک دوسرے کو پہچانو۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049013.mp3"
     },
     "highlighted_word_indices": [
-      2
+      3
+    ],
+    "highlighted_words": [
+      "لِتَعَارَفُوا"
     ],
     "noor_explanation": {
-      "en": "النَّاسُ means the people. Arabic introductions help us meet people with adab: مَا اسْمُكَ؟ and اسْمِي ...",
-      "ur": "النَّاسُ کا مطلب ہے لوگ۔ عربی تعارف ہمیں ادب کے ساتھ لوگوں سے ملنا سکھاتا ہے: مَا اسْمُكَ؟ اور اسْمِي ..."
+      "en": "لِتَعَارَفُوا: that you may know one another. The Quran gives the purpose; Arabic gives you the first words for it, مَا اسْمُكَ؟ and اِسْمِي. Every introduction you make from now on is part of that purpose.",
+      "ur": "لِتَعَارَفُوا: تاکہ تم ایک دوسرے کو پہچانو۔ قرآن مقصد بتاتا ہے؛ عربی اس کے پہلے لفظ دیتی ہے، مَا اسْمُكَ؟ اور اِسْمِي۔ اب سے آپ کا ہر تعارف اسی مقصد کا حصہ ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now ask a simple personal question in Arabic: مَا اسْمُكَ؟",
-      "ur": "اب آپ عربی میں ایک آسان ذاتی سوال پوچھ سکتے ہیں: مَا اسْمُكَ؟"
+      "en": "You can now ask a person's name, مَا اسْمُكَ؟, answer with اِسْمِي, and recognise مَا اسْمُكِ؟ when the question is put to a woman.",
+      "ur": "اب آپ کسی کا نام پوچھ سکتے ہیں، مَا اسْمُكَ؟، اِسْمِي سے جواب دے سکتے ہیں، اور جب سوال عورت سے ہو تو مَا اسْمُكِ؟ پہچان سکتے ہیں۔"
     }
   }
 }

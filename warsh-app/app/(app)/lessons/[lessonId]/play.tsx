@@ -185,6 +185,7 @@ function exPrompt(ex: RawEx, language: LessonLanguage, t: TranslateFn): string |
   if (type === "WORD_ORDER") return localizedText(ex.context, language);
   if (type === "TRANSLATE_TO_ARABIC") return localizedText(ex.source, language);
   if (type === "IDENTIFY_ROOT") return t("player.prompt.identifyRoot");
+  if (type === "CONVERSATION_BUILDER") return t("player.prompt.conversationReply");
   return undefined;
 }
 
@@ -200,6 +201,7 @@ function exArabicText(ex: RawEx): string | undefined {
   if (t === "MATCH_AYAH") return (ex.ayah_fragment as any)?.ar as string | undefined;
   if (t === "HARAKAH_PLACEMENT") return ex.word_unvowelled as string | undefined;
   if (t === "IDENTIFY_ROOT") return (ex.word as any)?.ar as string | undefined;
+  if (t === "CONVERSATION_BUILDER") return (ex.prompt_line as any)?.ar as string | undefined;
   return undefined;
 }
 
@@ -250,6 +252,12 @@ function exOptions(ex: RawEx, language: LessonLanguage, t: TranslateFn): string[
   }
   if (type === "IDENTIFY_ROOT") {
     return (ex.options as string[] | undefined) ?? [];
+  }
+  if (type === "CONVERSATION_BUILDER") {
+    // Schema v1.0: PICK offers Arabic reply lines, BUILD offers tiles.
+    const source = (ex.response_mode as string | undefined) === "BUILD" ? ex.tiles : ex.options;
+    const items = source as Array<any> | undefined;
+    return items ? items.map((item) => item.ar as string) : [];
   }
   return [];
 }
@@ -305,6 +313,18 @@ function exCorrectAnswer(ex: RawEx, language: LessonLanguage, t: TranslateFn): s
     const opts = ex.options as string[] | undefined;
     const idx = ex.correct_index as number | undefined;
     if (opts && idx !== undefined) return opts[idx];
+    return "";
+  }
+  if (type === "CONVERSATION_BUILDER") {
+    if ((ex.response_mode as string | undefined) === "BUILD") {
+      const tiles = ex.tiles as Array<any> | undefined;
+      const order = ex.correct_order as number[] | undefined;
+      if (tiles && order) return order.map((i) => tiles[i].ar as string).join(" ");
+      return "";
+    }
+    const opts = ex.options as Array<any> | undefined;
+    const idx = ex.correct_option_index as number | undefined;
+    if (opts && idx !== undefined) return opts[idx]?.ar as string ?? "";
     return "";
   }
   return "";
@@ -1095,21 +1115,26 @@ export default function LessonPlayScreen() {
   // ---- CONVERSATION_BUILDER ----
 
   function renderConversationBuilder() {
+    // Schema v1.0 exercises carry the opening line in `prompt_line`, which
+    // renderPractice already shows as the Arabic prompt card; the legacy
+    // `conversation` transcript below is kept for older content only.
     const lines = (currentExercise?.conversation as Array<{ speaker: string; line: string }> | undefined) ?? [];
     return (
       <>
-        <View style={styles.dialogueCard}>
-          {lines.map((line, index) => (
-            <View key={`${line.speaker}-${index}`} style={styles.dialogueLine}>
-              <Text style={styles.dialogueSpeaker}>{line.speaker}</Text>
-              {containsArabic(line.line) ? (
-                <ArabicText size="sm" style={styles.dialogueArabic}>{line.line}</ArabicText>
-              ) : (
-                <Text style={styles.dialogueText}>{line.line}</Text>
-              )}
-            </View>
-          ))}
-        </View>
+        {lines.length > 0 ? (
+          <View style={styles.dialogueCard}>
+            {lines.map((line, index) => (
+              <View key={`${line.speaker}-${index}`} style={styles.dialogueLine}>
+                <Text style={styles.dialogueSpeaker}>{line.speaker}</Text>
+                {containsArabic(line.line) ? (
+                  <ArabicText size="sm" style={styles.dialogueArabic}>{line.line}</ArabicText>
+                ) : (
+                  <Text style={styles.dialogueText}>{line.line}</Text>
+                )}
+              </View>
+            ))}
+          </View>
+        ) : null}
         {renderOptionGrid()}
       </>
     );
@@ -1376,7 +1401,9 @@ export default function LessonPlayScreen() {
     if (type === "BUILD_SENTENCE")       return renderBuildSentence();
     if (type === "MATCHING")             return renderMatching();
     if (type === "GRAMMAR_PARSE")        return renderGrammarParse();
-    if (type === "CONVERSATION_BUILDER") return renderConversationBuilder();
+    if (type === "CONVERSATION_BUILDER") {
+      return (currentExercise?.response_mode as string | undefined) === "BUILD" ? renderBuildSentence() : renderConversationBuilder();
+    }
     // TRANSLATE_TO_ARABIC, IDENTIFY_ROOT, MATCH_AYAH → auto-submit option grid
     return renderOptionGrid();
   }

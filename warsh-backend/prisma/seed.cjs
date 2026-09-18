@@ -100,7 +100,9 @@ const ch12L01Content     = require("./fixtures/chapter-12-lesson-01.json");
 const ch12L02Content     = require("./fixtures/chapter-12-lesson-02.json");
 const ch12L03Content     = require("./fixtures/chapter-12-lesson-03.json");
 const ch12L04Content     = require("./fixtures/chapter-12-lesson-04.json");
-const ch12L05SpokenContent = require("./fixtures/chapter-12-lesson-05-spoken-phrases.json");
+const ch12L05SpokenContent = require("./fixtures/chapter-12-lesson-05-spoken-phrases.json"); // ch12-l05, order 5
+const ch12L06Content     = require("./fixtures/chapter-12-lesson-06-review.json");     // ch12-l06, review, order 6
+const ch12TestContent    = require("./fixtures/chapter-12-lesson-07-final-test.json"); // ch12-test, order 7
 const ch13L01Content     = require("./fixtures/chapter-13-lesson-01.json");
 const ch13L02Content     = require("./fixtures/chapter-13-lesson-02.json");
 const ch13L03Content     = require("./fixtures/chapter-13-lesson-03.json");
@@ -834,12 +836,15 @@ async function main() {
     { id: "ch11-l05",  chapterId: ch11Id, order: 5, title: "Home in the Quran — بُيُوتِكُمْ",            titleAr: "بُيُوتِكُمْ فِي الْقُرْآنِ",               template: "STANDARD", xpReward: ch11L05Content._meta?.xp_reward  ?? 10, content: ch11L05Content },
     { id: "ch11-l06",  chapterId: ch11Id, order: 6, title: "Chapter 11 Review",                          titleAr: "مُرَاجَعَةُ الْفَصْلِ الْحَادِيَ عَشَرَ",   template: "REVIEW",   xpReward: ch11L06Content._meta?.xp_reward  ?? 20, content: ch11L06Content },
     { id: "ch11-test", chapterId: ch11Id, order: 7, title: "Chapter 11 Final Test",                      titleAr: "اخْتِبَارُ الْفَصْلِ الْحَادِيَ عَشَرَ",   template: "REVIEW",   xpReward: ch11TestContent._meta?.xp_reward ?? 20, content: ch11TestContent },
-    // Chapter 12
-    { id: "ch12-l01", chapterId: ch12Id, order: 1, title: "What Is Your Name?",                     titleAr: "مَا اسْمُكَ؟",                            template: "STANDARD",        xpReward: ch12L01Content._meta?.xp_reward       ?? 10, content: ch12L01Content },
-    { id: "ch12-l02", chapterId: ch12Id, order: 2, title: "Where Are You From?",                    titleAr: "مِنْ أَيْنَ أَنْتَ؟",                     template: "STANDARD",        xpReward: ch12L02Content._meta?.xp_reward       ?? 10, content: ch12L02Content },
-    { id: "ch12-l03", chapterId: ch12Id, order: 3, title: "Professions",                            titleAr: "الْمِهَن",                                template: "STANDARD",        xpReward: ch12L03Content._meta?.xp_reward       ?? 10, content: ch12L03Content },
-    { id: "ch12-l04", chapterId: ch12Id, order: 4, title: "Past Tense as Vocabulary",               titleAr: "الْفِعْل الْمَاضِي لِلتَّعَرُّف",          template: "STANDARD",        xpReward: ch12L04Content._meta?.xp_reward       ?? 10, content: ch12L04Content },
-    { id: "ch12-l05", chapterId: ch12Id, order: 5, title: "SP3 - Classroom and Halaqa Phrases",      titleAr: "عِبَارَاتُ الدَّرْسِ وَالحَلْقَة",        template: "SPOKEN_PHRASES",  xpReward: ch12L05SpokenContent._meta?.xp_reward ?? 15, content: ch12L05SpokenContent },
+    // Chapter 12 — Docs/proposals/chapter-12-content-proposal.md. ch12-l01..l05
+    // keep their IDs and display orders; ch12-l06 (review) and ch12-test are new rows.
+    { id: "ch12-l01",  chapterId: ch12Id, order: 1, title: "What Is Your Name? — مَا اسْمُكَ؟",       titleAr: "مَا اسْمُكَ؟",                             template: "STANDARD",       xpReward: ch12L01Content._meta?.xp_reward       ?? 10, content: ch12L01Content },
+    { id: "ch12-l02",  chapterId: ch12Id, order: 2, title: "Where Are You From? — مِنْ أَيْنَ؟",      titleAr: "مِنْ أَيْنَ أَنْتَ؟",                      template: "STANDARD",       xpReward: ch12L02Content._meta?.xp_reward       ?? 10, content: ch12L02Content },
+    { id: "ch12-l03",  chapterId: ch12Id, order: 3, title: "Professions — مَا مِهْنَتُكَ؟",           titleAr: "الْمِهَنُ — مَا مِهْنَتُكَ؟",               template: "STANDARD",       xpReward: ch12L03Content._meta?.xp_reward       ?? 10, content: ch12L03Content },
+    { id: "ch12-l04",  chapterId: ch12Id, order: 4, title: "Past-Tense Recognition",                 titleAr: "تَعَرُّفُ الْفِعْلِ الْمَاضِي",              template: "STANDARD",       xpReward: ch12L04Content._meta?.xp_reward       ?? 10, content: ch12L04Content },
+    { id: "ch12-l05",  chapterId: ch12Id, order: 5, title: "Classroom and Halaqa Phrases",           titleAr: "عِبَارَاتُ الدَّرْسِ وَالْحَلْقَةِ",          template: "SPOKEN_PHRASES", xpReward: ch12L05SpokenContent._meta?.xp_reward ?? 15, content: ch12L05SpokenContent },
+    { id: "ch12-l06",  chapterId: ch12Id, order: 6, title: "Chapter 12 Review",                      titleAr: "مُرَاجَعَةُ الْفَصْلِ الثَّانِيَ عَشَرَ",    template: "REVIEW",         xpReward: ch12L06Content._meta?.xp_reward       ?? 20, content: ch12L06Content },
+    { id: "ch12-test", chapterId: ch12Id, order: 7, title: "Chapter 12 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الثَّانِيَ عَشَرَ",     template: "REVIEW",         xpReward: ch12TestContent._meta?.xp_reward      ?? 20, content: ch12TestContent },
     // Chapter 13
     { id: "ch13-l01", chapterId: ch13Id, order: 1, title: "Sound Masculine Plural — ونَ",            titleAr: "الْمُذَكَّر السَّالِم",                   template: "STANDARD",        xpReward: ch13L01Content._meta?.xp_reward       ?? 10, content: ch13L01Content },
     { id: "ch13-l02", chapterId: ch13Id, order: 2, title: "Sound Feminine Plural — ات",              titleAr: "الْمُؤَنَّث السَّالِم",                   template: "STANDARD",        xpReward: ch13L02Content._meta?.xp_reward       ?? 10, content: ch13L02Content },

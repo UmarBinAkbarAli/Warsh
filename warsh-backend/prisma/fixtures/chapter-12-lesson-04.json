@@ -2,28 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 12, Lesson 4 - past tense verbs as vocabulary only: ذهب، رجع، خلق.",
+    "_note": "Chapter 12, Lesson 4 (ch12-l04) — ذَهَبَ، رَجَعَ، خَلَقَ as whole-word vocabulary, recognition only, in the sentences ذَهَبَ إِلَى الْمَسْجِدِ and رَجَعَ بَعْدَ الدَّرْسِ (إِلَى / الْمَسْجِد from Book 1, بَعْدَ from Chapter 10). Quran checkpoint moved from Al-Hujurat 49:13 (which contains خَلَقْنَاكُمْ, not the taught form) to Al-Alaq 96:2, which opens with the exact form خَلَقَ. The خَلَقْنَاكُمْ fill-in was removed; one CONTRAST card keeps the bridge at recognition level so the learner can tell the taught word from a different conjugated form, which the chapter test checks. Rebuilt 2026-09-19 from Docs/proposals/chapter-12-content-proposal.md.",
+    "titleUr": "فعلِ ماضی کی پہچان — ذَهَبَ، رَجَعَ، خَلَقَ",
     "chapter_order": 12,
     "lesson_order": 4,
-    "title": "Past Tense as Vocabulary",
-    "titleAr": "الْفِعْل الْمَاضِي لِلتَّعَرُّف",
-    "source": "reader_lecture_12_ta'aruf.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 49,
-      "ayah": 13,
-      "label": "Al-Hujurat 49:13",
-      "ar": "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ",
-      "en": "O mankind, indeed We created you from male and female.",
-      "ur": "اے لوگو، بے شک ہم نے تمہیں ایک مرد اور ایک عورت سے پیدا کیا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049013.mp3"
+      "surah": 96,
+      "ayah": 2,
+      "label": "Al-Alaq 96:2",
+      "ar": "خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ",
+      "en": "Created man from a clinging substance.",
+      "ur": "اس نے انسان کو جمے ہوئے خون سے پیدا کیا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096002.mp3"
     },
     "noor_intro": {
-      "en": "Today you will meet past tense verbs as useful words. No full conjugation yet: just recognize ذَهَبَ, رَجَعَ, and خَلَقَ.",
-      "ur": "آج آپ فعلِ ماضی کو مفید الفاظ کے طور پر پہچانیں گے۔ ابھی پوری گردان نہیں: صرف ذَهَبَ، رَجَعَ، اور خَلَقَ کو پہچاننا ہے۔"
+      "en": "Surah Al-Alaq: خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ, He created man from a clinging substance. خَلَقَ is a past-tense verb: the action is already done. Today you meet three such verbs as whole words, ذَهَبَ, رَجَعَ and خَلَقَ. No conjugation yet, only recognition.",
+      "ur": "سورہ علق: خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ، اس نے انسان کو جمے ہوئے خون سے پیدا کیا۔ خَلَقَ فعلِ ماضی ہے: کام ہو چکا ہے۔ آج آپ ایسے تین فعل پورے لفظوں کے طور پر سیکھیں گے، ذَهَبَ، رَجَعَ اور خَلَقَ۔ ابھی گردان نہیں، صرف پہچان۔"
     },
     "autoplay": true
   },
@@ -36,9 +34,32 @@
         "ur": "فعلِ ماضی بطور لفظ"
       },
       "explanation": {
-        "en": "A past tense verb tells about an action that already happened. In this lesson, learn each verb like a vocabulary word.",
-        "ur": "فعلِ ماضی ایسے کام کو بتاتا ہے جو ہو چکا ہو۔ اس سبق میں ہر فعل کو ایک لفظ کی طرح یاد کریں۔"
-      }
+        "en": "A past-tense verb tells of an action that already happened. Each of the three verbs in this lesson is one complete word meaning 'he ...'. You are learning to recognise them, not yet to change them.",
+        "ur": "فعلِ ماضی ایسے کام کا بتاتا ہے جو ہو چکا ہو۔ اس سبق کے تینوں فعل ایک ایک مکمل لفظ ہیں جن کا مطلب 'اس نے ...' ہے۔ آپ انہیں پہچاننا سیکھ رہے ہیں، ابھی بدلنا نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "ar": "رَجَعَ",
+          "ar_plain": "رجع",
+          "translit": "rajaʿa",
+          "en": "he returned",
+          "ur": "وہ واپس آیا"
+        },
+        {
+          "ar": "خَلَقَ",
+          "ar_plain": "خلق",
+          "translit": "khalaqa",
+          "en": "He created",
+          "ur": "اس نے پیدا کیا"
+        }
+      ]
     },
     {
       "type": "WORD",
@@ -50,8 +71,8 @@
         "ur": "وہ گیا"
       },
       "explanation": {
-        "en": "ذَهَبَ means he went. Read it as one complete vocabulary item.",
-        "ur": "ذَهَبَ کا مطلب ہے: وہ گیا۔ اسے ایک مکمل لفظ کے طور پر پڑھیں۔"
+        "en": "ذَهَبَ means 'he went'. Read it as one whole vocabulary word.",
+        "ur": "ذَهَبَ کا مطلب ہے 'وہ گیا'۔ اسے ایک پورے لفظ کے طور پر پڑھیں۔"
       },
       "introduces_vocab": {
         "ar_plain": "ذهب"
@@ -59,21 +80,52 @@
       "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/dhahaba.webp"
     },
     {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "ذَهَبَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "ذهب الى المسجد",
+        "translit": "dhahaba ilā l-masjidi",
+        "en": "He went to the mosque.",
+        "ur": "وہ مسجد گیا۔"
+      },
+      "explanation": {
+        "en": "ذَهَبَ, then إِلَى, 'to', then the place. The verb comes first in this kind of sentence; the 'he' is inside the verb.",
+        "ur": "ذَهَبَ، پھر إِلَى، 'کی طرف'، پھر جگہ۔ اس طرح کے جملے میں فعل پہلے آتا ہے؛ 'وہ' فعل کے اندر ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/masjid.webp"
+    },
+    {
       "type": "WORD",
       "text": {
         "ar": "رَجَعَ",
         "ar_plain": "رجع",
-        "translit": "raja'a",
+        "translit": "rajaʿa",
         "en": "he returned",
         "ur": "وہ واپس آیا"
       },
       "explanation": {
-        "en": "رَجَعَ means he returned or came back.",
-        "ur": "رَجَعَ کا مطلب ہے: وہ واپس آیا۔"
+        "en": "رَجَعَ means 'he returned', he came back.",
+        "ur": "رَجَعَ کا مطلب ہے 'وہ واپس آیا'، وہ لوٹ آیا۔"
       },
       "introduces_vocab": {
         "ar_plain": "رجع"
-      }
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/rajaa.webp"
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "رَجَعَ بَعْدَ الدَّرْسِ",
+        "ar_plain": "رجع بعد الدرس",
+        "translit": "rajaʿa baʿda d-darsi",
+        "en": "He returned after the lesson.",
+        "ur": "وہ سبق کے بعد واپس آیا۔"
+      },
+      "explanation": {
+        "en": "رَجَعَ, then بَعْدَ, 'after', from Chapter 10, then the event. He returned after the lesson.",
+        "ur": "رَجَعَ، پھر بَعْدَ، 'کے بعد'، باب 10 سے، پھر واقعہ۔ وہ سبق کے بعد واپس آیا۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/dars.webp"
     },
     {
       "type": "WORD",
@@ -85,26 +137,68 @@
         "ur": "اس نے پیدا کیا"
       },
       "explanation": {
-        "en": "خَلَقَ means He created. In the ayah, Allah says خَلَقْنَاكُم: We created you.",
-        "ur": "خَلَقَ کا مطلب ہے: اس نے پیدا کیا۔ آیت میں اللہ فرماتا ہے خَلَقْنَاكُم: ہم نے تمہیں پیدا کیا۔"
+        "en": "خَلَقَ means 'He created'. It is the first word of Al-Alaq 96:2, exactly in this form.",
+        "ur": "خَلَقَ کا مطلب ہے 'اس نے پیدا کیا'۔ یہ العلق 96:2 کا پہلا لفظ ہے، بالکل اسی صورت میں۔"
       },
       "introduces_vocab": {
         "ar_plain": "خلق"
       }
     },
     {
-      "type": "AYAH_PREVIEW",
-      "text": {
-        "ar": "إِنَّا خَلَقْنَاكُم",
-        "ar_plain": "انا خلقناكم",
-        "translit": "innaa khalaqnaakum",
-        "en": "indeed We created you",
-        "ur": "بے شک ہم نے تمہیں پیدا کیا"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The exact form you learn",
+        "ar": "خَلَقَ / خَلَقْنَاكُمْ",
+        "ur": "وہی صورت جو آپ سیکھ رہے ہیں"
       },
       "explanation": {
-        "en": "You already know the meaning of خَلَقَ. Now notice it inside the Quranic phrase خَلَقْنَاكُم.",
-        "ur": "آپ خَلَقَ کا معنی جان چکے ہیں۔ اب اسے قرآنی جملے خَلَقْنَاكُم میں پہچانیں۔"
-      }
+        "en": "خَلَقَ, He created, is your word. In Al-Hujurat you saw خَلَقْنَاكُمْ, We created you: the same root with a different ending and 'you' attached. That is a different conjugated form. You only need to recognise خَلَقَ; the longer forms come later.",
+        "ur": "خَلَقَ، اس نے پیدا کیا، آپ کا لفظ ہے۔ الحجرات میں آپ نے خَلَقْنَاكُمْ دیکھا، ہم نے تمہیں پیدا کیا: وہی مادہ، مختلف آخر اور 'تمہیں' جڑا ہوا۔ یہ ایک مختلف گردانی صورت ہے۔ آپ کو صرف خَلَقَ پہچاننا ہے؛ لمبی صورتیں بعد میں آئیں گی۔"
+      },
+      "examples": [
+        {
+          "ar": "خَلَقَ",
+          "ar_plain": "خلق",
+          "translit": "khalaqa",
+          "en": "He created",
+          "ur": "اس نے پیدا کیا"
+        },
+        {
+          "ar": "خَلَقْنَاكُمْ",
+          "ar_plain": "خلقناكم",
+          "translit": "khalaqnākum",
+          "en": "We created you — a different conjugated form",
+          "ur": "ہم نے تمہیں پیدا کیا — ایک مختلف گردانی صورت"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ",
+        "ar_plain": "خلق الانسان من علق",
+        "translit": "khalaqa l-insāna min ʿalaq",
+        "en": "Created man from a clinging substance.",
+        "ur": "اس نے انسان کو جمے ہوئے خون سے پیدا کیا۔"
+      },
+      "explanation": {
+        "en": "خَلَقَ is the very first word, exactly the form you learned. Then الْإِنسَانَ, man, and مِنْ, from, Lesson 2's word. He created man from a clinging substance.",
+        "ur": "خَلَقَ بالکل پہلا لفظ ہے، ٹھیک وہی صورت جو آپ نے سیکھی۔ پھر الْإِنسَانَ، انسان، اور مِنْ، سے، سبق 2 کا لفظ۔ اس نے انسان کو جمے ہوئے خون سے پیدا کیا۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096002.mp3",
+      "examples": [
+        {
+          "ar": "خَلَقَ",
+          "ar_plain": "خلق",
+          "translit": "khalaqa",
+          "en": "He created",
+          "ur": "اس نے پیدا کیا"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -137,6 +231,10 @@
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "ذَهَبَ is 'he went'. رَجَعَ is 'he returned' and خَلَقَ is 'He created'.",
+        "ur": "ذَهَبَ 'وہ گیا' ہے۔ رَجَعَ 'وہ واپس آیا' اور خَلَقَ 'اس نے پیدا کیا'۔"
+      },
       "xp_value": 1
     },
     {
@@ -145,7 +243,7 @@
       "prompt": {
         "ar": "رَجَعَ",
         "ar_plain": "رجع",
-        "translit": "raja'a",
+        "translit": "rajaʿa",
         "en": "he returned",
         "ur": "وہ واپس آیا"
       },
@@ -168,14 +266,18 @@
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "رَجَعَ is 'he returned', he came back. ذَهَبَ is the going.",
+        "ur": "رَجَعَ 'وہ واپس آیا' ہے، وہ لوٹ آیا۔ ذَهَبَ جانا ہے۔"
+      },
       "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch12-l04-ex03",
       "statement": {
-        "en": "خَلَقَ means He created.",
-        "ur": "خَلَقَ کا مطلب ہے: اس نے پیدا کیا۔",
+        "en": "خَلَقَ means 'He created'.",
+        "ur": "خَلَقَ کا مطلب ہے 'اس نے پیدا کیا'۔",
         "ar_example": {
           "ar": "خَلَقَ",
           "ar_plain": "خلق",
@@ -185,6 +287,10 @@
         }
       },
       "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "This is true: خَلَقَ is 'He created', the first word of Al-Alaq 96:2.",
+        "ur": "یہ درست ہے: خَلَقَ 'اس نے پیدا کیا' ہے، العلق 96:2 کا پہلا لفظ۔"
+      },
       "xp_value": 1
     },
     {
@@ -201,7 +307,7 @@
         {
           "ar": "رَجَعَ",
           "ar_plain": "رجع",
-          "translit": "raja'a",
+          "translit": "rajaʿa",
           "en": "he returned",
           "ur": "وہ واپس آیا"
         },
@@ -213,11 +319,11 @@
           "ur": "اس نے پیدا کیا"
         },
         {
-          "ar": "مِنْ",
-          "ar_plain": "من",
-          "translit": "min",
-          "en": "from",
-          "ur": "سے"
+          "ar": "بَعْدَ",
+          "ar_plain": "بعد",
+          "translit": "baʿda",
+          "en": "after",
+          "ur": "کے بعد"
         }
       ],
       "right_column": [
@@ -234,8 +340,8 @@
           "ur": "اس نے پیدا کیا"
         },
         {
-          "en": "from",
-          "ur": "سے"
+          "en": "after",
+          "ur": "کے بعد"
         }
       ],
       "correct_pairs": [
@@ -256,26 +362,23 @@
           3
         ]
       ],
+      "explanation_on_wrong": {
+        "en": "Three verbs and one time word: ذَهَبَ went, رَجَعَ returned, خَلَقَ created, and بَعْدَ, after, is not a verb at all.",
+        "ur": "تین فعل اور ایک وقت کا لفظ: ذَهَبَ گیا، رَجَعَ واپس آیا، خَلَقَ پیدا کیا، اور بَعْدَ، کے بعد، فعل ہے ہی نہیں۔"
+      },
       "xp_value": 1
     },
     {
       "type": "FILL_BLANK",
       "id": "ch12-l04-ex05",
       "mode": "TAP",
-      "sentence_ar": "إِنَّا ___",
+      "sentence_ar": "___ إِلَى الْمَسْجِدِ",
       "hint": {
-        "en": "Indeed We created you",
-        "ur": "بے شک ہم نے تمہیں پیدا کیا"
+        "en": "He went to the mosque.",
+        "ur": "وہ مسجد گیا۔"
       },
       "options": [
         {
-          "ar": "خَلَقْنَاكُم",
-          "ar_plain": "خلقناكم",
-          "translit": "khalaqnaakum",
-          "en": "We created you",
-          "ur": "ہم نے تمہیں پیدا کیا"
-        },
-        {
           "ar": "ذَهَبَ",
           "ar_plain": "ذهب",
           "translit": "dhahaba",
@@ -285,53 +388,7 @@
         {
           "ar": "رَجَعَ",
           "ar_plain": "رجع",
-          "translit": "raja'a",
-          "en": "he returned",
-          "ur": "وہ واپس آیا"
-        },
-        {
-          "ar": "أَيْنَ",
-          "ar_plain": "اين",
-          "translit": "ayna",
-          "en": "where",
-          "ur": "کہاں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "خَلَقْنَاكُم",
-        "ar_plain": "خلقناكم",
-        "translit": "khalaqnaakum",
-        "en": "We created you",
-        "ur": "ہم نے تمہیں پیدا کیا"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch12-l04-ex06",
-      "target_translation": {
-        "en": "He went and returned.",
-        "ur": "وہ گیا اور واپس آیا۔"
-      },
-      "tiles": [
-        {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
-          "translit": "dhahaba",
-          "en": "he went",
-          "ur": "وہ گیا"
-        },
-        {
-          "ar": "وَ",
-          "ar_plain": "و",
-          "translit": "wa",
-          "en": "and",
-          "ur": "اور"
-        },
-        {
-          "ar": "رَجَعَ",
-          "ar_plain": "رجع",
-          "translit": "raja'a",
+          "translit": "rajaʿa",
           "en": "he returned",
           "ur": "وہ واپس آیا"
         },
@@ -341,6 +398,63 @@
           "translit": "khalaqa",
           "en": "He created",
           "ur": "اس نے پیدا کیا"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "اين",
+          "translit": "ayna",
+          "en": "where?",
+          "ur": "کہاں؟"
+        }
+      ],
+      "correct_answer": {
+        "ar": "ذَهَبَ",
+        "ar_plain": "ذهب",
+        "translit": "dhahaba",
+        "en": "he went",
+        "ur": "وہ گیا"
+      },
+      "explanation_on_wrong": {
+        "en": "'He went' is ذَهَبَ: ذَهَبَ إِلَى الْمَسْجِدِ. رَجَعَ would be 'he returned'.",
+        "ur": "'وہ گیا' ذَهَبَ ہے: ذَهَبَ إِلَى الْمَسْجِدِ۔ رَجَعَ 'وہ واپس آیا' ہوتا۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch12-l04-ex06",
+      "target_translation": {
+        "en": "He returned after the lesson.",
+        "ur": "وہ سبق کے بعد واپس آیا۔"
+      },
+      "tiles": [
+        {
+          "ar": "رَجَعَ",
+          "ar_plain": "رجع",
+          "translit": "rajaʿa",
+          "en": "he returned",
+          "ur": "وہ واپس آیا"
+        },
+        {
+          "ar": "بَعْدَ",
+          "ar_plain": "بعد",
+          "translit": "baʿda",
+          "en": "after",
+          "ur": "کے بعد"
+        },
+        {
+          "ar": "الدَّرْسِ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsi",
+          "en": "the lesson",
+          "ur": "سبق"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
         }
       ],
       "correct_order": [
@@ -348,36 +462,75 @@
         1,
         2
       ],
+      "explanation_on_wrong": {
+        "en": "The verb comes first: رَجَعَ, he returned, then بَعْدَ الدَّرْسِ, after the lesson. ذَهَبَ would change the meaning to 'went'.",
+        "ur": "فعل پہلے آتا ہے: رَجَعَ، وہ واپس آیا، پھر بَعْدَ الدَّرْسِ، سبق کے بعد۔ ذَهَبَ سے مطلب 'گیا' ہو جاتا۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch12-l04-ex07",
+      "ayah_fragment": {
+        "ar": "خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ",
+        "surah_ref": "Al-Alaq 96:2"
+      },
+      "options": [
+        {
+          "en": "خَلَقَ, the first word, is 'He created', exactly the form you learned",
+          "ur": "خَلَقَ، پہلا لفظ، 'اس نے پیدا کیا' ہے، بالکل وہی صورت جو آپ نے سیکھی"
+        },
+        {
+          "en": "الْإِنسَانَ is the verb 'He created'",
+          "ur": "الْإِنسَانَ فعل 'اس نے پیدا کیا' ہے"
+        },
+        {
+          "en": "مِنْ is the verb 'he went'",
+          "ur": "مِنْ فعل 'وہ گیا' ہے"
+        },
+        {
+          "en": "The ayah contains no past-tense verb",
+          "ur": "آیت میں کوئی فعلِ ماضی نہیں"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The ayah opens with خَلَقَ, He created. الْإِنسَانَ is 'man' and مِنْ is 'from'; neither is a verb.",
+        "ur": "آیت خَلَقَ، اس نے پیدا کیا، سے شروع ہوتی ہے۔ الْإِنسَانَ 'انسان' ہے اور مِنْ 'سے'؛ دونوں فعل نہیں۔"
+      },
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Recognizing past tense verbs",
+      "en": "Recognising past-tense verbs",
       "ar": "تَعَرُّفُ الْفِعْلِ الْمَاضِي",
       "ur": "فعلِ ماضی کی پہچان"
     },
     "ayah": {
-      "surah": 49,
-      "ayah": 13,
-      "label": "Al-Hujurat 49:13",
-      "ar": "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ",
-      "en": "O mankind, indeed We created you from male and female.",
-      "ur": "اے لوگو، بے شک ہم نے تمہیں ایک مرد اور ایک عورت سے پیدا کیا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049013.mp3"
+      "surah": 96,
+      "ayah": 2,
+      "label": "Al-Alaq 96:2",
+      "ar": "خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ",
+      "en": "Created man from a clinging substance.",
+      "ur": "اس نے انسان کو جمے ہوئے خون سے پیدا کیا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096002.mp3"
     },
     "highlighted_word_indices": [
-      4
+      0
+    ],
+    "highlighted_words": [
+      "خَلَقَ"
     ],
     "noor_explanation": {
-      "en": "خَلَقْنَاكُم comes from the same action idea as خَلَقَ: created. For now, simply recognize the meaning when you see it.",
-      "ur": "خَلَقْنَاكُم اسی عمل کے معنی سے ہے جسے آپ نے خَلَقَ میں دیکھا: پیدا کیا۔ فی الحال اسے دیکھ کر معنی پہچاننا کافی ہے۔"
+      "en": "خَلَقَ opens the ayah in exactly the form you learned: He created. Whenever you meet ذَهَبَ, رَجَعَ or خَلَقَ, you know a finished action is being told. The longer forms of the same roots are a lesson for later.",
+      "ur": "خَلَقَ آیت کو بالکل اسی صورت میں شروع کرتا ہے جو آپ نے سیکھی: اس نے پیدا کیا۔ جب بھی آپ ذَهَبَ، رَجَعَ یا خَلَقَ دیکھیں، آپ جانتے ہیں کہ ہو چکا کام بتایا جا رہا ہے۔ انہی مادوں کی لمبی صورتیں بعد کا سبق ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You now recognize three past tense verbs as vocabulary: ذَهَبَ, رَجَعَ, and خَلَقَ.",
-      "ur": "اب آپ تین فعلِ ماضی کو الفاظ کے طور پر پہچانتے ہیں: ذَهَبَ، رَجَعَ، اور خَلَقَ۔"
+      "en": "You now recognise three past-tense verbs as whole words, ذَهَبَ, رَجَعَ and خَلَقَ, and you can tell the taught form خَلَقَ from a longer conjugated one.",
+      "ur": "اب آپ تین فعلِ ماضی کو پورے لفظوں کے طور پر پہچانتے ہیں، ذَهَبَ، رَجَعَ اور خَلَقَ، اور سکھائی گئی صورت خَلَقَ کو لمبی گردانی صورت سے الگ کر سکتے ہیں۔"
     }
   }
 }
