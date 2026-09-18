@@ -2,25 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 10, Lesson 1 - plural third-person pronouns هُمْ and هُنَّ.",
+    "_note": "Chapter 10, display lesson 1 (ch10-l01) — standalone third-person plural pronouns هُمْ (male or mixed group) and هُنَّ (female-only group) as the subject of a nominal sentence; standalone هُمْ versus attached ـهِمْ for recognition only. Quran hook: standalone هُمْ in وَهُمْ لَا يَشْعُرُونَ (Yusuf 12:15), replacing the attached-form hook عَلَيْهِمْ. Rebuilt 2026-09-18 from Docs/proposals/chapter-10-content-proposal.md.",
+    "titleUr": "وہ سب — هُمْ / هُنَّ",
     "chapter_order": 10,
     "lesson_order": 1,
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 1,
-      "ayah": 7,
-      "label": "Al-Fatiha 1:7",
-      "ar": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ",
-      "en": "The path of those upon whom You have bestowed favor.",
-      "ur": "ان لوگوں کا راستہ جن پر تو نے انعام فرمایا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001007.mp3"
+      "surah": 12,
+      "ayah": 15,
+      "label": "Yusuf 12:15",
+      "ar": "وَهُمْ لَا يَشْعُرُونَ",
+      "en": "…while they do not perceive.",
+      "ur": "اور انہیں خبر نہ ہوگی۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012015.mp3"
     },
     "noor_intro": {
-      "en": "Al-Fatiha ends with عَلَيْهِمْ: upon them. Today you learn the standalone plural pronouns هُمْ and هُنَّ.",
-      "ur": "الفاتحہ کے آخر میں عَلَيْهِمْ آتا ہے: ان پر۔ آج آپ جمع ضمیریں هُمْ اور هُنَّ سیکھیں گے۔"
+      "en": "In وَهُمْ لَا يَشْعُرُونَ, one small word names a whole group: هُمْ, they. It stands on its own, before anything else in the phrase. Today you learn the two Arabic words for they.",
+      "ur": "وَهُمْ لَا يَشْعُرُونَ میں ایک چھوٹا سا لفظ پوری جماعت کا نام لیتا ہے: هُمْ، وہ سب۔ یہ جملے میں الگ اپنی جگہ کھڑا ہے۔ آج آپ 'وہ سب' کے لیے عربی کے دو لفظ سیکھیں گے۔"
     },
     "autoplay": true
   },
@@ -28,50 +29,213 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "They: masculine or mixed",
+        "en": "They: a male or mixed group",
         "ar": "هُمْ",
         "ur": "وہ سب: مذکر یا مخلوط جماعت"
       },
       "explanation": {
-        "en": "هُمْ means they. Use it for a group of males, or for a mixed group.",
-        "ur": "هُمْ کا مطلب ہے: وہ سب۔ یہ مذکر جماعت یا مخلوط جماعت کے لیے آتا ہے۔"
-      }
+        "en": "The word هُمْ means they. Use it for a group of men, or for a group that contains both men and women.",
+        "ur": "لفظ هُمْ کا مطلب ہے: وہ سب۔ یہ مردوں کی جماعت کے لیے آتا ہے، یا ایسی جماعت کے لیے جس میں مرد اور عورتیں دونوں ہوں۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/qawm.webp",
+      "examples": [
+        {
+          "ar": "هُمْ",
+          "ar_plain": "هم",
+          "translit": "hum",
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "They: a female-only group",
+        "ar": "هُنَّ",
+        "ur": "وہ سب: صرف مؤنث جماعت"
+      },
+      "explanation": {
+        "en": "The word هُنَّ also means they, but only for a group made up of women. One man in the group, and the word becomes هُمْ.",
+        "ur": "لفظ هُنَّ کا مطلب بھی 'وہ سب' ہے، مگر صرف عورتوں پر مشتمل جماعت کے لیے۔ جماعت میں ایک مرد بھی ہو تو لفظ هُمْ ہو جاتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "هُنَّ",
+          "ar_plain": "هن",
+          "translit": "hunna",
+          "en": "they (female-only group)",
+          "ur": "وہ سب (صرف مؤنث جماعت)"
+        }
+      ]
     },
     {
       "type": "WORD",
       "text": {
         "ar": "هُمْ طُلَّابٌ",
         "ar_plain": "هم طلاب",
-        "translit": "hum tullaabun",
-        "en": "They are students",
-        "ur": "وہ طلبہ ہیں"
+        "translit": "hum ṭullābun",
+        "en": "They are students.",
+        "ur": "وہ طلبہ ہیں۔"
+      },
+      "explanation": {
+        "en": "A pronoun and a plural noun make a complete sentence. No word for 'are' is needed: هُمْ طُلَّابٌ, they are students.",
+        "ur": "ایک ضمیر اور ایک جمع اسم مل کر مکمل جملہ بناتے ہیں۔ 'ہیں' کے لیے کوئی لفظ درکار نہیں: هُمْ طُلَّابٌ، وہ طلبہ ہیں۔"
       }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "هُنَّ طَالِبَاتٌ",
+        "ar_plain": "هن طالبات",
+        "translit": "hunna ṭālibātun",
+        "en": "They are female students.",
+        "ur": "وہ طالبات ہیں۔"
+      },
+      "explanation": {
+        "en": "The female-only pronoun هُنَّ pairs with the sound feminine plural you met in Chapter 9: هُنَّ طَالِبَاتٌ.",
+        "ur": "صرف مؤنث ضمیر هُنَّ اس جمع مؤنث سالم کے ساتھ آتا ہے جو آپ نے باب 9 میں دیکھی: هُنَّ طَالِبَاتٌ۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Which they?",
+        "ar": "هُمْ / هُنَّ",
+        "ur": "کون سا 'وہ سب'؟"
+      },
+      "explanation": {
+        "en": "Look at the group before you choose. Men, or men and women together: هُمْ. Women only: هُنَّ. The noun that follows usually matches: مُسْلِمُونَ after هُمْ, مُسْلِمَاتٌ after هُنَّ.",
+        "ur": "لفظ چننے سے پہلے جماعت کو دیکھیں۔ مرد، یا مرد اور عورتیں ملے جلے: هُمْ۔ صرف عورتیں: هُنَّ۔ بعد کا اسم عام طور پر اسی کے مطابق ہوتا ہے: هُمْ کے بعد مُسْلِمُونَ، هُنَّ کے بعد مُسْلِمَاتٌ۔"
+      },
+      "examples": [
+        {
+          "ar": "هُمْ مُسْلِمُونَ",
+          "ar_plain": "هم مسلمون",
+          "translit": "hum muslimūna",
+          "en": "They are Muslims.",
+          "ur": "وہ مسلمان ہیں۔"
+        },
+        {
+          "ar": "هُنَّ مُسْلِمَاتٌ",
+          "ar_plain": "هن مسلمات",
+          "translit": "hunna muslimātun",
+          "en": "They are Muslim women.",
+          "ur": "وہ مسلمان عورتیں ہیں۔"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Standalone or attached",
+        "ar": "هُمْ / ـهِمْ",
+        "ur": "الگ یا جڑا ہوا"
+      },
+      "explanation": {
+        "en": "In this chapter هُمْ stands alone as its own word. Al-Fatihah ends with عَلَيْهِمْ, where a shorter form, ـهِمْ, is attached to the end of عَلَى. Recognise the attached form when you see it; using it is a later lesson.",
+        "ur": "اس باب میں هُمْ الگ اپنا لفظ بن کر آتا ہے۔ الفاتحہ کے آخر میں عَلَيْهِمْ ہے، جہاں ایک چھوٹی صورت ـهِمْ لفظ عَلَى کے آخر سے جڑی ہے۔ جڑی ہوئی صورت کو دیکھ کر پہچانیں؛ اس کا استعمال بعد کے سبق کی بات ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "هُمْ",
+          "ar_plain": "هم",
+          "translit": "hum",
+          "en": "they (standalone)",
+          "ur": "وہ سب (الگ لفظ)"
+        },
+        {
+          "ar": "عَلَيْهِمْ",
+          "ar_plain": "عليهم",
+          "translit": "ʿalayhim",
+          "en": "upon them (attached ـهِمْ)",
+          "ur": "ان پر (جڑا ہوا ـهِمْ)"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "They: feminine only",
-        "ar": "هُنَّ",
-        "ur": "وہ سب: صرف مؤنث جماعت"
+        "en": "A pronoun can be the subject",
+        "ar": "الْمُبْتَدَأ",
+        "ur": "ضمیر مبتدا بن سکتی ہے"
       },
       "explanation": {
-        "en": "هُنَّ means they for a group of females only.",
-        "ur": "هُنَّ کا مطلب بھی وہ سب ہے، مگر صرف مؤنث جماعت کے لیے۔"
-      }
+        "en": "In هُمْ مُعَلِّمُونَ the pronoun is the subject and the noun is the predicate, exactly like هٰؤُلَاءِ مُعَلِّمُونَ in Chapter 9. Any of the pronouns in this chapter can open a sentence this way.",
+        "ur": "هُمْ مُعَلِّمُونَ میں ضمیر مبتدا ہے اور اسم خبر ہے، بالکل باب 9 کے هٰؤُلَاءِ مُعَلِّمُونَ کی طرح۔ اس باب کی ہر ضمیر اسی طرح جملہ شروع کر سکتی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "هُمْ مُعَلِّمُونَ",
+          "ar_plain": "هم معلمون",
+          "translit": "hum muʿallimūna",
+          "en": "They are teachers.",
+          "ur": "وہ اساتذہ ہیں۔"
+        },
+        {
+          "ar": "هُنَّ مُعَلِّمَاتٌ",
+          "ar_plain": "هن معلمات",
+          "translit": "hunna muʿallimātun",
+          "en": "They are female teachers.",
+          "ur": "وہ معلمات ہیں۔"
+        }
+      ]
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
       "text": {
-        "ar": "هُنَّ طَالِبَاتٌ",
-        "ar_plain": "هن طالبات",
-        "translit": "hunna taalibaatun",
-        "en": "They are female students",
-        "ur": "وہ طالبات ہیں"
+        "ar": "وَهُمْ لَا يَشْعُرُونَ",
+        "ar_plain": "وهم لا يشعرون",
+        "translit": "wa-hum lā yashʿurūna",
+        "en": "while they do not perceive",
+        "ur": "اور انہیں خبر نہ ہوگی"
       },
       "explanation": {
-        "en": "هُنَّ pairs naturally with feminine plural words like طَالِبَاتٌ.",
-        "ur": "هُنَّ مؤنث جمع الفاظ جیسے طَالِبَاتٌ کے ساتھ آتا ہے۔"
-      }
+        "en": "Find هُمْ right after the وَ. It is the standalone pronoun, a whole word on its own: they. The words after it tell what they do not perceive.",
+        "ur": "وَ کے فوراً بعد هُمْ تلاش کریں۔ یہ الگ ضمیر ہے، اپنی جگہ پورا لفظ: وہ سب۔ اس کے بعد کے الفاظ بتاتے ہیں کہ انہیں کس چیز کی خبر نہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012015.mp3",
+      "examples": [
+        {
+          "ar": "وَهُمْ",
+          "ar_plain": "وهم",
+          "translit": "wa-hum",
+          "en": "and they / while they",
+          "ur": "اور وہ سب"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Summary and boundary",
+        "ar": "هُمْ / هُنَّ",
+        "ur": "خلاصہ اور حد"
+      },
+      "explanation": {
+        "en": "Two words for they: هُمْ for a male or mixed group, هُنَّ for a female-only group. Both stand alone and can begin a sentence. Two people together, and the attached forms like ـهِمْ, belong to later chapters.",
+        "ur": "'وہ سب' کے لیے دو لفظ: مذکر یا مخلوط جماعت کے لیے هُمْ، صرف مؤنث جماعت کے لیے هُنَّ۔ دونوں الگ آتے ہیں اور جملہ شروع کر سکتے ہیں۔ دو افراد کی صورت اور ـهِمْ جیسی جڑی ہوئی صورتیں بعد کے ابواب میں آئیں گی۔"
+      },
+      "examples": [
+        {
+          "ar": "هُمْ",
+          "ar_plain": "هم",
+          "translit": "hum",
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
+        },
+        {
+          "ar": "هُنَّ",
+          "ar_plain": "هن",
+          "translit": "hunna",
+          "en": "they (female-only group)",
+          "ur": "وہ سب (صرف مؤنث جماعت)"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -82,92 +246,104 @@
         "ar": "هُمْ",
         "ar_plain": "هم",
         "translit": "hum",
-        "en": "they",
-        "ur": "وہ سب"
+        "en": "they (male or mixed group)",
+        "ur": "وہ سب (مذکر یا مخلوط جماعت)"
       },
       "options": [
         {
-          "en": "they",
-          "ur": "وہ سب"
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
+        },
+        {
+          "en": "they (female-only group)",
+          "ur": "وہ سب (صرف مؤنث جماعت)"
         },
         {
           "en": "we",
           "ur": "ہم"
         },
         {
-          "en": "these",
-          "ur": "یہ سب"
-        },
-        {
-          "en": "after",
-          "ur": "بعد"
+          "en": "these (people)",
+          "ur": "یہ لوگ"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word هُمْ is they for a group of men, or a group of men and women together.",
+        "ur": "لفظ هُمْ مردوں کی جماعت، یا مردوں اور عورتوں کی ملی جلی جماعت کے لیے 'وہ سب' ہے۔"
+      },
       "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch10-l01-ex02",
       "statement": {
-        "en": "هُنَّ is used for a female-only group.",
-        "ur": "هُنَّ صرف مؤنث جماعت کے لیے آتا ہے۔",
+        "en": "The word هُنَّ is used for a group made up of women only.",
+        "ur": "لفظ هُنَّ صرف عورتوں پر مشتمل جماعت کے لیے آتا ہے۔",
         "ar_example": {
           "ar": "هُنَّ طَالِبَاتٌ",
           "ar_plain": "هن طالبات",
-          "translit": "hunna taalibaatun",
-          "en": "They are female students",
-          "ur": "وہ طالبات ہیں"
+          "translit": "hunna ṭālibātun",
+          "en": "They are female students.",
+          "ur": "وہ طالبات ہیں۔"
         }
       },
       "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True: هُنَّ is the female-only they. A group with any men in it takes هُمْ.",
+        "ur": "درست: هُنَّ صرف مؤنث 'وہ سب' ہے۔ جس جماعت میں کوئی مرد بھی ہو اس کے لیے هُمْ آتا ہے۔"
+      },
       "xp_value": 1
     },
     {
       "type": "FILL_BLANK",
       "id": "ch10-l01-ex03",
       "mode": "TAP",
-      "sentence_ar": "___ طُلَّابٌ",
+      "sentence_ar": "___ طَالِبَاتٌ",
       "hint": {
-        "en": "They are students",
-        "ur": "وہ طلبہ ہیں"
+        "en": "They are female students.",
+        "ur": "وہ طالبات ہیں۔"
       },
       "options": [
-        {
-          "ar": "هُمْ",
-          "ar_plain": "هم",
-          "translit": "hum",
-          "en": "they",
-          "ur": "وہ سب"
-        },
         {
           "ar": "هُنَّ",
           "ar_plain": "هن",
           "translit": "hunna",
-          "en": "they (feminine)",
-          "ur": "وہ سب (مؤنث)"
+          "en": "they (female-only group)",
+          "ur": "وہ سب (صرف مؤنث جماعت)"
         },
         {
-          "ar": "نَحْنُ",
-          "ar_plain": "نحن",
-          "translit": "nahnu",
-          "en": "we",
-          "ur": "ہم"
+          "ar": "هُمْ",
+          "ar_plain": "هم",
+          "translit": "hum",
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
         },
         {
-          "ar": "قَبْلَ",
-          "ar_plain": "قبل",
-          "translit": "qabla",
-          "en": "before",
-          "ur": "پہلے"
+          "ar": "هٰؤُلَاءِ",
+          "ar_plain": "هؤلاء",
+          "translit": "hāʾulāʾi",
+          "en": "these (people)",
+          "ur": "یہ لوگ"
+        },
+        {
+          "ar": "هٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "hādhihi",
+          "en": "this (feminine)",
+          "ur": "یہ (مؤنث)"
         }
       ],
       "correct_answer": {
-        "ar": "هُمْ",
-        "ar_plain": "هم",
-        "translit": "hum",
-        "en": "they",
-        "ur": "وہ سب"
+        "ar": "هُنَّ",
+        "ar_plain": "هن",
+        "translit": "hunna",
+        "en": "they (female-only group)",
+        "ur": "وہ سب (صرف مؤنث جماعت)"
+      },
+      "explanation_on_wrong": {
+        "en": "The group طَالِبَاتٌ is female-only, so the pronoun is هُنَّ: هُنَّ طَالِبَاتٌ.",
+        "ur": "طَالِبَاتٌ صرف مؤنث جماعت ہے، اس لیے ضمیر هُنَّ ہے: هُنَّ طَالِبَاتٌ۔"
       },
       "xp_value": 1
     },
@@ -179,47 +355,47 @@
           "ar": "هُمْ",
           "ar_plain": "هم",
           "translit": "hum",
-          "en": "they",
-          "ur": "وہ سب"
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
         },
         {
           "ar": "هُنَّ",
           "ar_plain": "هن",
           "translit": "hunna",
-          "en": "they feminine",
-          "ur": "وہ سب مؤنث"
+          "en": "they (female-only group)",
+          "ur": "وہ سب (صرف مؤنث جماعت)"
         },
         {
-          "ar": "طُلَّابٌ",
-          "ar_plain": "طلاب",
-          "translit": "tullaabun",
-          "en": "students",
-          "ur": "طلبہ"
+          "ar": "هُمْ طُلَّابٌ",
+          "ar_plain": "هم طلاب",
+          "translit": "hum ṭullābun",
+          "en": "They are students.",
+          "ur": "وہ طلبہ ہیں۔"
         },
         {
-          "ar": "طَالِبَاتٌ",
-          "ar_plain": "طالبات",
-          "translit": "taalibaatun",
-          "en": "female students",
-          "ur": "طالبات"
+          "ar": "هُنَّ طَالِبَاتٌ",
+          "ar_plain": "هن طالبات",
+          "translit": "hunna ṭālibātun",
+          "en": "They are female students.",
+          "ur": "وہ طالبات ہیں۔"
         }
       ],
       "right_column": [
         {
-          "en": "they",
-          "ur": "وہ سب"
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
         },
         {
-          "en": "they feminine",
-          "ur": "وہ سب مؤنث"
+          "en": "they (female-only group)",
+          "ur": "وہ سب (صرف مؤنث جماعت)"
         },
         {
-          "en": "students",
-          "ur": "طلبہ"
+          "en": "They are students.",
+          "ur": "وہ طلبہ ہیں۔"
         },
         {
-          "en": "female students",
-          "ur": "طالبات"
+          "en": "They are female students.",
+          "ur": "وہ طالبات ہیں۔"
         }
       ],
       "correct_pairs": [
@@ -243,65 +419,136 @@
       "xp_value": 1
     },
     {
-      "type": "GRAMMAR_PARSE",
+      "type": "BUILD_SENTENCE",
       "id": "ch10-l01-ex05",
-      "sentence_ar": "هُمْ طُلَّابٌ",
-      "words": [
+      "target_translation": {
+        "en": "They are Muslims.",
+        "ur": "وہ مسلمان ہیں۔"
+      },
+      "tiles": [
+        {
+          "ar": "مُسْلِمُونَ",
+          "ar_plain": "مسلمون",
+          "translit": "muslimūna",
+          "en": "Muslims / Muslim men",
+          "ur": "مسلمان (مرد یا ملی جلی جماعت)"
+        },
         {
           "ar": "هُمْ",
           "ar_plain": "هم",
           "translit": "hum",
-          "en": "they",
-          "ur": "وہ سب"
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
         },
         {
-          "ar": "طُلَّابٌ",
-          "ar_plain": "طلاب",
-          "translit": "tullaabun",
-          "en": "students",
-          "ur": "طلبہ"
+          "ar": "هُنَّ",
+          "ar_plain": "هن",
+          "translit": "hunna",
+          "en": "they (female-only group)",
+          "ur": "وہ سب (صرف مؤنث جماعت)"
+        },
+        {
+          "ar": "مُسْلِمٌ",
+          "ar_plain": "مسلم",
+          "translit": "muslimun",
+          "en": "a Muslim man",
+          "ur": "ایک مسلمان (مرد)"
         }
       ],
-      "available_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "DEMONSTRATIVE",
-        "ADJECTIVE"
+      "correct_order": [
+        1,
+        0
       ],
-      "correct_roles": [
-        "SUBJECT",
-        "PREDICATE"
+      "explanation_on_wrong": {
+        "en": "The order is هُمْ مُسْلِمُونَ: the pronoun first, then the plural noun. The group is male or mixed, so هُمْ, not هُنَّ.",
+        "ur": "ترتیب هُمْ مُسْلِمُونَ ہے: پہلے ضمیر، پھر جمع اسم۔ جماعت مذکر یا مخلوط ہے، اس لیے هُمْ، هُنَّ نہیں۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch10-l01-ex06",
+      "statement": {
+        "en": "In عَلَيْهِمْ the pronoun is attached to the end of عَلَى; the standalone form of the same pronoun is هُمْ.",
+        "ur": "عَلَيْهِمْ میں ضمیر عَلَى کے آخر سے جڑی ہوئی ہے؛ اسی ضمیر کی الگ صورت هُمْ ہے۔",
+        "ar_example": {
+          "ar": "عَلَيْهِمْ",
+          "ar_plain": "عليهم",
+          "translit": "ʿalayhim",
+          "en": "upon them (attached ـهِمْ)",
+          "ur": "ان پر (جڑا ہوا ـهِمْ)"
+        }
+      },
+      "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True: ـهِمْ inside عَلَيْهِمْ is the attached form. On its own, they is هُمْ. You only need to recognise the attached form for now.",
+        "ur": "درست: عَلَيْهِمْ کے اندر ـهِمْ جڑی ہوئی صورت ہے۔ الگ لفظ کے طور پر 'وہ سب' هُمْ ہے۔ ابھی جڑی ہوئی صورت کو صرف پہچاننا ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch10-l01-ex07",
+      "ayah_fragment": {
+        "ar": "وَهُمْ لَا يَشْعُرُونَ",
+        "surah_ref": "Yusuf 12:15"
+      },
+      "options": [
+        {
+          "en": "'and they' — هُمْ is the standalone pronoun for a male or mixed group",
+          "ur": "'اور وہ سب' — هُمْ مذکر یا مخلوط جماعت کے لیے الگ ضمیر ہے"
+        },
+        {
+          "en": "'and we' — هُمْ means we",
+          "ur": "'اور ہم' — هُمْ کا مطلب ہم ہے"
+        },
+        {
+          "en": "'upon them' — هُمْ is attached to another word here",
+          "ur": "'ان پر' — یہاں هُمْ کسی دوسرے لفظ سے جڑا ہے"
+        },
+        {
+          "en": "'and they (women)' — هُمْ is the female-only pronoun",
+          "ur": "'اور وہ عورتیں' — هُمْ صرف مؤنث ضمیر ہے"
+        }
       ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "After the وَ comes هُمْ on its own: the standalone they. The female-only form would be هُنَّ, and the attached form would be joined to another word, as in عَلَيْهِمْ.",
+        "ur": "وَ کے بعد هُمْ الگ آتا ہے: 'وہ سب' کی الگ صورت۔ صرف مؤنث صورت هُنَّ ہوتی، اور جڑی ہوئی صورت کسی دوسرے لفظ سے ملی ہوتی، جیسے عَلَيْهِمْ میں۔"
+      },
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Plural pronouns: they",
-      "ar": "ضَمَائِرُ الغَائِبِ الجَمْع",
-      "ur": "غائب جمع ضمیریں"
+      "en": "They — هُمْ and هُنَّ",
+      "ar": "ضَمِيرُ الْغَائِبِينَ",
+      "ur": "وہ سب — هُمْ اور هُنَّ"
     },
     "ayah": {
-      "surah": 1,
-      "ayah": 7,
-      "label": "Al-Fatiha 1:7",
-      "ar": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ",
-      "en": "The path of those upon whom You have bestowed favor.",
-      "ur": "ان لوگوں کا راستہ جن پر تو نے انعام فرمایا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001007.mp3"
+      "surah": 12,
+      "ayah": 15,
+      "label": "Yusuf 12:15",
+      "ar": "وَهُمْ لَا يَشْعُرُونَ",
+      "en": "…while they do not perceive.",
+      "ur": "اور انہیں خبر نہ ہوگی۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012015.mp3"
     },
     "highlighted_word_indices": [
-      3
+      0
+    ],
+    "highlighted_words": [
+      "وَهُمْ"
     ],
     "noor_explanation": {
-      "en": "عَلَيْهِمْ contains هِمْ, the attached form of هُمْ. You are beginning to see plural pronouns inside Quranic phrases.",
-      "ur": "عَلَيْهِمْ میں هِمْ ہے، جو هُمْ کی جڑی ہوئی شکل ہے۔ اب آپ قرآنی جملوں میں جمع ضمیریں پہچان رہے ہیں۔"
+      "en": "The ayah names the brothers of Yusuf with one standalone word, هُمْ: they. Whenever you meet هُمْ or هُنَّ on its own in the Quran, a group is being spoken about.",
+      "ur": "آیت یوسف علیہ السلام کے بھائیوں کا نام ایک الگ لفظ سے لیتی ہے، هُمْ: وہ سب۔ جب بھی قرآن میں هُمْ یا هُنَّ الگ ملے، کسی جماعت کے بارے میں بات ہو رہی ہوتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now separate هُمْ for they and هُنَّ for female-only they.",
-      "ur": "اب آپ هُمْ اور هُنَّ میں فرق پہچان سکتے ہیں۔"
+      "en": "You can now say they in Arabic two ways, هُمْ for a male or mixed group and هُنَّ for a female-only group, and build a sentence from either one.",
+      "ur": "اب آپ عربی میں 'وہ سب' دو طرح کہہ سکتے ہیں، مذکر یا مخلوط جماعت کے لیے هُمْ اور صرف مؤنث جماعت کے لیے هُنَّ، اور دونوں سے جملہ بنا سکتے ہیں۔"
     }
   }
 }

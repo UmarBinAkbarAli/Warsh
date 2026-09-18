@@ -375,10 +375,36 @@ Everything below this list is either done and verified, or one of these:
    build; the "start with English" authoring rule is now a style preference,
    not a rendering requirement. `reveal.noor_explanation` is not rendered by
    the player at all (283 Arabic-leading strings there are moot).
-   The Chapter 10 proposal is in the tree, owner-authored and not yet
-   reviewed. After every chapter promotion
-   that adds lesson ids, re-run `progress:backfill-skipped` for the owner's
-   test account and `content:backfill-new-lessons` for everyone else.
+   **Chapter 10 (`Docs/proposals/chapter-10-content-proposal.md`, plural
+   pronouns + `قَبْلَ / بَعْدَ`) is built and staging-verified (2026-09-18);
+   production promotion is pending the owner's go-ahead** —
+   `npm run content:promote-chapter-ten -- --apply`, then
+   `content:backfill-new-lessons -- --lesson-ids ch10-l05,ch10-l06,ch10-test
+   --apply`, `progress:backfill-skipped` for the owner's test account,
+   `content:baseline`, `content:check`. `ch10-l01..l04` are rewritten in
+   place (9 cards / 7 exercises each); `ch10-l05` (you all, display order 3),
+   `ch10-l06` (review, 8 cards / 10 exercises) and `ch10-test` (12 MC, 80 %)
+   are new. Fixture file numbers follow display order, as in Chapter 5, so
+   `ch10-l03` (before) is file 04 and `ch10-l04` (after) is file 05 — the
+   proposal's "keep file 03/04 for l03/l04" rule cannot coexist with the
+   mirror's `(chapter, order)` keying and is recorded as a deviation in the
+   proposal's implementation notes. Fixture/Quran/Urdu audits pass; 31
+   catalogue clips generated (R2 3762/3762); `salah`, `dars`, `shams`,
+   `rajaa` discover images copied from the dictionary set; five composite
+   scenes tracked for the owner in `lesson-illustrations-needed.md`.
+   Verified on the API 34 emulator against staging: lesson list order and
+   titles, every card of all five lessons and the review (images + audio),
+   Lesson 1 end to end with all seven exercise types, test intro and first
+   question; through the API: test locked until the six lessons are
+   complete, answer key stripped from the payload, 0/12 and 9/12 fail, 10/12
+   and 12/12 pass, a repeated pass earns 0 XP, chapter completes, and a
+   fresh second account sees 0/7 with the test locked. Note: deep-linking
+   `warsh://lessons/{id}/play` while another lesson screen is mounted
+   red-boxes the dev build (`ReactShadowNode.addChildAt` on null) and leaves
+   a corrupted view tree — navigate through the list instead. After every
+   chapter promotion that adds lesson ids, re-run `progress:backfill-skipped`
+   for the owner's test account and `content:backfill-new-lessons` for
+   everyone else.
    Fixed 2026-09-18 alongside the promotion: (a) `GET /api/lessons/{id}` no
    longer returns `assessment.questions[].correct_index` — the server graded
    already and the app never read it, but the answer key was visible to anyone

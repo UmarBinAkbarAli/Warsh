@@ -2,222 +2,321 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 10, Lesson 4 - time expression بَعْدَ after, followed by genitive noun.",
+    "_note": "Chapter 10, display lesson 4 (ch10-l03) — the time word قَبْلَ (before) in the construct phrases قَبْلَ الصَّلَاةِ / قَبْلَ الدَّرْسِ and the sentence ذَهَبَ قَبْلَ الصَّلَاةِ with the Chapter 5 verb; the kasrah is described only for the phrases used here. Quran hook: قَبْلَ طُلُوعِ الشَّمْسِ وَقَبْلَ غُرُوبِهَا (Ta-Ha 20:130), replacing a hook that did not contain the target word; جَاءُوا removed. Fixture number equals display order; the stable ID is ch10-l03. Rebuilt 2026-09-18 from Docs/proposals/chapter-10-content-proposal.md.",
+    "titleUr": "پہلے — قَبْلَ",
     "chapter_order": 10,
     "lesson_order": 4,
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 94,
-      "ayah": 6,
-      "label": "Ash-Sharh 94:6",
-      "ar": "إِنَّ مَعَ الْعُسْرِ يُسْرًا",
-      "en": "Indeed, with hardship is ease.",
-      "ur": "بے شک تنگی کے ساتھ آسانی ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/094006.mp3"
+      "surah": 20,
+      "ayah": 130,
+      "label": "Ta-Ha 20:130",
+      "ar": "قَبْلَ طُلُوعِ الشَّمْسِ وَقَبْلَ غُرُوبِهَا",
+      "en": "…before the rising of the sun and before its setting…",
+      "ur": "سورج نکلنے سے پہلے اور اس کے ڈوبنے سے پہلے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020130.mp3"
     },
     "noor_intro": {
-      "en": "Some Arabic words arrange events in time. You learned قَبْلَ. Today: بَعْدَ, after.",
-      "ur": "کچھ عربی الفاظ واقعات کو وقت میں ترتیب دیتے ہیں۔ آپ نے قَبْلَ سیکھا۔ آج: بَعْدَ، بعد۔"
+      "en": "Twice in one breath the verse says قَبْلَ, before: before the sun rises, before it sets. Today you learn this little time word and how it joins the noun after it.",
+      "ur": "ایک ہی سانس میں آیت دو بار قَبْلَ کہتی ہے، پہلے: سورج نکلنے سے پہلے، اس کے ڈوبنے سے پہلے۔ آج آپ یہ چھوٹا سا وقت کا لفظ اور اس کا بعد والے اسم سے جڑنا سیکھیں گے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "بَعْدَ",
-        "ar_plain": "بعد",
-        "translit": "ba'da",
-        "en": "after",
-        "ur": "بعد"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Before",
+        "ar": "قَبْلَ",
+        "ur": "پہلے"
       },
       "explanation": {
-        "en": "بَعْدَ means after. It also needs a noun after it.",
-        "ur": "بَعْدَ کا مطلب ہے بعد۔ اس کے بعد بھی ایک اسم آتا ہے۔"
-      }
+        "en": "The word قَبْلَ means before. It places one thing earlier than another in time.",
+        "ur": "لفظ قَبْلَ کا مطلب ہے: پہلے۔ یہ ایک چیز کو وقت میں دوسری سے پہلے رکھتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "قَبْلَ",
+          "ar_plain": "قبل",
+          "translit": "qabla",
+          "en": "before",
+          "ur": "پہلے / سے پہلے"
+        }
+      ]
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "بَعْدَ الدَّرْسِ",
-        "ar_plain": "بعد الدرس",
-        "translit": "ba'da ad-darsi",
-        "en": "after the lesson",
-        "ur": "سبق کے بعد"
+        "ar": "قَبْلَ الصَّلَاةِ",
+        "ar_plain": "قبل الصلاة",
+        "translit": "qabla ṣ-ṣalāti",
+        "en": "before the prayer",
+        "ur": "نماز سے پہلے"
       },
       "explanation": {
-        "en": "الدَّرْسِ has kasra after بَعْدَ, just like after قَبْلَ.",
-        "ur": "بَعْدَ کے بعد الدَّرْسِ کسرہ کے ساتھ آتا ہے، جیسے قَبْلَ کے بعد۔"
+        "en": "The word الصَّلَاة is the prayer. Put قَبْلَ in front and you have a time phrase: before the prayer.",
+        "ur": "لفظ الصَّلَاة نماز ہے۔ آگے قَبْلَ لگائیں تو وقت کا فقرہ بن جاتا ہے: نماز سے پہلے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/salah.webp"
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "قَبْلَ الدَّرْسِ",
+        "ar_plain": "قبل الدرس",
+        "translit": "qabla d-darsi",
+        "en": "before the lesson",
+        "ur": "سبق سے پہلے"
+      },
+      "explanation": {
+        "en": "The same word with a noun you met in Chapter 8: قَبْلَ الدَّرْسِ, before the lesson.",
+        "ur": "وہی لفظ ایک ایسے اسم کے ساتھ جو آپ نے باب 8 میں دیکھا: قَبْلَ الدَّرْسِ، سبق سے پہلے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/dars.webp"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Two events on a line",
+        "ar": "قَبْلَ وَبَعْدَ",
+        "ur": "ایک لکیر پر دو واقعے"
+      },
+      "explanation": {
+        "en": "Picture two events on a timeline. The word قَبْلَ names the earlier one. Its partner بَعْدَ, after, names the later one; you meet it in the next lesson.",
+        "ur": "وقت کی لکیر پر دو واقعے تصور کریں۔ لفظ قَبْلَ پہلے والے کا نام لیتا ہے۔ اس کا جوڑی دار بَعْدَ، بعد، بعد والے کا نام لیتا ہے؛ وہ آپ اگلے سبق میں دیکھیں گے۔"
+      },
+      "examples": [
+        {
+          "ar": "قَبْلَ الدَّرْسِ",
+          "ar_plain": "قبل الدرس",
+          "translit": "qabla d-darsi",
+          "en": "before the lesson",
+          "ur": "سبق سے پہلے"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "ذَهَبَ قَبْلَ الصَّلَاةِ",
+        "ar_plain": "ذهب قبل الصلاة",
+        "translit": "dhahaba qabla ṣ-ṣalāti",
+        "en": "He went before the prayer.",
+        "ur": "وہ نماز سے پہلے گیا۔"
+      },
+      "explanation": {
+        "en": "A verb you know from Chapter 5 plus the new time phrase: ذَهَبَ, he went; قَبْلَ الصَّلَاةِ, before the prayer. The going happened first.",
+        "ur": "باب 5 کا جانا پہچانا فعل اور نیا وقت کا فقرہ: ذَهَبَ، وہ گیا؛ قَبْلَ الصَّلَاةِ، نماز سے پہلے۔ جانا پہلے ہوا۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Before and after",
-        "ar": "قَبْلَ وَبَعْدَ",
-        "ur": "پہلے اور بعد"
+        "en": "A word that needs a partner",
+        "ar": "قَبْلَ مَعَ اسْمٍ",
+        "ur": "ایسا لفظ جسے ساتھی چاہیے"
       },
       "explanation": {
-        "en": "قَبْلَ points backward in sequence. بَعْدَ points forward in sequence.",
-        "ur": "قَبْلَ ترتیب میں پہلے کی طرف اشارہ کرتا ہے۔ بَعْدَ بعد کی طرف۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "جَاءُوا بَعْدَ الصَّلَاةِ",
-        "ar_plain": "جاءوا بعد الصلاة",
-        "translit": "jaa'u ba'da as-salaati",
-        "en": "They came after the prayer",
-        "ur": "وہ نماز کے بعد آئے"
+        "en": "On its own, قَبْلَ leaves a question hanging: before what? The noun after it answers, and the two words are read as one phrase, the way كِتَابُ اللَّهِ was one phrase in Chapter 3.",
+        "ur": "اکیلا قَبْلَ ایک سوال ادھورا چھوڑ دیتا ہے: کس سے پہلے؟ اس کے بعد کا اسم جواب دیتا ہے، اور دونوں لفظ ایک فقرے کی طرح پڑھے جاتے ہیں، جیسے باب 3 میں كِتَابُ اللَّهِ ایک فقرہ تھا۔"
       },
-      "explanation": {
-        "en": "بَعْدَ الصَّلَاةِ answers when they came.",
-        "ur": "بَعْدَ الصَّلَاةِ بتاتا ہے کہ وہ کب آئے۔"
-      }
-    }
-  ],
-  "exercises": [
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch10-l04-ex01",
-      "prompt": {
-        "ar": "بَعْدَ الدَّرْسِ",
-        "ar_plain": "بعد الدرس",
-        "translit": "ba'da ad-darsi",
-        "en": "after the lesson",
-        "ur": "سبق کے بعد"
-      },
-      "options": [
+      "examples": [
         {
-          "en": "after the lesson",
-          "ur": "سبق کے بعد"
-        },
-        {
+          "ar": "قَبْلَ الصَّلَاةِ",
+          "ar_plain": "قبل الصلاة",
+          "translit": "qabla ṣ-ṣalāti",
           "en": "before the prayer",
           "ur": "نماز سے پہلے"
         },
         {
-          "en": "they are students",
-          "ur": "وہ طلبہ ہیں"
-        },
-        {
-          "en": "my father",
-          "ur": "میرے والد"
+          "ar": "قَبْلَ الدَّرْسِ",
+          "ar_plain": "قبل الدرس",
+          "translit": "qabla d-darsi",
+          "en": "before the lesson",
+          "ur": "سبق سے پہلے"
         }
-      ],
-      "correct_index": 0,
-      "xp_value": 1
+      ]
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch10-l04-ex02",
-      "statement": {
-        "en": "بَعْدَ means after.",
-        "ur": "بَعْدَ کا مطلب بعد ہے۔",
-        "ar_example": {
-          "ar": "بَعْدَ الدَّرْسِ",
-          "ar_plain": "بعد الدرس",
-          "translit": "ba'da ad-darsi",
-          "en": "after the lesson",
-          "ur": "سبق کے بعد"
-        }
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The kasrah in these phrases",
+        "ar": "الصَّلَاةِ",
+        "ur": "ان فقروں میں کسرہ"
       },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch10-l04-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ الدَّرْسِ",
-      "hint": {
-        "en": "after the lesson",
-        "ur": "سبق کے بعد"
+      "explanation": {
+        "en": "In the phrases of this lesson, the noun after قَبْلَ ends in a kasrah: الصَّلَاةِ, الدَّرْسِ. Read it as part of the phrase. The fuller rule behind it comes in a later chapter.",
+        "ur": "اس سبق کے فقروں میں قَبْلَ کے بعد کا اسم کسرہ پر ختم ہوتا ہے: الصَّلَاةِ، الدَّرْسِ۔ اسے فقرے کا حصہ سمجھ کر پڑھیں۔ اس کے پیچھے کا پورا قاعدہ بعد کے باب میں آئے گا۔"
       },
-      "options": [
-        {
-          "ar": "بَعْدَ",
-          "ar_plain": "بعد",
-          "translit": "ba'da",
-          "en": "after",
-          "ur": "بعد"
-        },
-        {
-          "ar": "قَبْلَ",
-          "ar_plain": "قبل",
-          "translit": "qabla",
-          "en": "before",
-          "ur": "پہلے"
-        },
-        {
-          "ar": "نَحْنُ",
-          "ar_plain": "نحن",
-          "translit": "nahnu",
-          "en": "we",
-          "ur": "ہم"
-        },
-        {
-          "ar": "هُنَّ",
-          "ar_plain": "هن",
-          "translit": "hunna",
-          "en": "they feminine",
-          "ur": "وہ مؤنث"
-        }
-      ],
-      "correct_answer": {
-        "ar": "بَعْدَ",
-        "ar_plain": "بعد",
-        "translit": "ba'da",
-        "en": "after",
-        "ur": "بعد"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch10-l04-ex04",
-      "left_column": [
-        {
-          "ar": "قَبْلَ",
-          "ar_plain": "قبل",
-          "translit": "qabla",
-          "en": "before",
-          "ur": "پہلے"
-        },
-        {
-          "ar": "بَعْدَ",
-          "ar_plain": "بعد",
-          "translit": "ba'da",
-          "en": "after",
-          "ur": "بعد"
-        },
+      "examples": [
         {
           "ar": "الصَّلَاةِ",
           "ar_plain": "الصلاة",
-          "translit": "as-salaati",
-          "en": "the prayer",
-          "ur": "نماز"
+          "translit": "aṣ-ṣalāti",
+          "en": "the prayer (after قَبْلَ)",
+          "ur": "نماز (قَبْلَ کے بعد)"
         },
         {
           "ar": "الدَّرْسِ",
           "ar_plain": "الدرس",
           "translit": "ad-darsi",
+          "en": "the lesson (after قَبْلَ)",
+          "ur": "سبق (قَبْلَ کے بعد)"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "قَبْلَ طُلُوعِ الشَّمْسِ",
+        "ar_plain": "قبل طلوع الشمس",
+        "translit": "qabla ṭulūʿi sh-shamsi",
+        "en": "before the rising of the sun",
+        "ur": "سورج نکلنے سے پہلے"
+      },
+      "explanation": {
+        "en": "Find قَبْلَ at the start, then again after the وَ. Each time, a noun follows and the two are read together: before the rising of the sun, before its setting.",
+        "ur": "شروع میں قَبْلَ تلاش کریں، پھر وَ کے بعد دوبارہ۔ ہر بار اس کے بعد اسم آتا ہے اور دونوں ساتھ پڑھے جاتے ہیں: سورج نکلنے سے پہلے، اس کے ڈوبنے سے پہلے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020130.mp3",
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/shams.webp",
+      "examples": [
+        {
+          "ar": "قَبْلَ",
+          "ar_plain": "قبل",
+          "translit": "qabla",
+          "en": "before",
+          "ur": "پہلے / سے پہلے"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Summary",
+        "ar": "قَبْلَ",
+        "ur": "خلاصہ"
+      },
+      "explanation": {
+        "en": "The word قَبْلَ means before, always joins the noun after it into one phrase, and names the earlier of two events. Its partner, بَعْدَ, completes the pair in the next lesson.",
+        "ur": "لفظ قَبْلَ کا مطلب پہلے ہے، یہ ہمیشہ بعد والے اسم سے مل کر ایک فقرہ بنتا ہے، اور دو واقعوں میں سے پہلے والے کا نام لیتا ہے۔ اس کا جوڑی دار بَعْدَ اگلے سبق میں جوڑا مکمل کرے گا۔"
+      },
+      "examples": [
+        {
+          "ar": "ذَهَبَ قَبْلَ الصَّلَاةِ",
+          "ar_plain": "ذهب قبل الصلاة",
+          "translit": "dhahaba qabla ṣ-ṣalāti",
+          "en": "He went before the prayer.",
+          "ur": "وہ نماز سے پہلے گیا۔"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch10-l03-ex01",
+      "prompt": {
+        "ar": "قَبْلَ",
+        "ar_plain": "قبل",
+        "translit": "qabla",
+        "en": "before",
+        "ur": "پہلے / سے پہلے"
+      },
+      "options": [
+        {
+          "en": "before",
+          "ur": "پہلے"
+        },
+        {
+          "en": "after",
+          "ur": "بعد"
+        },
+        {
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "en": "to",
+          "ur": "کی طرف"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word قَبْلَ is before: the earlier of two events.",
+        "ur": "لفظ قَبْلَ پہلے ہے: دو واقعوں میں سے پہلے والا۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch10-l03-ex02",
+      "statement": {
+        "en": "In the sentence ذَهَبَ قَبْلَ الصَّلَاةِ, the going happened first and the prayer came later.",
+        "ur": "جملے ذَهَبَ قَبْلَ الصَّلَاةِ میں جانا پہلے ہوا اور نماز بعد میں آئی۔",
+        "ar_example": {
+          "ar": "ذَهَبَ قَبْلَ الصَّلَاةِ",
+          "ar_plain": "ذهب قبل الصلاة",
+          "translit": "dhahaba qabla ṣ-ṣalāti",
+          "en": "He went before the prayer.",
+          "ur": "وہ نماز سے پہلے گیا۔"
+        }
+      },
+      "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True: قَبْلَ places the going before the prayer, so the going is the earlier event.",
+        "ur": "درست: قَبْلَ جانے کو نماز سے پہلے رکھتا ہے، اس لیے جانا پہلے والا واقعہ ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch10-l03-ex03",
+      "left_column": [
+        {
+          "ar": "قَبْلَ الصَّلَاةِ",
+          "ar_plain": "قبل الصلاة",
+          "translit": "qabla ṣ-ṣalāti",
+          "en": "before the prayer",
+          "ur": "نماز سے پہلے"
+        },
+        {
+          "ar": "قَبْلَ الدَّرْسِ",
+          "ar_plain": "قبل الدرس",
+          "translit": "qabla d-darsi",
+          "en": "before the lesson",
+          "ur": "سبق سے پہلے"
+        },
+        {
+          "ar": "الصَّلَاةُ",
+          "ar_plain": "الصلاة",
+          "translit": "aṣ-ṣalātu",
+          "en": "the prayer",
+          "ur": "نماز"
+        },
+        {
+          "ar": "الدَّرْسُ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsu",
           "en": "the lesson",
           "ur": "سبق"
         }
       ],
       "right_column": [
         {
-          "en": "before",
-          "ur": "پہلے"
+          "en": "before the prayer",
+          "ur": "نماز سے پہلے"
         },
         {
-          "en": "after",
-          "ur": "بعد"
+          "en": "before the lesson",
+          "ur": "سبق سے پہلے"
         },
         {
           "en": "the prayer",
@@ -249,65 +348,191 @@
       "xp_value": 1
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch10-l04-ex05",
-      "sentence_ar": "بَعْدَ الدَّرْسِ",
-      "words": [
+      "type": "FILL_BLANK",
+      "id": "ch10-l03-ex04",
+      "mode": "TAP",
+      "sentence_ar": "___ الدَّرْسِ",
+      "hint": {
+        "en": "before the lesson",
+        "ur": "سبق سے پہلے"
+      },
+      "options": [
+        {
+          "ar": "قَبْلَ",
+          "ar_plain": "قبل",
+          "translit": "qabla",
+          "en": "before",
+          "ur": "پہلے / سے پہلے"
+        },
         {
           "ar": "بَعْدَ",
           "ar_plain": "بعد",
-          "translit": "ba'da",
+          "translit": "baʿda",
           "en": "after",
-          "ur": "بعد"
+          "ur": "بعد / کے بعد"
         },
         {
-          "ar": "الدَّرْسِ",
-          "ar_plain": "الدرس",
-          "translit": "ad-darsi",
-          "en": "the lesson",
-          "ur": "سبق"
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "إلى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "کی طرف"
         }
       ],
-      "available_roles": [
-        "PREPOSITION",
-        "POSSESSIVE",
-        "SUBJECT",
-        "PREDICATE"
+      "correct_answer": {
+        "ar": "قَبْلَ",
+        "ar_plain": "قبل",
+        "translit": "qabla",
+        "en": "before",
+        "ur": "پہلے / سے پہلے"
+      },
+      "explanation_on_wrong": {
+        "en": "Before is قَبْلَ: قَبْلَ الدَّرْسِ.",
+        "ur": "'پہلے' قَبْلَ ہے: قَبْلَ الدَّرْسِ۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch10-l03-ex05",
+      "target_translation": {
+        "en": "He went before the prayer.",
+        "ur": "وہ نماز سے پہلے گیا۔"
+      },
+      "tiles": [
+        {
+          "ar": "الصَّلَاةِ",
+          "ar_plain": "الصلاة",
+          "translit": "aṣ-ṣalāti",
+          "en": "the prayer",
+          "ur": "نماز"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "ar": "قَبْلَ",
+          "ar_plain": "قبل",
+          "translit": "qabla",
+          "en": "before",
+          "ur": "پہلے / سے پہلے"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "إلى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "کی طرف"
+        }
       ],
-      "correct_roles": [
-        "PREPOSITION",
-        "POSSESSIVE"
+      "correct_order": [
+        1,
+        2,
+        0
       ],
+      "explanation_on_wrong": {
+        "en": "The order is ذَهَبَ قَبْلَ الصَّلَاةِ: the verb, then قَبْلَ, then the noun it joins.",
+        "ur": "ترتیب ذَهَبَ قَبْلَ الصَّلَاةِ ہے: فعل، پھر قَبْلَ، پھر وہ اسم جس سے یہ جڑتا ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch10-l03-ex06",
+      "statement": {
+        "en": "The phrase قَبْلَ الدَّرْسِ means after the lesson.",
+        "ur": "فقرہ قَبْلَ الدَّرْسِ کا مطلب سبق کے بعد ہے۔",
+        "ar_example": {
+          "ar": "قَبْلَ الدَّرْسِ",
+          "ar_plain": "قبل الدرس",
+          "translit": "qabla d-darsi",
+          "en": "before the lesson",
+          "ur": "سبق سے پہلے"
+        }
+      },
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "False: قَبْلَ is before, so قَبْلَ الدَّرْسِ is before the lesson. After is بَعْدَ.",
+        "ur": "غلط: قَبْلَ پہلے ہے، اس لیے قَبْلَ الدَّرْسِ سبق سے پہلے ہے۔ بعد بَعْدَ ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch10-l03-ex07",
+      "ayah_fragment": {
+        "ar": "قَبْلَ طُلُوعِ الشَّمْسِ وَقَبْلَ غُرُوبِهَا",
+        "surah_ref": "Ta-Ha 20:130"
+      },
+      "options": [
+        {
+          "en": "'before … and before …' — قَبْلَ places the praise before sunrise and before sunset",
+          "ur": "'پہلے … اور پہلے …' — قَبْلَ تسبیح کو سورج نکلنے سے پہلے اور ڈوبنے سے پہلے رکھتا ہے"
+        },
+        {
+          "en": "'after … and after …' — قَبْلَ means after",
+          "ur": "'بعد … اور بعد …' — قَبْلَ کا مطلب بعد ہے"
+        },
+        {
+          "en": "'in … and in …' — قَبْلَ means in",
+          "ur": "'میں … اور میں …' — قَبْلَ کا مطلب میں ہے"
+        },
+        {
+          "en": "'they … and they …' — قَبْلَ is a pronoun",
+          "ur": "'وہ سب … اور وہ سب …' — قَبْلَ ایک ضمیر ہے"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word قَبْلَ is before, and it appears twice: before the rising of the sun, and before its setting.",
+        "ur": "لفظ قَبْلَ پہلے ہے، اور دو بار آتا ہے: سورج نکلنے سے پہلے، اور اس کے ڈوبنے سے پہلے۔"
+      },
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "After - بَعْدَ",
-      "ar": "بَعْدَ",
-      "ur": "بعد"
+      "en": "Before — قَبْلَ",
+      "ar": "قَبْلَ — ظَرْفُ زَمَان",
+      "ur": "پہلے — قَبْلَ"
     },
     "ayah": {
-      "surah": 94,
-      "ayah": 6,
-      "label": "Ash-Sharh 94:6",
-      "ar": "إِنَّ مَعَ الْعُسْرِ يُسْرًا",
-      "en": "Indeed, with hardship is ease.",
-      "ur": "بے شک تنگی کے ساتھ آسانی ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/094006.mp3"
+      "surah": 20,
+      "ayah": 130,
+      "label": "Ta-Ha 20:130",
+      "ar": "قَبْلَ طُلُوعِ الشَّمْسِ وَقَبْلَ غُرُوبِهَا",
+      "en": "…before the rising of the sun and before its setting…",
+      "ur": "سورج نکلنے سے پہلے اور اس کے ڈوبنے سے پہلے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020130.mp3"
     },
     "highlighted_word_indices": [
-      1
+      0,
+      3
+    ],
+    "highlighted_words": [
+      "قَبْلَ",
+      "وَقَبْلَ"
     ],
     "noor_explanation": {
-      "en": "This ayah uses مَعَ, with, another small relationship word. قَبْلَ and بَعْدَ are the time pair you now know.",
-      "ur": "اس آیت میں مَعَ ہے: ساتھ۔ یہ بھی تعلق بتانے والا چھوٹا لفظ ہے۔ قَبْلَ اور بَعْدَ وقت کا جوڑا ہے جو آپ نے سیکھ لیا۔"
+      "en": "Twice the verse says قَبْلَ, and twice a noun follows it to say before what: the rising of the sun, its setting. The same shape as قَبْلَ الصَّلَاةِ, now on a Quranic page.",
+      "ur": "آیت دو بار قَبْلَ کہتی ہے، اور دونوں بار اس کے بعد اسم آ کر بتاتا ہے کہ کس سے پہلے: سورج کا نکلنا، اس کا ڈوبنا۔ وہی شکل جو قَبْلَ الصَّلَاةِ کی ہے، اب قرآن کے صفحے پر۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 10 complete. You can read they, we, before, and after in simple Arabic sentences.",
-      "ur": "باب 10 مکمل۔ آپ اب وہ سب، ہم، پہلے، اور بعد کو آسان عربی جملوں میں پڑھ سکتے ہیں۔"
+      "en": "You can now say before with قَبْلَ, join it to a noun, and place an action earlier than the prayer or the lesson.",
+      "ur": "اب آپ قَبْلَ سے 'پہلے' کہہ سکتے ہیں، اسے اسم سے جوڑ سکتے ہیں، اور کسی کام کو نماز یا سبق سے پہلے رکھ سکتے ہیں۔"
     }
   }
 }

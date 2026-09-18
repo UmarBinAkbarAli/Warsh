@@ -2,284 +2,566 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 10, Lesson 3 - time expression قَبْلَ before, followed by genitive noun.",
+    "_note": "Chapter 10, display lesson 3 (ch10-l05, new) — standalone second-person plural pronouns أَنْتُمْ (male or mixed group) and أَنْتُنَّ (female-only group): speaking directly to a group, contrast with هُمْ / هُنَّ, nominal sentence use without a new verb lesson. Quran hook: أَنْتُمْ in Al-Kafirun 109:3. Fixture number equals display order; the stable ID is ch10-l05. Added 2026-09-18 from Docs/proposals/chapter-10-content-proposal.md.",
+    "titleUr": "تم سب — أَنْتُمْ / أَنْتُنَّ",
     "chapter_order": 10,
     "lesson_order": 3,
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 25,
-      "label": "Al-Baqarah 2:25",
-      "ar": "وَأُتُوا بِهِ مُتَشَابِهًا",
-      "en": "And they will be given it in resemblance.",
-      "ur": "اور انہیں وہ ملتا جلتا دیا جائے گا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002025.mp3"
+      "surah": 109,
+      "ayah": 3,
+      "label": "Al-Kafirun 109:3",
+      "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+      "en": "Nor are you worshippers of what I worship.",
+      "ur": "اور نہ تم اس کی عبادت کرنے والے ہو جس کی میں عبادت کرتا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109003.mp3"
     },
     "noor_intro": {
-      "en": "Arabic places events in time with small words. Today: قَبْلَ, before.",
-      "ur": "عربی چھوٹے الفاظ سے واقعات کا وقت بتاتی ہے۔ آج: قَبْلَ، پہلے۔"
+      "en": "In this verse the Prophet ﷺ speaks directly to a group: أَنْتُمْ, you all. It is not they, and not we; it is the people being addressed. Today you learn the two words for you all.",
+      "ur": "اس آیت میں نبی ﷺ براہِ راست ایک جماعت سے بات کرتے ہیں: أَنْتُمْ، تم سب۔ یہ نہ 'وہ سب' ہے، نہ 'ہم'؛ یہ وہ لوگ ہیں جن سے خطاب ہو رہا ہے۔ آج آپ 'تم سب' کے لیے دو لفظ سیکھیں گے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "قَبْلَ",
-        "ar_plain": "قبل",
-        "translit": "qabla",
-        "en": "before",
-        "ur": "پہلے"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "You all: a male or mixed group",
+        "ar": "أَنْتُمْ",
+        "ur": "تم سب: مذکر یا مخلوط جماعت"
       },
       "explanation": {
-        "en": "قَبْلَ places one thing before another in time.",
-        "ur": "قَبْلَ ایک چیز کو دوسری چیز سے پہلے وقت میں رکھتا ہے۔"
+        "en": "The word أَنْتُمْ means you all. Use it when you speak to a group of men, or to a group of men and women together.",
+        "ur": "لفظ أَنْتُمْ کا مطلب ہے: تم سب۔ یہ تب آتا ہے جب آپ مردوں کی جماعت سے، یا مردوں اور عورتوں کی ملی جلی جماعت سے بات کریں۔"
+      },
+      "examples": [
+        {
+          "ar": "أَنْتُمْ",
+          "ar_plain": "أنتم",
+          "translit": "antum",
+          "en": "you all (male or mixed group)",
+          "ur": "تم سب (مذکر یا مخلوط جماعت)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "You all: a female-only group",
+        "ar": "أَنْتُنَّ",
+        "ur": "تم سب: صرف مؤنث جماعت"
+      },
+      "explanation": {
+        "en": "The word أَنْتُنَّ also means you all, but only when every person you are speaking to is a woman. The ending ـُنَّ is the same one you saw in هُنَّ.",
+        "ur": "لفظ أَنْتُنَّ کا مطلب بھی 'تم سب' ہے، مگر صرف تب جب آپ جن سے بات کر رہے ہیں وہ سب عورتیں ہوں۔ آخری حصہ ـُنَّ وہی ہے جو آپ نے هُنَّ میں دیکھا۔"
+      },
+      "examples": [
+        {
+          "ar": "أَنْتُنَّ",
+          "ar_plain": "أنتن",
+          "translit": "antunna",
+          "en": "you all (female-only group)",
+          "ur": "تم سب (صرف مؤنث جماعت)"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "أَنْتُمْ طُلَّابٌ",
+        "ar_plain": "أنتم طلاب",
+        "translit": "antum ṭullābun",
+        "en": "You are students.",
+        "ur": "تم سب طلبہ ہو۔"
+      },
+      "explanation": {
+        "en": "Said to a group of students, face to face: أَنْتُمْ طُلَّابٌ, you are students. The pronoun opens the sentence, the plural noun completes it.",
+        "ur": "طلبہ کی جماعت سے آمنے سامنے کہا جائے: أَنْتُمْ طُلَّابٌ، تم سب طلبہ ہو۔ ضمیر جملہ شروع کرتی ہے، جمع اسم مکمل کرتا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "قَبْلَ الصَّلَاةِ",
-        "ar_plain": "قبل الصلاة",
-        "translit": "qabla as-salaati",
-        "en": "before the prayer",
-        "ur": "نماز سے پہلے"
+        "ar": "أَنْتُنَّ طَالِبَاتٌ",
+        "ar_plain": "أنتن طالبات",
+        "translit": "antunna ṭālibātun",
+        "en": "You are female students.",
+        "ur": "تم سب طالبات ہو۔"
       },
       "explanation": {
-        "en": "The noun after قَبْلَ comes with kasra: الصَّلَاةِ.",
-        "ur": "قَبْلَ کے بعد آنے والے اسم پر کسرہ آتا ہے: الصَّلَاةِ۔"
+        "en": "Said to a group of female students: أَنْتُنَّ طَالِبَاتٌ. The female-only pronoun pairs with the sound feminine plural.",
+        "ur": "طالبات کی جماعت سے کہا جائے: أَنْتُنَّ طَالِبَاتٌ۔ صرف مؤنث ضمیر جمع مؤنث سالم کے ساتھ آتی ہے۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Time word + noun",
-        "ar": "ظَرْفُ زَمَانٍ",
-        "ur": "زمانے کا ظرف"
+        "en": "Speaking to the group",
+        "ar": "الْمُخَاطَبُونَ",
+        "ur": "جماعت سے خطاب"
       },
       "explanation": {
-        "en": "قَبْلَ is a time word. It needs another noun to complete the meaning: before what?",
-        "ur": "قَبْلَ وقت کا لفظ ہے۔ معنی مکمل کرنے کے لیے اسے ایک اسم چاہیے: کس سے پہلے؟"
-      }
+        "en": "The pronouns هُمْ and هُنَّ talk about a group that is not listening. The pronouns أَنْتُمْ and أَنْتُنَّ talk to a group that is right in front of you. Same group size, different direction.",
+        "ur": "ضمیریں هُمْ اور هُنَّ ایسی جماعت کے بارے میں بات کرتی ہیں جو سن نہیں رہی۔ ضمیریں أَنْتُمْ اور أَنْتُنَّ اس جماعت سے بات کرتی ہیں جو آپ کے سامنے ہے۔ جماعت کا حجم وہی، رخ مختلف۔"
+      },
+      "examples": [
+        {
+          "ar": "أَنْتُمْ",
+          "ar_plain": "أنتم",
+          "translit": "antum",
+          "en": "you all (male or mixed group)",
+          "ur": "تم سب (مذکر یا مخلوط جماعت)"
+        },
+        {
+          "ar": "أَنْتُنَّ",
+          "ar_plain": "أنتن",
+          "translit": "antunna",
+          "en": "you all (female-only group)",
+          "ur": "تم سب (صرف مؤنث جماعت)"
+        }
+      ]
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "جَاءُوا قَبْلَ الدَّرْسِ",
-        "ar_plain": "جاءوا قبل الدرس",
-        "translit": "jaa'u qabla ad-darsi",
-        "en": "They came before the lesson",
-        "ur": "وہ سبق سے پہلے آئے"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "They or you all",
+        "ar": "هُمْ / أَنْتُمْ",
+        "ur": "وہ سب یا تم سب"
       },
       "explanation": {
-        "en": "قَبْلَ الدَّرْسِ answers when they came.",
-        "ur": "قَبْلَ الدَّرْسِ بتاتا ہے کہ وہ کب آئے۔"
-      }
+        "en": "Same noun, two sentences. هُمْ مُسْلِمُونَ is said about them: they are Muslims. أَنْتُمْ مُسْلِمُونَ is said to them: you are Muslims. Female-only groups follow the same pair: هُنَّ and أَنْتُنَّ.",
+        "ur": "ایک ہی اسم، دو جملے۔ هُمْ مُسْلِمُونَ ان کے بارے میں کہا جاتا ہے: وہ مسلمان ہیں۔ أَنْتُمْ مُسْلِمُونَ ان سے کہا جاتا ہے: تم سب مسلمان ہو۔ صرف مؤنث جماعتیں بھی اسی جوڑے پر چلتی ہیں: هُنَّ اور أَنْتُنَّ۔"
+      },
+      "examples": [
+        {
+          "ar": "هُمْ مُسْلِمُونَ",
+          "ar_plain": "هم مسلمون",
+          "translit": "hum muslimūna",
+          "en": "They are Muslims.",
+          "ur": "وہ مسلمان ہیں۔"
+        },
+        {
+          "ar": "أَنْتُمْ مُسْلِمُونَ",
+          "ar_plain": "أنتم مسلمون",
+          "translit": "antum muslimūna",
+          "en": "You are Muslims.",
+          "ur": "تم سب مسلمان ہو۔"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "No new verb needed",
+        "ar": "أَنْتُمْ مُؤْمِنُونَ",
+        "ur": "کوئی نیا فعل درکار نہیں"
+      },
+      "explanation": {
+        "en": "You can already say a great deal with these pronouns and the plural nouns of Chapter 9: أَنْتُمْ مُؤْمِنُونَ, أَنْتُنَّ مُؤْمِنَاتٌ. Verbs for you all come in a later chapter.",
+        "ur": "ان ضمیروں اور باب 9 کے جمع اسماء سے آپ ابھی بہت کچھ کہہ سکتے ہیں: أَنْتُمْ مُؤْمِنُونَ، أَنْتُنَّ مُؤْمِنَاتٌ۔ 'تم سب' کے لیے افعال بعد کے باب میں آئیں گے۔"
+      },
+      "examples": [
+        {
+          "ar": "أَنْتُمْ مُؤْمِنُونَ",
+          "ar_plain": "أنتم مؤمنون",
+          "translit": "antum muʾminūna",
+          "en": "You are believers.",
+          "ur": "تم سب مومن ہو۔"
+        },
+        {
+          "ar": "أَنْتُنَّ مُؤْمِنَاتٌ",
+          "ar_plain": "أنتن مؤمنات",
+          "translit": "antunna muʾminātun",
+          "en": "You are believing women.",
+          "ur": "تم سب مومن عورتیں ہو۔"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "وَلَا أَنْتُمْ عَابِدُونَ",
+        "ar_plain": "ولا أنتم عابدون",
+        "translit": "wa-lā antum ʿābidūna",
+        "en": "nor are you worshippers",
+        "ur": "اور نہ تم عبادت کرنے والے ہو"
+      },
+      "explanation": {
+        "en": "Find أَنْتُمْ after وَلَا. The verse is addressed to the group directly, so the pronoun is you all, not they. The word after it, عَابِدُونَ, carries the ـُونَ ending from Chapter 9.",
+        "ur": "وَلَا کے بعد أَنْتُمْ تلاش کریں۔ آیت براہِ راست جماعت سے مخاطب ہے، اس لیے ضمیر 'تم سب' ہے، 'وہ سب' نہیں۔ اس کے بعد کا لفظ عَابِدُونَ باب 9 والی علامت ـُونَ رکھتا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109003.mp3",
+      "examples": [
+        {
+          "ar": "أَنْتُمْ",
+          "ar_plain": "أنتم",
+          "translit": "antum",
+          "en": "you all (male or mixed group)",
+          "ur": "تم سب (مذکر یا مخلوط جماعت)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Summary and boundary",
+        "ar": "أَنْتُمْ / أَنْتُنَّ",
+        "ur": "خلاصہ اور حد"
+      },
+      "explanation": {
+        "en": "Five standalone pronouns so far: هُمْ and هُنَّ for they, نَحْنُ for we, أَنْتُمْ and أَنْتُنَّ for you all. Speaking to exactly two people, and attached forms like ـكُمْ, belong to later chapters.",
+        "ur": "اب تک پانچ الگ ضمیریں: 'وہ سب' کے لیے هُمْ اور هُنَّ، 'ہم' کے لیے نَحْنُ، 'تم سب' کے لیے أَنْتُمْ اور أَنْتُنَّ۔ ٹھیک دو افراد سے خطاب، اور ـكُمْ جیسی جڑی ہوئی صورتیں بعد کے ابواب میں آئیں گی۔"
+      },
+      "examples": [
+        {
+          "ar": "أَنْتُمْ",
+          "ar_plain": "أنتم",
+          "translit": "antum",
+          "en": "you all (male or mixed group)",
+          "ur": "تم سب (مذکر یا مخلوط جماعت)"
+        },
+        {
+          "ar": "أَنْتُنَّ",
+          "ar_plain": "أنتن",
+          "translit": "antunna",
+          "en": "you all (female-only group)",
+          "ur": "تم سب (صرف مؤنث جماعت)"
+        }
+      ]
     }
   ],
   "exercises": [
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch10-l03-ex01",
+      "id": "ch10-l05-ex01",
       "prompt": {
-        "ar": "قَبْلَ الصَّلَاةِ",
-        "ar_plain": "قبل الصلاة",
-        "translit": "qabla as-salaati",
-        "en": "before the prayer",
-        "ur": "نماز سے پہلے"
+        "ar": "أَنْتُمْ",
+        "ar_plain": "أنتم",
+        "translit": "antum",
+        "en": "you all (male or mixed group)",
+        "ur": "تم سب (مذکر یا مخلوط جماعت)"
       },
       "options": [
         {
-          "en": "before the prayer",
-          "ur": "نماز سے پہلے"
+          "en": "you all (male or mixed group)",
+          "ur": "تم سب (مذکر یا مخلوط جماعت)"
         },
         {
-          "en": "after the lesson",
-          "ur": "سبق کے بعد"
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
         },
         {
-          "en": "we are Muslims",
-          "ur": "ہم مسلمان ہیں"
+          "en": "we",
+          "ur": "ہم"
         },
         {
-          "en": "in the house",
-          "ur": "گھر میں"
+          "en": "you all (female-only group)",
+          "ur": "تم سب (صرف مؤنث جماعت)"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word أَنْتُمْ is you all, said to a group of men or a mixed group. The female-only form is أَنْتُنَّ.",
+        "ur": "لفظ أَنْتُمْ 'تم سب' ہے، مردوں کی یا مخلوط جماعت سے۔ صرف مؤنث صورت أَنْتُنَّ ہے۔"
+      },
       "xp_value": 1
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch10-l03-ex02",
-      "statement": {
-        "en": "The noun after قَبْلَ usually comes with kasra.",
-        "ur": "قَبْلَ کے بعد اسم عموماً کسرہ کے ساتھ آتا ہے۔",
-        "ar_example": {
-          "ar": "قَبْلَ الصَّلَاةِ",
-          "ar_plain": "قبل الصلاة",
-          "translit": "qabla as-salaati",
-          "en": "before the prayer",
-          "ur": "نماز سے پہلے"
-        }
+      "type": "TAP_TRANSLATION",
+      "id": "ch10-l05-ex02",
+      "prompt": {
+        "ar": "أَنْتُنَّ طَالِبَاتٌ",
+        "ar_plain": "أنتن طالبات",
+        "translit": "antunna ṭālibātun",
+        "en": "You are female students.",
+        "ur": "تم سب طالبات ہو۔"
       },
-      "correct_answer": true,
+      "options": [
+        {
+          "en": "You are female students — said to a group of women.",
+          "ur": "تم سب طالبات ہو — عورتوں کی جماعت سے کہا گیا۔"
+        },
+        {
+          "en": "They are female students — said about a group of women.",
+          "ur": "وہ طالبات ہیں — عورتوں کی جماعت کے بارے میں کہا گیا۔"
+        },
+        {
+          "en": "We are female students — the speaker is included.",
+          "ur": "ہم طالبات ہیں — بولنے والی شامل ہے۔"
+        },
+        {
+          "en": "You are students — said to a male or mixed group.",
+          "ur": "تم سب طلبہ ہو — مذکر یا مخلوط جماعت سے کہا گیا۔"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The pronoun أَنْتُنَّ speaks to a female-only group, so the sentence is addressed to them: you are female students.",
+        "ur": "ضمیر أَنْتُنَّ صرف مؤنث جماعت سے بات کرتی ہے، اس لیے جملہ انہی سے کہا گیا ہے: تم سب طالبات ہو۔"
+      },
       "xp_value": 1
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch10-l03-ex03",
+      "id": "ch10-l05-ex03",
       "mode": "TAP",
-      "sentence_ar": "___ الصَّلَاةِ",
+      "sentence_ar": "___ مُسْلِمُونَ",
       "hint": {
-        "en": "before the prayer",
-        "ur": "نماز سے پہلے"
+        "en": "You are Muslims — said to a group of men.",
+        "ur": "تم سب مسلمان ہو — مردوں کی جماعت سے کہا گیا۔"
       },
       "options": [
         {
-          "ar": "قَبْلَ",
-          "ar_plain": "قبل",
-          "translit": "qabla",
-          "en": "before",
-          "ur": "پہلے"
+          "ar": "أَنْتُمْ",
+          "ar_plain": "أنتم",
+          "translit": "antum",
+          "en": "you all (male or mixed group)",
+          "ur": "تم سب (مذکر یا مخلوط جماعت)"
         },
         {
-          "ar": "بَعْدَ",
-          "ar_plain": "بعد",
-          "translit": "ba'da",
-          "en": "after",
-          "ur": "بعد"
+          "ar": "أَنْتُنَّ",
+          "ar_plain": "أنتن",
+          "translit": "antunna",
+          "en": "you all (female-only group)",
+          "ur": "تم سب (صرف مؤنث جماعت)"
         },
         {
           "ar": "هُمْ",
           "ar_plain": "هم",
           "translit": "hum",
-          "en": "they",
-          "ur": "وہ"
-        },
-        {
-          "ar": "فِيهِ",
-          "ar_plain": "فيه",
-          "translit": "fihi",
-          "en": "in it",
-          "ur": "اس میں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "قَبْلَ",
-        "ar_plain": "قبل",
-        "translit": "qabla",
-        "en": "before",
-        "ur": "پہلے"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch10-l03-ex04",
-      "target_translation": {
-        "en": "before the lesson",
-        "ur": "سبق سے پہلے"
-      },
-      "tiles": [
-        {
-          "ar": "قَبْلَ",
-          "ar_plain": "قبل",
-          "translit": "qabla",
-          "en": "before",
-          "ur": "پہلے"
-        },
-        {
-          "ar": "الدَّرْسِ",
-          "ar_plain": "الدرس",
-          "translit": "ad-darsi",
-          "en": "the lesson",
-          "ur": "سبق"
-        },
-        {
-          "ar": "بَعْدَ",
-          "ar_plain": "بعد",
-          "translit": "ba'da",
-          "en": "after",
-          "ur": "بعد"
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
         },
         {
           "ar": "نَحْنُ",
           "ar_plain": "نحن",
-          "translit": "nahnu",
+          "translit": "naḥnu",
           "en": "we",
           "ur": "ہم"
         }
       ],
-      "correct_order": [
-        0,
-        1
+      "correct_answer": {
+        "ar": "أَنْتُمْ",
+        "ar_plain": "أنتم",
+        "translit": "antum",
+        "en": "you all (male or mixed group)",
+        "ur": "تم سب (مذکر یا مخلوط جماعت)"
+      },
+      "explanation_on_wrong": {
+        "en": "The sentence is said to a group of men, so the pronoun is أَنْتُمْ: أَنْتُمْ مُسْلِمُونَ.",
+        "ur": "جملہ مردوں کی جماعت سے کہا گیا ہے، اس لیے ضمیر أَنْتُمْ ہے: أَنْتُمْ مُسْلِمُونَ۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch10-l05-ex04",
+      "left_column": [
+        {
+          "ar": "أَنْتُمْ",
+          "ar_plain": "أنتم",
+          "translit": "antum",
+          "en": "you all (male or mixed group)",
+          "ur": "تم سب (مذکر یا مخلوط جماعت)"
+        },
+        {
+          "ar": "أَنْتُنَّ",
+          "ar_plain": "أنتن",
+          "translit": "antunna",
+          "en": "you all (female-only group)",
+          "ur": "تم سب (صرف مؤنث جماعت)"
+        },
+        {
+          "ar": "هُمْ",
+          "ar_plain": "هم",
+          "translit": "hum",
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
+        },
+        {
+          "ar": "نَحْنُ",
+          "ar_plain": "نحن",
+          "translit": "naḥnu",
+          "en": "we",
+          "ur": "ہم"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "you all (male or mixed group)",
+          "ur": "تم سب (مذکر یا مخلوط جماعت)"
+        },
+        {
+          "en": "you all (female-only group)",
+          "ur": "تم سب (صرف مؤنث جماعت)"
+        },
+        {
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
+        },
+        {
+          "en": "we",
+          "ur": "ہم"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
       ],
       "xp_value": 1
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch10-l03-ex05",
-      "sentence_ar": "قَبْلَ الصَّلَاةِ",
-      "words": [
+      "type": "BUILD_SENTENCE",
+      "id": "ch10-l05-ex05",
+      "target_translation": {
+        "en": "You are believers — said to a group of men.",
+        "ur": "تم سب مومن ہو — مردوں کی جماعت سے کہا گیا۔"
+      },
+      "tiles": [
         {
-          "ar": "قَبْلَ",
-          "ar_plain": "قبل",
-          "translit": "qabla",
-          "en": "before",
-          "ur": "پہلے"
+          "ar": "مُؤْمِنُونَ",
+          "ar_plain": "مؤمنون",
+          "translit": "muʾminūna",
+          "en": "believers / believing men",
+          "ur": "مومن مرد / مومنین"
         },
         {
-          "ar": "الصَّلَاةِ",
-          "ar_plain": "الصلاة",
-          "translit": "as-salaati",
-          "en": "the prayer",
-          "ur": "نماز"
+          "ar": "أَنْتُمْ",
+          "ar_plain": "أنتم",
+          "translit": "antum",
+          "en": "you all (male or mixed group)",
+          "ur": "تم سب (مذکر یا مخلوط جماعت)"
+        },
+        {
+          "ar": "هُمْ",
+          "ar_plain": "هم",
+          "translit": "hum",
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
+        },
+        {
+          "ar": "مُؤْمِنَاتٌ",
+          "ar_plain": "مؤمنات",
+          "translit": "muʾminātun",
+          "en": "believing women",
+          "ur": "مومن عورتیں"
         }
       ],
-      "available_roles": [
-        "PREPOSITION",
-        "POSSESSIVE",
-        "SUBJECT",
-        "PREDICATE"
+      "correct_order": [
+        1,
+        0
       ],
-      "correct_roles": [
-        "PREPOSITION",
-        "POSSESSIVE"
+      "explanation_on_wrong": {
+        "en": "The order is أَنْتُمْ مُؤْمِنُونَ: you all, then the plural noun. The sentence is said to the group, so أَنْتُمْ, not هُمْ.",
+        "ur": "ترتیب أَنْتُمْ مُؤْمِنُونَ ہے: تم سب، پھر جمع اسم۔ جملہ جماعت سے کہا گیا ہے، اس لیے أَنْتُمْ، هُمْ نہیں۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch10-l05-ex06",
+      "statement": {
+        "en": "The sentence هُمْ طُلَّابٌ is said directly to the students.",
+        "ur": "جملہ هُمْ طُلَّابٌ براہِ راست طلبہ سے کہا گیا ہے۔",
+        "ar_example": {
+          "ar": "هُمْ طُلَّابٌ",
+          "ar_plain": "هم طلاب",
+          "translit": "hum ṭullābun",
+          "en": "They are students.",
+          "ur": "وہ طلبہ ہیں۔"
+        }
+      },
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "False: هُمْ speaks about the students. To speak to them you need أَنْتُمْ: أَنْتُمْ طُلَّابٌ.",
+        "ur": "غلط: هُمْ طلبہ کے بارے میں بات کرتا ہے۔ ان سے بات کرنے کے لیے أَنْتُمْ چاہیے: أَنْتُمْ طُلَّابٌ۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch10-l05-ex07",
+      "ayah_fragment": {
+        "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+        "surah_ref": "Al-Kafirun 109:3"
+      },
+      "options": [
+        {
+          "en": "'nor are you (all)' — أَنْتُمْ addresses the group directly",
+          "ur": "'اور نہ تم سب' — أَنْتُمْ براہِ راست جماعت سے مخاطب ہے"
+        },
+        {
+          "en": "'nor are they' — أَنْتُمْ speaks about a distant group",
+          "ur": "'اور نہ وہ سب' — أَنْتُمْ کسی دور کی جماعت کے بارے میں ہے"
+        },
+        {
+          "en": "'nor are we' — أَنْتُمْ includes the speaker",
+          "ur": "'اور نہ ہم' — أَنْتُمْ میں بولنے والا شامل ہے"
+        },
+        {
+          "en": "'nor are you (women)' — أَنْتُمْ is the female-only form",
+          "ur": "'اور نہ تم عورتیں' — أَنْتُمْ صرف مؤنث صورت ہے"
+        }
       ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word أَنْتُمْ is you all for a male or mixed group, spoken to the people in front of the speaker. They would be هُمْ; the female-only form would be أَنْتُنَّ.",
+        "ur": "لفظ أَنْتُمْ مذکر یا مخلوط جماعت کے لیے 'تم سب' ہے، بولنے والے کے سامنے موجود لوگوں سے۔ 'وہ سب' هُمْ ہوتا؛ صرف مؤنث صورت أَنْتُنَّ ہوتی۔"
+      },
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Before - قَبْلَ",
-      "ar": "قَبْلَ",
-      "ur": "پہلے"
+      "en": "You all — أَنْتُمْ and أَنْتُنَّ",
+      "ar": "ضَمِيرُ الْمُخَاطَبِينَ",
+      "ur": "تم سب — أَنْتُمْ اور أَنْتُنَّ"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 25,
-      "label": "Al-Baqarah 2:25",
-      "ar": "وَأُتُوا بِهِ مُتَشَابِهًا",
-      "en": "And they will be given it in resemblance.",
-      "ur": "اور انہیں وہ ملتا جلتا دیا جائے گا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002025.mp3"
+      "surah": 109,
+      "ayah": 3,
+      "label": "Al-Kafirun 109:3",
+      "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+      "en": "Nor are you worshippers of what I worship.",
+      "ur": "اور نہ تم اس کی عبادت کرنے والے ہو جس کی میں عبادت کرتا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109003.mp3"
     },
     "highlighted_word_indices": [
       1
     ],
+    "highlighted_words": [
+      "أَنْتُمْ"
+    ],
     "noor_explanation": {
-      "en": "This short hook reminds you that Arabic often compresses meaning into small words and endings. قَبْلَ also depends on the noun after it.",
-      "ur": "یہ چھوٹا حصہ یاد دلاتا ہے کہ عربی چھوٹے الفاظ اور اعراب میں معنی رکھتی ہے۔ قَبْلَ بھی اپنے بعد والے اسم سے معنی مکمل کرتا ہے۔"
+      "en": "The verse turns to the group and says أَنْتُمْ, you all, followed by عَابِدُونَ with the ـُونَ ending you already know. Pronoun, then plural noun: the same sentence shape you built in this lesson.",
+      "ur": "آیت جماعت کی طرف رخ کر کے أَنْتُمْ کہتی ہے، تم سب، اور پھر عَابِدُونَ جس میں وہی ـُونَ ہے جو آپ جانتے ہیں۔ ضمیر، پھر جمع اسم: وہی جملے کی شکل جو آپ نے اس سبق میں بنائی۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now read قَبْلَ الصَّلَاةِ: before the prayer.",
-      "ur": "اب آپ قَبْلَ الصَّلَاةِ پڑھ سکتے ہیں: نماز سے پہلے۔"
+      "en": "You can now speak to a group with أَنْتُمْ or أَنْتُنَّ, tell it apart from هُمْ and هُنَّ, and build a sentence from any of the five pronouns you have met.",
+      "ur": "اب آپ أَنْتُمْ یا أَنْتُنَّ سے جماعت سے بات کر سکتے ہیں، اسے هُمْ اور هُنَّ سے الگ پہچان سکتے ہیں، اور پانچوں ضمیروں میں سے کسی سے بھی جملہ بنا سکتے ہیں۔"
     }
   }
 }

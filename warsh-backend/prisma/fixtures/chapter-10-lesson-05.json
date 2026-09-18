@@ -1,0 +1,564 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 10, display lesson 5 (ch10-l04) — the time word بَعْدَ (after) in the construct phrases بَعْدَ الدَّرْسِ / بَعْدَ الصَّلَاةِ, contrast with قَبْلَ, and the sentence رَجَعَ بَعْدَ الدَّرْسِ with the Chapter 8 verb; the kasrah is described only for the phrases used here. Quran hook: بَعْدَ إِذْ هَدَيْتَنَا (Ali 'Imran 3:8), replacing a hook that did not contain the target word; جَاءُوا removed. Fixture number equals display order; the stable ID is ch10-l04. Rebuilt 2026-09-18 from Docs/proposals/chapter-10-content-proposal.md.",
+    "titleUr": "بعد — بَعْدَ",
+    "chapter_order": 10,
+    "lesson_order": 5,
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 3,
+      "ayah": 8,
+      "label": "Ali 'Imran 3:8",
+      "ar": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا",
+      "en": "Our Lord, let not our hearts deviate after You have guided us…",
+      "ur": "اے ہمارے رب! تو نے ہمیں ہدایت دے دی، اس کے بعد ہمارے دلوں کو ٹیڑھا نہ کر۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003008.mp3"
+    },
+    "noor_intro": {
+      "en": "This prayer asks for one thing after another: guidance first, then hearts that stay straight. The word that orders them is بَعْدَ, after. Today you learn the partner of قَبْلَ.",
+      "ur": "یہ دعا ایک چیز کے بعد دوسری مانگتی ہے: پہلے ہدایت، پھر ایسے دل جو سیدھے رہیں۔ جو لفظ ان کی ترتیب طے کرتا ہے وہ بَعْدَ ہے، بعد۔ آج آپ قَبْلَ کا جوڑی دار سیکھیں گے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "After",
+        "ar": "بَعْدَ",
+        "ur": "بعد"
+      },
+      "explanation": {
+        "en": "The word بَعْدَ means after. It places one thing later than another in time: the mirror image of قَبْلَ.",
+        "ur": "لفظ بَعْدَ کا مطلب ہے: بعد۔ یہ ایک چیز کو وقت میں دوسری کے بعد رکھتا ہے: قَبْلَ کا الٹ۔"
+      },
+      "examples": [
+        {
+          "ar": "بَعْدَ",
+          "ar_plain": "بعد",
+          "translit": "baʿda",
+          "en": "after",
+          "ur": "بعد / کے بعد"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "بَعْدَ الدَّرْسِ",
+        "ar_plain": "بعد الدرس",
+        "translit": "baʿda d-darsi",
+        "en": "after the lesson",
+        "ur": "سبق کے بعد"
+      },
+      "explanation": {
+        "en": "Put بَعْدَ in front of الدَّرْس and you have a time phrase: after the lesson.",
+        "ur": "الدَّرْس کے آگے بَعْدَ لگائیں تو وقت کا فقرہ بن جاتا ہے: سبق کے بعد۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/dars.webp"
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "بَعْدَ الصَّلَاةِ",
+        "ar_plain": "بعد الصلاة",
+        "translit": "baʿda ṣ-ṣalāti",
+        "en": "after the prayer",
+        "ur": "نماز کے بعد"
+      },
+      "explanation": {
+        "en": "The same word with the prayer: بَعْدَ الصَّلَاةِ, after the prayer.",
+        "ur": "وہی لفظ نماز کے ساتھ: بَعْدَ الصَّلَاةِ، نماز کے بعد۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/salah.webp"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Before or after",
+        "ar": "قَبْلَ / بَعْدَ",
+        "ur": "پہلے یا بعد"
+      },
+      "explanation": {
+        "en": "The same noun, two positions on the timeline. قَبْلَ الصَّلَاةِ is earlier than the prayer; بَعْدَ الصَّلَاةِ is later than it. Only the first word changes.",
+        "ur": "ایک ہی اسم، وقت کی لکیر پر دو جگہیں۔ قَبْلَ الصَّلَاةِ نماز سے پہلے ہے؛ بَعْدَ الصَّلَاةِ اس کے بعد۔ صرف پہلا لفظ بدلتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "قَبْلَ الصَّلَاةِ",
+          "ar_plain": "قبل الصلاة",
+          "translit": "qabla ṣ-ṣalāti",
+          "en": "before the prayer",
+          "ur": "نماز سے پہلے"
+        },
+        {
+          "ar": "بَعْدَ الصَّلَاةِ",
+          "ar_plain": "بعد الصلاة",
+          "translit": "baʿda ṣ-ṣalāti",
+          "en": "after the prayer",
+          "ur": "نماز کے بعد"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "رَجَعَ بَعْدَ الدَّرْسِ",
+        "ar_plain": "رجع بعد الدرس",
+        "translit": "rajaʿa baʿda d-darsi",
+        "en": "He returned after the lesson.",
+        "ur": "وہ سبق کے بعد لوٹا۔"
+      },
+      "explanation": {
+        "en": "A verb you know from Chapter 8 plus the new time phrase: رَجَعَ, he returned; بَعْدَ الدَّرْسِ, after the lesson. The lesson happened first, the return came later.",
+        "ur": "باب 8 کا جانا پہچانا فعل اور نیا وقت کا فقرہ: رَجَعَ، وہ لوٹا؛ بَعْدَ الدَّرْسِ، سبق کے بعد۔ سبق پہلے ہوا، لوٹنا بعد میں۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/rajaa.webp"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The same partner pattern",
+        "ar": "بَعْدَ مَعَ اسْمٍ",
+        "ur": "وہی ساتھی والا انداز"
+      },
+      "explanation": {
+        "en": "Like قَبْلَ, the word بَعْدَ never stands alone: after what? The noun after it answers, and the two are read as one phrase.",
+        "ur": "قَبْلَ کی طرح لفظ بَعْدَ بھی کبھی اکیلا نہیں آتا: کس کے بعد؟ اس کے بعد کا اسم جواب دیتا ہے، اور دونوں ایک فقرے کی طرح پڑھے جاتے ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "بَعْدَ الدَّرْسِ",
+          "ar_plain": "بعد الدرس",
+          "translit": "baʿda d-darsi",
+          "en": "after the lesson",
+          "ur": "سبق کے بعد"
+        },
+        {
+          "ar": "بَعْدَ الصَّلَاةِ",
+          "ar_plain": "بعد الصلاة",
+          "translit": "baʿda ṣ-ṣalāti",
+          "en": "after the prayer",
+          "ur": "نماز کے بعد"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The kasrah again",
+        "ar": "الدَّرْسِ",
+        "ur": "پھر وہی کسرہ"
+      },
+      "explanation": {
+        "en": "In the phrases of this lesson, the noun after بَعْدَ ends in a kasrah, just as it did after قَبْلَ: الدَّرْسِ, الصَّلَاةِ. Read it as part of the phrase; the fuller rule comes later.",
+        "ur": "اس سبق کے فقروں میں بَعْدَ کے بعد کا اسم کسرہ پر ختم ہوتا ہے، بالکل جیسے قَبْلَ کے بعد ہوتا تھا: الدَّرْسِ، الصَّلَاةِ۔ اسے فقرے کا حصہ سمجھ کر پڑھیں؛ پورا قاعدہ بعد میں آئے گا۔"
+      },
+      "examples": [
+        {
+          "ar": "الدَّرْسِ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsi",
+          "en": "the lesson (after بَعْدَ)",
+          "ur": "سبق (بَعْدَ کے بعد)"
+        },
+        {
+          "ar": "الصَّلَاةِ",
+          "ar_plain": "الصلاة",
+          "translit": "aṣ-ṣalāti",
+          "en": "the prayer (after بَعْدَ)",
+          "ur": "نماز (بَعْدَ کے بعد)"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "بَعْدَ إِذْ هَدَيْتَنَا",
+        "ar_plain": "بعد إذ هديتنا",
+        "translit": "baʿda idh hadaytanā",
+        "en": "after You have guided us",
+        "ur": "اس کے بعد کہ تو نے ہمیں ہدایت دی"
+      },
+      "explanation": {
+        "en": "Find بَعْدَ. What follows it names the earlier event, the guidance; the request comes after it. The word marks which of the two came later.",
+        "ur": "بَعْدَ تلاش کریں۔ اس کے بعد جو آتا ہے وہ پہلے والے واقعے، ہدایت، کا نام ہے؛ درخواست اس کے بعد ہے۔ یہ لفظ بتاتا ہے کہ دونوں میں سے کون سا بعد میں آیا۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003008.mp3",
+      "examples": [
+        {
+          "ar": "بَعْدَ",
+          "ar_plain": "بعد",
+          "translit": "baʿda",
+          "en": "after",
+          "ur": "بعد / کے بعد"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Summary",
+        "ar": "قَبْلَ / بَعْدَ",
+        "ur": "خلاصہ"
+      },
+      "explanation": {
+        "en": "The pair is complete: قَبْلَ for the earlier event, بَعْدَ for the later one. Both join the noun after them into one phrase, and both can follow a verb you already know.",
+        "ur": "جوڑا مکمل ہے: پہلے والے واقعے کے لیے قَبْلَ، بعد والے کے لیے بَعْدَ۔ دونوں اپنے بعد والے اسم سے مل کر ایک فقرہ بنتے ہیں، اور دونوں کسی جانے پہچانے فعل کے بعد آ سکتے ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "ذَهَبَ قَبْلَ الدَّرْسِ",
+          "ar_plain": "ذهب قبل الدرس",
+          "translit": "dhahaba qabla d-darsi",
+          "en": "He went before the lesson.",
+          "ur": "وہ سبق سے پہلے گیا۔"
+        },
+        {
+          "ar": "رَجَعَ بَعْدَ الدَّرْسِ",
+          "ar_plain": "رجع بعد الدرس",
+          "translit": "rajaʿa baʿda d-darsi",
+          "en": "He returned after the lesson.",
+          "ur": "وہ سبق کے بعد لوٹا۔"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch10-l04-ex01",
+      "prompt": {
+        "ar": "بَعْدَ",
+        "ar_plain": "بعد",
+        "translit": "baʿda",
+        "en": "after",
+        "ur": "بعد / کے بعد"
+      },
+      "options": [
+        {
+          "en": "after",
+          "ur": "بعد"
+        },
+        {
+          "en": "before",
+          "ur": "پہلے"
+        },
+        {
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "en": "we",
+          "ur": "ہم"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word بَعْدَ is after: the later of two events. Before is قَبْلَ.",
+        "ur": "لفظ بَعْدَ بعد ہے: دو واقعوں میں سے بعد والا۔ پہلے قَبْلَ ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch10-l04-ex02",
+      "statement": {
+        "en": "In the sentence رَجَعَ بَعْدَ الدَّرْسِ, the lesson happened first and the return came later.",
+        "ur": "جملے رَجَعَ بَعْدَ الدَّرْسِ میں سبق پہلے ہوا اور لوٹنا بعد میں آیا۔",
+        "ar_example": {
+          "ar": "رَجَعَ بَعْدَ الدَّرْسِ",
+          "ar_plain": "رجع بعد الدرس",
+          "translit": "rajaʿa baʿda d-darsi",
+          "en": "He returned after the lesson.",
+          "ur": "وہ سبق کے بعد لوٹا۔"
+        }
+      },
+      "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True: بَعْدَ places the return after the lesson, so the lesson is the earlier event.",
+        "ur": "درست: بَعْدَ لوٹنے کو سبق کے بعد رکھتا ہے، اس لیے سبق پہلے والا واقعہ ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch10-l04-ex03",
+      "left_column": [
+        {
+          "ar": "بَعْدَ الدَّرْسِ",
+          "ar_plain": "بعد الدرس",
+          "translit": "baʿda d-darsi",
+          "en": "after the lesson",
+          "ur": "سبق کے بعد"
+        },
+        {
+          "ar": "قَبْلَ الدَّرْسِ",
+          "ar_plain": "قبل الدرس",
+          "translit": "qabla d-darsi",
+          "en": "before the lesson",
+          "ur": "سبق سے پہلے"
+        },
+        {
+          "ar": "بَعْدَ الصَّلَاةِ",
+          "ar_plain": "بعد الصلاة",
+          "translit": "baʿda ṣ-ṣalāti",
+          "en": "after the prayer",
+          "ur": "نماز کے بعد"
+        },
+        {
+          "ar": "قَبْلَ الصَّلَاةِ",
+          "ar_plain": "قبل الصلاة",
+          "translit": "qabla ṣ-ṣalāti",
+          "en": "before the prayer",
+          "ur": "نماز سے پہلے"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "after the lesson",
+          "ur": "سبق کے بعد"
+        },
+        {
+          "en": "before the lesson",
+          "ur": "سبق سے پہلے"
+        },
+        {
+          "en": "after the prayer",
+          "ur": "نماز کے بعد"
+        },
+        {
+          "en": "before the prayer",
+          "ur": "نماز سے پہلے"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch10-l04-ex04",
+      "mode": "TAP",
+      "sentence_ar": "رَجَعَ ___ الصَّلَاةِ",
+      "hint": {
+        "en": "He returned after the prayer.",
+        "ur": "وہ نماز کے بعد لوٹا۔"
+      },
+      "options": [
+        {
+          "ar": "بَعْدَ",
+          "ar_plain": "بعد",
+          "translit": "baʿda",
+          "en": "after",
+          "ur": "بعد / کے بعد"
+        },
+        {
+          "ar": "قَبْلَ",
+          "ar_plain": "قبل",
+          "translit": "qabla",
+          "en": "before",
+          "ur": "پہلے / سے پہلے"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "إلى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "کی طرف"
+        }
+      ],
+      "correct_answer": {
+        "ar": "بَعْدَ",
+        "ar_plain": "بعد",
+        "translit": "baʿda",
+        "en": "after",
+        "ur": "بعد / کے بعد"
+      },
+      "explanation_on_wrong": {
+        "en": "After is بَعْدَ: رَجَعَ بَعْدَ الصَّلَاةِ.",
+        "ur": "'بعد' بَعْدَ ہے: رَجَعَ بَعْدَ الصَّلَاةِ۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch10-l04-ex05",
+      "target_translation": {
+        "en": "He returned after the lesson.",
+        "ur": "وہ سبق کے بعد لوٹا۔"
+      },
+      "tiles": [
+        {
+          "ar": "الدَّرْسِ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsi",
+          "en": "the lesson",
+          "ur": "سبق"
+        },
+        {
+          "ar": "بَعْدَ",
+          "ar_plain": "بعد",
+          "translit": "baʿda",
+          "en": "after",
+          "ur": "بعد / کے بعد"
+        },
+        {
+          "ar": "رَجَعَ",
+          "ar_plain": "رجع",
+          "translit": "rajaʿa",
+          "en": "he returned",
+          "ur": "وہ لوٹا"
+        },
+        {
+          "ar": "قَبْلَ",
+          "ar_plain": "قبل",
+          "translit": "qabla",
+          "en": "before",
+          "ur": "پہلے / سے پہلے"
+        }
+      ],
+      "correct_order": [
+        2,
+        1,
+        0
+      ],
+      "explanation_on_wrong": {
+        "en": "The order is رَجَعَ بَعْدَ الدَّرْسِ: the verb, then بَعْدَ, then the noun it joins.",
+        "ur": "ترتیب رَجَعَ بَعْدَ الدَّرْسِ ہے: فعل، پھر بَعْدَ، پھر وہ اسم جس سے یہ جڑتا ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch10-l04-ex06",
+      "prompt": {
+        "ar": "بَعْدَ الصَّلَاةِ",
+        "ar_plain": "بعد الصلاة",
+        "translit": "baʿda ṣ-ṣalāti",
+        "en": "after the prayer",
+        "ur": "نماز کے بعد"
+      },
+      "options": [
+        {
+          "en": "after the prayer",
+          "ur": "نماز کے بعد"
+        },
+        {
+          "en": "before the prayer",
+          "ur": "نماز سے پہلے"
+        },
+        {
+          "en": "in the prayer",
+          "ur": "نماز میں"
+        },
+        {
+          "en": "after the lesson",
+          "ur": "سبق کے بعد"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The first word is بَعْدَ, after, and the noun is الصَّلَاةِ, the prayer: after the prayer.",
+        "ur": "پہلا لفظ بَعْدَ ہے، بعد، اور اسم الصَّلَاةِ ہے، نماز: نماز کے بعد۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch10-l04-ex07",
+      "ayah_fragment": {
+        "ar": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا",
+        "surah_ref": "Ali 'Imran 3:8"
+      },
+      "options": [
+        {
+          "en": "'after You have guided us' — بَعْدَ places the request after the guidance",
+          "ur": "'اس کے بعد کہ تو نے ہمیں ہدایت دی' — بَعْدَ درخواست کو ہدایت کے بعد رکھتا ہے"
+        },
+        {
+          "en": "'before You have guided us' — بَعْدَ means before",
+          "ur": "'اس سے پہلے کہ تو ہمیں ہدایت دے' — بَعْدَ کا مطلب پہلے ہے"
+        },
+        {
+          "en": "'we have guided' — بَعْدَ is the pronoun we",
+          "ur": "'ہم نے ہدایت دی' — بَعْدَ ضمیر 'ہم' ہے"
+        },
+        {
+          "en": "'with our guidance' — بَعْدَ means with",
+          "ur": "'ہماری ہدایت کے ساتھ' — بَعْدَ کا مطلب ساتھ ہے"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word بَعْدَ is after. The guidance came first; the prayer asks for straight hearts after it.",
+        "ur": "لفظ بَعْدَ بعد ہے۔ ہدایت پہلے آئی؛ دعا اس کے بعد سیدھے دلوں کی مانگتی ہے۔"
+      },
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "After — بَعْدَ",
+      "ar": "بَعْدَ — ظَرْفُ زَمَان",
+      "ur": "بعد — بَعْدَ"
+    },
+    "ayah": {
+      "surah": 3,
+      "ayah": 8,
+      "label": "Ali 'Imran 3:8",
+      "ar": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا",
+      "en": "Our Lord, let not our hearts deviate after You have guided us…",
+      "ur": "اے ہمارے رب! تو نے ہمیں ہدایت دے دی، اس کے بعد ہمارے دلوں کو ٹیڑھا نہ کر۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003008.mp3"
+    },
+    "highlighted_word_indices": [
+      4
+    ],
+    "highlighted_words": [
+      "بَعْدَ"
+    ],
+    "noor_explanation": {
+      "en": "One word, بَعْدَ, sets the order of the whole prayer: guidance first, then the plea that hearts stay straight. With قَبْلَ from the last lesson, you can now read both directions on the timeline.",
+      "ur": "ایک لفظ، بَعْدَ، پوری دعا کی ترتیب طے کرتا ہے: پہلے ہدایت، پھر التجا کہ دل سیدھے رہیں۔ پچھلے سبق کے قَبْلَ کے ساتھ اب آپ وقت کی لکیر کی دونوں سمتیں پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can now say after with بَعْدَ, tell it apart from قَبْلَ, and place an action later than the prayer or the lesson.",
+      "ur": "اب آپ بَعْدَ سے 'بعد' کہہ سکتے ہیں، اسے قَبْلَ سے الگ پہچان سکتے ہیں، اور کسی کام کو نماز یا سبق کے بعد رکھ سکتے ہیں۔"
+    }
+  }
+}

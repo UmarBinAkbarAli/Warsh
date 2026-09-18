@@ -1,0 +1,459 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 10 final test (ch10-test, new). Twelve multiple-choice questions covering the chapter outcomes: هُمْ, هُنَّ for a female-only group, نَحْنُ, نَعْبُدُ as the voice of we, أَنْتُمْ, أَنْتُنَّ, perspective (about versus to the group), standalone versus attached recognition, قَبْلَ, بَعْدَ الدَّرْسِ, event order in ذَهَبَ قَبْلَ الصَّلَاةِ, and أَنْتُمْ in Al-Kafirun 109:3. Excludes attached plural possessives, plural verb conjugation, dual pronouns and case terminology. Pass mark 80 % (10 of 12) to match Chapters 3–9. Added 2026-09-18 from Docs/proposals/chapter-10-content-proposal.md.",
+    "titleUr": "باب 10 کا آخری امتحان",
+    "chapter_order": 10,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 109,
+      "ayah": 3,
+      "label": "Al-Kafirun 109:3",
+      "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+      "en": "Nor are you worshippers of what I worship.",
+      "ur": "اور نہ تم اس کی عبادت کرنے والے ہو جس کی میں عبادت کرتا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109003.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 10.",
+      "ur": "باب 10 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "exercises": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 10,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch10-test-q01",
+        "topic": {
+          "en": "They",
+          "ur": "وہ سب"
+        },
+        "prompt": {
+          "en": "What does هُمْ mean?",
+          "ur": "هُمْ کا کیا مطلب ہے؟"
+        },
+        "arabic": "هُمْ",
+        "options": [
+          {
+            "en": "we",
+            "ur": "ہم"
+          },
+          {
+            "en": "they (male or mixed group)",
+            "ur": "وہ سب (مذکر یا مخلوط جماعت)"
+          },
+          {
+            "en": "you all (male or mixed group)",
+            "ur": "تم سب (مذکر یا مخلوط جماعت)"
+          },
+          {
+            "en": "these (people)",
+            "ur": "یہ لوگ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch10-test-q02",
+        "topic": {
+          "en": "A female-only group",
+          "ur": "صرف مؤنث جماعت"
+        },
+        "prompt": {
+          "en": "Which pronoun means they for a group of women only?",
+          "ur": "صرف عورتوں کی جماعت کے لیے 'وہ سب' کون سی ضمیر ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "هُمْ",
+            "en": "they (male or mixed group)",
+            "ur": "وہ سب (مذکر یا مخلوط جماعت)"
+          },
+          {
+            "arabic": "هُنَّ",
+            "en": "they (female-only group)",
+            "ur": "وہ سب (صرف مؤنث جماعت)"
+          },
+          {
+            "arabic": "أَنْتُنَّ",
+            "en": "you all (female-only group)",
+            "ur": "تم سب (صرف مؤنث جماعت)"
+          },
+          {
+            "arabic": "نَحْنُ",
+            "en": "we",
+            "ur": "ہم"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch10-test-q03",
+        "topic": {
+          "en": "We",
+          "ur": "ہم"
+        },
+        "prompt": {
+          "en": "Which pronoun includes the speaker together with others?",
+          "ur": "کون سی ضمیر میں بولنے والا دوسروں کے ساتھ شامل ہوتا ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "هُمْ",
+            "en": "they (male or mixed group)",
+            "ur": "وہ سب (مذکر یا مخلوط جماعت)"
+          },
+          {
+            "arabic": "أَنْتُمْ",
+            "en": "you all (male or mixed group)",
+            "ur": "تم سب (مذکر یا مخلوط جماعت)"
+          },
+          {
+            "arabic": "نَحْنُ",
+            "en": "we",
+            "ur": "ہم"
+          },
+          {
+            "arabic": "هُنَّ",
+            "en": "they (female-only group)",
+            "ur": "وہ سب (صرف مؤنث جماعت)"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch10-test-q04",
+        "topic": {
+          "en": "The voice of we in Al-Fatihah",
+          "ur": "الفاتحہ میں 'ہم' کی آواز"
+        },
+        "prompt": {
+          "en": "In إِيَّاكَ نَعْبُدُ (Al-Fatihah 1:5), what does نَعْبُدُ mean?",
+          "ur": "إِيَّاكَ نَعْبُدُ (الفاتحہ 1:5) میں نَعْبُدُ کا کیا مطلب ہے؟"
+        },
+        "arabic": "إِيَّاكَ نَعْبُدُ",
+        "options": [
+          {
+            "en": "I worship",
+            "ur": "میں عبادت کرتا ہوں"
+          },
+          {
+            "en": "we worship",
+            "ur": "ہم عبادت کرتے ہیں"
+          },
+          {
+            "en": "they worship",
+            "ur": "وہ عبادت کرتے ہیں"
+          },
+          {
+            "en": "you all worship",
+            "ur": "تم سب عبادت کرتے ہو"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch10-test-q05",
+        "topic": {
+          "en": "We are Muslims",
+          "ur": "ہم مسلمان ہیں"
+        },
+        "prompt": {
+          "en": "Which sentence means 'We are Muslims'?",
+          "ur": "کون سا جملہ 'ہم مسلمان ہیں' کا معنی دیتا ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "هُمْ مُسْلِمُونَ",
+            "en": "They are Muslims.",
+            "ur": "وہ مسلمان ہیں۔"
+          },
+          {
+            "arabic": "أَنْتُمْ مُسْلِمُونَ",
+            "en": "You are Muslims.",
+            "ur": "تم سب مسلمان ہو۔"
+          },
+          {
+            "arabic": "نَحْنُ مُسْلِمُونَ",
+            "en": "We are Muslims.",
+            "ur": "ہم مسلمان ہیں۔"
+          },
+          {
+            "arabic": "هٰؤُلَاءِ مُسْلِمُونَ",
+            "en": "These are Muslims.",
+            "ur": "یہ مسلمان ہیں۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch10-test-q06",
+        "topic": {
+          "en": "You all",
+          "ur": "تم سب"
+        },
+        "prompt": {
+          "en": "What does أَنْتُمْ mean?",
+          "ur": "أَنْتُمْ کا کیا مطلب ہے؟"
+        },
+        "arabic": "أَنْتُمْ",
+        "options": [
+          {
+            "en": "they (male or mixed group)",
+            "ur": "وہ سب (مذکر یا مخلوط جماعت)"
+          },
+          {
+            "en": "we",
+            "ur": "ہم"
+          },
+          {
+            "en": "you all (female-only group)",
+            "ur": "تم سب (صرف مؤنث جماعت)"
+          },
+          {
+            "en": "you all (male or mixed group)",
+            "ur": "تم سب (مذکر یا مخلوط جماعت)"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch10-test-q07",
+        "topic": {
+          "en": "Speaking to a group of women",
+          "ur": "عورتوں کی جماعت سے خطاب"
+        },
+        "prompt": {
+          "en": "You are speaking directly to a group of female students. Which sentence is correct?",
+          "ur": "آپ براہِ راست طالبات کی جماعت سے بات کر رہے ہیں۔ کون سا جملہ درست ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "هُنَّ طَالِبَاتٌ",
+            "en": "They are female students.",
+            "ur": "وہ طالبات ہیں۔"
+          },
+          {
+            "arabic": "أَنْتُنَّ طَالِبَاتٌ",
+            "en": "You are female students.",
+            "ur": "تم سب طالبات ہو۔"
+          },
+          {
+            "arabic": "أَنْتُمْ طُلَّابٌ",
+            "en": "You are students.",
+            "ur": "تم سب طلبہ ہو۔"
+          },
+          {
+            "arabic": "نَحْنُ طَالِبَاتٌ",
+            "en": "We are female students.",
+            "ur": "ہم طالبات ہیں۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch10-test-q08",
+        "topic": {
+          "en": "About or to the group",
+          "ur": "جماعت کے بارے میں یا جماعت سے"
+        },
+        "prompt": {
+          "en": "The sentence هُمْ مُعَلِّمُونَ is…",
+          "ur": "جملہ هُمْ مُعَلِّمُونَ …"
+        },
+        "arabic": "هُمْ مُعَلِّمُونَ",
+        "options": [
+          {
+            "en": "said about a group of teachers: they are teachers",
+            "ur": "اساتذہ کی جماعت کے بارے میں کہا گیا: وہ اساتذہ ہیں"
+          },
+          {
+            "en": "said directly to a group of teachers: you are teachers",
+            "ur": "براہِ راست اساتذہ کی جماعت سے کہا گیا: تم سب اساتذہ ہو"
+          },
+          {
+            "en": "said by the teachers about themselves: we are teachers",
+            "ur": "اساتذہ نے اپنے بارے میں کہا: ہم اساتذہ ہیں"
+          },
+          {
+            "en": "about one teacher only",
+            "ur": "صرف ایک استاد کے بارے میں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch10-test-q09",
+        "topic": {
+          "en": "Standalone or attached",
+          "ur": "الگ یا جڑا ہوا"
+        },
+        "prompt": {
+          "en": "In which word is the pronoun attached to another word rather than standing alone?",
+          "ur": "کس لفظ میں ضمیر الگ کھڑی ہونے کے بجائے دوسرے لفظ سے جڑی ہوئی ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "هُمْ",
+            "en": "they",
+            "ur": "وہ سب"
+          },
+          {
+            "arabic": "نَحْنُ",
+            "en": "we",
+            "ur": "ہم"
+          },
+          {
+            "arabic": "عَلَيْهِمْ",
+            "en": "upon them",
+            "ur": "ان پر"
+          },
+          {
+            "arabic": "أَنْتُمْ",
+            "en": "you all",
+            "ur": "تم سب"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch10-test-q10",
+        "topic": {
+          "en": "Before",
+          "ur": "پہلے"
+        },
+        "prompt": {
+          "en": "What does قَبْلَ الصَّلَاةِ mean?",
+          "ur": "قَبْلَ الصَّلَاةِ کا کیا مطلب ہے؟"
+        },
+        "arabic": "قَبْلَ الصَّلَاةِ",
+        "options": [
+          {
+            "en": "after the prayer",
+            "ur": "نماز کے بعد"
+          },
+          {
+            "en": "before the prayer",
+            "ur": "نماز سے پہلے"
+          },
+          {
+            "en": "in the prayer",
+            "ur": "نماز میں"
+          },
+          {
+            "en": "the prayer",
+            "ur": "نماز"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch10-test-q11",
+        "topic": {
+          "en": "After",
+          "ur": "بعد"
+        },
+        "prompt": {
+          "en": "Which phrase means 'after the lesson'?",
+          "ur": "کون سا فقرہ 'سبق کے بعد' کا معنی دیتا ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "قَبْلَ الدَّرْسِ",
+            "en": "before the lesson",
+            "ur": "سبق سے پہلے"
+          },
+          {
+            "arabic": "بَعْدَ الدَّرْسِ",
+            "en": "after the lesson",
+            "ur": "سبق کے بعد"
+          },
+          {
+            "arabic": "بَعْدَ الصَّلَاةِ",
+            "en": "after the prayer",
+            "ur": "نماز کے بعد"
+          },
+          {
+            "arabic": "فِي الدَّرْسِ",
+            "en": "in the lesson",
+            "ur": "سبق میں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch10-test-q12",
+        "topic": {
+          "en": "Order of events",
+          "ur": "واقعات کی ترتیب"
+        },
+        "prompt": {
+          "en": "In ذَهَبَ قَبْلَ الصَّلَاةِ, which happened first?",
+          "ur": "ذَهَبَ قَبْلَ الصَّلَاةِ میں پہلے کیا ہوا؟"
+        },
+        "arabic": "ذَهَبَ قَبْلَ الصَّلَاةِ",
+        "options": [
+          {
+            "en": "the going — he went, then the prayer came",
+            "ur": "جانا — وہ گیا، پھر نماز آئی"
+          },
+          {
+            "en": "the prayer — he prayed, then he went",
+            "ur": "نماز — اس نے نماز پڑھی، پھر گیا"
+          },
+          {
+            "en": "both at the same time",
+            "ur": "دونوں ایک ہی وقت میں"
+          },
+          {
+            "en": "the sentence does not say",
+            "ur": "جملہ نہیں بتاتا"
+          }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 10 — plural pronouns, before and after",
+      "ar": "ضَمَائِرُ الْجَمْعِ وَقَبْلَ وَبَعْدَ",
+      "ur": "باب 10 — جمع ضمیریں، پہلے اور بعد"
+    },
+    "ayah": {
+      "surah": 109,
+      "ayah": 3,
+      "label": "Al-Kafirun 109:3",
+      "ar": "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ",
+      "en": "Nor are you worshippers of what I worship.",
+      "ur": "اور نہ تم اس کی عبادت کرنے والے ہو جس کی میں عبادت کرتا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109003.mp3"
+    },
+    "highlighted_word_indices": [
+      1
+    ],
+    "highlighted_words": [
+      "أَنْتُمْ"
+    ],
+    "noor_explanation": {
+      "en": "The pronoun أَنْتُمْ opens a sentence addressed to a group, and a plural noun completes it. That pattern, with its four sibling pronouns and the time pair قَبْلَ and بَعْدَ, is what this test measured.",
+      "ur": "ضمیر أَنْتُمْ ایک جماعت سے مخاطب جملہ شروع کرتی ہے، اور ایک جمع اسم اسے مکمل کرتا ہے۔ یہی انداز، اس کی چار ساتھی ضمیروں اور وقت کے جوڑے قَبْلَ اور بَعْدَ کے ساتھ، اس امتحان میں پرکھا گیا۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 10 complete: you can name a group as they, we or you all, choose the female-only form when it fits, and place an action before or after the prayer and the lesson.",
+      "ur": "باب 10 مکمل: اب آپ کسی جماعت کو 'وہ سب'، 'ہم' یا 'تم سب' کہہ سکتے ہیں، جہاں مناسب ہو صرف مؤنث صورت چن سکتے ہیں، اور کسی کام کو نماز اور سبق سے پہلے یا بعد رکھ سکتے ہیں۔"
+    }
+  }
+}

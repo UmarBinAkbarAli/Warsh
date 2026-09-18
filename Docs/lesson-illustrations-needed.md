@@ -122,6 +122,24 @@ used.
 | 3 | `ch09-one-many-four-panels.png` | `ch09-l03` cards 1, 7 | الْجَمْعُ الْمُكَسَّر · عَائِلَاتُ الْكَلِمَات | Four panels: one book / several books, one house / several houses, one student / several students, one masjid / several masjids; no words. |
 | 4 | `ch09-pointing-at-group.png` | `ch09-l04` cards 3, 4 | هٰؤُلَاءِ مُسْلِمُونَ · هٰؤُلَاءِ طَالِبَاتٌ | A speaker indicating a nearby group of male, female or mixed learners; the card supplies the demonstrative; no speech bubbles. |
 
+## Chapter 10 — open (5 scenes)
+
+Briefs from `proposals/chapter-10-content-proposal.md` (one per lesson). Cards
+whose word has an approved asset already show one: `qawm` for the group
+cards, and `salah`, `dars`, `shams` and `rajaa`, copied from the dictionary set
+on 2026-09-18 (the `qabl` / `ba'd` dictionary badges are abstract frames and
+were not used). The review reuses the Chapter 10 assets. Fixture numbers
+follow display order, so `ch10-l05` (you all) is file 03, `ch10-l03` (before)
+is file 04 and `ch10-l04` (after) is file 05.
+
+| # | Filename | Cards | Arabic on the card | Brief |
+|---|---|---|---|---|
+| 1 | `ch10-they-two-groups.png` | `ch10-l01` cards 2, 5 | هُنَّ · هُمْ / هُنَّ | Two separate nearby groups seen from outside: one male or mixed, one female-only, clearly apart so the only difference is who is in each group; no lettering. |
+| 2 | `ch10-we-group-speaking.png` | `ch10-l02` cards 2, 7 | نَحْنُ · نَحْنُ / هُمْ | A group speaking as one, the viewer inside it (first-person viewpoint, the speaker's own shoulder or hand in frame is fine); men and women together; no speech bubbles or text. |
+| 3 | `ch10-you-all-facing-group.png` | `ch10-l05` (file 03) cards 5, 6 | الْمُخَاطَبُونَ · هُمْ / أَنْتُمْ | One learner facing a group and addressing it directly; two panels or one scene with a male/mixed group and a female-only group; no text. |
+| 4 | `ch10-before-timeline.png` | `ch10-l03` (file 04) cards 4, 9 | قَبْلَ وَبَعْدَ · قَبْلَ | A simple two-step timeline (two events on a line, e.g. a walking figure then a prayer mat); the earlier event highlighted, the later one muted; no words or arrows with lettering. |
+| 5 | `ch10-after-timeline.png` | `ch10-l04` (file 05) cards 4, 9 | قَبْلَ / بَعْدَ · قَبْلَ وَبَعْدَ | The same timeline language as scene 4 with the later event highlighted and the earlier one muted; no text. |
+
 ## Delivered
 
 _Nothing yet._

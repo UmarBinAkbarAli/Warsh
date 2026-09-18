@@ -423,33 +423,40 @@ const specs = [
     ],
   },
 
-  // ── Ch10 ── Plural Pronouns and Time ──────────────────────────────────────
+  // ── Ch10 ── Plural Pronouns and قَبْلَ / بَعْدَ ─────────────────────────────
+  // Docs/proposals/chapter-10-content-proposal.md (2026-09-18): standalone
+  // plural pronouns only (attached forms deferred), the time pair taught as
+  // construct phrases, جَاءُوا removed (plural past verbs are not yet taught).
   {
     order: 10,
     sourceFile: "reader_lecture_10_damair_jama.md",
-    title: "Plural Pronouns and Time Expressions",
-    titleAr: "ضَمَائِر الْجَمْع وَالظُّرُوف الزَّمَانِيَّة",
-    description: "They, you all, we — and the time words before and after.",
-    hook: { ayahAr: "أَنْعَمْتَ عَلَيْهِمْ", ayahRef: "Al-Fatiha 1:7", highlightedWord: "عَلَيْهِمْ" },
+    title: "Plural Pronouns and قَبْلَ / بَعْدَ",
+    titleUr: "جمع ضمیریں اور قَبْلَ / بَعْدَ",
+    titleAr: "ضَمَائِرُ الْجَمْعِ وَقَبْلَ وَبَعْدَ",
+    description: "They, we and you all — هُمْ، هُنَّ، نَحْنُ، أَنْتُمْ، أَنْتُنَّ — then the time pair قَبْلَ and بَعْدَ.",
+    descriptionUr: "وہ سب، ہم اور تم سب — هُمْ، هُنَّ، نَحْنُ، أَنْتُمْ، أَنْتُنَّ — پھر وقت کا جوڑا قَبْلَ اور بَعْدَ۔",
+    hook: { ayahAr: "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ", ayahRef: "Al-Kafirun 109:3", highlightedWord: "أَنْتُمْ" },
     examples: [
       card("هُمْ طُلَّابٌ", "They are students", "hum tullaabun"),
       card("نَحْنُ مُسْلِمُونَ", "We are Muslims", "nahnu muslimoona"),
-      card("قَبْلَ الصَّلَاةِ", "before prayer", "qablas-salaati"),
+      card("أَنْتُمْ مُؤْمِنُونَ", "You are believers", "antum mu'minoona"),
+      card("قَبْلَ الصَّلَاةِ", "before the prayer", "qablas-salaati"),
       card("بَعْدَ الدَّرْسِ", "after the lesson", "ba'dad-darsi"),
     ],
     parseText: "هُمْ طُلَّابٌ",
     parseTokens: [token("هُمْ", "مبتدأ", "they"), token("طُلَّابٌ", "خبر", "students")],
-    conversation: ["مَتَى جَاءُوا؟", "جَاءُوا بَعْدَ الصَّلَاةِ"],
-    conversationDistractor: "هٰؤُلَاءِ مُسْلِمُونَ",
+    conversation: ["مَنْ هٰؤُلَاءِ؟", "هُمْ طُلَّابٌ"],
+    conversationDistractor: "نَحْنُ مُسْلِمُونَ",
     distractor: "a book / books",
     blankDistractor: "عِنْدَ",
-    noorTip: "عَلَيْهِمْ in Al-Fatiha — the preposition عَلَى carries the plural attached pronoun هِمْ.",
-    noorTipUr: "عَلَيْهِمْ میں حرف جر عَلَى کے ساتھ ضمیر جمع هِمْ لگا ہے — الفاتحہ میں دیکھیں۔",
+    noorTip: "أَنْتُمْ in Al-Kafirun speaks straight to a group — you all — and عَابِدُونَ after it carries the ون plural ending from Chapter 9.",
+    noorTipUr: "الکافرون میں أَنْتُمْ براہِ راست جماعت سے بات کرتا ہے — تم سب — اور اس کے بعد عَابِدُونَ باب 9 والی ون کی علامت رکھتا ہے۔",
     focuses: [
-      { title: "They — هُمْ / هُنَّ", titleAr: "هُمْ وَهُنَّ", grammarTerm: "ضمير غائب جمع", reveal: "Arabic has two words for 'they' — هُمْ for males (or mixed), هُنَّ for females only.", hookQuestion: "When would you use هُنَّ instead of هُمْ?" },
-      { title: "We — نَحْنُ", titleAr: "نَحْنُ", grammarTerm: "ضمير المتكلمين", reveal: "نَحْنُ includes the speaker and others. Al-Fatiha uses نَعْبُدُ (we worship) — the first-person plural of community.", hookQuestion: "Why does Al-Fatiha say نَعْبُدُ (we) rather than أَعْبُدُ (I)?" },
-      { title: "Before — قَبْلَ", titleAr: "قَبْلَ", grammarTerm: "ظرف زمان", reveal: "قَبْلَ is always followed by a noun in kasra (genitive) — قَبْلَ الصَّلَاةِ.", hookQuestion: "What case does the noun after قَبْلَ take?" },
-      { title: "After — بَعْدَ", titleAr: "بَعْدَ", grammarTerm: "ظرف زمان", reveal: "بَعْدَ follows the same rule — followed by genitive — and organises two events in sequence.", hookQuestion: "What does بَعْدَ الدَّرْسِ tell you about when they came?" },
+      { title: "They — هُمْ / هُنَّ", titleAr: "هُمْ وَهُنَّ", grammarTerm: "ضمير غائب جمع", reveal: "Arabic has two words for 'they' — هُمْ for a male or mixed group, هُنَّ for a female-only group. Both stand alone.", hookQuestion: "When would you use هُنَّ instead of هُمْ?" },
+      { title: "We — نَحْنُ", titleAr: "نَحْنُ", grammarTerm: "ضمير المتكلمين", reveal: "نَحْنُ includes the speaker and others. Al-Fatihah says نَعْبُدُ (we worship) — the same 'we' inside a verb.", hookQuestion: "Why does Al-Fatihah say نَعْبُدُ (we) rather than أَعْبُدُ (I)?" },
+      { title: "You all — أَنْتُمْ / أَنْتُنَّ", titleAr: "أَنْتُمْ وَأَنْتُنَّ", grammarTerm: "ضمير مخاطب جمع", reveal: "أَنْتُمْ speaks to a male or mixed group, أَنْتُنَّ to a female-only group — the same choice as هُمْ / هُنَّ, facing the group.", hookQuestion: "What separates هُمْ طُلَّابٌ from أَنْتُمْ طُلَّابٌ?" },
+      { title: "Before — قَبْلَ", titleAr: "قَبْلَ", grammarTerm: "ظرف زمان", reveal: "قَبْلَ joins the noun after it into one phrase — قَبْلَ الصَّلَاةِ — and names the earlier of two events.", hookQuestion: "What does قَبْلَ need after it to complete its meaning?" },
+      { title: "After — بَعْدَ", titleAr: "بَعْدَ", grammarTerm: "ظرف زمان", reveal: "بَعْدَ follows the same phrase pattern — بَعْدَ الدَّرْسِ — and names the later event.", hookQuestion: "In رَجَعَ بَعْدَ الدَّرْسِ, which happened first?" },
     ],
   },
 

@@ -82,10 +82,13 @@ const ch09L03Content     = require("./fixtures/chapter-09-lesson-03.json");
 const ch09L04Content     = require("./fixtures/chapter-09-lesson-04.json");
 const ch09L05Content     = require("./fixtures/chapter-09-lesson-05-review.json");      // ch09-l05, review (replaces the verb-pattern lesson)
 const ch09TestContent    = require("./fixtures/chapter-09-lesson-06-final-test.json"); // ch09-test, order 6
-const ch10L01Content     = require("./fixtures/chapter-10-lesson-01.json");
-const ch10L02Content     = require("./fixtures/chapter-10-lesson-02.json");
-const ch10L03Content     = require("./fixtures/chapter-10-lesson-03.json");
-const ch10L04Content     = require("./fixtures/chapter-10-lesson-04.json");
+const ch10L01Content     = require("./fixtures/chapter-10-lesson-01.json");            // ch10-l01, order 1
+const ch10L02Content     = require("./fixtures/chapter-10-lesson-02.json");            // ch10-l02, order 2
+const ch10L05Content     = require("./fixtures/chapter-10-lesson-03.json");            // ch10-l05 (you all), order 3
+const ch10L03Content     = require("./fixtures/chapter-10-lesson-04.json");            // ch10-l03 (before), order 4
+const ch10L04Content     = require("./fixtures/chapter-10-lesson-05.json");            // ch10-l04 (after), order 5
+const ch10L06Content     = require("./fixtures/chapter-10-lesson-06-review.json");     // ch10-l06, review, order 6
+const ch10TestContent    = require("./fixtures/chapter-10-lesson-07-final-test.json"); // ch10-test, order 7
 const ch11L01Content     = require("./fixtures/chapter-11-lesson-01.json");
 const ch11L02Content     = require("./fixtures/chapter-11-lesson-02.json");
 const ch11L03Content     = require("./fixtures/chapter-11-lesson-03.json");
@@ -809,11 +812,17 @@ async function main() {
     { id: "ch09-l04", chapterId: ch9Id, order: 4, title: "Nearby People — هٰؤُلَاءِ",              titleAr: "هٰؤُلَاءِ — لِلْجَمَاعَةِ الْقَرِيبَة",    template: "STANDARD", xpReward: ch09L04Content._meta?.xp_reward  ?? 10, content: ch09L04Content },
     { id: "ch09-l05", chapterId: ch9Id, order: 5, title: "Chapter 9 Review",                       titleAr: "مُرَاجَعَةُ الْفَصْلِ التَّاسِع",           template: "REVIEW",   xpReward: ch09L05Content._meta?.xp_reward  ?? 20, content: ch09L05Content },
     { id: "ch09-test", chapterId: ch9Id, order: 6, title: "Chapter 9 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ التَّاسِعِ",          template: "REVIEW",   xpReward: ch09TestContent._meta?.xp_reward ?? 20, content: ch09TestContent },
-    // Chapter 10
-    { id: "ch10-l01", chapterId: ch10Id, order: 1, title: "Plural Pronouns — هُمْ and هُنَّ",       titleAr: "هُمْ وَهُنَّ — ضَمِيرُ الْجَمَاعَة",    template: "STANDARD",     xpReward: ch10L01Content._meta?.xp_reward     ?? 10, content: ch10L01Content },
-    { id: "ch10-l02", chapterId: ch10Id, order: 2, title: "We — نَحْنُ",                            titleAr: "نَحْنُ — ضَمِيرُ الْمُتَكَلِّمِ الجَمْع", template: "STANDARD",    xpReward: ch10L02Content._meta?.xp_reward     ?? 10, content: ch10L02Content },
-    { id: "ch10-l03", chapterId: ch10Id, order: 3, title: "Before — قَبْلَ",                        titleAr: "قَبْلَ — الظَّرْفُ الزَّمَانِيّ",         template: "STANDARD",    xpReward: ch10L03Content._meta?.xp_reward     ?? 10, content: ch10L03Content },
-    { id: "ch10-l04", chapterId: ch10Id, order: 4, title: "After — بَعْدَ",                         titleAr: "بَعْدَ — الظَّرْفُ الزَّمَانِيّ",         template: "STANDARD",    xpReward: ch10L04Content._meta?.xp_reward     ?? 10, content: ch10L04Content },
+    // Chapter 10 — Docs/proposals/chapter-10-content-proposal.md. Existing IDs kept
+    // in place; fixture file number == display order (the mirror convention), so
+    // ch10-l03/l04 (before/after) now load files 04/05 and the new ch10-l05 (you
+    // all) sits at display order 3. ch10-l06 (review) and ch10-test are new rows.
+    { id: "ch10-l01",  chapterId: ch10Id, order: 1, title: "They — هُمْ and هُنَّ",                 titleAr: "هُمْ وَهُنَّ — ضَمِيرُ الْغَائِبِينَ",       template: "STANDARD", xpReward: ch10L01Content._meta?.xp_reward  ?? 10, content: ch10L01Content },
+    { id: "ch10-l02",  chapterId: ch10Id, order: 2, title: "We — نَحْنُ",                            titleAr: "نَحْنُ — ضَمِيرُ الْمُتَكَلِّمِينَ",         template: "STANDARD", xpReward: ch10L02Content._meta?.xp_reward  ?? 10, content: ch10L02Content },
+    { id: "ch10-l05",  chapterId: ch10Id, order: 3, title: "You All — أَنْتُمْ and أَنْتُنَّ",        titleAr: "أَنْتُمْ وَأَنْتُنَّ — ضَمِيرُ الْمُخَاطَبِينَ", template: "STANDARD", xpReward: ch10L05Content._meta?.xp_reward  ?? 10, content: ch10L05Content },
+    { id: "ch10-l03",  chapterId: ch10Id, order: 4, title: "Before — قَبْلَ",                        titleAr: "قَبْلَ — ظَرْفُ زَمَان",                     template: "STANDARD", xpReward: ch10L03Content._meta?.xp_reward  ?? 10, content: ch10L03Content },
+    { id: "ch10-l04",  chapterId: ch10Id, order: 5, title: "After — بَعْدَ",                         titleAr: "بَعْدَ — ظَرْفُ زَمَان",                     template: "STANDARD", xpReward: ch10L04Content._meta?.xp_reward  ?? 10, content: ch10L04Content },
+    { id: "ch10-l06",  chapterId: ch10Id, order: 6, title: "Chapter 10 Review",                      titleAr: "مُرَاجَعَةُ الْفَصْلِ الْعَاشِر",            template: "REVIEW",   xpReward: ch10L06Content._meta?.xp_reward  ?? 20, content: ch10L06Content },
+    { id: "ch10-test", chapterId: ch10Id, order: 7, title: "Chapter 10 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الْعَاشِرِ",            template: "REVIEW",   xpReward: ch10TestContent._meta?.xp_reward ?? 20, content: ch10TestContent },
     // Chapter 11
     { id: "ch11-l01", chapterId: ch11Id, order: 1, title: "My Father and My Mother — أَبِي and أُمِّي", titleAr: "أَبِي وَأُمِّي",                    template: "STANDARD",    xpReward: ch11L01Content._meta?.xp_reward     ?? 10, content: ch11L01Content },
     { id: "ch11-l02", chapterId: ch11Id, order: 2, title: "Family Vocabulary",                      titleAr: "كَلِمَاتُ الْعَائِلَة",                   template: "STANDARD",    xpReward: ch11L02Content._meta?.xp_reward     ?? 10, content: ch11L02Content },
