@@ -346,17 +346,25 @@ Everything below this list is either done and verified, or one of these:
    `noor_explanation`) must begin with English, and a `CONTRAST` card needs
    `concept.ar` or it renders blank.
    **Chapter 9 (`Docs/proposals/chapter-09-content-proposal.md`, plural nouns
-   + `هٰؤُلَاءِ`) is built and staging-verified 2026-09-18, production pending
-   owner approval**: `ch09-l01..l04` rewritten in place, `ch09-l05` keeps its
-   ID but is now the review (the `VERB_PATTERN` past-tense table is dropped),
-   `ch09-test` (12 MC, 80 %) new; promote with `content:promote-chapter-nine --
-   --apply`, then `content:backfill-new-lessons -- --lesson-ids ch09-test
-   --apply`. Catalogue clips generated (56/56), `mumina` + `qawm` discover
-   images added. The direction rule above also covers `TRUE_FALSE`
-   `statement.en` and every `explanation_on_wrong.en` (found on the emulator
-   during this build); the live Chapter 8 fixtures still carry a few
-   `explanation_on_wrong` strings that open with Arabic. The Chapter 10
-   proposal is in the tree, owner-authored and not yet reviewed. After every chapter promotion
+   + `هٰؤُلَاءِ`) is live in production (promoted 2026-09-18** with
+   `content:promote-chapter-nine -- --apply`; `ch09-l01..l04` rewritten in
+   place, `ch09-l05` keeps its ID but is now the review — the `VERB_PATTERN`
+   past-tense table is dropped — and `ch09-test` (12 MC, 80 %) is new).
+   Post-promotion: `content:backfill-new-lessons -- --lesson-ids ch09-test
+   --apply` inserted 1 row (the owner's test account, now 421/421);
+   `content:baseline` re-recorded (it had not been refreshed after the
+   Chapter 8 promotion, so `content:check` showed Chapter 8 as a false
+   conflict — production matched Git byte for byte); R2 audio audit
+   3737/3737, missing 0; `content:check` clean. The 22 Chapter 8
+   `explanation_on_wrong` / `TRUE_FALSE` strings that opened with Arabic were
+   rewritten and re-promoted with `content:promote-chapter-eight -- --apply`
+   in the same session. **The same Arabic-leading pattern remains in roughly
+   1,400 strings across Chapters 1–72** (every chapter, counted 2026-09-18);
+   the durable fix is in the player — force `writingDirection: "ltr"` on the
+   `MATCH_AYAH` option, `TRUE_FALSE` statement, wrong-answer explanation,
+   `noor_intro` and `noor_explanation` texts — rather than rewriting content.
+   The Chapter 10 proposal is in the tree, owner-authored and not yet
+   reviewed. After every chapter promotion
    that adds lesson ids, re-run `progress:backfill-skipped` for the owner's
    test account and `content:backfill-new-lessons` for everyone else.
    Fixed 2026-09-18 alongside the promotion: (a) `GET /api/lessons/{id}` no

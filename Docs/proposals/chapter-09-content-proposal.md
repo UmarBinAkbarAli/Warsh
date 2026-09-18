@@ -1,6 +1,6 @@
 # Chapter 9 — Complete Content Proposal
 
-**Status:** Implemented in isolated staging 2026-09-18 from this proposal; production promotion pending owner approval  
+**Status:** Approved by the product owner 2026-09-18; implemented in isolated staging and promoted to production 2026-09-18  
 **Chapter position:** Chapter 9  
 **Working title:** **Plural Nouns and `هٰؤُلَاءِ`**  
 **Urdu title:** **جمع کے اسماء اور `هٰؤُلَاءِ`**
