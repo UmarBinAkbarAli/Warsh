@@ -202,6 +202,13 @@ npx vitest run <file>
   hardcoded hex); web wraps in `WebShell`.
 - Keep `i18n/en.ts` and `i18n/ur.ts` in sync; Arabic learning content stays Arabic
   in both languages.
+- The lesson player renders some English strings without a forced text
+  direction: `MATCH_AYAH` options, `TRUE_FALSE` `statement.en`, every
+  `explanation_on_wrong.en`, hook `noor_intro.en` and reveal
+  `noor_explanation.en`. One that opens with an Arabic word is laid out
+  right-to-left and reads scrambled, so start those strings with English
+  ("The word مُؤْمِنُونَ …"). A `CONTRAST` card needs `concept.ar` or its
+  headline renders blank.
 - After committing web-affecting app changes, run `npm run deploy:web` so
   `app.warsh.app` does not fall behind.
 

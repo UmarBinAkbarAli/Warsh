@@ -1,0 +1,743 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 9, display lesson 5 (ch09-l05) — chapter review replacing the former VERB_PATTERN lesson (past-tense table of ذَهَبَ, now deferred to the verb-conjugation sequence): the three plural families, sound ending versus changed shape, هٰؤُلَاءِ with masculine/mixed and female groups, noun مُؤْمِنُونَ versus verb يُؤْمِنُونَ. No new grammar. Rebuilt 2026-09-18 from Docs/proposals/chapter-09-content-proposal.md.",
+    "titleUr": "باب 9 کا مراجعہ",
+    "chapter_order": 9,
+    "lesson_order": 5,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 9,
+      "ayah": 71,
+      "label": "At-Tawbah 9:71",
+      "ar": "وَالْمُؤْمِنُونَ وَالْمُؤْمِنَاتُ بَعْضُهُمْ أَوْلِيَاءُ بَعْضٍ",
+      "en": "The believing men and believing women are allies of one another.",
+      "ur": "مومن مرد اور مومن عورتیں ایک دوسرے کے مددگار ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009071.mp3"
+    },
+    "noor_intro": {
+      "en": "Back to the pair وَالْمُؤْمِنُونَ وَالْمُؤْمِنَاتُ. You can now read both endings, ون and ات, and you know a third kind of plural that has neither. Let us review everything Chapter 9 built.",
+      "ur": "واپس جوڑے وَالْمُؤْمِنُونَ وَالْمُؤْمِنَاتُ کی طرف۔ اب آپ دونوں علامتیں ون اور ات پڑھ سکتے ہیں، اور جمع کی ایک تیسری قسم بھی جانتے ہیں جس میں یہ دونوں نہیں۔ آئیے باب 9 کا سب کچھ دہرائیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The three plural families",
+        "ar": "أَنْوَاعُ الْجَمْعِ الثَّلَاثَة",
+        "ur": "جمع کے تین خاندان"
+      },
+      "explanation": {
+        "en": "Sound masculine (ـُونَ), sound feminine (ـَات), and broken (the inside changes). Every plural in this chapter belongs to one of the three.",
+        "ur": "جمع مذکر سالم (ـُونَ)، جمع مؤنث سالم (ـَات)، اور جمع مکسر (اندر سے تبدیلی)۔ اس باب کی ہر جمع ان تین میں سے کسی ایک سے تعلق رکھتی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "مُسْلِمُونَ",
+          "ar_plain": "مسلمون",
+          "translit": "muslimūna",
+          "en": "Muslims / Muslim men",
+          "ur": "مسلمان (مرد یا ملی جلی جماعت)"
+        },
+        {
+          "ar": "مُؤْمِنَاتٌ",
+          "ar_plain": "مؤمنات",
+          "translit": "muʾminātun",
+          "en": "believing women",
+          "ur": "مومن عورتیں"
+        },
+        {
+          "ar": "كُتُبٌ",
+          "ar_plain": "كتب",
+          "translit": "kutubun",
+          "en": "books",
+          "ur": "کتابیں"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Muslim man / Muslims",
+        "ar": "مُسْلِمٌ / مُسْلِمُونَ",
+        "ur": "مسلمان (مرد) / مسلمان (جمع)"
+      },
+      "explanation": {
+        "en": "Sound masculine: مُسْلِم stays whole and ـُونَ is added. Commonly for masculine human nouns, and for mixed groups.",
+        "ur": "جمع مذکر سالم: مُسْلِم سلامت رہتا ہے اور ـُونَ جڑتا ہے۔ عام طور پر مذکر انسانی اسماء کے لیے، اور ملی جلی جماعتوں کے لیے۔"
+      },
+      "examples": [
+        {
+          "ar": "مُسْلِمٌ",
+          "ar_plain": "مسلم",
+          "translit": "muslimun",
+          "en": "a Muslim man",
+          "ur": "ایک مسلمان (مرد)"
+        },
+        {
+          "ar": "مُسْلِمُونَ",
+          "ar_plain": "مسلمون",
+          "translit": "muslimūna",
+          "en": "Muslims / Muslim men",
+          "ur": "مسلمان (مرد یا ملی جلی جماعت)"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Believing woman / believing women",
+        "ar": "مُؤْمِنَةٌ / مُؤْمِنَاتٌ",
+        "ur": "مومن عورت / مومن عورتیں"
+      },
+      "explanation": {
+        "en": "Sound feminine: the ة of مُؤْمِنَةٌ is replaced by ات.",
+        "ur": "جمع مؤنث سالم: مُؤْمِنَةٌ کے ة کی جگہ ات آتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "مُؤْمِنَةٌ",
+          "ar_plain": "مؤمنة",
+          "translit": "muʾminatun",
+          "en": "a believing woman",
+          "ur": "ایک مومن عورت"
+        },
+        {
+          "ar": "مُؤْمِنَاتٌ",
+          "ar_plain": "مؤمنات",
+          "translit": "muʾminātun",
+          "en": "believing women",
+          "ur": "مومن عورتیں"
+        }
+      ],
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/mumina.webp"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Books and houses",
+        "ar": "كُتُبٌ / بُيُوتٌ",
+        "ur": "کتابیں اور گھر"
+      },
+      "explanation": {
+        "en": "Broken: كِتَابٌ / كُتُبٌ and بَيْتٌ / بُيُوتٌ change on the inside. Learn each family as a pair.",
+        "ur": "مکسر: كِتَابٌ / كُتُبٌ اور بَيْتٌ / بُيُوتٌ اندر سے بدلتے ہیں۔ ہر خاندان کو جوڑے کے طور پر یاد رکھیں۔"
+      },
+      "examples": [
+        {
+          "ar": "كُتُبٌ",
+          "ar_plain": "كتب",
+          "translit": "kutubun",
+          "en": "books",
+          "ur": "کتابیں"
+        },
+        {
+          "ar": "بُيُوتٌ",
+          "ar_plain": "بيوت",
+          "translit": "buyūtun",
+          "en": "houses",
+          "ur": "گھر (جمع)"
+        }
+      ],
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/kitab.webp"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Sound ending versus changed shape",
+        "ar": "طَالِبَاتٌ / طُلَّابٌ",
+        "ur": "سالم علامت بمقابلہ بدلی ہوئی شکل"
+      },
+      "explanation": {
+        "en": "طَالِبَاتٌ adds ات to a whole word; طُلَّابٌ reshapes طَالِبٌ from the inside. Same root, two different plural families.",
+        "ur": "طَالِبَاتٌ پورے لفظ پر ات جوڑتا ہے؛ طُلَّابٌ طَالِبٌ کو اندر سے نئی شکل دیتا ہے۔ ایک ہی مادہ، جمع کے دو مختلف خاندان۔"
+      },
+      "examples": [
+        {
+          "ar": "طَالِبَاتٌ",
+          "ar_plain": "طالبات",
+          "translit": "ṭālibātun",
+          "en": "female students",
+          "ur": "طالبات"
+        },
+        {
+          "ar": "طُلَّابٌ",
+          "ar_plain": "طلاب",
+          "translit": "ṭullābun",
+          "en": "students",
+          "ur": "طلبہ"
+        }
+      ],
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/talib.webp"
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "هٰؤُلَاءِ مُسْلِمُونَ",
+        "ar_plain": "هؤلاء مسلمون",
+        "translit": "hāʾulāʾi muslimūna",
+        "en": "These are Muslims.",
+        "ur": "یہ مسلمان ہیں۔"
+      },
+      "explanation": {
+        "en": "هٰؤُلَاءِ with a masculine or mixed human group: these are Muslims.",
+        "ur": "هٰؤُلَاءِ مذکر یا ملی جلی انسانی جماعت کے ساتھ: یہ مسلمان ہیں۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/qawm.webp"
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "هٰؤُلَاءِ طَالِبَاتٌ",
+        "ar_plain": "هؤلاء طالبات",
+        "translit": "hāʾulāʾi ṭālibātun",
+        "en": "These are female students.",
+        "ur": "یہ طالبات ہیں۔"
+      },
+      "explanation": {
+        "en": "هٰؤُلَاءِ with a female human group: these are female students. The pointing word does not change.",
+        "ur": "هٰؤُلَاءِ عورتوں کی جماعت کے ساتھ: یہ طالبات ہیں۔ اشارے کا لفظ نہیں بدلتا۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Noun or verb",
+        "ar": "مُؤْمِنُونَ / يُؤْمِنُونَ",
+        "ur": "اسم یا فعل"
+      },
+      "explanation": {
+        "en": "مُؤْمِنُونَ is the noun, believers. يُؤْمِنُونَ is the verb, they believe. Both end in ون; the opening يُ marks the verb. Recognition only.",
+        "ur": "مُؤْمِنُونَ اسم ہے، مومنین۔ يُؤْمِنُونَ فعل ہے، وہ ایمان رکھتے ہیں۔ دونوں ون پر ختم ہوتے ہیں؛ شروع کا يُ فعل کی پہچان ہے۔ صرف پہچان کے لیے۔"
+      },
+      "examples": [
+        {
+          "ar": "مُؤْمِنُونَ",
+          "ar_plain": "مؤمنون",
+          "translit": "muʾminūna",
+          "en": "believers / believing men",
+          "ur": "مومن مرد / مومنین"
+        },
+        {
+          "ar": "يُؤْمِنُونَ",
+          "ar_plain": "يؤمنون",
+          "translit": "yuʾminūna",
+          "en": "they believe (a verb)",
+          "ur": "وہ ایمان رکھتے ہیں (فعل)"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch09-l05-ex01",
+      "prompt": {
+        "ar": "مُسْلِمُونَ",
+        "ar_plain": "مسلمون",
+        "translit": "muslimūna",
+        "en": "Muslims / Muslim men",
+        "ur": "مسلمان (مرد یا ملی جلی جماعت)"
+      },
+      "options": [
+        {
+          "en": "Muslims — sound masculine plural, ending ـُونَ",
+          "ur": "مسلمان — جمع مذکر سالم، علامت ـُونَ"
+        },
+        {
+          "en": "one Muslim man — singular",
+          "ur": "ایک مسلمان (مرد) — واحد"
+        },
+        {
+          "en": "Muslim women — sound feminine plural, ending ـَات",
+          "ur": "مسلمان عورتیں — جمع مؤنث سالم، علامت ـَات"
+        },
+        {
+          "en": "they believe — a verb",
+          "ur": "وہ ایمان رکھتے ہیں — فعل"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word مُسْلِمُونَ ends in ـُونَ: the sound masculine plural, Muslims.",
+        "ur": "مُسْلِمُونَ ـُونَ پر ختم ہوتا ہے: جمع مذکر سالم، مسلمان۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch09-l05-ex02",
+      "prompt": {
+        "ar": "مُؤْمِنَاتٌ",
+        "ar_plain": "مؤمنات",
+        "translit": "muʾminātun",
+        "en": "believing women",
+        "ur": "مومن عورتیں"
+      },
+      "options": [
+        {
+          "en": "believing women — sound feminine plural, ending ـَات",
+          "ur": "مومن عورتیں — جمع مؤنث سالم، علامت ـَات"
+        },
+        {
+          "en": "believers — sound masculine plural, ending ـُونَ",
+          "ur": "مومنین — جمع مذکر سالم، علامت ـُونَ"
+        },
+        {
+          "en": "one believing woman — singular",
+          "ur": "ایک مومن عورت — واحد"
+        },
+        {
+          "en": "they believe — a verb",
+          "ur": "وہ ایمان رکھتے ہیں — فعل"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word مُؤْمِنَاتٌ ends in ـَات: the sound feminine plural, believing women.",
+        "ur": "مُؤْمِنَاتٌ ـَات پر ختم ہوتا ہے: جمع مؤنث سالم، مومن عورتیں۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch09-l05-ex03",
+      "left_column": [
+        {
+          "ar": "مُسْلِمٌ",
+          "ar_plain": "مسلم",
+          "translit": "muslimun",
+          "en": "a Muslim man",
+          "ur": "ایک مسلمان (مرد)"
+        },
+        {
+          "ar": "مُسْلِمُونَ",
+          "ar_plain": "مسلمون",
+          "translit": "muslimūna",
+          "en": "Muslims / Muslim men",
+          "ur": "مسلمان (مرد یا ملی جلی جماعت)"
+        },
+        {
+          "ar": "مُعَلِّمٌ",
+          "ar_plain": "معلم",
+          "translit": "muʿallimun",
+          "en": "a teacher (man)",
+          "ur": "ایک استاد (مرد)"
+        },
+        {
+          "ar": "مُعَلِّمُونَ",
+          "ar_plain": "معلمون",
+          "translit": "muʿallimūna",
+          "en": "teachers (men)",
+          "ur": "اساتذہ (مرد)"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "a Muslim man",
+          "ur": "ایک مسلمان (مرد)"
+        },
+        {
+          "en": "Muslims / Muslim men",
+          "ur": "مسلمان (مرد یا ملی جلی جماعت)"
+        },
+        {
+          "en": "a teacher (man)",
+          "ur": "ایک استاد (مرد)"
+        },
+        {
+          "en": "teachers (men)",
+          "ur": "اساتذہ (مرد)"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch09-l05-ex04",
+      "left_column": [
+        {
+          "ar": "طَالِبَةٌ",
+          "ar_plain": "طالبة",
+          "translit": "ṭālibatun",
+          "en": "a female student",
+          "ur": "ایک طالبہ"
+        },
+        {
+          "ar": "طَالِبَاتٌ",
+          "ar_plain": "طالبات",
+          "translit": "ṭālibātun",
+          "en": "female students",
+          "ur": "طالبات"
+        },
+        {
+          "ar": "مُؤْمِنَةٌ",
+          "ar_plain": "مؤمنة",
+          "translit": "muʾminatun",
+          "en": "a believing woman",
+          "ur": "ایک مومن عورت"
+        },
+        {
+          "ar": "مُؤْمِنَاتٌ",
+          "ar_plain": "مؤمنات",
+          "translit": "muʾminātun",
+          "en": "believing women",
+          "ur": "مومن عورتیں"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "a female student",
+          "ur": "ایک طالبہ"
+        },
+        {
+          "en": "female students",
+          "ur": "طالبات"
+        },
+        {
+          "en": "a believing woman",
+          "ur": "ایک مومن عورت"
+        },
+        {
+          "en": "believing women",
+          "ur": "مومن عورتیں"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch09-l05-ex05",
+      "left_column": [
+        {
+          "ar": "كُتُبٌ",
+          "ar_plain": "كتب",
+          "translit": "kutubun",
+          "en": "books",
+          "ur": "کتابیں"
+        },
+        {
+          "ar": "بُيُوتٌ",
+          "ar_plain": "بيوت",
+          "translit": "buyūtun",
+          "en": "houses",
+          "ur": "گھر (جمع)"
+        },
+        {
+          "ar": "طُلَّابٌ",
+          "ar_plain": "طلاب",
+          "translit": "ṭullābun",
+          "en": "students",
+          "ur": "طلبہ"
+        },
+        {
+          "ar": "مَسَاجِدُ",
+          "ar_plain": "مساجد",
+          "translit": "masājidu",
+          "en": "masjids",
+          "ur": "مساجد"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "books",
+          "ur": "کتابیں"
+        },
+        {
+          "en": "houses",
+          "ur": "گھر (جمع)"
+        },
+        {
+          "en": "students",
+          "ur": "طلبہ"
+        },
+        {
+          "en": "masjids",
+          "ur": "مساجد"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch09-l05-ex06",
+      "prompt": {
+        "ar": "طُلَّابٌ",
+        "ar_plain": "طلاب",
+        "translit": "ṭullābun",
+        "en": "students",
+        "ur": "طلبہ"
+      },
+      "options": [
+        {
+          "en": "students — a broken plural; the inside of طَالِبٌ changed",
+          "ur": "طلبہ — جمع مکسر؛ طَالِبٌ اندر سے بدلا"
+        },
+        {
+          "en": "students — a sound masculine plural; ـُونَ was added",
+          "ur": "طلبہ — جمع مذکر سالم؛ ـُونَ جڑا"
+        },
+        {
+          "en": "female students — a sound feminine plural; ـَات was added",
+          "ur": "طالبات — جمع مؤنث سالم؛ ـَات جڑا"
+        },
+        {
+          "en": "one student — singular",
+          "ur": "ایک طالب علم — واحد"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word طُلَّابٌ has no ون or ات; the shape of طَالِبٌ changed inside. It is a broken plural.",
+        "ur": "طُلَّابٌ میں نہ ون ہے نہ ات؛ طَالِبٌ کی شکل اندر سے بدلی۔ یہ جمع مکسر ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch09-l05-ex07",
+      "mode": "TAP",
+      "sentence_ar": "___ طَالِبَاتٌ",
+      "hint": {
+        "en": "These are female students.",
+        "ur": "یہ طالبات ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "هٰؤُلَاءِ",
+          "ar_plain": "هؤلاء",
+          "translit": "hāʾulāʾi",
+          "en": "these (people)",
+          "ur": "یہ لوگ"
+        },
+        {
+          "ar": "هٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "hādhihi",
+          "en": "this (feminine)",
+          "ur": "یہ (مؤنث)"
+        },
+        {
+          "ar": "هٰذَا",
+          "ar_plain": "هذا",
+          "translit": "hādhā",
+          "en": "this (masculine)",
+          "ur": "یہ (مذکر)"
+        },
+        {
+          "ar": "مَنْ",
+          "ar_plain": "من",
+          "translit": "man",
+          "en": "who?",
+          "ur": "کون؟"
+        }
+      ],
+      "correct_answer": {
+        "ar": "هٰؤُلَاءِ",
+        "ar_plain": "هؤلاء",
+        "translit": "hāʾulāʾi",
+        "en": "these (people)",
+        "ur": "یہ لوگ"
+      },
+      "explanation_on_wrong": {
+        "en": "The group طَالِبَاتٌ is people, so the pointing word is هٰؤُلَاءِ, not the singular هٰذِهِ.",
+        "ur": "طَالِبَاتٌ لوگوں کی جماعت ہے، اس لیے اشارے کا لفظ هٰؤُلَاءِ ہے، واحد هٰذِهِ نہیں۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch09-l05-ex08",
+      "target_translation": {
+        "en": "These are female students.",
+        "ur": "یہ طالبات ہیں۔"
+      },
+      "tiles": [
+        {
+          "ar": "هٰؤُلَاءِ",
+          "ar_plain": "هؤلاء",
+          "translit": "hāʾulāʾi",
+          "en": "these (people)",
+          "ur": "یہ لوگ"
+        },
+        {
+          "ar": "طَالِبَاتٌ",
+          "ar_plain": "طالبات",
+          "translit": "ṭālibātun",
+          "en": "female students",
+          "ur": "طالبات"
+        },
+        {
+          "ar": "هٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "hādhihi",
+          "en": "this (feminine)",
+          "ur": "یہ (مؤنث)"
+        },
+        {
+          "ar": "طَالِبَةٌ",
+          "ar_plain": "طالبة",
+          "translit": "ṭālibatun",
+          "en": "a female student",
+          "ur": "ایک طالبہ"
+        }
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "explanation_on_wrong": {
+        "en": "The order is هٰؤُلَاءِ طَالِبَاتٌ: the pointing word, then the sound feminine plural.",
+        "ur": "هٰؤُلَاءِ طَالِبَاتٌ — اشارے کا لفظ، پھر جمع مؤنث سالم۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch09-l05-ex09",
+      "statement": {
+        "en": "The word يُؤْمِنُونَ is the plural noun 'believers'.",
+        "ur": "يُؤْمِنُونَ جمع اسم 'مومنین' ہے۔",
+        "ar_example": {
+          "ar": "يُؤْمِنُونَ",
+          "ar_plain": "يؤمنون",
+          "translit": "yuʾminūna",
+          "en": "they believe (a verb)",
+          "ur": "وہ ایمان رکھتے ہیں (فعل)"
+        }
+      },
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "False: يُؤْمِنُونَ is the verb 'they believe'. The noun 'believers' is مُؤْمِنُونَ.",
+        "ur": "غلط: يُؤْمِنُونَ فعل ہے، 'وہ ایمان رکھتے ہیں'۔ اسم 'مومنین' مُؤْمِنُونَ ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch09-l05-ex10",
+      "ayah_fragment": {
+        "ar": "وَالْمُؤْمِنُونَ وَالْمُؤْمِنَاتُ",
+        "surah_ref": "At-Tawbah 9:71"
+      },
+      "options": [
+        {
+          "en": "'the believing men and the believing women' — ون then ات, two sound plurals",
+          "ur": "'مومن مرد اور مومن عورتیں' — ون پھر ات، دو سالم جمعیں"
+        },
+        {
+          "en": "'the believer and the believing woman' — both words are singular",
+          "ur": "'مومن اور مومن عورت' — دونوں لفظ واحد ہیں"
+        },
+        {
+          "en": "'they believe and they believed' — both words are verbs",
+          "ur": "'وہ ایمان رکھتے ہیں اور انہوں نے ایمان رکھا' — دونوں لفظ فعل ہیں"
+        },
+        {
+          "en": "'the believing men and the believing men' — both endings are ون",
+          "ur": "'مومن مرد اور مومن مرد' — دونوں علامتیں ون ہیں"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word الْمُؤْمِنُونَ carries ون and الْمُؤْمِنَاتُ carries ات: the believing men and the believing women.",
+        "ur": "الْمُؤْمِنُونَ میں ون اور الْمُؤْمِنَاتُ میں ات ہے: مومن مرد اور مومن عورتیں۔"
+      },
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Everything Chapter 9 built",
+      "ar": "الْجَمْعُ فِي الْقُرْآن",
+      "ur": "باب 9 نے جو کچھ بنایا"
+    },
+    "ayah": {
+      "surah": 9,
+      "ayah": 71,
+      "label": "At-Tawbah 9:71",
+      "ar": "وَالْمُؤْمِنُونَ وَالْمُؤْمِنَاتُ بَعْضُهُمْ أَوْلِيَاءُ بَعْضٍ",
+      "en": "The believing men and believing women are allies of one another.",
+      "ur": "مومن مرد اور مومن عورتیں ایک دوسرے کے مددگار ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009071.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "وَالْمُؤْمِنُونَ",
+      "وَالْمُؤْمِنَاتُ"
+    ],
+    "noor_explanation": {
+      "en": "Two words, two sound plurals: الْمُؤْمِنُونَ with ون and الْمُؤْمِنَاتُ with ات. Add the broken plurals that change inside, and هٰؤُلَاءِ to point at a nearby group, and you have the whole of Chapter 9.",
+      "ur": "دو لفظ، دو سالم جمعیں: ون کے ساتھ الْمُؤْمِنُونَ اور ات کے ساتھ الْمُؤْمِنَاتُ۔ اس میں اندر سے بدلنے والی جمع مکسر اور قریب کی جماعت کی طرف اشارے کے لیے هٰؤُلَاءِ ملا لیں، تو پورا باب 9 آپ کے پاس ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You have reviewed how Arabic marks regular human plurals, changes common words into broken plurals, and points to nearby groups of people. The final test checks these skills in mixed order.",
+      "ur": "آپ نے دہرا لیا کہ عربی باقاعدہ انسانی جمعوں کی نشان دہی کیسے کرتی ہے، عام الفاظ کو جمع مکسر میں کیسے بدلتی ہے، اور قریب کی انسانی جماعتوں کی طرف کیسے اشارہ کرتی ہے۔ آخری امتحان انہی مہارتوں کو ملی جلی ترتیب میں پرکھتا ہے۔"
+    }
+  }
+}

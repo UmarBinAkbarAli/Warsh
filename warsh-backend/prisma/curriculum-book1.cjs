@@ -395,10 +395,12 @@ const specs = [
   {
     order: 9,
     sourceFile: "reader_lecture_09_jama.md",
-    title: "Plural Nouns",
-    titleAr: "صِيَغ الْجَمْع",
-    description: "Arabic has three types of plural — sound masculine, sound feminine, and broken.",
-    hook: { ayahAr: "يُؤْمِنُونَ بِالْغَيْبِ", ayahRef: "Al-Baqarah 2:3", highlightedWord: "يُؤْمِنُونَ" },
+    title: "Plural Nouns and هٰؤُلَاءِ",
+    titleUr: "جمع کے اسماء اور هٰؤُلَاءِ",
+    titleAr: "صِيَغُ الْجَمْعِ وَهٰؤُلَاءِ",
+    description: "Three plural families — مُسْلِمُونَ، مُؤْمِنَاتٌ، كُتُبٌ — and هٰؤُلَاءِ to point to a nearby group of people.",
+    descriptionUr: "جمع کے تین خاندان — مُسْلِمُونَ، مُؤْمِنَاتٌ، كُتُبٌ — اور قریب کی انسانی جماعت کی طرف اشارے کے لیے هٰؤُلَاءِ۔",
+    hook: { ayahAr: "إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ", ayahRef: "Al-Hujurat 49:10", highlightedWord: "الْمُؤْمِنُونَ" },
     examples: [
       card("مُسْلِمٌ / مُسْلِمُونَ", "a Muslim / Muslims", "muslimun / muslimoona"),
       card("طَالِبَةٌ / طَالِبَاتٌ", "a female student / female students", "taalibatun / taalibaatun"),
@@ -411,8 +413,8 @@ const specs = [
     conversationDistractor: "الْبِنْتُ الَّتِي ذَهَبَتْ",
     distractor: "my mother is in the house",
     blankDistractor: "أُولَئِكَ",
-    noorTip: "يُؤْمِنُونَ is a sound masculine plural present-tense verb — they believe — built on the same ون pattern.",
-    noorTipUr: "یُؤْمِنُونَ جمع مذکر کا فعل مضارع ہے — وہ ایمان رکھتے ہیں — ون کی علامت پہچانیں۔",
+    noorTip: "الْمُؤْمِنُونَ is the sound masculine plural of مُؤْمِنٌ — the believers — the base word plus ون.",
+    noorTipUr: "الْمُؤْمِنُونَ مُؤْمِنٌ کی جمع مذکر سالم ہے — مومن لوگ — اصل لفظ اور ون۔",
     focuses: [
       { title: "Sound Masculine Plural — ونَ", titleAr: "جَمْع الْمُذَكَّر السَّالِم", grammarTerm: "جمع مذكر سالم", reveal: "Add ونَ to make a sound masculine plural — the root stays intact.", hookQuestion: "Why is this called 'sound' (سالم) plural?" },
       { title: "Sound Feminine Plural — ات", titleAr: "جَمْع الْمُؤَنَّث السَّالِم", grammarTerm: "جمع مؤنث سالم", reveal: "Remove ة, add ات — the feminine sound plural is regular and predictable.", hookQuestion: "How do you turn طَالِبَةٌ into its plural?" },

@@ -49,6 +49,7 @@
     "content:promote-chapter-six": "node scripts/promote-chapter-six.cjs",
     "content:promote-chapter-seven": "node scripts/promote-chapter-seven.cjs",
     "content:promote-chapter-eight": "node scripts/promote-chapter-eight.cjs",
+    "content:promote-chapter-nine": "node scripts/promote-chapter-nine.cjs",
     "images:sync-chapters": "npx tsx -r dotenv/config scripts/sync-chapter-images.ts",
     "images:sync-chapters:dry": "npx tsx -r dotenv/config scripts/sync-chapter-images.ts --dry-run",
     "images:upload-lessons": "npx tsx -r dotenv/config scripts/upload-lesson-images.ts",

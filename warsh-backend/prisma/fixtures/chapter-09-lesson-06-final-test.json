@@ -1,0 +1,470 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 9 final test (ch09-test, new). Twelve multiple-choice questions covering the chapter outcomes: ـُونَ, مُسْلِمٌ / مُسْلِمُونَ, ـَات, طَالِبَةٌ / طَالِبَاتٌ, مُؤْمِنُونَ versus مُؤْمِنَاتٌ, كُتُبٌ, بُيُوتٌ, sound versus broken, هٰؤُلَاءِ, هٰؤُلَاءِ مُسْلِمُونَ, هٰؤُلَاءِ طَالِبَاتٌ, and الْمُؤْمِنُونَ in Al-Hujurat 49:10. Pass mark 80 % (10 of 12) to match Chapters 3–8. Added 2026-09-18 from Docs/proposals/chapter-09-content-proposal.md.",
+    "titleUr": "باب 9 کا آخری امتحان",
+    "chapter_order": 9,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 49,
+      "ayah": 10,
+      "label": "Al-Hujurat 49:10",
+      "ar": "إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ",
+      "en": "The believers are but brothers.",
+      "ur": "مومن تو آپس میں بھائی بھائی ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049010.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 9.",
+      "ur": "باب 9 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "exercises": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 9,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch09-test-q01",
+        "topic": {
+          "en": "Sound masculine plural",
+          "ur": "جمع مذکر سالم"
+        },
+        "prompt": {
+          "en": "Which word is a sound masculine plural ending in ـُونَ?",
+          "ur": "کون سا لفظ ـُونَ پر ختم ہونے والی جمع مذکر سالم ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "مُعَلِّمٌ",
+            "en": "a teacher (man)",
+            "ur": "ایک استاد (مرد)"
+          },
+          {
+            "arabic": "مُعَلِّمُونَ",
+            "en": "teachers (men)",
+            "ur": "اساتذہ (مرد)"
+          },
+          {
+            "arabic": "مُعَلِّمَاتٌ",
+            "en": "female teachers",
+            "ur": "معلمات"
+          },
+          {
+            "arabic": "كُتُبٌ",
+            "en": "books",
+            "ur": "کتابیں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch09-test-q02",
+        "topic": {
+          "en": "Muslim / Muslims",
+          "ur": "مسلمان / مسلمان (جمع)"
+        },
+        "prompt": {
+          "en": "Which word is the plural of مُسْلِمٌ?",
+          "ur": "مُسْلِمٌ کی جمع کون سا لفظ ہے؟"
+        },
+        "arabic": "مُسْلِمٌ",
+        "options": [
+          {
+            "arabic": "مُسْلِمُونَ",
+            "en": "Muslims / Muslim men",
+            "ur": "مسلمان مرد / مسلمان"
+          },
+          {
+            "arabic": "مُسْلِمَةٌ",
+            "en": "a Muslim woman",
+            "ur": "ایک مسلمان عورت"
+          },
+          {
+            "arabic": "مُسْلِمٌ",
+            "en": "a Muslim man",
+            "ur": "ایک مسلمان (مرد)"
+          },
+          {
+            "arabic": "مُؤْمِنُونَ",
+            "en": "believers",
+            "ur": "مومنین"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch09-test-q03",
+        "topic": {
+          "en": "Sound feminine plural",
+          "ur": "جمع مؤنث سالم"
+        },
+        "prompt": {
+          "en": "Which word is a sound feminine plural ending in ـَات?",
+          "ur": "کون سا لفظ ـَات پر ختم ہونے والی جمع مؤنث سالم ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "مُعَلِّمُونَ",
+            "en": "teachers (men)",
+            "ur": "اساتذہ (مرد)"
+          },
+          {
+            "arabic": "طُلَّابٌ",
+            "en": "students",
+            "ur": "طلبہ"
+          },
+          {
+            "arabic": "مُعَلِّمَاتٌ",
+            "en": "female teachers",
+            "ur": "معلمات"
+          },
+          {
+            "arabic": "مُعَلِّمَةٌ",
+            "en": "a female teacher",
+            "ur": "ایک معلمہ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch09-test-q04",
+        "topic": {
+          "en": "Female student / female students",
+          "ur": "طالبہ / طالبات"
+        },
+        "prompt": {
+          "en": "Which word is the plural of طَالِبَةٌ?",
+          "ur": "طَالِبَةٌ کی جمع کون سا لفظ ہے؟"
+        },
+        "arabic": "طَالِبَةٌ",
+        "options": [
+          {
+            "arabic": "طُلَّابٌ",
+            "en": "students (masculine broken plural)",
+            "ur": "طلبہ (مذکر جمع مکسر)"
+          },
+          {
+            "arabic": "طَالِبَاتٌ",
+            "en": "female students",
+            "ur": "طالبات"
+          },
+          {
+            "arabic": "طَالِبٌ",
+            "en": "a male student",
+            "ur": "ایک طالب علم"
+          },
+          {
+            "arabic": "طَالِبَةٌ",
+            "en": "a female student",
+            "ur": "ایک طالبہ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch09-test-q05",
+        "topic": {
+          "en": "Masculine or feminine",
+          "ur": "مذکر یا مؤنث"
+        },
+        "prompt": {
+          "en": "What does مُؤْمِنَاتٌ mean?",
+          "ur": "مُؤْمِنَاتٌ کا کیا مطلب ہے؟"
+        },
+        "arabic": "مُؤْمِنَاتٌ",
+        "options": [
+          {
+            "en": "believers / believing men",
+            "ur": "مومن مرد / مومنین"
+          },
+          {
+            "en": "believing women",
+            "ur": "مومن عورتیں"
+          },
+          {
+            "en": "one believing woman",
+            "ur": "ایک مومن عورت"
+          },
+          {
+            "en": "they believe",
+            "ur": "وہ ایمان رکھتے ہیں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch09-test-q06",
+        "topic": {
+          "en": "Book / books",
+          "ur": "کتاب / کتابیں"
+        },
+        "prompt": {
+          "en": "Which word is the plural of كِتَابٌ?",
+          "ur": "كِتَابٌ کی جمع کون سا لفظ ہے؟"
+        },
+        "arabic": "كِتَابٌ",
+        "options": [
+          {
+            "arabic": "كُتُبٌ",
+            "en": "books",
+            "ur": "کتابیں"
+          },
+          {
+            "arabic": "بُيُوتٌ",
+            "en": "houses",
+            "ur": "گھر (جمع)"
+          },
+          {
+            "arabic": "كِتَابٌ",
+            "en": "a book",
+            "ur": "ایک کتاب"
+          },
+          {
+            "arabic": "مَسَاجِدُ",
+            "en": "masjids",
+            "ur": "مساجد"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch09-test-q07",
+        "topic": {
+          "en": "House / houses",
+          "ur": "گھر / گھر (جمع)"
+        },
+        "prompt": {
+          "en": "What does بُيُوتٌ mean?",
+          "ur": "بُيُوتٌ کا کیا مطلب ہے؟"
+        },
+        "arabic": "بُيُوتٌ",
+        "options": [
+          {
+            "en": "a house",
+            "ur": "ایک گھر"
+          },
+          {
+            "en": "masjids",
+            "ur": "مساجد"
+          },
+          {
+            "en": "houses",
+            "ur": "گھر (جمع)"
+          },
+          {
+            "en": "books",
+            "ur": "کتابیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch09-test-q08",
+        "topic": {
+          "en": "Sound or broken",
+          "ur": "سالم یا مکسر"
+        },
+        "prompt": {
+          "en": "Which word is a broken plural, changed on the inside rather than given a regular ending?",
+          "ur": "کون سا لفظ جمع مکسر ہے، یعنی باقاعدہ علامت کے بجائے اندر سے بدلا ہوا؟"
+        },
+        "options": [
+          {
+            "arabic": "مُسْلِمُونَ",
+            "en": "Muslims",
+            "ur": "مسلمان"
+          },
+          {
+            "arabic": "طَالِبَاتٌ",
+            "en": "female students",
+            "ur": "طالبات"
+          },
+          {
+            "arabic": "مُؤْمِنَاتٌ",
+            "en": "believing women",
+            "ur": "مومن عورتیں"
+          },
+          {
+            "arabic": "طُلَّابٌ",
+            "en": "students",
+            "ur": "طلبہ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch09-test-q09",
+        "topic": {
+          "en": "Pointing to a group",
+          "ur": "جماعت کی طرف اشارہ"
+        },
+        "prompt": {
+          "en": "Which word points to a nearby group of people?",
+          "ur": "کون سا لفظ قریب کی انسانی جماعت کی طرف اشارہ کرتا ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "هٰذَا",
+            "en": "this (masculine)",
+            "ur": "یہ (مذکر)"
+          },
+          {
+            "arabic": "هٰؤُلَاءِ",
+            "en": "these (people)",
+            "ur": "یہ لوگ"
+          },
+          {
+            "arabic": "هٰذِهِ",
+            "en": "this (feminine)",
+            "ur": "یہ (مؤنث)"
+          },
+          {
+            "arabic": "مَنْ",
+            "en": "who?",
+            "ur": "کون؟"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch09-test-q10",
+        "topic": {
+          "en": "These are Muslims",
+          "ur": "یہ مسلمان ہیں"
+        },
+        "prompt": {
+          "en": "What does هٰؤُلَاءِ مُسْلِمُونَ mean?",
+          "ur": "هٰؤُلَاءِ مُسْلِمُونَ کا کیا مطلب ہے؟"
+        },
+        "arabic": "هٰؤُلَاءِ مُسْلِمُونَ",
+        "options": [
+          {
+            "en": "This is a Muslim man.",
+            "ur": "یہ ایک مسلمان (مرد) ہے۔"
+          },
+          {
+            "en": "These are Muslims.",
+            "ur": "یہ مسلمان ہیں۔"
+          },
+          {
+            "en": "Who are these people?",
+            "ur": "یہ کون لوگ ہیں؟"
+          },
+          {
+            "en": "These are female students.",
+            "ur": "یہ طالبات ہیں۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch09-test-q11",
+        "topic": {
+          "en": "These are female students",
+          "ur": "یہ طالبات ہیں"
+        },
+        "prompt": {
+          "en": "Which sentence means 'These are female students'?",
+          "ur": "کون سا جملہ 'یہ طالبات ہیں' کا معنی دیتا ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "هٰذِهِ طَالِبَةٌ",
+            "en": "This is a female student.",
+            "ur": "یہ ایک طالبہ ہے۔"
+          },
+          {
+            "arabic": "هٰؤُلَاءِ طُلَّابٌ",
+            "en": "These are students.",
+            "ur": "یہ طلبہ ہیں۔"
+          },
+          {
+            "arabic": "هٰؤُلَاءِ طَالِبَاتٌ",
+            "en": "These are female students.",
+            "ur": "یہ طالبات ہیں۔"
+          },
+          {
+            "arabic": "مَنْ هٰؤُلَاءِ؟",
+            "en": "Who are these people?",
+            "ur": "یہ کون لوگ ہیں؟"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch09-test-q12",
+        "topic": {
+          "en": "Plural in the Quran",
+          "ur": "قرآن میں جمع"
+        },
+        "prompt": {
+          "en": "In إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ (Al-Hujurat 49:10), what kind of word is الْمُؤْمِنُونَ?",
+          "ur": "إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ (الحجرات 49:10) میں الْمُؤْمِنُونَ کس قسم کا لفظ ہے؟"
+        },
+        "arabic": "إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ",
+        "options": [
+          {
+            "en": "a sound masculine plural noun: the believers",
+            "ur": "جمع مذکر سالم اسم: مومن لوگ"
+          },
+          {
+            "en": "a verb: they believe",
+            "ur": "فعل: وہ ایمان رکھتے ہیں"
+          },
+          {
+            "en": "a sound feminine plural: the believing women",
+            "ur": "جمع مؤنث سالم: مومن عورتیں"
+          },
+          {
+            "en": "a singular noun: one believer",
+            "ur": "واحد اسم: ایک مومن"
+          }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Plurals in the Quran",
+      "ar": "الْجَمْعُ فِي الْقُرْآن",
+      "ur": "قرآن میں جمع"
+    },
+    "ayah": {
+      "surah": 9,
+      "ayah": 71,
+      "label": "At-Tawbah 9:71",
+      "ar": "وَالْمُؤْمِنُونَ وَالْمُؤْمِنَاتُ بَعْضُهُمْ أَوْلِيَاءُ بَعْضٍ",
+      "en": "The believing men and believing women are allies of one another.",
+      "ur": "مومن مرد اور مومن عورتیں ایک دوسرے کے مددگار ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009071.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "وَالْمُؤْمِنُونَ",
+      "وَالْمُؤْمِنَاتُ"
+    ],
+    "noor_explanation": {
+      "en": "Two plurals side by side, الْمُؤْمِنُونَ and الْمُؤْمِنَاتُ. Everything Chapter 9 tested lives in their endings, in the broken plurals that change inside, and in هٰؤُلَاءِ that points at a nearby group.",
+      "ur": "دو جمعیں ساتھ ساتھ، الْمُؤْمِنُونَ اور الْمُؤْمِنَاتُ۔ باب 9 نے جو کچھ پرکھا وہ سب ان کی علامتوں میں، اندر سے بدلنے والی جمع مکسر میں، اور قریب کی جماعت کی طرف اشارہ کرنے والے هٰؤُلَاءِ میں ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 9 complete: you can recognise the three plural families, tell a sound ending from a changed shape, and point to a nearby group with هٰؤُلَاءِ.",
+      "ur": "باب 9 مکمل: اب آپ جمع کے تین خاندان پہچان سکتے ہیں، سالم علامت اور بدلی ہوئی شکل میں فرق کر سکتے ہیں، اور هٰؤُلَاءِ سے قریب کی جماعت کی طرف اشارہ کر سکتے ہیں۔"
+    }
+  }
+}

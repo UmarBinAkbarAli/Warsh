@@ -345,8 +345,18 @@ Everything below this list is either done and verified, or one of these:
    direction (`MATCH_AYAH` options, hook `noor_intro`, reveal
    `noor_explanation`) must begin with English, and a `CONTRAST` card needs
    `concept.ar` or it renders blank.
-   Untracked proposals for Chapters 9 and 10 appeared in the tree 2026-09-18
-   (owner-authored, not yet reviewed). After every chapter promotion
+   **Chapter 9 (`Docs/proposals/chapter-09-content-proposal.md`, plural nouns
+   + `هٰؤُلَاءِ`) is built and staging-verified 2026-09-18, production pending
+   owner approval**: `ch09-l01..l04` rewritten in place, `ch09-l05` keeps its
+   ID but is now the review (the `VERB_PATTERN` past-tense table is dropped),
+   `ch09-test` (12 MC, 80 %) new; promote with `content:promote-chapter-nine --
+   --apply`, then `content:backfill-new-lessons -- --lesson-ids ch09-test
+   --apply`. Catalogue clips generated (56/56), `mumina` + `qawm` discover
+   images added. The direction rule above also covers `TRUE_FALSE`
+   `statement.en` and every `explanation_on_wrong.en` (found on the emulator
+   during this build); the live Chapter 8 fixtures still carry a few
+   `explanation_on_wrong` strings that open with Arabic. The Chapter 10
+   proposal is in the tree, owner-authored and not yet reviewed. After every chapter promotion
    that adds lesson ids, re-run `progress:backfill-skipped` for the owner's
    test account and `content:backfill-new-lessons` for everyone else.
    Fixed 2026-09-18 alongside the promotion: (a) `GET /api/lessons/{id}` no

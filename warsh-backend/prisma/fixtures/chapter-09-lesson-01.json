@@ -2,110 +2,253 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 9, Lesson 1 - sound masculine plural ending ونَ / جمع المذكر السالم. Quranic hook: يؤمنون in Al-Baqarah 2:3 as a recognition bridge for the ون pattern.",
+    "_note": "Chapter 9, display lesson 1 (ch09-l01) — sound masculine plural ـُونَ, nominative recognition form only: مُسْلِمٌ / مُسْلِمُونَ, مُؤْمِنٌ / مُؤْمِنُونَ, مُعَلِّمٌ / مُعَلِّمُونَ; human scope, mixed groups, noun مُؤْمِنُونَ versus verb يُؤْمِنُونَ. Quran hook: الْمُؤْمِنُونَ in Al-Hujurat 49:10 (replaces the verb hook يُؤْمِنُونَ). Rebuilt 2026-09-18 from Docs/proposals/chapter-09-content-proposal.md.",
+    "titleUr": "جمع مذکر سالم — ـُونَ",
     "chapter_order": 9,
     "lesson_order": 1,
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 3,
-      "label": "Al-Baqarah 2:3",
-      "ar": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ",
-      "en": "Those who believe in the unseen.",
-      "ur": "وہ لوگ جو غیب پر ایمان رکھتے ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002003.mp3"
+      "surah": 49,
+      "ayah": 10,
+      "label": "Al-Hujurat 49:10",
+      "ar": "إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ",
+      "en": "The believers are but brothers.",
+      "ur": "مومن تو آپس میں بھائی بھائی ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049010.mp3"
     },
     "noor_intro": {
-      "en": "Listen for the ending in يُؤْمِنُونَ. That ون sound often points your ear toward a group of believing men, or a mixed group. Today we use the same clue to recognise masculine plural nouns.",
-      "ur": "يُؤْمِنُونَ کے آخر کی ون آواز سنیں۔ یہ آواز اکثر مردوں یا ملے جلے گروہ کی طرف اشارہ دیتی ہے۔ آج ہم اسی اشارے سے مذکر جمع اسم پہچانیں گے۔"
+      "en": "In الْمُؤْمِنُونَ, one word names a whole group: the believers. Its ending, ـُونَ, is the first plural pattern of this chapter. Today you learn to see the singular inside it.",
+      "ur": "الْمُؤْمِنُونَ میں ایک لفظ پوری جماعت کا نام لیتا ہے: مومن لوگ۔ اس کا آخری حصہ ـُونَ اس باب کا پہلا جمع کا انداز ہے۔ آج آپ اس کے اندر واحد کو دیکھنا سیکھیں گے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "Sound masculine plural",
-        "ar": "جَمْعُ الْمُذَكَّرِ السَّالِم",
-        "ur": "جمع مذکر سالم"
+        "en": "One person and a group",
+        "ar": "مُسْلِمٌ / مُسْلِمُونَ",
+        "ur": "ایک شخص اور ایک جماعت"
       },
       "explanation": {
-        "en": "Arabic has a regular plural for masculine people. Add ونَ to the end, and the main word stays whole.\n\nمُسْلِمٌ - one Muslim man\nمُسْلِمُونَ - Muslim men / Muslims\nمُؤْمِنٌ - one believing man\nمُؤْمِنُونَ - believing men / believers",
-        "ur": "عربی میں مذکر انسانوں کے لیے ایک باقاعدہ جمع آتی ہے۔ آخر میں ونَ لگتا ہے، اور اصل لفظ ٹوٹتا نہیں۔\n\nمُسْلِمٌ - ایک مسلمان مرد\nمُسْلِمُونَ - مسلمان مرد / مسلمان\nمُؤْمِنٌ - ایک مؤمن مرد\nمُؤْمِنُونَ - مؤمن مرد / مؤمنین"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "مُسْلِمٌ",
-        "ar_plain": "مسلم",
-        "translit": "muslimun",
-        "en": "one Muslim man",
-        "ur": "ایک مسلمان مرد"
+        "en": "مُسْلِمٌ = one Muslim man. مُسْلِمُونَ = Muslim men, or Muslims as a group. The word grew an ending; the person became a group.",
+        "ur": "مُسْلِمٌ = ایک مسلمان (مرد)۔ مُسْلِمُونَ = مسلمان مرد، یا مسلمانوں کی جماعت۔ لفظ کے آخر میں اضافہ ہوا اور ایک شخص جماعت بن گیا۔"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/muslimun-singular.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "مُسْلِمُونَ",
-        "ar_plain": "مسلمون",
-        "translit": "muslimoona",
-        "en": "Muslim men / Muslims",
-        "ur": "مسلمان مرد / مسلمان"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/muslimoona.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "مُؤْمِنٌ",
-        "ar_plain": "مؤمن",
-        "translit": "mu'minun",
-        "en": "one believing man",
-        "ur": "ایک مؤمن مرد"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/muminun-singular.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "مُؤْمِنُونَ",
-        "ar_plain": "مؤمنون",
-        "translit": "mu'minoona",
-        "en": "believing men / believers",
-        "ur": "مؤمن مرد / مؤمنین"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/muminoona.mp3"
+      "examples": [
+        {
+          "ar": "مُسْلِمٌ",
+          "ar_plain": "مسلم",
+          "translit": "muslimun",
+          "en": "a Muslim man",
+          "ur": "ایک مسلمان (مرد)"
+        },
+        {
+          "ar": "مُسْلِمُونَ",
+          "ar_plain": "مسلمون",
+          "translit": "muslimūna",
+          "en": "Muslims / Muslim men",
+          "ur": "مسلمان (مرد یا ملی جلی جماعت)"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Why is it called sound?",
+        "en": "The visible ending",
+        "ar": "جَمْعُ الْمُذَكَّرِ السَّالِم",
+        "ur": "نظر آنے والی علامت"
+      },
+      "explanation": {
+        "en": "The ending ـُونَ is the sound masculine plural ending. In this lesson you recognise this one form: ـُونَ.",
+        "ur": "آخری حصہ ـُونَ جمع مذکر سالم کی علامت ہے۔ اس سبق میں آپ صرف یہی ایک صورت پہچانیں گے: ـُونَ۔"
+      },
+      "examples": [
+        {
+          "ar": "مُسْلِمُونَ",
+          "ar_plain": "مسلمون",
+          "translit": "muslimūna",
+          "en": "Muslims / Muslim men",
+          "ur": "مسلمان (مرد یا ملی جلی جماعت)"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Believer and believers",
+        "ar": "مُؤْمِنٌ / مُؤْمِنُونَ",
+        "ur": "مومن اور مومنین"
+      },
+      "explanation": {
+        "en": "مُؤْمِنٌ = a believer. مُؤْمِنُونَ = believers. The same ending, the same change from one to many.",
+        "ur": "مُؤْمِنٌ = ایک مومن۔ مُؤْمِنُونَ = مومنین۔ وہی علامت، ایک سے کئی کی وہی تبدیلی۔"
+      },
+      "examples": [
+        {
+          "ar": "مُؤْمِنٌ",
+          "ar_plain": "مؤمن",
+          "translit": "muʾminun",
+          "en": "a believer (man)",
+          "ur": "ایک مومن (مرد)"
+        },
+        {
+          "ar": "مُؤْمِنُونَ",
+          "ar_plain": "مؤمنون",
+          "translit": "muʾminūna",
+          "en": "believers / believing men",
+          "ur": "مومن مرد / مومنین"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Teacher and teachers",
+        "ar": "مُعَلِّمٌ / مُعَلِّمُونَ",
+        "ur": "استاد اور اساتذہ"
+      },
+      "explanation": {
+        "en": "مُعَلِّمٌ = a teacher. مُعَلِّمُونَ = teachers. Read the base word first, then the ending.",
+        "ur": "مُعَلِّمٌ = ایک استاد۔ مُعَلِّمُونَ = اساتذہ۔ پہلے اصل لفظ پڑھیں، پھر علامت۔"
+      },
+      "examples": [
+        {
+          "ar": "مُعَلِّمٌ",
+          "ar_plain": "معلم",
+          "translit": "muʿallimun",
+          "en": "a teacher (man)",
+          "ur": "ایک استاد (مرد)"
+        },
+        {
+          "ar": "مُعَلِّمُونَ",
+          "ar_plain": "معلمون",
+          "translit": "muʿallimūna",
+          "en": "teachers (men)",
+          "ur": "اساتذہ (مرد)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Why it is called sound",
         "ar": "لِمَاذَا سَالِم؟",
-        "ur": "اسے سالم کیوں کہتے ہیں؟"
+        "ur": "اسے 'سالم' کیوں کہتے ہیں؟"
       },
       "explanation": {
-        "en": "سَالِم means safe or sound. In مُسْلِمُونَ, the word مُسْلِم stays recognisable. Only the ending changes.\n\nLater you will meet broken plurals like كِتَابٌ -> كُتُبٌ, where the inside shape changes.",
-        "ur": "سَالِم کا مطلب ہے محفوظ یا صحیح سالم۔ مُسْلِمُونَ میں لفظ مُسْلِم پہچانا جا سکتا ہے؛ صرف آخر بدلتا ہے۔\n\nآگے آپ جمع مکسر دیکھیں گے، جیسے كِتَابٌ -> كُتُبٌ، جس میں اندرونی شکل بدل جاتی ہے۔"
-      }
+        "en": "It is called sound (سَالِم) because the main word stays whole and recognisable: مُسْلِم is still inside مُسْلِمُونَ. Only a regular ending is added.",
+        "ur": "اسے سالم اس لیے کہتے ہیں کہ اصل لفظ سلامت اور پہچانا جانے والا رہتا ہے: مُسْلِم اب بھی مُسْلِمُونَ کے اندر موجود ہے۔ صرف ایک باقاعدہ علامت جڑتی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "مُسْلِمٌ",
+          "ar_plain": "مسلم",
+          "translit": "muslimun",
+          "en": "a Muslim man",
+          "ur": "ایک مسلمان (مرد)"
+        },
+        {
+          "ar": "مُسْلِمُونَ",
+          "ar_plain": "مسلمون",
+          "translit": "muslimūna",
+          "en": "Muslims / Muslim men",
+          "ur": "مسلمان (مرد یا ملی جلی جماعت)"
+        }
+      ]
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "هٰؤُلَاءِ مُسْلِمُونَ",
-        "ar_plain": "هؤلاء مسلمون",
-        "translit": "ha'ula'i muslimoona",
-        "en": "These are Muslims.",
-        "ur": "یہ مسلمان ہیں۔"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Human scope",
+        "ar": "لِلْعَاقِلِ الْمُذَكَّر",
+        "ur": "انسانوں کے لیے"
       },
       "explanation": {
-        "en": "هٰؤُلَاءِ points to a nearby group. مُسْلِمُونَ tells you the group is masculine or mixed.",
-        "ur": "هٰؤُلَاءِ قریب کے گروہ کی طرف اشارہ ہے۔ مُسْلِمُونَ بتاتا ہے کہ گروہ مذکر یا ملا جلا ہے۔"
-      }
+        "en": "This pattern commonly applies to masculine human nouns and adjectives: Muslims, believers, teachers. It is not the plural of every masculine word; a book, for example, becomes plural another way, which you meet in Lesson 3.",
+        "ur": "یہ انداز عام طور پر مذکر انسانی اسماء اور صفات پر آتا ہے: مسلمان، مومن، استاد۔ یہ ہر مذکر لفظ کی جمع نہیں؛ مثلاً کتاب کی جمع دوسرے طریقے سے بنتی ہے، جو آپ سبق 3 میں دیکھیں گے۔"
+      },
+      "examples": [
+        {
+          "ar": "مُعَلِّمُونَ",
+          "ar_plain": "معلمون",
+          "translit": "muʿallimūna",
+          "en": "teachers (men)",
+          "ur": "اساتذہ (مرد)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Mixed groups",
+        "ar": "جَمَاعَةٌ مِنْ رِجَالٍ وَنِسَاء",
+        "ur": "ملی جلی جماعت"
+      },
+      "explanation": {
+        "en": "Arabic may use the masculine plural form for a group containing men and women. So مُسْلِمُونَ can mean Muslim men, or Muslims in general.",
+        "ur": "عربی میں مردوں اور عورتوں پر مشتمل جماعت کے لیے بھی مذکر جمع کی صورت آ سکتی ہے۔ اس لیے مُسْلِمُونَ کا مطلب مسلمان مرد بھی ہو سکتا ہے اور عام مسلمان بھی۔"
+      },
+      "examples": [
+        {
+          "ar": "مُسْلِمُونَ",
+          "ar_plain": "مسلمون",
+          "translit": "muslimūna",
+          "en": "Muslims / Muslim men",
+          "ur": "مسلمان (مرد یا ملی جلی جماعت)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Nominative form only",
+        "ar": "صِيغَةُ الرَّفْعِ فَقَطْ",
+        "ur": "صرف ایک صورت"
+      },
+      "explanation": {
+        "en": "In this chapter you recognise ـُونَ. The same words appear in the Quran with other endings too; those come in later chapters.",
+        "ur": "اس باب میں آپ ـُونَ پہچانتے ہیں۔ یہی الفاظ قرآن میں دوسری علامتوں کے ساتھ بھی آتے ہیں؛ وہ بعد کے ابواب میں آئیں گی۔"
+      },
+      "examples": [
+        {
+          "ar": "مُؤْمِنُونَ",
+          "ar_plain": "مؤمنون",
+          "translit": "muʾminūna",
+          "en": "believers / believing men",
+          "ur": "مومن مرد / مومنین"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "الْمُؤْمِنُونَ",
+        "ar_plain": "المؤمنون",
+        "translit": "al-muʾminūna",
+        "en": "the believers",
+        "ur": "مومن لوگ / ایمان والے"
+      },
+      "explanation": {
+        "en": "Find the singular base مُؤْمِن inside الْمُؤْمِنُونَ, then the ending ـُونَ. The word is a plural noun: the believers.",
+        "ur": "الْمُؤْمِنُونَ کے اندر واحد اصل مُؤْمِن تلاش کریں، پھر علامت ـُونَ۔ یہ لفظ جمع اسم ہے: مومن لوگ۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049010.mp3",
+      "examples": [
+        {
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-muʾminūna",
+          "en": "the believers",
+          "ur": "مومن لوگ / ایمان والے"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -115,149 +258,192 @@
       "prompt": {
         "ar": "مُسْلِمُونَ",
         "ar_plain": "مسلمون",
-        "translit": "muslimoona",
-        "en": "Muslim men / Muslims",
-        "ur": "مسلمان مرد / مسلمان"
+        "translit": "muslimūna",
+        "en": "Muslims / Muslim men",
+        "ur": "مسلمان (مرد یا ملی جلی جماعت)"
       },
       "options": [
         {
-          "en": "Muslim men / Muslims",
+          "en": "Muslims / Muslim men",
           "ur": "مسلمان مرد / مسلمان"
         },
         {
           "en": "one Muslim man",
-          "ur": "ایک مسلمان مرد"
+          "ur": "ایک مسلمان (مرد)"
         },
         {
-          "en": "female students",
-          "ur": "طالبات"
+          "en": "Muslim women",
+          "ur": "مسلمان عورتیں"
         },
         {
-          "en": "books",
-          "ur": "کتابیں"
+          "en": "believers",
+          "ur": "مومنین"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "The ونَ ending makes مُسْلِمُونَ plural.",
-        "ur": "ونَ کا آخر مُسْلِمُونَ کو جمع بناتا ہے۔"
-      }
+        "en": "The ending ـُونَ on مُسْلِم makes it plural: Muslims.",
+        "ur": "مُسْلِم پر علامت ـُونَ اسے جمع بناتی ہے: مسلمان۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch09-l01-ex02",
+      "prompt": {
+        "ar": "مُؤْمِنُونَ",
+        "ar_plain": "مؤمنون",
+        "translit": "muʾminūna",
+        "en": "believers / believing men",
+        "ur": "مومن مرد / مومنین"
+      },
+      "options": [
+        {
+          "en": "believers / believing men",
+          "ur": "مومن مرد / مومنین"
+        },
+        {
+          "en": "one believer",
+          "ur": "ایک مومن"
+        },
+        {
+          "en": "they believe",
+          "ur": "وہ ایمان رکھتے ہیں"
+        },
+        {
+          "en": "believing women",
+          "ur": "مومن عورتیں"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "One believer is مُؤْمِنٌ; add ـُونَ and مُؤْمِنُونَ is believers.",
+        "ur": "مُؤْمِنٌ ایک مومن ہے؛ مُؤْمِنُونَ میں ـُونَ جڑتا ہے: مومنین۔"
+      },
+      "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch09-l01-ex02",
+      "id": "ch09-l01-ex03",
       "statement": {
-        "en": "مُؤْمِنُونَ is a sound masculine plural because the word keeps its shape and takes ونَ.",
-        "ur": "مُؤْمِنُونَ جمع مذکر سالم ہے کیونکہ لفظ کی اصل شکل باقی رہتی ہے اور آخر میں ونَ آتا ہے۔",
+        "en": "The word مُؤْمِنُونَ keeps the base مُؤْمِن recognisable and adds the ending ـُونَ.",
+        "ur": "مُؤْمِنُونَ میں اصل لفظ مُؤْمِن پہچانا جاتا ہے اور اس پر علامت ـُونَ جڑتی ہے۔",
         "ar_example": {
           "ar": "مُؤْمِنُونَ",
           "ar_plain": "مؤمنون",
-          "translit": "mu'minoona",
-          "en": "believing men / believers",
-          "ur": "مؤمن مرد / مؤمنین"
+          "translit": "muʾminūna",
+          "en": "believers / believing men",
+          "ur": "مومن مرد / مومنین"
         }
       },
       "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True: that is exactly why it is called a sound plural.",
+        "ur": "درست: اسی لیے اسے سالم جمع کہتے ہیں۔"
+      },
       "xp_value": 1
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch09-l01-ex03",
+      "id": "ch09-l01-ex04",
       "mode": "TAP",
-      "sentence_ar": "هٰؤُلَاءِ ___",
+      "sentence_ar": "مُسْلِمٌ ← ___",
       "hint": {
-        "en": "These are Muslims.",
-        "ur": "یہ مسلمان ہیں۔"
+        "en": "Turn one Muslim man into Muslims.",
+        "ur": "ایک مسلمان (مرد) کو مسلمان (جمع) بنائیں۔"
       },
       "options": [
         {
           "ar": "مُسْلِمُونَ",
           "ar_plain": "مسلمون",
-          "translit": "muslimoona",
-          "en": "Muslim men / Muslims",
-          "ur": "مسلمان مرد / مسلمان"
+          "translit": "muslimūna",
+          "en": "Muslims / Muslim men",
+          "ur": "مسلمان (مرد یا ملی جلی جماعت)"
         },
         {
           "ar": "مُسْلِمٌ",
           "ar_plain": "مسلم",
           "translit": "muslimun",
-          "en": "one Muslim man",
-          "ur": "ایک مسلمان مرد"
+          "en": "a Muslim man",
+          "ur": "ایک مسلمان (مرد)"
         },
         {
-          "ar": "طَالِبَةٌ",
-          "ar_plain": "طالبة",
-          "translit": "talibatun",
-          "en": "one female student",
-          "ur": "ایک طالبہ"
+          "ar": "مُؤْمِنُونَ",
+          "ar_plain": "مؤمنون",
+          "translit": "muʾminūna",
+          "en": "believers / believing men",
+          "ur": "مومن مرد / مومنین"
         },
         {
-          "ar": "كُتُبٌ",
-          "ar_plain": "كتب",
-          "translit": "kutubun",
-          "en": "books",
-          "ur": "کتابیں"
+          "ar": "مُعَلِّمُونَ",
+          "ar_plain": "معلمون",
+          "translit": "muʿallimūna",
+          "en": "teachers (men)",
+          "ur": "اساتذہ (مرد)"
         }
       ],
       "correct_answer": {
         "ar": "مُسْلِمُونَ",
         "ar_plain": "مسلمون",
-        "translit": "muslimoona",
-        "en": "Muslim men / Muslims",
-        "ur": "مسلمان مرد / مسلمان"
+        "translit": "muslimūna",
+        "en": "Muslims / Muslim men",
+        "ur": "مسلمان (مرد یا ملی جلی جماعت)"
+      },
+      "explanation_on_wrong": {
+        "en": "Keep the base مُسْلِم and add ـُونَ: مُسْلِمُونَ.",
+        "ur": "اصل مُسْلِم رکھیں اور ـُونَ جوڑیں: مُسْلِمُونَ۔"
       },
       "xp_value": 1
     },
     {
       "type": "MATCHING",
-      "id": "ch09-l01-ex04",
+      "id": "ch09-l01-ex05",
       "left_column": [
         {
           "ar": "مُسْلِمٌ",
           "ar_plain": "مسلم",
           "translit": "muslimun",
-          "en": "one Muslim man",
-          "ur": "ایک مسلمان مرد"
+          "en": "a Muslim man",
+          "ur": "ایک مسلمان (مرد)"
         },
         {
           "ar": "مُسْلِمُونَ",
           "ar_plain": "مسلمون",
-          "translit": "muslimoona",
-          "en": "Muslim men / Muslims",
-          "ur": "مسلمان مرد / مسلمان"
-        },
-        {
-          "ar": "مُؤْمِنٌ",
-          "ar_plain": "مؤمن",
-          "translit": "mu'minun",
-          "en": "one believing man",
-          "ur": "ایک مؤمن مرد"
+          "translit": "muslimūna",
+          "en": "Muslims / Muslim men",
+          "ur": "مسلمان (مرد یا ملی جلی جماعت)"
         },
         {
           "ar": "مُؤْمِنُونَ",
           "ar_plain": "مؤمنون",
-          "translit": "mu'minoona",
-          "en": "believing men / believers",
-          "ur": "مؤمن مرد / مؤمنین"
+          "translit": "muʾminūna",
+          "en": "believers / believing men",
+          "ur": "مومن مرد / مومنین"
+        },
+        {
+          "ar": "مُعَلِّمُونَ",
+          "ar_plain": "معلمون",
+          "translit": "muʿallimūna",
+          "en": "teachers (men)",
+          "ur": "اساتذہ (مرد)"
         }
       ],
       "right_column": [
         {
-          "en": "one Muslim man",
-          "ur": "ایک مسلمان مرد"
+          "en": "a Muslim man",
+          "ur": "ایک مسلمان (مرد)"
         },
         {
-          "en": "Muslim men / Muslims",
-          "ur": "مسلمان مرد / مسلمان"
+          "en": "Muslims / Muslim men",
+          "ur": "مسلمان (مرد یا ملی جلی جماعت)"
         },
         {
-          "en": "one believing man",
-          "ur": "ایک مؤمن مرد"
+          "en": "believers / believing men",
+          "ur": "مومن مرد / مومنین"
         },
         {
-          "en": "believing men / believers",
-          "ur": "مؤمن مرد / مؤمنین"
+          "en": "teachers (men)",
+          "ur": "اساتذہ (مرد)"
         }
       ],
       "correct_pairs": [
@@ -281,137 +467,89 @@
       "xp_value": 1
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch09-l01-ex05",
-      "target_translation": {
-        "en": "These are believers.",
-        "ur": "یہ مؤمن ہیں۔"
-      },
-      "tiles": [
-        {
-          "ar": "هٰؤُلَاءِ",
-          "ar_plain": "هؤلاء",
-          "translit": "ha'ula'i",
-          "en": "these",
-          "ur": "یہ"
-        },
-        {
+      "type": "TRUE_FALSE",
+      "id": "ch09-l01-ex06",
+      "statement": {
+        "en": "The word مُؤْمِنُونَ is a verb meaning 'they believe'.",
+        "ur": "مُؤْمِنُونَ ایک فعل ہے جس کا مطلب 'وہ ایمان رکھتے ہیں' ہے۔",
+        "ar_example": {
           "ar": "مُؤْمِنُونَ",
           "ar_plain": "مؤمنون",
-          "translit": "mu'minoona",
-          "en": "believers",
-          "ur": "مؤمنین"
-        },
-        {
-          "ar": "مُسْلِمٌ",
-          "ar_plain": "مسلم",
-          "translit": "muslimun",
-          "en": "one Muslim man",
-          "ur": "ایک مسلمان مرد"
+          "translit": "muʾminūna",
+          "en": "believers / believing men",
+          "ur": "مومن مرد / مومنین"
         }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch09-l01-ex06",
-      "sentence_ar": "هٰؤُلَاءِ مُسْلِمُونَ",
-      "words": [
-        {
-          "ar": "هٰؤُلَاءِ",
-          "ar_plain": "هؤلاء",
-          "translit": "ha'ula'i",
-          "en": "these",
-          "ur": "یہ"
-        },
-        {
-          "ar": "مُسْلِمُونَ",
-          "ar_plain": "مسلمون",
-          "translit": "muslimoona",
-          "en": "Muslim men / Muslims",
-          "ur": "مسلمان مرد / مسلمان"
-        }
-      ],
-      "available_roles": [
-        "DEMONSTRATIVE",
-        "PREDICATE",
-        "SUBJECT",
-        "ADJECTIVE"
-      ],
-      "correct_roles": [
-        "DEMONSTRATIVE",
-        "PREDICATE"
-      ],
-      "xp_value": 1,
+      },
+      "correct_answer": false,
       "explanation_on_wrong": {
-        "en": "هٰؤُلَاءِ points to the group. مُسْلِمُونَ completes the meaning: these are Muslims.",
-        "ur": "هٰؤُلَاءِ گروہ کی طرف اشارہ ہے۔ مُسْلِمُونَ معنی مکمل کرتا ہے: یہ مسلمان ہیں۔"
-      }
+        "en": "False: مُؤْمِنُونَ is a plural noun, 'believers'. The verb 'they believe' is يُؤْمِنُونَ, which begins with يُ.",
+        "ur": "غلط: مُؤْمِنُونَ جمع اسم ہے، 'مومنین'۔ فعل 'وہ ایمان رکھتے ہیں' يُؤْمِنُونَ ہے، جو يُ سے شروع ہوتا ہے۔"
+      },
+      "xp_value": 1
     },
     {
       "type": "MATCH_AYAH",
       "id": "ch09-l01-ex07",
       "ayah_fragment": {
-        "ar": "يُؤْمِنُونَ بِالْغَيْبِ",
-        "surah_ref": "Al-Baqarah 2:3"
+        "ar": "إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ",
+        "surah_ref": "Al-Hujurat 49:10"
       },
       "options": [
         {
-          "en": "They believe in the unseen.",
-          "ur": "وہ غیب پر ایمان رکھتے ہیں۔"
+          "en": "'the believers' — الْمُؤْمِنُونَ is the sound masculine plural of مُؤْمِنٌ",
+          "ur": "'مومن لوگ' — الْمُؤْمِنُونَ مُؤْمِنٌ کی جمع مذکر سالم ہے"
         },
         {
-          "en": "These are Muslims.",
-          "ur": "یہ مسلمان ہیں۔"
+          "en": "'they believe' — الْمُؤْمِنُونَ is a verb",
+          "ur": "'وہ ایمان رکھتے ہیں' — الْمُؤْمِنُونَ ایک فعل ہے"
         },
         {
-          "en": "One believing man.",
-          "ur": "ایک مؤمن مرد۔"
+          "en": "'the believing women' — the ending is ـَات",
+          "ur": "'مومن عورتیں' — علامت ـَات ہے"
         },
         {
-          "en": "The books are new.",
-          "ur": "کتابیں نئی ہیں۔"
+          "en": "'one believer' — the word is singular",
+          "ur": "'ایک مومن' — لفظ واحد ہے"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "يُؤْمِنُونَ is a verb: they believe. Today it helps your ear recognise the same ون ending used in masculine plural forms.",
-        "ur": "يُؤْمِنُونَ فعل ہے: وہ ایمان رکھتے ہیں۔ آج یہ آپ کے کان کو وہی ون پہچاننے میں مدد دیتا ہے جو مذکر جمع صورتوں میں آتا ہے۔"
-      }
+        "en": "The word الْمُؤْمِنُونَ ends in ـُونَ: a plural noun, the believers. The verb would be يُؤْمِنُونَ.",
+        "ur": "الْمُؤْمِنُونَ کے آخر میں ـُونَ ہے: جمع اسم، مومن لوگ۔ فعل يُؤْمِنُونَ ہوتا۔"
+      },
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Sound masculine plural — ونَ",
-      "ar": "جَمْعُ الْمُذَكَّرِ السَّالِم",
-      "ur": "جمع مذکر سالم — ونَ"
+      "en": "The believers — ـُونَ",
+      "ar": "جَمْعُ الْمُذَكَّرِ السَّالِم",
+      "ur": "مومن لوگ — ـُونَ"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 3,
-      "label": "Al-Baqarah 2:3",
-      "ar": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ",
-      "en": "Those who believe in the unseen.",
-      "ur": "وہ لوگ جو غیب پر ایمان رکھتے ہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002003.mp3"
+      "surah": 49,
+      "ayah": 10,
+      "label": "Al-Hujurat 49:10",
+      "ar": "إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ",
+      "en": "The believers are but brothers.",
+      "ur": "مومن تو آپس میں بھائی بھائی ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049010.mp3"
     },
     "highlighted_word_indices": [
       1
     ],
+    "highlighted_words": [
+      "الْمُؤْمِنُونَ"
+    ],
     "noor_explanation": {
-      "en": "يُؤْمِنُونَ is a verb, not a noun, but the ending ونَ is a powerful recognition clue. When you see nouns like مُسْلِمُونَ and مُؤْمِنُونَ, that ending often marks a sound masculine plural: a group of men, or a mixed group.",
-      "ur": "يُؤْمِنُونَ فعل ہے، اسم نہیں، مگر آخر کی ونَ بہت اہم پہچان ہے۔ جب آپ مُسْلِمُونَ اور مُؤْمِنُونَ جیسے اسم دیکھیں تو یہی آخر عموماً جمع مذکر سالم بتاتا ہے: مردوں کا یا ملا جلا گروہ۔"
+      "en": "The ayah names the believers with one plural noun, الْمُؤْمِنُونَ: the base مُؤْمِن plus ـُونَ. Whenever you meet this ending on a human noun in the Quran, look for the singular inside it.",
+      "ur": "آیت مومنوں کا نام ایک جمع اسم سے لیتی ہے، الْمُؤْمِنُونَ: اصل مُؤْمِن اور ـُونَ۔ جب بھی قرآن میں کسی انسانی اسم پر یہ علامت ملے، اس کے اندر واحد تلاش کریں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now spot a major Quranic pattern: مُسْلِمُونَ, مُؤْمِنُونَ, and the familiar sound in يُؤْمِنُونَ. One ending can open many verses.",
-      "ur": "آپ اب قرآن کا ایک بڑا نمونہ پہچان سکتے ہیں: مُسْلِمُونَ، مُؤْمِنُونَ، اور يُؤْمِنُونَ کی مانوس آواز۔ ایک آخر بہت سی آیات کھول دیتا ہے۔"
+      "en": "You can now recognise a common Quranic human-plural pattern through ـُونَ, while knowing that it is not the plural rule for every masculine noun.",
+      "ur": "اب آپ ـُونَ کے ذریعے قرآن کا ایک عام انسانی جمع کا انداز پہچان سکتے ہیں، اور یہ بھی جانتے ہیں کہ یہ ہر مذکر اسم کی جمع کا قاعدہ نہیں۔"
     }
   }
 }

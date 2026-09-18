@@ -80,7 +80,8 @@ const ch09L01Content     = require("./fixtures/chapter-09-lesson-01.json");
 const ch09L02Content     = require("./fixtures/chapter-09-lesson-02.json");
 const ch09L03Content     = require("./fixtures/chapter-09-lesson-03.json");
 const ch09L04Content     = require("./fixtures/chapter-09-lesson-04.json");
-const ch09L05VerbContent = require("./fixtures/chapter-09-lesson-05-verb-pattern.json");
+const ch09L05Content     = require("./fixtures/chapter-09-lesson-05-review.json");      // ch09-l05, review (replaces the verb-pattern lesson)
+const ch09TestContent    = require("./fixtures/chapter-09-lesson-06-final-test.json"); // ch09-test, order 6
 const ch10L01Content     = require("./fixtures/chapter-10-lesson-01.json");
 const ch10L02Content     = require("./fixtures/chapter-10-lesson-02.json");
 const ch10L03Content     = require("./fixtures/chapter-10-lesson-03.json");
@@ -800,12 +801,14 @@ async function main() {
     { id: "ch08-l04", chapterId: ch8Id, order: 4, title: "My Mother — Feminine Integration",          titleAr: "أُمِّي — تَطْبِيقُ المُؤَنَّث",                       template: "STANDARD", xpReward: ch08L04Content._meta?.xp_reward ?? 10, content: ch08L04Content },
     { id: "ch08-l05", chapterId: ch8Id, order: 5, title: "Chapter 8 Review",                          titleAr: "مُرَاجَعَةُ الْفَصْلِ الثَّامِن",             template: "REVIEW",   xpReward: ch08L05Content._meta?.xp_reward ?? 20, content: ch08L05Content },
     { id: "ch08-test", chapterId: ch8Id, order: 6, title: "Chapter 8 Final Test",                     titleAr: "اخْتِبَارُ الْفَصْلِ الثَّامِنِ",            template: "REVIEW",   xpReward: ch08TestContent._meta?.xp_reward ?? 20, content: ch08TestContent },
-    // Chapter 9
-    { id: "ch09-l01", chapterId: ch9Id, order: 1, title: "Sound Masculine Plural — مُسْلِمُونَ",    titleAr: "جَمْعُ الْمُذَكَّرِ السَّالِم",          template: "STANDARD",     xpReward: ch09L01Content._meta?.xp_reward     ?? 10, content: ch09L01Content },
-    { id: "ch09-l02", chapterId: ch9Id, order: 2, title: "Sound Feminine Plural — مُؤْمِنَاتٌ",    titleAr: "جَمْعُ الْمُؤَنَّثِ السَّالِم",          template: "STANDARD",     xpReward: ch09L02Content._meta?.xp_reward     ?? 10, content: ch09L02Content },
-    { id: "ch09-l03", chapterId: ch9Id, order: 3, title: "Broken Plural — كُتُبٌ and بُيُوتٌ",     titleAr: "الْجَمْعُ الْمُكَسَّر",                  template: "STANDARD",     xpReward: ch09L03Content._meta?.xp_reward     ?? 10, content: ch09L03Content },
-    { id: "ch09-l04", chapterId: ch9Id, order: 4, title: "Plural Demonstrative — هٰؤُلَاءِ",        titleAr: "هٰؤُلَاءِ لِلْجَمَاعَة",                 template: "STANDARD",     xpReward: ch09L04Content._meta?.xp_reward     ?? 10, content: ch09L04Content },
-    { id: "ch09-l05", chapterId: ch9Id, order: 5, title: "Verb Pattern — Past Tense ذَهَبَ",        titleAr: "فِعْل مَاضٍ — نَمُوذَج الصَّرْف",        template: "VERB_PATTERN", xpReward: ch09L05VerbContent._meta?.xp_reward ?? 10, content: ch09L05VerbContent },
+    // Chapter 9 — Docs/proposals/chapter-09-content-proposal.md. Existing IDs kept
+    // in place (ch09-l05 is now the review, same ID); ch09-test is the only new row.
+    { id: "ch09-l01", chapterId: ch9Id, order: 1, title: "Sound Masculine Plural — ـُونَ",          titleAr: "جَمْعُ الْمُذَكَّرِ السَّالِم",          template: "STANDARD", xpReward: ch09L01Content._meta?.xp_reward  ?? 10, content: ch09L01Content },
+    { id: "ch09-l02", chapterId: ch9Id, order: 2, title: "Sound Feminine Plural — ـَات",           titleAr: "جَمْعُ الْمُؤَنَّثِ السَّالِم",          template: "STANDARD", xpReward: ch09L02Content._meta?.xp_reward  ?? 10, content: ch09L02Content },
+    { id: "ch09-l03", chapterId: ch9Id, order: 3, title: "Common Broken Plurals",                  titleAr: "الْجَمْعُ الْمُكَسَّر",                  template: "STANDARD", xpReward: ch09L03Content._meta?.xp_reward  ?? 10, content: ch09L03Content },
+    { id: "ch09-l04", chapterId: ch9Id, order: 4, title: "Nearby People — هٰؤُلَاءِ",              titleAr: "هٰؤُلَاءِ — لِلْجَمَاعَةِ الْقَرِيبَة",    template: "STANDARD", xpReward: ch09L04Content._meta?.xp_reward  ?? 10, content: ch09L04Content },
+    { id: "ch09-l05", chapterId: ch9Id, order: 5, title: "Chapter 9 Review",                       titleAr: "مُرَاجَعَةُ الْفَصْلِ التَّاسِع",           template: "REVIEW",   xpReward: ch09L05Content._meta?.xp_reward  ?? 20, content: ch09L05Content },
+    { id: "ch09-test", chapterId: ch9Id, order: 6, title: "Chapter 9 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ التَّاسِعِ",          template: "REVIEW",   xpReward: ch09TestContent._meta?.xp_reward ?? 20, content: ch09TestContent },
     // Chapter 10
     { id: "ch10-l01", chapterId: ch10Id, order: 1, title: "Plural Pronouns — هُمْ and هُنَّ",       titleAr: "هُمْ وَهُنَّ — ضَمِيرُ الْجَمَاعَة",    template: "STANDARD",     xpReward: ch10L01Content._meta?.xp_reward     ?? 10, content: ch10L01Content },
     { id: "ch10-l02", chapterId: ch10Id, order: 2, title: "We — نَحْنُ",                            titleAr: "نَحْنُ — ضَمِيرُ الْمُتَكَلِّمِ الجَمْع", template: "STANDARD",    xpReward: ch10L02Content._meta?.xp_reward     ?? 10, content: ch10L02Content },

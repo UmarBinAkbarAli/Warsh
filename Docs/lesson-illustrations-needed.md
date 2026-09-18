@@ -104,6 +104,24 @@ used.
 | 3 | `ch08-allati-connector-panels.png` | `ch08-l03` cards 4, 8 | الْبِنْتُ الَّتِي ذَهَبَتْ · الْمَدْرَسَةُ الَّتِي فِي الْقَرْيَةِ | Two panels: a girl visibly linked (path or thread) to a going-away scene; a school visibly linked to a village — "the one who / that …" without words. |
 | 4 | `ch08-mother-returning-home.png` | `ch08-l04` cards 6, 7 | رَجَعَتْ أُمِّي إِلَى الْبَيْتِ · أُمِّي الَّتِي رَجَعَتْ | A mother arriving back at a family house, supporting both "my mother returned home" and "my mother who returned"; no speech bubbles. |
 
+
+## Chapter 9 — open (4 scenes)
+
+Briefs from `proposals/chapter-09-content-proposal.md` §5 (one per lesson).
+Cards whose word has an approved asset already show one (`kitab`, `bayt`,
+`talib`, `masjid`, `hadha-v2`, and `mumina` + `qawm` — the last two copied
+from the dictionary set on 2026-09-18). The review reuses the Chapter 9
+assets, as the proposal asks. The `muslim` and `mu'min` dictionary badges
+(generated lettering) and the `mu'allim` one (reads as a shopkeeper) were not
+used.
+
+| # | Filename | Cards | Arabic on the card | Brief |
+|---|---|---|---|---|
+| 1 | `ch09-one-man-group.png` | `ch09-l01` cards 1, 3 · `ch09-l05` card 2 | مُسْلِمٌ / مُسْلِمُونَ · مُؤْمِنٌ / مُؤْمِنُونَ | One male learner beside a nearby group of male or mixed learners, so the only difference is one versus many; no lettering. |
+| 2 | `ch09-one-woman-group.png` | `ch09-l02` cards 2, 3 | طَالِبَةٌ / طَالِبَاتٌ · مُعَلِّمَةٌ / مُعَلِّمَاتٌ | One female learner beside a group of female learners/teachers; neutral clothing and setting, singular versus plural only; no labels. |
+| 3 | `ch09-one-many-four-panels.png` | `ch09-l03` cards 1, 7 | الْجَمْعُ الْمُكَسَّر · عَائِلَاتُ الْكَلِمَات | Four panels: one book / several books, one house / several houses, one student / several students, one masjid / several masjids; no words. |
+| 4 | `ch09-pointing-at-group.png` | `ch09-l04` cards 3, 4 | هٰؤُلَاءِ مُسْلِمُونَ · هٰؤُلَاءِ طَالِبَاتٌ | A speaker indicating a nearby group of male, female or mixed learners; the card supplies the demonstrative; no speech bubbles. |
+
 ## Delivered
 
 _Nothing yet._
