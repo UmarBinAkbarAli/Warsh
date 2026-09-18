@@ -3,7 +3,7 @@ import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
 import { getUserCourseState, PROGRESS_STATUS } from "../../../../lib/course";
 import { getUserSubscriptionState, requiresSubscription } from "../../../../lib/subscription";
-import { getChapterTestAssessment, isChapterTestContent, isChapterTestUnlocked } from "../../../../lib/chapterTests";
+import { getChapterTestAssessment, isChapterTestContent, isChapterTestUnlocked, stripChapterTestAnswers } from "../../../../lib/chapterTests";
 
 interface Props {
   params: { id: string };
@@ -20,7 +20,7 @@ export async function GET(request: Request, { params }: Props) {
     select: {
       id: true, order: true, title: true, titleUr: true, titleAr: true, template: true, xpReward: true, content: true, chapterId: true,
       status: true,
-      chapter: { select: { status: true } },
+      chapter: { select: { status: true, titleAr: true } },
     },
   });
 
@@ -77,7 +77,8 @@ export async function GET(request: Request, { params }: Props) {
         titleAr: lesson.titleAr,
         xpReward: lesson.xpReward,
         template: lesson.template,
-        content: lesson.content,
+        content: stripChapterTestAnswers(lesson.content),
+        chapterTitleAr: lesson.chapter.titleAr,
         isChapterTest: isChapterTestContent(lesson.content),
         isCompleted,
         isSkippedByPlacement: progressStatus === PROGRESS_STATUS.SKIPPED_BY_PLACEMENT,

@@ -40,6 +40,24 @@ export function isChapterTestContent(content: unknown) {
   return getChapterTestAssessment(content) !== null;
 }
 
+/**
+ * Lesson content as it may leave the server: the chapter-test answer key
+ * (`assessment.questions[].correct_index`) is removed. Grading happens in
+ * `gradeChapterTest` against the stored content, so the client never needs it.
+ * Non-test content is returned unchanged.
+ */
+export function stripChapterTestAnswers<T>(content: T): T {
+  const assessment = getChapterTestAssessment(content);
+  if (!assessment) return content;
+  return {
+    ...(content as Record<string, unknown>),
+    assessment: {
+      ...assessment,
+      questions: assessment.questions.map(({ correct_index: _correctIndex, ...question }) => question),
+    },
+  } as T;
+}
+
 export function gradeChapterTest(content: unknown, answers: ChapterTestAnswer[]) {
   const assessment = getChapterTestAssessment(content);
   if (!assessment) throw new Error("not_chapter_test");
