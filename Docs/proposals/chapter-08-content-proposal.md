@@ -1,6 +1,6 @@
 # Chapter 8 — Complete Content Proposal
 
-**Status:** Proposed for product-owner review; not implemented  
+**Status:** Approved by the product owner 2026-09-18; implemented in isolated staging 2026-09-18; production promotion pending  
 **Chapter position:** Chapter 8  
 **Working title:** **Feminine Past Verbs and `الَّتِي`**  
 **Urdu title:** **مؤنث ماضی کے افعال اور `الَّتِي`**
@@ -509,3 +509,67 @@ Implementation may begin only after this proposal is approved.
 - No new conversation lesson; that remains part of the dedicated conversation chapter.
 - No lesson-player, test-engine, progress-system, or unlocking changes unless testing proves a separate defect.
 - No production seed or production promotion without separate approval after staging verification.
+
+
+# Implementation notes (2026-09-18)
+
+Built as `warsh-backend/prisma/fixtures/chapter-08-lesson-0[1-6]*.json`:
+`ch08-l01..l04` rewritten in place to the 9/9/10/9-card, 7/7/7/8-exercise
+shape above; `ch08-l05` (review, 8 cards / 10 exercises) and `ch08-test`
+(12 questions, 80 %) added. Seed rows, the chapter spec in
+`curriculum-book1.cjs` (title, Urdu title, description), and
+`npm run content:promote-chapter-eight` mirror Chapter 7's scoped promotion
+(four in-place updates, two creates, learner progress untouched). Fixture,
+Quran and Urdu audits pass; the missing catalogue clips were generated
+(text-hash keyed, shared R2). Verified on the emulator against staging
+(Lesson 1 end to end in English — hook, all cards, every exercise type, reveal,
+close; every card of Lessons 2–4 and the review; the test intro and first
+questions) and through the API on a fresh account (test locked until the five
+lessons are done, 0/12 and 9/12 fail, 10/12 passes and completes the chapter).
+Deviations from the text above, each forced by the runtime or the pipeline:
+
+1. **Test blueprint rows** render as the chapter-test multiple-choice format
+   (the only format `assessment.questions` supports); the exact blueprint
+   answer is the correct option. Q10 ("build the sentence") and Q11 ("phrase or
+   sentence") are therefore recognition questions with the target as an option.
+2. **Quran recognition exercises** (`ch08-l0[1-3]-ex07`) use `MATCH_AYAH`,
+   which shows the fragment without synthesized recitation. Every option
+   begins with English: an option that opens with an Arabic word is laid out
+   right-to-left by the player and its English reads scrambled. The same rule
+   was applied to the hook `noor_intro` and reveal `noor_explanation`
+   paragraphs, which the player renders without a forced direction.
+3. **CONTRAST cards** carry an Arabic headline in `concept.ar` (`ذَهَبَ /
+   ذَهَبَتْ`, Chapters 4–5 convention) because the player's headline is
+   `text.ar ?? concept.ar`; without it a pair card renders blank above the
+   meaning.
+4. **Lesson 4 exercise 8** ("which is a phrase, which is a sentence") is a
+   `TRUE_FALSE` on `أُمِّي الَّتِي رَجَعَتْ` (false: it is a noun phrase); the
+   review's exercise 10 asks the same distinction in the other direction.
+   The two "grammar parse" rows use `GRAMMAR_PARSE` with `POSSESSIVE` for the
+   noun carrying `ـِي`, `RELATIVE_PRONOUN`, and `VERB`.
+5. **Illustrations.** The four media-plan scenes are tracked card by card in
+   `Docs/lesson-illustrations-needed.md` (+ `.csv`); they are owner
+   deliverables, so nothing was generated here. Existing discover assets are
+   reused where the word matches (`dhahaba`, `madrasa`, `umm`, `bayt`); the
+   text-free dictionary illustrations for `بِنْت` and `قَرْيَة` were copied to
+   `images/discover/bint.webp` and `qarya.webp` (768 px WebP). The `قَالَ`
+   dictionary badge carries generated Arabic lettering and was not used. Until
+   scene 1 lands, Lesson 1 card 2 keeps the masculine `dhahaba.webp` on the
+   `ذَهَبَ` card only.
+6. **No `VocabularyWord` rows** were added; `رَجَعَ`, `جَلَسَ`, `دَخَلَ`,
+   `بِنْت` and `أُمّ` are linked through `introduces_vocab` where the existing
+   `arabicPlain` matches.
+7. **Titles.** `ch08-l01` → "She Went — ذَهَبَتْ", `ch08-l02` → "The Same
+   Marker Across Verbs", `ch08-l03` → "الَّتِي — Feminine Relative",
+   `ch08-l04` → "My Mother — Feminine Integration" (em dashes, matching
+   Chapters 6–7). Chapter row → "Feminine Past Verbs and الَّتِي" with the
+   Urdu title from the header and a description in both languages.
+8. **Urdu gender labels**: `اُس (مرد) نے کہا` / `اُس (عورت) نے کہا` for
+   `قَالَ` / `قَالَتْ`, because the Urdu ergative past does not mark the
+   subject's gender; `(مذکر مالک)` / `(مؤنث مالک)` for `أُمُّهُ` / `أُمُّهَا`
+   as in Chapter 7.
+9. **Observation, not a Chapter 8 defect**: `GET /api/lessons/{id}` returns
+   `assessment.questions[].correct_index` to the client for every chapter test
+   (Chapters 3–8). The app never reads it and the server grades, but the key
+   is visible to anyone inspecting the response. Worth stripping in the lesson
+   route; out of scope here.

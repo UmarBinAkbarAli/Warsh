@@ -363,9 +363,11 @@ const specs = [
   {
     order: 8,
     sourceFile: "reader_lecture_08_fi'l_muannath_allatee.md",
-    title: "Feminine Verbs and الَّتِي",
+    title: "Feminine Past Verbs and الَّتِي",
+    titleUr: "مؤنث ماضی کے افعال اور الَّتِي",
     titleAr: "الْفِعْل الْمُؤَنَّث وَالَّتِي",
-    description: "The تْ sign marks a feminine past-tense verb. الَّتِي describes feminine nouns.",
+    description: "The silent تْ marks 'she' on a past verb — ذَهَبَتْ، قَالَتْ — and الَّتِي connects a feminine noun to its description.",
+    descriptionUr: "ماضی فعل پر ساکن تْ 'وہ (عورت)' کی علامت ہے — ذَهَبَتْ، قَالَتْ — اور الَّتِي مؤنث اسم کو اس کی وضاحت سے جوڑتا ہے۔",
     hook: { ayahAr: "الَّتِي لَمْ يُخْلَقْ مِثْلُهَا فِي الْبِلَادِ", ayahRef: "Al-Fajr 89:8", highlightedWord: "الَّتِي" },
     examples: [
       card("ذَهَبَتْ فَاطِمَةُ", "Fatimah went", "dhahabat faatimatu"),

@@ -1,0 +1,729 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 8, display lesson 5 (ch08-l05, new) — chapter review: ذَهَبَ / ذَهَبَتْ, the same marker across verbs, connected قَالَتِ, الَّذِي / الَّتِي, أُمِّي / أُمُّهُ, phrase versus sentence. No new grammar. Added 2026-09-18 from Docs/proposals/chapter-08-content-proposal.md.",
+    "titleUr": "باب 8 کا مراجعہ",
+    "chapter_order": 8,
+    "lesson_order": 5,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 28,
+      "ayah": 25,
+      "label": "Al-Qasas 28:25",
+      "ar": "قَالَتْ إِنَّ أَبِي يَدْعُوكَ",
+      "en": "She said, 'Indeed, my father invites you.'",
+      "ur": "اس نے کہا: میرے والد آپ کو بلا رہے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028025.mp3"
+    },
+    "noor_intro": {
+      "en": "Back to قَالَتْ إِنَّ أَبِي — you can now read both markers here: تْ for 'she' from this chapter, and ـِي for 'my' from Chapter 7. Let us review everything Chapter 8 built.",
+      "ur": "واپس قَالَتْ إِنَّ أَبِي کی طرف — اب آپ یہاں دونوں علامتیں پڑھ سکتے ہیں: اس باب کی تْ 'وہ (عورت)' کے لیے، اور باب 7 کی ـِي 'میرا' کے لیے۔ آئیے باب 8 کا سب کچھ دہرائیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "He went / she went",
+        "ar": "ذَهَبَ / ذَهَبَتْ",
+        "ur": "وہ گیا / وہ گئی"
+      },
+      "explanation": {
+        "en": "The silent تْ at the end of a past verb marks 'she'.",
+        "ur": "ماضی فعل کے آخر کی ساکن تْ 'وہ (عورت)' کی علامت ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went",
+          "ur": "وہ گئی"
+        }
+      ],
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/dhahaba.webp"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "He said / she said",
+        "ar": "قَالَ / قَالَتْ",
+        "ur": "اس نے کہا: مرد / عورت"
+      },
+      "explanation": {
+        "en": "قَالَ / قَالَتْ — the same marker on a different verb.",
+        "ur": "قَالَ / قَالَتْ — وہی علامت ایک دوسرے فعل پر۔"
+      },
+      "examples": [
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qāla",
+          "en": "he said",
+          "ur": "اُس (مرد) نے کہا"
+        },
+        {
+          "ar": "قَالَتْ",
+          "ar_plain": "قالت",
+          "translit": "qālat",
+          "en": "she said",
+          "ur": "اُس (عورت) نے کہا"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "One marker, many verbs",
+        "ar": "عَلَامَةٌ وَاحِدَة",
+        "ur": "ایک علامت، کئی افعال"
+      },
+      "explanation": {
+        "en": "رَجَعَتْ، جَلَسَتْ، دَخَلَتْ — she returned, she sat, she entered.",
+        "ur": "رَجَعَتْ، جَلَسَتْ، دَخَلَتْ — وہ لوٹی، وہ بیٹھی، وہ داخل ہوئی۔"
+      },
+      "examples": [
+        {
+          "ar": "رَجَعَتْ",
+          "ar_plain": "رجعت",
+          "translit": "rajaʿat",
+          "en": "she returned",
+          "ur": "وہ لوٹی"
+        },
+        {
+          "ar": "جَلَسَتْ",
+          "ar_plain": "جلست",
+          "translit": "jalasat",
+          "en": "she sat",
+          "ur": "وہ بیٹھی"
+        },
+        {
+          "ar": "دَخَلَتْ",
+          "ar_plain": "دخلت",
+          "translit": "dakhalat",
+          "en": "she entered",
+          "ur": "وہ داخل ہوئی"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Connected reading",
+        "ar": "قَالَتْ / قَالَتِ",
+        "ur": "ملا کر پڑھنا"
+      },
+      "explanation": {
+        "en": "قَالَتِ اخْرُجْ is still قَالَتْ; the kasrah only joins the two words.",
+        "ur": "قَالَتِ اخْرُجْ اب بھی قَالَتْ ہے؛ کسرہ صرف دونوں لفظوں کو جوڑتی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "قَالَتْ",
+          "ar_plain": "قالت",
+          "translit": "qālat",
+          "en": "she said",
+          "ur": "اُس (عورت) نے کہا"
+        },
+        {
+          "ar": "قَالَتِ",
+          "ar_plain": "قالت",
+          "translit": "qālati",
+          "en": "she said (connected reading)",
+          "ur": "اُس (عورت) نے کہا (ملا کر پڑھنے کی صورت)"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Masculine and feminine 'who'",
+        "ar": "الَّذِي / الَّتِي",
+        "ur": "مذکر اور مؤنث 'جو'"
+      },
+      "explanation": {
+        "en": "الَّذِي for a masculine singular noun, الَّتِي for a feminine singular noun.",
+        "ur": "الَّذِي واحد مذکر اسم کے لیے، الَّتِي واحد مؤنث اسم کے لیے۔"
+      },
+      "examples": [
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who / that / which (masculine)",
+          "ur": "جو (مذکر)"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who / that / which (feminine)",
+          "ur": "جو (مؤنث)"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "الْبِنْتُ الَّتِي ذَهَبَتْ",
+        "ar_plain": "البنت التي ذهبت",
+        "translit": "al-bintu llatī dhahabat",
+        "en": "the girl who went",
+        "ur": "وہ لڑکی جو گئی"
+      },
+      "explanation": {
+        "en": "Feminine noun + connector + feminine verb: the girl who went.",
+        "ur": "مؤنث اسم + جوڑنے والا لفظ + مؤنث فعل: وہ لڑکی جو گئی۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/bint.webp"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "My mother / his mother",
+        "ar": "أُمِّي / أُمُّهُ",
+        "ur": "میری ماں / اس کی ماں"
+      },
+      "explanation": {
+        "en": "The Chapter 7 endings on a feminine noun: ـِي = my, هُ = his.",
+        "ur": "باب 7 کی علامتیں ایک مؤنث اسم پر: ـِي = میرا، هُ = اس کا۔"
+      },
+      "examples": [
+        {
+          "ar": "أُمِّي",
+          "ar_plain": "أمي",
+          "translit": "ummī",
+          "en": "my mother",
+          "ur": "میری ماں"
+        },
+        {
+          "ar": "أُمُّهُ",
+          "ar_plain": "أمه",
+          "translit": "ummuhu",
+          "en": "his mother",
+          "ur": "اس کی ماں (مذکر مالک)"
+        }
+      ],
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/umm.webp"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Phrase versus sentence",
+        "ar": "أُمِّي الَّتِي رَجَعَتْ / رَجَعَتْ أُمِّي إِلَى الْبَيْتِ",
+        "ur": "ترکیب بمقابلہ جملہ"
+      },
+      "explanation": {
+        "en": "أُمِّي الَّتِي رَجَعَتْ names a person; رَجَعَتْ أُمِّي إِلَى الْبَيْتِ says something complete.",
+        "ur": "أُمِّي الَّتِي رَجَعَتْ ایک شخص کا نام لیتی ہے؛ رَجَعَتْ أُمِّي إِلَى الْبَيْتِ ایک مکمل بات کہتی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "أُمِّي الَّتِي رَجَعَتْ",
+          "ar_plain": "أمي التي رجعت",
+          "translit": "ummī llatī rajaʿat",
+          "en": "my mother who returned",
+          "ur": "میری ماں جو لوٹی"
+        },
+        {
+          "ar": "رَجَعَتْ أُمِّي إِلَى الْبَيْتِ",
+          "ar_plain": "رجعت أمي إلى البيت",
+          "translit": "rajaʿat ummī ilā l-bayti",
+          "en": "My mother returned to the house.",
+          "ur": "میری ماں گھر لوٹ آئی۔"
+        }
+      ],
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/bayt.webp"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch08-l05-ex01",
+      "prompt": {
+        "ar": "ذَهَبَتْ",
+        "ar_plain": "ذهبت",
+        "translit": "dhahabat",
+        "en": "she went",
+        "ur": "وہ گئی"
+      },
+      "options": [
+        {
+          "en": "she went — the تْ marks 'she'",
+          "ur": "وہ گئی — تْ 'وہ (عورت)' کی علامت ہے"
+        },
+        {
+          "en": "he went — there is no marker",
+          "ur": "وہ گیا — کوئی علامت نہیں"
+        },
+        {
+          "en": "you went — the تْ marks 'you'",
+          "ur": "تم گئے — تْ 'تم' کی علامت ہے"
+        },
+        {
+          "en": "they went — the تْ marks plural",
+          "ur": "وہ (سب) گئے — تْ جمع کی علامت ہے"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The silent تْ is the singular feminine marker: she went.",
+        "ur": "ساکن تْ واحد مؤنث کی علامت ہے: وہ گئی۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch08-l05-ex02",
+      "prompt": {
+        "ar": "قَالَتْ",
+        "ar_plain": "قالت",
+        "translit": "qālat",
+        "en": "she said",
+        "ur": "اُس (عورت) نے کہا"
+      },
+      "options": [
+        {
+          "en": "she said",
+          "ur": "اُس (عورت) نے کہا"
+        },
+        {
+          "en": "he said",
+          "ur": "اُس (مرد) نے کہا"
+        },
+        {
+          "en": "she returned",
+          "ur": "وہ لوٹی"
+        },
+        {
+          "en": "she went",
+          "ur": "وہ گئی"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "قَالَ + تْ = قَالَتْ, she said.",
+        "ur": "قَالَ + تْ = قَالَتْ، اُس (عورت) نے کہا۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch08-l05-ex03",
+      "left_column": [
+        {
+          "ar": "رَجَعَ",
+          "ar_plain": "رجع",
+          "translit": "rajaʿa",
+          "en": "he returned",
+          "ur": "وہ لوٹا"
+        },
+        {
+          "ar": "رَجَعَتْ",
+          "ar_plain": "رجعت",
+          "translit": "rajaʿat",
+          "en": "she returned",
+          "ur": "وہ لوٹی"
+        },
+        {
+          "ar": "جَلَسَ",
+          "ar_plain": "جلس",
+          "translit": "jalasa",
+          "en": "he sat",
+          "ur": "وہ بیٹھا"
+        },
+        {
+          "ar": "جَلَسَتْ",
+          "ar_plain": "جلست",
+          "translit": "jalasat",
+          "en": "she sat",
+          "ur": "وہ بیٹھی"
+        },
+        {
+          "ar": "دَخَلَ",
+          "ar_plain": "دخل",
+          "translit": "dakhala",
+          "en": "he entered",
+          "ur": "وہ داخل ہوا"
+        },
+        {
+          "ar": "دَخَلَتْ",
+          "ar_plain": "دخلت",
+          "translit": "dakhalat",
+          "en": "she entered",
+          "ur": "وہ داخل ہوئی"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "he returned",
+          "ur": "وہ لوٹا"
+        },
+        {
+          "en": "she returned",
+          "ur": "وہ لوٹی"
+        },
+        {
+          "en": "he sat",
+          "ur": "وہ بیٹھا"
+        },
+        {
+          "en": "she sat",
+          "ur": "وہ بیٹھی"
+        },
+        {
+          "en": "he entered",
+          "ur": "وہ داخل ہوا"
+        },
+        {
+          "en": "she entered",
+          "ur": "وہ داخل ہوئی"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch08-l05-ex04",
+      "statement": {
+        "en": "In قَالَتِ اخْرُجْ, the تِ is a different feminine form from قَالَتْ.",
+        "ur": "قَالَتِ اخْرُجْ میں تِ قَالَتْ سے مختلف مؤنث صورت ہے۔",
+        "ar_example": {
+          "ar": "قَالَتِ اخْرُجْ",
+          "ar_plain": "قالت اخرج",
+          "translit": "qālati khruj",
+          "en": "she said, 'Come out'",
+          "ur": "اس نے کہا: نکل آؤ"
+        }
+      },
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "False: it is the same قَالَتْ; the kasrah only joins it to the silent letter of اخْرُجْ.",
+        "ur": "غلط: یہ وہی قَالَتْ ہے؛ کسرہ صرف اخْرُجْ کے ساکن حرف سے جوڑتی ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch08-l05-ex05",
+      "mode": "TAP",
+      "sentence_ar": "الْمَدْرَسَةُ ___ فِي الْقَرْيَةِ",
+      "hint": {
+        "en": "the school that is in the village",
+        "ur": "وہ مدرسہ جو گاؤں میں ہے"
+      },
+      "options": [
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who / that / which (feminine)",
+          "ur": "جو (مؤنث)"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who / that / which (masculine)",
+          "ur": "جو (مذکر)"
+        },
+        {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went",
+          "ur": "وہ گئی"
+        },
+        {
+          "ar": "هَذِهِ",
+          "ar_plain": "هذه",
+          "translit": "hādhihi",
+          "en": "this (feminine)",
+          "ur": "یہ (مؤنث)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الَّتِي",
+        "ar_plain": "التي",
+        "translit": "allatī",
+        "en": "who / that / which (feminine)",
+        "ur": "جو (مؤنث)"
+      },
+      "explanation_on_wrong": {
+        "en": "مَدْرَسَةٌ is feminine singular, so it takes الَّتِي.",
+        "ur": "مَدْرَسَةٌ واحد مؤنث ہے، اس لیے الَّتِي آتا ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch08-l05-ex06",
+      "mode": "TAP",
+      "sentence_ar": "الْبِنْتُ ___ ذَهَبَتْ",
+      "hint": {
+        "en": "the girl who went",
+        "ur": "وہ لڑکی جو گئی"
+      },
+      "options": [
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who / that / which (feminine)",
+          "ur": "جو (مؤنث)"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who / that / which (masculine)",
+          "ur": "جو (مذکر)"
+        },
+        {
+          "ar": "هَذِهِ",
+          "ar_plain": "هذه",
+          "translit": "hādhihi",
+          "en": "this (feminine)",
+          "ur": "یہ (مؤنث)"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الَّتِي",
+        "ar_plain": "التي",
+        "translit": "allatī",
+        "en": "who / that / which (feminine)",
+        "ur": "جو (مؤنث)"
+      },
+      "explanation_on_wrong": {
+        "en": "بِنْتٌ is feminine, so the connector is الَّتِي.",
+        "ur": "بِنْتٌ مؤنث ہے، اس لیے جوڑنے والا لفظ الَّتِي ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch08-l05-ex07",
+      "prompt": {
+        "ar": "الْمَدْرَسَةُ الَّتِي فِي الْقَرْيَةِ",
+        "ar_plain": "المدرسة التي في القرية",
+        "translit": "al-madrasatu llatī fī l-qaryati",
+        "en": "the school that is in the village",
+        "ur": "وہ مدرسہ جو گاؤں میں ہے"
+      },
+      "options": [
+        {
+          "en": "the school that is in the village",
+          "ur": "وہ مدرسہ جو گاؤں میں ہے"
+        },
+        {
+          "en": "the village that is in the school",
+          "ur": "وہ گاؤں جو مدرسے میں ہے"
+        },
+        {
+          "en": "the school went to the village",
+          "ur": "مدرسہ گاؤں گیا"
+        },
+        {
+          "en": "the girl who is in the school",
+          "ur": "وہ لڑکی جو مدرسے میں ہے"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "Noun, connector, description: the school that is in the village.",
+        "ur": "اسم، جوڑنے والا لفظ، وضاحت: وہ مدرسہ جو گاؤں میں ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch08-l05-ex08",
+      "target_translation": {
+        "en": "My mother returned to the house.",
+        "ur": "میری ماں گھر لوٹ آئی۔"
+      },
+      "tiles": [
+        {
+          "ar": "رَجَعَتْ",
+          "ar_plain": "رجعت",
+          "translit": "rajaʿat",
+          "en": "she returned",
+          "ur": "وہ لوٹی"
+        },
+        {
+          "ar": "أُمِّي",
+          "ar_plain": "أمي",
+          "translit": "ummī",
+          "en": "my mother",
+          "ur": "میری ماں"
+        },
+        {
+          "ar": "إِلَى الْبَيْتِ",
+          "ar_plain": "إلى البيت",
+          "translit": "ilā l-bayti",
+          "en": "to the house",
+          "ur": "گھر کی طرف"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who / that / which (feminine)",
+          "ur": "جو (مؤنث)"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "explanation_on_wrong": {
+        "en": "رَجَعَتْ أُمِّي إِلَى الْبَيْتِ — verb, doer, destination.",
+        "ur": "رَجَعَتْ أُمِّي إِلَى الْبَيْتِ — فعل، کام کرنے والی، منزل۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch08-l05-ex09",
+      "sentence_ar": "أُمِّي الَّتِي رَجَعَتْ",
+      "words": [
+        {
+          "ar": "أُمِّي",
+          "ar_plain": "أمي",
+          "translit": "ummī",
+          "en": "my mother",
+          "ur": "میری ماں"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who / that / which (feminine)",
+          "ur": "جو (مؤنث)"
+        },
+        {
+          "ar": "رَجَعَتْ",
+          "ar_plain": "رجعت",
+          "translit": "rajaʿat",
+          "en": "she returned",
+          "ur": "وہ لوٹی"
+        }
+      ],
+      "available_roles": [
+        "POSSESSIVE",
+        "RELATIVE_PRONOUN",
+        "VERB",
+        "PREPOSITION"
+      ],
+      "correct_roles": [
+        "POSSESSIVE",
+        "RELATIVE_PRONOUN",
+        "VERB"
+      ],
+      "explanation_on_wrong": {
+        "en": "أُمِّي = noun with 'my'; الَّتِي = relative pronoun; رَجَعَتْ = feminine verb.",
+        "ur": "أُمِّي = 'میرا' والا اسم؛ الَّتِي = اسمِ موصول؛ رَجَعَتْ = مؤنث فعل۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch08-l05-ex10",
+      "statement": {
+        "en": "رَجَعَتْ أُمِّي إِلَى الْبَيْتِ is a complete sentence, while أُمِّي الَّتِي رَجَعَتْ is only a noun phrase.",
+        "ur": "رَجَعَتْ أُمِّي إِلَى الْبَيْتِ ایک مکمل جملہ ہے، جبکہ أُمِّي الَّتِي رَجَعَتْ صرف اسمی ترکیب ہے۔",
+        "ar_example": {
+          "ar": "رَجَعَتْ أُمِّي إِلَى الْبَيْتِ",
+          "ar_plain": "رجعت أمي إلى البيت",
+          "translit": "rajaʿat ummī ilā l-bayti",
+          "en": "My mother returned to the house.",
+          "ur": "میری ماں گھر لوٹ آئی۔"
+        }
+      },
+      "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True: the verbal sentence makes a complete statement; the الَّتِي phrase only identifies a person.",
+        "ur": "درست: فعلی جملہ مکمل بات کہتا ہے؛ الَّتِي والی ترکیب صرف شخص کی پہچان کراتی ہے۔"
+      },
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Everything Chapter 8 built",
+      "ar": "صِيغَةُ المُؤَنَّثِ فِي القُرْآن",
+      "ur": "باب 8 نے جو کچھ بنایا"
+    },
+    "ayah": {
+      "surah": 89,
+      "ayah": 8,
+      "label": "Al-Fajr 89:8",
+      "ar": "الَّتِي لَمْ يُخْلَقْ مِثْلُهَا فِي الْبِلَادِ",
+      "en": "The like of which was never created in the lands.",
+      "ur": "وہ ارم، جس جیسی کوئی بستی ملکوں میں پیدا نہیں کی گئی تھی۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/089008.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "الَّتِي"
+    ],
+    "noor_explanation": {
+      "en": "Here الَّتِي is the feminine connector, opening a description of إِرَمَ. This chapter gave you the feminine verb ending, the feminine 'who', and the endings from Chapter 7 on feminine nouns. Read them together, and a whole clause opens up.",
+      "ur": "الَّتِي — مؤنث جوڑنے والا لفظ، إِرَمَ کی وضاحت کا آغاز۔ اس باب نے آپ کو مؤنث فعل کی علامت، مؤنث 'جو'، اور باب 7 کی علامتیں مؤنث اسموں پر دیں۔ انہیں ملا کر پڑھیں تو پورا جملہ کھل جاتا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You have reviewed the complete Chapter 8 pattern: feminine past verbs, الَّتِي, attached pronouns, and complete feminine sentences. The final test checks these skills in mixed order.",
+      "ur": "آپ نے باب 8 کا پورا انداز دہرا لیا: مؤنث ماضی افعال، الَّتِي، جڑی ہوئی ضمیریں، اور مکمل مؤنث جملے۔ آخری امتحان انہی مہارتوں کو ملی جلی ترتیب میں پرکھتا ہے۔"
+    }
+  }
+}

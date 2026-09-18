@@ -74,6 +74,8 @@ const ch08L01Content = require("./fixtures/chapter-08-lesson-01.json");
 const ch08L02Content = require("./fixtures/chapter-08-lesson-02.json");
 const ch08L03Content = require("./fixtures/chapter-08-lesson-03.json");
 const ch08L04Content = require("./fixtures/chapter-08-lesson-04.json");
+const ch08L05Content = require("./fixtures/chapter-08-lesson-05-review.json");      // ch08-l05, review
+const ch08TestContent = require("./fixtures/chapter-08-lesson-06-final-test.json"); // ch08-test, order 6
 const ch09L01Content     = require("./fixtures/chapter-09-lesson-01.json");
 const ch09L02Content     = require("./fixtures/chapter-09-lesson-02.json");
 const ch09L03Content     = require("./fixtures/chapter-09-lesson-03.json");
@@ -790,11 +792,14 @@ async function main() {
     { id: "ch07-l05", chapterId: ch7Id, order: 5, title: "Simple Questions",                          titleAr: "الأَسْئِلَةُ السَّهْلَة",                    template: "SPOKEN_PHRASES", xpReward: ch07L05SpokenContent._meta?.xp_reward ?? 15, content: ch07L05SpokenContent },
     { id: "ch07-l06", chapterId: ch7Id, order: 6, title: "Chapter 7 Review",                          titleAr: "مُرَاجَعَةُ الْفَصْلِ السَّابِع",            template: "REVIEW",   xpReward: ch07L06Content._meta?.xp_reward ?? 20, content: ch07L06Content },
     { id: "ch07-test", chapterId: ch7Id, order: 7, title: "Chapter 7 Final Test",                     titleAr: "اخْتِبَارُ الْفَصْلِ السَّابِعِ",           template: "REVIEW",   xpReward: ch07TestContent._meta?.xp_reward ?? 20, content: ch07TestContent },
-    // Chapter 8
-    { id: "ch08-l01", chapterId: ch8Id, order: 1, title: "She Went - ذَهَبَتْ",                        titleAr: "ذَهَبَتْ - تَاءُ التَّأْنِيث",                         template: "STANDARD", xpReward: ch08L01Content._meta?.xp_reward ?? 10, content: ch08L01Content },
-    { id: "ch08-l02", chapterId: ch8Id, order: 2, title: "Feminine Marker Across Verbs",              titleAr: "تَاءُ التَّأْنِيث فِي الأَفْعَال",                       template: "STANDARD", xpReward: ch08L02Content._meta?.xp_reward ?? 10, content: ch08L02Content },
-    { id: "ch08-l03", chapterId: ch8Id, order: 3, title: "الَّتِي - Feminine Relative",                titleAr: "الَّتِي - اسْمٌ مَوْصُولٌ مُؤَنَّث",                    template: "STANDARD", xpReward: ch08L03Content._meta?.xp_reward ?? 10, content: ch08L03Content },
-    { id: "ch08-l04", chapterId: ch8Id, order: 4, title: "My Mother - أُمِّي",                         titleAr: "أُمِّي - تَطْبِيقُ المُؤَنَّث",                          template: "STANDARD", xpReward: ch08L04Content._meta?.xp_reward ?? 10, content: ch08L04Content },
+    // Chapter 8 — Docs/proposals/chapter-08-content-proposal.md. Existing IDs kept
+    // in place; ch08-l05 (review) and ch08-test are the only new rows.
+    { id: "ch08-l01", chapterId: ch8Id, order: 1, title: "She Went — ذَهَبَتْ",                        titleAr: "ذَهَبَتْ — تَاءُ التَّأْنِيثِ السَّاكِنَة",           template: "STANDARD", xpReward: ch08L01Content._meta?.xp_reward ?? 10, content: ch08L01Content },
+    { id: "ch08-l02", chapterId: ch8Id, order: 2, title: "The Same Marker Across Verbs",              titleAr: "تَاءُ التَّأْنِيثِ فِي أَفْعَالٍ كَثِيرَة",           template: "STANDARD", xpReward: ch08L02Content._meta?.xp_reward ?? 10, content: ch08L02Content },
+    { id: "ch08-l03", chapterId: ch8Id, order: 3, title: "الَّتِي — Feminine Relative",                titleAr: "الَّتِي — اسْمٌ مَوْصُولٌ مُؤَنَّث",                 template: "STANDARD", xpReward: ch08L03Content._meta?.xp_reward ?? 10, content: ch08L03Content },
+    { id: "ch08-l04", chapterId: ch8Id, order: 4, title: "My Mother — Feminine Integration",          titleAr: "أُمِّي — تَطْبِيقُ المُؤَنَّث",                       template: "STANDARD", xpReward: ch08L04Content._meta?.xp_reward ?? 10, content: ch08L04Content },
+    { id: "ch08-l05", chapterId: ch8Id, order: 5, title: "Chapter 8 Review",                          titleAr: "مُرَاجَعَةُ الْفَصْلِ الثَّامِن",             template: "REVIEW",   xpReward: ch08L05Content._meta?.xp_reward ?? 20, content: ch08L05Content },
+    { id: "ch08-test", chapterId: ch8Id, order: 6, title: "Chapter 8 Final Test",                     titleAr: "اخْتِبَارُ الْفَصْلِ الثَّامِنِ",            template: "REVIEW",   xpReward: ch08TestContent._meta?.xp_reward ?? 20, content: ch08TestContent },
     // Chapter 9
     { id: "ch09-l01", chapterId: ch9Id, order: 1, title: "Sound Masculine Plural — مُسْلِمُونَ",    titleAr: "جَمْعُ الْمُذَكَّرِ السَّالِم",          template: "STANDARD",     xpReward: ch09L01Content._meta?.xp_reward     ?? 10, content: ch09L01Content },
     { id: "ch09-l02", chapterId: ch9Id, order: 2, title: "Sound Feminine Plural — مُؤْمِنَاتٌ",    titleAr: "جَمْعُ الْمُؤَنَّثِ السَّالِم",          template: "STANDARD",     xpReward: ch09L02Content._meta?.xp_reward     ?? 10, content: ch09L02Content },

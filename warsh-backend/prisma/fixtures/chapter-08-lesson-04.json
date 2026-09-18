@@ -2,10 +2,11 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 8, Lesson 4 - my mother and feminine sentence integration with أُمِّي, الَّتِي, and feminine verbs.",
+    "_note": "Chapter 8, display lesson 4 (ch08-l04) — integration: أُمِّي / أُمُّهُ (Chapter 7 endings), a nominal sentence, a verbal sentence with رَجَعَتْ, and the described noun phrase أُمِّي الَّتِي رَجَعَتْ; phrase versus complete sentence. Quran hook: Al-Ma'idah 5:75. Rebuilt 2026-09-18 from Docs/proposals/chapter-08-content-proposal.md.",
+    "titleUr": "میری ماں — مؤنث کا اطلاق",
     "chapter_order": 8,
     "lesson_order": 4,
-    "estimated_minutes": 10,
+    "estimated_minutes": 11,
     "xp_reward": 10
   },
   "hook": {
@@ -13,85 +14,201 @@
       "surah": 5,
       "ayah": 75,
       "label": "Al-Ma'idah 5:75",
-      "ar": "وَأُمُّهُ صِدِّيقَةٌ",
-      "en": "And his mother was a truthful woman.",
+      "ar": "وَأُمُّهُ صِدِّيقَةٌ",
+      "en": "And his mother was a woman of great truth.",
       "ur": "اور ان کی والدہ نہایت سچی خاتون تھیں۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/005075.mp3"
     },
     "noor_intro": {
-      "en": "You know attached pronouns, feminine words, and feminine verbs. Today you combine them in warm family sentences.",
-      "ur": "آپ جڑی ہوئی ضمیریں، مؤنث الفاظ، اور مؤنث افعال جانتے ہیں۔ آج آپ انہیں خاندان کے جملوں میں ملائیں گے۔"
+      "en": "Here وَأُمُّهُ means 'and his mother'. The هُ is Chapter 7's 'his', now on a feminine noun. Today everything you have built comes together: attached pronouns, الَّتِي, and the feminine verb.",
+      "ur": "وَأُمُّهُ — 'اور اس کی ماں'۔ هُ باب 7 کی 'اس کا' ہے، اب ایک مؤنث اسم پر۔ آج آپ کا سیکھا ہوا سب کچھ اکٹھا ہوتا ہے: جڑی ہوئی ضمیریں، الَّتِي، اور مؤنث فعل۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "أُمِّي - my mother",
-        "ar": "أُمٌّ + ي",
-        "ur": "میری والدہ"
+      "type": "WORD",
+      "text": {
+        "ar": "أُمٌّ",
+        "ar_plain": "أم",
+        "translit": "ummun",
+        "en": "a mother",
+        "ur": "ایک ماں"
       },
       "explanation": {
-        "en": "أُمّ means mother. Attach ي and it becomes أُمِّي - my mother.\n\nأُمِّي فِي البَيْتِ - my mother is in the house\nأُمُّهُ صِدِّيقَةٌ - his mother is truthful",
-        "ur": "أُمّ کا مطلب ماں ہے۔ آخر میں ي لگائیں تو أُمِّي بنتا ہے: میری ماں۔\n\nأُمِّي فِي البَيْتِ - میری ماں گھر میں ہے\nأُمُّهُ صِدِّيقَةٌ - اس کی ماں سچی ہے"
+        "en": "أُمٌّ = a mother. A feminine noun.",
+        "ur": "أُمٌّ = ایک ماں۔ ایک مؤنث اسم۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/umm.webp",
+      "introduces_vocab": {
+        "ar_plain": "أم"
       }
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "أُمِّي",
-        "ar_plain": "امي",
-        "translit": "ummi",
+        "ar": "أُمِّي",
+        "ar_plain": "أمي",
+        "translit": "ummī",
         "en": "my mother",
         "ur": "میری ماں"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ummi.mp3"
+      "explanation": {
+        "en": "أُمِّي = my mother. The ـِي is the attached 'my' from Chapter 7, exactly as in كِتَابِي.",
+        "ur": "أُمِّي = میری ماں۔ ـِي باب 7 کی جڑی ہوئی 'میرا' ہے، بالکل كِتَابِي کی طرح۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/umm.webp",
+      "examples": [
+        {
+          "ar": "كِتَابِي",
+          "ar_plain": "كتابي",
+          "translit": "kitābī",
+          "en": "my book",
+          "ur": "میری کتاب"
+        },
+        {
+          "ar": "أُمِّي",
+          "ar_plain": "أمي",
+          "translit": "ummī",
+          "en": "my mother",
+          "ur": "میری ماں"
+        }
+      ]
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "أُمُّهُ",
-        "ar_plain": "امه",
+        "ar": "أُمُّهُ",
+        "ar_plain": "أمه",
         "translit": "ummuhu",
         "en": "his mother",
-        "ur": "اس کی ماں"
+        "ur": "اس کی ماں (مذکر مالک)"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ummuhu.mp3"
+      "explanation": {
+        "en": "أُمُّهُ = his mother. أُمّ + هُ.",
+        "ur": "أُمُّهُ = اس کی ماں۔ أُمّ + هُ۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "The Quranic description",
+        "ur": "قرآنی وضاحت"
+      },
+      "text": {
+        "ar": "أُمُّهُ صِدِّيقَةٌ",
+        "ar_plain": "أمه صديقة",
+        "translit": "ummuhu ṣiddīqatun",
+        "en": "His mother was a deeply truthful woman.",
+        "ur": "اس کی والدہ نہایت سچی خاتون تھیں۔"
+      },
+      "explanation": {
+        "en": "أُمُّهُ صِدِّيقَةٌ = his mother was a deeply truthful woman. صِدِّيقَةٌ is here for recognition only.",
+        "ur": "أُمُّهُ صِدِّيقَةٌ = اس کی والدہ نہایت سچی خاتون تھیں۔ صِدِّيقَةٌ یہاں صرف پہچان کے لیے ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/005075.mp3",
+      "examples": [
+        {
+          "ar": "أُمُّهُ صِدِّيقَةٌ",
+          "ar_plain": "أمه صديقة",
+          "translit": "ummuhu ṣiddīqatun",
+          "en": "His mother was a deeply truthful woman.",
+          "ur": "اس کی والدہ نہایت سچی خاتون تھیں۔"
+        }
+      ]
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "أُمِّي فِي البَيْتِ",
-        "ar_plain": "امي في البيت",
-        "translit": "ummi fi al-bayt",
-        "en": "my mother is in the house",
-        "ur": "میری ماں گھر میں ہے"
+        "ar": "أُمِّي فِي الْبَيْتِ",
+        "ar_plain": "أمي في البيت",
+        "translit": "ummī fī l-bayti",
+        "en": "My mother is in the house.",
+        "ur": "میری ماں گھر میں ہے۔"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ummi-fi-al-bayt.mp3"
+      "explanation": {
+        "en": "A complete nominal sentence: أُمِّي فِي الْبَيْتِ = my mother is in the house. No verb is needed.",
+        "ur": "ایک مکمل اسمی جملہ: أُمِّي فِي الْبَيْتِ = میری ماں گھر میں ہے۔ فعل کی ضرورت نہیں۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/bayt.webp"
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "أُمِّي الَّتِي رَجَعَتْ",
-        "ar_plain": "امي التي رجعت",
-        "translit": "ummi allati rajaat",
+        "ar": "رَجَعَتْ أُمِّي إِلَى الْبَيْتِ",
+        "ar_plain": "رجعت أمي إلى البيت",
+        "translit": "rajaʿat ummī ilā l-bayti",
+        "en": "My mother returned to the house.",
+        "ur": "میری ماں گھر لوٹ آئی۔"
+      },
+      "explanation": {
+        "en": "A complete verbal sentence: رَجَعَتْ أُمِّي إِلَى الْبَيْتِ = my mother returned to the house. Feminine verb, doer, destination.",
+        "ur": "ایک مکمل فعلی جملہ: رَجَعَتْ أُمِّي إِلَى الْبَيْتِ = میری ماں گھر لوٹ آئی۔ مؤنث فعل، کام کرنے والی، منزل۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/bayt.webp"
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "أُمِّي الَّتِي رَجَعَتْ",
+        "ar_plain": "أمي التي رجعت",
+        "translit": "ummī llatī rajaʿat",
         "en": "my mother who returned",
-        "ur": "میری ماں جو واپس آئی"
+        "ur": "میری ماں جو لوٹی"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ummi-allati-rajaat.mp3"
+      "explanation": {
+        "en": "A described noun phrase: أُمِّي الَّتِي رَجَعَتْ = my mother who returned. It names a person, but it does not yet say anything about her.",
+        "ur": "ایک وضاحت شدہ اسمی ترکیب: أُمِّي الَّتِي رَجَعَتْ = میری ماں جو لوٹی۔ یہ ایک شخص کا نام لیتی ہے، مگر ابھی اس کے بارے میں کچھ کہتی نہیں۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Phrase versus sentence",
+        "ar": "أُمِّي الَّتِي رَجَعَتْ / رَجَعَتْ أُمِّي إِلَى الْبَيْتِ",
+        "ur": "ترکیب بمقابلہ جملہ"
+      },
+      "explanation": {
+        "en": "أُمِّي الَّتِي رَجَعَتْ identifies a person and stops: a noun phrase. رَجَعَتْ أُمِّي إِلَى الْبَيْتِ makes a complete statement: a sentence.",
+        "ur": "أُمِّي الَّتِي رَجَعَتْ ایک شخص کی پہچان کراتی ہے اور رک جاتی ہے: اسمی ترکیب۔ رَجَعَتْ أُمِّي إِلَى الْبَيْتِ ایک مکمل بات کہتی ہے: جملہ۔"
+      },
+      "examples": [
+        {
+          "ar": "أُمِّي الَّتِي رَجَعَتْ",
+          "ar_plain": "أمي التي رجعت",
+          "translit": "ummī llatī rajaʿat",
+          "en": "my mother who returned",
+          "ur": "میری ماں جو لوٹی"
+        },
+        {
+          "ar": "رَجَعَتْ أُمِّي إِلَى الْبَيْتِ",
+          "ar_plain": "رجعت أمي إلى البيت",
+          "translit": "rajaʿat ummī ilā l-bayti",
+          "en": "My mother returned to the house.",
+          "ur": "میری ماں گھر لوٹ آئی۔"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Integration: pronoun + الَّتِي + feminine verb",
-        "ar": "ضَمِير + الَّتِي + فِعْل مُؤَنَّث",
-        "ur": "ضمیر + الَّتِي + مؤنث فعل"
+        "en": "Integration checkpoint",
+        "ar": "ضَمِير + الَّتِي + فِعْل مُؤَنَّث",
+        "ur": "یکجا جانچ"
       },
       "explanation": {
-        "en": "أُمِّي الَّتِي رَجَعَتْ combines three tools: my (ي), feminine relative (الَّتِي), and feminine verb (رَجَعَتْ).",
-        "ur": "أُمِّي الَّتِي رَجَعَتْ تین چیزیں ملاتا ہے: میری (ي)، مؤنث اسم موصول (الَّتِي)، اور مؤنث فعل (رَجَعَتْ)۔"
-      }
+        "en": "In أُمِّي الَّتِي رَجَعَتْ: ـِي = my (owner), الَّتِي = the feminine connector, تْ = she did. Three small pieces, one clear meaning.",
+        "ur": "أُمِّي الَّتِي رَجَعَتْ میں: ـِي = میرا (مالک)، الَّتِي = مؤنث جوڑنے والا لفظ، تْ = اس (عورت) نے کیا۔ تین چھوٹے ٹکڑے، ایک واضح معنی۔"
+      },
+      "examples": [
+        {
+          "ar": "أُمِّي الَّتِي رَجَعَتْ",
+          "ar_plain": "أمي التي رجعت",
+          "translit": "ummī llatī rajaʿat",
+          "en": "my mother who returned",
+          "ur": "میری ماں جو لوٹی"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -99,9 +216,9 @@
       "type": "TAP_TRANSLATION",
       "id": "ch08-l04-ex01",
       "prompt": {
-        "ar": "أُمِّي",
-        "ar_plain": "امي",
-        "translit": "ummi",
+        "ar": "أُمِّي",
+        "ar_plain": "أمي",
+        "translit": "ummī",
         "en": "my mother",
         "ur": "میری ماں"
       },
@@ -112,151 +229,202 @@
         },
         {
           "en": "his mother",
-          "ur": "اس کی ماں"
+          "ur": "اس کی ماں (مذکر مالک)"
         },
         {
-          "en": "my book",
-          "ur": "میری کتاب"
+          "en": "your mother",
+          "ur": "تمہاری ماں"
         },
         {
-          "en": "the girl who went",
-          "ur": "وہ لڑکی جو گئی"
+          "en": "a mother",
+          "ur": "ایک ماں"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The ending ـِي means 'my': أُمِّي = my mother.",
+        "ur": "علامت ـِي کا معنی 'میرا' ہے: أُمِّي = میری ماں۔"
+      },
       "xp_value": 1
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch08-l04-ex02",
       "prompt": {
-        "ar": "أُمِّي فِي البَيْتِ",
-        "ar_plain": "امي في البيت",
-        "translit": "ummi fi al-bayt",
-        "en": "my mother is in the house",
-        "ur": "میری ماں گھر میں ہے"
+        "ar": "أُمُّهُ",
+        "ar_plain": "أمه",
+        "translit": "ummuhu",
+        "en": "his mother",
+        "ur": "اس کی ماں (مذکر مالک)"
       },
       "options": [
         {
-          "en": "my mother is in the house",
-          "ur": "میری ماں گھر میں ہے"
+          "en": "his mother",
+          "ur": "اس کی ماں (مذکر مالک)"
         },
         {
-          "en": "the girl went",
-          "ur": "لڑکی گئی"
+          "en": "my mother",
+          "ur": "میری ماں"
         },
         {
-          "en": "where is the book?",
-          "ur": "کتاب کہاں ہے؟"
+          "en": "her mother",
+          "ur": "اس کی ماں (مؤنث مالک)"
         },
         {
-          "en": "his book is new",
-          "ur": "اس کی کتاب نئی ہے"
+          "en": "the mother",
+          "ur": "ماں"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "أُمّ + هُ = أُمُّهُ, his mother.",
+        "ur": "أُمّ + هُ = أُمُّهُ، اس کی ماں۔"
+      },
       "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch08-l04-ex03",
       "statement": {
-        "en": "أُمِّي contains the same attached ي pattern you learned in كِتَابِي.",
-        "ur": "أُمِّي میں وہی جڑی ہوئی ي ہے جو آپ نے كِتَابِي میں سیکھی تھی۔",
+        "en": "أُمِّي contains the same attached ـِي as كِتَابِي.",
+        "ur": "أُمِّي میں وہی جڑی ہوئی ـِي ہے جو كِتَابِي میں ہے۔",
         "ar_example": {
-          "ar": "أُمِّي / كِتَابِي",
-          "ar_plain": "امي كتابي",
-          "translit": "ummi / kitabi",
-          "en": "my mother / my book",
-          "ur": "میری ماں / میری کتاب"
+          "ar": "أُمِّي",
+          "ar_plain": "أمي",
+          "translit": "ummī",
+          "en": "my mother",
+          "ur": "میری ماں"
         }
       },
       "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True: both endings mean 'my'.",
+        "ur": "درست: دونوں علامتوں کا معنی 'میرا' ہے۔"
+      },
       "xp_value": 1
     },
     {
       "type": "FILL_BLANK",
       "id": "ch08-l04-ex04",
       "mode": "TAP",
-      "sentence_ar": "أُمِّي ___ رَجَعَتْ",
+      "sentence_ar": "أُمِّي ___ رَجَعَتْ",
       "hint": {
         "en": "my mother who returned",
-        "ur": "میری ماں جو واپس آئی"
+        "ur": "میری ماں جو لوٹی"
       },
       "options": [
         {
-          "ar": "الَّتِي",
+          "ar": "الَّتِي",
           "ar_plain": "التي",
-          "translit": "allati",
-          "en": "who (feminine)",
+          "translit": "allatī",
+          "en": "who / that / which (feminine)",
           "ur": "جو (مؤنث)"
         },
         {
-          "ar": "الَّذِي",
+          "ar": "الَّذِي",
           "ar_plain": "الذي",
-          "translit": "alladhi",
-          "en": "who (masculine)",
+          "translit": "alladhī",
+          "en": "who / that / which (masculine)",
           "ur": "جو (مذکر)"
         },
         {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
-          "translit": "dhahaba",
-          "en": "he went",
-          "ur": "وہ گیا"
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
         },
         {
-          "ar": "عِنْدَكَ",
-          "ar_plain": "عندك",
-          "translit": "indaka",
-          "en": "with you",
-          "ur": "تمہارے پاس"
+          "ar": "إِلَى",
+          "ar_plain": "إلى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "کی طرف"
         }
       ],
       "correct_answer": {
-        "ar": "الَّتِي",
+        "ar": "الَّتِي",
         "ar_plain": "التي",
-        "translit": "allati",
-        "en": "who (feminine)",
+        "translit": "allatī",
+        "en": "who / that / which (feminine)",
         "ur": "جو (مؤنث)"
+      },
+      "explanation_on_wrong": {
+        "en": "أُمّ is feminine, so the connector is الَّتِي.",
+        "ur": "أُمّ مؤنث ہے، اس لیے جوڑنے والا لفظ الَّتِي ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch08-l04-ex05",
+      "prompt": {
+        "ar": "أُمِّي فِي الْبَيْتِ",
+        "ar_plain": "أمي في البيت",
+        "translit": "ummī fī l-bayti",
+        "en": "My mother is in the house.",
+        "ur": "میری ماں گھر میں ہے۔"
+      },
+      "options": [
+        {
+          "en": "My mother is in the house.",
+          "ur": "میری ماں گھر میں ہے۔"
+        },
+        {
+          "en": "My mother returned to the house.",
+          "ur": "میری ماں گھر لوٹ آئی۔"
+        },
+        {
+          "en": "His mother is in the house.",
+          "ur": "اس کی ماں گھر میں ہے۔"
+        },
+        {
+          "en": "my mother who is in the house",
+          "ur": "میری ماں جو گھر میں ہے"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "أُمِّي فِي الْبَيْتِ is a complete nominal sentence: my mother is in the house.",
+        "ur": "أُمِّي فِي الْبَيْتِ ایک مکمل اسمی جملہ ہے: میری ماں گھر میں ہے۔"
       },
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch08-l04-ex05",
+      "id": "ch08-l04-ex06",
       "target_translation": {
-        "en": "my mother is in the house",
-        "ur": "میری ماں گھر میں ہے"
+        "en": "My mother returned to the house.",
+        "ur": "میری ماں گھر لوٹ آئی۔"
       },
       "tiles": [
         {
-          "ar": "أُمِّي",
-          "ar_plain": "امي",
-          "translit": "ummi",
+          "ar": "رَجَعَتْ",
+          "ar_plain": "رجعت",
+          "translit": "rajaʿat",
+          "en": "she returned",
+          "ur": "وہ لوٹی"
+        },
+        {
+          "ar": "أُمِّي",
+          "ar_plain": "أمي",
+          "translit": "ummī",
           "en": "my mother",
           "ur": "میری ماں"
         },
         {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fi",
-          "en": "in",
-          "ur": "میں"
+          "ar": "إِلَى الْبَيْتِ",
+          "ar_plain": "إلى البيت",
+          "translit": "ilā l-bayti",
+          "en": "to the house",
+          "ur": "گھر کی طرف"
         },
         {
-          "ar": "البَيْتِ",
-          "ar_plain": "البيت",
-          "translit": "al-bayt",
-          "en": "the house",
-          "ur": "گھر"
-        },
-        {
-          "ar": "ذَهَبَتْ",
-          "ar_plain": "ذهبت",
-          "translit": "dhahabat",
-          "en": "she went",
-          "ur": "وہ گئی"
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who / that / which (feminine)",
+          "ur": "جو (مؤنث)"
         }
       ],
       "correct_order": [
@@ -264,77 +432,108 @@
         1,
         2
       ],
+      "explanation_on_wrong": {
+        "en": "Feminine verb, then the doer, then the destination: رَجَعَتْ أُمِّي إِلَى الْبَيْتِ.",
+        "ur": "پہلے مؤنث فعل، پھر کام کرنے والی، پھر منزل: رَجَعَتْ أُمِّي إِلَى الْبَيْتِ۔"
+      },
       "xp_value": 1
     },
     {
       "type": "GRAMMAR_PARSE",
-      "id": "ch08-l04-ex06",
-      "sentence_ar": "أُمِّي الَّتِي رَجَعَتْ",
+      "id": "ch08-l04-ex07",
+      "sentence_ar": "أُمِّي الَّتِي رَجَعَتْ",
       "words": [
         {
-          "ar": "أُمِّي",
-          "ar_plain": "امي",
-          "translit": "ummi",
+          "ar": "أُمِّي",
+          "ar_plain": "أمي",
+          "translit": "ummī",
           "en": "my mother",
           "ur": "میری ماں"
         },
         {
-          "ar": "الَّتِي",
+          "ar": "الَّتِي",
           "ar_plain": "التي",
-          "translit": "allati",
-          "en": "who",
-          "ur": "جو"
+          "translit": "allatī",
+          "en": "who / that / which (feminine)",
+          "ur": "جو (مؤنث)"
         },
         {
           "ar": "رَجَعَتْ",
           "ar_plain": "رجعت",
-          "translit": "rajaat",
+          "translit": "rajaʿat",
           "en": "she returned",
           "ur": "وہ لوٹی"
         }
       ],
       "available_roles": [
-        "SUBJECT",
+        "POSSESSIVE",
         "RELATIVE_PRONOUN",
         "VERB",
-        "POSSESSIVE",
-        "ADJECTIVE"
+        "PREPOSITION"
       ],
       "correct_roles": [
-        "SUBJECT",
+        "POSSESSIVE",
         "RELATIVE_PRONOUN",
         "VERB"
       ],
+      "explanation_on_wrong": {
+        "en": "أُمِّي is the noun with the attached 'my'; الَّتِي is the relative pronoun; رَجَعَتْ is the feminine verb.",
+        "ur": "أُمِّي جڑی ہوئی 'میرا' والا اسم ہے؛ الَّتِي اسمِ موصول ہے؛ رَجَعَتْ مؤنث فعل ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch08-l04-ex08",
+      "statement": {
+        "en": "أُمِّي الَّتِي رَجَعَتْ is a complete sentence.",
+        "ur": "أُمِّي الَّتِي رَجَعَتْ ایک مکمل جملہ ہے۔",
+        "ar_example": {
+          "ar": "أُمِّي الَّتِي رَجَعَتْ",
+          "ar_plain": "أمي التي رجعت",
+          "translit": "ummī llatī rajaʿat",
+          "en": "my mother who returned",
+          "ur": "میری ماں جو لوٹی"
+        }
+      },
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "False: it only identifies 'my mother who returned'. رَجَعَتْ أُمِّي إِلَى الْبَيْتِ is the complete sentence.",
+        "ur": "غلط: یہ صرف 'میری ماں جو لوٹی' کی پہچان کراتی ہے۔ رَجَعَتْ أُمِّي إِلَى الْبَيْتِ مکمل جملہ ہے۔"
+      },
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "أُمّ with attached pronoun",
-      "ar": "أُمٌّ مَعَ الضَّمِير",
-      "ur": "أُمّ ضمیر کے ساتھ"
+      "en": "His mother — أُمُّهُ",
+      "ar": "أُمُّهُ فِي القُرْآن",
+      "ur": "اس کی ماں — أُمُّهُ"
     },
     "ayah": {
       "surah": 5,
       "ayah": 75,
       "label": "Al-Ma'idah 5:75",
-      "ar": "وَأُمُّهُ صِدِّيقَةٌ",
-      "en": "And his mother was a truthful woman.",
+      "ar": "وَأُمُّهُ صِدِّيقَةٌ",
+      "en": "And his mother was a woman of great truth.",
       "ur": "اور ان کی والدہ نہایت سچی خاتون تھیں۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/005075.mp3"
     },
     "highlighted_word_indices": [
       0
     ],
+    "highlighted_words": [
+      "وَأُمُّهُ"
+    ],
     "noor_explanation": {
-      "en": "أُمُّهُ is أُمّ plus the attached pronoun هُ: his mother. You learned the same possession family through كِتَابُهُ and أُمِّي.",
-      "ur": "أُمُّهُ اصل میں أُمّ + هُ ہے: اس کی والدہ۔ یہی ملکیت کا خاندان آپ نے كِتَابُهُ اور أُمِّي میں سیکھا۔"
+      "en": "Read وَأُمُّهُ صِدِّيقَةٌ: 'and his mother was a deeply truthful woman'. أُمّ is feminine, هُ is 'his', and صِدِّيقَةٌ describes her. You can now read a feminine noun, its owner, and its description in one breath.",
+      "ur": "وَأُمُّهُ صِدِّيقَةٌ — 'اور اس کی والدہ نہایت سچی خاتون تھیں'۔ أُمّ مؤنث ہے، هُ 'اس کا' ہے، اور صِدِّيقَةٌ ان کی صفت ہے۔ اب آپ ایک مؤنث اسم، اس کا مالک اور اس کی وضاحت ایک سانس میں پڑھ سکتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 8 complete. You can now read feminine verbs, الَّتِي, and family phrases like أُمِّي.",
-      "ur": "باب 8 مکمل۔ آپ اب مؤنث افعال، الَّتِي، اور أُمِّي جیسے خاندانی جملے پڑھ سکتے ہیں۔"
+      "en": "You can now combine 'my', the feminine relative pronoun and a feminine past verb, and tell a phrase from a complete sentence. The review brings the whole chapter together.",
+      "ur": "اب آپ 'میرا'، مؤنث اسمِ موصول اور مؤنث ماضی فعل کو ملا سکتے ہیں، اور ترکیب اور مکمل جملے میں فرق کر سکتے ہیں۔ مراجعہ پورے باب کو یکجا کرتا ہے۔"
     }
   }
 }

@@ -332,9 +332,26 @@ Everything below this list is either done and verified, or one of these:
    only learner who had finished either chapter was the owner's test account,
    backfilled with `progress:backfill-skipped`. Deviations are listed at the
    end of each proposal. **Chapter 8 (`Docs/proposals/chapter-08-content-proposal.md`,
-   feminine past verbs + `الَّتِي`) was approved by the owner 2026-09-18 and is
-   next: implement in isolated staging, verify, then a scoped
-   `content:promote-chapter-eight -- --apply`.** After every chapter promotion
+   feminine past verbs + `الَّتِي`) was approved 2026-09-18 and is implemented
+   in isolated staging (2026-09-18)**: `ch08-l01..l04` rewritten in place
+   (9/9/10/9 cards, 7/7/7/8 exercises), `ch08-l05` review and `ch08-test`
+   (12 MC, 80 %) added; fixtures/Urdu/Quran audits clean, catalogue clips
+   generated, `bint` + `qarya` copied from the dictionary set. Verified on the
+   emulator against staging (Lesson 1 end to end, every card of Lessons 2–4
+   and the review, test intro) and through the API on a fresh account (test
+   locked until the five lessons are done, 0/12 and 9/12 fail, 10/12 passes and
+   completes the chapter). Two player-driven content rules learned here, now
+   recorded in the proposal's implementation notes: any EN string the player
+   renders without a forced direction (`MATCH_AYAH` options, hook
+   `noor_intro`, reveal `noor_explanation`) must begin with English, and a
+   `CONTRAST` card needs `concept.ar` or it renders blank. **Awaits owner
+   approval to run `content:promote-chapter-eight -- --apply` against
+   production**, then `progress:backfill-skipped` for the test account and
+   `content:backfill-new-lessons -- --lesson-ids ch08-l05,ch08-test`.
+   Untracked proposals for Chapters 9 and 10 appeared in the tree 2026-09-18
+   (owner-authored, not yet reviewed). Observation: `GET /api/lessons/{id}`
+   returns `assessment.questions[].correct_index` for every chapter test; the
+   app ignores it and the server grades, but it is a visible answer key. After every chapter promotion
    that adds lesson ids, re-run `progress:backfill-skipped` for the owner's
    test account and `content:backfill-new-lessons` for everyone else.
    Approved UI follow-up (Pen-first): the chapter-test intro card shows a

@@ -88,6 +88,22 @@ Lesson 5 classroom scene lands on the review card that recaps the question set.
 | 4 | `ch07-four-people-have.png` | `ch07-l04` cards 1, 9 · `ch07-l06` card 7 | عِنْدِي / عِنْدَكَ / عِنْدَكِ / عِنْدَهُ / عِنْدَهَا | Four people in a row, each with or without a pen/book, communicating "I have / you have / he has / she has"; neutral, no stereotypes. |
 | 5 | `ch07-classroom-questions.png` | `ch07-l06` card 8 | مَا، مَنْ، أَيْنَ / أَعِنْدَكَ قَلَمٌ؟ | Two learners in a lesson, one gesturing at an object as if asking about it, the other checking whether a pen is available; no speech bubbles. |
 
+## Chapter 8 — open (4 scenes)
+
+Briefs from `proposals/chapter-08-content-proposal.md` §5 (one per lesson).
+Cards whose word has an approved asset already show one (`dhahaba`, `madrasa`,
+`umm`, `bayt`, and `bint` + `qarya` — the last two copied from the dictionary
+set on 2026-09-18). The review reuses the Chapter 8 assets, as the proposal
+asks. The rejected `qāla` dictionary badge (generated Arabic lettering) was not
+used.
+
+| # | Filename | Cards | Arabic on the card | Brief |
+|---|---|---|---|---|
+| 1 | `ch08-he-she-movement.png` | `ch08-l01` cards 4, 6 | ذَهَبَ / ذَهَبَتْ · ذَهَبَتْ فَاطِمَةُ | A man and a woman each completing the same walking-away action, side by side, so the only difference is who is going; no lettering. |
+| 2 | `ch08-she-returned-sat-entered.png` | `ch08-l02` cards 1, 6 | رَجَعَتْ · جَلَسَتْ · دَخَلَتْ | Three panels, one consistent female character: returning along a path, sitting, and stepping through a doorway; no labels. |
+| 3 | `ch08-allati-connector-panels.png` | `ch08-l03` cards 4, 8 | الْبِنْتُ الَّتِي ذَهَبَتْ · الْمَدْرَسَةُ الَّتِي فِي الْقَرْيَةِ | Two panels: a girl visibly linked (path or thread) to a going-away scene; a school visibly linked to a village — "the one who / that …" without words. |
+| 4 | `ch08-mother-returning-home.png` | `ch08-l04` cards 6, 7 | رَجَعَتْ أُمِّي إِلَى الْبَيْتِ · أُمِّي الَّتِي رَجَعَتْ | A mother arriving back at a family house, supporting both "my mother returned home" and "my mother who returned"; no speech bubbles. |
+
 ## Delivered
 
 _Nothing yet._
