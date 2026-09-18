@@ -323,27 +323,24 @@ Everything below this list is either done and verified, or one of these:
    across the R8 keep rules, native modules and the illustration pipeline —
    not worth it for a dashboard label. Do not list this as open again; take
    the upgrade when a feature needs it or SDK 54 loses support.
-2. **Curriculum rebuild, Chapters 8 onward** (owner, in Studio). **Chapter 6
-   is implemented in isolated staging (2026-09-17)** from
-   `Docs/proposals/chapter-06-content-proposal.md` and **Chapter 7 is
-   implemented in isolated staging (2026-09-18)** from
-   `Docs/proposals/chapter-07-content-proposal.md`: `ch07-l01..l04` rewritten
-   in place (9 cards / 7–8 exercises each), `ch07-l05` extended with the
-   female-addressee question and a second dialogue pass, `ch07-l06` review and
-   `ch07-test` (12 MC questions, 80 %) added; fixtures/Urdu/Quran audits clean,
-   one phrase clip and 11 catalogue clips generated, `images/discover/ism.webp`
-   copied from the dictionary set. Verified on the emulator against staging
-   (Lesson 1 end to end in Urdu; every Discover card of Lessons 2–4 and the
-   review, all seven spoken phrases and the five-line dialogue, and the test
-   intro/first question in English) and through the API (test locked until
-   the six items are done, 0/12 and 9/12 fail without unlocking Chapter 8,
-   12/12 passes, chapter completes, Chapter 8 unlocks). **Both chapters await
-   owner approval to run `content:promote-chapter-six -- --apply` and
-   `content:promote-chapter-seven -- --apply` against production** (in that
-   order); deviations are listed at the end of each proposal. Observation, not
-   a Chapter 7 defect: the chapter-test intro card shows a hard-coded
-   `هَذَا • ذَٰلِكَ • هَذِهِ • تِلْكَ` strip on every chapter
-   (`warsh-app/app/(app)/chapter-test/[lessonId].tsx`). Chapter 5's
+2. **Curriculum rebuild, Chapters 8 onward.** **Chapters 6 and 7 are live in
+   production (promoted 2026-09-18** with `content:promote-chapter-six` and
+   `content:promote-chapter-seven`, in that order; the promote scripts update
+   `ch06-l01..l04` / `ch07-l01..l05` in place so learner progress stays
+   attached, and only the review + final-test lessons are new ids). R2 audio
+   audit after promotion: 3702/3702, missing 0. `content:check` clean. The
+   only learner who had finished either chapter was the owner's test account,
+   backfilled with `progress:backfill-skipped`. Deviations are listed at the
+   end of each proposal. **Chapter 8 (`Docs/proposals/chapter-08-content-proposal.md`,
+   feminine past verbs + `الَّتِي`) was approved by the owner 2026-09-18 and is
+   next: implement in isolated staging, verify, then a scoped
+   `content:promote-chapter-eight -- --apply`.** After every chapter promotion
+   that adds lesson ids, re-run `progress:backfill-skipped` for the owner's
+   test account and `content:backfill-new-lessons` for everyone else.
+   Approved UI follow-up (Pen-first): the chapter-test intro card shows a
+   hard-coded `هَذَا • ذَٰلِكَ • هَذِهِ • تِلْكَ` strip on every chapter
+   (`warsh-app/app/(app)/chapter-test/[lessonId].tsx`); owner wants it
+   chapter-specific. Chapter 5's
    six composite-scene illustrations are owner deliverables tracked in
    `Docs/lesson-illustrations-needed.md` (+ `.csv` manifest; delivery lands via
    `npm run images:upload-lessons`, added 2026-09-17). From now on every chapter
