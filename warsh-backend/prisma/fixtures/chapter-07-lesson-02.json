@@ -2,10 +2,11 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 7, Lesson 2 - attached singular pronouns كَ and كِ for 'your'. Quranic reveal: ربك in Al-Alaq 96:1. Authored against warsh-content-schema.ts v1.0.",
+    "_note": "Chapter 7, display lesson 2 (ch07-l02) — attached كَ (male addressee) and كِ (female addressee) for 'your'. Quran hook: رَبِّكَ in Al-Alaq 96:1. Rebuilt 2026-09-18 from Docs/proposals/chapter-07-content-proposal.md.",
+    "titleUr": "تمہارا — جڑی ہوئی كَ اور كِ",
     "chapter_order": 7,
     "lesson_order": 2,
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
@@ -19,8 +20,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096001.mp3"
     },
     "noor_intro": {
-      "en": "The first revealed word led straight to رَبِّكَ - your Lord. Today you learn how كَ and كِ attach to nouns for 'your'.",
-      "ur": "وحی کا پہلا لفظ فوراً رَبِّكَ تک لے گیا - آپ کا رب۔ آج آپ سیکھیں گے کہ كَ اور كِ اسموں کے ساتھ 'تمہارا' کے لیے کیسے لگتے ہیں۔"
+      "en": "The first revealed words lead straight to رَبِّكَ — your Lord. Today you learn how كَ and كِ attach to a noun for 'your', and how the ending tells you whether a man or a woman is being addressed.",
+      "ur": "وحی کے پہلے الفاظ سیدھے رَبِّكَ تک لے جاتے ہیں — تمہارا رب۔ آج آپ سیکھیں گے کہ كَ اور كِ 'تمہارا' کے لیے اسم سے کیسے جڑتے ہیں، اور آخر کی علامت کیسے بتاتی ہے کہ مخاطب مرد ہے یا عورت۔"
     },
     "autoplay": true
   },
@@ -28,24 +29,59 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Your - attached كَ and كِ",
-        "ar": "كَافُ الْخِطَاب",
-        "ur": "تمہارا - جڑی ہوئی ك"
+        "en": "Your — attached كَ (male addressee)",
+        "ar": "كَافُ الْخِطَاب لِلْمُذَكَّر",
+        "ur": "تمہارا — جڑی ہوئی كَ (مذکر مخاطب)"
       },
       "explanation": {
-        "en": "When speaking to a man, Arabic attaches كَ. When speaking to a woman, Arabic attaches كِ.\n\nكِتَابُكَ - your book (to a man)\nكِتَابُكِ - your book (to a woman)\nرَبُّكَ - your Lord",
-        "ur": "مرد سے خطاب ہو تو عربی كَ لگاتی ہے۔ عورت سے خطاب ہو تو كِ لگاتی ہے۔\n\nكِتَابُكَ - تمہاری کتاب (مرد سے)\nكِتَابُكِ - تمہاری کتاب (عورت سے)\nرَبُّكَ - تمہارا رب"
-      }
+        "en": "When speaking to a man, Arabic attaches كَ (with fatḥa) to the noun: كِتَابُكَ, your book.",
+        "ur": "جب مرد سے بات ہو تو عربی اسم کے ساتھ كَ (فتحہ کے ساتھ) جوڑتی ہے: كِتَابُكَ، تمہاری کتاب۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابُكَ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuka",
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Your — attached كِ (female addressee)",
+        "ar": "كَافُ الْخِطَاب لِلْمُؤَنَّث",
+        "ur": "تمہارا — جڑی ہوئی كِ (مؤنث مخاطب)"
+      },
+      "explanation": {
+        "en": "When speaking to a woman, the same letter takes a kasra: كِتَابُكِ, your book. The meaning is the same; only the listener changes.",
+        "ur": "جب عورت سے بات ہو تو وہی حرف کسرہ لیتا ہے: كِتَابُكِ، تمہاری کتاب۔ معنی وہی ہے؛ صرف مخاطب بدلتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابُكِ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuki",
+          "en": "your book (female addressee)",
+          "ur": "تمہاری کتاب (مؤنث مخاطب)"
+        }
+      ]
     },
     {
       "type": "WORD",
       "text": {
         "ar": "كِتَابُكَ",
         "ar_plain": "كتابك",
-        "translit": "kitabuka",
-        "en": "your book (to a man)",
-        "ur": "تمہاری کتاب (مرد سے)"
+        "translit": "kitābuka",
+        "en": "your book (male addressee)",
+        "ur": "تمہاری کتاب (مذکر مخاطب)"
       },
+      "explanation": {
+        "en": "Said to a man. Listen for the fatḥa on the ك.",
+        "ur": "مرد سے کہا جاتا ہے۔ ك پر فتحہ سنیں۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/kitab.webp",
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/kitabuka.mp3"
     },
     {
@@ -53,22 +89,52 @@
       "text": {
         "ar": "كِتَابُكِ",
         "ar_plain": "كتابك",
-        "translit": "kitabuki",
-        "en": "your book (to a woman)",
-        "ur": "تمہاری کتاب (عورت سے)"
+        "translit": "kitābuki",
+        "en": "your book (female addressee)",
+        "ur": "تمہاری کتاب (مؤنث مخاطب)"
       },
+      "explanation": {
+        "en": "Said to a woman. Listen for the kasra on the ك.",
+        "ur": "عورت سے کہا جاتا ہے۔ ك پر کسرہ سنیں۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/kitab.webp",
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/kitabuki.mp3"
     },
     {
-      "type": "WORD",
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Your name — اِسْمُكَ / اِسْمُكِ",
+        "ur": "تمہارا نام — اِسْمُكَ / اِسْمُكِ"
+      },
       "text": {
-        "ar": "اسْمُكَ",
+        "ar": "اِسْمُكَ",
         "ar_plain": "اسمك",
         "translit": "ismuka",
-        "en": "your name",
-        "ur": "تمہارا نام"
+        "en": "your name (male addressee)",
+        "ur": "تمہارا نام (مذکر مخاطب)"
       },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ismuka.mp3"
+      "explanation": {
+        "en": "Same noun, two listeners. مَا اسْمُكَ؟ asks a man his name; مَا اسْمُكِ؟ asks a woman. You will use these when you meet someone.",
+        "ur": "ایک اسم، دو مخاطب۔ مَا اسْمُكَ؟ مرد سے نام پوچھتا ہے؛ مَا اسْمُكِ؟ عورت سے۔ کسی سے ملتے وقت آپ یہی استعمال کریں گے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/ism.webp",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ismuka.mp3",
+      "examples": [
+        {
+          "ar": "اِسْمُكَ",
+          "ar_plain": "اسمك",
+          "translit": "ismuka",
+          "en": "your name (male addressee)",
+          "ur": "تمہارا نام (مذکر مخاطب)"
+        },
+        {
+          "ar": "اِسْمُكِ",
+          "ar_plain": "اسمك",
+          "translit": "ismuki",
+          "en": "your name (female addressee)",
+          "ur": "تمہارا نام (مؤنث مخاطب)"
+        }
+      ]
     },
     {
       "type": "WORD",
@@ -76,36 +142,96 @@
         "ar": "رَبُّكَ",
         "ar_plain": "ربك",
         "translit": "rabbuka",
-        "en": "your Lord",
-        "ur": "تمہارا رب"
+        "en": "your Lord (male addressee)",
+        "ur": "تمہارا رب (مذکر مخاطب)"
+      },
+      "explanation": {
+        "en": "رَبّ + كَ. In the hook ayah the same word appears as رَبِّكَ, because بِاسْمِ pulls the ending vowel to a kasra; the كَ is unchanged.",
+        "ur": "رَبّ + كَ۔ آیت میں یہی لفظ رَبِّكَ ہے، کیونکہ بِاسْمِ آخری حرکت کو کسرہ کر دیتا ہے؛ كَ ویسی ہی رہتی ہے۔"
       },
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/rabbuka.mp3"
     },
     {
       "type": "CONTRAST",
       "concept": {
-        "en": "My vs Your",
+        "en": "My vs your",
         "ar": "يَاءُ الْمُتَكَلِّم وَكَافُ الْخِطَاب",
         "ur": "میرا اور تمہارا"
       },
       "explanation": {
-        "en": "كِتَابِي points to the speaker: my book. كِتَابُكَ points to the listener: your book. The ending tells you whose book it is.",
-        "ur": "كِتَابِي بولنے والے کی طرف اشارہ کرتا ہے: میری کتاب۔ كِتَابُكَ سننے والے کی طرف اشارہ کرتا ہے: تمہاری کتاب۔ آخر کی علامت بتاتی ہے کہ کتاب کس کی ہے۔"
+        "en": "Three endings, three people: كِتَابِي points to the speaker, كِتَابُكَ to a male listener, كِتَابُكِ to a female listener. The noun never changes; the ending does.",
+        "ur": "تین علامتیں، تین شخص: كِتَابِي بولنے والے کی طرف، كِتَابُكَ مذکر مخاطب کی طرف، كِتَابُكِ مؤنث مخاطب کی طرف اشارہ کرتا ہے۔ اسم کبھی نہیں بدلتا؛ علامت بدلتی ہے۔"
       },
       "examples": [
         {
           "ar": "كِتَابِي",
           "ar_plain": "كتابي",
-          "translit": "kitabi",
+          "translit": "kitābī",
           "en": "my book",
           "ur": "میری کتاب"
         },
         {
           "ar": "كِتَابُكَ",
           "ar_plain": "كتابك",
-          "translit": "kitabuka",
-          "en": "your book",
-          "ur": "تمہاری کتاب"
+          "translit": "kitābuka",
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
+        },
+        {
+          "ar": "كِتَابُكِ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuki",
+          "en": "your book (female addressee)",
+          "ur": "تمہاری کتاب (مؤنث مخاطب)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Still definite",
+        "ar": "مَا زَالَ الِاسْمُ مَعْرِفَةً",
+        "ur": "اسم اب بھی معرفہ ہے"
+      },
+      "explanation": {
+        "en": "Just like كِتَابِي, the noun with كَ or كِ is definite: كِتَابُكَ is 'your book', never 'a your book'. No tanwīn, no الـ.",
+        "ur": "كِتَابِي کی طرح كَ یا كِ والا اسم معرفہ ہے: كِتَابُكَ 'تمہاری کتاب' ہے، 'ایک تمہاری کتاب' کبھی نہیں۔ نہ تنوین، نہ الـ۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابُكِ جَدِيدٌ",
+          "ar_plain": "كتابك جديد",
+          "translit": "kitābuki jadīdun",
+          "en": "Your book is new. (female addressee)",
+          "ur": "تمہاری کتاب نئی ہے۔ (مؤنث مخاطب)"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "بِاسْمِ رَبِّكَ",
+        "ar_plain": "باسم ربك",
+        "translit": "bismi rabbika",
+        "en": "in the name of your Lord",
+        "ur": "اپنے رب کے نام سے"
+      },
+      "explanation": {
+        "en": "Find كَ in رَبِّكَ and read the whole phrase: بِاسْمِ رَبِّكَ — in the name of your Lord. The listener addressed here is the Prophet ﷺ.",
+        "ur": "رَبِّكَ میں كَ تلاش کریں اور پوری ترکیب پڑھیں: بِاسْمِ رَبِّكَ — اپنے رب کے نام سے۔ یہاں مخاطب نبی ﷺ ہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096001.mp3",
+      "examples": [
+        {
+          "ar": "بِاسْمِ رَبِّكَ",
+          "ar_plain": "باسم ربك",
+          "translit": "bismi rabbika",
+          "en": "in the name of your Lord",
+          "ur": "اپنے رب کے نام سے"
         }
       ]
     }
@@ -117,14 +243,18 @@
       "prompt": {
         "ar": "كِتَابُكَ",
         "ar_plain": "كتابك",
-        "translit": "kitabuka",
-        "en": "your book",
-        "ur": "تمہاری کتاب"
+        "translit": "kitābuka",
+        "en": "your book (male addressee)",
+        "ur": "تمہاری کتاب (مذکر مخاطب)"
       },
       "options": [
         {
-          "en": "your book",
-          "ur": "تمہاری کتاب"
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
+        },
+        {
+          "en": "your book (female addressee)",
+          "ur": "تمہاری کتاب (مؤنث مخاطب)"
         },
         {
           "en": "my book",
@@ -133,61 +263,69 @@
         {
           "en": "his book",
           "ur": "اس کی کتاب"
-        },
-        {
-          "en": "the book",
-          "ur": "کتاب"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The fatḥa on كَ marks a male addressee: كِتَابُكَ.",
+        "ur": "كَ پر فتحہ مذکر مخاطب کی علامت ہے: كِتَابُكَ۔"
+      },
       "xp_value": 1
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch07-l02-ex02",
       "prompt": {
-        "ar": "رَبُّكَ",
-        "ar_plain": "ربك",
-        "translit": "rabbuka",
-        "en": "your Lord",
-        "ur": "تمہارا رب"
+        "ar": "كِتَابُكِ",
+        "ar_plain": "كتابك",
+        "translit": "kitābuki",
+        "en": "your book (female addressee)",
+        "ur": "تمہاری کتاب (مؤنث مخاطب)"
       },
       "options": [
         {
-          "en": "your Lord",
-          "ur": "تمہارا رب"
+          "en": "your book (female addressee)",
+          "ur": "تمہاری کتاب (مؤنث مخاطب)"
         },
         {
-          "en": "my Lord",
-          "ur": "میرا رب"
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
         },
         {
-          "en": "his Lord",
-          "ur": "اس کا رب"
+          "en": "my book",
+          "ur": "میری کتاب"
         },
         {
-          "en": "our Lord",
-          "ur": "ہمارا رب"
+          "en": "her book",
+          "ur": "اس کی کتاب (مؤنث مالک)"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The kasra on كِ marks a female addressee: كِتَابُكِ.",
+        "ur": "كِ پر کسرہ مؤنث مخاطب کی علامت ہے: كِتَابُكِ۔"
+      },
       "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch07-l02-ex03",
       "statement": {
-        "en": "كِتَابُكَ and كِتَابُكِ both mean 'your book', but they address different listeners.",
-        "ur": "كِتَابُكَ اور كِتَابُكِ دونوں کا معنی 'تمہاری کتاب' ہے، مگر مخاطب مختلف ہے۔",
+        "en": "Both كِتَابُكَ and كِتَابُكِ mean 'your book'; they differ only in who is being addressed.",
+        "ur": "كِتَابُكَ اور كِتَابُكِ دونوں کا معنی 'تمہاری کتاب' ہے؛ فرق صرف مخاطب کا ہے۔",
         "ar_example": {
           "ar": "كِتَابُكَ / كِتَابُكِ",
           "ar_plain": "كتابك كتابك",
-          "translit": "kitabuka / kitabuki",
+          "translit": "kitābuka / kitābuki",
           "en": "your book",
           "ur": "تمہاری کتاب"
         }
       },
       "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True: the same meaning; كَ addresses a man and كِ addresses a woman.",
+        "ur": "درست: معنی ایک ہے؛ كَ مرد سے خطاب ہے اور كِ عورت سے۔"
+      },
       "xp_value": 1
     },
     {
@@ -196,79 +334,135 @@
       "mode": "TAP",
       "sentence_ar": "مَا ___؟",
       "hint": {
-        "en": "What is your name?",
-        "ur": "تمہارا نام کیا ہے؟"
+        "en": "What is your name? (asking a man)",
+        "ur": "تمہارا نام کیا ہے؟ (مرد سے پوچھتے ہوئے)"
       },
       "options": [
         {
-          "ar": "اسْمُكَ",
+          "ar": "اِسْمُكَ",
           "ar_plain": "اسمك",
           "translit": "ismuka",
-          "en": "your name",
-          "ur": "تمہارا نام"
+          "en": "your name (male addressee)",
+          "ur": "تمہارا نام (مذکر مخاطب)"
         },
         {
-          "ar": "اسْمِي",
+          "ar": "اِسْمُكِ",
+          "ar_plain": "اسمك",
+          "translit": "ismuki",
+          "en": "your name (female addressee)",
+          "ur": "تمہارا نام (مؤنث مخاطب)"
+        },
+        {
+          "ar": "اِسْمِي",
           "ar_plain": "اسمي",
-          "translit": "ismi",
+          "translit": "ismī",
           "en": "my name",
           "ur": "میرا نام"
         },
         {
           "ar": "كِتَابُكَ",
           "ar_plain": "كتابك",
-          "translit": "kitabuka",
-          "en": "your book",
-          "ur": "تمہاری کتاب"
-        },
-        {
-          "ar": "رَبُّهُ",
-          "ar_plain": "ربه",
-          "translit": "rabbuhu",
-          "en": "his Lord",
-          "ur": "اس کا رب"
+          "translit": "kitābuka",
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
         }
       ],
       "correct_answer": {
-        "ar": "اسْمُكَ",
+        "ar": "اِسْمُكَ",
         "ar_plain": "اسمك",
         "translit": "ismuka",
-        "en": "your name",
-        "ur": "تمہارا نام"
+        "en": "your name (male addressee)",
+        "ur": "تمہارا نام (مذکر مخاطب)"
+      },
+      "explanation_on_wrong": {
+        "en": "Asking a man takes كَ: مَا اسْمُكَ؟",
+        "ur": "مرد سے پوچھنے میں كَ آتی ہے: مَا اسْمُكَ؟"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch07-l02-ex05",
+      "mode": "TAP",
+      "sentence_ar": "مَا ___؟",
+      "hint": {
+        "en": "What is your name? (asking a woman)",
+        "ur": "تمہارا نام کیا ہے؟ (عورت سے پوچھتے ہوئے)"
+      },
+      "options": [
+        {
+          "ar": "اِسْمُكِ",
+          "ar_plain": "اسمك",
+          "translit": "ismuki",
+          "en": "your name (female addressee)",
+          "ur": "تمہارا نام (مؤنث مخاطب)"
+        },
+        {
+          "ar": "اِسْمُكَ",
+          "ar_plain": "اسمك",
+          "translit": "ismuka",
+          "en": "your name (male addressee)",
+          "ur": "تمہارا نام (مذکر مخاطب)"
+        },
+        {
+          "ar": "اِسْمِي",
+          "ar_plain": "اسمي",
+          "translit": "ismī",
+          "en": "my name",
+          "ur": "میرا نام"
+        },
+        {
+          "ar": "كِتَابُكِ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuki",
+          "en": "your book (female addressee)",
+          "ur": "تمہاری کتاب (مؤنث مخاطب)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اِسْمُكِ",
+        "ar_plain": "اسمك",
+        "translit": "ismuki",
+        "en": "your name (female addressee)",
+        "ur": "تمہارا نام (مؤنث مخاطب)"
+      },
+      "explanation_on_wrong": {
+        "en": "Asking a woman takes كِ: مَا اسْمُكِ؟",
+        "ur": "عورت سے پوچھنے میں كِ آتی ہے: مَا اسْمُكِ؟"
       },
       "xp_value": 1
     },
     {
       "type": "MATCHING",
-      "id": "ch07-l02-ex05",
+      "id": "ch07-l02-ex06",
       "left_column": [
         {
           "ar": "كِتَابِي",
           "ar_plain": "كتابي",
-          "translit": "kitabi",
+          "translit": "kitābī",
           "en": "my book",
           "ur": "میری کتاب"
         },
         {
           "ar": "كِتَابُكَ",
           "ar_plain": "كتابك",
-          "translit": "kitabuka",
-          "en": "your book",
-          "ur": "تمہاری کتاب"
+          "translit": "kitābuka",
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
         },
         {
-          "ar": "اسْمُكَ",
-          "ar_plain": "اسمك",
-          "translit": "ismuka",
-          "en": "your name",
-          "ur": "تمہارا نام"
+          "ar": "كِتَابُكِ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuki",
+          "en": "your book (female addressee)",
+          "ur": "تمہاری کتاب (مؤنث مخاطب)"
         },
         {
           "ar": "رَبُّكَ",
           "ar_plain": "ربك",
           "translit": "rabbuka",
-          "en": "your Lord",
-          "ur": "تمہارا رب"
+          "en": "your Lord (male addressee)",
+          "ur": "تمہارا رب (مذکر مخاطب)"
         }
       ],
       "right_column": [
@@ -277,16 +471,16 @@
           "ur": "میری کتاب"
         },
         {
-          "en": "your book",
-          "ur": "تمہاری کتاب"
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
         },
         {
-          "en": "your name",
-          "ur": "تمہارا نام"
+          "en": "your book (female addressee)",
+          "ur": "تمہاری کتاب (مؤنث مخاطب)"
         },
         {
-          "en": "your Lord",
-          "ur": "تمہارا رب"
+          "en": "your Lord (male addressee)",
+          "ur": "تمہارا رب (مذکر مخاطب)"
         }
       ],
       "correct_pairs": [
@@ -311,38 +505,42 @@
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch07-l02-ex06",
+      "id": "ch07-l02-ex07",
       "target_translation": {
-        "en": "your book is large",
-        "ur": "تمہاری کتاب بڑی ہے"
+        "en": "your book is new (said to a woman)",
+        "ur": "تمہاری کتاب نئی ہے (عورت سے کہتے ہوئے)"
       },
       "tiles": [
         {
+          "ar": "كِتَابُكِ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuki",
+          "en": "your book (female addressee)",
+          "ur": "تمہاری کتاب (مؤنث مخاطب)"
+        },
+        {
+          "ar": "جَدِيدٌ",
+          "ar_plain": "جديد",
+          "translit": "jadīdun",
+          "en": "new",
+          "ur": "نیا"
+        },
+        {
           "ar": "كِتَابُكَ",
           "ar_plain": "كتابك",
-          "translit": "kitabuka",
-          "en": "your book",
-          "ur": "تمہاری کتاب"
-        },
-        {
-          "ar": "كَبِيرٌ",
-          "ar_plain": "كبير",
-          "translit": "kabirun",
-          "en": "large",
-          "ur": "بڑا"
-        },
-        {
-          "ar": "كِتَابِي",
-          "ar_plain": "كتابي",
-          "translit": "kitabi",
-          "en": "my book",
-          "ur": "میری کتاب"
+          "translit": "kitābuka",
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
         }
       ],
       "correct_order": [
         0,
         1
       ],
+      "explanation_on_wrong": {
+        "en": "A woman is addressed, so the noun takes كِ: كِتَابُكِ جَدِيدٌ.",
+        "ur": "مخاطب عورت ہے، اس لیے اسم كِ لیتا ہے: كِتَابُكِ جَدِيدٌ۔"
+      },
       "xp_value": 1
     }
   ],
@@ -364,15 +562,18 @@
     "highlighted_word_indices": [
       2
     ],
+    "highlighted_words": [
+      "رَبِّكَ"
+    ],
     "noor_explanation": {
-      "en": "رَبِّكَ is رَبّ plus كَ: your Lord. The same attached pronoun you practised in كِتَابُكَ appears in the first revealed ayah.",
-      "ur": "رَبِّكَ اصل میں رَبّ + كَ ہے: تمہارا رب۔ یہی جڑی ہوئی ضمیر جو آپ نے كِتَابُكَ میں دیکھی، وحی کی پہلی آیت میں آتی ہے۔"
+      "en": "رَبِّكَ is رَبّ plus كَ: your Lord, addressed to a male listener. The same ending you practised in كِتَابُكَ opens the first revealed ayah.",
+      "ur": "رَبِّكَ اصل میں رَبّ + كَ ہے: تمہارا رب، مذکر مخاطب سے۔ وہی علامت جو آپ نے كِتَابُكَ میں مشق کی، وحی کی پہلی آیت میں آتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You now hear the listener inside the ending: كَ for your when addressing a man, كِ for your when addressing a woman.",
-      "ur": "آپ اب آخر کی علامت میں مخاطب کو سن سکتے ہیں: مرد سے خطاب ہو تو كَ، عورت سے خطاب ہو تو كِ۔"
+      "en": "The ending now tells you whether the noun belongs to the speaker or to the person being addressed, and whether that person is a man (كَ) or a woman (كِ).",
+      "ur": "اب آخر کی علامت آپ کو بتاتی ہے کہ اسم بولنے والے کا ہے یا مخاطب کا، اور مخاطب مرد ہے (كَ) یا عورت (كِ)۔"
     }
   }
 }

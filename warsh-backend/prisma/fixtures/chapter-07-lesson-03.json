@@ -2,10 +2,11 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 7, Lesson 3 - attached singular pronouns هُ and هَا for his/her. Quranic reveal: فجورها وتقواها in Ash-Shams 91:8. Authored against warsh-content-schema.ts v1.0.",
+    "_note": "Chapter 7, display lesson 3 (ch07-l03) — attached هُ (his) and هَا (her/its) on nouns; the owner's gender lives in the suffix. Quran hook: فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَاهَا (Ash-Shams 91:8), object vs possessive هَا for recognition only. Rebuilt 2026-09-18 from Docs/proposals/chapter-07-content-proposal.md.",
+    "titleUr": "اس کا اور اس کی — جڑی ہوئی هُ اور هَا",
     "chapter_order": 7,
     "lesson_order": 3,
-    "estimated_minutes": 10,
+    "estimated_minutes": 11,
     "xp_reward": 10
   },
   "hook": {
@@ -19,8 +20,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/091008.mp3"
     },
     "noor_intro": {
-      "en": "This ayah repeats هَا three times. Arabic can attach 'her' directly to a verb or noun. Today we focus on his and her attached to nouns.",
-      "ur": "اس آیت میں هَا تین بار آتا ہے۔ عربی 'اس کا/اس کی' کو فعل یا اسم کے ساتھ جوڑ سکتی ہے۔ آج ہم اسموں کے ساتھ 'اس کا' اور 'اس کی' دیکھیں گے۔"
+      "en": "This ayah ends three words with هَا. Arabic can attach 'his', 'her' or 'its' directly to a noun. Today you learn هُ and هَا on nouns, and you will notice that the Quran can attach the same letters to a verb too.",
+      "ur": "اس آیت کے تین لفظ هَا پر ختم ہوتے ہیں۔ عربی 'اس کا'، 'اس کی' کو براہِ راست اسم سے جوڑ سکتی ہے۔ آج آپ اسموں پر هُ اور هَا سیکھیں گے، اور دیکھیں گے کہ قرآن یہی حروف فعل سے بھی جوڑ سکتا ہے۔"
     },
     "autoplay": true
   },
@@ -28,24 +29,59 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "His and Her - هُ and هَا",
-        "ar": "ضَمِيرُ الْغَائِب وَالْغَائِبَة",
-        "ur": "اس کا اور اس کی"
+        "en": "His — attached هُ",
+        "ar": "ضَمِيرُ الْغَائِب",
+        "ur": "اس کا — جڑی ہوئی هُ (مذکر مالک)"
       },
       "explanation": {
-        "en": "هُ points to a masculine third person: his. هَا points to a feminine third person: her.\n\nكِتَابُهُ - his book\nمَدْرَسَتُهَا - her school\nقَلَمُهُ - his pen\nأُمُّهَا - her mother",
-        "ur": "هُ تیسرے مذکر کی طرف اشارہ کرتا ہے: اس کا۔ هَا تیسرے مؤنث کی طرف اشارہ کرتا ہے: اس کی۔\n\nكِتَابُهُ - اس کی کتاب\nمَدْرَسَتُهَا - اس کا مدرسہ\nقَلَمُهُ - اس کا قلم\nأُمُّهَا - اس کی ماں"
-      }
+        "en": "For a male owner who is not part of the conversation, Arabic attaches هُ to the noun: كِتَابُهُ, his book.",
+        "ur": "جو مذکر مالک گفتگو میں شامل نہ ہو، اس کے لیے عربی اسم سے هُ جوڑتی ہے: كِتَابُهُ، اس کی کتاب (مذکر مالک)۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitābuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب (مذکر مالک)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Her / its — attached هَا",
+        "ar": "ضَمِيرُ الْغَائِبَة",
+        "ur": "اس کی — جڑی ہوئی هَا (مؤنث مالک)"
+      },
+      "explanation": {
+        "en": "For a female owner, or a feminine thing, Arabic attaches هَا: مَدْرَسَتُهَا, her school. The ة of مَدْرَسَة is written and pronounced as ت before the ending.",
+        "ur": "مؤنث مالک، یا مؤنث چیز کے لیے عربی هَا جوڑتی ہے: مَدْرَسَتُهَا، اس کا مدرسہ (مؤنث مالک)۔ علامت سے پہلے مَدْرَسَة کی ة لکھی اور پڑھی ت جاتی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "مَدْرَسَتُهَا",
+          "ar_plain": "مدرستها",
+          "translit": "madrasatuhā",
+          "en": "her school",
+          "ur": "اس کا مدرسہ (مؤنث مالک)"
+        }
+      ]
     },
     {
       "type": "WORD",
       "text": {
         "ar": "كِتَابُهُ",
         "ar_plain": "كتابه",
-        "translit": "kitabuhu",
+        "translit": "kitābuhu",
         "en": "his book",
-        "ur": "اس کی کتاب"
+        "ur": "اس کی کتاب (مذکر مالک)"
       },
+      "explanation": {
+        "en": "كِتَاب + هُ. The owner is a man who is being talked about.",
+        "ur": "كِتَاب + هُ۔ مالک ایک مرد ہے جس کے بارے میں بات ہو رہی ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/kitab.webp",
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/kitabuhu.mp3"
     },
     {
@@ -55,8 +91,13 @@
         "ar_plain": "قلمه",
         "translit": "qalamuhu",
         "en": "his pen",
-        "ur": "اس کا قلم"
+        "ur": "اس کا قلم (مذکر مالک)"
       },
+      "explanation": {
+        "en": "قَلَم + هُ = his pen.",
+        "ur": "قَلَم + هُ = اس کا قلم۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/qalam.webp",
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/qalamuhu.mp3"
     },
     {
@@ -64,10 +105,15 @@
       "text": {
         "ar": "مَدْرَسَتُهَا",
         "ar_plain": "مدرستها",
-        "translit": "madrasatuha",
+        "translit": "madrasatuhā",
         "en": "her school",
-        "ur": "اس کا مدرسہ"
+        "ur": "اس کا مدرسہ (مؤنث مالک)"
       },
+      "explanation": {
+        "en": "مَدْرَسَة + هَا = her school. The owner is a woman; the school itself is not 'feminine' here.",
+        "ur": "مَدْرَسَة + هَا = اس کا مدرسہ۔ مالک عورت ہے؛ یہاں مدرسہ خود 'مؤنث' نہیں کہا جا رہا۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/madrasa.webp",
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/madrasatuha.mp3"
     },
     {
@@ -75,44 +121,97 @@
       "text": {
         "ar": "أُمُّهَا",
         "ar_plain": "أمها",
-        "translit": "ummuha",
+        "translit": "ummuhā",
         "en": "her mother",
-        "ur": "اس کی ماں"
+        "ur": "اس کی ماں (مؤنث مالک)"
       },
+      "explanation": {
+        "en": "أُمّ + هَا = her mother.",
+        "ur": "أُمّ + هَا = اس کی ماں۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/umm.webp",
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/ummuha.mp3"
     },
     {
       "type": "CONTRAST",
       "concept": {
-        "en": "Speaker, listener, absent person",
-        "ar": "مُتَكَلِّم، مُخَاطَب، غَائِب",
-        "ur": "بولنے والا، مخاطب، غائب"
+        "en": "The suffix shows the owner, not the thing",
+        "ar": "الضَّمِيرُ يَدُلُّ عَلَى الْمَالِك",
+        "ur": "علامت مالک کو دکھاتی ہے، چیز کو نہیں"
       },
       "explanation": {
-        "en": "كِتَابِي - my book: the speaker owns it.\nكِتَابُكَ - your book: the listener owns it.\nكِتَابُهُ - his book: someone absent owns it.\nArabic endings track the relationship.",
-        "ur": "كِتَابِي - میری کتاب: بولنے والے کی۔\nكِتَابُكَ - تمہاری کتاب: مخاطب کی۔\nكِتَابُهُ - اس کی کتاب: کسی غائب شخص کی۔\nعربی کے آخر تعلق کو دکھاتے ہیں۔"
+        "en": "Compare كِتَابُهُ and كِتَابُهَا. The book is the same masculine noun both times; only the owner changes — his book, her book. Ask 'whose?', not 'what gender is the thing?'.",
+        "ur": "كِتَابُهُ اور كِتَابُهَا کا موازنہ کریں۔ کتاب دونوں بار وہی مذکر اسم ہے؛ صرف مالک بدلتا ہے — اس کی کتاب (مذکر مالک)، اس کی کتاب (مؤنث مالک)۔ پوچھیں 'کس کی؟'، نہ کہ 'چیز کی جنس کیا ہے؟'۔"
       },
       "examples": [
         {
-          "ar": "كِتَابِي",
-          "ar_plain": "كتابي",
-          "translit": "kitabi",
-          "en": "my book",
-          "ur": "میری کتاب"
-        },
-        {
-          "ar": "كِتَابُكَ",
-          "ar_plain": "كتابك",
-          "translit": "kitabuka",
-          "en": "your book",
-          "ur": "تمہاری کتاب"
-        },
-        {
           "ar": "كِتَابُهُ",
           "ar_plain": "كتابه",
-          "translit": "kitabuhu",
+          "translit": "kitābuhu",
           "en": "his book",
-          "ur": "اس کی کتاب"
+          "ur": "اس کی کتاب (مذکر مالک)"
+        },
+        {
+          "ar": "كِتَابُهَا",
+          "ar_plain": "كتابها",
+          "translit": "kitābuhā",
+          "en": "her book",
+          "ur": "اس کی کتاب (مؤنث مالک)"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "One هَا, two jobs (recognition only)",
+        "ur": "ایک هَا، دو کام (صرف پہچان)"
+      },
+      "text": {
+        "ar": "فُجُورَهَا وَتَقْوَاهَا",
+        "ar_plain": "فجورها وتقواها",
+        "translit": "fujūrahā wa-taqwāhā",
+        "en": "its wickedness and its righteousness",
+        "ur": "اس کی بدی اور اس کی پرہیزگاری"
+      },
+      "explanation": {
+        "en": "In the hook, فُجُورَهَا and تَقْوَاهَا attach هَا to nouns: its wickedness, its righteousness — the possession you are learning. أَلْهَمَهَا attaches the same letters to a verb: inspired it. The word before هَا tells you which job it is doing. You only need to notice this today.",
+        "ur": "آیت میں فُجُورَهَا اور تَقْوَاهَا میں هَا اسموں سے جڑی ہے: اس کی بدی، اس کی پرہیزگاری — یہی ملکیت آپ سیکھ رہے ہیں۔ أَلْهَمَهَا میں وہی حروف فعل سے جڑے ہیں: اس کو سمجھا دی۔ هَا سے پہلے کا لفظ بتاتا ہے کہ وہ کون سا کام کر رہی ہے۔ آج بس اسے پہچاننا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/091008.mp3",
+      "examples": [
+        {
+          "ar": "فُجُورَهَا وَتَقْوَاهَا",
+          "ar_plain": "فجورها وتقواها",
+          "translit": "fujūrahā wa-taqwāhā",
+          "en": "its wickedness and its righteousness",
+          "ur": "اس کی بدی اور اس کی پرہیزگاری"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Checkpoint",
+        "ur": "جانچ"
+      },
+      "text": {
+        "ar": "قَلَمُهُ عَلَى الْمَكْتَبِ",
+        "ar_plain": "قلمه على المكتب",
+        "translit": "qalamuhu ʿalā l-maktabi",
+        "en": "His pen is on the desk.",
+        "ur": "اس کا قلم میز پر ہے۔"
+      },
+      "explanation": {
+        "en": "Read the noun first, then ask 'whose?'. هُ answers 'his'; هَا answers 'her' or 'its'.",
+        "ur": "پہلے اسم پڑھیں، پھر پوچھیں 'کس کا؟'۔ هُ جواب دیتی ہے 'اس کا (مذکر)'؛ هَا جواب دیتی ہے 'اس کا (مؤنث)'۔"
+      },
+      "examples": [
+        {
+          "ar": "قَلَمُهُ عَلَى الْمَكْتَبِ",
+          "ar_plain": "قلمه على المكتب",
+          "translit": "qalamuhu ʿalā l-maktabi",
+          "en": "His pen is on the desk.",
+          "ur": "اس کا قلم میز پر ہے۔"
         }
       ]
     }
@@ -124,14 +223,18 @@
       "prompt": {
         "ar": "كِتَابُهُ",
         "ar_plain": "كتابه",
-        "translit": "kitabuhu",
+        "translit": "kitābuhu",
         "en": "his book",
-        "ur": "اس کی کتاب"
+        "ur": "اس کی کتاب (مذکر مالک)"
       },
       "options": [
         {
           "en": "his book",
-          "ur": "اس کی کتاب"
+          "ur": "اس کی کتاب (مذکر مالک)"
+        },
+        {
+          "en": "her book",
+          "ur": "اس کی کتاب (مؤنث مالک)"
         },
         {
           "en": "my book",
@@ -140,13 +243,13 @@
         {
           "en": "your book",
           "ur": "تمہاری کتاب"
-        },
-        {
-          "en": "her school",
-          "ur": "اس کا مدرسہ"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "هُ marks a male owner: كِتَابُهُ = his book.",
+        "ur": "هُ مذکر مالک کی علامت ہے: كِتَابُهُ = اس کی کتاب (مذکر مالک)۔"
+      },
       "xp_value": 1
     },
     {
@@ -155,93 +258,105 @@
       "prompt": {
         "ar": "مَدْرَسَتُهَا",
         "ar_plain": "مدرستها",
-        "translit": "madrasatuha",
+        "translit": "madrasatuhā",
         "en": "her school",
-        "ur": "اس کا مدرسہ"
+        "ur": "اس کا مدرسہ (مؤنث مالک)"
       },
       "options": [
         {
           "en": "her school",
-          "ur": "اس کا مدرسہ"
+          "ur": "اس کا مدرسہ (مؤنث مالک)"
+        },
+        {
+          "en": "his school",
+          "ur": "اس کا مدرسہ (مذکر مالک)"
         },
         {
           "en": "my school",
           "ur": "میرا مدرسہ"
         },
         {
-          "en": "his pen",
-          "ur": "اس کا قلم"
-        },
-        {
-          "en": "your name",
-          "ur": "تمہارا نام"
+          "en": "her mother",
+          "ur": "اس کی ماں"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "هَا marks a female owner: مَدْرَسَتُهَا = her school.",
+        "ur": "هَا مؤنث مالک کی علامت ہے: مَدْرَسَتُهَا = اس کا مدرسہ (مؤنث مالک)۔"
+      },
       "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch07-l03-ex03",
       "statement": {
-        "en": "هَا at the end of a noun can mean 'her'.",
-        "ur": "اسم کے آخر میں هَا کا معنی 'اس کی' ہو سکتا ہے۔",
+        "en": "In أُمُّهَا, the suffix هَا tells you the owner is female.",
+        "ur": "أُمُّهَا میں علامت هَا بتاتی ہے کہ مالک مؤنث ہے۔",
         "ar_example": {
           "ar": "أُمُّهَا",
           "ar_plain": "أمها",
-          "translit": "ummuha",
+          "translit": "ummuhā",
           "en": "her mother",
-          "ur": "اس کی ماں"
+          "ur": "اس کی ماں (مؤنث مالک)"
         }
       },
       "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True: هَا = her. The suffix describes the owner, not the mother.",
+        "ur": "درست: هَا = اس کی (مؤنث)۔ علامت مالک کو بتاتی ہے، ماں کو نہیں۔"
+      },
       "xp_value": 1
     },
     {
       "type": "FILL_BLANK",
       "id": "ch07-l03-ex04",
       "mode": "TAP",
-      "sentence_ar": "___ عَلَى الْمَكْتَبِ",
+      "sentence_ar": "___ جَدِيدٌ",
       "hint": {
-        "en": "his pen is on the desk",
-        "ur": "اس کا قلم میز پر ہے"
+        "en": "his book is new",
+        "ur": "اس کی کتاب نئی ہے (مذکر مالک)"
       },
       "options": [
         {
-          "ar": "قَلَمُهُ",
-          "ar_plain": "قلمه",
-          "translit": "qalamuhu",
-          "en": "his pen",
-          "ur": "اس کا قلم"
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitābuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب (مذکر مالک)"
         },
         {
-          "ar": "قَلَمِي",
-          "ar_plain": "قلمي",
-          "translit": "qalami",
-          "en": "my pen",
-          "ur": "میرا قلم"
+          "ar": "كِتَابُهَا",
+          "ar_plain": "كتابها",
+          "translit": "kitābuhā",
+          "en": "her book",
+          "ur": "اس کی کتاب (مؤنث مالک)"
+        },
+        {
+          "ar": "كِتَابِي",
+          "ar_plain": "كتابي",
+          "translit": "kitābī",
+          "en": "my book",
+          "ur": "میری کتاب"
         },
         {
           "ar": "كِتَابُكَ",
           "ar_plain": "كتابك",
-          "translit": "kitabuka",
-          "en": "your book",
-          "ur": "تمہاری کتاب"
-        },
-        {
-          "ar": "مَدْرَسَتُهَا",
-          "ar_plain": "مدرستها",
-          "translit": "madrasatuha",
-          "en": "her school",
-          "ur": "اس کا مدرسہ"
+          "translit": "kitābuka",
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
         }
       ],
       "correct_answer": {
-        "ar": "قَلَمُهُ",
-        "ar_plain": "قلمه",
-        "translit": "qalamuhu",
-        "en": "his pen",
-        "ur": "اس کا قلم"
+        "ar": "كِتَابُهُ",
+        "ar_plain": "كتابه",
+        "translit": "kitābuhu",
+        "en": "his book",
+        "ur": "اس کی کتاب (مذکر مالک)"
+      },
+      "explanation_on_wrong": {
+        "en": "A male owner takes هُ: كِتَابُهُ جَدِيدٌ.",
+        "ur": "مذکر مالک کے لیے هُ آتی ہے: كِتَابُهُ جَدِيدٌ۔"
       },
       "xp_value": 1
     },
@@ -252,48 +367,48 @@
         {
           "ar": "كِتَابُهُ",
           "ar_plain": "كتابه",
-          "translit": "kitabuhu",
+          "translit": "kitābuhu",
           "en": "his book",
-          "ur": "اس کی کتاب"
+          "ur": "اس کی کتاب (مذکر مالک)"
         },
         {
           "ar": "قَلَمُهُ",
           "ar_plain": "قلمه",
           "translit": "qalamuhu",
           "en": "his pen",
-          "ur": "اس کا قلم"
+          "ur": "اس کا قلم (مذکر مالک)"
         },
         {
           "ar": "مَدْرَسَتُهَا",
           "ar_plain": "مدرستها",
-          "translit": "madrasatuha",
+          "translit": "madrasatuhā",
           "en": "her school",
-          "ur": "اس کا مدرسہ"
+          "ur": "اس کا مدرسہ (مؤنث مالک)"
         },
         {
           "ar": "أُمُّهَا",
           "ar_plain": "أمها",
-          "translit": "ummuha",
+          "translit": "ummuhā",
           "en": "her mother",
-          "ur": "اس کی ماں"
+          "ur": "اس کی ماں (مؤنث مالک)"
         }
       ],
       "right_column": [
         {
           "en": "his book",
-          "ur": "اس کی کتاب"
+          "ur": "اس کی کتاب (مذکر مالک)"
         },
         {
           "en": "his pen",
-          "ur": "اس کا قلم"
+          "ur": "اس کا قلم (مذکر مالک)"
         },
         {
           "en": "her school",
-          "ur": "اس کا مدرسہ"
+          "ur": "اس کا مدرسہ (مؤنث مالک)"
         },
         {
           "en": "her mother",
-          "ur": "اس کی ماں"
+          "ur": "اس کی ماں (مؤنث مالک)"
         }
       ],
       "correct_pairs": [
@@ -317,42 +432,83 @@
       "xp_value": 1
     },
     {
-      "type": "GRAMMAR_PARSE",
+      "type": "BUILD_SENTENCE",
       "id": "ch07-l03-ex06",
-      "sentence_ar": "كِتَابُهُ جَدِيدٌ",
-      "words": [
+      "target_translation": {
+        "en": "his book is new",
+        "ur": "اس کی کتاب نئی ہے (مذکر مالک)"
+      },
+      "tiles": [
         {
           "ar": "كِتَابُهُ",
           "ar_plain": "كتابه",
-          "translit": "kitabuhu",
+          "translit": "kitābuhu",
           "en": "his book",
-          "ur": "اس کی کتاب"
+          "ur": "اس کی کتاب (مذکر مالک)"
         },
         {
           "ar": "جَدِيدٌ",
           "ar_plain": "جديد",
-          "translit": "jadidun",
+          "translit": "jadīdun",
           "en": "new",
           "ur": "نیا"
+        },
+        {
+          "ar": "مَدْرَسَتُهَا",
+          "ar_plain": "مدرستها",
+          "translit": "madrasatuhā",
+          "en": "her school",
+          "ur": "اس کا مدرسہ (مؤنث مالک)"
         }
       ],
-      "available_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "POSSESSIVE"
+      "correct_order": [
+        0,
+        1
       ],
-      "correct_roles": [
-        "POSSESSIVE",
-        "PREDICATE"
+      "explanation_on_wrong": {
+        "en": "Owner's noun first, then the description: كِتَابُهُ جَدِيدٌ.",
+        "ur": "پہلے مالک والا اسم، پھر وصف: كِتَابُهُ جَدِيدٌ۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch07-l03-ex07",
+      "ayah_fragment": {
+        "ar": "فُجُورَهَا وَتَقْوَاهَا",
+        "surah_ref": "Ash-Shams 91:8"
+      },
+      "options": [
+        {
+          "en": "its wickedness and its righteousness — هَا on nouns = its",
+          "ur": "اس کی بدی اور اس کی پرہیزگاری — اسموں پر هَا = اس کی"
+        },
+        {
+          "en": "inspired it — هَا on a verb = it",
+          "ur": "اس کو سمجھا دی — فعل پر هَا = اس کو"
+        },
+        {
+          "en": "his wickedness and his righteousness — هُ = his",
+          "ur": "اس کی بدی اور اس کی پرہیزگاری (مذکر مالک) — هُ = اس کا"
+        },
+        {
+          "en": "my wickedness and my righteousness — ي = my",
+          "ur": "میری بدی اور میری پرہیزگاری — ي = میری"
+        }
       ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "Both words are nouns ending in هَا, so this is possession: its wickedness and its righteousness. The verb with هَا is أَلْهَمَهَا, not shown here.",
+        "ur": "دونوں لفظ هَا پر ختم ہونے والے اسم ہیں، اس لیے یہ ملکیت ہے: اس کی بدی اور اس کی پرہیزگاری۔ هَا والا فعل أَلْهَمَهَا ہے، جو یہاں نہیں دکھایا گیا۔"
+      },
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Attached هَا for her",
+      "en": "Attached هَا for her / its",
       "ar": "ضَمِيرُ الْغَائِبَة",
-      "ur": "اس کی کے لیے هَا"
+      "ur": "اس کی کے لیے جڑی ہوئی هَا"
     },
     "ayah": {
       "surah": 91,
@@ -364,19 +520,24 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/091008.mp3"
     },
     "highlighted_word_indices": [
+      0,
       1,
-      2,
-      3
+      2
+    ],
+    "highlighted_words": [
+      "فَأَلْهَمَهَا",
+      "فُجُورَهَا",
+      "وَتَقْوَاهَا"
     ],
     "noor_explanation": {
-      "en": "The repeated هَا points back to the soul. فُجُورَهَا and تَقْوَاهَا mean its wickedness and its righteousness. A small attached pronoun holds the ayah together.",
-      "ur": "بار بار آنے والی هَا نفس کی طرف لوٹتی ہے۔ فُجُورَهَا اور تَقْوَاهَا کا معنی ہے اس کی بدی اور اس کی پرہیزگاری۔ ایک چھوٹی جڑی ہوئی ضمیر آیت کو جوڑتی ہے۔"
+      "en": "Every هَا here points back to the soul. On the nouns, فُجُورَهَا and تَقْوَاهَا are 'its wickedness' and 'its righteousness' — the possession you practised. On the verb, أَلْهَمَهَا is 'inspired it'. One small ending holds the whole ayah together.",
+      "ur": "یہاں ہر هَا نفس کی طرف لوٹتی ہے۔ اسموں پر فُجُورَهَا اور تَقْوَاهَا 'اس کی بدی' اور 'اس کی پرہیزگاری' ہیں — وہی ملکیت جس کی آپ نے مشق کی۔ فعل پر أَلْهَمَهَا 'اس کو سمجھا دی' ہے۔ ایک چھوٹی سی علامت پوری آیت کو جوڑے رکھتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now track absent owners: هُ for his, هَا for her. These endings help you follow who belongs to whom inside Quranic phrases.",
-      "ur": "آپ اب غائب مالک کو پہچان سکتے ہیں: هُ اس کا، هَا اس کی۔ یہ آخر قرآن کی ترکیبوں میں تعلق دکھاتے ہیں۔"
+      "en": "You can now follow 'his' and 'her/its' through noun phrases: هُ for a male owner, هَا for a female one. A small ending shows who owns something.",
+      "ur": "اب آپ اسمی ترکیبوں میں 'اس کا' اور 'اس کی' کا پیچھا کر سکتے ہیں: مذکر مالک کے لیے هُ، مؤنث مالک کے لیے هَا۔ ایک چھوٹی سی علامت دکھاتی ہے کہ چیز کس کی ہے۔"
     }
   }
 }

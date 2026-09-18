@@ -72,6 +72,22 @@ word has an approved asset already show one (`rajul`, `walad`, `talib`,
 | 3 | `ch06-place-tool-panels.png` | `ch06-l03` cards 4, 6 | الْكِتَابُ الَّذِي فِي الْبَيْتِ · بِالْقَلَمِ | Three separate panels: a pen on a desk; a book inside a house; an abstract "taught by the pen" teaching scene. |
 | 4 | `ch06-creation-chain.png` | `ch06-l04` cards 4, 8 · `ch06-l05` card 7 | الَّذِي خَلَقَ فَسَوَّىٰ | Four connected stages left to right: creation, balance, measure, guidance — abstract objects only, no depiction of the Divine. |
 
+## Chapter 7 — open (5 scenes)
+
+Briefs from `proposals/chapter-07-content-proposal.md` (one per lesson). Cards
+whose word has an approved asset already show one (`kitab`, `qalam`, `bayt`,
+`madrasa`, `umm`, and `ism` — the last copied from the dictionary set on
+2026-09-18). The spoken-phrase template has no card slot for an image, so the
+Lesson 5 classroom scene lands on the review card that recaps the question set.
+
+| # | Filename | Cards | Arabic on the card | Brief |
+|---|---|---|---|---|
+| 1 | `ch07-my-objects.png` | `ch07-l01` cards 1, 8 | كِتَابِي / قَلَمِي / بَيْتِي | A learner identifying their own objects (book, pen, house, name-card motif) with a subtle "belongs to me" visual link from each object back to the learner. |
+| 2 | `ch07-two-listeners.png` | `ch07-l02` cards 1, 2, 7 | كِتَابُكَ / كِتَابُكِ | One speaker handing the same book toward two distinct listeners, a man and a woman, so the ending visibly depends on whom the speaker addresses. |
+| 3 | `ch07-his-her-owners.png` | `ch07-l03` cards 1, 2, 7 | كِتَابُهُ / مَدْرَسَتُهَا | Two ownership relationships side by side: a man with a book, a woman with a school/home symbol — each object clearly tied to its owner. |
+| 4 | `ch07-four-people-have.png` | `ch07-l04` cards 1, 9 · `ch07-l06` card 7 | عِنْدِي / عِنْدَكَ / عِنْدَكِ / عِنْدَهُ / عِنْدَهَا | Four people in a row, each with or without a pen/book, communicating "I have / you have / he has / she has"; neutral, no stereotypes. |
+| 5 | `ch07-classroom-questions.png` | `ch07-l06` card 8 | مَا، مَنْ، أَيْنَ / أَعِنْدَكَ قَلَمٌ؟ | Two learners in a lesson, one gesturing at an object as if asking about it, the other checking whether a pen is available; no speech bubbles. |
+
 ## Delivered
 
 _Nothing yet._

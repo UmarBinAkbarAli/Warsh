@@ -2,11 +2,12 @@
   "schema_version": "1.0",
   "template": "SPOKEN_PHRASES",
   "_meta": {
-    "_note": "SP2 after Chapter 7 - simple questions using who, what, where, and the attached-pronoun possession patterns already learned.",
+    "_note": "Chapter 7, display lesson 5 (ch07-l05) — SP2 simple questions: what, who, where, and the أَعِنْدَكَ / أَعِنْدَكِ possession question with its answers. sp2-01..06 unchanged; sp2-07 (female addressee) and a second dialogue pass added 2026-09-18 from Docs/proposals/chapter-07-content-proposal.md. لَيْسَ is recognition-only.",
     "chapter_order": 7,
     "lesson_order": 5,
-    "estimated_minutes": 8,
-    "xp_reward": 15
+    "estimated_minutes": 9,
+    "xp_reward": 15,
+    "titleUr": "سادہ سوالات"
   },
   "hook": {
     "ayah": {
@@ -19,8 +20,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020017.mp3"
     },
     "noor_intro": {
-      "en": "Simple Fus'ha questions are built from words you already know: what, who, where, and your attached pronouns.",
-      "ur": "سادہ فصحی سوالات انہی الفاظ سے بنتے ہیں جو آپ جانتے ہیں: کیا، کون، کہاں، اور جڑی ہوئی ضمیریں۔"
+      "en": "Simple Fus'ha questions are built from words you already know: what, who, where, and the attached pronouns from this chapter. In the hook ayah, بِيَمِينِكَ — 'in your right hand' — carries the same كَ you learned in Lesson 2.",
+      "ur": "سادہ فصحی سوالات انہی الفاظ سے بنتے ہیں جو آپ جانتے ہیں: کیا، کون، کہاں، اور اس باب کی جڑی ہوئی ضمیریں۔ آیت میں بِيَمِينِكَ — 'تمہارے دائیں ہاتھ میں' — وہی كَ ہے جو آپ نے سبق 2 میں سیکھی۔"
     },
     "autoplay": true
   },
@@ -69,10 +70,14 @@
           "ar": "أَعِنْدَكَ قَلَمٌ؟",
           "ar_plain": "اعندك قلم",
           "translit": "a-indaka qalamun?",
-          "en": "Do you have a pen?",
-          "ur": "کیا تمہارے پاس قلم ہے؟"
+          "en": "Do you have a pen? (male addressee)",
+          "ur": "کیا تمہارے پاس قلم ہے؟ (مذکر مخاطب)"
         },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/a-indaka-qalam.mp3"
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/a-indaka-qalam.mp3",
+        "context": {
+          "en": "Asking a man.",
+          "ur": "مرد سے پوچھتے ہوئے۔"
+        }
       },
       {
         "id": "sp2-05",
@@ -94,7 +99,26 @@
           "en": "No, I do not have it.",
           "ur": "نہیں، میرے پاس نہیں ہے۔"
         },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/la-laysa-indi.mp3"
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/la-laysa-indi.mp3",
+        "context": {
+          "en": "لَيْسَ negates 'have' here; just recognise it for now.",
+          "ur": "لَيْسَ یہاں 'پاس ہونا' کی نفی کرتا ہے؛ ابھی صرف اسے پہچانیں۔"
+        }
+      },
+      {
+        "id": "sp2-07",
+        "phrase": {
+          "ar": "أَعِنْدَكِ قَلَمٌ؟",
+          "ar_plain": "اعندك قلم",
+          "translit": "a-ʿindaki qalamun?",
+          "en": "Do you have a pen? (female addressee)",
+          "ur": "کیا تمہارے پاس قلم ہے؟ (مؤنث مخاطب)"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/a-indaki-qalam.mp3",
+        "context": {
+          "en": "Asking a woman: the kasra on كِ changes the listener, not the meaning.",
+          "ur": "عورت سے پوچھتے ہوئے: كِ پر کسرہ مخاطب بدلتا ہے، معنی نہیں۔"
+        }
       }
     ],
     "dialogue": [
@@ -109,13 +133,21 @@
       {
         "speaker": "A",
         "phrase_id": "sp2-03"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "sp2-07"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "sp2-05"
       }
     ]
   },
   "close": {
     "noor_message": {
-      "en": "You can now ask simple lesson questions in Fus'ha: what, who, where, and do you have?",
-      "ur": "آپ اب فصحی میں سادہ درسی سوالات پوچھ سکتے ہیں: کیا، کون، کہاں، اور کیا تمہارے پاس ہے؟"
+      "en": "You can now ask what, who, where, and whether someone has an object — to a man or a woman — in simple Fus'ha classroom conversation.",
+      "ur": "اب آپ سادہ فصحی درسی گفتگو میں پوچھ سکتے ہیں: کیا، کون، کہاں، اور کیا کسی کے پاس کوئی چیز ہے — مرد سے بھی، عورت سے بھی۔"
     }
   }
 }

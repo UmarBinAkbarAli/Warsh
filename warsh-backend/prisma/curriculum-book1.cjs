@@ -331,9 +331,11 @@ const specs = [
   {
     order: 7,
     sourceFile: "reader_lecture_07_damair_muttasila.md",
-    title: "Attached Pronouns — Singular",
+    title: "Attached Pronouns and Simple Possession",
+    titleUr: "جڑی ہوئی ضمیریں اور سادہ ملکیت",
     titleAr: "الضَّمَائِر الْمُتَّصِلَة الْمُفْرَدَة",
-    description: "Ownership expressed with attached endings — my, your, his, her on nouns.",
+    description: "Ownership expressed with attached endings — my, your (to a man or a woman), his, her — and 'I have' with عِنْدَ.",
+    descriptionUr: "جڑی ہوئی علامتوں سے ملکیت — میرا، تمہارا (مرد یا عورت سے)، اس کا، اس کی — اور عِنْدَ سے 'میرے پاس ہے'۔",
     hook: { ayahAr: "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ", ayahRef: "Al-Fatiha 1:5", highlightedWord: "إِيَّاكَ" },
     examples: [
       card("كِتَابِي", "my book", "kitaabee"),

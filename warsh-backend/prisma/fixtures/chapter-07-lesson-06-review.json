@@ -1,0 +1,695 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 7, display lesson 6 (ch07-l06, new) — chapter review: the four owner endings (ي، كَ/كِ، هُ/هَا), definiteness, لِي كِتَابٌ vs كِتَابِي, عِنْدَ possession, and the spoken question set. No new grammar. Added 2026-09-18 from Docs/proposals/chapter-07-content-proposal.md.",
+    "titleUr": "باب 7 کا مراجعہ",
+    "chapter_order": 7,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 6,
+      "ayah": 59,
+      "label": "Al-An'am 6:59",
+      "ar": "وَعِندَهُ مَفَاتِحُ الْغَيْبِ",
+      "en": "And with Him are the keys of the unseen.",
+      "ur": "اور اسی کے پاس غیب کی کنجیاں ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/006059.mp3"
+    },
+    "noor_intro": {
+      "en": "One ending, هُ, on عِنْدَ — and you already know what it means. This review gathers everything Chapter 7 built: my, your (to a man or a woman), his, her, and 'I have'.",
+      "ur": "عِنْدَ پر ایک علامت، هُ — اور آپ پہلے ہی جانتے ہیں اس کا معنی کیا ہے۔ یہ مراجعہ باب 7 کی ہر چیز اکٹھی کرتا ہے: میرا، تمہارا (مرد یا عورت سے)، اس کا، اس کی، اور 'میرے پاس ہے'۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The four owner endings",
+        "ar": "الضَّمَائِرُ الْمُتَّصِلَةُ الْمُفْرَدَة",
+        "ur": "مالک کی چار علامتیں"
+      },
+      "explanation": {
+        "en": "ي = my; كَ = your (to a man); كِ = your (to a woman); هُ = his; هَا = her / its. The noun stays the same; the ending names the owner.",
+        "ur": "ي = میرا؛ كَ = تمہارا (مرد سے)؛ كِ = تمہارا (عورت سے)؛ هُ = اس کا (مذکر)؛ هَا = اس کی (مؤنث)۔ اسم وہی رہتا ہے؛ علامت مالک بتاتی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابِي، كِتَابُكَ، كِتَابُكِ، كِتَابُهُ، كِتَابُهَا",
+          "ar_plain": "كتابي كتابك كتابك كتابه كتابها",
+          "translit": "kitābī, kitābuka, kitābuki, kitābuhu, kitābuhā",
+          "en": "my book, your book (m.), your book (f.), his book, her book",
+          "ur": "میری کتاب، تمہاری کتاب (مذکر مخاطب)، تمہاری کتاب (مؤنث مخاطب)، اس کی کتاب (مذکر مالک)، اس کی کتاب (مؤنث مالک)"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Speaker or listener?",
+        "ur": "بولنے والا یا مخاطب؟"
+      },
+      "text": {
+        "ar": "كِتَابِي",
+        "ar_plain": "كتابي",
+        "translit": "kitābī",
+        "en": "my book",
+        "ur": "میری کتاب"
+      },
+      "explanation": {
+        "en": "كِتَابِي belongs to the one speaking; كِتَابُكَ to the one being spoken to.",
+        "ur": "كِتَابِي بولنے والے کی ہے؛ كِتَابُكَ مخاطب کی۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/kitab.webp",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/kitabi.mp3",
+      "examples": [
+        {
+          "ar": "كِتَابِي",
+          "ar_plain": "كتابي",
+          "translit": "kitābī",
+          "en": "my book",
+          "ur": "میری کتاب"
+        },
+        {
+          "ar": "كِتَابُكَ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuka",
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A man or a woman addressed?",
+        "ur": "مخاطب مرد ہے یا عورت؟"
+      },
+      "text": {
+        "ar": "كِتَابُكِ",
+        "ar_plain": "كتابك",
+        "translit": "kitābuki",
+        "en": "your book (female addressee)",
+        "ur": "تمہاری کتاب (مؤنث مخاطب)"
+      },
+      "explanation": {
+        "en": "Fatḥa on the ك for a man, kasra for a woman. Same book, same meaning, different listener.",
+        "ur": "مرد کے لیے ك پر فتحہ، عورت کے لیے کسرہ۔ وہی کتاب، وہی معنی، مخاطب مختلف۔"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/kitabuki.mp3",
+      "examples": [
+        {
+          "ar": "كِتَابُكَ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuka",
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
+        },
+        {
+          "ar": "كِتَابُكِ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuki",
+          "en": "your book (female addressee)",
+          "ur": "تمہاری کتاب (مؤنث مخاطب)"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "His or her?",
+        "ur": "اس کا یا اس کی؟"
+      },
+      "text": {
+        "ar": "كِتَابُهُ",
+        "ar_plain": "كتابه",
+        "translit": "kitābuhu",
+        "en": "his book",
+        "ur": "اس کی کتاب (مذکر مالک)"
+      },
+      "explanation": {
+        "en": "هُ for a male owner, هَا for a female owner. The ending describes the owner, never the thing owned.",
+        "ur": "مذکر مالک کے لیے هُ، مؤنث مالک کے لیے هَا۔ علامت مالک کو بتاتی ہے، چیز کو کبھی نہیں۔"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/kitabuhu.mp3",
+      "examples": [
+        {
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitābuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب (مذکر مالک)"
+        },
+        {
+          "ar": "كِتَابُهَا",
+          "ar_plain": "كتابها",
+          "translit": "kitābuhā",
+          "en": "her book",
+          "ur": "اس کی کتاب (مؤنث مالک)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Attached pronouns make the noun definite",
+        "ar": "الِاسْمُ مَعْرِفَةٌ بِالضَّمِير",
+        "ur": "جڑی ہوئی ضمیر اسم کو معرفہ بناتی ہے"
+      },
+      "explanation": {
+        "en": "Once any of these endings is attached, the noun is definite: no tanwīn, no الـ. كِتَابُهَا is 'her book', never 'a her book'.",
+        "ur": "ان میں سے کوئی بھی علامت جڑ جائے تو اسم معرفہ ہے: نہ تنوین، نہ الـ۔ كِتَابُهَا 'اس کی کتاب' ہے، 'ایک اس کی کتاب' کبھی نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابُهَا جَدِيدٌ",
+          "ar_plain": "كتابها جديد",
+          "translit": "kitābuhā jadīdun",
+          "en": "Her book is new.",
+          "ur": "اس کی کتاب نئی ہے۔ (مؤنث مالک)"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "لِي كِتَابٌ vs كِتَابِي",
+        "ur": "لِي كِتَابٌ اور كِتَابِي"
+      },
+      "text": {
+        "ar": "لِي كِتَابٌ",
+        "ar_plain": "لي كتاب",
+        "translit": "lī kitābun",
+        "en": "a book is mine / I have a book",
+        "ur": "کتاب میری ہے"
+      },
+      "explanation": {
+        "en": "Chapter 5's لِي كِتَابٌ is a sentence: 'a book is mine'. كِتَابِي is one definite noun: 'my book'. Both concern possession; the structure is different.",
+        "ur": "باب 5 کا لِي كِتَابٌ ایک جملہ ہے: 'کتاب میری ہے'۔ كِتَابِي ایک معرفہ اسم ہے: 'میری کتاب'۔ دونوں کا تعلق ملکیت سے ہے؛ ساخت مختلف ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "لِي كِتَابٌ",
+          "ar_plain": "لي كتاب",
+          "translit": "lī kitābun",
+          "en": "a book is mine / I have a book",
+          "ur": "کتاب میری ہے"
+        },
+        {
+          "ar": "كِتَابِي",
+          "ar_plain": "كتابي",
+          "translit": "kitābī",
+          "en": "my book",
+          "ur": "میری کتاب"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "عِنْدِي and the two questions",
+        "ar": "عِنْدِي قَلَمٌ",
+        "ur": "عِنْدِي اور دونوں سوال"
+      },
+      "explanation": {
+        "en": "عِنْدِي قَلَمٌ — I have a pen. Ask a man أَعِنْدَكَ قَلَمٌ؟ and a woman أَعِنْدَكِ قَلَمٌ؟; the answer is the same: نَعَمْ، عِنْدِي قَلَمٌ.",
+        "ur": "عِنْدِي قَلَمٌ — میرے پاس قلم ہے۔ مرد سے أَعِنْدَكَ قَلَمٌ؟ اور عورت سے أَعِنْدَكِ قَلَمٌ؟ پوچھیں؛ جواب ایک ہی ہے: نَعَمْ، عِنْدِي قَلَمٌ۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/qalam.webp",
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/indi-qalam.mp3",
+      "examples": [
+        {
+          "ar": "أَعِنْدَكَ قَلَمٌ؟",
+          "ar_plain": "أعندك قلم",
+          "translit": "a-ʿindaka qalamun?",
+          "en": "Do you have a pen? (male addressee)",
+          "ur": "کیا تمہارے پاس قلم ہے؟ (مذکر مخاطب)"
+        },
+        {
+          "ar": "أَعِنْدَكِ قَلَمٌ؟",
+          "ar_plain": "أعندك قلم",
+          "translit": "a-ʿindaki qalamun?",
+          "en": "Do you have a pen? (female addressee)",
+          "ur": "کیا تمہارے پاس قلم ہے؟ (مؤنث مخاطب)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The spoken question set",
+        "ar": "مَا، مَنْ، أَيْنَ",
+        "ur": "بولے جانے والے سوالات"
+      },
+      "explanation": {
+        "en": "مَا هَذَا؟ what is this? — مَنْ هَذَا؟ who is this? — أَيْنَ الْكِتَابُ؟ where is the book? — أَعِنْدَكَ / أَعِنْدَكِ قَلَمٌ؟ do you have a pen?",
+        "ur": "مَا هَذَا؟ یہ کیا ہے؟ — مَنْ هَذَا؟ یہ کون ہے؟ — أَيْنَ الْكِتَابُ؟ کتاب کہاں ہے؟ — أَعِنْدَكَ / أَعِنْدَكِ قَلَمٌ؟ کیا تمہارے پاس قلم ہے؟"
+      },
+      "examples": [
+        {
+          "ar": "أَيْنَ الْكِتَابُ؟",
+          "ar_plain": "اين الكتاب",
+          "translit": "ayna l-kitābu?",
+          "en": "Where is the book?",
+          "ur": "کتاب کہاں ہے؟"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch07-l06-ex01",
+      "prompt": {
+        "ar": "كِتَابِي",
+        "ar_plain": "كتابي",
+        "translit": "kitābī",
+        "en": "my book",
+        "ur": "میری کتاب"
+      },
+      "options": [
+        {
+          "en": "my book",
+          "ur": "میری کتاب"
+        },
+        {
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
+        },
+        {
+          "en": "his book",
+          "ur": "اس کی کتاب (مذکر مالک)"
+        },
+        {
+          "en": "her book",
+          "ur": "اس کی کتاب (مؤنث مالک)"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "ي = my. كِتَابِي is the speaker's book.",
+        "ur": "ي = میرا۔ كِتَابِي بولنے والے کی کتاب ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch07-l06-ex02",
+      "prompt": {
+        "ar": "كِتَابُكَ",
+        "ar_plain": "كتابك",
+        "translit": "kitābuka",
+        "en": "your book (male addressee)",
+        "ur": "تمہاری کتاب (مذکر مخاطب)"
+      },
+      "options": [
+        {
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
+        },
+        {
+          "en": "your book (female addressee)",
+          "ur": "تمہاری کتاب (مؤنث مخاطب)"
+        },
+        {
+          "en": "his book",
+          "ur": "اس کی کتاب (مذکر مالک)"
+        },
+        {
+          "en": "my book",
+          "ur": "میری کتاب"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "Fatḥa on كَ = a male addressee.",
+        "ur": "كَ پر فتحہ = مذکر مخاطب۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch07-l06-ex03",
+      "prompt": {
+        "ar": "كِتَابُكِ",
+        "ar_plain": "كتابك",
+        "translit": "kitābuki",
+        "en": "your book (female addressee)",
+        "ur": "تمہاری کتاب (مؤنث مخاطب)"
+      },
+      "options": [
+        {
+          "en": "your book (female addressee)",
+          "ur": "تمہاری کتاب (مؤنث مخاطب)"
+        },
+        {
+          "en": "your book (male addressee)",
+          "ur": "تمہاری کتاب (مذکر مخاطب)"
+        },
+        {
+          "en": "her book",
+          "ur": "اس کی کتاب (مؤنث مالک)"
+        },
+        {
+          "en": "my book",
+          "ur": "میری کتاب"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "Kasra on كِ = a female addressee.",
+        "ur": "كِ پر کسرہ = مؤنث مخاطب۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch07-l06-ex04",
+      "prompt": {
+        "ar": "قَلَمُهُ",
+        "ar_plain": "قلمه",
+        "translit": "qalamuhu",
+        "en": "his pen",
+        "ur": "اس کا قلم (مذکر مالک)"
+      },
+      "options": [
+        {
+          "en": "his pen",
+          "ur": "اس کا قلم (مذکر مالک)"
+        },
+        {
+          "en": "her pen",
+          "ur": "اس کا قلم (مؤنث مالک)"
+        },
+        {
+          "en": "your pen (male addressee)",
+          "ur": "تمہارا قلم (مذکر مخاطب)"
+        },
+        {
+          "en": "my pen",
+          "ur": "میرا قلم"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "هُ = his: the owner is a man being talked about.",
+        "ur": "هُ = اس کا (مذکر): مالک ایک مرد ہے جس کا ذکر ہو رہا ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch07-l06-ex05",
+      "prompt": {
+        "ar": "مَدْرَسَتُهَا",
+        "ar_plain": "مدرستها",
+        "translit": "madrasatuhā",
+        "en": "her school",
+        "ur": "اس کا مدرسہ (مؤنث مالک)"
+      },
+      "options": [
+        {
+          "en": "her school",
+          "ur": "اس کا مدرسہ (مؤنث مالک)"
+        },
+        {
+          "en": "his school",
+          "ur": "اس کا مدرسہ (مذکر مالک)"
+        },
+        {
+          "en": "your school (female addressee)",
+          "ur": "تمہارا مدرسہ (مؤنث مخاطب)"
+        },
+        {
+          "en": "my school",
+          "ur": "میرا مدرسہ"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "هَا = her / its: the owner is female.",
+        "ur": "هَا = اس کی (مؤنث): مالک عورت ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch07-l06-ex06",
+      "prompt": {
+        "ar": "عِنْدِي قَلَمٌ",
+        "ar_plain": "عندي قلم",
+        "translit": "ʿindī qalamun",
+        "en": "I have a pen",
+        "ur": "میرے پاس قلم ہے"
+      },
+      "options": [
+        {
+          "en": "I have a pen",
+          "ur": "میرے پاس قلم ہے"
+        },
+        {
+          "en": "my pen",
+          "ur": "میرا قلم"
+        },
+        {
+          "en": "you have a pen (male addressee)",
+          "ur": "تمہارے پاس قلم ہے (مذکر مخاطب)"
+        },
+        {
+          "en": "he has a pen",
+          "ur": "اس کے پاس قلم ہے (مذکر)"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "عِنْدِي = with me = I have; the pen is with the speaker.",
+        "ur": "عِنْدِي = میرے پاس؛ قلم بولنے والے کے پاس ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch07-l06-ex07",
+      "mode": "TAP",
+      "sentence_ar": "___ قَلَمٌ؟",
+      "hint": {
+        "en": "Do you have a pen? (asking a woman)",
+        "ur": "کیا تمہارے پاس قلم ہے؟ (عورت سے پوچھتے ہوئے)"
+      },
+      "options": [
+        {
+          "ar": "أَعِنْدَكِ",
+          "ar_plain": "أعندك",
+          "translit": "a-ʿindaki",
+          "en": "do you have (female addressee)",
+          "ur": "کیا تمہارے پاس (مؤنث مخاطب)"
+        },
+        {
+          "ar": "أَعِنْدَكَ",
+          "ar_plain": "أعندك",
+          "translit": "a-ʿindaka",
+          "en": "do you have (male addressee)",
+          "ur": "کیا تمہارے پاس (مذکر مخاطب)"
+        },
+        {
+          "ar": "عِنْدِي",
+          "ar_plain": "عندي",
+          "translit": "ʿindī",
+          "en": "with me / I have",
+          "ur": "میرے پاس"
+        },
+        {
+          "ar": "أَعِنْدَهُ",
+          "ar_plain": "أعنده",
+          "translit": "a-ʿindahu",
+          "en": "does he have",
+          "ur": "کیا اس کے پاس (مذکر)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أَعِنْدَكِ",
+        "ar_plain": "أعندك",
+        "translit": "a-ʿindaki",
+        "en": "do you have (female addressee)",
+        "ur": "کیا تمہارے پاس (مؤنث مخاطب)"
+      },
+      "explanation_on_wrong": {
+        "en": "A woman is asked, so the ending is كِ: أَعِنْدَكِ قَلَمٌ؟",
+        "ur": "عورت سے پوچھا جا رہا ہے، اس لیے علامت كِ ہے: أَعِنْدَكِ قَلَمٌ؟"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch07-l06-ex08",
+      "left_column": [
+        {
+          "ar": "لِي كِتَابٌ",
+          "ar_plain": "لي كتاب",
+          "translit": "lī kitābun",
+          "en": "a book is mine",
+          "ur": "کتاب میری ہے"
+        },
+        {
+          "ar": "كِتَابِي",
+          "ar_plain": "كتابي",
+          "translit": "kitābī",
+          "en": "my book",
+          "ur": "میری کتاب"
+        },
+        {
+          "ar": "عِنْدِي كِتَابٌ",
+          "ar_plain": "عندي كتاب",
+          "translit": "ʿindī kitābun",
+          "en": "I have a book",
+          "ur": "میرے پاس کتاب ہے"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "a book is mine — لِـ + pronoun before the noun",
+          "ur": "کتاب میری ہے — اسم سے پہلے لِـ + ضمیر"
+        },
+        {
+          "en": "my book — ending attached to the noun",
+          "ur": "میری کتاب — اسم سے جڑی علامت"
+        },
+        {
+          "en": "I have a book — عِنْدَ + pronoun before the noun",
+          "ur": "میرے پاس کتاب ہے — اسم سے پہلے عِنْدَ + ضمیر"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch07-l06-ex09",
+      "target_translation": {
+        "en": "Yes, I have a pen",
+        "ur": "ہاں، میرے پاس قلم ہے"
+      },
+      "tiles": [
+        {
+          "ar": "نَعَمْ",
+          "ar_plain": "نعم",
+          "translit": "naʿam",
+          "en": "yes",
+          "ur": "ہاں"
+        },
+        {
+          "ar": "عِنْدِي",
+          "ar_plain": "عندي",
+          "translit": "ʿindī",
+          "en": "with me / I have",
+          "ur": "میرے پاس"
+        },
+        {
+          "ar": "قَلَمٌ",
+          "ar_plain": "قلم",
+          "translit": "qalamun",
+          "en": "a pen",
+          "ur": "قلم"
+        },
+        {
+          "ar": "قَلَمِي",
+          "ar_plain": "قلمي",
+          "translit": "qalamī",
+          "en": "my pen",
+          "ur": "میرا قلم"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "explanation_on_wrong": {
+        "en": "After عِنْدِي the thing owned stays indefinite: نَعَمْ، عِنْدِي قَلَمٌ, not قَلَمِي.",
+        "ur": "عِنْدِي کے بعد چیز نکرہ رہتی ہے: نَعَمْ، عِنْدِي قَلَمٌ، نہ کہ قَلَمِي۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch07-l06-ex10",
+      "ayah_fragment": {
+        "ar": "وَعِندَهُ مَفَاتِحُ الْغَيْبِ",
+        "surah_ref": "Al-An'am 6:59"
+      },
+      "options": [
+        {
+          "en": "And with Him are the keys of the unseen — هُ = Him",
+          "ur": "اور اسی کے پاس غیب کی کنجیاں ہیں — هُ = اس کے"
+        },
+        {
+          "en": "And with me are the keys of the unseen — ي = me",
+          "ur": "اور میرے پاس غیب کی کنجیاں ہیں — ي = میرے"
+        },
+        {
+          "en": "And with you are the keys of the unseen — كَ = you",
+          "ur": "اور تمہارے پاس غیب کی کنجیاں ہیں — كَ = تمہارے"
+        },
+        {
+          "en": "And with her are the keys of the unseen — هَا = her",
+          "ur": "اور اس کے پاس غیب کی کنجیاں ہیں — هَا = اس کے (مؤنث)"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "عِندَهُ ends in هُ, the same ending as كِتَابُهُ: with Him.",
+        "ur": "عِندَهُ کے آخر میں هُ ہے، وہی علامت جو كِتَابُهُ میں ہے: اسی کے پاس۔"
+      },
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Everything Chapter 7 built",
+      "ar": "الضَّمَائِرُ الْمُتَّصِلَةُ فِي الْقُرْآن",
+      "ur": "باب 7 نے جو کچھ بنایا"
+    },
+    "ayah": {
+      "surah": 6,
+      "ayah": 59,
+      "label": "Al-An'am 6:59",
+      "ar": "وَعِندَهُ مَفَاتِحُ الْغَيْبِ",
+      "en": "And with Him are the keys of the unseen.",
+      "ur": "اور اسی کے پاس غیب کی کنجیاں ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/006059.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "وَعِندَهُ"
+    ],
+    "noor_explanation": {
+      "en": "وَعِندَهُ — the هُ you met in كِتَابُهُ, now on عِنْدَ: 'with Him'. Whether the ending sits on a noun or on عِنْدَ, you read it the same way: find the ending, name the owner.",
+      "ur": "وَعِندَهُ — وہی هُ جو آپ نے كِتَابُهُ میں دیکھی، اب عِنْدَ پر: 'اسی کے پاس'۔ علامت اسم پر ہو یا عِنْدَ پر، آپ اسے ایک ہی طرح پڑھتے ہیں: علامت تلاش کریں، مالک کا نام لیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You have reviewed who owns something, who is being addressed, and how Arabic says 'I have'. The final test checks these skills in mixed order.",
+      "ur": "آپ نے مراجعہ کر لیا کہ چیز کس کی ہے، مخاطب کون ہے، اور عربی 'میرے پاس ہے' کیسے کہتی ہے۔ آخری امتحان انہی مہارتوں کو ملی جلی ترتیب میں پرکھتا ہے۔"
+    }
+  }
+}

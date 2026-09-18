@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 7 final test (ch07-test, new). Twelve multiple-choice questions covering the chapter outcomes: ي, كَ/كِ, هُ/هَا, definiteness, عِنْدَ possession, لِي كِتَابٌ vs كِتَابِي, the spoken questions, and an attached pronoun in a Quranic phrase. Pass mark 80 % (10 of 12) to match Chapters 3–6. Added 2026-09-18 from Docs/proposals/chapter-07-content-proposal.md.",
+    "titleUr": "باب 7 کا آخری امتحان",
+    "chapter_order": 7,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 6,
+      "ayah": 59,
+      "label": "Al-An'am 6:59",
+      "ar": "وَعِندَهُ مَفَاتِحُ الْغَيْبِ",
+      "en": "And with Him are the keys of the unseen.",
+      "ur": "اور اسی کے پاس غیب کی کنجیاں ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/006059.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 7.",
+      "ur": "باب 7 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "exercises": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 7,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch07-test-q01",
+        "topic": {
+          "en": "The 'my' ending",
+          "ur": "'میرا' کی علامت"
+        },
+        "prompt": {
+          "en": "Which ending attached to a noun means 'my'?",
+          "ur": "اسم سے جڑی کون سی علامت 'میرا' کا معنی دیتی ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "ـُهُ",
+            "en": "the ending هُ — his",
+            "ur": "علامت هُ — اس کا (مذکر)"
+          },
+          {
+            "arabic": "ـِي",
+            "en": "the ending ي — my",
+            "ur": "علامت ي — میرا"
+          },
+          {
+            "arabic": "ـُكَ",
+            "en": "the ending كَ — your (male addressee)",
+            "ur": "علامت كَ — تمہارا (مذکر مخاطب)"
+          },
+          {
+            "arabic": "ـُهَا",
+            "en": "the ending هَا — her / its",
+            "ur": "علامت هَا — اس کی (مؤنث)"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch07-test-q02",
+        "topic": {
+          "en": "Translation",
+          "ur": "ترجمہ"
+        },
+        "prompt": {
+          "en": "What does كِتَابِي mean?",
+          "ur": "كِتَابِي کا کیا مطلب ہے؟"
+        },
+        "options": [
+          {
+            "en": "my book",
+            "ur": "میری کتاب"
+          },
+          {
+            "en": "your book",
+            "ur": "تمہاری کتاب"
+          },
+          {
+            "en": "his book",
+            "ur": "اس کی کتاب (مذکر مالک)"
+          },
+          {
+            "en": "a book",
+            "ur": "ایک کتاب"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch07-test-q03",
+        "topic": {
+          "en": "Male vs female addressee",
+          "ur": "مذکر اور مؤنث مخاطب"
+        },
+        "prompt": {
+          "en": "What is the difference between كِتَابُكَ and كِتَابُكِ?",
+          "ur": "كِتَابُكَ اور كِتَابُكِ میں کیا فرق ہے؟"
+        },
+        "options": [
+          {
+            "en": "The first is 'your book' to a man, the second 'your book' to a woman",
+            "ur": "پہلا مرد سے 'تمہاری کتاب'، دوسرا عورت سے 'تمہاری کتاب'"
+          },
+          {
+            "en": "The first is 'my book', the second 'your book'",
+            "ur": "پہلا 'میری کتاب'، دوسرا 'تمہاری کتاب'"
+          },
+          {
+            "en": "The first is 'his book', the second 'her book'",
+            "ur": "پہلا 'اس کی کتاب (مذکر مالک)'، دوسرا 'اس کی کتاب (مؤنث مالک)'"
+          },
+          {
+            "en": "They mean the same and are said to the same person",
+            "ur": "دونوں کا معنی ایک ہے اور ایک ہی شخص سے کہے جاتے ہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch07-test-q04",
+        "topic": {
+          "en": "Female addressee",
+          "ur": "مؤنث مخاطب"
+        },
+        "prompt": {
+          "en": "Choose 'your book' said to a woman.",
+          "ur": "عورت سے کہا جانے والا 'تمہاری کتاب' چنیں۔"
+        },
+        "options": [
+          {
+            "arabic": "كِتَابُكَ",
+            "en": "your book (male addressee)",
+            "ur": "تمہاری کتاب (مذکر مخاطب)"
+          },
+          {
+            "arabic": "كِتَابُهَا",
+            "en": "her book",
+            "ur": "اس کی کتاب (مؤنث مالک)"
+          },
+          {
+            "arabic": "كِتَابُكِ",
+            "en": "your book (female addressee)",
+            "ur": "تمہاری کتاب (مؤنث مخاطب)"
+          },
+          {
+            "arabic": "كِتَابِي",
+            "en": "my book",
+            "ur": "میری کتاب"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch07-test-q05",
+        "topic": {
+          "en": "His vs her",
+          "ur": "اس کا اور اس کی"
+        },
+        "prompt": {
+          "en": "In قَلَمُهُ and قَلَمُهَا, what does the ending tell you?",
+          "ur": "قَلَمُهُ اور قَلَمُهَا میں علامت آپ کو کیا بتاتی ہے؟"
+        },
+        "options": [
+          {
+            "en": "Whether the pen is masculine or feminine",
+            "ur": "قلم مذکر ہے یا مؤنث"
+          },
+          {
+            "en": "Whether the owner is male (هُ) or female (هَا)",
+            "ur": "مالک مرد ہے (هُ) یا عورت (هَا)"
+          },
+          {
+            "en": "Whether the speaker or the listener owns the pen",
+            "ur": "قلم بولنے والے کا ہے یا مخاطب کا"
+          },
+          {
+            "en": "Whether there is one pen or two",
+            "ur": "قلم ایک ہے یا دو"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch07-test-q06",
+        "topic": {
+          "en": "Translation",
+          "ur": "ترجمہ"
+        },
+        "prompt": {
+          "en": "What does مَدْرَسَتُهَا mean?",
+          "ur": "مَدْرَسَتُهَا کا کیا مطلب ہے؟"
+        },
+        "options": [
+          {
+            "en": "his school",
+            "ur": "اس کا مدرسہ (مذکر مالک)"
+          },
+          {
+            "en": "my school",
+            "ur": "میرا مدرسہ"
+          },
+          {
+            "en": "her school",
+            "ur": "اس کا مدرسہ (مؤنث مالک)"
+          },
+          {
+            "en": "your school (female addressee)",
+            "ur": "تمہارا مدرسہ (مؤنث مخاطب)"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch07-test-q07",
+        "topic": {
+          "en": "Definiteness",
+          "ur": "معرفہ"
+        },
+        "prompt": {
+          "en": "Which statement about كِتَابُهُ is correct?",
+          "ur": "كِتَابُهُ کے بارے میں کون سا بیان درست ہے؟"
+        },
+        "options": [
+          {
+            "en": "It is indefinite, like كِتَابٌ",
+            "ur": "یہ نکرہ ہے، كِتَابٌ کی طرح"
+          },
+          {
+            "en": "It needs الـ to become definite",
+            "ur": "معرفہ بننے کے لیے اسے الـ چاہیے"
+          },
+          {
+            "en": "It is definite because of the attached pronoun: 'his book'",
+            "ur": "جڑی ہوئی ضمیر کی وجہ سے یہ معرفہ ہے: 'اس کی کتاب'"
+          },
+          {
+            "en": "It means 'a his book'",
+            "ur": "اس کا معنی 'ایک اس کی کتاب' ہے"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch07-test-q08",
+        "topic": {
+          "en": "Possession with عِنْدَ",
+          "ur": "عِنْدَ سے ملکیت"
+        },
+        "prompt": {
+          "en": "What does عِنْدِي قَلَمٌ mean?",
+          "ur": "عِنْدِي قَلَمٌ کا کیا مطلب ہے؟"
+        },
+        "options": [
+          {
+            "en": "my pen",
+            "ur": "میرا قلم"
+          },
+          {
+            "en": "I have a pen",
+            "ur": "میرے پاس قلم ہے"
+          },
+          {
+            "en": "you have a pen",
+            "ur": "تمہارے پاس قلم ہے"
+          },
+          {
+            "en": "he has a pen",
+            "ur": "اس کے پاس قلم ہے (مذکر)"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch07-test-q09",
+        "topic": {
+          "en": "Question to a woman",
+          "ur": "عورت سے سوال"
+        },
+        "prompt": {
+          "en": "Choose 'Do you have a pen?' asked to a woman.",
+          "ur": "عورت سے پوچھا جانے والا 'کیا تمہارے پاس قلم ہے؟' چنیں۔"
+        },
+        "options": [
+          {
+            "arabic": "أَعِنْدَكَ قَلَمٌ؟",
+            "en": "Do you have a pen? (male addressee)",
+            "ur": "کیا تمہارے پاس قلم ہے؟ (مذکر مخاطب)"
+          },
+          {
+            "arabic": "أَعِنْدَكِ قَلَمٌ؟",
+            "en": "Do you have a pen? (female addressee)",
+            "ur": "کیا تمہارے پاس قلم ہے؟ (مؤنث مخاطب)"
+          },
+          {
+            "arabic": "عِنْدِي قَلَمٌ",
+            "en": "I have a pen.",
+            "ur": "میرے پاس قلم ہے۔"
+          },
+          {
+            "arabic": "أَعِنْدَهَا قَلَمٌ؟",
+            "en": "Does she have a pen?",
+            "ur": "کیا اس کے پاس قلم ہے؟ (مؤنث)"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch07-test-q10",
+        "topic": {
+          "en": "لِي كِتَابٌ vs كِتَابِي",
+          "ur": "لِي كِتَابٌ اور كِتَابِي"
+        },
+        "prompt": {
+          "en": "How do لِي كِتَابٌ and كِتَابِي differ?",
+          "ur": "لِي كِتَابٌ اور كِتَابِي میں کیا فرق ہے؟"
+        },
+        "options": [
+          {
+            "en": "لِي كِتَابٌ is a sentence, 'a book is mine'; كِتَابِي is one definite noun, 'my book'",
+            "ur": "لِي كِتَابٌ ایک جملہ ہے، 'کتاب میری ہے'؛ كِتَابِي ایک معرفہ اسم ہے، 'میری کتاب'"
+          },
+          {
+            "en": "لِي كِتَابٌ means 'your book'; كِتَابِي means 'my book'",
+            "ur": "لِي كِتَابٌ کا معنی 'تمہاری کتاب' ہے؛ كِتَابِي کا معنی 'میری کتاب'"
+          },
+          {
+            "en": "They are the same phrase written two ways",
+            "ur": "یہ ایک ہی ترکیب دو طرح لکھی گئی ہے"
+          },
+          {
+            "en": "لِي كِتَابٌ is about a book; كِتَابِي is about a pen",
+            "ur": "لِي كِتَابٌ کتاب کے بارے میں ہے؛ كِتَابِي قلم کے بارے میں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch07-test-q11",
+        "topic": {
+          "en": "Spoken question",
+          "ur": "بولا جانے والا سوال"
+        },
+        "prompt": {
+          "en": "What does أَيْنَ الْكِتَابُ؟ mean?",
+          "ur": "أَيْنَ الْكِتَابُ؟ کا کیا مطلب ہے؟"
+        },
+        "options": [
+          {
+            "en": "What is this?",
+            "ur": "یہ کیا ہے؟"
+          },
+          {
+            "en": "Who is this?",
+            "ur": "یہ کون ہے؟"
+          },
+          {
+            "en": "Where is the book?",
+            "ur": "کتاب کہاں ہے؟"
+          },
+          {
+            "en": "Do you have a book?",
+            "ur": "کیا تمہارے پاس کتاب ہے؟"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch07-test-q12",
+        "topic": {
+          "en": "Attached pronoun in the Quran",
+          "ur": "قرآن میں جڑی ہوئی ضمیر"
+        },
+        "prompt": {
+          "en": "In يَا عِبَادِيَ (Az-Zumar 39:53), which attached pronoun do you see, and what does it mean?",
+          "ur": "يَا عِبَادِيَ (الزمر 39:53) میں کون سی جڑی ہوئی ضمیر ہے، اور اس کا معنی کیا ہے؟"
+        },
+        "options": [
+          {
+            "en": "هُ — his: 'O his servants'",
+            "ur": "هُ — اس کے: 'اے اس کے بندو'"
+          },
+          {
+            "en": "كَ — your: 'O your servants'",
+            "ur": "كَ — تمہارے: 'اے تمہارے بندو'"
+          },
+          {
+            "en": "ي — my: 'O My servants'",
+            "ur": "ي — میرے: 'اے میرے بندو'"
+          },
+          {
+            "en": "هَا — her: 'O her servants'",
+            "ur": "هَا — اس کے (مؤنث): 'اے اس کے بندو'"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Attached pronouns in the Quran",
+      "ar": "الضَّمَائِرُ الْمُتَّصِلَةُ فِي الْقُرْآن",
+      "ur": "قرآن میں جڑی ہوئی ضمیریں"
+    },
+    "ayah": {
+      "surah": 6,
+      "ayah": 59,
+      "label": "Al-An'am 6:59",
+      "ar": "وَعِندَهُ مَفَاتِحُ الْغَيْبِ",
+      "en": "And with Him are the keys of the unseen.",
+      "ur": "اور اسی کے پاس غیب کی کنجیاں ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/006059.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "وَعِندَهُ"
+    ],
+    "noor_explanation": {
+      "en": "وَعِندَهُ — عِنْدَ plus the ending هُ: 'with Him'. Everything Chapter 7 tested lives inside this one small ending: find it, name the owner.",
+      "ur": "وَعِندَهُ — عِنْدَ اور علامت هُ: 'اسی کے پاس'۔ باب 7 نے جو کچھ پرکھا وہ سب اسی چھوٹی سی علامت میں ہے: اسے تلاش کریں، مالک کا نام لیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 7 complete: you can read my, your (to a man or a woman), his and her on nouns, say 'I have' with عِنْدِي, and ask simple questions in Fus'ha.",
+      "ur": "باب 7 مکمل: اب آپ اسموں پر میرا، تمہارا (مرد یا عورت سے)، اس کا اور اس کی پڑھ سکتے ہیں، عِنْدِي سے 'میرے پاس ہے' کہہ سکتے ہیں، اور فصحی میں سادہ سوالات پوچھ سکتے ہیں۔"
+    }
+  }
+}

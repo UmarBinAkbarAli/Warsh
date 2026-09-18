@@ -304,7 +304,7 @@ files remain release evidence.
 
 ## Active priority queue
 
-### Open items (2026-09-17)
+### Open items (2026-09-18)
 
 Everything below this list is either done and verified, or one of these:
 
@@ -323,17 +323,27 @@ Everything below this list is either done and verified, or one of these:
    across the R8 keep rules, native modules and the illustration pipeline —
    not worth it for a dashboard label. Do not list this as open again; take
    the upgrade when a feature needs it or SDK 54 loses support.
-2. **Curriculum rebuild, Chapters 7 onward** (owner, in Studio). **Chapter 6 is
-   implemented in isolated staging (2026-09-17)** from
-   `Docs/proposals/chapter-06-content-proposal.md`: `ch06-l01..l04` rewritten in
-   place, `ch06-l05` review and `ch06-test` added, fixtures/Urdu/Quran audits
-   clean, 29 catalogue clips generated, verified on the emulator (Lesson 1 end
-   to end in Urdu, every card of Lessons 2–5 and the test in English) and
-   through the API (test gated, chapter completes, Chapter 7 unlocks).
-   **Awaiting owner approval to run `content:promote-chapter-six -- --apply`
-   against production**; deviations are listed at the end of the proposal.
-   `Docs/proposals/chapter-07-content-proposal.md` exists (owner draft, not yet
-   evaluated). Chapter 5's
+2. **Curriculum rebuild, Chapters 8 onward** (owner, in Studio). **Chapter 6
+   is implemented in isolated staging (2026-09-17)** from
+   `Docs/proposals/chapter-06-content-proposal.md` and **Chapter 7 is
+   implemented in isolated staging (2026-09-18)** from
+   `Docs/proposals/chapter-07-content-proposal.md`: `ch07-l01..l04` rewritten
+   in place (9 cards / 7–8 exercises each), `ch07-l05` extended with the
+   female-addressee question and a second dialogue pass, `ch07-l06` review and
+   `ch07-test` (12 MC questions, 80 %) added; fixtures/Urdu/Quran audits clean,
+   one phrase clip and 11 catalogue clips generated, `images/discover/ism.webp`
+   copied from the dictionary set. Verified on the emulator against staging
+   (Lesson 1 end to end in Urdu; every Discover card of Lessons 2–4 and the
+   review, all seven spoken phrases and the five-line dialogue, and the test
+   intro/first question in English) and through the API (test locked until
+   the six items are done, 0/12 and 9/12 fail without unlocking Chapter 8,
+   12/12 passes, chapter completes, Chapter 8 unlocks). **Both chapters await
+   owner approval to run `content:promote-chapter-six -- --apply` and
+   `content:promote-chapter-seven -- --apply` against production** (in that
+   order); deviations are listed at the end of each proposal. Observation, not
+   a Chapter 7 defect: the chapter-test intro card shows a hard-coded
+   `هَذَا • ذَٰلِكَ • هَذِهِ • تِلْكَ` strip on every chapter
+   (`warsh-app/app/(app)/chapter-test/[lessonId].tsx`). Chapter 5's
    six composite-scene illustrations are owner deliverables tracked in
    `Docs/lesson-illustrations-needed.md` (+ `.csv` manifest; delivery lands via
    `npm run images:upload-lessons`, added 2026-09-17). From now on every chapter

@@ -2,10 +2,11 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 7, Lesson 4 - عندي and possession with عند plus attached pronouns. Quranic reveal: وعنده مفاتح الغيب in Al-An'am 6:59. Authored against warsh-content-schema.ts v1.0.",
+    "_note": "Chapter 7, display lesson 4 (ch07-l04) — possession and availability with عِنْدَ plus attached pronouns (عِنْدِي، عِنْدَكَ، عِنْدَكِ، عِنْدَهُ، عِنْدَهَا), the أَعِنْدَكَ / أَعِنْدَكِ question, and the contrast with Chapter 5's لِي كِتَابٌ. Quran hook: وَعِندَهُ مَفَاتِحُ الْغَيْبِ (Al-An'am 6:59). Rebuilt 2026-09-18 from Docs/proposals/chapter-07-content-proposal.md.",
+    "titleUr": "عِنْدَ سے ملکیت",
     "chapter_order": 7,
     "lesson_order": 4,
-    "estimated_minutes": 10,
+    "estimated_minutes": 11,
     "xp_reward": 10
   },
   "hook": {
@@ -19,8 +20,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/006059.mp3"
     },
     "noor_intro": {
-      "en": "Arabic often says 'with me' to mean 'I have'. In the Quran, وَعِندَهُ means 'with Him' or 'He has'. Today you learn عِنْدِي, عِنْدَكَ, and عِنْدَهُ.",
-      "ur": "عربی میں 'میرے پاس' کے لیے اکثر 'میرے نزدیک/میرے پاس' کا لفظ آتا ہے۔ قرآن میں وَعِندَهُ کا معنی ہے 'اس کے پاس'۔ آج آپ عِنْدِي، عِنْدَكَ، اور عِنْدَهُ سیکھیں گے۔"
+      "en": "Arabic often says 'with me' to mean 'I have'. In the Quran, وَعِندَهُ means 'and with Him' — He has. Today you learn عِنْدَ with the endings you already know: عِنْدِي, عِنْدَكَ, عِنْدَكِ, عِنْدَهُ, عِنْدَهَا.",
+      "ur": "عربی اکثر 'میرے پاس' کہہ کر 'میرے پاس ہے' کا مطلب دیتی ہے۔ قرآن میں وَعِندَهُ کا معنی ہے 'اور اسی کے پاس'۔ آج آپ عِنْدَ کو انہی علامتوں کے ساتھ سیکھیں گے جو آپ جانتے ہیں: عِنْدِي، عِنْدَكَ، عِنْدَكِ، عِنْدَهُ، عِنْدَهَا۔"
     },
     "autoplay": true
   },
@@ -28,24 +29,38 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "I have - عِنْدِي",
-        "ar": "عِنْدَ مَعَ الضَّمِير",
-        "ur": "میرے پاس - عِنْدِي"
+        "en": "عِنْدَ — with / at, and 'have'",
+        "ar": "عِنْدَ",
+        "ur": "عِنْدَ — کے پاس، اور 'ہونا'"
       },
       "explanation": {
-        "en": "عِنْدَ means 'with / at'. When a pronoun attaches, Arabic can express possession:\n\nعِنْدِي قَلَمٌ - with me is a pen - I have a pen\nعِنْدَكَ كِتَابٌ - you have a book\nعِنْدَهُ بَيْتٌ - he has a house",
-        "ur": "عِنْدَ کا معنی 'کے پاس/نزدیک' ہے۔ جب ضمیر جڑتی ہے تو عربی ملکیت بتا سکتی ہے:\n\nعِنْدِي قَلَمٌ - میرے پاس قلم ہے\nعِنْدَكَ كِتَابٌ - تمہارے پاس کتاب ہے\nعِنْدَهُ بَيْتٌ - اس کے پاس گھر ہے"
-      }
+        "en": "عِنْدَ means 'with' or 'at' someone. Attach a pronoun and Arabic has its everyday way of saying 'have': the thing is with the person. Notice that عِنْدَ is not a simple preposition; the attached pronoun carries the person.",
+        "ur": "عِنْدَ کا معنی ہے کسی 'کے پاس'۔ ضمیر جوڑیں تو عربی کو 'پاس ہونا' کہنے کا روزمرہ طریقہ مل جاتا ہے: چیز اس شخص کے پاس ہے۔ دیکھیں عِنْدَ سادہ حرفِ جر نہیں؛ جڑی ہوئی ضمیر شخص کو بتاتی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "عِنْدِي",
+          "ar_plain": "عندي",
+          "translit": "ʿindī",
+          "en": "with me / I have",
+          "ur": "میرے پاس"
+        }
+      ]
     },
     {
       "type": "WORD",
       "text": {
         "ar": "عِنْدِي قَلَمٌ",
         "ar_plain": "عندي قلم",
-        "translit": "indi qalamun",
+        "translit": "ʿindī qalamun",
         "en": "I have a pen",
         "ur": "میرے پاس قلم ہے"
       },
+      "explanation": {
+        "en": "Literally 'with me is a pen'. The ي is the same 'my / me' ending from Lesson 1.",
+        "ur": "لفظی معنی 'میرے پاس ایک قلم ہے'۔ ي وہی 'میرا / مجھے' والی علامت ہے جو سبق 1 میں آئی۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/qalam.webp",
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/indi-qalam.mp3"
     },
     {
@@ -53,21 +68,46 @@
       "text": {
         "ar": "عِنْدَكَ كِتَابٌ",
         "ar_plain": "عندك كتاب",
-        "translit": "indaka kitabun",
-        "en": "you have a book",
-        "ur": "تمہارے پاس کتاب ہے"
+        "translit": "ʿindaka kitābun",
+        "en": "you have a book (male addressee)",
+        "ur": "تمہارے پاس کتاب ہے (مذکر مخاطب)"
       },
+      "explanation": {
+        "en": "عِنْدَ + كَ, said to a man.",
+        "ur": "عِنْدَ + كَ، مرد سے کہا جاتا ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/kitab.webp",
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/indaka-kitab.mp3"
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "عِنْدَكِ كِتَابٌ",
+        "ar_plain": "عندك كتاب",
+        "translit": "ʿindaki kitābun",
+        "en": "you have a book (female addressee)",
+        "ur": "تمہارے پاس کتاب ہے (مؤنث مخاطب)"
+      },
+      "explanation": {
+        "en": "عِنْدَ + كِ, said to a woman. Same meaning as عِنْدَكَ كِتَابٌ; the kasra changes the listener.",
+        "ur": "عِنْدَ + كِ، عورت سے کہا جاتا ہے۔ معنی عِنْدَكَ كِتَابٌ ہی کا ہے؛ کسرہ مخاطب بدل دیتا ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/kitab.webp"
     },
     {
       "type": "WORD",
       "text": {
         "ar": "عِنْدَهُ بَيْتٌ",
         "ar_plain": "عنده بيت",
-        "translit": "indahu baytun",
+        "translit": "ʿindahu baytun",
         "en": "he has a house",
-        "ur": "اس کے پاس گھر ہے"
+        "ur": "اس کے پاس گھر ہے (مذکر)"
       },
+      "explanation": {
+        "en": "عِنْدَ + هُ. Someone absent, male, has a house.",
+        "ur": "عِنْدَ + هُ۔ کوئی غائب مرد، اس کے پاس گھر ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/bayt.webp",
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/indahu-bayt.mp3"
     },
     {
@@ -75,30 +115,106 @@
       "text": {
         "ar": "عِنْدَهَا مَدْرَسَةٌ",
         "ar_plain": "عندها مدرسة",
-        "translit": "indaha madrasatun",
+        "translit": "ʿindahā madrasatun",
         "en": "she has a school",
-        "ur": "اس کے پاس مدرسہ ہے"
+        "ur": "اس کے پاس مدرسہ ہے (مؤنث)"
       },
+      "explanation": {
+        "en": "عِنْدَ + هَا. Someone absent, female, has a school.",
+        "ur": "عِنْدَ + هَا۔ کوئی غائب عورت، اس کے پاس مدرسہ ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/madrasa.webp",
       "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/indaha-madrasah.mp3"
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Question pattern",
-        "ar": "أَعِنْدَكَ؟",
-        "ur": "کیا تمہارے پاس؟"
+        "en": "Asking a man: أَعِنْدَكَ؟",
+        "ar": "أَعِنْدَكَ قَلَمٌ؟",
+        "ur": "مرد سے پوچھنا: أَعِنْدَكَ؟"
       },
       "explanation": {
-        "en": "أَعِنْدَكَ قَلَمٌ؟ means 'Do you have a pen?' The answer can be:\nنَعَمْ، عِنْدِي قَلَمٌ - Yes, I have a pen.",
-        "ur": "أَعِنْدَكَ قَلَمٌ؟ کا معنی ہے: کیا تمہارے پاس قلم ہے؟ جواب ہو سکتا ہے:\nنَعَمْ، عِنْدِي قَلَمٌ - ہاں، میرے پاس قلم ہے۔"
+        "en": "Put أَ in front and the sentence becomes a yes/no question: أَعِنْدَكَ قَلَمٌ؟ — Do you have a pen? The answer: نَعَمْ، عِنْدِي قَلَمٌ.",
+        "ur": "آگے أَ لگائیں تو جملہ ہاں/نہیں والا سوال بن جاتا ہے: أَعِنْدَكَ قَلَمٌ؟ — کیا تمہارے پاس قلم ہے؟ جواب: نَعَمْ، عِنْدِي قَلَمٌ۔"
       },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/a-indaka-qalam.mp3",
       "examples": [
         {
           "ar": "أَعِنْدَكَ قَلَمٌ؟",
           "ar_plain": "أعندك قلم",
-          "translit": "a-indaka qalamun?",
-          "en": "Do you have a pen?",
-          "ur": "کیا تمہارے پاس قلم ہے؟"
+          "translit": "a-ʿindaka qalamun?",
+          "en": "Do you have a pen? (male addressee)",
+          "ur": "کیا تمہارے پاس قلم ہے؟ (مذکر مخاطب)"
+        },
+        {
+          "ar": "نَعَمْ، عِنْدِي قَلَمٌ",
+          "ar_plain": "نعم عندي قلم",
+          "translit": "naʿam, ʿindī qalamun",
+          "en": "Yes, I have a pen.",
+          "ur": "ہاں، میرے پاس قلم ہے۔"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Asking a woman: أَعِنْدَكِ؟",
+        "ar": "أَعِنْدَكِ قَلَمٌ؟",
+        "ur": "عورت سے پوچھنا: أَعِنْدَكِ؟"
+      },
+      "explanation": {
+        "en": "The same question to a woman takes كِ: أَعِنْدَكِ قَلَمٌ؟ The answer does not change, because the answerer speaks of themself: عِنْدِي.",
+        "ur": "عورت سے وہی سوال كِ لیتا ہے: أَعِنْدَكِ قَلَمٌ؟ جواب نہیں بدلتا، کیونکہ جواب دینے والا اپنے بارے میں بولتا ہے: عِنْدِي۔"
+      },
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/a-indaki-qalam.mp3",
+      "examples": [
+        {
+          "ar": "أَعِنْدَكِ قَلَمٌ؟",
+          "ar_plain": "أعندك قلم",
+          "translit": "a-ʿindaki qalamun?",
+          "en": "Do you have a pen? (female addressee)",
+          "ur": "کیا تمہارے پاس قلم ہے؟ (مؤنث مخاطب)"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Three ways to own: لِي، كِتَابِي، عِنْدِي",
+        "ur": "ملکیت کے تین طریقے: لِي، كِتَابِي، عِنْدِي"
+      },
+      "text": {
+        "ar": "كِتَابِي",
+        "ar_plain": "كتابي",
+        "translit": "kitābī",
+        "en": "my book",
+        "ur": "میری کتاب"
+      },
+      "explanation": {
+        "en": "Chapter 5 gave you لِي كِتَابٌ — 'a book is mine'. This chapter gave you كِتَابِي — 'my book', one word. And عِنْدِي كِتَابٌ — 'I have a book'. All three concern possession, but the structure is different: لِـ and عِنْدَ take the pronoun and stand before the noun; ي attaches to the noun itself.",
+        "ur": "باب 5 نے آپ کو لِي كِتَابٌ دیا — 'کتاب میری ہے'۔ اس باب نے كِتَابِي دیا — 'میری کتاب'، ایک لفظ۔ اور عِنْدِي كِتَابٌ — 'میرے پاس کتاب ہے'۔ تینوں کا تعلق ملکیت سے ہے، مگر ساخت مختلف ہے: لِـ اور عِنْدَ ضمیر لے کر اسم سے پہلے آتے ہیں؛ ي اسم ہی سے جڑ جاتی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "لِي كِتَابٌ",
+          "ar_plain": "لي كتاب",
+          "translit": "lī kitābun",
+          "en": "a book is mine / I have a book",
+          "ur": "کتاب میری ہے"
+        },
+        {
+          "ar": "كِتَابِي",
+          "ar_plain": "كتابي",
+          "translit": "kitābī",
+          "en": "my book",
+          "ur": "میری کتاب"
+        },
+        {
+          "ar": "عِنْدِي كِتَابٌ",
+          "ar_plain": "عندي كتاب",
+          "translit": "ʿindī kitābun",
+          "en": "I have a book",
+          "ur": "میرے پاس کتاب ہے"
         }
       ]
     }
@@ -110,7 +226,7 @@
       "prompt": {
         "ar": "عِنْدِي قَلَمٌ",
         "ar_plain": "عندي قلم",
-        "translit": "indi qalamun",
+        "translit": "ʿindī qalamun",
         "en": "I have a pen",
         "ur": "میرے پاس قلم ہے"
       },
@@ -120,12 +236,12 @@
           "ur": "میرے پاس قلم ہے"
         },
         {
-          "en": "you have a book",
-          "ur": "تمہارے پاس کتاب ہے"
+          "en": "you have a pen",
+          "ur": "تمہارے پاس قلم ہے"
         },
         {
-          "en": "he has a house",
-          "ur": "اس کے پاس گھر ہے"
+          "en": "he has a pen",
+          "ur": "اس کے پاس قلم ہے"
         },
         {
           "en": "my pen is new",
@@ -133,6 +249,10 @@
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "عِنْدِي = with me = I have; قَلَمٌ = a pen.",
+        "ur": "عِنْدِي = میرے پاس؛ قَلَمٌ = قلم۔"
+      },
       "xp_value": 1
     },
     {
@@ -141,46 +261,54 @@
       "prompt": {
         "ar": "عِنْدَكَ كِتَابٌ",
         "ar_plain": "عندك كتاب",
-        "translit": "indaka kitabun",
-        "en": "you have a book",
-        "ur": "تمہارے پاس کتاب ہے"
+        "translit": "ʿindaka kitābun",
+        "en": "you have a book (male addressee)",
+        "ur": "تمہارے پاس کتاب ہے (مذکر مخاطب)"
       },
       "options": [
         {
-          "en": "you have a book",
-          "ur": "تمہارے پاس کتاب ہے"
+          "en": "you have a book (male addressee)",
+          "ur": "تمہارے پاس کتاب ہے (مذکر مخاطب)"
         },
         {
-          "en": "my book is new",
-          "ur": "میری کتاب نئی ہے"
+          "en": "you have a book (female addressee)",
+          "ur": "تمہارے پاس کتاب ہے (مؤنث مخاطب)"
         },
         {
-          "en": "his book",
-          "ur": "اس کی کتاب"
+          "en": "I have a book",
+          "ur": "میرے پاس کتاب ہے"
         },
         {
-          "en": "she has a school",
-          "ur": "اس کے پاس مدرسہ ہے"
+          "en": "your book is new",
+          "ur": "تمہاری کتاب نئی ہے"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "عِنْدَكَ with fatḥa addresses a man: you (m.) have a book.",
+        "ur": "فتحہ والا عِنْدَكَ مرد سے خطاب ہے: تمہارے پاس کتاب ہے (مذکر مخاطب)۔"
+      },
       "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch07-l04-ex03",
       "statement": {
-        "en": "عِنْدِي literally uses a place word, but it can mean 'I have'.",
-        "ur": "عِنْدِي اصل میں جگہ کا لفظ استعمال کرتا ہے، مگر معنی 'میرے پاس ہے' ہو سکتا ہے۔",
+        "en": "Literally, عِنْدِي contains a place word ('with / at me'), yet it can mean 'I have'.",
+        "ur": "لفظی طور پر عِنْدِي میں جگہ کا لفظ ہے ('میرے پاس')، پھر بھی اس کا معنی 'میرے پاس ہے' ہو سکتا ہے۔",
         "ar_example": {
           "ar": "عِنْدِي قَلَمٌ",
           "ar_plain": "عندي قلم",
-          "translit": "indi qalamun",
+          "translit": "ʿindī qalamun",
           "en": "I have a pen",
           "ur": "میرے پاس قلم ہے"
         }
       },
       "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True: 'with me is a pen' is how Arabic says 'I have a pen'.",
+        "ur": "درست: 'میرے پاس ایک قلم ہے' ہی عربی میں 'میرے پاس قلم ہے' کہنے کا طریقہ ہے۔"
+      },
       "xp_value": 1
     },
     {
@@ -196,38 +324,42 @@
         {
           "ar": "عِنْدِي",
           "ar_plain": "عندي",
-          "translit": "indi",
-          "en": "with me",
+          "translit": "ʿindī",
+          "en": "with me / I have",
           "ur": "میرے پاس"
         },
         {
           "ar": "عِنْدَكَ",
           "ar_plain": "عندك",
-          "translit": "indaka",
-          "en": "with you",
-          "ur": "تمہارے پاس"
+          "translit": "ʿindaka",
+          "en": "with you / you have (male addressee)",
+          "ur": "تمہارے پاس (مذکر مخاطب)"
         },
         {
           "ar": "عِنْدَهُ",
           "ar_plain": "عنده",
-          "translit": "indahu",
-          "en": "with him",
-          "ur": "اس کے پاس"
+          "translit": "ʿindahu",
+          "en": "with him / he has",
+          "ur": "اس کے پاس (مذکر)"
         },
         {
-          "ar": "كِتَابِي",
-          "ar_plain": "كتابي",
-          "translit": "kitabi",
-          "en": "my book",
-          "ur": "میری کتاب"
+          "ar": "عِنْدَهَا",
+          "ar_plain": "عندها",
+          "translit": "ʿindahā",
+          "en": "with her / she has",
+          "ur": "اس کے پاس (مؤنث)"
         }
       ],
       "correct_answer": {
         "ar": "عِنْدِي",
         "ar_plain": "عندي",
-        "translit": "indi",
-        "en": "with me",
+        "translit": "ʿindī",
+        "en": "with me / I have",
         "ur": "میرے پاس"
+      },
+      "explanation_on_wrong": {
+        "en": "The speaker has the pen, so the ending is ي: عِنْدِي قَلَمٌ.",
+        "ur": "قلم بولنے والے کے پاس ہے، اس لیے علامت ي ہے: عِنْدِي قَلَمٌ۔"
       },
       "xp_value": 1
     },
@@ -238,30 +370,37 @@
         {
           "ar": "عِنْدِي قَلَمٌ",
           "ar_plain": "عندي قلم",
-          "translit": "indi qalamun",
+          "translit": "ʿindī qalamun",
           "en": "I have a pen",
           "ur": "میرے پاس قلم ہے"
         },
         {
           "ar": "عِنْدَكَ كِتَابٌ",
           "ar_plain": "عندك كتاب",
-          "translit": "indaka kitabun",
-          "en": "you have a book",
-          "ur": "تمہارے پاس کتاب ہے"
+          "translit": "ʿindaka kitābun",
+          "en": "you have a book (male addressee)",
+          "ur": "تمہارے پاس کتاب ہے (مذکر مخاطب)"
+        },
+        {
+          "ar": "عِنْدَكِ كِتَابٌ",
+          "ar_plain": "عندك كتاب",
+          "translit": "ʿindaki kitābun",
+          "en": "you have a book (female addressee)",
+          "ur": "تمہارے پاس کتاب ہے (مؤنث مخاطب)"
         },
         {
           "ar": "عِنْدَهُ بَيْتٌ",
           "ar_plain": "عنده بيت",
-          "translit": "indahu baytun",
+          "translit": "ʿindahu baytun",
           "en": "he has a house",
-          "ur": "اس کے پاس گھر ہے"
+          "ur": "اس کے پاس گھر ہے (مذکر)"
         },
         {
           "ar": "عِنْدَهَا مَدْرَسَةٌ",
           "ar_plain": "عندها مدرسة",
-          "translit": "indaha madrasatun",
+          "translit": "ʿindahā madrasatun",
           "en": "she has a school",
-          "ur": "اس کے پاس مدرسہ ہے"
+          "ur": "اس کے پاس مدرسہ ہے (مؤنث)"
         }
       ],
       "right_column": [
@@ -270,16 +409,20 @@
           "ur": "میرے پاس قلم ہے"
         },
         {
-          "en": "you have a book",
-          "ur": "تمہارے پاس کتاب ہے"
+          "en": "you have a book (male addressee)",
+          "ur": "تمہارے پاس کتاب ہے (مذکر مخاطب)"
+        },
+        {
+          "en": "you have a book (female addressee)",
+          "ur": "تمہارے پاس کتاب ہے (مؤنث مخاطب)"
         },
         {
           "en": "he has a house",
-          "ur": "اس کے پاس گھر ہے"
+          "ur": "اس کے پاس گھر ہے (مذکر)"
         },
         {
           "en": "she has a school",
-          "ur": "اس کے پاس مدرسہ ہے"
+          "ur": "اس کے پاس مدرسہ ہے (مؤنث)"
         }
       ],
       "correct_pairs": [
@@ -298,6 +441,10 @@
         [
           3,
           3
+        ],
+        [
+          4,
+          4
         ]
       ],
       "xp_value": 1
@@ -313,15 +460,15 @@
         {
           "ar": "نَعَمْ",
           "ar_plain": "نعم",
-          "translit": "naam",
+          "translit": "naʿam",
           "en": "yes",
           "ur": "ہاں"
         },
         {
           "ar": "عِنْدِي",
           "ar_plain": "عندي",
-          "translit": "indi",
-          "en": "with me",
+          "translit": "ʿindī",
+          "en": "with me / I have",
           "ur": "میرے پاس"
         },
         {
@@ -332,11 +479,11 @@
           "ur": "قلم"
         },
         {
-          "ar": "كِتَابُكَ",
-          "ar_plain": "كتابك",
-          "translit": "kitabuka",
-          "en": "your book",
-          "ur": "تمہاری کتاب"
+          "ar": "عِنْدَكَ",
+          "ar_plain": "عندك",
+          "translit": "ʿindaka",
+          "en": "with you / you have (male addressee)",
+          "ur": "تمہارے پاس (مذکر مخاطب)"
         }
       ],
       "correct_order": [
@@ -344,17 +491,73 @@
         1,
         2
       ],
+      "explanation_on_wrong": {
+        "en": "Yes, then 'with me', then the pen: نَعَمْ، عِنْدِي قَلَمٌ.",
+        "ur": "ہاں، پھر 'میرے پاس'، پھر قلم: نَعَمْ، عِنْدِي قَلَمٌ۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch07-l04-ex07",
+      "mode": "TAP",
+      "sentence_ar": "___ قَلَمٌ؟",
+      "hint": {
+        "en": "Do you have a pen? (asking a woman)",
+        "ur": "کیا تمہارے پاس قلم ہے؟ (عورت سے پوچھتے ہوئے)"
+      },
+      "options": [
+        {
+          "ar": "أَعِنْدَكِ",
+          "ar_plain": "أعندك",
+          "translit": "a-ʿindaki",
+          "en": "do you have (female addressee)",
+          "ur": "کیا تمہارے پاس (مؤنث مخاطب)"
+        },
+        {
+          "ar": "أَعِنْدَكَ",
+          "ar_plain": "أعندك",
+          "translit": "a-ʿindaka",
+          "en": "do you have (male addressee)",
+          "ur": "کیا تمہارے پاس (مذکر مخاطب)"
+        },
+        {
+          "ar": "أَعِنْدَهَا",
+          "ar_plain": "أعندها",
+          "translit": "a-ʿindahā",
+          "en": "does she have",
+          "ur": "کیا اس کے پاس (مؤنث)"
+        },
+        {
+          "ar": "عِنْدِي",
+          "ar_plain": "عندي",
+          "translit": "ʿindī",
+          "en": "with me / I have",
+          "ur": "میرے پاس"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أَعِنْدَكِ",
+        "ar_plain": "أعندك",
+        "translit": "a-ʿindaki",
+        "en": "do you have (female addressee)",
+        "ur": "کیا تمہارے پاس (مؤنث مخاطب)"
+      },
+      "explanation_on_wrong": {
+        "en": "A question to a woman takes كِ: أَعِنْدَكِ قَلَمٌ؟",
+        "ur": "عورت سے سوال میں كِ آتی ہے: أَعِنْدَكِ قَلَمٌ؟"
+      },
       "xp_value": 1
     },
     {
       "type": "GRAMMAR_PARSE",
-      "id": "ch07-l04-ex07",
+      "id": "ch07-l04-ex08",
       "sentence_ar": "عِنْدِي قَلَمٌ",
       "words": [
         {
           "ar": "عِنْدِي",
           "ar_plain": "عندي",
-          "translit": "indi",
+          "translit": "ʿindī",
           "en": "with me / I have",
           "ur": "میرے پاس"
         },
@@ -367,23 +570,27 @@
         }
       ],
       "available_roles": [
-        "PREPOSITION",
         "POSSESSIVE",
         "SUBJECT",
-        "PREDICATE"
+        "PREDICATE",
+        "PREPOSITION"
       ],
       "correct_roles": [
         "POSSESSIVE",
         "SUBJECT"
       ],
+      "explanation_on_wrong": {
+        "en": "عِنْدِي is the possession expression ('with me'); قَلَمٌ is the thing possessed, the subject of the sentence. عِنْدَ is not a plain preposition here.",
+        "ur": "عِنْدِي ملکیت کی ترکیب ہے ('میرے پاس')؛ قَلَمٌ وہ چیز ہے جو پاس ہے، جملے کا مبتدا۔ عِنْدَ یہاں سادہ حرفِ جر نہیں۔"
+      },
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "عند with attached pronoun",
+      "en": "عِنْدَ with an attached pronoun",
       "ar": "عِنْدَ مَعَ الضَّمِير",
-      "ur": "عند ضمیر کے ساتھ"
+      "ur": "عِنْدَ جڑی ہوئی ضمیر کے ساتھ"
     },
     "ayah": {
       "surah": 6,
@@ -397,15 +604,18 @@
     "highlighted_word_indices": [
       0
     ],
+    "highlighted_words": [
+      "وَعِندَهُ"
+    ],
     "noor_explanation": {
-      "en": "وَعِندَهُ means 'and with Him' or 'and He has.' The pattern is the same family as عِنْدِي and عِنْدَكَ, but here it belongs to Allah alone: the keys of the unseen are with Him.",
-      "ur": "وَعِندَهُ کا معنی ہے 'اور اسی کے پاس'۔ یہ عِنْدِي اور عِنْدَكَ ہی کے خاندان کا نمونہ ہے، مگر یہاں بات صرف اللہ کے لیے ہے: غیب کی کنجیاں اسی کے پاس ہیں۔"
+      "en": "وَعِندَهُ is وَ + عِنْدَ + هُ: 'and with Him' — He has. The same family as عِنْدِي and عِنْدَكَ, but here it belongs to Allah alone: the keys of the unseen are with Him.",
+      "ur": "وَعِندَهُ اصل میں وَ + عِنْدَ + هُ ہے: 'اور اسی کے پاس'۔ یہ عِنْدِي اور عِنْدَكَ ہی کا خاندان ہے، مگر یہاں بات صرف اللہ کے لیے ہے: غیب کی کنجیاں اسی کے پاس ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 7 complete. You can now read my, your, his, her, and the عِنْدِي pattern for 'I have'. These small endings will appear everywhere.",
-      "ur": "باب 7 مکمل۔ آپ اب میرا، تمہارا، اس کا/اس کی، اور 'میرے پاس ہے' کے لیے عِنْدِي پڑھ سکتے ہیں۔ یہ چھوٹے آخر ہر جگہ آئیں گے۔"
+      "en": "Arabic can express possession with لِـ, with an attached noun ending, or with عِنْدَ plus a pronoun. You can now tell them apart and use the most useful beginner pattern: عِنْدِي.",
+      "ur": "عربی ملکیت لِـ سے، اسم سے جڑی علامت سے، یا عِنْدَ + ضمیر سے بتا سکتی ہے۔ اب آپ انہیں الگ پہچان سکتے ہیں اور سب سے کارآمد ابتدائی نمونہ استعمال کر سکتے ہیں: عِنْدِي۔"
     }
   }
 }
