@@ -362,6 +362,14 @@ function containsArabic(value?: string | null) {
   return Boolean(value && /[؀-ۿ]/.test(value));
 }
 
+// Arabic-only text (no Latin letters) gets the Arabic font and right-to-left
+// layout. Prose that merely *contains* Arabic ("هَذَا means 'this'") is
+// English and must stay left-to-right, or Android's first-strong heuristic
+// lays the whole paragraph out backwards.
+function isArabicOnly(value?: string | null) {
+  return containsArabic(value) && !/[A-Za-z]/.test(value ?? "");
+}
+
 function normalizeAnswer(value?: string | null) {
   return value?.normalize("NFKD").replace(/[ً-ٰٟ]/g, "").replace(/\s+/g, " ").trim() ?? "";
 }
@@ -416,10 +424,10 @@ function getCorrectAnswerDisplay(ex: RawEx | undefined, language: LessonLanguage
 }
 
 function renderMaybeArabic(value: string, arabicStyle: TextStyle = styles.optionArabicText, textStyle: TextStyle = styles.optionText) {
-  if (containsArabic(value)) {
+  if (isArabicOnly(value)) {
     return <ArabicText size="sm" style={arabicStyle}>{value}</ArabicText>;
   }
-  return <Text style={textStyle}>{value}</Text>;
+  return <Text style={textStyle}>{withDirectionMark(value, "en")}</Text>;
 }
 
 // ---------------------------------------------------------------------------
@@ -754,14 +762,15 @@ export default function LessonPlayScreen() {
   }
 
   function getOptionTextStyle(option: string) {
-    if (!isAnswered) return containsArabic(option) ? styles.optionArabicText : styles.optionText;
+    const arabic = isArabicOnly(option);
+    if (!isAnswered) return arabic ? styles.optionArabicText : styles.optionText;
     const correct = exCorrectAnswer(currentExercise, language, t);
     const isCorrect = containsArabic(option) || containsArabic(correct)
       ? option === correct
       : normalizeAnswer(option) === normalizeAnswer(correct);
-    if (isCorrect) return containsArabic(option) ? styles.optionArabicTextCorrect : styles.optionTextCorrect;
-    if (selectedText === option) return containsArabic(option) ? styles.optionArabicTextWrong : styles.optionTextWrong;
-    return containsArabic(option) ? styles.optionArabicText : styles.optionText;
+    if (isCorrect) return arabic ? styles.optionArabicTextCorrect : styles.optionTextCorrect;
+    if (selectedText === option) return arabic ? styles.optionArabicTextWrong : styles.optionTextWrong;
+    return arabic ? styles.optionArabicText : styles.optionText;
   }
 
   function updateMappedAnswer(key: string, value: string) {
@@ -788,7 +797,7 @@ export default function LessonPlayScreen() {
         ) : (
           <>
             <Text style={styles.feedbackWrongTitle}>{t("player.feedback.almost")}</Text>
-            {wrongExpl ? <Text style={[styles.feedbackExplanation, styles.feedbackWrongExplanation]}>{wrongExpl}</Text> : null}
+            {wrongExpl ? <Text style={[styles.feedbackExplanation, styles.feedbackWrongExplanation]}>{withDirectionMark(wrongExpl, language)}</Text> : null}
             {containsArabic(arabicForDisplay) ? (
               <ArabicText size="sm" style={styles.feedbackCorrectAnswerArabic}>{getCorrectAnswerDisplay(currentExercise, language, t)}</ArabicText>
             ) : (
@@ -1134,7 +1143,7 @@ export default function LessonPlayScreen() {
             </View>
           ) : null}
           <View style={styles.divider} />
-          {noorIntro ? <Text style={styles.hookQuestion}>{noorIntro}</Text> : null}
+          {noorIntro ? <Text style={styles.hookQuestion}>{withDirectionMark(noorIntro, language)}</Text> : null}
         </View>
         <BrandButton title={t("player.hookCta")} onPress={() => goToBeat(2)} style={styles.bottomButton} />
       </View>
@@ -1391,7 +1400,7 @@ export default function LessonPlayScreen() {
           <View style={styles.practiceProgressWrap}>{renderProgressBar()}</View>
           <View style={styles.backButtonSpacer} />
         </View>
-        <Text style={styles.exercisePrompt}>{prompt}</Text>
+        <Text style={styles.exercisePrompt}>{prompt ? withDirectionMark(prompt, language) : prompt}</Text>
         {arabicTxt ? (
           <View style={styles.exerciseArabicCard}>
             <ArabicText size="lg" style={styles.exerciseArabic}>{arabicTxt}</ArabicText>
@@ -1622,7 +1631,7 @@ export default function LessonPlayScreen() {
                 {language === "ur" ? t("player.urduMeanings") : t("player.englishMeanings")}
               </Text>
             </View>
-            <Text style={styles.noorTip} numberOfLines={3}>{noorTip}</Text>
+            <Text style={styles.noorTip} numberOfLines={3}>{withDirectionMark(noorTip, language)}</Text>
           </View>
 
           <Text style={styles.nextLessonReady}>{t("player.nextLessonReady")}</Text>
@@ -1663,7 +1672,7 @@ export default function LessonPlayScreen() {
           {titleAr ? <ArabicText size="lg" style={styles.hookAyah}>{titleAr}</ArabicText> : null}
           {titleText ? <Text style={styles.spContextTitleEn}>{titleText}</Text> : null}
           <View style={styles.divider} />
-          {contextBody ? <Text style={styles.hookQuestion}>{contextBody}</Text> : null}
+          {contextBody ? <Text style={styles.hookQuestion}>{withDirectionMark(contextBody, language)}</Text> : null}
         </View>
         <BrandButton title={t("common.begin")} onPress={() => goToBeat(2)} style={styles.bottomButton} />
       </View>

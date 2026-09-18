@@ -358,11 +358,23 @@ Everything below this list is either done and verified, or one of these:
    3737/3737, missing 0; `content:check` clean. The 22 Chapter 8
    `explanation_on_wrong` / `TRUE_FALSE` strings that opened with Arabic were
    rewritten and re-promoted with `content:promote-chapter-eight -- --apply`
-   in the same session. **The same Arabic-leading pattern remains in roughly
-   1,400 strings across Chapters 1–72** (every chapter, counted 2026-09-18);
-   the durable fix is in the player — force `writingDirection: "ltr"` on the
-   `MATCH_AYAH` option, `TRUE_FALSE` statement, wrong-answer explanation,
-   `noor_intro` and `noor_explanation` texts — rather than rewriting content.
+   in the same session. The same Arabic-leading pattern remained in roughly
+   1,400 strings across Chapters 1–72 (every chapter, counted 2026-09-18), so
+   the durable fix went into the player the same day rather than into content:
+   the exercise prompt (`TRUE_FALSE` statement, `FILL_BLANK` hint,
+   `BUILD_SENTENCE` translation), wrong-answer explanation, hook `noor_intro`,
+   close `noor_message`, spoken-phrases context body and every option label are
+   now wrapped in `withDirectionMark`, the Unicode LRM/RLM prefix the Discover
+   card already used (`writingDirection` is iOS-only, so a style alone does
+   nothing on Android). Options that merely contain Arabic inside English
+   prose render as left-to-right `Text`; only Arabic-only options keep the
+   `ArabicText` font and right-to-left layout (`isArabicOnly`). Verified on
+   the API 34 emulator with Chapter 1 Lesson 2: "ذَٰلِكَ points to something
+   near you." and the Arabic-leading wrong-answer explanation both read
+   left-to-right with the full stop on the right. Ships with the next Play
+   build; the "start with English" authoring rule is now a style preference,
+   not a rendering requirement. `reveal.noor_explanation` is not rendered by
+   the player at all (283 Arabic-leading strings there are moot).
    The Chapter 10 proposal is in the tree, owner-authored and not yet
    reviewed. After every chapter promotion
    that adds lesson ids, re-run `progress:backfill-skipped` for the owner's
