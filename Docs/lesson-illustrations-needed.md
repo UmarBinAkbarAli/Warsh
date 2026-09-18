@@ -140,6 +140,15 @@ is file 04 and `ch10-l04` (after) is file 05.
 | 4 | `ch10-before-timeline.png` | `ch10-l03` (file 04) cards 4, 9 | قَبْلَ وَبَعْدَ · قَبْلَ | A simple two-step timeline (two events on a line, e.g. a walking figure then a prayer mat); the earlier event highlighted, the later one muted; no words or arrows with lettering. |
 | 5 | `ch10-after-timeline.png` | `ch10-l04` (file 05) cards 4, 9 | قَبْلَ / بَعْدَ · قَبْلَ وَبَعْدَ | The same timeline language as scene 4 with the later event highlighted and the earlier one muted; no text. |
 
+## Chapter 11 — nothing open
+
+Rebuilt 2026-09-19 from `proposals/chapter-11-content-proposal.md`. Every card
+that carries an image uses an approved asset: `ab`, `umm`, `bayt`, `kitab`,
+`qalam`, `fi` and `qawm` from the discover set, and `akh`, `ukht`, `matbakh`,
+`ard` and `aila` copied from the dictionary word images on 2026-09-19. The
+proposal does not require an illustration on every card, so no composite
+scenes are requested.
+
 ## Delivered
 
 _Nothing yet._

@@ -410,6 +410,30 @@ Everything below this list is either done and verified, or one of these:
    chapter promotion that adds lesson ids, re-run `progress:backfill-skipped`
    for the owner's test account and `content:backfill-new-lessons` for
    everyone else.
+   **Chapter 11 (`Docs/proposals/chapter-11-content-proposal.md`, family
+   words, the ي of 'my', فِيهِ / فِيهَا and بُيُوتِكُمْ) is built and
+   staging-verified (2026-09-19); production promotion is pending the owner's
+   go-ahead** — `npm run content:promote-chapter-eleven -- --apply`, then
+   `content:backfill-new-lessons -- --lesson-ids ch11-l06,ch11-test --apply`,
+   `progress:backfill-skipped` for the owner's account, `content:baseline`,
+   `content:check`. `ch11-l01..l05` are rewritten in place (8 cards / 7
+   exercises each, IDs and display orders unchanged); `ch11-l06` (review,
+   8 cards / 10 exercises) and `ch11-test` (12 MC, 80 %) are new. Lesson 1
+   now hooks on Al-Qasas 28:25 (contains أَبِي) and Lesson 4 on Al-Baqarah
+   2:30 (فِيهَا with the feminine الْأَرْضِ on screen); the Lesson 1 parse is
+   SUBJECT / PREPOSITION / PREDICATE; Urdu matching choices are distinct;
+   every reveal declares `highlighted_words`. Fixture/Quran/Urdu audits
+   pass; 19 catalogue clips generated (R2 3778/3778); `akh`, `ukht`,
+   `matbakh`, `ard`, `aila` discover images copied from the dictionary set;
+   no open illustration scenes. Verified on the API 34 emulator against
+   staging: chapter card and lesson list, every card of all six lessons
+   (images + audio), Lesson 1 end to end with all seven exercise types,
+   test intro and first question; through the API on a fresh account: test
+   locked until the six lessons are complete, answer key stripped, 0/12 and
+   9/12 fail, 10/12 passes and completes the chapter, 12/12 repeat earns
+   0 XP. `media:check-fixtures` reports three pre-existing Chapter 4
+   relative-path image URLs (`/images/discover/ch04-*-v1.png`) that it cannot
+   HEAD; they are not part of this work.
    Fixed 2026-09-18 alongside the promotion: (a) `GET /api/lessons/{id}` no
    longer returns `assessment.questions[].correct_index` — the server graded
    already and the app never read it, but the answer key was visible to anyone

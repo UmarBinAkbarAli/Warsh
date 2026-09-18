@@ -89,11 +89,13 @@ const ch10L03Content     = require("./fixtures/chapter-10-lesson-04.json");     
 const ch10L04Content     = require("./fixtures/chapter-10-lesson-05.json");            // ch10-l04 (after), order 5
 const ch10L06Content     = require("./fixtures/chapter-10-lesson-06-review.json");     // ch10-l06, review, order 6
 const ch10TestContent    = require("./fixtures/chapter-10-lesson-07-final-test.json"); // ch10-test, order 7
-const ch11L01Content     = require("./fixtures/chapter-11-lesson-01.json");
-const ch11L02Content     = require("./fixtures/chapter-11-lesson-02.json");
-const ch11L03Content     = require("./fixtures/chapter-11-lesson-03.json");
-const ch11L04Content     = require("./fixtures/chapter-11-lesson-04.json");
-const ch11L05Content     = require("./fixtures/chapter-11-lesson-05.json");
+const ch11L01Content     = require("./fixtures/chapter-11-lesson-01.json");            // ch11-l01, order 1
+const ch11L02Content     = require("./fixtures/chapter-11-lesson-02.json");            // ch11-l02, order 2
+const ch11L03Content     = require("./fixtures/chapter-11-lesson-03.json");            // ch11-l03, order 3
+const ch11L04Content     = require("./fixtures/chapter-11-lesson-04.json");            // ch11-l04, order 4
+const ch11L05Content     = require("./fixtures/chapter-11-lesson-05.json");            // ch11-l05, order 5
+const ch11L06Content     = require("./fixtures/chapter-11-lesson-06-review.json");     // ch11-l06, review, order 6
+const ch11TestContent    = require("./fixtures/chapter-11-lesson-07-final-test.json"); // ch11-test, order 7
 const ch12L01Content     = require("./fixtures/chapter-12-lesson-01.json");
 const ch12L02Content     = require("./fixtures/chapter-12-lesson-02.json");
 const ch12L03Content     = require("./fixtures/chapter-12-lesson-03.json");
@@ -823,12 +825,15 @@ async function main() {
     { id: "ch10-l04",  chapterId: ch10Id, order: 5, title: "After — بَعْدَ",                         titleAr: "بَعْدَ — ظَرْفُ زَمَان",                     template: "STANDARD", xpReward: ch10L04Content._meta?.xp_reward  ?? 10, content: ch10L04Content },
     { id: "ch10-l06",  chapterId: ch10Id, order: 6, title: "Chapter 10 Review",                      titleAr: "مُرَاجَعَةُ الْفَصْلِ الْعَاشِر",            template: "REVIEW",   xpReward: ch10L06Content._meta?.xp_reward  ?? 20, content: ch10L06Content },
     { id: "ch10-test", chapterId: ch10Id, order: 7, title: "Chapter 10 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الْعَاشِرِ",            template: "REVIEW",   xpReward: ch10TestContent._meta?.xp_reward ?? 20, content: ch10TestContent },
-    // Chapter 11
-    { id: "ch11-l01", chapterId: ch11Id, order: 1, title: "My Father and My Mother — أَبِي and أُمِّي", titleAr: "أَبِي وَأُمِّي",                    template: "STANDARD",    xpReward: ch11L01Content._meta?.xp_reward     ?? 10, content: ch11L01Content },
-    { id: "ch11-l02", chapterId: ch11Id, order: 2, title: "Family Vocabulary",                      titleAr: "كَلِمَاتُ الْعَائِلَة",                   template: "STANDARD",    xpReward: ch11L02Content._meta?.xp_reward     ?? 10, content: ch11L02Content },
-    { id: "ch11-l03", chapterId: ch11Id, order: 3, title: "In It — فِيهِ",                          titleAr: "فِيهِ — ضَمِيرُ الْمُفْرَدِ الْغَائِب",  template: "STANDARD",    xpReward: ch11L03Content._meta?.xp_reward     ?? 10, content: ch11L03Content },
-    { id: "ch11-l04", chapterId: ch11Id, order: 4, title: "In It — فِيهَا",                         titleAr: "فِيهَا — ضَمِيرُ الْمُؤَنَّث",            template: "STANDARD",    xpReward: ch11L04Content._meta?.xp_reward     ?? 10, content: ch11L04Content },
-    { id: "ch11-l05", chapterId: ch11Id, order: 5, title: "Home in the Quran — بُيُوتِكُمْ",        titleAr: "بُيُوتِكُمْ فِي الْقُرْآن",               template: "STANDARD",    xpReward: ch11L05Content._meta?.xp_reward     ?? 10, content: ch11L05Content },
+    // Chapter 11 — Docs/proposals/chapter-11-content-proposal.md. ch11-l01..l05
+    // keep their IDs and display orders; ch11-l06 (review) and ch11-test are new rows.
+    { id: "ch11-l01",  chapterId: ch11Id, order: 1, title: "My Father and My Mother — أَبِي and أُمِّي", titleAr: "أَبِي وَأُمِّي",                       template: "STANDARD", xpReward: ch11L01Content._meta?.xp_reward  ?? 10, content: ch11L01Content },
+    { id: "ch11-l02",  chapterId: ch11Id, order: 2, title: "Family Vocabulary",                          titleAr: "مُفْرَدَاتُ الْأُسْرَةِ",                  template: "STANDARD", xpReward: ch11L02Content._meta?.xp_reward  ?? 10, content: ch11L02Content },
+    { id: "ch11-l03",  chapterId: ch11Id, order: 3, title: "In It, Masculine — فِيهِ",                   titleAr: "فِيهِ — ضَمِيرُ الْمُفْرَدِ الْغَائِبِ",  template: "STANDARD", xpReward: ch11L03Content._meta?.xp_reward  ?? 10, content: ch11L03Content },
+    { id: "ch11-l04",  chapterId: ch11Id, order: 4, title: "In It, Feminine — فِيهَا",                   titleAr: "فِيهَا — ضَمِيرُ الْمُفْرَدَةِ الْغَائِبَةِ", template: "STANDARD", xpReward: ch11L04Content._meta?.xp_reward  ?? 10, content: ch11L04Content },
+    { id: "ch11-l05",  chapterId: ch11Id, order: 5, title: "Home in the Quran — بُيُوتِكُمْ",            titleAr: "بُيُوتِكُمْ فِي الْقُرْآنِ",               template: "STANDARD", xpReward: ch11L05Content._meta?.xp_reward  ?? 10, content: ch11L05Content },
+    { id: "ch11-l06",  chapterId: ch11Id, order: 6, title: "Chapter 11 Review",                          titleAr: "مُرَاجَعَةُ الْفَصْلِ الْحَادِيَ عَشَرَ",   template: "REVIEW",   xpReward: ch11L06Content._meta?.xp_reward  ?? 20, content: ch11L06Content },
+    { id: "ch11-test", chapterId: ch11Id, order: 7, title: "Chapter 11 Final Test",                      titleAr: "اخْتِبَارُ الْفَصْلِ الْحَادِيَ عَشَرَ",   template: "REVIEW",   xpReward: ch11TestContent._meta?.xp_reward ?? 20, content: ch11TestContent },
     // Chapter 12
     { id: "ch12-l01", chapterId: ch12Id, order: 1, title: "What Is Your Name?",                     titleAr: "مَا اسْمُكَ؟",                            template: "STANDARD",        xpReward: ch12L01Content._meta?.xp_reward       ?? 10, content: ch12L01Content },
     { id: "ch12-l02", chapterId: ch12Id, order: 2, title: "Where Are You From?",                    titleAr: "مِنْ أَيْنَ أَنْتَ؟",                     template: "STANDARD",        xpReward: ch12L02Content._meta?.xp_reward       ?? 10, content: ch12L02Content },

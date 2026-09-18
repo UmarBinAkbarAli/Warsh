@@ -1,0 +1,458 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 11 final test (ch11-test, new). Twelve multiple-choice questions covering the chapter outcomes: أَبِي, أُمِّي, the possessive form for 'my brother', the four family words, إِخْوَةٌ as the plural met with أَخٌ, أَبِي فِي الْبَيْتِ, فِيهِ after a masculine antecedent, فِيهَا after a feminine one, a mixed فِيهِ / فِيهَا choice, بَيْتٌ versus بُيُوتٌ, كُمْ inside بُيُوتِكُمْ, and locating a taught target in Al-Baqarah 2:2. Excludes case terminology, full pronoun paradigms and any form not taught in the five lessons or the review. Pass mark 80 % (10 of 12) to match Chapters 3–10. Added 2026-09-19 from Docs/proposals/chapter-11-content-proposal.md.",
+    "titleUr": "باب 11 کا آخری امتحان",
+    "chapter_order": 11,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 16,
+      "ayah": 80,
+      "label": "An-Nahl 16:80",
+      "ar": "وَاللَّهُ جَعَلَ لَكُم مِّن بُيُوتِكُمْ سَكَنًا",
+      "en": "And Allah has made for you from your homes a place of rest.",
+      "ur": "اور اللہ نے تمہارے لیے تمہارے گھروں کو سکون کی جگہ بنایا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/016080.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 11.",
+      "ur": "باب 11 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "exercises": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 11,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch11-test-q01",
+        "topic": {
+          "en": "My father",
+          "ur": "میرے والد"
+        },
+        "prompt": {
+          "en": "What does أَبِي mean?",
+          "ur": "أَبِي کا کیا مطلب ہے؟"
+        },
+        "arabic": "أَبِي",
+        "options": [
+          {
+            "en": "a father",
+            "ur": "والد"
+          },
+          {
+            "en": "my father",
+            "ur": "میرے والد"
+          },
+          {
+            "en": "my brother",
+            "ur": "میرا بھائی"
+          },
+          {
+            "en": "your father",
+            "ur": "تمہارے والد"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch11-test-q02",
+        "topic": {
+          "en": "My mother",
+          "ur": "میری والدہ"
+        },
+        "prompt": {
+          "en": "What does أُمِّي mean?",
+          "ur": "أُمِّي کا کیا مطلب ہے؟"
+        },
+        "arabic": "أُمِّي",
+        "options": [
+          {
+            "en": "my mother",
+            "ur": "میری والدہ"
+          },
+          {
+            "en": "a mother",
+            "ur": "والدہ"
+          },
+          {
+            "en": "my sister",
+            "ur": "میری بہن"
+          },
+          {
+            "en": "in it",
+            "ur": "اس میں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch11-test-q03",
+        "topic": {
+          "en": "My brother",
+          "ur": "میرا بھائی"
+        },
+        "prompt": {
+          "en": "Which form means 'my brother'?",
+          "ur": "کون سی صورت کا مطلب 'میرا بھائی' ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "أَخٌ",
+            "en": "a brother",
+            "ur": "بھائی"
+          },
+          {
+            "arabic": "إِخْوَةٌ",
+            "en": "brothers",
+            "ur": "بھائی (جمع)"
+          },
+          {
+            "arabic": "أَخِي",
+            "en": "my brother",
+            "ur": "میرا بھائی"
+          },
+          {
+            "arabic": "أُخْتِي",
+            "en": "my sister",
+            "ur": "میری بہن"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch11-test-q04",
+        "topic": {
+          "en": "Family words",
+          "ur": "خاندانی الفاظ"
+        },
+        "prompt": {
+          "en": "Which word means 'a sister'?",
+          "ur": "کون سے لفظ کا مطلب 'بہن' ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "أَبٌ",
+            "en": "a father",
+            "ur": "والد"
+          },
+          {
+            "arabic": "أُمٌّ",
+            "en": "a mother",
+            "ur": "والدہ"
+          },
+          {
+            "arabic": "أَخٌ",
+            "en": "a brother",
+            "ur": "بھائی"
+          },
+          {
+            "arabic": "أُخْتٌ",
+            "en": "a sister",
+            "ur": "بہن"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch11-test-q05",
+        "topic": {
+          "en": "Brothers in the Quran",
+          "ur": "قرآن میں بھائی"
+        },
+        "prompt": {
+          "en": "In إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ, what is إِخْوَةٌ?",
+          "ur": "إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ میں إِخْوَةٌ کیا ہے؟"
+        },
+        "arabic": "إِخْوَةٌ",
+        "options": [
+          {
+            "en": "the singular word for brother",
+            "ur": "بھائی کا واحد لفظ"
+          },
+          {
+            "en": "the broken plural of أَخٌ: brothers",
+            "ur": "أَخٌ کی جمع مکسر: بھائی (جمع)"
+          },
+          {
+            "en": "the word for sister",
+            "ur": "بہن کا لفظ"
+          },
+          {
+            "en": "'my brother', with the ي of 'my'",
+            "ur": "'میرا بھائی'، 'میرا' والی ي کے ساتھ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch11-test-q06",
+        "topic": {
+          "en": "A sentence about my father",
+          "ur": "میرے والد کے بارے میں جملہ"
+        },
+        "prompt": {
+          "en": "Which sentence means 'My father is in the house'?",
+          "ur": "کون سے جملے کا مطلب 'میرے والد گھر میں ہیں' ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "أَبٌ فِي الْبَيْتِ",
+            "en": "A father is in the house.",
+            "ur": "ایک والد گھر میں ہیں۔"
+          },
+          {
+            "arabic": "أَبِي فِي الْبَيْتِ",
+            "en": "My father is in the house.",
+            "ur": "میرے والد گھر میں ہیں۔"
+          },
+          {
+            "arabic": "أُمِّي فِي الْبَيْتِ",
+            "en": "My mother is in the house.",
+            "ur": "میری والدہ گھر میں ہیں۔"
+          },
+          {
+            "arabic": "أَبِي فِي الْمَطْبَخِ",
+            "en": "My father is in the kitchen.",
+            "ur": "میرے والد باورچی خانے میں ہیں۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch11-test-q07",
+        "topic": {
+          "en": "In it, masculine",
+          "ur": "اس میں، مذکر"
+        },
+        "prompt": {
+          "en": "The pen is in the drawer: الْقَلَمُ فِي الدُّرْجِ. How do you say 'it is in it'?",
+          "ur": "قلم دراز میں ہے: الْقَلَمُ فِي الدُّرْجِ۔ 'وہ اس میں ہے' کیسے کہیں گے؟"
+        },
+        "options": [
+          {
+            "arabic": "هُوَ فِيهِ",
+            "en": "It is in it (masculine).",
+            "ur": "وہ اس میں ہے (مذکر)۔"
+          },
+          {
+            "arabic": "هُوَ فِيهَا",
+            "en": "It is in it (feminine).",
+            "ur": "وہ اس میں ہے (مؤنث)۔"
+          },
+          {
+            "arabic": "هُوَ فِي",
+            "en": "It is in.",
+            "ur": "وہ میں ہے۔"
+          },
+          {
+            "arabic": "هُوَ أَبِي",
+            "en": "He is my father.",
+            "ur": "وہ میرے والد ہیں۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch11-test-q08",
+        "topic": {
+          "en": "In it, feminine",
+          "ur": "اس میں، مؤنث"
+        },
+        "prompt": {
+          "en": "The book is in the bag: الْكِتَابُ فِي الْحَقِيبَةِ. How do you say 'it is in it'?",
+          "ur": "کتاب بیگ میں ہے: الْكِتَابُ فِي الْحَقِيبَةِ۔ 'وہ اس میں ہے' کیسے کہیں گے؟"
+        },
+        "options": [
+          {
+            "arabic": "هُوَ فِيهِ",
+            "en": "It is in it (masculine).",
+            "ur": "وہ اس میں ہے (مذکر)۔"
+          },
+          {
+            "arabic": "هُوَ فِيهَا",
+            "en": "It is in it (feminine).",
+            "ur": "وہ اس میں ہے (مؤنث)۔"
+          },
+          {
+            "arabic": "هُوَ بُيُوتِكُمْ",
+            "en": "It is your homes.",
+            "ur": "وہ تمہارے گھر ہے۔"
+          },
+          {
+            "arabic": "هُوَ أُخْتِي",
+            "en": "It is my sister.",
+            "ur": "وہ میری بہن ہے۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch11-test-q09",
+        "topic": {
+          "en": "Choosing فِيهِ or فِيهَا",
+          "ur": "فِيهِ یا فِيهَا کا چناؤ"
+        },
+        "prompt": {
+          "en": "What decides whether 'in it' is فِيهِ or فِيهَا?",
+          "ur": "یہ فیصلہ کیا کرتا ہے کہ 'اس میں' فِيهِ ہو گا یا فِيهَا؟"
+        },
+        "options": [
+          {
+            "en": "the gender of the thing that is inside",
+            "ur": "اندر والی چیز کی جنس"
+          },
+          {
+            "en": "the gender of the noun it points back to",
+            "ur": "اس اسم کی جنس جس کی طرف یہ لوٹتا ہے"
+          },
+          {
+            "en": "whether the sentence is about a person",
+            "ur": "آیا جملہ کسی شخص کے بارے میں ہے"
+          },
+          {
+            "en": "whether the sentence is from the Quran",
+            "ur": "آیا جملہ قرآن سے ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch11-test-q10",
+        "topic": {
+          "en": "A house, houses",
+          "ur": "ایک گھر، گھر (جمع)"
+        },
+        "prompt": {
+          "en": "Which word means 'houses'?",
+          "ur": "کون سے لفظ کا مطلب 'گھر (جمع)' ہے؟"
+        },
+        "options": [
+          {
+            "arabic": "بَيْتٌ",
+            "en": "a house",
+            "ur": "ایک گھر"
+          },
+          {
+            "arabic": "بُيُوتٌ",
+            "en": "houses",
+            "ur": "گھر (جمع)"
+          },
+          {
+            "arabic": "الْبَيْتِ",
+            "en": "the house",
+            "ur": "گھر (معین)"
+          },
+          {
+            "arabic": "بُيُوتِكُمْ",
+            "en": "your homes",
+            "ur": "تمہارے گھر"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch11-test-q11",
+        "topic": {
+          "en": "Your homes",
+          "ur": "تمہارے گھر"
+        },
+        "prompt": {
+          "en": "In بُيُوتِكُمْ, what does the ending كُمْ mean?",
+          "ur": "بُيُوتِكُمْ میں آخر کے كُمْ کا کیا مطلب ہے؟"
+        },
+        "arabic": "بُيُوتِكُمْ",
+        "options": [
+          {
+            "en": "my",
+            "ur": "میرا"
+          },
+          {
+            "en": "it, for a feminine noun",
+            "ur": "اس (مؤنث)"
+          },
+          {
+            "en": "your, addressing a group",
+            "ur": "تمہارا، جماعت سے خطاب"
+          },
+          {
+            "en": "houses",
+            "ur": "گھر (جمع)"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch11-test-q12",
+        "topic": {
+          "en": "Quran recognition",
+          "ur": "قرآنی پہچان"
+        },
+        "prompt": {
+          "en": "In ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ, what does فِيهِ refer to?",
+          "ur": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ میں فِيهِ کس کی طرف لوٹتا ہے؟"
+        },
+        "arabic": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+        "options": [
+          {
+            "en": "الْكِتَابُ, the Book, a masculine noun: no doubt in it",
+            "ur": "الْكِتَابُ، کتاب، مذکر اسم: اس میں کوئی شک نہیں"
+          },
+          {
+            "en": "a feminine noun mentioned earlier",
+            "ur": "پہلے ذکر ہوا کوئی مؤنث اسم"
+          },
+          {
+            "en": "the speaker's father",
+            "ur": "بولنے والے کے والد"
+          },
+          {
+            "en": "your homes",
+            "ur": "تمہارے گھر"
+          }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 11 — the home and family",
+      "ar": "الْبَيْتُ وَالْأُسْرَةُ",
+      "ur": "باب 11 — گھر اور خاندان"
+    },
+    "ayah": {
+      "surah": 16,
+      "ayah": 80,
+      "label": "An-Nahl 16:80",
+      "ar": "وَاللَّهُ جَعَلَ لَكُم مِّن بُيُوتِكُمْ سَكَنًا",
+      "en": "And Allah has made for you from your homes a place of rest.",
+      "ur": "اور اللہ نے تمہارے لیے تمہارے گھروں کو سکون کی جگہ بنایا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/016080.mp3"
+    },
+    "highlighted_word_indices": [
+      4
+    ],
+    "highlighted_words": [
+      "بُيُوتِكُمْ"
+    ],
+    "noor_explanation": {
+      "en": "بُيُوتِكُمْ is a house made plural and then made yours with the attached كُمْ. That habit of reading the ending, the ي of 'my' in أَبِي, the هِ and هَا of فِيهِ and فِيهَا, and this كُمْ, is what this test measured.",
+      "ur": "بُيُوتِكُمْ ایک گھر ہے جسے جمع بنایا اور پھر جڑے ہوئے كُمْ سے تمہارا بنایا۔ آخر پڑھنے کی یہی عادت، أَبِي میں 'میرا' کی ي، فِيهِ اور فِيهَا میں هِ اور هَا، اور یہ كُمْ، اس امتحان میں پرکھی گئی۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 11 complete. You can now read family words, the ي of 'my', فِيهِ and فِيهَا, and بُيُوتِكُمْ wherever the Quran uses them.",
+      "ur": "باب 11 مکمل۔ اب آپ خاندانی الفاظ، 'میرا' کی ي، فِيهِ اور فِيهَا، اور بُيُوتِكُمْ جہاں بھی قرآن انہیں استعمال کرے پڑھ سکتے ہیں۔"
+    }
+  }
+}

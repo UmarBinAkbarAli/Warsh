@@ -2,25 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 11, Lesson 4 - feminine in it: فِيهَا.",
+    "_note": "Chapter 11, Lesson 4 (ch11-l04) — فِيهَا, 'in it' referring to a feminine noun: فِي + هَا, the bag example with the explicit contrast الدُّرْجِ → فِيهِ / الْحَقِيبَةِ → فِيهَا, a mixed exercise chosen from the antecedent rather than an English label, and Urdu labels اس میں (مذکر) / اس میں (مؤنث). Hook and reveal replaced: Al-Qadr 97:3 does not contain the target, so the lesson now uses Al-Baqarah 2:30, where فِيهَا points back to the feminine الْأَرْضِ. Rebuilt 2026-09-19 from Docs/proposals/chapter-11-content-proposal.md.",
+    "titleUr": "اس میں، مؤنث — فِيهَا",
     "chapter_order": 11,
     "lesson_order": 4,
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 97,
-      "ayah": 3,
-      "label": "Al-Qadr 97:3",
-      "ar": "لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ",
-      "en": "The Night of Decree is better than a thousand months.",
-      "ur": "لیلۃ القدر ہزار مہینوں سے بہتر ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/097003.mp3"
+      "surah": 2,
+      "ayah": 30,
+      "label": "Al-Baqarah 2:30",
+      "ar": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً قَالُوا أَتَجْعَلُ فِيهَا",
+      "en": "\"Indeed, I will make upon the earth a successive authority.\" They said, \"Will You place upon it…\"",
+      "ur": "\"میں زمین میں ایک نائب بنانے والا ہوں۔\" انہوں نے کہا: \"کیا تُو اس میں…\"",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002030.mp3"
     },
     "noor_intro": {
-      "en": "Some nouns are feminine, so Arabic points back to them with هَا. Today: فِيهَا, in it.",
-      "ur": "کچھ اسم مؤنث ہوتے ہیں، اس لیے عربی ان کی طرف هَا سے لوٹتی ہے۔ آج: فِيهَا، اس میں۔"
+      "en": "In Al-Baqarah 2:30 the earth, الْأَرْضِ, is named, and a few words later the angels say فِيهَا: in it. Not فِيهِ, because الْأَرْضُ is feminine. Today you learn the feminine partner of فِيهِ and how to choose between them.",
+      "ur": "البقرہ 2:30 میں زمین، الْأَرْضِ، کا نام آتا ہے، اور چند لفظ بعد فرشتے کہتے ہیں فِيهَا: اس میں۔ فِيهِ نہیں، کیونکہ الْأَرْضُ مؤنث ہے۔ آج آپ فِيهِ کا مؤنث جوڑ سیکھیں گے اور یہ کہ دونوں میں سے چناؤ کیسے کریں۔"
     },
     "autoplay": true
   },
@@ -28,23 +29,44 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "In + it feminine",
+        "en": "In + it (feminine) → in it",
         "ar": "فِي + هَا",
-        "ur": "میں + وہ مؤنث"
+        "ur": "میں + وہ (مؤنث) ← اس میں"
       },
       "explanation": {
-        "en": "فِي plus هَا becomes فِيهَا: in it, referring to a feminine noun.",
-        "ur": "فِي کے ساتھ هَا لگے تو فِيهَا بنتا ہے: اس میں، جب اشارہ مؤنث اسم کی طرف ہو۔"
-      }
+        "en": "فِي means 'in'. The attached pronoun هَا means 'it' or 'her' when it refers to a feminine noun. Joined together: فِيهَا, in it. Same فِي as yesterday, a different ending.",
+        "ur": "فِي کا مطلب ہے 'میں'۔ جڑی ہوئی ضمیر هَا کا مطلب 'وہ / اس' ہے جب یہ مؤنث اسم کی طرف لوٹے۔ دونوں مل کر: فِيهَا، اس میں۔ وہی فِي، مگر علامت الگ۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/fi.webp",
+      "examples": [
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "فِيهَا",
+          "ar_plain": "فيها",
+          "translit": "fīhā",
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
+        }
+      ]
     },
     {
       "type": "WORD",
       "text": {
         "ar": "فِيهَا",
         "ar_plain": "فيها",
-        "translit": "fiha",
-        "en": "in it",
-        "ur": "اس میں"
+        "translit": "fīhā",
+        "en": "in it (feminine)",
+        "ur": "اس میں (مؤنث)"
+      },
+      "explanation": {
+        "en": "Listen for the long ā at the end: fīhā. That هَا is the sign that the noun it points back to is feminine.",
+        "ur": "آخر کی لمبی آ سنیں: فِيهَا۔ یہی هَا اس بات کی علامت ہے کہ جس اسم کی طرف یہ لوٹتا ہے وہ مؤنث ہے۔"
       }
     },
     {
@@ -52,28 +74,149 @@
       "text": {
         "ar": "الْكِتَابُ فِي الْحَقِيبَةِ",
         "ar_plain": "الكتاب في الحقيبة",
-        "translit": "al-kitaabu fi al-haqeebati",
-        "en": "The book is in the bag",
-        "ur": "کتاب بیگ میں ہے"
+        "translit": "al-kitābu fī l-ḥaqībati",
+        "en": "The book is in the bag.",
+        "ur": "کتاب بیگ میں ہے۔"
       },
       "explanation": {
-        "en": "الْحَقِيبَةِ is feminine, so the next sentence can say فِيهَا.",
-        "ur": "الْحَقِيبَةِ مؤنث ہے، اس لیے اگلے جملے میں فِيهَا آ سکتا ہے۔"
-      }
+        "en": "The full sentence names both things. The bag, الْحَقِيبَةِ, ends in ة, the most common feminine ending. That is the noun the next card will point back to.",
+        "ur": "پورا جملہ دونوں چیزوں کا نام لیتا ہے۔ بیگ، الْحَقِيبَةِ، ة پر ختم ہوتا ہے، جو سب سے عام مؤنث علامت ہے۔ اگلا کارڈ اسی اسم کی طرف لوٹے گا۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/kitab.webp"
     },
     {
       "type": "EXAMPLE",
       "text": {
         "ar": "هُوَ فِيهَا",
         "ar_plain": "هو فيها",
-        "translit": "huwa fiha",
-        "en": "It is in it",
-        "ur": "وہ اس میں ہے"
+        "translit": "huwa fīhā",
+        "en": "It (the book) is in it (the bag).",
+        "ur": "وہ (کتاب) اس (بیگ) میں ہے۔"
       },
       "explanation": {
-        "en": "The thing inside may be masculine, but فِيهَا agrees with the feminine container.",
-        "ur": "اندر والی چیز مذکر ہو سکتی ہے، مگر فِيهَا مؤنث ظرف یا چیز کی طرف لوٹتا ہے۔"
+        "en": "هُوَ is 'it', the book, which is masculine. فِيهَا is 'in it', the bag, which is feminine. Each pronoun matches its own noun: the thing inside can be masculine while the container is feminine.",
+        "ur": "هُوَ 'وہ' ہے، کتاب، جو مذکر ہے۔ فِيهَا 'اس میں' ہے، بیگ، جو مؤنث ہے۔ ہر ضمیر اپنے اسم سے ملتی ہے: اندر والی چیز مذکر ہو سکتی ہے جبکہ ظرف مؤنث ہو۔"
       }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Which 'in it'? Look at the noun",
+        "ar": "فِيهِ / فِيهَا",
+        "ur": "کون سا 'اس میں'؟ اسم کو دیکھیں"
+      },
+      "explanation": {
+        "en": "The drawer, الدُّرْجِ, is masculine, so 'in it' is فِيهِ. The bag, الْحَقِيبَةِ, is feminine, so 'in it' is فِيهَا. The choice is made by the noun you are pointing back to, never by the thing inside.",
+        "ur": "دراز، الدُّرْجِ، مذکر ہے، اس لیے 'اس میں' فِيهِ ہے۔ بیگ، الْحَقِيبَةِ، مؤنث ہے، اس لیے 'اس میں' فِيهَا ہے۔ چناؤ اسی اسم سے ہوتا ہے جس کی طرف آپ لوٹ رہے ہیں، اندر والی چیز سے کبھی نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "الدُّرْجِ",
+          "ar_plain": "الدرج",
+          "translit": "ad-durji",
+          "en": "the drawer (masculine)",
+          "ur": "دراز (مذکر)"
+        },
+        {
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fīhi",
+          "en": "in it (masculine)",
+          "ur": "اس میں (مذکر)"
+        },
+        {
+          "ar": "الْحَقِيبَةِ",
+          "ar_plain": "الحقيبة",
+          "translit": "al-ḥaqībati",
+          "en": "the bag (feminine)",
+          "ur": "بیگ (مؤنث)"
+        },
+        {
+          "ar": "فِيهَا",
+          "ar_plain": "فيها",
+          "translit": "fīhā",
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Feminine without ة",
+        "ar": "الْأَرْضُ",
+        "ur": "ة کے بغیر مؤنث"
+      },
+      "explanation": {
+        "en": "Most feminine nouns end in ة, like الْحَقِيبَةُ. A few are feminine without it, and الْأَرْضُ, the earth, is one you meet constantly in the Quran. That is why the ayah says فِيهَا about the earth.",
+        "ur": "زیادہ تر مؤنث اسم ة پر ختم ہوتے ہیں، جیسے الْحَقِيبَةُ۔ کچھ اس کے بغیر بھی مؤنث ہیں، اور الْأَرْضُ، زمین، ان میں سے ایک ہے جو قرآن میں بار بار ملتا ہے۔ اسی لیے آیت زمین کے بارے میں فِيهَا کہتی ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/ard.webp",
+      "examples": [
+        {
+          "ar": "الْأَرْضُ",
+          "ar_plain": "الارض",
+          "translit": "al-arḍu",
+          "en": "the earth (feminine)",
+          "ur": "زمین (مؤنث)"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً قَالُوا أَتَجْعَلُ فِيهَا",
+        "ar_plain": "اني جاعل في الارض خليفة قالوا اتجعل فيها",
+        "translit": "innī jāʿilun fī l-arḍi khalīfatan qālū a-tajʿalu fīhā",
+        "en": "\"Indeed, I will make upon the earth a successive authority.\" They said, \"Will You place upon it…\"",
+        "ur": "\"میں زمین میں ایک نائب بنانے والا ہوں۔\" انہوں نے کہا: \"کیا تُو اس میں…\""
+      },
+      "explanation": {
+        "en": "First find الْأَرْضِ, the earth. Then find فِيهَا at the end: in it, meaning in the earth. The noun is feminine, so the pronoun is هَا. You do not need the words in between yet; only the pair.",
+        "ur": "پہلے الْأَرْضِ، زمین، تلاش کریں۔ پھر آخر میں فِيهَا: اس میں، یعنی زمین میں۔ اسم مؤنث ہے، اس لیے ضمیر هَا ہے۔ بیچ کے الفاظ ابھی درکار نہیں؛ صرف یہ جوڑا۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002030.mp3",
+      "examples": [
+        {
+          "ar": "فِيهَا",
+          "ar_plain": "فيها",
+          "translit": "fīhā",
+          "en": "in it (the earth)",
+          "ur": "اس (زمین) میں"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Summary and boundary",
+        "ar": "فِيهِ / فِيهَا",
+        "ur": "خلاصہ اور حد"
+      },
+      "explanation": {
+        "en": "Two words for 'in it': فِيهِ after a masculine noun, فِيهَا after a feminine one. Find the noun first, then choose. Other attached pronouns on فِي, like 'in them' or 'in you', belong to later chapters.",
+        "ur": "'اس میں' کے لیے دو لفظ: مذکر اسم کے بعد فِيهِ، مؤنث کے بعد فِيهَا۔ پہلے اسم تلاش کریں، پھر چنیں۔ فِي پر دوسری جڑی ہوئی ضمیریں، جیسے 'ان میں' یا 'تم میں'، بعد کے ابواب میں آئیں گی۔"
+      },
+      "examples": [
+        {
+          "ar": "هُوَ فِيهِ",
+          "ar_plain": "هو فيه",
+          "translit": "huwa fīhi",
+          "en": "It is in it (masculine).",
+          "ur": "وہ اس میں ہے (مذکر)۔"
+        },
+        {
+          "ar": "هُوَ فِيهَا",
+          "ar_plain": "هو فيها",
+          "translit": "huwa fīhā",
+          "en": "It is in it (feminine).",
+          "ur": "وہ اس میں ہے (مؤنث)۔"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -83,46 +226,54 @@
       "prompt": {
         "ar": "فِيهَا",
         "ar_plain": "فيها",
-        "translit": "fiha",
-        "en": "in it",
-        "ur": "اس میں"
+        "translit": "fīhā",
+        "en": "in it (feminine)",
+        "ur": "اس میں (مؤنث)"
       },
       "options": [
         {
-          "en": "in it feminine",
-          "ur": "اس میں مؤنث"
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
         },
         {
-          "en": "in it masculine",
-          "ur": "اس میں مذکر"
+          "en": "in it (masculine)",
+          "ur": "اس میں (مذکر)"
         },
         {
           "en": "my sister",
           "ur": "میری بہن"
         },
         {
-          "en": "we",
-          "ur": "ہم"
+          "en": "in the bag",
+          "ur": "بیگ میں"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "فِيهَا is فِي plus the feminine attached pronoun هَا: in it, pointing back to a feminine noun.",
+        "ur": "فِيهَا دراصل فِي کے ساتھ مؤنث جڑی ہوئی ضمیر هَا ہے: اس میں، جو مؤنث اسم کی طرف لوٹتا ہے۔"
+      },
       "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch11-l04-ex02",
       "statement": {
-        "en": "فِيهَا refers back to a feminine noun.",
-        "ur": "فِيهَا مؤنث اسم کی طرف واپس اشارہ کرتا ہے۔",
+        "en": "In الْكِتَابُ فِي الْحَقِيبَةِ، هُوَ فِيهَا, the word فِيهَا points back to the bag, a feminine noun.",
+        "ur": "الْكِتَابُ فِي الْحَقِيبَةِ، هُوَ فِيهَا میں لفظ فِيهَا بیگ کی طرف لوٹتا ہے، جو مؤنث اسم ہے۔",
         "ar_example": {
-          "ar": "الْحَقِيبَةِ — فِيهَا",
-          "ar_plain": "الحقيبة فيها",
-          "translit": "al-haqeebati - fiha",
-          "en": "the bag - in it",
-          "ur": "بیگ - اس میں"
+          "ar": "الْحَقِيبَةُ",
+          "ar_plain": "الحقيبة",
+          "translit": "al-ḥaqībatu",
+          "en": "the bag (feminine)",
+          "ur": "بیگ (مؤنث)"
         }
       },
       "correct_answer": true,
+      "explanation_on_wrong": {
+        "en": "True: the book is in the bag, so 'in it' means in the bag. الْحَقِيبَةُ ends in ة and is feminine, which is why the ending is هَا.",
+        "ur": "درست: کتاب بیگ میں ہے، اس لیے 'اس میں' کا مطلب بیگ میں ہے۔ الْحَقِيبَةُ ة پر ختم ہوتا ہے اور مؤنث ہے، اسی لیے علامت هَا ہے۔"
+      },
       "xp_value": 1
     },
     {
@@ -131,45 +282,49 @@
       "mode": "TAP",
       "sentence_ar": "هُوَ ___",
       "hint": {
-        "en": "It is in it (the bag)",
-        "ur": "وہ اس میں ہے (بیگ میں)"
+        "en": "It (the book) is in it (the bag).",
+        "ur": "وہ (کتاب) اس (بیگ) میں ہے۔"
       },
       "options": [
         {
           "ar": "فِيهَا",
           "ar_plain": "فيها",
-          "translit": "fiha",
-          "en": "in it feminine",
-          "ur": "اس میں مؤنث"
+          "translit": "fīhā",
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
         },
         {
           "ar": "فِيهِ",
           "ar_plain": "فيه",
-          "translit": "fihi",
-          "en": "in it masculine",
-          "ur": "اس میں مذکر"
+          "translit": "fīhi",
+          "en": "in it (masculine)",
+          "ur": "اس میں (مذکر)"
         },
         {
-          "ar": "أَبِي",
-          "ar_plain": "ابي",
-          "translit": "abi",
-          "en": "my father",
-          "ur": "میرے والد"
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
         },
         {
-          "ar": "قَبْلَ",
-          "ar_plain": "قبل",
-          "translit": "qabla",
-          "en": "before",
-          "ur": "پہلے"
+          "ar": "أُمِّي",
+          "ar_plain": "امي",
+          "translit": "ummī",
+          "en": "my mother",
+          "ur": "میری والدہ"
         }
       ],
       "correct_answer": {
         "ar": "فِيهَا",
         "ar_plain": "فيها",
-        "translit": "fiha",
-        "en": "in it feminine",
-        "ur": "اس میں مؤنث"
+        "translit": "fīhā",
+        "en": "in it (feminine)",
+        "ur": "اس میں (مؤنث)"
+      },
+      "explanation_on_wrong": {
+        "en": "The bag, الْحَقِيبَةُ, is feminine, so 'in it' is فِيهَا: هُوَ فِيهَا. The book being masculine does not change the ending; only the container counts.",
+        "ur": "بیگ، الْحَقِيبَةُ، مؤنث ہے، اس لیے 'اس میں' فِيهَا ہے: هُوَ فِيهَا۔ کتاب کا مذکر ہونا علامت نہیں بدلتا؛ صرف ظرف کا اعتبار ہے۔"
       },
       "xp_value": 1
     },
@@ -180,48 +335,48 @@
         {
           "ar": "فِيهِ",
           "ar_plain": "فيه",
-          "translit": "fihi",
-          "en": "in it masculine",
-          "ur": "اس میں مذکر"
+          "translit": "fīhi",
+          "en": "in it (masculine)",
+          "ur": "اس میں (مذکر)"
         },
         {
           "ar": "فِيهَا",
           "ar_plain": "فيها",
-          "translit": "fiha",
-          "en": "in it feminine",
-          "ur": "اس میں مؤنث"
+          "translit": "fīhā",
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
         },
         {
-          "ar": "الدَّرْجِ",
+          "ar": "الدُّرْجِ",
           "ar_plain": "الدرج",
-          "translit": "ad-darji",
-          "en": "the drawer",
-          "ur": "دراز"
+          "translit": "ad-durji",
+          "en": "the drawer (masculine)",
+          "ur": "دراز (مذکر)"
         },
         {
           "ar": "الْحَقِيبَةِ",
           "ar_plain": "الحقيبة",
-          "translit": "al-haqeebati",
-          "en": "the bag",
-          "ur": "بیگ"
+          "translit": "al-ḥaqībati",
+          "en": "the bag (feminine)",
+          "ur": "بیگ (مؤنث)"
         }
       ],
       "right_column": [
         {
-          "en": "in it masculine",
-          "ur": "اس میں مذکر"
+          "en": "in it (masculine)",
+          "ur": "اس میں (مذکر)"
         },
         {
-          "en": "in it feminine",
-          "ur": "اس میں مؤنث"
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
         },
         {
-          "en": "the drawer",
-          "ur": "دراز"
+          "en": "the drawer (masculine)",
+          "ur": "دراز (مذکر)"
         },
         {
-          "en": "the bag",
-          "ur": "بیگ"
+          "en": "the bag (feminine)",
+          "ur": "بیگ (مؤنث)"
         }
       ],
       "correct_pairs": [
@@ -242,79 +397,174 @@
           3
         ]
       ],
+      "explanation_on_wrong": {
+        "en": "فِيهِ goes with a masculine noun like الدُّرْجِ; فِيهَا goes with a feminine noun like الْحَقِيبَةِ, which ends in ة.",
+        "ur": "فِيهِ مذکر اسم جیسے الدُّرْجِ کے ساتھ آتا ہے؛ فِيهَا مؤنث اسم جیسے الْحَقِيبَةِ کے ساتھ، جو ة پر ختم ہوتا ہے۔"
+      },
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch11-l04-ex05",
       "target_translation": {
-        "en": "It is in it (feminine)",
-        "ur": "وہ اس میں ہے (مؤنث)"
+        "en": "It (the book) is in it (the bag).",
+        "ur": "وہ (کتاب) اس (بیگ) میں ہے۔"
       },
       "tiles": [
         {
           "ar": "هُوَ",
           "ar_plain": "هو",
           "translit": "huwa",
-          "en": "it/he",
-          "ur": "وہ"
+          "en": "it / he",
+          "ur": "وہ (مذکر)"
         },
         {
           "ar": "فِيهَا",
           "ar_plain": "فيها",
-          "translit": "fiha",
-          "en": "in it",
-          "ur": "اس میں"
+          "translit": "fīhā",
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
         },
         {
           "ar": "فِيهِ",
           "ar_plain": "فيه",
-          "translit": "fihi",
-          "en": "in it masculine",
-          "ur": "اس میں مذکر"
+          "translit": "fīhi",
+          "en": "in it (masculine)",
+          "ur": "اس میں (مذکر)"
         },
         {
-          "ar": "بَعْدَ",
-          "ar_plain": "بعد",
-          "translit": "ba'da",
-          "en": "after",
-          "ur": "بعد"
+          "ar": "الْحَقِيبَةُ",
+          "ar_plain": "الحقيبة",
+          "translit": "al-ḥaqībatu",
+          "en": "the bag",
+          "ur": "بیگ"
         }
       ],
       "correct_order": [
         0,
         1
       ],
+      "explanation_on_wrong": {
+        "en": "The order is هُوَ فِيهَا: the pronoun for the book first, then 'in it'. The bag is feminine, so فِيهَا, and it is not named again.",
+        "ur": "ترتیب هُوَ فِيهَا ہے: پہلے کتاب کی ضمیر، پھر 'اس میں'۔ بیگ مؤنث ہے، اس لیے فِيهَا، اور اس کا نام دوبارہ نہیں آتا۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch11-l04-ex06",
+      "mode": "TAP",
+      "sentence_ar": "الْقَلَمُ فِي الدُّرْجِ. هُوَ ___",
+      "hint": {
+        "en": "The pen is in the drawer. It is in it.",
+        "ur": "قلم دراز میں ہے۔ وہ اس میں ہے۔"
+      },
+      "options": [
+        {
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fīhi",
+          "en": "in it (masculine)",
+          "ur": "اس میں (مذکر)"
+        },
+        {
+          "ar": "فِيهَا",
+          "ar_plain": "فيها",
+          "translit": "fīhā",
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
+        },
+        {
+          "ar": "أَبِي",
+          "ar_plain": "ابي",
+          "translit": "abī",
+          "en": "my father",
+          "ur": "میرے والد"
+        },
+        {
+          "ar": "بَعْدَ",
+          "ar_plain": "بعد",
+          "translit": "baʿda",
+          "en": "after",
+          "ur": "بعد"
+        }
+      ],
+      "correct_answer": {
+        "ar": "فِيهِ",
+        "ar_plain": "فيه",
+        "translit": "fīhi",
+        "en": "in it (masculine)",
+        "ur": "اس میں (مذکر)"
+      },
+      "explanation_on_wrong": {
+        "en": "Read the first sentence: the pen is in the drawer, and الدُّرْجُ is masculine. So 'in it' here is فِيهِ, not فِيهَا. The noun decides.",
+        "ur": "پہلا جملہ پڑھیں: قلم دراز میں ہے، اور الدُّرْجُ مذکر ہے۔ اس لیے یہاں 'اس میں' فِيهِ ہے، فِيهَا نہیں۔ فیصلہ اسم کرتا ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch11-l04-ex07",
+      "ayah_fragment": {
+        "ar": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً قَالُوا أَتَجْعَلُ فِيهَا",
+        "surah_ref": "Al-Baqarah 2:30"
+      },
+      "options": [
+        {
+          "en": "'in it' — فِيهَا points back to الْأَرْضِ, the earth, a feminine noun",
+          "ur": "'اس میں' — فِيهَا الْأَرْضِ، زمین، کی طرف لوٹتا ہے، جو مؤنث اسم ہے"
+        },
+        {
+          "en": "'in him' — فِيهَا points back to a masculine noun",
+          "ur": "'اس (مذکر) میں' — فِيهَا مذکر اسم کی طرف لوٹتا ہے"
+        },
+        {
+          "en": "'in my earth' — فِيهَا ends in the ي of 'my'",
+          "ur": "'میری زمین میں' — فِيهَا 'میرا' والی ي پر ختم ہوتا ہے"
+        },
+        {
+          "en": "'in your homes' — فِيهَا is بُيُوتِكُمْ",
+          "ur": "'تمہارے گھروں میں' — فِيهَا دراصل بُيُوتِكُمْ ہے"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The earth, الْأَرْضِ, is named first; فِيهَا at the end is 'in it', pointing back to the earth. الْأَرْضُ is feminine, so the pronoun is هَا.",
+        "ur": "پہلے زمین، الْأَرْضِ، کا نام آتا ہے؛ آخر کا فِيهَا 'اس میں' ہے، جو زمین کی طرف لوٹتا ہے۔ الْأَرْضُ مؤنث ہے، اس لیے ضمیر هَا ہے۔"
+      },
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "In it feminine - فِيهَا",
+      "en": "In it, feminine — فِيهَا",
       "ar": "فِيهَا",
-      "ur": "اس میں مؤنث"
+      "ur": "اس میں، مؤنث — فِيهَا"
     },
     "ayah": {
-      "surah": 97,
-      "ayah": 3,
-      "label": "Al-Qadr 97:3",
-      "ar": "لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ",
-      "en": "The Night of Decree is better than a thousand months.",
-      "ur": "لیلۃ القدر ہزار مہینوں سے بہتر ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/097003.mp3"
+      "surah": 2,
+      "ayah": 30,
+      "label": "Al-Baqarah 2:30",
+      "ar": "إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً قَالُوا أَتَجْعَلُ فِيهَا",
+      "en": "\"Indeed, I will make upon the earth a successive authority.\" They said, \"Will You place upon it…\"",
+      "ur": "\"میں زمین میں ایک نائب بنانے والا ہوں۔\" انہوں نے کہا: \"کیا تُو اس میں…\"",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002030.mp3"
     },
     "highlighted_word_indices": [
-      0
+      7
+    ],
+    "highlighted_words": [
+      "فِيهَا"
     ],
     "noor_explanation": {
-      "en": "لَيْلَةُ is feminine. When Arabic refers back to a feminine noun, هَا is often the attached pronoun you will see.",
-      "ur": "لَيْلَةُ مؤنث ہے۔ جب عربی مؤنث اسم کی طرف واپس اشارہ کرتی ہے تو اکثر هَا جڑی ہوئی ضمیر آتی ہے۔"
+      "en": "فِيهَا is 'in it', and the 'it' is الْأَرْضِ, the earth, named four words earlier. The earth is feminine, so Arabic points back to it with هَا. Read the noun first, and the ending explains itself.",
+      "ur": "فِيهَا 'اس میں' ہے، اور 'اس' سے مراد الْأَرْضِ، زمین، ہے جس کا نام چار لفظ پہلے آیا۔ زمین مؤنث ہے، اس لیے عربی هَا سے اس کی طرف لوٹتی ہے۔ پہلے اسم پڑھیں، تو علامت خود سمجھ آ جاتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now choose between فِيهِ and فِيهَا by looking at the noun they point back to.",
-      "ur": "اب آپ فِيهِ اور فِيهَا میں فرق پچھلے اسم کو دیکھ کر کر سکتے ہیں۔"
+      "en": "You can now choose between فِيهِ and فِيهَا by finding the noun they point back to, and you have seen the Quran do exactly that with الْأَرْضِ.",
+      "ur": "اب آپ اس اسم کو تلاش کر کے فِيهِ اور فِيهَا میں چناؤ کر سکتے ہیں جس کی طرف وہ لوٹتے ہیں، اور آپ نے قرآن کو الْأَرْضِ کے ساتھ بالکل یہی کرتے دیکھا ہے۔"
     }
   }
 }

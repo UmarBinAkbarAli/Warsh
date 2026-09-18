@@ -1,0 +1,796 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 11, Lesson 6 (ch11-l06, new) — chapter review: the four possessives أَبِي، أُمِّي، أَخِي، أُخْتِي, the family words أَبٌ، أُمٌّ، أَخٌ، أُخْتٌ and the encountered plural إِخْوَةٌ, فِيهِ versus فِيهَا chosen from the antecedent, and بَيْتٌ → بُيُوتٌ → بُيُوتِكُمْ. Mixed context exercises, no new grammar; the close states that the final test checks these existing skills. Added 2026-09-19 from Docs/proposals/chapter-11-content-proposal.md.",
+    "titleUr": "باب 11 کا مراجعہ",
+    "chapter_order": 11,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 16,
+      "ayah": 80,
+      "label": "An-Nahl 16:80",
+      "ar": "وَاللَّهُ جَعَلَ لَكُم مِّن بُيُوتِكُمْ سَكَنًا",
+      "en": "And Allah has made for you from your homes a place of rest.",
+      "ur": "اور اللہ نے تمہارے لیے تمہارے گھروں کو سکون کی جگہ بنایا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/016080.mp3"
+    },
+    "noor_intro": {
+      "en": "Back to the home ayah, now that you can read every part of بُيُوتِكُمْ. Family words, the ي of 'my', فِيهِ and فِيهَا, and the house in its three forms: that is Chapter 11. Let us review it all before the test.",
+      "ur": "واپس گھر والی آیت کی طرف، اب جب آپ بُيُوتِكُمْ کا ہر حصہ پڑھ سکتے ہیں۔ خاندانی الفاظ، 'میرا' کی ي، فِيهِ اور فِيهَا، اور گھر اپنی تین صورتوں میں: یہی باب 11 ہے۔ امتحان سے پہلے آئیے سب دہرائیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Four words made mine",
+        "ar": "أَبِي، أُمِّي، أَخِي، أُخْتِي",
+        "ur": "چار لفظ جو میرے بنے"
+      },
+      "explanation": {
+        "en": "My father, my mother, my brother, my sister. In every one the ي at the end is the word 'my', attached to the family noun in front of it.",
+        "ur": "میرے والد، میری والدہ، میرا بھائی، میری بہن۔ ہر ایک میں آخر کی ي 'میرا / میری' کا لفظ ہے، جو آگے کے خاندانی اسم سے جڑی ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/aila.webp",
+      "examples": [
+        {
+          "ar": "أَبِي",
+          "ar_plain": "ابي",
+          "translit": "abī",
+          "en": "my father",
+          "ur": "میرے والد"
+        },
+        {
+          "ar": "أُمِّي",
+          "ar_plain": "امي",
+          "translit": "ummī",
+          "en": "my mother",
+          "ur": "میری والدہ"
+        },
+        {
+          "ar": "أَخِي",
+          "ar_plain": "اخي",
+          "translit": "akhī",
+          "en": "my brother",
+          "ur": "میرا بھائی"
+        },
+        {
+          "ar": "أُخْتِي",
+          "ar_plain": "اختي",
+          "translit": "ukhtī",
+          "en": "my sister",
+          "ur": "میری بہن"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The family, base forms",
+        "ar": "أَبٌ، أُمٌّ، أَخٌ، أُخْتٌ",
+        "ur": "خاندان، بنیادی صورتیں"
+      },
+      "explanation": {
+        "en": "Without the ي: a father, a mother, a brother, a sister. These are the dictionary forms; the possessives above are made from them.",
+        "ur": "ي کے بغیر: والد، والدہ، بھائی، بہن۔ یہ لغت والی صورتیں ہیں؛ اوپر کی ملکیتی صورتیں انہی سے بنی ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "أَبٌ",
+          "ar_plain": "اب",
+          "translit": "abun",
+          "en": "a father",
+          "ur": "والد"
+        },
+        {
+          "ar": "أُمٌّ",
+          "ar_plain": "ام",
+          "translit": "ummun",
+          "en": "a mother",
+          "ur": "والدہ"
+        },
+        {
+          "ar": "أَخٌ",
+          "ar_plain": "اخ",
+          "translit": "akhun",
+          "en": "a brother",
+          "ur": "بھائی"
+        },
+        {
+          "ar": "أُخْتٌ",
+          "ar_plain": "اخت",
+          "translit": "ukhtun",
+          "en": "a sister",
+          "ur": "بہن"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "One brother, brothers",
+        "ar": "أَخٌ / إِخْوَةٌ",
+        "ur": "ایک بھائی، بھائی (جمع)"
+      },
+      "explanation": {
+        "en": "أَخٌ is one brother; إِخْوَةٌ is brothers, the broken plural you met in Al-Hujurat 49:10. Recognise it; you do not need to form other plurals from it.",
+        "ur": "أَخٌ ایک بھائی ہے؛ إِخْوَةٌ بھائی (جمع) ہے، وہ جمع مکسر جو آپ نے الحجرات 49:10 میں دیکھی۔ اسے پہچانیں؛ اس سے دوسری جمعیں بنانا ابھی درکار نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "أَخٌ",
+          "ar_plain": "اخ",
+          "translit": "akhun",
+          "en": "a brother",
+          "ur": "بھائی"
+        },
+        {
+          "ar": "إِخْوَةٌ",
+          "ar_plain": "اخوة",
+          "translit": "ikhwatun",
+          "en": "brothers (broken plural)",
+          "ur": "بھائی (جمع مکسر)"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "In it, two ways",
+        "ar": "فِيهِ / فِيهَا",
+        "ur": "اس میں، دو طرح"
+      },
+      "explanation": {
+        "en": "فِي plus هِ is 'in it' for a masculine noun; فِي plus هَا is 'in it' for a feminine noun. The pronoun at the end matches the noun it points back to.",
+        "ur": "فِي کے ساتھ هِ مذکر اسم کے لیے 'اس میں' ہے؛ فِي کے ساتھ هَا مؤنث اسم کے لیے 'اس میں'۔ آخر کی ضمیر اس اسم سے ملتی ہے جس کی طرف یہ لوٹتی ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/fi.webp",
+      "examples": [
+        {
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fīhi",
+          "en": "in it (masculine)",
+          "ur": "اس میں (مذکر)"
+        },
+        {
+          "ar": "فِيهَا",
+          "ar_plain": "فيها",
+          "translit": "fīhā",
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The noun decides",
+        "ar": "الدُّرْجِ / الْحَقِيبَةِ",
+        "ur": "فیصلہ اسم کرتا ہے"
+      },
+      "explanation": {
+        "en": "The drawer is masculine, so the pen is فِيهِ. The bag is feminine, so the book is فِيهَا. Find the container first; the thing inside never changes the ending.",
+        "ur": "دراز مذکر ہے، اس لیے قلم فِيهِ ہے۔ بیگ مؤنث ہے، اس لیے کتاب فِيهَا ہے۔ پہلے ظرف تلاش کریں؛ اندر والی چیز علامت کبھی نہیں بدلتی۔"
+      },
+      "examples": [
+        {
+          "ar": "الْقَلَمُ فِي الدُّرْجِ. هُوَ فِيهِ",
+          "ar_plain": "القلم في الدرج هو فيه",
+          "translit": "al-qalamu fī d-durji. huwa fīhi",
+          "en": "The pen is in the drawer. It is in it.",
+          "ur": "قلم دراز میں ہے۔ وہ اس میں ہے۔"
+        },
+        {
+          "ar": "الْكِتَابُ فِي الْحَقِيبَةِ. هُوَ فِيهَا",
+          "ar_plain": "الكتاب في الحقيبة هو فيها",
+          "translit": "al-kitābu fī l-ḥaqībati. huwa fīhā",
+          "en": "The book is in the bag. It is in it.",
+          "ur": "کتاب بیگ میں ہے۔ وہ اس میں ہے۔"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The house in three forms",
+        "ar": "بَيْتٌ / بُيُوتٌ / بُيُوتِكُمْ",
+        "ur": "گھر تین صورتوں میں"
+      },
+      "explanation": {
+        "en": "A house, houses, your homes. The plural is broken, the كُمْ is attached, and the Quran's بُيُوتِكُمْ is simply the three together.",
+        "ur": "ایک گھر، گھر (جمع)، تمہارے گھر۔ جمع مکسر ہے، كُمْ جڑا ہوا ہے، اور قرآن کا بُيُوتِكُمْ بس یہ تینوں ملا کر ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/bayt.webp",
+      "examples": [
+        {
+          "ar": "بَيْتٌ",
+          "ar_plain": "بيت",
+          "translit": "baytun",
+          "en": "a house",
+          "ur": "ایک گھر"
+        },
+        {
+          "ar": "بُيُوتٌ",
+          "ar_plain": "بيوت",
+          "translit": "buyūtun",
+          "en": "houses (broken plural)",
+          "ur": "گھر (جمع مکسر)"
+        },
+        {
+          "ar": "بُيُوتِكُمْ",
+          "ar_plain": "بيوتكم",
+          "translit": "buyūtikum",
+          "en": "your homes",
+          "ur": "تمہارے گھر"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "One habit behind the whole chapter",
+        "ar": "الضَّمِيرُ الْمُتَّصِلُ",
+        "ur": "پورے باب کے پیچھے ایک عادت"
+      },
+      "explanation": {
+        "en": "ي for 'my', هِ and هَا for 'it', كُمْ for 'your': four attached pronouns, each fixed to the end of a word. Read the word, then read the ending, and the meaning assembles itself.",
+        "ur": "'میرا' کے لیے ي، 'اس' کے لیے هِ اور هَا، 'تمہارا' کے لیے كُمْ: چار جڑی ہوئی ضمیریں، ہر ایک لفظ کے آخر سے جڑی ہوئی۔ لفظ پڑھیں، پھر آخر پڑھیں، اور مطلب خود جڑ جاتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "أَبِي",
+          "ar_plain": "ابي",
+          "translit": "abī",
+          "en": "my father",
+          "ur": "میرے والد"
+        },
+        {
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fīhi",
+          "en": "in it (masculine)",
+          "ur": "اس میں (مذکر)"
+        },
+        {
+          "ar": "فِيهَا",
+          "ar_plain": "فيها",
+          "translit": "fīhā",
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
+        },
+        {
+          "ar": "بُيُوتِكُمْ",
+          "ar_plain": "بيوتكم",
+          "translit": "buyūtikum",
+          "en": "your homes",
+          "ur": "تمہارے گھر"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "إِنَّ أَبِي يَدْعُوكَ",
+        "ar_plain": "ان ابي يدعوك",
+        "translit": "inna abī yadʿūka",
+        "en": "Indeed, my father invites you.",
+        "ur": "بے شک میرے والد آپ کو بلاتے ہیں۔"
+      },
+      "explanation": {
+        "en": "The chapter's first Quranic word, once more: أَبِي, my father. You met the same ending in أُمِّي، أَخِي، أُخْتِي, and the same habit of attaching in فِيهِ، فِيهَا، بُيُوتِكُمْ.",
+        "ur": "باب کا پہلا قرآنی لفظ، ایک بار پھر: أَبِي، میرے والد۔ یہی علامت آپ نے أُمِّي، أَخِي، أُخْتِي میں دیکھی، اور جوڑنے کی یہی عادت فِيهِ، فِيهَا، بُيُوتِكُمْ میں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028025.mp3",
+      "examples": [
+        {
+          "ar": "أَبِي",
+          "ar_plain": "ابي",
+          "translit": "abī",
+          "en": "my father",
+          "ur": "میرے والد"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch11-l06-ex01",
+      "prompt": {
+        "ar": "أُمِّي",
+        "ar_plain": "امي",
+        "translit": "ummī",
+        "en": "my mother",
+        "ur": "میری والدہ"
+      },
+      "options": [
+        {
+          "en": "my mother",
+          "ur": "میری والدہ"
+        },
+        {
+          "en": "a mother",
+          "ur": "والدہ"
+        },
+        {
+          "en": "my sister",
+          "ur": "میری بہن"
+        },
+        {
+          "en": "my father",
+          "ur": "میرے والد"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "أُمِّي is أُمٌّ, mother, with the ي of 'my': my mother.",
+        "ur": "أُمِّي دراصل أُمٌّ، والدہ، کے ساتھ 'میری' والی ي ہے: میری والدہ۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch11-l06-ex02",
+      "left_column": [
+        {
+          "ar": "أَبٌ",
+          "ar_plain": "اب",
+          "translit": "abun",
+          "en": "a father",
+          "ur": "والد"
+        },
+        {
+          "ar": "أُمٌّ",
+          "ar_plain": "ام",
+          "translit": "ummun",
+          "en": "a mother",
+          "ur": "والدہ"
+        },
+        {
+          "ar": "أَخٌ",
+          "ar_plain": "اخ",
+          "translit": "akhun",
+          "en": "a brother",
+          "ur": "بھائی"
+        },
+        {
+          "ar": "أُخْتٌ",
+          "ar_plain": "اخت",
+          "translit": "ukhtun",
+          "en": "a sister",
+          "ur": "بہن"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "a father",
+          "ur": "والد"
+        },
+        {
+          "en": "a mother",
+          "ur": "والدہ"
+        },
+        {
+          "en": "a brother",
+          "ur": "بھائی"
+        },
+        {
+          "en": "a sister",
+          "ur": "بہن"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "explanation_on_wrong": {
+        "en": "أَبٌ father, أُمٌّ mother, أَخٌ brother, أُخْتٌ sister.",
+        "ur": "أَبٌ والد، أُمٌّ والدہ، أَخٌ بھائی، أُخْتٌ بہن۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch11-l06-ex03",
+      "prompt": {
+        "ar": "إِخْوَةٌ",
+        "ar_plain": "اخوة",
+        "translit": "ikhwatun",
+        "en": "brothers (broken plural)",
+        "ur": "بھائی (جمع مکسر)"
+      },
+      "options": [
+        {
+          "en": "brothers",
+          "ur": "بھائی (جمع)"
+        },
+        {
+          "en": "a brother",
+          "ur": "ایک بھائی"
+        },
+        {
+          "en": "my brother",
+          "ur": "میرا بھائی"
+        },
+        {
+          "en": "sisters",
+          "ur": "بہنیں"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "إِخْوَةٌ is the broken plural of أَخٌ: brothers. One brother is أَخٌ; my brother is أَخِي.",
+        "ur": "إِخْوَةٌ، أَخٌ کی جمع مکسر ہے: بھائی (جمع)۔ ایک بھائی أَخٌ ہے؛ میرا بھائی أَخِي۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch11-l06-ex04",
+      "mode": "TAP",
+      "sentence_ar": "الْقَلَمُ فِي الدُّرْجِ. هُوَ ___",
+      "hint": {
+        "en": "The pen is in the drawer. It is in it.",
+        "ur": "قلم دراز میں ہے۔ وہ اس میں ہے۔"
+      },
+      "options": [
+        {
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fīhi",
+          "en": "in it (masculine)",
+          "ur": "اس میں (مذکر)"
+        },
+        {
+          "ar": "فِيهَا",
+          "ar_plain": "فيها",
+          "translit": "fīhā",
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "بُيُوتِكُمْ",
+          "ar_plain": "بيوتكم",
+          "translit": "buyūtikum",
+          "en": "your homes",
+          "ur": "تمہارے گھر"
+        }
+      ],
+      "correct_answer": {
+        "ar": "فِيهِ",
+        "ar_plain": "فيه",
+        "translit": "fīhi",
+        "en": "in it (masculine)",
+        "ur": "اس میں (مذکر)"
+      },
+      "explanation_on_wrong": {
+        "en": "The container is الدُّرْجُ, the drawer, which is masculine, so 'in it' is فِيهِ.",
+        "ur": "ظرف الدُّرْجُ، دراز، ہے جو مذکر ہے، اس لیے 'اس میں' فِيهِ ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch11-l06-ex05",
+      "target_translation": {
+        "en": "My father is in the house.",
+        "ur": "میرے والد گھر میں ہیں۔"
+      },
+      "tiles": [
+        {
+          "ar": "الْبَيْتِ",
+          "ar_plain": "البيت",
+          "translit": "al-bayti",
+          "en": "the house",
+          "ur": "گھر"
+        },
+        {
+          "ar": "أَبِي",
+          "ar_plain": "ابي",
+          "translit": "abī",
+          "en": "my father",
+          "ur": "میرے والد"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "أَبٌ",
+          "ar_plain": "اب",
+          "translit": "abun",
+          "en": "a father",
+          "ur": "والد"
+        }
+      ],
+      "correct_order": [
+        1,
+        2,
+        0
+      ],
+      "explanation_on_wrong": {
+        "en": "The order is أَبِي فِي الْبَيْتِ: 'my father', then 'in', then 'the house'. أَبٌ without the ي is only 'a father'.",
+        "ur": "ترتیب أَبِي فِي الْبَيْتِ ہے: 'میرے والد'، پھر 'میں'، پھر 'گھر'۔ ي کے بغیر أَبٌ صرف 'والد' ہے۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch11-l06-ex06",
+      "target_translation": {
+        "en": "It (the book) is in it (the bag).",
+        "ur": "وہ (کتاب) اس (بیگ) میں ہے۔"
+      },
+      "tiles": [
+        {
+          "ar": "فِيهِ",
+          "ar_plain": "فيه",
+          "translit": "fīhi",
+          "en": "in it (masculine)",
+          "ur": "اس میں (مذکر)"
+        },
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "it / he",
+          "ur": "وہ (مذکر)"
+        },
+        {
+          "ar": "فِيهَا",
+          "ar_plain": "فيها",
+          "translit": "fīhā",
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
+        },
+        {
+          "ar": "أُخْتِي",
+          "ar_plain": "اختي",
+          "translit": "ukhtī",
+          "en": "my sister",
+          "ur": "میری بہن"
+        }
+      ],
+      "correct_order": [
+        1,
+        2
+      ],
+      "explanation_on_wrong": {
+        "en": "The order is هُوَ فِيهَا: the pronoun for the book, then 'in it'. The bag is feminine, so فِيهَا rather than فِيهِ.",
+        "ur": "ترتیب هُوَ فِيهَا ہے: کتاب کی ضمیر، پھر 'اس میں'۔ بیگ مؤنث ہے، اس لیے فِيهِ کے بجائے فِيهَا۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch11-l06-ex07",
+      "statement": {
+        "en": "The word بَيْتٌ means houses, and بُيُوتٌ means a house.",
+        "ur": "لفظ بَيْتٌ کا مطلب گھر (جمع) ہے، اور بُيُوتٌ کا مطلب ایک گھر۔",
+        "ar_example": {
+          "ar": "بَيْتٌ",
+          "ar_plain": "بيت",
+          "translit": "baytun",
+          "en": "a house",
+          "ur": "ایک گھر"
+        }
+      },
+      "correct_answer": false,
+      "explanation_on_wrong": {
+        "en": "False: it is the other way round. بَيْتٌ is one house; بُيُوتٌ is houses, the broken plural.",
+        "ur": "غلط: معاملہ الٹ ہے۔ بَيْتٌ ایک گھر ہے؛ بُيُوتٌ گھر (جمع) ہے، جمع مکسر۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch11-l06-ex08",
+      "sentence_ar": "فِي بُيُوتِكُمْ",
+      "words": [
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "بُيُوتِكُمْ",
+          "ar_plain": "بيوتكم",
+          "translit": "buyūtikum",
+          "en": "your homes",
+          "ur": "تمہارے گھر"
+        }
+      ],
+      "available_roles": [
+        "PREPOSITION",
+        "POSSESSIVE",
+        "SUBJECT",
+        "PREDICATE"
+      ],
+      "correct_roles": [
+        "PREPOSITION",
+        "POSSESSIVE"
+      ],
+      "explanation_on_wrong": {
+        "en": "فِي is the preposition; بُيُوتِكُمْ, houses plus the attached كُمْ, is a possessive phrase: your homes.",
+        "ur": "فِي حرف جر ہے؛ بُيُوتِكُمْ، گھر (جمع) کے ساتھ جڑا ہوا كُمْ، ملکیت کا فقرہ ہے: تمہارے گھر۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch11-l06-ex09",
+      "left_column": [
+        {
+          "ar": "أَبِي",
+          "ar_plain": "ابي",
+          "translit": "abī",
+          "en": "my father",
+          "ur": "میرے والد"
+        },
+        {
+          "ar": "أُخْتِي",
+          "ar_plain": "اختي",
+          "translit": "ukhtī",
+          "en": "my sister",
+          "ur": "میری بہن"
+        },
+        {
+          "ar": "فِيهَا",
+          "ar_plain": "فيها",
+          "translit": "fīhā",
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
+        },
+        {
+          "ar": "بُيُوتِكُمْ",
+          "ar_plain": "بيوتكم",
+          "translit": "buyūtikum",
+          "en": "your homes",
+          "ur": "تمہارے گھر"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "my father",
+          "ur": "میرے والد"
+        },
+        {
+          "en": "my sister",
+          "ur": "میری بہن"
+        },
+        {
+          "en": "in it (feminine)",
+          "ur": "اس میں (مؤنث)"
+        },
+        {
+          "en": "your homes",
+          "ur": "تمہارے گھر"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "explanation_on_wrong": {
+        "en": "Read the ending of each word: ي is 'my' (أَبِي، أُخْتِي), هَا is 'it' for a feminine noun (فِيهَا), and كُمْ is 'your' to a group (بُيُوتِكُمْ).",
+        "ur": "ہر لفظ کا آخر پڑھیں: ي 'میرا' ہے (أَبِي، أُخْتِي)، هَا مؤنث اسم کے لیے 'اس' ہے (فِيهَا)، اور كُمْ جماعت کے لیے 'تمہارا' (بُيُوتِكُمْ)۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch11-l06-ex10",
+      "ayah_fragment": {
+        "ar": "إِنَّ أَبِي يَدْعُوكَ",
+        "surah_ref": "Al-Qasas 28:25"
+      },
+      "options": [
+        {
+          "en": "'my father' — أَبِي is أَبٌ with the ي of 'my' attached",
+          "ur": "'میرے والد' — أَبِي دراصل أَبٌ ہے جس کے ساتھ 'میرا' والی ي جڑی ہے"
+        },
+        {
+          "en": "'my brother' — أَبِي is the brother word",
+          "ur": "'میرا بھائی' — أَبِي بھائی کا لفظ ہے"
+        },
+        {
+          "en": "'your father' — the ending is كُمْ",
+          "ur": "'تمہارے والد' — آخر میں كُمْ ہے"
+        },
+        {
+          "en": "'in it' — أَبِي is فِيهِ",
+          "ur": "'اس میں' — أَبِي دراصل فِيهِ ہے"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "أَبِي is the father word with the ي of 'my' at its end: my father. The brother word would be أَخِي, and 'your' would end in كُمْ.",
+        "ur": "أَبِي والد کا لفظ ہے جس کے آخر میں 'میرا' والی ي ہے: میرے والد۔ بھائی کا لفظ أَخِي ہوتا، اور 'تمہارا' كُمْ پر ختم ہوتا۔"
+      },
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Everything Chapter 11 built",
+      "ar": "الْبَيْتُ وَالْأُسْرَةُ",
+      "ur": "باب 11 نے جو کچھ بنایا"
+    },
+    "ayah": {
+      "surah": 16,
+      "ayah": 80,
+      "label": "An-Nahl 16:80",
+      "ar": "وَاللَّهُ جَعَلَ لَكُم مِّن بُيُوتِكُمْ سَكَنًا",
+      "en": "And Allah has made for you from your homes a place of rest.",
+      "ur": "اور اللہ نے تمہارے لیے تمہارے گھروں کو سکون کی جگہ بنایا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/016080.mp3"
+    },
+    "highlighted_word_indices": [
+      4
+    ],
+    "highlighted_words": [
+      "بُيُوتِكُمْ"
+    ],
+    "noor_explanation": {
+      "en": "بُيُوتِكُمْ: a house made plural, then made yours. Change the ending and the same word turns towards 'my' or 'it'; that is what أَبِي, فِيهِ and فِيهَا taught you. One habit, read from the end of the word, and the whole chapter is in your hands.",
+      "ur": "بُيُوتِكُمْ: ایک گھر جسے جمع بنایا، پھر تمہارا بنایا۔ آخر بدلیں تو وہی لفظ 'میرا' یا 'اس' کی طرف مڑ جاتا ہے؛ یہی أَبِي، فِيهِ اور فِيهَا نے آپ کو سکھایا۔ ایک عادت، لفظ کے آخر سے پڑھی جائے، اور پورا باب آپ کے ہاتھ میں ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You have reviewed the family words, the ي of 'my', فِيهِ and فِيهَا chosen from the noun, and بُيُوتِكُمْ in its three parts. The final test checks these same skills in mixed order; there is nothing new in it.",
+      "ur": "آپ نے خاندانی الفاظ، 'میرا' کی ي، اسم کے مطابق چنے گئے فِيهِ اور فِيهَا، اور بُيُوتِكُمْ کے تین حصے دہرا لیے۔ آخری امتحان انہی مہارتوں کو ملی جلی ترتیب میں پرکھتا ہے؛ اس میں کچھ نیا نہیں۔"
+    }
+  }
+}

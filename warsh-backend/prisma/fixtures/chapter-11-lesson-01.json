@@ -2,25 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 11, Lesson 1 - family possessives أَبِي and أُمِّي.",
+    "_note": "Chapter 11, Lesson 1 (ch11-l01) — أَبِي and أُمِّي: the base words أَبٌ / أُمٌّ and the attached ي that makes them 'my father' / 'my mother', with the no-verb sentences أَبِي فِي الْبَيْتِ and أُمِّي فِي الْمَطْبَخِ. Quran checkpoint moved from An-Nahl 16:80 (which contains بُيُوتِكُمْ, taught in Lesson 5, not أَبِي) to Al-Qasas 28:25, which contains the target أَبِي. Grammar parse corrected: الْبَيْتِ is the predicate, not a possessive. Rebuilt 2026-09-19 from Docs/proposals/chapter-11-content-proposal.md.",
+    "titleUr": "میرے والد اور میری والدہ — أَبِي اور أُمِّي",
     "chapter_order": 11,
     "lesson_order": 1,
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 16,
-      "ayah": 80,
-      "label": "An-Nahl 16:80",
-      "ar": "وَاللَّهُ جَعَلَ لَكُم مِّن بُيُوتِكُمْ سَكَنًا",
-      "en": "And Allah has made for you from your homes a place of rest.",
-      "ur": "اور اللہ نے تمہارے لیے تمہارے گھروں کو سکون کی جگہ بنایا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/016080.mp3"
+      "surah": 28,
+      "ayah": 25,
+      "label": "Al-Qasas 28:25",
+      "ar": "إِنَّ أَبِي يَدْعُوكَ",
+      "en": "Indeed, my father invites you.",
+      "ur": "بے شک میرے والد آپ کو بلاتے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028025.mp3"
     },
     "noor_intro": {
-      "en": "Arabic family words become close and warm when pronouns attach. Today: my father and my mother.",
-      "ur": "عربی کے خاندانی الفاظ ضمیر لگنے سے بہت قریب اور محبت بھرے ہو جاتے ہیں۔ آج: میرے والد اور میری والدہ۔"
+      "en": "In Al-Qasas, a young woman brings a message to Musa: إِنَّ أَبِي يَدْعُوكَ, my father invites you. One small letter at the end of أَبِي turns 'father' into 'my father'. Today you learn that letter, and the two warmest words it makes.",
+      "ur": "القصص میں ایک نوجوان خاتون موسیٰ علیہ السلام تک پیغام لاتی ہے: إِنَّ أَبِي يَدْعُوكَ، میرے والد آپ کو بلاتے ہیں۔ أَبِي کے آخر کا ایک چھوٹا سا حرف 'والد' کو 'میرے والد' بنا دیتا ہے۔ آج آپ وہ حرف سیکھیں گے، اور وہ دو سب سے پیارے لفظ جو اس سے بنتے ہیں۔"
     },
     "autoplay": true
   },
@@ -28,15 +29,87 @@
     {
       "type": "WORD",
       "text": {
+        "ar": "أَبٌ",
+        "ar_plain": "اب",
+        "translit": "abun",
+        "en": "a father",
+        "ur": "والد"
+      },
+      "explanation": {
+        "en": "The base word for father is أَبٌ. It is the form you find in a dictionary, before anything is attached to it.",
+        "ur": "والد کے لیے بنیادی لفظ أَبٌ ہے۔ یہی صورت لغت میں ملتی ہے، اس سے پہلے کہ اس کے ساتھ کچھ جڑے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/ab.webp"
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "أُمٌّ",
+        "ar_plain": "ام",
+        "translit": "ummun",
+        "en": "a mother",
+        "ur": "والدہ"
+      },
+      "explanation": {
+        "en": "The base word for mother is أُمٌّ. Notice the shaddah on the م: the sound is doubled, umm.",
+        "ur": "والدہ کے لیے بنیادی لفظ أُمٌّ ہے۔ م پر شد دیکھیں: آواز دوہری ہے، اُمّ۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/umm.webp"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The attached ي means my",
+        "ar": "يَاءُ الْمُتَكَلِّمِ",
+        "ur": "جڑی ہوئی ي کا مطلب ہے: میرا / میری"
+      },
+      "explanation": {
+        "en": "Add a ي to the end of a noun and it means 'my'. The tanween drops, the last letter takes a kasrah, and the ي follows: أَبٌ becomes أَبِي, أُمٌّ becomes أُمِّي. In these examples that ي is the whole word 'my'.",
+        "ur": "اسم کے آخر میں ي لگائیں تو مطلب 'میرا / میری' ہو جاتا ہے۔ تنوین ہٹ جاتی ہے، آخری حرف پر کسرہ آتا ہے، اور اس کے بعد ي: أَبٌ سے أَبِي، أُمٌّ سے أُمِّي۔ ان مثالوں میں یہی ي پورا لفظ 'میرا / میری' ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "أَبٌ",
+          "ar_plain": "اب",
+          "translit": "abun",
+          "en": "a father",
+          "ur": "والد"
+        },
+        {
+          "ar": "أَبِي",
+          "ar_plain": "ابي",
+          "translit": "abī",
+          "en": "my father",
+          "ur": "میرے والد"
+        },
+        {
+          "ar": "أُمٌّ",
+          "ar_plain": "ام",
+          "translit": "ummun",
+          "en": "a mother",
+          "ur": "والدہ"
+        },
+        {
+          "ar": "أُمِّي",
+          "ar_plain": "امي",
+          "translit": "ummī",
+          "en": "my mother",
+          "ur": "میری والدہ"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
         "ar": "أَبِي",
         "ar_plain": "ابي",
-        "translit": "abi",
+        "translit": "abī",
         "en": "my father",
         "ur": "میرے والد"
       },
       "explanation": {
-        "en": "أَبٌ means father. With ي attached, it becomes أَبِي: my father.",
-        "ur": "أَبٌ کا مطلب والد ہے۔ آخر میں ي لگے تو أَبِي بنتا ہے: میرے والد۔"
+        "en": "أَبِي is 'my father': the base word أَبٌ with the ي of 'my' attached. This is the exact word the Quran uses in Al-Qasas 28:25.",
+        "ur": "أَبِي 'میرے والد' ہے: بنیادی لفظ أَبٌ کے ساتھ 'میرا' والی ي جڑی ہوئی۔ القصص 28:25 میں قرآن بالکل یہی لفظ استعمال کرتا ہے۔"
       }
     },
     {
@@ -44,13 +117,13 @@
       "text": {
         "ar": "أُمِّي",
         "ar_plain": "امي",
-        "translit": "ummi",
+        "translit": "ummī",
         "en": "my mother",
         "ur": "میری والدہ"
       },
       "explanation": {
-        "en": "أُمٌّ means mother. With ي attached, it becomes أُمِّي: my mother.",
-        "ur": "أُمٌّ کا مطلب والدہ ہے۔ آخر میں ي لگے تو أُمِّي بنتا ہے: میری والدہ۔"
+        "en": "أُمِّي is 'my mother': أُمٌّ with the same ي attached. The doubled م stays, and the kasrah before the ي is what you hear as ummī.",
+        "ur": "أُمِّي 'میری والدہ' ہے: أُمٌّ کے ساتھ وہی ي جڑی ہوئی۔ دوہری م باقی رہتی ہے، اور ي سے پہلے کا کسرہ ہی اُمّی کی آواز دیتا ہے۔"
       }
     },
     {
@@ -58,28 +131,58 @@
       "text": {
         "ar": "أَبِي فِي الْبَيْتِ",
         "ar_plain": "ابي في البيت",
-        "translit": "abi fi al-bayti",
-        "en": "My father is in the house",
-        "ur": "میرے والد گھر میں ہیں"
+        "translit": "abī fī l-bayti",
+        "en": "My father is in the house.",
+        "ur": "میرے والد گھر میں ہیں۔"
       },
       "explanation": {
-        "en": "This is a complete no-verb sentence: my father - in the house.",
-        "ur": "یہ بغیر فعل کے مکمل جملہ ہے: میرے والد - گھر میں۔"
-      }
+        "en": "A complete sentence with no verb: أَبِي is the subject, فِي is the preposition 'in', and الْبَيْتِ, 'the house', is the predicate that tells you where he is.",
+        "ur": "بغیر فعل کے مکمل جملہ: أَبِي مبتدا ہے، فِي حرف جر 'میں' ہے، اور الْبَيْتِ، 'گھر'، خبر ہے جو بتاتی ہے کہ وہ کہاں ہیں۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/bayt.webp"
     },
     {
       "type": "EXAMPLE",
       "text": {
         "ar": "أُمِّي فِي الْمَطْبَخِ",
         "ar_plain": "امي في المطبخ",
-        "translit": "ummi fi al-matbakhi",
-        "en": "My mother is in the kitchen",
-        "ur": "میری والدہ باورچی خانے میں ہیں"
+        "translit": "ummī fī l-maṭbakhi",
+        "en": "My mother is in the kitchen.",
+        "ur": "میری والدہ باورچی خانے میں ہیں۔"
       },
       "explanation": {
-        "en": "Family words often appear in everyday Arabic, but the same attached-pronoun pattern appears in the Quran too.",
-        "ur": "خاندانی الفاظ روزمرہ عربی میں آتے ہیں، مگر یہی جڑی ہوئی ضمیر کا قاعدہ قرآن میں بھی آتا ہے۔"
-      }
+        "en": "The same shape with the other word: أُمِّي, then فِي, then the place. Everyday sentences like this use exactly the attached ي you will now meet in the Quran.",
+        "ur": "دوسرے لفظ کے ساتھ وہی ساخت: أُمِّي، پھر فِي، پھر جگہ۔ ایسے روزمرہ جملوں میں بالکل وہی جڑی ہوئی ي ہے جو اب آپ قرآن میں دیکھیں گے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/matbakh.webp"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "إِنَّ أَبِي يَدْعُوكَ",
+        "ar_plain": "ان ابي يدعوك",
+        "translit": "inna abī yadʿūka",
+        "en": "Indeed, my father invites you.",
+        "ur": "بے شک میرے والد آپ کو بلاتے ہیں۔"
+      },
+      "explanation": {
+        "en": "Find أَبِي right after إِنَّ. The ي at its end is the 'my' you just learned: my father. The word after it, يَدْعُوكَ, tells what he does: he invites you.",
+        "ur": "إِنَّ کے فوراً بعد أَبِي تلاش کریں۔ اس کے آخر کی ي وہی 'میرا' ہے جو آپ نے ابھی سیکھا: میرے والد۔ اس کے بعد کا لفظ يَدْعُوكَ بتاتا ہے کہ وہ کیا کرتے ہیں: وہ آپ کو بلاتے ہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028025.mp3",
+      "examples": [
+        {
+          "ar": "أَبِي",
+          "ar_plain": "ابي",
+          "translit": "abī",
+          "en": "my father",
+          "ur": "میرے والد"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -89,7 +192,7 @@
       "prompt": {
         "ar": "أَبِي",
         "ar_plain": "ابي",
-        "translit": "abi",
+        "translit": "abī",
         "en": "my father",
         "ur": "میرے والد"
       },
@@ -103,15 +206,19 @@
           "ur": "میری والدہ"
         },
         {
-          "en": "the house",
-          "ur": "گھر"
+          "en": "a father",
+          "ur": "والد"
         },
         {
-          "en": "after",
-          "ur": "بعد"
+          "en": "the house",
+          "ur": "گھر"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word أَبِي is أَبٌ, father, with the ي of 'my' attached: my father.",
+        "ur": "لفظ أَبِي دراصل أَبٌ، والد، کے ساتھ 'میرا' والی ي جڑی ہوئی ہے: میرے والد۔"
+      },
       "xp_value": 1
     },
     {
@@ -120,7 +227,7 @@
       "prompt": {
         "ar": "أُمِّي",
         "ar_plain": "امي",
-        "translit": "ummi",
+        "translit": "ummī",
         "en": "my mother",
         "ur": "میری والدہ"
       },
@@ -134,15 +241,19 @@
           "ur": "میرے والد"
         },
         {
-          "en": "in it",
-          "ur": "اس میں"
+          "en": "a mother",
+          "ur": "والدہ"
         },
         {
-          "en": "we",
-          "ur": "ہم"
+          "en": "in it",
+          "ur": "اس میں"
         }
       ],
       "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "The word أُمِّي is أُمٌّ, mother, with the ي of 'my' attached: my mother.",
+        "ur": "لفظ أُمِّي دراصل أُمٌّ، والدہ، کے ساتھ 'میری' والی ي جڑی ہوئی ہے: میری والدہ۔"
+      },
       "xp_value": 1
     },
     {
@@ -151,45 +262,49 @@
       "mode": "TAP",
       "sentence_ar": "___ فِي الْبَيْتِ",
       "hint": {
-        "en": "My father is in the house",
-        "ur": "میرے والد گھر میں ہیں"
+        "en": "My father is in the house.",
+        "ur": "میرے والد گھر میں ہیں۔"
       },
       "options": [
         {
           "ar": "أَبِي",
           "ar_plain": "ابي",
-          "translit": "abi",
+          "translit": "abī",
           "en": "my father",
           "ur": "میرے والد"
         },
         {
           "ar": "أُمِّي",
           "ar_plain": "امي",
-          "translit": "ummi",
+          "translit": "ummī",
           "en": "my mother",
           "ur": "میری والدہ"
+        },
+        {
+          "ar": "أَبٌ",
+          "ar_plain": "اب",
+          "translit": "abun",
+          "en": "a father",
+          "ur": "والد"
         },
         {
           "ar": "هُمْ",
           "ar_plain": "هم",
           "translit": "hum",
-          "en": "they",
-          "ur": "وہ"
-        },
-        {
-          "ar": "قَبْلَ",
-          "ar_plain": "قبل",
-          "translit": "qabla",
-          "en": "before",
-          "ur": "پہلے"
+          "en": "they (male or mixed group)",
+          "ur": "وہ سب (مذکر یا مخلوط جماعت)"
         }
       ],
       "correct_answer": {
         "ar": "أَبِي",
         "ar_plain": "ابي",
-        "translit": "abi",
+        "translit": "abī",
         "en": "my father",
         "ur": "میرے والد"
+      },
+      "explanation_on_wrong": {
+        "en": "The sentence needs 'my father', so the form with the attached ي: أَبِي فِي الْبَيْتِ. Plain أَبٌ would be 'a father'.",
+        "ur": "جملے میں 'میرے والد' چاہیے، اس لیے جڑی ہوئی ي والی صورت: أَبِي فِي الْبَيْتِ۔ سادہ أَبٌ 'والد' ہوتا۔"
       },
       "xp_value": 1
     },
@@ -197,37 +312,37 @@
       "type": "BUILD_SENTENCE",
       "id": "ch11-l01-ex04",
       "target_translation": {
-        "en": "My mother is in the kitchen",
-        "ur": "میری والدہ باورچی خانے میں ہیں"
+        "en": "My mother is in the kitchen.",
+        "ur": "میری والدہ باورچی خانے میں ہیں۔"
       },
       "tiles": [
         {
           "ar": "أُمِّي",
           "ar_plain": "امي",
-          "translit": "ummi",
+          "translit": "ummī",
           "en": "my mother",
           "ur": "میری والدہ"
         },
         {
           "ar": "فِي",
           "ar_plain": "في",
-          "translit": "fi",
+          "translit": "fī",
           "en": "in",
           "ur": "میں"
         },
         {
           "ar": "الْمَطْبَخِ",
           "ar_plain": "المطبخ",
-          "translit": "al-matbakhi",
+          "translit": "al-maṭbakhi",
           "en": "the kitchen",
           "ur": "باورچی خانہ"
         },
         {
-          "ar": "بَعْدَ",
-          "ar_plain": "بعد",
-          "translit": "ba'da",
-          "en": "after",
-          "ur": "بعد"
+          "ar": "أُمٌّ",
+          "ar_plain": "ام",
+          "translit": "ummun",
+          "en": "a mother",
+          "ur": "والدہ"
         }
       ],
       "correct_order": [
@@ -235,6 +350,10 @@
         1,
         2
       ],
+      "explanation_on_wrong": {
+        "en": "The order is أُمِّي فِي الْمَطْبَخِ: 'my mother' first, then 'in', then 'the kitchen'. The tile أُمٌّ is only 'a mother', without 'my'.",
+        "ur": "ترتیب أُمِّي فِي الْمَطْبَخِ ہے: پہلے 'میری والدہ'، پھر 'میں'، پھر 'باورچی خانہ'۔ ٹائل أُمٌّ صرف 'والدہ' ہے، 'میری' کے بغیر۔"
+      },
       "xp_value": 1
     },
     {
@@ -245,14 +364,14 @@
         {
           "ar": "أَبِي",
           "ar_plain": "ابي",
-          "translit": "abi",
+          "translit": "abī",
           "en": "my father",
           "ur": "میرے والد"
         },
         {
           "ar": "فِي",
           "ar_plain": "في",
-          "translit": "fi",
+          "translit": "fī",
           "en": "in",
           "ur": "میں"
         },
@@ -267,44 +386,158 @@
       "available_roles": [
         "SUBJECT",
         "PREPOSITION",
-        "POSSESSIVE",
-        "PREDICATE"
+        "PREDICATE",
+        "POSSESSIVE"
       ],
       "correct_roles": [
         "SUBJECT",
         "PREPOSITION",
-        "POSSESSIVE"
+        "PREDICATE"
       ],
+      "explanation_on_wrong": {
+        "en": "أَبِي is the subject, فِي is the preposition, and الْبَيْتِ completes the sentence as its predicate. The 'my' is the ي inside أَبِي, so الْبَيْتِ is not a possessive.",
+        "ur": "أَبِي مبتدا ہے، فِي حرف جر ہے، اور الْبَيْتِ خبر بن کر جملہ مکمل کرتا ہے۔ 'میرا' تو أَبِي کے اندر کی ي ہے، اس لیے الْبَيْتِ ملکیت نہیں۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch11-l01-ex06",
+      "left_column": [
+        {
+          "ar": "أَبٌ",
+          "ar_plain": "اب",
+          "translit": "abun",
+          "en": "a father",
+          "ur": "والد"
+        },
+        {
+          "ar": "أَبِي",
+          "ar_plain": "ابي",
+          "translit": "abī",
+          "en": "my father",
+          "ur": "میرے والد"
+        },
+        {
+          "ar": "أُمٌّ",
+          "ar_plain": "ام",
+          "translit": "ummun",
+          "en": "a mother",
+          "ur": "والدہ"
+        },
+        {
+          "ar": "أُمِّي",
+          "ar_plain": "امي",
+          "translit": "ummī",
+          "en": "my mother",
+          "ur": "میری والدہ"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "a father",
+          "ur": "والد"
+        },
+        {
+          "en": "my father",
+          "ur": "میرے والد"
+        },
+        {
+          "en": "a mother",
+          "ur": "والدہ"
+        },
+        {
+          "en": "my mother",
+          "ur": "میری والدہ"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "explanation_on_wrong": {
+        "en": "Look at the ending: without the ي, أَبٌ and أُمٌّ are simply 'a father' and 'a mother'; with the ي, أَبِي and أُمِّي are 'my father' and 'my mother'.",
+        "ur": "آخر دیکھیں: ي کے بغیر أَبٌ اور أُمٌّ صرف 'والد' اور 'والدہ' ہیں؛ ي کے ساتھ أَبِي اور أُمِّي 'میرے والد' اور 'میری والدہ' ہیں۔"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch11-l01-ex07",
+      "ayah_fragment": {
+        "ar": "إِنَّ أَبِي يَدْعُوكَ",
+        "surah_ref": "Al-Qasas 28:25"
+      },
+      "options": [
+        {
+          "en": "'my father' — أَبِي is father with the ي of 'my' attached",
+          "ur": "'میرے والد' — أَبِي والد کے ساتھ 'میرا' والی ي جڑی ہوئی ہے"
+        },
+        {
+          "en": "'my mother' — أَبِي is the word for mother",
+          "ur": "'میری والدہ' — أَبِي والدہ کا لفظ ہے"
+        },
+        {
+          "en": "'a father' — أَبِي has nothing attached to it",
+          "ur": "'والد' — أَبِي کے ساتھ کچھ جڑا ہوا نہیں"
+        },
+        {
+          "en": "'your father' — the ي means 'your'",
+          "ur": "'تمہارے والد' — ي کا مطلب 'تمہارا' ہے"
+        }
+      ],
+      "correct_index": 0,
+      "explanation_on_wrong": {
+        "en": "After إِنَّ comes أَبِي: the base word أَبٌ, father, with the ي of 'my' at its end. The speaker is telling Musa about her own father: my father invites you.",
+        "ur": "إِنَّ کے بعد أَبِي آتا ہے: بنیادی لفظ أَبٌ، والد، جس کے آخر میں 'میرا' والی ي ہے۔ بولنے والی موسیٰ علیہ السلام کو اپنے والد کے بارے میں بتا رہی ہے: میرے والد آپ کو بلاتے ہیں۔"
+      },
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Family words with my",
-      "ar": "أَسْمَاءُ الأُسْرَةِ مَعَ يَاءِ المُتَكَلِّم",
-      "ur": "خاندانی الفاظ میرے کے ساتھ"
+      "en": "My father and my mother — أَبِي and أُمِّي",
+      "ar": "أَبِي وَأُمِّي",
+      "ur": "میرے والد اور میری والدہ — أَبِي اور أُمِّي"
     },
     "ayah": {
-      "surah": 16,
-      "ayah": 80,
-      "label": "An-Nahl 16:80",
-      "ar": "وَاللَّهُ جَعَلَ لَكُم مِّن بُيُوتِكُمْ سَكَنًا",
-      "en": "And Allah has made for you from your homes a place of rest.",
-      "ur": "اور اللہ نے تمہارے لیے تمہارے گھروں کو سکون کی جگہ بنایا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/016080.mp3"
+      "surah": 28,
+      "ayah": 25,
+      "label": "Al-Qasas 28:25",
+      "ar": "إِنَّ أَبِي يَدْعُوكَ",
+      "en": "Indeed, my father invites you.",
+      "ur": "بے شک میرے والد آپ کو بلاتے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028025.mp3"
     },
     "highlighted_word_indices": [
-      4
+      1
+    ],
+    "highlighted_words": [
+      "أَبِي"
     ],
     "noor_explanation": {
-      "en": "بُيُوتِكُمْ means your homes. The attached pronoun changes the family/home word into something personal, just like أَبِي and أُمِّي.",
-      "ur": "بُيُوتِكُمْ کا مطلب ہے تمہارے گھر۔ جڑی ہوئی ضمیر گھر کے لفظ کو ذاتی بنا دیتی ہے، جیسے أَبِي اور أُمِّي۔"
+      "en": "The word أَبِي in this ayah is exactly the word you built today: أَبٌ plus the ي of 'my'. Whenever a noun in the Quran ends in that ي, someone is speaking about what is theirs.",
+      "ur": "اس آیت کا لفظ أَبِي بالکل وہی لفظ ہے جو آپ نے آج بنایا: أَبٌ کے ساتھ 'میرا' والی ي۔ قرآن میں جب بھی کوئی اسم اس ي پر ختم ہو، کوئی اپنی چیز کے بارے میں بات کر رہا ہوتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now read two tender words: أَبِي and أُمِّي.",
-      "ur": "اب آپ دو محبت بھرے الفاظ پڑھ سکتے ہیں: أَبِي اور أُمِّي۔"
+      "en": "You can now read and build two tender words, أَبِي and أُمِّي, and you know that the ي at the end is what makes them yours.",
+      "ur": "اب آپ دو پیارے لفظ، أَبِي اور أُمِّي، پڑھ اور بنا سکتے ہیں، اور جانتے ہیں کہ آخر کی ي ہی انہیں آپ کا بناتی ہے۔"
     }
   }
 }

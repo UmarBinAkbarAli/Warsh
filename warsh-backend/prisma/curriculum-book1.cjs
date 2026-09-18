@@ -465,33 +465,39 @@ const specs = [
   // ─────────────────────────────────────────────────────────────────────────
 
   // ── Ch11 ── The Home and Family ───────────────────────────────────────────
+  // Docs/proposals/chapter-11-content-proposal.md (2026-09-19): أَبِي / أُمِّي
+  // with a Quran checkpoint that contains the target (Al-Qasas 28:25), the four
+  // family words plus the encountered plural إِخْوَةٌ, فِيهِ / فِيهَا chosen from
+  // the antecedent (Al-Baqarah 2:2 / 2:30), and بُيُوتِكُمْ assembled step by step.
   {
     order: 11,
     sourceFile: "reader_lecture_11_bayt_usra.md",
     title: "The Home and Family",
+    titleUr: "گھر اور خاندان",
     titleAr: "الْبَيْت وَالأُسْرَة",
-    description: "Family vocabulary, possessive phrases, and فِيهِ / فِيهَا for inside.",
+    description: "Family vocabulary, the ي of 'my', فِيهِ / فِيهَا for inside, and بُيُوتِكُمْ.",
+    descriptionUr: "خاندانی الفاظ، 'میرا' کی ي، اندر کے لیے فِيهِ / فِيهَا، اور بُيُوتِكُمْ۔",
     hook: { ayahAr: "وَاللَّهُ جَعَلَ لَكُم مِّن بُيُوتِكُمْ سَكَنًا", ayahRef: "An-Nahl 16:80", highlightedWord: "بُيُوتِكُمْ" },
     examples: [
       card("أَبِي فِي الْبَيْتِ", "My father is in the house", "abee fil-bayt"),
       card("أُمِّي فِي الْمَطْبَخِ", "My mother is in the kitchen", "ummee fil-matbakh"),
       card("الْكِتَابُ فِي الْحَقِيبَةِ — هُوَ فِيهَا", "The book is in the bag — it is in it", "al-kitaabu fil-haqeebati — huwa feeha"),
-      card("الْقَلَمُ فِي الدَّرْجِ — هُوَ فِيهِ", "The pen is in the drawer — it is in it", "al-qalamu fid-darji — huwa feeh"),
+      card("الْقَلَمُ فِي الدُّرْجِ — هُوَ فِيهِ", "The pen is in the drawer — it is in it", "al-qalamu fid-durji — huwa feeh"),
     ],
     parseText: "أَبِي فِي الْبَيْتِ",
-    parseTokens: [token("أَبِي", "مبتدأ", "my father"), token("فِي", "حرف جر", "in"), token("الْبَيْتِ", "مضاف إليه", "the house")],
+    parseTokens: [token("أَبِي", "مبتدأ", "my father"), token("فِي", "حرف جر", "in"), token("الْبَيْتِ", "خبر", "the house")],
     conversation: ["أَيْنَ أَبُوكَ؟", "أَبِي فِي الْبَيْتِ"],
     conversationDistractor: "هُمْ طُلَّابٌ",
     distractor: "after the lesson",
     blankDistractor: "عِنْدَهَا",
-    noorTip: "بُيُوتِكُمْ — your homes — the ي changes in the plural (بيت → بيوت), and كُمْ is your plural pronoun.",
-    noorTipUr: "بُیُوتِکُمْ میں بيت کا جمع مکسر اور ضمیر جمع مخاطب دونوں ہیں۔",
+    noorTip: "بُيُوتِكُمْ — your homes — is بَيْتٌ made plural (بُيُوتٌ) with كُمْ, your (to a group), attached at the end.",
+    noorTipUr: "بُیُوتِکُمْ میں بيت کی جمع مکسر اور جماعت سے خطاب کی ضمیر كُمْ دونوں ہیں۔",
     focuses: [
-      { title: "My Father and Mother", titleAr: "أَبِي وَأُمِّي", grammarTerm: "أسماء الأسرة مع ياء المتكلم", reveal: "Family words take attached pronouns — أَبِي (my father), أُمِّي (my mother). These are among the most emotionally important words in Arabic.", hookQuestion: "What is the pattern for attaching 'my' to أَبٌ?" },
-      { title: "Family Vocabulary", titleAr: "مُفْرَدَات الأُسْرَة", grammarTerm: "مفردات", reveal: "You built the core family vocabulary: أَبٌ (father), أُمٌّ (mother), أَخٌ (brother), أُخْتٌ (sister), اِبْنٌ (son), بِنْتٌ (daughter).", hookQuestion: "How do you say 'my brother' and 'my sister'?" },
-      { title: "In It — Masculine — فِيهِ", titleAr: "فِيهِ", grammarTerm: "جار ومجرور مع ضمير", reveal: "فِي (in) + هُ (it, masculine) = فِيهِ — 'in it', referring to a masculine noun.", hookQuestion: "Why does the pen use فِيهِ but the bag uses فِيهَا?" },
-      { title: "In It — Feminine — فِيهَا", titleAr: "فِيهَا", grammarTerm: "جار ومجرور مع ضمير مؤنث", reveal: "فِي (in) + هَا (it, feminine) = فِيهَا — 'in it', referring to a feminine noun.", hookQuestion: "How does Arabic keep track of what 'it' refers to across a sentence?" },
-      { title: "The Home in the Quran", titleAr: "الْبَيْت فِي الْقُرْآن", grammarTerm: "مفردات قرآنية", reveal: "You parsed بُيُوتِكُمْ — the broken plural of بَيْتٌ with your (plural) pronoun attached.", hookQuestion: "What is the broken plural of بَيْتٌ?" },
+      { title: "My Father and Mother", titleAr: "أَبِي وَأُمِّي", grammarTerm: "أسماء الأسرة مع ياء المتكلم", reveal: "Family words take the attached ي of 'my' — أَبِي (my father), أُمِّي (my mother) — the same word the Quran uses in إِنَّ أَبِي يَدْعُوكَ.", hookQuestion: "What is the pattern for attaching 'my' to أَبٌ?" },
+      { title: "Family Vocabulary", titleAr: "مُفْرَدَات الأُسْرَة", grammarTerm: "مفردات", reveal: "You built the core family vocabulary: أَبٌ (father), أُمٌّ (mother), أَخٌ (brother), أُخْتٌ (sister), and met إِخْوَةٌ (brothers) as the Quranic plural of أَخٌ.", hookQuestion: "How do you say 'my brother' and 'my sister'?" },
+      { title: "In It — Masculine — فِيهِ", titleAr: "فِيهِ", grammarTerm: "جار ومجرور مع ضمير", reveal: "فِي (in) + هِ (it, masculine) = فِيهِ — 'in it', pointing back to a masculine noun such as الْكِتَابُ.", hookQuestion: "Why does the pen use فِيهِ but the bag uses فِيهَا?" },
+      { title: "In It — Feminine — فِيهَا", titleAr: "فِيهَا", grammarTerm: "جار ومجرور مع ضمير مؤنث", reveal: "فِي (in) + هَا (it, feminine) = فِيهَا — 'in it', pointing back to a feminine noun such as الْأَرْضِ.", hookQuestion: "How does Arabic keep track of what 'it' refers to across a sentence?" },
+      { title: "The Home in the Quran", titleAr: "الْبَيْت فِي الْقُرْآن", grammarTerm: "مفردات قرآنية", reveal: "You parsed بُيُوتِكُمْ — the broken plural of بَيْتٌ with كُمْ, your (to a group), attached.", hookQuestion: "What is the broken plural of بَيْتٌ?" },
     ],
   },
 
