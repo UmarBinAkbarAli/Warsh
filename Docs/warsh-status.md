@@ -332,32 +332,36 @@ Everything below this list is either done and verified, or one of these:
    only learner who had finished either chapter was the owner's test account,
    backfilled with `progress:backfill-skipped`. Deviations are listed at the
    end of each proposal. **Chapter 8 (`Docs/proposals/chapter-08-content-proposal.md`,
-   feminine past verbs + `الَّتِي`) was approved 2026-09-18 and is implemented
-   in isolated staging (2026-09-18)**: `ch08-l01..l04` rewritten in place
-   (9/9/10/9 cards, 7/7/7/8 exercises), `ch08-l05` review and `ch08-test`
-   (12 MC, 80 %) added; fixtures/Urdu/Quran audits clean, catalogue clips
-   generated, `bint` + `qarya` copied from the dictionary set. Verified on the
-   emulator against staging (Lesson 1 end to end, every card of Lessons 2–4
-   and the review, test intro) and through the API on a fresh account (test
-   locked until the five lessons are done, 0/12 and 9/12 fail, 10/12 passes and
-   completes the chapter). Two player-driven content rules learned here, now
-   recorded in the proposal's implementation notes: any EN string the player
-   renders without a forced direction (`MATCH_AYAH` options, hook
-   `noor_intro`, reveal `noor_explanation`) must begin with English, and a
-   `CONTRAST` card needs `concept.ar` or it renders blank. **Awaits owner
-   approval to run `content:promote-chapter-eight -- --apply` against
-   production**, then `progress:backfill-skipped` for the test account and
-   `content:backfill-new-lessons -- --lesson-ids ch08-l05,ch08-test`.
+   feminine past verbs + `الَّتِي`) is live in production (promoted 2026-09-18**
+   with `content:promote-chapter-eight -- --apply`; `ch08-l01..l04` rewritten in
+   place so learner progress stays attached, `ch08-l05` review and `ch08-test`
+   (12 MC, 80 %) new). Post-promotion: `content:backfill-new-lessons --
+   --lesson-ids ch08-l05,ch08-test --apply` inserted 2 rows for the one learner
+   who had finished the chapter (the owner's test account, which
+   `progress:backfill-skipped` then reported at 420/420); R2 audio audit
+   3721/3721, missing 0; `content:check` clean. Two player-driven content rules
+   learned during the staging build are recorded in the proposal's
+   implementation notes: any EN string the player renders without a forced
+   direction (`MATCH_AYAH` options, hook `noor_intro`, reveal
+   `noor_explanation`) must begin with English, and a `CONTRAST` card needs
+   `concept.ar` or it renders blank.
    Untracked proposals for Chapters 9 and 10 appeared in the tree 2026-09-18
-   (owner-authored, not yet reviewed). Observation: `GET /api/lessons/{id}`
-   returns `assessment.questions[].correct_index` for every chapter test; the
-   app ignores it and the server grades, but it is a visible answer key. After every chapter promotion
+   (owner-authored, not yet reviewed). After every chapter promotion
    that adds lesson ids, re-run `progress:backfill-skipped` for the owner's
    test account and `content:backfill-new-lessons` for everyone else.
-   Approved UI follow-up (Pen-first): the chapter-test intro card shows a
-   hard-coded `هَذَا • ذَٰلِكَ • هَذِهِ • تِلْكَ` strip on every chapter
-   (`warsh-app/app/(app)/chapter-test/[lessonId].tsx`); owner wants it
-   chapter-specific. Chapter 5's
+   Fixed 2026-09-18 alongside the promotion: (a) `GET /api/lessons/{id}` no
+   longer returns `assessment.questions[].correct_index` — the server graded
+   already and the app never read it, but the answer key was visible to anyone
+   inspecting the response (`stripChapterTestAnswers` in `lib/chapterTests.ts`,
+   covered by `tests/chapterTests.test.ts`); (b) the chapter-test pass screen's
+   "Continue to next chapter" navigated to `/chapters/{id}`, a route that does
+   not exist, so every learner who passed a test and tapped Continue landed on
+   expo-router's unmatched-route error — it now goes to `/lessons/{chapterId}`
+   (owner hit this on the Chapter 1 test); (c) the chapter-test intro hero now
+   prints the chapter's own `Chapter.titleAr` (served as `chapterTitleAr` on the
+   lesson response) instead of the hard-coded `هَذَا • ذَٰلِكَ • هَذِهِ • تِلْكَ`
+   strip — Pen frame 24, approved 2026-09-18. (b) and (c) ship with the next
+   Android release; the web export was redeployed. Chapter 5's
    six composite-scene illustrations are owner deliverables tracked in
    `Docs/lesson-illustrations-needed.md` (+ `.csv` manifest; delivery lands via
    `npm run images:upload-lessons`, added 2026-09-17). From now on every chapter

@@ -56,6 +56,7 @@ export default function ChapterTestScreen() {
   const t = useT();
   const language = useTranslationLanguage();
   const [assessment, setAssessment] = useState<Assessment | null>(null);
+  const [chapterTitleAr, setChapterTitleAr] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -72,7 +73,10 @@ export default function ChapterTestScreen() {
         const response = await api.get(`/api/lessons/${lessonId}`);
         const nextAssessment = response.data.data.lesson.content?.assessment;
         if (!response.data.data.lesson.isChapterTest || nextAssessment?.type !== "CHAPTER_TEST") throw new Error("not_test");
-        if (active) setAssessment(nextAssessment);
+        if (active) {
+          setAssessment(nextAssessment);
+          setChapterTitleAr(response.data.data.lesson.chapterTitleAr ?? null);
+        }
       } catch {
         if (active) setError(t("chapterTest.loadError"));
       } finally {
@@ -174,7 +178,7 @@ export default function ChapterTestScreen() {
           <View style={styles.hero}>
             <View style={styles.heroIcon}><Ionicons name="clipboard-outline" size={28} color={WarshPalette.navy} /></View>
             <Text style={styles.heroTitle}>{t("chapterTest.heroTitle")}</Text>
-            <ArabicText size="md" style={styles.heroArabic}>هَذَا  •  ذَٰلِكَ  •  هَذِهِ  •  تِلْكَ</ArabicText>
+            {chapterTitleAr ? <ArabicText size="md" style={styles.heroArabic}>{chapterTitleAr}</ArabicText> : null}
           </View>
           <View style={styles.metricsCard}>
             <Metric icon="list-outline" value={String(assessment.questions.length)} label={t("chapterTest.questions")} />
@@ -232,7 +236,7 @@ export default function ChapterTestScreen() {
             title={result.passed ? t("chapterTest.continueNext") : t("chapterTest.retry")}
             onPress={() => {
               if (!result.passed) return resetTest();
-              if (result.nextChapterId) router.replace(`/chapters/${result.nextChapterId}`);
+              if (result.nextChapterId) router.replace(`/lessons/${result.nextChapterId}`);
               else router.replace("/(app)/(tabs)");
             }}
           />

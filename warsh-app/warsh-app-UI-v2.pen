@@ -146046,6 +146046,1414 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "qWBTO",
+      "x": 51466,
+      "y": 1979,
+      "name": "24 — Chapter Test Intro · Chapter-Specific Hero · Proposed",
+      "width": 1330,
+      "fill": "$warsh-card",
+      "cornerRadius": 28,
+      "stroke": "$warsh-line",
+      "strokeWidth": 1,
+      "layout": "vertical",
+      "gap": 28,
+      "padding": 40,
+      "children": [
+        {
+          "type": "frame",
+          "id": "cSK31",
+          "name": "Proposal Header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 6,
+          "children": [
+            {
+              "type": "text",
+              "id": "nJba3",
+              "name": "Proposal Title",
+              "fill": "$navy-deep",
+              "content": "Chapter test intro — the hero line becomes chapter-specific",
+              "fontFamily": "$font-display",
+              "fontSize": 34,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "r7oHx",
+              "name": "Proposal Note",
+              "fill": "$ink-muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Today the intro card prints a hard-coded strip (هَذَا • ذَٰلِكَ • هَذِهِ • تِلْكَ) on every chapter's test. Proposal: print the chapter's own Arabic title (Chapter.titleAr, already authored for all 72 chapters) in the same slot — same type size, no new layout. Owner request 2026-09-18.",
+              "lineHeight": 1.35,
+              "fontFamily": "$font-text",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hG5sL",
+          "name": "English Flow",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "nD2IP",
+              "name": "English Flow Label",
+              "fill": "$gold-deep",
+              "content": "Intro screens — Chapter 1 (as today), Chapter 7 and Chapter 8 with their own titleAr",
+              "fontFamily": "$font-text",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "xp72s",
+              "name": "English Screens",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "InLUV",
+                  "name": "Chapter 1 · as today",
+                  "clip": true,
+                  "width": 390,
+                  "height": 844,
+                  "fill": "$parchment-deep",
+                  "cornerRadius": 26,
+                  "stroke": "$sage-soft",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vbQjY",
+                      "name": "Status Bar",
+                      "width": "fill_container",
+                      "height": 40,
+                      "padding": [
+                        12,
+                        20,
+                        0,
+                        20
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "sPWL8",
+                          "name": "Time",
+                          "fill": "$ink",
+                          "content": "9:41",
+                          "fontFamily": "$font-text",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Y9JYKc",
+                          "name": "System Icons",
+                          "gap": 5,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "G7lBOj",
+                              "name": "Signal",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "signal",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "s01GJ",
+                              "name": "WiFi",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "wifi",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "C77EYc",
+                              "name": "Battery",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "battery-full",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Af33Y",
+                      "name": "Screen Header",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        8,
+                        20,
+                        14,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "RyB8t",
+                          "name": "Header Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "RaiEl",
+                              "name": "Back",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "arrow-left",
+                              "library": "lucide",
+                              "fill": "$navy-deep"
+                            },
+                            {
+                              "type": "text",
+                              "id": "aAjE7",
+                              "name": "Title",
+                              "fill": "$navy-deep",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Chapter 1 Final Test",
+                              "fontFamily": "$font-display",
+                              "fontSize": 24,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "OObrd",
+                          "name": "Subtitle",
+                          "fill": "$ink-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Before you begin",
+                          "lineHeight": 1.35,
+                          "fontFamily": "$font-text",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TVztR",
+                      "name": "Introduction Content",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "layout": "vertical",
+                      "gap": 18,
+                      "padding": [
+                        16,
+                        20,
+                        24,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "pSTib",
+                          "name": "Test Hero",
+                          "width": "fill_container",
+                          "height": 190,
+                          "fill": "$navy-deep",
+                          "cornerRadius": 24,
+                          "layout": "vertical",
+                          "gap": 12,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "Iudh8",
+                              "name": "Hero Icon Circle",
+                              "width": 58,
+                              "height": 58,
+                              "fill": "$gold",
+                              "cornerRadius": 29,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "oZkyu",
+                                  "name": "Test Icon",
+                                  "width": 28,
+                                  "height": 28,
+                                  "icon": "clipboard-check",
+                                  "library": "lucide",
+                                  "fill": "$navy-deep"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "r9WTUB",
+                              "name": "Hero Title",
+                              "fill": "$pure-white",
+                              "content": "Check your understanding",
+                              "fontFamily": "$font-display",
+                              "fontSize": 25,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "UXfzg",
+                              "name": "Hero Note",
+                              "fill": "$gold-muted",
+                              "content": "هٰذَا وَذٰلِكَ وَمَا وَمَنْ",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 19,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ZaXU1",
+                          "name": "Test Metrics",
+                          "width": "fill_container",
+                          "height": 100,
+                          "fill": "$pure-white",
+                          "cornerRadius": 18,
+                          "stroke": "$warsh-line",
+                          "strokeWidth": 1,
+                          "padding": [
+                            16,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "eX8mC",
+                              "name": "Questions Metric",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 4,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "yLGyt",
+                                  "name": "Questions Icon",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "list-checks",
+                                  "library": "lucide",
+                                  "fill": "$gold"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "UK010",
+                                  "name": "Metric Value",
+                                  "fill": "$navy-deep",
+                                  "content": "12",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 18,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "H9xcQ",
+                                  "name": "Metric Label",
+                                  "fill": "$ink-muted",
+                                  "content": "Questions",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "SOn7P",
+                              "name": "To pass Metric",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 4,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "qNbJX",
+                                  "name": "To pass Icon",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "target",
+                                  "library": "lucide",
+                                  "fill": "$gold"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "gvkKm",
+                                  "name": "Metric Value",
+                                  "fill": "$navy-deep",
+                                  "content": "10",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 18,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "U6gmMH",
+                                  "name": "Metric Label",
+                                  "fill": "$ink-muted",
+                                  "content": "To pass",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "RARHd",
+                              "name": "Retries Metric",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 4,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "wxD8h",
+                                  "name": "Retries Icon",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "rotate-ccw",
+                                  "library": "lucide",
+                                  "fill": "$gold"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "gfyvq",
+                                  "name": "Metric Value",
+                                  "fill": "$navy-deep",
+                                  "content": "∞",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 18,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "qpz4w",
+                                  "name": "Metric Label",
+                                  "fill": "$ink-muted",
+                                  "content": "Retries",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "EU0cR",
+                          "name": "Rules Card",
+                          "width": "fill_container",
+                          "fill": "$success-tint",
+                          "cornerRadius": 16,
+                          "stroke": "$warsh-line",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 7,
+                          "padding": 15,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "sbu6Y",
+                              "name": "Rule 1",
+                              "fill": "$ink-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "• Choose the best answer for every question.",
+                              "lineHeight": 1.35,
+                              "fontFamily": "$font-text",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "F90tH",
+                              "name": "Rule 2",
+                              "fill": "$ink-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "• Answers are checked when you finish.",
+                              "lineHeight": 1.35,
+                              "fontFamily": "$font-text",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "tZ84H",
+                              "name": "Rule 3",
+                              "fill": "$ink-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "• You can retry if you do not pass.",
+                              "lineHeight": 1.35,
+                              "fontFamily": "$font-text",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ljFyh",
+                          "name": "Flexible Spacer",
+                          "width": "fill_container",
+                          "height": "fill_container"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "RyvOD",
+                          "name": "Primary Button",
+                          "width": "fill_container",
+                          "height": 56,
+                          "fill": "$navy-deep",
+                          "cornerRadius": 16,
+                          "stroke": "$navy-deep",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WmmlY",
+                              "name": "Button Label",
+                              "fill": "$pure-white",
+                              "content": "Start Test",
+                              "fontFamily": "$font-text",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Rizrb",
+                  "name": "Chapter 7 · titleAr",
+                  "clip": true,
+                  "width": 390,
+                  "height": 844,
+                  "fill": "$parchment-deep",
+                  "cornerRadius": 26,
+                  "stroke": "$sage-soft",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "N0pZw",
+                      "name": "Status Bar",
+                      "width": "fill_container",
+                      "height": 40,
+                      "padding": [
+                        12,
+                        20,
+                        0,
+                        20
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "V47s2",
+                          "name": "Time",
+                          "fill": "$ink",
+                          "content": "9:41",
+                          "fontFamily": "$font-text",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "BnpWV",
+                          "name": "System Icons",
+                          "gap": 5,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "E8Tdp",
+                              "name": "Signal",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "signal",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "uGnzh",
+                              "name": "WiFi",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "wifi",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "oriBW",
+                              "name": "Battery",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "battery-full",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kXXTS",
+                      "name": "Screen Header",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        8,
+                        20,
+                        14,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ONBTM",
+                          "name": "Header Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "RIS9Y",
+                              "name": "Back",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "arrow-left",
+                              "library": "lucide",
+                              "fill": "$navy-deep"
+                            },
+                            {
+                              "type": "text",
+                              "id": "vjtRh",
+                              "name": "Title",
+                              "fill": "$navy-deep",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Chapter 7 Final Test",
+                              "fontFamily": "$font-display",
+                              "fontSize": 24,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "X9QVg",
+                          "name": "Subtitle",
+                          "fill": "$ink-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Before you begin",
+                          "lineHeight": 1.35,
+                          "fontFamily": "$font-text",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YWrK3",
+                      "name": "Introduction Content",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "layout": "vertical",
+                      "gap": 18,
+                      "padding": [
+                        16,
+                        20,
+                        24,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "L3Ayw",
+                          "name": "Test Hero",
+                          "width": "fill_container",
+                          "height": 190,
+                          "fill": "$navy-deep",
+                          "cornerRadius": 24,
+                          "layout": "vertical",
+                          "gap": 12,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "LSL0V",
+                              "name": "Hero Icon Circle",
+                              "width": 58,
+                              "height": 58,
+                              "fill": "$gold",
+                              "cornerRadius": 29,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "q3t8mY",
+                                  "name": "Test Icon",
+                                  "width": 28,
+                                  "height": 28,
+                                  "icon": "clipboard-check",
+                                  "library": "lucide",
+                                  "fill": "$navy-deep"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "X2lgQx",
+                              "name": "Hero Title",
+                              "fill": "$pure-white",
+                              "content": "Check your understanding",
+                              "fontFamily": "$font-display",
+                              "fontSize": 25,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "O162u",
+                              "name": "Hero Note",
+                              "fill": "$gold-muted",
+                              "content": "الضَّمَائِر الْمُتَّصِلَة الْمُفْرَدَة",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 19,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "wt5In",
+                          "name": "Test Metrics",
+                          "width": "fill_container",
+                          "height": 100,
+                          "fill": "$pure-white",
+                          "cornerRadius": 18,
+                          "stroke": "$warsh-line",
+                          "strokeWidth": 1,
+                          "padding": [
+                            16,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "d6MBu",
+                              "name": "Questions Metric",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 4,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "E6zrTO",
+                                  "name": "Questions Icon",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "list-checks",
+                                  "library": "lucide",
+                                  "fill": "$gold"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "DtQ0p",
+                                  "name": "Metric Value",
+                                  "fill": "$navy-deep",
+                                  "content": "12",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 18,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "Axbx0",
+                                  "name": "Metric Label",
+                                  "fill": "$ink-muted",
+                                  "content": "Questions",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "UlPkg",
+                              "name": "To pass Metric",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 4,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "etTPa",
+                                  "name": "To pass Icon",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "target",
+                                  "library": "lucide",
+                                  "fill": "$gold"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "rLmpR",
+                                  "name": "Metric Value",
+                                  "fill": "$navy-deep",
+                                  "content": "10",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 18,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "IAKU2",
+                                  "name": "Metric Label",
+                                  "fill": "$ink-muted",
+                                  "content": "To pass",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "VGYVw",
+                              "name": "Retries Metric",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 4,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "u31xBW",
+                                  "name": "Retries Icon",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "rotate-ccw",
+                                  "library": "lucide",
+                                  "fill": "$gold"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "Yc5ll",
+                                  "name": "Metric Value",
+                                  "fill": "$navy-deep",
+                                  "content": "∞",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 18,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "nknhi",
+                                  "name": "Metric Label",
+                                  "fill": "$ink-muted",
+                                  "content": "Retries",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "G8ScD",
+                          "name": "Rules Card",
+                          "width": "fill_container",
+                          "fill": "$success-tint",
+                          "cornerRadius": 16,
+                          "stroke": "$warsh-line",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 7,
+                          "padding": 15,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "gKhg1",
+                              "name": "Rule 1",
+                              "fill": "$ink-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "• Choose the best answer for every question.",
+                              "lineHeight": 1.35,
+                              "fontFamily": "$font-text",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "csTh1",
+                              "name": "Rule 2",
+                              "fill": "$ink-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "• Answers are checked when you finish.",
+                              "lineHeight": 1.35,
+                              "fontFamily": "$font-text",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "eRmYY",
+                              "name": "Rule 3",
+                              "fill": "$ink-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "• You can retry if you do not pass.",
+                              "lineHeight": 1.35,
+                              "fontFamily": "$font-text",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "AfQ2N",
+                          "name": "Flexible Spacer",
+                          "width": "fill_container",
+                          "height": "fill_container"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "yBXHA",
+                          "name": "Primary Button",
+                          "width": "fill_container",
+                          "height": 56,
+                          "fill": "$navy-deep",
+                          "cornerRadius": 16,
+                          "stroke": "$navy-deep",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "pO2xb",
+                              "name": "Button Label",
+                              "fill": "$pure-white",
+                              "content": "Start Test",
+                              "fontFamily": "$font-text",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aMMYZ",
+                  "name": "Chapter 8 · titleAr",
+                  "clip": true,
+                  "width": 390,
+                  "height": 844,
+                  "fill": "$parchment-deep",
+                  "cornerRadius": 26,
+                  "stroke": "$sage-soft",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "wGDbq",
+                      "name": "Status Bar",
+                      "width": "fill_container",
+                      "height": 40,
+                      "padding": [
+                        12,
+                        20,
+                        0,
+                        20
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "V76tUh",
+                          "name": "Time",
+                          "fill": "$ink",
+                          "content": "9:41",
+                          "fontFamily": "$font-text",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "KzKTq",
+                          "name": "System Icons",
+                          "gap": 5,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "jCPmF",
+                              "name": "Signal",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "signal",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "PnUpF",
+                              "name": "WiFi",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "wifi",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "PLTxZ",
+                              "name": "Battery",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "battery-full",
+                              "library": "lucide",
+                              "fill": "$ink"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "U7pxrT",
+                      "name": "Screen Header",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        8,
+                        20,
+                        14,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "udHkW",
+                          "name": "Header Row",
+                          "width": "fill_container",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "UVN3B",
+                              "name": "Back",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "arrow-left",
+                              "library": "lucide",
+                              "fill": "$navy-deep"
+                            },
+                            {
+                              "type": "text",
+                              "id": "IvxcT",
+                              "name": "Title",
+                              "fill": "$navy-deep",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Chapter 8 Final Test",
+                              "fontFamily": "$font-display",
+                              "fontSize": 24,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "tD304",
+                          "name": "Subtitle",
+                          "fill": "$ink-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Before you begin",
+                          "lineHeight": 1.35,
+                          "fontFamily": "$font-text",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "RIymW",
+                      "name": "Introduction Content",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "layout": "vertical",
+                      "gap": 18,
+                      "padding": [
+                        16,
+                        20,
+                        24,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "DFTlc",
+                          "name": "Test Hero",
+                          "width": "fill_container",
+                          "height": 190,
+                          "fill": "$navy-deep",
+                          "cornerRadius": 24,
+                          "layout": "vertical",
+                          "gap": 12,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "xnmiq",
+                              "name": "Hero Icon Circle",
+                              "width": 58,
+                              "height": 58,
+                              "fill": "$gold",
+                              "cornerRadius": 29,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "lF7Gw",
+                                  "name": "Test Icon",
+                                  "width": 28,
+                                  "height": 28,
+                                  "icon": "clipboard-check",
+                                  "library": "lucide",
+                                  "fill": "$navy-deep"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "xNzD0",
+                              "name": "Hero Title",
+                              "fill": "$pure-white",
+                              "content": "Check your understanding",
+                              "fontFamily": "$font-display",
+                              "fontSize": 25,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "BJ8tU",
+                              "name": "Hero Note",
+                              "fill": "$gold-muted",
+                              "content": "الْفِعْل الْمُؤَنَّث وَالَّتِي",
+                              "fontFamily": "$font-arabic",
+                              "fontSize": 19,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "H3JHD",
+                          "name": "Test Metrics",
+                          "width": "fill_container",
+                          "height": 100,
+                          "fill": "$pure-white",
+                          "cornerRadius": 18,
+                          "stroke": "$warsh-line",
+                          "strokeWidth": 1,
+                          "padding": [
+                            16,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "UvUSi",
+                              "name": "Questions Metric",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 4,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "FppTf",
+                                  "name": "Questions Icon",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "list-checks",
+                                  "library": "lucide",
+                                  "fill": "$gold"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "q6wfl",
+                                  "name": "Metric Value",
+                                  "fill": "$navy-deep",
+                                  "content": "12",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 18,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "fHFme",
+                                  "name": "Metric Label",
+                                  "fill": "$ink-muted",
+                                  "content": "Questions",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "IozW8",
+                              "name": "To pass Metric",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 4,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "iFrBK",
+                                  "name": "To pass Icon",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "target",
+                                  "library": "lucide",
+                                  "fill": "$gold"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "YwWcc",
+                                  "name": "Metric Value",
+                                  "fill": "$navy-deep",
+                                  "content": "10",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 18,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "W0kBT",
+                                  "name": "Metric Label",
+                                  "fill": "$ink-muted",
+                                  "content": "To pass",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "SpIub",
+                              "name": "Retries Metric",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 4,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "N5q2r",
+                                  "name": "Retries Icon",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "rotate-ccw",
+                                  "library": "lucide",
+                                  "fill": "$gold"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "ftogB",
+                                  "name": "Metric Value",
+                                  "fill": "$navy-deep",
+                                  "content": "∞",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 18,
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "kvHiU",
+                                  "name": "Metric Label",
+                                  "fill": "$ink-muted",
+                                  "content": "Retries",
+                                  "fontFamily": "$font-text",
+                                  "fontSize": 10,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "oMCTx",
+                          "name": "Rules Card",
+                          "width": "fill_container",
+                          "fill": "$success-tint",
+                          "cornerRadius": 16,
+                          "stroke": "$warsh-line",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 7,
+                          "padding": 15,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "PQT7W",
+                              "name": "Rule 1",
+                              "fill": "$ink-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "• Choose the best answer for every question.",
+                              "lineHeight": 1.35,
+                              "fontFamily": "$font-text",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "n1MQ30",
+                              "name": "Rule 2",
+                              "fill": "$ink-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "• Answers are checked when you finish.",
+                              "lineHeight": 1.35,
+                              "fontFamily": "$font-text",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "x1UnC",
+                              "name": "Rule 3",
+                              "fill": "$ink-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "• You can retry if you do not pass.",
+                              "lineHeight": 1.35,
+                              "fontFamily": "$font-text",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Vj3qi",
+                          "name": "Flexible Spacer",
+                          "width": "fill_container",
+                          "height": "fill_container"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "v23FP",
+                          "name": "Primary Button",
+                          "width": "fill_container",
+                          "height": 56,
+                          "fill": "$navy-deep",
+                          "cornerRadius": 16,
+                          "stroke": "$navy-deep",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "aoCQX",
+                              "name": "Button Label",
+                              "fill": "$pure-white",
+                              "content": "Start Test",
+                              "fontFamily": "$font-text",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {
