@@ -3,8 +3,8 @@
 ## Status
 
 Owner-authored. Implemented in the isolated staging database on 2026-09-19 and
-verified on the emulator; **production promotion is a separate, explicitly
-approved step** (`npm run content:promote-chapter-eleven -- --apply`). See
+verified on the emulator; **promoted to production 2026-09-19** with
+`npm run content:promote-chapter-eleven -- --apply` on the owner's go-ahead. See
 "Implementation notes" at the end.
 
 The current Chapter 11 fixture mirror is structurally valid and synchronized

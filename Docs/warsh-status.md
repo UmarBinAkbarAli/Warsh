@@ -411,12 +411,17 @@ Everything below this list is either done and verified, or one of these:
    for the owner's test account and `content:backfill-new-lessons` for
    everyone else.
    **Chapter 11 (`Docs/proposals/chapter-11-content-proposal.md`, family
-   words, the ي of 'my', فِيهِ / فِيهَا and بُيُوتِكُمْ) is built and
-   staging-verified (2026-09-19); production promotion is pending the owner's
-   go-ahead** — `npm run content:promote-chapter-eleven -- --apply`, then
-   `content:backfill-new-lessons -- --lesson-ids ch11-l06,ch11-test --apply`,
-   `progress:backfill-skipped` for the owner's account, `content:baseline`,
-   `content:check`. `ch11-l01..l05` are rewritten in place (8 cards / 7
+   words, the ي of 'my', فِيهِ / فِيهَا and بُيُوتِكُمْ) is built,
+   staging-verified and promoted to production 2026-09-19** on the owner's
+   go-ahead: `content:promote-chapter-eleven -- --apply` (5 in-place updates,
+   2 creates, post-promotion verification passed);
+   `content:backfill-new-lessons -- --lesson-ids ch11-l06,ch11-test --apply`
+   inserted 2 rows for the one learner who had finished the chapter (the
+   owner's account, now 426/426; `progress:backfill-skipped` found nothing
+   further); `content:baseline` re-recorded for 426 lessons; `content:check`
+   clean (0 orphans); R2 audio audit 3778/3778; Urdu audit clean; production
+   health 200 and the chapter lists all seven lessons in display order.
+   `ch11-l01..l05` are rewritten in place (8 cards / 7
    exercises each, IDs and display orders unchanged); `ch11-l06` (review,
    8 cards / 10 exercises) and `ch11-test` (12 MC, 80 %) are new. Lesson 1
    now hooks on Al-Qasas 28:25 (contains أَبِي) and Lesson 4 on Al-Baqarah
