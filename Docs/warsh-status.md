@@ -376,12 +376,17 @@ Everything below this list is either done and verified, or one of these:
    not a rendering requirement. `reveal.noor_explanation` is not rendered by
    the player at all (283 Arabic-leading strings there are moot).
    **Chapter 10 (`Docs/proposals/chapter-10-content-proposal.md`, plural
-   pronouns + `قَبْلَ / بَعْدَ`) is built and staging-verified (2026-09-18);
-   production promotion is pending the owner's go-ahead** —
-   `npm run content:promote-chapter-ten -- --apply`, then
+   pronouns + `قَبْلَ / بَعْدَ`) is built, staging-verified (2026-09-18) and
+   promoted to production 2026-09-19** on the owner's go-ahead:
+   `content:promote-chapter-ten -- --apply` (4 in-place updates, 3 creates,
+   chapter retitled, post-promotion verification passed);
    `content:backfill-new-lessons -- --lesson-ids ch10-l05,ch10-l06,ch10-test
-   --apply`, `progress:backfill-skipped` for the owner's test account,
-   `content:baseline`, `content:check`. `ch10-l01..l04` are rewritten in
+   --apply` inserted 3 rows for the one learner who had finished the chapter
+   (the owner's account, now 424/424; `progress:backfill-skipped` found
+   nothing further); `content:baseline` re-recorded for 424 lessons;
+   `content:check` clean (0 orphans); R2 audio audit 3762/3762, missing 0;
+   production health 200 and the chapter lists all seven lessons in display
+   order. `ch10-l01..l04` are rewritten in
    place (9 cards / 7 exercises each); `ch10-l05` (you all, display order 3),
    `ch10-l06` (review, 8 cards / 10 exercises) and `ch10-test` (12 MC, 80 %)
    are new. Fixture file numbers follow display order, as in Chapter 5, so
