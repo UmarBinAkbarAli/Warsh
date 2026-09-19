@@ -441,12 +441,19 @@ Everything below this list is either done and verified, or one of these:
    HEAD; they are not part of this work.
    **Chapter 12 (`Docs/proposals/chapter-12-content-proposal.md`,
    introductions: مَا اسْمُكَ؟, مِنْ أَيْنَ أَنْتَ؟, مَا مِهْنَتُكَ؟, past-tense
-   recognition, classroom phrases) is built and staging-verified 2026-09-19;
-   production promotion pending the owner's go-ahead** with
-   `content:promote-chapter-twelve -- --apply`, then
-   `content:backfill-new-lessons -- --lesson-ids ch12-l06,ch12-test --apply`,
-   `progress:backfill-skipped` for the owner's account, `content:baseline`,
-   `content:check`. `ch12-l01..l04` are rewritten in place (8 cards / 7–8
+   recognition, classroom phrases) is built, staging-verified and promoted to
+   production 2026-09-19** on the owner's go-ahead:
+   `content:promote-chapter-twelve -- --apply` (5 in-place updates, 2 creates,
+   post-promotion verification passed);
+   `content:backfill-new-lessons -- --lesson-ids ch12-l06,ch12-test --apply`
+   inserted 2 rows for the one learner who had finished the chapter (the
+   owner's account, now 428/428; `progress:backfill-skipped` found nothing
+   further); `content:baseline` re-recorded for 428 lessons; `content:check`
+   clean (0 orphans); R2 audio audit 3802/3802; production health 200 and the
+   chapter lists all seven lessons in display order. The first `content:check`
+   and promote dry run died with `P1017 "Server has closed the connection"` —
+   Neon's compute waking, not a data problem; the retry went through.
+   `ch12-l01..l04` are rewritten in place (8 cards / 7–8
    exercises, IDs and display orders unchanged); `ch12-l05` keeps its phrases
    and audio and only gains the recognition-only scope note, plain phrase
    contexts, a natural dialogue order and a clean title; `ch12-l06` (review,

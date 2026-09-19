@@ -3,9 +3,9 @@
 ## Status
 
 Owner-authored. Implemented in the isolated staging database on 2026-09-19 and
-verified on the emulator; **production promotion pending the owner's go-ahead**
-(`npm run content:promote-chapter-twelve -- --apply`). See "Implementation
-notes" at the end.
+verified on the emulator; **promoted to production on 2026-09-19** on the
+owner's go-ahead (`npm run content:promote-chapter-twelve -- --apply`). See
+"Implementation notes" at the end.
 
 The current Chapter 12 fixture mirror is structurally valid and synchronized
 with the database. This proposal resolves the lesson-to-reveal mismatches,
