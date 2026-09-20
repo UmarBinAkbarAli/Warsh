@@ -504,6 +504,54 @@ Everything below this list is either done and verified, or one of these:
    `npm run images:upload-lessons`, added 2026-09-17). From now on every chapter
    rebuild adds its missing card scenes to that file. The `لِمَنْ هَذَا؟` note at
    the end of the Chapter 5 proposal is settled 2026-09-17: stays as written.
+   **Chapter 13 (`Docs/proposals/chapter-13-content-proposal.md`, renamed
+   "Reading Plurals in the Quran": the three plural families applied to
+   Quranic forms) is built, staging-verified and promoted to production
+   2026-09-20** on the owner's "implement and promote, don't wait":
+   `content:promote-chapter-thirteen -- --apply` (4 in-place updates, 2 creates,
+   chapter renamed, post-promotion verification passed);
+   `content:backfill-new-lessons -- --lesson-ids ch13-l05,ch13-test --apply`
+   inserted 2 rows for the one learner who had finished the chapter (the
+   owner's account, now 430/430; the first attempt died on a Neon connection
+   drop and was re-run); `content:baseline` re-recorded for 430 lessons;
+   `content:check` clean (0 orphans); R2 catalogue audit 3819/3819 (38 new
+   clips); Quran audit 851/0; Urdu audit clean; legacy validator clean;
+   production health 200. `ch13-l01..l04` are rewritten in place (8/8/9/8
+   cards, 7/7/7/8 exercises, IDs and display orders unchanged): Lesson 1
+   bridges from Chapter 9 instead of reteaching, keeps Al-Kafirun 109:1 with
+   الْكَافِرُونَ declared, and presents مُتَّقِينَ as the encountered ـِينَ shape
+   of the same family; Lesson 2 moves to an Al-Ahzab 33:35 excerpt whose
+   declared token is وَالْمُؤْمِنَاتِ (index generated from the canonical
+   text, وَ included) with long-ā transliterations; Lesson 3 moves to An-Nas
+   114:5 at صُدُورِ (the old reveal index 4 on a four-token ayah highlighted
+   nothing), drops ثَلَاثَةُ كُتُبٍ, keeps `ch13-l03-ex07` for the An-Nas
+   Tadabbur coverage and uses unambiguous Urdu plurals; Lesson 4 is a new
+   Plural Reading Lab on an Al-Baqarah 2:5 excerpt at الْمُفْلِحُونَ with the
+   adjective-agreement objective removed entirely (Chapter 14 owns it).
+   `ch13-l05` (review, 8 cards / 10 exercises) and `ch13-test` (12 MC, 80 %)
+   are new. The stale `reader_lecture_13_jama_introduction.md` source is
+   replaced by the proposal path in the chapter spec. No new images (existing
+   dictionary scenes reused where a word had one).
+   **Validator correction shipped with it:** `validate-curriculum.cjs` now
+   bounds-checks `reveal.highlighted_word_indices` for every reveal, not only
+   when `highlighted_words` is declared, and accepts an empty list (Chapter 2
+   reading lessons highlight nothing on purpose). That surfaced 18 legacy
+   reveals in Chapters 19–70 whose index points past the ayah (several also
+   explain a word that is not in the excerpt); they are listed in
+   `LEGACY_REVEAL_INDEX_DEFECTS` and reported as warnings so the gate stays
+   green, and belong to the owner's Chapter 9–72 review — the list only
+   shrinks, and any new out-of-range index anywhere is an error.
+   `tests/reveal-validation.test.ts` proves index 4 fails a four-token ayah.
+   **Player fact learned:** a discover card shows only `text.ar ?? concept.ar`
+   as its hero and never renders `examples`, so every CONCEPT / CONTRAST card
+   must carry its comparison in `concept.ar` (the first cut rendered a blank
+   hero on the emulator; fixed before promotion). Verified on the API 34
+   emulator against staging: chapter card, Lesson 1 hook, all eight cards with
+   audio, and the exercise flow; through the API on a fresh account: test
+   locked (fetch and submit) until the five lessons are complete, answer key
+   stripped, every lesson serves its cards/exercises/declared reveal, 0/12 and
+   9/12 fail, 10/12 passes with the chapter bonus and unlocks Chapter 14, a
+   repeat pass earns 0 XP.
 3. ~~**Speak mic re-prompt on the Tecno**~~ — **verified on hardware
    2026-09-17** on the Play-installed 1.0.11. The owner's account is on
    Chapter 2, so the check used a throwaway production account placed at

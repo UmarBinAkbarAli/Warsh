@@ -2,8 +2,11 @@
 
 ## Status
 
-Review-first redesign proposal. No lesson fixtures, seed rows, database content,
-media, application code, or production state are changed by this document.
+Owner-authored. Implemented in the isolated staging database, verified on the
+emulator and through the API, and **promoted to production on 2026-09-20** on
+the owner's instruction to implement and promote without waiting
+(`npm run content:promote-chapter-thirteen -- --apply`). See "Implementation
+notes" at the end.
 
 The current Chapter 13 fixtures are structurally valid and synchronized with
 the database, but the chapter should not be implemented as a simple correction
@@ -372,3 +375,25 @@ number or case grammar, uses direct Quran targets with validated highlights,
 has accurate English, Urdu, and transliteration, passes isolated staging QA in
 both languages, preserves existing learner progress, and is not promoted to
 production without explicit approval.
+
+## Implementation notes (2026-09-20)
+
+- Every lesson specification above was implemented as written, with these
+  concrete choices: the Lesson 2 declared token is `وَالْمُؤْمِنَاتِ` (index 4
+  of the canonical excerpt `إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِينَ
+  وَالْمُؤْمِنَاتِ`, وَ included because the validator compares whole tokens);
+  Lesson 3 uses the excerpt `فِي صُدُورِ النَّاسِ` (index 1); Lesson 4 uses the
+  Al-Baqarah 2:5 excerpt `وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ` (index 2) with
+  `مُفْلِحٌ` introduced as its singular at recognition level.
+- The reveal-index validator correction is unconditional, with the 18
+  pre-existing out-of-range reveals in Chapters 19–70 allow-listed as warnings
+  (`LEGACY_REVEAL_INDEX_DEFECTS` in `prisma/validate-curriculum.cjs`) so that
+  content the owner has not yet reviewed does not block the release gate.
+- The `reader_lecture_13_jama_introduction.md` reference was replaced by this
+  proposal's path in `prisma/curriculum-book1.cjs`; no placeholder file exists.
+- The player renders a card's hero from `text.ar ?? concept.ar` only and never
+  lists `examples`; every CONCEPT / CONTRAST card therefore carries its
+  comparison in `concept.ar`.
+- No new illustrations were added; `kitab`, `bayt`, `walad`, `talib` and
+  `mumina` dictionary scenes are reused on the WORD cards that have them.
+

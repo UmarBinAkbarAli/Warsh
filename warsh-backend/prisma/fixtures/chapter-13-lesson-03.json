@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 13, Lesson 3 - broken plural recognition only: طَالِبٌ/طُلَّابٌ, بَيْتٌ/بُيُوتٌ, كِتَابٌ/كُتُبٌ, وَلَدٌ/أَوْلَادٌ. Quranic reveal: الْكَافِرُونَ in Al-Kafirun 109:1.",
+    "_note": "Chapter 13, Lesson 3 (ch13-l03) — broken plurals in the Quran: صَدْرٌ → صُدُورٌ, كِتَابٌ → كُتُبٌ, بَيْتٌ → بُيُوتٌ, وَلَدٌ → أَوْلَادٌ, طَالِبٌ → طُلَّابٌ presented as pairs to learn together, never as a generation rule. Quran checkpoint moved from Al-Kafirun 109:1 (a sound plural, with the reveal index 4 pointing past a four-token ayah so nothing was highlighted) to An-Nas 114:5 excerpted at فِي صُدُورِ النَّاسِ with صُدُورِ declared. The ثَلَاثَةُ كُتُبٍ number phrase is gone; the context tasks assess only the taught plural distinction. Urdu plurals are unambiguous (طلبہ، کتابیں، بچے، گھر — جمع). ch13-l03-ex07 keeps صُدُورِ for the An-Nas Tadabbur coverage. Rebuilt 2026-09-20 from Docs/proposals/chapter-13-content-proposal.md.",
+    "titleUr": "قرآن میں جمع مکسر",
     "chapter_order": 13,
     "lesson_order": 3,
-    "chapter_title": "Plural Forms — An Introduction",
-    "title": "Broken Plurals — Recognition",
-    "titleAr": "الْجَمْع الْمُكَسَّر",
-    "source": "reader_lecture_13_jama_introduction.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجیے: اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "surah": 114,
+      "ayah": 5,
+      "label": "An-Nas 114:5",
+      "ar": "فِي صُدُورِ النَّاسِ",
+      "en": "Into the chests of mankind.",
+      "ur": "لوگوں کے سینوں میں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/114005.mp3"
     },
     "noor_intro": {
-      "en": "Listen for الْكَافِرُونَ. Arabic has more than one way to show a plural. Today you will recognize plurals where the inside of the word changes.",
-      "ur": "الْكَافِرُونَ کو غور سے سنیں۔ عربی میں جمع بنانے کے ایک سے زیادہ طریقے ہیں۔ آج آپ وہ جمع پہچانیں گے جس میں لفظ کے اندر کی شکل بدل جاتی ہے۔"
+      "en": "Surah An-Nas speaks of the whisperer who whispers فِي صُدُورِ النَّاسِ, into the chests of mankind. صُدُورِ is the plural of صَدْرٌ, a chest, and no ending was added: the inside of the word changed. This is the broken plural in the Quran.",
+      "ur": "سورۃ الناس اس وسوسہ ڈالنے والے کی بات کرتی ہے جو فِي صُدُورِ النَّاسِ، لوگوں کے سینوں میں، وسوسہ ڈالتا ہے۔ صُدُورِ صَدْرٌ، سینہ، کی جمع ہے، اور کوئی آخر نہیں لگا: لفظ کا اندر بدل گیا۔ یہی قرآن میں جمع مکسر ہے۔"
     },
     "autoplay": true
   },
@@ -32,117 +29,213 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Broken plural",
-        "ar": "جَمْع مُكَسَّر",
-        "ur": "جمع مکسر"
-      },
-      "explanation": {
-        "en": "A broken plural does not simply add an ending. The inside shape of the word changes: كِتَابٌ becomes كُتُبٌ. For now, recognize the pair; do not try to memorize every pattern.",
-        "ur": "جمع مکسر صرف آخر میں علامت لگا کر نہیں بنتی۔ لفظ کے اندر کی شکل بدل جاتی ہے: كِتَابٌ سے كُتُبٌ بنتا ہے۔ ابھی ہر وزن یاد کرنے کی کوشش نہ کریں، صرف جوڑا پہچانیں۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "طَالِبٌ / طُلَّابٌ",
-        "ar_plain": "طالب طلاب",
-        "translit": "talibun / tullabun",
-        "en": "a student / students",
-        "ur": "ایک طالب علم / طالب علم"
-      },
-      "explanation": {
-        "en": "طُلَّابٌ is the plural of طَالِبٌ. Notice how the middle sound changes.",
-        "ur": "طُلَّابٌ، طَالِبٌ کی جمع ہے۔ غور کریں کہ درمیان کی آواز بدل گئی ہے۔"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/talib-tullab.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "بَيْتٌ / بُيُوتٌ",
-        "ar_plain": "بيت بيوت",
-        "translit": "baytun / buyutun",
-        "en": "a house / houses",
-        "ur": "ایک گھر / گھر"
-      },
-      "explanation": {
-        "en": "بُيُوتٌ is the plural of بَيْتٌ. This is a common broken plural in Quranic Arabic.",
-        "ur": "بُيُوتٌ، بَيْتٌ کی جمع ہے۔ قرآنی عربی میں یہ عام جمع مکسر ہے۔"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/bayt-buyut.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
+        "en": "Broken plural: the inside changes",
         "ar": "كِتَابٌ / كُتُبٌ",
-        "ar_plain": "كتاب كتب",
-        "translit": "kitabun / kutubun",
-        "en": "a book / books",
-        "ur": "ایک کتاب / کتابیں"
+        "ur": "جمع مکسر: اندر بدلتا ہے"
       },
       "explanation": {
-        "en": "كُتُبٌ is the plural of كِتَابٌ. The letters are related, but the shape is shorter and different.",
-        "ur": "كُتُبٌ، كِتَابٌ کی جمع ہے۔ حروف متعلق ہیں، مگر لفظ کی شکل مختصر اور بدلی ہوئی ہے۔"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/kitab-kutub.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "وَلَدٌ / أَوْلَادٌ",
-        "ar_plain": "ولد اولاد",
-        "translit": "waladun / awladun",
-        "en": "a boy / children",
-        "ur": "ایک لڑکا / بچے"
-      },
-      "explanation": {
-        "en": "أَوْلَادٌ is a plural from وَلَدٌ. Broken plurals are learned as families of words.",
-        "ur": "أَوْلَادٌ، وَلَدٌ سے بننے والی جمع ہے۔ جمع مکسر کو لفظی خاندانوں کی طرح سیکھا جاتا ہے۔"
-      },
-      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/vocab/walad-awlad.mp3"
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "صَدْرٌ / صُدُورٌ",
-        "ar_plain": "صدر صدور",
-        "translit": "ṣadrun / ṣudūrun",
-        "en": "a chest / chests",
-        "ur": "ایک سینہ / سینے"
-      },
-      "explanation": {
-        "en": "صُدُور is the broken plural of صَدْر. In An-Nas, فِي صُدُورِ النَّاسِ means 'in the chests of mankind.'",
-        "ur": "صُدُور، صَدْر کی جمع مکسر ہے۔ سورۃ الناس میں فِي صُدُورِ النَّاسِ کا مطلب 'انسانوں کے سینوں میں' ہے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "صدر"
-      }
-    },
-    {
-      "type": "CONTRAST",
-      "concept": {
-        "en": "Ending plural vs changed-shape plural",
-        "ar": "جَمْع سَالِم وَجَمْع مُكَسَّر",
-        "ur": "سالم جمع اور جمع مکسر"
-      },
-      "explanation": {
-        "en": "Some plurals have a clear ending, like الْكَافِرُونَ. Broken plurals, like كُتُبٌ and بُيُوتٌ, change the word shape inside. Today, your job is recognition.",
-        "ur": "کچھ جمعوں کے آخر میں صاف علامت آتی ہے، جیسے الْكَافِرُونَ۔ جمع مکسر، جیسے كُتُبٌ اور بُيُوتٌ، لفظ کو اندر سے بدل دیتی ہے۔ آج آپ کا کام صرف پہچان ہے۔"
+        "en": "A broken plural adds no ending. The shape inside the word changes: كِتَابٌ becomes كُتُبٌ. Learn each singular and plural together as one piece of vocabulary; there is no rule that lets you predict every broken plural.",
+        "ur": "جمع مکسر میں کوئی آخر نہیں لگتا۔ لفظ کے اندر کی شکل بدلتی ہے: كِتَابٌ سے كُتُبٌ۔ ہر واحد اور جمع کو ایک ساتھ ایک لغت کے طور پر یاد کریں؛ کوئی ایسا قاعدہ نہیں جس سے ہر جمع مکسر کا اندازہ لگایا جا سکے۔"
       },
       "examples": [
-        {
-          "ar": "الْكَافِرُونَ",
-          "ar_plain": "الكافرون",
-          "translit": "al-kafiruna",
-          "en": "the disbelievers",
-          "ur": "کافر لوگ"
-        },
         {
           "ar": "كُتُبٌ",
           "ar_plain": "كتب",
           "translit": "kutubun",
           "en": "books",
           "ur": "کتابیں"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "صَدْرٌ",
+        "ar_plain": "صدر",
+        "translit": "ṣadrun",
+        "en": "a chest",
+        "ur": "سینہ"
+      },
+      "explanation": {
+        "en": "صَدْرٌ is a chest. Its plural is صُدُورٌ, chests: the letters ص د ر stay, the vowels and shape change.",
+        "ur": "صَدْرٌ سینہ ہے۔ اس کی جمع صُدُورٌ، سینے: حروف ص د ر رہتے ہیں، حرکتیں اور شکل بدلتی ہیں۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "صدر"
+      },
+      "examples": [
+        {
+          "ar": "صُدُورٌ",
+          "ar_plain": "صدور",
+          "translit": "ṣudūrun",
+          "en": "chests",
+          "ur": "سینے"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "كِتَابٌ",
+        "ar_plain": "كتاب",
+        "translit": "kitābun",
+        "en": "a book",
+        "ur": "کتاب"
+      },
+      "explanation": {
+        "en": "كِتَابٌ is a book and كُتُبٌ is books. The long ā of the singular disappears in the plural.",
+        "ur": "كِتَابٌ کتاب ہے اور كُتُبٌ کتابیں۔ واحد کا لمبا آ جمع میں غائب ہو جاتا ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/kitab.webp",
+      "examples": [
+        {
+          "ar": "كُتُبٌ",
+          "ar_plain": "كتب",
+          "translit": "kutubun",
+          "en": "books",
+          "ur": "کتابیں"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "بَيْتٌ",
+        "ar_plain": "بيت",
+        "translit": "baytun",
+        "en": "a house",
+        "ur": "گھر"
+      },
+      "explanation": {
+        "en": "بَيْتٌ is a house and بُيُوتٌ is houses. You met بُيُوتٍ in the Quran in Chapter 9; the pair is the same.",
+        "ur": "بَيْتٌ گھر ہے اور بُيُوتٌ گھر — جمع۔ آپ نے باب 9 میں قرآن میں بُيُوتٍ دیکھا تھا؛ جوڑا وہی ہے۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/bayt.webp",
+      "examples": [
+        {
+          "ar": "بُيُوتٌ",
+          "ar_plain": "بيوت",
+          "translit": "buyūtun",
+          "en": "houses",
+          "ur": "گھر — جمع"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "وَلَدٌ",
+        "ar_plain": "ولد",
+        "translit": "waladun",
+        "en": "a boy",
+        "ur": "لڑکا"
+      },
+      "explanation": {
+        "en": "وَلَدٌ is a boy and أَوْلَادٌ is children. Here the plural even gains a letter at the front; nothing about وَلَدٌ tells you this in advance.",
+        "ur": "وَلَدٌ لڑکا ہے اور أَوْلَادٌ بچے۔ یہاں جمع کے شروع میں ایک حرف بھی بڑھ جاتا ہے؛ وَلَدٌ میں کوئی چیز پہلے سے یہ نہیں بتاتی۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/walad.webp",
+      "examples": [
+        {
+          "ar": "أَوْلَادٌ",
+          "ar_plain": "اولاد",
+          "translit": "awlādun",
+          "en": "children",
+          "ur": "بچے"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "طَالِبٌ",
+        "ar_plain": "طالب",
+        "translit": "ṭālibun",
+        "en": "a student (one male)",
+        "ur": "ایک طالب علم"
+      },
+      "explanation": {
+        "en": "طَالِبٌ is one student and طُلَّابٌ is students. Compare طَالِبَاتٌ from Lesson 2: the feminine took an ending, the masculine changed inside.",
+        "ur": "طَالِبٌ ایک طالب علم ہے اور طُلَّابٌ طلبہ۔ سبق 2 کے طَالِبَاتٌ سے موازنہ کریں: مؤنث نے آخر لیا، مذکر اندر سے بدلا۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/talib.webp",
+      "examples": [
+        {
+          "ar": "طُلَّابٌ",
+          "ar_plain": "طلاب",
+          "translit": "ṭullābun",
+          "en": "students",
+          "ur": "طلبہ"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Ending or inside?",
+        "ar": "مُؤْمِنُونَ / بُيُوتٌ",
+        "ur": "آخر یا اندر؟"
+      },
+      "explanation": {
+        "en": "مُؤْمِنُونَ: base whole, ending added, sound plural. بُيُوتٌ: no ending, inside changed, broken plural. Ask this one question about any plural you meet.",
+        "ur": "مُؤْمِنُونَ: اصل پورا، آخر لگا، جمع سالم۔ بُيُوتٌ: کوئی آخر نہیں، اندر بدلا، جمع مکسر۔ ہر جمع کے بارے میں یہی ایک سوال پوچھیں۔"
+      },
+      "examples": [
+        {
+          "ar": "مُؤْمِنُونَ",
+          "ar_plain": "مؤمنون",
+          "translit": "muʾminūna",
+          "en": "believers",
+          "ur": "مؤمنین"
+        },
+        {
+          "ar": "بُيُوتٌ",
+          "ar_plain": "بيوت",
+          "translit": "buyūtun",
+          "en": "houses",
+          "ur": "گھر — جمع"
+        }
+      ]
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "فِي صُدُورِ النَّاسِ",
+        "ar_plain": "في صدور الناس",
+        "translit": "fī ṣudūri n-nāsi",
+        "en": "into the chests of mankind",
+        "ur": "لوگوں کے سینوں میں"
+      },
+      "explanation": {
+        "en": "فِي is 'in', صُدُورِ is 'the chests of', النَّاسِ is 'mankind'. The plural صُدُورِ ends in a kasrah after فِي; that is the shape the sentence gives it, and the inside-change is what tells you it is plural.",
+        "ur": "فِي 'میں' ہے، صُدُورِ 'سینوں' ہے، النَّاسِ 'لوگوں' ہے۔ جمع صُدُورِ فِي کے بعد کسرہ پر ختم ہوتی ہے؛ یہ وہ شکل ہے جو جملہ اسے دیتا ہے، اور اندر کی تبدیلی بتاتی ہے کہ یہ جمع ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "صُدُورِ",
+        "ar_plain": "صدور",
+        "translit": "ṣudūri",
+        "en": "the chests of",
+        "ur": "سینوں"
+      },
+      "explanation": {
+        "en": "Find صُدُورِ in the middle of the excerpt. Singular صَدْرٌ, plural صُدُورٌ: a broken plural you now own as a pair.",
+        "ur": "اقتباس کے درمیان صُدُورِ تلاش کریں۔ واحد صَدْرٌ، جمع صُدُورٌ: ایک جمع مکسر جو اب آپ کے پاس جوڑے کی صورت میں ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/114005.mp3",
+      "examples": [
+        {
+          "ar": "فِي صُدُورِ النَّاسِ",
+          "ar_plain": "في صدور الناس",
+          "translit": "fī ṣudūri n-nāsi",
+          "en": "into the chests of mankind",
+          "ur": "لوگوں کے سینوں میں"
         }
       ]
     }
@@ -152,35 +245,35 @@
       "type": "TAP_TRANSLATION",
       "id": "ch13-l03-ex01",
       "prompt": {
-        "ar": "طُلَّابٌ",
-        "ar_plain": "طلاب",
-        "translit": "tullabun",
-        "en": "students",
-        "ur": "طالب علم"
+        "ar": "كُتُبٌ",
+        "ar_plain": "كتب",
+        "translit": "kutubun",
+        "en": "books",
+        "ur": "کتابیں"
       },
       "options": [
         {
-          "en": "students",
-          "ur": "طالب علم"
+          "en": "books",
+          "ur": "کتابیں"
         },
         {
-          "en": "one student",
-          "ur": "ایک طالب علم"
+          "en": "one book",
+          "ur": "کتاب"
         },
         {
           "en": "houses",
-          "ur": "گھر"
+          "ur": "گھر — جمع"
         },
         {
-          "en": "books",
-          "ur": "کتابیں"
+          "en": "students",
+          "ur": "طلبہ"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "طُلَّابٌ is the broken plural of طَالِبٌ.",
-        "ur": "طُلَّابٌ، طَالِبٌ کی جمع مکسر ہے۔"
+        "en": "كُتُبٌ is the broken plural of كِتَابٌ: books. Houses is بُيُوتٌ and students is طُلَّابٌ.",
+        "ur": "كُتُبٌ كِتَابٌ کی جمع مکسر ہے: کتابیں۔ گھر بُيُوتٌ اور طلبہ طُلَّابٌ ہے۔"
       }
     },
     {
@@ -188,50 +281,240 @@
       "id": "ch13-l03-ex02",
       "left_column": [
         {
-          "ar": "طَالِبٌ",
-          "ar_plain": "طالب",
-          "translit": "talibun",
-          "en": "a student",
-          "ur": "ایک طالب علم"
+          "ar": "صُدُورٌ",
+          "ar_plain": "صدور",
+          "translit": "ṣudūrun",
+          "en": "chests",
+          "ur": "سینے"
         },
         {
-          "ar": "بَيْتٌ",
-          "ar_plain": "بيت",
-          "translit": "baytun",
-          "en": "a house",
-          "ur": "ایک گھر"
+          "ar": "كُتُبٌ",
+          "ar_plain": "كتب",
+          "translit": "kutubun",
+          "en": "books",
+          "ur": "کتابیں"
         },
         {
-          "ar": "كِتَابٌ",
-          "ar_plain": "كتاب",
-          "translit": "kitabun",
-          "en": "a book",
-          "ur": "ایک کتاب"
+          "ar": "بُيُوتٌ",
+          "ar_plain": "بيوت",
+          "translit": "buyūtun",
+          "en": "houses",
+          "ur": "گھر — جمع"
         },
         {
-          "ar": "وَلَدٌ",
-          "ar_plain": "ولد",
-          "translit": "waladun",
-          "en": "a boy",
-          "ur": "ایک لڑکا"
+          "ar": "أَوْلَادٌ",
+          "ar_plain": "اولاد",
+          "translit": "awlādun",
+          "en": "children",
+          "ur": "بچے"
+        },
+        {
+          "ar": "طُلَّابٌ",
+          "ar_plain": "طلاب",
+          "translit": "ṭullābun",
+          "en": "students",
+          "ur": "طلبہ"
         }
       ],
       "right_column": [
         {
-          "en": "students - طُلَّابٌ",
-          "ur": "طالب علم - طُلَّابٌ"
+          "en": "chests — plural of صَدْرٌ",
+          "ur": "سینے — صَدْرٌ کی جمع"
         },
         {
-          "en": "houses - بُيُوتٌ",
-          "ur": "گھر - بُيُوتٌ"
+          "en": "books — plural of كِتَابٌ",
+          "ur": "کتابیں — كِتَابٌ کی جمع"
         },
         {
-          "en": "books - كُتُبٌ",
-          "ur": "کتابیں - كُتُبٌ"
+          "en": "houses — plural of بَيْتٌ",
+          "ur": "گھر (جمع) — بَيْتٌ کی جمع"
         },
         {
-          "en": "children - أَوْلَادٌ",
-          "ur": "بچے - أَوْلَادٌ"
+          "en": "children — plural of وَلَدٌ",
+          "ur": "بچے — وَلَدٌ کی جمع"
+        },
+        {
+          "en": "students — plural of طَالِبٌ",
+          "ur": "طلبہ — طَالِبٌ کی جمع"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch13-l03-ex03",
+      "statement": {
+        "en": "أَوْلَادٌ is a broken plural: the shape of وَلَدٌ changes instead of taking an ending.",
+        "ur": "أَوْلَادٌ جمع مکسر ہے: وَلَدٌ کی شکل بدلتی ہے، آخر نہیں لگتا۔",
+        "ar_example": {
+          "ar": "وَلَدٌ / أَوْلَادٌ",
+          "ar_plain": "ولد / اولاد",
+          "translit": "waladun / awlādun",
+          "en": "a boy / children",
+          "ur": "لڑکا / بچے"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch13-l03-ex04",
+      "mode": "TAP",
+      "sentence_ar": "فِي الْبَيْتِ ___",
+      "hint": {
+        "en": "In the house there are books.",
+        "ur": "گھر میں کتابیں ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "كُتُبٌ",
+          "ar_plain": "كتب",
+          "translit": "kutubun",
+          "en": "books",
+          "ur": "کتابیں"
+        },
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "kitābun",
+          "en": "a book",
+          "ur": "کتاب"
+        },
+        {
+          "ar": "بُيُوتٌ",
+          "ar_plain": "بيوت",
+          "translit": "buyūtun",
+          "en": "houses",
+          "ur": "گھر — جمع"
+        },
+        {
+          "ar": "طُلَّابٌ",
+          "ar_plain": "طلاب",
+          "translit": "ṭullābun",
+          "en": "students",
+          "ur": "طلبہ"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كُتُبٌ",
+        "ar_plain": "كتب",
+        "translit": "kutubun",
+        "en": "books",
+        "ur": "کتابیں"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Books is كُتُبٌ, the broken plural of كِتَابٌ. One book would be كِتَابٌ.",
+        "ur": "کتابیں كُتُبٌ ہے، كِتَابٌ کی جمع مکسر۔ ایک کتاب كِتَابٌ ہوتی۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch13-l03-ex05",
+      "prompt": {
+        "ar": "الطُّلَّابُ فِي الْمَسْجِدِ",
+        "ar_plain": "الطلاب في المسجد",
+        "translit": "aṭ-ṭullābu fī l-masjidi",
+        "en": "The students are in the mosque.",
+        "ur": "طلبہ مسجد میں ہیں۔"
+      },
+      "options": [
+        {
+          "en": "The students are in the mosque.",
+          "ur": "طلبہ مسجد میں ہیں۔"
+        },
+        {
+          "en": "The student is in the mosque.",
+          "ur": "طالب علم مسجد میں ہے۔"
+        },
+        {
+          "en": "The books are in the mosque.",
+          "ur": "کتابیں مسجد میں ہیں۔"
+        },
+        {
+          "en": "The houses are in the village.",
+          "ur": "گھر گاؤں میں ہیں۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الطُّلَّابُ is the broken plural of طَالِبٌ, so the sentence is about students, not one student.",
+        "ur": "الطُّلَّابُ طَالِبٌ کی جمع مکسر ہے، تو جملہ طلبہ کے بارے میں ہے، ایک طالب علم کے نہیں۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch13-l03-ex06",
+      "left_column": [
+        {
+          "ar": "مُؤْمِنُونَ",
+          "ar_plain": "مؤمنون",
+          "translit": "muʾminūna",
+          "en": "believers",
+          "ur": "مؤمنین"
+        },
+        {
+          "ar": "طَالِبَاتٌ",
+          "ar_plain": "طالبات",
+          "translit": "ṭālibātun",
+          "en": "female students",
+          "ur": "طالبات"
+        },
+        {
+          "ar": "بُيُوتٌ",
+          "ar_plain": "بيوت",
+          "translit": "buyūtun",
+          "en": "houses",
+          "ur": "گھر — جمع"
+        },
+        {
+          "ar": "كُتُبٌ",
+          "ar_plain": "كتب",
+          "translit": "kutubun",
+          "en": "books",
+          "ur": "کتابیں"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "sound masculine — believers",
+          "ur": "جمع مذکر سالم — مؤمنین"
+        },
+        {
+          "en": "sound feminine — female students",
+          "ur": "جمع مؤنث سالم — طالبات"
+        },
+        {
+          "en": "broken — houses",
+          "ur": "جمع مکسر — گھر (جمع)"
+        },
+        {
+          "en": "broken — books",
+          "ur": "جمع مکسر — کتابیں"
         }
       ],
       "correct_pairs": [
@@ -255,199 +538,70 @@
       "xp_value": 1
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch13-l03-ex03",
-      "statement": {
-        "en": "In a broken plural, the inside shape of the word changes.",
-        "ur": "جمع مکسر میں لفظ کے اندر کی شکل بدل جاتی ہے۔",
-        "ar_example": {
-          "ar": "كِتَابٌ / كُتُبٌ",
-          "ar_plain": "كتاب كتب",
-          "translit": "kitabun / kutubun",
-          "en": "a book / books",
-          "ur": "ایک کتاب / کتابیں"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch13-l03-ex04",
-      "mode": "TAP",
-      "sentence_ar": "عِنْدِي ثَلَاثَةُ ___",
-      "hint": {
-        "en": "I have three books",
-        "ur": "میرے پاس تین کتابیں ہیں"
-      },
-      "options": [
-        {
-          "ar": "كُتُبٍ",
-          "ar_plain": "كتب",
-          "translit": "kutubin",
-          "en": "books",
-          "ur": "کتابیں"
-        },
-        {
-          "ar": "كِتَابٌ",
-          "ar_plain": "كتاب",
-          "translit": "kitabun",
-          "en": "a book",
-          "ur": "ایک کتاب"
-        },
-        {
-          "ar": "طَالِبٌ",
-          "ar_plain": "طالب",
-          "translit": "talibun",
-          "en": "a student",
-          "ur": "ایک طالب علم"
-        },
-        {
-          "ar": "بَيْتٌ",
-          "ar_plain": "بيت",
-          "translit": "baytun",
-          "en": "a house",
-          "ur": "ایک گھر"
-        }
-      ],
-      "correct_answer": {
-        "ar": "كُتُبٍ",
-        "ar_plain": "كتب",
-        "translit": "kutubin",
-        "en": "books",
-        "ur": "کتابیں"
-      },
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "ثَلَاثَةُ points to more than one, so كُتُبٍ fits here.",
-        "ur": "ثَلَاثَةُ ایک سے زیادہ کو بتاتا ہے، اس لیے یہاں كُتُبٍ مناسب ہے۔"
-      }
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch13-l03-ex05",
-      "target_translation": {
-        "en": "These are students",
-        "ur": "یہ طالب علم ہیں"
-      },
-      "tiles": [
-        {
-          "ar": "هَؤُلَاءِ",
-          "ar_plain": "هؤلاء",
-          "translit": "ha'ula'i",
-          "en": "these",
-          "ur": "یہ"
-        },
-        {
-          "ar": "طُلَّابٌ",
-          "ar_plain": "طلاب",
-          "translit": "tullabun",
-          "en": "students",
-          "ur": "طالب علم"
-        },
-        {
-          "ar": "بَيْتٌ",
-          "ar_plain": "بيت",
-          "translit": "baytun",
-          "en": "a house",
-          "ur": "ایک گھر"
-        },
-        {
-          "ar": "كِتَابٌ",
-          "ar_plain": "كتاب",
-          "translit": "kitabun",
-          "en": "a book",
-          "ur": "ایک کتاب"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch13-l03-ex06",
-      "prompt": {
-        "ar": "أَوْلَادٌ",
-        "ar_plain": "اولاد",
-        "translit": "awladun",
-        "en": "children",
-        "ur": "بچے"
-      },
-      "options": [
-        {
-          "en": "one boy",
-          "ur": "ایک لڑکا"
-        },
-        {
-          "en": "children",
-          "ur": "بچے"
-        },
-        {
-          "en": "houses",
-          "ur": "گھر"
-        },
-        {
-          "en": "students",
-          "ur": "طالب علم"
-        }
-      ],
-      "correct_index": 1,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "أَوْلَادٌ is a plural from وَلَدٌ.",
-        "ur": "أَوْلَادٌ، وَلَدٌ سے بننے والی جمع ہے۔"
-      }
-    },
-    {
       "type": "TAP_TRANSLATION",
       "id": "ch13-l03-ex07",
       "prompt": {
         "ar": "فِي صُدُورِ النَّاسِ",
         "ar_plain": "في صدور الناس",
-        "translit": "fī ṣudūrin-nās",
-        "en": "in the chests of mankind",
-        "ur": "انسانوں کے سینوں میں"
+        "translit": "fī ṣudūri n-nāsi",
+        "en": "into the chests of mankind",
+        "ur": "لوگوں کے سینوں میں"
       },
       "options": [
-        { "en": "in the chests of mankind", "ur": "انسانوں کے سینوں میں" },
-        { "en": "from the people", "ur": "لوگوں میں سے" },
-        { "en": "in one chest", "ur": "ایک سینے میں" },
-        { "en": "the hearts of the jinn", "ur": "جنات کے دل" }
+        {
+          "en": "into the chests of mankind",
+          "ur": "لوگوں کے سینوں میں"
+        },
+        {
+          "en": "into one chest",
+          "ur": "ایک سینے میں"
+        },
+        {
+          "en": "from the people",
+          "ur": "لوگوں میں سے"
+        },
+        {
+          "en": "the hearts of the jinn",
+          "ur": "جنوں کے دل"
+        }
       ],
       "correct_index": 0,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "صُدُورِ is the plural of صَدْرٌ, chests, and فِي is 'in': into the chests of mankind.",
+        "ur": "صُدُورِ صَدْرٌ کی جمع ہے، سینے، اور فِي 'میں' ہے: لوگوں کے سینوں میں۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Recognizing plural forms",
-      "ar": "مَعْرِفَةُ أَشْكَالِ الْجَمْعِ",
-      "ur": "جمع کی شکلوں کی پہچان"
+      "en": "Broken plural in the Quran — the inside changes",
+      "ur": "قرآن میں جمع مکسر — اندر بدلتا ہے"
     },
     "ayah": {
-      "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجیے: اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "surah": 114,
+      "ayah": 5,
+      "label": "An-Nas 114:5",
+      "ar": "فِي صُدُورِ النَّاسِ",
+      "en": "Into the chests of mankind.",
+      "ur": "لوگوں کے سینوں میں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/114005.mp3"
     },
     "highlighted_word_indices": [
-      4
+      1
+    ],
+    "highlighted_words": [
+      "صُدُورِ"
     ],
     "noor_explanation": {
-      "en": "الْكَافِرُونَ is a plural with a clear ending. Broken plurals are another family: طُلَّابٌ, بُيُوتٌ, كُتُبٌ, and أَوْلَادٌ. You do not need every pattern yet; recognition comes first.",
-      "ur": "الْكَافِرُونَ ایسی جمع ہے جس کے آخر میں صاف علامت ہے۔ جمع مکسر دوسری قسم ہے: طُلَّابٌ، بُيُوتٌ، كُتُبٌ، اور أَوْلَادٌ۔ ابھی ہر وزن ضروری نہیں؛ پہلے پہچان آتی ہے۔"
+      "en": "صُدُورِ is the plural of صَدْرٌ. No ending was added; the word changed inside. That is why broken plurals are learned as pairs: صَدْرٌ / صُدُورٌ, كِتَابٌ / كُتُبٌ, بَيْتٌ / بُيُوتٌ, وَلَدٌ / أَوْلَادٌ, طَالِبٌ / طُلَّابٌ.",
+      "ur": "صُدُورِ صَدْرٌ کی جمع ہے۔ کوئی آخر نہیں لگا؛ لفظ اندر سے بدلا۔ اسی لیے جمع مکسر جوڑوں میں یاد کی جاتی ہے: صَدْرٌ / صُدُورٌ، كِتَابٌ / كُتُبٌ، بَيْتٌ / بُيُوتٌ، وَلَدٌ / أَوْلَادٌ، طَالِبٌ / طُلَّابٌ۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now recognize a broken plural when the word changes inside: طَالِبٌ to طُلَّابٌ, بَيْتٌ to بُيُوتٌ, كِتَابٌ to كُتُبٌ, and وَلَدٌ to أَوْلَادٌ.",
-      "ur": "اب آپ ایسی جمع پہچان سکتے ہیں جس میں لفظ اندر سے بدلتا ہے: طَالِبٌ سے طُلَّابٌ، بَيْتٌ سے بُيُوتٌ، كِتَابٌ سے كُتُبٌ، اور وَلَدٌ سے أَوْلَادٌ۔"
+      "en": "You can now recognise a broken plural by its changed inside, connect five Quranic pairs to their singulars, and tell a broken plural from a sound one.",
+      "ur": "اب آپ جمع مکسر کو اس کے بدلے ہوئے اندر سے پہچان سکتے ہیں، پانچ قرآنی جوڑوں کو ان کے واحد سے جوڑ سکتے ہیں، اور جمع مکسر کو جمع سالم سے الگ کر سکتے ہیں۔"
     }
   }
 }

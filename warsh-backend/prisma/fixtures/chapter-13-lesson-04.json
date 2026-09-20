@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 13, Lesson 4 - non-human broken plurals are treated as feminine singular for adjective agreement.",
+    "_note": "Chapter 13, Lesson 4 (ch13-l04) — Plural Reading Lab: cumulative application with no new grammar. The former objective (feminine-singular adjective agreement for non-human plurals) was removed entirely; it belongs to Chapter 14. Quran checkpoint is an Al-Baqarah 2:5 excerpt with الْمُفْلِحُونَ declared, a sound masculine plural not used by Lessons 1–3; مُفْلِحٌ is given as its singular at recognition level. Cards compare the three families in context and give a three-step reading routine; exercises classify, connect to singulars, distinguish endings from inside-change, and state why an unfamiliar broken plural is vocabulary. No adjective form, agreement or number phrase is assessed. Rebuilt 2026-09-20 from Docs/proposals/chapter-13-content-proposal.md.",
+    "titleUr": "جمع پڑھنے کی مشق گاہ",
     "chapter_order": 13,
     "lesson_order": 4,
-    "title": "Non-Human Plurals — Feminine Treatment",
-    "titleAr": "جَمْع غَيْر الْعَاقِل",
-    "chapter_title": "Plural Forms — An Introduction",
-    "source": "reader_lecture_13_jama_introduction.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجئے: اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "surah": 2,
+      "ayah": 5,
+      "label": "Al-Baqarah 2:5",
+      "ar": "وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ",
+      "en": "And it is those who are the successful.",
+      "ur": "اور یہی کامیاب ہونے والے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002005.mp3"
     },
     "noor_intro": {
-      "en": "This ayah addresses people with a human plural. Today, we contrast that with non-human plurals like books, houses, and pens.",
-      "ur": "اس آیت میں لوگوں کو انسانی جمع کے ساتھ خطاب کیا گیا ہے۔ آج ہم اس کے مقابل غیر عاقل جمع دیکھیں گے: کتابیں، گھر، اور قلم۔"
+      "en": "No new grammar today. Al-Baqarah 2:5 ends with الْمُفْلِحُونَ, the successful ones. Which family is it? Base whole, ending ـُونَ: sound masculine. In this lab you read plural after plural and answer that one question each time.",
+      "ur": "آج کوئی نئی گرامر نہیں۔ البقرہ 2:5 الْمُفْلِحُونَ، کامیاب لوگ، پر ختم ہوتی ہے۔ یہ کون سا خاندان ہے؟ اصل پورا، آخر ـُونَ: جمع مذکر سالم۔ اس مشق گاہ میں آپ ایک کے بعد ایک جمع پڑھتے ہیں اور ہر بار وہی ایک سوال حل کرتے ہیں۔"
     },
     "autoplay": true
   },
@@ -32,243 +29,322 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Non-human plural",
-        "ar": "جَمْعُ غَيْرِ الْعَاقِل",
-        "ur": "غیر عاقل جمع"
+        "en": "Three families, one question",
+        "ar": "مُؤْمِنُونَ / مُؤْمِنَاتٌ / كُتُبٌ",
+        "ur": "تین خاندان، ایک سوال"
       },
       "explanation": {
-        "en": "A non-human plural is a plural for things, places, animals, or objects. In this lesson, focus on objects: books, houses, and pens.",
-        "ur": "غیر عاقل جمع چیزوں، جگہوں، جانوروں، یا اشیاء کی جمع ہوتی ہے۔ اس سبق میں توجہ اشیاء پر ہے: کتابیں، گھر، اور قلم۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "The special agreement rule",
-        "ar": "قَاعِدَةُ غَيْرِ الْعَاقِل",
-        "ur": "غیر عاقل کا قاعدہ"
-      },
-      "explanation": {
-        "en": "Non-human broken plurals are treated like feminine singular when an adjective describes them.",
-        "ur": "غیر عاقل ٹوٹی ہوئی جمع کو صفت کے ساتھ مؤنث واحد کی طرح لیا جاتا ہے۔"
+        "en": "When you meet a plural in the Quran, ask: does it end in ـُونَ or ـِينَ (sound masculine), does it end in ـَات (sound feminine), or has the inside changed (broken)? Everything in this lesson is practice of that question.",
+        "ur": "جب قرآن میں کوئی جمع ملے تو پوچھیں: کیا یہ ـُونَ یا ـِينَ پر ختم ہوتی ہے (جمع مذکر سالم)، کیا ـَات پر (جمع مؤنث سالم)، یا اس کا اندر بدلا ہے (مکسر)؟ اس سبق کی ہر چیز اسی سوال کی مشق ہے۔"
       },
       "examples": [
         {
-          "ar": "الْكُتُبُ الْجَدِيدَةُ",
-          "ar_plain": "الكتب الجديدة",
-          "translit": "al-kutubu al-jadeedatu",
-          "en": "the new books",
-          "ur": "نئی کتابیں"
+          "ar": "مُؤْمِنُونَ",
+          "ar_plain": "مؤمنون",
+          "translit": "muʾminūna",
+          "en": "believers",
+          "ur": "مؤمنین"
+        },
+        {
+          "ar": "مُؤْمِنَاتٌ",
+          "ar_plain": "مؤمنات",
+          "translit": "muʾminātun",
+          "en": "believing women",
+          "ur": "مؤمن عورتیں"
+        },
+        {
+          "ar": "كُتُبٌ",
+          "ar_plain": "كتب",
+          "translit": "kutubun",
+          "en": "books",
+          "ur": "کتابیں"
         }
       ]
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "الْكُتُبُ الْجَدِيدَةُ",
-        "ar_plain": "الكتب الجديدة",
-        "translit": "al-kutubu al-jadeedatu",
-        "en": "the new books",
-        "ur": "نئی کتابیں"
+        "ar": "مُفْلِحٌ",
+        "ar_plain": "مفلح",
+        "translit": "mufliḥun",
+        "en": "a successful person",
+        "ur": "ایک کامیاب شخص"
       },
       "explanation": {
-        "en": "كُتُب is plural, but because books are non-human, the adjective is feminine singular: جَدِيدَة.",
-        "ur": "كُتُب جمع ہے، لیکن کتابیں غیر عاقل ہیں؛ اس لیے صفت مؤنث واحد آتی ہے: جَدِيدَة۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الْبُيُوتُ الْكَبِيرَةُ",
-        "ar_plain": "البيوت الكبيرة",
-        "translit": "al-buyootu al-kabeeratu",
-        "en": "the big houses",
-        "ur": "بڑے گھر"
+        "en": "مُفْلِحٌ is a successful person. In Al-Baqarah 2:5 the plural is الْمُفْلِحُونَ, the successful ones: base مُفْلِح whole, ending ـُونَ. A new word, but a family you already know.",
+        "ur": "مُفْلِحٌ کامیاب شخص ہے۔ البقرہ 2:5 میں جمع الْمُفْلِحُونَ ہے، کامیاب لوگ: اصل مُفْلِح پورا، آخر ـُونَ۔ نیا لفظ، مگر خاندان جسے آپ پہلے سے جانتے ہیں۔"
       },
-      "explanation": {
-        "en": "بُيُوت is a broken plural for houses. The adjective becomes كَبِيرَة, feminine singular.",
-        "ur": "بُيُوت گھروں کی ٹوٹی ہوئی جمع ہے۔ صفت كَبِيرَة آتی ہے، یعنی مؤنث واحد۔"
-      }
+      "examples": [
+        {
+          "ar": "الْمُفْلِحُونَ",
+          "ar_plain": "المفلحون",
+          "translit": "al-mufliḥūna",
+          "en": "the successful ones",
+          "ur": "کامیاب لوگ"
+        }
+      ]
     },
     {
       "type": "CONTRAST",
       "concept": {
-        "en": "Human plural vs non-human plural",
-        "ar": "الْعَاقِلُ وَغَيْرُ الْعَاقِل",
-        "ur": "عاقل اور غیر عاقل جمع"
+        "en": "Sound masculine in context",
+        "ar": "الْكَافِرُونَ / الْمُؤْمِنُونَ / الْمُتَّقِينَ",
+        "ur": "سیاق میں جمع مذکر سالم"
       },
       "explanation": {
-        "en": "Human plurals usually take plural adjectives: الطُّلَّابُ الْمُجْتَهِدُونَ. Non-human plurals take a feminine singular adjective: الْأَقْلَامُ الصَّغِيرَةُ.",
-        "ur": "انسانوں کی جمع عموماً جمع صفت لیتی ہے: الطُّلَّابُ الْمُجْتَهِدُونَ۔ غیر عاقل جمع مؤنث واحد صفت لیتی ہے: الْأَقْلَامُ الصَّغِيرَةُ۔"
+        "en": "الْكَافِرُونَ and الْمُؤْمِنُونَ show ـُونَ; الْمُتَّقِينَ shows ـِينَ. Three Quranic words, one family, base word whole every time.",
+        "ur": "الْكَافِرُونَ اور الْمُؤْمِنُونَ ـُونَ دکھاتے ہیں؛ الْمُتَّقِينَ ـِينَ دکھاتا ہے۔ تین قرآنی لفظ، ایک خاندان، ہر بار اصل لفظ پورا۔"
       },
       "examples": [
         {
-          "ar": "الطُّلَّابُ الْمُجْتَهِدُونَ",
-          "ar_plain": "الطلاب المجتهدون",
-          "translit": "at-tullaabu al-mujtahidoona",
-          "en": "the hardworking students",
-          "ur": "محنتی طلبہ"
+          "ar": "الْكَافِرُونَ",
+          "ar_plain": "الكافرون",
+          "translit": "al-kāfirūna",
+          "en": "the disbelievers",
+          "ur": "کافر لوگ"
         },
         {
-          "ar": "الْأَقْلَامُ الصَّغِيرَةُ",
-          "ar_plain": "الأقلام الصغيرة",
-          "translit": "al-aqlaamu as-sagheeratu",
-          "en": "the small pens",
-          "ur": "چھوٹے قلم"
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-muʾminūna",
+          "en": "the believers",
+          "ur": "مؤمنین"
+        },
+        {
+          "ar": "الْمُتَّقِينَ",
+          "ar_plain": "المتقين",
+          "translit": "al-muttaqīna",
+          "en": "the God-conscious (a group)",
+          "ur": "متقی لوگ"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Sound feminine in context",
+        "ar": "الْمُسْلِمَاتِ / الْمُؤْمِنَاتِ",
+        "ur": "سیاق میں جمع مؤنث سالم"
+      },
+      "explanation": {
+        "en": "الْمُسْلِمَاتِ and الْمُؤْمِنَاتِ both end in ـَات. Whatever vowel follows the ت in the sentence, the ـَات is what you read.",
+        "ur": "الْمُسْلِمَاتِ اور الْمُؤْمِنَاتِ دونوں ـَات پر ختم ہوتے ہیں۔ جملے میں ت کے بعد جو بھی حرکت ہو، آپ ـَات ہی پڑھتے ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "الْمُسْلِمَاتِ",
+          "ar_plain": "المسلمات",
+          "translit": "al-muslimāti",
+          "en": "the Muslim women",
+          "ur": "مسلمان عورتیں"
+        },
+        {
+          "ar": "الْمُؤْمِنَاتِ",
+          "ar_plain": "المؤمنات",
+          "translit": "al-muʾmināti",
+          "en": "the believing women",
+          "ur": "مومن عورتیں"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Broken in context",
+        "ar": "صُدُورٌ / كُتُبٌ / بُيُوتٌ / أَوْلَادٌ",
+        "ur": "سیاق میں جمع مکسر"
+      },
+      "explanation": {
+        "en": "صُدُورٌ, كُتُبٌ, بُيُوتٌ, أَوْلَادٌ: no plural ending anywhere. Each one is recognised only because you know its singular.",
+        "ur": "صُدُورٌ، كُتُبٌ، بُيُوتٌ، أَوْلَادٌ: کہیں جمع کا آخر نہیں۔ ہر ایک صرف اس لیے پہچانا جاتا ہے کہ آپ اس کا واحد جانتے ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "صُدُورٌ",
+          "ar_plain": "صدور",
+          "translit": "ṣudūrun",
+          "en": "chests",
+          "ur": "سینے"
+        },
+        {
+          "ar": "كُتُبٌ",
+          "ar_plain": "كتب",
+          "translit": "kutubun",
+          "en": "books",
+          "ur": "کتابیں"
+        },
+        {
+          "ar": "بُيُوتٌ",
+          "ar_plain": "بيوت",
+          "translit": "buyūtun",
+          "en": "houses",
+          "ur": "گھر — جمع"
+        },
+        {
+          "ar": "أَوْلَادٌ",
+          "ar_plain": "اولاد",
+          "translit": "awlādun",
+          "en": "children",
+          "ur": "بچے"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Three reading steps",
+        "ar": "الْمُؤْمِنِينَ",
+        "ur": "پڑھنے کے تین قدم"
+      },
+      "explanation": {
+        "en": "One: find the base word. Two: look at the ending. Three: look inside. For الْمُؤْمِنِينَ: base مُؤْمِن, ending ـِينَ, inside unchanged, so sound masculine, singular مُؤْمِنٌ.",
+        "ur": "ایک: اصل لفظ تلاش کریں۔ دو: آخر دیکھیں۔ تین: اندر دیکھیں۔ الْمُؤْمِنِينَ کے لیے: اصل مُؤْمِن، آخر ـِينَ، اندر ویسا ہی، تو جمع مذکر سالم، واحد مُؤْمِنٌ۔"
+      },
+      "examples": [
+        {
+          "ar": "الْمُؤْمِنِينَ",
+          "ar_plain": "المؤمنين",
+          "translit": "al-muʾminīna",
+          "en": "the believing men (the ـِينَ shape)",
+          "ur": "مومن مرد (ـِينَ والی شکل)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Why broken plurals are vocabulary",
+        "ar": "وَلَدٌ / أَوْلَادٌ",
+        "ur": "جمع مکسر لغت کیوں ہے"
+      },
+      "explanation": {
+        "en": "Nothing in وَلَدٌ tells you its plural is أَوْلَادٌ. When you meet an unfamiliar broken plural, learn it together with its singular as one pair; no ending rule will produce it for you.",
+        "ur": "وَلَدٌ میں کوئی چیز نہیں بتاتی کہ اس کی جمع أَوْلَادٌ ہے۔ جب کوئی انجانی جمع مکسر ملے تو اسے اس کے واحد کے ساتھ ایک جوڑے کے طور پر یاد کریں؛ کوئی آخر والا قاعدہ اسے آپ کے لیے نہیں بنائے گا۔"
+      },
+      "examples": [
+        {
+          "ar": "أَوْلَادٌ",
+          "ar_plain": "اولاد",
+          "translit": "awlādun",
+          "en": "children",
+          "ur": "بچے"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "الْمُفْلِحُونَ",
+        "ar_plain": "المفلحون",
+        "translit": "al-mufliḥūna",
+        "en": "the successful ones",
+        "ur": "کامیاب لوگ"
+      },
+      "explanation": {
+        "en": "Find الْمُفْلِحُونَ at the end of the excerpt. Base مُفْلِح, ending ـُونَ: the successful ones, a sound masculine plural.",
+        "ur": "اقتباس کے آخر میں الْمُفْلِحُونَ تلاش کریں۔ اصل مُفْلِح، آخر ـُونَ: کامیاب لوگ، جمع مذکر سالم۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002005.mp3",
+      "examples": [
+        {
+          "ar": "وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ",
+          "ar_plain": "واولئك هم المفلحون",
+          "translit": "wa-ulāʾika humu l-mufliḥūna",
+          "en": "and it is those who are the successful",
+          "ur": "اور یہی کامیاب ہونے والے ہیں"
         }
       ]
     }
   ],
   "exercises": [
     {
-      "type": "TRUE_FALSE",
-      "id": "ch13-l04-ex01",
-      "statement": {
-        "en": "Non-human broken plurals are treated like feminine singular when described by an adjective.",
-        "ur": "غیر عاقل ٹوٹی ہوئی جمع صفت کے ساتھ مؤنث واحد کی طرح آتی ہے۔",
-        "ar_example": {
-          "ar": "الْكُتُبُ الْجَدِيدَةُ",
-          "ar_plain": "الكتب الجديدة",
-          "translit": "al-kutubu al-jadeedatu",
-          "en": "the new books",
-          "ur": "نئی کتابیں"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
       "type": "TAP_TRANSLATION",
-      "id": "ch13-l04-ex02",
+      "id": "ch13-l04-ex01",
       "prompt": {
-        "ar": "الْكُتُبُ الْجَدِيدَةُ",
-        "ar_plain": "الكتب الجديدة",
-        "translit": "al-kutubu al-jadeedatu",
-        "en": "the new books",
-        "ur": "نئی کتابیں"
+        "ar": "الْمُفْلِحُونَ",
+        "ar_plain": "المفلحون",
+        "translit": "al-mufliḥūna",
+        "en": "the successful ones",
+        "ur": "کامیاب لوگ"
       },
       "options": [
         {
-          "en": "the new books",
-          "ur": "نئی کتابیں"
+          "en": "the successful ones (a group)",
+          "ur": "کامیاب لوگ"
         },
         {
-          "en": "the big houses",
-          "ur": "بڑے گھر"
+          "en": "one successful person",
+          "ur": "ایک کامیاب شخص"
         },
         {
-          "en": "the small pens",
-          "ur": "چھوٹے قلم"
+          "en": "the successful women",
+          "ur": "کامیاب عورتیں"
         },
         {
-          "en": "the hardworking students",
-          "ur": "محنتی طلبہ"
+          "en": "the books",
+          "ur": "کتابیں"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch13-l04-ex03",
-      "mode": "TAP",
-      "sentence_ar": "الْبُيُوتُ ___",
-      "hint": {
-        "en": "the big houses",
-        "ur": "بڑے گھر"
-      },
-      "options": [
-        {
-          "ar": "الْكَبِيرَةُ",
-          "ar_plain": "الكبيرة",
-          "translit": "al-kabeeratu",
-          "en": "the big (feminine singular)",
-          "ur": "بڑی"
-        },
-        {
-          "ar": "الْكَبِيرُونَ",
-          "ar_plain": "الكبيرون",
-          "translit": "al-kabeeroona",
-          "en": "the big ones (masculine plural)",
-          "ur": "بڑے لوگ"
-        },
-        {
-          "ar": "الْجَدِيدَةُ",
-          "ar_plain": "الجديدة",
-          "translit": "al-jadeedatu",
-          "en": "the new (feminine singular)",
-          "ur": "نئی"
-        },
-        {
-          "ar": "الصَّغِيرَةُ",
-          "ar_plain": "الصغيرة",
-          "translit": "as-sagheeratu",
-          "en": "the small (feminine singular)",
-          "ur": "چھوٹی"
-        }
-      ],
-      "correct_answer": {
-        "ar": "الْكَبِيرَةُ",
-        "ar_plain": "الكبيرة",
-        "translit": "al-kabeeratu",
-        "en": "the big (feminine singular)",
-        "ur": "بڑی"
-      },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "بُيُوت is non-human plural, so the adjective is feminine singular: كَبِيرَة.",
-        "ur": "بُيُوت غیر عاقل جمع ہے، اس لیے صفت مؤنث واحد آتی ہے: كَبِيرَة۔"
+        "en": "ـُونَ makes الْمُفْلِحُونَ a plural group: the successful ones. One person is مُفْلِحٌ.",
+        "ur": "ـُونَ الْمُفْلِحُونَ کو جمع گروہ بناتا ہے: کامیاب لوگ۔ ایک شخص مُفْلِحٌ ہے۔"
       }
     },
     {
       "type": "MATCHING",
-      "id": "ch13-l04-ex04",
+      "id": "ch13-l04-ex02",
       "left_column": [
         {
-          "ar": "الْكُتُبُ الْجَدِيدَةُ",
-          "ar_plain": "الكتب الجديدة",
-          "translit": "al-kutubu al-jadeedatu",
-          "en": "the new books",
-          "ur": "نئی کتابیں"
+          "ar": "الْمُتَّقِينَ",
+          "ar_plain": "المتقين",
+          "translit": "al-muttaqīna",
+          "en": "the God-conscious (a group)",
+          "ur": "متقی لوگ"
         },
         {
-          "ar": "الْبُيُوتُ الْكَبِيرَةُ",
-          "ar_plain": "البيوت الكبيرة",
-          "translit": "al-buyootu al-kabeeratu",
-          "en": "the big houses",
-          "ur": "بڑے گھر"
+          "ar": "الْمُسْلِمَاتِ",
+          "ar_plain": "المسلمات",
+          "translit": "al-muslimāti",
+          "en": "the Muslim women",
+          "ur": "مسلمان عورتیں"
         },
         {
-          "ar": "الْأَقْلَامُ الصَّغِيرَةُ",
-          "ar_plain": "الأقلام الصغيرة",
-          "translit": "al-aqlaamu as-sagheeratu",
-          "en": "the small pens",
-          "ur": "چھوٹے قلم"
+          "ar": "صُدُورٌ",
+          "ar_plain": "صدور",
+          "translit": "ṣudūrun",
+          "en": "chests",
+          "ur": "سینے"
         },
         {
-          "ar": "الطُّلَّابُ الْمُجْتَهِدُونَ",
-          "ar_plain": "الطلاب المجتهدون",
-          "translit": "at-tullaabu al-mujtahidoona",
-          "en": "the hardworking students",
-          "ur": "محنتی طلبہ"
+          "ar": "الْكَافِرُونَ",
+          "ar_plain": "الكافرون",
+          "translit": "al-kāfirūna",
+          "en": "the disbelievers",
+          "ur": "کافر لوگ"
         }
       ],
       "right_column": [
         {
-          "en": "the new books",
-          "ur": "نئی کتابیں"
+          "en": "sound masculine, ـِينَ shape",
+          "ur": "جمع مذکر سالم، ـِينَ والی شکل"
         },
         {
-          "en": "the big houses",
-          "ur": "بڑے گھر"
+          "en": "sound feminine, ـَات",
+          "ur": "جمع مؤنث سالم، ـَات"
         },
         {
-          "en": "the small pens",
-          "ur": "چھوٹے قلم"
+          "en": "broken, inside changed",
+          "ur": "جمع مکسر، اندر بدلا"
         },
         {
-          "en": "the hardworking students",
-          "ur": "محنتی طلبہ"
+          "en": "sound masculine, ـُونَ shape",
+          "ur": "جمع مذکر سالم، ـُونَ والی شکل"
         }
       ],
       "correct_pairs": [
@@ -292,112 +368,267 @@
       "xp_value": 1
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch13-l04-ex05",
-      "target_translation": {
-        "en": "the small pens",
-        "ur": "چھوٹے قلم"
-      },
-      "tiles": [
+      "type": "MATCHING",
+      "id": "ch13-l04-ex03",
+      "left_column": [
         {
-          "ar": "الْأَقْلَامُ",
-          "ar_plain": "الأقلام",
-          "translit": "al-aqlaamu",
-          "en": "the pens",
-          "ur": "قلم"
+          "ar": "الْمُفْلِحُونَ",
+          "ar_plain": "المفلحون",
+          "translit": "al-mufliḥūna",
+          "en": "the successful ones",
+          "ur": "کامیاب لوگ"
         },
         {
-          "ar": "الصَّغِيرَةُ",
-          "ar_plain": "الصغيرة",
-          "translit": "as-sagheeratu",
-          "en": "the small (feminine singular)",
-          "ur": "چھوٹی"
+          "ar": "مُؤْمِنَاتٌ",
+          "ar_plain": "مؤمنات",
+          "translit": "muʾminātun",
+          "en": "believing women",
+          "ur": "مؤمن عورتیں"
         },
         {
-          "ar": "الصَّغِيرُونَ",
-          "ar_plain": "الصغيرون",
-          "translit": "as-sagheeroona",
-          "en": "the small ones (masculine plural)",
-          "ur": "چھوٹے لوگ"
+          "ar": "أَوْلَادٌ",
+          "ar_plain": "اولاد",
+          "translit": "awlādun",
+          "en": "children",
+          "ur": "بچے"
         },
         {
-          "ar": "الْكَبِيرَةُ",
-          "ar_plain": "الكبيرة",
-          "translit": "al-kabeeratu",
-          "en": "the big (feminine singular)",
-          "ur": "بڑی"
+          "ar": "كُتُبٌ",
+          "ar_plain": "كتب",
+          "translit": "kutubun",
+          "en": "books",
+          "ur": "کتابیں"
         }
       ],
-      "correct_order": [
-        0,
-        1
+      "right_column": [
+        {
+          "en": "singular مُفْلِحٌ — a successful person",
+          "ur": "واحد مُفْلِحٌ — ایک کامیاب شخص"
+        },
+        {
+          "en": "singular مُؤْمِنَةٌ — a believing woman",
+          "ur": "واحد مُؤْمِنَةٌ — ایک مؤمن عورت"
+        },
+        {
+          "en": "singular وَلَدٌ — a boy",
+          "ur": "واحد وَلَدٌ — لڑکا"
+        },
+        {
+          "en": "singular كِتَابٌ — a book",
+          "ur": "واحد كِتَابٌ — کتاب"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
       ],
       "xp_value": 1
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch13-l04-ex06",
-      "sentence_ar": "الْكُتُبُ الْجَدِيدَةُ",
-      "words": [
-        {
-          "ar": "الْكُتُبُ",
-          "ar_plain": "الكتب",
-          "translit": "al-kutubu",
-          "en": "the books",
-          "ur": "کتابیں"
-        },
-        {
-          "ar": "الْجَدِيدَةُ",
-          "ar_plain": "الجديدة",
-          "translit": "al-jadeedatu",
-          "en": "the new",
-          "ur": "نئی"
+      "type": "TRUE_FALSE",
+      "id": "ch13-l04-ex04",
+      "statement": {
+        "en": "The plural كُتُبٌ is made by adding an ending to كِتَابٌ.",
+        "ur": "جمع كُتُبٌ كِتَابٌ کے آخر میں کچھ لگا کر بنتی ہے۔",
+        "ar_example": {
+          "ar": "كِتَابٌ / كُتُبٌ",
+          "ar_plain": "كتاب / كتب",
+          "translit": "kitābun / kutubun",
+          "en": "a book / books",
+          "ur": "کتاب / کتابیں"
         }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "ADJECTIVE",
-        "OBJECT"
-      ],
-      "correct_roles": [
-        "SUBJECT",
-        "ADJECTIVE"
-      ],
+      },
+      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "الْجَدِيدَةُ describes الْكُتُبُ. The adjective is feminine singular because books are non-human plural.",
-        "ur": "الْجَدِيدَةُ، الْكُتُبُ کی صفت ہے۔ کتابیں غیر عاقل جمع ہیں، اس لیے صفت مؤنث واحد ہے۔"
+        "en": "No ending is added. كُتُبٌ changes the inside of كِتَابٌ: it is a broken plural.",
+        "ur": "کوئی آخر نہیں لگتا۔ كُتُبٌ كِتَابٌ کا اندر بدلتی ہے: یہ جمع مکسر ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch13-l04-ex05",
+      "mode": "TAP",
+      "sentence_ar": "فِي الْبُيُوتِ ___",
+      "hint": {
+        "en": "In the houses there are children.",
+        "ur": "گھروں میں بچے ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "أَوْلَادٌ",
+          "ar_plain": "اولاد",
+          "translit": "awlādun",
+          "en": "children",
+          "ur": "بچے"
+        },
+        {
+          "ar": "وَلَدٌ",
+          "ar_plain": "ولد",
+          "translit": "waladun",
+          "en": "a boy",
+          "ur": "لڑکا"
+        },
+        {
+          "ar": "بُيُوتٌ",
+          "ar_plain": "بيوت",
+          "translit": "buyūtun",
+          "en": "houses",
+          "ur": "گھر — جمع"
+        },
+        {
+          "ar": "مُؤْمِنَاتٌ",
+          "ar_plain": "مؤمنات",
+          "translit": "muʾminātun",
+          "en": "believing women",
+          "ur": "مؤمن عورتیں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أَوْلَادٌ",
+        "ar_plain": "اولاد",
+        "translit": "awlādun",
+        "en": "children",
+        "ur": "بچے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Children is أَوْلَادٌ, the broken plural of وَلَدٌ. الْبُيُوتِ, the houses, is already in the sentence.",
+        "ur": "بچے أَوْلَادٌ ہے، وَلَدٌ کی جمع مکسر۔ الْبُيُوتِ، گھر، جملے میں پہلے سے موجود ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch13-l04-ex06",
+      "prompt": {
+        "ar": "الْمُؤْمِنُونَ وَالْمُؤْمِنَاتُ",
+        "ar_plain": "المؤمنون والمؤمنات",
+        "translit": "al-muʾminūna wal-muʾminātu",
+        "en": "the believing men and the believing women",
+        "ur": "مومن مرد اور مومن عورتیں"
+      },
+      "options": [
+        {
+          "en": "the believing men and the believing women",
+          "ur": "مومن مرد اور مومن عورتیں"
+        },
+        {
+          "en": "one believer and one believing woman",
+          "ur": "ایک مؤمن اور ایک مؤمن عورت"
+        },
+        {
+          "en": "the believers and the books",
+          "ur": "مؤمنین اور کتابیں"
+        },
+        {
+          "en": "the disbelievers and the students",
+          "ur": "کافر لوگ اور طلبہ"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ـُونَ then ـَات: the believing men and the believing women. Both are plurals of the same base مُؤْمِن.",
+        "ur": "ـُونَ پھر ـَات: مومن مرد اور مومن عورتیں۔ دونوں ایک ہی اصل مُؤْمِن کی جمع ہیں۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch13-l04-ex07",
+      "ayah_fragment": {
+        "ar": "وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ",
+        "surah_ref": "Al-Baqarah 2:5"
+      },
+      "options": [
+        {
+          "en": "الْمُفْلِحُونَ — the successful ones, sound masculine plural",
+          "ur": "الْمُفْلِحُونَ — کامیاب لوگ، جمع مذکر سالم"
+        },
+        {
+          "en": "هُمُ — the successful ones, broken plural",
+          "ur": "هُمُ — کامیاب لوگ، جمع مکسر"
+        },
+        {
+          "en": "أُولَٰئِكَ — books",
+          "ur": "أُولَٰئِكَ — کتابیں"
+        },
+        {
+          "en": "الْمُفْلِحُونَ — one successful person",
+          "ur": "الْمُفْلِحُونَ — ایک کامیاب شخص"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The plural is الْمُفْلِحُونَ, ending ـُونَ, base مُفْلِح whole: sound masculine. أُولَٰئِكَ is 'those' and هُمُ is 'they'.",
+        "ur": "جمع الْمُفْلِحُونَ ہے، آخر ـُونَ، اصل مُفْلِح پورا: جمع مذکر سالم۔ أُولَٰئِكَ 'وہ لوگ' اور هُمُ 'وہ' ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch13-l04-ex08",
+      "statement": {
+        "en": "An unfamiliar broken plural such as أَوْلَادٌ must be learned together with its singular, because no ending rule produces it.",
+        "ur": "أَوْلَادٌ جیسی انجانی جمع مکسر اپنے واحد کے ساتھ یاد کرنی پڑتی ہے، کیونکہ کوئی آخر والا قاعدہ اسے نہیں بناتا۔",
+        "ar_example": {
+          "ar": "وَلَدٌ / أَوْلَادٌ",
+          "ar_plain": "ولد / اولاد",
+          "translit": "waladun / awlādun",
+          "en": "a boy / children",
+          "ur": "لڑکا / بچے"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Sound plurals follow an ending; broken plurals do not. That is exactly why each broken pair is learned as vocabulary.",
+        "ur": "جمع سالم ایک آخر کے مطابق چلتی ہے؛ جمع مکسر نہیں۔ اسی لیے ہر مکسر جوڑا لغت کے طور پر یاد کیا جاتا ہے۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Non-human plurals take feminine singular adjectives",
-      "ar": "جَمْعُ غَيْرِ الْعَاقِلِ كَالْمُؤَنَّثِ الْمُفْرَد",
-      "ur": "غیر عاقل جمع مؤنث واحد کی طرح"
+      "en": "Reading plurals in the Quran",
+      "ur": "قرآن میں جمع پڑھنا"
     },
     "ayah": {
-      "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجئے: اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "surah": 2,
+      "ayah": 5,
+      "label": "Al-Baqarah 2:5",
+      "ar": "وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ",
+      "en": "And it is those who are the successful.",
+      "ur": "اور یہی کامیاب ہونے والے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002005.mp3"
     },
     "highlighted_word_indices": [
-      3
+      2
+    ],
+    "highlighted_words": [
+      "الْمُفْلِحُونَ"
     ],
     "noor_explanation": {
-      "en": "الْكَافِرُونَ is a human plural, so it keeps human plural treatment. But objects like كُتُب, بُيُوت, and أَقْلَام take feminine singular adjectives: جَدِيدَة, كَبِيرَة, صَغِيرَة.",
-      "ur": "الْكَافِرُونَ انسانی جمع ہے، اس لیے اس کا معاملہ انسانی جمع جیسا رہتا ہے۔ لیکن كُتُب، بُيُوت، اور أَقْلَام جیسی اشیاء مؤنث واحد صفت لیتی ہیں: جَدِيدَة، كَبِيرَة، صَغِيرَة۔"
+      "en": "الْمُفْلِحُونَ: base مُفْلِح, ending ـُونَ, sound masculine plural. You applied the same three steps to ـِينَ, ـَات and broken plurals in this lesson. Describing plurals with adjectives is a separate skill and comes in Chapter 14.",
+      "ur": "الْمُفْلِحُونَ: اصل مُفْلِح، آخر ـُونَ، جمع مذکر سالم۔ آپ نے اس سبق میں یہی تین قدم ـِينَ، ـَات اور جمع مکسر پر لگائے۔ جمع کو صفت کے ساتھ بیان کرنا الگ مہارت ہے اور باب 14 میں آتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You learned a core Arabic habit: non-human plurals often sound plural in meaning, but their adjectives behave like feminine singular.",
-      "ur": "آپ نے عربی کا ایک بنیادی قاعدہ سیکھ لیا: غیر عاقل جمع معنی میں جمع ہوتی ہے، مگر اس کی صفت مؤنث واحد کی طرح آتی ہے۔"
+      "en": "You can now read a Quranic plural, name its family, connect it to its singular, and explain why a broken plural is learned as a pair.",
+      "ur": "اب آپ قرآنی جمع پڑھ سکتے ہیں، اس کا خاندان بتا سکتے ہیں، اسے اس کے واحد سے جوڑ سکتے ہیں، اور بتا سکتے ہیں کہ جمع مکسر جوڑے کے طور پر کیوں یاد کی جاتی ہے۔"
     }
   }
 }

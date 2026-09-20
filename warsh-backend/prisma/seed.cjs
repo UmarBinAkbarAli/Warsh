@@ -107,6 +107,8 @@ const ch13L01Content     = require("./fixtures/chapter-13-lesson-01.json");
 const ch13L02Content     = require("./fixtures/chapter-13-lesson-02.json");
 const ch13L03Content     = require("./fixtures/chapter-13-lesson-03.json");
 const ch13L04Content     = require("./fixtures/chapter-13-lesson-04.json");
+const ch13L05Content     = require("./fixtures/chapter-13-lesson-05-review.json");     // ch13-l05, review, order 5
+const ch13TestContent    = require("./fixtures/chapter-13-lesson-06-final-test.json"); // ch13-test, order 6
 const ch14L01Content     = require("./fixtures/chapter-14-lesson-01.json");
 const ch14L02Content     = require("./fixtures/chapter-14-lesson-02.json");
 const ch14L03Content     = require("./fixtures/chapter-14-lesson-03.json");
@@ -845,11 +847,14 @@ async function main() {
     { id: "ch12-l05",  chapterId: ch12Id, order: 5, title: "Classroom and Halaqa Phrases",           titleAr: "عِبَارَاتُ الدَّرْسِ وَالْحَلْقَةِ",          template: "SPOKEN_PHRASES", xpReward: ch12L05SpokenContent._meta?.xp_reward ?? 15, content: ch12L05SpokenContent },
     { id: "ch12-l06",  chapterId: ch12Id, order: 6, title: "Chapter 12 Review",                      titleAr: "مُرَاجَعَةُ الْفَصْلِ الثَّانِيَ عَشَرَ",    template: "REVIEW",         xpReward: ch12L06Content._meta?.xp_reward       ?? 20, content: ch12L06Content },
     { id: "ch12-test", chapterId: ch12Id, order: 7, title: "Chapter 12 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الثَّانِيَ عَشَرَ",     template: "REVIEW",         xpReward: ch12TestContent._meta?.xp_reward      ?? 20, content: ch12TestContent },
-    // Chapter 13
-    { id: "ch13-l01", chapterId: ch13Id, order: 1, title: "Sound Masculine Plural — ونَ",            titleAr: "الْمُذَكَّر السَّالِم",                   template: "STANDARD",        xpReward: ch13L01Content._meta?.xp_reward       ?? 10, content: ch13L01Content },
-    { id: "ch13-l02", chapterId: ch13Id, order: 2, title: "Sound Feminine Plural — ات",              titleAr: "الْمُؤَنَّث السَّالِم",                   template: "STANDARD",        xpReward: ch13L02Content._meta?.xp_reward       ?? 10, content: ch13L02Content },
-    { id: "ch13-l03", chapterId: ch13Id, order: 3, title: "Broken Plurals — Recognition",            titleAr: "الْجَمْع الْمُكَسَّر",                    template: "STANDARD",        xpReward: ch13L03Content._meta?.xp_reward       ?? 10, content: ch13L03Content },
-    { id: "ch13-l04", chapterId: ch13Id, order: 4, title: "Non-Human Plurals — Feminine Treatment",  titleAr: "جَمْع غَيْر الْعَاقِل",                   template: "STANDARD",        xpReward: ch13L04Content._meta?.xp_reward       ?? 10, content: ch13L04Content },
+    // Chapter 13 — Docs/proposals/chapter-13-content-proposal.md. ch13-l01..l04
+    // keep their IDs and display orders; ch13-l05 (review) and ch13-test are new rows.
+    { id: "ch13-l01",  chapterId: ch13Id, order: 1, title: "Sound Masculine Plurals in Quranic Context", titleAr: "جَمْعُ الْمُذَكَّرِ السَّالِمِ فِي الْقُرْآنِ", template: "STANDARD", xpReward: ch13L01Content._meta?.xp_reward  ?? 10, content: ch13L01Content },
+    { id: "ch13-l02",  chapterId: ch13Id, order: 2, title: "Sound Feminine Plurals in Quranic Context",  titleAr: "جَمْعُ الْمُؤَنَّثِ السَّالِمِ فِي الْقُرْآنِ", template: "STANDARD", xpReward: ch13L02Content._meta?.xp_reward  ?? 10, content: ch13L02Content },
+    { id: "ch13-l03",  chapterId: ch13Id, order: 3, title: "Broken Plurals in the Quran",                titleAr: "الْجَمْعُ الْمُكَسَّرُ فِي الْقُرْآنِ",        template: "STANDARD", xpReward: ch13L03Content._meta?.xp_reward  ?? 10, content: ch13L03Content },
+    { id: "ch13-l04",  chapterId: ch13Id, order: 4, title: "Plural Reading Lab",                         titleAr: "مُخْتَبَرُ قِرَاءَةِ الْجُمُوعِ",              template: "STANDARD", xpReward: ch13L04Content._meta?.xp_reward  ?? 10, content: ch13L04Content },
+    { id: "ch13-l05",  chapterId: ch13Id, order: 5, title: "Chapter 13 Review",                          titleAr: "مُرَاجَعَةُ الْفَصْلِ الثَّالِثَ عَشَرَ",       template: "REVIEW",   xpReward: ch13L05Content._meta?.xp_reward  ?? 20, content: ch13L05Content },
+    { id: "ch13-test", chapterId: ch13Id, order: 6, title: "Chapter 13 Final Test",                      titleAr: "اخْتِبَارُ الْفَصْلِ الثَّالِثَ عَشَرَ",        template: "REVIEW",   xpReward: ch13TestContent._meta?.xp_reward ?? 20, content: ch13TestContent },
     // Chapter 14
     { id: "ch14-l01", chapterId: ch14Id, order: 1, title: "Adjectives with Human Plurals",           titleAr: "الصِّفَة مَعَ الْجَمْعِ الْعَاقِل",        template: "STANDARD",        xpReward: ch14L01Content._meta?.xp_reward       ?? 10, content: ch14L01Content },
     { id: "ch14-l02", chapterId: ch14Id, order: 2, title: "The Non-Human Plural Rule",               titleAr: "جَمْعُ غَيْرِ الْعَاقِل + الصِّفَة الْمُفْرَدَة الْمُؤَنَّثَة", template: "STANDARD", xpReward: ch14L02Content._meta?.xp_reward ?? 10, content: ch14L02Content },

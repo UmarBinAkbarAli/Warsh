@@ -540,33 +540,44 @@ const specs = [
     ],
   },
 
-  // ── Ch13 ── Plural Forms — An Introduction ────────────────────────────────
+  // ── Ch13 ── Reading Plurals in the Quran ─────────────────────────────────
+  // Docs/proposals/chapter-13-content-proposal.md (2026-09-20): Chapter 9 stays
+  // the introduction to the three plural families; Chapter 13 applies them to
+  // Quranic forms — ـُونَ with the encountered ـِينَ shape (Al-Kafirun 109:1,
+  // الْكَافِرُونَ), ـَات (Al-Ahzab 33:35 excerpt, وَالْمُؤْمِنَاتِ), broken pairs
+  // (An-Nas 114:5, صُدُورِ) and a mixed reading lab (Al-Baqarah 2:5,
+  // الْمُفْلِحُونَ). Case terminology, number grammar and adjective agreement
+  // (Chapter 14) are out of scope.
   {
     order: 13,
-    sourceFile: "reader_lecture_13_jama_introduction.md",
-    title: "Plural Forms — An Introduction",
-    titleAr: "صِيَغ الْجَمْع — مَدْخَل",
-    description: "Sound masculine plural, sound feminine plural, and broken plurals introduced as recognition.",
+    // The former reader_lecture_13_jama_introduction.md never existed in the
+    // repository; the approved proposal is the content specification.
+    sourceFile: "Docs/proposals/chapter-13-content-proposal.md",
+    title: "Reading Plurals in the Quran",
+    titleUr: "قرآن میں جمع پڑھنا",
+    titleAr: "قِرَاءَةُ الْجُمُوعِ فِي الْقُرْآنِ",
+    description: "Recognising the three plural families in Quranic forms and short sentences: ـُونَ and ـِينَ, ـَات, and broken plurals learned with their singulars.",
+    descriptionUr: "قرآنی صورتوں اور مختصر جملوں میں جمع کے تین خاندانوں کی پہچان: ـُونَ اور ـِينَ، ـَات، اور جمع مکسر اپنے واحد کے ساتھ۔",
     hook: { ayahAr: "قُلْ يَا أَيُّهَا الْكَافِرُونَ", ayahRef: "Al-Kafirun 109:1", highlightedWord: "الْكَافِرُونَ" },
     examples: [
-      card("كَاتِبٌ / كَاتِبُونَ", "a writer / writers (sound masc plural)", "kaatibun / kaatiboona"),
-      card("مُؤْمِنَةٌ / مُؤْمِنَاتٌ", "a believing woman / believing women", "mu'minatun / mu'minaat"),
-      card("طَالِبٌ / طُلَّابٌ", "a student / students (broken plural)", "taalibun / tullaab"),
-      card("أَوْلَادٌ وَبُيُوتٌ وَكُتُبٌ", "children and houses and books (broken plurals)", "awlaadun wa buyootun wa kutubun"),
+      card("كَافِرٌ / كَافِرُونَ", "a disbeliever / disbelievers (sound masculine plural)", "kāfirun / kāfirūna"),
+      card("مُؤْمِنَةٌ / مُؤْمِنَاتٌ", "a believing woman / believing women (sound feminine plural)", "muʾminatun / muʾminātun"),
+      card("صَدْرٌ / صُدُورٌ", "a chest / chests (broken plural)", "ṣadrun / ṣudūrun"),
+      card("الْمُؤْمِنُونَ وَالْمُؤْمِنَاتُ", "the believing men and the believing women", "al-muʾminūna wal-muʾminātu"),
     ],
-    parseText: "الْمُؤْمِنُونَ يُصَلُّونَ",
-    parseTokens: [token("الْمُؤْمِنُونَ", "مبتدأ", "the believers"), token("يُصَلُّونَ", "خبر", "pray")],
-    conversation: ["كَمِ الطُّلَّابُ فِي الْفَصْلِ؟", "فِي الْفَصْلِ عِشْرُونَ طَالِبًا"],
+    parseText: "هَؤُلَاءِ مُؤْمِنُونَ",
+    parseTokens: [token("هَؤُلَاءِ", "مبتدأ", "these"), token("مُؤْمِنُونَ", "خبر", "believers")],
+    conversation: ["مَنْ هَؤُلَاءِ؟", "هَؤُلَاءِ طُلَّابٌ"],
     conversationDistractor: "مَا اسْمُكَ؟",
-    distractor: "What is your profession?",
-    blankDistractor: "مُؤْمِنُونَ",
-    noorTip: "الْكَافِرُونَ is a sound masculine plural — and يَا أَيُّهَا addresses a group. Al-Kafirun speaks to plurals.",
-    noorTipUr: "الْکَافِرُونَ جمع مذکر سالم ہے — ون کی علامت نمایاں ہے۔",
+    distractor: "What is your name?",
+    blankDistractor: "مُؤْمِنَةٌ",
+    noorTip: "الْكَافِرُونَ keeps كَافِر whole and adds ـُونَ — a sound masculine plural. When the Quran shows the same family as الْمُتَّقِينَ, the ending is ـِينَ but the family is the same.",
+    noorTipUr: "الْكَافِرُونَ میں كَافِر پورا رہتا ہے اور ـُونَ لگتا ہے — جمع مذکر سالم۔ جب قرآن یہی خاندان الْمُتَّقِينَ کی صورت میں دکھائے تو آخر ـِينَ ہوتا ہے مگر خاندان وہی ہے۔",
     focuses: [
-      { title: "Sound Masculine Plural — ونَ", titleAr: "الْمُذَكَّر السَّالِم", grammarTerm: "جمع مذكر سالم", reveal: "Add ونَ to make a sound masculine plural — كَاتِبُونَ, مُؤْمِنُونَ, كَافِرُونَ. The root stays whole (sound).", hookQuestion: "What ending turns كَاتِبٌ into its plural?" },
-      { title: "Sound Feminine Plural — ات", titleAr: "الْمُؤَنَّث السَّالِم", grammarTerm: "جمع مؤنث سالم", reveal: "Remove ة from the feminine singular, add ات — مُؤْمِنَة → مُؤْمِنَات. Regular and predictable.", hookQuestion: "How do you turn مُسْلِمَةٌ into its plural?" },
-      { title: "Broken Plurals — Recognition", titleAr: "الْجَمْع الْمُكَسَّر", grammarTerm: "جمع مكسر", reveal: "Arabic also has broken plurals where the internal shape changes — طَالِبٌ → طُلَّابٌ, بَيْتٌ → بُيُوتٌ. These must be memorised.", hookQuestion: "Why is the broken plural called 'broken' (مكسر)?" },
-      { title: "Non-Human Plurals — Feminine Treatment", titleAr: "جَمْع غَيْر الْعَاقِل", grammarTerm: "جمع غير عاقل كالمؤنث", reveal: "Non-human broken plurals (books, houses, objects) are treated as feminine singular in grammar — الْكُتُبُ الْجَدِيدَةُ (the new books, fem adj).", hookQuestion: "Why does كُتُبٌ take the adjective جَدِيدَةٌ (feminine) rather than جَدِيدٌ?" },
+      { title: "Sound Masculine Plurals in Quranic Context", titleAr: "جَمْعُ الْمُذَكَّرِ السَّالِمِ فِي الْقُرْآنِ", grammarTerm: "جمع مذكر سالم", reveal: "كَافِرُونَ, مُؤْمِنُونَ and مُتَّقِينَ are one family: base whole, ending ـُونَ or ـِينَ. Why the ending changes comes later.", hookQuestion: "Which word in قُلْ يَا أَيُّهَا الْكَافِرُونَ is the plural?" },
+      { title: "Sound Feminine Plurals in Quranic Context", titleAr: "جَمْعُ الْمُؤَنَّثِ السَّالِمِ فِي الْقُرْآنِ", grammarTerm: "جمع مؤنث سالم", reveal: "مُؤْمِنَةٌ → مُؤْمِنَاتٌ with a long ā; in Al-Ahzab 33:35 the target is وَالْمُؤْمِنَاتِ beside الْمُؤْمِنِينَ.", hookQuestion: "Which ending marks believing women rather than believing men?" },
+      { title: "Broken Plurals in the Quran", titleAr: "الْجَمْعُ الْمُكَسَّرُ فِي الْقُرْآنِ", grammarTerm: "جمع مكسر", reveal: "صَدْرٌ / صُدُورٌ, كِتَابٌ / كُتُبٌ, بَيْتٌ / بُيُوتٌ, وَلَدٌ / أَوْلَادٌ, طَالِبٌ / طُلَّابٌ: no ending, the inside changes, learned as pairs.", hookQuestion: "In فِي صُدُورِ النَّاسِ, which word is the broken plural?" },
+      { title: "Plural Reading Lab", titleAr: "مُخْتَبَرُ قِرَاءَةِ الْجُمُوعِ", grammarTerm: "تطبيق", reveal: "Find the base word, look at the ending, look inside: الْمُفْلِحُونَ in Al-Baqarah 2:5 is sound masculine. No adjective or number grammar is assessed.", hookQuestion: "Which family is الْمُفْلِحُونَ, and what is its singular?" },
     ],
   },
 

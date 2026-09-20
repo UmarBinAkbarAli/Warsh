@@ -197,11 +197,42 @@ function validateLegacyCurriculum() {
 function createFixtureReporter() {
   return {
     errors: [],
+    warnings: [],
     add(pathLabel, message) {
       this.errors.push(`${pathLabel}: ${message}`);
     },
+    warn(pathLabel, message) {
+      this.warnings.push(`${pathLabel}: ${message}`);
+    },
   };
 }
+
+// Reveals whose highlighted_word_indices point past the end of their ayah.
+// They shipped before the bounds check became unconditional (2026-09-20) and
+// every one belongs to the owner's Chapter 9-72 content review, so they are
+// reported as warnings instead of failing the gate. The list only shrinks: a
+// fixture is removed the moment its reveal is corrected, and no new file may
+// be added. An out-of-range index anywhere else is an error.
+const LEGACY_REVEAL_INDEX_DEFECTS = new Set([
+  "chapter-19-lesson-01.json",
+  "chapter-27-lesson-02.json",
+  "chapter-34-lesson-06.json",
+  "chapter-43-lesson-04.json",
+  "chapter-45-lesson-04.json",
+  "chapter-47-lesson-01.json",
+  "chapter-48-lesson-01.json",
+  "chapter-48-lesson-04.json",
+  "chapter-50-lesson-05.json",
+  "chapter-53-lesson-02.json",
+  "chapter-58-lesson-04.json",
+  "chapter-65-lesson-03.json",
+  "chapter-66-lesson-02.json",
+  "chapter-66-lesson-04.json",
+  "chapter-66-lesson-05.json",
+  "chapter-69-lesson-02.json",
+  "chapter-69-lesson-03.json",
+  "chapter-70-lesson-03.json",
+]);
 
 function isPlainObject(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
@@ -381,7 +412,9 @@ function validateReveal(value, pathLabel, reporter) {
   const ayahWords = isNonEmptyString(value.ayah?.ar)
     ? value.ayah.ar.trim().split(/\s+/).filter(Boolean)
     : [];
-  if (assertArray(value.highlighted_word_indices, `${pathLabel}.highlighted_word_indices`, reporter, { min: 1 })) {
+  // An empty list means the reveal deliberately highlights nothing (Chapter 2
+  // reading lessons); any index present must land inside the ayah text.
+  if (assertArray(value.highlighted_word_indices, `${pathLabel}.highlighted_word_indices`, reporter)) {
     value.highlighted_word_indices.forEach((indexValue, index) => {
       assertInteger(indexValue, `${pathLabel}.highlighted_word_indices[${index}]`, reporter, {
         min: 0,
@@ -798,11 +831,18 @@ function validateLessonFixture(fileName, lesson, reporter, globalState) {
     return;
   }
 
-  // Corrected lessons opt into semantic reveal validation by declaring the
-  // expected normalized Arabic words. This lets the curriculum migrate
-  // lesson-by-lesson while preventing corrected content from drifting again.
-  if (lesson.reveal?.highlighted_words !== undefined) {
-    validateReveal(lesson.reveal, `${pathLabel}.reveal`, reporter);
+  // Every reveal has its highlighted indices bounds-checked against the ayah
+  // text (Chapter 13 Lesson 3 once shipped index 4 for a four-token ayah and
+  // highlighted nothing). Lessons that also declare highlighted_words get the
+  // semantic check on top, so a valid-but-wrong position is caught as well.
+  if (lesson.reveal !== undefined) {
+    if (LEGACY_REVEAL_INDEX_DEFECTS.has(fileName)) {
+      const legacyReporter = createFixtureReporter();
+      validateReveal(lesson.reveal, `${pathLabel}.reveal`, legacyReporter);
+      legacyReporter.errors.forEach((error) => reporter.warn("legacy reveal", error));
+    } else {
+      validateReveal(lesson.reveal, `${pathLabel}.reveal`, reporter);
+    }
   }
 
   const isChapterTest = lesson.assessment?.type === "CHAPTER_TEST";
@@ -1009,6 +1049,10 @@ function validateFixtureCurriculum() {
     throw new Error(`Fixture validation failed with ${reporter.errors.length} error(s):\n${preview}${remaining}`);
   }
 
+  if (reporter.warnings.length > 0) {
+    console.log(`Fixture validation warnings (${reporter.warnings.length}, legacy reveals awaiting content review):`);
+    reporter.warnings.forEach((warning) => console.log(`  - ${warning}`));
+  }
   console.log(`Fixture validation passed: ${files.length} fixture lesson(s).`);
 }
 
@@ -1033,4 +1077,8 @@ function main() {
   validateFixtureCurriculum();
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = { validateReveal };

@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 13, Lesson 2 - sound feminine plural ending ات. Recognition rule: remove ة and add ات.",
+    "_note": "Chapter 13, Lesson 2 (ch13-l02) — sound feminine plurals in Quranic context. ة → ـَات framed as a recognition pattern, not a universal production rule, with مُؤْمِنَةٌ → مُؤْمِنَاتٌ, مُسْلِمَةٌ → مُسْلِمَاتٌ, طَالِبَةٌ → طَالِبَاتٌ and long-ā transliterations throughout. Quran checkpoint moved from Al-Kafirun 109:1 (no feminine plural) to an Al-Ahzab 33:35 excerpt whose declared target is the ayah token وَالْمُؤْمِنَاتِ (index generated from the canonical text, وَ included); الْمُؤْمِنِينَ beside it recalls the ـِينَ shape from Lesson 1. Rebuilt 2026-09-20 from Docs/proposals/chapter-13-content-proposal.md.",
+    "titleUr": "قرآنی سیاق میں جمع مؤنث سالم",
     "chapter_order": 13,
     "lesson_order": 2,
-    "title": "Sound Feminine Plural — ات",
-    "titleAr": "الْمُؤَنَّث السَّالِم",
-    "chapter_title": "Plural Forms — An Introduction",
-    "source": "reader_lecture_13_jama_introduction.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجئے: اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "surah": 33,
+      "ayah": 35,
+      "label": "Al-Ahzab 33:35",
+      "ar": "إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
+      "en": "Indeed, the Muslim men and Muslim women, the believing men and believing women.",
+      "ur": "بے شک مسلمان مرد اور مسلمان عورتیں اور مومن مرد اور مومن عورتیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033035.mp3"
     },
     "noor_intro": {
-      "en": "Arabic has more than one way to show plural. Today you learn the clear feminine plural ending: ات.",
-      "ur": "عربی میں جمع دکھانے کے کئی طریقے ہیں۔ آج آپ مؤنث جمع کی صاف علامت سیکھیں گے: ات۔"
+      "en": "Al-Ahzab 33:35 lists believing men and believing women side by side. Listen for الْمُؤْمِنَاتِ: the same base as مُؤْمِن, with the feminine plural ending ـَات. Today you learn to hear and see that ending in the Quran.",
+      "ur": "الاحزاب 33:35 مومن مردوں اور مومن عورتوں کو ساتھ ساتھ گنواتی ہے۔ الْمُؤْمِنَاتِ سنیں: وہی اصل مُؤْمِن، مؤنث جمع کے آخر ـَات کے ساتھ۔ آج آپ قرآن میں اس آخر کو سننا اور دیکھنا سیکھتے ہیں۔"
     },
     "autoplay": true
   },
@@ -32,138 +29,189 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Sound feminine plural",
-        "ar": "جَمْعُ الْمُؤَنَّثِ السَّالِم",
-        "ur": "جمع مؤنث سالم"
-      },
-      "explanation": {
-        "en": "Many feminine words end in ة. To recognise the sound feminine plural, look for the ending ات.",
-        "ur": "بہت سے مؤنث الفاظ ة پر ختم ہوتے ہیں۔ جمع مؤنث سالم پہچاننے کے لیے آخر میں ات تلاش کریں۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Recognition rule",
-        "ar": "ة ← ات",
-        "ur": "پہچان کا قاعدہ"
-      },
-      "explanation": {
-        "en": "In simple recognition terms: remove the final ة and add ات. مُؤْمِنَةٌ becomes مُؤْمِنَاتٌ.",
-        "ur": "سادہ پہچان کے طور پر: آخر کی ة ہٹا کر ات لگا دیں۔ مُؤْمِنَةٌ سے مُؤْمِنَاتٌ بنتا ہے۔"
-      },
-      "examples": [
-        {
-          "ar": "مُؤْمِنَةٌ ← مُؤْمِنَاتٌ",
-          "ar_plain": "مؤمنة مؤمنات",
-          "translit": "mu'minatun -> mu'minatun",
-          "en": "a believing woman -> believing women",
-          "ur": "ایمان والی عورت -> ایمان والی عورتیں"
-        }
-      ]
-    },
-    {
-      "type": "CONTRAST",
-      "concept": {
-        "en": "One believing woman / believing women",
+        "en": "Recognition pattern: ة becomes ـَات",
         "ar": "مُؤْمِنَةٌ / مُؤْمِنَاتٌ",
-        "ur": "ایک ایمان والی عورت / ایمان والی عورتیں"
+        "ur": "پہچان کا نمونہ: ة سے ـَات"
       },
       "explanation": {
-        "en": "The plural keeps the main word shape, but the ending changes from ة to ات.",
-        "ur": "جمع میں لفظ کی اصل شکل باقی رہتی ہے، مگر آخر میں ة کی جگہ ات آتا ہے۔"
+        "en": "Many feminine person-words end in ة, and their plural ends in ـَات with a long ā: مُؤْمِنَةٌ becomes مُؤْمِنَاتٌ. Use this to recognise a plural you meet. It is not a rule for building every feminine plural; some feminine nouns use other shapes.",
+        "ur": "بہت سے مؤنث انسانی الفاظ ة پر ختم ہوتے ہیں، اور ان کی جمع لمبے آ کے ساتھ ـَات پر ختم ہوتی ہے: مُؤْمِنَةٌ سے مُؤْمِنَاتٌ۔ اسے سامنے آنے والی جمع پہچاننے کے لیے استعمال کریں۔ یہ ہر مؤنث جمع بنانے کا قاعدہ نہیں؛ کچھ مؤنث اسم دوسری شکلیں استعمال کرتے ہیں۔"
       },
       "examples": [
-        {
-          "ar": "مُؤْمِنَةٌ",
-          "ar_plain": "مؤمنة",
-          "translit": "mu'minatun",
-          "en": "a believing woman",
-          "ur": "ایک ایمان والی عورت"
-        },
         {
           "ar": "مُؤْمِنَاتٌ",
           "ar_plain": "مؤمنات",
-          "translit": "mu'minatun",
+          "translit": "muʾminātun",
           "en": "believing women",
-          "ur": "ایمان والی عورتیں"
+          "ur": "مؤمن عورتیں"
         }
       ]
     },
     {
-      "type": "CONTRAST",
-      "concept": {
-        "en": "One Muslim woman / Muslim women",
-        "ar": "مُسْلِمَةٌ / مُسْلِمَاتٌ",
-        "ur": "ایک مسلمان عورت / مسلمان عورتیں"
+      "type": "WORD",
+      "text": {
+        "ar": "مُؤْمِنَةٌ",
+        "ar_plain": "مؤمنة",
+        "translit": "muʾminatun",
+        "en": "a believing woman",
+        "ur": "ایک مؤمن عورت"
       },
       "explanation": {
-        "en": "مُسْلِمَةٌ ends with ة. The plural is مُسْلِمَاتٌ, ending with ات.",
-        "ur": "مُسْلِمَةٌ کے آخر میں ة ہے۔ اس کی جمع مُسْلِمَاتٌ ہے، جس کے آخر میں ات ہے۔"
+        "en": "مُؤْمِنَةٌ, muʾminatun, is one believing woman. مُؤْمِنَاتٌ, muʾminātun, is believing women. Say both and hear the long ā before the t in the plural.",
+        "ur": "مُؤْمِنَةٌ، muʾminatun، ایک مؤمن عورت ہے۔ مُؤْمِنَاتٌ، muʾminātun، مؤمن عورتیں۔ دونوں بولیں اور جمع میں ت سے پہلے لمبا آ سنیں۔"
+      },
+      "image_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/images/discover/mumina.webp",
+      "examples": [
+        {
+          "ar": "مُؤْمِنَاتٌ",
+          "ar_plain": "مؤمنات",
+          "translit": "muʾminātun",
+          "en": "believing women",
+          "ur": "مؤمن عورتیں"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "مُسْلِمَةٌ",
+        "ar_plain": "مسلمة",
+        "translit": "muslimatun",
+        "en": "a Muslim woman",
+        "ur": "ایک مسلمان عورت"
+      },
+      "explanation": {
+        "en": "مُسْلِمَةٌ, muslimatun, is one Muslim woman; مُسْلِمَاتٌ, muslimātun, is Muslim women. The base مُسْلِم stays whole and only the ending changes.",
+        "ur": "مُسْلِمَةٌ، muslimatun، ایک مسلمان عورت ہے؛ مُسْلِمَاتٌ، muslimātun، مسلمان عورتیں۔ اصل مُسْلِم پورا رہتا ہے اور صرف آخر بدلتا ہے۔"
       },
       "examples": [
         {
-          "ar": "مُسْلِمَةٌ",
-          "ar_plain": "مسلمة",
-          "translit": "muslimatun",
-          "en": "a Muslim woman",
-          "ur": "ایک مسلمان عورت"
-        },
-        {
           "ar": "مُسْلِمَاتٌ",
           "ar_plain": "مسلمات",
-          "translit": "muslimatun",
+          "translit": "muslimātun",
           "en": "Muslim women",
           "ur": "مسلمان عورتیں"
         }
       ]
     },
     {
-      "type": "CONTRAST",
-      "concept": {
-        "en": "One female student / female students",
-        "ar": "طَالِبَةٌ / طَالِبَاتٌ",
-        "ur": "ایک طالبہ / طالبات"
+      "type": "WORD",
+      "text": {
+        "ar": "طَالِبَةٌ",
+        "ar_plain": "طالبة",
+        "translit": "ṭālibatun",
+        "en": "a female student",
+        "ur": "ایک طالبہ"
       },
       "explanation": {
-        "en": "طَالِبَةٌ becomes طَالِبَاتٌ. When you see ات at the end, expect a feminine plural.",
-        "ur": "طَالِبَةٌ سے طَالِبَاتٌ بنتا ہے۔ آخر میں ات دیکھیں تو مؤنث جمع سمجھیں۔"
+        "en": "طَالِبَةٌ, ṭālibatun, is one female student; طَالِبَاتٌ, ṭālibātun, is female students. Compare the masculine طُلَّابٌ from Chapter 9, which changes inside instead.",
+        "ur": "طَالِبَةٌ، ṭālibatun، ایک طالبہ ہے؛ طَالِبَاتٌ، ṭālibātun، طالبات۔ باب 9 کی مذکر جمع طُلَّابٌ سے موازنہ کریں، جو اندر سے بدلتی ہے۔"
       },
       "examples": [
         {
-          "ar": "طَالِبَةٌ",
-          "ar_plain": "طالبة",
-          "translit": "talibatun",
-          "en": "a female student",
-          "ur": "ایک طالبہ"
-        },
-        {
           "ar": "طَالِبَاتٌ",
           "ar_plain": "طالبات",
-          "translit": "talibatun",
+          "translit": "ṭālibātun",
           "en": "female students",
           "ur": "طالبات"
         }
       ]
     },
     {
-      "type": "AYAH_PREVIEW",
+      "type": "CONTRAST",
       "concept": {
-        "en": "Plural endings in Quranic words",
-        "ar": "عَلَامَاتُ الْجَمْعِ",
-        "ur": "قرآنی الفاظ میں جمع کی علامتیں"
+        "en": "Masculine plural or feminine plural?",
+        "ar": "مُؤْمِنُونَ / مُؤْمِنَاتٌ",
+        "ur": "مذکر جمع یا مؤنث جمع؟"
       },
       "explanation": {
-        "en": "In الْكَافِرُونَ, the ون ending marks a masculine sound plural. Today, compare that with the feminine ending ات.",
-        "ur": "الْكَافِرُونَ میں ون مذکر جمع سالم کی علامت ہے۔ آج اسے مؤنث علامت ات کے ساتھ ملا کر سمجھیں۔"
+        "en": "Same base مُؤْمِن, two endings. ـُونَ or ـِينَ: men, or a mixed group. ـَات: women. The ending tells you who the group is.",
+        "ur": "ایک ہی اصل مُؤْمِن، دو آخر۔ ـُونَ یا ـِينَ: مرد، یا ملا جلا گروہ۔ ـَات: عورتیں۔ آخر بتاتا ہے کہ گروہ کون ہے۔"
       },
       "examples": [
         {
-          "ar": "الْكَافِرُونَ",
-          "ar_plain": "الكافرون",
-          "translit": "al-kafiruna",
-          "en": "the disbelievers",
-          "ur": "کافر لوگ"
+          "ar": "مُؤْمِنُونَ",
+          "ar_plain": "مؤمنون",
+          "translit": "muʾminūna",
+          "en": "believers",
+          "ur": "مؤمنین"
+        },
+        {
+          "ar": "مُؤْمِنَاتٌ",
+          "ar_plain": "مؤمنات",
+          "translit": "muʾminātun",
+          "en": "believing women",
+          "ur": "مؤمن عورتیں"
+        }
+      ]
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "وَالْمُؤْمِنَاتِ",
+        "ar_plain": "والمؤمنات",
+        "translit": "wal-muʾmināti",
+        "en": "and the believing women",
+        "ur": "اور مومن عورتیں"
+      },
+      "explanation": {
+        "en": "In the ayah the word carries وَ, 'and', and ال, 'the'. Inside is مُؤْمِنَات, the same plural family. Its last vowel is a kasrah here; that is simply the shape the sentence gives it, and no rule is needed for it yet.",
+        "ur": "آیت میں اس لفظ کے ساتھ وَ، 'اور'، اور ال، 'وہ'، لگے ہیں۔ اندر مُؤْمِنَات ہے، وہی جمع کا خاندان۔ یہاں اس کا آخری حرکت کسرہ ہے؛ یہ بس وہ شکل ہے جو جملہ اسے دیتا ہے، اور ابھی اس کے لیے کسی قاعدے کی ضرورت نہیں۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Two families in one ayah",
+        "ar": "الْمُؤْمِنِينَ / الْمُؤْمِنَاتِ",
+        "ur": "ایک آیت میں دو خاندان"
+      },
+      "explanation": {
+        "en": "The ayah pairs الْمُؤْمِنِينَ, the believing men in the ـِينَ shape you met in Lesson 1, with الْمُؤْمِنَاتِ, the believing women. One base word, two plural families, side by side.",
+        "ur": "آیت الْمُؤْمِنِينَ، مومن مرد اس ـِينَ والی شکل میں جو آپ نے سبق 1 میں دیکھی، کو الْمُؤْمِنَاتِ، مومن عورتوں، کے ساتھ جوڑتی ہے۔ ایک اصل لفظ، دو جمع کے خاندان، ساتھ ساتھ۔"
+      },
+      "examples": [
+        {
+          "ar": "الْمُؤْمِنِينَ",
+          "ar_plain": "المؤمنين",
+          "translit": "al-muʾminīna",
+          "en": "the believing men (the ـِينَ shape)",
+          "ur": "مومن مرد (ـِينَ والی شکل)"
+        },
+        {
+          "ar": "الْمُؤْمِنَاتِ",
+          "ar_plain": "المؤمنات",
+          "translit": "al-muʾmināti",
+          "en": "the believing women",
+          "ur": "مومن عورتیں"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "الْمُؤْمِنَاتِ",
+        "ar_plain": "المؤمنات",
+        "translit": "al-muʾmināti",
+        "en": "the believing women",
+        "ur": "مومن عورتیں"
+      },
+      "explanation": {
+        "en": "Find وَالْمُؤْمِنَاتِ, the last word of the excerpt. Strip وَ and ال and you are left with مُؤْمِنَات: base مُؤْمِن, ending ـَات, sound feminine plural.",
+        "ur": "اقتباس کا آخری لفظ وَالْمُؤْمِنَاتِ تلاش کریں۔ وَ اور ال ہٹائیں تو مُؤْمِنَات باقی رہتا ہے: اصل مُؤْمِن، آخر ـَات، جمع مؤنث سالم۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033035.mp3",
+      "examples": [
+        {
+          "ar": "إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
+          "ar_plain": "ان المسلمين والمسلمات والمؤمنين والمؤمنات",
+          "translit": "inna l-muslimīna wal-muslimāti wal-muʾminīna wal-muʾmināti",
+          "en": "Indeed, the Muslim men and Muslim women, the believing men and believing women",
+          "ur": "بے شک مسلمان مرد اور مسلمان عورتیں اور مومن مرد اور مومن عورتیں"
         }
       ]
     }
@@ -175,47 +223,47 @@
       "prompt": {
         "ar": "مُؤْمِنَاتٌ",
         "ar_plain": "مؤمنات",
-        "translit": "mu'minatun",
+        "translit": "muʾminātun",
         "en": "believing women",
-        "ur": "ایمان والی عورتیں"
+        "ur": "مؤمن عورتیں"
       },
       "options": [
         {
           "en": "believing women",
-          "ur": "ایمان والی عورتیں"
+          "ur": "مؤمن عورتیں"
         },
         {
           "en": "one believing woman",
-          "ur": "ایک ایمان والی عورت"
+          "ur": "ایک مؤمن عورت"
         },
         {
           "en": "believing men",
-          "ur": "ایمان والے مرد"
+          "ur": "مومن مرد"
         },
         {
-          "en": "the disbelievers",
-          "ur": "کافر لوگ"
+          "en": "a book",
+          "ur": "کتاب"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "The ending ات shows a sound feminine plural.",
-        "ur": "آخر کا ات جمع مؤنث سالم کی علامت ہے۔"
+        "en": "ـَات with its long ā marks the feminine plural: مُؤْمِنَاتٌ is believing women. One woman is مُؤْمِنَةٌ.",
+        "ur": "لمبے آ والا ـَات مؤنث جمع کی علامت ہے: مُؤْمِنَاتٌ مؤمن عورتیں ہے۔ ایک عورت مُؤْمِنَةٌ ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch13-l02-ex02",
       "statement": {
-        "en": "To recognise a sound feminine plural, look for ة changing into ات.",
-        "ur": "جمع مؤنث سالم پہچاننے کے لیے دیکھیں کہ ة بدل کر ات بن رہی ہے۔",
+        "en": "مُسْلِمَاتٌ is a sound feminine plural: the base مُسْلِمَة with the ending ـَات.",
+        "ur": "مُسْلِمَاتٌ جمع مؤنث سالم ہے: اصل مُسْلِمَة کے ساتھ آخر ـَات۔",
         "ar_example": {
-          "ar": "مُسْلِمَةٌ ← مُسْلِمَاتٌ",
-          "ar_plain": "مسلمة مسلمات",
-          "translit": "muslimatun -> muslimatun",
-          "en": "a Muslim woman -> Muslim women",
-          "ur": "ایک مسلمان عورت -> مسلمان عورتیں"
+          "ar": "مُسْلِمَةٌ / مُسْلِمَاتٌ",
+          "ar_plain": "مسلمة / مسلمات",
+          "translit": "muslimatun / muslimātun",
+          "en": "a Muslim woman / Muslim women",
+          "ur": "ایک مسلمان عورت / مسلمان عورتیں"
         }
       },
       "correct_answer": true,
@@ -225,52 +273,52 @@
       "type": "FILL_BLANK",
       "id": "ch13-l02-ex03",
       "mode": "TAP",
-      "sentence_ar": "طَالِبَةٌ ← ___",
+      "sentence_ar": "هَؤُلَاءِ ___",
       "hint": {
-        "en": "Change one female student into female students.",
-        "ur": "ایک طالبہ کو طالبات بنائیں۔"
+        "en": "These are female students.",
+        "ur": "یہ طالبات ہیں۔"
       },
       "options": [
         {
           "ar": "طَالِبَاتٌ",
           "ar_plain": "طالبات",
-          "translit": "talibatun",
+          "translit": "ṭālibātun",
           "en": "female students",
           "ur": "طالبات"
         },
         {
-          "ar": "طَالِبُونَ",
-          "ar_plain": "طالبون",
-          "translit": "talibuna",
-          "en": "male students",
-          "ur": "طلبہ"
-        },
-        {
           "ar": "طَالِبَةٌ",
           "ar_plain": "طالبة",
-          "translit": "talibatun",
+          "translit": "ṭālibatun",
           "en": "a female student",
           "ur": "ایک طالبہ"
         },
         {
-          "ar": "كِتَابٌ",
-          "ar_plain": "كتاب",
-          "translit": "kitabun",
-          "en": "a book",
-          "ur": "ایک کتاب"
+          "ar": "طُلَّابٌ",
+          "ar_plain": "طلاب",
+          "translit": "ṭullābun",
+          "en": "students",
+          "ur": "طلبہ"
+        },
+        {
+          "ar": "طَالِبٌ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibun",
+          "en": "a student (one male)",
+          "ur": "ایک طالب علم"
         }
       ],
       "correct_answer": {
         "ar": "طَالِبَاتٌ",
         "ar_plain": "طالبات",
-        "translit": "talibatun",
+        "translit": "ṭālibātun",
         "en": "female students",
         "ur": "طالبات"
       },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "Remove the final ة from طَالِبَةٌ and add ات: طَالِبَاتٌ.",
-        "ur": "طَالِبَةٌ کے آخر سے ة ہٹا کر ات لگائیں: طَالِبَاتٌ۔"
+        "en": "Female students is طَالِبَاتٌ, the ـَات plural of طَالِبَةٌ. طُلَّابٌ is the masculine broken plural.",
+        "ur": "طالبات طَالِبَاتٌ ہے، طَالِبَةٌ کی ـَات والی جمع۔ طُلَّابٌ مذکر جمع مکسر ہے۔"
       }
     },
     {
@@ -280,48 +328,48 @@
         {
           "ar": "مُؤْمِنَةٌ",
           "ar_plain": "مؤمنة",
-          "translit": "mu'minatun",
+          "translit": "muʾminatun",
           "en": "a believing woman",
-          "ur": "ایک ایمان والی عورت"
+          "ur": "ایک مؤمن عورت"
         },
         {
           "ar": "مُؤْمِنَاتٌ",
           "ar_plain": "مؤمنات",
-          "translit": "mu'minatun",
+          "translit": "muʾminātun",
           "en": "believing women",
-          "ur": "ایمان والی عورتیں"
+          "ur": "مؤمن عورتیں"
         },
         {
-          "ar": "مُسْلِمَةٌ",
-          "ar_plain": "مسلمة",
-          "translit": "muslimatun",
-          "en": "a Muslim woman",
-          "ur": "ایک مسلمان عورت"
+          "ar": "مُسْلِمُونَ",
+          "ar_plain": "مسلمون",
+          "translit": "muslimūna",
+          "en": "Muslims (men or a mixed group)",
+          "ur": "مسلمان مرد"
         },
         {
-          "ar": "مُسْلِمَاتٌ",
-          "ar_plain": "مسلمات",
-          "translit": "muslimatun",
-          "en": "Muslim women",
-          "ur": "مسلمان عورتیں"
+          "ar": "طَالِبَاتٌ",
+          "ar_plain": "طالبات",
+          "translit": "ṭālibātun",
+          "en": "female students",
+          "ur": "طالبات"
         }
       ],
       "right_column": [
         {
-          "en": "a believing woman",
-          "ur": "ایک ایمان والی عورت"
+          "en": "one believing woman",
+          "ur": "ایک مؤمن عورت"
         },
         {
           "en": "believing women",
-          "ur": "ایمان والی عورتیں"
+          "ur": "مؤمن عورتیں"
         },
         {
-          "en": "a Muslim woman",
-          "ur": "ایک مسلمان عورت"
+          "en": "Muslim men",
+          "ur": "مسلمان مرد"
         },
         {
-          "en": "Muslim women",
-          "ur": "مسلمان عورتیں"
+          "en": "female students",
+          "ur": "طالبات"
         }
       ],
       "correct_pairs": [
@@ -345,137 +393,173 @@
       "xp_value": 1
     },
     {
-      "type": "BUILD_SENTENCE",
+      "type": "TAP_TRANSLATION",
       "id": "ch13-l02-ex05",
-      "target_translation": {
-        "en": "the Muslim women are believers",
-        "ur": "مسلمان عورتیں ایمان والی ہیں"
-      },
-      "tiles": [
-        {
-          "ar": "الْمُسْلِمَاتُ",
-          "ar_plain": "المسلمات",
-          "translit": "al-muslimatu",
-          "en": "the Muslim women",
-          "ur": "مسلمان عورتیں"
-        },
-        {
-          "ar": "مُؤْمِنَاتٌ",
-          "ar_plain": "مؤمنات",
-          "translit": "mu'minatun",
-          "en": "believers",
-          "ur": "ایمان والی"
-        },
-        {
-          "ar": "قُلْ",
-          "ar_plain": "قل",
-          "translit": "qul",
-          "en": "say",
-          "ur": "کہہ دیجئے"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch13-l02-ex06",
-      "sentence_ar": "الطَّالِبَاتُ مُسْلِمَاتٌ",
-      "words": [
-        {
-          "ar": "الطَّالِبَاتُ",
-          "ar_plain": "الطالبات",
-          "translit": "at-talibatu",
-          "en": "the female students",
-          "ur": "طالبات"
-        },
-        {
-          "ar": "مُسْلِمَاتٌ",
-          "ar_plain": "مسلمات",
-          "translit": "muslimatun",
-          "en": "Muslim women",
-          "ur": "مسلمان عورتیں"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "ADJECTIVE",
-        "VERB"
-      ],
-      "correct_roles": [
-        "SUBJECT",
-        "PREDICATE"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "Both words end with ات, and here they form a simple subject-predicate sentence.",
-        "ur": "دونوں الفاظ کے آخر میں ات ہے، اور یہاں یہ مبتدا-خبر کا آسان جملہ بناتے ہیں۔"
-      }
-    },
-    {
-      "type": "MATCH_AYAH",
-      "id": "ch13-l02-ex07",
-      "ayah_fragment": {
-        "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-        "surah_ref": "Al-Kafirun 109:1"
+      "prompt": {
+        "ar": "هَؤُلَاءِ طَالِبَاتٌ",
+        "ar_plain": "هؤلاء طالبات",
+        "translit": "hāʾulāʾi ṭālibātun",
+        "en": "These are female students.",
+        "ur": "یہ طالبات ہیں۔"
       },
       "options": [
         {
-          "en": "Say, O disbelievers.",
-          "ur": "کہہ دیجئے: اے کافرو۔"
+          "en": "These are female students.",
+          "ur": "یہ طالبات ہیں۔"
         },
         {
-          "en": "believing women",
-          "ur": "ایمان والی عورتیں"
+          "en": "This is a female student.",
+          "ur": "یہ ایک طالبہ ہے۔"
         },
         {
-          "en": "Muslim women",
-          "ur": "مسلمان عورتیں"
+          "en": "These are male students.",
+          "ur": "یہ طلبہ ہیں۔"
         },
         {
-          "en": "female students",
-          "ur": "طالبات"
+          "en": "These are books.",
+          "ur": "یہ کتابیں ہیں۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "This ayah shows a plural ending ون. The lesson compares it with the feminine plural ending ات.",
-        "ur": "اس آیت میں جمع کی علامت ون ہے۔ سبق اسے مؤنث جمع کی علامت ات کے ساتھ ملا کر سمجھاتا ہے۔"
+        "en": "هَؤُلَاءِ is 'these' for people and طَالِبَاتٌ is the ـَات plural: these are female students.",
+        "ur": "هَؤُلَاءِ لوگوں کے لیے 'یہ' ہے اور طَالِبَاتٌ ـَات والی جمع: یہ طالبات ہیں۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch13-l02-ex06",
+      "left_column": [
+        {
+          "ar": "مُؤْمِنُونَ",
+          "ar_plain": "مؤمنون",
+          "translit": "muʾminūna",
+          "en": "believers",
+          "ur": "مؤمنین"
+        },
+        {
+          "ar": "مُؤْمِنَاتٌ",
+          "ar_plain": "مؤمنات",
+          "translit": "muʾminātun",
+          "en": "believing women",
+          "ur": "مؤمن عورتیں"
+        },
+        {
+          "ar": "مُسْلِمِينَ",
+          "ar_plain": "مسلمين",
+          "translit": "muslimīna",
+          "en": "Muslims (men, the ـِينَ shape)",
+          "ur": "مسلمان مرد (ـِينَ والی شکل)"
+        },
+        {
+          "ar": "مُسْلِمَاتٌ",
+          "ar_plain": "مسلمات",
+          "translit": "muslimātun",
+          "en": "Muslim women",
+          "ur": "مسلمان عورتیں"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "sound masculine — believing men",
+          "ur": "جمع مذکر سالم — مومن مرد"
+        },
+        {
+          "en": "sound feminine — believing women",
+          "ur": "جمع مؤنث سالم — مؤمن عورتیں"
+        },
+        {
+          "en": "sound masculine (ـِينَ shape) — Muslim men",
+          "ur": "جمع مذکر سالم (ـِينَ والی شکل) — مسلمان مرد"
+        },
+        {
+          "en": "sound feminine — Muslim women",
+          "ur": "جمع مؤنث سالم — مسلمان عورتیں"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch13-l02-ex07",
+      "ayah_fragment": {
+        "ar": "إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
+        "surah_ref": "Al-Ahzab 33:35"
+      },
+      "options": [
+        {
+          "en": "وَالْمُؤْمِنَاتِ — and the believing women, sound feminine plural",
+          "ur": "وَالْمُؤْمِنَاتِ — اور مومن عورتیں، جمع مؤنث سالم"
+        },
+        {
+          "en": "الْمُسْلِمِينَ — the Muslim women, sound feminine plural",
+          "ur": "الْمُسْلِمِينَ — مسلمان عورتیں، جمع مؤنث سالم"
+        },
+        {
+          "en": "إِنَّ — believing women",
+          "ur": "إِنَّ — مومن عورتیں"
+        },
+        {
+          "en": "وَالْمُؤْمِنِينَ — and the believing women",
+          "ur": "وَالْمُؤْمِنِينَ — اور مومن عورتیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The feminine plural ends in ـَات: وَالْمُؤْمِنَاتِ. الْمُسْلِمِينَ and وَالْمُؤْمِنِينَ end in ـِينَ, the masculine family; إِنَّ is 'indeed'.",
+        "ur": "مؤنث جمع ـَات پر ختم ہوتی ہے: وَالْمُؤْمِنَاتِ۔ الْمُسْلِمِينَ اور وَالْمُؤْمِنِينَ ـِينَ پر ختم ہوتے ہیں، مذکر خاندان؛ إِنَّ 'بے شک' ہے۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Sound feminine plural - ات",
-      "ar": "جَمْعُ الْمُؤَنَّثِ السَّالِم",
-      "ur": "جمع مؤنث سالم - ات"
+      "en": "Sound feminine plural in the Quran — ـَات",
+      "ur": "قرآن میں جمع مؤنث سالم — ـَات"
     },
     "ayah": {
-      "surah": 109,
-      "ayah": 1,
-      "label": "Al-Kafirun 109:1",
-      "ar": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
-      "en": "Say, O disbelievers.",
-      "ur": "کہہ دیجئے: اے کافرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+      "surah": 33,
+      "ayah": 35,
+      "label": "Al-Ahzab 33:35",
+      "ar": "إِنَّ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
+      "en": "Indeed, the Muslim men and Muslim women, the believing men and believing women.",
+      "ur": "بے شک مسلمان مرد اور مسلمان عورتیں اور مومن مرد اور مومن عورتیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033035.mp3"
     },
     "highlighted_word_indices": [
-      3
+      4
+    ],
+    "highlighted_words": [
+      "وَالْمُؤْمِنَاتِ"
     ],
     "noor_explanation": {
-      "en": "الْكَافِرُونَ shows one plural family with ون. For feminine words like مُؤْمِنَةٌ, مُسْلِمَةٌ, and طَالِبَةٌ, the regular plural sign is ات: مُؤْمِنَاتٌ, مُسْلِمَاتٌ, طَالِبَاتٌ.",
-      "ur": "الْكَافِرُونَ میں جمع کی ایک قسم ون کے ساتھ آتی ہے۔ مؤنث الفاظ جیسے مُؤْمِنَةٌ، مُسْلِمَةٌ، اور طَالِبَةٌ کے لیے باقاعدہ جمع کی علامت ات ہے: مُؤْمِنَاتٌ، مُسْلِمَاتٌ، طَالِبَاتٌ۔"
+      "en": "وَالْمُؤْمِنَاتِ: 'and' plus 'the' plus مُؤْمِنَات, the believing women. Base مُؤْمِن, ending ـَات. Beside it stands الْمُؤْمِنِينَ, the believing men, so the ayah shows both families in one breath.",
+      "ur": "وَالْمُؤْمِنَاتِ: 'اور' اور 'وہ' اور مُؤْمِنَات، مومن عورتیں۔ اصل مُؤْمِن، آخر ـَات۔ اس کے پاس الْمُؤْمِنِينَ، مومن مرد، کھڑا ہے، تو آیت ایک ہی سانس میں دونوں خاندان دکھاتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You now know a strong recognition clue: when a feminine word loses ة and gains ات, you are seeing the sound feminine plural.",
-      "ur": "اب آپ کے پاس پہچان کا مضبوط اشارہ ہے: جب مؤنث لفظ سے ة ہٹ کر ات آ جائے تو یہ جمع مؤنث سالم ہے۔"
+      "en": "You can now recognise ـَات as the sound feminine plural in the Quran, hear the long ā in مُؤْمِنَاتٌ, and tell مُؤْمِنُونَ from مُؤْمِنَاتٌ.",
+      "ur": "اب آپ قرآن میں ـَات کو جمع مؤنث سالم کے طور پر پہچان سکتے ہیں، مُؤْمِنَاتٌ میں لمبا آ سن سکتے ہیں، اور مُؤْمِنُونَ کو مُؤْمِنَاتٌ سے الگ کر سکتے ہیں۔"
     }
   }
 }
