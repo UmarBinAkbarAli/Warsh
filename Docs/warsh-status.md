@@ -552,6 +552,46 @@ Everything below this list is either done and verified, or one of these:
    stripped, every lesson serves its cards/exercises/declared reveal, 0/12 and
    9/12 fail, 10/12 passes with the chapter bonus and unlocks Chapter 14, a
    repeat pass earns 0 XP.
+   **Chapter 14 (`Docs/proposals/chapter-14-content-proposal.md`, "Describing
+   Plurals": adjective agreement with plural nouns) is built and
+   staging-verified 2026-09-21; production promotion is pending the owner's
+   go-ahead** (`npm run content:promote-chapter-fourteen -- --apply`, then
+   `content:backfill-new-lessons -- --lesson-ids ch14-l06,ch14-test --apply`
+   and `content:baseline`, mirroring Chapter 13). Seven items: `ch14-l01..l04`
+   rewritten in place (8/8/8/8 cards, 7/7/8/9 exercises, IDs and orders kept),
+   `ch14-l06` is the new order-5 recognition lesson (7 cards / 6 exercises),
+   the review `ch14-l05` keeps its ID and moves to order 6 (8 cards / 10
+   exercises), `ch14-test` (12 MC, 80 % = 10/12) is order 7. Because fixtures
+   map to rows by position, the order-5 file is
+   `chapter-14-lesson-05-quranic-agreement.json` (row `ch14-l06`) and the
+   review is `chapter-14-lesson-06-review.json` (row `ch14-l05`); both notes
+   say so. Reveals are all declared: Al-Anbiya 21:26 excerpt at مُكْرَمُونَ
+   (Lesson 1, test), Al-Ghashiyah 88:13 at مَرْفُوعَةٌ (Lesson 2, review),
+   88:14 at مَوْضُوعَةٌ (Lesson 3), 88:15 at مَصْفُوفَةٌ (Lesson 4), Az-Zumar
+   39:67 excerpt at مَطْوِيَّاتٌ (Lesson 5) — taught correctly as feminine
+   plural, an attested variation to recognise while the feminine-singular
+   default stays for production. Every proposal correction landed: the Al-Ma'un
+   107:2/107:4 hooks (no agreement) are gone, phrase-versus-sentence has its own
+   lesson bridging Chapter 4 Lesson 3, classification asks "does this plural
+   refer to human beings?" (never "can it think?"), ة and noun shape are
+   explicitly not decisive, الْأَرَضُونَ and جَنَّاتٌ تَجْرِي are out, Urdu uses
+   جمع مکسر / عاقل جمع / غیر عاقل جمع / وصفی ترکیب, transliteration is one
+   convention with -atun. Chapter spec, seed rows and
+   `scripts/promote-chapter-fourteen.cjs` mirror Chapter 13; the stale
+   `reader_lecture_14_wasf_jama.md` source is replaced by the proposal path.
+   Verified: fixture/legacy/Urdu/Quran audits clean (855 ayah entries, 0
+   issues), 175 tests, 36 new catalogue clips generated (fixtures 2806/2806;
+   the `--from-db` audit against staging lists 640 `audio/words` gaps that are
+   only staging's re-seeded vocabulary ids); API on fresh accounts: test
+   locked (fetch and submit) until the six lessons complete, answer key
+   stripped, 0/12 and 9/12 fail, 10/12 passes with +20 XP and the 50 XP
+   chapter bonus and unlocks Chapter 15 (locked before, checked with
+   `DEV_UNLOCK_ALL=false`), repeat pass earns 0; emulator (API 34, staging):
+   Lesson 1 hook with recitation, all eight cards with catalogue audio, all
+   seven exercise types answered, reveal highlights مُكْرَمُونَ, lesson
+   complete +15. Not done: scholarly review of the grammar explanations (the
+   proposal requires it before promotion), and Warsh Studio content-review
+   pass in Urdu.
 3. ~~**Speak mic re-prompt on the Tecno**~~ — **verified on hardware
    2026-09-17** on the Play-installed 1.0.11. The owner's account is on
    Chapter 2, so the check used a throwaway production account placed at

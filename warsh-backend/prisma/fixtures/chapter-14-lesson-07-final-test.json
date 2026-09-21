@@ -1,0 +1,458 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 14 final test (ch14-test, new). Twelve multiple-choice questions on the proposal's blueprint: human masculine plural adjective, human feminine plural adjective, كِرَامٌ as a broken-plural adjective, definiteness matching, two non-human feminine-singular default items, two descriptive-phrase-versus-sentence items, human/non-human classification with the reason, the Al-Ghashiyah 88:13 target, the Az-Zumar 39:67 مَطْوِيَّاتٌ variation, and a mixed Quran parse of 88:14. Excludes full case theory, verb agreement, number grammar and unseen Classical exceptions. Pass mark 80 % (10 of 12) to match Chapters 3–13. Added 2026-09-21 from Docs/proposals/chapter-14-content-proposal.md.",
+    "titleUr": "باب 14 کا آخری امتحان",
+    "chapter_order": 14,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 21,
+      "ayah": 26,
+      "label": "Al-Anbiya 21:26",
+      "ar": "بَلْ عِبَادٌ مُّكْرَمُونَ",
+      "en": "Rather, they are honored servants.",
+      "ur": "بلکہ وہ عزت والے بندے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/021026.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 14.",
+      "ur": "باب 14 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "exercises": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 14,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch14-test-q01",
+        "topic": {
+          "en": "Human masculine plural",
+          "ur": "مذکر عاقل جمع"
+        },
+        "prompt": {
+          "en": "Which adjective completes الطُّلَّابُ ___ to mean 'the hardworking students'?",
+          "ur": "کون سی صفت الطُّلَّابُ ___ کو مکمل کر کے 'محنتی طلبہ' بناتی ہے؟"
+        },
+        "arabic": "الطُّلَّابُ ___",
+        "options": [
+          {
+            "en": "plural masculine, with ال",
+            "ur": "جمع مذکر، ال کے ساتھ",
+            "arabic": "الْمُجْتَهِدُونَ"
+          },
+          {
+            "en": "singular feminine, with ال",
+            "ur": "واحد مؤنث، ال کے ساتھ",
+            "arabic": "الْمُجْتَهِدَةُ"
+          },
+          {
+            "en": "plural feminine, with ال",
+            "ur": "جمع مؤنث، ال کے ساتھ",
+            "arabic": "الْمُجْتَهِدَاتُ"
+          },
+          {
+            "en": "singular masculine, with ال",
+            "ur": "واحد مذکر، ال کے ساتھ",
+            "arabic": "الْمُجْتَهِدُ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch14-test-q02",
+        "topic": {
+          "en": "Human feminine plural",
+          "ur": "مؤنث عاقل جمع"
+        },
+        "prompt": {
+          "en": "Which adjective completes الطَّالِبَاتُ ___ to mean 'the hardworking female students'?",
+          "ur": "کون سی صفت الطَّالِبَاتُ ___ کو مکمل کر کے 'محنتی طالبات' بناتی ہے؟"
+        },
+        "arabic": "الطَّالِبَاتُ ___",
+        "options": [
+          {
+            "en": "plural masculine, with ال",
+            "ur": "جمع مذکر، ال کے ساتھ",
+            "arabic": "الْمُجْتَهِدُونَ"
+          },
+          {
+            "en": "plural feminine, with ال",
+            "ur": "جمع مؤنث، ال کے ساتھ",
+            "arabic": "الْمُجْتَهِدَاتُ"
+          },
+          {
+            "en": "singular feminine, with ال",
+            "ur": "واحد مؤنث، ال کے ساتھ",
+            "arabic": "الْمُجْتَهِدَةُ"
+          },
+          {
+            "en": "plural feminine, without ال",
+            "ur": "جمع مؤنث، بغیر ال",
+            "arabic": "مُجْتَهِدَاتٌ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch14-test-q03",
+        "topic": {
+          "en": "Broken-plural adjective",
+          "ur": "مکسر جمع صفت"
+        },
+        "prompt": {
+          "en": "What kind of word is كِرَامٌ in مُسْلِمُونَ كِرَامٌ?",
+          "ur": "مُسْلِمُونَ كِرَامٌ میں كِرَامٌ کس قسم کا لفظ ہے؟"
+        },
+        "arabic": "مُسْلِمُونَ كِرَامٌ",
+        "options": [
+          {
+            "en": "a plural adjective, the broken plural of كَرِيمٌ, describing a human plural",
+            "ur": "ایک جمع صفت، كَرِيمٌ کی جمع مکسر، عاقل جمع کی صفت"
+          },
+          {
+            "en": "a feminine singular adjective, the default for non-human plurals",
+            "ur": "ایک واحد مؤنث صفت، غیر عاقل جمع کا بنیادی قاعدہ"
+          },
+          {
+            "en": "a singular adjective describing one man",
+            "ur": "ایک واحد صفت جو ایک مرد کی صفت ہے"
+          },
+          {
+            "en": "a noun meaning 'Muslims'",
+            "ur": "ایک اسم جس کا مطلب 'مسلمان' ہے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch14-test-q04",
+        "topic": {
+          "en": "Definiteness",
+          "ur": "معرفہ اور نکرہ"
+        },
+        "prompt": {
+          "en": "Which phrase means 'the honourable Muslims'?",
+          "ur": "کون سی ترکیب کا مطلب 'معزز مسلمان (معرفہ)' ہے؟"
+        },
+        "options": [
+          {
+            "en": "ال on the noun only — a sentence",
+            "ur": "صرف اسم پر ال — جملہ",
+            "arabic": "الْمُسْلِمُونَ كِرَامٌ"
+          },
+          {
+            "en": "ال on both words — a definite phrase",
+            "ur": "دونوں لفظوں پر ال — معرفہ ترکیب",
+            "arabic": "الْمُسْلِمُونَ الْكِرَامُ"
+          },
+          {
+            "en": "no ال on either word — an indefinite phrase",
+            "ur": "کسی لفظ پر ال نہیں — نکرہ ترکیب",
+            "arabic": "مُسْلِمُونَ كِرَامٌ"
+          },
+          {
+            "en": "singular noun and singular adjective",
+            "ur": "واحد اسم اور واحد صفت",
+            "arabic": "الْمُسْلِمُ الْكَرِيمُ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch14-test-q05",
+        "topic": {
+          "en": "Non-human default",
+          "ur": "غیر عاقل بنیادی قاعدہ"
+        },
+        "prompt": {
+          "en": "Which adjective completes الْكُتُبُ ___ to mean 'the new books'?",
+          "ur": "کون سی صفت الْكُتُبُ ___ کو مکمل کر کے 'نئی کتابیں' بناتی ہے؟"
+        },
+        "arabic": "الْكُتُبُ ___",
+        "options": [
+          {
+            "en": "plural masculine, with ال",
+            "ur": "جمع مذکر، ال کے ساتھ",
+            "arabic": "الْجَدِيدُونَ"
+          },
+          {
+            "en": "singular masculine, with ال",
+            "ur": "واحد مذکر، ال کے ساتھ",
+            "arabic": "الْجَدِيدُ"
+          },
+          {
+            "en": "singular feminine, with ال",
+            "ur": "واحد مؤنث، ال کے ساتھ",
+            "arabic": "الْجَدِيدَةُ"
+          },
+          {
+            "en": "singular feminine, without ال",
+            "ur": "واحد مؤنث، بغیر ال",
+            "arabic": "جَدِيدَةٌ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch14-test-q06",
+        "topic": {
+          "en": "Non-human default",
+          "ur": "غیر عاقل بنیادی قاعدہ"
+        },
+        "prompt": {
+          "en": "Which phrase follows the beginner default for a non-human plural?",
+          "ur": "کون سی ترکیب غیر عاقل جمع کے لیے مبتدی کے بنیادی قاعدے پر چلتی ہے؟"
+        },
+        "options": [
+          {
+            "en": "mosques with a plural masculine adjective",
+            "ur": "مسجدیں جمع مذکر صفت کے ساتھ",
+            "arabic": "الْمَسَاجِدُ الْكَبِيرُونَ"
+          },
+          {
+            "en": "mosques with a plural feminine adjective",
+            "ur": "مسجدیں جمع مؤنث صفت کے ساتھ",
+            "arabic": "الْمَسَاجِدُ الْكَبِيرَاتُ"
+          },
+          {
+            "en": "one mosque with a singular adjective",
+            "ur": "ایک مسجد واحد صفت کے ساتھ",
+            "arabic": "الْمَسْجِدُ الْكَبِيرُ"
+          },
+          {
+            "en": "mosques with a feminine singular adjective",
+            "ur": "مسجدیں واحد مؤنث صفت کے ساتھ",
+            "arabic": "الْمَسَاجِدُ الْكَبِيرَةُ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch14-test-q07",
+        "topic": {
+          "en": "Phrase or sentence",
+          "ur": "ترکیب یا جملہ"
+        },
+        "prompt": {
+          "en": "What does الْكُتُبُ جَدِيدَةٌ mean?",
+          "ur": "الْكُتُبُ جَدِيدَةٌ کا کیا مطلب ہے؟"
+        },
+        "arabic": "الْكُتُبُ جَدِيدَةٌ",
+        "options": [
+          {
+            "en": "the new books — a phrase",
+            "ur": "نئی کتابیں — ترکیب"
+          },
+          {
+            "en": "The books are new. — a sentence",
+            "ur": "کتابیں نئی ہیں۔ — جملہ"
+          },
+          {
+            "en": "a new book",
+            "ur": "ایک نئی کتاب"
+          },
+          {
+            "en": "The book is new.",
+            "ur": "کتاب نئی ہے۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch14-test-q08",
+        "topic": {
+          "en": "Phrase or sentence",
+          "ur": "ترکیب یا جملہ"
+        },
+        "prompt": {
+          "en": "What does الطُّلَّابُ الْمُجْتَهِدُونَ mean?",
+          "ur": "الطُّلَّابُ الْمُجْتَهِدُونَ کا کیا مطلب ہے؟"
+        },
+        "arabic": "الطُّلَّابُ الْمُجْتَهِدُونَ",
+        "options": [
+          {
+            "en": "The students are hardworking. — a sentence",
+            "ur": "طلبہ محنتی ہیں۔ — جملہ"
+          },
+          {
+            "en": "a hardworking student",
+            "ur": "ایک محنتی طالب علم"
+          },
+          {
+            "en": "the hardworking students — a phrase",
+            "ur": "محنتی طلبہ — ترکیب"
+          },
+          {
+            "en": "the hardworking female students",
+            "ur": "محنتی طالبات"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch14-test-q09",
+        "topic": {
+          "en": "Classification",
+          "ur": "درجہ بندی"
+        },
+        "prompt": {
+          "en": "Why does عِبَادٌ take مُكْرَمُونَ while سُرُرٌ takes مَرْفُوعَةٌ?",
+          "ur": "عِبَادٌ کے ساتھ مُكْرَمُونَ کیوں آتا ہے جبکہ سُرُرٌ کے ساتھ مَرْفُوعَةٌ؟"
+        },
+        "arabic": "عِبَادٌ مُكْرَمُونَ / سُرُرٌ مَرْفُوعَةٌ",
+        "options": [
+          {
+            "en": "عِبَادٌ refers to human beings and سُرُرٌ does not",
+            "ur": "عِبَادٌ انسانوں کے لیے ہے اور سُرُرٌ نہیں"
+          },
+          {
+            "en": "عِبَادٌ is a sound plural and سُرُرٌ is a broken plural",
+            "ur": "عِبَادٌ جمع سالم ہے اور سُرُرٌ جمع مکسر"
+          },
+          {
+            "en": "عِبَادٌ is definite and سُرُرٌ is indefinite",
+            "ur": "عِبَادٌ معرفہ ہے اور سُرُرٌ نکرہ"
+          },
+          {
+            "en": "مُكْرَمُونَ and مَرْفُوعَةٌ are both feminine singular",
+            "ur": "مُكْرَمُونَ اور مَرْفُوعَةٌ دونوں واحد مؤنث ہیں"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch14-test-q10",
+        "topic": {
+          "en": "Quran target",
+          "ur": "قرآنی ہدف"
+        },
+        "prompt": {
+          "en": "In فِيهَا سُرُرٌ مَّرْفُوعَةٌ (Al-Ghashiyah 88:13), which word is the descriptor, and what form is it?",
+          "ur": "فِيهَا سُرُرٌ مَّرْفُوعَةٌ (الغاشیہ 88:13) میں صفت کون سا لفظ ہے، اور اس کی شکل کیا ہے؟"
+        },
+        "arabic": "فِيهَا سُرُرٌ مَّرْفُوعَةٌ",
+        "options": [
+          {
+            "en": "سُرُرٌ — a plural adjective",
+            "ur": "سُرُرٌ — ایک جمع صفت"
+          },
+          {
+            "en": "فِيهَا — a feminine singular adjective",
+            "ur": "فِيهَا — ایک واحد مؤنث صفت"
+          },
+          {
+            "en": "مَرْفُوعَةٌ — feminine plural, an attested variation",
+            "ur": "مَرْفُوعَةٌ — جمع مؤنث، ایک موجود مختلف صورت"
+          },
+          {
+            "en": "مَرْفُوعَةٌ — feminine singular, describing the non-human plural سُرُرٌ",
+            "ur": "مَرْفُوعَةٌ — واحد مؤنث، غیر عاقل جمع سُرُرٌ کی صفت"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch14-test-q11",
+        "topic": {
+          "en": "Quranic variation",
+          "ur": "قرآنی مختلف صورت"
+        },
+        "prompt": {
+          "en": "In وَالسَّمَاوَاتُ مَطْوِيَّاتٌ (Az-Zumar 39:67), what form is مَطْوِيَّاتٌ?",
+          "ur": "وَالسَّمَاوَاتُ مَطْوِيَّاتٌ (الزمر 39:67) میں مَطْوِيَّاتٌ کی شکل کیا ہے؟"
+        },
+        "arabic": "وَالسَّمَاوَاتُ مَطْوِيَّاتٌ",
+        "options": [
+          {
+            "en": "feminine singular — the beginner default",
+            "ur": "واحد مؤنث — مبتدی کا بنیادی قاعدہ"
+          },
+          {
+            "en": "feminine plural — an attested Quranic variation to recognise",
+            "ur": "جمع مؤنث — قرآن میں موجود ایک مختلف صورت جسے پہچاننا ہے"
+          },
+          {
+            "en": "masculine plural — like مُكْرَمُونَ",
+            "ur": "جمع مذکر — مُكْرَمُونَ کی طرح"
+          },
+          {
+            "en": "a singular noun meaning 'heaven'",
+            "ur": "ایک واحد اسم جس کا مطلب 'آسمان' ہے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch14-test-q12",
+        "topic": {
+          "en": "Mixed Quran reading",
+          "ur": "ملا جلا قرآنی مطالعہ"
+        },
+        "prompt": {
+          "en": "Which analysis of وَأَكْوَابٌ مَّوْضُوعَةٌ (Al-Ghashiyah 88:14) is correct?",
+          "ur": "وَأَكْوَابٌ مَّوْضُوعَةٌ (الغاشیہ 88:14) کا کون سا تجزیہ درست ہے؟"
+        },
+        "arabic": "وَأَكْوَابٌ مَّوْضُوعَةٌ",
+        "options": [
+          {
+            "en": "non-human plural + feminine singular descriptor; neither word has ال, so they match as a descriptive phrase",
+            "ur": "غیر عاقل جمع + واحد مؤنث صفت؛ کسی لفظ پر ال نہیں، اس لیے یہ وصفی ترکیب کے طور پر مطابق ہیں"
+          },
+          {
+            "en": "human plural + plural adjective; the cups are honored",
+            "ur": "عاقل جمع + جمع صفت؛ پیالے عزت والے ہیں"
+          },
+          {
+            "en": "non-human plural + feminine plural descriptor, like مَطْوِيَّاتٌ",
+            "ur": "غیر عاقل جمع + جمع مؤنث صفت، مَطْوِيَّاتٌ کی طرح"
+          },
+          {
+            "en": "a singular noun with a singular adjective: one cup put in place",
+            "ur": "واحد اسم واحد صفت کے ساتھ: ایک رکھا ہوا پیالہ"
+          }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 14 — describing plurals",
+      "ur": "باب 14 — جمع کی صفت"
+    },
+    "ayah": {
+      "surah": 21,
+      "ayah": 26,
+      "label": "Al-Anbiya 21:26",
+      "ar": "بَلْ عِبَادٌ مُّكْرَمُونَ",
+      "en": "Rather, they are honored servants.",
+      "ur": "بلکہ وہ عزت والے بندے ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/021026.mp3"
+    },
+    "highlighted_word_indices": [
+      2
+    ],
+    "highlighted_words": [
+      "مُكْرَمُونَ"
+    ],
+    "noor_explanation": {
+      "en": "مُكْرَمُونَ: the plural adjective that opened this chapter, describing the human plural عِبَادٌ. You can now choose between a plural adjective and the feminine singular default, tell a phrase from a sentence, and recognise مَطْوِيَّاتٌ as an attested variation.",
+      "ur": "مُكْرَمُونَ: وہ جمع صفت جس سے یہ باب شروع ہوا، عاقل جمع عِبَادٌ کی صفت۔ اب آپ جمع صفت اور واحد مؤنث کے بنیادی قاعدے میں انتخاب کر سکتے ہیں، ترکیب کو جملے سے الگ کر سکتے ہیں، اور مَطْوِيَّاتٌ کو موجود مختلف صورت کے طور پر پہچان سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 14 complete. You describe the plurals this chapter taught: people with plural adjectives, things with the feminine singular default, and the ال test to read phrase or sentence. Chapter 15 turns to هَؤُلَاءِ and أُولَئِكَ, pointing at groups.",
+      "ur": "باب 14 مکمل۔ آپ اس باب کی سکھائی ہوئی جمعوں کی صفت بیان کرتے ہیں: لوگ جمع صفت کے ساتھ، چیزیں واحد مؤنث کے بنیادی قاعدے کے ساتھ، اور ترکیب یا جملہ پڑھنے کے لیے ال کی جانچ۔ باب 15 هَؤُلَاءِ اور أُولَئِكَ کی طرف مڑتا ہے، گروہوں کی طرف اشارہ۔"
+    }
+  }
+}

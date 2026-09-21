@@ -113,7 +113,9 @@ const ch14L01Content     = require("./fixtures/chapter-14-lesson-01.json");
 const ch14L02Content     = require("./fixtures/chapter-14-lesson-02.json");
 const ch14L03Content     = require("./fixtures/chapter-14-lesson-03.json");
 const ch14L04Content     = require("./fixtures/chapter-14-lesson-04.json");
-const ch14L05Content     = require("./fixtures/chapter-14-lesson-05.json");
+const ch14L06Content     = require("./fixtures/chapter-14-lesson-05-quranic-agreement.json"); // ch14-l06, order 5
+const ch14L05Content     = require("./fixtures/chapter-14-lesson-06-review.json");            // ch14-l05, review, order 6
+const ch14TestContent    = require("./fixtures/chapter-14-lesson-07-final-test.json");        // ch14-test, order 7
 const ch15L01Content     = require("./fixtures/chapter-15-lesson-01.json");
 const ch15L02Content     = require("./fixtures/chapter-15-lesson-02.json");
 const ch15L03Content     = require("./fixtures/chapter-15-lesson-03.json");
@@ -855,12 +857,16 @@ async function main() {
     { id: "ch13-l04",  chapterId: ch13Id, order: 4, title: "Plural Reading Lab",                         titleAr: "مُخْتَبَرُ قِرَاءَةِ الْجُمُوعِ",              template: "STANDARD", xpReward: ch13L04Content._meta?.xp_reward  ?? 10, content: ch13L04Content },
     { id: "ch13-l05",  chapterId: ch13Id, order: 5, title: "Chapter 13 Review",                          titleAr: "مُرَاجَعَةُ الْفَصْلِ الثَّالِثَ عَشَرَ",       template: "REVIEW",   xpReward: ch13L05Content._meta?.xp_reward  ?? 20, content: ch13L05Content },
     { id: "ch13-test", chapterId: ch13Id, order: 6, title: "Chapter 13 Final Test",                      titleAr: "اخْتِبَارُ الْفَصْلِ الثَّالِثَ عَشَرَ",        template: "REVIEW",   xpReward: ch13TestContent._meta?.xp_reward ?? 20, content: ch13TestContent },
-    // Chapter 14
-    { id: "ch14-l01", chapterId: ch14Id, order: 1, title: "Adjectives with Human Plurals",           titleAr: "الصِّفَة مَعَ الْجَمْعِ الْعَاقِل",        template: "STANDARD",        xpReward: ch14L01Content._meta?.xp_reward       ?? 10, content: ch14L01Content },
-    { id: "ch14-l02", chapterId: ch14Id, order: 2, title: "The Non-Human Plural Rule",               titleAr: "جَمْعُ غَيْرِ الْعَاقِل + الصِّفَة الْمُفْرَدَة الْمُؤَنَّثَة", template: "STANDARD", xpReward: ch14L02Content._meta?.xp_reward ?? 10, content: ch14L02Content },
-    { id: "ch14-l03", chapterId: ch14Id, order: 3, title: "Non-Human Plurals in the Quran",          titleAr: "جَمْعُ غَيْرِ الْعَاقِل فِي الْقُرْآن",   template: "STANDARD",        xpReward: ch14L03Content._meta?.xp_reward       ?? 10, content: ch14L03Content },
-    { id: "ch14-l04", chapterId: ch14Id, order: 4, title: "Human vs Non-Human: Spotting the Diff",   titleAr: "الْعَاقِل وَغَيْرُ الْعَاقِل — الْفَرْق", template: "STANDARD",        xpReward: ch14L04Content._meta?.xp_reward       ?? 10, content: ch14L04Content },
-    { id: "ch14-l05", chapterId: ch14Id, order: 5, title: "Chapter 14 Review — Plural Agreement",    titleAr: "مُرَاجَعَة — الصِّفَة مَعَ الْجَمْع",     template: "REVIEW",          xpReward: ch14L05Content._meta?.xp_reward       ?? 10, content: ch14L05Content },
+    // Chapter 14 — Docs/proposals/chapter-14-content-proposal.md. ch14-l01..l04
+    // keep their IDs and display orders; the review ch14-l05 keeps its ID but moves
+    // to display order 6; ch14-l06 (order 5) and ch14-test (order 7) are new rows.
+    { id: "ch14-l01",  chapterId: ch14Id, order: 1, title: "Human Plurals and Plural Adjectives",             titleAr: "جَمْعُ الْعَاقِلِ وَصِفَتُهُ الْجَمْعُ",          template: "STANDARD", xpReward: ch14L01Content._meta?.xp_reward  ?? 10, content: ch14L01Content },
+    { id: "ch14-l02",  chapterId: ch14Id, order: 2, title: "Non-Human Plurals: The Feminine-Singular Default", titleAr: "جَمْعُ غَيْرِ الْعَاقِلِ وَالْمُفْرَدُ الْمُؤَنَّثُ", template: "STANDARD", xpReward: ch14L02Content._meta?.xp_reward  ?? 10, content: ch14L02Content },
+    { id: "ch14-l03",  chapterId: ch14Id, order: 3, title: "Descriptive Phrase or Complete Sentence?",         titleAr: "تَرْكِيبٌ أَمْ جُمْلَةٌ؟",                       template: "STANDARD", xpReward: ch14L03Content._meta?.xp_reward  ?? 10, content: ch14L03Content },
+    { id: "ch14-l04",  chapterId: ch14Id, order: 4, title: "Human or Non-Human? Choosing the Agreement",       titleAr: "عَاقِلٌ أَمْ غَيْرُ عَاقِلٍ؟",                   template: "STANDARD", xpReward: ch14L04Content._meta?.xp_reward  ?? 10, content: ch14L04Content },
+    { id: "ch14-l06",  chapterId: ch14Id, order: 5, title: "Quranic Agreement: Default Pattern and Variation", titleAr: "الْمُطَابَقَةُ فِي الْقُرْآنِ",                    template: "STANDARD", xpReward: ch14L06Content._meta?.xp_reward  ?? 10, content: ch14L06Content },
+    { id: "ch14-l05",  chapterId: ch14Id, order: 6, title: "Chapter 14 Review",                                titleAr: "مُرَاجَعَةُ الْفَصْلِ الرَّابِعَ عَشَرَ",         template: "REVIEW",   xpReward: ch14L05Content._meta?.xp_reward  ?? 20, content: ch14L05Content },
+    { id: "ch14-test", chapterId: ch14Id, order: 7, title: "Chapter 14 Final Test",                            titleAr: "اخْتِبَارُ الْفَصْلِ الرَّابِعَ عَشَرَ",          template: "REVIEW",   xpReward: ch14TestContent._meta?.xp_reward ?? 20, content: ch14TestContent },
     // Chapter 15
     { id: "ch15-l01", chapterId: ch15Id, order: 1, title: "هَؤُلَاءِ — These (Near)",              titleAr: "هَؤُلَاءِ — هَذِهِ لِلْجَمَاعَة",          template: "STANDARD",        xpReward: ch15L01Content._meta?.xp_reward       ?? 10, content: ch15L01Content },
     { id: "ch15-l02", chapterId: ch15Id, order: 2, title: "أُولَٰئِكَ — Those (Far)",               titleAr: "أُولَٰئِكَ — تِلْكَ لِلْجَمَاعَة",          template: "STANDARD",        xpReward: ch15L02Content._meta?.xp_reward       ?? 10, content: ch15L02Content },

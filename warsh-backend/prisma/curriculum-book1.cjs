@@ -582,32 +582,44 @@ const specs = [
   },
 
   // ── Ch14 ── Describing Plurals ────────────────────────────────────────────
+  // Docs/proposals/chapter-14-content-proposal.md (2026-09-21): human plurals
+  // take plural adjectives (Al-Anbiya 21:26, مُكْرَمُونَ); non-human plurals take
+  // the feminine-singular beginner default (Al-Ghashiyah 88:13, مَرْفُوعَةٌ);
+  // descriptive phrase versus nominal sentence (88:14, مَوْضُوعَةٌ); classify the
+  // noun before choosing (88:15, مَصْفُوفَةٌ); and Az-Zumar 39:67 مَطْوِيَّاتٌ taught
+  // accurately as an attested feminine-plural variation. Full case theory, verb
+  // agreement and number grammar are out of scope.
   {
     order: 14,
-    sourceFile: "reader_lecture_14_wasf_jama.md",
+    // The former reader_lecture_14_wasf_jama.md never existed in the
+    // repository; the approved proposal is the content specification.
+    sourceFile: "Docs/proposals/chapter-14-content-proposal.md",
     title: "Describing Plurals",
-    titleAr: "وَصْف الْجَمْع",
-    description: "Adjective agreement with plural nouns — and the important rule for non-human plurals.",
-    hook: { ayahAr: "وَالْمُؤْمِنُونَ وَالْمُؤْمِنَاتُ بَعْضُهُمْ أَوْلِيَاءُ بَعْضٍ", ayahRef: "At-Tawbah 9:71", highlightedWord: "الْمُؤْمِنُونَ" },
+    titleUr: "جمع کی صفت",
+    titleAr: "وَصْفُ الْجُمُوعِ",
+    description: "Adjective agreement with plural nouns: plural adjectives for human plurals, the feminine-singular default for non-human plurals, phrase versus sentence, and one attested Quranic variation.",
+    descriptionUr: "جمع اسم کے ساتھ صفت کی مطابقت: عاقل جمع کے لیے جمع صفت، غیر عاقل جمع کے لیے واحد مؤنث کا بنیادی قاعدہ، ترکیب یا جملہ، اور قرآن میں موجود ایک مختلف صورت۔",
+    hook: { ayahAr: "بَلْ عِبَادٌ مُّكْرَمُونَ", ayahRef: "Al-Anbiya 21:26", highlightedWord: "مُّكْرَمُونَ" },
     examples: [
-      card("الطُّلَّابُ الْمُجْتَهِدُونَ نَجَحُوا", "The hardworking students succeeded", "at-tullaabul-mujtahidoona najahhoo"),
-      card("الطَّالِبَاتُ الْمُجْتَهِدَاتُ نَجَحْنَ", "The hardworking female students succeeded", "at-taalibaatul-mujtahidaatu najahhna"),
-      card("الْكُتُبُ الْجَدِيدَةُ عَلَى الْمَكْتَبِ", "The new books are on the desk", "al-kutubu al-jadeeda alal-maktab"),
-      card("الْمَسَاجِدُ الْكَبِيرَةُ جَمِيلَةٌ", "The large mosques are beautiful", "al-masaajidu al-kabeera jameela"),
+      card("الطُّلَّابُ الْمُجْتَهِدُونَ", "the hardworking students", "aṭ-ṭullābu l-mujtahidūna"),
+      card("الطَّالِبَاتُ الْمُجْتَهِدَاتُ", "the hardworking female students", "aṭ-ṭālibātu l-mujtahidātu"),
+      card("الْكُتُبُ الْجَدِيدَةُ", "the new books", "al-kutubu l-jadīdatu"),
+      card("الْمَسَاجِدُ كَبِيرَةٌ", "The mosques are large.", "al-masājidu kabīratun"),
     ],
-    parseText: "الْكُتُبُ الْجَدِيدَةُ عَلَى الْمَكْتَبِ",
-    parseTokens: [token("الْكُتُبُ", "مبتدأ", "the books"), token("الْجَدِيدَةُ", "نعت", "new"), token("عَلَى", "حرف جر", "on"), token("الْمَكْتَبِ", "مضاف إليه", "the desk")],
-    conversation: ["كَيْفَ الطُّلَّابُ؟", "الطُّلَّابُ مُجْتَهِدُونَ وَنَاجِحُونَ"],
-    conversationDistractor: "الطَّالِبَاتُ الْمُجْتَهِدَاتُ",
-    distractor: "broken plurals of books and houses",
-    blankDistractor: "كَبِيرُونَ",
-    noorTip: "الْمُؤْمِنُونَ وَالْمُؤْمِنَاتُ — two sound plurals paired together as a community of believers.",
-    noorTipUr: "الْمُؤْمِنُونَ وَالْمُؤْمِنَاتُ — مرد اور عورت مؤمنین ایک دوسرے کے دوست ہیں — جمع مذکر اور مؤنث کا جوڑا۔",
+    parseText: "الْكُتُبُ جَدِيدَةٌ",
+    parseTokens: [token("الْكُتُبُ", "مبتدأ", "the books"), token("جَدِيدَةٌ", "خبر", "new")],
+    conversation: ["كَيْفَ الطُّلَّابُ؟", "الطُّلَّابُ مُجْتَهِدُونَ"],
+    conversationDistractor: "الْكُتُبُ جَدِيدَةٌ",
+    distractor: "The houses are large.",
+    blankDistractor: "الْجَدِيدَةُ",
+    noorTip: "عِبَادٌ refers to human beings, so its adjective مُكْرَمُونَ is plural. سُرُرٌ in Al-Ghashiyah 88:13 does not, so its adjective مَرْفُوعَةٌ is feminine singular: ask what the plural refers to before you choose.",
+    noorTipUr: "عِبَادٌ انسانوں کے لیے ہے، اس لیے اس کی صفت مُكْرَمُونَ جمع ہے۔ الغاشیہ 88:13 میں سُرُرٌ انسانوں کے لیے نہیں، اس لیے اس کی صفت مَرْفُوعَةٌ واحد مؤنث ہے: چننے سے پہلے پوچھیں کہ جمع کس کے لیے ہے۔",
     focuses: [
-      { title: "Human Plural + Plural Adjective", titleAr: "جَمْع الْعَاقِل + صِفَة جَمْع", grammarTerm: "نعت جمع", reveal: "Human plurals take plural adjectives — الطُّلَّابُ الْمُجْتَهِدُونَ (the hardworking students).", hookQuestion: "Why does مُجْتَهِدُونَ end in ون when describing الطُّلَّاب?" },
-      { title: "Feminine Human Plural", titleAr: "جَمْع مُؤَنَّث + صِفَة مُؤَنَّثَة جَمْع", grammarTerm: "نعت جمع مؤنث", reveal: "Feminine human plurals take feminine plural adjectives — الطَّالِبَاتُ الْمُجْتَهِدَاتُ.", hookQuestion: "How does the adjective change from مُجْتَهِدُونَ to مُجْتَهِدَاتٌ?" },
-      { title: "Non-Human Plural — Feminine Singular Adjective", titleAr: "جَمْع غَيْر الْعَاقِل + صِفَة مُفْرَدَة مُؤَنَّثَة", grammarTerm: "قاعدة غير العاقل", reveal: "This is a critical Arabic rule — non-human broken plurals take a FEMININE SINGULAR adjective: الْكُتُبُ الْجَدِيدَةُ (not الجديدون).", hookQuestion: "Why is الْجَدِيدَةُ feminine singular when describing الْكُتُبُ (plural)?" },
-      { title: "Mosques Are Beautiful", titleAr: "الْمَسَاجِدُ الْكَبِيرَةُ جَمِيلَةٌ", grammarTerm: "تطبيق قاعدة غير العاقل", reveal: "You applied the non-human plural rule to mosques — الْمَسَاجِدُ takes الْكَبِيرَةُ (feminine singular), not الكَبِيرُونَ.", hookQuestion: "Would الْأَقْلَامُ (pens) take a masculine plural or feminine singular adjective?" },
+      { title: "Human Plurals and Plural Adjectives", titleAr: "جَمْعُ الْعَاقِلِ وَصِفَتُهُ الْجَمْعُ", grammarTerm: "نعت الجمع العاقل", reveal: "A human plural takes a plural adjective matching gender and ال: الطُّلَّابُ الْمُجْتَهِدُونَ, الطَّالِبَاتُ الْمُجْتَهِدَاتُ, and the broken-plural adjective كِرَامٌ. In Al-Anbiya 21:26 عِبَادٌ takes مُكْرَمُونَ.", hookQuestion: "Which word in بَلْ عِبَادٌ مُكْرَمُونَ describes the servants?" },
+      { title: "Non-Human Plurals: The Feminine-Singular Default", titleAr: "جَمْعُ غَيْرِ الْعَاقِلِ وَالْمُفْرَدُ الْمُؤَنَّثُ", grammarTerm: "قاعدة غير العاقل", reveal: "A plural that does not refer to human beings commonly takes a feminine singular adjective: الْكُتُبُ الْجَدِيدَةُ, الْبُيُوتُ الْكَبِيرَةُ. Al-Ghashiyah 88:13 shows سُرُرٌ مَرْفُوعَةٌ. A beginner default, not an exceptionless law.", hookQuestion: "Why is الْجَدِيدَةُ feminine singular when الْكُتُبُ is plural?" },
+      { title: "Descriptive Phrase or Complete Sentence?", titleAr: "تَرْكِيبٌ أَمْ جُمْلَةٌ؟", grammarTerm: "النعت والخبر", reveal: "ال on both words makes a phrase, الْكُتُبُ الْجَدِيدَةُ; ال on the noun alone makes a sentence, الْكُتُبُ جَدِيدَةٌ. Al-Ghashiyah 88:14 أَكْوَابٌ مَوْضُوعَةٌ matches indefinite with indefinite.", hookQuestion: "What changes between الْكُتُبُ الْجَدِيدَةُ and الْكُتُبُ جَدِيدَةٌ?" },
+      { title: "Human or Non-Human? Choosing the Agreement", titleAr: "عَاقِلٌ أَمْ غَيْرُ عَاقِلٍ؟", grammarTerm: "تصنيف الجمع", reveal: "Ask what the plural refers to, then choose: عِبَادٌ مُكْرَمُونَ for people, نَمَارِقُ مَصْفُوفَةٌ (88:15) for things. Neither the noun shape nor the adjective ending decides on its own.", hookQuestion: "Both عِبَادٌ and سُرُرٌ are broken plurals — why do their adjectives differ?" },
+      { title: "Quranic Agreement: Default Pattern and Variation", titleAr: "الْمُطَابَقَةُ فِي الْقُرْآنِ", grammarTerm: "مطابقة الصفة", reveal: "Al-Ghashiyah 88:13–16 shows the default four times. Az-Zumar 39:67 وَالسَّمَاوَاتُ مَطْوِيَّاتٌ shows a feminine plural: an attested variation to recognise, while the default stays for your own phrases.", hookQuestion: "What form is مَطْوِيَّاتٌ in وَالسَّمَاوَاتُ مَطْوِيَّاتٌ بِيَمِينِهِ?" },
     ],
   },
 

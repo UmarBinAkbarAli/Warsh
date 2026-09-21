@@ -1,0 +1,717 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 14, display lesson 6 — database id ch14-l05 (the existing review, moved from display order 5 to 6 with its id kept so learner progress stays attached). Chapter review across the taught skills: human masculine and feminine plural agreement, كِرَامٌ as a broken-plural adjective, the non-human feminine-singular default, definite phrase versus indefinite predicate, human/non-human classification, the Al-Ghashiyah 88:13 target, and مَطْوِيَّاتٌ as a feminine-plural Quranic variation. No new grammar; the close says the learner can handle the chapter's taught patterns, not any plural. Rebuilt 2026-09-21 from Docs/proposals/chapter-14-content-proposal.md.",
+    "titleUr": "باب 14 کا مراجعہ",
+    "chapter_order": 14,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 88,
+      "ayah": 13,
+      "label": "Al-Ghashiyah 88:13",
+      "ar": "فِيهَا سُرُرٌ مَّرْفُوعَةٌ",
+      "en": "Within it are couches raised high.",
+      "ur": "اس میں اونچے تخت ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088013.mp3"
+    },
+    "noor_intro": {
+      "en": "Five lessons, two agreement patterns, one ال test, five Quranic phrases. This review mixes them all before the chapter test: people, things, phrase or sentence, and the one form that differs.",
+      "ur": "پانچ سبق، مطابقت کے دو پیٹرن، ال کی ایک جانچ، پانچ قرآنی ترکیبیں۔ یہ مراجعہ باب کے امتحان سے پہلے ان سب کو ملاتا ہے: لوگ، چیزیں، ترکیب یا جملہ، اور وہ ایک شکل جو مختلف ہے۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Describing plurals: the map",
+        "ar": "عَاقِلٌ أَمْ غَيْرُ عَاقِلٍ؟",
+        "ur": "جمع کی صفت: نقشہ"
+      },
+      "explanation": {
+        "en": "Ask what the plural refers to. Human beings: a plural adjective, matching gender and ال. Not human beings: the feminine singular default. Then check ال to see whether you have a phrase or a sentence.",
+        "ur": "پوچھیں جمع کس کے لیے ہے۔ انسان: جمع صفت، جنس اور ال میں مطابق۔ انسان نہیں: واحد مؤنث کا بنیادی قاعدہ۔ پھر ال دیکھیں کہ ترکیب ہے یا جملہ۔"
+      },
+      "examples": [
+        {
+          "ar": "الطُّلَّابُ الْمُجْتَهِدُونَ",
+          "ar_plain": "الطلاب المجتهدون",
+          "translit": "aṭ-ṭullābu l-mujtahidūna",
+          "en": "the hardworking students",
+          "ur": "محنتی طلبہ"
+        },
+        {
+          "ar": "الْكُتُبُ الْجَدِيدَةُ",
+          "ar_plain": "الكتب الجديدة",
+          "translit": "al-kutubu l-jadīdatu",
+          "en": "the new books",
+          "ur": "نئی کتابیں"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Human plurals: masculine and feminine",
+        "ar": "الطُّلَّابُ الْمُجْتَهِدُونَ / الطَّالِبَاتُ الْمُجْتَهِدَاتُ",
+        "ur": "عاقل جمع: مذکر اور مؤنث"
+      },
+      "explanation": {
+        "en": "Lesson 1. A masculine human plural takes مُجْتَهِدُونَ; a feminine human plural takes مُجْتَهِدَاتٌ. Both adjectives are plural because both nouns refer to people.",
+        "ur": "سبق 1۔ مذکر عاقل جمع مُجْتَهِدُونَ لیتی ہے؛ مؤنث عاقل جمع مُجْتَهِدَاتٌ۔ دونوں صفتیں جمع ہیں کیونکہ دونوں اسم لوگوں کے لیے ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "الطُّلَّابُ الْمُجْتَهِدُونَ",
+          "ar_plain": "الطلاب المجتهدون",
+          "translit": "aṭ-ṭullābu l-mujtahidūna",
+          "en": "the hardworking students",
+          "ur": "محنتی طلبہ"
+        },
+        {
+          "ar": "الطَّالِبَاتُ الْمُجْتَهِدَاتُ",
+          "ar_plain": "الطالبات المجتهدات",
+          "translit": "aṭ-ṭālibātu l-mujtahidātu",
+          "en": "the hardworking female students",
+          "ur": "محنتی طالبات"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A plural adjective by ending, or by broken shape",
+        "ar": "مُسْلِمُونَ صَالِحُونَ / مُسْلِمُونَ كِرَامٌ",
+        "ur": "جمع صفت آخر سے، یا مکسر شکل سے"
+      },
+      "explanation": {
+        "en": "Lesson 1. صَالِحُونَ is plural by its ending; كِرَامٌ is plural by its broken shape, the plural of كَرِيمٌ. Both describe the human plural مُسْلِمُونَ.",
+        "ur": "سبق 1۔ صَالِحُونَ اپنے آخر سے جمع ہے؛ كِرَامٌ اپنی مکسر شکل سے جمع ہے، كَرِيمٌ کی جمع۔ دونوں عاقل جمع مُسْلِمُونَ کی صفت ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "مُؤْمِنُونَ صَالِحُونَ",
+          "ar_plain": "مؤمنون صالحون",
+          "translit": "muʾminūna ṣāliḥūna",
+          "en": "righteous believers",
+          "ur": "نیک مؤمن مرد"
+        },
+        {
+          "ar": "مُسْلِمُونَ كِرَامٌ",
+          "ar_plain": "مسلمون كرام",
+          "translit": "muslimūna kirāmun",
+          "en": "honourable Muslims",
+          "ur": "معزز مسلمان"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Non-human plurals: the default",
+        "ar": "الْكُتُبُ الْجَدِيدَةُ / الْبُيُوتُ الْكَبِيرَةُ",
+        "ur": "غیر عاقل جمع: بنیادی قاعدہ"
+      },
+      "explanation": {
+        "en": "Lesson 2. Books and houses are not people, so the adjective is feminine singular: الْجَدِيدَةُ, الْكَبِيرَةُ. A strong default for your own phrases, not a claim about every construction.",
+        "ur": "سبق 2۔ کتابیں اور گھر لوگ نہیں، اس لیے صفت واحد مؤنث ہے: الْجَدِيدَةُ، الْكَبِيرَةُ۔ آپ کی اپنی ترکیبوں کے لیے مضبوط بنیادی قاعدہ، ہر ترکیب کا دعویٰ نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "الْكُتُبُ الْجَدِيدَةُ",
+          "ar_plain": "الكتب الجديدة",
+          "translit": "al-kutubu l-jadīdatu",
+          "en": "the new books",
+          "ur": "نئی کتابیں"
+        },
+        {
+          "ar": "الْبُيُوتُ الْكَبِيرَةُ",
+          "ar_plain": "البيوت الكبيرة",
+          "translit": "al-buyūtu l-kabīratu",
+          "en": "the large houses",
+          "ur": "بڑے گھر"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Phrase or sentence",
+        "ar": "الْكُتُبُ الْجَدِيدَةُ / الْكُتُبُ جَدِيدَةٌ",
+        "ur": "ترکیب یا جملہ"
+      },
+      "explanation": {
+        "en": "Lesson 3. ال on both words: the new books, a phrase. ال on the noun alone: the books are new, a sentence. The agreement does not change.",
+        "ur": "سبق 3۔ دونوں لفظوں پر ال: نئی کتابیں، ترکیب۔ صرف اسم پر ال: کتابیں نئی ہیں، جملہ۔ مطابقت نہیں بدلتی۔"
+      },
+      "examples": [
+        {
+          "ar": "الْكُتُبُ الْجَدِيدَةُ",
+          "ar_plain": "الكتب الجديدة",
+          "translit": "al-kutubu l-jadīdatu",
+          "en": "the new books",
+          "ur": "نئی کتابیں"
+        },
+        {
+          "ar": "الْكُتُبُ جَدِيدَةٌ",
+          "ar_plain": "الكتب جديدة",
+          "translit": "al-kutubu jadīdatun",
+          "en": "The books are new.",
+          "ur": "کتابیں نئی ہیں۔"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Classify first",
+        "ar": "عِبَادٌ مُكْرَمُونَ / سُرُرٌ مَرْفُوعَةٌ",
+        "ur": "پہلے درجہ بندی"
+      },
+      "explanation": {
+        "en": "Lesson 4. Two broken plurals from the Quran. عِبَادٌ refers to people, so مُكْرَمُونَ is plural; سُرُرٌ refers to couches, so مَرْفُوعَةٌ is feminine singular. Meaning decides, not the noun's shape or the adjective's ending.",
+        "ur": "سبق 4۔ قرآن کی دو جمع مکسر۔ عِبَادٌ لوگوں کے لیے ہے، اس لیے مُكْرَمُونَ جمع ہے؛ سُرُرٌ تختوں کے لیے ہے، اس لیے مَرْفُوعَةٌ واحد مؤنث۔ معنی فیصلہ کرتا ہے، اسم کی شکل یا صفت کا آخر نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "عِبَادٌ مُكْرَمُونَ",
+          "ar_plain": "عباد مكرمون",
+          "translit": "ʿibādun mukramūna",
+          "en": "honored servants",
+          "ur": "عزت والے بندے"
+        },
+        {
+          "ar": "سُرُرٌ مَرْفُوعَةٌ",
+          "ar_plain": "سرر مرفوعة",
+          "translit": "sururun marfūʿatun",
+          "en": "raised couches",
+          "ur": "اونچے تخت"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Default and variation",
+        "ar": "سُرُرٌ مَرْفُوعَةٌ / السَّمَاوَاتُ مَطْوِيَّاتٌ",
+        "ur": "بنیادی قاعدہ اور مختلف صورت"
+      },
+      "explanation": {
+        "en": "Lesson 5. Al-Ghashiyah shows the default four times. Az-Zumar 39:67 shows مَطْوِيَّاتٌ, a feminine plural describing السَّمَاوَاتُ: an attested variation you recognise, while you keep the default in your own phrases.",
+        "ur": "سبق 5۔ الغاشیہ بنیادی قاعدہ چار بار دکھاتی ہے۔ الزمر 39:67 مَطْوِيَّاتٌ دکھاتی ہے، السَّمَاوَاتُ کی صفت جمع مؤنث: ایک موجود مختلف صورت جسے آپ پہچانتے ہیں، جبکہ اپنی ترکیبوں میں بنیادی قاعدہ رکھتے ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "سُرُرٌ مَرْفُوعَةٌ",
+          "ar_plain": "سرر مرفوعة",
+          "translit": "sururun marfūʿatun",
+          "en": "raised couches",
+          "ur": "اونچے تخت"
+        },
+        {
+          "ar": "السَّمَاوَاتُ مَطْوِيَّاتٌ",
+          "ar_plain": "السماوات مطويات",
+          "translit": "as-samāwātu maṭwiyyātun",
+          "en": "the heavens are folded",
+          "ur": "آسمان لپٹے ہوئے ہیں"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "مَرْفُوعَةٌ",
+        "ar_plain": "مرفوعة",
+        "translit": "marfūʿatun",
+        "en": "raised high (feminine singular)",
+        "ur": "اونچے کیے ہوئے (واحد مؤنث)"
+      },
+      "explanation": {
+        "en": "One more time: سُرُرٌ, couches, is a non-human plural; مَرْفُوعَةٌ is its feminine singular descriptor; neither word carries ال, so they match as a phrase.",
+        "ur": "ایک بار پھر: سُرُرٌ، تخت، غیر عاقل جمع ہے؛ مَرْفُوعَةٌ اس کی واحد مؤنث صفت؛ کسی لفظ پر ال نہیں، اس لیے یہ ترکیب کے طور پر مطابق ہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088013.mp3",
+      "examples": [
+        {
+          "ar": "فِيهَا سُرُرٌ مَّرْفُوعَةٌ",
+          "ar_plain": "فيها سرر مرفوعة",
+          "translit": "fīhā sururun marfūʿatun",
+          "en": "Within it are couches raised high.",
+          "ur": "اس میں اونچے تخت ہیں۔"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch14-l05-ex01",
+      "prompt": {
+        "ar": "الطُّلَّابُ الْمُجْتَهِدُونَ",
+        "ar_plain": "الطلاب المجتهدون",
+        "translit": "aṭ-ṭullābu l-mujtahidūna",
+        "en": "the hardworking students",
+        "ur": "محنتی طلبہ"
+      },
+      "options": [
+        {
+          "en": "the hardworking students",
+          "ur": "محنتی طلبہ"
+        },
+        {
+          "en": "The students are hardworking.",
+          "ur": "طلبہ محنتی ہیں۔"
+        },
+        {
+          "en": "the hardworking female students",
+          "ur": "محنتی طالبات"
+        },
+        {
+          "en": "a hardworking student",
+          "ur": "ایک محنتی طالب علم"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Human plural, plural adjective, ال on both words: the hardworking students, one phrase.",
+        "ur": "عاقل جمع، جمع صفت، دونوں لفظوں پر ال: محنتی طلبہ، ایک ترکیب۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch14-l05-ex02",
+      "mode": "TAP",
+      "sentence_ar": "الطَّالِبَاتُ ___",
+      "hint": {
+        "en": "the hardworking female students",
+        "ur": "محنتی طالبات"
+      },
+      "options": [
+        {
+          "ar": "الْمُجْتَهِدَاتُ",
+          "ar_plain": "المجتهدات",
+          "translit": "al-mujtahidātu",
+          "en": "the hardworking (feminine plural)",
+          "ur": "محنتی (جمع مؤنث، ال کے ساتھ)"
+        },
+        {
+          "ar": "الْمُجْتَهِدُونَ",
+          "ar_plain": "المجتهدون",
+          "translit": "al-mujtahidūna",
+          "en": "the hardworking (masculine plural)",
+          "ur": "محنتی (جمع مذکر، ال کے ساتھ)"
+        },
+        {
+          "ar": "الْمُجْتَهِدَةُ",
+          "ar_plain": "المجتهدة",
+          "translit": "al-mujtahidatu",
+          "en": "the hardworking (one woman)",
+          "ur": "محنتی (ایک عورت، ال کے ساتھ)"
+        },
+        {
+          "ar": "الْكَبِيرَةُ",
+          "ar_plain": "الكبيرة",
+          "translit": "al-kabīratu",
+          "en": "the large (feminine singular)",
+          "ur": "بڑی (واحد مؤنث، ال کے ساتھ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الْمُجْتَهِدَاتُ",
+        "ar_plain": "المجتهدات",
+        "translit": "al-mujtahidātu",
+        "en": "the hardworking (feminine plural)",
+        "ur": "محنتی (جمع مؤنث، ال کے ساتھ)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A feminine human plural takes the feminine plural adjective with ال: الطَّالِبَاتُ الْمُجْتَهِدَاتُ.",
+        "ur": "مؤنث عاقل جمع ال کے ساتھ جمع مؤنث صفت لیتی ہے: الطَّالِبَاتُ الْمُجْتَهِدَاتُ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch14-l05-ex03",
+      "prompt": {
+        "ar": "الْمُسْلِمُونَ الْكِرَامُ",
+        "ar_plain": "المسلمون الكرام",
+        "translit": "al-muslimūna l-kirāmu",
+        "en": "the honourable Muslims",
+        "ur": "معزز مسلمان"
+      },
+      "options": [
+        {
+          "en": "the honourable Muslims",
+          "ur": "معزز مسلمان"
+        },
+        {
+          "en": "the honourable Muslim (one man)",
+          "ur": "معزز مسلمان (ایک مرد)"
+        },
+        {
+          "en": "The Muslims are honourable.",
+          "ur": "مسلمان معزز ہیں۔"
+        },
+        {
+          "en": "the large mosques",
+          "ur": "بڑی مسجدیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كِرَامٌ is the broken plural of كَرِيمٌ, and with ال on both words the phrase is the honourable Muslims.",
+        "ur": "كِرَامٌ كَرِيمٌ کی جمع مکسر ہے، اور دونوں لفظوں پر ال کے ساتھ ترکیب معزز مسلمان ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch14-l05-ex04",
+      "mode": "TAP",
+      "sentence_ar": "الْكُتُبُ ___",
+      "hint": {
+        "en": "the new books",
+        "ur": "نئی کتابیں"
+      },
+      "options": [
+        {
+          "ar": "الْجَدِيدَةُ",
+          "ar_plain": "الجديدة",
+          "translit": "al-jadīdatu",
+          "en": "the new (feminine singular)",
+          "ur": "نئی (واحد مؤنث، ال کے ساتھ)"
+        },
+        {
+          "ar": "الْجَدِيدُونَ",
+          "ar_plain": "الجديدون",
+          "translit": "al-jadīdūna",
+          "en": "the new (masculine plural)",
+          "ur": "نئے (جمع مذکر، ال کے ساتھ)"
+        },
+        {
+          "ar": "الْجَدِيدُ",
+          "ar_plain": "الجديد",
+          "translit": "al-jadīdu",
+          "en": "the new (masculine singular)",
+          "ur": "نیا (واحد مذکر، ال کے ساتھ)"
+        },
+        {
+          "ar": "جَدِيدَةٌ",
+          "ar_plain": "جديدة",
+          "translit": "jadīdatun",
+          "en": "new (feminine singular)",
+          "ur": "نئی (واحد مؤنث)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الْجَدِيدَةُ",
+        "ar_plain": "الجديدة",
+        "translit": "al-jadīdatu",
+        "en": "the new (feminine singular)",
+        "ur": "نئی (واحد مؤنث، ال کے ساتھ)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Books are a non-human plural, so the default feminine singular applies, with ال for the phrase: الْكُتُبُ الْجَدِيدَةُ.",
+        "ur": "کتابیں غیر عاقل جمع ہیں، اس لیے بنیادی واحد مؤنث لگتا ہے، ترکیب کے لیے ال کے ساتھ: الْكُتُبُ الْجَدِيدَةُ۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch14-l05-ex05",
+      "left_column": [
+        {
+          "ar": "الْكُتُبُ الْجَدِيدَةُ",
+          "ar_plain": "الكتب الجديدة",
+          "translit": "al-kutubu l-jadīdatu",
+          "en": "the new books",
+          "ur": "نئی کتابیں"
+        },
+        {
+          "ar": "الْكُتُبُ جَدِيدَةٌ",
+          "ar_plain": "الكتب جديدة",
+          "translit": "al-kutubu jadīdatun",
+          "en": "The books are new.",
+          "ur": "کتابیں نئی ہیں۔"
+        },
+        {
+          "ar": "الْمَسَاجِدُ الْكَبِيرَةُ",
+          "ar_plain": "المساجد الكبيرة",
+          "translit": "al-masājidu l-kabīratu",
+          "en": "the large mosques",
+          "ur": "بڑی مسجدیں"
+        },
+        {
+          "ar": "الْمَسَاجِدُ كَبِيرَةٌ",
+          "ar_plain": "المساجد كبيرة",
+          "translit": "al-masājidu kabīratun",
+          "en": "The mosques are large.",
+          "ur": "مسجدیں بڑی ہیں۔"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "the new books",
+          "ur": "نئی کتابیں"
+        },
+        {
+          "en": "The books are new.",
+          "ur": "کتابیں نئی ہیں۔"
+        },
+        {
+          "en": "the large mosques",
+          "ur": "بڑی مسجدیں"
+        },
+        {
+          "en": "The mosques are large.",
+          "ur": "مسجدیں بڑی ہیں۔"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch14-l05-ex06",
+      "statement": {
+        "en": "بُيُوتٌ and عِبَادٌ are both broken plurals, so both take a feminine singular adjective.",
+        "ur": "بُيُوتٌ اور عِبَادٌ دونوں جمع مکسر ہیں، اس لیے دونوں واحد مؤنث صفت لیتے ہیں۔",
+        "ar_example": {
+          "ar": "عِبَادٌ مُكْرَمُونَ",
+          "ar_plain": "عباد مكرمون",
+          "translit": "ʿibādun mukramūna",
+          "en": "honored servants",
+          "ur": "عزت والے بندے"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The shape does not decide. عِبَادٌ refers to people, so it takes the plural مُكْرَمُونَ; بُيُوتٌ refers to houses, so it takes كَبِيرَةٌ.",
+        "ur": "شکل فیصلہ نہیں کرتی۔ عِبَادٌ لوگوں کے لیے ہے، اس لیے جمع مُكْرَمُونَ لیتا ہے؛ بُيُوتٌ گھروں کے لیے ہے، اس لیے كَبِيرَةٌ لیتا ہے۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch14-l05-ex07",
+      "left_column": [
+        {
+          "ar": "عِبَادٌ مُكْرَمُونَ",
+          "ar_plain": "عباد مكرمون",
+          "translit": "ʿibādun mukramūna",
+          "en": "honored servants",
+          "ur": "عزت والے بندے"
+        },
+        {
+          "ar": "نَمَارِقُ مَصْفُوفَةٌ",
+          "ar_plain": "نمارق مصفوفة",
+          "translit": "namāriqu maṣfūfatun",
+          "en": "cushions lined up",
+          "ur": "قطار میں لگے گاؤ تکیے"
+        },
+        {
+          "ar": "مُؤْمِنَاتٌ صَالِحَاتٌ",
+          "ar_plain": "مؤمنات صالحات",
+          "translit": "muʾminātun ṣāliḥātun",
+          "en": "righteous believing women",
+          "ur": "نیک مؤمن عورتیں"
+        },
+        {
+          "ar": "أَكْوَابٌ مَوْضُوعَةٌ",
+          "ar_plain": "اكواب موضوعة",
+          "translit": "akwābun mawḍūʿatun",
+          "en": "cups put in place",
+          "ur": "رکھے ہوئے پیالے"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "honored servants — human plural",
+          "ur": "عزت والے بندے — عاقل جمع"
+        },
+        {
+          "en": "cushions lined up — non-human plural",
+          "ur": "قطار میں لگے گاؤ تکیے — غیر عاقل جمع"
+        },
+        {
+          "en": "righteous believing women — human plural",
+          "ur": "نیک مؤمن عورتیں — عاقل جمع"
+        },
+        {
+          "en": "cups put in place — non-human plural",
+          "ur": "رکھے ہوئے پیالے — غیر عاقل جمع"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch14-l05-ex08",
+      "ayah_fragment": {
+        "ar": "فِيهَا سُرُرٌ مَّرْفُوعَةٌ",
+        "surah_ref": "Al-Ghashiyah 88:13"
+      },
+      "options": [
+        {
+          "en": "مَرْفُوعَةٌ — raised high, feminine singular, describing the non-human plural سُرُرٌ",
+          "ur": "مَرْفُوعَةٌ — اونچے، واحد مؤنث، غیر عاقل جمع سُرُرٌ کی صفت"
+        },
+        {
+          "en": "مَرْفُوعَةٌ — raised high, a plural adjective for people",
+          "ur": "مَرْفُوعَةٌ — اونچے، لوگوں کے لیے جمع صفت"
+        },
+        {
+          "en": "سُرُرٌ — raised high, an adjective",
+          "ur": "سُرُرٌ — اونچے، ایک صفت"
+        },
+        {
+          "en": "فِيهَا — the heavens",
+          "ur": "فِيهَا — آسمان"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سُرُرٌ is couches, a non-human plural; مَرْفُوعَةٌ is its feminine singular descriptor, the default you learned in Lesson 2.",
+        "ur": "سُرُرٌ تخت ہے، غیر عاقل جمع؛ مَرْفُوعَةٌ اس کی واحد مؤنث صفت ہے، وہ بنیادی قاعدہ جو آپ نے سبق 2 میں سیکھا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch14-l05-ex09",
+      "statement": {
+        "en": "مَطْوِيَّاتٌ in Az-Zumar 39:67 is a feminine plural form: an attested variation, not the beginner default.",
+        "ur": "الزمر 39:67 میں مَطْوِيَّاتٌ جمع مؤنث شکل ہے: ایک موجود مختلف صورت، مبتدی کا بنیادی قاعدہ نہیں۔",
+        "ar_example": {
+          "ar": "السَّمَاوَاتُ مَطْوِيَّاتٌ",
+          "ar_plain": "السماوات مطويات",
+          "translit": "as-samāwātu maṭwiyyātun",
+          "en": "the heavens are folded",
+          "ur": "آسمان لپٹے ہوئے ہیں"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَطْوِيَّاتٌ ends in ـَات and is feminine plural. Recognise it as it appears; the default for your own phrases stays feminine singular.",
+        "ur": "مَطْوِيَّاتٌ ـَات پر ختم ہوتا ہے اور جمع مؤنث ہے۔ اسے ویسے پہچانیں جیسے وہ آیا ہے؛ آپ کی اپنی ترکیبوں کا بنیادی قاعدہ واحد مؤنث ہی رہتا ہے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch14-l05-ex10",
+      "target_translation": {
+        "en": "The houses are large.",
+        "ur": "گھر بڑے ہیں۔"
+      },
+      "tiles": [
+        {
+          "ar": "الْبُيُوتُ",
+          "ar_plain": "البيوت",
+          "translit": "al-buyūtu",
+          "en": "the houses",
+          "ur": "گھر (جمع)"
+        },
+        {
+          "ar": "كَبِيرَةٌ",
+          "ar_plain": "كبيرة",
+          "translit": "kabīratun",
+          "en": "large (feminine singular)",
+          "ur": "بڑی (واحد مؤنث)"
+        },
+        {
+          "ar": "الْكَبِيرَةُ",
+          "ar_plain": "الكبيرة",
+          "translit": "al-kabīratu",
+          "en": "the large (feminine singular)",
+          "ur": "بڑی (واحد مؤنث، ال کے ساتھ)"
+        }
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Subject, then information without ال: الْبُيُوتُ كَبِيرَةٌ. الْكَبِيرَةُ would build the phrase the large houses.",
+        "ur": "مبتدا، پھر بغیر ال خبر: الْبُيُوتُ كَبِيرَةٌ۔ الْكَبِيرَةُ سے ترکیب بڑے گھر بنتی۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 14 — describing plurals",
+      "ur": "باب 14 — جمع کی صفت"
+    },
+    "ayah": {
+      "surah": 88,
+      "ayah": 13,
+      "label": "Al-Ghashiyah 88:13",
+      "ar": "فِيهَا سُرُرٌ مَّرْفُوعَةٌ",
+      "en": "Within it are couches raised high.",
+      "ur": "اس میں اونچے تخت ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088013.mp3"
+    },
+    "highlighted_word_indices": [
+      2
+    ],
+    "highlighted_words": [
+      "مَرْفُوعَةٌ"
+    ],
+    "noor_explanation": {
+      "en": "مَرْفُوعَةٌ: the default descriptor for a non-human plural, in a phrase you first read in Lesson 2. You can now place every phrase of this chapter on the map: people or things, phrase or sentence, default or recognised variation.",
+      "ur": "مَرْفُوعَةٌ: غیر عاقل جمع کی بنیادی صفت، ایک ایسی ترکیب میں جو آپ نے پہلی بار سبق 2 میں پڑھی۔ اب آپ اس باب کی ہر ترکیب کو نقشے پر رکھ سکتے ہیں: لوگ یا چیزیں، ترکیب یا جملہ، بنیادی قاعدہ یا پہچانی ہوئی مختلف صورت۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can handle the patterns this chapter taught: plural adjectives for human plurals, the feminine singular default for non-human plurals, the ال test for phrase or sentence, and مَطْوِيَّاتٌ as a recognised variation. The test checks exactly these; no case endings, verbs or unseen exceptions.",
+      "ur": "آپ اس باب کے سکھائے ہوئے پیٹرن سنبھال سکتے ہیں: عاقل جمع کے لیے جمع صفت، غیر عاقل جمع کے لیے واحد مؤنث کا بنیادی قاعدہ، ترکیب یا جملے کے لیے ال کی جانچ، اور مَطْوِيَّاتٌ بطور پہچانی ہوئی مختلف صورت۔ امتحان بالکل یہی جانچتا ہے؛ اعراب، فعل یا نادیدہ استثنا نہیں۔"
+    }
+  }
+}

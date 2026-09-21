@@ -1,0 +1,439 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 14, display lesson 5 — database id ch14-l06 (new). Recognition lesson: the four connected non-human phrases of Al-Ghashiyah 88:13–16 (سُرُرٌ مَرْفُوعَةٌ, أَكْوَابٌ مَوْضُوعَةٌ, نَمَارِقُ مَصْفُوفَةٌ, زَرَابِيُّ مَبْثُوثَةٌ) as repeated Quranic evidence of the feminine-singular default, then Az-Zumar 39:67 وَالسَّمَاوَاتُ مَطْوِيَّاتٌ بِيَمِينِهِ with مَطْوِيَّاتٌ taught accurately as feminine plural — an attested variation to recognise, not a pattern beginners generate. Quran anchor Az-Zumar 39:67 excerpt with مَطْوِيَّاتٌ declared (index 1). The stable id ch14-l06 is kept while the review ch14-l05 moves to display order 6, so this fixture's position (14:5) does not match its id; see Docs/proposals/chapter-14-content-proposal.md. Added 2026-09-21.",
+    "titleUr": "قرآنی مطابقت: بنیادی پیٹرن اور مختلف صورت",
+    "chapter_order": 14,
+    "lesson_order": 5,
+    "estimated_minutes": 9,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 39,
+      "ayah": 67,
+      "label": "Az-Zumar 39:67",
+      "ar": "وَالسَّمَاوَاتُ مَطْوِيَّاتٌ بِيَمِينِهِ",
+      "en": "And the heavens will be folded in His right hand.",
+      "ur": "اور آسمان اس کے داہنے ہاتھ میں لپٹے ہوں گے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/039067.mp3"
+    },
+    "noor_intro": {
+      "en": "Four verses of Al-Ghashiyah describe Paradise with the default you learned. Then Az-Zumar shows the heavens folded in Allah's right hand — and the word مَطْوِيَّاتٌ is not the feminine singular. Today you learn to recognise both, and to keep using the default when you build your own phrases.",
+      "ur": "سورۃ الغاشیہ کی چار آیتیں جنت کو اسی بنیادی قاعدے سے بیان کرتی ہیں جو آپ نے سیکھا۔ پھر سورۃ الزمر آسمانوں کو اللہ کے داہنے ہاتھ میں لپٹا ہوا دکھاتی ہے — اور لفظ مَطْوِيَّاتٌ واحد مؤنث نہیں۔ آج آپ دونوں کو پہچاننا سیکھیں گے، اور اپنی ترکیبیں بناتے وقت بنیادی قاعدہ ہی استعمال کرتے رہیں گے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Four phrases, one default",
+        "ar": "سُرُرٌ مَرْفُوعَةٌ · أَكْوَابٌ مَوْضُوعَةٌ",
+        "ur": "چار ترکیبیں، ایک بنیادی قاعدہ"
+      },
+      "explanation": {
+        "en": "Al-Ghashiyah 88:13–16 describes Paradise with four non-human plurals in a row, each followed by a feminine singular descriptor. You have already read three of them; the fourth is new today.",
+        "ur": "الغاشیہ 88:13–16 جنت کو لگاتار چار غیر عاقل جمعوں سے بیان کرتی ہے، ہر ایک کے بعد واحد مؤنث صفت۔ ان میں سے تین آپ پہلے ہی پڑھ چکے ہیں؛ چوتھی آج نئی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "سُرُرٌ مَرْفُوعَةٌ",
+          "ar_plain": "سرر مرفوعة",
+          "translit": "sururun marfūʿatun",
+          "en": "raised couches",
+          "ur": "اونچے تخت"
+        },
+        {
+          "ar": "أَكْوَابٌ مَوْضُوعَةٌ",
+          "ar_plain": "اكواب موضوعة",
+          "translit": "akwābun mawḍūʿatun",
+          "en": "cups put in place",
+          "ur": "رکھے ہوئے پیالے"
+        },
+        {
+          "ar": "نَمَارِقُ مَصْفُوفَةٌ",
+          "ar_plain": "نمارق مصفوفة",
+          "translit": "namāriqu maṣfūfatun",
+          "en": "cushions lined up",
+          "ur": "قطار میں لگے گاؤ تکیے"
+        },
+        {
+          "ar": "زَرَابِيُّ مَبْثُوثَةٌ",
+          "ar_plain": "زرابي مبثوثة",
+          "translit": "zarābiyyu mabthūthatun",
+          "en": "carpets spread around",
+          "ur": "بچھے ہوئے قالین"
+        }
+      ]
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "سُرُرٌ مَرْفُوعَةٌ",
+        "ar_plain": "سرر مرفوعة",
+        "translit": "sururun marfūʿatun",
+        "en": "raised couches",
+        "ur": "اونچے تخت"
+      },
+      "explanation": {
+        "en": "88:13. سُرُرٌ, couches, plural of سَرِيرٌ; مَرْفُوعَةٌ, raised high, feminine singular. Non-human plural, default descriptor.",
+        "ur": "88:13۔ سُرُرٌ، تخت، سَرِيرٌ کی جمع؛ مَرْفُوعَةٌ، اونچے، واحد مؤنث۔ غیر عاقل جمع، بنیادی صفت۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088013.mp3"
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "أَكْوَابٌ مَوْضُوعَةٌ",
+        "ar_plain": "اكواب موضوعة",
+        "translit": "akwābun mawḍūʿatun",
+        "en": "cups put in place",
+        "ur": "رکھے ہوئے پیالے"
+      },
+      "explanation": {
+        "en": "88:14. أَكْوَابٌ, cups, plural of كُوبٌ; مَوْضُوعَةٌ, put in place, feminine singular. The same default, one verse later.",
+        "ur": "88:14۔ أَكْوَابٌ، پیالے، كُوبٌ کی جمع؛ مَوْضُوعَةٌ، رکھے ہوئے، واحد مؤنث۔ وہی بنیادی قاعدہ، ایک آیت بعد۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088014.mp3"
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "زَرَابِيُّ مَبْثُوثَةٌ",
+        "ar_plain": "زرابي مبثوثة",
+        "translit": "zarābiyyu mabthūthatun",
+        "en": "carpets spread around",
+        "ur": "بچھے ہوئے قالین"
+      },
+      "explanation": {
+        "en": "88:16. زَرَابِيُّ, carpets, plural of زَرْبِيَّةٌ; مَبْثُوثَةٌ, spread around, feminine singular. With نَمَارِقُ مَصْفُوفَةٌ in 88:15, that is four phrases with the same pattern.",
+        "ur": "88:16۔ زَرَابِيُّ، قالین، زَرْبِيَّةٌ کی جمع؛ مَبْثُوثَةٌ، بچھے ہوئے، واحد مؤنث۔ 88:15 کے نَمَارِقُ مَصْفُوفَةٌ کے ساتھ یہ ایک ہی پیٹرن کی چار ترکیبیں ہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/088016.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Read it as it is",
+        "ar": "السَّمَاوَاتُ مَطْوِيَّاتٌ",
+        "ur": "جیسا ہے ویسا پڑھیں"
+      },
+      "explanation": {
+        "en": "Az-Zumar 39:67: وَالسَّمَاوَاتُ مَطْوِيَّاتٌ بِيَمِينِهِ, and the heavens are folded in His right hand. السَّمَاوَاتُ is a non-human plural of سَمَاءٌ with the ـَات ending you know from Chapter 13. Its descriptor مَطْوِيَّاتٌ also ends in ـَات: it is feminine plural, not the feminine singular مَطْوِيَّةٌ.",
+        "ur": "الزمر 39:67: وَالسَّمَاوَاتُ مَطْوِيَّاتٌ بِيَمِينِهِ، اور آسمان اس کے داہنے ہاتھ میں لپٹے ہوئے ہیں۔ السَّمَاوَاتُ سَمَاءٌ کی غیر عاقل جمع ہے جس کا آخر ـَات ہے جو آپ باب 13 سے جانتے ہیں۔ اس کی صفت مَطْوِيَّاتٌ بھی ـَات پر ختم ہوتی ہے: یہ جمع مؤنث ہے، واحد مؤنث مَطْوِيَّةٌ نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "السَّمَاوَاتُ مَطْوِيَّاتٌ",
+          "ar_plain": "السماوات مطويات",
+          "translit": "as-samāwātu maṭwiyyātun",
+          "en": "the heavens are folded",
+          "ur": "آسمان لپٹے ہوئے ہیں"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The default, and an attested variation",
+        "ar": "سُرُرٌ مَرْفُوعَةٌ / السَّمَاوَاتُ مَطْوِيَّاتٌ",
+        "ur": "بنیادی قاعدہ، اور ایک موجود مختلف صورت"
+      },
+      "explanation": {
+        "en": "The feminine singular is the productive beginner default for describing non-human plurals. Quranic and Classical Arabic can also contain other attested agreement patterns. Here, مَطْوِيَّاتٌ is feminine plural, so recognise the form as it appears in the verse. Keep using the default in your own phrases, and do not invent new exceptions; one verse is not a map of all Classical Arabic.",
+        "ur": "غیر عاقل جمع کی صفت کے لیے واحد مؤنث مبتدی کا کارآمد بنیادی قاعدہ ہے۔ قرآنی اور کلاسیکی عربی میں مطابقت کے دوسرے موجود پیٹرن بھی ہو سکتے ہیں۔ یہاں مَطْوِيَّاتٌ جمع مؤنث ہے، اس لیے اس شکل کو ویسے ہی پہچانیں جیسے وہ آیت میں آئی ہے۔ اپنی ترکیبوں میں بنیادی قاعدہ ہی استعمال کرتے رہیں، اور نئے استثنا خود نہ گھڑیں؛ ایک آیت پوری کلاسیکی عربی کا نقشہ نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "سُرُرٌ مَرْفُوعَةٌ",
+          "ar_plain": "سرر مرفوعة",
+          "translit": "sururun marfūʿatun",
+          "en": "raised couches",
+          "ur": "اونچے تخت"
+        },
+        {
+          "ar": "السَّمَاوَاتُ مَطْوِيَّاتٌ",
+          "ar_plain": "السماوات مطويات",
+          "translit": "as-samāwātu maṭwiyyātun",
+          "en": "the heavens are folded",
+          "ur": "آسمان لپٹے ہوئے ہیں"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Quran checkpoint",
+        "ur": "قرآنی جانچ"
+      },
+      "text": {
+        "ar": "مَطْوِيَّاتٌ",
+        "ar_plain": "مطويات",
+        "translit": "maṭwiyyātun",
+        "en": "folded (feminine plural)",
+        "ur": "لپٹے ہوئے (جمع مؤنث)"
+      },
+      "explanation": {
+        "en": "Find مَطْوِيَّاتٌ after وَالسَّمَاوَاتُ. Base مَطْوِيّ, folded, ending ـَات: feminine plural, describing the heavens. No ال on مَطْوِيَّاتٌ, so by the Lesson 3 test this is a sentence: the heavens are folded.",
+        "ur": "وَالسَّمَاوَاتُ کے بعد مَطْوِيَّاتٌ تلاش کریں۔ اصل مَطْوِيّ، لپٹا ہوا، آخر ـَات: جمع مؤنث، آسمانوں کی صفت۔ مَطْوِيَّاتٌ پر ال نہیں، اس لیے سبق 3 کی جانچ سے یہ جملہ ہے: آسمان لپٹے ہوئے ہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/039067.mp3",
+      "examples": [
+        {
+          "ar": "وَالسَّمَاوَاتُ مَطْوِيَّاتٌ بِيَمِينِهِ",
+          "ar_plain": "والسماوات مطويات بيمينه",
+          "translit": "was-samāwātu maṭwiyyātun bi-yamīnihi",
+          "en": "And the heavens will be folded in His right hand.",
+          "ur": "اور آسمان اس کے داہنے ہاتھ میں لپٹے ہوں گے۔"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch14-l06-ex01",
+      "ayah_fragment": {
+        "ar": "فِيهَا سُرُرٌ مَّرْفُوعَةٌ",
+        "surah_ref": "Al-Ghashiyah 88:13"
+      },
+      "options": [
+        {
+          "en": "سُرُرٌ, couches, is a non-human plural and مَرْفُوعَةٌ is feminine singular: the default pattern",
+          "ur": "سُرُرٌ، تخت، غیر عاقل جمع ہے اور مَرْفُوعَةٌ واحد مؤنث: بنیادی پیٹرن"
+        },
+        {
+          "en": "سُرُرٌ, servants, takes the plural adjective مَرْفُوعَةٌ",
+          "ur": "سُرُرٌ، بندے، جمع صفت مَرْفُوعَةٌ لیتا ہے"
+        },
+        {
+          "en": "مَرْفُوعَةٌ is feminine plural, an attested variation",
+          "ur": "مَرْفُوعَةٌ جمع مؤنث ہے، ایک موجود مختلف صورت"
+        },
+        {
+          "en": "فِيهَا — couches",
+          "ur": "فِيهَا — تخت"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَرْفُوعَةٌ ends in ة, feminine singular, describing the non-human plural سُرُرٌ. That is the default, not a variation.",
+        "ur": "مَرْفُوعَةٌ ة پر ختم ہوتا ہے، واحد مؤنث، غیر عاقل جمع سُرُرٌ کی صفت۔ یہ بنیادی قاعدہ ہے، مختلف صورت نہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch14-l06-ex02",
+      "prompt": {
+        "ar": "زَرَابِيُّ مَبْثُوثَةٌ",
+        "ar_plain": "زرابي مبثوثة",
+        "translit": "zarābiyyu mabthūthatun",
+        "en": "carpets spread around",
+        "ur": "بچھے ہوئے قالین"
+      },
+      "options": [
+        {
+          "en": "carpets spread around",
+          "ur": "بچھے ہوئے قالین"
+        },
+        {
+          "en": "one carpet spread out",
+          "ur": "ایک بچھا ہوا قالین"
+        },
+        {
+          "en": "cushions lined up",
+          "ur": "قطار میں لگے گاؤ تکیے"
+        },
+        {
+          "en": "honored servants",
+          "ur": "عزت والے بندے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "زَرَابِيُّ is carpets, plural, and مَبْثُوثَةٌ is spread around, feminine singular by the default: carpets spread around, Al-Ghashiyah 88:16.",
+        "ur": "زَرَابِيُّ قالین ہے، جمع، اور مَبْثُوثَةٌ بچھے ہوئے، بنیادی قاعدے سے واحد مؤنث: بچھے ہوئے قالین، الغاشیہ 88:16۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch14-l06-ex03",
+      "statement": {
+        "en": "In وَالسَّمَاوَاتُ مَطْوِيَّاتٌ, the word مَطْوِيَّاتٌ is feminine plural, not feminine singular.",
+        "ur": "وَالسَّمَاوَاتُ مَطْوِيَّاتٌ میں لفظ مَطْوِيَّاتٌ جمع مؤنث ہے، واحد مؤنث نہیں۔",
+        "ar_example": {
+          "ar": "السَّمَاوَاتُ مَطْوِيَّاتٌ",
+          "ar_plain": "السماوات مطويات",
+          "translit": "as-samāwātu maṭwiyyātun",
+          "en": "the heavens are folded",
+          "ur": "آسمان لپٹے ہوئے ہیں"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَطْوِيَّاتٌ ends in ـَات, the feminine plural ending. The feminine singular would be مَطْوِيَّةٌ, which is not what the verse says.",
+        "ur": "مَطْوِيَّاتٌ ـَات پر ختم ہوتا ہے، جمع مؤنث کا آخر۔ واحد مؤنث مَطْوِيَّةٌ ہوتا، جو آیت میں نہیں۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch14-l06-ex04",
+      "left_column": [
+        {
+          "ar": "سُرُرٌ مَرْفُوعَةٌ",
+          "ar_plain": "سرر مرفوعة",
+          "translit": "sururun marfūʿatun",
+          "en": "raised couches",
+          "ur": "اونچے تخت"
+        },
+        {
+          "ar": "أَكْوَابٌ مَوْضُوعَةٌ",
+          "ar_plain": "اكواب موضوعة",
+          "translit": "akwābun mawḍūʿatun",
+          "en": "cups put in place",
+          "ur": "رکھے ہوئے پیالے"
+        },
+        {
+          "ar": "نَمَارِقُ مَصْفُوفَةٌ",
+          "ar_plain": "نمارق مصفوفة",
+          "translit": "namāriqu maṣfūfatun",
+          "en": "cushions lined up",
+          "ur": "قطار میں لگے گاؤ تکیے"
+        },
+        {
+          "ar": "زَرَابِيُّ مَبْثُوثَةٌ",
+          "ar_plain": "زرابي مبثوثة",
+          "translit": "zarābiyyu mabthūthatun",
+          "en": "carpets spread around",
+          "ur": "بچھے ہوئے قالین"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "raised couches",
+          "ur": "اونچے تخت"
+        },
+        {
+          "en": "cups put in place",
+          "ur": "رکھے ہوئے پیالے"
+        },
+        {
+          "en": "cushions lined up",
+          "ur": "قطار میں لگے گاؤ تکیے"
+        },
+        {
+          "en": "carpets spread around",
+          "ur": "بچھے ہوئے قالین"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch14-l06-ex05",
+      "ayah_fragment": {
+        "ar": "وَالسَّمَاوَاتُ مَطْوِيَّاتٌ بِيَمِينِهِ",
+        "surah_ref": "Az-Zumar 39:67"
+      },
+      "options": [
+        {
+          "en": "مَطْوِيَّاتٌ — folded, a feminine plural form describing السَّمَاوَاتُ: an attested Quranic variation",
+          "ur": "مَطْوِيَّاتٌ — لپٹے ہوئے، السَّمَاوَاتُ کی صفت جمع مؤنث شکل میں: قرآن میں موجود ایک مختلف صورت"
+        },
+        {
+          "en": "مَطْوِيَّاتٌ — folded, feminine singular, the beginner default",
+          "ur": "مَطْوِيَّاتٌ — لپٹا ہوا، واحد مؤنث، مبتدی کا بنیادی قاعدہ"
+        },
+        {
+          "en": "السَّمَاوَاتُ — folded, an adjective",
+          "ur": "السَّمَاوَاتُ — لپٹے ہوئے، ایک صفت"
+        },
+        {
+          "en": "بِيَمِينِهِ — the heavens",
+          "ur": "بِيَمِينِهِ — آسمان"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "السَّمَاوَاتُ is the heavens, بِيَمِينِهِ is in His right hand, and مَطْوِيَّاتٌ is the descriptor: feminine plural, an attested form you recognise rather than the default you produce.",
+        "ur": "السَّمَاوَاتُ آسمان ہے، بِيَمِينِهِ اس کے داہنے ہاتھ میں، اور مَطْوِيَّاتٌ صفت ہے: جمع مؤنث، ایک موجود شکل جسے آپ پہچانتے ہیں، نہ کہ وہ بنیادی قاعدہ جو آپ خود بناتے ہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch14-l06-ex06",
+      "statement": {
+        "en": "When you build your own phrase about a non-human plural in this book, you should invent new feminine plural forms like مَطْوِيَّاتٌ.",
+        "ur": "جب آپ اس کتاب میں غیر عاقل جمع کے بارے میں اپنی ترکیب بنائیں تو آپ کو مَطْوِيَّاتٌ جیسی نئی جمع مؤنث شکلیں گھڑنی چاہئیں۔",
+        "ar_example": {
+          "ar": "كُتُبٌ جَدِيدَةٌ",
+          "ar_plain": "كتب جديدة",
+          "translit": "kutubun jadīdatun",
+          "en": "new books",
+          "ur": "نئی کتابیں"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Keep the feminine singular default in your own phrases: كُتُبٌ جَدِيدَةٌ. مَطْوِيَّاتٌ is a form you recognise as it appears in the ayah, not a pattern to generate.",
+        "ur": "اپنی ترکیبوں میں واحد مؤنث کا بنیادی قاعدہ رکھیں: كُتُبٌ جَدِيدَةٌ۔ مَطْوِيَّاتٌ وہ شکل ہے جسے آپ آیت میں دیکھ کر پہچانتے ہیں، بنانے کا پیٹرن نہیں۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Quranic agreement: default pattern and variation",
+      "ur": "قرآنی مطابقت: بنیادی پیٹرن اور مختلف صورت"
+    },
+    "ayah": {
+      "surah": 39,
+      "ayah": 67,
+      "label": "Az-Zumar 39:67",
+      "ar": "وَالسَّمَاوَاتُ مَطْوِيَّاتٌ بِيَمِينِهِ",
+      "en": "And the heavens will be folded in His right hand.",
+      "ur": "اور آسمان اس کے داہنے ہاتھ میں لپٹے ہوں گے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/039067.mp3"
+    },
+    "highlighted_word_indices": [
+      1
+    ],
+    "highlighted_words": [
+      "مَطْوِيَّاتٌ"
+    ],
+    "noor_explanation": {
+      "en": "مَطْوِيَّاتٌ describes السَّمَاوَاتُ, the heavens, and it is feminine plural. The feminine singular remains your default for non-human plurals, and Al-Ghashiyah showed it four times in a row; this verse shows that the Quran also contains other attested agreement patterns. Recognise the form as it appears; keep the default when you build your own phrases.",
+      "ur": "مَطْوِيَّاتٌ السَّمَاوَاتُ، آسمانوں، کی صفت ہے، اور یہ جمع مؤنث ہے۔ غیر عاقل جمع کے لیے واحد مؤنث آپ کا بنیادی قاعدہ رہتا ہے، اور الغاشیہ نے اسے لگاتار چار بار دکھایا؛ یہ آیت دکھاتی ہے کہ قرآن میں مطابقت کے دوسرے موجود پیٹرن بھی ہیں۔ شکل کو ویسے ہی پہچانیں جیسے وہ آئی ہے؛ اپنی ترکیبیں بناتے وقت بنیادی قاعدہ رکھیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You can read the default across four Quranic phrases and recognise مَطْوِيَّاتٌ as a feminine plural variation. Next: the chapter review, then the test.",
+      "ur": "آپ چار قرآنی ترکیبوں میں بنیادی قاعدہ پڑھ سکتے ہیں اور مَطْوِيَّاتٌ کو جمع مؤنث کی مختلف صورت کے طور پر پہچان سکتے ہیں۔ آگے: باب کا مراجعہ، پھر امتحان۔"
+    }
+  }
+}
