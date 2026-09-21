@@ -54,8 +54,10 @@ cutouts in `Warsh-images/lesson-illustrations/` (committed originals). Uploaded
 via `images:upload-lessons` to R2 as `images/discover/{slug}.webp` (768 px,
 ~3.8 MB total), written into 63 discover cards across 32 fixtures, and
 published to production with `content:sync` (media-URL diffs only; mirror
-430/430 in sync afterwards). The earlier photographic batch in
-`generated/lesson-illustrations/` is superseded and not used.
+430/430 in sync afterwards). The photographic batch in
+`generated/lesson-illustrations/` is a separate higher-quality set the owner
+keeps for other uses (marketing, print); it is not the card asset and must not
+be deleted.
 
 | Filename | Cards | Arabic on the card |
 |---|---|---|
