@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-09-16
+**Last verified:** 2026-09-21
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
@@ -553,11 +553,19 @@ Everything below this list is either done and verified, or one of these:
    9/12 fail, 10/12 passes with the chapter bonus and unlocks Chapter 14, a
    repeat pass earns 0 XP.
    **Chapter 14 (`Docs/proposals/chapter-14-content-proposal.md`, "Describing
-   Plurals": adjective agreement with plural nouns) is built and
-   staging-verified 2026-09-21; production promotion is pending the owner's
-   go-ahead** (`npm run content:promote-chapter-fourteen -- --apply`, then
+   Plurals": adjective agreement with plural nouns) is built, staging-verified
+   and promoted to production 2026-09-21** on the owner's "yes promote":
+   `content:promote-chapter-fourteen -- --apply` (4 in-place updates, review
+   moved to order 6, 2 creates, post-promotion verification passed);
    `content:backfill-new-lessons -- --lesson-ids ch14-l06,ch14-test --apply`
-   and `content:baseline`, mirroring Chapter 13). Seven items: `ch14-l01..l04`
+   inserted 2 rows for the one learner who had finished the chapter;
+   `content:baseline` re-recorded for 432 lessons; `content:check` clean
+   (0 orphans); R2 catalogue audit against production 3832/3832 (0 missing);
+   production health 200; a fresh production account lists all seven lessons
+   in display order 1–4, l06, l05, test and gets `chapter_locked` on lesson
+   fetch. The owner's scholarly review of the grammar explanations and the
+   Studio Urdu content-review pass were deferred past promotion at the
+   owner's decision. Seven items: `ch14-l01..l04`
    rewritten in place (8/8/8/8 cards, 7/7/8/9 exercises, IDs and orders kept),
    `ch14-l06` is the new order-5 recognition lesson (7 cards / 6 exercises),
    the review `ch14-l05` keeps its ID and moves to order 6 (8 cards / 10
