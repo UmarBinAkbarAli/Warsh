@@ -107,6 +107,9 @@ function RootLayout() {
     "Scheherazade New Bold": require("../assets/fonts/ScheherazadeNew-Bold.ttf"),
     "Scheherazade New SemiBold": require("../assets/fonts/ScheherazadeNew-SemiBold.ttf"),
     "Scheherazade New Medium": require("../assets/fonts/ScheherazadeNew-Medium.ttf"),
+    // Quran reader text (Pen section 27): full Uthmani orthography and the
+    // U+06DD ayah-end ornament, which Scheherazade New does not draw.
+    "Amiri Quran": require("../assets/fonts/AmiriQuran-Regular.ttf"),
   });
 
   if (fontError) {

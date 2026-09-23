@@ -51,6 +51,28 @@ export const WarshPalette = {
   googleRed: "#EA4335", // Google brand mark — brand-locked, never re-tint
 } as const;
 
+// Quran reader (Pen section 27). Tajweed colours follow the printed Madani
+// tajweed mushaf convention hafiz students already know: green for nasal
+// rules, blue for qalqalah, reds and oranges for madd by length, grey for
+// letters that are written but not pronounced.
+export const TajweedPalette = {
+  nasal: "#1E9A4B", // ghunnah, ikhfa, iqlab, idgham with ghunnah
+  qalqalah: "#1D6FD1",
+  maddNecessary: "#8E1B1B", // 6 counts
+  maddObligatory: "#D32F2F", // 4–5 counts, same word
+  maddSeparated: "#E8590C", // 4–5 counts, across words
+  maddPermissible: "#E89A00", // 2, 4 or 6 counts when stopping
+  silent: "#9A9A9A",
+  nasalTint: "rgba(30, 154, 75, 0.14)", // nasal @ 14% — tapped word highlight
+} as const;
+
+export const MushafPalette = {
+  page: "#FFFDF6", // page paper, a shade warmer than cards
+  frame: WarshPalette.gold,
+  hairline: "#E6DFC8",
+  ayahMarker: WarshPalette.goldDeep,
+} as const;
+
 // Translucent tints derived from the palette above. Every rgba() in the app
 // comes from here so the alpha steps stay consistent; the base colour is the
 // palette token named in the comment.

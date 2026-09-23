@@ -237,6 +237,25 @@ files remain release evidence.
   `prisma/tadabbur-seed.cjs` and the live rows repaired with
   `content:restore-tadabbur -- --relink --apply`, which rewrites `vocabId` on
   existing Surahs and leaves their text, order and publish state untouched.
+- Quran reader (Pen section 27), free for every signed-in learner with no lesson
+  or subscription gate: a Quran card on the Learn tab opens the last page read,
+  and `/(app)/quran` lists surahs, juz and bookmarked pages. Pages follow the King
+  Fahd Complex 15-line Madani layout line for line (604 pages; line and page
+  numbers per word from the Quran.com v4 API). The text, layout and word-level
+  tajweed markup are bundled in `warsh-app/data/quran/` (≈2.5 MB, loaded on first
+  open), so reading needs no network. Rebuild with
+  `node scripts/build-quran-data.mjs`; it measures every line with HarfBuzz
+  against the bundled Amiri Quran font so each page gets the largest font size
+  whose widest line fits. Optional tajweed colours (nasal rules, qalqalah, madd by
+  length, silent letters; natural madd is left uncoloured) with a tap-a-word rule
+  explanation in English and Urdu. Last page, bookmarks, tajweed and keep-awake
+  are stored on the device only (`stores/quranStore.ts`). Not built yet: the 13-
+  and 16-line IndoPak layouts (shown as "coming soon"), recitation audio, tap-a-
+  word meanings, and translation under the page, which waits on a licensed Urdu
+  and English translation.
+  Verified 2026-09-23 on a release APK on the `Warsh_API_34` emulator (list,
+  page 2, the widest page 591, page 300, tajweed on/off, rule sheet, settings,
+  bookmark, swipe direction, Learn card resume). Not yet checked on web.
 - Ustaad Noor chat with daily limits and consumable overage credits
 - Subscription/paywall, purchase verification, restore flow, and the Google RTDN
   webhook, which has been reached by live notifications since 2026-08-29

@@ -8,6 +8,7 @@ import {
   type OnboardingStepKey,
 } from "@components/OnboardingChecklist";
 import { NewLessonsPrompt } from "@components/NewLessonsPrompt";
+import { QuranCard } from "@components/quran/QuranCard";
 import { SubscriptionBanner } from "@components/SubscriptionBanner";
 import { TranslationLanguagePrompt } from "@components/TranslationLanguagePrompt";
 import { useT } from "@i18n/index";
@@ -752,6 +753,10 @@ export default function HomeScreen() {
             </View>
           </Pressable>
         ) : null}
+
+        {/* Free Quran reader (Pen section 27) — no lesson or subscription
+            gate, so the Learn tab always has something to open. */}
+        <QuranCard />
 
         <Text style={styles.sectionTitle}>{t("learn.today")}</Text>
         <View style={styles.todayGrid}>
