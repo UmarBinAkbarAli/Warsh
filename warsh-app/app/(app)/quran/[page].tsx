@@ -17,40 +17,62 @@ import { MushafPage } from "@components/quran/MushafPage";
 import { QuranSettingsSheet, TajweedLegend, TajweedRuleSheet } from "@components/quran/QuranSheets";
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
-import { Colors, Fonts, FontSizes, LineHeights, Spacing, TajweedPalette, WarshPalette } from "../../../constants/theme";
-import { PAGE_COUNT, clampPage, getPage, juzForPage, surahForPage, type QuranWord } from "../../../services/quran/data";
+import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, TajweedPalette, WarshPalette } from "../../../constants/theme";
+import {
+  ayahForPage,
+  clampPage,
+  getPage,
+  hasTajweed,
+  juzForPage,
+  pageCount,
+  pageForAyah,
+  surahForPage,
+  type QuranWord,
+} from "../../../services/quran/data";
 
 const KEEP_AWAKE_TAG = "quran-reader";
-const PAGES = Array.from({ length: PAGE_COUNT }, (_, index) => index + 1);
 const PAGE_GUTTER = Spacing.md;
 
 /**
- * The Mushaf reader (Pen section 27, screens 3–5). Pages run right to left
- * like a printed Mushaf: swiping towards the right turns to the next page.
+ * The Mushaf reader (Pen sections 27 and 28). Pages run right to left like a
+ * printed Mushaf: swiping towards the right turns to the next page. The page
+ * in the route is a page of the current layout; switching layout reopens at
+ * the page holding the ayah being read.
  */
 export default function QuranReaderScreen() {
   const router = useRouter();
   const t = useT();
   const insets = useSafeAreaInsets();
   const params = useLocalSearchParams<{ page?: string }>();
-  const initialPage = clampPage(Number(params.page));
-
-  const tajweed = useQuranStore((s) => s.tajweed);
+  const layout = useQuranStore((s) => s.layout);
+  const tajweedOn = useQuranStore((s) => s.tajweed);
+  const tajweed = tajweedOn && hasTajweed(layout);
   const setTajweed = useQuranStore((s) => s.setTajweed);
   const keepAwake = useQuranStore((s) => s.keepAwake);
   const bookmarks = useQuranStore((s) => s.bookmarks);
   const toggleBookmark = useQuranStore((s) => s.toggleBookmark);
-  const setLastPage = useQuranStore((s) => s.setLastPage);
+  const setLastAyah = useQuranStore((s) => s.setLastAyah);
+  const lastAyah = useQuranStore((s) => s.lastAyah);
 
-  const [currentPage, setCurrentPage] = useState(initialPage);
+  // The page the pager opens at. A change of layout reopens the pager at the
+  // page holding the ayah being read.
+  const [opening, setOpening] = useState(() => ({ layout, page: clampPage(layout, Number(params.page)) }));
+  const [currentPage, setCurrentPage] = useState(opening.page);
+  if (opening.layout !== layout) {
+    const page = lastAyah ? pageForAyah(layout, lastAyah) : 1;
+    setOpening({ layout, page });
+    setCurrentPage(page);
+  }
+  const lastPageNumber = pageCount(layout);
+  const pages = useMemo(() => Array.from({ length: lastPageNumber }, (_, index) => index + 1), [lastPageNumber]);
   const [size, setSize] = useState<{ width: number; height: number } | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [tapped, setTapped] = useState<{ word: QuranWord; key: string; page: number } | null>(null);
   const listRef = useRef<FlatList<number>>(null);
 
   useEffect(() => {
-    setLastPage(currentPage);
-  }, [currentPage, setLastPage]);
+    setLastAyah(ayahForPage(layout, currentPage));
+  }, [layout, currentPage, setLastAyah]);
 
   useEffect(() => {
     if (!keepAwake) return;
@@ -69,11 +91,14 @@ export default function QuranReaderScreen() {
     if (visible && typeof visible.item === "number") setCurrentPage(visible.item);
   }).current;
 
-  const goToPage = useCallback((page: number) => {
-    const target = clampPage(page);
-    listRef.current?.scrollToIndex({ index: target - 1, animated: true });
-    setCurrentPage(target);
-  }, []);
+  const goToPage = useCallback(
+    (page: number) => {
+      const target = clampPage(layout, page);
+      listRef.current?.scrollToIndex({ index: target - 1, animated: true });
+      setCurrentPage(target);
+    },
+    [layout],
+  );
 
   const onLayout = (event: LayoutChangeEvent) => {
     const { width, height } = event.nativeEvent.layout;
@@ -82,9 +107,15 @@ export default function QuranReaderScreen() {
     }
   };
 
-  const page = getPage(currentPage);
-  const chapter = surahForPage(currentPage);
-  const bookmarked = bookmarks.includes(currentPage);
+  const page = getPage(layout, currentPage);
+  const chapter = surahForPage(layout, currentPage);
+  const pageAyahs = {
+    first: ayahForPage(layout, currentPage),
+    next: currentPage < lastPageNumber ? ayahForPage(layout, currentPage + 1) : null,
+  };
+  const bookmarked = bookmarks.some(
+    (ayah) => ayah >= pageAyahs.first && (pageAyahs.next === null || ayah < pageAyahs.next),
+  );
   const itemWidth = size?.width ?? 0;
 
   const renderItem = useCallback(
@@ -92,6 +123,7 @@ export default function QuranReaderScreen() {
       size ? (
         <View style={{ width: size.width, height: size.height, paddingHorizontal: PAGE_GUTTER }}>
           <MushafPage
+            layout={layout}
             pageNumber={item}
             width={size.width - PAGE_GUTTER * 2}
             height={size.height}
@@ -101,10 +133,14 @@ export default function QuranReaderScreen() {
           />
         </View>
       ) : null,
-    [size, tajweed, tapped],
+    [size, layout, tajweed, tapped],
   );
 
   const extraData = useMemo(() => ({ tajweed, tapped }), [tajweed, tapped]);
+  const juzLabel =
+    layout === "indopak15"
+      ? t("quran.parahPosition", { juz: juzForPage(layout, currentPage) })
+      : t("quran.juzHizb", { juz: juzForPage(layout, currentPage), hizb: page.z ?? 0 });
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top + Spacing.xs, paddingBottom: insets.bottom + Spacing.sm }]}>
@@ -123,20 +159,32 @@ export default function QuranReaderScreen() {
         </Pressable>
         <View style={styles.actions}>
           <Pressable
-            onPress={() => setTajweed(!tajweed)}
-            hitSlop={8}
-            accessibilityRole="switch"
-            accessibilityState={{ checked: tajweed }}
-            accessibilityLabel={t("quran.settings.tajweed")}
+            onPress={() => router.dismissTo("/(app)/quran")}
+            hitSlop={6}
+            style={({ pressed }) => [styles.indexButton, pressed && styles.pressed]}
+            accessibilityRole="button"
+            accessibilityLabel={t("quran.indexButton")}
           >
-            <Ionicons
-              name={tajweed ? "color-palette" : "color-palette-outline"}
-              size={22}
-              color={tajweed ? TajweedPalette.nasal : WarshPalette.navy}
-            />
+            <Ionicons name="list" size={16} color={WarshPalette.navy} />
+            <Text style={styles.indexButtonText}>{t("quran.indexButton")}</Text>
           </Pressable>
+          {hasTajweed(layout) ? (
+            <Pressable
+              onPress={() => setTajweed(!tajweed)}
+              hitSlop={8}
+              accessibilityRole="switch"
+              accessibilityState={{ checked: tajweed }}
+              accessibilityLabel={t("quran.settings.tajweed")}
+            >
+              <Ionicons
+                name={tajweed ? "color-palette" : "color-palette-outline"}
+                size={22}
+                color={tajweed ? TajweedPalette.nasal : WarshPalette.navy}
+              />
+            </Pressable>
+          ) : null}
           <Pressable
-            onPress={() => toggleBookmark(currentPage)}
+            onPress={() => toggleBookmark(pageAyahs)}
             hitSlop={8}
             accessibilityRole="button"
             accessibilityState={{ selected: bookmarked }}
@@ -168,8 +216,9 @@ export default function QuranReaderScreen() {
       <View style={styles.pager} onLayout={onLayout}>
         {size ? (
           <FlatList
+            key={opening.layout}
             ref={listRef}
-            data={PAGES}
+            data={pages}
             extraData={extraData}
             keyExtractor={(item) => String(item)}
             renderItem={renderItem}
@@ -177,7 +226,7 @@ export default function QuranReaderScreen() {
             inverted
             pagingEnabled
             showsHorizontalScrollIndicator={false}
-            initialScrollIndex={initialPage - 1}
+            initialScrollIndex={opening.page - 1}
             getItemLayout={(_, index) => ({ length: itemWidth, offset: itemWidth * index, index })}
             initialNumToRender={1}
             maxToRenderPerBatch={2}
@@ -191,7 +240,7 @@ export default function QuranReaderScreen() {
       <View style={styles.bottomBar}>
         <Pressable
           onPress={() => goToPage(currentPage + 1)}
-          disabled={currentPage >= PAGE_COUNT}
+          disabled={currentPage >= lastPageNumber}
           hitSlop={8}
           style={styles.navButton}
           accessibilityRole="button"
@@ -200,13 +249,13 @@ export default function QuranReaderScreen() {
           <Ionicons
             name="chevron-back"
             size={16}
-            color={currentPage >= PAGE_COUNT ? WarshPalette.disabledText : WarshPalette.subtleBrown}
+            color={currentPage >= lastPageNumber ? WarshPalette.disabledText : WarshPalette.subtleBrown}
           />
-          <Text style={[styles.navText, currentPage >= PAGE_COUNT && styles.navTextDisabled]}>
-            {currentPage >= PAGE_COUNT ? t("quran.endOfMushaf") : t("quran.page", { page: currentPage + 1 })}
+          <Text style={[styles.navText, currentPage >= lastPageNumber && styles.navTextDisabled]}>
+            {currentPage >= lastPageNumber ? t("quran.endOfMushaf") : t("quran.page", { page: currentPage + 1 })}
           </Text>
         </Pressable>
-        <Text style={styles.position}>{t("quran.juzHizb", { juz: juzForPage(currentPage), hizb: page.z })}</Text>
+        <Text style={styles.position}>{juzLabel}</Text>
         <Pressable
           onPress={() => goToPage(currentPage - 1)}
           disabled={currentPage <= 1}
@@ -261,7 +310,27 @@ const styles = StyleSheet.create({
   actions: {
     flexDirection: "row",
     alignItems: "center",
-    gap: Spacing.lg + 2,
+    gap: Spacing.lg,
+  },
+  indexButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.xs,
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.xs + 1,
+    borderRadius: Radii.full,
+    borderWidth: 1,
+    borderColor: WarshPalette.gold,
+    backgroundColor: WarshPalette.parchmentDeep,
+  },
+  indexButtonText: {
+    fontFamily: Fonts.bold,
+    fontSize: FontSizes.caption,
+    lineHeight: LineHeights.caption,
+    color: WarshPalette.navy,
+  },
+  pressed: {
+    opacity: 0.7,
   },
   legendRow: {
     paddingHorizontal: PAGE_GUTTER,

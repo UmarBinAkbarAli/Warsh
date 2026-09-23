@@ -5,21 +5,23 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
 import { Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import { chapters, juzForPage, surahForPage } from "../../services/quran/data";
+import { chapters, juzForPage, pageForAyah, surahForPage } from "../../services/quran/data";
 import { QURAN_FONT } from "./MushafPage";
 
 /**
- * Learn tab entry to the free Quran reader (Pen section 27, screen 1). It
+ * Learn tab entry to the free Quran reader (Pen sections 27 and 28). It
  * never depends on lessons or the subscription, so the tab always offers
  * something to open.
  */
 export function QuranCard() {
   const router = useRouter();
   const t = useT();
-  const lastPage = useQuranStore((s) => s.lastPage);
+  const layout = useQuranStore((s) => s.layout);
+  const lastAyah = useQuranStore((s) => s.lastAyah);
 
-  const chapter = lastPage ? surahForPage(lastPage) : chapters[0];
-  const juz = lastPage ? juzForPage(lastPage) : 1;
+  const lastPage = lastAyah ? pageForAyah(layout, lastAyah) : null;
+  const chapter = lastPage ? surahForPage(layout, lastPage) : chapters[0];
+  const juz = lastPage ? juzForPage(layout, lastPage) : 1;
 
   return (
     <Pressable

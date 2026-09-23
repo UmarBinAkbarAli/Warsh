@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { StyleSheet, Text, View, type StyleProp, type TextStyle } from "react-native";
 
-import { MushafPalette, TajweedPalette, WarshPalette } from "../../constants/theme";
+import { Fonts, MushafPalette, TajweedPalette, WarshPalette } from "../../constants/theme";
 import {
   BASMALA,
   LINES_PER_PAGE,
@@ -9,11 +9,14 @@ import {
   ayahMarker,
   getChapter,
   getPage,
+  hasTajweed,
   segmentsOf,
   tajweedExtraEm,
   juzForPage,
   toArabicDigits,
+  toUrduDigits,
   wordText,
+  type MushafLayout,
   type QuranLine,
   type QuranWord,
   type Segment,
@@ -21,6 +24,17 @@ import {
 import { TAJWEED_RULES, rulesInWord } from "../../services/quran/tajweed";
 
 export const QURAN_FONT = "Amiri Quran";
+/** The Indo-Pak Mushaf's own font; its ayah-end signs are private-use glyphs. */
+export const INDOPAK_FONT = "IndoPak Nastaleeq";
+
+const PAGE_FONT: Record<MushafLayout, string> = { madani15: QURAN_FONT, indopak15: INDOPAK_FONT };
+// The running header and page number follow each print: "الجزء ٣٠" on
+// Madani pages, "پارہ ۲۹" on Indo-Pak ones. The Indo-Pak font leaves پ and
+// the Arabic digits blank, so its header is set in Scheherazade New.
+const RUNNING = {
+  madani15: { font: QURAN_FONT, juz: "الجزء", surah: "سورة", digits: toArabicDigits },
+  indopak15: { font: Fonts.arabic, juz: "پارہ", surah: "سورۃ", digits: toUrduDigits },
+} satisfies Record<MushafLayout, { font: string | undefined; juz: string; surah: string; digits: (n: number) => string }>;
 
 // Page chrome, in px: frame padding plus the running header and page-number
 // rows. The rest of the height is split evenly across the 15 lines.
@@ -28,9 +42,9 @@ const FRAME_PADDING_X = 12;
 const FRAME_PADDING_Y = 8;
 const HEADER_HEIGHT = 30;
 const FOOTER_HEIGHT = 24;
-// Amiri Quran's marks reach well above and below the letters; below this
-// ratio of line height the harakat of neighbouring lines collide.
-const MAX_FONT_TO_LINE = 0.56;
+// The marks reach well above and below the letters; below this ratio of
+// line height the harakat of neighbouring lines collide.
+const MAX_FONT_TO_LINE: Record<MushafLayout, number> = { madani15: 0.56, indopak15: 0.6 };
 // Room for the few-percent difference between the build-time HarfBuzz
 // measurement and the platform's own text layout.
 const WIDTH_SAFETY = 0.96;
@@ -39,6 +53,7 @@ const WIDTH_SAFETY = 0.96;
 const COLOURED_WORD_SLACK = 80;
 
 type MushafPageProps = {
+  layout: MushafLayout;
   pageNumber: number;
   width: number;
   height: number;
@@ -49,12 +64,13 @@ type MushafPageProps = {
 };
 
 /**
- * One page of the 15-line Madani Mushaf. Line breaks come from the King
- * Fahd Complex layout, so every line holds exactly the words of the print.
+ * One page of a 15-line Mushaf, Indo-Pak or Madani. Line breaks come from
+ * the printed layout, so every line holds exactly the words of the print.
  * The font is sized so the page's widest line fits the width, then each line
  * is justified by spreading its words, as the print does.
  */
 export const MushafPage = memo(function MushafPage({
+  layout,
   pageNumber,
   width,
   height,
@@ -62,21 +78,26 @@ export const MushafPage = memo(function MushafPage({
   selectedWord,
   onWordPress,
 }: MushafPageProps) {
-  const page = getPage(pageNumber);
+  const page = getPage(layout, pageNumber);
+  const coloured = tajweed && hasTajweed(layout);
   const innerWidth = width - FRAME_PADDING_X * 2 - 2;
   const lineHeight = Math.floor((height - FRAME_PADDING_Y * 2 - HEADER_HEIGHT - FOOTER_HEIGHT - 2) / LINES_PER_PAGE);
   const fontSize = Math.max(
     10,
-    Math.floor(Math.min(lineHeight * MAX_FONT_TO_LINE, (innerWidth * WIDTH_SAFETY) / (tajweed ? page.t : page.m))),
+    Math.floor(
+      Math.min(lineHeight * MAX_FONT_TO_LINE[layout], (innerWidth * WIDTH_SAFETY) / (coloured ? (page.t ?? page.m) : page.m)),
+    ),
   );
   const openingPage = pageNumber <= 2;
   const firstSurah = getChapter(page.s);
+  const running = RUNNING[layout];
+  const runningText = [styles.runningText, { fontFamily: running.font }];
 
   return (
     <View style={[styles.frame, { width, height }]}>
       <View style={[styles.runningHeader, { height: HEADER_HEIGHT }]}>
-        <Text style={styles.runningText}>{`الجزء ${toArabicDigits(juzForPage(pageNumber))}`}</Text>
-        <Text style={styles.runningText}>{`سورة ${firstSurah.ar}`}</Text>
+        <Text style={runningText}>{`${running.juz} ${running.digits(juzForPage(layout, pageNumber))}`}</Text>
+        <Text style={runningText}>{`${running.surah} ${firstSurah.ar}`}</Text>
       </View>
 
       <View style={[styles.lines, openingPage && styles.linesCentered]}>
@@ -84,10 +105,11 @@ export const MushafPage = memo(function MushafPage({
           <MushafLine
             key={index}
             line={line}
+            layout={layout}
             lineIndex={index}
             height={lineHeight}
             fontSize={fontSize}
-            tajweed={tajweed}
+            tajweed={coloured}
             selectedWord={selectedWord}
             onWordPress={onWordPress}
           />
@@ -95,7 +117,7 @@ export const MushafPage = memo(function MushafPage({
       </View>
 
       <View style={[styles.footer, { height: FOOTER_HEIGHT }]}>
-        <Text style={styles.runningText}>{toArabicDigits(pageNumber)}</Text>
+        <Text style={runningText}>{running.digits(pageNumber)}</Text>
       </View>
     </View>
   );
@@ -103,6 +125,7 @@ export const MushafPage = memo(function MushafPage({
 
 type MushafLineProps = {
   line: QuranLine;
+  layout: MushafLayout;
   lineIndex: number;
   height: number;
   fontSize: number;
@@ -111,8 +134,8 @@ type MushafLineProps = {
   onWordPress?: (word: QuranWord, key: string) => void;
 };
 
-function MushafLine({ line, lineIndex, height, fontSize, tajweed, selectedWord, onWordPress }: MushafLineProps) {
-  const textStyle = [styles.quranText, { fontSize, lineHeight: height }];
+function MushafLine({ line, layout, lineIndex, height, fontSize, tajweed, selectedWord, onWordPress }: MushafLineProps) {
+  const textStyle = [styles.quranText, { fontFamily: PAGE_FONT[layout], fontSize, lineHeight: height }];
 
   if ("h" in line) {
     return (
@@ -129,7 +152,7 @@ function MushafLine({ line, lineIndex, height, fontSize, tajweed, selectedWord, 
   if ("b" in line) {
     return (
       <View style={[styles.line, styles.lineCentered, { height }]}>
-        <Text style={textStyle}>{BASMALA}</Text>
+        <Text style={textStyle}>{BASMALA[layout]}</Text>
       </View>
     );
   }

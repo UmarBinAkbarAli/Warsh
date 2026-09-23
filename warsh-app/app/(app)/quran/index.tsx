@@ -4,24 +4,45 @@ import { useMemo, useState } from "react";
 import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { QURAN_FONT } from "@components/quran/MushafPage";
+import { INDOPAK_FONT, QURAN_FONT } from "@components/quran/MushafPage";
 import { QuranSettingsSheet } from "@components/quran/QuranSheets";
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
-import { chapters, getChapter, juzForPage, juzStarts, surahForPage, type Chapter } from "../../../services/quran/data";
+import {
+  chapters,
+  getChapter,
+  juzForPage,
+  juzStarts,
+  pageForAyah,
+  surahForPage,
+  surahPage,
+  type Chapter,
+  type JuzStart,
+} from "../../../services/quran/data";
 
 type Tab = "surah" | "juz" | "bookmarks";
 
-type Row = { key: string; badge: string; title: string; subtitle: string; arabic?: string; page: number };
+type Row = {
+  key: string;
+  badge: string;
+  title: string;
+  subtitle: string;
+  arabic?: string;
+  /** The Arabic is Indo-Pak text (a parah name), drawn in its own font. */
+  indoPak?: boolean;
+  page: number;
+};
 
-/** Surah, juz and bookmark lists for the Quran reader (Pen section 27, screen 2). */
+/** Surah, juz (parah) and bookmark lists for the Quran reader (Pen sections 27 and 28). */
 export default function QuranIndexScreen() {
   const router = useRouter();
   const t = useT();
   const insets = useSafeAreaInsets();
-  const lastPage = useQuranStore((s) => s.lastPage);
+  const layout = useQuranStore((s) => s.layout);
+  const lastAyah = useQuranStore((s) => s.lastAyah);
   const bookmarks = useQuranStore((s) => s.bookmarks);
+  const lastPage = lastAyah ? pageForAyah(layout, lastAyah) : null;
   const [tab, setTab] = useState<Tab>("surah");
   const [searching, setSearching] = useState(false);
   const [query, setQuery] = useState("");
@@ -31,22 +52,35 @@ export default function QuranIndexScreen() {
 
   const rows = useMemo<Row[]>(() => {
     if (tab === "juz") {
-      return juzStarts.map((juz) => ({
-        key: `juz-${juz.juz}`,
-        badge: String(juz.juz),
-        title: t("quran.juz", { juz: juz.juz }),
-        subtitle: t("quran.juzStarts", { surah: getChapter(juz.surah).en, page: juz.page }),
-        page: juz.page,
-      }));
+      return juzStarts(layout).map((juz, index, all) =>
+        juz.en && juz.ar && juz.ayah
+          ? {
+              key: `juz-${juz.juz}`,
+              badge: String(juz.juz),
+              title: t("quran.parahName", { juz: juz.juz, name: juz.en }),
+              subtitle: parahRange(juz, all[index + 1]),
+              arabic: juz.ar,
+              indoPak: true,
+              page: juz.page,
+            }
+          : {
+              key: `juz-${juz.juz}`,
+              badge: String(juz.juz),
+              title: t("quran.juz", { juz: juz.juz }),
+              subtitle: t("quran.juzStarts", { surah: getChapter(juz.surah).en, page: juz.page }),
+              page: juz.page,
+            },
+      );
     }
     if (tab === "bookmarks") {
-      return bookmarks.map((page) => {
-        const chapter = surahForPage(page);
+      return bookmarks.map((ayah) => {
+        const page = pageForAyah(layout, ayah);
+        const chapter = surahForPage(layout, page);
         return {
-          key: `bookmark-${page}`,
+          key: `bookmark-${ayah}`,
           badge: String(page),
           title: chapter.en,
-          subtitle: t("quran.pageJuz", { page, juz: juzForPage(page) }),
+          subtitle: t("quran.pageJuz", { page, juz: juzForPage(layout, page) }),
           arabic: chapter.ar,
           page,
         };
@@ -62,11 +96,11 @@ export default function QuranIndexScreen() {
         ayat: chapter.ayat,
       }),
       arabic: chapter.ar,
-      page: chapter.page,
+      page: surahPage(layout, chapter.n),
     }));
-  }, [tab, query, bookmarks, t]);
+  }, [tab, query, bookmarks, layout, t]);
 
-  const lastChapter = lastPage ? surahForPage(lastPage) : null;
+  const lastChapter = lastPage ? surahForPage(layout, lastPage) : null;
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top + Spacing.sm }]}>
@@ -187,7 +221,9 @@ export default function QuranIndexScreen() {
               </Text>
             </View>
             <View style={styles.rowEnd}>
-              {item.arabic ? <Text style={styles.rowArabic}>{item.arabic}</Text> : null}
+              {item.arabic ? (
+                <Text style={[styles.rowArabic, item.indoPak && styles.rowArabicIndoPak]}>{item.arabic}</Text>
+              ) : null}
               <Text style={styles.rowPage}>{t("quran.pageShort", { page: item.page })}</Text>
             </View>
           </Pressable>
@@ -197,6 +233,20 @@ export default function QuranIndexScreen() {
       <QuranSettingsSheet visible={settingsOpen} onClose={() => setSettingsOpen(false)} />
     </View>
   );
+}
+
+// "Al-Baqarah 142 – 252", or "Al-Baqarah 253 – Ali 'Imran 91" when the
+// parah crosses into the next surah; it ends where the next parah begins.
+function parahRange(parah: JuzStart, next: JuzStart | undefined) {
+  const from = `${getChapter(parah.surah).en} ${parah.ayah}`;
+  let endSurah = next ? next.surah : 114;
+  let endAyah = next ? (next.ayah ?? 1) - 1 : getChapter(114).ayat;
+  if (endAyah === 0) {
+    endSurah -= 1;
+    endAyah = getChapter(endSurah).ayat;
+  }
+  const to = endSurah === parah.surah ? String(endAyah) : `${getChapter(endSurah).en} ${endAyah}`;
+  return `${from} – ${to}`;
 }
 
 // Matches a surah number, or an English or Arabic name with the "Al-" /
@@ -371,6 +421,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     lineHeight: 34,
     color: WarshPalette.navy,
+  },
+  rowArabicIndoPak: {
+    fontFamily: INDOPAK_FONT,
+    fontSize: 18,
   },
   rowPage: {
     fontFamily: Fonts.regular,

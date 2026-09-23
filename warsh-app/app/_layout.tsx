@@ -110,6 +110,8 @@ function RootLayout() {
     // Quran reader text (Pen section 27): full Uthmani orthography and the
     // U+06DD ayah-end ornament, which Scheherazade New does not draw.
     "Amiri Quran": require("../assets/fonts/AmiriQuran-Regular.ttf"),
+    // The Indo-Pak Mushaf (Pen section 28), which Warsh opens by default.
+    "IndoPak Nastaleeq": require("../assets/fonts/IndoPakNastaleeq-Regular.ttf"),
   });
 
   if (fontError) {

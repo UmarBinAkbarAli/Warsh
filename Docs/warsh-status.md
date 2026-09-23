@@ -256,6 +256,22 @@ files remain release evidence.
   Verified 2026-09-23 on a release APK on the `Warsh_API_34` emulator (list,
   page 2, the widest page 591, page 300, tajweed on/off, rule sheet, settings,
   bookmark, swipe direction, Learn card resume). Not yet checked on web.
+- Indo-Pak 15-line Mushaf (Pen section 28), the reader's default since
+  2026-09-23; Madani stays selectable in Reading settings. 610 pages from the
+  Qudratullah (Lahore) 15-line layout, which the owner confirmed matches the Taj
+  Company 15-line print, with the QUL Indo-Pak word-by-word text and its Indo-Pak
+  Nastaleeq font (`assets/fonts/IndoPakNastaleeq-Regular.ttf`). The QUL files
+  need a free qul.tarteel.ai account and live in the
+  gitignored `.quran-cache/qul/`; rebuild with
+  `node scripts/build-quran-indopak-data.mjs`. Parahs use the Indo-Pak
+  boundaries (4 at 3:92, 7 at 5:83, 11 at 9:94, 14 at 15:2, 20 at 27:60, 21 at
+  29:45, 23 at 36:22), each checked by the build to open a page, and the Juz tab
+  reads "Juz (Parah)" / "پارہ" with the parah names. A "Surah · Parah" button on
+  every page opens the list. The place and bookmarks are stored as ayahs, so
+  switching layout reopens at the same ayah. Indo-Pak pages have no tajweed
+  colours yet. Before a Play release: confirm the licence terms of the QUL
+  layout and the Indo-Pak font (the font carries no licence text), as with the
+  Quran.com data.
 - Ustaad Noor chat with daily limits and consumable overage credits
 - Subscription/paywall, purchase verification, restore flow, and the Google RTDN
   webhook, which has been reached by live notifications since 2026-08-29

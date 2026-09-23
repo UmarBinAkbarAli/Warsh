@@ -1,11 +1,17 @@
-// Bundled Quran data for the reader (Pen section 27), built by
-// scripts/build-quran-data.mjs from the King Fahd Complex 15-line Madani
-// layout. Everything is on the device, so reading needs no network.
+// Bundled Quran data for the reader (Pen sections 27 and 28). Two 15-line
+// layouts ship: the Indo-Pak Mushaf (Qudratullah print, the same pages as
+// Taj Company; scripts/build-quran-indopak-data.mjs), which Warsh opens by
+// default, and the King Fahd Complex Madani Mushaf with tajweed
+// (scripts/build-quran-data.mjs). Everything is on the device, so reading
+// needs no network.
 
 import chaptersJson from "../../data/quran/chapters.json";
+import indoPakIndexJson from "../../data/quran/indopak/index.json";
 import juzJson from "../../data/quran/juz.json";
+import madaniStartsJson from "../../data/quran/madani-starts.json";
 
-export const PAGE_COUNT = 604;
+export type MushafLayout = "indopak15" | "madani15";
+export const DEFAULT_LAYOUT: MushafLayout = "indopak15";
 export const LINES_PER_PAGE = 15;
 // Minimum gap between words in em. Must match WORD_GAP_EM in the build
 // script, which measures each page's widest line with this gap included.
@@ -32,15 +38,15 @@ export type QuranLine =
   | { w: QuranWord[]; c?: 1 }; // text; c = centred instead of justified
 
 export type QuranPage = {
-  /** Juz and hizb of the first ayah on the page. */
+  /** Juz (parah) the page belongs to, and on Madani pages the hizb of its first ayah. */
   j: number;
-  z: number;
+  z?: number;
   /** Surah of the first ayah on the page. */
   s: number;
   /** Width of the page's widest line in em, gaps included. */
   m: number;
-  /** The same with tajweed colours on. */
-  t: number;
+  /** The same with tajweed colours on (Madani only). */
+  t?: number;
   l: QuranLine[];
 };
 
@@ -56,56 +62,135 @@ export type Chapter = {
 
 export const chapters = chaptersJson as Chapter[];
 
-let pages: QuranPage[] | null = null;
+export type JuzStart = {
+  juz: number;
+  page: number;
+  surah: number;
+  /** Indo-Pak parahs only: the opening ayah and the name the parah is known by. */
+  ayah?: number;
+  en?: string;
+  ar?: string;
+};
 
-/** Pages load on first use (≈2.5 MB), not at app start. */
-export function getPages(): QuranPage[] {
-  if (!pages) {
+type LayoutData = {
+  pageCount: number;
+  tajweed: boolean;
+  /** Per page, the ayah (surah * 1000 + ayah) that begins on it; x.5 when the page only continues ayah x. */
+  starts: number[];
+  surahPages: number[];
+  juzStarts: JuzStart[];
+  loadPages: () => QuranPage[];
+};
+
+const indoPakIndex = indoPakIndexJson as { starts: number[]; surahPages: number[]; parahs: JuzStart[] };
+
+// Pages load on first use (≈1.6–2.5 MB each), not at app start.
+const LAYOUTS: Record<MushafLayout, LayoutData> = {
+  indopak15: {
+    pageCount: 610,
+    tajweed: false,
+    starts: indoPakIndex.starts,
+    surahPages: indoPakIndex.surahPages,
+    juzStarts: indoPakIndex.parahs,
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    pages = require("../../data/quran/pages.json") as QuranPage[];
-  }
-  return pages;
+    loadPages: () => require("../../data/quran/indopak/pages.json") as QuranPage[],
+  },
+  madani15: {
+    pageCount: 604,
+    tajweed: true,
+    starts: madaniStartsJson as number[],
+    surahPages: chapters.map((chapter) => chapter.page),
+    juzStarts: juzJson as JuzStart[],
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    loadPages: () => require("../../data/quran/pages.json") as QuranPage[],
+  },
+};
+
+const loaded: Partial<Record<MushafLayout, QuranPage[]>> = {};
+
+export function pageCount(layout: MushafLayout) {
+  return LAYOUTS[layout].pageCount;
 }
 
-export function getPage(pageNumber: number): QuranPage {
-  return getPages()[clampPage(pageNumber) - 1];
+export function hasTajweed(layout: MushafLayout) {
+  return LAYOUTS[layout].tajweed;
 }
 
-export function clampPage(pageNumber: number) {
+export function getPage(layout: MushafLayout, pageNumber: number): QuranPage {
+  loaded[layout] ??= LAYOUTS[layout].loadPages();
+  return loaded[layout][clampPage(layout, pageNumber) - 1];
+}
+
+export function clampPage(layout: MushafLayout, pageNumber: number) {
   if (!Number.isFinite(pageNumber)) return 1;
-  return Math.min(PAGE_COUNT, Math.max(1, Math.round(pageNumber)));
+  return Math.min(pageCount(layout), Math.max(1, Math.round(pageNumber)));
 }
 
 export function getChapter(surah: number): Chapter {
   return chapters[Math.min(114, Math.max(1, surah)) - 1];
 }
 
-export type JuzStart = { juz: number; page: number; surah: number };
+/** The page a surah opens on in this layout. */
+export function surahPage(layout: MushafLayout, surah: number) {
+  return LAYOUTS[layout].surahPages[getChapter(surah).n - 1];
+}
 
-/** The page holding each juz's first ayah, as the printed index lists it. */
-export const juzStarts = juzJson as JuzStart[];
+/** The page holding each juz's (parah's) first ayah, as the printed index lists it. */
+export function juzStarts(layout: MushafLayout): JuzStart[] {
+  return LAYOUTS[layout].juzStarts;
+}
 
-// These two answer from the small indexes, so the Learn card can name the
-// last page read without loading the page data.
+// These answer from the small indexes, so the Learn card can name the last
+// page read without loading the page data.
 
 /** The juz a page belongs to, as its running header shows it. */
-export function juzForPage(pageNumber: number) {
+export function juzForPage(layout: MushafLayout, pageNumber: number) {
   let juz = 1;
-  for (const start of juzStarts) if (start.page <= pageNumber) juz = start.juz;
+  for (const start of juzStarts(layout)) if (start.page <= pageNumber) juz = start.juz;
   return juz;
 }
 
-/** The last surah whose first ayah is on or before this page. */
-export function surahForPage(pageNumber: number): Chapter {
+/** The last surah that opens on or before this page. */
+export function surahForPage(layout: MushafLayout, pageNumber: number): Chapter {
+  const pages = LAYOUTS[layout].surahPages;
   let chapter = chapters[0];
-  for (const candidate of chapters) if (candidate.page <= pageNumber) chapter = candidate;
+  for (const candidate of chapters) if (pages[candidate.n - 1] <= pageNumber) chapter = candidate;
   return chapter;
+}
+
+// A place in the Quran is kept as an ayah (surah * 1000 + ayah), not a
+// page, so it survives a change of layout.
+
+/** The ayah a page is saved and bookmarked as: the first that begins on it. */
+export function ayahForPage(layout: MushafLayout, pageNumber: number) {
+  return Math.floor(LAYOUTS[layout].starts[clampPage(layout, pageNumber) - 1]);
+}
+
+/** The page an ayah begins on. */
+export function pageForAyah(layout: MushafLayout, ayah: number) {
+  const starts = LAYOUTS[layout].starts;
+  let low = 0;
+  let high = starts.length - 1;
+  while (low < high) {
+    const mid = Math.ceil((low + high) / 2);
+    if (starts[mid] <= ayah) low = mid;
+    else high = mid - 1;
+  }
+  return low + 1;
 }
 
 const ARABIC_DIGITS = "٠١٢٣٤٥٦٧٨٩";
 
 export function toArabicDigits(value: number) {
   return String(value).replace(/\d/g, (digit) => ARABIC_DIGITS[Number(digit)]);
+}
+
+// The Urdu (Extended Arabic-Indic) digits Indo-Pak prints number pages with;
+// the Indo-Pak font draws only these.
+const URDU_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
+
+export function toUrduDigits(value: number) {
+  return String(value).replace(/\d/g, (digit) => URDU_DIGITS[Number(digit)]);
 }
 
 /** Ayah-end ornament: U+06DD encloses the digits that follow it. */
@@ -130,4 +215,8 @@ export function wordText(word: QuranWord) {
   return (segmentsOf(word) ?? []).map((segment) => segment[0]).join("");
 }
 
-export const BASMALA = "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ";
+export const BASMALA: Record<MushafLayout, string> = {
+  madani15: "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ",
+  // Spelled as in the Indo-Pak text (1:1), which its font is built for.
+  indopak15: "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِیْمِ",
+};

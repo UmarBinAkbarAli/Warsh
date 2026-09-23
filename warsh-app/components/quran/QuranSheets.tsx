@@ -6,7 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import { segmentsOf, wordText, type QuranWord } from "../../services/quran/data";
+import { hasTajweed, segmentsOf, wordText, type MushafLayout, type QuranWord } from "../../services/quran/data";
 import { TAJWEED_LEGEND, TAJWEED_RULES, rulesInWord } from "../../services/quran/tajweed";
 import { QURAN_FONT } from "./MushafPage";
 
@@ -30,16 +30,21 @@ function BottomSheet({ visible, onClose, children }: { visible: boolean; onClose
   );
 }
 
-const LAYOUTS = [
-  { key: "madani15", titleKey: "quran.layout.madani15", subKey: "quran.layout.madani15Sub", available: true },
-  { key: "indopak16", titleKey: "quran.layout.indopak16", subKey: "quran.layout.indopak16Sub", available: false },
-  { key: "indopak13", titleKey: "quran.layout.indopak13", subKey: "quran.layout.indopak13Sub", available: false },
+// Built layouts are selectable; the rest are listed as coming soon.
+const LAYOUTS: { key: string; titleKey: string; subKey: string; layout?: MushafLayout }[] = [
+  { key: "indopak15", titleKey: "quran.layout.indopak15", subKey: "quran.layout.indopak15Sub", layout: "indopak15" },
+  { key: "madani15", titleKey: "quran.layout.madani15", subKey: "quran.layout.madani15Sub", layout: "madani15" },
+  { key: "indopak16", titleKey: "quran.layout.indopak16", subKey: "quran.layout.indopak16Sub" },
+  { key: "indopak13", titleKey: "quran.layout.indopak13", subKey: "quran.layout.indopak13Sub" },
 ];
 
 export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onClose: () => void }) {
   const t = useT();
+  const current = useQuranStore((s) => s.layout);
+  const setLayout = useQuranStore((s) => s.setLayout);
   const tajweed = useQuranStore((s) => s.tajweed);
   const keepAwake = useQuranStore((s) => s.keepAwake);
+  const tajweedAvailable = hasTajweed(current);
   const setTajweed = useQuranStore((s) => s.setTajweed);
   const setKeepAwake = useQuranStore((s) => s.setKeepAwake);
 
@@ -54,32 +59,39 @@ export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onC
 
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.sheetBody}>
         <Text style={styles.label}>{t("quran.settings.layout")}</Text>
-        {LAYOUTS.map((layout) => (
-          <View
-            key={layout.key}
-            style={[styles.option, layout.available ? styles.optionSelected : styles.optionDisabled]}
-            accessibilityState={{ selected: layout.available, disabled: !layout.available }}
-          >
-            <View style={[styles.radio, layout.available && styles.radioOn]} />
-            <View style={styles.optionCopy}>
-              <Text style={styles.optionTitle}>{t(layout.titleKey)}</Text>
-              <Text style={styles.optionSub}>{t(layout.subKey)}</Text>
-            </View>
-            {!layout.available ? (
-              <View style={styles.soonPill}>
-                <Text style={styles.soonText}>{t("quran.settings.comingSoon")}</Text>
+        {LAYOUTS.map(({ key, titleKey, subKey, layout }) => {
+          const selected = layout === current;
+          return (
+            <Pressable
+              key={key}
+              onPress={layout ? () => setLayout(layout) : undefined}
+              disabled={!layout}
+              style={[styles.option, selected && styles.optionSelected, !layout && styles.optionDisabled]}
+              accessibilityRole="radio"
+              accessibilityState={{ selected, disabled: !layout }}
+            >
+              <View style={[styles.radio, selected && styles.radioOn]} />
+              <View style={styles.optionCopy}>
+                <Text style={styles.optionTitle}>{t(titleKey)}</Text>
+                <Text style={styles.optionSub}>{t(subKey)}</Text>
               </View>
-            ) : null}
-          </View>
-        ))}
+              {!layout ? (
+                <View style={styles.soonPill}>
+                  <Text style={styles.soonText}>{t("quran.settings.comingSoon")}</Text>
+                </View>
+              ) : null}
+            </Pressable>
+          );
+        })}
 
         <Text style={[styles.label, styles.labelSpaced]}>{t("quran.settings.whileReading")}</Text>
         <View style={styles.toggleCard}>
           <ToggleRow
             title={t("quran.settings.tajweed")}
-            subtitle={t("quran.settings.tajweedSub")}
-            value={tajweed}
+            subtitle={t(tajweedAvailable ? "quran.settings.tajweedSub" : "quran.settings.tajweedMadaniOnly")}
+            value={tajweed && tajweedAvailable}
             onChange={setTajweed}
+            disabled={!tajweedAvailable}
           />
           <View style={styles.divider} />
           <ToggleRow
@@ -102,11 +114,13 @@ function ToggleRow({
   subtitle,
   value,
   onChange,
+  disabled = false,
 }: {
   title: string;
   subtitle: string;
   value: boolean;
   onChange: (value: boolean) => void;
+  disabled?: boolean;
 }) {
   return (
     <View style={styles.toggleRow}>
@@ -117,6 +131,7 @@ function ToggleRow({
       <Switch
         value={value}
         onValueChange={onChange}
+        disabled={disabled}
         trackColor={{ false: WarshPalette.cream, true: WarshPalette.navy }}
         thumbColor={WarshPalette.white}
         accessibilityLabel={title}
