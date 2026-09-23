@@ -71,7 +71,7 @@ const PLANS = {
     ["ch19-l03", 3, "A Familiar Change in a New Word", "التَّاءُ قَبْلَ الضَّمِيرِ", "STANDARD", "chapter-19-lesson-03.json"],
     ["ch19-l04", 4, "Who Owns What in a Sentence?", "لِمَنْ هٰذَا؟", "STANDARD", "chapter-19-lesson-04.json"],
     ["ch19-l05", 5, "Possession in Quranic Context", "الْمِلْكِيَّةُ فِي السِّيَاقِ الْقُرْآنِيِّ", "STANDARD", "chapter-19-lesson-05.json"],
-    ["ch19-l06", 6, "Chapter 19 Review: Al-Falaq Bridge", "مُرَاجَعَةُ الْفَصْلِ التَّاسِعَ عَشَرَ", "REVIEW", "chapter-19-lesson-06-review.json"],
+    ["ch19-l06", 6, "Chapter 19 Review", "مُرَاجَعَةُ الْفَصْلِ التَّاسِعَ عَشَرَ", "REVIEW", "chapter-19-lesson-06-review.json"],
     ["ch19-test", 7, "Chapter 19 Final Test", "اخْتِبَارُ الْفَصْلِ التَّاسِعَ عَشَرَ", "REVIEW", "chapter-19-lesson-07-final-test.json"],
   ],
 };

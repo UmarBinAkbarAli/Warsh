@@ -922,7 +922,7 @@ async function main() {
     { id: "ch19-l03", chapterId: ch19Id, order: 3, title: "A Familiar Change in a New Word", titleAr: "التَّاءُ قَبْلَ الضَّمِيرِ", template: "STANDARD", xpReward: ch19L03Content._meta?.xp_reward ?? 10, content: ch19L03Content },
     { id: "ch19-l04", chapterId: ch19Id, order: 4, title: "Who Owns What in a Sentence?", titleAr: "لِمَنْ هٰذَا؟", template: "STANDARD", xpReward: ch19L04Content._meta?.xp_reward ?? 10, content: ch19L04Content },
     { id: "ch19-l05", chapterId: ch19Id, order: 5, title: "Possession in Quranic Context", titleAr: "الْمِلْكِيَّةُ فِي السِّيَاقِ الْقُرْآنِيِّ", template: "STANDARD", xpReward: ch19L05Content._meta?.xp_reward ?? 10, content: ch19L05Content },
-    { id: "ch19-l06", chapterId: ch19Id, order: 6, title: "Chapter 19 Review: Al-Falaq Bridge", titleAr: "مُرَاجَعَةُ الْفَصْلِ التَّاسِعَ عَشَرَ", template: "REVIEW", xpReward: ch19L06Content._meta?.xp_reward ?? 20, content: ch19L06Content },
+    { id: "ch19-l06", chapterId: ch19Id, order: 6, title: "Chapter 19 Review", titleAr: "مُرَاجَعَةُ الْفَصْلِ التَّاسِعَ عَشَرَ", template: "REVIEW", xpReward: ch19L06Content._meta?.xp_reward ?? 20, content: ch19L06Content },
     { id: "ch19-test", chapterId: ch19Id, order: 7, title: "Chapter 19 Final Test", titleAr: "اخْتِبَارُ الْفَصْلِ التَّاسِعَ عَشَرَ", template: "REVIEW", xpReward: ch19TestContent._meta?.xp_reward ?? 20, content: ch19TestContent },
     // Chapter 20
     { id: "ch20-l01", chapterId: ch20Id, order: 1, title: "Our — نَا (our)",                       titleAr: "رَبَّنَا — نَا الْجَمْعِيَّة",              template: "STANDARD",        xpReward: ch20L01Content._meta?.xp_reward       ?? 10, content: ch20L01Content },

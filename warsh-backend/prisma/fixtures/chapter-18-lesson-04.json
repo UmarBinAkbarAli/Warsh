@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 18, Lesson 4 (ch18-l04) — الَّتِي read in context without redoing Chapter 8's introduction: after a feminine thing (الْمَدْرَسَةُ الَّتِي فِي الْقَرْيَةِ) and standing on its own for \"the woman who\" (الَّتِي ذَهَبَتْ). Quran: Al-Mujadilah 58:1 قَوْلَ الَّتِي تُجَادِلُكَ, recognition only (reveal index 4), deliberately reused from Chapter 17 Lesson 5 where the task was سَمِعَ; تُجَادِلُكَ is glossed. No \"every verb after الَّتِي has one feminine-present form\" rule. Rebuilt 2026-09-23 from Docs/proposals/chapter-18-content-proposal.md; the chapter map and fixtures named three different source files (reader_lecture_18_relative_pronouns.md, reader_lecture_book2_lesson7.md, tadabbur_an_nas.md), none of which existed in the repository, so the approved proposal is recorded as the source.",
+    "_note": "Chapter 18, Lesson 4 (ch18-l04) — الَّتِي read in context without redoing Chapter 8's introduction: after a feminine thing (الْمَدْرَسَةُ الَّتِي فِي الْقَرْيَةِ) and standing on its own for \"the woman who\" (الَّتِي ذَهَبَتْ). Quran: Al-Mujadilah 58:1 قَوْلَ الَّتِي تُجَادِلُكَ, recognition only (reveal index 4), deliberately reused from Chapter 17 Lesson 5 where the task was سَمِعَ; تُجَادِلُكَ is glossed. No \"every verb after الَّتِي has one feminine-present form\" rule. Rebuilt 2026-09-23 from Docs/proposals/chapter-18-content-proposal.md; the chapter map and fixtures named three different source files (reader_lecture_18_relative_pronouns.md, reader_lecture_book2_lesson7.md, tadabbur_an_nas.md), none of which existed in the repository, so the approved proposal is recorded as the source. Al-Falaq 113:4 وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ added (ayah card, الْعُقَدُ word card, ch18-l04-ex09) to teach النفاثات and عقد for Tadabbur coverage, moved from the Chapter 19 review; النَّفَّاثَاتِ is linked to الَّتِي only as a feminine word naming people by their action, not called a relative clause (Arabic editor to confirm).",
     "titleUr": "سیاق میں الَّتِي",
     "chapter_order": 18,
     "lesson_order": 4,
@@ -133,6 +133,39 @@
       "explanation": {
         "en": "A full sentence with الَّتِي: الطَّالِبَةُ الَّتِي قَامَتْ, the female student who stood up, then مُجْتَهِدَةٌ, is hardworking.",
         "ur": "الَّتِي کے ساتھ مکمل جملہ: الطَّالِبَةُ الَّتِي قَامَتْ، وہ طالبہ جو کھڑی ہوئی، پھر مُجْتَهِدَةٌ، محنتی ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Falaq 113:4: and from the evil of those who blow on knots,",
+        "ar": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
+        "ur": "Al-Falaq 113:4: اور گرہوں میں پھونکنے والیوں کی برائی سے،"
+      },
+      "explanation": {
+        "en": "النَّفَّاثَاتِ: those who blow, a feminine word for people named by what they do, as الَّتِي تُجَادِلُكَ named a woman by what she did. فِي الْعُقَدِ, on knots, is a place phrase like فِي الْقَرْيَةِ. A description of sorcery.",
+        "ur": "النَّفَّاثَاتِ: پھونکنے والیاں، مؤنث لفظ جو لوگوں کو ان کے کام سے پہچانتا ہے، جیسے الَّتِي تُجَادِلُكَ نے ایک عورت کو اس کے کام سے پہچانا۔ فِي الْعُقَدِ، گرہوں میں، فِي الْقَرْيَةِ کی طرح جگہ کا ٹکڑا ہے۔ جادو کا بیان۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113004.mp3",
+      "introduces_vocab": {
+        "ar_plain": "النفاثات"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "الْعُقَدُ",
+        "ar_plain": "العقد",
+        "translit": "al-ʿuqadu",
+        "en": "knots",
+        "ur": "گرہیں"
+      },
+      "explanation": {
+        "en": "الْعُقَدُ: knots, the plural of عُقْدَةٌ, a knot.",
+        "ur": "الْعُقَدُ: گرہیں، عُقْدَةٌ، گرہ، کی جمع۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "عقد"
       }
     }
   ],
@@ -451,6 +484,38 @@
       "explanation_on_wrong": {
         "en": "A feminine noun takes الَّتِي: الْمَدْرَسَةُ الَّتِي فِي الْقَرْيَةِ.",
         "ur": "مؤنث اسم الَّتِي لیتا ہے: الْمَدْرَسَةُ الَّتِي فِي الْقَرْيَةِ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch18-l04-ex09",
+      "ayah_fragment": {
+        "ar": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
+        "surah_ref": "Al-Falaq 113:4"
+      },
+      "options": [
+        {
+          "en": "النَّفَّاثَاتِ — the knots; الْعُقَدِ — those who blow",
+          "ur": "النَّفَّاثَاتِ — گرہیں؛ الْعُقَدِ — پھونکنے والیاں"
+        },
+        {
+          "en": "فِي — those who blow",
+          "ur": "فِي — پھونکنے والیاں"
+        },
+        {
+          "en": "الْعُقَدِ — darkness",
+          "ur": "الْعُقَدِ — اندھیرا"
+        },
+        {
+          "en": "النَّفَّاثَاتِ — those who blow; الْعُقَدِ — knots",
+          "ur": "النَّفَّاثَاتِ — پھونکنے والیاں؛ الْعُقَدِ — گرہیں"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "From the evil of those who blow on knots.",
+        "ur": "گرہوں میں پھونکنے والیوں کی برائی سے۔"
       }
     }
   ],

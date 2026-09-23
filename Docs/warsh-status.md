@@ -676,10 +676,15 @@ Everything below this list is either done and verified, or one of these:
    وَامْرَأَتُهُ (Ibrahim's wife) instead of Al-Masad 111:4 and Maryam 19:16
    أَهْلِهَا for owner-in-context. Tadabbur coverage (enforced by
    `db:validate-fixtures`) was kept rather than weakened: the An-Nas words sit
-   in Ch18 L1 and the Ch18 review, and the Ch19 review carries a labelled
-   "Al-Falaq word bridge" (8 glossed words, 4 recognition items, none in the
-   chapter test) — the Ch19 proposal wanted those words out of the review, so
-   this is the one owner decision to confirm. `chapter-19-lesson-01.json`
+   in Ch18 L1 and the Ch18 review; the Al-Falaq words (owner decision
+   2026-09-23) are taught where their grammar fits — مَا (113:2) Ch18 L3,
+   النَّفَّاثَاتِ / الْعُقَدِ (113:4) Ch18 L4, الْفَلَقِ Ch19 L1, غَاسِقٍ / إِذَا /
+   وَقَبَ (113:3) Ch19 L2, حَاسِدٍ / حَسَدَ (113:5) Ch19 L3 — so the Ch19 review
+   adds nothing new (it recalls 113:3 and 113:5) and the chapter test has none,
+   as the proposal asked. The Arabic editor still has to confirm the مَا ↔
+   الَّذِي and النَّفَّاثَاتِ ↔ الَّتِي framings. Re-staged 2026-09-23 (Ch18 + Ch19
+   applied; validators, Urdu audit, lesson-schema tests pass; 0 lesson clips
+   missing; API serves the new lessons). `chapter-19-lesson-01.json`
    left the legacy reveal-defect list (its index is fixed). Verified:
    fixture/legacy/Urdu/Quran audits clean (869 ayah entries, 0 issues), 183
    tests, 172 new catalogue clips (fixtures 3817/3817, no Quran text

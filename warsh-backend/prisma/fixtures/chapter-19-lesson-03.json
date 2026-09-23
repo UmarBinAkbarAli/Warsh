@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 19, Lesson 3 (ch19-l03) — Chapter 7's ة → ت before an ending (مَدْرَسَتُهَا) retrieved once, then transferred to قَرْيَةٌ and امْرَأَةٌ; مَدْرَسَتُهَا is not rescored as the new skill. Quran: Hud 11:71 وَامْرَأَتُهُ قَائِمَةٌ, Ibrahim's wife, chosen over the proposal's Al-Masad 111:4 candidate for the same written ت before ـهُ in a gentler context (reveal index 0). The false \"the noun itself does not change\" and alif-as-feminine claims are gone. Rebuilt 2026-09-23 from Docs/proposals/chapter-19-content-proposal.md; the chapter map and fixtures named two different reader_lecture_19 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "_note": "Chapter 19, Lesson 3 (ch19-l03) — Chapter 7's ة → ت before an ending (مَدْرَسَتُهَا) retrieved once, then transferred to قَرْيَةٌ and امْرَأَةٌ; مَدْرَسَتُهَا is not rescored as the new skill. Quran: Hud 11:71 وَامْرَأَتُهُ قَائِمَةٌ, Ibrahim's wife, chosen over the proposal's Al-Masad 111:4 candidate for the same written ت before ـهُ in a gentler context (reveal index 0). The false \"the noun itself does not change\" and alif-as-feminine claims are gone. Rebuilt 2026-09-23 from Docs/proposals/chapter-19-content-proposal.md; the chapter map and fixtures named two different reader_lecture_19 files, neither of which existed in the repository, so the approved proposal is recorded as the source. Al-Falaq 113:5 وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ added (ayah card, حَسَدَ word card, ch19-l03-ex09) to teach حاسد and حسد for Tadabbur coverage, moved from the Chapter 19 review; framed as familiar letters in a new word (إِذَا is taught in Lesson 2).",
     "titleUr": "نئے لفظ میں جانی پہچانی تبدیلی",
     "chapter_order": 19,
     "lesson_order": 3,
@@ -148,6 +148,39 @@
         "ur": "وَامْرَأَتُهُ قَائِمَةٌ: اور اس کی بیوی کھڑی تھی۔ یہ حضرت ابراہیم کی اہلیہ ہیں، جب فرشتے خوشخبری لائے؛ آیت آگے حضرت اسحاق کی بشارت تک جاتی ہے۔ ـهُ سے پہلے ت دیکھیں: امْرَأَة + ـهُ = امْرَأَتُهُ۔"
       },
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/011071.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Falaq 113:5: and from the evil of an envier when he envies.\"",
+        "ar": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+        "ur": "Al-Falaq 113:5: اور حسد کرنے والے کی برائی سے جب وہ حسد کرے۔"
+      },
+      "explanation": {
+        "en": "حَاسِدٍ: an envier; إِذَا حَسَدَ: when he envies. The same three letters, ح س د, in two new words: one is the person, one is the action. حَسَدَ looks like a past action, but after إِذَا it reads when he envies.",
+        "ur": "حَاسِدٍ: حسد کرنے والا؛ إِذَا حَسَدَ: جب وہ حسد کرے۔ وہی تین حروف، ح س د، دو نئے لفظوں میں: ایک شخص ہے، ایک کام۔ حَسَدَ ماضی کا کام لگتا ہے، لیکن إِذَا کے بعد اس کا مطلب ہے جب وہ حسد کرے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113005.mp3",
+      "introduces_vocab": {
+        "ar_plain": "حاسد"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "حَسَدَ",
+        "ar_plain": "حسد",
+        "translit": "ḥasada",
+        "en": "he envied",
+        "ur": "اس نے حسد کیا"
+      },
+      "explanation": {
+        "en": "حَسَدَ: he envied, the action of the envier, حَاسِدٌ. Same letters, one is the person, one is the action.",
+        "ur": "حَسَدَ: اس نے حسد کیا، حسد کرنے والے، حَاسِدٌ، کا کام۔ حروف وہی، ایک شخص ہے، ایک کام۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "حسد"
+      }
     }
   ],
   "exercises": [
@@ -456,6 +489,38 @@
       "explanation_on_wrong": {
         "en": "False. It is the noun's own ة, written open because ـهُ follows it.",
         "ur": "غلط۔ یہ اسم کی اپنی ة ہے، جو ـهُ کے بعد آنے کی وجہ سے کھلی لکھی گئی ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch19-l03-ex09",
+      "ayah_fragment": {
+        "ar": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+        "surah_ref": "Al-Falaq 113:5"
+      },
+      "options": [
+        {
+          "en": "حَاسِدٍ — envy; حَسَدَ — an envier",
+          "ur": "حَاسِدٍ — حسد؛ حَسَدَ — حسد کرنے والا"
+        },
+        {
+          "en": "حَاسِدٍ — an envier; إِذَا حَسَدَ — when he envies",
+          "ur": "حَاسِدٍ — حسد کرنے والا؛ إِذَا حَسَدَ — جب وہ حسد کرے"
+        },
+        {
+          "en": "حَسَدَ — he envied, long ago, as a finished story",
+          "ur": "حَسَدَ — اس نے حسد کیا، بہت پہلے، ختم شدہ قصے کی طرح"
+        },
+        {
+          "en": "إِذَا — an envier",
+          "ur": "إِذَا — حسد کرنے والا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "From the evil of an envier when he envies; after إِذَا, حَسَدَ reads when he envies.",
+        "ur": "حسد کرنے والے کی برائی سے جب وہ حسد کرے؛ إِذَا کے بعد حَسَدَ کا مطلب ہے جب وہ حسد کرے۔"
       }
     }
   ],

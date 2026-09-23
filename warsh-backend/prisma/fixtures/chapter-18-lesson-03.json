@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 18, Lesson 3 (ch18-l03) — a one-word adjective (الْمَسْجِدُ الْكَبِيرُ) versus a description that is a clause after الَّذِي, verbal or a place phrase (الْمَسْجِدُ الَّذِي فِي الْقَرْيَةِ), versus a main sentence (الْمَسْجِدُ كَبِيرٌ). قَلَمٌ الَّذِي جَدِيدٌ is marked false; a plain adjective is never dressed as a relative clause, and no \"must be a complete verb sentence\" rule. Quran retrieval: الْخَنَّاسِ in An-Nas 114:4 (reveal index 3) against الَّذِي يُوَسْوِسُ in 114:5. Rebuilt 2026-09-23 from Docs/proposals/chapter-18-content-proposal.md; the chapter map and fixtures named three different source files (reader_lecture_18_relative_pronouns.md, reader_lecture_book2_lesson7.md, tadabbur_an_nas.md), none of which existed in the repository, so the approved proposal is recorded as the source.",
+    "_note": "Chapter 18, Lesson 3 (ch18-l03) — a one-word adjective (الْمَسْجِدُ الْكَبِيرُ) versus a description that is a clause after الَّذِي, verbal or a place phrase (الْمَسْجِدُ الَّذِي فِي الْقَرْيَةِ), versus a main sentence (الْمَسْجِدُ كَبِيرٌ). قَلَمٌ الَّذِي جَدِيدٌ is marked false; a plain adjective is never dressed as a relative clause, and no \"must be a complete verb sentence\" rule. Quran retrieval: الْخَنَّاسِ in An-Nas 114:4 (reveal index 3) against الَّذِي يُوَسْوِسُ in 114:5. Rebuilt 2026-09-23 from Docs/proposals/chapter-18-content-proposal.md; the chapter map and fixtures named three different source files (reader_lecture_18_relative_pronouns.md, reader_lecture_book2_lesson7.md, tadabbur_an_nas.md), none of which existed in the repository, so the approved proposal is recorded as the source. Al-Falaq 113:2 مِن شَرِّ مَا خَلَقَ added (card + ch18-l03-ex09) to teach مَا (what) for Tadabbur coverage, moved from the Chapter 19 review; مَا is compared with الَّذِي only as a word that stands for something, with خَلَقَ saying which (Arabic editor to confirm).",
     "titleUr": "صفت یا جملہ؟",
     "chapter_order": 18,
     "lesson_order": 3,
@@ -175,6 +175,22 @@
         "ur": "پھر اسی وسوسہ ڈالنے والے کی لمبی وضاحت، الَّذِي سے شروع: جو انسانوں کے سینوں میں وسوسہ ڈالتا ہے۔ ایک اسم، پہلے ایک لفظ سے اور پھر پوری وضاحت سے بیان کیا گیا۔"
       },
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/114005.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Falaq 113:2: from the evil of what He created,",
+        "ar": "مِن شَرِّ مَا خَلَقَ",
+        "ur": "Al-Falaq 113:2: اس کی برائی سے جو اس نے پیدا کیا،"
+      },
+      "explanation": {
+        "en": "مَا here means what: from the evil of what He created. Like الَّذِي, it stands for something, and خَلَقَ after it says which.",
+        "ur": "یہاں مَا کا مطلب 'جو' ہے: اس کی برائی سے جو اس نے پیدا کیا۔ الَّذِي کی طرح یہ کسی چیز کی جگہ آتا ہے، اور اس کے بعد خَلَقَ بتاتا ہے کون سی۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113002.mp3",
+      "introduces_vocab": {
+        "ar_plain": "ما"
+      }
     }
   ],
   "exercises": [
@@ -489,6 +505,38 @@
       "explanation_on_wrong": {
         "en": "Noun, الَّذِي, then the place: الْكِتَابُ الَّذِي عَلَى الْمَكْتَبِ.",
         "ur": "اسم، الَّذِي، پھر جگہ: الْكِتَابُ الَّذِي عَلَى الْمَكْتَبِ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch18-l03-ex09",
+      "ayah_fragment": {
+        "ar": "مِن شَرِّ مَا خَلَقَ",
+        "surah_ref": "Al-Falaq 113:2"
+      },
+      "options": [
+        {
+          "en": "مَا — what: from the evil of what He created",
+          "ur": "مَا — جو: اس کی برائی سے جو اس نے پیدا کیا"
+        },
+        {
+          "en": "مَا — not: He did not create evil",
+          "ur": "مَا — نہیں: اس نے برائی پیدا نہیں کی"
+        },
+        {
+          "en": "خَلَقَ — what",
+          "ur": "خَلَقَ — جو"
+        },
+        {
+          "en": "شَرِّ — He created",
+          "ur": "شَرِّ — اس نے پیدا کیا"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَا here is what: from the evil of what He created.",
+        "ur": "یہاں مَا کا مطلب 'جو' ہے: اس کی برائی سے جو اس نے پیدا کیا۔"
       }
     }
   ],

@@ -2,11 +2,11 @@
   "schema_version": "1.0",
   "template": "REVIEW",
   "_meta": {
-    "_note": "Chapter 19 review (ch19-l06, repurposed to REVIEW; formerly chapter-19-lesson-06.json). Interleaves kasra versus my, attachment site (noun or action), ة → ت, and owner in a sentence; Al-Falaq 113:1 asks why بِرَبِّ الْفَلَقِ is not \"my Lord\". Deviation from the proposal, kept to hold the Tadabbur coverage invariant (every Al-Falaq word taught by the end of Chapter 19, enforced by db:validate-fixtures): a clearly labelled Al-Falaq word bridge glosses ما, غاسق, اذا, وقب, النفاثات, عقد, حاسد, حسد (cards) with four recognition items (ex07–ex10); none of these words is in the Chapter 19 final test, and no Tadabbur unlock is claimed. Reveal 113:1 at بِرَبِّ (index 2). Rebuilt 2026-09-23 from Docs/proposals/chapter-19-content-proposal.md; the chapter map and fixtures named two different reader_lecture_19 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
-    "titleUr": "باب 19 کا جائزہ: سورۃ الفلق کا پل",
+    "_note": "Chapter 19 review (ch19-l06, repurposed to REVIEW; formerly chapter-19-lesson-06.json). Interleaves kasra versus my, attachment site (noun or action), ة → ت, and owner in a sentence; Al-Falaq 113:1 asks why بِرَبِّ الْفَلَقِ is not \"my Lord\". No new material, as the proposal asks: the Al-Falaq words the Tadabbur coverage invariant requires by the end of Chapter 19 are taught in Ch18 L3 (مَا, 113:2), Ch18 L4 (النَّفَّاثَاتِ، الْعُقَدِ, 113:4), Ch19 L1 (الْفَلَقِ), Ch19 L2 (غَاسِقٍ، إِذَا، وَقَبَ, 113:3) and Ch19 L3 (حَاسِدٍ، حَسَدَ, 113:5); ex08 (113:3) and ex10 (113:5) recall them here, and none is in the Chapter 19 final test. No Tadabbur unlock is claimed. Reveal 113:1 at بِرَبِّ (index 2). Rebuilt 2026-09-23 from Docs/proposals/chapter-19-content-proposal.md; the chapter map and fixtures named two different reader_lecture_19 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "باب 19 کا جائزہ",
     "chapter_order": 19,
     "lesson_order": 6,
-    "estimated_minutes": 12,
+    "estimated_minutes": 10,
     "xp_reward": 20
   },
   "hook": {
@@ -20,8 +20,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
     },
     "noor_intro": {
-      "en": "Chapter 19 review. First the endings: kasra or my, his or him, the ة that opens, and whose it is. Then a short word bridge through the rest of Al-Falaq, glossed so you can read the surah.",
-      "ur": "باب 19 کا جائزہ۔ پہلے آخر: زیر یا میرا، اس کا یا اسے، کھلنے والی ة، اور کس کی چیز ہے۔ پھر باقی سورۃ الفلق کے الفاظ کا ایک مختصر پل، معنی کے ساتھ تاکہ آپ سورت پڑھ سکیں۔"
+      "en": "Chapter 19 review. The endings: kasra or my, his or him, the ة that opens, and whose it is. Then two ayat of Al-Falaq to recall before you read it in Tadabbur.",
+      "ur": "باب 19 کا جائزہ۔ آخر: زیر یا میرا، اس کا یا اسے، کھلنے والی ة، اور کس کی چیز ہے۔ پھر سورۃ الفلق کی دو آیات، تدبر میں پڑھنے سے پہلے یاد کرنے کے لیے۔"
     },
     "autoplay": true
   },
@@ -110,145 +110,13 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Al-Falaq word bridge",
+        "en": "Al-Falaq, all five ayat",
         "ar": "سُورَةُ الْفَلَقِ",
-        "ur": "سورۃ الفلق کے الفاظ کا پل"
+        "ur": "سورۃ الفلق، پانچوں آیات"
       },
       "explanation": {
-        "en": "The rest of Al-Falaq, word by word, so you can read it in Tadabbur. These words are for recognition; they are not in the Chapter 19 final test.",
-        "ur": "باقی سورۃ الفلق، لفظ بہ لفظ، تاکہ آپ اسے تدبر میں پڑھ سکیں۔ یہ الفاظ پہچان کے لیے ہیں؛ یہ باب 19 کے آخری امتحان میں نہیں۔"
-      }
-    },
-    {
-      "type": "AYAH_PREVIEW",
-      "concept": {
-        "en": "Al-Falaq 113:2: from the evil of what He created,",
-        "ar": "مِن شَرِّ مَا خَلَقَ",
-        "ur": "Al-Falaq 113:2: اس کی برائی سے جو اس نے پیدا کیا،"
-      },
-      "explanation": {
-        "en": "مِن شَرِّ مَا خَلَقَ: from the evil of what He created. مَا here means what; خَلَقَ, created.",
-        "ur": "مِن شَرِّ مَا خَلَقَ: اس کی برائی سے جو اس نے پیدا کیا۔ یہاں مَا کا مطلب 'جو'؛ خَلَقَ، پیدا کیا۔"
-      },
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113002.mp3",
-      "introduces_vocab": {
-        "ar_plain": "ما"
-      }
-    },
-    {
-      "type": "AYAH_PREVIEW",
-      "concept": {
-        "en": "Al-Falaq 113:3: and from the evil of darkness when it settles,",
-        "ar": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
-        "ur": "Al-Falaq 113:3: اور اندھیرے کی برائی سے جب وہ چھا جائے،"
-      },
-      "explanation": {
-        "en": "غَاسِقٍ: darkness, the dark of night; إِذَا: when; وَقَبَ: it settles, it spreads. From the evil of darkness when it settles.",
-        "ur": "غَاسِقٍ: اندھیرا، رات کی تاریکی؛ إِذَا: جب؛ وَقَبَ: وہ چھا جائے۔ اندھیرے کی برائی سے جب وہ چھا جائے۔"
-      },
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113003.mp3",
-      "introduces_vocab": {
-        "ar_plain": "غاسق"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "إِذَا",
-        "ar_plain": "اذا",
-        "translit": "idhā",
-        "en": "when",
-        "ur": "جب"
-      },
-      "explanation": {
-        "en": "إِذَا: when. It appears twice in Al-Falaq, in 113:3 and 113:5.",
-        "ur": "إِذَا: جب۔ یہ سورۃ الفلق میں دو بار آتا ہے، 113:3 اور 113:5 میں۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "اذا"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "وَقَبَ",
-        "ar_plain": "وقب",
-        "translit": "waqaba",
-        "en": "it settled, it spread (of darkness)",
-        "ur": "چھا گیا (اندھیرا)"
-      },
-      "explanation": {
-        "en": "وَقَبَ: it settles over, as night darkness does. After إِذَا it reads when it settles.",
-        "ur": "وَقَبَ: چھا جاتا ہے، جیسے رات کا اندھیرا۔ إِذَا کے بعد اس کا مطلب ہے جب وہ چھا جائے۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "وقب"
-      }
-    },
-    {
-      "type": "AYAH_PREVIEW",
-      "concept": {
-        "en": "Al-Falaq 113:4: and from the evil of those who blow on knots,",
-        "ar": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
-        "ur": "Al-Falaq 113:4: اور گرہوں میں پھونکنے والیوں کی برائی سے،"
-      },
-      "explanation": {
-        "en": "النَّفَّاثَاتِ: those who blow; فِي الْعُقَدِ: on knots. From the evil of those who blow on knots, a description of sorcery.",
-        "ur": "النَّفَّاثَاتِ: پھونکنے والیاں؛ فِي الْعُقَدِ: گرہوں میں۔ گرہوں میں پھونکنے والیوں کی برائی سے، جادو کا بیان۔"
-      },
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113004.mp3",
-      "introduces_vocab": {
-        "ar_plain": "النفاثات"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "الْعُقَدُ",
-        "ar_plain": "العقد",
-        "translit": "al-ʿuqadu",
-        "en": "knots",
-        "ur": "گرہیں"
-      },
-      "explanation": {
-        "en": "الْعُقَدُ: knots, the plural of عُقْدَةٌ, a knot.",
-        "ur": "الْعُقَدُ: گرہیں، عُقْدَةٌ، گرہ، کی جمع۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "عقد"
-      }
-    },
-    {
-      "type": "AYAH_PREVIEW",
-      "concept": {
-        "en": "Al-Falaq 113:5: and from the evil of an envier when he envies.\"",
-        "ar": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
-        "ur": "Al-Falaq 113:5: اور حسد کرنے والے کی برائی سے جب وہ حسد کرے۔"
-      },
-      "explanation": {
-        "en": "حَاسِدٍ: an envier; إِذَا حَسَدَ: when he envies. حَسَدَ looks like a past action, but after إِذَا it reads when he envies, the way شَرِبَ after مَن read whoever drinks in Chapter 17.",
-        "ur": "حَاسِدٍ: حسد کرنے والا؛ إِذَا حَسَدَ: جب وہ حسد کرے۔ حَسَدَ ماضی کا کام لگتا ہے، لیکن إِذَا کے بعد اس کا مطلب ہے جب وہ حسد کرے، جیسے باب 17 میں مَن کے بعد شَرِبَ کا مطلب تھا جو کوئی پیے۔"
-      },
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113005.mp3",
-      "introduces_vocab": {
-        "ar_plain": "حاسد"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "حَسَدَ",
-        "ar_plain": "حسد",
-        "translit": "ḥasada",
-        "en": "he envied",
-        "ur": "اس نے حسد کیا"
-      },
-      "explanation": {
-        "en": "حَسَدَ: he envied, the action of the envier, حَاسِدٌ. Same letters, one is the person, one is the action.",
-        "ur": "حَسَدَ: اس نے حسد کیا، حسد کرنے والے، حَاسِدٌ، کا کام۔ حروف وہی، ایک شخص ہے، ایک کام۔"
-      },
-      "introduces_vocab": {
-        "ar_plain": "حسد"
+        "en": "You met every word of Al-Falaq in Chapters 18 and 19. Two ayat to recall before Tadabbur; nothing new here, and none of it is in the final test.",
+        "ur": "آپ سورۃ الفلق کا ہر لفظ باب 18 اور 19 میں پڑھ چکے ہیں۔ تدبر سے پہلے دو آیات یاد کریں؛ یہاں کچھ نیا نہیں، اور اس میں سے کچھ بھی آخری امتحان میں نہیں۔"
       }
     }
   ],
@@ -471,38 +339,6 @@
     },
     {
       "type": "MATCH_AYAH",
-      "id": "ch19-l06-ex07",
-      "ayah_fragment": {
-        "ar": "مِن شَرِّ مَا خَلَقَ",
-        "surah_ref": "Al-Falaq 113:2"
-      },
-      "options": [
-        {
-          "en": "مَا — what: from the evil of what He created",
-          "ur": "مَا — جو: اس کی برائی سے جو اس نے پیدا کیا"
-        },
-        {
-          "en": "مَا — not: He did not create evil",
-          "ur": "مَا — نہیں: اس نے برائی پیدا نہیں کی"
-        },
-        {
-          "en": "خَلَقَ — what",
-          "ur": "خَلَقَ — جو"
-        },
-        {
-          "en": "شَرِّ — He created",
-          "ur": "شَرِّ — اس نے پیدا کیا"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "مَا here is what: from the evil of what He created.",
-        "ur": "یہاں مَا کا مطلب 'جو' ہے: اس کی برائی سے جو اس نے پیدا کیا۔"
-      }
-    },
-    {
-      "type": "MATCH_AYAH",
       "id": "ch19-l06-ex08",
       "ayah_fragment": {
         "ar": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
@@ -531,38 +367,6 @@
       "explanation_on_wrong": {
         "en": "From the evil of darkness when it settles.",
         "ur": "اندھیرے کی برائی سے جب وہ چھا جائے۔"
-      }
-    },
-    {
-      "type": "MATCH_AYAH",
-      "id": "ch19-l06-ex09",
-      "ayah_fragment": {
-        "ar": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
-        "surah_ref": "Al-Falaq 113:4"
-      },
-      "options": [
-        {
-          "en": "النَّفَّاثَاتِ — the knots; الْعُقَدِ — those who blow",
-          "ur": "النَّفَّاثَاتِ — گرہیں؛ الْعُقَدِ — پھونکنے والیاں"
-        },
-        {
-          "en": "فِي — those who blow",
-          "ur": "فِي — پھونکنے والیاں"
-        },
-        {
-          "en": "الْعُقَدِ — darkness",
-          "ur": "الْعُقَدِ — اندھیرا"
-        },
-        {
-          "en": "النَّفَّاثَاتِ — those who blow; الْعُقَدِ — knots",
-          "ur": "النَّفَّاثَاتِ — پھونکنے والیاں؛ الْعُقَدِ — گرہیں"
-        }
-      ],
-      "correct_index": 3,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "From the evil of those who blow on knots.",
-        "ur": "گرہوں میں پھونکنے والیوں کی برائی سے۔"
       }
     },
     {
