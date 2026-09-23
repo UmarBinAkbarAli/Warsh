@@ -37,8 +37,9 @@ const plan = [
   ["ch10-l05", 3, "You All — أَنْتُمْ and أَنْتُنَّ", "أَنْتُمْ وَأَنْتُنَّ — ضَمِيرُ الْمُخَاطَبِينَ", "STANDARD", "chapter-10-lesson-03.json"],
   ["ch10-l03", 4, "Before — قَبْلَ", "قَبْلَ — ظَرْفُ زَمَان", "STANDARD", "chapter-10-lesson-04.json"],
   ["ch10-l04", 5, "After — بَعْدَ", "بَعْدَ — ظَرْفُ زَمَان", "STANDARD", "chapter-10-lesson-05.json"],
-  ["ch10-l06", 6, "Chapter 10 Review", "مُرَاجَعَةُ الْفَصْلِ الْعَاشِر", "REVIEW", "chapter-10-lesson-06-review.json"],
-  ["ch10-test", 7, "Chapter 10 Final Test", "اخْتِبَارُ الْفَصْلِ الْعَاشِرِ", "REVIEW", "chapter-10-lesson-07-final-test.json"],
+  ["ch10-cl06", 6, "Meet Your Study Group — Conversation Lab", "نَحْنُ طُلَّابٌ", "SPOKEN_PHRASES", "chapter-10-lesson-06-conversation-lab.json"],
+  ["ch10-l06", 7, "Chapter 10 Review", "مُرَاجَعَةُ الْفَصْلِ الْعَاشِر", "REVIEW", "chapter-10-lesson-07-review.json"],
+  ["ch10-test", 8, "Chapter 10 Final Test", "اخْتِبَارُ الْفَصْلِ الْعَاشِرِ", "REVIEW", "chapter-10-lesson-08-final-test.json"],
 ].map(([id, order, title, titleAr, template, filename]) => {
   const content = JSON.parse(fs.readFileSync(path.join(FIXTURES_DIR, filename), "utf8"));
   return { id, order, title, titleAr, template, content, xpReward: content._meta?.xp_reward ?? 10 };

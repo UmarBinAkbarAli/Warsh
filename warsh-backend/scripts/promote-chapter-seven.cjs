@@ -33,7 +33,7 @@ const plan = [
   ["ch07-l02", 2, "Your — attached كَ and كِ", "كِتَابُكَ — كَافُ الخِطَاب", "STANDARD", "chapter-07-lesson-02.json"],
   ["ch07-l03", 3, "His and Her — attached هُ and هَا", "كِتَابُهُ وَمَدْرَسَتُهَا", "STANDARD", "chapter-07-lesson-03.json"],
   ["ch07-l04", 4, "Possession with عِنْدَ", "عِنْدَ مَعَ الضَّمِير", "STANDARD", "chapter-07-lesson-04.json"],
-  ["ch07-l05", 5, "Simple Questions", "الأَسْئِلَةُ السَّهْلَة", "SPOKEN_PHRASES", "chapter-07-lesson-05-spoken-phrases.json"],
+  ["ch07-l05", 5, "Asking About Objects — Conversation Lab", "الأَسْئِلَةُ السَّهْلَة", "SPOKEN_PHRASES", "chapter-07-lesson-05-spoken-phrases.json"],
   ["ch07-l06", 6, "Chapter 7 Review", "مُرَاجَعَةُ الْفَصْلِ السَّابِع", "REVIEW", "chapter-07-lesson-06-review.json"],
   ["ch07-test", 7, "Chapter 7 Final Test", "اخْتِبَارُ الْفَصْلِ السَّابِعِ", "REVIEW", "chapter-07-lesson-07-final-test.json"],
 ].map(([id, order, title, titleAr, template, filename]) => {

@@ -35,8 +35,9 @@ const plan = [
   ["ch09-l02", 2, "Sound Feminine Plural — ـَات", "جَمْعُ الْمُؤَنَّثِ السَّالِم", "STANDARD", "chapter-09-lesson-02.json"],
   ["ch09-l03", 3, "Common Broken Plurals", "الْجَمْعُ الْمُكَسَّر", "STANDARD", "chapter-09-lesson-03.json"],
   ["ch09-l04", 4, "Nearby People — هٰؤُلَاءِ", "هٰؤُلَاءِ — لِلْجَمَاعَةِ الْقَرِيبَة", "STANDARD", "chapter-09-lesson-04.json"],
-  ["ch09-l05", 5, "Chapter 9 Review", "مُرَاجَعَةُ الْفَصْلِ التَّاسِع", "REVIEW", "chapter-09-lesson-05-review.json"],
-  ["ch09-test", 6, "Chapter 9 Final Test", "اخْتِبَارُ الْفَصْلِ التَّاسِعِ", "REVIEW", "chapter-09-lesson-06-final-test.json"],
+  ["ch09-cl05", 5, "Who Are These People? — Conversation Lab", "مَنْ هٰؤُلَاءِ؟", "SPOKEN_PHRASES", "chapter-09-lesson-05-conversation-lab.json"],
+  ["ch09-l05", 6, "Chapter 9 Review", "مُرَاجَعَةُ الْفَصْلِ التَّاسِع", "REVIEW", "chapter-09-lesson-06-review.json"],
+  ["ch09-test", 7, "Chapter 9 Final Test", "اخْتِبَارُ الْفَصْلِ التَّاسِعِ", "REVIEW", "chapter-09-lesson-07-final-test.json"],
 ].map(([id, order, title, titleAr, template, filename]) => {
   const content = JSON.parse(fs.readFileSync(path.join(FIXTURES_DIR, filename), "utf8"));
   return { id, order, title, titleAr, template, content, xpReward: content._meta?.xp_reward ?? 10 };

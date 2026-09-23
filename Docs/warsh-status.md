@@ -600,10 +600,32 @@ Everything below this list is either done and verified, or one of these:
    complete +15. Not done: scholarly review of the grammar explanations (the
    proposal requires it before promotion), and Warsh Studio content-review
    pass in Urdu.
-   **Conversation Labs — CL6 Home and Family (Chapter 11 pilot) is built and
-   staging-verified 2026-09-23; production promotion is ON HOLD (owner,
-   2026-09-23) until the speech recognition module is built into the lab and
-   the non-blocking new/updated-lesson notice (Open items #7) is ready.** Design: Pen section 25 (approved). Proposal:
+   **Conversation Labs CL1–CL6 are live in production (2026-09-23, owner's
+   go-ahead).** CL6 (Chapter 11) went first; the owner then asked for the
+   Mission to use a new photo and new people instead of repeating Answer it,
+   and for CL1–CL5 to follow the same pattern. CL1 rebuilds `ch03-l05`
+   (Chapter 3, position 6) and CL3 rebuilds `ch07-l05` in place, keeping their
+   IDs, SP1/SP2 phrase ids and recordings; CL2 `ch05-cl07`, CL4 `ch09-cl05` and
+   CL5 `ch10-cl06` are new rows before each chapter's review and test (those
+   keep their IDs and move down one; fixtures renamed to match position).
+   Each lab: 7–11 phrases (unscored forms `heard_only`), a 4–6 line dialogue,
+   6 scored exercises, 3 Answer it turns that mirror the dialogue, and 3
+   Mission turns with new people, objects or places. Deviations from the
+   proposal, all to keep scored answers inside taught material:
+   CL2 uses الْكُرْسِيّ instead of الْمَكْتَب (Chapter 6) and drops هَلْ / هُوَ;
+   CL3 uses هَذَا الْأُسْتَاذُ instead of الْمُعَلِّمُ (Chapter 9); CL1 drops
+   أَنَا طَالِبٌ and treats مَا اسْمُكَ؟ / مَا اسْمُكِ؟ as heard only (ـكَ is
+   Chapter 7). Production steps run: `content:check` clean →
+   `content:promote-chapter-{five,nine,ten} -- --apply` → `content:sync`
+   (CL1, CL3) → titles → `content:backfill-new-lessons` (6 rows) →
+   `content:check` 436/436 → `content:baseline`; 29 phrase clips
+   (`audio:prebuild-fixtures`) + 12 catalogue clips (audit 3850/3850).
+   Verified through the live API with the owner's test account. Still open:
+   scholarly review of the Arabic in CL1–CL5; the Open items #7 notice for
+   learners who had already finished those chapters (6 backfilled rows keep
+   them unlocked); native Android needs 1.0.13 for the lab screens.
+   Original pilot note: **CL6 Home and Family (Chapter 11 pilot) was built and
+   staging-verified 2026-09-23.** Design: Pen section 25 (approved). Proposal:
    `Docs/proposals/conversation-labs-curriculum-proposal.md`. A lab is a
    `SPOKEN_PHRASES` lesson with a `spoken_phrases.lab` block
    (`@warsh/lesson-schema`: mission, goals, pattern note, speaking lines,

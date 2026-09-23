@@ -1,4 +1,14 @@
 {
+  "schema_version": "1.0",
+  "template": "SPOKEN_PHRASES",
+  "_meta": {
+    "_note": "Chapter 3, display lesson 6 (ch03-l05) — CL1 Greetings and First Meeting, rebuilt as a Conversation Lab from Docs/proposals/conversation-labs-curriculum-proposal.md (2026-09-23). Keeps the SP1 phrase ids and recordings. مَا اسْمُكَ؟ / مَا اسْمُكِ؟ are heard_only: the ـكَ / ـكِ of 'your' is not taught until Chapter 7, so only the اسْمِي answer is produced. أَنَا طَالِبٌ dropped (the proposal defers self-description). The Mission uses a new person (مَرْحَبًا, the name Ali, and Maryam) so it does not repeat Answer it.",
+    "titleUr": "سلام اور پہلی ملاقات — گفتگو لیب",
+    "chapter_order": 3,
+    "lesson_order": 6,
+    "estimated_minutes": 9,
+    "xp_reward": 15
+  },
   "hook": {
     "ayah": {
       "ar": "فَسَلِّمُوا عَلَىٰ أَنْفُسِكُمْ تَحِيَّةً مِّنْ عِندِ اللَّهِ",
@@ -11,29 +21,14 @@
     },
     "autoplay": true,
     "noor_intro": {
-      "en": "Your first spoken lesson begins with the greeting Allah taught this Ummah to love: السلام عليكم.",
-      "ur": "آپ کا پہلا بولنے والا درس اس سلام سے شروع ہوتا ہے جس سے اللہ نے اس امت کو محبت دی: السلام عليكم۔"
+      "en": "Allah tells the believers to greet one another with peace. Today you hold a first meeting in Fus'ha: greet, give your name, and welcome.",
+      "ur": "اللہ ایمان والوں کو ایک دوسرے کو سلام کرنے کا حکم دیتا ہے۔ آج آپ فصحیٰ میں پہلی ملاقات کریں گے: سلام، اپنا نام، اور خوش آمدید۔"
     }
   },
-  "_meta": {
-    "_note": "SP1 after Chapter 3 — Basic greetings and introductions. Classical Fus'ha only, no dialect. Authored for current mobile SPOKEN_PHRASES renderer.",
-    "xp_reward": 15,
-    "lesson_order": 6,
-    "chapter_order": 3,
-    "estimated_minutes": 8
-  },
-  "close": {
-    "noor_message": {
-      "en": "You can now greet and introduce yourself in simple Fus'ha. Keep it gentle and clear.",
-      "ur": "آپ اب سادہ فصحیٰ میں سلام اور تعارف کر سکتے ہیں۔ اسے نرم اور صاف رکھیں۔"
-    }
-  },
-  "template": "SPOKEN_PHRASES",
-  "schema_version": "1.0",
   "spoken_phrases": {
     "scene": {
-      "en": "Greetings and Introductions",
-      "ur": "سلام اور تعارف"
+      "en": "Two learners meet for the first time before a Quranic Arabic lesson.",
+      "ur": "قرآنی عربی کے سبق سے پہلے دو طالب علم پہلی بار ملتے ہیں۔"
     },
     "phrases": [
       {
@@ -46,8 +41,8 @@
           "translit": "as-salāmu ʿalaykum"
         },
         "context": {
-          "en": "Islamic greeting",
-          "ur": "اسلامی سلام"
+          "en": "Your classmate greets you before the lesson.",
+          "ur": "سبق سے پہلے آپ کا ہم جماعت آپ کو سلام کرتا ہے۔"
         },
         "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p1.mp3"
       },
@@ -61,8 +56,8 @@
           "translit": "wa ʿalaykumu s-salām"
         },
         "context": {
-          "en": "Response to the greeting",
-          "ur": "سلام کا جواب"
+          "en": "The reply adds وَ (and) and turns the greeting around.",
+          "ur": "جواب میں وَ (اور) آتا ہے اور سلام کی ترتیب الٹ جاتی ہے۔"
         },
         "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p2.mp3"
       },
@@ -76,10 +71,11 @@
           "translit": "mā ismuka?"
         },
         "context": {
-          "en": "Asking for someone's name",
-          "ur": "نام پوچھنا"
+          "en": "Asked to a man. You only need to understand it; you answer with اسْمِي.",
+          "ur": "مرد سے پوچھا گیا۔ آپ کو صرف سمجھنا ہے؛ جواب اسْمِي سے دیں۔"
         },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p3.mp3"
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p3.mp3",
+        "heard_only": true
       },
       {
         "id": "sp1-p4",
@@ -91,25 +87,26 @@
           "translit": "ismī ʿUmaru"
         },
         "context": {
-          "en": "Introducing yourself",
-          "ur": "اپنا تعارف"
+          "en": "اسْمِي, then your own name.",
+          "ur": "اسْمِي، پھر اپنا نام۔"
         },
         "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p4.mp3"
       },
       {
-        "id": "sp1-p5",
+        "id": "ch03-cl-p07",
         "phrase": {
-          "ar": "أَنَا طَالِبٌ",
-          "en": "I am a student",
-          "ur": "میں طالب علم ہوں",
-          "ar_plain": "أنا طالب",
-          "translit": "anā ṭālibun"
+          "ar": "مَا اسْمُكِ؟",
+          "ar_plain": "ما اسمك",
+          "translit": "mā smuki?",
+          "en": "What is your name? (to a woman)",
+          "ur": "آپ کا نام کیا ہے؟ (خاتون سے)"
         },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch03-cl-p07.mp3",
         "context": {
-          "en": "Describing your role",
-          "ur": "اپنا کردار بیان کرنا"
+          "en": "The same question asked to a woman ends in ـكِ.",
+          "ur": "یہی سوال خاتون سے پوچھا جائے تو آخر میں ـكِ آتا ہے۔"
         },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p5.mp3"
+        "heard_only": true
       },
       {
         "id": "sp1-p6",
@@ -121,10 +118,40 @@
           "translit": "ahlan wa sahlan"
         },
         "context": {
-          "en": "Welcoming someone",
-          "ur": "خیرمقدم"
+          "en": "Say this to welcome someone.",
+          "ur": "کسی کو خوش آمدید کہنے کے لیے۔"
         },
         "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p6.mp3"
+      },
+      {
+        "id": "ch03-cl-p08",
+        "phrase": {
+          "ar": "مَرْحَبًا",
+          "ar_plain": "مرحبا",
+          "translit": "marḥaban",
+          "en": "Hello! / Welcome!",
+          "ur": "مرحبا! / خوش آمدید!"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch03-cl-p08.mp3",
+        "context": {
+          "en": "Another friendly greeting. Answer it with أَهْلًا وَسَهْلًا.",
+          "ur": "ایک اور دوستانہ سلام۔ اس کا جواب أَهْلًا وَسَهْلًا ہے۔"
+        }
+      },
+      {
+        "id": "ch03-cl-p09",
+        "phrase": {
+          "ar": "جَزَاكَ اللَّهُ خَيْرًا",
+          "ar_plain": "جزاك الله خيرا",
+          "translit": "jazāka llāhu khayran",
+          "en": "May Allah reward you with good.",
+          "ur": "اللہ آپ کو بہترین بدلہ دے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch03-cl-p09.mp3",
+        "context": {
+          "en": "A warm way to thank someone.",
+          "ur": "کسی کا شکریہ ادا کرنے کا خوبصورت طریقہ۔"
+        }
       }
     ],
     "dialogue": [
@@ -147,7 +174,559 @@
       {
         "speaker": "A",
         "phrase_id": "sp1-p6"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch03-cl-p09"
       }
-    ]
+    ],
+    "lab": {
+      "title": {
+        "en": "Greetings and First Meeting",
+        "ur": "سلام اور پہلی ملاقات"
+      },
+      "mission": {
+        "en": "A new learner arrives: welcome them, tell them your name is Ali, then answer as Maryam.",
+        "ur": "ایک نیا طالب علم آتا ہے: اسے خوش آمدید کہیں، بتائیں کہ آپ کا نام علی ہے، پھر مریم بن کر جواب دیں۔"
+      },
+      "toolkit": [
+        "السَّلَامُ عَلَيْكُمْ",
+        "وَعَلَيْكُمُ السَّلَامُ",
+        "اسْمِي",
+        "أَهْلًا وَسَهْلًا",
+        "جَزَاكَ اللَّهُ خَيْرًا"
+      ],
+      "goals": [
+        {
+          "en": "Answer مَرْحَبًا",
+          "ur": "مَرْحَبًا کا جواب دیں"
+        },
+        {
+          "en": "Say your name is Ali",
+          "ur": "بتائیں کہ آپ کا نام علی ہے"
+        },
+        {
+          "en": "Answer as Maryam",
+          "ur": "مریم بن کر جواب دیں"
+        }
+      ],
+      "pattern": {
+        "after_phrase_id": "sp1-p2",
+        "items": [
+          {
+            "ar": "السَّلَامُ عَلَيْكُمْ",
+            "meaning": {
+              "en": "peace be upon you",
+              "ur": "آپ پر سلامتی ہو"
+            },
+            "source": {
+              "en": "the greeting",
+              "ur": "سلام"
+            }
+          },
+          {
+            "ar": "وَعَلَيْكُمُ السَّلَامُ",
+            "meaning": {
+              "en": "and upon you be peace",
+              "ur": "اور آپ پر بھی سلامتی ہو"
+            },
+            "source": {
+              "en": "the reply — وَ from Chapter 2",
+              "ur": "جواب — وَ باب 2 سے"
+            }
+          }
+        ],
+        "note": {
+          "en": "The reply swaps the two parts and starts with وَ. Never answer a greeting with the same greeting.",
+          "ur": "جواب میں دونوں حصے الٹ جاتے ہیں اور شروع میں وَ آتا ہے۔ سلام کا جواب وہی سلام دہرا کر نہ دیں۔"
+        }
+      },
+      "shadow_phrase_ids": [
+        "sp1-p2",
+        "sp1-p4",
+        "sp1-p6",
+        "ch03-cl-p09"
+      ],
+      "mission_turns": [
+        {
+          "prompt_phrase_id": "ch03-cl-p08",
+          "goal_index": 0,
+          "cue": {
+            "en": "A new learner says مَرْحَبًا. Welcome them.",
+            "ur": "ایک نیا طالب علم مَرْحَبًا کہتا ہے۔ اسے خوش آمدید کہیں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "أَهْلًا وَسَهْلًا",
+              "ar_plain": "اهلا وسهلا",
+              "translit": "ahlan wa sahlan",
+              "en": "Welcome.",
+              "ur": "خوش آمدید۔"
+            },
+            {
+              "ar": "وَعَلَيْكُمُ السَّلَامُ",
+              "ar_plain": "وعليكم السلام",
+              "translit": "wa ʿalaykumu s-salām",
+              "en": "And peace be upon you.",
+              "ur": "اور آپ پر بھی سلامتی ہو۔"
+            },
+            {
+              "ar": "اسْمِي عُمَرُ",
+              "ar_plain": "اسمي عمر",
+              "translit": "ismī ʿumaru",
+              "en": "My name is Umar.",
+              "ur": "میرا نام عمر ہے۔"
+            }
+          ],
+          "correct_option_index": 0
+        },
+        {
+          "prompt_phrase_id": "sp1-p3",
+          "goal_index": 1,
+          "cue": {
+            "en": "Your name is Ali.",
+            "ur": "آپ کا نام علی ہے۔"
+          },
+          "response_mode": "BUILD",
+          "tiles": [
+            {
+              "ar": "اسْمِي",
+              "ar_plain": "اسمي",
+              "translit": "ismī",
+              "en": "my name",
+              "ur": "میرا نام"
+            },
+            {
+              "ar": "عَلِيٌّ",
+              "ar_plain": "علي",
+              "translit": "ʿaliyyun",
+              "en": "Ali",
+              "ur": "علی"
+            },
+            {
+              "ar": "عُمَرُ",
+              "ar_plain": "عمر",
+              "translit": "ʿumaru",
+              "en": "Umar",
+              "ur": "عمر"
+            },
+            {
+              "ar": "مَا",
+              "ar_plain": "ما",
+              "translit": "mā",
+              "en": "what",
+              "ur": "کیا"
+            }
+          ],
+          "correct_order": [
+            0,
+            1
+          ]
+        },
+        {
+          "prompt_phrase_id": "ch03-cl-p07",
+          "goal_index": 2,
+          "cue": {
+            "en": "Now the teacher asks a woman, Maryam. Choose her answer.",
+            "ur": "اب استاد ایک خاتون، مریم، سے پوچھتے ہیں۔ اس کا جواب چنیں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "اسْمِي مَرْيَمُ",
+              "ar_plain": "اسمي مريم",
+              "translit": "ismī maryamu",
+              "en": "My name is Maryam.",
+              "ur": "میرا نام مریم ہے۔"
+            },
+            {
+              "ar": "اسْمِي عَلِيٌّ",
+              "ar_plain": "اسمي علي",
+              "translit": "ismī ʿaliyyun",
+              "en": "My name is Ali.",
+              "ur": "میرا نام علی ہے۔"
+            },
+            {
+              "ar": "مَا اسْمُكِ؟",
+              "ar_plain": "ما اسمك",
+              "translit": "mā smuki?",
+              "en": "What is your name? (to a woman)",
+              "ur": "آپ کا نام کیا ہے؟ (خاتون سے)"
+            }
+          ],
+          "correct_option_index": 0
+        }
+      ],
+      "answer_it": {
+        "turns": [
+          {
+            "prompt_phrase_id": "sp1-p1",
+            "cue": {
+              "en": "Your classmate greets you.",
+              "ur": "آپ کا ہم جماعت آپ کو سلام کرتا ہے۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "وَعَلَيْكُمُ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "السَّلَامُ"
+              }
+            ],
+            "model_phrase_id": "sp1-p2",
+            "tip": {
+              "en": "Start with وَعَلَيْكُمُ, then السَّلَامُ.",
+              "ur": "پہلے وَعَلَيْكُمُ، پھر السَّلَامُ کہیں۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "sp1-p3",
+            "cue": {
+              "en": "Tell them your name.",
+              "ur": "انہیں اپنا نام بتائیں۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "اسْمِي"
+              },
+              {
+                "kind": "OPEN",
+                "label": {
+                  "en": "your name",
+                  "ur": "آپ کا نام"
+                }
+              }
+            ],
+            "model_phrase_id": "sp1-p4",
+            "tip": {
+              "en": "Say اسْمِي (my name), then your own name.",
+              "ur": "اسْمِي (میرا نام) کہیں، پھر اپنا نام۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "sp1-p6",
+            "cue": {
+              "en": "They welcome you. Thank them.",
+              "ur": "وہ آپ کو خوش آمدید کہتے ہیں۔ ان کا شکریہ ادا کریں۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "جَزَاكَ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "اللَّهُ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "خَيْرًا"
+              }
+            ],
+            "model_phrase_id": "ch03-cl-p09",
+            "tip": {
+              "en": "جَزَاكَ اللَّهُ خَيْرًا — may Allah reward you with good.",
+              "ur": "جَزَاكَ اللَّهُ خَيْرًا — اللہ آپ کو بہترین بدلہ دے۔"
+            }
+          }
+        ]
+      },
+      "can_do": [
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Return a greeting",
+            "ur": "سلام کا جواب دینا"
+          },
+          "ar": "وَعَلَيْكُمُ السَّلَامُ"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Say your name",
+            "ur": "اپنا نام بتانا"
+          },
+          "ar": "اسْمِي عُمَرُ"
+        },
+        {
+          "kind": "UNDERSTAND",
+          "label": {
+            "en": "Understand “what is your name?”",
+            "ur": "“آپ کا نام کیا ہے؟” سمجھنا"
+          },
+          "ar": "مَا اسْمُكَ؟"
+        }
+      ]
+    }
+  },
+  "exercises": [
+    {
+      "id": "ch03-cl-e01",
+      "type": "CONVERSATION_BUILDER",
+      "prompt_line": {
+        "ar": "السَّلَامُ عَلَيْكُمْ",
+        "en": "Peace be upon you",
+        "ur": "السلام علیکم",
+        "ar_plain": "السلام عليكم",
+        "translit": "as-salāmu ʿalaykum"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "وَعَلَيْكُمُ السَّلَامُ",
+          "ar_plain": "وعليكم السلام",
+          "translit": "wa ʿalaykumu s-salām",
+          "en": "And peace be upon you.",
+          "ur": "اور آپ پر بھی سلامتی ہو۔"
+        },
+        {
+          "ar": "السَّلَامُ عَلَيْكُمْ",
+          "ar_plain": "السلام عليكم",
+          "translit": "as-salāmu ʿalaykum",
+          "en": "Peace be upon you.",
+          "ur": "آپ پر سلامتی ہو۔"
+        },
+        {
+          "ar": "أَهْلًا وَسَهْلًا",
+          "ar_plain": "اهلا وسهلا",
+          "translit": "ahlan wa sahlan",
+          "en": "Welcome.",
+          "ur": "خوش آمدید۔"
+        },
+        {
+          "ar": "اسْمِي عُمَرُ",
+          "ar_plain": "اسمي عمر",
+          "translit": "ismī ʿumaru",
+          "en": "My name is Umar.",
+          "ur": "میرا نام عمر ہے۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "explanation_on_wrong": {
+        "en": "A greeting is answered with وَعَلَيْكُمُ السَّلَامُ, not the same greeting.",
+        "ur": "سلام کا جواب وَعَلَيْكُمُ السَّلَامُ ہے، وہی سلام دہرانا نہیں۔"
+      }
+    },
+    {
+      "id": "ch03-cl-e02",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "مَا اسْمُكَ؟",
+        "en": "What is your name?",
+        "ur": "آپ کا نام کیا ہے؟",
+        "ar_plain": "ما اسمك",
+        "translit": "mā ismuka?"
+      },
+      "options": [
+        {
+          "en": "What is your name?",
+          "ur": "آپ کا نام کیا ہے؟"
+        },
+        {
+          "en": "My name is Umar.",
+          "ur": "میرا نام عمر ہے۔"
+        },
+        {
+          "en": "Welcome.",
+          "ur": "خوش آمدید۔"
+        },
+        {
+          "en": "Who is this?",
+          "ur": "یہ کون ہے؟"
+        }
+      ],
+      "correct_index": 0,
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/spoken/sp1-p3.mp3",
+      "explanation_on_wrong": {
+        "en": "مَا is “what” and اسْمُكَ is “your name”.",
+        "ur": "مَا کا مطلب “کیا” اور اسْمُكَ کا مطلب “آپ کا نام” ہے۔"
+      }
+    },
+    {
+      "id": "ch03-cl-e03",
+      "type": "CONVERSATION_BUILDER",
+      "prompt_line": {
+        "ar": "مَا اسْمُكَ؟",
+        "en": "What is your name?",
+        "ur": "آپ کا نام کیا ہے؟",
+        "ar_plain": "ما اسمك",
+        "translit": "mā ismuka?"
+      },
+      "response_mode": "BUILD",
+      "tiles": [
+        {
+          "ar": "اسْمِي",
+          "ar_plain": "اسمي",
+          "translit": "ismī",
+          "en": "my name",
+          "ur": "میرا نام"
+        },
+        {
+          "ar": "عُمَرُ",
+          "ar_plain": "عمر",
+          "translit": "ʿumaru",
+          "en": "Umar",
+          "ur": "عمر"
+        },
+        {
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "mā",
+          "en": "what",
+          "ur": "کیا"
+        },
+        {
+          "ar": "أَهْلًا",
+          "ar_plain": "اهلا",
+          "translit": "ahlan",
+          "en": "welcome",
+          "ur": "خوش آمدید"
+        }
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "explanation_on_wrong": {
+        "en": "Start with اسْمِي, then the name: اسْمِي عُمَرُ.",
+        "ur": "پہلے اسْمِي، پھر نام: اسْمِي عُمَرُ۔"
+      }
+    },
+    {
+      "id": "ch03-cl-e04",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "sentence_ar": "وَعَلَيْكُمُ ___",
+      "hint": {
+        "en": "Complete the reply: “And peace be upon you.”",
+        "ur": "جواب مکمل کریں: “اور آپ پر بھی سلامتی ہو۔”"
+      },
+      "options": [
+        {
+          "ar": "السَّلَامُ",
+          "ar_plain": "السلام",
+          "translit": "as-salāmu",
+          "en": "peace",
+          "ur": "سلامتی"
+        },
+        {
+          "ar": "عَلَيْكُمْ",
+          "ar_plain": "عليكم",
+          "translit": "ʿalaykum",
+          "en": "upon you",
+          "ur": "آپ پر"
+        },
+        {
+          "ar": "أَهْلًا",
+          "ar_plain": "اهلا",
+          "translit": "ahlan",
+          "en": "welcome",
+          "ur": "خوش آمدید"
+        },
+        {
+          "ar": "اسْمِي",
+          "ar_plain": "اسمي",
+          "translit": "ismī",
+          "en": "my name",
+          "ur": "میرا نام"
+        }
+      ],
+      "correct_answer": {
+        "ar": "السَّلَامُ",
+        "ar_plain": "السلام",
+        "translit": "as-salāmu",
+        "en": "peace",
+        "ur": "سلامتی"
+      },
+      "explanation_on_wrong": {
+        "en": "The reply is وَعَلَيْكُمُ السَّلَامُ.",
+        "ur": "جواب وَعَلَيْكُمُ السَّلَامُ ہے۔"
+      }
+    },
+    {
+      "id": "ch03-cl-e05",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "جَزَاكَ اللَّهُ خَيْرًا",
+        "ar_plain": "جزاك الله خيرا",
+        "translit": "jazāka llāhu khayran",
+        "en": "May Allah reward you with good.",
+        "ur": "اللہ آپ کو بہترین بدلہ دے۔"
+      },
+      "options": [
+        {
+          "en": "May Allah reward you with good.",
+          "ur": "اللہ آپ کو بہترین بدلہ دے۔"
+        },
+        {
+          "en": "Peace be upon you.",
+          "ur": "آپ پر سلامتی ہو۔"
+        },
+        {
+          "en": "Welcome.",
+          "ur": "خوش آمدید۔"
+        },
+        {
+          "en": "What is your name?",
+          "ur": "آپ کا نام کیا ہے؟"
+        }
+      ],
+      "correct_index": 0,
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch03-cl-p09.mp3",
+      "explanation_on_wrong": {
+        "en": "جَزَاكَ اللَّهُ خَيْرًا is how you thank someone.",
+        "ur": "جَزَاكَ اللَّهُ خَيْرًا شکریہ ادا کرنے کا طریقہ ہے۔"
+      }
+    },
+    {
+      "id": "ch03-cl-e06",
+      "type": "CONVERSATION_BUILDER",
+      "prompt_line": {
+        "ar": "أَهْلًا وَسَهْلًا",
+        "en": "Welcome",
+        "ur": "خوش آمدید",
+        "ar_plain": "أهلا وسهلا",
+        "translit": "ahlan wa sahlan"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "جَزَاكَ اللَّهُ خَيْرًا",
+          "ar_plain": "جزاك الله خيرا",
+          "translit": "jazāka llāhu khayran",
+          "en": "May Allah reward you with good.",
+          "ur": "اللہ آپ کو بہترین بدلہ دے۔"
+        },
+        {
+          "ar": "مَا اسْمُكَ؟",
+          "ar_plain": "ما اسمك",
+          "translit": "mā smuka?",
+          "en": "What is your name?",
+          "ur": "آپ کا نام کیا ہے؟"
+        },
+        {
+          "ar": "السَّلَامُ عَلَيْكُمْ",
+          "ar_plain": "السلام عليكم",
+          "translit": "as-salāmu ʿalaykum",
+          "en": "Peace be upon you.",
+          "ur": "آپ پر سلامتی ہو۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "explanation_on_wrong": {
+        "en": "When someone welcomes you, thank them: جَزَاكَ اللَّهُ خَيْرًا.",
+        "ur": "جب کوئی آپ کو خوش آمدید کہے تو شکریہ ادا کریں: جَزَاكَ اللَّهُ خَيْرًا۔"
+      }
+    }
+  ],
+  "close": {
+    "noor_message": {
+      "en": "You met someone new in Fus'ha: you returned the greeting, gave your name, and thanked them.",
+      "ur": "آپ نے فصحیٰ میں کسی نئے شخص سے ملاقات کی: سلام کا جواب دیا، اپنا نام بتایا، اور شکریہ ادا کیا۔"
+    }
   }
 }

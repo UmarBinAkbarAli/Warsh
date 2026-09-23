@@ -2,12 +2,12 @@
   "schema_version": "1.0",
   "template": "SPOKEN_PHRASES",
   "_meta": {
-    "_note": "Chapter 7, display lesson 5 (ch07-l05) — SP2 simple questions: what, who, where, and the أَعِنْدَكَ / أَعِنْدَكِ possession question with its answers. sp2-01..06 unchanged; sp2-07 (female addressee) and a second dialogue pass added 2026-09-18 from Docs/proposals/chapter-07-content-proposal.md. لَيْسَ is recognition-only.",
+    "_note": "Chapter 7, display lesson 5 (ch07-l05) — CL3 Asking About Objects, rebuilt as a Conversation Lab from Docs/proposals/conversation-labs-curriculum-proposal.md (2026-09-23). Keeps the SP2 phrase ids and recordings. أَعِنْدَكِ قَلَمٌ؟ and لَا، لَيْسَ عِنْدِي are heard_only (لَيْسَ is recognition-only until its chapter). هَذَا الْمُعَلِّمُ becomes هَذَا الْأُسْتَاذُ: مُعَلِّم is taught in Chapter 9. The Mission uses a book, the teacher and the pen in new places so it does not repeat Answer it.",
+    "titleUr": "چیزوں کے بارے میں پوچھنا — گفتگو لیب",
     "chapter_order": 7,
     "lesson_order": 5,
     "estimated_minutes": 9,
-    "xp_reward": 15,
-    "titleUr": "سادہ سوالات"
+    "xp_reward": 15
   },
   "hook": {
     "ayah": {
@@ -20,50 +20,17 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020017.mp3"
     },
     "noor_intro": {
-      "en": "Simple Fus'ha questions are built from words you already know: what, who, where, and the attached pronouns from this chapter. In the hook ayah, بِيَمِينِكَ — 'in your right hand' — carries the same كَ you learned in Lesson 2.",
-      "ur": "سادہ فصحی سوالات انہی الفاظ سے بنتے ہیں جو آپ جانتے ہیں: کیا، کون، کہاں، اور اس باب کی جڑی ہوئی ضمیریں۔ آیت میں بِيَمِينِكَ — 'تمہارے دائیں ہاتھ میں' — وہی كَ ہے جو آپ نے سبق 2 میں سیکھی۔"
+      "en": "Allah asks Musa a simple question: what is that in your hand? Today you ask and answer simple questions about the things around you.",
+      "ur": "اللہ موسیٰ سے ایک سادہ سوال پوچھتا ہے: تمہارے ہاتھ میں کیا ہے؟ آج آپ اپنے آس پاس کی چیزوں کے بارے میں سادہ سوال پوچھیں گے اور جواب دیں گے۔"
     },
     "autoplay": true
   },
   "spoken_phrases": {
     "scene": {
-      "en": "Asking simple questions in a lesson",
-      "ur": "درس میں سادہ سوالات پوچھنا"
+      "en": "Two learners are getting their books and pens ready for a lesson.",
+      "ur": "دو طالب علم سبق کے لیے اپنی کتابیں اور قلم تیار کر رہے ہیں۔"
     },
     "phrases": [
-      {
-        "id": "sp2-01",
-        "phrase": {
-          "ar": "مَا هَذَا؟",
-          "ar_plain": "ما هذا",
-          "translit": "ma hadha?",
-          "en": "What is this?",
-          "ur": "یہ کیا ہے؟"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ma-hadha.mp3"
-      },
-      {
-        "id": "sp2-02",
-        "phrase": {
-          "ar": "مَنْ هَذَا؟",
-          "ar_plain": "من هذا",
-          "translit": "man hadha?",
-          "en": "Who is this?",
-          "ur": "یہ کون ہے؟"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/man-hadha.mp3"
-      },
-      {
-        "id": "sp2-03",
-        "phrase": {
-          "ar": "أَيْنَ الْكِتَابُ؟",
-          "ar_plain": "اين الكتاب",
-          "translit": "ayna al-kitabu?",
-          "en": "Where is the book?",
-          "ur": "کتاب کہاں ہے؟"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ayna-al-kitab.mp3"
-      },
       {
         "id": "sp2-04",
         "phrase": {
@@ -75,8 +42,8 @@
         },
         "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/a-indaka-qalam.mp3",
         "context": {
-          "en": "Asking a man.",
-          "ur": "مرد سے پوچھتے ہوئے۔"
+          "en": "Your friend needs a pen. ـكَ: asked to a man.",
+          "ur": "آپ کے دوست کو قلم چاہیے۔ ـكَ: مرد سے پوچھا گیا۔"
         }
       },
       {
@@ -88,21 +55,10 @@
           "en": "Yes, I have a pen.",
           "ur": "ہاں، میرے پاس قلم ہے۔"
         },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/naam-indi-qalam.mp3"
-      },
-      {
-        "id": "sp2-06",
-        "phrase": {
-          "ar": "لَا، لَيْسَ عِنْدِي",
-          "ar_plain": "لا ليس عندي",
-          "translit": "la, laysa indi",
-          "en": "No, I do not have it.",
-          "ur": "نہیں، میرے پاس نہیں ہے۔"
-        },
-        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/la-laysa-indi.mp3",
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/naam-indi-qalam.mp3",
         "context": {
-          "en": "لَيْسَ negates 'have' here; just recognise it for now.",
-          "ur": "لَيْسَ یہاں 'پاس ہونا' کی نفی کرتا ہے؛ ابھی صرف اسے پہچانیں۔"
+          "en": "You hear عِنْدَكَ (you have); you answer عِنْدِي (I have).",
+          "ur": "آپ عِنْدَكَ (آپ کے پاس) سنتے ہیں؛ جواب عِنْدِي (میرے پاس) سے دیتے ہیں۔"
         }
       },
       {
@@ -116,9 +72,107 @@
         },
         "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/a-indaki-qalam.mp3",
         "context": {
-          "en": "Asking a woman: the kasra on كِ changes the listener, not the meaning.",
-          "ur": "عورت سے پوچھتے ہوئے: كِ پر کسرہ مخاطب بدلتا ہے، معنی نہیں۔"
+          "en": "The same question asked to a woman. You only need to understand it.",
+          "ur": "یہی سوال خاتون سے۔ آپ کو صرف سمجھنا ہے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "sp2-06",
+        "phrase": {
+          "ar": "لَا، لَيْسَ عِنْدِي",
+          "ar_plain": "لا ليس عندي",
+          "translit": "la, laysa indi",
+          "en": "No, I do not have it.",
+          "ur": "نہیں، میرے پاس نہیں ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/la-laysa-indi.mp3",
+        "context": {
+          "en": "لَيْسَ comes in a later chapter. For now, just understand this answer.",
+          "ur": "لَيْسَ بعد کے باب میں آئے گا۔ ابھی صرف یہ جواب سمجھ لیں۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "sp2-03",
+        "phrase": {
+          "ar": "أَيْنَ الْكِتَابُ؟",
+          "ar_plain": "اين الكتاب",
+          "translit": "ayna al-kitabu?",
+          "en": "Where is the book?",
+          "ur": "کتاب کہاں ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ayna-al-kitab.mp3"
+      },
+      {
+        "id": "ch07-cl-p01",
+        "phrase": {
+          "ar": "الْكِتَابُ عَلَى الْمَكْتَبِ",
+          "ar_plain": "الكتاب على المكتب",
+          "translit": "al-kitābu ʿalā l-maktabi",
+          "en": "The book is on the desk.",
+          "ur": "کتاب میز پر ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch07-cl-p01.mp3",
+        "context": {
+          "en": "عَلَى + the place.",
+          "ur": "عَلَى + جگہ۔"
         }
+      },
+      {
+        "id": "sp2-01",
+        "phrase": {
+          "ar": "مَا هَذَا؟",
+          "ar_plain": "ما هذا",
+          "translit": "ma hadha?",
+          "en": "What is this?",
+          "ur": "یہ کیا ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ma-hadha.mp3"
+      },
+      {
+        "id": "ch07-cl-p02",
+        "phrase": {
+          "ar": "هَذَا كِتَابٌ",
+          "ar_plain": "هذا كتاب",
+          "translit": "hādhā kitābun",
+          "en": "This is a book.",
+          "ur": "یہ ایک کتاب ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch07-cl-p02.mp3"
+      },
+      {
+        "id": "sp2-02",
+        "phrase": {
+          "ar": "مَنْ هَذَا؟",
+          "ar_plain": "من هذا",
+          "translit": "man hadha?",
+          "en": "Who is this?",
+          "ur": "یہ کون ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/man-hadha.mp3"
+      },
+      {
+        "id": "ch07-cl-p03",
+        "phrase": {
+          "ar": "أَعِنْدَكَ كِتَابٌ؟",
+          "ar_plain": "اعندك كتاب",
+          "translit": "a-ʿindaka kitābun?",
+          "en": "Do you have a book?",
+          "ur": "کیا آپ کے پاس کتاب ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch07-cl-p03.mp3"
+      },
+      {
+        "id": "ch07-cl-p04",
+        "phrase": {
+          "ar": "أَيْنَ الْقَلَمُ؟",
+          "ar_plain": "اين القلم",
+          "translit": "ayna l-qalamu?",
+          "en": "Where is the pen?",
+          "ur": "قلم کہاں ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch07-cl-p04.mp3"
       }
     ],
     "dialogue": [
@@ -135,19 +189,599 @@
         "phrase_id": "sp2-03"
       },
       {
+        "speaker": "B",
+        "phrase_id": "ch07-cl-p01"
+      },
+      {
         "speaker": "A",
-        "phrase_id": "sp2-07"
+        "phrase_id": "sp2-01"
       },
       {
         "speaker": "B",
-        "phrase_id": "sp2-05"
+        "phrase_id": "ch07-cl-p02"
       }
-    ]
+    ],
+    "lab": {
+      "title": {
+        "en": "Asking About Objects",
+        "ur": "چیزوں کے بارے میں پوچھنا"
+      },
+      "mission": {
+        "en": "A new lesson, new things: say you have a book, who the teacher is, and where the pen is.",
+        "ur": "نیا سبق، نئی چیزیں: بتائیں کہ آپ کے پاس کتاب ہے، استاد کون ہیں، اور قلم کہاں ہے۔"
+      },
+      "toolkit": [
+        "مَا",
+        "مَنْ",
+        "أَيْنَ",
+        "عِنْدِي",
+        "نَعَمْ",
+        "عَلَى"
+      ],
+      "goals": [
+        {
+          "en": "Say you have a book",
+          "ur": "بتائیں کہ آپ کے پاس کتاب ہے"
+        },
+        {
+          "en": "Say who this is",
+          "ur": "بتائیں کہ یہ کون ہے"
+        },
+        {
+          "en": "Say where the pen is",
+          "ur": "بتائیں کہ قلم کہاں ہے"
+        }
+      ],
+      "pattern": {
+        "after_phrase_id": "sp2-05",
+        "items": [
+          {
+            "ar": "عِنْدَكَ",
+            "meaning": {
+              "en": "you have",
+              "ur": "آپ کے پاس"
+            },
+            "source": {
+              "en": "ـكَ from Chapter 7",
+              "ur": "ـكَ باب 7 سے"
+            }
+          },
+          {
+            "ar": "عِنْدِي",
+            "meaning": {
+              "en": "I have",
+              "ur": "میرے پاس"
+            },
+            "source": {
+              "en": "ـِي from Chapter 7",
+              "ur": "ـِي باب 7 سے"
+            }
+          }
+        ],
+        "note": {
+          "en": "You hear “you have”. You answer with “I have” — that is the part you practise.",
+          "ur": "آپ “آپ کے پاس” سنیں گے۔ جواب “میرے پاس” سے دیں — یہی حصہ آپ مشق کرتے ہیں۔"
+        }
+      },
+      "shadow_phrase_ids": [
+        "sp2-05",
+        "ch07-cl-p01",
+        "ch07-cl-p02"
+      ],
+      "mission_turns": [
+        {
+          "prompt_phrase_id": "ch07-cl-p03",
+          "goal_index": 0,
+          "cue": {
+            "en": "Yes, you have a book.",
+            "ur": "جی ہاں، آپ کے پاس کتاب ہے۔"
+          },
+          "response_mode": "BUILD",
+          "tiles": [
+            {
+              "ar": "نَعَمْ",
+              "ar_plain": "نعم",
+              "translit": "naʿam",
+              "en": "yes",
+              "ur": "جی ہاں"
+            },
+            {
+              "ar": "عِنْدِي",
+              "ar_plain": "عندي",
+              "translit": "ʿindī",
+              "en": "I have",
+              "ur": "میرے پاس"
+            },
+            {
+              "ar": "كِتَابٌ",
+              "ar_plain": "كتاب",
+              "translit": "kitābun",
+              "en": "a book",
+              "ur": "ایک کتاب"
+            },
+            {
+              "ar": "عِنْدَكَ",
+              "ar_plain": "عندك",
+              "translit": "ʿindaka",
+              "en": "you have",
+              "ur": "آپ کے پاس"
+            },
+            {
+              "ar": "قَلَمٌ",
+              "ar_plain": "قلم",
+              "translit": "qalamun",
+              "en": "a pen",
+              "ur": "ایک قلم"
+            }
+          ],
+          "correct_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "prompt_phrase_id": "sp2-02",
+          "goal_index": 1,
+          "cue": {
+            "en": "It is the teacher.",
+            "ur": "یہ استاد ہیں۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "هَذَا الْأُسْتَاذُ",
+              "ar_plain": "هذا الاستاذ",
+              "translit": "hādhā l-ustādhu",
+              "en": "This is the teacher.",
+              "ur": "یہ استاد ہیں۔"
+            },
+            {
+              "ar": "هَذَا كِتَابٌ",
+              "ar_plain": "هذا كتاب",
+              "translit": "hādhā kitābun",
+              "en": "This is a book.",
+              "ur": "یہ ایک کتاب ہے۔"
+            },
+            {
+              "ar": "أَيْنَ الْأُسْتَاذُ؟",
+              "ar_plain": "اين الاستاذ",
+              "translit": "ayna l-ustādhu?",
+              "en": "Where is the teacher?",
+              "ur": "استاد کہاں ہیں؟"
+            }
+          ],
+          "correct_option_index": 0
+        },
+        {
+          "prompt_phrase_id": "ch07-cl-p04",
+          "goal_index": 2,
+          "cue": {
+            "en": "The pen is on the book.",
+            "ur": "قلم کتاب پر ہے۔"
+          },
+          "response_mode": "BUILD",
+          "tiles": [
+            {
+              "ar": "الْقَلَمُ",
+              "ar_plain": "القلم",
+              "translit": "al-qalamu",
+              "en": "the pen",
+              "ur": "قلم"
+            },
+            {
+              "ar": "عَلَى",
+              "ar_plain": "على",
+              "translit": "ʿalā",
+              "en": "on",
+              "ur": "پر"
+            },
+            {
+              "ar": "الْكِتَابِ",
+              "ar_plain": "الكتاب",
+              "translit": "al-kitābi",
+              "en": "the book",
+              "ur": "کتاب"
+            },
+            {
+              "ar": "فِي",
+              "ar_plain": "في",
+              "translit": "fī",
+              "en": "in",
+              "ur": "میں"
+            },
+            {
+              "ar": "الْمَكْتَبِ",
+              "ar_plain": "المكتب",
+              "translit": "al-maktabi",
+              "en": "the desk",
+              "ur": "میز"
+            }
+          ],
+          "correct_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "answer_it": {
+        "turns": [
+          {
+            "prompt_phrase_id": "sp2-04",
+            "cue": {
+              "en": "You have a pen.",
+              "ur": "آپ کے پاس قلم ہے۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "نَعَمْ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "عِنْدِي"
+              },
+              {
+                "kind": "WORD",
+                "ar": "قَلَمٌ"
+              }
+            ],
+            "model_phrase_id": "sp2-05",
+            "tip": {
+              "en": "You hear عِنْدَكَ; answer with عِنْدِي: نَعَمْ، عِنْدِي قَلَمٌ.",
+              "ur": "آپ عِنْدَكَ سنتے ہیں؛ جواب عِنْدِي سے: نَعَمْ، عِنْدِي قَلَمٌ۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "sp2-03",
+            "cue": {
+              "en": "The book is on the desk.",
+              "ur": "کتاب میز پر ہے۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "الْكِتَابُ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "عَلَى"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الْمَكْتَبِ"
+              }
+            ],
+            "model_phrase_id": "ch07-cl-p01",
+            "tip": {
+              "en": "The book first, then عَلَى الْمَكْتَبِ.",
+              "ur": "پہلے کتاب، پھر عَلَى الْمَكْتَبِ۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "sp2-01",
+            "cue": {
+              "en": "It is a book.",
+              "ur": "یہ ایک کتاب ہے۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "هَذَا"
+              },
+              {
+                "kind": "WORD",
+                "ar": "كِتَابٌ"
+              }
+            ],
+            "model_phrase_id": "ch07-cl-p02",
+            "tip": {
+              "en": "مَا asks “what”: answer هَذَا كِتَابٌ.",
+              "ur": "مَا سے “کیا” پوچھا جاتا ہے: جواب هَذَا كِتَابٌ۔"
+            }
+          }
+        ]
+      },
+      "can_do": [
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Say what something is",
+            "ur": "بتانا کہ کوئی چیز کیا ہے"
+          },
+          "ar": "هَذَا كِتَابٌ"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Say you have something",
+            "ur": "بتانا کہ آپ کے پاس کچھ ہے"
+          },
+          "ar": "نَعَمْ، عِنْدِي قَلَمٌ"
+        },
+        {
+          "kind": "UNDERSTAND",
+          "label": {
+            "en": "Understand “no, I don't have it”",
+            "ur": "“نہیں، میرے پاس نہیں ہے” سمجھنا"
+          },
+          "ar": "لَا، لَيْسَ عِنْدِي"
+        }
+      ]
+    }
   },
+  "exercises": [
+    {
+      "id": "ch07-cl-e01",
+      "type": "CONVERSATION_BUILDER",
+      "prompt_line": {
+        "ar": "أَعِنْدَكَ قَلَمٌ؟",
+        "ar_plain": "اعندك قلم",
+        "translit": "a-indaka qalamun?",
+        "en": "Do you have a pen? (male addressee)",
+        "ur": "کیا تمہارے پاس قلم ہے؟ (مذکر مخاطب)"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، عِنْدِي قَلَمٌ",
+          "ar_plain": "نعم عندي قلم",
+          "translit": "naam, indi qalamun",
+          "en": "Yes, I have a pen.",
+          "ur": "ہاں، میرے پاس قلم ہے۔"
+        },
+        {
+          "ar": "نَعَمْ، عِنْدَكَ قَلَمٌ",
+          "ar_plain": "نعم عندك قلم",
+          "translit": "naʿam, ʿindaka qalamun",
+          "en": "Yes, you have a pen.",
+          "ur": "جی ہاں، آپ کے پاس قلم ہے۔"
+        },
+        {
+          "ar": "مَا هَذَا؟",
+          "ar_plain": "ما هذا",
+          "translit": "ma hadha?",
+          "en": "What is this?",
+          "ur": "یہ کیا ہے؟"
+        },
+        {
+          "ar": "الْكِتَابُ عَلَى الْمَكْتَبِ",
+          "ar_plain": "الكتاب على المكتب",
+          "translit": "al-kitābu ʿalā l-maktabi",
+          "en": "The book is on the desk.",
+          "ur": "کتاب میز پر ہے۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "explanation_on_wrong": {
+        "en": "Answer about yourself with عِنْدِي (I have), not عِنْدَكَ.",
+        "ur": "اپنے بارے میں عِنْدِي (میرے پاس) سے جواب دیں، عِنْدَكَ سے نہیں۔"
+      }
+    },
+    {
+      "id": "ch07-cl-e02",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "لَا، لَيْسَ عِنْدِي",
+        "ar_plain": "لا ليس عندي",
+        "translit": "la, laysa indi",
+        "en": "No, I do not have it.",
+        "ur": "نہیں، میرے پاس نہیں ہے۔"
+      },
+      "options": [
+        {
+          "en": "No, I do not have it.",
+          "ur": "نہیں، میرے پاس نہیں ہے۔"
+        },
+        {
+          "en": "Yes, I have a pen.",
+          "ur": "جی ہاں، میرے پاس قلم ہے۔"
+        },
+        {
+          "en": "Do you have a pen?",
+          "ur": "کیا آپ کے پاس قلم ہے؟"
+        },
+        {
+          "en": "Where is the book?",
+          "ur": "کتاب کہاں ہے؟"
+        }
+      ],
+      "correct_index": 0,
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/la-laysa-indi.mp3",
+      "explanation_on_wrong": {
+        "en": "لَا is “no”; لَيْسَ عِنْدِي is “I do not have it”.",
+        "ur": "لَا کا مطلب “نہیں”؛ لَيْسَ عِنْدِي کا مطلب “میرے پاس نہیں ہے”۔"
+      }
+    },
+    {
+      "id": "ch07-cl-e03",
+      "type": "CONVERSATION_BUILDER",
+      "prompt_line": {
+        "ar": "مَا هَذَا؟",
+        "ar_plain": "ما هذا",
+        "translit": "ma hadha?",
+        "en": "What is this?",
+        "ur": "یہ کیا ہے؟"
+      },
+      "response_mode": "BUILD",
+      "tiles": [
+        {
+          "ar": "هَذَا",
+          "ar_plain": "هذا",
+          "translit": "hādhā",
+          "en": "this",
+          "ur": "یہ"
+        },
+        {
+          "ar": "كِتَابٌ",
+          "ar_plain": "كتاب",
+          "translit": "kitābun",
+          "en": "a book",
+          "ur": "ایک کتاب"
+        },
+        {
+          "ar": "مَنْ",
+          "ar_plain": "من",
+          "translit": "man",
+          "en": "who",
+          "ur": "کون"
+        },
+        {
+          "ar": "عِنْدِي",
+          "ar_plain": "عندي",
+          "translit": "ʿindī",
+          "en": "I have",
+          "ur": "میرے پاس"
+        }
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "explanation_on_wrong": {
+        "en": "مَا هَذَا؟ asks “what is this?”: هَذَا كِتَابٌ.",
+        "ur": "مَا هَذَا؟ کا مطلب “یہ کیا ہے؟”: هَذَا كِتَابٌ۔"
+      }
+    },
+    {
+      "id": "ch07-cl-e04",
+      "type": "FILL_BLANK",
+      "mode": "TAP",
+      "sentence_ar": "الْكِتَابُ ___ الْمَكْتَبِ",
+      "hint": {
+        "en": "Complete: “The book is on the desk.”",
+        "ur": "مکمل کریں: “کتاب میز پر ہے۔”"
+      },
+      "options": [
+        {
+          "ar": "عَلَى",
+          "ar_plain": "على",
+          "translit": "ʿalā",
+          "en": "on",
+          "ur": "پر"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "اين",
+          "translit": "ayna",
+          "en": "where",
+          "ur": "کہاں"
+        },
+        {
+          "ar": "عِنْدِي",
+          "ar_plain": "عندي",
+          "translit": "ʿindī",
+          "en": "I have",
+          "ur": "میرے پاس"
+        },
+        {
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "mā",
+          "en": "what",
+          "ur": "کیا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "عَلَى",
+        "ar_plain": "على",
+        "translit": "ʿalā",
+        "en": "on",
+        "ur": "پر"
+      },
+      "explanation_on_wrong": {
+        "en": "عَلَى means “on”.",
+        "ur": "عَلَى کا مطلب “پر” ہے۔"
+      }
+    },
+    {
+      "id": "ch07-cl-e05",
+      "type": "TAP_TRANSLATION",
+      "prompt": {
+        "ar": "أَعِنْدَكِ قَلَمٌ؟",
+        "ar_plain": "اعندك قلم",
+        "translit": "a-ʿindaki qalamun?",
+        "en": "Do you have a pen? (female addressee)",
+        "ur": "کیا تمہارے پاس قلم ہے؟ (مؤنث مخاطب)"
+      },
+      "options": [
+        {
+          "en": "Do you have a pen? (to a woman)",
+          "ur": "کیا آپ کے پاس قلم ہے؟ (خاتون سے)"
+        },
+        {
+          "en": "Yes, I have a pen.",
+          "ur": "جی ہاں، میرے پاس قلم ہے۔"
+        },
+        {
+          "en": "Where is the pen?",
+          "ur": "قلم کہاں ہے؟"
+        },
+        {
+          "en": "What is this?",
+          "ur": "یہ کیا ہے؟"
+        }
+      ],
+      "correct_index": 0,
+      "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/a-indaki-qalam.mp3",
+      "explanation_on_wrong": {
+        "en": "أَ makes a question, and ـكِ is “you” for a woman.",
+        "ur": "أَ سوال بناتا ہے، اور ـكِ خاتون کے لیے “آپ” ہے۔"
+      }
+    },
+    {
+      "id": "ch07-cl-e06",
+      "type": "CONVERSATION_BUILDER",
+      "prompt_line": {
+        "ar": "أَيْنَ الْكِتَابُ؟",
+        "ar_plain": "اين الكتاب",
+        "translit": "ayna al-kitabu?",
+        "en": "Where is the book?",
+        "ur": "کتاب کہاں ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "الْكِتَابُ عَلَى الْمَكْتَبِ",
+          "ar_plain": "الكتاب على المكتب",
+          "translit": "al-kitābu ʿalā l-maktabi",
+          "en": "The book is on the desk.",
+          "ur": "کتاب میز پر ہے۔"
+        },
+        {
+          "ar": "هَذَا كِتَابٌ",
+          "ar_plain": "هذا كتاب",
+          "translit": "hādhā kitābun",
+          "en": "This is a book.",
+          "ur": "یہ ایک کتاب ہے۔"
+        },
+        {
+          "ar": "نَعَمْ، عِنْدِي قَلَمٌ",
+          "ar_plain": "نعم عندي قلم",
+          "translit": "naam, indi qalamun",
+          "en": "Yes, I have a pen.",
+          "ur": "ہاں، میرے پاس قلم ہے۔"
+        },
+        {
+          "ar": "مَنْ هَذَا؟",
+          "ar_plain": "من هذا",
+          "translit": "man hadha?",
+          "en": "Who is this?",
+          "ur": "یہ کون ہے؟"
+        }
+      ],
+      "correct_option_index": 0,
+      "explanation_on_wrong": {
+        "en": "أَيْنَ asks “where”, so answer with a place.",
+        "ur": "أَيْنَ سے “کہاں” پوچھا جاتا ہے، تو جگہ بتائیں۔"
+      }
+    }
+  ],
   "close": {
     "noor_message": {
-      "en": "You can now ask what, who, where, and whether someone has an object — to a man or a woman — in simple Fus'ha classroom conversation.",
-      "ur": "اب آپ سادہ فصحی درسی گفتگو میں پوچھ سکتے ہیں: کیا، کون، کہاں، اور کیا کسی کے پاس کوئی چیز ہے — مرد سے بھی، عورت سے بھی۔"
+      "en": "You asked what, who and where, and said what you have — a real exchange in Fus'ha.",
+      "ur": "آپ نے کیا، کون اور کہاں پوچھا، اور بتایا کہ آپ کے پاس کیا ہے — فصحیٰ میں ایک حقیقی گفتگو۔"
     }
   }
 }

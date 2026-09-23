@@ -37,8 +37,9 @@ const plan = [
   ["ch05-l06", 4, "لَهُ، لَهَا، لَكُمْ", "لَهُ، لَهَا، لَكُمْ", "STANDARD", "chapter-05-lesson-04.json"],
   ["ch05-l04", 5, "‎ذَهَبَ — First Past-Tense Verb", "ذَهَبَ — أَوَّلُ فِعْلٍ مَاضٍ", "STANDARD", "chapter-05-lesson-05.json"],
   ["ch05-l07", 6, "Action, Doer, and Destination", "الْفِعْلُ وَالْفَاعِلُ وَإِلَى", "STANDARD", "chapter-05-lesson-06.json"],
-  ["ch05-l05", 7, "R1 Cumulative Review", "المُرَاجَعَةُ الأُولَى", "REVIEW", "chapter-05-lesson-07.json"],
-  ["ch05-test", 8, "Chapter 5 Final Test", "اخْتِبَارُ الْفَصْلِ الْخَامِسِ", "REVIEW", "chapter-05-lesson-08-final-test.json"],
+  ["ch05-cl07", 7, "Where Is It? — Conversation Lab", "أَيْنَ الْكِتَابُ؟", "SPOKEN_PHRASES", "chapter-05-lesson-07-conversation-lab.json"],
+  ["ch05-l05", 8, "R1 Cumulative Review", "المُرَاجَعَةُ الأُولَى", "REVIEW", "chapter-05-lesson-08-review.json"],
+  ["ch05-test", 9, "Chapter 5 Final Test", "اخْتِبَارُ الْفَصْلِ الْخَامِسِ", "REVIEW", "chapter-05-lesson-09-final-test.json"],
 ].map(([id, order, title, titleAr, template, filename]) => {
   const content = JSON.parse(fs.readFileSync(path.join(FIXTURES_DIR, filename), "utf8"));
   return { id, order, title, titleAr, template, content, xpReward: content._meta?.xp_reward ?? 10 };

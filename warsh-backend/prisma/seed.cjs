@@ -55,8 +55,9 @@ const ch05L03Content = require("./fixtures/chapter-05-lesson-03.json");        /
 const ch05L06Content = require("./fixtures/chapter-05-lesson-04.json");        // ch05-l06, order 4
 const ch05L04Content = require("./fixtures/chapter-05-lesson-05.json");        // ch05-l04, order 5
 const ch05L07Content = require("./fixtures/chapter-05-lesson-06.json");        // ch05-l07, order 6
-const ch05L05Content = require("./fixtures/chapter-05-lesson-07.json");        // ch05-l05, order 7
-const ch05TestContent = require("./fixtures/chapter-05-lesson-08-final-test.json"); // ch05-test, order 8
+const ch05Cl07Content = require("./fixtures/chapter-05-lesson-07-conversation-lab.json"); // ch05-cl07, Conversation Lab, order 7
+const ch05L05Content = require("./fixtures/chapter-05-lesson-08-review.json");  // ch05-l05, order 8
+const ch05TestContent = require("./fixtures/chapter-05-lesson-09-final-test.json"); // ch05-test, order 9
 const ch06L01Content = require("./fixtures/chapter-06-lesson-01.json");
 const ch06L02Content = require("./fixtures/chapter-06-lesson-02.json");
 const ch06L03Content = require("./fixtures/chapter-06-lesson-03.json");
@@ -80,15 +81,17 @@ const ch09L01Content     = require("./fixtures/chapter-09-lesson-01.json");
 const ch09L02Content     = require("./fixtures/chapter-09-lesson-02.json");
 const ch09L03Content     = require("./fixtures/chapter-09-lesson-03.json");
 const ch09L04Content     = require("./fixtures/chapter-09-lesson-04.json");
-const ch09L05Content     = require("./fixtures/chapter-09-lesson-05-review.json");      // ch09-l05, review (replaces the verb-pattern lesson)
-const ch09TestContent    = require("./fixtures/chapter-09-lesson-06-final-test.json"); // ch09-test, order 6
+const ch09Cl05Content    = require("./fixtures/chapter-09-lesson-05-conversation-lab.json"); // ch09-cl05, Conversation Lab, order 5
+const ch09L05Content     = require("./fixtures/chapter-09-lesson-06-review.json");      // ch09-l05, review (replaces the verb-pattern lesson), order 6
+const ch09TestContent    = require("./fixtures/chapter-09-lesson-07-final-test.json"); // ch09-test, order 7
 const ch10L01Content     = require("./fixtures/chapter-10-lesson-01.json");            // ch10-l01, order 1
 const ch10L02Content     = require("./fixtures/chapter-10-lesson-02.json");            // ch10-l02, order 2
 const ch10L05Content     = require("./fixtures/chapter-10-lesson-03.json");            // ch10-l05 (you all), order 3
 const ch10L03Content     = require("./fixtures/chapter-10-lesson-04.json");            // ch10-l03 (before), order 4
 const ch10L04Content     = require("./fixtures/chapter-10-lesson-05.json");            // ch10-l04 (after), order 5
-const ch10L06Content     = require("./fixtures/chapter-10-lesson-06-review.json");     // ch10-l06, review, order 6
-const ch10TestContent    = require("./fixtures/chapter-10-lesson-07-final-test.json"); // ch10-test, order 7
+const ch10Cl06Content    = require("./fixtures/chapter-10-lesson-06-conversation-lab.json"); // ch10-cl06, Conversation Lab, order 6
+const ch10L06Content     = require("./fixtures/chapter-10-lesson-07-review.json");     // ch10-l06, review, order 7
+const ch10TestContent    = require("./fixtures/chapter-10-lesson-08-final-test.json"); // ch10-test, order 8
 const ch11L01Content     = require("./fixtures/chapter-11-lesson-01.json");            // ch11-l01, order 1
 const ch11L02Content     = require("./fixtures/chapter-11-lesson-02.json");            // ch11-l02, order 2
 const ch11L03Content     = require("./fixtures/chapter-11-lesson-03.json");            // ch11-l03, order 3
@@ -765,7 +768,7 @@ async function main() {
     { id: "ch03-l02", chapterId: ch3Id, order: 3, title: "Whose? — لِمَنْ",                        titleAr: "لِمَنْ؟",                                     template: "STANDARD", xpReward: ch03L02Content._meta?.xp_reward ?? 10, content: ch03L02Content },
     { id: "ch03-l07", chapterId: ch3Id, order: 4, title: "Calling Someone — يَا",                  titleAr: "يَا النِّدَاء",                               template: "STANDARD", xpReward: ch03L07YaContent._meta?.xp_reward ?? 10, content: ch03L07YaContent },
     { id: "ch03-l03", chapterId: ch3Id, order: 5, title: "Basmalah Unlocked — بِسْمِ اللَّهِ",     titleAr: "بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ",     template: "STANDARD", xpReward: ch03L03Content._meta?.xp_reward ?? 10, content: ch03L03Content },
-    { id: "ch03-l05", chapterId: ch3Id, order: 6, title: "SP1 — Greetings and Introductions",      titleAr: "السَّلَامُ وَالتَّعَارُف",                    template: "SPOKEN_PHRASES", xpReward: ch03L05SpokenContent._meta?.xp_reward ?? 15, content: ch03L05SpokenContent },
+    { id: "ch03-l05", chapterId: ch3Id, order: 6, title: "Greetings and First Meeting — Conversation Lab", titleAr: "السَّلَامُ وَالتَّعَارُف",                    template: "SPOKEN_PHRASES", xpReward: ch03L05SpokenContent._meta?.xp_reward ?? 15, content: ch03L05SpokenContent },
     { id: "ch03-l04", chapterId: ch3Id, order: 7, title: "Chapter 3 Review",                       titleAr: "مُرَاجَعَة الفَصْل الثَّالِث",               template: "REVIEW",   xpReward: ch03L04Content._meta?.xp_reward ?? 20, content: ch03L04Content },
     { id: "ch03-test", chapterId: ch3Id, order: 8, title: "Chapter 3 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الثَّالِث",             template: "REVIEW",   xpReward: ch03L08TestContent._meta?.xp_reward ?? 20, content: ch03L08TestContent },
     // Chapter 4
@@ -784,8 +787,9 @@ async function main() {
     { id: "ch05-l06", chapterId: ch5Id, order: 4, title: "لَهُ، لَهَا، لَكُمْ",                    titleAr: "لَهُ، لَهَا، لَكُمْ",                     template: "STANDARD", xpReward: ch05L06Content._meta?.xp_reward ?? 10, content: ch05L06Content },
     { id: "ch05-l04", chapterId: ch5Id, order: 5, title: "‎ذَهَبَ — First Past-Tense Verb",        titleAr: "ذَهَبَ — أَوَّلُ فِعْلٍ مَاضٍ",           template: "STANDARD", xpReward: ch05L04Content._meta?.xp_reward ?? 10, content: ch05L04Content },
     { id: "ch05-l07", chapterId: ch5Id, order: 6, title: "Action, Doer, and Destination",          titleAr: "الْفِعْلُ وَالْفَاعِلُ وَإِلَى",          template: "STANDARD", xpReward: ch05L07Content._meta?.xp_reward ?? 10, content: ch05L07Content },
-    { id: "ch05-l05", chapterId: ch5Id, order: 7, title: "R1 Cumulative Review",                   titleAr: "المُرَاجَعَةُ الأُولَى",                  template: "REVIEW",   xpReward: ch05L05Content._meta?.xp_reward ?? 20, content: ch05L05Content },
-    { id: "ch05-test", chapterId: ch5Id, order: 8, title: "Chapter 5 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الْخَامِسِ",        template: "REVIEW",   xpReward: ch05TestContent._meta?.xp_reward ?? 20, content: ch05TestContent },
+    { id: "ch05-cl07", chapterId: ch5Id, order: 7, title: "Where Is It? — Conversation Lab",       titleAr: "أَيْنَ الْكِتَابُ؟",                        template: "SPOKEN_PHRASES", xpReward: ch05Cl07Content._meta?.xp_reward ?? 15, content: ch05Cl07Content },
+    { id: "ch05-l05", chapterId: ch5Id, order: 8, title: "R1 Cumulative Review",                   titleAr: "المُرَاجَعَةُ الأُولَى",                  template: "REVIEW",   xpReward: ch05L05Content._meta?.xp_reward ?? 20, content: ch05L05Content },
+    { id: "ch05-test", chapterId: ch5Id, order: 9, title: "Chapter 5 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الْخَامِسِ",        template: "REVIEW",   xpReward: ch05TestContent._meta?.xp_reward ?? 20, content: ch05TestContent },
 
     // Chapter 6 — Docs/proposals/chapter-06-content-proposal.md. Titles that open
     // with an Arabic word carry a leading LTR mark (‎) like Chapter 5.
@@ -802,7 +806,7 @@ async function main() {
     { id: "ch07-l02", chapterId: ch7Id, order: 2, title: "Your — attached كَ and كِ",               titleAr: "كِتَابُكَ — كَافُ الخِطَاب",                template: "STANDARD", xpReward: ch07L02Content._meta?.xp_reward ?? 10, content: ch07L02Content },
     { id: "ch07-l03", chapterId: ch7Id, order: 3, title: "His and Her — attached هُ and هَا",        titleAr: "كِتَابُهُ وَمَدْرَسَتُهَا",                 template: "STANDARD", xpReward: ch07L03Content._meta?.xp_reward ?? 10, content: ch07L03Content },
     { id: "ch07-l04", chapterId: ch7Id, order: 4, title: "Possession with عِنْدَ",                    titleAr: "عِنْدَ مَعَ الضَّمِير",                      template: "STANDARD", xpReward: ch07L04Content._meta?.xp_reward ?? 10, content: ch07L04Content },
-    { id: "ch07-l05", chapterId: ch7Id, order: 5, title: "Simple Questions",                          titleAr: "الأَسْئِلَةُ السَّهْلَة",                    template: "SPOKEN_PHRASES", xpReward: ch07L05SpokenContent._meta?.xp_reward ?? 15, content: ch07L05SpokenContent },
+    { id: "ch07-l05", chapterId: ch7Id, order: 5, title: "Asking About Objects — Conversation Lab",   titleAr: "الأَسْئِلَةُ السَّهْلَة",                    template: "SPOKEN_PHRASES", xpReward: ch07L05SpokenContent._meta?.xp_reward ?? 15, content: ch07L05SpokenContent },
     { id: "ch07-l06", chapterId: ch7Id, order: 6, title: "Chapter 7 Review",                          titleAr: "مُرَاجَعَةُ الْفَصْلِ السَّابِع",            template: "REVIEW",   xpReward: ch07L06Content._meta?.xp_reward ?? 20, content: ch07L06Content },
     { id: "ch07-test", chapterId: ch7Id, order: 7, title: "Chapter 7 Final Test",                     titleAr: "اخْتِبَارُ الْفَصْلِ السَّابِعِ",           template: "REVIEW",   xpReward: ch07TestContent._meta?.xp_reward ?? 20, content: ch07TestContent },
     // Chapter 8 — Docs/proposals/chapter-08-content-proposal.md. Existing IDs kept
@@ -819,8 +823,9 @@ async function main() {
     { id: "ch09-l02", chapterId: ch9Id, order: 2, title: "Sound Feminine Plural — ـَات",           titleAr: "جَمْعُ الْمُؤَنَّثِ السَّالِم",          template: "STANDARD", xpReward: ch09L02Content._meta?.xp_reward  ?? 10, content: ch09L02Content },
     { id: "ch09-l03", chapterId: ch9Id, order: 3, title: "Common Broken Plurals",                  titleAr: "الْجَمْعُ الْمُكَسَّر",                  template: "STANDARD", xpReward: ch09L03Content._meta?.xp_reward  ?? 10, content: ch09L03Content },
     { id: "ch09-l04", chapterId: ch9Id, order: 4, title: "Nearby People — هٰؤُلَاءِ",              titleAr: "هٰؤُلَاءِ — لِلْجَمَاعَةِ الْقَرِيبَة",    template: "STANDARD", xpReward: ch09L04Content._meta?.xp_reward  ?? 10, content: ch09L04Content },
-    { id: "ch09-l05", chapterId: ch9Id, order: 5, title: "Chapter 9 Review",                       titleAr: "مُرَاجَعَةُ الْفَصْلِ التَّاسِع",           template: "REVIEW",   xpReward: ch09L05Content._meta?.xp_reward  ?? 20, content: ch09L05Content },
-    { id: "ch09-test", chapterId: ch9Id, order: 6, title: "Chapter 9 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ التَّاسِعِ",          template: "REVIEW",   xpReward: ch09TestContent._meta?.xp_reward ?? 20, content: ch09TestContent },
+    { id: "ch09-cl05", chapterId: ch9Id, order: 5, title: "Who Are These People? — Conversation Lab", titleAr: "مَنْ هٰؤُلَاءِ؟",                    template: "SPOKEN_PHRASES", xpReward: ch09Cl05Content._meta?.xp_reward ?? 15, content: ch09Cl05Content },
+    { id: "ch09-l05", chapterId: ch9Id, order: 6, title: "Chapter 9 Review",                       titleAr: "مُرَاجَعَةُ الْفَصْلِ التَّاسِع",           template: "REVIEW",   xpReward: ch09L05Content._meta?.xp_reward  ?? 20, content: ch09L05Content },
+    { id: "ch09-test", chapterId: ch9Id, order: 7, title: "Chapter 9 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ التَّاسِعِ",          template: "REVIEW",   xpReward: ch09TestContent._meta?.xp_reward ?? 20, content: ch09TestContent },
     // Chapter 10 — Docs/proposals/chapter-10-content-proposal.md. Existing IDs kept
     // in place; fixture file number == display order (the mirror convention), so
     // ch10-l03/l04 (before/after) now load files 04/05 and the new ch10-l05 (you
@@ -830,8 +835,9 @@ async function main() {
     { id: "ch10-l05",  chapterId: ch10Id, order: 3, title: "You All — أَنْتُمْ and أَنْتُنَّ",        titleAr: "أَنْتُمْ وَأَنْتُنَّ — ضَمِيرُ الْمُخَاطَبِينَ", template: "STANDARD", xpReward: ch10L05Content._meta?.xp_reward  ?? 10, content: ch10L05Content },
     { id: "ch10-l03",  chapterId: ch10Id, order: 4, title: "Before — قَبْلَ",                        titleAr: "قَبْلَ — ظَرْفُ زَمَان",                     template: "STANDARD", xpReward: ch10L03Content._meta?.xp_reward  ?? 10, content: ch10L03Content },
     { id: "ch10-l04",  chapterId: ch10Id, order: 5, title: "After — بَعْدَ",                         titleAr: "بَعْدَ — ظَرْفُ زَمَان",                     template: "STANDARD", xpReward: ch10L04Content._meta?.xp_reward  ?? 10, content: ch10L04Content },
-    { id: "ch10-l06",  chapterId: ch10Id, order: 6, title: "Chapter 10 Review",                      titleAr: "مُرَاجَعَةُ الْفَصْلِ الْعَاشِر",            template: "REVIEW",   xpReward: ch10L06Content._meta?.xp_reward  ?? 20, content: ch10L06Content },
-    { id: "ch10-test", chapterId: ch10Id, order: 7, title: "Chapter 10 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الْعَاشِرِ",            template: "REVIEW",   xpReward: ch10TestContent._meta?.xp_reward ?? 20, content: ch10TestContent },
+    { id: "ch10-cl06", chapterId: ch10Id, order: 6, title: "Meet Your Study Group — Conversation Lab", titleAr: "نَحْنُ طُلَّابٌ",                     template: "SPOKEN_PHRASES", xpReward: ch10Cl06Content._meta?.xp_reward ?? 15, content: ch10Cl06Content },
+    { id: "ch10-l06",  chapterId: ch10Id, order: 7, title: "Chapter 10 Review",                      titleAr: "مُرَاجَعَةُ الْفَصْلِ الْعَاشِر",            template: "REVIEW",   xpReward: ch10L06Content._meta?.xp_reward  ?? 20, content: ch10L06Content },
+    { id: "ch10-test", chapterId: ch10Id, order: 8, title: "Chapter 10 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الْعَاشِرِ",            template: "REVIEW",   xpReward: ch10TestContent._meta?.xp_reward ?? 20, content: ch10TestContent },
     // Chapter 11 — Docs/proposals/chapter-11-content-proposal.md. ch11-l01..l05
     // keep their IDs and display orders; ch11-l06 (review) and ch11-test are new rows.
     // ch11-cl06 is the CL6 Conversation Lab (Docs/proposals/conversation-labs-curriculum-proposal.md),
