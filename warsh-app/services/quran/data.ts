@@ -1,18 +1,18 @@
-// Bundled Quran data for the reader (Pen sections 27 and 28). Two 15-line
-// layouts ship: the Indo-Pak Mushaf (Qudratullah print, the same pages as
-// Taj Company; scripts/build-quran-indopak-data.mjs), which Warsh opens by
-// default, and the King Fahd Complex Madani Mushaf with tajweed
-// (scripts/build-quran-data.mjs). Everything is on the device, so reading
+// Bundled Quran data for the reader (Pen sections 27 and 28). Three layouts
+// ship: the Indo-Pak 15-line Mushaf (Qudratullah print, the same pages as
+// Taj Company), which Warsh opens by default, the Taj Company Indo-Pak
+// 16-line Mushaf (both scripts/build-quran-indopak-data.mjs), and the King
+// Fahd Complex 15-line Madani Mushaf with tajweed (scripts/build-quran-data.mjs). Everything is on the device, so reading
 // needs no network.
 
 import chaptersJson from "../../data/quran/chapters.json";
 import indoPakIndexJson from "../../data/quran/indopak/index.json";
+import indoPak16IndexJson from "../../data/quran/indopak16/index.json";
 import juzJson from "../../data/quran/juz.json";
 import madaniStartsJson from "../../data/quran/madani-starts.json";
 
-export type MushafLayout = "indopak15" | "madani15";
+export type MushafLayout = "indopak15" | "indopak16" | "madani15";
 export const DEFAULT_LAYOUT: MushafLayout = "indopak15";
-export const LINES_PER_PAGE = 15;
 // Minimum gap between words in em. Must match WORD_GAP_EM in the build
 // script, which measures each page's widest line with this gap included.
 export const WORD_GAP_EM = 0.25;
@@ -33,7 +33,7 @@ export type WideTajweedWord = { s: Segment[]; x: number };
 /** A plain word, a word split into tajweed segments, or an ayah number. */
 export type QuranWord = string | Segment[] | WideTajweedWord | number;
 export type QuranLine =
-  | { h: number } // surah header
+  | { h: number; b?: 1 } // surah header; b = the basmala sits inside it (16-line)
   | { b: 1 } // basmala
   | { w: QuranWord[]; c?: 1 }; // text; c = centred instead of justified
 
@@ -74,6 +74,7 @@ export type JuzStart = {
 
 type LayoutData = {
   pageCount: number;
+  linesPerPage: number;
   tajweed: boolean;
   /** Per page, the ayah (surah * 1000 + ayah) that begins on it; x.5 when the page only continues ayah x. */
   starts: number[];
@@ -82,12 +83,15 @@ type LayoutData = {
   loadPages: () => QuranPage[];
 };
 
-const indoPakIndex = indoPakIndexJson as { starts: number[]; surahPages: number[]; parahs: JuzStart[] };
+type IndoPakIndex = { starts: number[]; surahPages: number[]; parahs: JuzStart[] };
+const indoPakIndex = indoPakIndexJson as IndoPakIndex;
+const indoPak16Index = indoPak16IndexJson as IndoPakIndex;
 
 // Pages load on first use (≈1.6–2.5 MB each), not at app start.
 const LAYOUTS: Record<MushafLayout, LayoutData> = {
   indopak15: {
     pageCount: 610,
+    linesPerPage: 15,
     tajweed: false,
     starts: indoPakIndex.starts,
     surahPages: indoPakIndex.surahPages,
@@ -95,8 +99,19 @@ const LAYOUTS: Record<MushafLayout, LayoutData> = {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     loadPages: () => require("../../data/quran/indopak/pages.json") as QuranPage[],
   },
+  indopak16: {
+    pageCount: 548,
+    linesPerPage: 16,
+    tajweed: false,
+    starts: indoPak16Index.starts,
+    surahPages: indoPak16Index.surahPages,
+    juzStarts: indoPak16Index.parahs,
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    loadPages: () => require("../../data/quran/indopak16/pages.json") as QuranPage[],
+  },
   madani15: {
     pageCount: 604,
+    linesPerPage: 15,
     tajweed: true,
     starts: madaniStartsJson as number[],
     surahPages: chapters.map((chapter) => chapter.page),
@@ -110,6 +125,15 @@ const loaded: Partial<Record<MushafLayout, QuranPage[]>> = {};
 
 export function pageCount(layout: MushafLayout) {
   return LAYOUTS[layout].pageCount;
+}
+
+export function linesPerPage(layout: MushafLayout) {
+  return LAYOUTS[layout].linesPerPage;
+}
+
+/** The Indo-Pak prints, which share a font, parah names and Urdu page numbers. */
+export function isIndoPak(layout: MushafLayout) {
+  return layout !== "madani15";
 }
 
 export function hasTajweed(layout: MushafLayout) {
@@ -219,4 +243,5 @@ export const BASMALA: Record<MushafLayout, string> = {
   madani15: "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ",
   // Spelled as in the Indo-Pak text (1:1), which its font is built for.
   indopak15: "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِیْمِ",
+  indopak16: "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِیْمِ",
 };

@@ -272,6 +272,13 @@ files remain release evidence.
   colours yet. Before a Play release: confirm the licence terms of the QUL
   layout and the Indo-Pak font (the font carries no licence text), as with the
   Quran.com data.
+- Indo-Pak 16-line Mushaf, selectable in Reading settings since 2026-09-23 (not
+  yet device-tested by the owner): 548 pages from the QUL Taj Company 16-line
+  layout (`taj-indopak-16-lines.db` in `.quran-cache/qul/`), built by the same
+  script into `data/quran/indopak16/`, same text, font and parah checks. The
+  print sets the basmala inside the surah header band, so those headers draw
+  name and basmala on one line; on pages 529–530 the basmala takes its own line.
+  Tajweed for Indo-Pak pages is deferred.
 - Ustaad Noor chat with daily limits and consumable overage credits
 - Subscription/paywall, purchase verification, restore flow, and the Google RTDN
   webhook, which has been reached by live notifications since 2026-08-29

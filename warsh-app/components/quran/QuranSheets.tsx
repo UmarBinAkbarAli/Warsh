@@ -34,7 +34,7 @@ function BottomSheet({ visible, onClose, children }: { visible: boolean; onClose
 const LAYOUTS: { key: string; titleKey: string; subKey: string; layout?: MushafLayout }[] = [
   { key: "indopak15", titleKey: "quran.layout.indopak15", subKey: "quran.layout.indopak15Sub", layout: "indopak15" },
   { key: "madani15", titleKey: "quran.layout.madani15", subKey: "quran.layout.madani15Sub", layout: "madani15" },
-  { key: "indopak16", titleKey: "quran.layout.indopak16", subKey: "quran.layout.indopak16Sub" },
+  { key: "indopak16", titleKey: "quran.layout.indopak16", subKey: "quran.layout.indopak16Sub", layout: "indopak16" },
   { key: "indopak13", titleKey: "quran.layout.indopak13", subKey: "quran.layout.indopak13Sub" },
 ];
 

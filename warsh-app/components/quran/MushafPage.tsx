@@ -4,12 +4,12 @@ import { StyleSheet, Text, View, type StyleProp, type TextStyle } from "react-na
 import { Fonts, MushafPalette, TajweedPalette, WarshPalette } from "../../constants/theme";
 import {
   BASMALA,
-  LINES_PER_PAGE,
   WORD_GAP_EM,
   ayahMarker,
   getChapter,
   getPage,
   hasTajweed,
+  linesPerPage,
   segmentsOf,
   tajweedExtraEm,
   juzForPage,
@@ -27,24 +27,29 @@ export const QURAN_FONT = "Amiri Quran";
 /** The Indo-Pak Mushaf's own font; its ayah-end signs are private-use glyphs. */
 export const INDOPAK_FONT = "IndoPak Nastaleeq";
 
-const PAGE_FONT: Record<MushafLayout, string> = { madani15: QURAN_FONT, indopak15: INDOPAK_FONT };
+const PAGE_FONT: Record<MushafLayout, string> = {
+  madani15: QURAN_FONT,
+  indopak15: INDOPAK_FONT,
+  indopak16: INDOPAK_FONT,
+};
 // The running header and page number follow each print: "الجزء ٣٠" on
 // Madani pages, "پارہ ۲۹" on Indo-Pak ones. The Indo-Pak font leaves پ and
 // the Arabic digits blank, so its header is set in Scheherazade New.
 const RUNNING = {
   madani15: { font: QURAN_FONT, juz: "الجزء", surah: "سورة", digits: toArabicDigits },
   indopak15: { font: Fonts.arabic, juz: "پارہ", surah: "سورۃ", digits: toUrduDigits },
+  indopak16: { font: Fonts.arabic, juz: "پارہ", surah: "سورۃ", digits: toUrduDigits },
 } satisfies Record<MushafLayout, { font: string | undefined; juz: string; surah: string; digits: (n: number) => string }>;
 
 // Page chrome, in px: frame padding plus the running header and page-number
-// rows. The rest of the height is split evenly across the 15 lines.
+// rows. The rest of the height is split evenly across the 15 or 16 lines.
 const FRAME_PADDING_X = 12;
 const FRAME_PADDING_Y = 8;
 const HEADER_HEIGHT = 30;
 const FOOTER_HEIGHT = 24;
 // The marks reach well above and below the letters; below this ratio of
 // line height the harakat of neighbouring lines collide.
-const MAX_FONT_TO_LINE: Record<MushafLayout, number> = { madani15: 0.56, indopak15: 0.6 };
+const MAX_FONT_TO_LINE: Record<MushafLayout, number> = { madani15: 0.56, indopak15: 0.6, indopak16: 0.6 };
 // Room for the few-percent difference between the build-time HarfBuzz
 // measurement and the platform's own text layout.
 const WIDTH_SAFETY = 0.96;
@@ -64,7 +69,7 @@ type MushafPageProps = {
 };
 
 /**
- * One page of a 15-line Mushaf, Indo-Pak or Madani. Line breaks come from
+ * One page of a Mushaf: Indo-Pak 15- or 16-line, or Madani 15-line. Line breaks come from
  * the printed layout, so every line holds exactly the words of the print.
  * The font is sized so the page's widest line fits the width, then each line
  * is justified by spreading its words, as the print does.
@@ -81,7 +86,7 @@ export const MushafPage = memo(function MushafPage({
   const page = getPage(layout, pageNumber);
   const coloured = tajweed && hasTajweed(layout);
   const innerWidth = width - FRAME_PADDING_X * 2 - 2;
-  const lineHeight = Math.floor((height - FRAME_PADDING_Y * 2 - HEADER_HEIGHT - FOOTER_HEIGHT - 2) / LINES_PER_PAGE);
+  const lineHeight = Math.floor((height - FRAME_PADDING_Y * 2 - HEADER_HEIGHT - FOOTER_HEIGHT - 2) / linesPerPage(layout));
   const fontSize = Math.max(
     10,
     Math.floor(
@@ -136,6 +141,23 @@ type MushafLineProps = {
 
 function MushafLine({ line, layout, lineIndex, height, fontSize, tajweed, selectedWord, onWordPress }: MushafLineProps) {
   const textStyle = [styles.quranText, { fontFamily: PAGE_FONT[layout], fontSize, lineHeight: height }];
+
+  if ("h" in line && line.b) {
+    // The 16-line print's header band: surah name, basmala in the middle.
+    const bandHeight = height - 4;
+    return (
+      <View style={[styles.line, { height }]}>
+        <View style={[styles.surahFrame, styles.surahBand, { height: bandHeight, borderRadius: bandHeight / 2 }]}>
+          <Text style={[textStyle, styles.surahName, { fontSize: fontSize * 0.75, lineHeight: bandHeight }]}>
+            {`سُورَةُ ${getChapter(line.h).ar}`}
+          </Text>
+          <Text style={[textStyle, styles.surahName, { fontSize: fontSize * 0.85, lineHeight: bandHeight }]}>
+            {BASMALA[layout]}
+          </Text>
+        </View>
+      </View>
+    );
+  }
 
   if ("h" in line) {
     return (
@@ -311,6 +333,10 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.parchmentDeep,
     borderWidth: 1,
     borderColor: WarshPalette.gold,
+  },
+  surahBand: {
+    flexDirection: "row-reverse",
+    justifyContent: "space-evenly",
   },
   surahName: {
     color: WarshPalette.navy,

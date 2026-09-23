@@ -910,7 +910,7 @@ export const en = {
   "quran.layout.indopak15Sub": "Qudratullah print, same pages as Taj Company · 610 pages",
   "quran.layout.madani15": "15-line · Madani",
   "quran.layout.madani15Sub": "King Fahd Complex print · 604 pages · tajweed colours",
-  "quran.layout.indopak16": "16-line · IndoPak",
+  "quran.layout.indopak16": "16-line · Indo-Pak",
   "quran.layout.indopak16Sub": "Taj Company print · 548 pages",
   "quran.layout.indopak13": "13-line · IndoPak",
   "quran.layout.indopak13Sub": "Hifz print · 847 pages",

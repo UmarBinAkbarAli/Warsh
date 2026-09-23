@@ -23,6 +23,7 @@ import {
   clampPage,
   getPage,
   hasTajweed,
+  isIndoPak,
   juzForPage,
   pageCount,
   pageForAyah,
@@ -138,7 +139,7 @@ export default function QuranReaderScreen() {
 
   const extraData = useMemo(() => ({ tajweed, tapped }), [tajweed, tapped]);
   const juzLabel =
-    layout === "indopak15"
+    isIndoPak(layout)
       ? t("quran.parahPosition", { juz: juzForPage(layout, currentPage) })
       : t("quran.juzHizb", { juz: juzForPage(layout, currentPage), hizb: page.z ?? 0 });
 
