@@ -58,6 +58,10 @@ export async function POST(request: Request, { params }: Props) {
   }
 
   const { chapterStateById } = await getUserCourseState(userId);
+  // Already satisfied before this completion: either the lesson was skipped,
+  // or it was added after the learner finished the chapter. Either way this
+  // completion does not finish the chapter a second time.
+  const chapterWasSatisfied = chapterStateById.get(lesson.chapterId)?.isSatisfied ?? false;
   if (chapterStateById.get(lesson.chapterId)?.isLocked) {
     return NextResponse.json({ error: "Chapter is locked", code: "chapter_locked" }, { status: 403 });
   }
@@ -194,7 +198,7 @@ export async function POST(request: Request, { params }: Props) {
     // this, a lesson backfilled into a finished chapter (content:backfill-new-
     // lessons) paid the chapter bonus a second time and announced an unlock.
     const alreadyCounted = existingStatus === PROGRESS_STATUS.SKIPPED_BY_PLACEMENT;
-    if (totalInChapter > 0 && doneInChapter === totalInChapter && !alreadyCounted) {
+    if (totalInChapter > 0 && doneInChapter === totalInChapter && !alreadyCounted && !chapterWasSatisfied) {
       chapterBonusXp = 50;
       chapterJustCompleted = true;
       await tx.user.update({ where: { id: userId }, data: { xp: { increment: 50 } } });

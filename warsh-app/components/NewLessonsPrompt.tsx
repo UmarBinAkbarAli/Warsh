@@ -1,7 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useT } from "@i18n/index";
-import type { CourseContinuityBreak } from "@services/courseContinuity";
-import { useLanguage } from "@services/language";
+import { pickLocalized, useLanguage, useTranslationLanguage } from "@services/language";
 import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -16,37 +15,62 @@ import {
 } from "../constants/theme";
 import { BrandButton } from "./BrandButton";
 
+/** One entry of `lessonNotices` from GET /api/chapters. */
+export type LessonNotice = {
+  kind: "new" | "updated";
+  lessonId: string;
+  lessonTitle: string;
+  lessonTitleUr?: string | null;
+  chapterId: string;
+  chapterOrder: number;
+  chapterTitle: string;
+  chapterTitleUr?: string | null;
+};
+
 type NewLessonsPromptProps = {
   visible: boolean;
-  info: CourseContinuityBreak;
-  chapterTitle: string;
-  onResume: () => void;
+  notices: LessonNotice[];
+  onOpen: (notice: LessonNotice) => void;
   onDismiss: () => void;
 };
 
+const MAX_ROWS = 3;
+
 /**
- * Shown when new lessons were published into a chapter the learner had already
- * finished, which re-locks everything after it (see
- * `@services/courseContinuity`). Nothing of theirs was lost, so the sheet leads
- * with that, shows the chapter as one step short, and hands them the lesson
- * that restores the map.
+ * Tells a learner that a lesson was added to a chapter they had already
+ * finished, or that a lesson they completed was updated (owner rule,
+ * 2026-09-23). It never blocks anything: the server keeps later chapters open
+ * (`findLessonsAddedAfterFinish` in warsh-backend/lib/course.ts), so the sheet
+ * only invites them to take a look, and Later is as valid as opening it.
  *
- * Designed in warsh-app-UI-v2.pen — "20 — New Lessons Prompt · Proposed Flow".
+ * Designed in warsh-app-UI-v2.pen — "20 — New Lessons Prompt · Proposed Flow"
+ * (revised 2026-09-23 as the non-blocking new / updated notice).
  */
-export function NewLessonsPrompt({
-  visible,
-  info,
-  chapterTitle,
-  onResume,
-  onDismiss,
-}: NewLessonsPromptProps) {
+export function NewLessonsPrompt({ visible, notices, onOpen, onDismiss }: NewLessonsPromptProps) {
   const insets = useSafeAreaInsets();
   const t = useT();
   const isUrdu = useLanguage() === "ur";
+  const translationLanguage = useTranslationLanguage();
 
-  const doneCount = Math.max(info.lessonCount - info.newLessonCount, 0);
+  const newCount = notices.filter((notice) => notice.kind === "new").length;
+  const updatedCount = notices.length - newCount;
+  const titleKey =
+    updatedCount === 0
+      ? newCount === 1
+        ? "lessonNotice.titleNewSingle"
+        : "lessonNotice.titleNewMultiple"
+      : newCount === 0
+        ? updatedCount === 1
+          ? "lessonNotice.titleUpdatedSingle"
+          : "lessonNotice.titleUpdatedMultiple"
+        : "lessonNotice.titleMixed";
+  const count = newCount > 0 ? newCount : updatedCount;
+  const rows = notices.slice(0, MAX_ROWS);
+  const hiddenCount = notices.length - rows.length;
   const rtlText = isUrdu ? styles.rtlText : null;
   const rtlRow = isUrdu ? styles.rtlRow : null;
+
+  if (notices.length === 0) return null;
 
   return (
     <Modal
@@ -59,9 +83,7 @@ export function NewLessonsPrompt({
     >
       <View style={styles.overlay}>
         <Pressable style={StyleSheet.absoluteFill} onPress={onDismiss} />
-        <View
-          style={[styles.sheet, { paddingBottom: insets.bottom + Spacing.lg }]}
-        >
+        <View style={[styles.sheet, { paddingBottom: insets.bottom + Spacing.lg }]}>
           <View style={styles.handleArea}>
             <View style={styles.handle} />
           </View>
@@ -72,74 +94,69 @@ export function NewLessonsPrompt({
             </View>
             <View style={styles.headerText}>
               <Text style={[styles.eyebrow, rtlText]} numberOfLines={1}>
-                {`${t("continuity.chapterLabel", { order: info.chapterOrder })} · ${chapterTitle}`}
+                {t("lessonNotice.eyebrow")}
               </Text>
-              <Text style={[styles.title, rtlText]}>
-                {t(
-                  info.newLessonCount === 1
-                    ? "continuity.titleSingle"
-                    : "continuity.titleMultiple",
-                  { count: info.newLessonCount },
-                )}
-              </Text>
+              <Text style={[styles.title, rtlText]}>{t(titleKey, { count })}</Text>
             </View>
           </View>
 
-          <Text style={[styles.body, rtlText]}>{t("continuity.body")}</Text>
+          <Text style={[styles.body, rtlText]}>{t("lessonNotice.body")}</Text>
 
-          <View style={styles.progress}>
-            <View style={[styles.progressLabels, rtlRow]}>
-              <Text style={styles.progressLabel}>
-                {t("continuity.progressLabel")}
-              </Text>
-              <Text style={styles.progressCount}>
-                {t("continuity.progressCount", {
-                  done: doneCount,
-                  total: info.lessonCount,
-                })}
-              </Text>
-            </View>
-            <View style={[styles.segments, rtlRow]}>
-              {Array.from({ length: info.lessonCount }).map((_, index) => (
-                <View
-                  key={index}
-                  style={[
-                    styles.segment,
-                    index < doneCount ? styles.segmentDone : styles.segmentNew,
-                  ]}
-                />
-              ))}
-            </View>
-            <Text style={[styles.progressNote, rtlText]}>
-              {t(
-                info.newLessonCount === 1
-                  ? "continuity.progressNoteSingle"
-                  : "continuity.progressNoteMultiple",
-              )}
-            </Text>
+          <View style={styles.list}>
+            {rows.map((notice) => {
+              const isNew = notice.kind === "new";
+              return (
+                <Pressable
+                  key={`${notice.kind}-${notice.lessonId}`}
+                  onPress={() => onOpen(notice)}
+                  accessibilityRole="button"
+                  style={({ pressed }) => [styles.row, rtlRow, pressed && styles.rowPressed]}
+                >
+                  <View style={[styles.pill, isNew ? styles.pillNew : styles.pillUpdated]}>
+                    <Text style={[styles.pillText, isNew ? styles.pillTextNew : styles.pillTextUpdated]}>
+                      {t(isNew ? "lessonNotice.badgeNew" : "lessonNotice.badgeUpdated")}
+                    </Text>
+                  </View>
+                  <View style={styles.rowText}>
+                    <Text style={[styles.rowTitle, rtlText]} numberOfLines={1}>
+                      {pickLocalized(notice.lessonTitle, notice.lessonTitleUr, translationLanguage)}
+                    </Text>
+                    <Text style={[styles.rowMeta, rtlText]} numberOfLines={1}>
+                      {`${t("lessonNotice.chapterLabel", { order: notice.chapterOrder })} · ${pickLocalized(
+                        notice.chapterTitle,
+                        notice.chapterTitleUr,
+                        translationLanguage,
+                      )}`}
+                    </Text>
+                  </View>
+                  <Ionicons
+                    name={isUrdu ? "chevron-back" : "chevron-forward"}
+                    size={18}
+                    color={Colors.text.muted}
+                  />
+                </Pressable>
+              );
+            })}
+            {hiddenCount > 0 ? (
+              <Text style={[styles.more, rtlText]}>{t("lessonNotice.more", { count: hiddenCount })}</Text>
+            ) : null}
           </View>
 
           <View style={[styles.reassurance, rtlRow]}>
-            <Ionicons
-              name="shield-checkmark-outline"
-              size={19}
-              color={WarshPalette.sageDeep}
-            />
-            <Text style={[styles.reassuranceText, rtlText]}>
-              {t("continuity.reassurance", { count: info.chaptersAheadCount })}
-            </Text>
+            <Ionicons name="lock-open-outline" size={19} color={WarshPalette.sageDeep} />
+            <Text style={[styles.reassuranceText, rtlText]}>{t("lessonNotice.reassurance")}</Text>
           </View>
 
-          <BrandButton title={t("continuity.resume")} onPress={onResume} />
+          <BrandButton title={t("lessonNotice.open")} onPress={() => onOpen(notices[0])} />
 
           <Pressable
             onPress={onDismiss}
             hitSlop={8}
             accessibilityRole="button"
-            accessibilityLabel={t("continuity.later")}
+            accessibilityLabel={t("lessonNotice.later")}
             style={styles.laterButton}
           >
-            <Text style={styles.laterText}>{t("continuity.later")}</Text>
+            <Text style={styles.laterText}>{t("lessonNotice.later")}</Text>
           </Pressable>
         </View>
       </View>
@@ -214,47 +231,65 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.bodyM,
     lineHeight: LineHeights.bodyM,
   },
-  progress: {
+  list: {
     gap: Spacing.xs,
   },
-  progressLabels: {
+  row: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
+    gap: Spacing.sm,
+    paddingVertical: Spacing.sm,
+    paddingHorizontal: Spacing.md,
+    borderRadius: Radii.lg,
+    borderWidth: 1,
+    borderColor: WarshPalette.cream,
+    backgroundColor: WarshPalette.white,
   },
-  progressLabel: {
-    color: Colors.text.muted,
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.label,
-    letterSpacing: 0.6,
+  rowPressed: {
+    backgroundColor: WarshPalette.highlightBg,
   },
-  progressCount: {
-    color: WarshPalette.ink,
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.caption,
+  pill: {
+    paddingHorizontal: Spacing.sm,
+    paddingVertical: 3,
+    borderRadius: Radii.full,
   },
-  segments: {
-    flexDirection: "row",
-    gap: 4,
-  },
-  segment: {
-    flex: 1,
-    height: 8,
-    borderRadius: Radii.sm,
-  },
-  segmentDone: {
-    backgroundColor: WarshPalette.sage,
-  },
-  segmentNew: {
+  pillNew: {
     backgroundColor: WarshPalette.highlightBg,
     borderWidth: 1,
     borderColor: WarshPalette.gold,
   },
-  progressNote: {
+  pillUpdated: {
+    backgroundColor: WarshPalette.sageTintBg,
+  },
+  pillText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.label,
+  },
+  pillTextNew: {
+    color: WarshPalette.ink,
+  },
+  pillTextUpdated: {
+    color: WarshPalette.sageDeep,
+  },
+  rowText: {
+    flex: 1,
+    gap: 2,
+  },
+  rowTitle: {
+    color: WarshPalette.ink,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+  },
+  rowMeta: {
     color: Colors.text.muted,
     fontFamily: Fonts.regular,
     fontSize: FontSizes.label,
-    lineHeight: LineHeights.label,
+  },
+  more: {
+    color: Colors.text.muted,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.caption,
+    paddingHorizontal: Spacing.xs,
   },
   reassurance: {
     flexDirection: "row",

@@ -116,7 +116,7 @@ function LessonPreviewSheet({
 
   // A lab backfilled as skipped into a finished chapter is still new to the
   // learner: offer to start it, not to review it.
-  const isNewLab = lesson.isConversationLab && !lesson.isCompleted;
+  const isNewLab = (lesson.isConversationLab || lesson.isNew) && !lesson.isCompleted;
   const skipped = lesson.isSkippedByPlacement && !isNewLab;
   const ctaLabel =
     lesson.isCompleted || skipped ? t("chapter.reviewLesson") : t("chapter.startLesson");
@@ -285,8 +285,11 @@ export default function ChapterScreen() {
         // A lab that is not completed is shown as new, including for learners
         // whose finished chapter had it backfilled as skipped: "skipped by
         // placement" would be untrue for a lesson that did not exist then.
-        const isNewLab = lesson.isConversationLab && !done;
+        // The same holds for any lesson added after the learner finished the
+        // chapter (`isNew`, from the server).
+        const isNewLab = (lesson.isConversationLab || lesson.isNew) && !done;
         const skipped = lesson.isSkippedByPlacement && !isNewLab;
+        const updated = lesson.isUpdated && done;
         return (
           <TouchableOpacity
             key={lesson.id}
@@ -296,6 +299,7 @@ export default function ChapterScreen() {
           >
             {skipped ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
             {isNewLab ? <StatusBadge label={t("lab.newBadge")} /> : null}
+            {updated ? <StatusBadge label={t("lessonNotice.badgeUpdated")} /> : null}
             <View style={styles.lessonCardTop}>
               <View style={styles.lessonIndex}>
                 {done ? (

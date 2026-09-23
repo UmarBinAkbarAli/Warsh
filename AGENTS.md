@@ -159,6 +159,12 @@ npx vitest run <file>
   `Docs/`).
 - `lib/course.ts` is authoritative for chapter unlocking/completion. Locking,
   trial/subscription access, and admin checks are enforced server-side.
+- A lesson published into a chapter a learner already finished never locks them
+  (owner rule): it is read from `Lesson.addedAt`, which a database trigger
+  stamps on first publish, and the learner is told through `lessonNotices` on
+  `GET /api/chapters`. Do not set `addedAt` by hand, and do not bulk-rewrite
+  `Lesson.content` without expecting every learner who completed those lessons
+  to see an "Updated" notice (`contentUpdatedAt`, same trigger).
 - Streak days run 04:00 PKT → 03:59:59 PKT via `lib/date.ts`; completion, daily
   goals, freezes, and the reset cron must all use that boundary.
 - Content review (`LessonContentReview`, `ContentReviewIssue`) stays separate from

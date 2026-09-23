@@ -7,7 +7,7 @@ import {
   type OnboardingStep,
   type OnboardingStepKey,
 } from "@components/OnboardingChecklist";
-import { NewLessonsPrompt } from "@components/NewLessonsPrompt";
+import { NewLessonsPrompt, type LessonNotice } from "@components/NewLessonsPrompt";
 import { QuranCard } from "@components/quran/QuranCard";
 import { SubscriptionBanner } from "@components/SubscriptionBanner";
 import { TranslationLanguagePrompt } from "@components/TranslationLanguagePrompt";
@@ -19,7 +19,6 @@ import { pickLocalized, pickTranslation, useLanguage, useTranslationLanguage, ty
 import { useAuthStore } from "@stores/authStore";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { findCourseContinuityBreak } from "@services/courseContinuity";
 import {
   ActivityIndicator,
   Animated,
@@ -84,6 +83,8 @@ type Chapter = {
   isLocked: boolean;
   isCompleted: boolean;
   isSkippedByPlacement: boolean;
+  /** Nothing here holds the learner back (new servers; older ones omit it). */
+  isSatisfied?: boolean;
   completedLessonCount: number;
   lessons: Lesson[];
 };
@@ -146,7 +147,7 @@ export default function HomeScreen() {
   const [showStreakEndedModal, setShowStreakEndedModal] = useState(false);
   const [showDailyGoalToast, setShowDailyGoalToast] = useState(false);
   const [showTranslationPrompt, setShowTranslationPrompt] = useState(false);
-  const [continuityDismissed, setContinuityDismissed] = useState(false);
+  const [lessonNotices, setLessonNotices] = useState<LessonNotice[]>([]);
   const [translationPromptSaving, setTranslationPromptSaving] = useState(false);
   const [isFirstTimeUser, setIsFirstTimeUser] = useState(false);
   const [checklistDismissed, setChecklistDismissed] = useState(false);
@@ -249,6 +250,7 @@ export default function HomeScreen() {
       ]);
 
       setChapters(chaptersResponse.data.data.chapters);
+      setLessonNotices(chaptersResponse.data.data.lessonNotices ?? []);
       const progress = progressResponse.data.data;
       const streak = progress.streak ?? progress.currentStreak ?? 0;
       setUserName(progress.userName ?? fallbackName ?? "");
@@ -339,7 +341,8 @@ export default function HomeScreen() {
     return (
       chapters.find(
         (chapter) =>
-          !chapter.isLocked && !chapter.isCompleted && !chapter.isSkippedByPlacement,
+          !chapter.isLocked &&
+          !(chapter.isSatisfied ?? (chapter.isCompleted || chapter.isSkippedByPlacement)),
       ) ??
       [...chapters].reverse().find((chapter) => !chapter.isLocked) ??
       chapters[0] ??
@@ -385,28 +388,22 @@ export default function HomeScreen() {
     [chapters],
   );
 
-  // A chapter the learner already finished can be re-locked when new lessons
-  // are published into it, which silently collapses the map back. Detect that
-  // from their own progress and explain it rather than leaving them stranded.
-  const continuityBreak = useMemo(
-    () => findCourseContinuityBreak(chapters),
-    [chapters],
-  );
-  const showContinuityPrompt =
+  // A lesson added to a chapter the learner already finished, or a change to
+  // one they completed, is announced once and never locks anything.
+  const showLessonNotices =
     !loading &&
-    !continuityDismissed &&
     !showTranslationPrompt &&
     !showStreakEndedModal &&
-    continuityBreak !== null;
+    lessonNotices.length > 0;
 
-  function resumeFromContinuityBreak() {
-    if (!continuityBreak) return;
-    setContinuityDismissed(true);
-    if (continuityBreak.resumeLessonId) {
-      router.push(`/lessons/${continuityBreak.resumeLessonId}/play`);
-    } else {
-      router.push(`/lessons/${continuityBreak.chapterId}`);
-    }
+  function markLessonNoticesSeen() {
+    setLessonNotices([]);
+    void api.post("/api/progress/lesson-notices").catch(() => undefined);
+  }
+
+  function openLessonNotice(notice: LessonNotice) {
+    markLessonNoticesSeen();
+    router.push(`/lessons/${notice.lessonId}/play`);
   }
 
   async function dismissFreezeBanner() {
@@ -513,19 +510,12 @@ export default function HomeScreen() {
         </View>
       </Modal>
 
-      {continuityBreak ? (
-        <NewLessonsPrompt
-          visible={showContinuityPrompt}
-          info={continuityBreak}
-          chapterTitle={pickLocalized(
-            continuityBreak.chapterTitle,
-            continuityBreak.chapterTitleUr,
-            translationLanguage,
-          )}
-          onResume={resumeFromContinuityBreak}
-          onDismiss={() => setContinuityDismissed(true)}
-        />
-      ) : null}
+      <NewLessonsPrompt
+        visible={showLessonNotices}
+        notices={lessonNotices}
+        onOpen={openLessonNotice}
+        onDismiss={markLessonNoticesSeen}
+      />
 
       <TranslationLanguagePrompt
         visible={showTranslationPrompt}

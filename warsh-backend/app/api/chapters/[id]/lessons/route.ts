@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "../../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../../lib/auth";
 import { getUserCourseState } from "../../../../../lib/course";
+import { buildLessonFlags } from "../../../../../lib/lessonNotices";
 import { getChapterTestAssessment, isChapterTestContent } from "../../../../../lib/chapterTests";
 
 interface Props {
@@ -30,7 +31,9 @@ export async function GET(request: Request, { params }: Props) {
     return NextResponse.json({ error: "Chapter not found", code: "not_found" }, { status: 404 });
   }
 
-  const { chapterStateById, completedLessonIds, skippedLessonIds } = await getUserCourseState(userId);
+  const courseState = await getUserCourseState(userId);
+  const { chapterStateById, completedLessonIds, skippedLessonIds } = courseState;
+  const lessonFlags = buildLessonFlags(courseState);
   const chapterState = chapterStateById.get(params.id);
 
   if (chapterState?.isLocked) {
@@ -53,6 +56,8 @@ export async function GET(request: Request, { params }: Props) {
     requiredCorrect: assessment ? Math.ceil((assessment.pass_score_percent / 100) * assessment.questions.length) : null,
     isCompleted: completedLessonIds.has(lesson.id),
     isSkippedByPlacement: skippedLessonIds.has(lesson.id),
+    isNew: lessonFlags.get(lesson.id)?.isNew ?? false,
+    isUpdated: lessonFlags.get(lesson.id)?.isUpdated ?? false,
     });
   });
   const regularLessons = lessons.filter((lesson: any) => !lesson.isChapterTest);
@@ -71,6 +76,7 @@ export async function GET(request: Request, { params }: Props) {
         isLocked: false,
         isCompleted: chapterState?.isCompleted ?? false,
         isSkippedByPlacement: chapterState?.isSkippedByPlacement ?? false,
+        isSatisfied: chapterState?.isSatisfied ?? false,
         completedLessonCount: regularLessons.filter((lesson: any) => completedLessonIds.has(lesson.id)).length,
         lessonCount: regularLessons.length,
         lessons: lessons.map((lesson: any) => ({

@@ -38,6 +38,9 @@ model User {
     phrasesSpoken  Int               @default(0)
     ttsUsageCount   Int              @default(0)
     ttsUsageResetAt DateTime?
+    // Last time the Learn tab's "new / updated lessons" notice was dismissed or
+    // opened. Null means never: every qualifying lesson is still unseen.
+    lessonNoticesSeenAt DateTime?
     createdAt      DateTime          @default(now())
     updatedAt      DateTime          @updatedAt
     streak         Streak?
@@ -208,6 +211,14 @@ model Lesson {
     content     Json
     status      ContentStatus  @default(DRAFT)
     publishedAt DateTime?
+    // When the lesson first went live, stamped by a database trigger (see the
+    // 20260923120000 migration) so Studio, promote scripts and sync all set it.
+    // Null for lessons live before the column existed: those are never treated
+    // as "added after the learner finished the chapter".
+    addedAt     DateTime?
+    // Last change to `content` while the lesson was published (same trigger).
+    // Drives the "updated lesson" notice for learners who had completed it.
+    contentUpdatedAt DateTime?
     updatedAt   DateTime       @default(now()) @updatedAt
     progress    Progress[]
     contentReview LessonContentReview?
