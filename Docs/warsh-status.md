@@ -601,8 +601,9 @@ Everything below this list is either done and verified, or one of these:
    proposal requires it before promotion), and Warsh Studio content-review
    pass in Urdu.
    **Conversation Labs — CL6 Home and Family (Chapter 11 pilot) is built and
-   staging-verified 2026-09-23; production promotion is pending the owner's
-   go-ahead.** Design: Pen section 25 (approved). Proposal:
+   staging-verified 2026-09-23; production promotion is ON HOLD (owner,
+   2026-09-23) until the speech recognition module is built into the lab and
+   the non-blocking new/updated-lesson notice (Open items #7) is ready.** Design: Pen section 25 (approved). Proposal:
    `Docs/proposals/conversation-labs-curriculum-proposal.md`. A lab is a
    `SPOKEN_PHRASES` lesson with a `spoken_phrases.lab` block
    (`@warsh/lesson-schema`: mission, goals, pattern note, speaking lines,
@@ -626,9 +627,8 @@ Everything below this list is either done and verified, or one of these:
    account. Production steps when approved: `content:check`, the promotion
    script `--apply`, the backfill `--apply`, `content:baseline`, then
    commit and deploy the backend and `deploy:web`; the Android client needs a
-   release before native learners see lab screens. Open: the owner's
-   decision on telling already-finished learners (the new-lessons prompt
-   never shows for them, because the backfill keeps their map unlocked);
+   release before native learners see lab screens. Open: telling
+   already-finished learners — settled as Open items #7;
    scene illustration (owner-supplied); scholarly review of the Arabic.
 3. ~~**Speak mic re-prompt on the Tecno**~~ — **verified on hardware
    2026-09-17** on the Play-installed 1.0.11. The owner's account is on
@@ -689,6 +689,18 @@ Everything below this list is either done and verified, or one of these:
      2026-09-16: `/api/chat` now has a burst limit (`068508b`, see the
      rate-limiting paragraph below). A global spend ceiling is deliberately
      not added until real traffic shows it is needed.
+7. **"New or updated lesson" notice for finished chapters (owner, 2026-09-23).**
+   House rule: whenever a lesson is added to, or updated in, a chapter a
+   learner already completed, that learner is told on the Learn tab and asked
+   to take a look — and is **never locked** by it. Today's
+   `components/NewLessonsPrompt.tsx` (Pen section 20) does not do this: it
+   fires only when the new lesson re-locks later chapters, so after the usual
+   `content:backfill-new-lessons` (which keeps the map unlocked) it never
+   shows, and edits to existing lessons trigger nothing at all. Work: update
+   Pen section 20 to a non-blocking "new / updated in a chapter you finished"
+   notice (EN + UR) for owner approval, then build it (the backend has to
+   report which finished chapters gained or changed lessons since the learner
+   last saw them). Must ship with or before the Conversation Lab launch.
 
 ### P0 — required verification and open gaps
 
