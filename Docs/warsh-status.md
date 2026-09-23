@@ -745,6 +745,13 @@ Everything below this list is either done and verified, or one of these:
    notice (EN + UR) for owner approval, then build it (the backend has to
    report which finished chapters gained or changed lessons since the learner
    last saw them). Must ship with or before the Conversation Lab launch.
+8. **Owner device test of 1.0.13 before any Play build (owner, 2026-09-23).**
+   1.0.13 (37) carries the Conversation Lab screens and Answer it; CL1–CL6
+   are already live on the server and the web. The owner tests the labs on
+   a real device first (sideloaded APK, email login `warsh-tester@warsh.app`
+   with every chapter unlocked). **Do not build or upload an AAB for Play
+   until the owner approves that test.** After approval: the full release
+   gate, `bundleRelease` + matching APK smoke test, then upload.
 
 ### P0 — required verification and open gaps
 
