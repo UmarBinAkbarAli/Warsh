@@ -11,7 +11,7 @@ export default function PrivacyPage() {
   return (
     <LegalLayout
       title="Privacy Policy"
-      meta="App: Warsh · Package: com.warsh.app · Developer: Umar Bin Akbar Ali · Last updated: September 11, 2026"
+      meta="App: Warsh · Package: com.warsh.app · Developer: Umar Bin Akbar Ali · Last updated: September 23, 2026"
     >
       <H2>1. Scope</H2>
       <P>
@@ -68,6 +68,16 @@ export default function PrivacyPage() {
         is deleted when you discard it, restart the exercise, advance, or leave the exercise.
         Warsh does not upload that raw recording to our servers or analytics providers.
       </P>
+      <P>
+        In Conversation Labs, the optional &ldquo;Answer it&rdquo; step turns your spoken answer
+        into text with the speech recognition service built into your device; on Android this is
+        normally Google&rsquo;s speech service, which may process the audio on Google&rsquo;s
+        servers unless an offline language pack is installed. The recognised text is compared
+        with the expected answer on your device only. Warsh never receives, uploads, or stores
+        that audio or its transcript, and the result is not scored or sent to analytics.
+        Google&rsquo;s processing is governed by Google&rsquo;s own privacy policy, and you can
+        always skip or reveal the answer instead of speaking.
+      </P>
 
       <H2>4. How We Use Information</H2>
       <UL>
@@ -119,6 +129,11 @@ export default function PrivacyPage() {
         <LI>
           <strong>Google Play:</strong> distributes the app, processes purchases, and provides
           purchase and subscription status used for verification.
+        </LI>
+        <LI>
+          <strong>Your device&rsquo;s speech recognition service (Google on Android):</strong>{" "}
+          receives the audio of an &ldquo;Answer it&rdquo; reply directly from your device, only
+          while you choose to speak one, and returns the text. Warsh does not receive that audio.
         </LI>
         <LI>
           <strong>Resend:</strong> sends password-reset and account-security emails when those

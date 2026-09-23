@@ -1,7 +1,7 @@
 # Warsh Current Status
 
 **Status:** Active current-state source of truth
-**Last verified:** 2026-09-21
+**Last verified:** 2026-09-23
 **Repository:** `D:\Code\Warsh`
 **Current phase:** Post-launch hardening
 
@@ -250,9 +250,8 @@ files remain release evidence.
   length, silent letters; natural madd is left uncoloured) with a tap-a-word rule
   explanation in English and Urdu. Last page, bookmarks, tajweed and keep-awake
   are stored on the device only (`stores/quranStore.ts`). Not built yet: the 13-
-  and 16-line IndoPak layouts (shown as "coming soon"), recitation audio, tap-a-
-  word meanings, and translation under the page, which waits on a licensed Urdu
-  and English translation.
+  line IndoPak layout (shown as "coming soon"), recitation audio and tap-a-word
+  meanings.
   Verified 2026-09-23 on a release APK on the `Warsh_API_34` emulator (list,
   page 2, the widest page 591, page 300, tajweed on/off, rule sheet, settings,
   bookmark, swipe direction, Learn card resume). Not yet checked on web.
@@ -268,17 +267,31 @@ files remain release evidence.
   29:45, 23 at 36:22), each checked by the build to open a page, and the Juz tab
   reads "Juz (Parah)" / "پارہ" with the parah names. A "Surah · Parah" button on
   every page opens the list. The place and bookmarks are stored as ayahs, so
-  switching layout reopens at the same ayah. Indo-Pak pages have no tajweed
-  colours yet. Before a Play release: confirm the licence terms of the QUL
-  layout and the Indo-Pak font (the font carries no licence text), as with the
-  Quran.com data.
+  switching layout reopens at the same ayah. The owner holds no separate licence
+  for the QUL layout or the Indo-Pak font (2026-09-23); both are the free QUL
+  downloads and ship as they are.
 - Indo-Pak 16-line Mushaf, selectable in Reading settings since 2026-09-23 (not
   yet device-tested by the owner): 548 pages from the QUL Taj Company 16-line
   layout (`taj-indopak-16-lines.db` in `.quran-cache/qul/`), built by the same
   script into `data/quran/indopak16/`, same text, font and parah checks. The
   print sets the basmala inside the surah header band, so those headers draw
   name and basmala on one line; on pages 529–530 the basmala takes its own line.
-  Tajweed for Indo-Pak pages is deferred.
+- Tajweed on the Indo-Pak pages (2026-09-23): `build-quran-indopak-data.mjs`
+  fetches Quran.com's word-level Uthmani tajweed (cached in
+  `.quran-cache/tajweed/`) and carries each rule onto the Indo-Pak spelling
+  letter by letter (`scripts/quran-indopak-tajweed.mjs`: letter clusters aligned
+  on a folded consonant skeleton). 46,035 of 46,036 coloured words map; three
+  ayahs whose Indo-Pak text splits a word differently (2:181, 8:6, 13:37) stay
+  plain. Colour runs are re-cut and sized with HarfBuzz against the Indo-Pak
+  font exactly as on Madani pages. Tajweed is now available on every layout.
+- Translation under the page (Pen section 30, 2026-09-23): Reading settings →
+  "Translation under the page" = Off (default) / Urdu, Maulana Muhammad
+  Junagarhi (owner's choice) / English, M. M. Pickthall. Both public domain,
+  from Quran.com resources 54 and 19, with Junagarhi's tafsir footnote markers
+  stripped; bundled by `scripts/build-quran-translations.mjs` (1.4 MB + 0.8 MB,
+  loaded only when turned on). With a translation on, a strip peeks under the
+  page and the page scrolls down to the ayahs that begin on it (plus the one it
+  continues). Verified on web against staging (page 562 = Al-Mulk 1–10).
 - Ustaad Noor chat with daily limits and consumable overage credits
 - Subscription/paywall, purchase verification, restore flow, and the Google RTDN
   webhook, which has been reached by live notifications since 2026-08-29
@@ -712,10 +725,11 @@ Everything below this list is either done and verified, or one of these:
    offline Arabic pack), and a walk-through of wrong → show answer → correct →
    all three turns → mission, Urdu mirroring and the fallback. The native
    module needs an app release (manifest `<queries>` for the speech service
-   added by hand — the android/ folder is tracked). Open before release: a
-   privacy-policy line that spoken answers go to Google's speech service
-   (Warsh never uploads or stores the audio); a real-voice test on a phone,
-   since the accuracy test used synthesized clips.
+   added by hand — the android/ folder is tracked). Both pre-release items are
+   closed (2026-09-23): the privacy policy (`Docs/privacy-policy.html` and
+   warsh.app/privacy) now says spoken answers go to the device's speech service
+   (Google on Android) and never to Warsh, and the owner tested real-voice
+   answers on a phone.
 3. ~~**Speak mic re-prompt on the Tecno**~~ — **verified on hardware
    2026-09-17** on the Play-installed 1.0.11. The owner's account is on
    Chapter 2, so the check used a throwaway production account placed at
@@ -746,14 +760,12 @@ Everything below this list is either done and verified, or one of these:
    key, so revocation holds on hardware too. Still open: a real
    device-to-device transfer - needs a second phone, nothing else can close
    it (re-confirmed 2026-09-17) - see P0 #10.
-5. **Memory thresholds (Workstream B):** Play Console still shows no memory
-   or bitmap data for Warsh (re-read 2026-09-17: anonymous RSS+swap and bitmap
-   P50/P90 all "-", crash/ANR/LMK "-", installed audience 20); the local
-   profile of the optimized build is far under every threshold - see P0 #11.
-   The two "Memory usage" action cards on release 35 are static-scan
-   recommendations (the bitmap one lists Glide/expo-image internals; the
-   other is the R8/AGP 9 item settled in #1). Re-read Android vitals in
-   mid-October, once 1.0.11 has been in the field a month.
+5. ~~**Memory thresholds (Workstream B)**~~ — **done 2026-09-23** (owner:
+   mark it done if nothing is wrong). Android vitals for 36 (1.0.12) still has
+   no measured memory, crash or ANR data at 25 installs, so nothing is over any
+   threshold; the two "Memory usage" cards are static-scan recommendations
+   (bitmap downsampling inside a library, and the R8/AGP 9 item settled in #1).
+   The local profile (P0 #11) sits at about 6 % of Google's thresholds.
 6. Discussion items — all three settled with the owner on 2026-09-16:
    - ~~Play's edge-to-edge recommendation~~ — accepted as permanent noise.
      The inset defects were fixed in 1.0.10 and verified on the Tecno; the
@@ -775,25 +787,28 @@ Everything below this list is either done and verified, or one of these:
      2026-09-16: `/api/chat` now has a burst limit (`068508b`, see the
      rate-limiting paragraph below). A global spend ceiling is deliberately
      not added until real traffic shows it is needed.
-7. **"New or updated lesson" notice for finished chapters (owner, 2026-09-23).**
-   House rule: whenever a lesson is added to, or updated in, a chapter a
-   learner already completed, that learner is told on the Learn tab and asked
-   to take a look — and is **never locked** by it. Today's
-   `components/NewLessonsPrompt.tsx` (Pen section 20) does not do this: it
-   fires only when the new lesson re-locks later chapters, so after the usual
-   `content:backfill-new-lessons` (which keeps the map unlocked) it never
-   shows, and edits to existing lessons trigger nothing at all. Work: update
-   Pen section 20 to a non-blocking "new / updated in a chapter you finished"
-   notice (EN + UR) for owner approval, then build it (the backend has to
-   report which finished chapters gained or changed lessons since the learner
-   last saw them). Must ship with or before the Conversation Lab launch.
-8. **Owner device test of 1.0.13 before any Play build (owner, 2026-09-23).**
-   1.0.13 (37) carries the Conversation Lab screens and Answer it; CL1–CL6
-   are already live on the server and the web. The owner tests the labs on
-   a real device first (sideloaded APK, email login `warsh-tester@warsh.app`
-   with every chapter unlocked). **Do not build or upload an AAB for Play
-   until the owner approves that test.** After approval: the full release
-   gate, `bundleRelease` + matching APK smoke test, then upload.
+7. ~~**"New or updated lesson" notice for finished chapters**~~ — **built
+   2026-09-23** (Pen section 20 revised; owner waived the approval gate).
+   Server: a lesson published into a chapter after the learner finished it no
+   longer blocks progression (`findLessonsAddedAfterFinish` in `lib/course.ts`:
+   every lesson still outstanding went live after their last finish in that
+   chapter); the chapter reads honestly incomplete (8/9), the lesson stays open,
+   later chapters stay unlocked, and completing it pays no second chapter bonus.
+   `Lesson.addedAt` / `Lesson.contentUpdatedAt` are stamped by a database trigger
+   (migration `20260923120000`), so Studio, promote scripts and sync all set
+   them; lessons live before the migration keep `addedAt` NULL and behave
+   exactly as before. `GET /api/chapters` returns `lessonNotices` (new lessons
+   in finished chapters, content changes to completed lessons, since
+   `User.lessonNoticesSeenAt`) and per-lesson `isNew` / `isUpdated`;
+   `POST /api/progress/lesson-notices` marks them seen. App: one non-blocking
+   sheet on the Learn tab (Take a look / Later), New and Updated badges in the
+   lesson list. `content:backfill-new-lessons` is no longer needed for new
+   lessons. The CL labs of 2026-09-23 are seeded as new (ch05-cl07, ch09-cl05,
+   ch10-cl06, ch11-cl06) and updated (ch03-l05, ch07-l05). Verified on staging
+   (API walk-through + web UI).
+8. ~~**Owner device test of 1.0.13 before any Play build**~~ — the owner tested
+   the labs and Answer it on a real phone (2026-09-23) and asked for the Play
+   build to follow the work above automatically.
 
 ### P0 — required verification and open gaps
 
