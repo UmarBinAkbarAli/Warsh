@@ -2,14 +2,11 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 18, Lesson 2 — Introduction to الَّتِي (feminine singular relative pronoun).",
+    "_note": "Chapter 18, Lesson 2 (ch18-l02) — definite noun + الَّذِي / الَّتِي + description versus indefinite noun + description directly (الرَّجُلُ الَّذِي ذَهَبَ / رَجُلٌ ذَهَبَ; الْبِنْتُ الَّتِي قَرَأَتِ / بِنْتٌ قَرَأَتِ). Past verbs replace the proposal's يَقْرَأُ / تَقْرَأُ because present tense is not yet taught. رَجُلٌ الَّذِي is marked false, never scored. Quran return: the definite الْوَسْوَاسِ in An-Nas 114:4 (reveal index 2). Rebuilt 2026-09-23 from Docs/proposals/chapter-18-content-proposal.md; the chapter map and fixtures named three different source files (reader_lecture_18_relative_pronouns.md, reader_lecture_book2_lesson7.md, tadabbur_an_nas.md), none of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "معرفہ یا نکرہ؟",
     "chapter_order": 18,
     "lesson_order": 2,
-    "chapter_title": "Relative Pronouns — الَّذِي وَالَّتِي",
-    "title": "Introducing الَّتِي — The One Who (Feminine)",
-    "titleAr": "تَعْرِيفُ الَّتِي — الَّتِي بِمَعْنَى \"الَّتِي هِيَ\"",
-    "source": "reader_lecture_book2_lesson7.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
@@ -17,273 +14,294 @@
       "surah": 114,
       "ayah": 4,
       "label": "An-Nas 114:4",
-      "ar": "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
-      "en": "From the evil of the whisperer who withdraws —",
-      "ur": "وہمزے کے برے سے جو پیچھے ہٹ جاتا ہے —",
+      "ar": "مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+      "en": "from the evil of the whisperer who withdraws,",
+      "ur": "وسوسہ ڈالنے والے، پیچھے ہٹ جانے والے کی برائی سے،",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/114004.mp3"
     },
     "noor_intro": {
-      "en": "An-Nas 114:4 contains a masculine noun and its adjective: الْوَسْوَاسِ الْخَنَّاسِ. It does not contain a relative pronoun. Today we use that contrast to learn الَّتِي — the relative pronoun used with feminine singular nouns.",
-      "ur": "سورۃ الناس 114:4 میں ایک مذکر اسم اور اس کی صفت ہے: الْوَسْوَاسِ الْخَنَّاسِ۔ اس آیت میں اسمِ موصول نہیں ہے۔ آج اسی فرق سے ہم الَّتِي سیکھیں گے — جو مؤنث واحد اسم کے ساتھ استعمال ہوتا ہے۔"
+      "en": "Before الَّذِي in An-Nas comes a noun with ال: الْوَسْوَاسِ, the whisperer. That ال is the reason الَّذِي can follow. Listen to 114:4 again.",
+      "ur": "سورۃ الناس میں الَّذِي سے پہلے ال والا اسم آتا ہے: الْوَسْوَاسِ، وسوسہ ڈالنے والا۔ یہی ال وجہ ہے کہ الَّذِي اس کے بعد آ سکتا ہے۔ 114:4 دوبارہ سنیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الرَّجُلُ الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "الرجل الذي ذهب الى المسجد",
+        "translit": "ar-rajulu lladhī dhahaba ilā l-masjidi",
+        "en": "the man who went to the mosque",
+        "ur": "وہ آدمی جو مسجد کی طرف گیا"
+      },
+      "explanation": {
+        "en": "A definite noun, الرَّجُلُ, then الَّذِي, then the description: the man who went to the mosque. A specific man.",
+        "ur": "ایک معرفہ اسم، الرَّجُلُ، پھر الَّذِي، پھر وضاحت: وہ آدمی جو مسجد کی طرف گیا۔ ایک متعین آدمی۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "رَجُلٌ ذَهَبَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "رجل ذهب الى المسجد",
+        "translit": "rajulun dhahaba ilā l-masjidi",
+        "en": "a man who went to the mosque",
+        "ur": "ایک آدمی جو مسجد کی طرف گیا"
+      },
+      "explanation": {
+        "en": "An indefinite noun, رَجُلٌ, a man, and the description follows it directly, with no الَّذِي: a man who went to the mosque.",
+        "ur": "ایک نکرہ اسم، رَجُلٌ، ایک آدمی، اور وضاحت الَّذِي کے بغیر سیدھی اس کے بعد آتی ہے: ایک آدمی جو مسجد کی طرف گیا۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
       "concept": {
-        "en": "الَّتِي — the relative pronoun 'the one who' or 'that' (feminine singular)",
-        "ar": "الْأَسْمَاءُ الْمَوْصُولَة — الَّتِي بِمَعْنَى \"الَّتِي هِيَ\" (مُؤَنَّث مُفْرَد)",
-        "ur": "الَّتِي — 'وہ جو' یا 'وہ' (مؤنث واحد) کا موصول اسم"
+        "en": "The man who… / A man who…",
+        "ar": "الرَّجُلُ الَّذِي ذَهَبَ / رَجُلٌ ذَهَبَ",
+        "ur": "وہ آدمی جو… / ایک آدمی جو…"
       },
       "explanation": {
-        "en": "الَّتِي is the feminine singular relative pronoun. It means 'the one who' or 'that' for feminine singular nouns. Where الَّذِي describes a man or a non-human masculine noun, الَّتِي describes a woman or a non-human feminine noun.",
-        "ur": "الَّتِي مؤنث واحد کا موصول اسم ہے۔ اس کا مطلب 'وہ جو' یا 'وہ' مؤنث واحد اسم کے لیے۔ جہاں الَّذِي کسی مرد یا غیر انسانی مذکر کو بیان کرتا ہے، الَّتِي کسی عورت یا غیر انسانی مؤنث کو بیان کرتا ہے۔"
+        "en": "With ال on the noun, use الَّذِي. Without ال, let the description follow directly. English uses who in both; Arabic does not. رَجُلٌ الَّذِي is not the standard pattern.",
+        "ur": "اسم پر ال ہو تو الَّذِي لائیں۔ ال نہ ہو تو وضاحت سیدھی بعد میں آنے دیں۔ اردو دونوں میں 'جو' کہتی ہے؛ عربی نہیں۔ رَجُلٌ الَّذِي معیاری طریقہ نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "الرَّجُلُ الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ",
+          "ar_plain": "الرجل الذي ذهب الى المسجد",
+          "translit": "ar-rajulu lladhī dhahaba ilā l-masjidi",
+          "en": "the man who went to the mosque",
+          "ur": "وہ آدمی جو مسجد کی طرف گیا"
+        },
+        {
+          "ar": "رَجُلٌ ذَهَبَ إِلَى الْمَسْجِدِ",
+          "ar_plain": "رجل ذهب الى المسجد",
+          "translit": "rajulun dhahaba ilā l-masjidi",
+          "en": "a man who went to the mosque",
+          "ur": "ایک آدمی جو مسجد کی طرف گیا"
+        }
+      ]
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الْبِنْتُ الَّتِي قَرَأَتِ الْكِتَابَ",
+        "ar_plain": "البنت التي قرات الكتاب",
+        "translit": "al-bintu llatī qaraʾati l-kitāba",
+        "en": "the girl who read the book",
+        "ur": "وہ لڑکی جس نے کتاب پڑھی"
+      },
+      "explanation": {
+        "en": "The feminine pair works the same way. A definite feminine noun takes الَّتِي: the girl who read the book.",
+        "ur": "مؤنث جوڑا بھی اسی طرح کام کرتا ہے۔ معرفہ مؤنث اسم الَّتِي لیتا ہے: وہ لڑکی جس نے کتاب پڑھی۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الْمَرْأَةُ الَّتِي تَقْرَأُ",
-        "ar_plain": "المرأة التي تقرأ",
-        "translit": "al-mar'atu al-latee taqra'u",
-        "en": "the woman who reads",
-        "ur": "وہ عورت جو پڑھتی ہے"
+        "ar": "بِنْتٌ قَرَأَتِ الْكِتَابَ",
+        "ar_plain": "بنت قرات الكتاب",
+        "translit": "bintun qaraʾati l-kitāba",
+        "en": "a girl who read the book",
+        "ur": "ایک لڑکی جس نے کتاب پڑھی"
       },
       "explanation": {
-        "en": "الْمَرْأَةُ is feminine singular (the woman). الَّتِي is the feminine relative pronoun. تَقْرَأُ is the describing clause (reads). Note the feminine verb form تَقْرَأُ (she reads) matches the feminine subject.",
-        "ur": "الْمَرْأَةُ مؤنث واحد ہے (وہ عورت)۔ الَّتِي مؤنث موصول اسم ہے۔ تَقْرَأُ بیان کنندہ جملہ ہے (پڑھتی ہے)۔ مؤنث فعل تَقْرَأُ (وہ پڑھتی ہے) مؤنث فاعل کے ساتھ ملتا ہے۔"
+        "en": "Indefinite: بِنْتٌ, a girl, and the description follows directly: a girl who read the book.",
+        "ur": "نکرہ: بِنْتٌ، ایک لڑکی، اور وضاحت سیدھی بعد میں آتی ہے: ایک لڑکی جس نے کتاب پڑھی۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الْمَدْرَسَةُ الَّتِي فِي الْقَرْيَةِ",
-        "ar_plain": "المدرسة التي في القرية",
-        "translit": "al-madrasatu al-latee fee al-qaryati",
-        "en": "the school that is in the village",
-        "ur": "وہ اسکول جو پنچ میں ہے"
+        "ar": "هٰذَا رَجُلٌ ذَهَبَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "هذا رجل ذهب الى المسجد",
+        "translit": "hādhā rajulun dhahaba ilā l-masjidi",
+        "en": "This is a man who went to the mosque.",
+        "ur": "یہ ایک آدمی ہے جو مسجد کی طرف گیا۔"
       },
       "explanation": {
-        "en": "الْمَدْرَسَةُ is feminine singular (school). الَّتِي connects it to the clause فِي الْقَرْيَةِ (is in the village). Even non-human nouns take الَّتِي when they are grammatically feminine — and schools are grammatically feminine in Arabic.",
-        "ur": "الْمَدْرَسَةُ مؤنث واحد ہے (اسکول)۔ الَّتِي اسے جملہ فِي الْقَرْيَةِ (پنچ میں ہے) سے جوڑتا ہے۔ غیر انسانی اسم بھی الَّتِي لیتے ہیں جب وہ گرامر میں مؤنث ہوں — اور اسکول عربی میں گرامری طور پر مؤنث ہیں۔"
+        "en": "Inside a full sentence: هٰذَا رَجُلٌ ذَهَبَ إِلَى الْمَسْجِدِ, this is a man who went to the mosque.",
+        "ur": "مکمل جملے کے اندر: هٰذَا رَجُلٌ ذَهَبَ إِلَى الْمَسْجِدِ، یہ ایک آدمی ہے جو مسجد کی طرف گیا۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الْكِتَابَةُ الَّتِي عَلَى الْمَكْتَبِ",
-        "ar_plain": "الكتابة التي على المكتب",
-        "translit": "al-kitaabatu al-latee 'alaa al-maktabi",
-        "en": "the writing that is on the desk",
-        "ur": "وہ تحریر جو میز پر ہے"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "An-Nas 114:4: from the evil of the whisperer who withdraws,",
+        "ar": "مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+        "ur": "An-Nas 114:4: وسوسہ ڈالنے والے، پیچھے ہٹ جانے والے کی برائی سے،"
       },
       "explanation": {
-        "en": "الْكِتَابَةُ (writing — derived from كَتَبَ) is grammatically feminine. الَّتِي works here. Note: not all feminine nouns are obvious — many technical and activity nouns are feminine even if they don't end in ة.",
-        "ur": "الْكِتَابَةُ (تحریر — کَتَبَ سے نکلا) گرامری طور پر مؤنث ہے۔ الَّتِي یہاں کام کرتا ہے۔ نوٹ: ہر مؤنث اسم очевид نہیں — بہت سے تکنیکی اور سرگرمی کے اسم مؤنث ہوتے ہیں اگرچہ ان کا آخر ة نہیں۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "The الَّذِي / الَّتِي pair — always match gender",
-        "ur": "الَّذِي / الَّتِي جوڑا — ہمیشہ جنس ملائیں"
+        "en": "الْوَسْوَاسِ has ال: the whisperer, a definite noun. That is why its longer description in 114:5 begins with الَّذِي.",
+        "ur": "الْوَسْوَاسِ پر ال ہے: وسوسہ ڈالنے والا، ایک معرفہ اسم۔ اسی لیے 114:5 میں اس کی لمبی وضاحت الَّذِي سے شروع ہوتی ہے۔"
       },
-      "body": {
-        "en": "Masculine singular noun → الَّذِي. Feminine singular noun → الَّتِي. This is not optional — it is a strict rule. The relative pronoun must match the gender of the noun it describes. الَّذِي describes الْبَيْتُ (masculine). الَّتِي describes الْمَدْرَسَةُ (feminine).",
-        "ur": "مذکر واحد اسم → الَّذِي۔ مؤنث واحد اسم → الَّتِي۔ یہ اختیاری نہیں — یہ سخت قاعدہ ہے۔ موصول اسم اس کے بیان کردہ اسم کی جنس سے ملنا چاہیے۔ الَّذِي بیان کرتا ہے الْبَيْتُ (مذکر) کو۔ الَّتِي بیان کرتی ہے الْمَدْرَسَةُ (مؤنث) کو۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Feminine noun indicators in Arabic",
-        "ur": "عربی میں مؤنث اسم کی پہچان"
-      },
-      "body": {
-        "en": "Most Arabic nouns ending in ة (ta marbuta) are feminine. But many nouns are feminine without this ending: مَدْرَسَةٌ, كِتَابَةٌ, فَاطِمَةُ, نَفْسٌ, رُوحٌ. When in doubt, check the verb: if the verb is feminine (تَفْعَلُ, تَقْرَأُ), the noun is feminine.",
-        "ur": "زیادہ تر عربی اسم جو ة (تاء مربوطہ) پر ختم ہوتے ہیں وہ مؤنث ہوتے ہیں۔ لیکن بہت سے اسم اس کے بغیر بھی مؤنث ہوتے ہیں: مَدْرَسَةٌ، كِتَابَةٌ، فَاطِمَةُ، نَفْسٌ، رُوحٌ۔ جب شک ہو تو فعل دیکھیں: اگر فعل مؤنث ہے (تَفْعَلُ, تَقْرَأُ)، تو اسم مؤنث ہے۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/114004.mp3"
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch18-l02-ex01",
-      "prompt": {
-        "ar": "الْمَرْأَةُ الَّتِي تَكْتُبُ",
-        "ar_plain": "المرأة التي تكتب",
-        "translit": "al-mar'atu al-latee taktubu",
-        "en": "the woman who writes",
-        "ur": "وہ عورت جو لکھتی ہے"
-      },
-      "options": [
-        {
-          "en": "the woman who writes",
-          "ur": "وہ عورت جو لکھتی ہے"
-        },
-        {
-          "en": "the man who writes",
-          "ur": "وہ آدمی جو لکھتا ہے"
-        },
-        {
-          "en": "a woman writes",
-          "ur": "ایک عورت لکھتی ہے"
-        },
-        {
-          "en": "the writing woman",
-          "ur": "لکھنے والی عورت"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "الْمَرْأَةُ is feminine singular. الَّتِي is the feminine relative pronoun. تَكْتُبُ is the feminine verb form (she writes). All three match — this is correct.",
-        "ur": "الْمَرْأَةُ مؤنث واحد ہے۔ الَّتِي مؤنث موصول اسم ہے۔ تَكْتُبُ مؤنث فعل ہے (وہ لکھتی ہے)۔ تینوں ملتے ہیں — یہ درست ہے۔"
-      }
-    },
-    {
       "type": "FILL_BLANK",
-      "id": "ch18-l02-ex02",
+      "id": "ch18-l02-ex01",
       "mode": "TAP",
-      "sentence_ar": "الْمَدْرَسَةُ ___ فِي الْبَلَدِ",
+      "sentence_ar": "الْبِنْتُ ___ قَرَأَتِ الْكِتَابَ",
       "hint": {
-        "en": "The school that is in the city.",
-        "ur": "وہ اسکول جو شہر میں ہے۔"
+        "en": "the girl who read the book",
+        "ur": "وہ لڑکی جس نے کتاب پڑھی"
       },
       "options": [
-        {
-          "ar": "الَّتِي",
-          "ar_plain": "التي",
-          "translit": "al-latee",
-          "en": "the one who (fem.)",
-          "ur": "وہ جو (مؤنث)"
-        },
         {
           "ar": "الَّذِي",
           "ar_plain": "الذي",
-          "translit": "al-lazee",
-          "en": "the one who (masc.)",
-          "ur": "وہ جو (مذکر)"
+          "translit": "alladhī",
+          "en": "who, which, that (masculine)",
+          "ur": "جو (مذکر)"
         },
         {
-          "ar": "هَذِهِ",
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who, which, that (feminine)",
+          "ur": "جو (مؤنث)"
+        },
+        {
+          "ar": "هٰذِهِ",
           "ar_plain": "هذه",
-          "translit": "haadihi",
-          "en": "this (fem.)",
+          "translit": "hādhihi",
+          "en": "this (feminine)",
           "ur": "یہ (مؤنث)"
         },
         {
-          "ar": "لَيْسَتْ",
-          "ar_plain": "ليست",
-          "translit": "layesat",
-          "en": "is not",
-          "ur": "نہیں ہے"
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
         }
       ],
       "correct_answer": {
         "ar": "الَّتِي",
         "ar_plain": "التي",
-        "translit": "al-latee",
-        "en": "the one who (fem.)",
-        "ur": "وہ جو (مؤنث)"
+        "translit": "allatī",
+        "en": "who, which, that (feminine)",
+        "ur": "جو (مؤنث)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْبِنْتُ is definite and feminine, so its description begins with الَّتِي.",
+        "ur": "الْبِنْتُ معرفہ اور مؤنث ہے، اس لیے اس کی وضاحت الَّتِي سے شروع ہوتی ہے۔"
+      }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch18-l02-ex03",
+      "id": "ch18-l02-ex02",
       "statement": {
-        "en": "الْمَدْرَسَةُ is grammatically feminine in Arabic, so it must use الَّتِي — not الَّذِي.",
-        "ur": "الْمَدْرَسَةُ عربی میں گرامری طور پر مؤنث ہے، اس لیے اسے الَّتِي — نہ کہ الَّذِي — استعمال کرنا چاہیے۔",
-        "ar_example": {
-          "ar": "الْمَدْرَسَةُ الَّتِي فِي الْبَلَدِ",
-          "ar_plain": "المدرسة التي في المدينة",
-          "translit": "al-madrasatu al-latee fee al-madiinati",
-          "en": "the school that is in the city",
-          "ur": "وہ اسکول جو شہر میں ہے"
-        }
+        "en": "رَجُلٌ الَّذِي ذَهَبَ is the standard way to say 'a man who went'.",
+        "ur": "رَجُلٌ الَّذِي ذَهَبَ 'ایک آدمی جو گیا' کہنے کا معیاری طریقہ ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. رَجُلٌ has no ال, so the description follows directly: رَجُلٌ ذَهَبَ. الَّذِي goes with الرَّجُلُ.",
+        "ur": "غلط۔ رَجُلٌ پر ال نہیں، اس لیے وضاحت سیدھی بعد میں آتی ہے: رَجُلٌ ذَهَبَ۔ الَّذِي، الرَّجُلُ کے ساتھ آتا ہے۔"
+      }
     },
     {
-      "type": "MATCHING",
+      "type": "TAP_TRANSLATION",
+      "id": "ch18-l02-ex03",
+      "prompt": {
+        "ar": "بِنْتٌ قَرَأَتِ الْكِتَابَ",
+        "ar_plain": "بنت قرات الكتاب",
+        "translit": "bintun qaraʾati l-kitāba",
+        "en": "a girl who read the book",
+        "ur": "ایک لڑکی جس نے کتاب پڑھی"
+      },
+      "options": [
+        {
+          "en": "the girl who read the book",
+          "ur": "وہ لڑکی جس نے کتاب پڑھی"
+        },
+        {
+          "en": "The girl read the book.",
+          "ur": "لڑکی نے کتاب پڑھی۔"
+        },
+        {
+          "en": "a girl and a book",
+          "ur": "ایک لڑکی اور ایک کتاب"
+        },
+        {
+          "en": "a girl who read the book",
+          "ur": "ایک لڑکی جس نے کتاب پڑھی"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "بِنْتٌ is indefinite, a girl, and قَرَأَتِ الْكِتَابَ describes her: a girl who read the book.",
+        "ur": "بِنْتٌ نکرہ ہے، ایک لڑکی، اور قَرَأَتِ الْكِتَابَ اس کی وضاحت ہے: ایک لڑکی جس نے کتاب پڑھی۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
       "id": "ch18-l02-ex04",
-      "left_column": [
+      "target_translation": {
+        "en": "a man who went to the mosque",
+        "ur": "ایک آدمی جو مسجد کی طرف گیا"
+      },
+      "tiles": [
         {
-          "ar": "الْمَرْأَةُ الَّتِي تُصَلِّي",
-          "ar_plain": "المرأة التي تصلي",
-          "translit": "al-mar'atu al-latee tushallee",
-          "en": "the woman who prays",
-          "ur": "وہ عورت جو نماز پڑھتی ہے"
+          "ar": "رَجُلٌ",
+          "ar_plain": "رجل",
+          "translit": "rajulun",
+          "en": "a man",
+          "ur": "ایک آدمی"
         },
         {
-          "ar": "الْمَدْرَسَةُ الَّتِي كَبِيرَةٌ",
-          "ar_plain": "المدرسة التي كبيرة",
-          "translit": "al-madrasatu al-latee kabiiratun",
-          "en": "the school that is big",
-          "ur": "وہ اسکول جو بڑا ہے"
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "گیا"
         },
         {
-          "ar": "الْبِنْتُ الَّتِي تَلْعَبُ",
-          "ar_plain": "البنت التي تلعب",
-          "translit": "al-bintu al-latee tal'abu",
-          "en": "the girl who plays",
-          "ur": "وہ لڑکی جو کھیلتی ہے"
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "کی طرف"
         },
         {
-          "ar": "النَّفْسُ الَّتِي تُرِيدُ",
-          "ar_plain": "النفس التي تريد",
-          "translit": "an-nafsu al-latee tureedu",
-          "en": "the soul that wants",
-          "ur": "وہ نفس جو چاہتی ہے"
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidi",
+          "en": "the mosque",
+          "ur": "مسجد"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who, which, that (masculine)",
+          "ur": "جو (مذکر)"
         }
       ],
-      "right_column": [
-        {
-          "en": "the woman who prays",
-          "ur": "وہ عورت جو نماز پڑھتی ہے"
-        },
-        {
-          "en": "the school that is big",
-          "ur": "وہ اسکول جو بڑا ہے"
-        },
-        {
-          "en": "the girl who plays",
-          "ur": "وہ لڑکی جو کھیلتی ہے"
-        },
-        {
-          "en": "the soul that wants",
-          "ur": "وہ نفس جو چاہتی ہے"
-        }
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
       ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "An indefinite noun takes its description directly, with no الَّذِي: رَجُلٌ ذَهَبَ إِلَى الْمَسْجِدِ.",
+        "ur": "نکرہ اسم الَّذِي کے بغیر سیدھی وضاحت لیتا ہے: رَجُلٌ ذَهَبَ إِلَى الْمَسْجِدِ۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch18-l02-ex05",
       "target_translation": {
-        "en": "The girl who reads is in the house.",
-        "ur": "وہ لڑکی جو پڑھتی ہے گھر میں ہے۔"
+        "en": "the girl who read the book",
+        "ur": "وہ لڑکی جس نے کتاب پڑھی"
       },
       "tiles": [
         {
@@ -296,30 +314,30 @@
         {
           "ar": "الَّتِي",
           "ar_plain": "التي",
-          "translit": "al-latee",
-          "en": "the one who",
-          "ur": "وہ جو"
+          "translit": "allatī",
+          "en": "who, which, that (feminine)",
+          "ur": "جو (مؤنث)"
         },
         {
-          "ar": "تَقْرَأُ",
-          "ar_plain": "تقرأ",
-          "translit": "taqra'u",
-          "en": "reads (fem.)",
-          "ur": "پڑھتی ہے (مؤنث)"
+          "ar": "قَرَأَتِ",
+          "ar_plain": "قرات",
+          "translit": "qaraʾati",
+          "en": "read (she)",
+          "ur": "پڑھی"
         },
         {
-          "ar": "فِي الْبَيْتِ",
-          "ar_plain": "في البيت",
-          "translit": "fee al-bayti",
-          "en": "in the house",
-          "ur": "گھر میں"
+          "ar": "الْكِتَابَ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitāba",
+          "en": "the book",
+          "ur": "کتاب"
         },
         {
-          "ar": "كَبِيرٌ",
-          "ar_plain": "كبير",
-          "translit": "kabirun",
-          "en": "big (masc.)",
-          "ur": "بڑا (مذکر)"
+          "ar": "بِنْتٌ",
+          "ar_plain": "بنت",
+          "translit": "bintun",
+          "en": "a girl",
+          "ur": "ایک لڑکی"
         }
       ],
       "correct_order": [
@@ -328,137 +346,184 @@
         2,
         3
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A definite feminine noun, then الَّتِي, then the description.",
+        "ur": "معرفہ مؤنث اسم، پھر الَّتِي، پھر وضاحت۔"
+      }
     },
     {
-      "type": "TAP_TRANSLATION",
+      "type": "MATCHING",
       "id": "ch18-l02-ex06",
-      "prompt": {
-        "ar": "الْمَرْأَةُ الَّتِي فِي الْمَسْجِدِ",
-        "ar_plain": "المرأة التي في المسجد",
-        "translit": "al-mar'atu al-latee fee al-masjidi",
-        "en": "the woman who is in the mosque",
-        "ur": "وہ عورت جو مسجد میں ہے"
+      "left_column": [
+        {
+          "ar": "الرَّجُلُ الَّذِي ذَهَبَ",
+          "ar_plain": "الرجل الذي ذهب",
+          "translit": "ar-rajulu lladhī dhahaba",
+          "en": "the man who went",
+          "ur": "وہ آدمی جو گیا"
+        },
+        {
+          "ar": "رَجُلٌ ذَهَبَ",
+          "ar_plain": "رجل ذهب",
+          "translit": "rajulun dhahaba",
+          "en": "a man who went",
+          "ur": "ایک آدمی جو گیا"
+        },
+        {
+          "ar": "الْبِنْتُ الَّتِي قَرَأَتْ",
+          "ar_plain": "البنت التي قرات",
+          "translit": "al-bintu llatī qaraʾat",
+          "en": "the girl who read",
+          "ur": "وہ لڑکی جس نے پڑھا"
+        },
+        {
+          "ar": "بِنْتٌ قَرَأَتْ",
+          "ar_plain": "بنت قرات",
+          "translit": "bintun qaraʾat",
+          "en": "a girl who read",
+          "ur": "ایک لڑکی جس نے پڑھا"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "a man who went",
+          "ur": "ایک آدمی جو گیا"
+        },
+        {
+          "en": "the girl who read",
+          "ur": "وہ لڑکی جس نے پڑھا"
+        },
+        {
+          "en": "a girl who read",
+          "ur": "ایک لڑکی جس نے پڑھا"
+        },
+        {
+          "en": "the man who went",
+          "ur": "وہ آدمی جو گیا"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ال on the noun: the … who, with الَّذِي or الَّتِي. No ال: a … who, with the description directly.",
+        "ur": "اسم پر ال: وہ … جو، الَّذِي یا الَّتِي کے ساتھ۔ ال نہیں: ایک … جو، سیدھی وضاحت کے ساتھ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch18-l02-ex07",
+      "ayah_fragment": {
+        "ar": "مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+        "surah_ref": "An-Nas 114:4"
       },
       "options": [
         {
-          "en": "the woman who is in the mosque",
-          "ur": "وہ عورت جو مسجد میں ہے"
+          "en": "الْوَسْوَاسِ is indefinite, a whisperer",
+          "ur": "الْوَسْوَاسِ نکرہ ہے، کوئی وسوسہ ڈالنے والا"
         },
         {
-          "en": "the woman in the big mosque",
-          "ur": "بڑی مسجد میں عورت"
+          "en": "الْخَنَّاسِ is the relative word",
+          "ur": "الْخَنَّاسِ اسم موصول ہے"
         },
         {
-          "en": "the mosque woman",
-          "ur": "مسجد کی عورت"
+          "en": "الْوَسْوَاسِ has ال — a definite noun, so its description in 114:5 opens with الَّذِي",
+          "ur": "الْوَسْوَاسِ پر ال ہے — معرفہ اسم، اس لیے 114:5 میں اس کی وضاحت الَّذِي سے شروع ہوتی ہے"
         },
         {
-          "en": "a woman and a mosque",
-          "ur": "ایک عورت اور ایک مسجد"
+          "en": "شَرِّ is the noun that الَّذِي describes",
+          "ur": "شَرِّ وہ اسم ہے جس کی الَّذِي وضاحت کرتا ہے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْوَسْوَاسِ carries ال: the whisperer. A definite noun takes الَّذِي before its description.",
+        "ur": "الْوَسْوَاسِ پر ال ہے: وسوسہ ڈالنے والا۔ معرفہ اسم اپنی وضاحت سے پہلے الَّذِي لیتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch18-l02-ex08",
+      "prompt": {
+        "ar": "الرَّجُلُ الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ أُسْتَاذٌ",
+        "ar_plain": "الرجل الذي ذهب الى المسجد استاذ",
+        "translit": "ar-rajulu lladhī dhahaba ilā l-masjidi ustādhun",
+        "en": "The man who went to the mosque is a teacher.",
+        "ur": "جو آدمی مسجد کی طرف گیا وہ استاد ہے۔"
+      },
+      "options": [
+        {
+          "en": "The man who went to the mosque is a teacher.",
+          "ur": "جو آدمی مسجد کی طرف گیا وہ استاد ہے۔"
+        },
+        {
+          "en": "A man went to the mosque with a teacher.",
+          "ur": "ایک آدمی استاد کے ساتھ مسجد گیا۔"
+        },
+        {
+          "en": "the teacher who went to the mosque",
+          "ur": "وہ استاد جو مسجد کی طرف گیا"
+        },
+        {
+          "en": "The teacher went to the mosque.",
+          "ur": "استاد مسجد کی طرف گیا۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "الْمَرْأَةُ (woman) is feminine singular. الَّتِي connects to فِي الْمَسْجِدِ (in the mosque) — the clause describing the woman. Perfect الَّتِي pattern.",
-        "ur": "الْمَرْأَةُ (عورت) مؤنث واحد ہے۔ الَّتِي فِي الْمَسْجِدِ (مسجد میں) سے جوڑتا ہے — وہ جملہ جو عورت کو بیان کرتا ہے۔ بہترین الَّتِي کا نمونہ۔"
+        "en": "الرَّجُلُ الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ is the man described; أُسْتَاذٌ is what is said about him.",
+        "ur": "الرَّجُلُ الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ وہ آدمی ہے جس کی وضاحت ہوئی؛ أُسْتَاذٌ وہ ہے جو اس کے بارے میں کہا گیا۔"
       }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch18-l02-ex07",
-      "statement": {
-        "en": "In الْمَرْأَةُ الَّتِي تَقْرَأُ, the verb تَقْرَأُ is feminine because the subject الْمَرْأَةُ is feminine.",
-        "ur": "الْمَرْأَةُ الَّتِي تَقْرَأُ میں، فعل تَقْرَأُ مؤنث ہے کیونکہ فاعل الْمَرْأَةُ مؤنث ہے۔",
-        "ar_example": {
-          "ar": "الْمَرْأَةُ الَّتِي تَقْرَأُ",
-          "ar_plain": "المرأة التي تقرأ",
-          "translit": "al-mar'atu al-latee taqra'u",
-          "en": "the woman who reads",
-          "ur": "وہ عورت جو پڑھتی ہے"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch18-l02-ex08",
-      "mode": "TAP",
-      "sentence_ar": "امْرَأَةٌ ___ تَذْهَبُ إِلَى الْمَسْجِدِ",
-      "hint": {
-        "en": "A woman who goes to the mosque.",
-        "ur": "ایک عورت جو مسجد جاتی ہے۔"
-      },
-      "options": [
-        {
-          "ar": "الَّتِي",
-          "ar_plain": "التي",
-          "translit": "al-latee",
-          "en": "the one who (fem.)",
-          "ur": "وہ جو (مؤنث)"
-        },
-        {
-          "ar": "الَّذِي",
-          "ar_plain": "الذي",
-          "translit": "al-lazee",
-          "en": "the one who (masc.)",
-          "ur": "وہ جو (مذکر)"
-        },
-        {
-          "ar": "هَذِهِ",
-          "ar_plain": "هذه",
-          "translit": "haadihi",
-          "en": "this (fem.)",
-          "ur": "یہ (مؤنث)"
-        },
-        {
-          "ar": "مِنْ",
-          "ar_plain": "من",
-          "translit": "min",
-          "en": "from",
-          "ur": "سے"
-        }
-      ],
-      "correct_answer": {
-        "ar": "الَّتِي",
-        "ar_plain": "التي",
-        "translit": "al-latee",
-        "en": "the one who (fem.)",
-        "ur": "وہ جو (مؤنث)"
-      },
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Contrast: adjective versus relative pronoun",
-      "ar": "الْفَرْقُ بَيْنَ الصِّفَةِ وَالِاسْمِ الْمَوْصُولِ",
-      "ur": "فرق: صفت اور اسمِ موصول"
+      "en": "Definite noun + الَّذِي, indefinite noun + description",
+      "ur": "معرفہ اسم + الَّذِي، نکرہ اسم + وضاحت"
     },
     "ayah": {
       "surah": 114,
       "ayah": 4,
       "label": "An-Nas 114:4",
-      "ar": "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
-      "en": "From the evil of the whisperer who withdraws —",
-      "ur": "وہمزے کے برے سے جو پیچھے ہٹ جاتا ہے —",
+      "ar": "مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+      "en": "from the evil of the whisperer who withdraws,",
+      "ur": "وسوسہ ڈالنے والے، پیچھے ہٹ جانے والے کی برائی سے،",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/114004.mp3"
     },
     "highlighted_word_indices": [
-      2,
-      3
+      2
+    ],
+    "highlighted_words": [
+      "الْوَسْوَاسِ"
     ],
     "noor_explanation": {
-      "en": "الْوَسْوَاسِ is a masculine noun and الْخَنَّاسِ is its adjective. Neither word is a relative pronoun, and الَّتِي does not appear in this ayah. Use الَّتِي only when a feminine singular noun is followed by a describing clause.",
-      "ur": "الْوَسْوَاسِ مذکر اسم ہے اور الْخَنَّاسِ اس کی صفت ہے۔ ان میں سے کوئی اسمِ موصول نہیں، اور اس آیت میں الَّتِي موجود نہیں۔ الَّتِي صرف اس وقت استعمال کریں جب مؤنث واحد اسم کے بعد اسے بیان کرنے والا جملہ آئے۔"
+      "en": "الْوَسْوَاسِ: the whisperer, a definite noun. Because it carries ال, its description in the next ayah begins with الَّذِي. For an indefinite noun, a man, a girl, the description follows directly.",
+      "ur": "الْوَسْوَاسِ: وسوسہ ڈالنے والا، ایک معرفہ اسم۔ چونکہ اس پر ال ہے، اگلی آیت میں اس کی وضاحت الَّذِي سے شروع ہوتی ہے۔ نکرہ اسم کے لیے، ایک آدمی، ایک لڑکی، وضاحت سیدھی بعد میں آتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "الَّتِي is to feminine nouns what الَّذِي is to masculine nouns. الْمَرْأَةُ الَّتِي, الْمَدْرَسَةُ الَّتِي, الْبِنْتُ الَّتِي — the one who, feminine version. In the Quran, both appear constantly: رَجُلٌ الَّذِي, امْرَأَةٌ الَّتِي. Now you can read both.",
-      "ur": "الَّتِي مؤنث اسم کے لیے وہی ہے جو الَّذِي مذکر کے لیے ہے۔ الْمَرْأَةُ الَّتِي، الْمَدْرَسَةُ الَّتِي، الْبِنْتُ الَّتِي — 'وہ جو'، مؤنث شکل۔ قرآن میں، دونوں مسلسل آتے ہیں: رَجُلٌ الَّذِي، امْرَأَةٌ الَّتِي۔ اب آپ دونوں پڑھ سکتے ہیں۔"
+      "en": "You can choose between الرَّجُلُ الَّذِي … and رَجُلٌ …, and the same for الَّتِي. Next: a one-word adjective versus a longer description.",
+      "ur": "آپ الرَّجُلُ الَّذِي … اور رَجُلٌ … میں انتخاب کر سکتے ہیں، اور الَّتِي کے لیے بھی۔ آگے: ایک لفظی صفت بمقابلہ لمبی وضاحت۔"
     }
   }
 }

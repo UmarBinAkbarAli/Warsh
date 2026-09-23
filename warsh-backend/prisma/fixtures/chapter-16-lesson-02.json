@@ -2,110 +2,163 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 16, Lesson 2 - Teacher and student: أُسْتَاذ، طَالِب، دَرْس",
+    "_note": "Chapter 16, Lesson 2 (ch16-l02) — people and roles in a connected school scene: أُسْتَاذٌ, طَالِبٌ / طُلَّابٌ (retrieval, Chapters 3 and 9), دَرْسٌ as the thing taught; who is where with nominal location sentences; no present verb, person marking or object case is taught or tested. Removed: دَرْسٌ called a human noun, kasra on the object, يَقْرَأُ vowel claim, and يَعْلِمُ الدَّرْسَ. Quran anchor Al-Alaq 96:5 at عَلَّمَ (index 0), labelled a thematic link to learning, not an occurrence of teacher/student nouns. Rebuilt 2026-09-23 from Docs/proposals/chapter-16-content-proposal.md; the curriculum map and fixtures named two different reader_lecture_16 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "استاد، طالب علم اور سبق",
     "chapter_order": 16,
     "lesson_order": 2,
-    "chapter_title": "School and Students",
-    "title": "The Teacher and the Student",
-    "titleAr": "الْأُسْتَاذُ وَالطَّالِبُ",
-    "source": "reader_lecture_16_school_and_students.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 87,
-      "ayah": 2,
-      "label": "Al-A'la 87:2",
-      "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
-      "en": "Who created and made equal.",
-      "ur": "جس نے پیدا کیا اور برابر بنایا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087002.mp3"
+      "surah": 96,
+      "ayah": 5,
+      "label": "Al-Alaq 96:5",
+      "ar": "عَلَّمَ الْإِنسَانَ مَا لَمْ يَعْلَمْ",
+      "en": "He taught humankind what it did not know.",
+      "ur": "انسان کو وہ سکھایا جو وہ نہیں جانتا تھا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096005.mp3"
     },
     "noor_intro": {
-      "en": "Two very important people at school: the teacher — أُسْتَاذٌ — and the student — طَالِبٌ. The teacher teaches, and the student learns. Let us learn their names in Arabic.",
-      "ur": "سکول میں دو بہت اہم لوگ: استاد — أُسْتَاذٌ — اور طالب علم — طَالِبٌ۔ استاد پڑھاتا ہے، اور طالب علم سیکھتا ہے۔ آئیے ان کے نام عربی میں سیکھیں۔"
+      "en": "A school is its people: a teacher, students, and the lesson between them. Al-Alaq 96:5 opens with عَلَّمَ, he taught. It is a link to the theme of learning; the ayah does not mention a teacher or a student.",
+      "ur": "اسکول اپنے لوگوں سے ہے: ایک استاد، طلبہ، اور ان کے درمیان سبق۔ سورۃ العلق 96:5 عَلَّمَ، اس نے سکھایا، سے شروع ہوتی ہے۔ یہ سیکھنے کے موضوع سے ربط ہے؛ آیت میں استاد یا طالب علم کا ذکر نہیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
+      "type": "WORD",
+      "text": {
+        "ar": "أُسْتَاذٌ",
+        "ar_plain": "استاذ",
+        "translit": "ustādhun",
+        "en": "a teacher",
+        "ur": "ایک استاد"
+      },
+      "explanation": {
+        "en": "أُسْتَاذٌ, a teacher, from Chapter 3. In a school scene he is the one who teaches. مُعَلِّمٌ from Chapter 9 is another word for teacher.",
+        "ur": "أُسْتَاذٌ، استاد، باب 3 سے۔ اسکول کے منظر میں وہ پڑھانے والا ہے۔ باب 9 کا مُعَلِّمٌ استاد کے لیے ایک اور لفظ ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "الْأُسْتَاذُ فِي الْفَصْلِ",
+          "ar_plain": "الاستاذ في الفصل",
+          "translit": "al-ustādhu fī l-faṣli",
+          "en": "The teacher is in the classroom.",
+          "ur": "استاد کلاس میں ہے۔"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
       "concept": {
-        "en": "People at school",
-        "ar": "النَّاسُ فِي الْمَدْرَسَةِ",
-        "ur": "مدرسے میں لوگ"
+        "en": "One student, several students",
+        "ar": "طَالِبٌ / طُلَّابٌ",
+        "ur": "ایک طالب علم، کئی طلبہ"
       },
       "explanation": {
-        "en": "The teacher is أُسْتَاذٌ (also used for professor/master). The student is طَالِبٌ (learner/seeker). The lesson is دَرْسٌ (plural: دُرُوسٌ). These are human nouns, so their adjectives will be plural when describing groups.",
-        "ur": "استاد کو أُسْتَاذٌ کہتے ہیں (پروفیسر/استاد کے لیے بھی)۔ طالب علم کو طَالِبٌ کہتے ہیں۔ سبق کو دَرْسٌ کہتے ہیں (جمع: دُرُوسٌ)۔ یہ سب انسانی اسم ہیں، اس لیے ان کی صفات گروہ کو بیان کرتے ہوئے جمع ہوں گی۔"
+        "en": "طَالِبٌ is one student; طُلَّابٌ is its broken plural from Chapter 9. Both are people who learn.",
+        "ur": "طَالِبٌ ایک طالب علم ہے؛ طُلَّابٌ اس کی جمع مکسر ہے، باب 9 سے۔ دونوں سیکھنے والے لوگ ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "طَالِبٌ",
+          "ar_plain": "طالب",
+          "translit": "ṭālibun",
+          "en": "a student",
+          "ur": "ایک طالب علم"
+        },
+        {
+          "ar": "طُلَّابٌ",
+          "ar_plain": "طلاب",
+          "translit": "ṭullābun",
+          "en": "students",
+          "ur": "طلبہ"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "دَرْسٌ",
+        "ar_plain": "درس",
+        "translit": "darsun",
+        "en": "a lesson",
+        "ur": "ایک سبق"
+      },
+      "explanation": {
+        "en": "دَرْسٌ is a lesson: what the teacher teaches and the students learn. It is not a person and not a room.",
+        "ur": "دَرْسٌ سبق ہے: جو استاد پڑھاتا ہے اور طلبہ سیکھتے ہیں۔ یہ نہ کوئی شخص ہے نہ کوئی کمرہ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الْأُسْتَاذُ مُجْتَهِدٌ",
-        "ar_plain": "الاستاذ مجتهد",
-        "translit": "al-ustaadhu mujtahidun",
-        "en": "The teacher is diligent.",
-        "ur": "استاد محنتی ہے۔"
+        "ar": "الْأُسْتَاذُ فِي الْفَصْلِ",
+        "ar_plain": "الاستاذ في الفصل",
+        "translit": "al-ustādhu fī l-faṣli",
+        "en": "The teacher is in the classroom.",
+        "ur": "استاد کلاس میں ہے۔"
       },
       "explanation": {
-        "en": "الْأُسْتَاذُ is the definite form (the teacher). مُجْتَهِدٌ is the adjective 'diligent' — masculine singular because أُسْتَاذٌ is a single male teacher.",
-        "ur": "الْأُسْتَاذُ معرفہ ہے (استاد)۔ مُجْتَهِدٌ صفت ہے 'محنتی' — مذکر واحد کیونکہ أُسْتَاذٌ ایک مرد استاد ہے۔"
+        "en": "Who is where: الْأُسْتَاذُ, the teacher, فِي الْفَصْلِ, in the classroom.",
+        "ur": "کون کہاں ہے: الْأُسْتَاذُ، استاد، فِي الْفَصْلِ، کلاس میں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الطَّالِبُ يَقْرَأُ الدَّرْسَ",
-        "ar_plain": "الطالب يقرأ الدرس",
-        "translit": "at-taalibu yaqra-u ad-darsa",
-        "en": "The student reads the lesson.",
-        "ur": "طالب علم سبق پڑھتا ہے۔"
+        "ar": "الطُّلَّابُ فِي الْمَدْرَسَةِ",
+        "ar_plain": "الطلاب في المدرسة",
+        "translit": "aṭ-ṭullābu fī l-madrasati",
+        "en": "The students are in the school.",
+        "ur": "طلبہ اسکول میں ہیں۔"
       },
       "explanation": {
-        "en": "يَقْرَأُ is the verb 'to read.' The lesson (دَرْسٌ) is the object here, so it takes a kasra (دَرْسٍ) as the object — this is i'rab. Notice يَقْرَأُ has a dhamma on the ya (ي) because it is a present tense verb.",
-        "ur": "يَقْرَأُ فعل ہے 'پڑھنا'۔ سبق (دَرْسٌ) یہاں مفعول ہے، اس لیے اس پر کسرہ (دَرْسٍ) ہے — یہ اعراب ہے۔ دیکھیں يَقْرَأُ پر ی کے نیچے ضمہ ہے کیونکہ یہ مضارع فعل ہے۔"
+        "en": "The same shape with a plural: الطُّلَّابُ فِي الْمَدْرَسَةِ, the students are in the school.",
+        "ur": "یہی ساخت جمع کے ساتھ: الطُّلَّابُ فِي الْمَدْرَسَةِ، طلبہ اسکول میں ہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الطُّلَّابُ مُجْتَهِدُونَ",
-        "ar_plain": "الطلاب مجتهدون",
-        "translit": "at-tullaabu mujtahidoona",
-        "en": "The students are diligent.",
-        "ur": "طالب علم محنتی ہیں۔"
+        "ar": "الدَّرْسُ جَدِيدٌ",
+        "ar_plain": "الدرس جديد",
+        "translit": "ad-darsu jadīdun",
+        "en": "The lesson is new.",
+        "ur": "سبق نیا ہے۔"
       },
       "explanation": {
-        "en": "طُّلَّابٌ is the broken plural of طَالِبٌ (students). Because students are people, the adjective مُجْتَهِدُونَ is masculine plural — the human plural rule.",
-        "ur": "طُّلَّابٌ کی جمع ہے طَالِبٌ (طالب علوم)۔ چونکہ طالب علم انسان ہیں، صفت مُجْتَهِدُونَ مذکر جمع ہے — انسانی جمع کا قاعدہ۔"
+        "en": "The lesson is a thing, one lesson, so its description is the simple singular: الدَّرْسُ جَدِيدٌ, the lesson is new.",
+        "ur": "سبق ایک چیز ہے، ایک سبق، اس لیے اس کی صفت سادہ واحد ہے: الدَّرْسُ جَدِيدٌ، سبق نیا ہے۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Verbs with human subjects",
-        "ur": "انسانی فاعل کے ساتھ افعال"
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الْأُسْتَاذُ وَالطُّلَّابُ فِي الْفَصْلِ",
+        "ar_plain": "الاستاذ والطلاب في الفصل",
+        "translit": "al-ustādhu wa-ṭ-ṭullābu fī l-faṣli",
+        "en": "The teacher and the students are in the classroom.",
+        "ur": "استاد اور طلبہ کلاس میں ہیں۔"
       },
-      "body": {
-        "en": "When a human acts, we use the appropriate verb form. يَقْرَأُ = he reads (طَالِبٌ يَقْرَأُ). دَرْسٌ (lesson) is non-human, so its adjective was feminine singular in the last lesson, but as a subject of a verb it takes the base form.",
-        "ur": "جب کوئی انسان عمل کرتا ہے، ہم مناسب فعل کی شکل استعمال کرتے ہیں۔ يَقْرَأُ = وہ پڑھتا ہے (طَالِبٌ يَقْرَأُ)۔ دَرْسٌ ( سبق) غیر انسانی ہے، تو اس کی صفت پچھلے سبق میں مؤنث واحد تھی، لیکن فعل کے فاعل کے طور پر یہ اصل شکل لیتا ہے۔"
+      "explanation": {
+        "en": "A whole scene in one line: the teacher and the students are in the classroom. وَ joins the two people; فِي الْفَصْلِ tells you where they all are.",
+        "ur": "ایک سطر میں پورا منظر: استاد اور طلبہ کلاس میں ہیں۔ وَ دونوں کو جوڑتا ہے؛ فِي الْفَصْلِ بتاتا ہے کہ سب کہاں ہیں۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Key vocabulary — School people",
-        "ar": "Key vocabulary — School people",
-        "ur": "اہم الفاظ — سکول کے لوگ"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Alaq 96:5: He taught humankind what it did not know.",
+        "ar": "عَلَّمَ الْإِنسَانَ مَا لَمْ يَعْلَمْ",
+        "ur": "Al-Alaq 96:5: انسان کو وہ سکھایا جو وہ نہیں جانتا تھا۔"
       },
-      "body": {
-        "en": "أُسْتَاذٌ — teacher · طَالِبٌ — student (sg.) · طُّلَّابٌ — students (pl.) · دَرْسٌ — lesson (sg.) · دُرُوسٌ — lessons (pl.) · مُجْتَهِدٌ — diligent",
-        "ar": "أُسْتَاذٌ — teacher · طَالِبٌ — student (sg.) · طُّلَّابٌ — students (pl.) · دَرْسٌ — lesson (sg.) · دُرُوسٌ — lessons (pl.) · مُجْتَهِدٌ — diligent",
-        "ur": "أُسْتَاذٌ — استاد · طَالِبٌ — طالب علم (واحد) · طُّلَّابٌ — طالب علوم (جمع) · دَرْسٌ — سبق (واحد) · دُرُوسٌ — دروس (جمع) · مُجْتَهِدٌ — محنتی"
-      }
+      "explanation": {
+        "en": "A thematic link, not a school word. عَلَّمَ means he taught; the ayah says Allah taught humankind what it did not know. It is not the word أُسْتَاذٌ or طَالِبٌ. Recognise عَلَّمَ by its meaning; the verb pattern is studied later.",
+        "ur": "یہ موضوعاتی ربط ہے، اسکول کا لفظ نہیں۔ عَلَّمَ کا مطلب ہے اس نے سکھایا؛ آیت بتاتی ہے کہ اللہ نے انسان کو وہ سکھایا جو وہ نہیں جانتا تھا۔ یہ لفظ أُسْتَاذٌ یا طَالِبٌ نہیں۔ عَلَّمَ کو اس کے معنی سے پہچانیں؛ فعل کا وزن بعد میں پڑھا جائے گا۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096005.mp3"
     }
   ],
   "exercises": [
@@ -113,94 +166,105 @@
       "type": "TAP_TRANSLATION",
       "id": "ch16-l02-ex01",
       "prompt": {
-        "ar": "الْأُسْتَاذُ مُجْتَهِدٌ",
-        "ar_plain": "الاستاذ مجتهد",
-        "translit": "al-ustaadhu mujtahidun",
-        "en": "The teacher is diligent.",
-        "ur": "استاد محنتی ہے۔"
+        "ar": "الْأُسْتَاذُ فِي الْفَصْلِ",
+        "ar_plain": "الاستاذ في الفصل",
+        "translit": "al-ustādhu fī l-faṣli",
+        "en": "The teacher is in the classroom.",
+        "ur": "استاد کلاس میں ہے۔"
       },
       "options": [
         {
-          "en": "The teacher is diligent.",
-          "ur": "استاد محنتی ہے۔"
+          "en": "The student is in the classroom.",
+          "ur": "طالب علم کلاس میں ہے۔"
         },
         {
-          "en": "The teacher is new.",
-          "ur": "استاد نیا ہے۔"
+          "en": "The teacher is in the classroom.",
+          "ur": "استاد کلاس میں ہے۔"
         },
         {
-          "en": "The student is diligent.",
-          "ur": "طالب علم محنتی ہے۔"
+          "en": "The teacher is in the school.",
+          "ur": "استاد اسکول میں ہے۔"
         },
         {
-          "en": "The students are diligent.",
-          "ur": "طالب علم محنتی ہیں۔"
+          "en": "The lesson is in the classroom.",
+          "ur": "سبق کلاس میں ہے۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "الْأُسْتَاذُ is 'the teacher' (human, single male). مُجْتَهِدٌ is 'diligent' in the masculine singular form to match a single male teacher.",
-        "ur": "الْأُسْتَاذُ 'استاد' ہے (انسانی، واحد مذکر)۔ مُجْتَهِدٌ 'محنتی' مذکر واحد کی شکل میں ہے تاکہ ایک مرد استاد کے ساتھ ملے۔"
+        "en": "الْأُسْتَاذُ is the teacher and الْفَصْلِ is the classroom.",
+        "ur": "الْأُسْتَاذُ استاد ہے اور الْفَصْلِ کلاس روم۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch16-l02-ex02",
+      "prompt_line": {
+        "ar": "مَنْ فِي الْفَصْلِ؟",
+        "ar_plain": "من في الفصل",
+        "translit": "man fī l-faṣli?",
+        "en": "Who is in the classroom?",
+        "ur": "کلاس میں کون ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "الْفَصْلُ كَبِيرٌ",
+          "ar_plain": "الفصل كبير",
+          "translit": "al-faṣlu kabīrun",
+          "en": "The classroom is big.",
+          "ur": "کلاس بڑی ہے۔"
+        },
+        {
+          "ar": "الدَّرْسُ جَدِيدٌ",
+          "ar_plain": "الدرس جديد",
+          "translit": "ad-darsu jadīdun",
+          "en": "The lesson is new.",
+          "ur": "سبق نیا ہے۔"
+        },
+        {
+          "ar": "فِي الْمَدْرَسَةِ",
+          "ar_plain": "في المدرسة",
+          "translit": "fī l-madrasati",
+          "en": "in the school",
+          "ur": "اسکول میں"
+        },
+        {
+          "ar": "الْأُسْتَاذُ فِي الْفَصْلِ",
+          "ar_plain": "الاستاذ في الفصل",
+          "translit": "al-ustādhu fī l-faṣli",
+          "en": "The teacher is in the classroom.",
+          "ur": "استاد کلاس میں ہے۔"
+        }
+      ],
+      "correct_option_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَنْ asks who, so the reply names a person: الْأُسْتَاذُ فِي الْفَصْلِ.",
+        "ur": "مَنْ کون پوچھتا ہے، اس لیے جواب کسی شخص کا نام لیتا ہے: الْأُسْتَاذُ فِي الْفَصْلِ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch16-l02-ex02",
-      "statement": {
-        "en": "طُّلَّابٌ is the plural of طَالِبٌ.",
-        "ur": "طُّلَّابٌ کی جمع ہے طَالِبٌ۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
       "id": "ch16-l02-ex03",
-      "mode": "TAP",
-      "sentence_ar": "الطَّالِبُ ___ الدَّرْسَ",
-      "hint": {
-        "en": "The student reads the lesson.",
-        "ur": "طالب علم سبق پڑھتا ہے۔"
-      },
-      "options": [
-        {
-          "ar": "يَقْرَأُ",
-          "ar_plain": "يقرأ",
-          "translit": "yaqra-u",
-          "en": "reads",
-          "ur": "پڑھتا ہے"
-        },
-        {
-          "ar": "يَكْتُبُ",
-          "ar_plain": "يكتب",
-          "translit": "yaktubu",
-          "en": "writes",
-          "ur": "لکھتا ہے"
-        },
-        {
-          "ar": "يَنَامُ",
-          "ar_plain": "ينام",
-          "translit": "yanaamu",
-          "en": "sleeps",
-          "ur": "سوتا ہے"
-        },
-        {
-          "ar": "يَفْهَمُ",
-          "ar_plain": "يفهم",
-          "translit": "yafhamu",
-          "en": "understands",
-          "ur": "سمجھتا ہے"
+      "statement": {
+        "en": "دَرْسٌ is one of the people in the school.",
+        "ur": "دَرْسٌ اسکول کے لوگوں میں سے ایک ہے۔",
+        "ar_example": {
+          "ar": "دَرْسٌ",
+          "ar_plain": "درس",
+          "translit": "darsun",
+          "en": "a lesson",
+          "ur": "ایک سبق"
         }
-      ],
-      "correct_answer": {
-        "ar": "يَقْرَأُ",
-        "ar_plain": "يقرأ",
-        "translit": "yaqra-u",
-        "en": "reads",
-        "ur": "پڑھتا ہے"
       },
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. دَرْسٌ is a lesson, the thing that is taught. The people are أُسْتَاذٌ and طَالِبٌ.",
+        "ur": "غلط۔ دَرْسٌ سبق ہے، وہ چیز جو پڑھائی جاتی ہے۔ لوگ أُسْتَاذٌ اور طَالِبٌ ہیں۔"
+      }
     },
     {
       "type": "MATCHING",
@@ -209,103 +273,162 @@
         {
           "ar": "أُسْتَاذٌ",
           "ar_plain": "استاذ",
-          "translit": "ustaadun",
-          "en": "teacher",
-          "ur": "استاد"
+          "translit": "ustādhun",
+          "en": "a teacher",
+          "ur": "ایک استاد"
         },
         {
           "ar": "طَالِبٌ",
           "ar_plain": "طالب",
-          "translit": "taalibun",
-          "en": "student (sg.)",
-          "ur": "طالب علم (واحد)"
+          "translit": "ṭālibun",
+          "en": "a student",
+          "ur": "ایک طالب علم"
         },
         {
-          "ar": "طُّلَّابٌ",
+          "ar": "طُلَّابٌ",
           "ar_plain": "طلاب",
-          "translit": "tullaabun",
-          "en": "students (pl.)",
-          "ur": "طالب علوم (جمع)"
+          "translit": "ṭullābun",
+          "en": "students",
+          "ur": "طلبہ"
         },
         {
           "ar": "دَرْسٌ",
           "ar_plain": "درس",
           "translit": "darsun",
-          "en": "lesson",
-          "ur": "سبق"
+          "en": "a lesson",
+          "ur": "ایک سبق"
         }
       ],
       "right_column": [
         {
-          "en": "teacher",
-          "ur": "استاد"
+          "en": "a student",
+          "ur": "ایک طالب علم"
         },
         {
-          "en": "student (sg.)",
-          "ur": "طالب علم (واحد)"
+          "en": "students",
+          "ur": "طلبہ"
         },
         {
-          "en": "students (pl.)",
-          "ur": "طالب علوم (جمع)"
+          "en": "a lesson",
+          "ur": "ایک سبق"
         },
         {
-          "en": "lesson",
-          "ur": "سبق"
+          "en": "a teacher",
+          "ur": "ایک استاد"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          3
         ],
         [
           1,
-          1
+          0
         ],
         [
           2,
-          2
+          1
         ],
         [
           3,
-          3
+          2
         ]
       ],
       "xp_value": 1
     },
     {
-      "type": "BUILD_SENTENCE",
+      "type": "FILL_BLANK",
       "id": "ch16-l02-ex05",
-      "target_translation": {
-        "en": "The diligent students read the lesson.",
-        "ur": "محنتی طالب علوم سبق پڑھتے ہیں۔"
+      "mode": "TAP",
+      "sentence_ar": "___ فِي الْمَدْرَسَةِ",
+      "hint": {
+        "en": "The students are in the school.",
+        "ur": "طلبہ اسکول میں ہیں۔"
       },
-      "tiles": [
+      "options": [
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        },
+        {
+          "ar": "الدَّرْسُ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsu",
+          "en": "the lesson",
+          "ur": "سبق"
+        },
         {
           "ar": "الطُّلَّابُ",
           "ar_plain": "الطلاب",
-          "translit": "at-tullaabu",
+          "translit": "aṭ-ṭullābu",
           "en": "the students",
-          "ur": "طالب علوم"
+          "ur": "طلبہ"
         },
         {
-          "ar": "الْمُجْتَهِدُونَ",
-          "ar_plain": "المجتهدون",
-          "translit": "al-mujtahidoona",
-          "en": "the diligent (pl.)",
-          "ur": "محنتی (جمع)"
+          "ar": "الْأُسْتَاذُ",
+          "ar_plain": "الاستاذ",
+          "translit": "al-ustādhu",
+          "en": "the teacher",
+          "ur": "استاد"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الطُّلَّابُ",
+        "ar_plain": "الطلاب",
+        "translit": "aṭ-ṭullābu",
+        "en": "the students",
+        "ur": "طلبہ"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The hint asks for several students: الطُّلَّابُ, the plural of الطَّالِبُ.",
+        "ur": "اشارہ کئی طلبہ کا ہے: الطُّلَّابُ، الطَّالِبُ کی جمع۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch16-l02-ex06",
+      "target_translation": {
+        "en": "The teacher and the students are in the classroom.",
+        "ur": "استاد اور طلبہ کلاس میں ہیں۔"
+      },
+      "tiles": [
+        {
+          "ar": "الْأُسْتَاذُ",
+          "ar_plain": "الاستاذ",
+          "translit": "al-ustādhu",
+          "en": "the teacher",
+          "ur": "استاد"
         },
         {
-          "ar": "يَقْرَأُونَ",
-          "ar_plain": "يقرؤون",
-          "translit": "yaqra-wna",
-          "en": "they read",
-          "ur": "وہ پڑھتے ہیں"
+          "ar": "وَالطُّلَّابُ",
+          "ar_plain": "والطلاب",
+          "translit": "wa-ṭ-ṭullābu",
+          "en": "and the students",
+          "ur": "اور طلبہ"
         },
         {
-          "ar": "الدَّرْسَ",
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        },
+        {
+          "ar": "الْفَصْلِ",
+          "ar_plain": "الفصل",
+          "translit": "al-faṣli",
+          "en": "the classroom",
+          "ur": "کلاس"
+        },
+        {
+          "ar": "الدَّرْسُ",
           "ar_plain": "الدرس",
-          "translit": "ad-darsa",
+          "translit": "ad-darsu",
           "en": "the lesson",
           "ur": "سبق"
         }
@@ -316,129 +439,109 @@
         2,
         3
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The two people first, joined by وَ, then where they are: الْأُسْتَاذُ وَالطُّلَّابُ فِي الْفَصْلِ.",
+        "ur": "پہلے دونوں لوگ، وَ سے جڑے ہوئے، پھر وہ کہاں ہیں: الْأُسْتَاذُ وَالطُّلَّابُ فِي الْفَصْلِ۔"
+      }
     },
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch16-l02-ex06",
-      "prompt": {
-        "ar": "الدُّرُوسُ جَدِيدَةٌ",
-        "ar_plain": "الدروس جديدة",
-        "translit": "ad-duruusu jadiidatun",
-        "en": "The lessons are new.",
-        "ur": "دروس نئے ہیں۔"
+      "type": "MATCH_AYAH",
+      "id": "ch16-l02-ex07",
+      "ayah_fragment": {
+        "ar": "عَلَّمَ الْإِنسَانَ مَا لَمْ يَعْلَمْ",
+        "surah_ref": "Al-Alaq 96:5"
       },
       "options": [
         {
-          "en": "The lessons are new.",
-          "ur": "دروس نئے ہیں۔"
+          "en": "عَلَّمَ — He taught: a thematic link to learning, not a school word",
+          "ur": "عَلَّمَ — اس نے سکھایا: سیکھنے کے موضوع سے ربط، اسکول کا لفظ نہیں"
         },
         {
-          "en": "The lesson is new.",
-          "ur": "سبق نیا ہے۔"
+          "en": "عَلَّمَ — a teacher (أُسْتَاذٌ)",
+          "ur": "عَلَّمَ — ایک استاد (أُسْتَاذٌ)"
         },
         {
-          "en": "The lessons are big.",
-          "ur": "دروس بڑے ہیں۔"
+          "en": "الْإِنسَانَ — the student",
+          "ur": "الْإِنسَانَ — طالب علم"
         },
         {
-          "en": "The books are new.",
-          "ur": "کتابیں نئی ہیں۔"
+          "en": "لَمْ — the lesson",
+          "ur": "لَمْ — سبق"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "دُرُوسٌ is non-human plural (lessons). Its adjective جَدِيدَةٌ is feminine singular — non-human plural rule.",
-        "ur": "دُرُوسٌ غیر انسانی جمع ہے (دروس)۔ اس کی صفت جَدِيدَةٌ مؤنث واحد ہے — غیر انسانی جمع کا قاعدہ۔"
+        "en": "The first word is عَلَّمَ, he taught. The ayah speaks of Allah teaching humankind; it does not contain أُسْتَاذٌ or طَالِبٌ.",
+        "ur": "پہلا لفظ عَلَّمَ، اس نے سکھایا، ہے۔ آیت اللہ کے انسان کو سکھانے کا ذکر کرتی ہے؛ اس میں أُسْتَاذٌ یا طَالِبٌ نہیں۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch16-l02-ex07",
-      "statement": {
-        "en": "When describing a group of students (طُّلَّابٌ), the adjective must be plural because they are people.",
-        "ur": "جب طالب علوم (طُّلَّابٌ) کو بیان کریں تو صفت جمع ہونی چاہیے کیونکہ وہ انسان ہیں۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
+      "type": "TAP_TRANSLATION",
       "id": "ch16-l02-ex08",
-      "mode": "TAP",
-      "sentence_ar": "الْأُسْتَاذُ يَعْلِمُ ___",
-      "hint": {
-        "en": "The teacher teaches the lesson.",
-        "ur": "استاد سبق پڑھاتا ہے۔"
+      "prompt": {
+        "ar": "الدَّرْسُ جَدِيدٌ",
+        "ar_plain": "الدرس جديد",
+        "translit": "ad-darsu jadīdun",
+        "en": "The lesson is new.",
+        "ur": "سبق نیا ہے۔"
       },
       "options": [
         {
-          "ar": "الطَّالِبَ",
-          "ar_plain": "الطالب",
-          "translit": "at-taaliba",
-          "en": "the student",
-          "ur": "طالب علم"
+          "en": "The student is new.",
+          "ur": "طالب علم نیا ہے۔"
         },
         {
-          "ar": "الدَّرْسَ",
-          "ar_plain": "الدرس",
-          "translit": "ad-darsa",
-          "en": "the lesson",
-          "ur": "سبق"
+          "en": "the new lesson",
+          "ur": "نیا سبق"
         },
         {
-          "ar": "الْكِتَابَ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaaba",
-          "en": "the book",
-          "ur": "کتاب"
+          "en": "The classroom is new.",
+          "ur": "کلاس نئی ہے۔"
         },
         {
-          "ar": "الْمَدْرَسَةَ",
-          "ar_plain": "المدرسة",
-          "translit": "al-madrasata",
-          "en": "the school",
-          "ur": "مدرسہ"
+          "en": "The lesson is new.",
+          "ur": "سبق نیا ہے۔"
         }
       ],
-      "correct_answer": {
-        "ar": "الدَّرْسَ",
-        "ar_plain": "الدرس",
-        "translit": "ad-darsa",
-        "en": "the lesson",
-        "ur": "سبق"
-      },
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الدَّرْسُ is the lesson and جَدِيدٌ without ال completes the sentence: the lesson is new.",
+        "ur": "الدَّرْسُ سبق ہے اور بغیر ال کے جَدِيدٌ جملہ مکمل کرتا ہے: سبق نیا ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Teacher, student, and lesson",
-      "ar": "أُسْتَاذٌ، طَالِبٌ، دَرْسٌ",
-      "ur": "استاد، طالب علم، سبق"
+      "en": "Teacher, student and lesson",
+      "ur": "استاد، طالب علم اور سبق"
     },
     "ayah": {
-      "surah": 87,
-      "ayah": 2,
-      "label": "Al-A'la 87:2",
-      "ar": "الَّذِي خَلَقَ فَسَوَّىٰ",
-      "en": "Who created and made equal.",
-      "ur": "جس نے پیدا کیا اور برابر بنایا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087002.mp3"
+      "surah": 96,
+      "ayah": 5,
+      "label": "Al-Alaq 96:5",
+      "ar": "عَلَّمَ الْإِنسَانَ مَا لَمْ يَعْلَمْ",
+      "en": "He taught humankind what it did not know.",
+      "ur": "انسان کو وہ سکھایا جو وہ نہیں جانتا تھا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096005.mp3"
     },
     "highlighted_word_indices": [
       0
     ],
+    "highlighted_words": [
+      "عَلَّمَ"
+    ],
     "noor_explanation": {
-      "en": "خَلَقَ means 'He created.' Allah created the teacher and the student, both with equal value. The teacher imparts knowledge, the student receives it — both are honored in Islam.",
-      "ur": "خَلَقَ کا مطلب ہے 'اس نے پیدا کیا'۔ اللہ نے استاد اور طالب علم دونوں کو برابر قدر عطا کی۔ استاد علم دیتا ہے، طالب علم وصول کرتا ہے — دونوں کو اسلام میں عزت حاصل ہے۔"
+      "en": "عَلَّمَ: he taught. In the ayah it is Allah who taught humankind what it did not know. The school words of this lesson, أُسْتَاذٌ, طَالِبٌ, دَرْسٌ, are not in the ayah; it links to them through its theme of learning.",
+      "ur": "عَلَّمَ: اس نے سکھایا۔ آیت میں اللہ ہے جس نے انسان کو وہ سکھایا جو وہ نہیں جانتا تھا۔ اس سبق کے اسکول کے الفاظ، أُسْتَاذٌ، طَالِبٌ، دَرْسٌ، آیت میں نہیں؛ یہ سیکھنے کے موضوع کے ذریعے ان سے جڑتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "أُسْتَاذٌ and طَالِبٌ — the teacher and the student. The teacher gives knowledge, the student receives it. Both are honored in the sight of Allah. Treat your teachers with great respect.",
-      "ur": "أُسْتَاذٌ اور طَالِبٌ — استاد اور طالب علم۔ استاد علم دیتا ہے، طالب علم وصول کرتا ہے۔ دونوں کو اللہ کے نزدیک عزت حاصل ہے۔ اپنے استادوں کا بہت احترام کریں۔"
+      "en": "You can say who is in the school and where, and tell the lesson from the people. Next: yesterday, today and tomorrow.",
+      "ur": "آپ بتا سکتے ہیں کہ اسکول میں کون ہے اور کہاں، اور سبق کو لوگوں سے الگ کر سکتے ہیں۔ آگے: گزرا ہوا کل، آج اور آنے والا کل۔"
     }
   }
 }

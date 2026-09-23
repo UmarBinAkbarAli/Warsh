@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 17, Lesson 1 - Past tense verbs أَكَلَ and شَرِبَ as vocabulary (recognition mode). First sustained verb exposure.",
+    "_note": "Chapter 17, Lesson 1 (ch17-l01) — أَكَلَ and شَرِبَ read in action sentences (action, doer, what was eaten or drunk); one scoped Chapter 8 ـتْ example (شَرِبَتِ الْبِنْتُ). Quran: Yusuf 12:17 excerpt فَأَكَلَهُ الذِّئْبُ, taught as the brothers' claim, with the attached ـهُ as a glossed Chapter 7 preview (reveal index 0); Al-Baqarah 2:249 شَرِبَ shown honestly as a condition after مَن (whoever drinks), not as a narrated past. The Al-Ma'un hooks that contained none of these verbs are gone. Rebuilt 2026-09-23 from Docs/proposals/chapter-17-content-proposal.md; the chapter map and fixtures named two different reader_lecture_17 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "کھانا اور پینا",
     "chapter_order": 17,
     "lesson_order": 1,
-    "chapter_title": "Daily Actions and Verbs",
-    "title": "Eating and Drinking",
-    "titleAr": "الْأَكْلُ وَالشُّرْبُ",
-    "source": "reader_book2_lesson6_daily_verbs.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 107,
-      "ayah": 5,
-      "label": "Al-Ma'un 107:5",
-      "ar": "الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ",
-      "en": "[But] who are heedless of their prayer -",
-      "ur": "جو نماز کی طرف سے غافل رہتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107005.mp3"
+      "surah": 12,
+      "ayah": 17,
+      "label": "Yusuf 12:17",
+      "ar": "فَأَكَلَهُ الذِّئْبُ",
+      "en": "…and a wolf ate him.",
+      "ur": "…تو اسے بھیڑیا کھا گیا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012017.mp3"
     },
     "noor_intro": {
-      "en": "Today we begin our study of Arabic verbs. Just as you learned nouns, now you will learn verbs — words that describe actions. We start with two actions we do every day: eating and drinking.",
-      "ur": "آج ہم عربی کے افعال کا مطالعہ شروع کرتے ہیں۔ جیسے آپ نے اسم سیکھے، اب آپ افعال سیکھیں گے — الفاظ جو اعمال کو بیان کرتے ہیں۔ ہم دو اعمال سے شروع کرتے ہیں جو ہم روزانہ کرتے ہیں: کھانا اور پینا۔"
+      "en": "In Chapter 5 you learned ذَهَبَ, he went: a past action. This chapter reads more of them. Yusuf's brothers come home and tell their father something that did not happen. Listen for أَكَلَ, ate, hidden inside the first word.",
+      "ur": "باب 5 میں آپ نے ذَهَبَ، وہ گیا، سیکھا: ماضی کا ایک کام۔ یہ باب ایسے اور کام پڑھتا ہے۔ حضرت یوسف کے بھائی گھر آ کر اپنے والد کو ایک ایسی بات بتاتے ہیں جو ہوئی نہیں تھی۔ پہلے لفظ کے اندر چھپا أَكَلَ، کھایا، سنیں۔"
     },
     "autoplay": true
   },
@@ -32,81 +29,110 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Past tense verbs as vocabulary (recognition)",
-        "ar": "أَفْعَالُ الْمَاضِي كَلُمَاتٌ مُعْتَرَفٌ بِهَا",
-        "ur": "ماضی کے افعال بطور اصطلاح (پہچان)"
+        "en": "A past action: who did what",
+        "ar": "ذَهَبَ الطَّالِبُ",
+        "ur": "ماضی کا کام: کس نے کیا کیا"
       },
       "explanation": {
-        "en": "In this chapter, verbs are treated as vocabulary words — you learn to recognize them, not yet to conjugate them. Full conjugation comes in Books 4-5.",
-        "ur": "اس باب میں، افعال کو لفظی الفاظ کے طور پر سیکھا جاتا ہے — آپ انہیں پہچانتے ہیں، ابھی صرف کرنے کے لیے نہیں۔ مکمل صرف کتابوں 4-5 میں آئے گا۔"
+        "en": "A past action word often comes first and the doer comes after it: ذَهَبَ الطَّالِبُ, the student went. Some actions also have a thing they happen to. This chapter asks three questions of each sentence: what happened, who did it, and to what.",
+        "ur": "ماضی کا کام اکثر پہلے آتا ہے اور کرنے والا اس کے بعد: ذَهَبَ الطَّالِبُ، طالب علم گیا۔ کچھ کاموں میں وہ چیز بھی ہوتی ہے جس پر کام ہوا۔ یہ باب ہر جملے سے تین سوال پوچھتا ہے: کیا ہوا، کس نے کیا، اور کس پر۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "أَكَلَ",
+        "ar_plain": "اكل",
+        "translit": "akala",
+        "en": "he ate",
+        "ur": "اس نے کھایا"
+      },
+      "explanation": {
+        "en": "أَكَلَ: he ate. It is a past action, something already done.",
+        "ur": "أَكَلَ: اس نے کھایا۔ یہ ماضی کا کام ہے، جو ہو چکا۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "أَكَلَ الرَّجُلُ",
-        "ar_plain": "اكل الرجل",
-        "translit": "akala ar-rajulu",
-        "en": "The man ate",
-        "ur": "آدمی نے کھایا"
+        "ar": "أَكَلَ الْوَلَدُ الْخُبْزَ",
+        "ar_plain": "اكل الولد الخبز",
+        "translit": "akala l-waladu l-khubza",
+        "en": "The boy ate the bread.",
+        "ur": "لڑکے نے روٹی کھائی۔"
       },
       "explanation": {
-        "en": "أَكَلَ means 'he ate.' It is a past tense verb. Notice how the verb أَكَلَ does not change to agree with the gender of the subject in this recognition phase — it simply states the action.",
-        "ur": "أَكَلَ کا مطلب ہے 'اس نے کھایا'۔ یہ ماضی کا فعل ہے۔ نوٹ کریں کہ اس پہچان مرحلے میں فعل أَكَلَ فاعل کی جنس سے соглас نہیں ہوتا — یہ صرف عمل بیان کرتا ہے۔"
+        "en": "Action أَكَلَ, doer الْوَلَدُ, the boy, and what he ate, الْخُبْزَ, the bread. Practice sentence, not Quran.",
+        "ur": "کام أَكَلَ، کرنے والا الْوَلَدُ، لڑکا، اور جو اس نے کھایا، الْخُبْزَ، روٹی۔ مشق کا جملہ، قرآن نہیں۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "شَرِبَ",
+        "ar_plain": "شرب",
+        "translit": "shariba",
+        "en": "he drank",
+        "ur": "اس نے پیا"
+      },
+      "explanation": {
+        "en": "شَرِبَ: he drank.",
+        "ur": "شَرِبَ: اس نے پیا۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "أَكَلَتِ الْمَرْأَةُ",
-        "ar_plain": "اكلت المرأة",
-        "translit": "akalat al-mar'atu",
-        "en": "The woman ate",
-        "ur": "عورت نے کھایا"
+        "ar": "شَرِبَ الْوَلَدُ الْمَاءَ",
+        "ar_plain": "شرب الولد الماء",
+        "translit": "shariba l-waladu l-māʾa",
+        "en": "The boy drank the water.",
+        "ur": "لڑکے نے پانی پیا۔"
       },
       "explanation": {
-        "en": "أَكَلَتْ adds ت at the end — this ت marks feminine. أَكَلَتْ means 'she ate.' When you see ت at the end of a past tense verb, it means the subject is female.",
-        "ur": "أَكَلَتْ کے آخر میں ت ہے — یہ ت مؤنث کی نشاندہی کرتی ہے۔ أَكَلَتْ کا مطلب ہے 'اس نے کھایا'۔ جب آپ ماضی کے فعل کے آخر میں ت دیکھیں تو اس کا مطلب ہے کہ فاعل مؤنث ہے۔"
+        "en": "Same three parts: شَرِبَ, drank; الْوَلَدُ, the boy; الْمَاءَ, the water.",
+        "ur": "وہی تین حصے: شَرِبَ، پیا؛ الْوَلَدُ، لڑکا؛ الْمَاءَ، پانی۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "شَرِبَ الْوَلَدُ",
-        "ar_plain": "شرب الولد",
-        "translit": "shariba al-waladu",
-        "en": "The boy drank",
-        "ur": "لڑکے نے پیا"
+        "ar": "شَرِبَتِ الْبِنْتُ الْمَاءَ",
+        "ar_plain": "شربت البنت الماء",
+        "translit": "sharibati l-bintu l-māʾa",
+        "en": "The girl drank the water.",
+        "ur": "لڑکی نے پانی پیا۔"
       },
       "explanation": {
-        "en": "شَرِبَ means 'he drank.' Like أَكَلَ, this is a three-letter verb (فعل ثلاثي) in the past tense.",
-        "ur": "شَرِبَ کا مطلب ہے 'اس نے پیا'۔ أَكَلَ کی طرح، یہ ماضی میں تین حرفی فعل (فعل ثلاثي) ہے۔"
+        "en": "The Chapter 8 clue: in these paired examples ـتْ on the action tells you the doer is female. شَرِبَتْ, she drank; before ال it is said -ti to join: sharibati l-bintu.",
+        "ur": "باب 8 کا اشارہ: ان جوڑی والی مثالوں میں کام پر ـتْ بتاتا ہے کہ کرنے والی عورت ہے۔ شَرِبَتْ، اس نے پیا؛ ال سے پہلے جوڑنے کے لیے اسے -ti پڑھتے ہیں۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "شَرِبَتِ الْجَارِيَةُ",
-        "ar_plain": "شربت الجارية",
-        "translit": "sharibat al-jaan",
-        "en": "The girl drank",
-        "ur": "لڑکی نے پیا"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Yusuf 12:17: …and a wolf ate him.",
+        "ar": "فَأَكَلَهُ الذِّئْبُ",
+        "ur": "Yusuf 12:17: …تو اسے بھیڑیا کھا گیا۔"
       },
       "explanation": {
-        "en": "شَرِبَتْ adds ت for feminine — 'she drank.' The pattern is always: verb root + ت = feminine past tense.",
-        "ur": "شَرِبَتْ مؤنث کے لیے ت لیتی ہے — 'اس نے پیا'۔ پٹرن ہمیشہ یہی ہے: فعل کا بنیاد + ت = مؤنث ماضی۔"
-      }
+        "en": "Yusuf's brothers tell their father فَأَكَلَهُ الذِّئْبُ, and a wolf ate him. It is their claim; the surah shows it was not true. Inside the first word: فَـ, and so, أَكَلَ, ate, and ـهُ, him, the Chapter 7 ending. The doer comes after the action: الذِّئْبُ, the wolf.",
+        "ur": "حضرت یوسف کے بھائی اپنے والد سے کہتے ہیں فَأَكَلَهُ الذِّئْبُ، تو اسے بھیڑیا کھا گیا۔ یہ ان کا دعویٰ ہے؛ سورت بتاتی ہے کہ یہ سچ نہیں تھا۔ پہلے لفظ کے اندر: فَـ، تو، أَكَلَ، کھایا، اور ـهُ، اسے، باب 7 کا آخر۔ کرنے والا کام کے بعد آتا ہے: الذِّئْبُ، بھیڑیا۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012017.mp3"
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "The feminine marker ت in past tense verbs",
-        "ur": "ماضی افعال میں ت کی نشاندہی"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:249: So whoever drinks from it is not of me.",
+        "ar": "فَمَن شَرِبَ مِنْهُ فَلَيْسَ مِنِّي",
+        "ur": "Al-Baqarah 2:249: تو جو اس میں سے پیے گا وہ مجھ سے نہیں۔"
       },
-      "body": {
-        "en": "أَكَلَ (he ate) → أَكَلَتْ (she ate). شَرِبَ (he drank) → شَرِبَتْ (she drank). The ت at the end signals feminine subject. This is your first step to reading Arabic verbs fluently.",
-        "ur": "أَكَلَ (اس نے کھایا) → أَكَلَتْ (اس نے کھایا)۔ شَرِبَ (اس نے پیا) → شَرِبَتْ (اس نے پیا)۔ آخر میں ت فاعل مؤنث کی نشاندہی کرتی ہے۔ یہ آپ کا عربی افعال پڑھنے میں پہلا قدم ہے۔"
-      }
+      "explanation": {
+        "en": "Talut tells his soldiers about a river. شَرِبَ is the form you just learned, but after مَن, whoever, it sets a condition: whoever drinks from it is not of me. So it is translated drinks, not drank. Recognise the word; let the context give the meaning.",
+        "ur": "طالوت اپنے سپاہیوں کو ایک نہر کے بارے میں بتاتے ہیں۔ شَرِبَ وہی صورت ہے جو آپ نے ابھی سیکھی، لیکن مَن، جو کوئی، کے بعد یہ شرط بناتی ہے: جو اس میں سے پیے گا وہ مجھ سے نہیں۔ اس لیے ترجمہ 'پیا' نہیں، 'پیے گا' ہے۔ لفظ پہچانیں؛ معنی سیاق سے لیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002249.mp3"
     }
   ],
   "exercises": [
@@ -114,113 +140,103 @@
       "type": "TAP_TRANSLATION",
       "id": "ch17-l01-ex01",
       "prompt": {
-        "ar": "أَكَلَ الرَّجُلُ",
-        "ar_plain": "اكل الرجل",
-        "translit": "akala ar-rajulu",
-        "en": "The man ate",
-        "ur": "آدمی نے کھایا"
+        "ar": "أَكَلَ",
+        "ar_plain": "اكل",
+        "translit": "akala",
+        "en": "he ate",
+        "ur": "اس نے کھایا"
       },
       "options": [
         {
-          "en": "The man ate",
-          "ur": "آدمی نے کھایا"
+          "en": "he ate",
+          "ur": "اس نے کھایا"
         },
         {
-          "en": "The man drank",
-          "ur": "آدمی نے پیا"
+          "en": "he drank",
+          "ur": "اس نے پیا"
         },
         {
-          "en": "The woman ate",
-          "ur": "عورت نے کھایا"
+          "en": "he went",
+          "ur": "وہ گیا"
         },
         {
-          "en": "The boy slept",
-          "ur": "لڑکا سویا"
+          "en": "eat! (an instruction)",
+          "ur": "کھاؤ! (ہدایت)"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَكَلَ means 'he ate.' The man (الرَّجُلُ) is the subject who performed the eating.",
-        "ur": "أَكَلَ کا مطلب ہے 'اس نے کھایا'۔ آدمی (الرَّجُلُ) وہ فاعل ہے جس نے کھایا۔"
+        "en": "أَكَلَ is a past action: he ate.",
+        "ur": "أَكَلَ ماضی کا کام ہے: اس نے کھایا۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch17-l01-ex02",
       "prompt": {
-        "ar": "أَكَلَتِ الْمَرْأَةُ",
-        "ar_plain": "اكلت المرأة",
-        "translit": "akalat al-mar'atu",
-        "en": "The woman ate",
-        "ur": "عورت نے کھایا"
+        "ar": "شَرِبَ الْوَلَدُ الْمَاءَ",
+        "ar_plain": "شرب الولد الماء",
+        "translit": "shariba l-waladu l-māʾa",
+        "en": "The boy drank the water.",
+        "ur": "لڑکے نے پانی پیا۔"
       },
       "options": [
         {
-          "en": "The man ate",
-          "ur": "آدمی نے کھایا"
+          "en": "The boy ate the bread.",
+          "ur": "لڑکے نے روٹی کھائی۔"
         },
         {
-          "en": "The woman ate",
-          "ur": "عورت نے کھایا"
+          "en": "The girl drank the water.",
+          "ur": "لڑکی نے پانی پیا۔"
         },
         {
-          "en": "The woman drank",
-          "ur": "عورت نے پیا"
+          "en": "The boy drank the water.",
+          "ur": "لڑکے نے پانی پیا۔"
         },
         {
-          "en": "The boy ate",
-          "ur": "لڑکے نے کھایا"
+          "en": "The boy went to the water.",
+          "ur": "لڑکا پانی کی طرف گیا۔"
         }
       ],
-      "correct_index": 1,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَكَلَتْ ends with ت — this signals feminine. The woman (المَرْأَةُ) is female, so the verb takes the feminine ending ت.",
-        "ur": "أَكَلَتْ ت کے ساتھ ختم ہوتا ہے — یہ مؤنث کی نشاندہی ہے۔ عورت (المَرْأَةُ) مؤنث ہے، اس لیے فعل ت کے ساتھ آتا ہے۔"
+        "en": "شَرِبَ, drank; الْوَلَدُ, the boy; الْمَاءَ, the water.",
+        "ur": "شَرِبَ، پیا؛ الْوَلَدُ، لڑکا؛ الْمَاءَ، پانی۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch17-l01-ex03",
       "statement": {
-        "en": "The verb شَرِبَتْ means 'she drank' because the ت at the end marks feminine.",
-        "ur": "فعل شَرِبَتْ کا مطلب 'اس نے پیا' ہے کیونکہ آخر میں ت مؤنث کی نشاندہی ہے۔"
-      },
-      "ar_example": {
-        "ar": "شَرِبَتْ الْجَارِيَةُ",
-        "ar_plain": "شربت الجارية",
-        "translit": "sharibat al-jaan",
-        "en": "The girl drank",
-        "ur": "لڑکی نے پیا"
+        "en": "In أَكَلَ الْوَلَدُ الْخُبْزَ, the one who did the eating is الْوَلَدُ.",
+        "ur": "أَكَلَ الْوَلَدُ الْخُبْزَ میں کھانے والا الْوَلَدُ ہے۔",
+        "ar_example": {
+          "ar": "أَكَلَ الْوَلَدُ الْخُبْزَ",
+          "ar_plain": "اكل الولد الخبز",
+          "translit": "akala l-waladu l-khubza",
+          "en": "The boy ate the bread.",
+          "ur": "لڑکے نے روٹی کھائی۔"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The doer comes right after the action: الْوَلَدُ, the boy, ate. الْخُبْزَ is what was eaten.",
+        "ur": "کرنے والا کام کے فوراً بعد آتا ہے: الْوَلَدُ، لڑکے، نے کھایا۔ الْخُبْزَ وہ ہے جو کھایا گیا۔"
+      }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch17-l01-ex04",
       "mode": "TAP",
-      "sentence_ar": "الْوَلَدُ ___",
+      "sentence_ar": "___ الْوَلَدُ الْمَاءَ",
       "hint": {
-        "en": "The boy drank.",
-        "ur": "لڑکے نے پیا۔"
+        "en": "The boy drank the water.",
+        "ur": "لڑکے نے پانی پیا۔"
       },
       "options": [
-        {
-          "ar": "شَرِبَ",
-          "ar_plain": "شرب",
-          "translit": "shariba",
-          "en": "he drank",
-          "ur": "اس نے پیا"
-        },
-        {
-          "ar": "شَرِبَتْ",
-          "ar_plain": "شربت",
-          "translit": "sharibat",
-          "en": "she drank",
-          "ur": "اس نے پیا (مؤنث)"
-        },
         {
           "ar": "أَكَلَ",
           "ar_plain": "اكل",
@@ -229,11 +245,25 @@
           "ur": "اس نے کھایا"
         },
         {
-          "ar": "أَكَلَتْ",
-          "ar_plain": "اكلت",
-          "translit": "akalat",
-          "en": "she ate",
-          "ur": "اس نے کھایا (مؤنث)"
+          "ar": "شَرِبَ",
+          "ar_plain": "شرب",
+          "translit": "shariba",
+          "en": "he drank",
+          "ur": "اس نے پیا"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "ar": "شَرِبَتْ",
+          "ar_plain": "شربت",
+          "translit": "sharibat",
+          "en": "she drank",
+          "ur": "اس (عورت) نے پیا"
         }
       ],
       "correct_answer": {
@@ -243,7 +273,11 @@
         "en": "he drank",
         "ur": "اس نے پیا"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Drank is شَرِبَ, and the doer, the boy, is male, so no ـتْ.",
+        "ur": "پیا شَرِبَ ہے، اور کرنے والا، لڑکا، مرد ہے، اس لیے ـتْ نہیں۔"
+      }
     },
     {
       "type": "MATCHING",
@@ -257,13 +291,6 @@
           "ur": "اس نے کھایا"
         },
         {
-          "ar": "أَكَلَتْ",
-          "ar_plain": "اكلت",
-          "translit": "akalat",
-          "en": "she ate",
-          "ur": "اس نے کھایا"
-        },
-        {
           "ar": "شَرِبَ",
           "ar_plain": "شرب",
           "translit": "shariba",
@@ -271,77 +298,54 @@
           "ur": "اس نے پیا"
         },
         {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
           "ar": "شَرِبَتْ",
           "ar_plain": "شربت",
           "translit": "sharibat",
           "en": "she drank",
-          "ur": "اس نے پیا"
-        },
-        {
-          "ar": "أَكَلَ الْوَلَدُ",
-          "ar_plain": "اكل الولد",
-          "translit": "akala al-waladu",
-          "en": "The boy ate",
-          "ur": "لڑکے نے کھایا"
-        },
-        {
-          "ar": "شَرِبَتِ الْبِنْتُ",
-          "ar_plain": "شربت البنت",
-          "translit": "sharibat al-bintu",
-          "en": "The girl drank",
-          "ur": "لڑکی نے پیا"
+          "ur": "اس (عورت) نے پیا"
         }
       ],
       "right_column": [
-        {
-          "en": "he ate",
-          "ur": "اس نے کھایا"
-        },
-        {
-          "en": "she ate",
-          "ur": "اس نے کھایا"
-        },
         {
           "en": "he drank",
           "ur": "اس نے پیا"
         },
         {
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
           "en": "she drank",
-          "ur": "اس نے پیا"
+          "ur": "اس (عورت) نے پیا"
         },
         {
-          "en": "The boy ate",
-          "ur": "لڑکے نے کھایا"
-        },
-        {
-          "en": "The girl drank",
-          "ur": "لڑکی نے پیا"
+          "en": "he ate",
+          "ur": "اس نے کھایا"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
           3
         ],
         [
-          4,
-          4
+          1,
+          0
         ],
         [
-          5,
-          5
+          2,
+          1
+        ],
+        [
+          3,
+          2
         ]
       ],
       "xp_value": 1
@@ -350,126 +354,144 @@
       "type": "BUILD_SENTENCE",
       "id": "ch17-l01-ex06",
       "target_translation": {
-        "en": "The woman drank water.",
-        "ur": "عورت نے پانی پیا۔"
+        "en": "The boy ate the bread.",
+        "ur": "لڑکے نے روٹی کھائی۔"
       },
       "tiles": [
         {
-          "ar": "شَرِبَتْ",
-          "ar_plain": "شربت",
-          "translit": "sharibat",
-          "en": "she drank",
-          "ur": "اس نے پیا"
-        },
-        {
-          "ar": "الْمَرْأَةُ",
-          "ar_plain": "المرأة",
-          "translit": "al-mar'atu",
-          "en": "the woman",
-          "ur": "عورت"
-        },
-        {
-          "ar": "الْمَاءُ",
-          "ar_plain": "الماء",
-          "translit": "al-maa'u",
-          "en": "the water",
-          "ur": "پانی"
-        },
-        {
-          "ar": "أَكَلَتْ",
-          "ar_plain": "اكلت",
-          "translit": "akalat",
-          "en": "she ate",
+          "ar": "أَكَلَ",
+          "ar_plain": "اكل",
+          "translit": "akala",
+          "en": "he ate",
           "ur": "اس نے کھایا"
+        },
+        {
+          "ar": "الْوَلَدُ",
+          "ar_plain": "الولد",
+          "translit": "al-waladu",
+          "en": "the boy",
+          "ur": "لڑکا"
+        },
+        {
+          "ar": "الْخُبْزَ",
+          "ar_plain": "الخبز",
+          "translit": "al-khubza",
+          "en": "the bread",
+          "ur": "روٹی"
+        },
+        {
+          "ar": "شَرِبَ",
+          "ar_plain": "شرب",
+          "translit": "shariba",
+          "en": "he drank",
+          "ur": "اس نے پیا"
         }
       ],
       "correct_order": [
-        1,
         0,
+        1,
         2
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Action, doer, then what was eaten: أَكَلَ الْوَلَدُ الْخُبْزَ.",
+        "ur": "کام، کرنے والا، پھر جو کھایا گیا: أَكَلَ الْوَلَدُ الْخُبْزَ۔"
+      }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "MATCH_AYAH",
       "id": "ch17-l01-ex07",
-      "statement": {
-        "en": "In the phrase أَكَلَتِ الْمَرْأَةُ, the ت on أَكَلَتْ tells us the subject is feminine (the woman).",
-        "ur": "أَكَلَتِ الْمَرْأَةُ میں أَكَلَتْ پر ت ہمیں بتاتی ہے کہ فاعل مؤنث ہے (عورت)۔"
-      },
-      "ar_example": {
-        "ar": "أَكَلَتِ الْمَرْأَةُ",
-        "ar_plain": "اكلت المرأة",
-        "translit": "akalat al-mar'atu",
-        "en": "The woman ate",
-        "ur": "عورت نے کھایا"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch17-l01-ex08",
-      "prompt": {
-        "ar": "الْجَارِيَةُ شَرِبَتْ الْمَاءَ",
-        "ar_plain": "الجارية شربت الماء",
-        "translit": "al-jaan sharibat al-maa'a",
-        "en": "The girl drank the water",
-        "ur": "لڑکی نے پانی پیا"
+      "ayah_fragment": {
+        "ar": "فَأَكَلَهُ الذِّئْبُ",
+        "surah_ref": "Yusuf 12:17"
       },
       "options": [
         {
-          "en": "The girl drank the water",
-          "ur": "لڑکی نے پانی پیا"
+          "en": "الذِّئْبُ — he ate",
+          "ur": "الذِّئْبُ — اس نے کھایا"
         },
         {
-          "en": "The boy drank the water",
-          "ur": "لڑکے نے پانی پیا"
+          "en": "فَأَكَلَهُ — he drank",
+          "ur": "فَأَكَلَهُ — اس نے پیا"
         },
         {
-          "en": "The girl ate the food",
-          "ur": "لڑکی نے کھانا کھایا"
+          "en": "The Quran reports as fact that Yusuf was eaten",
+          "ur": "قرآن بطور حقیقت بتاتا ہے کہ یوسف کو کھا لیا گیا"
         },
         {
-          "en": "The woman drank the water",
-          "ur": "عورت نے پانی پیا"
+          "en": "أَكَلَ is inside فَأَكَلَهُ: and a wolf ate him — the brothers' claim",
+          "ur": "فَأَكَلَهُ کے اندر أَكَلَ ہے: تو اسے بھیڑیا کھا گیا — بھائیوں کا دعویٰ"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 3,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "الْجَارِيَةُ means 'the girl' and شَرِبَتْ (with ت) means 'she drank.' Together: The girl drank.",
-        "ur": "الْجَارِيَةُ کا مطلب ہے 'لڑکی' اور شَرِبَتْ (ت کے ساتھ) کا مطلب ہے 'اس نے پیا'۔ مل کر: لڑکی نے پانی پیا۔"
+        "en": "The action is أَكَلَ, inside فَأَكَلَهُ, and its doer is الذِّئْبُ. The brothers said it; it did not happen.",
+        "ur": "کام أَكَلَ ہے، فَأَكَلَهُ کے اندر، اور اس کا کرنے والا الذِّئْبُ ہے۔ یہ بھائیوں نے کہا؛ ایسا ہوا نہیں۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch17-l01-ex08",
+      "ayah_fragment": {
+        "ar": "فَمَن شَرِبَ مِنْهُ فَلَيْسَ مِنِّي",
+        "surah_ref": "Al-Baqarah 2:249"
+      },
+      "options": [
+        {
+          "en": "شَرِبَ — he ate",
+          "ur": "شَرِبَ — اس نے کھایا"
+        },
+        {
+          "en": "شَرِبَ — drinks: after مَن, whoever, the form sets a condition",
+          "ur": "شَرِبَ — پیے گا: مَن، جو کوئی، کے بعد یہ صورت شرط بناتی ہے"
+        },
+        {
+          "en": "مِنْهُ — he drank",
+          "ur": "مِنْهُ — اس نے پیا"
+        },
+        {
+          "en": "شَرِبَ — drink! (an instruction)",
+          "ur": "شَرِبَ — پیو! (ہدایت)"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "شَرِبَ is the drink verb, but after مَن it means whoever drinks, a condition about the river.",
+        "ur": "شَرِبَ پینے کا فعل ہے، لیکن مَن کے بعد اس کا مطلب ہے جو کوئی پیے، نہر کے بارے میں ایک شرط۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Past tense verbs: أَكَلَ and شَرِبَ",
-      "ar": "أَفْعَالُ الْمَاضِي: أَكَلَ وَشَرِبَ",
-      "ur": "ماضی کے افعال: أَكَلَ اور شَرِبَ"
+      "en": "Action, doer, and what it happened to",
+      "ur": "کام، کرنے والا، اور جس پر ہوا"
     },
     "ayah": {
-      "surah": 107,
-      "ayah": 5,
-      "label": "Al-Ma'un 107:5",
-      "ar": "الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ",
-      "en": "[But] who are heedless of their prayer -",
-      "ur": "جو نماز کی طرف سے غافل رہتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107005.mp3"
+      "surah": 12,
+      "ayah": 17,
+      "label": "Yusuf 12:17",
+      "ar": "فَأَكَلَهُ الذِّئْبُ",
+      "en": "…and a wolf ate him.",
+      "ur": "…تو اسے بھیڑیا کھا گیا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012017.mp3"
     },
     "highlighted_word_indices": [
-      1
+      0
+    ],
+    "highlighted_words": [
+      "فَأَكَلَهُ"
     ],
     "noor_explanation": {
-      "en": "أَكَلَ and شَرِبَ are two of the most common past tense verbs in Arabic. أَكَلَ means 'he ate' — أَكَلَتْ means 'she ate.' شَرِبَ means 'he drank' — شَرِبَتْ means 'she drank.' The ت at the end is your clue that the subject is feminine. These two verbs will appear everywhere in the Quran.",
-      "ur": "أَكَلَ اور شَرِبَ عربی کے دو سبھی عام ماضی افعال ہیں۔ أَكَلَ کا مطلب ہے 'اس نے کھایا' — أَكَلَتْ کا مطلب 'اس نے کھایا'۔ شَرِبَ کا مطلب 'اس نے پیا' — شَرِبَتْ کا مطلب 'اس نے پیا'۔ آخر میں ت آپ کو بتاتی ہے کہ فاعل مؤنث ہے۔ یہ دونوں افعال قرآن میں ہر جگہ نظر آئیں گے۔"
+      "en": "فَأَكَلَهُ الذِّئْبُ: the action أَكَلَ with its doer after it, الذِّئْبُ. Reading who did what is the skill of this chapter, and it also lets you notice whose words these are: the brothers', not a report of what happened.",
+      "ur": "فَأَكَلَهُ الذِّئْبُ: کام أَكَلَ اور اس کے بعد اس کا کرنے والا، الذِّئْبُ۔ یہ پڑھنا کہ کس نے کیا کیا اس باب کی مہارت ہے، اور اس سے آپ یہ بھی دیکھتے ہیں کہ یہ کس کے الفاظ ہیں: بھائیوں کے، واقعے کی خبر نہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You have learned your first two Arabic verbs: أَكَلَ (to eat) and شَرِبَ (to drink). Remember: the ت at the end means feminine. أَكَلَ — شَرِبَ — you are building your verb vocabulary!",
-      "ur": "آپ نے اپنے پہلے دو عربی افعال سیکھ لیے: أَكَلَ (کھانا) اور شَرِبَ (پینا)۔ یاد رکھیں: آخر میں ت کا مطلب مؤنث ہے۔ أَكَلَ — شَرِبَ — آپ اپنا فعل کا词汇 بنا رہے ہیں!"
+      "en": "You can read أَكَلَ and شَرِبَ with their doer and object. Next: reading and writing, and a word whose meaning changes in the Quran.",
+      "ur": "آپ أَكَلَ اور شَرِبَ کو ان کے کرنے والے اور مفعول کے ساتھ پڑھ سکتے ہیں۔ آگے: پڑھنا اور لکھنا، اور ایک لفظ جس کا معنی قرآن میں بدل جاتا ہے۔"
     }
   }
 }

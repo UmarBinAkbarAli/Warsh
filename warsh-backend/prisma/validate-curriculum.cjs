@@ -214,7 +214,6 @@ function createFixtureReporter() {
 // fixture is removed the moment its reveal is corrected, and no new file may
 // be added. An out-of-range index anywhere else is an error.
 const LEGACY_REVEAL_INDEX_DEFECTS = new Set([
-  "chapter-19-lesson-01.json",
   "chapter-27-lesson-02.json",
   "chapter-34-lesson-06.json",
   "chapter-43-lesson-04.json",

@@ -1,0 +1,494 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 16 review (ch16-l05, REVIEW, rebuilt; formerly chapter-16-lesson-05.json). Ten mixed items across school objects, people, location answers, time words and instructions, two of them reading a whole school scene; one Quran-versus-authored item and one direct-target retrieval (Al-Alaq 96:4, بِالْقَلَمِ, index 2). Removed: the singular-noun adjective rule, the غَدًا = پرسوں mapping, and the present-verb and case explanations. Rebuilt 2026-09-23 from Docs/proposals/chapter-16-content-proposal.md; the curriculum map and fixtures named two different reader_lecture_16 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "باب 16 کا جائزہ",
+    "chapter_order": 16,
+    "lesson_order": 5,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 96,
+      "ayah": 4,
+      "label": "Al-Alaq 96:4",
+      "ar": "الَّذِي عَلَّمَ بِالْقَلَمِ",
+      "en": "Who taught by the pen.",
+      "ur": "جس نے قلم کے ذریعے سکھایا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096004.mp3"
+    },
+    "noor_intro": {
+      "en": "Chapter 16 review: the classroom, its people, three time words and four instructions.",
+      "ur": "باب 16 کا جائزہ: کلاس روم، اس کے لوگ، وقت کے تین الفاظ اور چار ہدایات۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The classroom",
+        "ar": "فَصْلٌ، مَكْتَبٌ، دَفْتَرٌ",
+        "ur": "کلاس روم"
+      },
+      "explanation": {
+        "en": "فَصْلٌ, the classroom; مَكْتَبٌ, the desk; دَفْتَرٌ, the notebook; with كِتَابٌ and قَلَمٌ from earlier chapters.",
+        "ur": "فَصْلٌ، کلاس روم؛ مَكْتَبٌ، میز؛ دَفْتَرٌ، کاپی؛ پچھلے ابواب کے كِتَابٌ اور قَلَمٌ کے ساتھ۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The people and the lesson",
+        "ar": "أُسْتَاذٌ، طَالِبٌ، دَرْسٌ",
+        "ur": "لوگ اور سبق"
+      },
+      "explanation": {
+        "en": "أُسْتَاذٌ teaches, طَالِبٌ and طُلَّابٌ learn, and دَرْسٌ is the lesson itself, not a person.",
+        "ur": "أُسْتَاذٌ پڑھاتا ہے، طَالِبٌ اور طُلَّابٌ سیکھتے ہیں، اور دَرْسٌ خود سبق ہے، کوئی شخص نہیں۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الْأُسْتَاذُ وَالطُّلَّابُ فِي الْفَصْلِ",
+        "ar_plain": "الاستاذ والطلاب في الفصل",
+        "translit": "al-ustādhu wa-ṭ-ṭullābu fī l-faṣli",
+        "en": "The teacher and the students are in the classroom.",
+        "ur": "استاد اور طلبہ کلاس میں ہیں۔"
+      },
+      "explanation": {
+        "en": "Read a scene: who is there, and where.",
+        "ur": "منظر پڑھیں: کون ہے، اور کہاں۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "When",
+        "ar": "أَمْسِ، الْيَوْمَ، غَدًا",
+        "ur": "کب"
+      },
+      "explanation": {
+        "en": "أَمْسِ, the day that has passed; الْيَوْمَ, today; غَدًا, the day that is coming. Urdu کل needs context; Arabic does not.",
+        "ur": "أَمْسِ، گزرا ہوا دن؛ الْيَوْمَ، آج؛ غَدًا، آنے والا دن۔ اردو کل کو سیاق چاہیے؛ عربی کو نہیں۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Instructions",
+        "ar": "اِفْتَحْ، اِقْرَأْ، اُكْتُبْ، اُنْظُرْ",
+        "ur": "ہدایات"
+      },
+      "explanation": {
+        "en": "Open, read, write, look: understand the instruction, then act, with نَعَمْ يَا أُسْتَاذُ if a reply is needed.",
+        "ur": "کھولو، پڑھو، لکھو، دیکھو: ہدایت سمجھیں، پھر عمل کریں، اور اگر جواب چاہیے تو نَعَمْ يَا أُسْتَاذُ۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Alaq 96:4: Who taught by the pen.",
+        "ar": "الَّذِي عَلَّمَ بِالْقَلَمِ",
+        "ur": "Al-Alaq 96:4: جس نے قلم کے ذریعے سکھایا۔"
+      },
+      "explanation": {
+        "en": "بِالْقَلَمِ, by the pen: a real Quran occurrence of the word pen. Your classroom sentences are practice; this is Quran, with its reference and recitation.",
+        "ur": "بِالْقَلَمِ، قلم کے ذریعے: قرآن میں لفظ قلم کا حقیقی استعمال۔ آپ کے کلاس کے جملے مشق ہیں؛ یہ قرآن ہے، اپنے حوالے اور تلاوت کے ساتھ۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096004.mp3"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch16-l05-ex01",
+      "prompt": {
+        "ar": "الْكُتُبُ عَلَى الْمَكْتَبِ",
+        "ar_plain": "الكتب على المكتب",
+        "translit": "al-kutubu ʿalā l-maktabi",
+        "en": "The books are on the desk.",
+        "ur": "کتابیں میز پر ہیں۔"
+      },
+      "options": [
+        {
+          "en": "The book is in the desk.",
+          "ur": "کتاب میز میں ہے۔"
+        },
+        {
+          "en": "The books are on the desk.",
+          "ur": "کتابیں میز پر ہیں۔"
+        },
+        {
+          "en": "The notebooks are on the desk.",
+          "ur": "کاپیاں میز پر ہیں۔"
+        },
+        {
+          "en": "The desk is on the books.",
+          "ur": "میز کتابوں پر ہے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْكُتُبُ is the books (Chapter 13) and عَلَى الْمَكْتَبِ is on the desk.",
+        "ur": "الْكُتُبُ کتابیں ہیں (باب 13) اور عَلَى الْمَكْتَبِ میز پر۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch16-l05-ex02",
+      "prompt_line": {
+        "ar": "أَيْنَ الدَّفْتَرُ؟",
+        "ar_plain": "اين الدفتر",
+        "translit": "ayna d-daftaru?",
+        "en": "Where is the notebook?",
+        "ur": "کاپی کہاں ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "الدَّرْسُ غَدًا",
+          "ar_plain": "الدرس غدا",
+          "translit": "ad-darsu ghadan",
+          "en": "The lesson is tomorrow.",
+          "ur": "سبق آنے والے کل ہے۔"
+        },
+        {
+          "ar": "هٰذَا دَفْتَرٌ جَدِيدٌ",
+          "ar_plain": "هذا دفتر جديد",
+          "translit": "hādhā daftarun jadīdun",
+          "en": "This is a new notebook.",
+          "ur": "یہ ایک نئی کاپی ہے۔"
+        },
+        {
+          "ar": "الْأُسْتَاذُ فِي الْفَصْلِ",
+          "ar_plain": "الاستاذ في الفصل",
+          "translit": "al-ustādhu fī l-faṣli",
+          "en": "The teacher is in the classroom.",
+          "ur": "استاد کلاس میں ہے۔"
+        },
+        {
+          "ar": "الدَّفْتَرُ عَلَى الْمَكْتَبِ",
+          "ar_plain": "الدفتر على المكتب",
+          "translit": "ad-daftaru ʿalā l-maktabi",
+          "en": "The notebook is on the desk.",
+          "ur": "کاپی میز پر ہے۔"
+        }
+      ],
+      "correct_option_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَيْنَ asks where: the notebook is on the desk.",
+        "ur": "أَيْنَ کہاں پوچھتا ہے: کاپی میز پر ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch16-l05-ex03",
+      "prompt": {
+        "ar": "الْأُسْتَاذُ وَالطُّلَّابُ فِي الْفَصْلِ",
+        "ar_plain": "الاستاذ والطلاب في الفصل",
+        "translit": "al-ustādhu wa-ṭ-ṭullābu fī l-faṣli",
+        "en": "The teacher and the students are in the classroom.",
+        "ur": "استاد اور طلبہ کلاس میں ہیں۔"
+      },
+      "options": [
+        {
+          "en": "The teacher and the students are in the classroom.",
+          "ur": "استاد اور طلبہ کلاس میں ہیں۔"
+        },
+        {
+          "en": "The teacher is in the classroom and the students are in the school.",
+          "ur": "استاد کلاس میں ہے اور طلبہ اسکول میں۔"
+        },
+        {
+          "en": "The students are teachers.",
+          "ur": "طلبہ استاد ہیں۔"
+        },
+        {
+          "en": "The teacher and the student are in the school.",
+          "ur": "استاد اور طالب علم اسکول میں ہیں۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Both people are joined by وَ and both are فِي الْفَصْلِ, in the classroom.",
+        "ur": "دونوں لوگ وَ سے جڑے ہیں اور دونوں فِي الْفَصْلِ، کلاس میں، ہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch16-l05-ex04",
+      "statement": {
+        "en": "In الْأُسْتَاذُ وَالطُّلَّابُ فِي الْفَصْلِ, the lesson is one of the people in the room.",
+        "ur": "الْأُسْتَاذُ وَالطُّلَّابُ فِي الْفَصْلِ میں سبق کمرے کے لوگوں میں سے ایک ہے۔",
+        "ar_example": {
+          "ar": "الْأُسْتَاذُ وَالطُّلَّابُ فِي الْفَصْلِ",
+          "ar_plain": "الاستاذ والطلاب في الفصل",
+          "translit": "al-ustādhu wa-ṭ-ṭullābu fī l-faṣli",
+          "en": "The teacher and the students are in the classroom.",
+          "ur": "استاد اور طلبہ کلاس میں ہیں۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. The people are the teacher and the students; the lesson, دَرْسٌ, is not mentioned and is not a person.",
+        "ur": "غلط۔ لوگ استاد اور طلبہ ہیں؛ سبق، دَرْسٌ، کا ذکر نہیں اور وہ کوئی شخص نہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch16-l05-ex05",
+      "prompt": {
+        "ar": "أَمْسِ",
+        "ar_plain": "امس",
+        "translit": "amsi",
+        "en": "yesterday",
+        "ur": "گزرا ہوا کل"
+      },
+      "options": [
+        {
+          "en": "tomorrow",
+          "ur": "آنے والا کل"
+        },
+        {
+          "en": "today",
+          "ur": "آج"
+        },
+        {
+          "en": "the day after tomorrow",
+          "ur": "پرسوں"
+        },
+        {
+          "en": "yesterday",
+          "ur": "گزرا ہوا کل"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَمْسِ is the day that has passed: yesterday.",
+        "ur": "أَمْسِ وہ دن ہے جو گزر گیا: گزرا ہوا کل۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch16-l05-ex06",
+      "mode": "TAP",
+      "sentence_ar": "الدَّرْسُ ___",
+      "hint": {
+        "en": "The lesson is tomorrow.",
+        "ur": "سبق آنے والے کل ہے۔"
+      },
+      "options": [
+        {
+          "ar": "أَمْسِ",
+          "ar_plain": "امس",
+          "translit": "amsi",
+          "en": "yesterday",
+          "ur": "گزرا ہوا کل"
+        },
+        {
+          "ar": "الْيَوْمَ",
+          "ar_plain": "اليوم",
+          "translit": "al-yawma",
+          "en": "today",
+          "ur": "آج"
+        },
+        {
+          "ar": "غَدًا",
+          "ar_plain": "غدا",
+          "translit": "ghadan",
+          "en": "tomorrow",
+          "ur": "آنے والا کل"
+        },
+        {
+          "ar": "جَدِيدٌ",
+          "ar_plain": "جديد",
+          "translit": "jadīdun",
+          "en": "new",
+          "ur": "نیا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "غَدًا",
+        "ar_plain": "غدا",
+        "translit": "ghadan",
+        "en": "tomorrow",
+        "ur": "آنے والا کل"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Tomorrow is غَدًا: الدَّرْسُ غَدًا.",
+        "ur": "آنے والا کل غَدًا ہے: الدَّرْسُ غَدًا۔"
+      }
+    },
+    {
+      "type": "AUDIO_RECOGNITION",
+      "id": "ch16-l05-ex07",
+      "arabic_text": "اُكْتُبْ فِي الدَّفْتَرِ",
+      "options": [
+        {
+          "en": "Open the notebook.",
+          "ur": "کاپی کھولو۔"
+        },
+        {
+          "en": "Write in the notebook.",
+          "ur": "کاپی میں لکھو۔"
+        },
+        {
+          "en": "Look at the notebook.",
+          "ur": "کاپی کی طرف دیکھو۔"
+        },
+        {
+          "en": "Read the notebook.",
+          "ur": "کاپی پڑھو۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "اُكْتُبْ is write: write in the notebook.",
+        "ur": "اُكْتُبْ کا مطلب لکھو ہے: کاپی میں لکھو۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch16-l05-ex08",
+      "prompt_line": {
+        "ar": "اُنْظُرْ إِلَى الْأُسْتَاذِ",
+        "ar_plain": "انظر الى الاستاذ",
+        "translit": "unẓur ilā l-ustādhi",
+        "en": "Look at the teacher.",
+        "ur": "استاد کی طرف دیکھو۔"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "الدَّرْسُ أَمْسِ",
+          "ar_plain": "الدرس امس",
+          "translit": "ad-darsu amsi",
+          "en": "The lesson was yesterday.",
+          "ur": "سبق گزرے ہوئے کل تھا۔"
+        },
+        {
+          "ar": "أَيْنَ الْقَلَمُ؟",
+          "ar_plain": "اين القلم",
+          "translit": "ayna l-qalamu?",
+          "en": "Where is the pen?",
+          "ur": "قلم کہاں ہے؟"
+        },
+        {
+          "ar": "نَعَمْ يَا أُسْتَاذُ",
+          "ar_plain": "نعم يا استاذ",
+          "translit": "naʿam yā ustādhu",
+          "en": "Yes, teacher.",
+          "ur": "جی، استاد صاحب۔"
+        },
+        {
+          "ar": "هٰذَا فَصْلٌ",
+          "ar_plain": "هذا فصل",
+          "translit": "hādhā faṣlun",
+          "en": "This is a classroom.",
+          "ur": "یہ ایک کلاس ہے۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "An instruction is answered with نَعَمْ يَا أُسْتَاذُ, and then you look.",
+        "ur": "ہدایت کا جواب نَعَمْ يَا أُسْتَاذُ ہے، اور پھر آپ دیکھتے ہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch16-l05-ex09",
+      "statement": {
+        "en": "اُكْتُبْ فِي الدَّفْتَرِ is a line from the Quran.",
+        "ur": "اُكْتُبْ فِي الدَّفْتَرِ قرآن کی ایک سطر ہے۔",
+        "ar_example": {
+          "ar": "اُكْتُبْ فِي الدَّفْتَرِ",
+          "ar_plain": "اكتب في الدفتر",
+          "translit": "uktub fī d-daftari",
+          "en": "Write in the notebook.",
+          "ur": "کاپی میں لکھو۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. It is an authored classroom instruction. The Quran's اقْرَأْ in Al-Alaq 96:1 comes with its reference and recitation.",
+        "ur": "غلط۔ یہ کلاس کی لکھی ہوئی ہدایت ہے۔ سورۃ العلق 96:1 کا اقْرَأْ اپنے حوالے اور تلاوت کے ساتھ آتا ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch16-l05-ex10",
+      "ayah_fragment": {
+        "ar": "الَّذِي عَلَّمَ بِالْقَلَمِ",
+        "surah_ref": "Al-Alaq 96:4"
+      },
+      "options": [
+        {
+          "en": "بِالْقَلَمِ — by the pen",
+          "ur": "بِالْقَلَمِ — قلم کے ذریعے"
+        },
+        {
+          "en": "بِالْقَلَمِ — in the classroom",
+          "ur": "بِالْقَلَمِ — کلاس میں"
+        },
+        {
+          "en": "عَلَّمَ — the notebook",
+          "ur": "عَلَّمَ — کاپی"
+        },
+        {
+          "en": "الَّذِي — tomorrow",
+          "ur": "الَّذِي — آنے والا کل"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "بِـ + الْقَلَمِ: by the pen.",
+        "ur": "بِـ + الْقَلَمِ: قلم کے ذریعے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 16: a school scene",
+      "ur": "باب 16: اسکول کا منظر"
+    },
+    "ayah": {
+      "surah": 96,
+      "ayah": 4,
+      "label": "Al-Alaq 96:4",
+      "ar": "الَّذِي عَلَّمَ بِالْقَلَمِ",
+      "en": "Who taught by the pen.",
+      "ur": "جس نے قلم کے ذریعے سکھایا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096004.mp3"
+    },
+    "highlighted_word_indices": [
+      2
+    ],
+    "highlighted_words": [
+      "بِالْقَلَمِ"
+    ],
+    "noor_explanation": {
+      "en": "بِالْقَلَمِ: by the pen. From the pen on your desk to the people, the days and the instructions, you can now follow a simple school scene in Arabic.",
+      "ur": "بِالْقَلَمِ: قلم کے ذریعے۔ آپ کی میز کے قلم سے لے کر لوگوں، دنوں اور ہدایات تک، اب آپ عربی میں اسکول کا ایک سادہ منظر سمجھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review complete. The Chapter 16 final test is next.",
+      "ur": "جائزہ مکمل۔ اگلا باب 16 کا آخری امتحان ہے۔"
+    }
+  }
+}

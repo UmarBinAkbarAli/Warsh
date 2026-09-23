@@ -2,188 +2,167 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 16, Lesson 3 - Time markers: يَوْم، صَبَاح، مَسَاء، الْيَوْم، أَمْس، غَدًا",
+    "_note": "Chapter 16, Lesson 3 (ch16-l03) — أَمْسِ / الْيَوْمَ / غَدًا as meaning-bearing time words: a past line with the known ذَهَبَ, nominal scheduling lines for today and tomorrow, and an Urdu card on کل needing context. No سَأَذْهَبُ, no future سَـ, no قَرَأَ production, no \"implied preposition\" story for أَمْسِ, one form الْيَوْمَ throughout. غَدًا is آنے والا کل in Urdu, never پرسوں; إِلَى is کی طرف, not میں. Quran anchor Al-Kahf 18:23 at غَدًا (index 6), with 18:24 supplied as context and not scored. Rebuilt 2026-09-23 from Docs/proposals/chapter-16-content-proposal.md; the curriculum map and fixtures named two different reader_lecture_16 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "گزرا ہوا کل، آج، آنے والا کل",
     "chapter_order": 16,
     "lesson_order": 3,
-    "chapter_title": "School and Students",
-    "title": "Today, Yesterday, and Tomorrow",
-    "titleAr": "الْيَوْمُ وَأَمْسُ وَغَدًا",
-    "source": "reader_lecture_16_school_and_students.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 107,
-      "ayah": 1,
-      "label": "Al-Ma'un 107:1",
-      "ar": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ",
-      "en": "Have you seen the one who denies the recompense?",
-      "ur": "کیا آپ نے اسے دیکھا جو جزا سے انکار کرتا ہے؟",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107001.mp3"
+      "surah": 18,
+      "ayah": 23,
+      "label": "Al-Kahf 18:23",
+      "ar": "وَلَا تَقُولَنَّ لِشَيْءٍ إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا",
+      "en": "And never say of anything, \"I will surely do that tomorrow,\"",
+      "ur": "اور کسی چیز کے بارے میں ہرگز نہ کہو کہ میں یہ کام کل ضرور کروں گا،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018023.mp3"
     },
     "noor_intro": {
-      "en": "Every day at school is filled with new learning. Today we learn about time: the day — يَوْمٌ — and how to talk about yesterday, today, and tomorrow.",
-      "ur": "سکول میں ہر دن نئے سیکھنے سے بھرا ہوا ہے۔ آج ہم وقت کے بارے میں سیکھیں گے: دن — يَوْمٌ — اور کل، آج، اور پرسوں کے بارے میں کیسے بتائیں۔"
+      "en": "Three small words tell you when. The last word of Al-Kahf 18:23 is one of them: غَدًا, tomorrow. Listen for it.",
+      "ur": "تین چھوٹے لفظ بتاتے ہیں کب۔ سورۃ الکہف 18:23 کا آخری لفظ ان میں سے ایک ہے: غَدًا، آنے والا کل۔ اسے سنیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
+      "type": "WORD",
+      "text": {
+        "ar": "أَمْسِ",
+        "ar_plain": "امس",
+        "translit": "amsi",
+        "en": "yesterday",
+        "ur": "گزرا ہوا کل"
+      },
+      "explanation": {
+        "en": "أَمْسِ is yesterday, the day before today. Its ending does not change in these lessons; why time words end as they do is studied later.",
+        "ur": "أَمْسِ گزرا ہوا کل ہے، آج سے پہلے کا دن۔ ان اسباق میں اس کا آخر نہیں بدلتا؛ وقت کے الفاظ کے آخر ایسے کیوں ہیں یہ بعد میں پڑھا جائے گا۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "الْيَوْمَ",
+        "ar_plain": "اليوم",
+        "translit": "al-yawma",
+        "en": "today",
+        "ur": "آج"
+      },
+      "explanation": {
+        "en": "الْيَوْمَ is today. يَوْمٌ is a day; with ال and this ending it means this very day, today.",
+        "ur": "الْيَوْمَ آج ہے۔ يَوْمٌ ایک دن ہے؛ ال اور اس آخر کے ساتھ اس کا مطلب یہی دن، آج، ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "غَدًا",
+        "ar_plain": "غدا",
+        "translit": "ghadan",
+        "en": "tomorrow",
+        "ur": "آنے والا کل"
+      },
+      "explanation": {
+        "en": "غَدًا is tomorrow, the day after today. Not the day after tomorrow: that is a different expression you will meet later.",
+        "ur": "غَدًا آنے والا کل ہے، آج کے بعد کا دن۔ پرسوں نہیں: وہ ایک الگ تعبیر ہے جو بعد میں آئے گی۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
       "concept": {
-        "en": "Talking about time at school",
-        "ar": "التَّحَدُّثُ عَنِ الزَّمَنِ فِي الْمَدْرَسَةِ",
-        "ur": "مدرسے میں وقت کے بارے میں بات کرنا"
+        "en": "Urdu has one کل, Arabic has two",
+        "ar": "أَمْسِ / غَدًا",
+        "ur": "اردو میں ایک کل، عربی میں دو"
       },
       "explanation": {
-        "en": "Today is الْيَوْمُ. Yesterday is أَمْسٌ (notice no ال because it refers to a specific past day). Tomorrow is غَدًا (also without ال, referring to a specific coming day).",
-        "ur": "آج کو الْيَوْمُ کہتے ہیں۔ کل کو أَمْسٌ کہتے ہیں (دیکھیں ال نہیں کیونکہ یہ مخصوص ماضی کے دن کی طرف اشارہ کرتا ہے)۔ پرسوں کو غَدًا کہتے ہیں (ال کے بغیر، مخصوص آنے والے دن کے لیے)۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الْيَوْمُ الدَّرْسُ جَدِيدٌ",
-        "ar_plain": "اليوم الدرس جديد",
-        "translit": "al-yawmu ad-darsu jadiidun",
-        "en": "Today the lesson is new.",
-        "ur": "آج سبق نیا ہے۔"
+        "en": "Urdu says کل for both yesterday and tomorrow and lets the verb show which. Arabic keeps two words: أَمْسِ for the day that has passed, غَدًا for the day that is coming. Check which day is meant before you answer.",
+        "ur": "اردو گزرے ہوئے اور آنے والے دونوں دنوں کے لیے کل کہتی ہے اور فعل سے پتا چلتا ہے کون سا۔ عربی دو لفظ رکھتی ہے: گزرے ہوئے دن کے لیے أَمْسِ، آنے والے دن کے لیے غَدًا۔ جواب سے پہلے دیکھیں کون سا دن مراد ہے۔"
       },
-      "explanation": {
-        "en": "الْيَوْمُ means 'today.' Notice how دَرْسٌ (lesson) takes a dhamma (دَّ) here — it is the subject (مبتدأ) of the sentence, not the object.",
-        "ur": "الْيَوْمُ کا مطلب ہے 'آج'۔ دیکھیں کیسے دَرْسٌ (سبق) یہاں ضمہ (دَّ) لیتا ہے — یہ جملے کا مبتدأ ہے، مفعول نہیں۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "أَمْسِ الطَّالِبُ قَرَأَ الدَّرْسَ",
-        "ar_plain": "امس الطالب قرأ الدرس",
-        "translit": "amsi at-taalibu qara-a ad-darsa",
-        "en": "Yesterday the student read the lesson.",
-        "ur": "کل طالب علم نے سبق پڑھا۔"
-      },
-      "explanation": {
-        "en": "أَمْسِ takes a kasra because it is a time expression used in the genitive case (حالة). قَرَأَ is the past tense of يَقْرَأُ — 'he read.' Notice the student (طَّالِبُ) takes a dhamma because it is the doer in a past tense sentence.",
-        "ur": "أَمْسِ کسرہ لیتا ہے کیونکہ یہ ایک وقتیت کا اظہار ہے جو حالت جر میں ہے۔ قَرَأَ، يَقْرَأُ کا ماضی ہے — 'اس نے پڑھا'۔ دیکھیں طالب (طَّالِبُ) ضمہ لیتا ہے کیونکہ یہ ماضی جملے میں فاعل ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "غَدًا سَأَذْهَبُ إِلَى الْمَدْرَسَةِ",
-        "ar_plain": "غدا ساذهب الى المدرسة",
-        "translit": "ghadan sa-athhabu ilaa al-madrasati",
-        "en": "Tomorrow I will go to the school.",
-        "ur": "کل میں مدرسے میں جاؤں گا۔"
-      },
-      "explanation": {
-        "en": "غَدًا is 'tomorrow.' سَأَذْهَبُ is the future tense — 'I will go.' الْمَدْرَسَةِ takes a kasra because إِلَى is a prejection that governs the genitive case.",
-        "ur": "غَدًا کا مطلب ہے 'کل'۔ سَأَذْهَبُ مستقبل ہے — 'میں جاؤں گا'۔ الْمَدْرَسَةِ کسرہ لیتا ہے کیونکہ إِلَى ایک حرف جر ہے جو معمول کسرہ دیتا ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Time expressions and their case",
-        "ur": "وقتی اظہارات اور ان کی حالت"
-      },
-      "body": {
-        "en": "Time words in Arabic take different cases depending on their role: أَمْسِ (yesterday) — genitive (كسرة) after implied preposition; الْيَوْمَ (today) — accusative (فتحة) as a time adverb; غَدًا (tomorrow) — accusative (فتحة) as a time adverb. صَبَاحًا (morning) and مَسَاءً (evening) are also accusative adverbs.",
-        "ur": "عربی میں وقت کے الفاظ اپنے کردار کے مطابق مختلف حالتیں لیتے ہیں: أَمْسِ (کل) — جر (كسرة) ضمنی حرف جر کے بعد؛ الْيَوْمَ (آج) — نصب (فتحة) وقت کے متعلق adverb کے طور پر؛ غَدًا (پرسوں) — نصب (فتحة) وقت کے متعلق adverb کے طور پر۔ صَبَاحًا (صبح) اور مَسَاءً (شام) بھی نصب میں ہیں۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Key vocabulary — Time markers",
-        "ar": "Key vocabulary — Time markers",
-        "ur": "اہم الفاظ — وقت کے اشارے"
-      },
-      "body": {
-        "en": "يَوْمٌ — day · يَوْمٌ (singular) → أَيَّامٌ (plural) · أَمْسٌ — yesterday · الْيَوْمُ — today · غَدًا — tomorrow · أُسْبُوعٌ — week · صَبَاحًا — in the morning · مَسَاءً — in the evening",
-        "ar": "يَوْمٌ — day · يَوْمٌ (singular) → أَيَّامٌ (plural) · أَمْسٌ — yesterday · الْيَوْمُ — today · غَدًا — tomorrow · أُسْبُوعٌ — week · صَبَاحًا — in the morning · مَسَاءً — in the evening",
-        "ur": "يَوْمٌ — دن · يَوْمٌ (واحد) → أَيَّامٌ (جمع) · أَمْسٌ — کل · الْيَوْمُ — آج · غَدًا — پرسوں · أُسْبُوعٌ — ہفتہ · صَبَاحًا — صبح · مَسَاءً — شام کو"
-      }
-    }
-  ],
-  "exercises": [
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch16-l03-ex01",
-      "prompt": {
-        "ar": "أَمْسِ الطَّالِبُ قَرَأَ الدَّرْسَ",
-        "ar_plain": "امس الطالب قرأ الدرس",
-        "translit": "amsi at-taalibu qara-a ad-darsa",
-        "en": "Yesterday the student read the lesson.",
-        "ur": "کل طالب علم نے سبق پڑھا۔"
-      },
-      "options": [
-        {
-          "en": "Yesterday the student read the lesson.",
-          "ur": "کل طالب علم نے سبق پڑھا۔"
-        },
-        {
-          "en": "Today the student reads the lesson.",
-          "ur": "آج طالب علم سبق پڑھتا ہے۔"
-        },
-        {
-          "en": "Tomorrow the student reads the lesson.",
-          "ur": "کل طالب علم سبق پڑھتا ہے۔"
-        },
-        {
-          "en": "Yesterday the teacher read the lesson.",
-          "ur": "کل استاد نے سبق پڑھا۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "أَمْسِ means 'yesterday' and triggers the genitive case (كسرة). The past tense verb قَرَأَ tells us this happened in the past.",
-        "ur": "أَمْسِ کا مطلب ہے 'کل' اور جر (كسرة) کی حالت دیتا ہے۔ ماضی فعل قَرَأَ بتاتا ہے کہ یہ ماضی میں ہوا۔"
-      }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch16-l03-ex02",
-      "statement": {
-        "en": "غَدًا means 'yesterday' and أَمْسٌ means 'tomorrow.'",
-        "ur": "غَدًا کا مطلب ہے 'کل' اور أَمْسٌ کا مطلب ہے 'پرسوں'۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch16-l03-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ سَأَذْهَبُ إِلَى الْمَدْرَسَةِ",
-      "hint": {
-        "en": "Tomorrow I will go to the school.",
-        "ur": "کل میں مدرسے میں جاؤں گا۔"
-      },
-      "options": [
-        {
-          "ar": "غَدًا",
-          "ar_plain": "غدا",
-          "translit": "ghadan",
-          "en": "tomorrow",
-          "ur": "کل"
-        },
+      "examples": [
         {
           "ar": "أَمْسِ",
           "ar_plain": "امس",
           "translit": "amsi",
           "en": "yesterday",
-          "ur": "کل"
+          "ur": "گزرا ہوا کل"
         },
         {
-          "ar": "صَبَاحًا",
-          "ar_plain": "صباحا",
-          "translit": "sabaahan",
-          "en": "in the morning",
-          "ur": "صبح"
+          "ar": "غَدًا",
+          "ar_plain": "غدا",
+          "translit": "ghadan",
+          "en": "tomorrow",
+          "ur": "آنے والا کل"
+        }
+      ]
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ أَمْسِ",
+        "ar_plain": "ذهب الطالب الى المدرسة امس",
+        "translit": "dhahaba ṭ-ṭālibu ilā l-madrasati amsi",
+        "en": "The student went to the school yesterday.",
+        "ur": "طالب علم گزرے ہوئے کل اسکول گیا۔"
+      },
+      "explanation": {
+        "en": "ذَهَبَ, went, from Chapter 5, tells you the action has happened; أَمْسِ tells you when. إِلَى الْمَدْرَسَةِ is to the school, towards it.",
+        "ur": "ذَهَبَ، گیا، باب 5 سے، بتاتا ہے کہ کام ہو چکا؛ أَمْسِ بتاتا ہے کب۔ إِلَى الْمَدْرَسَةِ کا مطلب ہے اسکول کی طرف۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الدَّرْسُ الْيَوْمَ",
+        "ar_plain": "الدرس اليوم",
+        "translit": "ad-darsu l-yawma",
+        "en": "The lesson is today.",
+        "ur": "سبق آج ہے۔"
+      },
+      "explanation": {
+        "en": "A scheduling line with no verb: الدَّرْسُ, the lesson, الْيَوْمَ, today. The lesson is today.",
+        "ur": "بغیر فعل کے وقت بتانے والی سطر: الدَّرْسُ، سبق، الْيَوْمَ، آج۔ سبق آج ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الدَّرْسُ غَدًا",
+        "ar_plain": "الدرس غدا",
+        "translit": "ad-darsu ghadan",
+        "en": "The lesson is tomorrow.",
+        "ur": "سبق آنے والے کل ہے۔"
+      },
+      "explanation": {
+        "en": "Change one word and the day moves: الدَّرْسُ غَدًا, the lesson is tomorrow. No future verb is needed to say it.",
+        "ur": "ایک لفظ بدلیں اور دن بدل جاتا ہے: الدَّرْسُ غَدًا، سبق آنے والے کل ہے۔ یہ کہنے کے لیے مستقبل کا فعل نہیں چاہیے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Kahf 18:23: And never say of anything, \"I will surely do that tomorrow,\"",
+        "ar": "وَلَا تَقُولَنَّ لِشَيْءٍ إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا",
+        "ur": "Al-Kahf 18:23: اور کسی چیز کے بارے میں ہرگز نہ کہو کہ میں یہ کام کل ضرور کروں گا،"
+      },
+      "explanation": {
+        "en": "The last word is غَدًا, tomorrow. The next ayah, 18:24, completes the teaching: except when adding, if Allah wills. Recognise غَدًا here; the other words and verb forms of the ayah are not tested.",
+        "ur": "آخری لفظ غَدًا، آنے والا کل، ہے۔ اگلی آیت، 18:24، بات مکمل کرتی ہے: مگر یہ کہ اللہ چاہے۔ یہاں غَدًا پہچانیں؛ آیت کے دوسرے الفاظ اور فعل کی صورتیں امتحان میں نہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018023.mp3"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "MATCHING",
+      "id": "ch16-l03-ex01",
+      "left_column": [
+        {
+          "ar": "أَمْسِ",
+          "ar_plain": "امس",
+          "translit": "amsi",
+          "en": "yesterday",
+          "ur": "گزرا ہوا کل"
         },
         {
           "ar": "الْيَوْمَ",
@@ -191,54 +170,59 @@
           "translit": "al-yawma",
           "en": "today",
           "ur": "آج"
-        }
-      ],
-      "correct_answer": {
-        "ar": "غَدًا",
-        "ar_plain": "غدا",
-        "translit": "ghadan",
-        "en": "tomorrow",
-        "ur": "کل"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch16-l03-ex04",
-      "left_column": [
-        {
-          "ar": "أَمْسٌ",
-          "ar_plain": "امس",
-          "translit": "amsin",
-          "en": "yesterday",
-          "ur": "کل"
-        },
-        {
-          "ar": "الْيَوْمُ",
-          "ar_plain": "اليوم",
-          "translit": "al-yawmu",
-          "en": "today",
-          "ur": "آج"
         },
         {
           "ar": "غَدًا",
           "ar_plain": "غدا",
           "translit": "ghadan",
           "en": "tomorrow",
-          "ur": "پرسوں"
-        },
-        {
-          "ar": "أُسْبُوعٌ",
-          "ar_plain": "اسبوع",
-          "translit": "usbuu-un",
-          "en": "week",
-          "ur": "ہفتہ"
+          "ur": "آنے والا کل"
         }
       ],
       "right_column": [
         {
+          "en": "today",
+          "ur": "آج"
+        },
+        {
+          "en": "tomorrow",
+          "ur": "آنے والا کل"
+        },
+        {
           "en": "yesterday",
-          "ur": "کل"
+          "ur": "گزرا ہوا کل"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch16-l03-ex02",
+      "prompt": {
+        "ar": "غَدًا",
+        "ar_plain": "غدا",
+        "translit": "ghadan",
+        "en": "tomorrow",
+        "ur": "آنے والا کل"
+      },
+      "options": [
+        {
+          "en": "yesterday",
+          "ur": "گزرا ہوا کل"
         },
         {
           "en": "today",
@@ -246,41 +230,44 @@
         },
         {
           "en": "tomorrow",
-          "ur": "پرسوں"
+          "ur": "آنے والا کل"
         },
         {
-          "en": "week",
-          "ur": "ہفتہ"
+          "en": "the day after tomorrow",
+          "ur": "پرسوں"
         }
       ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "غَدًا is the day after today: tomorrow, آنے والا کل. It is never پرسوں.",
+        "ur": "غَدًا آج کے بعد کا دن ہے: آنے والا کل۔ یہ کبھی پرسوں نہیں۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch16-l03-ex05",
-      "target_translation": {
-        "en": "Today the lesson is new.",
-        "ur": "آج سبق نیا ہے۔"
+      "type": "FILL_BLANK",
+      "id": "ch16-l03-ex03",
+      "mode": "TAP",
+      "sentence_ar": "ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ ___",
+      "hint": {
+        "en": "The student went to the school yesterday.",
+        "ur": "طالب علم گزرے ہوئے کل اسکول گیا۔"
       },
-      "tiles": [
+      "options": [
+        {
+          "ar": "غَدًا",
+          "ar_plain": "غدا",
+          "translit": "ghadan",
+          "en": "tomorrow",
+          "ur": "آنے والا کل"
+        },
+        {
+          "ar": "أَمْسِ",
+          "ar_plain": "امس",
+          "translit": "amsi",
+          "en": "yesterday",
+          "ur": "گزرا ہوا کل"
+        },
         {
           "ar": "الْيَوْمَ",
           "ar_plain": "اليوم",
@@ -294,147 +281,232 @@
           "translit": "ad-darsu",
           "en": "the lesson",
           "ur": "سبق"
-        },
-        {
-          "ar": "جَدِيدٌ",
-          "ar_plain": "جديد",
-          "translit": "jadiidun",
-          "en": "new",
-          "ur": "نیا"
-        },
-        {
-          "ar": "الْقِرَاءَةُ",
-          "ar_plain": "القراءة",
-          "translit": "al-qiraa-atu",
-          "en": "the reading",
-          "ur": "پڑھائی"
         }
       ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
+      "correct_answer": {
+        "ar": "أَمْسِ",
+        "ar_plain": "امس",
+        "translit": "amsi",
+        "en": "yesterday",
+        "ur": "گزرا ہوا کل"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The hint says yesterday: أَمْسِ, the day that has passed.",
+        "ur": "اشارہ گزرے ہوئے کل کا ہے: أَمْسِ، جو دن گزر گیا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch16-l03-ex04",
+      "statement": {
+        "en": "غَدًا means the day after tomorrow.",
+        "ur": "غَدًا کا مطلب پرسوں ہے۔",
+        "ar_example": {
+          "ar": "غَدًا",
+          "ar_plain": "غدا",
+          "translit": "ghadan",
+          "en": "tomorrow",
+          "ur": "آنے والا کل"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. غَدًا is tomorrow, the day right after today: آنے والا کل.",
+        "ur": "غلط۔ غَدًا آنے والا کل ہے، آج کے فوراً بعد کا دن۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch16-l03-ex06",
+      "id": "ch16-l03-ex05",
       "prompt": {
-        "ar": "صَبَاحًا أَذْهَبُ إِلَى الْمَدْرَسَةِ",
-        "ar_plain": "صباحا اذهب الى المدرسة",
-        "translit": "sabaahan athhabu ilaa al-madrasati",
-        "en": "In the morning I go to the school.",
-        "ur": "صبح میں مدرسے میں جاتا ہوں۔"
+        "ar": "الدَّرْسُ غَدًا",
+        "ar_plain": "الدرس غدا",
+        "translit": "ad-darsu ghadan",
+        "en": "The lesson is tomorrow.",
+        "ur": "سبق آنے والے کل ہے۔"
       },
       "options": [
         {
-          "en": "In the morning I go to the school.",
-          "ur": "صبح میں مدرسے میں جاتا ہوں۔"
+          "en": "The lesson is tomorrow.",
+          "ur": "سبق آنے والے کل ہے۔"
         },
         {
-          "en": "In the evening I go to the school.",
-          "ur": "شام کو میں مدرسے میں جاتا ہوں۔"
+          "en": "The lesson was yesterday.",
+          "ur": "سبق گزرے ہوئے کل تھا۔"
         },
         {
-          "en": "In the morning the school is big.",
-          "ur": "صبح مدرسہ بڑی ہے۔"
+          "en": "The lesson is today.",
+          "ur": "سبق آج ہے۔"
         },
         {
-          "en": "Tomorrow I go to the school.",
-          "ur": "کل میں مدرسے میں جاتا ہوں۔"
+          "en": "The lesson is new.",
+          "ur": "سبق نیا ہے۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "صَبَاحًا is 'in the morning' — an accusative adverb of time. أَذْهَبُ is 'I go' (present tense). إِلَى الْمَدْرَسَةِ means 'to the school' (genitive after إِلَى).",
-        "ur": "صَبَاحًا 'صبح' ہے — نصب میں وقت کا متعلقہ۔ أَذْهَبُ 'میں جاتا ہوں' ہے (مضارع)۔ إِلَى الْمَدْرَسَةِ کا مطلب ہے 'مدرسے میں' (جر میں إِلَى کے بعد)۔"
+        "en": "غَدًا is tomorrow, so the lesson is tomorrow.",
+        "ur": "غَدًا آنے والا کل ہے، اس لیے سبق آنے والے کل ہے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "AUDIO_RECOGNITION",
+      "id": "ch16-l03-ex06",
+      "arabic_text": "الدَّرْسُ الْيَوْمَ",
+      "options": [
+        {
+          "en": "The lesson is tomorrow.",
+          "ur": "سبق آنے والے کل ہے۔"
+        },
+        {
+          "en": "The lesson was yesterday.",
+          "ur": "سبق گزرے ہوئے کل تھا۔"
+        },
+        {
+          "en": "The student is in the school.",
+          "ur": "طالب علم اسکول میں ہے۔"
+        },
+        {
+          "en": "The lesson is today.",
+          "ur": "سبق آج ہے۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "You heard الْيَوْمَ, today: the lesson is today.",
+        "ur": "آپ نے الْيَوْمَ، آج، سنا: سبق آج ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
       "id": "ch16-l03-ex07",
-      "statement": {
-        "en": "أُسْبُوعٌ means 'week' and الْأُسَابِيعُ is its plural.",
-        "ur": "أُسْبُوعٌ کا مطلب ہے 'ہفتہ' اور الْأُسَابِيعُ اس کی جمع ہے۔"
+      "ayah_fragment": {
+        "ar": "وَلَا تَقُولَنَّ لِشَيْءٍ إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا",
+        "surah_ref": "Al-Kahf 18:23"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "options": [
+        {
+          "en": "غَدًا — yesterday",
+          "ur": "غَدًا — گزرا ہوا کل"
+        },
+        {
+          "en": "غَدًا — tomorrow",
+          "ur": "غَدًا — آنے والا کل"
+        },
+        {
+          "en": "غَدًا — today",
+          "ur": "غَدًا — آج"
+        },
+        {
+          "en": "ذَٰلِكَ — tomorrow",
+          "ur": "ذَٰلِكَ — آنے والا کل"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The last word, غَدًا, is tomorrow. ذَٰلِكَ is the pointer that, which you know from Chapter 1.",
+        "ur": "آخری لفظ غَدًا آنے والا کل ہے۔ ذَٰلِكَ اشارہ 'وہ' ہے، جو آپ باب 1 سے جانتے ہیں۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
       "id": "ch16-l03-ex08",
-      "xp_value": 1,
+      "target_translation": {
+        "en": "The student went to the school yesterday.",
+        "ur": "طالب علم گزرے ہوئے کل اسکول گیا۔"
+      },
       "tiles": [
         {
-          "ar": "الْيَوْمُ",
-          "ar_plain": "اليوم",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "گیا"
         },
         {
-          "ar": "طَالِبٌ",
-          "ar_plain": "طالب",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
         },
         {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilā",
+          "en": "to, towards",
+          "ur": "کی طرف"
         },
         {
           "ar": "الْمَدْرَسَةِ",
           "ar_plain": "المدرسة",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
+          "translit": "al-madrasati",
+          "en": "the school",
+          "ur": "اسکول"
+        },
+        {
+          "ar": "أَمْسِ",
+          "ar_plain": "امس",
+          "translit": "amsi",
+          "en": "yesterday",
+          "ur": "گزرا ہوا کل"
+        },
+        {
+          "ar": "غَدًا",
+          "ar_plain": "غدا",
+          "translit": "ghadan",
+          "en": "tomorrow",
+          "ur": "آنے والا کل"
         }
       ],
       "correct_order": [
         0,
         1,
         2,
-        3
+        3,
+        4
       ],
-      "target_translation": {
-        "en": "Today the student is at the school.",
-        "ur": "آج طالب علم مدرسے میں ہے۔"
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Action, doer, where to, then when: ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ أَمْسِ. غَدًا cannot go with a past action here.",
+        "ur": "کام، کرنے والا، کس طرف، پھر کب: ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ أَمْسِ۔ یہاں ماضی کے کام کے ساتھ غَدًا نہیں آ سکتا۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
       "en": "Yesterday, today, tomorrow",
-      "ar": "أَمْسٌ، الْيَوْمُ، غَدًا",
-      "ur": "کل، آج، پرسوں"
+      "ur": "گزرا ہوا کل، آج، آنے والا کل"
     },
     "ayah": {
-      "surah": 107,
-      "ayah": 1,
-      "label": "Al-Ma'un 107:1",
-      "ar": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ",
-      "en": "Have you seen the one who denies the recompense?",
-      "ur": "کیا آپ نے اسے دیکھا جو جزا سے انکار کرتا ہے؟",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107001.mp3"
+      "surah": 18,
+      "ayah": 23,
+      "label": "Al-Kahf 18:23",
+      "ar": "وَلَا تَقُولَنَّ لِشَيْءٍ إِنِّي فَاعِلٌ ذَٰلِكَ غَدًا",
+      "en": "And never say of anything, \"I will surely do that tomorrow,\"",
+      "ur": "اور کسی چیز کے بارے میں ہرگز نہ کہو کہ میں یہ کام کل ضرور کروں گا،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018023.mp3"
     },
     "highlighted_word_indices": [
-      0
+      6
+    ],
+    "highlighted_words": [
+      "غَدًا"
     ],
     "noor_explanation": {
-      "en": "يُكَذِّبُ is from كَذَّبَ (to deny/falsify). The Day of Recompense (الدِّينِ) is the day of reckoning. Every day we spend at school is preparation for that day — use your time wisely.",
-      "ur": "يُكَذِّبُ، كَذَّبَ (انکار/جھٹلانا) سے ہے۔ جزا کا دن (الدِّينِ) حساب کا دن ہے۔ سکول میں جو ہر دن گزارتے ہیں وہ اس دن کی تیاری ہے — اپنے وقت کو عقلمندی سے استعمال کریں۔"
+      "en": "غَدًا: tomorrow, the day that is coming. With أَمْسِ for the day that has passed and الْيَوْمَ for this day, you can now place a school event in time.",
+      "ur": "غَدًا: آنے والا کل، وہ دن جو آ رہا ہے۔ گزرے ہوئے دن کے لیے أَمْسِ اور اس دن کے لیے الْيَوْمَ کے ساتھ اب آپ اسکول کے کسی واقعے کو وقت میں رکھ سکتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Time moves forward — أَمْسٌ, الْيَوْمُ, غَدًا — yesterday, today, tomorrow. Each day at school is a gift. Do not waste it, for every moment of learning draws you closer to your Lord.",
-      "ur": "وقت آگے بڑھتا ہے — أَمْسٌ، الْيَوْمُ، غَدًا — کل، آج، پرسوں۔ سکول میں ہر دن ایک تحفت ہے۔ اسے ضائع نہ کریں، کیونکہ سیکھنے کا ہر لمظہ آپ کو اپنے رب کے قریب لے جاتا ہے۔"
+      "en": "You can tell yesterday, today and tomorrow apart, even where Urdu uses one word. Next: understanding a teacher's instructions in class.",
+      "ur": "آپ گزرے ہوئے کل، آج اور آنے والے کل میں فرق کر سکتے ہیں، وہاں بھی جہاں اردو ایک لفظ استعمال کرتی ہے۔ آگے: کلاس میں استاد کی ہدایات سمجھنا۔"
     }
   }
 }

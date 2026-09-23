@@ -1,0 +1,439 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 19 final test (ch19-test, new). Twelve multiple-choice questions on the proposal's blueprint: final kasra versus my (3), owner in a sentence (2), ة → ت transfer (2), noun-attached versus action-attached ـهُ (2), 109:6 and 113:1 in context (2), Quran versus authored (1). No ـنَا / ـكُمْ / ـهُمْ, no Al-Falaq word bridge vocabulary, no genitive-case derivation or object-pronoun paradigm. Pass mark 80 % (10 of 12). Rebuilt 2026-09-23 from Docs/proposals/chapter-19-content-proposal.md; the chapter map and fixtures named two different reader_lecture_19 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "باب 19 کا آخری امتحان",
+    "chapter_order": 19,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 12,
+      "ayah": 100,
+      "label": "Yusuf 12:100",
+      "ar": "إِنَّ رَبِّي لَطِيفٌ لِّمَا يَشَاءُ",
+      "en": "Indeed, my Lord is subtle in what He wills.",
+      "ur": "بے شک میرا رب جو چاہتا ہے اس کی باریک تدبیر کرنے والا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012100.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 19.",
+      "ur": "باب 19 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 19,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch19-test-q01",
+        "topic": {
+          "en": "Kasra or my",
+          "ur": "زیر یا میرا"
+        },
+        "prompt": {
+          "en": "Which one means 'my Lord'?",
+          "ur": "کس کا مطلب 'میرا رب' ہے؟"
+        },
+        "options": [
+          {
+            "en": "رَبِّ الْعَالَمِينَ",
+            "ur": "رَبِّ الْعَالَمِينَ"
+          },
+          {
+            "en": "بِرَبِّ الْفَلَقِ",
+            "ur": "بِرَبِّ الْفَلَقِ"
+          },
+          {
+            "en": "رَبِّي",
+            "ur": "رَبِّي"
+          },
+          {
+            "en": "رَبُّ الْبَيْتِ",
+            "ur": "رَبُّ الْبَيْتِ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch19-test-q02",
+        "topic": {
+          "en": "Kasra or my",
+          "ur": "زیر یا میرا"
+        },
+        "prompt": {
+          "en": "Al-Fatiha 1:2 — what does رَبِّ الْعَالَمِينَ mean?",
+          "ur": "سورۃ الفاتحہ 1:2 — رَبِّ الْعَالَمِينَ کا کیا مطلب ہے؟"
+        },
+        "arabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "options": [
+          {
+            "en": "Lord of the worlds",
+            "ur": "تمام جہانوں کا رب"
+          },
+          {
+            "en": "my Lord of the worlds",
+            "ur": "میرا، جہانوں کا رب"
+          },
+          {
+            "en": "my worlds",
+            "ur": "میرے جہان"
+          },
+          {
+            "en": "the worlds' my Lord",
+            "ur": "جہانوں کا میرا رب"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch19-test-q03",
+        "topic": {
+          "en": "Kasra or my",
+          "ur": "زیر یا میرا"
+        },
+        "prompt": {
+          "en": "Which statement is true?",
+          "ur": "کون سی بات درست ہے؟"
+        },
+        "options": [
+          {
+            "en": "Every final kasra means my.",
+            "ur": "ہر آخری زیر کا مطلب میرا ہے۔"
+          },
+          {
+            "en": "رَبِّ always means my Lord.",
+            "ur": "رَبِّ کا مطلب ہمیشہ میرا رب ہے۔"
+          },
+          {
+            "en": "A kasra means his.",
+            "ur": "زیر کا مطلب اس کا ہے۔"
+          },
+          {
+            "en": "My is shown by a written ي; a kasra alone does not prove it.",
+            "ur": "'میرا' لکھی ہوئی ي سے ظاہر ہوتا ہے؛ صرف زیر اسے ثابت نہیں کرتا۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch19-test-q04",
+        "topic": {
+          "en": "Find the owner",
+          "ur": "مالک ڈھونڈیں"
+        },
+        "prompt": {
+          "en": "فَاطِمَةُ طَالِبَةٌ، كِتَابُهَا جَدِيدٌ — whose book is new?",
+          "ur": "فَاطِمَةُ طَالِبَةٌ، كِتَابُهَا جَدِيدٌ — کس کی کتاب نئی ہے؟"
+        },
+        "arabic": "فَاطِمَةُ طَالِبَةٌ، كِتَابُهَا جَدِيدٌ",
+        "options": [
+          {
+            "en": "the speaker's",
+            "ur": "بولنے والے کی"
+          },
+          {
+            "en": "Fatimah's",
+            "ur": "فاطمہ کی"
+          },
+          {
+            "en": "the listener's",
+            "ur": "سننے والے کی"
+          },
+          {
+            "en": "a man's",
+            "ur": "کسی مرد کی"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch19-test-q05",
+        "topic": {
+          "en": "Find the owner",
+          "ur": "مالک ڈھونڈیں"
+        },
+        "prompt": {
+          "en": "Someone asks Fatimah أَيْنَ قَلَمُكِ؟ Which reply fits?",
+          "ur": "کوئی فاطمہ سے پوچھتا ہے أَيْنَ قَلَمُكِ؟ کون سا جواب مناسب ہے؟"
+        },
+        "arabic": "أَيْنَ قَلَمُكِ يَا فَاطِمَةُ؟",
+        "options": [
+          {
+            "en": "Your pen is on the desk.",
+            "ur": "تمہارا قلم میز پر ہے۔",
+            "arabic": "قَلَمُكِ عَلَى الْمَكْتَبِ"
+          },
+          {
+            "en": "His pen is on the desk.",
+            "ur": "اس کا قلم میز پر ہے۔",
+            "arabic": "قَلَمُهُ عَلَى الْمَكْتَبِ"
+          },
+          {
+            "en": "My pen is on the desk.",
+            "ur": "میرا قلم میز پر ہے۔",
+            "arabic": "قَلَمِي عَلَى الْمَكْتَبِ"
+          },
+          {
+            "en": "This is a pen.",
+            "ur": "یہ ایک قلم ہے۔",
+            "arabic": "هٰذَا قَلَمٌ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch19-test-q06",
+        "topic": {
+          "en": "ة → ت",
+          "ur": "ة ← ت"
+        },
+        "prompt": {
+          "en": "How do you write 'his village' (قَرْيَةٌ + ـهُ)?",
+          "ur": "'اس کا گاؤں' (قَرْيَةٌ + ـهُ) کیسے لکھیں گے؟"
+        },
+        "options": [
+          {
+            "en": "قَرْيَتُهُ",
+            "ur": "قَرْيَتُهُ"
+          },
+          {
+            "en": "قَرْيَةُهُ",
+            "ur": "قَرْيَةُهُ"
+          },
+          {
+            "en": "قَرْيَهُ",
+            "ur": "قَرْيَهُ"
+          },
+          {
+            "en": "قَرْيَتِي",
+            "ur": "قَرْيَتِي"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch19-test-q07",
+        "topic": {
+          "en": "ة → ت",
+          "ur": "ة ← ت"
+        },
+        "prompt": {
+          "en": "Hud 11:71 — what does وَامْرَأَتُهُ mean?",
+          "ur": "سورۃ ہود 11:71 — وَامْرَأَتُهُ کا کیا مطلب ہے؟"
+        },
+        "arabic": "وَامْرَأَتُهُ قَائِمَةٌ",
+        "options": [
+          {
+            "en": "and a woman",
+            "ur": "اور ایک عورت"
+          },
+          {
+            "en": "and her husband",
+            "ur": "اور اس کا شوہر"
+          },
+          {
+            "en": "and my wife",
+            "ur": "اور میری بیوی"
+          },
+          {
+            "en": "and his wife",
+            "ur": "اور اس کی بیوی"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch19-test-q08",
+        "topic": {
+          "en": "His or him",
+          "ur": "اس کا یا اسے"
+        },
+        "prompt": {
+          "en": "In كِتَابُهُ, what does ـهُ mean?",
+          "ur": "كِتَابُهُ میں ـهُ کا کیا مطلب ہے؟"
+        },
+        "arabic": "كِتَابُهُ",
+        "options": [
+          {
+            "en": "him (on an action)",
+            "ur": "اسے (کام پر)"
+          },
+          {
+            "en": "his (on a noun)",
+            "ur": "اس کا (اسم پر)"
+          },
+          {
+            "en": "my",
+            "ur": "میرا"
+          },
+          {
+            "en": "her",
+            "ur": "اس کی (عورت)"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch19-test-q09",
+        "topic": {
+          "en": "His or him",
+          "ur": "اس کا یا اسے"
+        },
+        "prompt": {
+          "en": "Al-Baqarah 2:87 — in وَأَيَّدْنَاهُ, what is ـهُ?",
+          "ur": "سورۃ البقرہ 2:87 — وَأَيَّدْنَاهُ میں ـهُ کیا ہے؟"
+        },
+        "arabic": "وَأَيَّدْنَاهُ بِرُوحِ الْقُدُسِ",
+        "options": [
+          {
+            "en": "his, on a noun",
+            "ur": "اس کا، اسم پر"
+          },
+          {
+            "en": "my",
+            "ur": "میرا"
+          },
+          {
+            "en": "him, the one who was supported: ـهُ on an action",
+            "ur": "اسے، جس کی مدد ہوئی: کام پر ـهُ"
+          },
+          {
+            "en": "the Pure Spirit",
+            "ur": "روح القدس"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch19-test-q10",
+        "topic": {
+          "en": "Quran in context",
+          "ur": "سیاق میں قرآن"
+        },
+        "prompt": {
+          "en": "Al-Kafirun 109:6 — what does دِينِ mean in وَلِيَ دِينِ?",
+          "ur": "سورۃ الکافرون 109:6 — وَلِيَ دِينِ میں دِينِ کا کیا مطلب ہے؟"
+        },
+        "arabic": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+        "options": [
+          {
+            "en": "my religion, though the ي of my is not written",
+            "ur": "میرا دین، اگرچہ 'میرا' کی ي لکھی نہیں"
+          },
+          {
+            "en": "a religion",
+            "ur": "کوئی دین"
+          },
+          {
+            "en": "your religion",
+            "ur": "تمہارا دین"
+          },
+          {
+            "en": "religion of…",
+            "ur": "… کا دین"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch19-test-q11",
+        "topic": {
+          "en": "Quran in context",
+          "ur": "سیاق میں قرآن"
+        },
+        "prompt": {
+          "en": "Al-Falaq 113:1 — why is بِرَبِّ الْفَلَقِ not 'my Lord'?",
+          "ur": "سورۃ الفلق 113:1 — بِرَبِّ الْفَلَقِ کا مطلب 'میرا رب' کیوں نہیں؟"
+        },
+        "arabic": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+        "options": [
+          {
+            "en": "Because قُلْ comes first.",
+            "ur": "کیونکہ قُلْ پہلے آتا ہے۔"
+          },
+          {
+            "en": "No ي is written, and الْفَلَقِ follows: the Lord of daybreak.",
+            "ur": "ي لکھی نہیں، اور الْفَلَقِ بعد میں آتا ہے: صبح کا رب۔"
+          },
+          {
+            "en": "Because بِـ always cancels my.",
+            "ur": "کیونکہ بِـ ہمیشہ 'میرا' ختم کر دیتا ہے۔"
+          },
+          {
+            "en": "It is my Lord.",
+            "ur": "یہ میرا رب ہی ہے۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch19-test-q12",
+        "topic": {
+          "en": "Quran or practice sentence",
+          "ur": "قرآن یا مشق کا جملہ"
+        },
+        "prompt": {
+          "en": "Which of these is a Quran quotation?",
+          "ur": "ان میں سے قرآنی اقتباس کون سا ہے؟"
+        },
+        "options": [
+          {
+            "en": "قَرْيَتُهُ كَبِيرَةٌ",
+            "ur": "قَرْيَتُهُ كَبِيرَةٌ"
+          },
+          {
+            "en": "كِتَابُهَا عَلَى الْمَكْتَبِ",
+            "ur": "كِتَابُهَا عَلَى الْمَكْتَبِ"
+          },
+          {
+            "en": "قَلَمِي عَلَى الْمَكْتَبِ",
+            "ur": "قَلَمِي عَلَى الْمَكْتَبِ"
+          },
+          {
+            "en": "وَامْرَأَتُهُ قَائِمَةٌ",
+            "ur": "وَامْرَأَتُهُ قَائِمَةٌ"
+          }
+        ],
+        "correct_index": 3
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 19 — attached pronouns in context",
+      "ur": "باب 19 — سیاق میں جڑی ہوئی ضمیریں"
+    },
+    "ayah": {
+      "surah": 12,
+      "ayah": 100,
+      "label": "Yusuf 12:100",
+      "ar": "إِنَّ رَبِّي لَطِيفٌ لِّمَا يَشَاءُ",
+      "en": "Indeed, my Lord is subtle in what He wills.",
+      "ur": "بے شک میرا رب جو چاہتا ہے اس کی باریک تدبیر کرنے والا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012100.mp3"
+    },
+    "highlighted_word_indices": [
+      1
+    ],
+    "highlighted_words": [
+      "رَبِّي"
+    ],
+    "noor_explanation": {
+      "en": "رَبِّي: my Lord, with the written ي. You can now tell it from رَبِّ followed by a noun, read his and him by what they attach to, open the ة into ت, and find the owner in the sentence.",
+      "ur": "رَبِّي: میرا رب، لکھی ہوئی ي کے ساتھ۔ اب آپ اسے اس رَبِّ سے الگ کر سکتے ہیں جس کے بعد اسم ہو، 'اس کا' اور 'اسے' کو اس سے پڑھ سکتے ہیں جس سے وہ جڑے ہیں، ة کو ت میں کھول سکتے ہیں، اور جملے میں مالک ڈھونڈ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 19 complete. Chapter 20 adds the plural endings: our, your for a group, and their.",
+      "ur": "باب 19 مکمل۔ باب 20 جمع کے آخر جوڑتا ہے: ہمارا، کئی لوگوں کے لیے تمہارا، اور ان کا۔"
+    }
+  }
+}

@@ -623,33 +623,43 @@ const specs = [
     ],
   },
 
-  // ── Ch15 ── Demonstratives Expanded — هَؤُلَاءِ وَأُولَئِكَ ─────────────────
+  // ── Ch15 ── These and Those in Quranic Context ──────────────────────────
+  // Docs/proposals/chapter-15-content-proposal.md (2026-09-23): أُولٰئِكَ against
+  // the Chapter 9 هٰؤُلَاءِ (Al-Baqarah 2:5); people or things, with the هٰذِهِ /
+  // تِلْكَ beginner default for non-human plurals (Al-Hijr 15:68); pointing
+  // phrase versus complete statement (Al-Mu'minun 23:10); a Quran reading lab
+  // on who each pointer means (Al-Kahf 18:15). The position-words lesson is
+  // gone (Chapter 2 teaches them); duals, case theory and rhetoric are out.
   {
     order: 15,
-    sourceFile: "reader_lecture_15_haulai_ulaika.md",
-    title: "Demonstratives Expanded — These and Those",
-    titleAr: "هَؤُلَاءِ وَأُولَئِكَ",
-    description: "Plural demonstratives for people and things — near and far groups.",
-    hook: { ayahAr: "أُولَئِكَ عَلَى هُدًى مِّن رَّبِّهِمْ", ayahRef: "Al-Baqarah 2:5", highlightedWord: "أُولَئِكَ" },
+    // The former reader_lecture_15 files never existed in the repository; the
+    // approved proposal is the content specification.
+    sourceFile: "Docs/proposals/chapter-15-content-proposal.md",
+    title: "These and Those in Quranic Context",
+    titleUr: "یہ اور وہ: قرآنی سیاق میں",
+    titleAr: "هٰؤُلَاءِ وَأُولٰئِكَ",
+    description: "Pointing at groups: هٰؤُلَاءِ and أُولٰئِكَ for people, the هٰذِهِ / تِلْكَ default for things, pointing phrase versus statement, and finding who a Quranic pointer means.",
+    descriptionUr: "گروہوں کی طرف اشارہ: لوگوں کے لیے هٰؤُلَاءِ اور أُولٰئِكَ، چیزوں کے لیے هٰذِهِ / تِلْكَ کا بنیادی قاعدہ، اشاری ترکیب یا جملہ، اور قرآنی اشارے کا مرجع ڈھونڈنا۔",
+    hook: { ayahAr: "أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ", ayahRef: "Al-Baqarah 2:5", highlightedWord: "أُولَٰئِكَ" },
     examples: [
-      card("هَؤُلَاءِ هُمُ الْمُؤْمِنُونَ", "These are the believers", "haa'ulaa'i humul-mu'minoon"),
-      card("أُولَئِكَ هُمُ الْمُفْلِحُونَ", "Those are the successful ones", "ulaa'ika humul-muflihoon"),
-      card("هَؤُلَاءِ طُلَّابٌ مُجْتَهِدُونَ", "These are hardworking students", "haa'ulaa'i tullaabun mujtahidoon"),
-      card("أُولَئِكَ عَلَى هُدًى مِنْ رَبِّهِمْ", "Those are upon guidance from their Lord", "ulaa'ika 'alaa hudan min rabbihim"),
+      card("هٰؤُلَاءِ طُلَّابٌ", "These are students.", "hāʾulāʾi ṭullābun"),
+      card("أُولٰئِكَ طُلَّابٌ", "Those are students.", "ulāʾika ṭullābun"),
+      card("هٰذِهِ كُتُبٌ", "These are books.", "hādhihi kutubun"),
+      card("تِلْكَ بُيُوتٌ", "Those are houses.", "tilka buyūtun"),
     ],
-    parseText: "أُولَئِكَ هُمُ الْمُفْلِحُونَ",
-    parseTokens: [token("أُولَئِكَ", "مبتدأ", "those"), token("هُمُ", "ضمير فصل", "they"), token("الْمُفْلِحُونَ", "خبر", "the successful")],
-    conversation: ["مَنْ هَؤُلَاءِ؟", "هَؤُلَاءِ أَصْدِقَائِي الطُّلَّابُ"],
-    conversationDistractor: "الْمَسَاجِدُ الْكَبِيرَةُ جَمِيلَةٌ",
-    distractor: "The new books are on the desk",
+    parseText: "هٰؤُلَاءِ مُسْلِمُونَ",
+    parseTokens: [token("هٰؤُلَاءِ", "مبتدأ", "these"), token("مُسْلِمُونَ", "خبر", "Muslims")],
+    conversation: ["مَنْ أُولٰئِكَ؟", "أُولٰئِكَ مُعَلِّمُونَ"],
+    conversationDistractor: "هٰذِهِ كُتُبٌ",
+    distractor: "These Muslims",
     blankDistractor: "هٰذَا",
-    noorTip: "أُولَئِكَ appears in the Quran to point to the believers who will succeed — distance here is honour.",
-    noorTipUr: "أُولَئِكَ قرآن میں کامیاب مؤمنین کی طرف اشارہ کرتا ہے — دوری یہاں تعظیم کے لیے ہے۔",
+    noorTip: "أُولَٰئِكَ in Al-Baqarah 2:5 points back to the people of taqwa described in 2:2–4: find the pointer, then look back to see who it means.",
+    noorTipUr: "سورۃ البقرہ 2:5 میں أُولَٰئِكَ، 2:2–4 میں بیان کیے گئے متقین کی طرف واپس اشارہ ہے: اشارہ ڈھونڈیں، پھر پیچھے دیکھیں کہ کون مراد ہے۔",
     focuses: [
-      { title: "These — هَؤُلَاءِ", titleAr: "هَؤُلَاءِ", grammarTerm: "اسم إشارة للجمع القريب", reveal: "هَؤُلَاءِ points to a nearby group of people — near in place or in the speaker's focus.", hookQuestion: "In which situations would you use هَؤُلَاءِ rather than هٰذَا?" },
-      { title: "Those — أُولَئِكَ", titleAr: "أُولَئِكَ", grammarTerm: "اسم إشارة للجمع البعيد", reveal: "أُولَئِكَ points to a far group. The Quran uses it to elevate — those believers, distant from the speaker, are honoured.", hookQuestion: "Why does Al-Baqarah use أُولَئِكَ (far) for the believers who are on guidance?" },
-      { title: "ضَمِير الْفَصْل — Separating Pronoun", titleAr: "هُمُ لِلتَّوْكِيد", grammarTerm: "ضمير فصل", reveal: "In أُولَئِكَ هُمُ الْمُفْلِحُونَ, the هُمُ is not the subject — it is a separating pronoun that adds emphasis: 'those (and no one else) are the successful'.", hookQuestion: "What does هُمُ add in أُولَئِكَ هُمُ الْمُفْلِحُونَ?" },
-      { title: "Completing the Pointing System", titleAr: "مَنْظُومَة أَسْمَاء الإِشَارَة", grammarTerm: "كل أسماء الإشارة", reveal: "You now know all Arabic pointing words: هٰذَا (near-m), هٰذِهِ (near-f), ذٰلِكَ (far-m), تِلْكَ (far-f), هَؤُلَاءِ (near-pl), أُولَئِكَ (far-pl).", hookQuestion: "Write all six Arabic pointing words in a table of near/far × masculine/feminine/plural." },
+      { title: "These and Those People", titleAr: "هٰؤُلَاءِ وَأُولٰئِكَ", grammarTerm: "اسم إشارة للجمع", reveal: "أُولٰئِكَ is the far partner of هٰؤُلَاءِ, for men and women alike; far can mean mentioned earlier. In 2:5 it points back to the people of 2:2–4.", hookQuestion: "Who does أُولَٰئِكَ point to in Al-Baqarah 2:5?" },
+      { title: "People or Things? Choosing the Pointer", titleAr: "لِلنَّاسِ أَمْ لِلْأَشْيَاءِ؟", grammarTerm: "الإشارة إلى غير العاقل", reveal: "People take هٰؤُلَاءِ / أُولٰئِكَ; plurals of things take the beginner default هٰذِهِ / تِلْكَ. Al-Hijr 15:68 هَٰؤُلَاءِ ضَيْفِي points to guests.", hookQuestion: "Why is it هٰذِهِ كُتُبٌ and not هٰؤُلَاءِ كُتُبٌ?" },
+      { title: "Pointing Phrase or Complete Statement?", titleAr: "تَرْكِيبٌ إِشَارِيٌّ أَمْ جُمْلَةٌ؟", grammarTerm: "المبتدأ والخبر", reveal: "هٰؤُلَاءِ مُسْلِمُونَ is a statement; هٰؤُلَاءِ الْمُسْلِمُونَ reads as a phrase. أُولَٰئِكَ هُمُ الْوَارِثُونَ (23:10) is a complete statement.", hookQuestion: "What changes between هٰؤُلَاءِ مُسْلِمُونَ and هٰؤُلَاءِ الْمُسْلِمُونَ?" },
+      { title: "Quran Reading Lab: Who Are “Those”?", titleAr: "مَنْ أُولَٰئِكَ؟", grammarTerm: "مرجع الإشارة", reveal: "For every pointer: the word, the group, the evidence. Al-Kahf 18:15 هَٰؤُلَاءِ قَوْمُنَا names the group right after the pointer.", hookQuestion: "Who does هَٰؤُلَاءِ point to in Al-Kahf 18:15?" },
     ],
   },
 

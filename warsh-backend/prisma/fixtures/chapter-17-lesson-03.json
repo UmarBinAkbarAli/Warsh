@@ -2,111 +2,140 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 17, Lesson 3 - Past tense verbs نَامَ and قَامَ as vocabulary (recognition mode).",
+    "_note": "Chapter 17, Lesson 3 (ch17-l03) — قَامَ as an action with a doer and no object; verb + doer, not weak-root morphology. نَامَ appears once as labelled, unassessed exposure. Quran: Al-Jinn 72:19 excerpt, قَامَ with its doer عَبْدُ اللَّهِ (reveal index 2); لَمَّا and يَدْعُوهُ glossed. The Yusuf 12:36 prison-sleeping claim and the قَامَ يَصُومُ explanation are gone. Rebuilt 2026-09-23 from Docs/proposals/chapter-17-content-proposal.md; the chapter map and fixtures named two different reader_lecture_17 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "کھڑا ہونا، اور کام والا جملہ",
     "chapter_order": 17,
     "lesson_order": 3,
-    "chapter_title": "Daily Actions and Verbs",
-    "title": "Sleeping and Standing",
-    "titleAr": "النَّوْمُ وَالْقِيَامُ",
-    "source": "reader_book2_lesson6_daily_verbs.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 107,
-      "ayah": 6,
-      "label": "Al-Ma'un 107:6",
-      "ar": "الَّذِينَ هُمْ يُرَاءُونَ",
-      "en": "Those who make show [of their deeds]",
-      "ur": "جو ریا کاری کرتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107006.mp3"
+      "surah": 72,
+      "ayah": 19,
+      "label": "Al-Jinn 72:19",
+      "ar": "وَأَنَّهُ لَمَّا قَامَ عَبْدُ اللَّهِ يَدْعُوهُ",
+      "en": "And when the servant of Allah stood up, calling upon Him,",
+      "ur": "اور جب اللہ کا بندہ اسے پکارنے کے لیے کھڑا ہوا،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/072019.mp3"
     },
     "noor_intro": {
-      "en": "Two more verbs for your growing vocabulary: نَامَ (to sleep) and قَامَ (to stand). These verbs appear in the Quran in the story of Prophet Yusuf (peace be upon him), where we read about those who slept in the prison.",
-      "ur": "آپ کی بڑھتی ہوئی vocabulary میں دو اور افعال: نَامَ (سونا) اور قَامَ (کھڑا ہونا)۔ یہ افعال قرآن میں حضرت یوسف (علیہ السلام) کی کہانی میں آئے ہیں، جہاں ہم پڑھتے ہیں کہ جنہوں نے جیل میں سویا۔"
+      "en": "Not every action has an object. Someone can simply stand up. In Al-Jinn 72:19, listen for قَامَ, stood, and then for who stood.",
+      "ur": "ہر کام کا مفعول نہیں ہوتا۔ کوئی بس کھڑا ہو سکتا ہے۔ سورۃ الجن 72:19 میں قَامَ، کھڑا ہوا، سنیں، اور پھر یہ کہ کون کھڑا ہوا۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
+      "type": "WORD",
+      "text": {
+        "ar": "قَامَ",
+        "ar_plain": "قام",
+        "translit": "qāma",
+        "en": "he stood up",
+        "ur": "وہ کھڑا ہوا"
+      },
+      "explanation": {
+        "en": "قَامَ: he stood up.",
+        "ur": "قَامَ: وہ کھڑا ہوا۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "قَامَ الطَّالِبُ",
+        "ar_plain": "قام الطالب",
+        "translit": "qāma ṭ-ṭālibu",
+        "en": "The student stood up.",
+        "ur": "طالب علم کھڑا ہوا۔"
+      },
+      "explanation": {
+        "en": "Action and doer, and the sentence is complete: قَامَ الطَّالِبُ, the student stood up. Nothing is stood; there is no object.",
+        "ur": "کام اور کرنے والا، اور جملہ مکمل ہے: قَامَ الطَّالِبُ، طالب علم کھڑا ہوا۔ کسی چیز پر کھڑا ہونا نہیں؛ کوئی مفعول نہیں۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
       "concept": {
-        "en": "Verbs of body states: sleeping and standing",
-        "ar": "أَفْعَالُ أَحْوَالِ الْجَسَدِ: النَّوْمُ وَالْقِيَامُ",
-        "ur": "جسم کے احوال کے افعال: سونا اور کھڑا ہونا"
+        "en": "With an object, without one",
+        "ar": "قَامَ الطَّالِبُ / قَرَأَ الطَّالِبُ الْكِتَابَ",
+        "ur": "مفعول کے ساتھ، اس کے بغیر"
       },
       "explanation": {
-        "en": "نَامَ means 'he slept' and قَامَ means 'he stood.' Like all past tense verbs, they add ت for feminine: نَامَتْ and قَامَتْ.",
-        "ur": "نَامَ کا مطلب 'اس نے سوتا' اور قَامَ کا مطلب 'اس کھڑا ہوا'۔ تمام ماضی افعال کی طرح، یہ مؤنث کے لیے ت لیتے ہیں: نَامَتْ اور قَامَتْ۔"
+        "en": "قَرَأَ needs to say what was read: الْكِتَابَ. قَامَ is complete with its doer alone. Both put the doer right after the action.",
+        "ur": "قَرَأَ کو بتانا ہوتا ہے کہ کیا پڑھا: الْكِتَابَ۔ قَامَ صرف کرنے والے کے ساتھ مکمل ہے۔ دونوں میں کرنے والا کام کے فوراً بعد ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "قَامَ الطَّالِبُ",
+          "ar_plain": "قام الطالب",
+          "translit": "qāma ṭ-ṭālibu",
+          "en": "The student stood up.",
+          "ur": "طالب علم کھڑا ہوا۔"
+        },
+        {
+          "ar": "قَرَأَ الطَّالِبُ الْكِتَابَ",
+          "ar_plain": "قرا الطالب الكتاب",
+          "translit": "qaraʾa ṭ-ṭālibu l-kitāba",
+          "en": "The student read the book.",
+          "ur": "طالب علم نے کتاب پڑھی۔"
+        }
+      ]
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "قَامَتِ الطَّالِبَةُ",
+        "ar_plain": "قامت الطالبة",
+        "translit": "qāmati ṭ-ṭālibatu",
+        "en": "The female student stood up.",
+        "ur": "طالبہ کھڑی ہوئی۔"
+      },
+      "explanation": {
+        "en": "A female doer: قَامَتْ, she stood up, said -ti before ال: qāmati ṭ-ṭālibatu.",
+        "ur": "کرنے والی عورت: قَامَتْ، وہ کھڑی ہوئی، ال سے پہلے -ti پڑھا جاتا ہے۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "نَامَ",
+        "ar_plain": "نام",
+        "translit": "nāma",
+        "en": "he slept",
+        "ur": "وہ سویا"
+      },
+      "explanation": {
+        "en": "An extra word to recognise, not tested in this chapter: نَامَ, he slept. نَامَ الْوَلَدُ, the boy slept.",
+        "ur": "پہچاننے کے لیے ایک اضافی لفظ، اس باب کے امتحان میں نہیں: نَامَ، وہ سویا۔ نَامَ الْوَلَدُ، لڑکا سویا۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "نَامَ الْوَلَدُ",
-        "ar_plain": "نام الولد",
-        "translit": "naama al-waladu",
-        "en": "The boy slept",
-        "ur": "لڑکا سویا"
+        "ar": "قَامَ الْوَلَدُ وَذَهَبَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "قام الولد وذهب الى المسجد",
+        "translit": "qāma l-waladu wa-dhahaba ilā l-masjidi",
+        "en": "The boy stood up and went to the mosque.",
+        "ur": "لڑکا کھڑا ہوا اور مسجد کی طرف گیا۔"
       },
       "explanation": {
-        "en": "نَامَ is from the root ن-و-م, which also gives us نَوْمٌ (sleep). The noun and verb share the same root letters.",
-        "ur": "نَامَ root ن-و-م سے ہے، جو ہمیں نَوْمٌ (نیند) بھی دیتا ہے۔ اسم اور فعل ایک ہی root کے حروف بانٹتے ہیں۔"
+        "en": "Two actions joined by وَ: قَامَ, stood up, then ذَهَبَ, went, with where to: إِلَى الْمَسْجِدِ.",
+        "ur": "دو کام وَ سے جڑے ہوئے: قَامَ، کھڑا ہوا، پھر ذَهَبَ، گیا، کس طرف کے ساتھ: إِلَى الْمَسْجِدِ۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "نَامَتِ الْبِنْتُ",
-        "ar_plain": "نامت البنت",
-        "translit": "naamat al-bintu",
-        "en": "The girl slept",
-        "ur": "لڑکی سوئی"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Jinn 72:19: And when the servant of Allah stood up, calling upon Him,",
+        "ar": "وَأَنَّهُ لَمَّا قَامَ عَبْدُ اللَّهِ يَدْعُوهُ",
+        "ur": "Al-Jinn 72:19: اور جب اللہ کا بندہ اسے پکارنے کے لیے کھڑا ہوا،"
       },
       "explanation": {
-        "en": "نَامَتْ with ت at the end = 'she slept.' The feminine marker ت tells us the subject is female.",
-        "ur": "نَامَتْ ت کے ساتھ = 'اس نے سوتی'۔ ت کی نشاندہی ہمیں بتاتی ہے کہ فاعل عورت ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "قَامَ الرَّجُلُ",
-        "ar_plain": "قام الرجل",
-        "translit": "qaama ar-rajulu",
-        "en": "The man stood",
-        "ur": "آدمی کھڑا ہوا"
+        "en": "قَامَ, stood up, then its doer: عَبْدُ اللَّهِ, the servant of Allah, the Prophet ﷺ. Ask who stood: the words right after the action tell you. لَمَّا, when, and يَدْعُوهُ, calling upon Him, are glossed.",
+        "ur": "قَامَ، کھڑا ہوا، پھر اس کا کرنے والا: عَبْدُ اللَّهِ، اللہ کا بندہ، نبی ﷺ۔ پوچھیں کون کھڑا ہوا: کام کے فوراً بعد کے الفاظ بتاتے ہیں۔ لَمَّا، جب، اور يَدْعُوهُ، اسے پکارتے ہوئے، کا صرف معنی دیا گیا ہے۔"
       },
-      "explanation": {
-        "en": "قَامَ means 'he stood.' قَامَ is also used in the phrase قَامَ يَصُومُ (he stood to fast) — it means 'to rise up' or 'to perform an action.'",
-        "ur": "قَامَ کا مطلب 'اس کھڑا ہوا'۔ قَامَ phrase قَامَ يَصُومُ (وہ کھڑا ہو کر روزہ رکھتا ہے) میں بھی آتا ہے — اس کا مطلب ہے 'اُٹھنا' یا 'کوئی عمل انجام دینا'۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "قَامَتِ الْمَرْأَةُ",
-        "ar_plain": "قامت المرأة",
-        "translit": "qaamat al-mar'atu",
-        "en": "The woman stood",
-        "ur": "عورت کھڑی ہوئی"
-      },
-      "explanation": {
-        "en": "قَامَتْ with ت = 'she stood.' The ت feminine marker is consistent across all these verbs.",
-        "ur": "قَامَتْ ت کے ساتھ = 'اس کھڑی ہوئی'۔ ت کی نشاندہی تمام افعال میں یکساں ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "The root-noun connection in verbs",
-        "ur": "افعال میں root-اسم کا جُڑنا"
-      },
-      "body": {
-        "en": "نَامَ (he slept) → نَوْمٌ (sleep) share ن-و-م. قَامَ (he stood) → قِيَامٌ (standing) share ق-ي-م. When you learn a verb, look for its related noun — the root letters will help you remember both words.",
-        "ur": "نَامَ (اس نے سوتا) → نَوْمٌ (نیند) ن-و-م بانٹتے ہیں۔ قَامَ (اس کھڑا ہوا) → قِيَامٌ (کھڑے ہونا) ق-ي-م بانٹتے ہیں۔ جب آپ ایک فعل سیکھیں تو اس کا متعلقہ اسم تلاش کریں — root کے حروف آپ کو دونوں لفظ یاد رکھنے میں مدد دیں گے۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/072019.mp3"
     }
   ],
   "exercises": [
@@ -114,361 +143,366 @@
       "type": "TAP_TRANSLATION",
       "id": "ch17-l03-ex01",
       "prompt": {
-        "ar": "نَامَ الْوَلَدُ",
-        "ar_plain": "نام الولد",
-        "translit": "naama al-waladu",
-        "en": "The boy slept",
-        "ur": "لڑکا سویا"
+        "ar": "قَامَ الطَّالِبُ",
+        "ar_plain": "قام الطالب",
+        "translit": "qāma ṭ-ṭālibu",
+        "en": "The student stood up.",
+        "ur": "طالب علم کھڑا ہوا۔"
       },
       "options": [
         {
-          "en": "The boy slept",
-          "ur": "لڑکا سویا"
+          "en": "The student slept.",
+          "ur": "طالب علم سویا۔"
         },
         {
-          "en": "The boy stood",
-          "ur": "لڑکا کھڑا ہوا"
+          "en": "The student went.",
+          "ur": "طالب علم گیا۔"
         },
         {
-          "en": "The girl slept",
-          "ur": "لڑکی سوئی"
+          "en": "The student stood up.",
+          "ur": "طالب علم کھڑا ہوا۔"
         },
         {
-          "en": "The boy ate",
-          "ur": "لڑکے نے کھایا"
+          "en": "Stand up, student!",
+          "ur": "کھڑے ہو جاؤ، طالب علم!"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "نَامَ means 'he slept.' The root ن-و-م connects to نَوْمٌ (sleep).",
-        "ur": "نَامَ کا مطلب 'اس نے سوتا'۔ root ن-و-م کو نَوْمٌ (نیند) سے جوجھتا ہے۔"
-      }
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch17-l03-ex02",
-      "prompt": {
-        "ar": "قَامَتِ الْمَرْأَةُ",
-        "ar_plain": "قامت المرأة",
-        "translit": "qaamat al-mar'atu",
-        "en": "The woman stood",
-        "ur": "عورت کھڑی ہوئی"
-      },
-      "options": [
-        {
-          "en": "The man stood",
-          "ur": "آدمی کھڑا ہوا"
-        },
-        {
-          "en": "The woman stood",
-          "ur": "عورت کھڑی ہوئی"
-        },
-        {
-          "en": "The woman slept",
-          "ur": "عورت سوئی"
-        },
-        {
-          "en": "The woman ate",
-          "ur": "عورت نے کھایا"
-        }
-      ],
-      "correct_index": 1,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "قَامَتْ ends with ت — feminine. The woman (المَرْأَةُ) is female, so the verb takes the feminine marker ت.",
-        "ur": "قَامَتْ ت کے ساتھ ختم ہوتا ہے — مؤنث۔ عورت (المَرْأَةُ) مؤنث ہے، اس لیے فعل ت کا نشان لیتا ہے۔"
+        "en": "قَامَ is stood up, and الطَّالِبُ is the doer.",
+        "ur": "قَامَ کا مطلب کھڑا ہوا ہے، اور الطَّالِبُ کرنے والا ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch17-l03-ex03",
+      "id": "ch17-l03-ex02",
       "statement": {
-        "en": "The verb نَامَتْ means 'she slept' because the ت at the end marks feminine.",
-        "ur": "فعل نَامَتْ کا مطلب 'اس نے سوتی' ہے کیونکہ آخر میں ت مؤنث کی نشاندہی ہے۔"
+        "en": "قَامَ الطَّالِبُ needs an object to be a complete sentence.",
+        "ur": "قَامَ الطَّالِبُ کو مکمل جملہ بننے کے لیے مفعول چاہیے۔",
+        "ar_example": {
+          "ar": "قَامَ الطَّالِبُ",
+          "ar_plain": "قام الطالب",
+          "translit": "qāma ṭ-ṭālibu",
+          "en": "The student stood up.",
+          "ur": "طالب علم کھڑا ہوا۔"
+        }
       },
-      "ar_example": {
-        "ar": "نَامَتِ الْبِنْتُ",
-        "ar_plain": "نامت البنت",
-        "translit": "naamat al-bintu",
-        "en": "The girl slept",
-        "ur": "لڑکی سوئی"
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. قَامَ is complete with its doer: the student stood up.",
+        "ur": "غلط۔ قَامَ اپنے کرنے والے کے ساتھ مکمل ہے: طالب علم کھڑا ہوا۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch17-l03-ex03",
+      "prompt_line": {
+        "ar": "مَنْ قَامَ؟",
+        "ar_plain": "من قام",
+        "translit": "man qāma?",
+        "en": "Who stood up?",
+        "ur": "کون کھڑا ہوا؟"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "الْأُسْتَاذُ فِي الْفَصْلِ",
+          "ar_plain": "الاستاذ في الفصل",
+          "translit": "al-ustādhu fī l-faṣli",
+          "en": "The teacher is in the classroom.",
+          "ur": "استاد کلاس میں ہے۔"
+        },
+        {
+          "ar": "قَامَ الْأُسْتَاذُ",
+          "ar_plain": "قام الاستاذ",
+          "translit": "qāma l-ustādhu",
+          "en": "The teacher stood up.",
+          "ur": "استاد کھڑا ہوا۔"
+        },
+        {
+          "ar": "اِقْرَأْ",
+          "ar_plain": "اقرا",
+          "translit": "iqraʾ",
+          "en": "Read.",
+          "ur": "پڑھو۔"
+        },
+        {
+          "ar": "غَدًا",
+          "ar_plain": "غدا",
+          "translit": "ghadan",
+          "en": "tomorrow",
+          "ur": "آنے والا کل"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَنْ asks who; the reply names the doer of قَامَ: قَامَ الْأُسْتَاذُ.",
+        "ur": "مَنْ کون پوچھتا ہے؛ جواب قَامَ کے کرنے والے کا نام لیتا ہے: قَامَ الْأُسْتَاذُ۔"
+      }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch17-l03-ex04",
       "mode": "TAP",
-      "sentence_ar": "الرَّجُلُ ___",
+      "sentence_ar": "___ الطَّالِبَةُ",
       "hint": {
-        "en": "The man stood.",
-        "ur": "آدمی کھڑا ہوا۔"
+        "en": "The female student stood up.",
+        "ur": "طالبہ کھڑی ہوئی۔"
       },
       "options": [
         {
           "ar": "قَامَ",
           "ar_plain": "قام",
-          "translit": "qaama",
-          "en": "he stood",
-          "ur": "اس نے کھڑا ہوا"
+          "translit": "qāma",
+          "en": "he stood up",
+          "ur": "وہ کھڑا ہوا"
         },
         {
-          "ar": "قَامَتْ",
+          "ar": "شَرِبَتِ",
+          "ar_plain": "شربت",
+          "translit": "sharibati",
+          "en": "she drank",
+          "ur": "اس (عورت) نے پیا"
+        },
+        {
+          "ar": "قَامَتِ",
           "ar_plain": "قامت",
-          "translit": "qaamat",
-          "en": "she stood",
-          "ur": "اس نے کھڑی ہوئی"
+          "translit": "qāmati",
+          "en": "she stood up",
+          "ur": "وہ کھڑی ہوئی"
         },
         {
-          "ar": "نَامَ",
-          "ar_plain": "نام",
-          "translit": "naama",
-          "en": "he slept",
-          "ur": "اس نے سوتا"
-        },
-        {
-          "ar": "نَامَتْ",
-          "ar_plain": "نامت",
-          "translit": "naamat",
-          "en": "she slept",
-          "ur": "اس نے سوئی"
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
         }
       ],
       "correct_answer": {
-        "ar": "قَامَ",
-        "ar_plain": "قام",
-        "translit": "qaama",
-        "en": "he stood",
-        "ur": "اس نے کھڑا ہوا"
+        "ar": "قَامَتِ",
+        "ar_plain": "قامت",
+        "translit": "qāmati",
+        "en": "she stood up",
+        "ur": "وہ کھڑی ہوئی"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Stood up with a female doer: قَامَتِ الطَّالِبَةُ.",
+        "ur": "کرنے والی عورت کے ساتھ کھڑا ہونا: قَامَتِ الطَّالِبَةُ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch17-l03-ex05",
+      "ayah_fragment": {
+        "ar": "وَأَنَّهُ لَمَّا قَامَ عَبْدُ اللَّهِ يَدْعُوهُ",
+        "surah_ref": "Al-Jinn 72:19"
+      },
+      "options": [
+        {
+          "en": "قَامَ — stood up; its doer is عَبْدُ اللَّهِ",
+          "ur": "قَامَ — کھڑا ہوا؛ اس کا کرنے والا عَبْدُ اللَّهِ ہے"
+        },
+        {
+          "en": "قَامَ — slept",
+          "ur": "قَامَ — سویا"
+        },
+        {
+          "en": "عَبْدُ اللَّهِ — the action",
+          "ur": "عَبْدُ اللَّهِ — کام"
+        },
+        {
+          "en": "يَدْعُوهُ — the doer of قَامَ",
+          "ur": "يَدْعُوهُ — قَامَ کا کرنے والا"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The action is قَامَ and the words right after it, عَبْدُ اللَّهِ, name who stood.",
+        "ur": "کام قَامَ ہے اور اس کے فوراً بعد کے الفاظ، عَبْدُ اللَّهِ، بتاتے ہیں کون کھڑا ہوا۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch17-l03-ex05",
+      "id": "ch17-l03-ex06",
       "left_column": [
-        {
-          "ar": "نَامَ",
-          "ar_plain": "نام",
-          "translit": "naama",
-          "en": "he slept",
-          "ur": "اس نے سوتا"
-        },
-        {
-          "ar": "نَامَتْ",
-          "ar_plain": "نامت",
-          "translit": "naamat",
-          "en": "she slept",
-          "ur": "اس نے سوئی"
-        },
         {
           "ar": "قَامَ",
           "ar_plain": "قام",
-          "translit": "qaama",
-          "en": "he stood",
-          "ur": "اس نے کھڑا ہوا"
+          "translit": "qāma",
+          "en": "he stood up",
+          "ur": "وہ کھڑا ہوا"
         },
         {
-          "ar": "قَامَتْ",
-          "ar_plain": "قامت",
-          "translit": "qaamat",
-          "en": "she stood",
-          "ur": "اس نے کھڑی ہوئی"
+          "ar": "أَكَلَ",
+          "ar_plain": "اكل",
+          "translit": "akala",
+          "en": "he ate",
+          "ur": "اس نے کھایا"
         },
         {
-          "ar": "نَامَ الرَّجُلُ",
-          "ar_plain": "نام الرجل",
-          "translit": "naama ar-rajulu",
-          "en": "The man slept",
-          "ur": "آدمی سویا"
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
         },
         {
-          "ar": "قَامَتِ الْبِنْتُ",
-          "ar_plain": "قامت البنت",
-          "translit": "qaamat al-bintu",
-          "en": "The girl stood",
-          "ur": "لڑکی کھڑی ہوئی"
+          "ar": "شَرِبَ",
+          "ar_plain": "شرب",
+          "translit": "shariba",
+          "en": "he drank",
+          "ur": "اس نے پیا"
         }
       ],
       "right_column": [
         {
-          "en": "he slept",
-          "ur": "اس نے سوتا"
+          "en": "he ate",
+          "ur": "اس نے کھایا"
         },
         {
-          "en": "she slept",
-          "ur": "اس نے سوئی"
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
         },
         {
-          "en": "he stood",
-          "ur": "اس نے کھڑا ہوا"
+          "en": "he drank",
+          "ur": "اس نے پیا"
         },
         {
-          "en": "she stood",
-          "ur": "اس نے کھڑی ہوئی"
-        },
-        {
-          "en": "The man slept",
-          "ur": "آدمی سویا"
-        },
-        {
-          "en": "The girl stood",
-          "ur": "لڑکی کھڑی ہوئی"
+          "en": "he stood up",
+          "ur": "وہ کھڑا ہوا"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
           3
         ],
         [
-          4,
-          4
+          1,
+          0
         ],
         [
-          5,
-          5
+          2,
+          1
+        ],
+        [
+          3,
+          2
         ]
       ],
       "xp_value": 1
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch17-l03-ex06",
+      "id": "ch17-l03-ex07",
       "target_translation": {
-        "en": "The girl stood up.",
-        "ur": "لڑکی کھڑی ہوئی۔"
+        "en": "The teacher stood up.",
+        "ur": "استاد کھڑا ہوا۔"
       },
       "tiles": [
         {
-          "ar": "قَامَتْ",
-          "ar_plain": "قامت",
-          "translit": "qaamat",
-          "en": "she stood",
-          "ur": "اس نے کھڑی ہوئی"
+          "ar": "قَامَ",
+          "ar_plain": "قام",
+          "translit": "qāma",
+          "en": "he stood up",
+          "ur": "وہ کھڑا ہوا"
         },
         {
-          "ar": "الْبِنْتُ",
-          "ar_plain": "البنت",
-          "translit": "al-bintu",
-          "en": "the girl",
-          "ur": "لڑکی"
+          "ar": "الْأُسْتَاذُ",
+          "ar_plain": "الاستاذ",
+          "translit": "al-ustādhu",
+          "en": "the teacher",
+          "ur": "استاد"
         },
         {
-          "ar": "نَامَتْ",
-          "ar_plain": "نامت",
-          "translit": "naamat",
-          "en": "she slept",
-          "ur": "اس نے سوئی"
-        },
-        {
-          "ar": "الْوَلَدُ",
-          "ar_plain": "الولد",
-          "translit": "al-waladu",
-          "en": "the boy",
-          "ur": "لڑکا"
+          "ar": "الْكِتَابَ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitāba",
+          "en": "the book",
+          "ur": "کتاب"
         }
       ],
       "correct_order": [
-        1,
-        0
+        0,
+        1
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch17-l03-ex07",
-      "statement": {
-        "en": "The root ن-و-م connects نَامَ (he slept) and نَوْمٌ (sleep). Similarly, the root ق-ي-م connects قَامَ (he stood) and قِيَامٌ (standing).",
-        "ur": "root ن-و-م کو نَامَ (اس نے سوتا) اور نَوْمٌ (نیند) جوجھتا ہے۔ اسی طرح، root ق-ي-م کو قَامَ (اس کھڑا ہوا) اور قِيَامٌ (کھڑے ہونا) جوجھتا ہے۔"
-      },
-      "ar_example": {
-        "ar": "قَامَ قِيَامًا صَالِحًا",
-        "ar_plain": "قام قياما صالحا",
-        "translit": "qaama qiyaaman saalihan",
-        "en": "He stood a righteous standing",
-        "ur": "اس نے ایک نیک کھڑے ہونا کیا"
-      },
-      "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Action and doer are enough: قَامَ الْأُسْتَاذُ. No object is needed.",
+        "ur": "کام اور کرنے والا کافی ہیں: قَامَ الْأُسْتَاذُ۔ مفعول کی ضرورت نہیں۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch17-l03-ex08",
       "prompt": {
-        "ar": "نَامَتِ الطَّالِبَةُ",
-        "ar_plain": "نامت الطالبة",
-        "translit": "naamat at-taalibatu",
-        "en": "The female student slept",
-        "ur": "طالبہ سوئی"
+        "ar": "قَامَ الْوَلَدُ وَذَهَبَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "قام الولد وذهب الى المسجد",
+        "translit": "qāma l-waladu wa-dhahaba ilā l-masjidi",
+        "en": "The boy stood up and went to the mosque.",
+        "ur": "لڑکا کھڑا ہوا اور مسجد کی طرف گیا۔"
       },
       "options": [
         {
-          "en": "The female student slept",
-          "ur": "طالبہ سوئی"
+          "en": "The boy went to the mosque and prayed.",
+          "ur": "لڑکا مسجد گیا اور نماز پڑھی۔"
         },
         {
-          "en": "The female student stood",
-          "ur": "طالبہ کھڑی ہوئی"
+          "en": "The boy slept in the mosque.",
+          "ur": "لڑکا مسجد میں سویا۔"
         },
         {
-          "en": "The male student slept",
-          "ur": "طالب علم سویا"
+          "en": "Stand up and go to the mosque.",
+          "ur": "کھڑے ہو جاؤ اور مسجد جاؤ۔"
         },
         {
-          "en": "The female student read",
-          "ur": "طالبہ نے پڑھا"
+          "en": "The boy stood up and went to the mosque.",
+          "ur": "لڑکا کھڑا ہوا اور مسجد کی طرف گیا۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 3,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "نَامَتْ ends with ت (feminine). الطَّالِبَةُ (female student) is feminine, so the verb takes the feminine marker ت.",
-        "ur": "نَامَتْ ت کے ساتھ ختم ہوتا ہے (مؤنث)۔ الطَّالِبَةُ (طالبہ) مؤنث ہے، اس لیے فعل ت کا نشان لیتا ہے۔"
+        "en": "قَامَ, stood up; وَذَهَبَ, and went; إِلَى الْمَسْجِدِ, to the mosque.",
+        "ur": "قَامَ، کھڑا ہوا؛ وَذَهَبَ، اور گیا؛ إِلَى الْمَسْجِدِ، مسجد کی طرف۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Past tense verbs: نَامَ and قَامَ",
-      "ar": "أَفْعَالُ الْمَاضِي: نَامَ وَقَامَ",
-      "ur": "ماضی کے افعال: نَامَ اور قَامَ"
+      "en": "Find the doer",
+      "ur": "کرنے والا ڈھونڈیں"
     },
     "ayah": {
-      "surah": 107,
-      "ayah": 6,
-      "label": "Al-Ma'un 107:6",
-      "ar": "الَّذِينَ هُمْ يُرَاءُونَ",
-      "en": "Those who make show [of their deeds]",
-      "ur": "جو ریا کاری کرتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107006.mp3"
+      "surah": 72,
+      "ayah": 19,
+      "label": "Al-Jinn 72:19",
+      "ar": "وَأَنَّهُ لَمَّا قَامَ عَبْدُ اللَّهِ يَدْعُوهُ",
+      "en": "And when the servant of Allah stood up, calling upon Him,",
+      "ur": "اور جب اللہ کا بندہ اسے پکارنے کے لیے کھڑا ہوا،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/072019.mp3"
     },
     "highlighted_word_indices": [
-      1
+      2
+    ],
+    "highlighted_words": [
+      "قَامَ"
     ],
     "noor_explanation": {
-      "en": "نَامَ (he slept) → نَامَتْ (she slept), root ن-و-م. قَامَ (he stood) → قَامَتْ (she stood), root ق-ي-م. Notice how the root connects the verb to its related noun: نَامَ → نَوْمٌ, قَامَ → قِيَامٌ. This root connection will help you expand your Arabic vocabulary quickly.",
-      "ur": "نَامَ (اس نے سوتا) → نَامَتْ (اس نے سوئی)، root ن-و-م۔ قَامَ (اس کھڑا ہوا) → قَامَتْ (اس کھڑی ہوئی)، root ق-ي-م۔ نوٹ کریں کہ root فعل کو اس کے متعلقہ اسم سے کیسے جوجھتا ہے: نَامَ → نَوْمٌ، قَامَ → قِيَامٌ۔ یہ root کا جُڑنا آپ کی عربی vocabulary تیزی سے بڑھانے میں مدد دے گا۔"
+      "en": "قَامَ عَبْدُ اللَّهِ: the action, then who did it. You answered the chapter's second question, who did it, straight from the order of the words.",
+      "ur": "قَامَ عَبْدُ اللَّهِ: کام، پھر کس نے کیا۔ آپ نے باب کے دوسرے سوال، کس نے کیا، کا جواب براہ راست الفاظ کی ترتیب سے دیا۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Six verbs now: أَكَلَ, شَرِبَ, قَرَأَ, كَتَبَ, نَامَ, قَامَ. Each one adds ت for feminine. Look for the root connection when you learn a new verb — it will unlock the noun too. Keep building!",
-      "ur": "اب چھ افعال ہیں: أَكَلَ، شَرِبَ، قَرَأَ، كَتَبَ، نَامَ، قَامَ۔ ہر ایک مؤنث کے لیے ت لیتا ہے۔ نیا فعل سیکھتے وقت root کا جُڑنا دیکھیں — یہ اسم کو بھی کھولے گا۔ جاری رکھیں!"
+      "en": "You can read قَامَ with its doer and tell an action that needs an object from one that does not. Next: prayer and movement, and a Quranic negation.",
+      "ur": "آپ قَامَ کو اس کے کرنے والے کے ساتھ پڑھ سکتے ہیں اور مفعول والے کام کو بغیر مفعول والے سے الگ کر سکتے ہیں۔ آگے: نماز اور حرکت، اور ایک قرآنی نفی۔"
     }
   }
 }

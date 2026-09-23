@@ -655,6 +655,45 @@ Everything below this list is either done and verified, or one of these:
    complete +15. Not done: scholarly review of the grammar explanations (the
    proposal requires it before promotion), and Warsh Studio content-review
    pass in Urdu.
+   **Chapters 15–19 (`Docs/proposals/chapter-15..19-content-proposal.md`) are
+   built and staging-verified 2026-09-23; production promotion is pending the
+   owner's go-ahead** (`npm run content:promote-chapter-fifteen -- --apply`,
+   likewise `-sixteen` … `-nineteen`, all one script,
+   `scripts/promote-chapters-15-19.cjs`, then `content:baseline`; no
+   `content:backfill-new-lessons` — the `addedAt` trigger keeps finished
+   learners unlocked). 15 "These and Those in Quranic Context" and 16 "School
+   Life in Quranic Arabic" have four lessons, a review and a new `chNN-test`
+   (order 6); 17 "Past Actions in Quranic Arabic", 18 "Reading Connected
+   Descriptions" and 19 "Attached Pronouns in Context" have five lessons, the
+   old order-6 lesson rebuilt as the REVIEW and a new `chNN-test` (order 7).
+   Every existing ID and display order is kept; the old review/l06 files were
+   renamed `-review.json`. Deviations from the proposals, all recorded in the
+   fixture notes: Ch15 review — none; Ch16 L4 adds قُلْ (Tadabbur key قل);
+   Ch17 uses Al-Mujadilah 58:21 كَتَبَ اللَّهُ instead of 2:187, teaches 2:249
+   شَرِبَ honestly as "whoever drinks", keeps نَامَ / جَلَسَ as unassessed
+   exposure and drops نَظَرَ; Ch18 authored examples use past verbs, not
+   يَقْرَأُ / تَقْرَأُ (present tense not yet taught); Ch19 uses Hud 11:71
+   وَامْرَأَتُهُ (Ibrahim's wife) instead of Al-Masad 111:4 and Maryam 19:16
+   أَهْلِهَا for owner-in-context. Tadabbur coverage (enforced by
+   `db:validate-fixtures`) was kept rather than weakened: the An-Nas words sit
+   in Ch18 L1 and the Ch18 review, and the Ch19 review carries a labelled
+   "Al-Falaq word bridge" (8 glossed words, 4 recognition items, none in the
+   chapter test) — the Ch19 proposal wanted those words out of the review, so
+   this is the one owner decision to confirm. `chapter-19-lesson-01.json`
+   left the legacy reveal-defect list (its index is fixed). Verified:
+   fixture/legacy/Urdu/Quran audits clean (869 ayah entries, 0 issues), 183
+   tests, 172 new catalogue clips (fixtures 3817/3817, no Quran text
+   synthesised); staging promote dry-run then apply for all five; API on a
+   fresh account with `DEV_UNLOCK_ALL=false`: each chapter lists its items in
+   order, the test is locked until the lessons are done, answer key stripped,
+   every reveal highlight matches its word, 0/12 and 9/12 fail, 10/12 passes
+   (+20 XP) and unlocks the next chapter, repeat pass 0 XP; a learner who
+   finished the old Chapter 15 keeps Chapter 16 open and gets "Updated"
+   notices; web player (staging): Ch15 L1 hook with recitation, cards, the
+   new ayah card (Arabic + meaning, no transliteration, human recitation),
+   tap/true-false/fill exercises. Not done: scholarly review of the grammar
+   and Quran-context wording the proposals ask for, and an Android emulator
+   pass.
    **Conversation Labs CL1–CL6 are live in production (2026-09-23, owner's
    go-ahead).** CL6 (Chapter 11) went first; the owner then asked for the
    Mission to use a new photo and new people instead of repeating Answer it,

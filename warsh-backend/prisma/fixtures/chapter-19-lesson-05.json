@@ -2,302 +2,332 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 19, Lesson 5 - plural attached pronouns: أَنْفُسُهُمْ (their) and أَنْفُسُكُمْ (your-pl).",
+    "_note": "Chapter 19, Lesson 5 (ch19-l05) — repurposed from the former plural-possessive lesson (ـهُمْ / ـكُمْ / ـنَا now wait for Chapter 20). لِي كِتَابٌ (Chapter 5, I have a book) versus كِتَابِي (my book); Al-Kafirun 109:6 وَلِيَ دِينِ with the omitted possessive ي of دِينِ explained as a written Quranic form known from context, never as \"final kasra means my\" (reveal index 3). لَكُمْ دِينُكُمْ is glossed as a Chapter 20 preview, not taught or graded. Rebuilt 2026-09-23 from Docs/proposals/chapter-19-content-proposal.md; the chapter map and fixtures named two different reader_lecture_19 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "قرآنی سیاق میں ملکیت",
     "chapter_order": 19,
     "lesson_order": 5,
-    "chapter_title": "Attached Pronouns — Possession (Singular)",
-    "title": "Plural Possessives: Their, Your (Plural)",
-    "titleAr": "جمع ملکیت: ان کا، تمہارا (جمع)",
-    "source": "reader_lecture_19_attached_pronouns.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 87,
-      "label": "Al-Baqarah 2:87",
-      "ar": "وَلَقَدْ آتَيْنَا مُوسَى الْكِتَابَ وَقَفَّيْنَا مِن بَعْدِهِ بِالرُّسُلِ ۖ وَآتَيْنَا عِيسَى ابْنَ مَرْيَمَ الْبَيِّنَاتِ وَأَيَّدْنَاهُ بِرُوحِ الْقُدُسِ ۗ أَفَكُلَّمَا جَاءَكُمْ رَسُولٌ بِمَا لَا تَهْوَىٰ أَنفُسُكُمُ اسْتَكْبَرْتُمْ فَفَرِيقًا كَذَّبْتُمْ وَفَرِيقًا تَقْتُلُونَ",
-      "en": "And We did certainly give Moses the Scripture [i.e., the Torah] and followed up after him with messengers. And We gave Jesus, the son of Mary, clear proofs and supported him with the Pure Spirit [i.e., the angel Gabriel]. But is it [not] that every time a messenger came to you, [O Children of Israel], with what your souls did not desire, you were arrogant? And a party [of messengers] you denied and another party you killed.",
-      "ur": "اور ہم نے موسیٰ کو کتاب عنایت کی اور ان کے پیچھے یکے بعد دیگرے پیغمبر بھیجتے رہے اور عیسیٰ بن مریم کو کھلے نشانات بخشے اور روح القدس (یعنی جبرئیل) سے ان کو مدد دی۔تو جب کوئی پیغمبر تمہارے پاس ایسی باتیں لے کر آئے، جن کو تمہارا جی نہیں چاہتا تھا، تو تم سرکش ہو جاتے رہے، اور ایک گروہ (انبیاء) کو تو جھٹلاتے رہے اور ایک گروہ کو قتل کرتے رہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002087.mp3"
+      "surah": 109,
+      "ayah": 6,
+      "label": "Al-Kafirun 109:6",
+      "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+      "en": "For you is your religion, and for me is my religion.",
+      "ur": "تمہارے لیے تمہارا دین ہے، اور میرے لیے میرا دین۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
     },
     "noor_intro": {
-      "en": "بِأَنْفُسِهِمْ — 'for their own selves.' This lesson covers plural attached possessives: أَنْفُسُهُمْ (their selves) and أَنْفُسُكُمْ (your selves). These are critical for Quranic reading — أَنْفُسُ appears hundreds of times.",
-      "ur": "بِأَنْفُسِهِمْ — 'اپنی جیز کے لیے۔' یہ سبق جمع ملحق ملکیتوں کا احاطہ کرتا ہے: أَنْفُسُهُمْ (ان کی جیز) اور أَنْفُسُكُمْ (تمہاری جیز)۔ یہ قرآنی پڑھنے کے لیے بہت اہم ہیں — أَنْفُسُ سیکڑوں بار آیا ہے۔"
+      "en": "Al-Kafirun ends with a short ayah about two ways and two religions. Listen to its last word, دِينِ. It means my religion, yet the ي of my is not written. This lesson explains why that is special.",
+      "ur": "سورۃ الکافرون دو راستوں اور دو دینوں کے بارے میں ایک مختصر آیت پر ختم ہوتی ہے۔ اس کا آخری لفظ، دِينِ، سنیں۔ اس کا مطلب میرا دین ہے، پھر بھی 'میرا' کی ي لکھی نہیں۔ یہ سبق بتاتا ہے کہ یہ خاص کیوں ہے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "I have, or my",
+        "ar": "لِي كِتَابٌ / كِتَابِي",
+        "ur": "میرے پاس، یا میرا"
+      },
+      "explanation": {
+        "en": "لِي كِتَابٌ, from Chapter 5: I have a book, literally for me is a book. كِتَابِي: my book, the ي attached to the noun. Two ways to connect a thing to me.",
+        "ur": "لِي كِتَابٌ، باب 5 سے: میرے پاس ایک کتاب ہے، لفظی طور پر میرے لیے ایک کتاب ہے۔ كِتَابِي: میری کتاب، ي اسم سے جڑی ہوئی۔ کسی چیز کو اپنے سے جوڑنے کے دو طریقے۔"
+      },
+      "examples": [
+        {
+          "ar": "لِي كِتَابٌ",
+          "ar_plain": "لي كتاب",
+          "translit": "lī kitābun",
+          "en": "I have a book.",
+          "ur": "میرے پاس ایک کتاب ہے۔"
+        },
+        {
+          "ar": "كِتَابِي",
+          "ar_plain": "كتابي",
+          "translit": "kitābī",
+          "en": "my book",
+          "ur": "میری کتاب"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "دِينِي",
+        "ar_plain": "ديني",
+        "translit": "dīnī",
+        "en": "my religion",
+        "ur": "میرا دین"
+      },
+      "explanation": {
+        "en": "دِينِي: my religion, with the written ي. You met it in Chapter 7.",
+        "ur": "دِينِي: میرا دین، لکھی ہوئی ي کے ساتھ۔ آپ اس سے باب 7 میں ملے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Kafirun 109:6: For you is your religion, and for me is my religion.",
+        "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+        "ur": "Al-Kafirun 109:6: تمہارے لیے تمہارا دین ہے، اور میرے لیے میرا دین۔"
+      },
+      "explanation": {
+        "en": "وَلِيَ دِينِ: and for me is my religion. لِيَ is for me. دِينِ means my religion here, but the possessive ي is not written; the kasra is all that remains of it in this Quranic form. You know the meaning from the context and the translation.",
+        "ur": "وَلِيَ دِينِ: اور میرے لیے میرا دین۔ لِيَ کا مطلب میرے لیے۔ یہاں دِينِ کا مطلب میرا دین ہے، لیکن ملکیت کی ي لکھی نہیں؛ اس قرآنی صورت میں اس کا صرف زیر باقی ہے۔ معنی آپ سیاق اور ترجمے سے جانتے ہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "Attached possessive pronoun هِمْ (their)",
-        "ar": "ضمیر ملکیت هِمْ (ان کا)",
-        "ur": "ملحق ضمیر ملکیت هِمْ (ان کا)"
+        "en": "Special, not a new rule",
+        "ar": "دِينِي / دِينِ",
+        "ur": "خاص صورت، نیا قاعدہ نہیں"
       },
       "explanation": {
-        "en": "هِمْ attaches to nouns and means 'their' — possession by a plural group. أَنْفُسُهُمْ means 'their selves' or 'their own souls.' This word appears many times in the Quran.",
-        "ur": "هِمْ اسم سے ملتا ہے اور 'ان کا' کا مطلب ہے — جمع گروہ کی ملکیت۔ أَنْفُسُهُمْ کا مطلب 'ان کی جیز' یا 'ان کی روحیں'۔ یہ لفظ قرآن میں کئی بار آیا ہے۔"
+        "en": "Do not turn this into a rule. In Lesson 1, رَبِّ الْعَالَمِينَ ended in a kasra and meant Lord of. A final kasra alone never proves my; in 109:6 the context does.",
+        "ur": "اسے قاعدہ نہ بنائیں۔ سبق 1 میں رَبِّ الْعَالَمِينَ زیر پر ختم ہوا اور مطلب تھا … کا رب۔ صرف آخری زیر کبھی 'میرا' ثابت نہیں کرتا؛ 109:6 میں سیاق ثابت کرتا ہے۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Attached possessive pronoun كُمْ (your plural)",
-        "ar": "ضمیر ملکیت كُمْ (تمہارا - جمع)",
-        "ur": "ملحق ضمیر ملکیت كُمْ (تمہارا - جمع)"
+        "en": "The first half: a preview",
+        "ar": "لَكُمْ / دِينُكُمْ",
+        "ur": "پہلا حصہ: ایک جھلک"
       },
       "explanation": {
-        "en": "كُمْ attaches to nouns and means 'your' (plural) — speaking to multiple people. أَنْفُسُكُمْ means 'your selves' — addressing a group. The كَفْ in كُمْ signals plural.",
-        "ur": "كُمْ اسم سے ملتا ہے اور 'تمہارا' (جمع) کا مطلب ہے — کسی گروہ سے بات کرنا۔ أَنْفُسُكُمْ کا مطلب 'تمہاری جیز' — کسی جماعت سے مخاطب۔ كُمْ میں كَفْ جمع کی علامت ہے۔"
+        "en": "The ayah opens لَكُمْ دِينُكُمْ, for you is your religion. ـكُمْ is your for a group of people; it is taught in Chapter 20. Here it is glossed only.",
+        "ur": "آیت لَكُمْ دِينُكُمْ سے شروع ہوتی ہے، تمہارے لیے تمہارا دین۔ ـكُمْ کئی لوگوں کے لیے 'تمہارا' ہے؛ یہ باب 20 میں پڑھایا جائے گا۔ یہاں صرف معنی دیا گیا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "أَنْفُسُهُمْ",
-        "ar_plain": "أنفسهم",
-        "translit": "anfusuhum",
-        "en": "their selves",
-        "ur": "ان کی جیز"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "You have, or your",
+        "ar": "لَكَ كِتَابٌ / كِتَابُكَ",
+        "ur": "تمہارے پاس، یا تمہارا"
       },
       "explanation": {
-        "en": "أَنْفُسٌ is the plural of نَفْسٌ (self/soul). With هِمْ attached: أَنْفُسُهُمْ — 'their selves.' This appears in Al-Baqarah 2:87 and many other verses. نَفْسٌ is one of the most frequent Quranic nouns.",
-        "ur": "أَنْفُسٌ نَفْسٌ (جیز/روح) کی جمع ہے۔ هِمْ ملانے سے: أَنْفُسُهُمْ — 'ان کی جیز'۔ یہ البقرة 2:87 اور کئی دوسری آیات میں آیا ہے۔ نَفْسٌ قرآن کے سب سے بار بار آنے والے اسم میں سے ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "أَنْفُسُكُمْ",
-        "ar_plain": "أنفسكم",
-        "translit": "anfusukum",
-        "en": "your selves (plural)",
-        "ur": "تمہاری جیز (جمع)"
+        "en": "The same pair for one man you are speaking to: لَكَ كِتَابٌ, you have a book; كِتَابُكَ, your book.",
+        "ur": "جس ایک مرد سے آپ بات کر رہے ہیں اس کے لیے یہی جوڑا: لَكَ كِتَابٌ، تمہارے پاس ایک کتاب ہے؛ كِتَابُكَ، تمہاری کتاب۔"
       },
-      "explanation": {
-        "en": "Same noun with كُمْ attached: أَنْفُسُكُمْ — 'your selves' (to a group). Used when addressing multiple people. Allah says things to all believers using this form.",
-        "ur": "وہی اسم كُمْ کے ساتھ: أَنْفُسُكُمْ — 'تمہاری جیز' (جماعت سے)۔ جب کسی جماعت سے بات کریں تو اس شکل میں۔ اللہ اس شکل میں سب مومنین سے بات کرتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "أَنْفُسُنَا",
-        "ar_plain": "أنفسنا",
-        "translit": "anfusunaa",
-        "en": "our selves",
-        "ur": "ہماری جیز"
-      },
-      "explanation": {
-        "en": "نَا attaches to nouns for 'our.' أَنْفُسُنَا — 'our selves.' This form is used in supplication: رَبَّنَا اغْفِرْ لَنَا — 'Our Lord, forgive us.'",
-        "ur": "نَا اسم سے مل کر 'ہمارا' بناتا ہے۔ أَنْفُسُنَا — 'ہماری جیز'۔ اس شکل کی درخواست میں استعمال ہوتی ہے: رَبَّنَا اغْفِرْ لَنَا — 'اے ہمارے رب، ہمیں بخش'۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "كِتَابُهُمْ",
-        "ar_plain": "كتابهم",
-        "translit": "kitaabuhum",
-        "en": "their book",
-        "ur": "ان کی کتاب"
-      },
-      "explanation": {
-        "en": "هُمْ can attach to any noun: كِتَابُهُمْ — 'their book.' The plural ending مِ can attach to any noun to show possession by a plural group.",
-        "ur": "هُمْ کسی بھی اسم سے مل سکتا ہے: كِتَابُهُمْ — 'ان کی کتاب'۔ جمع کا آخر مِ کسی بھی اسم سے مل کر جمع گروہ کی ملکیت دکھاتا ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Plural attached possessives",
-        "ur": "جمع ملحق ضمائر ملکیت"
-      },
-      "body": {
-        "en": "Their: هِمْ → attaches as هُمْ. Your (pl): كُمْ. Our: نَا. The pattern is the same as singular — only the pronoun changes. أَنْفُسُهُمْ appears in the Quran many times meaning 'their selves.'",
-        "ur": "ان کا: هِمْ → ملتا ہے هُمْ کے طور پر۔ تمہارا (جمع): كُمْ۔ ہمارا: نَا۔ وہی نمونہ جو واحد کا ہے — صرف ضمیر بدلتا ہے۔ أَنْفُسُهُمْ قرآن میں کئی بار 'ان کی جیز' کے معنی میں آیا ہے۔"
-      }
+      "examples": [
+        {
+          "ar": "لَكَ كِتَابٌ",
+          "ar_plain": "لك كتاب",
+          "translit": "laka kitābun",
+          "en": "You have a book.",
+          "ur": "تمہارے پاس ایک کتاب ہے۔"
+        },
+        {
+          "ar": "كِتَابُكَ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuka",
+          "en": "your book (to a man)",
+          "ur": "تمہاری کتاب (مرد سے)"
+        }
+      ]
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "MATCH_AYAH",
       "id": "ch19-l05-ex01",
-      "prompt": {
-        "ar": "أَنْفُسُهُمْ",
-        "ar_plain": "أنفسهم",
-        "translit": "anfusuhum",
-        "en": "their selves",
-        "ur": "ان کی جیز"
+      "ayah_fragment": {
+        "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+        "surah_ref": "Al-Kafirun 109:6"
       },
       "options": [
         {
-          "en": "their selves",
-          "ur": "ان کی جیز"
+          "en": "وَلِيَ دِينِ — and for me is a religion",
+          "ur": "وَلِيَ دِينِ — اور میرے لیے کوئی دین"
         },
         {
-          "en": "our selves",
-          "ur": "ہماری جیز"
+          "en": "وَلِيَ دِينِ — and for me is my religion: the ي of my is not written in دِينِ",
+          "ur": "وَلِيَ دِينِ — اور میرے لیے میرا دین: دِينِ میں 'میرا' کی ي لکھی نہیں"
         },
         {
-          "en": "your selves (pl)",
-          "ur": "تمہاری جیز (جمع)"
+          "en": "لَكُمْ — my religion",
+          "ur": "لَكُمْ — میرا دین"
         },
         {
-          "en": "my self",
-          "ur": "میری جیز"
+          "en": "دِينِ — your religion",
+          "ur": "دِينِ — تمہارا دین"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَنْفُسُهُمْ uses هِمْ meaning 'their.' The مِ at the end signals plural 'their.' أَنْفُسُنَا would be 'our selves,' أَنْفُسُكُمْ would be 'your selves (plural).'",
-        "ur": "أَنْفُسُهُمْ میں هِمْ 'ان کا' کا مطلب ہے۔ آخر مِ جمع 'ان کا' کی علامت ہے۔ أَنْفُسُنَا 'ہماری جیز' ہوگا، أَنْفُسُكُمْ 'تمہاری جیز (جمع)'۔"
+        "en": "لِيَ, for me; دِينِ, my religion, with the possessive ي left unwritten.",
+        "ur": "لِيَ، میرے لیے؛ دِينِ، میرا دین، ملکیت کی ي لکھے بغیر۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch19-l05-ex02",
       "statement": {
-        "en": "أَنْفُسُكُمْ means 'your selves' when speaking to a group of people.",
-        "ur": "أَنْفُسُكُمْ کا مطلب 'تمہاری جیز' ہے جب کسی جماعت سے بات کر رہے ہو۔"
-      },
-      "ar_example": {
-        "ar": "أَنْفُسُكُمْ",
-        "ar_plain": "أنفسكم",
-        "translit": "anfusukum",
-        "en": "your selves (plural)",
-        "ur": "تمہاری جیز (جمع)"
+        "en": "In وَلِيَ دِينِ, the word دِينِ means 'my religion' even though the ي of 'my' is not written.",
+        "ur": "وَلِيَ دِينِ میں لفظ دِينِ کا مطلب 'میرا دین' ہے، اگرچہ 'میرا' کی ي لکھی نہیں۔"
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It is a written Quranic form; the context gives my religion.",
+        "ur": "یہ ایک قرآنی تحریری صورت ہے؛ سیاق 'میرا دین' کا معنی دیتا ہے۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
+      "type": "TRUE_FALSE",
       "id": "ch19-l05-ex03",
+      "statement": {
+        "en": "Any word that ends in a kasra means 'my'.",
+        "ur": "زیر پر ختم ہونے والے ہر لفظ کا مطلب 'میرا' ہوتا ہے۔"
+      },
+      "correct_answer": false,
       "xp_value": 1,
-      "tiles": [
+      "explanation_on_wrong": {
+        "en": "False. رَبِّ الْعَالَمِينَ ends in a kasra and means Lord of the worlds. Only context can make a kasra mean my, as in 109:6.",
+        "ur": "غلط۔ رَبِّ الْعَالَمِينَ زیر پر ختم ہوتا ہے اور مطلب ہے تمام جہانوں کا رب۔ صرف سیاق ہی زیر کو 'میرا' بنا سکتا ہے، جیسے 109:6 میں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch19-l05-ex04",
+      "prompt": {
+        "ar": "لِي كِتَابٌ",
+        "ar_plain": "لي كتاب",
+        "translit": "lī kitābun",
+        "en": "I have a book.",
+        "ur": "میرے پاس ایک کتاب ہے۔"
+      },
+      "options": [
         {
-          "ar": "رَبُّنَا",
-          "ar_plain": "ربنا",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
+          "en": "my book",
+          "ur": "میری کتاب"
         },
         {
-          "ar": "اغْفِرْ",
-          "ar_plain": "اغفر",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
+          "en": "You have a book.",
+          "ur": "تمہارے پاس ایک کتاب ہے۔"
         },
         {
-          "ar": "لَنَا",
-          "ar_plain": "لنا",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
+          "en": "I have a book.",
+          "ur": "میرے پاس ایک کتاب ہے۔"
         },
         {
-          "ar": "ذَنْبَنَا",
-          "ar_plain": "ذنبنا",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
-        },
-        {
-          "ar": "وَأَغْفِرِ",
-          "ar_plain": "وأغفر",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
-        },
-        {
-          "ar": "لِأَنْفُسِهِمْ",
-          "ar_plain": "لأنفسهم",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
+          "en": "This is a book.",
+          "ur": "یہ ایک کتاب ہے۔"
         }
       ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لِي كِتَابٌ: for me is a book, I have a book.",
+        "ur": "لِي كِتَابٌ: میرے لیے ایک کتاب، میرے پاس ایک کتاب ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch19-l05-ex05",
+      "prompt": {
+        "ar": "كِتَابِي",
+        "ar_plain": "كتابي",
+        "translit": "kitābī",
+        "en": "my book",
+        "ur": "میری کتاب"
+      },
+      "options": [
+        {
+          "en": "my book",
+          "ur": "میری کتاب"
+        },
+        {
+          "en": "I have a book.",
+          "ur": "میرے پاس ایک کتاب ہے۔"
+        },
+        {
+          "en": "your book",
+          "ur": "تمہاری کتاب"
+        },
+        {
+          "en": "a book",
+          "ur": "ایک کتاب"
+        }
       ],
-      "target_translation": {
-        "en": "'Our Lord, forgive us our sin and forgive ___ selves.'",
-        "ur": "'اے ہمارے رب، ہمارا گناہ بخش اور ___ جیز کو بخش۔'"
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The ي attached to كِتَاب: my book.",
+        "ur": "كِتَاب سے جڑی ي: میری کتاب۔"
       }
     },
     {
       "type": "MATCHING",
-      "id": "ch19-l05-ex04",
+      "id": "ch19-l05-ex06",
       "left_column": [
         {
-          "ar": "أَنْفُسُهُمْ",
-          "ar_plain": "أنفسهم",
-          "translit": "anfusuhum",
-          "en": "their selves",
-          "ur": "ان کی جیز"
+          "ar": "لِي كِتَابٌ",
+          "ar_plain": "لي كتاب",
+          "translit": "lī kitābun",
+          "en": "I have a book.",
+          "ur": "میرے پاس ایک کتاب ہے۔"
         },
         {
-          "ar": "أَنْفُسُكُمْ",
-          "ar_plain": "أنفسكم",
-          "translit": "anfusukum",
-          "en": "your selves (pl)",
-          "ur": "تمہاری جیز (جمع)"
+          "ar": "كِتَابِي",
+          "ar_plain": "كتابي",
+          "translit": "kitābī",
+          "en": "my book",
+          "ur": "میری کتاب"
         },
         {
-          "ar": "أَنْفُسُنَا",
-          "ar_plain": "أنفسنا",
-          "translit": "anfusunaa",
-          "en": "our selves",
-          "ur": "ہماری جیز"
+          "ar": "لَكَ كِتَابٌ",
+          "ar_plain": "لك كتاب",
+          "translit": "laka kitābun",
+          "en": "You have a book.",
+          "ur": "تمہارے پاس ایک کتاب ہے۔"
         },
         {
-          "ar": "أَنْفْسِي",
-          "ar_plain": "أنفسي",
-          "translit": "nafsi",
-          "en": "my self",
-          "ur": "میری جیز"
+          "ar": "كِتَابُكَ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuka",
+          "en": "your book (to a man)",
+          "ur": "تمہاری کتاب (مرد سے)"
         }
       ],
       "right_column": [
         {
-          "en": "our selves",
-          "ur": "ہماری جیز"
+          "en": "my book",
+          "ur": "میری کتاب"
         },
         {
-          "en": "their selves",
-          "ur": "ان کی جیز"
+          "en": "You have a book.",
+          "ur": "تمہارے پاس ایک کتاب ہے۔"
         },
         {
-          "en": "my self",
-          "ur": "میری جیز"
+          "en": "your book (to a man)",
+          "ur": "تمہاری کتاب (مرد سے)"
         },
         {
-          "en": "your selves (pl)",
-          "ur": "تمہاری جیز (جمع)"
+          "en": "I have a book.",
+          "ur": "میرے پاس ایک کتاب ہے۔"
         }
       ],
       "correct_pairs": [
         [
           0,
-          1
-        ],
-        [
-          1,
           3
         ],
         [
-          2,
+          1,
           0
+        ],
+        [
+          2,
+          1
         ],
         [
           3,
@@ -307,158 +337,102 @@
       "xp_value": 1
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch19-l05-ex05",
-      "target_translation": {
-        "en": "Their books are new.",
-        "ur": "ان کی کتابیں نئی ہیں۔"
-      },
-      "tiles": [
-        {
-          "ar": "جَدِيدَةٌ",
-          "ar_plain": "جديدة",
-          "translit": "jadiidatun",
-          "en": "new (f)",
-          "ur": "نئی"
-        },
-        {
-          "ar": "كِتَابُهُمْ",
-          "ar_plain": "كتابهم",
-          "translit": "kitaabuhum",
-          "en": "their book",
-          "ur": "ان کی کتاب"
-        },
-        {
-          "ar": "هِيَ",
-          "ar_plain": "هي",
-          "translit": "hiya",
-          "en": "it is (f)",
-          "ur": "وہ ہے (مؤنث)"
-        },
-        {
-          "ar": "كِتَابُنَا",
-          "ar_plain": "كتابنا",
-          "translit": "kitaabunaa",
-          "en": "our book",
-          "ur": "ہماری کتاب"
-        }
-      ],
-      "correct_order": [
-        1,
-        2,
-        0
-      ],
-      "xp_value": 1
-    },
-    {
       "type": "TAP_TRANSLATION",
-      "id": "ch19-l05-ex06",
+      "id": "ch19-l05-ex07",
       "prompt": {
-        "ar": "رَبُّكُمْ",
-        "ar_plain": "ربكم",
-        "translit": "rabbukum",
-        "en": "your Lord (plural)",
-        "ur": "تمہارا رب (جمع)"
+        "ar": "دِينِي",
+        "ar_plain": "ديني",
+        "translit": "dīnī",
+        "en": "my religion",
+        "ur": "میرا دین"
       },
       "options": [
         {
-          "en": "your Lord (plural)",
-          "ur": "تمہارا رب (جمع)"
+          "en": "your religion",
+          "ur": "تمہارا دین"
         },
         {
-          "en": "our Lord",
-          "ur": "ہمارا رب"
+          "en": "for me",
+          "ur": "میرے لیے"
         },
         {
-          "en": "their Lord",
-          "ur": "ان کا رب"
+          "en": "a religion",
+          "ur": "ایک دین"
         },
         {
-          "en": "my Lord",
-          "ur": "میرا رب"
+          "en": "my religion",
+          "ur": "میرا دین"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 3,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَبُّكُمْ uses كُمْ meaning 'your (plural).' Addressing multiple people. رَبُّنَا would be 'our Lord,' رَبُّهُمْ would be 'their Lord.'",
-        "ur": "رَبُّكُمْ میں كُمْ 'تمہارا (جمع)' کا مطلب ہے۔ کسی جماعت سے مخاطب۔ رَبُّنَا 'ہمارا رب' ہوگا، رَبُّهُمْ 'ان کا رب'۔"
+        "en": "دِينِي, with the written ي: my religion.",
+        "ur": "لکھی ہوئی ي کے ساتھ دِينِي: میرا دین۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch19-l05-ex07",
-      "statement": {
-        "en": "أَنْفُسُنَا means 'our selves' — the نَا shows possession by 'us.'",
-        "ur": "أَنْفُسُنَا کا مطلب 'ہماری جیز' ہے — نَا 'ہماری' ملکیت دکھاتا ہے۔"
-      },
-      "ar_example": {
-        "ar": "رَبَّنَا أَغْفِرْ لَنَا",
-        "ar_plain": "ربنا اغفر لنا",
-        "translit": "rabbanaa ighfir laanaa",
-        "en": "Our Lord, forgive us.",
-        "ur": "اے ہمارے رب، ہمیں بخش۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
+      "type": "MATCH_AYAH",
       "id": "ch19-l05-ex08",
-      "xp_value": 1,
-      "tiles": [
+      "ayah_fragment": {
+        "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "surah_ref": "Al-Fatiha 1:2"
+      },
+      "options": [
         {
-          "ar": "هَؤُلَاءِ",
-          "ar_plain": "هؤلاء",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
+          "en": "رَبِّ — my Lord, like دِينِ in 109:6",
+          "ur": "رَبِّ — میرا رب، جیسے 109:6 میں دِينِ"
         },
         {
-          "ar": "كِتَابُهُنَّ",
-          "ar_plain": "كتابهن",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
+          "en": "الْعَالَمِينَ — my worlds",
+          "ur": "الْعَالَمِينَ — میرے جہان"
+        },
+        {
+          "en": "رَبِّ — Lord of: this kasra does not mean my",
+          "ur": "رَبِّ — … کا رب: یہ زیر 'میرا' نہیں"
+        },
+        {
+          "en": "لِلَّهِ — my God",
+          "ur": "لِلَّهِ — میرا اللہ"
         }
       ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "target_translation": {
-        "en": "'These are their books (feminine plural).'",
-        "ur": "'یہ ان کی کتابیں ہیں (مؤنث جمع)۔'"
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رَبِّ الْعَالَمِينَ: Lord of the worlds. The kasra is not a sign of my; 109:6 is a special case read from context.",
+        "ur": "رَبِّ الْعَالَمِينَ: تمام جہانوں کا رب۔ زیر 'میرا' کی علامت نہیں؛ 109:6 ایک خاص صورت ہے جو سیاق سے پڑھی جاتی ہے۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Plural attached possessives: هُمْ their, كُمْ your-pl, نَا our",
-      "ar": "جمع ملحق ملکیت: هُمْ ان کا، كُمْ تمہارا (جمع)، نَا ہمارا",
-      "ur": "جمع ملحق ملکیت: هُمْ ان کا، كُمْ تمہارا (جمع)، نَا ہمارا"
+      "en": "Possession read from context",
+      "ur": "سیاق سے پڑھی گئی ملکیت"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 87,
-      "label": "Al-Baqarah 2:87",
-      "ar": "وَلَقَدْ آتَيْنَا مُوسَى الْكِتَابَ وَقَفَّيْنَا مِن بَعْدِهِ بِالرُّسُلِ ۖ وَآتَيْنَا عِيسَى ابْنَ مَرْيَمَ الْبَيِّنَاتِ وَأَيَّدْنَاهُ بِرُوحِ الْقُدُسِ ۗ أَفَكُلَّمَا جَاءَكُمْ رَسُولٌ بِمَا لَا تَهْوَىٰ أَنفُسُكُمُ اسْتَكْبَرْتُمْ فَفَرِيقًا كَذَّبْتُمْ وَفَرِيقًا تَقْتُلُونَ",
-      "en": "And We did certainly give Moses the Scripture [i.e., the Torah] and followed up after him with messengers. And We gave Jesus, the son of Mary, clear proofs and supported him with the Pure Spirit [i.e., the angel Gabriel]. But is it [not] that every time a messenger came to you, [O Children of Israel], with what your souls did not desire, you were arrogant? And a party [of messengers] you denied and another party you killed.",
-      "ur": "اور ہم نے موسیٰ کو کتاب عنایت کی اور ان کے پیچھے یکے بعد دیگرے پیغمبر بھیجتے رہے اور عیسیٰ بن مریم کو کھلے نشانات بخشے اور روح القدس (یعنی جبرئیل) سے ان کو مدد دی۔تو جب کوئی پیغمبر تمہارے پاس ایسی باتیں لے کر آئے، جن کو تمہارا جی نہیں چاہتا تھا، تو تم سرکش ہو جاتے رہے، اور ایک گروہ (انبیاء) کو تو جھٹلاتے رہے اور ایک گروہ کو قتل کرتے رہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002087.mp3"
+      "surah": 109,
+      "ayah": 6,
+      "label": "Al-Kafirun 109:6",
+      "ar": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+      "en": "For you is your religion, and for me is my religion.",
+      "ur": "تمہارے لیے تمہارا دین ہے، اور میرے لیے میرا دین۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
     },
     "highlighted_word_indices": [
-      6
+      3
+    ],
+    "highlighted_words": [
+      "دِينِ"
     ],
     "noor_explanation": {
-      "en": "بِأَنْفُسِهِمْ — 'for their own selves.' أَنْفُسُهُمْ uses the attached pronoun هِمْ meaning 'their.' نَفْسٌ (self/soul) is one of the most frequent words in the Quran. Being able to parse أَنْفُسُهُمْ is essential for understanding Quranic Arabic.",
-      "ur": "بِأَنْفُسِهِمْ — 'اپنی جیز کے لیے۔' أَنْفُسُهُمْ میں ملحق ضمیر هِمْ 'ان کا' کا مطلب ہے۔ نَفْسٌ (جیز/روح) قرآن کے سب سے بار بار آنے والے الفاظ میں سے ہے۔ أَنْفُسُهُمْ کو پارس کرنا قرآنی عربی سمجھنے کے لیے ضروری ہے۔"
+      "en": "دِينِ: my religion, with its ي unwritten in this Quranic form. You know it means my from وَلِيَ and from the whole ayah, not from the kasra alone.",
+      "ur": "دِينِ: میرا دین، اس قرآنی صورت میں اس کی ي لکھی نہیں۔ آپ جانتے ہیں کہ اس کا مطلب 'میرا' ہے وَلِيَ اور پوری آیت سے، صرف زیر سے نہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Plural possessives: هُمْ their, كُمْ your (pl), نَا our. أَنْفُسُهُمْ appears constantly in the Quran — 'their selves.' أَنْفُسُكُمْ is used when Allah addresses a group of believers. These are high-frequency Quranic forms.",
-      "ur": "جمع ملکتیں: هُمْ ان کا، كُمْ تمہارا (جمع)، نَا ہمارا۔ أَنْفُسُهُمْ قرآن میں مسلسل آتا ہے — 'ان کی جیز'۔ أَنْفُسُكُمْ اس وقت استعمال ہوتا ہے جب اللہ مومنین کی جماعت سے بات کرتا ہے۔ یہ زیادہ تر آنے والے قرآنی شکلیں ہیں۔"
+      "en": "You can read لِي and ـِي, and one special Quranic spelling, without being misled by a kasra. Next: the Chapter 19 review, with a word bridge into Al-Falaq.",
+      "ur": "آپ لِي اور ـِي پڑھ سکتے ہیں، اور ایک خاص قرآنی املا بھی، زیر سے دھوکا کھائے بغیر۔ آگے: باب 19 کا جائزہ، سورۃ الفلق کے الفاظ کے ایک پل کے ساتھ۔"
     }
   }
 }

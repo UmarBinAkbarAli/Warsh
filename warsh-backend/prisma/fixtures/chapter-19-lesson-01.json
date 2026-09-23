@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 19, Lesson 1 - Introduction to attached possessive pronoun ـِي (my).",
+    "_note": "Chapter 19, Lesson 1 (ch19-l01) — final kasra versus first-person ـِي: رَبِّ الْعَالَمِينَ (Al-Fatiha 1:2) and بِرَبِّ الْفَلَقِ (Al-Falaq 113:1) are \"Lord of\", رَبِّي (Yusuf 12:100) is \"my Lord\". Corrects the former claim that 1:2 means \"my Lord\" and its out-of-range highlight index 4 (the reveal is now 12:100 at رَبِّي, index 1). Tadabbur Al-Falaq coverage: introduces الفلق (card), assessed in ex02. No case-paradigm derivation. Rebuilt 2026-09-23 from Docs/proposals/chapter-19-content-proposal.md; the chapter map and fixtures named two different reader_lecture_19 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "زیر یا 'میرا'؟",
     "chapter_order": 19,
     "lesson_order": 1,
-    "chapter_title": "Attached Pronouns — Possession (Singular)",
-    "title": "The Possessive ـِي (My)",
-    "titleAr": "ضمیر ملکیت ـِي (میرا)",
-    "source": "reader_lecture_19_attached_pronouns.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 1,
-      "ayah": 2,
-      "label": "Al-Fatiha 1:2",
-      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
-      "en": "All praise is for Allah, Lord of all worlds.",
-      "ur": "تمام تعریف اللہ کے لیے ہے، جو تمام جہانوں کا رب ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
+      "surah": 12,
+      "ayah": 100,
+      "label": "Yusuf 12:100",
+      "ar": "إِنَّ رَبِّي لَطِيفٌ لِّمَا يَشَاءُ",
+      "en": "Indeed, my Lord is subtle in what He wills.",
+      "ur": "بے شک میرا رب جو چاہتا ہے اس کی باریک تدبیر کرنے والا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012100.mp3"
     },
     "noor_intro": {
-      "en": "رَبِّ الْعَالَمِينَ — 'Lord of all worlds.' رَّبِّ is 'my Lord' attached to رَبِّ. In Arabic, possession is shown by attaching letters directly to the noun. Today we learn ـِي meaning 'my.'",
-      "ur": "رَبِّ الْعَالَمِينَ — 'تمام جہانوں کا رب۔' رَّبِّ میں رَبِّ کے ساتھ 'میرا رب' لگا ہے۔ عربی میں ملکیت کا اظہار اسم کے ساتھ حروف لگا کر ہوتا ہے۔ آج ہم ـِي سیکھیں گے جس کا مطلب ہے 'میرا'۔"
+      "en": "In Chapter 7 you learned رَبِّي, my Lord. Yusuf, peace be upon him, says it here at the end of his story. But not every رَبِّ in the Quran means my Lord. This lesson teaches you to tell them apart.",
+      "ur": "باب 7 میں آپ نے رَبِّي، میرا رب، سیکھا۔ حضرت یوسف علیہ السلام اپنے قصے کے آخر میں یہاں یہی کہتے ہیں۔ لیکن قرآن میں ہر رَبِّ کا مطلب میرا رب نہیں۔ یہ سبق آپ کو ان میں فرق کرنا سکھاتا ہے۔"
     },
     "autoplay": true
   },
@@ -32,247 +29,356 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Attached possessive pronoun ـِي",
-        "ar": "ضمیر ملکیت 连接 ـِي",
-        "ur": "جوڑنے والا ضمیر ملکیت ـِي"
+        "en": "Recall: ـِي means my",
+        "ar": "كِتَابِي، رَبِّي",
+        "ur": "یاد کریں: ـِي کا مطلب میرا"
       },
       "explanation": {
-        "en": "In Arabic, the pronoun 'my' is not a separate word. It attaches to the end of a noun using the letters ـِي (ya alif kasra). These letters carry the meaning 'my.'",
-        "ur": "عربی میں 'میرا' الگ لفظ نہیں ہے۔ یہ اسم کے آخر میں ـِي (یا الف کسرہ) لگا کر ظاہر ہوتا ہے۔ یہ حروف 'میرا' کا مطلب دیتے ہیں۔"
+        "en": "In Chapter 7, ـِي on a noun meant my: كِتَابِي, my book; رَبِّي, my Lord. Look closely: the ending is a written ي, with a kasra before it.",
+        "ur": "باب 7 میں اسم پر ـِي کا مطلب میرا تھا: كِتَابِي، میری کتاب؛ رَبِّي، میرا رب۔ غور سے دیکھیں: آخر میں لکھی ہوئی ي ہے، اور اس سے پہلے زیر۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Fatiha 1:2: All praise is for Allah, Lord of the worlds.",
+        "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "ur": "Al-Fatiha 1:2: سب تعریف اللہ کے لیے ہے جو تمام جہانوں کا رب ہے۔"
+      },
+      "explanation": {
+        "en": "رَبِّ ends in a kasra but has no ي. The next word tells you whose Lord: رَبِّ الْعَالَمِينَ, Lord of the worlds. The kasra here is an ending you will study later, not my.",
+        "ur": "رَبِّ کے آخر میں زیر ہے لیکن ي نہیں۔ اگلا لفظ بتاتا ہے کس کا رب: رَبِّ الْعَالَمِينَ، تمام جہانوں کا رب۔ یہاں کا زیر ایک آخر ہے جو آپ بعد میں پڑھیں گے، میرا نہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Falaq 113:1: Say, \"I seek refuge in the Lord of daybreak,",
+        "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+        "ur": "Al-Falaq 113:1: کہو: میں صبح کے رب کی پناہ مانگتا ہوں،"
+      },
+      "explanation": {
+        "en": "The same shape: بِرَبِّ الْفَلَقِ, in the Lord of daybreak. A kasra, no ي, and a noun right after it. Not my Lord.",
+        "ur": "وہی شکل: بِرَبِّ الْفَلَقِ، صبح کے رب کی۔ زیر، ي نہیں، اور فوراً بعد ایک اسم۔ میرا رب نہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
+    },
+    {
+      "type": "WORD",
       "text": {
-        "ar": "كِتَابِي",
-        "ar_plain": "كتابي",
-        "translit": "kitaabu",
-        "en": "my book",
-        "ur": "میری کتاب"
+        "ar": "الْفَلَقُ",
+        "ar_plain": "الفلق",
+        "translit": "al-falaqu",
+        "en": "daybreak",
+        "ur": "صبح، پو پھٹنا"
       },
       "explanation": {
-        "en": "كِتَابُ is 'book.' Adding ـِي gives us كِتَابِي meaning 'my book.' The kasra under the ك shows possession belongs to me.",
-        "ur": "كِتَابُ 'کتاب' ہے۔ اس میں ـِي لگانے سے كِتَابِي ہوتا ہے جس کا مطلب 'میری کتاب'۔ ك کے نیچے کسرہ دیکھیں جو بتاتا ہے کہ ملکیت میری ہے۔"
+        "en": "الْفَلَقُ: daybreak, the dawn splitting the dark. Al-Falaq, the surah, is named after it.",
+        "ur": "الْفَلَقُ: صبح، اندھیرے کو چیر کر نکلنے والی سپیدی۔ سورۃ الفلق کا نام اسی پر ہے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "الفلق"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "رَبِّي",
-        "ar_plain": "ربي",
-        "translit": "rabbi",
-        "en": "my Lord",
-        "ur": "میرا رب"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Yusuf 12:100: Indeed, my Lord is subtle in what He wills.",
+        "ar": "إِنَّ رَبِّي لَطِيفٌ لِّمَا يَشَاءُ",
+        "ur": "Yusuf 12:100: بے شک میرا رب جو چاہتا ہے اس کی باریک تدبیر کرنے والا ہے۔"
       },
       "explanation": {
-        "en": "رَبُّ is 'Lord.' With ـِي attached: رَبِّي — 'my Lord.' This appears in Al-Fatiha: رَبِّ الْعَالَمِينَ. Note how the damma on the ب becomes a kasra when ـِي is attached — this is the effect of the attached pronoun.",
-        "ur": "رَبُّ 'رب' ہے۔ اس میں ـِي لگانے سے: رَبِّي — 'میرا رب۔' یہ الفاتحہ میں آیا ہے: رَبِّ الْعَالَمِينَ۔ دھیان دیں کہ ب کا ذالہ کسرہ میں بدل گیا جب ـِي لگا — یہ ملحق ضمیر کا اثر ہے۔"
+        "en": "Now the written ي: رَبِّي, my Lord. Yusuf, reunited with his family, says: indeed, my Lord is subtle in what He wills. لَطِيفٌ, subtle, and يَشَاءُ, He wills, are glossed.",
+        "ur": "اب لکھی ہوئی ي: رَبِّي، میرا رب۔ حضرت یوسف، اپنے خاندان سے ملنے کے بعد، فرماتے ہیں: بے شک میرا رب جو چاہتا ہے اس کی باریک تدبیر کرنے والا ہے۔ لَطِيفٌ، باریک بین، اور يَشَاءُ، وہ چاہتا ہے، کا صرف معنی دیا گیا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012100.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Two checks before you say my",
+        "ar": "رَبِّ … / رَبِّي",
+        "ur": "'میرا' کہنے سے پہلے دو جانچیں"
+      },
+      "explanation": {
+        "en": "One: is a ي written at the end? Two: does a noun follow straight after, naming whose? رَبِّي has the ي and means my Lord. رَبِّ الْعَالَمِينَ has no ي and a noun after it: Lord of the worlds.",
+        "ur": "ایک: کیا آخر میں ي لکھی ہے؟ دو: کیا فوراً بعد کوئی اسم آتا ہے جو بتائے کس کا؟ رَبِّي میں ي ہے اور مطلب میرا رب۔ رَبِّ الْعَالَمِينَ میں ي نہیں اور بعد میں اسم ہے: تمام جہانوں کا رب۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "اِسْمِي",
-        "ar_plain": "اسمي",
-        "translit": "ismi",
-        "en": "my name",
-        "ur": "مرا نام"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The same test on your own nouns",
+        "ar": "بَيْتُ الْأُسْتَاذِ / بَيْتِي",
+        "ur": "اپنے اسموں پر یہی جانچ"
       },
       "explanation": {
-        "en": "اِسْمُ is 'name.' With ـِي attached: اِسْمِي — 'my name.' The kasra under the ا shows 'my' attached.",
-        "ur": "اِسْمُ 'نام' ہے۔ اس میں ـِي لگانے سے: اِسْمِي — 'میرا نام۔' ا کے نیچے کسرہ 'میرا' دکھاتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "بَيْتِي",
-        "ar_plain": "بيتي",
-        "translit": "bayti",
-        "en": "my house",
-        "ur": "میرا گھر"
+        "en": "بَيْتُ الْأُسْتَاذِ: the teacher's house, a noun after it names the owner. بَيْتِي: my house, the written ي.",
+        "ur": "بَيْتُ الْأُسْتَاذِ: استاد کا گھر، بعد کا اسم مالک بتاتا ہے۔ بَيْتِي: میرا گھر، لکھی ہوئی ي۔"
       },
-      "explanation": {
-        "en": "بَيْتُ is 'house.' With ـِي attached: بَيْتِي — 'my house.' The feminine marker ة is dropped when the attached pronoun is added.",
-        "ur": "بَيْتُ 'گھر' ہے۔ اس میں ـِي لگانے سے: بَيْتِي — 'میرا گھر۔' مؤنث کی علامت ة ملحق ضمیر لگانے پر گر جاتی ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "قَلَمِي",
-        "ar_plain": "قلمي",
-        "translit": "qalami",
-        "en": "my pen",
-        "ur": "میرا قلم"
-      },
-      "explanation": {
-        "en": "قَلَمُ is 'pen.' With ـِي attached: قَلَمِي — 'my pen.' The damma on the م becomes a kasra in front of ـِي.",
-        "ur": "قَلَمُ 'قلم' ہے۔ اس میں ـِي لگانے سے: قَلَمِي — 'میرا قلم۔' م کا ذالہ ـِي سے پہلے کسرہ میں بدل جاتا ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Vowel change when ـِي attaches",
-        "ur": "ـِي لگانے پر حرف کی حرکت بدل جاتی ہے"
-      },
-      "body": {
-        "en": "When ـِي attaches to a noun, the vowel on the last consonant changes to kasra. This is called إِدْغَام in Arabic grammar. رَبُّ → رَبِّي, بَيْتُ → بَيْتِي, قَلَمُ → قَلَمِي.",
-        "ur": "جب ـِي کسی اسم سے ملتا ہے تو آخر حرف پر حرکت کسرہ ہو جاتی ہے۔ اسے عربی grammar میں إِدْغَام کہتے ہیں۔ رَبُّ → رَبِّي, بَيْتُ → بَيْتِي, قَلَمُ → قَلَمِي۔"
-      }
+      "examples": [
+        {
+          "ar": "بَيْتُ الْأُسْتَاذِ",
+          "ar_plain": "بيت الاستاذ",
+          "translit": "baytu l-ustādhi",
+          "en": "the teacher's house",
+          "ur": "استاد کا گھر"
+        },
+        {
+          "ar": "بَيْتِي",
+          "ar_plain": "بيتي",
+          "translit": "baytī",
+          "en": "my house",
+          "ur": "میرا گھر"
+        }
+      ]
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "MATCH_AYAH",
       "id": "ch19-l01-ex01",
-      "prompt": {
-        "ar": "كِتَابِي",
-        "ar_plain": "كتابي",
-        "translit": "kitaabi",
-        "en": "my book",
-        "ur": "میری کتاب"
+      "ayah_fragment": {
+        "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        "surah_ref": "Al-Fatiha 1:2"
       },
       "options": [
         {
-          "en": "my book",
-          "ur": "میری کتاب"
+          "en": "رَبِّ — my Lord",
+          "ur": "رَبِّ — میرا رب"
         },
         {
-          "en": "your book",
-          "ur": "تمہاری کتاب"
+          "en": "الْعَالَمِينَ — my",
+          "ur": "الْعَالَمِينَ — میرا"
         },
         {
-          "en": "his book",
-          "ur": "اس کی کتاب"
+          "en": "رَبِّ الْعَالَمِينَ — Lord of the worlds: no ي, so not 'my Lord'",
+          "ur": "رَبِّ الْعَالَمِينَ — تمام جہانوں کا رب: ي نہیں، اس لیے 'میرا رب' نہیں"
         },
         {
-          "en": "a book",
-          "ur": "ایک کتاب"
+          "en": "الْحَمْدُ — the Lord",
+          "ur": "الْحَمْدُ — رب"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No ي is written on رَبِّ, and الْعَالَمِينَ follows it: Lord of the worlds.",
+        "ur": "رَبِّ پر ي لکھی نہیں، اور اس کے بعد الْعَالَمِينَ آتا ہے: تمام جہانوں کا رب۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch19-l01-ex02",
+      "ayah_fragment": {
+        "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+        "surah_ref": "Al-Falaq 113:1"
+      },
+      "options": [
+        {
+          "en": "بِرَبِّ الْفَلَقِ — in my Lord, the daybreak",
+          "ur": "بِرَبِّ الْفَلَقِ — میرے رب، صبح کی"
+        },
+        {
+          "en": "بِرَبِّ الْفَلَقِ — in the Lord of daybreak",
+          "ur": "بِرَبِّ الْفَلَقِ — صبح کے رب کی"
+        },
+        {
+          "en": "الْفَلَقِ — my Lord",
+          "ur": "الْفَلَقِ — میرا رب"
+        },
+        {
+          "en": "قُلْ — my Lord",
+          "ur": "قُلْ — میرا رب"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رَبِّ has no ي and الْفَلَقِ, daybreak, follows it: the Lord of daybreak.",
+        "ur": "رَبِّ پر ي نہیں اور اس کے بعد الْفَلَقِ، صبح، آتا ہے: صبح کا رب۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch19-l01-ex03",
+      "ayah_fragment": {
+        "ar": "إِنَّ رَبِّي لَطِيفٌ لِّمَا يَشَاءُ",
+        "surah_ref": "Yusuf 12:100"
+      },
+      "options": [
+        {
+          "en": "رَبِّي — Lord of…",
+          "ur": "رَبِّي — … کا رب"
+        },
+        {
+          "en": "لَطِيفٌ — my Lord",
+          "ur": "لَطِيفٌ — میرا رب"
+        },
+        {
+          "en": "يَشَاءُ — my",
+          "ur": "يَشَاءُ — میرا"
+        },
+        {
+          "en": "رَبِّي — my Lord: the written ي means my",
+          "ur": "رَبِّي — میرا رب: لکھی ہوئی ي کا مطلب میرا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رَبِّي carries the written ي: my Lord.",
+        "ur": "رَبِّي پر لکھی ہوئی ي ہے: میرا رب۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch19-l01-ex04",
+      "statement": {
+        "en": "A kasra at the end of رَبِّ always means 'my'.",
+        "ur": "رَبِّ کے آخر میں زیر کا مطلب ہمیشہ 'میرا' ہوتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. رَبِّ الْعَالَمِينَ and بِرَبِّ الْفَلَقِ end in a kasra and mean Lord of. My needs the written ي: رَبِّي.",
+        "ur": "غلط۔ رَبِّ الْعَالَمِينَ اور بِرَبِّ الْفَلَقِ زیر پر ختم ہوتے ہیں اور ان کا مطلب … کا رب ہے۔ 'میرا' کے لیے لکھی ہوئی ي چاہیے: رَبِّي۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch19-l01-ex05",
+      "prompt": {
+        "ar": "رَبِّي",
+        "ar_plain": "ربي",
+        "translit": "rabbī",
+        "en": "my Lord",
+        "ur": "میرا رب"
+      },
+      "options": [
+        {
+          "en": "my Lord",
+          "ur": "میرا رب"
+        },
+        {
+          "en": "Lord of …",
+          "ur": "… کا رب"
+        },
+        {
+          "en": "your Lord",
+          "ur": "تمہارا رب"
+        },
+        {
+          "en": "his Lord",
+          "ur": "اس کا رب"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "كِتَابِي is كِتَابُ + ـِي = 'my book.' The attached ـِي means 'my.'",
-        "ur": "كِتَابِي = كِتَابُ + ـِي = 'میری کتاب'۔ ملحق ـِي کا مطلب 'میرا' ہے۔"
+        "en": "The written ي at the end means my: my Lord.",
+        "ur": "آخر میں لکھی ہوئی ي کا مطلب میرا ہے: میرا رب۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch19-l01-ex06",
+      "prompt": {
+        "ar": "الْفَلَقُ",
+        "ar_plain": "الفلق",
+        "translit": "al-falaqu",
+        "en": "daybreak",
+        "ur": "صبح، پو پھٹنا"
+      },
+      "options": [
+        {
+          "en": "the Lord",
+          "ur": "رب"
+        },
+        {
+          "en": "refuge",
+          "ur": "پناہ"
+        },
+        {
+          "en": "daybreak",
+          "ur": "صبح، پو پھٹنا"
+        },
+        {
+          "en": "the night",
+          "ur": "رات"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْفَلَقُ is daybreak, the name of Al-Falaq.",
+        "ur": "الْفَلَقُ صبح ہے، سورۃ الفلق کا نام۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch19-l01-ex02",
+      "id": "ch19-l01-ex07",
       "statement": {
-        "en": "In Arabic, 'my' is shown by attaching the letters ـِي to the noun.",
-        "ur": "عربی میں 'میرا' اسم میں ـِي ملحق کرکے دکھایا جاتا ہے۔"
+        "en": "In بِرَبِّ الْفَلَقِ (Al-Falaq 113:1), the word رَبِّ means 'my Lord'.",
+        "ur": "بِرَبِّ الْفَلَقِ (سورۃ الفلق 113:1) میں لفظ رَبِّ کا مطلب 'میرا رب' ہے۔"
       },
-      "ar_example": {
-        "ar": "رَبِّي",
-        "ar_plain": "ربي",
-        "translit": "rabbi",
-        "en": "my Lord",
-        "ur": "میرا رب"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch19-l01-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ رَبٌّ",
-      "hint": {
-        "en": "rabbi — 'my Lord'",
-        "ur": "rabbi — 'میرا رب'"
-      },
-      "options": [
-        {
-          "ar": "رَبِّي",
-          "ar_plain": "ربي",
-          "translit": "rabbi",
-          "en": "my Lord",
-          "ur": "میرا رب"
-        },
-        {
-          "ar": "رَبَّنَا",
-          "ar_plain": "ربنا",
-          "translit": "rabbanaa",
-          "en": "our Lord",
-          "ur": "ہمارا رب"
-        },
-        {
-          "ar": "رَبُّكَ",
-          "ar_plain": "ربك",
-          "translit": "rabbuka",
-          "en": "your Lord",
-          "ur": "تمہارا رب"
-        },
-        {
-          "ar": "رَبُّهُ",
-          "ar_plain": "ربه",
-          "translit": "rabbuhu",
-          "en": "his Lord",
-          "ur": "اس کا رب"
-        }
-      ],
-      "correct_answer": {
-        "ar": "رَبِّي",
-        "ar_plain": "ربي",
-        "translit": "rabbi",
-        "en": "my Lord",
-        "ur": "میرا رب"
-      },
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. No ي is written, and الْفَلَقِ follows: the Lord of daybreak.",
+        "ur": "غلط۔ ي لکھی نہیں، اور الْفَلَقِ بعد میں آتا ہے: صبح کا رب۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch19-l01-ex04",
+      "id": "ch19-l01-ex08",
       "left_column": [
         {
-          "ar": "رَبِّي",
-          "ar_plain": "ربي",
-          "translit": "rabbi",
-          "en": "my Lord",
-          "ur": "میرا رب"
-        },
-        {
-          "ar": "اِسْمِي",
-          "ar_plain": "اسمي",
-          "translit": "ismi",
-          "en": "my name",
-          "ur": "میرا نام"
+          "ar": "بَيْتُ الْأُسْتَاذِ",
+          "ar_plain": "بيت الاستاذ",
+          "translit": "baytu l-ustādhi",
+          "en": "the teacher's house",
+          "ur": "استاد کا گھر"
         },
         {
           "ar": "بَيْتِي",
           "ar_plain": "بيتي",
-          "translit": "bayti",
+          "translit": "baytī",
           "en": "my house",
           "ur": "میرا گھر"
         },
         {
+          "ar": "قَلَمُ الْبِنْتِ",
+          "ar_plain": "قلم البنت",
+          "translit": "qalamu l-binti",
+          "en": "the girl's pen",
+          "ur": "لڑکی کا قلم"
+        },
+        {
           "ar": "قَلَمِي",
           "ar_plain": "قلمي",
-          "translit": "qalami",
+          "translit": "qalamī",
           "en": "my pen",
           "ur": "میرا قلم"
         }
       ],
       "right_column": [
         {
-          "en": "my pen",
-          "ur": "میرا قلم"
-        },
-        {
           "en": "my house",
           "ur": "میرا گھر"
         },
         {
-          "en": "my name",
-          "ur": "میرا نام"
+          "en": "the girl's pen",
+          "ur": "لڑکی کا قلم"
         },
         {
-          "en": "my Lord",
-          "ur": "میرا رب"
+          "en": "my pen",
+          "ur": "میرا قلم"
+        },
+        {
+          "en": "the teacher's house",
+          "ur": "استاد کا گھر"
         }
       ],
       "correct_pairs": [
@@ -282,7 +388,7 @@
         ],
         [
           1,
-          2
+          0
         ],
         [
           2,
@@ -290,182 +396,45 @@
         ],
         [
           3,
-          0
+          2
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch19-l01-ex05",
-      "target_translation": {
-        "en": "This is my book.",
-        "ur": "یہ میری کتاب ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "اِسْمِي",
-          "ar_plain": "اسمي",
-          "translit": "ismi",
-          "en": "my name",
-          "ur": "میرا نام"
-        },
-        {
-          "ar": "كِتَابِي",
-          "ar_plain": "كتابي",
-          "translit": "kitaabi",
-          "en": "my book",
-          "ur": "میری کتاب"
-        },
-        {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "haadha",
-          "en": "this",
-          "ur": "یہ"
-        },
-        {
-          "ar": "رَبِّي",
-          "ar_plain": "ربي",
-          "translit": "rabbi",
-          "en": "my Lord",
-          "ur": "میرا رب"
-        }
-      ],
-      "correct_order": [
-        2,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch19-l01-ex06",
-      "prompt": {
-        "ar": "رَبِّي",
-        "ar_plain": "ربي",
-        "translit": "rabbi",
-        "en": "my Lord",
-        "ur": "میرا رب"
-      },
-      "options": [
-        {
-          "en": "my Lord",
-          "ur": "میرا رب"
-        },
-        {
-          "en": "the Lord",
-          "ur": "رب"
-        },
-        {
-          "en": "our Lord",
-          "ur": "ہمارا رب"
-        },
-        {
-          "en": "their Lord",
-          "ur": "ان کا رب"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَبِّي = رَبُّ + ـِي = 'my Lord.' The attached ـِي shows possession by 'me.' This word appears in Al-Fatiha.",
-        "ur": "رَبِّي = رَبُّ + ـِي = 'میرا رب'۔ ملحق ـِي 'میری' ملکیت دکھاتا ہے۔ یہ لفظ الفاتحہ میں آیا ہے۔"
+        "en": "A noun after it names the owner; a written ي means my.",
+        "ur": "بعد کا اسم مالک بتاتا ہے؛ لکھی ہوئی ي کا مطلب میرا ہے۔"
       }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch19-l01-ex07",
-      "statement": {
-        "en": "When ـِي attaches, the vowel on the last consonant always changes to kasra (ـِ).",
-        "ur": "جب ـِي ملتا ہے تو آخر حرف پر حرکت ہمیشہ کسرہ (ـِ) ہو جاتی ہے۔"
-      },
-      "ar_example": {
-        "ar": "بَيْتِي",
-        "ar_plain": "بيتي",
-        "translit": "bayti",
-        "en": "my house",
-        "ur": "میرا گھر"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch19-l01-ex08",
-      "mode": "TAP",
-      "sentence_ar": "هَذَا ___",
-      "hint": {
-        "en": "'This is my pen.'",
-        "ur": "'یہ میرا قلم ہے۔'"
-      },
-      "options": [
-        {
-          "ar": "قَلَمِي",
-          "ar_plain": "قلمي",
-          "translit": "qalami",
-          "en": "my pen",
-          "ur": "میرا قلم"
-        },
-        {
-          "ar": "قَلَمُكَ",
-          "ar_plain": "قلمك",
-          "translit": "qalamuka",
-          "en": "your pen",
-          "ur": "تمہارا قلم"
-        },
-        {
-          "ar": "قَلَمُهُ",
-          "ar_plain": "قلمه",
-          "translit": "qalamuhu",
-          "en": "his pen",
-          "ur": "اس کا قلم"
-        },
-        {
-          "ar": "قَلَمٌ",
-          "ar_plain": "قلم",
-          "translit": "qalamun",
-          "en": "a pen",
-          "ur": "ایک قلم"
-        }
-      ],
-      "correct_answer": {
-        "ar": "قَلَمِي",
-        "ar_plain": "قلمي",
-        "translit": "qalami",
-        "en": "my pen",
-        "ur": "میرا قلم"
-      },
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Attached pronoun ـِي = my",
-      "ar": "ضمیر ملکیت ـِي = میرا",
-      "ur": "ملحق ضمیر ـِي = میرا"
+      "en": "The written ي, not the kasra, means my",
+      "ur": "زیر نہیں، لکھی ہوئی ي کا مطلب میرا ہے"
     },
     "ayah": {
-      "surah": 1,
-      "ayah": 2,
-      "label": "Al-Fatiha 1:2",
-      "ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
-      "en": "All praise is for Allah, Lord of all worlds.",
-      "ur": "تمام تعریف اللہ کے لیے ہے، جو تمام جہانوں کا رب ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
+      "surah": 12,
+      "ayah": 100,
+      "label": "Yusuf 12:100",
+      "ar": "إِنَّ رَبِّي لَطِيفٌ لِّمَا يَشَاءُ",
+      "en": "Indeed, my Lord is subtle in what He wills.",
+      "ur": "بے شک میرا رب جو چاہتا ہے اس کی باریک تدبیر کرنے والا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012100.mp3"
     },
     "highlighted_word_indices": [
-      4
+      1
+    ],
+    "highlighted_words": [
+      "رَبِّي"
     ],
     "noor_explanation": {
-      "en": "رَبِّ الْعَالَمِينَ — 'Lord of all worlds.' رَبِّي is 'my Lord' — the attached ـِي means 'my.' رَبُّ becomes رَبِّ when ـِي is attached, and the vowel changes from damma to kasra. This pattern appears thousands of times in the Quran.",
-      "ur": "رَبِّ الْعَالَمِينَ — 'تمام جہانوں کا رب۔' رَبِّي 'میرا رب' ہے — ملحق ـِي کا مطلب 'میرا'۔ رَبُّ میں ـِي لگانے سے رَبِّي ہوتا ہے اور ذالہ ذالہ سے کسرہ میں بدل جاتا ہے۔ یہ نمونہ قرآن میں ہزاروں بار آیا ہے۔"
+      "en": "رَبِّي: my Lord, with the written ي. رَبِّ الْعَالَمِينَ and بِرَبِّ الْفَلَقِ also end in a kasra, but a noun follows and no ي is written: Lord of. Check for the ي before you read my.",
+      "ur": "رَبِّي: میرا رب، لکھی ہوئی ي کے ساتھ۔ رَبِّ الْعَالَمِينَ اور بِرَبِّ الْفَلَقِ بھی زیر پر ختم ہوتے ہیں، لیکن بعد میں اسم آتا ہے اور ي لکھی نہیں: … کا رب۔ 'میرا' پڑھنے سے پہلے ي دیکھیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "ـِي means 'my.' Attach it to any noun: كِتَابِي, رَبِّي, اِسْمِي, بَيْتِي, قَلَمِي. Remember: the last vowel changes to kasra. رَبِّي رَبُّكُمْ — my Lord, your Lord.",
-      "ur": "ـِي کا مطلب 'میرا' ہے۔ کسی بھی اسم میں ملو: كِتَابِي, رَبِّي, اِسْمِي, بَيْتِي, قَلَمِي۔ یاد رکھیں: آخر حرکت کسرہ ہو جاتی ہے۔ رَبِّي رَبُّكُمْ — میرا رب، تمہارا رب۔"
+      "en": "You can tell رَبِّي, my Lord, from رَبِّ followed by a noun. Next: the same ending on a noun and on an action.",
+      "ur": "آپ رَبِّي، میرا رب، کو اس رَبِّ سے الگ کر سکتے ہیں جس کے بعد اسم ہو۔ آگے: ایک ہی آخر اسم پر اور کام پر۔"
     }
   }
 }

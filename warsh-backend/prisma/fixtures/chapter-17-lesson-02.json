@@ -2,111 +2,140 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 17, Lesson 2 - Past tense verbs قَرَأَ and كَتَبَ as vocabulary (recognition mode).",
+    "_note": "Chapter 17, Lesson 2 (ch17-l02) — قَرَأَ and كَتَبَ in authored sentences; the past قَرَأَ kept distinct from Chapter 16's instruction اِقْرَأْ without teaching imperative formation. Quran: Al-Mujadilah 58:21 كَتَبَ اللَّهُ, where كَتَبَ means decreed, not wrote (reveal index 0) — chosen over the proposal's 2:187 candidate because it is a short verb–doer excerpt with the same \"decreed\" sense. No \"stories of prophets who read and write\" claim; no always-true ـتْ rule. Rebuilt 2026-09-23 from Docs/proposals/chapter-17-content-proposal.md; the chapter map and fixtures named two different reader_lecture_17 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "پڑھنا اور لکھنا",
     "chapter_order": 17,
     "lesson_order": 2,
-    "chapter_title": "Daily Actions and Verbs",
-    "title": "Reading and Writing",
-    "titleAr": "الْقِرَاءَةُ وَالْكِتَابَةُ",
-    "source": "reader_book2_lesson6_daily_verbs.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 12,
-      "ayah": 36,
-      "label": "Yusuf 12:36",
-      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ ۖ قَالَ أَحَدُهُمَا إِنِّي أَرَانِي أَعْصِرُ خَمْرًا ۖ وَقَالَ الْآخَرُ إِنِّي أَرَانِي أَحْمِلُ فَوْقَ رَأْسِي خُبْزًا تَأْكُلُ الطَّيْرُ مِنْهُ ۖ نَبِّئْنَا بِتَأْوِيلِهِ ۖ إِنَّا نَرَاكَ مِنَ الْمُحْسِنِينَ",
-      "en": "And there entered the prison with him two young men. One of them said, \"Indeed, I have seen myself [in a dream] pressing [grapes for] wine.\" The other said, \"Indeed, I have seen myself carrying upon my head [some] bread, from which the birds were eating. Inform us of its interpretation; indeed, we see you to be of those who do good.\"",
-      "ur": "اور ان کے ساتھ دو اور جوان بھی داخل زندان ہوئے۔ ایک نے ان میں سے کہا کہ (میں نے خواب دیکھا ہے) دیکھتا (کیا) ہوں کہ شراب (کے لیے انگور) نچوڑ رہا ہوں۔ دوسرے نے کہا کہ (میں نے بھی خواب دیکھا ہے) میں یہ دیکھتا ہوں کہ اپنے سر پر روٹیاں اٹھائے ہوئے ہوں اور جانور ان میں سے کھا رہے (ہیں تو) ہمیں ان کی تعبیر بتا دیجیئے کہ ہم تمہیں نیکوکار دیکھتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
+      "surah": 58,
+      "ayah": 21,
+      "label": "Al-Mujadilah 58:21",
+      "ar": "كَتَبَ اللَّهُ لَأَغْلِبَنَّ أَنَا وَرُسُلِي",
+      "en": "Allah has decreed: \"I will surely prevail, I and My messengers.\"",
+      "ur": "اللہ نے لکھ دیا ہے کہ میں اور میرے رسول ضرور غالب رہیں گے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/058021.mp3"
     },
     "noor_intro": {
-      "en": "Two more verbs today: قَرَأَ (to read) and كَتَبَ (to write). These are the verbs of knowledge and learning — the tools by which we gain understanding of the Quran.",
-      "ur": "آج دو اور افعال: قَرَأَ (پڑھنا) اور كَتَبَ (لکھنا)۔ یہ علم اور سیکھنے کے افعال ہیں — وہ ذرائع جن سے ہم قرآن کی سمجھ حاصل کرتے ہیں۔"
+      "en": "Two school actions next: reading and writing. Then a surprise: in Al-Mujadilah 58:21, كَتَبَ does not mean wrote with a pen. Listen for it as the first word.",
+      "ur": "اب اسکول کے دو کام: پڑھنا اور لکھنا۔ پھر ایک نئی بات: سورۃ المجادلہ 58:21 میں كَتَبَ کا مطلب قلم سے لکھنا نہیں۔ اسے پہلے لفظ کے طور پر سنیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Verbs of knowledge: reading and writing",
-        "ar": "أَفْعَالُ الْعِلْمِ: الْقِرَاءَةُ وَالْكِتَابَةُ",
-        "ur": "علم کے افعال: پڑھنا اور لکھنا"
+      "type": "WORD",
+      "text": {
+        "ar": "قَرَأَ",
+        "ar_plain": "قرا",
+        "translit": "qaraʾa",
+        "en": "he read",
+        "ur": "اس نے پڑھا"
       },
       "explanation": {
-        "en": "قَرَأَ and كَتَبَ are past tense verbs meaning 'he read' and 'he wrote.' Like أَكَلَ and شَرِبَ, they add ت for feminine forms: قَرَأَتْ and كَتَبَتْ.",
-        "ur": "قَرَأَ اور كَتَبَ ماضی کے افعال ہیں جن کے معنی 'اس نے پڑھا' اور 'اس نے لکھا' ہیں۔ أَكَلَ اور شَرِبَ کی طرح، یہ مؤنث کے لیے ت لیتے ہیں: قَرَأَتْ اور كَتَبَتْ۔"
+        "en": "قَرَأَ: he read. A past action: the reading has happened.",
+        "ur": "قَرَأَ: اس نے پڑھا۔ ماضی کا کام: پڑھنا ہو چکا۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
         "ar": "قَرَأَ الطَّالِبُ الْكِتَابَ",
-        "ar_plain": "قرأ الطالب الكتاب",
-        "translit": "qara'a at-taalibu al-kitaaba",
-        "en": "The student read the book",
-        "ur": "طالب علم نے کتاب پڑھی"
+        "ar_plain": "قرا الطالب الكتاب",
+        "translit": "qaraʾa ṭ-ṭālibu l-kitāba",
+        "en": "The student read the book.",
+        "ur": "طالب علم نے کتاب پڑھی۔"
       },
       "explanation": {
-        "en": "قَرَأَ means 'he read.' The student (الطَّالِبُ) is masculine, so the verb takes no extra ending.",
-        "ur": "قَرَأَ کا مطلب 'اس نے پڑھا'۔ طالب علم (الطَّالِبُ) مذکر ہے، اس لیے فعل پر کوئی اضافی نشان نہیں۔"
+        "en": "قَرَأَ, read; الطَّالِبُ, the student; الْكِتَابَ, the book.",
+        "ur": "قَرَأَ، پڑھا؛ الطَّالِبُ، طالب علم؛ الْكِتَابَ، کتاب۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "An instruction or a report?",
+        "ar": "اِقْرَأْ / قَرَأَ",
+        "ur": "ہدایت یا خبر؟"
+      },
+      "explanation": {
+        "en": "In Chapter 16 the teacher said اِقْرَأْ, read!, asking you to act. قَرَأَ reports that someone read. The same idea of reading, two different jobs.",
+        "ur": "باب 16 میں استاد نے اِقْرَأْ، پڑھو!، کہا، آپ کو عمل کا کہتے ہوئے۔ قَرَأَ خبر دیتا ہے کہ کسی نے پڑھا۔ پڑھنے کا ایک ہی خیال، دو مختلف کام۔"
+      },
+      "examples": [
+        {
+          "ar": "اِقْرَأْ",
+          "ar_plain": "اقرا",
+          "translit": "iqraʾ",
+          "en": "read! (an instruction)",
+          "ur": "پڑھو! (ہدایت)"
+        },
+        {
+          "ar": "قَرَأَ",
+          "ar_plain": "قرا",
+          "translit": "qaraʾa",
+          "en": "he read",
+          "ur": "اس نے پڑھا"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "كَتَبَ",
+        "ar_plain": "كتب",
+        "translit": "kataba",
+        "en": "he wrote",
+        "ur": "اس نے لکھا"
+      },
+      "explanation": {
+        "en": "كَتَبَ: he wrote.",
+        "ur": "كَتَبَ: اس نے لکھا۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "قَرَأَتِ الطَّالِبَةُ الْقُرْآنَ",
-        "ar_plain": "قرأت الطالبة القرآن",
-        "translit": "qara'at at-taalibatu al-qur'aana",
-        "en": "The female student read the Quran",
-        "ur": "طالبہ نے قرآن پڑھا"
+        "ar": "كَتَبَ الطَّالِبُ الدَّرْسَ",
+        "ar_plain": "كتب الطالب الدرس",
+        "translit": "kataba ṭ-ṭālibu d-darsa",
+        "en": "The student wrote the lesson.",
+        "ur": "طالب علم نے سبق لکھا۔"
       },
       "explanation": {
-        "en": "قَرَأَتْ with ت at the end = 'she read.' الطَّالِبَةُ (female student) is feminine, so the verb takes the feminine marker ت.",
-        "ur": "قَرَأَتْ ت کے ساتھ = 'اس نے پڑھا'۔ الطَّالِبَةُ (طالبہ) مؤنث ہے، اس لیے فعل ت کا نشان لیتا ہے۔"
+        "en": "كَتَبَ, wrote; الطَّالِبُ, the student; الدَّرْسَ, the lesson.",
+        "ur": "كَتَبَ، لکھا؛ الطَّالِبُ، طالب علم؛ الدَّرْسَ، سبق۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "كَتَبَ الْمُعَلِّمُ الرَّسَالَةَ",
-        "ar_plain": "كتب المعلم الرسالة",
-        "translit": "kataba al-mu'allimu ar-rasaalata",
-        "en": "The teacher wrote the letter",
-        "ur": "استاد نے خط لکھا"
+        "ar": "كَتَبَتِ الطَّالِبَةُ الدَّرْسَ",
+        "ar_plain": "كتبت الطالبة الدرس",
+        "translit": "katabati ṭ-ṭālibatu d-darsa",
+        "en": "The female student wrote the lesson.",
+        "ur": "طالبہ نے سبق لکھا۔"
       },
       "explanation": {
-        "en": "كَتَبَ means 'he wrote.' This is the root ك-ت-ب, the same root that gives us كِتَابٌ (book) — they are related in meaning.",
-        "ur": "كَتَبَ کا مطلب 'اس نے لکھا'۔ یہ اصل ك-ت-ب ہے، وہی جو كِتَابٌ (کتاب) کو دیتی ہے — ان کا مطلب آپس میں جُڑا ہوا ہے۔"
+        "en": "The doer is الطَّالِبَةُ, a female student, and the action shows it with ـتْ, said -ti before ال.",
+        "ur": "کرنے والی الطَّالِبَةُ، طالبہ، ہے، اور کام ـتْ سے یہ دکھاتا ہے، جو ال سے پہلے -ti پڑھا جاتا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "كَتَبَتِ الْمُسْلِمَةُ الْأَسْئِلَةَ",
-        "ar_plain": "كتبت المسلمة الأسئلة",
-        "translit": "katabat al-muslimaatu al-as'ilata",
-        "en": "The Muslim woman wrote the questions",
-        "ur": "مسلمہ عورت نے سوالات لکھے"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Mujadilah 58:21: Allah has decreed: \"I will surely prevail, I and My messengers.\"",
+        "ar": "كَتَبَ اللَّهُ لَأَغْلِبَنَّ أَنَا وَرُسُلِي",
+        "ur": "Al-Mujadilah 58:21: اللہ نے لکھ دیا ہے کہ میں اور میرے رسول ضرور غالب رہیں گے۔"
       },
       "explanation": {
-        "en": "كَتَبَتْ with ت = 'she wrote.' The feminine marker ت tells us the subject is female.",
-        "ur": "كَتَبَتْ ت کے ساتھ = 'اس نے لکھا'۔ ت کی نشاندہی ہمیں بتاتی ہے کہ فاعل عورت ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Verb roots are related to nouns",
-        "ur": "فعل کے roots noun سے جُڑے ہوتے ہیں"
+        "en": "كَتَبَ with its doer right after it: اللَّهُ. But here the meaning is not writing with a pen: كَتَبَ اللَّهُ means Allah has decreed. A word can carry a different meaning in context, and the gloss tells you which. The rest of the ayah, I will surely prevail, I and My messengers, is glossed, not tested.",
+        "ur": "كَتَبَ اور اس کے فوراً بعد اس کا کرنے والا: اللَّهُ۔ لیکن یہاں معنی قلم سے لکھنا نہیں: كَتَبَ اللَّهُ کا مطلب ہے اللہ نے مقرر کر دیا ہے۔ ایک لفظ سیاق میں مختلف معنی رکھ سکتا ہے، اور ترجمہ بتاتا ہے کون سا۔ آیت کا باقی حصہ، میں اور میرے رسول ضرور غالب رہیں گے، صرف معنی کے لیے ہے، امتحان میں نہیں۔"
       },
-      "body": {
-        "en": "كَتَبَ (he wrote) and كِتَابٌ (book) share the root ك-ت-ب. قَرَأَ (he read) is from the root ق-ر-أ. When you learn a verb, look for related nouns — they often share the same root letters. This connection will help you remember vocabulary.",
-        "ur": "كَتَبَ (اس نے لکھا) اور كِتَابٌ (کتاب) میں ایک ہی root ك-ت-ب ہے۔ قَرَأَ (اس نے پڑھا) root ق-ر-أ سے ہے۔ جب آپ ایک فعل سیکھیں تو متعلقہ اسم تلاش کریں — اکثر وہی root کے حروف سے ملتے ہیں۔ یہ ربط آپ کو vocabulary یاد رکھنے میں مدد دے گا۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/058021.mp3"
     }
   ],
   "exercises": [
@@ -114,119 +143,88 @@
       "type": "TAP_TRANSLATION",
       "id": "ch17-l02-ex01",
       "prompt": {
-        "ar": "قَرَأَ الطَّالِبُ",
-        "ar_plain": "قرأ الطالب",
-        "translit": "qara'a at-taalibu",
-        "en": "The student read",
-        "ur": "طالب علم نے پڑھا"
+        "ar": "قَرَأَ الطَّالِبُ الْكِتَابَ",
+        "ar_plain": "قرا الطالب الكتاب",
+        "translit": "qaraʾa ṭ-ṭālibu l-kitāba",
+        "en": "The student read the book.",
+        "ur": "طالب علم نے کتاب پڑھی۔"
       },
       "options": [
         {
-          "en": "The student read",
-          "ur": "طالب علم نے پڑھا"
+          "en": "The student wrote the book.",
+          "ur": "طالب علم نے کتاب لکھی۔"
         },
         {
-          "en": "The student wrote",
-          "ur": "طالب علم نے لکھا"
+          "en": "The student read the book.",
+          "ur": "طالب علم نے کتاب پڑھی۔"
         },
         {
-          "en": "The teacher read",
-          "ur": "استاد نے پڑھا"
+          "en": "Read the book!",
+          "ur": "کتاب پڑھو!"
         },
         {
-          "en": "The student ate",
-          "ur": "طالب علم نے کھایا"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "قَرَأَ means 'he read.' The student (طَالِبٌ) is the subject.",
-        "ur": "قَرَأَ کا مطلب ہے 'اس نے پڑھا'۔ طالب (طَالِبٌ) فاعل ہے۔"
-      }
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch17-l02-ex02",
-      "prompt": {
-        "ar": "كَتَبَتِ الْمُسْلِمَةُ",
-        "ar_plain": "كتبت المسلمة",
-        "translit": "katabat al-muslimaatu",
-        "en": "The Muslim woman wrote",
-        "ur": "مسلمہ عورت نے لکھا"
-      },
-      "options": [
-        {
-          "en": "The Muslim woman read",
-          "ur": "مسلمہ عورت نے پڑھا"
-        },
-        {
-          "en": "The Muslim woman wrote",
-          "ur": "مسلمہ عورت نے لکھا"
-        },
-        {
-          "en": "The Muslim man wrote",
-          "ur": "مسلمان نے لکھا"
-        },
-        {
-          "en": "The Muslim woman ate",
-          "ur": "مسلمہ عورت نے کھایا"
+          "en": "The book is with the student.",
+          "ur": "کتاب طالب علم کے پاس ہے۔"
         }
       ],
       "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "كَتَبَتْ ends with ت — feminine. The subject is female: the Muslim woman (المُسْلِمَةُ).",
-        "ur": "كَتَبَتْ ت کے ساتھ ختم ہوتا ہے — مؤنث۔ فاعل عورت ہے: مسلمہ (المُسْلِمَةُ)۔"
+        "en": "قَرَأَ is he read, a past report, and الطَّالِبُ is the doer.",
+        "ur": "قَرَأَ کا مطلب اس نے پڑھا ہے، ماضی کی خبر، اور الطَّالِبُ کرنے والا ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch17-l02-ex03",
+      "id": "ch17-l02-ex02",
       "statement": {
-        "en": "The verb كَتَبَ and the noun كِتَابٌ share the same root letters (ك-ت-ب) because writing and books are related concepts.",
-        "ur": "فعل كَتَبَ اور اسم كِتَابٌ میں ایک ہی root حروف (ك-ت-ب) ہیں کیونکہ لکھنا اور کتاب آپس میں جُڑے ہوے تصورات ہیں۔"
+        "en": "قَرَأَ is an instruction asking someone to read.",
+        "ur": "قَرَأَ کسی کو پڑھنے کا کہنے والی ہدایت ہے۔",
+        "ar_example": {
+          "ar": "قَرَأَ",
+          "ar_plain": "قرا",
+          "translit": "qaraʾa",
+          "en": "he read",
+          "ur": "اس نے پڑھا"
+        }
       },
-      "ar_example": {
-        "ar": "كَتَبَ الْمُعَلِّمُ كِتَابًا",
-        "ar_plain": "كتب المعلم كتابا",
-        "translit": "kataba al-mu'allimu kitaaban",
-        "en": "The teacher wrote a book",
-        "ur": "استاد نے ایک کتاب لکھی"
-      },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. قَرَأَ reports that he read. The instruction is اِقْرَأْ, read!",
+        "ur": "غلط۔ قَرَأَ خبر دیتا ہے کہ اس نے پڑھا۔ ہدایت اِقْرَأْ، پڑھو!، ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch17-l02-ex04",
+      "id": "ch17-l02-ex03",
       "mode": "TAP",
-      "sentence_ar": "الطَّالِبَةُ ___ الْقُرْآنَ",
+      "sentence_ar": "___ الطَّالِبُ الدَّرْسَ",
       "hint": {
-        "en": "The female student read the Quran.",
-        "ur": "طالبہ نے قرآن پڑھا۔"
+        "en": "The student wrote the lesson.",
+        "ur": "طالب علم نے سبق لکھا۔"
       },
       "options": [
         {
-          "ar": "قَرَأَتْ",
-          "ar_plain": "قرأت",
-          "translit": "qara'at",
-          "en": "she read",
-          "ur": "اس نے پڑھا"
-        },
-        {
           "ar": "قَرَأَ",
-          "ar_plain": "قرأ",
-          "translit": "qara'a",
+          "ar_plain": "قرا",
+          "translit": "qaraʾa",
           "en": "he read",
           "ur": "اس نے پڑھا"
         },
         {
-          "ar": "كَتَبَتْ",
-          "ar_plain": "كتبت",
-          "translit": "katabat",
-          "en": "she wrote",
-          "ur": "اس نے لکھا"
+          "ar": "اُكْتُبْ",
+          "ar_plain": "اكتب",
+          "translit": "uktub",
+          "en": "write! (an instruction)",
+          "ur": "لکھو! (ہدایت)"
+        },
+        {
+          "ar": "شَرِبَ",
+          "ar_plain": "شرب",
+          "translit": "shariba",
+          "en": "he drank",
+          "ur": "اس نے پیا"
         },
         {
           "ar": "كَتَبَ",
@@ -237,30 +235,27 @@
         }
       ],
       "correct_answer": {
-        "ar": "قَرَأَتْ",
-        "ar_plain": "قرأت",
-        "translit": "qara'at",
-        "en": "she read",
-        "ur": "اس نے پڑھا"
+        "ar": "كَتَبَ",
+        "ar_plain": "كتب",
+        "translit": "kataba",
+        "en": "he wrote",
+        "ur": "اس نے لکھا"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Wrote, a past report, is كَتَبَ. اُكْتُبْ asks someone to write.",
+        "ur": "لکھا، ماضی کی خبر، كَتَبَ ہے۔ اُكْتُبْ کسی کو لکھنے کا کہتا ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch17-l02-ex05",
+      "id": "ch17-l02-ex04",
       "left_column": [
         {
           "ar": "قَرَأَ",
-          "ar_plain": "قرأ",
-          "translit": "qara'a",
+          "ar_plain": "قرا",
+          "translit": "qaraʾa",
           "en": "he read",
-          "ur": "اس نے پڑھا"
-        },
-        {
-          "ar": "قَرَأَتْ",
-          "ar_plain": "قرأت",
-          "translit": "qara'at",
-          "en": "she read",
           "ur": "اس نے پڑھا"
         },
         {
@@ -271,205 +266,217 @@
           "ur": "اس نے لکھا"
         },
         {
-          "ar": "كَتَبَتْ",
-          "ar_plain": "كتبت",
-          "translit": "katabat",
-          "en": "she wrote",
-          "ur": "اس نے لکھا"
+          "ar": "اِقْرَأْ",
+          "ar_plain": "اقرا",
+          "translit": "iqraʾ",
+          "en": "read! (an instruction)",
+          "ur": "پڑھو! (ہدایت)"
         },
         {
-          "ar": "قَرَأَ الْمُعَلِّمُ",
-          "ar_plain": "قرأ المعلم",
-          "translit": "qara'a al-mu'allimu",
-          "en": "The teacher read",
-          "ur": "استاد نے پڑھا"
-        },
-        {
-          "ar": "كَتَبَتِ الطَّالِبَةُ",
-          "ar_plain": "كتبت الطالبة",
-          "translit": "katabat at-taalibatu",
-          "en": "The female student wrote",
-          "ur": "طالبہ نے لکھا"
+          "ar": "أَكَلَ",
+          "ar_plain": "اكل",
+          "translit": "akala",
+          "en": "he ate",
+          "ur": "اس نے کھایا"
         }
       ],
       "right_column": [
-        {
-          "en": "he read",
-          "ur": "اس نے پڑھا"
-        },
-        {
-          "en": "she read",
-          "ur": "اس نے پڑھا"
-        },
         {
           "en": "he wrote",
           "ur": "اس نے لکھا"
         },
         {
-          "en": "she wrote",
-          "ur": "اس نے لکھا"
+          "en": "read! (an instruction)",
+          "ur": "پڑھو! (ہدایت)"
         },
         {
-          "en": "The teacher read",
-          "ur": "استاد نے پڑھا"
+          "en": "he ate",
+          "ur": "اس نے کھایا"
         },
         {
-          "en": "The female student wrote",
-          "ur": "طالبہ نے لکھا"
+          "en": "he read",
+          "ur": "اس نے پڑھا"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
           3
         ],
         [
-          4,
-          4
+          1,
+          0
         ],
         [
-          5,
-          5
+          2,
+          1
+        ],
+        [
+          3,
+          2
         ]
       ],
       "xp_value": 1
     },
     {
+      "type": "TAP_TRANSLATION",
+      "id": "ch17-l02-ex05",
+      "prompt": {
+        "ar": "كَتَبَتِ الطَّالِبَةُ الدَّرْسَ",
+        "ar_plain": "كتبت الطالبة الدرس",
+        "translit": "katabati ṭ-ṭālibatu d-darsa",
+        "en": "The female student wrote the lesson.",
+        "ur": "طالبہ نے سبق لکھا۔"
+      },
+      "options": [
+        {
+          "en": "The female student wrote the lesson.",
+          "ur": "طالبہ نے سبق لکھا۔"
+        },
+        {
+          "en": "The student wrote the lesson.",
+          "ur": "طالب علم نے سبق لکھا۔"
+        },
+        {
+          "en": "The female student read the lesson.",
+          "ur": "طالبہ نے سبق پڑھا۔"
+        },
+        {
+          "en": "Write the lesson!",
+          "ur": "سبق لکھو!"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كَتَبَتْ, she wrote, with the doer الطَّالِبَةُ, the female student.",
+        "ur": "كَتَبَتْ، اس نے لکھا، کرنے والی الطَّالِبَةُ، طالبہ، کے ساتھ۔"
+      }
+    },
+    {
       "type": "BUILD_SENTENCE",
       "id": "ch17-l02-ex06",
       "target_translation": {
-        "en": "The teacher wrote a letter.",
-        "ur": "استاد نے ایک خط لکھا۔"
+        "en": "The student read the book.",
+        "ur": "طالب علم نے کتاب پڑھی۔"
       },
       "tiles": [
+        {
+          "ar": "قَرَأَ",
+          "ar_plain": "قرا",
+          "translit": "qaraʾa",
+          "en": "he read",
+          "ur": "اس نے پڑھا"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        },
+        {
+          "ar": "الْكِتَابَ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitāba",
+          "en": "the book",
+          "ur": "کتاب"
+        },
         {
           "ar": "كَتَبَ",
           "ar_plain": "كتب",
           "translit": "kataba",
           "en": "he wrote",
           "ur": "اس نے لکھا"
-        },
-        {
-          "ar": "الْمُعَلِّمُ",
-          "ar_plain": "المعلم",
-          "translit": "al-mu'allimu",
-          "en": "the teacher",
-          "ur": "استاد"
-        },
-        {
-          "ar": "رِسَالَةً",
-          "ar_plain": "رسالة",
-          "translit": "risaalatan",
-          "en": "a letter",
-          "ur": "ایک خط"
-        },
-        {
-          "ar": "قَرَأَ",
-          "ar_plain": "قرأ",
-          "translit": "qara'a",
-          "en": "he read",
-          "ur": "اس نے پڑھا"
         }
       ],
       "correct_order": [
-        1,
         0,
+        1,
         2
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Action, doer, what was read: قَرَأَ الطَّالِبُ الْكِتَابَ.",
+        "ur": "کام، کرنے والا، جو پڑھا گیا: قَرَأَ الطَّالِبُ الْكِتَابَ۔"
+      }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "MATCH_AYAH",
       "id": "ch17-l02-ex07",
-      "statement": {
-        "en": "When you see the ت marker at the end of a past tense verb, it always means the subject is feminine.",
-        "ur": "جب آپ ماضی کے فعل کے آخر میں ت کا نشان دیکھیں تو اس کا مطلب ہمیشہ یہ ہوتا ہے کہ فاعل مؤنث ہے۔"
-      },
-      "ar_example": {
-        "ar": "قَرَأَتْ الْمُسْلِمَةُ",
-        "ar_plain": "قرأت المسلمة",
-        "translit": "qara'at al-muslimaatu",
-        "en": "The Muslim woman read",
-        "ur": "مسلمہ عورت نے پڑھا"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch17-l02-ex08",
-      "prompt": {
-        "ar": "كَتَبَ الْوَلَدُ الْإِجَابَةَ",
-        "ar_plain": "كتب الولد الإجابة",
-        "translit": "kataba al-waladu al-ijabaata",
-        "en": "The boy wrote the answer",
-        "ur": "لڑکے نے جواب لکھا"
+      "ayah_fragment": {
+        "ar": "كَتَبَ اللَّهُ لَأَغْلِبَنَّ أَنَا وَرُسُلِي",
+        "surah_ref": "Al-Mujadilah 58:21"
       },
       "options": [
         {
-          "en": "The boy wrote the answer",
-          "ur": "لڑکے نے جواب لکھا"
+          "en": "كَتَبَ اللَّهُ — Allah wrote a book with a pen",
+          "ur": "كَتَبَ اللَّهُ — اللہ نے قلم سے کتاب لکھی"
         },
         {
-          "en": "The boy read the answer",
-          "ur": "لڑکے نے جواب پڑھا"
+          "en": "اللَّهُ — he wrote",
+          "ur": "اللَّهُ — اس نے لکھا"
         },
         {
-          "en": "The girl wrote the answer",
-          "ur": "لڑکی نے جواب لکھا"
+          "en": "كَتَبَ اللَّهُ — Allah has decreed: here كَتَبَ means decreed, not wrote with a pen",
+          "ur": "كَتَبَ اللَّهُ — اللہ نے مقرر کر دیا: یہاں كَتَبَ کا مطلب مقرر کرنا ہے، قلم سے لکھنا نہیں"
         },
         {
-          "en": "The boy ate the answer",
-          "ur": "لڑکے نے جواب کھایا"
+          "en": "كَتَبَ — write! (an instruction)",
+          "ur": "كَتَبَ — لکھو! (ہدایت)"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "كَتَبَ means 'he wrote.' الْوَلَدُ is the boy (masculine), so no ت on the verb.",
-        "ur": "كَتَبَ کا مطلب 'اس نے لکھا'۔ الْوَلَدُ لڑکا ہے (مذکر)، اس لیے فعل پر ت نہیں۔"
+        "en": "The action is كَتَبَ and its doer is اللَّهُ; in this ayah the meaning is decreed.",
+        "ur": "کام كَتَبَ ہے اور اس کا کرنے والا اللَّهُ؛ اس آیت میں معنی مقرر کرنا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch17-l02-ex08",
+      "statement": {
+        "en": "In كَتَبَ اللَّهُ (Al-Mujadilah 58:21), the doer of كَتَبَ is اللَّهُ.",
+        "ur": "كَتَبَ اللَّهُ (سورۃ المجادلہ 58:21) میں كَتَبَ کا کرنے والا اللَّهُ ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The doer comes right after the action: اللَّهُ.",
+        "ur": "کرنے والا کام کے فوراً بعد آتا ہے: اللَّهُ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Past tense verbs: قَرَأَ and كَتَبَ",
-      "ar": "أَفْعَالُ الْمَاضِي: قَرَأَ وَكَتَبَ",
-      "ur": "ماضی کے افعال: قَرَأَ اور كَتَبَ"
+      "en": "Reading, writing, and meaning in context",
+      "ur": "پڑھنا، لکھنا، اور سیاق میں معنی"
     },
     "ayah": {
-      "surah": 12,
-      "ayah": 36,
-      "label": "Yusuf 12:36",
-      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ ۖ قَالَ أَحَدُهُمَا إِنِّي أَرَانِي أَعْصِرُ خَمْرًا ۖ وَقَالَ الْآخَرُ إِنِّي أَرَانِي أَحْمِلُ فَوْقَ رَأْسِي خُبْزًا تَأْكُلُ الطَّيْرُ مِنْهُ ۖ نَبِّئْنَا بِتَأْوِيلِهِ ۖ إِنَّا نَرَاكَ مِنَ الْمُحْسِنِينَ",
-      "en": "And there entered the prison with him two young men. One of them said, \"Indeed, I have seen myself [in a dream] pressing [grapes for] wine.\" The other said, \"Indeed, I have seen myself carrying upon my head [some] bread, from which the birds were eating. Inform us of its interpretation; indeed, we see you to be of those who do good.\"",
-      "ur": "اور ان کے ساتھ دو اور جوان بھی داخل زندان ہوئے۔ ایک نے ان میں سے کہا کہ (میں نے خواب دیکھا ہے) دیکھتا (کیا) ہوں کہ شراب (کے لیے انگور) نچوڑ رہا ہوں۔ دوسرے نے کہا کہ (میں نے بھی خواب دیکھا ہے) میں یہ دیکھتا ہوں کہ اپنے سر پر روٹیاں اٹھائے ہوئے ہوں اور جانور ان میں سے کھا رہے (ہیں تو) ہمیں ان کی تعبیر بتا دیجیئے کہ ہم تمہیں نیکوکار دیکھتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
+      "surah": 58,
+      "ayah": 21,
+      "label": "Al-Mujadilah 58:21",
+      "ar": "كَتَبَ اللَّهُ لَأَغْلِبَنَّ أَنَا وَرُسُلِي",
+      "en": "Allah has decreed: \"I will surely prevail, I and My messengers.\"",
+      "ur": "اللہ نے لکھ دیا ہے کہ میں اور میرے رسول ضرور غالب رہیں گے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/058021.mp3"
     },
     "highlighted_word_indices": [
-      1
+      0
+    ],
+    "highlighted_words": [
+      "كَتَبَ"
     ],
     "noor_explanation": {
-      "en": "قَرَأَ and كَتَبَ are the verbs of learning. قَرَأَ (he read) → قَرَأَتْ (she read). كَتَبَ (he wrote) → كَتَبَتْ (she wrote). The root ك-ت-ب connects كَتَبَ to كِتَابٌ (book) — writing creates books. These verbs will appear throughout the Quran, especially in stories of prophets who read and write.",
-      "ur": "قَرَأَ اور كَتَبَ سیکھنے کے افعال ہیں۔ قَرَأَ (اس نے پڑھا) → قَرَأَتْ (اس نے پڑھا)۔ كَتَبَ (اس نے لکھا) → كَتَبَتْ (اس نے لکھا)۔ root ك-ت-ب کَتَبَ کو كِتَابٌ (کتاب) سے جوجھتا ہے — لکھنا کتابیں بناتی ہے۔ یہ افعال قرآن میں ہر جگہ نظر آئیں گے، خاص کر انبیاء کی کہانیوں میں جو پڑھتے اور لکھتے ہیں۔"
+      "en": "كَتَبَ: the same action word as in كَتَبَ الطَّالِبُ الدَّرْسَ, with its doer after it. In your sentences it means wrote; in this ayah it means decreed. Find the doer from the order, and take the meaning from the context.",
+      "ur": "كَتَبَ: وہی کام کا لفظ جو كَتَبَ الطَّالِبُ الدَّرْسَ میں ہے، اس کے بعد کرنے والے کے ساتھ۔ آپ کے جملوں میں اس کا مطلب لکھا ہے؛ اس آیت میں مقرر کیا۔ ترتیب سے کرنے والا ڈھونڈیں، اور معنی سیاق سے لیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Four verbs now in your vocabulary: أَكَلَ, شَرِبَ, قَرَأَ, كَتَبَ. Each one adds ت for feminine. These are the actions of daily life — eating, drinking, reading, writing. Keep building!",
-      "ur": "اب آپ کے پاس چار افعال ہیں: أَكَلَ، شَرِبَ، قَرَأَ، كَتَبَ۔ ہر ایک مؤنث کے لیے ت لیتا ہے۔ یہ روزانہ کے اعمال کے افعال ہیں — کھانا، پینا، پڑھنا، لکھنا۔ جاری رکھیں!"
+      "en": "You can read قَرَأَ and كَتَبَ, tell قَرَأَ from اِقْرَأْ, and let context choose a meaning. Next: standing, an action with no object.",
+      "ur": "آپ قَرَأَ اور كَتَبَ پڑھ سکتے ہیں، قَرَأَ کو اِقْرَأْ سے الگ کر سکتے ہیں، اور سیاق سے معنی چن سکتے ہیں۔ آگے: کھڑا ہونا، ایسا کام جس کا مفعول نہیں۔"
     }
   }
 }

@@ -1,0 +1,544 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 17 review (ch17-l06, repurposed from the ـتْ lecture to REVIEW; formerly chapter-17-lesson-06.json). No new verb or rule: interleaves the seven core actions, doer-finding, object versus destination, one scoped ـتْ item with the صَلَّتْ caution, Quran-token retrieval from Lessons 1, 3, 4 and 5, and Quran versus authored. Al-Baqarah 2:286 كَسَبَتْ is kept only as a labelled cross-chapter retrieval of the feminine cue (the نَفْس that earns is feminine); كَسَبَتْ / اكْتَسَبَتْ is not contrasted. نَظَرَ is dropped entirely. Reveal Al-Jinn 72:19 excerpt at قَامَ (index 2). Rebuilt 2026-09-23 from Docs/proposals/chapter-17-content-proposal.md; the chapter map and fixtures named two different reader_lecture_17 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "باب 17 کا جائزہ",
+    "chapter_order": 17,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 72,
+      "ayah": 19,
+      "label": "Al-Jinn 72:19",
+      "ar": "وَأَنَّهُ لَمَّا قَامَ عَبْدُ اللَّهِ يَدْعُوهُ",
+      "en": "And when the servant of Allah stood up, calling upon Him,",
+      "ur": "اور جب اللہ کا بندہ اسے پکارنے کے لیے کھڑا ہوا،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/072019.mp3"
+    },
+    "noor_intro": {
+      "en": "Chapter 17 review: seven past actions, who did them, and what they happened to.",
+      "ur": "باب 17 کا جائزہ: ماضی کے سات کام، کس نے کیے، اور کس پر ہوئے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Seven past actions",
+        "ar": "أَكَلَ، شَرِبَ، قَرَأَ، كَتَبَ، قَامَ، صَلَّى، سَمِعَ",
+        "ur": "ماضی کے سات کام"
+      },
+      "explanation": {
+        "en": "ate, drank, read, wrote, stood up, prayed, heard, and ذَهَبَ, went, from Chapter 5.",
+        "ur": "کھایا، پیا، پڑھا، لکھا، کھڑا ہوا، نماز پڑھی، سنا، اور باب 5 کا ذَهَبَ، گیا۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Three questions",
+        "ar": "سَمِعَ الطَّالِبُ الْأُسْتَاذَ",
+        "ur": "تین سوال"
+      },
+      "explanation": {
+        "en": "What happened? The action comes first. Who did it? The next word. To whom or what? The word after that, if there is one; قَامَ needs none.",
+        "ur": "کیا ہوا؟ کام پہلے آتا ہے۔ کس نے کیا؟ اگلا لفظ۔ کس پر یا کس چیز پر؟ اس کے بعد والا لفظ، اگر ہو؛ قَامَ کو کسی کی ضرورت نہیں۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "An object or a destination",
+        "ar": "قَرَأَ الطَّالِبُ الْكِتَابَ / ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ",
+        "ur": "مفعول یا منزل"
+      },
+      "explanation": {
+        "en": "الْكِتَابَ is what was read. إِلَى الْمَسْجِدِ is where the man went, and it is optional.",
+        "ur": "الْكِتَابَ وہ ہے جو پڑھا گیا۔ إِلَى الْمَسْجِدِ وہ جگہ ہے جہاں آدمی گیا، اور یہ ضروری نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "قَرَأَ الطَّالِبُ الْكِتَابَ",
+          "ar_plain": "قرا الطالب الكتاب",
+          "translit": "qaraʾa ṭ-ṭālibu l-kitāba",
+          "en": "The student read the book.",
+          "ur": "طالب علم نے کتاب پڑھی۔"
+        },
+        {
+          "ar": "ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ",
+          "ar_plain": "ذهب الرجل الى المسجد",
+          "translit": "dhahaba r-rajulu ilā l-masjidi",
+          "en": "The man went to the mosque.",
+          "ur": "آدمی مسجد کی طرف گیا۔"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The ـتْ clue, read with care",
+        "ar": "شَرِبَتْ / صَلَّتْ",
+        "ur": "ـتْ کا اشارہ، احتیاط سے"
+      },
+      "explanation": {
+        "en": "In these paired past actions ـتْ marks a female doer. The spelling can change before it, as in صَلَّى, صَلَّتْ, and not every word ending in ت is a feminine action.",
+        "ur": "ماضی کے ان جوڑی والے کاموں میں ـتْ کرنے والی عورت کی علامت ہے۔ اس سے پہلے املا بدل سکتا ہے، جیسے صَلَّى، صَلَّتْ، اور ت پر ختم ہونے والا ہر لفظ مؤنث کام نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "شَرِبَتْ",
+          "ar_plain": "شربت",
+          "translit": "sharibat",
+          "en": "she drank",
+          "ur": "اس (عورت) نے پیا"
+        },
+        {
+          "ar": "صَلَّتْ",
+          "ar_plain": "صلت",
+          "translit": "ṣallat",
+          "en": "she prayed",
+          "ur": "اس (عورت) نے نماز پڑھی"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Meaning in context",
+        "ar": "كَتَبَ / شَرِبَ / صَلَّى",
+        "ur": "سیاق میں معنی"
+      },
+      "explanation": {
+        "en": "In the Quran, كَتَبَ اللَّهُ is Allah decreed; after مَن, شَرِبَ is whoever drinks; and وَلَا صَلَّىٰ is nor did he pray. Find the action, then read what surrounds it.",
+        "ur": "قرآن میں كَتَبَ اللَّهُ کا مطلب اللہ نے مقرر کیا؛ مَن کے بعد شَرِبَ کا مطلب جو کوئی پیے؛ اور وَلَا صَلَّىٰ کا مطلب اور نہ نماز پڑھی۔ کام ڈھونڈیں، پھر اس کے آس پاس پڑھیں۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:286: It will have the good it has earned, and it will bear the evil it has earned.",
+        "ar": "لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ",
+        "ur": "Al-Baqarah 2:286: اس کے لیے وہ ہے جو اس نے کمایا، اور اس پر وہ ہے جو اس نے کمایا۔"
+      },
+      "explanation": {
+        "en": "A retrieval from Chapter 8, not new grammar: كَسَبَتْ, it earned, ends in ـتْ because what earns here is نَفْس, a soul, which is feminine in Arabic. The ayah is glossed; only the ـتْ clue is asked about.",
+        "ur": "باب 8 سے دہرائی، نیا قاعدہ نہیں: كَسَبَتْ، اس نے کمایا، ـتْ پر ختم ہوتا ہے کیونکہ یہاں کمانے والی نَفْس، جان، ہے، جو عربی میں مؤنث ہے۔ آیت کا صرف معنی دیا گیا ہے؛ سوال صرف ـتْ کے اشارے کا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002286.mp3"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "MATCHING",
+      "id": "ch17-l06-ex01",
+      "left_column": [
+        {
+          "ar": "أَكَلَ",
+          "ar_plain": "اكل",
+          "translit": "akala",
+          "en": "he ate",
+          "ur": "اس نے کھایا"
+        },
+        {
+          "ar": "كَتَبَ",
+          "ar_plain": "كتب",
+          "translit": "kataba",
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        },
+        {
+          "ar": "سَمِعَ",
+          "ar_plain": "سمع",
+          "translit": "samiʿa",
+          "en": "he heard",
+          "ur": "اس نے سنا"
+        },
+        {
+          "ar": "صَلَّى",
+          "ar_plain": "صلى",
+          "translit": "ṣallā",
+          "en": "he prayed",
+          "ur": "اس نے نماز پڑھی"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "he wrote",
+          "ur": "اس نے لکھا"
+        },
+        {
+          "en": "he heard",
+          "ur": "اس نے سنا"
+        },
+        {
+          "en": "he prayed",
+          "ur": "اس نے نماز پڑھی"
+        },
+        {
+          "en": "he ate",
+          "ur": "اس نے کھایا"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch17-l06-ex02",
+      "prompt": {
+        "ar": "شَرِبَتِ الْبِنْتُ الْمَاءَ",
+        "ar_plain": "شربت البنت الماء",
+        "translit": "sharibati l-bintu l-māʾa",
+        "en": "The girl drank the water.",
+        "ur": "لڑکی نے پانی پیا۔"
+      },
+      "options": [
+        {
+          "en": "The boy drank the water.",
+          "ur": "لڑکے نے پانی پیا۔"
+        },
+        {
+          "en": "The girl ate the bread.",
+          "ur": "لڑکی نے روٹی کھائی۔"
+        },
+        {
+          "en": "Drink the water, girl!",
+          "ur": "لڑکی، پانی پیو!"
+        },
+        {
+          "en": "The girl drank the water.",
+          "ur": "لڑکی نے پانی پیا۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "شَرِبَتْ, she drank; الْبِنْتُ, the girl; الْمَاءَ, the water.",
+        "ur": "شَرِبَتْ، اس نے پیا؛ الْبِنْتُ، لڑکی؛ الْمَاءَ، پانی۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch17-l06-ex03",
+      "statement": {
+        "en": "In قَرَأَ الْأُسْتَاذُ الدَّرْسَ, the doer is الدَّرْسَ.",
+        "ur": "قَرَأَ الْأُسْتَاذُ الدَّرْسَ میں کرنے والا الدَّرْسَ ہے۔",
+        "ar_example": {
+          "ar": "قَرَأَ الْأُسْتَاذُ الدَّرْسَ",
+          "ar_plain": "قرا الاستاذ الدرس",
+          "translit": "qaraʾa l-ustādhu d-darsa",
+          "en": "The teacher read the lesson.",
+          "ur": "استاد نے سبق پڑھا۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. The doer comes right after the action: الْأُسْتَاذُ. الدَّرْسَ is what was read.",
+        "ur": "غلط۔ کرنے والا کام کے فوراً بعد آتا ہے: الْأُسْتَاذُ۔ الدَّرْسَ وہ ہے جو پڑھا گیا۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch17-l06-ex04",
+      "prompt_line": {
+        "ar": "مَاذَا فَعَلَ الْوَلَدُ؟",
+        "ar_plain": "ماذا فعل الولد",
+        "translit": "mādhā faʿala l-waladu?",
+        "en": "What did the boy do?",
+        "ur": "لڑکے نے کیا کیا؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "الْوَلَدُ فِي الْبَيْتِ",
+          "ar_plain": "الولد في البيت",
+          "translit": "al-waladu fī l-bayti",
+          "en": "The boy is in the house.",
+          "ur": "لڑکا گھر میں ہے۔"
+        },
+        {
+          "ar": "شَرِبَ الْمَاءَ",
+          "ar_plain": "شرب الماء",
+          "translit": "shariba l-māʾa",
+          "en": "He drank the water.",
+          "ur": "اس نے پانی پیا۔"
+        },
+        {
+          "ar": "اُكْتُبْ",
+          "ar_plain": "اكتب",
+          "translit": "uktub",
+          "en": "Write!",
+          "ur": "لکھو!"
+        },
+        {
+          "ar": "أَمْسِ",
+          "ar_plain": "امس",
+          "translit": "amsi",
+          "en": "yesterday",
+          "ur": "گزرا ہوا کل"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The question asks for a past action, so answer with one: شَرِبَ الْمَاءَ.",
+        "ur": "سوال ماضی کا کام پوچھتا ہے، اس لیے ایک کام سے جواب دیں: شَرِبَ الْمَاءَ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch17-l06-ex05",
+      "mode": "TAP",
+      "sentence_ar": "قَامَ الْوَلَدُ وَذَهَبَ ___ الْمَسْجِدِ",
+      "hint": {
+        "en": "The boy stood up and went to the mosque.",
+        "ur": "لڑکا کھڑا ہوا اور مسجد کی طرف گیا۔"
+      },
+      "options": [
+        {
+          "ar": "عَلَى",
+          "ar_plain": "على",
+          "translit": "ʿalā",
+          "en": "on",
+          "ur": "پر"
+        },
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilā",
+          "en": "to, towards",
+          "ur": "کی طرف"
+        },
+        {
+          "ar": "قَامَ",
+          "ar_plain": "قام",
+          "translit": "qāma",
+          "en": "he stood up",
+          "ur": "وہ کھڑا ہوا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "إِلَى",
+        "ar_plain": "الى",
+        "translit": "ilā",
+        "en": "to, towards",
+        "ur": "کی طرف"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The destination after ذَهَبَ is shown with إِلَى: to the mosque.",
+        "ur": "ذَهَبَ کے بعد منزل إِلَى سے دکھائی جاتی ہے: مسجد کی طرف۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch17-l06-ex06",
+      "ayah_fragment": {
+        "ar": "فَأَكَلَهُ الذِّئْبُ",
+        "surah_ref": "Yusuf 12:17"
+      },
+      "options": [
+        {
+          "en": "أَكَلَ, with its doer الذِّئْبُ — the brothers' claim",
+          "ur": "أَكَلَ، اپنے کرنے والے الذِّئْبُ کے ساتھ — بھائیوں کا دعویٰ"
+        },
+        {
+          "en": "شَرِبَ, with its doer الذِّئْبُ",
+          "ur": "شَرِبَ، اپنے کرنے والے الذِّئْبُ کے ساتھ"
+        },
+        {
+          "en": "قَامَ, with its doer يُوسُفُ",
+          "ur": "قَامَ، اپنے کرنے والے يُوسُفُ کے ساتھ"
+        },
+        {
+          "en": "No action appears in this line",
+          "ur": "اس سطر میں کوئی کام نہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "فَأَكَلَهُ contains أَكَلَ; the doer is الذِّئْبُ.",
+        "ur": "فَأَكَلَهُ میں أَكَلَ ہے؛ کرنے والا الذِّئْبُ ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch17-l06-ex07",
+      "ayah_fragment": {
+        "ar": "فَلَا صَدَّقَ وَلَا صَلَّىٰ",
+        "surah_ref": "Al-Qiyamah 75:31"
+      },
+      "options": [
+        {
+          "en": "he prayed and believed",
+          "ur": "اس نے نماز پڑھی اور تصدیق کی"
+        },
+        {
+          "en": "pray and believe!",
+          "ur": "نماز پڑھو اور تصدیق کرو!"
+        },
+        {
+          "en": "nor did he pray — the action is denied",
+          "ur": "اور نہ نماز پڑھی — کام کی نفی ہے"
+        },
+        {
+          "en": "he went to his family",
+          "ur": "وہ اپنے گھر والوں کی طرف گیا"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا before each action denies it: he neither believed nor prayed.",
+        "ur": "ہر کام سے پہلے لَا اس کی نفی کرتا ہے: نہ تصدیق کی اور نہ نماز پڑھی۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch17-l06-ex08",
+      "ayah_fragment": {
+        "ar": "قَدْ سَمِعَ اللَّهُ قَوْلَ الَّتِي تُجَادِلُكَ فِي زَوْجِهَا",
+        "surah_ref": "Al-Mujadilah 58:1"
+      },
+      "options": [
+        {
+          "en": "سَمِعَ — heard; doer قَوْلَ",
+          "ur": "سَمِعَ — سنا؛ کرنے والا قَوْلَ"
+        },
+        {
+          "en": "سَمِعَ — heard; doer اللَّهُ; what was heard قَوْلَ",
+          "ur": "سَمِعَ — سنا؛ کرنے والا اللَّهُ؛ جو سنا گیا قَوْلَ"
+        },
+        {
+          "en": "قَدْ — heard",
+          "ur": "قَدْ — سنا"
+        },
+        {
+          "en": "سَمِعَ — sat; doer اللَّهُ",
+          "ur": "سَمِعَ — بیٹھا؛ کرنے والا اللَّهُ"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Action, doer, object: سَمِعَ اللَّهُ قَوْلَ.",
+        "ur": "کام، کرنے والا، مفعول: سَمِعَ اللَّهُ قَوْلَ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch17-l06-ex09",
+      "ayah_fragment": {
+        "ar": "لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ",
+        "surah_ref": "Al-Baqarah 2:286"
+      },
+      "options": [
+        {
+          "en": "كَسَبَتْ — they earned; ـتْ marks a plural",
+          "ur": "كَسَبَتْ — انہوں نے کمایا؛ ـتْ جمع کی علامت ہے"
+        },
+        {
+          "en": "لَهَا — it earned",
+          "ur": "لَهَا — اس نے کمایا"
+        },
+        {
+          "en": "كَسَبَتْ — an instruction: earn!",
+          "ur": "كَسَبَتْ — ہدایت: کماؤ!"
+        },
+        {
+          "en": "كَسَبَتْ — it earned; ـتْ because the soul, نَفْس, is feminine",
+          "ur": "كَسَبَتْ — اس نے کمایا؛ ـتْ اس لیے کہ جان، نَفْس، مؤنث ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The ـتْ on كَسَبَتْ points to a feminine doer: the soul.",
+        "ur": "كَسَبَتْ پر ـتْ مؤنث کرنے والی کی طرف اشارہ ہے: جان۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch17-l06-ex10",
+      "statement": {
+        "en": "شَرِبَ الْوَلَدُ الْمَاءَ is a line from the Quran.",
+        "ur": "شَرِبَ الْوَلَدُ الْمَاءَ قرآن کی ایک سطر ہے۔",
+        "ar_example": {
+          "ar": "شَرِبَ الْوَلَدُ الْمَاءَ",
+          "ar_plain": "شرب الولد الماء",
+          "translit": "shariba l-waladu l-māʾa",
+          "en": "The boy drank the water.",
+          "ur": "لڑکے نے پانی پیا۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. It is a practice sentence. A Quran line in Warsh comes with its surah and ayah and a reciter's voice.",
+        "ur": "غلط۔ یہ مشق کا جملہ ہے۔ وَرش میں قرآنی سطر سورت، آیت اور قاری کی آواز کے ساتھ آتی ہے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 17: past actions in context",
+      "ur": "باب 17: سیاق میں ماضی کے کام"
+    },
+    "ayah": {
+      "surah": 72,
+      "ayah": 19,
+      "label": "Al-Jinn 72:19",
+      "ar": "وَأَنَّهُ لَمَّا قَامَ عَبْدُ اللَّهِ يَدْعُوهُ",
+      "en": "And when the servant of Allah stood up, calling upon Him,",
+      "ur": "اور جب اللہ کا بندہ اسے پکارنے کے لیے کھڑا ہوا،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/072019.mp3"
+    },
+    "highlighted_word_indices": [
+      2
+    ],
+    "highlighted_words": [
+      "قَامَ"
+    ],
+    "noor_explanation": {
+      "en": "قَامَ عَبْدُ اللَّهِ: an action and its doer, the pattern you read all chapter. With seven actions, the doer-first order and an eye for context, you can read who did what in simple Arabic and in these Quran lines.",
+      "ur": "قَامَ عَبْدُ اللَّهِ: ایک کام اور اس کا کرنے والا، وہ ترتیب جو آپ نے پورے باب میں پڑھی۔ سات کاموں، کرنے والے کی ترتیب اور سیاق پر نظر کے ساتھ، آپ سادہ عربی اور ان قرآنی سطروں میں پڑھ سکتے ہیں کہ کس نے کیا کیا۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review complete. The Chapter 17 final test is next.",
+      "ur": "جائزہ مکمل۔ اگلا باب 17 کا آخری امتحان ہے۔"
+    }
+  }
+}

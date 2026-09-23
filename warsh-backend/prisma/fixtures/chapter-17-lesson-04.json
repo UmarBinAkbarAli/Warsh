@@ -2,111 +2,153 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 17, Lesson 4 - Past tense verbs صَلَّى and ذَهَبَ as vocabulary (recognition mode).",
+    "_note": "Chapter 17, Lesson 4 (ch17-l04) — صَلَّى, with صَلَّتْ shown as a learned pair (the ى drops, so \"just add ت\" is not a spelling rule), and ذَهَبَ retrieved with an optional destination (إِلَى is not obligatory). Quran: Al-Qiyamah 75:31 وَلَا صَلَّىٰ taught as a negation, nor did he pray (reveal index 3), and 75:33 ذَهَبَ إِلَىٰ أَهْلِهِ as a real movement example; the serious context is kept. The invented أَصَلَّى \"in Al-Ma'un\" is gone. Rebuilt 2026-09-23 from Docs/proposals/chapter-17-content-proposal.md; the chapter map and fixtures named two different reader_lecture_17 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "نماز اور حرکت",
     "chapter_order": 17,
     "lesson_order": 4,
-    "chapter_title": "Daily Actions and Verbs",
-    "title": "Prayer and Going",
-    "titleAr": "الصَّلَاةُ وَالذَّهَابُ",
-    "source": "reader_book2_lesson6_daily_verbs.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 107,
-      "ayah": 5,
-      "label": "Al-Ma'un 107:5",
-      "ar": "الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ",
-      "en": "[But] who are heedless of their prayer -",
-      "ur": "جو نماز کی طرف سے غافل رہتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107005.mp3"
+      "surah": 75,
+      "ayah": 31,
+      "label": "Al-Qiyamah 75:31",
+      "ar": "فَلَا صَدَّقَ وَلَا صَلَّىٰ",
+      "en": "He neither believed nor prayed.",
+      "ur": "تو اس نے نہ تصدیق کی اور نہ نماز پڑھی۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/075031.mp3"
     },
     "noor_intro": {
-      "en": "Today we learn two verbs that are central to a Muslim's daily life: صَلَّى (to pray) and ذَهَبَ (to go). In the Quran, we are asked about our prayer: أَصَلَّى — does he pray? This is the question of faith.",
-      "ur": "آج ہم دو ایسے افعال سیکھتے ہیں جو مسلمان کی روزانہ کی زندگی میں مرکزی ہیں: صَلَّى (نماز پڑھنا) اور ذَهَبَ (جانا)۔ قرآن میں ہماری نماز کے بارے میں پوچھا جاتا ہے: أَصَلَّى — کیا وہ نماز پڑھتا ہے؟ یہ ایمان کا سوال ہے۔"
+      "en": "Al-Qiyamah describes a man who turned away. Listen to 75:31: two past actions, each with لَا before it. The second is صَلَّىٰ, prayed, but read the whole phrase before you decide what it says.",
+      "ur": "سورۃ القیامہ ایک ایسے آدمی کا ذکر کرتی ہے جس نے منہ موڑا۔ 75:31 سنیں: ماضی کے دو کام، ہر ایک سے پہلے لَا۔ دوسرا صَلَّىٰ، نماز پڑھی، ہے، لیکن فیصلے سے پہلے پورا جملہ پڑھیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
+      "type": "WORD",
+      "text": {
+        "ar": "صَلَّى",
+        "ar_plain": "صلى",
+        "translit": "ṣallā",
+        "en": "he prayed",
+        "ur": "اس نے نماز پڑھی"
+      },
+      "explanation": {
+        "en": "صَلَّى: he prayed.",
+        "ur": "صَلَّى: اس نے نماز پڑھی۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "صَلَّى الرَّجُلُ فِي الْمَسْجِدِ",
+        "ar_plain": "صلى الرجل في المسجد",
+        "translit": "ṣallā r-rajulu fī l-masjidi",
+        "en": "The man prayed in the mosque.",
+        "ur": "آدمی نے مسجد میں نماز پڑھی۔"
+      },
+      "explanation": {
+        "en": "صَلَّى, prayed; الرَّجُلُ, the man; فِي الْمَسْجِدِ, in the mosque, tells you where.",
+        "ur": "صَلَّى، نماز پڑھی؛ الرَّجُلُ، آدمی؛ فِي الْمَسْجِدِ، مسجد میں، بتاتا ہے کہاں۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
       "concept": {
-        "en": "Verbs of worship and movement",
-        "ar": "أَفْعَالُ الْعِبَادَةِ وَالِانْتِقَالِ",
-        "ur": "عبادت اور حرکت کے افعال"
+        "en": "Learn the pair",
+        "ar": "صَلَّى / صَلَّتْ",
+        "ur": "جوڑا یاد کریں"
       },
       "explanation": {
-        "en": "صَلَّى means 'he prayed' and ذَهَبَ means 'he went.' صَلَّى is from the root ص-ل-و which relates to صَلَاة (prayer). ذَهَبَ is from the root ذ-ه-ب meaning 'to go.' Both add ت for feminine: صَلَّتْ and ذَهَبَتْ.",
-        "ur": "صَلَّى کا مطلب 'اس نے نماز پڑھی' اور ذَهَبَ کا مطلب 'اس نے گیا'۔ صَلَّى root ص-ل-و سے ہے جو صَلَاة (نماز) سے جُڑا ہے۔ ذَهَبَ root ذ-ه-ب سے ہے جس کا مطلب 'جانا' ہے۔ دونوں مؤنث کے لیے ت لیتے ہیں: صَلَّتْ اور ذَهَبَتْ۔"
-      }
+        "en": "For a female doer, صَلَّى becomes صَلَّتْ: the final ى drops before ـتْ. So ـتْ is a clue to read, not a rule to glue on: learn صَلَّى and صَلَّتْ as a pair.",
+        "ur": "کرنے والی عورت ہو تو صَلَّى، صَلَّتْ بن جاتا ہے: ـتْ سے پہلے آخری ى گر جاتی ہے۔ اس لیے ـتْ پڑھنے کا اشارہ ہے، چپکانے کا قاعدہ نہیں: صَلَّى اور صَلَّتْ کو جوڑے کی طرح یاد کریں۔"
+      },
+      "examples": [
+        {
+          "ar": "صَلَّى",
+          "ar_plain": "صلى",
+          "translit": "ṣallā",
+          "en": "he prayed",
+          "ur": "اس نے نماز پڑھی"
+        },
+        {
+          "ar": "صَلَّتْ",
+          "ar_plain": "صلت",
+          "translit": "ṣallat",
+          "en": "she prayed",
+          "ur": "اس (عورت) نے نماز پڑھی"
+        }
+      ]
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "صَلَّى الرَّجُلُ",
-        "ar_plain": "صلى الرجل",
-        "translit": "sallaa ar-rajulu",
-        "en": "The man prayed",
-        "ur": "آدمی نے نماز پڑھی"
+        "ar": "صَلَّتِ الْبِنْتُ",
+        "ar_plain": "صلت البنت",
+        "translit": "ṣallati l-bintu",
+        "en": "The girl prayed.",
+        "ur": "لڑکی نے نماز پڑھی۔"
       },
       "explanation": {
-        "en": "صَلَّى means 'he prayed.' Note that صَلَّى has a shadda (ّ) on the ل, indicating a doubled letter. This is part of the verb's pattern for prayer.",
-        "ur": "صَلَّى کا مطلب 'اس نے نماز پڑھی'۔ نوٹ کریں کہ صَلَّى پر ل پر شدد (ّ) ہے، جو دہرائی ہوئی حرف کی نشاندہی کرتی ہے۔ یہ نماز کے فعل کے پٹرن کا حصہ ہے۔"
+        "en": "صَلَّتِ الْبِنْتُ: the girl prayed, said -ti before ال.",
+        "ur": "صَلَّتِ الْبِنْتُ: لڑکی نے نماز پڑھی، ال سے پہلے -ti پڑھا جاتا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "صَلَّتِ الْمَرْأَةُ",
-        "ar_plain": "صلت المرأة",
-        "translit": "sallat al-mar'atu",
-        "en": "The woman prayed",
-        "ur": "عورت نے نماز پڑھی"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Where to is optional",
+        "ar": "ذَهَبَ الرَّجُلُ / ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ",
+        "ur": "کس طرف، ضروری نہیں"
       },
       "explanation": {
-        "en": "صَلَّتْ with ت = 'she prayed.' The feminine marker ت appears at the end of صَلَّتْ.",
-        "ur": "صَلَّتْ ت کے ساتھ = 'اس نے نماز پڑھی'۔ ت کی نشاندہی صَلَّتْ کے آخر میں ہے۔"
-      }
+        "en": "ذَهَبَ from Chapter 5 can stand alone: ذَهَبَ الرَّجُلُ, the man went. When the destination is given, إِلَى shows it: إِلَى الْمَسْجِدِ, to the mosque. ذَهَبَ does not always need إِلَى.",
+        "ur": "باب 5 کا ذَهَبَ اکیلا آ سکتا ہے: ذَهَبَ الرَّجُلُ، آدمی چلا گیا۔ جب منزل بتائی جائے تو إِلَى اسے دکھاتا ہے: إِلَى الْمَسْجِدِ، مسجد کی طرف۔ ذَهَبَ کو ہمیشہ إِلَى کی ضرورت نہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "ذَهَبَ الرَّجُلُ",
+          "ar_plain": "ذهب الرجل",
+          "translit": "dhahaba r-rajulu",
+          "en": "The man went.",
+          "ur": "آدمی چلا گیا۔"
+        },
+        {
+          "ar": "ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ",
+          "ar_plain": "ذهب الرجل الى المسجد",
+          "translit": "dhahaba r-rajulu ilā l-masjidi",
+          "en": "The man went to the mosque.",
+          "ur": "آدمی مسجد کی طرف گیا۔"
+        }
+      ]
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "ذَهَبَ الْوَلَدُ إِلَى الْمَسْجِدِ",
-        "ar_plain": "ذهب الولد إلى المسجد",
-        "translit": "dhahaba al-waladu 'ilaa al-masjidi",
-        "en": "The boy went to the mosque",
-        "ur": "لڑکا مسجد کی طرف گیا"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Qiyamah 75:31: He neither believed nor prayed.",
+        "ar": "فَلَا صَدَّقَ وَلَا صَلَّىٰ",
+        "ur": "Al-Qiyamah 75:31: تو اس نے نہ تصدیق کی اور نہ نماز پڑھی۔"
       },
       "explanation": {
-        "en": "ذَهَبَ means 'he went.' إِلَى means 'to' or 'towards.' الْمَسْجِدِ is 'the mosque.' ذَهَبَ إِلَى الْمَسْجِدِ — he went to the mosque (to pray).",
-        "ur": "ذَهَبَ کا مطلب 'اس نے گیا'۔ إِلَى کا مطلب 'طرف' یا 'تک' ہے۔ الْمَسْجِدِ 'مسجد' ہے۔ ذَهَبَ إِلَى الْمَسْجِدِ — وہ مسجد کی طرف گیا (نماز کے لیے)۔"
-      }
+        "en": "لَا before each past action makes it a denial: فَلَا صَدَّقَ, he did not believe, وَلَا صَلَّىٰ, nor did he pray. The ayah describes a man who rejected; it does not say he prayed. Read the whole phrase: here the negation is the meaning.",
+        "ur": "ہر ماضی کے کام سے پہلے لَا اسے نفی بنا دیتا ہے: فَلَا صَدَّقَ، اس نے تصدیق نہ کی، وَلَا صَلَّىٰ، اور نہ نماز پڑھی۔ آیت ایک انکار کرنے والے آدمی کا ذکر کرتی ہے؛ یہ نہیں کہتی کہ اس نے نماز پڑھی۔ پورا جملہ پڑھیں: یہاں نفی ہی معنی ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/075031.mp3"
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "ذَهَبَتِ الْبِنْتُ إِلَى الْبَيْتِ",
-        "ar_plain": "ذهبت البنت إلى البيت",
-        "translit": "dhahabat al-bintu 'ilaa al-bayti",
-        "en": "The girl went home",
-        "ur": "لڑکی گر کو گئی"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Qiyamah 75:33: Then he went to his family, swaggering.",
+        "ar": "ثُمَّ ذَهَبَ إِلَىٰ أَهْلِهِ يَتَمَطَّىٰ",
+        "ur": "Al-Qiyamah 75:33: پھر اکڑتا ہوا اپنے گھر والوں کی طرف چلا گیا۔"
       },
       "explanation": {
-        "en": "ذَهَبَتْ with ت = 'she went.' ذَهَبَتْ إِلَى الْبَيْتِ means 'she went home.'",
-        "ur": "ذَهَبَتْ ت کے ساتھ = 'اس نے گئی'۔ ذَهَبَتْ إِلَى الْبَيْتِ کا مطلب 'وہ گر کو گئی'۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "ذَهَبَ إِلَى — the verb of movement",
-        "ur": "ذَهَبَ إِلَى — حرکت کا فعل"
+        "en": "Two ayat later: ذَهَبَ إِلَىٰ أَهْلِهِ, he went to his family, the same shape as ذَهَبَ إِلَى الْمَسْجِدِ. أَهْلِهِ is family with ـهِ, his. يَتَمَطَّىٰ, swaggering, is glossed.",
+        "ur": "دو آیات بعد: ذَهَبَ إِلَىٰ أَهْلِهِ، وہ اپنے گھر والوں کی طرف گیا، وہی ساخت جو ذَهَبَ إِلَى الْمَسْجِدِ میں ہے۔ أَهْلِهِ گھر والے ہیں ـهِ، اس کے، کے ساتھ۔ يَتَمَطَّىٰ، اکڑتا ہوا، کا صرف معنی دیا گیا ہے۔"
       },
-      "body": {
-        "en": "ذَهَبَ is the verb for 'to go.' It is always followed by إِلَى (to/towards). ذَهَبَ إِلَى الْمَسْجِدِ (he went to the mosque), ذَهَبَ إِلَى الْبَيْتِ (he went home). This pattern is fixed — you will see it everywhere in Arabic.",
-        "ur": "ذَهَبَ 'جانا' کا فعل ہے۔ اس کے بعد ہمیشہ إِلَى (طرف/تک) آتا ہے۔ ذَهَبَ إِلَى الْمَسْجِدِ (وہ مسجد کو گیا)، ذَهَبَ إِلَى الْبَيْتِ (وہ گر کو گیا)۔ یہ پٹرن fix ہے — آپ اسے عربی میں ہر جگہ دیکھیں گے۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/075033.mp3"
     }
   ],
   "exercises": [
@@ -114,362 +156,345 @@
       "type": "TAP_TRANSLATION",
       "id": "ch17-l04-ex01",
       "prompt": {
-        "ar": "صَلَّى الرَّجُلُ",
-        "ar_plain": "صلى الرجل",
-        "translit": "sallaa ar-rajulu",
-        "en": "The man prayed",
-        "ur": "آدمی نے نماز پڑھی"
+        "ar": "صَلَّى الرَّجُلُ فِي الْمَسْجِدِ",
+        "ar_plain": "صلى الرجل في المسجد",
+        "translit": "ṣallā r-rajulu fī l-masjidi",
+        "en": "The man prayed in the mosque.",
+        "ur": "آدمی نے مسجد میں نماز پڑھی۔"
       },
       "options": [
         {
-          "en": "The man prayed",
-          "ur": "آدمی نے نماز پڑھی"
+          "en": "The man prayed in the mosque.",
+          "ur": "آدمی نے مسجد میں نماز پڑھی۔"
         },
         {
-          "en": "The man went",
-          "ur": "آدمی گیا"
+          "en": "The man went to the mosque.",
+          "ur": "آدمی مسجد کی طرف گیا۔"
         },
         {
-          "en": "The woman prayed",
-          "ur": "عورت نے نماز پڑھی"
+          "en": "The man stood up in the mosque.",
+          "ur": "آدمی مسجد میں کھڑا ہوا۔"
         },
         {
-          "en": "The man slept",
-          "ur": "آدمی سویا"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wwrong": {
-        "en": "صَلَّى means 'he prayed.' The root ص-ل-و connects to صَلَاة (prayer).",
-        "ur": "صَلَّى کا مطلب 'اس نے نماز پڑھی'۔ root ص-ل-و کو صَلَاة (نماز) سے جوجھتا ہے۔"
-      }
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch17-l04-ex02",
-      "prompt": {
-        "ar": "ذَهَبَ الْوَلَدُ إِلَى الْمَسْجِدِ",
-        "ar_plain": "ذهب الولد إلى المسجد",
-        "translit": "dhahaba al-waladu 'ilaa al-masjidi",
-        "en": "The boy went to the mosque",
-        "ur": "لڑکا مسجد کی طرف گیا"
-      },
-      "options": [
-        {
-          "en": "The boy went to the mosque",
-          "ur": "لڑکا مسجد کی طرف گیا"
-        },
-        {
-          "en": "The boy prayed at the mosque",
-          "ur": "لڑکے نے مسجد میں نماز پڑھی"
-        },
-        {
-          "en": "The girl went to the mosque",
-          "ur": "لڑکی مسجد کی طرف گئی"
-        },
-        {
-          "en": "The boy came from the mosque",
-          "ur": "لڑکا مسجد سے آیا"
+          "en": "Pray in the mosque!",
+          "ur": "مسجد میں نماز پڑھو!"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "ذَهَبَ means 'he went.' إِلَى means 'to/towards.' الْمَسْجِدِ is 'the mosque.'",
-        "ur": "ذَهَبَ کا مطلب 'اس نے گیا'۔ إِلَى کا مطلب 'طرف/تک' ہے۔ الْمَسْجِدِ 'مسجد' ہے۔"
+        "en": "صَلَّى, prayed; الرَّجُلُ, the man; فِي الْمَسْجِدِ, in the mosque.",
+        "ur": "صَلَّى، نماز پڑھی؛ الرَّجُلُ، آدمی؛ فِي الْمَسْجِدِ، مسجد میں۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch17-l04-ex03",
+      "id": "ch17-l04-ex02",
       "statement": {
-        "en": "In the Quranic question أَصَلَّى, the verb صَلَّى means 'does he pray?' — it is asking about a person's prayer.",
-        "ur": "قرآنی سوال أَصَلَّى میں، فعل صَلَّى کا مطلب 'کیا وہ نماز پڑھتا ہے؟' ہے — یہ کسی شخص کی نماز کے بارے میں پوچھ رہا ہے۔"
+        "en": "In وَلَا صَلَّىٰ (Al-Qiyamah 75:31), the man prayed.",
+        "ur": "وَلَا صَلَّىٰ (سورۃ القیامہ 75:31) میں آدمی نے نماز پڑھی۔"
       },
-      "ar_example": {
-        "ar": "أَصَلَّى",
-        "ar_plain": "أصللى",
-        "translit": "a-sallaa",
-        "en": "does he pray?",
-        "ur": "کیا وہ نماز پڑھتا ہے؟"
-      },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. لَا before the past action denies it: nor did he pray.",
+        "ur": "غلط۔ ماضی کے کام سے پہلے لَا اس کی نفی کرتا ہے: اور نہ نماز پڑھی۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch17-l04-ex04",
+      "id": "ch17-l04-ex03",
       "mode": "TAP",
-      "sentence_ar": "الْمَرْأَةُ ___ إِلَى الْمَسْجِدِ",
+      "sentence_ar": "___ الْبِنْتُ",
       "hint": {
-        "en": "The woman went to the mosque.",
-        "ur": "عورت مسجد کی طرف گئی۔"
+        "en": "The girl prayed.",
+        "ur": "لڑکی نے نماز پڑھی۔"
       },
       "options": [
         {
-          "ar": "ذَهَبَتْ",
+          "ar": "ذَهَبَتِ",
           "ar_plain": "ذهبت",
-          "translit": "dhahabat",
+          "translit": "dhahabati",
           "en": "she went",
-          "ur": "اس نے گئی"
+          "ur": "وہ (عورت) گئی"
         },
         {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
-          "translit": "dhahaba",
-          "en": "he went",
-          "ur": "اس نے گیا"
-        },
-        {
-          "ar": "صَلَّتْ",
+          "ar": "صَلَّتِ",
           "ar_plain": "صلت",
-          "translit": "sallat",
+          "translit": "ṣallati",
           "en": "she prayed",
-          "ur": "اس نے نماز پڑھی"
+          "ur": "اس (عورت) نے نماز پڑھی"
+        },
+        {
+          "ar": "قَامَتِ",
+          "ar_plain": "قامت",
+          "translit": "qāmati",
+          "en": "she stood up",
+          "ur": "وہ کھڑی ہوئی"
         },
         {
           "ar": "صَلَّى",
           "ar_plain": "صلى",
-          "translit": "sallaa",
+          "translit": "ṣallā",
           "en": "he prayed",
           "ur": "اس نے نماز پڑھی"
         }
       ],
       "correct_answer": {
-        "ar": "ذَهَبَتْ",
-        "ar_plain": "ذهبت",
-        "translit": "dhahabat",
-        "en": "she went",
-        "ur": "اس نے گئی"
+        "ar": "صَلَّتِ",
+        "ar_plain": "صلت",
+        "translit": "ṣallati",
+        "en": "she prayed",
+        "ur": "اس (عورت) نے نماز پڑھی"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Prayed with a female doer is صَلَّتْ, said -ti before ال: صَلَّتِ الْبِنْتُ.",
+        "ur": "کرنے والی عورت کے ساتھ نماز پڑھی صَلَّتْ ہے، ال سے پہلے -ti: صَلَّتِ الْبِنْتُ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch17-l04-ex04",
+      "statement": {
+        "en": "ذَهَبَ must always be followed by إِلَى.",
+        "ur": "ذَهَبَ کے بعد ہمیشہ إِلَى آنا ضروری ہے۔",
+        "ar_example": {
+          "ar": "ذَهَبَ الرَّجُلُ",
+          "ar_plain": "ذهب الرجل",
+          "translit": "dhahaba r-rajulu",
+          "en": "The man went.",
+          "ur": "آدمی چلا گیا۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. ذَهَبَ الرَّجُلُ, the man went, is complete. إِلَى is added only when you say where to.",
+        "ur": "غلط۔ ذَهَبَ الرَّجُلُ، آدمی چلا گیا، مکمل ہے۔ إِلَى صرف تب آتا ہے جب آپ بتائیں کس طرف۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch17-l04-ex05",
+      "ayah_fragment": {
+        "ar": "فَلَا صَدَّقَ وَلَا صَلَّىٰ",
+        "surah_ref": "Al-Qiyamah 75:31"
+      },
+      "options": [
+        {
+          "en": "صَلَّىٰ — he prayed (the ayah affirms it)",
+          "ur": "صَلَّىٰ — اس نے نماز پڑھی (آیت اس کا اثبات کرتی ہے)"
+        },
+        {
+          "en": "صَدَّقَ — he prayed",
+          "ur": "صَدَّقَ — اس نے نماز پڑھی"
+        },
+        {
+          "en": "وَلَا صَلَّىٰ — nor did he pray: لَا denies the action",
+          "ur": "وَلَا صَلَّىٰ — اور نہ نماز پڑھی: لَا کام کی نفی کرتا ہے"
+        },
+        {
+          "en": "لَا — he went",
+          "ur": "لَا — وہ گیا"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Read the whole phrase: وَلَا صَلَّىٰ, nor did he pray.",
+        "ur": "پورا جملہ پڑھیں: وَلَا صَلَّىٰ، اور نہ نماز پڑھی۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch17-l04-ex06",
+      "ayah_fragment": {
+        "ar": "ثُمَّ ذَهَبَ إِلَىٰ أَهْلِهِ يَتَمَطَّىٰ",
+        "surah_ref": "Al-Qiyamah 75:33"
+      },
+      "options": [
+        {
+          "en": "ذَهَبَ — he prayed",
+          "ur": "ذَهَبَ — اس نے نماز پڑھی"
+        },
+        {
+          "en": "أَهْلِهِ — he went",
+          "ur": "أَهْلِهِ — وہ گیا"
+        },
+        {
+          "en": "إِلَىٰ — his family",
+          "ur": "إِلَىٰ — اس کے گھر والے"
+        },
+        {
+          "en": "ذَهَبَ إِلَىٰ أَهْلِهِ — he went to his family",
+          "ur": "ذَهَبَ إِلَىٰ أَهْلِهِ — وہ اپنے گھر والوں کی طرف گیا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ذَهَبَ, went; إِلَىٰ, to; أَهْلِهِ, his family.",
+        "ur": "ذَهَبَ، گیا؛ إِلَىٰ، کی طرف؛ أَهْلِهِ، اس کے گھر والے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch17-l04-ex07",
+      "target_translation": {
+        "en": "The man went to the mosque.",
+        "ur": "آدمی مسجد کی طرف گیا۔"
+      },
+      "tiles": [
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "he went",
+          "ur": "وہ گیا"
+        },
+        {
+          "ar": "الرَّجُلُ",
+          "ar_plain": "الرجل",
+          "translit": "ar-rajulu",
+          "en": "the man",
+          "ur": "آدمی"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilā",
+          "en": "to, towards",
+          "ur": "کی طرف"
+        },
+        {
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidi",
+          "en": "the mosque",
+          "ur": "مسجد"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Action, doer, then where to: ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ.",
+        "ur": "کام، کرنے والا، پھر کس طرف: ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch17-l04-ex05",
+      "id": "ch17-l04-ex08",
       "left_column": [
         {
           "ar": "صَلَّى",
           "ar_plain": "صلى",
-          "translit": "sallaa",
+          "translit": "ṣallā",
           "en": "he prayed",
           "ur": "اس نے نماز پڑھی"
         },
         {
           "ar": "صَلَّتْ",
           "ar_plain": "صلت",
-          "translit": "sallat",
+          "translit": "ṣallat",
           "en": "she prayed",
-          "ur": "اس نے نماز پڑھی"
+          "ur": "اس (عورت) نے نماز پڑھی"
         },
         {
           "ar": "ذَهَبَ",
           "ar_plain": "ذهب",
           "translit": "dhahaba",
           "en": "he went",
-          "ur": "اس نے گیا"
+          "ur": "وہ گیا"
         },
         {
           "ar": "ذَهَبَتْ",
           "ar_plain": "ذهبت",
           "translit": "dhahabat",
           "en": "she went",
-          "ur": "اس نے گئی"
-        },
-        {
-          "ar": "صَلَّى الرَّجُلُ",
-          "ar_plain": "صلى الرجل",
-          "translit": "sallaa ar-rajulu",
-          "en": "The man prayed",
-          "ur": "آدمی نے نماز پڑھی"
-        },
-        {
-          "ar": "ذَهَبَتِ الْبِنْتُ",
-          "ar_plain": "ذهبت البنت",
-          "translit": "dhahabat al-bintu",
-          "en": "The girl went",
-          "ur": "لڑکی گئی"
+          "ur": "وہ (عورت) گئی"
         }
       ],
       "right_column": [
         {
-          "en": "he prayed",
-          "ur": "اس نے نماز پڑھی"
-        },
-        {
           "en": "she prayed",
-          "ur": "اس نے نماز پڑھی"
+          "ur": "اس (عورت) نے نماز پڑھی"
         },
         {
           "en": "he went",
-          "ur": "اس نے گیا"
+          "ur": "وہ گیا"
         },
         {
           "en": "she went",
-          "ur": "اس نے گئی"
+          "ur": "وہ (عورت) گئی"
         },
         {
-          "en": "The man prayed",
-          "ur": "آدمی نے نماز پڑھی"
-        },
-        {
-          "en": "The girl went",
-          "ur": "لڑکی گئی"
+          "en": "he prayed",
+          "ur": "اس نے نماز پڑھی"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
           3
         ],
         [
-          4,
-          4
+          1,
+          0
         ],
         [
-          5,
-          5
+          2,
+          1
+        ],
+        [
+          3,
+          2
         ]
       ],
       "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch17-l04-ex06",
-      "target_translation": {
-        "en": "The woman went to the mosque.",
-        "ur": "عورت مسجد کی طرف گئی۔"
-      },
-      "tiles": [
-        {
-          "ar": "ذَهَبَتْ",
-          "ar_plain": "ذهبت",
-          "translit": "dhahabat",
-          "en": "she went",
-          "ur": "اس نے گئی"
-        },
-        {
-          "ar": "الْمَرْأَةُ",
-          "ar_plain": "المرأة",
-          "translit": "al-mar'atu",
-          "en": "the woman",
-          "ur": "عورت"
-        },
-        {
-          "ar": "إِلَى الْمَسْجِدِ",
-          "ar_plain": "إلى المسجد",
-          "translit": "'ilaa al-masjidi",
-          "en": "to the mosque",
-          "ur": "مسجد کی طرف"
-        },
-        {
-          "ar": "صَلَّتْ",
-          "ar_plain": "صلت",
-          "translit": "sallat",
-          "en": "she prayed",
-          "ur": "اس نے نماز پڑھی"
-        }
-      ],
-      "correct_order": [
-        1,
-        0,
-        2
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch17-l04-ex07",
-      "statement": {
-        "en": "The verb ذَهَبَ must always be followed by إِلَى (to/towards) to indicate the destination.",
-        "ur": "فعل ذَهَبَ کے بعد ہمیشہ مقصد بتانے کے لیے إِلَى (طرف/تک) آنا چاہیے۔"
-      },
-      "ar_example": {
-        "ar": "ذَهَبَ إِلَى الْبَيْتِ",
-        "ar_plain": "ذهب إلى البيت",
-        "translit": "dhahaba 'ilaa al-bayti",
-        "en": "He went home",
-        "ur": "وہ گر کو گیا"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch17-l04-ex08",
-      "prompt": {
-        "ar": "ذَهَبَتْ الْمُسْلِمَةُ إِلَى الْمَسْجِدِ لِتُصَلِّيَ",
-        "ar_plain": "ذهبت المسلمة إلى المسجد لتصلّي",
-        "translit": "dhahabat al-muslimaatu 'ilaa al-masjidi li-tusalliyya",
-        "en": "The Muslim woman went to the mosque to pray",
-        "ur": "مسلمہ عورت نماز کے لیے مسجد کی طرف گئی"
-      },
-      "options": [
-        {
-          "en": "The Muslim woman went to the mosque to pray",
-          "ur": "مسلمہ عورت نماز کے لیے مسجد کی طرف گئی"
-        },
-        {
-          "en": "The Muslim man went to the mosque to pray",
-          "ur": "مسلمان آدمی نماز کے لیے مسجد کی طرف گیا"
-        },
-        {
-          "en": "The Muslim woman went home to sleep",
-          "ur": "مسلمہ عورت سونے کے لیے گھر کو گئی"
-        },
-        {
-          "en": "The Muslim woman read at the mosque",
-          "ur": "مسلمہ عورت نے مسجد میں پڑھا"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "ذَهَبَتْ (she went) + إِلَى الْمَسْجِدِ (to the mosque) + لِتُصَلِّيَ (to pray). This sentence uses all three: going, destination, and purpose.",
-        "ur": "ذَهَبَتْ (اس نے گئی) + إِلَى الْمَسْجِدِ (مسجد کی طرف) + لِتُصَلِّيَ (نماز کے لیے)۔ یہ جملہ تینوں استعمال کرتا ہے: جانا، مقصد، اور مقصد۔"
-      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Past tense verbs: صَلَّى and ذَهَبَ",
-      "ar": "أَفْعَالُ الْمَاضِي: صَلَّى وَذَهَبَ",
-      "ur": "ماضی کے افعال: صَلَّى اور ذَهَبَ"
+      "en": "Read the whole phrase",
+      "ur": "پورا جملہ پڑھیں"
     },
     "ayah": {
-      "surah": 107,
-      "ayah": 5,
-      "label": "Al-Ma'un 107:5",
-      "ar": "الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ",
-      "en": "[But] who are heedless of their prayer -",
-      "ur": "جو نماز کی طرف سے غافل رہتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/107005.mp3"
+      "surah": 75,
+      "ayah": 31,
+      "label": "Al-Qiyamah 75:31",
+      "ar": "فَلَا صَدَّقَ وَلَا صَلَّىٰ",
+      "en": "He neither believed nor prayed.",
+      "ur": "تو اس نے نہ تصدیق کی اور نہ نماز پڑھی۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/075031.mp3"
     },
     "highlighted_word_indices": [
-      2
+      3
+    ],
+    "highlighted_words": [
+      "صَلَّىٰ"
     ],
     "noor_explanation": {
-      "en": "صَلَّى (he prayed) → صَلَّتْ (she prayed). ذَهَبَ (he went) → ذَهَبَتْ (she went). ذَهَبَ is always followed by إِلَى to show destination. In Al-Ma'un, Allah asks: أَصَلَّى — does he pray? This is the question that separates true faith from mere performance.",
-      "ur": "صَلَّى (اس نے نماز پڑھی) → صَلَّتْ (اس نے نماز پڑھی)۔ ذَهَبَ (اس نے گیا) → ذَهَبَتْ (اس نے گئی)۔ ذَهَبَ کے بعد ہمیشہ مقصد بتانے کے لیے إِلَى آتا ہے۔ سورۃ الماعون میں اللہ پوچھتا ہے: أَصَلَّى — کیا وہ نماز پڑھتا ہے؟ یہ وہ سوال ہے جو حقیقی ایمان کو عمل سے جدا کرتا ہے۔"
+      "en": "صَلَّىٰ is prayed, but وَلَا before it turns the phrase into nor did he pray. Finding the action word is the first step; reading what surrounds it tells you whether it happened.",
+      "ur": "صَلَّىٰ کا مطلب نماز پڑھی ہے، لیکن اس سے پہلے وَلَا جملے کو 'اور نہ نماز پڑھی' بنا دیتا ہے۔ کام کا لفظ ڈھونڈنا پہلا قدم ہے؛ اس کے آس پاس پڑھنا بتاتا ہے کہ کام ہوا یا نہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Eight verbs now in your vocabulary. صَلَّى and ذَهَبَ are essential for describing a Muslim's daily life. Remember: ذَهَبَ needs إِلَى to show where you're going. صَلَّى connects you to the worship that defines us. Keep building!",
-      "ur": "اب آپ کے پاس آٹھ افعال ہیں۔ صَلَّى اور ذَهَبَ مسلمان کی روزانہ کی زندگی بیان کرنے کے لیے ضروری ہیں۔ یاد رکھیں: ذَهَبَ کے لیے مقصد بتانے کے لیے إِلَى چاہیے۔ صَلَّى اس عبادت سے جو ہمیں تعریف کرتی ہے جُڑا ہوا ہے۔ جاری رکھیں!"
+      "en": "You can read صَلَّى and صَلَّتْ, use ذَهَبَ with or without a destination, and notice a negation. Next: hearing, and who did what to whom.",
+      "ur": "آپ صَلَّى اور صَلَّتْ پڑھ سکتے ہیں، ذَهَبَ کو منزل کے ساتھ یا اس کے بغیر استعمال کر سکتے ہیں، اور نفی پہچان سکتے ہیں۔ آگے: سننا، اور کس نے کس کے ساتھ کیا کیا۔"
     }
   }
 }

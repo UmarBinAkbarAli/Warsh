@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 16, Lesson 4 - Classroom commands and actions: افْتَحْ، اقْرَأْ، اُكْتُبْ، اُنْظُرْ",
+    "_note": "Chapter 16, Lesson 4 (ch16-l04, STANDARD) — whole-phrase comprehension of four instructions to one male learner (اِفْتَحِ الْكِتَابَ، اِقْرَأْ، اُكْتُبْ فِي الدَّفْتَرِ، اُنْظُرْ إِلَى الْأُسْتَاذِ) and a polite reply نَعَمْ يَا أُسْتَاذُ; قُلْ (say) carries the Tadabbur vocabulary key قل for An-Nas and Al-Falaq (card introduces_vocab, exercise ch16-l04-ex09); the group form اِفْتَحُوا الْكُتُبَ is Chapter 12 retrieval only. No imperative derivation (\"remove the prefix\" is gone), no politeness-vowel claim (a true/false item now marks it false), no malformed اُجْلِسْ / اُقُمْ. Quran anchor Al-Alaq 96:1 at اقْرَأْ (index 0), kept distinct from authored classroom lines. STANDARD kept: SPOKEN_PHRASES would drop the Quran reveal. Rebuilt 2026-09-23 from Docs/proposals/chapter-16-content-proposal.md; the curriculum map and fixtures named two different reader_lecture_16 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "کلاس میں سنیں اور جواب دیں",
     "chapter_order": 16,
     "lesson_order": 4,
-    "chapter_title": "School and Students",
-    "title": "Classroom Commands",
-    "titleAr": "أَوَامِرُ الْفَصْلِ",
-    "source": "reader_lecture_16_school_and_students.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 87,
+      "surah": 96,
       "ayah": 1,
-      "label": "Al-A'la 87:1",
-      "ar": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
-      "en": "Exalt the name of your Lord, the Most High,",
-      "ur": "(اے پیغمبر) اپنے پروردگار جلیل الشان کے نام کی تسبیح کرو",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
+      "label": "Al-Alaq 96:1",
+      "ar": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+      "en": "Read in the name of your Lord who created.",
+      "ur": "اپنے رب کے نام سے پڑھو جس نے پیدا کیا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096001.mp3"
     },
     "noor_intro": {
-      "en": "In the classroom, the teacher gives commands. Commands in Arabic are simple — just remove the prefix and you get the imperative form. Let us learn the most common classroom commands.",
-      "ur": "کلاس روم میں استاد حکم دیتا ہے۔ عربی میں حکم دینا آسان ہے — بس prefix ہٹا دو اور امریہ حاصل ہو جاتا ہے۔ آئیے سب سے عام کلاس روم کے احکام سیکھیں۔"
+      "en": "In class the teacher gives short instructions and you act on them. One of them is also the first word of Al-Alaq: اقْرَأْ, read. Listen to the ayah first.",
+      "ur": "کلاس میں استاد مختصر ہدایات دیتا ہے اور آپ ان پر عمل کرتے ہیں۔ ان میں سے ایک سورۃ العلق کا پہلا لفظ بھی ہے: اقْرَأْ، پڑھو۔ پہلے آیت سنیں۔"
     },
     "autoplay": true
   },
@@ -32,79 +29,69 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Classroom imperatives (commands)",
-        "ar": "صِيَغُ الْأَمْرِ فِي الْفَصْلِ",
-        "ur": "کلاس روم میں امریہ کی شکلیں"
+        "en": "Instructions to one learner",
+        "ar": "اِفْتَحْ، اِقْرَأْ، اُكْتُبْ، اُنْظُرْ",
+        "ur": "ایک سیکھنے والے کو ہدایات"
       },
       "explanation": {
-        "en": "In Arabic, imperatives are formed by removing the prefix of the present tense verb: يَفْتَحُ → اِفْتَحْ (open!), يَقْرَأُ → اِقْرَأْ (read!), يَكْتُبُ → اُكْتُبْ (write!), يَنْظُرُ → اُنْظُرْ (look!).",
-        "ur": "عربی میں امریہ بنانے کے لیے مضارع کے prefix کو ہٹا دیتے ہیں: يَفْتَحُ → اِفْتَحْ (کھولو!), يَقْرَأُ → اِقْرَأْ (پڑھو!), يَكْتُبُ → اُكْتُبْ (لکھو!), يَنْظُرُ → اُنْظُرْ (دیکھو!)۔"
+        "en": "A teacher speaks to one student with short instruction words. Learn each one as a whole with its meaning; how these forms are built is studied later. These address one male learner. In Chapter 12 you heard the form for a group: اِفْتَحُوا الْكُتُبَ, open the books.",
+        "ur": "استاد ایک طالب علم سے مختصر ہدایتی الفاظ میں بات کرتا ہے۔ ہر ایک کو اس کے معنی کے ساتھ پورا سیکھیں؛ یہ صورتیں کیسے بنتی ہیں یہ بعد میں پڑھا جائے گا۔ یہ ایک مرد سیکھنے والے کے لیے ہیں۔ باب 12 میں آپ نے گروہ کے لیے صورت سنی: اِفْتَحُوا الْكُتُبَ، کتابیں کھولو۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "اِفْتَحِ الْكِتَابَ!",
-        "ar_plain": "افتح الكتاب!",
-        "translit": "iftahi al-kitaaba!",
-        "en": "Open the book!",
-        "ur": "کتاب کھولو!"
+        "ar": "اِفْتَحِ الْكِتَابَ",
+        "ar_plain": "افتح الكتاب",
+        "translit": "iftaḥi l-kitāba",
+        "en": "Open the book.",
+        "ur": "کتاب کھولو۔"
       },
       "explanation": {
-        "en": "اِفْتَحْ is the imperative 'open!' from يَفْتَحُ. The object الْكِتَابَ is in the accusative case (فتحة). Notice the command ends in a kasra (open to a teacher/someone you respect).",
-        "ur": "اِفْتَحْ، يَفْتَحُ سے امریہ 'کھولو!' ہے۔ مفعول الْكِتَابَ نصب میں ہے (فتحة)۔ دیکھیں حکم کے آخر میں کسرہ ہے (کسی محترم کو مخاطب کرنے پر)۔"
+        "en": "Open the book. Before الْكِتَابَ the end of اِفْتَحْ is said with -i so the words join: iftaḥi l-kitāba. You only need to understand it.",
+        "ur": "کتاب کھولو۔ الْكِتَابَ سے پہلے اِفْتَحْ کا آخر -i سے بولا جاتا ہے تاکہ الفاظ جڑ جائیں۔ آپ کو صرف اسے سمجھنا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "اِقْرَأِ الدَّرْسَ!",
-        "ar_plain": "اقرأ الدرس!",
-        "translit": "iqra-i ad-darsa!",
-        "en": "Read the lesson!",
-        "ur": "سبق پڑھو!"
+        "ar": "اِقْرَأْ",
+        "ar_plain": "اقرا",
+        "translit": "iqraʾ",
+        "en": "Read.",
+        "ur": "پڑھو۔"
       },
       "explanation": {
-        "en": "اِقْرَأْ is the imperative 'read!' from يَقْرَأُ. The lesson (دَّرْسَ) is the direct object — accusative with فتحة.",
-        "ur": "اِقْرَأْ، يَقْرَأُ سے امریہ 'پڑھو!' ہے۔ سبق (دَّرْسَ) مفعول ہے — نصب میں فتحة کے ساتھ۔"
+        "en": "Read, or recite. The teacher points to a line and says اِقْرَأْ. Your answer is to read it.",
+        "ur": "پڑھو، یا تلاوت کرو۔ استاد کسی سطر کی طرف اشارہ کر کے اِقْرَأْ کہتا ہے۔ آپ کا جواب اسے پڑھنا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "اُكْتُبْ فِي الدَّفْتَرِ!",
-        "ar_plain": "اكتب في الدفتر!",
-        "translit": "uktub fi ad-daftari!",
-        "en": "Write in the notebook!",
-        "ur": "نوٹ بک میں لکھو!"
+        "ar": "اُكْتُبْ فِي الدَّفْتَرِ",
+        "ar_plain": "اكتب في الدفتر",
+        "translit": "uktub fī d-daftari",
+        "en": "Write in the notebook.",
+        "ur": "کاپی میں لکھو۔"
       },
       "explanation": {
-        "en": "اُكْتُبْ is the imperative 'write!' from يَكْتُبُ. فِي الدَّفْتَرِ means 'in the notebook' — الدَّفْتَرِ is genitive after فِي. The command ends in a dhamma (ُكْتُبْ) — this is the form for speaking to someone you know well or a younger person.",
-        "ur": "اُكْتُبْ، يَكْتُبُ سے امریہ 'لکھو!' ہے۔ فِي الدَّفْتَرِ کا مطلب ہے 'نوٹ بک میں' — الدَّفْتَرِ فِي کے بعد جر میں ہے۔ حکم کے آخر میں ضمہ (ُكْتُبْ) ہے — یہ شکل کسی جانے پہچانے یا چھوٹے شخص سے بات کرنے کے لیے ہے۔"
+        "en": "Write in the notebook: اُكْتُبْ, write, then فِي الدَّفْتَرِ, in the notebook, a word from Lesson 1.",
+        "ur": "کاپی میں لکھو: اُكْتُبْ، لکھو، پھر فِي الدَّفْتَرِ، کاپی میں، سبق 1 کا لفظ۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "How imperative forms differ",
-        "ur": "امریہ کی شکلیں کیسے مختلف ہیں"
+      "type": "WORD",
+      "text": {
+        "ar": "اُنْظُرْ إِلَى الْأُسْتَاذِ",
+        "ar_plain": "انظر الى الاستاذ",
+        "translit": "unẓur ilā l-ustādhi",
+        "en": "Look at the teacher.",
+        "ur": "استاد کی طرف دیکھو۔"
       },
-      "body": {
-        "en": "The imperative vowel changes based on who you are speaking to: اِفْتَحْ (fatha — open!) for a respected person; اُنْظُرْ (dhamma — look!) for someone you know well. The vowel on the first letter also changes: فَ for فَعَلَ verbs, أُ for أُعْلِمَ verbs. Listen carefully to the vowel at the start of the command.",
-        "ur": "امریہ کا حرف آخر اس کس سے بات کر رہے ہیں اس پر منحصر ہے: اِفْتَحْ (فتحہ — کھولو!) کسی محترم کے لیے؛ اُنْظُرْ (ضمہ — دیکھو!) کسی جانے پہچانے کے لیے۔ پہلے حرف کا حرکت بھی بدلتا ہے: فَ فَعَلَ کے افعال کے لیے، أُ أُعْلِمَ کے لیے۔ حکم کے شروع میں حرکت پر غور سے سنیں۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Key vocabulary — Classroom commands",
-        "ar": "Key vocabulary — Classroom commands",
-        "ur": "اہم الفاظ — کلاس روم کے احکام"
-      },
-      "body": {
-        "en": "اِفْتَحْ — open! · اِقْرَأْ — read! · اُكْتُبْ — write! · اُنْظُرْ — look! · اُجْلِسْ — sit down! · اُقُمْ — stand up!",
-        "ar": "اِفْتَحْ — open! · اِقْرَأْ — read! · اُكْتُبْ — write! · اُنْظُرْ — look! · اُجْلِسْ — sit down! · اُقُمْ — stand up!",
-        "ur": "اِفْتَحْ — کھولو! · اِقْرَأْ — پڑھو! · اُكْتُبْ — لکھو! · اُنْظُرْ — دیکھو! · اُجْلِسْ — بیٹھ جاؤ! · اُقُمْ — کھڑے ہو جاؤ!"
+      "explanation": {
+        "en": "Look at the teacher: اُنْظُرْ, look, then إِلَى الْأُسْتَاذِ, towards the teacher.",
+        "ur": "استاد کی طرف دیکھو: اُنْظُرْ، دیکھو، پھر إِلَى الْأُسْتَاذِ، استاد کی طرف۔"
       }
     },
     {
@@ -113,366 +100,432 @@
         "ar": "قُلْ",
         "ar_plain": "قل",
         "translit": "qul",
-        "en": "say!",
-        "ur": "کہو"
+        "en": "Say.",
+        "ur": "کہو۔"
       },
       "explanation": {
-        "en": "قُلْ is the command 'say!' In An-Nas, the surah begins قُلْ أَعُوذُ — 'Say: I seek refuge.'",
-        "ur": "قُلْ حکم ہے: 'کہو!' سورۃ الناس قُلْ أَعُوذُ سے شروع ہوتی ہے: 'کہو: میں پناہ مانگتا ہوں۔'"
+        "en": "Say. The teacher asks you to repeat a word: قُلْ, then the word. Two short surahs you will read in Chapters 18 and 19, An-Nas and Al-Falaq, open with this same instruction: قُلْ أَعُوذُ, say: I seek refuge.",
+        "ur": "کہو۔ استاد آپ سے کوئی لفظ دہرانے کو کہتا ہے: قُلْ، پھر لفظ۔ دو چھوٹی سورتیں جو آپ باب 18 اور 19 میں پڑھیں گے، الناس اور الفلق، اسی ہدایت سے شروع ہوتی ہیں: قُلْ أَعُوذُ، کہو: میں پناہ مانگتا ہوں۔"
       },
       "introduces_vocab": {
         "ar_plain": "قل"
       }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The first vowel belongs to the word",
+        "ar": "اِفْتَحْ / اُكْتُبْ",
+        "ur": "پہلی حرکت لفظ کی ہے"
+      },
+      "explanation": {
+        "en": "Some instructions start with i, like اِفْتَحْ, and some with u, like اُكْتُبْ. The vowel comes with the word; it does not show whether the teacher is being polite or familiar. Learn each word with its own sound.",
+        "ur": "کچھ ہدایات i سے شروع ہوتی ہیں، جیسے اِفْتَحْ، اور کچھ u سے، جیسے اُكْتُبْ۔ یہ حرکت لفظ کے ساتھ آتی ہے؛ یہ نہیں بتاتی کہ استاد ادب سے بات کر رہا ہے یا بے تکلفی سے۔ ہر لفظ کو اس کی اپنی آواز کے ساتھ سیکھیں۔"
+      },
+      "examples": [
+        {
+          "ar": "اِفْتَحْ",
+          "ar_plain": "افتح",
+          "translit": "iftaḥ",
+          "en": "open",
+          "ur": "کھولو"
+        },
+        {
+          "ar": "اُكْتُبْ",
+          "ar_plain": "اكتب",
+          "translit": "uktub",
+          "en": "write",
+          "ur": "لکھو"
+        }
+      ]
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "نَعَمْ يَا أُسْتَاذُ",
+        "ar_plain": "نعم يا استاذ",
+        "translit": "naʿam yā ustādhu",
+        "en": "Yes, teacher.",
+        "ur": "جی، استاد صاحب۔"
+      },
+      "explanation": {
+        "en": "A polite reply before you act: نَعَمْ, yes, then يَا أُسْتَاذُ, teacher, the calling form from Chapter 3. Then do what was asked.",
+        "ur": "عمل سے پہلے مؤدبانہ جواب: نَعَمْ، جی، پھر يَا أُسْتَاذُ، استاد صاحب، باب 3 کی پکارنے والی صورت۔ پھر جو کہا گیا وہ کریں۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Alaq 96:1: Read in the name of your Lord who created.",
+        "ar": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+        "ur": "Al-Alaq 96:1: اپنے رب کے نام سے پڑھو جس نے پیدا کیا۔"
+      },
+      "explanation": {
+        "en": "The first word, اقْرَأْ, is an instruction to read or recite, the same word you just learned. Here it is a Quranic command with its own setting, the opening of Al-Alaq addressed to the Prophet ﷺ; it is not a classroom line. رَبِّكَ, your Lord, and الَّذِي خَلَقَ, who created, are glossed for now.",
+        "ur": "پہلا لفظ اقْرَأْ پڑھنے یا تلاوت کرنے کی ہدایت ہے، وہی لفظ جو آپ نے ابھی سیکھا۔ یہاں یہ اپنے خاص سیاق کے ساتھ قرآنی حکم ہے، سورۃ العلق کا آغاز جو نبی ﷺ سے خطاب ہے؛ یہ کلاس کی سطر نہیں۔ رَبِّكَ، تمہارا رب، اور الَّذِي خَلَقَ، جس نے پیدا کیا، کا صرف معنی ابھی دیا گیا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096001.mp3"
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "AUDIO_RECOGNITION",
       "id": "ch16-l04-ex01",
-      "prompt": {
-        "ar": "اِفْتَحِ الْكِتَابَ!",
-        "ar_plain": "افتح الكتاب!",
-        "translit": "iftahi al-kitaaba!",
-        "en": "Open the book!",
-        "ur": "کتاب کھولو!"
-      },
+      "arabic_text": "اِفْتَحِ الْكِتَابَ",
       "options": [
         {
-          "en": "Open the book!",
-          "ur": "کتاب کھولو!"
+          "en": "Open the book.",
+          "ur": "کتاب کھولو۔"
         },
         {
-          "en": "Close the book!",
-          "ur": "کتاب بند کرو!"
+          "en": "Read the book.",
+          "ur": "کتاب پڑھو۔"
         },
         {
-          "en": "Read the book!",
-          "ur": "کتاب پڑھو!"
+          "en": "Write in the book.",
+          "ur": "کتاب میں لکھو۔"
         },
         {
-          "en": "Write in the book!",
-          "ur": "کتاب میں لکھو!"
+          "en": "Look at the book.",
+          "ur": "کتاب کی طرف دیکھو۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "اِفْتَحْ is the imperative of يَفْتَحُ meaning 'open!' The kasra at the end signals the command is directed to someone with respect. الْكِتَابَ is the object in accusative case.",
-        "ur": "اِفْتَحْ، يَفْتَحُ کا امریہ ہے جس کا مطلب ہے 'کھولو!' آخر میں کسرہ سے پتہ چلتا ہے کہ حکم احترام سے دیا گیا ہے۔ الْكِتَابَ مفعول ہے نصب کی حالت میں۔"
+        "en": "اِفْتَحْ is open: open the book.",
+        "ur": "اِفْتَحْ کا مطلب کھولو ہے: کتاب کھولو۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch16-l04-ex02",
-      "statement": {
-        "en": "The imperative اِقْرَأْ comes from the verb يَكْتُبُ meaning 'to write.'",
-        "ur": "امریہ اِقْرَأْ، يَكْتُبُ (لکھنا) فعل سے آیا ہے۔"
-      },
-      "correct_answer": false,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch16-l04-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ فِي الدَّفْتَرِ!",
-      "hint": {
-        "en": "Write in the notebook!",
-        "ur": "نوٹ بک میں لکھو!"
-      },
-      "options": [
-        {
-          "ar": "اُكْتُبْ",
-          "ar_plain": "اكتب",
-          "translit": "uktub",
-          "en": "write!",
-          "ur": "لکھو!"
-        },
-        {
-          "ar": "اِفْتَحْ",
-          "ar_plain": "افتح",
-          "translit": "iftah",
-          "en": "open!",
-          "ur": "کھولو!"
-        },
-        {
-          "ar": "اِقْرَأْ",
-          "ar_plain": "اقرأ",
-          "translit": "iqra",
-          "en": "read!",
-          "ur": "پڑھو!"
-        },
-        {
-          "ar": "اُنْظُرْ",
-          "ar_plain": "انظر",
-          "translit": "unzur",
-          "en": "look!",
-          "ur": "دیکھو!"
-        }
-      ],
-      "correct_answer": {
-        "ar": "اُكْتُبْ",
-        "ar_plain": "اكتب",
-        "translit": "uktub",
-        "en": "write!",
-        "ur": "لکھو!"
-      },
-      "xp_value": 1
-    },
-    {
       "type": "MATCHING",
-      "id": "ch16-l04-ex04",
+      "id": "ch16-l04-ex02",
       "left_column": [
         {
           "ar": "اِفْتَحْ",
           "ar_plain": "افتح",
-          "translit": "iftah",
-          "en": "open!",
-          "ur": "کھولو!"
+          "translit": "iftaḥ",
+          "en": "open",
+          "ur": "کھولو"
         },
         {
           "ar": "اِقْرَأْ",
-          "ar_plain": "اقرأ",
-          "translit": "iqra",
-          "en": "read!",
-          "ur": "پڑھو!"
+          "ar_plain": "اقرا",
+          "translit": "iqraʾ",
+          "en": "read",
+          "ur": "پڑھو"
         },
         {
           "ar": "اُكْتُبْ",
           "ar_plain": "اكتب",
           "translit": "uktub",
-          "en": "write!",
-          "ur": "لکھو!"
+          "en": "write",
+          "ur": "لکھو"
         },
         {
           "ar": "اُنْظُرْ",
           "ar_plain": "انظر",
-          "translit": "unzur",
-          "en": "look!",
-          "ur": "دیکھو!"
+          "translit": "unẓur",
+          "en": "look",
+          "ur": "دیکھو"
         }
       ],
       "right_column": [
         {
-          "en": "open!",
-          "ur": "کھولو!"
+          "en": "read",
+          "ur": "پڑھو"
         },
         {
-          "en": "read!",
-          "ur": "پڑھو!"
+          "en": "write",
+          "ur": "لکھو"
         },
         {
-          "en": "write!",
-          "ur": "لکھو!"
+          "en": "look",
+          "ur": "دیکھو"
         },
         {
-          "en": "look!",
-          "ur": "دیکھو!"
+          "en": "open",
+          "ur": "کھولو"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          3
         ],
         [
           1,
-          1
+          0
         ],
         [
           2,
-          2
+          1
         ],
         [
           3,
-          3
+          2
         ]
       ],
       "xp_value": 1
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch16-l04-ex05",
-      "target_translation": {
-        "en": "Read the lesson!",
-        "ur": "سبق پڑھو!"
-      },
-      "tiles": [
-        {
-          "ar": "اِقْرَأْ",
-          "ar_plain": "اقرأ",
-          "translit": "iqra",
-          "en": "read!",
-          "ur": "پڑھو!"
-        },
-        {
-          "ar": "الدَّرْسَ",
-          "ar_plain": "الدرس",
-          "translit": "ad-darsa",
-          "en": "the lesson",
-          "ur": "سبق"
-        },
-        {
-          "ar": "اِفْتَحْ",
-          "ar_plain": "افتح",
-          "translit": "iftah",
-          "en": "open!",
-          "ur": "کھولو!"
-        },
-        {
-          "ar": "الْكِتَابَ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaaba",
-          "en": "the book",
-          "ur": "کتاب"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
       "type": "TAP_TRANSLATION",
-      "id": "ch16-l04-ex06",
+      "id": "ch16-l04-ex03",
       "prompt": {
-        "ar": "اُنْظُرْ إِلَى الْأُسْتَاذِ!",
-        "ar_plain": "انظر الى الاستاذ!",
-        "translit": "unzur ilaa al-ustaadhi!",
-        "en": "Look at the teacher!",
-        "ur": "استاد کو دیکھو!"
+        "ar": "اُكْتُبْ فِي الدَّفْتَرِ",
+        "ar_plain": "اكتب في الدفتر",
+        "translit": "uktub fī d-daftari",
+        "en": "Write in the notebook.",
+        "ur": "کاپی میں لکھو۔"
       },
       "options": [
         {
-          "en": "Look at the teacher!",
-          "ur": "استاد کو دیکھو!"
+          "en": "Read the notebook.",
+          "ur": "کاپی پڑھو۔"
         },
         {
-          "en": "Look at the student!",
-          "ur": "طالب علم کو دیکھو!"
+          "en": "Open the notebook.",
+          "ur": "کاپی کھولو۔"
         },
         {
-          "en": "Sit with the teacher!",
-          "ur": "استاد کے ساتھ بیٹھو!"
+          "en": "Write in the notebook.",
+          "ur": "کاپی میں لکھو۔"
         },
         {
-          "en": "Stand with the teacher!",
-          "ur": "استاد کے ساتھ کھڑے ہو!"
+          "en": "Look at the notebook.",
+          "ur": "کاپی کی طرف دیکھو۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "اُنْظُرْ is the imperative of يَنْظُرُ meaning 'look!' إِلَى means 'at/to.' الْأُسْتَاذِ is in the genitive case after إِلَى.",
-        "ur": "اُنْظُرْ، يَنْظُرُ کا امریہ ہے جس کا مطلب ہے 'دیکھو!' إِلَى کا مطلب ہے 'کو/سمت'۔ الْأُسْتَاذِ، إِلَى کے بعد جر میں ہے۔"
+        "en": "اُكْتُبْ is write, and فِي الدَّفْتَرِ is in the notebook.",
+        "ur": "اُكْتُبْ کا مطلب لکھو ہے، اور فِي الدَّفْتَرِ کا مطلب کاپی میں۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch16-l04-ex04",
+      "prompt_line": {
+        "ar": "اِقْرَأْ",
+        "ar_plain": "اقرا",
+        "translit": "iqraʾ",
+        "en": "Read.",
+        "ur": "پڑھو۔"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "الدَّرْسُ غَدًا",
+          "ar_plain": "الدرس غدا",
+          "translit": "ad-darsu ghadan",
+          "en": "The lesson is tomorrow.",
+          "ur": "سبق آنے والے کل ہے۔"
+        },
+        {
+          "ar": "نَعَمْ يَا أُسْتَاذُ",
+          "ar_plain": "نعم يا استاذ",
+          "translit": "naʿam yā ustādhu",
+          "en": "Yes, teacher.",
+          "ur": "جی، استاد صاحب۔"
+        },
+        {
+          "ar": "هٰذَا قَلَمٌ",
+          "ar_plain": "هذا قلم",
+          "translit": "hādhā qalamun",
+          "en": "This is a pen.",
+          "ur": "یہ ایک قلم ہے۔"
+        },
+        {
+          "ar": "أَيْنَ الْفَصْلُ؟",
+          "ar_plain": "اين الفصل",
+          "translit": "ayna l-faṣlu?",
+          "en": "Where is the classroom?",
+          "ur": "کلاس کہاں ہے؟"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The teacher gave an instruction; the fitting reply is نَعَمْ يَا أُسْتَاذُ, and then you read.",
+        "ur": "استاد نے ہدایت دی؛ مناسب جواب نَعَمْ يَا أُسْتَاذُ ہے، اور پھر آپ پڑھتے ہیں۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch16-l04-ex07",
+      "id": "ch16-l04-ex05",
       "statement": {
-        "en": "The imperative اِفْتَحْ ends with a kasra (فَتْحْ) which shows respect toward the listener.",
-        "ur": "امریہ اِفْتَحْ کسرہ (فَتْحْ) پر ختم ہوتا ہے جو سننے والے کے لیے احترام ظاہر کرتا ہے۔"
+        "en": "The vowels at the start of اِفْتَحْ and اُكْتُبْ show whether the teacher is being polite or familiar.",
+        "ur": "اِفْتَحْ اور اُكْتُبْ کے شروع کی حرکات بتاتی ہیں کہ استاد ادب سے بات کر رہا ہے یا بے تکلفی سے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. The first vowel belongs to each word; it says nothing about politeness.",
+        "ur": "غلط۔ پہلی حرکت ہر لفظ کی اپنی ہے؛ یہ ادب کے بارے میں کچھ نہیں بتاتی۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch16-l04-ex08",
-      "mode": "TAP",
-      "sentence_ar": "الطَّالِبُ ___ إِلَى الْكِتَابِ",
-      "hint": {
-        "en": "The student looks at the book.",
-        "ur": "طالب علم کتاب کو دیکھتا ہے۔"
+      "type": "AUDIO_RECOGNITION",
+      "id": "ch16-l04-ex06",
+      "arabic_text": "اُنْظُرْ إِلَى الْأُسْتَاذِ",
+      "options": [
+        {
+          "en": "Write to the teacher.",
+          "ur": "استاد کو لکھو۔"
+        },
+        {
+          "en": "Read to the teacher.",
+          "ur": "استاد کو پڑھ کر سناؤ۔"
+        },
+        {
+          "en": "Open the door for the teacher.",
+          "ur": "استاد کے لیے دروازہ کھولو۔"
+        },
+        {
+          "en": "Look at the teacher.",
+          "ur": "استاد کی طرف دیکھو۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "اُنْظُرْ is look, and إِلَى الْأُسْتَاذِ is towards the teacher.",
+        "ur": "اُنْظُرْ کا مطلب دیکھو ہے، اور إِلَى الْأُسْتَاذِ کا مطلب استاد کی طرف۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch16-l04-ex07",
+      "ayah_fragment": {
+        "ar": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+        "surah_ref": "Al-Alaq 96:1"
       },
       "options": [
         {
-          "ar": "يَنْظُرُ",
-          "ar_plain": "ينظر",
-          "translit": "yanzuru",
-          "en": "looks",
-          "ur": "دیکھتا ہے"
+          "en": "اقْرَأْ — he read (a past action)",
+          "ur": "اقْرَأْ — اس نے پڑھا (ماضی کا کام)"
         },
         {
-          "ar": "يَفْتَحُ",
-          "ar_plain": "يفتح",
-          "translit": "yiftahu",
-          "en": "opens",
-          "ur": "کھولتا ہے"
+          "en": "خَلَقَ — read",
+          "ur": "خَلَقَ — پڑھو"
         },
         {
-          "ar": "يَقْرَأُ",
-          "ar_plain": "يقرأ",
-          "translit": "yaqra-u",
-          "en": "reads",
-          "ur": "پڑھتا ہے"
+          "en": "اقْرَأْ — read or recite: a command in the Quran, in its own setting",
+          "ur": "اقْرَأْ — پڑھو یا تلاوت کرو: اپنے سیاق میں قرآنی حکم"
         },
         {
-          "ar": "يَكْتُبُ",
-          "ar_plain": "يكتب",
-          "translit": "yaktubu",
-          "en": "writes",
-          "ur": "لکھتا ہے"
+          "en": "اقْرَأْ — a line a teacher says in class",
+          "ur": "اقْرَأْ — کلاس میں استاد کی کہی ہوئی سطر"
         }
       ],
-      "correct_answer": {
-        "ar": "يَنْظُرُ",
-        "ar_plain": "ينظر",
-        "translit": "yanzuru",
-        "en": "looks",
-        "ur": "دیکھتا ہے"
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The first word, اقْرَأْ, is a command: read. It is the Quran's own command, not a classroom line.",
+        "ur": "پہلا لفظ اقْرَأْ ایک حکم ہے: پڑھو۔ یہ قرآن کا اپنا حکم ہے، کلاس کی سطر نہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch16-l04-ex08",
+      "prompt": {
+        "ar": "اِقْرَأْ",
+        "ar_plain": "اقرا",
+        "translit": "iqraʾ",
+        "en": "Read.",
+        "ur": "پڑھو۔"
       },
-      "xp_value": 1
+      "options": [
+        {
+          "en": "He read.",
+          "ur": "اس نے پڑھا۔"
+        },
+        {
+          "en": "Read! (an instruction)",
+          "ur": "پڑھو! (ہدایت)"
+        },
+        {
+          "en": "Write!",
+          "ur": "لکھو!"
+        },
+        {
+          "en": "Look!",
+          "ur": "دیکھو!"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "اِقْرَأْ is an instruction: read! It asks you to act; it does not report something that happened.",
+        "ur": "اِقْرَأْ ایک ہدایت ہے: پڑھو! یہ آپ کو عمل کا کہتی ہے؛ یہ کسی ہو چکی بات کی خبر نہیں دیتی۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch16-l04-ex09",
       "prompt": {
-        "ar": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
-        "ar_plain": "قل اعوذ برب الناس",
-        "translit": "qul aʿūdhu birabbin-nās",
-        "en": "Say: I seek refuge in the Lord of mankind.",
-        "ur": "کہو: میں انسانوں کے رب کی پناہ مانگتا ہوں۔"
+        "ar": "قُلْ",
+        "ar_plain": "قل",
+        "translit": "qul",
+        "en": "Say.",
+        "ur": "کہو۔"
       },
       "options": [
-        { "en": "Say: I seek refuge in the Lord of mankind.", "ur": "کہو: میں انسانوں کے رب کی پناہ مانگتا ہوں۔" },
-        { "en": "The Lord of mankind says.", "ur": "انسانوں کا رب کہتا ہے۔" },
-        { "en": "I say to mankind.", "ur": "میں انسانوں سے کہتا ہوں۔" },
-        { "en": "Seek refuge from mankind.", "ur": "انسانوں سے پناہ مانگو۔" }
+        {
+          "en": "He said.",
+          "ur": "اس نے کہا۔"
+        },
+        {
+          "en": "Read!",
+          "ur": "پڑھو!"
+        },
+        {
+          "en": "Look!",
+          "ur": "دیکھو!"
+        },
+        {
+          "en": "Say! (an instruction)",
+          "ur": "کہو! (ہدایت)"
+        }
       ],
-      "correct_index": 0,
-      "xp_value": 1
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "قُلْ is the instruction say! It is the first word of An-Nas and Al-Falaq: قُلْ أَعُوذُ.",
+        "ur": "قُلْ ہدایت ہے: کہو! یہ الناس اور الفلق کا پہلا لفظ ہے: قُلْ أَعُوذُ۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Classroom commands",
-      "ar": "أَوَامِرُ الْفَصْلِ",
-      "ur": "کلاس روم کے احکام"
+      "en": "Understanding classroom instructions",
+      "ur": "کلاس کی ہدایات سمجھنا"
     },
     "ayah": {
-      "surah": 87,
+      "surah": 96,
       "ayah": 1,
-      "label": "Al-A'la 87:1",
-      "ar": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
-      "en": "Exalt the name of your Lord, the Most High,",
-      "ur": "(اے پیغمبر) اپنے پروردگار جلیل الشان کے نام کی تسبیح کرو",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/087001.mp3"
+      "label": "Al-Alaq 96:1",
+      "ar": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+      "en": "Read in the name of your Lord who created.",
+      "ur": "اپنے رب کے نام سے پڑھو جس نے پیدا کیا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096001.mp3"
     },
     "highlighted_word_indices": [
       0
     ],
+    "highlighted_words": [
+      "اقْرَأْ"
+    ],
     "noor_explanation": {
-      "en": "سَبِّحْ is also an imperative — from سَبَّحَ (to glorify). When we say سَبِّحْ بِاسْمِ رَبِّكَ we are commanded to glorify Allah. Just as we obey our teacher's commands in class, we must obey Allah's commands always.",
-      "ur": "سَبِّحْ بھی ایک امریہ ہے — سَبَّحَ (تسبیح کرنا) سے۔ جب ہم کہتے ہیں سَبِّحْ بِاسْمِ رَبِّكَ تو ہمیں اللہ کی تسبیح کا حکم دیا جاتا ہے۔ جیسے ہم کلاس میں استاد کے احکام مانتے ہیں، اسی طرح ہمیں ہمیشہ اللہ کے احکام ماننے چاہیئیں۔"
+      "en": "اقْرَأْ: read, recite. You now understand four classroom instructions and can reply politely. The Quran's اقْرَأْ is the same word, used in its own setting as a command to the Prophet ﷺ.",
+      "ur": "اقْرَأْ: پڑھو، تلاوت کرو۔ اب آپ کلاس کی چار ہدایات سمجھتے ہیں اور ادب سے جواب دے سکتے ہیں۔ قرآن کا اقْرَأْ یہی لفظ ہے، اپنے سیاق میں نبی ﷺ کو حکم کے طور پر۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Commands are simple in Arabic: remove the prefix and you have the imperative. اِفْتَحْ, اِقْرَأْ, اُكْتُبْ, اُنْظُرْ — these four will serve you in every classroom. Use them with respect, and your teachers will love you.",
-      "ur": "عربی میں حکم دینا آسان ہے: prefix ہٹا دو اور امریہ حاصل۔ اِفْتَحْ، اِقْرَأْ، اُكْتُبْ، اُنْظُرْ — یہ چار آپ کے ہر کلاس روم میں کام آئیں گے۔ احترام کے ساتھ انہیں استعمال کریں، اور آپ کے استاد آپ سے محبت کریں گے۔"
+      "en": "You can follow a teacher's instructions: open, read, write, look, say. Next: the Chapter 16 review.",
+      "ur": "آپ استاد کی ہدایات پر عمل کر سکتے ہیں: کھولو، پڑھو، لکھو، دیکھو، کہو۔ آگے: باب 16 کا جائزہ۔"
     }
   }
 }

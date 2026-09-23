@@ -128,10 +128,10 @@ function chapter(spec) {
   return {
     order: spec.order,
     title: spec.title,
-    titleUr: localizeMetadata(spec.title),
+    titleUr: spec.titleUr ?? localizeMetadata(spec.title),
     titleAr: spec.titleAr,
     description: spec.description,
-    descriptionUr: localizeMetadata(spec.description),
+    descriptionUr: spec.descriptionUr ?? localizeMetadata(spec.description),
     worldMapX: Number((0.08 + spec.order * 0.055).toFixed(2)),
     worldMapY: Number((0.12 + (spec.order % 5) * 0.14).toFixed(2)),
     isLocked: spec.order !== 1,
@@ -140,123 +140,165 @@ function chapter(spec) {
 }
 
 const specs = [
-  // ── Ch16 ── School and Students ──────────────────────────────────────────
+  // ── Ch16 ── School Life in Quranic Arabic ───────────────────────────────
+  // Docs/proposals/chapter-16-content-proposal.md (2026-09-23): classroom
+  // objects and أَيْنَ؟ answers (Al-Alaq 96:4, بِالْقَلَمِ), teacher/student/lesson
+  // roles (96:5 عَلَّمَ, a thematic link only), أَمْسِ / الْيَوْمَ / غَدًا (Al-Kahf
+  // 18:23), and whole-phrase classroom instructions (96:1 اقْرَأْ). No future
+  // سَـ, present conjugation or imperative derivation.
   {
     order: 16,
-    sourceFile: "reader_lecture_16_school_students.md",
-    title: "School and Students",
-    titleAr: "مَدْرَسَة وَطُلَّاب",
-    description: "Classroom vocabulary, time markers, and everyday school sentences.",
-    hook: { ayahAr: "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ", ayahRef: "Al-Alaq 96:1", highlightedWord: "اقْرَأْ" },
+    // The former reader_lecture_16 files never existed in the repository; the
+    // approved proposal is the content specification.
+    sourceFile: "Docs/proposals/chapter-16-content-proposal.md",
+    title: "School Life in Quranic Arabic",
+    titleUr: "قرآنی عربی میں اسکول کی زندگی",
+    titleAr: "فِي الْمَدْرَسَةِ",
+    description: "A school scene in Arabic: classroom objects and where they are, teacher, student and lesson, yesterday, today and tomorrow, and a teacher's instructions — with the Quran words بِالْقَلَمِ, غَدًا and اقْرَأْ.",
+    descriptionUr: "عربی میں اسکول کا منظر: کلاس کی چیزیں اور وہ کہاں ہیں، استاد، طالب علم اور سبق، گزرا ہوا کل، آج اور آنے والا کل، اور استاد کی ہدایات — قرآنی الفاظ بِالْقَلَمِ، غَدًا اور اقْرَأْ کے ساتھ۔",
+    hook: { ayahAr: "الَّذِي عَلَّمَ بِالْقَلَمِ", ayahRef: "Al-Alaq 96:4", highlightedWord: "بِالْقَلَمِ" },
     examples: [
-      card("هٰذِهِ مَدْرَسَةٌ كَبِيرَةٌ", "This is a large school", "haadhihi madrasatun kabeeratun"),
-      card("الأُسْتَاذُ فِي الْفَصْلِ الْيَوْمَ", "The teacher is in the class today", "al-ustaadhu fil-fasli al-yawma"),
-      card("الطَّالِبُ يَقْرَأُ الدَّرْسَ", "The student reads the lesson", "at-taalibu yaqra'u ad-darsa"),
-      card("ذَهَبْنَا إِلَى الْمَدْرَسَةِ أَمْسِ", "We went to the school yesterday", "dhahabnaa ilal-madrasati amsi"),
+      card("الْكِتَابُ عَلَى الْمَكْتَبِ", "The book is on the desk.", "al-kitābu ʿalā l-maktabi"),
+      card("الْأُسْتَاذُ فِي الْفَصْلِ", "The teacher is in the classroom.", "al-ustādhu fī l-faṣli"),
+      card("الدَّرْسُ غَدًا", "The lesson is tomorrow.", "ad-darsu ghadan"),
+      card("ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ أَمْسِ", "The student went to the school yesterday.", "dhahaba ṭ-ṭālibu ilā l-madrasati amsi"),
     ],
-    parseText: "الأُسْتَاذُ فِي الْفَصْلِ",
-    parseTokens: [token("الأُسْتَاذُ", "مبتدأ", "the teacher"), token("فِي", "حرف جر", "in"), token("الْفَصْلِ", "مضاف إليه", "the class")],
-    conversation: ["أَيْنَ الأُسْتَاذُ؟", "الأُسْتَاذُ فِي الْفَصْلِ الْيَوْمَ"],
-    conversationDistractor: "ذَهَبَ إِلَى السُّوقِ",
-    distractor: "The pen is on the desk",
+    parseText: "الْأُسْتَاذُ فِي الْفَصْلِ",
+    parseTokens: [token("الْأُسْتَاذُ", "مبتدأ", "the teacher"), token("فِي", "حرف جر", "in"), token("الْفَصْلِ", "اسم مجرور", "the classroom")],
+    conversation: ["أَيْنَ الْقَلَمُ؟", "الْقَلَمُ عَلَى الدَّفْتَرِ"],
+    conversationDistractor: "الدَّرْسُ غَدًا",
+    distractor: "The lesson was yesterday.",
     blankDistractor: "أَمْسِ",
-    noorTip: "The first word revealed in the Quran was اقْرَأْ — a command to read. That is what school is for.",
-    noorTipUr: "قرآن کا پہلا لفظ اقْرَأْ تھا۔ علم حاصل کرنا عبادت ہے۔",
+    noorTip: "بِالْقَلَمِ in Al-Alaq 96:4 really is the word pen, the one on your desk; the ayah speaks of Allah who taught by the pen, not of a classroom.",
+    noorTipUr: "سورۃ العلق 96:4 میں بِالْقَلَمِ واقعی لفظ قلم ہے، وہی جو آپ کی میز پر ہے؛ آیت اللہ کا ذکر کرتی ہے جس نے قلم کے ذریعے سکھایا، کلاس کا نہیں۔",
     focuses: [
-      { title: "School Place", titleAr: "الْمَدْرَسَة", grammarTerm: "اسم مكان", reveal: "You identified the school as a place of reading, matching the first Quranic command.", hookQuestion: "Why is the first Quranic word a command to read?" },
-      { title: "The Teacher", titleAr: "الأُسْتَاذ", grammarTerm: "اسم فاعل", reveal: "You placed the teacher inside the classroom using a preposition phrase.", hookQuestion: "What does فِي tell you about where someone is?" },
-      { title: "The Student", titleAr: "الطَّالِب", grammarTerm: "اسم فاعل", reveal: "You saw a student acting on a lesson — a subject doing something.", hookQuestion: "Who is the doer in الطَّالِبُ يَقْرَأُ?" },
-      { title: "Lesson and Class", titleAr: "دَرْس وَفَصْل", grammarTerm: "مفردات", reveal: "You connected time markers اليَوْم and أَمْس to locate actions in time.", hookQuestion: "How does أَمْسِ change the meaning of a sentence?" },
+      { title: "In the Learning Space", titleAr: "فِي الْفَصْلِ", grammarTerm: "مفردات المدرسة", reveal: "فَصْلٌ, مَكْتَبٌ, دَفْتَرٌ and a أَيْنَ؟ answer; Al-Alaq 96:4 بِالْقَلَمِ is a real pen occurrence.", hookQuestion: "Which word in الَّذِي عَلَّمَ بِالْقَلَمِ contains pen?" },
+      { title: "Teacher, Student, and Lesson", titleAr: "الْأُسْتَاذُ وَالطَّالِبُ وَالدَّرْسُ", grammarTerm: "مفردات المدرسة", reveal: "أُسْتَاذٌ teaches, طَالِبٌ learns, دَرْسٌ is the lesson; 96:5 عَلَّمَ is a thematic link, not a school word.", hookQuestion: "Who is in the classroom, and what is the lesson?" },
+      { title: "Yesterday, Today, Tomorrow", titleAr: "أَمْسِ وَالْيَوْمَ وَغَدًا", grammarTerm: "ظرف زمان", reveal: "أَمْسِ, الْيَوْمَ, غَدًا by meaning; غَدًا is آنے والا کل, never پرسوں (Al-Kahf 18:23).", hookQuestion: "Which word in Al-Kahf 18:23 means tomorrow?" },
+      { title: "Listen and Respond in Class", titleAr: "تَعْلِيمَاتُ الْفَصْلِ", grammarTerm: "فعل أمر", reveal: "اِفْتَحْ، اِقْرَأْ، اُكْتُبْ، اُنْظُرْ، قُلْ understood as whole instructions; Al-Alaq 96:1 اقْرَأْ is the Quran's own command.", hookQuestion: "What does اقْرَأْ ask the listener to do?" },
     ],
   },
 
-  // ── Ch17 ── Daily Actions and Verbs ──────────────────────────────────────
+  // ── Ch17 ── Past Actions in Quranic Arabic ──────────────────────────────
+  // Docs/proposals/chapter-17-content-proposal.md (2026-09-23): seven assessed
+  // past actions (أَكَلَ، شَرِبَ، قَرَأَ، كَتَبَ، قَامَ، صَلَّى، سَمِعَ) with ذَهَبَ
+  // retrieved; action, doer and object/destination; the scoped ـتْ clue. Quran:
+  // Yusuf 12:17, Al-Baqarah 2:249, Al-Mujadilah 58:21 (كَتَبَ = decreed), Al-Jinn
+  // 72:19, Al-Qiyamah 75:31–33 (negated صَلَّىٰ), Al-Mujadilah 58:1; 2:286 كَسَبَتْ
+  // only as a labelled retrieval of the feminine clue.
   {
     order: 17,
-    sourceFile: "reader_lecture_17_daily_actions_verbs.md",
-    title: "Daily Actions and Verbs",
-    titleAr: "أَفْعَال يَوْمِيَّة",
-    description: "Past tense verb recognition through daily action vocabulary.",
-    hook: { ayahAr: "لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ", ayahRef: "Al-Baqarah 2:286", highlightedWord: "كَسَبَتْ" },
+    // The former reader_lecture_17 files never existed in the repository; the
+    // approved proposal is the content specification.
+    sourceFile: "Docs/proposals/chapter-17-content-proposal.md",
+    title: "Past Actions in Quranic Arabic",
+    titleUr: "قرآنی عربی میں ماضی کے کام",
+    titleAr: "الْأَفْعَالُ الْمَاضِيَةُ",
+    description: "Reading who did what: seven past actions, their doers and objects, the feminine ـتْ clue, and real past actions in the Quran read in their context.",
+    descriptionUr: "یہ پڑھنا کہ کس نے کیا کیا: ماضی کے سات کام، ان کے کرنے والے اور مفعول، مؤنث ـتْ کا اشارہ، اور قرآن میں ماضی کے حقیقی کام ان کے سیاق میں۔",
+    hook: { ayahAr: "وَأَنَّهُ لَمَّا قَامَ عَبْدُ اللَّهِ يَدْعُوهُ", ayahRef: "Al-Jinn 72:19", highlightedWord: "قَامَ" },
     examples: [
-      card("أَكَلَ الْوَلَدُ الطَّعَامَ", "The boy ate the food", "akala al-waladu at-ta'aama"),
-      card("قَرَأَتِ الْبِنْتُ الْكِتَابَ", "The girl read the book", "qara'ati al-bintu al-kitaaba"),
-      card("كَتَبَ الطَّالِبُ الدَّرْسَ", "The student wrote the lesson", "kataba at-taalibu ad-darsa"),
-      card("ذَهَبَتْ فَاطِمَةُ إِلَى الْمَدْرَسَةِ", "Fatimah went to the school", "dhahabat faatimatu ilal-madrasati"),
+      card("أَكَلَ الْوَلَدُ الْخُبْزَ", "The boy ate the bread.", "akala l-waladu l-khubza"),
+      card("قَرَأَ الطَّالِبُ الْكِتَابَ", "The student read the book.", "qaraʾa ṭ-ṭālibu l-kitāba"),
+      card("سَمِعَ الطَّالِبُ الْأُسْتَاذَ", "The student heard the teacher.", "samiʿa ṭ-ṭālibu l-ustādha"),
+      card("ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ", "The man went to the mosque.", "dhahaba r-rajulu ilā l-masjidi"),
     ],
     parseText: "كَتَبَ الطَّالِبُ الدَّرْسَ",
     parseTokens: [token("كَتَبَ", "فعل", "wrote"), token("الطَّالِبُ", "فاعل", "the student"), token("الدَّرْسَ", "مفعول", "the lesson")],
-    conversation: ["مَاذَا فَعَلَ الْوَلَدُ؟", "أَكَلَ الْوَلَدُ الطَّعَامَ"],
-    conversationDistractor: "الأُسْتَاذُ فِي الْفَصْلِ",
-    distractor: "The teacher is in the class",
+    conversation: ["مَاذَا فَعَلَ الطَّالِبُ؟", "قَرَأَ الْكِتَابَ"],
+    conversationDistractor: "الطَّالِبُ فِي الْفَصْلِ",
+    distractor: "The teacher heard the student.",
     blankDistractor: "شَرِبَ",
-    noorTip: "Every deed is recorded — كَسَبَتْ reminds us that our daily actions carry weight.",
-    noorTipUr: "ہر عمل درج ہوتا ہے۔ کَسَبَتْ اور اکْتَسَبَتْ کا فرق سوچیں۔",
+    noorTip: "In Al-Qiyamah 75:31 صَلَّىٰ comes after لَا: nor did he pray. Find the action word, then read what surrounds it before you decide what happened.",
+    noorTipUr: "سورۃ القیامہ 75:31 میں صَلَّىٰ، لَا کے بعد آتا ہے: اور نہ نماز پڑھی۔ کام کا لفظ ڈھونڈیں، پھر فیصلے سے پہلے اس کے آس پاس پڑھیں۔",
     focuses: [
-      { title: "He Ate", titleAr: "أَكَلَ", grammarTerm: "فعل ماض", reveal: "You recognised a past tense verb and found the doer after it.", hookQuestion: "Which word tells you the action already happened?" },
-      { title: "He Read", titleAr: "قَرَأَ", grammarTerm: "فعل ماض", reveal: "You matched the feminine verb form with a feminine subject.", hookQuestion: "What is the difference between قَرَأَ and قَرَأَتْ?" },
-      { title: "He Wrote", titleAr: "كَتَبَ", grammarTerm: "فعل ماض متعدٍّ", reveal: "You saw a verb take an object, making a complete action sentence.", hookQuestion: "What does الدَّرْسَ add after كَتَبَ?" },
-      { title: "She Went", titleAr: "ذَهَبَتْ", grammarTerm: "فعل ماض مؤنث", reveal: "You followed a feminine verb with its subject and destination.", hookQuestion: "How does تْ mark the feminine in the verb?" },
+      { title: "Eating and Drinking", titleAr: "أَكَلَ وَشَرِبَ", grammarTerm: "فعل ماض", reveal: "Action, doer, object: أَكَلَ الْوَلَدُ الْخُبْزَ. Yusuf 12:17 فَأَكَلَهُ الذِّئْبُ is the brothers' claim; 2:249 شَرِبَ after مَن means whoever drinks.", hookQuestion: "Who ate, according to the brothers in Yusuf 12:17?" },
+      { title: "Reading and Writing", titleAr: "قَرَأَ وَكَتَبَ", grammarTerm: "فعل ماض", reveal: "قَرَأَ reports, اِقْرَأْ instructs; in Al-Mujadilah 58:21 كَتَبَ اللَّهُ means Allah has decreed.", hookQuestion: "What does كَتَبَ mean in كَتَبَ اللَّهُ?" },
+      { title: "Standing, and an Action Sentence", titleAr: "قَامَ", grammarTerm: "الفعل والفاعل", reveal: "قَامَ is complete with its doer: قَامَ عَبْدُ اللَّهِ (Al-Jinn 72:19).", hookQuestion: "Who stood up in Al-Jinn 72:19?" },
+      { title: "Prayer and Movement", titleAr: "صَلَّى وَذَهَبَ", grammarTerm: "النفي بلا", reveal: "صَلَّى / صَلَّتْ as a pair; ذَهَبَ with an optional destination; وَلَا صَلَّىٰ (75:31) is a denial.", hookQuestion: "Did the man in Al-Qiyamah 75:31 pray?" },
+      { title: "Hearing, and Who Did What", titleAr: "سَمِعَ", grammarTerm: "الفعل والفاعل والمفعول", reveal: "Order tells the roles: سَمِعَ اللَّهُ قَوْلَ (Al-Mujadilah 58:1), action, doer, what was heard.", hookQuestion: "Who heard, and what was heard, in Al-Mujadilah 58:1?" },
     ],
   },
 
-  // ── Ch18 ── Relative Pronouns الَّذِي وَالَّتِي ───────────────────────────
+  // ── Ch18 ── Reading Connected Descriptions ──────────────────────────────
+  // Docs/proposals/chapter-18-content-proposal.md (2026-09-23): follow الَّذِي
+  // across An-Nas 114:4–5; definite noun + الَّذِي / الَّتِي versus an indefinite
+  // noun with its description directly; adjective versus description; الَّتِي on
+  // its own in Al-Mujadilah 58:1; the three parts of a long sentence. Authored
+  // examples use past verbs and place phrases (present tense is not yet taught).
+  // الَّذِي is an اسم موصول, not a مضاف إليه.
   {
     order: 18,
-    sourceFile: "reader_lecture_18_relative_pronouns.md",
-    title: "Relative Pronouns: الَّذِي and الَّتِي",
-    titleAr: "الَّذِي وَالَّتِي",
-    description: "Connecting clauses with the masculine and feminine relative pronouns.",
+    // The former reader_lecture_18 / reader_lecture_book2_lesson7 / tadabbur_an_nas
+    // files never existed in the repository; the approved proposal is the
+    // content specification.
+    sourceFile: "Docs/proposals/chapter-18-content-proposal.md",
+    title: "Reading Connected Descriptions: الَّذِي / الَّتِي in Context",
+    titleUr: "جڑی ہوئی وضاحتیں: الَّذِي / الَّتِي سیاق میں",
+    titleAr: "الْوَصْفُ بِالَّذِي وَالَّتِي",
+    description: "Following الَّذِي across An-Nas 114:4–5, choosing الَّذِي / الَّتِي after a definite noun, telling a description from an adjective and from a full sentence, and reading الَّتِي on its own.",
+    descriptionUr: "سورۃ الناس 114:4–5 میں الَّذِي کا مرجع ڈھونڈنا، معرفہ اسم کے بعد الَّذِي / الَّتِي چننا، وضاحت کو صفت اور مکمل جملے سے الگ کرنا، اور الَّتِي کو اکیلا پڑھنا۔",
     hook: { ayahAr: "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ", ayahRef: "An-Nas 114:5", highlightedWord: "الَّذِي" },
     examples: [
-      card("الرَّجُلُ الَّذِي جَاءَ أُسْتَاذٌ", "The man who came is a teacher", "ar-rajulu alladhee jaa'a ustaadh"),
-      card("الْبِنْتُ الَّتِي قَرَأَتْ مُجْتَهِدَةٌ", "The girl who read is hardworking", "al-bintu allatee qara'at mujtahida"),
-      card("الْكِتَابُ الَّذِي عَلَى الْمَكْتَبِ جَدِيدٌ", "The book that is on the desk is new", "al-kitaabu alladhee alal-maktabi jadeed"),
-      card("الْمَدْرَسَةُ الَّتِي ذَهَبْنَا إِلَيْهَا كَبِيرَةٌ", "The school we went to is large", "al-madrasatu allatee dhahabnaa ilayha kabeera"),
+      card("الرَّجُلُ الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ", "the man who went to the mosque", "ar-rajulu lladhī dhahaba ilā l-masjidi"),
+      card("رَجُلٌ ذَهَبَ إِلَى الْمَسْجِدِ", "a man who went to the mosque", "rajulun dhahaba ilā l-masjidi"),
+      card("الْمَسْجِدُ الَّذِي فِي الْقَرْيَةِ", "the mosque that is in the village", "al-masjidu lladhī fī l-qaryati"),
+      card("الْكِتَابُ الَّذِي عَلَى الْمَكْتَبِ جَدِيدٌ", "The book that is on the desk is new.", "al-kitābu lladhī ʿalā l-maktabi jadīdun"),
     ],
-    parseText: "الرَّجُلُ الَّذِي جَاءَ أُسْتَاذٌ",
-    parseTokens: [token("الرَّجُلُ", "مبتدأ", "the man"), token("الَّذِي", "مضاف إليه", "who"), token("جَاءَ", "فعل", "came"), token("أُسْتَاذٌ", "خبر", "teacher")],
-    conversation: ["مَنِ الرَّجُلُ الَّذِي جَاءَ؟", "الرَّجُلُ الَّذِي جَاءَ أُسْتَاذٌ"],
-    conversationDistractor: "أَكَلَ الْوَلَدُ الطَّعَامَ",
-    distractor: "The student wrote the lesson",
+    parseText: "الرَّجُلُ الَّذِي قَامَ أُسْتَاذٌ",
+    parseTokens: [token("الرَّجُلُ", "مبتدأ", "the man"), token("الَّذِي", "اسم موصول", "who"), token("قَامَ", "فعل", "stood up"), token("أُسْتَاذٌ", "خبر", "a teacher")],
+    conversation: ["مَنِ الرَّجُلُ الَّذِي قَامَ؟", "هُوَ الْأُسْتَاذُ"],
+    conversationDistractor: "قَامَ الرَّجُلُ",
+    distractor: "a man who went to the mosque",
     blankDistractor: "الَّتِي",
-    noorTip: "الَّذِي opens a description of the whisperer in An-Nas — a relative clause that names evil precisely.",
-    noorTipUr: "سورۃ الناس میں الَّذِي کے بعد آنے والی صفت پر غور کریں۔",
+    noorTip: "الَّذِي at the start of An-Nas 114:5 carries on the description of الْوَسْوَاسِ from 114:4: look back one ayah to find who it describes.",
+    noorTipUr: "سورۃ الناس 114:5 کے شروع کا الَّذِي، 114:4 کے الْوَسْوَاسِ کی وضاحت آگے بڑھاتا ہے: یہ جاننے کے لیے کہ یہ کس کی وضاحت ہے ایک آیت پیچھے دیکھیں۔",
     focuses: [
-      { title: "The One Who (m)", titleAr: "الَّذِي", grammarTerm: "اسم موصول مذكر", reveal: "You connected a masculine noun to a clause that describes it.", hookQuestion: "What does الَّذِي make you wait to hear?" },
-      { title: "The One Who (f)", titleAr: "الَّتِي", grammarTerm: "اسم موصول مؤنث", reveal: "You matched the relative pronoun to a feminine noun.", hookQuestion: "Why can't you use الَّذِي for a feminine noun?" },
-      { title: "Connecting Clauses", titleAr: "صِلَة الْمَوْصُول", grammarTerm: "صلة الموصول", reveal: "You saw that the clause after الَّذِي must contain a complete idea.", hookQuestion: "What makes a relative clause complete?" },
-      { title: "From An-Nas", titleAr: "الَّذِي يُوَسْوِسُ", grammarTerm: "اسم موصول في القرآن", reveal: "You read Quranic Arabic directly, recognising the pattern you just learned.", hookQuestion: "Who is الَّذِي referring to in An-Nas?" },
+      { title: "Who Does الَّذِي Describe?", titleAr: "الَّذِي فِي سُورَةِ النَّاسِ", grammarTerm: "اسم موصول", reveal: "الَّذِي in 114:5 describes الْوَسْوَاسِ in 114:4: noun, adjective الْخَنَّاسِ, relative word, action يُوَسْوِسُ.", hookQuestion: "Who does الَّذِي describe in An-Nas 114:5?" },
+      { title: "The Noun or a Noun?", titleAr: "الْمَعْرِفَةُ وَالنَّكِرَةُ قَبْلَ الْوَصْفِ", grammarTerm: "صلة الموصول", reveal: "الرَّجُلُ الَّذِي ذَهَبَ, but رَجُلٌ ذَهَبَ: a definite noun takes الَّذِي, an indefinite one its description directly.", hookQuestion: "Why does الْوَسْوَاسِ take الَّذِي?" },
+      { title: "Adjective or Clause?", titleAr: "صِفَةٌ أَمْ صِلَةٌ؟", grammarTerm: "النعت وصلة الموصول", reveal: "الْمَسْجِدُ الْكَبِيرُ is one quality; الْمَسْجِدُ الَّذِي فِي الْقَرْيَةِ is a description; a new pen is قَلَمٌ جَدِيدٌ.", hookQuestion: "What does الْخَنَّاسِ add, and what does الَّذِي يُوَسْوِسُ add?" },
+      { title: "The Feminine Relative in Context", titleAr: "الَّتِي فِي السِّيَاقِ", grammarTerm: "اسم موصول مؤنث", reveal: "الَّتِي after a feminine thing, and on its own for the woman who: قَوْلَ الَّتِي تُجَادِلُكَ (58:1).", hookQuestion: "Who is الَّتِي in Al-Mujadilah 58:1?" },
+      { title: "Read the Whole Sentence", titleAr: "الْجُمْلَةُ كُلُّهَا", grammarTerm: "المبتدأ والصلة والخبر", reveal: "Described noun, description, news: الْكِتَابُ الَّذِي عَلَى الْمَكْتَبِ جَدِيدٌ.", hookQuestion: "Which part of the sentence tells you which book?" },
     ],
   },
 
-  // ── Ch19 ── Attached Pronouns: Singular Possession ───────────────────────
+  // ── Ch19 ── Attached Pronouns in Context ────────────────────────────────
+  // Docs/proposals/chapter-19-content-proposal.md (2026-09-23): final kasra
+  // versus ـِي (Al-Fatiha 1:2, Al-Falaq 113:1, Yusuf 12:100); ـهُ on a noun versus
+  // an action (Al-Baqarah 2:87); ة → ت transferred to new nouns (Hud 11:71);
+  // the owner in a sentence (Maryam 19:16); لِي versus ـِي and the omitted
+  // possessive ي of دِينِ (Al-Kafirun 109:6). Plural endings wait for Chapter 20.
   {
     order: 19,
-    sourceFile: "reader_lecture_19_attached_pronouns_singular.md",
-    title: "Attached Pronouns: Singular Possession",
-    titleAr: "ضَمَائِر الإِفْرَاد الْمُتَّصِلَة",
-    description: "My, your, his, her — attaching singular pronouns to nouns.",
-    hook: { ayahAr: "لَكُمْ دِينُكُمْ وَلِيَ دِينِ", ayahRef: "Al-Kafirun 109:6", highlightedWord: "دِينِ" },
+    // The former reader_lecture_19 files never existed in the repository; the
+    // approved proposal is the content specification.
+    sourceFile: "Docs/proposals/chapter-19-content-proposal.md",
+    title: "Attached Pronouns in Context: Reading Possession Accurately",
+    titleUr: "سیاق میں جڑی ہوئی ضمیریں: ملکیت درست پڑھنا",
+    titleAr: "الضَّمَائِرُ الْمُتَّصِلَةُ فِي السِّيَاقِ",
+    description: "Is that kasra my? What is the ending attached to, and whose is it? Reading singular attached pronouns accurately in sentences and in the Quran.",
+    descriptionUr: "کیا یہ زیر 'میرا' ہے؟ آخر کس سے جڑا ہے، اور کس کی چیز ہے؟ جملوں اور قرآن میں واحد جڑی ہوئی ضمیریں درست پڑھنا۔",
+    hook: { ayahAr: "إِنَّ رَبِّي لَطِيفٌ لِّمَا يَشَاءُ", ayahRef: "Yusuf 12:100", highlightedWord: "رَبِّي" },
     examples: [
-      card("كِتَابِي جَدِيدٌ", "My book is new", "kitaabee jadeedun"),
-      card("بَيْتُكَ كَبِيرٌ", "Your house is large", "baytuka kabeerun"),
-      card("قَلَمُهُ عَلَى الْمَكْتَبِ", "His pen is on the desk", "qalamuhoo alal-maktabi"),
-      card("مَدْرَسَتُهَا بَعِيدَةٌ", "Her school is far", "madrasatuhaa ba'eedatun"),
+      card("رَبِّي", "my Lord", "rabbī"),
+      card("كِتَابُهَا عَلَى الْمَكْتَبِ", "Her book is on the desk.", "kitābuhā ʿalā l-maktabi"),
+      card("قَرْيَتُهُ كَبِيرَةٌ", "His village is big.", "qaryatuhu kabīratun"),
+      card("سَمِعَهُ الطَّالِبُ", "The student heard him.", "samiʿahu ṭ-ṭālibu"),
     ],
-    parseText: "كِتَابِي جَدِيدٌ",
-    parseTokens: [token("كِتَابِي", "مبتدأ", "my book"), token("جَدِيدٌ", "خبر", "new")],
-    conversation: ["أَيْنَ كِتَابُكَ؟", "كِتَابِي عَلَى الْمَكْتَبِ"],
-    conversationDistractor: "الرَّجُلُ الَّذِي جَاءَ أُسْتَاذٌ",
-    distractor: "The man who came is a teacher",
-    blankDistractor: "بَيْتُهُ",
-    noorTip: "Al-Kafirun ends with لِيَ دِينِ — 'my religion' expressed with the attached ي.",
-    noorTipUr: "وَلِيَ دِينِ میں یاء ضمیر کو پہچانیں۔",
+    parseText: "كِتَابُهَا جَدِيدٌ",
+    parseTokens: [token("كِتَابُهَا", "مبتدأ", "her book"), token("جَدِيدٌ", "خبر", "new")],
+    conversation: ["أَيْنَ قَلَمُكِ يَا فَاطِمَةُ؟", "قَلَمِي عَلَى الْمَكْتَبِ"],
+    conversationDistractor: "قَلَمُكِ عَلَى الْمَكْتَبِ",
+    distractor: "Lord of the worlds",
+    blankDistractor: "قَرْيَتُهَا",
+    noorTip: "رَبِّ الْعَالَمِينَ and بِرَبِّ الْفَلَقِ end in a kasra but mean Lord of; رَبِّي, with its written ي, is my Lord. Check for the ي before you read my.",
+    noorTipUr: "رَبِّ الْعَالَمِينَ اور بِرَبِّ الْفَلَقِ زیر پر ختم ہوتے ہیں لیکن ان کا مطلب … کا رب ہے؛ لکھی ہوئی ي کے ساتھ رَبِّي کا مطلب میرا رب ہے۔ 'میرا' پڑھنے سے پہلے ي دیکھیں۔",
     focuses: [
-      { title: "My + Noun", titleAr: "ـِي", grammarTerm: "ضمير متكلم متصل", reveal: "You attached ي to a noun to express ownership without a separate word.", hookQuestion: "Where is the word 'my' hiding in كِتَابِي?" },
-      { title: "Your + Noun", titleAr: "ـُكَ", grammarTerm: "ضمير مخاطب مذكر", reveal: "You switched the ending to address a male listener.", hookQuestion: "What changes when you speak to someone directly?" },
-      { title: "His + Noun", titleAr: "ـُهُ", grammarTerm: "ضمير غائب مذكر", reveal: "You expressed his possession with a single ending on the noun.", hookQuestion: "How does هُ point away to a third person?" },
-      { title: "Her + Noun", titleAr: "ـُهَا", grammarTerm: "ضمير غائبة مؤنث", reveal: "You completed the singular feminine possession form.", hookQuestion: "What tells you this noun belongs to a female?" },
+      { title: "Kasra or “My”?", titleAr: "كَسْرَةٌ أَمْ يَاءُ الْمُتَكَلِّمِ؟", grammarTerm: "ياء المتكلم", reveal: "رَبِّي is my Lord; رَبِّ الْعَالَمِينَ (1:2) and بِرَبِّ الْفَلَقِ (113:1) are Lord of.", hookQuestion: "Which form actually means my Lord?" },
+      { title: "Same Shape, Different Attachment", titleAr: "شَكْلٌ وَاحِدٌ وَمَوْضِعَانِ", grammarTerm: "ضمير متصل", reveal: "بَعْدِهِ, after him; وَأَيَّدْنَاهُ, We supported him (2:87): his on a noun, him on an action.", hookQuestion: "What is ـهُ attached to in وَأَيَّدْنَاهُ?" },
+      { title: "A Familiar Change in a New Word", titleAr: "التَّاءُ قَبْلَ الضَّمِيرِ", grammarTerm: "التاء المربوطة", reveal: "ة opens into ت before an ending: قَرْيَتُهُ, وَامْرَأَتُهُ (Hud 11:71).", hookQuestion: "Why is there a ت in وَامْرَأَتُهُ?" },
+      { title: "Who Owns What in a Sentence?", titleAr: "لِمَنْ هٰذَا؟", grammarTerm: "مرجع الضمير", reveal: "The ending gives the person, the sentence gives the name: مِنْ أَهْلِهَا, Maryam's family (19:16).", hookQuestion: "Whose family is أَهْلِهَا in Maryam 19:16?" },
+      { title: "Possession in Quranic Context", titleAr: "الْمِلْكِيَّةُ فِي السِّيَاقِ الْقُرْآنِيِّ", grammarTerm: "حذف ياء المتكلم", reveal: "لِي كِتَابٌ versus كِتَابِي; وَلِيَ دِينِ (109:6) means my religion with the ي unwritten.", hookQuestion: "Why does دِينِ mean my religion in Al-Kafirun 109:6?" },
     ],
   },
 
@@ -892,4 +934,4 @@ const specs = [
 ];
 
 const chapters = specs.map(chapter);
-module.exports = { chapters };
+module.exports = { chapters, specs };

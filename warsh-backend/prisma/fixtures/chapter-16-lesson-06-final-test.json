@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 16 final test (ch16-test, new). Twelve multiple-choice questions on the proposal's blueprint: school objects and setting (2), teacher/student/lesson roles (2), location question and answer in a school (2), yesterday/today/tomorrow (3), classroom instructions (2), Quran word recognition بِالْقَلَمِ (1). No future سَـ, present conjugation, imperative derivation, case analysis or thematic-verse overclaim. Pass mark 80 % (10 of 12). Rebuilt 2026-09-23 from Docs/proposals/chapter-16-content-proposal.md; the curriculum map and fixtures named two different reader_lecture_16 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "باب 16 کا آخری امتحان",
+    "chapter_order": 16,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 96,
+      "ayah": 4,
+      "label": "Al-Alaq 96:4",
+      "ar": "الَّذِي عَلَّمَ بِالْقَلَمِ",
+      "en": "Who taught by the pen.",
+      "ur": "جس نے قلم کے ذریعے سکھایا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096004.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 16.",
+      "ur": "باب 16 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 16,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch16-test-q01",
+        "topic": {
+          "en": "School objects",
+          "ur": "اسکول کی چیزیں"
+        },
+        "prompt": {
+          "en": "What is دَفْتَرٌ?",
+          "ur": "دَفْتَرٌ کیا ہے؟"
+        },
+        "arabic": "دَفْتَرٌ",
+        "options": [
+          {
+            "en": "a notebook",
+            "ur": "ایک کاپی"
+          },
+          {
+            "en": "a desk",
+            "ur": "ایک میز"
+          },
+          {
+            "en": "a classroom",
+            "ur": "ایک کلاس (کمرہ)"
+          },
+          {
+            "en": "a lesson",
+            "ur": "ایک سبق"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch16-test-q02",
+        "topic": {
+          "en": "School setting",
+          "ur": "اسکول کا ماحول"
+        },
+        "prompt": {
+          "en": "What is فَصْلٌ?",
+          "ur": "فَصْلٌ کیا ہے؟"
+        },
+        "arabic": "فَصْلٌ",
+        "options": [
+          {
+            "en": "a lesson",
+            "ur": "ایک سبق"
+          },
+          {
+            "en": "a school",
+            "ur": "ایک اسکول"
+          },
+          {
+            "en": "a classroom",
+            "ur": "ایک کلاس (کمرہ)"
+          },
+          {
+            "en": "a pen",
+            "ur": "ایک قلم"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch16-test-q03",
+        "topic": {
+          "en": "People and roles",
+          "ur": "لوگ اور کردار"
+        },
+        "prompt": {
+          "en": "In a school, who teaches?",
+          "ur": "اسکول میں کون پڑھاتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "طَالِبٌ",
+            "ur": "طَالِبٌ"
+          },
+          {
+            "en": "أُسْتَاذٌ",
+            "ur": "أُسْتَاذٌ"
+          },
+          {
+            "en": "دَرْسٌ",
+            "ur": "دَرْسٌ"
+          },
+          {
+            "en": "مَكْتَبٌ",
+            "ur": "مَكْتَبٌ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch16-test-q04",
+        "topic": {
+          "en": "People and roles",
+          "ur": "لوگ اور کردار"
+        },
+        "prompt": {
+          "en": "Which word is NOT a person?",
+          "ur": "کون سا لفظ کوئی شخص نہیں؟"
+        },
+        "options": [
+          {
+            "en": "طَالِبٌ — a student",
+            "ur": "طَالِبٌ — ایک طالب علم"
+          },
+          {
+            "en": "أُسْتَاذٌ — a teacher",
+            "ur": "أُسْتَاذٌ — ایک استاد"
+          },
+          {
+            "en": "طُلَّابٌ — students",
+            "ur": "طُلَّابٌ — طلبہ"
+          },
+          {
+            "en": "دَرْسٌ — a lesson",
+            "ur": "دَرْسٌ — ایک سبق"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch16-test-q05",
+        "topic": {
+          "en": "Where?",
+          "ur": "کہاں؟"
+        },
+        "prompt": {
+          "en": "Which reply answers أَيْنَ الْقَلَمُ؟",
+          "ur": "کون سا جواب أَيْنَ الْقَلَمُ؟ کا ہے؟"
+        },
+        "arabic": "أَيْنَ الْقَلَمُ؟",
+        "options": [
+          {
+            "en": "This is a pen.",
+            "ur": "یہ ایک قلم ہے۔",
+            "arabic": "هٰذَا قَلَمٌ"
+          },
+          {
+            "en": "The pen is on the notebook.",
+            "ur": "قلم کاپی پر ہے۔",
+            "arabic": "الْقَلَمُ عَلَى الدَّفْتَرِ"
+          },
+          {
+            "en": "The pen is new.",
+            "ur": "قلم نیا ہے۔",
+            "arabic": "الْقَلَمُ جَدِيدٌ"
+          },
+          {
+            "en": "The lesson is tomorrow.",
+            "ur": "سبق آنے والے کل ہے۔",
+            "arabic": "الدَّرْسُ غَدًا"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch16-test-q06",
+        "topic": {
+          "en": "Where?",
+          "ur": "کہاں؟"
+        },
+        "prompt": {
+          "en": "What does الطُّلَّابُ فِي الْمَدْرَسَةِ mean?",
+          "ur": "الطُّلَّابُ فِي الْمَدْرَسَةِ کا کیا مطلب ہے؟"
+        },
+        "arabic": "الطُّلَّابُ فِي الْمَدْرَسَةِ",
+        "options": [
+          {
+            "en": "The student went to the school.",
+            "ur": "طالب علم اسکول گیا۔"
+          },
+          {
+            "en": "The students are in the classroom.",
+            "ur": "طلبہ کلاس میں ہیں۔"
+          },
+          {
+            "en": "The students are in the school.",
+            "ur": "طلبہ اسکول میں ہیں۔"
+          },
+          {
+            "en": "The teacher is in the school.",
+            "ur": "استاد اسکول میں ہے۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch16-test-q07",
+        "topic": {
+          "en": "Time words",
+          "ur": "وقت کے الفاظ"
+        },
+        "prompt": {
+          "en": "What does غَدًا mean?",
+          "ur": "غَدًا کا کیا مطلب ہے؟"
+        },
+        "arabic": "غَدًا",
+        "options": [
+          {
+            "en": "the day after tomorrow",
+            "ur": "پرسوں"
+          },
+          {
+            "en": "yesterday",
+            "ur": "گزرا ہوا کل"
+          },
+          {
+            "en": "today",
+            "ur": "آج"
+          },
+          {
+            "en": "tomorrow",
+            "ur": "آنے والا کل"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch16-test-q08",
+        "topic": {
+          "en": "Time words",
+          "ur": "وقت کے الفاظ"
+        },
+        "prompt": {
+          "en": "Which word completes ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ ___ to mean 'yesterday'?",
+          "ur": "کون سا لفظ ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ ___ کو 'گزرے ہوئے کل' کے معنی میں مکمل کرتا ہے؟"
+        },
+        "arabic": "ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ ___",
+        "options": [
+          {
+            "en": "yesterday",
+            "ur": "گزرا ہوا کل",
+            "arabic": "أَمْسِ"
+          },
+          {
+            "en": "tomorrow",
+            "ur": "آنے والا کل",
+            "arabic": "غَدًا"
+          },
+          {
+            "en": "today",
+            "ur": "آج",
+            "arabic": "الْيَوْمَ"
+          },
+          {
+            "en": "the lesson",
+            "ur": "سبق",
+            "arabic": "الدَّرْسُ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch16-test-q09",
+        "topic": {
+          "en": "Time words",
+          "ur": "وقت کے الفاظ"
+        },
+        "prompt": {
+          "en": "What does الدَّرْسُ الْيَوْمَ mean?",
+          "ur": "الدَّرْسُ الْيَوْمَ کا کیا مطلب ہے؟"
+        },
+        "arabic": "الدَّرْسُ الْيَوْمَ",
+        "options": [
+          {
+            "en": "The lesson is tomorrow.",
+            "ur": "سبق آنے والے کل ہے۔"
+          },
+          {
+            "en": "The lesson is today.",
+            "ur": "سبق آج ہے۔"
+          },
+          {
+            "en": "The lesson was yesterday.",
+            "ur": "سبق گزرے ہوئے کل تھا۔"
+          },
+          {
+            "en": "The lesson is new.",
+            "ur": "سبق نیا ہے۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch16-test-q10",
+        "topic": {
+          "en": "Instructions",
+          "ur": "ہدایات"
+        },
+        "prompt": {
+          "en": "The teacher says اُكْتُبْ فِي الدَّفْتَرِ. What do you do?",
+          "ur": "استاد کہتا ہے اُكْتُبْ فِي الدَّفْتَرِ۔ آپ کیا کرتے ہیں؟"
+        },
+        "arabic": "اُكْتُبْ فِي الدَّفْتَرِ",
+        "options": [
+          {
+            "en": "Open the notebook.",
+            "ur": "کاپی کھولتے ہیں۔"
+          },
+          {
+            "en": "Read the notebook aloud.",
+            "ur": "کاپی بلند آواز سے پڑھتے ہیں۔"
+          },
+          {
+            "en": "Write in the notebook.",
+            "ur": "کاپی میں لکھتے ہیں۔"
+          },
+          {
+            "en": "Look at the teacher.",
+            "ur": "استاد کی طرف دیکھتے ہیں۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch16-test-q11",
+        "topic": {
+          "en": "Instructions",
+          "ur": "ہدایات"
+        },
+        "prompt": {
+          "en": "The teacher says اِفْتَحِ الْكِتَابَ. What do you do?",
+          "ur": "استاد کہتا ہے اِفْتَحِ الْكِتَابَ۔ آپ کیا کرتے ہیں؟"
+        },
+        "arabic": "اِفْتَحِ الْكِتَابَ",
+        "options": [
+          {
+            "en": "Write in the book.",
+            "ur": "کتاب میں لکھتے ہیں۔"
+          },
+          {
+            "en": "Close the notebook.",
+            "ur": "کاپی بند کرتے ہیں۔"
+          },
+          {
+            "en": "Look at the desk.",
+            "ur": "میز کی طرف دیکھتے ہیں۔"
+          },
+          {
+            "en": "Open the book.",
+            "ur": "کتاب کھولتے ہیں۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch16-test-q12",
+        "topic": {
+          "en": "Quran word",
+          "ur": "قرآنی لفظ"
+        },
+        "prompt": {
+          "en": "Al-Alaq 96:4 — what does بِالْقَلَمِ mean?",
+          "ur": "سورۃ العلق 96:4 — بِالْقَلَمِ کا کیا مطلب ہے؟"
+        },
+        "arabic": "الَّذِي عَلَّمَ بِالْقَلَمِ",
+        "options": [
+          {
+            "en": "in the school",
+            "ur": "اسکول میں"
+          },
+          {
+            "en": "by the pen",
+            "ur": "قلم کے ذریعے"
+          },
+          {
+            "en": "the teacher",
+            "ur": "استاد"
+          },
+          {
+            "en": "in the notebook",
+            "ur": "کاپی میں"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 16 — a school scene",
+      "ur": "باب 16 — اسکول کا منظر"
+    },
+    "ayah": {
+      "surah": 96,
+      "ayah": 4,
+      "label": "Al-Alaq 96:4",
+      "ar": "الَّذِي عَلَّمَ بِالْقَلَمِ",
+      "en": "Who taught by the pen.",
+      "ur": "جس نے قلم کے ذریعے سکھایا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/096004.mp3"
+    },
+    "highlighted_word_indices": [
+      2
+    ],
+    "highlighted_words": [
+      "بِالْقَلَمِ"
+    ],
+    "noor_explanation": {
+      "en": "بِالْقَلَمِ: by the pen, a word you can now read in the Quran and use at your desk. You can follow a school scene: its objects, its people, when things happen and what the teacher asks.",
+      "ur": "بِالْقَلَمِ: قلم کے ذریعے، ایک لفظ جو اب آپ قرآن میں پڑھ سکتے ہیں اور اپنی میز پر استعمال کر سکتے ہیں۔ آپ اسکول کا منظر سمجھ سکتے ہیں: اس کی چیزیں، اس کے لوگ، کام کب ہوتے ہیں اور استاد کیا کہتا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 16 complete. Chapter 17 turns to past actions: reading who did what, in practice sentences and in the Quran.",
+      "ur": "باب 16 مکمل۔ باب 17 ماضی کے کاموں کی طرف مڑتا ہے: مشق کے جملوں اور قرآن میں پڑھنا کہ کس نے کیا کیا۔"
+    }
+  }
+}

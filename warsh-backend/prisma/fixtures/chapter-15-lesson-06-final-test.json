@@ -1,0 +1,452 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 15 final test (ch15-test, new). Twelve multiple-choice questions on the proposal's blueprint: singular versus near-human plural (1), near-human retrieval (1), far-human أُولٰئِكَ (2), near/far in a described scene (1), non-human near/far default (2), pointing phrase versus statement (2), Quran pointer and referent in 15:68, 2:5 and 23:10 (3). No theological inference, dual forms, case theory or location-word morphology. Pass mark 80 % (10 of 12), matching Chapters 3–14. Rebuilt 2026-09-23 from Docs/proposals/chapter-15-content-proposal.md; the former reader_lecture_15 source paths never existed in the repository and were dropped.",
+    "titleUr": "باب 15 کا آخری امتحان",
+    "chapter_order": 15,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 5,
+      "label": "Al-Baqarah 2:5",
+      "ar": "أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ",
+      "en": "Those are upon guidance from their Lord.",
+      "ur": "وہی لوگ اپنے رب کی طرف سے ہدایت پر ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002005.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 15.",
+      "ur": "باب 15 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 15,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch15-test-q01",
+        "topic": {
+          "en": "One person or a group",
+          "ur": "ایک شخص یا گروہ"
+        },
+        "prompt": {
+          "en": "Which word completes ___ طَالِبٌ, 'This is a student' (one student, near)?",
+          "ur": "کون سا لفظ ___ طَالِبٌ کو مکمل کر کے 'یہ ایک طالب علم ہے' (ایک طالب علم، قریب) بناتا ہے؟"
+        },
+        "arabic": "___ طَالِبٌ",
+        "options": [
+          {
+            "en": "this (one, masculine, near)",
+            "ur": "یہ (ایک، مذکر، قریب)",
+            "arabic": "هٰذَا"
+          },
+          {
+            "en": "these (people, near)",
+            "ur": "یہ (لوگ، قریب)",
+            "arabic": "هٰؤُلَاءِ"
+          },
+          {
+            "en": "those (people, far)",
+            "ur": "وہ (لوگ، دور)",
+            "arabic": "أُولٰئِكَ"
+          },
+          {
+            "en": "that (one, feminine, far)",
+            "ur": "وہ (ایک، مؤنث، دور)",
+            "arabic": "تِلْكَ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch15-test-q02",
+        "topic": {
+          "en": "Near group of people",
+          "ur": "قریب لوگوں کا گروہ"
+        },
+        "prompt": {
+          "en": "Which word completes ___ مُسْلِمُونَ, 'These are Muslims' (standing beside you)?",
+          "ur": "کون سا لفظ ___ مُسْلِمُونَ کو مکمل کر کے 'یہ مسلمان ہیں' (آپ کے پاس کھڑے) بناتا ہے؟"
+        },
+        "arabic": "___ مُسْلِمُونَ",
+        "options": [
+          {
+            "en": "those (people, far)",
+            "ur": "وہ (لوگ، دور)",
+            "arabic": "أُولٰئِكَ"
+          },
+          {
+            "en": "these (things, near)",
+            "ur": "یہ (چیزیں، قریب)",
+            "arabic": "هٰذِهِ"
+          },
+          {
+            "en": "these (people, near)",
+            "ur": "یہ (لوگ، قریب)",
+            "arabic": "هٰؤُلَاءِ"
+          },
+          {
+            "en": "this (one, masculine, near)",
+            "ur": "یہ (ایک، مذکر، قریب)",
+            "arabic": "هٰذَا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch15-test-q03",
+        "topic": {
+          "en": "Far group of people",
+          "ur": "دور لوگوں کا گروہ"
+        },
+        "prompt": {
+          "en": "What does أُولٰئِكَ طُلَّابٌ mean?",
+          "ur": "أُولٰئِكَ طُلَّابٌ کا کیا مطلب ہے؟"
+        },
+        "arabic": "أُولٰئِكَ طُلَّابٌ",
+        "options": [
+          {
+            "en": "These are students.",
+            "ur": "یہ طلبہ ہیں۔"
+          },
+          {
+            "en": "Those are students.",
+            "ur": "وہ طلبہ ہیں۔"
+          },
+          {
+            "en": "That is a student.",
+            "ur": "وہ ایک طالب علم ہے۔"
+          },
+          {
+            "en": "Those are books.",
+            "ur": "وہ کتابیں ہیں۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch15-test-q04",
+        "topic": {
+          "en": "Far group of people",
+          "ur": "دور لوگوں کا گروہ"
+        },
+        "prompt": {
+          "en": "A group of female teachers is across the hall. Which pointer fits?",
+          "ur": "خواتین اساتذہ کا ایک گروہ ہال کے دوسری طرف ہے۔ کون سا اشارہ درست ہے؟"
+        },
+        "arabic": "___ مُعَلِّمَاتٌ",
+        "options": [
+          {
+            "en": "those (things, far)",
+            "ur": "وہ (چیزیں، دور)",
+            "arabic": "تِلْكَ"
+          },
+          {
+            "en": "these (people, near)",
+            "ur": "یہ (لوگ، قریب)",
+            "arabic": "هٰؤُلَاءِ"
+          },
+          {
+            "en": "that (one, masculine, far)",
+            "ur": "وہ (ایک، مذکر، دور)",
+            "arabic": "ذٰلِكَ"
+          },
+          {
+            "en": "those (people, far) — for women as well as men",
+            "ur": "وہ (لوگ، دور) — مردوں کی طرح عورتوں کے لیے بھی",
+            "arabic": "أُولٰئِكَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch15-test-q05",
+        "topic": {
+          "en": "Near or far in a scene",
+          "ur": "منظر میں قریب یا دور"
+        },
+        "prompt": {
+          "en": "You are in a classroom. The students at your table are ___, and the students at the far door are ___.",
+          "ur": "آپ ایک کلاس میں ہیں۔ آپ کی میز کے طلبہ ___ ہیں، اور دور دروازے کے طلبہ ___ ہیں۔"
+        },
+        "options": [
+          {
+            "en": "هٰؤُلَاءِ … أُولٰئِكَ",
+            "ur": "هٰؤُلَاءِ … أُولٰئِكَ"
+          },
+          {
+            "en": "أُولٰئِكَ … هٰؤُلَاءِ",
+            "ur": "أُولٰئِكَ … هٰؤُلَاءِ"
+          },
+          {
+            "en": "هٰذِهِ … تِلْكَ",
+            "ur": "هٰذِهِ … تِلْكَ"
+          },
+          {
+            "en": "هٰذَا … ذٰلِكَ",
+            "ur": "هٰذَا … ذٰلِكَ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch15-test-q06",
+        "topic": {
+          "en": "Things, near",
+          "ur": "چیزیں، قریب"
+        },
+        "prompt": {
+          "en": "Which is the expected beginner way to say 'These are books'?",
+          "ur": "'یہ کتابیں ہیں' کہنے کا متوقع بنیادی طریقہ کون سا ہے؟"
+        },
+        "options": [
+          {
+            "en": "هٰؤُلَاءِ كُتُبٌ",
+            "ur": "هٰؤُلَاءِ كُتُبٌ"
+          },
+          {
+            "en": "أُولٰئِكَ كُتُبٌ",
+            "ur": "أُولٰئِكَ كُتُبٌ"
+          },
+          {
+            "en": "هٰذِهِ كُتُبٌ",
+            "ur": "هٰذِهِ كُتُبٌ"
+          },
+          {
+            "en": "هٰذَا كُتُبٌ",
+            "ur": "هٰذَا كُتُبٌ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch15-test-q07",
+        "topic": {
+          "en": "Things, far",
+          "ur": "چیزیں، دور"
+        },
+        "prompt": {
+          "en": "What does تِلْكَ بُيُوتٌ mean, and why تِلْكَ?",
+          "ur": "تِلْكَ بُيُوتٌ کا کیا مطلب ہے، اور تِلْكَ کیوں؟"
+        },
+        "arabic": "تِلْكَ بُيُوتٌ",
+        "options": [
+          {
+            "en": "These are houses — تِلْكَ means near.",
+            "ur": "یہ گھر ہیں — تِلْكَ قریب کے لیے ہے۔"
+          },
+          {
+            "en": "Those are houses — houses are far things, which commonly take the feminine singular pointer.",
+            "ur": "وہ گھر ہیں — گھر دور کی چیزیں ہیں، جو عام طور پر واحد مؤنث کا اشارہ لیتی ہیں۔"
+          },
+          {
+            "en": "That is one house — تِلْكَ always means one.",
+            "ur": "وہ ایک گھر ہے — تِلْكَ ہمیشہ ایک کے لیے ہے۔"
+          },
+          {
+            "en": "Those are people — تِلْكَ is for human groups.",
+            "ur": "وہ لوگ ہیں — تِلْكَ انسانوں کے گروہ کے لیے ہے۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch15-test-q08",
+        "topic": {
+          "en": "Phrase or statement",
+          "ur": "ترکیب یا جملہ"
+        },
+        "prompt": {
+          "en": "Which one is a complete statement?",
+          "ur": "ان میں سے مکمل جملہ کون سا ہے؟"
+        },
+        "options": [
+          {
+            "en": "هٰؤُلَاءِ الْمُسْلِمُونَ — these Muslims",
+            "ur": "هٰؤُلَاءِ الْمُسْلِمُونَ — یہ مسلمان (ترکیب)"
+          },
+          {
+            "en": "أُولٰئِكَ الطُّلَّابُ — those students",
+            "ur": "أُولٰئِكَ الطُّلَّابُ — وہ طلبہ (ترکیب)"
+          },
+          {
+            "en": "هٰؤُلَاءِ الطَّالِبَاتُ — these female students",
+            "ur": "هٰؤُلَاءِ الطَّالِبَاتُ — یہ طالبات (ترکیب)"
+          },
+          {
+            "en": "هٰؤُلَاءِ مُسْلِمُونَ — These are Muslims.",
+            "ur": "هٰؤُلَاءِ مُسْلِمُونَ — یہ مسلمان ہیں۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch15-test-q09",
+        "topic": {
+          "en": "Phrase or statement",
+          "ur": "ترکیب یا جملہ"
+        },
+        "prompt": {
+          "en": "Which word completes هٰؤُلَاءِ الطُّلَّابُ ___ to mean 'These students are hardworking'?",
+          "ur": "کون سا لفظ هٰؤُلَاءِ الطُّلَّابُ ___ کو مکمل کر کے 'یہ طلبہ محنتی ہیں' بناتا ہے؟"
+        },
+        "arabic": "هٰؤُلَاءِ الطُّلَّابُ ___",
+        "options": [
+          {
+            "en": "hardworking (plural, no ال)",
+            "ur": "محنتی (جمع، بغیر ال)",
+            "arabic": "مُجْتَهِدُونَ"
+          },
+          {
+            "en": "the hardworking (plural, with ال)",
+            "ur": "محنتی (جمع، ال کے ساتھ)",
+            "arabic": "الْمُجْتَهِدُونَ"
+          },
+          {
+            "en": "hardworking (feminine singular)",
+            "ur": "محنتی (واحد مؤنث)",
+            "arabic": "مُجْتَهِدَةٌ"
+          },
+          {
+            "en": "hardworking (one man)",
+            "ur": "محنتی (ایک مرد)",
+            "arabic": "مُجْتَهِدٌ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch15-test-q10",
+        "topic": {
+          "en": "Quran: pointer and referent",
+          "ur": "قرآن: اشارہ اور مرجع"
+        },
+        "prompt": {
+          "en": "Al-Hijr 15:68 — who does هَٰؤُلَاءِ point to?",
+          "ur": "سورۃ الحجر 15:68 — هَٰؤُلَاءِ کس کی طرف اشارہ کرتا ہے؟"
+        },
+        "arabic": "قَالَ إِنَّ هَٰؤُلَاءِ ضَيْفِي",
+        "options": [
+          {
+            "en": "Lut himself",
+            "ur": "خود حضرت لوط"
+          },
+          {
+            "en": "Lut's guests, people who are with him",
+            "ur": "حضرت لوط کے مہمان، وہ لوگ جو ان کے پاس ہیں"
+          },
+          {
+            "en": "Things in the house",
+            "ur": "گھر کی چیزیں"
+          },
+          {
+            "en": "A group far away from Lut",
+            "ur": "حضرت لوط سے دور ایک گروہ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch15-test-q11",
+        "topic": {
+          "en": "Quran: pointer and referent",
+          "ur": "قرآن: اشارہ اور مرجع"
+        },
+        "prompt": {
+          "en": "Al-Baqarah 2:5 — who does أُولَٰئِكَ point to?",
+          "ur": "سورۃ البقرہ 2:5 — أُولَٰئِكَ کس کی طرف اشارہ کرتا ہے؟"
+        },
+        "arabic": "أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ",
+        "options": [
+          {
+            "en": "People named inside 2:5 itself",
+            "ur": "وہ لوگ جن کا نام خود 2:5 میں ہے"
+          },
+          {
+            "en": "The guidance",
+            "ur": "ہدایت"
+          },
+          {
+            "en": "The people of taqwa described just before, in 2:2–4",
+            "ur": "متقین جن کا ذکر ابھی 2:2–4 میں ہوا"
+          },
+          {
+            "en": "People standing far from the reciter",
+            "ur": "تلاوت کرنے والے سے دور کھڑے لوگ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch15-test-q12",
+        "topic": {
+          "en": "Quran: pointer and referent",
+          "ur": "قرآن: اشارہ اور مرجع"
+        },
+        "prompt": {
+          "en": "Al-Mu'minun 23:10 — which is true?",
+          "ur": "سورۃ المؤمنون 23:10 — کون سی بات درست ہے؟"
+        },
+        "arabic": "أُولَٰئِكَ هُمُ الْوَارِثُونَ",
+        "options": [
+          {
+            "en": "It is an unfinished phrase: those inheritors…",
+            "ur": "یہ نامکمل ترکیب ہے: وہ وارث…"
+          },
+          {
+            "en": "أُولَٰئِكَ points to far things.",
+            "ur": "أُولَٰئِكَ دور کی چیزوں کی طرف اشارہ ہے۔"
+          },
+          {
+            "en": "الْوَارِثُونَ is the pointing word.",
+            "ur": "الْوَارِثُونَ اشارے والا لفظ ہے۔"
+          },
+          {
+            "en": "It is a complete statement, and أُولَٰئِكَ points back to the believers of 23:1–9.",
+            "ur": "یہ مکمل جملہ ہے، اور أُولَٰئِكَ 23:1–9 کے مؤمنوں کی طرف واپس اشارہ ہے۔"
+          }
+        ],
+        "correct_index": 3
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 15 — pointing at groups",
+      "ur": "باب 15 — گروہوں کی طرف اشارہ"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 5,
+      "label": "Al-Baqarah 2:5",
+      "ar": "أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ",
+      "en": "Those are upon guidance from their Lord.",
+      "ur": "وہی لوگ اپنے رب کی طرف سے ہدایت پر ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002005.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "أُولَٰئِكَ"
+    ],
+    "noor_explanation": {
+      "en": "أُولَٰئِكَ opened this chapter: those, pointing back to the people described before it. You can now choose between هٰؤُلَاءِ, أُولٰئِكَ, هٰذِهِ and تِلْكَ for groups, and tell a pointing phrase from a complete statement.",
+      "ur": "أُولَٰئِكَ سے یہ باب شروع ہوا: وہی لوگ، جو پہلے بیان کیے گئے لوگوں کی طرف واپس اشارہ ہے۔ اب آپ گروہوں کے لیے هٰؤُلَاءِ، أُولٰئِكَ، هٰذِهِ اور تِلْكَ میں سے چن سکتے ہیں، اور اشاری ترکیب کو مکمل جملے سے الگ کر سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 15 complete. You point at groups of people and things, near and far, and find who a Quranic pointer means. Chapter 16 takes you into a school scene.",
+      "ur": "باب 15 مکمل۔ آپ قریب اور دور کے لوگوں اور چیزوں کے گروہوں کی طرف اشارہ کرتے ہیں، اور قرآنی اشارے کا مرجع ڈھونڈتے ہیں۔ باب 16 آپ کو ایک اسکول کے منظر میں لے جاتا ہے۔"
+    }
+  }
+}

@@ -1,0 +1,599 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 15 review (ch15-l05, REVIEW, rebuilt; formerly chapter-15-lesson-05.json). Mixed retrieval, no new grammar: near/far human selection, the non-human هٰذِهِ / تِلْكَ default with its reason, phrase versus complete statement, Quran target recognition and referent (2:5, 15:68, 23:10), and one singular-pointer transfer item. Reveal Al-Baqarah 2:5 excerpt at أُولَٰئِكَ (index 0); 2:256 is no longer used. Rebuilt 2026-09-23 from Docs/proposals/chapter-15-content-proposal.md; the former reader_lecture_15 source paths never existed in the repository and were dropped.",
+    "titleUr": "باب 15 کا جائزہ",
+    "chapter_order": 15,
+    "lesson_order": 5,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 23,
+      "ayah": 10,
+      "label": "Al-Mu'minun 23:10",
+      "ar": "أُولَٰئِكَ هُمُ الْوَارِثُونَ",
+      "en": "Those are the inheritors.",
+      "ur": "یہی لوگ وارث ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/023010.mp3"
+    },
+    "noor_intro": {
+      "en": "Chapter 15 review. Every pointer you need is here: near and far, people and things, one and many. Listen once more to أُولَٰئِكَ هُمُ الْوَارِثُونَ.",
+      "ur": "باب 15 کا جائزہ۔ آپ کو جس اشارے کی ضرورت ہے وہ یہاں ہے: قریب اور دور، لوگ اور چیزیں، ایک اور کئی۔ ایک بار پھر أُولَٰئِكَ هُمُ الْوَارِثُونَ سنیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The whole pointing set",
+        "ar": "هٰذَا، هٰذِهِ، ذٰلِكَ، تِلْكَ، هٰؤُلَاءِ، أُولٰئِكَ",
+        "ur": "اشاروں کا پورا مجموعہ"
+      },
+      "explanation": {
+        "en": "One near: هٰذَا, هٰذِهِ. One far: ذٰلِكَ, تِلْكَ. A group of people: هٰؤُلَاءِ near, أُولٰئِكَ far. A group of things: the beginner default هٰذِهِ near, تِلْكَ far. Other forms, such as the dual, come later.",
+        "ur": "ایک قریب: هٰذَا، هٰذِهِ۔ ایک دور: ذٰلِكَ، تِلْكَ۔ لوگوں کا گروہ: قریب هٰؤُلَاءِ، دور أُولٰئِكَ۔ چیزوں کا گروہ: بنیادی قاعدہ قریب هٰذِهِ، دور تِلْكَ۔ دوسری شکلیں، جیسے تثنیہ، بعد میں آئیں گی۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "People: near and far",
+        "ar": "هٰؤُلَاءِ طُلَّابٌ / أُولٰئِكَ طُلَّابٌ",
+        "ur": "لوگ: قریب اور دور"
+      },
+      "explanation": {
+        "en": "Same students, two distances. أُولٰئِكَ also points back to people who were just mentioned.",
+        "ur": "وہی طلبہ، دو فاصلے۔ أُولٰئِكَ ان لوگوں کی طرف بھی واپس اشارہ کرتا ہے جن کا ابھی ذکر ہوا۔"
+      },
+      "examples": [
+        {
+          "ar": "هٰؤُلَاءِ طُلَّابٌ",
+          "ar_plain": "هؤلاء طلاب",
+          "translit": "hāʾulāʾi ṭullābun",
+          "en": "These are students.",
+          "ur": "یہ طلبہ ہیں۔"
+        },
+        {
+          "ar": "أُولٰئِكَ طُلَّابٌ",
+          "ar_plain": "اولئك طلاب",
+          "translit": "ulāʾika ṭullābun",
+          "en": "Those are students.",
+          "ur": "وہ طلبہ ہیں۔"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Things: near and far",
+        "ar": "هٰذِهِ كُتُبٌ / تِلْكَ كُتُبٌ",
+        "ur": "چیزیں: قریب اور دور"
+      },
+      "explanation": {
+        "en": "A plural of things commonly takes the feminine singular pointer, just as it takes a feminine singular adjective: هٰذِهِ كُتُبٌ جَدِيدَةٌ.",
+        "ur": "چیزوں کی جمع عام طور پر واحد مؤنث کا اشارہ لیتی ہے، جیسے وہ واحد مؤنث صفت لیتی ہے: هٰذِهِ كُتُبٌ جَدِيدَةٌ۔"
+      },
+      "examples": [
+        {
+          "ar": "هٰذِهِ كُتُبٌ",
+          "ar_plain": "هذه كتب",
+          "translit": "hādhihi kutubun",
+          "en": "These are books.",
+          "ur": "یہ کتابیں ہیں۔"
+        },
+        {
+          "ar": "تِلْكَ كُتُبٌ",
+          "ar_plain": "تلك كتب",
+          "translit": "tilka kutubun",
+          "en": "Those are books.",
+          "ur": "وہ کتابیں ہیں۔"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Statement or phrase",
+        "ar": "هٰؤُلَاءِ مُسْلِمُونَ / هٰؤُلَاءِ الْمُسْلِمُونَ",
+        "ur": "جملہ یا ترکیب"
+      },
+      "explanation": {
+        "en": "No ال after the pointer: a complete statement, these are Muslims. ال after the pointer: a phrase, these Muslims, still waiting for its news.",
+        "ur": "اشارے کے بعد ال نہیں: مکمل جملہ، یہ مسلمان ہیں۔ اشارے کے بعد ال: ترکیب، یہ مسلمان، جس کی خبر ابھی باقی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "هٰؤُلَاءِ مُسْلِمُونَ",
+          "ar_plain": "هؤلاء مسلمون",
+          "translit": "hāʾulāʾi muslimūna",
+          "en": "These are Muslims.",
+          "ur": "یہ مسلمان ہیں۔"
+        },
+        {
+          "ar": "هٰؤُلَاءِ الْمُسْلِمُونَ",
+          "ar_plain": "هؤلاء المسلمون",
+          "translit": "hāʾulāʾi l-muslimūna",
+          "en": "these Muslims",
+          "ur": "یہ مسلمان (ترکیب)"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:5: Those are upon guidance from their Lord.",
+        "ar": "أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ",
+        "ur": "Al-Baqarah 2:5: وہی لوگ اپنے رب کی طرف سے ہدایت پر ہیں۔"
+      },
+      "explanation": {
+        "en": "أُولَٰئِكَ points back to the people of taqwa described in 2:2–4.",
+        "ur": "أُولَٰئِكَ 2:2–4 میں بیان کیے گئے متقین کی طرف واپس اشارہ ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002005.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Hijr 15:68: He said, \"Indeed, these are my guests.\"",
+        "ar": "قَالَ إِنَّ هَٰؤُلَاءِ ضَيْفِي",
+        "ur": "Al-Hijr 15:68: انہوں نے کہا: یہ میرے مہمان ہیں۔"
+      },
+      "explanation": {
+        "en": "هَٰؤُلَاءِ points to Lut's guests, people who are with him; ضَيْفِي names them.",
+        "ur": "هَٰؤُلَاءِ حضرت لوط کے مہمانوں کی طرف اشارہ ہے، وہ لوگ جو ان کے پاس ہیں؛ ضَيْفِي ان کا نام بتاتا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/015068.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Before you answer",
+        "ar": "هٰؤُلَاءِ / أُولٰئِكَ / هٰذِهِ / تِلْكَ",
+        "ur": "جواب سے پہلے"
+      },
+      "explanation": {
+        "en": "Ask three things: people or things? near or far? ال on the next word or not? Then, for a Quran line, look for who was just described.",
+        "ur": "تین باتیں پوچھیں: لوگ یا چیزیں؟ قریب یا دور؟ اگلے لفظ پر ال ہے یا نہیں؟ پھر قرآنی سطر کے لیے دیکھیں کہ ابھی کس کا ذکر ہوا۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "FILL_BLANK",
+      "id": "ch15-l05-ex01",
+      "mode": "TAP",
+      "sentence_ar": "___ طُلَّابٌ",
+      "hint": {
+        "en": "Those are students. (They were mentioned a moment ago.)",
+        "ur": "وہ طلبہ ہیں۔ (ان کا ابھی ذکر ہوا۔)"
+      },
+      "options": [
+        {
+          "ar": "هٰؤُلَاءِ",
+          "ar_plain": "هؤلاء",
+          "translit": "hāʾulāʾi",
+          "en": "these (people, near)",
+          "ur": "یہ (لوگ، قریب)"
+        },
+        {
+          "ar": "أُولٰئِكَ",
+          "ar_plain": "اولئك",
+          "translit": "ulāʾika",
+          "en": "those (people, far)",
+          "ur": "وہ (لوگ، دور)"
+        },
+        {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "tilka",
+          "en": "those (things, far)",
+          "ur": "وہ (چیزیں، دور)"
+        },
+        {
+          "ar": "ذٰلِكَ",
+          "ar_plain": "ذلك",
+          "translit": "dhālika",
+          "en": "that (one, masculine, far)",
+          "ur": "وہ (ایک، مذکر، دور)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أُولٰئِكَ",
+        "ar_plain": "اولئك",
+        "translit": "ulāʾika",
+        "en": "those (people, far)",
+        "ur": "وہ (لوگ، دور)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "People mentioned earlier are pointed to with أُولٰئِكَ.",
+        "ur": "پہلے ذکر شدہ لوگوں کی طرف أُولٰئِكَ سے اشارہ ہوتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch15-l05-ex02",
+      "mode": "TAP",
+      "sentence_ar": "___ بُيُوتٌ",
+      "hint": {
+        "en": "These are houses. (You are standing among them.)",
+        "ur": "یہ گھر ہیں۔ (آپ ان کے درمیان کھڑے ہیں۔)"
+      },
+      "options": [
+        {
+          "ar": "هٰؤُلَاءِ",
+          "ar_plain": "هؤلاء",
+          "translit": "hāʾulāʾi",
+          "en": "these (people, near)",
+          "ur": "یہ (لوگ، قریب)"
+        },
+        {
+          "ar": "هٰذَا",
+          "ar_plain": "هذا",
+          "translit": "hādhā",
+          "en": "this (one, masculine, near)",
+          "ur": "یہ (ایک، مذکر، قریب)"
+        },
+        {
+          "ar": "أُولٰئِكَ",
+          "ar_plain": "اولئك",
+          "translit": "ulāʾika",
+          "en": "those (people, far)",
+          "ur": "وہ (لوگ، دور)"
+        },
+        {
+          "ar": "هٰذِهِ",
+          "ar_plain": "هذه",
+          "translit": "hādhihi",
+          "en": "these (things, near)",
+          "ur": "یہ (چیزیں، قریب)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "هٰذِهِ",
+        "ar_plain": "هذه",
+        "translit": "hādhihi",
+        "en": "these (things, near)",
+        "ur": "یہ (چیزیں، قریب)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Houses are things and they are near: هٰذِهِ بُيُوتٌ. هٰؤُلَاءِ is for people; هٰذَا points to one masculine thing.",
+        "ur": "گھر چیزیں ہیں اور قریب ہیں: هٰذِهِ بُيُوتٌ۔ هٰؤُلَاءِ لوگوں کے لیے ہے؛ هٰذَا ایک مذکر چیز کی طرف اشارہ ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch15-l05-ex03",
+      "statement": {
+        "en": "The beginner default for a group of things uses هٰذِهِ and تِلْكَ because a non-human plural is commonly treated as feminine singular.",
+        "ur": "چیزوں کے گروہ کے لیے بنیادی قاعدہ هٰذِهِ اور تِلْكَ استعمال کرتا ہے کیونکہ غیر عاقل جمع کو عام طور پر واحد مؤنث سمجھا جاتا ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It is the same default as Chapter 14's adjectives: كُتُبٌ جَدِيدَةٌ, so هٰذِهِ كُتُبٌ.",
+        "ur": "یہ باب 14 کی صفات والا بنیادی قاعدہ ہی ہے: كُتُبٌ جَدِيدَةٌ، اس لیے هٰذِهِ كُتُبٌ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch15-l05-ex04",
+      "prompt": {
+        "ar": "هٰؤُلَاءِ الْمُسْلِمُونَ",
+        "ar_plain": "هؤلاء المسلمون",
+        "translit": "hāʾulāʾi l-muslimūna",
+        "en": "these Muslims",
+        "ur": "یہ مسلمان (ترکیب)"
+      },
+      "options": [
+        {
+          "en": "These are Muslims.",
+          "ur": "یہ مسلمان ہیں۔"
+        },
+        {
+          "en": "these Muslims (a phrase, not yet a sentence)",
+          "ur": "یہ مسلمان (ترکیب، ابھی جملہ نہیں)"
+        },
+        {
+          "en": "Those are the Muslims.",
+          "ur": "یہی مسلمان ہیں۔"
+        },
+        {
+          "en": "This is a Muslim.",
+          "ur": "یہ ایک مسلمان ہے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ال on the noun makes one phrase with the pointer: these Muslims.",
+        "ur": "اسم پر ال اشارے کے ساتھ ایک ترکیب بناتا ہے: یہ مسلمان۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch15-l05-ex05",
+      "target_translation": {
+        "en": "Those female students are hardworking.",
+        "ur": "وہ طالبات محنتی ہیں۔"
+      },
+      "tiles": [
+        {
+          "ar": "أُولٰئِكَ",
+          "ar_plain": "اولئك",
+          "translit": "ulāʾika",
+          "en": "those (people, far)",
+          "ur": "وہ (لوگ، دور)"
+        },
+        {
+          "ar": "الطَّالِبَاتُ",
+          "ar_plain": "الطالبات",
+          "translit": "aṭ-ṭālibātu",
+          "en": "the female students",
+          "ur": "طالبات (ال کے ساتھ)"
+        },
+        {
+          "ar": "مُجْتَهِدَاتٌ",
+          "ar_plain": "مجتهدات",
+          "translit": "mujtahidātun",
+          "en": "hardworking (feminine plural)",
+          "ur": "محنتی (جمع مؤنث)"
+        },
+        {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "tilka",
+          "en": "those (things, far)",
+          "ur": "وہ (چیزیں، دور)"
+        }
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Female students are people and far: أُولٰئِكَ. The phrase أُولٰئِكَ الطَّالِبَاتُ is completed by مُجْتَهِدَاتٌ.",
+        "ur": "طالبات لوگ ہیں اور دور: أُولٰئِكَ۔ ترکیب أُولٰئِكَ الطَّالِبَاتُ کو مُجْتَهِدَاتٌ مکمل کرتا ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch15-l05-ex06",
+      "ayah_fragment": {
+        "ar": "أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ",
+        "surah_ref": "Al-Baqarah 2:5"
+      },
+      "options": [
+        {
+          "en": "هُدًى, pointing to a far group",
+          "ur": "هُدًى، جو دور کے گروہ کی طرف اشارہ ہے"
+        },
+        {
+          "en": "رَبِّهِمْ, pointing to things",
+          "ur": "رَبِّهِمْ، جو چیزوں کی طرف اشارہ ہے"
+        },
+        {
+          "en": "أُولَٰئِكَ, pointing back to the people described in 2:2–4",
+          "ur": "أُولَٰئِكَ، جو 2:2–4 میں بیان کیے گئے لوگوں کی طرف واپس اشارہ ہے"
+        },
+        {
+          "en": "أُولَٰئِكَ, pointing to guests in a house",
+          "ur": "أُولَٰئِكَ، جو گھر کے مہمانوں کی طرف اشارہ ہے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The pointer is the first word, أُولَٰئِكَ, and its group is the people of taqwa from 2:2–4.",
+        "ur": "اشارہ پہلا لفظ أُولَٰئِكَ ہے، اور اس کا گروہ 2:2–4 کے متقین ہیں۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch15-l05-ex07",
+      "ayah_fragment": {
+        "ar": "قَالَ إِنَّ هَٰؤُلَاءِ ضَيْفِي",
+        "surah_ref": "Al-Hijr 15:68"
+      },
+      "options": [
+        {
+          "en": "The pointer هَٰؤُلَاءِ: near people, the guests",
+          "ur": "اشارہ هَٰؤُلَاءِ: قریب لوگ، مہمان"
+        },
+        {
+          "en": "The pointer هَٰؤُلَاءِ: near things in the house",
+          "ur": "اشارہ هَٰؤُلَاءِ: گھر کی قریب چیزیں"
+        },
+        {
+          "en": "The pointer أُولَٰئِكَ: far people",
+          "ur": "اشارہ أُولَٰئِكَ: دور لوگ"
+        },
+        {
+          "en": "No pointer appears in this line",
+          "ur": "اس سطر میں کوئی اشارہ نہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هَٰؤُلَاءِ ضَيْفِي: the near human pointer, used for Lut's guests.",
+        "ur": "هَٰؤُلَاءِ ضَيْفِي: قریب لوگوں کا اشارہ، حضرت لوط کے مہمانوں کے لیے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch15-l05-ex08",
+      "statement": {
+        "en": "In أُولَٰئِكَ هُمُ الْوَارِثُونَ (Al-Mu'minun 23:10) the words form a complete statement: those are the inheritors.",
+        "ur": "أُولَٰئِكَ هُمُ الْوَارِثُونَ (سورۃ المؤمنون 23:10) میں الفاظ ایک مکمل جملہ ہیں: یہی لوگ وارث ہیں۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Pointer, هُمُ, then a noun with ال: the whole shape is a complete statement about the believers of 23:1–9.",
+        "ur": "اشارہ، هُمُ، پھر ال والا اسم: پوری ساخت 23:1–9 کے مؤمنوں کے بارے میں مکمل جملہ ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch15-l05-ex09",
+      "mode": "TAP",
+      "sentence_ar": "___ قَلَمٌ",
+      "hint": {
+        "en": "That is a pen. (It is on the far table.)",
+        "ur": "وہ ایک قلم ہے۔ (وہ دور کی میز پر ہے۔)"
+      },
+      "options": [
+        {
+          "ar": "تِلْكَ",
+          "ar_plain": "تلك",
+          "translit": "tilka",
+          "en": "those (things, far)",
+          "ur": "وہ (چیزیں، دور)"
+        },
+        {
+          "ar": "أُولٰئِكَ",
+          "ar_plain": "اولئك",
+          "translit": "ulāʾika",
+          "en": "those (people, far)",
+          "ur": "وہ (لوگ، دور)"
+        },
+        {
+          "ar": "ذٰلِكَ",
+          "ar_plain": "ذلك",
+          "translit": "dhālika",
+          "en": "that (one, masculine, far)",
+          "ur": "وہ (ایک، مذکر، دور)"
+        },
+        {
+          "ar": "هٰذَا",
+          "ar_plain": "هذا",
+          "translit": "hādhā",
+          "en": "this (one, masculine, near)",
+          "ur": "یہ (ایک، مذکر، قریب)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "ذٰلِكَ",
+        "ar_plain": "ذلك",
+        "translit": "dhālika",
+        "en": "that (one, masculine, far)",
+        "ur": "وہ (ایک، مذکر، دور)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "One masculine thing, far away: ذٰلِكَ قَلَمٌ. The group pointers are for more than one.",
+        "ur": "ایک مذکر چیز، دور: ذٰلِكَ قَلَمٌ۔ گروہ کے اشارے ایک سے زیادہ کے لیے ہیں۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch15-l05-ex10",
+      "left_column": [
+        {
+          "ar": "هٰؤُلَاءِ طَالِبَاتٌ",
+          "ar_plain": "هؤلاء طالبات",
+          "translit": "hāʾulāʾi ṭālibātun",
+          "en": "These are female students.",
+          "ur": "یہ طالبات ہیں۔"
+        },
+        {
+          "ar": "تِلْكَ بُيُوتٌ",
+          "ar_plain": "تلك بيوت",
+          "translit": "tilka buyūtun",
+          "en": "Those are houses.",
+          "ur": "وہ گھر ہیں۔"
+        },
+        {
+          "ar": "أُولٰئِكَ مُعَلِّمُونَ",
+          "ar_plain": "اولئك معلمون",
+          "translit": "ulāʾika muʿallimūna",
+          "en": "Those are teachers.",
+          "ur": "وہ اساتذہ ہیں۔"
+        },
+        {
+          "ar": "هٰذِهِ كُتُبٌ",
+          "ar_plain": "هذه كتب",
+          "translit": "hādhihi kutubun",
+          "en": "These are books.",
+          "ur": "یہ کتابیں ہیں۔"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "Those are houses.",
+          "ur": "وہ گھر ہیں۔"
+        },
+        {
+          "en": "Those are teachers.",
+          "ur": "وہ اساتذہ ہیں۔"
+        },
+        {
+          "en": "These are books.",
+          "ur": "یہ کتابیں ہیں۔"
+        },
+        {
+          "en": "These are female students.",
+          "ur": "یہ طالبات ہیں۔"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "xp_value": 1
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 15: pointing at groups",
+      "ur": "باب 15: گروہوں کی طرف اشارہ"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 5,
+      "label": "Al-Baqarah 2:5",
+      "ar": "أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ",
+      "en": "Those are upon guidance from their Lord.",
+      "ur": "وہی لوگ اپنے رب کی طرف سے ہدایت پر ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002005.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "أُولَٰئِكَ"
+    ],
+    "noor_explanation": {
+      "en": "أُولَٰئِكَ: the far human pointer, here pointing back to the people described before it. With هٰؤُلَاءِ, هٰذِهِ and تِلْكَ you can now point at any group this chapter taught, and tell a pointing phrase from a complete statement.",
+      "ur": "أُولَٰئِكَ: دور کے لوگوں کا اشارہ، یہاں پہلے بیان کیے گئے لوگوں کی طرف واپس اشارہ۔ هٰؤُلَاءِ، هٰذِهِ اور تِلْكَ کے ساتھ اب آپ اس باب کے ہر گروہ کی طرف اشارہ کر سکتے ہیں، اور اشاری ترکیب کو مکمل جملے سے الگ کر سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review complete. The Chapter 15 final test is next.",
+      "ur": "جائزہ مکمل۔ اگلا باب 15 کا آخری امتحان ہے۔"
+    }
+  }
+}

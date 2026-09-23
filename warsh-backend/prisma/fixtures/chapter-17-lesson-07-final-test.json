@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 17 final test (ch17-test, new). Twelve multiple-choice questions on the proposal's blueprint: meaning of a taught past action incl. كَتَبَ = decreed in context (3), doer in a simple sentence (2), action/object/destination (2), scoped feminine ـتْ (1), Quran target with negation/context (2), one taught question–answer exchange (1), Quran versus authored (1). Optional نَامَ / جَلَسَ, roots, present tense, imperative derivation and full conjugation are not assessed. Pass mark 80 % (10 of 12). Rebuilt 2026-09-23 from Docs/proposals/chapter-17-content-proposal.md; the chapter map and fixtures named two different reader_lecture_17 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "باب 17 کا آخری امتحان",
+    "chapter_order": 17,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 72,
+      "ayah": 19,
+      "label": "Al-Jinn 72:19",
+      "ar": "وَأَنَّهُ لَمَّا قَامَ عَبْدُ اللَّهِ يَدْعُوهُ",
+      "en": "And when the servant of Allah stood up, calling upon Him,",
+      "ur": "اور جب اللہ کا بندہ اسے پکارنے کے لیے کھڑا ہوا،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/072019.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 17.",
+      "ur": "باب 17 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 17,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch17-test-q01",
+        "topic": {
+          "en": "Past action meaning",
+          "ur": "ماضی کے کام کا معنی"
+        },
+        "prompt": {
+          "en": "What does شَرِبَ mean?",
+          "ur": "شَرِبَ کا کیا مطلب ہے؟"
+        },
+        "arabic": "شَرِبَ",
+        "options": [
+          {
+            "en": "he ate",
+            "ur": "اس نے کھایا"
+          },
+          {
+            "en": "he drank",
+            "ur": "اس نے پیا"
+          },
+          {
+            "en": "he heard",
+            "ur": "اس نے سنا"
+          },
+          {
+            "en": "drink! (an instruction)",
+            "ur": "پیو! (ہدایت)"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch17-test-q02",
+        "topic": {
+          "en": "Past action meaning",
+          "ur": "ماضی کے کام کا معنی"
+        },
+        "prompt": {
+          "en": "What does سَمِعَ mean?",
+          "ur": "سَمِعَ کا کیا مطلب ہے؟"
+        },
+        "arabic": "سَمِعَ",
+        "options": [
+          {
+            "en": "he stood up",
+            "ur": "وہ کھڑا ہوا"
+          },
+          {
+            "en": "he wrote",
+            "ur": "اس نے لکھا"
+          },
+          {
+            "en": "he prayed",
+            "ur": "اس نے نماز پڑھی"
+          },
+          {
+            "en": "he heard",
+            "ur": "اس نے سنا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch17-test-q03",
+        "topic": {
+          "en": "Meaning in context",
+          "ur": "سیاق میں معنی"
+        },
+        "prompt": {
+          "en": "In كَتَبَ اللَّهُ (Al-Mujadilah 58:21), what does كَتَبَ mean?",
+          "ur": "كَتَبَ اللَّهُ (سورۃ المجادلہ 58:21) میں كَتَبَ کا کیا مطلب ہے؟"
+        },
+        "arabic": "كَتَبَ اللَّهُ",
+        "options": [
+          {
+            "en": "has decreed",
+            "ur": "مقرر کر دیا ہے"
+          },
+          {
+            "en": "wrote with a pen",
+            "ur": "قلم سے لکھا"
+          },
+          {
+            "en": "read",
+            "ur": "پڑھا"
+          },
+          {
+            "en": "write! (an instruction)",
+            "ur": "لکھو! (ہدایت)"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch17-test-q04",
+        "topic": {
+          "en": "Find the doer",
+          "ur": "کرنے والا ڈھونڈیں"
+        },
+        "prompt": {
+          "en": "In قَرَأَ الطَّالِبُ الْكِتَابَ, who did the reading?",
+          "ur": "قَرَأَ الطَّالِبُ الْكِتَابَ میں کس نے پڑھا؟"
+        },
+        "arabic": "قَرَأَ الطَّالِبُ الْكِتَابَ",
+        "options": [
+          {
+            "en": "the book — الْكِتَابَ",
+            "ur": "کتاب — الْكِتَابَ"
+          },
+          {
+            "en": "the teacher",
+            "ur": "استاد"
+          },
+          {
+            "en": "the student — الطَّالِبُ",
+            "ur": "طالب علم — الطَّالِبُ"
+          },
+          {
+            "en": "no one is named",
+            "ur": "کسی کا نام نہیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch17-test-q05",
+        "topic": {
+          "en": "Find the doer",
+          "ur": "کرنے والا ڈھونڈیں"
+        },
+        "prompt": {
+          "en": "What does سَمِعَ الطَّالِبُ الْأُسْتَاذَ mean?",
+          "ur": "سَمِعَ الطَّالِبُ الْأُسْتَاذَ کا کیا مطلب ہے؟"
+        },
+        "arabic": "سَمِعَ الطَّالِبُ الْأُسْتَاذَ",
+        "options": [
+          {
+            "en": "The teacher heard the student.",
+            "ur": "استاد نے طالب علم کو سنا۔"
+          },
+          {
+            "en": "The student heard the teacher.",
+            "ur": "طالب علم نے استاد کو سنا۔"
+          },
+          {
+            "en": "The student read to the teacher.",
+            "ur": "طالب علم نے استاد کو پڑھ کر سنایا۔"
+          },
+          {
+            "en": "Listen to the teacher, student!",
+            "ur": "طالب علم، استاد کو سنو!"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch17-test-q06",
+        "topic": {
+          "en": "Object or destination",
+          "ur": "مفعول یا منزل"
+        },
+        "prompt": {
+          "en": "In ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ, what does إِلَى الْمَسْجِدِ tell you?",
+          "ur": "ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ میں إِلَى الْمَسْجِدِ کیا بتاتا ہے؟"
+        },
+        "arabic": "ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ",
+        "options": [
+          {
+            "en": "who went",
+            "ur": "کون گیا"
+          },
+          {
+            "en": "what he ate",
+            "ur": "اس نے کیا کھایا"
+          },
+          {
+            "en": "when he went",
+            "ur": "وہ کب گیا"
+          },
+          {
+            "en": "where he went",
+            "ur": "وہ کہاں گیا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch17-test-q07",
+        "topic": {
+          "en": "Object or destination",
+          "ur": "مفعول یا منزل"
+        },
+        "prompt": {
+          "en": "Which sentence is complete without any object?",
+          "ur": "کون سا جملہ بغیر کسی مفعول کے مکمل ہے؟"
+        },
+        "options": [
+          {
+            "en": "قَامَ الطَّالِبُ — The student stood up.",
+            "ur": "قَامَ الطَّالِبُ — طالب علم کھڑا ہوا۔"
+          },
+          {
+            "en": "قَرَأَ الطَّالِبُ … — The student read …",
+            "ur": "قَرَأَ الطَّالِبُ … — طالب علم نے پڑھا …"
+          },
+          {
+            "en": "أَكَلَ الْوَلَدُ … — The boy ate …",
+            "ur": "أَكَلَ الْوَلَدُ … — لڑکے نے کھایا …"
+          },
+          {
+            "en": "سَمِعَتِ الْبِنْتُ … — The girl heard …",
+            "ur": "سَمِعَتِ الْبِنْتُ … — لڑکی نے سنا …"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch17-test-q08",
+        "topic": {
+          "en": "The ـتْ clue",
+          "ur": "ـتْ کا اشارہ"
+        },
+        "prompt": {
+          "en": "Which word completes ___ الْبِنْتُ to mean 'The girl prayed'?",
+          "ur": "کون سا لفظ ___ الْبِنْتُ کو 'لڑکی نے نماز پڑھی' بناتا ہے؟"
+        },
+        "arabic": "___ الْبِنْتُ",
+        "options": [
+          {
+            "en": "he prayed",
+            "ur": "اس نے نماز پڑھی",
+            "arabic": "صَلَّى"
+          },
+          {
+            "en": "she went",
+            "ur": "وہ (عورت) گئی",
+            "arabic": "ذَهَبَتِ"
+          },
+          {
+            "en": "she prayed",
+            "ur": "اس (عورت) نے نماز پڑھی",
+            "arabic": "صَلَّتِ"
+          },
+          {
+            "en": "she drank",
+            "ur": "اس (عورت) نے پیا",
+            "arabic": "شَرِبَتِ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch17-test-q09",
+        "topic": {
+          "en": "Quran: negation",
+          "ur": "قرآن: نفی"
+        },
+        "prompt": {
+          "en": "Al-Qiyamah 75:31 — what does the ayah say about prayer?",
+          "ur": "سورۃ القیامہ 75:31 — آیت نماز کے بارے میں کیا کہتی ہے؟"
+        },
+        "arabic": "فَلَا صَدَّقَ وَلَا صَلَّىٰ",
+        "options": [
+          {
+            "en": "He prayed.",
+            "ur": "اس نے نماز پڑھی۔"
+          },
+          {
+            "en": "He did not pray.",
+            "ur": "اس نے نماز نہیں پڑھی۔"
+          },
+          {
+            "en": "Pray!",
+            "ur": "نماز پڑھو!"
+          },
+          {
+            "en": "He went to pray.",
+            "ur": "وہ نماز پڑھنے گیا۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch17-test-q10",
+        "topic": {
+          "en": "Quran: the action and its doer",
+          "ur": "قرآن: کام اور کرنے والا"
+        },
+        "prompt": {
+          "en": "Yusuf 12:17 — which is true?",
+          "ur": "سورۃ یوسف 12:17 — کون سی بات درست ہے؟"
+        },
+        "arabic": "فَأَكَلَهُ الذِّئْبُ",
+        "options": [
+          {
+            "en": "The action word is الذِّئْبُ.",
+            "ur": "کام کا لفظ الذِّئْبُ ہے۔"
+          },
+          {
+            "en": "The action is شَرِبَ, drank.",
+            "ur": "کام شَرِبَ، پیا، ہے۔"
+          },
+          {
+            "en": "The ayah reports as fact that a wolf ate Yusuf.",
+            "ur": "آیت بطور حقیقت بتاتی ہے کہ بھیڑیے نے یوسف کو کھا لیا۔"
+          },
+          {
+            "en": "أَكَلَ is inside فَأَكَلَهُ and its doer is الذِّئْبُ; the brothers are speaking.",
+            "ur": "أَكَلَ، فَأَكَلَهُ کے اندر ہے اور اس کا کرنے والا الذِّئْبُ ہے؛ بھائی بات کر رہے ہیں۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch17-test-q11",
+        "topic": {
+          "en": "A short exchange",
+          "ur": "مختصر گفتگو"
+        },
+        "prompt": {
+          "en": "Which reply answers مَاذَا فَعَلَ الطَّالِبُ؟",
+          "ur": "کون سا جواب مَاذَا فَعَلَ الطَّالِبُ؟ کا ہے؟"
+        },
+        "arabic": "مَاذَا فَعَلَ الطَّالِبُ؟",
+        "options": [
+          {
+            "en": "He wrote the lesson.",
+            "ur": "اس نے سبق لکھا۔",
+            "arabic": "كَتَبَ الدَّرْسَ"
+          },
+          {
+            "en": "The student is in the classroom.",
+            "ur": "طالب علم کلاس میں ہے۔",
+            "arabic": "الطَّالِبُ فِي الْفَصْلِ"
+          },
+          {
+            "en": "Write the lesson!",
+            "ur": "سبق لکھو!",
+            "arabic": "اُكْتُبِ الدَّرْسَ"
+          },
+          {
+            "en": "tomorrow",
+            "ur": "آنے والا کل",
+            "arabic": "غَدًا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch17-test-q12",
+        "topic": {
+          "en": "Quran or practice sentence",
+          "ur": "قرآن یا مشق کا جملہ"
+        },
+        "prompt": {
+          "en": "Which of these is a Quran quotation?",
+          "ur": "ان میں سے قرآنی اقتباس کون سا ہے؟"
+        },
+        "options": [
+          {
+            "en": "قَامَ الطَّالِبُ",
+            "ur": "قَامَ الطَّالِبُ"
+          },
+          {
+            "en": "شَرِبَ الْوَلَدُ الْمَاءَ",
+            "ur": "شَرِبَ الْوَلَدُ الْمَاءَ"
+          },
+          {
+            "en": "قَامَ عَبْدُ اللَّهِ",
+            "ur": "قَامَ عَبْدُ اللَّهِ"
+          },
+          {
+            "en": "كَتَبَ الطَّالِبُ الدَّرْسَ",
+            "ur": "كَتَبَ الطَّالِبُ الدَّرْسَ"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 17 — past actions",
+      "ur": "باب 17 — ماضی کے کام"
+    },
+    "ayah": {
+      "surah": 72,
+      "ayah": 19,
+      "label": "Al-Jinn 72:19",
+      "ar": "وَأَنَّهُ لَمَّا قَامَ عَبْدُ اللَّهِ يَدْعُوهُ",
+      "en": "And when the servant of Allah stood up, calling upon Him,",
+      "ur": "اور جب اللہ کا بندہ اسے پکارنے کے لیے کھڑا ہوا،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/072019.mp3"
+    },
+    "highlighted_word_indices": [
+      2
+    ],
+    "highlighted_words": [
+      "قَامَ"
+    ],
+    "noor_explanation": {
+      "en": "قَامَ: stood up, with its doer after it. You can now read seven past actions, find who did them and what they happened to, and let the Quran's context decide the meaning.",
+      "ur": "قَامَ: کھڑا ہوا، اس کے بعد اس کے کرنے والے کے ساتھ۔ اب آپ ماضی کے سات کام پڑھ سکتے ہیں، معلوم کر سکتے ہیں کہ کس نے کیے اور کس پر ہوئے، اور قرآن کے سیاق کو معنی طے کرنے دیتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 17 complete. Chapter 18 returns to الَّذِي and الَّتِي and reads longer descriptions, starting from An-Nas.",
+      "ur": "باب 17 مکمل۔ باب 18 الَّذِي اور الَّتِي کی طرف لوٹتا ہے اور لمبی وضاحتیں پڑھتا ہے، سورۃ الناس سے شروع کرتے ہوئے۔"
+    }
+  }
+}

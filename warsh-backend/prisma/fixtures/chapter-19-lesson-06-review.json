@@ -1,0 +1,632 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 19 review (ch19-l06, repurposed to REVIEW; formerly chapter-19-lesson-06.json). Interleaves kasra versus my, attachment site (noun or action), ة → ت, and owner in a sentence; Al-Falaq 113:1 asks why بِرَبِّ الْفَلَقِ is not \"my Lord\". Deviation from the proposal, kept to hold the Tadabbur coverage invariant (every Al-Falaq word taught by the end of Chapter 19, enforced by db:validate-fixtures): a clearly labelled Al-Falaq word bridge glosses ما, غاسق, اذا, وقب, النفاثات, عقد, حاسد, حسد (cards) with four recognition items (ex07–ex10); none of these words is in the Chapter 19 final test, and no Tadabbur unlock is claimed. Reveal 113:1 at بِرَبِّ (index 2). Rebuilt 2026-09-23 from Docs/proposals/chapter-19-content-proposal.md; the chapter map and fixtures named two different reader_lecture_19 files, neither of which existed in the repository, so the approved proposal is recorded as the source.",
+    "titleUr": "باب 19 کا جائزہ: سورۃ الفلق کا پل",
+    "chapter_order": 19,
+    "lesson_order": 6,
+    "estimated_minutes": 12,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 113,
+      "ayah": 1,
+      "label": "Al-Falaq 113:1",
+      "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+      "en": "Say, \"I seek refuge in the Lord of daybreak,",
+      "ur": "کہو: میں صبح کے رب کی پناہ مانگتا ہوں،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
+    },
+    "noor_intro": {
+      "en": "Chapter 19 review. First the endings: kasra or my, his or him, the ة that opens, and whose it is. Then a short word bridge through the rest of Al-Falaq, glossed so you can read the surah.",
+      "ur": "باب 19 کا جائزہ۔ پہلے آخر: زیر یا میرا، اس کا یا اسے، کھلنے والی ة، اور کس کی چیز ہے۔ پھر باقی سورۃ الفلق کے الفاظ کا ایک مختصر پل، معنی کے ساتھ تاکہ آپ سورت پڑھ سکیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Three questions for an ending",
+        "ar": "رَبِّ / رَبِّي / أَيَّدْنَاهُ",
+        "ur": "آخر کے لیے تین سوال"
+      },
+      "explanation": {
+        "en": "Is a ي written, or only a kasra? Is the ending on a noun or on an action? Who is the owner, named in the sentence?",
+        "ur": "کیا ي لکھی ہے، یا صرف زیر؟ آخر اسم پر ہے یا کام پر؟ مالک کون ہے، جس کا نام جملے میں ہے؟"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "His or him",
+        "ar": "كِتَابُهُ / سَمِعَهُ",
+        "ur": "اس کا یا اسے"
+      },
+      "explanation": {
+        "en": "On a noun, his; on an action, him.",
+        "ur": "اسم پر، اس کا؛ کام پر، اسے۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitābuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب (مرد)"
+        },
+        {
+          "ar": "سَمِعَهُ",
+          "ar_plain": "سمعه",
+          "translit": "samiʿahu",
+          "en": "he heard him",
+          "ur": "اس نے اسے سنا"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "The ة opens",
+        "ar": "قَرْيَةٌ / قَرْيَتُهُ",
+        "ur": "ة کھلتی ہے"
+      },
+      "explanation": {
+        "en": "Before an ending, ة is written ت.",
+        "ur": "آخر سے پہلے ة، ت لکھی جاتی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "قَرْيَةٌ",
+          "ar_plain": "قرية",
+          "translit": "qaryatun",
+          "en": "a village",
+          "ur": "ایک گاؤں"
+        },
+        {
+          "ar": "قَرْيَتُهُ",
+          "ar_plain": "قريته",
+          "translit": "qaryatuhu",
+          "en": "his village",
+          "ur": "اس کا گاؤں (مرد)"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Falaq 113:1: Say, \"I seek refuge in the Lord of daybreak,",
+        "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+        "ur": "Al-Falaq 113:1: کہو: میں صبح کے رب کی پناہ مانگتا ہوں،"
+      },
+      "explanation": {
+        "en": "بِرَبِّ الْفَلَقِ: in the Lord of daybreak. A kasra with a noun after it, not my Lord.",
+        "ur": "بِرَبِّ الْفَلَقِ: صبح کے رب کی۔ زیر اور بعد میں اسم، میرا رب نہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Al-Falaq word bridge",
+        "ar": "سُورَةُ الْفَلَقِ",
+        "ur": "سورۃ الفلق کے الفاظ کا پل"
+      },
+      "explanation": {
+        "en": "The rest of Al-Falaq, word by word, so you can read it in Tadabbur. These words are for recognition; they are not in the Chapter 19 final test.",
+        "ur": "باقی سورۃ الفلق، لفظ بہ لفظ، تاکہ آپ اسے تدبر میں پڑھ سکیں۔ یہ الفاظ پہچان کے لیے ہیں؛ یہ باب 19 کے آخری امتحان میں نہیں۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Falaq 113:2: from the evil of what He created,",
+        "ar": "مِن شَرِّ مَا خَلَقَ",
+        "ur": "Al-Falaq 113:2: اس کی برائی سے جو اس نے پیدا کیا،"
+      },
+      "explanation": {
+        "en": "مِن شَرِّ مَا خَلَقَ: from the evil of what He created. مَا here means what; خَلَقَ, created.",
+        "ur": "مِن شَرِّ مَا خَلَقَ: اس کی برائی سے جو اس نے پیدا کیا۔ یہاں مَا کا مطلب 'جو'؛ خَلَقَ، پیدا کیا۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113002.mp3",
+      "introduces_vocab": {
+        "ar_plain": "ما"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Falaq 113:3: and from the evil of darkness when it settles,",
+        "ar": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+        "ur": "Al-Falaq 113:3: اور اندھیرے کی برائی سے جب وہ چھا جائے،"
+      },
+      "explanation": {
+        "en": "غَاسِقٍ: darkness, the dark of night; إِذَا: when; وَقَبَ: it settles, it spreads. From the evil of darkness when it settles.",
+        "ur": "غَاسِقٍ: اندھیرا، رات کی تاریکی؛ إِذَا: جب؛ وَقَبَ: وہ چھا جائے۔ اندھیرے کی برائی سے جب وہ چھا جائے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113003.mp3",
+      "introduces_vocab": {
+        "ar_plain": "غاسق"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "إِذَا",
+        "ar_plain": "اذا",
+        "translit": "idhā",
+        "en": "when",
+        "ur": "جب"
+      },
+      "explanation": {
+        "en": "إِذَا: when. It appears twice in Al-Falaq, in 113:3 and 113:5.",
+        "ur": "إِذَا: جب۔ یہ سورۃ الفلق میں دو بار آتا ہے، 113:3 اور 113:5 میں۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "اذا"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "وَقَبَ",
+        "ar_plain": "وقب",
+        "translit": "waqaba",
+        "en": "it settled, it spread (of darkness)",
+        "ur": "چھا گیا (اندھیرا)"
+      },
+      "explanation": {
+        "en": "وَقَبَ: it settles over, as night darkness does. After إِذَا it reads when it settles.",
+        "ur": "وَقَبَ: چھا جاتا ہے، جیسے رات کا اندھیرا۔ إِذَا کے بعد اس کا مطلب ہے جب وہ چھا جائے۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "وقب"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Falaq 113:4: and from the evil of those who blow on knots,",
+        "ar": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
+        "ur": "Al-Falaq 113:4: اور گرہوں میں پھونکنے والیوں کی برائی سے،"
+      },
+      "explanation": {
+        "en": "النَّفَّاثَاتِ: those who blow; فِي الْعُقَدِ: on knots. From the evil of those who blow on knots, a description of sorcery.",
+        "ur": "النَّفَّاثَاتِ: پھونکنے والیاں؛ فِي الْعُقَدِ: گرہوں میں۔ گرہوں میں پھونکنے والیوں کی برائی سے، جادو کا بیان۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113004.mp3",
+      "introduces_vocab": {
+        "ar_plain": "النفاثات"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "الْعُقَدُ",
+        "ar_plain": "العقد",
+        "translit": "al-ʿuqadu",
+        "en": "knots",
+        "ur": "گرہیں"
+      },
+      "explanation": {
+        "en": "الْعُقَدُ: knots, the plural of عُقْدَةٌ, a knot.",
+        "ur": "الْعُقَدُ: گرہیں، عُقْدَةٌ، گرہ، کی جمع۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "عقد"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Falaq 113:5: and from the evil of an envier when he envies.\"",
+        "ar": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+        "ur": "Al-Falaq 113:5: اور حسد کرنے والے کی برائی سے جب وہ حسد کرے۔"
+      },
+      "explanation": {
+        "en": "حَاسِدٍ: an envier; إِذَا حَسَدَ: when he envies. حَسَدَ looks like a past action, but after إِذَا it reads when he envies, the way شَرِبَ after مَن read whoever drinks in Chapter 17.",
+        "ur": "حَاسِدٍ: حسد کرنے والا؛ إِذَا حَسَدَ: جب وہ حسد کرے۔ حَسَدَ ماضی کا کام لگتا ہے، لیکن إِذَا کے بعد اس کا مطلب ہے جب وہ حسد کرے، جیسے باب 17 میں مَن کے بعد شَرِبَ کا مطلب تھا جو کوئی پیے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113005.mp3",
+      "introduces_vocab": {
+        "ar_plain": "حاسد"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "حَسَدَ",
+        "ar_plain": "حسد",
+        "translit": "ḥasada",
+        "en": "he envied",
+        "ur": "اس نے حسد کیا"
+      },
+      "explanation": {
+        "en": "حَسَدَ: he envied, the action of the envier, حَاسِدٌ. Same letters, one is the person, one is the action.",
+        "ur": "حَسَدَ: اس نے حسد کیا، حسد کرنے والے، حَاسِدٌ، کا کام۔ حروف وہی، ایک شخص ہے، ایک کام۔"
+      },
+      "introduces_vocab": {
+        "ar_plain": "حسد"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch19-l06-ex01",
+      "ayah_fragment": {
+        "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+        "surah_ref": "Al-Falaq 113:1"
+      },
+      "options": [
+        {
+          "en": "بِرَبِّ — in my Lord",
+          "ur": "بِرَبِّ — میرے رب کی"
+        },
+        {
+          "en": "بِرَبِّ الْفَلَقِ — in the Lord of daybreak: a kasra, no ي, a noun after it",
+          "ur": "بِرَبِّ الْفَلَقِ — صبح کے رب کی: زیر، ي نہیں، بعد میں اسم"
+        },
+        {
+          "en": "الْفَلَقِ — my daybreak",
+          "ur": "الْفَلَقِ — میری صبح"
+        },
+        {
+          "en": "أَعُوذُ — my Lord",
+          "ur": "أَعُوذُ — میرا رب"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No ي is written, and الْفَلَقِ follows: the Lord of daybreak.",
+        "ur": "ي لکھی نہیں، اور الْفَلَقِ بعد میں آتا ہے: صبح کا رب۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch19-l06-ex02",
+      "prompt": {
+        "ar": "رَبِّي",
+        "ar_plain": "ربي",
+        "translit": "rabbī",
+        "en": "my Lord",
+        "ur": "میرا رب"
+      },
+      "options": [
+        {
+          "en": "Lord of…",
+          "ur": "… کا رب"
+        },
+        {
+          "en": "his Lord",
+          "ur": "اس کا رب"
+        },
+        {
+          "en": "our Lord",
+          "ur": "ہمارا رب"
+        },
+        {
+          "en": "my Lord",
+          "ur": "میرا رب"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The written ي: my Lord.",
+        "ur": "لکھی ہوئی ي: میرا رب۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch19-l06-ex03",
+      "statement": {
+        "en": "In وَأَيَّدْنَاهُ (Al-Baqarah 2:87), ـهُ is him, the one who was supported.",
+        "ur": "وَأَيَّدْنَاهُ (سورۃ البقرہ 2:87) میں ـهُ کا مطلب 'اسے' ہے، جس کی مدد ہوئی۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ـهُ on an action names the one the action reached: him.",
+        "ur": "کام پر ـهُ اس کا نام ہے جس تک کام پہنچا: اسے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch19-l06-ex04",
+      "mode": "TAP",
+      "sentence_ar": "هٰذِهِ ___",
+      "hint": {
+        "en": "This is his village.",
+        "ur": "یہ اس کا گاؤں ہے۔"
+      },
+      "options": [
+        {
+          "ar": "قَرْيَتُهَا",
+          "ar_plain": "قريتها",
+          "translit": "qaryatuhā",
+          "en": "her village",
+          "ur": "اس کا گاؤں (عورت)"
+        },
+        {
+          "ar": "قَرْيَتِي",
+          "ar_plain": "قريتي",
+          "translit": "qaryatī",
+          "en": "my village",
+          "ur": "میرا گاؤں"
+        },
+        {
+          "ar": "قَرْيَتُهُ",
+          "ar_plain": "قريته",
+          "translit": "qaryatuhu",
+          "en": "his village",
+          "ur": "اس کا گاؤں (مرد)"
+        },
+        {
+          "ar": "قَرْيَةٌ",
+          "ar_plain": "قرية",
+          "translit": "qaryatun",
+          "en": "a village",
+          "ur": "ایک گاؤں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "قَرْيَتُهُ",
+        "ar_plain": "قريته",
+        "translit": "qaryatuhu",
+        "en": "his village",
+        "ur": "اس کا گاؤں (مرد)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "His is ـهُ, and ة opens into ت before it: قَرْيَتُهُ.",
+        "ur": "'اس کا' (مرد) ـهُ ہے، اور اس سے پہلے ة کھل کر ت بنتی ہے: قَرْيَتُهُ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch19-l06-ex05",
+      "prompt_line": {
+        "ar": "أَيْنَ كِتَابُكَ يَا أَحْمَدُ؟",
+        "ar_plain": "اين كتابك يا احمد",
+        "translit": "ayna kitābuka yā aḥmadu?",
+        "en": "Where is your book, Ahmad?",
+        "ur": "احمد، تمہاری کتاب کہاں ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "كِتَابِي عَلَى الْمَكْتَبِ",
+          "ar_plain": "كتابي على المكتب",
+          "translit": "kitābī ʿalā l-maktabi",
+          "en": "My book is on the desk.",
+          "ur": "میری کتاب میز پر ہے۔"
+        },
+        {
+          "ar": "كِتَابُكَ عَلَى الْمَكْتَبِ",
+          "ar_plain": "كتابك على المكتب",
+          "translit": "kitābuka ʿalā l-maktabi",
+          "en": "Your book is on the desk.",
+          "ur": "تمہاری کتاب میز پر ہے۔"
+        },
+        {
+          "ar": "كِتَابُهَا عَلَى الْمَكْتَبِ",
+          "ar_plain": "كتابها على المكتب",
+          "translit": "kitābuhā ʿalā l-maktabi",
+          "en": "Her book is on the desk.",
+          "ur": "اس کی کتاب میز پر ہے۔"
+        },
+        {
+          "ar": "لِي كِتَابٌ",
+          "ar_plain": "لي كتاب",
+          "translit": "lī kitābun",
+          "en": "I have a book.",
+          "ur": "میرے پاس ایک کتاب ہے۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Ahmad answers about his own book: my book, كِتَابِي.",
+        "ur": "احمد اپنی کتاب کے بارے میں جواب دیتا ہے: میری کتاب، كِتَابِي۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch19-l06-ex06",
+      "prompt": {
+        "ar": "فَاطِمَةُ طَالِبَةٌ، كِتَابُهَا جَدِيدٌ",
+        "ar_plain": "فاطمة طالبة كتابها جديد",
+        "translit": "fāṭimatu ṭālibatun, kitābuhā jadīdun",
+        "en": "Fatimah is a student; her book is new.",
+        "ur": "فاطمہ طالبہ ہے؛ اس کی کتاب نئی ہے۔"
+      },
+      "options": [
+        {
+          "en": "Fatimah is a student; my book is new.",
+          "ur": "فاطمہ طالبہ ہے؛ میری کتاب نئی ہے۔"
+        },
+        {
+          "en": "Fatimah is a student; her book is new.",
+          "ur": "فاطمہ طالبہ ہے؛ اس کی کتاب نئی ہے۔"
+        },
+        {
+          "en": "Fatimah's student has a new book.",
+          "ur": "فاطمہ کے طالب علم کے پاس نئی کتاب ہے۔"
+        },
+        {
+          "en": "Fatimah read a new book.",
+          "ur": "فاطمہ نے نئی کتاب پڑھی۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ـهَا, her, points back to Fatimah.",
+        "ur": "ـهَا، اس کی، فاطمہ کی طرف اشارہ ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch19-l06-ex07",
+      "ayah_fragment": {
+        "ar": "مِن شَرِّ مَا خَلَقَ",
+        "surah_ref": "Al-Falaq 113:2"
+      },
+      "options": [
+        {
+          "en": "مَا — what: from the evil of what He created",
+          "ur": "مَا — جو: اس کی برائی سے جو اس نے پیدا کیا"
+        },
+        {
+          "en": "مَا — not: He did not create evil",
+          "ur": "مَا — نہیں: اس نے برائی پیدا نہیں کی"
+        },
+        {
+          "en": "خَلَقَ — what",
+          "ur": "خَلَقَ — جو"
+        },
+        {
+          "en": "شَرِّ — He created",
+          "ur": "شَرِّ — اس نے پیدا کیا"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَا here is what: from the evil of what He created.",
+        "ur": "یہاں مَا کا مطلب 'جو' ہے: اس کی برائی سے جو اس نے پیدا کیا۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch19-l06-ex08",
+      "ayah_fragment": {
+        "ar": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+        "surah_ref": "Al-Falaq 113:3"
+      },
+      "options": [
+        {
+          "en": "غَاسِقٍ — daybreak; إِذَا — if; وَقَبَ — it rises",
+          "ur": "غَاسِقٍ — صبح؛ إِذَا — اگر؛ وَقَبَ — نکلے"
+        },
+        {
+          "en": "وَقَبَ — darkness",
+          "ur": "وَقَبَ — اندھیرا"
+        },
+        {
+          "en": "غَاسِقٍ — darkness; إِذَا — when; وَقَبَ — it settles",
+          "ur": "غَاسِقٍ — اندھیرا؛ إِذَا — جب؛ وَقَبَ — چھا جائے"
+        },
+        {
+          "en": "إِذَا — evil",
+          "ur": "إِذَا — برائی"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "From the evil of darkness when it settles.",
+        "ur": "اندھیرے کی برائی سے جب وہ چھا جائے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch19-l06-ex09",
+      "ayah_fragment": {
+        "ar": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
+        "surah_ref": "Al-Falaq 113:4"
+      },
+      "options": [
+        {
+          "en": "النَّفَّاثَاتِ — the knots; الْعُقَدِ — those who blow",
+          "ur": "النَّفَّاثَاتِ — گرہیں؛ الْعُقَدِ — پھونکنے والیاں"
+        },
+        {
+          "en": "فِي — those who blow",
+          "ur": "فِي — پھونکنے والیاں"
+        },
+        {
+          "en": "الْعُقَدِ — darkness",
+          "ur": "الْعُقَدِ — اندھیرا"
+        },
+        {
+          "en": "النَّفَّاثَاتِ — those who blow; الْعُقَدِ — knots",
+          "ur": "النَّفَّاثَاتِ — پھونکنے والیاں؛ الْعُقَدِ — گرہیں"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "From the evil of those who blow on knots.",
+        "ur": "گرہوں میں پھونکنے والیوں کی برائی سے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch19-l06-ex10",
+      "ayah_fragment": {
+        "ar": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+        "surah_ref": "Al-Falaq 113:5"
+      },
+      "options": [
+        {
+          "en": "حَاسِدٍ — envy; حَسَدَ — an envier",
+          "ur": "حَاسِدٍ — حسد؛ حَسَدَ — حسد کرنے والا"
+        },
+        {
+          "en": "حَاسِدٍ — an envier; إِذَا حَسَدَ — when he envies",
+          "ur": "حَاسِدٍ — حسد کرنے والا؛ إِذَا حَسَدَ — جب وہ حسد کرے"
+        },
+        {
+          "en": "حَسَدَ — he envied, long ago, as a finished story",
+          "ur": "حَسَدَ — اس نے حسد کیا، بہت پہلے، ختم شدہ قصے کی طرح"
+        },
+        {
+          "en": "إِذَا — an envier",
+          "ur": "إِذَا — حسد کرنے والا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "From the evil of an envier when he envies; after إِذَا, حَسَدَ reads when he envies.",
+        "ur": "حسد کرنے والے کی برائی سے جب وہ حسد کرے؛ إِذَا کے بعد حَسَدَ کا مطلب ہے جب وہ حسد کرے۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 19: attached pronouns in context",
+      "ur": "باب 19: سیاق میں جڑی ہوئی ضمیریں"
+    },
+    "ayah": {
+      "surah": 113,
+      "ayah": 1,
+      "label": "Al-Falaq 113:1",
+      "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+      "en": "Say, \"I seek refuge in the Lord of daybreak,",
+      "ur": "کہو: میں صبح کے رب کی پناہ مانگتا ہوں،",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
+    },
+    "highlighted_word_indices": [
+      2
+    ],
+    "highlighted_words": [
+      "بِرَبِّ"
+    ],
+    "noor_explanation": {
+      "en": "بِرَبِّ الْفَلَقِ: the Lord of daybreak, a kasra that is not my. You can now check for the written ي, see what an ending is attached to, read the ت of a ة noun, and find the owner in the sentence.",
+      "ur": "بِرَبِّ الْفَلَقِ: صبح کا رب، ایک زیر جو 'میرا' نہیں۔ اب آپ لکھی ہوئی ي دیکھ سکتے ہیں، دیکھ سکتے ہیں کہ آخر کس سے جڑا ہے، ة والے اسم کی ت پڑھ سکتے ہیں، اور جملے میں مالک ڈھونڈ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review complete. The Chapter 19 final test is next.",
+      "ur": "جائزہ مکمل۔ اگلا باب 19 کا آخری امتحان ہے۔"
+    }
+  }
+}
