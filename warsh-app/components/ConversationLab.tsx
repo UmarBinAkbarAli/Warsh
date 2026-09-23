@@ -9,6 +9,7 @@ import { ArabicText } from "./ArabicText";
 import { BrandButton } from "./BrandButton";
 import { PlayButton } from "./PlayButton";
 import { ShadowRepeatExercise } from "./ShadowRepeatExercise";
+import { AnswerItConversation, hasAnswerIt } from "./AnswerItConversation";
 import { Fonts, FontSizes, LineHeights, Radii, Spacing, WarshAlpha, WarshPalette } from "../constants/theme";
 
 /**
@@ -431,6 +432,19 @@ export function LabSpeakAndMission({
   onClose: () => void;
 }) {
   const [stage, setStage] = useState<"speak" | "mission">("speak");
+  // A lab with an Answer it conversation speaks its answers instead of
+  // repeating lines (Pen section 26); otherwise the Say-it lines as before.
+  if (stage === "speak" && hasAnswerIt(content)) {
+    return (
+      <AnswerItConversation
+        content={content}
+        header={<StepHeader step={5} onClose={onClose} />}
+        contentStyle={contentStyle}
+        onTurnSpoken={onLineSpoken}
+        onDone={() => setStage("mission")}
+      />
+    );
+  }
   if (stage === "speak") {
     return <SpeakLines content={content} language={language} contentStyle={contentStyle} onLineSpoken={onLineSpoken} onDone={() => setStage("mission")} onClose={onClose} />;
   }

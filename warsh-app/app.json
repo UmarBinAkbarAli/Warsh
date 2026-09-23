@@ -49,7 +49,14 @@
         }
       ],
       "@sentry/react-native/expo",
-      "expo-secure-store"
+      "expo-secure-store",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Warsh uses the microphone so you can practise speaking Arabic.",
+          "speechRecognitionPermission": "Warsh uses speech recognition to check the words in your spoken answers."
+        }
+      ]
     ],
     "extra": {
       "eas": {

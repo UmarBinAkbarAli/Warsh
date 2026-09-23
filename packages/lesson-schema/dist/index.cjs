@@ -376,6 +376,26 @@ var LabMissionTurnSchema = import_zod4.z.object({
     ctx.addIssue({ code: import_zod4.z.ZodIssueCode.custom, message: "BUILD turns need tiles and a correct_order that points into them" });
   }
 });
+var AnswerSlotSchema = import_zod4.z.discriminatedUnion("kind", [
+  import_zod4.z.object({
+    kind: import_zod4.z.literal("WORD"),
+    ar: import_zod4.z.string().min(1),
+    // Other spellings the recogniser may return for this word.
+    accept: import_zod4.z.array(import_zod4.z.string().min(1)).max(6).optional()
+  }),
+  import_zod4.z.object({ kind: import_zod4.z.literal("OPEN"), label: LocalizedSchema })
+]);
+var AnswerItTurnSchema = import_zod4.z.object({
+  prompt_phrase_id: import_zod4.z.string().min(1),
+  // Stands in for the picture until the owner supplies one ("It is your father.").
+  cue: LocalizedSchema.optional(),
+  slots: import_zod4.z.array(AnswerSlotSchema).min(1).max(6),
+  // What "Show answer" reveals. A taught phrase supplies text and audio; a
+  // turn with an OPEN slot writes its own model ("اسْمِي …").
+  model_phrase_id: import_zod4.z.string().min(1).optional(),
+  model: import_zod4.z.object({ ar: import_zod4.z.string().min(1), en: import_zod4.z.string().min(1), ur: import_zod4.z.string().optional() }).optional(),
+  tip: LocalizedSchema.optional()
+}).refine((turn) => turn.model_phrase_id || turn.model, { message: "an Answer it turn needs model_phrase_id or model" });
 var ConversationLabSchema = import_zod4.z.object({
   title: LocalizedSchema,
   mission: LocalizedSchema,
@@ -389,6 +409,7 @@ var ConversationLabSchema = import_zod4.z.object({
   }).optional(),
   shadow_phrase_ids: import_zod4.z.array(import_zod4.z.string().min(1)).min(1).max(5),
   mission_turns: import_zod4.z.array(LabMissionTurnSchema).min(1).max(6),
+  answer_it: import_zod4.z.object({ turns: import_zod4.z.array(AnswerItTurnSchema).min(1).max(5) }).optional(),
   can_do: import_zod4.z.array(import_zod4.z.object({ kind: import_zod4.z.enum(["SAY", "UNDERSTAND"]), label: LocalizedSchema, ar: import_zod4.z.string().min(1) })).min(1).max(4)
 });
 function lessonAnswerText(value) {
@@ -497,6 +518,17 @@ var LessonContentSchema = import_zod4.z.object({
       const answer = turn.response_mode === "PICK" ? turn.options?.[turn.correct_option_index ?? -1]?.ar : turn.correct_order?.map((tileIndex) => turn.tiles?.[tileIndex]?.ar ?? "").join(" ");
       if (answer && heardOnly.has(answer.normalize("NFC").trim())) {
         issue(["mission_turns", index], "a mission answer cannot be a heard_only phrase");
+      }
+    });
+    lab.answer_it?.turns.forEach((turn, index) => {
+      if (!phraseById.has(turn.prompt_phrase_id)) issue(["answer_it", "turns", index, "prompt_phrase_id"], "prompt_phrase_id must name a phrase");
+      if (turn.model_phrase_id) {
+        const model = phraseById.get(turn.model_phrase_id);
+        if (!model) issue(["answer_it", "turns", index, "model_phrase_id"], "model_phrase_id must name a phrase");
+        else if (model.heard_only) issue(["answer_it", "turns", index, "model_phrase_id"], "the learner cannot be asked to say a heard_only phrase");
+      }
+      if (!turn.slots.some((slot) => slot.kind === "WORD")) {
+        issue(["answer_it", "turns", index, "slots"], "an Answer it turn needs at least one WORD slot to check");
       }
     });
   }).optional(),

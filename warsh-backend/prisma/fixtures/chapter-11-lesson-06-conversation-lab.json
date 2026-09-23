@@ -383,6 +383,80 @@
           ]
         }
       ],
+      "answer_it": {
+        "turns": [
+          {
+            "prompt_phrase_id": "ch11-cl-p01",
+            "cue": {
+              "en": "It is your father.",
+              "ur": "یہ آپ کے والد ہیں۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "هَذَا"
+              },
+              {
+                "kind": "WORD",
+                "ar": "أَبِي"
+              }
+            ],
+            "model_phrase_id": "ch11-cl-p02",
+            "tip": {
+              "en": "Start with هَذَا (this is), then say who: أَبِي (my father).",
+              "ur": "پہلے هَذَا (یہ ہے) کہیں، پھر بتائیں کون: أَبِي (میرے والد)۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "ch11-cl-p03",
+            "cue": {
+              "en": "It is your mother.",
+              "ur": "یہ آپ کی والدہ ہیں۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "هَذِهِ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "أُمِّي"
+              }
+            ],
+            "model_phrase_id": "ch11-cl-p04",
+            "tip": {
+              "en": "For a woman, start with هَذِهِ, then أُمِّي (my mother).",
+              "ur": "عورت کے لیے هَذِهِ سے شروع کریں، پھر أُمِّي (میری والدہ)۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "ch11-cl-p09",
+            "cue": {
+              "en": "Your sister is at home.",
+              "ur": "آپ کی بہن گھر پر ہے۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "أُخْتِي"
+              },
+              {
+                "kind": "WORD",
+                "ar": "فِي"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الْبَيْتِ"
+              }
+            ],
+            "model_phrase_id": "ch11-cl-p10",
+            "tip": {
+              "en": "You hear “your sister”; answer with “my sister”: أُخْتِي فِي الْبَيْتِ.",
+              "ur": "آپ “تمہاری بہن” سنتے ہیں؛ جواب “میری بہن” سے دیں: أُخْتِي فِي الْبَيْتِ۔"
+            }
+          }
+        ]
+      },
       "can_do": [
         {
           "kind": "SAY",

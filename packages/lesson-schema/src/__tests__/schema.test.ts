@@ -280,4 +280,40 @@ describe("Conversation Lab", () => {
     (lesson.exercises[0] as { correct_option_index: number }).correct_option_index = 1;
     expect(LessonContentSchema.safeParse(lesson).success).toBe(true);
   });
+
+  describe("Answer it", () => {
+    function withAnswerIt(turn: Record<string, unknown>) {
+      const lesson = labLesson();
+      (lesson.spoken_phrases.lab as Record<string, unknown>).answer_it = { turns: [turn] };
+      return lesson;
+    }
+    const sisterSlots = [{ kind: "WORD", ar: "أُخْتِي" }, { kind: "WORD", ar: "فِي" }, { kind: "WORD", ar: "الْبَيْتِ" }];
+
+    it("accepts a heard_only question answered with a taught phrase", () => {
+      expect(LessonContentSchema.safeParse(withAnswerIt({ prompt_phrase_id: "p3", slots: sisterSlots, model_phrase_id: "p4" })).success).toBe(true);
+    });
+
+    it("accepts an open name slot with a written model", () => {
+      const turn = {
+        prompt_phrase_id: "p1",
+        slots: [{ kind: "WORD", ar: "اسْمِي" }, { kind: "OPEN", label: { en: "your name" } }],
+        model: { ar: "اسْمِي …", en: "My name is …" },
+      };
+      expect(LessonContentSchema.safeParse(withAnswerIt(turn)).success).toBe(true);
+    });
+
+    it("rejects a heard_only phrase as the model answer", () => {
+      expect(LessonContentSchema.safeParse(withAnswerIt({ prompt_phrase_id: "p1", slots: sisterSlots, model_phrase_id: "p3" })).success).toBe(false);
+    });
+
+    it("rejects an unknown question phrase", () => {
+      expect(LessonContentSchema.safeParse(withAnswerIt({ prompt_phrase_id: "nope", slots: sisterSlots, model_phrase_id: "p4" })).success).toBe(false);
+    });
+
+    it("rejects a turn with no model answer or no WORD slot to check", () => {
+      expect(LessonContentSchema.safeParse(withAnswerIt({ prompt_phrase_id: "p3", slots: sisterSlots })).success).toBe(false);
+      const openOnly = { prompt_phrase_id: "p1", slots: [{ kind: "OPEN", label: { en: "your name" } }], model: { ar: "…", en: "…" } };
+      expect(LessonContentSchema.safeParse(withAnswerIt(openOnly)).success).toBe(false);
+    });
+  });
 });

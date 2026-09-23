@@ -630,6 +630,28 @@ Everything below this list is either done and verified, or one of these:
    release before native learners see lab screens. Open: telling
    already-finished learners — settled as Open items #7;
    scene illustration (owner-supplied); scholarly review of the Arabic.
+   **Answer it — the speech recognition part of the hold above — is built and
+   staging-verified 2026-09-23.** Design: Pen section 26 (approved). Proposal:
+   `Docs/proposals/spoken-answer-checking-proposal.md`. A lab may carry
+   `spoken_phrases.lab.answer_it` (turns: a lesson phrase as the question,
+   WORD/OPEN answer slots, a model answer, a tip); when present, lab step 5 is
+   a chat (`components/AnswerItConversation.tsx`) instead of the Say-it lines.
+   The device recogniser (`expo-speech-recognition`, `ar-SA`, Google on
+   Android) turns speech into text; `services/answerMatch.ts` folds harakat
+   and hamza/taa-marbuta spellings and checks words only — never
+   pronunciation, never scored, Try again / Show answer / Skip always there,
+   free pass after 3 misses. No recogniser → record-and-compare with the model
+   answer in the same chat. OpenAI is deliberately not used. CL6 has 3 turns.
+   Verified: schema tests (reject heard-only model answers, unknown phrases,
+   turns with nothing to check), 11 matcher tests, Google's recogniser on the
+   API 34 emulator fed the CL6 clips scored 8/8 (network; the emulator has no
+   offline Arabic pack), and a walk-through of wrong → show answer → correct →
+   all three turns → mission, Urdu mirroring and the fallback. The native
+   module needs an app release (manifest `<queries>` for the speech service
+   added by hand — the android/ folder is tracked). Open before release: a
+   privacy-policy line that spoken answers go to Google's speech service
+   (Warsh never uploads or stores the audio); a real-voice test on a phone,
+   since the accuracy test used synthesized clips.
 3. ~~**Speak mic re-prompt on the Tecno**~~ — **verified on hardware
    2026-09-17** on the Play-installed 1.0.11. The owner's account is on
    Chapter 2, so the check used a throwaway production account placed at

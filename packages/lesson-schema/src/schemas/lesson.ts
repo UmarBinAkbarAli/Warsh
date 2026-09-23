@@ -55,6 +55,32 @@ const LabMissionTurnSchema = z
     }
   });
 
+// "Answer it" — a spoken conversation. The friend asks a lesson phrase; the
+// learner answers out loud and the device's speech recogniser turns it into
+// text. Checking is word level only: every WORD slot must be heard, an OPEN
+// slot (a name) takes any word. Never harakat or pronunciation, never scored.
+const AnswerSlotSchema = z.discriminatedUnion("kind", [
+  z.object({
+    kind: z.literal("WORD"),
+    ar: z.string().min(1),
+    // Other spellings the recogniser may return for this word.
+    accept: z.array(z.string().min(1)).max(6).optional(),
+  }),
+  z.object({ kind: z.literal("OPEN"), label: LocalizedSchema }),
+]);
+
+const AnswerItTurnSchema = z.object({
+  prompt_phrase_id: z.string().min(1),
+  // Stands in for the picture until the owner supplies one ("It is your father.").
+  cue: LocalizedSchema.optional(),
+  slots: z.array(AnswerSlotSchema).min(1).max(6),
+  // What "Show answer" reveals. A taught phrase supplies text and audio; a
+  // turn with an OPEN slot writes its own model ("اسْمِي …").
+  model_phrase_id: z.string().min(1).optional(),
+  model: z.object({ ar: z.string().min(1), en: z.string().min(1), ur: z.string().optional() }).optional(),
+  tip: LocalizedSchema.optional(),
+}).refine((turn) => turn.model_phrase_id || turn.model, { message: "an Answer it turn needs model_phrase_id or model" });
+
 export const ConversationLabSchema = z.object({
   title: LocalizedSchema,
   mission: LocalizedSchema,
@@ -70,6 +96,7 @@ export const ConversationLabSchema = z.object({
     .optional(),
   shadow_phrase_ids: z.array(z.string().min(1)).min(1).max(5),
   mission_turns: z.array(LabMissionTurnSchema).min(1).max(6),
+  answer_it: z.object({ turns: z.array(AnswerItTurnSchema).min(1).max(5) }).optional(),
   can_do: z
     .array(z.object({ kind: z.enum(["SAY", "UNDERSTAND"]), label: LocalizedSchema, ar: z.string().min(1) }))
     .min(1)
@@ -203,6 +230,17 @@ export const LessonContentSchema = z.object({
           : turn.correct_order?.map((tileIndex) => turn.tiles?.[tileIndex]?.ar ?? "").join(" ");
         if (answer && heardOnly.has(answer.normalize("NFC").trim())) {
           issue(["mission_turns", index], "a mission answer cannot be a heard_only phrase");
+        }
+      });
+      lab.answer_it?.turns.forEach((turn, index) => {
+        if (!phraseById.has(turn.prompt_phrase_id)) issue(["answer_it", "turns", index, "prompt_phrase_id"], "prompt_phrase_id must name a phrase");
+        if (turn.model_phrase_id) {
+          const model = phraseById.get(turn.model_phrase_id);
+          if (!model) issue(["answer_it", "turns", index, "model_phrase_id"], "model_phrase_id must name a phrase");
+          else if (model.heard_only) issue(["answer_it", "turns", index, "model_phrase_id"], "the learner cannot be asked to say a heard_only phrase");
+        }
+        if (!turn.slots.some((slot) => slot.kind === "WORD")) {
+          issue(["answer_it", "turns", index, "slots"], "an Answer it turn needs at least one WORD slot to check");
         }
       });
     })

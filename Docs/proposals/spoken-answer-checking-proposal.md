@@ -1,6 +1,7 @@
 # Spoken Answer Checking ("Answer it") — Proposal
 
-Status: **idea, not approved.** Written 2026-09-23. It follows the Pen-first gate: no
+Status: **design approved (Pen section 26), built and staging-verified 2026-09-23;**
+**production pending.** Written 2026-09-23. It follows the Pen-first gate: no
 code until a Pen design is approved. It extends step 7 ("Say it") of the Conversation
 Labs proposal (`conversation-labs-curriculum-proposal.md`).
 

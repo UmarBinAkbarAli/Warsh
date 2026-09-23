@@ -3794,6 +3794,248 @@ declare const ConversationLabSchema: z.ZodObject<{
             ur?: string | undefined;
         } | undefined;
     }>, "many">;
+    answer_it: z.ZodOptional<z.ZodObject<{
+        turns: z.ZodArray<z.ZodEffects<z.ZodObject<{
+            prompt_phrase_id: z.ZodString;
+            cue: z.ZodOptional<z.ZodObject<{
+                en: z.ZodString;
+                ur: z.ZodOptional<z.ZodString>;
+            }, "strip", z.ZodTypeAny, {
+                en: string;
+                ur?: string | undefined;
+            }, {
+                en: string;
+                ur?: string | undefined;
+            }>>;
+            slots: z.ZodArray<z.ZodDiscriminatedUnion<"kind", [z.ZodObject<{
+                kind: z.ZodLiteral<"WORD">;
+                ar: z.ZodString;
+                accept: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+            }, "strip", z.ZodTypeAny, {
+                ar: string;
+                kind: "WORD";
+                accept?: string[] | undefined;
+            }, {
+                ar: string;
+                kind: "WORD";
+                accept?: string[] | undefined;
+            }>, z.ZodObject<{
+                kind: z.ZodLiteral<"OPEN">;
+                label: z.ZodObject<{
+                    en: z.ZodString;
+                    ur: z.ZodOptional<z.ZodString>;
+                }, "strip", z.ZodTypeAny, {
+                    en: string;
+                    ur?: string | undefined;
+                }, {
+                    en: string;
+                    ur?: string | undefined;
+                }>;
+            }, "strip", z.ZodTypeAny, {
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "OPEN";
+            }, {
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "OPEN";
+            }>]>, "many">;
+            model_phrase_id: z.ZodOptional<z.ZodString>;
+            model: z.ZodOptional<z.ZodObject<{
+                ar: z.ZodString;
+                en: z.ZodString;
+                ur: z.ZodOptional<z.ZodString>;
+            }, "strip", z.ZodTypeAny, {
+                ar: string;
+                en: string;
+                ur?: string | undefined;
+            }, {
+                ar: string;
+                en: string;
+                ur?: string | undefined;
+            }>>;
+            tip: z.ZodOptional<z.ZodObject<{
+                en: z.ZodString;
+                ur: z.ZodOptional<z.ZodString>;
+            }, "strip", z.ZodTypeAny, {
+                en: string;
+                ur?: string | undefined;
+            }, {
+                en: string;
+                ur?: string | undefined;
+            }>>;
+        }, "strip", z.ZodTypeAny, {
+            prompt_phrase_id: string;
+            slots: ({
+                ar: string;
+                kind: "WORD";
+                accept?: string[] | undefined;
+            } | {
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "OPEN";
+            })[];
+            cue?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            model_phrase_id?: string | undefined;
+            model?: {
+                ar: string;
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            tip?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+        }, {
+            prompt_phrase_id: string;
+            slots: ({
+                ar: string;
+                kind: "WORD";
+                accept?: string[] | undefined;
+            } | {
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "OPEN";
+            })[];
+            cue?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            model_phrase_id?: string | undefined;
+            model?: {
+                ar: string;
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            tip?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+        }>, {
+            prompt_phrase_id: string;
+            slots: ({
+                ar: string;
+                kind: "WORD";
+                accept?: string[] | undefined;
+            } | {
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "OPEN";
+            })[];
+            cue?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            model_phrase_id?: string | undefined;
+            model?: {
+                ar: string;
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            tip?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+        }, {
+            prompt_phrase_id: string;
+            slots: ({
+                ar: string;
+                kind: "WORD";
+                accept?: string[] | undefined;
+            } | {
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "OPEN";
+            })[];
+            cue?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            model_phrase_id?: string | undefined;
+            model?: {
+                ar: string;
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            tip?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+        }>, "many">;
+    }, "strip", z.ZodTypeAny, {
+        turns: {
+            prompt_phrase_id: string;
+            slots: ({
+                ar: string;
+                kind: "WORD";
+                accept?: string[] | undefined;
+            } | {
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "OPEN";
+            })[];
+            cue?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            model_phrase_id?: string | undefined;
+            model?: {
+                ar: string;
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            tip?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+        }[];
+    }, {
+        turns: {
+            prompt_phrase_id: string;
+            slots: ({
+                ar: string;
+                kind: "WORD";
+                accept?: string[] | undefined;
+            } | {
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "OPEN";
+            })[];
+            cue?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            model_phrase_id?: string | undefined;
+            model?: {
+                ar: string;
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            tip?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+        }[];
+    }>>;
     can_do: z.ZodArray<z.ZodObject<{
         kind: z.ZodEnum<["SAY", "UNDERSTAND"]>;
         label: z.ZodObject<{
@@ -3888,6 +4130,36 @@ declare const ConversationLabSchema: z.ZodObject<{
             ur?: string | undefined;
         };
     } | undefined;
+    answer_it?: {
+        turns: {
+            prompt_phrase_id: string;
+            slots: ({
+                ar: string;
+                kind: "WORD";
+                accept?: string[] | undefined;
+            } | {
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "OPEN";
+            })[];
+            cue?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            model_phrase_id?: string | undefined;
+            model?: {
+                ar: string;
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            tip?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+        }[];
+    } | undefined;
 }, {
     title: {
         en: string;
@@ -3953,6 +4225,36 @@ declare const ConversationLabSchema: z.ZodObject<{
             en: string;
             ur?: string | undefined;
         };
+    } | undefined;
+    answer_it?: {
+        turns: {
+            prompt_phrase_id: string;
+            slots: ({
+                ar: string;
+                kind: "WORD";
+                accept?: string[] | undefined;
+            } | {
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "OPEN";
+            })[];
+            cue?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            model_phrase_id?: string | undefined;
+            model?: {
+                ar: string;
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            tip?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+        }[];
     } | undefined;
 }>;
 declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
@@ -6713,6 +7015,248 @@ declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
                     ur?: string | undefined;
                 } | undefined;
             }>, "many">;
+            answer_it: z.ZodOptional<z.ZodObject<{
+                turns: z.ZodArray<z.ZodEffects<z.ZodObject<{
+                    prompt_phrase_id: z.ZodString;
+                    cue: z.ZodOptional<z.ZodObject<{
+                        en: z.ZodString;
+                        ur: z.ZodOptional<z.ZodString>;
+                    }, "strip", z.ZodTypeAny, {
+                        en: string;
+                        ur?: string | undefined;
+                    }, {
+                        en: string;
+                        ur?: string | undefined;
+                    }>>;
+                    slots: z.ZodArray<z.ZodDiscriminatedUnion<"kind", [z.ZodObject<{
+                        kind: z.ZodLiteral<"WORD">;
+                        ar: z.ZodString;
+                        accept: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+                    }, "strip", z.ZodTypeAny, {
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    }, {
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    }>, z.ZodObject<{
+                        kind: z.ZodLiteral<"OPEN">;
+                        label: z.ZodObject<{
+                            en: z.ZodString;
+                            ur: z.ZodOptional<z.ZodString>;
+                        }, "strip", z.ZodTypeAny, {
+                            en: string;
+                            ur?: string | undefined;
+                        }, {
+                            en: string;
+                            ur?: string | undefined;
+                        }>;
+                    }, "strip", z.ZodTypeAny, {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    }, {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    }>]>, "many">;
+                    model_phrase_id: z.ZodOptional<z.ZodString>;
+                    model: z.ZodOptional<z.ZodObject<{
+                        ar: z.ZodString;
+                        en: z.ZodString;
+                        ur: z.ZodOptional<z.ZodString>;
+                    }, "strip", z.ZodTypeAny, {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    }, {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    }>>;
+                    tip: z.ZodOptional<z.ZodObject<{
+                        en: z.ZodString;
+                        ur: z.ZodOptional<z.ZodString>;
+                    }, "strip", z.ZodTypeAny, {
+                        en: string;
+                        ur?: string | undefined;
+                    }, {
+                        en: string;
+                        ur?: string | undefined;
+                    }>>;
+                }, "strip", z.ZodTypeAny, {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }, {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }>, {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }, {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }>, "many">;
+            }, "strip", z.ZodTypeAny, {
+                turns: {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }[];
+            }, {
+                turns: {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }[];
+            }>>;
             can_do: z.ZodArray<z.ZodObject<{
                 kind: z.ZodEnum<["SAY", "UNDERSTAND"]>;
                 label: z.ZodObject<{
@@ -6807,6 +7351,36 @@ declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
                     ur?: string | undefined;
                 };
             } | undefined;
+            answer_it?: {
+                turns: {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }[];
+            } | undefined;
         }, {
             title: {
                 en: string;
@@ -6872,6 +7446,36 @@ declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
                     en: string;
                     ur?: string | undefined;
                 };
+            } | undefined;
+            answer_it?: {
+                turns: {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }[];
             } | undefined;
         }>>;
     }, "strip", z.ZodTypeAny, {
@@ -6965,6 +7569,36 @@ declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
                     ur?: string | undefined;
                 };
             } | undefined;
+            answer_it?: {
+                turns: {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }[];
+            } | undefined;
         } | undefined;
     }, {
         scene: {
@@ -7056,6 +7690,36 @@ declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
                     en: string;
                     ur?: string | undefined;
                 };
+            } | undefined;
+            answer_it?: {
+                turns: {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }[];
             } | undefined;
         } | undefined;
     }>, {
@@ -7149,6 +7813,36 @@ declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
                     ur?: string | undefined;
                 };
             } | undefined;
+            answer_it?: {
+                turns: {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }[];
+            } | undefined;
         } | undefined;
     }, {
         scene: {
@@ -7240,6 +7934,36 @@ declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
                     en: string;
                     ur?: string | undefined;
                 };
+            } | undefined;
+            answer_it?: {
+                turns: {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }[];
             } | undefined;
         } | undefined;
     }>>;
@@ -8018,6 +8742,36 @@ declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
                     ur?: string | undefined;
                 };
             } | undefined;
+            answer_it?: {
+                turns: {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }[];
+            } | undefined;
         } | undefined;
     } | undefined;
     conjugation_table?: {
@@ -8682,6 +9436,36 @@ declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
                     en: string;
                     ur?: string | undefined;
                 };
+            } | undefined;
+            answer_it?: {
+                turns: {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }[];
             } | undefined;
         } | undefined;
     } | undefined;
@@ -9348,6 +10132,36 @@ declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
                     ur?: string | undefined;
                 };
             } | undefined;
+            answer_it?: {
+                turns: {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }[];
+            } | undefined;
         } | undefined;
     } | undefined;
     conjugation_table?: {
@@ -10012,6 +10826,36 @@ declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
                     en: string;
                     ur?: string | undefined;
                 };
+            } | undefined;
+            answer_it?: {
+                turns: {
+                    prompt_phrase_id: string;
+                    slots: ({
+                        ar: string;
+                        kind: "WORD";
+                        accept?: string[] | undefined;
+                    } | {
+                        label: {
+                            en: string;
+                            ur?: string | undefined;
+                        };
+                        kind: "OPEN";
+                    })[];
+                    cue?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    model_phrase_id?: string | undefined;
+                    model?: {
+                        ar: string;
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                    tip?: {
+                        en: string;
+                        ur?: string | undefined;
+                    } | undefined;
+                }[];
             } | undefined;
         } | undefined;
     } | undefined;
