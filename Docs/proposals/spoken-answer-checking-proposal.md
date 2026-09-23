@@ -63,16 +63,17 @@ we check **words**, never pronunciation.
 | Free API tiers (Groq Whisper, Google Cloud STT monthly free minutes, Azure free hours) | Free up to a limit | Rate limits or monthly caps, so not a free base for everyone. |
 | On-device Whisper (`whisper.rn`) or Vosk | Free, offline | Adds tens of MB to the app. Small models are weak on Arabic. |
 
-**Recommendation:** use the device's built-in recogniser as the free default.
-Keep OpenAI as an optional fallback for devices without one. Decide after the
-accuracy test.
+**Decision (owner, 2026-09-23):** use the device's built-in Google speech
+recognition. **OpenAI is out of scope** until this option is fully tested. Devices
+without a recogniser get today's record-and-compare screen. There is no paid
+fallback and no backend route.
 
 ## Next steps
 
-1. **Accuracy test:** run the built-in recogniser and OpenAI over existing lesson
-   audio and a few short spoken answers (اسْمِي عُمَر, هٰذَا كِتَابٌ). Measure how
-   often the key words come back correctly.
+1. **Accuracy test:** run Google's built-in recogniser over existing lesson audio
+   and a few short spoken answers (اسْمِي عُمَر, هٰذَا كِتَابٌ). Measure how often
+   the key words come back correctly.
 2. **Pen design** of the "Answer it" screen (question, mic, "We heard", result,
    retry, skip) for owner approval.
-3. After approval: schema addition, component, backend route (only if OpenAI is
-   used), i18n (en + ur), and content for the first Conversation Lab.
+3. After approval: schema addition, native speech-recognition module (new app
+   build), component, i18n (en + ur), and content for the first Conversation Lab.
