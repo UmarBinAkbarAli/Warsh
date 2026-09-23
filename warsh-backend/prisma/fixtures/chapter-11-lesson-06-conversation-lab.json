@@ -200,8 +200,8 @@
         "ur": "گھر اور خاندان"
       },
       "mission": {
-        "en": "Name two people in the photo and say where your sister is.",
-        "ur": "تصویر میں دو افراد کے بارے میں بتائیں اور بتائیں کہ آپ کی بہن کہاں ہے۔"
+        "en": "A new photo: name your brother and your sister, then say where your mother is.",
+        "ur": "ایک نئی تصویر: اپنے بھائی اور بہن کے بارے میں بتائیں، پھر بتائیں کہ آپ کی والدہ کہاں ہیں۔"
       },
       "toolkit": [
         "أَبِي",
@@ -212,16 +212,16 @@
       ],
       "goals": [
         {
-          "en": "Name the first person",
-          "ur": "پہلے شخص کے بارے میں بتائیں"
+          "en": "Name your brother",
+          "ur": "اپنے بھائی کے بارے میں بتائیں"
         },
         {
-          "en": "Name the second person",
-          "ur": "دوسرے شخص کے بارے میں بتائیں"
+          "en": "Name your sister",
+          "ur": "اپنی بہن کے بارے میں بتائیں"
         },
         {
-          "en": "Say where your sister is",
-          "ur": "بتائیں کہ آپ کی بہن کہاں ہے"
+          "en": "Say where your mother is",
+          "ur": "بتائیں کہ آپ کی والدہ کہاں ہیں"
         }
       ],
       "pattern": {
@@ -266,8 +266,8 @@
           "prompt_phrase_id": "ch11-cl-p01",
           "goal_index": 0,
           "cue": {
-            "en": "It is your father.",
-            "ur": "یہ آپ کے والد ہیں۔"
+            "en": "It is your brother.",
+            "ur": "یہ آپ کا بھائی ہے۔"
           },
           "response_mode": "BUILD",
           "tiles": [
@@ -279,11 +279,11 @@
               "ur": "یہ"
             },
             {
-              "ar": "أَبِي",
-              "ar_plain": "ابي",
-              "translit": "abī",
-              "en": "my father",
-              "ur": "میرے والد"
+              "ar": "أَخِي",
+              "ar_plain": "اخي",
+              "translit": "akhī",
+              "en": "my brother",
+              "ur": "میرا بھائی"
             },
             {
               "ar": "هَذِهِ",
@@ -291,6 +291,13 @@
               "translit": "hādhihi",
               "en": "this (f.)",
               "ur": "یہ (مؤنث)"
+            },
+            {
+              "ar": "أَبِي",
+              "ar_plain": "ابي",
+              "translit": "abī",
+              "en": "my father",
+              "ur": "میرے والد"
             }
           ],
           "correct_order": [
@@ -302,18 +309,11 @@
           "prompt_phrase_id": "ch11-cl-p03",
           "goal_index": 1,
           "cue": {
-            "en": "It is your mother.",
-            "ur": "یہ آپ کی والدہ ہیں۔"
+            "en": "It is your sister.",
+            "ur": "یہ آپ کی بہن ہے۔"
           },
           "response_mode": "PICK",
           "options": [
-            {
-              "ar": "هَذِهِ أُمِّي",
-              "ar_plain": "هذه امي",
-              "translit": "hādhihi ummī",
-              "en": "This is my mother.",
-              "ur": "یہ میری والدہ ہیں۔"
-            },
             {
               "ar": "هَذِهِ أُخْتِي",
               "ar_plain": "هذه اختي",
@@ -322,30 +322,37 @@
               "ur": "یہ میری بہن ہے۔"
             },
             {
-              "ar": "أُمِّي فِي الْبَيْتِ",
-              "ar_plain": "امي في البيت",
-              "translit": "ummī fī l-bayti",
-              "en": "My mother is in the house.",
-              "ur": "میری والدہ گھر میں ہیں۔"
+              "ar": "هَذِهِ أُخْتُكَ",
+              "ar_plain": "هذه اختك",
+              "translit": "hādhihi ukhtuka",
+              "en": "This is your sister.",
+              "ur": "یہ تمہاری بہن ہے۔"
+            },
+            {
+              "ar": "هَذَا أُخْتِي",
+              "ar_plain": "هذا اختي",
+              "translit": "hādhā ukhtī",
+              "en": "“This” (m.) + my sister",
+              "ur": "“یہ” (مذکر) + میری بہن"
             }
           ],
           "correct_option_index": 0
         },
         {
-          "prompt_phrase_id": "ch11-cl-p09",
+          "prompt_phrase_id": "ch11-cl-p07",
           "goal_index": 2,
           "cue": {
-            "en": "Your sister is at home.",
-            "ur": "آپ کی بہن گھر پر ہے۔"
+            "en": "Your mother is in the mosque.",
+            "ur": "آپ کی والدہ مسجد میں ہیں۔"
           },
           "response_mode": "BUILD",
           "tiles": [
             {
-              "ar": "أُخْتِي",
-              "ar_plain": "اختي",
-              "translit": "ukhtī",
-              "en": "my sister",
-              "ur": "میری بہن"
+              "ar": "أُمِّي",
+              "ar_plain": "امي",
+              "translit": "ummī",
+              "en": "my mother",
+              "ur": "میری والدہ"
             },
             {
               "ar": "فِي",
@@ -355,25 +362,25 @@
               "ur": "میں"
             },
             {
+              "ar": "الْمَسْجِدِ",
+              "ar_plain": "المسجد",
+              "translit": "al-masjidi",
+              "en": "the mosque",
+              "ur": "مسجد"
+            },
+            {
+              "ar": "أُمُّكَ",
+              "ar_plain": "امك",
+              "translit": "ummuka",
+              "en": "your mother",
+              "ur": "تمہاری والدہ"
+            },
+            {
               "ar": "الْبَيْتِ",
               "ar_plain": "البيت",
               "translit": "al-bayti",
               "en": "the house",
               "ur": "گھر"
-            },
-            {
-              "ar": "أُمِّي",
-              "ar_plain": "امي",
-              "translit": "ummī",
-              "en": "my mother",
-              "ur": "میری والدہ"
-            },
-            {
-              "ar": "الْغُرْفَةِ",
-              "ar_plain": "الغرفة",
-              "translit": "al-ghurfati",
-              "en": "the room",
-              "ur": "کمرہ"
             }
           ],
           "correct_order": [
