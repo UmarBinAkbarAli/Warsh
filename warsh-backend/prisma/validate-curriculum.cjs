@@ -880,8 +880,15 @@ function validateLessonFixture(fileName, lesson, reporter, globalState) {
 
   if (lesson.template === "SPOKEN_PHRASES") {
     if (lesson.spoken_phrases === undefined) reporter.add(`${pathLabel}.spoken_phrases`, "SPOKEN_PHRASES lessons must include spoken_phrases");
+    // A Conversation Lab (spoken_phrases.lab) has a scored practice beat; plain
+    // spoken-phrase lessons still carry none.
+    const isLab = lesson.spoken_phrases?.lab !== undefined;
     for (const field of ["discover_cards", "exercises", "reveal", "conjugation_table"]) {
+      if (field === "exercises" && isLab) continue;
       if (lesson[field] !== undefined) reporter.add(`${pathLabel}.${field}`, "SPOKEN_PHRASES lessons must not include this beat");
+    }
+    if (isLab && !(Array.isArray(lesson.exercises) && lesson.exercises.length >= 4)) {
+      reporter.add(`${pathLabel}.exercises`, "a Conversation Lab needs at least four practice exercises");
     }
     for (const legacyField of ["contextTitle", "contextTitleEn", "contextBody", "phrases", "dialogue"]) {
       if (lesson[legacyField] !== undefined) {

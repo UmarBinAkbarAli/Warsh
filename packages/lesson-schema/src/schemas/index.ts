@@ -47,6 +47,8 @@ export {
 // Lesson content — top-level schema + inferred types + backward-compat types
 export {
   LessonContentSchema,
+  ConversationLabSchema,
+  type ConversationLab,
   type LessonContent,
   type LessonTemplate,
   type SpokenPhrase,

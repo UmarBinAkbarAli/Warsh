@@ -5,6 +5,10 @@
  * ch11-test are the only inserted rows. The chapter description is updated to
  * the approved text; the chapter title is unchanged.
  *
+ * Since 2026-09-23 the plan also carries the CL6 Conversation Lab (ch11-cl06,
+ * order 6), which moved the review and test to orders 7 and 8. The narrower
+ * content:promote-conversation-lab-ch11 is what first shipped that change.
+ *
  * Usage:
  *   npm run content:promote-chapter-eleven
  *   npm run content:promote-chapter-eleven -- --apply
@@ -35,8 +39,9 @@ const plan = [
   ["ch11-l03", 3, "In It, Masculine — فِيهِ", "فِيهِ — ضَمِيرُ الْمُفْرَدِ الْغَائِبِ", "STANDARD", "chapter-11-lesson-03.json"],
   ["ch11-l04", 4, "In It, Feminine — فِيهَا", "فِيهَا — ضَمِيرُ الْمُفْرَدَةِ الْغَائِبَةِ", "STANDARD", "chapter-11-lesson-04.json"],
   ["ch11-l05", 5, "Home in the Quran — بُيُوتِكُمْ", "بُيُوتِكُمْ فِي الْقُرْآنِ", "STANDARD", "chapter-11-lesson-05.json"],
-  ["ch11-l06", 6, "Chapter 11 Review", "مُرَاجَعَةُ الْفَصْلِ الْحَادِيَ عَشَرَ", "REVIEW", "chapter-11-lesson-06-review.json"],
-  ["ch11-test", 7, "Chapter 11 Final Test", "اخْتِبَارُ الْفَصْلِ الْحَادِيَ عَشَرَ", "REVIEW", "chapter-11-lesson-07-final-test.json"],
+  ["ch11-cl06", 6, "Home and Family — Conversation Lab", "مَنْ هَذَا؟", "SPOKEN_PHRASES", "chapter-11-lesson-06-conversation-lab.json"],
+  ["ch11-l06", 7, "Chapter 11 Review", "مُرَاجَعَةُ الْفَصْلِ الْحَادِيَ عَشَرَ", "REVIEW", "chapter-11-lesson-07-review.json"],
+  ["ch11-test", 8, "Chapter 11 Final Test", "اخْتِبَارُ الْفَصْلِ الْحَادِيَ عَشَرَ", "REVIEW", "chapter-11-lesson-08-final-test.json"],
 ].map(([id, order, title, titleAr, template, filename]) => {
   const content = JSON.parse(fs.readFileSync(path.join(FIXTURES_DIR, filename), "utf8"));
   return { id, order, title, titleAr, template, content, xpReward: content._meta?.xp_reward ?? 10 };

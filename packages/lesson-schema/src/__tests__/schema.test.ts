@@ -191,3 +191,93 @@ describe("LessonContent schema", () => {
     expect(LessonContentSchema.safeParse(content).success).toBe(true);
   });
 });
+
+describe("Conversation Lab", () => {
+  const text = (ar: string, en: string) => ({ ar, ar_plain: ar, translit: "x", en });
+  const phrase = (id: string, ar: string, heard_only?: boolean) => ({
+    id,
+    phrase: text(ar, id),
+    audio_url: "",
+    ...(heard_only ? { heard_only } : {}),
+  });
+
+  function labLesson() {
+    return {
+      schema_version: "1.0",
+      template: "SPOKEN_PHRASES",
+      hook: { ayah: { surah: 28, ayah: 25, label: "Al-Qasas 28:25", ar: "إِنَّ أَبِي يَدْعُوكَ", en: "Indeed, my father invites you." } },
+      close: { noor_message: { en: "Well done." } },
+      spoken_phrases: {
+        scene: { en: "A family photo." },
+        phrases: [
+          phrase("p1", "مَنْ هَذَا؟"),
+          phrase("p2", "هَذَا أَبِي"),
+          phrase("p3", "أَيْنَ أُخْتُكَ؟", true),
+          phrase("p4", "أُخْتِي فِي الْبَيْتِ"),
+        ],
+        dialogue: [
+          { speaker: "A", phrase_id: "p1" },
+          { speaker: "B", phrase_id: "p2" },
+          { speaker: "A", phrase_id: "p3" },
+          { speaker: "B", phrase_id: "p4" },
+        ],
+        lab: {
+          title: { en: "Home and Family" },
+          mission: { en: "Say where your sister is." },
+          goals: [{ en: "Say where your sister is" }],
+          shadow_phrase_ids: ["p2", "p4"],
+          mission_turns: [
+            {
+              prompt_phrase_id: "p3",
+              goal_index: 0,
+              response_mode: "BUILD",
+              tiles: [text("أُخْتِي", "my sister"), text("فِي", "in"), text("الْبَيْتِ", "the house")],
+              correct_order: [0, 1, 2],
+            },
+          ],
+          can_do: [{ kind: "SAY", label: { en: "Where someone is" }, ar: "أُخْتِي فِي الْبَيْتِ" }],
+        },
+      },
+      exercises: [] as unknown[],
+    };
+  }
+
+  it("accepts a lab lesson", () => {
+    expect(LessonContentSchema.safeParse(labLesson()).success).toBe(true);
+  });
+
+  it("rejects the learner saying a heard_only phrase in the dialogue", () => {
+    const lesson = labLesson();
+    lesson.spoken_phrases.dialogue[3].phrase_id = "p3";
+    expect(LessonContentSchema.safeParse(lesson).success).toBe(false);
+  });
+
+  it("rejects a heard_only phrase as a speaking target", () => {
+    const lesson = labLesson();
+    lesson.spoken_phrases.lab.shadow_phrase_ids = ["p3"];
+    expect(LessonContentSchema.safeParse(lesson).success).toBe(false);
+  });
+
+  it("rejects a mission turn whose goal does not exist", () => {
+    const lesson = labLesson();
+    lesson.spoken_phrases.lab.mission_turns[0].goal_index = 3;
+    expect(LessonContentSchema.safeParse(lesson).success).toBe(false);
+  });
+
+  it("rejects a scored exercise whose answer is a heard_only phrase", () => {
+    const lesson = labLesson();
+    lesson.exercises = [
+      {
+        id: "e1",
+        type: "CONVERSATION_BUILDER",
+        prompt_line: text("مَنْ هَذَا؟", "Who is this?"),
+        response_mode: "PICK",
+        options: [text("أَيْنَ أُخْتُكَ؟", "Where is your sister?"), text("هَذَا أَبِي", "This is my father.")],
+        correct_option_index: 0,
+      },
+    ];
+    expect(LessonContentSchema.safeParse(lesson).success).toBe(false);
+    (lesson.exercises[0] as { correct_option_index: number }).correct_option_index = 1;
+    expect(LessonContentSchema.safeParse(lesson).success).toBe(true);
+  });
+});

@@ -94,8 +94,9 @@ const ch11L02Content     = require("./fixtures/chapter-11-lesson-02.json");     
 const ch11L03Content     = require("./fixtures/chapter-11-lesson-03.json");            // ch11-l03, order 3
 const ch11L04Content     = require("./fixtures/chapter-11-lesson-04.json");            // ch11-l04, order 4
 const ch11L05Content     = require("./fixtures/chapter-11-lesson-05.json");            // ch11-l05, order 5
-const ch11L06Content     = require("./fixtures/chapter-11-lesson-06-review.json");     // ch11-l06, review, order 6
-const ch11TestContent    = require("./fixtures/chapter-11-lesson-07-final-test.json"); // ch11-test, order 7
+const ch11Cl06Content    = require("./fixtures/chapter-11-lesson-06-conversation-lab.json"); // ch11-cl06, Conversation Lab, order 6
+const ch11L06Content     = require("./fixtures/chapter-11-lesson-07-review.json");     // ch11-l06, review, order 7
+const ch11TestContent    = require("./fixtures/chapter-11-lesson-08-final-test.json"); // ch11-test, order 8
 const ch12L01Content     = require("./fixtures/chapter-12-lesson-01.json");
 const ch12L02Content     = require("./fixtures/chapter-12-lesson-02.json");
 const ch12L03Content     = require("./fixtures/chapter-12-lesson-03.json");
@@ -833,13 +834,16 @@ async function main() {
     { id: "ch10-test", chapterId: ch10Id, order: 7, title: "Chapter 10 Final Test",                  titleAr: "اخْتِبَارُ الْفَصْلِ الْعَاشِرِ",            template: "REVIEW",   xpReward: ch10TestContent._meta?.xp_reward ?? 20, content: ch10TestContent },
     // Chapter 11 — Docs/proposals/chapter-11-content-proposal.md. ch11-l01..l05
     // keep their IDs and display orders; ch11-l06 (review) and ch11-test are new rows.
+    // ch11-cl06 is the CL6 Conversation Lab (Docs/proposals/conversation-labs-curriculum-proposal.md),
+    // inserted before the review, which moves the review and test to orders 7 and 8.
     { id: "ch11-l01",  chapterId: ch11Id, order: 1, title: "My Father and My Mother — أَبِي and أُمِّي", titleAr: "أَبِي وَأُمِّي",                       template: "STANDARD", xpReward: ch11L01Content._meta?.xp_reward  ?? 10, content: ch11L01Content },
     { id: "ch11-l02",  chapterId: ch11Id, order: 2, title: "Family Vocabulary",                          titleAr: "مُفْرَدَاتُ الْأُسْرَةِ",                  template: "STANDARD", xpReward: ch11L02Content._meta?.xp_reward  ?? 10, content: ch11L02Content },
     { id: "ch11-l03",  chapterId: ch11Id, order: 3, title: "In It, Masculine — فِيهِ",                   titleAr: "فِيهِ — ضَمِيرُ الْمُفْرَدِ الْغَائِبِ",  template: "STANDARD", xpReward: ch11L03Content._meta?.xp_reward  ?? 10, content: ch11L03Content },
     { id: "ch11-l04",  chapterId: ch11Id, order: 4, title: "In It, Feminine — فِيهَا",                   titleAr: "فِيهَا — ضَمِيرُ الْمُفْرَدَةِ الْغَائِبَةِ", template: "STANDARD", xpReward: ch11L04Content._meta?.xp_reward  ?? 10, content: ch11L04Content },
     { id: "ch11-l05",  chapterId: ch11Id, order: 5, title: "Home in the Quran — بُيُوتِكُمْ",            titleAr: "بُيُوتِكُمْ فِي الْقُرْآنِ",               template: "STANDARD", xpReward: ch11L05Content._meta?.xp_reward  ?? 10, content: ch11L05Content },
-    { id: "ch11-l06",  chapterId: ch11Id, order: 6, title: "Chapter 11 Review",                          titleAr: "مُرَاجَعَةُ الْفَصْلِ الْحَادِيَ عَشَرَ",   template: "REVIEW",   xpReward: ch11L06Content._meta?.xp_reward  ?? 20, content: ch11L06Content },
-    { id: "ch11-test", chapterId: ch11Id, order: 7, title: "Chapter 11 Final Test",                      titleAr: "اخْتِبَارُ الْفَصْلِ الْحَادِيَ عَشَرَ",   template: "REVIEW",   xpReward: ch11TestContent._meta?.xp_reward ?? 20, content: ch11TestContent },
+    { id: "ch11-cl06", chapterId: ch11Id, order: 6, title: "Home and Family — Conversation Lab",       titleAr: "مَنْ هَذَا؟",                                 template: "SPOKEN_PHRASES", xpReward: ch11Cl06Content._meta?.xp_reward ?? 15, content: ch11Cl06Content },
+    { id: "ch11-l06",  chapterId: ch11Id, order: 7, title: "Chapter 11 Review",                          titleAr: "مُرَاجَعَةُ الْفَصْلِ الْحَادِيَ عَشَرَ",   template: "REVIEW",   xpReward: ch11L06Content._meta?.xp_reward  ?? 20, content: ch11L06Content },
+    { id: "ch11-test", chapterId: ch11Id, order: 8, title: "Chapter 11 Final Test",                      titleAr: "اخْتِبَارُ الْفَصْلِ الْحَادِيَ عَشَرَ",   template: "REVIEW",   xpReward: ch11TestContent._meta?.xp_reward ?? 20, content: ch11TestContent },
     // Chapter 12 — Docs/proposals/chapter-12-content-proposal.md. ch12-l01..l05
     // keep their IDs and display orders; ch12-l06 (review) and ch12-test are new rows.
     { id: "ch12-l01",  chapterId: ch12Id, order: 1, title: "What Is Your Name? — مَا اسْمُكَ؟",       titleAr: "مَا اسْمُكَ؟",                             template: "STANDARD",       xpReward: ch12L01Content._meta?.xp_reward       ?? 10, content: ch12L01Content },

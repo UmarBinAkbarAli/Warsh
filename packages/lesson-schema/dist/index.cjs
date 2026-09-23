@@ -27,6 +27,7 @@ __export(index_exports, {
   BuildSentenceExerciseSchema: () => BuildSentenceExerciseSchema,
   CloseBeatSchema: () => CloseBeatSchema,
   ConversationBuilderExerciseSchema: () => ConversationBuilderExerciseSchema,
+  ConversationLabSchema: () => ConversationLabSchema,
   DiscoverCardSchema: () => DiscoverCardSchema,
   ExerciseSchema: () => ExerciseSchema,
   FillBlankExerciseSchema: () => FillBlankExerciseSchema,
@@ -349,6 +350,50 @@ var ChapterTestQuestionSchema = import_zod4.z.object({
   options: import_zod4.z.array(LocalizedAssessmentTextSchema.extend({ arabic: import_zod4.z.string().min(1).optional() })).min(2).max(6),
   correct_index: import_zod4.z.number().int().min(0)
 });
+var LocalizedSchema = import_zod4.z.object({ en: import_zod4.z.string().min(1), ur: import_zod4.z.string().optional() });
+var LabArabicSchema = import_zod4.z.object({
+  ar: import_zod4.z.string().min(1),
+  ar_plain: import_zod4.z.string().min(1),
+  translit: import_zod4.z.string().min(1),
+  en: import_zod4.z.string().min(1),
+  ur: import_zod4.z.string().optional()
+});
+var LabMissionTurnSchema = import_zod4.z.object({
+  prompt_phrase_id: import_zod4.z.string().min(1),
+  goal_index: import_zod4.z.number().int().min(0),
+  cue: LocalizedSchema.optional(),
+  response_mode: import_zod4.z.enum(["PICK", "BUILD"]),
+  options: import_zod4.z.array(LabArabicSchema).min(2).max(4).optional(),
+  correct_option_index: import_zod4.z.number().int().min(0).optional(),
+  tiles: import_zod4.z.array(LabArabicSchema).min(2).max(6).optional(),
+  correct_order: import_zod4.z.array(import_zod4.z.number().int().min(0)).min(1).optional()
+}).superRefine((turn, ctx) => {
+  if (turn.response_mode === "PICK") {
+    if (!turn.options || turn.correct_option_index === void 0 || turn.correct_option_index >= turn.options.length) {
+      ctx.addIssue({ code: import_zod4.z.ZodIssueCode.custom, message: "PICK turns need options and a valid correct_option_index" });
+    }
+  } else if (!turn.tiles || !turn.correct_order || turn.correct_order.some((index) => index >= turn.tiles.length)) {
+    ctx.addIssue({ code: import_zod4.z.ZodIssueCode.custom, message: "BUILD turns need tiles and a correct_order that points into them" });
+  }
+});
+var ConversationLabSchema = import_zod4.z.object({
+  title: LocalizedSchema,
+  mission: LocalizedSchema,
+  toolkit: import_zod4.z.array(import_zod4.z.string().min(1)).max(8).optional(),
+  goals: import_zod4.z.array(LocalizedSchema).min(1).max(4),
+  // "Notice the pattern" — shown once, straight after the named phrase card.
+  pattern: import_zod4.z.object({
+    after_phrase_id: import_zod4.z.string().min(1),
+    items: import_zod4.z.array(import_zod4.z.object({ ar: import_zod4.z.string().min(1), meaning: LocalizedSchema, source: LocalizedSchema })).min(2).max(3),
+    note: LocalizedSchema
+  }).optional(),
+  shadow_phrase_ids: import_zod4.z.array(import_zod4.z.string().min(1)).min(1).max(5),
+  mission_turns: import_zod4.z.array(LabMissionTurnSchema).min(1).max(6),
+  can_do: import_zod4.z.array(import_zod4.z.object({ kind: import_zod4.z.enum(["SAY", "UNDERSTAND"]), label: LocalizedSchema, ar: import_zod4.z.string().min(1) })).min(1).max(4)
+});
+function lessonAnswerText(value) {
+  return value.ar.normalize("NFC").trim();
+}
 var LessonContentSchema = import_zod4.z.object({
   schema_version: import_zod4.z.literal("1.0"),
   template: import_zod4.z.enum(["STANDARD", "SPOKEN_PHRASES", "REVIEW", "VERB_PATTERN"]),
@@ -406,7 +451,10 @@ var LessonContentSchema = import_zod4.z.object({
         id: import_zod4.z.string().min(1),
         phrase: import_zod4.z.object({ ar: import_zod4.z.string().min(1), ar_plain: import_zod4.z.string().min(1), translit: import_zod4.z.string().min(1), en: import_zod4.z.string().min(1), ur: import_zod4.z.string().optional() }),
         audio_url: import_zod4.z.string(),
-        context: import_zod4.z.object({ en: import_zod4.z.string().min(1), ur: import_zod4.z.string().optional() }).optional()
+        context: import_zod4.z.object({ en: import_zod4.z.string().min(1), ur: import_zod4.z.string().optional() }).optional(),
+        // Recognition only: the learner hears and understands it but is
+        // never asked to produce it (a form the host chapter has not taught).
+        heard_only: import_zod4.z.boolean().optional()
       })
     ).min(4),
     dialogue: import_zod4.z.array(
@@ -414,7 +462,43 @@ var LessonContentSchema = import_zod4.z.object({
         speaker: import_zod4.z.enum(["A", "B"]),
         phrase_id: import_zod4.z.string()
       })
-    ).optional()
+    ).optional(),
+    lab: ConversationLabSchema.optional()
+  }).superRefine((block, ctx) => {
+    const lab = block.lab;
+    if (!lab) return;
+    const phraseById = new Map(block.phrases.map((phrase) => [phrase.id, phrase]));
+    const heardOnly = new Set(
+      block.phrases.filter((phrase) => phrase.heard_only).map((phrase) => lessonAnswerText(phrase.phrase))
+    );
+    const issue = (path, message) => ctx.addIssue({ code: import_zod4.z.ZodIssueCode.custom, path: ["lab", ...path], message });
+    if (!block.dialogue || block.dialogue.length < 2) {
+      ctx.addIssue({ code: import_zod4.z.ZodIssueCode.custom, path: ["dialogue"], message: "a Conversation Lab needs a dialogue of at least two lines" });
+    }
+    block.dialogue?.forEach((line, index) => {
+      const phrase = phraseById.get(line.phrase_id);
+      if (!phrase) {
+        ctx.addIssue({ code: import_zod4.z.ZodIssueCode.custom, path: ["dialogue", index, "phrase_id"], message: "dialogue phrase_id must name a phrase" });
+      } else if (line.speaker === "B" && phrase.heard_only) {
+        ctx.addIssue({ code: import_zod4.z.ZodIssueCode.custom, path: ["dialogue", index, "phrase_id"], message: "the learner (speaker B) cannot say a heard_only phrase" });
+      }
+    });
+    if (lab.pattern && !phraseById.has(lab.pattern.after_phrase_id)) {
+      issue(["pattern", "after_phrase_id"], "after_phrase_id must name a phrase");
+    }
+    lab.shadow_phrase_ids.forEach((id, index) => {
+      const phrase = phraseById.get(id);
+      if (!phrase) issue(["shadow_phrase_ids", index], "shadow phrase must name a phrase");
+      else if (phrase.heard_only) issue(["shadow_phrase_ids", index], "a heard_only phrase cannot be a speaking target");
+    });
+    lab.mission_turns.forEach((turn, index) => {
+      if (!phraseById.has(turn.prompt_phrase_id)) issue(["mission_turns", index, "prompt_phrase_id"], "prompt_phrase_id must name a phrase");
+      if (turn.goal_index >= lab.goals.length) issue(["mission_turns", index, "goal_index"], "goal_index must point at a goal");
+      const answer = turn.response_mode === "PICK" ? turn.options?.[turn.correct_option_index ?? -1]?.ar : turn.correct_order?.map((tileIndex) => turn.tiles?.[tileIndex]?.ar ?? "").join(" ");
+      if (answer && heardOnly.has(answer.normalize("NFC").trim())) {
+        issue(["mission_turns", index], "a mission answer cannot be a heard_only phrase");
+      }
+    });
   }).optional(),
   conjugation_table: import_zod4.z.object({
     root: import_zod4.z.string(),
@@ -427,6 +511,31 @@ var LessonContentSchema = import_zod4.z.object({
       })
     ).min(1)
   }).optional()
+}).superRefine((content, ctx) => {
+  const block = content.spoken_phrases;
+  if (!block?.lab || !content.exercises) return;
+  const heardOnly = new Set(
+    block.phrases.filter((phrase) => phrase.heard_only).map((phrase) => lessonAnswerText(phrase.phrase))
+  );
+  content.exercises.forEach((exercise, index) => {
+    let answer;
+    if (exercise.type === "CONVERSATION_BUILDER") {
+      answer = exercise.response_mode === "PICK" ? exercise.options?.[exercise.correct_option_index ?? -1]?.ar : exercise.correct_order?.map((tileIndex) => exercise.tiles?.[tileIndex]?.ar ?? "").join(" ");
+    } else if (exercise.type === "BUILD_SENTENCE" || exercise.type === "WORD_ORDER") {
+      answer = exercise.correct_order.map((tileIndex) => exercise.tiles[tileIndex]?.ar ?? "").join(" ");
+    } else if (exercise.type === "FILL_BLANK") {
+      answer = exercise.correct_answer.ar;
+    } else if (exercise.type === "SHADOW_REPEAT") {
+      answer = exercise.phrase.ar;
+    }
+    if (answer && heardOnly.has(answer.normalize("NFC").trim())) {
+      ctx.addIssue({
+        code: import_zod4.z.ZodIssueCode.custom,
+        path: ["exercises", index],
+        message: "a Conversation Lab exercise cannot score a heard_only phrase as the answer"
+      });
+    }
+  });
 });
 function isStandardLesson(v) {
   return v.template === "STANDARD";
@@ -935,6 +1044,7 @@ var exerciseFormConfig = {
   BuildSentenceExerciseSchema,
   CloseBeatSchema,
   ConversationBuilderExerciseSchema,
+  ConversationLabSchema,
   DiscoverCardSchema,
   ExerciseSchema,
   FillBlankExerciseSchema,

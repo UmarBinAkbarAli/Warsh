@@ -57,6 +57,14 @@ function lessonTypeLabel(type: string, t: ReturnType<typeof useT>) {
   }
 }
 
+function lessonKindLabel(lesson: any, t: ReturnType<typeof useT>) {
+  return lesson.isConversationLab ? t("lab.typeLabel") : lessonTypeLabel(lesson.type, t);
+}
+
+function lessonKindIcon(lesson: any): React.ComponentProps<typeof Ionicons>["name"] {
+  return lesson.isConversationLab ? "chatbubbles-outline" : lessonTypeIcon(lesson.type);
+}
+
 function lessonTypeIcon(type: string): React.ComponentProps<typeof Ionicons>["name"] {
   switch (type) {
     case "LISTENING":
@@ -106,8 +114,12 @@ function LessonPreviewSheet({
   const t = useT();
   if (!lesson) return null;
 
+  // A lab backfilled as skipped into a finished chapter is still new to the
+  // learner: offer to start it, not to review it.
+  const isNewLab = lesson.isConversationLab && !lesson.isCompleted;
+  const skipped = lesson.isSkippedByPlacement && !isNewLab;
   const ctaLabel =
-    lesson.isCompleted || lesson.isSkippedByPlacement ? t("chapter.reviewLesson") : t("chapter.startLesson");
+    lesson.isCompleted || skipped ? t("chapter.reviewLesson") : t("chapter.startLesson");
 
   return (
     <Modal statusBarTranslucent navigationBarTranslucent visible={visible} transparent animationType="slide" onRequestClose={onDismiss}>
@@ -117,8 +129,8 @@ function LessonPreviewSheet({
 
           {/* Lesson type pill */}
           <View style={styles.typePill}>
-            <Ionicons name={lessonTypeIcon(lesson.type)} size={14} color={WarshPalette.gold} />
-            <Text style={styles.typePillText}>{lessonTypeLabel(lesson.type, t)}</Text>
+            <Ionicons name={lessonKindIcon(lesson)} size={14} color={WarshPalette.gold} />
+            <Text style={styles.typePillText}>{lessonKindLabel(lesson, t)}</Text>
           </View>
 
           {/* Titles */}
@@ -138,7 +150,7 @@ function LessonPreviewSheet({
                 <Ionicons name="checkmark-circle" size={16} color={WarshPalette.sage} />
                 <Text style={[styles.sheetMetaText, { color: WarshPalette.sage }]}>{t("chapter.completedStatus")}</Text>
               </View>
-            ) : lesson.isSkippedByPlacement ? (
+            ) : skipped ? (
               <View style={styles.sheetMetaItem}>
                 <Ionicons name="play-skip-forward-outline" size={16} color={WarshPalette.subtleBrown} />
                 <Text style={[styles.sheetMetaText, { color: WarshPalette.subtleBrown }]}>{t("chapter.skippedStatus")}</Text>
@@ -270,15 +282,20 @@ export default function ChapterScreen() {
     <View style={desktopWeb ? undefined : { marginTop: Spacing.xl }}>
       {regularLessons.map((lesson: any, idx: number) => {
         const done = lesson.isCompleted;
-        const skipped = lesson.isSkippedByPlacement;
+        // A lab that is not completed is shown as new, including for learners
+        // whose finished chapter had it backfilled as skipped: "skipped by
+        // placement" would be untrue for a lesson that did not exist then.
+        const isNewLab = lesson.isConversationLab && !done;
+        const skipped = lesson.isSkippedByPlacement && !isNewLab;
         return (
           <TouchableOpacity
             key={lesson.id}
-            style={[styles.lessonCard, desktopWeb && styles.webLessonCard, done && styles.lessonCardDone]}
+            style={[styles.lessonCard, desktopWeb && styles.webLessonCard, done && styles.lessonCardDone, isNewLab && styles.lessonCardNewLab]}
             onPress={() => handleLessonTap(lesson)}
             activeOpacity={0.8}
           >
             {skipped ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
+            {isNewLab ? <StatusBadge label={t("lab.newBadge")} /> : null}
             <View style={styles.lessonCardTop}>
               <View style={styles.lessonIndex}>
                 {done ? (
@@ -295,8 +312,8 @@ export default function ChapterScreen() {
                   </ArabicText>
                 ) : null}
                 <View style={styles.lessonMeta}>
-                  <Ionicons name={lessonTypeIcon(lesson.type)} size={12} color={WarshPalette.gold} />
-                  <Text style={styles.lessonMetaText}>{lessonTypeLabel(lesson.type, t)}</Text>
+                  <Ionicons name={lessonKindIcon(lesson)} size={12} color={WarshPalette.gold} />
+                  <Text style={styles.lessonMetaText}>{lessonKindLabel(lesson, t)}</Text>
                   <Text style={styles.lessonMetaDot}>·</Text>
                   <Text style={styles.lessonMetaText}>{lesson.xpReward} XP</Text>
                 </View>
@@ -477,6 +494,11 @@ const styles = StyleSheet.create({
   lessonCardDone: {
     borderColor: WarshPalette.sage + "55",
     backgroundColor: WarshPalette.sageTintBg,
+  },
+  lessonCardNewLab: {
+    borderColor: WarshPalette.gold,
+    borderWidth: 2,
+    backgroundColor: WarshAlpha.goldWash,
   },
   lessonCardTop: { flexDirection: "row", alignItems: "center", gap: Spacing.md },
   lessonIndex: {

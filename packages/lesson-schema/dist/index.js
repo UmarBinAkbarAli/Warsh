@@ -288,6 +288,50 @@ var ChapterTestQuestionSchema = z4.object({
   options: z4.array(LocalizedAssessmentTextSchema.extend({ arabic: z4.string().min(1).optional() })).min(2).max(6),
   correct_index: z4.number().int().min(0)
 });
+var LocalizedSchema = z4.object({ en: z4.string().min(1), ur: z4.string().optional() });
+var LabArabicSchema = z4.object({
+  ar: z4.string().min(1),
+  ar_plain: z4.string().min(1),
+  translit: z4.string().min(1),
+  en: z4.string().min(1),
+  ur: z4.string().optional()
+});
+var LabMissionTurnSchema = z4.object({
+  prompt_phrase_id: z4.string().min(1),
+  goal_index: z4.number().int().min(0),
+  cue: LocalizedSchema.optional(),
+  response_mode: z4.enum(["PICK", "BUILD"]),
+  options: z4.array(LabArabicSchema).min(2).max(4).optional(),
+  correct_option_index: z4.number().int().min(0).optional(),
+  tiles: z4.array(LabArabicSchema).min(2).max(6).optional(),
+  correct_order: z4.array(z4.number().int().min(0)).min(1).optional()
+}).superRefine((turn, ctx) => {
+  if (turn.response_mode === "PICK") {
+    if (!turn.options || turn.correct_option_index === void 0 || turn.correct_option_index >= turn.options.length) {
+      ctx.addIssue({ code: z4.ZodIssueCode.custom, message: "PICK turns need options and a valid correct_option_index" });
+    }
+  } else if (!turn.tiles || !turn.correct_order || turn.correct_order.some((index) => index >= turn.tiles.length)) {
+    ctx.addIssue({ code: z4.ZodIssueCode.custom, message: "BUILD turns need tiles and a correct_order that points into them" });
+  }
+});
+var ConversationLabSchema = z4.object({
+  title: LocalizedSchema,
+  mission: LocalizedSchema,
+  toolkit: z4.array(z4.string().min(1)).max(8).optional(),
+  goals: z4.array(LocalizedSchema).min(1).max(4),
+  // "Notice the pattern" — shown once, straight after the named phrase card.
+  pattern: z4.object({
+    after_phrase_id: z4.string().min(1),
+    items: z4.array(z4.object({ ar: z4.string().min(1), meaning: LocalizedSchema, source: LocalizedSchema })).min(2).max(3),
+    note: LocalizedSchema
+  }).optional(),
+  shadow_phrase_ids: z4.array(z4.string().min(1)).min(1).max(5),
+  mission_turns: z4.array(LabMissionTurnSchema).min(1).max(6),
+  can_do: z4.array(z4.object({ kind: z4.enum(["SAY", "UNDERSTAND"]), label: LocalizedSchema, ar: z4.string().min(1) })).min(1).max(4)
+});
+function lessonAnswerText(value) {
+  return value.ar.normalize("NFC").trim();
+}
 var LessonContentSchema = z4.object({
   schema_version: z4.literal("1.0"),
   template: z4.enum(["STANDARD", "SPOKEN_PHRASES", "REVIEW", "VERB_PATTERN"]),
@@ -345,7 +389,10 @@ var LessonContentSchema = z4.object({
         id: z4.string().min(1),
         phrase: z4.object({ ar: z4.string().min(1), ar_plain: z4.string().min(1), translit: z4.string().min(1), en: z4.string().min(1), ur: z4.string().optional() }),
         audio_url: z4.string(),
-        context: z4.object({ en: z4.string().min(1), ur: z4.string().optional() }).optional()
+        context: z4.object({ en: z4.string().min(1), ur: z4.string().optional() }).optional(),
+        // Recognition only: the learner hears and understands it but is
+        // never asked to produce it (a form the host chapter has not taught).
+        heard_only: z4.boolean().optional()
       })
     ).min(4),
     dialogue: z4.array(
@@ -353,7 +400,43 @@ var LessonContentSchema = z4.object({
         speaker: z4.enum(["A", "B"]),
         phrase_id: z4.string()
       })
-    ).optional()
+    ).optional(),
+    lab: ConversationLabSchema.optional()
+  }).superRefine((block, ctx) => {
+    const lab = block.lab;
+    if (!lab) return;
+    const phraseById = new Map(block.phrases.map((phrase) => [phrase.id, phrase]));
+    const heardOnly = new Set(
+      block.phrases.filter((phrase) => phrase.heard_only).map((phrase) => lessonAnswerText(phrase.phrase))
+    );
+    const issue = (path, message) => ctx.addIssue({ code: z4.ZodIssueCode.custom, path: ["lab", ...path], message });
+    if (!block.dialogue || block.dialogue.length < 2) {
+      ctx.addIssue({ code: z4.ZodIssueCode.custom, path: ["dialogue"], message: "a Conversation Lab needs a dialogue of at least two lines" });
+    }
+    block.dialogue?.forEach((line, index) => {
+      const phrase = phraseById.get(line.phrase_id);
+      if (!phrase) {
+        ctx.addIssue({ code: z4.ZodIssueCode.custom, path: ["dialogue", index, "phrase_id"], message: "dialogue phrase_id must name a phrase" });
+      } else if (line.speaker === "B" && phrase.heard_only) {
+        ctx.addIssue({ code: z4.ZodIssueCode.custom, path: ["dialogue", index, "phrase_id"], message: "the learner (speaker B) cannot say a heard_only phrase" });
+      }
+    });
+    if (lab.pattern && !phraseById.has(lab.pattern.after_phrase_id)) {
+      issue(["pattern", "after_phrase_id"], "after_phrase_id must name a phrase");
+    }
+    lab.shadow_phrase_ids.forEach((id, index) => {
+      const phrase = phraseById.get(id);
+      if (!phrase) issue(["shadow_phrase_ids", index], "shadow phrase must name a phrase");
+      else if (phrase.heard_only) issue(["shadow_phrase_ids", index], "a heard_only phrase cannot be a speaking target");
+    });
+    lab.mission_turns.forEach((turn, index) => {
+      if (!phraseById.has(turn.prompt_phrase_id)) issue(["mission_turns", index, "prompt_phrase_id"], "prompt_phrase_id must name a phrase");
+      if (turn.goal_index >= lab.goals.length) issue(["mission_turns", index, "goal_index"], "goal_index must point at a goal");
+      const answer = turn.response_mode === "PICK" ? turn.options?.[turn.correct_option_index ?? -1]?.ar : turn.correct_order?.map((tileIndex) => turn.tiles?.[tileIndex]?.ar ?? "").join(" ");
+      if (answer && heardOnly.has(answer.normalize("NFC").trim())) {
+        issue(["mission_turns", index], "a mission answer cannot be a heard_only phrase");
+      }
+    });
   }).optional(),
   conjugation_table: z4.object({
     root: z4.string(),
@@ -366,6 +449,31 @@ var LessonContentSchema = z4.object({
       })
     ).min(1)
   }).optional()
+}).superRefine((content, ctx) => {
+  const block = content.spoken_phrases;
+  if (!block?.lab || !content.exercises) return;
+  const heardOnly = new Set(
+    block.phrases.filter((phrase) => phrase.heard_only).map((phrase) => lessonAnswerText(phrase.phrase))
+  );
+  content.exercises.forEach((exercise, index) => {
+    let answer;
+    if (exercise.type === "CONVERSATION_BUILDER") {
+      answer = exercise.response_mode === "PICK" ? exercise.options?.[exercise.correct_option_index ?? -1]?.ar : exercise.correct_order?.map((tileIndex) => exercise.tiles?.[tileIndex]?.ar ?? "").join(" ");
+    } else if (exercise.type === "BUILD_SENTENCE" || exercise.type === "WORD_ORDER") {
+      answer = exercise.correct_order.map((tileIndex) => exercise.tiles[tileIndex]?.ar ?? "").join(" ");
+    } else if (exercise.type === "FILL_BLANK") {
+      answer = exercise.correct_answer.ar;
+    } else if (exercise.type === "SHADOW_REPEAT") {
+      answer = exercise.phrase.ar;
+    }
+    if (answer && heardOnly.has(answer.normalize("NFC").trim())) {
+      ctx.addIssue({
+        code: z4.ZodIssueCode.custom,
+        path: ["exercises", index],
+        message: "a Conversation Lab exercise cannot score a heard_only phrase as the answer"
+      });
+    }
+  });
 });
 function isStandardLesson(v) {
   return v.template === "STANDARD";
@@ -873,6 +981,7 @@ export {
   BuildSentenceExerciseSchema,
   CloseBeatSchema,
   ConversationBuilderExerciseSchema,
+  ConversationLabSchema,
   DiscoverCardSchema,
   ExerciseSchema,
   FillBlankExerciseSchema,

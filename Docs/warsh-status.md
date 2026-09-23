@@ -600,6 +600,36 @@ Everything below this list is either done and verified, or one of these:
    complete +15. Not done: scholarly review of the grammar explanations (the
    proposal requires it before promotion), and Warsh Studio content-review
    pass in Urdu.
+   **Conversation Labs — CL6 Home and Family (Chapter 11 pilot) is built and
+   staging-verified 2026-09-23; production promotion is pending the owner's
+   go-ahead.** Design: Pen section 25 (approved). Proposal:
+   `Docs/proposals/conversation-labs-curriculum-proposal.md`. A lab is a
+   `SPOKEN_PHRASES` lesson with a `spoken_phrases.lab` block
+   (`@warsh/lesson-schema`: mission, goals, pattern note, speaking lines,
+   mission turns, can-do list; phrases may be `heard_only`, and the schema
+   rejects a heard-only form as a learner line, speaking target, mission
+   answer or scored exercise answer). Player beats: scene → listen first +
+   phrases → scored practice (existing exercise renderer, 70 % pass) → speak
+   (`ShadowRepeatExercise`) + mission (retry, never scored) → close with the
+   can-do card (`components/ConversationLab.tsx`). `ch11-cl06` sits at order
+   6; the review `ch11-l06` and `ch11-test` keep their IDs and move to 7 and 8
+   (fixtures renamed to `-lesson-07-review` / `-lesson-08-final-test` because
+   fixtures map to rows by position). Chapter list shows a "New" badge and
+   the Conversation Lab label instead of "Skipped by placement" for a
+   backfilled lab. Fixed on the way: completing a lesson that was
+   `SKIPPED_BY_PLACEMENT` re-paid the 50 XP chapter bonus and claimed "Next
+   chapter unlocked" — it now only fires when that completion is what
+   finishes the chapter. Audio: 10 phrase clips + 4 catalogue clips in R2
+   (catalogue audit 3836/3836). Staging: `content:promote-conversation-lab-ch11
+   -- --apply` + `content:backfill-new-lessons -- --lesson-ids ch11-cl06
+   --apply` (9 learners); emulator walk-through of every step on the test
+   account. Production steps when approved: `content:check`, the promotion
+   script `--apply`, the backfill `--apply`, `content:baseline`, then
+   commit and deploy the backend and `deploy:web`; the Android client needs a
+   release before native learners see lab screens. Open: the owner's
+   decision on telling already-finished learners (the new-lessons prompt
+   never shows for them, because the backfill keeps their map unlocked);
+   scene illustration (owner-supplied); scholarly review of the Arabic.
 3. ~~**Speak mic re-prompt on the Tecno**~~ — **verified on hardware
    2026-09-17** on the Play-installed 1.0.11. The owner's account is on
    Chapter 2, so the check used a throwaway production account placed at

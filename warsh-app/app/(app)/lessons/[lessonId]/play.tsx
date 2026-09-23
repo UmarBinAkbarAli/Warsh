@@ -9,6 +9,7 @@ import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { PlayButton } from "@components/PlayButton";
 import { ShadowRepeatExercise } from "@components/ShadowRepeatExercise";
+import { getConversationLab, LabCanDoCard, LabIntroScreen, LabListenAndPhrases, LabSpeakAndMission } from "@components/ConversationLab";
 import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../../../constants/theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
@@ -489,6 +490,10 @@ export default function LessonPlayScreen() {
 
   // Shorthand content accessor — avoids casting everywhere
   const c = (lesson?.content ?? {}) as Record<string, any>;
+  // A Conversation Lab is a SPOKEN_PHRASES lesson with a spoken_phrases.lab
+  // block. It keeps the five beats: 1 scene, 2 listen + phrases, 3 scored
+  // practice (the shared exercise renderer), 4 speak + mission, 5 close.
+  const lab = getConversationLab(c);
   // Memoized so the prefetch effects below keep a stable dependency; rebuilding
   // these arrays each render made the warm-up re-fire on every state change.
   const discoverCards = useMemo(
@@ -711,13 +716,14 @@ export default function LessonPlayScreen() {
   // Hardware back on Discover and Practice must agree with the close button —
   // otherwise one exits silently and the other asks.
   useEffect(() => {
-    if (Platform.OS !== "android" || (currentBeat !== 2 && currentBeat !== 3)) return;
+    const guarded = currentBeat === 2 || currentBeat === 3 || (Boolean(lab) && currentBeat === 4);
+    if (Platform.OS !== "android" || !guarded) return;
     const sub = BackHandler.addEventListener("hardwareBackPress", () => {
       setShowExitConfirm(true);
       return true;
     });
     return () => sub.remove();
-  }, [currentBeat]);
+  }, [currentBeat, lab]);
 
   function goToBeat(beat: number) {
     setCurrentBeat(beat);
@@ -1353,7 +1359,9 @@ export default function LessonPlayScreen() {
             <Text style={styles.exitBody}>
               {progressSaved
                 ? t("player.leaveLessonSavedBody")
-                : t("player.leaveLessonBody", { current: currentCardIndex + 1, total: discoverCards.length })}
+                : lab
+                  ? t("lab.leaveBody")
+                  : t("player.leaveLessonBody", { current: currentCardIndex + 1, total: discoverCards.length })}
             </Text>
             <BrandButton
               title={t("player.keepLearning")}
@@ -1594,7 +1602,7 @@ export default function LessonPlayScreen() {
     const practiceCount = isSpoken ? spokenPhraseCount : exercises.length;
 
     const closeBlock = c.close as Record<string, any> | undefined;
-    const noorTip = isSpoken
+    const noorTip = isSpoken && !lab
       ? t("player.closeSpokenTip", {
           count: spokenPhraseCount,
           suffix: spokenPhraseCount !== 1 ? "s" : "",
@@ -1617,7 +1625,7 @@ export default function LessonPlayScreen() {
             <View style={styles.noorMonogram}>
               <Ionicons name="checkmark" size={28} color={WarshPalette.parchment} />
             </View>
-            <Text style={styles.completeCardTitle}>{t("player.lessonComplete")}</Text>
+            <Text style={styles.completeCardTitle}>{lab ? t("lab.completeTitle") : t("player.lessonComplete")}</Text>
             <ArabicText size="md" style={styles.closeArabic}>بَارَكَ اللَّهُ فِيكَ</ArabicText>
           </View>
 
@@ -1645,7 +1653,8 @@ export default function LessonPlayScreen() {
               {t("player.nextChapterUnlocked")}
             </Text>
           ) : null}
-          {isSpoken && phrasesLearned > 0 ? (
+          {lab ? <LabCanDoCard content={c} language={language} /> : null}
+          {isSpoken && !lab && phrasesLearned > 0 ? (
             <Text style={styles.spPhrasesEarned}>
               {t("player.phrasesToSay", { count: phrasesLearned, suffix: phrasesLearned !== 1 ? "s" : "" })}
             </Text>
@@ -1952,6 +1961,32 @@ export default function LessonPlayScreen() {
     );
   }
 
+  if (lab) {
+    const closeLesson = () => setShowExitConfirm(true);
+    const labPadding = screenPadding;
+    if (currentBeat === 5) return failResult ? renderRetry() : renderClose();
+    if (currentBeat === 3) return renderPractice();
+    return (
+      <View style={styles.labRoot}>
+        {currentBeat === 2 ? (
+          <LabListenAndPhrases content={c} language={language} contentStyle={labPadding} onDone={() => goToBeat(3)} onClose={closeLesson} />
+        ) : currentBeat === 4 ? (
+          <LabSpeakAndMission
+            content={c}
+            language={language}
+            contentStyle={labPadding}
+            onLineSpoken={() => { phrasesCompletedRef.current += 1; }}
+            onDone={() => goToBeat(5)}
+            onClose={closeLesson}
+          />
+        ) : (
+          <LabIntroScreen content={c} language={language} contentStyle={labPadding} onStart={() => goToBeat(2)} onClose={closeLesson} />
+        )}
+        {renderExitConfirm()}
+      </View>
+    );
+  }
+
   if (lesson.template === "SPOKEN_PHRASES") {
     if (currentBeat === 5) return renderClose();
     if (currentBeat === 2) return renderSP2Phrases();
@@ -1971,6 +2006,10 @@ export default function LessonPlayScreen() {
 }
 
 const styles = StyleSheet.create({
+  labRoot: {
+    flex: 1,
+    backgroundColor: WarshPalette.creamBg,
+  },
   loadingScreen: {
     flex: 1,
     alignItems: "center",

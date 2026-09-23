@@ -189,7 +189,12 @@ export async function POST(request: Request, { params }: Props) {
       }),
     ]);
 
-    if (totalInChapter > 0 && doneInChapter === totalInChapter) {
+    // A lesson that was SKIPPED_BY_PLACEMENT already counted towards the
+    // chapter, so finishing it cannot be what completes the chapter. Without
+    // this, a lesson backfilled into a finished chapter (content:backfill-new-
+    // lessons) paid the chapter bonus a second time and announced an unlock.
+    const alreadyCounted = existingStatus === PROGRESS_STATUS.SKIPPED_BY_PLACEMENT;
+    if (totalInChapter > 0 && doneInChapter === totalInChapter && !alreadyCounted) {
       chapterBonusXp = 50;
       chapterJustCompleted = true;
       await tx.user.update({ where: { id: userId }, data: { xp: { increment: 50 } } });

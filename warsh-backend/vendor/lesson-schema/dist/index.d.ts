@@ -3520,7 +3520,442 @@ type Exercise = z.infer<typeof ExerciseSchema>;
 type ExerciseType = Exercise["type"];
 declare function isExercise(value: unknown): value is Exercise;
 
-declare const LessonContentSchema: z.ZodObject<{
+declare const ConversationLabSchema: z.ZodObject<{
+    title: z.ZodObject<{
+        en: z.ZodString;
+        ur: z.ZodOptional<z.ZodString>;
+    }, "strip", z.ZodTypeAny, {
+        en: string;
+        ur?: string | undefined;
+    }, {
+        en: string;
+        ur?: string | undefined;
+    }>;
+    mission: z.ZodObject<{
+        en: z.ZodString;
+        ur: z.ZodOptional<z.ZodString>;
+    }, "strip", z.ZodTypeAny, {
+        en: string;
+        ur?: string | undefined;
+    }, {
+        en: string;
+        ur?: string | undefined;
+    }>;
+    toolkit: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+    goals: z.ZodArray<z.ZodObject<{
+        en: z.ZodString;
+        ur: z.ZodOptional<z.ZodString>;
+    }, "strip", z.ZodTypeAny, {
+        en: string;
+        ur?: string | undefined;
+    }, {
+        en: string;
+        ur?: string | undefined;
+    }>, "many">;
+    pattern: z.ZodOptional<z.ZodObject<{
+        after_phrase_id: z.ZodString;
+        items: z.ZodArray<z.ZodObject<{
+            ar: z.ZodString;
+            meaning: z.ZodObject<{
+                en: z.ZodString;
+                ur: z.ZodOptional<z.ZodString>;
+            }, "strip", z.ZodTypeAny, {
+                en: string;
+                ur?: string | undefined;
+            }, {
+                en: string;
+                ur?: string | undefined;
+            }>;
+            source: z.ZodObject<{
+                en: z.ZodString;
+                ur: z.ZodOptional<z.ZodString>;
+            }, "strip", z.ZodTypeAny, {
+                en: string;
+                ur?: string | undefined;
+            }, {
+                en: string;
+                ur?: string | undefined;
+            }>;
+        }, "strip", z.ZodTypeAny, {
+            ar: string;
+            source: {
+                en: string;
+                ur?: string | undefined;
+            };
+            meaning: {
+                en: string;
+                ur?: string | undefined;
+            };
+        }, {
+            ar: string;
+            source: {
+                en: string;
+                ur?: string | undefined;
+            };
+            meaning: {
+                en: string;
+                ur?: string | undefined;
+            };
+        }>, "many">;
+        note: z.ZodObject<{
+            en: z.ZodString;
+            ur: z.ZodOptional<z.ZodString>;
+        }, "strip", z.ZodTypeAny, {
+            en: string;
+            ur?: string | undefined;
+        }, {
+            en: string;
+            ur?: string | undefined;
+        }>;
+    }, "strip", z.ZodTypeAny, {
+        after_phrase_id: string;
+        items: {
+            ar: string;
+            source: {
+                en: string;
+                ur?: string | undefined;
+            };
+            meaning: {
+                en: string;
+                ur?: string | undefined;
+            };
+        }[];
+        note: {
+            en: string;
+            ur?: string | undefined;
+        };
+    }, {
+        after_phrase_id: string;
+        items: {
+            ar: string;
+            source: {
+                en: string;
+                ur?: string | undefined;
+            };
+            meaning: {
+                en: string;
+                ur?: string | undefined;
+            };
+        }[];
+        note: {
+            en: string;
+            ur?: string | undefined;
+        };
+    }>>;
+    shadow_phrase_ids: z.ZodArray<z.ZodString, "many">;
+    mission_turns: z.ZodArray<z.ZodEffects<z.ZodObject<{
+        prompt_phrase_id: z.ZodString;
+        goal_index: z.ZodNumber;
+        cue: z.ZodOptional<z.ZodObject<{
+            en: z.ZodString;
+            ur: z.ZodOptional<z.ZodString>;
+        }, "strip", z.ZodTypeAny, {
+            en: string;
+            ur?: string | undefined;
+        }, {
+            en: string;
+            ur?: string | undefined;
+        }>>;
+        response_mode: z.ZodEnum<["PICK", "BUILD"]>;
+        options: z.ZodOptional<z.ZodArray<z.ZodObject<{
+            ar: z.ZodString;
+            ar_plain: z.ZodString;
+            translit: z.ZodString;
+            en: z.ZodString;
+            ur: z.ZodOptional<z.ZodString>;
+        }, "strip", z.ZodTypeAny, {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }, {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }>, "many">>;
+        correct_option_index: z.ZodOptional<z.ZodNumber>;
+        tiles: z.ZodOptional<z.ZodArray<z.ZodObject<{
+            ar: z.ZodString;
+            ar_plain: z.ZodString;
+            translit: z.ZodString;
+            en: z.ZodString;
+            ur: z.ZodOptional<z.ZodString>;
+        }, "strip", z.ZodTypeAny, {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }, {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }>, "many">>;
+        correct_order: z.ZodOptional<z.ZodArray<z.ZodNumber, "many">>;
+    }, "strip", z.ZodTypeAny, {
+        response_mode: "PICK" | "BUILD";
+        prompt_phrase_id: string;
+        goal_index: number;
+        options?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        tiles?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        correct_order?: number[] | undefined;
+        correct_option_index?: number | undefined;
+        cue?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    }, {
+        response_mode: "PICK" | "BUILD";
+        prompt_phrase_id: string;
+        goal_index: number;
+        options?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        tiles?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        correct_order?: number[] | undefined;
+        correct_option_index?: number | undefined;
+        cue?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    }>, {
+        response_mode: "PICK" | "BUILD";
+        prompt_phrase_id: string;
+        goal_index: number;
+        options?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        tiles?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        correct_order?: number[] | undefined;
+        correct_option_index?: number | undefined;
+        cue?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    }, {
+        response_mode: "PICK" | "BUILD";
+        prompt_phrase_id: string;
+        goal_index: number;
+        options?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        tiles?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        correct_order?: number[] | undefined;
+        correct_option_index?: number | undefined;
+        cue?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    }>, "many">;
+    can_do: z.ZodArray<z.ZodObject<{
+        kind: z.ZodEnum<["SAY", "UNDERSTAND"]>;
+        label: z.ZodObject<{
+            en: z.ZodString;
+            ur: z.ZodOptional<z.ZodString>;
+        }, "strip", z.ZodTypeAny, {
+            en: string;
+            ur?: string | undefined;
+        }, {
+            en: string;
+            ur?: string | undefined;
+        }>;
+        ar: z.ZodString;
+    }, "strip", z.ZodTypeAny, {
+        ar: string;
+        label: {
+            en: string;
+            ur?: string | undefined;
+        };
+        kind: "SAY" | "UNDERSTAND";
+    }, {
+        ar: string;
+        label: {
+            en: string;
+            ur?: string | undefined;
+        };
+        kind: "SAY" | "UNDERSTAND";
+    }>, "many">;
+}, "strip", z.ZodTypeAny, {
+    title: {
+        en: string;
+        ur?: string | undefined;
+    };
+    mission: {
+        en: string;
+        ur?: string | undefined;
+    };
+    goals: {
+        en: string;
+        ur?: string | undefined;
+    }[];
+    shadow_phrase_ids: string[];
+    mission_turns: {
+        response_mode: "PICK" | "BUILD";
+        prompt_phrase_id: string;
+        goal_index: number;
+        options?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        tiles?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        correct_order?: number[] | undefined;
+        correct_option_index?: number | undefined;
+        cue?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    }[];
+    can_do: {
+        ar: string;
+        label: {
+            en: string;
+            ur?: string | undefined;
+        };
+        kind: "SAY" | "UNDERSTAND";
+    }[];
+    toolkit?: string[] | undefined;
+    pattern?: {
+        after_phrase_id: string;
+        items: {
+            ar: string;
+            source: {
+                en: string;
+                ur?: string | undefined;
+            };
+            meaning: {
+                en: string;
+                ur?: string | undefined;
+            };
+        }[];
+        note: {
+            en: string;
+            ur?: string | undefined;
+        };
+    } | undefined;
+}, {
+    title: {
+        en: string;
+        ur?: string | undefined;
+    };
+    mission: {
+        en: string;
+        ur?: string | undefined;
+    };
+    goals: {
+        en: string;
+        ur?: string | undefined;
+    }[];
+    shadow_phrase_ids: string[];
+    mission_turns: {
+        response_mode: "PICK" | "BUILD";
+        prompt_phrase_id: string;
+        goal_index: number;
+        options?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        tiles?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        correct_order?: number[] | undefined;
+        correct_option_index?: number | undefined;
+        cue?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    }[];
+    can_do: {
+        ar: string;
+        label: {
+            en: string;
+            ur?: string | undefined;
+        };
+        kind: "SAY" | "UNDERSTAND";
+    }[];
+    toolkit?: string[] | undefined;
+    pattern?: {
+        after_phrase_id: string;
+        items: {
+            ar: string;
+            source: {
+                en: string;
+                ur?: string | undefined;
+            };
+            meaning: {
+                en: string;
+                ur?: string | undefined;
+            };
+        }[];
+        note: {
+            en: string;
+            ur?: string | undefined;
+        };
+    } | undefined;
+}>;
+declare const LessonContentSchema: z.ZodEffects<z.ZodObject<{
     schema_version: z.ZodLiteral<"1.0">;
     template: z.ZodEnum<["STANDARD", "SPOKEN_PHRASES", "REVIEW", "VERB_PATTERN"]>;
     hook: z.ZodObject<{
@@ -5919,7 +6354,7 @@ declare const LessonContentSchema: z.ZodObject<{
         };
         highlighted_words?: string[] | undefined;
     }>>;
-    spoken_phrases: z.ZodOptional<z.ZodObject<{
+    spoken_phrases: z.ZodOptional<z.ZodEffects<z.ZodObject<{
         scene: z.ZodObject<{
             en: z.ZodString;
             ur: z.ZodOptional<z.ZodString>;
@@ -5962,6 +6397,7 @@ declare const LessonContentSchema: z.ZodObject<{
                 en: string;
                 ur?: string | undefined;
             }>>;
+            heard_only: z.ZodOptional<z.ZodBoolean>;
         }, "strip", z.ZodTypeAny, {
             audio_url: string;
             id: string;
@@ -5976,6 +6412,7 @@ declare const LessonContentSchema: z.ZodObject<{
                 en: string;
                 ur?: string | undefined;
             } | undefined;
+            heard_only?: boolean | undefined;
         }, {
             audio_url: string;
             id: string;
@@ -5990,6 +6427,7 @@ declare const LessonContentSchema: z.ZodObject<{
                 en: string;
                 ur?: string | undefined;
             } | undefined;
+            heard_only?: boolean | undefined;
         }>, "many">;
         dialogue: z.ZodOptional<z.ZodArray<z.ZodObject<{
             speaker: z.ZodEnum<["A", "B"]>;
@@ -6001,6 +6439,441 @@ declare const LessonContentSchema: z.ZodObject<{
             speaker: "A" | "B";
             phrase_id: string;
         }>, "many">>;
+        lab: z.ZodOptional<z.ZodObject<{
+            title: z.ZodObject<{
+                en: z.ZodString;
+                ur: z.ZodOptional<z.ZodString>;
+            }, "strip", z.ZodTypeAny, {
+                en: string;
+                ur?: string | undefined;
+            }, {
+                en: string;
+                ur?: string | undefined;
+            }>;
+            mission: z.ZodObject<{
+                en: z.ZodString;
+                ur: z.ZodOptional<z.ZodString>;
+            }, "strip", z.ZodTypeAny, {
+                en: string;
+                ur?: string | undefined;
+            }, {
+                en: string;
+                ur?: string | undefined;
+            }>;
+            toolkit: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+            goals: z.ZodArray<z.ZodObject<{
+                en: z.ZodString;
+                ur: z.ZodOptional<z.ZodString>;
+            }, "strip", z.ZodTypeAny, {
+                en: string;
+                ur?: string | undefined;
+            }, {
+                en: string;
+                ur?: string | undefined;
+            }>, "many">;
+            pattern: z.ZodOptional<z.ZodObject<{
+                after_phrase_id: z.ZodString;
+                items: z.ZodArray<z.ZodObject<{
+                    ar: z.ZodString;
+                    meaning: z.ZodObject<{
+                        en: z.ZodString;
+                        ur: z.ZodOptional<z.ZodString>;
+                    }, "strip", z.ZodTypeAny, {
+                        en: string;
+                        ur?: string | undefined;
+                    }, {
+                        en: string;
+                        ur?: string | undefined;
+                    }>;
+                    source: z.ZodObject<{
+                        en: z.ZodString;
+                        ur: z.ZodOptional<z.ZodString>;
+                    }, "strip", z.ZodTypeAny, {
+                        en: string;
+                        ur?: string | undefined;
+                    }, {
+                        en: string;
+                        ur?: string | undefined;
+                    }>;
+                }, "strip", z.ZodTypeAny, {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }, {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }>, "many">;
+                note: z.ZodObject<{
+                    en: z.ZodString;
+                    ur: z.ZodOptional<z.ZodString>;
+                }, "strip", z.ZodTypeAny, {
+                    en: string;
+                    ur?: string | undefined;
+                }, {
+                    en: string;
+                    ur?: string | undefined;
+                }>;
+            }, "strip", z.ZodTypeAny, {
+                after_phrase_id: string;
+                items: {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }[];
+                note: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+            }, {
+                after_phrase_id: string;
+                items: {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }[];
+                note: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+            }>>;
+            shadow_phrase_ids: z.ZodArray<z.ZodString, "many">;
+            mission_turns: z.ZodArray<z.ZodEffects<z.ZodObject<{
+                prompt_phrase_id: z.ZodString;
+                goal_index: z.ZodNumber;
+                cue: z.ZodOptional<z.ZodObject<{
+                    en: z.ZodString;
+                    ur: z.ZodOptional<z.ZodString>;
+                }, "strip", z.ZodTypeAny, {
+                    en: string;
+                    ur?: string | undefined;
+                }, {
+                    en: string;
+                    ur?: string | undefined;
+                }>>;
+                response_mode: z.ZodEnum<["PICK", "BUILD"]>;
+                options: z.ZodOptional<z.ZodArray<z.ZodObject<{
+                    ar: z.ZodString;
+                    ar_plain: z.ZodString;
+                    translit: z.ZodString;
+                    en: z.ZodString;
+                    ur: z.ZodOptional<z.ZodString>;
+                }, "strip", z.ZodTypeAny, {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }, {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }>, "many">>;
+                correct_option_index: z.ZodOptional<z.ZodNumber>;
+                tiles: z.ZodOptional<z.ZodArray<z.ZodObject<{
+                    ar: z.ZodString;
+                    ar_plain: z.ZodString;
+                    translit: z.ZodString;
+                    en: z.ZodString;
+                    ur: z.ZodOptional<z.ZodString>;
+                }, "strip", z.ZodTypeAny, {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }, {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }>, "many">>;
+                correct_order: z.ZodOptional<z.ZodArray<z.ZodNumber, "many">>;
+            }, "strip", z.ZodTypeAny, {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }, {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }>, {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }, {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }>, "many">;
+            can_do: z.ZodArray<z.ZodObject<{
+                kind: z.ZodEnum<["SAY", "UNDERSTAND"]>;
+                label: z.ZodObject<{
+                    en: z.ZodString;
+                    ur: z.ZodOptional<z.ZodString>;
+                }, "strip", z.ZodTypeAny, {
+                    en: string;
+                    ur?: string | undefined;
+                }, {
+                    en: string;
+                    ur?: string | undefined;
+                }>;
+                ar: z.ZodString;
+            }, "strip", z.ZodTypeAny, {
+                ar: string;
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "SAY" | "UNDERSTAND";
+            }, {
+                ar: string;
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "SAY" | "UNDERSTAND";
+            }>, "many">;
+        }, "strip", z.ZodTypeAny, {
+            title: {
+                en: string;
+                ur?: string | undefined;
+            };
+            mission: {
+                en: string;
+                ur?: string | undefined;
+            };
+            goals: {
+                en: string;
+                ur?: string | undefined;
+            }[];
+            shadow_phrase_ids: string[];
+            mission_turns: {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }[];
+            can_do: {
+                ar: string;
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "SAY" | "UNDERSTAND";
+            }[];
+            toolkit?: string[] | undefined;
+            pattern?: {
+                after_phrase_id: string;
+                items: {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }[];
+                note: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+            } | undefined;
+        }, {
+            title: {
+                en: string;
+                ur?: string | undefined;
+            };
+            mission: {
+                en: string;
+                ur?: string | undefined;
+            };
+            goals: {
+                en: string;
+                ur?: string | undefined;
+            }[];
+            shadow_phrase_ids: string[];
+            mission_turns: {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }[];
+            can_do: {
+                ar: string;
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "SAY" | "UNDERSTAND";
+            }[];
+            toolkit?: string[] | undefined;
+            pattern?: {
+                after_phrase_id: string;
+                items: {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }[];
+                note: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+            } | undefined;
+        }>>;
     }, "strip", z.ZodTypeAny, {
         scene: {
             en: string;
@@ -6020,11 +6893,79 @@ declare const LessonContentSchema: z.ZodObject<{
                 en: string;
                 ur?: string | undefined;
             } | undefined;
+            heard_only?: boolean | undefined;
         }[];
         dialogue?: {
             speaker: "A" | "B";
             phrase_id: string;
         }[] | undefined;
+        lab?: {
+            title: {
+                en: string;
+                ur?: string | undefined;
+            };
+            mission: {
+                en: string;
+                ur?: string | undefined;
+            };
+            goals: {
+                en: string;
+                ur?: string | undefined;
+            }[];
+            shadow_phrase_ids: string[];
+            mission_turns: {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }[];
+            can_do: {
+                ar: string;
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "SAY" | "UNDERSTAND";
+            }[];
+            toolkit?: string[] | undefined;
+            pattern?: {
+                after_phrase_id: string;
+                items: {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }[];
+                note: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+            } | undefined;
+        } | undefined;
     }, {
         scene: {
             en: string;
@@ -6044,11 +6985,263 @@ declare const LessonContentSchema: z.ZodObject<{
                 en: string;
                 ur?: string | undefined;
             } | undefined;
+            heard_only?: boolean | undefined;
         }[];
         dialogue?: {
             speaker: "A" | "B";
             phrase_id: string;
         }[] | undefined;
+        lab?: {
+            title: {
+                en: string;
+                ur?: string | undefined;
+            };
+            mission: {
+                en: string;
+                ur?: string | undefined;
+            };
+            goals: {
+                en: string;
+                ur?: string | undefined;
+            }[];
+            shadow_phrase_ids: string[];
+            mission_turns: {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }[];
+            can_do: {
+                ar: string;
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "SAY" | "UNDERSTAND";
+            }[];
+            toolkit?: string[] | undefined;
+            pattern?: {
+                after_phrase_id: string;
+                items: {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }[];
+                note: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+            } | undefined;
+        } | undefined;
+    }>, {
+        scene: {
+            en: string;
+            ur?: string | undefined;
+        };
+        phrases: {
+            audio_url: string;
+            id: string;
+            phrase: {
+                ar: string;
+                ar_plain: string;
+                translit: string;
+                en: string;
+                ur?: string | undefined;
+            };
+            context?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            heard_only?: boolean | undefined;
+        }[];
+        dialogue?: {
+            speaker: "A" | "B";
+            phrase_id: string;
+        }[] | undefined;
+        lab?: {
+            title: {
+                en: string;
+                ur?: string | undefined;
+            };
+            mission: {
+                en: string;
+                ur?: string | undefined;
+            };
+            goals: {
+                en: string;
+                ur?: string | undefined;
+            }[];
+            shadow_phrase_ids: string[];
+            mission_turns: {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }[];
+            can_do: {
+                ar: string;
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "SAY" | "UNDERSTAND";
+            }[];
+            toolkit?: string[] | undefined;
+            pattern?: {
+                after_phrase_id: string;
+                items: {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }[];
+                note: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+            } | undefined;
+        } | undefined;
+    }, {
+        scene: {
+            en: string;
+            ur?: string | undefined;
+        };
+        phrases: {
+            audio_url: string;
+            id: string;
+            phrase: {
+                ar: string;
+                ar_plain: string;
+                translit: string;
+                en: string;
+                ur?: string | undefined;
+            };
+            context?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            heard_only?: boolean | undefined;
+        }[];
+        dialogue?: {
+            speaker: "A" | "B";
+            phrase_id: string;
+        }[] | undefined;
+        lab?: {
+            title: {
+                en: string;
+                ur?: string | undefined;
+            };
+            mission: {
+                en: string;
+                ur?: string | undefined;
+            };
+            goals: {
+                en: string;
+                ur?: string | undefined;
+            }[];
+            shadow_phrase_ids: string[];
+            mission_turns: {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }[];
+            can_do: {
+                ar: string;
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "SAY" | "UNDERSTAND";
+            }[];
+            toolkit?: string[] | undefined;
+            pattern?: {
+                after_phrase_id: string;
+                items: {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }[];
+                note: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+            } | undefined;
+        } | undefined;
     }>>;
     conjugation_table: z.ZodOptional<z.ZodObject<{
         root: z.ZodString;
@@ -6753,11 +7946,79 @@ declare const LessonContentSchema: z.ZodObject<{
                 en: string;
                 ur?: string | undefined;
             } | undefined;
+            heard_only?: boolean | undefined;
         }[];
         dialogue?: {
             speaker: "A" | "B";
             phrase_id: string;
         }[] | undefined;
+        lab?: {
+            title: {
+                en: string;
+                ur?: string | undefined;
+            };
+            mission: {
+                en: string;
+                ur?: string | undefined;
+            };
+            goals: {
+                en: string;
+                ur?: string | undefined;
+            }[];
+            shadow_phrase_ids: string[];
+            mission_turns: {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }[];
+            can_do: {
+                ar: string;
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "SAY" | "UNDERSTAND";
+            }[];
+            toolkit?: string[] | undefined;
+            pattern?: {
+                after_phrase_id: string;
+                items: {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }[];
+                note: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+            } | undefined;
+        } | undefined;
     } | undefined;
     conjugation_table?: {
         root: string;
@@ -7350,11 +8611,1409 @@ declare const LessonContentSchema: z.ZodObject<{
                 en: string;
                 ur?: string | undefined;
             } | undefined;
+            heard_only?: boolean | undefined;
         }[];
         dialogue?: {
             speaker: "A" | "B";
             phrase_id: string;
         }[] | undefined;
+        lab?: {
+            title: {
+                en: string;
+                ur?: string | undefined;
+            };
+            mission: {
+                en: string;
+                ur?: string | undefined;
+            };
+            goals: {
+                en: string;
+                ur?: string | undefined;
+            }[];
+            shadow_phrase_ids: string[];
+            mission_turns: {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }[];
+            can_do: {
+                ar: string;
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "SAY" | "UNDERSTAND";
+            }[];
+            toolkit?: string[] | undefined;
+            pattern?: {
+                after_phrase_id: string;
+                items: {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }[];
+                note: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+            } | undefined;
+        } | undefined;
+    } | undefined;
+    conjugation_table?: {
+        root: string;
+        pattern_name: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        };
+        rows: {
+            pronoun: {
+                ar: string;
+                ar_plain: string;
+                translit: string;
+                en: string;
+                ur?: string | undefined;
+            };
+            conjugated: {
+                ar: string;
+                ar_plain: string;
+                translit: string;
+                en: string;
+                ur?: string | undefined;
+            };
+            audio_url?: string | undefined;
+        }[];
+    } | undefined;
+}>, {
+    schema_version: "1.0";
+    template: "STANDARD" | "SPOKEN_PHRASES" | "REVIEW" | "VERB_PATTERN";
+    hook: {
+        ayah: {
+            ar: string;
+            en: string;
+            surah: number;
+            ayah: number;
+            label: string;
+            ur?: string | undefined;
+            audio_url?: string | undefined;
+            word_timings?: {
+                index: number;
+                start_ms: number;
+                end_ms: number;
+            }[] | undefined;
+        };
+        noor_intro?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        autoplay?: boolean | undefined;
+    };
+    close: {
+        noor_message_template?: string | undefined;
+        noor_message?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    };
+    discover_cards?: ({
+        type: "WORD";
+        text: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        audio_url?: string | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        examples?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+    } | {
+        type: "CONCEPT";
+        explanation: {
+            en: string;
+            ur?: string | undefined;
+        };
+        concept: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        };
+        audio_url?: string | undefined;
+        image_url?: string | undefined;
+        examples?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+    } | {
+        type: "EXAMPLE";
+        audio_url?: string | undefined;
+        text?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        examples?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+    } | {
+        type: "CONTRAST";
+        examples: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[];
+        audio_url?: string | undefined;
+        text?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+        concept?: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "AYAH_PREVIEW";
+        audio_url?: string | undefined;
+        text?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        examples?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+        concept?: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "GRAMMAR_NOTE";
+        title: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        };
+        body: {
+            en: string;
+            ur?: string | undefined;
+        };
+        audio_url?: string | undefined;
+        image_url?: string | undefined;
+    } | {
+        type: "SENTENCE";
+        text: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        audio_url?: string | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+    })[] | undefined;
+    exercises?: ({
+        type: "TRUE_FALSE";
+        id: string;
+        statement: {
+            en: string;
+            ur?: string | undefined;
+            ar_example?: {
+                ar: string;
+                ar_plain: string;
+                translit: string;
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+        };
+        correct_answer: boolean;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        options: {
+            en: string;
+            ur?: string | undefined;
+        }[];
+        type: "TAP_TRANSLATION";
+        id: string;
+        prompt: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        correct_index: number;
+        audio_url?: string | undefined;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "FILL_BLANK";
+        id: string;
+        correct_answer: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        mode: "TAP" | "TYPE";
+        sentence_ar: string;
+        hint: {
+            en: string;
+            ur?: string | undefined;
+        };
+        options?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "BUILD_SENTENCE";
+        id: string;
+        target_translation: {
+            en: string;
+            ur?: string | undefined;
+        };
+        tiles: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[];
+        correct_order: number[];
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "MATCHING";
+        id: string;
+        left_column: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[];
+        right_column: {
+            en: string;
+            ur?: string | undefined;
+        }[];
+        correct_pairs: [number, number][];
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "GRAMMAR_PARSE";
+        id: string;
+        sentence_ar: string;
+        words: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[];
+        available_roles: ("SUBJECT" | "PREDICATE" | "VERB" | "OBJECT" | "PARTICLE" | "PREPOSITION" | "POSSESSIVE" | "ADJECTIVE" | "DEMONSTRATIVE" | "RELATIVE_PRONOUN" | "PRONOUN" | "LITERARY_DEVICE" | "CONJUNCTION" | "INTERJECTION" | "VERB_PHRASE" | "NOUN" | "VOCATIVE" | "TIME_ZARF" | "PLACE_ZARF")[];
+        correct_roles: ("SUBJECT" | "PREDICATE" | "VERB" | "OBJECT" | "PARTICLE" | "PREPOSITION" | "POSSESSIVE" | "ADJECTIVE" | "DEMONSTRATIVE" | "RELATIVE_PRONOUN" | "PRONOUN" | "LITERARY_DEVICE" | "CONJUNCTION" | "INTERJECTION" | "VERB_PHRASE" | "NOUN" | "VOCATIVE" | "TIME_ZARF" | "PLACE_ZARF")[];
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "CONVERSATION_BUILDER";
+        id: string;
+        prompt_line: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        response_mode: "PICK" | "BUILD";
+        options?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        tiles?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        correct_order?: number[] | undefined;
+        correct_option_index?: number | undefined;
+    } | {
+        type: "SHADOW_REPEAT";
+        audio_url: string;
+        id: string;
+        phrase: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        self_grading: true;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        options: {
+            en: string;
+            ur?: string | undefined;
+        }[];
+        type: "AUDIO_RECOGNITION";
+        id: string;
+        correct_index: number;
+        arabic_text: string;
+        audio_url?: string | undefined;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "WRITE_ARABIC";
+        id: string;
+        correct_answer: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        prompt: {
+            en: string;
+            ur?: string | undefined;
+        };
+        hint_available: boolean;
+        audio_url?: string | undefined;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "HARAKAH_PLACEMENT";
+        id: string;
+        hint: {
+            en: string;
+            ur?: string | undefined;
+        };
+        word_unvowelled: string;
+        correct_vowelled: string;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "WORD_ORDER";
+        id: string;
+        tiles: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[];
+        correct_order: number[];
+        context: {
+            en: string;
+            ur?: string | undefined;
+        };
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "TRANSLATE_TO_ARABIC";
+        id: string;
+        source: {
+            en: string;
+            ur?: string | undefined;
+        };
+        acceptable_answers: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[];
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        options: string[];
+        type: "IDENTIFY_ROOT";
+        id: string;
+        correct_index: number;
+        word: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        options: {
+            en: string;
+            ur?: string | undefined;
+        }[];
+        type: "MATCH_AYAH";
+        id: string;
+        correct_index: number;
+        ayah_fragment: {
+            ar: string;
+            surah_ref: string;
+        };
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    })[] | undefined;
+    assessment?: {
+        type: "CHAPTER_TEST";
+        chapter_order: number;
+        pass_score_percent: number;
+        questions: {
+            options: {
+                en: string;
+                ur: string;
+                arabic?: string | undefined;
+            }[];
+            id: string;
+            prompt: {
+                en: string;
+                ur: string;
+            };
+            correct_index: number;
+            topic: {
+                en: string;
+                ur: string;
+            };
+            arabic?: string | undefined;
+        }[];
+    } | undefined;
+    reveal?: {
+        ayah: {
+            ar: string;
+            en: string;
+            surah: number;
+            ayah: number;
+            label: string;
+            ur?: string | undefined;
+            audio_url?: string | undefined;
+        };
+        concept_name: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        };
+        highlighted_word_indices: number[];
+        noor_explanation: {
+            en: string;
+            ur?: string | undefined;
+        };
+        highlighted_words?: string[] | undefined;
+    } | undefined;
+    spoken_phrases?: {
+        scene: {
+            en: string;
+            ur?: string | undefined;
+        };
+        phrases: {
+            audio_url: string;
+            id: string;
+            phrase: {
+                ar: string;
+                ar_plain: string;
+                translit: string;
+                en: string;
+                ur?: string | undefined;
+            };
+            context?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            heard_only?: boolean | undefined;
+        }[];
+        dialogue?: {
+            speaker: "A" | "B";
+            phrase_id: string;
+        }[] | undefined;
+        lab?: {
+            title: {
+                en: string;
+                ur?: string | undefined;
+            };
+            mission: {
+                en: string;
+                ur?: string | undefined;
+            };
+            goals: {
+                en: string;
+                ur?: string | undefined;
+            }[];
+            shadow_phrase_ids: string[];
+            mission_turns: {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }[];
+            can_do: {
+                ar: string;
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "SAY" | "UNDERSTAND";
+            }[];
+            toolkit?: string[] | undefined;
+            pattern?: {
+                after_phrase_id: string;
+                items: {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }[];
+                note: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+            } | undefined;
+        } | undefined;
+    } | undefined;
+    conjugation_table?: {
+        root: string;
+        pattern_name: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        };
+        rows: {
+            pronoun: {
+                ar: string;
+                ar_plain: string;
+                translit: string;
+                en: string;
+                ur?: string | undefined;
+            };
+            conjugated: {
+                ar: string;
+                ar_plain: string;
+                translit: string;
+                en: string;
+                ur?: string | undefined;
+            };
+            audio_url?: string | undefined;
+        }[];
+    } | undefined;
+}, {
+    schema_version: "1.0";
+    template: "STANDARD" | "SPOKEN_PHRASES" | "REVIEW" | "VERB_PATTERN";
+    hook: {
+        ayah: {
+            ar: string;
+            en: string;
+            surah: number;
+            ayah: number;
+            label: string;
+            ur?: string | undefined;
+            audio_url?: string | undefined;
+            word_timings?: {
+                index: number;
+                start_ms: number;
+                end_ms: number;
+            }[] | undefined;
+        };
+        noor_intro?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        autoplay?: boolean | undefined;
+    };
+    close: {
+        noor_message_template?: string | undefined;
+        noor_message?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    };
+    discover_cards?: ({
+        type: "WORD";
+        text: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        audio_url?: string | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        examples?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+    } | {
+        type: "CONCEPT";
+        explanation: {
+            en: string;
+            ur?: string | undefined;
+        };
+        concept: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        };
+        audio_url?: string | undefined;
+        image_url?: string | undefined;
+        examples?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+    } | {
+        type: "EXAMPLE";
+        audio_url?: string | undefined;
+        text?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        examples?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+    } | {
+        type: "CONTRAST";
+        examples: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[];
+        audio_url?: string | undefined;
+        text?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+        concept?: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "AYAH_PREVIEW";
+        audio_url?: string | undefined;
+        text?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        examples?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+        concept?: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "GRAMMAR_NOTE";
+        title: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        };
+        body: {
+            en: string;
+            ur?: string | undefined;
+        };
+        audio_url?: string | undefined;
+        image_url?: string | undefined;
+    } | {
+        type: "SENTENCE";
+        text: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        audio_url?: string | undefined;
+        image_url?: string | undefined;
+        explanation?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        introduces_vocab?: {
+            ar_plain: string;
+            word_id?: string | undefined;
+        } | undefined;
+    })[] | undefined;
+    exercises?: ({
+        type: "TRUE_FALSE";
+        id: string;
+        statement: {
+            en: string;
+            ur?: string | undefined;
+            ar_example?: {
+                ar: string;
+                ar_plain: string;
+                translit: string;
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+        };
+        correct_answer: boolean;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        options: {
+            en: string;
+            ur?: string | undefined;
+        }[];
+        type: "TAP_TRANSLATION";
+        id: string;
+        prompt: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        correct_index: number;
+        audio_url?: string | undefined;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "FILL_BLANK";
+        id: string;
+        correct_answer: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        mode: "TAP" | "TYPE";
+        sentence_ar: string;
+        hint: {
+            en: string;
+            ur?: string | undefined;
+        };
+        options?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "BUILD_SENTENCE";
+        id: string;
+        target_translation: {
+            en: string;
+            ur?: string | undefined;
+        };
+        tiles: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[];
+        correct_order: number[];
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "MATCHING";
+        id: string;
+        left_column: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[];
+        right_column: {
+            en: string;
+            ur?: string | undefined;
+        }[];
+        correct_pairs: [number, number][];
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "GRAMMAR_PARSE";
+        id: string;
+        sentence_ar: string;
+        words: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[];
+        available_roles: ("SUBJECT" | "PREDICATE" | "VERB" | "OBJECT" | "PARTICLE" | "PREPOSITION" | "POSSESSIVE" | "ADJECTIVE" | "DEMONSTRATIVE" | "RELATIVE_PRONOUN" | "PRONOUN" | "LITERARY_DEVICE" | "CONJUNCTION" | "INTERJECTION" | "VERB_PHRASE" | "NOUN" | "VOCATIVE" | "TIME_ZARF" | "PLACE_ZARF")[];
+        correct_roles: ("SUBJECT" | "PREDICATE" | "VERB" | "OBJECT" | "PARTICLE" | "PREPOSITION" | "POSSESSIVE" | "ADJECTIVE" | "DEMONSTRATIVE" | "RELATIVE_PRONOUN" | "PRONOUN" | "LITERARY_DEVICE" | "CONJUNCTION" | "INTERJECTION" | "VERB_PHRASE" | "NOUN" | "VOCATIVE" | "TIME_ZARF" | "PLACE_ZARF")[];
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "CONVERSATION_BUILDER";
+        id: string;
+        prompt_line: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        response_mode: "PICK" | "BUILD";
+        options?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+        tiles?: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[] | undefined;
+        correct_order?: number[] | undefined;
+        correct_option_index?: number | undefined;
+    } | {
+        type: "SHADOW_REPEAT";
+        audio_url: string;
+        id: string;
+        phrase: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        self_grading: true;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        options: {
+            en: string;
+            ur?: string | undefined;
+        }[];
+        type: "AUDIO_RECOGNITION";
+        id: string;
+        correct_index: number;
+        arabic_text: string;
+        audio_url?: string | undefined;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "WRITE_ARABIC";
+        id: string;
+        correct_answer: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        prompt: {
+            en: string;
+            ur?: string | undefined;
+        };
+        hint_available: boolean;
+        audio_url?: string | undefined;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "HARAKAH_PLACEMENT";
+        id: string;
+        hint: {
+            en: string;
+            ur?: string | undefined;
+        };
+        word_unvowelled: string;
+        correct_vowelled: string;
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "WORD_ORDER";
+        id: string;
+        tiles: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[];
+        correct_order: number[];
+        context: {
+            en: string;
+            ur?: string | undefined;
+        };
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        type: "TRANSLATE_TO_ARABIC";
+        id: string;
+        source: {
+            en: string;
+            ur?: string | undefined;
+        };
+        acceptable_answers: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        }[];
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        options: string[];
+        type: "IDENTIFY_ROOT";
+        id: string;
+        correct_index: number;
+        word: {
+            ar: string;
+            ar_plain: string;
+            translit: string;
+            en: string;
+            ur?: string | undefined;
+        };
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    } | {
+        options: {
+            en: string;
+            ur?: string | undefined;
+        }[];
+        type: "MATCH_AYAH";
+        id: string;
+        correct_index: number;
+        ayah_fragment: {
+            ar: string;
+            surah_ref: string;
+        };
+        xp_value?: number | undefined;
+        explanation_on_wrong?: {
+            en: string;
+            ur?: string | undefined;
+        } | undefined;
+    })[] | undefined;
+    assessment?: {
+        type: "CHAPTER_TEST";
+        chapter_order: number;
+        pass_score_percent: number;
+        questions: {
+            options: {
+                en: string;
+                ur: string;
+                arabic?: string | undefined;
+            }[];
+            id: string;
+            prompt: {
+                en: string;
+                ur: string;
+            };
+            correct_index: number;
+            topic: {
+                en: string;
+                ur: string;
+            };
+            arabic?: string | undefined;
+        }[];
+    } | undefined;
+    reveal?: {
+        ayah: {
+            ar: string;
+            en: string;
+            surah: number;
+            ayah: number;
+            label: string;
+            ur?: string | undefined;
+            audio_url?: string | undefined;
+        };
+        concept_name: {
+            en: string;
+            ar?: string | undefined;
+            ur?: string | undefined;
+        };
+        highlighted_word_indices: number[];
+        noor_explanation: {
+            en: string;
+            ur?: string | undefined;
+        };
+        highlighted_words?: string[] | undefined;
+    } | undefined;
+    spoken_phrases?: {
+        scene: {
+            en: string;
+            ur?: string | undefined;
+        };
+        phrases: {
+            audio_url: string;
+            id: string;
+            phrase: {
+                ar: string;
+                ar_plain: string;
+                translit: string;
+                en: string;
+                ur?: string | undefined;
+            };
+            context?: {
+                en: string;
+                ur?: string | undefined;
+            } | undefined;
+            heard_only?: boolean | undefined;
+        }[];
+        dialogue?: {
+            speaker: "A" | "B";
+            phrase_id: string;
+        }[] | undefined;
+        lab?: {
+            title: {
+                en: string;
+                ur?: string | undefined;
+            };
+            mission: {
+                en: string;
+                ur?: string | undefined;
+            };
+            goals: {
+                en: string;
+                ur?: string | undefined;
+            }[];
+            shadow_phrase_ids: string[];
+            mission_turns: {
+                response_mode: "PICK" | "BUILD";
+                prompt_phrase_id: string;
+                goal_index: number;
+                options?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                tiles?: {
+                    ar: string;
+                    ar_plain: string;
+                    translit: string;
+                    en: string;
+                    ur?: string | undefined;
+                }[] | undefined;
+                correct_order?: number[] | undefined;
+                correct_option_index?: number | undefined;
+                cue?: {
+                    en: string;
+                    ur?: string | undefined;
+                } | undefined;
+            }[];
+            can_do: {
+                ar: string;
+                label: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+                kind: "SAY" | "UNDERSTAND";
+            }[];
+            toolkit?: string[] | undefined;
+            pattern?: {
+                after_phrase_id: string;
+                items: {
+                    ar: string;
+                    source: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                    meaning: {
+                        en: string;
+                        ur?: string | undefined;
+                    };
+                }[];
+                note: {
+                    en: string;
+                    ur?: string | undefined;
+                };
+            } | undefined;
+        } | undefined;
     } | undefined;
     conjugation_table?: {
         root: string;
@@ -7430,7 +10089,9 @@ type SpokenPhrase = {
         en: string;
         ur?: string;
     };
+    heard_only?: boolean;
 };
+type ConversationLab = z.infer<typeof ConversationLabSchema>;
 type SpokenPhrasesBlock = {
     scene: {
         en: string;
@@ -7441,6 +10102,7 @@ type SpokenPhrasesBlock = {
         speaker: "A" | "B";
         phrase_id: string;
     }[];
+    lab?: ConversationLab;
 };
 type ConjugationRow = {
     pronoun: {
@@ -7520,4 +10182,4 @@ interface TypeFormConfig {
 declare const discoverCardFormConfig: Record<string, TypeFormConfig>;
 declare const exerciseFormConfig: Record<string, TypeFormConfig>;
 
-export { type ArabicText, ArabicTextSchema, AudioRecognitionExerciseSchema, type AyahReference, AyahReferenceSchema, type AyahWordTiming, AyahWordTimingSchema, BuildSentenceExerciseSchema, type CloseBeat, CloseBeatSchema, type ConjugationRow, type ConjugationTable, ConversationBuilderExerciseSchema, type DiscoverCard, DiscoverCardSchema, type DiscoverCardType, type Exercise, ExerciseSchema, type ExerciseType, FillBlankExerciseSchema, GrammarParseExerciseSchema, type GrammaticalRole, GrammaticalRoleSchema, HarakahPlacementExerciseSchema, type HookBeat, HookBeatSchema, IdentifyRootExerciseSchema, type LessonContent, LessonContentSchema, type LessonTemplate, MatchAyahExerciseSchema, MatchingExerciseSchema, ShadowRepeatExerciseSchema, type SpokenPhrase, type SpokenPhrasesBlock, TapTranslationExerciseSchema, TranslateToArabicExerciseSchema, TrueFalseExerciseSchema, type VocabRef, VocabRefSchema, WordOrderExerciseSchema, WriteArabicExerciseSchema, createExerciseId, createStarterCard, createStarterExercise, discoverCardFormConfig, exerciseFormConfig, isExercise, isReviewLesson, isSpokenPhrasesLesson, isStandardLesson, isVerbPatternLesson, parseLenient };
+export { type ArabicText, ArabicTextSchema, AudioRecognitionExerciseSchema, type AyahReference, AyahReferenceSchema, type AyahWordTiming, AyahWordTimingSchema, BuildSentenceExerciseSchema, type CloseBeat, CloseBeatSchema, type ConjugationRow, type ConjugationTable, ConversationBuilderExerciseSchema, type ConversationLab, ConversationLabSchema, type DiscoverCard, DiscoverCardSchema, type DiscoverCardType, type Exercise, ExerciseSchema, type ExerciseType, FillBlankExerciseSchema, GrammarParseExerciseSchema, type GrammaticalRole, GrammaticalRoleSchema, HarakahPlacementExerciseSchema, type HookBeat, HookBeatSchema, IdentifyRootExerciseSchema, type LessonContent, LessonContentSchema, type LessonTemplate, MatchAyahExerciseSchema, MatchingExerciseSchema, ShadowRepeatExerciseSchema, type SpokenPhrase, type SpokenPhrasesBlock, TapTranslationExerciseSchema, TranslateToArabicExerciseSchema, TrueFalseExerciseSchema, type VocabRef, VocabRefSchema, WordOrderExerciseSchema, WriteArabicExerciseSchema, createExerciseId, createStarterCard, createStarterExercise, discoverCardFormConfig, exerciseFormConfig, isExercise, isReviewLesson, isSpokenPhrasesLesson, isStandardLesson, isVerbPatternLesson, parseLenient };

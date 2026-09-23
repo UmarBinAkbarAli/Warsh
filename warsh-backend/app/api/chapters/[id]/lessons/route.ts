@@ -48,6 +48,7 @@ export async function GET(request: Request, { params }: Props) {
     template: lesson.template,
     xpReward: lesson.xpReward,
     isChapterTest: isChapterTestContent(lesson.content),
+    isConversationLab: Boolean(lesson.content?.spoken_phrases?.lab),
     questionCount: assessment?.questions.length ?? null,
     requiredCorrect: assessment ? Math.ceil((assessment.pass_score_percent / 100) * assessment.questions.length) : null,
     isCompleted: completedLessonIds.has(lesson.id),
