@@ -808,7 +808,13 @@ Everything below this list is either done and verified, or one of these:
    (API walk-through + web UI).
 8. ~~**Owner device test of 1.0.13 before any Play build**~~ — the owner tested
    the labs and Answer it on a real phone (2026-09-23) and asked for the Play
-   build to follow the work above automatically.
+   build to follow the work above automatically. **1.0.13 (37) submitted to Production
+   2026-09-23**: release gate passed (fixtures, Urdu audit, backend build, app
+   lint + tsc, `verify:release-api-url`, `verify:play-signing`); the matching
+   APK was smoke-tested on the API 34 emulator against production (Learn tab,
+   Indo-Pak tajweed, Urdu translation under the page, page swipe, a Chapter 72
+   lesson). Play: full rollout, 12,309 phones supported (no device loss),
+   22.6 MB for new installs; in review.
 
 ### P0 — required verification and open gaps
 
