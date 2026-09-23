@@ -46,6 +46,25 @@ pronunciation.
 
 Keep "Say it" (repeat) as it is and add "Answer it" as a new exercise type.
 
+### UI: chat-style conversation (Pen section 26)
+
+Each "Answer it" item is a short spoken conversation of about 3 turns, shown as a
+chat thread:
+
+- The friend's question is a bubble on the left, with a play button.
+- The learner's turn is an "Answer it" slot on the right. The mic sits in a dock at
+  the bottom.
+- While the learner speaks, the slot shows the words being heard live.
+- **Correct:** the answer becomes a green bubble with ✓, and the next question
+  appears below it.
+- **Missing or wrong word:** the bubble turns red. A missing word is outlined and a
+  wrong word is underlined, with a tip. Try again, Show answer, and Skip sit right
+  under the bubble.
+- **Nothing heard:** an inline note appears with the try counter.
+- **Finished:** the whole conversation stays on screen, all green, then Continue.
+- **Urdu UI:** the chat is mirrored (friend on the right, learner on the left).
+  Arabic is unchanged.
+
 ## Content impact
 
 Each "Answer it" item needs an answer pattern in the lesson content (required
