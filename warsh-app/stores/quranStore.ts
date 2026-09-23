@@ -3,6 +3,7 @@ import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 import { DEFAULT_LAYOUT, type MushafLayout } from "../services/quran/data";
+import type { QuranTranslation } from "../services/quran/translations";
 
 // Quran reader state (Pen sections 27 and 28). Kept on the device only: the
 // reader is free and offline, so nothing here waits on the backend. The
@@ -15,12 +16,15 @@ interface QuranState {
   bookmarks: number[];
   tajweed: boolean;
   keepAwake: boolean;
+  /** Translation shown under the page (Pen section 30); null = off. */
+  translation: QuranTranslation | null;
   setLayout: (layout: MushafLayout) => void;
   setLastAyah: (ayah: number) => void;
   /** Bookmarks the page's opening ayah, or clears every bookmark on the page. */
   toggleBookmark: (pageAyahs: { first: number; next: number | null }) => void;
   setTajweed: (on: boolean) => void;
   setKeepAwake: (on: boolean) => void;
+  setTranslation: (translation: QuranTranslation | null) => void;
 }
 
 export const useQuranStore = create<QuranState>()(
@@ -32,6 +36,7 @@ export const useQuranStore = create<QuranState>()(
       bookmarks: [],
       tajweed: false,
       keepAwake: true,
+      translation: null,
       setLayout: (layout) => set({ layout }),
       setLastAyah: (ayah) => set({ lastAyah: ayah, lastReadAt: new Date().toISOString() }),
       toggleBookmark: ({ first, next }) =>
@@ -45,6 +50,7 @@ export const useQuranStore = create<QuranState>()(
         }),
       setTajweed: (tajweed) => set({ tajweed }),
       setKeepAwake: (keepAwake) => set({ keepAwake }),
+      setTranslation: (translation) => set({ translation }),
     }),
     {
       name: "warsh_quran_reader",

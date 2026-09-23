@@ -6,9 +6,10 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
 import { Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
-import { hasTajweed, segmentsOf, wordText, type MushafLayout, type QuranWord } from "../../services/quran/data";
+import { hasTajweed, isIndoPak, segmentsOf, wordText, type MushafLayout, type QuranWord } from "../../services/quran/data";
 import { TAJWEED_LEGEND, TAJWEED_RULES, rulesInWord } from "../../services/quran/tajweed";
-import { QURAN_FONT } from "./MushafPage";
+import { TRANSLATIONS, type QuranTranslation } from "../../services/quran/translations";
+import { INDOPAK_FONT, QURAN_FONT } from "./MushafPage";
 
 function BottomSheet({ visible, onClose, children }: { visible: boolean; onClose: () => void; children: ReactNode }) {
   const insets = useSafeAreaInsets();
@@ -47,6 +48,12 @@ export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onC
   const tajweedAvailable = hasTajweed(current);
   const setTajweed = useQuranStore((s) => s.setTajweed);
   const setKeepAwake = useQuranStore((s) => s.setKeepAwake);
+  const translation = useQuranStore((s) => s.translation);
+  const setTranslation = useQuranStore((s) => s.setTranslation);
+  const translationOptions: { key: QuranTranslation | null; titleKey: string; subKey: string }[] = [
+    { key: null, titleKey: "quran.translation.off", subKey: "quran.translation.offSub" },
+    ...TRANSLATIONS,
+  ];
 
   return (
     <BottomSheet visible={visible} onClose={onClose}>
@@ -80,6 +87,26 @@ export function QuranSettingsSheet({ visible, onClose }: { visible: boolean; onC
                   <Text style={styles.soonText}>{t("quran.settings.comingSoon")}</Text>
                 </View>
               ) : null}
+            </Pressable>
+          );
+        })}
+
+        <Text style={[styles.label, styles.labelSpaced]}>{t("quran.settings.translation")}</Text>
+        {translationOptions.map(({ key, titleKey, subKey }) => {
+          const selected = key === translation;
+          return (
+            <Pressable
+              key={key ?? "off"}
+              onPress={() => setTranslation(key)}
+              style={[styles.option, selected && styles.optionSelected]}
+              accessibilityRole="radio"
+              accessibilityState={{ selected }}
+            >
+              <View style={[styles.radio, selected && styles.radioOn]} />
+              <View style={styles.optionCopy}>
+                <Text style={styles.optionTitle}>{t(titleKey)}</Text>
+                <Text style={styles.optionSub}>{t(subKey)}</Text>
+              </View>
             </Pressable>
           );
         })}
@@ -141,7 +168,15 @@ function ToggleRow({
 }
 
 /** Explains the tajweed rules in a tapped word (Pen 27, screen 4). */
-export function TajweedRuleSheet({ word, onClose }: { word: QuranWord | null; onClose: () => void }) {
+export function TajweedRuleSheet({
+  word,
+  layout,
+  onClose,
+}: {
+  word: QuranWord | null;
+  layout: MushafLayout;
+  onClose: () => void;
+}) {
   const t = useT();
   const codes = word ? rulesInWord(word) : [];
   const segments = word ? segmentsOf(word) : null;
@@ -151,7 +186,7 @@ export function TajweedRuleSheet({ word, onClose }: { word: QuranWord | null; on
       {word ? (
         <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.sheetBody}>
           <View style={styles.wordRow}>
-            <Text style={styles.wordArabic}>
+            <Text style={[styles.wordArabic, isIndoPak(layout) && styles.wordIndoPak]}>
               {segments
                 ? segments.map(([text, code], index) => (
                     <Text key={index} style={code && TAJWEED_RULES[code].color ? { color: TAJWEED_RULES[code].color } : null}>
@@ -333,6 +368,9 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.white,
     borderWidth: 1,
     borderColor: WarshPalette.cream,
+  },
+  wordIndoPak: {
+    fontFamily: INDOPAK_FONT,
   },
   wordArabic: {
     fontFamily: QURAN_FONT,

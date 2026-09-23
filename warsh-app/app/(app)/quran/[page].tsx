@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   FlatList,
   Pressable,
+  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -14,6 +15,7 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { MushafPage } from "@components/quran/MushafPage";
+import { PageTranslation, TRANSLATION_PEEK_HEIGHT, TranslationPeek } from "@components/quran/PageTranslation";
 import { QuranSettingsSheet, TajweedLegend, TajweedRuleSheet } from "@components/quran/QuranSheets";
 import { useT } from "@i18n/index";
 import { useQuranStore } from "@stores/quranStore";
@@ -50,6 +52,7 @@ export default function QuranReaderScreen() {
   const tajweed = tajweedOn && hasTajweed(layout);
   const setTajweed = useQuranStore((s) => s.setTajweed);
   const keepAwake = useQuranStore((s) => s.keepAwake);
+  const translation = useQuranStore((s) => s.translation);
   const bookmarks = useQuranStore((s) => s.bookmarks);
   const toggleBookmark = useQuranStore((s) => s.toggleBookmark);
   const setLastAyah = useQuranStore((s) => s.setLastAyah);
@@ -120,24 +123,42 @@ export default function QuranReaderScreen() {
   const itemWidth = size?.width ?? 0;
 
   const renderItem = useCallback(
-    ({ item }: { item: number }) =>
-      size ? (
-        <View style={{ width: size.width, height: size.height, paddingHorizontal: PAGE_GUTTER }}>
-          <MushafPage
-            layout={layout}
-            pageNumber={item}
-            width={size.width - PAGE_GUTTER * 2}
-            height={size.height}
-            tajweed={tajweed}
-            selectedWord={tapped && tapped.page === item ? tapped.key : null}
-            onWordPress={(word, key) => setTapped({ word, key, page: item })}
-          />
-        </View>
-      ) : null,
-    [size, layout, tajweed, tapped],
+    ({ item }: { item: number }) => {
+      if (!size) return null;
+      const mushafPage = (
+        <MushafPage
+          layout={layout}
+          pageNumber={item}
+          width={size.width - PAGE_GUTTER * 2}
+          height={translation ? size.height - TRANSLATION_PEEK_HEIGHT : size.height}
+          tajweed={tajweed}
+          selectedWord={tapped && tapped.page === item ? tapped.key : null}
+          onWordPress={(word, key) => setTapped({ word, key, page: item })}
+        />
+      );
+      if (!translation) {
+        return <View style={{ width: size.width, height: size.height, paddingHorizontal: PAGE_GUTTER }}>{mushafPage}</View>;
+      }
+      // Translation under the page (Pen section 30): the page keeps its
+      // printed lines, a strip peeks below it, and the page scrolls down to
+      // the translation of its ayahs.
+      return (
+        <ScrollView
+          style={{ width: size.width, height: size.height }}
+          contentContainerStyle={{ paddingHorizontal: PAGE_GUTTER }}
+          showsVerticalScrollIndicator={false}
+          nestedScrollEnabled
+        >
+          {mushafPage}
+          <TranslationPeek translation={translation} />
+          <PageTranslation layout={layout} pageNumber={item} translation={translation} />
+        </ScrollView>
+      );
+    },
+    [size, layout, tajweed, tapped, translation],
   );
 
-  const extraData = useMemo(() => ({ tajweed, tapped }), [tajweed, tapped]);
+  const extraData = useMemo(() => ({ tajweed, tapped, translation }), [tajweed, tapped, translation]);
   const juzLabel =
     isIndoPak(layout)
       ? t("quran.parahPosition", { juz: juzForPage(layout, currentPage) })
@@ -277,7 +298,7 @@ export default function QuranReaderScreen() {
       </View>
 
       <QuranSettingsSheet visible={settingsOpen} onClose={() => setSettingsOpen(false)} />
-      <TajweedRuleSheet word={tapped?.word ?? null} onClose={() => setTapped(null)} />
+      <TajweedRuleSheet word={tapped?.word ?? null} layout={layout} onClose={() => setTapped(null)} />
     </View>
   );
 }

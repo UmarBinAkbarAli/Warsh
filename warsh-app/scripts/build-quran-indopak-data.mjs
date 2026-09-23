@@ -10,6 +10,9 @@
 //   - "Indopak Nastaleeq script - Word by Word", quran-script/59, json
 //   - the matching "Indopak Nastaleeq" font, font/242, bundled as
 //     assets/fonts/IndoPakNastaleeq-Regular.ttf
+// Tajweed colours come from Quran.com's word-level Uthmani tajweed markup
+// (fetched from the public v4 API and cached in .quran-cache/tajweed/), carried
+// over to the Indo-Pak spelling letter by letter (scripts/quran-indopak-tajweed.mjs).
 // Put the three data files in .quran-cache/qul/ (gitignored), then:
 //
 //   node scripts/build-quran-indopak-data.mjs [--source <dir>]
@@ -17,11 +20,12 @@
 // Also writes the ayah index for the Madani pages built by
 // build-quran-data.mjs, so switching layout keeps the reader's place.
 
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { createRequire } from "node:module";
 import { dirname, join, resolve } from "node:path";
 import { DatabaseSync } from "node:sqlite";
 import { fileURLToPath } from "node:url";
+import { indoPakSegments } from "./quran-indopak-tajweed.mjs";
 
 const appDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const sourceArg = process.argv.indexOf("--source");
@@ -103,6 +107,140 @@ const emWidth = (text) => {
 
 const size = (f) => `${(readFileSync(f).length / 1024).toFixed(0)} KB`;
 
+// Width in em of text[start, end) shaped with the rest of the word as
+// context — how Android draws one colour run of a word.
+const runWidth = (text, start, end) => {
+  const x = hbInstance.exports;
+  const ptr = x.malloc(text.length * 2);
+  const units = new Uint16Array(x.memory.buffer, ptr, text.length);
+  for (let i = 0; i < text.length; i++) units[i] = text.charCodeAt(i);
+  const buffer = hb.createBuffer();
+  x.hb_buffer_add_utf16(buffer.ptr, ptr, text.length, start, end - start);
+  x.free(ptr);
+  buffer.guessSegmentProperties();
+  hb.shape(font, buffer);
+  const advance = buffer.json().reduce((sum, glyph) => sum + glyph.ax, 0);
+  buffer.destroy();
+  return advance / face.upem;
+};
+
+// How much wider the word draws when split at these offsets than whole.
+const splitCost = (text, cuts) => {
+  let drawn = 0;
+  let from = 0;
+  for (const to of [...cuts, text.length]) {
+    drawn += runWidth(text, from, to);
+    from = to;
+  }
+  return drawn - runWidth(text, 0, text.length);
+};
+
+// Word-level Uthmani tajweed markup by location, fetched once.
+const tajweedDir = join(appDir, ".quran-cache", "tajweed");
+async function loadTajweedWords() {
+  const file = join(tajweedDir, "words.json");
+  if (existsSync(file)) return JSON.parse(readFileSync(file, "utf8"));
+  mkdirSync(tajweedDir, { recursive: true });
+  const out = {};
+  for (let surah = 1; surah <= 114; surah++) {
+    for (let page = 1; page; ) {
+      const params = new URLSearchParams({
+        words: "true",
+        word_fields: "text_uthmani_tajweed,location",
+        per_page: "50",
+        page: String(page),
+      });
+      let body;
+      for (let attempt = 1; !body; attempt++) {
+        const response = await fetch(`https://api.quran.com/api/v4/verses/by_chapter/${surah}?${params}`);
+        if (response.ok) body = await response.json();
+        else if (attempt >= 5) throw new Error(`surah ${surah} page ${page}: HTTP ${response.status}`);
+        else await new Promise((r) => setTimeout(r, 1000 * attempt));
+      }
+      for (const verse of body.verses) {
+        for (const word of verse.words) out[word.location] = { t: word.text_uthmani_tajweed, e: word.char_type_name };
+      }
+      page = body.pagination.next_page;
+    }
+  }
+  writeFileSync(file, JSON.stringify(out));
+  return out;
+}
+const tajweedWords = await loadTajweedWords();
+
+// Ayahs whose Indo-Pak text splits a word differently from Quran.com's, so
+// word positions stop lining up: those stay uncoloured.
+const wordCounts = (locations) => {
+  const counts = new Map();
+  for (const location of locations) {
+    const ayah = location.split(":").slice(0, 2).join(":");
+    counts.set(ayah, (counts.get(ayah) ?? 0) + 1);
+  }
+  return counts;
+};
+const qcCounts = wordCounts(Object.keys(tajweedWords));
+const misaligned = new Set(
+  [...wordCounts(Object.keys(script))].filter(([ayah, count]) => qcCounts.get(ayah) !== count).map(([ayah]) => ayah),
+);
+
+// An Indo-Pak word as the page stores it: plain text, tajweed segments, or
+// segments plus the extra room (em) they need. Android draws each colour run
+// separately and the font's joins do not reach across a run, so where a
+// boundary costs width it moves a letter at a time into the uncoloured side,
+// as build-quran-data.mjs does for the Madani pages.
+let colouredWords = 0;
+let costlyWords = 0;
+function storedWord(word) {
+  const source = tajweedWords[word.location];
+  if (!source || source.e !== "word" || misaligned.has(`${word.surah}:${word.ayah}`)) return word.text;
+  const segments = indoPakSegments(source.t, word.text);
+  if (!segments || segments.every((s) => s.length === 1)) return word.text;
+  const text = word.text;
+  if (segments.map((s) => s[0]).join("") !== text) throw new Error(`${word.location}: segments do not spell the word`);
+  colouredWords++;
+  const cuts = [];
+  let offset = 0;
+  for (const segment of segments.slice(0, -1)) cuts.push((offset += segment[0].length));
+  const letterStarts = [...text.matchAll(/\P{M}/gu)].map((m) => m.index);
+  cuts.forEach((cut, i) => {
+    if (splitCost(text, [cut]) < 0.01) return;
+    const growRight = Boolean(segments[i][1]);
+    const candidates = letterStarts
+      .filter((at) => at > 0 && at < text.length && (growRight ? at > cut : at < cut))
+      .sort((a, b) => (growRight ? a - b : b - a))
+      .slice(0, 3);
+    const better = candidates.find((at) => splitCost(text, [at]) < 0.01);
+    if (better !== undefined) cuts[i] = better;
+  });
+  const aligned = [];
+  let from = 0;
+  segments.forEach((segment, i) => {
+    const to = i < cuts.length ? Math.min(Math.max(from, cuts[i]), text.length) : text.length;
+    if (to > from) aligned.push(segment[1] ? [text.slice(from, to), segment[1]] : [text.slice(from, to)]);
+    from = to;
+  });
+  const regrouped = [];
+  for (const segment of aligned) {
+    const last = regrouped.at(-1);
+    if (last && last[1] === segment[1]) last[0] += segment[0];
+    else regrouped.push(segment);
+  }
+  if (regrouped.map((s) => s[0]).join("") !== text || regrouped.some((s, i) => i > 0 && /^\p{M}/u.test(s[0]))) {
+    throw new Error(`${word.location}: could not re-segment ${text}`);
+  }
+  if (regrouped.every((s) => s.length === 1)) return text;
+  const boundaries = regrouped
+    .slice(0, -1)
+    .map((_, i) => regrouped.slice(0, i + 1).reduce((n, seg) => n + seg[0].length, 0));
+  const cost = splitCost(text, boundaries);
+  if (cost > 0.01) {
+    costlyWords++;
+    return { s: regrouped, x: Math.ceil(cost * 100) / 100 };
+  }
+  return regrouped;
+}
+const plainOf = (w) => (typeof w === "string" ? w : (Array.isArray(w) ? w : w.s).map((s) => s[0]).join(""));
+
 function buildLayout({ file, pageCount: PAGE_COUNT, linesPerPage: LINES_PER_PAGE, dir }) {
   const outDir = join(dataDir, dir);
   const db = new DatabaseSync(join(sourceDir, file));
@@ -140,7 +278,7 @@ function buildLayout({ file, pageCount: PAGE_COUNT, linesPerPage: LINES_PER_PAGE
         for (let id = row.first_word_id; id <= row.last_word_id; id++) {
           if (id !== expectedWord++) throw new Error(`page ${page}: word ${id} out of order`);
           const word = words[id];
-          line.w.push(word.text);
+          line.w.push(storedWord(word));
           wordPage[id] = page;
           firstWord ??= word;
           if (firstBegin === null && word.word === "1") firstBegin = code(word.surah, word.ayah);
@@ -192,8 +330,13 @@ function buildLayout({ file, pageCount: PAGE_COUNT, linesPerPage: LINES_PER_PAGE
   for (const page of pages) {
     const widths = page.l
       .filter((line) => line.w)
-      .map((line) => line.w.reduce((sum, w) => sum + emWidth(w), 0) + (line.w.length - 1) * WORD_GAP_EM);
+      .map((line) => line.w.reduce((sum, w) => sum + emWidth(plainOf(w)), 0) + (line.w.length - 1) * WORD_GAP_EM);
     page.m = Math.ceil(Math.max(...widths) * 100) / 100;
+    // The same with tajweed colours on, where some words need extra room.
+    const tajweedWidths = page.l
+      .filter((line) => line.w)
+      .map((line, i) => widths[i] + line.w.reduce((sum, w) => sum + (w?.x ?? 0), 0));
+    page.t = Math.ceil(Math.max(...tajweedWidths) * 100) / 100;
   }
 
   mkdirSync(outDir, { recursive: true });
@@ -205,6 +348,10 @@ function buildLayout({ file, pageCount: PAGE_COUNT, linesPerPage: LINES_PER_PAGE
 }
 
 for (const layout of LAYOUTS) buildLayout(layout);
+console.log(
+  `tajweed: ${colouredWords} coloured word placements, ${costlyWords} need extra room, ` +
+    `${misaligned.size} ayahs left plain (${[...misaligned].join(", ")})`,
+);
 
 // The Madani ayah index, from the pages build-quran-data.mjs wrote: a
 // number in a line ends that ayah, and a surah header starts ayah 1.

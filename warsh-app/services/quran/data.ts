@@ -1,9 +1,10 @@
 // Bundled Quran data for the reader (Pen sections 27 and 28). Three layouts
-// ship: the Indo-Pak 15-line Mushaf (Qudratullah print, the same pages as
-// Taj Company), which Warsh opens by default, the Taj Company Indo-Pak
-// 16-line Mushaf (both scripts/build-quran-indopak-data.mjs), and the King
-// Fahd Complex 15-line Madani Mushaf with tajweed (scripts/build-quran-data.mjs). Everything is on the device, so reading
-// needs no network.
+// ship, all with tajweed: the Indo-Pak 15-line Mushaf (Qudratullah print, the
+// same pages as Taj Company), which Warsh opens by default, the Taj Company
+// Indo-Pak 16-line Mushaf (both scripts/build-quran-indopak-data.mjs, which
+// carries Quran.com's Uthmani tajweed over to the Indo-Pak spelling), and the
+// King Fahd Complex 15-line Madani Mushaf (scripts/build-quran-data.mjs).
+// Everything is on the device, so reading needs no network.
 
 import chaptersJson from "../../data/quran/chapters.json";
 import indoPakIndexJson from "../../data/quran/indopak/index.json";
@@ -45,7 +46,7 @@ export type QuranPage = {
   s: number;
   /** Width of the page's widest line in em, gaps included. */
   m: number;
-  /** The same with tajweed colours on (Madani only). */
+  /** The same with tajweed colours on. */
   t?: number;
   l: QuranLine[];
 };
@@ -92,7 +93,7 @@ const LAYOUTS: Record<MushafLayout, LayoutData> = {
   indopak15: {
     pageCount: 610,
     linesPerPage: 15,
-    tajweed: false,
+    tajweed: true,
     starts: indoPakIndex.starts,
     surahPages: indoPakIndex.surahPages,
     juzStarts: indoPakIndex.parahs,
@@ -102,7 +103,7 @@ const LAYOUTS: Record<MushafLayout, LayoutData> = {
   indopak16: {
     pageCount: 548,
     linesPerPage: 16,
-    tajweed: false,
+    tajweed: true,
     starts: indoPak16Index.starts,
     surahPages: indoPak16Index.surahPages,
     juzStarts: indoPak16Index.parahs,
@@ -188,6 +189,11 @@ export function surahForPage(layout: MushafLayout, pageNumber: number): Chapter 
 /** The ayah a page is saved and bookmarked as: the first that begins on it. */
 export function ayahForPage(layout: MushafLayout, pageNumber: number) {
   return Math.floor(LAYOUTS[layout].starts[clampPage(layout, pageNumber) - 1]);
+}
+
+/** The stored start of a page: its first beginning ayah, or x.5 when it opens mid-ayah x. */
+export function pageStart(layout: MushafLayout, pageNumber: number) {
+  return LAYOUTS[layout].starts[clampPage(layout, pageNumber) - 1];
 }
 
 /** The page an ayah begins on. */
