@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
 import { parseIntParam } from "../../../../lib/env";
+import { findWordIdsByTransliteration } from "../../../../lib/transliterationSearch";
 
 export async function GET(request: Request) {
   const userId = await getUserIdFromRequest(request);
@@ -30,6 +31,7 @@ export async function GET(request: Request) {
       { translationEn: { contains: search, mode: "insensitive" } },
       { translationUr: { contains: search } },
       { rootLetters: { contains: search } },
+      { id: { in: await findWordIdsByTransliteration(prisma, search) } },
     ];
   }
 

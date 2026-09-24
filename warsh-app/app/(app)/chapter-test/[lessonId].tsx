@@ -263,7 +263,6 @@ export default function ChapterTestScreen() {
         <Text style={styles.questionCount}>{questionIndex + 1}/{assessment.questions.length}</Text>
       </View>
       <ScrollView contentContainerStyle={styles.questionContent} showsVerticalScrollIndicator={false}>
-        <View style={styles.topicPill}><Text style={styles.topicPillText}>{localized(question.topic)}</Text></View>
         <Text style={styles.prompt}>{localized(question.prompt)}</Text>
         {question.arabic ? <ArabicText size="lg" style={styles.questionArabic}>{question.arabic}</ArabicText> : null}
         <View style={styles.optionList}>
@@ -341,8 +340,6 @@ const styles = StyleSheet.create({
   progressFill: { height: 6, borderRadius: 3, backgroundColor: WarshPalette.gold },
   questionCount: { color: WarshPalette.subtleBrown, fontFamily: Fonts.bold, fontSize: FontSizes.caption },
   questionContent: { paddingHorizontal: Spacing.gutter, paddingBottom: 110 },
-  topicPill: { alignSelf: "flex-start", backgroundColor: WarshPalette.parchmentBg, borderRadius: Radii.full, paddingHorizontal: Spacing.md, paddingVertical: 6, marginBottom: Spacing.lg },
-  topicPillText: { color: WarshPalette.goldDeep, fontFamily: Fonts.bold, fontSize: FontSizes.label, textTransform: "uppercase" },
   prompt: { color: WarshPalette.navy, fontFamily: Fonts.display, fontSize: 23, lineHeight: 29, marginBottom: Spacing.md },
   questionArabic: { color: WarshPalette.ink, textAlign: "center", marginBottom: Spacing.lg },
   optionList: { gap: Spacing.sm },

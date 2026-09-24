@@ -484,7 +484,7 @@ export const en = {
   "manageSub.legal": "Subscriptions are billed through your Google Play account and renew automatically unless cancelled at least 24 hours before the end of the current period.",
 
   "paywall.close": "Close paywall",
-  "paywall.trialChip": "Chapter 1 · {{days}} trial days left",
+  "paywall.trialChip": "{{days}} trial days left",
   "paywall.premiumChip": "Warsh Premium",
   "paywall.title": "Continue your Qur'anic Arabic journey",
   "paywall.subtitle": "Keep all 72 chapters, the Noor tutor, and speaking practice going.",
@@ -495,7 +495,8 @@ export const en = {
   "paywall.seeFeatures": "See all features",
   "paywall.yearly": "Yearly",
   "paywall.monthly": "Monthly",
-  "paywall.yearlyPrice": "{{price}} / year · $0.83 / month",
+  "paywall.yearlyPrice": "{{price}} / year · {{monthly}} / month",
+  "paywall.yearlyPriceOnly": "{{price}} / year",
   "paywall.monthlyPrice": "{{price}} / month",
   "paywall.bestValue": "Best value · 17% off",
   "paywall.currentPlan": "Current plan",

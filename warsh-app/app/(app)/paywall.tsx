@@ -181,21 +181,46 @@ export default function PaywallScreen({ dismissable = true }: Props) {
     }, [])
   );
 
-  function getPriceLabel(planKey: "monthly" | "annual") {
-    const fallback = planKey === "annual" ? "$10" : "$1";
+  // The recurring pricing phase Play reports for a plan; earlier phases are
+  // free-trial / intro offers.
+  function getRecurringPhase(planKey: "monthly" | "annual"): any | undefined {
     const product = products.find((p) => getIapProductId(p) === SUBSCRIPTION_PRODUCT_ID);
-    if (!product) return fallback;
+    if (!product) return undefined;
     const basePlanId = BASE_PLAN_IDS[planKey];
     const offers = ((product as any)?.subscriptionOffers ?? []) as Array<any>;
     // v14 field is `basePlanIdAndroid` (not `basePlanId`).
     const offer = offers.find((o: any) => o.basePlanIdAndroid === basePlanId);
-    if (!offer) return fallback;
-    // Prefer the regular recurring phase from the Android pricing phases; the last
-    // phase is the ongoing price (earlier phases are free-trial / intro offers).
+    if (!offer) return undefined;
     const phaseList: any[] = offer?.pricingPhasesAndroid?.pricingPhaseList ?? [];
-    const recurringPhase = [...phaseList].reverse().find((p: any) => p.formattedPrice);
-    return recurringPhase?.formattedPrice ?? offer.displayPrice ?? fallback;
+    return [...phaseList].reverse().find((p: any) => p.formattedPrice) ?? { formattedPrice: offer.displayPrice };
   }
+
+  function getPriceLabel(planKey: "monthly" | "annual") {
+    const fallback = planKey === "annual" ? "$10" : "$1";
+    const price = getRecurringPhase(planKey)?.formattedPrice as string | undefined;
+    // Play formats PKR as "Rs 2,800.00"; whole amounts read better without ".00".
+    return price ? price.replace(/\.00(?!\d)/, "") : fallback;
+  }
+
+  // The yearly price spread over twelve months, in the store's own currency.
+  // Undefined when Play hasn't reported an amount, so no other currency is shown.
+  function getYearlyMonthlyEquivalent(): string | undefined {
+    const phase = getRecurringPhase("annual");
+    const micros = Number(phase?.priceAmountMicros);
+    const currency = phase?.priceCurrencyCode as string | undefined;
+    if (!currency || !Number.isFinite(micros) || micros <= 0) return undefined;
+    const monthly = micros / 1_000_000 / 12;
+    try {
+      return new Intl.NumberFormat(undefined, {
+        style: "currency",
+        currency,
+        maximumFractionDigits: monthly >= 100 ? 0 : 2,
+      }).format(monthly);
+    } catch {
+      return undefined;
+    }
+  }
+
 
 
   // sha256(userId) — the same value the server derives, binding the purchase to
@@ -455,6 +480,7 @@ export default function PaywallScreen({ dismissable = true }: Props) {
   const trialChipText = trialDaysRemaining !== null && trialDaysRemaining > 0
     ? t("paywall.trialChip", { days: trialDaysRemaining })
     : t("paywall.premiumChip");
+  const yearlyMonthlyEquivalent = getYearlyMonthlyEquivalent();
   const benefitItems = [
     { icon: "book-outline" as const, label: t("paywall.benefitChapters") },
     { icon: "sparkles-outline" as const, label: t("paywall.benefitNoor") },
@@ -556,7 +582,9 @@ export default function PaywallScreen({ dismissable = true }: Props) {
               <View style={styles.planMain}>
                 <Text style={[styles.planTitle, isUrdu && styles.urduText]}>{t("paywall.yearly")}</Text>
                 <Text style={[styles.planMeta, isUrdu && styles.urduText]}>
-                  {t("paywall.yearlyPrice", { price: getPriceLabel("annual") })}
+                  {yearlyMonthlyEquivalent
+                    ? t("paywall.yearlyPrice", { price: getPriceLabel("annual"), monthly: yearlyMonthlyEquivalent })
+                    : t("paywall.yearlyPriceOnly", { price: getPriceLabel("annual") })}
                 </Text>
               </View>
               <View style={[styles.valueBadge, currentPlanKey === "annual" && styles.currentBadge]}>

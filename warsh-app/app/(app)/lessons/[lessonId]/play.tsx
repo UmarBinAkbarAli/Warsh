@@ -14,7 +14,7 @@ import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, Warsh
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { cancelTodayReminders, fireMilestoneNotification } from "@services/notifications";
 import { trackLessonStarted, trackLessonCompleted, trackMilestoneUnlocked } from "@services/analytics";
-import { pickLocalized, useTranslationLanguage } from "@services/language";
+import { pickLocalized, useLanguage, useTranslationLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 import { prefetchCatalogAudio, prefetchRemoteAudio } from "@services/audioCache";
 import { prefetchChapter } from "@services/chapterPrefetch";
@@ -167,27 +167,31 @@ function roleLabel(role: string, t: TranslateFn): string {
   }
 }
 
-function exPrompt(ex: RawEx, language: LessonLanguage, t: TranslateFn): string | undefined {
+/** The prompt plus the language it is written in: strings from `t()` follow the UI
+ *  language, authored content follows the meaning language. */
+function exPrompt(ex: RawEx, language: LessonLanguage, uiLanguage: LessonLanguage, t: TranslateFn): { text: string | undefined; language: LessonLanguage } {
+  const authored = (text: string | undefined) => ({ text, language });
+  const ui = (text: string) => ({ text, language: uiLanguage });
   const type = exType(ex);
   if (type === "TAP_TRANSLATION") {
     if ((ex.direction as string | undefined) === "en_to_ar") {
-      return t("player.prompt.whichArabicMeans", { value: localizedText(ex.prompt, language) ?? "" });
+      return ui(t("player.prompt.whichArabicMeans", { value: localizedText(ex.prompt, language) ?? "" }));
     }
-    return t("player.prompt.whatArabicMeans");
+    return ui(t("player.prompt.whatArabicMeans"));
   }
-  if (type === "TRUE_FALSE") return localizedText(ex.statement, language);
-  if (type === "FILL_BLANK") return localizedText(ex.hint, language);
-  if (type === "BUILD_SENTENCE") return localizedText(ex.target_translation, language);
-  if (type === "MATCHING") return t("player.prompt.matchArabicMeaning");
-  if (type === "MATCH_AYAH") return t("player.prompt.matchAyahMeaning");
-  if (type === "AUDIO_RECOGNITION") return t("player.prompt.audioMeaning");
-  if (type === "WRITE_ARABIC") return localizedText(ex.prompt, language);
-  if (type === "HARAKAH_PLACEMENT") return t("player.prompt.harakah");
-  if (type === "WORD_ORDER") return localizedText(ex.context, language);
-  if (type === "TRANSLATE_TO_ARABIC") return localizedText(ex.source, language);
-  if (type === "IDENTIFY_ROOT") return t("player.prompt.identifyRoot");
-  if (type === "CONVERSATION_BUILDER") return t("player.prompt.conversationReply");
-  return undefined;
+  if (type === "TRUE_FALSE") return authored(localizedText(ex.statement, language));
+  if (type === "FILL_BLANK") return authored(localizedText(ex.hint, language));
+  if (type === "BUILD_SENTENCE") return authored(localizedText(ex.target_translation, language));
+  if (type === "MATCHING") return ui(t("player.prompt.matchArabicMeaning"));
+  if (type === "MATCH_AYAH") return ui(t("player.prompt.matchAyahMeaning"));
+  if (type === "AUDIO_RECOGNITION") return ui(t("player.prompt.audioMeaning"));
+  if (type === "WRITE_ARABIC") return authored(localizedText(ex.prompt, language));
+  if (type === "HARAKAH_PLACEMENT") return ui(t("player.prompt.harakah"));
+  if (type === "WORD_ORDER") return authored(localizedText(ex.context, language));
+  if (type === "TRANSLATE_TO_ARABIC") return authored(localizedText(ex.source, language));
+  if (type === "IDENTIFY_ROOT") return ui(t("player.prompt.identifyRoot"));
+  if (type === "CONVERSATION_BUILDER") return ui(t("player.prompt.conversationReply"));
+  return authored(undefined);
 }
 
 function exArabicText(ex: RawEx): string | undefined {
@@ -459,6 +463,7 @@ export default function LessonPlayScreen() {
   const insets = useSafeAreaInsets();
   const language = useTranslationLanguage();
   const t = useT();
+  const uiLanguage = useLanguage();
   const { lessonId } = useLocalSearchParams<{ lessonId: string }>();
   const userId = useAuthStore((state) => state.user?.id);
   const [lesson, setLesson] = useState<RawLesson | null>(null);
@@ -1275,7 +1280,9 @@ export default function LessonPlayScreen() {
             {arabicText ? (
               <ArabicText size="lg" style={styles.discoverArabic}>{arabicText}</ArabicText>
             ) : null}
-            {transliteration ? <Text style={styles.discoverTransliteration}>{transliteration}</Text> : null}
+            {/* Quranic ayat are never shown in transliteration (product rule), even
+                when the card carries one; it still keys the audio cache below. */}
+            {transliteration && cardType !== "AYAH_PREVIEW" ? <Text style={styles.discoverTransliteration}>{transliteration}</Text> : null}
 
             {arabicText ? (
               <View style={styles.discoverPlayRow}>
@@ -1417,7 +1424,7 @@ export default function LessonPlayScreen() {
   }
 
   function renderPractice() {
-    const prompt    = exPrompt(currentExercise ?? {}, language, t);
+    const { text: prompt, language: promptLanguage } = exPrompt(currentExercise ?? {}, language, uiLanguage, t);
     const arabicTxt = exArabicText(currentExercise ?? {});
     const arabicAudioTxt = exAudioText(currentExercise ?? {});
 
@@ -1435,7 +1442,7 @@ export default function LessonPlayScreen() {
           <View style={styles.practiceProgressWrap}>{renderProgressBar()}</View>
           <View style={styles.backButtonSpacer} />
         </View>
-        <Text style={styles.exercisePrompt}>{prompt ? withDirectionMark(prompt, language) : prompt}</Text>
+        <Text style={styles.exercisePrompt}>{prompt ? withDirectionMark(prompt, promptLanguage) : prompt}</Text>
         {arabicTxt ? (
           <View style={styles.exerciseArabicCard}>
             <ArabicText size="lg" style={styles.exerciseArabic}>{arabicTxt}</ArabicText>

@@ -481,7 +481,7 @@ export const ur = {
   "manageSub.legal": "سبسکرپشنز آپ کے گوگل پلے اکاؤنٹ سے وصول کی جاتی ہیں اور موجودہ مدت ختم ہونے سے کم از کم 24 گھنٹے پہلے منسوخ نہ کرنے پر خودبخود تجدید ہو جاتی ہیں۔",
 
   "paywall.close": "پے وال بند کریں",
-  "paywall.trialChip": "باب 1 · آزمائش کے {{days}} دن باقی",
+  "paywall.trialChip": "آزمائش کے {{days}} دن باقی",
   "paywall.premiumChip": "ورش پریمیم",
   "paywall.title": "اپنا قرآنی عربی کا سفر جاری رکھیں",
   "paywall.subtitle": "تمام 72 ابواب، استاد نور، اور بولنے کی مشق جاری رکھیں۔",
@@ -492,7 +492,8 @@ export const ur = {
   "paywall.seeFeatures": "تمام سہولیات دیکھیں",
   "paywall.yearly": "سالانہ",
   "paywall.monthly": "ماہانہ",
-  "paywall.yearlyPrice": "⁦{{price}}⁩ سالانہ · ⁦US$0.83⁩ فی ماہ",
+  "paywall.yearlyPrice": "⁦{{price}}⁩ سالانہ · ⁦{{monthly}}⁩ فی ماہ",
+  "paywall.yearlyPriceOnly": "⁦{{price}}⁩ سالانہ",
   "paywall.monthlyPrice": "⁦{{price}}⁩ ماہانہ",
   "paywall.bestValue": "بہترین قیمت · 17٪ بچت",
   "paywall.currentPlan": "موجودہ منصوبہ",
