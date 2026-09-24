@@ -193,7 +193,8 @@ const ch25L02Content     = require("./fixtures/chapter-25-lesson-02.json");
 const ch25L03Content     = require("./fixtures/chapter-25-lesson-03.json");
 const ch25L04Content     = require("./fixtures/chapter-25-lesson-04.json");
 const ch25L05Content     = require("./fixtures/chapter-25-lesson-05.json");
-const ch25L06Content     = require("./fixtures/chapter-25-lesson-06.json");
+const ch25L06Content     = require("./fixtures/chapter-25-lesson-06-review.json");
+const ch25TestContent    = require("./fixtures/chapter-25-lesson-07-final-test.json");
 const ch26L01Content     = require("./fixtures/chapter-26-lesson-01.json");
 const ch26L02Content     = require("./fixtures/chapter-26-lesson-02.json");
 const ch26L03Content     = require("./fixtures/chapter-26-lesson-03.json");
@@ -977,12 +978,13 @@ async function main() {
     { id: "ch24-l06", chapterId: ch24Id, order: 6, title: "Chapter 24 Mixed Review", titleAr: "مُرَاجَعَةُ الْفَصْلِ الرَّابِعِ وَالْعِشْرِينَ", template: "REVIEW", xpReward: ch24L06Content._meta?.xp_reward ?? 20, content: ch24L06Content },
     { id: "ch24-test", chapterId: ch24Id, order: 7, title: "Chapter 24 Final Test", titleAr: "اخْتِبَارُ الْفَصْلِ الرَّابِعِ وَالْعِشْرِينَ", template: "REVIEW", xpReward: ch24TestContent._meta?.xp_reward ?? 20, content: ch24TestContent },
     // Chapter 25
-    { id: "ch25-l01", chapterId: ch25Id, order: 1, title: "لَيْسَ — He Is Not",                    titleAr: "لَيْسَ — لَيْسَ هُوَ",                   template: "STANDARD",        xpReward: ch25L01Content._meta?.xp_reward       ?? 10, content: ch25L01Content },
-    { id: "ch25-l02", chapterId: ch25Id, order: 2, title: "لَيْسَتْ — She Is Not",                 titleAr: "لَيْسَتْ — لَيْسَتْ هِيَ",               template: "STANDARD",        xpReward: ch25L02Content._meta?.xp_reward       ?? 10, content: ch25L02Content },
-    { id: "ch25-l03", chapterId: ch25Id, order: 3, title: "لَيْسُوا — They Are Not",               titleAr: "لَيْسُوا — لَيْسُوا هُمْ",               template: "STANDARD",        xpReward: ch25L03Content._meta?.xp_reward       ?? 10, content: ch25L03Content },
-    { id: "ch25-l04", chapterId: ch25Id, order: 4, title: "لَيْسَ with Adjectives",               titleAr: "لَيْسَ مَعَ الصِّفَاتِ",                  template: "STANDARD",        xpReward: ch25L04Content._meta?.xp_reward       ?? 10, content: ch25L04Content },
-    { id: "ch25-l05", chapterId: ch25Id, order: 5, title: "إِنَّ vs لَيْسَ — Assertion vs Negation", titleAr: "إِنَّ وَلَيْسَ — الْإِيجَابُ وَالنَّفْيُ", template: "STANDARD", xpReward: ch25L05Content._meta?.xp_reward ?? 10, content: ch25L05Content },
-    { id: "ch25-l06", chapterId: ch25Id, order: 6, title: "Al-Ikhlas Context: كُفُو أَحَد",        titleAr: "الْإِخْلَاصُ — لَمْ يَلِدْ وَلَمْ يُولَدْ", template: "STANDARD",        xpReward: ch25L06Content._meta?.xp_reward       ?? 10, content: ch25L06Content },
+    { id: "ch25-l01", chapterId: ch25Id, order: 1, title: "What Does لَيْسَ Mean?", titleAr: "لَيْسَ لِلنَّفْيِ", template: "STANDARD", xpReward: ch25L01Content._meta?.xp_reward ?? 10, content: ch25L01Content },
+    { id: "ch25-l02", chapterId: ch25Id, order: 2, title: "The Noun and Predicate After لَيْسَ", titleAr: "اسْمُ لَيْسَ وَخَبَرُهَا", template: "STANDARD", xpReward: ch25L02Content._meta?.xp_reward ?? 10, content: ch25L02Content },
+    { id: "ch25-l03", chapterId: ch25Id, order: 3, title: "لَيْسَتْ with Feminine Nouns", titleAr: "لَيْسَتْ لِلْمُؤَنَّثِ", template: "STANDARD", xpReward: ch25L03Content._meta?.xp_reward ?? 10, content: ch25L03Content },
+    { id: "ch25-l04", chapterId: ch25Id, order: 4, title: "لَيْسُوا: They Are Not", titleAr: "لَيْسُوا لِلْجَمْعِ", template: "STANDARD", xpReward: ch25L04Content._meta?.xp_reward ?? 10, content: ch25L04Content },
+    { id: "ch25-l05", chapterId: ch25Id, order: 5, title: "إِنَّ and لَيْسَ: Read the Difference", titleAr: "إِنَّ وَلَيْسَ", template: "STANDARD", xpReward: ch25L05Content._meta?.xp_reward ?? 10, content: ch25L05Content },
+    { id: "ch25-l06", chapterId: ch25Id, order: 6, title: "Chapter 25 Mixed Review", titleAr: "مُرَاجَعَةُ الْفَصْلِ الْخَامِسِ وَالْعِشْرِينَ", template: "REVIEW", xpReward: ch25L06Content._meta?.xp_reward ?? 20, content: ch25L06Content },
+    { id: "ch25-test", chapterId: ch25Id, order: 7, title: "Chapter 25 Final Test", titleAr: "اخْتِبَارُ الْفَصْلِ الْخَامِسِ وَالْعِشْرِينَ", template: "REVIEW", xpReward: ch25TestContent._meta?.xp_reward ?? 20, content: ch25TestContent },
     // Chapter 26
     { id: "ch26-l01", chapterId: ch26Id, order: 1, title: "هَذَا/ذَلِكَ with Idafa",              titleAr: "الْمُشِيرُ وَالْإِضَافَةُ",                template: "STANDARD",        xpReward: ch26L01Content._meta?.xp_reward       ?? 10, content: ch26L01Content },
     { id: "ch26-l02", chapterId: ch26Id, order: 2, title: "هَؤُلَاء/أُولَئِكَ with Idafa",        titleAr: "الْمُشِيرُ الْجَمْعِيُّ وَالْإِضَافَةُ",  template: "STANDARD",        xpReward: ch26L02Content._meta?.xp_reward       ?? 10, content: ch26L02Content },

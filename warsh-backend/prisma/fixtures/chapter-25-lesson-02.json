@@ -2,439 +2,476 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 25, Lesson 2 - laytat (she is not). Feminine singular subject. Contrast with layla. Predicate remains accusative.",
+    "_note": "Chapter 25 correction, 2026-09-24 (Docs/proposals/chapter-25-content-correction.md, section 'Second pass'). Authored practice is not Quran text; the Quran anchors are the 42:11 excerpt لَيْسَ كَمِثْلِهِ شَيْءٌ (read for meaning only; its prepositional phrase is never graded for case) and the 3:113 excerpt لَيْسُوا سَوَاءً. Vocabulary is limited to words already taught (house, book, pen, mosque, school, teacher, student; big, small, new, near, far). The noun and news of لَيْسَ are named only when لَيْسَ comes first. Lesson 2: اسم ليس keeps its ḍamma, خبر ليس takes a fatḥa; the two word orders; roles named only in the لَيْسَ-first order.",
     "chapter_order": 25,
     "lesson_order": 2,
-    "chapter_title": "Negating the Nominal Sentence",
-    "title": "laytat — She Is Not",
-    "titleAr": "لَيْسَتْ — هِيَ لَيْسَتْ",
-    "source": "reader_book3_lesson2_negation.md",
-    "estimated_minutes": 8,
+    "chapter_title": "لَيْسَ: Negating Nominal Sentences",
+    "title": "The Noun and the News After لَيْسَ",
+    "titleUr": "لَيْسَ کا اسم اور خبر",
+    "titleAr": "اسْمُ لَيْسَ وَخَبَرُهَا",
+    "source": "Docs/proposals/chapter-25-content-correction.md",
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 77,
-      "ayah": 50,
-      "label": "Al-Murselat 77:50",
-      "ar": "فَبِأَيِّ حَدِيثٍ بَعْدَهُ يُؤْمِنُونَ",
-      "en": "Then in what statement after it [i.e., the Qur’ān] will they believe?",
-      "ur": "اب اس کے بعد یہ کون سی بات پر ایمان لائیں گے؟",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/077050.mp3"
+      "surah": 42,
+      "ayah": 11,
+      "label": "Ash-Shura 42:11 (excerpt)",
+      "ar": "لَيْسَ كَمِثْلِهِ شَيْءٌ",
+      "en": "There is nothing like Him.",
+      "ur": "اس جیسی کوئی چیز نہیں ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/042011.mp3"
     },
     "noor_intro": {
-      "en": "فَيْمَ تَكْذِبُونَ — 'Then what would you deny?' Today we learn laytat (she is not) — the feminine form of layla. Just as 'she' replaces 'he' in English, laytat replaces layla when the subject is female.",
-      "ur": "فَيْمَ تَكْذِبُونَ — 'پھر تم کس چیز کو جھٹلاؤ گے؟' آج ہم لَيْسَتْ (وہ نہیں ہے — مؤنث) سیکھیں گے۔ جیسے انگریزی میں 'she' 'he' کی جگہ آتی ہے، ویسے ہی عربی میں جب خبر کا مضمون مؤنث ہو تو لَيْسَتْ آتی ہے۔"
+      "en": "In Lesson 1 كَبِيرٌ became كَبِيرًا after لَيْسَ. Today: which word changes, and which does not.",
+      "ur": "سبق 1 میں لَيْسَ کے بعد كَبِيرٌ، كَبِيرًا بن گیا۔ آج: کون سا لفظ بدلتا ہے اور کون سا نہیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "One word keeps its ending, one word changes",
+        "ar": "الْكِتَابُ جَدِيدٌ / لَيْسَ الْكِتَابُ جَدِيدًا",
+        "ur": "ایک لفظ کا اعراب وہی رہتا ہے، ایک بدلتا ہے"
+      },
+      "explanation": {
+        "en": "الْكِتَابُ keeps its ḍamma. جَدِيدٌ becomes جَدِيدًا: a fatḥa.",
+        "ur": "الْكِتَابُ کا پیش وہی رہتا ہے۔ جَدِيدٌ، جَدِيدًا بن جاتا ہے: زبر۔"
+      },
+      "examples": [
+        {
+          "ar": "الْكِتَابُ جَدِيدٌ",
+          "ar_plain": "الكتاب جديد",
+          "translit": "al-kitābu jadīdun",
+          "en": "The book is new.",
+          "ur": "کتاب نئی ہے۔"
+        },
+        {
+          "ar": "لَيْسَ الْكِتَابُ جَدِيدًا",
+          "ar_plain": "ليس الكتاب جديدا",
+          "translit": "laysa l-kitābu jadīdan",
+          "en": "The book is not new.",
+          "ur": "کتاب نئی نہیں ہے۔"
+        }
+      ]
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "laytat — feminine form of layla",
-        "ar": "لَيْسَتْ — مؤنث لَيْسَ",
-        "ur": "لَيْسَتْ — لَيْسَ کی مؤنث شکل"
+        "en": "The noun of لَيْسَ keeps a ḍamma",
+        "ar": "اسْمُ لَيْسَ مَرْفُوعٌ",
+        "ur": "لَيْسَ کا اسم پیش کے ساتھ"
       },
       "explanation": {
-        "en": "When the mubtada (subject) of a nominal sentence is feminine singular, use لَيْسَتْ instead of لَيْسَ. The khabar still takes the accusative (منصوب), regardless of gender.",
-        "ur": "جب جملہ اسمی کا مبتدا (موضوع) مؤنث واحد ہو، تو لَيْسَ کی جگہ لَيْسَتْ استعمال ہوتی ہے۔ خبر پھر بھی منصوب ہوتی ہے، جنس سے قطع نظر۔"
+        "en": "The noun straight after لَيْسَ is called اسم ليس, the noun of لَيْسَ. It is مرفوع: it ends in a ḍamma. In لَيْسَ الْكِتَابُ جَدِيدًا that noun is الْكِتَابُ.",
+        "ur": "لَيْسَ کے فوراً بعد آنے والا اسم اسم ليس کہلاتا ہے، یعنی لَيْسَ کا اسم۔ یہ مرفوع ہے: آخر میں پیش۔ لَيْسَ الْكِتَابُ جَدِيدًا میں یہ اسم الْكِتَابُ ہے۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The news of لَيْسَ takes a fatḥa",
+        "ar": "خَبَرُ لَيْسَ مَنْصُوبٌ",
+        "ur": "لَيْسَ کی خبر زبر کے ساتھ"
+      },
+      "explanation": {
+        "en": "What is said about the noun is خبر ليس, the news of لَيْسَ. It is منصوب: here a double fatḥa, jadīdan. The alif at the end only carries that ending.",
+        "ur": "اسم کے بارے میں جو کہا جائے وہ خبر ليس ہے، یعنی لَيْسَ کی خبر۔ یہ منصوب ہے: یہاں دو زبر، جَدِيدًا۔ آخر کا الف صرف اس اعراب کو اٹھاتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "هِيَ لَيْسَتْ صَغِيرًا",
-        "ar_plain": "هي ليست صغيراً",
-        "translit": "hiya laytat saghiiran",
-        "en": "She is not small.",
-        "ur": "وہ چھوٹی نہیں ہے۔"
+        "ar": "لَيْسَ الْقَلَمُ صَغِيرًا",
+        "ar_plain": "ليس القلم صغيرا",
+        "translit": "laysa l-qalamu ṣaghīran",
+        "en": "The pen is not small.",
+        "ur": "قلم چھوٹا نہیں ہے۔"
       },
       "explanation": {
-        "en": "هِيَ is the feminine pronoun (she). It is the mubtada. لَيْسَتْ is the negation verb in feminine form. صَغِيرًا is the khabar, still accusative — not صَغِيرٌ.",
-        "ur": "هِيَ مؤنث ضمیر ہے (وہ)۔ یہ مبتدا ہے۔ لَيْسَتْ انکار کا فعل مؤنث شکل میں ہے۔ صَغِيرًا خبر ہے، پھر بھی منصوب — صَغِيرٌ نہیں۔"
+        "en": "الْقَلَمُ, with a ḍamma, is the noun of لَيْسَ. صَغِيرًا, with a fatḥa, is its news.",
+        "ur": "الْقَلَمُ، پیش کے ساتھ، لَيْسَ کا اسم ہے۔ صَغِيرًا، زبر کے ساتھ، اس کی خبر ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الْمُسْلِمَةُ لَيْسَتْ كَافِرَةً",
-        "ar_plain": "المسلمة ليست كافرة",
-        "translit": "al-muslimahtu laytat kaafiratan",
-        "en": "The believing woman is not a disbeliever.",
-        "ur": "مومنہ عورت کافر نہیں ہے۔"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Two word orders, one meaning",
+        "ar": "لَيْسَ الْبَيْتُ كَبِيرًا / الْبَيْتُ لَيْسَ كَبِيرًا",
+        "ur": "دو ترتیبیں، ایک مطلب"
       },
       "explanation": {
-        "en": "الْمُسْلِمَةُ is a feminine noun (muslim woman). لَيْسَتْ negates it. كَافِرَةً is the khabar — feminine form of the adjective, accusative case. Note كَافِرَةً not كَافِرَةٌ.",
-        "ur": "الْمُسْلِمَةُ مؤنث اسم ہے (مسلمان عورت)۔ لَيْسَتْ نے انکار کیا۔ كَافِرَةً خبر ہے — صفت کی مؤنث شکل، نصب کی حالت۔ دیکھیں كَافِرَةً نہیں كَافِرَةٌ۔"
-      }
+        "en": "Both mean: the house is not big. The noun can also come before لَيْسَ. Either way the description ends in a fatḥa: كَبِيرًا. In this chapter we name the noun and news of لَيْسَ only when لَيْسَ comes first.",
+        "ur": "دونوں کا مطلب: گھر بڑا نہیں ہے۔ اسم لَيْسَ سے پہلے بھی آ سکتا ہے۔ دونوں صورتوں میں وصف زبر پر ختم ہوتا ہے: كَبِيرًا۔ اس باب میں لَيْسَ کا اسم اور خبر صرف اسی وقت بتائیں گے جب لَيْسَ پہلے آئے۔"
+      },
+      "examples": [
+        {
+          "ar": "لَيْسَ الْبَيْتُ كَبِيرًا",
+          "ar_plain": "ليس البيت كبيرا",
+          "translit": "laysa l-baytu kabīran",
+          "en": "The house is not big.",
+          "ur": "گھر بڑا نہیں ہے۔"
+        },
+        {
+          "ar": "الْبَيْتُ لَيْسَ كَبِيرًا",
+          "ar_plain": "البيت ليس كبيرا",
+          "translit": "al-baytu laysa kabīran",
+          "en": "The house is not big.",
+          "ur": "گھر بڑا نہیں ہے۔"
+        }
+      ]
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الشَّمْسُ لَيْسَتْ بَارِدَةً",
-        "ar_plain": "الشمس ليست باردة",
-        "translit": "ash-shamsu laytat baaridatan",
-        "en": "The sun is not cold.",
-        "ur": "سورج ٹھنڈا نہیں ہے۔"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Three checks",
+        "ar": "لَيْسَ ← اسْمٌ ← خَبَرٌ",
+        "ur": "تین جانچیں"
       },
       "explanation": {
-        "en": "الشَّمْسُ (the sun) is grammatically feminine in Arabic even though 'sun' is not inherently gendered. لَيْسَتْ matches. بَارِدَةً is feminine accusative. In the positive: الشَّمْسُ بَارِدَةٌ (nominative).",
-        "ur": "الشَّمْسُ (سورج) عربی میں грамматически مؤنث ہے اگرچہ 'سورج' جنس سے متعلق نہیں ہے۔ لَيْسَتْ ملتی ہے۔ بَارِدَةً مؤنث منصوب ہے۔ مثبت میں: الشَّمْسُ بَارِدَةٌ (مرفوع)۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "هَذَا الْكِتَابُ لَيْسَتْ صَغِيرًا",
-        "ar_plain": "هذا الكتاب ليست صغيراً",
-        "translit": "haadhaa al-kitaabu laytat saghiiran",
-        "en": "This book is not small.",
-        "ur": "یہ کتاب چھوٹی نہیں ہے۔"
-      },
-      "explanation": {
-        "en": "Even though the pronoun هَذَا is technically masculine, the actual subject is الْكِتَابُ which is feminine (grammatically). So laytat is used. The verb must match the noun, not the demonstrative pronoun.",
-        "ur": "اگرچہ ضمیر هَذَا技术上 مذکر ہے، اصل مضمون الْكِتَابُ ہے جو грамматически مؤنث ہے۔ اس لیے لَيْسَتْ آئی۔ فعل اسم سے ملا نہ کہ اشاریہ ضمیر سے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "layla vs laytat — matching the noun's gender",
-        "ur": "لَيْسَ بمقابلہ لَيْسَتْ — اسم کی جنس سے میل"
-      },
-      "body": {
-        "en": "Use لَيْسَ when the subject is masculine or non-human-feminine (like كِتَاب). Use لَيْسَتْ when the subject is a naturally feminine noun (like مُسْلِمَة or نِسَاء). The khabar always stays accusative in both cases.",
-        "ur": "لَيْسَ اس وقت استعمال ہوتی ہے جب مبتدا مذکر ہو یا غیر انسانی مؤنث (جیسے كِتَاب)۔ لَيْسَتْ اس وقت استعمال ہوتی ہے جب مبتدا قدرتی مؤنث اسم ہو (جیسے مُسْلِمَة یا نِسَاء)۔ دونوں صورتوں میں خبر ہمیشہ منصوب رہتی ہے۔"
+        "en": "1. Is لَيْسَ first? 2. The noun right after it: a ḍamma. 3. The word that says something about it: a fatḥa.",
+        "ur": "1. کیا لَيْسَ پہلے ہے؟ 2. اس کے فوراً بعد والا اسم: پیش۔ 3. اس کے بارے میں بات بتانے والا لفظ: زبر۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "TRUE_FALSE",
       "id": "ch25-l02-ex01",
-      "prompt": {
-        "ar": "هِيَ لَيْسَتْ صَغِيرًا",
-        "ar_plain": "هي ليست صغيراً",
-        "translit": "hiya laytat saghiiran",
-        "en": "She is not small.",
-        "ur": "وہ چھوٹی نہیں ہے۔"
-      },
-      "options": [
-        {
-          "en": "She is not small.",
-          "ur": "وہ چھوٹی نہیں ہے۔"
-        },
-        {
-          "en": "He is not small.",
-          "ur": "وہ چھوٹا نہیں ہے۔"
-        },
-        {
-          "en": "She is small.",
-          "ur": "وہ چھوٹی ہے۔"
-        },
-        {
-          "en": "Is she small?",
-          "ur": "کیا وہ چھوٹی ہے؟"
+      "statement": {
+        "en": "الْكِتَابُ is the noun of لَيْسَ, and it has a ḍamma.",
+        "ur": "الْكِتَابُ، لَيْسَ کا اسم ہے اور اس پر پیش ہے۔",
+        "ar_example": {
+          "ar": "لَيْسَ الْكِتَابُ جَدِيدًا",
+          "ar_plain": "ليس الكتاب جديدا",
+          "translit": "laysa l-kitābu jadīdan",
+          "en": "The book is not new.",
+          "ur": "کتاب نئی نہیں ہے۔"
         }
-      ],
-      "correct_index": 0,
+      },
+      "correct_answer": true,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "هِيَ is feminine 'she.' لَيْسَتْ is the feminine negation verb. صَغِيرًا is the khabar in accusative — feminine adjective form. This is 'she is not small.'",
-        "ur": "هِيَ 'وہ' (مؤنث) ہے۔ لَيْسَتْ انکار کا فعل مؤنث ہے۔ صَغِيرًا خبر ہے منصوب — صفت کی مؤنث شکل۔ یہ 'وہ چھوٹی نہیں ہے۔'"
+        "en": "الْكِتَابُ comes straight after لَيْسَ and keeps its ḍamma.",
+        "ur": "الْكِتَابُ لَيْسَ کے فوراً بعد ہے اور اس کا پیش باقی ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch25-l02-ex02",
       "statement": {
-        "en": "In الْمُسْلِمَةُ لَيْسَتْ كَافِرَةً, the khabar كَافِرَةً is accusative because لَيْسَتْ governs it — the same rule as with لَيْسَ.",
-        "ur": "الْمُسْلِمَةُ لَيْسَتْ كَافِرَةً میں، خبر كَافِرَةً منصوب ہے کیونکہ لَيْسَتْ نے اس پر حکم رکھا ہے — لَيْسَ والا ہی قاعدہ۔",
+        "en": "بَعِيدًا is the noun of لَيْسَ.",
+        "ur": "بَعِيدًا، لَيْسَ کا اسم ہے۔",
         "ar_example": {
-          "ar": "الْمُسْلِمَةُ لَيْسَتْ كَافِرَةً",
-          "ar_plain": "المسلمة ليست كافرة",
-          "translit": "al-muslimahtu laytat kaafiratan",
-          "en": "The Muslim woman is not a disbeliever.",
-          "ur": "مومنہ عورت کافر نہیں ہے۔"
+          "ar": "لَيْسَ الْمَسْجِدُ بَعِيدًا",
+          "ar_plain": "ليس المسجد بعيدا",
+          "translit": "laysa l-masjidu baʿīdan",
+          "en": "The mosque is not far.",
+          "ur": "مسجد دور نہیں ہے۔"
         }
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْمَسْجِدُ is the noun (ḍamma); بَعِيدًا is the news (fatḥa).",
+        "ur": "الْمَسْجِدُ اسم ہے (پیش)؛ بَعِيدًا خبر ہے (زبر)۔"
+      }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch25-l02-ex03",
       "mode": "TAP",
-      "sentence_ar": "الشَّمْسُ لَيْسَتْ ___",
+      "sentence_ar": "لَيْسَ الْقَلَمُ ___",
       "hint": {
-        "en": "The sun is not cold. (cold: بَارِدٌ / بَارِدَةٌ — adjective must match and be accusative)",
-        "ur": "سورج ٹھنڈا نہیں ہے۔ (ٹھنڈا: بَارِدٌ / بَارِدَةٌ — صفت ملائے اور منصوب ہو)"
+        "en": "The pen is not new.",
+        "ur": "قلم نیا نہیں ہے۔"
       },
       "options": [
         {
-          "ar": "بَارِدَةً",
-          "ar_plain": "باردة",
-          "translit": "baaridatan",
-          "en": "cold (fem. accusative)",
-          "ur": "ٹھنڈی (مؤنث منصوب)"
+          "ar": "جَدِيدٌ",
+          "ar_plain": "جديد",
+          "translit": "jadīdun",
+          "en": "new",
+          "ur": "نیا"
         },
         {
-          "ar": "بَارِدَةٌ",
-          "ar_plain": "باردة",
-          "translit": "baaridatun",
-          "en": "cold (fem. nominative)",
-          "ur": "ٹھنڈی (مؤنث مرفوع)"
+          "ar": "جَدِيدًا",
+          "ar_plain": "جديدا",
+          "translit": "jadīdan",
+          "en": "new",
+          "ur": "نیا"
         },
         {
-          "ar": "بَارِدٌ",
-          "ar_plain": "بارد",
-          "translit": "baaridun",
-          "en": "cold (masc. nominative)",
-          "ur": "ٹھنڈا (مذکر مرفوع)"
+          "ar": "جَدِيدٍ",
+          "ar_plain": "جديد",
+          "translit": "jadīdin",
+          "en": "new",
+          "ur": "نیا"
         },
         {
-          "ar": "بَارِدًا",
-          "ar_plain": "بارداً",
-          "translit": "baaridan",
-          "en": "cold (masc. accusative)",
-          "ur": "ٹھنڈا (مذکر منصوب)"
+          "ar": "جَدِيدَةً",
+          "ar_plain": "جديدة",
+          "translit": "jadīdatan",
+          "en": "new (feminine)",
+          "ur": "نئی"
         }
       ],
       "correct_answer": {
-        "ar": "بَارِدَةً",
-        "ar_plain": "باردة",
-        "translit": "baaridatan",
-        "en": "cold (fem. accusative)",
-        "ur": "ٹھنڈی (مؤنث منصوب)"
+        "ar": "جَدِيدًا",
+        "ar_plain": "جديدا",
+        "translit": "jadīdan",
+        "en": "new",
+        "ur": "نیا"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The news of لَيْسَ takes a fatḥa: جَدِيدًا.",
+        "ur": "لَيْسَ کی خبر زبر لیتی ہے: جَدِيدًا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch25-l02-ex04",
+      "mode": "TAP",
+      "sentence_ar": "لَيْسَ ___ كَبِيرًا",
+      "hint": {
+        "en": "The house is not big.",
+        "ur": "گھر بڑا نہیں ہے۔"
+      },
+      "options": [
+        {
+          "ar": "الْبَيْتَ",
+          "ar_plain": "البيت",
+          "translit": "al-bayta",
+          "en": "the house",
+          "ur": "گھر"
+        },
+        {
+          "ar": "الْبَيْتِ",
+          "ar_plain": "البيت",
+          "translit": "al-bayti",
+          "en": "the house",
+          "ur": "گھر"
+        },
+        {
+          "ar": "الْبَيْتُ",
+          "ar_plain": "البيت",
+          "translit": "al-baytu",
+          "en": "the house",
+          "ur": "گھر"
+        },
+        {
+          "ar": "بَيْتًا",
+          "ar_plain": "بيتا",
+          "translit": "baytan",
+          "en": "a house",
+          "ur": "ایک گھر"
+        }
+      ],
+      "correct_answer": {
+        "ar": "الْبَيْتُ",
+        "ar_plain": "البيت",
+        "translit": "al-baytu",
+        "en": "the house",
+        "ur": "گھر"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The noun of لَيْسَ keeps a ḍamma: الْبَيْتُ.",
+        "ur": "لَيْسَ کا اسم پیش رکھتا ہے: الْبَيْتُ۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch25-l02-ex04",
+      "id": "ch25-l02-ex05",
       "left_column": [
         {
-          "ar": "هِيَ لَيْسَتْ كَبِيرَةً",
-          "ar_plain": "هي ليست كبيرة",
-          "translit": "hiya laytat kabiiratan",
-          "en": "She is not great.",
-          "ur": "وہ بڑی نہیں ہے۔"
+          "ar": "لَيْسَ",
+          "ar_plain": "ليس",
+          "translit": "laysa",
+          "en": "is not",
+          "ur": "نہیں ہے"
         },
         {
-          "ar": "الْمُسْلِمَةُ لَيْسَتْ ضَعِيفَةً",
-          "ar_plain": "المسلمة ليست ضعيفة",
-          "translit": "al-muslimahtu laytat da'iifatan",
-          "en": "The Muslim woman is not weak.",
-          "ur": "مومنہ عورت کمزور نہیں ہے۔"
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitābu",
+          "en": "the book",
+          "ur": "کتاب"
         },
         {
-          "ar": "الشَّمْسُ لَيْسَتْ بَارِدَةً",
-          "ar_plain": "الشمس ليست باردة",
-          "translit": "ash-shamsu laytat baaridatan",
-          "en": "The sun is not cold.",
-          "ur": "سورج ٹھنڈا نہیں ہے۔"
-        },
-        {
-          "ar": "نِسَاءٌ لَيْسَتْ جَاهِلَاتٌ",
-          "ar_plain": "نساء ليسن جاهلات",
-          "translit": "nisaa-on laytat jaahilaat",
-          "en": "Women are not ignorant.",
-          "ur": "عورتیں نادان نہیں ہیں۔"
+          "ar": "جَدِيدًا",
+          "ar_plain": "جديدا",
+          "translit": "jadīdan",
+          "en": "new",
+          "ur": "نیا"
         }
       ],
       "right_column": [
         {
-          "en": "She is not great.",
-          "ur": "وہ بڑی نہیں ہے۔"
+          "en": "the news of لَيْسَ: fatḥa",
+          "ur": "لَيْسَ کی خبر: زبر"
         },
         {
-          "en": "The Muslim woman is not weak.",
-          "ur": "مومنہ عورت کمزور نہیں ہے۔"
+          "en": "the word that negates",
+          "ur": "نفی کرنے والا لفظ"
         },
         {
-          "en": "The sun is not cold.",
-          "ur": "سورج ٹھنڈا نہیں ہے۔"
-        },
-        {
-          "en": "Women are not ignorant.",
-          "ur": "عورتیں نادان نہیں ہیں۔"
+          "en": "the noun of لَيْسَ: ḍamma",
+          "ur": "لَيْسَ کا اسم: پیش"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
           1
         ],
         [
-          2,
+          1,
           2
         ],
         [
-          3,
-          3
+          2,
+          0
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "In لَيْسَ الْكِتَابُ جَدِيدًا: the negating word, the noun with a ḍamma, the news with a fatḥa.",
+        "ur": "لَيْسَ الْكِتَابُ جَدِيدًا میں: نفی کا لفظ، پیش والا اسم، زبر والی خبر۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch25-l02-ex06",
+      "prompt": {
+        "ar": "لَيْسَ الْقَلَمُ صَغِيرًا",
+        "ar_plain": "ليس القلم صغيرا",
+        "translit": "laysa l-qalamu ṣaghīran",
+        "en": "The pen is not small.",
+        "ur": "قلم چھوٹا نہیں ہے۔"
+      },
+      "options": [
+        {
+          "en": "The pen is small.",
+          "ur": "قلم چھوٹا ہے۔"
+        },
+        {
+          "en": "The pen is not small.",
+          "ur": "قلم چھوٹا نہیں ہے۔"
+        },
+        {
+          "en": "The pen is not new.",
+          "ur": "قلم نیا نہیں ہے۔"
+        },
+        {
+          "en": "The book is not small.",
+          "ur": "کتاب چھوٹی نہیں ہے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْقَلَمُ is the pen, صَغِيرًا is small, and لَيْسَ makes it negative.",
+        "ur": "الْقَلَمُ قلم، صَغِيرًا چھوٹا، اور لَيْسَ نفی کرتا ہے۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch25-l02-ex05",
+      "id": "ch25-l02-ex07",
       "target_translation": {
-        "en": "The student is not weak.",
-        "ur": "طالبہ کمزور نہیں ہے۔"
+        "en": "The mosque is not far.",
+        "ur": "مسجد دور نہیں ہے۔"
       },
       "tiles": [
         {
-          "ar": "الطَّالِبَةُ",
-          "ar_plain": "الطالبة",
-          "translit": "at-taalibatu",
-          "en": "the female student",
-          "ur": "طالبہ"
+          "ar": "بَعِيدًا",
+          "ar_plain": "بعيدا",
+          "translit": "baʿīdan",
+          "en": "far",
+          "ur": "دور"
         },
         {
-          "ar": "لَيْسَتْ",
-          "ar_plain": "ليست",
-          "translit": "laytat",
+          "ar": "لَيْسَ",
+          "ar_plain": "ليس",
+          "translit": "laysa",
           "en": "is not",
           "ur": "نہیں ہے"
         },
         {
-          "ar": "ضَعِيفَةً",
-          "ar_plain": "ضعيفة",
-          "translit": "da'iifatan",
-          "en": "weak (fem. accusative)",
-          "ur": "کمزور (مؤنث منصوب)"
-        },
-        {
-          "ar": "ضَعِيفٌ",
-          "ar_plain": "ضعيف",
-          "translit": "da'iifun",
-          "en": "weak (masc. nominative)",
-          "ur": "کمزور (مذکر مرفوع)"
+          "ar": "الْمَسْجِدُ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidu",
+          "en": "the mosque",
+          "ur": "مسجد"
         }
       ],
       "correct_order": [
-        0,
         1,
-        2
+        2,
+        0
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch25-l02-ex06",
-      "statement": {
-        "en": "The verb لَيْسَتْ must match the gender of the mubtada noun, not the demonstrative pronoun. So هَذَا الْمُسْلِمَةُ لَيْسَتْ is correct because الْمُسْلِمَةُ is feminine.",
-        "ur": "فعل لَيْسَتْ اسم مبتدا کی جنس سے ملتا ہے، اشاریہ ضمیر سے نہیں۔ اس لیے هَذَا الْمُسْلِمَةُ لَيْسَتْ درست ہے کیونکہ الْمُسْلِمَةُ مؤنث ہے۔",
-        "ar_example": {
-          "ar": "هَذَا الْمُسْلِمَةُ لَيْسَتْ جَاهِلَةً",
-          "ar_plain": "هذه المسلمة ليست جاهلة",
-          "translit": "haadhihaa al-muslimahtu laytat jaahilatan",
-          "en": "This Muslim woman is not ignorant.",
-          "ur": "یہ مومنہ عورت نادان نہیں ہے۔"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch25-l02-ex07",
-      "mode": "TAP",
-      "sentence_ar": "الْمُسْلِمَةُ لَيْسَتْ ___",
-      "hint": {
-        "en": "The Muslim woman is not a disbeliever.",
-        "ur": "مومنہ عورت کافر نہیں ہے۔"
-      },
-      "options": [
-        {
-          "ar": "كَافِرَةً",
-          "ar_plain": "كافرة",
-          "translit": "kaafiratan",
-          "en": "disbeliever (fem. accusative)",
-          "ur": "کافر (مؤنث منصوب)"
-        },
-        {
-          "ar": "كَافِرٌ",
-          "ar_plain": "كافر",
-          "translit": "kaafirun",
-          "en": "disbeliever (masc. nominative)",
-          "ur": "کافر (مذکر مرفوع)"
-        },
-        {
-          "ar": "مُؤْمِنَةٌ",
-          "ar_plain": "مؤمنة",
-          "translit": "mu'minatan",
-          "en": "believer (fem. nominative — wrong case)",
-          "ur": "مومن (مؤنث مرفوع — غلط case)"
-        },
-        {
-          "ar": "عَالِمَةً",
-          "ar_plain": "عالمة",
-          "translit": "aalimatan",
-          "en": "scholar (fem. accusative)",
-          "ur": "عالم (مؤنث منصوب)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "كَافِرَةً",
-        "ar_plain": "كافرة",
-        "translit": "kaafiratan",
-        "en": "disbeliever (fem. accusative)",
-        "ur": "کافر (مؤنث منصوب)"
-      },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَيْسَ, then its noun الْمَسْجِدُ, then its news بَعِيدًا.",
+        "ur": "لَيْسَ، پھر اس کا اسم الْمَسْجِدُ، پھر اس کی خبر بَعِيدًا۔"
+      }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch25-l02-ex08",
       "statement": {
-        "en": "The Muslim woman is not righteous.",
-        "ur": "مومنہ عورت نیک نہیں ہے۔",
+        "en": "These two sentences mean the same.",
+        "ur": "ان دونوں جملوں کا مطلب ایک ہے۔",
         "ar_example": {
-          "ar": "الْمُسْلِمَةُ لَيْسَتْ صَالِحَةً",
-          "en": "The Muslim woman is not righteous.",
-          "ur": "مومنہ عورت نیک نہیں ہے۔",
-          "ar_plain": "المسلمة ليست صالحة",
-          "translit": "—"
+          "ar": "لَيْسَ الْبَيْتُ كَبِيرًا / الْبَيْتُ لَيْسَ كَبِيرًا",
+          "ar_plain": "ليس البيت كبيرا البيت ليس كبيرا",
+          "translit": "laysa l-baytu kabīran / al-baytu laysa kabīran",
+          "en": "The house is not big. / The house is not big.",
+          "ur": "گھر بڑا نہیں ہے۔ / گھر بڑا نہیں ہے۔"
         }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Only the word order differs: both say the house is not big.",
+        "ur": "صرف ترتیب مختلف ہے: دونوں کہتے ہیں کہ گھر بڑا نہیں ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "laytat — feminine negation of the nominal sentence",
-      "ar": "لَيْسَتْ — جملہ اسمی کا مؤنث انکار",
-      "ur": "لَيْسَتْ — جملہ اسمی کا مؤنث انکار"
+      "en": "The noun and news of لَيْسَ",
+      "ar": "اسْمُ لَيْسَ وَخَبَرُهَا",
+      "ur": "لَيْسَ کا اسم اور خبر"
     },
     "ayah": {
-      "surah": 77,
-      "ayah": 50,
-      "label": "Al-Murselat 77:50",
-      "ar": "فَبِأَيِّ حَدِيثٍ بَعْدَهُ يُؤْمِنُونَ",
-      "en": "Then in what statement after it [i.e., the Qur’ān] will they believe?",
-      "ur": "اب اس کے بعد یہ کون سی بات پر ایمان لائیں گے؟",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/077050.mp3"
+      "surah": 42,
+      "ayah": 11,
+      "label": "Ash-Shura 42:11 (excerpt)",
+      "ar": "لَيْسَ كَمِثْلِهِ شَيْءٌ",
+      "en": "There is nothing like Him.",
+      "ur": "اس جیسی کوئی چیز نہیں ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/042011.mp3"
     },
     "highlighted_word_indices": [
-      1
+      0
+    ],
+    "highlighted_words": [
+      "لَيْسَ"
     ],
     "noor_explanation": {
-      "en": "لَيْسَتْ is the feminine form of لَيْسَ. Just as هِيَ replaces هُوَ for a female subject, لَيْسَتْ replaces لَيْسَ. The khabar stays accusative in both forms. Gender match: لَيْسَ for masculine, لَيْسَتْ for feminine.",
-      "ur": "لَيْسَتْ لَيْسَ کی مؤنث شکل ہے۔ جیسے ہِيَ ہُوَ کی جگہ مؤنث مضمون کے لیے آتی ہے، ویسے ہی لَيْسَتْ لَيْسَ کی جگہ آتی ہے۔ خبر دونوں صورتوں میں منصوب رہتی ہے۔ جنس کا میل: لَيْسَ مذکر کے لیے، لَيْسَتْ مؤنث کے لیے۔"
+      "en": "In your own sentences: the noun of لَيْسَ keeps its ḍamma and its news takes a fatḥa. The excerpt from 42:11 you read for meaning.",
+      "ur": "آپ کے اپنے جملوں میں: لَيْسَ کا اسم پیش رکھتا ہے اور اس کی خبر زبر لیتی ہے۔ 42:11 کا اقتباس آپ معنی کے لیے پڑھتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "layla for he, laytat for she — just like English 'he is not' and 'she is not.' The khabar stays accusative either way. Now you can negate any singular nominal sentence.",
-      "ur": "لَيْسَ 'وہ نہیں' (مذکر)، لَيْسَتْ 'وہ نہیں' (مؤنث) — انگریزی والا ہی فرق۔ خبر ہر صورت منصوب رہتی ہے۔ اب آپ کوئی بھی واحد جملہ اسمی منفی کر سکتے ہیں۔"
+      "en": "Noun with a ḍamma, news with a fatḥa. Next: لَيْسَتْ for feminine nouns.",
+      "ur": "اسم پیش کے ساتھ، خبر زبر کے ساتھ۔ اگلا سبق: مؤنث اسم کے لیے لَيْسَتْ۔"
     }
   }
 }

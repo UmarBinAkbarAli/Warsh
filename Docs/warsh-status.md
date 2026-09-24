@@ -701,6 +701,22 @@ Everything below this list is either done and verified, or one of these:
    tap/true-false/fill exercises. Not done: scholarly review of the grammar
    and Quran-context wording the proposals ask for, and an Android emulator
    pass.
+   **Chapter 25 (`Docs/proposals/chapter-25-content-correction.md`) is
+   corrected, staging-verified and promoted to production 2026-09-24** on the
+   owner's instruction. The first rewrite was reviewed and fixed before
+   promotion (section "Second pass"): two MATCH_AYAH items with non-meaning
+   options, untaught words, thin lessons, an incorrect-Arabic example and a
+   "layla" line. "لَيْسَ: Negating Nominal Sentences": l01–l05 rebuilt to 6
+   cards / 8 exercises each on the 42:11 and 3:113 excerpts (2:173 in the
+   إِنَّ contrast), one card teaches both word orders, and the noun and news of
+   لَيْسَ are graded only when لَيْسَ comes first. `ch25-l06` is the REVIEW
+   (`chapter-25-lesson-06-review.json`), `ch25-test` new at order 7 (12
+   questions, 10/12 passes, closing ayah 42:11). 36 cards / 24 scenes listed
+   for illustration. Verified: fixture validation, Urdu and Quran audits,
+   exact-excerpt check, 183 backend tests, staging promote and a 22-check API
+   walk; production `content:promote-chapter-twenty-five -- --apply` after a
+   clean content:check, new baseline (452), catalogue audio. Not done:
+   scholarly review of the Arabic/Urdu wording and an Android emulator pass.
    **Chapter 24 (`Docs/proposals/chapter-24-content-proposal.md`) is built,
    staging-verified and promoted to production 2026-09-24** on the owner's
    instruction. The review confirmed the proposal's defects (Lesson 2 taught

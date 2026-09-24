@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 25 correction, 2026-09-24 (Docs/proposals/chapter-25-content-correction.md, section 'Second pass'). Authored practice is not Quran text; the Quran anchors are the 42:11 excerpt لَيْسَ كَمِثْلِهِ شَيْءٌ (read for meaning only; its prepositional phrase is never graded for case) and the 3:113 excerpt لَيْسُوا سَوَاءً. Vocabulary is limited to words already taught (house, book, pen, mosque, school, teacher, student; big, small, new, near, far). The noun and news of لَيْسَ are named only when لَيْسَ comes first. Chapter test (ch25-test, new): twelve questions — meaning (2), noun and news of لَيْسَ in لَيْسَ-first sentences (3), ending of the news (1), feminine agreement (2), لَيْسُوا and ـِينَ (1), the 3:113 excerpt (1), إِنَّ versus لَيْسَ (1), the 42:11 excerpt for meaning only (1). Pass mark 80 %: 9/12 fails, 10/12 passes.",
+    "chapter_order": 25,
+    "lesson_order": 7,
+    "chapter_title": "لَيْسَ: Negating Nominal Sentences",
+    "title": "Chapter 25 Final Test",
+    "titleUr": "باب 25 کا آخری امتحان",
+    "titleAr": "اخْتِبَارُ الْفَصْلِ الْخَامِسِ وَالْعِشْرِينَ",
+    "source": "Docs/proposals/chapter-25-content-correction.md",
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 42,
+      "ayah": 11,
+      "label": "Ash-Shura 42:11 (excerpt)",
+      "ar": "لَيْسَ كَمِثْلِهِ شَيْءٌ",
+      "en": "There is nothing like Him.",
+      "ur": "اس جیسی کوئی چیز نہیں ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/042011.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 25.",
+      "ur": "باب 25 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 25,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch25-test-q01",
+        "topic": {
+          "en": "Meaning of لَيْسَ",
+          "ur": "لَيْسَ کا مطلب"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "لَيْسَ الْمَسْجِدُ بَعِيدًا",
+        "options": [
+          {
+            "en": "The mosque is far.",
+            "ur": "مسجد دور ہے۔"
+          },
+          {
+            "en": "The mosque is not far.",
+            "ur": "مسجد دور نہیں ہے۔"
+          },
+          {
+            "en": "Indeed, the mosque is far.",
+            "ur": "بے شک مسجد دور ہے۔"
+          },
+          {
+            "en": "Is the mosque far?",
+            "ur": "کیا مسجد دور ہے؟"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch25-test-q02",
+        "topic": {
+          "en": "Meaning of لَيْسَ",
+          "ur": "لَيْسَ کا مطلب"
+        },
+        "prompt": {
+          "en": "Which sentence says 'The pen is not new'?",
+          "ur": "کون سا جملہ کہتا ہے: قلم نیا نہیں ہے؟"
+        },
+        "options": [
+          {
+            "en": "الْقَلَمُ جَدِيدٌ",
+            "ur": "الْقَلَمُ جَدِيدٌ"
+          },
+          {
+            "en": "إِنَّ الْقَلَمَ جَدِيدٌ",
+            "ur": "إِنَّ الْقَلَمَ جَدِيدٌ"
+          },
+          {
+            "en": "لَيْسَ الْقَلَمُ جَدِيدًا",
+            "ur": "لَيْسَ الْقَلَمُ جَدِيدًا"
+          },
+          {
+            "en": "لَيْسَ الْبَيْتُ جَدِيدًا",
+            "ur": "لَيْسَ الْبَيْتُ جَدِيدًا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch25-test-q03",
+        "topic": {
+          "en": "The noun of لَيْسَ",
+          "ur": "لَيْسَ کا اسم"
+        },
+        "prompt": {
+          "en": "Which word is the noun of لَيْسَ?",
+          "ur": "لَيْسَ کا اسم کون سا لفظ ہے؟"
+        },
+        "arabic": "لَيْسَ الْكِتَابُ صَغِيرًا",
+        "options": [
+          {
+            "en": "لَيْسَ",
+            "ur": "لَيْسَ"
+          },
+          {
+            "en": "الْكِتَابُ",
+            "ur": "الْكِتَابُ"
+          },
+          {
+            "en": "صَغِيرًا",
+            "ur": "صَغِيرًا"
+          },
+          {
+            "en": "There is no noun.",
+            "ur": "کوئی اسم نہیں ہے۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch25-test-q04",
+        "topic": {
+          "en": "The news of لَيْسَ",
+          "ur": "لَيْسَ کی خبر"
+        },
+        "prompt": {
+          "en": "Which word is the news of لَيْسَ?",
+          "ur": "لَيْسَ کی خبر کون سا لفظ ہے؟"
+        },
+        "arabic": "لَيْسَ الْمَسْجِدُ قَرِيبًا",
+        "options": [
+          {
+            "en": "لَيْسَ",
+            "ur": "لَيْسَ"
+          },
+          {
+            "en": "الْمَسْجِدُ",
+            "ur": "الْمَسْجِدُ"
+          },
+          {
+            "en": "قَرِيبًا",
+            "ur": "قَرِيبًا"
+          },
+          {
+            "en": "There is no news.",
+            "ur": "کوئی خبر نہیں ہے۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch25-test-q05",
+        "topic": {
+          "en": "The ending of the news",
+          "ur": "خبر کا اعراب"
+        },
+        "prompt": {
+          "en": "Complete: 'The house is not big.'",
+          "ur": "مکمل کریں: گھر بڑا نہیں ہے۔"
+        },
+        "arabic": "لَيْسَ الْبَيْتُ ___",
+        "options": [
+          {
+            "en": "كَبِيرٌ",
+            "ur": "كَبِيرٌ"
+          },
+          {
+            "en": "كَبِيرٍ",
+            "ur": "كَبِيرٍ"
+          },
+          {
+            "en": "كَبِيرًا",
+            "ur": "كَبِيرًا"
+          },
+          {
+            "en": "كَبِيرَةً",
+            "ur": "كَبِيرَةً"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch25-test-q06",
+        "topic": {
+          "en": "Noun and news endings",
+          "ur": "اسم اور خبر کا اعراب"
+        },
+        "prompt": {
+          "en": "After لَيْسَ, which is right?",
+          "ur": "لَيْسَ کے بعد کون سی بات درست ہے؟"
+        },
+        "options": [
+          {
+            "en": "The noun has a fatḥa and the news a ḍamma.",
+            "ur": "اسم پر زبر اور خبر پر پیش۔"
+          },
+          {
+            "en": "The noun has a ḍamma and the news a fatḥa.",
+            "ur": "اسم پر پیش اور خبر پر زبر۔"
+          },
+          {
+            "en": "Both have a kasra.",
+            "ur": "دونوں پر زیر۔"
+          },
+          {
+            "en": "Nothing changes at all.",
+            "ur": "کچھ بھی نہیں بدلتا۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch25-test-q07",
+        "topic": {
+          "en": "Feminine agreement",
+          "ur": "مؤنث کی مطابقت"
+        },
+        "prompt": {
+          "en": "Choose the correct sentence: 'The school is not big.'",
+          "ur": "درست جملہ چنیں: مدرسہ بڑا نہیں ہے۔"
+        },
+        "options": [
+          {
+            "en": "الْمَدْرَسَةُ لَيْسَ كَبِيرًا",
+            "ur": "الْمَدْرَسَةُ لَيْسَ كَبِيرًا"
+          },
+          {
+            "en": "الْمَدْرَسَةُ لَيْسَتْ كَبِيرًا",
+            "ur": "الْمَدْرَسَةُ لَيْسَتْ كَبِيرًا"
+          },
+          {
+            "en": "الْمَدْرَسَةُ لَيْسَتْ كَبِيرَةً",
+            "ur": "الْمَدْرَسَةُ لَيْسَتْ كَبِيرَةً"
+          },
+          {
+            "en": "الْمَدْرَسَةُ لَيْسُوا كَبِيرَةً",
+            "ur": "الْمَدْرَسَةُ لَيْسُوا كَبِيرَةً"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch25-test-q08",
+        "topic": {
+          "en": "Feminine agreement",
+          "ur": "مؤنث کی مطابقت"
+        },
+        "prompt": {
+          "en": "Which word fills the gap? 'The teacher (a woman) is not far.'",
+          "ur": "خالی جگہ میں کون سا لفظ آئے گا؟ معلمہ دور نہیں ہیں۔"
+        },
+        "arabic": "الْمُعَلِّمَةُ ___ بَعِيدَةً",
+        "options": [
+          {
+            "en": "لَيْسَ",
+            "ur": "لَيْسَ"
+          },
+          {
+            "en": "لَيْسَتْ",
+            "ur": "لَيْسَتْ"
+          },
+          {
+            "en": "لَيْسُوا",
+            "ur": "لَيْسُوا"
+          },
+          {
+            "en": "إِنَّ",
+            "ur": "إِنَّ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch25-test-q09",
+        "topic": {
+          "en": "لَيْسُوا",
+          "ur": "لَيْسُوا"
+        },
+        "prompt": {
+          "en": "Complete: 'They are not teachers.'",
+          "ur": "مکمل کریں: وہ اساتذہ نہیں ہیں۔"
+        },
+        "arabic": "هُمْ لَيْسُوا ___",
+        "options": [
+          {
+            "en": "مُعَلِّمُونَ",
+            "ur": "مُعَلِّمُونَ"
+          },
+          {
+            "en": "مُعَلِّمًا",
+            "ur": "مُعَلِّمًا"
+          },
+          {
+            "en": "مُعَلِّمَةً",
+            "ur": "مُعَلِّمَةً"
+          },
+          {
+            "en": "مُعَلِّمِينَ",
+            "ur": "مُعَلِّمِينَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch25-test-q10",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآنی مطالعہ"
+        },
+        "prompt": {
+          "en": "What does this Quran excerpt (3:113) mean?",
+          "ur": "اس قرآنی اقتباس (3:113) کا کیا مطلب ہے؟"
+        },
+        "arabic": "لَيْسُوا سَوَاءً",
+        "options": [
+          {
+            "en": "They are all alike.",
+            "ur": "وہ سب برابر ہیں۔"
+          },
+          {
+            "en": "They are not all alike.",
+            "ur": "وہ سب برابر نہیں ہیں۔"
+          },
+          {
+            "en": "She is not like them.",
+            "ur": "وہ ان جیسی نہیں ہے۔"
+          },
+          {
+            "en": "Are they all alike?",
+            "ur": "کیا وہ سب برابر ہیں؟"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch25-test-q11",
+        "topic": {
+          "en": "إِنَّ or لَيْسَ",
+          "ur": "إِنَّ یا لَيْسَ"
+        },
+        "prompt": {
+          "en": "Which statement is right?",
+          "ur": "کون سی بات درست ہے؟"
+        },
+        "arabic": "إِنَّ الْبَيْتَ كَبِيرٌ / لَيْسَ الْبَيْتُ كَبِيرًا",
+        "options": [
+          {
+            "en": "Both sentences say the house is not big.",
+            "ur": "دونوں جملے کہتے ہیں کہ گھر بڑا نہیں ہے۔"
+          },
+          {
+            "en": "إِنَّ stresses the statement; لَيْسَ makes it negative.",
+            "ur": "إِنَّ جملے پر زور دیتا ہے؛ لَيْسَ اسے منفی بناتا ہے۔"
+          },
+          {
+            "en": "لَيْسَ never changes its form.",
+            "ur": "لَيْسَ کبھی شکل نہیں بدلتا۔"
+          },
+          {
+            "en": "Both sentences use the same endings.",
+            "ur": "دونوں جملوں میں ایک جیسے اعراب ہیں۔"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch25-test-q12",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآنی مطالعہ"
+        },
+        "prompt": {
+          "en": "What does this Quran excerpt (42:11) mean?",
+          "ur": "اس قرآنی اقتباس (42:11) کا کیا مطلب ہے؟"
+        },
+        "arabic": "لَيْسَ كَمِثْلِهِ شَيْءٌ",
+        "options": [
+          {
+            "en": "Everything is like Him.",
+            "ur": "ہر چیز اس جیسی ہے۔"
+          },
+          {
+            "en": "Indeed, He is near.",
+            "ur": "بے شک وہ قریب ہے۔"
+          },
+          {
+            "en": "There is nothing like Him.",
+            "ur": "اس جیسی کوئی چیز نہیں ہے۔"
+          },
+          {
+            "en": "Is anything like Him?",
+            "ur": "کیا کوئی چیز اس جیسی ہے؟"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 25 — لَيْسَ",
+      "ar": "لَيْسَ لِلنَّفْيِ",
+      "ur": "باب 25 — لَيْسَ"
+    },
+    "ayah": {
+      "surah": 42,
+      "ayah": 11,
+      "label": "Ash-Shura 42:11 (excerpt)",
+      "ar": "لَيْسَ كَمِثْلِهِ شَيْءٌ",
+      "en": "There is nothing like Him.",
+      "ur": "اس جیسی کوئی چیز نہیں ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/042011.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "لَيْسَ"
+    ],
+    "noor_explanation": {
+      "en": "لَيْسَ كَمِثْلِهِ شَيْءٌ: there is nothing like Him. You finish Chapter 25 able to read لَيْسَ, لَيْسَتْ and لَيْسُوا, their noun and news, and tell them from إِنَّ.",
+      "ur": "لَيْسَ كَمِثْلِهِ شَيْءٌ: اس جیسی کوئی چیز نہیں ہے۔ آپ باب 25 اس حال میں مکمل کرتے ہیں کہ لَيْسَ، لَيْسَتْ اور لَيْسُوا، ان کا اسم اور خبر پڑھ سکتے ہیں، اور انہیں إِنَّ سے الگ پہچان سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 25 complete: you can read and build negative statements with لَيْسَ.",
+      "ur": "باب 25 مکمل: آپ لَيْسَ سے منفی جملے پڑھ اور بنا سکتے ہیں۔"
+    }
+  }
+}

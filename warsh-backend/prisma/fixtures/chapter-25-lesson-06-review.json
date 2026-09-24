@@ -1,0 +1,571 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 25 correction, 2026-09-24 (Docs/proposals/chapter-25-content-correction.md, section 'Second pass'). Authored practice is not Quran text; the Quran anchors are the 42:11 excerpt لَيْسَ كَمِثْلِهِ شَيْءٌ (read for meaning only; its prepositional phrase is never graded for case) and the 3:113 excerpt لَيْسُوا سَوَاءً. Vocabulary is limited to words already taught (house, book, pen, mosque, school, teacher, student; big, small, new, near, far). The noun and news of لَيْسَ are named only when لَيْسَ comes first. Lesson 6 (REVIEW): interleaves the three forms, the noun and news of لَيْسَ, and the two excerpts. No new grammar.",
+    "chapter_order": 25,
+    "lesson_order": 6,
+    "chapter_title": "لَيْسَ: Negating Nominal Sentences",
+    "title": "Chapter 25 Mixed Review",
+    "titleUr": "باب 25 کی ملی جلی دہرائی",
+    "titleAr": "مُرَاجَعَةُ الْفَصْلِ الْخَامِسِ وَالْعِشْرِينَ",
+    "source": "Docs/proposals/chapter-25-content-correction.md",
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 3,
+      "ayah": 113,
+      "label": "Aal Imran 3:113 (excerpt)",
+      "ar": "لَيْسُوا سَوَاءً",
+      "en": "They are not all alike.",
+      "ur": "وہ سب برابر نہیں ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003113.mp3"
+    },
+    "noor_intro": {
+      "en": "Review: لَيْسَ, لَيْسَتْ and لَيْسُوا, their noun and news, and the two ayat.",
+      "ur": "دہرائی: لَيْسَ، لَيْسَتْ اور لَيْسُوا، ان کا اسم اور خبر، اور دونوں آیات۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Three checks",
+        "ar": "لَيْسَ · لَيْسَتْ · لَيْسُوا",
+        "ur": "تین جانچیں"
+      },
+      "explanation": {
+        "en": "1. Which form fits the noun: masculine, feminine or a group? 2. When لَيْسَ comes first, its noun has a ḍamma. 3. Its news has a fatḥa, or ـِينَ for a plural in ـُونَ.",
+        "ur": "1. اسم کے لیے کون سی شکل: مذکر، مؤنث یا جماعت؟ 2. جب لَيْسَ پہلے آئے تو اس کا اسم پیش پر۔ 3. اس کی خبر زبر پر، یا ـُونَ والی جمع کے لیے ـِينَ۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الْمُعَلِّمَةُ لَيْسَتْ بَعِيدَةً",
+        "ar_plain": "المعلمة ليست بعيدة",
+        "translit": "al-muʿallimatu laysat baʿīdatan",
+        "en": "The teacher is not far.",
+        "ur": "معلمہ دور نہیں ہیں۔"
+      },
+      "explanation": {
+        "en": "Feminine noun: لَيْسَتْ, and بَعِيدَةً keeps its ة.",
+        "ur": "مؤنث اسم: لَيْسَتْ، اور بَعِيدَةً اپنی ة رکھتا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "هُمْ لَيْسُوا مُعَلِّمِينَ",
+        "ar_plain": "هم ليسوا معلمين",
+        "translit": "hum laysū muʿallimīna",
+        "en": "They are not teachers.",
+        "ur": "وہ اساتذہ نہیں ہیں۔"
+      },
+      "explanation": {
+        "en": "A group: لَيْسُوا, and مُعَلِّمُونَ becomes مُعَلِّمِينَ.",
+        "ur": "جماعت: لَيْسُوا، اور مُعَلِّمُونَ، مُعَلِّمِينَ بن جاتا ہے۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "إِنَّ or لَيْسَ?",
+        "ar": "إِنَّ الْبَيْتَ كَبِيرٌ / لَيْسَ الْبَيْتُ كَبِيرًا",
+        "ur": "إِنَّ یا لَيْسَ؟"
+      },
+      "explanation": {
+        "en": "Indeed the house is big / the house is not big. Opposite meanings, opposite endings.",
+        "ur": "بے شک گھر بڑا ہے / گھر بڑا نہیں ہے۔ الٹے معنی، الٹے اعراب۔"
+      },
+      "examples": [
+        {
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
+        },
+        {
+          "ar": "لَيْسَ الْبَيْتُ كَبِيرًا",
+          "ar_plain": "ليس البيت كبيرا",
+          "translit": "laysa l-baytu kabīran",
+          "en": "The house is not big.",
+          "ur": "گھر بڑا نہیں ہے۔"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Ash-Shura 42:11 (an excerpt): There is nothing like Him.",
+        "ar": "لَيْسَ كَمِثْلِهِ شَيْءٌ",
+        "ur": "الشوریٰ 42:11 (اقتباس): اس جیسی کوئی چیز نہیں ہے۔"
+      },
+      "explanation": {
+        "en": "لَيْسَ opens the excerpt. Read it for meaning.",
+        "ur": "اقتباس لَيْسَ سے شروع ہوتا ہے۔ اسے معنی کے لیے پڑھیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/042011.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Aal Imran 3:113 (an excerpt): They are not all alike.",
+        "ar": "لَيْسُوا سَوَاءً",
+        "ur": "آل عمران 3:113 (اقتباس): وہ سب برابر نہیں ہیں۔"
+      },
+      "explanation": {
+        "en": "لَيْسُوا for 'they', and سَوَاءً with the fatḥa of the news.",
+        "ur": "'وہ سب' کے لیے لَيْسُوا، اور سَوَاءً خبر کے زبر کے ساتھ۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003113.mp3"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch25-l06-ex01",
+      "prompt": {
+        "ar": "الْمُعَلِّمَةُ لَيْسَتْ بَعِيدَةً",
+        "ar_plain": "المعلمة ليست بعيدة",
+        "translit": "al-muʿallimatu laysat baʿīdatan",
+        "en": "The teacher is not far.",
+        "ur": "معلمہ دور نہیں ہیں۔"
+      },
+      "options": [
+        {
+          "en": "The teacher is far.",
+          "ur": "معلمہ دور ہیں۔"
+        },
+        {
+          "en": "They are not teachers.",
+          "ur": "وہ اساتذہ نہیں ہیں۔"
+        },
+        {
+          "en": "The teacher is not far.",
+          "ur": "معلمہ دور نہیں ہیں۔"
+        },
+        {
+          "en": "The school is not far.",
+          "ur": "مدرسہ دور نہیں ہے۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْمُعَلِّمَةُ is the teacher; لَيْسَتْ بَعِيدَةً, not far.",
+        "ur": "الْمُعَلِّمَةُ معلمہ ہیں؛ لَيْسَتْ بَعِيدَةً، دور نہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch25-l06-ex02",
+      "statement": {
+        "en": "الْقَلَمُ is the noun of لَيْسَ here.",
+        "ur": "یہاں الْقَلَمُ، لَيْسَ کا اسم ہے۔",
+        "ar_example": {
+          "ar": "لَيْسَ الْقَلَمُ صَغِيرًا",
+          "ar_plain": "ليس القلم صغيرا",
+          "translit": "laysa l-qalamu ṣaghīran",
+          "en": "The pen is not small.",
+          "ur": "قلم چھوٹا نہیں ہے۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْقَلَمُ comes straight after لَيْسَ, with a ḍamma.",
+        "ur": "الْقَلَمُ لَيْسَ کے فوراً بعد ہے، پیش کے ساتھ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch25-l06-ex03",
+      "statement": {
+        "en": "الْبَيْتُ is the news of لَيْسَ here.",
+        "ur": "یہاں الْبَيْتُ، لَيْسَ کی خبر ہے۔",
+        "ar_example": {
+          "ar": "لَيْسَ الْبَيْتُ كَبِيرًا",
+          "ar_plain": "ليس البيت كبيرا",
+          "translit": "laysa l-baytu kabīran",
+          "en": "The house is not big.",
+          "ur": "گھر بڑا نہیں ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْبَيْتُ is the noun (ḍamma); كَبِيرًا is the news (fatḥa).",
+        "ur": "الْبَيْتُ اسم ہے (پیش)؛ كَبِيرًا خبر ہے (زبر)۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch25-l06-ex04",
+      "mode": "TAP",
+      "sentence_ar": "الْمُعَلِّمَةُ ___ بَعِيدَةً",
+      "hint": {
+        "en": "The teacher (a woman) is not far.",
+        "ur": "معلمہ دور نہیں ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "لَيْسُوا",
+          "ar_plain": "ليسوا",
+          "translit": "laysū",
+          "en": "they are not",
+          "ur": "وہ نہیں ہیں"
+        },
+        {
+          "ar": "لَيْسَتْ",
+          "ar_plain": "ليست",
+          "translit": "laysat",
+          "en": "is not (feminine)",
+          "ur": "نہیں ہے (مؤنث)"
+        },
+        {
+          "ar": "لَيْسَ",
+          "ar_plain": "ليس",
+          "translit": "laysa",
+          "en": "is not",
+          "ur": "نہیں ہے"
+        },
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed (a word of emphasis)",
+          "ur": "بے شک (تاکید کا لفظ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لَيْسَتْ",
+        "ar_plain": "ليست",
+        "translit": "laysat",
+        "en": "is not (feminine)",
+        "ur": "نہیں ہے (مؤنث)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Feminine noun: لَيْسَتْ.",
+        "ur": "مؤنث اسم: لَيْسَتْ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch25-l06-ex05",
+      "mode": "TAP",
+      "sentence_ar": "هُمْ لَيْسُوا ___",
+      "hint": {
+        "en": "They are not teachers.",
+        "ur": "وہ اساتذہ نہیں ہیں۔"
+      },
+      "options": [
+        {
+          "ar": "مُعَلِّمُونَ",
+          "ar_plain": "معلمون",
+          "translit": "muʿallimūna",
+          "en": "teachers",
+          "ur": "اساتذہ"
+        },
+        {
+          "ar": "مُعَلِّمَةً",
+          "ar_plain": "معلمة",
+          "translit": "muʿallimatan",
+          "en": "a teacher (woman)",
+          "ur": "ایک معلمہ"
+        },
+        {
+          "ar": "مُعَلِّمِينَ",
+          "ar_plain": "معلمين",
+          "translit": "muʿallimīna",
+          "en": "teachers",
+          "ur": "اساتذہ"
+        },
+        {
+          "ar": "مُعَلِّمًا",
+          "ar_plain": "معلما",
+          "translit": "muʿalliman",
+          "en": "a teacher",
+          "ur": "ایک استاد"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مُعَلِّمِينَ",
+        "ar_plain": "معلمين",
+        "translit": "muʿallimīna",
+        "en": "teachers",
+        "ur": "اساتذہ"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ـُونَ becomes ـِينَ: مُعَلِّمِينَ.",
+        "ur": "ـُونَ، ـِينَ بن جاتا ہے: مُعَلِّمِينَ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch25-l06-ex06",
+      "ayah_fragment": {
+        "ar": "لَيْسَ كَمِثْلِهِ شَيْءٌ",
+        "surah_ref": "Ash-Shura 42:11"
+      },
+      "options": [
+        {
+          "en": "Indeed, He is near.",
+          "ur": "بے شک وہ قریب ہے۔"
+        },
+        {
+          "en": "Is anything like Him?",
+          "ur": "کیا کوئی چیز اس جیسی ہے؟"
+        },
+        {
+          "en": "There is nothing like Him.",
+          "ur": "اس جیسی کوئی چیز نہیں ہے۔"
+        },
+        {
+          "en": "Everything is like Him.",
+          "ur": "ہر چیز اس جیسی ہے۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَيْسَ: there is nothing like Him.",
+        "ur": "لَيْسَ: اس جیسی کوئی چیز نہیں۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch25-l06-ex07",
+      "ayah_fragment": {
+        "ar": "لَيْسُوا سَوَاءً",
+        "surah_ref": "Aal Imran 3:113"
+      },
+      "options": [
+        {
+          "en": "They are not all alike.",
+          "ur": "وہ سب برابر نہیں ہیں۔"
+        },
+        {
+          "en": "They are all alike.",
+          "ur": "وہ سب برابر ہیں۔"
+        },
+        {
+          "en": "They are not teachers.",
+          "ur": "وہ اساتذہ نہیں ہیں۔"
+        },
+        {
+          "en": "Are they all alike?",
+          "ur": "کیا وہ سب برابر ہیں؟"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَيْسُوا: they are not. سَوَاءً: alike.",
+        "ur": "لَيْسُوا: وہ نہیں ہیں۔ سَوَاءً: برابر۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch25-l06-ex08",
+      "left_column": [
+        {
+          "ar": "لَيْسَ الْكِتَابُ جَدِيدًا",
+          "ar_plain": "ليس الكتاب جديدا",
+          "translit": "laysa l-kitābu jadīdan",
+          "en": "The book is not new.",
+          "ur": "کتاب نئی نہیں ہے۔"
+        },
+        {
+          "ar": "الْمَدْرَسَةُ لَيْسَتْ بَعِيدَةً",
+          "ar_plain": "المدرسة ليست بعيدة",
+          "translit": "al-madrasatu laysat baʿīdatan",
+          "en": "The school is not far.",
+          "ur": "مدرسہ دور نہیں ہے۔"
+        },
+        {
+          "ar": "هُمْ لَيْسُوا مُعَلِّمِينَ",
+          "ar_plain": "هم ليسوا معلمين",
+          "translit": "hum laysū muʿallimīna",
+          "en": "They are not teachers.",
+          "ur": "وہ اساتذہ نہیں ہیں۔"
+        },
+        {
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "They are not teachers.",
+          "ur": "وہ اساتذہ نہیں ہیں۔"
+        },
+        {
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
+        },
+        {
+          "en": "The book is not new.",
+          "ur": "کتاب نئی نہیں ہے۔"
+        },
+        {
+          "en": "The school is not far.",
+          "ur": "مدرسہ دور نہیں ہے۔"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Read the form first: لَيْسَ, لَيْسَتْ, لَيْسُوا, or إِنَّ.",
+        "ur": "پہلے شکل پڑھیں: لَيْسَ، لَيْسَتْ، لَيْسُوا، یا إِنَّ۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch25-l06-ex09",
+      "target_translation": {
+        "en": "The book is not new.",
+        "ur": "کتاب نئی نہیں ہے۔"
+      },
+      "tiles": [
+        {
+          "ar": "جَدِيدًا",
+          "ar_plain": "جديدا",
+          "translit": "jadīdan",
+          "en": "new",
+          "ur": "نیا"
+        },
+        {
+          "ar": "لَيْسَ",
+          "ar_plain": "ليس",
+          "translit": "laysa",
+          "en": "is not",
+          "ur": "نہیں ہے"
+        },
+        {
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitābu",
+          "en": "the book",
+          "ur": "کتاب"
+        }
+      ],
+      "correct_order": [
+        1,
+        2,
+        0
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَيْسَ, then الْكِتَابُ, then جَدِيدًا.",
+        "ur": "لَيْسَ، پھر الْكِتَابُ، پھر جَدِيدًا۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch25-l06-ex10",
+      "prompt_line": {
+        "ar": "هَلْ هُمْ مُعَلِّمُونَ؟",
+        "ar_plain": "هل هم معلمون",
+        "translit": "hal hum muʿallimūna?",
+        "en": "Are they teachers?",
+        "ur": "کیا وہ اساتذہ ہیں؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "هِيَ لَيْسَتْ مُعَلِّمَةً",
+          "ar_plain": "هي ليست معلمة",
+          "translit": "hiya laysat muʿallimatan",
+          "en": "She is not a teacher.",
+          "ur": "وہ معلمہ نہیں ہے۔"
+        },
+        {
+          "ar": "لَا، هُمْ لَيْسُوا مُعَلِّمِينَ",
+          "ar_plain": "لا هم ليسوا معلمين",
+          "translit": "lā, hum laysū muʿallimīna",
+          "en": "No, they are not teachers.",
+          "ur": "نہیں، وہ اساتذہ نہیں ہیں۔"
+        },
+        {
+          "ar": "نَعَمْ، الْمَسْجِدُ قَرِيبٌ",
+          "ar_plain": "نعم المسجد قريب",
+          "translit": "naʿam, al-masjidu qarībun",
+          "en": "Yes, the mosque is near.",
+          "ur": "جی ہاں، مسجد قریب ہے۔"
+        },
+        {
+          "ar": "أَيْنَ الْمُعَلِّمُونَ؟",
+          "ar_plain": "أين المعلمون",
+          "translit": "ayna l-muʿallimūna?",
+          "en": "Where are the teachers?",
+          "ur": "اساتذہ کہاں ہیں؟"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The question is about هُمْ: answer with لَيْسُوا.",
+        "ur": "سوال هُمْ کے بارے میں ہے: لَيْسُوا سے جواب دیں۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 25 review",
+      "ar": "مُرَاجَعَةُ لَيْسَ",
+      "ur": "باب 25 کی دہرائی"
+    },
+    "ayah": {
+      "surah": 3,
+      "ayah": 113,
+      "label": "Aal Imran 3:113 (excerpt)",
+      "ar": "لَيْسُوا سَوَاءً",
+      "en": "They are not all alike.",
+      "ur": "وہ سب برابر نہیں ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003113.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "لَيْسُوا"
+    ],
+    "noor_explanation": {
+      "en": "Review complete. The chapter test uses new sentences built from the same words.",
+      "ur": "دہرائی مکمل۔ باب کا امتحان انہی الفاظ سے بنے نئے جملے استعمال کرتا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review complete. Next: the Chapter 25 test.",
+      "ur": "دہرائی مکمل۔ اگلا: باب 25 کا امتحان۔"
+    }
+  }
+}

@@ -2,111 +2,125 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 25, Lesson 5 - Contrast inn (indeed) vs layla (is not). inn nominates the khabar, layla puts it in accusative. This lesson bridges the two poles.",
+    "_note": "Chapter 25 correction, 2026-09-24 (Docs/proposals/chapter-25-content-correction.md, section 'Second pass'). Authored practice is not Quran text; the Quran anchors are the 42:11 excerpt لَيْسَ كَمِثْلِهِ شَيْءٌ (read for meaning only; its prepositional phrase is never graded for case) and the 3:113 excerpt لَيْسُوا سَوَاءً. Vocabulary is limited to words already taught (house, book, pen, mosque, school, teacher, student; big, small, new, near, far). The noun and news of لَيْسَ are named only when لَيْسَ comes first. Lesson 5: emphasis versus negation; opposite endings (إِنَّ: noun fatḥa, news ḍamma; لَيْسَ: noun ḍamma, news fatḥa); لَيْسَ changes form, إِنَّ does not.",
     "chapter_order": 25,
     "lesson_order": 5,
-    "chapter_title": "Negating the Nominal Sentence",
-    "title": "inn vs layla — Assertion and Negation",
-    "titleAr": "إِنَّ وَاللَيْسَ — تَأْكِيد وَإِنْكَار",
-    "source": "reader_book3_lesson2_negation.md",
-    "estimated_minutes": 9,
+    "chapter_title": "لَيْسَ: Negating Nominal Sentences",
+    "title": "إِنَّ and لَيْسَ: Read the Difference",
+    "titleUr": "إِنَّ اور لَيْسَ کا فرق",
+    "titleAr": "إِنَّ وَلَيْسَ",
+    "source": "Docs/proposals/chapter-25-content-correction.md",
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 17,
-      "ayah": 77,
-      "label": "Al-Isra 17:77",
-      "ar": "سُنَّةَ مَن قَدْ أَرْسَلْنَا قَبْلَكَ مِن رُّسُلِنَا ۖ وَلَا تَجِدُ لِسُنَّتِنَا تَحْوِيلًا",
-      "en": "[That is Our] established way for those We had sent before you of Our messengers; and you will not find in Our way any alteration.",
-      "ur": "جو پیغمبر ہم نے تم سے پہلے بھیجے تھے ان کا (اور ان کے بارے میں ہمارا یہی) طریق رہا ہے اور تم ہمارے طریق میں تغیروتبدل نہ پاؤ گے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017077.mp3"
+      "surah": 2,
+      "ayah": 173,
+      "label": "Al-Baqarah 2:173",
+      "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+      "en": "Indeed, Allah is Forgiving and Merciful.",
+      "ur": "بے شک اللہ بخشنے والا، رحم کرنے والا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002173.mp3"
     },
     "noor_intro": {
-      "en": "إِنَّ رَبَّكَ فَعَّالٌ لِّمَا يُرِيدُ — 'Indeed your Lord does whatsoever He intends.' إِنَّ asserts and puts the khabar in the nominative. Today we contrast this with لَيْسَ, which negates and puts the khabar in the accusative. Together, you have both poles of the nominal sentence.",
-      "ur": "إِنَّ رَبَّكَ فَعَّالٌ لِّمَا يُرِيدُ — 'بے شک تمہارا رب جو چاہتا ہے کرتا ہے۔' إِنَّ تَاکِید کرتی ہے اور خبر کو مرفوع کرتی ہے۔ آج ہم اسے لَيْسَ سے موازنہ کریں گے، جو انکار کرتی ہے اور خبر کو منصوب کرتی ہے۔ ساتھ مل کر، تمہارے پاس جملہ اسمی کے دونوں ستون ہیں۔"
+      "en": "Chapter 24: إِنَّ stresses a statement. Chapter 25: لَيْسَ denies one. Today: tell them apart.",
+      "ur": "باب 24: إِنَّ جملے پر زور دیتا ہے۔ باب 25: لَيْسَ جملے کی نفی کرتا ہے۔ آج: دونوں میں فرق۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Emphasis or negation?",
+        "ar": "إِنَّ الْبَيْتَ كَبِيرٌ / لَيْسَ الْبَيْتُ كَبِيرًا",
+        "ur": "زور یا نفی؟"
+      },
+      "explanation": {
+        "en": "The first stresses that the house is big. The second says it is not big.",
+        "ur": "پہلا جملہ زور دیتا ہے کہ گھر بڑا ہے۔ دوسرا کہتا ہے کہ بڑا نہیں ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
+        },
+        {
+          "ar": "لَيْسَ الْبَيْتُ كَبِيرًا",
+          "ar_plain": "ليس البيت كبيرا",
+          "translit": "laysa l-baytu kabīran",
+          "en": "The house is not big.",
+          "ur": "گھر بڑا نہیں ہے۔"
+        }
+      ]
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "inn asserts — layla negates. Two poles of the nominal sentence.",
-        "ar": "إِنَّ تَاکِید — لَيْسَ انکار۔ جملہ اسمی کے دو ستون۔",
-        "ur": "إِنَّ تَاکِید — لَيْسَ انکار۔ جملہ اسمی کے دو ستون۔"
+        "en": "Opposite endings",
+        "ar": "الْبَيْتَ … كَبِيرٌ / الْبَيْتُ … كَبِيرًا",
+        "ur": "الٹے اعراب"
       },
       "explanation": {
-        "en": "إِنَّ and لَيْسَ are opposites. إِنَّ 'indeed/verily' — nominates the khabar (مرفوع). لَيْسَ 'is not' — puts the khabar in the accusative (منصوب). The khabar looks different in each case. Study them together to understand the contrast.",
-        "ur": "إِنَّ اور لَيْسَ opposite ہیں۔ إِنَّ 'بے شک' — خبر کو رفع دیتی ہے (مرفوع)۔ لَيْسَ 'نہیں ہے' — خبر کو نصب دیتی ہے (منصوب)۔ ہر صورت میں خبر مختلف نظر آتی ہے۔ دونوں کو ساتھ پڑھ کر فرق سمجھیں۔"
+        "en": "After إِنَّ: the noun takes a fatḥa (الْبَيْتَ), the news a ḍamma (كَبِيرٌ). After لَيْسَ: the noun keeps a ḍamma (الْبَيْتُ), the news takes a fatḥa (كَبِيرًا).",
+        "ur": "إِنَّ کے بعد: اسم پر زبر (الْبَيْتَ)، خبر پر پیش (كَبِيرٌ)۔ لَيْسَ کے بعد: اسم پر پیش (الْبَيْتُ)، خبر پر زبر (كَبِيرًا)۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "لَيْسَ changes, إِنَّ does not",
+        "ar": "لَيْسَ · لَيْسَتْ · لَيْسُوا / إِنَّ",
+        "ur": "لَيْسَ بدلتا ہے، إِنَّ نہیں"
+      },
+      "explanation": {
+        "en": "لَيْسَ is a verb: it changes to match its noun (لَيْسَتْ, لَيْسُوا). إِنَّ is a particle: it always stays إِنَّ.",
+        "ur": "لَيْسَ فعل ہے: یہ اپنے اسم کے مطابق بدلتا ہے (لَيْسَتْ، لَيْسُوا)۔ إِنَّ حرف ہے: یہ ہمیشہ إِنَّ ہی رہتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "إِنَّ اللَّهَ عَزِيزٌ / لَيْسَ اللَّهُ ضَعِيفًا",
-        "ar_plain": "إن الله العزيز / ليس الله ضعيفاً",
-        "translit": "inna al-laaha 'aziizun / layla al-laahu da'iifan",
-        "en": "Indeed Allah is Mighty. / Allah is not weak.",
-        "ur": "بے شک اللہ عزیز ہے۔ / اللہ کمزور نہیں ہے۔"
+        "ar": "لَيْسَ الْمَسْجِدُ بَعِيدًا، إِنَّ الْمَسْجِدَ قَرِيبٌ",
+        "ar_plain": "ليس المسجد بعيدا إن المسجد قريب",
+        "translit": "laysa l-masjidu baʿīdan, inna l-masjida qarībun",
+        "en": "The mosque is not far; indeed, the mosque is near.",
+        "ur": "مسجد دور نہیں ہے؛ بے شک مسجد قریب ہے۔"
       },
       "explanation": {
-        "en": "عَزِيزٌ (nominative) after إِنَّ. ضَعِيفًا (accusative) after لَيْسَ. The same Allah, two different grammatical treatments. The adjective form changes because the particle changes the case.",
-        "ur": "عَزِيزٌ (مرفوع) إِنَّ کے بعد۔ ضَعِيفًا (منصوب) لَيْسَ کے بعد۔ وہی اللہ، دو مختلف گرامری معاملات۔ صفت کی شکل بدل جاتی ہے کیونکہ حرف جر کیس بدل دیتا ہے۔"
+        "en": "First لَيْسَ denies: not far. Then إِنَّ stresses the truth: near.",
+        "ur": "پہلے لَيْسَ نفی کرتا ہے: دور نہیں۔ پھر إِنَّ سچ پر زور دیتا ہے: قریب ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِنَّ الْمُسْلِمَ صَادِقٌ / لَيْسَ الْمُسْلِمُ كَاذِبًا",
-        "ar_plain": "إن المسلم صادق / ليس المسلم كاذباً",
-        "translit": "inna al-muslima saadiqun / layla al-muslima kaadhiban",
-        "en": "Indeed the Muslim is truthful. / The Muslim is not a liar.",
-        "ur": "بے شک مسلمان سچا ہے۔ / مسلمان جھوٹا نہیں ہے۔"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:173 (its closing words): Indeed, Allah is Forgiving and Merciful.",
+        "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+        "ur": "البقرہ 2:173 (آخری الفاظ): بے شک اللہ بخشنے والا، رحم کرنے والا ہے۔"
       },
       "explanation": {
-        "en": "صَادِقٌ (nominative) after إِنَّ. كَاذِبًا (accusative) after لَيْسَ. The tanween ٌ vs ً tells you whether the particle is إِنَّ or لَيْسَ.",
-        "ur": "صَادِقٌ (مرفوع) إِنَّ کے بعد۔ كَاذِبًا (منصوب) لَيْسَ کے بعد۔ تنوین ٌ بمقابلہ ً تمہیں بتاتی ہے کہ حرف إِنَّ ہے یا لَيْسَ۔"
-      }
+        "en": "From Chapter 24: إِنَّ, then its noun اللَّهَ with a fatḥa, then its news غَفُورٌ with a ḍamma.",
+        "ur": "باب 24 سے: إِنَّ، پھر اس کا اسم اللَّهَ زبر کے ساتھ، پھر اس کی خبر غَفُورٌ پیش کے ساتھ۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002173.mp3"
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِنَّ الْكِتَابَ نَافِعٌ / لَيْسَ الْكِتَابُ ضَارًّا",
-        "ar_plain": "إن الكتاب نافع / ليس الكتاب ضاراً",
-        "translit": "inna al-kitaaba naafi'un / layla al-kitaaba daarran",
-        "en": "Indeed the book is beneficial. / The book is not harmful.",
-        "ur": "بے شک کتاب فائدہ مند ہے۔ / کتاب نقصان دہ نہیں ہے۔"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Ash-Shura 42:11 (an excerpt): There is nothing like Him.",
+        "ar": "لَيْسَ كَمِثْلِهِ شَيْءٌ",
+        "ur": "الشوریٰ 42:11 (اقتباس): اس جیسی کوئی چیز نہیں ہے۔"
       },
       "explanation": {
-        "en": "نَافِعٌ (nominative) after إِنَّ. ضَارًّا (accusative with stress mark) after لَيْسَ. The shadda on the n in ضَارًّا is a pronunciation signal that it is منصوب here.",
-        "ur": "نَافِعٌ (مرفوع) إِنَّ کے بعد۔ ضَارًّا (نصب میں تشدید کے ساتھ) لَيْسَ کے بعد۔ ضَارًّا میں n پر تشدید ایک تلفظ کی علامت ہے کہ یہ منصوب ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَيْسَ فِي الْأَرْضِ ضَيْعَةٌ لِلسَّيِّفِ",
-        "ar_plain": "ليس في الأرض ضيعة للسياف",
-        "translit": "layla fii al-ardhi day'ahtun li-as-sayyafi",
-        "en": "There is no small plot of land for the sword-bearer on earth.",
-        "ur": "زمين پر تلوار والے کے لیے کوئی چھوٹی زمین نہیں ہے۔"
+        "en": "لَيْسَ denies: there is nothing like Him. Two ayat, two different jobs: إِنَّ stresses, لَيْسَ negates.",
+        "ur": "لَيْسَ نفی کرتا ہے: اس جیسی کوئی چیز نہیں۔ دو آیات، دو مختلف کام: إِنَّ زور دیتا ہے، لَيْسَ نفی کرتا ہے۔"
       },
-      "explanation": {
-        "en": "This is a famous classical Arabic sentence. لَيْسَ negates the entire existence of something. ضَيْعَةٌ is the khabar, here in the nominative — wait, in this case لَيْسَ negates a verbal concept and ضَيْعَةٌ is actually the فاعل of an implied verb. More on this later.",
-        "ur": "یہ ایک مشہور کلاسیکل عربی جملہ ہے۔ لَيْسَ نے پوری چیز کی موجودگی کا انکار کیا ہے۔ ضَيْعَةٌ خبر ہے، یہاں مرفوع — دراصل اس صورت میں لَيْسَ ایک محذوف فعل کا فاعل ہے۔ اس پر مزید بعد میں۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "inn and layla: the case-changing pair",
-        "ur": "إِنَّ اور لَيْسَ: case بدلنے والی جوڑی"
-      },
-      "body": {
-        "en": "Both إِنَّ and لَيْسَ are حروف (particles) that change the case of the khabar. إِنَّ → nominative (مرفوع). لَيْسَ → accusative (منصوب). This pair is your key to reading nominal sentences in the Quran correctly. The adjective tanween tells you which particle is operating.",
-        "ur": "إِنَّ اور لَيْسَ دونوں حروف ہیں جو خبر کی حالت بدلتے ہیں۔ إِنَّ → مرفوع۔ لَيْسَ → منصوب۔ یہ جوڑی تمہاری کلید ہے قرآن میں جملہ اسمی کو درست پڑھنے کے لیے۔ صفت کا تنوین بتاتا ہے کہ کون سا حرف کام کر رہا ہے۔"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/042011.mp3"
     }
   ],
   "exercises": [
@@ -114,161 +128,242 @@
       "type": "TAP_TRANSLATION",
       "id": "ch25-l05-ex01",
       "prompt": {
-        "ar": "إِنَّ اللَّهَ عَزِيزٌ",
-        "ar_plain": "إن الله العزيز",
-        "translit": "inna al-laaha 'aziizun",
-        "en": "Indeed Allah is Mighty.",
-        "ur": "بے شک اللہ عزیز ہے۔"
+        "ar": "لَيْسَ الْقَلَمُ جَدِيدًا",
+        "ar_plain": "ليس القلم جديدا",
+        "translit": "laysa l-qalamu jadīdan",
+        "en": "The pen is not new.",
+        "ur": "قلم نیا نہیں ہے۔"
       },
       "options": [
         {
-          "en": "Indeed Allah is Mighty.",
-          "ur": "بے شک اللہ عزیز ہے۔"
+          "en": "Indeed, the pen is new.",
+          "ur": "بے شک قلم نیا ہے۔"
         },
         {
-          "en": "Allah is not Mighty.",
-          "ur": "اللہ عزیز نہیں ہے۔"
+          "en": "The pen is not new.",
+          "ur": "قلم نیا نہیں ہے۔"
         },
         {
-          "en": "The Mighty is Allah.",
-          "ur": "عزیز اللہ ہے۔"
+          "en": "The pen is new.",
+          "ur": "قلم نیا ہے۔"
         },
         {
-          "en": "Is Allah Mighty?",
-          "ur": "کیا اللہ عزیز ہے؟"
+          "en": "The book is not new.",
+          "ur": "کتاب نئی نہیں ہے۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنَّ nominates the khabar: عَزِيزٌ (nominative). This is an assertive sentence: 'Indeed Allah is Mighty.' لَيْسَ would make it accusative: عَزِيزًا.",
-        "ur": "إِنَّ خبر کو رفع دیتی ہے: عَزِيزٌ (مرفوع)۔ یہ ایک تَاکِیدی جملہ ہے: 'بے شک اللہ عزیز ہے۔' لَيْسَ اسے منصوب کرے گی: عَزِيزًا۔"
+        "en": "لَيْسَ negates: the pen is not new.",
+        "ur": "لَيْسَ نفی کرتا ہے: قلم نیا نہیں ہے۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "FILL_BLANK",
       "id": "ch25-l05-ex02",
-      "statement": {
-        "en": "In لَيْسَ اللَّهُ ضَعِيفًا, the adjective ضَعِيفًا is accusative because layla puts the khabar in the accusative, while in إِنَّ اللَّهَ عَزِيزٌ the adjective عَزِيزٌ is nominative because inn nominates it.",
-        "ur": "لَيْسَ اللَّهُ ضَعِيفًا میں، صفت ضَعِيفًا منصوب ہے کیونکہ لَيْسَ خبر کو منصوب کرتی ہے، جبکہ إِنَّ اللَّهَ عَزِيزٌ میں صفت عَزِيزٌ مرفوع ہے کیونکہ إِنَّ نے اسے رفع دیا۔",
-        "ar_example": {
-          "ar": "إِنَّ اللَّهَ عَزِيزٌ / لَيْسَ اللَّهُ ضَعِيفًا",
-          "ar_plain": "إن الله العزيز / ليس الله ضعيفاً",
-          "translit": "inna al-laaha 'aziizun / layla al-laahu da'iifan",
-          "en": "Indeed Allah is Mighty. / Allah is not weak.",
-          "ur": "بے شک اللہ عزیز ہے۔ / اللہ کمزور نہیں ہے۔"
-        }
+      "mode": "TAP",
+      "sentence_ar": "___ الْقَلَمُ جَدِيدًا",
+      "hint": {
+        "en": "The pen is not new.",
+        "ur": "قلم نیا نہیں ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "options": [
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed (a word of emphasis)",
+          "ur": "بے شک (تاکید کا لفظ)"
+        },
+        {
+          "ar": "لَيْسَ",
+          "ar_plain": "ليس",
+          "translit": "laysa",
+          "en": "is not",
+          "ur": "نہیں ہے"
+        },
+        {
+          "ar": "لَيْسَتْ",
+          "ar_plain": "ليست",
+          "translit": "laysat",
+          "en": "is not (feminine)",
+          "ur": "نہیں ہے (مؤنث)"
+        },
+        {
+          "ar": "هَلْ",
+          "ar_plain": "هل",
+          "translit": "hal",
+          "en": "is…? (question word)",
+          "ur": "کیا (سوالیہ لفظ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "لَيْسَ",
+        "ar_plain": "ليس",
+        "translit": "laysa",
+        "en": "is not",
+        "ur": "نہیں ہے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْقَلَمُ with a ḍamma and جَدِيدًا with a fatḥa: the pattern of لَيْسَ.",
+        "ur": "الْقَلَمُ پیش کے ساتھ اور جَدِيدًا زبر کے ساتھ: لَيْسَ کا انداز۔"
+      }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch25-l05-ex03",
       "mode": "TAP",
-      "sentence_ar": "لَيْسَ الْمُسْلِمُ ___",
+      "sentence_ar": "إِنَّ ___ جَدِيدٌ",
       "hint": {
-        "en": "The Muslim is not a liar. (Compare: إِنَّ الْمُسْلِمَ صَادِقٌ — 'Indeed the Muslim is truthful.')",
-        "ur": "مسلمان جھوٹا نہیں ہے۔ (موازنہ: إِنَّ الْمُسْلِمَ صَادِقٌ — 'بے شک مسلمان سچا ہے۔')"
+        "en": "Indeed, the pen is new.",
+        "ur": "بے شک قلم نیا ہے۔"
       },
       "options": [
         {
-          "ar": "كَاذِبًا",
-          "ar_plain": "كاذباً",
-          "translit": "kaadhiban",
-          "en": "liar (accusative after layla)",
-          "ur": "جھوٹا (لَيْسَ کے بعد منصوب)"
+          "ar": "الْقَلَمُ",
+          "ar_plain": "القلم",
+          "translit": "al-qalamu",
+          "en": "the pen",
+          "ur": "قلم"
         },
         {
-          "ar": "كَاذِبٌ",
-          "ar_plain": "كاذب",
-          "translit": "kaadhibun",
-          "en": "liar (nominative — wrong after layla)",
-          "ur": "جھوٹا (مرفوع — لَيْسَ کے بعد غلط)"
+          "ar": "الْقَلَمَ",
+          "ar_plain": "القلم",
+          "translit": "al-qalama",
+          "en": "the pen",
+          "ur": "قلم"
         },
         {
-          "ar": "صَادِقٌ",
-          "ar_plain": "صادق",
-          "translit": "saadiqun",
-          "en": "truthful (nominative — opposite meaning)",
-          "ur": "سچا (مرفوع — مخالف مطلب)"
+          "ar": "الْقَلَمِ",
+          "ar_plain": "القلم",
+          "translit": "al-qalami",
+          "en": "the pen",
+          "ur": "قلم"
         },
         {
-          "ar": "عَالِمًا",
-          "ar_plain": "عالماً",
-          "translit": "aaliman",
-          "en": "scholar (accusative — different meaning)",
-          "ur": "عالم (منصوب — مختلف مطلب)"
+          "ar": "قَلَمًا",
+          "ar_plain": "قلما",
+          "translit": "qalaman",
+          "en": "a pen",
+          "ur": "ایک قلم"
         }
       ],
       "correct_answer": {
-        "ar": "كَاذِبًا",
-        "ar_plain": "كاذباً",
-        "translit": "kaadhiban",
-        "en": "liar (accusative after layla)",
-        "ur": "جھوٹا (لَيْسَ کے بعد منصوب)"
+        "ar": "الْقَلَمَ",
+        "ar_plain": "القلم",
+        "translit": "al-qalama",
+        "en": "the pen",
+        "ur": "قلم"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The noun of إِنَّ takes a fatḥa: الْقَلَمَ.",
+        "ur": "إِنَّ کا اسم زبر لیتا ہے: الْقَلَمَ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch25-l05-ex04",
+      "statement": {
+        "en": "This sentence says the house is not big.",
+        "ur": "یہ جملہ کہتا ہے کہ گھر بڑا نہیں ہے۔",
+        "ar_example": {
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِنَّ stresses: indeed, the house is big.",
+        "ur": "إِنَّ زور دیتا ہے: بے شک گھر بڑا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch25-l05-ex05",
+      "statement": {
+        "en": "لَيْسَ changes its form with its noun; إِنَّ does not.",
+        "ur": "لَيْسَ اپنے اسم کے ساتھ شکل بدلتا ہے؛ إِنَّ نہیں بدلتا۔",
+        "ar_example": {
+          "ar": "الْمَدْرَسَةُ لَيْسَتْ بَعِيدَةً",
+          "ar_plain": "المدرسة ليست بعيدة",
+          "translit": "al-madrasatu laysat baʿīdatan",
+          "en": "The school is not far.",
+          "ur": "مدرسہ دور نہیں ہے۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Here لَيْسَ became لَيْسَتْ for the school. إِنَّ is always إِنَّ.",
+        "ur": "یہاں مدرسے کے لیے لَيْسَ، لَيْسَتْ بنا۔ إِنَّ ہمیشہ إِنَّ ہی رہتا ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch25-l05-ex04",
+      "id": "ch25-l05-ex06",
       "left_column": [
         {
-          "ar": "إِنَّ اللَّهَ عَزِيزٌ",
-          "ar_plain": "إن الله العزيز",
-          "translit": "inna al-laaha 'aziizun",
-          "en": "Indeed Allah is Mighty.",
-          "ur": "بے شک اللہ عزیز ہے۔"
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
         },
         {
-          "ar": "لَيْسَ اللَّهُ ضَعِيفًا",
-          "ar_plain": "ليس الله ضعيفاً",
-          "translit": "layla al-laahu da'iifan",
-          "en": "Allah is not weak.",
-          "ur": "اللہ کمزور نہیں ہے۔"
+          "ar": "لَيْسَ الْبَيْتُ كَبِيرًا",
+          "ar_plain": "ليس البيت كبيرا",
+          "translit": "laysa l-baytu kabīran",
+          "en": "The house is not big.",
+          "ur": "گھر بڑا نہیں ہے۔"
         },
         {
-          "ar": "إِنَّ الْكِتَابَ نَافِعٌ",
-          "ar_plain": "إن الكتاب نافع",
-          "translit": "inna al-kitaaba naafi'un",
-          "en": "Indeed the book is beneficial.",
-          "ur": "بے شک کتاب فائدہ مند ہے۔"
+          "ar": "إِنَّ الْمَسْجِدَ قَرِيبٌ",
+          "ar_plain": "إن المسجد قريب",
+          "translit": "inna l-masjida qarībun",
+          "en": "Indeed, the mosque is near.",
+          "ur": "بے شک مسجد قریب ہے۔"
         },
         {
-          "ar": "لَيْسَ الْكِتَابُ ضَارًّا",
-          "ar_plain": "ليس الكتاب ضاراً",
-          "translit": "layla al-kitaaba daarran",
-          "en": "The book is not harmful.",
-          "ur": "کتاب نقصان دہ نہیں ہے۔"
+          "ar": "لَيْسَ الْمَسْجِدُ قَرِيبًا",
+          "ar_plain": "ليس المسجد قريبا",
+          "translit": "laysa l-masjidu qarīban",
+          "en": "The mosque is not near.",
+          "ur": "مسجد قریب نہیں ہے۔"
         }
       ],
       "right_column": [
         {
-          "en": "Indeed Allah is Mighty.",
-          "ur": "بے شک اللہ عزیز ہے۔"
+          "en": "The mosque is not near.",
+          "ur": "مسجد قریب نہیں ہے۔"
         },
         {
-          "en": "Allah is not weak.",
-          "ur": "اللہ کمزور نہیں ہے۔"
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
         },
         {
-          "en": "Indeed the book is beneficial.",
-          "ur": "بے شک کتاب فائدہ مند ہے۔"
+          "en": "Indeed, the mosque is near.",
+          "ur": "بے شک مسجد قریب ہے۔"
         },
         {
-          "en": "The book is not harmful.",
-          "ur": "کتاب نقصان دہ نہیں ہے۔"
+          "en": "The house is not big.",
+          "ur": "گھر بڑا نہیں ہے۔"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          1
         ],
         [
           1,
-          1
+          3
         ],
         [
           2,
@@ -276,165 +371,135 @@
         ],
         [
           3,
-          3
+          0
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِنَّ: indeed. لَيْسَ: not.",
+        "ur": "إِنَّ: بے شک۔ لَيْسَ: نہیں۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch25-l05-ex07",
+      "prompt_line": {
+        "ar": "هَلِ الْكِتَابُ جَدِيدٌ؟",
+        "ar_plain": "هل الكتاب جديد",
+        "translit": "hali l-kitābu jadīdun?",
+        "en": "Is the book new?",
+        "ur": "کیا کتاب نئی ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "لَا، لَيْسَ الْكِتَابُ جَدِيدًا",
+          "ar_plain": "لا ليس الكتاب جديدا",
+          "translit": "lā, laysa l-kitābu jadīdan",
+          "en": "No, the book is not new.",
+          "ur": "نہیں، کتاب نئی نہیں ہے۔"
+        },
+        {
+          "ar": "إِنَّ الْمَسْجِدَ قَرِيبٌ",
+          "ar_plain": "إن المسجد قريب",
+          "translit": "inna l-masjida qarībun",
+          "en": "Indeed, the mosque is near.",
+          "ur": "بے شک مسجد قریب ہے۔"
+        },
+        {
+          "ar": "أَيْنَ الْكِتَابُ؟",
+          "ar_plain": "أين الكتاب",
+          "translit": "ayna l-kitābu?",
+          "en": "Where is the book?",
+          "ur": "کتاب کہاں ہے؟"
+        },
+        {
+          "ar": "الْمَدْرَسَةُ لَيْسَتْ بَعِيدَةً",
+          "ar_plain": "المدرسة ليست بعيدة",
+          "translit": "al-madrasatu laysat baʿīdatan",
+          "en": "The school is not far.",
+          "ur": "مدرسہ دور نہیں ہے۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The question is about the book: 'no, it is not new'.",
+        "ur": "سوال کتاب کے بارے میں ہے: 'نہیں، نئی نہیں ہے'۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch25-l05-ex05",
+      "id": "ch25-l05-ex08",
       "target_translation": {
-        "en": "The book is not harmful.",
-        "ur": "کتاب نقصان دہ نہیں ہے۔"
+        "en": "The house is not big.",
+        "ur": "گھر بڑا نہیں ہے۔"
       },
       "tiles": [
         {
-          "ar": "الْكِتَابُ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaabu",
-          "en": "the book",
-          "ur": "کتاب"
+          "ar": "الْبَيْتُ",
+          "ar_plain": "البيت",
+          "translit": "al-baytu",
+          "en": "the house",
+          "ur": "گھر"
+        },
+        {
+          "ar": "كَبِيرًا",
+          "ar_plain": "كبيرا",
+          "translit": "kabīran",
+          "en": "big",
+          "ur": "بڑا"
         },
         {
           "ar": "لَيْسَ",
           "ar_plain": "ليس",
-          "translit": "layla",
+          "translit": "laysa",
           "en": "is not",
           "ur": "نہیں ہے"
-        },
-        {
-          "ar": "ضَارًّا",
-          "ar_plain": "ضاراً",
-          "translit": "daarran",
-          "en": "harmful (accusative)",
-          "ur": "نقصان دہ (منصوب)"
-        },
-        {
-          "ar": "نَافِعٌ",
-          "ar_plain": "نافع",
-          "translit": "naafi'un",
-          "en": "beneficial (nominative — opposite meaning)",
-          "ur": "فائدہ مند (مرفوع — مخالف مطلب)"
         }
       ],
       "correct_order": [
+        2,
         0,
-        1,
-        2
+        1
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch25-l05-ex06",
-      "statement": {
-        "en": "The tanween on the adjective (last letter) tells you which particle is being used: ٌ → إِنَّ (nominative khabar), ً → لَيْسَ (accusative khabar).",
-        "ur": "صفت کے آخر (تنوین) سے پتہ چلتا ہے کہ کون سا حرف استعمال ہو رہا ہے: ٌ → إِنَّ (مرفوع خبر)، ً → لَيْسَ (منصوب خبر)۔",
-        "ar_example": {
-          "ar": "إِنَّ اللَّهَ عَزِيزٌ / لَيْسَ اللَّهُ عَزِيزًا",
-          "ar_plain": "إن الله العزيز / ليس الله العزيزاً",
-          "translit": "inna al-laaha 'aziizun / layla al-laahu 'aziizan",
-          "en": "Indeed Allah is Mighty. / Allah is not Mighty.",
-          "ur": "بے شک اللہ عزیز ہے۔ / اللہ عزیز نہیں ہے۔"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch25-l05-ex07",
-      "mode": "TAP",
-      "sentence_ar": "إِنَّ الْمُسْلِمَ ___",
-      "hint": {
-        "en": "Indeed the Muslim is strong.",
-        "ur": "بے شک مسلمان زوردار ہے۔"
-      },
-      "options": [
-        {
-          "ar": "قَوِيٌّ",
-          "ar_plain": "قوي",
-          "translit": "qawiyyun",
-          "en": "strong (nominative after إِنَّ)",
-          "ur": "زوردار (إِنَّ کے بعد مرفوع)"
-        },
-        {
-          "ar": "قَوِيًّا",
-          "ar_plain": "قوياً",
-          "translit": "qawiyyan",
-          "en": "strong (accusative — wrong after إِنَّ)",
-          "ur": "زوردار (منصوب — إِنَّ کے بعد غلط)"
-        },
-        {
-          "ar": "ضَعِيفٌ",
-          "ar_plain": "ضعيف",
-          "translit": "da'iifun",
-          "en": "weak (nominative — opposite meaning)",
-          "ur": "کمزور (مرفوع — مخالف مطلب)"
-        },
-        {
-          "ar": "شَجِيعٌ",
-          "ar_plain": "شجاع",
-          "translit": "shajiirun",
-          "en": "brave (nominative — different meaning)",
-          "ur": "بہادر (مرفوع — مختلف مطلب)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "قَوِيٌّ",
-        "ar_plain": "قوي",
-        "translit": "qawiyyun",
-        "en": "strong (nominative after إِنَّ)",
-        "ur": "زوردار (إِنَّ کے بعد مرفوع)"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch25-l05-ex08",
-      "statement": {
-        "en": "Indeed Allah is Wise.",
-        "ur": "بے شک اللہ حکیم ہے۔",
-        "ar_example": {
-          "ar": "إِنَّ اللَّهَ حَكِيمٌ",
-          "en": "Indeed Allah is Wise.",
-          "ur": "بے شک اللہ حکیم ہے۔",
-          "ar_plain": "إن الله حكيم",
-          "translit": "—"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَيْسَ, then الْبَيْتُ with a ḍamma, then كَبِيرًا with a fatḥa.",
+        "ur": "لَيْسَ، پھر الْبَيْتُ پیش کے ساتھ، پھر كَبِيرًا زبر کے ساتھ۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "inn nominates — layla puts in accusative",
-      "ar": "إِنَّ رفع دیتی ہے — لَيْسَ منصوب کرتی ہے",
-      "ur": "إِنَّ رفع دیتی ہے — لَيْسَ منصوب کرتی ہے"
+      "en": "Emphasis and negation",
+      "ar": "التَّوْكِيدُ وَالنَّفْيُ",
+      "ur": "تاکید اور نفی"
     },
     "ayah": {
-      "surah": 17,
-      "ayah": 77,
-      "label": "Al-Isra 17:77",
-      "ar": "سُنَّةَ مَن قَدْ أَرْسَلْنَا قَبْلَكَ مِن رُّسُلِنَا ۖ وَلَا تَجِدُ لِسُنَّتِنَا تَحْوِيلًا",
-      "en": "[That is Our] established way for those We had sent before you of Our messengers; and you will not find in Our way any alteration.",
-      "ur": "جو پیغمبر ہم نے تم سے پہلے بھیجے تھے ان کا (اور ان کے بارے میں ہمارا یہی) طریق رہا ہے اور تم ہمارے طریق میں تغیروتبدل نہ پاؤ گے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017077.mp3"
+      "surah": 42,
+      "ayah": 11,
+      "label": "Ash-Shura 42:11 (excerpt)",
+      "ar": "لَيْسَ كَمِثْلِهِ شَيْءٌ",
+      "en": "There is nothing like Him.",
+      "ur": "اس جیسی کوئی چیز نہیں ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/042011.mp3"
     },
     "highlighted_word_indices": [
       0
     ],
+    "highlighted_words": [
+      "لَيْسَ"
+    ],
     "noor_explanation": {
-      "en": "إِنَّ and لَيْسَ are the two poles of the nominal sentence. إِنَّ اللَّهَ عَزِيزٌ — the khabar is nominative (مرفوع). لَيْسَ اللَّهُ ضَعِيفًا — the khabar is accusative (منصوب). The case marker on the adjective is your signal: ٌ means إِنَّ is at work, ً means لَيْسَ is at work.",
-      "ur": "إِنَّ اور لَيْسَ جملہ اسمی کے دو ستون ہیں۔ إِنَّ اللَّهَ عَزِيزٌ — خبر مرفوع ہے۔ لَيْسَ اللَّهُ ضَعِيفًا — خبر منصوب ہے۔ صفت پر case کی علامت تمہاری signal ہے: ٌ مطلب إِنَّ کام کر رہی ہے، ً مطلب لَيْسَ کام کر رہی ہے۔"
+      "en": "لَيْسَ كَمِثْلِهِ شَيْءٌ denies; إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ stresses. You can now tell the two apart.",
+      "ur": "لَيْسَ كَمِثْلِهِ شَيْءٌ نفی کرتا ہے؛ إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ زور دیتا ہے۔ اب آپ دونوں میں فرق کر سکتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "With إِنَّ and لَيْسَ, you now have both assertion and negation of the nominal sentence. Tanween ٌ = إِنَّ (Mighty). Tanween ً = لَيْسَ (not Mighty). The Quran is full of both — now you can read them.",
-      "ur": "إِنَّ اور لَيْسَ کے ساتھ، اب تمہارے پاس جملہ اسمی کی تَاکِید اور انکار دونوں ہیں۔ تنوین ٌ = إِنَّ (عزیز ہے)۔ تنوین ً = لَيْسَ (عزیز نہیں ہے)۔ قرآن دونوں سے بھری پڑی ہے — اب تم پڑھ سکتے ہو۔"
+      "en": "You can tell إِنَّ from لَيْسَ by meaning and by their endings. Next: the chapter review.",
+      "ur": "آپ معنی اور اعراب سے إِنَّ اور لَيْسَ میں فرق کر سکتے ہیں۔ اگلا: باب کی دہرائی۔"
     }
   }
 }
