@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 24 final test (ch24-test, new). Twelve multiple-choice questions on the proposal's blueprint: meaning of إِنَّ (2), اسم إنّ / خبر إنّ in simple sentences (3), correct ending and the reversed rule rejected (2), إِنَّا and particle- versus action-attached ـنَا (2), transfer to new sentences (2), bounded reading of 43:3 (1). No predicate phrase is graded for case. Pass mark 80 %: 9/12 fails, 10/12 passes. Rebuilt 2026-09-24 from Docs/proposals/chapter-24-content-proposal.md with the owner-approved amendments recorded in its section 8 (numbers stay in Chapter 48, رَحِيمٌ is described as a second nominative description without naming it adjective or second خبر, إِنَّنَا is taught as recognition, every card is listed for illustration, and learners keep their progress with the automatic Updated notice). The map and old fixtures named reader_lecture_24_inna_emphasis.md, which never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "باب 24 کا آخری امتحان",
+    "chapter_order": 24,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 108,
+      "ayah": 1,
+      "label": "Al-Kawthar 108:1",
+      "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
+      "en": "Indeed, We have granted you al-Kawthar.",
+      "ur": "بے شک ہم نے آپ کو کوثر عطا فرمائی ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 24.",
+      "ur": "باب 24 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 24,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch24-test-q01",
+        "topic": {
+          "en": "Meaning of إِنَّ",
+          "ur": "إِنَّ کا مطلب"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "إِنَّ الْبَيْتَ جَمِيلٌ",
+        "options": [
+          {
+            "en": "The house is not beautiful.",
+            "ur": "گھر خوب صورت نہیں ہے۔"
+          },
+          {
+            "en": "Indeed, the house is beautiful.",
+            "ur": "بے شک گھر خوب صورت ہے۔"
+          },
+          {
+            "en": "Is the house beautiful?",
+            "ur": "کیا گھر خوب صورت ہے؟"
+          },
+          {
+            "en": "the beautiful house",
+            "ur": "خوب صورت گھر"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch24-test-q02",
+        "topic": {
+          "en": "Meaning of إِنَّ",
+          "ur": "إِنَّ کا مطلب"
+        },
+        "prompt": {
+          "en": "What does إِنَّ add to الْمَسْجِدُ قَرِيبٌ?",
+          "ur": "إِنَّ، الْمَسْجِدُ قَرِيبٌ میں کیا اضافہ کرتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "A question",
+            "ur": "سوال"
+          },
+          {
+            "en": "A negative: not near",
+            "ur": "نفی: قریب نہیں"
+          },
+          {
+            "en": "Emphasis: the same claim, said firmly",
+            "ur": "زور: وہی بات، مضبوطی سے"
+          },
+          {
+            "en": "A condition: if",
+            "ur": "شرط: اگر"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch24-test-q03",
+        "topic": {
+          "en": "Noun and news",
+          "ur": "اسم اور خبر"
+        },
+        "prompt": {
+          "en": "Which word is the noun of إِنَّ (اسم إنّ)?",
+          "ur": "إِنَّ کا اسم (اسم إنّ) کون سا لفظ ہے؟"
+        },
+        "arabic": "إِنَّ الْمُعَلِّمَ مُجْتَهِدٌ",
+        "options": [
+          {
+            "en": "الْمُعَلِّمَ",
+            "ur": "الْمُعَلِّمَ"
+          },
+          {
+            "en": "مُجْتَهِدٌ",
+            "ur": "مُجْتَهِدٌ"
+          },
+          {
+            "en": "إِنَّ",
+            "ur": "إِنَّ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch24-test-q04",
+        "topic": {
+          "en": "Noun and news",
+          "ur": "اسم اور خبر"
+        },
+        "prompt": {
+          "en": "Which word is the news of إِنَّ (خبر إنّ)?",
+          "ur": "إِنَّ کی خبر (خبر إنّ) کون سا لفظ ہے؟"
+        },
+        "arabic": "إِنَّ الْمَدْرَسَةَ كَبِيرَةٌ",
+        "options": [
+          {
+            "en": "الْمَدْرَسَةَ",
+            "ur": "الْمَدْرَسَةَ"
+          },
+          {
+            "en": "إِنَّ",
+            "ur": "إِنَّ"
+          },
+          {
+            "en": "كَبِيرَةٌ",
+            "ur": "كَبِيرَةٌ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch24-test-q05",
+        "topic": {
+          "en": "Noun and news",
+          "ur": "اسم اور خبر"
+        },
+        "prompt": {
+          "en": "In إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ (2:173), what is اللَّهَ?",
+          "ur": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ (2:173) میں اللَّهَ کیا ہے؟"
+        },
+        "options": [
+          {
+            "en": "The object of an action",
+            "ur": "کسی فعل کا مفعول"
+          },
+          {
+            "en": "The news of إِنَّ",
+            "ur": "إِنَّ کی خبر"
+          },
+          {
+            "en": "A word after a preposition",
+            "ur": "حرفِ جر کے بعد والا لفظ"
+          },
+          {
+            "en": "The noun of إِنَّ, with a fatḥa",
+            "ur": "إِنَّ کا اسم، زبر کے ساتھ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch24-test-q06",
+        "topic": {
+          "en": "Endings after إِنَّ",
+          "ur": "إِنَّ کے بعد اعراب"
+        },
+        "prompt": {
+          "en": "Choose the correct sentence: Indeed, the book is new.",
+          "ur": "صحیح جملہ چنیں: بے شک کتاب نئی ہے۔"
+        },
+        "options": [
+          {
+            "en": "إِنَّ الْكِتَابُ جَدِيدٌ",
+            "ur": "إِنَّ الْكِتَابُ جَدِيدٌ"
+          },
+          {
+            "en": "إِنَّ الْكِتَابَ جَدِيدٌ",
+            "ur": "إِنَّ الْكِتَابَ جَدِيدٌ"
+          },
+          {
+            "en": "إِنَّ الْكِتَابَ جَدِيدًا",
+            "ur": "إِنَّ الْكِتَابَ جَدِيدًا"
+          },
+          {
+            "en": "إِنَّ الْكِتَابُ جَدِيدًا",
+            "ur": "إِنَّ الْكِتَابُ جَدِيدًا"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch24-test-q07",
+        "topic": {
+          "en": "Endings after إِنَّ",
+          "ur": "إِنَّ کے بعد اعراب"
+        },
+        "prompt": {
+          "en": "A learner says: after إِنَّ the noun keeps its ḍamma and the news takes a fatḥa. Is that right?",
+          "ur": "ایک طالب علم کہتا ہے: إِنَّ کے بعد اسم پر پیش رہتا ہے اور خبر زبر لیتی ہے۔ کیا یہ درست ہے؟"
+        },
+        "options": [
+          {
+            "en": "No — the noun takes a fatḥa and the news keeps its ḍamma",
+            "ur": "نہیں — اسم زبر لیتا ہے اور خبر پیش پر رہتی ہے"
+          },
+          {
+            "en": "Yes, that is the rule",
+            "ur": "جی ہاں، یہی قاعدہ ہے"
+          },
+          {
+            "en": "Only in the Quran",
+            "ur": "صرف قرآن میں"
+          },
+          {
+            "en": "Only with feminine nouns",
+            "ur": "صرف مؤنث اسموں کے ساتھ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch24-test-q08",
+        "topic": {
+          "en": "إِنَّا and ـنَا",
+          "ur": "إِنَّا اور ـنَا"
+        },
+        "prompt": {
+          "en": "What does إِنَّا mean?",
+          "ur": "إِنَّا کا کیا مطلب ہے؟"
+        },
+        "options": [
+          {
+            "en": "our",
+            "ur": "ہمارا"
+          },
+          {
+            "en": "we heard",
+            "ur": "ہم نے سنا"
+          },
+          {
+            "en": "indeed he",
+            "ur": "بے شک وہ"
+          },
+          {
+            "en": "indeed we",
+            "ur": "بے شک ہم"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch24-test-q09",
+        "topic": {
+          "en": "إِنَّا and ـنَا",
+          "ur": "إِنَّا اور ـنَا"
+        },
+        "prompt": {
+          "en": "In إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ, which ـنَا is attached to إِنَّ?",
+          "ur": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ میں کون سا ـنَا، إِنَّ سے جڑا ہے؟"
+        },
+        "options": [
+          {
+            "en": "The one in أَعْطَيْنَاكَ",
+            "ur": "أَعْطَيْنَاكَ والا"
+          },
+          {
+            "en": "The one in إِنَّا",
+            "ur": "إِنَّا والا"
+          },
+          {
+            "en": "Both of them",
+            "ur": "دونوں"
+          },
+          {
+            "en": "Neither of them",
+            "ur": "کوئی نہیں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch24-test-q10",
+        "topic": {
+          "en": "New sentences",
+          "ur": "نئے جملے"
+        },
+        "prompt": {
+          "en": "Fill the gap: Indeed, the school is near.",
+          "ur": "خالی جگہ پُر کریں: بے شک اسکول قریب ہے۔"
+        },
+        "arabic": "إِنَّ ___ قَرِيبَةٌ",
+        "options": [
+          {
+            "en": "الْمَدْرَسَةُ",
+            "ur": "الْمَدْرَسَةُ"
+          },
+          {
+            "en": "الْمَدْرَسَةِ",
+            "ur": "الْمَدْرَسَةِ"
+          },
+          {
+            "en": "الْمَدْرَسَةَ",
+            "ur": "الْمَدْرَسَةَ"
+          },
+          {
+            "en": "مَدْرَسَةٌ",
+            "ur": "مَدْرَسَةٌ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch24-test-q11",
+        "topic": {
+          "en": "New sentences",
+          "ur": "نئے جملے"
+        },
+        "prompt": {
+          "en": "Fill the gap: Indeed, the student is hardworking.",
+          "ur": "خالی جگہ پُر کریں: بے شک طالب علم محنتی ہے۔"
+        },
+        "arabic": "إِنَّ الطَّالِبَ ___",
+        "options": [
+          {
+            "en": "مُجْتَهِدٌ",
+            "ur": "مُجْتَهِدٌ"
+          },
+          {
+            "en": "مُجْتَهِدًا",
+            "ur": "مُجْتَهِدًا"
+          },
+          {
+            "en": "مُجْتَهِدٍ",
+            "ur": "مُجْتَهِدٍ"
+          },
+          {
+            "en": "الْمُجْتَهِدَ",
+            "ur": "الْمُجْتَهِدَ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch24-test-q12",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن کی قراءت"
+        },
+        "prompt": {
+          "en": "Who made it an Arabic Quran?",
+          "ur": "کس نے اسے عربی قرآن بنایا؟"
+        },
+        "arabic": "إِنَّا جَعَلْنَاهُ قُرْآنًا عَرَبِيًّا (43:3)",
+        "options": [
+          {
+            "en": "The Prophet ﷺ",
+            "ur": "نبی ﷺ"
+          },
+          {
+            "en": "The listeners — you",
+            "ur": "سننے والے — تم"
+          },
+          {
+            "en": "The believers — we heard",
+            "ur": "ایمان والے — ہم نے سنا"
+          },
+          {
+            "en": "Allah — We",
+            "ur": "اللہ — ہم"
+          }
+        ],
+        "correct_index": 3
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 24 — إِنَّ and إِنَّا",
+      "ar": "إِنَّ وَإِنَّا",
+      "ur": "باب 24 — إِنَّ اور إِنَّا"
+    },
+    "ayah": {
+      "surah": 108,
+      "ayah": 1,
+      "label": "Al-Kawthar 108:1",
+      "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
+      "en": "Indeed, We have granted you al-Kawthar.",
+      "ur": "بے شک ہم نے آپ کو کوثر عطا فرمائی ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "إِنَّا"
+    ],
+    "noor_explanation": {
+      "en": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ: indeed We have granted you al-Kawthar. You finish Chapter 24 able to read إِنَّ, its noun and news, and إِنَّا.",
+      "ur": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ: بے شک ہم نے آپ کو کوثر عطا فرمائی ہے۔ آپ باب 24 اس حال میں مکمل کرتے ہیں کہ إِنَّ، اس کا اسم اور خبر، اور إِنَّا پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 24 complete. Chapter 25: لَيْسَ, which negates a statement.",
+      "ur": "باب 24 مکمل۔ باب 25: لَيْسَ، جو جملے کی نفی کرتا ہے۔"
+    }
+  }
+}

@@ -447,6 +447,40 @@ The Chapter 20–23 rebuild adds 158 discover cards. **133 new scenes cover 154 
 | `ch23-where-my-book-sister.png` | `ch23-l05` card 4 | سَأَلَ أَحْمَدُ: أَيْنَ كِتَابِي؟ قَالَتْ أُخْتُهُ: كِتَابُكَ عَلَى الْمَكْتَبِ | A boy searching for his book; his sister points to it on the desk |
 | `ch23-our-or-us-review.png` | `ch23-l05` card 6 | رَبَّنَا / آتِنَا | Raised hands in supplication with two small tiles beside them: an owner tag and an arrow pointing to the hands |
 
+### Chapter 24
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch24-house-big-emphasis.png` | `ch24-l01` card 1 · `ch24-l02` card 1 | الْبَيْتُ كَبِيرٌ / إِنَّ الْبَيْتَ كَبِيرٌ | Two panels of the same large house: plain; then the same house with a bold underline and an exclamation mark |
+| `ch24-emphasis-underline.png` | `ch24-l01` card 2 | إِنَّ | A single statement card with a bold underline beneath it, nothing else changed |
+| `ch24-mosque-near.png` | `ch24-l01` card 3 | إِنَّ الْمَسْجِدَ قَرِيبٌ | A mosque just across the road from a family home, a short path between them |
+| `ch24-student-hardworking.png` | `ch24-l01` card 4 | إِنَّ الطَّالِبَ مُجْتَهِدٌ | A boy at his desk working hard on his lesson, books open |
+| `ch24-forgiving-merciful.png` | `ch24-l01` card 5 · `ch24-l02` card 5 · `ch24-l06` card 4 | إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ | An open Mushaf on a wooden stand in soft morning light beside a prayer mat; no figures |
+| `ch24-inna-word-order.png` | `ch24-l01` card 6 | إِنَّ + الْبَيْتَ + كَبِيرٌ | Three word cards in a row, the first highlighted, arrows showing the order |
+| `ch24-noun-fatha.png` | `ch24-l02` card 2 | اسْمُ إِنَّ مَنْصُوبٌ | A word card with a small fatḥa mark glowing above its last letter |
+| `ch24-news-damma.png` | `ch24-l02` card 3 | خَبَرُ إِنَّ مَرْفُوعٌ | A word card with a small ḍamma mark on its last letter, unchanged, a check beside it |
+| `ch24-teacher-hardworking.png` | `ch24-l02` card 4 | إِنَّ الْمُعَلِّمَ مُجْتَهِدٌ | A teacher busy marking notebooks at a desk after class |
+| `ch24-rule-right-way.png` | `ch24-l02` card 6 · `ch24-l06` card 2 | إِنَّ + اسْمٌ مَنْصُوبٌ + خَبَرٌ مَرْفُوعٌ · اسْمُ إِنَّ مَنْصُوبٌ، خَبَرُهَا مَرْفُوعٌ | Two arrows on a board: one pointing to a fatḥa (noun), one to a ḍamma (news); a crossed-out reversed pair below |
+| `ch24-inna-plus-na.png` | `ch24-l03` card 1 · `ch24-l05` card 2 | إِنَّ + نَا = إِنَّا · إِنَّا | Two puzzle pieces clicking together into one word tile |
+| `ch24-na-three-hosts.png` | `ch24-l03` card 2 | كِتَابُنَا / سَمِعْنَا / إِنَّا | One small ending tile attached to three different cards: a book, an ear (hearing), and an emphasis mark |
+| `ch24-arabic-quran.png` | `ch24-l03` card 3 · `ch24-l06` card 5 | إِنَّا جَعَلْنَاهُ قُرْآنًا عَرَبِيًّا | An open Mushaf with Arabic script, soft light across the page; no figures |
+| `ch24-who-is-we.png` | `ch24-l03` card 4 | إِنَّا | A vast starry sky over quiet desert dunes; no figures |
+| `ch24-we-have-heard.png` | `ch24-l03` card 5 | رَبَّنَا إِنَّنَا سَمِعْنَا | A group of worshippers seen from behind, hands raised in dua under an open sky |
+| `ch24-one-question.png` | `ch24-l03` card 6 | إِنَّا أَمْ فِعْلٌ؟ | A magnifying glass over a small ending tile, showing what it is attached to |
+| `ch24-three-steps.png` | `ch24-l04` card 1 | إِنَّ ← اسْمٌ ← خَبَرٌ | Three numbered steps on a card: find, mark, read |
+| `ch24-school-far.png` | `ch24-l04` card 2 | إِنَّ الْمَدْرَسَةَ بَعِيدَةٌ | A school building far away on a hill, a long road leading to it |
+| `ch24-girl-hardworking.png` | `ch24-l04` card 3 | إِنَّ الطَّالِبَةَ مُجْتَهِدَةٌ | A girl in modest dress studying hard at her desk |
+| `ch24-book-on-desk.png` | `ch24-l04` card 4 | إِنَّ الْكِتَابَ عَلَى الْمَكْتَبِ | A single book lying on a school desk |
+| `ch24-mosque-beautiful.png` | `ch24-l04` card 5 | الْمَسْجِدُ جَمِيلٌ / إِنَّ الْمَسْجِدَ جَمِيلٌ | A beautiful mosque with a dome and minaret; two panels, the second framed with a bold underline |
+| `ch24-wrong-answer.png` | `ch24-l04` card 6 | اسْمُ إِنَّ مَنْصُوبٌ، خَبَرُهَا مَرْفُوعٌ | An answer card with its marks swapped, a red cross beside it and the corrected card with a tick |
+| `ch24-kawthar-mushaf.png` | `ch24-l05` card 1 | إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ | An open Mushaf at Surah Al-Kawthar, the short surah framed on the page; no figures |
+| `ch24-given-you.png` | `ch24-l05` card 3 | أَعْطَيْنَا + كَ | A wrapped gift with a small label tag addressed to you; no figures |
+| `ch24-na-two-hosts.png` | `ch24-l05` card 4 · `ch24-l06` card 6 | إِنَّا / أَعْطَيْنَا | One ending tile shown twice: attached to an emphasis card and to an action card |
+| `ch24-what-was-given.png` | `ch24-l05` card 5 | الْكَوْثَرَ | A glowing gift parcel with an arrow pointing to it |
+| `ch24-who-gives-receives.png` | `ch24-l05` card 6 | مَنْ أَعْطَى؟ مَنْ أَخَذَ؟ | Three labelled boxes linked by arrows: giver, receiver, gift |
+| `ch24-pen-new.png` | `ch24-l06` card 1 | الْقَلَمُ جَدِيدٌ / إِنَّ الْقَلَمَ جَدِيدٌ | A brand-new pen; two panels, the second with a bold underline |
+| `ch24-pen-small.png` | `ch24-l06` card 3 | إِنَّ الْقَلَمَ صَغِيرٌ | A small pen beside a large ruler for scale |
+
 ### Chapters 20–23 — reused, nothing to draw
 
 | Card | Arabic | Existing picture |

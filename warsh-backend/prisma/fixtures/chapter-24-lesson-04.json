@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 24, Lesson 4 — Numbers 1-10 in Arabic, used within إِنَّ sentences. Masculine and feminine forms, and the basics of counting in Quranic Arabic.",
+    "_note": "Chapter 24, Lesson 4 (ch24-l04) — transfer: the rule applied to sentences not seen before (home, school, book, student). إِنَّ الْكِتَابَ عَلَى الْمَكْتَبِ is meaning-level only; the case of a place phrase is never graded. Feminine news (بَعِيدَةٌ, مُجْتَهِدَةٌ) keeps Chapter 4 agreement. The old Numbers 1–10 lesson (wrong gender rules, إِنَّ الْكِتَابَ ثَلَاثَةٌ) is removed; numbers are taught in Chapter 48 (Numbers 1–20). Rebuilt 2026-09-24 from Docs/proposals/chapter-24-content-proposal.md with the owner-approved amendments recorded in its section 8 (numbers stay in Chapter 48, رَحِيمٌ is described as a second nominative description without naming it adjective or second خبر, إِنَّنَا is taught as recognition, every card is listed for illustration, and learners keep their progress with the automatic Updated notice). The map and old fixtures named reader_lecture_24_inna_emphasis.md, which never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "نئے جملوں میں إِنَّ",
     "chapter_order": 24,
     "lesson_order": 4,
-    "chapter_title": "Conversational Foundations & إِنَّ",
-    "title": "Numbers 1-10 in Arabic",
-    "titleAr": "الْأَعْدَادُ مِنَ الْوَاحِدِ إِلَى الْعَشَرَةِ",
-    "source": "reader_book3_lesson1_inna.pdf",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
       "surah": 2,
-      "ayah": 26,
-      "label": "Al-Baqarah 2:26",
-      "ar": "إِنَّ اللَّهَ لَا يَسْتَحْيِي أَن يَضْرِبَ مَثَلًا مَّا بَعُوضَةً فَمَا فَوْقَهَا ۚ فَأَمَّا الَّذِينَ آمَنُوا فَيَعْلَمُونَ أَنَّهُ الْحَقُّ مِن رَّبِّهِمْ ۖ وَأَمَّا الَّذِينَ كَفَرُوا فَيَقُولُونَ مَاذَا أَرَادَ اللَّهُ بِهَٰذَا مَثَلًا ۘ يُضِلُّ بِهِ كَثِيرًا وَيَهْدِي بِهِ كَثِيرًا ۚ وَمَا يُضِلُّ بِهِ إِلَّا الْفَاسِقِينَ",
-      "en": "Indeed, Allāh is not timid to present an example - that of a mosquito or what is smaller than it. And those who have believed know that it is the truth from their Lord. But as for those who disbelieve, they say, \"What did Allāh intend by this as an example?\" He misleads many thereby and guides many thereby. And He misleads not except the defiantly disobedient,",
-      "ur": "الله اس بات سے عار نہیں کرتا کہ مچھر یا اس سے بڑھ کر کسی چیز (مثلاً مکھی مکڑی وغیرہ) کی مثال بیان فرمائے۔ جو مومن ہیں، وہ یقین کرتے ہیں وہ ان کے پروردگار کی طرف سے سچ ہے اور جو کافر ہیں وہ کہتے ہیں کہ اس مثال سے خدا کی مراد ہی کیا ہے۔ اس سے (خدا) بہتوں کو گمراہ کرتا ہے اور بہتوں کو ہدایت بخشتا ہے اور گمراہ بھی کرتا تو نافرمانوں ہی کو",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002026.mp3"
+      "ayah": 173,
+      "label": "Al-Baqarah 2:173",
+      "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+      "en": "Indeed, Allah is Forgiving and Merciful.",
+      "ur": "بے شک اللہ بخشنے والا، رحم کرنے والا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002173.mp3"
     },
     "noor_intro": {
-      "en": "Numbers in Arabic have two forms: one for counting masculine nouns and one for counting feminine nouns. Today we learn 1-10 — the foundation of all Quranic counting. You will also see how numbers appear inside إِنَّ sentences.",
-      "ur": "عربی میں اعداد کی دو شکلیں ہیں: ایک مذکر اسم کو گننے کے لیے اور ایک مؤنث اسم کو گننے کے لیے۔ آج ہم 1-10 سیکھتے ہیں — قرآنی گنتی کی بنیاد۔ آپ یہ بھی دیکھیں گے کہ اعداد إِنَّ جملوں کے اندر کیسے آتے ہیں۔"
+      "en": "You know the rule from 2:173. Now use it in sentences you have never seen.",
+      "ur": "آپ 2:173 سے قاعدہ جانتے ہیں۔ اب اسے ایسے جملوں میں استعمال کریں جو پہلے نہیں دیکھے۔"
     },
     "autoplay": true
   },
@@ -32,78 +29,95 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Numbers 1-10 in Arabic",
-        "ar": "الْأَعْدَادُ مِنَ الْوَاحِدِ إِلَى الْعَشَرَةِ",
-        "ur": "عربی میں 1-10 تک کے اعداد"
+        "en": "Three steps",
+        "ar": "إِنَّ ← اسْمٌ ← خَبَرٌ",
+        "ur": "تین قدم"
       },
       "explanation": {
-        "en": "Arabic numbers 1-10 have two forms: the masculine form (used when counting masculine nouns) and the feminine form (used when counting feminine nouns). The masculine forms end in ونَ or ٌ, while the feminine forms end in اتٌ or ٌ.",
-        "ur": "عربی اعداد 1-10 کی دو شکلیں ہیں: مذکر شکل (مذکر اسم کو گننے کے لیے) اور مؤنث شکل (مؤنث اسم کو گننے کے لیے)۔ مذکر اشکال ونَ یا ٌ پر ختم ہوتی ہیں، جبکہ مؤنث اشکال اتٌ یا ٌ پر ختم ہوتی ہیں۔"
+        "en": "1. Find إِنَّ. 2. The noun straight after it is its noun, with a fatḥa. 3. The word that tells us about it is its news, with a ḍamma.",
+        "ur": "1۔ إِنَّ تلاش کریں۔ 2۔ اس کے فوراً بعد والا اسم اس کا اسم ہے، زبر کے ساتھ۔ 3۔ جو لفظ اس کے بارے میں بتائے وہ اس کی خبر ہے، پیش کے ساتھ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "وَاحِدٌ — اثْنَانِ — ثَلَاثَةٌ — أَرْبَعَةٌ — خَمْسَةٌ — سِتَّةٌ — سَبْعَةٌ — ثَمَانِيَةٌ — تِسْعَةٌ — عَشَرَةٌ",
-        "ar_plain": "واحد - اثنان - ثلاثة - أربعة - خمسة - ستة - سبعة - ثمانية - تسعة - عشرة",
-        "translit": "waahidun — ithnaani — thalathatu — arba'atu — khamsatu — sittu — sab'atu — thamaaniatu — tis'atu — 'asharatu",
-        "en": "One — Two — Three — Four — Five — Six — Seven — Eight — Nine — Ten (masc. forms)",
-        "ur": "ایک — دو — تین — چار — پانچ — چھ — سات — آٹھ — نو — دس (مذکر اشکال)"
+        "ar": "إِنَّ الْمَدْرَسَةَ بَعِيدَةٌ",
+        "ar_plain": "إن المدرسة بعيدة",
+        "translit": "inna l-madrasata baʿīdatun",
+        "en": "Indeed, the school is far.",
+        "ur": "بے شک اسکول دور ہے۔"
       },
       "explanation": {
-        "en": "These are the masculine-number forms — used when the noun being counted is masculine. ثَلَاثَةٌ and أَرْبَعَةٌ are slightly different (dropping the final taa marbuta from the standalone form).",
-        "ur": "یہ مذکر-number اشکال ہیں — گنے والے اسم کے مذکر ہونے پر استعمال ہوتی ہیں۔ ثَلَاثَةٌ اور أَرْبَعَةٌ تھوڑے مختلف ہیں (standalone form سے final taa marbuta گرنے سے)۔"
+        "en": "الْمَدْرَسَةَ, with a fatḥa, is the noun of إِنَّ. بَعِيدَةٌ is its news: feminine, like الْمَدْرَسَة (Chapter 4), with a ḍamma.",
+        "ur": "الْمَدْرَسَةَ (زبر) إِنَّ کا اسم ہے۔ بَعِيدَةٌ اس کی خبر ہے: الْمَدْرَسَة کی طرح مؤنث (باب 4)، پیش کے ساتھ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "وَاحِدَةٌ — اثْنَتَانِ — ثَلَاثٌ — أَرْبَعٌ — خَمْسٌ — سِتٌّ — سَبْعٌ — ثَمَانٍ — تِسْعٌ — عَشْرٌ",
-        "ar_plain": "واحدة - اثنتان - ثلاث - أربعا - خمş - ست - سبع - ثمان - تسع - عشر",
-        "translit": "waahidatu — ithnaatayni — thalathu — arba'u — khamsu — sittu — sab'u — thamaanu — tis'u — 'ashru",
-        "en": "One — Two — Three — Four — Five — Six — Seven — Eight — Nine — Ten (fem. forms)",
-        "ur": "ایک — دو — تین — چار — پانچ — چھ — سات — آٹھ — نو — دس (مؤنث اشکال)"
+        "ar": "إِنَّ الطَّالِبَةَ مُجْتَهِدَةٌ",
+        "ar_plain": "إن الطالبة مجتهدة",
+        "translit": "inna ṭ-ṭālibata mujtahidatun",
+        "en": "Indeed, the student (a girl) is hardworking.",
+        "ur": "بے شک طالبہ محنتی ہے۔"
       },
       "explanation": {
-        "en": "These are the feminine-number forms — used when the noun being counted is feminine. Notice they are generally shorter than the masculine forms (e.g., ثَلَاثٌ vs ثَلَاثَةٌ).",
-        "ur": "یہ مؤنث-number اشکال ہیں — گنے والے اسم کے مؤنث ہونے پر استعمال ہوتی ہیں۔ نوٹ کریں کہ یہ عموماً مذکر اشکال سے چھوٹی ہوتی ہیں (مثلاً ثَلَاثٌ بمقابلہ ثَلَاثَةٌ)۔"
+        "en": "الطَّالِبَةَ: the noun of إِنَّ. مُجْتَهِدَةٌ: its news, feminine, with a ḍamma.",
+        "ur": "الطَّالِبَةَ: إِنَّ کا اسم۔ مُجْتَهِدَةٌ: اس کی خبر، مؤنث، پیش کے ساتھ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "إِنَّ الْكِتَابَ وَاحِدٌ",
-        "ar_plain": "إن الكتاب واحد",
-        "translit": "inna al-kitaaba waahidun",
-        "en": "Indeed, the book is one.",
-        "ur": "بے شک کتاب ایک ہے۔"
+        "ar": "إِنَّ الْكِتَابَ عَلَى الْمَكْتَبِ",
+        "ar_plain": "إن الكتاب على المكتب",
+        "translit": "inna l-kitāba ʿalā l-maktabi",
+        "en": "Indeed, the book is on the desk.",
+        "ur": "بے شک کتاب میز پر ہے۔"
       },
       "explanation": {
-        "en": "Here الْكِتَابَ is a feminine noun, but وَاحِدٌ is the predicate (not directly counting a noun). The number is functioning as a descriptor in the إِنَّ sentence. Notice the nominative ending on وَاحِدٌ.",
-        "ur": "یہاں الْكِتَابَ ایک مؤنث اسم ہے، لیکن وَاحِدٌ خبر ہے (کسی اسم کو براہ راست نہیں گن رہا)۔ عدد إِنَّ جملے میں descriptor کے طور پر کام کر رہا ہے۔ وَاحِدٌ پر مرفوع ending نوٹ کریں۔"
+        "en": "الْكِتَابَ, with a fatḥa, is the noun of إِنَّ. The news here is a place: عَلَى الْمَكْتَبِ, on the desk. Read it for meaning.",
+        "ur": "الْكِتَابَ (زبر) إِنَّ کا اسم ہے۔ یہاں خبر ایک جگہ ہے: عَلَى الْمَكْتَبِ، میز پر۔ اسے معنی کے لیے پڑھیں۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Numbers inside إِنَّ sentences",
-        "ur": "إِنَّ جملوں کے اندر اعداد"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Plain or emphasised?",
+        "ar": "الْمَسْجِدُ جَمِيلٌ / إِنَّ الْمَسْجِدَ جَمِيلٌ",
+        "ur": "سادہ یا زور کے ساتھ؟"
       },
-      "body": {
-        "en": "Numbers can appear in إِنَّ sentences either as the predicate (e.g., إِنَّ الْكِتَابَ وَاحِدٌ) or after إِنَّ as part of the predicate phrase. The key is that the number takes a case based on its grammatical role — in these examples, it functions as a predicate and takes the nominative (مرفوع).",
-        "ur": "اعداد إِنَّ جملوں میں یا تو خبر کے طور پر (مثلاً إِنَّ الْكِتَابَ وَاحِدٌ) یا إِنَّ کے بعد خبر phrase کا حصہ بن کر ظاہر ہو سکتے ہیں۔ اہم بات یہ ہے کہ عدد اپنے گرامری کردار کی بنیاد پر case لیتا ہے — ان مثالوں میں، یہ خبر کے طور پر کام کرتا ہے اور مرفوع (مرفوع) لیتا ہے۔"
-      }
+      "explanation": {
+        "en": "The first is a plain statement. The second, with إِنَّ, says it with emphasis — and الْمَسْجِدَ takes a fatḥa.",
+        "ur": "پہلا سادہ جملہ ہے۔ دوسرا، إِنَّ کے ساتھ، زور سے کہتا ہے — اور الْمَسْجِدَ پر زبر آتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "الْمَسْجِدُ جَمِيلٌ",
+          "ar_plain": "المسجد جميل",
+          "translit": "al-masjidu jamīlun",
+          "en": "The mosque is beautiful.",
+          "ur": "مسجد خوب صورت ہے۔"
+        },
+        {
+          "ar": "إِنَّ الْمَسْجِدَ جَمِيلٌ",
+          "ar_plain": "إن المسجد جميل",
+          "translit": "inna l-masjida jamīlun",
+          "en": "Indeed, the mosque is beautiful.",
+          "ur": "بے شک مسجد خوب صورت ہے۔"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Vocabulary: Numbers 1-10",
-        "ar": "الْأَعْدَادُ: وَاحِدٌ إِلَى عَشَرَة",
-        "ur": "اعداد: ایک سے دس"
+        "en": "Why is a wrong answer wrong?",
+        "ar": "اسْمُ إِنَّ مَنْصُوبٌ، خَبَرُهَا مَرْفُوعٌ",
+        "ur": "غلط جواب غلط کیوں ہے؟"
       },
       "explanation": {
-        "en": "These ten numbers form the foundation for all counting in the Quran. They appear constantly — in prayers, in Ayatul Kursi, in the descriptions of Paradise and Hell. Learning them here unlocks many future verses.",
-        "ur": "یہ دس اعداد قرآن میں تمام گنتی کی بنیاد ہیں۔ یہ مسلسل آتے ہیں — نمازوں میں، آیت الکرسی میں، جنت اور جہنم کے بیانات میں۔ یہاں سیکھنا کئی مستقبل کی آیات کو کھولتا ہے۔"
+        "en": "If an answer gives the noun after إِنَّ a ḍamma, or gives its news a fatḥa, it has the rule reversed.",
+        "ur": "اگر کوئی جواب إِنَّ کے بعد والے اسم پر پیش لگائے، یا اس کی خبر پر زبر، تو اس نے قاعدہ الٹ دیا ہے۔"
       }
     }
   ],
@@ -112,371 +126,328 @@
       "type": "TAP_TRANSLATION",
       "id": "ch24-l04-ex01",
       "prompt": {
-        "ar": "وَاحِدٌ",
-        "ar_plain": "واحد",
-        "translit": "waahidun",
-        "en": "one",
-        "ur": "ایک"
+        "ar": "إِنَّ الْكِتَابَ عَلَى الْمَكْتَبِ",
+        "ar_plain": "إن الكتاب على المكتب",
+        "translit": "inna l-kitāba ʿalā l-maktabi",
+        "en": "Indeed, the book is on the desk.",
+        "ur": "بے شک کتاب میز پر ہے۔"
       },
       "options": [
         {
-          "en": "one",
-          "ur": "ایک"
+          "en": "the book on the desk",
+          "ur": "میز پر رکھی کتاب"
         },
         {
-          "en": "two",
-          "ur": "دو"
+          "en": "Indeed, the book is on the desk.",
+          "ur": "بے شک کتاب میز پر ہے۔"
         },
         {
-          "en": "three",
-          "ur": "تین"
+          "en": "Is the book on the desk?",
+          "ur": "کیا کتاب میز پر ہے؟"
         },
         {
-          "en": "ten",
-          "ur": "دس"
+          "en": "Indeed, the desk is on the book.",
+          "ur": "بے شک میز کتاب پر ہے۔"
         }
       ],
-      "correct_index": 0,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch24-l04-ex02",
-      "prompt": {
-        "ar": "ثَلَاثَةٌ",
-        "ar_plain": "ثلاثة",
-        "translit": "thalathatu",
-        "en": "three",
-        "ur": "تین"
-      },
-      "options": [
-        {
-          "en": "three",
-          "ur": "تین"
-        },
-        {
-          "en": "four",
-          "ur": "چار"
-        },
-        {
-          "en": "five",
-          "ur": "پانچ"
-        },
-        {
-          "en": "seven",
-          "ur": "سات"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِنَّ, indeed; الْكِتَابَ, the book; عَلَى الْمَكْتَبِ, on the desk.",
+        "ur": "إِنَّ، بے شک؛ الْكِتَابَ، کتاب؛ عَلَى الْمَكْتَبِ، میز پر۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch24-l04-ex03",
+      "id": "ch24-l04-ex02",
       "mode": "TAP",
-      "sentence_ar": "إِنَّ الْكِتَابَ ___",
+      "sentence_ar": "إِنَّ ___ بَعِيدَةٌ",
       "hint": {
-        "en": "Indeed, the book is one.",
-        "ur": "بے شک کتاب ایک ہے۔"
+        "en": "Indeed, the school is far.",
+        "ur": "بے شک اسکول دور ہے۔"
       },
       "options": [
         {
-          "ar": "وَاحِدٌ",
-          "ar_plain": "واحد",
-          "translit": "waahidun",
-          "en": "one",
-          "ur": "ایک"
+          "ar": "الْمَدْرَسَةُ",
+          "ar_plain": "المدرسة",
+          "translit": "al-madrasatu",
+          "en": "the school (with a ḍamma)",
+          "ur": "اسکول (پیش کے ساتھ)"
         },
         {
-          "ar": "وَاحِدَةٌ",
-          "ar_plain": "واحدة",
-          "translit": "waahidatu",
-          "en": "one (fem.)",
-          "ur": "ایک (مؤنث)"
+          "ar": "الْمَدْرَسَةِ",
+          "ar_plain": "المدرسة",
+          "translit": "al-madrasati",
+          "en": "the school (with a kasra)",
+          "ur": "اسکول (زیر کے ساتھ)"
         },
         {
-          "ar": "اثْنَانِ",
-          "ar_plain": "اثنان",
-          "translit": "ithnaani",
-          "en": "two",
-          "ur": "دو"
+          "ar": "الْمَدْرَسَةَ",
+          "ar_plain": "المدرسة",
+          "translit": "al-madrasata",
+          "en": "the school (with a fatḥa)",
+          "ur": "اسکول (زبر کے ساتھ)"
         },
         {
-          "ar": "عَشَرَةٌ",
-          "ar_plain": "عشرة",
-          "translit": "asharatu",
-          "en": "ten",
-          "ur": "دس"
+          "ar": "مَدْرَسَةٌ",
+          "ar_plain": "مدرسة",
+          "translit": "madrasatun",
+          "en": "a school",
+          "ur": "ایک اسکول"
         }
       ],
       "correct_answer": {
-        "ar": "وَاحِدٌ",
-        "ar_plain": "واحد",
-        "translit": "waahidun",
-        "en": "one",
-        "ur": "ایک"
+        "ar": "الْمَدْرَسَةَ",
+        "ar_plain": "المدرسة",
+        "translit": "al-madrasata",
+        "en": "the school (with a fatḥa)",
+        "ur": "اسکول (زبر کے ساتھ)"
       },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch24-l04-ex04",
-      "left_column": [
-        {
-          "ar": "وَاحِدٌ",
-          "ar_plain": "واحد",
-          "translit": "waahidun",
-          "en": "one",
-          "ur": "ایک"
-        },
-        {
-          "ar": "أَرْبَعَةٌ",
-          "ar_plain": "أربعة",
-          "translit": "arba'atu",
-          "en": "four",
-          "ur": "چار"
-        },
-        {
-          "ar": "سِتَّةٌ",
-          "ar_plain": "ستة",
-          "translit": "sittu",
-          "en": "six",
-          "ur": "چھ"
-        },
-        {
-          "ar": "تِسْعَةٌ",
-          "ar_plain": "تسعة",
-          "translit": "tis'atu",
-          "en": "nine",
-          "ur": "نو"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "one",
-          "ur": "ایک"
-        },
-        {
-          "en": "four",
-          "ur": "چار"
-        },
-        {
-          "en": "six",
-          "ur": "چھ"
-        },
-        {
-          "en": "nine",
-          "ur": "نو"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The noun of إِنَّ takes a fatḥa: الْمَدْرَسَةَ.",
+        "ur": "إِنَّ کا اسم زبر لیتا ہے: الْمَدْرَسَةَ۔"
+      }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch24-l04-ex05",
+      "id": "ch24-l04-ex03",
       "statement": {
-        "en": "Arabic numbers 1-10 have two forms: one for counting masculine nouns and one for counting feminine nouns.",
-        "ur": "عربی اعداد 1-10 کی دو شکلیں ہوتی ہیں: ایک مذکر اسم کو گننے کے لیے اور ایک مؤنث اسم کو گننے کے لیے۔"
+        "en": "This sentence is said with emphasis.",
+        "ur": "یہ جملہ زور کے ساتھ کہا گیا ہے۔",
+        "ar_example": {
+          "ar": "الْمَسْجِدُ جَمِيلٌ",
+          "ar_plain": "المسجد جميل",
+          "translit": "al-masjidu jamīlun",
+          "en": "The mosque is beautiful.",
+          "ur": "مسجد خوب صورت ہے۔"
+        }
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "There is no إِنَّ: it is a plain statement.",
+        "ur": "اس میں إِنَّ نہیں: یہ سادہ جملہ ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch24-l04-ex04",
+      "statement": {
+        "en": "In this sentence, مُجْتَهِدَةٌ is the noun of إِنَّ.",
+        "ur": "اس جملے میں مُجْتَهِدَةٌ، إِنَّ کا اسم ہے۔",
+        "ar_example": {
+          "ar": "إِنَّ الطَّالِبَةَ مُجْتَهِدَةٌ",
+          "ar_plain": "إن الطالبة مجتهدة",
+          "translit": "inna ṭ-ṭālibata mujtahidatun",
+          "en": "Indeed, the student (a girl) is hardworking.",
+          "ur": "بے شک طالبہ محنتی ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الطَّالِبَةَ, right after إِنَّ, is its noun. مُجْتَهِدَةٌ is its news.",
+        "ur": "إِنَّ کے فوراً بعد الطَّالِبَةَ اس کا اسم ہے۔ مُجْتَهِدَةٌ اس کی خبر ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch24-l04-ex05",
+      "mode": "TAP",
+      "sentence_ar": "إِنَّ الطَّالِبَةَ ___",
+      "hint": {
+        "en": "Indeed, the student (a girl) is hardworking.",
+        "ur": "بے شک طالبہ محنتی ہے۔"
+      },
+      "options": [
+        {
+          "ar": "مُجْتَهِدَةٌ",
+          "ar_plain": "مجتهدة",
+          "translit": "mujtahidatun",
+          "en": "hardworking (feminine, with a ḍamma)",
+          "ur": "محنتی (مؤنث، پیش کے ساتھ)"
+        },
+        {
+          "ar": "مُجْتَهِدَةً",
+          "ar_plain": "مجتهدة",
+          "translit": "mujtahidatan",
+          "en": "hardworking (feminine, with a fatḥa)",
+          "ur": "محنتی (مؤنث، زبر کے ساتھ)"
+        },
+        {
+          "ar": "مُجْتَهِدٌ",
+          "ar_plain": "مجتهد",
+          "translit": "mujtahidun",
+          "en": "hardworking (masculine)",
+          "ur": "محنتی (مذکر)"
+        },
+        {
+          "ar": "مُجْتَهِدَةٍ",
+          "ar_plain": "مجتهدة",
+          "translit": "mujtahidatin",
+          "en": "hardworking (feminine, with a kasra)",
+          "ur": "محنتی (مؤنث، زیر کے ساتھ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مُجْتَهِدَةٌ",
+        "ar_plain": "مجتهدة",
+        "translit": "mujtahidatun",
+        "en": "hardworking (feminine, with a ḍamma)",
+        "ur": "محنتی (مؤنث، پیش کے ساتھ)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The news is feminine, like الطَّالِبَة, and keeps its ḍamma.",
+        "ur": "خبر الطَّالِبَة کی طرح مؤنث ہے اور پیش پر رہتی ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch24-l04-ex06",
+      "prompt_line": {
+        "ar": "أَيْنَ الْكِتَابُ؟",
+        "ar_plain": "أين الكتاب",
+        "translit": "ayna l-kitābu?",
+        "en": "Where is the book?",
+        "ur": "کتاب کہاں ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "إِنَّ الْكِتَابَ جَدِيدٌ",
+          "ar_plain": "إن الكتاب جديد",
+          "translit": "inna l-kitāba jadīdun",
+          "en": "Indeed, the book is new.",
+          "ur": "بے شک کتاب نئی ہے۔"
+        },
+        {
+          "ar": "الْكِتَابُ الْجَدِيدُ",
+          "ar_plain": "الكتاب الجديد",
+          "translit": "al-kitābu l-jadīdu",
+          "en": "the new book",
+          "ur": "نئی کتاب"
+        },
+        {
+          "ar": "إِنَّ الْكِتَابَ عَلَى الْمَكْتَبِ",
+          "ar_plain": "إن الكتاب على المكتب",
+          "translit": "inna l-kitāba ʿalā l-maktabi",
+          "en": "Indeed, the book is on the desk.",
+          "ur": "بے شک کتاب میز پر ہے۔"
+        },
+        {
+          "ar": "هَلِ الْكِتَابُ جَدِيدٌ؟",
+          "ar_plain": "هل الكتاب جديد",
+          "translit": "hali l-kitābu jadīdun?",
+          "en": "Is the book new?",
+          "ur": "کیا کتاب نئی ہے؟"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَيْنَ asks where: answer with a place.",
+        "ur": "أَيْنَ 'کہاں' پوچھتا ہے: جگہ بتا کر جواب دیں۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch24-l04-ex06",
+      "id": "ch24-l04-ex07",
       "target_translation": {
-        "en": "Indeed, the book is one.",
-        "ur": "بے شک کتاب ایک ہے۔"
+        "en": "Indeed, the mosque is beautiful.",
+        "ur": "بے شک مسجد خوب صورت ہے۔"
       },
       "tiles": [
+        {
+          "ar": "جَمِيلٌ",
+          "ar_plain": "جميل",
+          "translit": "jamīlun",
+          "en": "beautiful",
+          "ur": "خوب صورت"
+        },
+        {
+          "ar": "الْمَسْجِدَ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjida",
+          "en": "the mosque",
+          "ur": "مسجد"
+        },
         {
           "ar": "إِنَّ",
           "ar_plain": "إن",
           "translit": "inna",
-          "en": "indeed",
-          "ur": "بے شک"
-        },
-        {
-          "ar": "الْكِتَابَ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaaba",
-          "en": "the book",
-          "ur": "کتاب"
-        },
-        {
-          "ar": "وَاحِدٌ",
-          "ar_plain": "واحد",
-          "translit": "waahidun",
-          "en": "one",
-          "ur": "ایک"
-        },
-        {
-          "ar": "وَاحِدَةٌ",
-          "ar_plain": "واحدة",
-          "translit": "waahidatu",
-          "en": "one (fem.)",
-          "ur": "ایک (مؤنث)"
+          "en": "indeed (a word of emphasis)",
+          "ur": "بے شک (تاکید کا لفظ)"
         }
       ],
       "correct_order": [
-        0,
+        2,
         1,
-        2
+        0
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch24-l04-ex07",
-      "prompt": {
-        "ar": "إِنَّ الْكِتَابَ ثَلَاثَةٌ",
-        "ar_plain": "إن الكتاب ثلاثة",
-        "translit": "inna al-kitaaba thalathatu",
-        "en": "Indeed, the book is three (in quantity).",
-        "ur": "بے شک کتاب تین ہے (مقدار میں)۔"
-      },
-      "options": [
-        {
-          "en": "Indeed, the book is three.",
-          "ur": "بے شک کتاب تین ہے۔"
-        },
-        {
-          "en": "The three books.",
-          "ur": "تین کتابیں۔"
-        },
-        {
-          "en": "Indeed, three books.",
-          "ur": "بے شک تین کتابیں۔"
-        },
-        {
-          "en": "Three is the book.",
-          "ur": "تین کتاب ہے۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنَّ الْكِتَابَ is the subject. ثَلَاثَةٌ is the predicate — in nominative here. Indeed, the book is three. This is a description within an إِنَّ sentence.",
-        "ur": "إِنَّ الْكِتَابَ مبتدأ ہے۔ ثَلَاثَةٌ خبر ہے — یہاں مرفوع میں۔ بے شک کتاب تین ہے۔ یہ ایک إِنَّ جملے کے اندر بیان ہے۔"
+        "en": "إِنَّ, its noun الْمَسْجِدَ, its news جَمِيلٌ.",
+        "ur": "إِنَّ، اس کا اسم الْمَسْجِدَ، اس کی خبر جَمِيلٌ۔"
       }
     },
     {
-      "type": "MATCHING",
+      "type": "TRUE_FALSE",
       "id": "ch24-l04-ex08",
-      "left_column": [
-        {
-          "ar": "سِتَّةٌ",
-          "ar_plain": "ستة",
-          "translit": "sittu",
-          "en": "six",
-          "ur": "چھ"
-        },
-        {
-          "ar": "سَبْعَةٌ",
-          "ar_plain": "سبعة",
-          "translit": "sab'atu",
-          "en": "seven",
-          "ur": "سات"
-        },
-        {
-          "ar": "ثَمَانِيَةٌ",
-          "ar_plain": "ثمانية",
-          "translit": "thamaaniatu",
-          "en": "eight",
-          "ur": "آٹھ"
-        },
-        {
-          "ar": "عَشَرَةٌ",
-          "ar_plain": "عشرة",
-          "translit": "asharatu",
-          "en": "ten",
-          "ur": "دس"
+      "statement": {
+        "en": "A classmate says: the noun after إِنَّ keeps its ḍamma, so we say الْبَيْتُ after إِنَّ. Is the classmate right?",
+        "ur": "ایک ساتھی کہتا ہے: إِنَّ کے بعد اسم پر پیش رہتا ہے، اس لیے إِنَّ کے بعد الْبَيْتُ کہتے ہیں۔ کیا وہ ٹھیک ہے؟",
+        "ar_example": {
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
         }
-      ],
-      "right_column": [
-        {
-          "en": "six",
-          "ur": "چھ"
-        },
-        {
-          "en": "seven",
-          "ur": "سات"
-        },
-        {
-          "en": "eight",
-          "ur": "آٹھ"
-        },
-        {
-          "en": "ten",
-          "ur": "دس"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The noun after إِنَّ takes a fatḥa: إِنَّ الْبَيْتَ كَبِيرٌ.",
+        "ur": "إِنَّ کے بعد والا اسم زبر لیتا ہے: إِنَّ الْبَيْتَ كَبِيرٌ۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Numbers 1-10 — the foundation of Quranic counting",
-      "ar": "الْأَعْدَادُ — بنیاد قرآنی گنتی",
-      "ur": "1-10 تک اعداد — قرآنی گنتی کی بنیاد"
+      "en": "Using إِنَّ",
+      "ar": "إِنَّ فِي جُمَلٍ جَدِيدَةٍ",
+      "ur": "إِنَّ کا استعمال"
     },
     "ayah": {
       "surah": 2,
-      "ayah": 26,
-      "label": "Al-Baqarah 2:26",
-      "ar": "إِنَّ اللَّهَ لَا يَسْتَحْيِي",
-      "en": "Indeed, Allah does not shy away.",
-      "ur": "بے شک اللہ شرماتا نہیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002026.mp3"
+      "ayah": 173,
+      "label": "Al-Baqarah 2:173",
+      "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+      "en": "Indeed, Allah is Forgiving and Merciful.",
+      "ur": "بے شک اللہ بخشنے والا، رحم کرنے والا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002173.mp3"
     },
     "highlighted_word_indices": [
-      0
+      0,
+      1,
+      2
+    ],
+    "highlighted_words": [
+      "إِنَّ",
+      "اللَّهَ",
+      "غَفُورٌ"
     ],
     "noor_explanation": {
-      "en": "Numbers appear throughout the Quran — in Ayatul Kursi (one), in descriptions of the people of Paradise and Hell, in prayer timings. Today you learned 1-10. This foundation will unlock dozens of future verses, in sha Allah.",
-      "ur": "اعداد پورے قرآن میں آتے ہیں — آیت الکرسی میں (ایک)، جنت اور جہنم کے باشندوں کے بیانات میں، نماز کے اوقات میں۔ آج آپ نے 1-10 سیکھا۔ یہ بنیاد کئی دہائیوں کی future آیات کو کھولے گی، ان شاء اللہ۔"
+      "en": "إِنَّ اللَّهَ غَفُورٌ: the same three steps you used today — إِنَّ, its noun with a fatḥa, its news with a ḍamma.",
+      "ur": "إِنَّ اللَّهَ غَفُورٌ: وہی تین قدم جو آپ نے آج استعمال کیے — إِنَّ، زبر والا اسم، پیش والی خبر۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Numbers are everywhere in the Quran. When you see وَاحِدٌ, ثِلَاثَةٌ, أَرْبَعَةٌ and the rest — you now know them. أَعْطَيْنَاكَ الْكَوْثَرَ is one; Al-Kawthar. Keep going — the numbers of the Quran are now yours.",
-      "ur": "اعداد قرآن میں ہر جگہ ہیں۔ جب آپ وَاحِدٌ, ثِلَاثَةٌ, أَرْبَعَةٌ اور باقی دیکھیں — آپ اب جانتے ہیں۔ أَعْطَيْنَاكَ الْكَوْثَرَ ایک ہے؛ الکوثر۔ جاری رکھیں — قرآن کے اعداد اب آپ کے ہیں۔"
+      "en": "You used إِنَّ in new sentences. Next: read Al-Kawthar 108:1.",
+      "ur": "آپ نے نئے جملوں میں إِنَّ استعمال کیا۔ آگے: الکوثر 108:1 پڑھیں۔"
     }
   }
 }

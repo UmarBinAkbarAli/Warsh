@@ -2,257 +2,417 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 24, Lesson 2 — إِنَّ takes accusative (نصب) on the predicate. The noun after إِنَّ is the subject (مبتدأ) in nominative; the predicate (خبر) is in accusative.",
+    "_note": "Chapter 24, Lesson 2 (ch24-l02) — the rule, stated the right way round: the noun after إِنَّ is اسم إنّ and منصوب (fatḥa); its news is خبر إنّ and stays مرفوع. Before/after pair الْبَيْتُ كَبِيرٌ → إِنَّ الْبَيْتَ كَبِيرٌ and the closing statement of 2:173. رَحِيمٌ is recognised only as a second nominative description of Allah — not a second اسم إنّ, and not labelled adjective or second خبر. The old lesson taught the reversed rule (noun nominative, predicate accusative) and scored it; every such prompt and key is gone. Rebuilt 2026-09-24 from Docs/proposals/chapter-24-content-proposal.md with the owner-approved amendments recorded in its section 8 (numbers stay in Chapter 48, رَحِيمٌ is described as a second nominative description without naming it adjective or second خبر, إِنَّنَا is taught as recognition, every card is listed for illustration, and learners keep their progress with the automatic Updated notice). The map and old fixtures named reader_lecture_24_inna_emphasis.md, which never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "إِنَّ کے بعد اسم بدلتا ہے، خبر نہیں",
     "chapter_order": 24,
     "lesson_order": 2,
-    "chapter_title": "Conversational Foundations & إِنَّ",
-    "title": "إِنَّ Takes Accusative — The Predicate in نصب",
-    "titleAr": "إِنَّ تَنْصِبُ الْخَبَرَ",
-    "source": "reader_book3_lesson1_inna.pdf",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 108,
-      "ayah": 1,
-      "label": "Al-Kawthar 108:1",
-      "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
-      "en": "Indeed, We have given you Al-Kawthar.",
-      "ur": "بے شک ہم نے تمہیں کوثر دیا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+      "surah": 2,
+      "ayah": 173,
+      "label": "Al-Baqarah 2:173",
+      "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+      "en": "Indeed, Allah is Forgiving and Merciful.",
+      "ur": "بے شک اللہ بخشنے والا، رحم کرنے والا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002173.mp3"
     },
     "noor_intro": {
-      "en": "Yesterday we met إِنَّ. Today we learn its most important grammar rule: when إِنَّ opens a sentence, its predicate goes into the accusative case. This is called نصب in Arabic grammar.",
-      "ur": "کل ہم نے إِنَّ سے ملاقات کی۔ آج ہم اس کے سب سے اہم گرامر قاعدے کو سیکھتے ہیں: جب إِنَّ ایک جملہ کھولتا ہے، اس کی خبر نصب case میں جاتی ہے۔ عربی گرامر میں اسے نصب کہتے ہیں۔"
+      "en": "Listen again to the end of 2:173. After إِنَّ, one word ends in a fatḥa, and the next ones keep their ḍamma.",
+      "ur": "2:173 کا آخر دوبارہ سنیں۔ إِنَّ کے بعد ایک لفظ زبر پر ختم ہوتا ہے، اور اگلے لفظ پیش پر رہتے ہیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "What changes after إِنَّ?",
+        "ar": "الْبَيْتُ كَبِيرٌ / إِنَّ الْبَيْتَ كَبِيرٌ",
+        "ur": "إِنَّ کے بعد کیا بدلتا ہے؟"
+      },
+      "explanation": {
+        "en": "الْبَيْتُ, with a ḍamma, becomes الْبَيْتَ, with a fatḥa. كَبِيرٌ does not change: it keeps its ḍamma.",
+        "ur": "الْبَيْتُ (پیش) الْبَيْتَ (زبر) بن جاتا ہے۔ كَبِيرٌ نہیں بدلتا: اس پر پیش ہی رہتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "الْبَيْتُ كَبِيرٌ",
+          "ar_plain": "البيت كبير",
+          "translit": "al-baytu kabīrun",
+          "en": "The house is big.",
+          "ur": "گھر بڑا ہے۔"
+        },
+        {
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
+        }
+      ]
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "إِنَّ نصب — accusative on the predicate",
-        "ar": "إِنَّ تَنْصِبُ الْخَبَرَ",
-        "ur": "إِنَّ خبر کو نصب کرتا ہے"
+        "en": "The noun of إِنَّ takes a fatḥa",
+        "ar": "اسْمُ إِنَّ مَنْصُوبٌ",
+        "ur": "إِنَّ کا اسم زبر لیتا ہے"
       },
       "explanation": {
-        "en": "In a nominal sentence opened by إِنَّ, the predicate (خبر) takes the accusative case (نصب). The subject (مبتدأ) stays nominative (مرفوع). The sign of accusative is typically a fatHa (َ) on the last letter.",
-        "ur": "إِنَّ سے کھولی گئی جملہ اسمیہ میں، خبر (خبر) نصب case (نصب) لیتی ہے۔ مبتدأ (subject) مرفوع رہتا ہے۔ نصب کا نشان عموماً آخری حرف پر فتحہ (َ) ہے۔"
+        "en": "The noun straight after إِنَّ is called اسم إنّ, the noun of إِنَّ. It is منصوب: it ends in a fatḥa. In إِنَّ الْبَيْتَ كَبِيرٌ, that noun is الْبَيْتَ.",
+        "ur": "إِنَّ کے فوراً بعد والا اسم 'اسم إنّ' کہلاتا ہے۔ یہ منصوب ہوتا ہے: اس کے آخر میں زبر آتا ہے۔ إِنَّ الْبَيْتَ كَبِيرٌ میں وہ اسم الْبَيْتَ ہے۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Its news stays with a ḍamma",
+        "ar": "خَبَرُ إِنَّ مَرْفُوعٌ",
+        "ur": "اس کی خبر پیش پر رہتی ہے"
+      },
+      "explanation": {
+        "en": "The word that tells us about that noun is خبر إنّ, the news of إِنَّ. It stays مرفوع: كَبِيرٌ keeps its ḍamma.",
+        "ur": "جو لفظ اس اسم کے بارے میں خبر دیتا ہے وہ 'خبر إنّ' ہے۔ یہ مرفوع رہتا ہے: كَبِيرٌ پر پیش ہی رہتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "إِنَّ الْكِتَابَ كَبِيرٌ",
-        "ar_plain": "إن الكتاب كبير",
-        "translit": "inna al-kitaaba kabiirun",
-        "en": "Indeed, the book is big.",
-        "ur": "بے شک کتاب بڑی ہے۔"
+        "ar": "إِنَّ الْمُعَلِّمَ مُجْتَهِدٌ",
+        "ar_plain": "إن المعلم مجتهد",
+        "translit": "inna l-muʿallima mujtahidun",
+        "en": "Indeed, the teacher is hardworking.",
+        "ur": "بے شک استاد محنتی ہیں۔"
       },
       "explanation": {
-        "en": "الْكِتَابَ is the subject (مبتدأ) — still nominative. كَبِيرٌ is the predicate — in accusative. Notice the fatHa on the last letter of كَبِيرٌ (ب). This is the key sign.",
-        "ur": "الْكِتَابَ مبتدأ ہے — ابھی بھی مرفوع۔ كَبِيرٌ خبر ہے — نصب میں۔ کَبِيرٌ کے آخری حرف (ب) پر فتحہ نوٹ کریں۔ یہ main اشارہ ہے۔"
+        "en": "الْمُعَلِّمَ, with a fatḥa, is the noun of إِنَّ. مُجْتَهِدٌ, with a ḍamma, is its news.",
+        "ur": "الْمُعَلِّمَ (زبر) إِنَّ کا اسم ہے۔ مُجْتَهِدٌ (پیش) اس کی خبر ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِنَّ الْكِتَابَ جَدِيدٌ",
-        "ar_plain": "إن الكتاب جديد",
-        "translit": "inna al-kitaaba jadiidun",
-        "en": "Indeed, the book is new.",
-        "ur": "بے شک کتاب نئی ہے۔"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:173 (its closing words)",
+        "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+        "ur": "البقرہ 2:173 (آخری الفاظ)"
       },
       "explanation": {
-        "en": "جَدِيدٌ is an adjective (صفة) functioning as the predicate. The adjective agrees with the noun in being definite and singular, and it takes the accusative ending (nominative would be جَدِيدٌ too here because it is indefinite, but when it is the predicate it follows a different pattern).",
-        "ur": "جَدِيدٌ ایک صفت ہے جو خبر کے طور پر کام کر رہی ہے۔ صفت اسم کے ساتھ معرفہ اور واحد ہونے میں agree کرتی ہے، اور یہ نصب ending لیتی ہے۔"
-      }
+        "en": "اللَّهَ, with a fatḥa, is the noun of إِنَّ. غَفُورٌ, Forgiving, is its news, with a ḍamma. رَحِيمٌ, Merciful, is a second description of Allah, also with a ḍamma — it is not a second noun of إِنَّ.",
+        "ur": "اللَّهَ (زبر) إِنَّ کا اسم ہے۔ غَفُورٌ، بخشنے والا، اس کی خبر ہے، پیش کے ساتھ۔ رَحِيمٌ، رحم کرنے والا، اللہ کا دوسرا وصف ہے، وہ بھی پیش کے ساتھ — یہ إِنَّ کا دوسرا اسم نہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002173.mp3"
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِنَّ اللَّهَ لَا يَسْتَحْيِي",
-        "ar_plain": "إن الله لا يستحيي",
-        "translit": "inna Allaha laa yastahyi",
-        "en": "Indeed, Allah does not shy away.",
-        "ur": "بے شک اللہ شرماتا نہیں۔"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Keep the rule the right way round",
+        "ar": "إِنَّ + اسْمٌ مَنْصُوبٌ + خَبَرٌ مَرْفُوعٌ",
+        "ur": "قاعدہ صحیح ترتیب سے یاد رکھیں"
       },
       "explanation": {
-        "en": "Here اللَّهَ is the subject (nominative). لَا يَسْتَحْيِي is the verbal predicate — it is a full verb phrase, and verbs do not take case endings in the same way nouns do. The key is that إِنَّ opens the sentence and the whole statement after it is the emphasis.",
-        "ur": "یہاں اللَّهَ مبتدأ ہے (مرفوع)۔ لَا يَسْتَحْيِي ایک فعلی خبر ہے — یہ ایک مکمل فعل phrase ہے۔ اہم بات یہ ہے کہ إِنَّ جملہ کھولتا ہے اور اس کے بعد پورا statement emphasis ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Why does the predicate take accusative?",
-        "ur": "خبر کیوں نصب میں ہوتی ہے؟"
-      },
-      "body": {
-        "en": "Classical Arabic grammarians explain that إِنَّ is a حرف (particle) that inna changes the case of what follows it. The subject (مبتدأ) after إِنَّ is still nominative, but the predicate (خبر) is accusative — this is إِعْرَاب, Arabic grammatical case. Think of it as إِنَّ giving the following noun a 'special status' and the predicate gets the accusative marker.",
-        "ur": "کلاسیکی عربی علماء بیان کرتے ہیں کہ إِنَّ ایک حرف ہے جو اپنے following پر case تبدیل کرتا ہے۔ إِنَّ کے بعد مبتدأ ابھی بھی مرفوع ہے، لیکن خبر نصب ہے — یہ إِعْرَاب ہے، عربی گرامری case۔ اسے ایسے سمجھیں کہ إِنَّ اگلے اسم کو 'خصوصی حیثیت' دیتا ہے اور خبر accusative marker حاصل کرتی ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "The two parts of an إِنَّ sentence",
-        "ur": "إِنَّ جملے کے دو حصے"
-      },
-      "body": {
-        "en": "Every إِنَّ sentence has two essential parts: (1) المبتدأ after إِنَّ (still nominative) and (2) الخبر — the predicate, in accusative. إِنَّ + [noun in nom.] + [predicate in acc.]. Example: إِنَّ الْكِتَابَ [مبتدأ] كَبِيرٌ [خبر in acc.].",
-        "ur": "ہر إِنَّ جملے کے دو ضروری حصے ہیں: (1) إِنَّ کے بعد مبتدأ (ابھی بھی مرفوع) اور (2) خبر — نصب میں۔ إِنَّ + [مرفوع میں اسم] + [نصب میں خبر]۔ مثال: إِنَّ الْكِتَابَ [مبتدأ] كَبِيرٌ [خبر in acc.]۔"
+        "en": "After إِنَّ: the noun takes a fatḥa, the news keeps its ḍamma. Never the other way round.",
+        "ur": "إِنَّ کے بعد: اسم پر زبر، خبر پر پیش۔ کبھی الٹا نہیں۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "GRAMMAR_PARSE",
+      "type": "TRUE_FALSE",
       "id": "ch24-l02-ex01",
-      "words": [
-        {
-          "ar": "إِنَّ",
-          "ar_plain": "إن",
-          "translit": "inna",
-          "en": "indeed",
-          "ur": "بے شک"
-        },
-        {
-          "ar": "الْكِتَابَ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaaba",
-          "en": "the book (subject)",
-          "ur": "کتاب (موضوع)"
-        },
-        {
-          "ar": "كَبِيرٌ",
-          "ar_plain": "كبير",
-          "translit": "kabiirun",
-          "en": "big (predicate)",
-          "ur": "بڑا (پیش گوئی)"
+      "statement": {
+        "en": "الْبَيْتَ ends in a fatḥa because it is the noun right after إِنَّ.",
+        "ur": "الْبَيْتَ زبر پر ختم ہوتا ہے کیونکہ یہ إِنَّ کے فوراً بعد والا اسم ہے۔",
+        "ar_example": {
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
         }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "SUBJECT",
-        "PREDICATE"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "SUBJECT",
-        "PREDICATE"
-      ],
-      "xp_value": 1,
-      "sentence_ar": "إِنَّ الْكِتَابَ كَبِيرٌ"
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch24-l02-ex02",
-      "prompt": {
-        "ar": "إِنَّ الْكِتَابَ كَبِيرٌ",
-        "ar_plain": "إن الكتاب كبير",
-        "translit": "inna al-kitaaba kabiirun",
-        "en": "Indeed, the book is big.",
-        "ur": "بے شک کتاب بڑی ہے۔"
       },
-      "options": [
-        {
-          "en": "Indeed, the book is big.",
-          "ur": "بے شک کتاب بڑی ہے۔"
-        },
-        {
-          "en": "Indeed, a big book.",
-          "ur": "بے شک ایک بڑی کتاب۔"
-        },
-        {
-          "en": "The big book.",
-          "ur": "بڑی کتاب۔"
-        },
-        {
-          "en": "Is the book big?",
-          "ur": "کیا کتاب بڑی ہے؟"
-        }
-      ],
-      "correct_index": 0,
+      "correct_answer": true,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنَّ opens the sentence. الْكِتَابَ is the subject. كَبِيرٌ is the predicate in accusative. Together: Indeed, the book is big.",
-        "ur": "إِنَّ جملہ کھولتا ہے۔ الْكِتَابَ مبتدأ ہے۔ كَبِيرٌ خبر ہے نصب میں۔ مل کر: بے شک کتاب بڑی ہے۔"
+        "en": "The noun of إِنَّ is منصوب: a fatḥa.",
+        "ur": "إِنَّ کا اسم منصوب ہوتا ہے: زبر۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch24-l02-ex03",
+      "id": "ch24-l02-ex02",
       "statement": {
-        "en": "In إِنَّ الْكِتَابَ كَبِيرٌ, the word كَبِيرٌ is in the accusative case.",
-        "ur": "إِنَّ الْكِتَابَ كَبِيرٌ میں، word كَبِيرٌ نصب case میں ہے۔"
+        "en": "After إِنَّ, the news word كَبِيرٌ must change to كَبِيرًا.",
+        "ur": "إِنَّ کے بعد خبر كَبِيرٌ کو كَبِيرًا بننا چاہیے۔",
+        "ar_example": {
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
+        }
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The news of إِنَّ stays مرفوع: كَبِيرٌ. Only the noun right after إِنَّ takes the fatḥa.",
+        "ur": "إِنَّ کی خبر مرفوع رہتی ہے: كَبِيرٌ۔ صرف إِنَّ کے فوراً بعد والا اسم زبر لیتا ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch24-l02-ex04",
+      "id": "ch24-l02-ex03",
       "mode": "TAP",
-      "sentence_ar": "إِنَّ الْكِتَابَ ___",
+      "sentence_ar": "إِنَّ ___ جَدِيدٌ",
       "hint": {
         "en": "Indeed, the book is new.",
         "ur": "بے شک کتاب نئی ہے۔"
       },
       "options": [
         {
-          "ar": "جَدِيدٌ",
-          "ar_plain": "جديد",
-          "translit": "jadiidun",
-          "en": "new (predicate)",
-          "ur": "نئی (خبر)"
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitābu",
+          "en": "the book (with a ḍamma)",
+          "ur": "کتاب (پیش کے ساتھ)"
         },
         {
-          "ar": "جَدِيدٌ",
-          "ar_plain": "جديد",
-          "translit": "jadiidun",
-          "en": "new (predicate)",
-          "ur": "نئی (خبر)"
+          "ar": "الْكِتَابَ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitāba",
+          "en": "the book (with a fatḥa)",
+          "ur": "کتاب (زبر کے ساتھ)"
+        },
+        {
+          "ar": "الْكِتَابِ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitābi",
+          "en": "the book (with a kasra)",
+          "ur": "کتاب (زیر کے ساتھ)"
         },
         {
           "ar": "كِتَابٌ",
           "ar_plain": "كتاب",
-          "translit": "kitaabun",
+          "translit": "kitābun",
           "en": "a book",
           "ur": "ایک کتاب"
-        },
-        {
-          "ar": "جَدِيدَةٌ",
-          "ar_plain": "جديدة",
-          "translit": "jadiidatun",
-          "en": "new (fem.)",
-          "ur": "نئی (مؤنث)"
         }
       ],
       "correct_answer": {
-        "ar": "جَدِيدٌ",
-        "ar_plain": "جديد",
-        "translit": "jadiidun",
-        "en": "new (predicate)",
-        "ur": "نئی (خبر)"
+        "ar": "الْكِتَابَ",
+        "ar_plain": "الكتاب",
+        "translit": "al-kitāba",
+        "en": "the book (with a fatḥa)",
+        "ur": "کتاب (زبر کے ساتھ)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The noun right after إِنَّ takes a fatḥa: الْكِتَابَ.",
+        "ur": "إِنَّ کے فوراً بعد والا اسم زبر لیتا ہے: الْكِتَابَ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch24-l02-ex04",
+      "mode": "TAP",
+      "sentence_ar": "إِنَّ الْمَسْجِدَ ___",
+      "hint": {
+        "en": "Indeed, the mosque is near.",
+        "ur": "بے شک مسجد قریب ہے۔"
+      },
+      "options": [
+        {
+          "ar": "قَرِيبًا",
+          "ar_plain": "قريبا",
+          "translit": "qarīban",
+          "en": "near (with a fatḥa)",
+          "ur": "قریب (زبر کے ساتھ)"
+        },
+        {
+          "ar": "قَرِيبٍ",
+          "ar_plain": "قريب",
+          "translit": "qarībin",
+          "en": "near (with a kasra)",
+          "ur": "قریب (زیر کے ساتھ)"
+        },
+        {
+          "ar": "الْقَرِيبَ",
+          "ar_plain": "القريب",
+          "translit": "al-qarība",
+          "en": "the near one",
+          "ur": "قریب والا"
+        },
+        {
+          "ar": "قَرِيبٌ",
+          "ar_plain": "قريب",
+          "translit": "qarībun",
+          "en": "near (with a ḍamma)",
+          "ur": "قریب (پیش کے ساتھ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "قَرِيبٌ",
+        "ar_plain": "قريب",
+        "translit": "qarībun",
+        "en": "near (with a ḍamma)",
+        "ur": "قریب (پیش کے ساتھ)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The news of إِنَّ keeps its ḍamma: قَرِيبٌ.",
+        "ur": "إِنَّ کی خبر پیش پر رہتی ہے: قَرِيبٌ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch24-l02-ex05",
+      "ayah_fragment": {
+        "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+        "surah_ref": "Al-Baqarah 2:173"
+      },
+      "options": [
+        {
+          "en": "اللَّهَ — the noun of إِنَّ, with a fatḥa; غَفُورٌ — its news, with a ḍamma",
+          "ur": "اللَّهَ — إِنَّ کا اسم، زبر کے ساتھ؛ غَفُورٌ — اس کی خبر، پیش کے ساتھ"
+        },
+        {
+          "en": "اللَّهَ is the object of an action",
+          "ur": "اللَّهَ کسی فعل کا مفعول ہے"
+        },
+        {
+          "en": "غَفُورٌ is the noun of إِنَّ",
+          "ur": "غَفُورٌ إِنَّ کا اسم ہے"
+        },
+        {
+          "en": "رَحِيمٌ is a second noun of إِنَّ",
+          "ur": "رَحِيمٌ إِنَّ کا دوسرا اسم ہے"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "There is no action here. اللَّهَ follows إِنَّ, so it is its noun; غَفُورٌ tells us about Him.",
+        "ur": "یہاں کوئی فعل نہیں۔ اللَّهَ إِنَّ کے بعد ہے، اس لیے اس کا اسم ہے؛ غَفُورٌ اس کے بارے میں خبر دیتا ہے۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch24-l02-ex06",
+      "left_column": [
+        {
+          "ar": "إِنَّ",
+          "ar_plain": "إن",
+          "translit": "inna",
+          "en": "indeed (a word of emphasis)",
+          "ur": "بے شک (تاکید کا لفظ)"
+        },
+        {
+          "ar": "الطَّالِبَ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭāliba",
+          "en": "the student",
+          "ur": "طالب علم"
+        },
+        {
+          "ar": "مُجْتَهِدٌ",
+          "ar_plain": "مجتهد",
+          "translit": "mujtahidun",
+          "en": "hardworking",
+          "ur": "محنتی"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "the noun of إِنَّ — fatḥa",
+          "ur": "إِنَّ کا اسم — زبر"
+        },
+        {
+          "en": "the word of emphasis",
+          "ur": "تاکید کا لفظ"
+        },
+        {
+          "en": "the news of إِنَّ — ḍamma",
+          "ur": "إِنَّ کی خبر — پیش"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "In إِنَّ الطَّالِبَ مُجْتَهِدٌ: emphasis, noun with a fatḥa, news with a ḍamma.",
+        "ur": "إِنَّ الطَّالِبَ مُجْتَهِدٌ میں: تاکید، زبر والا اسم، پیش والی خبر۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch24-l02-ex07",
+      "prompt": {
+        "ar": "إِنَّ الْمَدْرَسَةَ كَبِيرَةٌ",
+        "ar_plain": "إن المدرسة كبيرة",
+        "translit": "inna l-madrasata kabīratun",
+        "en": "Indeed, the school is big.",
+        "ur": "بے شک اسکول بڑا ہے۔"
+      },
+      "options": [
+        {
+          "en": "Indeed, the school is big.",
+          "ur": "بے شک اسکول بڑا ہے۔"
+        },
+        {
+          "en": "the big school",
+          "ur": "بڑا اسکول"
+        },
+        {
+          "en": "Is the school big?",
+          "ur": "کیا اسکول بڑا ہے؟"
+        },
+        {
+          "en": "Indeed, the house is small.",
+          "ur": "بے شک گھر چھوٹا ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْمَدْرَسَةَ is the noun of إِنَّ; كَبِيرَةٌ, big, is its news.",
+        "ur": "الْمَدْرَسَةَ إِنَّ کا اسم ہے؛ كَبِيرَةٌ، بڑا، اس کی خبر ہے۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch24-l02-ex05",
+      "id": "ch24-l02-ex08",
       "target_translation": {
         "en": "Indeed, the house is big.",
         "ur": "بے شک گھر بڑا ہے۔"
       },
       "tiles": [
         {
+          "ar": "كَبِيرٌ",
+          "ar_plain": "كبير",
+          "translit": "kabīrun",
+          "en": "big",
+          "ur": "بڑا"
+        },
+        {
           "ar": "إِنَّ",
           "ar_plain": "إن",
           "translit": "inna",
-          "en": "indeed",
-          "ur": "بے شک"
+          "en": "indeed (a word of emphasis)",
+          "ur": "بے شک (تاکید کا لفظ)"
         },
         {
           "ar": "الْبَيْتَ",
@@ -260,174 +420,52 @@
           "translit": "al-bayta",
           "en": "the house",
           "ur": "گھر"
-        },
-        {
-          "ar": "كَبِيرٌ",
-          "ar_plain": "كبير",
-          "translit": "kabiirun",
-          "en": "big (predicate)",
-          "ur": "بڑا (خبر)"
-        },
-        {
-          "ar": "كَبِيرٌ",
-          "ar_plain": "كبير",
-          "translit": "kabiirun",
-          "en": "big",
-          "ur": "بڑا"
         }
       ],
       "correct_order": [
-        0,
         1,
-        2
+        2,
+        0
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch24-l02-ex06",
-      "left_column": [
-        {
-          "ar": "إِنَّ اللَّهَ لَا يَسْتَحْيِي",
-          "ar_plain": "إن الله لا يستحيي",
-          "translit": "inna Allaha laa yastahyi",
-          "en": "Indeed, Allah does not shy away",
-          "ur": "بے شک اللہ شرماتا نہیں"
-        },
-        {
-          "ar": "إِنَّ الْكِتَابَ كَبِيرٌ",
-          "ar_plain": "إن الكتاب كبير",
-          "translit": "inna al-kitaaba kabiirun",
-          "en": "Indeed, the book is big",
-          "ur": "بے شک کتاب بڑی ہے"
-        },
-        {
-          "ar": "إِنَّ الْبَيْتَ جَمِيلٌ",
-          "ar_plain": "إن البيت جميل",
-          "translit": "inna al-bayta jamiilun",
-          "en": "Indeed, the house is beautiful",
-          "ur": "بے شک گھر خوبصورت ہے"
-        },
-        {
-          "ar": "إِنَّ الْمَسْجِدَ صَغِيرٌ",
-          "ar_plain": "إن المسجد صغير",
-          "translit": "inna al-masjida saghiirun",
-          "en": "Indeed, the mosque is small",
-          "ur": "بے شک مسجد چھوٹی ہے"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "Indeed, Allah does not shy away",
-          "ur": "بے شک اللہ شرماتا نہیں"
-        },
-        {
-          "en": "Indeed, the book is big",
-          "ur": "بے شک کتاب بڑی ہے"
-        },
-        {
-          "en": "Indeed, the house is beautiful",
-          "ur": "بے شک گھر خوبصورت ہے"
-        },
-        {
-          "en": "Indeed, the mosque is small",
-          "ur": "بے شک مسجد چھوٹی ہے"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch24-l02-ex07",
-      "statement": {
-        "en": "In إِنَّ + noun + adjective, the adjective functions as the predicate (خبر) and is in the accusative case.",
-        "ur": "إِنَّ + اسم + صفت میں، صفت خبر (خبر) کے طور پر کام کرتی ہے اور نصب case میں ہوتی ہے۔"
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch24-l02-ex08",
-      "prompt": {
-        "ar": "إِنَّ الْبَيْتَ جَمِيلٌ",
-        "ar_plain": "إن البيت جميل",
-        "translit": "inna al-bayta jamiilun",
-        "en": "Indeed, the house is beautiful.",
-        "ur": "بے شک گھر خوبصورت ہے۔"
-      },
-      "options": [
-        {
-          "en": "Indeed, the house is beautiful.",
-          "ur": "بے شک گھر خوبصورت ہے۔"
-        },
-        {
-          "en": "Indeed, a beautiful house.",
-          "ur": "بے شک ایک خوبصورت گھر۔"
-        },
-        {
-          "en": "The beautiful house.",
-          "ur": "خوبصورت گھر۔"
-        },
-        {
-          "en": "The house and the beautiful.",
-          "ur": "گھر اور خوبصورت۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنَّ opens the sentence. الْبَيْتَ is the subject. جَمِيلٌ is the predicate in accusative — it describes the house. Indeed, the house is beautiful.",
-        "ur": "إِنَّ جملہ کھولتا ہے۔ الْبَيْتَ مبتدأ ہے۔ جَمِيلٌ خبر ہے نصب میں — یہ گھر کو بیان کرتا ہے۔ بے شک گھر خوبصورت ہے۔"
+        "en": "إِنَّ, then its noun الْبَيْتَ, then its news كَبِيرٌ.",
+        "ur": "إِنَّ، پھر اس کا اسم الْبَيْتَ، پھر اس کی خبر كَبِيرٌ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "إِنَّ takes accusative on the predicate",
-      "ar": "إِنَّ تَنْصِبُ الْخَبَرَ",
-      "ur": "إِنَّ خبر کو نصب کرتا ہے"
+      "en": "The noun and news of إِنَّ",
+      "ar": "اسْمُ إِنَّ وَخَبَرُهَا",
+      "ur": "إِنَّ کا اسم اور خبر"
     },
     "ayah": {
-      "surah": 108,
-      "ayah": 1,
-      "label": "Al-Kawthar 108:1",
-      "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
-      "en": "Indeed, We have given you Al-Kawthar.",
-      "ur": "بے شک ہم نے تمہیں کوثر دیا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+      "surah": 2,
+      "ayah": 173,
+      "label": "Al-Baqarah 2:173",
+      "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+      "en": "Indeed, Allah is Forgiving and Merciful.",
+      "ur": "بے شک اللہ بخشنے والا، رحم کرنے والا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002173.mp3"
     },
     "highlighted_word_indices": [
       1,
       2
     ],
+    "highlighted_words": [
+      "اللَّهَ",
+      "غَفُورٌ"
+    ],
     "noor_explanation": {
-      "en": "In إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ, we have إِنَّ + نَا (subject) and أَعْطَيْنَاكَ (verbal predicate). The verbal predicate does not take a case ending the way a noun does, but the structure is the same: إِنَّ + [subject] + [predicate]. We will study أَعْطَى in detail in Lesson 5.",
-      "ur": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ میں، ہمارے پاس إِنَّ + نَا (subject) اور أَعْطَيْنَاكَ (فعلی خبر) ہے۔ فعلی خبر اس طرح case ending نہیں لیتی جیسے اسم لیتا ہے، لیکن ساخت وہی ہے: إِنَّ + [subject] + [predicate]۔ ہم أَعْطَى کا تفصیلی مطالعہ Lesson 5 میں کریں گے۔"
+      "en": "اللَّهَ, with a fatḥa, is the noun of إِنَّ; غَفُورٌ, with a ḍamma, is its news. You can now read why each ending is there.",
+      "ur": "اللَّهَ، زبر کے ساتھ، إِنَّ کا اسم ہے؛ غَفُورٌ، پیش کے ساتھ، اس کی خبر ہے۔ اب آپ پڑھ سکتے ہیں کہ ہر آخر وہاں کیوں ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "The إِنَّ rule is now yours: إِنَّ + nominative subject + accusative predicate. When you read إِنَّ in the Quran, you now know exactly what is happening grammatically. This is a huge step forward.",
-      "ur": "إِنَّ قاعدہ اب آپ کا ہے: إِنَّ + مرفوع subject + نصب predicate۔ جب آپ قرآن میں إِنَّ پڑھتے ہیں، اب آپ بالکل جانتے ہیں کہ گرامر کے لحاظ سے کیا ہو رہا ہے۔ یہ ایک بہت بڑا قدم ہے۔"
+      "en": "Noun with a fatḥa, news with a ḍamma. Next: إِنَّا, indeed we.",
+      "ur": "اسم پر زبر، خبر پر پیش۔ آگے: إِنَّا، بے شک ہم۔"
     }
   }
 }

@@ -701,6 +701,23 @@ Everything below this list is either done and verified, or one of these:
    tap/true-false/fill exercises. Not done: scholarly review of the grammar
    and Quran-context wording the proposals ask for, and an Android emulator
    pass.
+   **Chapter 24 (`Docs/proposals/chapter-24-content-proposal.md`) is built,
+   staging-verified and promoted to production 2026-09-24** on the owner's
+   instruction. The review confirmed the proposal's defects (Lesson 2 taught
+   and scored the reversed case rule; 43:3 was credited to 6:12; a Numbers
+   lesson; corrupted text) and the owner approved five amendments (section 8):
+   numbers stay in Chapter 48, رَحِيمٌ is only "a second description", every
+   card is listed for illustration (36 cards, 29 scenes), إِنَّنَا is taught as
+   recognition, and progress is not reset. "إِنَّ and إِنَّا: Emphasis in
+   Quranic Sentences": l01–l05 rewritten (anchors 2:173 closing words, 43:3
+   excerpt, 108:1, plus 3:193 for إِنَّنَا), `ch24-l06` now REVIEW,
+   `ch24-test` new at order 7 (12 questions, 10/12 passes). Verified: fixture
+   and legacy validation, Urdu and Quran audits, exact-excerpt check, 183
+   backend tests, staging promote and a 22-check API walk (test locked until
+   l01–l06 done, key stripped, 0/12 and 9/12 fail, 10/12 passes, replay 0 XP);
+   production `content:promote-chapter-twenty-four -- --apply` (content:check
+   clean beforehand, progress untouched) and catalogue audio. Not done:
+   scholarly review of the Arabic/Urdu wording and an Android emulator pass.
    **Chapters 20–23 (`Docs/proposals/chapter-20..23-content-proposal.md`) are
    built, staging-verified and promoted to production 2026-09-24** on the
    owner's instruction (review first, then build and promote without asking).

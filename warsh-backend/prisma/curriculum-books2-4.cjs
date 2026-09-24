@@ -457,33 +457,43 @@ const specs = [
     ],
   },
 
-  // ── Ch24 ── إِنَّ: Emphasis and Assertion ────────────────────────────────
+  // ── Ch24 ── إِنَّ and إِنَّا: Emphasis in Quranic Sentences ──────────────────
+  // Docs/proposals/chapter-24-content-proposal.md (2026-09-24): what إِنَّ adds;
+  // اسم إنّ منصوب / خبر إنّ مرفوع (the closing words of 2:173); إِنَّا = إِنَّ + نَا
+  // (43:3, with إِنَّنَا from 3:193 as recognition); transfer to new sentences;
+  // guided reading of 108:1; a mixed review and a 12-question test. Numbers
+  // moved out: Chapter 48 teaches them.
   {
     order: 24,
-    sourceFile: "reader_lecture_24_inna_emphasis.md",
-    title: "إِنَّ: Emphasis and Assertion",
-    titleAr: "إِنَّ لِلتَّوْكِيد",
-    description: "The particle إِنَّ and its sisters for asserting and emphasising meaning.",
+    // The former reader_lecture_24_inna_emphasis.md never existed in the
+    // repository; the approved proposal is the content specification.
+    sourceFile: "Docs/proposals/chapter-24-content-proposal.md",
+    title: "إِنَّ and إِنَّا: Emphasis in Quranic Sentences",
+    titleUr: "إِنَّ اور إِنَّا: قرآنی جملوں میں تاکید",
+    titleAr: "إِنَّ وَإِنَّا فِي الْجُمَلِ الْقُرْآنِيَّةِ",
+    description: "Read إِنَّ as emphasis, give its noun a fatḥa and keep its news with a ḍamma, and read إِنَّا, indeed We, in the Quran.",
+    descriptionUr: "إِنَّ کو تاکید کے طور پر پڑھیں، اس کے اسم پر زبر اور خبر پر پیش پہچانیں، اور قرآن میں إِنَّا، بے شک ہم، پڑھیں۔",
     hook: { ayahAr: "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ", ayahRef: "Al-Kawthar 108:1", highlightedWord: "إِنَّا" },
     examples: [
-      card("إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ", "Indeed Allah is Forgiving, Merciful", "inna allaaha ghafoorun raheem"),
-      card("إِنَّ الْبَيْتَ كَبِيرٌ", "Indeed the house is large", "innal-bayta kabeer"),
-      card("إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ", "Indeed We have given you abundance", "innaa a'taynaaka al-kawthar"),
-      card("إِنَّ هٰذَا الْقُرْآنَ يَهْدِي", "Indeed this Quran guides", "inna haadhal-qur'aana yahdee"),
+      card("الْبَيْتُ كَبِيرٌ", "The house is big.", "al-baytu kabīrun"),
+      card("إِنَّ الْبَيْتَ كَبِيرٌ", "Indeed, the house is big.", "inna l-bayta kabīrun"),
+      card("إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ", "Indeed, Allah is Forgiving and Merciful. (2:173, closing words)", "inna llāha ghafūrun raḥīmun"),
+      card("إِنَّا جَعَلْنَاهُ قُرْآنًا عَرَبِيًّا", "Indeed, We have made it an Arabic Quran. (43:3, excerpt)", "innā jaʿalnāhu qurʾānan ʿarabiyyan"),
     ],
     parseText: "إِنَّ اللَّهَ غَفُورٌ",
-    parseTokens: [token("إِنَّ", "حرف جر", "indeed"), token("اللَّهَ", "مفعول", "Allah"), token("غَفُورٌ", "خبر", "forgiving")],
-    conversation: ["هَلِ اللَّهُ رَحِيمٌ؟", "نَعَمْ، إِنَّ اللَّهَ رَحِيمٌ"],
-    conversationDistractor: "ذَهَبَتْ إِلَى مَدْرَسَتِهَا",
-    distractor: "She went to her school",
-    blankDistractor: "لَعَلَّ",
-    noorTip: "إِنَّا أَعْطَيْنَاكَ — the Divine assertion of gift. إِنَّ removes all doubt.",
-    noorTipUr: "إِنَّ یقین دلاتا ہے — شک کی گنجائش نہیں رہتی۔",
+    parseTokens: [token("إِنَّ", "حرف توكيد ونصب", "indeed"), token("اللَّهَ", "اسم إنّ منصوب", "Allah"), token("غَفُورٌ", "خبر إنّ مرفوع", "Forgiving")],
+    conversation: ["هَلِ الْمَسْجِدُ بَعِيدٌ؟", "لَا، إِنَّ الْمَسْجِدَ قَرِيبٌ"],
+    conversationDistractor: "نَعَمْ، الْكِتَابُ جَدِيدٌ",
+    distractor: "Is the mosque far?",
+    blankDistractor: "هَلْ",
+    noorTip: "إِنَّ adds emphasis to a statement. Its noun takes a fatḥa; its news keeps its ḍamma.",
+    noorTipUr: "إِنَّ جملے پر زور دیتا ہے۔ اس کا اسم زبر لیتا ہے؛ اس کی خبر پیش پر رہتی ہے۔",
     focuses: [
-      { title: "إِنَّ Makes It Certain", titleAr: "إِنَّ", grammarTerm: "حرف توكيد", reveal: "You felt the certainty إِنَّ adds before naming the grammar.", hookQuestion: "What changes when you put إِنَّ at the start?" },
-      { title: "إِنَّ + Proper Noun", titleAr: "إِنَّ اللَّهَ", grammarTerm: "اسم إن", reveal: "You saw that the noun after إِنَّ takes a fatḥa instead of ḍamma.", hookQuestion: "Why does اللَّهَ carry fatḥa after إِنَّ?" },
-      { title: "إِنَّا — Indeed We", titleAr: "إِنَّا", grammarTerm: "إن + نون الوقاية", reveal: "You recognised إِنَّا as إِنَّ with the attached we-pronoun.", hookQuestion: "Who is the 'We' in إِنَّا أَعْطَيْنَاكَ?" },
-      { title: "From Al-Kawthar", titleAr: "أَعْطَيْنَاكَ الْكَوْثَرَ", grammarTerm: "إن في القرآن", reveal: "You read the opening of Al-Kawthar as living grammar.", hookQuestion: "What does الْكَوْثَرَ refer to?" },
+      { title: "What Does إِنَّ Add?", titleAr: "إِنَّ لِلتَّوْكِيدِ", grammarTerm: "حرف توكيد", reveal: "إِنَّ adds emphasis to a statement; the claim itself does not change.", hookQuestion: "What changes when إِنَّ opens a statement?" },
+      { title: "The Noun and the News", titleAr: "اسْمُ إِنَّ وَخَبَرُهَا", grammarTerm: "اسم إنّ منصوب، خبر إنّ مرفوع", reveal: "إِنَّ اللَّهَ غَفُورٌ (2:173): the noun takes a fatḥa, the news keeps its ḍamma.", hookQuestion: "Why does اللَّهَ carry a fatḥa after إِنَّ?" },
+      { title: "إِنَّا — Indeed We", titleAr: "إِنَّا = إِنَّ + نَا", grammarTerm: "اسم إنّ ضمير متصل", reveal: "إِنَّا جَعَلْنَاهُ (43:3): ـنَا on إِنَّ, then ـنَا on the action.", hookQuestion: "What is ـنَا attached to in إِنَّا?" },
+      { title: "Apply إِنَّ", titleAr: "إِنَّ فِي جُمَلٍ جَدِيدَةٍ", grammarTerm: "تطبيق", reveal: "You used the rule in sentences you had not seen.", hookQuestion: "Which word takes the fatḥa in إِنَّ الْمَدْرَسَةَ بَعِيدَةٌ?" },
+      { title: "Reading Al-Kawthar 108:1", titleAr: "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ", grammarTerm: "قراءة قرآنية", reveal: "إِنَّا … أَعْطَيْنَاكَ: the same ـنَا on two hosts; We give, you receive.", hookQuestion: "Who gives and who receives in 108:1?" },
     ],
   },
 

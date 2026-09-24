@@ -2,107 +2,121 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 24, Lesson 1 — Introduction to إِنَّ (the emphatic particle) and its role in Quranic Arabic.",
+    "_note": "Chapter 24, Lesson 1 (ch24-l01) — what إِنَّ adds: the same statement said with emphasis (الْبَيْتُ كَبِيرٌ → إِنَّ الْبَيْتَ كَبِيرٌ). The changed noun ending is only noticed here; Lesson 2 names it. Quran: the closing statement of Al-Baqarah 2:173, إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ, presented as the end of a longer ayah. The old 6:12 attribution of إِنَّا جَعَلْنَاهُ قُرْآنًا عَرَبِيًّا (it is 43:3) and the 'removes all doubt' claim are gone. Rebuilt 2026-09-24 from Docs/proposals/chapter-24-content-proposal.md with the owner-approved amendments recorded in its section 8 (numbers stay in Chapter 48, رَحِيمٌ is described as a second nominative description without naming it adjective or second خبر, إِنَّنَا is taught as recognition, every card is listed for illustration, and learners keep their progress with the automatic Updated notice). The map and old fixtures named reader_lecture_24_inna_emphasis.md, which never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "إِنَّ کیا اضافہ کرتا ہے؟",
     "chapter_order": 24,
     "lesson_order": 1,
-    "chapter_title": "Conversational Foundations & إِنَّ",
-    "title": "The Particle إِنَّ — Indeed, Truly",
-    "titleAr": "حَرْفُ الْتَّوْكِيدِ إِنَّ",
-    "source": "reader_book3_lesson1_inna.pdf",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 108,
-      "ayah": 1,
-      "label": "Al-Kawthar 108:1",
-      "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
-      "en": "Indeed, We have given you Al-Kawthar.",
-      "ur": "بے شک ہم نے تمہیں کوثر دیا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+      "surah": 2,
+      "ayah": 173,
+      "label": "Al-Baqarah 2:173",
+      "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+      "en": "Indeed, Allah is Forgiving and Merciful.",
+      "ur": "بے شک اللہ بخشنے والا، رحم کرنے والا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002173.mp3"
     },
     "noor_intro": {
-      "en": "إِنَّ is one of the most frequent words in the entire Quran. It means 'indeed' or 'truly' — and it is a key to unlocking the grammar of hundreds of Quranic verses. Let us meet it properly today.",
-      "ur": "إِنَّ پورے قرآن میں سب سے زیادہ آنے والے الفاظ میں سے ایک ہے۔ اس کا مطلب 'بے شک' یا 'واقعی' ہے — اور یہ سینکڑوں قرآنی آیات کی گرامر کو کھولنے کی کلید ہے۔ آئیے آج اس سے صحیح طور پر ملیں۔"
+      "en": "Al-Baqarah 2:173 is a long ayah. It ends with a short statement that opens with إِنَّ. Listen for it at the end.",
+      "ur": "سورۃ البقرہ کی آیت 173 لمبی ہے۔ اس کے آخر میں ایک مختصر جملہ ہے جو إِنَّ سے شروع ہوتا ہے۔ آخر میں اسے سنیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A statement, then the same statement with emphasis",
+        "ar": "الْبَيْتُ كَبِيرٌ / إِنَّ الْبَيْتَ كَبِيرٌ",
+        "ur": "ایک جملہ، پھر وہی جملہ زور کے ساتھ"
+      },
+      "explanation": {
+        "en": "Both say the house is big. إِنَّ adds emphasis: indeed, the house is big. Look closely: الْبَيْتُ became الْبَيْتَ. Lesson 2 explains why.",
+        "ur": "دونوں کہتے ہیں کہ گھر بڑا ہے۔ إِنَّ زور بڑھاتا ہے: بے شک گھر بڑا ہے۔ غور سے دیکھیں: الْبَيْتُ، الْبَيْتَ بن گیا۔ سبق 2 میں اس کی وجہ آئے گی۔"
+      },
+      "examples": [
+        {
+          "ar": "الْبَيْتُ كَبِيرٌ",
+          "ar_plain": "البيت كبير",
+          "translit": "al-baytu kabīrun",
+          "en": "The house is big.",
+          "ur": "گھر بڑا ہے۔"
+        },
+        {
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
+        }
+      ]
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "إِنَّ — the emphatic particle",
-        "ar": "إِنَّ — حَرْفُ التَّوْكِيدِ",
-        "ur": "إِنَّ — تاؤید کا حرف"
+        "en": "إِنَّ adds emphasis, not a new claim",
+        "ar": "إِنَّ",
+        "ur": "إِنَّ زور بڑھاتا ہے، نئی بات نہیں"
       },
       "explanation": {
-        "en": "إِنَّ is a particle that means 'indeed, truly, surely.' It opens a nominal sentence — a sentence that begins with a noun rather than a verb. It is used constantly throughout the Quran to emphasize an important statement.",
-        "ur": "إِنَّ ایک حرف ہے جس کا مطلب 'بے شک، واقعی، یقیناً' ہے۔ یہ ایک جملہ اسمیہ کھولتا ہے — ایک ایسی جملہ جو اسم سے شروع ہوتی ہے، فعل سے نہیں۔ یہ پورے قرآن میں اہم بیان کو زور دینے کے لیے مسلسل استعمال ہوتا ہے۔"
+        "en": "إِنَّ comes at the start of a statement and stresses it. In English we say indeed or truly, or simply say it firmly. What is said about the house does not change.",
+        "ur": "إِنَّ جملے کے شروع میں آتا ہے اور اس پر زور دیتا ہے۔ اردو میں ہم 'بے شک' یا 'یقیناً' کہتے ہیں۔ گھر کے بارے میں جو کہا گیا ہے وہ نہیں بدلتا۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "إِنَّ اللَّهَ لَا يَسْتَحْيِي",
-        "ar_plain": "إن الله لا يستحيي",
-        "translit": "inna Allaha la yastahyi",
-        "en": "Indeed, Allah does not shy away.",
-        "ur": "بے شک اللہ شرماتا نہیں۔"
+        "ar": "إِنَّ الْمَسْجِدَ قَرِيبٌ",
+        "ar_plain": "إن المسجد قريب",
+        "translit": "inna l-masjida qarībun",
+        "en": "Indeed, the mosque is near.",
+        "ur": "بے شک مسجد قریب ہے۔"
       },
       "explanation": {
-        "en": "From Surah Al-Baqarah 2:26. إِنَّ opens the sentence. لَا يَسْتَحْيِي is the predicate (comment) that follows. إِنَّ here affirms a great truth about Allah's nature.",
-        "ur": "سورۃ البقرہ 2:26 سے۔ إِنَّ جملہ کھولتا ہے۔ لَا يَسْتَحْيِي وہ خبر ہے جو follow کرتی ہے۔ یہاں إِنَّ اللہ کی nature کے بارے میں ایک عظیم حقیقت کی تصدیق کرتا ہے۔"
+        "en": "الْمَسْجِدُ قَرِيبٌ, the mosque is near, said with emphasis.",
+        "ur": "الْمَسْجِدُ قَرِيبٌ، مسجد قریب ہے، زور کے ساتھ کہا گیا۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "إِنَّا جَعَلْنَاهُ قُرْآنًا عَرَبِيًّا",
-        "ar_plain": "إنا جعلناه قرآنا عربيا",
-        "translit": "innaa ja'alnahu quranan 'arabiyyan",
-        "en": "Indeed, We have made it an Arabic Quran.",
-        "ur": "بے شک ہم نے اسے عربی قرآن بنایا ہے۔"
+        "ar": "إِنَّ الطَّالِبَ مُجْتَهِدٌ",
+        "ar_plain": "إن الطالب مجتهد",
+        "translit": "inna ṭ-ṭāliba mujtahidun",
+        "en": "Indeed, the student is hardworking.",
+        "ur": "بے شک طالب علم محنتی ہے۔"
       },
       "explanation": {
-        "en": "From Surah Al-An'am 6:12. Note إِنَّا (إِنَّ + نَا) — the نَا is attached to إِنَّ. We will study this form in Lesson 3.",
-        "ur": "سورۃ الانعام 6:12 سے۔ نوٹ کریں إِنَّا (إِنَّ + نَا) — نَا إِنَّ سے ملحق ہے۔ ہم اس شکل کا Lesson 3 میں مطالعہ کریں گے۔"
+        "en": "مُجْتَهِدٌ, hardworking, is from Chapter 4. إِنَّ stresses the whole statement.",
+        "ur": "مُجْتَهِدٌ، محنتی، باب 4 سے ہے۔ إِنَّ پورے جملے پر زور دیتا ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "إِنَّ الْكِتَابَ لَا يُمَكِّنُ",
-        "ar_plain": "إن الكتاب لا يمكن",
-        "translit": "inna al-kitaaba laa yumakkinu",
-        "en": "Indeed, the book does not admit.",
-        "ur": "بے شک کتاب قبول نہیں کرتی۔"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:173 (its closing words): Indeed, Allah is Forgiving and Merciful.",
+        "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+        "ur": "البقرہ 2:173 (آخری الفاظ): بے شک اللہ بخشنے والا، رحم کرنے والا ہے۔"
       },
       "explanation": {
-        "en": "A simple example to show the structure. إِنَّ + noun (subject) + predicate. The noun after إِنَّ is in the accusative (منصوب) — we study this in Lesson 2.",
-        "ur": "ساخت دکھانے کا ایک سادہ مثال۔ إِنَّ + اسم (فاعل) + خبر۔ إِنَّ کے بعد اسم نصب میں ہے (منصوب) — ہم اسے Lesson 2 میں study کرتے ہیں۔"
-      }
+        "en": "These are the last words of a longer ayah. إِنَّ opens the statement: Allah is Forgiving and Merciful — said with emphasis.",
+        "ur": "یہ ایک لمبی آیت کے آخری الفاظ ہیں۔ إِنَّ جملہ شروع کرتا ہے: اللہ بخشنے والا، رحم کرنے والا ہے — زور کے ساتھ۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002173.mp3"
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Where does إِنَّ appear in the Quran?",
-        "ur": "قرآن میں إِنَّ کہاں آتا ہے؟"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Where does إِنَّ go?",
+        "ar": "إِنَّ + الْبَيْتَ + كَبِيرٌ",
+        "ur": "إِنَّ کہاں آتا ہے؟"
       },
-      "body": {
-        "en": "إِنَّ appears over 300 times in the Quran. It is used to open Surah Al-Kawthar, Surah Al-Baqarah (the longest Surah), Surah Aal Imran, Surah Al-An'am, and many more. Every serious Quran student must master إِنَّ.",
-        "ur": "إِنَّ قرآن میں 300 سے زیادہ بار آتا ہے۔ یہ سورۃ الکوثر، سورۃ البقرہ (سب سے لمبی سورہ)، سورۃ آل عمران، سورۃ الانعام اور کئی دوسری سورتوں کو کھولنے کے لیے استعمال ہوتا ہے۔ ہر سنجیدہ قرآن طالب علم کو إِنَّ پر عبور حاصل ہونا چاہیے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "إِنَّ and its sisters",
-        "ur": "إِنَّ اور اس کی بہنیں"
-      },
-      "body": {
-        "en": "إِنَّ has 'sister' particles that behave similarly: أَنَّ (that), كَأَنَّ (as if), لَكِنَّ (but), لَيْتَ (if only), لَعَلَّ (perhaps). We focus on إِنَّ in this chapter — knowing it makes learning its sisters much easier.",
-        "ur": "إِنَّ کی 'بہن' کے نام سے اور حروف ہیں جو اسی طرح برتاؤ کرتے ہیں: أَنَّ (کہ)، كَأَنَّ (جیسے)، لَكِنَّ (مگر)، لَيْتَ (کاش)، لَعَلَّ (شاید)۔ ہم اس باب میں إِنَّ پر focus کرتے ہیں — اسے جاننا اس کی بہنوں کو سیکھنا بہت آسان بناتا ہے۔"
+      "explanation": {
+        "en": "First إِنَّ, then the noun the statement is about, then what is said about it.",
+        "ur": "پہلے إِنَّ، پھر وہ اسم جس کے بارے میں بات ہے، پھر اس کے بارے میں خبر۔"
       }
     }
   ],
@@ -111,189 +125,247 @@
       "type": "TAP_TRANSLATION",
       "id": "ch24-l01-ex01",
       "prompt": {
-        "ar": "إِنَّ اللَّهَ لَا يَسْتَحْيِي",
-        "ar_plain": "إن الله لا يستحيي",
-        "translit": "inna Allaha laa yastahyi",
-        "en": "Indeed, Allah does not shy away.",
-        "ur": "بے شک اللہ شرماتا نہیں۔"
+        "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+        "ar_plain": "إن البيت كبير",
+        "translit": "inna l-bayta kabīrun",
+        "en": "Indeed, the house is big.",
+        "ur": "بے شک گھر بڑا ہے۔"
       },
       "options": [
         {
-          "en": "Indeed, Allah does not shy away.",
-          "ur": "بے شک اللہ شرماتا نہیں۔"
+          "en": "The house is not big.",
+          "ur": "گھر بڑا نہیں ہے۔"
         },
         {
-          "en": "Is Allah shy?",
-          "ur": "کیا اللہ شرماتا ہے؟"
+          "en": "Is the house big?",
+          "ur": "کیا گھر بڑا ہے؟"
         },
         {
-          "en": "Indeed, the book is shy.",
-          "ur": "بے شک کتاب شرماتی ہے۔"
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
         },
         {
-          "en": "Allah truly shy.",
-          "ur": "اللہ واقعی شرماتا ہے۔"
+          "en": "the big house",
+          "ur": "بڑا گھر"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنَّ means 'indeed.' لَا يَسْتَحْيِي is 'does not shy away.' Together: Indeed, Allah does not shy away. This is Al-Baqarah 2:26.",
-        "ur": "إِنَّ کا مطلب 'بے شک' ہے۔ لَا يَسْتَحْيِي ہے 'شرماتا نہیں'۔ مل کر: بے شک اللہ شرماتا نہیں۔ یہ البقرہ 2:26 ہے۔"
+        "en": "إِنَّ adds indeed; the claim stays: the house is big.",
+        "ur": "إِنَّ 'بے شک' کا اضافہ کرتا ہے؛ بات وہی رہتی ہے: گھر بڑا ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch24-l01-ex02",
       "statement": {
-        "en": "إِنَّ is a verb in Arabic.",
-        "ur": "إِنَّ عربی میں ایک فعل ہے۔"
+        "en": "With إِنَّ, the sentence now says the mosque is no longer near.",
+        "ur": "إِنَّ کے ساتھ جملہ اب کہتا ہے کہ مسجد قریب نہیں رہی۔",
+        "ar_example": {
+          "ar": "إِنَّ الْمَسْجِدَ قَرِيبٌ",
+          "ar_plain": "إن المسجد قريب",
+          "translit": "inna l-masjida qarībun",
+          "en": "Indeed, the mosque is near.",
+          "ur": "بے شک مسجد قریب ہے۔"
+        }
       },
       "correct_answer": false,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِنَّ does not change the claim. It says the same thing with emphasis: indeed, the mosque is near.",
+        "ur": "إِنَّ بات نہیں بدلتا۔ وہی بات زور سے کہتا ہے: بے شک مسجد قریب ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch24-l01-ex03",
+      "ayah_fragment": {
+        "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+        "surah_ref": "Al-Baqarah 2:173"
+      },
+      "options": [
+        {
+          "en": "A question: is Allah Forgiving?",
+          "ur": "سوال: کیا اللہ بخشنے والا ہے؟"
+        },
+        {
+          "en": "A statement opened by إِنَّ: indeed, Allah is Forgiving and Merciful",
+          "ur": "إِنَّ سے شروع ہونے والا جملہ: بے شک اللہ بخشنے والا، رحم کرنے والا ہے"
+        },
+        {
+          "en": "إِنَّ here means if",
+          "ur": "یہاں إِنَّ کا مطلب 'اگر' ہے"
+        },
+        {
+          "en": "It says Allah is not Forgiving",
+          "ur": "یہ کہتا ہے کہ اللہ بخشنے والا نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It is a statement, and إِنَّ gives it emphasis.",
+        "ur": "یہ ایک بیان ہے، اور إِنَّ اسے زور دیتا ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch24-l01-ex03",
+      "id": "ch24-l01-ex04",
       "mode": "TAP",
-      "sentence_ar": "___ اللَّهَ لَا يَسْتَحْيِي",
+      "sentence_ar": "___ الطَّالِبَ مُجْتَهِدٌ",
       "hint": {
-        "en": "Indeed, Allah does not shy away.",
-        "ur": "بے شک اللہ شرماتا نہیں۔"
+        "en": "Indeed, the student is hardworking.",
+        "ur": "بے شک طالب علم محنتی ہے۔"
       },
       "options": [
         {
           "ar": "إِنَّ",
           "ar_plain": "إن",
           "translit": "inna",
-          "en": "indeed",
-          "ur": "بے شک"
+          "en": "indeed (a word of emphasis)",
+          "ur": "بے شک (تاکید کا لفظ)"
         },
         {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
+          "ar": "هَلْ",
+          "ar_plain": "هل",
+          "translit": "hal",
+          "en": "is it? (a question word)",
+          "ur": "کیا؟ (سوالیہ لفظ)"
         },
         {
-          "ar": "عَلَى",
-          "ar_plain": "على",
-          "translit": "alaa",
-          "en": "on",
-          "ur": "پر"
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "lā",
+          "en": "no",
+          "ur": "نہیں"
         },
         {
-          "ar": "بِ",
-          "ar_plain": "ب",
-          "translit": "bi",
-          "en": "with",
-          "ur": "ساتھ"
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "mā",
+          "en": "what?",
+          "ur": "کیا؟"
         }
       ],
       "correct_answer": {
         "ar": "إِنَّ",
         "ar_plain": "إن",
         "translit": "inna",
-        "en": "indeed",
-        "ur": "بے شک"
+        "en": "indeed (a word of emphasis)",
+        "ur": "بے شک (تاکید کا لفظ)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Indeed is إِنَّ, at the start of the statement.",
+        "ur": "'بے شک' کے لیے إِنَّ، جملے کے شروع میں۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch24-l01-ex04",
+      "id": "ch24-l01-ex05",
       "prompt": {
-        "ar": "إِنَّا جَعَلْنَاهُ قُرْآنًا عَرَبِيًّا",
-        "ar_plain": "إنا جعلناه قرآنا عربيا",
-        "translit": "innaa ja'alnaahu quranan 'arabiyyan",
-        "en": "Indeed, We have made it an Arabic Quran.",
-        "ur": "بے شک ہم نے اسے عربی قرآن بنایا ہے۔"
+        "ar": "إِنَّ الْكِتَابَ جَدِيدٌ",
+        "ar_plain": "إن الكتاب جديد",
+        "translit": "inna l-kitāba jadīdun",
+        "en": "Indeed, the book is new.",
+        "ur": "بے شک کتاب نئی ہے۔"
       },
       "options": [
         {
-          "en": "Indeed, We have made it an Arabic Quran.",
-          "ur": "بے شک ہم نے اسے عربی قرآن بنایا ہے۔"
+          "en": "Indeed, the book is new.",
+          "ur": "بے شک کتاب نئی ہے۔"
         },
         {
-          "en": "We made an Arabic book.",
-          "ur": "ہم نے ایک عربی کتاب بنائی۔"
+          "en": "indeed, the new book",
+          "ur": "بے شک نئی کتاب"
         },
         {
-          "en": "Indeed, the Quran is Arabic.",
-          "ur": "بے شک قرآن عربی ہے۔"
+          "en": "The book is old.",
+          "ur": "کتاب پرانی ہے۔"
         },
         {
-          "en": "The Arabic Quran was made.",
-          "ur": "عربی قرآن بنایا گیا۔"
+          "en": "Where is the new book?",
+          "ur": "نئی کتاب کہاں ہے؟"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِنَّا = إِنَّ + نَا (We truly). جَعَلْنَاهُ means 'We made it.' قُرْآنًا عَرَبِيًّا is 'an Arabic Quran.' This is Al-An'am 6:12.",
-        "ur": "إِنَّا = إِنَّ + نَا (ہم واقعی)۔ جَعَلْنَاهُ کا مطلب 'ہم نے اسے بنایا'۔ قُرْآنًا عَرَبِيًّا ہے 'ایک عربی قرآن'۔ یہ الانعام 6:12 ہے۔"
+        "en": "إِنَّ, indeed; الْكِتَابَ, the book; جَدِيدٌ, new.",
+        "ur": "إِنَّ، بے شک؛ الْكِتَابَ، کتاب؛ جَدِيدٌ، نئی۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch24-l01-ex05",
+      "id": "ch24-l01-ex06",
       "statement": {
-        "en": "إِنَّ opens a nominal sentence (جُمْلَةٌ اسْمِيَّة).",
-        "ur": "إِنَّ ایک جملہ اسمیہ (جُمْلَةٌ اسْمِيَّة) کھولتا ہے۔"
+        "en": "الْبَيْتُ كَبِيرٌ and this sentence say the same thing; this one says it with emphasis.",
+        "ur": "الْبَيْتُ كَبِيرٌ اور یہ جملہ ایک ہی بات کہتے ہیں؛ یہ جملہ زور کے ساتھ کہتا ہے۔",
+        "ar_example": {
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
+        }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Same claim, more emphasis: that is what إِنَّ adds.",
+        "ur": "بات وہی، زور زیادہ: یہی إِنَّ کا کام ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch24-l01-ex06",
+      "id": "ch24-l01-ex07",
       "left_column": [
         {
-          "ar": "إِنَّ اللَّهَ لَا يَسْتَحْيِي",
-          "ar_plain": "إن الله لا يستحيي",
-          "translit": "inna Allaha laa yastahyi",
-          "en": "Indeed, Allah does not shy away",
-          "ur": "بے شک اللہ شرماتا نہیں"
+          "ar": "الْبَيْتُ كَبِيرٌ",
+          "ar_plain": "البيت كبير",
+          "translit": "al-baytu kabīrun",
+          "en": "The house is big.",
+          "ur": "گھر بڑا ہے۔"
         },
         {
-          "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
-          "ar_plain": "إنا أعطيناك الكوثر",
-          "translit": "innaa a'thaynaaka al-kawthara",
-          "en": "Indeed, We gave you Al-Kawthar",
-          "ur": "بے شک ہم نے تمہیں کوثر دیا"
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
         },
         {
-          "ar": "إِنَّ الْكِتَابَ لَا يُمَكِّنُ",
-          "ar_plain": "إن الكتاب لا يمكن",
-          "translit": "inna al-kitaaba laa yumakkinu",
-          "en": "Indeed, the book does not admit",
-          "ur": "بے شک کتاب قبول نہیں کرتی"
+          "ar": "الْمَسْجِدُ قَرِيبٌ",
+          "ar_plain": "المسجد قريب",
+          "translit": "al-masjidu qarībun",
+          "en": "The mosque is near.",
+          "ur": "مسجد قریب ہے۔"
         },
         {
-          "ar": "إِنَّ رَبَّكُمْ لَهُوَ الْعَزِيزُ",
-          "ar_plain": "إن ربكم لهو العزيز",
-          "translit": "inna rabbakum lahuwa al-'azizu",
-          "en": "Indeed, your Lord is the Mighty",
-          "ur": "بے شک تمہارا رب عزیز ہے"
+          "ar": "إِنَّ الْمَسْجِدَ قَرِيبٌ",
+          "ar_plain": "إن المسجد قريب",
+          "translit": "inna l-masjida qarībun",
+          "en": "Indeed, the mosque is near.",
+          "ur": "بے شک مسجد قریب ہے۔"
         }
       ],
       "right_column": [
         {
-          "en": "Indeed, Allah does not shy away",
-          "ur": "بے شک اللہ شرماتا نہیں"
+          "en": "The house is big.",
+          "ur": "گھر بڑا ہے۔"
         },
         {
-          "en": "Indeed, We gave you Al-Kawthar",
-          "ur": "بے شک ہم نے تمہیں کوثر دیا"
+          "en": "The mosque is near.",
+          "ur": "مسجد قریب ہے۔"
         },
         {
-          "en": "Indeed, the book does not admit",
-          "ur": "بے شک کتاب قبول نہیں کرتی"
+          "en": "Indeed, the mosque is near.",
+          "ur": "بے شک مسجد قریب ہے۔"
         },
         {
-          "en": "Indeed, your Lord is the Mighty",
-          "ur": "بے شک تمہارا رب عزیز ہے"
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
         }
       ],
       "correct_pairs": [
@@ -303,92 +375,102 @@
         ],
         [
           1,
-          1
+          3
         ],
         [
           2,
-          2
+          1
         ],
         [
           3,
-          3
+          2
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The sentences with إِنَّ carry indeed.",
+        "ur": "إِنَّ والے جملوں میں 'بے شک' ہے۔"
+      }
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch24-l01-ex07",
-      "target_translation": {
-        "en": "Indeed, your Lord is the Mighty.",
-        "ur": "بے شک تمہارا رب عزیز ہے۔"
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch24-l01-ex08",
+      "prompt_line": {
+        "ar": "هَلِ الْمَسْجِدُ بَعِيدٌ؟",
+        "ar_plain": "هل المسجد بعيد",
+        "translit": "hali l-masjidu baʿīdun?",
+        "en": "Is the mosque far?",
+        "ur": "کیا مسجد دور ہے؟"
       },
-      "tiles": [
+      "response_mode": "PICK",
+      "options": [
         {
-          "ar": "إِنَّ",
-          "ar_plain": "إن",
-          "translit": "inna",
-          "en": "indeed",
-          "ur": "بے شک"
+          "ar": "نَعَمْ، الْكِتَابُ جَدِيدٌ",
+          "ar_plain": "نعم الكتاب جديد",
+          "translit": "naʿam, al-kitābu jadīdun",
+          "en": "Yes, the book is new.",
+          "ur": "جی ہاں، کتاب نئی ہے۔"
         },
         {
-          "ar": "رَبَّكُمْ",
-          "ar_plain": "ربكم",
-          "translit": "rabbakum",
-          "en": "your Lord",
-          "ur": "تمہارا رب"
+          "ar": "أَيْنَ الْمَسْجِدُ؟",
+          "ar_plain": "أين المسجد",
+          "translit": "ayna l-masjidu?",
+          "en": "Where is the mosque?",
+          "ur": "مسجد کہاں ہے؟"
         },
         {
-          "ar": "لَهُوَ",
-          "ar_plain": "لهو",
-          "translit": "lahuwa",
-          "en": "He is",
-          "ur": "وہ ہے"
+          "ar": "إِنَّ الْبَيْتَ كَبِيرٌ",
+          "ar_plain": "إن البيت كبير",
+          "translit": "inna l-bayta kabīrun",
+          "en": "Indeed, the house is big.",
+          "ur": "بے شک گھر بڑا ہے۔"
         },
         {
-          "ar": "الْعَزِيزُ",
-          "ar_plain": "العزيز",
-          "translit": "al-'azizu",
-          "en": "the Mighty",
-          "ur": "عزیز"
+          "ar": "لَا، إِنَّ الْمَسْجِدَ قَرِيبٌ",
+          "ar_plain": "لا إن المسجد قريب",
+          "translit": "lā, inna l-masjida qarībun",
+          "en": "No — indeed, the mosque is near.",
+          "ur": "نہیں — بے شک مسجد قریب ہے۔"
         }
       ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
+      "correct_option_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The question is about the mosque: answer about the mosque, firmly.",
+        "ur": "سوال مسجد کے بارے میں ہے: مسجد کے بارے میں زور سے جواب دیں۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "إِنَّ — the emphatic particle of truth",
-      "ar": "إِنَّ — حَرْفُ التَّوْكِيدِ",
-      "ur": "إِنَّ — حق کی تصدیق کا حرف"
+      "en": "إِنَّ — emphasis",
+      "ar": "إِنَّ لِلتَّوْكِيدِ",
+      "ur": "إِنَّ — تاکید"
     },
     "ayah": {
-      "surah": 108,
-      "ayah": 1,
-      "label": "Al-Kawthar 108:1",
-      "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
-      "en": "Indeed, We have given you Al-Kawthar.",
-      "ur": "بے شک ہم نے تمہیں کوثر دیا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+      "surah": 2,
+      "ayah": 173,
+      "label": "Al-Baqarah 2:173",
+      "ar": "إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ",
+      "en": "Indeed, Allah is Forgiving and Merciful.",
+      "ur": "بے شک اللہ بخشنے والا، رحم کرنے والا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002173.mp3"
     },
     "highlighted_word_indices": [
       0
     ],
+    "highlighted_words": [
+      "إِنَّ"
+    ],
     "noor_explanation": {
-      "en": "إِنَّ appears over 300 times in the Quran. It is never filler — every time you see it, Allah or the Quran is emphasizing a great truth. إِنَّ is your signal to pay attention.",
-      "ur": "إِنَّ قرآن میں 300 سے زیادہ بار آتا ہے۔ یہ کبھی فضول نہیں — ہر بار جب آپ اسے دیکھتے ہیں، اللہ یا قرآن ایک عظیم حقیقت پر زور دے رہا ہے۔ إِنَّ آپ کا signal ہے کہ توجہ دیں۔"
+      "en": "إِنَّ: indeed. The ayah's closing statement — Allah is Forgiving and Merciful — is said with emphasis. You now hear إِنَّ as a word that stresses what follows.",
+      "ur": "إِنَّ: بے شک۔ آیت کا آخری جملہ — اللہ بخشنے والا، رحم کرنے والا ہے — زور کے ساتھ کہا گیا ہے۔ اب آپ إِنَّ کو ایسا لفظ سمجھتے ہیں جو بعد والی بات پر زور دیتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "إِنَّ is not just a word — it is a key. When you see إِنَّ in the Quran, know that what follows is a truth Allah wants you to hold firmly. إِنَّ appears so often that mastering it today is one of the most important things you can do.",
-      "ur": "إِنَّ صرف ایک لفظ نہیں — یہ ایک کلید ہے۔ جب آپ قرآن میں إِنَّ دیکھیں، جان لیں کہ جو کچھ اس کے بعد آتا ہے وہ ایک حقیقت ہے جسے اللہ چاہتا ہے کہ آپ مضبوطی سے پکڑیں۔ إِنَّ اتنا często آتا ہے کہ آج اس پر عبور حاصل کرنا آپ کی سب سے اہم کاموں میں سے ایک ہے۔"
+      "en": "You know what إِنَّ adds. Next: why the noun after it ends in a fatḥa.",
+      "ur": "آپ جان گئے کہ إِنَّ کیا اضافہ کرتا ہے۔ آگے: اس کے بعد والے اسم پر زبر کیوں آتا ہے۔"
     }
   }
 }

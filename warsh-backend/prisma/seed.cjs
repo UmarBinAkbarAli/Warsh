@@ -186,7 +186,8 @@ const ch24L02Content     = require("./fixtures/chapter-24-lesson-02.json");
 const ch24L03Content     = require("./fixtures/chapter-24-lesson-03.json");
 const ch24L04Content     = require("./fixtures/chapter-24-lesson-04.json");
 const ch24L05Content     = require("./fixtures/chapter-24-lesson-05.json");
-const ch24L06Content     = require("./fixtures/chapter-24-lesson-06.json");
+const ch24L06Content     = require("./fixtures/chapter-24-lesson-06-review.json");      // ch24-l06, now REVIEW
+const ch24TestContent    = require("./fixtures/chapter-24-lesson-07-final-test.json"); // ch24-test, order 7
 const ch25L01Content     = require("./fixtures/chapter-25-lesson-01.json");
 const ch25L02Content     = require("./fixtures/chapter-25-lesson-02.json");
 const ch25L03Content     = require("./fixtures/chapter-25-lesson-03.json");
@@ -968,12 +969,13 @@ async function main() {
     { id: "ch23-l05", chapterId: ch23Id, order: 5, title: "Book 2 Mixed Review", titleAr: "مُرَاجَعَةُ الْكِتَابِ الثَّانِي", template: "REVIEW", xpReward: ch23L05Content._meta?.xp_reward ?? 20, content: ch23L05Content },
     { id: "ch23-test", chapterId: ch23Id, order: 6, title: "Chapter 23 Final Test", titleAr: "اخْتِبَارُ الْفَصْلِ الثَّالِثِ وَالْعِشْرِينَ", template: "REVIEW", xpReward: ch23TestContent._meta?.xp_reward ?? 20, content: ch23TestContent },
     // Chapter 24
-    { id: "ch24-l01", chapterId: ch24Id, order: 1, title: "The Particle إِنَّ — Indeed, Truly",       titleAr: "إِنَّ — حَرْفُ التَّوْكِيدِ",              template: "STANDARD",        xpReward: ch24L01Content._meta?.xp_reward       ?? 10, content: ch24L01Content },
-    { id: "ch24-l02", chapterId: ch24Id, order: 2, title: "إِنَّ Takes Accusative — نصب",          titleAr: "إِنَّ تَنْصِبُ الْخَبَرَ",               template: "STANDARD",        xpReward: ch24L02Content._meta?.xp_reward       ?? 10, content: ch24L02Content },
-    { id: "ch24-l03", chapterId: ch24Id, order: 3, title: "إِنَّا — We Truly",                     titleAr: "إِنَّا — نَحْنُ حَقًّا",                  template: "STANDARD",        xpReward: ch24L03Content._meta?.xp_reward       ?? 10, content: ch24L03Content },
-    { id: "ch24-l04", chapterId: ch24Id, order: 4, title: "Numbers 1-10 in Arabic",                titleAr: "الْأَعْدَادُ مِنْ ١ إِلَى ١٠",           template: "STANDARD",        xpReward: ch24L04Content._meta?.xp_reward       ?? 10, content: ch24L04Content },
-    { id: "ch24-l05", chapterId: ch24Id, order: 5, title: "Al-Kawthar: إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ", titleAr: "الْكَوْثَرُ — إِنَّا أَعْطَيْنَاكَ",  template: "STANDARD",        xpReward: ch24L05Content._meta?.xp_reward       ?? 10, content: ch24L05Content },
-    { id: "ch24-l06", chapterId: ch24Id, order: 6, title: "إِنَّ with Descriptive Vocabulary",     titleAr: "إِنَّ مَعَ صِفَاتٍ",                      template: "STANDARD",        xpReward: ch24L06Content._meta?.xp_reward       ?? 10, content: ch24L06Content },
+    { id: "ch24-l01", chapterId: ch24Id, order: 1, title: "What Does إِنَّ Add?", titleAr: "إِنَّ لِلتَّوْكِيدِ", template: "STANDARD", xpReward: ch24L01Content._meta?.xp_reward ?? 10, content: ch24L01Content },
+    { id: "ch24-l02", chapterId: ch24Id, order: 2, title: "The Noun and the News After إِنَّ", titleAr: "اسْمُ إِنَّ وَخَبَرُهَا", template: "STANDARD", xpReward: ch24L02Content._meta?.xp_reward ?? 10, content: ch24L02Content },
+    { id: "ch24-l03", chapterId: ch24Id, order: 3, title: "إِنَّا — Indeed We", titleAr: "إِنَّا = إِنَّ + نَا", template: "STANDARD", xpReward: ch24L03Content._meta?.xp_reward ?? 10, content: ch24L03Content },
+    { id: "ch24-l04", chapterId: ch24Id, order: 4, title: "Apply إِنَّ in New Sentences", titleAr: "إِنَّ فِي جُمَلٍ جَدِيدَةٍ", template: "STANDARD", xpReward: ch24L04Content._meta?.xp_reward ?? 10, content: ch24L04Content },
+    { id: "ch24-l05", chapterId: ch24Id, order: 5, title: "Guided Reading: Al-Kawthar 108:1", titleAr: "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ", template: "STANDARD", xpReward: ch24L05Content._meta?.xp_reward ?? 10, content: ch24L05Content },
+    { id: "ch24-l06", chapterId: ch24Id, order: 6, title: "Chapter 24 Mixed Review", titleAr: "مُرَاجَعَةُ الْفَصْلِ الرَّابِعِ وَالْعِشْرِينَ", template: "REVIEW", xpReward: ch24L06Content._meta?.xp_reward ?? 20, content: ch24L06Content },
+    { id: "ch24-test", chapterId: ch24Id, order: 7, title: "Chapter 24 Final Test", titleAr: "اخْتِبَارُ الْفَصْلِ الرَّابِعِ وَالْعِشْرِينَ", template: "REVIEW", xpReward: ch24TestContent._meta?.xp_reward ?? 20, content: ch24TestContent },
     // Chapter 25
     { id: "ch25-l01", chapterId: ch25Id, order: 1, title: "لَيْسَ — He Is Not",                    titleAr: "لَيْسَ — لَيْسَ هُوَ",                   template: "STANDARD",        xpReward: ch25L01Content._meta?.xp_reward       ?? 10, content: ch25L01Content },
     { id: "ch25-l02", chapterId: ch25Id, order: 2, title: "لَيْسَتْ — She Is Not",                 titleAr: "لَيْسَتْ — لَيْسَتْ هِيَ",               template: "STANDARD",        xpReward: ch25L02Content._meta?.xp_reward       ?? 10, content: ch25L02Content },
