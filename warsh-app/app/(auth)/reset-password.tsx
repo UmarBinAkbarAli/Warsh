@@ -175,6 +175,6 @@ const styles = StyleSheet.create({
   backText: {
     fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
   },
 });

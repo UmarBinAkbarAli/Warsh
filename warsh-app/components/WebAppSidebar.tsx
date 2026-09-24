@@ -148,7 +148,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.navy,
     fontFamily: Fonts.bold,
     fontSize: 15,
-    fontWeight: "700",
     letterSpacing: 3,
   },
   nav: {
@@ -174,7 +173,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.semiBold,
     fontSize: 14,
-    fontWeight: "600",
   },
   navLabelSelected: {
     color: WarshPalette.white,
@@ -212,7 +210,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.ink,
     fontFamily: Fonts.semiBold,
     fontSize: 13,
-    fontWeight: "600",
   },
   footerMeta: {
     color: WarshPalette.subtleBrown,

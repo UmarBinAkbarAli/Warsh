@@ -10,7 +10,11 @@ export const WarshPalette = {
   navy: "#071B44", // brand navy (A1 CTA surface)
   navyDeep: "#04122E", // navy pressed state
   gold: "#C49B4D", // --gold (A1 gold)
-  goldDeep: "#A88648", // --gold-deep (pressed states, gold text on light bg)
+  goldDeep: "#A88648", // --gold-deep (pressed states and borders; too light for text)
+  // Any gold-coloured TEXT on a light surface: 4.8:1 on creamBg, 4.9:1 on
+  // parchmentBg. gold and goldDeep stay for fills, icons, rings and progress,
+  // and for text on navy (UX evaluation 2026-09-24, finding H2).
+  goldText: "#85672C",
   parchment: "#D4B06A", // --gold-soft / A1 gold-light (muted-gold accent, text on navy)
   cream: "#EDDFAF", // --parchment-deep (borders, grouping surfaces)
   creamBg: "#F8F4ED", // --screen-bg (primary screen background; 2026-08 redesign)
@@ -37,6 +41,7 @@ export const WarshPalette = {
   sageTintBorderStrong: "#5A6953", // --sage-deep
   disabledIcon: "#9DAB94", // --sage-soft
   disabledText: "#9B9283", // warm grey, between ink-muted and sage-soft
+  disabledFill: "#EDE6D6", // disabled primary button (label: subtleBrown, 5.1:1)
   waveformGoldIdle: "#DCC98F", // desaturated --gold-soft
   waveformSageIdle: "#9DAB94", // --sage-soft
   recordingBg: "#944232", // deep terracotta (live-recording state)
@@ -109,6 +114,7 @@ export const Colors = {
     secondary: WarshPalette.deep,
     // Spec-11 §2.4: captions/helper text use muted ink, never gold.
     muted: WarshPalette.subtleBrown,
+    gold: WarshPalette.goldText,
     arabic: WarshPalette.ink,
     danger: WarshPalette.wrongText,
   },

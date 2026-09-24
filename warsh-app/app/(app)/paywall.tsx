@@ -784,7 +784,6 @@ const styles = StyleSheet.create({
   heroTitle: {
     fontFamily: Fonts.bold,
     fontSize: 28,
-    fontWeight: "700",
     color: WarshPalette.ink,
     lineHeight: 32,
     marginBottom: 5,
@@ -838,7 +837,7 @@ const styles = StyleSheet.create({
   featuresLink: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.caption,
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     paddingTop: 4,
     paddingBottom: 2,
   },
@@ -869,7 +868,6 @@ const styles = StyleSheet.create({
   planTitle: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.h3,
-    fontWeight: "700",
     color: WarshPalette.ink,
     lineHeight: LineHeights.h3,
   },
@@ -882,7 +880,6 @@ const styles = StyleSheet.create({
   monthlyPrice: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.bodyM,
-    fontWeight: "700",
     color: WarshPalette.ink,
   },
   valueBadge: {
@@ -942,7 +939,7 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline",
   },
   promoLink: {
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
     textDecorationLine: "underline",
@@ -963,7 +960,6 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.h3,
-    fontWeight: "700",
     color: WarshPalette.ink,
     marginBottom: Spacing.md,
     textAlign: "center",

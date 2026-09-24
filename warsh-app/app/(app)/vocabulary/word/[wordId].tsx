@@ -395,7 +395,7 @@ const styles = StyleSheet.create({
     borderBottomColor: WarshPalette.parchmentCardBorder,
   },
   backBtn: {
-    color: WarshPalette.gold, fontFamily: Fonts.regular,
+    color: WarshPalette.goldText, fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyL,
   },
 
@@ -435,7 +435,7 @@ const styles = StyleSheet.create({
   translation: {
     marginTop: Spacing.xs, color: WarshPalette.ink,
     fontFamily: Fonts.display, fontSize: FontSizes.h3,
-    fontWeight: "700", textAlign: "center",
+    textAlign: "center",
   },
   translationUr: {
     marginTop: Spacing.xs, color: WarshPalette.bodyBrown,
@@ -463,7 +463,7 @@ const styles = StyleSheet.create({
     borderColor: WarshPalette.gold + "88",
     backgroundColor: WarshPalette.cream,
   },
-  masteredBadgeText: { color: WarshPalette.gold },
+  masteredBadgeText: { color: WarshPalette.goldText },
 
   card: {
     marginBottom: Spacing.md,
@@ -474,9 +474,8 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.parchmentBg,
   },
   cardTitle: {
-    color: WarshPalette.gold, fontFamily: Fonts.display,
-    fontSize: FontSizes.label, fontWeight: "700",
-    textTransform: "uppercase", letterSpacing: 0.5,
+    color: WarshPalette.goldText, fontFamily: Fonts.display,
+    fontSize: FontSizes.label, textTransform: "uppercase", letterSpacing: 0.5,
     marginBottom: Spacing.md,
   },
 
@@ -489,12 +488,12 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.bodyM,
   },
   grammarValue: {
-    color: WarshPalette.ink, fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM, fontWeight: "600",
+    color: WarshPalette.ink, fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
   },
   grammarValueRow: { alignItems: "flex-end" },
   grammarArabic: { color: WarshPalette.ink },
-  rootText: { color: WarshPalette.gold },
+  rootText: { color: WarshPalette.goldText },
 
   ayahContainer: { marginBottom: Spacing.sm },
   ayahText: { textAlign: "right" },
@@ -504,14 +503,14 @@ const styles = StyleSheet.create({
   },
   ayahWordGold: {
     fontFamily: Fonts.arabic, fontSize: 20,
-    color: WarshPalette.gold, lineHeight: 34,
+    color: WarshPalette.goldText, lineHeight: 34,
   },
   ayahMeta: {
     flexDirection: "row", alignItems: "center",
     gap: Spacing.sm, marginBottom: Spacing.sm,
   },
   ayahRef: {
-    color: WarshPalette.gold, fontFamily: Fonts.regular,
+    color: WarshPalette.goldText, fontFamily: Fonts.regular,
     fontSize: FontSizes.caption,
   },
   ayahTranslation: {
@@ -524,7 +523,7 @@ const styles = StyleSheet.create({
     gap: 6, marginBottom: Spacing.sm,
   },
   frequencyText: {
-    color: WarshPalette.gold, fontFamily: Fonts.regular,
+    color: WarshPalette.goldText, fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM,
   },
   chapterText: {
@@ -561,8 +560,8 @@ const styles = StyleSheet.create({
   relatedArabic: { color: WarshPalette.ink },
   relatedRight: { flex: 1 },
   relatedMeaning: {
-    color: WarshPalette.ink, fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM, fontWeight: "600",
+    color: WarshPalette.ink, fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
   },
   relatedTranslit: {
     color: WarshPalette.subtleBrown, fontFamily: Fonts.regular,

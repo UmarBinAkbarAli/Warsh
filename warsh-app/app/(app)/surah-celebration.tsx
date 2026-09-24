@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
   surahAr: {
     fontFamily: Fonts.arabic,
     fontSize: FontSizes.arabicL + 8,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     textAlign: "center",
     writingDirection: "rtl",
     lineHeight: LineHeights.arabicL + 8,
@@ -155,7 +155,6 @@ const styles = StyleSheet.create({
   xpText: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
-    fontWeight: "600",
     color: WarshPalette.white,
   },
   quote: {
@@ -192,8 +191,7 @@ const styles = StyleSheet.create({
   shareText: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.bodyM,
-    fontWeight: "700",
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     textAlign: "center",
   },
 });

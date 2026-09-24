@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
   arabicWord: {
     fontFamily: Fonts.arabicBold,
     fontSize: 42,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     // The Arabic glyph sits slightly lower by default — align with baseline
     lineHeight: 52,
   },

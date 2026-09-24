@@ -193,14 +193,14 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0,
   },
   backBtn: {
-    color: WarshPalette.gold, fontFamily: Fonts.regular,
+    color: WarshPalette.goldText, fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyL, marginBottom: Spacing.sm,
   },
   headerTitle: { alignItems: "flex-end" },
   headerAr: { color: WarshPalette.ink },
   headerEn: {
     color: WarshPalette.bodyBrown, fontFamily: Fonts.display,
-    fontSize: FontSizes.h2, fontWeight: "700", lineHeight: LineHeights.h2,
+    fontSize: FontSizes.h2, lineHeight: LineHeights.h2,
   },
 
   searchInput: {
@@ -225,13 +225,13 @@ const styles = StyleSheet.create({
   arabicRow: { flexDirection: "row", alignItems: "center", gap: 4 },
   arabic: { color: WarshPalette.ink },
   root: {
-    flexShrink: 1, color: WarshPalette.gold,
+    flexShrink: 1, color: WarshPalette.goldText,
     fontFamily: Fonts.regular, fontSize: FontSizes.caption,
   },
   meaning: {
     marginTop: Spacing.xs, color: WarshPalette.ink,
     fontFamily: Fonts.display, fontSize: FontSizes.bodyL,
-    fontWeight: "700", lineHeight: LineHeights.bodyL,
+    lineHeight: LineHeights.bodyL,
   },
   translit: {
     color: WarshPalette.bodyBrown, fontFamily: Fonts.regular,
@@ -243,7 +243,7 @@ const styles = StyleSheet.create({
   },
   ayahText: { color: WarshPalette.ink, textAlign: "right" },
   ayahRef: {
-    marginTop: 2, color: WarshPalette.gold,
+    marginTop: 2, color: WarshPalette.goldText,
     fontFamily: Fonts.regular, fontSize: FontSizes.caption,
   },
 
@@ -254,7 +254,7 @@ const styles = StyleSheet.create({
   },
   emptyTitle: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.h3, fontWeight: "700",
+    fontSize: FontSizes.h3,
   },
   emptyCopy: {
     marginTop: Spacing.xs, color: WarshPalette.bodyBrown,

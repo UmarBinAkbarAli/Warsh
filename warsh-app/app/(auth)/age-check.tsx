@@ -475,7 +475,7 @@ const styles = StyleSheet.create({
   },
   bismillah: {
     textAlign: "center",
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     marginTop: Spacing.lg,
     marginBottom: Spacing.xl,
   },
@@ -578,8 +578,7 @@ const styles = StyleSheet.create({
   whyText: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.bodyM,
-    fontWeight: "700",
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
   },
   refusedBody: {
     alignItems: "center",
@@ -599,7 +598,7 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.md,
   },
   sealLetter: {
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
   },
   ctaStack: {
     gap: Spacing.md,

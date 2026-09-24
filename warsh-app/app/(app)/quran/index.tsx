@@ -430,7 +430,7 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.regular,
     fontSize: FontSizes.label,
     lineHeight: LineHeights.label,
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
   },
   empty: {
     fontFamily: Fonts.regular,

@@ -20,19 +20,12 @@ type BrandButtonProps = {
   style?: ViewStyle;
 };
 
-// Returns true for hex colors that need a light text overlay
-function isDarkColor(hex?: string): boolean {
-  if (!hex || !hex.startsWith("#") || hex.length < 7) return false;
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
-  return r * 0.299 + g * 0.587 + b * 0.114 < 128;
-}
-
 // Button system: primary uses the A1 hero-CTA treatment (navy surface,
-// gold border, gold-light label — user decision 2026-07-08, supersedes
-// spec-11's gold primary); sage-bordered secondary and transparent
-// terracotta destructive per spec-11 §5.1. 56pt tall.
+// gold-light label — user decision 2026-07-08, supersedes spec-11's gold
+// primary); sage-bordered secondary and transparent terracotta destructive per
+// spec-11 §5.1. 56pt tall. The primary is always navy: a backgroundColor in
+// `style` is ignored, so every screen shows the same main action (UX
+// evaluation 2026-09-24, finding H7).
 export function BrandButton({
   title,
   onPress,
@@ -45,18 +38,11 @@ export function BrandButton({
   const isDisabled = disabled || loading;
 
   if (variant === "primary") {
-    // Callers may override backgroundColor via style; honor it and pick a
-    // readable label color for dark overrides.
-    const flat = StyleSheet.flatten(style) as
-      | (ViewStyle & { backgroundColor?: string })
-      | undefined;
-    const bgFromStyle: string | undefined = flat?.backgroundColor;
-    const { backgroundColor: _stripped, ...outerStyle } = flat ?? {};
+    const flat = StyleSheet.flatten(style) as ViewStyle | undefined;
+    const { backgroundColor: _ignored, borderColor: _ignoredBorder, ...outerStyle } = flat ?? {};
 
-    const labelColor = bgFromStyle
-      ? isDarkColor(bgFromStyle)
-        ? WarshPalette.parchmentBg
-        : WarshPalette.ink
+    const labelColor = isDisabled
+      ? WarshPalette.subtleBrown
       : selected
         ? WarshPalette.ink
         : WarshPalette.parchment; // gold-light on navy
@@ -71,16 +57,15 @@ export function BrandButton({
           styles.primary,
           {
             backgroundColor:
-              bgFromStyle ??
-              (pressed && !isDisabled
+              pressed && !isDisabled
                 ? WarshPalette.navyDeep
                 : selected
                   ? WarshPalette.highlightBg
-                  : WarshPalette.navy),
+                  : WarshPalette.navy,
           },
           selected ? styles.selectedBorder : null,
-          isDisabled ? styles.primaryDisabled : null,
           outerStyle,
+          isDisabled ? styles.primaryDisabled : null,
         ]}
       >
         {loading ? (
@@ -159,9 +144,12 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: WarshPalette.gold,
   },
+  // Warm fill with a readable muted label; a faded navy with a gold label
+  // was close to invisible (finding M10).
   primaryDisabled: {
-    backgroundColor: WarshPalette.navy,
-    opacity: 0.4,
+    backgroundColor: WarshPalette.disabledFill,
+    borderWidth: 1,
+    borderColor: WarshPalette.sageSoft,
   },
   secondary: {
     backgroundColor: "transparent",

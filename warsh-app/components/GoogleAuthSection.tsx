@@ -283,7 +283,6 @@ const styles = StyleSheet.create({
     color: Colors.text.primary,
     fontFamily: Fonts.bold,
     fontSize: FontSizes.h2,
-    fontWeight: "700",
   },
   modalBody: {
     color: Colors.text.secondary,
@@ -307,7 +306,6 @@ const styles = StyleSheet.create({
   cancelText: {
     color: Colors.text.secondary,
     fontFamily: Fonts.semiBold,
-    fontWeight: "600",
   },
   linkButton: {
     minWidth: 118,
@@ -323,7 +321,6 @@ const styles = StyleSheet.create({
   },
   linkText: {
     color: WarshPalette.ink,
-    fontFamily: Fonts.semiBold,
-    fontWeight: "700",
+    fontFamily: Fonts.bold,
   },
 });

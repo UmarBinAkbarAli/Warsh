@@ -1148,7 +1148,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.bold,
     fontSize: 11,
-    fontWeight: "700",
     letterSpacing: 1.4,
   },
   statValue: {
@@ -1168,7 +1167,7 @@ const styles = StyleSheet.create({
     gap: Spacing.sm,
     padding: Spacing.md,
     borderRadius: Radii.md,
-    backgroundColor: WarshPalette.ink,
+    backgroundColor: WarshPalette.navy,
     marginBottom: Spacing.sm,
   },
   coachMarkText: {
@@ -1413,7 +1412,7 @@ const styles = StyleSheet.create({
     gap: 2,
   },
   sectionActionText: {
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.caption,
   },
@@ -1459,7 +1458,7 @@ const styles = StyleSheet.create({
   },
   journeyCopy: { flex: 1, minWidth: 0 },
   journeyLabel: {
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: 9,
     lineHeight: 13,
@@ -1564,7 +1563,7 @@ const styles = StyleSheet.create({
     borderRadius: Radii.md,
   },
   allChaptersText: {
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
   },
@@ -1581,7 +1580,7 @@ const styles = StyleSheet.create({
     gap: Spacing.sm,
     padding: Spacing.md,
     borderRadius: Radii.md,
-    backgroundColor: WarshPalette.ink,
+    backgroundColor: WarshPalette.navy,
     marginBottom: Spacing.md,
   },
   trialExpiredText: {
@@ -1620,7 +1619,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   trialBannerCta: {
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
   },

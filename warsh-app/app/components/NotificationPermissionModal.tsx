@@ -100,7 +100,6 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.h1,
-    fontWeight: "700",
     color: WarshPalette.ink,
     textAlign: "center",
     lineHeight: LineHeights.h1,

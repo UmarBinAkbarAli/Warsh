@@ -366,7 +366,7 @@ const styles = StyleSheet.create({
   chipGoldText: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.caption,
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
   },
   note: {
     fontFamily: Fonts.regular,

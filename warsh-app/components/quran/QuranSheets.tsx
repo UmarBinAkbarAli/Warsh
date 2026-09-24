@@ -274,7 +274,7 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.label,
     lineHeight: LineHeights.label,
     letterSpacing: 1,
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
   },
   labelSpaced: {
     marginTop: Spacing.md,
@@ -334,7 +334,7 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.bold,
     fontSize: FontSizes.label,
     lineHeight: LineHeights.label,
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
   },
   toggleCard: {
     backgroundColor: WarshPalette.white,

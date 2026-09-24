@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     lineHeight: LineHeights.h3,
   },
   skip: {
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.caption,
   },

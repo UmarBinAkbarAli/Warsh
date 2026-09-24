@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     paddingBottom: Spacing.xl,
   },
   eyebrow: {
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.label,
     letterSpacing: 0.6,
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.parchmentDeep,
   },
   numberText: {
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.label,
   },

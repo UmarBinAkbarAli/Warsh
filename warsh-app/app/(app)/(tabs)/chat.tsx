@@ -318,10 +318,10 @@ export default function ChatScreen() {
               marginRight: Spacing.md,
             }}
           >
-            <Text style={{ color: Colors.accent.gold, fontSize: 18, fontWeight: "700" }}>ن</Text>
+            <Text style={{ color: Colors.text.gold, fontSize: 18, fontFamily: Fonts.arabicBold }}>ن</Text>
           </View>
           <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontWeight: "700" }}>
+            <Text style={{ fontSize: FontSizes.h2, lineHeight: LineHeights.h2, color: Colors.text.primary, fontFamily: Fonts.bold }}>
               Ustaad Noor
             </Text>
             <Text style={{ color: Colors.text.secondary }} numberOfLines={1}>
@@ -392,7 +392,7 @@ export default function ChatScreen() {
             onPress={sendMessage}
             disabled={sending}
             style={({ pressed }) => ({
-              backgroundColor: Colors.accent.gold,
+              backgroundColor: pressed && !sending ? WarshPalette.navyDeep : WarshPalette.navy,
               borderRadius: Radii.md + 2,
               paddingHorizontal: Spacing.lg,
               paddingVertical: Spacing.md,
@@ -401,7 +401,7 @@ export default function ChatScreen() {
               opacity: sending ? 0.7 : 1,
             })}
           >
-            <Text style={{ color: Colors.bg.primary, fontWeight: "700" }}>{sending ? "Sending" : "Send"}</Text>
+            <Text style={{ color: WarshPalette.parchment, fontFamily: Fonts.bold }}>{sending ? "Sending" : "Send"}</Text>
           </Pressable>
         </View>
       </View>
@@ -519,7 +519,6 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.h1,
     lineHeight: LineHeights.h1,
     fontFamily: Fonts.bold,
-    fontWeight: "700",
     textAlign: "center",
     marginBottom: Spacing.md,
   },
@@ -539,7 +538,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.ink,
     fontSize: 24,
     fontFamily: Fonts.bold,
-    fontWeight: "700",
     lineHeight: 30,
   },
   priceLabel: {

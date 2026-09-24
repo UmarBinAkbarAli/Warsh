@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   eyebrow: {
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.label,
     letterSpacing: 0.6,

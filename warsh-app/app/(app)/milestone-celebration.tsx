@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
     gap: Spacing.lg,
   },
   eyebrow: {
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.label,
     lineHeight: LineHeights.label,
@@ -258,7 +258,6 @@ const styles = StyleSheet.create({
     marginTop: Spacing.sm,
     fontFamily: Fonts.bold,
     fontSize: FontSizes.displayL,
-    fontWeight: "700",
     color: WarshPalette.white,
     textAlign: "center",
     lineHeight: LineHeights.displayL,
@@ -276,7 +275,6 @@ const styles = StyleSheet.create({
   xpText: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
-    fontWeight: "600",
     color: WarshPalette.navy,
   },
   blessingCard: {

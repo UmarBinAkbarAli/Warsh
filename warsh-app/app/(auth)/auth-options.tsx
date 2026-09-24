@@ -218,7 +218,6 @@ const styles = StyleSheet.create({
   langCode: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.caption,
-    fontWeight: "600",
     letterSpacing: 0.6,
     color: WarshPalette.navy,
   },
@@ -286,7 +285,6 @@ const styles = StyleSheet.create({
   emailLabel: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
-    fontWeight: "600",
     color: WarshPalette.subtleBrown,
   },
   legal: {
@@ -314,6 +312,6 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.regular,
     fontSize: FontSizes.caption,
     lineHeight: 15,
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
   },
 });

@@ -478,7 +478,7 @@ const styles = StyleSheet.create({
   },
   transliteration: {
     marginTop: 6,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.italic,
     fontSize: 12,
     fontStyle: "italic",
@@ -507,7 +507,7 @@ const styles = StyleSheet.create({
     gap: 8,
     paddingVertical: 14,
     borderRadius: 10,
-    backgroundColor: WarshPalette.ink,
+    backgroundColor: WarshPalette.navy,
   },
   playBtnActive: {
     backgroundColor: WarshPalette.sage,
@@ -516,7 +516,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.creamBg,
     fontFamily: Fonts.semiBold,
     fontSize: 14,
-    fontWeight: "500",
   },
   speakBtn: {
     flexDirection: "row",
@@ -536,7 +535,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.creamBg,
     fontFamily: Fonts.semiBold,
     fontSize: 14,
-    fontWeight: "500",
   },
   speakBtnLabelDisabled: {
     color: WarshPalette.disabledText,
@@ -552,7 +550,7 @@ const styles = StyleSheet.create({
   },
   hint: {
     textAlign: "center",
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
     fontSize: 11,
     lineHeight: 16,
@@ -624,7 +622,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   noorMessage: {
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.italic,
     fontSize: 18,
     fontStyle: "italic",
@@ -652,7 +650,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.ink,
     fontFamily: Fonts.semiBold,
     fontSize: 18,
-    fontWeight: "500",
     lineHeight: 26,
     textAlign: "center",
     marginBottom: 8,
@@ -666,7 +663,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   modalPrivacy: {
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.italic,
     fontSize: 11,
     fontStyle: "italic",
@@ -694,7 +691,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
   },
   modalSkipText: {
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
     fontSize: 13,
     lineHeight: 20,

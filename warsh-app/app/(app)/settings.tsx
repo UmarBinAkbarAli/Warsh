@@ -657,12 +657,12 @@ const styles = StyleSheet.create({
     borderBottomColor: WarshPalette.parchmentCardBorder,
   },
   backBtn: {
-    color: WarshPalette.gold, fontFamily: Fonts.regular,
+    color: WarshPalette.goldText, fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyL, width: 60,
   },
   headerTitle: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.h2, fontWeight: "700",
+    fontSize: FontSizes.h2,
   },
 
   content: { paddingHorizontal: Spacing.xl, paddingTop: Spacing.md },
@@ -694,9 +694,8 @@ const styles = StyleSheet.create({
   },
 
   sectionHeader: {
-    color: WarshPalette.gold, fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption, fontWeight: "700",
-    textTransform: "uppercase", letterSpacing: 0.8,
+    color: WarshPalette.goldText, fontFamily: Fonts.bold,
+    fontSize: FontSizes.caption, textTransform: "uppercase", letterSpacing: 0.8,
     marginTop: Spacing.lg, marginBottom: Spacing.sm,
     marginLeft: 4,
   },
@@ -759,8 +758,8 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.sage,
   },
   pillText: {
-    color: WarshPalette.bodyBrown, fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption, fontWeight: "600",
+    color: WarshPalette.bodyBrown, fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.caption,
   },
   pillTextSelected: { color: WarshPalette.white },
   sheetOverlay: {
@@ -780,7 +779,7 @@ const styles = StyleSheet.create({
     marginVertical: Spacing.sm,
   },
   sheetEyebrow: {
-    color: WarshPalette.goldDeep, fontFamily: Fonts.semiBold,
+    color: WarshPalette.goldText, fontFamily: Fonts.semiBold,
     fontSize: FontSizes.label, textTransform: "uppercase", letterSpacing: 0.7,
   },
   sheetTitle: {

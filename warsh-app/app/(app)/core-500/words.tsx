@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
   rankText: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.label,
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
   },
   rowCopy: { flex: 1, gap: 2 },
   rowMeaning: {

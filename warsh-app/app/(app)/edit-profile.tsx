@@ -187,7 +187,6 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.h1,
     lineHeight: LineHeights.h1,
     color: WarshPalette.ink,
-    fontWeight: "700",
     textAlign: "center",
   },
   saveBtn: {
@@ -196,8 +195,7 @@ const styles = StyleSheet.create({
   saveBtnText: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.bodyL,
-    color: WarshPalette.gold,
-    fontWeight: "700",
+    color: WarshPalette.goldText,
   },
   saveBtnDisabled: {
     opacity: 0.5,
@@ -283,8 +281,7 @@ const styles = StyleSheet.create({
   sectionHeader: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.caption,
-    color: WarshPalette.gold,
-    fontWeight: "700",
+    color: WarshPalette.goldText,
     textTransform: "uppercase",
     letterSpacing: 0.8,
     marginBottom: Spacing.sm,
@@ -307,7 +304,6 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.caption,
     color: WarshPalette.subtleBrown,
-    fontWeight: "600",
     marginBottom: 4,
     textTransform: "uppercase",
     letterSpacing: 0.5,
@@ -358,13 +354,11 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyL,
     color: WarshPalette.bodyBrown,
-    fontWeight: "600",
     textAlign: "center",
   },
   langTitleSelected: {
     color: WarshPalette.ink,
     fontFamily: Fonts.bold,
-    fontWeight: "700",
   },
   langSubtitle: {
     fontFamily: Fonts.regular,

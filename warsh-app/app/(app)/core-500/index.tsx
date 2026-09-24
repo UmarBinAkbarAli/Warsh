@@ -308,10 +308,11 @@ const styles = StyleSheet.create({
   },
   heroRow: { flexDirection: "row", alignItems: "flex-end", gap: Spacing.sm },
   heroPercent: {
-    fontFamily: Fonts.display,
-    fontSize: 48,
-    lineHeight: 54,
+    fontFamily: Fonts.bold,
+    fontSize: 40,
+    lineHeight: 48,
     color: WarshPalette.navy,
+    fontVariant: ["lining-nums", "tabular-nums"],
   },
   heroCaption: {
     flex: 1,

@@ -265,7 +265,7 @@ const styles = StyleSheet.create({
   cancelBtn: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.bodyM,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
   },
   recentTitle: {
     fontFamily: Fonts.regular,

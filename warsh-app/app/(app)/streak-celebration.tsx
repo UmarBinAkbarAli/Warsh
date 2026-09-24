@@ -191,7 +191,6 @@ const styles = StyleSheet.create({
   streakCount: {
     fontFamily: Fonts.bold,
     fontSize: 68,
-    fontWeight: "700",
     color: WarshPalette.white,
     lineHeight: 72,
   },
@@ -227,7 +226,7 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.md,
   },
   weekEyebrow: {
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.label,
     letterSpacing: 1.2,
@@ -279,7 +278,6 @@ const styles = StyleSheet.create({
   dayLabelToday: {
     color: WarshPalette.ink,
     fontFamily: Fonts.semiBold,
-    fontWeight: "600",
   },
   motivationCard: {
     width: "100%",

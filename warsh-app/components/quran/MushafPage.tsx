@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     lineHeight: 26,
     includeFontPadding: false,
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
   },
   lines: {
     flex: 1,

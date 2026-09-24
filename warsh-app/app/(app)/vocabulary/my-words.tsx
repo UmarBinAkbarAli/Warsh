@@ -286,7 +286,7 @@ const styles = StyleSheet.create({
   sortLabel: {
     fontFamily: Fonts.regular,
     fontSize: FontSizes.caption,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
   },
   listContent: {
     paddingHorizontal: Spacing.xl,

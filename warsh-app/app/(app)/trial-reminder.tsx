@@ -91,13 +91,12 @@ const styles = StyleSheet.create({
     paddingTop: Spacing.lg,
   },
   bismillah: {
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     marginBottom: Spacing.md,
   },
   title: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.h1,
-    fontWeight: "700",
     color: WarshPalette.ink,
     textAlign: "center",
     lineHeight: LineHeights.h1 * 1.4,

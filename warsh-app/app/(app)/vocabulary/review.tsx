@@ -322,7 +322,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.5, borderBottomColor: WarshPalette.parchmentCardBorder,
   },
   backBtn: {
-    color: WarshPalette.gold, fontFamily: Fonts.regular,
+    color: WarshPalette.goldText, fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyL,
   },
   progressLabel: {
@@ -348,10 +348,10 @@ const styles = StyleSheet.create({
   },
 
   // Empty state
-  emptyArabic: { color: WarshPalette.gold, textAlign: "center", marginBottom: Spacing.md },
+  emptyArabic: { color: WarshPalette.goldText, textAlign: "center", marginBottom: Spacing.md },
   emptyTitle: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.h2, fontWeight: "700", textAlign: "center",
+    fontSize: FontSizes.h2, textAlign: "center",
     marginBottom: Spacing.sm,
   },
   emptyCopy: {
@@ -361,16 +361,17 @@ const styles = StyleSheet.create({
   },
 
   // Pre-review
-  preArabic: { color: WarshPalette.gold, marginBottom: Spacing.md, textAlign: "center" },
+  preArabic: { color: WarshPalette.goldText, marginBottom: Spacing.md, textAlign: "center" },
   preTitle: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.h2, fontWeight: "700", textAlign: "center",
+    fontSize: FontSizes.h2, textAlign: "center",
     marginBottom: Spacing.sm,
   },
   preCount: {
-    color: WarshPalette.sage, fontFamily: Fonts.display,
-    fontSize: FontSizes.h3, fontWeight: "700", textAlign: "center",
+    color: WarshPalette.sage, fontFamily: Fonts.bold,
+    fontSize: FontSizes.h3, textAlign: "center",
     marginBottom: Spacing.sm,
+    fontVariant: ["lining-nums", "tabular-nums"],
   },
   preCopy: {
     color: WarshPalette.bodyBrown, fontFamily: Fonts.regular,
@@ -378,20 +379,20 @@ const styles = StyleSheet.create({
     lineHeight: LineHeights.bodyL, marginBottom: Spacing.xl,
   },
   beginBtn: {
-    backgroundColor: WarshPalette.ink, paddingHorizontal: Spacing.xl * 1.5,
+    backgroundColor: WarshPalette.navy, paddingHorizontal: Spacing.xl * 1.5,
     paddingVertical: Spacing.md, borderRadius: Radii.lg, minWidth: 180,
     alignItems: "center",
   },
   beginBtnText: {
-    color: WarshPalette.cream, fontFamily: Fonts.display,
-    fontSize: FontSizes.bodyL, fontWeight: "700",
+    color: WarshPalette.cream, fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyL,
   },
 
   // Done
-  doneArabic: { color: WarshPalette.gold, textAlign: "center", marginBottom: Spacing.md },
+  doneArabic: { color: WarshPalette.goldText, textAlign: "center", marginBottom: Spacing.md },
   doneTitle: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.h2, fontWeight: "700", textAlign: "center",
+    fontSize: FontSizes.h2, textAlign: "center",
     marginBottom: Spacing.sm,
   },
   doneCount: {
@@ -408,21 +409,22 @@ const styles = StyleSheet.create({
   goodBox: { backgroundColor: WarshPalette.parchmentBg, borderWidth: 1, borderColor: WarshPalette.defaultCardBorder },
   easyBox: { backgroundColor: WarshPalette.sageTintBg, borderWidth: 1, borderColor: WarshPalette.sageTintBorder },
   resultNum: {
-    color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.h2, fontWeight: "700",
+    color: WarshPalette.ink, fontFamily: Fonts.bold,
+    fontSize: FontSizes.h2,
+    fontVariant: ["lining-nums", "tabular-nums"],
   },
   resultLabel: {
     color: WarshPalette.bodyBrown, fontFamily: Fonts.regular,
     fontSize: FontSizes.caption, marginTop: 2,
   },
   doneBtn: {
-    backgroundColor: WarshPalette.ink, paddingHorizontal: Spacing.xl * 1.5,
+    backgroundColor: WarshPalette.navy, paddingHorizontal: Spacing.xl * 1.5,
     paddingVertical: Spacing.md, borderRadius: Radii.lg, minWidth: 180,
     alignItems: "center",
   },
   doneBtnText: {
-    color: WarshPalette.cream, fontFamily: Fonts.display,
-    fontSize: FontSizes.bodyL, fontWeight: "700",
+    color: WarshPalette.cream, fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyL,
   },
 
   // Flash card
@@ -444,7 +446,7 @@ const styles = StyleSheet.create({
   },
   cardArabic: { color: WarshPalette.ink, textAlign: "center" },
   tapPrompt: {
-    marginTop: Spacing.xl, color: WarshPalette.gold,
+    marginTop: Spacing.xl, color: WarshPalette.goldText,
     fontFamily: Fonts.regular, fontSize: FontSizes.bodyL,
     fontStyle: "italic",
   },
@@ -455,7 +457,7 @@ const styles = StyleSheet.create({
   },
   cardTranslation: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.h3, fontWeight: "700", textAlign: "center",
+    fontSize: FontSizes.h3, textAlign: "center",
   },
   cardTranslit: {
     marginTop: 4, color: WarshPalette.bodyBrown, fontFamily: Fonts.regular,
@@ -468,7 +470,7 @@ const styles = StyleSheet.create({
   },
   cardAyahText: { color: WarshPalette.ink, textAlign: "right" },
   cardAyahRef: {
-    marginTop: 2, color: WarshPalette.gold,
+    marginTop: 2, color: WarshPalette.goldText,
     fontFamily: Fonts.regular, fontSize: FontSizes.caption,
   },
   audioRow: { alignItems: "center", marginTop: Spacing.lg },
@@ -490,8 +492,8 @@ const styles = StyleSheet.create({
   goodBtn: { backgroundColor: WarshPalette.parchmentBg, borderColor: WarshPalette.defaultCardBorder },
   easyBtn: { backgroundColor: WarshPalette.sageTintBg, borderColor: WarshPalette.sageTintBorderStrong },
   responseBtnText: {
-    color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.bodyL, fontWeight: "700",
+    color: WarshPalette.ink, fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyL,
   },
   goodBtnText: { color: WarshPalette.bodyBrown },
 });

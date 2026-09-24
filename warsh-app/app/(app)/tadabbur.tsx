@@ -381,8 +381,8 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.md,
     borderBottomWidth: 0.5, borderBottomColor: WarshPalette.parchmentCardBorder,
   },
-  backBtn: { color: WarshPalette.gold, fontFamily: Fonts.regular, fontSize: FontSizes.bodyL, width: 60 },
-  headerTitle: { color: WarshPalette.ink, fontFamily: Fonts.display, fontSize: FontSizes.h3, fontWeight: "700" },
+  backBtn: { color: WarshPalette.goldText, fontFamily: Fonts.regular, fontSize: FontSizes.bodyL, width: 60 },
+  headerTitle: { color: WarshPalette.ink, fontFamily: Fonts.display, fontSize: FontSizes.h3 },
 
   content: { paddingHorizontal: Spacing.xl, paddingBottom: Spacing.xl * 3 },
   webRow: {
@@ -400,13 +400,13 @@ const styles = StyleSheet.create({
 
   // Focus header
   focusHeader: { alignItems: "flex-end", paddingVertical: Spacing.xl },
-  focusEyebrow: { color: WarshPalette.gold, fontFamily: Fonts.regular, fontSize: FontSizes.caption, fontWeight: "700", textTransform: "uppercase", marginBottom: Spacing.xs },
+  focusEyebrow: { color: WarshPalette.goldText, fontFamily: Fonts.bold, fontSize: FontSizes.caption, textTransform: "uppercase", marginBottom: Spacing.xs },
   focusNameAr: { color: WarshPalette.ink, textAlign: "right" },
   focusNameEn: { color: WarshPalette.bodyBrown, fontFamily: Fonts.regular, fontSize: FontSizes.bodyL, marginTop: Spacing.xs, textAlign: "right" },
   focusProgressRow: { width: "100%", marginTop: Spacing.md },
   progressTrack: { height: 6, backgroundColor: WarshPalette.cream, borderRadius: 3, overflow: "hidden" },
   progressFill: { height: 6, backgroundColor: WarshPalette.gold, borderRadius: 3 },
-  focusPercent: { color: WarshPalette.gold, fontFamily: Fonts.regular, fontSize: FontSizes.caption, marginTop: 4, textAlign: "right" },
+  focusPercent: { color: WarshPalette.goldText, fontFamily: Fonts.regular, fontSize: FontSizes.caption, marginTop: 4, textAlign: "right" },
 
   // Legend
   legend: { flexDirection: "row", gap: Spacing.lg, marginBottom: Spacing.lg, justifyContent: "flex-end" },
@@ -425,14 +425,14 @@ const styles = StyleSheet.create({
   ayahWordWrap: { flexDirection: "row-reverse", flexWrap: "wrap", gap: 4, justifyContent: "flex-start" },
   ayahWord: { fontFamily: Fonts.arabic, fontSize: 22, lineHeight: 38 },
   ayahMeta: { flexDirection: "row", alignItems: "center", gap: Spacing.sm, marginTop: 4 },
-  ayahRef: { color: WarshPalette.gold, fontFamily: Fonts.regular, fontSize: FontSizes.caption },
+  ayahRef: { color: WarshPalette.goldText, fontFamily: Fonts.regular, fontSize: FontSizes.caption },
   ayahTranslation: { color: WarshPalette.bodyBrown, fontFamily: Fonts.regular, fontSize: FontSizes.bodyM, fontStyle: "italic", marginTop: 2, lineHeight: LineHeights.bodyM },
 
   loadingText: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.bodyM, textAlign: "center", marginTop: Spacing.xl },
 
   // Sections
   section: { marginBottom: Spacing.xl },
-  sectionTitle: { color: WarshPalette.gold, fontFamily: Fonts.regular, fontSize: FontSizes.caption, fontWeight: "700", textTransform: "uppercase", marginBottom: Spacing.md },
+  sectionTitle: { color: WarshPalette.goldText, fontFamily: Fonts.bold, fontSize: FontSizes.caption, textTransform: "uppercase", marginBottom: Spacing.md },
   surahRow: {
     flexDirection: "row", alignItems: "center",
     padding: Spacing.md, borderRadius: Radii.md,
@@ -467,7 +467,7 @@ const styles = StyleSheet.create({
     borderRadius: Radii.md, borderWidth: 1, borderColor: WarshPalette.gold,
     padding: Spacing.md, alignItems: "center", marginBottom: Spacing.sm,
   },
-  sheetDetailBtnText: { color: WarshPalette.gold, fontFamily: Fonts.display, fontSize: FontSizes.bodyL, fontWeight: "700" },
+  sheetDetailBtnText: { color: WarshPalette.goldText, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyL },
   sheetDismissBtn: { padding: Spacing.md, alignItems: "center" },
   sheetDismissBtnText: { color: WarshPalette.bodyBrown, fontFamily: Fonts.regular, fontSize: FontSizes.bodyM },
 });

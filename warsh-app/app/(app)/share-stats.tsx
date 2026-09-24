@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
     paddingTop: 36,
   },
   card: {
-    backgroundColor: WarshPalette.ink,
+    backgroundColor: WarshPalette.navy,
     padding: Spacing.xl,
     borderRadius: Radii.xl,
   },
@@ -228,7 +228,6 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.display,
     fontSize: FontSizes.h2,
     color: WarshPalette.gold,
-    fontWeight: "700",
   },
   cardBrandSep: {
     fontFamily: Fonts.display,
@@ -243,7 +242,6 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.display,
     fontSize: FontSizes.h1,
     color: WarshPalette.parchment,
-    fontWeight: "700",
     marginBottom: Spacing.xs,
   },
   cardLevel: {
@@ -259,11 +257,11 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.lg,
   },
   streakNum: {
-    fontFamily: Fonts.display,
-    fontSize: 64,
+    fontFamily: Fonts.bold,
+    fontSize: 54,
     color: WarshPalette.sage,
-    fontWeight: "500",
     lineHeight: 70,
+    fontVariant: ["lining-nums", "tabular-nums"],
   },
   streakLabel: {
     fontFamily: Fonts.regular,
@@ -289,10 +287,10 @@ const styles = StyleSheet.create({
     padding: Spacing.md,
   },
   statNum: {
-    fontFamily: Fonts.display,
+    fontFamily: Fonts.bold,
     fontSize: FontSizes.arabicM,
     color: WarshPalette.gold,
-    fontWeight: "700",
+    fontVariant: ["lining-nums", "tabular-nums"],
   },
   statLabel: {
     fontFamily: Fonts.regular,
@@ -314,7 +312,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: Spacing.sm,
     marginHorizontal: Spacing.xl,
-    backgroundColor: WarshPalette.gold,
+    backgroundColor: WarshPalette.navy,
     borderRadius: Radii.lg,
     paddingVertical: Spacing.md,
     minHeight: 52,
@@ -323,6 +321,6 @@ const styles = StyleSheet.create({
   shareBtnText: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.bodyM,
-    color: WarshPalette.white,
+    color: WarshPalette.parchment,
   },
 });

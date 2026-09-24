@@ -108,7 +108,6 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.bold,
     fontSize: FontSizes.bodyL,
     lineHeight: LineHeights.bodyL,
-    fontWeight: "700",
     color: WarshPalette.ink,
     textAlign: "center",
     marginTop: Spacing.sm,
@@ -136,6 +135,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   resendAction: {
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
   },
 });

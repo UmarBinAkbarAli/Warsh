@@ -359,7 +359,7 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingHorizontal: Theme.Spacing.xl,
     paddingBottom: 40,
-    backgroundColor: Theme.WarshPalette.ink,
+    backgroundColor: Theme.WarshPalette.navy,
   },
   headerTopRow: {
     flexDirection: "row",
@@ -374,14 +374,12 @@ const styles = StyleSheet.create({
     color: Theme.WarshPalette.gold,
     fontFamily: Theme.Fonts.display,
     fontSize: Theme.FontSizes.displayXL,
-    fontWeight: "500",
     lineHeight: Theme.LineHeights.displayXL,
   },
   brandSeparator: {
     color: Theme.WarshPalette.gold,
     fontFamily: Theme.Fonts.display,
     fontSize: Theme.FontSizes.displayXL,
-    fontWeight: "500",
     lineHeight: Theme.LineHeights.displayXL,
   },
   brandArabic: {
@@ -419,7 +417,6 @@ const styles = StyleSheet.create({
   subBadgeText: {
     fontFamily: Theme.Fonts.semiBold,
     fontSize: Theme.FontSizes.label,
-    fontWeight: "600",
   },
   errorText: {
     marginHorizontal: Theme.Spacing.xl,
@@ -444,10 +441,10 @@ const styles = StyleSheet.create({
   },
   streakNumber: {
     color: Theme.WarshPalette.sage,
-    fontFamily: Theme.Fonts.display,
-    fontSize: 48,
-    fontWeight: "500",
-    lineHeight: 56,
+    fontFamily: Theme.Fonts.bold,
+    fontSize: 40,
+    lineHeight: 48,
+    fontVariant: ["lining-nums", "tabular-nums"],
   },
   streakLabel: {
     marginBottom: Theme.Spacing.sm,
@@ -488,7 +485,7 @@ const styles = StyleSheet.create({
   },
   streakQuote: {
     marginTop: Theme.Spacing.lg,
-    color: Theme.WarshPalette.gold,
+    color: Theme.WarshPalette.goldText,
     fontFamily: Theme.Fonts.italic,
     fontSize: Theme.FontSizes.caption,
     fontStyle: "italic",
@@ -510,7 +507,7 @@ const styles = StyleSheet.create({
     backgroundColor: Theme.WarshPalette.white,
   },
   statArabicLabel: {
-    color: Theme.WarshPalette.gold,
+    color: Theme.WarshPalette.goldText,
     fontSize: Theme.FontSizes.h3,
     lineHeight: Theme.LineHeights.h3,
     textAlign: "center",
@@ -518,11 +515,11 @@ const styles = StyleSheet.create({
   statValue: {
     marginTop: Theme.Spacing.xs,
     color: Theme.WarshPalette.sage,
-    fontFamily: Theme.Fonts.display,
-    fontSize: Theme.FontSizes.arabicL,
-    fontWeight: "500",
+    fontFamily: Theme.Fonts.bold,
+    fontSize: 24,
     lineHeight: 34,
     textAlign: "center",
+    fontVariant: ["lining-nums", "tabular-nums"],
   },
   statSub: {
     marginTop: Theme.Spacing.xs,
@@ -555,10 +552,10 @@ const styles = StyleSheet.create({
   },
   levelValue: {
     color: Theme.WarshPalette.ink,
-    fontFamily: Theme.Fonts.display,
+    fontFamily: Theme.Fonts.bold,
     fontSize: Theme.FontSizes.arabicM,
-    fontWeight: "500",
     lineHeight: Theme.LineHeights.arabicM,
+    fontVariant: ["lining-nums", "tabular-nums"],
   },
   progressTrack: {
     width: "100%",
@@ -591,11 +588,10 @@ const styles = StyleSheet.create({
     color: Theme.WarshPalette.ink,
     fontFamily: Theme.Fonts.display,
     fontSize: Theme.FontSizes.bodyL,
-    fontWeight: "500",
     lineHeight: Theme.LineHeights.bodyL,
   },
   achievementsCount: {
-    color: Theme.WarshPalette.gold,
+    color: Theme.WarshPalette.goldText,
     fontFamily: Theme.Fonts.regular,
     fontSize: Theme.FontSizes.caption,
     lineHeight: Theme.LineHeights.caption,
@@ -627,9 +623,8 @@ const styles = StyleSheet.create({
   },
   achievementMoreText: {
     color: Theme.WarshPalette.subtleBrown,
-    fontFamily: Theme.Fonts.display,
+    fontFamily: Theme.Fonts.semiBold,
     fontSize: Theme.FontSizes.bodyM,
-    fontWeight: "500",
     lineHeight: Theme.LineHeights.bodyM,
   },
   speakingCard: {
@@ -655,10 +650,10 @@ const styles = StyleSheet.create({
   },
   speakingCount: {
     color: Theme.WarshPalette.ink,
-    fontFamily: Theme.Fonts.display,
-    fontSize: 36,
-    fontWeight: "500",
-    lineHeight: 44,
+    fontFamily: Theme.Fonts.bold,
+    fontSize: 30,
+    lineHeight: 38,
+    fontVariant: ["lining-nums", "tabular-nums"],
   },
   speakingSub: {
     color: Theme.WarshPalette.subtleBrown,
@@ -671,11 +666,11 @@ const styles = StyleSheet.create({
     marginTop: Theme.Spacing.md,
     padding: Theme.Spacing.lg,
     borderRadius: Theme.Radii.md,
-    backgroundColor: Theme.WarshPalette.ink,
+    backgroundColor: Theme.WarshPalette.navy,
   },
   tipLabel: {
     color: Theme.WarshPalette.gold,
-    fontFamily: Theme.Fonts.display,
+    fontFamily: Theme.Fonts.semiBold,
     fontSize: Theme.FontSizes.label,
     lineHeight: Theme.LineHeights.label,
   },

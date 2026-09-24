@@ -828,7 +828,7 @@ export default function LessonPlayScreen() {
         ) : (
           <>
             <Text style={styles.feedbackWrongTitle}>{t("player.feedback.almost")}</Text>
-            {wrongExpl ? <Text style={[styles.feedbackExplanation, styles.feedbackWrongExplanation]}>{withDirectionMark(wrongExpl, language)}</Text> : null}
+            {wrongExpl ? <Text style={[styles.feedbackExplanation, language === "ur" && styles.feedbackExplanationUrdu, styles.feedbackWrongExplanation]}>{withDirectionMark(wrongExpl, language)}</Text> : null}
             {containsArabic(arabicForDisplay) ? (
               <ArabicText size="sm" style={styles.feedbackCorrectAnswerArabic}>{getCorrectAnswerDisplay(currentExercise, language, t)}</ArabicText>
             ) : (
@@ -2044,7 +2044,7 @@ const styles = StyleSheet.create({
   },
   ayahRef: {
     marginTop: 8,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.italic,
     fontSize: 10,
     fontStyle: "italic",
@@ -2067,7 +2067,6 @@ const styles = StyleSheet.create({
   },
   bottomButton: {
     alignSelf: "stretch",
-    backgroundColor: WarshPalette.ink,
   },
   topRow: {
     flexDirection: "row",
@@ -2096,7 +2095,7 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.cream,
   },
   discoverDotActive: {
-    backgroundColor: WarshPalette.ink,
+    backgroundColor: WarshPalette.navy,
   },
   discoverScroll: {
     flex: 1,
@@ -2210,7 +2209,6 @@ const styles = StyleSheet.create({
   exitPrimary: {
     marginTop: Spacing.xl,
     marginBottom: Spacing.sm,
-    backgroundColor: WarshPalette.ink,
   },
   exercisePlayRow: {
     alignItems: "center",
@@ -2296,7 +2294,7 @@ const styles = StyleSheet.create({
   hintButtonText: {
     fontFamily: Fonts.regular,
     fontSize: 13,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
   },
   hintRevealText: {
     fontFamily: Fonts.regular,
@@ -2307,7 +2305,7 @@ const styles = StyleSheet.create({
   hintRevealLetter: {
     fontFamily: Fonts.arabic,
     fontSize: 20,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
   },
 
   audioRecognitionCenter: {
@@ -2356,8 +2354,11 @@ const styles = StyleSheet.create({
     padding: 12,
     backgroundColor: WarshPalette.white,
   },
+  // Correct stays at full strength: deep sage text and a 2px border, so the
+  // right answer never reads as disabled (finding H3).
   optionCorrect: {
-    borderColor: WarshPalette.sage,
+    borderColor: WarshPalette.sageDeep,
+    borderWidth: 2,
     backgroundColor: WarshPalette.correctBg,
   },
   optionWrong: {
@@ -2367,22 +2368,22 @@ const styles = StyleSheet.create({
   optionText: {
     color: WarshPalette.ink,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: FontSizes.bodyM,
+    lineHeight: LineHeights.bodyM,
     textAlign: "center",
   },
   optionTextCorrect: {
-    color: WarshPalette.sage,
-    fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 17,
+    color: WarshPalette.sageDeep,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+    lineHeight: LineHeights.bodyM,
     textAlign: "center",
   },
   optionTextWrong: {
     color: WarshPalette.wrongText,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: FontSizes.bodyM,
+    lineHeight: LineHeights.bodyM,
     textAlign: "center",
   },
   optionArabicText: {
@@ -2390,7 +2391,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   optionArabicTextCorrect: {
-    color: WarshPalette.sage,
+    color: WarshPalette.sageDeep,
     textAlign: "center",
   },
   optionArabicTextWrong: {
@@ -2409,7 +2410,7 @@ const styles = StyleSheet.create({
     padding: 12,
   },
   answerRowCorrect: {
-    borderColor: WarshPalette.sage,
+    borderColor: WarshPalette.sageDeep,
     backgroundColor: WarshPalette.correctBg,
   },
   answerRowWrong: {
@@ -2543,7 +2544,7 @@ const styles = StyleSheet.create({
   },
   parseGloss: {
     marginTop: 2,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
     fontSize: 9,
     lineHeight: 13,
@@ -2591,7 +2592,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   dialogueSpeaker: {
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
     fontSize: 9,
     lineHeight: 13,
@@ -2626,39 +2627,46 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.wrongBg,
   },
   feedbackArabic: {
-    color: WarshPalette.sage,
+    color: WarshPalette.sageDeep,
     fontSize: 16,
     lineHeight: 26,
     textAlign: "left",
   },
   feedbackExplanation: {
-    color: WarshPalette.bodyBrown,
+    color: WarshPalette.ink,
     fontFamily: Fonts.regular,
-    fontSize: 11,
-    lineHeight: 16,
+    fontSize: FontSizes.bodyM,
+    lineHeight: 22,
+  },
+  // Urdu reads 2–3pt smaller than Latin at the same size (finding H4).
+  feedbackExplanationUrdu: {
+    fontFamily: Fonts.urduFallback,
+    fontSize: 18,
+    lineHeight: 34,
   },
   feedbackWrongTitle: {
     color: WarshPalette.wrongText,
-    fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 18,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+    lineHeight: 20,
   },
   feedbackWrongExplanation: {
     marginTop: 4,
   },
+  // The right answer is named in sage, never in the colour that means wrong.
   feedbackCorrectAnswerArabic: {
     marginTop: 4,
-    color: WarshPalette.wrongText,
+    color: WarshPalette.sageDeep,
     fontSize: 20,
     lineHeight: 30,
     textAlign: "left",
   },
   feedbackCorrectAnswerText: {
     marginTop: 4,
-    color: WarshPalette.wrongText,
-    fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 18,
+    color: WarshPalette.sageDeep,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM,
+    lineHeight: 20,
   },
   revealScreen: {
     backgroundColor: WarshPalette.creamBg,
@@ -2673,7 +2681,7 @@ const styles = StyleSheet.create({
     paddingBottom: 28,
   },
   revealEyebrow: {
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: 10,
     lineHeight: 14,
@@ -2688,7 +2696,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.ink,
     fontFamily: Fonts.bold,
     fontSize: 26,
-    fontWeight: "700",
     lineHeight: 37,
     textAlign: "center",
   },
@@ -2715,7 +2722,7 @@ const styles = StyleSheet.create({
     color: WarshPalette.ink,
   },
   highlightedWord: {
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
   },
   revealPlayRow: {
     alignSelf: "center",
@@ -2760,7 +2767,7 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.highlightBgSoft,
   },
   revealWordChipText: {
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontSize: 20,
     lineHeight: 28,
   },
@@ -2866,7 +2873,6 @@ const styles = StyleSheet.create({
     marginTop: 12,
     fontFamily: Fonts.bold,
     fontSize: 25,
-    fontWeight: "700",
     color: WarshPalette.white,
     textAlign: "center",
   },
@@ -2915,7 +2921,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.sage,
     fontFamily: Fonts.semiBold,
     fontSize: 24,
-    fontWeight: "500",
     lineHeight: 32,
     textAlign: "center",
   },
@@ -2977,7 +2982,7 @@ const styles = StyleSheet.create({
   },
   spContextTitleEn: {
     marginTop: 8,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
     fontSize: 12,
     lineHeight: 18,
@@ -3012,7 +3017,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.sage,
     fontFamily: Fonts.semiBold,
     fontSize: 18,
-    fontWeight: "500",
     lineHeight: 26,
     textAlign: "center",
     marginBottom: 8,
@@ -3054,7 +3058,7 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.arabic,
     fontSize: 36,
     lineHeight: 52,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     textAlign: "center",
     writingDirection: "rtl",
   },
@@ -3102,13 +3106,13 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.regular,
     fontSize: 10,
     lineHeight: 14,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
   },
   verbConjugatedForm: {
     fontFamily: Fonts.arabic,
     fontSize: 20,
     lineHeight: 30,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     textAlign: "right",
     writingDirection: "rtl",
   },
@@ -3145,8 +3149,8 @@ const styles = StyleSheet.create({
     borderRadius: 999,
     backgroundColor: WarshPalette.sage,
     color: WarshPalette.creamBg,
+    fontFamily: Fonts.bold,
     fontSize: 12,
-    fontWeight: "700",
     overflow: "hidden",
   },
   verbPatternContinueButton: {

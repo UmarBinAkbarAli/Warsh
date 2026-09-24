@@ -534,7 +534,7 @@ export const en = {
   "player.prompt.identifyRoot": "What is the 3-letter root (الجذر) of this word?",
   "player.prompt.conversationReply": "Someone says this to you. How do you reply?",
   "player.feedback.correct": "You recognised the pattern and chose the right answer.",
-  "player.feedback.almost": "Almost - let's look at this again",
+  "player.feedback.almost": "Not quite, here's why",
   "player.writePlaceholder": "اكتب هنا",
   "player.showHint": "Show hint",
   "player.startsWith": "Starts with:",

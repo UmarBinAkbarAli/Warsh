@@ -154,7 +154,6 @@ const styles = StyleSheet.create({
   label: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
-    fontWeight: "600",
     color: WarshPalette.subtleBrown,
   },
   realButtonOverlay: {

@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
   },
   bismillah: {
     textAlign: "center",
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     marginTop: Spacing.lg,
     marginBottom: Spacing.xxl,
   },
@@ -255,7 +255,6 @@ const styles = StyleSheet.create({
   switchLink: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.bodyM,
-    fontWeight: "700",
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
   },
 });

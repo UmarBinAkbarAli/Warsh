@@ -189,7 +189,6 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.h1,
     lineHeight: LineHeights.h1,
     color: WarshPalette.ink,
-    fontWeight: "700",
     flex: 1,
     textAlign: "center",
     marginHorizontal: Spacing.sm,
@@ -224,7 +223,6 @@ const styles = StyleSheet.create({
   heroNumber: {
     fontFamily: Fonts.bold,
     fontSize: 64,
-    fontWeight: "700",
     color: WarshPalette.ink,
     lineHeight: 72,
     marginTop: Spacing.xs,
@@ -264,7 +262,6 @@ const styles = StyleSheet.create({
   statValue: {
     fontFamily: Fonts.bold,
     fontSize: 28,
-    fontWeight: "700",
     color: WarshPalette.ink,
     lineHeight: 34,
   },
@@ -279,8 +276,7 @@ const styles = StyleSheet.create({
   sectionHeader: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.caption,
-    color: WarshPalette.gold,
-    fontWeight: "700",
+    color: WarshPalette.goldText,
     textTransform: "uppercase",
     letterSpacing: 0.8,
     marginBottom: Spacing.sm,
@@ -312,10 +308,9 @@ const styles = StyleSheet.create({
     borderColor: WarshPalette.defaultCardBorder,
   },
   dayLabel: {
-    fontFamily: Fonts.regular,
+    fontFamily: Fonts.semiBold,
     fontSize: FontSizes.label ?? FontSizes.caption,
     color: WarshPalette.bodyBrown,
-    fontWeight: "600",
   },
   dayLabelToday: {
     color: WarshPalette.white,
@@ -368,16 +363,14 @@ const styles = StyleSheet.create({
   milestoneLabelAchieved: {
     fontFamily: Fonts.semiBold,
     color: WarshPalette.ink,
-    fontWeight: "600",
   },
   milestoneXp: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM,
     color: WarshPalette.subtleBrown,
-    fontWeight: "600",
   },
   milestoneXpAchieved: {
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
   },
 
   // Info card
@@ -393,7 +386,6 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyL,
     color: WarshPalette.ink,
-    fontWeight: "600",
     marginBottom: Spacing.xs,
   },
   infoBody: {

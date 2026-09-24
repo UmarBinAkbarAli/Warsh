@@ -377,5 +377,5 @@ const styles = StyleSheet.create({
   secondaryButton: { height: 54, borderRadius: Radii.lg, borderWidth: 1, borderColor: WarshPalette.sageSoft, alignItems: "center", justifyContent: "center" },
   secondaryButtonText: { color: WarshPalette.navy, fontFamily: Fonts.bold, fontSize: FontSizes.bodyM },
   errorText: { color: Colors.error, fontFamily: Fonts.regular, fontSize: FontSizes.bodyM, textAlign: "center" },
-  backLink: { color: WarshPalette.goldDeep, fontFamily: Fonts.bold, fontSize: FontSizes.bodyL },
+  backLink: { color: WarshPalette.goldText, fontFamily: Fonts.bold, fontSize: FontSizes.bodyL },
 });

@@ -142,10 +142,9 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.lg,
   },
   eyebrow: {
-    color: WarshPalette.gold,
-    fontFamily: Fonts.regular,
+    color: WarshPalette.goldText,
+    fontFamily: Fonts.bold,
     fontSize: FontSizes.label,
-    fontWeight: "700",
     letterSpacing: 0,
     lineHeight: LineHeights.label,
     textTransform: "uppercase",
@@ -155,7 +154,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.ink,
     fontFamily: Fonts.display,
     fontSize: FontSizes.h1,
-    fontWeight: "700",
     lineHeight: LineHeights.h1,
   },
   subtitle: {
@@ -174,9 +172,8 @@ const styles = StyleSheet.create({
   },
   sectionLabel: {
     color: WarshPalette.subtleBrown,
-    fontFamily: Fonts.regular,
+    fontFamily: Fonts.bold,
     fontSize: FontSizes.caption,
-    fontWeight: "700",
     lineHeight: LineHeights.caption,
     letterSpacing: 0.5,
     textTransform: "uppercase",
@@ -238,7 +235,7 @@ const styles = StyleSheet.create({
   },
   cardDate: {
     marginTop: 2,
-    color: WarshPalette.gold,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.italic,
     fontSize: FontSizes.caption,
     fontStyle: "italic",
@@ -246,10 +243,10 @@ const styles = StyleSheet.create({
   },
   cardXp: {
     color: WarshPalette.sage,
-    fontFamily: Fonts.display,
+    fontFamily: Fonts.bold,
     fontSize: FontSizes.caption,
-    fontWeight: "500",
     lineHeight: LineHeights.caption,
+    fontVariant: ["lining-nums", "tabular-nums"],
   },
   cardXpLocked: {
     color: WarshPalette.subtleBrown,

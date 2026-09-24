@@ -273,7 +273,7 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.xs,
   },
   titleLocked: { color: WarshPalette.subtleBrown },
-  titleAr: { color: WarshPalette.gold, marginBottom: Spacing.xs },
+  titleAr: { color: WarshPalette.goldText, marginBottom: Spacing.xs },
   description: {
     fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM,

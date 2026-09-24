@@ -437,14 +437,14 @@ const styles = StyleSheet.create({
 
   header: { marginBottom: Spacing.lg },
   eyebrow: {
-    color: WarshPalette.gold, fontFamily: Fonts.regular,
-    fontSize: FontSizes.label, fontWeight: "700", textTransform: "uppercase",
+    color: WarshPalette.goldText, fontFamily: Fonts.bold,
+    fontSize: FontSizes.label, textTransform: "uppercase",
   },
   title: {
     marginTop: 2, color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.h1, fontWeight: "700", lineHeight: LineHeights.h1,
+    fontSize: FontSizes.h1, lineHeight: LineHeights.h1,
   },
-  titleAr: { color: WarshPalette.gold, marginTop: 0 },
+  titleAr: { color: WarshPalette.goldText, marginTop: 0 },
 
   searchInput: {
     marginBottom: Spacing.sm,
@@ -457,8 +457,8 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.parchmentBg,
   },
   wotdLabel: {
-    color: WarshPalette.gold, fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption, fontWeight: "700", textTransform: "uppercase",
+    color: WarshPalette.goldText, fontFamily: Fonts.bold,
+    fontSize: FontSizes.caption, textTransform: "uppercase",
     marginBottom: Spacing.sm,
   },
   wotdArabicRow: {
@@ -468,7 +468,7 @@ const styles = StyleSheet.create({
   wotdArabic: { color: WarshPalette.ink, flex: 1 },
   wotdMeaning: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.h3, fontWeight: "700", lineHeight: LineHeights.h3,
+    fontSize: FontSizes.h3, lineHeight: LineHeights.h3,
   },
   wotdTranslit: {
     color: WarshPalette.bodyBrown, fontFamily: Fonts.regular,
@@ -480,11 +480,11 @@ const styles = StyleSheet.create({
   },
   wotdAyahText: { color: WarshPalette.ink, textAlign: "right" },
   wotdAyahRef: {
-    marginTop: 4, color: WarshPalette.gold, fontFamily: Fonts.regular,
+    marginTop: 4, color: WarshPalette.goldText, fontFamily: Fonts.regular,
     fontSize: FontSizes.caption,
   },
   wotdTapHint: {
-    marginTop: Spacing.sm, color: WarshPalette.gold,
+    marginTop: Spacing.sm, color: WarshPalette.goldText,
     fontFamily: Fonts.regular, fontSize: FontSizes.caption,
     textAlign: "right",
   },
@@ -501,15 +501,15 @@ const styles = StyleSheet.create({
   reviewCardLeft: { flexDirection: "row", alignItems: "center" },
   reviewCardTitle: {
     color: WarshPalette.sage, fontFamily: Fonts.display,
-    fontSize: FontSizes.bodyL, fontWeight: "700",
+    fontSize: FontSizes.bodyL,
   },
   reviewCardCount: {
     color: WarshPalette.bodyBrown, fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM,
   },
   reviewCardCta: {
-    color: WarshPalette.sage, fontFamily: Fonts.display,
-    fontSize: FontSizes.bodyL, fontWeight: "700",
+    color: WarshPalette.sage, fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyL,
   },
 
   // Stats
@@ -520,8 +520,9 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.white,
   },
   statValue: {
-    color: WarshPalette.sage, fontFamily: Fonts.display,
-    fontSize: FontSizes.h2, fontWeight: "700", lineHeight: LineHeights.h2,
+    color: WarshPalette.sage, fontFamily: Fonts.bold,
+    fontSize: FontSizes.h2, lineHeight: LineHeights.h2,
+    fontVariant: ["lining-nums", "tabular-nums"],
   },
   statLabel: {
     marginTop: Spacing.xs, color: WarshPalette.subtleBrown,
@@ -540,21 +541,21 @@ const styles = StyleSheet.create({
   myWordsLeft: { flexDirection: "row", alignItems: "center" },
   myWordsTitle: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.bodyL, fontWeight: "700",
+    fontSize: FontSizes.bodyL,
   },
   myWordsSub: {
     color: WarshPalette.bodyBrown, fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM,
   },
   myWordsCta: {
-    color: WarshPalette.gold, fontFamily: Fonts.display,
-    fontSize: FontSizes.bodyL, fontWeight: "700",
+    color: WarshPalette.goldText, fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyL,
   },
 
   // Section
   sectionTitle: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.h3, fontWeight: "700", lineHeight: LineHeights.h3,
+    fontSize: FontSizes.h3, lineHeight: LineHeights.h3,
     marginBottom: Spacing.md,
   },
 
@@ -572,7 +573,7 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.bodyM, lineHeight: LineHeights.bodyM,
   },
   topicCount: {
-    marginTop: 2, color: WarshPalette.gold,
+    marginTop: 2, color: WarshPalette.goldText,
     fontFamily: Fonts.regular, fontSize: FontSizes.caption,
   },
 
@@ -593,13 +594,13 @@ const styles = StyleSheet.create({
   wordArabicRow: { flexDirection: "row", alignItems: "center", gap: 4 },
   wordArabic: { color: WarshPalette.ink },
   rootText: {
-    flexShrink: 1, color: WarshPalette.gold,
+    flexShrink: 1, color: WarshPalette.goldText,
     fontFamily: Fonts.regular, fontSize: FontSizes.caption,
   },
   meaningText: {
     marginTop: Spacing.xs, color: WarshPalette.ink,
     fontFamily: Fonts.display, fontSize: FontSizes.bodyL,
-    fontWeight: "700", lineHeight: LineHeights.bodyL,
+    lineHeight: LineHeights.bodyL,
   },
   detailText: {
     color: WarshPalette.bodyBrown, fontFamily: Fonts.regular,
@@ -615,7 +616,7 @@ const styles = StyleSheet.create({
   },
   emptyTitle: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.h3, fontWeight: "700",
+    fontSize: FontSizes.h3,
   },
   emptyCopy: {
     marginTop: Spacing.xs, color: WarshPalette.bodyBrown,

@@ -531,7 +531,7 @@ export const ur = {
   "player.prompt.identifyRoot": "اس لفظ کا تین حرفی روٹ (الجذر) کیا ہے؟",
   "player.prompt.conversationReply": "کوئی آپ سے یہ کہتا ہے۔ آپ کیا جواب دیں گے؟",
   "player.feedback.correct": "آپ نے نمونہ پہچان لیا اور درست جواب چن لیا۔",
-  "player.feedback.almost": "قریب تھے - اسے دوبارہ دیکھتے ہیں",
+  "player.feedback.almost": "ابھی ٹھیک نہیں، وجہ یہ ہے",
   "player.writePlaceholder": "یہاں لکھیں",
   "player.showHint": "اشارہ دکھائیں",
   "player.startsWith": "شروع ہوتا ہے:",

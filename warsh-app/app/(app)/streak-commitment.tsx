@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
   },
   eyebrow: {
     marginTop: Spacing.sm,
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.label,
     lineHeight: LineHeights.label,
@@ -225,7 +225,6 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: Fonts.bold,
     fontSize: FontSizes.displayXL,
-    fontWeight: "700",
     color: WarshPalette.ink,
     lineHeight: LineHeights.displayXL,
     textAlign: "center",
@@ -263,7 +262,7 @@ const styles = StyleSheet.create({
     gap: 2,
   },
   dailyUnitEyebrow: {
-    color: WarshPalette.goldDeep,
+    color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.label,
     letterSpacing: 1.2,
@@ -271,7 +270,6 @@ const styles = StyleSheet.create({
   dailyUnitValue: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyL,
-    fontWeight: "600",
     color: WarshPalette.navy,
     lineHeight: LineHeights.bodyL,
   },
@@ -324,7 +322,6 @@ const styles = StyleSheet.create({
   goalLabel: {
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.h3,
-    fontWeight: "600",
     color: WarshPalette.ink,
     lineHeight: LineHeights.h3,
   },

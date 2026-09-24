@@ -273,8 +273,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.5,
     borderBottomColor: WarshPalette.parchmentCardBorder,
   },
-  backBtn: { color: WarshPalette.gold, fontFamily: Fonts.regular, fontSize: FontSizes.bodyL, width: 60 },
-  headerTitle: { color: WarshPalette.ink, fontFamily: Fonts.display, fontSize: FontSizes.h2, fontWeight: "700" },
+  backBtn: { color: WarshPalette.goldText, fontFamily: Fonts.regular, fontSize: FontSizes.bodyL, width: 60 },
+  headerTitle: { color: WarshPalette.ink, fontFamily: Fonts.display, fontSize: FontSizes.h2 },
 
   centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: Spacing.xl, gap: Spacing.md },
   errorText: {
@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.bodyL, textAlign: "center",
   },
   retryBtn: { paddingVertical: Spacing.sm, paddingHorizontal: Spacing.lg },
-  retryText: { color: WarshPalette.gold, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyL },
+  retryText: { color: WarshPalette.goldText, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyL },
 
   content: { paddingHorizontal: Spacing.xl, paddingTop: Spacing.lg, paddingBottom: Spacing.xl * 2 },
   webRow: {
@@ -308,12 +308,12 @@ const styles = StyleSheet.create({
   statusRow: { flexDirection: "row", alignItems: "center", gap: Spacing.sm, marginBottom: Spacing.sm },
   statusDot: { width: 10, height: 10, borderRadius: 5 },
   statusLabel: {
-    fontFamily: Fonts.semiBold, fontSize: FontSizes.caption,
-    fontWeight: "700", textTransform: "uppercase", letterSpacing: 0.8,
+    fontFamily: Fonts.bold, fontSize: FontSizes.caption,
+    textTransform: "uppercase", letterSpacing: 0.8,
   },
   planName: {
     color: WarshPalette.ink, fontFamily: Fonts.display,
-    fontSize: FontSizes.h2, fontWeight: "700", lineHeight: LineHeights.h2,
+    fontSize: FontSizes.h2, lineHeight: LineHeights.h2,
   },
   planMeta: {
     marginTop: Spacing.xs, color: WarshPalette.bodyBrown,
@@ -335,12 +335,12 @@ const styles = StyleSheet.create({
 
   actions: { marginTop: Spacing.xl, gap: Spacing.sm },
   primaryBtn: {
-    backgroundColor: WarshPalette.gold, padding: Spacing.lg,
+    backgroundColor: WarshPalette.navy, padding: Spacing.lg,
     borderRadius: Radii.lg, alignItems: "center",
   },
   primaryBtnText: {
-    color: WarshPalette.ink, fontFamily: Fonts.bold,
-    fontSize: FontSizes.h3, fontWeight: "700",
+    color: WarshPalette.parchment, fontFamily: Fonts.bold,
+    fontSize: FontSizes.h3,
   },
   secondaryBtn: {
     flexDirection: "row", alignItems: "center", justifyContent: "center", gap: Spacing.sm,
@@ -350,11 +350,11 @@ const styles = StyleSheet.create({
   },
   secondaryBtnText: {
     color: WarshPalette.ink, fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.bodyL, fontWeight: "600",
+    fontSize: FontSizes.bodyL,
   },
   linkBtn: { alignItems: "center", paddingVertical: Spacing.md },
   linkText: {
-    color: WarshPalette.gold, fontFamily: Fonts.regular,
+    color: WarshPalette.goldText, fontFamily: Fonts.regular,
     fontSize: FontSizes.bodyM, textDecorationLine: "underline",
   },
   legal: {
