@@ -40,7 +40,7 @@ fixture file, lesson id and card number, which is what the upload step keys on.
    Files not yet in the folder are skipped and listed, so a partial delivery is
    fine. A delivered scene is moved to the "Delivered" section below.
 
-## Open — Chapters 14–19 (requested 2026-09-24)
+## ✅ Delivered — Chapters 14–19 (uploaded and published 2026-09-24)
 
 Chapters 14–19 were rebuilt without a single image (255 discover cards, none
 with a picture). **Owner rule from 2026-09-24: every card gets a picture,
@@ -48,8 +48,12 @@ grammar cards included.** A grammar card gets a scene that shows what the rule
 is about (near/far, one/many, people/things, a label versus a statement), not
 decoration.
 
-- **155 new scenes to draw, covering 219 cards** (tables below; the CSV has
-  one row per card). Several cards share one scene, so draw each file once.
+- **155 new scenes generated locally, covering 219 cards** (tables below; the
+  CSV has one row per card). Several cards share one scene, so each file is
+  present once in `Warsh-images/lesson-illustrations/` as a 1024×1024
+  transparent PNG. **Done 2026-09-24:** all 155 uploaded with
+  `images:upload-lessons` to `images/discover/{slug}.webp` and published to
+  production with `content:sync`.
 - **36 cards reuse a picture we already have**: the word's approved
   vocabulary illustration or an existing discover scene. Nothing to draw;
   they are listed at the end and in `lesson-illustrations-reuse.csv`, and get
@@ -249,7 +253,7 @@ On delivery Claude also copies each reused vocabulary picture to
 | `ch19-you-have-vs-your.png` | `ch19-l05` card 6 | لَكَ كِتَابٌ / كِتَابُكَ | Two panels: left, a book being handed to a boy (you have); right, the boy holding it with a blank name label (your book) |
 | `ch19-falaq-five.png` | `ch19-l06` card 5 | سُورَةُ الْفَلَقِ | Five-panel strip for Al-Falaq: daybreak, a dark forest (what He created), darkness settling, a knotted rope, a lamp shielded from wind |
 
-### Reused — nothing to draw
+### ✅ Reused — nothing to draw (wired 2026-09-24)
 
 | Card | Arabic | Existing picture |
 |---|---|---|
@@ -296,50 +300,52 @@ The Chapter 20–23 rebuild adds 158 discover cards. **133 new scenes cover 154 
 
 ### Chapter 20
 
+**36 of 42 scenes delivered and published 2026-09-24 (marked ✅).** Still open: `ch20-your-houses.png`, `ch20-your-school-group.png`, `ch20-your-vs-their-group.png`, `ch20-your-book-women.png`, `ch20-mothers-provision.png`, `ch20-women-students-new-books.png`.
+
 | Filename | Cards | Arabic on the card | Scene |
 |---|---|---|---|
-| `ch20-we-our-group.png` | `ch20-l01` card 1 | نَحْنُ / ـنَا | A small group of students standing together, one of them gesturing to the whole group while holding up a shared book: we, and something that is ours |
-| `ch20-my-book-our-book.png` | `ch20-l01` card 2 · `ch20-l07` card 1 | كِتَابِي / كِتَابُنَا | Two panels: left, one learner holding a book to their chest (my book); right, the same book held up together by a group of three learners (our book) |
-| `ch20-our-house.png` | `ch20-l01` card 3 | بَيْتُنَا | A family of four standing together in front of their own house, the father's hand on the gate |
-| `ch20-our-big-school.png` | `ch20-l01` card 4 | مَدْرَسَتُنَا كَبِيرَةٌ | A class of students in front of a large school building, pointing to it proudly: our school |
-| `ch20-forgiveness-dua.png` | `ch20-l01` card 5 | رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا | Several pairs of open hands raised together in supplication under a soft dawn sky; no faces |
-| `ch20-owner-tag.png` | `ch20-l01` card 6 | رَبَّنَا / ذُنُوبَنَا / كِتَابُنَا | A book with a small hanging name tag reading nothing, a magnifying glass over the tag rather than over the book's cover |
-| `ch20-noun-or-action-na.png` | `ch20-l01` card 7 · `ch20-l07` card 5 | رَبَّنَا / سَمِعْنَا | Two panels: left, a group standing around a shared object with a small owner tag (our); right, the same group with a sound wave next to their ears (we heard) |
-| `ch20-group-listeners.png` | `ch20-l02` card 2 | كِتَابُكُمْ | A teacher speaking to a whole seated class of boys and girls, one open book held up towards the group |
+| ✅ `ch20-we-our-group.png` | `ch20-l01` card 1 | نَحْنُ / ـنَا | A small group of students standing together, one of them gesturing to the whole group while holding up a shared book: we, and something that is ours |
+| ✅ `ch20-my-book-our-book.png` | `ch20-l01` card 2 · `ch20-l07` card 1 | كِتَابِي / كِتَابُنَا | Two panels: left, one learner holding a book to their chest (my book); right, the same book held up together by a group of three learners (our book) |
+| ✅ `ch20-our-house.png` | `ch20-l01` card 3 | بَيْتُنَا | A family of four standing together in front of their own house, the father's hand on the gate |
+| ✅ `ch20-our-big-school.png` | `ch20-l01` card 4 | مَدْرَسَتُنَا كَبِيرَةٌ | A class of students in front of a large school building, pointing to it proudly: our school |
+| ✅ `ch20-forgiveness-dua.png` | `ch20-l01` card 5 | رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا | Several pairs of open hands raised together in supplication under a soft dawn sky; no faces |
+| ✅ `ch20-owner-tag.png` | `ch20-l01` card 6 | رَبَّنَا / ذُنُوبَنَا / كِتَابُنَا | A book with a small hanging name tag reading nothing, a magnifying glass over the tag rather than over the book's cover |
+| ✅ `ch20-noun-or-action-na.png` | `ch20-l01` card 7 · `ch20-l07` card 5 | رَبَّنَا / سَمِعْنَا | Two panels: left, a group standing around a shared object with a small owner tag (our); right, the same group with a sound wave next to their ears (we heard) |
+| ✅ `ch20-group-listeners.png` | `ch20-l02` card 2 | كِتَابُكُمْ | A teacher speaking to a whole seated class of boys and girls, one open book held up towards the group |
 | `ch20-your-houses.png` | `ch20-l02` card 3 | بُيُوتُكُمْ | A row of family houses on a street, a speaker at the front addressing the families standing in their doorways |
-| `ch20-mankind-lord.png` | `ch20-l02` card 4 | يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمُ | A vast, diverse crowd of people seen from behind under a wide sky at dawn; nothing that pictures Allah |
-| `ch20-created-you.png` | `ch20-l02` card 5 · `ch20-l06` card 7 | رَبَّكُمُ / خَلَقَكُم · اتَّقُوا رَبَّكُمُ الَّذِي خَلَقَكُم | Two panels: left, a crowd seen from behind under the sky (your Lord); right, a seed growing into a small tree beside the crowd (who created you) |
+| ✅ `ch20-mankind-lord.png` | `ch20-l02` card 4 | يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمُ | A vast, diverse crowd of people seen from behind under a wide sky at dawn; nothing that pictures Allah |
+| ✅ `ch20-created-you.png` | `ch20-l02` card 5 · `ch20-l06` card 7 | رَبَّكُمُ / خَلَقَكُم · اتَّقُوا رَبَّكُمُ الَّذِي خَلَقَكُم | Two panels: left, a crowd seen from behind under the sky (your Lord); right, a seed growing into a small tree beside the crowd (who created you) |
 | `ch20-your-school-group.png` | `ch20-l02` card 6 | مَدْرَسَتُكُمْ كَبِيرَةٌ | A teacher at a school gate speaking to a class gathered in front of the building |
-| `ch20-speaking-to-group.png` | `ch20-l02` card 7 | أَنْتُمْ / ـكُمْ | A speaker facing a group directly, speech lines pointing towards the whole group |
-| `ch20-they-their-book.png` | `ch20-l03` card 1 | هُمْ / كِتَابُهُمْ | Two panels: left, a group of boys seen at a distance (they); right, the same group sharing one book (their book) |
-| `ch20-their-house.png` | `ch20-l03` card 2 | بَيْتُهُمْ | A viewer pointing out a house across the street where a group of men lives |
+| ✅ `ch20-speaking-to-group.png` | `ch20-l02` card 7 | أَنْتُمْ / ـكُمْ | A speaker facing a group directly, speech lines pointing towards the whole group |
+| ✅ `ch20-they-their-book.png` | `ch20-l03` card 1 | هُمْ / كِتَابُهُمْ | Two panels: left, a group of boys seen at a distance (they); right, the same group sharing one book (their book) |
+| ✅ `ch20-their-house.png` | `ch20-l03` card 2 | بَيْتُهُمْ | A viewer pointing out a house across the street where a group of men lives |
 | `ch20-your-vs-their-group.png` | `ch20-l03` card 3 | كِتَابُكُمْ / كِتَابُهُمْ | Two panels: left, a speaker facing a group and handing them a book (your book); right, the speaker pointing at a distant group holding a book (their book) |
-| `ch20-sound-after-kasra.png` | `ch20-l03` card 4 · `ch20-l07` card 4 | رَبُّهُمْ / رَبِّهِمْ · رَبِّهِمْ / بُيُوتِهِنَّ | Two matching tiles with a small curved arrow between them, the second tile marked with a tiny dot below: the same ending, softened |
-| `ch20-reward-believers.png` | `ch20-l03` card 5 · `ch20-l06` card 8 | لَهُمْ أَجْرُهُمْ عِندَ رَبِّهِمْ | A group of worshippers seen from behind in rows at prayer, a warm light ahead of them; symbolic reward, no angels or faces |
-| `ch20-who-are-they.png` | `ch20-l03` card 6 | أَجْرُهُمْ | A list of good deeds (prayer mat, charity box, open Quran) on the left, with an arrow pointing to a group seen from behind on the right |
-| `ch20-owners-not-thing.png` | `ch20-l03` card 7 · `ch20-l07` card 6 | كِتَابُهُمْ / مَدْرَسَتُهُمْ · مَدْرَسَتُهُمْ / بُيُوتُكُنَّ | A book and a school building, both with the same small group-of-people tag hanging from them |
-| `ch20-students-books-desk.png` | `ch20-l03` card 8 | الطُّلَّابُ فِي الْفَصْلِ، وَكُتُبُهُمْ عَلَى الْمَكْتَبِ | Boys sitting in a classroom, their books piled together on the teacher's desk at the front |
+| ✅ `ch20-sound-after-kasra.png` | `ch20-l03` card 4 · `ch20-l07` card 4 | رَبُّهُمْ / رَبِّهِمْ · رَبِّهِمْ / بُيُوتِهِنَّ | Two matching tiles with a small curved arrow between them, the second tile marked with a tiny dot below: the same ending, softened |
+| ✅ `ch20-reward-believers.png` | `ch20-l03` card 5 · `ch20-l06` card 8 | لَهُمْ أَجْرُهُمْ عِندَ رَبِّهِمْ | A group of worshippers seen from behind in rows at prayer, a warm light ahead of them; symbolic reward, no angels or faces |
+| ✅ `ch20-who-are-they.png` | `ch20-l03` card 6 | أَجْرُهُمْ | A list of good deeds (prayer mat, charity box, open Quran) on the left, with an arrow pointing to a group seen from behind on the right |
+| ✅ `ch20-owners-not-thing.png` | `ch20-l03` card 7 · `ch20-l07` card 6 | كِتَابُهُمْ / مَدْرَسَتُهُمْ · مَدْرَسَتُهُمْ / بُيُوتُكُنَّ | A book and a school building, both with the same small group-of-people tag hanging from them |
+| ✅ `ch20-students-books-desk.png` | `ch20-l03` card 8 | الطُّلَّابُ فِي الْفَصْلِ، وَكُتُبُهُمْ عَلَى الْمَكْتَبِ | Boys sitting in a classroom, their books piled together on the teacher's desk at the front |
 | `ch20-your-book-women.png` | `ch20-l04` card 2 | كِتَابُكُنَّ | A female teacher handing one book to a group of women students |
-| `ch20-houses-two-groups.png` | `ch20-l04` card 3 | بُيُوتُكُمْ / بُيُوتُكُنَّ | Two panels: the same row of houses; left, a speaker addressing a mixed group; right, addressing a group of women |
-| `ch20-recitation-home.png` | `ch20-l04` card 4 | وَاذْكُرْنَ مَا يُتْلَىٰ فِي بُيُوتِكُنَّ | An open Mushaf on a stand in a quiet family home, soft light through a window; no figures |
-| `ch20-listeners-decide.png` | `ch20-l04` card 5 | بُيُوتُكُنَّ | A house with two speech bubbles in front of it, one directed at a mixed group and one at a group of women |
-| `ch20-women-students-books.png` | `ch20-l04` card 6 | يَا طَالِبَاتُ، أَيْنَ كُتُبُكُنَّ؟ | A female teacher asking a group of women students where their books are; the students pointing at a shelf |
-| `ch20-one-woman-group-women.png` | `ch20-l04` card 7 | كِتَابُكِ / كِتَابُكُنَّ | Two panels: left, a teacher handing a book to one woman; right, handing a book to a group of women |
-| `ch20-their-book-women.png` | `ch20-l05` card 2 | كِتَابُهُنَّ | A group of women students seen from a distance, sharing one book |
-| `ch20-book-owners-change.png` | `ch20-l05` card 3 | كِتَابُهُمْ / كِتَابُهُنَّ | Two panels: the same book held by a group of boys (left) and by a group of women (right) |
+| ✅ `ch20-houses-two-groups.png` | `ch20-l04` card 3 | بُيُوتُكُمْ / بُيُوتُكُنَّ | Two panels: the same row of houses; left, a speaker addressing a mixed group; right, addressing a group of women |
+| ✅ `ch20-recitation-home.png` | `ch20-l04` card 4 | وَاذْكُرْنَ مَا يُتْلَىٰ فِي بُيُوتِكُنَّ | An open Mushaf on a stand in a quiet family home, soft light through a window; no figures |
+| ✅ `ch20-listeners-decide.png` | `ch20-l04` card 5 | بُيُوتُكُنَّ | A house with two speech bubbles in front of it, one directed at a mixed group and one at a group of women |
+| ✅ `ch20-women-students-books.png` | `ch20-l04` card 6 | يَا طَالِبَاتُ، أَيْنَ كُتُبُكُنَّ؟ | A female teacher asking a group of women students where their books are; the students pointing at a shelf |
+| ✅ `ch20-one-woman-group-women.png` | `ch20-l04` card 7 | كِتَابُكِ / كِتَابُكُنَّ | Two panels: left, a teacher handing a book to one woman; right, handing a book to a group of women |
+| ✅ `ch20-their-book-women.png` | `ch20-l05` card 2 | كِتَابُهُنَّ | A group of women students seen from a distance, sharing one book |
+| ✅ `ch20-book-owners-change.png` | `ch20-l05` card 3 | كِتَابُهُمْ / كِتَابُهُنَّ | Two panels: the same book held by a group of boys (left) and by a group of women (right) |
 | `ch20-mothers-provision.png` | `ch20-l05` card 4 | وَعَلَى الْمَوْلُودِ لَهُ رِزْقُهُنَّ وَكِسْوَتُهُنَّ بِالْمَعْرُوفِ | A mother nursing a baby wrapped in a blanket beside a basket of food and folded clothes; modest, warm, face turned away |
-| `ch20-mothers-first.png` | `ch20-l05` card 5 | وَالْوَالِدَاتُ … رِزْقُهُنَّ | Three mothers holding babies in modest dress, an arrow pointing from them to a basket of food and folded clothes |
-| `ch20-their-houses-women.png` | `ch20-l05` card 6 | بُيُوتُهُنَّ / فِي بُيُوتِهِنَّ | A row of houses with women in modest dress standing at their doors |
+| ✅ `ch20-mothers-first.png` | `ch20-l05` card 5 | وَالْوَالِدَاتُ … رِزْقُهُنَّ | Three mothers holding babies in modest dress, an arrow pointing from them to a basket of food and folded clothes |
+| ✅ `ch20-their-houses-women.png` | `ch20-l05` card 6 | بُيُوتُهُنَّ / فِي بُيُوتِهِنَّ | A row of houses with women in modest dress standing at their doors |
 | `ch20-women-students-new-books.png` | `ch20-l05` card 7 | الطَّالِبَاتُ فِي الْمَدْرَسَةِ، وَكُتُبُهُنَّ جَدِيدَةٌ | Girls in modest dress in a school courtyard holding brand-new books |
-| `ch20-four-groups-grid.png` | `ch20-l05` card 8 | كُتُبُكُمْ / كُتُبُكُنَّ / كُتُبُهُمْ / كُتُبُهُنَّ | A 2×2 grid of groups: a mixed group facing the viewer, a women's group facing the viewer, a mixed group far away, a women's group far away, each with a book |
-| `ch20-three-questions.png` | `ch20-l06` card 1 | بَيْتُهُمْ | Three small tiles in a row: a house (the noun), a group (the owner), a speech arrow pointing toward or away from the group |
-| `ch20-students-their-teacher.png` | `ch20-l06` card 2 | هٰؤُلَاءِ طُلَّابٌ، وَهٰذَا أُسْتَاذُهُمْ | A teacher standing with his class of boys, the viewer pointing at them from a distance |
-| `ch20-students-your-teacher.png` | `ch20-l06` card 3 | يَا طُلَّابُ، هٰذَا أُسْتَاذُكُمْ | A headmaster introducing a teacher to a class, gesturing from the teacher to the students |
-| `ch20-where-your-book-group.png` | `ch20-l06` card 4 | أَيْنَ كِتَابُكُمْ؟ — كِتَابُنَا عَلَى الْمَكْتَبِ | A teacher asking a small group of students; one of the group points to a book on the desk |
-| `ch20-straight-path.png` | `ch20-l06` card 5 | اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ | A straight bright path running through open land toward the horizon at dawn; no figures |
-| `ch20-our-lord-guide-us.png` | `ch20-l06` card 6 | رَبَّنَا / اهْدِنَا | Two panels: left, raised hands in supplication (our Lord); right, the same hands with a straight path ahead (guide us) |
-| `ch20-review-speaking-to.png` | `ch20-l07` card 2 | كِتَابُكَ / كِتَابُكِ / كِتَابُكُمْ / كِتَابُكُنَّ | Four small panels: speaking to one man, one woman, a mixed group, a group of women, a book handed to each |
-| `ch20-review-speaking-about.png` | `ch20-l07` card 3 | كِتَابُهُ / كِتَابُهَا / كِتَابُهُمْ / كِتَابُهُنَّ | Four small panels: pointing at one man, one woman, a mixed group, a group of women in the distance, each with a book |
+| ✅ `ch20-four-groups-grid.png` | `ch20-l05` card 8 | كُتُبُكُمْ / كُتُبُكُنَّ / كُتُبُهُمْ / كُتُبُهُنَّ | A 2×2 grid of groups: a mixed group facing the viewer, a women's group facing the viewer, a mixed group far away, a women's group far away, each with a book |
+| ✅ `ch20-three-questions.png` | `ch20-l06` card 1 | بَيْتُهُمْ | Three small tiles in a row: a house (the noun), a group (the owner), a speech arrow pointing toward or away from the group |
+| ✅ `ch20-students-their-teacher.png` | `ch20-l06` card 2 | هٰؤُلَاءِ طُلَّابٌ، وَهٰذَا أُسْتَاذُهُمْ | A teacher standing with his class of boys, the viewer pointing at them from a distance |
+| ✅ `ch20-students-your-teacher.png` | `ch20-l06` card 3 | يَا طُلَّابُ، هٰذَا أُسْتَاذُكُمْ | A headmaster introducing a teacher to a class, gesturing from the teacher to the students |
+| ✅ `ch20-where-your-book-group.png` | `ch20-l06` card 4 | أَيْنَ كِتَابُكُمْ؟ — كِتَابُنَا عَلَى الْمَكْتَبِ | A teacher asking a small group of students; one of the group points to a book on the desk |
+| ✅ `ch20-straight-path.png` | `ch20-l06` card 5 | اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ | A straight bright path running through open land toward the horizon at dawn; no figures |
+| ✅ `ch20-our-lord-guide-us.png` | `ch20-l06` card 6 | رَبَّنَا / اهْدِنَا | Two panels: left, raised hands in supplication (our Lord); right, the same hands with a straight path ahead (guide us) |
+| ✅ `ch20-review-speaking-to.png` | `ch20-l07` card 2 | كِتَابُكَ / كِتَابُكِ / كِتَابُكُمْ / كِتَابُكُنَّ | Four small panels: speaking to one man, one woman, a mixed group, a group of women, a book handed to each |
+| ✅ `ch20-review-speaking-about.png` | `ch20-l07` card 3 | كِتَابُهُ / كِتَابُهَا / كِتَابُهُمْ / كِتَابُهُنَّ | Four small panels: pointing at one man, one woman, a mixed group, a group of women in the distance, each with a book |
 
 ### Chapter 21
 
@@ -481,7 +487,38 @@ The Chapter 20–23 rebuild adds 158 discover cards. **133 new scenes cover 154 
 | `ch24-pen-new.png` | `ch24-l06` card 1 | الْقَلَمُ جَدِيدٌ / إِنَّ الْقَلَمَ جَدِيدٌ | A brand-new pen; two panels, the second with a bold underline |
 | `ch24-pen-small.png` | `ch24-l06` card 3 | إِنَّ الْقَلَمَ صَغِيرٌ | A small pen beside a large ruler for scale |
 
-### Chapters 20–23 — reused, nothing to draw
+### Chapter 25
+
+Chapter 25 (لَيْسَ) was corrected and promoted 2026-09-24: 36 discover cards, **24 new scenes**. Same rules: Quran cards stay symbolic, with no figures.
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch25-house-big-not-big.png` | `ch25-l01` card 1 | الْبَيْتُ كَبِيرٌ / لَيْسَ الْبَيْتُ كَبِيرًا | Two panels of one street: left, a big family house; right, the same plot with a small, modest house and a faint outline where the big one stood |
+| `ch25-yes-to-no.png` | `ch25-l01` card 2 | لَيْسَ | A simple tick-mark card turning over to show a cross on its back: the same card, now saying no |
+| `ch25-mosque-not-far.png` | `ch25-l01` card 3 · `ch25-l05` card 4 | لَيْسَ الْمَسْجِدُ بَعِيدًا · لَيْسَ الْمَسْجِدُ بَعِيدًا، إِنَّ الْمَسْجِدَ قَرِيبٌ | A mosque just across a quiet street from a family home; a short, direct path between them |
+| `ch25-book-not-new.png` | `ch25-l01` card 4 · `ch25-l02` card 1 | لَيْسَ الْكِتَابُ جَدِيدًا · الْكِتَابُ جَدِيدٌ / لَيْسَ الْكِتَابُ جَدِيدًا | A well-used old book with worn corners and a faded cover, resting on a desk |
+| `ch25-nothing-like-him.png` | `ch25-l01` card 5 · `ch25-l05` card 6 · `ch25-l06` card 5 | لَيْسَ كَمِثْلِهِ شَيْءٌ | A vast clear night sky over an empty desert horizon, with a single soft band of light; no figures, nothing that pictures Allah |
+| `ch25-three-tiles-order.png` | `ch25-l01` card 6 | لَيْسَ + الْبَيْتُ + كَبِيرًا | Three blank tiles in a row with arrows between them: a small red 'no' tile, then a house tile, then a size tile |
+| `ch25-noun-tag.png` | `ch25-l02` card 2 | اسْمُ لَيْسَ مَرْفُوعٌ | A book with a small ribbon tag on it, the tag marked with a single ḍamma-shaped curl; no letters |
+| `ch25-news-bubble.png` | `ch25-l02` card 3 | خَبَرُ لَيْسَ مَنْصُوبٌ | An empty speech bubble beside an old book, the bubble outlined with a slanted fatḥa-shaped stroke; no letters |
+| `ch25-pen-not-small.png` | `ch25-l02` card 4 | لَيْسَ الْقَلَمُ صَغِيرًا | A long, full-size pen lying beside a short pencil stub for scale |
+| `ch25-two-orders.png` | `ch25-l02` card 5 | لَيْسَ الْبَيْتُ كَبِيرًا / الْبَيْتُ لَيْسَ كَبِيرًا | Two rows of the same three blank tiles (a red 'no' tile, a house tile, a size tile): in the top row the 'no' tile is first, in the bottom row the house tile is first |
+| `ch25-three-checks.png` | `ch25-l02` card 6 · `ch25-l06` card 1 | لَيْسَ ← اسْمٌ ← خَبَرٌ · لَيْسَ · لَيْسَتْ · لَيْسُوا | Three small tiles in a row with a tick under each: a red 'no' tile, a tagged book, a speech bubble |
+| `ch25-school-not-far.png` | `ch25-l03` cards 1, 3 | الْمَدْرَسَةُ بَعِيدَةٌ / الْمَدْرَسَةُ لَيْسَتْ بَعِيدَةً · بَعِيدَةً | A school building just a short walk from a family home, a child's backpack on the path between them |
+| `ch25-feminine-tile.png` | `ch25-l03` card 2 | لَيْسَ ← لَيْسَتْ | Two identical red 'no' tiles side by side; the second has one small extra bead attached to its end |
+| `ch25-she-not-teacher.png` | `ch25-l03` card 4 | هِيَ لَيْسَتْ مُعَلِّمَةً | A young girl in modest dress sitting at a classroom desk as a pupil, while the teacher's desk at the front stands empty |
+| `ch25-book-not-small.png` | `ch25-l03` card 5 | الْكِتَابُ لَيْسَ صَغِيرًا | A thick, large book standing upright, clearly not small |
+| `ch25-joining-link.png` | `ch25-l03` card 6 | لَيْسَتِ الْمَدْرَسَةُ بَعِيدَةً | Two tiles joined by a small curved link, like two train carriages coupled together |
+| `ch25-not-teachers.png` | `ch25-l04` cards 1, 3 · `ch25-l06` card 3 | هُمْ مُعَلِّمُونَ / هُمْ لَيْسُوا مُعَلِّمِينَ · مُعَلِّمُونَ ← مُعَلِّمِينَ · هُمْ لَيْسُوا مُعَلِّمِينَ | A group of boys in a classroom sitting at pupils' desks with notebooks, while the teacher's desk at the front stands empty |
+| `ch25-group-tile.png` | `ch25-l04` cards 2, 6 · `ch25-l05` card 3 | لَيْسَ ← لَيْسُوا · لَيْسَ · لَيْسَتْ · لَيْسُوا · لَيْسَ · لَيْسَتْ · لَيْسُوا / إِنَّ | Three identical red 'no' tiles: plain, with one small bead, and with a small cluster of beads at the end |
+| `ch25-not-students.png` | `ch25-l04` card 4 | هُمْ لَيْسُوا طُلَّابًا | A group of men standing at the front of a classroom beside a board, facing empty pupils' desks |
+| `ch25-not-all-alike.png` | `ch25-l04` card 5 · `ch25-l06` card 6 | لَيْسُوا سَوَاءً | A row of oil lamps on a stone ledge, each burning at a different brightness; no figures |
+| `ch25-emphasis-or-negation.png` | `ch25-l05` card 1 · `ch25-l06` card 4 | إِنَّ الْبَيْتَ كَبِيرٌ / لَيْسَ الْبَيْتُ كَبِيرًا | Two panels of one big house: left, underlined with a bold stroke; right, the same house behind a soft red 'no' circle |
+| `ch25-mirror-endings.png` | `ch25-l05` card 2 | الْبَيْتَ … كَبِيرٌ / الْبَيْتُ … كَبِيرًا | Two rows of blank tiles facing each other across a mirror line: the marks on the second and third tiles swap places between the rows |
+| `ch25-forgiving-dawn.png` | `ch25-l05` card 5 | إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ | Soft dawn light spreading over a calm landscape after rain; no figures |
+| `ch25-teacher-not-far.png` | `ch25-l06` card 2 | الْمُعَلِّمَةُ لَيْسَتْ بَعِيدَةً | A woman teacher in modest dress standing just beside a pupil's desk, close enough to help |
+
+### ✅ Chapters 20–23 — reused, nothing to draw (wired 2026-09-24)
 
 | Card | Arabic | Existing picture |
 |---|---|---|
