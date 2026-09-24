@@ -717,6 +717,13 @@ Everything below this list is either done and verified, or one of these:
    walk; production `content:promote-chapter-twenty-five -- --apply` after a
    clean content:check, new baseline (452), catalogue audio. Not done:
    scholarly review of the Arabic/Urdu wording and an Android emulator pass.
+   **Lesson illustrations, Chapters 14–20: delivered and published
+   2026-09-24.** 191 owner scenes (Ch14–19 complete; Ch20 36 of 42, six still
+   open) uploaded to `images/discover/`, plus the 40 reuse cards wired by
+   `scripts/wire-reused-lesson-images.ts`; 301 cards across 42 lessons,
+   published with a commit-scoped `content:sync --git-ref=HEAD^..HEAD`
+   (media only); all 227 URLs answer 200. Still to draw: the rest of Ch20,
+   Ch21–25 (`lesson-illustrations-needed.md`).
    **Chapter 24 (`Docs/proposals/chapter-24-content-proposal.md`) is built,
    staging-verified and promoted to production 2026-09-24** on the owner's
    instruction. The review confirmed the proposal's defects (Lesson 2 taught
