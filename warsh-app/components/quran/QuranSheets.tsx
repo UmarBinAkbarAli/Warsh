@@ -23,7 +23,10 @@ function BottomSheet({ visible, onClose, children }: { visible: boolean; onClose
       onRequestClose={onClose}
     >
       <Pressable style={styles.scrim} onPress={onClose} accessibilityRole="button" />
-      <View style={[styles.sheet, { paddingBottom: insets.bottom + Spacing.xl }]}>
+      {/* Gesture-nav insets can read 0 inside a translucent modal on some
+          Android builds, which left the last option under the home indicator
+          (finding M14); keep at least a gesture bar's worth of room. */}
+      <View style={[styles.sheet, { paddingBottom: Math.max(insets.bottom, 24) + Spacing.xl }]}>
         <View style={styles.handle} />
         {children}
       </View>

@@ -32,6 +32,7 @@ interface SubState {
   willCancel: boolean;
   inGracePeriod: boolean;
   trialDaysRemaining: number;
+  trialExpiresAt?: string | null;
   trialActive: boolean;
   subscriptionActive: boolean;
   hasAccess: boolean;
@@ -131,10 +132,14 @@ export default function ManageSubscriptionScreen() {
     statusKey = "manageSub.statusTrial";
     tone = "warn";
     planName = t("manageSub.freeTrial");
-    dateLine = t("manageSub.trialDaysLeft", {
-      count: state?.trialDaysRemaining ?? 0,
-      suffix: (state?.trialDaysRemaining ?? 0) !== 1 ? "s" : "",
-    });
+    // A date reads better than "463 days remaining" (finding L4).
+    const trialEnd = formatDate(state?.trialExpiresAt ?? null);
+    dateLine = trialEnd
+      ? t("manageSub.trialEnds", { date: trialEnd })
+      : t("manageSub.trialDaysLeft", {
+          count: state?.trialDaysRemaining ?? 0,
+          suffix: (state?.trialDaysRemaining ?? 0) !== 1 ? "s" : "",
+        });
     showSeePlans = true;
   } else if (subscriptionActive) {
     // active / cancelled-but-in-period / grace period — all still have access.

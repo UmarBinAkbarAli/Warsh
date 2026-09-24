@@ -71,7 +71,7 @@ export default function StreakDetailScreen() {
     <View style={[styles.screen, { paddingTop: insets.top }]}>
       {/* Header */}
       <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
-        <TouchableOpacity onPress={() => router.back()} hitSlop={8}>
+        <TouchableOpacity accessibilityRole="button" accessibilityLabel="Back" onPress={() => router.back()} hitSlop={8}>
           <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Streak · الاستمرار</Text>
@@ -87,7 +87,7 @@ export default function StreakDetailScreen() {
       >
         {/* Hero */}
         <View style={styles.heroSection}>
-          <Text style={styles.heroEmoji}>🔥</Text>
+          <Ionicons name="flame-outline" size={40} color={WarshPalette.gold} accessibilityElementsHidden importantForAccessibility="no" />
           <Text style={styles.heroNumber}>{loading ? "—" : currentStreak}</Text>
           <Text style={styles.heroSubtitle}>day streak</Text>
         </View>
@@ -148,7 +148,7 @@ export default function StreakDetailScreen() {
                     {m.label}
                   </Text>
                   <Text style={[styles.milestoneXp, achieved ? styles.milestoneXpAchieved : null]}>
-                    +{m.xp} XP
+                    +{m.xp} points
                   </Text>
                 </View>
               </View>

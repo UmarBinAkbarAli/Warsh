@@ -185,7 +185,7 @@ export default function Core500SetScreen() {
           desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.lg },
         ]}
       >
-        <TouchableOpacity
+        <TouchableOpacity accessibilityRole="button" accessibilityLabel={t("a11y.close")}
           onPress={() => router.back()}
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
         >

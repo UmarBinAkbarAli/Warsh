@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, Platform, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
+import { ActivityIndicator, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, useWindowDimensions, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
+import { StatusBarBacking } from "@components/StatusBarBacking";
 import { FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../constants/theme";
 
 type Achievement = {
@@ -58,62 +59,76 @@ export default function MilestonesScreen() {
   }
 
   return (
-    <ScrollView
-      style={styles.screen}
-      contentContainerStyle={[
-        styles.content,
-        desktopWeb ? styles.webRow : { paddingTop: insets.top + Spacing.xl },
-      ]}
-    >
-      <View style={styles.header}>
-        <Text style={styles.eyebrow}>Your journey</Text>
-        <Text style={styles.title}>Milestones</Text>
-        <Text style={styles.subtitle}>{earned.length} earned · {remaining.length} remaining</Text>
-      </View>
+    <View style={{ flex: 1 }}>
+      <ScrollView
+        style={styles.screen}
+        contentContainerStyle={[
+          styles.content,
+          desktopWeb ? styles.webRow : { paddingTop: insets.top + Spacing.xl },
+        ]}
+      >
+        {!desktopWeb ? (
+          <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityLabel="Back"
+            onPress={() => router.back()}
+            hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+            style={styles.topBack}
+          >
+            <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
+          </TouchableOpacity>
+        ) : null}
+        <View style={styles.header}>
+          <Text style={styles.eyebrow}>Your journey</Text>
+          <Text style={styles.title}>Milestones</Text>
+          <Text style={styles.subtitle}>{earned.length} earned · {remaining.length} remaining</Text>
+        </View>
 
-      {error ? <Text style={styles.errorText}>{error}</Text> : null}
+        {error ? <Text style={styles.errorText}>{error}</Text> : null}
 
-      {earned.length > 0 ? (
-        <>
-          <Text style={styles.sectionLabel}>Earned</Text>
-          {earned.map((a) => (
-            <View key={a.key} style={[styles.card, styles.cardEarned]}>
-              <View style={styles.iconWrap}>
-                <Ionicons name={a.icon as any} size={28} color={WarshPalette.gold} />
+        {earned.length > 0 ? (
+          <>
+            <Text style={styles.sectionLabel}>Earned</Text>
+            {earned.map((a) => (
+              <View key={a.key} style={[styles.card, styles.cardEarned]}>
+                <View style={styles.iconWrap}>
+                  <Ionicons name={a.icon as any} size={28} color={WarshPalette.gold} />
+                </View>
+                <View style={styles.cardBody}>
+                  <ArabicText size="sm" style={styles.cardTitle}>{a.title}</ArabicText>
+                  <Text style={styles.cardDesc}>{a.description}</Text>
+                  {a.unlockedAt ? (
+                    <Text style={styles.cardDate}>{formatDate(a.unlockedAt)}</Text>
+                  ) : null}
+                </View>
+                <Text style={styles.cardXp}>+{a.xpReward} points</Text>
               </View>
-              <View style={styles.cardBody}>
-                <ArabicText size="sm" style={styles.cardTitle}>{a.title}</ArabicText>
-                <Text style={styles.cardDesc}>{a.description}</Text>
-                {a.unlockedAt ? (
-                  <Text style={styles.cardDate}>{formatDate(a.unlockedAt)}</Text>
-                ) : null}
-              </View>
-              <Text style={styles.cardXp}>+{a.xpReward} pts</Text>
-            </View>
-          ))}
-        </>
-      ) : null}
+            ))}
+          </>
+        ) : null}
 
-      {remaining.length > 0 ? (
-        <>
-          <Text style={styles.sectionLabel}>Not yet earned</Text>
-          {remaining.map((a) => (
-            <View key={a.key} style={[styles.card, styles.cardLocked]}>
-              <View style={[styles.iconWrap, styles.iconWrapLocked]}>
-                <Ionicons name={a.icon as any} size={28} color={WarshPalette.subtleBrown} />
+        {remaining.length > 0 ? (
+          <>
+            <Text style={styles.sectionLabel}>Not yet earned</Text>
+            {remaining.map((a) => (
+              <View key={a.key} style={[styles.card, styles.cardLocked]}>
+                <View style={[styles.iconWrap, styles.iconWrapLocked]}>
+                  <Ionicons name={a.icon as any} size={28} color={WarshPalette.subtleBrown} />
+                </View>
+                <View style={styles.cardBody}>
+                  <ArabicText size="sm" style={styles.cardTitleLocked}>{a.title}</ArabicText>
+                  <Text style={styles.cardDesc}>{a.description}</Text>
+                </View>
+                <Text style={styles.cardXpLocked}>+{a.xpReward} points</Text>
               </View>
-              <View style={styles.cardBody}>
-                <ArabicText size="sm" style={styles.cardTitleLocked}>{a.title}</ArabicText>
-                <Text style={styles.cardDesc}>{a.description}</Text>
-              </View>
-              <Text style={styles.cardXpLocked}>+{a.xpReward} pts</Text>
-            </View>
-          ))}
-        </>
-      ) : null}
+            ))}
+          </>
+        ) : null}
 
-      <BrandButton title="Back" onPress={() => router.back()} style={styles.backButton} />
-    </ScrollView>
+        <BrandButton title="Back" onPress={() => router.back()} style={styles.backButton} />
+      </ScrollView>
+      <StatusBarBacking />
+    </View>
   );
 }
 
@@ -122,11 +137,12 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: WarshPalette.parchment,
+    backgroundColor: WarshPalette.creamBg,
   },
+  topBack: { alignSelf: "flex-start", minWidth: 48, minHeight: 48, justifyContent: "center", marginBottom: Spacing.sm },
   screen: {
     flex: 1,
-    backgroundColor: WarshPalette.parchment,
+    backgroundColor: WarshPalette.creamBg,
   },
   content: {
     paddingHorizontal: Spacing.xl,
@@ -242,7 +258,7 @@ const styles = StyleSheet.create({
     lineHeight: LineHeights.caption,
   },
   cardXp: {
-    color: WarshPalette.sage,
+    color: WarshPalette.sageDeep,
     fontFamily: Fonts.bold,
     fontSize: FontSizes.caption,
     lineHeight: LineHeights.caption,

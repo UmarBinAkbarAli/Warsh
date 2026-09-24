@@ -216,7 +216,7 @@ export default function WordDetailScreen() {
         <TouchableOpacity onPress={() => router.back()}>
           <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={toggleFavorite} disabled={saving}>
+        <TouchableOpacity accessibilityRole="button" accessibilityLabel={t(userWord?.isFavorite ? "a11y.unsaveWord" : "a11y.saveWord")} onPress={toggleFavorite} disabled={saving}>
           <Ionicons
             name={userWord?.isFavorite ? "heart" : "heart-outline"}
             size={24}

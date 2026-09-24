@@ -390,7 +390,7 @@ export function AnswerItConversation({
           </>
         ) : (
           <>
-            <Pressable accessibilityRole="button" onPress={toggleRecording} style={[styles.micRing, recording && styles.micRingLive]}>
+            <Pressable accessibilityRole="button" accessibilityLabel={t(recording ? "a11y.stopRecording" : "a11y.record")} onPress={toggleRecording} style={[styles.micRing, recording && styles.micRingLive]}>
               <View style={[styles.micButton, recording && styles.micButtonLive]}>
                 <Ionicons name={recording ? "stop" : "mic"} size={24} color={WarshPalette.white} />
               </View>

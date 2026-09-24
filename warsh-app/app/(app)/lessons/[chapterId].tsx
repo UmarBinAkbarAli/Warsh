@@ -16,6 +16,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
+import { StatusBarBacking } from "@components/StatusBarBacking";
 import { BrandButton } from "@components/BrandButton";
 import { useTranslationLanguage, pickLocalized } from "@services/language";
 import { useT } from "@i18n/index";
@@ -319,7 +320,7 @@ export default function ChapterScreen() {
                   <Ionicons name={lessonKindIcon(lesson)} size={12} color={WarshPalette.gold} />
                   <Text style={styles.lessonMetaText}>{lessonKindLabel(lesson, t)}</Text>
                   <Text style={styles.lessonMetaDot}>·</Text>
-                  <Text style={styles.lessonMetaText}>{lesson.xpReward} XP</Text>
+                  <Text style={styles.lessonMetaText}>{lesson.xpReward} points</Text>
                 </View>
               </View>
               <Ionicons
@@ -399,6 +400,7 @@ export default function ChapterScreen() {
 
         {desktopWeb ? <View style={styles.webRail}>{progressCard}</View> : null}
       </ScrollView>
+      <StatusBarBacking />
 
       <LessonPreviewSheet
         lesson={previewLesson}

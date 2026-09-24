@@ -31,6 +31,7 @@ import { isSentrySmokeTestEnabled, sendSentrySmokeTest } from "@services/sentry"
 import { trackCommitmentSet } from "@services/analytics";
 import { DAILY_UNIT_MINUTES, STREAK_GOAL_OPTIONS } from "../../constants/commitment";
 import { useT } from "@i18n/index";
+import { ConfirmDialog } from "@components/ConfirmDialog";
 import { type AppLanguage } from "@services/language";
 
 // AsyncStorage keys for local preferences
@@ -168,6 +169,8 @@ function OptionPicker({
 // ─── main screen ─────────────────────────────────────────────────────────────
 
 export default function SettingsScreen() {
+  const [confirmDelete, setConfirmDelete] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
   const desktopWeb = Platform.OS === "web" && width >= 960;
@@ -280,28 +283,24 @@ export default function SettingsScreen() {
     }
   }
 
-  async function handleDeleteAccount() {
-    Alert.alert(
-      t("settings.deleteAccountTitle"),
-      t("settings.deleteAccountBody"),
-      [
-        { text: t("common.cancel"), style: "cancel" },
-        {
-          text: t("settings.deleteAccountConfirm"),
-          style: "destructive",
-          onPress: async () => {
-            try {
-              await deleteAccount();
-              await cancelAllNotifications();
-              await clearSession();
-            } catch {
-              Alert.alert(t("settings.errorTitle"), t("settings.deleteAccountError"));
-            }
-          },
-        },
-      ]
-    );
+  function handleDeleteAccount() {
+    setConfirmDelete(true);
   }
+
+  async function confirmDeleteAccount() {
+    setDeleting(true);
+    try {
+      await deleteAccount();
+      await cancelAllNotifications();
+      await clearSession();
+    } catch {
+      setConfirmDelete(false);
+      Alert.alert(t("settings.errorTitle"), t("settings.deleteAccountError"));
+    } finally {
+      setDeleting(false);
+    }
+  }
+
 
   async function handleSentrySmokeTest() {
     try {
@@ -640,6 +639,17 @@ export default function SettingsScreen() {
           </View>
         </View>
       </Modal>
+      <ConfirmDialog
+        visible={confirmDelete}
+        title={t("settings.deleteAccountTitle")}
+        body={t("settings.deleteAccountBody")}
+        confirmLabel={t("settings.deleteAccountConfirm")}
+        cancelLabel={t("common.cancel")}
+        destructive
+        loading={deleting}
+        onCancel={() => setConfirmDelete(false)}
+        onConfirm={() => void confirmDeleteAccount()}
+      />
     </View>
   );
 }

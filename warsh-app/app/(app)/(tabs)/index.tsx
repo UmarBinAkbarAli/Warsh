@@ -1,6 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
 import { ArabicText } from "@components/ArabicText";
+import { StatusBarBacking } from "@components/StatusBarBacking";
 import { BrandButton } from "@components/BrandButton";
 import {
   OnboardingChecklist,
@@ -114,6 +115,13 @@ interface Core500Summary {
   completedSetCount: number;
   nextSetNumber: number | null;
   wordsLeftInNextSet: number;
+}
+
+// Authoring codes such as "R15 — " lead some Arabic titles; the Latin letters
+// and digits then reorder around the Arabic under the bidi algorithm, so the
+// learner sees only the Arabic (finding H9).
+function learnerArabicTitle(title: string | null | undefined) {
+  return (title ?? "").replace(/^[A-Za-z]+\d*\s*[—–-]\s*/, "").trim();
 }
 
 export default function HomeScreen() {
@@ -703,17 +711,12 @@ export default function HomeScreen() {
             </View>
 
             <ArabicText size="lg" style={styles.heroArabic} numberOfLines={2}>
-              {activeLesson?.titleAr || activeChapter.titleAr}
+              {learnerArabicTitle(activeLesson?.titleAr || activeChapter.titleAr)}
             </ArabicText>
             <Text style={styles.heroTitle} numberOfLines={2}>
               {pickLocalized(activeLesson?.title, activeLesson?.titleUr, translationLanguage) ||
                 pickLocalized(activeChapter.title, activeChapter.titleUr, translationLanguage)}
             </Text>
-            {activeLesson?.titleUr && activeLesson.titleUr !== activeLesson.title ? (
-              <Text style={styles.heroUrdu} numberOfLines={1}>
-                {language === "ur" ? activeLesson.title : activeLesson.titleUr}
-              </Text>
-            ) : null}
 
             <View style={styles.progressLabelRow}>
               <Text style={styles.heroMeta}>{t("learn.progress")}</Text>
@@ -860,13 +863,8 @@ export default function HomeScreen() {
                   <Text style={styles.journeyTitle} numberOfLines={2}>
                     {pickLocalized(activeLesson.title, activeLesson.titleUr, translationLanguage)}
                   </Text>
-                  {activeLesson.titleUr ? (
-                    <Text style={styles.journeySubtitle} numberOfLines={1}>
-                      {language === "ur" ? activeLesson.title : activeLesson.titleUr}
-                    </Text>
-                  ) : null}
                   <ArabicText size="md" style={styles.journeyArabic} numberOfLines={2}>
-                    {activeLesson.titleAr}
+                    {learnerArabicTitle(activeLesson.titleAr)}
                   </ArabicText>
                 </View>
               </Pressable>
@@ -892,14 +890,9 @@ export default function HomeScreen() {
                       ? pickLocalized(nextLesson.title, nextLesson.titleUr, translationLanguage)
                       : t("learn.chapterComplete")}
                   </Text>
-                  {nextLesson?.titleUr ? (
-                    <Text style={styles.journeySubtitle} numberOfLines={1}>
-                      {language === "ur" ? nextLesson.title : nextLesson.titleUr}
-                    </Text>
-                  ) : null}
                   {nextLesson ? (
                     <ArabicText size="md" style={styles.journeyArabic} numberOfLines={2}>
-                      {nextLesson.titleAr}
+                      {learnerArabicTitle(nextLesson.titleAr)}
                     </ArabicText>
                   ) : null}
                 </View>
@@ -1034,6 +1027,7 @@ export default function HomeScreen() {
           <Ionicons name="arrow-forward" size={16} color={WarshPalette.goldDeep} />
         </TouchableOpacity>
       </ScrollView>
+      <StatusBarBacking />
     </View>
   );
 }

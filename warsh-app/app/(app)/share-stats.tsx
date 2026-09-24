@@ -96,7 +96,7 @@ export default function ShareStatsScreen() {
     <View style={[styles.screen, { paddingTop: insets.top }]}>
       {/* Header */}
       <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
-        <TouchableOpacity
+        <TouchableOpacity accessibilityRole="button" accessibilityLabel="Back"
           onPress={() => router.back()}
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
         >
@@ -136,7 +136,7 @@ export default function ShareStatsScreen() {
               <View style={styles.statsGrid}>
                 <View style={styles.statBox}>
                   <Text style={styles.statNum}>{stats.xp}</Text>
-                  <Text style={styles.statLabel}>XP earned</Text>
+                  <Text style={styles.statLabel}>Points earned</Text>
                 </View>
                 <View style={styles.statBox}>
                   <Text style={styles.statNum}>{stats.completedLessons}</Text>

@@ -71,7 +71,7 @@ export default function SurahCelebrationScreen() {
 
         {/* XP badge */}
         <View style={styles.xpBadge}>
-          <Text style={styles.xpText}>+{xpEarned ?? "0"} XP</Text>
+          <Text style={styles.xpText}>+{xpEarned ?? "0"} points</Text>
         </View>
 
         {/* Quote */}

@@ -43,6 +43,8 @@ export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
+        // Frees about 130px for the answer while typing to Noor (finding M11).
+        tabBarHideOnKeyboard: true,
         headerShown: false,
         sceneStyle: {
           backgroundColor: Colors.bg.primary,

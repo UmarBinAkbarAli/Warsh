@@ -289,6 +289,13 @@ export default function AgeCheckScreen() {
   const selectedIndex =
     open === "day" ? (day ?? 0) - 1 : open === "month" ? (month ?? 0) - 1 : open === "year" ? years.indexOf(year ?? -1) : -1;
 
+  // With no year chosen yet, open near a typical adult birth year so nobody
+  // scrolls past a dozen recent years. Every year stays listed: the age screen
+  // must stay neutral and never reveal the cut-off (finding M10).
+  function initialScrollFor(field: Field | null) {
+    return field === "year" && year === null ? Math.max(0, years.indexOf(currentYear - 25) - 3) : undefined;
+  }
+
   function choose(index: number) {
     if (open === "day") setDay(days[index]);
     else if (open === "month") setMonth(index + 1);
@@ -401,7 +408,7 @@ export default function AgeCheckScreen() {
             data={sheetItems}
             keyExtractor={(item) => String(item)}
             style={styles.sheetList}
-            initialScrollIndex={selectedIndex > 0 ? selectedIndex : undefined}
+            initialScrollIndex={selectedIndex > 0 ? selectedIndex : initialScrollFor(open)}
             getItemLayout={(_, index) => ({ length: OPTION_HEIGHT, offset: OPTION_HEIGHT * index, index })}
             renderItem={({ item, index }) => {
               const selected = index === selectedIndex;

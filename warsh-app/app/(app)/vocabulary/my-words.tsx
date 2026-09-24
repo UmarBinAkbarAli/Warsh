@@ -138,7 +138,7 @@ export default function MyWordsScreen() {
       {/* Header */}
       <View style={[styles.header, desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.xl }]}>
         {!desktopWeb ? (
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button" accessibilityLabel={t("common.back")}
             onPress={() => router.back()}
             hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           >
@@ -152,6 +152,7 @@ export default function MyWordsScreen() {
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
+        style={styles.filterScroll}
         contentContainerStyle={[styles.filterRow, desktopWeb && styles.webRow]}
       >
         {FILTER_OPTIONS.map((opt) => {
@@ -161,6 +162,8 @@ export default function MyWordsScreen() {
               key={opt.key}
               onPress={() => setFilter(opt.key)}
               activeOpacity={0.75}
+              accessibilityRole="button"
+              accessibilityState={{ selected }}
               style={[styles.chip, selected && styles.chipSelected]}
             >
               <Text style={[styles.chipText, selected && styles.chipTextSelected]}>
@@ -252,31 +255,38 @@ const styles = StyleSheet.create({
     lineHeight: LineHeights.h1,
     color: WarshPalette.ink,
   },
+  // Without flexGrow 0 the list below squeezed this row and clipped the chips
+  // to 18dp (finding H12).
+  filterScroll: { flexGrow: 0, flexShrink: 0 },
   filterRow: {
     paddingHorizontal: Spacing.xl,
     paddingVertical: Spacing.sm,
     gap: Spacing.sm,
     flexDirection: "row",
+    alignItems: "center",
   },
   chip: {
-    paddingHorizontal: Spacing.md,
-    paddingVertical: Spacing.xs,
+    minHeight: 40,
+    justifyContent: "center",
+    paddingHorizontal: Spacing.lg,
+    paddingVertical: Spacing.sm,
     borderRadius: Radii.full,
     backgroundColor: WarshPalette.white,
     borderWidth: 1,
     borderColor: WarshPalette.defaultCardBorder,
   },
   chipSelected: {
-    backgroundColor: WarshPalette.gold,
-    borderColor: WarshPalette.gold,
+    backgroundColor: WarshPalette.navy,
+    borderColor: WarshPalette.navy,
   },
   chipText: {
     fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.caption,
+    fontSize: FontSizes.bodyM,
+    lineHeight: 20,
     color: WarshPalette.bodyBrown,
   },
   chipTextSelected: {
-    color: WarshPalette.white,
+    color: WarshPalette.parchment,
   },
   sortRow: {
     paddingHorizontal: Spacing.xl,

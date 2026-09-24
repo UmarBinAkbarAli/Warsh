@@ -159,7 +159,7 @@ export default function ChapterTestScreen() {
   function renderHeader(subtitle?: string) {
     return (
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.headerBack}>
+        <TouchableOpacity accessibilityRole="button" accessibilityLabel={t("common.back")} onPress={() => router.back()} style={styles.headerBack}>
           <Ionicons name="arrow-back" size={21} color={WarshPalette.navy} />
         </TouchableOpacity>
         <View style={styles.headerText}>
@@ -256,7 +256,7 @@ export default function ChapterTestScreen() {
   return (
     <View style={[styles.screen, shellStyle]}>
       <View style={styles.questionHeader}>
-        <TouchableOpacity onPress={() => router.back()}><Ionicons name="close" size={22} color={WarshPalette.navy} /></TouchableOpacity>
+        <TouchableOpacity accessibilityRole="button" accessibilityLabel={t("a11y.close")} onPress={() => router.back()}><Ionicons name="close" size={22} color={WarshPalette.navy} /></TouchableOpacity>
         <View style={styles.progressTrack}>
           <View style={[styles.progressFill, { width: `${((questionIndex + 1) / assessment.questions.length) * 100}%` }]} />
         </View>

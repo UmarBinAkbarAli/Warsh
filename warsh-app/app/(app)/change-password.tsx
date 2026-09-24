@@ -83,7 +83,7 @@ export default function ChangePasswordScreen() {
     >
       <View style={[styles.header, desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.sm }]}>
         {!desktopWeb ? (
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button" accessibilityLabel="Back"
             onPress={() => router.back()}
             hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           >
@@ -108,7 +108,7 @@ export default function ChangePasswordScreen() {
             placeholder="Enter current password"
             placeholderTextColor={WarshPalette.subtleBrown}
           />
-          <TouchableOpacity onPress={() => setShowCurrent((v) => !v)} hitSlop={8}>
+          <TouchableOpacity accessibilityRole="button" accessibilityLabel={showCurrent ? "Hide password" : "Show password"} onPress={() => setShowCurrent((v) => !v)} hitSlop={8}>
             <Ionicons
               name={showCurrent ? "eye-off-outline" : "eye-outline"}
               size={20}
@@ -129,7 +129,7 @@ export default function ChangePasswordScreen() {
             placeholder="At least 8 characters"
             placeholderTextColor={WarshPalette.subtleBrown}
           />
-          <TouchableOpacity onPress={() => setShowNew((v) => !v)} hitSlop={8}>
+          <TouchableOpacity accessibilityRole="button" accessibilityLabel={showNew ? "Hide password" : "Show password"} onPress={() => setShowNew((v) => !v)} hitSlop={8}>
             <Ionicons
               name={showNew ? "eye-off-outline" : "eye-outline"}
               size={20}
@@ -150,7 +150,7 @@ export default function ChangePasswordScreen() {
             placeholder="Repeat new password"
             placeholderTextColor={WarshPalette.subtleBrown}
           />
-          <TouchableOpacity onPress={() => setShowConfirm((v) => !v)} hitSlop={8}>
+          <TouchableOpacity accessibilityRole="button" accessibilityLabel={showConfirm ? "Hide password" : "Show password"} onPress={() => setShowConfirm((v) => !v)} hitSlop={8}>
             <Ionicons
               name={showConfirm ? "eye-off-outline" : "eye-outline"}
               size={20}

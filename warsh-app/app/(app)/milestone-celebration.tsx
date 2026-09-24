@@ -148,7 +148,7 @@ export default function MilestoneCelebrationScreen() {
           <Text style={styles.titleEn}>{current.title}</Text>
           <View style={styles.xpBadge}>
             <Ionicons name="sparkles" size={14} color={WarshPalette.navy} />
-            <Text style={styles.xpText}>+{current.xpReward} XP</Text>
+            <Text style={styles.xpText}>+{current.xpReward} points</Text>
           </View>
         </Animated.View>
 

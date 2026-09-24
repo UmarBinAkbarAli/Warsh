@@ -57,7 +57,7 @@ export default function EditProfileScreen() {
     <View style={[styles.screen, { paddingTop: insets.top }]}>
       {/* Header */}
       <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.headerSide} hitSlop={8}>
+        <TouchableOpacity accessibilityRole="button" accessibilityLabel={t("common.back")} onPress={() => router.back()} style={styles.headerSide} hitSlop={8}>
           <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t("editProfile.title")}</Text>

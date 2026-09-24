@@ -97,7 +97,7 @@ export default function Core500WordsScreen() {
         ]}
       >
         {!desktopWeb ? (
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button" accessibilityLabel={t("common.back")}
             onPress={() => router.back()}
             hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           >

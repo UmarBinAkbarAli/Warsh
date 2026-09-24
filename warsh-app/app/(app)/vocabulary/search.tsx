@@ -168,6 +168,7 @@ export default function VocabularySearchScreen() {
           value={query}
           onChangeText={setQuery}
           placeholder={t("vocabulary.searchPlaceholder")}
+          accessibilityLabel={t("a11y.searchWords")}
           placeholderTextColor={WarshPalette.subtleBrown}
           style={styles.searchInput}
           returnKeyType="search"

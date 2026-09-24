@@ -56,21 +56,21 @@ export default function RegisterScreen() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<{ name?: string; email?: string; password?: string }>({});
 
   async function handleSubmit() {
     const trimmedName = displayName.trim();
     const trimmedEmail = email.trim();
 
-    if (!trimmedName || !trimmedEmail || !password) {
-      setError(t("auth.errorAllFields"));
-      return;
-    }
-    if (!isValidEmail(trimmedEmail)) {
-      setError(t("auth.errorEmail"));
-      return;
-    }
-    if (password.length < 8) {
-      setError(t("auth.errorPasswordShort"));
+    // Each problem is named under its own field (finding M10).
+    const nextErrors = {
+      name: trimmedName ? undefined : t("auth.errorNameRequired"),
+      email: !trimmedEmail ? t("auth.errorEmailRequired") : !isValidEmail(trimmedEmail) ? t("auth.errorEmail") : undefined,
+      password: !password ? t("auth.errorPasswordRequired") : password.length < 8 ? t("auth.errorPasswordShort") : undefined,
+    };
+    setFieldErrors(nextErrors);
+    if (nextErrors.name || nextErrors.email || nextErrors.password) {
+      setError("");
       return;
     }
 
@@ -149,6 +149,7 @@ export default function RegisterScreen() {
             autoCapitalize="words"
             textContentType="name"
             containerStyle={styles.field}
+            error={fieldErrors.name}
           />
           <AuthInput
             placeholder={t("auth.email")}
@@ -157,6 +158,7 @@ export default function RegisterScreen() {
             keyboardType="email-address"
             textContentType="emailAddress"
             containerStyle={styles.field}
+            error={fieldErrors.email}
           />
           <AuthInput
             placeholder={t("auth.passwordLabel")}
@@ -165,6 +167,7 @@ export default function RegisterScreen() {
             secure
             textContentType="newPassword"
             containerStyle={styles.field}
+            error={fieldErrors.password}
           />
 
           {error ? <Text style={styles.error}>{error}</Text> : null}
@@ -178,7 +181,7 @@ export default function RegisterScreen() {
 
           <View style={[styles.switchRow, isUrdu ? styles.switchRowRtl : null]}>
             <Text style={styles.switchText}>{t("auth.alreadyAccount")} </Text>
-            <Link href="/(auth)/login" style={styles.switchLink}>
+            <Link href="/(auth)/login" style={styles.switchLink} accessibilityRole="button">
               {t("auth.logIn")}
             </Link>
           </View>

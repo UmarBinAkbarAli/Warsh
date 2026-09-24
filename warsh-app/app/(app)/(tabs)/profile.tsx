@@ -9,8 +9,10 @@ import api from "@services/api";
 import { useAuth } from "@hooks/useAuth";
 import { useLanguage } from "@services/language";
 import * as Theme from "../../../constants/theme";
+import { ConfirmDialog } from "@components/ConfirmDialog";
 import { BrandButton } from "@components/BrandButton";
 import { ArabicText } from "@components/ArabicText";
+import { StatusBarBacking } from "@components/StatusBarBacking";
 import { useT } from "@i18n/index";
 
 export default function ProfileScreen() {
@@ -19,6 +21,7 @@ export default function ProfileScreen() {
   const { width } = useWindowDimensions();
   const desktopWeb = Platform.OS === "web" && width >= 960;
   const { user, logout } = useAuth();
+  const [confirmLogout, setConfirmLogout] = useState(false);
   const language = useLanguage();
   const t = useT();
   const [data, setData] = useState<any>(null);
@@ -99,13 +102,13 @@ export default function ProfileScreen() {
             وَرْش
           </ArabicText>
         </View>
-        <Pressable onPress={() => router.push("/(app)/settings")} hitSlop={8}>
+        <Pressable accessibilityRole="button" accessibilityLabel={t("a11y.settings")} onPress={() => router.push("/(app)/settings")} hitSlop={8}>
           <Ionicons name="settings-outline" size={22} color={Theme.WarshPalette.gold} />
         </Pressable>
       </View>
       <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
         <Text style={styles.userName}>{displayName}</Text>
-        <Pressable onPress={() => router.push("/(app)/edit-profile")} hitSlop={8}>
+        <Pressable accessibilityRole="button" accessibilityLabel={t("a11y.editProfile")} onPress={() => router.push("/(app)/edit-profile")} hitSlop={8}>
           <Ionicons name="create-outline" size={16} color={Theme.WarshPalette.gold} />
         </Pressable>
       </View>
@@ -265,9 +268,21 @@ export default function ProfileScreen() {
       />
       <BrandButton
         title={t("profile.logOut")}
-        onPress={logout}
+        onPress={() => setConfirmLogout(true)}
         variant="danger"
         style={StyleSheet.flatten([styles.logoutButton, desktopWeb && styles.webRow])}
+      />
+      <ConfirmDialog
+        visible={confirmLogout}
+        title={t("profile.logOutConfirmTitle")}
+        body={t("profile.logOutConfirmBody")}
+        confirmLabel={t("profile.logOut")}
+        cancelLabel={t("profile.logOutStay")}
+        onCancel={() => setConfirmLogout(false)}
+        onConfirm={() => {
+          setConfirmLogout(false);
+          void logout();
+        }}
       />
     </>
   );
@@ -291,19 +306,34 @@ export default function ProfileScreen() {
   }
 
   return (
-    <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
-      {profileHeader}
-      {error ? <Text style={styles.errorText}>{error}</Text> : null}
-      {streakCard}
-      {restContent}
-      <BrandButton
-        title={t("profile.shareProgress")}
-        onPress={() => router.push("/(app)/share-stats")}
-        variant="secondary"
-        style={styles.shareButton}
-      />
-      <BrandButton title={t("profile.logOut")} onPress={logout} variant="danger" style={styles.logoutButton} />
-    </ScrollView>
+    <View style={{ flex: 1 }}>
+      <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
+        {profileHeader}
+        {error ? <Text style={styles.errorText}>{error}</Text> : null}
+        {streakCard}
+        {restContent}
+        <BrandButton
+          title={t("profile.shareProgress")}
+          onPress={() => router.push("/(app)/share-stats")}
+          variant="secondary"
+          style={styles.shareButton}
+        />
+        <BrandButton title={t("profile.logOut")} onPress={() => setConfirmLogout(true)} variant="danger" style={styles.logoutButton} />
+        <ConfirmDialog
+          visible={confirmLogout}
+          title={t("profile.logOutConfirmTitle")}
+          body={t("profile.logOutConfirmBody")}
+          confirmLabel={t("profile.logOut")}
+          cancelLabel={t("profile.logOutStay")}
+          onCancel={() => setConfirmLogout(false)}
+          onConfirm={() => {
+            setConfirmLogout(false);
+            void logout();
+          }}
+        />
+      </ScrollView>
+      <StatusBarBacking color={Theme.WarshPalette.navy} />
+    </View>
   );
 }
 

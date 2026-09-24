@@ -1179,7 +1179,7 @@ export default function LessonPlayScreen() {
             </View>
           ) : null}
           <View style={styles.divider} />
-          {noorIntro ? <Text style={styles.hookQuestion}>{withDirectionMark(noorIntro, language)}</Text> : null}
+          {noorIntro ? <Text style={[styles.hookQuestion, styles.hookBody, language === "ur" && styles.hookBodyUrdu]}>{withDirectionMark(noorIntro, language)}</Text> : null}
         </View>
         <BrandButton title={t("player.hookCta")} onPress={() => goToBeat(2)} style={styles.bottomButton} />
       </View>
@@ -1715,7 +1715,7 @@ export default function LessonPlayScreen() {
           {titleAr ? <ArabicText size="lg" style={styles.hookAyah}>{titleAr}</ArabicText> : null}
           {titleText ? <Text style={styles.spContextTitleEn}>{titleText}</Text> : null}
           <View style={styles.divider} />
-          {contextBody ? <Text style={styles.hookQuestion}>{withDirectionMark(contextBody, language)}</Text> : null}
+          {contextBody ? <Text style={[styles.hookQuestion, styles.hookBody, language === "ur" && styles.hookBodyUrdu]}>{withDirectionMark(contextBody, language)}</Text> : null}
         </View>
         <BrandButton title={t("common.begin")} onPress={() => goToBeat(2)} style={styles.bottomButton} />
       </View>
@@ -2061,9 +2061,24 @@ const styles = StyleSheet.create({
     maxWidth: 280,
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: 13,
-    lineHeight: 20,
+    fontSize: FontSizes.bodyM,
+    lineHeight: 22,
     textAlign: "center",
+  },
+  // The story paragraph that frames a lesson: a readable column, and Urdu at
+  // 18/34 aligned right rather than small and centred (finding M16).
+  hookBody: {
+    maxWidth: 360,
+    color: WarshPalette.ink,
+    fontSize: FontSizes.bodyL,
+    lineHeight: 26,
+  },
+  hookBodyUrdu: {
+    alignSelf: "stretch",
+    fontFamily: Fonts.urduFallback,
+    fontSize: 18,
+    lineHeight: 34,
+    textAlign: "right",
   },
   bottomButton: {
     alignSelf: "stretch",

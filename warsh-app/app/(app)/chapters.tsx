@@ -140,7 +140,7 @@ export default function ChaptersScreen() {
     <View style={[styles.container, { paddingTop: desktopWeb ? 0 : insets.top }]}>
       <View style={[styles.header, desktopWeb && styles.webHeader]}>
         {!desktopWeb ? (
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button" accessibilityLabel={t("common.back")}
             onPress={() => router.back()}
             hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           >

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   StyleSheet,
+  Text,
   TextInput,
   TextInputProps,
   TouchableOpacity,
@@ -16,6 +17,8 @@ type AuthInputProps = Omit<TextInputProps, "style"> & {
   /** Renders the show/hide eye toggle and masks the value until toggled. */
   secure?: boolean;
   containerStyle?: ViewStyle;
+  /** Shown under the field, which turns terracotta, so each problem sits by its field. */
+  error?: string;
 };
 
 /**
@@ -27,13 +30,16 @@ type AuthInputProps = Omit<TextInputProps, "style"> & {
  * as drawn in Figma: once the user types, an inline icon would slide with
  * the text and eventually run off the field.
  */
-export function AuthInput({ secure = false, containerStyle, ...props }: AuthInputProps) {
+export function AuthInput({ secure = false, containerStyle, error, ...props }: AuthInputProps) {
   const [visible, setVisible] = useState(false);
   const isUrdu = useLanguage() === "ur";
+  const { marginBottom, marginTop, ...fieldContainer } = StyleSheet.flatten(containerStyle) ?? {};
 
   return (
-    <View style={[styles.field, isUrdu ? styles.fieldRtl : null, containerStyle]}>
+    <View style={{ marginBottom, marginTop }}>
+    <View style={[styles.field, isUrdu ? styles.fieldRtl : null, fieldContainer, error ? styles.fieldError : null]}>
       <TextInput
+        accessibilityLabel={props.accessibilityLabel ?? props.placeholder}
         {...props}
         style={[styles.input, isUrdu ? styles.inputRtl : null]}
         secureTextEntry={secure && !visible}
@@ -55,6 +61,12 @@ export function AuthInput({ secure = false, containerStyle, ...props }: AuthInpu
           />
         </TouchableOpacity>
       ) : null}
+    </View>
+    {error ? (
+      <Text style={[styles.errorText, isUrdu ? styles.inputRtl : null]} accessibilityLiveRegion="polite">
+        {error}
+      </Text>
+    ) : null}
     </View>
   );
 }
@@ -81,6 +93,17 @@ const styles = StyleSheet.create({
     color: WarshPalette.ink,
     // Android centres text oddly in a fixed-height row without this.
     paddingVertical: 0,
+  },
+  fieldError: {
+    borderColor: WarshPalette.wrongText,
+    borderWidth: 1.5,
+  },
+  errorText: {
+    marginTop: Spacing.xs,
+    color: WarshPalette.wrongText,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM,
+    lineHeight: 20,
   },
   inputRtl: {
     textAlign: "right",

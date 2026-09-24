@@ -32,6 +32,9 @@ interface WordData {
   arabicPlain: string;
   vocabId: string | null;
   state: WordState;
+  meaningEn?: string;
+  meaningUr?: string | null;
+  root?: string | null;
 }
 
 interface AyahData {
@@ -54,12 +57,14 @@ interface SurahMeta {
   completedAt: string | null;
 }
 
-// ─── word color ───────────────────────────────────────────────────────────────
+// ─── word state ───────────────────────────────────────────────────────────────
+// Every word stays in full ink so the ayah is always legible; the learner's
+// state is an underline instead of a faded colour (finding H8).
 
-function wordColor(state: WordState): string {
-  if (state === "gold") return WarshPalette.gold;
-  if (state === "ink") return WarshPalette.ink;
-  return WarshPalette.sage + "80"; // sage dim
+function wordMarkStyle(state: WordState) {
+  if (state === "gold") return styles.wordMarkMastered;
+  if (state === "ink") return styles.wordMarkLearning;
+  return null;
 }
 
 // ─── color-coded ayah row ─────────────────────────────────────────────────────
@@ -83,7 +88,8 @@ function AyahRow({
             onPress={() => w.vocabId && onWordPress(w)}
             activeOpacity={w.vocabId ? 0.65 : 1}
           >
-            <Text style={[styles.ayahWord, { color: wordColor(w.state) }]}>{w.arabic}</Text>
+            <Text style={styles.ayahWord}>{w.arabic}</Text>
+            <View style={[styles.wordMark, wordMarkStyle(w.state)]} />
           </TouchableOpacity>
         ))}
       </View>
@@ -116,6 +122,7 @@ function WordSheet({
   onViewDetail: () => void;
 }) {
   const insets = useSafeAreaInsets();
+  const translationLanguage = useTranslationLanguage();
   return (
     <Modal statusBarTranslucent navigationBarTranslucent visible={visible} transparent animationType="slide" onRequestClose={onDismiss}>
       <Pressable style={styles.sheetOverlay} onPress={onDismiss}>
@@ -124,11 +131,17 @@ function WordSheet({
           {word ? (
             <>
               <View style={styles.sheetArabicRow}>
-                <ArabicText size="xl" style={StyleSheet.flatten([styles.sheetArabic, { color: wordColor(word.state) }])}>
+                <ArabicText size="xl" style={styles.sheetArabic}>
                   {word.arabic}
                 </ArabicText>
                 <PlayButton text={word.arabic} cacheKey={word.arabicPlain} category="words" wordId={word.vocabId ?? undefined} size={24} />
               </View>
+              {word.meaningEn ? (
+                <Text style={[styles.sheetMeaning, translationLanguage === "ur" && styles.sheetMeaningUrdu]}>
+                  {pickLocalized(word.meaningEn, word.meaningUr, translationLanguage)}
+                </Text>
+              ) : null}
+              {word.root ? <ArabicText size="sm" style={styles.sheetRoot}>{word.root}</ArabicText> : null}
               <View style={styles.sheetStateBadge}>
                 <Text style={styles.sheetStateBadgeText}>
                   {word.state === "gold" ? "Mastered" : word.state === "ink" ? "In vocabulary" : "Not yet learned"}
@@ -155,7 +168,7 @@ function WordSheet({
 function ProgressBar({ percent }: { percent: number }) {
   return (
     <View style={styles.progressTrack}>
-      <View style={[styles.progressFill, { width: `${Math.min(100, percent)}%` as any }]} />
+      <View style={[styles.progressFill, { width: `${Math.max(0, Math.min(100, percent || 0))}%` as any }]} />
     </View>
   );
 }
@@ -191,7 +204,7 @@ export default function TadabburScreen() {
           setActiveSurahId(targetId);
           const meta = surahs.find((s: SurahMeta) => s.id === targetId);
           if (meta) setSurahMeta(meta);
-          if (targetId) loadSurahAyat(targetId);
+          if (targetId) loadSurahAyat(targetId, surahs);
         })
         .catch((loadError) => {
           if (isSubscriptionRequiredError(loadError)) {
@@ -202,11 +215,13 @@ export default function TadabburScreen() {
     }, [params.surahId, router])
   );
 
-  async function loadSurahAyat(surahId: string) {
+  // `surahs` is passed on first load: `allSurahs` state is still empty in this
+  // closure, and the fallback used to lack comprehensionPercent (finding H8).
+  async function loadSurahAyat(surahId: string, surahs: SurahMeta[] = allSurahs) {
     setLoadingAyat(true);
     try {
       const res = await getTadabburSurah(surahId);
-      const surah: SurahMeta = allSurahs.find((s) => s.id === surahId) ?? res.data.data.surah;
+      const surah: SurahMeta = surahs.find((s) => s.id === surahId) ?? res.data.data.surah;
       setAyat(res.data.data.ayat);
       setSurahMeta(surah);
 
@@ -221,7 +236,7 @@ export default function TadabburScreen() {
               surahNameAr: surah.nameAr,
               surahNameEn: surah.nameEn,
               xpEarned: "50",
-              isFirst: allSurahs.filter((s) => s.completedAt).length === 0 ? "true" : "false",
+              isFirst: surahs.filter((s) => s.completedAt).length === 0 ? "true" : "false",
             },
           });
         }
@@ -265,7 +280,7 @@ export default function TadabburScreen() {
             <Text style={styles.focusNameEn}>{surahMeta.nameEn} · {surahMeta.meaningEn}</Text>
             <View style={styles.focusProgressRow}>
               <ProgressBar percent={surahMeta.comprehensionPercent} />
-              <Text style={styles.focusPercent}>{surahMeta.comprehensionPercent}% understood</Text>
+              <Text style={styles.focusPercent}>{surahMeta.comprehensionPercent ?? 0}% understood</Text>
             </View>
           </View>
         ) : null}
@@ -273,15 +288,15 @@ export default function TadabburScreen() {
         {/* Legend */}
         <View style={styles.legend}>
           <View style={styles.legendItem}>
-            <View style={[styles.legendDot, { backgroundColor: WarshPalette.gold }]} />
+            <View style={[styles.legendMark, styles.wordMarkMastered]} />
             <Text style={styles.legendText}>Mastered</Text>
           </View>
           <View style={styles.legendItem}>
-            <View style={[styles.legendDot, { backgroundColor: WarshPalette.ink }]} />
+            <View style={[styles.legendMark, styles.wordMarkLearning]} />
             <Text style={styles.legendText}>In vocabulary</Text>
           </View>
           <View style={styles.legendItem}>
-            <View style={[styles.legendDot, { backgroundColor: WarshPalette.sage + "80" }]} />
+            <View style={styles.legendMark} />
             <Text style={styles.legendText}>Not yet learned</Text>
           </View>
         </View>
@@ -411,7 +426,7 @@ const styles = StyleSheet.create({
   // Legend
   legend: { flexDirection: "row", gap: Spacing.lg, marginBottom: Spacing.lg, justifyContent: "flex-end" },
   legendItem: { flexDirection: "row", alignItems: "center", gap: 4 },
-  legendDot: { width: 10, height: 10, borderRadius: 5 },
+  legendMark: { width: 16, height: 3, borderRadius: 2, backgroundColor: WarshPalette.cream },
   legendText: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption },
 
   // Surah text
@@ -423,7 +438,13 @@ const styles = StyleSheet.create({
   },
   ayahBlock: { marginBottom: Spacing.lg },
   ayahWordWrap: { flexDirection: "row-reverse", flexWrap: "wrap", gap: 4, justifyContent: "flex-start" },
-  ayahWord: { fontFamily: Fonts.arabic, fontSize: 22, lineHeight: 38 },
+  ayahWord: { fontFamily: Fonts.arabic, fontSize: 22, lineHeight: 38, color: WarshPalette.ink },
+  wordMark: { height: 3, borderRadius: 2, marginTop: -2, backgroundColor: "transparent" },
+  wordMarkMastered: { backgroundColor: WarshPalette.gold },
+  wordMarkLearning: { backgroundColor: WarshPalette.sageSoft },
+  sheetMeaning: { color: WarshPalette.ink, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyL, lineHeight: LineHeights.bodyL, textAlign: "center", marginTop: Spacing.sm },
+  sheetMeaningUrdu: { fontFamily: Fonts.urduFallback, fontSize: 20, lineHeight: 36 },
+  sheetRoot: { color: WarshPalette.subtleBrown, textAlign: "center", marginTop: Spacing.xs },
   ayahMeta: { flexDirection: "row", alignItems: "center", gap: Spacing.sm, marginTop: 4 },
   ayahRef: { color: WarshPalette.goldText, fontFamily: Fonts.regular, fontSize: FontSizes.caption },
   ayahTranslation: { color: WarshPalette.bodyBrown, fontFamily: Fonts.regular, fontSize: FontSizes.bodyM, fontStyle: "italic", marginTop: 2, lineHeight: LineHeights.bodyM },

@@ -20,6 +20,7 @@ import { PlayButton } from "@components/PlayButton";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
 import { getVocabularyWords, getWordOfDay, getSRSDueWords } from "@services/api";
 import { useTranslationLanguage, pickTranslation } from "@services/language";
+import { StatusBarBacking } from "@components/StatusBarBacking";
 import { useT } from "@i18n/index";
 
 // ─── topic catalog ──────────────────────────────────────────────────────────
@@ -293,133 +294,137 @@ export default function VocabularyScreen() {
   const isSearching = query.trim().length >= 2;
 
   return (
-    <ScrollView
-      style={styles.screen}
-      contentContainerStyle={[
-        styles.content,
-        desktopWeb && styles.webContent,
-        { paddingTop: desktopWeb ? 40 : insets.top + Spacing.xl },
-      ]}
-      keyboardShouldPersistTaps="handled"
-    >
-      {/* Header */}
-      <View style={styles.header}>
-        <Text style={styles.eyebrow}>{t("vocabulary.freeForever")}</Text>
-        <Text style={styles.title}>{t("vocabulary.title")}</Text>
-        <ArabicText size="md" style={styles.titleAr}>مُفْرَدَات</ArabicText>
-      </View>
-
-      {/* Search */}
-      <TouchableOpacity activeOpacity={0.85} onPress={() => router.push("/(app)/vocabulary/search")}>
-        <View pointerEvents="none">
-          <TextInput
-            value={query}
-            onChangeText={setQuery}
-            placeholder={t("vocabulary.searchPlaceholder")}
-            mode="outlined"
-            dense
-            editable={false}
-            left={<TextInput.Icon icon="magnify" />}
-            style={[styles.searchInput, { backgroundColor: Colors.bg.surface }]}
-          />
+    <View style={{ flex: 1 }}>
+      <ScrollView
+        style={styles.screen}
+        contentContainerStyle={[
+          styles.content,
+          desktopWeb && styles.webContent,
+          { paddingTop: desktopWeb ? 40 : insets.top + Spacing.xl },
+        ]}
+        keyboardShouldPersistTaps="handled"
+      >
+        {/* Header */}
+        <View style={styles.header}>
+          <Text style={styles.eyebrow}>{t("vocabulary.freeForever")}</Text>
+          <Text style={styles.title}>{t("vocabulary.title")}</Text>
+          <ArabicText size="md" style={styles.titleAr}>مُفْرَدَات</ArabicText>
         </View>
-      </TouchableOpacity>
 
-      {loading ? (
-        <ActivityIndicator color={WarshPalette.gold} style={{ marginTop: Spacing.xl }} />
-      ) : isSearching ? (
-        /* Search results */
-        <View style={{ marginTop: Spacing.lg }}>
-          {searching ? (
-            <ActivityIndicator color={WarshPalette.gold} />
-          ) : searchResults.length > 0 ? (
-            searchResults.map((w) => (
-              <WordRow
-                key={w.id}
-                word={w}
-                language={language}
-                onPress={() => router.push(`/(app)/vocabulary/word/${w.id}`)}
-              />
-            ))
-          ) : (
-            <View style={styles.emptyCard}>
-              <Text style={styles.emptyTitle}>{t("vocabulary.noWordsFound")}</Text>
-              <Text style={styles.emptyCopy}>{t("vocabulary.tryDifferentSpelling")}</Text>
-            </View>
-          )}
-        </View>
-      ) : (
-        <>
-          {/* Word of Day */}
-          {wordOfDay ? (
-            <View style={{ marginTop: Spacing.lg }}>
-              <WordOfDayCard
-                word={wordOfDay}
-                language={language}
-                onPress={() => router.push(`/(app)/vocabulary/word/${wordOfDay.id}`)}
-              />
-            </View>
-          ) : null}
+        {/* Search */}
+        <TouchableOpacity activeOpacity={0.85} onPress={() => router.push("/(app)/vocabulary/search")}>
+          <View pointerEvents="none">
+            <TextInput
+              value={query}
+              onChangeText={setQuery}
+              placeholder={t("vocabulary.searchPlaceholder")}
+              accessibilityLabel={t("a11y.searchWords")}
+              mode="outlined"
+              dense
+              editable={false}
+              left={<TextInput.Icon icon="magnify" />}
+              style={[styles.searchInput, { backgroundColor: Colors.bg.surface }]}
+            />
+          </View>
+        </TouchableOpacity>
 
-          {/* SRS Review card */}
-          {srsDueCount > 0 ? (
+        {loading ? (
+          <ActivityIndicator color={WarshPalette.gold} style={{ marginTop: Spacing.xl }} />
+        ) : isSearching ? (
+          /* Search results */
+          <View style={{ marginTop: Spacing.lg }}>
+            {searching ? (
+              <ActivityIndicator color={WarshPalette.gold} />
+            ) : searchResults.length > 0 ? (
+              searchResults.map((w) => (
+                <WordRow
+                  key={w.id}
+                  word={w}
+                  language={language}
+                  onPress={() => router.push(`/(app)/vocabulary/word/${w.id}`)}
+                />
+              ))
+            ) : (
+              <View style={styles.emptyCard}>
+                <Text style={styles.emptyTitle}>{t("vocabulary.noWordsFound")}</Text>
+                <Text style={styles.emptyCopy}>{t("vocabulary.tryDifferentSpelling")}</Text>
+              </View>
+            )}
+          </View>
+        ) : (
+          <>
+            {/* Word of Day */}
+            {wordOfDay ? (
+              <View style={{ marginTop: Spacing.lg }}>
+                <WordOfDayCard
+                  word={wordOfDay}
+                  language={language}
+                  onPress={() => router.push(`/(app)/vocabulary/word/${wordOfDay.id}`)}
+                />
+              </View>
+            ) : null}
+
+            {/* SRS Review card */}
+            {srsDueCount > 0 ? (
+              <TouchableOpacity
+                style={styles.reviewCard}
+                onPress={() => router.push("/(app)/vocabulary/review")}
+                activeOpacity={0.8}
+              >
+                <View style={styles.reviewCardLeft}>
+                  <Ionicons name="repeat-outline" size={22} color={WarshPalette.sage} />
+                  <View style={{ marginLeft: Spacing.sm }}>
+                    <Text style={styles.reviewCardTitle}>{t("vocabulary.review")}</Text>
+                    <Text style={styles.reviewCardCount}>{t("vocabulary.reviewReady", { count: srsDueCount, suffix: srsDueCount !== 1 ? "s" : "" })}</Text>
+                  </View>
+                </View>
+                <Text style={styles.reviewCardCta}>{t("vocabulary.begin")}</Text>
+              </TouchableOpacity>
+            ) : null}
+
+            {/* Stats */}
+            <View style={styles.statsRow}>
+              <View style={styles.statBox}>
+                <Text style={styles.statValue}>{allWords.length}</Text>
+                <Text style={styles.statLabel}>{t("vocabulary.wordsInBank")}</Text>
+              </View>
+              <View style={styles.statBox}>
+                <Text style={styles.statValue}>16</Text>
+                <Text style={styles.statLabel}>{t("vocabulary.topics")}</Text>
+              </View>
+            </View>
+
+            {/* My Words */}
             <TouchableOpacity
-              style={styles.reviewCard}
-              onPress={() => router.push("/(app)/vocabulary/review")}
+              style={styles.myWordsCard}
+              onPress={() => router.push("/(app)/vocabulary/my-words")}
               activeOpacity={0.8}
             >
-              <View style={styles.reviewCardLeft}>
-                <Ionicons name="repeat-outline" size={22} color={WarshPalette.sage} />
+              <View style={styles.myWordsLeft}>
+                <Ionicons name="bookmark-outline" size={22} color={WarshPalette.gold} />
                 <View style={{ marginLeft: Spacing.sm }}>
-                  <Text style={styles.reviewCardTitle}>{t("vocabulary.review")}</Text>
-                  <Text style={styles.reviewCardCount}>{t("vocabulary.reviewReady", { count: srsDueCount, suffix: srsDueCount !== 1 ? "s" : "" })}</Text>
+                  <Text style={styles.myWordsTitle}>{t("vocabulary.myWords")}</Text>
+                  <Text style={styles.myWordsSub}>{t("vocabulary.myWordsSub")}</Text>
                 </View>
               </View>
-              <Text style={styles.reviewCardCta}>{t("vocabulary.begin")}</Text>
+              <Text style={styles.myWordsCta}>{t("common.view")} ›</Text>
             </TouchableOpacity>
-          ) : null}
 
-          {/* Stats */}
-          <View style={styles.statsRow}>
-            <View style={styles.statBox}>
-              <Text style={styles.statValue}>{allWords.length}</Text>
-              <Text style={styles.statLabel}>{t("vocabulary.wordsInBank")}</Text>
-            </View>
-            <View style={styles.statBox}>
-              <Text style={styles.statValue}>16</Text>
-              <Text style={styles.statLabel}>{t("vocabulary.topics")}</Text>
-            </View>
-          </View>
+            {/* Browse by Topic */}
+            <Text style={styles.sectionTitle}>{t("vocabulary.browseByTopic")}</Text>
+            <TopicGrid
+              language={language}
+              wordCounts={wordCounts}
+              onPress={(key) => router.push(`/(app)/vocabulary/${key}`)}
+            />
 
-          {/* My Words */}
-          <TouchableOpacity
-            style={styles.myWordsCard}
-            onPress={() => router.push("/(app)/vocabulary/my-words")}
-            activeOpacity={0.8}
-          >
-            <View style={styles.myWordsLeft}>
-              <Ionicons name="bookmark-outline" size={22} color={WarshPalette.gold} />
-              <View style={{ marginLeft: Spacing.sm }}>
-                <Text style={styles.myWordsTitle}>{t("vocabulary.myWords")}</Text>
-                <Text style={styles.myWordsSub}>{t("vocabulary.myWordsSub")}</Text>
-              </View>
-            </View>
-            <Text style={styles.myWordsCta}>{t("common.view")} ›</Text>
-          </TouchableOpacity>
-
-          {/* Browse by Topic */}
-          <Text style={styles.sectionTitle}>{t("vocabulary.browseByTopic")}</Text>
-          <TopicGrid
-            language={language}
-            wordCounts={wordCounts}
-            onPress={(key) => router.push(`/(app)/vocabulary/${key}`)}
-          />
-
-          {/* Footer */}
-          <Text style={styles.footer}>{t("vocabulary.footer")}</Text>
-        </>
-      )}
-    </ScrollView>
+            {/* Footer */}
+            <Text style={styles.footer}>{t("vocabulary.footer")}</Text>
+          </>
+        )}
+      </ScrollView>
+      <StatusBarBacking />
+    </View>
   );
 }
 

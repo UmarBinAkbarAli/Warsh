@@ -116,7 +116,7 @@ export function BrandButton({
       ]}
     >
       {loading ? (
-        <ActivityIndicator color={WarshPalette.wrongBorder} />
+        <ActivityIndicator color={WarshPalette.wrongText} />
       ) : (
         <Text style={[styles.label, styles.labelDanger]}>{title}</Text>
       )}
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     color: WarshPalette.ink,
   },
   labelDanger: {
-    color: WarshPalette.wrongBorder,
+    color: WarshPalette.wrongText, // 5.6:1 on parchment; wrongBorder was 2.9:1
   },
   disabled: {
     opacity: 0.5,
