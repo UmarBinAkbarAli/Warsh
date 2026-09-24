@@ -527,6 +527,263 @@ Chapter 25 (لَيْسَ) was corrected and promoted 2026-09-24: 36 discover car
 | `ch20-l05` card 1 | هُمْ / هُنَّ | `images/discover/ch10-they-two-groups.webp` |
 | `ch23-l04` card 4 | قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ | `images/discover/ch19-daybreak.webp` |
 
+## Open — Chapters 1–11 (requested 2026-09-24)
+
+An audit of every Chapter 1–11 discover card found **377 of 564 without a picture**. Each card was matched against the live discover scenes and the approved vocabulary pictures:
+
+- **219 cards wired now** to a picture we already have (list at the end of this section): live discover scenes, 20 vocabulary pictures copied to `images/discover/{slug}.webp`, and 12 of the Chapter 14–20 scenes uploaded today. Fixtures and production are both updated.
+- **3 cards wait on a Chapter 24/25 scene already requested.** Their CSV rows reuse that filename, so they are wired in the same delivery.
+- **86 new scenes cover 155 cards** (tables below).
+
+Seventeen vocabulary pictures are only the Arabic word printed on a tile (نَبِيّ، رَسُول، آيَة، اللَّه، رَبّ، الرَّحْمٰن، دِين، عَمَل، خَلَقَ…). Discover cards carry no lettering, so those words get scenes instead. The vocabulary picture for عَبْد shows shackles and is not used for "servant of Allah". Quran cards stay symbolic: no Allah, prophet (Musa, Yunus), Maryam or angel, no figures where the ayah is about one.
+
+**Published 2026-09-24, without "Updated" notices (owner decision).** Since the 2026-09-23 trigger, any content change to a live lesson stamps `contentUpdatedAt`, which shows an "Updated" notice to every learner who finished it. For this picture-only change, the 63 lessons were synced with `content:sync -- --git-changed`, then their previous `contentUpdatedAt` values were written back. Do the same when the remaining scenes are delivered.
+
+### Chapter 1
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch01-near-book-far-mosque.png` | `ch01-l02` card 2 | هَذَا وَذَٰلِكَ | Two panels from the learner's viewpoint: left, a book on the desk right in front of the viewer; right, a mosque small in the distance across open ground |
+| `ch01-far-pen-far-path.png` | `ch01-l02` card 4 | ذَٰلِكَ قَبْلَ الِاسْم | Seen from a doorway: a pen lying on a table at the far end of a long room, and through the far window a path winding away into the distance |
+| `ch01-muslim-prayer.png` | `ch01-l02` card 7 | مُسْلِم | A man in modest dress standing on a prayer mat, hands raised to begin the prayer, seen from behind |
+| `ch01-message-lamp-scroll.png` | `ch01-l02` cards 8, 11 · `ch04-l01` card 9 · `ch04-l06` card 6 | نَبِيّ · رَسُول · نَبِيٌّ عَظِيمٌ | A sealed scroll resting beside a lit oil lamp in a quiet room: a message brought from afar. No figures |
+| `ch01-gender-book-tree.png` | `ch01-l03` card 1 | التَّذْكِير وَالتَّأْنِيث | Two panels: a book with a small navy tag hanging from it; a tree with a small gold tag hanging from it. Two kinds of noun, marked only by the tag colour |
+| `ch01-surah-heading.png` | `ch01-l03` card 7 · `ch04-l03` card 10 | سُورَة · سُورَةٌ كَرِيمَةٌ | An open Mushaf on a wooden stand, a decorated surah heading band across the top of the page (ornament only, nothing readable) |
+| `ch01-tree-near-far.png` | `ch01-l04` card 1 · `ch05-l02` card 1 | تِلْكَ | Two panels of one landscape: a tree close to the viewer; the same kind of tree small and far away on a hill |
+| `ch01-three-feminine-nouns.png` | `ch01-l04` card 3 · `ch05-l01` card 3 | التَّاء الْمَرْبُوطَة | Three things in a row, a tree, a walled garden and a school building, each with the same small gold tag hanging from it (the shared feminine sign) |
+
+### Chapter 2
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch02-a-book-any.png` | `ch02-l01` card 1 | التَّنْوِين — عَلَامَة النَّكِرَة | A hand taking one ordinary book from a shelf of many similar books: a book, any one of them |
+| `ch02-indefinite-definite.png` | `ch02-l02` cards 1, 3 · `ch02-l04` card 1 | التَّعْرِيف بِالْ · بَيْتٌ → الْبَيْتُ · النَّكِرَة وَالْمَعْرِفَة | Two panels: left, a row of similar houses, any one of them; right, one of those houses singled out and lit warmly, that particular house |
+| `ch02-book-is-new.png` | `ch02-l02` card 2 · `ch02-l16` cards 1, 2 · `ch04-l01` card 3 · `ch04-l02` card 4 · `ch04-l05` card 3 | الْمُبْتَدَأُ وَالْخَبَرُ · الْجُمْلَةُ الاسْمِيَّةُ · جَدِيدٌ · كِتَابٌ جَدِيدٌ · الْكِتَابُ الْجَدِيدُ · الْكِتَابُ الْجَدِيدُ / الْكِتَابُ جَدِيدٌ | A single brand-new book with a crisp, bright cover, a faint shine on it |
+| `ch02-where-book.png` | `ch02-l03` card 4 | أَيْنَ الْكِتَابُ؟ | A child in a room lifting a cushion and looking around, searching for a missing book |
+| `ch02-house-is-big.png` | `ch02-l16` card 3 · `ch04-l01` card 4 · `ch04-l02` card 2 · `ch04-l05` card 2 · `ch05-l05` card 4 | الْبَيْتُ كَبِيرٌ · بَيْتٌ كَبِيرٌ · الْبَيْتُ الْكَبِيرُ · الْبَيْتُ الْكَبِيرُ / الْبَيْتُ كَبِيرٌ | A big family house, with a small garden shed beside it for scale |
+| `ch02-road-is-long.png` | `ch02-l16` card 4 | الطَّرِيقُ طَوِيلٌ | A long straight road stretching away to the horizon |
+| `ch02-in-the-house.png` | `ch02-l05` card 4 | فِي الْبَيْتِ | A family seated together inside a house, seen through a wide-open doorway |
+| `ch02-on-the-house.png` | `ch02-l06` card 4 | عَلَى الْبَيْتِ | A bird sitting on the roof of a house |
+| `ch02-from-the-house.png` | `ch02-l07` card 4 | مِنْ الْبَيْتِ | A boy stepping out of a house's front door and walking away from it |
+| `ch02-to-the-house.png` | `ch02-l08` card 4 | إِلَى الْبَيْتِ | A boy walking along a garden path toward a house's front door |
+| `ch02-in-front-of.png` | `ch02-l09` cards 1, 2, 3 | أَمَامَ | A child standing directly in front of a closed wooden door, facing the viewer |
+| `ch02-in-front-of-the-house.png` | `ch02-l09` card 4 | أَمَامَ الْبَيْتِ | A tree standing in front of a house, between the house and the viewer |
+| `ch02-behind-the-house.png` | `ch02-l10` card 4 | خَلْفَ الْبَيْتِ | A tall tree partly hidden behind a house, its crown showing above the roof |
+| `ch02-above-the-house.png` | `ch02-l11` card 4 | فَوْقَ الْبَيْتِ | A crescent moon high above a house at night |
+| `ch02-under-the-house.png` | `ch02-l12` card 4 | تَحْتَ الْبَيْتِ | A cat curled up in the space under a raised wooden house |
+| `ch02-with-the-house.png` | `ch02-l13` card 4 | مَعَ الْبَيْتِ | A house together with its own garden, the two forming one home |
+| `ch02-writing-with-pen.png` | `ch02-l14` cards 1, 2, 3 | بِ | A hand writing in a notebook with a pen: done by means of the pen |
+| `ch02-by-the-house.png` | `ch02-l14` card 4 | بِ الْبَيْتِ | A wooden bench standing right by the wall of a house |
+| `ch02-and-the-house.png` | `ch02-l15` card 4 | وَ الْبَيْتِ | A house and a tree side by side, the two things together |
+| `ch02-three-descriptions.png` | `ch02-l04` card 2 | الْمُبْتَدَأُ وَالْخَبَرُ | Three panels: a brand-new book, a big house, an old weathered mosque |
+
+### Chapter 3
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch03-idafa-two-joined.png` | `ch03-l01` cards 1, 10 · `ch03-l06` cards 1, 11 · `ch03-l04` cards 1, 2 | الإِضَافَة · قاعدة الإضافة · الإِضَافَة فِي العِبَارَات · الفصل الثالث — القواعد الأساسية · الإضافة — مرجع سريع | Two blank tiles snapping together like puzzle pieces: the first loses a small round knob as it joins, the second carries a small curl beneath it. Two nouns become one phrase |
+| `ch03-students-book.png` | `ch03-l01` card 2 · `ch03-l02` card 3 · `ch05-l05` card 3 | كِتَابُ الطَّالِبِ · هٰذَا كِتَابُ الطَّالِبِ | A student holding up his own book, a blank name label on its cover |
+| `ch03-mans-house.png` | `ch03-l01` card 3 | بَيْتُ الرَّجُلِ | A man standing at the door of his own house, key in hand |
+| `ch03-mosque-door.png` | `ch03-l01` card 4 | بَابُ الْمَسْجِدِ | The large carved wooden door of a mosque, close up |
+| `ch03-teachers-pen.png` | `ch03-l01` card 5 | قَلَمُ الأُسْتَاذِ | A teacher at his desk holding his pen over an open register |
+| `ch03-open-mushaf.png` | `ch03-l01` card 6 · `ch11-l03` card 7 | كَلَامُ اللَّهِ · ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ | An open Mushaf on a wooden stand in soft light (nothing readable on the page) |
+| `ch03-kaaba.png` | `ch03-l01` card 9 · `ch03-l06` card 10 | بَيْتُ اللَّهِ | The Kaaba in the courtyard of Masjid al-Haram, seen from a respectful distance |
+| `ch03-light-of-sky.png` | `ch03-l06` card 4 | نُورُ السَّمَاءِ | Soft light streaming down through clouds across a wide sky |
+| `ch03-servant-prostration.png` | `ch03-l06` card 8 · `ch03-l03` card 10 · `ch07-l01` card 9 | عَبْدُ اللَّهِ · يَا عِبَادِيَ | A man in sujood on a prayer mat, seen from behind in soft light |
+| `ch03-whose-book.png` | `ch03-l02` cards 1, 2 | لِمَنْ — للسؤال عن الملكية · لِمَنْ هٰذَا؟ | A book lying alone on a table while two children look at it and at each other with open, questioning hands: whose is it? |
+| `ch03-today-sun.png` | `ch03-l02` card 5 | الْيَوْمُ | The sun high over a quiet town in the middle of the day |
+| `ch03-day-of-resurrection.png` | `ch03-l02` card 6 | يَوْمُ الْقِيَامَةِ | A vast empty plain under an overwhelming dawn light. No figures |
+| `ch03-calling-boy.png` | `ch03-l07` cards 1, 4 | يَا — حرف النداء · يَا وَلَدُ | A man calling out to a boy across a courtyard; the boy turns round |
+| `ch03-dua-hands.png` | `ch03-l07` card 2 · `ch07-l01` card 4 · `ch07-l02` card 6 | يَا رَبِّ · رَبِّي · رَبُّكَ | Two hands raised in dua against a soft dawn sky, seen from behind; no face |
+| `ch03-calling-teacher.png` | `ch03-l07` cards 3, 7, 8 | يَا أُسْتَاذُ · قَبْلَ يَا وَبَعْدَهَا · قَاعِدَةٌ مُبَسَّطَةٌ | A pupil raising a hand and calling to the teacher at the front of the classroom |
+| `ch03-calling-father.png` | `ch03-l07` card 5 | يَا أَبِي | A child running toward his father, one arm raised, calling to him |
+| `ch03-calling-mother.png` | `ch03-l07` card 6 | يَا أُمِّي | A girl in modest dress calling to her mother across the kitchen doorway |
+| `ch03-bismillah-start.png` | `ch03-l03` cards 1, 3, 11 | بِسْمِ — ثلاثة طبقات نحوية · اللَّهُ · بِاسْمِ اللَّهِ | Hands opening a Mushaf at its first page, gentle light rising from it: beginning in the name of Allah (nothing readable) |
+| `ch03-praise-dawn.png` | `ch03-l03` card 6 | بِحَمْدِهِ | Birds in flight over trees at dawn, the whole landscape glowing. No figures |
+
+### Chapter 4
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch04-righteous-boy.png` | `ch04-l01` card 5 · `ch04-l02` card 6 | وَلَدٌ صَالِحٌ · الْوَلَدُ الصَّالِحُ | A boy helping an elderly man carry his bag across a street |
+| `ch04-kind-words.png` | `ch04-l01` card 12 · `ch04-l02` card 9 | كَلَامٌ حَسَنٌ · الْقَوْلُ الْكَرِيمُ | Two men talking warmly, one speaking kindly to the other with an open hand |
+| `ch04-righteous-deed.png` | `ch04-l02` card 10 · `ch04-l06` card 4 | الْعَمَلُ الصَّالِحُ | A young man carrying a jug of water to an elderly neighbour's doorstep |
+| `ch04-three-checks.png` | `ch04-l06` card 1 | ثَلَاثَةُ مَفَاتِيحَ | Three small tiles in a row with a tick under each: an arrow from a noun block to an adjective block (order), two matching highlighted tags (definiteness), two matching gold beads (gender) |
+
+### Chapter 5
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch05-school-near-far.png` | `ch05-l02` cards 9, 10 · `ch05-l05` card 2 | هَٰذِهِ / تِلْكَ · تِلْكَ | Two panels: a school right in front of the viewer; the same school small in the distance |
+| `ch05-idafa-vs-has.png` | `ch05-l03` card 9 | كِتَابُ الطَّالِبِ / لِلطَّالِبِ كِتَابٌ | Two panels: left, a student's own book with a blank name label on the cover; right, the same student holding a book out to show he has one |
+| `ch05-left-in-anger.png` | `ch05-l04` card 9 | — | A lone path leading away from a town toward the sea at dusk. No figures |
+| `ch05-one-went-group-went.png` | `ch05-l07` card 9 | ذَهَبَ / ذَهَبُوا | Two panels: one man walking away down a road; a group of men walking away down the same road |
+| `ch05-four-pointers.png` | `ch05-l05` card 1 | هَٰذَا، ذَٰلِكَ، هَٰذِهِ، تِلْكَ | Four-panel grid from the learner's viewpoint: a book near, a book far, a tree near, a tree far |
+
+### Chapter 6
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch06-three-connectors.png` | `ch06-l02` card 7 · `ch06-l04` card 9 · `ch06-l05` card 8 | الَّذِي / الَّتِي / الَّذِينَ | Three panels, each with a small pointing arrow: one man, one woman, a group of men |
+| `ch06-went-read.png` | `ch06-l02` card 8 | ذَهَبَ / قَرَأَ | Two panels: a boy walking out through a door; the same boy sitting and reading a book |
+| `ch06-measured-guided.png` | `ch06-l04` cards 5, 6, 7, 10 | وَالَّذِي قَدَّرَ فَهَدَىٰ · وَ + الَّذِي · فَ + هَدَىٰ | A seed, then a sapling growing up along a guiding trellis toward the light: measured, then guided. No figures |
+
+### Chapter 7
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch07-asking-him-pen.png` | `ch07-l04` card 7 | أَعِنْدَكَ قَلَمٌ؟ | One boy asking another boy with an open hand; the other boy holds up a pen: yes, I have one |
+| `ch07-asking-her-pen.png` | `ch07-l04` card 8 | أَعِنْدَكِ قَلَمٌ؟ | One girl in modest dress asking another girl with an open hand; the other girl holds up a pen |
+| `ch07-five-owners-books.png` | `ch07-l06` card 1 | الضَّمَائِرُ الْمُتَّصِلَةُ الْمُفْرَدَة | Five identical books, each held by a different owner: the viewer's own hands, a boy facing us, a girl facing us, a boy seen from the side, a girl seen from the side |
+
+### Chapter 8
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch08-he-said-she-said.png` | `ch08-l01` card 5 · `ch08-l05` card 2 | قَالَ / قَالَتْ | Two panels: a man speaking with an open hand; a woman in modest dress speaking with the same gesture |
+| `ch11-invitation-well.png` | `ch08-l01` card 9 · `ch11-l01` card 8 · `ch11-l06` card 8 | قَالَتْ · إِنَّ أَبِي يَدْعُوكَ | A desert well beside a path that leads toward a distant tent. No figures |
+| `ch08-come-out-door.png` | `ch08-l02` cards 7, 8 · `ch08-l05` card 4 | قَالَتِ اخْرُجْ · وَقَالَتِ · قَالَتْ / قَالَتِ | An inner doorway with a curtain drawn aside and light spilling from the room beyond. No figures |
+| `ch08-ancient-city-pillars.png` | `ch08-l03` card 9 | الَّتِي | Ruins of a great ancient city of tall stone pillars in the desert. No figures |
+| `ch08-truthful-lamp.png` | `ch08-l04` card 4 | أُمُّهُ صِدِّيقَةٌ | A single lamp burning steadily in a quiet prayer niche. No figures |
+
+### Chapter 9
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch09-teacher-teachers.png` | `ch09-l01` card 4 | مُعَلِّمٌ / مُعَلِّمُونَ | Two panels: one male teacher at a board; a group of male teachers standing together |
+| `ch09-mixed-group.png` | `ch09-l01` card 7 | جَمَاعَةٌ مِنْ رِجَالٍ وَنِسَاء | A congregation of men and women (separate groups, modest dress) walking out of a mosque together |
+| `ch09-men-women-groups.png` | `ch09-l02` card 7 | مُؤْمِنُونَ / مُؤْمِنَاتٌ | Two panels: a group of men walking to the mosque; a group of women in modest dress walking to the mosque |
+| `ch09-who-are-these.png` | `ch09-l04` card 7 | مَنْ هٰؤُلَاءِ؟ | A child tugging a parent's sleeve and looking at a group of visitors standing at the door |
+| `ch09-three-plurals.png` | `ch09-l05` card 1 | أَنْوَاعُ الْجَمْعِ الثَّلَاثَة | Three panels: a group of men, a group of women, a stack of books |
+| `ch09-believers-believe.png` | `ch09-l05` card 8 | مُؤْمِنُونَ / يُؤْمِنُونَ | Two panels: a group of men standing calmly (who they are); the same group raising their hands in dua (what they do) |
+
+### Chapter 10
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch10-upon-them.png` | `ch10-l01` card 6 · `ch10-l06` card 6 | هُمْ / ـهِمْ · هُمْ / عَلَيْهِمْ | Soft light falling from above onto a small group seen from behind, walking a straight path |
+| `ch10-unaware.png` | `ch10-l01` card 8 | وَهُمْ لَا يَشْعُرُونَ | A group walking on at dusk with their backs to a bright lamp they do not notice |
+| `ch10-congregation-rows.png` | `ch10-l02` cards 5, 6, 9 | نَعْبُدُ · نَعْبُدُ / نَسْتَعِينُ · إِيَّاكَ نَعْبُدُ | Rows of worshippers standing shoulder to shoulder in prayer, seen from behind |
+| `ch10-you-all-women.png` | `ch10-l05` cards 2, 4 | أَنْتُنَّ · أَنْتُنَّ طَالِبَاتٌ | A woman teacher in modest dress facing a group of women students and speaking to them |
+| `ch10-you-all-two-groups.png` | `ch10-l05` card 9 · `ch10-l06` card 3 | أَنْتُمْ / أَنْتُنَّ | Two panels: a speaker facing a group of men; a speaker facing a group of women |
+| `ch10-five-pronouns.png` | `ch10-l06` card 1 | هُمْ، هُنَّ، نَحْنُ، أَنْتُمْ، أَنْتُنَّ | Five small panels: a group of men, a group of women, a group that includes the viewer, a speaker facing men, a speaker facing women |
+
+### Chapter 11
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch11-my-father-my-mother.png` | `ch11-l01` card 3 | يَاءُ الْمُتَكَلِّمِ | A child standing between father and mother, holding both their hands |
+| `ch11-brother-sister.png` | `ch11-l02` card 6 | أَخِي / أُخْتِي | A boy and his sister in modest dress standing side by side |
+| `ch11-brothers-believers.png` | `ch11-l02` card 8 | إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ | Men of different ages greeting each other warmly outside a mosque |
+| `ch11-pen-in-drawer.png` | `ch11-l03` cards 2, 5, 6, 8 | فِيهِ · هُوَ فِيهِ · فِي الدُّرْجِ / فِيهِ | An open desk drawer with a pen lying inside it |
+| `ch11-book-in-bag.png` | `ch11-l04` cards 2, 4 | فِيهَا · هُوَ فِيهَا | An open school bag with a book inside it |
+| `ch11-drawer-and-bag.png` | `ch11-l04` cards 5, 8 · `ch11-l05` card 7 · `ch11-l06` card 5 | فِيهِ / فِيهَا · ـهِ، ـهَا، ـكُمْ · الدُّرْجِ / الْحَقِيبَةِ | Two panels: a pen in an open desk drawer; a book in an open school bag |
+| `ch11-your-homes.png` | `ch11-l05` cards 4, 5, 8 | بُيُوتِكُمْ · فِي بُيُوتِكُمْ · وَاللَّهُ جَعَلَ لَكُم مِّن بُيُوتِكُمْ سَكَنًا | A quiet street of family homes at evening, lamps lit in every window |
+
+### Chapters 1–11 — waiting on a scene already requested
+
+| Card | Arabic | Scene |
+|---|---|---|
+| `ch04-l01` card 7 | قَلَمٌ صَغِيرٌ | `ch24-pen-small.png` |
+| `ch04-l01` card 8 | مَسْجِدٌ قَرِيبٌ | `ch25-mosque-not-far.png` |
+| `ch04-l05` card 5 | اِخْتِبَارٌ سَرِيعٌ | `ch25-mosque-not-far.png` |
+
+### Chapters 1–11 — wired 2026-09-24 to an existing picture
+
+| Picture | Cards |
+|---|---|
+| `images/discover/ch19-lord-of-worlds.webp` | `ch03-l06` 2 |
+| `images/discover/ch18-king-of-mankind.webp` | `ch03-l06` 3 · `ch03-l02` 10 |
+| `images/discover/ch20-mankind-lord.webp` | `ch03-l02` 9, 11 |
+| `images/discover/ch19-my-religion.webp` | `ch04-l01` 10 · `ch04-l02` 7 · `ch04-l06` 7 · `ch07-l01` 5 |
+| `images/discover/ch14-phrase-or-sentence.webp` | `ch04-l02` 12 · `ch04-l05` 1 |
+| `images/discover/ch16-iqra-cave-light.webp` | `ch07-l02` 9 |
+| `images/discover/ch19-two-paths.webp` | `ch07-l03` 8 · `ch10-l05` 8 |
+| `images/discover/ch19-i-have-vs-my.webp` | `ch07-l06` 6 |
+| `images/discover/ch18-he-who-she-who-went.webp` | `ch08-l03` 2, 7 · `ch08-l05` 5 |
+| `images/discover/ch14-people-or-things-sort.webp` | `ch09-l01` 6 · `ch09-l03` 6 |
+| `images/discover/ch20-our-lord-guide-us.webp` | `ch10-l04` 8 |
+| `images/discover/ch14-large-houses.webp` | `ch11-l05` 2, 6 |
+| `images/discover/sirat.webp` | `ch01-l01` 7 |
+| `images/discover/dhalika-v2.webp` | `ch01-l02` 3 |
+| `images/discover/ch12-muallim-teacher.webp` | `ch01-l02` 5 · `ch02-l01` 9 |
+| `images/discover/talib.webp` | `ch01-l02` 6 · `ch02-l01` 8 · `ch04-l01` 6 · `ch04-l02` 5 · `ch06-l01` 7 |
+| `images/discover/ch05-near-feminine-scene.webp` | `ch01-l03` 2 |
+| `images/discover/shajara.webp` | `ch01-l03` 3 · `ch05-l01` 10 · `ch05-l02` 3 |
+| `images/discover/ch05-tilka-ayat-allah.webp` | `ch01-l03` 8 · `ch05-l02` 7, 8 · `ch05-l06` 8 |
+| `images/discover/nima.webp` | `ch01-l03` 10 · `ch03-l06` 6 · `ch03-l03` 8 · `ch04-l03` 9 · `ch04-l06` 5 |
+| `images/discover/umma.webp` | `ch01-l03` 11 |
+| `images/discover/madrasa.webp` | `ch01-l04` 2 · `ch04-l03` 3 · `ch05-l01` 8 · `ch05-l02` 4 |
+| `images/discover/kitab.webp` | `ch02-l01` 2 · `ch02-l02` 4 |
+| `images/discover/qalam.webp` | `ch02-l01` 3 · `ch06-l03` 9 |
+| `images/discover/bayt.webp` | `ch02-l01` 4 |
+| `images/discover/masjid.webp` | `ch02-l01` 5 · `ch06-l03` 10 |
+| `images/discover/rajul.webp` | `ch02-l01` 6 · `ch04-l01` 2 · `ch04-l02` 3 · `ch04-l05` 4 · `ch06-l02` 10 |
+| `images/discover/walad.webp` | `ch02-l01` 7 |
+| `images/discover/bab.webp` | `ch02-l01` 10 |
+| `images/discover/kursi.webp` | `ch02-l01` 11 |
+| `images/discover/suq.webp` | `ch02-l01` 12 |
+| `images/discover/tariq.webp` | `ch02-l01` 13 |
+| `images/discover/ayna.webp` | `ch02-l03` 3 |
+| `images/discover/fi.webp` | `ch02-l05` 1, 2, 3 |
+| `images/discover/ala.webp` | `ch02-l06` 2, 3 |
+| `images/discover/min.webp` | `ch02-l07` 2, 3 |
+| `images/discover/ila.webp` | `ch02-l08` 2, 3 · `ch05-l07` 10 |
+| `images/discover/khalfa.webp` | `ch02-l10` 1, 2, 3 |
+| `images/discover/fawqa.webp` | `ch02-l11` 1, 2, 3 |
+| `images/discover/tahta.webp` | `ch02-l12` 1, 2, 3 |
+| `images/discover/maa.webp` | `ch02-l13` 1, 2, 3 |
+| `images/discover/wa.webp` | `ch02-l15` 1, 2, 3 |
+| `images/discover/umm.webp` | `ch03-l01` 7 · `ch08-l04` 3 · `ch11-l01` 5 |
+| `images/discover/madina.webp` | `ch03-l01` 8 · `ch03-l06` 9 · `ch04-l03` 2 |
+| `images/discover/rahma.webp` | `ch03-l06` 5 · `ch03-l03` 4, 5, 7 · `ch04-l03` 8 |
+| `images/discover/fadl.webp` | `ch03-l06` 7 · `ch03-l03` 9 |
+| `images/discover/mulk.webp` | `ch03-l02` 4 · `ch03-l04` 3 |
+| `images/discover/janna-v2.webp` | `ch03-l02` 7 · `ch04-l03` 6 |
+| `images/discover/sabil.webp` | `ch03-l02` 8 |
+| `images/discover/ism.webp` | `ch03-l03` 2 |
+| `images/discover/ilm.webp` | `ch04-l01` 11 · `ch04-l02` 8 · `ch04-l06` 8 |
+| `images/discover/ch04-adjective-after-noun-v1.png` | `ch04-l01` 13 · `ch04-l04` 1 |
+| `images/discover/sirat-mustaqim.webp` | `ch04-l02` 11 · `ch04-l06` 2, 9 |
+| `images/discover/ghurfa.webp` | `ch04-l03` 4 |
+| `images/discover/imraa.webp` | `ch04-l03` 5 |
+| `images/discover/kalima.webp` | `ch04-l03` 7 · `ch04-l06` 3 · `ch05-l01` 5 · `ch05-l05` 5 |
+| `images/discover/salah.webp` | `ch04-l03` 11 · `ch10-l03` 5, 6, 7 |
+| `images/discover/ch04-feminine-agreement-v1.png` | `ch04-l03` 12 · `ch04-l04` 3 |
+| `images/discover/ch04-definite-agreement-v1.png` | `ch04-l04` 2 |
+| `images/discover/ch05-naqat-allah.webp` | `ch05-l01` 9 |
+| `images/discover/ch05-lahu-laha-lakum-owners.webp` | `ch05-l03` 1 · `ch05-l06` 2, 4, 6, 7, 11 · `ch05-l05` 6 |
+| `images/discover/ch05-li-laka-contrast.webp` | `ch05-l03` 2, 5, 8, 10 · `ch05-l06` 1 |
+| `images/discover/ch07-two-listeners.webp` | `ch05-l03` 6 · `ch07-l02` 8 · `ch07-l06` 3 |
+| `images/discover/samaa.webp` | `ch05-l06` 9 |
+| `images/discover/dhahaba.webp` | `ch05-l04` 1, 3, 4, 10 |
+| `images/discover/ch05-dhahaba-movement.webp` | `ch05-l04` 6, 8 · `ch05-l07` 2 · `ch06-l01` 6, 9 |
+| `images/discover/ch05-action-doer-destination.webp` | `ch05-l07` 11 |
+| `images/discover/ch06-described-person-action.webp` | `ch06-l01` 5 |
+| `images/discover/ch06-person-connected-action.webp` | `ch06-l02` 1 · `ch06-l04` 1 · `ch06-l05` 4 |
+| `images/discover/ch06-creation-chain.webp` | `ch06-l02` 9 · `ch06-l04` 2, 3 |
+| `images/discover/ch06-place-tool-panels.webp` | `ch06-l03` 7, 8 |
+| `images/discover/ch07-his-her-owners.webp` | `ch07-l03` 9 · `ch07-l06` 4 |
+| `images/discover/ch07-my-objects.webp` | `ch07-l06` 5 · `ch11-l06` 7 |
+| `images/discover/ch08-he-she-movement.webp` | `ch08-l01` 1, 3, 7, 8 · `ch08-l02` 5 |
+| `images/discover/ch08-she-returned-sat-entered.webp` | `ch08-l02` 2, 3, 4, 9 · `ch08-l05` 3 |
+| `images/discover/bint.webp` | `ch08-l03` 10 |
+| `images/discover/ch08-mother-returning-home.webp` | `ch08-l04` 8, 9 |
+| `images/discover/ch09-one-man-group.webp` | `ch09-l01` 2, 5, 8, 9 |
+| `images/discover/ch09-one-woman-group.webp` | `ch09-l02` 1, 6, 8 |
+| `images/discover/mumina.webp` | `ch09-l02` 5, 9 |
+| `images/discover/ch09-one-many-four-panels.webp` | `ch09-l03` 8 |
+| `images/discover/ch09-pointing-at-group.webp` | `ch09-l04` 6, 8 · `ch09-l05` 7 |
+| `images/discover/ch10-they-two-groups.webp` | `ch10-l01` 3, 4, 7, 9 · `ch10-l06` 2 |
+| `images/discover/ch10-we-group-speaking.webp` | `ch10-l02` 1, 4, 8 · `ch10-l06` 5 |
+| `images/discover/ch10-you-all-facing-group.webp` | `ch10-l05` 1, 3, 7 |
+| `images/discover/ch10-before-timeline.webp` | `ch10-l03` 1 |
+| `images/discover/ch10-after-timeline.webp` | `ch10-l04` 1 |
+| `images/discover/dars.webp` | `ch10-l04` 6, 7 |
+| `images/discover/ab.webp` | `ch11-l01` 4 |
+| `images/discover/ard.webp` | `ch11-l04` 7 |
+| `images/discover/aila.webp` | `ch11-l06` 2, 3 |
+
 ## Delivered — 2026-09-21
 
 31 scenes for Chapters 5–10 and 12, delivered as 1024×1024 transparent PNG
