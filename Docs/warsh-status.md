@@ -701,6 +701,42 @@ Everything below this list is either done and verified, or one of these:
    tap/true-false/fill exercises. Not done: scholarly review of the grammar
    and Quran-context wording the proposals ask for, and an Android emulator
    pass.
+   **Chapters 20–23 (`Docs/proposals/chapter-20..23-content-proposal.md`) are
+   built, staging-verified and promoted to production 2026-09-24** on the
+   owner's instruction (review first, then build and promote without asking).
+   A pre-build review found nine proposal issues; the owner approved the fixes,
+   recorded in section 7 of each proposal: Ch20 uses 2:277 for ـهُمْ (2:5 is
+   already Ch15 L4's), teaches ـهِمْ / ـهِنَّ after a kasra, uses 33:34 and 2:233
+   instead of 33:33 and 60:12, and bridges from Ch10's pronouns and Ch11's
+   بُيُوتِكُمْ; Ch21 treats دَخَلَ / رَجَعَ as Ch8 retrieval and anchors on 17:1,
+   20:86, 2:164, 28:15 + 28:21 (not the 12:99 imperative); Ch22 adds 3:37 (قَالَ
+   reporting a question, قَالَتْ its answer), 2:186 and 12:90, and promotes
+   CL5's heard-only repair phrase to a spoken line; Ch23 uses 20:17–18 instead
+   of 2:5. Items: 20 — l01–l05 rewritten, `ch20-l06` (application), `ch20-l07`
+   (review), `ch20-test` (orders 6–8); 21 — l01–l04 rewritten, CL8 Finding
+   Someone `ch21-cl08` at order 5, review `ch21-l05` moved to 6, `ch21-test` 7;
+   22 — l01–l04 rewritten, CL9 Ask, Answer, Confirm `ch22-cl09` at 5, review
+   `ch22-l05` to 6, `ch22-test` 7; 23 "Book 2 Reading Consolidation" — l01–l04
+   rewritten, `ch23-l05` review, `ch23-test` (16 questions, 13/16 to pass).
+   Tests for 20–22 are 12 questions at 80 %. The Conversation Labs roadmap's
+   CL8 / CL9 entries were synchronised. Answer positions are shuffled per item
+   (the player never shuffles). Verified: fixture validation (450), legacy
+   curriculum, Urdu audit, Quran audit (885 hook/reveal entries) plus a
+   stricter check of all 125 Quran excerpts in cards, match-the-ayah items and
+   test prompts, 183 backend + 21 schema tests; audio 177 new catalogue clips
+   (2815/2815) and 22 lab phrase clips; staging promote + an 88-check API
+   walk-through (DEV_UNLOCK_ALL=false: order, test lock on fetch and submit,
+   key stripped, 0/12 and 9/12 fail, 10/12 passes, 12/16 fails and 13/16
+   passes for Ch23, each pass unlocks the next chapter, replay earns 0 XP; a
+   learner who finished the old Ch21 keeps Ch22 open with New / Updated flags);
+   web player on staging (Ch20 L1 hook and cards, CL8 dialogue). Production:
+   the 19 existing Ch20–23 rows matched the sync baseline (no Studio edits),
+   `promote-chapters-20-23.cjs --apply` for each chapter (27 rows updated or
+   created, progress untouched, post-promotion verification passed), live API
+   lists the new orders. Illustrations: 158 cards mapped — 133 new scenes and
+   4 reuses — in `Docs/lesson-illustrations-needed.md` / `.csv`. Not done:
+   scholarly review of the Arabic, Quran context and Urdu wording, and an
+   Android emulator pass.
    **Conversation Labs CL1–CL6 are live in production (2026-09-23, owner's
    go-ahead).** CL6 (Chapter 11) went first; the owner then asked for the
    Mission to use a new photo and new people instead of repeating Answer it,

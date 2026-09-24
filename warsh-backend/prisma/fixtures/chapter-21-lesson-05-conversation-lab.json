@@ -1,0 +1,796 @@
+{
+  "schema_version": "1.0",
+  "template": "SPOKEN_PHRASES",
+  "_meta": {
+    "_note": "Chapter 21, display lesson 5 (ch21-cl08, new) — CL8 Finding Someone, the revised Conversation Lab the Chapter 21 proposal specifies in place of the provisional \"Finding a Place: Expanded Directions\" sketch (Docs/proposals/conversation-labs-curriculum-proposal.md, synchronised in the same change). One scene: A asks where Ahmad is; B says he left the school for the mosque; A asks where the mosque is; B locates it between the school and the market. Scored lines use only Chapter 21 Lessons 1–3 (مِنْ … إِلَى …, خَرَجَ / ذَهَبَ / رَجَعَتْ, بَيْنَ … وَ …, خَلْفَ) with Chapter 2 and 12 retrieval (أَيْنَ, جَزَاكَ اللهُ خَيْرًا). No turn-by-turn directions, no imperatives, no pronunciation scoring. The Mission uses new people and places (the market, Fatimah) so it does not repeat Answer it. The review ch21-l05 keeps its ID and moves to order 6; ch21-test is order 7. Rebuilt 2026-09-24 from Docs/proposals/chapter-21-content-proposal.md with the owner-approved review amendments recorded there (دَخَلَ and رَجَعَ treated as Chapter 8 retrieval, خَرَجَ the new verb; Al-Qasas 28:15 وَدَخَلَ الْمَدِينَةَ instead of the imperative in Yusuf 12:99, paired with 28:21 from the same story; Ta-Ha 20:86 فَرَجَعَ for رَجَعَ; Al-Isra 17:1 as a verified مِنْ … إِلَى journey; Al-Baqarah 2:164 for بَيْنَ … وَ …). The map and fixtures named reader_lecture_21 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "کسی کو ڈھونڈنا — گفتگو لیب",
+    "chapter_order": 21,
+    "lesson_order": 5,
+    "estimated_minutes": 10,
+    "xp_reward": 15
+  },
+  "hook": {
+    "ayah": {
+      "surah": 17,
+      "ayah": 1,
+      "label": "Al-Isra 17:1",
+      "ar": "مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+      "en": "from al-Masjid al-Haram to al-Masjid al-Aqsa",
+      "ur": "مسجد حرام سے مسجد اقصیٰ تک",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017001.mp3"
+    },
+    "noor_intro": {
+      "en": "Every journey has a start and an end. Today a friend is looking for someone, and you tell them where he went and how to find the place.",
+      "ur": "ہر سفر کا ایک آغاز اور ایک انجام ہوتا ہے۔ آج ایک دوست کسی کو ڈھونڈ رہا ہے، اور آپ اسے بتاتے ہیں کہ وہ کہاں گیا اور وہ جگہ کیسے ملے گی۔"
+    },
+    "autoplay": false
+  },
+  "exercises": [
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch21-cl-e01",
+      "prompt_line": {
+        "ar": "أَيْنَ أَحْمَدُ؟",
+        "ar_plain": "اين احمد",
+        "translit": "ayna aḥmadu?",
+        "en": "Where is Ahmad?",
+        "ur": "احمد کہاں ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "خَرَجَ مِنَ الْمَدْرَسَةِ وَذَهَبَ إِلَى الْمَسْجِدِ",
+          "ar_plain": "خرج من المدرسة وذهب الى المسجد",
+          "translit": "kharaja mina l-madrasati wa dhahaba ilā l-masjidi",
+          "en": "He left the school and went to the mosque.",
+          "ur": "وہ اسکول سے نکلا اور مسجد گیا۔"
+        },
+        {
+          "ar": "رَجَعَتْ إِلَى الْبَيْتِ",
+          "ar_plain": "رجعت الى البيت",
+          "translit": "rajaʿat ilā l-bayti",
+          "en": "She returned to the house.",
+          "ur": "وہ گھر واپس آ گئی۔"
+        },
+        {
+          "ar": "الْبَيْتُ خَلْفَ الْمَسْجِدِ",
+          "ar_plain": "البيت خلف المسجد",
+          "translit": "al-baytu khalfa l-masjidi",
+          "en": "The house is behind the mosque.",
+          "ur": "گھر مسجد کے پیچھے ہے۔"
+        },
+        {
+          "ar": "الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ",
+          "ar_plain": "المسجد بين المدرسة والسوق",
+          "translit": "al-masjidu bayna l-madrasati wa s-sūqi",
+          "en": "The mosque is between the school and the market.",
+          "ur": "مسجد اسکول اور بازار کے درمیان ہے۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The friend asks about Ahmad: say where he left and where he went.",
+        "ur": "دوست احمد کے بارے میں پوچھتا ہے: بتائیں وہ کہاں سے نکلا اور کہاں گیا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch21-cl-e02",
+      "prompt": {
+        "ar": "مِنْ أَيْنَ خَرَجَ؟",
+        "ar_plain": "من اين خرج",
+        "translit": "min ayna kharaja?",
+        "en": "From where did he leave?",
+        "ur": "وہ کہاں سے نکلا؟"
+      },
+      "options": [
+        {
+          "en": "Where did he go?",
+          "ur": "وہ کہاں گیا؟"
+        },
+        {
+          "en": "From where did he leave?",
+          "ur": "وہ کہاں سے نکلا؟"
+        },
+        {
+          "en": "Did he leave?",
+          "ur": "کیا وہ نکلا؟"
+        },
+        {
+          "en": "Where is he?",
+          "ur": "وہ کہاں ہے؟"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مِنْ أَيْنَ asks for the start of the journey.",
+        "ur": "مِنْ أَيْنَ سفر کا آغاز پوچھتا ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch21-cl-e03",
+      "prompt_line": {
+        "ar": "وَأَيْنَ الْمَسْجِدُ؟",
+        "ar_plain": "واين المسجد",
+        "translit": "wa ayna l-masjidu?",
+        "en": "And where is the mosque?",
+        "ur": "اور مسجد کہاں ہے؟"
+      },
+      "response_mode": "BUILD",
+      "tiles": [
+        {
+          "ar": "وَالسُّوقِ",
+          "ar_plain": "والسوق",
+          "translit": "wa s-sūqi",
+          "en": "and the market",
+          "ur": "اور بازار"
+        },
+        {
+          "ar": "الْمَسْجِدُ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidu",
+          "en": "the mosque",
+          "ur": "مسجد"
+        },
+        {
+          "ar": "خَلْفَ",
+          "ar_plain": "خلف",
+          "translit": "khalfa",
+          "en": "behind",
+          "ur": "پیچھے"
+        },
+        {
+          "ar": "بَيْنَ",
+          "ar_plain": "بين",
+          "translit": "bayna",
+          "en": "between",
+          "ur": "کے درمیان"
+        },
+        {
+          "ar": "الْمَدْرَسَةِ",
+          "ar_plain": "المدرسة",
+          "translit": "al-madrasati",
+          "en": "the school",
+          "ur": "اسکول"
+        }
+      ],
+      "correct_order": [
+        1,
+        3,
+        4,
+        0
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The mosque, بَيْنَ, then the two landmarks.",
+        "ur": "مسجد، بَيْنَ، پھر دونوں نشانیاں۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch21-cl-e04",
+      "mode": "TAP",
+      "sentence_ar": "رَجَعَتْ ___ الْبَيْتِ",
+      "hint": {
+        "en": "She returned to the house.",
+        "ur": "وہ گھر واپس آ گئی۔"
+      },
+      "options": [
+        {
+          "ar": "بَيْنَ",
+          "ar_plain": "بين",
+          "translit": "bayna",
+          "en": "between",
+          "ur": "کے درمیان"
+        },
+        {
+          "ar": "خَلْفَ",
+          "ar_plain": "خلف",
+          "translit": "khalfa",
+          "en": "behind",
+          "ur": "پیچھے"
+        },
+        {
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "کی طرف"
+        }
+      ],
+      "correct_answer": {
+        "ar": "إِلَى",
+        "ar_plain": "الى",
+        "translit": "ilā",
+        "en": "to",
+        "ur": "کی طرف"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Returned to: إِلَى.",
+        "ur": "واپس آئی، کی طرف: إِلَى۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch21-cl-e05",
+      "prompt": {
+        "ar": "إِلَى أَيْنَ ذَهَبَ؟",
+        "ar_plain": "الى اين ذهب",
+        "translit": "ilā ayna dhahaba?",
+        "en": "Where did he go?",
+        "ur": "وہ کہاں گیا؟"
+      },
+      "options": [
+        {
+          "en": "Where did he go?",
+          "ur": "وہ کہاں گیا؟"
+        },
+        {
+          "en": "From where did he leave?",
+          "ur": "وہ کہاں سے نکلا؟"
+        },
+        {
+          "en": "Did he return?",
+          "ur": "کیا وہ واپس آیا؟"
+        },
+        {
+          "en": "Where is the mosque?",
+          "ur": "مسجد کہاں ہے؟"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِلَى أَيْنَ asks for the end of the journey.",
+        "ur": "إِلَى أَيْنَ سفر کا انجام پوچھتا ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch21-cl-e06",
+      "prompt_line": {
+        "ar": "وَأَيْنَ الْبَيْتُ؟",
+        "ar_plain": "واين البيت",
+        "translit": "wa ayna l-baytu?",
+        "en": "And where is the house?",
+        "ur": "اور گھر کہاں ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "رَجَعَ إِلَى الْبَيْتِ",
+          "ar_plain": "رجع الى البيت",
+          "translit": "rajaʿa ilā l-bayti",
+          "en": "He returned to the house.",
+          "ur": "وہ گھر واپس آ گیا۔"
+        },
+        {
+          "ar": "الْبَيْتُ خَلْفَ الْمَسْجِدِ",
+          "ar_plain": "البيت خلف المسجد",
+          "translit": "al-baytu khalfa l-masjidi",
+          "en": "The house is behind the mosque.",
+          "ur": "گھر مسجد کے پیچھے ہے۔"
+        },
+        {
+          "ar": "خَرَجَ مِنَ الْمَدْرَسَةِ وَذَهَبَ إِلَى الْمَسْجِدِ",
+          "ar_plain": "خرج من المدرسة وذهب الى المسجد",
+          "translit": "kharaja mina l-madrasati wa dhahaba ilā l-masjidi",
+          "en": "He left the school and went to the mosque.",
+          "ur": "وہ اسکول سے نکلا اور مسجد گیا۔"
+        },
+        {
+          "ar": "أَيْنَ أَحْمَدُ؟",
+          "ar_plain": "اين احمد",
+          "translit": "ayna aḥmadu?",
+          "en": "Where is Ahmad?",
+          "ur": "احمد کہاں ہے؟"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَيْنَ الْبَيْتُ؟ asks for a place: الْبَيْتُ خَلْفَ الْمَسْجِدِ.",
+        "ur": "أَيْنَ الْبَيْتُ؟ جگہ پوچھتا ہے: الْبَيْتُ خَلْفَ الْمَسْجِدِ۔"
+      }
+    }
+  ],
+  "spoken_phrases": {
+    "scene": {
+      "en": "After school your friend is looking for Ahmad. You saw where he went, and you know the neighbourhood.",
+      "ur": "اسکول کے بعد آپ کا دوست احمد کو ڈھونڈ رہا ہے۔ آپ نے دیکھا کہ وہ کہاں گیا، اور آپ محلے کو جانتے ہیں۔"
+    },
+    "phrases": [
+      {
+        "id": "ch21-cl-p01",
+        "phrase": {
+          "ar": "أَيْنَ أَحْمَدُ؟",
+          "ar_plain": "اين احمد",
+          "translit": "ayna aḥmadu?",
+          "en": "Where is Ahmad?",
+          "ur": "احمد کہاں ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch21-cl-p01.mp3",
+        "context": {
+          "en": "Your friend is looking for Ahmad.",
+          "ur": "آپ کا دوست احمد کو ڈھونڈ رہا ہے۔"
+        }
+      },
+      {
+        "id": "ch21-cl-p02",
+        "phrase": {
+          "ar": "خَرَجَ مِنَ الْمَدْرَسَةِ وَذَهَبَ إِلَى الْمَسْجِدِ",
+          "ar_plain": "خرج من المدرسة وذهب الى المسجد",
+          "translit": "kharaja mina l-madrasati wa dhahaba ilā l-masjidi",
+          "en": "He left the school and went to the mosque.",
+          "ur": "وہ اسکول سے نکلا اور مسجد گیا۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch21-cl-p02.mp3",
+        "context": {
+          "en": "Start after مِنَ, end after إِلَى (Lesson 1).",
+          "ur": "آغاز مِنَ کے بعد، انجام إِلَى کے بعد (سبق 1)۔"
+        }
+      },
+      {
+        "id": "ch21-cl-p03",
+        "phrase": {
+          "ar": "مِنْ أَيْنَ خَرَجَ؟",
+          "ar_plain": "من اين خرج",
+          "translit": "min ayna kharaja?",
+          "en": "From where did he leave?",
+          "ur": "وہ کہاں سے نکلا؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch21-cl-p03.mp3"
+      },
+      {
+        "id": "ch21-cl-p04",
+        "phrase": {
+          "ar": "إِلَى أَيْنَ ذَهَبَ؟",
+          "ar_plain": "الى اين ذهب",
+          "translit": "ilā ayna dhahaba?",
+          "en": "Where did he go?",
+          "ur": "وہ کہاں گیا؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch21-cl-p04.mp3"
+      },
+      {
+        "id": "ch21-cl-p05",
+        "phrase": {
+          "ar": "وَأَيْنَ الْمَسْجِدُ؟",
+          "ar_plain": "واين المسجد",
+          "translit": "wa ayna l-masjidu?",
+          "en": "And where is the mosque?",
+          "ur": "اور مسجد کہاں ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch21-cl-p05.mp3"
+      },
+      {
+        "id": "ch21-cl-p06",
+        "phrase": {
+          "ar": "الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ",
+          "ar_plain": "المسجد بين المدرسة والسوق",
+          "translit": "al-masjidu bayna l-madrasati wa s-sūqi",
+          "en": "The mosque is between the school and the market.",
+          "ur": "مسجد اسکول اور بازار کے درمیان ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch21-cl-p06.mp3",
+        "context": {
+          "en": "Two landmarks with بَيْنَ … وَ … (Lesson 3).",
+          "ur": "بَيْنَ … وَ … کے ساتھ دو نشانیاں (سبق 3)۔"
+        }
+      },
+      {
+        "id": "ch21-cl-p07",
+        "phrase": {
+          "ar": "أَيْنَ فَاطِمَةُ؟",
+          "ar_plain": "اين فاطمة",
+          "translit": "ayna fāṭimatu?",
+          "en": "Where is Fatimah?",
+          "ur": "فاطمہ کہاں ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch21-cl-p07.mp3"
+      },
+      {
+        "id": "ch21-cl-p08",
+        "phrase": {
+          "ar": "رَجَعَتْ إِلَى الْبَيْتِ",
+          "ar_plain": "رجعت الى البيت",
+          "translit": "rajaʿat ilā l-bayti",
+          "en": "She returned to the house.",
+          "ur": "وہ گھر واپس آ گئی۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch21-cl-p08.mp3"
+      },
+      {
+        "id": "ch21-cl-p09",
+        "phrase": {
+          "ar": "وَأَيْنَ الْبَيْتُ؟",
+          "ar_plain": "واين البيت",
+          "translit": "wa ayna l-baytu?",
+          "en": "And where is the house?",
+          "ur": "اور گھر کہاں ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch21-cl-p09.mp3"
+      },
+      {
+        "id": "ch21-cl-p10",
+        "phrase": {
+          "ar": "الْبَيْتُ خَلْفَ الْمَسْجِدِ",
+          "ar_plain": "البيت خلف المسجد",
+          "translit": "al-baytu khalfa l-masjidi",
+          "en": "The house is behind the mosque.",
+          "ur": "گھر مسجد کے پیچھے ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch21-cl-p10.mp3"
+      },
+      {
+        "id": "ch21-cl-p11",
+        "phrase": {
+          "ar": "جَزَاكَ اللهُ خَيْرًا",
+          "ar_plain": "جزاك الله خيرا",
+          "translit": "jazāka llāhu khayran",
+          "en": "May Allah reward you with good.",
+          "ur": "اللہ آپ کو اچھا بدلہ دے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch21-cl-p11.mp3",
+        "context": {
+          "en": "The thank-you you learned in Chapter 12.",
+          "ur": "شکریے کا وہ جملہ جو آپ نے باب 12 میں سیکھا۔"
+        }
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "A",
+        "phrase_id": "ch21-cl-p01"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch21-cl-p02"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch21-cl-p05"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch21-cl-p06"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch21-cl-p11"
+      }
+    ],
+    "lab": {
+      "title": {
+        "en": "Finding Someone",
+        "ur": "کسی کو ڈھونڈنا"
+      },
+      "mission": {
+        "en": "More friends are searching: say where Fatimah went, where a place is, and that Ahmad came back.",
+        "ur": "مزید دوست ڈھونڈ رہے ہیں: بتائیں فاطمہ کہاں گئی، ایک جگہ کہاں ہے، اور یہ کہ احمد واپس آ گیا۔"
+      },
+      "toolkit": [
+        "مِنْ",
+        "إِلَى",
+        "خَرَجَ",
+        "ذَهَبَ",
+        "رَجَعَ",
+        "بَيْنَ",
+        "خَلْفَ"
+      ],
+      "goals": [
+        {
+          "en": "Say where someone went",
+          "ur": "بتائیں کوئی کہاں گیا"
+        },
+        {
+          "en": "Say where a place is",
+          "ur": "بتائیں کوئی جگہ کہاں ہے"
+        },
+        {
+          "en": "Say that someone came back",
+          "ur": "بتائیں کہ کوئی واپس آیا"
+        }
+      ],
+      "pattern": {
+        "after_phrase_id": "ch21-cl-p02",
+        "items": [
+          {
+            "ar": "مِنَ الْمَدْرَسَةِ",
+            "meaning": {
+              "en": "from the school: the start",
+              "ur": "اسکول سے: آغاز"
+            },
+            "source": {
+              "en": "Chapter 21, Lesson 1",
+              "ur": "باب 21، سبق 1"
+            }
+          },
+          {
+            "ar": "إِلَى الْمَسْجِدِ",
+            "meaning": {
+              "en": "to the mosque: the end",
+              "ur": "مسجد کی طرف: انجام"
+            },
+            "source": {
+              "en": "Chapter 21, Lesson 1",
+              "ur": "باب 21، سبق 1"
+            }
+          },
+          {
+            "ar": "بَيْنَ … وَ …",
+            "meaning": {
+              "en": "between … and …",
+              "ur": "… اور … کے درمیان"
+            },
+            "source": {
+              "en": "Chapter 21, Lesson 3",
+              "ur": "باب 21، سبق 3"
+            }
+          }
+        ],
+        "note": {
+          "en": "Tell the journey with مِنْ and إِلَى; tell the place with a landmark.",
+          "ur": "سفر مِنْ اور إِلَى سے بتائیں؛ جگہ نشانی سے بتائیں۔"
+        }
+      },
+      "shadow_phrase_ids": [
+        "ch21-cl-p02",
+        "ch21-cl-p06",
+        "ch21-cl-p08",
+        "ch21-cl-p10"
+      ],
+      "mission_turns": [
+        {
+          "prompt_phrase_id": "ch21-cl-p07",
+          "goal_index": 0,
+          "cue": {
+            "en": "Fatimah left the market and went to the school.",
+            "ur": "فاطمہ بازار سے نکلی اور اسکول گئی۔"
+          },
+          "response_mode": "BUILD",
+          "tiles": [
+            {
+              "ar": "إِلَى السُّوقِ",
+              "ar_plain": "الى السوق",
+              "translit": "ilā s-sūqi",
+              "en": "to the market",
+              "ur": "بازار کی طرف"
+            },
+            {
+              "ar": "وَذَهَبَتْ",
+              "ar_plain": "وذهبت",
+              "translit": "wa dhahabat",
+              "en": "and she went",
+              "ur": "اور وہ گئی"
+            },
+            {
+              "ar": "إِلَى الْمَدْرَسَةِ",
+              "ar_plain": "الى المدرسة",
+              "translit": "ilā l-madrasati",
+              "en": "to the school",
+              "ur": "اسکول کی طرف"
+            },
+            {
+              "ar": "خَرَجَتْ",
+              "ar_plain": "خرجت",
+              "translit": "kharajat",
+              "en": "she left",
+              "ur": "وہ نکلی"
+            },
+            {
+              "ar": "مِنَ السُّوقِ",
+              "ar_plain": "من السوق",
+              "translit": "mina s-sūqi",
+              "en": "from the market",
+              "ur": "بازار سے"
+            }
+          ],
+          "correct_order": [
+            3,
+            4,
+            1,
+            2
+          ]
+        },
+        {
+          "prompt_phrase_id": "ch21-cl-p05",
+          "goal_index": 1,
+          "cue": {
+            "en": "This time the mosque is between the house and the market.",
+            "ur": "اس بار مسجد گھر اور بازار کے درمیان ہے۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "الْمَسْجِدُ خَلْفَ الْبَيْتِ",
+              "ar_plain": "المسجد خلف البيت",
+              "translit": "al-masjidu khalfa l-bayti",
+              "en": "The mosque is behind the house.",
+              "ur": "مسجد گھر کے پیچھے ہے۔"
+            },
+            {
+              "ar": "الْمَسْجِدُ بَيْنَ الْبَيْتِ وَالسُّوقِ",
+              "ar_plain": "المسجد بين البيت والسوق",
+              "translit": "al-masjidu bayna l-bayti wa s-sūqi",
+              "en": "The mosque is between the house and the market.",
+              "ur": "مسجد گھر اور بازار کے درمیان ہے۔"
+            },
+            {
+              "ar": "الْبَيْتُ بَيْنَ الْمَسْجِدِ وَالسُّوقِ",
+              "ar_plain": "البيت بين المسجد والسوق",
+              "translit": "al-baytu bayna l-masjidi wa s-sūqi",
+              "en": "The house is between the mosque and the market.",
+              "ur": "گھر مسجد اور بازار کے درمیان ہے۔"
+            }
+          ],
+          "correct_option_index": 1
+        },
+        {
+          "prompt_phrase_id": "ch21-cl-p01",
+          "goal_index": 2,
+          "cue": {
+            "en": "Ahmad has come back to the house.",
+            "ur": "احمد گھر واپس آ گیا ہے۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "خَرَجَ مِنَ الْبَيْتِ",
+              "ar_plain": "خرج من البيت",
+              "translit": "kharaja mina l-bayti",
+              "en": "He left the house.",
+              "ur": "وہ گھر سے نکلا۔"
+            },
+            {
+              "ar": "رَجَعَ إِلَى الْبَيْتِ",
+              "ar_plain": "رجع الى البيت",
+              "translit": "rajaʿa ilā l-bayti",
+              "en": "He returned to the house.",
+              "ur": "وہ گھر واپس آ گیا۔"
+            },
+            {
+              "ar": "رَجَعَتْ إِلَى الْبَيْتِ",
+              "ar_plain": "رجعت الى البيت",
+              "translit": "rajaʿat ilā l-bayti",
+              "en": "She returned to the house.",
+              "ur": "وہ گھر واپس آ گئی۔"
+            }
+          ],
+          "correct_option_index": 1
+        }
+      ],
+      "answer_it": {
+        "turns": [
+          {
+            "prompt_phrase_id": "ch21-cl-p01",
+            "cue": {
+              "en": "He left the school and went to the mosque.",
+              "ur": "وہ اسکول سے نکلا اور مسجد گیا۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "خَرَجَ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الْمَدْرَسَةِ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "وَذَهَبَ",
+                "accept": [
+                  "ذهب"
+                ]
+              },
+              {
+                "kind": "WORD",
+                "ar": "الْمَسْجِدِ"
+              }
+            ],
+            "model_phrase_id": "ch21-cl-p02",
+            "tip": {
+              "en": "Start with خَرَجَ مِنَ, then ذَهَبَ إِلَى.",
+              "ur": "خَرَجَ مِنَ سے شروع کریں، پھر ذَهَبَ إِلَى۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "ch21-cl-p05",
+            "cue": {
+              "en": "Between the school and the market.",
+              "ur": "اسکول اور بازار کے درمیان۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "بَيْنَ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الْمَدْرَسَةِ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "وَالسُّوقِ",
+                "accept": [
+                  "السوق"
+                ]
+              }
+            ],
+            "model_phrase_id": "ch21-cl-p06",
+            "tip": {
+              "en": "بَيْنَ, the first landmark, then وَ and the second.",
+              "ur": "بَيْنَ، پہلی نشانی، پھر وَ اور دوسری۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "ch21-cl-p07",
+            "cue": {
+              "en": "She went back home.",
+              "ur": "وہ گھر واپس چلی گئی۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "رَجَعَتْ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الْبَيْتِ"
+              }
+            ],
+            "model_phrase_id": "ch21-cl-p08",
+            "tip": {
+              "en": "For Fatimah: رَجَعَتْ, then إِلَى الْبَيْتِ.",
+              "ur": "فاطمہ کے لیے: رَجَعَتْ، پھر إِلَى الْبَيْتِ۔"
+            }
+          }
+        ]
+      },
+      "can_do": [
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Say where someone went",
+            "ur": "بتانا کہ کوئی کہاں گیا"
+          },
+          "ar": "خَرَجَ مِنَ الْمَدْرَسَةِ وَذَهَبَ إِلَى الْمَسْجِدِ"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Say where a place is",
+            "ur": "بتانا کہ کوئی جگہ کہاں ہے"
+          },
+          "ar": "الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ"
+        },
+        {
+          "kind": "UNDERSTAND",
+          "label": {
+            "en": "Understand from where and to where",
+            "ur": "کہاں سے اور کہاں تک سمجھنا"
+          },
+          "ar": "إِلَى أَيْنَ ذَهَبَ؟"
+        }
+      ]
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You helped a friend find someone: where he left, where he went, and where that place is.",
+      "ur": "آپ نے ایک دوست کو کسی کو ڈھونڈنے میں مدد دی: وہ کہاں سے نکلا، کہاں گیا، اور وہ جگہ کہاں ہے۔"
+    }
+  }
+}

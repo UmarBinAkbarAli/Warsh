@@ -2,111 +2,173 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 20, Lesson 4 — Contrast singular vs plural attached pronouns.",
+    "_note": "Chapter 20, Lesson 4 (ch20-l04) — ـكُنَّ, your, said to a group of women, given its own first encounter (it had been crowded into a ten-form contrast), bridged from Chapter 10's أَنْتُنَّ. Quran: Al-Ahzab 33:34 فِي بُيُوتِكُنَّ (proposal amendment: 33:34 instead of 33:33 — the same word, in the ayah about the Quran and wisdom recited in the homes of the Prophet's wives ﷺ); recognition and controlled choices only, no analysis of the surrounding commands. بُيُوتُكُمْ / بُيُوتُكُنَّ shows that the listeners, not the houses, decide the ending. Reveal بُيُوتِكُنَّ (index 4). Rebuilt 2026-09-24 from Docs/proposals/chapter-20-content-proposal.md with the owner-approved review amendments recorded there (2:277 for ـهُمْ instead of 2:5, which Chapter 15 L4 already reads; 33:34 instead of 33:33; 2:233 instead of 60:12; the ـهِمْ / ـهِنَّ sound change after a kasra taught; Chapter 10's standalone plural pronouns and Chapter 11's بُيُوتِكُمْ used as the bridge). The chapter map named reader_lecture_20_attached_pronouns_plural.md, which never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "خواتین کے گروہ سے 'تمہارا': ـكُنَّ",
     "chapter_order": 20,
     "lesson_order": 4,
-    "chapter_title": "Attached Pronouns — Plural Forms",
-    "title": "Singular vs Plural — Comparing Pronouns",
-    "titleAr": "الْمُقَارَنَةُ بَيْنَ ضَمَائِرِ الْوَاحِدِ وَالْجَمْعِ",
-    "source": "reader_lecture_20_attached_pronouns_plural.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 59,
-      "ayah": 24,
-      "label": "Al-Hashr 59:24",
-      "ar": "هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ",
-      "en": "He is Allah, the Creator, the Maker, the Shaper.",
-      "ur": "وہ اللہ ہے، پیدا کرنے والا، بنانے والا، صورت بنانے والا۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/059024.mp3"
+      "surah": 33,
+      "ayah": 34,
+      "label": "Al-Ahzab 33:34",
+      "ar": "وَاذْكُرْنَ مَا يُتْلَىٰ فِي بُيُوتِكُنَّ",
+      "en": "And remember what is recited in your houses",
+      "ur": "اور یاد رکھو جو تمہارے گھروں میں پڑھا جاتا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033034.mp3"
     },
     "noor_intro": {
-      "en": "Now you know all the attached pronouns. Let us compare them side by side — singular and plural — so you can instantly tell which one you are reading. This is how fluent readers scan Quranic text.",
-      "ur": "اب آپ سب attached pronouns جانتے ہیں۔ آئیے ان کا موازنہ کریں — واحد اور جمع — تاکہ آپ فوری طور پر بتا سکیں کہ آپ کیا پڑھ رہے ہیں۔ یہی طریقہ ہے کہ fluent قاری Quranic text scan کرتے ہیں۔"
+      "en": "This ayah speaks to the wives of the Prophet ﷺ, a group of women, about the Quran recited in their homes. Listen for بُيُوتِكُنَّ, your houses.",
+      "ur": "یہ آیت نبی ﷺ کی ازواج، یعنی خواتین کے ایک گروہ، سے ان کے گھروں میں پڑھے جانے والے قرآن کے بارے میں بات کرتی ہے۔ بُيُوتِكُنَّ سنیں، تمہارے گھر۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Recall: you all",
+        "ar": "أَنْتُمْ / أَنْتُنَّ",
+        "ur": "یاد کریں: تم سب"
+      },
+      "explanation": {
+        "en": "Chapter 10: أَنْتُمْ speaks to a male or mixed group; أَنْتُنَّ speaks to a group in which everyone is a woman. Listen to the ending ـنَّ: you will hear it again today.",
+        "ur": "باب 10: أَنْتُمْ مرد یا ملے جلے گروہ سے بات کرتا ہے؛ أَنْتُنَّ ایسے گروہ سے جس میں سب خواتین ہوں۔ آخر ـنَّ سنیں: آج یہ پھر سنائی دے گا۔"
+      },
+      "examples": [
+        {
+          "ar": "أَنْتُمْ",
+          "ar_plain": "انتم",
+          "translit": "antum",
+          "en": "you all (a male or mixed group)",
+          "ur": "تم سب (مرد یا ملا جلا گروہ)"
+        },
+        {
+          "ar": "أَنْتُنَّ",
+          "ar_plain": "انتن",
+          "translit": "antunna",
+          "en": "you all (a group of women)",
+          "ur": "تم سب (خواتین)"
+        }
+      ]
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "All attached pronouns — singular and plural compared",
-        "ar": "جَمِيعُ الضَّمَائِرِ الْمَحْصُورَةِ — وَاحِدٌ وَجَمْعٌ مُقَارَنًا",
-        "ur": "تمام attached pronouns — واحد اور جمع کا موازنہ"
+        "en": "ـكُنَّ: your, to a group of women",
+        "ar": "كِتَابُكُنَّ",
+        "ur": "ـكُنَّ: خواتین کے گروہ سے 'تمہارا'"
       },
       "explanation": {
-        "en": "There are six key attached pronouns. First person: ي (my), نَا (our). Second person: كَ (you masc. sg.), كِ (you fem. sg.), كُمْ (you masc. pl.), كُنَّ (you fem. pl.). Third person: هُ (him), هَا (her), هُمْ (them masc.), هُنَّ (them fem.). The presence and position of letters tells you exactly who is meant.",
-        "ur": "چھ key attached pronouns ہیں۔ First person: ي (میرا)، نَا (ہمارا)۔ Second person: كَ (تم مذکر واحد)، كِ (تم مؤنث واحد)، كُمْ (تم مذکر جمع)، كُنَّ (تم مؤنث جمع)۔ Third person: هُ (اسے)، هَا (اسے مؤنث)، هُمْ (انہیں مذکر)، هُنَّ (انہیں مؤنث)۔ letters کی موجودگی اور position آپ کو precisely بتاتی ہے کہ کون مراد ہے۔"
+        "en": "When every person you speak to is a woman, your is ـكُنَّ: كِتَابُكُنَّ, your book, said to a group of women.",
+        "ur": "جب آپ جن سے بات کر رہے ہیں وہ سب خواتین ہوں تو 'تمہارا' ـكُنَّ ہے: كِتَابُكُنَّ، تم سب کی کتاب، خواتین کے گروہ سے کہا گیا۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابُكُنَّ",
+          "ar_plain": "كتابكن",
+          "translit": "kitābukunna",
+          "en": "your book (to a group of women)",
+          "ur": "تم سب کی کتاب (خواتین کے گروہ سے)"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Same houses, different listeners",
+        "ar": "بُيُوتُكُمْ / بُيُوتُكُنَّ",
+        "ur": "وہی گھر، مختلف سننے والے"
+      },
+      "explanation": {
+        "en": "The houses do not change. بُيُوتُكُمْ is said to a male or mixed group; بُيُوتُكُنَّ is said to a group of women.",
+        "ur": "گھر نہیں بدلتے۔ بُيُوتُكُمْ مرد یا ملے جلے گروہ سے کہا جاتا ہے؛ بُيُوتُكُنَّ خواتین کے گروہ سے۔"
+      },
+      "examples": [
+        {
+          "ar": "بُيُوتُكُمْ",
+          "ar_plain": "بيوتكم",
+          "translit": "buyūtukum",
+          "en": "your houses (to a group)",
+          "ur": "تم سب کے گھر"
+        },
+        {
+          "ar": "بُيُوتُكُنَّ",
+          "ar_plain": "بيوتكن",
+          "translit": "buyūtukunna",
+          "en": "your houses (to a group of women)",
+          "ur": "تم سب کے گھر (خواتین سے)"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Ahzab 33:34: And remember what is recited in your houses",
+        "ar": "وَاذْكُرْنَ مَا يُتْلَىٰ فِي بُيُوتِكُنَّ",
+        "ur": "Al-Ahzab 33:34: اور یاد رکھو جو تمہارے گھروں میں پڑھا جاتا ہے"
+      },
+      "explanation": {
+        "en": "بُيُوتِكُنَّ: your houses — بُيُوت + ـكُنَّ, with -i after فِي. The women addressed are the wives of the Prophet ﷺ; what is recited in their homes is the verses of Allah and wisdom. وَاذْكُرْنَ, and remember, and يُتْلَىٰ, is recited, are only glossed.",
+        "ur": "بُيُوتِكُنَّ: تمہارے گھر — بُيُوت + ـكُنَّ، فِي کے بعد -i کے ساتھ۔ جن خواتین سے خطاب ہے وہ نبی ﷺ کی ازواج ہیں؛ ان کے گھروں میں اللہ کی آیات اور حکمت پڑھی جاتی ہے۔ وَاذْكُرْنَ، اور یاد رکھو، اور يُتْلَىٰ، پڑھا جاتا ہے، کا صرف معنی دیا گیا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033034.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The listeners decide, not the house",
+        "ar": "بُيُوتُكُنَّ",
+        "ur": "سننے والے طے کرتے ہیں، گھر نہیں"
+      },
+      "explanation": {
+        "en": "بَيْتٌ is masculine, yet the ending here is ـكُنَّ, because the listeners are women. The ending always tells you who is being spoken to.",
+        "ur": "بَيْتٌ مذکر ہے، پھر بھی یہاں آخر ـكُنَّ ہے، کیونکہ سننے والی خواتین ہیں۔ آخر ہمیشہ بتاتا ہے کہ کس سے بات ہو رہی ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "رَبِّي vs رَبَّنَا",
-        "ar_plain": "ربي vs ربنا",
-        "translit": "rabbee vs rabbanaa",
-        "en": "my Lord vs our Lord",
-        "ur": "میرا رب بمقابلہ ہمارا رب"
+        "ar": "يَا طَالِبَاتُ، أَيْنَ كُتُبُكُنَّ؟",
+        "ar_plain": "يا طالبات اين كتبكن",
+        "translit": "yā ṭālibātu, ayna kutubukunna?",
+        "en": "Students (all women), where are your books?",
+        "ur": "طالبات! تم سب کی کتابیں کہاں ہیں؟"
       },
       "explanation": {
-        "en": "رَبِّي — the ر is single, the ending is ي (singular first person). رَبَّنَا — the ر is doubled due to shaddah, the ending is نَا (plural first person). The doubling of the base letter is a reliable signal of plural pronouns in رَبّ class words.",
-        "ur": "رَبِّي — ر اکیلا ہے، ending ي ہے (singular first person)۔ رَبَّنَا — ر شدہ کی وجہ سے double ہے، ending نَا ہے (plural first person)۔ base letter کی double شدہ ہیں رَبّ class words میں plural pronouns کا reliable signal ہے۔"
+        "en": "The teacher speaks to a group of female students, طَالِبَاتٌ from Chapter 9, so your is ـكُنَّ.",
+        "ur": "استاد طالبات کے ایک گروہ سے بات کر رہے ہیں، طَالِبَاتٌ باب 9 سے، اس لیے 'تمہارا' ـكُنَّ ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "رَبَّكَ vs رَبَّكُمْ",
-        "ar_plain": "ربك vs ربكم",
-        "translit": "rabbaka vs rabbukum",
-        "en": "your Lord (sg.) vs your Lord (pl.)",
-        "ur": "تمہارے رب (واحد) بمقابلہ تمہارے رب (جمع)"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "One woman or a group of women",
+        "ar": "كِتَابُكِ / كِتَابُكُنَّ",
+        "ur": "ایک عورت یا خواتین کا گروہ"
       },
       "explanation": {
-        "en": "رَبَّكَ has ك only (second person singular masc.). رَبَّكُمْ has كم (second person plural masc.) — the plural marker كم adds an extra ك and م. The longer the ending, the more people are addressed.",
-        "ur": "رَبَّكَ میں صرف ك ہے (second person singular masc.)۔ رَبَّكُمْ میں كم ہے (second person plural masc.) — plural marker كم میں ایک extra ك اور م ہے۔ جتنی ending لمبی، اتنے زیادہ لوگوں سے خطاب۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "رَبَّهُ vs رَبَّهُمْ vs رَبَّهُنَّ",
-        "ar_plain": "ربه vs ربههم vs ربههن",
-        "translit": "rabbahu vs rabbahum vs rabbahunna",
-        "en": "his Lord vs their Lord (masc.) vs their Lord (fem.)",
-        "ur": "اس کا رب بمقابلہ ان کا رب (مذکر) بمقابلہ ان کا رب (مؤنث)"
+        "en": "كِتَابُكِ: your book, to one woman (Chapter 7). كِتَابُكُنَّ: your book, to a group of women.",
+        "ur": "كِتَابُكِ: تمہاری کتاب، ایک عورت سے (باب 7)۔ كِتَابُكُنَّ: تم سب کی کتاب، خواتین کے گروہ سے۔"
       },
-      "explanation": {
-        "en": "رَبَّهُ — single third person masculine (his Lord). رَبَّهُمْ — plural third person masculine (their Lord, group of men). رَبَّهُنَّ — plural third person feminine (their Lord, group of women). The difference is in the pronoun ending: هُ vs هُمْ vs هُنَّ.",
-        "ur": "رَبَّهُ — single third person masculine (اس کا رب)۔ رَبَّهُمْ — plural third person masculine (ان کا رب، مردوں کا گروہ)۔ رَبَّهُنَّ — plural third person feminine (ان کا رب، عورتوں کا گروہ)۔ فرق pronoun ending میں ہے: هُ vs هُمْ vs هُنَّ۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "title": {
-        "en": "Vocabulary — Full attached pronoun paradigm",
-        "ur": "لُغَاتٌ — مکمل attached pronoun paradigm"
-      },
-      "text": {
-        "ar": "رَبِّي · رَبَّنَا · رَبَّكَ · رَبَّكِ · رَبَّكُمْ · رَبَّكُنَّ · رَبَّهُ · رَبَّهَا · رَبَّهُمْ · رَبَّهُنَّ · رَبُّنَا · إِلَهَهُمْ",
-        "en": "my Lord · our Lord · your Lord (sg.) · your Lord (fem. sg.) · your Lord (pl.) · your Lord (fem. pl.) · his Lord · her Lord · their Lord (masc.) · their Lord (fem.) · our Lord (alternate form) · their god",
-        "ar_plain": "ربي · ربنا · ربك · ربك · ربكم · ربكن · ربه · ربها · ربهم · ربهن · ربنا · إلههم",
-        "translit": "—",
-        "ur": "میرا رب · ہمارا رب · آپ کا رب (sg.) · آپ کا رب (fem. sg.) · آپ کا رب (pl.) · آپ کا رب (fem. pl.) · اس کا رب · اس کا رب · ان کا رب (masc.) · ان کا رب (fem.) · ہمارا رب (متبادل شکل) · ان کا خدا"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "How to identify pronouns quickly",
-        "ur": "pronouns کو جلدی کیسے پہچانیں"
-      },
-      "body": {
-        "en": "Count the letters at the end: ي = 1 person (I/my). نَا = group (we/our). كَ = 1 male (you). كِ = 1 female (you). كُمْ = group (you-pl). كُنَّ = group (you-pl fem.). هُ = 1 male (he/his). هَا = 1 female (she/her). هُمْ = group (they-masc). هُنَّ = group (they-fem). The Quran uses all of them — now you can recognize each one.",
-        "ur": "آخر میں letters گنیں: ي = 1 شخص (میں/میرا)۔ نَا = گروہ (ہم/ہمارا)۔ كَ = 1 مرد (تم)۔ كِ = 1 عورت (تم)۔ كُمْ = گروہ (تم-جمع)۔ كُنَّ = گروہ (تم-مؤنث جمع)۔ هُ = 1 مرد (اسے/اس کا)۔ هَا = 1 عورت (اسے/اس کی)۔ هُمْ = گروہ (وہ-مذکر)۔ هُنَّ = گروہ (وہ-مؤنث)۔ قرآن ان سب کو استعمال کرتا ہے — اب آپ ہر ایک کو پہچان سکتے ہیں۔"
-      }
+      "examples": [
+        {
+          "ar": "كِتَابُكِ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuki",
+          "en": "your book (to one woman)",
+          "ur": "تمہاری کتاب (ایک عورت سے)"
+        },
+        {
+          "ar": "كِتَابُكُنَّ",
+          "ar_plain": "كتابكن",
+          "translit": "kitābukunna",
+          "en": "your book (to a group of women)",
+          "ur": "تم سب کی کتاب (خواتین کے گروہ سے)"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -114,360 +176,341 @@
       "type": "TAP_TRANSLATION",
       "id": "ch20-l04-ex01",
       "prompt": {
-        "ar": "رَبِّي",
-        "ar_plain": "ربي",
-        "translit": "rabbee",
-        "en": "my Lord",
-        "ur": "میرا رب"
+        "ar": "كِتَابُكُنَّ",
+        "ar_plain": "كتابكن",
+        "translit": "kitābukunna",
+        "en": "your book (to a group of women)",
+        "ur": "تم سب کی کتاب (خواتین کے گروہ سے)"
       },
       "options": [
         {
-          "en": "my Lord",
-          "ur": "میرا رب"
+          "en": "your book (said to a mixed group)",
+          "ur": "تم سب کی کتاب (ملے جلے گروہ سے)"
         },
         {
-          "en": "our Lord",
-          "ur": "ہمارا رب"
+          "en": "her book",
+          "ur": "اس کی کتاب (عورت)"
         },
         {
-          "en": "your Lord",
-          "ur": "تمہارے رب"
+          "en": "your book (said to a group of women)",
+          "ur": "تم سب کی کتاب (خواتین کے گروہ سے)"
         },
         {
-          "en": "their Lord",
-          "ur": "ان کا رب"
+          "en": "your book (said to one woman)",
+          "ur": "تمہاری کتاب (ایک عورت سے)"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَبِّي uses ي (singular first person pronoun) — 'my Lord.' رَبَّنَا would use نَا (plural first person) — 'our Lord.'",
-        "ur": "رَبِّي ي (singular first person pronoun) استعمال کرتا ہے — 'میرا رب'۔ رَبَّنَا نَا (plural first person) استعمال کرتا — 'ہمارا رب'۔"
+        "en": "ـكُنَّ: your, to a group of women.",
+        "ur": "ـكُنَّ: خواتین کے گروہ سے 'تمہارا'۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch20-l04-ex02",
+      "mode": "TAP",
+      "sentence_ar": "يَا طَالِبَاتُ، أَيْنَ ___؟",
+      "hint": {
+        "en": "Students (all women), where is your school?",
+        "ur": "طالبات! تم سب کا اسکول کہاں ہے؟"
+      },
+      "options": [
+        {
+          "ar": "مَدْرَسَتُكِ",
+          "ar_plain": "مدرستك",
+          "translit": "madrasatuki",
+          "en": "your school (to one woman)",
+          "ur": "تمہارا اسکول (ایک عورت سے)"
+        },
+        {
+          "ar": "مَدْرَسَتُكُمْ",
+          "ar_plain": "مدرستكم",
+          "translit": "madrasatukum",
+          "en": "your school (to a group)",
+          "ur": "تم سب کا اسکول"
+        },
+        {
+          "ar": "مَدْرَسَتُنَا",
+          "ar_plain": "مدرستنا",
+          "translit": "madrasatunā",
+          "en": "our school",
+          "ur": "ہمارا اسکول"
+        },
+        {
+          "ar": "مَدْرَسَتُكُنَّ",
+          "ar_plain": "مدرستكن",
+          "translit": "madrasatukunna",
+          "en": "your school (to a group of women)",
+          "ur": "تم سب کا اسکول (خواتین سے)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مَدْرَسَتُكُنَّ",
+        "ar_plain": "مدرستكن",
+        "translit": "madrasatukunna",
+        "en": "your school (to a group of women)",
+        "ur": "تم سب کا اسکول (خواتین سے)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "All the listeners are women: مَدْرَسَتُكُنَّ.",
+        "ur": "سب سننے والی خواتین ہیں: مَدْرَسَتُكُنَّ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch20-l04-ex03",
+      "mode": "TAP",
+      "sentence_ar": "يَا طُلَّابُ، أَيْنَ ___؟",
+      "hint": {
+        "en": "Students (a class of boys), where is your school?",
+        "ur": "طلبہ (لڑکوں کی جماعت)! تم سب کا اسکول کہاں ہے؟"
+      },
+      "options": [
+        {
+          "ar": "مَدْرَسَتُكُمْ",
+          "ar_plain": "مدرستكم",
+          "translit": "madrasatukum",
+          "en": "your school (to a group)",
+          "ur": "تم سب کا اسکول"
+        },
+        {
+          "ar": "مَدْرَسَتُكَ",
+          "ar_plain": "مدرستك",
+          "translit": "madrasatuka",
+          "en": "your school (to one man)",
+          "ur": "تمہارا اسکول (ایک مرد سے)"
+        },
+        {
+          "ar": "مَدْرَسَتُكُنَّ",
+          "ar_plain": "مدرستكن",
+          "translit": "madrasatukunna",
+          "en": "your school (to a group of women)",
+          "ur": "تم سب کا اسکول (خواتین سے)"
+        },
+        {
+          "ar": "مَدْرَسَتُنَا",
+          "ar_plain": "مدرستنا",
+          "translit": "madrasatunā",
+          "en": "our school",
+          "ur": "ہمارا اسکول"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مَدْرَسَتُكُمْ",
+        "ar_plain": "مدرستكم",
+        "translit": "madrasatukum",
+        "en": "your school (to a group)",
+        "ur": "تم سب کا اسکول"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The listeners are boys, a male group: مَدْرَسَتُكُمْ.",
+        "ur": "سننے والے لڑکے ہیں، مردوں کا گروہ: مَدْرَسَتُكُمْ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch20-l04-ex04",
+      "ayah_fragment": {
+        "ar": "وَاذْكُرْنَ مَا يُتْلَىٰ فِي بُيُوتِكُنَّ",
+        "surah_ref": "Al-Ahzab 33:34"
+      },
+      "options": [
+        {
+          "en": "بُيُوتِكُنَّ — houses that are feminine",
+          "ur": "بُيُوتِكُنَّ — ایسے گھر جو مؤنث ہیں"
+        },
+        {
+          "en": "بُيُوتِكُنَّ — your houses, said to a group of women",
+          "ur": "بُيُوتِكُنَّ — تمہارے گھر، خواتین کے گروہ سے کہا گیا"
+        },
+        {
+          "en": "بُيُوتِكُنَّ — their houses, women who are not addressed",
+          "ur": "بُيُوتِكُنَّ — ان کے گھر، وہ خواتین جن سے خطاب نہیں"
+        },
+        {
+          "en": "بُيُوتِكُنَّ — your houses, said to one woman",
+          "ur": "بُيُوتِكُنَّ — تمہارے گھر، ایک عورت سے کہا گیا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The ayah speaks to the wives of the Prophet ﷺ: your houses.",
+        "ur": "آیت نبی ﷺ کی ازواج سے خطاب کرتی ہے: تمہارے گھر۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch20-l04-ex02",
+      "id": "ch20-l04-ex05",
       "statement": {
-        "en": "رَبَّكُمْ uses a plural pronoun (كم) while رَبَّكَ uses a singular pronoun (ك).",
-        "ur": "رَبَّكُمْ plural pronoun (كم) استعمال کرتا ہے جبکہ رَبَّكَ singular pronoun (ك) استعمال کرتا ہے۔",
-        "ar_example": {
-          "ar": "رَبَّكُمْ — our vs رَبَّكَ — your (sg.)",
-          "ar_plain": "ربكم — plural | ربك — singular",
-          "translit": "rabbukum — plural | rabbaka — singular",
-          "en": "your Lord (plural) vs your Lord (singular)",
-          "ur": "تمہارے رب (جمع) بمقابلہ تمہارے رب (واحد)"
-        }
+        "en": "ـكُنَّ in بُيُوتُكُنَّ shows that the houses are feminine.",
+        "ur": "بُيُوتُكُنَّ میں ـكُنَّ بتاتا ہے کہ گھر مؤنث ہیں۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch20-l04-ex03",
+      "correct_answer": false,
       "xp_value": 1,
-      "tiles": [
-        {
-          "ar": "رَبَّهُ",
-          "ar_plain": "ربه",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
-        },
-        {
-          "ar": "لَهُ",
-          "ar_plain": "له",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
-        },
-        {
-          "ar": "الْمُلْكُ",
-          "ar_plain": "الملك",
-          "translit": "—",
-          "en": "—",
-          "ur": "-"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "target_translation": {
-        "en": "His Lord — to Him belongs the kingdom.",
-        "ur": "اس کا رب — اسی کا بادشاہت ہے۔"
+      "explanation_on_wrong": {
+        "en": "It shows the listeners are a group of women.",
+        "ur": "یہ بتاتا ہے کہ سننے والی خواتین کا گروہ ہیں۔"
       }
     },
     {
       "type": "MATCHING",
-      "id": "ch20-l04-ex04",
+      "id": "ch20-l04-ex06",
       "left_column": [
         {
-          "ar": "رَبِّي",
-          "ar_plain": "ربي",
-          "translit": "rabbee",
-          "en": "my Lord",
-          "ur": "میرا رب"
+          "ar": "كِتَابُكِ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuki",
+          "en": "your book (to one woman)",
+          "ur": "تمہاری کتاب (ایک عورت سے)"
         },
         {
-          "ar": "رَبَّنَا",
-          "ar_plain": "ربنا",
-          "translit": "rabbanaa",
-          "en": "our Lord",
-          "ur": "ہمارا رب"
+          "ar": "كِتَابُكُمْ",
+          "ar_plain": "كتابكم",
+          "translit": "kitābukum",
+          "en": "your book (to a group)",
+          "ur": "تم سب کی کتاب (گروہ سے)"
         },
         {
-          "ar": "رَبَّكُمْ",
-          "ar_plain": "ربكم",
-          "translit": "rabbukum",
-          "en": "your Lord (pl.)",
-          "ur": "تمہارے رب (جمع)"
+          "ar": "كِتَابُكُنَّ",
+          "ar_plain": "كتابكن",
+          "translit": "kitābukunna",
+          "en": "your book (to a group of women)",
+          "ur": "تم سب کی کتاب (خواتین کے گروہ سے)"
         },
         {
-          "ar": "رَبَّهُمْ",
-          "ar_plain": "ربهم",
-          "translit": "rabbahum",
-          "en": "their Lord (masc.)",
-          "ur": "ان کا رب (مذکر)"
-        },
-        {
-          "ar": "رَبَّهُ",
-          "ar_plain": "ربه",
-          "translit": "rabbahu",
-          "en": "his Lord",
-          "ur": "اس کا رب"
-        },
-        {
-          "ar": "رَبَّهُنَّ",
-          "ar_plain": "ربهن",
-          "translit": "rabbahunna",
-          "en": "their Lord (fem.)",
-          "ur": "ان کا رب (مؤنث)"
+          "ar": "كِتَابُكَ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuka",
+          "en": "your book (to one man)",
+          "ur": "تمہاری کتاب (ایک مرد سے)"
         }
       ],
       "right_column": [
         {
-          "en": "my Lord",
-          "ur": "میرا رب"
+          "en": "your book (to a male or mixed group)",
+          "ur": "تم سب کی کتاب (مرد یا ملے جلے گروہ سے)"
         },
         {
-          "en": "our Lord",
-          "ur": "ہمارا رب"
+          "en": "your book (to one man)",
+          "ur": "تمہاری کتاب (ایک مرد سے)"
         },
         {
-          "en": "your Lord (pl.)",
-          "ur": "تمہارے رب (جمع)"
+          "en": "your book (to one woman)",
+          "ur": "تمہاری کتاب (ایک عورت سے)"
         },
         {
-          "en": "their Lord (masc.)",
-          "ur": "ان کا رب (مذکر)"
-        },
-        {
-          "en": "his Lord",
-          "ur": "اس کا رب"
-        },
-        {
-          "en": "their Lord (fem.)",
-          "ur": "ان کا رب (مؤنث)"
+          "en": "your book (to a group of women)",
+          "ur": "تم سب کی کتاب (خواتین سے)"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
+          0
+        ],
+        [
+          2,
           3
         ],
         [
-          4,
-          4
-        ],
-        [
-          5,
-          5
+          3,
+          1
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch20-l04-ex05",
-      "target_translation": {
-        "en": "Their Lord (masc.) is the Lord of all.",
-        "ur": "ان کا رب (مذکر) سب کا رب ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "رَبَّهُمْ",
-          "ar_plain": "ربهم",
-          "translit": "rabbahum",
-          "en": "their Lord (masc.)",
-          "ur": "ان کا رب (مذکر)"
-        },
-        {
-          "ar": "رَبُّ الْعَالَمِينَ",
-          "ar_plain": "رب العالمين",
-          "translit": "rabbul-'aalamiin",
-          "en": "Lord of all",
-          "ur": "سب کا رب"
-        },
-        {
-          "ar": "رَبُّنَا",
-          "ar_plain": "ربنا",
-          "translit": "rabbunaa",
-          "en": "our Lord",
-          "ur": "ہمارا رب"
-        },
-        {
-          "ar": "رَبُّ",
-          "ar_plain": "رب",
-          "translit": "rabbu",
-          "en": "Lord (indef.)",
-          "ur": "رب (نکرہ)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch20-l04-ex06",
-      "statement": {
-        "en": "The pronoun ending هُ denotes third person singular masculine (his), while هُمْ denotes third person plural masculine (their-m).",
-        "ur": "pronoun ending هُ third person singular masculine (اس کا) کو denotes کرتا ہے، جبکہ هُمْ third person plural masculine (ان کا، مذکر) کو denote کرتا ہے۔",
-        "ar_example": {
-          "ar": "رَبَّهُ — his Lord | رَبَّهُمْ — their Lord (masc.)",
-          "ar_plain": "ربه — میرا رب | ربههم — ان کا رب (مذکر)",
-          "translit": "rabbahu — his Lord | rabbahum — their Lord (masc.)",
-          "en": "his Lord | their Lord (masc.)",
-          "ur": "اس کا رب | ان کا رب (مذکر)"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch20-l04-ex07",
-      "prompt": {
-        "ar": "رَبَّكُنَّ فِي السَّمَاءِ",
-        "ar_plain": "ربكن في السماء",
-        "translit": "rabbakunna fis-samaa'i",
-        "en": "Your Lord (fem. pl.) is in the heavens.",
-        "ur": "تمہاری رب (مؤنث جمع) آسمان میں ہے۔"
-      },
-      "options": [
-        {
-          "en": "Your Lord (fem. pl.) is in the heavens.",
-          "ur": "تمہاری رب (مؤنث جمع) آسمان میں ہے۔"
-        },
-        {
-          "en": "Our Lord is in the heavens.",
-          "ur": "ہمارا رب آسمان میں ہے۔"
-        },
-        {
-          "en": "Your Lord (sg.) is in the heavens.",
-          "ur": "تمہارے رب (واحد) آسمان میں ہے۔"
-        },
-        {
-          "en": "Their Lord is in the heavens.",
-          "ur": "ان کا رب آسمان میں ہے۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَبَّكُنَّ uses كُنَّ — the second person feminine plural attached pronoun. This is used when addressing a group of women. رَبَّكُمْ would address men. رَبَّنَا would be 'our Lord.'",
-        "ur": "رَبَّكُنَّ میں كُنَّ ہے — second person feminine plural attached pronoun۔ یہ عورتوں کی جماعت سے خطاب کرتے وقت استعمال ہوتا ہے۔ رَبَّكُمْ مردوں کو خطاب کرے گا۔ رَبَّنَا 'ہمارا رب' ہوگا۔"
+        "en": "ـكِ one woman, ـكُمْ a male or mixed group, ـكُنَّ women, ـكَ one man.",
+        "ur": "ـكِ ایک عورت، ـكُمْ مرد یا ملا جلا گروہ، ـكُنَّ خواتین، ـكَ ایک مرد۔"
       }
     },
     {
-      "type": "BUILD_SENTENCE",
-      "id": "ch20-l04-ex08",
-      "target_translation": {
-        "en": "I fear my Lord and our Lord.",
-        "ur": "میں اپنے رب سے اور ہمارے رب سے ڈرتا ہوں۔"
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch20-l04-ex07",
+      "prompt_line": {
+        "ar": "يَا طَالِبَاتُ، أَيْنَ كُتُبُكُنَّ؟",
+        "ar_plain": "يا طالبات اين كتبكن",
+        "translit": "yā ṭālibātu, ayna kutubukunna?",
+        "en": "Students (all women), where are your books?",
+        "ur": "طالبات! تم سب کی کتابیں کہاں ہیں؟"
       },
-      "tiles": [
+      "response_mode": "PICK",
+      "options": [
         {
-          "ar": "أَخْشَى",
-          "ar_plain": "أخشى",
-          "translit": "akhshaa",
-          "en": "I fear",
-          "ur": "میں ڈرتا ہوں"
+          "ar": "كُتُبُنَا عَلَى الْمَكْتَبِ",
+          "ar_plain": "كتبنا على المكتب",
+          "translit": "kutubunā ʿalā l-maktabi",
+          "en": "Our books are on the desk.",
+          "ur": "ہماری کتابیں میز پر ہیں۔"
         },
         {
-          "ar": "رَبِّي",
-          "ar_plain": "ربي",
-          "translit": "rabbee",
-          "en": "my Lord",
-          "ur": "میرا رب"
+          "ar": "كُتُبُهُمْ عَلَى الْمَكْتَبِ",
+          "ar_plain": "كتبهم على المكتب",
+          "translit": "kutubuhum ʿalā l-maktabi",
+          "en": "Their books are on the desk.",
+          "ur": "ان کی کتابیں میز پر ہیں۔"
         },
         {
-          "ar": "وَرَبَّنَا",
-          "ar_plain": "وربنا",
-          "translit": "wa-rabbanaa",
-          "en": "and our Lord",
-          "ur": "اور ہمارا رب"
+          "ar": "كُتُبُكَ عَلَى الْمَكْتَبِ",
+          "ar_plain": "كتبك على المكتب",
+          "translit": "kutubuka ʿalā l-maktabi",
+          "en": "Your books are on the desk. (to one man)",
+          "ur": "تمہاری کتابیں میز پر ہیں۔"
         },
         {
-          "ar": "رَبَّهُ",
-          "ar_plain": "ربه",
-          "translit": "rabbahu",
-          "en": "his Lord",
-          "ur": "اس کا رب"
+          "ar": "كُتُبُكُنَّ عَلَى الْمَكْتَبِ",
+          "ar_plain": "كتبكن على المكتب",
+          "translit": "kutubukunna ʿalā l-maktabi",
+          "en": "Your books are on the desk. (to women)",
+          "ur": "تم سب کی کتابیں میز پر ہیں۔"
         }
       ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The women answer for their own group: كُتُبُنَا, our books.",
+        "ur": "خواتین اپنے گروہ کی طرف سے جواب دیتی ہیں: كُتُبُنَا، ہماری کتابیں۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Singular vs plural attached pronouns — all six forms",
-      "ar": "ضمير الواحد بمقابلہ ضمير الجمع — چھ صورتیں",
-      "ur": "واحد بمقابلہ جمع attached pronouns — چھ forms"
+      "en": "ـكُنَّ: your, to a group of women",
+      "ar": "ـكُنَّ لِلْمُخَاطَبَاتِ",
+      "ur": "ـكُنَّ: خواتین کے گروہ سے 'تمہارا'"
     },
     "ayah": {
-      "surah": 6,
-      "ayah": 164,
-      "label": "Al-An'am 6:164",
-      "ar": "قُلْ أَغَيْرَ اللَّهِ أَبْغِي رَبًّا وَهُوَ رَبُّ كُلِّ شَيْءٍ ۚ وَلَا تَكْسِبُ كُلُّ نَفْسٍ إِلَّا عَلَيْهَا ۚ وَلَا تَزِرُ وَازِرَةٌ وِزْرَ أُخْرَىٰ ۚ ثُمَّ إِلَىٰ رَبِّكُم مَّرْجِعُكُمْ فَيُنَبِّئُكُم بِمَا كُنتُمْ فِيهِ تَخْتَلِفُونَ",
-      "en": "Say, \"Is it other than Allāh I should desire as a lord while He is the Lord of all things? And every soul earns not [blame] except against itself, and no bearer of burdens will bear the burden of another. Then to your Lord is your return, and He will inform you concerning that over which you used to differ.\"",
-      "ur": "کہو کیا میں خدا کے سوا اور پروردگار تلاش کروں اور وہی تو ہر چیز کا مالک ہے اور جو کوئی (برا) کام کرتا ہے تو اس کا ضرر اسی کو ہوتا ہے اور کوئی شخص کسی (کے گناہ) کا بوجھ نہیں اٹھائے گا پھر تم سب کو اپنے پروردگار کی طرف لوٹ کا جانا ہے تو جن جن باتوں میں تم اختلاف کیا کرتے تھے وہ تم کو بتائے گا",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/006164.mp3"
+      "surah": 33,
+      "ayah": 34,
+      "label": "Al-Ahzab 33:34",
+      "ar": "وَاذْكُرْنَ مَا يُتْلَىٰ فِي بُيُوتِكُنَّ",
+      "en": "And remember what is recited in your houses",
+      "ur": "اور یاد رکھو جو تمہارے گھروں میں پڑھا جاتا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033034.mp3"
     },
     "highlighted_word_indices": [
-      5,
-      6
+      4
+    ],
+    "highlighted_words": [
+      "بُيُوتِكُنَّ"
     ],
     "noor_explanation": {
-      "en": "رَبُّ الْعَالَمِينَ — Lord of all worlds. Notice how the Quran uses رَبُّ (definite, with ال) in the construct state: رَبُّ الْعَالَمِينَ. When attached pronouns are not used, the noun takes ال for definiteness. This contrast between ال and attached pronouns is essential for reading Quranic Arabic fluently.",
-      "ur": "رَبُّ الْعَالَمِينَ — سب جہانوں کا رب۔ دھیان دیں کہ قرآن رَبُّ (معرفہ، ال کے ساتھ) کو اضافہ کی حالت میں استعمال کرتا ہے: رَبُّ الْعَالَمِينَ۔ جب attached pronouns استعمال نہیں ہوتے تو noun definiteness کے لیے ال لیتا ہے۔ ال اور attached pronouns کے درمیان یہ contrast Quranic Arabic کو fluently پڑھنے کے لیے ضروری ہے۔"
+      "en": "بُيُوتِكُنَّ: your houses. The ayah addresses the Prophet's wives ﷺ directly, a group of women, and asks them to remember the verses of Allah recited in their homes.",
+      "ur": "بُيُوتِكُنَّ: تمہارے گھر۔ آیت براہِ راست نبی ﷺ کی ازواج، یعنی خواتین کے ایک گروہ، سے خطاب کرتی ہے اور انہیں اپنے گھروں میں پڑھی جانے والی اللہ کی آیات یاد رکھنے کو کہتی ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Now you have seen all six attached pronouns in comparison. You can read رَبِّي, رَبَّنَا, رَبَّكَ, رَبَّكُمْ, رَبَّهُمْ, and رَبَّهُنَّ — and know exactly who is speaking, who is being addressed, and who is being described. This is a major milestone in your Quranic Arabic journey.",
-      "ur": "اب آپ نے چھوٹے attached pronouns کا موازنہ دیکھ لیا ہے۔ آپ رَبِّي, رَبَّنَا, رَبَّكَ, رَبَّكُمْ, رَبَّهُمْ, اور رَبَّهُنَّ پڑھ سکتے ہیں — اور precisely جانتے ہیں کہ کون بات کر رہا ہے، کس سے خطاب ہو رہا ہے، اور کون بیان ہو رہا ہے۔ یہ آپ کے Quranic Arabic سفر میں ایک بڑا سنگ میل ہے۔"
+      "en": "ـكُنَّ is your when every listener is a woman. Next: ـهُنَّ, their, for a group of women you talk about.",
+      "ur": "جب سننے والی سب خواتین ہوں تو 'تمہارا' ـكُنَّ ہے۔ آگے: ـهُنَّ، ان کا، خواتین کے اس گروہ کے لیے جس کے بارے میں بات ہو۔"
     }
   }
 }

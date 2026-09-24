@@ -1,0 +1,535 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 22 review (ch22-l05, REVIEW; display order 6 after the new ch22-cl09; file renamed chapter-22-lesson-06-review.json because fixtures map to rows by display order). Fresh mini-dialogues (Fatimah asks where the mosque is; Ahmad answers; a teacher checks understanding) interleave speaker identification, question versus statement, answer relevance, and understanding / repair choices; 12:36, 3:37 and 2:186 are recalled only. No new morphology or Quran assertion; the 109:1 قُلْ hook is gone. Reveal قَالَ أَحَدُهُمَا (12:36, indices 4–5). Rebuilt 2026-09-24 from Docs/proposals/chapter-22-content-proposal.md with the owner-approved review amendments recorded there (Ali 'Imran 3:37 as the verified ayah in which قَالَ reports a question and قَالَتْ its answer; Al-Baqarah 2:186 سَأَلَكَ as a real سَأَلَ in the Quran; Yusuf 12:90 as the second verified speech frame; CL5's heard-only هَلْ فَهِمْتُمْ؟ / مَرَّةً أُخْرَى، لَوْ سَمَحْتَ promoted to spoken lines rather than treated as new). The map and fixtures named two reader_lecture_22 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "باب 22 کا جائزہ",
+    "chapter_order": 22,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 12,
+      "ayah": 36,
+      "label": "Yusuf 12:36",
+      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ قَالَ أَحَدُهُمَا",
+      "en": "And two young men entered the prison with him. One of them said…",
+      "ur": "اور ان کے ساتھ دو جوان قید خانے میں داخل ہوئے۔ ان میں سے ایک نے کہا…",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
+    },
+    "noor_intro": {
+      "en": "Review time. For every line ask: who spoke, was it a question, and did the answer fit?",
+      "ur": "جائزے کا وقت۔ ہر سطر کے لیے پوچھیں: کون بولا، کیا یہ سوال تھا، اور کیا جواب مناسب تھا؟"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Said, asked, answered",
+        "ar": "قَالَ / سَأَلَ / أَجَابَ",
+        "ur": "کہا، پوچھا، جواب دیا"
+      },
+      "explanation": {
+        "en": "قَالَ reports any speech, a question included. سَأَلَ reports asking. أَجَابَ reports answering.",
+        "ur": "قَالَ کوئی بھی بات بیان کرتا ہے، سوال بھی۔ سَأَلَ پوچھنا بیان کرتا ہے۔ أَجَابَ جواب دینا بیان کرتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qāla",
+          "en": "he said",
+          "ur": "اس نے کہا"
+        },
+        {
+          "ar": "سَأَلَ",
+          "ar_plain": "سال",
+          "translit": "saʾala",
+          "en": "he asked",
+          "ur": "اس نے پوچھا"
+        },
+        {
+          "ar": "أَجَابَ",
+          "ar_plain": "اجاب",
+          "translit": "ajāba",
+          "en": "he answered",
+          "ur": "اس نے جواب دیا"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Speaker first, then the words",
+        "ar": "قَالَتْ فَاطِمَةُ: …",
+        "ur": "پہلے بولنے والا، پھر الفاظ"
+      },
+      "explanation": {
+        "en": "The speaker follows the verb; inside the quotation, I and my mean that speaker.",
+        "ur": "بولنے والا فعل کے بعد آتا ہے؛ اقتباس کے اندر 'میں' اور 'میرا' اسی بولنے والے کے ہیں۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The words decide",
+        "ar": "قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا",
+        "ur": "الفاظ فیصلہ کرتے ہیں"
+      },
+      "explanation": {
+        "en": "A question can be reported with قَالَ (3:37). Look at the words, not the verb.",
+        "ur": "سوال قَالَ سے بیان ہو سکتا ہے (3:37)۔ فعل نہیں، الفاظ دیکھیں۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "An answer that fits",
+        "ar": "أَيْنَ؟ مَكَانٌ",
+        "ur": "مناسب جواب"
+      },
+      "explanation": {
+        "en": "أَيْنَ: a place. مَا: a thing. مَنْ: a person. هَلْ: yes or no, from the facts.",
+        "ur": "أَيْنَ: جگہ۔ مَا: چیز۔ مَنْ: شخص۔ هَلْ: ہاں یا نہیں، حقیقت کے مطابق۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Confirm or ask again",
+        "ar": "نَعَمْ، فَهِمْتُ الدَّرْسَ / مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+        "ur": "تصدیق یا دوبارہ درخواست"
+      },
+      "explanation": {
+        "en": "Understood: confirm with the fixed reply. Not understood: ask politely for it again.",
+        "ur": "سمجھ آ گیا: مقررہ جواب سے تصدیق کریں۔ سمجھ نہیں آیا: ادب سے دوبارہ کہنے کو کہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "نَعَمْ، فَهِمْتُ الدَّرْسَ",
+          "ar_plain": "نعم فهمت الدرس",
+          "translit": "naʿam, fahimtu d-darsa",
+          "en": "Yes, I understood the lesson.",
+          "ur": "جی ہاں، سبق سمجھ آ گیا۔"
+        },
+        {
+          "ar": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+          "ar_plain": "مرة اخرى لو سمحت",
+          "translit": "marratan ukhrā, law samaḥta",
+          "en": "Once again, please.",
+          "ur": "ایک بار پھر، براہِ کرم۔"
+        }
+      ]
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "سَأَلَتْ فَاطِمَةُ: أَيْنَ الْمَسْجِدُ؟",
+        "ar_plain": "سالت فاطمة اين المسجد",
+        "translit": "saʾalat fāṭimatu: ayna l-masjidu?",
+        "en": "Fatimah asked, “Where is the mosque?”",
+        "ur": "فاطمہ نے پوچھا: مسجد کہاں ہے؟"
+      },
+      "explanation": {
+        "en": "Today's new dialogue opens with Fatimah's question.",
+        "ur": "آج کی نئی گفتگو فاطمہ کے سوال سے شروع ہوتی ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch22-l05-ex01",
+      "prompt": {
+        "ar": "سَأَلَتْ فَاطِمَةُ: أَيْنَ الْمَسْجِدُ؟",
+        "ar_plain": "سالت فاطمة اين المسجد",
+        "translit": "saʾalat fāṭimatu: ayna l-masjidu?",
+        "en": "Fatimah asked, “Where is the mosque?”",
+        "ur": "فاطمہ نے پوچھا: مسجد کہاں ہے؟"
+      },
+      "options": [
+        {
+          "en": "Fatimah asked, “What is the mosque?”",
+          "ur": "فاطمہ نے پوچھا: مسجد کیا ہے؟"
+        },
+        {
+          "en": "Fatimah asked, “Where is the mosque?”",
+          "ur": "فاطمہ نے پوچھا: مسجد کہاں ہے؟"
+        },
+        {
+          "en": "Fatimah said, “The mosque is here.”",
+          "ur": "فاطمہ نے کہا: مسجد یہاں ہے۔"
+        },
+        {
+          "en": "Ahmad asked, “Where is the mosque?”",
+          "ur": "احمد نے پوچھا: مسجد کہاں ہے؟"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَأَلَتْ فَاطِمَةُ: Fatimah asked; أَيْنَ: where.",
+        "ur": "سَأَلَتْ فَاطِمَةُ: فاطمہ نے پوچھا؛ أَيْنَ: کہاں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch22-l05-ex02",
+      "statement": {
+        "en": "Ahmad's answer fits Fatimah's question.",
+        "ur": "احمد کا جواب فاطمہ کے سوال کے مطابق ہے۔",
+        "ar_example": {
+          "ar": "أَجَابَ أَحْمَدُ: الْمَسْجِدُ أَمَامَ الْمَدْرَسَةِ",
+          "ar_plain": "اجاب احمد المسجد امام المدرسة",
+          "translit": "ajāba aḥmadu: al-masjidu amāma l-madrasati",
+          "en": "Ahmad answered, “The mosque is in front of the school.”",
+          "ur": "احمد نے جواب دیا: مسجد اسکول کے سامنے ہے۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "She asked where; he gave a place: أَمَامَ الْمَدْرَسَةِ.",
+        "ur": "انہوں نے کہاں پوچھا؛ اس نے جگہ بتائی: أَمَامَ الْمَدْرَسَةِ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch22-l05-ex03",
+      "prompt_line": {
+        "ar": "مَنْ هٰذَا؟",
+        "ar_plain": "من هذا",
+        "translit": "man hādhā?",
+        "en": "Who is this?",
+        "ur": "یہ کون ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، فَهِمْتُ",
+          "ar_plain": "نعم فهمت",
+          "translit": "naʿam, fahimtu",
+          "en": "Yes, I understood.",
+          "ur": "جی ہاں، سمجھ آ گیا۔"
+        },
+        {
+          "ar": "الْأُسْتَاذُ فِي الْفَصْلِ",
+          "ar_plain": "الاستاذ في الفصل",
+          "translit": "al-ustādhu fī l-faṣli",
+          "en": "The teacher is in the classroom.",
+          "ur": "استاد کلاس میں ہیں۔"
+        },
+        {
+          "ar": "هٰذَا كِتَابٌ",
+          "ar_plain": "هذا كتاب",
+          "translit": "hādhā kitābun",
+          "en": "This is a book.",
+          "ur": "یہ ایک کتاب ہے۔"
+        },
+        {
+          "ar": "هٰذَا الْأُسْتَاذُ",
+          "ar_plain": "هذا الاستاذ",
+          "translit": "hādhā l-ustādhu",
+          "en": "This is the teacher.",
+          "ur": "یہ استاد ہیں۔"
+        }
+      ],
+      "correct_option_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَنْ wants a person.",
+        "ur": "مَنْ شخص چاہتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch22-l05-ex04",
+      "mode": "TAP",
+      "sentence_ar": "___ الطَّالِبُ: هَلْ هٰذَا الْمَسْجِدُ؟",
+      "hint": {
+        "en": "The student asked, “Is this the mosque?”",
+        "ur": "طالب علم نے پوچھا: کیا یہ مسجد ہے؟"
+      },
+      "options": [
+        {
+          "ar": "سَأَلَتْ",
+          "ar_plain": "سالت",
+          "translit": "saʾalat",
+          "en": "she asked",
+          "ur": "اس نے پوچھا (عورت)"
+        },
+        {
+          "ar": "رَجَعَ",
+          "ar_plain": "رجع",
+          "translit": "rajaʿa",
+          "en": "he returned",
+          "ur": "وہ واپس آیا"
+        },
+        {
+          "ar": "سَأَلَ",
+          "ar_plain": "سال",
+          "translit": "saʾala",
+          "en": "he asked",
+          "ur": "اس نے پوچھا"
+        },
+        {
+          "ar": "أَجَابَ",
+          "ar_plain": "اجاب",
+          "translit": "ajāba",
+          "en": "he answered",
+          "ur": "اس نے جواب دیا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "سَأَلَ",
+        "ar_plain": "سال",
+        "translit": "saʾala",
+        "en": "he asked",
+        "ur": "اس نے پوچھا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Asked, for a male student: سَأَلَ.",
+        "ur": "طالب علم کے لیے پوچھا: سَأَلَ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch22-l05-ex05",
+      "statement": {
+        "en": "Because the verb is قَالَ, this line cannot be a question.",
+        "ur": "چونکہ فعل قَالَ ہے، یہ سطر سوال نہیں ہو سکتی۔",
+        "ar_example": {
+          "ar": "قَالَ أَحْمَدُ: مَا هٰذَا؟",
+          "ar_plain": "قال احمد ما هذا",
+          "translit": "qāla aḥmadu: mā hādhā?",
+          "en": "Ahmad said, “What is this?”",
+          "ur": "احمد نے کہا: یہ کیا ہے؟"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَا makes it a question; قَالَ just reports it.",
+        "ur": "مَا اسے سوال بناتا ہے؛ قَالَ صرف اسے بیان کرتا ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch22-l05-ex06",
+      "ayah_fragment": {
+        "ar": "قَالَ أَحَدُهُمَا",
+        "surah_ref": "Yusuf 12:36"
+      },
+      "options": [
+        {
+          "en": "one of the two young men is speaking",
+          "ur": "دونوں جوانوں میں سے ایک بول رہا ہے"
+        },
+        {
+          "en": "the king is speaking",
+          "ur": "بادشاہ بول رہا ہے"
+        },
+        {
+          "en": "both young men speak together",
+          "ur": "دونوں جوان ایک ساتھ بول رہے ہیں"
+        },
+        {
+          "en": "Yusuf is speaking",
+          "ur": "یوسف بول رہے ہیں"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The speaker follows قَالَ: أَحَدُهُمَا.",
+        "ur": "بولنے والا قَالَ کے بعد ہے: أَحَدُهُمَا۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch22-l05-ex07",
+      "ayah_fragment": {
+        "ar": "قَالَتْ هُوَ مِنْ عِندِ اللَّهِ",
+        "surah_ref": "Ali 'Imran 3:37"
+      },
+      "options": [
+        {
+          "en": "Maryam asks a question",
+          "ur": "مریم سوال پوچھتی ہیں"
+        },
+        {
+          "en": "Zakariyya answers",
+          "ur": "زکریا جواب دیتے ہیں"
+        },
+        {
+          "en": "Maryam says she does not know",
+          "ur": "مریم کہتی ہیں کہ وہ نہیں جانتیں"
+        },
+        {
+          "en": "Maryam answers: it is from Allah",
+          "ur": "مریم جواب دیتی ہیں: یہ اللہ کی طرف سے ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "قَالَتْ: she said — her answer.",
+        "ur": "قَالَتْ: انہوں نے کہا — ان کا جواب۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch22-l05-ex08",
+      "prompt_line": {
+        "ar": "لَا، لَمْ أَفْهَمْ",
+        "ar_plain": "لا لم افهم",
+        "translit": "lā, lam afham",
+        "en": "No, I did not understand.",
+        "ur": "نہیں، مجھے سمجھ نہیں آیا۔"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، فَهِمْتُ الدَّرْسَ",
+          "ar_plain": "نعم فهمت الدرس",
+          "translit": "naʿam, fahimtu d-darsa",
+          "en": "Yes, I understood the lesson.",
+          "ur": "جی ہاں، سبق سمجھ آ گیا۔"
+        },
+        {
+          "ar": "الدَّرْسُ غَدًا",
+          "ar_plain": "الدرس غدا",
+          "translit": "ad-darsu ghadan",
+          "en": "The lesson is tomorrow.",
+          "ur": "سبق کل ہے۔"
+        },
+        {
+          "ar": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+          "ar_plain": "مرة اخرى لو سمحت",
+          "translit": "marratan ukhrā, law samaḥta",
+          "en": "Once again, please.",
+          "ur": "ایک بار پھر، براہِ کرم۔"
+        },
+        {
+          "ar": "أَيْنَ الْكِتَابُ؟",
+          "ar_plain": "اين الكتاب",
+          "translit": "ayna l-kitābu?",
+          "en": "Where is the book?",
+          "ur": "کتاب کہاں ہے؟"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After 'I did not understand', ask for it again.",
+        "ur": "'مجھے سمجھ نہیں آیا' کے بعد دوبارہ کہنے کو کہیں۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch22-l05-ex09",
+      "ayah_fragment": {
+        "ar": "وَإِذَا سَأَلَكَ عِبَادِي عَنِّي",
+        "surah_ref": "Al-Baqarah 2:186"
+      },
+      "options": [
+        {
+          "en": "The Prophet ﷺ asks My servants",
+          "ur": "نبی ﷺ میرے بندوں سے پوچھتے ہیں"
+        },
+        {
+          "en": "My servants ask the Prophet ﷺ about Allah",
+          "ur": "میرے بندے نبی ﷺ سے اللہ کے بارے میں پوچھتے ہیں"
+        },
+        {
+          "en": "My servants answer",
+          "ur": "میرے بندے جواب دیتے ہیں"
+        },
+        {
+          "en": "It is a statement with no asking",
+          "ur": "یہ بیان ہے، اس میں پوچھنا نہیں"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَأَلَكَ: they ask you; عِبَادِي are the askers.",
+        "ur": "سَأَلَكَ: وہ آپ سے پوچھیں؛ عِبَادِي پوچھنے والے ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch22-l05-ex10",
+      "prompt": {
+        "ar": "قَالَ الْأُسْتَاذُ: هَلْ فَهِمْتَ الدَّرْسَ؟",
+        "ar_plain": "قال الاستاذ هل فهمت الدرس",
+        "translit": "qāla l-ustādhu: hal fahimta d-darsa?",
+        "en": "The teacher said, “Did you understand the lesson?”",
+        "ur": "استاد نے کہا: کیا تمہیں سبق سمجھ آیا؟"
+      },
+      "options": [
+        {
+          "en": "The teacher said, “Where is the lesson?”",
+          "ur": "استاد نے کہا: سبق کہاں ہے؟"
+        },
+        {
+          "en": "The teacher said, “I understood the lesson.”",
+          "ur": "استاد نے کہا: مجھے سبق سمجھ آ گیا۔"
+        },
+        {
+          "en": "Ahmad asked, “Did you understand the lesson?”",
+          "ur": "احمد نے پوچھا: کیا تمہیں سبق سمجھ آیا؟"
+        },
+        {
+          "en": "The teacher said, “Did you understand the lesson?”",
+          "ur": "استاد نے کہا: کیا تمہیں سبق سمجھ آیا؟"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Speaker: the teacher; his words check understanding.",
+        "ur": "بولنے والے: استاد؛ ان کے الفاظ سمجھ کی جانچ کرتے ہیں۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Dialogue and communication",
+      "ar": "الْحِوَارُ",
+      "ur": "مکالمہ"
+    },
+    "ayah": {
+      "surah": 12,
+      "ayah": 36,
+      "label": "Yusuf 12:36",
+      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ قَالَ أَحَدُهُمَا",
+      "en": "And two young men entered the prison with him. One of them said…",
+      "ur": "اور ان کے ساتھ دو جوان قید خانے میں داخل ہوئے۔ ان میں سے ایک نے کہا…",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
+    },
+    "highlighted_word_indices": [
+      4,
+      5
+    ],
+    "highlighted_words": [
+      "قَالَ",
+      "أَحَدُهُمَا"
+    ],
+    "noor_explanation": {
+      "en": "قَالَ أَحَدُهُمَا: one of them said. Speaker, words, question, fitting answer, understanding: you can now follow a short exchange from start to finish.",
+      "ur": "قَالَ أَحَدُهُمَا: ان میں سے ایک نے کہا۔ بولنے والا، الفاظ، سوال، مناسب جواب، سمجھ: اب آپ ایک مختصر گفتگو شروع سے آخر تک سمجھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review complete. Take the Chapter 22 final test when you are ready.",
+      "ur": "جائزہ مکمل۔ جب تیار ہوں تو باب 22 کا آخری امتحان دیں۔"
+    }
+  }
+}

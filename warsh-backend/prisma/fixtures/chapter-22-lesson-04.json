@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 22, Lesson 4 - Full conversation combining قَالَ، سَأَلَ، أَجَابَ with earlier vocabulary.",
+    "_note": "Chapter 22, Lesson 4 (ch22-l04) — follow the full exchange: a four-turn authored classroom scene (the teacher asks where Ahmad's book is, Ahmad answers, the teacher checks understanding, Ahmad confirms) read for who speaks, the question, whether the reply fits, and the understanding check; a repair branch (لَا، لَمْ أَفْهَمْ, recognised → مَرَّةً أُخْرَى، لَوْ سَمَحْتَ). Quran: Yusuf 12:90, a verified question-and-answer both reported with قَالُوا / قَالَ (reveal قَالَ, index 4); no سَأَلَ / أَجَابَ is attributed to it. Comprehension questions replace the former fourth matching table; the unbuildable tiles and duplicate-answer matches are gone. Rebuilt 2026-09-24 from Docs/proposals/chapter-22-content-proposal.md with the owner-approved review amendments recorded there (Ali 'Imran 3:37 as the verified ayah in which قَالَ reports a question and قَالَتْ its answer; Al-Baqarah 2:186 سَأَلَكَ as a real سَأَلَ in the Quran; Yusuf 12:90 as the second verified speech frame; CL5's heard-only هَلْ فَهِمْتُمْ؟ / مَرَّةً أُخْرَى، لَوْ سَمَحْتَ promoted to spoken lines rather than treated as new). The map and fixtures named two reader_lecture_22 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "پوری گفتگو سمجھیں",
     "chapter_order": 22,
     "lesson_order": 4,
-    "chapter_title": "Dialogue and Communication",
-    "title": "Full Dialogue — Ask and Answer",
-    "titleAr": "الْحِوَارُ الْكَامِلُ: السُّؤَالُ وَالْإِجَابَةُ",
-    "source": "reader_lecture_22_dialogue.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
       "surah": 12,
-      "ayah": 36,
-      "label": "Yusuf 12:36",
-      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ ۖ قَالَ أَحَدُهُمَا إِنِّي أَرَانِي أَعْصِرُ خَمْرًا ۖ وَقَالَ الْآخَرُ إِنِّي أَرَانِي أَحْمِلُ فَوْقَ رَأْسِي خُبْزًا تَأْكُلُ الطَّيْرُ مِنْهُ ۖ نَبِّئْنَا بِتَأْوِيلِهِ ۖ إِنَّا نَرَاكَ مِنَ الْمُحْسِنِينَ",
-      "en": "And there entered the prison with him two young men. One of them said, \"Indeed, I have seen myself [in a dream] pressing [grapes for] wine.\" The other said, \"Indeed, I have seen myself carrying upon my head [some] bread, from which the birds were eating. Inform us of its interpretation; indeed, we see you to be of those who do good.\"",
-      "ur": "اور ان کے ساتھ دو اور جوان بھی داخل زندان ہوئے۔ ایک نے ان میں سے کہا کہ (میں نے خواب دیکھا ہے) دیکھتا (کیا) ہوں کہ شراب (کے لیے انگور) نچوڑ رہا ہوں۔ دوسرے نے کہا کہ (میں نے بھی خواب دیکھا ہے) میں یہ دیکھتا ہوں کہ اپنے سر پر روٹیاں اٹھائے ہوئے ہوں اور جانور ان میں سے کھا رہے (ہیں تو) ہمیں ان کی تعبیر بتا دیجیئے کہ ہم تمہیں نیکوکار دیکھتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
+      "ayah": 90,
+      "label": "Yusuf 12:90",
+      "ar": "قَالُوا أَإِنَّكَ لَأَنتَ يُوسُفُ قَالَ أَنَا يُوسُفُ وَهَٰذَا أَخِي",
+      "en": "They said, “Are you indeed Yusuf?” He said, “I am Yusuf, and this is my brother.”",
+      "ur": "انہوں نے کہا: کیا واقعی آپ ہی یوسف ہیں؟ انہوں نے کہا: میں یوسف ہوں اور یہ میرا بھائی ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012090.mp3"
     },
     "noor_intro": {
-      "en": "Today we put it all together. You will see a complete Arabic dialogue with قَالَ, سَأَلَ, and أَجَابَ all in one conversation. This is real Arabic!",
-      "ur": "آج ہم سب کو یکجا کرتے ہیں۔ آپ ایک مکمل عربی گفتگو دیکھیں گے جس میں قَالَ، سَأَلَ، اور أَجَابَ سب ایک ہی بات چیت میں ہیں۔ یہ اصل عربی ہے!"
+      "en": "Yusuf's brothers finally recognise him. They ask a question, and he answers. Listen for قَالُوا, they said, and قَالَ, he said.",
+      "ur": "یوسف کے بھائی آخرکار انہیں پہچان لیتے ہیں۔ وہ ایک سوال پوچھتے ہیں، اور وہ جواب دیتے ہیں۔ قَالُوا، انہوں نے کہا، اور قَالَ، اس نے کہا، سنیں۔"
     },
     "autoplay": true
   },
@@ -32,76 +29,106 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Full dialogue — combining all three verbs",
-        "ar": "الْحِوَارُ الْكَامِلُ — تَرْكِيبُ ثَلَاثَةِ الْأَفْعَالِ",
-        "ur": "مکمل گفتگو — تین افعال کا امتزاج"
+        "en": "Four questions for any exchange",
+        "ar": "مَنْ قَالَ؟ مَاذَا قَالَ؟",
+        "ur": "ہر گفتگو کے لیے چار سوال"
       },
       "explanation": {
-        "en": "A real Arabic dialogue uses قَالَ (speaker), سَأَلَ (question), and أَجَابَ (answer) together. Each verb marks a different turn in the conversation.",
-        "ur": "ایک اصل عربی گفتگو میں قَالَ (بولنا)، سَأَلَ (سوال)، اور أَجَابَ (جواب) ایک ساتھ استعمال ہوتے ہیں۔ ہر فعل بات چیت میں ایک مختلف باری کو ظاہر کرتا ہے۔"
+        "en": "Who spoke? What was said? Was it a question? Did the answer fit? Ask these four for every line.",
+        "ur": "کون بولا؟ کیا کہا گیا؟ کیا یہ سوال تھا؟ کیا جواب مناسب تھا؟ ہر سطر کے لیے یہ چار پوچھیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "سَأَلَ عَلِيٌّ: \"مَا هَذَا؟\" / أَجَابَ حَسَنٌ: \"هَذَا كِتَابٌ\"",
-        "ar_plain": "سأل علي: ما هذا؟ / أجاب حسن: هذا كتاب",
-        "translit": "sa'ala 'aliyyun: 'maa haadhaa?' / ajaaba hlasanun: 'haadhaa kitaabun'",
-        "en": "Ali asked: 'What is this?' / Hasan answered: 'This is a book.'",
-        "ur": "علی نے پوچھا: 'یہ کیا ہے؟' / حسن نے جواب دیا: 'یہ کتاب ہے۔'"
+        "ar": "سَأَلَ الْأُسْتَاذُ: أَيْنَ كِتَابُكَ يَا أَحْمَدُ؟",
+        "ar_plain": "سال الاستاذ اين كتابك يا احمد",
+        "translit": "saʾala l-ustādhu: ayna kitābuka yā aḥmadu?",
+        "en": "The teacher asked, “Where is your book, Ahmad?”",
+        "ur": "استاد نے پوچھا: احمد، تمہاری کتاب کہاں ہے؟"
       },
       "explanation": {
-        "en": "A question and answer exchange. سَأَلَ opens the question, أَجَابَ gives the answer. مَا هَذَا؟ means 'what is this?' هَذَا means 'this.'",
-        "ur": "سوال اور جواب کا تبادلہ۔ سَأَلَ سوال کھولتا ہے، أَجَابَ جواب دیتا ہے۔ مَا هَذَا؟ کا مطلب ہے 'یہ کیا ہے؟' هَذَا کا مطلب ہے 'یہ'۔"
+        "en": "Speaker: the teacher. It is a question (أَيْنَ), about Ahmad's book: كِتَابُكَ, your book, said to Ahmad.",
+        "ur": "بولنے والے: استاد۔ یہ سوال ہے (أَيْنَ)، احمد کی کتاب کے بارے میں: كِتَابُكَ، تمہاری کتاب، احمد سے کہا گیا۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "سَأَلَتْ هِنْدٌ: \"أَيْنَ الْمَسْجِدُ؟\" / أَجَابَتْ فَاطِمَةُ: \"الْمَسْجِدُ قُرْبُ الْمَدْرَسَةِ\"",
-        "ar_plain": "سألت هند: أين المسجد؟ / أجابت فاطمة: المسجد قرب المدرسة",
-        "translit": "sa'alati hindun: 'ayna al-masjidu?' / ajaabati faatimatun: 'al-masjidu qurbu al-madrasati'",
-        "en": "Hind asked: 'Where is the mosque?' / Fatima answered: 'The mosque is near the school.'",
-        "ur": "ہند نے پوچھا: 'مسجد کہاں ہے؟' / فاطمہ نے جواب دیا: 'مسجد school کے قریب ہے۔'"
+        "ar": "أَجَابَ أَحْمَدُ: كِتَابِي فِي الْبَيْتِ",
+        "ar_plain": "اجاب احمد كتابي في البيت",
+        "translit": "ajāba aḥmadu: kitābī fī l-bayti",
+        "en": "Ahmad answered, “My book is at home.”",
+        "ur": "احمد نے جواب دیا: میری کتاب گھر میں ہے۔"
       },
       "explanation": {
-        "en": "Both feminine forms here. قُرْبُ means 'near.' قُرْبُ الْمَدْرَسَةِ = near the school. Both speakers are women.",
-        "ur": "یہاں دونوں مؤنث forms ہیں۔ قُرْبُ کا مطلب ہے 'قریب'۔ قُرْبُ الْمَدْرَسَةِ = school کے قریب۔ دونوں بولنے والی عورتیں ہیں۔"
+        "en": "Speaker: Ahmad. His answer fits: أَيْنَ asked for a place, and فِي الْبَيْتِ is a place. كِتَابِي, my book, is Ahmad's own — the same book the teacher called كِتَابُكَ.",
+        "ur": "بولنے والا: احمد۔ اس کا جواب مناسب ہے: أَيْنَ نے جگہ پوچھی، اور فِي الْبَيْتِ ایک جگہ ہے۔ كِتَابِي، میری کتاب، احمد کی اپنی ہے — وہی کتاب جسے استاد نے كِتَابُكَ کہا۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "قَالَ الْأَسْتَاذُ: \"الطَّلَابُ فِي الْمَكْتَبِ\" / قَالَ طَالِبٌ: \"هَلِ الْكِتَابُ جَدِيدٌ؟\" / أَجَابَ الْأَسْتَاذُ: \"نَعَمْ\"",
-        "ar_plain": "قال الاستاذ: الطلاب في المكتب / قال طالب: هل الكتاب جديد؟ / أجاب الاستاذ: نعم",
-        "translit": "qaala al-ustaadu: 'at-tullaabu fi al-maktabi' / qaala taalibun: 'hal al-kitaabu jadiidun?' / ajaaba al-ustaadu: 'na'am'",
-        "en": "The teacher said: 'The students are in the office.' / A student said: 'Is the book new?' / The teacher answered: 'Yes.'",
-        "ur": "استاد نے کہا: 'طالب علم دفتر میں ہیں۔' / ایک طالب علم نے کہا: 'کیا کتاب نئی ہے؟' / استاد نے جواب دیا: 'جی ہاں'۔"
+        "ar": "قَالَ الْأُسْتَاذُ: هَلْ فَهِمْتَ الدَّرْسَ؟",
+        "ar_plain": "قال الاستاذ هل فهمت الدرس",
+        "translit": "qāla l-ustādhu: hal fahimta d-darsa?",
+        "en": "The teacher said, “Did you understand the lesson?”",
+        "ur": "استاد نے کہا: کیا تمہیں سبق سمجھ آیا؟"
       },
       "explanation": {
-        "en": "A three-turn dialogue: قَالَ makes a statement, then another قَالَ asks a question (indirect), and أَجَابَ gives the final answer.",
-        "ur": "تین باری کی گفتگو: قَالَ ایک بیان کرتا ہے، پھر دوسرا قَالَ ایک سوال کرتا ہے (بالواسطہ)، اور أَجَابَ آخری جواب دیتا ہے۔"
+        "en": "Speaker: the teacher again, reporting a question with قَالَ. He is checking whether Ahmad understood.",
+        "ur": "بولنے والے: پھر استاد، قَالَ سے سوال بیان کرتے ہوئے۔ وہ دیکھ رہے ہیں کہ احمد کو سمجھ آیا یا نہیں۔"
       }
     },
     {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Dialogue verbs in summary",
-        "ur": "گفتگو کے افعال کا خلاصہ"
-      },
-      "body": {
-        "en": "قَالَ (said) → statement. سَأَلَ (asked) → question. أَجَابَ (answered) → answer. All three can be used with masculine, feminine, singular, and plural subjects.",
-        "ur": "قَالَ (کہا) → بیان۔ سَأَلَ (پوچھا) → سوال۔ أَجَابَ (جواب دیا) → جواب۔ تینوں مذکر، مؤنث، واحد، اور جمع کے ساتھ استعمال ہو سکتے ہیں۔"
-      }
-    },
-    {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "هَذَا · هَذِهِ · قُرْبُ · بَعِيدٌ · جَدِيدٌ · قَدِيمٌ · دَعَا · حَدَّثَ",
-        "en": "this (m) · this (f) · near · far · new · old / ancient · he called · he spoke / narrated",
-        "ur": "یہ (مذکر) · یہ (مؤنث) · قریب · دور · نیا · پرانا · اس نے بلایا · اس نے بتایا/حدیث بیان کی",
-        "ar_plain": "هذا · هذه · قرب · بعيد · جديد · قديم · دعا · حدث",
-        "translit": "—"
+        "ar": "قَالَ أَحْمَدُ: نَعَمْ، فَهِمْتُ الدَّرْسَ",
+        "ar_plain": "قال احمد نعم فهمت الدرس",
+        "translit": "qāla aḥmadu: naʿam, fahimtu d-darsa",
+        "en": "Ahmad said, “Yes, I understood the lesson.”",
+        "ur": "احمد نے کہا: جی ہاں، سبق سمجھ آ گیا۔"
+      },
+      "explanation": {
+        "en": "Ahmad confirms with the fixed reply. The exchange is complete: a question, a fitting answer, and understanding checked.",
+        "ur": "احمد مقررہ جواب سے تصدیق کرتا ہے۔ گفتگو مکمل ہے: سوال، مناسب جواب، اور سمجھ کی جانچ۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "When the answer is no",
+        "ar": "لَا، لَمْ أَفْهَمْ — مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+        "ur": "جب جواب نہیں ہو"
+      },
+      "explanation": {
+        "en": "Another day Ahmad might say لَا، لَمْ أَفْهَمْ, I did not understand (recognise it), and then ask politely: مَرَّةً أُخْرَى، لَوْ سَمَحْتَ.",
+        "ur": "کسی اور دن احمد کہہ سکتا ہے لَا، لَمْ أَفْهَمْ، مجھے سمجھ نہیں آیا (اسے پہچانیں)، اور پھر ادب سے کہے: مَرَّةً أُخْرَى، لَوْ سَمَحْتَ۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Yusuf 12:90: They said, “Are you indeed Yusuf?” He said, “I am Yusuf, and this is my brother.”",
+        "ar": "قَالُوا أَإِنَّكَ لَأَنتَ يُوسُفُ قَالَ أَنَا يُوسُفُ وَهَٰذَا أَخِي",
+        "ur": "Yusuf 12:90: انہوں نے کہا: کیا واقعی آپ ہی یوسف ہیں؟ انہوں نے کہا: میں یوسف ہوں اور یہ میرا بھائی ہے۔"
+      },
+      "explanation": {
+        "en": "The brothers ask, reported with قَالُوا, they said: are you indeed Yusuf? Yusuf answers with قَالَ: أَنَا يُوسُفُ وَهَٰذَا أَخِي, I am Yusuf, and this is my brother. The answer fits exactly. أَإِنَّكَ لَأَنتَ, are you really, is only glossed.",
+        "ur": "بھائی پوچھتے ہیں، قَالُوا، انہوں نے کہا، سے بیان کیا گیا: کیا واقعی آپ ہی یوسف ہیں؟ یوسف قَالَ سے جواب دیتے ہیں: أَنَا يُوسُفُ وَهَٰذَا أَخِي، میں یوسف ہوں اور یہ میرا بھائی ہے۔ جواب بالکل مناسب ہے۔ أَإِنَّكَ لَأَنتَ، کیا واقعی آپ، کا صرف معنی دیا گیا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012090.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Quran or practice?",
+        "ar": "قَالَ أَنَا يُوسُفُ / قَالَ أَحْمَدُ: نَعَمْ",
+        "ur": "قرآن یا مشق؟"
+      },
+      "explanation": {
+        "en": "The ayah is Quran, with its surah, ayah and recitation. Ahmad's classroom is written for practice. Never attribute a practice line to the Quran.",
+        "ur": "آیت قرآن ہے، سورت، آیت اور تلاوت کے ساتھ۔ احمد کی کلاس مشق کے لیے لکھی گئی ہے۔ مشق کی کسی سطر کو کبھی قرآن سے منسوب نہ کریں۔"
       }
     }
   ],
@@ -110,377 +137,305 @@
       "type": "TAP_TRANSLATION",
       "id": "ch22-l04-ex01",
       "prompt": {
-        "ar": "سَأَلَ عَلِيٌّ: \"مَا هَذَا؟\" / أَجَابَ حَسَنٌ: \"هَذَا كِتَابٌ\"",
-        "ar_plain": "سأل علي: ما هذا؟ / أجاب حسن: هذا كتاب",
-        "translit": "sa'ala 'aliyyun: 'maa haadhaa?' / ajaaba hasanun: 'haadhaa kitaabun'",
-        "en": "Ali asked: 'What is this?' / Hasan answered: 'This is a book.'",
-        "ur": "علی نے پوچھا: 'یہ کیا ہے؟' / حسن نے جواب دیا: 'یہ کتاب ہے۔'"
+        "ar": "سَأَلَ الْأُسْتَاذُ: أَيْنَ كِتَابُكَ يَا أَحْمَدُ؟",
+        "ar_plain": "سال الاستاذ اين كتابك يا احمد",
+        "translit": "saʾala l-ustādhu: ayna kitābuka yā aḥmadu?",
+        "en": "The teacher asked, “Where is your book, Ahmad?”",
+        "ur": "استاد نے پوچھا: احمد، تمہاری کتاب کہاں ہے؟"
       },
       "options": [
         {
-          "en": "Ali asked: 'What is this?' / Hasan answered: 'This is a book.'",
-          "ur": "علی نے پوچھا: 'یہ کیا ہے؟' / حسن نے جواب دیا: 'یہ کتاب ہے۔'"
+          "en": "The teacher asked, “Where is your book, Ahmad?”",
+          "ur": "استاد نے پوچھا: احمد، تمہاری کتاب کہاں ہے؟"
         },
         {
-          "en": "Ali said: 'What is this?' / Hasan answered: 'This is a book.'",
-          "ur": "علی نے کہا: 'یہ کیا ہے؟' / حسن نے جواب دیا: 'یہ کتاب ہے۔'"
+          "en": "The teacher asked, “What is your book, Ahmad?”",
+          "ur": "استاد نے پوچھا: احمد، تمہاری کتاب کیا ہے؟"
         },
         {
-          "en": "Ali asked: 'Where is this?' / Hasan answered: 'This is a book.'",
-          "ur": "علی نے پوچھا: 'یہ کہاں ہے؟' / حسن نے جواب دیا: 'یہ کتاب ہے۔'"
+          "en": "The teacher said, “Your book is here, Ahmad.”",
+          "ur": "استاد نے کہا: احمد، تمہاری کتاب یہاں ہے۔"
         },
         {
-          "en": "Ali answered: 'What is this?' / Hasan asked: 'This is a book.'",
-          "ur": "علی نے جواب دیا: 'یہ کیا ہے؟' / حسن نے پوچھا: 'یہ کتاب ہے۔'"
+          "en": "Ahmad asked the teacher, “Where is your book?”",
+          "ur": "احمد نے استاد سے پوچھا: آپ کی کتاب کہاں ہے؟"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "سَأَلَ = asked, أَجَابَ = answered. مَا هَذَا؟ = 'What is this?' هَذَا كِتَابٌ = 'This is a book.'",
-        "ur": "سَأَلَ = پوچھا، أَجَابَ = جواب دیا۔ مَا هَذَا؟ = 'یہ کیا ہے؟' هَذَا كِتَابٌ = 'یہ کتاب ہے'۔"
+        "en": "Speaker after سَأَلَ: the teacher. Question: أَيْنَ, where.",
+        "ur": "سَأَلَ کے بعد بولنے والے: استاد۔ سوال: أَيْنَ، کہاں۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch22-l04-ex02",
+      "prompt_line": {
+        "ar": "أَيْنَ كِتَابُكَ يَا أَحْمَدُ؟",
+        "ar_plain": "اين كتابك يا احمد",
+        "translit": "ayna kitābuka yā aḥmadu?",
+        "en": "Where is your book, Ahmad?",
+        "ur": "احمد، تمہاری کتاب کہاں ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ، فَهِمْتُ",
+          "ar_plain": "نعم فهمت",
+          "translit": "naʿam, fahimtu",
+          "en": "Yes, I understood.",
+          "ur": "جی ہاں، سمجھ آ گیا۔"
+        },
+        {
+          "ar": "كِتَابِي فِي الْبَيْتِ",
+          "ar_plain": "كتابي في البيت",
+          "translit": "kitābī fī l-bayti",
+          "en": "My book is at home.",
+          "ur": "میری کتاب گھر میں ہے۔"
+        },
+        {
+          "ar": "كِتَابُكَ فِي الْبَيْتِ",
+          "ar_plain": "كتابك في البيت",
+          "translit": "kitābuka fī l-bayti",
+          "en": "Your book is at home.",
+          "ur": "تمہاری کتاب گھر میں ہے۔"
+        },
+        {
+          "ar": "هٰذَا كِتَابٌ",
+          "ar_plain": "هذا كتاب",
+          "translit": "hādhā kitābun",
+          "en": "This is a book.",
+          "ur": "یہ ایک کتاب ہے۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Ahmad answers about his own book: كِتَابِي, and a place.",
+        "ur": "احمد اپنی کتاب کے بارے میں جواب دیتا ہے: كِتَابِي، اور ایک جگہ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch22-l04-ex02",
+      "id": "ch22-l04-ex03",
       "statement": {
-        "en": "In a complete dialogue, أَجَابَ always follows سَأَلَ — the answer follows the question.",
-        "ur": "ایک مکمل گفتگو میں، أَجَابَ ہمیشہ سَأَلَ کے بعد آتا ہے — جواب سوال کے بعد آتا ہے۔",
+        "en": "In this line, كِتَابِي is the teacher's book.",
+        "ur": "اس سطر میں كِتَابِي استاد کی کتاب ہے۔",
         "ar_example": {
-          "ar": "سَأَلَتْ هِنْدٌ: \"أَيْنَ الْمَسْجِدُ؟\" / أَجَابَتْ فَاطِمَةُ: \"الْمَسْجِدُ قُرْبُ الْمَدْرَسَةِ\"",
-          "ar_plain": "سألت هند: أين المسجد؟ / أجابت فاطمة: المسجد قرب المدرسة",
-          "translit": "sa'alati hindun: 'ayna al-masjidu?' / ajaabati faatimatun: 'al-masjidu qurbu al-madrasati'",
-          "en": "Hind asked: 'Where is the mosque?' / Fatima answered: 'The mosque is near the school.'",
-          "ur": "ہند نے پوچھا: 'مسجد کہاں ہے؟' / فاطمہ نے جواب دیا: 'مسجد school کے قریب ہے۔'"
+          "ar": "أَجَابَ أَحْمَدُ: كِتَابِي فِي الْبَيْتِ",
+          "ar_plain": "اجاب احمد كتابي في البيت",
+          "translit": "ajāba aḥmadu: kitābī fī l-bayti",
+          "en": "Ahmad answered, “My book is at home.”",
+          "ur": "احمد نے جواب دیا: میری کتاب گھر میں ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Ahmad is speaking, so my book is Ahmad's.",
+        "ur": "احمد بول رہا ہے، اس لیے میری کتاب احمد کی ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch22-l04-ex04",
+      "statement": {
+        "en": "The teacher is checking whether Ahmad understood.",
+        "ur": "استاد دیکھ رہے ہیں کہ احمد کو سمجھ آیا یا نہیں۔",
+        "ar_example": {
+          "ar": "قَالَ الْأُسْتَاذُ: هَلْ فَهِمْتَ الدَّرْسَ؟",
+          "ar_plain": "قال الاستاذ هل فهمت الدرس",
+          "translit": "qāla l-ustādhu: hal fahimta d-darsa?",
+          "en": "The teacher said, “Did you understand the lesson?”",
+          "ur": "استاد نے کہا: کیا تمہیں سبق سمجھ آیا؟"
         }
       },
       "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch22-l04-ex03",
-      "mode": "TAP",
-      "sentence_ar": "سَأَلَ عَلِيٌّ: \"أَيْنَ الْمَسْجِدُ؟\" / ___ حَسَنٌ: \"الْمَسْجِدُ قُرْبُ الْمَدْرَسَةِ\"",
-      "hint": {
-        "en": "Ali asked: 'Where is the mosque?' / Hasan: 'The mosque is near the school.'",
-        "ur": "علی نے پوچھا: 'مسجد کہاں ہے؟' / حسن: 'مسجد school کے قریب ہے۔'"
-      },
-      "options": [
-        {
-          "ar": "قَالَ",
-          "ar_plain": "قال",
-          "translit": "qaala",
-          "en": "he said",
-          "ur": "اس نے کہا"
-        },
-        {
-          "ar": "سَأَلَ",
-          "ar_plain": "سأل",
-          "translit": "sa'ala",
-          "en": "he asked",
-          "ur": "اس نے پوچھا"
-        },
-        {
-          "ar": "أَجَابَ",
-          "ar_plain": "أجاب",
-          "translit": "ajaaba",
-          "en": "he answered",
-          "ur": "اس نے جواب دیا"
-        },
-        {
-          "ar": "دَعَا",
-          "ar_plain": "دعا",
-          "translit": "da'aa",
-          "en": "he called",
-          "ur": "اس نے بلایا"
-        }
-      ],
-      "correct_answer": {
-        "ar": "أَجَابَ",
-        "ar_plain": "أجاب",
-        "translit": "ajaaba",
-        "en": "he answered",
-        "ur": "اس نے جواب دیا"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch22-l04-ex04",
-      "left_column": [
-        {
-          "ar": "قَالَ الْأَسْتَاذُ",
-          "ar_plain": "قال الاستاذ",
-          "translit": "qaala al-ustaadu",
-          "en": "the teacher said",
-          "ur": "استاد نے کہا"
-        },
-        {
-          "ar": "سَأَلَ الطَّالِبُ",
-          "ar_plain": "سأل الطالب",
-          "translit": "sa'ala at-taalibu",
-          "en": "the student asked",
-          "ur": "طالب علم نے پوچھا"
-        },
-        {
-          "ar": "أَجَابَتِ الْمُعَلِّمَةُ",
-          "ar_plain": "أجابت المعلمة",
-          "translit": "ajaabati al-mu'allimatu",
-          "en": "the teacher (f) answered",
-          "ur": "استانی نے جواب دیا"
-        },
-        {
-          "ar": "قَالَتِ الْبِنْتُ",
-          "ar_plain": "قالت البنت",
-          "translit": "qaalati al-bintu",
-          "en": "the girl said",
-          "ur": "لڑکی نے کہا"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "statement",
-          "ur": "بیان"
-        },
-        {
-          "en": "question",
-          "ur": "سوال"
-        },
-        {
-          "en": "answer",
-          "ur": "جواب"
-        },
-        {
-          "en": "statement",
-          "ur": "بیان"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch22-l04-ex05",
-      "target_translation": {
-        "en": "Hind asked: 'Is the mosque far?' / Fatima answered: 'No, it is near.'",
-        "ur": "ہند نے پوچھا: 'کیا مسجد دور ہے؟' / فاطمہ نے جواب دیا: 'نہیں، یہ قریب ہے۔'"
-      },
-      "tiles": [
-        {
-          "ar": "سَأَلَتْ",
-          "ar_plain": "سألت",
-          "translit": "sa'alati",
-          "en": "she asked",
-          "ur": "اس نے پوچھا"
-        },
-        {
-          "ar": "هُنْدٌ",
-          "ar_plain": "هند",
-          "translit": "hindun",
-          "en": "Hind",
-          "ur": "ہند"
-        },
-        {
-          "ar": "أَيْنَ",
-          "ar_plain": "أين",
-          "translit": "ayna",
-          "en": "where",
-          "ur": "کہاں"
-        },
-        {
-          "ar": "الْمَسْجِدُ",
-          "ar_plain": "المسجد",
-          "translit": "al-masjidu",
-          "en": "the mosque",
-          "ur": "مسجد"
-        },
-        {
-          "ar": "بَعِيدٌ",
-          "ar_plain": "بعيد",
-          "translit": "ba'iidun",
-          "en": "far",
-          "ur": "دور"
-        }
-      ],
-      "correct_order": [
-        1,
-        0,
-        2,
-        3,
-        4
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "CONVERSATION_BUILDER",
-      "id": "ch22-l04-ex06",
-      "prompt_line": {
-        "ar": "مَا اسْمُكَ؟",
-        "ar_plain": "ما اسمك؟",
-        "translit": "maa ismuka?",
-        "en": "What is your name?",
-        "ur": "آپ کا نام کیا ہے؟"
-      },
-      "response_mode": "PICK",
-      "options": [
-        {
-          "ar": "اسْمِي عَلِيٌّ",
-          "ar_plain": "اسمي علي",
-          "translit": "ismii 'aliyyun",
-          "en": "My name is Ali.",
-          "ur": "میرا نام علی ہے۔"
-        },
-        {
-          "ar": "نَعَمْ، أَنَا عَلِيٌّ",
-          "ar_plain": "نعم، أنا علي",
-          "translit": "na'am, anaa 'aliyyun",
-          "en": "Yes, I am Ali.",
-          "ur": "جی ہاں، میں علی ہوں۔"
-        },
-        {
-          "ar": "هَلْ أَنْتَ عَلِيٌّ؟",
-          "ar_plain": "هل أنت علي؟",
-          "translit": "hal anta 'aliyyun?",
-          "en": "Are you Ali?",
-          "ur": "کیا تم علی ہو؟"
-        },
-        {
-          "ar": "أَنَا فِي الْمَسْجِدِ",
-          "ar_plain": "أنا في المسجد",
-          "translit": "anaa fi al-masjidi",
-          "en": "I am at the mosque.",
-          "ur": "میں مسجد میں ہوں۔"
-        }
-      ],
-      "correct_option_index": 0,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هَلْ فَهِمْتَ الدَّرْسَ؟ checks understanding.",
+        "ur": "هَلْ فَهِمْتَ الدَّرْسَ؟ سمجھ کی جانچ کرتا ہے۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch22-l04-ex07",
+      "id": "ch22-l04-ex05",
       "prompt": {
-        "ar": "قَالَ الْأَسْتَاذُ: \"الْكِتَابُ جَدِيدٌ\" / قَالَ الطَّالِبُ: \"هَلِ الْكِتَابُ لِلْمُعَلِّمِ؟\" / أَجَابَ الْأَسْتَاذُ: \"لَا\"",
-        "ar_plain": "قال الاستاذ: الكتاب جديد / قال الطالب: هل الكتاب للمعلم؟ / أجاب الاستاذ: لا",
-        "translit": "qaala al-ustaadu: 'al-kitaabu jadiidun' / qaala at-taalibu: 'hal al-kitaabu li al-mu'allimi?' / ajaaba al-ustaadu: 'laa'",
-        "en": "The teacher said: 'The book is new.' / The student said: 'Is the book for the teacher?' / The teacher answered: 'No.'",
-        "ur": "استاد نے کہا: 'کتاب نئی ہے' / طالب علم نے کہا: 'کیا کتاب استاد کے لیے ہے؟' / استاد نے جواب دیا: 'نہیں'۔"
+        "ar": "لَا، لَمْ أَفْهَمْ",
+        "ar_plain": "لا لم افهم",
+        "translit": "lā, lam afham",
+        "en": "No, I did not understand.",
+        "ur": "نہیں، مجھے سمجھ نہیں آیا۔"
       },
       "options": [
         {
-          "en": "The teacher said: 'The book is new.' / The student: 'Is it for the teacher?' / The teacher: 'No.'",
-          "ur": "استاد نے کہا: 'کتاب نئی ہے' / طالب علم: 'کیا یہ استاد کے لیے ہے؟' / استاد: 'نہیں'۔"
+          "en": "No, I did not understand.",
+          "ur": "نہیں، مجھے سمجھ نہیں آیا۔"
         },
         {
-          "en": "The teacher asked: 'The book is new.' / The student: 'Is it for the teacher?' / The teacher: 'No.'",
-          "ur": "استاد نے پوچھا: 'کتاب نئی ہے' / طالب علم: 'کیا یہ استاد کے لیے ہے؟' / استاد: 'نہیں'۔"
+          "en": "Once again, please.",
+          "ur": "ایک بار پھر، براہِ کرم۔"
         },
         {
-          "en": "The teacher said: 'The book is new.' / The student: 'Is it for the student?' / The teacher: 'Yes.'",
-          "ur": "استاد نے کہا: 'کتاب نئی ہے' / طالب علم: 'کیا یہ طالب علم کے لیے ہے؟' / استاد: 'جی ہاں'۔"
+          "en": "Did you understand?",
+          "ur": "کیا سمجھ آیا؟"
         },
         {
-          "en": "The teacher said: 'The book is old.' / The student: 'Is it for the teacher?' / The teacher: 'No.'",
-          "ur": "استاد نے کہا: 'کتاب پرانی ہے' / طالب علم: 'کیا یہ استاد کے لیے ہے؟' / استاد: 'نہیں'۔"
+          "en": "Yes, I understood.",
+          "ur": "جی ہاں، سمجھ آ گیا۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "This is a 3-turn dialogue: statement (قَالَ), question (قَالَ with question), answer (أَجَابَ). لَا = no.",
-        "ur": "یہ 3 باری کی گفتگو ہے: بیان (قَالَ)، سوال (قَالَ سوال کے ساتھ)، جواب (أَجَابَ)۔ لَا = نہیں۔"
+        "en": "لَا, no, then لَمْ أَفْهَمْ, I did not understand.",
+        "ur": "لَا، نہیں، پھر لَمْ أَفْهَمْ، مجھے سمجھ نہیں آیا۔"
       }
     },
     {
-      "type": "CONVERSATION_BUILDER",
-      "id": "ch22-l04-ex08",
-      "prompt_line": {
-        "ar": "أَنْتَ طَالِبٌ؟",
-        "ar_plain": "أنت طالب؟",
-        "translit": "anta taalibun?",
-        "en": "Are you a student?",
-        "ur": "کیا تم طالب علم ہو؟"
+      "type": "TRUE_FALSE",
+      "id": "ch22-l04-ex06",
+      "statement": {
+        "en": "After لَا، لَمْ أَفْهَمْ, a fitting next line is مَرَّةً أُخْرَى، لَوْ سَمَحْتَ.",
+        "ur": "لَا، لَمْ أَفْهَمْ کے بعد مناسب اگلی سطر مَرَّةً أُخْرَى، لَوْ سَمَحْتَ ہے۔"
       },
-      "response_mode": "PICK",
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "If you did not understand, ask politely for it again.",
+        "ur": "اگر سمجھ نہ آئے تو ادب سے دوبارہ کہنے کی درخواست کریں۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch22-l04-ex07",
+      "ayah_fragment": {
+        "ar": "قَالُوا أَإِنَّكَ لَأَنتَ يُوسُفُ قَالَ أَنَا يُوسُفُ",
+        "surah_ref": "Yusuf 12:90"
+      },
       "options": [
         {
-          "ar": "نَعَمْ، أَنَا طَالِبٌ",
-          "ar_plain": "نعم، أنا طالب",
-          "translit": "na'am, anaa taalibun",
-          "en": "Yes, I am a student.",
-          "ur": "جی ہاں، میں طالب علم ہوں۔"
+          "en": "There is no question in this ayah",
+          "ur": "اس آیت میں کوئی سوال نہیں"
         },
         {
-          "ar": "لَا، أَنَا مُعَلِّمٌ",
-          "ar_plain": "لا، أنا معلم",
-          "translit": "laa, anaa mu'allimun",
-          "en": "No, I am a teacher.",
-          "ur": "نہیں، میں استاد ہوں۔"
+          "en": "The word أَجَابَ is in the ayah",
+          "ur": "لفظ أَجَابَ آیت میں ہے"
         },
         {
-          "ar": "الْمَسْجِدُ قَرِيبٌ",
-          "ar_plain": "المسجد قريب",
-          "translit": "al-masjidu qariibun",
-          "en": "The mosque is near.",
-          "ur": "مسجد قریب ہے۔"
+          "en": "The brothers ask; Yusuf answers: أَنَا يُوسُفُ",
+          "ur": "بھائی پوچھتے ہیں؛ یوسف جواب دیتے ہیں: أَنَا يُوسُفُ"
         },
         {
-          "ar": "أَسْمُكَ عَلِيٌّ",
-          "ar_plain": "اسمك علي",
-          "translit": "ismuka 'aliyyun",
-          "en": "Your name is Ali.",
-          "ur": "تمہارا نام علی ہے۔"
+          "en": "Yusuf asks; the brothers answer",
+          "ur": "یوسف پوچھتے ہیں؛ بھائی جواب دیتے ہیں"
         }
       ],
-      "correct_option_index": 0,
-      "xp_value": 1
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "قَالُوا introduces their question; قَالَ introduces his answer.",
+        "ur": "قَالُوا ان کا سوال شروع کرتا ہے؛ قَالَ ان کا جواب۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch22-l04-ex08",
+      "mode": "TAP",
+      "sentence_ar": "سَأَلَ الْأُسْتَاذُ: أَيْنَ كِتَابُكِ يَا فَاطِمَةُ؟ ___ فَاطِمَةُ: كِتَابِي عَلَى الْمَكْتَبِ",
+      "hint": {
+        "en": "… Fatimah answered, “My book is on the desk.”",
+        "ur": "… فاطمہ نے جواب دیا: میری کتاب میز پر ہے۔"
+      },
+      "options": [
+        {
+          "ar": "أَجَابَ",
+          "ar_plain": "اجاب",
+          "translit": "ajāba",
+          "en": "he answered",
+          "ur": "اس نے جواب دیا"
+        },
+        {
+          "ar": "سَأَلَتْ",
+          "ar_plain": "سالت",
+          "translit": "saʾalat",
+          "en": "she asked",
+          "ur": "اس نے پوچھا (عورت)"
+        },
+        {
+          "ar": "دَخَلَتْ",
+          "ar_plain": "دخلت",
+          "translit": "dakhalat",
+          "en": "she entered",
+          "ur": "وہ داخل ہوئی"
+        },
+        {
+          "ar": "أَجَابَتْ",
+          "ar_plain": "اجابت",
+          "translit": "ajābat",
+          "en": "she answered",
+          "ur": "اس نے جواب دیا (عورت)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أَجَابَتْ",
+        "ar_plain": "اجابت",
+        "translit": "ajābat",
+        "en": "she answered",
+        "ur": "اس نے جواب دیا (عورت)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Fatimah answers: أَجَابَتْ.",
+        "ur": "فاطمہ جواب دیتی ہیں: أَجَابَتْ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch22-l04-ex09",
+      "statement": {
+        "en": "The classroom scene with Ahmad is a Quran quotation.",
+        "ur": "احمد والا کلاس کا منظر قرآن کا اقتباس ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It is a practice scene; only the ayah has a surah and ayah number.",
+        "ur": "یہ مشق کا منظر ہے؛ صرف آیت کی سورت اور آیت نمبر ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Full dialogue — قَالَ, سَأَلَ, and أَجَابَ together",
-      "ar": "الْحِوَارُ الْكَامِلُ — قَالَ، سَأَلَ، أَجَابَ بِرَفْقِ",
-      "ur": "مکمل گفتگو — قَالَ، سَأَلَ، اور أَجَابَ اکٹھے"
+      "en": "Follow the whole exchange",
+      "ar": "الْحِوَارُ كُلُّهُ",
+      "ur": "پوری گفتگو"
     },
     "ayah": {
       "surah": 12,
-      "ayah": 36,
-      "label": "Yusuf 12:36",
-      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ ۖ قَالَ أَحَدُهُمَا إِنِّي أَرَانِي أَعْصِرُ خَمْرًا ۖ وَقَالَ الْآخَرُ إِنِّي أَرَانِي أَحْمِلُ فَوْقَ رَأْسِي خُبْزًا تَأْكُلُ الطَّيْرُ مِنْهُ ۖ نَبِّئْنَا بِتَأْوِيلِهِ ۖ إِنَّا نَرَاكَ مِنَ الْمُحْسِنِينَ",
-      "en": "And there entered the prison with him two young men. One of them said, \"Indeed, I have seen myself [in a dream] pressing [grapes for] wine.\" The other said, \"Indeed, I have seen myself carrying upon my head [some] bread, from which the birds were eating. Inform us of its interpretation; indeed, we see you to be of those who do good.\"",
-      "ur": "اور ان کے ساتھ دو اور جوان بھی داخل زندان ہوئے۔ ایک نے ان میں سے کہا کہ (میں نے خواب دیکھا ہے) دیکھتا (کیا) ہوں کہ شراب (کے لیے انگور) نچوڑ رہا ہوں۔ دوسرے نے کہا کہ (میں نے بھی خواب دیکھا ہے) میں یہ دیکھتا ہوں کہ اپنے سر پر روٹیاں اٹھائے ہوئے ہوں اور جانور ان میں سے کھا رہے (ہیں تو) ہمیں ان کی تعبیر بتا دیجیئے کہ ہم تمہیں نیکوکار دیکھتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
+      "ayah": 90,
+      "label": "Yusuf 12:90",
+      "ar": "قَالُوا أَإِنَّكَ لَأَنتَ يُوسُفُ قَالَ أَنَا يُوسُفُ وَهَٰذَا أَخِي",
+      "en": "They said, “Are you indeed Yusuf?” He said, “I am Yusuf, and this is my brother.”",
+      "ur": "انہوں نے کہا: کیا واقعی آپ ہی یوسف ہیں؟ انہوں نے کہا: میں یوسف ہوں اور یہ میرا بھائی ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012090.mp3"
     },
     "highlighted_word_indices": [
-      1
+      4
+    ],
+    "highlighted_words": [
+      "قَالَ"
     ],
     "noor_explanation": {
-      "en": "The Quran is full of dialogue — قَالَ, سَأَلَ, أَجَابَ. Yusuf's story in Surah Yusuf is almost entirely dialogue. Now you can read it!",
-      "ur": "قرآن گفتگو سے بھرا ہوا ہے — قَالَ، سَأَلَ، أَجَابَ۔ سورہ یوسف میں یوسف کی کہانی تقریباً مکمل طور پر گفتگو ہے۔ اب آپ اسے پڑھ سکتے ہیں!"
+      "en": "قَالَ: he said — Yusuf's answer to his brothers' question. A question, a fitting answer, and a moment of recognition. You can now follow who asks, who answers, and whether the answer fits.",
+      "ur": "قَالَ: انہوں نے کہا — بھائیوں کے سوال پر یوسف کا جواب۔ ایک سوال، ایک مناسب جواب، اور پہچان کا ایک لمحہ۔ اب آپ سمجھ سکتے ہیں کون پوچھتا ہے، کون جواب دیتا ہے، اور جواب مناسب ہے یا نہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "These three verbs are the skeleton of every Arabic conversation. Keep practicing: قَالَ, سَأَلَ, أَجَابَ — said, asked, answered. You're building real communication skills!",
-      "ur": "یہ تین افعال ہر عربی گفتگو کا skeleton ہیں۔ مشق کرتے رہیں: قَالَ، سَأَلَ، أَجَابَ — کہا، پوچھا، جواب دیا۔ آپ اصل مواصلاتی مہارتیں بنا رہے ہیں!"
+      "en": "You followed a whole exchange. Next: Conversation Lab 9 — ask, answer and confirm.",
+      "ur": "آپ نے پوری گفتگو سمجھی۔ آگے: گفتگو لیب 9 — پوچھیں، جواب دیں اور تصدیق کریں۔"
     }
   }
 }

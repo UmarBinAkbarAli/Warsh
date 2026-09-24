@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 22 final test (ch22-test, new; display order 7). Twelve multiple-choice questions on the proposal's blueprint: speaker and quoted words, including one verified Quran target (3: authored, 12:36, authored with my), questioner and question versus the reporting verb (2), an answer justified by the displayed question or fact (3), the understanding / repair exchange with the taught fixed phrases (2), following and completing a short classroom dialogue (2). No dual forms, no لَمْ grammar, no Chapter 28 عَلِمَ / فَهِمَ contrast; every yes/no item shows its fact. Pass mark 80 % (10 of 12). Rebuilt 2026-09-24 from Docs/proposals/chapter-22-content-proposal.md with the owner-approved review amendments recorded there (Ali 'Imran 3:37 as the verified ayah in which قَالَ reports a question and قَالَتْ its answer; Al-Baqarah 2:186 سَأَلَكَ as a real سَأَلَ in the Quran; Yusuf 12:90 as the second verified speech frame; CL5's heard-only هَلْ فَهِمْتُمْ؟ / مَرَّةً أُخْرَى، لَوْ سَمَحْتَ promoted to spoken lines rather than treated as new). The map and fixtures named two reader_lecture_22 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "باب 22 کا آخری امتحان",
+    "chapter_order": 22,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 12,
+      "ayah": 36,
+      "label": "Yusuf 12:36",
+      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ قَالَ أَحَدُهُمَا",
+      "en": "And two young men entered the prison with him. One of them said…",
+      "ur": "اور ان کے ساتھ دو جوان قید خانے میں داخل ہوئے۔ ان میں سے ایک نے کہا…",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 22.",
+      "ur": "باب 22 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 22,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch22-test-q01",
+        "topic": {
+          "en": "Who spoke",
+          "ur": "کون بولا"
+        },
+        "prompt": {
+          "en": "Who is speaking?",
+          "ur": "کون بول رہا ہے؟"
+        },
+        "arabic": "قَالَتِ الْمُعَلِّمَةُ: الدَّرْسُ فِي الْفَصْلِ",
+        "options": [
+          {
+            "en": "the female teacher",
+            "ur": "معلمہ"
+          },
+          {
+            "en": "Fatimah",
+            "ur": "فاطمہ"
+          },
+          {
+            "en": "a male student",
+            "ur": "ایک طالب علم"
+          },
+          {
+            "en": "the lesson",
+            "ur": "سبق"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch22-test-q02",
+        "topic": {
+          "en": "Who spoke",
+          "ur": "کون بولا"
+        },
+        "prompt": {
+          "en": "Yusuf 12:36 — who says قَالَ أَحَدُهُمَا?",
+          "ur": "سورۃ یوسف 12:36 — قَالَ أَحَدُهُمَا کون کہتا ہے؟"
+        },
+        "arabic": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ قَالَ أَحَدُهُمَا",
+        "options": [
+          {
+            "en": "the king",
+            "ur": "بادشاہ"
+          },
+          {
+            "en": "one of the two young men",
+            "ur": "دونوں جوانوں میں سے ایک"
+          },
+          {
+            "en": "Yusuf's brothers",
+            "ur": "یوسف کے بھائی"
+          },
+          {
+            "en": "Yusuf",
+            "ur": "یوسف"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch22-test-q03",
+        "topic": {
+          "en": "Who spoke",
+          "ur": "کون بولا"
+        },
+        "prompt": {
+          "en": "Whose pen is it?",
+          "ur": "یہ قلم کس کا ہے؟"
+        },
+        "arabic": "قَالَتْ زَيْنَبُ: قَلَمِي فِي الْحَقِيبَةِ",
+        "options": [
+          {
+            "en": "the teacher's",
+            "ur": "استاد کا"
+          },
+          {
+            "en": "the listener's",
+            "ur": "سننے والے کا"
+          },
+          {
+            "en": "Zaynab's",
+            "ur": "زینب کا"
+          },
+          {
+            "en": "nobody's",
+            "ur": "کسی کا نہیں"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch22-test-q04",
+        "topic": {
+          "en": "Questions",
+          "ur": "سوالات"
+        },
+        "prompt": {
+          "en": "Who asked the question?",
+          "ur": "سوال کس نے پوچھا؟"
+        },
+        "arabic": "سَأَلَ الطَّالِبُ الْأُسْتَاذَ: أَيْنَ الدَّرْسُ؟",
+        "options": [
+          {
+            "en": "nobody: it is a statement",
+            "ur": "کسی نے نہیں: یہ بیان ہے"
+          },
+          {
+            "en": "Ahmad",
+            "ur": "احمد"
+          },
+          {
+            "en": "the teacher",
+            "ur": "استاد"
+          },
+          {
+            "en": "the student",
+            "ur": "طالب علم"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch22-test-q05",
+        "topic": {
+          "en": "Questions",
+          "ur": "سوالات"
+        },
+        "prompt": {
+          "en": "Is this line a question?",
+          "ur": "کیا یہ سطر سوال ہے؟"
+        },
+        "arabic": "قَالَ أَحْمَدُ: أَيْنَ الْقَلَمُ؟",
+        "options": [
+          {
+            "en": "Yes: أَيْنَ makes it a question, even with قَالَ",
+            "ur": "ہاں: أَيْنَ اسے سوال بناتا ہے، قَالَ کے باوجود"
+          },
+          {
+            "en": "No: only سَأَلَ can report a question",
+            "ur": "نہیں: صرف سَأَلَ سوال بیان کر سکتا ہے"
+          },
+          {
+            "en": "No: قَالَ always reports a statement",
+            "ur": "نہیں: قَالَ ہمیشہ بیان بتاتا ہے"
+          },
+          {
+            "en": "Yes: because Ahmad is a student",
+            "ur": "ہاں: کیونکہ احمد طالب علم ہے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch22-test-q06",
+        "topic": {
+          "en": "A fitting answer",
+          "ur": "مناسب جواب"
+        },
+        "prompt": {
+          "en": "Which answer fits the question?",
+          "ur": "کون سا جواب سوال کے مطابق ہے؟"
+        },
+        "arabic": "أَيْنَ الْحَقِيبَةُ؟",
+        "options": [
+          {
+            "en": "نَعَمْ",
+            "ur": "نَعَمْ"
+          },
+          {
+            "en": "الْحَقِيبَةُ تَحْتَ الْمَكْتَبِ",
+            "ur": "الْحَقِيبَةُ تَحْتَ الْمَكْتَبِ"
+          },
+          {
+            "en": "الْحَقِيبَةُ جَدِيدَةٌ",
+            "ur": "الْحَقِيبَةُ جَدِيدَةٌ"
+          },
+          {
+            "en": "هٰذِهِ حَقِيبَةٌ",
+            "ur": "هٰذِهِ حَقِيبَةٌ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch22-test-q07",
+        "topic": {
+          "en": "A fitting answer",
+          "ur": "مناسب جواب"
+        },
+        "prompt": {
+          "en": "The fact comes first. Which answer is right?",
+          "ur": "حقیقت پہلے دی گئی ہے۔ کون سا جواب درست ہے؟"
+        },
+        "arabic": "الْقَلَمُ عَلَى الْمَكْتَبِ. هَلِ الْقَلَمُ فِي الْحَقِيبَةِ؟",
+        "options": [
+          {
+            "en": "نَعَمْ",
+            "ur": "نَعَمْ"
+          },
+          {
+            "en": "هٰذَا قَلَمٌ",
+            "ur": "هٰذَا قَلَمٌ"
+          },
+          {
+            "en": "لَا",
+            "ur": "لَا"
+          },
+          {
+            "en": "أَيْنَ الْقَلَمُ؟",
+            "ur": "أَيْنَ الْقَلَمُ؟"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch22-test-q08",
+        "topic": {
+          "en": "A fitting answer",
+          "ur": "مناسب جواب"
+        },
+        "prompt": {
+          "en": "Ali 'Imran 3:37 — how does Maryam answer 'from where is this?'",
+          "ur": "سورۃ آل عمران 3:37 — مریم 'یہ کہاں سے ہے؟' کا کیا جواب دیتی ہیں؟"
+        },
+        "arabic": "قَالَتْ هُوَ مِنْ عِندِ اللَّهِ",
+        "options": [
+          {
+            "en": "It is for you.",
+            "ur": "یہ تمہارے لیے ہے۔"
+          },
+          {
+            "en": "She asks another question.",
+            "ur": "وہ دوسرا سوال پوچھتی ہیں۔"
+          },
+          {
+            "en": "I do not know.",
+            "ur": "میں نہیں جانتی۔"
+          },
+          {
+            "en": "It is from Allah.",
+            "ur": "یہ اللہ کی طرف سے ہے۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch22-test-q09",
+        "topic": {
+          "en": "Understanding",
+          "ur": "سمجھ"
+        },
+        "prompt": {
+          "en": "The teacher asks هَلْ فَهِمْتَ الدَّرْسَ؟ and you understood. What do you say?",
+          "ur": "استاد پوچھتے ہیں هَلْ فَهِمْتَ الدَّرْسَ؟ اور آپ کو سمجھ آ گیا۔ آپ کیا کہیں گے؟"
+        },
+        "options": [
+          {
+            "en": "نَعَمْ، فَهِمْتُ الدَّرْسَ",
+            "ur": "نَعَمْ، فَهِمْتُ الدَّرْسَ"
+          },
+          {
+            "en": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+            "ur": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ"
+          },
+          {
+            "en": "هَلْ فَهِمْتَ؟",
+            "ur": "هَلْ فَهِمْتَ؟"
+          },
+          {
+            "en": "نَعَمْ، فَهِمْتَ الدَّرْسَ",
+            "ur": "نَعَمْ، فَهِمْتَ الدَّرْسَ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch22-test-q10",
+        "topic": {
+          "en": "Understanding",
+          "ur": "سمجھ"
+        },
+        "prompt": {
+          "en": "You did not catch what the teacher said. What do you say?",
+          "ur": "استاد کی بات آپ کی سمجھ میں نہیں آئی۔ آپ کیا کہیں گے؟"
+        },
+        "options": [
+          {
+            "en": "الدَّرْسُ غَدًا",
+            "ur": "الدَّرْسُ غَدًا"
+          },
+          {
+            "en": "نَعَمْ، فَهِمْتُ",
+            "ur": "نَعَمْ، فَهِمْتُ"
+          },
+          {
+            "en": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+            "ur": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ"
+          },
+          {
+            "en": "قَالَ الْأُسْتَاذُ",
+            "ur": "قَالَ الْأُسْتَاذُ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch22-test-q11",
+        "topic": {
+          "en": "Following a dialogue",
+          "ur": "گفتگو سمجھنا"
+        },
+        "prompt": {
+          "en": "What fits the gap?",
+          "ur": "خالی جگہ میں کیا مناسب ہے؟"
+        },
+        "arabic": "مَاذَا قَالَ الْأُسْتَاذُ؟ — ___",
+        "options": [
+          {
+            "en": "أَيْنَ الْأُسْتَاذُ؟",
+            "ur": "أَيْنَ الْأُسْتَاذُ؟"
+          },
+          {
+            "en": "قَالَ الْأُسْتَاذُ: الدَّرْسُ غَدًا",
+            "ur": "قَالَ الْأُسْتَاذُ: الدَّرْسُ غَدًا"
+          },
+          {
+            "en": "نَعَمْ، فَهِمْتُ",
+            "ur": "نَعَمْ، فَهِمْتُ"
+          },
+          {
+            "en": "سَأَلَ الْأُسْتَاذُ",
+            "ur": "سَأَلَ الْأُسْتَاذُ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch22-test-q12",
+        "topic": {
+          "en": "Following a dialogue",
+          "ur": "گفتگو سمجھنا"
+        },
+        "prompt": {
+          "en": "In this exchange, who answered?",
+          "ur": "اس گفتگو میں کس نے جواب دیا؟"
+        },
+        "arabic": "سَأَلَ أَحْمَدُ: أَيْنَ الْمَسْجِدُ؟ أَجَابَتْ فَاطِمَةُ: الْمَسْجِدُ خَلْفَ الْبَيْتِ",
+        "options": [
+          {
+            "en": "Fatimah",
+            "ur": "فاطمہ"
+          },
+          {
+            "en": "Ahmad",
+            "ur": "احمد"
+          },
+          {
+            "en": "the mosque",
+            "ur": "مسجد"
+          },
+          {
+            "en": "nobody",
+            "ur": "کسی نے نہیں"
+          }
+        ],
+        "correct_index": 0
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 22 — dialogue and communication",
+      "ur": "باب 22 — مکالمہ"
+    },
+    "ayah": {
+      "surah": 3,
+      "ayah": 37,
+      "label": "Ali 'Imran 3:37",
+      "ar": "قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا قَالَتْ هُوَ مِنْ عِندِ اللَّهِ",
+      "en": "He said, “O Maryam, from where is this for you?” She said, “It is from Allah.”",
+      "ur": "انہوں نے کہا: اے مریم! یہ تمہارے پاس کہاں سے آیا؟ انہوں نے کہا: یہ اللہ کی طرف سے ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003037.mp3"
+    },
+    "highlighted_word_indices": [
+      5
+    ],
+    "highlighted_words": [
+      "هَٰذَا"
+    ],
+    "noor_explanation": {
+      "en": "قَالَتْ: she said — Maryam's fitting answer. You can now find who spoke, tell a question by its words, choose an answer that fits, and keep a conversation going.",
+      "ur": "قَالَتْ: انہوں نے کہا — مریم کا مناسب جواب۔ اب آپ ڈھونڈ سکتے ہیں کون بولا، الفاظ سے سوال پہچان سکتے ہیں، مناسب جواب چن سکتے ہیں، اور گفتگو جاری رکھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 22 complete. Chapter 23 brings Book 2 together: you read connected Arabic using everything so far.",
+      "ur": "باب 22 مکمل۔ باب 23 کتاب 2 کو یکجا کرتا ہے: آپ اب تک کی ہر چیز سے جڑی ہوئی عربی پڑھیں گے۔"
+    }
+  }
+}

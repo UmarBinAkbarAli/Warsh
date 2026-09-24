@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 23, Lesson 2 - Relative pronouns (الَّذِي، الَّتِي) and attached pronouns (كِتَابِي، رَبِّي، رَبَّنَا) integration. Pure integration from Ch1-22.",
+    "_note": "Chapter 23, Lesson 2 (ch23-l02) — two links in connected reading, kept apart so a wrong answer shows which link was missed: الَّذِي / الَّتِي and their antecedent (Chapters 6, 8, 18) and a noun-attached owner, singular or plural (Chapters 7, 19, 20), in authored sentences; separate هُوَ versus attached ـهُ as recognition. Quran: Al-Baqarah 2:21 رَبَّكُمُ الَّذِي خَلَقَكُمْ — الَّذِي describes رَبَّكُمُ, and ـكُمْ is your on the noun and you on the action (reveal الَّذِي, index 5). No plural relative, no case parse, no scored sentence role for an isolated phrase; the 'attached هُوَ' in 112:1 and the al-asmāʾ al-badaliyyah label are gone. Rebuilt 2026-09-24 from Docs/proposals/chapter-23-content-proposal.md with the owner-approved review amendments recorded there (Ta-Ha 20:17–18 وَمَا تِلْكَ بِيَمِينِكَ / قَالَ هِيَ عَصَايَ instead of Al-Baqarah 2:5, whose أُولَٰئِكَ → people of taqwa task is already Chapter 15 L4's; Al-Baqarah 2:21 for الَّذِي with رَبَّكُمُ; Al-Qasas 28:21 for movement plus speech). Chapters 20–22 were rebuilt and released together with this chapter, so every combined skill tested here is taught. The map and fixtures named reader_lecture_23_book2_consolidation.md and reader_lessons_11-13_integration.md, neither of which existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "کس کا وصف، اور کس کی چیز؟",
     "chapter_order": 23,
     "lesson_order": 2,
-    "chapter_title": "Grammar Structures, Reading, and Application",
-    "title": "Relative Pronouns and Attached Pronouns",
-    "titleAr": "الْأَسْمَاءُ الْمَوْصُولَة وَالْأَسْمَاءُ الْبَدَلِيَّة",
-    "source": "reader_lessons_11-13_integration.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 112,
-      "ayah": 1,
-      "label": "Al-Ikhlas 112:1",
-      "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
-      "en": "Say, He is Allah, the One.",
-      "ur": "کہہ دیجیے، وہ اللہ ایک ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112001.mp3"
+      "surah": 2,
+      "ayah": 21,
+      "label": "Al-Baqarah 2:21",
+      "ar": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ",
+      "en": "O mankind, worship your Lord, who created you",
+      "ur": "اے لوگو! اپنے رب کی عبادت کرو جس نے تمہیں پیدا کیا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002021.mp3"
     },
     "noor_intro": {
-      "en": "هُوَ is an attached pronoun meaning 'He.' In this ayah, Allah describes Himself. Today we practice الَّذِي and الَّتِي (who/which) and attached pronouns like كِتَابِي and رَبِّي.",
-      "ur": "هُوَ ایک بدلیہ ضمیر ہے جس کا مطلب 'وہ' ہے۔ اس آیت میں اللہ اپنے آپ کو بیان فرماتے ہیں۔ آج ہم الَّذِي اور الَّتِي (جو/کہ) اور بدلیہ ضمیر جیسے كِتَابِي اور رَبِّي کی مشق کریں گے۔"
+      "en": "The first command in the Quran's order is to worship. Listen for رَبَّكُمُ, your Lord, and الَّذِي, who, which describes Him.",
+      "ur": "قرآن کی ترتیب میں پہلا حکم عبادت کا ہے۔ رَبَّكُمُ، تمہارا رب، اور الَّذِي، جس نے، سنیں، جو اس کا وصف بیان کرتا ہے۔"
     },
     "autoplay": true
   },
@@ -32,76 +29,94 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Relative pronoun: الَّذِي (the one who/which — masculine)",
-        "ar": "الْأَسْمَاءُ الْمَوْصُولَة: الَّذِي (مذکر)",
-        "ur": "اسم موصول: الَّذِي (مذکر)"
+        "en": "Two links in one sentence",
+        "ar": "الَّذِي / ـهُ",
+        "ur": "ایک جملے میں دو رشتے"
       },
       "explanation": {
-        "en": "الَّذِي means 'the one who' or 'that' (masculine singular). It connects two clauses: الَّذِي يَقْرَأُ is 'the one who reads.' It must agree in gender and number with its antecedent.",
-        "ur": "الَّذِي کا مطلب 'جو' یا 'کہ' (مذکر واحد) ہے۔ یہ دو جملے کو جوڑتا ہے: الَّذِي يَقْرَأُ یعنی 'جو پڑھتا ہے'۔ اسے اپنے antecedent کے جنس اور تعداد سے ملنا چاہیے۔"
+        "en": "Link one: الَّذِي or الَّتِي describes a noun that was just named. Link two: an ending like ـهُ, ـهَا or ـهُمْ points to an owner. Find each link separately.",
+        "ur": "پہلا رشتہ: الَّذِي یا الَّتِي ابھی ذکر کیے گئے اسم کا وصف بیان کرتا ہے۔ دوسرا رشتہ: ـهُ، ـهَا یا ـهُمْ جیسا آخر مالک کی طرف اشارہ کرتا ہے۔ ہر رشتہ الگ ڈھونڈیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الَّذِي يَقْرَأُ الْكِتَابَ",
-        "ar_plain": "الذي يقرأ الكتاب",
-        "translit": "alladhii yaqra'ul kitaaba",
-        "en": "The one who reads the book.",
-        "ur": "جو کتاب پڑھتا ہے۔"
+        "ar": "الطَّالِبُ الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ أَخِي",
+        "ar_plain": "الطالب الذي ذهب الى المسجد اخي",
+        "translit": "aṭ-ṭālibu lladhī dhahaba ilā l-masjidi akhī",
+        "en": "The student who went to the mosque is my brother.",
+        "ur": "جو طالب علم مسجد گیا وہ میرا بھائی ہے۔"
       },
       "explanation": {
-        "en": "الَّذِي is the relative pronoun (subject of the relative clause). يَقْرَأُ is the verb. الْكِتَابَ is the object. The structure: [antecedent + الَّذِي + verb phrase].",
-        "ur": "الَّذِي اسم موصول ہے (نسبی جملے کا فاعل)۔ يَقْرَأُ فعل ہے۔ الْكِتَابَ مفعول ہے۔ ساخت: [antecedent + الَّذِي + فعل کی جملہ]۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Relative pronoun: الَّتِي (the one who/which — feminine)",
-        "ar": "الْأَسْمَاءُ الْمَوْصُولَة: الَّتِي (مؤنث)",
-        "ur": "اسم موصول: الَّتِي (مؤنث)"
-      },
-      "explanation": {
-        "en": "الَّتِي means 'the one who' or 'that' (feminine singular). It is used when the antecedent is feminine. الْمُسْلِمَةُ الَّتِي تَقْرَأُ — 'the believing woman who reads.'",
-        "ur": "الَّتِي کا مطلب 'جو' یا 'کہ' (مؤنث واحد) ہے۔ یہ اس وقت استعمال ہوتی ہے جب antecedent مؤنث ہو۔ الْمُسْلِمَةُ الَّتِي تَقْرَأُ — 'مومنہ عورت جو پڑھتی ہے'۔"
+        "en": "الَّذِي describes الطَّالِبُ: the student who went to the mosque. أَخِي, my brother, belongs to the speaker.",
+        "ur": "الَّذِي الطَّالِبُ کا وصف ہے: وہ طالب علم جو مسجد گیا۔ أَخِي، میرا بھائی، بولنے والے کا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الْمُسْلِمَةُ الَّتِي تَقْرَأُ الْقُرْآنَ",
-        "ar_plain": "المسلمة التي تقرأ القرآن",
-        "translit": "al-muslimahtu allatii taqra'ul qur'aana",
-        "en": "The believing woman who reads the Quran.",
-        "ur": "مومنہ عورت جو قرآن پڑھتی ہے۔"
+        "ar": "هٰذِهِ الطَّالِبَةُ الَّتِي رَجَعَتْ. كِتَابُهَا جَدِيدٌ.",
+        "ar_plain": "هذه الطالبة التي رجعت كتابها جديد",
+        "translit": "hādhihi ṭ-ṭālibatu llatī rajaʿat. kitābuhā jadīdun.",
+        "en": "This is the student who returned. Her book is new.",
+        "ur": "یہ وہ طالبہ ہے جو واپس آئی۔ اس کی کتاب نئی ہے۔"
       },
       "explanation": {
-        "en": "الْمُسْلِمَةُ is the feminine antecedent. الَّتِي is the feminine relative pronoun. تَقْرَأُ is the verb in the feminine form matching the subject. الْقُرْآنَ is the object.",
-        "ur": "الْمُسْلِمَةُ مؤنث antecedent ہے۔ الَّتِي مؤنث اسم موصول ہے۔ تَقْرَأُ فعل کا مؤنث صورت ہے جو فاعل سے ملتی ہے۔ الْقُرْآنَ مفعول ہے۔"
+        "en": "Link one: الَّتِي describes الطَّالِبَةُ. Link two: the ـهَا of كِتَابُهَا points to the same student. Two links, one person.",
+        "ur": "پہلا رشتہ: الَّتِي الطَّالِبَةُ کا وصف ہے۔ دوسرا رشتہ: كِتَابُهَا کا ـهَا اسی طالبہ کی طرف اشارہ کرتا ہے۔ دو رشتے، ایک شخص۔"
       }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:21: O mankind, worship your Lord, who created you",
+        "ar": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ",
+        "ur": "Al-Baqarah 2:21: اے لوگو! اپنے رب کی عبادت کرو جس نے تمہیں پیدا کیا"
+      },
+      "explanation": {
+        "en": "رَبَّكُمُ: your Lord (Chapter 20). الَّذِي خَلَقَكُمْ: who created you — الَّذِي describes رَبَّكُمُ (Chapter 18). In خَلَقَكُمْ the ending sits on an action, so it is you, the people addressed. اعْبُدُوا, worship, is only glossed.",
+        "ur": "رَبَّكُمُ: تمہارا رب (باب 20)۔ الَّذِي خَلَقَكُمْ: جس نے تمہیں پیدا کیا — الَّذِي رَبَّكُمُ کا وصف ہے (باب 18)۔ خَلَقَكُمْ میں آخر کام پر ہے، اس لیے یہ 'تمہیں' ہے، جن لوگوں سے خطاب ہے۔ اعْبُدُوا، عبادت کرو، کا صرف معنی دیا گیا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002021.mp3"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Separate pronoun or ending?",
+        "ar": "هُوَ طَالِبٌ / كِتَابُهُ",
+        "ur": "الگ ضمیر یا آخر؟"
+      },
+      "explanation": {
+        "en": "هُوَ طَالِبٌ: he is a student — هُوَ is its own word. كِتَابُهُ: his book — ـهُ is attached. Only the ending can mean his.",
+        "ur": "هُوَ طَالِبٌ: وہ طالب علم ہے — هُوَ الگ لفظ ہے۔ كِتَابُهُ: اس کی کتاب — ـهُ جڑا ہوا ہے۔ صرف آخر کا مطلب 'اس کا' ہو سکتا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "هُوَ طَالِبٌ",
+          "ar_plain": "هو طالب",
+          "translit": "huwa ṭālibun",
+          "en": "He is a student.",
+          "ur": "وہ طالب علم ہے۔"
+        },
+        {
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitābuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Attached pronouns (al-asmaa' al-badaliyyah)",
-        "ar": "الْأَسْمَاءُ الْبَدَلِيَّة",
-        "ur": "بدلیہ اسماء"
+        "en": "Which link did you miss?",
+        "ar": "مَنِ الْمَوْصُوفُ؟ لِمَنْ هٰذَا؟",
+        "ur": "کون سا رشتہ چھوٹ گیا؟"
       },
       "explanation": {
-        "en": "Attached pronouns are suffixes attached to nouns, verbs, and prepositions to indicate possession or reference. كِتَابِي (my book), رَبِّي (my Lord), رَبَّنَا (our Lord), بَيْتُكَ (your house). The pronoun is built into the word itself.",
-        "ur": "بدلیہ ضمیریں اسم، فعل، اور حروف کے ساتھ بطور لاحقہ لگائی جاتی ہیں تاکہ possession یا حوالہ ظاہر کیا جا سکے۔ كِتَابِي (میری کتاب)، رَبِّي (میرے رب)، رَبَّنَا (ہمارے رب)، بَيْتُكَ (تمہارا گھر)۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Key vocabulary in this lesson",
-        "ur": "اس سبق میں اہم الفاظ"
-      },
-      "body": {
-        "en": "الَّذِي who/which (masc.) · الَّتِي who/which (fem.) · كِتَابِي my book · رَبِّي my Lord · رَبَّنَا our Lord · بَيْتُكَ your house · يَقْرَأُ he reads · تَقْرَأُ she reads · الْقُرْآنُ the Quran · الْمُسْلِمَةُ believing woman",
-        "ur": "الَّذِي جو/کہ (مذکر) · الَّتِي جو/کہ (مؤنث) · كِتَابِي میری کتاب · رَبِّي میرے رب · رَبَّنَا ہمارے رب · بَيْتُكَ تمہارا گھر · يَقْرَأُ وہ پڑھتا ہے · تَقْرَأُ وہ پڑھتی ہے · الْقُرْآنُ قرآن · الْمُسْلِمَةُ مومنہ"
+        "en": "Ask two separate questions. Who does الَّذِي / الَّتِي describe? Whose is the thing with the ending? If you answer one wrongly, you know exactly which link to check again.",
+        "ur": "دو الگ سوال پوچھیں۔ الَّذِي / الَّتِي کس کا وصف ہے؟ آخر والی چیز کس کی ہے؟ اگر ایک کا جواب غلط ہو تو آپ کو ٹھیک پتا ہوگا کہ کون سا رشتہ دوبارہ دیکھنا ہے۔"
       }
     }
   ],
@@ -110,157 +125,270 @@
       "type": "TAP_TRANSLATION",
       "id": "ch23-l02-ex01",
       "prompt": {
-        "ar": "الَّذِي يَقْرَأُ الْكِتَابَ",
-        "ar_plain": "الذي يقرأ الكتاب",
-        "translit": "alladhii yaqra'ul kitaaba",
-        "en": "The one who reads the book.",
-        "ur": "جو کتاب پڑھتا ہے۔"
+        "ar": "الطَّالِبُ الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ أَخِي",
+        "ar_plain": "الطالب الذي ذهب الى المسجد اخي",
+        "translit": "aṭ-ṭālibu lladhī dhahaba ilā l-masjidi akhī",
+        "en": "The student who went to the mosque is my brother.",
+        "ur": "جو طالب علم مسجد گیا وہ میرا بھائی ہے۔"
       },
       "options": [
         {
-          "en": "The one who reads the book.",
-          "ur": "جو کتاب پڑھتا ہے۔"
+          "en": "The student who went to the mosque is his brother.",
+          "ur": "جو طالب علم مسجد گیا وہ اس کا بھائی ہے۔"
         },
         {
-          "en": "The book that is read.",
-          "ur": "وہ کتاب جو پڑھی جاتی ہے۔"
+          "en": "My brother, the student, is in the mosque.",
+          "ur": "میرا بھائی، طالب علم، مسجد میں ہے۔"
         },
         {
-          "en": "The student reads the book.",
-          "ur": "طالب علم کتاب پڑھتا ہے۔"
+          "en": "The student went to my brother's mosque.",
+          "ur": "طالب علم میرے بھائی کی مسجد گیا۔"
         },
         {
-          "en": "The one who wrote the book.",
-          "ur": "جو کتاب لکھتا ہے۔"
+          "en": "The student who went to the mosque is my brother.",
+          "ur": "جو طالب علم مسجد گیا وہ میرا بھائی ہے۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 3,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "الَّذِي is the masculine relative pronoun 'the one who/that.' يَقْرَأُ is the present tense verb 'reads.' الْكِتَابَ is the object 'the book.'",
-        "ur": "الَّذِي مذکر اسم موصول 'جو/کہ' ہے۔ يَقْرَأُ حالی فعل 'پڑھتا ہے' ہے۔ الْكِتَابَ مفعول 'کتاب' ہے۔"
+        "en": "الَّذِي describes الطَّالِبُ; أَخِي is my brother.",
+        "ur": "الَّذِي الطَّالِبُ کا وصف ہے؛ أَخِي میرا بھائی۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch23-l02-ex02",
       "statement": {
-        "en": "الَّتِي is used for feminine singular antecedents, while الَّذِي is used for masculine singular antecedents.",
-        "ur": "الَّتِي مؤنث واحد antecedents کے لیے استعمال ہوتی ہے، جبکہ الَّذِي مذکر واحد antecedents کے لیے استعمال ہوتا ہے۔",
+        "en": "الَّذِي describes الْمَسْجِدِ.",
+        "ur": "الَّذِي الْمَسْجِدِ کا وصف ہے۔",
         "ar_example": {
-          "ar": "الْمُسْلِمَةُ الَّتِي تَقْرَأُ",
-          "ar_plain": "المسلمة التي تقرأ",
-          "translit": "al-muslimahtu allatii taqra'u",
-          "en": "The believing woman who reads.",
-          "ur": "مومنہ عورت جو پڑھتی ہے۔"
+          "ar": "الطَّالِبُ الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ أَخِي",
+          "ar_plain": "الطالب الذي ذهب الى المسجد اخي",
+          "translit": "aṭ-ṭālibu lladhī dhahaba ilā l-masjidi akhī",
+          "en": "The student who went to the mosque is my brother.",
+          "ur": "جو طالب علم مسجد گیا وہ میرا بھائی ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الَّذِي follows الطَّالِبُ and describes him: the student who went.",
+        "ur": "الَّذِي الطَّالِبُ کے بعد ہے اور اس کا وصف ہے: وہ طالب علم جو گیا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch23-l02-ex03",
+      "statement": {
+        "en": "The new book belongs to the student who returned.",
+        "ur": "نئی کتاب اس طالبہ کی ہے جو واپس آئی۔",
+        "ar_example": {
+          "ar": "هٰذِهِ الطَّالِبَةُ الَّتِي رَجَعَتْ. كِتَابُهَا جَدِيدٌ.",
+          "ar_plain": "هذه الطالبة التي رجعت كتابها جديد",
+          "translit": "hādhihi ṭ-ṭālibatu llatī rajaʿat. kitābuhā jadīdun.",
+          "en": "This is the student who returned. Her book is new.",
+          "ur": "یہ وہ طالبہ ہے جو واپس آئی۔ اس کی کتاب نئی ہے۔"
         }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ـهَا points back to الطَّالِبَةُ.",
+        "ur": "ـهَا الطَّالِبَةُ کی طرف لوٹتا ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch23-l02-ex03",
+      "id": "ch23-l02-ex04",
       "mode": "TAP",
-      "sentence_ar": "كِتَابُ ___",
+      "sentence_ar": "هٰذَا الطَّالِبُ ___ دَخَلَ الْمَسْجِدَ",
       "hint": {
-        "en": "This is my book.",
-        "ur": "یہ میری کتاب ہے۔"
+        "en": "This is the student who entered the mosque.",
+        "ur": "یہ وہ طالب علم ہے جو مسجد میں داخل ہوا۔"
       },
       "options": [
         {
-          "ar": "ي",
-          "ar_plain": "ي",
-          "translit": "i",
-          "en": "my (attached pronoun)",
-          "ur": "میرا (بدلیہ ضمیر)"
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who (masculine)",
+          "ur": "جو (مذکر)"
         },
         {
-          "ar": "كَ",
-          "ar_plain": "ك",
-          "translit": "ka",
-          "en": "your (masc.)",
-          "ur": "تمہارا"
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who (feminine)",
+          "ur": "جو (مؤنث)"
         },
         {
-          "ar": "هُ",
-          "ar_plain": "ه",
-          "translit": "hu",
-          "en": "his",
-          "ur": "اس کا"
+          "ar": "هٰذَا",
+          "ar_plain": "هذا",
+          "translit": "hādhā",
+          "en": "this",
+          "ur": "یہ"
         },
         {
-          "ar": "نَا",
-          "ar_plain": "نا",
-          "translit": "naa",
-          "en": "our",
-          "ur": "ہمارا"
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "he, it (a separate word)",
+          "ur": "وہ (الگ لفظ، مذکر)"
         }
       ],
       "correct_answer": {
-        "ar": "ي",
-        "ar_plain": "ي",
-        "translit": "i",
-        "en": "my (attached pronoun)",
-        "ur": "میرا (بدلیہ ضمیر)"
+        "ar": "الَّذِي",
+        "ar_plain": "الذي",
+        "translit": "alladhī",
+        "en": "who (masculine)",
+        "ur": "جو (مذکر)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الطَّالِبُ is masculine: الَّذِي.",
+        "ur": "الطَّالِبُ مذکر ہے: الَّذِي۔"
+      }
     },
     {
-      "type": "MATCHING",
-      "id": "ch23-l02-ex04",
-      "left_column": [
+      "type": "FILL_BLANK",
+      "id": "ch23-l02-ex05",
+      "mode": "TAP",
+      "sentence_ar": "هٰذِهِ فَاطِمَةُ، وَهٰذَا ___",
+      "hint": {
+        "en": "This is Fatimah, and this is her book.",
+        "ur": "یہ فاطمہ ہیں، اور یہ ان کی کتاب ہے۔"
+      },
+      "options": [
         {
           "ar": "كِتَابِي",
           "ar_plain": "كتابي",
-          "translit": "kitaabii",
+          "translit": "kitābī",
           "en": "my book",
           "ur": "میری کتاب"
         },
         {
-          "ar": "رَبِّي",
-          "ar_plain": "ربي",
-          "translit": "rabbii",
-          "en": "my Lord",
-          "ur": "میرے رب"
+          "ar": "كِتَابُهُمْ",
+          "ar_plain": "كتابهم",
+          "translit": "kitābuhum",
+          "en": "their book",
+          "ur": "ان کی کتاب"
         },
         {
-          "ar": "رَبَّنَا",
-          "ar_plain": "ربنا",
-          "translit": "rabbanaa",
-          "en": "our Lord",
-          "ur": "ہمارے رب"
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitābuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب (مرد)"
         },
         {
-          "ar": "بَيْتُكَ",
-          "ar_plain": "بيتك",
-          "translit": "baytuka",
-          "en": "your house",
-          "ur": "تمہارا گھر"
+          "ar": "كِتَابُهَا",
+          "ar_plain": "كتابها",
+          "translit": "kitābuhā",
+          "en": "her book",
+          "ur": "اس کی کتاب (عورت)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كِتَابُهَا",
+        "ar_plain": "كتابها",
+        "translit": "kitābuhā",
+        "en": "her book",
+        "ur": "اس کی کتاب (عورت)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The owner is Fatimah: ـهَا.",
+        "ur": "مالک فاطمہ ہیں: ـهَا۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch23-l02-ex06",
+      "ayah_fragment": {
+        "ar": "اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ",
+        "surah_ref": "Al-Baqarah 2:21"
+      },
+      "options": [
+        {
+          "en": "الَّذِي describes the people",
+          "ur": "الَّذِي لوگوں کا وصف ہے"
+        },
+        {
+          "en": "خَلَقَكُمْ — your creation, a noun",
+          "ur": "خَلَقَكُمْ — تمہاری تخلیق، ایک اسم"
+        },
+        {
+          "en": "الَّذِي describes رَبَّكُمُ; in خَلَقَكُمْ, ـكُمْ is you, the people addressed",
+          "ur": "الَّذِي رَبَّكُمُ کا وصف ہے؛ خَلَقَكُمْ میں ـكُمْ کا مطلب 'تمہیں'، جن سے خطاب ہے"
+        },
+        {
+          "en": "رَبَّكُمُ — their Lord",
+          "ur": "رَبَّكُمُ — ان کا رب"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Link one: الَّذِي → رَبَّكُمُ. Link two: ـكُمْ → the people addressed.",
+        "ur": "پہلا رشتہ: الَّذِي ← رَبَّكُمُ۔ دوسرا رشتہ: ـكُمْ ← جن سے خطاب ہے۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch23-l02-ex07",
+      "left_column": [
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "he, it (a separate word)",
+          "ur": "وہ (الگ لفظ، مذکر)"
+        },
+        {
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitābuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who, which (masculine)",
+          "ur": "جو (مذکر)"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who, which (feminine)",
+          "ur": "جو (مؤنث)"
         }
       ],
       "right_column": [
         {
-          "en": "my book",
-          "ur": "میری کتاب"
+          "en": "who, which — for a feminine noun",
+          "ur": "جو — مؤنث اسم کے لیے"
         },
         {
-          "en": "my Lord",
-          "ur": "میرے رب"
+          "en": "his book — an attached ending",
+          "ur": "اس کی کتاب — جڑا ہوا آخر"
         },
         {
-          "en": "our Lord",
-          "ur": "ہمارے رب"
+          "en": "he — a separate word",
+          "ur": "وہ — الگ لفظ"
         },
         {
-          "en": "your house",
-          "ur": "تمہارا گھر"
+          "en": "who, which — for a masculine noun",
+          "ur": "جو — مذکر اسم کے لیے"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          2
         ],
         [
           1,
@@ -268,159 +396,106 @@
         ],
         [
           2,
-          2
+          3
         ],
         [
           3,
-          3
+          0
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Pronouns, endings and relatives each do a different job.",
+        "ur": "ضمیریں، آخر اور موصول ہر ایک الگ کام کرتے ہیں۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch23-l02-ex05",
+      "id": "ch23-l02-ex08",
       "target_translation": {
-        "en": "The believing woman who reads the Quran.",
-        "ur": "مومنہ عورت جو قرآن پڑھتی ہے۔"
+        "en": "The girl who returned is my sister.",
+        "ur": "جو لڑکی واپس آئی وہ میری بہن ہے۔"
       },
       "tiles": [
         {
-          "ar": "الْمُسْلِمَةُ",
-          "ar_plain": "المسلمة",
-          "translit": "al-muslimahtu",
-          "en": "the believing woman",
-          "ur": "مومنہ عورت"
+          "ar": "أُخْتِي",
+          "ar_plain": "اختي",
+          "translit": "ukhtī",
+          "en": "my sister",
+          "ur": "میری بہن"
+        },
+        {
+          "ar": "الْبِنْتُ",
+          "ar_plain": "البنت",
+          "translit": "al-bintu",
+          "en": "the girl",
+          "ur": "لڑکی"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who (masculine)",
+          "ur": "جو (مذکر)"
+        },
+        {
+          "ar": "رَجَعَتْ",
+          "ar_plain": "رجعت",
+          "translit": "rajaʿat",
+          "en": "returned",
+          "ur": "واپس آئی"
         },
         {
           "ar": "الَّتِي",
           "ar_plain": "التي",
-          "translit": "allatii",
-          "en": "who",
-          "ur": "جو"
-        },
-        {
-          "ar": "تَقْرَأُ",
-          "ar_plain": "تقرأ",
-          "translit": "taqra'u",
-          "en": "reads (fem.)",
-          "ur": "پڑھتی ہے"
-        },
-        {
-          "ar": "الْقُرْآنَ",
-          "ar_plain": "القرآن",
-          "translit": "al-qur'aana",
-          "en": "the Quran",
-          "ur": "قرآن"
+          "translit": "allatī",
+          "en": "who (feminine)",
+          "ur": "جو (مؤنث)"
         }
       ],
       "correct_order": [
-        0,
         1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch23-l02-ex06",
-      "sentence_ar": "رَبُّ الْعَالَمِينَ",
-      "words": [
-        {
-          "ar": "رَبُّ",
-          "ar_plain": "رب",
-          "translit": "rabbu",
-          "en": "Lord",
-          "ur": "رب"
-        },
-        {
-          "ar": "الْعَالَمِينَ",
-          "ar_plain": "العالمين",
-          "translit": "al-'aalamiina",
-          "en": "of the worlds",
-          "ur": "عالمین کا"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "POSSESSIVE",
-        "OBJECT"
-      ],
-      "correct_roles": [
-        "SUBJECT",
-        "POSSESSIVE"
+        4,
+        3,
+        0
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَبُّ is nominative (مَرْفُوع) as the subject of an implied predicate. الْعَالَمِينَ is the genitive (مَجْرُور) possessor completing the idaafa. This is the idaafa رَبُّ الْعَالَمِينَ — Lord of the worlds.",
-        "ur": "رَبُّ مرفوع ہے (مبتدا کے طور پر)۔ الْعَالَمِينَ مجرور قابض ہے جو اضافت مکمل کرتا ہے۔ یہ اضافت ہے رَبُّ الْعَالَمِينَ — رب العالمین۔"
-      }
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch23-l02-ex07",
-      "prompt": {
-        "ar": "رَبِّي رَبُّ الْعَالَمِينَ",
-        "ar_plain": "ربي رب العالمين",
-        "translit": "rabbii rabbul 'aalamiina",
-        "en": "My Lord is the Lord of the worlds.",
-        "ur": "میرا رب رب العالمین ہے۔"
-      },
-      "options": [
-        {
-          "en": "My Lord is the Lord of the worlds.",
-          "ur": "میرا رب رب العالمین ہے۔"
-        },
-        {
-          "en": "The Lord of the worlds is mine.",
-          "ur": "رب العالمین میرا ہے۔"
-        },
-        {
-          "en": "My Lord and the Lord of the worlds.",
-          "ur": "میرا رب اور رب العالمین۔"
-        },
-        {
-          "en": "I am the Lord of the worlds.",
-          "ur": "میں رب العالمین ہوں۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "رَبِّي is 'my Lord' — رَبّ + ي (attached pronoun 'my'). رَبُّ الْعَالَمِينَ is an idaafa meaning 'Lord of the worlds.' This is an equational sentence: رَبِّي = رَبُّ الْعَالَمِينَ.",
-        "ur": "رَبِّي 'میرا رب' ہے — رَبّ + ي (بدلیہ ضمیر 'میرا')۔ رَبُّ الْعَالَمِينَ ایک اضافت ہے جس کا مطلب 'رب العالمین' ہے۔ یہ ایک بیانی جملہ ہے: رَبِّي = رَبُّ الْعَالَمِينَ۔"
+        "en": "الْبِنْتُ الَّتِي رَجَعَتْ, then the news: أُخْتِي.",
+        "ur": "الْبِنْتُ الَّتِي رَجَعَتْ، پھر خبر: أُخْتِي۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Relative pronouns and attached pronouns",
-      "ar": "الْأَسْمَاءُ الْمَوْصُولَة وَالْأَسْمَاءُ الْبَدَلِيَّة",
-      "ur": "اسماء موصولہ اور بدلیہ اسماء"
+      "en": "Who is described, and whose is it?",
+      "ar": "الْمَوْصُولُ وَالضَّمِيرُ",
+      "ur": "کس کا وصف، اور کس کی چیز؟"
     },
     "ayah": {
-      "surah": 112,
-      "ayah": 1,
-      "label": "Al-Ikhlas 112:1",
-      "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
-      "en": "Say, He is Allah, the One.",
-      "ur": "کہہ دیجیے، وہ اللہ ایک ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112001.mp3"
+      "surah": 2,
+      "ayah": 21,
+      "label": "Al-Baqarah 2:21",
+      "ar": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ",
+      "en": "O mankind, worship your Lord, who created you",
+      "ur": "اے لوگو! اپنے رب کی عبادت کرو جس نے تمہیں پیدا کیا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002021.mp3"
     },
     "highlighted_word_indices": [
-      1
+      5
+    ],
+    "highlighted_words": [
+      "الَّذِي"
     ],
     "noor_explanation": {
-      "en": "هُوَ is an attached pronoun meaning 'He.' In Surah Al-Ikhlas, Allah uses هُوَ to refer to Himself — هُوَ اللَّهُ أَحَدٌ: 'He is Allah, the One.' Attached pronouns like هُوَ, كِتَابِي, رَبِّي are compact ways of indicating 'he/she/it/this' or possession.",
-      "ur": "هُوَ ایک بدلیہ ضمیر ہے جس کا مطلب 'وہ' ہے۔ سورہ اخلاص میں اللہ اپنے آپ کو ہُوَ سے بیان فرماتے ہیں — هُوَ اللَّهُ أَحَدٌ: 'وہ اللہ ایک ہے۔' بدلیہ ضمیریں جیسے هُوَ، كِتَابِي، رَبِّي 'وہ/اس' یا possession ظاہر کرنے کے مختصر طریقے ہیں۔"
+      "en": "الَّذِي: who — describing رَبَّكُمُ, your Lord, as the One who created you. One ayah, two links: a relative that describes, and endings that point to people.",
+      "ur": "الَّذِي: جس نے — رَبَّكُمُ، تمہارے رب، کا وصف بیان کرتا ہے کہ وہی ہے جس نے تمہیں پیدا کیا۔ ایک آیت، دو رشتے: وصف بیان کرنے والا موصول، اور لوگوں کی طرف اشارہ کرنے والے آخر۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "الَّذِي and الَّتِي let you connect ideas smoothly. رَبِّي and رَبَّنَا are in your heart every day in Salah. Now you know these attached pronouns in Arabic too — you are reading the Quran in its own language.",
-      "ur": "الَّذِي اور الَّتِي آپ کو خیالات کو آسانی سے جوڑنے دیتے ہیں۔ رَبِّي اور رَبَّنَا آپ کے دل میں ہر روز نماز میں ہیں۔ اب آپ ان بدلیہ ضمیروں کو بھی عربی میں جانتے ہیں — آپ قرآن کو اس کی اپنی زبان میں پڑھ رہے ہیں۔"
+      "en": "You kept two links apart in one sentence. Next: read a small scene from beginning to end.",
+      "ur": "آپ نے ایک جملے میں دو رشتوں کو الگ رکھا۔ آگے: ایک چھوٹا منظر شروع سے آخر تک پڑھیں۔"
     }
   }
 }

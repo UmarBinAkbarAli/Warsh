@@ -1,0 +1,522 @@
+{
+  "schema_version": "1.0",
+  "template": "STANDARD",
+  "_meta": {
+    "_note": "Chapter 20, Lesson 6 (ch20-l06, new STANDARD) — application: for each sentence, find the noun, the owner, and whether the group is spoken to or about, in two authored scenes (هٰؤُلَاءِ طُلَّابٌ، وَهٰذَا أُسْتَاذُهُمْ / يَا طُلَّابُ، هٰذَا أُسْتَاذُكُمْ), the chapter map's controlled exchange أَيْنَ كِتَابُكُمْ؟ — كِتَابُنَا عَلَى الْمَكْتَبِ (الْمَكْتَب instead of the map's untaught الطَّاوِلَة), and two ayat already read (4:1, 2:277). Capped noun-versus-action contrast: رَبَّنَا versus اهْدِنَا (Al-Fatiha 1:6, hook and reveal, index 0), recognition only — no object-pronoun or verb table. Rebuilt 2026-09-24 from Docs/proposals/chapter-20-content-proposal.md with the owner-approved review amendments recorded there (2:277 for ـهُمْ instead of 2:5, which Chapter 15 L4 already reads; 33:34 instead of 33:33; 2:233 instead of 60:12; the ـهِمْ / ـهِنَّ sound change after a kasra taught; Chapter 10's standalone plural pronouns and Chapter 11's بُيُوتِكُمْ used as the bridge). The chapter map named reader_lecture_20_attached_pronouns_plural.md, which never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "کون کس کا ہے؟",
+    "chapter_order": 20,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 10
+  },
+  "hook": {
+    "ayah": {
+      "surah": 1,
+      "ayah": 6,
+      "label": "Al-Fatiha 1:6",
+      "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "en": "Guide us to the straight path.",
+      "ur": "ہمیں سیدھے راستے پر چلا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001006.mp3"
+    },
+    "noor_intro": {
+      "en": "You say this in every prayer: اهْدِنَا, guide us. It ends in ـنَا, like رَبَّنَا. Is it our here? Today you decide from the word it sits on.",
+      "ur": "یہ آپ ہر نماز میں کہتے ہیں: اهْدِنَا، ہمیں ہدایت دے۔ اس کے آخر میں ـنَا ہے، جیسے رَبَّنَا میں۔ کیا یہاں اس کا مطلب 'ہمارا' ہے؟ آج آپ یہ اس لفظ سے طے کریں گے جس پر یہ جڑا ہے۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Three questions",
+        "ar": "بَيْتُهُمْ",
+        "ur": "تین سوال"
+      },
+      "explanation": {
+        "en": "One: what is the noun? Two: who is the owner? Three: is that group being spoken to, or spoken about? In بَيْتُهُمْ: a house; a group; spoken about.",
+        "ur": "ایک: اسم کیا ہے؟ دو: مالک کون ہے؟ تین: اس گروہ سے بات ہو رہی ہے یا اس کے بارے میں؟ بَيْتُهُمْ میں: گھر؛ ایک گروہ؛ جس کے بارے میں بات ہو۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "هٰؤُلَاءِ طُلَّابٌ، وَهٰذَا أُسْتَاذُهُمْ",
+        "ar_plain": "هؤلاء طلاب وهذا استاذهم",
+        "translit": "hāʾulāʾi ṭullābun, wa hādhā ustādhuhum",
+        "en": "These are students, and this is their teacher.",
+        "ur": "یہ طلبہ ہیں، اور یہ ان کے استاد ہیں۔"
+      },
+      "explanation": {
+        "en": "Noun: أُسْتَاذ. Owners: the students, pointed at with هٰؤُلَاءِ. They are spoken about, so their is ـهُمْ.",
+        "ur": "اسم: أُسْتَاذ۔ مالک: طلبہ، جن کی طرف هٰؤُلَاءِ سے اشارہ ہے۔ ان کے بارے میں بات ہو رہی ہے، اس لیے 'ان کا' ـهُمْ ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يَا طُلَّابُ، هٰذَا أُسْتَاذُكُمْ",
+        "ar_plain": "يا طلاب هذا استاذكم",
+        "translit": "yā ṭullābu, hādhā ustādhukum",
+        "en": "Students, this is your teacher.",
+        "ur": "طلبہ! یہ تم سب کے استاد ہیں۔"
+      },
+      "explanation": {
+        "en": "Same teacher, same students. Now يَا طُلَّابُ speaks to them, so your is ـكُمْ.",
+        "ur": "وہی استاد، وہی طلبہ۔ اب يَا طُلَّابُ ان سے بات کرتا ہے، اس لیے 'تمہارا' ـكُمْ ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "أَيْنَ كِتَابُكُمْ؟ — كِتَابُنَا عَلَى الْمَكْتَبِ",
+        "ar_plain": "اين كتابكم كتابنا على المكتب",
+        "translit": "ayna kitābukum? — kitābunā ʿalā l-maktabi",
+        "en": "Where is your book? — Our book is on the desk.",
+        "ur": "تم سب کی کتاب کہاں ہے؟ — ہماری کتاب میز پر ہے۔"
+      },
+      "explanation": {
+        "en": "The question speaks to a group with ـكُمْ. The group answers for itself with ـنَا: our book. The book has not changed hands; only the speaker has.",
+        "ur": "سوال ـكُمْ سے گروہ سے بات کرتا ہے۔ گروہ اپنی طرف سے ـنَا سے جواب دیتا ہے: ہماری کتاب۔ کتاب کا مالک نہیں بدلا؛ صرف بولنے والا بدلا ہے۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Fatiha 1:6: Guide us to the straight path.",
+        "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+        "ur": "Al-Fatiha 1:6: ہمیں سیدھے راستے پر چلا۔"
+      },
+      "explanation": {
+        "en": "اهْدِنَا: guide us. Here ـنَا sits on a request, an action (guide!), so it is us, the ones to be guided, not our. Recognise it; how such requests are formed is not part of this chapter.",
+        "ur": "اهْدِنَا: ہمیں ہدایت دے۔ یہاں ـنَا ایک درخواست، یعنی کام (ہدایت دے!)، پر ہے، اس لیے یہ 'ہمیں' ہے، جنہیں ہدایت دی جائے، 'ہمارا' نہیں۔ اسے پہچانیں؛ ایسی درخواستیں کیسے بنتی ہیں یہ اس باب کا حصہ نہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001006.mp3"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Our on a noun, us on an action",
+        "ar": "رَبَّنَا / اهْدِنَا",
+        "ur": "اسم پر ہمارا، کام پر ہمیں"
+      },
+      "explanation": {
+        "en": "رَبَّنَا: رَبّ is a noun, so ـنَا is our: our Lord. اهْدِنَا: a request to act, so ـنَا is us: guide us.",
+        "ur": "رَبَّنَا: رَبّ اسم ہے، اس لیے ـنَا 'ہمارا' ہے: ہمارا رب۔ اهْدِنَا: کام کی درخواست ہے، اس لیے ـنَا 'ہمیں' ہے: ہمیں ہدایت دے۔"
+      },
+      "examples": [
+        {
+          "ar": "رَبَّنَا",
+          "ar_plain": "ربنا",
+          "translit": "rabbanā",
+          "en": "our Lord",
+          "ur": "ہمارا رب"
+        },
+        {
+          "ar": "اهْدِنَا",
+          "ar_plain": "اهدنا",
+          "translit": "ihdinā",
+          "en": "guide us",
+          "ur": "ہمیں ہدایت دے"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "An-Nisa 4:1: fear your Lord, who created you",
+        "ar": "اتَّقُوا رَبَّكُمُ الَّذِي خَلَقَكُم",
+        "ur": "An-Nisa 4:1: اپنے رب سے ڈرو جس نے تمہیں پیدا کیا"
+      },
+      "explanation": {
+        "en": "Read it again with the three questions. رَبَّكُمُ: noun رَبّ, owners the people addressed (spoken to), so your. خَلَقَكُم: the ending on an action, so you, the ones created.",
+        "ur": "تین سوالوں کے ساتھ اسے دوبارہ پڑھیں۔ رَبَّكُمُ: اسم رَبّ، مالک وہ لوگ جن سے خطاب ہے (جن سے بات ہو)، اس لیے 'تمہارا'۔ خَلَقَكُم: آخر کام پر ہے، اس لیے 'تمہیں'، جنہیں پیدا کیا گیا۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/004001.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:277: they will have their reward with their Lord",
+        "ar": "لَهُمْ أَجْرُهُمْ عِندَ رَبِّهِمْ",
+        "ur": "Al-Baqarah 2:277: ان کے لیے ان کا اجر ان کے رب کے پاس ہے"
+      },
+      "explanation": {
+        "en": "And once more: أَجْرُهُمْ and رَبِّهِمْ. Nouns, owned by the believers, who are spoken about, so their: ـهُمْ, heard ـهِمْ after the kasra.",
+        "ur": "اور ایک بار پھر: أَجْرُهُمْ اور رَبِّهِمْ۔ اسم، جن کے مالک مومن ہیں، جن کے بارے میں بات ہو رہی ہے، اس لیے 'ان کا': ـهُمْ، زیر کے بعد ـهِمْ سنائی دیتا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002277.mp3"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch20-l06-ex01",
+      "prompt_line": {
+        "ar": "أَيْنَ كِتَابُكُمْ؟",
+        "ar_plain": "اين كتابكم",
+        "translit": "ayna kitābukum?",
+        "en": "Where is your book? (to your group)",
+        "ur": "تم سب کی کتاب کہاں ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "كِتَابُنَا عَلَى الْمَكْتَبِ",
+          "ar_plain": "كتابنا على المكتب",
+          "translit": "kitābunā ʿalā l-maktabi",
+          "en": "Our book is on the desk.",
+          "ur": "ہماری کتاب میز پر ہے۔"
+        },
+        {
+          "ar": "كِتَابُكُنَّ عَلَى الْمَكْتَبِ",
+          "ar_plain": "كتابكن على المكتب",
+          "translit": "kitābukunna ʿalā l-maktabi",
+          "en": "Your book is on the desk. (to women)",
+          "ur": "تم سب کی کتاب میز پر ہے۔ (خواتین سے)"
+        },
+        {
+          "ar": "كِتَابُكُمْ عَلَى الْمَكْتَبِ",
+          "ar_plain": "كتابكم على المكتب",
+          "translit": "kitābukum ʿalā l-maktabi",
+          "en": "Your book is on the desk. (to a group)",
+          "ur": "تم سب کی کتاب میز پر ہے۔"
+        },
+        {
+          "ar": "كِتَابُهُمْ عَلَى الْمَكْتَبِ",
+          "ar_plain": "كتابهم على المكتب",
+          "translit": "kitābuhum ʿalā l-maktabi",
+          "en": "Their book is on the desk.",
+          "ur": "ان کی کتاب میز پر ہے۔"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Your group is asked with ـكُمْ and answers with ـنَا.",
+        "ur": "آپ کے گروہ سے ـكُمْ سے پوچھا گیا اور وہ ـنَا سے جواب دیتا ہے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch20-l06-ex02",
+      "prompt": {
+        "ar": "يَا طَالِبَاتُ، هٰذِهِ مُعَلِّمَتُكُنَّ",
+        "ar_plain": "يا طالبات هذه معلمتكن",
+        "translit": "yā ṭālibātu, hādhihi muʿallimatukunna",
+        "en": "Students (all women), this is your teacher.",
+        "ur": "طالبات! یہ تم سب کی معلمہ ہیں۔"
+      },
+      "options": [
+        {
+          "en": "Student, this is your teacher. (to one woman)",
+          "ur": "طالبہ! یہ تمہاری معلمہ ہیں۔"
+        },
+        {
+          "en": "Students (all women), this is your teacher.",
+          "ur": "طالبات! یہ تم سب کی معلمہ ہیں۔"
+        },
+        {
+          "en": "Students, this is our teacher.",
+          "ur": "طالبات! یہ ہماری معلمہ ہیں۔"
+        },
+        {
+          "en": "Students, this is their teacher.",
+          "ur": "طالبات! یہ ان کی معلمہ ہیں۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَا طَالِبَاتُ speaks to a group of women: ـكُنَّ, your.",
+        "ur": "يَا طَالِبَاتُ خواتین کے گروہ سے بات کرتا ہے: ـكُنَّ، تم سب کی۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch20-l06-ex03",
+      "ayah_fragment": {
+        "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+        "surah_ref": "Al-Fatiha 1:6"
+      },
+      "options": [
+        {
+          "en": "الصِّرَاطَ — our path",
+          "ur": "الصِّرَاطَ — ہمارا راستہ"
+        },
+        {
+          "en": "اهْدِنَا — our guidance: ـنَا on a noun",
+          "ur": "اهْدِنَا — ہماری ہدایت: اسم پر ـنَا"
+        },
+        {
+          "en": "اهْدِنَا — guide us: ـنَا is on a request, an action, so it is us",
+          "ur": "اهْدِنَا — ہمیں ہدایت دے: ـنَا درخواست، یعنی کام، پر ہے، اس لیے 'ہمیں'"
+        },
+        {
+          "en": "اهْدِنَا — guide them",
+          "ur": "اهْدِنَا — انہیں ہدایت دے"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "On a request to act, ـنَا is us: guide us.",
+        "ur": "کام کی درخواست پر ـنَا کا مطلب 'ہمیں': ہمیں ہدایت دے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch20-l06-ex04",
+      "statement": {
+        "en": "In رَبَّنَا and اهْدِنَا, ـنَا does the same job.",
+        "ur": "رَبَّنَا اور اهْدِنَا میں ـنَا ایک ہی کام کرتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رَبَّنَا: our (on a noun). اهْدِنَا: us (on an action).",
+        "ur": "رَبَّنَا: ہمارا (اسم پر)۔ اهْدِنَا: ہمیں (کام پر)۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch20-l06-ex05",
+      "mode": "TAP",
+      "sentence_ar": "هٰؤُلَاءِ طَالِبَاتٌ، وَهٰذِهِ ___",
+      "hint": {
+        "en": "These are female students, and this is their school.",
+        "ur": "یہ طالبات ہیں، اور یہ ان کا اسکول ہے۔"
+      },
+      "options": [
+        {
+          "ar": "مَدْرَسَتُهُنَّ",
+          "ar_plain": "مدرستهن",
+          "translit": "madrasatuhunna",
+          "en": "their school (women)",
+          "ur": "ان کا اسکول (خواتین)"
+        },
+        {
+          "ar": "مَدْرَسَتُهُمْ",
+          "ar_plain": "مدرستهم",
+          "translit": "madrasatuhum",
+          "en": "their school (a male or mixed group)",
+          "ur": "ان کا اسکول (مرد یا ملا جلا گروہ)"
+        },
+        {
+          "ar": "مَدْرَسَتُنَا",
+          "ar_plain": "مدرستنا",
+          "translit": "madrasatunā",
+          "en": "our school",
+          "ur": "ہمارا اسکول"
+        },
+        {
+          "ar": "مَدْرَسَتُكُنَّ",
+          "ar_plain": "مدرستكن",
+          "translit": "madrasatukunna",
+          "en": "your school (to women)",
+          "ur": "تم سب کا اسکول (خواتین سے)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "مَدْرَسَتُهُنَّ",
+        "ar_plain": "مدرستهن",
+        "translit": "madrasatuhunna",
+        "en": "their school (women)",
+        "ur": "ان کا اسکول (خواتین)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The owners are طَالِبَاتٌ, women spoken about: ـهُنَّ.",
+        "ur": "مالک طَالِبَاتٌ ہیں، خواتین جن کی بات ہو: ـهُنَّ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch20-l06-ex06",
+      "ayah_fragment": {
+        "ar": "اتَّقُوا رَبَّكُمُ الَّذِي خَلَقَكُم",
+        "surah_ref": "An-Nisa 4:1"
+      },
+      "options": [
+        {
+          "en": "خَلَقَكُم — your creation, a noun",
+          "ur": "خَلَقَكُم — تمہاری تخلیق، ایک اسم"
+        },
+        {
+          "en": "رَبَّكُمُ — your Lord; خَلَقَكُم — He created you: the people addressed",
+          "ur": "رَبَّكُمُ — تمہارا رب؛ خَلَقَكُم — اس نے تمہیں پیدا کیا: جن لوگوں سے خطاب ہے"
+        },
+        {
+          "en": "both mean your",
+          "ur": "دونوں کا مطلب 'تمہارا'"
+        },
+        {
+          "en": "رَبَّكُمُ — their Lord",
+          "ur": "رَبَّكُمُ — ان کا رب"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "On the noun: your. On the action: you.",
+        "ur": "اسم پر: تمہارا۔ کام پر: تمہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch20-l06-ex07",
+      "prompt": {
+        "ar": "هٰؤُلَاءِ طُلَّابٌ، وَهٰذَا أُسْتَاذُهُمْ",
+        "ar_plain": "هؤلاء طلاب وهذا استاذهم",
+        "translit": "hāʾulāʾi ṭullābun, wa hādhā ustādhuhum",
+        "en": "These are students, and this is their teacher.",
+        "ur": "یہ طلبہ ہیں، اور یہ ان کے استاد ہیں۔"
+      },
+      "options": [
+        {
+          "en": "These are teachers, and this is their student.",
+          "ur": "یہ اساتذہ ہیں، اور یہ ان کا طالب علم ہے۔"
+        },
+        {
+          "en": "These are students, and this is your teacher.",
+          "ur": "یہ طلبہ ہیں، اور یہ تم سب کے استاد ہیں۔"
+        },
+        {
+          "en": "These are students, and this is their teacher.",
+          "ur": "یہ طلبہ ہیں، اور یہ ان کے استاد ہیں۔"
+        },
+        {
+          "en": "These are students, and this is our teacher.",
+          "ur": "یہ طلبہ ہیں، اور یہ ہمارے استاد ہیں۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The students are spoken about: أُسْتَاذُهُمْ, their teacher.",
+        "ur": "طلبہ کے بارے میں بات ہو رہی ہے: أُسْتَاذُهُمْ، ان کے استاد۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch20-l06-ex08",
+      "left_column": [
+        {
+          "ar": "بَيْتُنَا",
+          "ar_plain": "بيتنا",
+          "translit": "baytunā",
+          "en": "our house",
+          "ur": "ہمارا گھر"
+        },
+        {
+          "ar": "بُيُوتُكُمْ",
+          "ar_plain": "بيوتكم",
+          "translit": "buyūtukum",
+          "en": "your houses (to a group)",
+          "ur": "تم سب کے گھر"
+        },
+        {
+          "ar": "بُيُوتُهُنَّ",
+          "ar_plain": "بيوتهن",
+          "translit": "buyūtuhunna",
+          "en": "their houses (women)",
+          "ur": "ان کے گھر (خواتین)"
+        },
+        {
+          "ar": "بَيْتُهُمْ",
+          "ar_plain": "بيتهم",
+          "translit": "baytuhum",
+          "en": "their house (a male or mixed group)",
+          "ur": "ان کا گھر (مرد یا ملا جلا گروہ)"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "your houses (to a group)",
+          "ur": "تم سب کے گھر"
+        },
+        {
+          "en": "their house (a male or mixed group)",
+          "ur": "ان کا گھر (مرد یا ملا جلا گروہ)"
+        },
+        {
+          "en": "our house",
+          "ur": "ہمارا گھر"
+        },
+        {
+          "en": "their houses (women)",
+          "ur": "ان کے گھر (خواتین)"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Read the noun, then the owner.",
+        "ur": "پہلے اسم پڑھیں، پھر مالک۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch20-l06-ex09",
+      "statement": {
+        "en": "In لَهُمْ أَجْرُهُمْ (Al-Baqarah 2:277), the believers are being spoken to.",
+        "ur": "لَهُمْ أَجْرُهُمْ (سورۃ البقرہ 2:277) میں مومنوں سے براہِ راست بات ہو رہی ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "They are spoken about, so their is ـهُمْ, not ـكُمْ.",
+        "ur": "ان کے بارے میں بات ہو رہی ہے، اس لیے 'ان کا' ـهُمْ ہے، ـكُمْ نہیں۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Noun or action? Spoken to or about?",
+      "ar": "الِاسْمُ وَصَاحِبُهُ",
+      "ur": "اسم یا کام؟ جس سے بات ہو یا جس کے بارے میں؟"
+    },
+    "ayah": {
+      "surah": 1,
+      "ayah": 6,
+      "label": "Al-Fatiha 1:6",
+      "ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "en": "Guide us to the straight path.",
+      "ur": "ہمیں سیدھے راستے پر چلا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/001006.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "اهْدِنَا"
+    ],
+    "noor_explanation": {
+      "en": "اهْدِنَا: guide us. You say it in every prayer, and رَبَّنَا opens many du'as. The ending is the same, but on a request it means us. You now check what an ending is attached to before you read it.",
+      "ur": "اهْدِنَا: ہمیں ہدایت دے۔ آپ یہ ہر نماز میں کہتے ہیں، اور بہت سی دعائیں رَبَّنَا سے شروع ہوتی ہیں۔ آخر وہی ہے، لیکن درخواست پر اس کا مطلب 'ہمیں' ہے۔ اب آپ آخر پڑھنے سے پہلے دیکھتے ہیں کہ وہ کس سے جڑا ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You read owners in scenes and ayat, and kept our apart from us. Next: the Chapter 20 review.",
+      "ur": "آپ نے مناظر اور آیات میں مالک پڑھے، اور 'ہمارا' کو 'ہمیں' سے الگ رکھا۔ آگے: باب 20 کا جائزہ۔"
+    }
+  }
+}

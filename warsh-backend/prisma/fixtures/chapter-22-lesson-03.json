@@ -2,92 +2,147 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 22, Lesson 3 - أَجَابَ (answering in dialogue).",
+    "_note": "Chapter 22, Lesson 3 (ch22-l03) — an answer that fits: new أَجَابَ / أَجَابَتْ; أَيْنَ wants a place, مَا a thing, مَنْ a person, هَلْ نَعَمْ or لَا — and a yes/no answer is only gradable when a fact is shown. The fixed classroom phrases هَلْ فَهِمْتَ الدَّرْسَ؟ / نَعَمْ، فَهِمْتُ الدَّرْسَ (the singular of CL5's heard-only هَلْ فَهِمْتُمْ؟ / فَهِمْنَا) and the repair phrase مَرَّةً أُخْرَى، لَوْ سَمَحْتَ (heard-only in CL5, now said) are taught as phrases, not derived into a person paradigm; لَا، لَمْ أَفْهَمْ is recognised only (لَمْ is not taught). Quran: Ali 'Imran 3:37, Zakariyya's question and Maryam's fitting answer هُوَ مِنْ عِندِ اللَّهِ, reported with قَالَ / قَالَتْ rather than أَجَابَ (reveal قَالَتْ, index 5). The misdescribed 2:111 answer and the ungradeable yes/no keys are gone. Rebuilt 2026-09-24 from Docs/proposals/chapter-22-content-proposal.md with the owner-approved review amendments recorded there (Ali 'Imran 3:37 as the verified ayah in which قَالَ reports a question and قَالَتْ its answer; Al-Baqarah 2:186 سَأَلَكَ as a real سَأَلَ in the Quran; Yusuf 12:90 as the second verified speech frame; CL5's heard-only هَلْ فَهِمْتُمْ؟ / مَرَّةً أُخْرَى، لَوْ سَمَحْتَ promoted to spoken lines rather than treated as new). The map and fixtures named two reader_lecture_22 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "مناسب جواب",
     "chapter_order": 22,
     "lesson_order": 3,
-    "chapter_title": "Dialogue and Communication",
-    "title": "أَجَابَ — Answering in Dialogue",
-    "titleAr": "الْإِجَابَةُ فِي الْحِوَارِ: أَجَابَ",
-    "source": "reader_lecture_22_dialogue.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 111,
-      "label": "Al-Baqarah 2:111",
-      "ar": "وَقَالُوا لَنْ يَدْخُلَ الْجَنَّةَ إِلَّا مَنْ كَانَ هُودًا أَوْ نَصَارَىٰ",
-      "en": "And they said: 'None will enter Paradise except those who are Jews or Christians.'",
-      "ur": "اور انہوں نے کہا: 'جنت میں صرف وہی داخل ہو گا جو یہودی یا عیسائی ہو گا۔'",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002111.mp3"
+      "surah": 3,
+      "ayah": 37,
+      "label": "Ali 'Imran 3:37",
+      "ar": "قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا قَالَتْ هُوَ مِنْ عِندِ اللَّهِ",
+      "en": "He said, “O Maryam, from where is this for you?” She said, “It is from Allah.”",
+      "ur": "انہوں نے کہا: اے مریم! یہ تمہارے پاس کہاں سے آیا؟ انہوں نے کہا: یہ اللہ کی طرف سے ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003037.mp3"
     },
     "noor_intro": {
-      "en": "After the question comes the answer. أَجَابَ means 'he answered.' The Quran shows both sides of dialogue — the question and the reply.",
-      "ur": "سوال کے بعد جواب آتا ہے۔ أَجَابَ کا مطلب ہے 'اس نے جواب دیا'۔ قرآن دونوں طرفِ گفتگو کو دکھاتا ہے — سوال اور جواب۔"
+      "en": "A question and its answer in one ayah. Zakariyya asks Maryam where her food comes from; listen for her answer after قَالَتْ.",
+      "ur": "ایک آیت میں سوال اور اس کا جواب۔ زکریا مریم سے پوچھتے ہیں کہ ان کا کھانا کہاں سے آتا ہے؛ قَالَتْ کے بعد ان کا جواب سنیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "أَجَابَ — the verb 'he answered'",
-        "ar": "أَجَابَ — فعلِ اَمرِ \"جواب دیا\"",
-        "ur": "أَجَابَ — 'جواب دیا' کا فعل"
-      },
-      "explanation": {
-        "en": "أَجَابَ (ajaaba) means 'he answered.' It follows سَأَلَ in a dialogue. The answer is given after this verb.",
-        "ur": "أَجَابَ (ajaaba) کا مطلب ہے 'اس نے جواب دیا'۔ یہ گفتگو میں سَأَلَ کے بعد آتا ہے۔ جواب اس فعل کے بعد دیا جاتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "أَجَابَ عَلِيٌّ: \"نَعَمْ، أَنَا طَالِبٌ\"",
-        "ar_plain": "أجاب علي: نعم، أنا طالب",
-        "translit": "ajaaba 'aliyyun: 'na'am, anaa taalibun'",
-        "en": "Ali answered: 'Yes, I am a student.'",
-        "ur": "علی نے جواب دیا: 'جی ہاں، میں طالب علم ہوں۔'"
-      },
-      "explanation": {
-        "en": "أَجَابَ introduces the responder (عَلِيٌّ). The answer follows. نَعَمْ (yes) or لَا (no) often begins the actual answer in a yes/no question.",
-        "ur": "أَجَابَ جواب دینے والے (عَلِيٌّ) کو متعارف کراتا ہے۔ جواب اس کے بعد آتا ہے۔ نَعَمْ (جی ہاں) یا لَا (نہیں) اکثر جواب کا آغاز کرتے ہیں۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "أَجَابَتْ فَاطِمَةُ: \"لَا، أَنَا مُعَلِّمَةٌ\"",
-        "ar_plain": "أجابت فاطمة: لا، أنا معلمة",
-        "translit": "ajaabati faatimatun: 'laa, anaa mu'allimatun'",
-        "en": "Fatima answered: 'No, I am a teacher.'",
-        "ur": "فاطمہ نے جواب دیا: 'نہیں، میں استانی ہوں۔'"
-      },
-      "explanation": {
-        "en": "أَجَابَتْ is feminine. Note the negative answer: لَا (no). مُعَلِّمَةٌ is the feminine form of teacher.",
-        "ur": "أَجَابَتْ مؤنث ہے۔ منفی جواب: لَا (نہیں) دیکھیں۔ مُعَلِّمَةٌ استاد کی مؤنث ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Forms of أَجَابَ",
-        "ur": "أَجَابَ کے forms"
-      },
-      "body": {
-        "en": "أَجَابَ (he answered) · أَجَابَتْ (she answered) · أَجَابُوا (they-m answered) · أَجَابَتَا (they-f answered) · أَجَبْتُ (I answered) · أَجَبْنَا (we answered)",
-        "ur": "أَجَابَ (اس نے جواب دیا) · أَجَابَتْ (اس نے جواب دیا — مؤنث) · أَجَابُوا (انہوں نے جواب دیا — جمع مذکر) · أَجَابَتَا (انہوں نے جواب دیا — جمع مؤنث) · أَجَبْتُ (میں نے جواب دیا) · أَجَبْنَا (ہم نے جواب دیا)"
-      }
-    },
-    {
       "type": "WORD",
       "text": {
-        "ar": "أَجَابَ · أَجَابَتْ · إِجَابَةٌ · نَعَمْ · لَا · رَدَّ · صَحِيحٌ",
-        "en": "he answered · she answered · an answer · yes · no · he replied / responded · correct / true",
-        "ur": "اس نے جواب دیا · اس نے جواب دیا (مؤنث) · جواب · جی ہاں · نہیں · اس نے جواب دیا/رد کیا · صحیح/درست",
-        "ar_plain": "أجاب · أجابت · إجابة · نعم · لا · رد · صحيح",
-        "translit": "—"
+        "ar": "أَجَابَ",
+        "ar_plain": "اجاب",
+        "translit": "ajāba",
+        "en": "he answered",
+        "ur": "اس نے جواب دیا"
+      },
+      "explanation": {
+        "en": "New verb: أَجَابَ, he answered. For a woman: أَجَابَتْ.",
+        "ur": "نیا فعل: أَجَابَ، اس نے جواب دیا۔ عورت کے لیے: أَجَابَتْ۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "سَأَلَ الْأُسْتَاذُ: أَيْنَ الْكِتَابُ؟ وَأَجَابَ أَحْمَدُ: الْكِتَابُ عَلَى الْمَكْتَبِ",
+        "ar_plain": "سال الاستاذ اين الكتاب واجاب احمد الكتاب على المكتب",
+        "translit": "saʾala l-ustādhu: ayna l-kitābu? wa ajāba aḥmadu: al-kitābu ʿalā l-maktabi",
+        "en": "The teacher asked, “Where is the book?” and Ahmad answered, “The book is on the desk.”",
+        "ur": "استاد نے پوچھا: کتاب کہاں ہے؟ اور احمد نے جواب دیا: کتاب میز پر ہے۔"
+      },
+      "explanation": {
+        "en": "Question: أَيْنَ, where. Answer: عَلَى الْمَكْتَبِ, a place. The answer fits because it gives what the question asked for.",
+        "ur": "سوال: أَيْنَ، کہاں۔ جواب: عَلَى الْمَكْتَبِ، ایک جگہ۔ جواب مناسب ہے کیونکہ وہ وہی دیتا ہے جو سوال نے پوچھا۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Does the answer fit?",
+        "ar": "أَيْنَ؟ مَا؟ مَنْ؟ هَلْ؟",
+        "ur": "کیا جواب مناسب ہے؟"
+      },
+      "explanation": {
+        "en": "أَيْنَ wants a place. مَا wants a thing. مَنْ wants a person. هَلْ wants نَعَمْ or لَا.",
+        "ur": "أَيْنَ جگہ چاہتا ہے۔ مَا چیز چاہتا ہے۔ مَنْ شخص چاہتا ہے۔ هَلْ نَعَمْ یا لَا چاہتا ہے۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Yes or no needs the facts",
+        "ar": "الْكِتَابُ جَدِيدٌ. هَلِ الْكِتَابُ جَدِيدٌ؟ نَعَمْ",
+        "ur": "ہاں یا نہیں کے لیے حقیقت چاہیے"
+      },
+      "explanation": {
+        "en": "نَعَمْ or لَا is right only if you know the facts. Here the facts come first: the book is new. So to هَلِ الْكِتَابُ جَدِيدٌ؟ the answer is نَعَمْ. (هَلْ is read هَلِ before الْـ.)",
+        "ur": "نَعَمْ یا لَا تب ہی درست ہے جب آپ حقیقت جانتے ہوں۔ یہاں حقیقت پہلے آتی ہے: کتاب نئی ہے۔ اس لیے هَلِ الْكِتَابُ جَدِيدٌ؟ کا جواب نَعَمْ ہے۔ (الْـ سے پہلے هَلْ کو هَلِ پڑھا جاتا ہے۔)"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Ali 'Imran 3:37: He said, “O Maryam, from where is this for you?” She said, “It is from Allah.”",
+        "ar": "قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا قَالَتْ هُوَ مِنْ عِندِ اللَّهِ",
+        "ur": "Ali 'Imran 3:37: انہوں نے کہا: اے مریم! یہ تمہارے پاس کہاں سے آیا؟ انہوں نے کہا: یہ اللہ کی طرف سے ہے۔"
+      },
+      "explanation": {
+        "en": "Zakariyya asked with قَالَ; Maryam answered with قَالَتْ: هُوَ مِنْ عِندِ اللَّهِ, it is from Allah. Her answer fits the question: from where? From Allah. The Quran reports this answer with قَالَتْ, not أَجَابَتْ; answers are often reported with قَالَ.",
+        "ur": "زکریا نے قَالَ سے پوچھا؛ مریم نے قَالَتْ سے جواب دیا: هُوَ مِنْ عِندِ اللَّهِ، یہ اللہ کی طرف سے ہے۔ ان کا جواب سوال کے مطابق ہے: کہاں سے؟ اللہ کی طرف سے۔ قرآن یہ جواب قَالَتْ سے بیان کرتا ہے، أَجَابَتْ سے نہیں؛ جواب اکثر قَالَ سے بیان ہوتے ہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003037.mp3"
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "هَلْ فَهِمْتَ الدَّرْسَ؟",
+        "ar_plain": "هل فهمت الدرس",
+        "translit": "hal fahimta d-darsa?",
+        "en": "Did you understand the lesson?",
+        "ur": "کیا تمہیں سبق سمجھ آیا؟"
+      },
+      "explanation": {
+        "en": "A fixed classroom question, said to one man. In Chapter 10's lab you heard it said to a group: هَلْ فَهِمْتُمْ؟. Learn it as a phrase.",
+        "ur": "کلاس کا ایک مقررہ سوال، ایک مرد سے کہا گیا۔ باب 10 کی لیب میں آپ نے اسے گروہ سے کہا ہوا سنا: هَلْ فَهِمْتُمْ؟۔ اسے ایک جملے کے طور پر سیکھیں۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "نَعَمْ، فَهِمْتُ الدَّرْسَ",
+        "ar_plain": "نعم فهمت الدرس",
+        "translit": "naʿam, fahimtu d-darsa",
+        "en": "Yes, I understood the lesson.",
+        "ur": "جی ہاں، سبق سمجھ آ گیا۔"
+      },
+      "explanation": {
+        "en": "The fixed reply: yes, I understood the lesson. The ـتُ at the end of فَهِمْتُ is I here; how such endings work is studied later.",
+        "ur": "مقررہ جواب: جی ہاں، سبق سمجھ آ گیا۔ فَهِمْتُ کے آخر کا ـتُ یہاں 'میں' ہے؛ ایسے آخر کیسے کام کرتے ہیں یہ بعد میں پڑھا جائے گا۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+        "ar_plain": "مرة اخرى لو سمحت",
+        "translit": "marratan ukhrā, law samaḥta",
+        "en": "Once again, please.",
+        "ur": "ایک بار پھر، براہِ کرم۔"
+      },
+      "explanation": {
+        "en": "Didn't catch it? Ask politely for it again. You heard this in Chapter 10's lab; now you say it. Said to a man; to a woman teacher it is لَوْ سَمَحْتِ.",
+        "ur": "بات سمجھ نہیں آئی؟ ادب سے دوبارہ کہنے کی درخواست کریں۔ آپ نے یہ باب 10 کی لیب میں سنا تھا؛ اب آپ اسے کہیں گے۔ مرد سے کہا گیا؛ خاتون استاد سے لَوْ سَمَحْتِ۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "If you did not understand",
+        "ar": "لَا، لَمْ أَفْهَمْ",
+        "ur": "اگر سمجھ نہ آئے"
+      },
+      "explanation": {
+        "en": "لَا، لَمْ أَفْهَمْ: No, I did not understand. Just recognise it when you hear it; you will not be asked to say it yet. The polite next step is مَرَّةً أُخْرَى، لَوْ سَمَحْتَ.",
+        "ur": "لَا، لَمْ أَفْهَمْ: نہیں، مجھے سمجھ نہیں آیا۔ سنیں تو بس پہچان لیں؛ ابھی آپ سے یہ کہنے کو نہیں کہا جائے گا۔ ادب والا اگلا قدم ہے مَرَّةً أُخْرَى، لَوْ سَمَحْتَ۔"
       }
     }
   ],
@@ -96,161 +151,373 @@
       "type": "TAP_TRANSLATION",
       "id": "ch22-l03-ex01",
       "prompt": {
-        "ar": "أَجَابَ عَلِيٌّ: \"نَعَمْ، أَنَا طَالِبٌ\"",
-        "ar_plain": "أجاب علي: نعم، أنا طالب",
-        "translit": "ajaaba 'aliyyun: 'na'am, anaa taalibun'",
-        "en": "Ali answered: 'Yes, I am a student.'",
-        "ur": "علی نے جواب دیا: 'جی ہاں، میں طالب علم ہوں۔'"
+        "ar": "أَجَابَ",
+        "ar_plain": "اجاب",
+        "translit": "ajāba",
+        "en": "he answered",
+        "ur": "اس نے جواب دیا"
       },
       "options": [
         {
-          "en": "Ali answered: 'Yes, I am a student.'",
-          "ur": "علی نے جواب دیا: 'جی ہاں، میں طالب علم ہوں۔'"
-        },
-        {
-          "en": "Ali asked: 'Yes, I am a student.'",
-          "ur": "علی نے پوچھا: 'جی ہاں، میں طالب علم ہوں۔'"
-        },
-        {
-          "en": "Ali said: 'Yes, I am a student.'",
-          "ur": "علی نے کہا: 'جی ہاں، میں طالب علم ہوں۔'"
-        },
-        {
-          "en": "Ali went: 'Yes, I am a student.'",
-          "ur": "علی گیا: 'جی ہاں، میں طالب علم ہوں۔'"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "أَجَابَ means 'he answered' — it is the response to a question. نَعَمْ means 'yes.'",
-        "ur": "أَجَابَ کا مطلب ہے 'اس نے جواب دیا' — یہ سوال کا جواب ہے۔ نَعَمْ کا مطلب ہے 'جی ہاں'۔"
-      }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch22-l03-ex02",
-      "statement": {
-        "en": "أَجَابَتْ is the feminine singular form meaning 'she answered.'",
-        "ur": "أَجَابَتْ واحد مؤنث ہے جس کا مطلب ہے 'اس نے جواب دیا'۔",
-        "ar_example": {
-          "ar": "أَجَابَتْ هِنْدٌ: \"لَا، أَنَا مُعَلِّمَةٌ\"",
-          "ar_plain": "أجابت هند: لا، أنا معلمة",
-          "translit": "ajaabati hindun: 'laa, anaa mu'allimatun'",
-          "en": "Hind answered: 'No, I am a teacher.'",
-          "ur": "ہند نے جواب دیا: 'نہیں، میں استانی ہوں۔'"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch22-l03-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ الْوَلَدُ: \"نَعَمْ، أَنَا فِي الْمَسْجِدِ\"",
-      "hint": {
-        "en": "The boy answered: 'Yes, I am at the mosque.'",
-        "ur": "لڑکے نے جواب دیا: 'جی ہاں، میں مسجد میں ہوں۔'"
-      },
-      "options": [
-        {
-          "ar": "قَالَ",
-          "ar_plain": "قال",
-          "translit": "qaala",
           "en": "he said",
           "ur": "اس نے کہا"
         },
         {
-          "ar": "سَأَلَ",
-          "ar_plain": "سأل",
-          "translit": "sa'ala",
           "en": "he asked",
           "ur": "اس نے پوچھا"
         },
         {
-          "ar": "أَجَابَ",
-          "ar_plain": "أجاب",
-          "translit": "ajaaba",
-          "en": "he answered",
-          "ur": "اس نے جواب دیا"
+          "en": "he understood",
+          "ur": "وہ سمجھ گیا"
         },
         {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
-          "translit": "dhahaba",
-          "en": "he went",
-          "ur": "اس نے گیا"
+          "en": "he answered",
+          "ur": "اس نے جواب دیا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَجَابَ: he answered.",
+        "ur": "أَجَابَ: اس نے جواب دیا۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch22-l03-ex02",
+      "prompt_line": {
+        "ar": "أَيْنَ الْكِتَابُ؟",
+        "ar_plain": "اين الكتاب",
+        "translit": "ayna l-kitābu?",
+        "en": "Where is the book?",
+        "ur": "کتاب کہاں ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "نَعَمْ",
+          "ar_plain": "نعم",
+          "translit": "naʿam",
+          "en": "yes",
+          "ur": "جی ہاں"
+        },
+        {
+          "ar": "الْكِتَابُ جَدِيدٌ",
+          "ar_plain": "الكتاب جديد",
+          "translit": "al-kitābu jadīdun",
+          "en": "The book is new.",
+          "ur": "کتاب نئی ہے۔"
+        },
+        {
+          "ar": "الْكِتَابُ عَلَى الْمَكْتَبِ",
+          "ar_plain": "الكتاب على المكتب",
+          "translit": "al-kitābu ʿalā l-maktabi",
+          "en": "The book is on the desk.",
+          "ur": "کتاب میز پر ہے۔"
+        },
+        {
+          "ar": "هٰذَا كِتَابٌ",
+          "ar_plain": "هذا كتاب",
+          "translit": "hādhā kitābun",
+          "en": "This is a book.",
+          "ur": "یہ ایک کتاب ہے۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَيْنَ wants a place: عَلَى الْمَكْتَبِ.",
+        "ur": "أَيْنَ جگہ چاہتا ہے: عَلَى الْمَكْتَبِ۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch22-l03-ex03",
+      "prompt_line": {
+        "ar": "مَا هٰذَا؟",
+        "ar_plain": "ما هذا",
+        "translit": "mā hādhā?",
+        "en": "What is this?",
+        "ur": "یہ کیا ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "الْقَلَمُ عَلَى الْمَكْتَبِ",
+          "ar_plain": "القلم على المكتب",
+          "translit": "al-qalamu ʿalā l-maktabi",
+          "en": "The pen is on the desk.",
+          "ur": "قلم میز پر ہے۔"
+        },
+        {
+          "ar": "هٰذَا قَلَمٌ",
+          "ar_plain": "هذا قلم",
+          "translit": "hādhā qalamun",
+          "en": "This is a pen.",
+          "ur": "یہ ایک قلم ہے۔"
+        },
+        {
+          "ar": "أَنَا طَالِبٌ",
+          "ar_plain": "انا طالب",
+          "translit": "anā ṭālibun",
+          "en": "I am a student.",
+          "ur": "میں طالب علم ہوں۔"
+        },
+        {
+          "ar": "نَعَمْ، فَهِمْتُ",
+          "ar_plain": "نعم فهمت",
+          "translit": "naʿam, fahimtu",
+          "en": "Yes, I understood.",
+          "ur": "جی ہاں، سمجھ آ گیا۔"
+        }
+      ],
+      "correct_option_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَا wants a thing: هٰذَا قَلَمٌ.",
+        "ur": "مَا چیز چاہتا ہے: هٰذَا قَلَمٌ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch22-l03-ex04",
+      "mode": "TAP",
+      "sentence_ar": "الْكِتَابُ جَدِيدٌ. هَلِ الْكِتَابُ جَدِيدٌ؟ ___",
+      "hint": {
+        "en": "The book is new. Is the book new? — (answer from the fact)",
+        "ur": "کتاب نئی ہے۔ کیا کتاب نئی ہے؟ — (حقیقت کے مطابق جواب)"
+      },
+      "options": [
+        {
+          "ar": "نَعَمْ",
+          "ar_plain": "نعم",
+          "translit": "naʿam",
+          "en": "yes",
+          "ur": "جی ہاں"
+        },
+        {
+          "ar": "عَلَى الْمَكْتَبِ",
+          "ar_plain": "على المكتب",
+          "translit": "ʿalā l-maktabi",
+          "en": "on the desk",
+          "ur": "میز پر"
+        },
+        {
+          "ar": "هٰذَا كِتَابٌ",
+          "ar_plain": "هذا كتاب",
+          "translit": "hādhā kitābun",
+          "en": "This is a book.",
+          "ur": "یہ ایک کتاب ہے۔"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "lā",
+          "en": "no",
+          "ur": "نہیں"
         }
       ],
       "correct_answer": {
-        "ar": "أَجَابَ",
-        "ar_plain": "أجاب",
-        "translit": "ajaaba",
-        "en": "he answered",
-        "ur": "اس نے جواب دیا"
+        "ar": "نَعَمْ",
+        "ar_plain": "نعم",
+        "translit": "naʿam",
+        "en": "yes",
+        "ur": "جی ہاں"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The fact says the book is new, so the answer is نَعَمْ.",
+        "ur": "حقیقت کہتی ہے کتاب نئی ہے، اس لیے جواب نَعَمْ ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch22-l03-ex05",
+      "ayah_fragment": {
+        "ar": "قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا قَالَتْ هُوَ مِنْ عِندِ اللَّهِ",
+        "surah_ref": "Ali 'Imran 3:37"
+      },
+      "options": [
+        {
+          "en": "The word أَجَابَتْ is in the ayah",
+          "ur": "لفظ أَجَابَتْ آیت میں ہے"
+        },
+        {
+          "en": "Zakariyya gives the answer",
+          "ur": "زکریا جواب دیتے ہیں"
+        },
+        {
+          "en": "قَالَتْ introduces a second question",
+          "ur": "قَالَتْ دوسرا سوال شروع کرتا ہے"
+        },
+        {
+          "en": "قَالَتْ هُوَ مِنْ عِندِ اللَّهِ — Maryam's answer: it is from Allah",
+          "ur": "قَالَتْ هُوَ مِنْ عِندِ اللَّهِ — مریم کا جواب: یہ اللہ کی طرف سے ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The answer comes after قَالَتْ, and fits 'from where?'.",
+        "ur": "جواب قَالَتْ کے بعد آتا ہے، اور 'کہاں سے؟' کے مطابق ہے۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch22-l03-ex06",
+      "prompt_line": {
+        "ar": "هَلْ فَهِمْتَ الدَّرْسَ؟",
+        "ar_plain": "هل فهمت الدرس",
+        "translit": "hal fahimta d-darsa?",
+        "en": "Did you understand the lesson?",
+        "ur": "کیا تمہیں سبق سمجھ آیا؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "أَيْنَ الدَّرْسُ؟",
+          "ar_plain": "اين الدرس",
+          "translit": "ayna d-darsu?",
+          "en": "Where is the lesson?",
+          "ur": "سبق کہاں ہے؟"
+        },
+        {
+          "ar": "الدَّرْسُ عَلَى الْمَكْتَبِ",
+          "ar_plain": "الدرس على المكتب",
+          "translit": "ad-darsu ʿalā l-maktabi",
+          "en": "The lesson is on the desk.",
+          "ur": "سبق میز پر ہے۔"
+        },
+        {
+          "ar": "نَعَمْ، فَهِمْتُ الدَّرْسَ",
+          "ar_plain": "نعم فهمت الدرس",
+          "translit": "naʿam, fahimtu d-darsa",
+          "en": "Yes, I understood the lesson.",
+          "ur": "جی ہاں، سبق سمجھ آ گیا۔"
+        },
+        {
+          "ar": "نَعَمْ، فَهِمْتَ الدَّرْسَ",
+          "ar_plain": "نعم فهمت الدرس",
+          "translit": "naʿam, fahimta d-darsa",
+          "en": "Yes, you understood the lesson.",
+          "ur": "جی ہاں، تمہیں سبق سمجھ آ گیا۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Confirm with the fixed reply: نَعَمْ، فَهِمْتُ الدَّرْسَ.",
+        "ur": "مقررہ جواب سے تصدیق کریں: نَعَمْ، فَهِمْتُ الدَّرْسَ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch22-l03-ex07",
+      "prompt": {
+        "ar": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+        "ar_plain": "مرة اخرى لو سمحت",
+        "translit": "marratan ukhrā, law samaḥta",
+        "en": "Once again, please.",
+        "ur": "ایک بار پھر، براہِ کرم۔"
+      },
+      "options": [
+        {
+          "en": "Yes, I understood.",
+          "ur": "جی ہاں، سمجھ آ گیا۔"
+        },
+        {
+          "en": "Once again, please.",
+          "ur": "ایک بار پھر، براہِ کرم۔"
+        },
+        {
+          "en": "Did you understand?",
+          "ur": "کیا سمجھ آیا؟"
+        },
+        {
+          "en": "No, I did not understand.",
+          "ur": "نہیں، مجھے سمجھ نہیں آیا۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَرَّةً أُخْرَى: once again; لَوْ سَمَحْتَ: please.",
+        "ur": "مَرَّةً أُخْرَى: ایک بار پھر؛ لَوْ سَمَحْتَ: براہِ کرم۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch22-l03-ex08",
+      "statement": {
+        "en": "An answer fits a أَيْنَ question when it gives a place.",
+        "ur": "أَيْنَ والے سوال کا جواب تب مناسب ہے جب وہ جگہ بتائے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَيْنَ asks where, so a place answers it.",
+        "ur": "أَيْنَ کہاں پوچھتا ہے، اس لیے جگہ اس کا جواب ہے۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch22-l03-ex04",
+      "id": "ch22-l03-ex09",
       "left_column": [
         {
-          "ar": "أَجَابَ عَلِيٌّ",
-          "ar_plain": "أجاب علي",
-          "translit": "ajaaba 'aliyyun",
-          "en": "Ali answered",
-          "ur": "علی نے جواب دیا"
+          "ar": "أَيْنَ الْقَلَمُ؟",
+          "ar_plain": "اين القلم",
+          "translit": "ayna l-qalamu?",
+          "en": "Where is the pen?",
+          "ur": "قلم کہاں ہے؟"
         },
         {
-          "ar": "أَجَابَتْ فَاطِمَةُ",
-          "ar_plain": "أجابت فاطمة",
-          "translit": "ajaabati faatimatun",
-          "en": "Fatima answered",
-          "ur": "فاطمہ نے جواب دیا"
+          "ar": "مَا هٰذَا؟",
+          "ar_plain": "ما هذا",
+          "translit": "mā hādhā?",
+          "en": "What is this?",
+          "ur": "یہ کیا ہے؟"
         },
         {
-          "ar": "أَجَابُوا الرِّجَالُ",
-          "ar_plain": "أجابوا الرجال",
-          "translit": "ajaabuu ar-rijaalu",
-          "en": "the men answered",
-          "ur": "مردوں نے جواب دیا"
+          "ar": "مَنْ هٰذَا؟",
+          "ar_plain": "من هذا",
+          "translit": "man hādhā?",
+          "en": "Who is this?",
+          "ur": "یہ کون ہے؟"
         },
         {
-          "ar": "أَجَبْتُ أَنَا",
-          "ar_plain": "أجبت أنا",
-          "translit": "ajabtu ana",
-          "en": "I answered",
-          "ur": "میں نے جواب دیا"
+          "ar": "هَلْ فَهِمْتَ؟",
+          "ar_plain": "هل فهمت",
+          "translit": "hal fahimta?",
+          "en": "Did you understand?",
+          "ur": "کیا سمجھ آیا؟"
         }
       ],
       "right_column": [
         {
-          "en": "he answered (singular m)",
-          "ur": "اس نے جواب دیا (واحد مذکر)"
+          "en": "Yes, I understood.",
+          "ur": "جی ہاں، سمجھ آ گیا۔"
         },
         {
-          "en": "she answered (singular f)",
-          "ur": "اس نے جواب دیا (واحد مؤنث)"
+          "en": "The pen is on the desk.",
+          "ur": "قلم میز پر ہے۔"
         },
         {
-          "en": "they answered (plural m)",
-          "ur": "انہوں نے جواب دیا (جمع مذکر)"
+          "en": "This is the teacher.",
+          "ur": "یہ استاد ہیں۔"
         },
         {
-          "en": "I answered",
-          "ur": "میں نے جواب دیا"
+          "en": "This is a pen.",
+          "ur": "یہ ایک قلم ہے۔"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
+          1
         ],
         [
           1,
-          1
+          3
         ],
         [
           2,
@@ -258,171 +525,46 @@
         ],
         [
           3,
-          3
+          0
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch22-l03-ex05",
-      "target_translation": {
-        "en": "Hind answered: 'No, I am a teacher.'",
-        "ur": "ہند نے جواب دیا: 'نہیں، میں استانی ہوں۔'"
-      },
-      "tiles": [
-        {
-          "ar": "أَجَابَتْ",
-          "ar_plain": "أجابت",
-          "translit": "ajaabati",
-          "en": "she answered",
-          "ur": "اس نے جواب دیا"
-        },
-        {
-          "ar": "هُنْدٌ",
-          "ar_plain": "هند",
-          "translit": "hindun",
-          "en": "Hind",
-          "ur": "ہند"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "أَنَا",
-          "ar_plain": "انا",
-          "translit": "anaa",
-          "en": "I",
-          "ur": "میں"
-        },
-        {
-          "ar": "مُعَلِّمَةٌ",
-          "ar_plain": "معلمة",
-          "translit": "mu'allimatun",
-          "en": "a teacher (f)",
-          "ur": "استانی"
-        }
-      ],
-      "correct_order": [
-        1,
-        0,
-        2,
-        3,
-        4
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "CONVERSATION_BUILDER",
-      "id": "ch22-l03-ex06",
-      "prompt_line": {
-        "ar": "هَلْ الْمَسْجِدُ قَرِيبٌ؟",
-        "ar_plain": "هل المسجد قريب؟",
-        "translit": "hal al-masjidu qariibun?",
-        "en": "Is the mosque near?",
-        "ur": "کیا مسجد قریب ہے؟"
-      },
-      "response_mode": "PICK",
-      "options": [
-        {
-          "ar": "نَعَمْ، الْمَسْجِدُ قَرِيبٌ",
-          "ar_plain": "نعم، المسجد قريب",
-          "translit": "na'am, al-masjidu qariibun",
-          "en": "Yes, the mosque is near.",
-          "ur": "جی ہاں، مسجد قریب ہے۔"
-        },
-        {
-          "ar": "لَا، الْمَسْجِدُ بَعِيدٌ",
-          "ar_plain": "لا، المسجد بعيد",
-          "translit": "laa, al-masjidu ba'iidun",
-          "en": "No, the mosque is far.",
-          "ur": "نہیں، مسجد دور ہے۔"
-        },
-        {
-          "ar": "أَنَا فِي الْمَسْجِدِ",
-          "ar_plain": "أنا في المسجد",
-          "translit": "anaa fi al-masjidi",
-          "en": "I am at the mosque.",
-          "ur": "میں مسجد میں ہوں۔"
-        },
-        {
-          "ar": "الْمَسْجِدُ كَبِيرٌ",
-          "ar_plain": "المسجد كبير",
-          "translit": "al-masjidu kabiirun",
-          "en": "The mosque is big.",
-          "ur": "مسجد بڑی ہے۔"
-        }
-      ],
-      "correct_option_index": 0,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch22-l03-ex07",
-      "prompt": {
-        "ar": "أَجَابُوا الْأَصْدِقَاءُ: \"نَعَمْ، الْمَكْتَبُ فِي الْمَدْرَسَةِ\"",
-        "ar_plain": "أجابوا الأصدقاء: نعم، المكتب في المدرسة",
-        "translit": "ajaabuu al-asadiqaa'u: 'na'am, al-maktabu fi al-madrasati'",
-        "en": "The friends answered: 'Yes, the office is at the school.'",
-        "ur": "دوستوں نے جواب دیا: 'جی ہاں، دفتر school میں ہے۔'"
-      },
-      "options": [
-        {
-          "en": "The friends answered: 'Yes, the office is at the school.'",
-          "ur": "دوستوں نے جواب دیا: 'جی ہاں، دفتر school میں ہے۔'"
-        },
-        {
-          "en": "The friends asked: 'Yes, the office is at the school.'",
-          "ur": "دوستوں نے پوچھا: 'جی ہاں، دفتر school میں ہے۔'"
-        },
-        {
-          "en": "A friend answered: 'Yes, the school is at the office.'",
-          "ur": "ایک دوست نے جواب دیا: 'جی ہاں، school دفتر میں ہے۔'"
-        },
-        {
-          "en": "The friends went: 'Yes, the office is at the school.'",
-          "ur": "دوست گئے: 'جی ہاں، دفتر school میں ہے۔'"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَجَابُوا is plural masculine 'they answered.' The answer confirms location: 'yes, the office is at the school.'",
-        "ur": "أَجَابُوا جمع مذکر ہے 'انہوں نے جواب دیا'۔ جواب مقام کی تصدیق کرتا ہے: 'جی ہاں، دفتر school میں ہے'۔"
+        "en": "Match each question word to what it asks for.",
+        "ur": "ہر سوالیہ لفظ کو اس سے ملائیں جو وہ پوچھتا ہے۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "أَجَابَ — answering in dialogue",
-      "ar": "أَجَابَ — الْإِجَابَةُ فِي الْحِوَارِ",
-      "ur": "أَجَابَ — گفتگو میں جواب دینا"
+      "en": "An answer that fits",
+      "ar": "الْجَوَابُ الْمُنَاسِبُ",
+      "ur": "مناسب جواب"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 111,
-      "label": "Al-Baqarah 2:111",
-      "ar": "وَقَالُوا لَنْ يَدْخُلَ الْجَنَّةَ إِلَّا مَنْ كَانَ هُودًا أَوْ نَصَارَىٰ",
-      "en": "And they said: 'None will enter Paradise except those who are Jews or Christians.'",
-      "ur": "اور انہوں نے کہا: 'جنت میں صرف وہی داخل ہو گا جو یہودی یا عیسائی ہو گا۔'",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002111.mp3"
+      "surah": 3,
+      "ayah": 37,
+      "label": "Ali 'Imran 3:37",
+      "ar": "قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا قَالَتْ هُوَ مِنْ عِندِ اللَّهِ",
+      "en": "He said, “O Maryam, from where is this for you?” She said, “It is from Allah.”",
+      "ur": "انہوں نے کہا: اے مریم! یہ تمہارے پاس کہاں سے آیا؟ انہوں نے کہا: یہ اللہ کی طرف سے ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003037.mp3"
     },
     "highlighted_word_indices": [
-      0
+      5
+    ],
+    "highlighted_words": [
+      "هَٰذَا"
     ],
     "noor_explanation": {
-      "en": "وَقَالُوا — here the disbelievers are giving their answer (a wrong belief). In Arabic, dialogue is always: question → answer. قَالَ and أَجَابَ work together.",
-      "ur": "وَقَالُوا — یہاں کافر اپنا جواب دے رہے ہیں (ایک غلط عقیدہ)۔ عربی میں گفتگو ہمیشہ: سوال → جواب۔ قَالَ اور أَجَابَ مل کر کام کرتے ہیں۔"
+      "en": "قَالَتْ: she said — Maryam's answer. Asked 'from where?', she answered 'from Allah': an answer that gives exactly what the question asked for.",
+      "ur": "قَالَتْ: انہوں نے کہا — مریم کا جواب۔ 'کہاں سے؟' پوچھا گیا تو انہوں نے 'اللہ کی طرف سے' جواب دیا: ایسا جواب جو بالکل وہی دیتا ہے جو سوال نے پوچھا۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "قَالَ = said, سَأَلَ = asked, أَجَابَ = answered. These three verbs are the foundation of every Arabic conversation. Practice them together!",
-      "ur": "قَالَ = کہا، سَأَلَ = پوچھا، أَجَابَ = جواب دیا۔ یہ تین افعال ہر عربی گفتگو کی بنیاد ہیں۔ انہیں مل کر مشق کریں!"
+      "en": "You can pick an answer that fits, confirm you understood, and ask for it again. Next: follow a whole exchange.",
+      "ur": "آپ مناسب جواب چن سکتے ہیں، سمجھ آنے کی تصدیق کر سکتے ہیں، اور دوبارہ کہنے کی درخواست کر سکتے ہیں۔ آگے: پوری گفتگو سمجھیں۔"
     }
   }
 }

@@ -1,0 +1,435 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 21 final test (ch21-test, new; display order 7). Twelve multiple-choice questions on the proposal's blueprint: start and end of a journey (3), ذَهَبَ / خَرَجَ / دَخَلَ / رَجَعَ in context (3), a landmark or a fuller answer to أَيْنَ؟ (2), the CL8 journey-plus-landmark exchange (2), a verified Quran movement target with context (2: 28:21, 20:86). New sentences (Yusuf's and Zaynab's journeys, the village, the bag); no gender, case or verse-number clue decides an answer. Pass mark 80 % (10 of 12). Rebuilt 2026-09-24 from Docs/proposals/chapter-21-content-proposal.md with the owner-approved review amendments recorded there (دَخَلَ and رَجَعَ treated as Chapter 8 retrieval, خَرَجَ the new verb; Al-Qasas 28:15 وَدَخَلَ الْمَدِينَةَ instead of the imperative in Yusuf 12:99, paired with 28:21 from the same story; Ta-Ha 20:86 فَرَجَعَ for رَجَعَ; Al-Isra 17:1 as a verified مِنْ … إِلَى journey; Al-Baqarah 2:164 for بَيْنَ … وَ …). The map and fixtures named reader_lecture_21 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "باب 21 کا آخری امتحان",
+    "chapter_order": 21,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 17,
+      "ayah": 1,
+      "label": "Al-Isra 17:1",
+      "ar": "مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+      "en": "from al-Masjid al-Haram to al-Masjid al-Aqsa",
+      "ur": "مسجد حرام سے مسجد اقصیٰ تک",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017001.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 21.",
+      "ur": "باب 21 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 21,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch21-test-q01",
+        "topic": {
+          "en": "Start and end",
+          "ur": "آغاز اور انجام"
+        },
+        "prompt": {
+          "en": "Where did the journey start?",
+          "ur": "سفر کہاں سے شروع ہوا؟"
+        },
+        "arabic": "خَرَجَ يُوسُفُ مِنَ الْقَرْيَةِ وَذَهَبَ إِلَى الْمَدِينَةِ",
+        "options": [
+          {
+            "en": "the mosque",
+            "ur": "مسجد"
+          },
+          {
+            "en": "the city",
+            "ur": "شہر"
+          },
+          {
+            "en": "the house",
+            "ur": "گھر"
+          },
+          {
+            "en": "the village",
+            "ur": "گاؤں"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch21-test-q02",
+        "topic": {
+          "en": "Start and end",
+          "ur": "آغاز اور انجام"
+        },
+        "prompt": {
+          "en": "Where did the journey end?",
+          "ur": "سفر کہاں ختم ہوا؟"
+        },
+        "arabic": "خَرَجَتْ زَيْنَبُ مِنَ الْمَسْجِدِ وَذَهَبَتْ إِلَى الْمَدْرَسَةِ",
+        "options": [
+          {
+            "en": "the house",
+            "ur": "گھر"
+          },
+          {
+            "en": "the mosque",
+            "ur": "مسجد"
+          },
+          {
+            "en": "the school",
+            "ur": "اسکول"
+          },
+          {
+            "en": "the market",
+            "ur": "بازار"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch21-test-q03",
+        "topic": {
+          "en": "Start and end",
+          "ur": "آغاز اور انجام"
+        },
+        "prompt": {
+          "en": "Which question asks where he went to?",
+          "ur": "کون سا سوال پوچھتا ہے کہ وہ کہاں گیا؟"
+        },
+        "options": [
+          {
+            "en": "مَنْ خَرَجَ؟",
+            "ur": "مَنْ خَرَجَ؟"
+          },
+          {
+            "en": "إِلَى أَيْنَ ذَهَبَ؟",
+            "ur": "إِلَى أَيْنَ ذَهَبَ؟"
+          },
+          {
+            "en": "أَيْنَ الْمَسْجِدُ؟",
+            "ur": "أَيْنَ الْمَسْجِدُ؟"
+          },
+          {
+            "en": "مِنْ أَيْنَ خَرَجَ؟",
+            "ur": "مِنْ أَيْنَ خَرَجَ؟"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch21-test-q04",
+        "topic": {
+          "en": "Which movement",
+          "ur": "کون سی حرکت"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "دَخَلَ الطَّالِبُ الْمَسْجِدَ",
+        "options": [
+          {
+            "en": "The student entered the mosque.",
+            "ur": "طالب علم مسجد میں داخل ہوا۔"
+          },
+          {
+            "en": "The student left the mosque.",
+            "ur": "طالب علم مسجد سے نکلا۔"
+          },
+          {
+            "en": "The student is behind the mosque.",
+            "ur": "طالب علم مسجد کے پیچھے ہے۔"
+          },
+          {
+            "en": "The student returned from the mosque.",
+            "ur": "طالب علم مسجد سے واپس آیا۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch21-test-q05",
+        "topic": {
+          "en": "Which movement",
+          "ur": "کون سی حرکت"
+        },
+        "prompt": {
+          "en": "Ahmad was at the market and came back to the house. Which verb fits?",
+          "ur": "احمد بازار میں تھا اور گھر واپس آیا۔ کون سا فعل مناسب ہے؟"
+        },
+        "arabic": "___ أَحْمَدُ إِلَى الْبَيْتِ",
+        "options": [
+          {
+            "en": "دَخَلَ",
+            "ur": "دَخَلَ"
+          },
+          {
+            "en": "رَجَعَتْ",
+            "ur": "رَجَعَتْ"
+          },
+          {
+            "en": "خَرَجَ",
+            "ur": "خَرَجَ"
+          },
+          {
+            "en": "رَجَعَ",
+            "ur": "رَجَعَ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch21-test-q06",
+        "topic": {
+          "en": "Which movement",
+          "ur": "کون سی حرکت"
+        },
+        "prompt": {
+          "en": "Which sentence says 'She left the school'?",
+          "ur": "کون سا جملہ کہتا ہے 'وہ اسکول سے نکلی'؟"
+        },
+        "options": [
+          {
+            "en": "رَجَعَتْ إِلَى الْمَدْرَسَةِ",
+            "ur": "رَجَعَتْ إِلَى الْمَدْرَسَةِ"
+          },
+          {
+            "en": "دَخَلَتِ الْمَدْرَسَةَ",
+            "ur": "دَخَلَتِ الْمَدْرَسَةَ"
+          },
+          {
+            "en": "خَرَجَتْ مِنَ الْمَدْرَسَةِ",
+            "ur": "خَرَجَتْ مِنَ الْمَدْرَسَةِ"
+          },
+          {
+            "en": "ذَهَبَتْ إِلَى الْمَدْرَسَةِ",
+            "ur": "ذَهَبَتْ إِلَى الْمَدْرَسَةِ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch21-test-q07",
+        "topic": {
+          "en": "Landmarks",
+          "ur": "نشانیاں"
+        },
+        "prompt": {
+          "en": "Where is the bag?",
+          "ur": "بستہ کہاں ہے؟"
+        },
+        "arabic": "الْحَقِيبَةُ بَيْنَ الْكُرْسِيِّ وَالْمَكْتَبِ",
+        "options": [
+          {
+            "en": "on the desk",
+            "ur": "میز پر"
+          },
+          {
+            "en": "between the chair and the desk",
+            "ur": "کرسی اور میز کے درمیان"
+          },
+          {
+            "en": "behind the chair",
+            "ur": "کرسی کے پیچھے"
+          },
+          {
+            "en": "in the desk",
+            "ur": "میز میں"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch21-test-q08",
+        "topic": {
+          "en": "Landmarks",
+          "ur": "نشانیاں"
+        },
+        "prompt": {
+          "en": "Someone asks أَيْنَ الْمَدْرَسَةُ؟. Which answer helps them find it using two landmarks?",
+          "ur": "کوئی پوچھتا ہے أَيْنَ الْمَدْرَسَةُ؟۔ کون سا جواب دو نشانیوں سے اسے ڈھونڈنے میں مدد دیتا ہے؟"
+        },
+        "options": [
+          {
+            "en": "الْمَدْرَسَةُ بَيْنَ الْمَسْجِدِ وَالسُّوقِ",
+            "ur": "الْمَدْرَسَةُ بَيْنَ الْمَسْجِدِ وَالسُّوقِ"
+          },
+          {
+            "en": "ذَهَبَ إِلَى الْمَدْرَسَةِ",
+            "ur": "ذَهَبَ إِلَى الْمَدْرَسَةِ"
+          },
+          {
+            "en": "خَرَجَ مِنَ الْمَدْرَسَةِ",
+            "ur": "خَرَجَ مِنَ الْمَدْرَسَةِ"
+          },
+          {
+            "en": "الْمَدْرَسَةُ كَبِيرَةٌ",
+            "ur": "الْمَدْرَسَةُ كَبِيرَةٌ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch21-test-q09",
+        "topic": {
+          "en": "Finding someone",
+          "ur": "کسی کو ڈھونڈنا"
+        },
+        "prompt": {
+          "en": "A friend asks أَيْنَ أَحْمَدُ؟. Which reply tells where Ahmad went?",
+          "ur": "ایک دوست پوچھتا ہے أَيْنَ أَحْمَدُ؟۔ کون سا جواب بتاتا ہے کہ احمد کہاں گیا؟"
+        },
+        "options": [
+          {
+            "en": "السُّوقُ خَلْفَ الْبَيْتِ",
+            "ur": "السُّوقُ خَلْفَ الْبَيْتِ"
+          },
+          {
+            "en": "جَزَاكَ اللهُ خَيْرًا",
+            "ur": "جَزَاكَ اللهُ خَيْرًا"
+          },
+          {
+            "en": "أَيْنَ السُّوقُ؟",
+            "ur": "أَيْنَ السُّوقُ؟"
+          },
+          {
+            "en": "خَرَجَ مِنَ الْبَيْتِ وَذَهَبَ إِلَى السُّوقِ",
+            "ur": "خَرَجَ مِنَ الْبَيْتِ وَذَهَبَ إِلَى السُّوقِ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch21-test-q10",
+        "topic": {
+          "en": "Finding someone",
+          "ur": "کسی کو ڈھونڈنا"
+        },
+        "prompt": {
+          "en": "In this exchange, where is the mosque?",
+          "ur": "اس گفتگو میں مسجد کہاں ہے؟"
+        },
+        "arabic": "وَأَيْنَ الْمَسْجِدُ؟ — الْمَسْجِدُ خَلْفَ الْمَدْرَسَةِ",
+        "options": [
+          {
+            "en": "in the school",
+            "ur": "اسکول میں"
+          },
+          {
+            "en": "behind the school",
+            "ur": "اسکول کے پیچھے"
+          },
+          {
+            "en": "between the school and the market",
+            "ur": "اسکول اور بازار کے درمیان"
+          },
+          {
+            "en": "in front of the school",
+            "ur": "اسکول کے سامنے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch21-test-q11",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن پڑھنا"
+        },
+        "prompt": {
+          "en": "Al-Qasas 28:21 — what did Musa do?",
+          "ur": "سورۃ القصص 28:21 — موسیٰ نے کیا کیا؟"
+        },
+        "arabic": "فَخَرَجَ مِنْهَا خَائِفًا يَتَرَقَّبُ",
+        "options": [
+          {
+            "en": "He stayed in the city.",
+            "ur": "وہ شہر میں رہے۔"
+          },
+          {
+            "en": "He returned to the city.",
+            "ur": "وہ شہر واپس آئے۔"
+          },
+          {
+            "en": "He left the city.",
+            "ur": "وہ شہر سے نکلے۔"
+          },
+          {
+            "en": "He entered the city.",
+            "ur": "وہ شہر میں داخل ہوئے۔"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch21-test-q12",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن پڑھنا"
+        },
+        "prompt": {
+          "en": "Ta-Ha 20:86 — what does إِلَىٰ قَوْمِهِ tell you?",
+          "ur": "سورۃ طٰہٰ 20:86 — إِلَىٰ قَوْمِهِ کیا بتاتا ہے؟"
+        },
+        "arabic": "فَرَجَعَ مُوسَىٰ إِلَىٰ قَوْمِهِ",
+        "options": [
+          {
+            "en": "who returned to Musa",
+            "ur": "کون موسیٰ کی طرف لوٹا"
+          },
+          {
+            "en": "where Musa left from",
+            "ur": "موسیٰ کہاں سے نکلے"
+          },
+          {
+            "en": "a place between two landmarks",
+            "ur": "دو نشانیوں کے درمیان ایک جگہ"
+          },
+          {
+            "en": "where Musa returned to: his people",
+            "ur": "موسیٰ کہاں لوٹے: اپنی قوم کی طرف"
+          }
+        ],
+        "correct_index": 3
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 21 — journeys and landmarks",
+      "ur": "باب 21 — سفر اور نشانیاں"
+    },
+    "ayah": {
+      "surah": 17,
+      "ayah": 1,
+      "label": "Al-Isra 17:1",
+      "ar": "مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+      "en": "from al-Masjid al-Haram to al-Masjid al-Aqsa",
+      "ur": "مسجد حرام سے مسجد اقصیٰ تک",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017001.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "مِّنَ"
+    ],
+    "noor_explanation": {
+      "en": "مِّنَ … إِلَى …: start and end. You can now follow a journey, tell went, left, entered and returned apart, and find a place by its landmarks.",
+      "ur": "مِّنَ … إِلَى …: آغاز اور انجام۔ اب آپ سفر سمجھ سکتے ہیں، گیا، نکلا، داخل ہوا اور واپس آیا کو الگ پہچان سکتے ہیں، اور کسی جگہ کو اس کی نشانیوں سے ڈھونڈ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 21 complete. Chapter 22 follows a conversation: who said what, who asked, and which answer fits.",
+      "ur": "باب 21 مکمل۔ باب 22 ایک گفتگو کے بارے میں ہے: کس نے کیا کہا، کس نے پوچھا، اور کون سا جواب مناسب ہے۔"
+    }
+  }
+}

@@ -2,434 +2,501 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 23, Lesson 1 - Idafa constructions and demonstratives (هَذَا، ذَلِكَ، هَؤُلَاءِ، أُولَئِكَ) integration. Pure integration of concepts from Ch1-22.",
+    "_note": "Chapter 23, Lesson 1 (ch23-l01) — pointing, owning and asking combined: a pointing phrase (هٰذَا الْكِتَابُ, Chapter 15) versus a complete sentence with idafa (هٰذَا كِتَابُ الطَّالِبِ, Chapter 3) or an attached owner (هٰذَا كِتَابُهُ). Quran: Ta-Ha 20:17–18 — مَا asks, تِلْكَ points, بِيَمِينِكَ owns (ـكَ, Musa addressed), قَالَ reports the answer, هِيَ is a separate pronoun and عَصَايَ has the owner ending ـيَ (my, written يَ after an alif); reveal عَصَايَ (20:18, index 2). Proposal amendment: 20:17–18 replaces 2:5, whose referent task Chapter 15 L4 already sets. No GRAMMAR_PARSE: هٰذَا is not scored as anything but the pointer; the false Al-Kawthar idafa and 'first noun of idafa is nominative' claims are gone. Rebuilt 2026-09-24 from Docs/proposals/chapter-23-content-proposal.md with the owner-approved review amendments recorded there (Ta-Ha 20:17–18 وَمَا تِلْكَ بِيَمِينِكَ / قَالَ هِيَ عَصَايَ instead of Al-Baqarah 2:5, whose أُولَٰئِكَ → people of taqwa task is already Chapter 15 L4's; Al-Baqarah 2:21 for الَّذِي with رَبَّكُمُ; Al-Qasas 28:21 for movement plus speech). Chapters 20–22 were rebuilt and released together with this chapter, so every combined skill tested here is taught. The map and fixtures named reader_lecture_23_book2_consolidation.md and reader_lessons_11-13_integration.md, neither of which existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "اشارہ، ملکیت اور سوال",
     "chapter_order": 23,
     "lesson_order": 1,
-    "chapter_title": "Grammar Structures, Reading, and Application",
-    "title": "Idafa and Demonstratives Integration",
-    "titleAr": "الإضافة وَأَسْمَاءُ الْإِشَارَة",
-    "source": "reader_lessons_11-13_integration.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 108,
-      "ayah": 1,
-      "label": "Al-Kawthar 108:1",
-      "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
-      "en": "Indeed, We have given you Al-Kawthar.",
-      "ur": "بے شک ہم نے آپ کو کوثر عطا کیا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+      "surah": 20,
+      "ayah": 17,
+      "label": "Ta-Ha 20:17",
+      "ar": "وَمَا تِلْكَ بِيَمِينِكَ يَا مُوسَىٰ",
+      "en": "And what is that in your right hand, O Musa?",
+      "ur": "اور اے موسیٰ! تمہارے دائیں ہاتھ میں یہ کیا ہے؟",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020017.mp3"
     },
     "noor_intro": {
-      "en": "الْكَوْثَرَ is an idaafa — كَوْثَرَ is the possessed noun and ال is the possessor. Today we weave idaafa and demonstratives (هَذَا، ذَلِكَ) together in one reading.",
-      "ur": "الْكَوْثَرَ ایک اضافت ہے — كَوْثَرَ مفتوح ہے اور ال کاسی ہے۔ آج ہم اضافت اور اشاریے (ہذَا، ذٰلِک) کو ایک پڑھائی میں ملایں گے۔"
+      "en": "At the valley, Allah asks Musa, peace be upon him, a question about what is in his hand. Listen for مَا, the question, and تِلْكَ, the pointer.",
+      "ur": "وادی میں اللہ موسیٰ علیہ السلام سے ان کے ہاتھ کی چیز کے بارے میں سوال کرتا ہے۔ مَا، سوال، اور تِلْكَ، اشارہ، سنیں۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
+      "type": "CONTRAST",
       "concept": {
-        "en": "Idafa: noun + noun possession chain",
-        "ar": "الإضافة: سلسلة اسم + اسم",
-        "ur": "اضافت: اسم + اسم کی زنجیر"
+        "en": "Pointing phrase or sentence?",
+        "ar": "هٰذَا الْكِتَابُ / هٰذَا كِتَابُ الطَّالِبِ",
+        "ur": "اشارے والا ٹکڑا یا جملہ؟"
       },
       "explanation": {
-        "en": "Idafa chains two or more nouns together where the last noun possesses the first. كِتَابُ الطَّالِبِ means 'the student's book' — the book belongs to the student. The first noun is in the nominative (مَرْفُوع) and takes no ال; the last noun governs the phrase.",
-        "ur": "اضافت دو یا زیادہ اسم کو ملا کر بنتی ہے جہاں آخری اسم پہلے کو possessed کرتا ہے۔ كِتَابُ الطَّالِبِ کا مطلب 'طالب کی کتاب' — کتاب طالب کی ہے۔ پہلا اسم مرفوع ہے اور اس پر ال نہیں لگتی۔"
-      }
+        "en": "هٰذَا الْكِتَابُ: this book — a phrase, still waiting for news (Chapter 15). هٰذَا كِتَابُ الطَّالِبِ: This is the student's book — a complete sentence: هٰذَا points, and كِتَابُ الطَّالِبِ, an idafa, is what it is.",
+        "ur": "هٰذَا الْكِتَابُ: یہ کتاب — ایک ٹکڑا، جو ابھی خبر کا منتظر ہے (باب 15)۔ هٰذَا كِتَابُ الطَّالِبِ: یہ طالب علم کی کتاب ہے — مکمل جملہ: هٰذَا اشارہ کرتا ہے، اور كِتَابُ الطَّالِبِ، ایک اضافت، بتاتا ہے کہ وہ کیا ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "هٰذَا الْكِتَابُ",
+          "ar_plain": "هذا الكتاب",
+          "translit": "hādhā l-kitābu",
+          "en": "this book",
+          "ur": "یہ کتاب"
+        },
+        {
+          "ar": "هٰذَا كِتَابُ الطَّالِبِ",
+          "ar_plain": "هذا كتاب الطالب",
+          "translit": "hādhā kitābu ṭ-ṭālibi",
+          "en": "This is the student's book.",
+          "ur": "یہ طالب علم کی کتاب ہے۔"
+        }
+      ]
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "هَذَا كِتَابُ الطَّالِبِ",
+        "ar": "هٰذَا كِتَابُ الطَّالِبِ",
         "ar_plain": "هذا كتاب الطالب",
-        "translit": "haadhaa kitaabut taalibi",
+        "translit": "hādhā kitābu ṭ-ṭālibi",
         "en": "This is the student's book.",
-        "ur": "یہ طالب کی کتاب ہے۔"
+        "ur": "یہ طالب علم کی کتاب ہے۔"
       },
       "explanation": {
-        "en": "هَذَا is the demonstrative 'this.' كِتَابُ is the first noun of the idaafa chain. الطَّالِبِ is the possessor (genitive). Together: this is the student's book.",
-        "ur": "ہذَا اشاریہ 'یہ' ہے۔ كِتَابُ اضافت کا پہلا اسم ہے۔ الطَّالِبِ قابض ہے (جر میں)۔ مل کر: یہ طالب کی کتاب ہے۔"
+        "en": "كِتَابُ has no الْ; its owner, الطَّالِبِ, follows it (Chapter 3). With هٰذَا before it, you have a full sentence.",
+        "ur": "كِتَابُ پر الْ نہیں؛ اس کا مالک، الطَّالِبِ، اس کے بعد آتا ہے (باب 3)۔ اس سے پہلے هٰذَا ہو تو مکمل جملہ بن جاتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "ذَلِكَ بَيْتُ الْمُسْلِمِ",
-        "ar_plain": "ذلك بيت المسلم",
-        "translit": "dhaalika baytul muslimi",
-        "en": "That is the Muslim's house.",
-        "ur": "وہ مسلمان کا گھر ہے۔"
+        "ar": "هٰذَا كِتَابُهُ",
+        "ar_plain": "هذا كتابه",
+        "translit": "hādhā kitābuhu",
+        "en": "This is his book.",
+        "ur": "یہ اس کی کتاب ہے۔"
       },
       "explanation": {
-        "en": "ذَلِكَ is the demonstrative 'that' (for distant masculine). بَيْتُ is the first idaafa noun. الْمُسْلِمِ is the possessor. The entire idaafa بَيْتُ الْمُسْلِمِ is the predicate of ذَلِكَ.",
-        "ur": "ذٰلِک دور کے مذکر کے لیے اشاریہ 'وہ' ہے۔ بَيْتُ پہلا اضافت اسم ہے۔ الْمُسْلِمِ قابض ہے۔ پوری اضافت بَيتُ الْمُسْلِمِ ذٰلِک کی خبر ہے۔"
+        "en": "The owner can also be an ending: كِتَابُهُ, his book. Still a complete sentence.",
+        "ur": "مالک آخر بھی ہو سکتا ہے: كِتَابُهُ، اس کی کتاب۔ پھر بھی مکمل جملہ۔"
       }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Ta-Ha 20:17: And what is that in your right hand, O Musa?",
+        "ar": "وَمَا تِلْكَ بِيَمِينِكَ يَا مُوسَىٰ",
+        "ur": "Ta-Ha 20:17: اور اے موسیٰ! تمہارے دائیں ہاتھ میں یہ کیا ہے؟"
+      },
+      "explanation": {
+        "en": "مَا asks what. تِلْكَ, that (feminine, Chapter 5), points to something in Musa's hand. بِيَمِينِكَ: in your right hand — بِـ + يَمِين + ـكَ, your, said to one man, Musa. Allah is the One asking.",
+        "ur": "مَا پوچھتا ہے کیا۔ تِلْكَ، وہ (مؤنث، باب 5)، موسیٰ کے ہاتھ کی کسی چیز کی طرف اشارہ کرتا ہے۔ بِيَمِينِكَ: تمہارے دائیں ہاتھ میں — بِـ + يَمِين + ـكَ، تمہارا، ایک مرد، یعنی موسیٰ، سے کہا گیا۔ سوال اللہ کی طرف سے ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020017.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Ta-Ha 20:18: He said, “It is my staff; I lean upon it.”",
+        "ar": "قَالَ هِيَ عَصَايَ أَتَوَكَّأُ عَلَيْهَا",
+        "ur": "Ta-Ha 20:18: انہوں نے کہا: یہ میری لاٹھی ہے، میں اس پر ٹیک لگاتا ہوں۔"
+      },
+      "explanation": {
+        "en": "قَالَ: Musa answers. هِيَ: it — a separate word, pointing back to تِلْكَ. عَصَايَ: my staff — عَصَا + my; after an alif, my is written يَ with a fatha. The answer fits: مَا asked what, and he names the thing. أَتَوَكَّأُ عَلَيْهَا, I lean upon it, is only glossed.",
+        "ur": "قَالَ: موسیٰ جواب دیتے ہیں۔ هِيَ: یہ — ایک الگ لفظ، جو تِلْكَ کی طرف لوٹتا ہے۔ عَصَايَ: میری لاٹھی — عَصَا + میرا؛ الف کے بعد 'میرا' زبر کے ساتھ يَ لکھا جاتا ہے۔ جواب مناسب ہے: مَا نے 'کیا' پوچھا، اور انہوں نے چیز کا نام بتایا۔ أَتَوَكَّأُ عَلَيْهَا، میں اس پر ٹیک لگاتا ہوں، کا صرف معنی دیا گیا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020018.mp3"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "A separate word or an ending?",
+        "ar": "هِيَ / عَصَايَ",
+        "ur": "الگ لفظ یا آخر؟"
+      },
+      "explanation": {
+        "en": "هِيَ stands alone: it. The ـيَ of عَصَايَ is attached: my. Separate pronouns and attached endings do different jobs.",
+        "ur": "هِيَ اکیلا کھڑا ہے: یہ/وہ۔ عَصَايَ کا ـيَ جڑا ہوا ہے: میرا۔ الگ ضمیریں اور جڑے ہوئے آخر الگ کام کرتے ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "هِيَ",
+          "ar_plain": "هي",
+          "translit": "hiya",
+          "en": "she, it (a separate word)",
+          "ur": "وہ (الگ لفظ، مؤنث)"
+        },
+        {
+          "ar": "عَصَايَ",
+          "ar_plain": "عصاي",
+          "translit": "ʿaṣāya",
+          "en": "my staff",
+          "ur": "میری لاٹھی"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Demonstratives: near and far",
-        "ar": "أَسْمَاءُ الْإِشَارَة: قَرِيب وَبَعِيد",
-        "ur": "اشاریے: قریب اور دور"
+        "en": "Read the whole exchange",
+        "ar": "مَا تِلْكَ؟ — هِيَ عَصَايَ",
+        "ur": "پوری گفتگو پڑھیں"
       },
       "explanation": {
-        "en": "Arabic has two main distances for demonstratives: near (هَذَا/هَذِهِ) and far (ذَلِكَ/تِلْكَ). For plurals: هَؤُلَاءِ (these) and أُولَئِكَ (those). هَذَا and ذَلِكَ are masculine singular; هَذِهِ and تِلْكَ are feminine singular.",
-        "ur": "عربی میں اشاریوں کے دو فاصلے ہیں: قریب (ہذَا/ہذِهِ) اور دور (ذٰلِک/تِلک)۔ جمع کے لیے: ہؤُلَاءِ (یہ) اور أُولَئِک (وہ)۔ ہذَا اور ذٰلِک مذکر واحد ہیں؛ ہذِهِ اور تِلک مؤنث واحد ہیں۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "هَؤُلَاءِ طُلَّابُ الْمَدْرَسَةِ",
-        "ar_plain": "هؤلء طلاب المدرسة",
-        "translit": "haa'ulaa'i tullaabu al-madrasati",
-        "en": "These are the school students.",
-        "ur": "یہ اسکول کے طالب علم ہیں۔"
-      },
-      "explanation": {
-        "en": "هَؤُلَاءِ is the plural demonstrative 'these.' طُلَّابُ is the first noun of the idaafa. الْمَدْرَسَةِ is the possessor. The pattern mirrors the singular هَذَا كِتَابُ الطَّالِبِ, just with a plural demonstrative.",
-        "ur": "ہؤُلَاءِ جمع اشاریہ 'یہ' ہے۔ طُلَّابُ اضافت کا پہلا اسم ہے۔ الْمَدْرَسَةِ قابض ہے۔ یہ الگو مفرد ہذَا كِتَابُ الطَّالِبِ کی طرح ہے، صرف جمع اشاریے کے ساتھ۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Key vocabulary in this lesson",
-        "ur": "اس سبق میں اہم الفاظ"
-      },
-      "body": {
-        "en": "كِتَابٌ book · طَالِبٌ student · بَيْتٌ house · مُسْلِمٌ Muslim · مَدْرَسَةٌ school · هَذَا this (masc.) · ذَلِكَ that (masc.) · هَؤُلَاءِ these · أُولَئِكَ those · هَذِهِ this (fem.) · تِلْكَ that (fem.)",
-        "ur": "كِتَابٌ کتاب · طَالِبٌ طالب علم · بَيْتٌ گھر · مُسْلِمٌ مسلمان · مَدْرَسَةٌ اسکول · هَذَا یہ (مذکر) · ذَلِكَ وہ (مذکر) · هَؤُلَاءِ یہ (جمع) · أُولَئِكَ وہ (جمع) · هَذِهِ یہ (مؤنث) · تِلْكَ وہ (مؤنث)"
+        "en": "In two ayat: a question (مَا), a pointer (تِلْكَ), an owner ending (ـكَ), a speaker (قَالَ), a separate pronoun (هِيَ) and my (ـيَ). Book 2 skills, working together.",
+        "ur": "دو آیات میں: سوال (مَا)، اشارہ (تِلْكَ)، مالک کا آخر (ـكَ)، بولنے والا (قَالَ)، الگ ضمیر (هِيَ) اور میرا (ـيَ)۔ کتاب 2 کی مہارتیں، ایک ساتھ کام کرتی ہوئی۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "MATCH_AYAH",
       "id": "ch23-l01-ex01",
-      "prompt": {
-        "ar": "هَذَا كِتَابُ الطَّالِبِ",
-        "ar_plain": "هذا كتاب الطالب",
-        "translit": "haadhaa kitaabut taalibi",
-        "en": "This is the student's book.",
-        "ur": "یہ طالب کی کتاب ہے۔"
+      "ayah_fragment": {
+        "ar": "وَمَا تِلْكَ بِيَمِينِكَ يَا مُوسَىٰ",
+        "surah_ref": "Ta-Ha 20:17"
       },
       "options": [
         {
-          "en": "This is the student's book.",
-          "ur": "یہ طالب کی کتاب ہے۔"
+          "en": "تِلْكَ points to what is in Musa's hand; بِيَمِينِكَ — in your right hand",
+          "ur": "تِلْكَ موسیٰ کے ہاتھ کی چیز کی طرف اشارہ کرتا ہے؛ بِيَمِينِكَ — تمہارے دائیں ہاتھ میں"
         },
         {
-          "en": "This is a book for the student.",
-          "ur": "یہ طالب کے لیے کتاب ہے۔"
+          "en": "The ayah is a statement, not a question",
+          "ur": "آیت بیان ہے، سوال نہیں"
         },
         {
-          "en": "That is the student's book.",
-          "ur": "وہ طالب کی کتاب ہے۔"
+          "en": "تِلْكَ points to a group of people far away",
+          "ur": "تِلْكَ دور کے لوگوں کی طرف اشارہ کرتا ہے"
         },
         {
-          "en": "This is the teacher's book.",
-          "ur": "یہ استاد کی کتاب ہے۔"
+          "en": "بِيَمِينِكَ — in my right hand",
+          "ur": "بِيَمِينِكَ — میرے دائیں ہاتھ میں"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "هَذَا is 'this' (near). كِتَابُ is the first noun of the idaafa. الطَّالِبِ is the possessor. The full meaning: this is the student's book.",
-        "ur": "ہذَا 'یہ' ہے (قریب)۔ كِتَابُ اضافت کا پہلا اسم ہے۔ الطَّالِبِ قابض ہے۔ مکمل معنی: یہ طالب کی کتاب ہے۔"
+        "en": "مَا asks; تِلْكَ points; ـكَ is your, Musa's.",
+        "ur": "مَا پوچھتا ہے؛ تِلْكَ اشارہ کرتا ہے؛ ـكَ تمہارا، یعنی موسیٰ کا۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch23-l01-ex02",
+      "ayah_fragment": {
+        "ar": "قَالَ هِيَ عَصَايَ",
+        "surah_ref": "Ta-Ha 20:18"
+      },
+      "options": [
+        {
+          "en": "عَصَايَ — his staff",
+          "ur": "عَصَايَ — اس کی لاٹھی"
+        },
+        {
+          "en": "هِيَ — a separate word, it; عَصَايَ — my staff: Musa's own",
+          "ur": "هِيَ — الگ لفظ، یہ؛ عَصَايَ — میری لاٹھی: موسیٰ کی اپنی"
+        },
+        {
+          "en": "هِيَ — an ending meaning her",
+          "ur": "هِيَ — آخر، جس کا مطلب اس کی"
+        },
+        {
+          "en": "عَصَايَ — your staff",
+          "ur": "عَصَايَ — تمہاری لاٹھی"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Musa is speaking, so my staff is his own.",
+        "ur": "موسیٰ بول رہے ہیں، اس لیے میری لاٹھی ان کی اپنی ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch23-l01-ex02",
+      "id": "ch23-l01-ex03",
       "statement": {
-        "en": "In هَذَا بَيْتُ الْمُسْلِمِ, the word الْمُسْلِمِ is in the genitive case because it is the possessor in an idaafa construction.",
-        "ur": "ہذَا بَيتُ الْمُسْلِمِ میں الْمُسْلِمِ جر میں ہے کیونکہ یہ اضافت میں قابض ہے۔",
+        "en": "This is a complete sentence: This is the student's book.",
+        "ur": "یہ مکمل جملہ ہے: یہ طالب علم کی کتاب ہے۔",
         "ar_example": {
-          "ar": "هَذَا بَيْتُ الْمُسْلِمِ",
-          "ar_plain": "هذا بيت المسلم",
-          "translit": "haadhaa baytul muslimi",
-          "en": "This is the Muslim's house.",
-          "ur": "یہ مسلمان کا گھر ہے۔"
+          "ar": "هٰذَا كِتَابُ الطَّالِبِ",
+          "ar_plain": "هذا كتاب الطالب",
+          "translit": "hādhā kitābu ṭ-ṭālibi",
+          "en": "This is the student's book.",
+          "ur": "یہ طالب علم کی کتاب ہے۔"
         }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هٰذَا, then an idafa without الْ on its first word: a sentence.",
+        "ur": "هٰذَا، پھر ایسی اضافت جس کے پہلے لفظ پر الْ نہیں: جملہ۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch23-l01-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ كِتَابُ الْمُسْلِمِ",
-      "hint": {
-        "en": "This is the Muslim's book.",
-        "ur": "یہ مسلمان کی کتاب ہے۔"
+      "type": "TRUE_FALSE",
+      "id": "ch23-l01-ex04",
+      "statement": {
+        "en": "This is a complete sentence.",
+        "ur": "یہ مکمل جملہ ہے۔",
+        "ar_example": {
+          "ar": "هٰذَا الْكِتَابُ",
+          "ar_plain": "هذا الكتاب",
+          "translit": "hādhā l-kitābu",
+          "en": "this book",
+          "ur": "یہ کتاب"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هٰذَا الْكِتَابُ is a phrase: this book. It needs news.",
+        "ur": "هٰذَا الْكِتَابُ ٹکڑا ہے: یہ کتاب۔ اسے خبر چاہیے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch23-l01-ex05",
+      "prompt": {
+        "ar": "هٰذَا كِتَابُهُ",
+        "ar_plain": "هذا كتابه",
+        "translit": "hādhā kitābuhu",
+        "en": "This is his book.",
+        "ur": "یہ اس کی کتاب ہے۔"
       },
       "options": [
         {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "haadhaa",
-          "en": "this (masc.)",
-          "ur": "یہ (مذکر)"
+          "en": "This is his book.",
+          "ur": "یہ اس کی کتاب ہے۔"
         },
         {
-          "ar": "ذَلِكَ",
-          "ar_plain": "ذلك",
-          "translit": "dhaalika",
-          "en": "that (masc.)",
-          "ur": "وہ (مذکر)"
+          "en": "This is her book.",
+          "ur": "یہ اس (عورت) کی کتاب ہے۔"
         },
         {
-          "ar": "هَذِهِ",
-          "ar_plain": "هذه",
-          "translit": "haadhihi",
-          "en": "this (fem.)",
-          "ur": "یہ (مؤنث)"
+          "en": "That is his book.",
+          "ur": "وہ اس کی کتاب ہے۔"
         },
         {
-          "ar": "تِلْكَ",
-          "ar_plain": "تلك",
-          "translit": "tilka",
-          "en": "that (fem.)",
-          "ur": "وہ (مؤنث)"
+          "en": "This is my book.",
+          "ur": "یہ میری کتاب ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هٰذَا, this; كِتَابُهُ, his book.",
+        "ur": "هٰذَا، یہ؛ كِتَابُهُ، اس کی کتاب۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch23-l01-ex06",
+      "mode": "TAP",
+      "sentence_ar": "قَالَ مُوسَىٰ: ___ عَصَايَ",
+      "hint": {
+        "en": "Musa said, “It is my staff.”",
+        "ur": "موسیٰ نے کہا: یہ میری لاٹھی ہے۔"
+      },
+      "options": [
+        {
+          "ar": "أَنَا",
+          "ar_plain": "انا",
+          "translit": "anā",
+          "en": "I",
+          "ur": "میں"
+        },
+        {
+          "ar": "هِيَ",
+          "ar_plain": "هي",
+          "translit": "hiya",
+          "en": "she, it (a separate word)",
+          "ur": "وہ (الگ لفظ، مؤنث)"
+        },
+        {
+          "ar": "هُمْ",
+          "ar_plain": "هم",
+          "translit": "hum",
+          "en": "they",
+          "ur": "وہ (جمع)"
+        },
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "he, it (a separate word)",
+          "ur": "وہ (الگ لفظ، مذکر)"
         }
       ],
       "correct_answer": {
-        "ar": "هَذَا",
-        "ar_plain": "هذا",
-        "translit": "haadhaa",
-        "en": "this (masc.)",
-        "ur": "یہ (مذکر)"
+        "ar": "هِيَ",
+        "ar_plain": "هي",
+        "translit": "hiya",
+        "en": "she, it (a separate word)",
+        "ur": "وہ (الگ لفظ، مؤنث)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The staff was pointed at with تِلْكَ (feminine), so it is هِيَ.",
+        "ur": "لاٹھی کی طرف تِلْكَ (مؤنث) سے اشارہ ہوا، اس لیے هِيَ۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch23-l01-ex04",
+      "id": "ch23-l01-ex07",
       "left_column": [
         {
-          "ar": "هَذَا كِتَابُ الطَّالِبِ",
-          "ar_plain": "هذا كتاب الطالب",
-          "translit": "haadhaa kitaabut taalibi",
-          "en": "This is the student's book.",
-          "ur": "یہ طالب کی کتاب ہے۔"
+          "ar": "هِيَ",
+          "ar_plain": "هي",
+          "translit": "hiya",
+          "en": "she, it (a separate word)",
+          "ur": "وہ (الگ لفظ، مؤنث)"
         },
         {
-          "ar": "ذَلِكَ بَيْتُ الْمُسْلِمِ",
-          "ar_plain": "ذلك بيت المسلم",
-          "translit": "dhaalika baytul muslimi",
-          "en": "That is the Muslim's house.",
-          "ur": "وہ مسلمان کا گھر ہے۔"
+          "ar": "ـهَا",
+          "ar_plain": "ها",
+          "translit": "-hā",
+          "en": "her, its (an ending)",
+          "ur": "اس کا (آخر، مؤنث)"
         },
         {
-          "ar": "هَؤُلَاءِ طُلَّابُ الْمَدْرَسَةِ",
-          "ar_plain": "هؤلء طلاب المدرسة",
-          "translit": "haa'ulaa'i tullaabu al-madrasati",
-          "en": "These are the school students.",
-          "ur": "یہ اسکول کے طالب علم ہیں۔"
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "he, it (a separate word)",
+          "ur": "وہ (الگ لفظ، مذکر)"
         },
         {
-          "ar": "أُولَئِكَ مُسْلِمُونَ صَالِحُونَ",
-          "ar_plain": "اولئك مسلمون صالحون",
-          "translit": "ulaa'ika muslimoona saalihoona",
-          "en": "Those are righteous Muslims.",
-          "ur": "وہ نیک مسلمان ہیں۔"
+          "ar": "ـهُ",
+          "ar_plain": "ه",
+          "translit": "-hu",
+          "en": "his, its (an ending)",
+          "ur": "اس کا (آخر، مذکر)"
         }
       ],
       "right_column": [
         {
-          "en": "This is the student's book.",
-          "ur": "یہ طالب کی کتاب ہے۔"
+          "en": "he, it — a separate word",
+          "ur": "وہ — الگ لفظ (مذکر)"
         },
         {
-          "en": "That is the Muslim's house.",
-          "ur": "وہ مسلمان کا گھر ہے۔"
+          "en": "she, it — a separate word",
+          "ur": "وہ — الگ لفظ (مؤنث)"
         },
         {
-          "en": "These are the school students.",
-          "ur": "یہ اسکول کے طالب علم ہیں۔"
+          "en": "his, its — an ending",
+          "ur": "اس کا — آخر (مذکر)"
         },
         {
-          "en": "Those are righteous Muslims.",
-          "ur": "وہ نیک مسلمان ہیں۔"
+          "en": "her, its — an ending",
+          "ur": "اس کا — آخر (مؤنث)"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
           1
         ],
         [
+          1,
+          3
+        ],
+        [
           2,
-          2
+          0
         ],
         [
           3,
-          3
+          2
         ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch23-l01-ex05",
-      "target_translation": {
-        "en": "That is the Muslim's house.",
-        "ur": "وہ مسلمان کا گھر ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "ذَلِكَ",
-          "ar_plain": "ذلك",
-          "translit": "dhaalika",
-          "en": "that",
-          "ur": "وہ"
-        },
-        {
-          "ar": "بَيْتُ",
-          "ar_plain": "بيت",
-          "translit": "baytu",
-          "en": "house (idaafa noun)",
-          "ur": "گھر (اضافت کا پہلا اسم)"
-        },
-        {
-          "ar": "الْمُسْلِمِ",
-          "ar_plain": "المسلم",
-          "translit": "al-muslimi",
-          "en": "the Muslim (possessor)",
-          "ur": "مسلمان (قابض)"
-        },
-        {
-          "ar": "مُسْلِمٌ",
-          "ar_plain": "مسلم",
-          "translit": "muslimun",
-          "en": "a Muslim",
-          "ur": "ایک مسلمان"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch23-l01-ex06",
-      "sentence_ar": "هَذَا بَيْتُ الطَّالِبِ",
-      "words": [
-        {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "haadhaa",
-          "en": "this",
-          "ur": "یہ"
-        },
-        {
-          "ar": "بَيْتُ",
-          "ar_plain": "بيت",
-          "translit": "baytu",
-          "en": "house",
-          "ur": "گھر"
-        },
-        {
-          "ar": "الطَّالِبِ",
-          "ar_plain": "الطالب",
-          "translit": "at-taalibi",
-          "en": "the student",
-          "ur": "طالب"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "PREDICATE",
-        "POSSESSIVE",
-        "DEMONSTRATIVE"
-      ],
-      "correct_roles": [
-        "DEMONSTRATIVE",
-        "SUBJECT",
-        "POSSESSIVE"
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "هَذَا is the demonstrative 'this.' بَيْتُ is the idaafa noun (subject of the equational sentence). الطَّالِبِ is the possessor completing the idaafa.",
-        "ur": "ہذَا اشاریہ 'یہ' ہے۔ بَيتُ اضافت کا اسم ہے (جملے کا مبتدا)۔ الطَّالِبِ قابض ہے جو اضافت مکمل کرتا ہے۔"
+        "en": "Separate words stand alone; endings attach to a word.",
+        "ur": "الگ لفظ اکیلے کھڑے ہوتے ہیں؛ آخر کسی لفظ سے جڑتے ہیں۔"
       }
     },
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch23-l01-ex07",
-      "prompt": {
-        "ar": "أُولَئِكَ مُسْلِمُونَ صَالِحُونَ",
-        "ar_plain": "اولئك مسلمون صالحون",
-        "translit": "ulaa'ika muslimoona saalihoona",
-        "en": "Those are righteous Muslims.",
-        "ur": "وہ نیک مسلمان ہیں۔"
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch23-l01-ex08",
+      "prompt_line": {
+        "ar": "مَا هٰذَا؟",
+        "ar_plain": "ما هذا",
+        "translit": "mā hādhā?",
+        "en": "What is this?",
+        "ur": "یہ کیا ہے؟"
       },
+      "response_mode": "PICK",
       "options": [
         {
-          "en": "Those are righteous Muslims.",
-          "ur": "وہ نیک مسلمان ہیں۔"
+          "ar": "كِتَابِي عَلَى الْمَكْتَبِ",
+          "ar_plain": "كتابي على المكتب",
+          "translit": "kitābī ʿalā l-maktabi",
+          "en": "My book is on the desk.",
+          "ur": "میری کتاب میز پر ہے۔"
         },
         {
-          "en": "These are righteous Muslims.",
-          "ur": "یہ نیک مسلمان ہیں۔"
+          "ar": "نَعَمْ",
+          "ar_plain": "نعم",
+          "translit": "naʿam",
+          "en": "yes",
+          "ur": "جی ہاں"
         },
         {
-          "en": "Those are one righteous Muslim.",
-          "ur": "وہ ایک نیک مسلمان ہیں۔"
+          "ar": "أَيْنَ كِتَابِي؟",
+          "ar_plain": "اين كتابي",
+          "translit": "ayna kitābī?",
+          "en": "Where is my book?",
+          "ur": "میری کتاب کہاں ہے؟"
         },
         {
-          "en": "Those are bad Muslims.",
-          "ur": "وہ برے مسلمان ہیں۔"
+          "ar": "هٰذَا كِتَابِي",
+          "ar_plain": "هذا كتابي",
+          "translit": "hādhā kitābī",
+          "en": "This is my book.",
+          "ur": "یہ میری کتاب ہے۔"
         }
       ],
-      "correct_index": 0,
+      "correct_option_index": 3,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أُولَئِكَ is the far demonstrative 'those' (plural). مُسْلِمُونَ صَالِحُونَ is the predicate — both are human plurals, so both take the plural adjective form.",
-        "ur": "أُولَئِكَ دور کا اشاریہ 'وہ' ہے (جمع)۔ مُسْلِمُونَ صَالِحُونَ خبر ہے — دونوں انسانی جمع ہیں، اس لیے دونوں جمع صفت لیتے ہیں۔"
+        "en": "مَا asks what: name the thing, as Musa did.",
+        "ur": "مَا 'کیا' پوچھتا ہے: چیز کا نام بتائیں، جیسے موسیٰ نے کیا۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Idafa + demonstratives",
-      "ar": "الإضافة + أَسْمَاءُ الْإِشَارَة",
-      "ur": "اضافت + اشاریے"
+      "en": "Pointer, owner, question and answer",
+      "ar": "الْإِشَارَةُ وَالْمِلْكِيَّةُ وَالسُّؤَالُ",
+      "ur": "اشارہ، مالک، سوال اور جواب"
     },
     "ayah": {
-      "surah": 108,
-      "ayah": 1,
-      "label": "Al-Kawthar 108:1",
-      "ar": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
-      "en": "Indeed, We have given you Al-Kawthar.",
-      "ur": "بے شک ہم نے آپ کو کوثر عطا کیا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+      "surah": 20,
+      "ayah": 18,
+      "label": "Ta-Ha 20:18",
+      "ar": "قَالَ هِيَ عَصَايَ أَتَوَكَّأُ عَلَيْهَا",
+      "en": "He said, “It is my staff; I lean upon it.”",
+      "ur": "انہوں نے کہا: یہ میری لاٹھی ہے، میں اس پر ٹیک لگاتا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020018.mp3"
     },
     "highlighted_word_indices": [
       2
     ],
+    "highlighted_words": [
+      "عَصَايَ"
+    ],
     "noor_explanation": {
-      "en": "الْكَوْثَرَ is an idaafa word — كَوْثَر is the possessed noun (nominative) and ال refers to something given to the Prophet. When you combine idaafa with demonstratives like هَذَا and ذَلِكَ, you can point to possessed things directly.",
-      "ur": "الْكَوْثَرَ ایک اضافتی لفظ ہے — كَوْثَر مفتوح ہے اور ال کسی چیز کو حوالہ دیتا ہے جو رسول کو دیا گیا۔ جب آپ اضافت کو اشاریوں جیسے ہذَا اور ذٰلِک کے ساتھ ملایں تو possessed چیزوں کی طرف براہ راست اشارہ کر سکتے ہیں۔"
+      "en": "عَصَايَ: my staff. Asked 'what is that in your hand?', Musa names it and owns it. One short exchange holds a pointer, a question, two owner endings and a separate pronoun — and you read them all.",
+      "ur": "عَصَايَ: میری لاٹھی۔ 'تمہارے ہاتھ میں یہ کیا ہے؟' پوچھا گیا تو موسیٰ نے اس کا نام بتایا اور اسے اپنا کہا۔ ایک مختصر گفتگو میں اشارہ، سوال، مالک کے دو آخر اور ایک الگ ضمیر ہیں — اور آپ نے سب پڑھ لیے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Idafa and demonstratives work beautifully together. هَذَا كِتَابُ الطَّالِبِ, ذَلِكَ بَيْتُ الْمُسْلِمِ — point and possess, all in one phrase. Keep reading, the Quran is full of these patterns.",
-      "ur": "اضافت اور اشاریے ایک دوسرے کے ساتھ خوبصورتی سے کام کرتے ہیں۔ ہذَا كِتَابُ الطَّالِبِ، ذٰلِک بَيتُ الْمُسْلِمِ — اشارہ کرو اور possession کرو، ایک ہی جملے میں۔ پڑھتا رہیں، قرآن ان نمونوں سے بھرا ہوا ہے۔"
+      "en": "You combined pointing, owning and asking. Next: who is described, and whose is it?",
+      "ur": "آپ نے اشارہ، ملکیت اور سوال کو یکجا کیا۔ آگے: کس کا وصف ہے، اور چیز کس کی ہے؟"
     }
   }
 }

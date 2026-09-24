@@ -1,0 +1,557 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 21 review (ch21-l05, REVIEW; display order 6 after the new ch21-cl08; file renamed chapter-21-lesson-06-review.json because fixtures map to rows by display order). Mixed retrieval from one coherent journey (Fatimah: house → market; the market between the mosque and the school; back home): start and end, which movement, a landmark, Quran quotation versus practice sentence; 17:1, 28:21 and 28:15 recalled. No new grammar or Quran claim; the two old word-list matches and the direct-object Urdu error are gone. Reveal وَدَخَلَ (28:15, index 0). Rebuilt 2026-09-24 from Docs/proposals/chapter-21-content-proposal.md with the owner-approved review amendments recorded there (دَخَلَ and رَجَعَ treated as Chapter 8 retrieval, خَرَجَ the new verb; Al-Qasas 28:15 وَدَخَلَ الْمَدِينَةَ instead of the imperative in Yusuf 12:99, paired with 28:21 from the same story; Ta-Ha 20:86 فَرَجَعَ for رَجَعَ; Al-Isra 17:1 as a verified مِنْ … إِلَى journey; Al-Baqarah 2:164 for بَيْنَ … وَ …). The map and fixtures named reader_lecture_21 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "باب 21 کا جائزہ",
+    "chapter_order": 21,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 28,
+      "ayah": 15,
+      "label": "Al-Qasas 28:15",
+      "ar": "وَدَخَلَ الْمَدِينَةَ عَلَىٰ حِينِ غَفْلَةٍ مِّنْ أَهْلِهَا",
+      "en": "And he entered the city at a time when its people were unaware.",
+      "ur": "اور وہ شہر میں ایسے وقت داخل ہوئے جب اس کے لوگ بے خبر تھے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028015.mp3"
+    },
+    "noor_intro": {
+      "en": "Review time. For every sentence ask: which movement, from where, to where, and where exactly?",
+      "ur": "جائزے کا وقت۔ ہر جملے کے لیے پوچھیں: کون سی حرکت، کہاں سے، کہاں تک، اور ٹھیک کہاں؟"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "A journey: start and end",
+        "ar": "مِنْ … إِلَى …",
+        "ur": "سفر: آغاز اور انجام"
+      },
+      "explanation": {
+        "en": "After مِنْ: where it began. After إِلَى: where it ended. Ask with مِنْ أَيْنَ؟ and إِلَى أَيْنَ؟.",
+        "ur": "مِنْ کے بعد: کہاں سے شروع ہوا۔ إِلَى کے بعد: کہاں ختم ہوا۔ مِنْ أَيْنَ؟ اور إِلَى أَيْنَ؟ سے پوچھیں۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Four movements",
+        "ar": "ذَهَبَ، خَرَجَ، دَخَلَ، رَجَعَ",
+        "ur": "چار حرکتیں"
+      },
+      "explanation": {
+        "en": "went, left, entered, returned. For a woman add تْ: ذَهَبَتْ، خَرَجَتْ، دَخَلَتْ، رَجَعَتْ.",
+        "ur": "گیا، نکلا، داخل ہوا، واپس آیا۔ عورت کے لیے تْ لگائیں: ذَهَبَتْ، خَرَجَتْ، دَخَلَتْ، رَجَعَتْ۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Entered, left",
+        "ar": "دَخَلَ الْمَسْجِدَ / خَرَجَ مِنَ الْمَسْجِدِ",
+        "ur": "داخل ہوا، نکلا"
+      },
+      "explanation": {
+        "en": "دَخَلَ with the place straight after; خَرَجَ with مِنْ.",
+        "ur": "دَخَلَ کے فوراً بعد جگہ؛ خَرَجَ کے ساتھ مِنْ۔"
+      },
+      "examples": [
+        {
+          "ar": "دَخَلَ الْمَسْجِدَ",
+          "ar_plain": "دخل المسجد",
+          "translit": "dakhala l-masjida",
+          "en": "He entered the mosque.",
+          "ur": "وہ مسجد میں داخل ہوا۔"
+        },
+        {
+          "ar": "خَرَجَ مِنَ الْمَسْجِدِ",
+          "ar_plain": "خرج من المسجد",
+          "translit": "kharaja mina l-masjidi",
+          "en": "He left the mosque.",
+          "ur": "وہ مسجد سے نکلا۔"
+        }
+      ]
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "السُّوقُ بَيْنَ الْمَسْجِدِ وَالْمَدْرَسَةِ",
+        "ar_plain": "السوق بين المسجد والمدرسة",
+        "translit": "as-sūqu bayna l-masjidi wa l-madrasati",
+        "en": "The market is between the mosque and the school.",
+        "ur": "بازار مسجد اور اسکول کے درمیان ہے۔"
+      },
+      "explanation": {
+        "en": "Two landmarks after بَيْنَ and وَ; the market is in the middle.",
+        "ur": "بَيْنَ اور وَ کے بعد دو نشانیاں؛ بازار بیچ میں ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "خَرَجَتْ فَاطِمَةُ مِنَ الْبَيْتِ وَذَهَبَتْ إِلَى السُّوقِ",
+        "ar_plain": "خرجت فاطمة من البيت وذهبت الى السوق",
+        "translit": "kharajat fāṭimatu mina l-bayti wa dhahabat ilā s-sūqi",
+        "en": "Fatimah left the house and went to the market.",
+        "ur": "فاطمہ گھر سے نکلی اور بازار گئی۔"
+      },
+      "explanation": {
+        "en": "Today's journey: Fatimah starts at the house and ends at the market.",
+        "ur": "آج کا سفر: فاطمہ گھر سے شروع کرتی ہے اور بازار پر ختم کرتی ہے۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Quran or practice sentence?",
+        "ar": "فَخَرَجَ مِنْهَا / خَرَجَتْ فَاطِمَةُ",
+        "ur": "قرآن یا مشق کا جملہ؟"
+      },
+      "explanation": {
+        "en": "A Quran line comes with its surah, ayah and recitation; Fatimah's journey is written for practice.",
+        "ur": "قرآن کی سطر سورت، آیت اور تلاوت کے ساتھ آتی ہے؛ فاطمہ کا سفر مشق کے لیے لکھا گیا ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch21-l05-ex01",
+      "prompt": {
+        "ar": "خَرَجَتْ فَاطِمَةُ مِنَ الْبَيْتِ وَذَهَبَتْ إِلَى السُّوقِ",
+        "ar_plain": "خرجت فاطمة من البيت وذهبت الى السوق",
+        "translit": "kharajat fāṭimatu mina l-bayti wa dhahabat ilā s-sūqi",
+        "en": "Fatimah left the house and went to the market.",
+        "ur": "فاطمہ گھر سے نکلی اور بازار گئی۔"
+      },
+      "options": [
+        {
+          "en": "Fatimah returned from the market.",
+          "ur": "فاطمہ بازار سے واپس آئی۔"
+        },
+        {
+          "en": "Fatimah left the market and went to the house.",
+          "ur": "فاطمہ بازار سے نکلی اور گھر گئی۔"
+        },
+        {
+          "en": "Fatimah left the house and went to the market.",
+          "ur": "فاطمہ گھر سے نکلی اور بازار گئی۔"
+        },
+        {
+          "en": "Fatimah entered the house and the market.",
+          "ur": "فاطمہ گھر اور بازار میں داخل ہوئی۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Start after مِنَ: the house. End after إِلَى: the market.",
+        "ur": "مِنَ کے بعد آغاز: گھر۔ إِلَى کے بعد انجام: بازار۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch21-l05-ex02",
+      "statement": {
+        "en": "Fatimah's journey starts at the market.",
+        "ur": "فاطمہ کا سفر بازار سے شروع ہوتا ہے۔",
+        "ar_example": {
+          "ar": "خَرَجَتْ فَاطِمَةُ مِنَ الْبَيْتِ وَذَهَبَتْ إِلَى السُّوقِ",
+          "ar_plain": "خرجت فاطمة من البيت وذهبت الى السوق",
+          "translit": "kharajat fāṭimatu mina l-bayti wa dhahabat ilā s-sūqi",
+          "en": "Fatimah left the house and went to the market.",
+          "ur": "فاطمہ گھر سے نکلی اور بازار گئی۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The start is after مِنَ: the house.",
+        "ur": "آغاز مِنَ کے بعد ہے: گھر۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch21-l05-ex03",
+      "mode": "TAP",
+      "sentence_ar": "السُّوقُ ___ الْمَسْجِدِ وَالْمَدْرَسَةِ",
+      "hint": {
+        "en": "The market is between the mosque and the school.",
+        "ur": "بازار مسجد اور اسکول کے درمیان ہے۔"
+      },
+      "options": [
+        {
+          "ar": "بَيْنَ",
+          "ar_plain": "بين",
+          "translit": "bayna",
+          "en": "between",
+          "ur": "کے درمیان"
+        },
+        {
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "کی طرف"
+        },
+        {
+          "ar": "خَلْفَ",
+          "ar_plain": "خلف",
+          "translit": "khalfa",
+          "en": "behind",
+          "ur": "پیچھے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "بَيْنَ",
+        "ar_plain": "بين",
+        "translit": "bayna",
+        "en": "between",
+        "ur": "کے درمیان"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two landmarks: بَيْنَ.",
+        "ur": "دو نشانیاں: بَيْنَ۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch21-l05-ex04",
+      "mode": "TAP",
+      "sentence_ar": "___ فَاطِمَةُ إِلَى الْبَيْتِ",
+      "hint": {
+        "en": "Fatimah returned to the house.",
+        "ur": "فاطمہ گھر واپس آئی۔"
+      },
+      "options": [
+        {
+          "ar": "دَخَلَتْ",
+          "ar_plain": "دخلت",
+          "translit": "dakhalat",
+          "en": "she entered",
+          "ur": "وہ داخل ہوئی"
+        },
+        {
+          "ar": "رَجَعَتْ",
+          "ar_plain": "رجعت",
+          "translit": "rajaʿat",
+          "en": "she returned",
+          "ur": "وہ واپس آئی"
+        },
+        {
+          "ar": "رَجَعَ",
+          "ar_plain": "رجع",
+          "translit": "rajaʿa",
+          "en": "he returned",
+          "ur": "وہ واپس آیا"
+        },
+        {
+          "ar": "خَرَجَتْ",
+          "ar_plain": "خرجت",
+          "translit": "kharajat",
+          "en": "she left",
+          "ur": "وہ نکلی"
+        }
+      ],
+      "correct_answer": {
+        "ar": "رَجَعَتْ",
+        "ar_plain": "رجعت",
+        "translit": "rajaʿat",
+        "en": "she returned",
+        "ur": "وہ واپس آئی"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Returned, for Fatimah: رَجَعَتْ.",
+        "ur": "فاطمہ کے لیے واپس آئی: رَجَعَتْ۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch21-l05-ex05",
+      "left_column": [
+        {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went",
+          "ur": "وہ گئی"
+        },
+        {
+          "ar": "خَرَجَتْ",
+          "ar_plain": "خرجت",
+          "translit": "kharajat",
+          "en": "she left",
+          "ur": "وہ نکلی"
+        },
+        {
+          "ar": "دَخَلَتْ",
+          "ar_plain": "دخلت",
+          "translit": "dakhalat",
+          "en": "she entered",
+          "ur": "وہ داخل ہوئی"
+        },
+        {
+          "ar": "رَجَعَتْ",
+          "ar_plain": "رجعت",
+          "translit": "rajaʿat",
+          "en": "she returned",
+          "ur": "وہ واپس آئی"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "she returned",
+          "ur": "وہ واپس آئی"
+        },
+        {
+          "en": "she left, went out",
+          "ur": "وہ نکلی"
+        },
+        {
+          "en": "she went",
+          "ur": "وہ گئی"
+        },
+        {
+          "en": "she entered",
+          "ur": "وہ داخل ہوئی"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The same four movements, for a woman.",
+        "ur": "وہی چار حرکتیں، عورت کے لیے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch21-l05-ex06",
+      "ayah_fragment": {
+        "ar": "فَخَرَجَ مِنْهَا",
+        "surah_ref": "Al-Qasas 28:21"
+      },
+      "options": [
+        {
+          "en": "so he returned to it",
+          "ur": "پس وہ اس کی طرف لوٹے"
+        },
+        {
+          "en": "so he entered it",
+          "ur": "پس وہ اس میں داخل ہوئے"
+        },
+        {
+          "en": "so she left him",
+          "ur": "پس وہ (عورت) اس سے نکلی"
+        },
+        {
+          "en": "so he left it: Musa left the city",
+          "ur": "پس وہ اس سے نکلے: موسیٰ شہر سے نکلے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "خَرَجَ مِنْ: left.",
+        "ur": "خَرَجَ مِنْ: نکلا۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch21-l05-ex07",
+      "ayah_fragment": {
+        "ar": "مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+        "surah_ref": "Al-Isra 17:1"
+      },
+      "options": [
+        {
+          "en": "from al-Masjid al-Haram (start) to al-Masjid al-Aqsa (end)",
+          "ur": "مسجد حرام (آغاز) سے مسجد اقصیٰ (انجام) تک"
+        },
+        {
+          "en": "between the two mosques",
+          "ur": "دونوں مسجدوں کے درمیان"
+        },
+        {
+          "en": "from al-Masjid al-Aqsa to al-Masjid al-Haram",
+          "ur": "مسجد اقصیٰ سے مسجد حرام تک"
+        },
+        {
+          "en": "inside al-Masjid al-Haram",
+          "ur": "مسجد حرام کے اندر"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مِنْ: the start; إِلَى: the end.",
+        "ur": "مِنْ: آغاز؛ إِلَى: انجام۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch21-l05-ex08",
+      "statement": {
+        "en": "فَخَرَجَ مِنْهَا is a practice sentence written for this course.",
+        "ur": "فَخَرَجَ مِنْهَا اس کورس کے لیے لکھا گیا مشق کا جملہ ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It is Quran: Al-Qasas 28:21.",
+        "ur": "یہ قرآن ہے: سورۃ القصص 28:21۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch21-l05-ex09",
+      "prompt_line": {
+        "ar": "خَرَجَتْ فَاطِمَةُ مِنَ الْبَيْتِ وَذَهَبَتْ إِلَى السُّوقِ. إِلَى أَيْنَ ذَهَبَتْ؟",
+        "ar_plain": "خرجت فاطمة من البيت وذهبت الى السوق الى اين ذهبت",
+        "translit": "kharajat fāṭimatu mina l-bayti wa dhahabat ilā s-sūqi. ilā ayna dhahabat?",
+        "en": "Fatimah left the house and went to the market. Where did she go?",
+        "ur": "فاطمہ گھر سے نکلی اور بازار گئی۔ وہ کہاں گئی؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "مِنَ السُّوقِ",
+          "ar_plain": "من السوق",
+          "translit": "mina s-sūqi",
+          "en": "from the market",
+          "ur": "بازار سے"
+        },
+        {
+          "ar": "مِنَ الْبَيْتِ",
+          "ar_plain": "من البيت",
+          "translit": "mina l-bayti",
+          "en": "from the house",
+          "ur": "گھر سے"
+        },
+        {
+          "ar": "إِلَى السُّوقِ",
+          "ar_plain": "الى السوق",
+          "translit": "ilā s-sūqi",
+          "en": "to the market",
+          "ur": "بازار کی طرف"
+        },
+        {
+          "ar": "إِلَى الْبَيْتِ",
+          "ar_plain": "الى البيت",
+          "translit": "ilā l-bayti",
+          "en": "to the house",
+          "ur": "گھر کی طرف"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِلَى أَيْنَ: the end, إِلَى السُّوقِ.",
+        "ur": "إِلَى أَيْنَ: انجام، إِلَى السُّوقِ۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch21-l05-ex10",
+      "target_translation": {
+        "en": "He entered the mosque.",
+        "ur": "وہ مسجد میں داخل ہوا۔"
+      },
+      "tiles": [
+        {
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "الْمَسْجِدَ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjida",
+          "en": "the mosque",
+          "ur": "مسجد"
+        },
+        {
+          "ar": "دَخَلَ",
+          "ar_plain": "دخل",
+          "translit": "dakhala",
+          "en": "he entered",
+          "ur": "وہ داخل ہوا"
+        }
+      ],
+      "correct_order": [
+        2,
+        1
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "دَخَلَ, then the place directly.",
+        "ur": "دَخَلَ، پھر سیدھی جگہ۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Journeys and landmarks",
+      "ar": "الْأَمَاكِنُ وَالْحَرَكَةُ",
+      "ur": "سفر اور نشانیاں"
+    },
+    "ayah": {
+      "surah": 28,
+      "ayah": 15,
+      "label": "Al-Qasas 28:15",
+      "ar": "وَدَخَلَ الْمَدِينَةَ عَلَىٰ حِينِ غَفْلَةٍ مِّنْ أَهْلِهَا",
+      "en": "And he entered the city at a time when its people were unaware.",
+      "ur": "اور وہ شہر میں ایسے وقت داخل ہوئے جب اس کے لوگ بے خبر تھے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028015.mp3"
+    },
+    "highlighted_word_indices": [
+      0
+    ],
+    "highlighted_words": [
+      "وَدَخَلَ"
+    ],
+    "noor_explanation": {
+      "en": "وَدَخَلَ: and he entered. A verb of movement, then the place. You can now follow where people go, where they start and end, and where a place lies between two others.",
+      "ur": "وَدَخَلَ: اور وہ داخل ہوئے۔ حرکت کا فعل، پھر جگہ۔ اب آپ سمجھ سکتے ہیں کہ لوگ کہاں جاتے ہیں، کہاں سے شروع اور کہاں ختم کرتے ہیں، اور کوئی جگہ دو جگہوں کے درمیان کہاں ہے۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review complete. Take the Chapter 21 final test when you are ready.",
+      "ur": "جائزہ مکمل۔ جب تیار ہوں تو باب 21 کا آخری امتحان دیں۔"
+    }
+  }
+}

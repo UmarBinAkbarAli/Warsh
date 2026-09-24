@@ -2,14 +2,11 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 22, Lesson 1 - قَالَ in conversation (speaker and speech).",
+    "_note": "Chapter 22, Lesson 1 (ch22-l01) — who said what: قَالَ / قَالَتْ retrieved from Chapter 8; a reported line has three parts — the verb, the speaker, the words — and inside the quotation my/I mean the speaker (Chapter 19's owner rule). Quran: Yusuf 12:36, where the speaker of قَالَ أَحَدُهُمَا is one of the two young men who entered the prison with Yusuf ﷺ, not Yusuf and not his brothers; قَالَ الْآخَرُ shows a second speaker (reveal قَالَ أَحَدُهُمَا, indices 4–5). The false وَقَالَ لَهُ quotation, the brothers attribution, قَالُوا الْوَلَدُونَ and the six-form conjugation tables (with the dual mislabelled 'they-f') are gone. Rebuilt 2026-09-24 from Docs/proposals/chapter-22-content-proposal.md with the owner-approved review amendments recorded there (Ali 'Imran 3:37 as the verified ayah in which قَالَ reports a question and قَالَتْ its answer; Al-Baqarah 2:186 سَأَلَكَ as a real سَأَلَ in the Quran; Yusuf 12:90 as the second verified speech frame; CL5's heard-only هَلْ فَهِمْتُمْ؟ / مَرَّةً أُخْرَى، لَوْ سَمَحْتَ promoted to spoken lines rather than treated as new). The map and fixtures named two reader_lecture_22 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "کس نے کیا کہا؟",
     "chapter_order": 22,
     "lesson_order": 1,
-    "chapter_title": "Dialogue and Communication",
-    "title": "قَالَ — Speaking in Dialogue",
-    "titleAr": "الْقَوْلُ فِي الْحِوَارِ: قَالَ",
-    "source": "reader_lecture_22_dialogue.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
@@ -17,91 +14,158 @@
       "surah": 12,
       "ayah": 36,
       "label": "Yusuf 12:36",
-      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ ۖ قَالَ أَحَدُهُمَا إِنِّي أَرَانِي أَعْصِرُ خَمْرًا ۖ وَقَالَ الْآخَرُ إِنِّي أَرَانِي أَحْمِلُ فَوْقَ رَأْسِي خُبْزًا تَأْكُلُ الطَّيْرُ مِنْهُ ۖ نَبِّئْنَا بِتَأْوِيلِهِ ۖ إِنَّا نَرَاكَ مِنَ الْمُحْسِنِينَ",
-      "en": "And there entered the prison with him two young men. One of them said, \"Indeed, I have seen myself [in a dream] pressing [grapes for] wine.\" The other said, \"Indeed, I have seen myself carrying upon my head [some] bread, from which the birds were eating. Inform us of its interpretation; indeed, we see you to be of those who do good.\"",
-      "ur": "اور ان کے ساتھ دو اور جوان بھی داخل زندان ہوئے۔ ایک نے ان میں سے کہا کہ (میں نے خواب دیکھا ہے) دیکھتا (کیا) ہوں کہ شراب (کے لیے انگور) نچوڑ رہا ہوں۔ دوسرے نے کہا کہ (میں نے بھی خواب دیکھا ہے) میں یہ دیکھتا ہوں کہ اپنے سر پر روٹیاں اٹھائے ہوئے ہوں اور جانور ان میں سے کھا رہے (ہیں تو) ہمیں ان کی تعبیر بتا دیجیئے کہ ہم تمہیں نیکوکار دیکھتے ہیں",
+      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ قَالَ أَحَدُهُمَا",
+      "en": "And two young men entered the prison with him. One of them said…",
+      "ur": "اور ان کے ساتھ دو جوان قید خانے میں داخل ہوئے۔ ان میں سے ایک نے کہا…",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
     },
     "noor_intro": {
-      "en": "وَقَالَ لَهُ — 'and he said to him.' قَالَ is how Arabic introduces what a speaker says. Today we learn this essential dialogue verb.",
-      "ur": "وَقَالَ لَهُ — 'اور انہوں نے اس سے کہا۔' قَالَ عربی میں بولے ہوئے الفاظ کو متعارف کراتا ہے۔ آج ہم یہ ضروری گفتگو کا فعل سیکھیں گے۔"
+      "en": "Yusuf, peace be upon him, is in prison, and two young men enter with him. Then someone speaks. Listen for قَالَ and for who comes right after it.",
+      "ur": "یوسف علیہ السلام قید خانے میں ہیں، اور ان کے ساتھ دو جوان داخل ہوتے ہیں۔ پھر کوئی بولتا ہے۔ قَالَ سنیں، اور یہ کہ اس کے فوراً بعد کون آتا ہے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Recall: he said, she said",
+        "ar": "قَالَ / قَالَتْ",
+        "ur": "یاد کریں: اس نے کہا"
+      },
+      "explanation": {
+        "en": "Chapter 8: قَالَ, he said; قَالَتْ, she said. The تْ tells you the speaker is a woman.",
+        "ur": "باب 8: قَالَ، اس (مرد) نے کہا؛ قَالَتْ، اس (عورت) نے کہا۔ تْ بتاتا ہے کہ بولنے والی عورت ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qāla",
+          "en": "he said",
+          "ur": "اس نے کہا"
+        },
+        {
+          "ar": "قَالَتْ",
+          "ar_plain": "قالت",
+          "translit": "qālat",
+          "en": "she said",
+          "ur": "اس نے کہا (عورت)"
+        }
+      ]
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "قَالَ — the verb 'he said'",
-        "ar": "قَالَ — فعلِ اَمرِ \"کہا\"",
-        "ur": "قَالَ — 'کہا' کا فعل"
+        "en": "Three parts of a reported line",
+        "ar": "قَالَ الْأُسْتَاذُ: الْكِتَابُ جَدِيدٌ",
+        "ur": "بیان کی ہوئی بات کے تین حصے"
       },
       "explanation": {
-        "en": "قَالَ (qaala) means 'he said.' It is the most common way to introduce speech in Arabic. The speaker is the subject; what they say follows.",
-        "ur": "قَالَ (qaala) کا مطلب ہے 'اس نے کہا'۔ یہ عربی میں بولے ہوئے کو متعارف کرانے کا سب سے عام طریقہ ہے۔"
-      }
+        "en": "The verb: قَالَ, said. The speaker: الْأُسْتَاذُ, the teacher. The words: الْكِتَابُ جَدِيدٌ, the book is new.",
+        "ur": "فعل: قَالَ، کہا۔ بولنے والا: الْأُسْتَاذُ، استاد۔ الفاظ: الْكِتَابُ جَدِيدٌ، کتاب نئی ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "قَالَ الْأُسْتَاذُ: الْكِتَابُ جَدِيدٌ",
+          "ar_plain": "قال الاستاذ الكتاب جديد",
+          "translit": "qāla l-ustādhu: al-kitābu jadīdun",
+          "en": "The teacher said, “The book is new.”",
+          "ur": "استاد نے کہا: کتاب نئی ہے۔"
+        }
+      ]
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "قَالَ الْأَسْتَاذُ: \"الْكِتَابُ عَلَى الْمَكْتَبِ\"",
-        "ar_plain": "قال الاستاذ: الكتاب على المكتب",
-        "translit": "qaala al-ustaadu: 'al-kitaabu 'alaa al-maktabi'",
-        "en": "The teacher said: 'The book is on the desk.'",
-        "ur": "استاد نے کہا: 'کتاب میز پر ہے۔'"
+        "ar": "قَالَتْ فَاطِمَةُ: أَنَا طَالِبَةٌ",
+        "ar_plain": "قالت فاطمة انا طالبة",
+        "translit": "qālat fāṭimatu: anā ṭālibatun",
+        "en": "Fatimah said, “I am a student.”",
+        "ur": "فاطمہ نے کہا: میں طالبہ ہوں۔"
       },
       "explanation": {
-        "en": "قَالَ introduces the speaker (الْأَسْتَاذُ) and then the quoted speech in Arabic is placed between quotation marks or after a colon.",
-        "ur": "قَالَ بولنے والے (الْأَسْتَاذُ) کو متعارف کراتا ہے اور پھر بولے ہوئے الفاظ کو نقلِ قول کے نشانات میں یاcolon کے بعد لکھا جاتا ہے۔"
+        "en": "Speaker: فَاطِمَةُ. Her words: أَنَا طَالِبَةٌ. Inside the quotation, أَنَا, I, is the speaker herself.",
+        "ur": "بولنے والی: فَاطِمَةُ۔ اس کے الفاظ: أَنَا طَالِبَةٌ۔ اقتباس کے اندر أَنَا، میں، خود بولنے والی ہے۔"
       }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Find the speaker after قَالَ",
+        "ar": "قَالَ الطَّالِبُ",
+        "ur": "قَالَ کے بعد بولنے والا ڈھونڈیں"
+      },
+      "explanation": {
+        "en": "In these sentences the speaker comes right after قَالَ or قَالَتْ, and the spoken words come after the speaker.",
+        "ur": "ان جملوں میں بولنے والا قَالَ یا قَالَتْ کے فوراً بعد آتا ہے، اور بولے گئے الفاظ بولنے والے کے بعد۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Yusuf 12:36: And two young men entered the prison with him. One of them said…",
+        "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ قَالَ أَحَدُهُمَا",
+        "ur": "Yusuf 12:36: اور ان کے ساتھ دو جوان قید خانے میں داخل ہوئے۔ ان میں سے ایک نے کہا…"
+      },
+      "explanation": {
+        "en": "Two young men entered the prison with Yusuf. قَالَ أَحَدُهُمَا: one of them said. The speaker is أَحَدُهُمَا, one of the two young men — not Yusuf. فَتَيَانِ, two young men, and أَحَدُهُمَا, one of the two, are only glossed.",
+        "ur": "یوسف کے ساتھ دو جوان قید خانے میں داخل ہوئے۔ قَالَ أَحَدُهُمَا: ان میں سے ایک نے کہا۔ بولنے والا أَحَدُهُمَا ہے، دونوں جوانوں میں سے ایک — یوسف نہیں۔ فَتَيَانِ، دو جوان، اور أَحَدُهُمَا، دونوں میں سے ایک، کا صرف معنی دیا گیا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Narration, then the speaker's own words",
+        "ar": "قَالَ أَحَدُهُمَا إِنِّي أَرَانِي",
+        "ur": "بیان، پھر بولنے والے کے اپنے الفاظ"
+      },
+      "explanation": {
+        "en": "The ayah goes on: قَالَ أَحَدُهُمَا إِنِّي أَرَانِي أَعْصِرُ خَمْرًا, one of them said, “I saw myself (in a dream) pressing grapes for wine.” The narrator tells us who spoke; after that we hear the young man's own words, with I and myself.",
+        "ur": "آیت آگے کہتی ہے: قَالَ أَحَدُهُمَا إِنِّي أَرَانِي أَعْصِرُ خَمْرًا، ان میں سے ایک نے کہا: میں نے (خواب میں) خود کو شراب کے لیے انگور نچوڑتے دیکھا۔ بیان کرنے والا بتاتا ہے کہ کون بولا؛ اس کے بعد ہم جوان کے اپنے الفاظ سنتے ہیں، 'میں' اور 'خود' کے ساتھ۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Two speakers",
+        "ar": "قَالَ أَحَدُهُمَا / وَقَالَ الْآخَرُ",
+        "ur": "دو بولنے والے"
+      },
+      "explanation": {
+        "en": "The same ayah: قَالَ أَحَدُهُمَا, one of them said; وَقَالَ الْآخَرُ, and the other said. Two speakers, two separate quotations.",
+        "ur": "وہی آیت: قَالَ أَحَدُهُمَا، ان میں سے ایک نے کہا؛ وَقَالَ الْآخَرُ، اور دوسرے نے کہا۔ دو بولنے والے، دو الگ اقتباس۔"
+      },
+      "examples": [
+        {
+          "ar": "قَالَ أَحَدُهُمَا",
+          "ar_plain": "قال احدهما",
+          "translit": "qāla aḥaduhumā",
+          "en": "one of them said",
+          "ur": "ان میں سے ایک نے کہا"
+        },
+        {
+          "ar": "وَقَالَ الْآخَرُ",
+          "ar_plain": "وقال الاخر",
+          "translit": "wa qāla l-ākharu",
+          "en": "and the other said",
+          "ur": "اور دوسرے نے کہا"
+        }
+      ]
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "قَالَتْ هِنْدٌ: \"أَنَا طَالِبَةٌ\"",
-        "ar_plain": "قالت هند: انا طالبة",
-        "translit": "qaalati hindun: 'anaa taalibatun'",
-        "en": "Hind said: 'I am a student.'",
-        "ur": "ہند نے کہا: 'میں طالبہ ہوں۔'"
+        "ar": "قَالَ أَحْمَدُ: كِتَابِي عَلَى الْمَكْتَبِ",
+        "ar_plain": "قال احمد كتابي على المكتب",
+        "translit": "qāla aḥmadu: kitābī ʿalā l-maktabi",
+        "en": "Ahmad said, “My book is on the desk.”",
+        "ur": "احمد نے کہا: میری کتاب میز پر ہے۔"
       },
       "explanation": {
-        "en": "For feminine singular, use قَالَتْ. The تْ at the end marks the feminine subject. Note هِنْدٌ (Hind) — a female Arabic name.",
-        "ur": "مؤنث واحد کے لیے قَالَتْ استعمال ہوتا ہے۔ تْ آخر میں مؤنث کی نشاندہی کرتی ہے۔ ہِنْدٌ ایک مؤنث عربی نام ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "قَالُوا الْوَلَدُونَ: \"نَحْنُ فِي الْمَدْرَسَةِ\"",
-        "ar_plain": "قالوا الولدون: نحن في المدرسة",
-        "translit": "qaaluu al-waladoona: 'nahnu fi al-madrasati'",
-        "en": "The boys said: 'We are at the school.'",
-        "ur": "لڑکوں نے کہا: 'ہم school میں ہیں۔'"
-      },
-      "explanation": {
-        "en": "قَالُوا is the masculine plural form — 'they said' referring to a group of males. واو الجماعة marks the plural subject.",
-        "ur": "قَالُوا جمع مذکر ہے — 'انہوں نے کہا' مردوں کے گروہ کے لیے۔ واو الجماعة جمع کی نشاندہی کرتی ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Forms of قَالَ",
-        "ur": "قَالَ کے forms"
-      },
-      "body": {
-        "en": "قَالَ (he said) · قَالَتْ (she said) · قَالُوا (they-m said) · قَالَتَا (they-f said) · قُلْتُ (I said) · قُلْنَا (we said)",
-        "ur": "قَالَ (اس نے کہا) · قَالَتْ (اس نے کہا — مؤنث) · قَالُوا (انہوں نے کہا — جمع مذکر) · قَالَتَا (انہوں نے کہا — جمع مؤنث) · قُلْتُ (میں نے کہا) · قُلْنَا (ہم نے کہا)"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "قَالَ · قَالَتْ · قَالُوا · كَلَامٌ · حَدِيثٌ · نَطَقَ · سَكَتَ",
-        "en": "he said · she said · they said (m) · speech / words · conversation / talk · he spoke · he was silent",
-        "ur": "اس نے کہا · اس نے کہا (مؤنث) · انہوں نے کہا (جمع مذکر) · بولی/کلام · گفتگو/حدیث · اس نے بولی · اس نے خاموشی سے کہا",
-        "ar_plain": "قال · قالت · قالوا · كلام · حديث · نطق · سكت",
-        "translit": "—"
+        "en": "Inside Ahmad's words, كِتَابِي, my book, is Ahmad's book: my always means the one speaking.",
+        "ur": "احمد کے الفاظ میں كِتَابِي، میری کتاب، احمد کی کتاب ہے: 'میرا' ہمیشہ بولنے والے کا ہوتا ہے۔"
       }
     }
   ],
@@ -110,332 +174,355 @@
       "type": "TAP_TRANSLATION",
       "id": "ch22-l01-ex01",
       "prompt": {
-        "ar": "قَالَ مُحَمَّدٌ: \"الْكِتَابُ جَدِيدٌ\"",
-        "ar_plain": "قال محمد: الكتاب جديد",
-        "translit": "qaala muhammadun: 'al-kitaabu jadiidun'",
-        "en": "Muhammad said: 'The book is new.'",
-        "ur": "محمد نے کہا: 'کتاب نئی ہے۔'"
+        "ar": "قَالَتْ",
+        "ar_plain": "قالت",
+        "translit": "qālat",
+        "en": "she said",
+        "ur": "اس نے کہا (عورت)"
       },
       "options": [
         {
-          "en": "Muhammad said: 'The book is new.'",
-          "ur": "محمد نے کہا: 'کتاب نئی ہے۔'"
+          "en": "he said",
+          "ur": "اس (مرد) نے کہا"
         },
         {
-          "en": "Muhammad asked: 'The book is new.'",
-          "ur": "محمد نے پوچھا: 'کتاب نئی ہے۔'"
+          "en": "she said",
+          "ur": "اس (عورت) نے کہا"
         },
         {
-          "en": "The book is new, said Muhammad.",
-          "ur": "کتاب نئی ہے، محمد نے کہا۔"
+          "en": "she entered",
+          "ur": "وہ داخل ہوئی"
         },
         {
-          "en": "Muhammad read the new book.",
-          "ur": "محمد نے نئی کتاب پڑھی۔"
+          "en": "she went",
+          "ur": "وہ گئی"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "قَالَ + تْ: she said.",
+        "ur": "قَالَ + تْ: اس (عورت) نے کہا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch22-l01-ex02",
+      "prompt": {
+        "ar": "قَالَ الْأُسْتَاذُ: الْكِتَابُ جَدِيدٌ",
+        "ar_plain": "قال الاستاذ الكتاب جديد",
+        "translit": "qāla l-ustādhu: al-kitābu jadīdun",
+        "en": "The teacher said, “The book is new.”",
+        "ur": "استاد نے کہا: کتاب نئی ہے۔"
+      },
+      "options": [
+        {
+          "en": "The teacher said, “The book is new.”",
+          "ur": "استاد نے کہا: کتاب نئی ہے۔"
+        },
+        {
+          "en": "The teacher's book is new.",
+          "ur": "استاد کی کتاب نئی ہے۔"
+        },
+        {
+          "en": "The teacher said, “The book is big.”",
+          "ur": "استاد نے کہا: کتاب بڑی ہے۔"
+        },
+        {
+          "en": "The student said, “The book is new.”",
+          "ur": "طالب علم نے کہا: کتاب نئی ہے۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "قَالَ means 'he said.' The speaker is مُحَمَّدٌ and the quoted speech follows.",
-        "ur": "قَالَ کا مطلب ہے 'اس نے کہا'۔ بولنے والا مُحَمَّدٌ ہے اور نقلِ قول کے الفاظ اس کے بعد ہیں۔"
+        "en": "Speaker: الْأُسْتَاذُ. Words: الْكِتَابُ جَدِيدٌ.",
+        "ur": "بولنے والا: الْأُسْتَاذُ۔ الفاظ: الْكِتَابُ جَدِيدٌ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch22-l01-ex03",
+      "ayah_fragment": {
+        "ar": "قَالَ أَحَدُهُمَا",
+        "surah_ref": "Yusuf 12:36"
+      },
+      "options": [
+        {
+          "en": "Yusuf's brothers speak",
+          "ur": "یوسف کے بھائی بولتے ہیں"
+        },
+        {
+          "en": "Both young men speak together",
+          "ur": "دونوں جوان ایک ساتھ بولتے ہیں"
+        },
+        {
+          "en": "Yusuf is the speaker",
+          "ur": "یوسف بولنے والے ہیں"
+        },
+        {
+          "en": "One of the two young men: he is the speaker",
+          "ur": "دونوں جوانوں میں سے ایک: وہی بولنے والا ہے"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After قَالَ comes the speaker: أَحَدُهُمَا, one of the two.",
+        "ur": "قَالَ کے بعد بولنے والا آتا ہے: أَحَدُهُمَا، دونوں میں سے ایک۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch22-l01-ex02",
+      "id": "ch22-l01-ex04",
       "statement": {
-        "en": "قَالَتْ is used when the speaker is a single female.",
-        "ur": "قَالَتْ اس وقت استعمال ہوتی ہے جب بولنے والی ایک عورت ہو۔",
+        "en": "The book belongs to Ahmad.",
+        "ur": "کتاب احمد کی ہے۔",
         "ar_example": {
-          "ar": "قَالَتْ فَاطِمَةُ: \"أَنَا فِي الْبَيْتِ\"",
-          "ar_plain": "قالت فاطمة: انا في البيت",
-          "translit": "qaalati faatimatun: 'anaa fi al-bayti'",
-          "en": "Fatima said: 'I am at home.'",
-          "ur": "فاطمہ نے کہا: 'میں گ�ر میں ہوں۔'"
+          "ar": "قَالَ أَحْمَدُ: كِتَابِي عَلَى الْمَكْتَبِ",
+          "ar_plain": "قال احمد كتابي على المكتب",
+          "translit": "qāla aḥmadu: kitābī ʿalā l-maktabi",
+          "en": "Ahmad said, “My book is on the desk.”",
+          "ur": "احمد نے کہا: میری کتاب میز پر ہے۔"
         }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Inside the quotation, my means the speaker, Ahmad.",
+        "ur": "اقتباس کے اندر 'میری' کا مطلب بولنے والا، یعنی احمد، ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch22-l01-ex03",
+      "id": "ch22-l01-ex05",
       "mode": "TAP",
-      "sentence_ar": "___ الْأَسْتَاذُ: \"الْمَدْرَسَةُ قَرِيبَةٌ\"",
+      "sentence_ar": "___ فَاطِمَةُ: أَنَا طَالِبَةٌ",
       "hint": {
-        "en": "The teacher said: 'The school is near.'",
-        "ur": "استاد نے کہا: 'school قریب ہے۔'"
+        "en": "Fatimah said, “I am a student.”",
+        "ur": "فاطمہ نے کہا: میں طالبہ ہوں۔"
       },
       "options": [
         {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went",
+          "ur": "وہ گئی"
+        },
+        {
+          "ar": "قَالَتْ",
+          "ar_plain": "قالت",
+          "translit": "qālat",
+          "en": "she said",
+          "ur": "اس نے کہا (عورت)"
+        },
+        {
           "ar": "قَالَ",
           "ar_plain": "قال",
-          "translit": "qaala",
+          "translit": "qāla",
           "en": "he said",
           "ur": "اس نے کہا"
         },
         {
-          "ar": "سَأَلَ",
-          "ar_plain": "سأل",
-          "translit": "sa'ala",
-          "en": "he asked",
-          "ur": "اس نے پوچھا"
-        },
-        {
-          "ar": "أَجَابَ",
-          "ar_plain": "أجاب",
-          "translit": "ajaaba",
-          "en": "he answered",
-          "ur": "اس نے جواب دیا"
-        },
-        {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
-          "translit": "dhahaba",
-          "en": "he went",
-          "ur": "اس نے گیا"
+          "ar": "رَجَعَتْ",
+          "ar_plain": "رجعت",
+          "translit": "rajaʿat",
+          "en": "she returned",
+          "ur": "وہ واپس آئی"
         }
       ],
       "correct_answer": {
-        "ar": "قَالَ",
-        "ar_plain": "قال",
-        "translit": "qaala",
-        "en": "he said",
-        "ur": "اس نے کہا"
+        "ar": "قَالَتْ",
+        "ar_plain": "قالت",
+        "translit": "qālat",
+        "en": "she said",
+        "ur": "اس نے کہا (عورت)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Fatimah is a woman: قَالَتْ.",
+        "ur": "فاطمہ عورت ہیں: قَالَتْ۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch22-l01-ex04",
+      "id": "ch22-l01-ex06",
       "left_column": [
         {
-          "ar": "قَالَ الْوَلَدُ",
-          "ar_plain": "قال الولد",
-          "translit": "qaala al-waladu",
-          "en": "the boy said",
-          "ur": "لڑکے نے کہا"
+          "ar": "قَالَ الْأُسْتَاذُ",
+          "ar_plain": "قال الاستاذ",
+          "translit": "qāla l-ustādhu",
+          "en": "the teacher said",
+          "ur": "استاد نے کہا"
         },
         {
-          "ar": "قَالَتْ الْبِنْتُ",
-          "ar_plain": "قالت البنت",
-          "translit": "qaalati al-bintu",
-          "en": "the girl said",
-          "ur": "لڑکی نے کہا"
+          "ar": "قَالَتِ الطَّالِبَةُ",
+          "ar_plain": "قالت الطالبة",
+          "translit": "qālati ṭ-ṭālibatu",
+          "en": "the female student said",
+          "ur": "طالبہ نے کہا"
         },
         {
-          "ar": "قَالُوا الرِّجَالُ",
-          "ar_plain": "قالوا الرجال",
-          "translit": "qaaluu ar-rijaalu",
-          "en": "the men said",
-          "ur": "مردوں نے کہا"
+          "ar": "قَالَ الطَّالِبُ",
+          "ar_plain": "قال الطالب",
+          "translit": "qāla ṭ-ṭālibu",
+          "en": "the student said",
+          "ur": "طالب علم نے کہا"
         },
         {
-          "ar": "قَالَتْ الْمَرْأَةُ",
-          "ar_plain": "قالت المرأة",
-          "translit": "qaalati al-mar'atu",
-          "en": "the woman said",
-          "ur": "عورت نے کہا"
+          "ar": "قَالَتْ فَاطِمَةُ",
+          "ar_plain": "قالت فاطمة",
+          "translit": "qālat fāṭimatu",
+          "en": "Fatimah said",
+          "ur": "فاطمہ نے کہا"
         }
       ],
       "right_column": [
         {
-          "en": "he said (singular m)",
-          "ur": "اس نے کہا (واحد مذکر)"
+          "en": "A female student is speaking.",
+          "ur": "ایک طالبہ بول رہی ہے۔"
         },
         {
-          "en": "she said (singular f)",
-          "ur": "اس نے کہا (واحد مؤنث)"
+          "en": "Fatimah is speaking.",
+          "ur": "فاطمہ بول رہی ہیں۔"
         },
         {
-          "en": "they said (plural m)",
-          "ur": "انہوں نے کہا (جمع مذکر)"
+          "en": "The teacher is speaking.",
+          "ur": "استاد بول رہے ہیں۔"
         },
         {
-          "en": "she said (singular f)",
-          "ur": "اس نے کہا (واحد مؤنث)"
+          "en": "A male student is speaking.",
+          "ur": "ایک طالب علم بول رہا ہے۔"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
+          0
+        ],
+        [
+          2,
           3
+        ],
+        [
+          3,
+          1
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The speaker comes right after قَالَ / قَالَتْ.",
+        "ur": "بولنے والا قَالَ / قَالَتْ کے فوراً بعد آتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch22-l01-ex07",
+      "statement": {
+        "en": "In قَالَ أَحَدُهُمَا (Yusuf 12:36), the speaker is Yusuf.",
+        "ur": "قَالَ أَحَدُهُمَا (سورۃ یوسف 12:36) میں بولنے والے یوسف ہیں۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The speaker is one of the two young men in the prison.",
+        "ur": "بولنے والا قید خانے کے دو جوانوں میں سے ایک ہے۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch22-l01-ex05",
+      "id": "ch22-l01-ex08",
       "target_translation": {
-        "en": "The girl said: 'I am at home.'",
-        "ur": "لڑکی نے کہا: 'میں گھر میں ہوں۔'"
+        "en": "The student said, “The book is new.”",
+        "ur": "طالب علم نے کہا: کتاب نئی ہے۔"
       },
       "tiles": [
         {
-          "ar": "قَالَتْ",
-          "ar_plain": "قالت",
-          "translit": "qaalati",
-          "en": "she said",
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitābu",
+          "en": "the book",
+          "ur": "کتاب"
+        },
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qāla",
+          "en": "he said",
           "ur": "اس نے کہا"
         },
         {
-          "ar": "الْبِنْتُ",
-          "ar_plain": "البنت",
-          "translit": "al-bintu",
-          "en": "the girl",
-          "ur": "لڑکی"
+          "ar": "جَدِيدٌ",
+          "ar_plain": "جديد",
+          "translit": "jadīdun",
+          "en": "new",
+          "ur": "نئی"
         },
         {
-          "ar": "أَنَا",
-          "ar_plain": "انا",
-          "translit": "anaa",
-          "en": "I",
-          "ur": "میں"
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
         },
         {
-          "ar": "فِي الْبَيْتِ",
-          "ar_plain": "في البيت",
-          "translit": "fi al-bayti",
-          "en": "at home",
-          "ur": "گھر میں"
-        },
-        {
-          "ar": "فِي الْمَدْرَسَةِ",
-          "ar_plain": "في المدرسة",
-          "translit": "fi al-madrasati",
-          "en": "at school",
-          "ur": "school میں"
+          "ar": "قَالَتْ",
+          "ar_plain": "قالت",
+          "translit": "qālat",
+          "en": "she said",
+          "ur": "اس نے کہا (عورت)"
         }
       ],
       "correct_order": [
         1,
+        3,
         0,
-        2,
-        3
+        2
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "CONVERSATION_BUILDER",
-      "id": "ch22-l01-ex06",
-      "prompt_line": {
-        "ar": "مَنْ قَالَ: \"الْكِتَابُ عَلَى الْمَكْتَبِ\"؟",
-        "ar_plain": "من قال: الكتاب على المكتب؟",
-        "translit": "man qaala: 'al-kitaabu 'alaa al-maktabi'?",
-        "en": "Who said: 'The book is on the desk'?",
-        "ur": "کس نے کہا: 'کتاب میز پر ہے'؟"
-      },
-      "response_mode": "PICK",
-      "options": [
-        {
-          "ar": "قَالَ عَلِيٌّ",
-          "ar_plain": "قال علي",
-          "translit": "qaala 'aliyyun",
-          "en": "Ali said",
-          "ur": "علی نے کہا"
-        },
-        {
-          "ar": "سَأَلَ عَلِيٌّ",
-          "ar_plain": "سأل علي",
-          "translit": "sa'ala 'aliyyun",
-          "en": "Ali asked",
-          "ur": "علی نے پوچھا"
-        },
-        {
-          "ar": "أَجَابَ عَلِيٌّ",
-          "ar_plain": "أجاب علي",
-          "translit": "ajaaba 'aliyyun",
-          "en": "Ali answered",
-          "ur": "علی نے جواب دیا"
-        },
-        {
-          "ar": "ذَهَبَ عَلِيٌّ",
-          "ar_plain": "ذهب علي",
-          "translit": "dhahaba 'aliyyun",
-          "en": "Ali went",
-          "ur": "علی گیا"
-        }
-      ],
-      "correct_option_index": 0,
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch22-l01-ex07",
-      "prompt": {
-        "ar": "قَالُوا الْأَصْدِقَاءُ: \"نَحْنُ فِي الْمَسْجِدِ\"",
-        "ar_plain": "قالوا الأصدقاء: نحن في المسجد",
-        "translit": "qaaluu al-asadiqaa'u: 'nahnu fi al-masjidi'",
-        "en": "The friends said: 'We are at the mosque.'",
-        "ur": "دوستوں نے کہا: 'ہم مسجد میں ہیں۔'"
-      },
-      "options": [
-        {
-          "en": "The friends said: 'We are at the mosque.'",
-          "ur": "دوستوں نے کہا: 'ہم مسجد میں ہیں۔'"
-        },
-        {
-          "en": "The friends asked: 'We are at the mosque.'",
-          "ur": "دوستوں نے پوچھا: 'ہم مسجد میں ہیں۔'"
-        },
-        {
-          "en": "A friend said: 'I am at the mosque.'",
-          "ur": "ایک دوست نے کہا: 'میں مسجد میں ہوں۔'"
-        },
-        {
-          "en": "The friends went to the mosque.",
-          "ur": "دوست مسجد گئے۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "قَالُوا indicates plural masculine 'they said.' الْأَصْدِقَاءُ is the plural of صَدِيقٌ (friend), all male.",
-        "ur": "قَالُوا جمع مذکر ہے 'انہوں نے کہا'۔ الْأَصْدِقَاءُ صَدِيقٌ (دوست) کی جمع ہے، تمام مرد۔"
+        "en": "قَالَ, the speaker, then his words.",
+        "ur": "قَالَ، بولنے والا، پھر اس کے الفاظ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "قَالَ — introducing speech in dialogue",
-      "ar": "قَالَ — الْقَوْلُ فِي الْحِوَارِ",
-      "ur": "قَالَ — گفتگو میں بولی کا متعارف کرانا"
+      "en": "Who said what?",
+      "ar": "مَنْ قَالَ؟",
+      "ur": "کس نے کیا کہا؟"
     },
     "ayah": {
       "surah": 12,
       "ayah": 36,
       "label": "Yusuf 12:36",
-      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ ۖ قَالَ أَحَدُهُمَا إِنِّي أَرَانِي أَعْصِرُ خَمْرًا ۖ وَقَالَ الْآخَرُ إِنِّي أَرَانِي أَحْمِلُ فَوْقَ رَأْسِي خُبْزًا تَأْكُلُ الطَّيْرُ مِنْهُ ۖ نَبِّئْنَا بِتَأْوِيلِهِ ۖ إِنَّا نَرَاكَ مِنَ الْمُحْسِنِينَ",
-      "en": "And there entered the prison with him two young men. One of them said, \"Indeed, I have seen myself [in a dream] pressing [grapes for] wine.\" The other said, \"Indeed, I have seen myself carrying upon my head [some] bread, from which the birds were eating. Inform us of its interpretation; indeed, we see you to be of those who do good.\"",
-      "ur": "اور ان کے ساتھ دو اور جوان بھی داخل زندان ہوئے۔ ایک نے ان میں سے کہا کہ (میں نے خواب دیکھا ہے) دیکھتا (کیا) ہوں کہ شراب (کے لیے انگور) نچوڑ رہا ہوں۔ دوسرے نے کہا کہ (میں نے بھی خواب دیکھا ہے) میں یہ دیکھتا ہوں کہ اپنے سر پر روٹیاں اٹھائے ہوئے ہوں اور جانور ان میں سے کھا رہے (ہیں تو) ہمیں ان کی تعبیر بتا دیجیئے کہ ہم تمہیں نیکوکار دیکھتے ہیں",
+      "ar": "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ قَالَ أَحَدُهُمَا",
+      "en": "And two young men entered the prison with him. One of them said…",
+      "ur": "اور ان کے ساتھ دو جوان قید خانے میں داخل ہوئے۔ ان میں سے ایک نے کہا…",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012036.mp3"
     },
     "highlighted_word_indices": [
-      1
+      4,
+      5
+    ],
+    "highlighted_words": [
+      "قَالَ",
+      "أَحَدُهُمَا"
     ],
     "noor_explanation": {
-      "en": "وَقَالَ لَهُ — 'and he said to him.' In the Quran, Yusuf's brothers speak to him using قَالَ. This verb opens every dialogue in Arabic.",
-      "ur": "وَقَالَ لَهُ — 'اور انہوں نے اس سے کہا۔' قرآن میں یوسف کے بھائی ان سے قَالَ سے بات کرتے ہیں۔ یہ فعل ہر گفتگو کو کھولتا ہے۔"
+      "en": "قَالَ أَحَدُهُمَا: one of them said. The Quran names the speaker right after قَالَ, then gives his own words. Asking who spoke before what was said keeps you from mixing up the people in a story.",
+      "ur": "قَالَ أَحَدُهُمَا: ان میں سے ایک نے کہا۔ قرآن قَالَ کے فوراً بعد بولنے والے کا ذکر کرتا ہے، پھر اس کے اپنے الفاظ دیتا ہے۔ 'کیا کہا' سے پہلے 'کون بولا' پوچھنے سے آپ قصے کے لوگوں کو آپس میں نہیں ملاتے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "قَالَ, قَالَتْ, قَالُوا — these three forms cover most of the dialogue in Arabic. One said, she said, they said. Keep practicing!",
-      "ur": "قَالَ، قَالَتْ، قَالُوا — یہ تین forms عربی میں اکثر گفتگو کا احاطہ کرتے ہیں۔ اس نے کہا، اس نے کہا، انہوں نے کہا۔ مزید مشق کریں!"
+      "en": "You can find the speaker and their words. Next: سَأَلَ, asked — and a surprise: قَالَ can report a question too.",
+      "ur": "آپ بولنے والا اور اس کے الفاظ ڈھونڈ سکتے ہیں۔ آگے: سَأَلَ، پوچھا — اور ایک نئی بات: قَالَ سوال بھی بیان کر سکتا ہے۔"
     }
   }
 }

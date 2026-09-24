@@ -1,0 +1,507 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Book 2 mixed review (ch23-l05, new REVIEW). Three fresh mini-scenes — our school with the mosque in front of it (أَمَامَهَا, a position word with an owner ending), Fatimah leaving her house for the market, Ahmad asking his sister where his book is — and two taught Quran targets (20:18, 113:1), with one reflect-and-correct item each for the two common confusions (separate هُوَ versus attached ـهُ; رَبَّنَا versus آتِنَا). No new grammar or verse assertion. Reveal بِرَبِّ (113:1, index 2). Rebuilt 2026-09-24 from Docs/proposals/chapter-23-content-proposal.md with the owner-approved review amendments recorded there (Ta-Ha 20:17–18 وَمَا تِلْكَ بِيَمِينِكَ / قَالَ هِيَ عَصَايَ instead of Al-Baqarah 2:5, whose أُولَٰئِكَ → people of taqwa task is already Chapter 15 L4's; Al-Baqarah 2:21 for الَّذِي with رَبَّكُمُ; Al-Qasas 28:21 for movement plus speech). Chapters 20–22 were rebuilt and released together with this chapter, so every combined skill tested here is taught. The map and fixtures named reader_lecture_23_book2_consolidation.md and reader_lessons_11-13_integration.md, neither of which existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "کتاب 2 کا ملا جلا جائزہ",
+    "chapter_order": 23,
+    "lesson_order": 5,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 201,
+      "label": "Al-Baqarah 2:201",
+      "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
+      "en": "Our Lord, give us good in this world",
+      "ur": "اے ہمارے رب! ہمیں دنیا میں بھلائی دے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002201.mp3"
+    },
+    "noor_intro": {
+      "en": "Review time. Read each scene for who, what, where and whose, then check two ayat you know.",
+      "ur": "جائزے کا وقت۔ ہر منظر میں کون، کیا، کہاں اور کس کا پڑھیں، پھر دو جانی پہچانی آیات دیکھیں۔"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Book 2 in one page",
+        "ar": "هٰذَا كِتَابُهُ · الَّذِي · مِنْ … إِلَى … · قَالَ",
+        "ur": "کتاب 2 ایک صفحے میں"
+      },
+      "explanation": {
+        "en": "Pointing and owning, describing with الَّذِي / الَّتِي, journeys and landmarks, and who said what. Today you use them together.",
+        "ur": "اشارہ اور ملکیت، الَّذِي / الَّتِي سے وصف، سفر اور نشانیاں، اور کس نے کیا کہا۔ آج آپ انہیں ایک ساتھ استعمال کریں گے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "هٰذِهِ مَدْرَسَتُنَا، وَالْمَسْجِدُ أَمَامَهَا",
+        "ar_plain": "هذه مدرستنا والمسجد امامها",
+        "translit": "hādhihi madrasatunā, wa l-masjidu amāmahā",
+        "en": "This is our school, and the mosque is in front of it.",
+        "ur": "یہ ہمارا اسکول ہے، اور مسجد اس کے سامنے ہے۔"
+      },
+      "explanation": {
+        "en": "مَدْرَسَتُنَا: our school. أَمَامَهَا: in front of it — أَمَامَ + ـهَا, pointing back to the school.",
+        "ur": "مَدْرَسَتُنَا: ہمارا اسکول۔ أَمَامَهَا: اس کے سامنے — أَمَامَ + ـهَا، اسکول کی طرف اشارہ۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "خَرَجَتْ فَاطِمَةُ مِنْ بَيْتِهَا وَذَهَبَتْ إِلَى السُّوقِ",
+        "ar_plain": "خرجت فاطمة من بيتها وذهبت الى السوق",
+        "translit": "kharajat fāṭimatu min baytihā wa dhahabat ilā s-sūqi",
+        "en": "Fatimah left her house and went to the market.",
+        "ur": "فاطمہ اپنے گھر سے نکلی اور بازار گئی۔"
+      },
+      "explanation": {
+        "en": "Start: بَيْتِهَا, her house — ـهَا is Fatimah. End: السُّوق.",
+        "ur": "آغاز: بَيْتِهَا، اس کا گھر — ـهَا فاطمہ ہیں۔ انجام: السُّوق۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "سَأَلَ أَحْمَدُ: أَيْنَ كِتَابِي؟ قَالَتْ أُخْتُهُ: كِتَابُكَ عَلَى الْمَكْتَبِ",
+        "ar_plain": "سال احمد اين كتابي قالت اخته كتابك على المكتب",
+        "translit": "saʾala aḥmadu: ayna kitābī? qālat ukhtuhu: kitābuka ʿalā l-maktabi",
+        "en": "Ahmad asked, “Where is my book?” His sister said, “Your book is on the desk.”",
+        "ur": "احمد نے پوچھا: میری کتاب کہاں ہے؟ اس کی بہن نے کہا: تمہاری کتاب میز پر ہے۔"
+      },
+      "explanation": {
+        "en": "Ahmad asks about كِتَابِي, my book; his sister answers كِتَابُكَ, your book. The same book, seen from two speakers.",
+        "ur": "احمد كِتَابِي، میری کتاب، کے بارے میں پوچھتا ہے؛ اس کی بہن كِتَابُكَ، تمہاری کتاب، سے جواب دیتی ہے۔ وہی کتاب، دو بولنے والوں کی نظر سے۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Common mix-up 1",
+        "ar": "هُوَ / ـهُ",
+        "ur": "عام الجھن 1"
+      },
+      "explanation": {
+        "en": "هُوَ is a word on its own: he. ـهُ is attached: his, or him on an action.",
+        "ur": "هُوَ اپنے آپ میں لفظ ہے: وہ۔ ـهُ جڑا ہوا ہے: اس کا، یا کام پر اسے۔"
+      },
+      "examples": [
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "he, it (a separate word)",
+          "ur": "وہ (الگ لفظ، مذکر)"
+        },
+        {
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitābuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Common mix-up 2",
+        "ar": "رَبَّنَا / آتِنَا",
+        "ur": "عام الجھن 2"
+      },
+      "explanation": {
+        "en": "رَبَّنَا: our (a noun). آتِنَا: us (a request).",
+        "ur": "رَبَّنَا: ہمارا (اسم)۔ آتِنَا: ہمیں (درخواست)۔"
+      },
+      "examples": [
+        {
+          "ar": "رَبَّنَا",
+          "ar_plain": "ربنا",
+          "translit": "rabbanā",
+          "en": "our Lord",
+          "ur": "ہمارا رب"
+        },
+        {
+          "ar": "آتِنَا",
+          "ar_plain": "اتنا",
+          "translit": "ātinā",
+          "en": "give us",
+          "ur": "ہمیں دے"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch23-l05-ex01",
+      "prompt": {
+        "ar": "هٰذِهِ مَدْرَسَتُنَا، وَالْمَسْجِدُ أَمَامَهَا",
+        "ar_plain": "هذه مدرستنا والمسجد امامها",
+        "translit": "hādhihi madrasatunā, wa l-masjidu amāmahā",
+        "en": "This is our school, and the mosque is in front of it.",
+        "ur": "یہ ہمارا اسکول ہے، اور مسجد اس کے سامنے ہے۔"
+      },
+      "options": [
+        {
+          "en": "This is our school, and the mosque is in front of it.",
+          "ur": "یہ ہمارا اسکول ہے، اور مسجد اس کے سامنے ہے۔"
+        },
+        {
+          "en": "This is my school, and the mosque is behind it.",
+          "ur": "یہ میرا اسکول ہے، اور مسجد اس کے پیچھے ہے۔"
+        },
+        {
+          "en": "This school is ours, and the mosque is far.",
+          "ur": "یہ اسکول ہمارا ہے، اور مسجد دور ہے۔"
+        },
+        {
+          "en": "This is their school, and the mosque is in it.",
+          "ur": "یہ ان کا اسکول ہے، اور مسجد اس میں ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَدْرَسَتُنَا: our school; أَمَامَهَا: in front of it.",
+        "ur": "مَدْرَسَتُنَا: ہمارا اسکول؛ أَمَامَهَا: اس کے سامنے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch23-l05-ex02",
+      "statement": {
+        "en": "In أَمَامَهَا, ـهَا points back to the school.",
+        "ur": "أَمَامَهَا میں ـهَا اسکول کی طرف لوٹتا ہے۔",
+        "ar_example": {
+          "ar": "هٰذِهِ مَدْرَسَتُنَا، وَالْمَسْجِدُ أَمَامَهَا",
+          "ar_plain": "هذه مدرستنا والمسجد امامها",
+          "translit": "hādhihi madrasatunā, wa l-masjidu amāmahā",
+          "en": "This is our school, and the mosque is in front of it.",
+          "ur": "یہ ہمارا اسکول ہے، اور مسجد اس کے سامنے ہے۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The mosque is in front of the school: ـهَا = الْمَدْرَسَة.",
+        "ur": "مسجد اسکول کے سامنے ہے: ـهَا = الْمَدْرَسَة۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch23-l05-ex03",
+      "prompt_line": {
+        "ar": "خَرَجَتْ فَاطِمَةُ مِنْ بَيْتِهَا وَذَهَبَتْ إِلَى السُّوقِ. مِنْ أَيْنَ خَرَجَتْ؟",
+        "ar_plain": "خرجت فاطمة من بيتها وذهبت الى السوق من اين خرجت",
+        "translit": "kharajat fāṭimatu min baytihā wa dhahabat ilā s-sūqi. min ayna kharajat?",
+        "en": "Fatimah left her house and went to the market. From where did she leave?",
+        "ur": "فاطمہ اپنے گھر سے نکلی اور بازار گئی۔ وہ کہاں سے نکلی؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "مِنَ السُّوقِ",
+          "ar_plain": "من السوق",
+          "translit": "mina s-sūqi",
+          "en": "from the market",
+          "ur": "بازار سے"
+        },
+        {
+          "ar": "مِنْ بَيْتِهِ",
+          "ar_plain": "من بيته",
+          "translit": "min baytihi",
+          "en": "from his house",
+          "ur": "اس (مرد) کے گھر سے"
+        },
+        {
+          "ar": "مِنْ بَيْتِهَا",
+          "ar_plain": "من بيتها",
+          "translit": "min baytihā",
+          "en": "from her house",
+          "ur": "اپنے گھر سے"
+        },
+        {
+          "ar": "إِلَى السُّوقِ",
+          "ar_plain": "الى السوق",
+          "translit": "ilā s-sūqi",
+          "en": "to the market",
+          "ur": "بازار کی طرف"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The start is after مِنْ: her own house.",
+        "ur": "آغاز مِنْ کے بعد ہے: اس کا اپنا گھر۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch23-l05-ex04",
+      "statement": {
+        "en": "In this scene, كِتَابِي and كِتَابُكَ are two different books.",
+        "ur": "اس منظر میں كِتَابِي اور كِتَابُكَ دو الگ کتابیں ہیں۔",
+        "ar_example": {
+          "ar": "سَأَلَ أَحْمَدُ: أَيْنَ كِتَابِي؟ قَالَتْ أُخْتُهُ: كِتَابُكَ عَلَى الْمَكْتَبِ",
+          "ar_plain": "سال احمد اين كتابي قالت اخته كتابك على المكتب",
+          "translit": "saʾala aḥmadu: ayna kitābī? qālat ukhtuhu: kitābuka ʿalā l-maktabi",
+          "en": "Ahmad asked, “Where is my book?” His sister said, “Your book is on the desk.”",
+          "ur": "احمد نے پوچھا: میری کتاب کہاں ہے؟ اس کی بہن نے کہا: تمہاری کتاب میز پر ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It is Ahmad's book: my when he speaks, your when his sister speaks.",
+        "ur": "یہ احمد کی کتاب ہے: جب وہ بولے تو میری، جب اس کی بہن بولے تو تمہاری۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch23-l05-ex05",
+      "mode": "TAP",
+      "sentence_ar": "سَأَلَ أَحْمَدُ: أَيْنَ كِتَابِي؟ ___ أُخْتُهُ: كِتَابُكَ عَلَى الْمَكْتَبِ",
+      "hint": {
+        "en": "… His sister said, “Your book is on the desk.”",
+        "ur": "… اس کی بہن نے کہا: تمہاری کتاب میز پر ہے۔"
+      },
+      "options": [
+        {
+          "ar": "قَالَتْ",
+          "ar_plain": "قالت",
+          "translit": "qālat",
+          "en": "she said",
+          "ur": "اس نے کہا (عورت)"
+        },
+        {
+          "ar": "ذَهَبَتْ",
+          "ar_plain": "ذهبت",
+          "translit": "dhahabat",
+          "en": "she went",
+          "ur": "وہ گئی"
+        },
+        {
+          "ar": "سَأَلَ",
+          "ar_plain": "سال",
+          "translit": "saʾala",
+          "en": "he asked",
+          "ur": "اس نے پوچھا"
+        },
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qāla",
+          "en": "he said",
+          "ur": "اس نے کہا (مرد)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "قَالَتْ",
+        "ar_plain": "قالت",
+        "translit": "qālat",
+        "en": "she said",
+        "ur": "اس نے کہا (عورت)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "His sister speaks: قَالَتْ.",
+        "ur": "اس کی بہن بولتی ہے: قَالَتْ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch23-l05-ex06",
+      "ayah_fragment": {
+        "ar": "قَالَ هِيَ عَصَايَ",
+        "surah_ref": "Ta-Ha 20:18"
+      },
+      "options": [
+        {
+          "en": "هِيَ — her staff",
+          "ur": "هِيَ — اس کی لاٹھی"
+        },
+        {
+          "en": "Musa answers: it is my staff",
+          "ur": "موسیٰ جواب دیتے ہیں: یہ میری لاٹھی ہے"
+        },
+        {
+          "en": "عَصَايَ — your staff",
+          "ur": "عَصَايَ — تمہاری لاٹھی"
+        },
+        {
+          "en": "Musa asks: what is my staff?",
+          "ur": "موسیٰ پوچھتے ہیں: میری لاٹھی کیا ہے؟"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "قَالَ reports his answer; عَصَايَ is my staff.",
+        "ur": "قَالَ ان کا جواب بیان کرتا ہے؛ عَصَايَ میری لاٹھی ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch23-l05-ex07",
+      "ayah_fragment": {
+        "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+        "surah_ref": "Al-Falaq 113:1"
+      },
+      "options": [
+        {
+          "en": "our Lord",
+          "ur": "ہمارا رب"
+        },
+        {
+          "en": "my Lord of daybreak",
+          "ur": "صبح کا میرا رب"
+        },
+        {
+          "en": "the Lord of daybreak: رَبِّ with its owner-word",
+          "ur": "صبح کا رب: رَبِّ اپنے مالک والے لفظ کے ساتھ"
+        },
+        {
+          "en": "a new daybreak",
+          "ur": "ایک نئی صبح"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No ي: not my. الْفَلَقِ follows: the Lord of daybreak.",
+        "ur": "ي نہیں: 'میرا' نہیں۔ الْفَلَقِ بعد میں: صبح کا رب۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch23-l05-ex08",
+      "statement": {
+        "en": "A learner says: “هُوَ in قُلْ هُوَ اللَّهُ أَحَدٌ is an attached ending.” Is that right?",
+        "ur": "ایک طالب علم کہتا ہے: 'قُلْ هُوَ اللَّهُ أَحَدٌ میں هُوَ جڑا ہوا آخر ہے۔' کیا یہ درست ہے؟"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هُوَ is a separate pronoun; the attached form is ـهُ.",
+        "ur": "هُوَ الگ ضمیر ہے؛ جڑی ہوئی شکل ـهُ ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch23-l05-ex09",
+      "statement": {
+        "en": "A learner says: “In رَبَّنَا آتِنَا, both words mean our.” Is that right?",
+        "ur": "ایک طالب علم کہتا ہے: 'رَبَّنَا آتِنَا میں دونوں لفظوں کا مطلب ہمارا ہے۔' کیا یہ درست ہے؟"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رَبَّنَا: our Lord; آتِنَا: give us.",
+        "ur": "رَبَّنَا: ہمارا رب؛ آتِنَا: ہمیں دے۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch23-l05-ex10",
+      "target_translation": {
+        "en": "This is the student who went to the mosque.",
+        "ur": "یہ وہ طالب علم ہے جو مسجد گیا۔"
+      },
+      "tiles": [
+        {
+          "ar": "إِلَى الْمَسْجِدِ",
+          "ar_plain": "الى المسجد",
+          "translit": "ilā l-masjidi",
+          "en": "to the mosque",
+          "ur": "مسجد کی طرف"
+        },
+        {
+          "ar": "الَّذِي",
+          "ar_plain": "الذي",
+          "translit": "alladhī",
+          "en": "who",
+          "ur": "جو"
+        },
+        {
+          "ar": "الَّتِي",
+          "ar_plain": "التي",
+          "translit": "allatī",
+          "en": "who (feminine)",
+          "ur": "جو (مؤنث)"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "گیا"
+        },
+        {
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "aṭ-ṭālibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        },
+        {
+          "ar": "هٰذَا",
+          "ar_plain": "هذا",
+          "translit": "hādhā",
+          "en": "this",
+          "ur": "یہ"
+        }
+      ],
+      "correct_order": [
+        5,
+        4,
+        1,
+        3,
+        0
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هٰذَا الطَّالِبُ, then الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ.",
+        "ur": "هٰذَا الطَّالِبُ، پھر الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Book 2, together",
+      "ar": "الْكِتَابُ الثَّانِي",
+      "ur": "کتاب 2، یکجا"
+    },
+    "ayah": {
+      "surah": 113,
+      "ayah": 1,
+      "label": "Al-Falaq 113:1",
+      "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+      "en": "Say, “I seek refuge in the Lord of daybreak.”",
+      "ur": "کہو: میں صبح کے رب کی پناہ مانگتا ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
+    },
+    "highlighted_word_indices": [
+      2
+    ],
+    "highlighted_words": [
+      "بِرَبِّ"
+    ],
+    "noor_explanation": {
+      "en": "بِرَبِّ: in the Lord of — the kasra without ي you learned to check in Chapter 19. Pointers, owners, relatives, journeys and dialogue: you can now read them together in connected Arabic.",
+      "ur": "بِرَبِّ: … کے رب کی — بغیر ي کا زیر جسے جانچنا آپ نے باب 19 میں سیکھا۔ اشارے، مالک، موصول، سفر اور گفتگو: اب آپ انہیں جڑی ہوئی عربی میں ایک ساتھ پڑھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review complete. Take the Chapter 23 final test when you are ready.",
+      "ur": "جائزہ مکمل۔ جب تیار ہوں تو باب 23 کا آخری امتحان دیں۔"
+    }
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 20 final test (ch20-test, new). Twelve multiple-choice questions on the proposal's blueprint: ـنَا / ـكُمْ / ـهُمْ recognised on nouns (3), ـكُمْ/ـكُنَّ and ـهُمْ/ـهُنَّ chosen from an explicit referent (3), noun and owner in an authored sentence or exchange (2), a taught Quran target in context (2: 3:193, 2:277), noun-attached our versus an action-attached ending (2). New sentences, not card wording (دَفْتَر, قَلَم, فَصْل, بَيْت); no verse-number trivia, case theory or theology. Pass mark 80 % (10 of 12). Rebuilt 2026-09-24 from Docs/proposals/chapter-20-content-proposal.md with the owner-approved review amendments recorded there (2:277 for ـهُمْ instead of 2:5, which Chapter 15 L4 already reads; 33:34 instead of 33:33; 2:233 instead of 60:12; the ـهِمْ / ـهِنَّ sound change after a kasra taught; Chapter 10's standalone plural pronouns and Chapter 11's بُيُوتِكُمْ used as the bridge). The chapter map named reader_lecture_20_attached_pronouns_plural.md, which never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "باب 20 کا آخری امتحان",
+    "chapter_order": 20,
+    "lesson_order": 8,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 3,
+      "ayah": 193,
+      "label": "Ali 'Imran 3:193",
+      "ar": "رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا",
+      "en": "Our Lord, so forgive us our sins",
+      "ur": "اے ہمارے رب! پس ہمارے گناہ بخش دے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003193.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 20.",
+      "ur": "باب 20 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 20,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch20-test-q01",
+        "topic": {
+          "en": "Plural endings on nouns",
+          "ur": "اسم پر جمع کے آخر"
+        },
+        "prompt": {
+          "en": "What does دَفْتَرُنَا mean?",
+          "ur": "دَفْتَرُنَا کا کیا مطلب ہے؟"
+        },
+        "arabic": "دَفْتَرُنَا",
+        "options": [
+          {
+            "en": "my notebook",
+            "ur": "میری کاپی"
+          },
+          {
+            "en": "your notebook (to a group)",
+            "ur": "تم سب کی کاپی"
+          },
+          {
+            "en": "our notebook",
+            "ur": "ہماری کاپی"
+          },
+          {
+            "en": "their notebook",
+            "ur": "ان کی کاپی"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch20-test-q02",
+        "topic": {
+          "en": "Plural endings on nouns",
+          "ur": "اسم پر جمع کے آخر"
+        },
+        "prompt": {
+          "en": "A teacher says قَلَمُكُمْ. Who is the teacher speaking to?",
+          "ur": "استاد قَلَمُكُمْ کہتے ہیں۔ استاد کس سے بات کر رہے ہیں؟"
+        },
+        "arabic": "قَلَمُكُمْ",
+        "options": [
+          {
+            "en": "nobody: he is talking about a group",
+            "ur": "کسی سے نہیں: وہ ایک گروہ کے بارے میں بات کر رہے ہیں"
+          },
+          {
+            "en": "a group of women only",
+            "ur": "صرف خواتین کا گروہ"
+          },
+          {
+            "en": "one man",
+            "ur": "ایک مرد"
+          },
+          {
+            "en": "a male or mixed group",
+            "ur": "مرد یا ملا جلا گروہ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch20-test-q03",
+        "topic": {
+          "en": "Plural endings on nouns",
+          "ur": "اسم پر جمع کے آخر"
+        },
+        "prompt": {
+          "en": "What does فَصْلُهُمْ mean?",
+          "ur": "فَصْلُهُمْ کا کیا مطلب ہے؟"
+        },
+        "arabic": "فَصْلُهُمْ",
+        "options": [
+          {
+            "en": "their classroom",
+            "ur": "ان کی کلاس"
+          },
+          {
+            "en": "his classroom",
+            "ur": "اس کی کلاس"
+          },
+          {
+            "en": "your classroom (to a group)",
+            "ur": "تم سب کی کلاس"
+          },
+          {
+            "en": "our classroom",
+            "ur": "ہماری کلاس"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch20-test-q04",
+        "topic": {
+          "en": "Choose from the group",
+          "ur": "گروہ کے مطابق چنیں"
+        },
+        "prompt": {
+          "en": "A teacher speaks to a class of girls: 'Where are your notebooks?' Which is correct?",
+          "ur": "ایک استاد لڑکیوں کی جماعت سے کہتی ہیں: 'تم سب کی کاپیاں کہاں ہیں؟' کون سا درست ہے؟"
+        },
+        "options": [
+          {
+            "en": "أَيْنَ دَفَاتِرُكِ؟",
+            "ur": "أَيْنَ دَفَاتِرُكِ؟"
+          },
+          {
+            "en": "أَيْنَ دَفَاتِرُكُنَّ؟",
+            "ur": "أَيْنَ دَفَاتِرُكُنَّ؟"
+          },
+          {
+            "en": "أَيْنَ دَفَاتِرُكُمْ؟",
+            "ur": "أَيْنَ دَفَاتِرُكُمْ؟"
+          },
+          {
+            "en": "أَيْنَ دَفَاتِرُهُنَّ؟",
+            "ur": "أَيْنَ دَفَاتِرُهُنَّ؟"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch20-test-q05",
+        "topic": {
+          "en": "Choose from the group",
+          "ur": "گروہ کے مطابق چنیں"
+        },
+        "prompt": {
+          "en": "You are talking about a group of boys: 'Their house is big.' Which is correct?",
+          "ur": "آپ لڑکوں کے ایک گروہ کے بارے میں بات کر رہے ہیں: 'ان کا گھر بڑا ہے۔' کون سا درست ہے؟"
+        },
+        "options": [
+          {
+            "en": "بَيْتُكُمْ كَبِيرٌ",
+            "ur": "بَيْتُكُمْ كَبِيرٌ"
+          },
+          {
+            "en": "بَيْتُهُ كَبِيرٌ",
+            "ur": "بَيْتُهُ كَبِيرٌ"
+          },
+          {
+            "en": "بَيْتُهُمْ كَبِيرٌ",
+            "ur": "بَيْتُهُمْ كَبِيرٌ"
+          },
+          {
+            "en": "بَيْتُهُنَّ كَبِيرٌ",
+            "ur": "بَيْتُهُنَّ كَبِيرٌ"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch20-test-q06",
+        "topic": {
+          "en": "Choose from the group",
+          "ur": "گروہ کے مطابق چنیں"
+        },
+        "prompt": {
+          "en": "You are talking about a group of women teachers: 'Their school is new.' Which is correct?",
+          "ur": "آپ معلمات کے ایک گروہ کے بارے میں بات کر رہے ہیں: 'ان کا اسکول نیا ہے۔' کون سا درست ہے؟"
+        },
+        "options": [
+          {
+            "en": "مَدْرَسَتُهَا جَدِيدَةٌ",
+            "ur": "مَدْرَسَتُهَا جَدِيدَةٌ"
+          },
+          {
+            "en": "مَدْرَسَتُهُمْ جَدِيدَةٌ",
+            "ur": "مَدْرَسَتُهُمْ جَدِيدَةٌ"
+          },
+          {
+            "en": "مَدْرَسَتُكُنَّ جَدِيدَةٌ",
+            "ur": "مَدْرَسَتُكُنَّ جَدِيدَةٌ"
+          },
+          {
+            "en": "مَدْرَسَتُهُنَّ جَدِيدَةٌ",
+            "ur": "مَدْرَسَتُهُنَّ جَدِيدَةٌ"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch20-test-q07",
+        "topic": {
+          "en": "Noun and owner",
+          "ur": "اسم اور مالک"
+        },
+        "prompt": {
+          "en": "Whose teacher is in the mosque?",
+          "ur": "کس کے استاد مسجد میں ہیں؟"
+        },
+        "arabic": "الطُّلَّابُ فِي الْفَصْلِ، وَأُسْتَاذُهُمْ فِي الْمَسْجِدِ",
+        "options": [
+          {
+            "en": "the students'",
+            "ur": "طلبہ کے"
+          },
+          {
+            "en": "the mosque's",
+            "ur": "مسجد کے"
+          },
+          {
+            "en": "the speaker's",
+            "ur": "بولنے والے کے"
+          },
+          {
+            "en": "the listeners'",
+            "ur": "سننے والوں کے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch20-test-q08",
+        "topic": {
+          "en": "Noun and owner",
+          "ur": "اسم اور مالک"
+        },
+        "prompt": {
+          "en": "In this exchange, who owns the pen?",
+          "ur": "اس گفتگو میں قلم کس کا ہے؟"
+        },
+        "arabic": "أَيْنَ قَلَمُكُمْ؟ — قَلَمُنَا فِي الْحَقِيبَةِ",
+        "options": [
+          {
+            "en": "one woman",
+            "ur": "ایک عورت کا"
+          },
+          {
+            "en": "the group that answers",
+            "ur": "جواب دینے والے گروہ کا"
+          },
+          {
+            "en": "a group that is not present",
+            "ur": "ایک ایسے گروہ کا جو موجود نہیں"
+          },
+          {
+            "en": "the person asking",
+            "ur": "پوچھنے والے کا"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch20-test-q09",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن پڑھنا"
+        },
+        "prompt": {
+          "en": "Ali 'Imran 3:193 — what does ذُنُوبَنَا mean?",
+          "ur": "سورۃ آل عمران 3:193 — ذُنُوبَنَا کا کیا مطلب ہے؟"
+        },
+        "arabic": "رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا",
+        "options": [
+          {
+            "en": "their sins",
+            "ur": "ان کے گناہ"
+          },
+          {
+            "en": "your sins (to a group)",
+            "ur": "تم سب کے گناہ"
+          },
+          {
+            "en": "our sins",
+            "ur": "ہمارے گناہ"
+          },
+          {
+            "en": "we sinned",
+            "ur": "ہم نے گناہ کیا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch20-test-q10",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن پڑھنا"
+        },
+        "prompt": {
+          "en": "Al-Baqarah 2:277 — whose reward is أَجْرُهُمْ?",
+          "ur": "سورۃ البقرہ 2:277 — أَجْرُهُمْ کس کا اجر ہے؟"
+        },
+        "arabic": "لَهُمْ أَجْرُهُمْ عِندَ رَبِّهِمْ",
+        "options": [
+          {
+            "en": "the reward of the believers the ayah describes",
+            "ur": "ان مومنوں کا اجر جن کا آیت ذکر کرتی ہے"
+          },
+          {
+            "en": "a reward that belongs to a group of women",
+            "ur": "ایسا اجر جو خواتین کے گروہ کا ہے"
+          },
+          {
+            "en": "the speaker's own reward",
+            "ur": "خود بولنے والے کا اجر"
+          },
+          {
+            "en": "the reward of the listeners, addressed directly",
+            "ur": "سننے والوں کا اجر، جن سے براہِ راست خطاب ہے"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch20-test-q11",
+        "topic": {
+          "en": "Noun or action",
+          "ur": "اسم یا کام"
+        },
+        "prompt": {
+          "en": "In which word does ـنَا mean our?",
+          "ur": "کس لفظ میں ـنَا کا مطلب 'ہمارا' ہے؟"
+        },
+        "options": [
+          {
+            "en": "بَيْتُنَا",
+            "ur": "بَيْتُنَا"
+          },
+          {
+            "en": "سَمِعْنَا",
+            "ur": "سَمِعْنَا"
+          },
+          {
+            "en": "اهْدِنَا",
+            "ur": "اهْدِنَا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch20-test-q12",
+        "topic": {
+          "en": "Noun or action",
+          "ur": "اسم یا کام"
+        },
+        "prompt": {
+          "en": "An-Nisa 4:1 — in خَلَقَكُم, what does ـكُم mean?",
+          "ur": "سورۃ النساء 4:1 — خَلَقَكُم میں ـكُم کا کیا مطلب ہے؟"
+        },
+        "arabic": "رَبَّكُمُ الَّذِي خَلَقَكُم",
+        "options": [
+          {
+            "en": "their",
+            "ur": "ان کا"
+          },
+          {
+            "en": "your, because it is on a noun",
+            "ur": "تمہارا، کیونکہ یہ اسم پر ہے"
+          },
+          {
+            "en": "you, the ones created, because it is on an action",
+            "ur": "تمہیں، جنہیں پیدا کیا گیا، کیونکہ یہ کام پر ہے"
+          },
+          {
+            "en": "our",
+            "ur": "ہمارا"
+          }
+        ],
+        "correct_index": 2
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 20 — plural attached pronouns",
+      "ur": "باب 20 — جمع کی جڑی ہوئی ضمیریں"
+    },
+    "ayah": {
+      "surah": 3,
+      "ayah": 193,
+      "label": "Ali 'Imran 3:193",
+      "ar": "رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا",
+      "en": "Our Lord, so forgive us our sins",
+      "ur": "اے ہمارے رب! پس ہمارے گناہ بخش دے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003193.mp3"
+    },
+    "highlighted_word_indices": [
+      3
+    ],
+    "highlighted_words": [
+      "ذُنُوبَنَا"
+    ],
+    "noor_explanation": {
+      "en": "ذُنُوبَنَا: our sins. You can now read our, your and their for groups, tell who is spoken to from who is spoken about, and keep a noun's ending apart from an action's.",
+      "ur": "ذُنُوبَنَا: ہمارے گناہ۔ اب آپ گروہوں کے لیے ہمارا، تمہارا اور ان کا پڑھ سکتے ہیں، جن سے بات ہو اور جن کے بارے میں بات ہو انہیں الگ کر سکتے ہیں، اور اسم کے آخر کو کام کے آخر سے الگ رکھ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Chapter 20 complete. Chapter 21 follows journeys: from where, to where, and where exactly.",
+      "ur": "باب 20 مکمل۔ باب 21 سفر کے بارے میں ہے: کہاں سے، کہاں تک، اور ٹھیک کہاں۔"
+    }
+  }
+}

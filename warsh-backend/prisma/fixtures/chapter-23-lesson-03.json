@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 23, Lesson 3 - Verbs, prepositions, and plurals in a reading passage. Integration of ذَهَبَ، قَالَ، أَكَلَ، شَرِبَ with فِي، عَلَى، إِلَى، مِنْ. Pure integration from Ch1-22.",
+    "_note": "Chapter 23, Lesson 3 (ch23-l03) — whole-scene comprehension of one authored five-line story (yesterday Ahmad leaves school for the mosque; the mosque between the school and the market; the teacher asks the students whether they understood; Ahmad answers; after the prayer he returns to his house), combining a time word (أَمْسِ, Chapter 16; بَعْدَ, Chapter 10), movement with start and end (Chapter 21), a landmark (Chapter 21), a familiar plural (طُلَّاب, Chapter 9), a question and answer (Chapter 22; هَلْ فَهِمْتُمُ heard in CL5 and CL9) and an owner ending after a kasra (بَيْتِهِ, Chapter 19). Quran: Al-Qasas 28:21, a movement followed by speech (reveal فَخَرَجَ and قَالَ, indices 0 and 4); رَبِّ is framed as the call my Lord with the ي unwritten, as دِينِ in Chapter 19. No new vocabulary list; the fabricated 113:5 quotation, the 'فَـ marks Form I' rule and the أَخِيهِ OBJECT parse are gone. Rebuilt 2026-09-24 from Docs/proposals/chapter-23-content-proposal.md with the owner-approved review amendments recorded there (Ta-Ha 20:17–18 وَمَا تِلْكَ بِيَمِينِكَ / قَالَ هِيَ عَصَايَ instead of Al-Baqarah 2:5, whose أُولَٰئِكَ → people of taqwa task is already Chapter 15 L4's; Al-Baqarah 2:21 for الَّذِي with رَبَّكُمُ; Al-Qasas 28:21 for movement plus speech). Chapters 20–22 were rebuilt and released together with this chapter, so every combined skill tested here is taught. The map and fixtures named reader_lecture_23_book2_consolidation.md and reader_lessons_11-13_integration.md, neither of which existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "چھوٹا منظر پڑھیں",
     "chapter_order": 23,
     "lesson_order": 3,
-    "chapter_title": "Grammar Structures, Reading, and Application",
-    "title": "Verbs, Prepositions, and Plurals in Reading",
-    "titleAr": "الْأَفْعَالُ وَالْحُرُوفُ وَالْجَمْعُ فِي الْقِرَاءَة",
-    "source": "reader_lessons_11-13_integration.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 113,
-      "ayah": 5,
-      "label": "Al-Falaq 113:5",
-      "ar": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
-      "en": "And from the evil of an envier when he envies.\"",
-      "ur": "اور حسد کرنے والے کی برائی سے جب حسد کرنے لگے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113005.mp3"
+      "surah": 28,
+      "ayah": 21,
+      "label": "Al-Qasas 28:21",
+      "ar": "فَخَرَجَ مِنْهَا خَائِفًا يَتَرَقَّبُ قَالَ رَبِّ نَجِّنِي",
+      "en": "So he left it, fearful and watchful. He said, “My Lord, save me…”",
+      "ur": "پس وہ وہاں سے ڈرتے ہوئے اور چوکنا ہو کر نکلے۔ کہا: اے میرے رب! مجھے بچا لے…",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028021.mp3"
     },
     "noor_intro": {
-      "en": "The Quran uses verbs like ذَهَبَ (went), قَالَ (said), أَكَلَ (ate), and شَرِبَ (drank) constantly. When combined with prepositions like فِي (in), عَلَى (on), إِلَى (to), and مِنْ (from), they form the backbone of Quranic narrative. Today we read them together.",
-      "ur": "قرآن میں أفعال جیسے ذَهَبَ (گیا)، قَالَ (کہا)، أَكَلَ (کھایا)، اور شَرِبَ (پیا) بار بار آتے ہیں۔ جب حروف جیسے فِي (میں)، عَلَى (پر)، إِلَى (تک)، اور مِنْ (سے) کے ساتھ ملائے جاتے ہیں تو قرآنی بیان کی ریڑھ بناتے ہیں۔ آج ہم انہیں ایک ساتھ پڑھیں گے۔"
+      "en": "A story moves, then someone speaks. Musa leaves the city, then calls on his Lord. Listen for فَخَرَجَ and قَالَ.",
+      "ur": "قصہ آگے بڑھتا ہے، پھر کوئی بولتا ہے۔ موسیٰ شہر سے نکلتے ہیں، پھر اپنے رب کو پکارتے ہیں۔ فَخَرَجَ اور قَالَ سنیں۔"
     },
     "autoplay": true
   },
@@ -32,79 +29,97 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Common Quranic verbs: past tense",
-        "ar": "أَفْعَالٌ قُرْآنِيَّة شَائِعَة: الْمَاضِي",
-        "ur": "عام قرآنی أفعال: ماضی"
+        "en": "Questions for a scene",
+        "ar": "مَنْ؟ مِنْ أَيْنَ؟ إِلَى أَيْنَ؟",
+        "ur": "منظر کے لیے سوال"
       },
       "explanation": {
-        "en": "Past tense verbs in Arabic describe completed actions. ذَهَبَ (he went), قَالَ (he said), أَكَلَ (he ate), شَرِبَ (he drank), فَعَلَ (he did). These are all Form I past tense, recognized by the فَـ prefix pattern.",
-        "ur": "عربی میں ماضی کے أفعال مکمل شدہ کارروائیاں بیان کرتے ہیں۔ ذَهَبَ (وہ گیا)، قَالَ (اس نے کہا)، أَكَلَ (اس نے کھایا)، شَرِبَ (اس نے پیا)، فَعَلَ (اس نے کیا)۔ یہ سب فعل کی پہلی صورت کے ماضی ہیں، فَـ prefix کے نمونے سے پہچananے جاتے ہیں۔"
+        "en": "Who did what? From where, to where? Where is the place? Who spoke, and what was said? When? Answer every question from the text.",
+        "ur": "کس نے کیا کیا؟ کہاں سے، کہاں تک؟ جگہ کہاں ہے؟ کون بولا، اور کیا کہا؟ کب؟ ہر سوال کا جواب متن سے دیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ",
-        "ar_plain": "ذهب الرجل إلى المسجد",
-        "translit": "dhahabar rajulu ilal masjidi",
-        "en": "The man went to the mosque.",
-        "ur": "آدمی مسجد کی طرف گیا۔"
+        "ar": "أَمْسِ خَرَجَ أَحْمَدُ مِنَ الْمَدْرَسَةِ وَذَهَبَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "امس خرج احمد من المدرسة وذهب الى المسجد",
+        "translit": "amsi kharaja aḥmadu mina l-madrasati wa dhahaba ilā l-masjidi",
+        "en": "Yesterday Ahmad left the school and went to the mosque.",
+        "ur": "کل احمد اسکول سے نکلا اور مسجد گیا۔"
       },
       "explanation": {
-        "en": "ذَهَبَ is the past tense verb 'went.' الرَّجُلُ is the subject. إِلَى is the preposition 'to.' الْمَسْجِدِ is the noun governed by the preposition (genitive). This pattern — verb + subject + preposition + noun — is everywhere in the Quran.",
-        "ur": "ذَهَبَ ماضی فعل 'گیا' ہے۔ الرَّجُلُ فاعل ہے۔ إِلَى حرف ہے 'کی طرف'۔ الْمَسْجِدِ اس حرف کے زیر انتظام اسم ہے (جر)۔ یہ الگو — فعل + فاعل + حرف + اسم — قرآن میں ہر جگہ ہے۔"
+        "en": "When: أَمْسِ, yesterday. Who: Ahmad. Movement: he left, then went. Start: the school. End: the mosque.",
+        "ur": "کب: أَمْسِ، کل۔ کون: احمد۔ حرکت: وہ نکلا، پھر گیا۔ آغاز: اسکول۔ انجام: مسجد۔"
       }
     },
     {
-      "type": "CONCEPT",
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ",
+        "ar_plain": "المسجد بين المدرسة والسوق",
+        "translit": "al-masjidu bayna l-madrasati wa s-sūqi",
+        "en": "The mosque is between the school and the market.",
+        "ur": "مسجد اسکول اور بازار کے درمیان ہے۔"
+      },
+      "explanation": {
+        "en": "Where is the mosque? Between two landmarks: the school and the market.",
+        "ur": "مسجد کہاں ہے؟ دو نشانیوں کے درمیان: اسکول اور بازار۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "فِي الْمَسْجِدِ سَأَلَ الْأُسْتَاذُ الطُّلَّابَ: هَلْ فَهِمْتُمُ الدَّرْسَ؟",
+        "ar_plain": "في المسجد سال الاستاذ الطلاب هل فهمتم الدرس",
+        "translit": "fī l-masjidi saʾala l-ustādhu ṭ-ṭullāba: hal fahimtumu d-darsa?",
+        "en": "In the mosque the teacher asked the students, “Did you all understand the lesson?”",
+        "ur": "مسجد میں استاد نے طلبہ سے پوچھا: کیا آپ سب کو سبق سمجھ آیا؟"
+      },
+      "explanation": {
+        "en": "Who asked? The teacher. Whom? الطُّلَّابَ, the students — a plural you know. What? Whether they all understood: هَلْ فَهِمْتُمُ الدَّرْسَ؟, the group question from the labs.",
+        "ur": "کس نے پوچھا؟ استاد نے۔ کس سے؟ الطُّلَّابَ، طلبہ — ایک جمع جو آپ جانتے ہیں۔ کیا؟ کیا سب کو سمجھ آیا: هَلْ فَهِمْتُمُ الدَّرْسَ؟، لیبز والا گروہ کا سوال۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "قَالَ أَحْمَدُ: نَعَمْ، فَهِمْتُ الدَّرْسَ",
+        "ar_plain": "قال احمد نعم فهمت الدرس",
+        "translit": "qāla aḥmadu: naʿam, fahimtu d-darsa",
+        "en": "Ahmad said, “Yes, I understood the lesson.”",
+        "ur": "احمد نے کہا: جی ہاں، سبق سمجھ آ گیا۔"
+      },
+      "explanation": {
+        "en": "Who spoke? Ahmad. His answer fits the question: yes, I understood.",
+        "ur": "کون بولا؟ احمد۔ اس کا جواب سوال کے مطابق ہے: جی ہاں، سمجھ آ گیا۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "وَبَعْدَ الصَّلَاةِ رَجَعَ أَحْمَدُ إِلَى بَيْتِهِ",
+        "ar_plain": "وبعد الصلاة رجع احمد الى بيته",
+        "translit": "wa baʿda ṣ-ṣalāti rajaʿa aḥmadu ilā baytihi",
+        "en": "And after the prayer Ahmad returned to his house.",
+        "ur": "اور نماز کے بعد احمد اپنے گھر واپس آیا۔"
+      },
+      "explanation": {
+        "en": "When: بَعْدَ الصَّلَاةِ, after the prayer. Movement: رَجَعَ, returned. Where to: إِلَى بَيْتِهِ, to his house — ـهُ read ـهِ after the kasra, pointing to Ahmad.",
+        "ur": "کب: بَعْدَ الصَّلَاةِ، نماز کے بعد۔ حرکت: رَجَعَ، واپس آیا۔ کہاں: إِلَى بَيْتِهِ، اپنے گھر — زیر کے بعد ـهُ کو ـهِ پڑھا گیا، احمد کی طرف اشارہ۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
       "concept": {
-        "en": "Key prepositions: فِي، عَلَى، إِلَى، مِنْ",
-        "ar": "حُرُوفُ الْجَر الْأَهَمَّة: فِي، عَلَى، إِلَى، مِنْ",
-        "ur": "اہم حروف جر: فِي، عَلَى، إِلَى، مِنْ"
+        "en": "Al-Qasas 28:21: So he left it, fearful and watchful. He said, “My Lord, save me…”",
+        "ar": "فَخَرَجَ مِنْهَا خَائِفًا يَتَرَقَّبُ قَالَ رَبِّ نَجِّنِي",
+        "ur": "Al-Qasas 28:21: پس وہ وہاں سے ڈرتے ہوئے اور چوکنا ہو کر نکلے۔ کہا: اے میرے رب! مجھے بچا لے…"
       },
       "explanation": {
-        "en": "Arabic has four essential prepositions that appear constantly in the Quran: فِي (in/on), عَلَى (on/upon), إِلَى (to/toward), مِنْ (from/out of). They govern the noun after them in the genitive case (مَجْرُور).",
-        "ur": "عربی میں چار ضروری حروف ہیں جو قرآن میں بار بار آتے ہیں: فِي (میں/پر)، عَلَى (پر)، إِلَى (تک/کی طرف)، مِنْ (سے/باہر)۔ وہ ان کے بعد آنے والے اسم کو جر میں رکھتے ہیں (مَجْرُور)۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "أَكَلَ الطَّالِبُ فِي الْمَطْعَمِ",
-        "ar_plain": "أكل الطالب في المطعم",
-        "translit": "akala at-taalibu fil maT'am",
-        "en": "The student ate in the restaurant.",
-        "ur": "طالب علم نے ریستوراں میں کھایا۔"
+        "en": "The same shape as a scene: first a movement, فَخَرَجَ مِنْهَا, he left it (the city); then speech, قَالَ. رَبِّ here is a call, my Lord, with the ي unwritten, as in دِينِ (Chapter 19). نَجِّنِي, save me, is only glossed.",
+        "ur": "منظر جیسی ہی شکل: پہلے حرکت، فَخَرَجَ مِنْهَا، وہ اس (شہر) سے نکلے؛ پھر بات، قَالَ۔ یہاں رَبِّ ایک پکار ہے، اے میرے رب، ي لکھی نہیں گئی، جیسے دِينِ میں (باب 19)۔ نَجِّنِي، مجھے بچا لے، کا صرف معنی دیا گیا ہے۔"
       },
-      "explanation": {
-        "en": "أَكَلَ is the past verb 'ate.' فِي is the preposition 'in.' الْمَطْعَمِ is genitive after فِي. The entire phrase فِي الْمَطْعَمِ tells WHERE the eating happened.",
-        "ur": "أَكَلَ ماضی فعل 'کھایا' ہے۔ فِي حرف 'میں' ہے۔ الْمَطْعَمِ فِي کے بعد جر میں ہے۔ پوری عبارت فِي الْمَطْعَمِ بتاتی ہے کہ کہاں کھایا گیا۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "شَرِبَ الْمُسْلِمُونَ مِنَ الْمَاءِ",
-        "ar_plain": "شرب المسلمون من الماء",
-        "translit": "sharibal muslimoona minal maa'i",
-        "en": "The Muslims drank from the water.",
-        "ur": "مسلمانوں نے پانی سے پیا۔"
-      },
-      "explanation": {
-        "en": "شَرِبَ is the verb 'drank.' الْمُسْلِمُونَ is the human plural subject — note the adjective would be plural too (e.g., صَالِحُونَ). مِنَ is the preposition 'from.' الْمَاءِ is genitive.",
-        "ur": "شَرِبَ فعل 'پیا' ہے۔ الْمُسْلِمُونَ انسانی جمع فاعل ہے — نوٹ کریں کہ صفت بھی جمع ہو گی (مثلاً صَالِحُونَ)۔ مِنَ حرف 'سے' ہے۔ الْمَاءِ جر میں ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Key vocabulary in this lesson",
-        "ur": "اس سبق میں اہم الفاظ"
-      },
-      "body": {
-        "en": "ذَهَبَ went · قَالَ said · أَكَلَ ate · شَرِبَ drank · فَعَلَ did · فِي in/on · عَلَى on/upon · إِلَى to/toward · مِنْ from · رَجُلٌ man · طَالِبٌ student · مُسْلِمٌ Muslim · مَسْجِدٌ mosque · مَطْعَمٌ restaurant · مَاءٌ water",
-        "ur": "ذَهَبَ گیا · قَالَ کہا · أَكَلَ کھایا · شَرِبَ پیا · فَعَلَ کیا · فِي میں/پر · عَلَى پر/کے اوپر · إِلَى تک/کی طرف · مِنْ سے/باہر · رَجُلٌ آدمی · طَالِبٌ طالب علم · مُسْلِمٌ مسلمان · مَسْجِدٌ مسجد · مَطْعَمٌ ریستوراں · مَاءٌ پانی"
-      }
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028021.mp3"
     }
   ],
   "exercises": [
@@ -112,195 +127,329 @@
       "type": "TAP_TRANSLATION",
       "id": "ch23-l03-ex01",
       "prompt": {
-        "ar": "ذَهَبَ الرَّجُلُ إِلَى الْمَسْجِدِ",
-        "ar_plain": "ذهب الرجل إلى المسجد",
-        "translit": "dhahabar rajulu ilal masjidi",
-        "en": "The man went to the mosque.",
-        "ur": "آدمی مسجد کی طرف گیا۔"
+        "ar": "أَمْسِ خَرَجَ أَحْمَدُ مِنَ الْمَدْرَسَةِ وَذَهَبَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "امس خرج احمد من المدرسة وذهب الى المسجد",
+        "translit": "amsi kharaja aḥmadu mina l-madrasati wa dhahaba ilā l-masjidi",
+        "en": "Yesterday Ahmad left the school and went to the mosque.",
+        "ur": "کل احمد اسکول سے نکلا اور مسجد گیا۔"
       },
       "options": [
         {
-          "en": "The man went to the mosque.",
-          "ur": "آدمی مسجد کی طرف گیا۔"
+          "en": "Yesterday Ahmad entered the school and the mosque.",
+          "ur": "کل احمد اسکول اور مسجد میں داخل ہوا۔"
         },
         {
-          "en": "The man came from the mosque.",
-          "ur": "آدمی مسجد سے آیا۔"
+          "en": "Tomorrow Ahmad will leave the school for the mosque.",
+          "ur": "کل (آنے والا) احمد اسکول سے مسجد جائے گا۔"
         },
         {
-          "en": "The man sat at the mosque.",
-          "ur": "آدمی مسجد میں بیٹھا۔"
+          "en": "Yesterday Ahmad left the school and went to the mosque.",
+          "ur": "کل احمد اسکول سے نکلا اور مسجد گیا۔"
         },
         {
-          "en": "The man prayed at the mosque.",
-          "ur": "آدمی نے مسجد میں نماز پڑھی۔"
+          "en": "Yesterday Ahmad left the mosque and went to the school.",
+          "ur": "کل احمد مسجد سے نکلا اور اسکول گیا۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَمْسِ: yesterday. Start after مِنَ, end after إِلَى.",
+        "ur": "أَمْسِ: کل (گزرا ہوا)۔ مِنَ کے بعد آغاز، إِلَى کے بعد انجام۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch23-l03-ex02",
+      "prompt_line": {
+        "ar": "أَمْسِ خَرَجَ أَحْمَدُ مِنَ الْمَدْرَسَةِ وَذَهَبَ إِلَى الْمَسْجِدِ. مِنْ أَيْنَ خَرَجَ؟",
+        "ar_plain": "امس خرج احمد من المدرسة وذهب الى المسجد من اين خرج",
+        "translit": "amsi kharaja aḥmadu mina l-madrasati wa dhahaba ilā l-masjidi. min ayna kharaja?",
+        "en": "Yesterday Ahmad left the school and went to the mosque. From where did he leave?",
+        "ur": "کل احمد اسکول سے نکلا اور مسجد گیا۔ وہ کہاں سے نکلا؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "إِلَى الْمَسْجِدِ",
+          "ar_plain": "الى المسجد",
+          "translit": "ilā l-masjidi",
+          "en": "to the mosque",
+          "ur": "مسجد کی طرف"
+        },
+        {
+          "ar": "أَمْسِ",
+          "ar_plain": "امس",
+          "translit": "amsi",
+          "en": "yesterday",
+          "ur": "کل (گزرا ہوا)"
+        },
+        {
+          "ar": "مِنَ الْمَسْجِدِ",
+          "ar_plain": "من المسجد",
+          "translit": "mina l-masjidi",
+          "en": "from the mosque",
+          "ur": "مسجد سے"
+        },
+        {
+          "ar": "مِنَ الْمَدْرَسَةِ",
+          "ar_plain": "من المدرسة",
+          "translit": "mina l-madrasati",
+          "en": "from the school",
+          "ur": "اسکول سے"
+        }
+      ],
+      "correct_option_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مِنْ أَيْنَ asks for the start: مِنَ الْمَدْرَسَةِ.",
+        "ur": "مِنْ أَيْنَ آغاز پوچھتا ہے: مِنَ الْمَدْرَسَةِ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch23-l03-ex03",
+      "statement": {
+        "en": "The school is between the mosque and the market.",
+        "ur": "اسکول مسجد اور بازار کے درمیان ہے۔",
+        "ar_example": {
+          "ar": "الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ",
+          "ar_plain": "المسجد بين المدرسة والسوق",
+          "translit": "al-masjidu bayna l-madrasati wa s-sūqi",
+          "en": "The mosque is between the school and the market.",
+          "ur": "مسجد اسکول اور بازار کے درمیان ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The mosque is in the middle.",
+        "ur": "مسجد بیچ میں ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch23-l03-ex04",
+      "statement": {
+        "en": "The students asked the teacher a question.",
+        "ur": "طلبہ نے استاد سے سوال پوچھا۔",
+        "ar_example": {
+          "ar": "فِي الْمَسْجِدِ سَأَلَ الْأُسْتَاذُ الطُّلَّابَ: هَلْ فَهِمْتُمُ الدَّرْسَ؟",
+          "ar_plain": "في المسجد سال الاستاذ الطلاب هل فهمتم الدرس",
+          "translit": "fī l-masjidi saʾala l-ustādhu ṭ-ṭullāba: hal fahimtumu d-darsa?",
+          "en": "In the mosque the teacher asked the students, “Did you all understand the lesson?”",
+          "ur": "مسجد میں استاد نے طلبہ سے پوچھا: کیا آپ سب کو سبق سمجھ آیا؟"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَأَلَ الْأُسْتَاذُ: the teacher asked the students.",
+        "ur": "سَأَلَ الْأُسْتَاذُ: استاد نے طلبہ سے پوچھا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch23-l03-ex05",
+      "mode": "TAP",
+      "sentence_ar": "وَبَعْدَ الصَّلَاةِ ___ أَحْمَدُ إِلَى بَيْتِهِ",
+      "hint": {
+        "en": "And after the prayer Ahmad returned to his house.",
+        "ur": "اور نماز کے بعد احمد اپنے گھر واپس آیا۔"
+      },
+      "options": [
+        {
+          "ar": "دَخَلَ",
+          "ar_plain": "دخل",
+          "translit": "dakhala",
+          "en": "entered",
+          "ur": "داخل ہوا"
+        },
+        {
+          "ar": "خَرَجَ",
+          "ar_plain": "خرج",
+          "translit": "kharaja",
+          "en": "left",
+          "ur": "نکلا"
+        },
+        {
+          "ar": "رَجَعَ",
+          "ar_plain": "رجع",
+          "translit": "rajaʿa",
+          "en": "returned",
+          "ur": "واپس آیا"
+        },
+        {
+          "ar": "رَجَعَتْ",
+          "ar_plain": "رجعت",
+          "translit": "rajaʿat",
+          "en": "she returned",
+          "ur": "وہ واپس آئی"
+        }
+      ],
+      "correct_answer": {
+        "ar": "رَجَعَ",
+        "ar_plain": "رجع",
+        "translit": "rajaʿa",
+        "en": "returned",
+        "ur": "واپس آیا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Returned, for Ahmad: رَجَعَ.",
+        "ur": "احمد کے لیے واپس آیا: رَجَعَ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch23-l03-ex06",
+      "prompt": {
+        "ar": "وَبَعْدَ الصَّلَاةِ رَجَعَ أَحْمَدُ إِلَى بَيْتِهِ",
+        "ar_plain": "وبعد الصلاة رجع احمد الى بيته",
+        "translit": "wa baʿda ṣ-ṣalāti rajaʿa aḥmadu ilā baytihi",
+        "en": "And after the prayer Ahmad returned to his house.",
+        "ur": "اور نماز کے بعد احمد اپنے گھر واپس آیا۔"
+      },
+      "options": [
+        {
+          "en": "And before the prayer Ahmad returned to his house.",
+          "ur": "اور نماز سے پہلے احمد اپنے گھر واپس آیا۔"
+        },
+        {
+          "en": "And after the prayer Ahmad returned to our house.",
+          "ur": "اور نماز کے بعد احمد ہمارے گھر واپس آیا۔"
+        },
+        {
+          "en": "And after the prayer Ahmad left his house.",
+          "ur": "اور نماز کے بعد احمد اپنے گھر سے نکلا۔"
+        },
+        {
+          "en": "And after the prayer Ahmad returned to his house.",
+          "ur": "اور نماز کے بعد احمد اپنے گھر واپس آیا۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "بَعْدَ: after; رَجَعَ إِلَى: returned to; بَيْتِهِ: his house.",
+        "ur": "بَعْدَ: بعد؛ رَجَعَ إِلَى: واپس آیا؛ بَيْتِهِ: اس کا گھر۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch23-l03-ex07",
+      "ayah_fragment": {
+        "ar": "فَخَرَجَ مِنْهَا خَائِفًا يَتَرَقَّبُ قَالَ رَبِّ نَجِّنِي",
+        "surah_ref": "Al-Qasas 28:21"
+      },
+      "options": [
+        {
+          "en": "First a movement — he left the city; then speech — he said, “My Lord, save me”",
+          "ur": "پہلے حرکت — وہ شہر سے نکلے؛ پھر بات — کہا: اے میرے رب، مجھے بچا لے"
+        },
+        {
+          "en": "He entered the city and said nothing",
+          "ur": "وہ شہر میں داخل ہوئے اور کچھ نہ کہا"
+        },
+        {
+          "en": "Someone else speaks to Musa",
+          "ur": "کوئی اور موسیٰ سے بات کرتا ہے"
+        },
+        {
+          "en": "He returned to the city, then asked a question",
+          "ur": "وہ شہر واپس آئے، پھر سوال پوچھا"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "ذَهَبَ is 'went.' إِلَى is 'to/toward.' الْمَسْجِدِ is the destination. The pattern verb + subject + إِلَى + destination is very common in the Quran.",
-        "ur": "ذَهَبَ 'گیا' ہے۔ إِلَى 'کی طرف/تک' ہے۔ الْمَسْجِدِ منزل ہے۔ فعل + فاعل + إِلَى + منزل کا الگو قرآن میں بہت عام ہے۔"
+        "en": "فَخَرَجَ: he left; قَالَ: he said.",
+        "ur": "فَخَرَجَ: وہ نکلے؛ قَالَ: انہوں نے کہا۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch23-l03-ex02",
-      "statement": {
-        "en": "In the phrase مِنَ الْمَاءِ, the noun الْمَاءِ is in the genitive case because it follows the preposition مِنْ.",
-        "ur": "مِنَ الْمَاءِ میں الْمَاءِ جر میں ہے کیونکہ یہ حرف مِنْ کے بعد آیا ہے۔",
-        "ar_example": {
-          "ar": "شَرِبَ الْمُسْلِمُونَ مِنَ الْمَاءِ",
-          "ar_plain": "شرب المسلمون من الماء",
-          "translit": "sharibal muslimoona minal maa'i",
-          "en": "The Muslims drank from the water.",
-          "ur": "مسلمانوں نے پانی سے پیا۔"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch23-l03-ex03",
-      "mode": "TAP",
-      "sentence_ar": "أَكَلَ الطَّالِبُ ___ الْمَطْعَمِ",
-      "hint": {
-        "en": "The student ate in the restaurant.",
-        "ur": "طالب علم نے ریستوراں میں کھایا۔"
-      },
-      "options": [
-        {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
-        },
-        {
-          "ar": "إِلَى",
-          "ar_plain": "إلى",
-          "translit": "ilaa",
-          "en": "to",
-          "ur": "تک"
-        },
-        {
-          "ar": "عَلَى",
-          "ar_plain": "على",
-          "translit": "alaa",
-          "en": "on",
-          "ur": "پر"
-        },
-        {
-          "ar": "مِنْ",
-          "ar_plain": "من",
-          "translit": "min",
-          "en": "from",
-          "ur": "سے"
-        }
-      ],
-      "correct_answer": {
-        "ar": "فِي",
-        "ar_plain": "في",
-        "translit": "fii",
-        "en": "in",
-        "ur": "میں"
-      },
-      "xp_value": 1
-    },
-    {
       "type": "MATCHING",
-      "id": "ch23-l03-ex04",
+      "id": "ch23-l03-ex08",
       "left_column": [
         {
-          "ar": "ذَهَبَ إِلَى الْمَسْجِدِ",
-          "ar_plain": "ذهب إلى المسجد",
-          "translit": "dhahaba ilal masjidi",
-          "en": "He went to the mosque.",
-          "ur": "وہ مسجد کی طرف گیا۔"
+          "ar": "مِنْ أَيْنَ؟",
+          "ar_plain": "من اين",
+          "translit": "min ayna?",
+          "en": "from where?",
+          "ur": "کہاں سے؟"
         },
         {
-          "ar": "أَكَلَ فِي الْمَطْعَمِ",
-          "ar_plain": "أكل في المطعم",
-          "translit": "akala fil maT'am",
-          "en": "He ate in the restaurant.",
-          "ur": "اس نے ریستوراں میں کھایا۔"
+          "ar": "إِلَى أَيْنَ؟",
+          "ar_plain": "الى اين",
+          "translit": "ilā ayna?",
+          "en": "to where?",
+          "ur": "کہاں تک؟"
         },
         {
-          "ar": "شَرِبَ مِنَ الْمَاءِ",
-          "ar_plain": "شرب من الماء",
-          "translit": "shariba minal maa'i",
-          "en": "He drank from the water.",
-          "ur": "اس نے پانی سے پیا۔"
+          "ar": "مَنْ؟",
+          "ar_plain": "من",
+          "translit": "man?",
+          "en": "who?",
+          "ur": "کون؟"
         },
         {
-          "ar": "جَلَسَ عَلَى الْكُرْسِيِّ",
-          "ar_plain": "جلس على الكرسي",
-          "translit": "jalasa alal kursiyyi",
-          "en": "He sat on the chair.",
-          "ur": "وہ کرسی پر بیٹھا۔"
+          "ar": "أَيْنَ؟",
+          "ar_plain": "اين",
+          "translit": "ayna?",
+          "en": "where?",
+          "ur": "کہاں؟"
         }
       ],
       "right_column": [
         {
-          "en": "He went to the mosque.",
-          "ur": "وہ مسجد کی طرف گیا۔"
+          "en": "asks for a person",
+          "ur": "شخص پوچھتا ہے"
         },
         {
-          "en": "He ate in the restaurant.",
-          "ur": "اس نے ریستوراں میں کھایا۔"
+          "en": "asks for the start",
+          "ur": "آغاز پوچھتا ہے"
         },
         {
-          "en": "He drank from the water.",
-          "ur": "اس نے پانی سے پیا۔"
+          "en": "asks where something is",
+          "ur": "پوچھتا ہے کوئی چیز کہاں ہے"
         },
         {
-          "en": "He sat on the chair.",
-          "ur": "وہ کرسی پر بیٹھا۔"
+          "en": "asks for the end",
+          "ur": "انجام پوچھتا ہے"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
           1
         ],
         [
+          1,
+          3
+        ],
+        [
           2,
-          2
+          0
         ],
         [
           3,
-          3
+          2
         ]
       ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Each question asks for a different part of the scene.",
+        "ur": "ہر سوال منظر کا الگ حصہ پوچھتا ہے۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch23-l03-ex05",
+      "id": "ch23-l03-ex09",
       "target_translation": {
-        "en": "The Muslims drank from the water.",
-        "ur": "مسلمانوں نے پانی سے پیا۔"
+        "en": "Ahmad went to the mosque.",
+        "ur": "احمد مسجد گیا۔"
       },
       "tiles": [
-        {
-          "ar": "شَرِبَ",
-          "ar_plain": "شرب",
-          "translit": "shariba",
-          "en": "drank",
-          "ur": "پیا"
-        },
-        {
-          "ar": "الْمُسْلِمُونَ",
-          "ar_plain": "المسلمون",
-          "translit": "al-muslimoona",
-          "en": "the Muslims",
-          "ur": "مسلمان"
-        },
         {
           "ar": "مِنَ",
           "ar_plain": "من",
@@ -309,137 +458,79 @@
           "ur": "سے"
         },
         {
-          "ar": "الْمَاءِ",
-          "ar_plain": "الماء",
-          "translit": "al-maa'i",
-          "en": "the water",
-          "ur": "پانی"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch23-l03-ex06",
-      "sentence_ar": "قَالَ الْمُسْلِمُ إِلَى أَخِيهِ",
-      "words": [
-        {
-          "ar": "قَالَ",
-          "ar_plain": "قال",
-          "translit": "qaala",
-          "en": "said",
-          "ur": "کہا"
-        },
-        {
-          "ar": "الْمُسْلِمُ",
-          "ar_plain": "المسلم",
-          "translit": "al-muslimu",
-          "en": "the Muslim",
-          "ur": "مسلمان"
+          "ar": "الْمَسْجِدِ",
+          "ar_plain": "المسجد",
+          "translit": "al-masjidi",
+          "en": "the mosque",
+          "ur": "مسجد"
         },
         {
           "ar": "إِلَى",
-          "ar_plain": "إلى",
-          "translit": "ilaa",
+          "ar_plain": "الى",
+          "translit": "ilā",
           "en": "to",
           "ur": "کی طرف"
         },
         {
-          "ar": "أَخِيهِ",
-          "ar_plain": "أخيه",
-          "translit": "akhiihi",
-          "en": "his brother",
-          "ur": "اس کا بھائی"
+          "ar": "أَحْمَدُ",
+          "ar_plain": "احمد",
+          "translit": "aḥmadu",
+          "en": "Ahmad",
+          "ur": "احمد"
+        },
+        {
+          "ar": "ذَهَبَ",
+          "ar_plain": "ذهب",
+          "translit": "dhahaba",
+          "en": "went",
+          "ur": "گیا"
         }
       ],
-      "available_roles": [
-        "VERB",
-        "SUBJECT",
-        "PREPOSITION",
-        "OBJECT",
-        "POSSESSIVE"
-      ],
-      "correct_roles": [
-        "VERB",
-        "SUBJECT",
-        "PREPOSITION",
-        "OBJECT"
+      "correct_order": [
+        4,
+        3,
+        2,
+        1
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "قَالَ is the verb 'said.' الْمُسْلِمُ is the subject. إِلَى is the preposition 'to.' أَخِيهِ is the object of the preposition — 'his brother' (أَخ + ہِ = brother + his).",
-        "ur": "قَالَ فعل 'کہا' ہے۔ الْمُسْلِمُ فاعل ہے۔ إِلَى حرف 'کی طرف' ہے۔ أَخِيهِ حرف کا مفعول ہے — 'اس کا بھائی' (أَخ + ہِ = بھائی + اس کا)۔"
-      }
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch23-l03-ex07",
-      "prompt": {
-        "ar": "فَعَلَ الْمُسْلِمُونَ الصَّالِحَاتِ",
-        "ar_plain": "فعل المسلمون الصالحات",
-        "translit": "fa'ala al-muslimoona as-saalihaati",
-        "en": "The Muslims did righteous deeds.",
-        "ur": "مسلمانوں نے نیک کام کیے۔"
-      },
-      "options": [
-        {
-          "en": "The Muslims did righteous deeds.",
-          "ur": "مسلمانوں نے نیک کام کیے۔"
-        },
-        {
-          "en": "The righteous Muslims did.",
-          "ur": "نیک مسلمانوں نے کیا۔"
-        },
-        {
-          "en": "The Muslims are righteous.",
-          "ur": "مسلمان نیک ہیں۔"
-        },
-        {
-          "en": "The Muslims said righteous things.",
-          "ur": "مسلمانوں نے نیک باتیں کہیں۔"
-        }
-      ],
-      "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "فَعَلَ is the verb 'did.' الْمُسْلِمُونَ is the human plural subject. الصَّالِحَاتِ is the feminine plural object — note that الْمُسْلِمُونَ is human plural so a different adjective form would apply if describing them.",
-        "ur": "فَعَلَ فعل 'کیا' ہے۔ الْمُسْلِمُونَ انسانی جمع فاعل ہے۔ الصَّالِحَاتِ مؤنث جمع مفعول ہے — نوٹ کریں کہ الْمُسْلِمُونَ انسانی جمع ہے تو اگر انہیں بیان کرنا ہو تو دوسری صفت صورت لگے گی۔"
+        "en": "The verb, the doer, then إِلَى and the place.",
+        "ur": "فعل، کرنے والا، پھر إِلَى اور جگہ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Verbs, prepositions, and plurals",
-      "ar": "الْأَفْعَالُ وَالْحُرُوفُ وَالْجَمْعُ",
-      "ur": "أفعال، حروف، اور جمع"
+      "en": "Read the whole scene",
+      "ar": "قِرَاءَةُ الْمَشْهَدِ",
+      "ur": "پورا منظر پڑھیں"
     },
     "ayah": {
-      "surah": 113,
-      "ayah": 5,
-      "label": "Al-Falaq 113:5",
-      "ar": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
-      "en": "And from the evil of an envier when he envies.\"",
-      "ur": "اور حسد کرنے والے کی برائی سے جب حسد کرنے لگے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113005.mp3"
+      "surah": 28,
+      "ayah": 21,
+      "label": "Al-Qasas 28:21",
+      "ar": "فَخَرَجَ مِنْهَا خَائِفًا يَتَرَقَّبُ قَالَ رَبِّ نَجِّنِي",
+      "en": "So he left it, fearful and watchful. He said, “My Lord, save me…”",
+      "ur": "پس وہ وہاں سے ڈرتے ہوئے اور چوکنا ہو کر نکلے۔ کہا: اے میرے رب! مجھے بچا لے…",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028021.mp3"
     },
     "highlighted_word_indices": [
-      1
+      0,
+      4
+    ],
+    "highlighted_words": [
+      "فَخَرَجَ",
+      "قَالَ"
     ],
     "noor_explanation": {
-      "en": "مِنْ شَرِّ النَّوْمَةِ — 'from the evil of the sleepless night.' مِنْ is the preposition 'from.' شَرِّ is in the genitive after مِنْ. النَّوْمَةِ is the noun 'sleepless night.' The preposition + noun pattern appears constantly in the Quran — once you recognize مِنْ، فِي، عَلَى، إِلَى, the Quran opens up.",
-      "ur": "مِنْ شَرِّ النَّوْمَةِ — 'بے خوابی کی رات کے برے اثر سے'۔ مِنْ حرف 'سے' ہے۔ شَرِّ مِنْ کے بعد جر میں ہے۔ النَّوْمَةِ اسم 'بے خوابی' ہے۔ حرف + اسم کا الگو قرآن میں بار بار آتا ہے — ایک بار مِنْ، فِي، عَلَى، إِلَى پہچان لو، قرآن کھل جاتا ہے۔"
+      "en": "فَخَرَجَ … قَالَ: he left … he said. A movement, then speech — the same order as Ahmad's day. You read a connected scene and answered who, what, where and when from the text itself.",
+      "ur": "فَخَرَجَ … قَالَ: وہ نکلے … انہوں نے کہا۔ حرکت، پھر بات — احمد کے دن جیسی ہی ترتیب۔ آپ نے ایک جڑا ہوا منظر پڑھا اور کون، کیا، کہاں اور کب کا جواب خود متن سے دیا۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Verbs, prepositions, plurals — these are the three pillars of Quranic narrative. ذَهَبَ إِلَى، أَكَلَ فِي، شَرِبَ مِنْ — once these combinations feel familiar, Surah Al-Falaq and beyond will make much more sense.",
-      "ur": "أفعال، حروف، جمع — یہ قرآنی بیان کے تین ستون ہیں۔ ذَهَبَ إِلَى، أَكَلَ فِي، شَرِبَ مِنْ — ایک بار یہ جوڑے熟悉的 ہو جائیں، سورہ فالقر اور اس سے آگے بہت زیادہ سمجھ آئے گا۔"
+      "en": "You read a whole scene. Next: read real ayat, one or two questions each.",
+      "ur": "آپ نے پورا منظر پڑھا۔ آگے: اصل آیات پڑھیں، ہر ایک پر ایک یا دو سوال۔"
     }
   }
 }

@@ -2,92 +2,148 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 22, Lesson 2 - سَأَلَ (asking questions in dialogue).",
+    "_note": "Chapter 22, Lesson 2 (ch22-l02) — who asked, and what: new سَأَلَ / سَأَلَتْ in authored classroom lines; the familiar question words هَلْ، أَيْنَ، مَا، مَنْ mark a question; the meaning of the reporting verb is kept apart from the type of the quoted line, because قَالَ can report a question (Quran: Ali 'Imran 3:37, Zakariyya's أَنَّىٰ لَكِ هَٰذَا reported with قَالَ). Quran: Al-Baqarah 2:186 وَإِذَا سَأَلَكَ عِبَادِي (a real سَأَلَ, with ـكَ from Chapter 7; hook and reveal, index 1). The misdescribed Yusuf 12:77 'Did he steal?' example and the قَالَ = statement / سَأَلَ = question rule are gone. Rebuilt 2026-09-24 from Docs/proposals/chapter-22-content-proposal.md with the owner-approved review amendments recorded there (Ali 'Imran 3:37 as the verified ayah in which قَالَ reports a question and قَالَتْ its answer; Al-Baqarah 2:186 سَأَلَكَ as a real سَأَلَ in the Quran; Yusuf 12:90 as the second verified speech frame; CL5's heard-only هَلْ فَهِمْتُمْ؟ / مَرَّةً أُخْرَى، لَوْ سَمَحْتَ promoted to spoken lines rather than treated as new). The map and fixtures named two reader_lecture_22 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "کس نے پوچھا، اور کیا؟",
     "chapter_order": 22,
     "lesson_order": 2,
-    "chapter_title": "Dialogue and Communication",
-    "title": "سَأَلَ — Asking Questions in Dialogue",
-    "titleAr": "السُّؤَالُ فِي الْحِوَارِ: سَأَلَ",
-    "source": "reader_lecture_22_dialogue.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 12,
-      "ayah": 77,
-      "label": "Yusuf 12:77",
-      "ar": "قَالُوا إِنْ يَسْرِقْ فَقَدْ سَرَقَ أَخٌ لَهُ مِنْ قَبْلُ",
-      "en": "They said: 'If he steals, his brother stole before.'",
-      "ur": "انہوں نے کہا: 'اگر وہ چوری کرے تو اس کا بھائی پہلے چوری کر چکا ہے۔'",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012077.mp3"
+      "surah": 2,
+      "ayah": 186,
+      "label": "Al-Baqarah 2:186",
+      "ar": "وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ",
+      "en": "And when My servants ask you concerning Me — indeed I am near.",
+      "ur": "اور جب میرے بندے آپ سے میرے بارے میں پوچھیں تو میں قریب ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002186.mp3"
     },
     "noor_intro": {
-      "en": "Before they said anything, they asked: 'Did he steal?' سَأَلَ means 'he asked.' Today we learn how to ask questions in Arabic dialogue.",
-      "ur": "اس سے پہلے انہوں نے کچھ کہا، انہوں نے پوچھا: 'کیا اس نے چوری کی؟' سَأَلَ کا مطلب ہے 'اس نے پوچھا'۔ آج ہم عربی گفتگو میں سوالات پوچھنا سیکھیں گے۔"
+      "en": "Allah tells the Prophet ﷺ what to say when people ask about Him. Listen for سَأَلَكَ: asked you.",
+      "ur": "اللہ نبی ﷺ کو بتاتا ہے کہ جب لوگ اس کے بارے میں پوچھیں تو کیا کہیں۔ سَأَلَكَ سنیں: آپ سے پوچھا۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "سَأَلَ — the verb 'he asked'",
-        "ar": "سَأَلَ — فعلِ اَمرِ \"پوچھا\"",
-        "ur": "سَأَلَ — 'پوچھا' کا فعل"
-      },
-      "explanation": {
-        "en": "سَأَلَ (sa'ala) means 'he asked.' It introduces a question in dialogue. The question mark (؟) comes after the quoted question.",
-        "ur": "سَأَلَ (sa'ala) کا مطلب ہے 'اس نے پوچھا'۔ یہ گفتگو میں سوال کو متعارف کراتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "سَأَلَ الْوَلَدُ: \"أَيْنَ الْمَسْجِدُ؟\"",
-        "ar_plain": "سأل الولد: أين المسجد؟",
-        "translit": "sa'ala al-waladu: 'ayna al-masjidu?'",
-        "en": "The boy asked: 'Where is the mosque?'",
-        "ur": "لڑکے نے پوچھا: 'مسجد کہاں ہے؟'"
-      },
-      "explanation": {
-        "en": "سَأَلَ introduces the questioner (الْوَلَدُ) and the question follows in Arabic. أَيْنَ (where) is an interrogative particle.",
-        "ur": "سَأَلَ سوال کرنے والے (الْوَلَدُ) کو متعارف کراتا ہے اور سوال عربی میں اس کے بعد آتا ہے۔ أَيْنَ (کہاں) ایک interrogative particle ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "سَأَلَتْ هِنْدٌ أَخَهَا: \"هَلْ أَنْتَ طَالِبٌ؟\"",
-        "ar_plain": "سألت هند أخاها: هل أنت طالب؟",
-        "translit": "sa'alati hindun akhahaa: 'hal anta taalibun?'",
-        "en": "Hind asked her brother: 'Are you a student?'",
-        "ur": "ہند نے اپنے بھائی سے پوچھا: 'کیا تم طالب علم ہو؟'"
-      },
-      "explanation": {
-        "en": "سَأَلَتْ for feminine. The question هَلْ (hal) is a yes/no question marker, like 'are you...?' أَخَهَا means 'her brother.'",
-        "ur": "سَأَلَتْ مؤنث کے لیے۔ سوال هَلْ (hal) yes/no سوال کا نشان ہے، جیسے 'کیا تم...؟' أَخَهَا کا مطلب ہے 'اس کا بھائی'۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Forms of سَأَلَ",
-        "ur": "سَأَلَ کے forms"
-      },
-      "body": {
-        "en": "سَأَلَ (he asked) · سَأَلَتْ (she asked) · سَأَلُوا (they-m asked) · سَأَلَتَا (they-f asked) · سَأَلْتُ (I asked) · سَأَلْنَا (we asked)",
-        "ur": "سَأَلَ (اس نے پوچھا) · سَأَلَتْ (اس نے پوچھا — مؤنث) · سَأَلُوا (انہوں نے پوچھا — جمع مذکر) · سَأَلَتَا (انہوں نے پوچھا — جمع مؤنث) · سَأَلْتُ (میں نے پوچھا) · سَأَلْنَا (ہم نے پوچھا)"
-      }
-    },
-    {
       "type": "WORD",
       "text": {
-        "ar": "سَأَلَ · سَأَلَتْ · سُؤَالٌ · أَيْنَ · هَلْ · مَنْ · مَا",
-        "en": "he asked · she asked · a question · where · yes/no question marker · who · what",
-        "ur": "اس نے پوچھا · اس نے پوچھا (مؤنث) · سوال · کہاں · ہل (سوال کا لفظ) · کون · کیا",
-        "ar_plain": "سأل · سألت · سؤال · أين · هل · من · ما",
-        "translit": "—"
+        "ar": "سَأَلَ",
+        "ar_plain": "سال",
+        "translit": "saʾala",
+        "en": "he asked",
+        "ur": "اس نے پوچھا"
+      },
+      "explanation": {
+        "en": "New verb: سَأَلَ, he asked. For a woman: سَأَلَتْ, with the تْ you know.",
+        "ur": "نیا فعل: سَأَلَ، اس نے پوچھا۔ عورت کے لیے: سَأَلَتْ، اس تْ کے ساتھ جو آپ جانتے ہیں۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Words that make a question",
+        "ar": "هَلْ / أَيْنَ / مَا / مَنْ",
+        "ur": "سوال بنانے والے الفاظ"
+      },
+      "explanation": {
+        "en": "You know them: هَلْ asks yes or no, أَيْنَ where, مَا what, مَنْ who. A line built with one of them, ending in ؟, is a question.",
+        "ur": "آپ انہیں جانتے ہیں: هَلْ ہاں یا نہیں پوچھتا ہے، أَيْنَ کہاں، مَا کیا، مَنْ کون۔ ان میں سے کسی ایک سے بنی سطر، جس کے آخر میں ؟ ہو، سوال ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "سَأَلَ الطَّالِبُ: أَيْنَ الْكِتَابُ؟",
+        "ar_plain": "سال الطالب اين الكتاب",
+        "translit": "saʾala ṭ-ṭālibu: ayna l-kitābu?",
+        "en": "The student asked, “Where is the book?”",
+        "ur": "طالب علم نے پوچھا: کتاب کہاں ہے؟"
+      },
+      "explanation": {
+        "en": "Who asked? الطَّالِبُ. What did he ask? أَيْنَ الْكِتَابُ؟, a where-question.",
+        "ur": "کس نے پوچھا؟ الطَّالِبُ۔ کیا پوچھا؟ أَيْنَ الْكِتَابُ؟، 'کہاں' والا سوال۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "سَأَلَتِ الطَّالِبَةُ: مَا هٰذَا؟",
+        "ar_plain": "سالت الطالبة ما هذا",
+        "translit": "saʾalati ṭ-ṭālibatu: mā hādhā?",
+        "en": "The female student asked, “What is this?”",
+        "ur": "طالبہ نے پوچھا: یہ کیا ہے؟"
+      },
+      "explanation": {
+        "en": "سَأَلَتْ before الْـ is read سَأَلَتِ, the same joining kasra as قَالَتِ in Chapter 8. Questioner: الطَّالِبَةُ. Question: مَا هٰذَا؟.",
+        "ur": "الْـ سے پہلے سَأَلَتْ کو سَأَلَتِ پڑھا جاتا ہے، وہی ملانے والا زیر جو باب 8 میں قَالَتِ میں تھا۔ پوچھنے والی: الطَّالِبَةُ۔ سوال: مَا هٰذَا؟۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "قَالَ can report a question too",
+        "ar": "قَالَ … أَيْنَ …؟",
+        "ur": "قَالَ سوال بھی بیان کر سکتا ہے"
+      },
+      "explanation": {
+        "en": "قَالَ only tells you that someone spoke. Whether it is a question depends on the words: قَالَ الطَّالِبُ: أَيْنَ الْمَسْجِدُ؟ is a question. Do not decide from the verb; look at the words.",
+        "ur": "قَالَ صرف بتاتا ہے کہ کوئی بولا۔ سوال ہے یا نہیں، یہ الفاظ پر ہے: قَالَ الطَّالِبُ: أَيْنَ الْمَسْجِدُ؟ سوال ہے۔ فعل سے فیصلہ نہ کریں؛ الفاظ دیکھیں۔"
+      },
+      "examples": [
+        {
+          "ar": "قَالَ الطَّالِبُ: أَيْنَ الْمَسْجِدُ؟",
+          "ar_plain": "قال الطالب اين المسجد",
+          "translit": "qāla ṭ-ṭālibu: ayna l-masjidu?",
+          "en": "The student said, “Where is the mosque?”",
+          "ur": "طالب علم نے کہا: مسجد کہاں ہے؟"
+        },
+        {
+          "ar": "قَالَ الْأُسْتَاذُ: الْكِتَابُ جَدِيدٌ",
+          "ar_plain": "قال الاستاذ الكتاب جديد",
+          "translit": "qāla l-ustādhu: al-kitābu jadīdun",
+          "en": "The teacher said, “The book is new.”",
+          "ur": "استاد نے کہا: کتاب نئی ہے۔"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Ali 'Imran 3:37: He said, “O Maryam, from where is this for you?”",
+        "ar": "قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا",
+        "ur": "Ali 'Imran 3:37: انہوں نے کہا: اے مریم! یہ تمہارے پاس کہاں سے آیا؟"
+      },
+      "explanation": {
+        "en": "Zakariyya, peace be upon him, found food with Maryam and asked about it — yet the ayah says قَالَ. His words make it a question: from where is this for you? أَنَّىٰ, from where, is glossed; لَكِ, for you (a woman), is from Chapter 5.",
+        "ur": "زکریا علیہ السلام نے مریم کے پاس کھانا پایا اور اس کے بارے میں پوچھا — پھر بھی آیت قَالَ کہتی ہے۔ ان کے الفاظ اسے سوال بناتے ہیں: یہ تمہارے پاس کہاں سے آیا؟ أَنَّىٰ، کہاں سے، کا صرف معنی دیا گیا ہے؛ لَكِ، تمہارے لیے (عورت)، باب 5 سے ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003037.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:186: And when My servants ask you concerning Me",
+        "ar": "وَإِذَا سَأَلَكَ عِبَادِي عَنِّي",
+        "ur": "Al-Baqarah 2:186: اور جب میرے بندے آپ سے میرے بارے میں پوچھیں"
+      },
+      "explanation": {
+        "en": "سَأَلَكَ: asked you — سَأَلَ + ـكَ, you, the Prophet ﷺ. عِبَادِي, My servants (Chapter 7's ـي), are the ones asking; عَنِّي, about Me. After إِذَا, when, it reads 'when they ask'.",
+        "ur": "سَأَلَكَ: آپ سے پوچھا — سَأَلَ + ـكَ، آپ، یعنی نبی ﷺ۔ عِبَادِي، میرے بندے (باب 7 کا ـي)، پوچھنے والے ہیں؛ عَنِّي، میرے بارے میں۔ إِذَا، جب، کے بعد اس کا مطلب 'جب وہ پوچھیں' ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002186.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Two questions about a question",
+        "ar": "مَنْ سَأَلَ؟ مَاذَا سَأَلَ؟",
+        "ur": "سوال کے بارے میں دو سوال"
+      },
+      "explanation": {
+        "en": "Who asked? What did they ask? Answer both from the line itself.",
+        "ur": "کس نے پوچھا؟ کیا پوچھا؟ دونوں کا جواب خود سطر سے دیں۔"
       }
     }
   ],
@@ -96,332 +152,350 @@
       "type": "TAP_TRANSLATION",
       "id": "ch22-l02-ex01",
       "prompt": {
-        "ar": "سَأَلَ عَلِيٌّ: \"أَيْنَ الْمَسْجِدُ؟\"",
-        "ar_plain": "سأل علي: أين المسجد؟",
-        "translit": "sa'ala 'aliyyun: 'ayna al-masjidu?'",
-        "en": "Ali asked: 'Where is the mosque?'",
-        "ur": "علی نے پوچھا: 'مسجد کہاں ہے؟'"
+        "ar": "سَأَلَ",
+        "ar_plain": "سال",
+        "translit": "saʾala",
+        "en": "he asked",
+        "ur": "اس نے پوچھا"
       },
       "options": [
         {
-          "en": "Ali asked: 'Where is the mosque?'",
-          "ur": "علی نے پوچھا: 'مسجد کہاں ہے؟'"
+          "en": "he said",
+          "ur": "اس نے کہا"
         },
         {
-          "en": "Ali said: 'Where is the mosque?'",
-          "ur": "علی نے کہا: 'مسجد کہاں ہے؟'"
+          "en": "he heard",
+          "ur": "اس نے سنا"
         },
         {
-          "en": "Ali answered: 'The mosque is near.'",
-          "ur": "علی نے جواب دیا: 'مسجد قریب ہے۔'"
+          "en": "he asked",
+          "ur": "اس نے پوچھا"
         },
         {
-          "en": "Ali went to the mosque.",
-          "ur": "علی مسجد گیا۔"
+          "en": "he answered",
+          "ur": "اس نے جواب دیا"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "سَأَلَ means 'he asked' — it introduces a question, not a statement. أَيْنَ means 'where.'",
-        "ur": "سَأَلَ کا مطلب ہے 'اس نے پوچھا' — یہ ایک سوال متعارف کراتا ہے، بیان نہیں۔ أَيْنَ کا مطلب ہے 'کہاں'۔"
+        "en": "سَأَلَ: he asked.",
+        "ur": "سَأَلَ: اس نے پوچھا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch22-l02-ex02",
+      "prompt": {
+        "ar": "سَأَلَ الطَّالِبُ: أَيْنَ الْكِتَابُ؟",
+        "ar_plain": "سال الطالب اين الكتاب",
+        "translit": "saʾala ṭ-ṭālibu: ayna l-kitābu?",
+        "en": "The student asked, “Where is the book?”",
+        "ur": "طالب علم نے پوچھا: کتاب کہاں ہے؟"
+      },
+      "options": [
+        {
+          "en": "The teacher asked, “Where is the book?”",
+          "ur": "استاد نے پوچھا: کتاب کہاں ہے؟"
+        },
+        {
+          "en": "The student asked, “What is the book?”",
+          "ur": "طالب علم نے پوچھا: کتاب کیا ہے؟"
+        },
+        {
+          "en": "The student said, “The book is here.”",
+          "ur": "طالب علم نے کہا: کتاب یہاں ہے۔"
+        },
+        {
+          "en": "The student asked, “Where is the book?”",
+          "ur": "طالب علم نے پوچھا: کتاب کہاں ہے؟"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Questioner: الطَّالِبُ. Question: أَيْنَ الْكِتَابُ؟.",
+        "ur": "پوچھنے والا: الطَّالِبُ۔ سوال: أَيْنَ الْكِتَابُ؟۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch22-l02-ex02",
+      "id": "ch22-l02-ex03",
       "statement": {
-        "en": "سَأَلَتْ is used when the questioner is a single woman.",
-        "ur": "سَأَلَتْ اس وقت استعمال ہوتی ہے جب پوچھنے والی ایک عورت ہو۔",
+        "en": "This line is a question, even though the verb is قَالَ.",
+        "ur": "یہ سطر سوال ہے، حالانکہ فعل قَالَ ہے۔",
         "ar_example": {
-          "ar": "سَأَلَتْ فَاطِمَةُ: \"هَلْ أَنْتِ طَالِبَةٌ؟\"",
-          "ar_plain": "سألت فاطمة: هل أنتِ طالبة؟",
-          "translit": "sa'alati faatimatun: 'hal anti taalibatun?'",
-          "en": "Fatima asked: 'Are you a student (f)?'",
-          "ur": "فاطمہ نے پوچھا: 'کیا تم طالبہ ہو؟'"
+          "ar": "قَالَ الطَّالِبُ: أَيْنَ الْمَسْجِدُ؟",
+          "ar_plain": "قال الطالب اين المسجد",
+          "translit": "qāla ṭ-ṭālibu: ayna l-masjidu?",
+          "en": "The student said, “Where is the mosque?”",
+          "ur": "طالب علم نے کہا: مسجد کہاں ہے؟"
         }
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَيْنَ makes the words a question; قَالَ just reports them.",
+        "ur": "أَيْنَ الفاظ کو سوال بناتا ہے؛ قَالَ صرف انہیں بیان کرتا ہے۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch22-l02-ex03",
-      "mode": "TAP",
-      "sentence_ar": "___ الْأُمُّ: \"مَنْ هَذَا؟\"",
-      "hint": {
-        "en": "The mother asked: 'Who is this?'",
-        "ur": "ماں نے پوچھا: 'یہ کون ہے؟'"
+      "type": "MATCH_AYAH",
+      "id": "ch22-l02-ex04",
+      "ayah_fragment": {
+        "ar": "قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا",
+        "surah_ref": "Ali 'Imran 3:37"
       },
       "options": [
         {
-          "ar": "قَالَتْ",
-          "ar_plain": "قالت",
-          "translit": "qaalati",
-          "en": "she said",
-          "ur": "اس نے کہا"
+          "en": "Maryam gives an answer here",
+          "ur": "یہاں مریم جواب دیتی ہیں"
         },
         {
-          "ar": "سَأَلَتْ",
-          "ar_plain": "سألت",
-          "translit": "sa'alati",
-          "en": "she asked",
+          "en": "Zakariyya asks Maryam a question; قَالَ reports it",
+          "ur": "زکریا مریم سے سوال پوچھتے ہیں؛ قَالَ اسے بیان کرتا ہے"
+        },
+        {
+          "en": "Maryam asks Zakariyya a question",
+          "ur": "مریم زکریا سے سوال پوچھتی ہیں"
+        },
+        {
+          "en": "It is a statement, because the verb is قَالَ",
+          "ur": "یہ بیان ہے، کیونکہ فعل قَالَ ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The words أَنَّىٰ لَكِ هَٰذَا are a question, reported with قَالَ.",
+        "ur": "الفاظ أَنَّىٰ لَكِ هَٰذَا سوال ہیں، قَالَ سے بیان کیے گئے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch22-l02-ex05",
+      "ayah_fragment": {
+        "ar": "وَإِذَا سَأَلَكَ عِبَادِي عَنِّي",
+        "surah_ref": "Al-Baqarah 2:186"
+      },
+      "options": [
+        {
+          "en": "سَأَلَكَ — your question",
+          "ur": "سَأَلَكَ — آپ کا سوال"
+        },
+        {
+          "en": "سَأَلَكَ — you asked",
+          "ur": "سَأَلَكَ — آپ نے پوچھا"
+        },
+        {
+          "en": "سَأَلَكَ — they ask you: My servants are the ones asking",
+          "ur": "سَأَلَكَ — وہ آپ سے پوچھیں: میرے بندے پوچھنے والے ہیں"
+        },
+        {
+          "en": "سَأَلَكَ — you answered them",
+          "ur": "سَأَلَكَ — آپ نے انہیں جواب دیا"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَأَلَ + ـكَ: asked you; عِبَادِي ask.",
+        "ur": "سَأَلَ + ـكَ: آپ سے پوچھا؛ عِبَادِي پوچھتے ہیں۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch22-l02-ex06",
+      "mode": "TAP",
+      "sentence_ar": "___ فَاطِمَةُ: مَا هٰذَا؟",
+      "hint": {
+        "en": "Fatimah asked, “What is this?”",
+        "ur": "فاطمہ نے پوچھا: یہ کیا ہے؟"
+      },
+      "options": [
+        {
+          "ar": "دَخَلَتْ",
+          "ar_plain": "دخلت",
+          "translit": "dakhalat",
+          "en": "she entered",
+          "ur": "وہ داخل ہوئی"
+        },
+        {
+          "ar": "رَجَعَتْ",
+          "ar_plain": "رجعت",
+          "translit": "rajaʿat",
+          "en": "she returned",
+          "ur": "وہ واپس آئی"
+        },
+        {
+          "ar": "سَأَلَ",
+          "ar_plain": "سال",
+          "translit": "saʾala",
+          "en": "he asked",
           "ur": "اس نے پوچھا"
         },
         {
-          "ar": "أَجَابَتْ",
-          "ar_plain": "أجابت",
-          "translit": "ajaabati",
-          "en": "she answered",
-          "ur": "اس نے جواب دیا"
-        },
-        {
-          "ar": "دَعَتْ",
-          "ar_plain": "دعت",
-          "translit": "da'at",
-          "en": "she called",
-          "ur": "اس نے بلایا"
+          "ar": "سَأَلَتْ",
+          "ar_plain": "سالت",
+          "translit": "saʾalat",
+          "en": "she asked",
+          "ur": "اس نے پوچھا (عورت)"
         }
       ],
       "correct_answer": {
         "ar": "سَأَلَتْ",
-        "ar_plain": "سألت",
-        "translit": "sa'alati",
+        "ar_plain": "سالت",
+        "translit": "saʾalat",
         "en": "she asked",
-        "ur": "اس نے پوچھا"
+        "ur": "اس نے پوچھا (عورت)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Asked, for Fatimah: سَأَلَتْ.",
+        "ur": "فاطمہ کے لیے پوچھا: سَأَلَتْ۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch22-l02-ex04",
+      "id": "ch22-l02-ex07",
       "left_column": [
         {
-          "ar": "سَأَلَ عَلِيٌّ",
-          "ar_plain": "سأل علي",
-          "translit": "sa'ala 'aliyyun",
-          "en": "Ali asked",
-          "ur": "علی نے پوچھا"
+          "ar": "هَلْ",
+          "ar_plain": "هل",
+          "translit": "hal",
+          "en": "yes/no question word",
+          "ur": "کیا (ہاں/نہیں)"
         },
         {
-          "ar": "سَأَلَتْ هِنْدٌ",
-          "ar_plain": "سألت هند",
-          "translit": "sa'alati hindun",
-          "en": "Hind asked",
-          "ur": "ہند نے پوچھا"
+          "ar": "أَيْنَ",
+          "ar_plain": "اين",
+          "translit": "ayna",
+          "en": "where?",
+          "ur": "کہاں؟"
         },
         {
-          "ar": "سَأَلُوا الْوَلَدُونَ",
-          "ar_plain": "سألوا الولدون",
-          "translit": "sa'aluu al-waladoona",
-          "en": "the boys asked",
-          "ur": "لڑکوں نے پوچھا"
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "mā",
+          "en": "what?",
+          "ur": "کیا؟"
         },
         {
-          "ar": "سَأَلْتُ أَنَا",
-          "ar_plain": "سألت أنا",
-          "translit": "sa'altu ana",
-          "en": "I asked",
-          "ur": "میں نے پوچھا"
+          "ar": "مَنْ",
+          "ar_plain": "من",
+          "translit": "man",
+          "en": "who?",
+          "ur": "کون؟"
         }
       ],
       "right_column": [
         {
-          "en": "he asked (singular m)",
-          "ur": "اس نے پوچھا (واحد مذکر)"
+          "en": "asks what",
+          "ur": "کیا پوچھتا ہے"
         },
         {
-          "en": "she asked (singular f)",
-          "ur": "اس نے پوچھا (واحد مؤنث)"
+          "en": "asks yes or no",
+          "ur": "ہاں یا نہیں پوچھتا ہے"
         },
         {
-          "en": "they asked (plural m)",
-          "ur": "انہوں نے پوچھا (جمع مذکر)"
+          "en": "asks who",
+          "ur": "کون پوچھتا ہے"
         },
         {
-          "en": "I asked",
-          "ur": "میں نے پوچھا"
+          "en": "asks where",
+          "ur": "کہاں پوچھتا ہے"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
           1
         ],
         [
+          1,
+          3
+        ],
+        [
           2,
-          2
+          0
         ],
         [
           3,
-          3
+          2
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch22-l02-ex05",
-      "target_translation": {
-        "en": "The teacher asked: 'What is your name?'",
-        "ur": "استاد نے پوچھا: 'تمہارا نام کیا ہے؟'"
-      },
-      "tiles": [
-        {
-          "ar": "سَأَلَ",
-          "ar_plain": "سأل",
-          "translit": "sa'ala",
-          "en": "he asked",
-          "ur": "اس نے پوچھا"
-        },
-        {
-          "ar": "الْأَسْتَاذُ",
-          "ar_plain": "الاستاذ",
-          "translit": "al-ustaadu",
-          "en": "the teacher",
-          "ur": "استاد"
-        },
-        {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "what",
-          "ur": "کیا"
-        },
-        {
-          "ar": "اسْمُكَ",
-          "ar_plain": "اسمك",
-          "translit": "ismuka",
-          "en": "your name",
-          "ur": "تمہارا نام"
-        },
-        {
-          "ar": "هَلْ",
-          "ar_plain": "هل",
-          "translit": "hal",
-          "en": "yes/no?",
-          "ur": "کیا"
-        }
-      ],
-      "correct_order": [
-        1,
-        0,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "CONVERSATION_BUILDER",
-      "id": "ch22-l02-ex06",
-      "prompt_line": {
-        "ar": "هَلْ أَنْتَ طَالِبٌ؟",
-        "ar_plain": "هل أنت طالب؟",
-        "translit": "hal anta taalibun?",
-        "en": "Are you a student?",
-        "ur": "کیا تم طالب علم ہو؟"
-      },
-      "response_mode": "PICK",
-      "options": [
-        {
-          "ar": "نَعَمْ، أَنَا طَالِبٌ",
-          "ar_plain": "نعم، أنا طالب",
-          "translit": "na'am, anaa taalibun",
-          "en": "Yes, I am a student.",
-          "ur": "جی ہاں، میں طالب علم ہوں۔"
-        },
-        {
-          "ar": "لَا، أَنَا مُعَلِّمٌ",
-          "ar_plain": "لا، أنا معلم",
-          "translit": "laa, anaa mu'allimun",
-          "en": "No, I am a teacher.",
-          "ur": "نہیں، میں استاد ہوں۔"
-        },
-        {
-          "ar": "أَنَا فِي الْمَدْرَسَةِ",
-          "ar_plain": "أنا في المدرسة",
-          "translit": "anaa fi al-madrasati",
-          "en": "I am at school.",
-          "ur": "میں school میں ہوں۔"
-        },
-        {
-          "ar": "الْمَسْجِدُ قَرِيبٌ",
-          "ar_plain": "المسجد قريب",
-          "translit": "al-masjidu qariibun",
-          "en": "The mosque is near.",
-          "ur": "مسجد قریب ہے۔"
-        }
-      ],
-      "correct_option_index": 0,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Each question word asks for something different.",
+        "ur": "ہر سوالیہ لفظ کچھ مختلف پوچھتا ہے۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
-      "id": "ch22-l02-ex07",
+      "id": "ch22-l02-ex08",
       "prompt": {
-        "ar": "سَأَلُوا الْأَصْدِقَاءُ: \"أَيْنَ الْمَكْتَبُ؟\"",
-        "ar_plain": "سألوا الأصدقاء: أين المكتب؟",
-        "translit": "sa'aluu al-asadiqaa'u: 'ayna al-maktabu?'",
-        "en": "The friends asked: 'Where is the office?'",
-        "ur": "دوستوں نے پوچھا: 'دفتر کہاں ہے؟'"
+        "ar": "سَأَلَ الْأُسْتَاذُ: أَيْنَ أَحْمَدُ؟",
+        "ar_plain": "سال الاستاذ اين احمد",
+        "translit": "saʾala l-ustādhu: ayna aḥmadu?",
+        "en": "The teacher asked, “Where is Ahmad?”",
+        "ur": "استاد نے پوچھا: احمد کہاں ہے؟"
       },
       "options": [
         {
-          "en": "The friends asked: 'Where is the office?'",
-          "ur": "دوستوں نے پوچھا: 'دفتر کہاں ہے؟'"
+          "en": "Ahmad answered the teacher.",
+          "ur": "احمد نے استاد کو جواب دیا۔"
         },
         {
-          "en": "The friends said: 'The office is near.'",
-          "ur": "دوستوں نے کہا: 'دفتر قریب ہے۔'"
+          "en": "The teacher asked where Ahmad is.",
+          "ur": "استاد نے پوچھا کہ احمد کہاں ہے۔"
         },
         {
-          "en": "A friend asked: 'Where is the mosque?'",
-          "ur": "ایک دوست نے پوچھا: 'مسجد کہاں ہے؟'"
+          "en": "The teacher said that Ahmad is here.",
+          "ur": "استاد نے کہا کہ احمد یہاں ہے۔"
         },
         {
-          "en": "The friends went to the office.",
-          "ur": "دوست دفتر گئے۔"
+          "en": "Ahmad asked where the teacher is.",
+          "ur": "احمد نے پوچھا کہ استاد کہاں ہیں۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "سَأَلُوا is plural masculine 'they asked.' أَيْنَ means 'where.' The question is about the location of الْمَكْتَبُ (the office).",
-        "ur": "سَأَلُوا جمع مذکر ہے 'انہوں نے پوچھا'۔ أَيْنَ کا مطلب ہے 'کہاں'۔ سوال الْمَكْتَبُ (دفتر) کے مقام کے بارے میں ہے۔"
+        "en": "Questioner after سَأَلَ: الْأُسْتَاذُ. Question: about Ahmad.",
+        "ur": "سَأَلَ کے بعد پوچھنے والا: الْأُسْتَاذُ۔ سوال: احمد کے بارے میں۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "سَأَلَ — asking questions in dialogue",
-      "ar": "سَأَلَ — السُّؤَالُ فِي الْحِوَارِ",
-      "ur": "سَأَلَ — گفتگو میں سوال پوچھنا"
+      "en": "Who asked, and what?",
+      "ar": "مَنْ سَأَلَ؟ مَاذَا سَأَلَ؟",
+      "ur": "کس نے پوچھا، اور کیا؟"
     },
     "ayah": {
-      "surah": 12,
-      "ayah": 77,
-      "label": "Yusuf 12:77",
-      "ar": "قَالُوا إِنْ يَسْرِقْ فَقَدْ سَرَقَ أَخٌ لَهُ مِنْ قَبْلُ",
-      "en": "They said: 'If he steals, his brother stole before.'",
-      "ur": "انہوں نے کہا: 'اگر وہ چوری کرے تو اس کا بھائی پہلے چوری کر چکا ہے۔'",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012077.mp3"
+      "surah": 2,
+      "ayah": 186,
+      "label": "Al-Baqarah 2:186",
+      "ar": "وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ",
+      "en": "And when My servants ask you concerning Me — indeed I am near.",
+      "ur": "اور جب میرے بندے آپ سے میرے بارے میں پوچھیں تو میں قریب ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002186.mp3"
     },
     "highlighted_word_indices": [
-      0
+      1
+    ],
+    "highlighted_words": [
+      "سَأَلَكَ"
     ],
     "noor_explanation": {
-      "en": "قَالُوا in this ayah actually follows a question — they were answering accusations. In Arabic, asking questions with سَأَلَ is how you open a dialogue politely.",
-      "ur": "قَالُوا اس آیت میں دراصل ایک سوال کے بعد آتا ہے — وہ الزامات کا جواب دے رہے تھے۔ عربی میں سَأَلَ سے سوال کرنا گفتگو کو شائستگی سے کھولنے کا طریقہ ہے۔"
+      "en": "سَأَلَكَ: they ask you. People asked the Prophet ﷺ about their Lord, and the answer came at once: I am near. سَأَلَ names the asking; the words, or the ayah's own context, tell you the question.",
+      "ur": "سَأَلَكَ: وہ آپ سے پوچھیں۔ لوگوں نے نبی ﷺ سے اپنے رب کے بارے میں پوچھا، اور جواب فوراً آیا: میں قریب ہوں۔ سَأَلَ پوچھنے کا نام ہے؛ الفاظ، یا آیت کا اپنا سیاق، سوال بتاتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "سَأَلَ, سَأَلَتْ, سَأَلُوا — these forms let you ask questions in Arabic. Remember: قَالَ = said, سَأَلَ = asked. Two different verbs!",
-      "ur": "سَأَلَ، سَأَلَتْ، سَأَلُوا — یہ forms آپ کو عربی میں سوال کرنے دیتے ہیں۔ یاد رکھیں: قَالَ = کہا، سَأَلَ = پوچھا۔ دو مختلف افعال!"
+      "en": "You can find who asked and what. Next: أَجَابَ, answered — and how to tell whether an answer fits.",
+      "ur": "آپ ڈھونڈ سکتے ہیں کس نے پوچھا اور کیا۔ آگے: أَجَابَ، جواب دیا — اور یہ کیسے جانیں کہ جواب مناسب ہے۔"
     }
   }
 }

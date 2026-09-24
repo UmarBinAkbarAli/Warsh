@@ -302,123 +302,158 @@ const specs = [
     ],
   },
 
-  // ── Ch20 ── Attached Pronouns: Plural ────────────────────────────────────
+  // ── Ch20 ── Plural Attached Pronouns ────────────────────────────────────
+  // Docs/proposals/chapter-20-content-proposal.md (2026-09-24): five noun-attached
+  // plural endings, each introduced on its own — ـنَا (Ali 'Imran 3:193), ـكُمْ
+  // (An-Nisa 4:1), ـهُمْ / ـهِمْ (Al-Baqarah 2:277), ـكُنَّ (Al-Ahzab 33:34), ـهُنَّ
+  // (Al-Baqarah 2:233) — then an application lesson with the capped noun-versus-
+  // action contrast رَبَّنَا / اهْدِنَا (Al-Fatiha 1:6), a review and a final test.
   {
     order: 20,
-    sourceFile: "reader_lecture_20_attached_pronouns_plural.md",
-    title: "Attached Pronouns: Plural",
-    titleAr: "ضَمَائِر الْجَمْع الْمُتَّصِلَة",
-    description: "Our, your (plural), their — attaching plural pronouns to nouns.",
-    hook: { ayahAr: "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ", ayahRef: "Al-Fatiha 1:6", highlightedWord: "اهْدِنَا" },
+    // The former reader_lecture_20 file never existed in the repository; the
+    // approved proposal is the content specification.
+    sourceFile: "Docs/proposals/chapter-20-content-proposal.md",
+    title: "Plural Attached Pronouns: Our, Your and Their",
+    titleUr: "جمع کی جڑی ہوئی ضمیریں: ہمارا، تمہارا اور ان کا",
+    titleAr: "ضَمَائِرُ الْجَمْعِ الْمُتَّصِلَةُ",
+    description: "Our, your for a group, and their: five plural endings on nouns. Who owns it, and is that group spoken to or spoken about?",
+    descriptionUr: "ہمارا، گروہ سے تمہارا، اور ان کا: اسم پر جمع کے پانچ آخر۔ مالک کون ہے، اور اس گروہ سے بات ہو رہی ہے یا اس کے بارے میں؟",
+    hook: { ayahAr: "رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا", ayahRef: "Ali 'Imran 3:193", highlightedWord: "ذُنُوبَنَا" },
     examples: [
-      card("رَبَّنَا اغْفِرْ لَنَا", "Our Lord, forgive us", "rabbanaa ighfir lanaa"),
-      card("بَيْتُكُمْ قَرِيبٌ", "Your (pl) house is near", "baytukum qareebun"),
-      card("كِتَابُهُمْ عَلَى الطَّاوِلَةِ", "Their (m) book is on the table", "kitaabuhum alat-taawila"),
-      card("مَدْرَسَتُهُنَّ جَدِيدَةٌ", "Their (f) school is new", "madrasatuhunna jadeedatun"),
+      card("كِتَابُنَا عَلَى الْمَكْتَبِ", "Our book is on the desk.", "kitābunā ʿalā l-maktabi"),
+      card("بَيْتُكُمْ كَبِيرٌ", "Your house is big. (to a group)", "baytukum kabīrun"),
+      card("الطُّلَّابُ فِي الْفَصْلِ، وَكُتُبُهُمْ عَلَى الْمَكْتَبِ", "The students are in the classroom, and their books are on the desk.", "aṭ-ṭullābu fī l-faṣli, wa kutubuhum ʿalā l-maktabi"),
+      card("الطَّالِبَاتُ فِي الْمَدْرَسَةِ، وَكُتُبُهُنَّ جَدِيدَةٌ", "The female students are at school, and their books are new.", "aṭ-ṭālibātu fī l-madrasati, wa kutubuhunna jadīdatun"),
     ],
-    parseText: "رَبَّنَا اغْفِرْ لَنَا",
-    parseTokens: [token("رَبَّنَا", "مضاف", "our Lord"), token("اغْفِرْ", "فعل", "forgive"), token("لَنَا", "حرف جر", "for us")],
-    conversation: ["أَيْنَ كِتَابُكُمْ؟", "كِتَابُنَا عَلَى الطَّاوِلَةِ"],
-    conversationDistractor: "مَدْرَسَتُهَا بَعِيدَةٌ",
-    distractor: "Her school is far",
-    blankDistractor: "كِتَابُهُنَّ",
-    noorTip: "اهْدِنَا — guide us — is the most repeated supplication in Islam, using the نَا pronoun.",
-    noorTipUr: "اهْدِنَا میں نا جمع متکلم کی ضمیر ہے — ہم سب مل کر مانگتے ہیں۔",
+    parseText: "كِتَابُنَا جَدِيدٌ",
+    parseTokens: [token("كِتَابُنَا", "مبتدأ", "our book"), token("جَدِيدٌ", "خبر", "new")],
+    conversation: ["أَيْنَ كِتَابُكُمْ؟", "كِتَابُنَا عَلَى الْمَكْتَبِ"],
+    conversationDistractor: "كِتَابُكُمْ عَلَى الْمَكْتَبِ",
+    distractor: "Your house is big. (to one man)",
+    blankDistractor: "كِتَابُكُنَّ",
+    noorTip: "رَبَّنَا is our Lord, but اهْدِنَا is guide us: before you read ـنَا as our, check that it sits on a noun.",
+    noorTipUr: "رَبَّنَا کا مطلب ہمارا رب ہے، لیکن اهْدِنَا کا مطلب ہمیں ہدایت دے: ـنَا کو 'ہمارا' پڑھنے سے پہلے دیکھیں کہ وہ اسم پر ہے۔",
     focuses: [
-      { title: "Our + Noun", titleAr: "ـُنَا", grammarTerm: "ضمير المتكلمين", reveal: "You expressed communal ownership with the نا ending.", hookQuestion: "How does رَبَّنَا feel different from رَبِّي?" },
-      { title: "Your (pl) + Noun", titleAr: "ـُكُمْ", grammarTerm: "ضمير جمع المخاطب", reveal: "You addressed a group with their shared possession.", hookQuestion: "When do you use كُمْ instead of كَ?" },
-      { title: "Their (m) + Noun", titleAr: "ـُهُمْ", grammarTerm: "ضمير جمع الغائب", reveal: "You pointed to a group's possession from a distance.", hookQuestion: "What group does هُمْ represent?" },
-      { title: "Their (f) + Noun", titleAr: "ـُهُنَّ", grammarTerm: "ضمير جمع الغائبات", reveal: "You completed the feminine plural possession form.", hookQuestion: "When would you use هُنَّ over هُمْ?" },
+      { title: "Our: ـنَا on a Noun", titleAr: "رَبَّنَا وَذُنُوبَنَا", grammarTerm: "ضمير المتكلمين", reveal: "ذُنُوبَنَا, our sins (3:193): the believers who are speaking own them.", hookQuestion: "Whose sins are ذُنُوبَنَا?" },
+      { title: "Your, to a Group: ـكُمْ", titleAr: "رَبَّكُمُ", grammarTerm: "ضمير المخاطبين", reveal: "رَبَّكُمُ, your Lord (4:1), said to all people; خَلَقَكُم, created you, is the same ending on an action.", hookQuestion: "Who is being spoken to in رَبَّكُمُ?" },
+      { title: "Their: ـهُمْ", titleAr: "أَجْرُهُمْ عِنْدَ رَبِّهِمْ", grammarTerm: "ضمير الغائبين", reveal: "أَجْرُهُمْ and رَبِّهِمْ (2:277): the believers spoken about; ـهُمْ is heard ـهِمْ after a kasra.", hookQuestion: "Why is رَبِّهِمْ read with -him?" },
+      { title: "Your, to a Group of Women: ـكُنَّ", titleAr: "بُيُوتُكُنَّ", grammarTerm: "ضمير المخاطبات", reveal: "بُيُوتِكُنَّ, your houses (33:34), said to a group of women.", hookQuestion: "Who decides the ending of بُيُوتِكُنَّ: the houses or the listeners?" },
+      { title: "Their, a Group of Women: ـهُنَّ", titleAr: "رِزْقُهُنَّ وَكِسْوَتُهُنَّ", grammarTerm: "ضمير الغائبات", reveal: "رِزْقُهُنَّ وَكِسْوَتُهُنَّ (2:233): the mothers' provision and clothing.", hookQuestion: "Whose provision is رِزْقُهُنَّ?" },
+      { title: "Who Belongs to Whom?", titleAr: "الِاسْمُ وَصَاحِبُهُ", grammarTerm: "الاسم والفعل", reveal: "رَبَّنَا, our Lord, but اهْدِنَا, guide us (1:6): the same ending on a noun and on an action.", hookQuestion: "Does ـنَا mean our in اهْدِنَا?" },
     ],
   },
 
-  // ── Ch21 ── Places and Movement ──────────────────────────────────────────
+  // ── Ch21 ── Places and Movement: Journeys and Landmarks ──────────────────
+  // Docs/proposals/chapter-21-content-proposal.md (2026-09-24): the journey from
+  // مِنْ to إِلَى (Al-Isra 17:1), went / left / entered / returned (Ta-Ha 20:86),
+  // بَيْنَ … وَ … (Al-Baqarah 2:164), entering and leaving in Al-Qasas 28:15 and
+  // 28:21, then CL8 Finding Someone, a review and a final test.
   {
     order: 21,
-    sourceFile: "reader_lecture_21_places_movement.md",
-    title: "Places and Movement",
-    titleAr: "الأَمَاكِن وَالتَّنَقُّل",
-    description: "Verbs of movement with prepositions, city and village vocabulary.",
-    hook: { ayahAr: "وَاللَّهُ يَعْلَمُ مَا تُسِرُّونَ وَمَا تُعْلِنُونَ", ayahRef: "An-Nahl 16:19", highlightedWord: "يَعْلَمُ" },
+    // The former reader_lecture_21 files never existed in the repository; the
+    // approved proposal is the content specification.
+    sourceFile: "Docs/proposals/chapter-21-content-proposal.md",
+    title: "Places and Movement: Journeys and Landmarks",
+    titleUr: "جگہیں اور حرکت: سفر اور نشانیاں",
+    titleAr: "الْأَمَاكِنُ وَالْحَرَكَةُ",
+    description: "From where, to where, and where exactly: follow a short journey, tell went, left, entered and returned apart, and find a place between two landmarks.",
+    descriptionUr: "کہاں سے، کہاں تک، اور ٹھیک کہاں: ایک مختصر سفر سمجھیں، گیا، نکلا، داخل ہوا اور واپس آیا کو الگ پہچانیں، اور دو نشانیوں کے درمیان جگہ ڈھونڈیں۔",
+    hook: { ayahAr: "مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى", ayahRef: "Al-Isra 17:1", highlightedWord: "مِّنَ" },
     examples: [
-      card("ذَهَبَ أَحْمَدُ إِلَى الْمَدِينَةِ", "Ahmad went to the city", "dhahaba ahmadu ilal-madeenat"),
-      card("خَرَجَ مِنَ الْبَيْتِ بَاكِرًا", "He left the house early", "kharaja minal-bayti baakiran"),
-      card("دَخَلَ الطَّالِبُ الْفَصْلَ", "The student entered the classroom", "dakhala at-talibu al-fasla"),
-      card("الْقَرْيَةُ بَعِيدَةٌ عَنِ الْمَدِينَةِ", "The village is far from the city", "al-qaryatu ba'eedatun anil-madeenati"),
+      card("خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ وَذَهَبَ إِلَى الْمَسْجِدِ", "Ahmad left the house and went to the mosque.", "kharaja aḥmadu mina l-bayti wa dhahaba ilā l-masjidi"),
+      card("دَخَلَ الطَّالِبُ الْفَصْلَ", "The student entered the classroom.", "dakhala ṭ-ṭālibu l-faṣla"),
+      card("رَجَعَتْ فَاطِمَةُ إِلَى الْبَيْتِ", "Fatimah returned to the house.", "rajaʿat fāṭimatu ilā l-bayti"),
+      card("الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ", "The mosque is between the school and the market.", "al-masjidu bayna l-madrasati wa s-sūqi"),
     ],
-    parseText: "ذَهَبَ أَحْمَدُ إِلَى الْمَدِينَةِ",
-    parseTokens: [token("ذَهَبَ", "فعل", "went"), token("أَحْمَدُ", "فاعل", "Ahmad"), token("إِلَى", "حرف جر", "to"), token("الْمَدِينَةِ", "مضاف إليه", "the city")],
-    conversation: ["مِنْ أَيْنَ خَرَجَ؟", "خَرَجَ مِنَ الْبَيْتِ"],
-    conversationDistractor: "كِتَابُهُمْ عَلَى الطَّاوِلَةِ",
-    distractor: "Their book is on the table",
-    blankDistractor: "عَنِ",
-    noorTip: "Allah knows what we conceal and reveal — يَعْلَمُ shows a present tense verb.",
-    noorTipUr: "يَعْلَمُ حال کا فعل ہے — اللہ جانتا ہے، جانتا رہتا ہے۔",
+    parseText: "دَخَلَ الطَّالِبُ الْفَصْلَ",
+    parseTokens: [token("دَخَلَ", "فعل", "entered"), token("الطَّالِبُ", "فاعل", "the student"), token("الْفَصْلَ", "مفعول", "the classroom")],
+    conversation: ["أَيْنَ أَحْمَدُ؟", "خَرَجَ مِنَ الْمَدْرَسَةِ وَذَهَبَ إِلَى الْمَسْجِدِ"],
+    conversationDistractor: "الْمَسْجِدُ خَلْفَ الْبَيْتِ",
+    distractor: "Ahmad left the mosque and went to the house.",
+    blankDistractor: "إِلَى",
+    noorTip: "After مِنْ comes where a journey began, after إِلَى where it ended: مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى.",
+    noorTipUr: "مِنْ کے بعد وہ جگہ آتی ہے جہاں سے سفر شروع ہوا، إِلَى کے بعد جہاں ختم ہوا: مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى۔",
     focuses: [
-      { title: "He Went To", titleAr: "ذَهَبَ إِلَى", grammarTerm: "فعل + حرف جر", reveal: "You paired a verb of motion with its direction using إِلَى.", hookQuestion: "What does إِلَى tell you about where Ahmad ended up?" },
-      { title: "He Came Out From", titleAr: "خَرَجَ مِنْ", grammarTerm: "فعل + حرف جر", reveal: "You expressed departure from a place using مِنْ.", hookQuestion: "How does مِنْ change the meaning of خَرَجَ?" },
-      { title: "He Entered", titleAr: "دَخَلَ", grammarTerm: "فعل ماض", reveal: "You saw that دَخَلَ can take a direct object without a preposition.", hookQuestion: "Why does الْفَصْلَ follow دَخَلَ directly?" },
-      { title: "The City and Village", titleAr: "مَدِينَة وَقَرْيَة", grammarTerm: "مفردات مكانية", reveal: "You placed two locations in a relation of distance.", hookQuestion: "What does بَعِيدَةٌ عَنِ describe?" },
+      { title: "The Journey: From Where, To Where?", titleAr: "مِنْ أَيْنَ وَإِلَى أَيْنَ؟", grammarTerm: "حرف جر", reveal: "مِّنَ … إِلَى … (17:1): the start and the end of the Night Journey.", hookQuestion: "Where did the Night Journey begin, and where did it end?" },
+      { title: "Which Movement Happened?", titleAr: "ذَهَبَ، خَرَجَ، دَخَلَ، رَجَعَ", grammarTerm: "أفعال الحركة", reveal: "فَرَجَعَ مُوسَىٰ إِلَىٰ قَوْمِهِ (20:86): returned, not went.", hookQuestion: "Why does 20:86 say رَجَعَ and not ذَهَبَ?" },
+      { title: "Find It by a Landmark", titleAr: "بَيْنَ … وَ …", grammarTerm: "ظرف مكان", reveal: "بَيْنَ السَّمَاءِ وَالْأَرْضِ (2:164): the clouds between the sky and the earth.", hookQuestion: "What sits between the sky and the earth in 2:164?" },
+      { title: "Quran Reading: Entering and Leaving", titleAr: "دَخَلَ وَخَرَجَ فِي الْقُرْآنِ", grammarTerm: "فعل ماض", reveal: "وَدَخَلَ الْمَدِينَةَ (28:15), then فَخَرَجَ مِنْهَا (28:21): the same city.", hookQuestion: "What does ـهَا in مِنْهَا point to?" },
     ],
   },
 
-  // ── Ch22 ── Dialogue and Communication ───────────────────────────────────
+  // ── Ch22 ── Dialogue: Who Said What? ─────────────────────────────────────
+  // Docs/proposals/chapter-22-content-proposal.md (2026-09-24): the speaker after
+  // قَالَ (Yusuf 12:36), سَأَلَ and questions reported with قَالَ (Al-Baqarah
+  // 2:186, Ali 'Imran 3:37), أَجَابَ and a fitting answer, a full exchange
+  // (Yusuf 12:90), then CL9 Ask, Answer, Confirm, a review and a final test.
   {
     order: 22,
-    sourceFile: "reader_lecture_22_dialogue_communication.md",
-    title: "Dialogue and Communication",
-    titleAr: "الْحِوَار وَالتَّوَاصُل",
-    description: "Conversation verbs — said, asked, answered, understood.",
-    hook: { ayahAr: "وَقُولُوا لِلنَّاسِ حُسْنًا", ayahRef: "Al-Baqarah 2:83", highlightedWord: "قُولُوا" },
+    // The former reader_lecture_22 files never existed in the repository; the
+    // approved proposal is the content specification.
+    sourceFile: "Docs/proposals/chapter-22-content-proposal.md",
+    title: "Dialogue: Who Said What?",
+    titleUr: "مکالمہ: کس نے کیا کہا؟",
+    titleAr: "الْحِوَارُ: مَنْ قَالَ مَاذَا؟",
+    description: "Follow a short exchange: who spoke, what was said, who asked, which answer fits, and whether the listener understood.",
+    descriptionUr: "ایک مختصر گفتگو سمجھیں: کون بولا، کیا کہا گیا، کس نے پوچھا، کون سا جواب مناسب ہے، اور کیا سننے والے کو سمجھ آیا۔",
+    hook: { ayahAr: "وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ قَالَ أَحَدُهُمَا", ayahRef: "Yusuf 12:36", highlightedWord: "قَالَ" },
     examples: [
-      card("قَالَ الأُسْتَاذُ كَلِمَةً حَسَنَةً", "The teacher said a good word", "qaala al-ustaadhu kalimatan hasanatan"),
-      card("سَأَلَ الطَّالِبُ سُؤَالًا", "The student asked a question", "sa'ala at-talibu su'aalan"),
-      card("أَجَابَتِ الْبِنْتُ بِسُرْعَةٍ", "The girl answered quickly", "ajaabati al-bintu bisur'atin"),
-      card("فَهِمَ الطَّالِبُ الدَّرْسَ", "The student understood the lesson", "fahima at-talibu ad-darsa"),
+      card("قَالَ الْأُسْتَاذُ: الْكِتَابُ جَدِيدٌ", "The teacher said, “The book is new.”", "qāla l-ustādhu: al-kitābu jadīdun"),
+      card("سَأَلَ الطَّالِبُ: أَيْنَ الْكِتَابُ؟", "The student asked, “Where is the book?”", "saʾala ṭ-ṭālibu: ayna l-kitābu?"),
+      card("أَجَابَ أَحْمَدُ: الْكِتَابُ عَلَى الْمَكْتَبِ", "Ahmad answered, “The book is on the desk.”", "ajāba aḥmadu: al-kitābu ʿalā l-maktabi"),
+      card("هَلْ فَهِمْتَ الدَّرْسَ؟ نَعَمْ، فَهِمْتُ الدَّرْسَ", "Did you understand the lesson? Yes, I understood the lesson.", "hal fahimta d-darsa? naʿam, fahimtu d-darsa"),
     ],
-    parseText: "قَالَ الأُسْتَاذُ كَلِمَةً",
-    parseTokens: [token("قَالَ", "فعل", "said"), token("الأُسْتَاذُ", "فاعل", "the teacher"), token("كَلِمَةً", "مفعول", "a word")],
+    parseText: "قَالَ الْأُسْتَاذُ: الْكِتَابُ جَدِيدٌ",
+    parseTokens: [token("قَالَ", "فعل", "said"), token("الْأُسْتَاذُ", "فاعل", "the teacher"), token("الْكِتَابُ", "مبتدأ", "the book"), token("جَدِيدٌ", "خبر", "new")],
     conversation: ["هَلْ فَهِمْتَ الدَّرْسَ؟", "نَعَمْ، فَهِمْتُ الدَّرْسَ"],
-    conversationDistractor: "خَرَجَ مِنَ الْبَيْتِ",
-    distractor: "He left the house early",
-    blankDistractor: "سَمِعَ",
-    noorTip: "قُولُوا لِلنَّاسِ حُسْنًا — speak good to people. Every conversation is a choice.",
-    noorTipUr: "لوگوں سے اچھی بات کرو — یہ حکم ہے قرآن کا۔",
+    conversationDistractor: "نَعَمْ، فَهِمْتَ الدَّرْسَ",
+    distractor: "Ahmad asked, “Where is the book?”",
+    blankDistractor: "سَأَلَ",
+    noorTip: "قَالَ can report a question too: قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا (3:37). Decide from the words, not from the verb.",
+    noorTipUr: "قَالَ سوال بھی بیان کر سکتا ہے: قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا (3:37)۔ فیصلہ الفاظ سے کریں، فعل سے نہیں۔",
     focuses: [
-      { title: "He Said", titleAr: "قَالَ", grammarTerm: "فعل قول", reveal: "You used the most frequent speech verb in the Quran.", hookQuestion: "Why does the Quran use قَالَ so often?" },
-      { title: "He Asked", titleAr: "سَأَلَ", grammarTerm: "فعل سؤال", reveal: "You paired the asking verb with its object: the question itself.", hookQuestion: "What is the difference between قَالَ and سَأَلَ?" },
-      { title: "He Answered", titleAr: "أَجَابَ", grammarTerm: "فعل إجابة", reveal: "You expressed a response, including the manner — quickly.", hookQuestion: "What does بِسُرْعَةٍ add to the verb?" },
-      { title: "A Full Exchange", titleAr: "فَهِمَ", grammarTerm: "فعل فهم", reveal: "You completed a full dialogue loop: question, answer, understanding.", hookQuestion: "What happens when فَهِمَ ends the exchange?" },
+      { title: "Who Said What?", titleAr: "مَنْ قَالَ؟", grammarTerm: "فعل القول", reveal: "قَالَ أَحَدُهُمَا (12:36): one of the two young men is the speaker, not Yusuf.", hookQuestion: "Who speaks in قَالَ أَحَدُهُمَا?" },
+      { title: "Who Asked, and What?", titleAr: "مَنْ سَأَلَ؟", grammarTerm: "الاستفهام", reveal: "وَإِذَا سَأَلَكَ عِبَادِي (2:186): My servants ask; a question can also be reported with قَالَ (3:37).", hookQuestion: "Who is asking in 2:186?" },
+      { title: "An Answer That Fits", titleAr: "الْجَوَابُ الْمُنَاسِبُ", grammarTerm: "الجواب", reveal: "قَالَتْ هُوَ مِنْ عِندِ اللَّهِ (3:37): 'from where?' answered 'from Allah'.", hookQuestion: "How does Maryam's answer fit Zakariyya's question?" },
+      { title: "Follow the Full Exchange", titleAr: "الْحِوَارُ كُلُّهُ", grammarTerm: "الحوار", reveal: "قَالُوا … قَالَ أَنَا يُوسُفُ (12:90): a question and its answer.", hookQuestion: "Who asks and who answers in 12:90?" },
     ],
   },
 
-  // ── Ch23 ── Grammar Structures Consolidated ───────────────────────────────
+  // ── Ch23 ── Book 2 Reading Consolidation ─────────────────────────────────
+  // Docs/proposals/chapter-23-content-proposal.md (2026-09-24): pointer, owner,
+  // question and answer (Ta-Ha 20:17–18); a relative and an owner in one
+  // sentence (Al-Baqarah 2:21); a whole scene (Al-Qasas 28:21); separate real
+  // excerpts (2:201, 113:1, 112:1); a mixed review and a 16-question test.
   {
     order: 23,
-    sourceFile: "reader_lecture_23_book2_consolidation.md",
-    title: "Grammar Structures Consolidated",
-    titleAr: "مُرَاجَعَة شَامِلَة لِلْكِتَاب الثَّانِي",
-    description: "Integration of all Book 2 patterns in connected sentences.",
+    // The former reader_lecture_23 / reader_lessons_11-13 files never existed in
+    // the repository; the approved proposal is the content specification.
+    sourceFile: "Docs/proposals/chapter-23-content-proposal.md",
+    title: "Book 2 Reading Consolidation",
+    titleUr: "کتاب 2: پڑھنے کی مشق یکجا",
+    titleAr: "مُرَاجَعَةُ الْقِرَاءَةِ فِي الْكِتَابِ الثَّانِي",
+    description: "Put Book 2 together: read connected Arabic for who is pointed at, who owns what, who is described, where people go and who said what.",
+    descriptionUr: "کتاب 2 کو یکجا کریں: جڑی ہوئی عربی میں پڑھیں کہ کس کی طرف اشارہ ہے، کس کی کیا چیز ہے، کس کا وصف ہے، لوگ کہاں جاتے ہیں اور کس نے کیا کہا۔",
     hook: { ayahAr: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً", ayahRef: "Al-Baqarah 2:201", highlightedWord: "رَبَّنَا" },
     examples: [
-      card("الطَّالِبُ الَّذِي فَهِمَ الدَّرْسَ نَجَحَ", "The student who understood the lesson succeeded", "at-talibu alladhee fahima ad-darsa najaha"),
-      card("ذَهَبَتْ إِلَى مَدْرَسَتِهَا بَعْدَ الإِفْطَارِ", "She went to her school after breakfast", "dhahabat ilaa madrasatiha ba'dal-iftaari"),
-      card("سَأَلَ الأُسْتَاذُ طُلَّابَهُ أَسْئِلَةً", "The teacher asked his students questions", "sa'ala al-ustaadhu tullaabahu as'ilatan"),
-      card("رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً", "Our Lord, give us good in this world", "rabbanaa aatinaa fid-dunyaa hasanatan"),
+      card("هٰذَا كِتَابُ الطَّالِبِ", "This is the student's book.", "hādhā kitābu ṭ-ṭālibi"),
+      card("الطَّالِبُ الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ أَخِي", "The student who went to the mosque is my brother.", "aṭ-ṭālibu lladhī dhahaba ilā l-masjidi akhī"),
+      card("وَبَعْدَ الصَّلَاةِ رَجَعَ أَحْمَدُ إِلَى بَيْتِهِ", "And after the prayer Ahmad returned to his house.", "wa baʿda ṣ-ṣalāti rajaʿa aḥmadu ilā baytihi"),
+      card("رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً", "Our Lord, give us good in this world.", "rabbanā ātinā fī d-dunyā ḥasanatan"),
     ],
-    parseText: "ذَهَبَتْ إِلَى مَدْرَسَتِهَا",
-    parseTokens: [token("ذَهَبَتْ", "فعل", "she went"), token("إِلَى", "حرف جر", "to"), token("مَدْرَسَتِهَا", "مضاف إليه", "her school")],
-    conversation: ["مَاذَا قَالَ الأُسْتَاذُ؟", "سَأَلَ الأُسْتَاذُ طُلَّابَهُ أَسْئِلَةً"],
-    conversationDistractor: "فَهِمَ الطَّالِبُ الدَّرْسَ",
-    distractor: "The student understood the lesson",
-    blankDistractor: "أَجَابَ",
-    noorTip: "رَبَّنَا آتِنَا is the traveller's supplication — it uses everything you learned in Book 2.",
-    noorTipUr: "یہ دعا Book 2 کے تمام قواعد کو جوڑتی ہے — ربنا، آتنا، حسنة۔",
+    parseText: "هٰذَا كِتَابُ الطَّالِبِ",
+    parseTokens: [token("هٰذَا", "مبتدأ", "this"), token("كِتَابُ", "خبر", "the book of"), token("الطَّالِبِ", "مضاف إليه", "the student")],
+    conversation: ["مَا هٰذَا؟", "هٰذَا كِتَابِي"],
+    conversationDistractor: "كِتَابِي عَلَى الْمَكْتَبِ",
+    distractor: "This book",
+    blankDistractor: "الَّتِي",
+    noorTip: "رَبَّنَا آتِنَا: our Lord, give us. The same ending, two jobs — read each ayah for what it really shows.",
+    noorTipUr: "رَبَّنَا آتِنَا: اے ہمارے رب، ہمیں دے۔ ایک ہی آخر، دو کام — ہر آیت کو اسی کے لیے پڑھیں جو وہ واقعی دکھاتی ہے۔",
     focuses: [
-      { title: "Nominal Sentence Review", titleAr: "الْجُمْلَة الِاسْمِيَّة", grammarTerm: "جملة اسمية", reveal: "You recognised the subject-predicate pair across complex sentences.", hookQuestion: "Can you still find the مبتدأ in a long sentence?" },
-      { title: "Verb + Preposition", titleAr: "فِعْل + حَرْف جَر", grammarTerm: "متعلق بالفعل", reveal: "You tracked how prepositions attach direction and meaning to verbs.", hookQuestion: "What would ذَهَبَتْ mean without إِلَى?" },
-      { title: "Pronoun Chains", titleAr: "سِلْسِلَة الضَّمَائِر", grammarTerm: "ضمائر متصلة", reveal: "You saw attached pronouns on verbs, nouns, and prepositions in one passage.", hookQuestion: "Find three different attached pronouns in this chapter's examples." },
-      { title: "Reading a Full Passage", titleAr: "قِرَاءَة فَقْرَة", grammarTerm: "نص متكامل", reveal: "You read a Quranic supplication as natural Arabic, not word by word.", hookQuestion: "What makes رَبَّنَا آتِنَا feel complete as a sentence?" },
+      { title: "Pointing, Owning and Asking", titleAr: "مَا تِلْكَ بِيَمِينِكَ؟", grammarTerm: "اسم الإشارة والإضافة", reveal: "مَا تِلْكَ بِيَمِينِكَ … هِيَ عَصَايَ (20:17–18): pointer, question, owner endings and a separate pronoun.", hookQuestion: "Whose staff is عَصَايَ?" },
+      { title: "Who Is Described, and Whose Is It?", titleAr: "الْمَوْصُولُ وَالضَّمِيرُ", grammarTerm: "الاسم الموصول", reveal: "رَبَّكُمُ الَّذِي خَلَقَكُمْ (2:21): الَّذِي describes your Lord.", hookQuestion: "Who does الَّذِي describe in 2:21?" },
+      { title: "Read the Small Scene", titleAr: "قِرَاءَةُ الْمَشْهَدِ", grammarTerm: "نص متكامل", reveal: "فَخَرَجَ مِنْهَا … قَالَ (28:21): a movement, then speech.", hookQuestion: "What happens first in 28:21, and what next?" },
+      { title: "Quran Reading Across Real Ayat", titleAr: "قِرَاءَةُ الْآيَاتِ", grammarTerm: "قراءة الآيات", reveal: "رَبَّنَا آتِنَا (2:201): our on a noun, us on a request.", hookQuestion: "Do رَبَّنَا and آتِنَا mean the same thing?" },
     ],
   },
 

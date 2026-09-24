@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 21, Lesson 4 - Position words: in front, behind, above, below, between.",
+    "_note": "Chapter 21, Lesson 4 (ch21-l04) — Quran reading lab on one story: Al-Qasas 28:15 وَدَخَلَ الْمَدِينَةَ (entered the city, place straight after the verb) and 28:21 فَخَرَجَ مِنْهَا (so he left it), where مِنْهَا = مِنْ + ـهَا and its antecedent الْمَدِينَة comes from the story (28:18), not from the short excerpt (Chapter 19's ending-gives-the-person rule); Ta-Ha 20:86 فَرَجَعَ recalled. Proposal amendment: 28:15 replaces Yusuf 12:99, whose ادْخُلُوا is an imperative and whose دَخَلُوا عَلَىٰ would complicate the place-after-دَخَلَ pattern. Musa ﷺ is never pictured; the killing in 28:15 is not narrated beyond the entry. Reveal فَخَرَجَ (28:21, index 0). Rebuilt 2026-09-24 from Docs/proposals/chapter-21-content-proposal.md with the owner-approved review amendments recorded there (دَخَلَ and رَجَعَ treated as Chapter 8 retrieval, خَرَجَ the new verb; Al-Qasas 28:15 وَدَخَلَ الْمَدِينَةَ instead of the imperative in Yusuf 12:99, paired with 28:21 from the same story; Ta-Ha 20:86 فَرَجَعَ for رَجَعَ; Al-Isra 17:1 as a verified مِنْ … إِلَى journey; Al-Baqarah 2:164 for بَيْنَ … وَ …). The map and fixtures named reader_lecture_21 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "قرآن میں داخل ہونا اور نکلنا",
     "chapter_order": 21,
     "lesson_order": 4,
-    "chapter_title": "Places and Movement",
-    "title": "Position and Direction",
-    "titleAr": "الْمَوَاضِعُ وَالْأَتْجَاهَاتُ",
-    "source": "reader_lecture_21_position.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 113,
-      "ayah": 2,
-      "label": "Al-Falaq 113:2",
-      "ar": "مِن شَرِّ مَا خَلَقَ",
-      "en": "From the evil of that which He created",
-      "ur": "ہر چیز کی بدی سے جو اس نے پیدا کی",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113002.mp3"
+      "surah": 28,
+      "ayah": 15,
+      "label": "Al-Qasas 28:15",
+      "ar": "وَدَخَلَ الْمَدِينَةَ عَلَىٰ حِينِ غَفْلَةٍ مِّنْ أَهْلِهَا",
+      "en": "And he entered the city at a time when its people were unaware.",
+      "ur": "اور وہ شہر میں ایسے وقت داخل ہوئے جب اس کے لوگ بے خبر تھے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028015.mp3"
     },
     "noor_intro": {
-      "en": "رَبِّ الْفَلَقِ — Lord of the daybreak. The word الْفَلَقِ means 'daybreak' or 'dawn.' It describes a time, but we also need words to describe WHERE things are in relation to each other. Today we learn position words.",
-      "ur": "رَبِّ الْفَلَقِ — صبح کے رب۔ لفظ الْفَلَقِ کا مطلب ہے 'صبح' یا 'فجر'۔ یہ ایک وقت بیان کرتا ہے، مگر ہمیں ایسے الفاظ بھی چاہیئے جو بتائیں کہ چیزیں کہاں ہیں ایک دوسرے کےrelativeto۔ آج ہم مقام کے الفاظ سیکھیں گے۔"
+      "en": "Surah Al-Qasas tells how Musa, peace be upon him, entered a city and later had to leave it. Listen for وَدَخَلَ and the place right after it.",
+      "ur": "سورۃ القصص بتاتی ہے کہ موسیٰ علیہ السلام ایک شہر میں داخل ہوئے اور بعد میں انہیں وہاں سے نکلنا پڑا۔ وَدَخَلَ سنیں اور اس کے فوراً بعد والی جگہ۔"
     },
     "autoplay": true
   },
@@ -32,449 +29,418 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Position words in Arabic",
-        "ar": "كَلِمَاتُ الْمَوْضِعِ فِي الْعَرَبِيَّةِ",
-        "ur": "عربی میں مقام کے الفاظ"
+        "en": "Read a story by its movements",
+        "ar": "دَخَلَ … خَرَجَ …",
+        "ur": "قصہ حرکتوں سے پڑھیں"
       },
       "explanation": {
-        "en": "Arabic uses specific words to describe where something is located relative to something else. These position words (أَمَامَ, خَلْف, فَوْق, تَحْت, بَيْن) tell us the spatial relationship between objects.",
-        "ur": "عربی میں خاص الفاظ ہیں جو بتاتے ہیں کہ کوئی چیز کسی اور چیز کے کہاں ہے۔ یہ مقام کے الفاظ (أَمَامَ، خَلْف، فَوْق، تَحْت، بَيْن) ہمیں اشیاء کے درمیان spatial relationship بتاتے ہیں۔"
+        "en": "In Surah Al-Qasas, Musa enters a city and later leaves it. Each verb tells you what happened; each place word tells you where.",
+        "ur": "سورۃ القصص میں موسیٰ ایک شہر میں داخل ہوتے ہیں اور بعد میں وہاں سے نکلتے ہیں۔ ہر فعل بتاتا ہے کیا ہوا؛ ہر جگہ والا لفظ بتاتا ہے کہاں۔"
       }
     },
     {
-      "type": "EXAMPLE",
+      "type": "WORD",
       "text": {
-        "ar": "الْكِتَابُ أَمَامَ الْمَكْتَبِ",
-        "ar_plain": "الكتاب أمام المكتب",
-        "translit": "al-kitaabu amaaama al-maktabi",
-        "en": "The book is in front of the desk.",
-        "ur": "کتاب میز کے سامنے ہے۔"
+        "ar": "الْمَدِينَةُ",
+        "ar_plain": "المدينة",
+        "translit": "al-madīnatu",
+        "en": "the city",
+        "ur": "شہر"
       },
       "explanation": {
-        "en": "أَمَامَ means 'in front of' or 'before.' It shows the position of something facing another thing. The word after أَمَامَ takes the genitive case (maktabi — genitive of مَكْتَب).",
-        "ur": "أَمَامَ کا مطلب ہے 'کے سامنے' یا 'سے پہلے'۔ یہ بتاتا ہے کہ کوئی چیز کسی دوسری چیز کے سامنے ہے۔ أَمَامَ کے بعد والے اسم پر جنیت آتا ہے (maktabi — مَكْتَب کی جنیت)۔"
+        "en": "مَدِينَةٌ, a city, you met in Chapters 3 and 6. In this story it is the city Musa entered and later left.",
+        "ur": "مَدِينَةٌ، شہر، آپ باب 3 اور 6 میں پڑھ چکے ہیں۔ اس قصے میں یہ وہ شہر ہے جس میں موسیٰ داخل ہوئے اور بعد میں اس سے نکلے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الْقَمَرُ خَلْفَ الْجِبَالِ",
-        "ar_plain": "القمر خلف الجبال",
-        "translit": "al-qamaru khalfa al-jibaali",
-        "en": "The moon is behind the mountains.",
-        "ur": "چاند پہاڑوں کے پیچھے ہے۔"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Qasas 28:15: And he entered the city at a time when its people were unaware",
+        "ar": "وَدَخَلَ الْمَدِينَةَ عَلَىٰ حِينِ غَفْلَةٍ مِّنْ أَهْلِهَا",
+        "ur": "Al-Qasas 28:15: اور وہ شہر میں ایسے وقت داخل ہوئے جب اس کے لوگ بے خبر تھے"
       },
       "explanation": {
-        "en": "خَلْفَ means 'behind' or 'after.' It is the opposite of أَمَامَ. When something is hidden from view by being 'behind' another object, خَلْفَ is used.",
-        "ur": "خَلْفَ کا مطلب ہے 'کے پیچھے' یا 'کے بعد'۔ یہ أَمَامَ کا الٹ ہے۔ جب کوئی چیز کسی دوسری چیز کے پیچھے چھپی ہو تو خَلْفَ استعمال ہوتا ہے۔"
+        "en": "وَدَخَلَ: and he entered — Musa. الْمَدِينَةَ, the city, follows the verb directly, like دَخَلَ الْمَسْجِدَ. عَلَىٰ حِينِ غَفْلَةٍ مِّنْ أَهْلِهَا, at a time its people were unaware, is only glossed; أَهْلِهَا, its people, is Chapter 19's ـهَا.",
+        "ur": "وَدَخَلَ: اور وہ داخل ہوئے — موسیٰ۔ الْمَدِينَةَ، شہر، سیدھا فعل کے بعد آتا ہے، جیسے دَخَلَ الْمَسْجِدَ۔ عَلَىٰ حِينِ غَفْلَةٍ مِّنْ أَهْلِهَا، جب اس کے لوگ بے خبر تھے، کا صرف معنی دیا گیا ہے؛ أَهْلِهَا، اس کے لوگ، باب 19 کا ـهَا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028015.mp3"
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Qasas 28:21: So he left it, fearful and watchful",
+        "ar": "فَخَرَجَ مِنْهَا خَائِفًا يَتَرَقَّبُ",
+        "ur": "Al-Qasas 28:21: پس وہ وہاں سے ڈرتے ہوئے اور چوکنا ہو کر نکلے"
+      },
+      "explanation": {
+        "en": "فَخَرَجَ: so he left — Musa again. مِنْهَا: from it, مِنْ + ـهَا. خَائِفًا يَتَرَقَّبُ, fearful and watchful, is only glossed.",
+        "ur": "فَخَرَجَ: پس وہ نکلے — پھر موسیٰ۔ مِنْهَا: اس سے، مِنْ + ـهَا۔ خَائِفًا يَتَرَقَّبُ، ڈرتے ہوئے اور چوکنا، کا صرف معنی دیا گیا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028021.mp3"
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Who is ـهَا in مِنْهَا?",
+        "ar": "مِنْهَا / الْمَدِينَةِ",
+        "ur": "مِنْهَا میں ـهَا کون ہے؟"
+      },
+      "explanation": {
+        "en": "You cannot see الْمَدِينَة inside 28:21; the story supplies it: a few ayat earlier Musa is in the city (28:18). The ending gives the kind — one, feminine — and the story gives the name. That is Chapter 19's rule.",
+        "ur": "28:21 کے اندر الْمَدِينَة نظر نہیں آتا؛ قصہ اسے بتاتا ہے: چند آیات پہلے موسیٰ شہر میں ہیں (28:18)۔ آخر قسم بتاتا ہے — ایک، مؤنث — اور قصہ نام بتاتا ہے۔ یہی باب 19 کا اصول ہے۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الصُّورَةُ فَوْقَ السَّرِيرِ",
-        "ar_plain": "الصورة فوق السرير",
-        "translit": "as-suuratu fawqa as-sariri",
-        "en": "The picture is above the bed.",
-        "ur": "تصویر بستر کے اوپر ہے۔"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Entered it, left it",
+        "ar": "دَخَلَ الْمَدِينَةَ / خَرَجَ مِنْهَا",
+        "ur": "اس میں داخل ہوئے، اس سے نکلے"
       },
       "explanation": {
-        "en": "فَوْقَ means 'above' or 'on top of.' It describes vertical position — something is on a higher level than another object. تَحْتَ is its opposite meaning 'below' or 'underneath.'",
-        "ur": "فَوْقَ کا مطلب ہے 'کے اوپر' یا 'کی چوٹی پر'۔ یہ عمودی مقام دکھاتا ہے — کوئی چیز کسی دوسری چیز سے اونچی پوزیشن پر ہے۔ تَحْتَ اس کا الٹ ہے جس کا مطلب ہے 'کے نیچے'۔"
-      }
+        "en": "The same city, two movements: دَخَلَ with the place straight after it; خَرَجَ with مِنْ before the place.",
+        "ur": "وہی شہر، دو حرکتیں: دَخَلَ کے فوراً بعد جگہ؛ خَرَجَ کے ساتھ جگہ سے پہلے مِنْ۔"
+      },
+      "examples": [
+        {
+          "ar": "دَخَلَ الْمَدِينَةَ",
+          "ar_plain": "دخل المدينة",
+          "translit": "dakhala l-madīnata",
+          "en": "He entered the city.",
+          "ur": "وہ شہر میں داخل ہوا۔"
+        },
+        {
+          "ar": "خَرَجَ مِنْهَا",
+          "ar_plain": "خرج منها",
+          "translit": "kharaja minhā",
+          "en": "He left it.",
+          "ur": "وہ اس سے نکلا۔"
+        }
+      ]
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الْكُرَةُ تَحْتَ الْمَائِدَةِ",
-        "ar_plain": "الكرة تحت المائدة",
-        "translit": "al-kuratu tahta al-maa'idi",
-        "en": "The ball is under the table.",
-        "ur": "گیند میز کے نیچے ہے۔"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Ta-Ha 20:86: So Musa returned to his people",
+        "ar": "فَرَجَعَ مُوسَىٰ إِلَىٰ قَوْمِهِ",
+        "ur": "Ta-Ha 20:86: پھر موسیٰ اپنی قوم کی طرف لوٹے"
       },
       "explanation": {
-        "en": "تَحْتَ means 'below,' 'under,' or 'underneath.' It is the opposite of فَوْقَ. The ball is in a lower position than the table — hidden from direct view.",
-        "ur": "تَحْتَ کا مطلب ہے 'کے نیچے' یا 'تلے'۔ یہ فَوْقَ کا الٹ ہے۔ گیند میز سے نیچے پوزیشن پر ہے — براہ راست دیکھ سے چھپی ہوئی۔"
-      }
+        "en": "Another story, a third movement: رَجَعَ, returned, with إِلَىٰ for where to. You read it in Lesson 2.",
+        "ur": "ایک اور قصہ، تیسری حرکت: رَجَعَ، لوٹا، اور منزل کے لیے إِلَىٰ۔ آپ نے اسے سبق 2 میں پڑھا۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020086.mp3"
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالْمَدِينَةِ",
-        "ar_plain": "المسجد بين المدرسة والمدينة",
-        "translit": "al-masjidu bayna al-madrasati wal-madiinati",
-        "en": "The mosque is between the school and the city.",
-        "ur": "مسجد اسکول اور شہر کے درمیان ہے۔"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Quran or practice sentence?",
+        "ar": "فَخَرَجَ مِنْهَا / خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ",
+        "ur": "قرآن یا مشق کا جملہ؟"
       },
       "explanation": {
-        "en": "بَيْنَ means 'between.' It is always used with وَ (and) to connect two things: بَيْنَ الْـ وَالْـ means 'between X and Y.' The word بَيْن itself is related to the root ب-ي-ن meaning 'two' (جذر ب-ي-ن).",
-        "ur": "بَيْنَ کا مطلب ہے 'کے درمیان'۔ یہ ہمیشہ وَ (اور) کے ساتھ استعمال ہوتا ہے تاکہ دو چیزیں جڑیں: بَيْنَ الْـ وَالْـ کا مطلب 'X اور Y کے درمیان'۔ لفظ بَيْن خود جذر ب-ي-ن ('دو') سے متعلق ہے۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Position words govern the genitive case",
-        "ur": "مقام کے الفاظ جنیت کا حکم دیتے ہیں"
-      },
-      "body": {
-        "en": "أَمَامَ, خَلْفَ, فَوْقَ, تَحْتَ, and بَيْنَ are all position words that govern the genitive case (جنیت). The noun following each one takes kasra. They function like prepositions in their grammar.",
-        "ur": "أَمَامَ، خَلْفَ، فَوْقَ، تَحْتَ، اور بَيْنَ سب مقام کے الفاظ ہیں جو جنیت کا حکم دیتے ہیں۔ ہر ایک کے بعد والے اسم پر کسرہ آتا ہے۔ یہ حروف جر کی طرح grammar رکھتے ہیں۔"
+        "en": "In Warsh a Quran quotation always comes with its surah and ayah and a reciter's voice. خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ is a practice sentence written for learning. Keep the two apart.",
+        "ur": "وارش میں قرآن کا اقتباس ہمیشہ سورت اور آیت نمبر اور قاری کی آواز کے ساتھ آتا ہے۔ خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ سیکھنے کے لیے لکھا گیا مشق کا جملہ ہے۔ دونوں کو الگ رکھیں۔"
       }
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "MATCH_AYAH",
       "id": "ch21-l04-ex01",
-      "prompt": {
-        "ar": "أَمَامَ",
-        "ar_plain": "أمام",
-        "translit": "amaama",
-        "en": "in front of / before",
-        "ur": "کے سامنے"
+      "ayah_fragment": {
+        "ar": "وَدَخَلَ الْمَدِينَةَ",
+        "surah_ref": "Al-Qasas 28:15"
       },
       "options": [
         {
-          "en": "in front of / before",
-          "ur": "کے سامنے"
+          "en": "and the city entered",
+          "ur": "اور شہر داخل ہوا"
         },
         {
-          "en": "behind / after",
-          "ur": "کے پیچھے"
+          "en": "and he returned to the city",
+          "ur": "اور وہ شہر واپس آئے"
         },
         {
-          "en": "above / on",
-          "ur": "کے اوپر"
+          "en": "and he left the city",
+          "ur": "اور وہ شہر سے نکلے"
         },
         {
-          "en": "below / under",
-          "ur": "کے نیچے"
+          "en": "and he entered the city — Musa",
+          "ur": "اور وہ شہر میں داخل ہوئے — موسیٰ"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "دَخَلَ: entered; الْمَدِينَةَ follows it directly.",
+        "ur": "دَخَلَ: داخل ہوا؛ الْمَدِينَةَ سیدھا اس کے بعد ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch21-l04-ex02",
+      "ayah_fragment": {
+        "ar": "فَخَرَجَ مِنْهَا",
+        "surah_ref": "Al-Qasas 28:21"
+      },
+      "options": [
+        {
+          "en": "مِنْهَا — to it",
+          "ur": "مِنْهَا — اس کی طرف"
+        },
+        {
+          "en": "مِنْهَا — from them",
+          "ur": "مِنْهَا — ان سے"
+        },
+        {
+          "en": "مِنْهَا — from it: the city Musa had been in",
+          "ur": "مِنْهَا — اس سے: وہ شہر جس میں موسیٰ تھے"
+        },
+        {
+          "en": "مِنْهَا — from her: a woman in the ayah",
+          "ur": "مِنْهَا — اس (عورت) سے: آیت میں ایک عورت"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ـهَا points to the city from the story.",
+        "ur": "ـهَا قصے کے شہر کی طرف اشارہ کرتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch21-l04-ex03",
+      "statement": {
+        "en": "In فَخَرَجَ مِنْهَا, Musa enters the city.",
+        "ur": "فَخَرَجَ مِنْهَا میں موسیٰ شہر میں داخل ہوتے ہیں۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "خَرَجَ مِنْ: he left it.",
+        "ur": "خَرَجَ مِنْ: وہ اس سے نکلے۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch21-l04-ex04",
+      "prompt": {
+        "ar": "مِنْهَا",
+        "ar_plain": "منها",
+        "translit": "minhā",
+        "en": "from it (something feminine named before)",
+        "ur": "اس سے (پہلے ذکر شدہ مؤنث)"
+      },
+      "options": [
+        {
+          "en": "from it (something feminine named before)",
+          "ur": "اس سے (پہلے ذکر شدہ مؤنث)"
+        },
+        {
+          "en": "to it",
+          "ur": "اس کی طرف"
+        },
+        {
+          "en": "from him",
+          "ur": "اس (مرد) سے"
+        },
+        {
+          "en": "in it",
+          "ur": "اس میں"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "أَمَامَ means 'in front of' — the position facing something.",
-        "ur": "أَمَامَ کا مطلب ہے 'کے سامنے' — کسی چیز کی طرف منہ کرکے ہونا۔"
+        "en": "مِنْ + ـهَا: from it or her.",
+        "ur": "مِنْ + ـهَا: اس سے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch21-l04-ex05",
+      "mode": "TAP",
+      "sentence_ar": "خَرَجَ أَحْمَدُ مِنَ الْمَدِينَةِ وَ___ إِلَى الْقَرْيَةِ",
+      "hint": {
+        "en": "Ahmad left the city and returned to the village.",
+        "ur": "احمد شہر سے نکلا اور گاؤں واپس آیا۔"
+      },
+      "options": [
+        {
+          "ar": "دَخَلَ",
+          "ar_plain": "دخل",
+          "translit": "dakhala",
+          "en": "he entered",
+          "ur": "وہ داخل ہوا"
+        },
+        {
+          "ar": "رَجَعَتْ",
+          "ar_plain": "رجعت",
+          "translit": "rajaʿat",
+          "en": "she returned",
+          "ur": "وہ واپس آئی"
+        },
+        {
+          "ar": "خَرَجَ",
+          "ar_plain": "خرج",
+          "translit": "kharaja",
+          "en": "he went out, he left",
+          "ur": "وہ نکلا"
+        },
+        {
+          "ar": "رَجَعَ",
+          "ar_plain": "رجع",
+          "translit": "rajaʿa",
+          "en": "he returned",
+          "ur": "وہ واپس آیا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "رَجَعَ",
+        "ar_plain": "رجع",
+        "translit": "rajaʿa",
+        "en": "he returned",
+        "ur": "وہ واپس آیا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Returned, for Ahmad: رَجَعَ.",
+        "ur": "احمد کے لیے واپس آیا: رَجَعَ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch21-l04-ex02",
+      "id": "ch21-l04-ex06",
       "statement": {
-        "en": "فَوْقَ and تَحْتَ are opposites: 'above' and 'below.'",
-        "ur": "فَوْقَ اور تَحْتَ الٹ ہیں: 'کے اوپر' اور 'کے نیچے'۔",
-        "ar_example": {
-          "ar": "الصُّورَةُ فَوْقَ السَّرِيرِ / تَحْتَ السَّرِيرِ",
-          "ar_plain": "فوق السرير / تحت السرير",
-          "translit": "fawqa as-sariri / tahta as-sariri",
-          "en": "above the bed / below the bed",
-          "ur": "بستر کے اوپر / بستر کے نیچے"
-        }
+        "en": "In وَدَخَلَ الْمَدِينَةَ, the verb comes first and the place he entered follows it with no word between.",
+        "ur": "وَدَخَلَ الْمَدِينَةَ میں پہلے فعل آتا ہے اور جس جگہ داخل ہوئے وہ بغیر کسی لفظ کے اس کے بعد آتی ہے۔"
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "دَخَلَ الْمَدِينَةَ: entered the city.",
+        "ur": "دَخَلَ الْمَدِينَةَ: شہر میں داخل ہوا۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch21-l04-ex03",
-      "mode": "TAP",
-      "sentence_ar": "الْمَسْجِدُ ___ الْمَدْرَسَةِ وَالْمَدِينَةِ",
-      "hint": {
-        "en": "The mosque is between the school and the city.",
-        "ur": "مسجد اسکول اور شہر کے درمیان ہے۔"
+      "type": "MATCH_AYAH",
+      "id": "ch21-l04-ex07",
+      "ayah_fragment": {
+        "ar": "فَرَجَعَ مُوسَىٰ إِلَىٰ قَوْمِهِ",
+        "surah_ref": "Ta-Ha 20:86"
       },
       "options": [
         {
-          "ar": "بَيْنَ",
-          "ar_plain": "بين",
-          "translit": "bayna",
-          "en": "between",
-          "ur": "کے درمیان"
+          "en": "Musa's people returned to him",
+          "ur": "موسیٰ کی قوم ان کی طرف لوٹی"
         },
         {
-          "ar": "أَمَامَ",
-          "ar_plain": "أمام",
-          "translit": "amaama",
-          "en": "in front of",
-          "ur": "کے سامنے"
+          "en": "Musa returned to his people",
+          "ur": "موسیٰ اپنی قوم کی طرف لوٹے"
         },
         {
-          "ar": "فَوْقَ",
-          "ar_plain": "فوق",
-          "translit": "fawqa",
-          "en": "above",
-          "ur": "کے اوپر"
+          "en": "Musa left his people",
+          "ur": "موسیٰ اپنی قوم سے نکلے"
         },
         {
-          "ar": "خَلْفَ",
-          "ar_plain": "خلف",
-          "translit": "khalfa",
-          "en": "behind",
-          "ur": "کے پیچھے"
+          "en": "Musa entered a city",
+          "ur": "موسیٰ ایک شہر میں داخل ہوئے"
         }
       ],
-      "correct_answer": {
-        "ar": "بَيْنَ",
-        "ar_plain": "بين",
-        "translit": "bayna",
-        "en": "between",
-        "ur": "کے درمیان"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch21-l04-ex04",
-      "left_column": [
-        {
-          "ar": "أَمَامَ",
-          "ar_plain": "أمام",
-          "translit": "amaama",
-          "en": "in front of",
-          "ur": "کے سامنے"
-        },
-        {
-          "ar": "خَلْفَ",
-          "ar_plain": "خلف",
-          "translit": "khalfa",
-          "en": "behind",
-          "ur": "کے پیچھے"
-        },
-        {
-          "ar": "فَوْقَ",
-          "ar_plain": "فوق",
-          "translit": "fawqa",
-          "en": "above",
-          "ur": "کے اوپر"
-        },
-        {
-          "ar": "تَحْتَ",
-          "ar_plain": "تحت",
-          "translit": "tahta",
-          "en": "below",
-          "ur": "کے نیچے"
-        },
-        {
-          "ar": "بَيْنَ",
-          "ar_plain": "بين",
-          "translit": "bayna",
-          "en": "between",
-          "ur": "کے درمیان"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "in front of",
-          "ur": "کے سامنے"
-        },
-        {
-          "en": "behind",
-          "ur": "کے پیچھے"
-        },
-        {
-          "en": "above",
-          "ur": "کے اوپر"
-        },
-        {
-          "en": "below",
-          "ur": "کے نیچے"
-        },
-        {
-          "en": "between",
-          "ur": "کے درمیان"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ],
-        [
-          4,
-          4
-        ]
-      ],
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رَجَعَ: returned; إِلَىٰ قَوْمِهِ: to his people.",
+        "ur": "رَجَعَ: لوٹا؛ إِلَىٰ قَوْمِهِ: اپنی قوم کی طرف۔"
+      }
     },
     {
       "type": "BUILD_SENTENCE",
-      "id": "ch21-l04-ex05",
+      "id": "ch21-l04-ex08",
       "target_translation": {
-        "en": "The book is in front of the desk.",
-        "ur": "کتاب میز کے سامنے ہے۔"
+        "en": "He entered the city.",
+        "ur": "وہ شہر میں داخل ہوا۔"
       },
       "tiles": [
         {
-          "ar": "الْكِتَابُ",
-          "ar_plain": "الكتاب",
-          "translit": "al-kitaabu",
-          "en": "the book",
-          "ur": "کتاب"
+          "ar": "الْمَدِينَةَ",
+          "ar_plain": "المدينة",
+          "translit": "al-madīnata",
+          "en": "the city",
+          "ur": "شہر"
         },
         {
-          "ar": "أَمَامَ",
-          "ar_plain": "أمام",
-          "translit": "amaama",
-          "en": "in front of",
-          "ur": "کے سامنے"
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "سے"
         },
         {
-          "ar": "الْمَكْتَبِ",
-          "ar_plain": "المكتب",
-          "translit": "al-maktabi",
-          "en": "the desk",
-          "ur": "میز"
+          "ar": "دَخَلَ",
+          "ar_plain": "دخل",
+          "translit": "dakhala",
+          "en": "he entered",
+          "ur": "وہ داخل ہوا"
         }
       ],
       "correct_order": [
-        0,
-        1,
-        2
+        2,
+        0
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch21-l04-ex06",
-      "prompt": {
-        "ar": "الْقَمَرُ خَلْفَ الْجِبَالِ",
-        "ar_plain": "القمر خلف الجبال",
-        "translit": "al-qamaru khalfa al-jibaali",
-        "en": "The moon is behind the mountains.",
-        "ur": "چاند پہاڑوں کے پیچھے ہے۔"
-      },
-      "options": [
-        {
-          "en": "The moon is behind the mountains.",
-          "ur": "چاند پہاڑوں کے پیچھے ہے۔"
-        },
-        {
-          "en": "The moon is above the mountains.",
-          "ur": "چاند پہاڑوں کے اوپر ہے۔"
-        },
-        {
-          "en": "The moon is in front of the mountains.",
-          "ur": "چاند پہاڑوں کے سامنے ہے۔"
-        },
-        {
-          "en": "The moon is between the mountains.",
-          "ur": "چاند پہاڑوں کے درمیان ہے۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "خَلْفَ means 'behind' — the moon is hidden by the mountains from the viewer's perspective.",
-        "ur": "خَلْفَ کا مطلب ہے 'کے پیچھے' — چاند دیکھنے والے سے پہاڑوں کی پشت پر چھپا ہوا ہے۔"
+        "en": "دَخَلَ, then the place directly.",
+        "ur": "دَخَلَ، پھر سیدھی جگہ۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch21-l04-ex07",
+      "id": "ch21-l04-ex09",
       "statement": {
-        "en": "Position words like أَمَامَ, خَلْفَ, and بَيْنَ govern the genitive case (جنیت) on the noun that follows.",
-        "ur": "أَمَامَ، خَلْفَ، اور بَيْنَ جیسے مقام کے الفاظ اپنے بعد والے اسم پر جنیت کا حکم دیتے ہیں۔",
-        "ar_example": {
-          "ar": "بَيْنَ الْمَدْرَسَةِ وَالْمَدِينَةِ",
-          "ar_plain": "بين المدرسة والمدينة",
-          "translit": "bayna al-madrasati wal-madiinati",
-          "en": "between the school and the city",
-          "ur": "اسکول اور شہر کے درمیان"
-        }
+        "en": "خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ is a Quran quotation.",
+        "ur": "خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ قرآن کا اقتباس ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
-    },
-    {
-      "type": "FILL_BLANK",
-      "id": "ch21-l04-ex08",
-      "mode": "TAP",
-      "sentence_ar": "الْكُرَةُ تَحْتَ ___",
-      "hint": {
-        "en": "The ball is under the table.",
-        "ur": "گیند میز کے نیچے ہے۔"
-      },
-      "options": [
-        {
-          "ar": "الْمَائِدَةِ",
-          "ar_plain": "المائدة",
-          "translit": "al-maa'idi",
-          "en": "the table",
-          "ur": "میز"
-        },
-        {
-          "ar": "الْبَيْتِ",
-          "ar_plain": "البيت",
-          "translit": "al-bayti",
-          "en": "the house",
-          "ur": "گھر"
-        },
-        {
-          "ar": "الْمَسْجِدِ",
-          "ar_plain": "المسجد",
-          "translit": "al-masjidi",
-          "en": "the mosque",
-          "ur": "مسجد"
-        },
-        {
-          "ar": "السَّرِيرِ",
-          "ar_plain": "السرير",
-          "translit": "as-sariri",
-          "en": "the bed",
-          "ur": "بستر"
-        }
-      ],
-      "correct_answer": {
-        "ar": "الْمَائِدَةِ",
-        "ar_plain": "المائدة",
-        "translit": "al-maa'idi",
-        "en": "the table",
-        "ur": "میز"
-      },
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It is a practice sentence; it has no surah and ayah.",
+        "ur": "یہ مشق کا جملہ ہے؛ اس کی کوئی سورت اور آیت نہیں۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Position words: أَمَامَ, خَلْفَ, فَوْقَ, تَحْتَ, بَيْنَ",
-      "ar": "مَفْهُومُ الْمَوْضِعِ: أَمَامَ، خَلْفَ، فَوْقَ، تَحْتَ، بَيْنَ",
-      "ur": "مقام کے الفاظ: أَمَامَ، خَلْفَ، فَوْقَ، تَحْتَ، بَيْنَ"
+      "en": "Entering and leaving in one story",
+      "ar": "دَخَلَ وَخَرَجَ",
+      "ur": "ایک قصے میں داخل ہونا اور نکلنا"
     },
     "ayah": {
-      "surah": 113,
-      "ayah": 2,
-      "label": "Al-Falaq 113:2",
-      "ar": "مِن شَرِّ مَا خَلَقَ",
-      "en": "From the evil of that which He created",
-      "ur": "ہر چیز کی بدی سے جو اس نے پیدا کی",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113002.mp3"
+      "surah": 28,
+      "ayah": 21,
+      "label": "Al-Qasas 28:21",
+      "ar": "فَخَرَجَ مِنْهَا خَائِفًا يَتَرَقَّبُ",
+      "en": "So he left it, fearful and watchful.",
+      "ur": "پس وہ وہاں سے ڈرتے ہوئے اور چوکنا ہو کر نکلے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/028021.mp3"
     },
     "highlighted_word_indices": [
-      1
+      0
+    ],
+    "highlighted_words": [
+      "فَخَرَجَ"
     ],
     "noor_explanation": {
-      "en": "رَبِّ الْفَلَقِ — Lord of the daybreak. The daybreak (الْفَلْقِ) is the moment when light breaks through from behind (خَلْف) the darkness. Notice the spatial imagery: فَلَقَ means 'to split' — light splits through from behind the night. Position words describe the spatial relationships that undergird even our most spiritual language.",
-      "ur": "رَبِّ الْفَلَقِ — صبح کے رب۔ صبح (الْفَلْقِ) وہ لمحہ ہے جب روشنی اندھیرے کے پیچھے (خَلْف) سے نکل کر پھیلتی ہے۔ نوٹ کریں spatial imagery: فَلَقَ کا مطلب ہے 'چیرنا' — روشنی رات کے پیچھے سے چھُٹ کر نکلتی ہے۔ مقام کے الفاظ spatial relationships بیان کرتے ہیں جو ہماری سب سے روحانی زبان کی بھی بنیاد ہیں۔"
+      "en": "فَخَرَجَ: so he left. Musa had entered the city (28:15); now he leaves it, مِنْهَا. You followed a Quran story by its movements, and found what ـهَا meant from the story itself.",
+      "ur": "فَخَرَجَ: پس وہ نکلے۔ موسیٰ شہر میں داخل ہوئے تھے (28:15)؛ اب وہ اس سے نکلتے ہیں، مِنْهَا۔ آپ نے قرآن کا قصہ اس کی حرکتوں سے سمجھا، اور ـهَا کا مطلب خود قصے سے ڈھونڈا۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You now know five position words: أَمَامَ (in front), خَلْفَ (behind), فَوْقَ (above), تَحْتَ (below), and بَيْنَ (between). All govern the genitive case. With places, prepositions, and now positions, you can describe the entire geography of a sentence!",
-      "ur": "اب آپ پانچ مقام کے الفاظ جانتے ہیں: أَمَامَ (کے سامنے)، خَلْفَ (کے پیچھے)، فَوْقَ (کے اوپر)، تَحْتَ (کے نیچے)، اور بَيْنَ (کے درمیان)۔ سب جنیت کا حکم دیتے ہیں۔ جگہوں، حروف جر، اور اب مقام کے الفاظ کے ساتھ، آپ پورے جملے کا جغرافیہ بیان کر سکتے ہیں!"
+      "en": "You read entering, leaving and returning in the Quran. Next: Conversation Lab 8, finding someone.",
+      "ur": "آپ نے قرآن میں داخل ہونا، نکلنا اور لوٹنا پڑھا۔ آگے: گفتگو لیب 8، کسی کو ڈھونڈنا۔"
     }
   }
 }

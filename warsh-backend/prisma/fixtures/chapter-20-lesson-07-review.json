@@ -1,0 +1,642 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 20 review (ch20-l07, new REVIEW). Interleaves the five plural endings, singular → plural retrieval from Chapter 7 (ـكَ → ـكُمْ, ـكِ → ـكُنَّ, ـهُ → ـهُمْ, ـهَا → ـهُنَّ), ـهِمْ / ـهِنَّ after a kasra, and one noun-versus-action item; the ayat recalled (3:193, 2:233, 33:34, 2:277) were all taught in Lessons 1–6. No new form or Quran claim. Reveal رَبِّهِمْ in 2:277 (index 3). Rebuilt 2026-09-24 from Docs/proposals/chapter-20-content-proposal.md with the owner-approved review amendments recorded there (2:277 for ـهُمْ instead of 2:5, which Chapter 15 L4 already reads; 33:34 instead of 33:33; 2:233 instead of 60:12; the ـهِمْ / ـهِنَّ sound change after a kasra taught; Chapter 10's standalone plural pronouns and Chapter 11's بُيُوتِكُمْ used as the bridge). The chapter map named reader_lecture_20_attached_pronouns_plural.md, which never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "باب 20 کا جائزہ",
+    "chapter_order": 20,
+    "lesson_order": 7,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 3,
+      "ayah": 193,
+      "label": "Ali 'Imran 3:193",
+      "ar": "رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا",
+      "en": "Our Lord, so forgive us our sins",
+      "ur": "اے ہمارے رب! پس ہمارے گناہ بخش دے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003193.mp3"
+    },
+    "noor_intro": {
+      "en": "Review time. For every ending ask: who is the owner, and is that group being spoken to or spoken about?",
+      "ur": "جائزے کا وقت۔ ہر آخر کے لیے پوچھیں: مالک کون ہے، اور اس گروہ سے بات ہو رہی ہے یا اس کے بارے میں؟"
+    },
+    "autoplay": true
+  },
+  "discover_cards": [
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "My and our",
+        "ar": "كِتَابِي / كِتَابُنَا",
+        "ur": "میرا اور ہمارا"
+      },
+      "explanation": {
+        "en": "One speaker: ـي. The speaker with others: ـنَا.",
+        "ur": "ایک بولنے والا: ـي۔ بولنے والا دوسروں کے ساتھ: ـنَا۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابِي",
+          "ar_plain": "كتابي",
+          "translit": "kitābī",
+          "en": "my book",
+          "ur": "میری کتاب"
+        },
+        {
+          "ar": "كِتَابُنَا",
+          "ar_plain": "كتابنا",
+          "translit": "kitābunā",
+          "en": "our book",
+          "ur": "ہماری کتاب"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Speaking to someone",
+        "ar": "كِتَابُكَ / كِتَابُكِ / كِتَابُكُمْ / كِتَابُكُنَّ",
+        "ur": "کسی سے بات کرتے ہوئے"
+      },
+      "explanation": {
+        "en": "To one man ـكَ, to one woman ـكِ, to a male or mixed group ـكُمْ, to a group of women ـكُنَّ.",
+        "ur": "ایک مرد سے ـكَ، ایک عورت سے ـكِ، مرد یا ملے جلے گروہ سے ـكُمْ، خواتین کے گروہ سے ـكُنَّ۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابُكَ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuka",
+          "en": "your book (to one man)",
+          "ur": "تمہاری کتاب (ایک مرد سے)"
+        },
+        {
+          "ar": "كِتَابُكِ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuki",
+          "en": "your book (to one woman)",
+          "ur": "تمہاری کتاب (ایک عورت سے)"
+        },
+        {
+          "ar": "كِتَابُكُمْ",
+          "ar_plain": "كتابكم",
+          "translit": "kitābukum",
+          "en": "your book (to a group)",
+          "ur": "تم سب کی کتاب (گروہ سے)"
+        },
+        {
+          "ar": "كِتَابُكُنَّ",
+          "ar_plain": "كتابكن",
+          "translit": "kitābukunna",
+          "en": "your book (to a group of women)",
+          "ur": "تم سب کی کتاب (خواتین کے گروہ سے)"
+        }
+      ]
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Speaking about someone",
+        "ar": "كِتَابُهُ / كِتَابُهَا / كِتَابُهُمْ / كِتَابُهُنَّ",
+        "ur": "کسی کے بارے میں بات کرتے ہوئے"
+      },
+      "explanation": {
+        "en": "About one man ـهُ, one woman ـهَا, a male or mixed group ـهُمْ, a group of women ـهُنَّ.",
+        "ur": "ایک مرد کے بارے میں ـهُ، ایک عورت ـهَا، مرد یا ملا جلا گروہ ـهُمْ، خواتین کا گروہ ـهُنَّ۔"
+      },
+      "examples": [
+        {
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitābuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب (مرد)"
+        },
+        {
+          "ar": "كِتَابُهَا",
+          "ar_plain": "كتابها",
+          "translit": "kitābuhā",
+          "en": "her book",
+          "ur": "اس کی کتاب (عورت)"
+        },
+        {
+          "ar": "كِتَابُهُمْ",
+          "ar_plain": "كتابهم",
+          "translit": "kitābuhum",
+          "en": "their book (a male or mixed group)",
+          "ur": "ان کی کتاب (مرد یا ملا جلا گروہ)"
+        },
+        {
+          "ar": "كِتَابُهُنَّ",
+          "ar_plain": "كتابهن",
+          "translit": "kitābuhunna",
+          "en": "their book (a group of women)",
+          "ur": "ان کی کتاب (خواتین)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "After a kasra",
+        "ar": "رَبِّهِمْ / بُيُوتِهِنَّ",
+        "ur": "زیر کے بعد"
+      },
+      "explanation": {
+        "en": "After a kasra or ي, ـهُمْ is heard ـهِمْ and ـهُنَّ is heard ـهِنَّ. The meaning does not change.",
+        "ur": "زیر یا ي کے بعد ـهُمْ، ـهِمْ اور ـهُنَّ، ـهِنَّ سنائی دیتا ہے۔ معنی نہیں بدلتا۔"
+      }
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Where is it attached?",
+        "ar": "رَبَّنَا / سَمِعْنَا",
+        "ur": "کس سے جڑا ہے؟"
+      },
+      "explanation": {
+        "en": "On a noun, ـنَا is our. On an action, it names who acted or who was acted on: we heard, guide us.",
+        "ur": "اسم پر ـنَا 'ہمارا' ہے۔ کام پر یہ بتاتا ہے کہ کام کس نے کیا یا کس پر ہوا: ہم نے سنا، ہمیں ہدایت دے۔"
+      },
+      "examples": [
+        {
+          "ar": "رَبَّنَا",
+          "ar_plain": "ربنا",
+          "translit": "rabbanā",
+          "en": "our Lord",
+          "ur": "ہمارا رب"
+        },
+        {
+          "ar": "سَمِعْنَا",
+          "ar_plain": "سمعنا",
+          "translit": "samiʿnā",
+          "en": "we heard",
+          "ur": "ہم نے سنا"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "The owners, not the thing",
+        "ar": "مَدْرَسَتُهُمْ / بُيُوتُكُنَّ",
+        "ur": "مالک، چیز نہیں"
+      },
+      "explanation": {
+        "en": "A feminine school can take ـهُمْ and masculine houses can take ـكُنَّ. The ending always follows the people.",
+        "ur": "مؤنث اسکول ـهُمْ لے سکتا ہے اور مذکر گھر ـكُنَّ۔ آخر ہمیشہ لوگوں کے مطابق ہوتا ہے۔"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch20-l07-ex01",
+      "prompt": {
+        "ar": "مَدْرَسَتُنَا",
+        "ar_plain": "مدرستنا",
+        "translit": "madrasatunā",
+        "en": "our school",
+        "ur": "ہمارا اسکول"
+      },
+      "options": [
+        {
+          "en": "my school",
+          "ur": "میرا اسکول"
+        },
+        {
+          "en": "our school",
+          "ur": "ہمارا اسکول"
+        },
+        {
+          "en": "your school (to a group)",
+          "ur": "تم سب کا اسکول"
+        },
+        {
+          "en": "their school",
+          "ur": "ان کا اسکول"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ـنَا: our.",
+        "ur": "ـنَا: ہمارا۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch20-l07-ex02",
+      "mode": "TAP",
+      "sentence_ar": "يَا طُلَّابُ، هٰذَا ___",
+      "hint": {
+        "en": "Students, this is your book. (said to the whole group)",
+        "ur": "طلبہ! یہ تم سب کی کتاب ہے۔"
+      },
+      "options": [
+        {
+          "ar": "كِتَابُكُمْ",
+          "ar_plain": "كتابكم",
+          "translit": "kitābukum",
+          "en": "your book (to a group)",
+          "ur": "تم سب کی کتاب (گروہ سے)"
+        },
+        {
+          "ar": "كِتَابُنَا",
+          "ar_plain": "كتابنا",
+          "translit": "kitābunā",
+          "en": "our book",
+          "ur": "ہماری کتاب"
+        },
+        {
+          "ar": "كِتَابُهُمْ",
+          "ar_plain": "كتابهم",
+          "translit": "kitābuhum",
+          "en": "their book (a male or mixed group)",
+          "ur": "ان کی کتاب (مرد یا ملا جلا گروہ)"
+        },
+        {
+          "ar": "كِتَابُكَ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuka",
+          "en": "your book (to one man)",
+          "ur": "تمہاری کتاب (ایک مرد سے)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كِتَابُكُمْ",
+        "ar_plain": "كتابكم",
+        "translit": "kitābukum",
+        "en": "your book (to a group)",
+        "ur": "تم سب کی کتاب (گروہ سے)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كِتَابُكَ to one man becomes كِتَابُكُمْ to the group.",
+        "ur": "ایک مرد سے كِتَابُكَ گروہ سے كِتَابُكُمْ بن جاتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch20-l07-ex03",
+      "mode": "TAP",
+      "sentence_ar": "يَا طَالِبَاتُ، هٰذَا ___",
+      "hint": {
+        "en": "Students (all women), this is your book.",
+        "ur": "طالبات! یہ تم سب کی کتاب ہے۔"
+      },
+      "options": [
+        {
+          "ar": "كِتَابُهُنَّ",
+          "ar_plain": "كتابهن",
+          "translit": "kitābuhunna",
+          "en": "their book (a group of women)",
+          "ur": "ان کی کتاب (خواتین)"
+        },
+        {
+          "ar": "كِتَابُكُمْ",
+          "ar_plain": "كتابكم",
+          "translit": "kitābukum",
+          "en": "your book (to a group)",
+          "ur": "تم سب کی کتاب (گروہ سے)"
+        },
+        {
+          "ar": "كِتَابُكِ",
+          "ar_plain": "كتابك",
+          "translit": "kitābuki",
+          "en": "your book (to one woman)",
+          "ur": "تمہاری کتاب (ایک عورت سے)"
+        },
+        {
+          "ar": "كِتَابُكُنَّ",
+          "ar_plain": "كتابكن",
+          "translit": "kitābukunna",
+          "en": "your book (to a group of women)",
+          "ur": "تم سب کی کتاب (خواتین کے گروہ سے)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كِتَابُكُنَّ",
+        "ar_plain": "كتابكن",
+        "translit": "kitābukunna",
+        "en": "your book (to a group of women)",
+        "ur": "تم سب کی کتاب (خواتین کے گروہ سے)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كِتَابُكِ to one woman becomes كِتَابُكُنَّ to a group of women.",
+        "ur": "ایک عورت سے كِتَابُكِ خواتین کے گروہ سے كِتَابُكُنَّ بن جاتا ہے۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch20-l07-ex04",
+      "ayah_fragment": {
+        "ar": "رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا",
+        "surah_ref": "Ali 'Imran 3:193"
+      },
+      "options": [
+        {
+          "en": "ذُنُوبَنَا — your sins, said to a group",
+          "ur": "ذُنُوبَنَا — تم سب کے گناہ"
+        },
+        {
+          "en": "رَبَّنَا — guide us",
+          "ur": "رَبَّنَا — ہمیں ہدایت دے"
+        },
+        {
+          "en": "ذُنُوبَنَا — our sins: the believers are speaking",
+          "ur": "ذُنُوبَنَا — ہمارے گناہ: مومن بول رہے ہیں"
+        },
+        {
+          "en": "ذُنُوبَنَا — their sins",
+          "ur": "ذُنُوبَنَا — ان کے گناہ"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ـنَا on ذُنُوب: our sins.",
+        "ur": "ذُنُوب پر ـنَا: ہمارے گناہ۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch20-l07-ex05",
+      "ayah_fragment": {
+        "ar": "رِزْقُهُنَّ وَكِسْوَتُهُنَّ بِالْمَعْرُوفِ",
+        "surah_ref": "Al-Baqarah 2:233"
+      },
+      "options": [
+        {
+          "en": "the father's provision and clothing",
+          "ur": "باپ کا کھانا اور کپڑا"
+        },
+        {
+          "en": "their provision and their clothing: the mothers'",
+          "ur": "ان کا کھانا اور ان کا کپڑا: ماؤں کا"
+        },
+        {
+          "en": "your provision and your clothing, said to the mothers",
+          "ur": "تمہارا کھانا اور کپڑا، ماؤں سے کہا گیا"
+        },
+        {
+          "en": "his provision and his clothing",
+          "ur": "اس کا کھانا اور اس کا کپڑا"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ـهُنَّ points back to الْوَالِدَاتُ.",
+        "ur": "ـهُنَّ الْوَالِدَاتُ کی طرف لوٹتا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch20-l07-ex06",
+      "statement": {
+        "en": "In سَمِعْنَا (we heard), ـنَا means our.",
+        "ur": "سَمِعْنَا (ہم نے سنا) میں ـنَا کا مطلب 'ہمارا' ہے۔",
+        "ar_example": {
+          "ar": "سَمِعْنَا",
+          "ar_plain": "سمعنا",
+          "translit": "samiʿnā",
+          "en": "we heard",
+          "ur": "ہم نے سنا"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "سَمِعَ is an action: ـنَا is we, who heard.",
+        "ur": "سَمِعَ ایک کام ہے: ـنَا 'ہم' ہے، جنہوں نے سنا۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch20-l07-ex07",
+      "left_column": [
+        {
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitābuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب (مرد)"
+        },
+        {
+          "ar": "كِتَابُهُمْ",
+          "ar_plain": "كتابهم",
+          "translit": "kitābuhum",
+          "en": "their book (a male or mixed group)",
+          "ur": "ان کی کتاب (مرد یا ملا جلا گروہ)"
+        },
+        {
+          "ar": "كِتَابُهَا",
+          "ar_plain": "كتابها",
+          "translit": "kitābuhā",
+          "en": "her book",
+          "ur": "اس کی کتاب (عورت)"
+        },
+        {
+          "ar": "كِتَابُهُنَّ",
+          "ar_plain": "كتابهن",
+          "translit": "kitābuhunna",
+          "en": "their book (a group of women)",
+          "ur": "ان کی کتاب (خواتین)"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "their book (a group of women)",
+          "ur": "ان کی کتاب (خواتین)"
+        },
+        {
+          "en": "their book (a male or mixed group)",
+          "ur": "ان کی کتاب (مرد یا ملا جلا گروہ)"
+        },
+        {
+          "en": "his book",
+          "ur": "اس کی کتاب (مرد)"
+        },
+        {
+          "en": "her book",
+          "ur": "اس کی کتاب (عورت)"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "One owner or a group; a man or a woman.",
+        "ur": "ایک مالک یا گروہ؛ مرد یا عورت۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch20-l07-ex08",
+      "prompt_line": {
+        "ar": "أَيْنَ بَيْتُكُمْ؟",
+        "ar_plain": "اين بيتكم",
+        "translit": "ayna baytukum?",
+        "en": "Where is your house? (to your family)",
+        "ur": "تم سب کا گھر کہاں ہے؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "بَيْتُكُمْ فِي الْقَرْيَةِ",
+          "ar_plain": "بيتكم في القرية",
+          "translit": "baytukum fī l-qaryati",
+          "en": "Your house is in the village. (to a group)",
+          "ur": "تم سب کا گھر گاؤں میں ہے۔"
+        },
+        {
+          "ar": "بَيْتُهُمْ فِي الْقَرْيَةِ",
+          "ar_plain": "بيتهم في القرية",
+          "translit": "baytuhum fī l-qaryati",
+          "en": "Their house is in the village.",
+          "ur": "ان کا گھر گاؤں میں ہے۔"
+        },
+        {
+          "ar": "بَيْتُنَا فِي الْقَرْيَةِ",
+          "ar_plain": "بيتنا في القرية",
+          "translit": "baytunā fī l-qaryati",
+          "en": "Our house is in the village.",
+          "ur": "ہمارا گھر گاؤں میں ہے۔"
+        },
+        {
+          "ar": "بَيْتُهُ فِي الْقَرْيَةِ",
+          "ar_plain": "بيته في القرية",
+          "translit": "baytuhu fī l-qaryati",
+          "en": "His house is in the village.",
+          "ur": "اس کا گھر گاؤں میں ہے۔"
+        }
+      ],
+      "correct_option_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Asked with ـكُمْ, you answer for your family with ـنَا.",
+        "ur": "ـكُمْ سے پوچھا گیا، آپ اپنے گھر والوں کی طرف سے ـنَا سے جواب دیتے ہیں۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch20-l07-ex09",
+      "prompt": {
+        "ar": "الطَّالِبَاتُ فِي الْمَسْجِدِ، وَكُتُبُهُنَّ فِي الْبَيْتِ",
+        "ar_plain": "الطالبات في المسجد وكتبهن في البيت",
+        "translit": "aṭ-ṭālibātu fī l-masjidi, wa kutubuhunna fī l-bayti",
+        "en": "The female students are in the mosque, and their books are in the house.",
+        "ur": "طالبات مسجد میں ہیں، اور ان کی کتابیں گھر میں ہیں۔"
+      },
+      "options": [
+        {
+          "en": "The students are in the mosque, and our books are in the house.",
+          "ur": "طلبہ مسجد میں ہیں، اور ہماری کتابیں گھر میں ہیں۔"
+        },
+        {
+          "en": "The female students are in the mosque, and their books are in the house.",
+          "ur": "طالبات مسجد میں ہیں، اور ان کی کتابیں گھر میں ہیں۔"
+        },
+        {
+          "en": "The female students are in the house, and their books are in the mosque.",
+          "ur": "طالبات گھر میں ہیں، اور ان کی کتابیں مسجد میں ہیں۔"
+        },
+        {
+          "en": "The female students are in the mosque, and your books are in the house.",
+          "ur": "طالبات مسجد میں ہیں، اور تم سب کی کتابیں گھر میں ہیں۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "كُتُبُهُنَّ: their books — the female students'.",
+        "ur": "كُتُبُهُنَّ: ان کی کتابیں — طالبات کی۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch20-l07-ex10",
+      "ayah_fragment": {
+        "ar": "فِي بُيُوتِكُنَّ",
+        "surah_ref": "Al-Ahzab 33:34"
+      },
+      "options": [
+        {
+          "en": "your house, said to one woman",
+          "ur": "تمہارا گھر، ایک عورت سے"
+        },
+        {
+          "en": "their houses, women spoken about",
+          "ur": "ان کے گھر، جن خواتین کی بات ہو"
+        },
+        {
+          "en": "our houses",
+          "ur": "ہمارے گھر"
+        },
+        {
+          "en": "your houses, said to a group of women",
+          "ur": "تمہارے گھر، خواتین کے گروہ سے کہا گیا"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "ـكُنَّ: your, to a group of women.",
+        "ur": "ـكُنَّ: خواتین کے گروہ سے 'تمہارا'۔"
+      }
+    }
+  ],
+  "reveal": {
+    "concept_name": {
+      "en": "Five plural endings",
+      "ar": "ضَمَائِرُ الْجَمْعِ الْمُتَّصِلَةُ",
+      "ur": "جمع کے پانچ آخر"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 277,
+      "label": "Al-Baqarah 2:277",
+      "ar": "لَهُمْ أَجْرُهُمْ عِندَ رَبِّهِمْ",
+      "en": "they will have their reward with their Lord",
+      "ur": "ان کے لیے ان کا اجر ان کے رب کے پاس ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002277.mp3"
+    },
+    "highlighted_word_indices": [
+      3
+    ],
+    "highlighted_words": [
+      "رَبِّهِمْ"
+    ],
+    "noor_explanation": {
+      "en": "رَبِّهِمْ: their Lord, ـهُمْ heard ـهِمْ after the kasra. our, your for a group, your for women, their, their for women: you can now tell all five apart and find their owners.",
+      "ur": "رَبِّهِمْ: ان کا رب، زیر کے بعد ـهُمْ کو ـهِمْ سنا گیا۔ ہمارا، گروہ سے تمہارا، خواتین سے تمہارا، ان کا، خواتین کا ان کا: اب آپ پانچوں کو الگ کر کے ان کے مالک ڈھونڈ سکتے ہیں۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Review complete. Take the Chapter 20 final test when you are ready.",
+      "ur": "جائزہ مکمل۔ جب تیار ہوں تو باب 20 کا آخری امتحان دیں۔"
+    }
+  }
+}

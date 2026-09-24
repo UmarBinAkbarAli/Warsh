@@ -37,8 +37,8 @@ Adding separate conversation chapters is not recommended at this stage because t
 | CL5 | 10 | Meet Your Study Group | Use we/they/you-all and recognise classroom survival phrases | New lesson; applies Chapter 10 pronouns |
 | CL6 | 11 | Home and Family | Introduce family and locate people | New lesson; first pilot |
 | CL7 | 12 | Personal Introduction and Halaqa | Give name, origin, and profession; participate politely | Refine existing material in a separate follow-up |
-| CL8 | 21 | Finding a Place: Expanded Directions | Build on CL2 with movement and directions | Provisional later chapter lab |
-| CL9 | 22 | Ask, Answer, and Confirm Understanding | Expand CL5's fixed phrases into a productive loop | Provisional later chapter lab |
+| CL8 | 21 | Finding Someone: Journey and Landmark | Say where someone went (مِنْ … إِلَى …) and locate a place between two landmarks | Built 2026-09-24 as `ch21-cl08` (order 5) |
+| CL9 | 22 | Ask, Answer, and Confirm Understanding | Expand CL5's fixed phrases into a productive loop | Built 2026-09-24 as `ch22-cl09` (order 5) |
 | CL10 | 31 | Asking a Scholar | Ask respectful questions after a lesson | Provisional rebuild |
 | CL11 | 38 | Daily Routine | Discuss recurring actions using the present tense | Provisional new lesson |
 | CL12 | 40 | At the Mosque | Ask about prayer, wudu, and congregation | Provisional rebuild |
@@ -385,80 +385,81 @@ Complete a four-part introduction: greeting, name, origin, and profession.
 
 Female-address forms remain recognition-only unless the preceding Chapter 12 lessons explicitly teach them. Classroom imperatives remain listening-only.
 
-### CL8 — Finding a Place: Expanded Directions
+### CL8 — Finding Someone: Journey and Landmark
 
-**Host:** Chapter 21  
-**Action:** Reassess the proposed `SPOKEN_PHRASES` lesson when Chapter 21 is audited  
-**Scene:** A visitor asks where the mosque, classroom, and entrance are; this extends the basic location exchange from CL2.
+**Host:** Chapter 21
+**Status:** Built 2026-09-24 as `ch21-cl08` (display order 5; the review `ch21-l05` moves to 6 and `ch21-test` is 7). Specified by `Docs/proposals/chapter-21-content-proposal.md`, which replaced the provisional "Expanded Directions" sketch: its phrases mostly repeated CL2 and promised directions the chapter's forms cannot deliver.
+**Scene:** After school a friend is looking for Ahmad; the learner saw where he went and knows the neighbourhood.
 
 #### Learner outcome
 
-The learner can ask where a place is and understand a location response, adding movement or route instructions only after Chapter 21 has taught the needed forms.
+The learner can say where someone left from and went to, and locate a place between two landmarks. Turn-by-turn directions and imperatives wait for the chapters that teach them.
 
 #### Core phrase set
 
-- **أَيْنَ الْمَسْجِدُ؟** — Where is the mosque?
-- **الْمَسْجِدُ قَرِيبٌ** — The mosque is near.
-- **أَيْنَ الْفَصْلُ؟** — Where is the classroom?
-- **الْفَصْلُ هُنَاكَ** — The classroom is there.
-- **أَيْنَ الْبَابُ؟** — Where is the door?
-- **الْبَابُ أَمَامَكَ** — The door is in front of you.
-- **الْكِتَابُ فَوْقَ الْمَكْتَبِ** — The book is above/on the desk.
-- **الْحَقِيبَةُ تَحْتَ الْكُرْسِيِّ** — The bag is under the chair.
-- **شُكْرًا** — Thank you.
+- **أَيْنَ أَحْمَدُ؟** — Where is Ahmad?
+- **خَرَجَ مِنَ الْمَدْرَسَةِ وَذَهَبَ إِلَى الْمَسْجِدِ** — He left the school and went to the mosque.
+- **مِنْ أَيْنَ خَرَجَ؟ / إِلَى أَيْنَ ذَهَبَ؟** — From where did he leave? / Where did he go?
+- **وَأَيْنَ الْمَسْجِدُ؟** — And where is the mosque?
+- **الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ** — The mosque is between the school and the market.
+- **رَجَعَتْ إِلَى الْبَيْتِ** — She returned to the house.
+- **الْبَيْتُ خَلْفَ الْمَسْجِدِ** — The house is behind the mosque.
+- **جَزَاكَ اللهُ خَيْرًا** — May Allah reward you with good.
 
 #### Model exchange
 
-> A: لَوْ سَمَحْتَ، أَيْنَ الْمَسْجِدُ؟  
-> B: الْمَسْجِدُ هُنَاكَ  
-> A: وَأَيْنَ الْبَابُ؟  
-> B: الْبَابُ أَمَامَكَ  
-> A: شُكْرًا  
-> B: أَهْلًا وَسَهْلًا
+> A: أَيْنَ أَحْمَدُ؟
+> B: خَرَجَ مِنَ الْمَدْرَسَةِ وَذَهَبَ إِلَى الْمَسْجِدِ
+> A: وَأَيْنَ الْمَسْجِدُ؟
+> B: الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ
+> A: جَزَاكَ اللهُ خَيْرًا
 
 #### Assessment mission
 
-Ask for one place and select the response that correctly uses a learned location word.
+New people and places: say where Fatimah went, where the mosque is this time, and that Ahmad came back.
 
 #### Boundaries
 
-The phrase list above is a provisional scene sketch. Reuse of CL2 location phrases alone would not justify a new lesson; the Chapter 21 audit must identify a taught movement or direction function to add. Do not assess turn-by-turn street directions or imperative verbs before they are taught.
+No turn-by-turn street directions, no imperatives, no pronunciation scoring.
 
 ### CL9 — Ask, Answer, and Confirm Understanding
 
-**Host:** Chapter 22  
-**Action:** Rebuild the chapter's fragmented Conversation Builders into a coherent lab  
-**Scene:** A learner asks about a lesson and confirms understanding.
+**Host:** Chapter 22
+**Status:** Built 2026-09-24 as `ch22-cl09` (display order 5; the review `ch22-l05` moves to 6 and `ch22-test` is 7), as specified by `Docs/proposals/chapter-22-content-proposal.md`.
+**Scene:** After the lesson, a classmate who arrived late asks about it.
 
 #### Learner outcome
 
-The learner can ask, answer, say they understood, and request repetition when necessary. This expands the fixed phrases heard in CL5 into forms supported by Chapter 22.
+The learner can confirm they understood, report what the teacher said, answer where the lesson is, and ask politely for repetition. CL5's heard-only repair phrase is now spoken.
 
 #### Core phrase set
 
 - **هَلْ فَهِمْتَ الدَّرْسَ؟** — Did you understand the lesson?
 - **نَعَمْ، فَهِمْتُ الدَّرْسَ** — Yes, I understood the lesson.
-- **لَا، لَمْ أَفْهَمْ** — No, I did not understand. (recognition if negation is not yet taught)
 - **مَاذَا قَالَ الْأُسْتَاذُ؟** — What did the teacher say?
-- **قَالَ الْأُسْتَاذُ ...** — The teacher said …
-- **سَأَلَ الطَّالِبُ سُؤَالًا** — The student asked a question.
-- **أَجَابَ الْأُسْتَاذُ** — The teacher answered.
-- **مَرَّةً أُخْرَى، لَوْ سَمَحْتَ** — Once again, please. (recognition)
+- **قَالَ الْأُسْتَاذُ: الدَّرْسُ غَدًا** — The teacher said, "The lesson is tomorrow."
+- **أَيْنَ الدَّرْسُ؟ / الدَّرْسُ فِي الْمَسْجِدِ** — Where is the lesson? / The lesson is in the mosque.
+- **مَرَّةً أُخْرَى، لَوْ سَمَحْتَ** — Once again, please.
+- Heard only: **لَا، لَمْ أَفْهَمْ** (No, I did not understand), **هَلْ فَهِمْتِ الدَّرْسَ؟** (to a woman), **هَلْ فَهِمْتُمْ؟** (to a group).
 
 #### Model exchange
 
-> A: هَلْ فَهِمْتَ الدَّرْسَ؟  
-> B: نَعَمْ، فَهِمْتُ الدَّرْسَ  
-> A: مَاذَا قَالَ الْأُسْتَاذُ؟  
-> B: قَالَ الْأُسْتَاذُ: الْكِتَابُ عَلَى الْمَكْتَبِ
+> A: هَلْ فَهِمْتَ الدَّرْسَ؟
+> B: نَعَمْ، فَهِمْتُ الدَّرْسَ
+> A: مَاذَا قَالَ الْأُسْتَاذُ؟
+> B: قَالَ الْأُسْتَاذُ: الدَّرْسُ غَدًا
+> A: أَيْنَ الدَّرْسُ؟
+> B: الدَّرْسُ فِي الْمَسْجِدِ
+
+The learner's own lines are the same for male and female learners; the gendered question forms are heard only.
 
 #### Assessment mission
 
-Complete the loop: question → answer → confirmation of understanding.
+The teacher asks: request repetition, report what he said, and say where tomorrow's lesson is.
 
 #### Boundaries
 
-Do not assess **لَمْ** before its dedicated chapter. Until then, the negative response is listening and recognition only.
+Do not assess **لَمْ** before its dedicated chapter; the negative reply stays heard only.
 
 ### CL10 — Asking a Scholar
 

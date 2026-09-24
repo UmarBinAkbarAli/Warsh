@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 23, Lesson 4 - Full review integrating Idafa, demonstratives, relative pronouns, attached pronouns, verbs, prepositions, plurals. Al-Falaq integration toward Al-Ikhlas. Quranic hook: Al-Falaq 113 toward Al-Ikhlas 112.",
+    "_note": "Chapter 23, Lesson 4 (ch23-l04) — Quran reading across separate verified excerpts, one or two bounded questions each: Al-Baqarah 2:201 رَبَّنَا (our, on a noun) versus آتِنَا (us, on a request) and فِي الدُّنْيَا; Al-Falaq 113:1 بِرَبِّ الْفَلَقِ (بِـ, then رَبِّ with its owner-word: an idafa, not my Lord); Al-Ikhlas 112:1 هُوَ as a separate pronoun and اللَّهُ أَحَدٌ as a sentence, not an idafa. Reveal رَبَّنَا آتِنَا (2:201, indices 0–1). No excerpt is claimed to hold every Book 2 pattern; the 'traveller's supplication uses everything in Book 2' claim, the 113:1 demonstrative/relative/possessive claims, the nominative رَبِّ SUBJECT parse and the authored الَّذِي خَلَقَ الْفَلَقَ presented as Al-Falaq are gone. Rebuilt 2026-09-24 from Docs/proposals/chapter-23-content-proposal.md with the owner-approved review amendments recorded there (Ta-Ha 20:17–18 وَمَا تِلْكَ بِيَمِينِكَ / قَالَ هِيَ عَصَايَ instead of Al-Baqarah 2:5, whose أُولَٰئِكَ → people of taqwa task is already Chapter 15 L4's; Al-Baqarah 2:21 for الَّذِي with رَبَّكُمُ; Al-Qasas 28:21 for movement plus speech). Chapters 20–22 were rebuilt and released together with this chapter, so every combined skill tested here is taught. The map and fixtures named reader_lecture_23_book2_consolidation.md and reader_lessons_11-13_integration.md, neither of which existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "اصل آیات میں پڑھنا",
     "chapter_order": 23,
     "lesson_order": 4,
-    "chapter_title": "Grammar Structures, Reading, and Application",
-    "title": "Full Review: Al-Falaq Toward Al-Ikhlas",
-    "titleAr": "مُرَاجَعَة شَامِلَة: الْفَلَقُ نَحْوَ الْإِخْلَاص",
-    "source": "reader_lessons_11-13_integration.md",
-    "estimated_minutes": 9,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 113,
-      "ayah": 1,
-      "label": "Al-Falaq 113:1",
-      "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
-      "en": "Say, I seek refuge in the Lord of the dawn.",
-      "ur": "کہہ دیجیے، میں субһ کے رب کی پناہ مانگتا ہوں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
+      "surah": 2,
+      "ayah": 201,
+      "label": "Al-Baqarah 2:201",
+      "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
+      "en": "Our Lord, give us good in this world",
+      "ur": "اے ہمارے رب! ہمیں دنیا میں بھلائی دے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002201.mp3"
     },
     "noor_intro": {
-      "en": "رَبِّ الْفَلَقِ — 'Lord of the dawn.' This is an idaafa: رَبّ (Lord) possesses الْفَلَقِ (the dawn). Today we bring everything together: idaafa, demonstratives, relative pronouns, attached pronouns, verbs, and prepositions — all pointing toward a deeper reading of Al-Falaq and Al-Ikhlas.",
-      "ur": "رَبِّ الْفَلَقِ — 'سفري کا رب'۔ یہ ایک اضافت ہے: رَبّ (رب) کو الْفَلَقِ (صباح) کا possession ہے۔ آج ہم سب کو اکٹھا کرتے ہیں: اضافت، اشاریے، اسماء موصولہ، بدلیہ اسماء، أفعال، اور حروف — سب کو مل کر سورہ فلک اور سورہ اخلاص کو گہرائی سے پڑھنے کی طرف لے جاتے ہیں۔"
+      "en": "One of the most loved du'as in the Quran. Listen for رَبَّنَا and آتِنَا: they end the same way, but do they mean the same thing?",
+      "ur": "قرآن کی سب سے پیاری دعاؤں میں سے ایک۔ رَبَّنَا اور آتِنَا سنیں: دونوں کا آخر ایک جیسا ہے، لیکن کیا مطلب بھی ایک ہے؟"
     },
     "autoplay": true
   },
@@ -32,449 +29,400 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Full integration: everything together",
-        "ar": "التكامل الشامل: كل شيء معًا",
-        "ur": " повно integrate: سب کچھ اکٹھے"
+        "en": "One or two questions per ayah",
+        "ar": "آيَةٌ وَسُؤَالٌ",
+        "ur": "ہر آیت پر ایک یا دو سوال"
       },
       "explanation": {
-        "en": "Arabic grammar elements work together in sentences. One sentence can contain: an idaafa (كِتَابُ الطَّالِبِ), a demonstrative (هَذَا), a relative pronoun (الَّذِي), an attached pronoun (رَبِّي), a verb (ذَهَبَ), and prepositions (فِي، إِلَى). Today we practice reading them all in one passage.",
-        "ur": "عربی گرامر کے عناصر جملے میں اکٹھے کام کرتے ہیں۔ ایک جملے میں ہو سکتا ہے: اضافت (كِتَابُ الطَّالِبِ)، اشاریہ (ہذَا)، اسم موصول (الَّذِي)، بدلیہ ضمیر (رَبِّي)، فعل (ذَهَبَ)، اور حروف (فِي، إِلَى)۔ آج ہم ان سب کو ایک پاسج میں پڑھنے کی مشق کرتے ہیں۔"
+        "en": "Real ayat do not line up every pattern for you. Read each excerpt for the one or two things it really shows, and leave the rest glossed.",
+        "ur": "اصل آیات ہر قاعدہ آپ کے لیے ترتیب سے نہیں رکھتیں۔ ہر اقتباس میں وہ ایک یا دو چیزیں پڑھیں جو واقعی اس میں ہیں، اور باقی کا صرف معنی لیں۔"
       }
     },
     {
       "type": "AYAH_PREVIEW",
-      "text": {
+      "concept": {
+        "en": "Al-Baqarah 2:201: Our Lord, give us good in this world",
+        "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
+        "ur": "Al-Baqarah 2:201: اے ہمارے رب! ہمیں دنیا میں بھلائی دے"
+      },
+      "explanation": {
+        "en": "رَبَّنَا: our Lord — ـنَا on a noun. آتِنَا: give us — ـنَا on a request, so us. فِي الدُّنْيَا: in this world, فِي with a noun. حَسَنَةً, good, is what is asked for.",
+        "ur": "رَبَّنَا: ہمارا رب — اسم پر ـنَا۔ آتِنَا: ہمیں دے — درخواست پر ـنَا، اس لیے 'ہمیں'۔ فِي الدُّنْيَا: دنیا میں، فِي ایک اسم کے ساتھ۔ حَسَنَةً، بھلائی، وہ ہے جو مانگی جا رہی ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002201.mp3"
+    },
+    {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Our or us?",
+        "ar": "رَبَّنَا / آتِنَا",
+        "ur": "ہمارا یا ہمیں؟"
+      },
+      "explanation": {
+        "en": "The same ending, two jobs: on a noun our, on an action us. You met the same pair in Chapter 20 with اهْدِنَا.",
+        "ur": "ایک ہی آخر، دو کام: اسم پر 'ہمارا'، کام پر 'ہمیں'۔ یہی جوڑا آپ نے باب 20 میں اهْدِنَا کے ساتھ دیکھا۔"
+      },
+      "examples": [
+        {
+          "ar": "رَبَّنَا",
+          "ar_plain": "ربنا",
+          "translit": "rabbanā",
+          "en": "our Lord",
+          "ur": "ہمارا رب"
+        },
+        {
+          "ar": "آتِنَا",
+          "ar_plain": "اتنا",
+          "translit": "ātinā",
+          "en": "give us",
+          "ur": "ہمیں دے"
+        }
+      ]
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Falaq 113:1: Say, “I seek refuge in the Lord of daybreak.”",
         "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
-        "ar_plain": "قل أعوذ برب الفلق",
-        "translit": "qul a'oodhu bi-rabbi al-falaqi",
-        "en": "Say, I seek refuge in the Lord of the dawn.",
-        "ur": "کہہ دیجیے، میں субһ کے رب کی پناہ مانگتا ہوں۔"
+        "ur": "Al-Falaq 113:1: کہو: میں صبح کے رب کی پناہ مانگتا ہوں۔"
       },
       "explanation": {
-        "en": "رَبِّ الْفَلَقِ is an idaafa: رَبّ (Lord, nominative) + الْفَلَقِ (the dawn, genitive possessor). بِ is the preposition 'in/with.' أَعُوذُ is the verb 'I seek refuge.' All four grammar topics of this chapter are in this one ayah.",
-        "ur": "رَبِّ الْفَلَقِ ایک اضافت ہے: رَبّ (رب، مرفوع) + الْفَلَقِ (صبح، جر قابض)۔ بِ حرف 'میں/ساتھ' ہے۔ أَعُوذُ فعل 'میں پناہ مانگتا ہوں' ہے۔ اس chapter کے سب چار گرامر موضوعات اس ایک آیت میں ہیں۔"
-      }
+        "en": "بِرَبِّ الْفَلَقِ: بِـ, in (seeking refuge in), then رَبِّ الْفَلَقِ, the Lord of daybreak — an idafa: the owner-word الْفَلَقِ follows رَبِّ. No ي is written, so it is not my Lord (Chapter 19).",
+        "ur": "بِرَبِّ الْفَلَقِ: بِـ، کی (پناہ)، پھر رَبِّ الْفَلَقِ، صبح کا رب — اضافت: مالک والا لفظ الْفَلَقِ، رَبِّ کے بعد آتا ہے۔ ي لکھی نہیں، اس لیے یہ 'میرا رب' نہیں (باب 19)۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/113001.mp3"
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "هَذَا رَبُّ الْفَلَقِ",
-        "ar_plain": "هذا رب الفلق",
-        "translit": "haadhaa rabbul falaqi",
-        "en": "This is the Lord of the dawn.",
-        "ur": "یہ субһ کا رب ہے۔"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Ikhlas 112:1: Say, “He is Allah, One.”",
+        "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "ur": "Al-Ikhlas 112:1: کہو: وہ اللہ ایک ہے۔"
       },
       "explanation": {
-        "en": "هَذَا is the demonstrative 'this.' رَبُّ is the first noun of the idaafa (nominative). الْفَلَقِ is the possessor (genitive). Demonstrative + Idaafa together — all concepts from this chapter in one sentence.",
-        "ur": "ہذَا اشاریہ 'یہ' ہے۔ رَبُّ اضافت کا پہلا اسم ہے (مرفوع)۔ الْفَلَقِ قابض ہے (جر)۔ اشاریہ + اضافت اکٹھے — اس chapter کے سب تصورات ایک جملے میں۔"
-      }
+        "en": "هُوَ: He — a separate pronoun, standing on its own, not an ending. اللَّهُ أَحَدٌ: Allah is One — a statement about Him, not an idafa.",
+        "ur": "هُوَ: وہ — الگ ضمیر، اپنے طور پر کھڑا، آخر نہیں۔ اللَّهُ أَحَدٌ: اللہ ایک ہے — اس کے بارے میں بیان، اضافت نہیں۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112001.mp3"
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "الَّذِي خَلَقَ الْفَلَقَ",
-        "ar_plain": "الذي خلق الفلق",
-        "translit": "alladhii khalaqal falaqa",
-        "en": "He who created the dawn.",
-        "ur": "جس نے субһ کو پیدا کیا۔"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Separate word or ending?",
+        "ar": "هُوَ / ـهُ",
+        "ur": "الگ لفظ یا آخر؟"
       },
       "explanation": {
-        "en": "الَّذِي is the relative pronoun 'He who.' خَلَقَ is the past verb 'created.' الْفَلَقَ is the object (accusative). The relative pronoun الَّذِي introduces this description of Allah in Surah Al-Falaq.",
-        "ur": "الَّذِي اسم موصول 'وہ جو' ہے۔ خَلَقَ ماضی فعل 'پیدا کیا' ہے۔ الْفَلَقَ مفعول ہے (منصوب)۔ اسم موصول الَّذِي سورہ فلک میں اللہ کے اس وصف کو متعارف کراتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "رَبُّنَا خَالِقُ كُلِّ شَيْءٍ",
-        "ar_plain": "ربنا خالق كل شيء",
-        "translit": "rabbunaa khaaliqu kulli shay-in",
-        "en": "Our Lord is the Creator of all things.",
-        "ur": "ہمارا رب ہر چیز کا خالق ہے۔"
+        "en": "هُوَ in 112:1 is a word by itself. ـهُ is only ever attached: كِتَابُهُ, his book.",
+        "ur": "112:1 میں هُوَ اپنے آپ میں ایک لفظ ہے۔ ـهُ ہمیشہ جڑا ہوا ہوتا ہے: كِتَابُهُ، اس کی کتاب۔"
       },
-      "explanation": {
-        "en": "رَبُّنَا is 'our Lord' — رَبّ + نَا (attached pronoun 'our'). خَالِقُ is the predicate (nominative). كُلِّ is the genitive noun 'all.' شَيْءٍ is also genitive — the idaafa كُلِّ شَيْءٍ means 'of all things.' This sentence uses attached pronouns and idaafa together.",
-        "ur": "رَبُّنَا 'ہمارا رب' ہے — رَبّ + نَا (بدلیہ ضمیر 'ہمارا')۔ خَالِقُ خبر ہے (مرفوع)۔ كُلِّ جر کا اسم 'سب' ہے۔ شَيْءٍ بھی جر میں ہے — اضافت كُلِّ شَيْءٍ کا مطلب 'ہر چیز کا' ہے۔ اس جملے میں بدلیہ ضمیر اور اضافت اکٹھے ہیں۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Key vocabulary in this review lesson",
-        "ur": "اس مروری سبق میں اہم الفاظ"
-      },
-      "body": {
-        "en": "رَبّ Lord · فَلَقٌ dawn · خَلَقَ created · كُلّ all · شَيْء thing · أَعُوذُ I seek refuge · بِ with/in · هَذَا this · ذَلِكَ that · الَّذِي who/which (masc.) · الَّتِي who/which (fem.) · رَبِّي my Lord · رَبُّنَا our Lord · ذَهَبَ went · قَالَ said · فَعَلَ did · فِي in · إِلَى to · مِنْ from · عَلَى on",
-        "ur": "رَبّ رب · فَلَقٌ صبح · خَلَقَ پیدا کیا · كُلّ سب · شَيْء چیز · أَعُوذُ میں پناہ مانگتا ہوں · بِ ساتھ/میں · هَذَا یہ · ذَلِكَ وہ · الَّذِي جو/کہ (مذکر) · الَّتِي جو/کہ (مؤنث) · رَبِّي میرا رب · رَبُّنَا ہمارا رب · ذَهَبَ گیا · قَالَ کہا · فَعَلَ کیا · فِي میں · إِلَى تک · مِنْ سے · عَلَى پر"
-      }
+      "examples": [
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "he, it (a separate word)",
+          "ur": "وہ (الگ لفظ، مذکر)"
+        },
+        {
+          "ar": "كِتَابُهُ",
+          "ar_plain": "كتابه",
+          "translit": "kitābuhu",
+          "en": "his book",
+          "ur": "اس کی کتاب"
+        }
+      ]
     }
   ],
   "exercises": [
     {
-      "type": "TAP_TRANSLATION",
+      "type": "MATCH_AYAH",
       "id": "ch23-l04-ex01",
-      "prompt": {
-        "ar": "رَبُّ الْفَلَقِ",
-        "ar_plain": "رب الفلق",
-        "translit": "rabbul falaqi",
-        "en": "Lord of the dawn.",
-        "ur": "صبح کا رب۔"
+      "ayah_fragment": {
+        "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
+        "surah_ref": "Al-Baqarah 2:201"
       },
       "options": [
         {
-          "en": "Lord of the dawn.",
-          "ur": "صبح کا رب۔"
+          "en": "Both mean our",
+          "ur": "دونوں کا مطلب 'ہمارا'"
         },
         {
-          "en": "The Lord created the dawn.",
-          "ur": "رب نے صبح پیدا کی۔"
+          "en": "رَبَّنَا — our Lord (on a noun); آتِنَا — give us (on a request)",
+          "ur": "رَبَّنَا — ہمارا رب (اسم پر)؛ آتِنَا — ہمیں دے (درخواست پر)"
         },
         {
-          "en": "The dawn is the Lord.",
-          "ur": "صبح رب ہے۔"
+          "en": "آتِنَا — our gift, a noun",
+          "ur": "آتِنَا — ہمارا تحفہ، ایک اسم"
         },
         {
-          "en": "The Lord of all things.",
-          "ur": "سب چیزوں کا رب۔"
+          "en": "Both mean us",
+          "ur": "دونوں کا مطلب 'ہمیں'"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَبُّ is the first noun of the idaafa (nominative). الْفَلَقِ is the possessor (genitive). This is the idaafa رَبُّ الْفَلَقِ — 'Lord of the dawn,' exactly as it appears in Surah Al-Falaq.",
-        "ur": "رَبُّ اضافت کا پہلا اسم ہے (مرفوع)۔ الْفَلَقِ قابض ہے (جر)۔ یہ اضافت ہے رَبُّ الْفَلَقِ — 'صبح کا رب'، بالکل جیسے سورہ فلک میں ہے۔"
+        "en": "On a noun, our; on an action, us.",
+        "ur": "اسم پر ہمارا؛ کام پر ہمیں۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch23-l04-ex02",
       "statement": {
-        "en": "In رَبُّنَا خَالِقُ كُلِّ شَيْءٍ, the word كُلِّ is in the genitive case because it is the first noun of the idaafa كُلِّ شَيْءٍ.",
-        "ur": "رَبُّنَا خَالِقُ كُلِّ شَيْءٍ میں كُلِّ جر میں ہے کیونکہ یہ اضافت كُلِّ شَيْءٍ کا پہلا اسم ہے۔",
+        "en": "In آتِنَا, ـنَا means our.",
+        "ur": "آتِنَا میں ـنَا کا مطلب 'ہمارا' ہے۔",
         "ar_example": {
-          "ar": "رَبُّنَا خَالِقُ كُلِّ شَيْءٍ",
-          "ar_plain": "ربنا خالق كل شيء",
-          "translit": "rabbunaa khaaliqu kulli shay-in",
-          "en": "Our Lord is the Creator of all things.",
-          "ur": "ہمارا رب ہر چیز کا خالق ہے۔"
+          "ar": "آتِنَا",
+          "ar_plain": "اتنا",
+          "translit": "ātinā",
+          "en": "give us",
+          "ur": "ہمیں دے"
         }
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "آتِنَا is a request, give: ـنَا is us.",
+        "ur": "آتِنَا درخواست ہے، دے: ـنَا کا مطلب 'ہمیں'۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
+      "type": "MATCH_AYAH",
       "id": "ch23-l04-ex03",
-      "mode": "TAP",
-      "sentence_ar": "الَّذِي ___ الْفَلَقَ",
-      "hint": {
-        "en": "He who created the dawn.",
-        "ur": "جس نے صبح کو پیدا کیا۔"
+      "ayah_fragment": {
+        "ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+        "surah_ref": "Al-Falaq 113:1"
       },
       "options": [
         {
-          "ar": "خَلَقَ",
-          "ar_plain": "خلق",
-          "translit": "khalaqa",
-          "en": "created",
-          "ur": "پیدا کیا"
+          "en": "رَبِّ الْفَلَقِ — a noun with its adjective",
+          "ur": "رَبِّ الْفَلَقِ — اسم اور اس کی صفت"
         },
         {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
-          "translit": "dhahaba",
-          "en": "went",
-          "ur": "گیا"
+          "en": "بِرَبِّ — in my Lord",
+          "ur": "بِرَبِّ — میرے رب کی"
         },
         {
-          "ar": "قَالَ",
-          "ar_plain": "قال",
-          "translit": "qaala",
-          "en": "said",
-          "ur": "کہا"
+          "en": "الْفَلَقِ — my daybreak",
+          "ur": "الْفَلَقِ — میری صبح"
         },
         {
-          "ar": "أَكَلَ",
-          "ar_plain": "أكل",
-          "translit": "akala",
-          "en": "ate",
-          "ur": "کھایا"
+          "en": "بِـ + رَبِّ الْفَلَقِ — in the Lord of daybreak: رَبِّ followed by its owner-word",
+          "ur": "بِـ + رَبِّ الْفَلَقِ — صبح کے رب کی: رَبِّ کے بعد مالک والا لفظ"
         }
       ],
-      "correct_answer": {
-        "ar": "خَلَقَ",
-        "ar_plain": "خلق",
-        "translit": "khalaqa",
-        "en": "created",
-        "ur": "پیدا کیا"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch23-l04-ex04",
-      "left_column": [
-        {
-          "ar": "رَبُّ الْفَلَقِ",
-          "ar_plain": "رب الفلق",
-          "translit": "rabbul falaqi",
-          "en": "Lord of the dawn",
-          "ur": "صبح کا رب"
-        },
-        {
-          "ar": "رَبُّنَا خَالِقُ كُلِّ شَيْءٍ",
-          "ar_plain": "ربنا خالق كل شيء",
-          "translit": "rabbunaa khaaliqu kulli shay-in",
-          "en": "Our Lord is Creator of all things",
-          "ur": "ہمارا رب ہر چیز کا خالق ہے"
-        },
-        {
-          "ar": "الَّذِي خَلَقَ",
-          "ar_plain": "الذي خلق",
-          "translit": "alladhii khalaqa",
-          "en": "He who created",
-          "ur": "جس نے پیدا کیا"
-        },
-        {
-          "ar": "أُولَئِكَ رِجَالٌ كِرَامٌ",
-          "ar_plain": "اولئك رجال كرام",
-          "translit": "ulaa'ika rijaalun kiraamun",
-          "en": "Those are noble men",
-          "ur": "وہ شریف مرد ہیں"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "Lord of the dawn",
-          "ur": "صبح کا رب"
-        },
-        {
-          "en": "Our Lord is Creator of all things",
-          "ur": "ہمارا رب ہر چیز کا خالق ہے"
-        },
-        {
-          "en": "He who created",
-          "ur": "جس نے پیدا کیا"
-        },
-        {
-          "en": "Those are noble men",
-          "ur": "وہ شریف مرد ہیں"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch23-l04-ex05",
-      "target_translation": {
-        "en": "Our Lord is the Creator of all things.",
-        "ur": "ہمارا رب ہر چیز کا خالق ہے۔"
-      },
-      "tiles": [
-        {
-          "ar": "رَبُّنَا",
-          "ar_plain": "ربنا",
-          "translit": "rabbunaa",
-          "en": "our Lord",
-          "ur": "ہمارا رب"
-        },
-        {
-          "ar": "خَالِقُ",
-          "ar_plain": "خالق",
-          "translit": "khaaliqu",
-          "en": "Creator",
-          "ur": "خالق"
-        },
-        {
-          "ar": "كُلِّ",
-          "ar_plain": "كل",
-          "translit": "kulli",
-          "en": "of all (genitive)",
-          "ur": "سب کا (جر)"
-        },
-        {
-          "ar": "شَيْءٍ",
-          "ar_plain": "شيء",
-          "translit": "shay-in",
-          "en": "thing (genitive)",
-          "ur": "چیز (جر)"
-        },
-        {
-          "ar": "شَيْءٌ",
-          "ar_plain": "شيء",
-          "translit": "shay-un",
-          "en": "a thing (nominative)",
-          "ur": "ایک چیز (مرفوع)"
-        }
-      ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch23-l04-ex06",
-      "sentence_ar": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
-      "words": [
-        {
-          "ar": "قُلْ",
-          "ar_plain": "قل",
-          "translit": "qul",
-          "en": "Say",
-          "ur": "کہہ"
-        },
-        {
-          "ar": "أَعُوذُ",
-          "ar_plain": "أعوذ",
-          "translit": "a'oodhu",
-          "en": "I seek refuge",
-          "ur": "میں پناہ مانگتا ہوں"
-        },
-        {
-          "ar": "بِ",
-          "ar_plain": "ب",
-          "translit": "bi",
-          "en": "in/with",
-          "ur": "میں/ساتھ"
-        },
-        {
-          "ar": "رَبِّ",
-          "ar_plain": "رب",
-          "translit": "rabbi",
-          "en": "Lord",
-          "ur": "رب"
-        },
-        {
-          "ar": "الْفَلَقِ",
-          "ar_plain": "الفلق",
-          "translit": "al-falaqi",
-          "en": "the dawn",
-          "ur": "صبح"
-        }
-      ],
-      "available_roles": [
-        "VERB",
-        "SUBJECT",
-        "PREPOSITION",
-        "POSSESSIVE",
-        "OBJECT",
-        "PARTICLE"
-      ],
-      "correct_roles": [
-        "VERB",
-        "VERB",
-        "PREPOSITION",
-        "SUBJECT",
-        "POSSESSIVE"
-      ],
+      "correct_index": 3,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "قُلْ is the imperative 'Say.' أَعُوذُ is the verb 'I seek refuge.' بِ is the preposition 'in/with.' رَبِّ is the first noun of the idaafa (genitive after بِ). الْفَلَقِ is the possessor completing the idaafa. All five grammar topics from this chapter appear in this one ayah!",
-        "ur": "قُلْ حکم 'کہہ' ہے۔ أَعُوذُ فعل 'میں پناہ مانگتا ہوں' ہے۔ بِ حرف 'میں/ساتھ' ہے۔ رَبِّ اضافت کا پہلا اسم ہے (بِ کے بعد جر)۔ الْفَلَقِ قابض ہے جو اضافت مکمل کرتا ہے۔ اس chapter کے پانے گرامر موضوعات اس ایک آیت میں ہیں!"
+        "en": "No ي, and الْفَلَقِ follows: the Lord of daybreak.",
+        "ur": "ي نہیں، اور الْفَلَقِ بعد میں ہے: صبح کا رب۔"
+      }
+    },
+    {
+      "type": "MATCH_AYAH",
+      "id": "ch23-l04-ex04",
+      "ayah_fragment": {
+        "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+        "surah_ref": "Al-Ikhlas 112:1"
+      },
+      "options": [
+        {
+          "en": "أَحَدٌ — our",
+          "ur": "أَحَدٌ — ہمارا"
+        },
+        {
+          "en": "اللَّهُ أَحَدٌ — an idafa: the one of Allah",
+          "ur": "اللَّهُ أَحَدٌ — اضافت: اللہ کا ایک"
+        },
+        {
+          "en": "هُوَ — He: a separate pronoun",
+          "ur": "هُوَ — وہ: الگ ضمیر"
+        },
+        {
+          "en": "هُوَ — an ending meaning his",
+          "ur": "هُوَ — آخر، جس کا مطلب 'اس کا'"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "هُوَ stands alone; it is not attached to any word.",
+        "ur": "هُوَ اکیلا ہے؛ کسی لفظ سے جڑا نہیں۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch23-l04-ex05",
+      "statement": {
+        "en": "اللَّهُ أَحَدٌ in Al-Ikhlas 112:1 is an idafa.",
+        "ur": "سورۃ الاخلاص 112:1 میں اللَّهُ أَحَدٌ اضافت ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It is a statement: Allah is One.",
+        "ur": "یہ بیان ہے: اللہ ایک ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch23-l04-ex06",
+      "statement": {
+        "en": "Every ayah contains all the Book 2 patterns.",
+        "ur": "ہر آیت میں کتاب 2 کے سب قاعدے ہوتے ہیں۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Each excerpt shows one or two; read it for what it really has.",
+        "ur": "ہر اقتباس ایک یا دو دکھاتا ہے؛ اسے اسی کے لیے پڑھیں جو اس میں واقعی ہے۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch23-l04-ex07",
       "prompt": {
-        "ar": "الَّتِي خَلَقَ الْإِنسَانَ وَالْجَانَّ",
-        "ar_plain": "التي خلق الإنسان والجان",
-        "translit": "allatii khalaqal insaana wal jaanna",
-        "en": "Who created mankind and the jinn.",
-        "ur": "جس نے انسان اور جن کو پیدا کیا۔"
+        "ar": "فِي الدُّنْيَا",
+        "ar_plain": "في الدنيا",
+        "translit": "fī d-dunyā",
+        "en": "in this world",
+        "ur": "دنیا میں"
       },
       "options": [
         {
-          "en": "Who created mankind and the jinn.",
-          "ur": "جس نے انسان اور جن کو پیدا کیا۔"
+          "en": "to this world",
+          "ur": "دنیا کی طرف"
         },
         {
-          "en": "That created the human and the jinn.",
-          "ur": "جس نے انسان اور جن کو پیدا کیا۔"
+          "en": "from this world",
+          "ur": "دنیا سے"
         },
         {
-          "en": "The humans and jinn were created.",
-          "ur": "انسان اور جن پیدا ہوئے۔"
+          "en": "our world",
+          "ur": "ہماری دنیا"
         },
         {
-          "en": "Who created human beings only.",
-          "ur": "جس نے صرف انسان کو پیدا کیا۔"
+          "en": "in this world",
+          "ur": "دنیا میں"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 3,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "الَّتِي is the feminine relative pronoun 'who/which' (referring to رَبّ). خَلَقَ is the verb 'created.' الْإِنسَانَ is the object 'mankind.' الْجَانَّ is 'the jinn.' This ayah appears at the end of Al-Falaq and points toward the Oneness of the Creator.",
-        "ur": "الَّتِي مؤنث اسم موصول 'جو/کہ' ہے (رَبّ کی طرف اشارہ)۔ خَلَقَ فعل 'پیدا کیا' ہے۔ الْإِنسَانَ مفعول 'انسان' ہے۔ الْجَانَّ 'جن' ہے۔ یہ آیت سورہ فلک کے آخر میں ہے اور خالق کی یکتائی کی طرف اشارہ کرتی ہے۔"
+        "en": "فِي: in.",
+        "ur": "فِي: میں۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "MATCHING",
       "id": "ch23-l04-ex08",
-      "statement": {
-        "en": "In أَعُوذُ بِرَبِّ الْفَلَقِ, the preposition بِ governs رَبِّ in the genitive, and then الْفَلَقِ is the possessor completing the idaafa رَبِّ الْفَلَقِ.",
-        "ur": "أَعُوذُ بِرَبِّ الْفَلَقِ میں حرف بِ رَبِّ کو جر میں رکھتا ہے، اور پھر الْفَلَقِ قابض ہے جو اضافت رَبِّ الْفَلَقِ مکمل کرتا ہے۔",
-        "ar_example": {
-          "ar": "أَعُوذُ بِرَبِّ الْفَلَقِ",
-          "ar_plain": "أعوذ برب الفلق",
-          "translit": "a'oodhu bi-rabbi al-falaqi",
-          "en": "I seek refuge in the Lord of the dawn.",
-          "ur": "میں صبح کے رب کی پناہ مانگتا ہوں۔"
+      "left_column": [
+        {
+          "ar": "رَبَّنَا",
+          "ar_plain": "ربنا",
+          "translit": "rabbanā",
+          "en": "our Lord",
+          "ur": "ہمارا رب"
+        },
+        {
+          "ar": "آتِنَا",
+          "ar_plain": "اتنا",
+          "translit": "ātinā",
+          "en": "give us",
+          "ur": "ہمیں دے"
+        },
+        {
+          "ar": "هُوَ",
+          "ar_plain": "هو",
+          "translit": "huwa",
+          "en": "he, it (a separate word)",
+          "ur": "وہ (الگ لفظ، مذکر)"
+        },
+        {
+          "ar": "بِرَبِّ الْفَلَقِ",
+          "ar_plain": "برب الفلق",
+          "translit": "bi-rabbi l-falaqi",
+          "en": "in the Lord of daybreak",
+          "ur": "صبح کے رب کی"
         }
-      },
-      "correct_answer": true,
-      "xp_value": 1
+      ],
+      "right_column": [
+        {
+          "en": "give us",
+          "ur": "ہمیں دے"
+        },
+        {
+          "en": "in the Lord of daybreak",
+          "ur": "صبح کے رب کی"
+        },
+        {
+          "en": "our Lord",
+          "ur": "ہمارا رب"
+        },
+        {
+          "en": "He (a separate pronoun)",
+          "ur": "وہ (الگ ضمیر)"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Read each word for what it really shows.",
+        "ur": "ہر لفظ کو اسی کے لیے پڑھیں جو وہ واقعی دکھاتا ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Everything together: toward Al-Ikhlas",
-      "ar": "كُلُّ الْأَشْيَاءِ مَعًا: نَحْوَ الْإِخْلَاص",
-      "ur": "سب کچھ اکٹھے: اخلاص کی طرف"
+      "en": "Real ayat, real patterns",
+      "ar": "قِرَاءَةُ الْآيَاتِ",
+      "ur": "اصل آیات، اصل قاعدے"
     },
     "ayah": {
-      "surah": 112,
-      "ayah": 1,
-      "label": "Al-Ikhlas 112:1",
-      "ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
-      "en": "Say, He is Allah, the One.",
-      "ur": "کہہ دیجیے، وہ اللہ ایک ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/112001.mp3"
+      "surah": 2,
+      "ayah": 201,
+      "label": "Al-Baqarah 2:201",
+      "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
+      "en": "Our Lord, give us good in this world",
+      "ur": "اے ہمارے رب! ہمیں دنیا میں بھلائی دے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002201.mp3"
     },
     "highlighted_word_indices": [
+      0,
       1
     ],
+    "highlighted_words": [
+      "رَبَّنَا",
+      "آتِنَا"
+    ],
     "noor_explanation": {
-      "en": "After learning رَبُّ الْفَلَقِ (Lord of the dawn), الَّذِي خَلَقَ (He who created), and كُلِّ شَيْءٍ (of all things) — we arrive at هُوَ اللَّهُ أَحَدٌ. Every grammar element from this chapter converges: attached pronouns (هُوَ), idaafa (اللَّهِ أَحَدٌ), and the declaration of pure tawheed. You have read your way to Al-Ikhlas.",
-      "ur": "رَبُّ الْفَلَقِ (صبح کا رب)، الَّذِي خَلَقَ (جس نے پیدا کیا)، اور كُلِّ شَيْءٍ (ہر چیز کے) کے سیکھنے کے بعد — ہم پہنچتے ہیں هُوَ اللَّهُ أَحَدٌ تک۔ اس chapter کے ہر گرامر عنصر یہاں ملتا ہے: بدلیہ ضمیر (هُوَ)، اضافت (اللَّهِ أَحَدٌ)، اور توحید کا اعلان۔ آپ نے اپنی پڑھائی سے سورہ اخلاص تک پہنچنا سیکھ لیا ہے۔"
+      "en": "رَبَّنَا آتِنَا: our Lord, give us. Two words, one ending, two jobs. Reading real ayat means asking what each one actually shows, and not expecting one ayah to hold everything.",
+      "ur": "رَبَّنَا آتِنَا: اے ہمارے رب، ہمیں دے۔ دو لفظ، ایک آخر، دو کام۔ اصل آیات پڑھنے کا مطلب ہے یہ پوچھنا کہ ہر ایک واقعی کیا دکھاتی ہے، اور یہ امید نہ رکھنا کہ ایک آیت میں سب کچھ ہو۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Today you brought everything together — idaafa, demonstratives, relative pronouns, attached pronouns, verbs, prepositions. And they all pointed to one place: هُوَ اللَّهُ أَحَدٌ. This is the goal of all Arabic grammar — to understand the Quran. You are well on your way, يا طالب العلم.",
-      "ur": "آج آپ نے سب کچھ اکٹھا کیا — اضافت، اشاریے، اسماء موصولہ، بدلیہ اسماء، أفعال، حروف۔ اور سب نے ایک جگہ کی طرف اشارہ کیا: هُوَ اللَّهُ أَحَدٌ۔ یہ تمام عربی گرامر کا مقصد ہے — قرآن کو سمجھنا۔ آپ اچھی طرح سے اس راستے پر ہیں، یا طالب العلم۔"
+      "en": "You read four real ayat accurately. Next: the Book 2 mixed review.",
+      "ur": "آپ نے چار اصل آیات درست پڑھیں۔ آگے: کتاب 2 کا ملا جلا جائزہ۔"
     }
   }
 }

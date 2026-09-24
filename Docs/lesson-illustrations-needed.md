@@ -290,6 +290,172 @@ On delivery Claude also copies each reused vocabulary picture to
 | `ch19-l03` card 8 | حَسَدَ | `images/words/cmtvrdah000cn585ktylu46kg.jpg` (vocabulary حَسَدَ) |
 | `ch19-l04` card 5 | كِتَابُكَ / كِتَابُكِ | `images/discover/ch07-two-listeners.webp` |
 
+## Open — Chapters 20–23 (requested 2026-09-24)
+
+The Chapter 20–23 rebuild adds 158 discover cards. **133 new scenes cover 154 cards**; 4 cards reuse a picture we already have (end of this section). The same rules apply: Quran cards stay symbolic and never show Allah, a prophet, Maryam or an angel; people wear modest dress.
+
+### Chapter 20
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch20-we-our-group.png` | `ch20-l01` card 1 | نَحْنُ / ـنَا | A small group of students standing together, one of them gesturing to the whole group while holding up a shared book: we, and something that is ours |
+| `ch20-my-book-our-book.png` | `ch20-l01` card 2 · `ch20-l07` card 1 | كِتَابِي / كِتَابُنَا | Two panels: left, one learner holding a book to their chest (my book); right, the same book held up together by a group of three learners (our book) |
+| `ch20-our-house.png` | `ch20-l01` card 3 | بَيْتُنَا | A family of four standing together in front of their own house, the father's hand on the gate |
+| `ch20-our-big-school.png` | `ch20-l01` card 4 | مَدْرَسَتُنَا كَبِيرَةٌ | A class of students in front of a large school building, pointing to it proudly: our school |
+| `ch20-forgiveness-dua.png` | `ch20-l01` card 5 | رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا | Several pairs of open hands raised together in supplication under a soft dawn sky; no faces |
+| `ch20-owner-tag.png` | `ch20-l01` card 6 | رَبَّنَا / ذُنُوبَنَا / كِتَابُنَا | A book with a small hanging name tag reading nothing, a magnifying glass over the tag rather than over the book's cover |
+| `ch20-noun-or-action-na.png` | `ch20-l01` card 7 · `ch20-l07` card 5 | رَبَّنَا / سَمِعْنَا | Two panels: left, a group standing around a shared object with a small owner tag (our); right, the same group with a sound wave next to their ears (we heard) |
+| `ch20-group-listeners.png` | `ch20-l02` card 2 | كِتَابُكُمْ | A teacher speaking to a whole seated class of boys and girls, one open book held up towards the group |
+| `ch20-your-houses.png` | `ch20-l02` card 3 | بُيُوتُكُمْ | A row of family houses on a street, a speaker at the front addressing the families standing in their doorways |
+| `ch20-mankind-lord.png` | `ch20-l02` card 4 | يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمُ | A vast, diverse crowd of people seen from behind under a wide sky at dawn; nothing that pictures Allah |
+| `ch20-created-you.png` | `ch20-l02` card 5 · `ch20-l06` card 7 | رَبَّكُمُ / خَلَقَكُم · اتَّقُوا رَبَّكُمُ الَّذِي خَلَقَكُم | Two panels: left, a crowd seen from behind under the sky (your Lord); right, a seed growing into a small tree beside the crowd (who created you) |
+| `ch20-your-school-group.png` | `ch20-l02` card 6 | مَدْرَسَتُكُمْ كَبِيرَةٌ | A teacher at a school gate speaking to a class gathered in front of the building |
+| `ch20-speaking-to-group.png` | `ch20-l02` card 7 | أَنْتُمْ / ـكُمْ | A speaker facing a group directly, speech lines pointing towards the whole group |
+| `ch20-they-their-book.png` | `ch20-l03` card 1 | هُمْ / كِتَابُهُمْ | Two panels: left, a group of boys seen at a distance (they); right, the same group sharing one book (their book) |
+| `ch20-their-house.png` | `ch20-l03` card 2 | بَيْتُهُمْ | A viewer pointing out a house across the street where a group of men lives |
+| `ch20-your-vs-their-group.png` | `ch20-l03` card 3 | كِتَابُكُمْ / كِتَابُهُمْ | Two panels: left, a speaker facing a group and handing them a book (your book); right, the speaker pointing at a distant group holding a book (their book) |
+| `ch20-sound-after-kasra.png` | `ch20-l03` card 4 · `ch20-l07` card 4 | رَبُّهُمْ / رَبِّهِمْ · رَبِّهِمْ / بُيُوتِهِنَّ | Two matching tiles with a small curved arrow between them, the second tile marked with a tiny dot below: the same ending, softened |
+| `ch20-reward-believers.png` | `ch20-l03` card 5 · `ch20-l06` card 8 | لَهُمْ أَجْرُهُمْ عِندَ رَبِّهِمْ | A group of worshippers seen from behind in rows at prayer, a warm light ahead of them; symbolic reward, no angels or faces |
+| `ch20-who-are-they.png` | `ch20-l03` card 6 | أَجْرُهُمْ | A list of good deeds (prayer mat, charity box, open Quran) on the left, with an arrow pointing to a group seen from behind on the right |
+| `ch20-owners-not-thing.png` | `ch20-l03` card 7 · `ch20-l07` card 6 | كِتَابُهُمْ / مَدْرَسَتُهُمْ · مَدْرَسَتُهُمْ / بُيُوتُكُنَّ | A book and a school building, both with the same small group-of-people tag hanging from them |
+| `ch20-students-books-desk.png` | `ch20-l03` card 8 | الطُّلَّابُ فِي الْفَصْلِ، وَكُتُبُهُمْ عَلَى الْمَكْتَبِ | Boys sitting in a classroom, their books piled together on the teacher's desk at the front |
+| `ch20-your-book-women.png` | `ch20-l04` card 2 | كِتَابُكُنَّ | A female teacher handing one book to a group of women students |
+| `ch20-houses-two-groups.png` | `ch20-l04` card 3 | بُيُوتُكُمْ / بُيُوتُكُنَّ | Two panels: the same row of houses; left, a speaker addressing a mixed group; right, addressing a group of women |
+| `ch20-recitation-home.png` | `ch20-l04` card 4 | وَاذْكُرْنَ مَا يُتْلَىٰ فِي بُيُوتِكُنَّ | An open Mushaf on a stand in a quiet family home, soft light through a window; no figures |
+| `ch20-listeners-decide.png` | `ch20-l04` card 5 | بُيُوتُكُنَّ | A house with two speech bubbles in front of it, one directed at a mixed group and one at a group of women |
+| `ch20-women-students-books.png` | `ch20-l04` card 6 | يَا طَالِبَاتُ، أَيْنَ كُتُبُكُنَّ؟ | A female teacher asking a group of women students where their books are; the students pointing at a shelf |
+| `ch20-one-woman-group-women.png` | `ch20-l04` card 7 | كِتَابُكِ / كِتَابُكُنَّ | Two panels: left, a teacher handing a book to one woman; right, handing a book to a group of women |
+| `ch20-their-book-women.png` | `ch20-l05` card 2 | كِتَابُهُنَّ | A group of women students seen from a distance, sharing one book |
+| `ch20-book-owners-change.png` | `ch20-l05` card 3 | كِتَابُهُمْ / كِتَابُهُنَّ | Two panels: the same book held by a group of boys (left) and by a group of women (right) |
+| `ch20-mothers-provision.png` | `ch20-l05` card 4 | وَعَلَى الْمَوْلُودِ لَهُ رِزْقُهُنَّ وَكِسْوَتُهُنَّ بِالْمَعْرُوفِ | A mother nursing a baby wrapped in a blanket beside a basket of food and folded clothes; modest, warm, face turned away |
+| `ch20-mothers-first.png` | `ch20-l05` card 5 | وَالْوَالِدَاتُ … رِزْقُهُنَّ | Three mothers holding babies in modest dress, an arrow pointing from them to a basket of food and folded clothes |
+| `ch20-their-houses-women.png` | `ch20-l05` card 6 | بُيُوتُهُنَّ / فِي بُيُوتِهِنَّ | A row of houses with women in modest dress standing at their doors |
+| `ch20-women-students-new-books.png` | `ch20-l05` card 7 | الطَّالِبَاتُ فِي الْمَدْرَسَةِ، وَكُتُبُهُنَّ جَدِيدَةٌ | Girls in modest dress in a school courtyard holding brand-new books |
+| `ch20-four-groups-grid.png` | `ch20-l05` card 8 | كُتُبُكُمْ / كُتُبُكُنَّ / كُتُبُهُمْ / كُتُبُهُنَّ | A 2×2 grid of groups: a mixed group facing the viewer, a women's group facing the viewer, a mixed group far away, a women's group far away, each with a book |
+| `ch20-three-questions.png` | `ch20-l06` card 1 | بَيْتُهُمْ | Three small tiles in a row: a house (the noun), a group (the owner), a speech arrow pointing toward or away from the group |
+| `ch20-students-their-teacher.png` | `ch20-l06` card 2 | هٰؤُلَاءِ طُلَّابٌ، وَهٰذَا أُسْتَاذُهُمْ | A teacher standing with his class of boys, the viewer pointing at them from a distance |
+| `ch20-students-your-teacher.png` | `ch20-l06` card 3 | يَا طُلَّابُ، هٰذَا أُسْتَاذُكُمْ | A headmaster introducing a teacher to a class, gesturing from the teacher to the students |
+| `ch20-where-your-book-group.png` | `ch20-l06` card 4 | أَيْنَ كِتَابُكُمْ؟ — كِتَابُنَا عَلَى الْمَكْتَبِ | A teacher asking a small group of students; one of the group points to a book on the desk |
+| `ch20-straight-path.png` | `ch20-l06` card 5 | اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ | A straight bright path running through open land toward the horizon at dawn; no figures |
+| `ch20-our-lord-guide-us.png` | `ch20-l06` card 6 | رَبَّنَا / اهْدِنَا | Two panels: left, raised hands in supplication (our Lord); right, the same hands with a straight path ahead (guide us) |
+| `ch20-review-speaking-to.png` | `ch20-l07` card 2 | كِتَابُكَ / كِتَابُكِ / كِتَابُكُمْ / كِتَابُكُنَّ | Four small panels: speaking to one man, one woman, a mixed group, a group of women, a book handed to each |
+| `ch20-review-speaking-about.png` | `ch20-l07` card 3 | كِتَابُهُ / كِتَابُهَا / كِتَابُهُمْ / كِتَابُهُنَّ | Four small panels: pointing at one man, one woman, a mixed group, a group of women in the distance, each with a book |
+
+### Chapter 21
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch21-journey-start-end.png` | `ch21-l01` card 1 · `ch21-l05` card 1 | مِنْ … إِلَى … | A path drawn from a house on the left to a mosque on the right, a flag at the start and a flag at the end |
+| `ch21-kharaja-leaving.png` | `ch21-l01` card 2 | خَرَجَ | A boy stepping out of the front door of a house onto the street |
+| `ch21-ahmad-leaves-home.png` | `ch21-l01` card 3 | خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ | Ahmad, a boy with a school bag, stepping out of his house door |
+| `ch21-house-to-mosque.png` | `ch21-l01` card 4 | خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ وَذَهَبَ إِلَى الْمَسْجِدِ | A boy walking along a street from his house toward a mosque, footprints behind him |
+| `ch21-from-where.png` | `ch21-l01` card 5 | مِنْ أَيْنَ خَرَجَ أَحْمَدُ؟ | A question mark hovering over the house at the start of a footpath |
+| `ch21-to-where.png` | `ch21-l01` card 6 | إِلَى أَيْنَ ذَهَبَ؟ | A question mark hovering over the mosque at the end of a footpath |
+| `ch21-night-journey.png` | `ch21-l01` card 7 | مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى | Two mosques far apart under a starry night sky — the Kaaba's mosque on one side, the Dome of the Rock on the other — joined by a soft arc of light; no figures |
+| `ch21-fatimah-school-home.png` | `ch21-l01` card 8 | خَرَجَتْ فَاطِمَةُ مِنَ الْمَدْرَسَةِ وَذَهَبَتْ إِلَى الْبَيْتِ | A girl in modest dress walking out of a school gate toward her house |
+| `ch21-four-movements.png` | `ch21-l02` card 1 · `ch21-l05` card 2 | ذَهَبَ، خَرَجَ، دَخَلَ، رَجَعَ | Four panels with the same boy: walking away, stepping out of a door, stepping into a door, walking back home |
+| `ch21-in-or-out.png` | `ch21-l02` card 2 · `ch21-l05` card 3 | دَخَلَ الْمَسْجِدَ / خَرَجَ مِنَ الْمَسْجِدِ | Two panels at the same mosque door: left, a man entering; right, the man leaving |
+| `ch21-went-or-returned.png` | `ch21-l02` card 3 | ذَهَبَ إِلَى الْمَدْرَسَةِ / رَجَعَ إِلَى الْبَيْتِ | Two panels: left, a boy walking toward a school; right, the boy walking back into his own house |
+| `ch21-destination-optional.png` | `ch21-l02` card 4 | ذَهَبَ أَحْمَدُ / ذَهَبَ أَحْمَدُ إِلَى الْمَسْجِدِ | Two panels: left, a boy walking off along a road; right, the same boy walking along the road to a mosque at its end |
+| `ch21-three-movement-story.png` | `ch21-l02` card 5 | خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ وَدَخَلَ الْمَسْجِدَ وَرَجَعَ إِلَى الْبَيْتِ | A three-step strip: boy leaves his house, enters a mosque, walks back home |
+| `ch21-return-to-people.png` | `ch21-l02` card 6 · `ch21-l04` card 7 | فَرَجَعَ مُوسَىٰ إِلَىٰ قَوْمِهِ | A mountain path leading down to a distant tent encampment at dusk; no figures |
+| `ch21-verb-then-place.png` | `ch21-l02` card 7 | مِنْ؟ إِلَى؟ | Three small tiles: an arrow leaving a box, an arrow entering a box, an arrow arriving at a box (no lettering) |
+| `ch21-front-behind.png` | `ch21-l03` card 1 | أَمَامَ / خَلْفَ | Two panels: a mosque in front of a school; the same mosque behind the school |
+| `ch21-between.png` | `ch21-l03` card 2 · `ch21-l03` card 3 · `ch21-l03` card 4 · `ch21-l03` card 5 | بَيْنَ · بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ · الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ · أَيْنَ الْمَسْجِدُ؟ | A mosque standing between a school on its left and a market on its right, seen from the street |
+| `ch21-clouds-between.png` | `ch21-l03` card 6 | وَالسَّحَابِ الْمُسَخَّرِ بَيْنَ السَّمَاءِ وَالْأَرْضِ | Clouds floating between a wide sky above and green earth below |
+| `ch21-in-or-between.png` | `ch21-l03` card 7 | فِي الْحَقِيبَةِ / بَيْنَ الْقَلَمِ وَالدَّفْتَرِ | Two panels on a desk: a book inside a school bag; a book lying between a pen and a notebook |
+| `ch21-city-story.png` | `ch21-l04` card 1 | دَخَلَ … خَرَجَ … | An ancient walled city gate in the morning; one path leading in and another leading out; no figures |
+| `ch21-city.png` | `ch21-l04` card 2 | الْمَدِينَةُ | An old city with walls, houses and a busy gate, seen from a hill |
+| `ch21-entered-city.png` | `ch21-l04` card 3 | وَدَخَلَ الْمَدِينَةَ عَلَىٰ حِينِ غَفْلَةٍ مِّنْ أَهْلِهَا | The open gate of an ancient city at midday, a quiet street beyond; no figures |
+| `ch21-left-city.png` | `ch21-l04` card 4 · `ch21-l04` card 5 | فَخَرَجَ مِنْهَا خَائِفًا يَتَرَقَّبُ · مِنْهَا / الْمَدِينَةِ | A lone road leading away from an ancient city at dawn, the gate behind; no figures |
+| `ch21-in-out-city.png` | `ch21-l04` card 6 | دَخَلَ الْمَدِينَةَ / خَرَجَ مِنْهَا | Two panels at the same city gate: arrow going in, arrow going out |
+| `ch21-quran-or-practice.png` | `ch21-l04` card 8 · `ch21-l05` card 6 | فَخَرَجَ مِنْهَا / خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ · فَخَرَجَ مِنْهَا / خَرَجَتْ فَاطِمَةُ | Two panels: left, an open Mushaf with a verse marker; right, a school notebook with a practice sentence written in it |
+| `ch21-market-between.png` | `ch21-l05` card 4 | السُّوقُ بَيْنَ الْمَسْجِدِ وَالْمَدْرَسَةِ | A market with stalls standing between a mosque and a school |
+| `ch21-fatimah-house-market.png` | `ch21-l05` card 5 | خَرَجَتْ فَاطِمَةُ مِنَ الْبَيْتِ وَذَهَبَتْ إِلَى السُّوقِ | A girl in modest dress walking from her house toward a busy market |
+
+### Chapter 22
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch22-he-she-said.png` | `ch22-l01` card 1 | قَالَ / قَالَتْ | Two panels: a man speaking with a speech bubble; a woman in modest dress speaking with a speech bubble |
+| `ch22-teacher-said.png` | `ch22-l01` card 2 | قَالَ الْأُسْتَاذُ: الْكِتَابُ جَدِيدٌ | A teacher holding up a new book and speaking to the class |
+| `ch22-fatimah-student.png` | `ch22-l01` card 3 | قَالَتْ فَاطِمَةُ: أَنَا طَالِبَةٌ | A girl in modest dress introducing herself in a classroom, hand on her chest |
+| `ch22-speaker-first.png` | `ch22-l01` card 4 · `ch22-l05` card 2 | قَالَ الطَّالِبُ · قَالَتْ فَاطِمَةُ: … | A speech bubble with an arrow pointing back to the student who is speaking |
+| `ch22-prison-two-men.png` | `ch22-l01` card 5 | وَدَخَلَ مَعَهُ السِّجْنَ فَتَيَانِ قَالَ أَحَدُهُمَا | A stone prison corridor with two small lit windows; no figures |
+| `ch22-narration-quote.png` | `ch22-l01` card 6 | قَالَ أَحَدُهُمَا إِنِّي أَرَانِي | An open book with a narrator's line on top and a speech bubble opening below it |
+| `ch22-two-speakers.png` | `ch22-l01` card 7 | قَالَ أَحَدُهُمَا / وَقَالَ الْآخَرُ | Two separate speech bubbles coming from two sides of a stone room; no figures |
+| `ch22-ahmad-my-book.png` | `ch22-l01` card 8 | قَالَ أَحْمَدُ: كِتَابِي عَلَى الْمَكْتَبِ | A boy pointing at his own book on a desk while speaking |
+| `ch22-asked.png` | `ch22-l02` card 1 | سَأَلَ | A student raising his hand to ask the teacher a question |
+| `ch22-question-words.png` | `ch22-l02` card 2 | هَلْ / أَيْنَ / مَا / مَنْ | Four question-mark cards on a table: a yes/no card, a map pin (where), a box (what), a person silhouette (who) |
+| `ch22-student-asks-where-book.png` | `ch22-l02` card 3 | سَأَلَ الطَّالِبُ: أَيْنَ الْكِتَابُ؟ | A student looking around the classroom and asking where the book is |
+| `ch22-girl-asks-what.png` | `ch22-l02` card 4 | سَأَلَتِ الطَّالِبَةُ: مَا هٰذَا؟ | A girl in modest dress holding up an object and asking what it is |
+| `ch22-said-a-question.png` | `ch22-l02` card 5 · `ch22-l05` card 3 | قَالَ … أَيْنَ …؟ · قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا | A speech bubble that contains a large question mark |
+| `ch22-provision-in-sanctuary.png` | `ch22-l02` card 6 | قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا | A quiet prayer chamber with a small basket of fruit in soft light; no figures |
+| `ch22-asking-about-allah.png` | `ch22-l02` card 7 | وَإِذَا سَأَلَكَ عِبَادِي عَنِّي | Open hands raised under a clear night sky full of stars; no figures |
+| `ch22-who-asked-what.png` | `ch22-l02` card 8 | مَنْ سَأَلَ؟ مَاذَا سَأَلَ؟ | Two small tiles: a person silhouette with a raised hand, and a question mark |
+| `ch22-answered.png` | `ch22-l03` card 1 | أَجَابَ | A student standing to answer the teacher's question |
+| `ch22-question-answer-book.png` | `ch22-l03` card 2 | سَأَلَ الْأُسْتَاذُ: أَيْنَ الْكِتَابُ؟ وَأَجَابَ أَحْمَدُ: الْكِتَابُ عَلَى الْمَكْتَبِ | Two panels: a teacher asking; a student pointing to the book on the desk |
+| `ch22-answer-fits.png` | `ch22-l03` card 3 · `ch22-l05` card 4 | أَيْنَ؟ مَا؟ مَنْ؟ هَلْ؟ · أَيْنَ؟ مَكَانٌ | Four pairs of cards, each question card matched to the right answer: a map pin to a place, a box to an object, a silhouette to a person, a yes/no card to a tick |
+| `ch22-yes-from-facts.png` | `ch22-l03` card 4 | الْكِتَابُ جَدِيدٌ. هَلِ الْكِتَابُ جَدِيدٌ؟ نَعَمْ | A new book on a table with a tick next to it |
+| `ch22-maryam-answer.png` | `ch22-l03` card 5 | قَالَ يَا مَرْيَمُ أَنَّىٰ لَكِ هَٰذَا قَالَتْ هُوَ مِنْ عِندِ اللَّهِ | A quiet prayer chamber with a basket of fruit and a light falling on it from above; no figures |
+| `ch22-did-you-understand.png` | `ch22-l03` card 6 | هَلْ فَهِمْتَ الدَّرْسَ؟ | A teacher kindly asking a student whether he understood |
+| `ch22-yes-understood.png` | `ch22-l03` card 7 | نَعَمْ، فَهِمْتُ الدَّرْسَ | A student nodding with a small light bulb above his head |
+| `ch22-once-again-please.png` | `ch22-l03` card 8 | مَرَّةً أُخْرَى، لَوْ سَمَحْتَ | A student politely raising a hand, the teacher pointing back at the board |
+| `ch22-did-not-understand.png` | `ch22-l03` card 9 | لَا، لَمْ أَفْهَمْ | A student looking puzzled at the board, a small question mark above him |
+| `ch22-four-questions.png` | `ch22-l04` card 1 | مَنْ قَالَ؟ مَاذَا قَالَ؟ | Four icons in a row: speaker, speech bubble, question mark, tick |
+| `ch22-teacher-asks-ahmad-book.png` | `ch22-l04` card 2 | سَأَلَ الْأُسْتَاذُ: أَيْنَ كِتَابُكَ يَا أَحْمَدُ؟ | A teacher asking Ahmad about his book; Ahmad's desk is empty |
+| `ch22-ahmad-book-home.png` | `ch22-l04` card 3 | أَجَابَ أَحْمَدُ: كِتَابِي فِي الْبَيْتِ | Ahmad answering, with a small thought bubble of his book on a table at home |
+| `ch22-teacher-checks.png` | `ch22-l04` card 4 | قَالَ الْأُسْتَاذُ: هَلْ فَهِمْتَ الدَّرْسَ؟ | A teacher checking in with Ahmad at his desk |
+| `ch22-ahmad-confirms.png` | `ch22-l04` card 5 | قَالَ أَحْمَدُ: نَعَمْ، فَهِمْتُ الدَّرْسَ | Ahmad smiling and nodding to the teacher |
+| `ch22-answer-no-repeat.png` | `ch22-l04` card 6 · `ch22-l05` card 5 | لَا، لَمْ أَفْهَمْ — مَرَّةً أُخْرَى، لَوْ سَمَحْتَ · نَعَمْ، فَهِمْتُ الدَّرْسَ / مَرَّةً أُخْرَى، لَوْ سَمَحْتَ | Two panels: a puzzled student; the same student politely raising a hand |
+| `ch22-brothers-recognise.png` | `ch22-l04` card 7 | قَالُوا أَإِنَّكَ لَأَنتَ يُوسُفُ قَالَ أَنَا يُوسُفُ وَهَٰذَا أَخِي | A palace hall with a long carpet leading to an open doorway full of light; no figures |
+| `ch22-quran-or-practice.png` | `ch22-l04` card 8 | قَالَ أَنَا يُوسُفُ / قَالَ أَحْمَدُ: نَعَمْ | Two panels: an open Mushaf; a classroom scene drawn in a notebook |
+| `ch22-said-asked-answered.png` | `ch22-l05` card 1 | قَالَ / سَأَلَ / أَجَابَ | Three panels: a speech bubble, a question-mark bubble, a reply bubble |
+| `ch22-fatimah-asks-mosque.png` | `ch22-l05` card 6 | سَأَلَتْ فَاطِمَةُ: أَيْنَ الْمَسْجِدُ؟ | A girl in modest dress asking a boy on the street where the mosque is; the boy points |
+
+### Chapter 23
+
+| Filename | Cards | Arabic on the card | Scene |
+|---|---|---|---|
+| `ch23-phrase-or-sentence.png` | `ch23-l01` card 1 | هٰذَا الْكِتَابُ / هٰذَا كِتَابُ الطَّالِبِ | Two panels: a finger pointing at a book (this book); the same book with a name label showing whose it is (this is the student's book) |
+| `ch23-student-book.png` | `ch23-l01` card 2 | هٰذَا كِتَابُ الطَّالِبِ | A student's book with the student standing beside it |
+| `ch23-his-book.png` | `ch23-l01` card 3 | هٰذَا كِتَابُهُ | A man holding up his own book |
+| `ch23-what-in-hand.png` | `ch23-l01` card 4 | وَمَا تِلْكَ بِيَمِينِكَ يَا مُوسَىٰ | A shepherd's wooden staff resting in the sand of a quiet valley, soft light from above; no figures |
+| `ch23-staff.png` | `ch23-l01` card 5 | قَالَ هِيَ عَصَايَ أَتَوَكَّأُ عَلَيْهَا | A wooden staff leaning against a rock beside a small flock of sheep; no figures |
+| `ch23-separate-or-ending.png` | `ch23-l01` card 6 | هِيَ / عَصَايَ | Two tiles: one standing alone; one clipped onto a word card |
+| `ch23-whole-exchange.png` | `ch23-l01` card 7 | مَا تِلْكَ؟ — هِيَ عَصَايَ | A question card and an answer card joined by an arrow, a wooden staff drawn on the answer card |
+| `ch23-two-links.png` | `ch23-l02` card 1 | الَّذِي / ـهُ | A sentence strip with two arrows: one from 'who' back to a person, one from a small tag to its owner |
+| `ch23-brother-went-mosque.png` | `ch23-l02` card 2 | الطَّالِبُ الَّذِي ذَهَبَ إِلَى الْمَسْجِدِ أَخِي | A boy walking into a mosque while his brother points at him from the street |
+| `ch23-student-returned-new-book.png` | `ch23-l02` card 3 | هٰذِهِ الطَّالِبَةُ الَّتِي رَجَعَتْ. كِتَابُهَا جَدِيدٌ. | A girl returning to class and showing a brand-new book |
+| `ch23-worship-lord.png` | `ch23-l02` card 4 | يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ | A crowd seen from behind praying in rows under an open sky; nothing that pictures Allah |
+| `ch23-he-his.png` | `ch23-l02` card 5 · `ch23-l04` card 6 · `ch23-l05` card 5 | هُوَ طَالِبٌ / كِتَابُهُ · هُوَ / ـهُ | Two panels: a boy standing alone (he); the boy holding his book (his book) |
+| `ch23-which-link.png` | `ch23-l02` card 6 | مَنِ الْمَوْصُوفُ؟ لِمَنْ هٰذَا؟ | A magnifying glass over two separate arrows in a sentence strip |
+| `ch23-scene-questions.png` | `ch23-l03` card 1 | مَنْ؟ مِنْ أَيْنَ؟ إِلَى أَيْنَ؟ | A comic strip frame with small icons around it: a person, a start flag, an end flag, a clock |
+| `ch23-yesterday-school-mosque.png` | `ch23-l03` card 2 | أَمْسِ خَرَجَ أَحْمَدُ مِنَ الْمَدْرَسَةِ وَذَهَبَ إِلَى الْمَسْجِدِ | Yesterday's calendar page, and a boy walking from school to a mosque |
+| `ch23-mosque-between.png` | `ch23-l03` card 3 | الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ | A mosque between a school and a market, drawn as a small map |
+| `ch23-teacher-asks-students.png` | `ch23-l03` card 4 | فِي الْمَسْجِدِ سَأَلَ الْأُسْتَاذُ الطُّلَّابَ: هَلْ فَهِمْتُمُ الدَّرْسَ؟ | Inside a mosque, a teacher sitting with a circle of students, asking them a question |
+| `ch23-ahmad-understood.png` | `ch23-l03` card 5 | قَالَ أَحْمَدُ: نَعَمْ، فَهِمْتُ الدَّرْسَ | Ahmad in the study circle nodding to the teacher |
+| `ch23-after-prayer-home.png` | `ch23-l03` card 6 | وَبَعْدَ الصَّلَاةِ رَجَعَ أَحْمَدُ إِلَى بَيْتِهِ | After prayer, Ahmad walking home from the mosque at sunset |
+| `ch23-left-then-said.png` | `ch23-l03` card 7 | فَخَرَجَ مِنْهَا خَائِفًا يَتَرَقَّبُ قَالَ رَبِّ نَجِّنِي | An ancient city gate at dawn with a road leading away, a small light in the sky; no figures |
+| `ch23-ayah-one-question.png` | `ch23-l04` card 1 | آيَةٌ وَسُؤَالٌ | An open Mushaf with one small question card placed beside a single verse |
+| `ch23-good-in-this-world.png` | `ch23-l04` card 2 | رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً | Open hands in supplication in front of a green, fruitful landscape; no faces |
+| `ch23-our-or-us.png` | `ch23-l04` card 3 | رَبَّنَا / آتِنَا | Two panels: raised hands (our Lord); open hands receiving (give us) |
+| `ch23-oneness.png` | `ch23-l04` card 5 | قُلْ هُوَ اللَّهُ أَحَدٌ | A single bright point of light in a vast, clear sky; no figures |
+| `ch23-book2-page.png` | `ch23-l05` card 1 | هٰذَا كِتَابُهُ · الَّذِي · مِنْ … إِلَى … · قَالَ | A single page with four small icons: a pointing hand, a name tag, a path with two flags, a speech bubble |
+| `ch23-our-school-mosque-front.png` | `ch23-l05` card 2 | هٰذِهِ مَدْرَسَتُنَا، وَالْمَسْجِدُ أَمَامَهَا | A school building with a mosque standing in front of it |
+| `ch23-fatimah-her-house-market.png` | `ch23-l05` card 3 | خَرَجَتْ فَاطِمَةُ مِنْ بَيْتِهَا وَذَهَبَتْ إِلَى السُّوقِ | A girl in modest dress stepping out of her house toward a market |
+| `ch23-where-my-book-sister.png` | `ch23-l05` card 4 | سَأَلَ أَحْمَدُ: أَيْنَ كِتَابِي؟ قَالَتْ أُخْتُهُ: كِتَابُكَ عَلَى الْمَكْتَبِ | A boy searching for his book; his sister points to it on the desk |
+| `ch23-our-or-us-review.png` | `ch23-l05` card 6 | رَبَّنَا / آتِنَا | Raised hands in supplication with two small tiles beside them: an owner tag and an arrow pointing to the hands |
+
+### Chapters 20–23 — reused, nothing to draw
+
+| Card | Arabic | Existing picture |
+|---|---|---|
+| `ch20-l02` card 1 | كِتَابُكَ / كِتَابُكِ | `images/discover/ch07-two-listeners.webp` |
+| `ch20-l04` card 1 | أَنْتُمْ / أَنْتُنَّ | `images/discover/ch10-you-all-facing-group.webp` |
+| `ch20-l05` card 1 | هُمْ / هُنَّ | `images/discover/ch10-they-two-groups.webp` |
+| `ch23-l04` card 4 | قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ | `images/discover/ch19-daybreak.webp` |
+
 ## Delivered — 2026-09-21
 
 31 scenes for Chapters 5–10 and 12, delivered as 1024×1024 transparent PNG

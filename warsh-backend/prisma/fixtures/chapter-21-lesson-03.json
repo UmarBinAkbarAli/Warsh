@@ -2,111 +2,150 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 21, Lesson 3 - Movement verbs: went to, left from, entered.",
+    "_note": "Chapter 21, Lesson 3 (ch21-l03) — find a place by a landmark: أَمَامَ / خَلْفَ retrieved briefly from Chapter 2, then the new بَيْنَ … وَ … with two named landmarks in authored scenes (mosque between school and market; book between pen and notebook), and a fuller answer to أَيْنَ؟. Quran: Al-Baqarah 2:164 بَيْنَ السَّمَاءِ وَالْأَرْضِ (reveal index 2). No claim that بَيْنَ comes from a root meaning two or is always followed by وَ; no preposition/position-word theory; the unrelated Al-Falaq 113:2 reveal is gone. Rebuilt 2026-09-24 from Docs/proposals/chapter-21-content-proposal.md with the owner-approved review amendments recorded there (دَخَلَ and رَجَعَ treated as Chapter 8 retrieval, خَرَجَ the new verb; Al-Qasas 28:15 وَدَخَلَ الْمَدِينَةَ instead of the imperative in Yusuf 12:99, paired with 28:21 from the same story; Ta-Ha 20:86 فَرَجَعَ for رَجَعَ; Al-Isra 17:1 as a verified مِنْ … إِلَى journey; Al-Baqarah 2:164 for بَيْنَ … وَ …). The map and fixtures named reader_lecture_21 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "نشانی سے ڈھونڈیں",
     "chapter_order": 21,
     "lesson_order": 3,
-    "chapter_title": "Places and Movement",
-    "title": "Movement Verbs",
-    "titleAr": "أَفْعَالُ الْمَشْيِ وَالتَّحَرُّكِ",
-    "source": "reader_lecture_21_movement.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 12,
-      "ayah": 93,
-      "label": "Yusuf 12:93",
-      "ar": "اذْهَبُوا بِقَمِيصِي هَٰذَا فَأَلْقُوهُ عَلَىٰ وَجْهِ أَبِي يَأْتِ بَصِيرًا وَأْتُونِي بِأَهْلِكُمْ أَجْمَعِينَ",
-      "en": "Take this, my shirt, and cast it over the face of my father; he will become seeing. And bring me your family, all together.\"",
-      "ur": "یہ میرا کرتہ لے جاؤ اور اسے والد صاحب کے منہ پر ڈال دو۔ وہ بینا ہو جائیں گے۔ اور اپنے تمام اہل وعیال کو میرے پاس لے آؤ",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012093.mp3"
+      "surah": 2,
+      "ayah": 164,
+      "label": "Al-Baqarah 2:164",
+      "ar": "وَالسَّحَابِ الْمُسَخَّرِ بَيْنَ السَّمَاءِ وَالْأَرْضِ",
+      "en": "and the clouds held in service between the sky and the earth",
+      "ur": "اور بادل جو آسمان اور زمین کے درمیان مسخر ہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002164.mp3"
     },
     "noor_intro": {
-      "en": "The imperative اذْهَبُوا (go!) is from the verb ذَهَبَ (he went). It uses the root ذ-ه-ب, which means 'to go.' Today we learn verbs of movement — how to say someone went, left, or entered a place.",
-      "ur": "حکمی صورت اذْهَبُوا (جاؤ!) verb ذَهَبَ (وہ گیا) سے ہے۔ یہ جذر ذ-ه-ب استعمال کرتا ہے، جس کا مطلب ہے 'جانا'۔ آج ہم حرکت کے افعال سیکھیں گے — کہنا کہ کوئی گیا، نکلا، یا داخل ہوا۔"
+      "en": "Al-Baqarah 2:164 lists signs in creation. One of them hangs in the middle: listen for بَيْنَ, between, and the two things it sits between.",
+      "ur": "سورۃ البقرہ 2:164 کائنات کی نشانیاں گنواتی ہے۔ ان میں سے ایک درمیان میں ٹھہری ہے: بَيْنَ سنیں، درمیان، اور وہ دو چیزیں جن کے درمیان وہ ہے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
+      "type": "CONTRAST",
+      "concept": {
+        "en": "Recall: in front of, behind",
+        "ar": "أَمَامَ / خَلْفَ",
+        "ur": "یاد کریں: سامنے، پیچھے"
+      },
+      "explanation": {
+        "en": "Chapter 2: أَمَامَ, in front of, and خَلْفَ, behind, place one thing by one landmark.",
+        "ur": "باب 2: أَمَامَ، سامنے، اور خَلْفَ، پیچھے، ایک چیز کو ایک نشانی کے لحاظ سے رکھتے ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "الْمَسْجِدُ أَمَامَ الْمَدْرَسَةِ",
+          "ar_plain": "المسجد امام المدرسة",
+          "translit": "al-masjidu amāma l-madrasati",
+          "en": "The mosque is in front of the school.",
+          "ur": "مسجد اسکول کے سامنے ہے۔"
+        },
+        {
+          "ar": "الْمَسْجِدُ خَلْفَ الْمَدْرَسَةِ",
+          "ar_plain": "المسجد خلف المدرسة",
+          "translit": "al-masjidu khalfa l-madrasati",
+          "en": "The mosque is behind the school.",
+          "ur": "مسجد اسکول کے پیچھے ہے۔"
+        }
+      ]
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "بَيْنَ",
+        "ar_plain": "بين",
+        "translit": "bayna",
+        "en": "between",
+        "ur": "کے درمیان"
+      },
+      "explanation": {
+        "en": "New: بَيْنَ, between. It needs two landmarks, and the place you want sits in the middle.",
+        "ur": "نیا: بَيْنَ، درمیان۔ اسے دو نشانیاں چاہییں، اور جو جگہ آپ ڈھونڈ رہے ہیں وہ بیچ میں ہے۔"
+      }
+    },
+    {
       "type": "CONCEPT",
       "concept": {
-        "en": "Movement verbs in Arabic",
-        "ar": "أَفْعَالُ التَّحَرُّكِ فِي الْعَرَبِيَّةِ",
-        "ur": "عربی میں حرکت کے افعال"
+        "en": "بَيْنَ … وَ …",
+        "ar": "بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ",
+        "ur": "بَيْنَ … وَ …"
       },
       "explanation": {
-        "en": "Arabic has several verbs for movement, each with a specific meaning: ذَهَبَ (went to), خَرَجَ (left/went out), دَخَلَ (entered), رَجَعَ (returned), مَشَى (walked). These combine with prepositions to describe complete journeys.",
-        "ur": "عربی میں حرکت کے کئی افعال ہیں، ہر ایک کا خاص مطلب: ذَهَبَ (گیا)، خَرَجَ (نکلا/باہر گیا)، دَخَلَ (داخل ہوا)، رَجَعَ (واپس آیا)، مَشَى (چلا)۔ یہ حروف جر کے ساتھ مل کر مکمل سفر بیان کرتے ہیں۔"
+        "en": "Name the first landmark right after بَيْنَ, then join the second with وَ: بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ, between the school and the market.",
+        "ur": "پہلی نشانی بَيْنَ کے فوراً بعد بتائیں، پھر دوسری کو وَ سے جوڑیں: بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ، اسکول اور بازار کے درمیان۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "ذَهَبَ الرَّجُلُ إِلَى الْمَدِينَةِ",
-        "ar_plain": "ذهب الرجل إلى المدينة",
-        "translit": "dhahaba ar-rajulu ilaa al-madiinati",
-        "en": "The man went to the city.",
-        "ur": "آدمی شہر کو گیا۔"
+        "ar": "الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ",
+        "ar_plain": "المسجد بين المدرسة والسوق",
+        "translit": "al-masjidu bayna l-madrasati wa s-sūqi",
+        "en": "The mosque is between the school and the market.",
+        "ur": "مسجد اسکول اور بازار کے درمیان ہے۔"
       },
       "explanation": {
-        "en": "ذَهَبَ (root: ذ-ه-ب) means 'he went.' It always needs إِلَى to show the destination: ذَهَبَ إِلَى means 'went to.' Without إِلَى, you only know someone left but not where they went.",
-        "ur": "ذَهَبَ (جذر: ذ-ه-ب) کا مطلب ہے 'وہ گیا'۔ اسے ہمیشہ إِلَى کی ضرورت ہوتی ہے تاکہ منزل ظاہر ہو: ذَهَبَ إِلَى کا مطلب 'کو گیا'۔ إِلَى کے بغیر، صرف یہ معلوم ہوتا ہے کہ کوئی نکلا مگر کہاں۔"
+        "en": "Middle: the mosque. Landmarks: the school and the market (سُوق from Chapter 2).",
+        "ur": "بیچ میں: مسجد۔ نشانیاں: اسکول اور بازار (سُوق باب 2 سے)۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "خَرَجَ الْوَلَدُ مِنَ الْبَيْتِ",
-        "ar_plain": "خرج الولد من البيت",
-        "translit": "kharaja al-waladu minal-bayti",
-        "en": "The boy left the house.",
-        "ur": "لڑکا گھر سے نکلا۔"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Answer أَيْنَ؟ with a landmark",
+        "ar": "أَيْنَ الْمَسْجِدُ؟",
+        "ur": "أَيْنَ؟ کا جواب نشانی سے"
       },
       "explanation": {
-        "en": "خَرَجَ (root: خ-ر-ج) means 'he went out' or 'he left.' It pairs with مِنْ to show where someone left from: خَرَجَ مِنَ الْبَيْتِ means 'left from the house.'",
-        "ur": "خَرَجَ (جذر: خ-ر-ج) کا مطلب ہے 'وہ باہر نکلا' یا 'چھوڑا'۔ یہ مِنْ کے ساتھ آتا ہے تاکہ جگہ ظاہر ہو جہاں سے نکلا: خَرَجَ مِنَ الْبَيْتِ کا مطلب 'گھر سے نکلا'۔"
+        "en": "In Chapter 2 you answered أَيْنَ؟ with فِي or عَلَى. A landmark answer helps someone find the place: أَمَامَ الْمَدْرَسَةِ, or بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ.",
+        "ur": "باب 2 میں آپ نے أَيْنَ؟ کا جواب فِي یا عَلَى سے دیا۔ نشانی والا جواب جگہ ڈھونڈنے میں مدد دیتا ہے: أَمَامَ الْمَدْرَسَةِ، یا بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "دَخَلَ الْمُسْلِمُ الْمَسْجِدَ",
-        "ar_plain": "دخل المسلم المسجد",
-        "translit": "dakhala al-muslimu al-masjida",
-        "en": "The Muslim entered the mosque.",
-        "ur": "مسلمان مسجد میں داخل ہوا۔"
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Baqarah 2:164: and the clouds held in service between the sky and the earth",
+        "ar": "وَالسَّحَابِ الْمُسَخَّرِ بَيْنَ السَّمَاءِ وَالْأَرْضِ",
+        "ur": "Al-Baqarah 2:164: اور بادل جو آسمان اور زمین کے درمیان مسخر ہیں"
       },
       "explanation": {
-        "en": "دَخَلَ (root: د-خ-ل) means 'he entered.' Unlike ذَهَبَ and خَرَجَ, it takes a direct object (not a preposition): دَخَلَ الْمَسْجِدَ means 'entered the mosque' — no إِلَى or مِنْ needed.",
-        "ur": "دَخَلَ (جذر: د-خ-ل) کا مطلب ہے 'وہ داخل ہوا'۔ ذَهَبَ اور خَرَجَ کے برعکس، یہ بالواسطہ فعل ہے (حرف جر کے بغیر): دَخَلَ الْمَسْجِدَ کا مطلب 'مسجد میں داخل ہوا' — إِلَى یا مِنْ کی ضرورت نہیں۔"
-      }
+        "en": "The clouds hang between the sky and the earth. First landmark: السَّمَاءِ, right after بَيْنَ. Second: الْأَرْضِ, joined by وَ. الْمُسَخَّرِ, held in service, is only glossed.",
+        "ur": "بادل آسمان اور زمین کے درمیان ہیں۔ پہلی نشانی: السَّمَاءِ، بَيْنَ کے فوراً بعد۔ دوسری: الْأَرْضِ، وَ سے جڑی۔ الْمُسَخَّرِ، مسخر، کا صرف معنی دیا گیا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002164.mp3"
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "رَجَعَ الْأَبُ إِلَى الْقَرْيَةِ بَعْدَ يَوْمَيْنِ",
-        "ar_plain": "رجع الأب إلى القرية بعد يومين",
-        "translit": "raja'a al-aba ilaa al-qaryati ba'da yawmayni",
-        "en": "The father returned to the village after two days.",
-        "ur": "باپ دو دن بعد پنڈ کو واپس آیا۔"
+      "type": "CONTRAST",
+      "concept": {
+        "en": "In it, or between two things?",
+        "ar": "فِي الْحَقِيبَةِ / بَيْنَ الْقَلَمِ وَالدَّفْتَرِ",
+        "ur": "اس میں، یا دو چیزوں کے درمیان؟"
       },
       "explanation": {
-        "en": "رَجَعَ (root: ر-ج-ع) means 'he returned.' Like ذَهَبَ, it uses إِلَى for the destination. بَعْدَ يَوْمَيْنِ means 'after two days' — يَوْمَيْنِ is the dual form of يَوْم (day).",
-        "ur": "رَجَعَ (جذر: ر-ج-ع) کا مطلب ہے 'وہ واپس آیا'۔ ذَهَبَ کی طرح، اس میں بھی منزل کے لیے إِلَى آتا ہے۔ بَعْدَ يَوْمَيْنِ کا مطلب 'دو دن بعد' — يَوْمَيْنِdual ہے يَوْم (دن) کی۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Two types of movement verb construction",
-        "ur": "حرکت کے فعل کی دو قسموں کاconstruction"
+        "en": "فِي places a thing inside one place. بَيْنَ places it between two.",
+        "ur": "فِي کسی چیز کو ایک جگہ کے اندر رکھتا ہے۔ بَيْنَ اسے دو کے درمیان رکھتا ہے۔"
       },
-      "body": {
-        "en": "Some movement verbs need a preposition (ذَهَبَ إِلَى, خَرَجَ مِنْ, رَجَعَ إِلَى), while one takes a direct object (دَخَلَ الْـ). This is important to remember when building sentences.",
-        "ur": "کچھ حرکت کے افعال کو حرف جر کی ضرورت ہوتی ہے (ذَهَبَ إِلَى، خَرَجَ مِنْ، رَجَعَ إِلَى)، جبکہ ایک بالواسطہ فعل ہے (دَخَلَ الْـ)۔ جملے بناتے وقت یہ یاد رکھنا اہم ہے۔"
-      }
+      "examples": [
+        {
+          "ar": "الْكِتَابُ فِي الْحَقِيبَةِ",
+          "ar_plain": "الكتاب في الحقيبة",
+          "translit": "al-kitābu fī l-ḥaqībati",
+          "en": "The book is in the bag.",
+          "ur": "کتاب بستے میں ہے۔"
+        },
+        {
+          "ar": "الْكِتَابُ بَيْنَ الْقَلَمِ وَالدَّفْتَرِ",
+          "ar_plain": "الكتاب بين القلم والدفتر",
+          "translit": "al-kitābu bayna l-qalami wa d-daftari",
+          "en": "The book is between the pen and the notebook.",
+          "ur": "کتاب قلم اور کاپی کے درمیان ہے۔"
+        }
+      ]
     }
   ],
   "exercises": [
@@ -114,345 +153,391 @@
       "type": "TAP_TRANSLATION",
       "id": "ch21-l03-ex01",
       "prompt": {
-        "ar": "ذَهَبَ",
-        "ar_plain": "ذهب",
-        "translit": "dhahaba",
-        "en": "he went",
-        "ur": "وہ گیا"
+        "ar": "بَيْنَ",
+        "ar_plain": "بين",
+        "translit": "bayna",
+        "en": "between",
+        "ur": "کے درمیان"
       },
       "options": [
         {
-          "en": "he went",
-          "ur": "وہ گیا"
+          "en": "between",
+          "ur": "درمیان"
         },
         {
-          "en": "he left",
-          "ur": "وہ نکلا"
+          "en": "in front of",
+          "ur": "سامنے"
         },
         {
-          "en": "he entered",
-          "ur": "وہ داخل ہوا"
+          "en": "under",
+          "ur": "نیچے"
         },
         {
-          "en": "he returned",
-          "ur": "وہ واپس آیا"
+          "en": "behind",
+          "ur": "پیچھے"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "ذَهَبَ (root ذ-ه-ب) means 'he went.' It is the root of the imperative اذْهَبُوا from Surah Yusuf.",
-        "ur": "ذَهَبَ (جذر ذ-ه-ب) کا مطلب ہے 'وہ گیا'۔ یہ سورة یوسف سے حکمی صورت اذْهَبُوا کا جذر ہے۔"
+        "en": "بَيْنَ: between.",
+        "ur": "بَيْنَ: درمیان۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch21-l03-ex02",
-      "statement": {
-        "en": "دَخَلَ takes a direct object (no preposition needed), unlike ذَهَبَ which needs إِلَى.",
-        "ur": "دَخَلَ بالواسطہ فعل ہے (حرف جر کی ضرورت نہیں)، ذَهَبَ کے برعکس جسے إِلَى کی ضرورت ہوتی ہے۔",
-        "ar_example": {
-          "ar": "دَخَلَ الْمُسْلِمُ الْمَسْجِدَ",
-          "ar_plain": "دخل المسلم المسجد",
-          "translit": "dakhala al-muslimu al-masjida",
-          "en": "The Muslim entered the mosque.",
-          "ur": "مسلمان مسجد میں داخل ہوا۔"
-        }
+      "prompt": {
+        "ar": "الْمَسْجِدُ بَيْنَ الْمَدْرَسَةِ وَالسُّوقِ",
+        "ar_plain": "المسجد بين المدرسة والسوق",
+        "translit": "al-masjidu bayna l-madrasati wa s-sūqi",
+        "en": "The mosque is between the school and the market.",
+        "ur": "مسجد اسکول اور بازار کے درمیان ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "options": [
+        {
+          "en": "The market is between the school and the mosque.",
+          "ur": "بازار اسکول اور مسجد کے درمیان ہے۔"
+        },
+        {
+          "en": "The mosque is between the school and the market.",
+          "ur": "مسجد اسکول اور بازار کے درمیان ہے۔"
+        },
+        {
+          "en": "The school is between the mosque and the market.",
+          "ur": "اسکول مسجد اور بازار کے درمیان ہے۔"
+        },
+        {
+          "en": "The mosque is in front of the school.",
+          "ur": "مسجد اسکول کے سامنے ہے۔"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The mosque is in the middle; the school and the market are the landmarks.",
+        "ur": "مسجد بیچ میں ہے؛ اسکول اور بازار نشانیاں ہیں۔"
+      }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch21-l03-ex03",
       "mode": "TAP",
-      "sentence_ar": "الْوَلَدُ ___ مِنَ الْبَيْتِ",
+      "sentence_ar": "الْمَسْجِدُ ___ الْبَيْتِ وَالْمَدْرَسَةِ",
       "hint": {
-        "en": "The boy left the house.",
-        "ur": "لڑکا گھر سے نکلا۔"
+        "en": "The mosque is between the house and the school.",
+        "ur": "مسجد گھر اور اسکول کے درمیان ہے۔"
       },
       "options": [
         {
-          "ar": "خَرَجَ",
-          "ar_plain": "خرج",
-          "translit": "kharaja",
-          "en": "left (he went out)",
-          "ur": "نکلا"
+          "ar": "أَمَامَ",
+          "ar_plain": "امام",
+          "translit": "amāma",
+          "en": "in front of",
+          "ur": "سامنے"
         },
         {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
-          "translit": "dhahaba",
-          "en": "went",
-          "ur": "گیا"
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
         },
         {
-          "ar": "دَخَلَ",
-          "ar_plain": "دخل",
-          "translit": "dakhala",
-          "en": "entered",
-          "ur": "داخل ہوا"
+          "ar": "بَيْنَ",
+          "ar_plain": "بين",
+          "translit": "bayna",
+          "en": "between",
+          "ur": "کے درمیان"
         },
         {
-          "ar": "رَجَعَ",
-          "ar_plain": "رجع",
-          "translit": "raja'a",
-          "en": "returned",
-          "ur": "واپس آیا"
+          "ar": "خَلْفَ",
+          "ar_plain": "خلف",
+          "translit": "khalfa",
+          "en": "behind",
+          "ur": "پیچھے"
         }
       ],
       "correct_answer": {
-        "ar": "خَرَجَ",
-        "ar_plain": "خرج",
-        "translit": "kharaja",
-        "en": "left (he went out)",
-        "ur": "نکلا"
+        "ar": "بَيْنَ",
+        "ar_plain": "بين",
+        "translit": "bayna",
+        "en": "between",
+        "ur": "کے درمیان"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Two landmarks joined by وَ: بَيْنَ.",
+        "ur": "وَ سے جڑی دو نشانیاں: بَيْنَ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch21-l03-ex04",
+      "statement": {
+        "en": "In this sentence, the mosque is in the middle.",
+        "ur": "اس جملے میں مسجد بیچ میں ہے۔",
+        "ar_example": {
+          "ar": "السُّوقُ بَيْنَ الْمَسْجِدِ وَالْبَيْتِ",
+          "ar_plain": "السوق بين المسجد والبيت",
+          "translit": "as-sūqu bayna l-masjidi wa l-bayti",
+          "en": "The market is between the mosque and the house.",
+          "ur": "بازار مسجد اور گھر کے درمیان ہے۔"
+        }
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The market is in the middle; the mosque and the house are the landmarks.",
+        "ur": "بازار بیچ میں ہے؛ مسجد اور گھر نشانیاں ہیں۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch21-l03-ex04",
+      "id": "ch21-l03-ex05",
       "left_column": [
         {
-          "ar": "ذَهَبَ إِلَى",
-          "ar_plain": "ذهب إلى",
-          "translit": "dhahaba ilaa",
-          "en": "went to",
-          "ur": "کو گیا"
+          "ar": "أَمَامَ الْمَسْجِدِ",
+          "ar_plain": "امام المسجد",
+          "translit": "amāma l-masjidi",
+          "en": "in front of the mosque",
+          "ur": "مسجد کے سامنے"
         },
         {
-          "ar": "خَرَجَ مِنْ",
-          "ar_plain": "خرج من",
-          "translit": "kharaja min",
-          "en": "left from",
-          "ur": "سے نکلا"
+          "ar": "خَلْفَ الْمَسْجِدِ",
+          "ar_plain": "خلف المسجد",
+          "translit": "khalfa l-masjidi",
+          "en": "behind the mosque",
+          "ur": "مسجد کے پیچھے"
         },
         {
-          "ar": "دَخَلَ",
-          "ar_plain": "دخل",
-          "translit": "dakhala",
-          "en": "entered",
-          "ur": "داخل ہوا"
+          "ar": "بَيْنَ الْمَسْجِدِ وَالسُّوقِ",
+          "ar_plain": "بين المسجد والسوق",
+          "translit": "bayna l-masjidi wa s-sūqi",
+          "en": "between the mosque and the market",
+          "ur": "مسجد اور بازار کے درمیان"
         },
         {
-          "ar": "رَجَعَ إِلَى",
-          "ar_plain": "رجع إلى",
-          "translit": "raja'a ilaa",
-          "en": "returned to",
-          "ur": "کو واپس آیا"
+          "ar": "فِي الْمَسْجِدِ",
+          "ar_plain": "في المسجد",
+          "translit": "fī l-masjidi",
+          "en": "in the mosque",
+          "ur": "مسجد میں"
         }
       ],
       "right_column": [
         {
-          "en": "went to",
-          "ur": "کو گیا"
+          "en": "between the mosque and the market",
+          "ur": "مسجد اور بازار کے درمیان"
         },
         {
-          "en": "left from",
-          "ur": "سے نکلا"
+          "en": "in the mosque",
+          "ur": "مسجد میں"
         },
         {
-          "en": "entered",
-          "ur": "داخل ہوا"
+          "en": "in front of the mosque",
+          "ur": "مسجد کے سامنے"
         },
         {
-          "en": "returned to",
-          "ur": "کو واپس آیا"
+          "en": "behind the mosque",
+          "ur": "مسجد کے پیچھے"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
           3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
         ]
       ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch21-l03-ex05",
-      "target_translation": {
-        "en": "The Muslim entered the mosque.",
-        "ur": "مسلمان مسجد میں داخل ہوا۔"
-      },
-      "tiles": [
-        {
-          "ar": "دَخَلَ",
-          "ar_plain": "دخل",
-          "translit": "dakhala",
-          "en": "entered",
-          "ur": "داخل ہوا"
-        },
-        {
-          "ar": "الْمُسْلِمُ",
-          "ar_plain": "المسلم",
-          "translit": "al-muslimu",
-          "en": "the Muslim",
-          "ur": "مسلمان"
-        },
-        {
-          "ar": "الْمَسْجِدَ",
-          "ar_plain": "المسجد",
-          "translit": "al-masjida",
-          "en": "the mosque",
-          "ur": "مسجد"
-        },
-        {
-          "ar": "إِلَى",
-          "ar_plain": "إلى",
-          "translit": "ilaa",
-          "en": "to",
-          "ur": "کو"
-        }
-      ],
-      "correct_order": [
-        1,
-        0,
-        2
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "TAP_TRANSLATION",
-      "id": "ch21-l03-ex06",
-      "prompt": {
-        "ar": "رَجَعَ الْأَبُ إِلَى الْبَيْتِ",
-        "ar_plain": "رجع الأب إلى البيت",
-        "translit": "raja'a al-aba ilaa al-bayti",
-        "en": "The father returned to the house.",
-        "ur": "باپ گھر کو واپس آیا۔"
-      },
-      "options": [
-        {
-          "en": "The father returned to the house.",
-          "ur": "باپ گھر کو واپس آیا۔"
-        },
-        {
-          "en": "The father left the house.",
-          "ur": "باپ گھر سے نکلا۔"
-        },
-        {
-          "en": "The father went to the house.",
-          "ur": "باپ گھر کو گیا۔"
-        },
-        {
-          "en": "The father entered the house.",
-          "ur": "باپ گھر میں داخل ہوا۔"
-        }
-      ],
-      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَجَعَ means 'returned' — it implies going back to a place one was before. ذَهَبَ would mean 'went' (first time or one-way).",
-        "ur": "رَجَعَ کا مطلب ہے 'واپس آیا' — اس میں یہ ہے کہ کسی جگہ واپس آ رہا ہے جہاں پہلے تھا۔ ذَهَبَ کا مطلب ہوگا 'گیا' (پہلی بار یا ایک طرف)۔"
+        "en": "One landmark: أَمَامَ, خَلْفَ, فِي. Two landmarks: بَيْنَ … وَ ….",
+        "ur": "ایک نشانی: أَمَامَ، خَلْفَ، فِي۔ دو نشانیاں: بَيْنَ … وَ …۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
-      "id": "ch21-l03-ex07",
-      "statement": {
-        "en": "خَرَجَ مِنَ الْبَيْتِ means 'he left from the house.'",
-        "ur": "خَرَجَ مِنَ الْبَيْتِ کا مطلب ہے 'وہ گھر سے نکلا'۔",
-        "ar_example": {
-          "ar": "خَرَجَ مِنَ الْبَيْتِ",
-          "ar_plain": "خرج من البيت",
-          "translit": "kharaja minal-bayti",
-          "en": "left from the house",
-          "ur": "گھر سے نکلا"
-        }
+      "type": "MATCH_AYAH",
+      "id": "ch21-l03-ex06",
+      "ayah_fragment": {
+        "ar": "وَالسَّحَابِ الْمُسَخَّرِ بَيْنَ السَّمَاءِ وَالْأَرْضِ",
+        "surah_ref": "Al-Baqarah 2:164"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "options": [
+        {
+          "en": "The clouds are inside the earth",
+          "ur": "بادل زمین کے اندر ہیں"
+        },
+        {
+          "en": "بَيْنَ السَّمَاءِ وَالْأَرْضِ — between the sky and the earth: the clouds are in the middle",
+          "ur": "بَيْنَ السَّمَاءِ وَالْأَرْضِ — آسمان اور زمین کے درمیان: بادل بیچ میں ہیں"
+        },
+        {
+          "en": "The clouds are above the sky",
+          "ur": "بادل آسمان کے اوپر ہیں"
+        },
+        {
+          "en": "The sky is between the clouds and the earth",
+          "ur": "آسمان بادلوں اور زمین کے درمیان ہے"
+        }
+      ],
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The two landmarks come after بَيْنَ and وَ; the clouds are between them.",
+        "ur": "دونوں نشانیاں بَيْنَ اور وَ کے بعد ہیں؛ بادل ان کے درمیان ہیں۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch21-l03-ex07",
+      "target_translation": {
+        "en": "The book is between the pen and the notebook.",
+        "ur": "کتاب قلم اور کاپی کے درمیان ہے۔"
+      },
+      "tiles": [
+        {
+          "ar": "الْكِتَابُ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitābu",
+          "en": "the book",
+          "ur": "کتاب"
+        },
+        {
+          "ar": "الْقَلَمِ",
+          "ar_plain": "القلم",
+          "translit": "al-qalami",
+          "en": "the pen",
+          "ur": "قلم"
+        },
+        {
+          "ar": "بَيْنَ",
+          "ar_plain": "بين",
+          "translit": "bayna",
+          "en": "between",
+          "ur": "کے درمیان"
+        },
+        {
+          "ar": "وَالدَّفْتَرِ",
+          "ar_plain": "والدفتر",
+          "translit": "wa d-daftari",
+          "en": "and the notebook",
+          "ur": "اور کاپی"
+        },
+        {
+          "ar": "أَمَامَ",
+          "ar_plain": "امام",
+          "translit": "amāma",
+          "en": "in front of",
+          "ur": "سامنے"
+        }
+      ],
+      "correct_order": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The book, بَيْنَ, first landmark, then وَ and the second.",
+        "ur": "کتاب، بَيْنَ، پہلی نشانی، پھر وَ اور دوسری۔"
+      }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch21-l03-ex08",
       "mode": "TAP",
-      "sentence_ar": "ذَهَبَ الْمُسْلِمُ ___ الْمَسْجِدِ",
+      "sentence_ar": "أَيْنَ الْبَيْتُ؟ الْبَيْتُ ___ الْمَسْجِدِ",
       "hint": {
-        "en": "The Muslim went to the mosque.",
-        "ur": "مسلمان مسجد کو گیا۔"
+        "en": "Where is the house? The house is behind the mosque.",
+        "ur": "گھر کہاں ہے؟ گھر مسجد کے پیچھے ہے۔"
       },
       "options": [
         {
           "ar": "إِلَى",
-          "ar_plain": "إلى",
-          "translit": "ilaa",
+          "ar_plain": "الى",
+          "translit": "ilā",
           "en": "to",
-          "ur": "کو"
+          "ur": "کی طرف"
         },
         {
-          "ar": "مِنْ",
-          "ar_plain": "من",
-          "translit": "min",
-          "en": "from",
-          "ur": "سے"
+          "ar": "بَيْنَ",
+          "ar_plain": "بين",
+          "translit": "bayna",
+          "en": "between",
+          "ur": "کے درمیان"
         },
         {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
+          "ar": "أَمَامَ",
+          "ar_plain": "امام",
+          "translit": "amāma",
+          "en": "in front of",
+          "ur": "سامنے"
         },
         {
-          "ar": "عَلَى",
-          "ar_plain": "على",
-          "translit": "alaa",
-          "en": "on",
-          "ur": "پر"
+          "ar": "خَلْفَ",
+          "ar_plain": "خلف",
+          "translit": "khalfa",
+          "en": "behind",
+          "ur": "پیچھے"
         }
       ],
       "correct_answer": {
-        "ar": "إِلَى",
-        "ar_plain": "إلى",
-        "translit": "ilaa",
-        "en": "to",
-        "ur": "کو"
+        "ar": "خَلْفَ",
+        "ar_plain": "خلف",
+        "translit": "khalfa",
+        "en": "behind",
+        "ur": "پیچھے"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Behind: خَلْفَ.",
+        "ur": "پیچھے: خَلْفَ۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Movement verbs: ذَهَبَ, خَرَجَ, دَخَلَ, رَجَعَ",
-      "ar": "أَفْعَالُ التَّحَرُّكِ: ذَهَبَ، خَرَجَ، دَخَلَ، رَجَعَ",
-      "ur": "حرکت کے افعال: ذَهَبَ، خَرَجَ، دَخَلَ، رَجَعَ"
+      "en": "Between two landmarks",
+      "ar": "بَيْنَ … وَ …",
+      "ur": "دو نشانیوں کے درمیان"
     },
     "ayah": {
-      "surah": 12,
-      "ayah": 93,
-      "label": "Yusuf 12:93",
-      "ar": "اذْهَبُوا بِقَمِيصِي هَٰذَا فَأَلْقُوهُ عَلَىٰ وَجْهِ أَبِي يَأْتِ بَصِيرًا وَأْتُونِي بِأَهْلِكُمْ أَجْمَعِينَ",
-      "en": "Take this, my shirt, and cast it over the face of my father; he will become seeing. And bring me your family, all together.\"",
-      "ur": "یہ میرا کرتہ لے جاؤ اور اسے والد صاحب کے منہ پر ڈال دو۔ وہ بینا ہو جائیں گے۔ اور اپنے تمام اہل وعیال کو میرے پاس لے آؤ",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012093.mp3"
+      "surah": 2,
+      "ayah": 164,
+      "label": "Al-Baqarah 2:164",
+      "ar": "وَالسَّحَابِ الْمُسَخَّرِ بَيْنَ السَّمَاءِ وَالْأَرْضِ",
+      "en": "and the clouds held in service between the sky and the earth",
+      "ur": "اور بادل جو آسمان اور زمین کے درمیان مسخر ہیں",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002164.mp3"
     },
     "highlighted_word_indices": [
-      0
+      2
+    ],
+    "highlighted_words": [
+      "بَيْنَ"
     ],
     "noor_explanation": {
-      "en": "اذْهَبُوا is the imperative 'go!' from the root ذ-ه-ب. The brothers were told to GO somewhere with Yusuf's garment. In Arabic, movement verbs describe HOW someone travels: ذَهَبَ (went to), خَرَجَ (left from), دَخَلَ (entered into), and رَجَعَ (returned to). Each one changes the sentence structure differently.",
-      "ur": "اذْهَبُوا حکمی صورت 'جاؤ!' ہے جو جذر ذ-ه-ب سے ہے۔ بھائیوں کو یوسف کی قمیص کے ساتھ کہیں جانا تھا۔ عربی میں حرکت کے افعال بتاتے ہیں کہ کوئی کیسے گیا: ذَهَبَ (کو گیا)، خَرَجَ (سے نکلا)، دَخَلَ (میں داخل ہوا)، اور رَجَعَ (کو واپس آیا)۔ ہر ایک جملے کی structure الگ ہوتی ہے۔"
+      "en": "بَيْنَ: between. The clouds sit between the sky and the earth, a sign for people who reflect. Two landmarks, one thing in the middle: that is how بَيْنَ … وَ … works in every sentence.",
+      "ur": "بَيْنَ: درمیان۔ بادل آسمان اور زمین کے درمیان ہیں، غور کرنے والوں کے لیے ایک نشانی۔ دو نشانیاں، بیچ میں ایک چیز: ہر جملے میں بَيْنَ … وَ … ایسے ہی کام کرتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You now know four movement verbs: ذَهَبَ (went to), خَرَجَ (left from), دَخَلَ (entered), and رَجَعَ (returned). Remember: ذَهَبَ, خَرَجَ, and رَجَعَ need prepositions, while دَخَلَ takes a direct object. This is a key difference!",
-      "ur": "اب آپ چار حرکت کے افعال جانتے ہیں: ذَهَبَ (کو گیا)، خَرَجَ (سے نکلا)، دَخَلَ (داخل ہوا)، اور رَجَعَ (واپس آیا)۔ یاد رکھیں: ذَهَبَ، خَرَجَ، اور رَجَعَ کو حروف جر کی ضرورت ہوتی ہے، جبکہ دَخَلَ بالواسطہ فعل ہے۔ یہ ایک اہم فرق ہے!"
+      "en": "You can place something between two landmarks. Next: read entering and leaving in one Quran story.",
+      "ur": "آپ کسی چیز کو دو نشانیوں کے درمیان رکھ سکتے ہیں۔ آگے: ایک قرآنی قصے میں داخل ہونا اور نکلنا پڑھیں۔"
     }
   }
 }

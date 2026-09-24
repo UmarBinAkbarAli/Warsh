@@ -1,0 +1,562 @@
+{
+  "schema_version": "1.0",
+  "template": "REVIEW",
+  "_meta": {
+    "_note": "Chapter 23 cumulative final test (ch23-test, new). Sixteen multiple-choice questions on the proposal's blueprint: demonstrative / idafa / noun-attached owner in a complete sentence (3), relative antecedent and pronoun referent in connected reading (3), action, doer, familiar plural, time and place in a mini-scene (3), speaker, question and fitting answer (2), bounded recognition of Quran targets taught in Lessons 1–4 (3: 20:18, 2:21, 113:1), separate versus attached pronoun or noun- versus action-attached ـنَا (2). New sentences throughout; every form tested was taught and released in Chapters 3–22. Pass mark 80 %: 12/16 fails, 13/16 passes. Rebuilt 2026-09-24 from Docs/proposals/chapter-23-content-proposal.md with the owner-approved review amendments recorded there (Ta-Ha 20:17–18 وَمَا تِلْكَ بِيَمِينِكَ / قَالَ هِيَ عَصَايَ instead of Al-Baqarah 2:5, whose أُولَٰئِكَ → people of taqwa task is already Chapter 15 L4's; Al-Baqarah 2:21 for الَّذِي with رَبَّكُمُ; Al-Qasas 28:21 for movement plus speech). Chapters 20–22 were rebuilt and released together with this chapter, so every combined skill tested here is taught. The map and fixtures named reader_lecture_23_book2_consolidation.md and reader_lessons_11-13_integration.md, neither of which existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "باب 23 کا مجموعی آخری امتحان",
+    "chapter_order": 23,
+    "lesson_order": 6,
+    "estimated_minutes": 10,
+    "xp_reward": 20
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 201,
+      "label": "Al-Baqarah 2:201",
+      "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
+      "en": "Our Lord, give us good in this world",
+      "ur": "اے ہمارے رب! ہمیں دنیا میں بھلائی دے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002201.mp3"
+    },
+    "noor_intro": {
+      "en": "Complete this test to finish Chapter 23 and Book 2.",
+      "ur": "باب 23 اور کتاب 2 مکمل کرنے کے لیے یہ امتحان مکمل کریں۔"
+    },
+    "autoplay": false
+  },
+  "discover_cards": [],
+  "assessment": {
+    "type": "CHAPTER_TEST",
+    "chapter_order": 23,
+    "pass_score_percent": 80,
+    "questions": [
+      {
+        "id": "ch23-test-q01",
+        "topic": {
+          "en": "Pointing and owning",
+          "ur": "اشارہ اور ملکیت"
+        },
+        "prompt": {
+          "en": "Which one is a complete sentence?",
+          "ur": "کون سا مکمل جملہ ہے؟"
+        },
+        "options": [
+          {
+            "en": "قَلَمُ الْأُسْتَاذِ",
+            "ur": "قَلَمُ الْأُسْتَاذِ"
+          },
+          {
+            "en": "هٰذَا قَلَمُ الْأُسْتَاذِ",
+            "ur": "هٰذَا قَلَمُ الْأُسْتَاذِ"
+          },
+          {
+            "en": "هٰذَا الْقَلَمُ",
+            "ur": "هٰذَا الْقَلَمُ"
+          },
+          {
+            "en": "الْقَلَمُ الْجَدِيدُ",
+            "ur": "الْقَلَمُ الْجَدِيدُ"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch23-test-q02",
+        "topic": {
+          "en": "Pointing and owning",
+          "ur": "اشارہ اور ملکیت"
+        },
+        "prompt": {
+          "en": "What does this mean?",
+          "ur": "اس کا کیا مطلب ہے؟"
+        },
+        "arabic": "تِلْكَ مَدْرَسَتُهُمْ",
+        "options": [
+          {
+            "en": "That is their school.",
+            "ur": "وہ ان کا اسکول ہے۔"
+          },
+          {
+            "en": "That is your school.",
+            "ur": "وہ تم سب کا اسکول ہے۔"
+          },
+          {
+            "en": "That school of theirs",
+            "ur": "ان کا وہ اسکول"
+          },
+          {
+            "en": "This is our school.",
+            "ur": "یہ ہمارا اسکول ہے۔"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch23-test-q03",
+        "topic": {
+          "en": "Pointing and owning",
+          "ur": "اشارہ اور ملکیت"
+        },
+        "prompt": {
+          "en": "Whose house is it?",
+          "ur": "یہ گھر کس کا ہے؟"
+        },
+        "arabic": "هٰذَا بَيْتُ الْمُعَلِّمِ",
+        "options": [
+          {
+            "en": "mine",
+            "ur": "میرا"
+          },
+          {
+            "en": "nobody's: it is not a sentence",
+            "ur": "کسی کا نہیں: یہ جملہ نہیں"
+          },
+          {
+            "en": "the listener's",
+            "ur": "سننے والے کا"
+          },
+          {
+            "en": "the teacher's",
+            "ur": "استاد کا"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch23-test-q04",
+        "topic": {
+          "en": "Relatives and referents",
+          "ur": "موصول اور مرجع"
+        },
+        "prompt": {
+          "en": "Who does الَّذِي describe?",
+          "ur": "الَّذِي کس کا وصف ہے؟"
+        },
+        "arabic": "الرَّجُلُ الَّذِي دَخَلَ الْمَسْجِدَ أُسْتَاذِي",
+        "options": [
+          {
+            "en": "the teacher's student",
+            "ur": "استاد کا طالب علم"
+          },
+          {
+            "en": "the speaker",
+            "ur": "بولنے والا"
+          },
+          {
+            "en": "الرَّجُلُ, the man",
+            "ur": "الرَّجُلُ، آدمی"
+          },
+          {
+            "en": "الْمَسْجِدَ, the mosque",
+            "ur": "الْمَسْجِدَ، مسجد"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch23-test-q05",
+        "topic": {
+          "en": "Relatives and referents",
+          "ur": "موصول اور مرجع"
+        },
+        "prompt": {
+          "en": "Whose book is new?",
+          "ur": "کس کی کتاب نئی ہے؟"
+        },
+        "arabic": "هٰذِهِ زَيْنَبُ الَّتِي رَجَعَتْ. كِتَابُهَا جَدِيدٌ.",
+        "options": [
+          {
+            "en": "a man's",
+            "ur": "ایک آدمی کی"
+          },
+          {
+            "en": "Zaynab's",
+            "ur": "زینب کی"
+          },
+          {
+            "en": "the listener's",
+            "ur": "سننے والے کی"
+          },
+          {
+            "en": "the speaker's",
+            "ur": "بولنے والے کی"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch23-test-q06",
+        "topic": {
+          "en": "Relatives and referents",
+          "ur": "موصول اور مرجع"
+        },
+        "prompt": {
+          "en": "Which word completes: 'the girl who went to school'?",
+          "ur": "کون سا لفظ مکمل کرتا ہے: 'وہ لڑکی جو اسکول گئی'؟"
+        },
+        "arabic": "الْبِنْتُ ___ ذَهَبَتْ إِلَى الْمَدْرَسَةِ",
+        "options": [
+          {
+            "en": "الَّتِي",
+            "ur": "الَّتِي"
+          },
+          {
+            "en": "هِيَ",
+            "ur": "هِيَ"
+          },
+          {
+            "en": "هٰذِهِ",
+            "ur": "هٰذِهِ"
+          },
+          {
+            "en": "الَّذِي",
+            "ur": "الَّذِي"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch23-test-q07",
+        "topic": {
+          "en": "Reading a scene",
+          "ur": "منظر پڑھنا"
+        },
+        "prompt": {
+          "en": "When did it happen, and where did Yusuf go?",
+          "ur": "یہ کب ہوا، اور یوسف کہاں گیا؟"
+        },
+        "arabic": "أَمْسِ خَرَجَ يُوسُفُ مِنَ الْبَيْتِ وَذَهَبَ إِلَى السُّوقِ",
+        "options": [
+          {
+            "en": "Today; from the market",
+            "ur": "آج؛ بازار سے"
+          },
+          {
+            "en": "Yesterday; to the house",
+            "ur": "کل (گزرا ہوا)؛ گھر"
+          },
+          {
+            "en": "Tomorrow; to the market",
+            "ur": "کل (آنے والا)؛ بازار"
+          },
+          {
+            "en": "Yesterday; to the market",
+            "ur": "کل (گزرا ہوا)؛ بازار"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch23-test-q08",
+        "topic": {
+          "en": "Reading a scene",
+          "ur": "منظر پڑھنا"
+        },
+        "prompt": {
+          "en": "Who went to the mosque?",
+          "ur": "مسجد کون گیا؟"
+        },
+        "arabic": "ذَهَبَ الطُّلَّابُ وَالْأُسْتَاذُ إِلَى الْمَسْجِدِ",
+        "options": [
+          {
+            "en": "one student",
+            "ur": "ایک طالب علم"
+          },
+          {
+            "en": "only the teacher",
+            "ur": "صرف استاد"
+          },
+          {
+            "en": "the students and the teacher",
+            "ur": "طلبہ اور استاد"
+          },
+          {
+            "en": "the female students",
+            "ur": "طالبات"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch23-test-q09",
+        "topic": {
+          "en": "Reading a scene",
+          "ur": "منظر پڑھنا"
+        },
+        "prompt": {
+          "en": "Where is the house?",
+          "ur": "گھر کہاں ہے؟"
+        },
+        "arabic": "الْبَيْتُ بَيْنَ الْمَسْجِدِ وَالْمَدْرَسَةِ",
+        "options": [
+          {
+            "en": "in the school",
+            "ur": "اسکول میں"
+          },
+          {
+            "en": "between the mosque and the school",
+            "ur": "مسجد اور اسکول کے درمیان"
+          },
+          {
+            "en": "behind the mosque",
+            "ur": "مسجد کے پیچھے"
+          },
+          {
+            "en": "in front of the school",
+            "ur": "اسکول کے سامنے"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch23-test-q10",
+        "topic": {
+          "en": "Dialogue",
+          "ur": "گفتگو"
+        },
+        "prompt": {
+          "en": "Who asked, and who answered?",
+          "ur": "کس نے پوچھا، اور کس نے جواب دیا؟"
+        },
+        "arabic": "سَأَلَتْ فَاطِمَةُ: أَيْنَ الْقَلَمُ؟ أَجَابَ أَحْمَدُ: الْقَلَمُ فِي الْحَقِيبَةِ",
+        "options": [
+          {
+            "en": "Ahmad asked; Fatimah answered.",
+            "ur": "احمد نے پوچھا؛ فاطمہ نے جواب دیا۔"
+          },
+          {
+            "en": "Nobody asked a question.",
+            "ur": "کسی نے سوال نہیں پوچھا۔"
+          },
+          {
+            "en": "Fatimah asked and answered.",
+            "ur": "فاطمہ نے پوچھا اور جواب دیا۔"
+          },
+          {
+            "en": "Fatimah asked; Ahmad answered.",
+            "ur": "فاطمہ نے پوچھا؛ احمد نے جواب دیا۔"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch23-test-q11",
+        "topic": {
+          "en": "Dialogue",
+          "ur": "گفتگو"
+        },
+        "prompt": {
+          "en": "Which answer fits the question?",
+          "ur": "کون سا جواب سوال کے مطابق ہے؟"
+        },
+        "arabic": "مَنْ هٰذِهِ؟",
+        "options": [
+          {
+            "en": "هٰذِهِ أُخْتِي",
+            "ur": "هٰذِهِ أُخْتِي"
+          },
+          {
+            "en": "أُخْتِي فِي الْبَيْتِ",
+            "ur": "أُخْتِي فِي الْبَيْتِ"
+          },
+          {
+            "en": "هٰذِهِ حَقِيبَةٌ",
+            "ur": "هٰذِهِ حَقِيبَةٌ"
+          },
+          {
+            "en": "نَعَمْ",
+            "ur": "نَعَمْ"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch23-test-q12",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن پڑھنا"
+        },
+        "prompt": {
+          "en": "Ta-Ha 20:18 — what is عَصَايَ?",
+          "ur": "سورۃ طٰہٰ 20:18 — عَصَايَ کیا ہے؟"
+        },
+        "arabic": "قَالَ هِيَ عَصَايَ",
+        "options": [
+          {
+            "en": "your staff",
+            "ur": "تمہاری لاٹھی"
+          },
+          {
+            "en": "my staff: Musa's own",
+            "ur": "میری لاٹھی: موسیٰ کی اپنی"
+          },
+          {
+            "en": "her staff",
+            "ur": "اس کی لاٹھی"
+          },
+          {
+            "en": "a staff pointed at from far away",
+            "ur": "دور سے اشارہ کی گئی لاٹھی"
+          }
+        ],
+        "correct_index": 1
+      },
+      {
+        "id": "ch23-test-q13",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن پڑھنا"
+        },
+        "prompt": {
+          "en": "Al-Baqarah 2:21 — who does الَّذِي describe?",
+          "ur": "سورۃ البقرہ 2:21 — الَّذِي کس کا وصف ہے؟"
+        },
+        "arabic": "اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ",
+        "options": [
+          {
+            "en": "the people addressed",
+            "ur": "جن لوگوں سے خطاب ہے"
+          },
+          {
+            "en": "a group of women",
+            "ur": "خواتین کا گروہ"
+          },
+          {
+            "en": "رَبَّكُمُ, your Lord",
+            "ur": "رَبَّكُمُ، تمہارا رب"
+          },
+          {
+            "en": "the speaker",
+            "ur": "بولنے والا"
+          }
+        ],
+        "correct_index": 2
+      },
+      {
+        "id": "ch23-test-q14",
+        "topic": {
+          "en": "Quran reading",
+          "ur": "قرآن پڑھنا"
+        },
+        "prompt": {
+          "en": "Al-Falaq 113:1 — what does بِرَبِّ الْفَلَقِ mean?",
+          "ur": "سورۃ الفلق 113:1 — بِرَبِّ الْفَلَقِ کا کیا مطلب ہے؟"
+        },
+        "arabic": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+        "options": [
+          {
+            "en": "in my Lord of daybreak",
+            "ur": "صبح کے میرے رب کی"
+          },
+          {
+            "en": "the daybreak of my Lord",
+            "ur": "میرے رب کی صبح"
+          },
+          {
+            "en": "in our daybreak",
+            "ur": "ہماری صبح میں"
+          },
+          {
+            "en": "in the Lord of daybreak",
+            "ur": "صبح کے رب کی"
+          }
+        ],
+        "correct_index": 3
+      },
+      {
+        "id": "ch23-test-q15",
+        "topic": {
+          "en": "Word or ending",
+          "ur": "لفظ یا آخر"
+        },
+        "prompt": {
+          "en": "Which one is a separate pronoun, not an ending?",
+          "ur": "کون سا الگ ضمیر ہے، آخر نہیں؟"
+        },
+        "options": [
+          {
+            "en": "هُوَ",
+            "ur": "هُوَ"
+          },
+          {
+            "en": "ـهُمْ in كِتَابُهُمْ",
+            "ur": "كِتَابُهُمْ میں ـهُمْ"
+          },
+          {
+            "en": "ـهُ in بَيْتُهُ",
+            "ur": "بَيْتُهُ میں ـهُ"
+          },
+          {
+            "en": "ـهَا in مَدْرَسَتُهَا",
+            "ur": "مَدْرَسَتُهَا میں ـهَا"
+          }
+        ],
+        "correct_index": 0
+      },
+      {
+        "id": "ch23-test-q16",
+        "topic": {
+          "en": "Word or ending",
+          "ur": "لفظ یا آخر"
+        },
+        "prompt": {
+          "en": "In which word does ـنَا mean us, not our?",
+          "ur": "کس لفظ میں ـنَا کا مطلب 'ہمیں' ہے، 'ہمارا' نہیں؟"
+        },
+        "options": [
+          {
+            "en": "بَيْتُنَا",
+            "ur": "بَيْتُنَا"
+          },
+          {
+            "en": "آتِنَا",
+            "ur": "آتِنَا"
+          },
+          {
+            "en": "مَدْرَسَتُنَا",
+            "ur": "مَدْرَسَتُنَا"
+          },
+          {
+            "en": "رَبَّنَا",
+            "ur": "رَبَّنَا"
+          }
+        ],
+        "correct_index": 1
+      }
+    ]
+  },
+  "reveal": {
+    "concept_name": {
+      "en": "Chapter 23 — Book 2 reading consolidation",
+      "ur": "باب 23 — کتاب 2: پڑھنے کی مشق یکجا"
+    },
+    "ayah": {
+      "surah": 2,
+      "ayah": 201,
+      "label": "Al-Baqarah 2:201",
+      "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
+      "en": "Our Lord, give us good in this world",
+      "ur": "اے ہمارے رب! ہمیں دنیا میں بھلائی دے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002201.mp3"
+    },
+    "highlighted_word_indices": [
+      0,
+      1
+    ],
+    "highlighted_words": [
+      "رَبَّنَا",
+      "آتِنَا"
+    ],
+    "noor_explanation": {
+      "en": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً: our Lord, give us good in this world. You finish Book 2 able to read connected Arabic: who is pointed at, who owns what, who is described, where people go, and who said what.",
+      "ur": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً: اے ہمارے رب، ہمیں دنیا میں بھلائی دے۔ آپ کتاب 2 اس حال میں مکمل کرتے ہیں کہ جڑی ہوئی عربی پڑھ سکتے ہیں: کس کی طرف اشارہ ہے، کس کی کیا چیز ہے، کس کا وصف ہے، لوگ کہاں جاتے ہیں، اور کس نے کیا کہا۔"
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "Book 2 complete. Chapter 24 opens with إِنَّ: emphasis and assertion.",
+      "ur": "کتاب 2 مکمل۔ باب 24 إِنَّ سے شروع ہوتا ہے: تاکید اور زور۔"
+    }
+  }
+}

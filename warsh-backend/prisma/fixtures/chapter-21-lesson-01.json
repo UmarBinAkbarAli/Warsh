@@ -2,29 +2,26 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 21, Lesson 1 - Places: city, village, market, mosque, house, school.",
+    "_note": "Chapter 21, Lesson 1 (ch21-l01) — the journey as one unit: known مِنْ (start) and إِلَى (end) from Chapter 2 in a single route, the new verb خَرَجَ (left, went out) with خَرَجَتْ on Chapter 8's pattern, and the questions مِنْ أَيْنَ خَرَجَ؟ (Chapter 12's مِنْ أَيْنَ reused for a starting point) and إِلَى أَيْنَ ذَهَبَ؟ answered from the sentence. مِنَ before الْـ is a joining vowel, not a merger rule. Quran: Al-Isra 17:1, مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى (reveal index 0). No place-noun list, no case rule; the false 'most place nouns are feminine' and 'ال causes kasra' notes and the 12:93 list are gone. Rebuilt 2026-09-24 from Docs/proposals/chapter-21-content-proposal.md with the owner-approved review amendments recorded there (دَخَلَ and رَجَعَ treated as Chapter 8 retrieval, خَرَجَ the new verb; Al-Qasas 28:15 وَدَخَلَ الْمَدِينَةَ instead of the imperative in Yusuf 12:99, paired with 28:21 from the same story; Ta-Ha 20:86 فَرَجَعَ for رَجَعَ; Al-Isra 17:1 as a verified مِنْ … إِلَى journey; Al-Baqarah 2:164 for بَيْنَ … وَ …). The map and fixtures named reader_lecture_21 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "سفر: کہاں سے، کہاں تک؟",
     "chapter_order": 21,
     "lesson_order": 1,
-    "chapter_title": "Places and Movement",
-    "title": "Places in Arabic",
-    "titleAr": "الْأَمَاكِنُ",
-    "source": "reader_lecture_21_places.md",
-    "estimated_minutes": 8,
+    "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 12,
-      "ayah": 93,
-      "label": "Yusuf 12:93",
-      "ar": "اذْهَبُوا بِقَمِيصِي هَٰذَا فَأَلْقُوهُ عَلَىٰ وَجْهِ أَبِي يَأْتِ بَصِيرًا وَأْتُونِي بِأَهْلِكُمْ أَجْمَعِينَ",
-      "en": "Take this, my shirt, and cast it over the face of my father; he will become seeing. And bring me your family, all together.\"",
-      "ur": "یہ میرا کرتہ لے جاؤ اور اسے والد صاحب کے منہ پر ڈال دو۔ وہ بینا ہو جائیں گے۔ اور اپنے تمام اہل وعیال کو میرے پاس لے آؤ",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012093.mp3"
+      "surah": 17,
+      "ayah": 1,
+      "label": "Al-Isra 17:1",
+      "ar": "مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+      "en": "from al-Masjid al-Haram to al-Masjid al-Aqsa",
+      "ur": "مسجد حرام سے مسجد اقصیٰ تک",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017001.mp3"
     },
     "noor_intro": {
-      "en": "In this ayah, the brothers were told to go (اذْهَبُوا) somewhere — to a place. Today we learn the names of places in Arabic.",
-      "ur": "اس آیت میں بھائیوں کو کہا گیا کہ کہیں جاؤ (اذْهَبُوا) — کسی جگہ۔ آج ہم عربی میں جگہوں کے نام سیکھیں گے۔"
+      "en": "Al-Isra begins with the Night Journey of the Prophet ﷺ. Listen for the two ends of the journey: after مِنَ, and after إِلَى.",
+      "ur": "سورۃ الاسراء نبی ﷺ کے رات کے سفر سے شروع ہوتی ہے۔ سفر کے دونوں سرے سنیں: مِنَ کے بعد، اور إِلَى کے بعد۔"
     },
     "autoplay": true
   },
@@ -32,80 +29,106 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Places in Arabic",
-        "ar": "الْأَمَاكِنُ فِي الْعَرَبِيَّةِ",
-        "ur": "عربی میں جگہیں"
+        "en": "The two ends of a journey",
+        "ar": "مِنْ … إِلَى …",
+        "ur": "سفر کے دو سرے"
       },
       "explanation": {
-        "en": "Arabic has specific words for common places: city, village, market, mosque, house, and school. These are nouns that tell us where something is located.",
-        "ur": "عربی میں عام جگہوں کے لیے خاص الفاظ ہیں: شہر، پنڈ، بازار، مسجد، گھر، اور اسکول۔ یہ اسم ہیں جو بتاتے ہیں کہ کچھ کہاں ہے۔"
+        "en": "You know مِنْ, from, and إِلَى, to, from Chapter 2. Together they mark a whole journey: where it began, after مِنْ, and where it ended, after إِلَى.",
+        "ur": "آپ باب 2 سے مِنْ، سے، اور إِلَى، تک/کی طرف، جانتے ہیں۔ دونوں مل کر پورا سفر بتاتے ہیں: کہاں سے شروع ہوا، مِنْ کے بعد، اور کہاں ختم ہوا، إِلَى کے بعد۔"
+      }
+    },
+    {
+      "type": "WORD",
+      "text": {
+        "ar": "خَرَجَ",
+        "ar_plain": "خرج",
+        "translit": "kharaja",
+        "en": "he went out, he left",
+        "ur": "وہ نکلا"
+      },
+      "explanation": {
+        "en": "New verb: خَرَجَ, he went out, he left. The place he left comes after مِنْ. For a woman: خَرَجَتْ, with the تْ you know from Chapter 8 (رَجَعَتْ، دَخَلَتْ).",
+        "ur": "نیا فعل: خَرَجَ، وہ نکلا، وہ چلا گیا۔ جس جگہ سے نکلا وہ مِنْ کے بعد آتی ہے۔ عورت کے لیے: خَرَجَتْ، اس تْ کے ساتھ جو آپ باب 8 سے جانتے ہیں (رَجَعَتْ، دَخَلَتْ)۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "ذَهَبَ الرَّجُلُ إِلَى الْمَدِينَةِ",
-        "ar_plain": "ذهب الرجل إلى المدينة",
-        "translit": "dhahaba ar-rajulu ilaa al-madiinati",
-        "en": "The man went to the city.",
-        "ur": "آدمی شہر کو گیا۔"
+        "ar": "خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ",
+        "ar_plain": "خرج احمد من البيت",
+        "translit": "kharaja aḥmadu mina l-bayti",
+        "en": "Ahmad left the house.",
+        "ur": "احمد گھر سے نکلا۔"
       },
       "explanation": {
-        "en": "مَدِينَة means 'city.' It is a feminine noun. When saying 'to the city,' we use الْمَدِينَةِ with the genitive case (kasra at the end).",
-        "ur": "مَدِينَة کا مطلب ہے 'شہر'۔ یہ مؤنث اسم ہے۔ 'شہر کو' کہنے کے لیے ہم الْمَدِينَةِ استعمال کرتے ہیں (آخر میں کسرہ)۔"
+        "en": "Before الْ, مِنْ is read مِنَ so the two words join smoothly. It is the same مِنْ, from.",
+        "ur": "الْ سے پہلے مِنْ کو مِنَ پڑھا جاتا ہے تاکہ دونوں لفظ آسانی سے مل جائیں۔ یہ وہی مِنْ ہے، سے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "سَكَنَ الْفُلَانِيُّ فِي قَرْيَةٍ",
-        "ar_plain": "سكن الفلاني في قرية",
-        "translit": "sakana al-fulaanu fii qaryatin",
-        "en": "So-and-so lived in a village.",
-        "ur": "فسنانی ایک پنڈ میں رہتا تھا۔"
+        "ar": "خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ وَذَهَبَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "خرج احمد من البيت وذهب الى المسجد",
+        "translit": "kharaja aḥmadu mina l-bayti wa dhahaba ilā l-masjidi",
+        "en": "Ahmad left the house and went to the mosque.",
+        "ur": "احمد گھر سے نکلا اور مسجد گیا۔"
       },
       "explanation": {
-        "en": "قَرْيَة means 'village.' It is also feminine. The preposition فِي means 'in.' So فِي قَرْيَةٍ means 'in a village.'",
-        "ur": "قَرْيَة کا مطلب ہے 'پنڈ'۔ یہ بھی مؤنث ہے۔ فِي کا مطلب ہے 'میں'۔ تو فِي قَرْيَةٍ میں 'ایک پنڈ میں'۔"
+        "en": "Start: الْبَيْت, after مِنَ. End: الْمَسْجِد, after إِلَى. وَ joins the two actions of one journey: he left, and he went.",
+        "ur": "آغاز: الْبَيْت، مِنَ کے بعد۔ انجام: الْمَسْجِد، إِلَى کے بعد۔ وَ ایک سفر کے دو کاموں کو جوڑتا ہے: وہ نکلا، اور وہ گیا۔"
       }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Ask about the start: مِنْ أَيْنَ؟",
+        "ar": "مِنْ أَيْنَ خَرَجَ أَحْمَدُ؟",
+        "ur": "آغاز کے بارے میں پوچھیں: مِنْ أَيْنَ؟"
+      },
+      "explanation": {
+        "en": "In Chapter 12, مِنْ أَيْنَ أَنْتَ؟ asked where someone is from. Here it asks where a journey began: From where did Ahmad leave? — مِنَ الْبَيْتِ, from the house.",
+        "ur": "باب 12 میں مِنْ أَيْنَ أَنْتَ؟ نے پوچھا کہ کوئی کہاں سے ہے۔ یہاں یہ پوچھتا ہے کہ سفر کہاں سے شروع ہوا: احمد کہاں سے نکلا؟ — مِنَ الْبَيْتِ، گھر سے۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Ask about the end: إِلَى أَيْنَ؟",
+        "ar": "إِلَى أَيْنَ ذَهَبَ؟",
+        "ur": "انجام کے بارے میں پوچھیں: إِلَى أَيْنَ؟"
+      },
+      "explanation": {
+        "en": "إِلَى أَيْنَ ذَهَبَ؟ Where did he go to? The answer is the phrase after إِلَى: إِلَى الْمَسْجِدِ, to the mosque. Answer with the whole phrase.",
+        "ur": "إِلَى أَيْنَ ذَهَبَ؟ وہ کہاں گیا؟ جواب إِلَى کے بعد والا حصہ ہے: إِلَى الْمَسْجِدِ، مسجد کی طرف۔ پورے حصے کے ساتھ جواب دیں۔"
+      }
+    },
+    {
+      "type": "AYAH_PREVIEW",
+      "concept": {
+        "en": "Al-Isra 17:1: from al-Masjid al-Haram to al-Masjid al-Aqsa",
+        "ar": "مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+        "ur": "Al-Isra 17:1: مسجد حرام سے مسجد اقصیٰ تک"
+      },
+      "explanation": {
+        "en": "The Night Journey of the Prophet ﷺ: from al-Masjid al-Haram in Makkah, after مِّنَ, to al-Masjid al-Aqsa in Jerusalem, after إِلَى. The earlier words of the ayah, أَسْرَىٰ بِعَبْدِهِ لَيْلًا, took His servant by night, are only glossed.",
+        "ur": "نبی ﷺ کا رات کا سفر: مکہ کی مسجد حرام سے، مِّنَ کے بعد، یروشلم کی مسجد اقصیٰ تک، إِلَى کے بعد۔ آیت کے پہلے الفاظ، أَسْرَىٰ بِعَبْدِهِ لَيْلًا، اپنے بندے کو رات میں لے گیا، کا صرف معنی دیا گیا ہے۔"
+      },
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017001.mp3"
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "اشْتَرَى الْمُسْلِمُ الطَّعَامَ مِنَ السُّوقِ",
-        "ar_plain": "اشترى المسلم الطعام من السوق",
-        "translit": "ishtaraa al-muslimu at-ta'aama mina as-suwq",
-        "en": "The Muslim bought food from the market.",
-        "ur": "مسلمان نے بازار سے کھانا خریدا۔"
+        "ar": "خَرَجَتْ فَاطِمَةُ مِنَ الْمَدْرَسَةِ وَذَهَبَتْ إِلَى الْبَيْتِ",
+        "ar_plain": "خرجت فاطمة من المدرسة وذهبت الى البيت",
+        "translit": "kharajat fāṭimatu mina l-madrasati wa dhahabat ilā l-bayti",
+        "en": "Fatimah left the school and went to the house.",
+        "ur": "فاطمہ اسکول سے نکلی اور گھر گئی۔"
       },
       "explanation": {
-        "en": "سُوق means 'market.' The phrase مِنَ السُّوقِ means 'from the market' — مِنَ is 'from' and السُّوقِ is the market with genitive case.",
-        "ur": "سُوق کا مطلب ہے 'بازار'۔ مِنَ السُّوقِ کا مطلب ہے 'بازار سے' — مِنَ ہے 'سے' اور السُّوقِ ہے بازار جنیت کے ساتھ۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "دَخَلَ الْمُسْلِمُ الْمَسْجِدَ لِيُصَلِّيَ",
-        "ar_plain": "دخل المسلم المسجد ليصلي",
-        "translit": "dakhala al-muslimu al-masjida liyusalliya",
-        "en": "The Muslim entered the mosque to pray.",
-        "ur": "مسلمان نے نماز پڑھنے کے لیے مسجد میں داخل ہوا۔"
-      },
-      "explanation": {
-        "en": "مَسْجِد means 'mosque.' It is the place of prayer (صَلَاة). Muslims go to the mosque to pray in congregation.",
-        "ur": "مَسْجِد کا مطلب ہے 'مسجد'۔ یہ نماز (صَلَاة) کی جگہ ہے۔ مسلمان جماعت کی نماز کے لیے مسجد میں جاتے ہیں۔"
-      }
-    },
-    {
-      "type": "GRAMMAR_NOTE",
-      "title": {
-        "en": "Places are usually feminine in Arabic",
-        "ur": "عربی میں جگہیں عموماً مؤنث ہوتی ہیں"
-      },
-      "body": {
-        "en": "Most place nouns in Arabic are feminine: مَدِينَة (city), قَرْيَة (village), مَدْرَسَة (school), مَسْجِد (mosque — actually masculine but commonly referred to with feminine grammar). Feminine nouns take kasra on the definite ال.",
-        "ur": "عربی میں زیادہ تر جگہ کے اسم مؤنث ہوتے ہیں: مَدِينَة (شہر)، قَرْيَة (پنڈ)، مَدْرَسَة (اسکول)، مَسْجِد (مسجد — اصل میں مذکر مگر عموماً مؤنث کے ساتھ)۔ مؤنث اسم پر معرفہ کے وقت کسرہ لگتا ہے۔"
+        "en": "The same journey shape with a woman: خَرَجَتْ, ذَهَبَتْ. Start: الْمَدْرَسَة. End: الْبَيْت.",
+        "ur": "عورت کے ساتھ سفر کی وہی شکل: خَرَجَتْ، ذَهَبَتْ۔ آغاز: الْمَدْرَسَة۔ انجام: الْبَيْت۔"
       }
     }
   ],
@@ -114,280 +137,285 @@
       "type": "TAP_TRANSLATION",
       "id": "ch21-l01-ex01",
       "prompt": {
-        "ar": "مَدِينَة",
-        "ar_plain": "مدينة",
-        "translit": "madiinatin",
-        "en": "city",
-        "ur": "شہر"
+        "ar": "خَرَجَ",
+        "ar_plain": "خرج",
+        "translit": "kharaja",
+        "en": "he went out, he left",
+        "ur": "وہ نکلا"
       },
       "options": [
         {
-          "en": "city",
-          "ur": "شہر"
+          "en": "he sat",
+          "ur": "وہ بیٹھا"
         },
         {
-          "en": "village",
-          "ur": "پنڈ"
+          "en": "he returned",
+          "ur": "وہ واپس آیا"
         },
         {
-          "en": "market",
-          "ur": "بازار"
+          "en": "he left, he went out",
+          "ur": "وہ نکلا"
         },
         {
-          "en": "house",
-          "ur": "گھر"
+          "en": "he entered",
+          "ur": "وہ داخل ہوا"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مَدِينَة means 'city' — a large populated place.",
-        "ur": "مَدِينَة کا مطلب ہے 'شہر' — ایک بڑی آباد جگہ۔"
+        "en": "خَرَجَ: he went out, he left.",
+        "ur": "خَرَجَ: وہ نکلا۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch21-l01-ex02",
-      "statement": {
-        "en": "قَرْيَة means 'village' in Arabic.",
-        "ur": "قَرْيَة کا مطلب عربی میں 'پنڈ' ہے۔",
-        "ar_example": {
-          "ar": "قَرْيَة",
-          "ar_plain": "قرية",
-          "translit": "qaryatin",
-          "en": "village",
-          "ur": "پنڈ"
-        }
+      "prompt": {
+        "ar": "خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ وَذَهَبَ إِلَى الْمَسْجِدِ",
+        "ar_plain": "خرج احمد من البيت وذهب الى المسجد",
+        "translit": "kharaja aḥmadu mina l-bayti wa dhahaba ilā l-masjidi",
+        "en": "Ahmad left the house and went to the mosque.",
+        "ur": "احمد گھر سے نکلا اور مسجد گیا۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "options": [
+        {
+          "en": "Ahmad entered the house and the mosque.",
+          "ur": "احمد گھر اور مسجد میں داخل ہوا۔"
+        },
+        {
+          "en": "Ahmad is in the house near the mosque.",
+          "ur": "احمد مسجد کے قریب گھر میں ہے۔"
+        },
+        {
+          "en": "Ahmad left the mosque and went to the house.",
+          "ur": "احمد مسجد سے نکلا اور گھر گیا۔"
+        },
+        {
+          "en": "Ahmad left the house and went to the mosque.",
+          "ur": "احمد گھر سے نکلا اور مسجد گیا۔"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After مِنَ: the start, the house. After إِلَى: the end, the mosque.",
+        "ur": "مِنَ کے بعد: آغاز، گھر۔ إِلَى کے بعد: انجام، مسجد۔"
+      }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch21-l01-ex03",
       "mode": "TAP",
-      "sentence_ar": "ذَهَبَ الْأَبُ إِلَى ___",
+      "sentence_ar": "خَرَجَ أَحْمَدُ ___ الْبَيْتِ",
       "hint": {
-        "en": "The father went to the market.",
-        "ur": "باپ بازار کو گیا۔"
+        "en": "Ahmad left the house.",
+        "ur": "احمد گھر سے نکلا۔"
       },
       "options": [
         {
-          "ar": "السُّوقِ",
-          "ar_plain": "السوق",
-          "translit": "as-suwqi",
-          "en": "the market",
-          "ur": "بازار"
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "سے"
         },
         {
-          "ar": "الْمَدِينَةِ",
-          "ar_plain": "المدينة",
-          "translit": "al-madiinati",
-          "en": "the city",
-          "ur": "شہر"
+          "ar": "عَلَى",
+          "ar_plain": "على",
+          "translit": "ʿalā",
+          "en": "on",
+          "ur": "پر"
         },
         {
-          "ar": "الْبَيْتِ",
-          "ar_plain": "البيت",
-          "translit": "al-bayti",
-          "en": "the house",
-          "ur": "گھر"
-        },
-        {
-          "ar": "الْمَسْجِدِ",
-          "ar_plain": "المسجد",
-          "translit": "al-masjidi",
-          "en": "the mosque",
-          "ur": "مسجد"
-        }
-      ],
-      "correct_answer": {
-        "ar": "السُّوقِ",
-        "ar_plain": "السوق",
-        "translit": "as-suwqi",
-        "en": "the market",
-        "ur": "بازار"
-      },
-      "xp_value": 1
-    },
-    {
-      "type": "MATCHING",
-      "id": "ch21-l01-ex04",
-      "left_column": [
-        {
-          "ar": "مَدِينَة",
-          "ar_plain": "مدينة",
-          "translit": "madiinatin",
-          "en": "city",
-          "ur": "شہر"
-        },
-        {
-          "ar": "قَرْيَة",
-          "ar_plain": "قرية",
-          "translit": "qaryatin",
-          "en": "village",
-          "ur": "پنڈ"
-        },
-        {
-          "ar": "مَسْجِد",
-          "ar_plain": "مسجد",
-          "translit": "masjidun",
-          "en": "mosque",
-          "ur": "مسجد"
-        },
-        {
-          "ar": "مَدْرَسَة",
-          "ar_plain": "مدرسة",
-          "translit": "madrasatin",
-          "en": "school",
-          "ur": "اسکول"
-        }
-      ],
-      "right_column": [
-        {
-          "en": "city",
-          "ur": "شہر"
-        },
-        {
-          "en": "village",
-          "ur": "پنڈ"
-        },
-        {
-          "en": "mosque",
-          "ur": "مسجد"
-        },
-        {
-          "en": "school",
-          "ur": "اسکول"
-        }
-      ],
-      "correct_pairs": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
-          2
-        ],
-        [
-          3,
-          3
-        ]
-      ],
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch21-l01-ex05",
-      "target_translation": {
-        "en": "The man went to the village.",
-        "ur": "آدمی پنڈ کو گیا۔"
-      },
-      "tiles": [
-        {
-          "ar": "ذَهَبَ",
-          "ar_plain": "ذهب",
-          "translit": "dhahaba",
-          "en": "went",
-          "ur": "گیا"
-        },
-        {
-          "ar": "الرَّجُلُ",
-          "ar_plain": "الرجل",
-          "translit": "ar-rajulu",
-          "en": "the man",
-          "ur": "آدمی"
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fī",
+          "en": "in",
+          "ur": "میں"
         },
         {
           "ar": "إِلَى",
-          "ar_plain": "إلى",
-          "translit": "ilaa",
+          "ar_plain": "الى",
+          "translit": "ilā",
           "en": "to",
-          "ur": "کو"
-        },
-        {
-          "ar": "الْقَرْيَةِ",
-          "ar_plain": "القرية",
-          "translit": "al-qaryati",
-          "en": "the village",
-          "ur": "پنڈ"
+          "ur": "کی طرف"
         }
       ],
-      "correct_order": [
-        1,
-        0,
-        2,
-        3
-      ],
-      "xp_value": 1
+      "correct_answer": {
+        "ar": "مِنَ",
+        "ar_plain": "من",
+        "translit": "mina",
+        "en": "from",
+        "ur": "سے"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The place left comes after مِنْ, read مِنَ before الْ.",
+        "ur": "جس جگہ سے نکلا وہ مِنْ کے بعد آتی ہے، الْ سے پہلے مِنَ پڑھا جاتا ہے۔"
+      }
     },
     {
-      "type": "TAP_TRANSLATION",
-      "id": "ch21-l01-ex06",
-      "prompt": {
-        "ar": "دَخَلَ الْمُسْلِمُ الْمَسْجِدَ",
-        "ar_plain": "دخل المسلم المسجد",
-        "translit": "dakhala al-muslimu al-masjida",
-        "en": "The Muslim entered the mosque.",
-        "ur": "مسلمان مسجد میں داخل ہوا۔"
+      "type": "FILL_BLANK",
+      "id": "ch21-l01-ex04",
+      "mode": "TAP",
+      "sentence_ar": "ذَهَبَتْ فَاطِمَةُ ___ الْمَدْرَسَةِ",
+      "hint": {
+        "en": "Fatimah went to the school.",
+        "ur": "فاطمہ اسکول گئی۔"
       },
       "options": [
         {
-          "en": "The Muslim entered the mosque.",
-          "ur": "مسلمان مسجد میں داخل ہوا۔"
+          "ar": "عَلَى",
+          "ar_plain": "على",
+          "translit": "ʿalā",
+          "en": "on",
+          "ur": "پر"
         },
         {
-          "en": "The Muslim left the mosque.",
-          "ur": "مسلمان مسجد سے نکلا۔"
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "کی طرف"
         },
         {
-          "en": "The Muslim bought from the market.",
-          "ur": "مسلمان نے بازار سے خریدا۔"
+          "ar": "تَحْتَ",
+          "ar_plain": "تحت",
+          "translit": "taḥta",
+          "en": "under",
+          "ur": "نیچے"
         },
         {
-          "en": "The Muslim went to the city.",
-          "ur": "مسلمان شہر کو گیا۔"
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "سے"
         }
       ],
-      "correct_index": 0,
+      "correct_answer": {
+        "ar": "إِلَى",
+        "ar_plain": "الى",
+        "translit": "ilā",
+        "en": "to",
+        "ur": "کی طرف"
+      },
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "دَخَلَ means 'entered' and الْمَسْجِدَ is 'the mosque.' So: the Muslim entered the mosque.",
-        "ur": "دَخَلَ کا مطلب ہے 'داخل ہوا' اور الْمَسْجِدَ ہے 'مسجد'۔ تو: مسلمان مسجد میں داخل ہوا۔"
+        "en": "The destination comes after إِلَى.",
+        "ur": "منزل إِلَى کے بعد آتی ہے۔"
       }
     },
     {
       "type": "TRUE_FALSE",
-      "id": "ch21-l01-ex07",
+      "id": "ch21-l01-ex05",
       "statement": {
-        "en": "الْمَدِينَةُ is a feminine noun in Arabic.",
-        "ur": "الْمَدِينَةُ عربی میں مؤنث اسم ہے۔",
+        "en": "In this sentence, the journey ends at the school.",
+        "ur": "اس جملے میں سفر اسکول پر ختم ہوتا ہے۔",
         "ar_example": {
-          "ar": "الْمَدِينَةُ الْكَبِيرَةُ",
-          "ar_plain": "المدينة الكبيرة",
-          "translit": "al-madiinatu al-kabiiru",
-          "en": "the big city",
-          "ur": "بڑا شہر"
+          "ar": "خَرَجَتْ فَاطِمَةُ مِنَ الْمَدْرَسَةِ وَذَهَبَتْ إِلَى الْبَيْتِ",
+          "ar_plain": "خرجت فاطمة من المدرسة وذهبت الى البيت",
+          "translit": "kharajat fāṭimatu mina l-madrasati wa dhahabat ilā l-bayti",
+          "en": "Fatimah left the school and went to the house.",
+          "ur": "فاطمہ اسکول سے نکلی اور گھر گئی۔"
         }
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The school comes after مِنَ: it is the start. The end is الْبَيْتِ, after إِلَى.",
+        "ur": "اسکول مِنَ کے بعد ہے: یہ آغاز ہے۔ انجام الْبَيْتِ ہے، إِلَى کے بعد۔"
+      }
     },
     {
-      "type": "FILL_BLANK",
-      "id": "ch21-l01-ex08",
-      "mode": "TAP",
-      "sentence_ar": "يَدْرُسُ الْوَلَدُ فِي ___",
-      "hint": {
-        "en": "The boy studies in the school.",
-        "ur": "لڑکا اسکول میں پڑھتا ہے۔"
+      "type": "MATCH_AYAH",
+      "id": "ch21-l01-ex06",
+      "ayah_fragment": {
+        "ar": "مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+        "surah_ref": "Al-Isra 17:1"
       },
       "options": [
+        {
+          "en": "Both mosques come after إِلَى",
+          "ur": "دونوں مسجدیں إِلَى کے بعد ہیں"
+        },
+        {
+          "en": "The journey stays inside one mosque",
+          "ur": "سفر ایک ہی مسجد کے اندر رہتا ہے"
+        },
+        {
+          "en": "Start: al-Masjid al-Aqsa; end: al-Masjid al-Haram",
+          "ur": "آغاز: مسجد اقصیٰ؛ انجام: مسجد حرام"
+        },
+        {
+          "en": "Start: al-Masjid al-Haram, after مِّنَ; end: al-Masjid al-Aqsa, after إِلَى",
+          "ur": "آغاز: مسجد حرام، مِّنَ کے بعد؛ انجام: مسجد اقصیٰ، إِلَى کے بعد"
+        }
+      ],
+      "correct_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مِنْ marks the start, إِلَى the end.",
+        "ur": "مِنْ آغاز بتاتا ہے، إِلَى انجام۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch21-l01-ex07",
+      "prompt_line": {
+        "ar": "خَرَجَ أَحْمَدُ مِنَ الْبَيْتِ وَذَهَبَ إِلَى الْمَسْجِدِ. إِلَى أَيْنَ ذَهَبَ؟",
+        "ar_plain": "خرج احمد من البيت وذهب الى المسجد الى اين ذهب",
+        "translit": "kharaja aḥmadu mina l-bayti wa dhahaba ilā l-masjidi. ilā ayna dhahaba?",
+        "en": "Ahmad left the house and went to the mosque. Where did he go?",
+        "ur": "احمد گھر سے نکلا اور مسجد گیا۔ وہ کہاں گیا؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "إِلَى الْمَسْجِدِ",
+          "ar_plain": "الى المسجد",
+          "translit": "ilā l-masjidi",
+          "en": "to the mosque",
+          "ur": "مسجد کی طرف"
+        },
+        {
+          "ar": "مِنَ الْمَسْجِدِ",
+          "ar_plain": "من المسجد",
+          "translit": "mina l-masjidi",
+          "en": "from the mosque",
+          "ur": "مسجد سے"
+        },
+        {
+          "ar": "مِنَ الْبَيْتِ",
+          "ar_plain": "من البيت",
+          "translit": "mina l-bayti",
+          "en": "from the house",
+          "ur": "گھر سے"
+        },
+        {
+          "ar": "إِلَى الْبَيْتِ",
+          "ar_plain": "الى البيت",
+          "translit": "ilā l-bayti",
+          "en": "to the house",
+          "ur": "گھر کی طرف"
+        }
+      ],
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "إِلَى أَيْنَ asks for the end of the journey: إِلَى الْمَسْجِدِ.",
+        "ur": "إِلَى أَيْنَ سفر کا انجام پوچھتا ہے: إِلَى الْمَسْجِدِ۔"
+      }
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch21-l01-ex08",
+      "target_translation": {
+        "en": "She left the school.",
+        "ur": "وہ اسکول سے نکلی۔"
+      },
+      "tiles": [
         {
           "ar": "الْمَدْرَسَةِ",
           "ar_plain": "المدرسة",
@@ -396,64 +424,69 @@
           "ur": "اسکول"
         },
         {
-          "ar": "الْمَسْجِدِ",
-          "ar_plain": "المسجد",
-          "translit": "al-masjidi",
-          "en": "the mosque",
-          "ur": "مسجد"
+          "ar": "خَرَجَتْ",
+          "ar_plain": "خرجت",
+          "translit": "kharajat",
+          "en": "she left",
+          "ur": "وہ نکلی"
         },
         {
-          "ar": "السُّوقِ",
-          "ar_plain": "السوق",
-          "translit": "as-suwqi",
-          "en": "the market",
-          "ur": "بازار"
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "from",
+          "ur": "سے"
         },
         {
-          "ar": "الْقَرْيَةِ",
-          "ar_plain": "القرية",
-          "translit": "al-qaryati",
-          "en": "the village",
-          "ur": "پنڈ"
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilā",
+          "en": "to",
+          "ur": "کی طرف"
         }
       ],
-      "correct_answer": {
-        "ar": "الْمَدْرَسَةِ",
-        "ar_plain": "المدرسة",
-        "translit": "al-madrasati",
-        "en": "the school",
-        "ur": "اسکول"
-      },
-      "xp_value": 1
+      "correct_order": [
+        1,
+        2,
+        0
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "خَرَجَتْ, then مِنَ and the place she left.",
+        "ur": "خَرَجَتْ، پھر مِنَ اور وہ جگہ جہاں سے وہ نکلی۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Places in Arabic",
-      "ar": "الْأَمَاكِنُ",
-      "ur": "عربی میں جگہیں"
+      "en": "From where, to where",
+      "ar": "مِنْ … إِلَى …",
+      "ur": "کہاں سے، کہاں تک"
     },
     "ayah": {
-      "surah": 12,
-      "ayah": 93,
-      "label": "Yusuf 12:93",
-      "ar": "اذْهَبُوا بِقَمِيصِي هَٰذَا فَأَلْقُوهُ عَلَىٰ وَجْهِ أَبِي يَأْتِ بَصِيرًا وَأْتُونِي بِأَهْلِكُمْ أَجْمَعِينَ",
-      "en": "Take this, my shirt, and cast it over the face of my father; he will become seeing. And bring me your family, all together.\"",
-      "ur": "یہ میرا کرتہ لے جاؤ اور اسے والد صاحب کے منہ پر ڈال دو۔ وہ بینا ہو جائیں گے۔ اور اپنے تمام اہل وعیال کو میرے پاس لے آؤ",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012093.mp3"
+      "surah": 17,
+      "ayah": 1,
+      "label": "Al-Isra 17:1",
+      "ar": "مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى",
+      "en": "from al-Masjid al-Haram to al-Masjid al-Aqsa",
+      "ur": "مسجد حرام سے مسجد اقصیٰ تک",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/017001.mp3"
     },
     "highlighted_word_indices": [
       0
     ],
+    "highlighted_words": [
+      "مِّنَ"
+    ],
     "noor_explanation": {
-      "en": "اذْهَبُوا means 'go!' — the imperative form. The brothers were told to go somewhere with Yusuf's garment. In Arabic, places like مَدِينَة, قَرْيَة, and مَسْجِد tell us WHERE someone is going or what WHERE something is.",
-      "ur": "اذْهَبُوا کا مطلب ہے 'جاؤ!' — حکم کی صورت۔ بھائیوں کو یوسف کی قمیص کے ساتھ کہیں جانا تھا۔ عربی میں مَدِينَة، قَرْيَة، اور مَسْجِد جیسی جگہیں بتاتی ہیں کہ کوئی کہاں جا رہا ہے یا کچھ کہاں ہے۔"
+      "en": "مِّنَ … إِلَى …: the whole Night Journey in two small words. After مِنْ the place it began, after إِلَى the place it reached. You can now read any journey the same way.",
+      "ur": "مِّنَ … إِلَى …: رات کا پورا سفر دو چھوٹے لفظوں میں۔ مِنْ کے بعد وہ جگہ جہاں سے شروع ہوا، إِلَى کے بعد وہ جگہ جہاں پہنچا۔ اب آپ ہر سفر اسی طرح پڑھ سکتے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You now know six important place words: مَدِينَة, قَرْيَة, سُوق, مَسْجِد, مَدْرَسَة, and بَيْت. These will help you describe WHERE things are in Arabic.",
-      "ur": "اب آپ چھ اہم جگہ کے الفاظ جانتے ہیں: مَدِينَة، قَرْيَة، سُوق، مَسْجِد، مَدْرَسَة، اور بَيْت۔ یہ آپ کو عربی میں بتانے میں مدد کریں گے کہ چیزیں کہاں ہیں۔"
+      "en": "You can follow a journey from its start to its end. Next: which movement happened — went, left, entered or returned?",
+      "ur": "آپ سفر کو شروع سے آخر تک سمجھ سکتے ہیں۔ آگے: کون سی حرکت ہوئی — گیا، نکلا، داخل ہوا یا واپس آیا؟"
     }
   }
 }

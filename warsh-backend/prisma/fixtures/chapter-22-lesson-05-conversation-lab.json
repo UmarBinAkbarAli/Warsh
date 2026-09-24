@@ -1,0 +1,817 @@
+{
+  "schema_version": "1.0",
+  "template": "SPOKEN_PHRASES",
+  "_meta": {
+    "_note": "Chapter 22, display lesson 5 (ch22-cl09, new) — CL9 Ask, Answer, Confirm from Docs/proposals/conversation-labs-curriculum-proposal.md, specified by the Chapter 22 proposal and synchronised there in the same change. A classmate who came late asks whether you understood, what the teacher said, and where the lesson is. The learner's own lines (نَعَمْ، فَهِمْتُ الدَّرْسَ; قَالَ الْأُسْتَاذُ: الدَّرْسُ غَدًا; مَرَّةً أُخْرَى، لَوْ سَمَحْتَ to the male teacher; الدَّرْسُ فِي الْمَسْجِدِ) are the same for male and female learners, which settles the proposal's addressee question; هَلْ فَهِمْتِ؟ (to a woman), هَلْ فَهِمْتُمْ؟ (to a group) and لَا، لَمْ أَفْهَمْ are heard_only (لَمْ is not taught). CL5's heard-only repair phrase is now spoken. No pronunciation scoring. The review ch22-l05 keeps its ID and moves to order 6; ch22-test is order 7. Rebuilt 2026-09-24 from Docs/proposals/chapter-22-content-proposal.md with the owner-approved review amendments recorded there (Ali 'Imran 3:37 as the verified ayah in which قَالَ reports a question and قَالَتْ its answer; Al-Baqarah 2:186 سَأَلَكَ as a real سَأَلَ in the Quran; Yusuf 12:90 as the second verified speech frame; CL5's heard-only هَلْ فَهِمْتُمْ؟ / مَرَّةً أُخْرَى، لَوْ سَمَحْتَ promoted to spoken lines rather than treated as new). The map and fixtures named two reader_lecture_22 files that never existed in the repository, so the proposal is recorded as the source.",
+    "titleUr": "پوچھیں، جواب دیں، تصدیق کریں — گفتگو لیب",
+    "chapter_order": 22,
+    "lesson_order": 5,
+    "estimated_minutes": 10,
+    "xp_reward": 15
+  },
+  "hook": {
+    "ayah": {
+      "surah": 2,
+      "ayah": 186,
+      "label": "Al-Baqarah 2:186",
+      "ar": "وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ",
+      "en": "And when My servants ask you concerning Me — indeed I am near.",
+      "ur": "اور جب میرے بندے آپ سے میرے بارے میں پوچھیں تو میں قریب ہوں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002186.mp3"
+    },
+    "noor_intro": {
+      "en": "A good question deserves a clear answer. Today a classmate asks you about the lesson: answer, report what the teacher said, and ask again when you need to.",
+      "ur": "اچھا سوال واضح جواب کا حق دار ہے۔ آج ایک ہم جماعت آپ سے سبق کے بارے میں پوچھتا ہے: جواب دیں، بتائیں استاد نے کیا کہا، اور ضرورت ہو تو دوبارہ پوچھیں۔"
+    },
+    "autoplay": false
+  },
+  "exercises": [
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch22-cl-e01",
+      "prompt_line": {
+        "ar": "هَلْ فَهِمْتَ الدَّرْسَ؟",
+        "ar_plain": "هل فهمت الدرس",
+        "translit": "hal fahimta d-darsa?",
+        "en": "Did you understand the lesson?",
+        "ur": "کیا تمہیں سبق سمجھ آیا؟"
+      },
+      "response_mode": "PICK",
+      "options": [
+        {
+          "ar": "مَاذَا قَالَ الْأُسْتَاذُ؟",
+          "ar_plain": "ماذا قال الاستاذ",
+          "translit": "mādhā qāla l-ustādhu?",
+          "en": "What did the teacher say?",
+          "ur": "استاد نے کیا کہا؟"
+        },
+        {
+          "ar": "نَعَمْ، فَهِمْتَ الدَّرْسَ",
+          "ar_plain": "نعم فهمت الدرس",
+          "translit": "naʿam, fahimta d-darsa",
+          "en": "Yes, you understood the lesson.",
+          "ur": "جی ہاں، تمہیں سبق سمجھ آ گیا۔"
+        },
+        {
+          "ar": "أَيْنَ الدَّرْسُ؟",
+          "ar_plain": "اين الدرس",
+          "translit": "ayna d-darsu?",
+          "en": "Where is the lesson?",
+          "ur": "سبق کہاں ہے؟"
+        },
+        {
+          "ar": "نَعَمْ، فَهِمْتُ الدَّرْسَ",
+          "ar_plain": "نعم فهمت الدرس",
+          "translit": "naʿam, fahimtu d-darsa",
+          "en": "Yes, I understood the lesson.",
+          "ur": "جی ہاں، سبق سمجھ آ گیا۔"
+        }
+      ],
+      "correct_option_index": 3,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Confirm for yourself: نَعَمْ، فَهِمْتُ الدَّرْسَ.",
+        "ur": "اپنی طرف سے تصدیق کریں: نَعَمْ، فَهِمْتُ الدَّرْسَ۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch22-cl-e02",
+      "prompt": {
+        "ar": "لَا، لَمْ أَفْهَمْ",
+        "ar_plain": "لا لم افهم",
+        "translit": "lā, lam afham",
+        "en": "No, I did not understand.",
+        "ur": "نہیں، مجھے سمجھ نہیں آیا۔"
+      },
+      "options": [
+        {
+          "en": "Yes, I understood.",
+          "ur": "جی ہاں، سمجھ آ گیا۔"
+        },
+        {
+          "en": "Did you understand?",
+          "ur": "کیا سمجھ آیا؟"
+        },
+        {
+          "en": "No, I did not understand.",
+          "ur": "نہیں، مجھے سمجھ نہیں آیا۔"
+        },
+        {
+          "en": "Once again, please.",
+          "ur": "ایک بار پھر، براہِ کرم۔"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَا … لَمْ أَفْهَمْ: No, I did not understand.",
+        "ur": "لَا … لَمْ أَفْهَمْ: نہیں، مجھے سمجھ نہیں آیا۔"
+      }
+    },
+    {
+      "type": "CONVERSATION_BUILDER",
+      "id": "ch22-cl-e03",
+      "prompt_line": {
+        "ar": "مَاذَا قَالَ الْأُسْتَاذُ؟",
+        "ar_plain": "ماذا قال الاستاذ",
+        "translit": "mādhā qāla l-ustādhu?",
+        "en": "What did the teacher say?",
+        "ur": "استاد نے کیا کہا؟"
+      },
+      "response_mode": "BUILD",
+      "tiles": [
+        {
+          "ar": "قَالَ",
+          "ar_plain": "قال",
+          "translit": "qāla",
+          "en": "said",
+          "ur": "کہا"
+        },
+        {
+          "ar": "أَمْسِ",
+          "ar_plain": "امس",
+          "translit": "amsi",
+          "en": "yesterday",
+          "ur": "کل (گزرا ہوا)"
+        },
+        {
+          "ar": "الدَّرْسُ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsu",
+          "en": "the lesson",
+          "ur": "سبق"
+        },
+        {
+          "ar": "غَدًا",
+          "ar_plain": "غدا",
+          "translit": "ghadan",
+          "en": "tomorrow",
+          "ur": "کل (آنے والا)"
+        },
+        {
+          "ar": "الْأُسْتَاذُ",
+          "ar_plain": "الاستاذ",
+          "translit": "al-ustādhu",
+          "en": "the teacher",
+          "ur": "استاد"
+        }
+      ],
+      "correct_order": [
+        0,
+        4,
+        2,
+        3
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "قَالَ الْأُسْتَاذُ, then his words: الدَّرْسُ غَدًا.",
+        "ur": "قَالَ الْأُسْتَاذُ، پھر ان کے الفاظ: الدَّرْسُ غَدًا۔"
+      }
+    },
+    {
+      "type": "TAP_TRANSLATION",
+      "id": "ch22-cl-e04",
+      "prompt": {
+        "ar": "هَلْ فَهِمْتِ الدَّرْسَ؟",
+        "ar_plain": "هل فهمت الدرس",
+        "translit": "hal fahimti d-darsa?",
+        "en": "Did you understand the lesson? (to a woman)",
+        "ur": "کیا تمہیں سبق سمجھ آیا؟ (عورت سے)"
+      },
+      "options": [
+        {
+          "en": "Did you understand the lesson? (said to a woman)",
+          "ur": "کیا تمہیں سبق سمجھ آیا؟ (عورت سے)"
+        },
+        {
+          "en": "Did you all understand?",
+          "ur": "کیا آپ سب کو سمجھ آیا؟"
+        },
+        {
+          "en": "Yes, I understood the lesson.",
+          "ur": "جی ہاں، سبق سمجھ آ گیا۔"
+        },
+        {
+          "en": "Did you understand the lesson? (said to a man)",
+          "ur": "کیا تمہیں سبق سمجھ آیا؟ (مرد سے)"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "فَهِمْتِ, with a kasra: said to a woman.",
+        "ur": "فَهِمْتِ، زیر کے ساتھ: عورت سے کہا گیا۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch22-cl-e05",
+      "statement": {
+        "en": "You say this to ask someone to repeat.",
+        "ur": "یہ آپ کسی سے دہرانے کی درخواست کے لیے کہتے ہیں۔",
+        "ar_example": {
+          "ar": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+          "ar_plain": "مرة اخرى لو سمحت",
+          "translit": "marratan ukhrā, law samaḥta",
+          "en": "Once again, please.",
+          "ur": "ایک بار پھر، براہِ کرم۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَرَّةً أُخْرَى: once again.",
+        "ur": "مَرَّةً أُخْرَى: ایک بار پھر۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch22-cl-e06",
+      "left_column": [
+        {
+          "ar": "هَلْ فَهِمْتَ الدَّرْسَ؟",
+          "ar_plain": "هل فهمت الدرس",
+          "translit": "hal fahimta d-darsa?",
+          "en": "Did you understand the lesson?",
+          "ur": "کیا تمہیں سبق سمجھ آیا؟"
+        },
+        {
+          "ar": "نَعَمْ، فَهِمْتُ الدَّرْسَ",
+          "ar_plain": "نعم فهمت الدرس",
+          "translit": "naʿam, fahimtu d-darsa",
+          "en": "Yes, I understood the lesson.",
+          "ur": "جی ہاں، سبق سمجھ آ گیا۔"
+        },
+        {
+          "ar": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+          "ar_plain": "مرة اخرى لو سمحت",
+          "translit": "marratan ukhrā, law samaḥta",
+          "en": "Once again, please.",
+          "ur": "ایک بار پھر، براہِ کرم۔"
+        },
+        {
+          "ar": "مَاذَا قَالَ الْأُسْتَاذُ؟",
+          "ar_plain": "ماذا قال الاستاذ",
+          "translit": "mādhā qāla l-ustādhu?",
+          "en": "What did the teacher say?",
+          "ur": "استاد نے کیا کہا؟"
+        }
+      ],
+      "right_column": [
+        {
+          "en": "asks what the teacher said",
+          "ur": "پوچھتا ہے کہ استاد نے کیا کہا"
+        },
+        {
+          "en": "checks whether you understood",
+          "ur": "دیکھتا ہے کہ آپ کو سمجھ آیا یا نہیں"
+        },
+        {
+          "en": "asks for it again",
+          "ur": "دوبارہ کہنے کی درخواست کرتا ہے"
+        },
+        {
+          "en": "confirms that you understood",
+          "ur": "تصدیق کرتا ہے کہ آپ کو سمجھ آ گیا"
+        }
+      ],
+      "correct_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Each line does a different job in the conversation.",
+        "ur": "ہر سطر گفتگو میں الگ کام کرتی ہے۔"
+      }
+    }
+  ],
+  "spoken_phrases": {
+    "scene": {
+      "en": "After the lesson, a classmate who arrived late asks you about it.",
+      "ur": "سبق کے بعد، ایک ہم جماعت جو دیر سے آیا تھا، آپ سے اس کے بارے میں پوچھتا ہے۔"
+    },
+    "phrases": [
+      {
+        "id": "ch22-cl-p01",
+        "phrase": {
+          "ar": "هَلْ فَهِمْتَ الدَّرْسَ؟",
+          "ar_plain": "هل فهمت الدرس",
+          "translit": "hal fahimta d-darsa?",
+          "en": "Did you understand the lesson?",
+          "ur": "کیا تمہیں سبق سمجھ آیا؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch22-cl-p01.mp3",
+        "context": {
+          "en": "Your classmate arrived late and asks you.",
+          "ur": "آپ کا ہم جماعت دیر سے آیا ہے اور آپ سے پوچھتا ہے۔"
+        }
+      },
+      {
+        "id": "ch22-cl-p02",
+        "phrase": {
+          "ar": "نَعَمْ، فَهِمْتُ الدَّرْسَ",
+          "ar_plain": "نعم فهمت الدرس",
+          "translit": "naʿam, fahimtu d-darsa",
+          "en": "Yes, I understood the lesson.",
+          "ur": "جی ہاں، سبق سمجھ آ گیا۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch22-cl-p02.mp3",
+        "context": {
+          "en": "The fixed reply from Lesson 3.",
+          "ur": "سبق 3 کا مقررہ جواب۔"
+        }
+      },
+      {
+        "id": "ch22-cl-p03",
+        "phrase": {
+          "ar": "مَاذَا قَالَ الْأُسْتَاذُ؟",
+          "ar_plain": "ماذا قال الاستاذ",
+          "translit": "mādhā qāla l-ustādhu?",
+          "en": "What did the teacher say?",
+          "ur": "استاد نے کیا کہا؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch22-cl-p03.mp3"
+      },
+      {
+        "id": "ch22-cl-p04",
+        "phrase": {
+          "ar": "قَالَ الْأُسْتَاذُ: الدَّرْسُ غَدًا",
+          "ar_plain": "قال الاستاذ الدرس غدا",
+          "translit": "qāla l-ustādhu: ad-darsu ghadan",
+          "en": "The teacher said, “The lesson is tomorrow.”",
+          "ur": "استاد نے کہا: سبق کل ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch22-cl-p04.mp3",
+        "context": {
+          "en": "Report his words after قَالَ (Lesson 1); غَدًا from Chapter 16.",
+          "ur": "قَالَ کے بعد ان کے الفاظ بتائیں (سبق 1)؛ غَدًا باب 16 سے۔"
+        }
+      },
+      {
+        "id": "ch22-cl-p05",
+        "phrase": {
+          "ar": "لَا، لَمْ أَفْهَمْ",
+          "ar_plain": "لا لم افهم",
+          "translit": "lā, lam afham",
+          "en": "No, I did not understand.",
+          "ur": "نہیں، مجھے سمجھ نہیں آیا۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch22-cl-p05.mp3",
+        "context": {
+          "en": "Understand it when you hear it; you will not say it yet.",
+          "ur": "سنیں تو سمجھ لیں؛ ابھی آپ اسے نہیں کہیں گے۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch22-cl-p06",
+        "phrase": {
+          "ar": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+          "ar_plain": "مرة اخرى لو سمحت",
+          "translit": "marratan ukhrā, law samaḥta",
+          "en": "Once again, please.",
+          "ur": "ایک بار پھر، براہِ کرم۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch22-cl-p06.mp3",
+        "context": {
+          "en": "Heard in Chapter 10's lab; now you say it, to the teacher.",
+          "ur": "باب 10 کی لیب میں سنا تھا؛ اب آپ اسے استاد سے کہیں گے۔"
+        }
+      },
+      {
+        "id": "ch22-cl-p07",
+        "phrase": {
+          "ar": "هَلْ فَهِمْتِ الدَّرْسَ؟",
+          "ar_plain": "هل فهمت الدرس",
+          "translit": "hal fahimti d-darsa?",
+          "en": "Did you understand the lesson? (to a woman)",
+          "ur": "کیا تمہیں سبق سمجھ آیا؟ (عورت سے)"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch22-cl-p07.mp3",
+        "context": {
+          "en": "The same question asked to a woman: فَهِمْتِ.",
+          "ur": "یہی سوال عورت سے: فَهِمْتِ۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch22-cl-p08",
+        "phrase": {
+          "ar": "هَلْ فَهِمْتُمْ؟",
+          "ar_plain": "هل فهمتم",
+          "translit": "hal fahimtum?",
+          "en": "Did you all understand?",
+          "ur": "کیا آپ سب کو سمجھ آیا؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch22-cl-p08.mp3",
+        "context": {
+          "en": "The teacher asks the whole class (Chapter 10's lab).",
+          "ur": "استاد پوری جماعت سے پوچھتے ہیں (باب 10 کی لیب)۔"
+        },
+        "heard_only": true
+      },
+      {
+        "id": "ch22-cl-p09",
+        "phrase": {
+          "ar": "أَيْنَ الدَّرْسُ؟",
+          "ar_plain": "اين الدرس",
+          "translit": "ayna d-darsu?",
+          "en": "Where is the lesson?",
+          "ur": "سبق کہاں ہے؟"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch22-cl-p09.mp3"
+      },
+      {
+        "id": "ch22-cl-p10",
+        "phrase": {
+          "ar": "الدَّرْسُ فِي الْمَسْجِدِ",
+          "ar_plain": "الدرس في المسجد",
+          "translit": "ad-darsu fī l-masjidi",
+          "en": "The lesson is in the mosque.",
+          "ur": "سبق مسجد میں ہے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch22-cl-p10.mp3"
+      },
+      {
+        "id": "ch22-cl-p11",
+        "phrase": {
+          "ar": "جَزَاكَ اللهُ خَيْرًا",
+          "ar_plain": "جزاك الله خيرا",
+          "translit": "jazāka llāhu khayran",
+          "en": "May Allah reward you with good.",
+          "ur": "اللہ آپ کو اچھا بدلہ دے۔"
+        },
+        "audio_url": "https://pub-66b79e087e50463e9774c73769b4b8db.r2.dev/audio/phrases/ch22-cl-p11.mp3"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "A",
+        "phrase_id": "ch22-cl-p01"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch22-cl-p02"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch22-cl-p03"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch22-cl-p04"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch22-cl-p09"
+      },
+      {
+        "speaker": "B",
+        "phrase_id": "ch22-cl-p10"
+      },
+      {
+        "speaker": "A",
+        "phrase_id": "ch22-cl-p11"
+      }
+    ],
+    "lab": {
+      "title": {
+        "en": "Ask, Answer, Confirm",
+        "ur": "پوچھیں، جواب دیں، تصدیق کریں"
+      },
+      "mission": {
+        "en": "Now it is the teacher asking. Ask for it again when you miss it, report what he said, and say where tomorrow's lesson is.",
+        "ur": "اب استاد پوچھ رہے ہیں۔ بات رہ جائے تو دوبارہ کہنے کو کہیں، بتائیں انہوں نے کیا کہا، اور بتائیں کل کا سبق کہاں ہے۔"
+      },
+      "toolkit": [
+        "قَالَ",
+        "فَهِمْتُ",
+        "نَعَمْ",
+        "مَرَّةً أُخْرَى",
+        "لَوْ سَمَحْتَ",
+        "الدَّرْسُ",
+        "غَدًا"
+      ],
+      "goals": [
+        {
+          "en": "Ask for it again politely",
+          "ur": "ادب سے دوبارہ کہنے کو کہیں"
+        },
+        {
+          "en": "Report what someone said",
+          "ur": "بتائیں کسی نے کیا کہا"
+        },
+        {
+          "en": "Answer where something is",
+          "ur": "بتائیں کوئی چیز کہاں ہے"
+        }
+      ],
+      "pattern": {
+        "after_phrase_id": "ch22-cl-p04",
+        "items": [
+          {
+            "ar": "قَالَ الْأُسْتَاذُ: …",
+            "meaning": {
+              "en": "the teacher said: … (his words follow)",
+              "ur": "استاد نے کہا: … (ان کے الفاظ بعد میں)"
+            },
+            "source": {
+              "en": "Chapter 22, Lesson 1",
+              "ur": "باب 22، سبق 1"
+            }
+          },
+          {
+            "ar": "فَهِمْتَ؟ — فَهِمْتُ",
+            "meaning": {
+              "en": "you understood? — I understood",
+              "ur": "تمہیں سمجھ آیا؟ — سمجھ آ گیا"
+            },
+            "source": {
+              "en": "Chapter 22, Lesson 3",
+              "ur": "باب 22، سبق 3"
+            }
+          },
+          {
+            "ar": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+            "meaning": {
+              "en": "once again, please",
+              "ur": "ایک بار پھر، براہِ کرم"
+            },
+            "source": {
+              "en": "Chapter 10 lab, now spoken",
+              "ur": "باب 10 کی لیب، اب بولا جائے"
+            }
+          }
+        ],
+        "note": {
+          "en": "Report someone's words after قَالَ; confirm with فَهِمْتُ, or ask politely for it again.",
+          "ur": "قَالَ کے بعد کسی کے الفاظ بتائیں؛ فَهِمْتُ سے تصدیق کریں، یا ادب سے دوبارہ کہنے کو کہیں۔"
+        }
+      },
+      "shadow_phrase_ids": [
+        "ch22-cl-p02",
+        "ch22-cl-p04",
+        "ch22-cl-p06",
+        "ch22-cl-p10"
+      ],
+      "mission_turns": [
+        {
+          "prompt_phrase_id": "ch22-cl-p01",
+          "goal_index": 0,
+          "cue": {
+            "en": "The teacher asks you. This time you did not understand.",
+            "ur": "استاد آپ سے پوچھتے ہیں۔ اس بار آپ کو سمجھ نہیں آیا۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "نَعَمْ، فَهِمْتُ الدَّرْسَ",
+              "ar_plain": "نعم فهمت الدرس",
+              "translit": "naʿam, fahimtu d-darsa",
+              "en": "Yes, I understood the lesson.",
+              "ur": "جی ہاں، سبق سمجھ آ گیا۔"
+            },
+            {
+              "ar": "هَلْ فَهِمْتَ الدَّرْسَ؟",
+              "ar_plain": "هل فهمت الدرس",
+              "translit": "hal fahimta d-darsa?",
+              "en": "Did you understand the lesson?",
+              "ur": "کیا تمہیں سبق سمجھ آیا؟"
+            },
+            {
+              "ar": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ",
+              "ar_plain": "مرة اخرى لو سمحت",
+              "translit": "marratan ukhrā, law samaḥta",
+              "en": "Once again, please.",
+              "ur": "ایک بار پھر، براہِ کرم۔"
+            }
+          ],
+          "correct_option_index": 2
+        },
+        {
+          "prompt_phrase_id": "ch22-cl-p03",
+          "goal_index": 1,
+          "cue": {
+            "en": "The teacher said the book is new.",
+            "ur": "استاد نے کہا کہ کتاب نئی ہے۔"
+          },
+          "response_mode": "BUILD",
+          "tiles": [
+            {
+              "ar": "قَالَتْ",
+              "ar_plain": "قالت",
+              "translit": "qālat",
+              "en": "she said",
+              "ur": "اس نے کہا (عورت)"
+            },
+            {
+              "ar": "جَدِيدٌ",
+              "ar_plain": "جديد",
+              "translit": "jadīdun",
+              "en": "new",
+              "ur": "نئی"
+            },
+            {
+              "ar": "قَالَ",
+              "ar_plain": "قال",
+              "translit": "qāla",
+              "en": "said",
+              "ur": "کہا"
+            },
+            {
+              "ar": "الْكِتَابُ",
+              "ar_plain": "الكتاب",
+              "translit": "al-kitābu",
+              "en": "the book",
+              "ur": "کتاب"
+            },
+            {
+              "ar": "الْأُسْتَاذُ",
+              "ar_plain": "الاستاذ",
+              "translit": "al-ustādhu",
+              "en": "the teacher",
+              "ur": "استاد"
+            }
+          ],
+          "correct_order": [
+            2,
+            4,
+            3,
+            1
+          ]
+        },
+        {
+          "prompt_phrase_id": "ch22-cl-p09",
+          "goal_index": 2,
+          "cue": {
+            "en": "Tomorrow's lesson is in the school.",
+            "ur": "کل کا سبق اسکول میں ہے۔"
+          },
+          "response_mode": "PICK",
+          "options": [
+            {
+              "ar": "الدَّرْسُ فِي الْمَدْرَسَةِ",
+              "ar_plain": "الدرس في المدرسة",
+              "translit": "ad-darsu fī l-madrasati",
+              "en": "The lesson is in the school.",
+              "ur": "سبق اسکول میں ہے۔"
+            },
+            {
+              "ar": "نَعَمْ، فَهِمْتُ الدَّرْسَ",
+              "ar_plain": "نعم فهمت الدرس",
+              "translit": "naʿam, fahimtu d-darsa",
+              "en": "Yes, I understood the lesson.",
+              "ur": "جی ہاں، سبق سمجھ آ گیا۔"
+            },
+            {
+              "ar": "الدَّرْسُ غَدًا",
+              "ar_plain": "الدرس غدا",
+              "translit": "ad-darsu ghadan",
+              "en": "The lesson is tomorrow.",
+              "ur": "سبق کل ہے۔"
+            }
+          ],
+          "correct_option_index": 0
+        }
+      ],
+      "answer_it": {
+        "turns": [
+          {
+            "prompt_phrase_id": "ch22-cl-p01",
+            "cue": {
+              "en": "You understood it.",
+              "ur": "آپ کو سمجھ آ گیا۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "نَعَمْ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "فَهِمْتُ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الدَّرْسَ"
+              }
+            ],
+            "model_phrase_id": "ch22-cl-p02",
+            "tip": {
+              "en": "نَعَمْ، then فَهِمْتُ الدَّرْسَ.",
+              "ur": "نَعَمْ، پھر فَهِمْتُ الدَّرْسَ۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "ch22-cl-p03",
+            "cue": {
+              "en": "He said the lesson is tomorrow.",
+              "ur": "انہوں نے کہا کہ سبق کل ہے۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "قَالَ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الْأُسْتَاذُ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الدَّرْسُ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "غَدًا"
+              }
+            ],
+            "model_phrase_id": "ch22-cl-p04",
+            "tip": {
+              "en": "قَالَ الْأُسْتَاذُ, then his words.",
+              "ur": "قَالَ الْأُسْتَاذُ، پھر ان کے الفاظ۔"
+            }
+          },
+          {
+            "prompt_phrase_id": "ch22-cl-p09",
+            "cue": {
+              "en": "It is in the mosque.",
+              "ur": "یہ مسجد میں ہے۔"
+            },
+            "slots": [
+              {
+                "kind": "WORD",
+                "ar": "الدَّرْسُ"
+              },
+              {
+                "kind": "WORD",
+                "ar": "الْمَسْجِدِ"
+              }
+            ],
+            "model_phrase_id": "ch22-cl-p10",
+            "tip": {
+              "en": "أَيْنَ wants a place: فِي الْمَسْجِدِ.",
+              "ur": "أَيْنَ جگہ چاہتا ہے: فِي الْمَسْجِدِ۔"
+            }
+          }
+        ]
+      },
+      "can_do": [
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Say you understood",
+            "ur": "بتانا کہ سمجھ آ گیا"
+          },
+          "ar": "نَعَمْ، فَهِمْتُ الدَّرْسَ"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Ask for it again",
+            "ur": "دوبارہ کہنے کو کہنا"
+          },
+          "ar": "مَرَّةً أُخْرَى، لَوْ سَمَحْتَ"
+        },
+        {
+          "kind": "SAY",
+          "label": {
+            "en": "Report what someone said",
+            "ur": "بتانا کہ کسی نے کیا کہا"
+          },
+          "ar": "قَالَ الْأُسْتَاذُ: الدَّرْسُ غَدًا"
+        },
+        {
+          "kind": "UNDERSTAND",
+          "label": {
+            "en": "Understand 'I did not understand'",
+            "ur": "'مجھے سمجھ نہیں آیا' سمجھنا"
+          },
+          "ar": "لَا، لَمْ أَفْهَمْ"
+        }
+      ]
+    }
+  },
+  "close": {
+    "noor_message": {
+      "en": "You confirmed you understood, reported the teacher's words, and asked politely for it again.",
+      "ur": "آپ نے سمجھ آنے کی تصدیق کی، استاد کے الفاظ بتائے، اور ادب سے دوبارہ کہنے کو کہا۔"
+    }
+  }
+}

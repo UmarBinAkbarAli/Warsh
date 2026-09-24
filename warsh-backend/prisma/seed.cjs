@@ -158,20 +158,29 @@ const ch20L02Content     = require("./fixtures/chapter-20-lesson-02.json");
 const ch20L03Content     = require("./fixtures/chapter-20-lesson-03.json");
 const ch20L04Content     = require("./fixtures/chapter-20-lesson-04.json");
 const ch20L05Content     = require("./fixtures/chapter-20-lesson-05.json");
+const ch20L06Content     = require("./fixtures/chapter-20-lesson-06.json");           // ch20-l06, new application lesson, order 6
+const ch20L07Content     = require("./fixtures/chapter-20-lesson-07-review.json");    // ch20-l07, new review, order 7
+const ch20TestContent    = require("./fixtures/chapter-20-lesson-08-final-test.json"); // ch20-test, order 8
 const ch21L01Content     = require("./fixtures/chapter-21-lesson-01.json");
 const ch21L02Content     = require("./fixtures/chapter-21-lesson-02.json");
 const ch21L03Content     = require("./fixtures/chapter-21-lesson-03.json");
 const ch21L04Content     = require("./fixtures/chapter-21-lesson-04.json");
-const ch21L05Content     = require("./fixtures/chapter-21-lesson-05.json");
+const ch21Cl08Content    = require("./fixtures/chapter-21-lesson-05-conversation-lab.json"); // ch21-cl08, Conversation Lab, order 5
+const ch21L05Content     = require("./fixtures/chapter-21-lesson-06-review.json");    // ch21-l05, review, order 6
+const ch21TestContent    = require("./fixtures/chapter-21-lesson-07-final-test.json"); // ch21-test, order 7
 const ch22L01Content     = require("./fixtures/chapter-22-lesson-01.json");
 const ch22L02Content     = require("./fixtures/chapter-22-lesson-02.json");
 const ch22L03Content     = require("./fixtures/chapter-22-lesson-03.json");
 const ch22L04Content     = require("./fixtures/chapter-22-lesson-04.json");
-const ch22L05Content     = require("./fixtures/chapter-22-lesson-05.json");
+const ch22Cl09Content    = require("./fixtures/chapter-22-lesson-05-conversation-lab.json"); // ch22-cl09, Conversation Lab, order 5
+const ch22L05Content     = require("./fixtures/chapter-22-lesson-06-review.json");    // ch22-l05, review, order 6
+const ch22TestContent    = require("./fixtures/chapter-22-lesson-07-final-test.json"); // ch22-test, order 7
 const ch23L01Content     = require("./fixtures/chapter-23-lesson-01.json");
 const ch23L02Content     = require("./fixtures/chapter-23-lesson-02.json");
 const ch23L03Content     = require("./fixtures/chapter-23-lesson-03.json");
 const ch23L04Content     = require("./fixtures/chapter-23-lesson-04.json");
+const ch23L05Content     = require("./fixtures/chapter-23-lesson-05-review.json");    // ch23-l05, new review, order 5
+const ch23TestContent    = require("./fixtures/chapter-23-lesson-06-final-test.json"); // ch23-test, order 6
 const ch24L01Content     = require("./fixtures/chapter-24-lesson-01.json");
 const ch24L02Content     = require("./fixtures/chapter-24-lesson-02.json");
 const ch24L03Content     = require("./fixtures/chapter-24-lesson-03.json");
@@ -924,29 +933,40 @@ async function main() {
     { id: "ch19-l05", chapterId: ch19Id, order: 5, title: "Possession in Quranic Context", titleAr: "الْمِلْكِيَّةُ فِي السِّيَاقِ الْقُرْآنِيِّ", template: "STANDARD", xpReward: ch19L05Content._meta?.xp_reward ?? 10, content: ch19L05Content },
     { id: "ch19-l06", chapterId: ch19Id, order: 6, title: "Chapter 19 Review", titleAr: "مُرَاجَعَةُ الْفَصْلِ التَّاسِعَ عَشَرَ", template: "REVIEW", xpReward: ch19L06Content._meta?.xp_reward ?? 20, content: ch19L06Content },
     { id: "ch19-test", chapterId: ch19Id, order: 7, title: "Chapter 19 Final Test", titleAr: "اخْتِبَارُ الْفَصْلِ التَّاسِعَ عَشَرَ", template: "REVIEW", xpReward: ch19TestContent._meta?.xp_reward ?? 20, content: ch19TestContent },
+    // Chapters 20–23 — Docs/proposals/chapter-20..23-content-proposal.md (2026-09-24). Existing IDs keep their rows; the reviews
+    // ch21-l05 / ch22-l05 move to order 6 behind the new Conversation Labs; every chapter gains a final test.
     // Chapter 20
-    { id: "ch20-l01", chapterId: ch20Id, order: 1, title: "Our — نَا (our)",                       titleAr: "رَبَّنَا — نَا الْجَمْعِيَّة",              template: "STANDARD",        xpReward: ch20L01Content._meta?.xp_reward       ?? 10, content: ch20L01Content },
-    { id: "ch20-l02", chapterId: ch20Id, order: 2, title: "Your-pl — كُمْ (your-pl)",              titleAr: "رَبَّكُمْ — كُمْ لِلْجَمَاعَة",           template: "STANDARD",        xpReward: ch20L02Content._meta?.xp_reward       ?? 10, content: ch20L02Content },
-    { id: "ch20-l03", chapterId: ch20Id, order: 3, title: "Their — هُمْ and هُنَّ",               titleAr: "رَبَّهُمْ وَرَبَّهُنَّ",                  template: "STANDARD",        xpReward: ch20L03Content._meta?.xp_reward       ?? 10, content: ch20L03Content },
-    { id: "ch20-l04", chapterId: ch20Id, order: 4, title: "Singular vs Plural Contrast",             titleAr: "الْمُفْرَدُ وَالْجَمْعُ — الْفَرْقُ",     template: "STANDARD",        xpReward: ch20L04Content._meta?.xp_reward       ?? 10, content: ch20L04Content },
-    { id: "ch20-l05", chapterId: ch20Id, order: 5, title: "رَبَّنَا in Al-Fatiha + Al-Ikhlas",     titleAr: "رَبَّنَا فِي الْفَاتِحَةِ وَالْإِخْلَاص", template: "STANDARD",        xpReward: ch20L05Content._meta?.xp_reward       ?? 10, content: ch20L05Content },
+    { id: "ch20-l01", chapterId: ch20Id, order: 1, title: "Our: ـنَا on a Noun", titleAr: "رَبَّنَا وَذُنُوبَنَا", template: "STANDARD", xpReward: ch20L01Content._meta?.xp_reward ?? 10, content: ch20L01Content },
+    { id: "ch20-l02", chapterId: ch20Id, order: 2, title: "Your, to a Group: ـكُمْ", titleAr: "رَبَّكُمُ", template: "STANDARD", xpReward: ch20L02Content._meta?.xp_reward ?? 10, content: ch20L02Content },
+    { id: "ch20-l03", chapterId: ch20Id, order: 3, title: "Their: ـهُمْ", titleAr: "أَجْرُهُمْ عِنْدَ رَبِّهِمْ", template: "STANDARD", xpReward: ch20L03Content._meta?.xp_reward ?? 10, content: ch20L03Content },
+    { id: "ch20-l04", chapterId: ch20Id, order: 4, title: "Your, to a Group of Women: ـكُنَّ", titleAr: "بُيُوتُكُنَّ", template: "STANDARD", xpReward: ch20L04Content._meta?.xp_reward ?? 10, content: ch20L04Content },
+    { id: "ch20-l05", chapterId: ch20Id, order: 5, title: "Their, a Group of Women: ـهُنَّ", titleAr: "رِزْقُهُنَّ وَكِسْوَتُهُنَّ", template: "STANDARD", xpReward: ch20L05Content._meta?.xp_reward ?? 10, content: ch20L05Content },
+    { id: "ch20-l06", chapterId: ch20Id, order: 6, title: "Who Belongs to Whom?", titleAr: "الِاسْمُ وَصَاحِبُهُ", template: "STANDARD", xpReward: ch20L06Content._meta?.xp_reward ?? 10, content: ch20L06Content },
+    { id: "ch20-l07", chapterId: ch20Id, order: 7, title: "Chapter 20 Review", titleAr: "مُرَاجَعَةُ الْفَصْلِ الْعِشْرِينَ", template: "REVIEW", xpReward: ch20L07Content._meta?.xp_reward ?? 20, content: ch20L07Content },
+    { id: "ch20-test", chapterId: ch20Id, order: 8, title: "Chapter 20 Final Test", titleAr: "اخْتِبَارُ الْفَصْلِ الْعِشْرِينَ", template: "REVIEW", xpReward: ch20TestContent._meta?.xp_reward ?? 20, content: ch20TestContent },
     // Chapter 21
-    { id: "ch21-l01", chapterId: ch21Id, order: 1, title: "Places — مَدِينَة، قَرْيَة، سُوق",      titleAr: "الْمَكَانُ — مَدِينَةٌ وَقَرْيَةٌ",     template: "STANDARD",        xpReward: ch21L01Content._meta?.xp_reward       ?? 10, content: ch21L01Content },
-    { id: "ch21-l02", chapterId: ch21Id, order: 2, title: "Directional Prepositions — إِلَى، مِنْ، فِي", titleAr: "حُرُوفُ الْجِهَةِ",                   template: "STANDARD",        xpReward: ch21L02Content._meta?.xp_reward       ?? 10, content: ch21L02Content },
-    { id: "ch21-l03", chapterId: ch21Id, order: 3, title: "Movement Verbs — ذَهَبَ، خَرَجَ، دَخَلَ", titleAr: "أَفْعَالُ الْحَرَكَةِ",                 template: "STANDARD",        xpReward: ch21L03Content._meta?.xp_reward       ?? 10, content: ch21L03Content },
-    { id: "ch21-l04", chapterId: ch21Id, order: 4, title: "Position Words — أَمَام، خَلْف، فَوْق، تَحْت", titleAr: "أَسْمَاءُ الْمَوَاضِعِ",             template: "STANDARD",        xpReward: ch21L04Content._meta?.xp_reward       ?? 10, content: ch21L04Content },
-    { id: "ch21-l05", chapterId: ch21Id, order: 5, title: "Chapter 21 Review",                     titleAr: "مُرَاجَعَة الْفَصْل الْحَادِي وَالْعِشْرِينَ", template: "REVIEW",      xpReward: ch21L05Content._meta?.xp_reward       ?? 5,  content: ch21L05Content },
+    { id: "ch21-l01", chapterId: ch21Id, order: 1, title: "The Journey: From Where, To Where?", titleAr: "مِنْ أَيْنَ وَإِلَى أَيْنَ؟", template: "STANDARD", xpReward: ch21L01Content._meta?.xp_reward ?? 10, content: ch21L01Content },
+    { id: "ch21-l02", chapterId: ch21Id, order: 2, title: "Which Movement Happened?", titleAr: "ذَهَبَ، خَرَجَ، دَخَلَ، رَجَعَ", template: "STANDARD", xpReward: ch21L02Content._meta?.xp_reward ?? 10, content: ch21L02Content },
+    { id: "ch21-l03", chapterId: ch21Id, order: 3, title: "Find It by a Landmark", titleAr: "بَيْنَ … وَ …", template: "STANDARD", xpReward: ch21L03Content._meta?.xp_reward ?? 10, content: ch21L03Content },
+    { id: "ch21-l04", chapterId: ch21Id, order: 4, title: "Quran Reading: Entering and Leaving", titleAr: "دَخَلَ وَخَرَجَ فِي الْقُرْآنِ", template: "STANDARD", xpReward: ch21L04Content._meta?.xp_reward ?? 10, content: ch21L04Content },
+    { id: "ch21-cl08", chapterId: ch21Id, order: 5, title: "Finding Someone — Conversation Lab", titleAr: "أَيْنَ أَحْمَدُ؟", template: "SPOKEN_PHRASES", xpReward: ch21Cl08Content._meta?.xp_reward ?? 15, content: ch21Cl08Content },
+    { id: "ch21-l05", chapterId: ch21Id, order: 6, title: "Chapter 21 Review", titleAr: "مُرَاجَعَةُ الْفَصْلِ الْحَادِي وَالْعِشْرِينَ", template: "REVIEW", xpReward: ch21L05Content._meta?.xp_reward ?? 20, content: ch21L05Content },
+    { id: "ch21-test", chapterId: ch21Id, order: 7, title: "Chapter 21 Final Test", titleAr: "اخْتِبَارُ الْفَصْلِ الْحَادِي وَالْعِشْرِينَ", template: "REVIEW", xpReward: ch21TestContent._meta?.xp_reward ?? 20, content: ch21TestContent },
     // Chapter 22
-    { id: "ch22-l01", chapterId: ch22Id, order: 1, title: "قَالَ — Speaker and Speech",            titleAr: "قَالَ — الْمُتَكَلِّمُ وَكَلَامُهُ",       template: "STANDARD",        xpReward: ch22L01Content._meta?.xp_reward       ?? 10, content: ch22L01Content },
-    { id: "ch22-l02", chapterId: ch22Id, order: 2, title: "سَأَلَ — Asking Questions",             titleAr: "سَأَلَ — إِطْرَاحُ الْأَسْئِلَة",          template: "STANDARD",        xpReward: ch22L02Content._meta?.xp_reward       ?? 10, content: ch22L02Content },
-    { id: "ch22-l03", chapterId: ch22Id, order: 3, title: "أَجَابَ — Answering",                   titleAr: "أَجَابَ — الرَّدُّ وَالْإِجَابَة",         template: "STANDARD",        xpReward: ch22L03Content._meta?.xp_reward       ?? 10, content: ch22L03Content },
-    { id: "ch22-l04", chapterId: ch22Id, order: 4, title: "Full Conversation",                     titleAr: "الْحِوَارُ الْكَامِلُ",                  template: "STANDARD",        xpReward: ch22L04Content._meta?.xp_reward       ?? 10, content: ch22L04Content },
-    { id: "ch22-l05", chapterId: ch22Id, order: 5, title: "Chapter 22 Review",                     titleAr: "مُرَاجَعَة الْفَصْل الثَّانِي وَالْعِشْرِينَ", template: "REVIEW",    xpReward: ch22L05Content._meta?.xp_reward       ?? 5,  content: ch22L05Content },
+    { id: "ch22-l01", chapterId: ch22Id, order: 1, title: "Who Said What?", titleAr: "مَنْ قَالَ؟", template: "STANDARD", xpReward: ch22L01Content._meta?.xp_reward ?? 10, content: ch22L01Content },
+    { id: "ch22-l02", chapterId: ch22Id, order: 2, title: "Who Asked, and What?", titleAr: "مَنْ سَأَلَ؟", template: "STANDARD", xpReward: ch22L02Content._meta?.xp_reward ?? 10, content: ch22L02Content },
+    { id: "ch22-l03", chapterId: ch22Id, order: 3, title: "An Answer That Fits", titleAr: "الْجَوَابُ الْمُنَاسِبُ", template: "STANDARD", xpReward: ch22L03Content._meta?.xp_reward ?? 10, content: ch22L03Content },
+    { id: "ch22-l04", chapterId: ch22Id, order: 4, title: "Follow the Full Exchange", titleAr: "الْحِوَارُ كُلُّهُ", template: "STANDARD", xpReward: ch22L04Content._meta?.xp_reward ?? 10, content: ch22L04Content },
+    { id: "ch22-cl09", chapterId: ch22Id, order: 5, title: "Ask, Answer, Confirm — Conversation Lab", titleAr: "هَلْ فَهِمْتَ الدَّرْسَ؟", template: "SPOKEN_PHRASES", xpReward: ch22Cl09Content._meta?.xp_reward ?? 15, content: ch22Cl09Content },
+    { id: "ch22-l05", chapterId: ch22Id, order: 6, title: "Chapter 22 Review", titleAr: "مُرَاجَعَةُ الْفَصْلِ الثَّانِي وَالْعِشْرِينَ", template: "REVIEW", xpReward: ch22L05Content._meta?.xp_reward ?? 20, content: ch22L05Content },
+    { id: "ch22-test", chapterId: ch22Id, order: 7, title: "Chapter 22 Final Test", titleAr: "اخْتِبَارُ الْفَصْلِ الثَّانِي وَالْعِشْرِينَ", template: "REVIEW", xpReward: ch22TestContent._meta?.xp_reward ?? 20, content: ch22TestContent },
     // Chapter 23
-    { id: "ch23-l01", chapterId: ch23Id, order: 1, title: "Idafa + Demonstratives Integration",    titleAr: "الْإِضَافَةُ وَإِشَارَةُ الْمَفْهُومِ", template: "STANDARD",        xpReward: ch23L01Content._meta?.xp_reward       ?? 10, content: ch23L01Content },
-    { id: "ch23-l02", chapterId: ch23Id, order: 2, title: "Relative + Attached Pronouns Integration", titleAr: "الْمَوْصُولُ وَالضَّمِيرُ",             template: "STANDARD",        xpReward: ch23L02Content._meta?.xp_reward       ?? 10, content: ch23L02Content },
-    { id: "ch23-l03", chapterId: ch23Id, order: 3, title: "Verbs + Prepositions + Plurals",       titleAr: "الْفِعْلُ وَالْحَرْفُ وَالْجَمْعُ",      template: "STANDARD",        xpReward: ch23L03Content._meta?.xp_reward       ?? 10, content: ch23L03Content },
-    { id: "ch23-l04", chapterId: ch23Id, order: 4, title: "Full Review: Al-Falaq toward Al-Ikhlas", titleAr: "الْفَلَقُ وَالْإِخْلَاصُ",              template: "STANDARD",        xpReward: ch23L04Content._meta?.xp_reward       ?? 10, content: ch23L04Content },
+    { id: "ch23-l01", chapterId: ch23Id, order: 1, title: "Pointing, Owning and Asking", titleAr: "مَا تِلْكَ بِيَمِينِكَ؟", template: "STANDARD", xpReward: ch23L01Content._meta?.xp_reward ?? 10, content: ch23L01Content },
+    { id: "ch23-l02", chapterId: ch23Id, order: 2, title: "Who Is Described, and Whose Is It?", titleAr: "الْمَوْصُولُ وَالضَّمِيرُ", template: "STANDARD", xpReward: ch23L02Content._meta?.xp_reward ?? 10, content: ch23L02Content },
+    { id: "ch23-l03", chapterId: ch23Id, order: 3, title: "Read the Small Scene", titleAr: "قِرَاءَةُ الْمَشْهَدِ", template: "STANDARD", xpReward: ch23L03Content._meta?.xp_reward ?? 10, content: ch23L03Content },
+    { id: "ch23-l04", chapterId: ch23Id, order: 4, title: "Quran Reading Across Real Ayat", titleAr: "قِرَاءَةُ الْآيَاتِ", template: "STANDARD", xpReward: ch23L04Content._meta?.xp_reward ?? 10, content: ch23L04Content },
+    { id: "ch23-l05", chapterId: ch23Id, order: 5, title: "Book 2 Mixed Review", titleAr: "مُرَاجَعَةُ الْكِتَابِ الثَّانِي", template: "REVIEW", xpReward: ch23L05Content._meta?.xp_reward ?? 20, content: ch23L05Content },
+    { id: "ch23-test", chapterId: ch23Id, order: 6, title: "Chapter 23 Final Test", titleAr: "اخْتِبَارُ الْفَصْلِ الثَّالِثِ وَالْعِشْرِينَ", template: "REVIEW", xpReward: ch23TestContent._meta?.xp_reward ?? 20, content: ch23TestContent },
     // Chapter 24
     { id: "ch24-l01", chapterId: ch24Id, order: 1, title: "The Particle إِنَّ — Indeed, Truly",       titleAr: "إِنَّ — حَرْفُ التَّوْكِيدِ",              template: "STANDARD",        xpReward: ch24L01Content._meta?.xp_reward       ?? 10, content: ch24L01Content },
     { id: "ch24-l02", chapterId: ch24Id, order: 2, title: "إِنَّ Takes Accusative — نصب",          titleAr: "إِنَّ تَنْصِبُ الْخَبَرَ",               template: "STANDARD",        xpReward: ch24L02Content._meta?.xp_reward       ?? 10, content: ch24L02Content },
