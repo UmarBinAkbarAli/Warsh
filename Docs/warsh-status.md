@@ -656,10 +656,11 @@ Everything below this list is either done and verified, or one of these:
    proposal requires it before promotion), and Warsh Studio content-review
    pass in Urdu.
    **Chapters 15–19 (`Docs/proposals/chapter-15..19-content-proposal.md`) are
-   built and staging-verified 2026-09-23; production promotion is pending the
-   owner's go-ahead** (`npm run content:promote-chapter-fifteen -- --apply`,
-   likewise `-sixteen` … `-nineteen`, all one script,
-   `scripts/promote-chapters-15-19.cjs`, then `content:baseline`; no
+   built, staging-verified 2026-09-23 and promoted to production 2026-09-24**
+   (`content:check` clean first — 0 DB-ahead, 0 conflicts; dry run then
+   `--apply` for 15–19: 28 lessons updated in place, 5 `chNN-test` created,
+   progress rows untouched; `content:baseline` → 441/441 in sync; live API
+   serves the new lessons) via `scripts/promote-chapters-15-19.cjs`; no
    `content:backfill-new-lessons` — the `addedAt` trigger keeps finished
    learners unlocked). 15 "These and Those in Quranic Context" and 16 "School
    Life in Quranic Arabic" have four lessons, a review and a new `chNN-test`
@@ -682,7 +683,8 @@ Everything below this list is either done and verified, or one of these:
    وَقَبَ (113:3) Ch19 L2, حَاسِدٍ / حَسَدَ (113:5) Ch19 L3 — so the Ch19 review
    adds nothing new (it recalls 113:3 and 113:5) and the chapter test has none,
    as the proposal asked. The Arabic editor still has to confirm the مَا ↔
-   الَّذِي and النَّفَّاثَاتِ ↔ الَّتِي framings. Re-staged 2026-09-23 (Ch18 + Ch19
+   الَّذِي and النَّفَّاثَاتِ ↔ الَّتِي framings (owner review doc, Claude Docs
+   "Al-Falaq comparisons: Arabic editor review", 2026-09-24). Re-staged 2026-09-23 (Ch18 + Ch19
    applied; validators, Urdu audit, lesson-schema tests pass; 0 lesson clips
    missing; API serves the new lessons). `chapter-19-lesson-01.json`
    left the legacy reveal-defect list (its index is fixed). Verified:
