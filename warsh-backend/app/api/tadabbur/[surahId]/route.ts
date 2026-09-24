@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
-import { computeWordStates } from "../../../../lib/tadabbur";
+import { computeSurahState, computeWordStates } from "../../../../lib/tadabbur";
 import { getUserSubscriptionState, requiresSubscription } from "../../../../lib/subscription";
 
 export async function GET(request: Request, { params }: { params: { surahId: string } }) {
@@ -27,6 +27,27 @@ export async function GET(request: Request, { params }: { params: { surahId: str
   );
 
   const ayatWithStates = computeWordStates(surah.ayatData as any, masteredWordIds);
+  const state = computeSurahState(surah.ayatData as any, masteredWordIds);
+
+  // Meaning and root for every linked word, so the word sheet can teach the
+  // word rather than only name its state (finding H8).
+  const linkedIds = [...new Set(ayatWithStates.flatMap((ayah) => ayah.words.map((w) => w.vocabId).filter((id): id is string => Boolean(id))))];
+  const linkedWords = linkedIds.length
+    ? await prisma.vocabularyWord.findMany({
+        where: { id: { in: linkedIds } },
+        select: { id: true, translationEn: true, translationUr: true, rootLetters: true },
+      })
+    : [];
+  const wordInfo = new Map(linkedWords.map((w) => [w.id, w]));
+  const ayat = ayatWithStates.map((ayah) => ({
+    ...ayah,
+    words: ayah.words.map((w) => {
+      const info = w.vocabId ? wordInfo.get(w.vocabId) : undefined;
+      return info
+        ? { ...w, meaningEn: info.translationEn, meaningUr: info.translationUr, root: info.rootLetters }
+        : w;
+    }),
+  }));
 
   return NextResponse.json({
     data: {
@@ -38,8 +59,12 @@ export async function GET(request: Request, { params }: { params: { surahId: str
         nameEn: surah.nameEn,
         meaningEn: surah.meaningEn,
         totalAyat: surah.totalAyat,
+        comprehensionPercent: state.comprehensionPercent,
+        vocabLinkedWords: state.vocabLinkedWords,
+        masteredWords: state.masteredWords,
+        completedAt: progress?.completedAt ?? null,
       },
-      ayat: ayatWithStates,
+      ayat,
       completedAt: progress?.completedAt ?? null,
     },
   });

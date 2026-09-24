@@ -11,6 +11,7 @@ interface SeedAyah {
   ayahNumber: number;
   arabic: string;
   translationEn: string;
+  translationUr?: string | null;
   words: SeedWord[];
 }
 
@@ -22,6 +23,7 @@ export interface AyahWithStates {
   ayahNumber: number;
   arabic: string;
   translationEn: string;
+  translationUr: string | null;
   words: WordWithState[];
 }
 
@@ -33,6 +35,8 @@ export function computeWordStates(
     ayahNumber: ayah.ayahNumber,
     arabic: ayah.arabic,
     translationEn: ayah.translationEn,
+    // The app picks this when meanings are Urdu; it was dropped here before.
+    translationUr: ayah.translationUr ?? null,
     words: ayah.words.map((w) => {
       let state: WordState = "sage";
       if (w.vocabId) {

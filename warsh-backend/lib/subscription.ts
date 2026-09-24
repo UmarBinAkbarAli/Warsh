@@ -119,6 +119,7 @@ export function getSubscriptionState(user: UserSub) {
     // Payment is being retried; access retained for now.
     inGracePeriod: storeState === "in_grace" && subscriptionActive,
     trialDaysRemaining: Math.max(0, trialDaysRemaining),
+    trialExpiresAt: user.trialExpiresAt,
     trialActive,
     subscriptionActive,
     hasAccess,

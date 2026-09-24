@@ -152,7 +152,7 @@ export async function POST(request: Request) {
   await prisma.chatMessage.create({ data: { userId, role: "ASSISTANT", content: reply, tokens: reply.length } });
 
   // Award FIRST_NOOR on the user's very first message
-  let firstNoorAchievement: { key: string; title: string; xpReward: number } | null = null;
+  let firstNoorAchievement: { key: string; title: string; description: string; xpReward: number } | null = null;
   if (totalMessageCount === 0) {
     const achievement = await prisma.achievement.findUnique({ where: { key: ACHIEVEMENT_KEYS.FIRST_NOOR } });
     if (achievement) {
@@ -162,7 +162,7 @@ export async function POST(request: Request) {
         if (achievement.xpReward > 0) {
           await prisma.user.update({ where: { id: userId }, data: { xp: { increment: achievement.xpReward } } });
         }
-        firstNoorAchievement = { key: achievement.key, title: achievement.title, xpReward: achievement.xpReward };
+        firstNoorAchievement = { key: achievement.key, title: achievement.title, description: achievement.description, xpReward: achievement.xpReward };
       }
     }
   }
