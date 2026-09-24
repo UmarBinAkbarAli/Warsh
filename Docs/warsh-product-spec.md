@@ -297,6 +297,10 @@ The current Google implementation uses subscription product `warsh_premium` with
 
 The code tokens in `warsh-app/constants/theme.ts` are the exact implementation values. Do not create parallel hardcoded palettes.
 
+### Illustrations: no human faces (locked, 2026-09-24)
+
+No picture in Warsh shows human facial features — lesson discover cards, vocabulary words, chapter art, store and marketing images alike. A person's face is either a smooth, blank, featureless surface (the approved style: no eyes, eyebrows, nose, mouth or expression; hair, beard, cap and hijab are fine) or turned away from the viewer. Any visible eye, mouth or smile — including in profile — is a face. Every generation prompt must say so explicitly, and every image is checked before it is uploaded. A picture that shows a face is replaced, never shipped. Quran cards additionally never depict Allah, a prophet, Maryam, an angel, a jinn or the devil.
+
 ### Typography
 
 - English/UI body: Lora

@@ -215,6 +215,14 @@ npx vitest run <file>
   `play.tsx`); `writingDirection` is iOS-only and does nothing on Android, so
   any new `<Text>` that shows lesson content must use the same wrapper. A
   `CONTRAST` card needs `concept.ar` or its headline renders blank.
+- **No human facial features in any Warsh image** (owner rule, 2026-09-24):
+  lesson cards, vocabulary, chapter art and store/marketing images draw faces
+  blank and featureless (no eyes, nose, mouth or expression) or turned away; a
+  visible eye or smile, even in profile, fails. Say so in every generation
+  prompt and open every image before uploading. To replace a live
+  lesson picture use `images:upload-lessons -- --replace`; R2 caches
+  `images/discover/` as immutable, so overwriting the same key changes nothing
+  on devices that already saw it.
 - After committing web-affecting app changes, run `npm run deploy:web` so
   `app.warsh.app` does not fall behind.
 

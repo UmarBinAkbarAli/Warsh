@@ -17,12 +17,20 @@
  *   npm run content:sync
  *
  * Usage (from warsh-backend/):
- *   npx tsx -r dotenv/config scripts/upload-lesson-images.ts --input <folder> [--dry-run] [--manifest=<csv>]
+ *   npx tsx -r dotenv/config scripts/upload-lesson-images.ts --input <folder> [--dry-run] [--replace] [--manifest=<csv>]
  *
  * Files that are in the manifest but not in the folder are skipped and listed
  * at the end, so a partial delivery is fine.
+ *
+ * `--replace` is for a redrawn scene whose card already has a picture. R2
+ * serves `images/discover/` with `Cache-Control: immutable` for a year, so
+ * overwriting the same key leaves every device that has seen the old picture
+ * showing it. With `--replace` the key gets a content-hash suffix
+ * (`{slug}-{sha8}.webp`), the card's URL changes, and the new picture reaches
+ * everyone. Only put the redrawn files in the input folder.
  */
 
+import crypto from "crypto";
 import fs from "fs";
 import path from "path";
 import { createRequire } from "module";
@@ -35,6 +43,7 @@ const sharp = createRequire(__filename)(
 ) as typeof import("sharp");
 
 const DRY_RUN = process.argv.includes("--dry-run");
+const REPLACE = process.argv.includes("--replace");
 const MANIFEST_PATH = path.resolve(
   process.argv.find((argument) => argument.startsWith("--manifest="))?.slice("--manifest=".length)
     ?? path.join(__dirname, "../../Docs/lesson-illustrations-needed.csv"),
@@ -112,7 +121,8 @@ async function main() {
         .resize({ width: MAX_DIMENSION, height: MAX_DIMENSION, fit: "inside", withoutEnlargement: true })
         .webp({ quality: WEBP_QUALITY })
         .toBuffer();
-      const key = `images/discover/${slugFromFilename(row.filename)}.webp`;
+      const suffix = REPLACE ? `-${crypto.createHash("sha256").update(webp).digest("hex").slice(0, 8)}` : "";
+      const key = `images/discover/${slugFromFilename(row.filename)}${suffix}.webp`;
       url = getR2PublicUrl(key);
       console.log(`${DRY_RUN ? "[dry] " : ""}upload ${row.filename} → ${key} (${(webp.length / 1024).toFixed(0)} KB)`);
       if (!DRY_RUN) await uploadImageToR2(key, webp, "image/webp");

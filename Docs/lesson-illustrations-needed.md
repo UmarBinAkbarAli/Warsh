@@ -24,6 +24,12 @@ fixture file, lesson id and card number, which is what the upload step keys on.
    (the card supplies the text); nothing decorative that competes with the
    learning word. Square, any size — the upload step downscales to 768 px WebP,
    so send the full-quality original.
+   **No facial features, ever** (owner rule, 2026-09-24; see product spec §13).
+   Faces are smooth and blank — no eyes, eyebrows, nose, mouth or expression —
+   or turned away from the viewer. A visible eye, mouth or smile, even in
+   profile, fails. Every prompt states *"faceless figures: blank featureless
+   faces, no eyes, no mouth"*, and Claude opens every file and rejects any with
+   a face **before** uploading.
 3. Drop them in **one folder** (sub-folders are fine) and say where it is.
 4. Claude runs the upload, which resizes, uploads to R2
    (`images/discover/{slug}.webp`), writes the URL into each card, and then
@@ -38,7 +44,38 @@ fixture file, lesson id and card number, which is what the upload step keys on.
    npm run content:sync
    ```
    Files not yet in the folder are skipped and listed, so a partial delivery is
-   fine. A delivered scene is moved to the "Delivered" section below.
+   fine.
+5. **Replacing a picture that is already live** (e.g. a faceless redraw): R2
+   serves `images/discover/` as `immutable` for a year, so overwriting the same
+   key leaves every phone that saw the old picture showing it. Put only the
+   redrawn files in a folder and add `--replace`, which uploads to
+   `{slug}-{sha8}.webp` and changes the card URL. Then open the live URL and
+   confirm it shows the new picture. A delivered scene is moved to the "Delivered" section below.
+
+## ⚠️ Still showing faces — redraw faceless (listed 2026-09-24)
+
+These pictures are live but break the no-faces rule (product spec §13). Redraw each
+as the same scene with blank, featureless faces or figures turned away, keep the
+filename, and drop the new files in one folder. Claude then checks every file for
+faces and publishes with `--replace` (step 5 above), which is what cleared the 50
+Chapter 14–18 redraws on 2026-09-24.
+
+- **Chapter 5** (3): `ch05-action-doer-destination.png`, `ch05-lahu-laha-lakum-owners.png`, `ch05-li-laka-contrast.png`
+- **Chapter 6** (3): `ch06-described-person-action.png`, `ch06-person-connected-action.png`, `ch06-place-tool-panels.png`
+- **Chapter 7** (4): `ch07-classroom-questions.png`, `ch07-four-people-have.png`, `ch07-my-objects.png`, `ch07-two-listeners.png`
+- **Chapter 8** (3): `ch08-allati-connector-panels.png`, `ch08-mother-returning-home.png`, `ch08-she-returned-sat-entered.png`
+- **Chapter 9** (3): `ch09-one-man-group.png`, `ch09-one-woman-group.png`, `ch09-pointing-at-group.png`
+- **Chapter 10** (5): `ch10-after-timeline.png`, `ch10-before-timeline.png`, `ch10-they-two-groups.png`, `ch10-we-group-speaking.png`, `ch10-you-all-facing-group.png`
+- **Chapter 12** (2): `ch12-muallim-teacher.png`, `ch12-muhandis-engineer.png`
+- **Chapter 14** (3): `ch14-believers-and-mosques.png`, `ch14-honourable-muslims.png`, `ch14-people-or-things-sort.png`
+- **Chapter 15** (4): `ch15-far-group.png`, `ch15-far-students-far-books.png`, `ch15-pointing-set-recall.png`, `ch15-those-houses-far.png`
+- **Chapter 16** (1): `ch16-went-to-school-yesterday.png`
+- **Chapter 17** (1): `ch17-object-or-destination.png`
+- **Chapter 18** (6): `ch18-four-lines-summary.png`, `ch18-man-stood-teacher.png`, `ch18-the-girl-who-read.png`, `ch18-the-man-who-went.png`, `ch18-the-vs-a-man.png`, `ch18-who-stood-question.png`
+- **Chapter 19** (11): `ch19-fatimah-new-book.png`, `ch19-fatimah-pen-on-desk.png`, `ch19-his-book-heard-him.png`, `ch19-her-village-big.png`, `ch19-i-have-vs-my.png`, `ch19-my-book-her-book.png`, `ch19-my-her-book-on-desk.png`, `ch19-my-your-his-school.png`, `ch19-teachers-house-my-house.png`, `ch19-woman-his-wife.png`, `ch19-you-have-vs-your.png`
+- **Chapter 20** (24): `ch20-book-owners-change.png`, `ch20-four-groups-grid.png`, `ch20-group-listeners.png`, `ch20-houses-two-groups.png`, `ch20-mothers-first.png`, `ch20-my-book-our-book.png`, `ch20-noun-or-action-na.png`, `ch20-one-woman-group-women.png`, `ch20-our-big-school.png`, `ch20-our-house.png`, `ch20-review-speaking-about.png`, `ch20-review-speaking-to.png`, `ch20-speaking-to-group.png`, `ch20-students-books-desk.png`, `ch20-students-their-teacher.png`, `ch20-students-your-teacher.png`, `ch20-their-book-women.png`, `ch20-their-house.png`, `ch20-their-houses-women.png`, `ch20-they-their-book.png`, `ch20-three-questions.png`, `ch20-we-our-group.png`, `ch20-where-your-book-group.png`, `ch20-women-students-books.png`
+
+Total: 73. Only this folder was checked; vocabulary pictures have not been checked yet.
 
 ## ✅ Delivered — Chapters 14–19 (uploaded and published 2026-09-24)
 

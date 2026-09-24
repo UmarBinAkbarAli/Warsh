@@ -20,6 +20,8 @@ database `word_id`, which is what the upload step keys on.
    background, square, the Warsh palette (deep green, gold, cream, ink), realistic
    render. Any size is fine; compression to 768 px / ≤100 KB happens on upload,
    so send the full-quality original (it also becomes the local master copy).
+   **No facial features, ever** (owner rule, 2026-09-24; product spec §13):
+   faces blank and featureless or turned away. Check every file before upload.
 3. Drop them all in **one folder** (sub-folders are fine) and say where it is.
 4. Then Claude runs the compress + upload step, which sets each word's `imageUrl`,
    re-checks every URL, and reports coverage:
