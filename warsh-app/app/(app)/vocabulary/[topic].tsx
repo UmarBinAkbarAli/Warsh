@@ -22,6 +22,7 @@ import { useTranslationLanguage, pickTranslation } from "@services/language";
 import { TOPIC_CATALOG, getTopicLabel } from "../(tabs)/vocabulary";
 import { useT } from "@i18n/index";
 import { prefetchVocabWordAudio } from "@services/audioCache";
+import { ScreenHeader } from "@components/ScreenHeader";
 
 const PREFETCH_WORD_COUNT = 12;
 
@@ -92,13 +93,11 @@ export default function TopicDetailScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bg.primary }}>
       {/* Header */}
-      <View style={[styles.header, desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.md }]}>
-        <Text style={styles.backBtn} onPress={() => router.back()}>‹ {t("common.back")}</Text>
-        <View style={styles.headerTitle}>
-          <ArabicText size="md" style={styles.headerAr}>{topicMeta?.labelAr ?? topic}</ArabicText>
-          <Text style={styles.headerEn}>{getTopicLabel(topicMeta?.key ?? topic ?? "", language, t)}</Text>
-        </View>
-      </View>
+      <ScreenHeader
+        title={getTopicLabel(topicMeta?.key ?? topic ?? "", language, t)}
+        right={<ArabicText size="md" style={styles.headerAr}>{topicMeta?.labelAr ?? topic}</ArabicText>}
+        style={desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top }}
+      />
 
       {/* Search within topic */}
       <View style={[{ paddingHorizontal: Spacing.xl, paddingBottom: Spacing.md }, desktopWeb && styles.webRow]}>

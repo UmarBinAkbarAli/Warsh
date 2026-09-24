@@ -112,7 +112,7 @@ export function OnboardingChecklist({
 const styles = StyleSheet.create({
   card: {
     padding: Spacing.lg,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.gold,
     backgroundColor: WarshPalette.parchmentBg,

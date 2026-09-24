@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="%LANG_ISO_CODE%">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#F8F4ED" />
+    <title>%WEB_TITLE%</title>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        overflow: hidden;
+        /* creamBg in constants/theme.ts: no white flash before the bundle runs */
+        background-color: #F8F4ED;
+      }
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+    <!-- Shown until React renders into #root and replaces it (the bundle takes
+         several seconds on a cold start over a slow connection). Colours are
+         the creamBg / gold / goldText tokens from constants/theme.ts. -->
+    <style id="warsh-boot">
+      .warsh-boot {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        font-family: "Scheherazade New", "Noto Naskh Arabic", serif;
+        color: #85672C;
+      }
+      .warsh-boot-mark {
+        font-size: 64px;
+        line-height: 1;
+      }
+      .warsh-boot-bar {
+        width: 120px;
+        height: 3px;
+        border-radius: 2px;
+        background: #EDE6D6;
+        overflow: hidden;
+      }
+      .warsh-boot-bar::after {
+        content: "";
+        display: block;
+        width: 40%;
+        height: 100%;
+        border-radius: 2px;
+        background: #C49B4D;
+        animation: warsh-boot-slide 1.2s ease-in-out infinite;
+      }
+      @keyframes warsh-boot-slide {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(250%); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .warsh-boot-bar::after { animation: none; width: 100%; opacity: 0.5; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root">
+      <div class="warsh-boot" role="status" aria-label="Loading Warsh">
+        <div class="warsh-boot-mark" lang="ar" dir="rtl">وَرْش</div>
+        <div class="warsh-boot-bar"></div>
+      </div>
+    </div>
+  </body>
+</html>

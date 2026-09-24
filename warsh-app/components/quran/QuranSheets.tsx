@@ -288,7 +288,7 @@ const styles = StyleSheet.create({
     gap: Spacing.md,
     paddingHorizontal: Spacing.lg,
     paddingVertical: Spacing.md,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.cream,
   },
@@ -341,7 +341,7 @@ const styles = StyleSheet.create({
   },
   toggleCard: {
     backgroundColor: WarshPalette.white,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.cream,
   },

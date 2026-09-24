@@ -21,6 +21,7 @@ import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, Wa
 import { getTadabbur, getTadabburSurah, isSubscriptionRequiredError, subscriptionRequiredRoute } from "@services/api";
 import { pickLocalized, useTranslationLanguage } from "@services/language";
 import { getEveryAyahAudioUrl } from "@services/quranAudio";
+import { ScreenHeader } from "@components/ScreenHeader";
 
 // ─── types ────────────────────────────────────────────────────────────────────
 
@@ -261,14 +262,7 @@ export default function TadabburScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
-      {/* Header */}
-      <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.backBtn}>‹ Back</Text>
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Tadabbur · تَدَبُّر</Text>
-        <View style={{ width: 60 }} />
-      </View>
+      <ScreenHeader title="Tadabbur · تَدَبُّر" style={desktopWeb ? styles.webHeaderRow : null} />
 
       <ScrollView contentContainerStyle={[styles.content, desktopWeb && styles.webRow]}>
 
@@ -431,7 +425,7 @@ const styles = StyleSheet.create({
 
   // Surah text
   surahBlock: {
-    borderRadius: Radii.lg, borderWidth: 0.5,
+    borderRadius: Radii.md, borderWidth: 0.5,
     borderColor: WarshPalette.parchmentCardBorder,
     backgroundColor: WarshPalette.parchmentBg,
     padding: Spacing.lg, marginBottom: Spacing.xl,

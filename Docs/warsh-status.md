@@ -359,6 +359,54 @@ files remain release evidence.
 
 ## Active priority queue
 
+### UX evaluation follow-up (2026-09-25)
+
+Implemented from the 2026-09-24 UX evaluation (owner asked to implement
+directly; Pen section 31 holds the proposals). Web ships with the push;
+Android learners get these in the next Play release.
+
+- One lesson-complete screen: result, Quran connection, this week and
+  Continue. The separate reveal beat, the streak-celebration screen and the
+  Learn-tab "goal complete" toast are gone; the one-time commitment prompt
+  still follows (`services/commitmentPrompt.ts`). (H15)
+- Word order: a placed tile leaves a dashed gap; tiles 56dp at 26pt. (H13)
+- Matching is one pairing board with shuffled meanings; boards that pair
+  Arabic with Arabic say "Tap an item, then its pair." (M2)
+- Grammar parse says "Tag each word…"; scrolling exercises pad under the
+  feedback panel; correct answers list one pair per line. (M1)
+- `components/ScreenHeader.tsx` on every stack screen except the Quran reader.
+  (M4)
+- Chapters: whole card tappable, one status chip (Completed / Placed out /
+  In progress / Not started / Locked); chapter detail header shows
+  "Chapter N" and marks the "Up next" lesson. (M5)
+- Streak: `services/streakWeek.ts` + `StreakWeekRow` feed both the completion
+  screen and Streak detail (Streak detail used a mock week). Zero freezes
+  now says how to earn one. (M7)
+- Vocabulary tab shows placeholders and no longer waits for all 920 words
+  before rendering; web shows a cream Warsh loader (`public/index.html`). (M9)
+- Word detail: one "Save for review" action replaces the heart + "Mark for
+  review". (M12)
+- Edit profile: name is editable (`PATCH /api/users/me` accepts `name`,
+  1–60 chars, `lib/displayName.ts`); avatar "coming soon" removed. (M13)
+- Radii collapsed to 4/8/12/20 (+full); nothing under 12pt; product spec and
+  Pen variables now say Inter, `#F8F4ED`, radius 12 for cards.
+
+Still open from the evaluation:
+
+- **Laptop web type (M18).** A global CSS `zoom` was tried on app.warsh.app
+  at 1440px and broke the layout (sidebar overlap, 47 elements past the
+  viewport), so it needs per-screen desktop type work.
+- **Word detail data (M12).** Only 55 of 920 words carry a Quran example,
+  444 a root, 179 related words; filling them is a content job.
+- **Tadabbur Urdu (owner).** No Urdu translation in the data. The Mushaf
+  reader already ships Junagarhi (Urdu) and Pickthall (English), both public
+  domain, if the owner wants the same one.
+- **Test with learners first:** full Urdu RTL (H10); hiding the SRS picture
+  (M3).
+- Chapter 72 review (R15) content: its word-order prompt prints the Arabic
+  answer, and its conversation options do not answer the question.
+
+
 ### Open items (2026-09-18)
 
 Everything below this list is either done and verified, or one of these:

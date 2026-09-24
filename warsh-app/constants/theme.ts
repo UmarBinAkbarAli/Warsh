@@ -167,7 +167,7 @@ export const FontSizes = {
   bodyL: 16,
   bodyM: 14,
   caption: 12,
-  label: 10,
+  label: 12, // minimum UI text size (UX evaluation 2026-09-24)
   transliteration: 14,
   arabicXL: 52,
   // Discover card headword — sits between arabicL and arabicXL so the word
@@ -188,7 +188,7 @@ export const LineHeights = {
   bodyL: 24,
   bodyM: 20,
   caption: 18,
-  label: 14,
+  label: 16,
   transliteration: 20,
   arabicXL: 80,
   arabicDiscover: 64,
@@ -197,13 +197,14 @@ export const LineHeights = {
   arabicS: 30,
 } as const;
 
+// Four corner roles (UX evaluation 2026-09-24). Use a literal radius only for
+// a circle (width == height == 2r) or a hairline progress bar.
 export const Radii = {
   xs: 4, // text inputs (2026-08 auth redesign)
-  sm: 8,
-  md: 12,
-  lg: 16,
-  xl: 20,
-  full: 9999,
+  sm: 8, // chips, tags, word tiles
+  md: 12, // buttons and cards
+  xl: 20, // bottom sheets and dialogs
+  full: 9999, // avatars and pills
 } as const;
 
 export const Spacing = {

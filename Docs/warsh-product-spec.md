@@ -303,10 +303,21 @@ No picture in Warsh shows human facial features — lesson discover cards, vocab
 
 ### Typography
 
-- English/UI body: Lora
-- Display/headings: Cormorant Garamond where currently used
-- Arabic and Urdu fallback: Scheherazade New
+- English/UI body and every number: Inter (owner decision 2026-08-16; Lora is retired)
+- Display: Cormorant Garamond SemiBold for screen titles only, never for numbers
+- Arabic and Urdu: Scheherazade New
 - Arabic always renders right-to-left through the shared Arabic component
+- Weight comes from the font file (`Inter-SemiBold`, `Inter-Bold`), never from `fontWeight`, which makes Android fall back to the system font
+- Type ramp: Display 28 · Title 20 · Heading 18 · Body 16 · Secondary 14 · Label 12. Nothing in the UI renders below 12
+
+### Shape
+
+Four corner radii (`Radii` in `theme.ts`): 4 for text inputs, 8 for chips, tags and word tiles, 12 for buttons and cards, 20 for bottom sheets and dialogs; `full` for avatars and pills. A literal radius appears only on a circle or a hairline progress bar.
+
+### Screen structure
+
+- Every stack screen uses the shared `ScreenHeader`: a 48dp back chevron, then the title on the leading edge.
+- A lesson ends on one completion screen: the result, the Quran connection, this week's streak and the next step, with a single Continue.
 
 ### Components and accessibility
 

@@ -309,7 +309,7 @@ const styles = StyleSheet.create({
   content: { paddingHorizontal: Spacing.gutter, gap: Spacing.lg },
   wordCard: {
     backgroundColor: WarshPalette.parchmentBg,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.parchmentCardBorder,
     paddingVertical: Spacing.xl,

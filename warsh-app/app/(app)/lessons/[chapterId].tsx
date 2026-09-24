@@ -16,6 +16,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import api from "@services/api";
 import { ArabicText } from "@components/ArabicText";
+import { ScreenHeader } from "@components/ScreenHeader";
 import { StatusBarBacking } from "@components/StatusBarBacking";
 import { BrandButton } from "@components/BrandButton";
 import { useTranslationLanguage, pickLocalized } from "@services/language";
@@ -58,8 +59,19 @@ function lessonTypeLabel(type: string, t: ReturnType<typeof useT>) {
   }
 }
 
+// The lessons API sends `template`; `type` is a legacy field that is unset.
+const TEMPLATE_LABEL_KEYS: Record<string, string> = {
+  STANDARD: "chapter.typeLesson",
+  REVIEW: "chapter.typeReview",
+  VERB_PATTERN: "chapter.typeVerbPatterns",
+  SPOKEN_PHRASES: "chapter.typeSpoken",
+};
+
 function lessonKindLabel(lesson: any, t: ReturnType<typeof useT>) {
-  return lesson.isConversationLab ? t("lab.typeLabel") : lessonTypeLabel(lesson.type, t);
+  if (lesson.isConversationLab) return t("lab.typeLabel");
+  if (lesson.type) return lessonTypeLabel(lesson.type, t);
+  const key = TEMPLATE_LABEL_KEYS[lesson.template as string];
+  return key ? t(key) : "";
 }
 
 function lessonKindIcon(lesson: any): React.ComponentProps<typeof Ionicons>["name"] {
@@ -242,11 +254,11 @@ export default function ChapterScreen() {
 
   if (!chapter) {
     return (
-      <View style={styles.errorScreen}>
-        <Text style={styles.errorText}>{error ?? t("chapter.notFound")}</Text>
-        <TouchableOpacity onPress={() => router.back()} style={{ marginTop: Spacing.lg }}>
-          <Text style={styles.backLink}>‹ {t("common.back")}</Text>
-        </TouchableOpacity>
+      <View style={[styles.screen, { paddingTop: insets.top }]}>
+        <ScreenHeader />
+        <View style={styles.errorScreen}>
+          <Text style={styles.errorText}>{error ?? t("chapter.notFound")}</Text>
+        </View>
       </View>
     );
   }
@@ -279,10 +291,14 @@ export default function ChapterScreen() {
     </View>
   );
 
+  // The first lesson that is neither done nor skipped is the one to do next.
+  const upNextId = regularLessons.find((lesson: any) => !lesson.isCompleted && !(lesson.isSkippedByPlacement && !lesson.isConversationLab && !lesson.isNew))?.id;
+
   const lessonList = (
     <View style={desktopWeb ? undefined : { marginTop: Spacing.xl }}>
       {regularLessons.map((lesson: any, idx: number) => {
         const done = lesson.isCompleted;
+        const upNext = lesson.id === upNextId;
         // A lab that is not completed is shown as new, including for learners
         // whose finished chapter had it backfilled as skipped: "skipped by
         // placement" would be untrue for a lesson that did not exist then.
@@ -294,19 +310,20 @@ export default function ChapterScreen() {
         return (
           <TouchableOpacity
             key={lesson.id}
-            style={[styles.lessonCard, desktopWeb && styles.webLessonCard, done && styles.lessonCardDone, isNewLab && styles.lessonCardNewLab]}
+            style={[styles.lessonCard, desktopWeb && styles.webLessonCard, done && styles.lessonCardDone, skipped && styles.lessonCardSkipped, isNewLab && styles.lessonCardNewLab, upNext && styles.lessonCardUpNext]}
             onPress={() => handleLessonTap(lesson)}
             activeOpacity={0.8}
           >
+            {upNext ? <StatusBadge label={t("chapter.upNext")} /> : null}
             {skipped ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
             {isNewLab ? <StatusBadge label={t("lab.newBadge")} /> : null}
             {updated ? <StatusBadge label={t("lessonNotice.badgeUpdated")} /> : null}
             <View style={styles.lessonCardTop}>
-              <View style={styles.lessonIndex}>
+              <View style={[styles.lessonIndex, upNext && styles.lessonIndexUpNext]}>
                 {done ? (
                   <Ionicons name="checkmark" size={14} color={WarshPalette.sage} />
                 ) : (
-                  <Text style={styles.lessonIndexText}>{idx + 1}</Text>
+                  <Text style={[styles.lessonIndexText, upNext && styles.lessonIndexTextUpNext]}>{idx + 1}</Text>
                 )}
               </View>
               <View style={styles.lessonInfo}>
@@ -320,7 +337,7 @@ export default function ChapterScreen() {
                   <Ionicons name={lessonKindIcon(lesson)} size={12} color={WarshPalette.gold} />
                   <Text style={styles.lessonMetaText}>{lessonKindLabel(lesson, t)}</Text>
                   <Text style={styles.lessonMetaDot}>·</Text>
-                  <Text style={styles.lessonMetaText}>{lesson.xpReward} points</Text>
+                  <Text style={styles.lessonMetaText}>{t("chapter.xp", { count: lesson.xpReward })}</Text>
                 </View>
               </View>
               <Ionicons
@@ -370,20 +387,19 @@ export default function ChapterScreen() {
   );
 
   return (
-    <View style={styles.screen}>
+    <View style={[styles.screen, desktopWeb ? null : { paddingTop: insets.top }]}>
+      <ScreenHeader
+        title={chapter.order ? t("chapter.number", { count: chapter.order }) : undefined}
+        style={desktopWeb ? styles.webHeader : null}
+      />
       <ScrollView
         style={styles.scroll}
         contentContainerStyle={[
           styles.content,
-          desktopWeb ? styles.webContent : { paddingTop: insets.top + Spacing.lg },
+          desktopWeb ? styles.webContent : { paddingTop: Spacing.sm },
         ]}
       >
         <View style={desktopWeb ? styles.webMain : undefined}>
-          {/* Back button */}
-          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
-            <Text style={styles.backBtnText}>‹ {t("chapter.backChapters")}</Text>
-          </TouchableOpacity>
-
           {chapter.isSkippedByPlacement ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
 
           <Text style={styles.chapterTitle}>{pickLocalized(chapter.title, chapter.titleUr, language)}</Text>
@@ -434,10 +450,8 @@ const styles = StyleSheet.create({
   loadingScreen: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: Colors.bg.primary },
   errorScreen: { flex: 1, justifyContent: "center", alignItems: "center", padding: Spacing.xl, backgroundColor: Colors.bg.primary },
   errorText: { fontSize: FontSizes.bodyL, color: Colors.text.secondary, textAlign: "center" },
-  backLink: { color: WarshPalette.goldText, fontFamily: Fonts.regular, fontSize: FontSizes.bodyL },
 
-  backBtn: { marginBottom: Spacing.lg },
-  backBtnText: { color: WarshPalette.goldText, fontFamily: Fonts.regular, fontSize: FontSizes.bodyL },
+  webHeader: { width: "100%", maxWidth: 1180, alignSelf: "center", paddingTop: 24 },
 
   statusBadge: {
     alignSelf: "flex-start",
@@ -473,7 +487,7 @@ const styles = StyleSheet.create({
   progressFill: { height: 6, borderRadius: 3, backgroundColor: WarshPalette.gold },
   progressCard: {
     padding: 20,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.defaultCardBorder,
     backgroundColor: WarshPalette.white,
@@ -490,10 +504,23 @@ const styles = StyleSheet.create({
     borderColor: WarshPalette.parchmentCardBorder,
     backgroundColor: WarshPalette.white,
   },
+  lessonCardUpNext: {
+    borderWidth: 2,
+    borderColor: WarshPalette.gold,
+  },
+  lessonCardSkipped: {
+    backgroundColor: WarshPalette.parchmentBg,
+  },
+  lessonIndexUpNext: {
+    backgroundColor: WarshPalette.navy,
+  },
+  lessonIndexTextUpNext: {
+    color: WarshPalette.parchment,
+  },
   webLessonCard: {
     marginBottom: 12,
     padding: 18,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
   },
   lessonCardDone: {
@@ -528,7 +555,7 @@ const styles = StyleSheet.create({
     marginTop: Spacing.sm,
     marginBottom: Spacing.sm,
     padding: Spacing.lg,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     backgroundColor: WarshPalette.navy,
     flexDirection: "row",
     alignItems: "center",

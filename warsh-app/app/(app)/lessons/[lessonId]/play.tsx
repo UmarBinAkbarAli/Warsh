@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ActivityIndicator, Animated, BackHandler, Modal, PanResponder, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, TextStyle, useWindowDimensions, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
@@ -9,6 +9,7 @@ import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { PlayButton } from "@components/PlayButton";
 import { ShadowRepeatExercise } from "@components/ShadowRepeatExercise";
+import { StreakWeekRow } from "@components/StreakWeekRow";
 import { getConversationLab, LabCanDoCard, LabIntroScreen, LabListenAndPhrases, LabSpeakAndMission } from "@components/ConversationLab";
 import { Animation, Colors, Fonts, FontSizes, LineHeights, Radii, Spacing, WarshPalette } from "../../../../constants/theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -19,6 +20,7 @@ import { useT } from "@i18n/index";
 import { prefetchCatalogAudio, prefetchRemoteAudio } from "@services/audioCache";
 import { prefetchChapter } from "@services/chapterPrefetch";
 import { useAuthStore } from "@stores/authStore";
+import { shouldOfferCommitmentPrompt } from "@services/commitmentPrompt";
 
 // ---------------------------------------------------------------------------
 // API response shape — content is the raw warsh-content-schema v1.0 blob
@@ -182,7 +184,14 @@ function exPrompt(ex: RawEx, language: LessonLanguage, uiLanguage: LessonLanguag
   if (type === "TRUE_FALSE") return authored(localizedText(ex.statement, language));
   if (type === "FILL_BLANK") return authored(localizedText(ex.hint, language));
   if (type === "BUILD_SENTENCE") return authored(localizedText(ex.target_translation, language));
-  if (type === "MATCHING") return ui(t("player.prompt.matchArabicMeaning"));
+  if (type === "MATCHING") {
+    // Some REVIEW boards pair Arabic with Arabic (a topic with its chapter), so
+    // "with its meaning" would describe the wrong task.
+    const right = (ex.right_column as Array<any> | undefined) ?? [];
+    const meaningsAreArabic = right.length > 0 && right.every((item) => isArabicOnly(localizedText(item, language)));
+    return ui(t(meaningsAreArabic ? "player.prompt.matchPairs" : "player.prompt.matchArabicMeaning"));
+  }
+  if (type === "GRAMMAR_PARSE") return ui(t("player.prompt.tagEachWord"));
   if (type === "MATCH_AYAH") return ui(t("player.prompt.matchAyahMeaning"));
   if (type === "AUDIO_RECOGNITION") return ui(t("player.prompt.audioMeaning"));
   if (type === "WRITE_ARABIC") return authored(localizedText(ex.prompt, language));
@@ -356,6 +365,27 @@ function exParseTokens(ex: RawEx, language: LessonLanguage, t: TranslateFn): Par
   }));
 }
 
+/** Deterministic shuffle (same order on every render of one exercise) that
+ *  never returns the authored order when another order exists — most fixtures
+ *  list meanings in the same order as the words. */
+function shuffleStable<T>(items: T[], seed: string): T[] {
+  let hash = 2166136261;
+  for (let i = 0; i < seed.length; i += 1) hash = Math.imul(hash ^ seed.charCodeAt(i), 16777619);
+  const next = () => {
+    hash = Math.imul(hash ^ (hash >>> 15), 2246822507);
+    hash = Math.imul(hash ^ (hash >>> 13), 3266489909);
+    hash ^= hash >>> 16;
+    return (hash >>> 0) / 4294967296;
+  };
+  const result = [...items];
+  for (let i = result.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(next() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  if (result.length > 1 && result.every((item, index) => item === items[index])) result.push(result.shift() as T);
+  return result;
+}
+
 function exLabels(ex: RawEx, t: TranslateFn): string[] {
   return ((ex.available_roles as string[] | undefined) ?? []).map((role) => roleLabel(role, t));
 }
@@ -443,8 +473,9 @@ function isAnswerCorrect(ex: RawEx | undefined, selectedAnswer: SelectedAnswer, 
 
 function getCorrectAnswerDisplay(ex: RawEx | undefined, language: LessonLanguage, t: TranslateFn): string {
   if (!ex) return "";
-  if (exType(ex) === "MATCHING") return exPairs(ex, language).map((pair) => `${pair.left} = ${pair.right}`).join(" | ");
-  if (exType(ex) === "GRAMMAR_PARSE") return exParseTokens(ex, language, t).map((token) => `${token.word} = ${token.label}`).join(" | ");
+  // One pair per line: joined on one line, Arabic and English runs interleave.
+  if (exType(ex) === "MATCHING") return exPairs(ex, language).map((pair) => `${pair.left} = ${pair.right}`).join("\n");
+  if (exType(ex) === "GRAMMAR_PARSE") return exParseTokens(ex, language, t).map((token) => `${token.word} = ${token.label}`).join("\n");
   return exCorrectAnswer(ex, language, t);
 }
 
@@ -478,6 +509,10 @@ export default function LessonPlayScreen() {
   const [completionResult, setCompletionResult] = useState<CompletionResult | null>(null);
   const [failResult, setFailResult] = useState<FailResult | null>(null);
   const [showExitConfirm, setShowExitConfirm] = useState(false);
+  const [matchActive, setMatchActive] = useState<{ side: "left" | "right"; value: string } | null>(null);
+  // The feedback panel floats over the bottom of the exercise; scrolling
+  // exercises pad by its height so the last card can be scrolled clear of it.
+  const [feedbackHeight, setFeedbackHeight] = useState(0);
 
   // WRITE_ARABIC hint state
   const [writeHintShown, setWriteHintShown] = useState(false);
@@ -643,15 +678,15 @@ export default function LessonPlayScreen() {
         trackLessonCompleted({ lessonId, lessonType: lesson?.template, xpEarned: data.xpEarned, currentStreak: data.currentStreak, dailyGoalMet });
         if (dailyGoalMet) {
           cancelTodayReminders().catch(() => {});
-          const today = new Date().toISOString().slice(0, 10);
-          AsyncStorage.setItem(`warsh_daily_goal_toast_${today}`, "1").catch(() => {});
         }
         for (const achievement of achievements as { key: string; title: string; xpReward: number }[]) {
           fireMilestoneNotification(achievement.title).catch(() => {});
           trackMilestoneUnlocked(achievement.key ?? "", achievement.title, achievement.xpReward ?? 0);
         }
       } catch (err: any) {
-        if (err.response?.status === 403) {
+        // Only a real lock says "locked"; a Vercel checkpoint page is also a 403.
+        const code = err.response?.data?.code;
+        if (code === "chapter_locked" || code === "chapter_test_locked") {
           setError(t("player.lessonLocked"));
         } else {
           setError(t("player.completeError"));
@@ -744,11 +779,14 @@ export default function LessonPlayScreen() {
   }
 
   function goToNextExercise() {
-    if (currentExerciseIndex >= exercises.length - 1) { goToBeat(4); return; }
+    // The Quran connection now lives on the completion screen, so a lesson goes
+    // straight from its last exercise to beat 5. Labs keep beat 4 (speak).
+    if (currentExerciseIndex >= exercises.length - 1) { goToBeat(lab ? 4 : 5); return; }
     setCurrentExerciseIndex((i) => i + 1);
     setSelectedAnswer(null);
     setIsAnswered(false);
     setWriteHintShown(false);
+    setMatchActive(null);
   }
 
   function answerExercise(answer: SelectedAnswer) {
@@ -819,7 +857,10 @@ export default function LessonPlayScreen() {
     const wrongExpl = exWrongExpl(currentExercise, language);
     const arabicForDisplay = exArabicText(currentExercise) ?? exCorrectAnswer(currentExercise, language, t);
     return (
-      <View style={[styles.feedbackBar, answeredCorrectly ? styles.feedbackCorrect : styles.feedbackWrong]}>
+      <View
+        onLayout={(event) => setFeedbackHeight(event.nativeEvent.layout.height)}
+        style={[styles.feedbackBar, answeredCorrectly ? styles.feedbackCorrect : styles.feedbackWrong]}
+      >
         {answeredCorrectly ? (
           <>
             <ArabicText size="sm" style={styles.feedbackArabic}>بارك الله فيك</ArabicText>
@@ -991,6 +1032,8 @@ export default function LessonPlayScreen() {
     const slots = splitWords(exCorrectAnswer(currentExercise ?? {}, language, t));
     const canCheck = selectedTiles.length === slots.length && !isAnswered;
     const options = exOptions(currentExercise ?? {}, language, t);
+    const remainingPlaced = new Map<string, number>();
+    for (const tile of selectedTiles) remainingPlaced.set(tile, (remainingPlaced.get(tile) ?? 0) + 1);
 
     return (
       <>
@@ -1011,17 +1054,27 @@ export default function LessonPlayScreen() {
           })}
         </View>
         <View style={styles.tileWrap}>
-          {options.map((option, index) => (
-            <Pressable
-              key={`${option}-${index}`}
-              accessibilityRole="button"
-              disabled={isAnswered}
-              onPress={() => addBuildTile(option)}
-              style={styles.wordTile}
-            >
-              {renderMaybeArabic(option, styles.tileArabicText, styles.tileText)}
-            </Pressable>
-          ))}
+          {options.map((option, index) => {
+            // A placed tile leaves a dashed gap of the same size in the bank, so
+            // learners can see what they have used. Duplicated words are
+            // matched by count, first come first served.
+            const used = (remainingPlaced.get(option) ?? 0) > 0;
+            if (used) remainingPlaced.set(option, (remainingPlaced.get(option) ?? 0) - 1);
+            return (
+              <Pressable
+                key={`${option}-${index}`}
+                accessibilityRole="button"
+                accessibilityState={{ disabled: used || isAnswered }}
+                disabled={isAnswered || used}
+                onPress={() => addBuildTile(option)}
+                style={[styles.wordTile, used ? styles.wordTileUsed : null]}
+              >
+                <View style={used ? styles.wordTileHidden : null}>
+                  {renderMaybeArabic(option, styles.tileArabicText, styles.tileText)}
+                </View>
+              </Pressable>
+            );
+          })}
         </View>
         {canCheck ? <BrandButton title={t("common.check")} onPress={checkBuildSentence} style={styles.bottomButton} /> : null}
       </>
@@ -1029,41 +1082,120 @@ export default function LessonPlayScreen() {
   }
 
   // ---- MATCHING ----
+  // One pairing board: Arabic on one side, meanings (shuffled) on the other.
+  // Tap either side, then its partner; pairs share a number. Tapping a paired
+  // item unpairs it. The answer stays a left → right map for isAnswerCorrect.
+
+  function setMatchPair(left: string, right: string | null) {
+    if (isAnswered) return;
+    setSelectedAnswer((current) => {
+      const map = { ...(!Array.isArray(current) && current && typeof current === "object" ? current : {}) };
+      for (const key of Object.keys(map)) {
+        if (key === left || (right !== null && map[key] === right)) delete map[key];
+      }
+      if (right !== null) map[left] = right;
+      return map;
+    });
+  }
 
   function renderMatching() {
     const pairs = exPairs(currentExercise ?? {}, language);
-    const choices = exOptions(currentExercise ?? {}, language, t);
+    const choices = shuffleStable(exOptions(currentExercise ?? {}, language, t), `${lessonId}-${currentExerciseIndex}`);
     const selectedMap = !Array.isArray(selectedAnswer) && selectedAnswer && typeof selectedAnswer === "object" ? selectedAnswer : {};
     const canCheck = pairs.length > 0 && pairs.every((pair) => selectedMap[pair.left]) && !isAnswered;
+    const numberOfLeft = (left: string) => pairs.findIndex((pair) => pair.left === left) + 1;
+    const leftOfChoice = (choice: string) => pairs.find((pair) => selectedMap[pair.left] === choice)?.left;
+
+    function tapLeft(left: string) {
+      if (isAnswered) return;
+      if (matchActive?.side === "right") {
+        setMatchPair(left, matchActive.value);
+        setMatchActive(null);
+        return;
+      }
+      if (selectedMap[left]) setMatchPair(left, null);
+      setMatchActive(matchActive?.side === "left" && matchActive.value === left ? null : { side: "left", value: left });
+    }
+
+    function tapRight(choice: string) {
+      if (isAnswered) return;
+      if (matchActive?.side === "left") {
+        setMatchPair(matchActive.value, choice);
+        setMatchActive(null);
+        return;
+      }
+      const pairedLeft = leftOfChoice(choice);
+      if (pairedLeft) setMatchPair(pairedLeft, null);
+      setMatchActive(matchActive?.side === "right" && matchActive.value === choice ? null : { side: "right", value: choice });
+    }
+
+    function badge(number: number, state: "neutral" | "correct" | "wrong") {
+      return (
+        <View style={[styles.matchBadge, state === "correct" ? styles.matchBadgeCorrect : state === "wrong" ? styles.matchBadgeWrong : null]}>
+          <Text style={styles.matchBadgeText}>{number}</Text>
+        </View>
+      );
+    }
 
     return (
       <>
         {/* Keyed so back-to-back matching exercises get a fresh scroller: React would
             otherwise reuse the native view and open the next one scrolled down. */}
-        <ScrollView key={`matching-${currentExerciseIndex}`} style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
-          {pairs.map((pair) => (
-            <View key={pair.left} style={styles.matchingRow}>
-              <View style={styles.matchingLeft}>{renderMaybeArabic(pair.left, styles.matchingArabic, styles.matchingText)}</View>
-              <View style={styles.matchingChoices}>
-                {choices.map((choice) => {
-                  const selected = selectedMap[pair.left] === choice;
-                  const correct = isAnswered && normalizeAnswer(choice) === normalizeAnswer(pair.right);
-                  const wrong = isAnswered && selected && !correct;
-                  return (
-                    <Pressable
-                      key={`${pair.left}-${choice}`}
-                      accessibilityRole="button"
-                      disabled={isAnswered}
-                      onPress={() => updateMappedAnswer(pair.left, choice)}
-                      style={[styles.matchingChoice, selected ? styles.matchingChoiceSelected : null, correct ? styles.optionCorrect : wrong ? styles.optionWrong : null]}
-                    >
-                      {renderMaybeArabic(choice, correct ? styles.optionArabicTextCorrect : wrong ? styles.optionArabicTextWrong : styles.optionArabicText, correct ? styles.optionTextCorrect : wrong ? styles.optionTextWrong : styles.optionText)}
-                    </Pressable>
-                  );
-                })}
-              </View>
+        <ScrollView
+          key={`matching-${currentExerciseIndex}`}
+          style={styles.exerciseScroller}
+          contentContainerStyle={[styles.exerciseScrollerContent, isAnswered ? { paddingBottom: feedbackHeight + 16 } : null]}
+        >
+          <View style={styles.matchBoard}>
+            <View style={styles.matchColumn}>
+              {pairs.map((pair) => {
+                const paired = Boolean(selectedMap[pair.left]);
+                const active = matchActive?.side === "left" && matchActive.value === pair.left;
+                const correct = isAnswered && normalizeAnswer(selectedMap[pair.left]) === normalizeAnswer(pair.right);
+                const state = !isAnswered ? "neutral" : correct ? "correct" : "wrong";
+                return (
+                  <Pressable
+                    key={pair.left}
+                    accessibilityRole="button"
+                    accessibilityState={{ selected: active, disabled: isAnswered }}
+                    disabled={isAnswered}
+                    onPress={() => tapLeft(pair.left)}
+                    style={[styles.matchCell, paired ? styles.matchCellPaired : null, active ? styles.matchCellActive : null, state === "correct" ? styles.optionCorrect : state === "wrong" ? styles.optionWrong : null]}
+                  >
+                    {paired ? badge(numberOfLeft(pair.left), state) : null}
+                    <View style={styles.matchCellBody}>{renderMaybeArabic(pair.left, styles.matchingArabic, styles.matchingText)}</View>
+                  </Pressable>
+                );
+              })}
             </View>
-          ))}
+            <View style={styles.matchColumn}>
+              {choices.map((choice, index) => {
+                const pairedLeft = leftOfChoice(choice);
+                const active = matchActive?.side === "right" && matchActive.value === choice;
+                const correct = isAnswered && Boolean(pairedLeft) && pairs.some((pair) => pair.left === pairedLeft && normalizeAnswer(pair.right) === normalizeAnswer(choice));
+                const state = !isAnswered || !pairedLeft ? "neutral" : correct ? "correct" : "wrong";
+                return (
+                  <Pressable
+                    key={`${choice}-${index}`}
+                    accessibilityRole="button"
+                    accessibilityState={{ selected: active, disabled: isAnswered }}
+                    disabled={isAnswered}
+                    onPress={() => tapRight(choice)}
+                    style={[styles.matchCell, pairedLeft ? styles.matchCellPaired : null, active ? styles.matchCellActive : null, state === "correct" ? styles.optionCorrect : state === "wrong" ? styles.optionWrong : null]}
+                  >
+                    {pairedLeft ? badge(numberOfLeft(pairedLeft), state) : null}
+                    <View style={styles.matchCellBody}>
+                      {renderMaybeArabic(
+                        choice,
+                        state === "correct" ? styles.optionArabicTextCorrect : state === "wrong" ? styles.optionArabicTextWrong : styles.optionArabicText,
+                        state === "correct" ? styles.optionTextCorrect : state === "wrong" ? styles.optionTextWrong : styles.matchingText,
+                      )}
+                    </View>
+                  </Pressable>
+                );
+              })}
+            </View>
+          </View>
         </ScrollView>
         {canCheck ? <BrandButton title={t("common.check")} onPress={() => answerExercise(selectedMap)} style={styles.bottomButton} /> : null}
       </>
@@ -1082,7 +1214,11 @@ export default function LessonPlayScreen() {
 
     return (
       <>
-        <ScrollView key={`parse-${currentExerciseIndex}`} style={styles.exerciseScroller} contentContainerStyle={styles.exerciseScrollerContent}>
+        <ScrollView
+          key={`parse-${currentExerciseIndex}`}
+          style={styles.exerciseScroller}
+          contentContainerStyle={[styles.exerciseScrollerContent, isAnswered ? { paddingBottom: feedbackHeight + 16 } : null]}
+        >
           <View style={styles.parseSentence}>
             {tokens.map((token) => (
               <View key={token.word} style={styles.parseToken}>
@@ -1108,7 +1244,7 @@ export default function LessonPlayScreen() {
                       accessibilityRole="button"
                       disabled={isAnswered}
                       onPress={() => updateMappedAnswer(token.word, label)}
-                      style={[styles.labelChip, selected ? styles.matchingChoiceSelected : null, correct ? styles.optionCorrect : wrong ? styles.optionWrong : null]}
+                      style={[styles.labelChip, selected ? styles.labelChipSelected : null, correct ? styles.optionCorrect : wrong ? styles.optionWrong : null]}
                     >
                       {renderMaybeArabic(label, correct ? styles.optionArabicTextCorrect : wrong ? styles.optionArabicTextWrong : styles.optionArabicText, correct ? styles.optionTextCorrect : wrong ? styles.optionTextWrong : styles.optionText)}
                     </Pressable>
@@ -1485,54 +1621,60 @@ export default function LessonPlayScreen() {
     );
   }
 
-  function renderReveal() {
+  function renderQuranConnection(): React.ReactNode {
     const reveal = c.reveal as Record<string, any> | undefined;
     const ayah = reveal?.ayah as Record<string, any> | undefined;
     const hook = c.hook as Record<string, any> | undefined;
     const hookAyah = hook?.ayah as Record<string, any> | undefined;
     const ayahAr = ayah?.ar as string | undefined;
+    if (!ayahAr) return null;
     const indices = (reveal?.highlighted_word_indices as number[] | undefined) ?? [];
     const learnedWords = splitWords(ayahAr).filter((_, index) => indices.includes(index));
     const ayahAudioUrl = (ayah?.audio_url ?? hookAyah?.audio_url) as string | undefined;
 
     return (
+      <View style={styles.closeSection}>
+        <Text style={styles.closeSectionEyebrow}>{t("player.quranConnection")}</Text>
+        <Text style={styles.closeSectionTitle}>{t("player.revealHeading")}</Text>
+        <View style={styles.revealAyahCard}>
+          {renderRevealAyah()}
+          {ayah?.label ? <Text style={styles.ayahRef}>{ayah.label as string}</Text> : null}
+          {ayahAudioUrl ? (
+            <View style={styles.revealPlayRow}>
+              <PlayButton
+                text={ayahAr}
+                cacheKey={`reveal-${ayah?.label ?? lessonId}`}
+                category="lessons"
+                audioUrl={ayahAudioUrl}
+                size={22}
+              />
+              <Text style={styles.revealListenLabel}>{t("player.listenToAyah")}</Text>
+            </View>
+          ) : null}
+          {learnedWords.length > 0 ? (
+            <View style={styles.revealLearnedSection}>
+              <Text style={styles.revealLearnedLabel}>{t("player.wordsYouRecognised")}</Text>
+              <View style={styles.revealWordChips}>
+                {learnedWords.map((word, index) => (
+                  <View key={`${word}-${index}`} style={styles.revealWordChip}>
+                    <ArabicText size="sm" style={styles.revealWordChipText}>{word}</ArabicText>
+                  </View>
+                ))}
+              </View>
+            </View>
+          ) : null}
+        </View>
+        {learnedWords.length > 0 ? <Text style={styles.revealHighlightNote}>{t("player.revealHighlightNote")}</Text> : null}
+      </View>
+    );
+  }
+
+  // Only reachable from a beat-4 checkpoint saved by an older build.
+  function renderReveal() {
+    return (
       <View style={[styles.fullScreen, screenPadding, styles.revealScreen]}>
-        <ScrollView
-          style={styles.revealScroll}
-          contentContainerStyle={styles.revealContent}
-          showsVerticalScrollIndicator={false}
-        >
-          <Text style={styles.revealEyebrow}>{t("player.quranConnection")}</Text>
-          <Text style={styles.revealHeading}>{t("player.revealHeading")}</Text>
-          <View style={styles.revealAyahCard}>
-            {renderRevealAyah()}
-            {ayah?.label ? <Text style={styles.ayahRef}>{ayah.label as string}</Text> : null}
-            {ayahAr && ayahAudioUrl ? (
-              <View style={styles.revealPlayRow}>
-                <PlayButton
-                  text={ayahAr}
-                  cacheKey={`reveal-${ayah?.label ?? lessonId}`}
-                  category="lessons"
-                  audioUrl={ayahAudioUrl}
-                  size={22}
-                />
-                <Text style={styles.revealListenLabel}>{t("player.listenToAyah")}</Text>
-              </View>
-            ) : null}
-            {learnedWords.length > 0 ? (
-              <View style={styles.revealLearnedSection}>
-                <Text style={styles.revealLearnedLabel}>{t("player.wordsYouRecognised")}</Text>
-                <View style={styles.revealWordChips}>
-                  {learnedWords.map((word, index) => (
-                    <View key={`${word}-${index}`} style={styles.revealWordChip}>
-                      <ArabicText size="sm" style={styles.revealWordChipText}>{word}</ArabicText>
-                    </View>
-                  ))}
-                </View>
-              </View>
-            ) : null}
-          </View>
-          <Text style={styles.revealHighlightNote}>{t("player.revealHighlightNote")}</Text>
+        <ScrollView style={styles.revealScroll} contentContainerStyle={styles.revealContent} showsVerticalScrollIndicator={false}>
+          {renderQuranConnection()}
         </ScrollView>
         <BrandButton title={t("common.continue")} onPress={() => goToBeat(5)} style={styles.bottomButton} />
       </View>
@@ -1636,7 +1778,8 @@ export default function LessonPlayScreen() {
             <ArabicText size="md" style={styles.closeArabic}>بَارَكَ اللَّهُ فِيكَ</ArabicText>
           </View>
 
-          <View style={styles.completionResultsCard}>
+          {/* Without a server result these would be guesses (+10, 1 day). */}
+          {!error ? <View style={styles.completionResultsCard}>
             <View style={styles.completionMetric}>
               <Text style={styles.completionMetricValue}>+{earnedPoints}</Text>
               <Text style={styles.completionMetricLabel}>{t("player.completionPoints")}</Text>
@@ -1653,7 +1796,7 @@ export default function LessonPlayScreen() {
               <Text style={styles.completionMetricValue}>{streak}</Text>
               <Text style={styles.completionMetricLabel}>{t("player.completionStreak")}</Text>
             </View>
-          </View>
+          </View> : null}
 
           {completionResult?.chapterJustCompleted ? (
             <Text style={styles.chapterUnlockedBadge}>
@@ -1665,6 +1808,20 @@ export default function LessonPlayScreen() {
             <Text style={styles.spPhrasesEarned}>
               {t("player.phrasesToSay", { count: phrasesLearned, suffix: phrasesLearned !== 1 ? "s" : "" })}
             </Text>
+          ) : null}
+
+          {!lab ? renderQuranConnection() : null}
+
+          {completionResult ? (
+            <View style={styles.closeSection}>
+              <View style={styles.closeWeekHeader}>
+                <Text style={styles.closeSectionEyebrow}>{t("player.thisWeek")}</Text>
+                {completionResult.dailyGoalMet ? <Text style={styles.closeWeekStatus}>{t("player.todayGoalComplete")}</Text> : null}
+              </View>
+              <View style={styles.closeWeekCard}>
+                <StreakWeekRow streak={streak} lastActiveDate={new Date()} />
+              </View>
+            </View>
           ) : null}
 
           <View style={styles.noorRecapCard}>
@@ -1682,13 +1839,13 @@ export default function LessonPlayScreen() {
 
         <BrandButton
           title={t("common.continue")}
-          onPress={() => {
+          onPress={async () => {
             const achievements = completionResult?.newAchievements ?? [];
             if (achievements.length > 0) {
-              const nextRoute = shouldShowStreakCelebration ? "streak-celebration" : "tabs";
-              router.push({ pathname: "/(app)/milestone-celebration", params: { achievements: JSON.stringify(achievements), nextRoute, streak: String(streak) } });
-            } else if (shouldShowStreakCelebration) {
-              router.push({ pathname: "/(app)/streak-celebration", params: { streak: String(streak) } });
+              const nextRoute = shouldShowStreakCelebration ? "commitment" : "tabs";
+              router.push({ pathname: "/(app)/milestone-celebration", params: { achievements: JSON.stringify(achievements), nextRoute } });
+            } else if (shouldShowStreakCelebration && await shouldOfferCommitmentPrompt(userId)) {
+              router.push({ pathname: "/(app)/streak-commitment", params: { source: "celebration" } });
             } else {
               router.replace("/(app)/(tabs)");
             }
@@ -2046,7 +2203,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
     color: WarshPalette.goldText,
     fontFamily: Fonts.italic,
-    fontSize: 10,
+    fontSize: 12,
     fontStyle: "italic",
     textAlign: "center",
   },
@@ -2201,7 +2358,7 @@ const styles = StyleSheet.create({
   },
   exitDialog: {
     padding: Spacing.xl,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.cream,
     backgroundColor: WarshPalette.parchmentBg,
@@ -2261,7 +2418,7 @@ const styles = StyleSheet.create({
     marginTop: 24,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: 12,
+    borderRadius: Radii.md,
     padding: 16,
     backgroundColor: WarshPalette.parchmentBg,
   },
@@ -2281,7 +2438,7 @@ const styles = StyleSheet.create({
   writeArabicInput: {
     borderWidth: 1.5,
     borderColor: WarshPalette.defaultCardBorder,
-    borderRadius: 12,
+    borderRadius: Radii.md,
     padding: 16,
     fontSize: 24,
     fontFamily: Fonts.arabic,
@@ -2302,7 +2459,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     paddingVertical: 6,
     paddingHorizontal: 16,
-    borderRadius: 20,
+    borderRadius: Radii.xl,
     borderWidth: 1,
     borderColor: WarshPalette.gold,
   },
@@ -2365,7 +2522,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     borderWidth: 1,
     borderColor: WarshPalette.defaultCardBorder,
-    borderRadius: 8,
+    borderRadius: Radii.sm,
     padding: 12,
     backgroundColor: WarshPalette.white,
   },
@@ -2421,7 +2578,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderStyle: "dashed",
     borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: 12,
+    borderRadius: Radii.md,
     padding: 12,
   },
   answerRowCorrect: {
@@ -2436,13 +2593,13 @@ const styles = StyleSheet.create({
     flexDirection: "row-reverse",
   },
   answerSlot: {
-    minWidth: 58,
-    minHeight: 34,
+    minWidth: 64,
+    minHeight: 56,
     alignItems: "center",
     justifyContent: "center",
     margin: 4,
-    borderRadius: 6,
-    paddingHorizontal: 10,
+    borderRadius: Radii.sm,
+    paddingHorizontal: 14,
     paddingVertical: 6,
     backgroundColor: WarshPalette.creamBg,
   },
@@ -2463,25 +2620,35 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
   },
   wordTile: {
+    minHeight: 56,
+    justifyContent: "center",
     margin: 4,
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: 1,
     borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: 6,
-    paddingHorizontal: 10,
+    borderRadius: Radii.sm,
+    paddingHorizontal: 14,
     paddingVertical: 6,
     backgroundColor: WarshPalette.parchmentBg,
+  },
+  wordTileUsed: {
+    borderStyle: "dashed",
+    borderColor: WarshPalette.sageSoft,
+    backgroundColor: "transparent",
+  },
+  wordTileHidden: {
+    opacity: 0,
   },
   tileText: {
     color: WarshPalette.ink,
     fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 17,
+    fontSize: 15,
+    lineHeight: 21,
     textAlign: "center",
   },
   tileArabicText: {
     color: WarshPalette.ink,
-    fontSize: 20,
-    lineHeight: 28,
+    fontSize: 26,
+    lineHeight: 38,
     textAlign: "center",
   },
   exerciseScroller: {
@@ -2492,34 +2659,59 @@ const styles = StyleSheet.create({
     paddingTop: 8,
     paddingBottom: 16,
   },
-  matchingRow: {
-    marginBottom: 12,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: WarshPalette.defaultCardBorder,
-    borderRadius: 10,
-    padding: 10,
-    backgroundColor: WarshPalette.white,
-  },
-  matchingLeft: {
-    marginBottom: 8,
-  },
-  matchingChoices: {
+  matchBoard: {
     flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 6,
+    gap: 10,
   },
-  matchingChoice: {
-    minHeight: 38,
-    minWidth: "47%",
+  matchColumn: {
+    flex: 1,
+    gap: 10,
+  },
+  matchCell: {
+    minHeight: 64,
+    flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
+    gap: 8,
     borderWidth: 1,
     borderColor: WarshPalette.defaultCardBorder,
-    borderRadius: 8,
-    padding: 8,
-    backgroundColor: WarshPalette.creamBg,
+    borderRadius: Radii.md,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    backgroundColor: WarshPalette.white,
   },
-  matchingChoiceSelected: {
+  matchCellPaired: {
+    borderColor: WarshPalette.navy,
+    backgroundColor: WarshPalette.parchmentBg,
+  },
+  matchCellActive: {
+    borderWidth: 2,
+    borderColor: WarshPalette.gold,
+  },
+  matchCellBody: {
+    flex: 1,
+    alignItems: "center",
+  },
+  matchBadge: {
+    width: 22,
+    height: 22,
+    borderRadius: 11,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: WarshPalette.navy,
+  },
+  matchBadgeCorrect: {
+    backgroundColor: WarshPalette.sageDeep,
+  },
+  matchBadgeWrong: {
+    backgroundColor: WarshPalette.wrongBorder,
+  },
+  matchBadgeText: {
+    color: WarshPalette.parchment,
+    fontFamily: Fonts.semiBold,
+    fontSize: 12,
+    lineHeight: 16,
+  },
+  labelChipSelected: {
     borderColor: WarshPalette.gold,
     backgroundColor: WarshPalette.highlightBg,
   },
@@ -2532,8 +2724,8 @@ const styles = StyleSheet.create({
   matchingText: {
     color: WarshPalette.ink,
     fontFamily: Fonts.regular,
-    fontSize: 13,
-    lineHeight: 18,
+    fontSize: 15,
+    lineHeight: 21,
     textAlign: "center",
   },
   parseSentence: {
@@ -2543,7 +2735,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: WarshPalette.highlightBorder,
-    borderRadius: 12,
+    borderRadius: Radii.md,
     padding: 12,
     backgroundColor: WarshPalette.highlightBgSoft,
   },
@@ -2561,15 +2753,15 @@ const styles = StyleSheet.create({
     marginTop: 2,
     color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
-    fontSize: 9,
-    lineHeight: 13,
+    fontSize: 12,
+    lineHeight: 16,
     textAlign: "center",
   },
   parseRow: {
     marginBottom: 12,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: WarshPalette.defaultCardBorder,
-    borderRadius: 10,
+    borderRadius: Radii.md,
     padding: 10,
     backgroundColor: WarshPalette.white,
   },
@@ -2590,7 +2782,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderWidth: 1,
     borderColor: WarshPalette.defaultCardBorder,
-    borderRadius: 999,
+    borderRadius: Radii.full,
     paddingHorizontal: 10,
     paddingVertical: 6,
     backgroundColor: WarshPalette.creamBg,
@@ -2599,7 +2791,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: 12,
+    borderRadius: Radii.md,
     padding: 12,
     backgroundColor: WarshPalette.white,
   },
@@ -2609,8 +2801,8 @@ const styles = StyleSheet.create({
   dialogueSpeaker: {
     color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
-    fontSize: 9,
-    lineHeight: 13,
+    fontSize: 12,
+    lineHeight: 16,
   },
   dialogueArabic: {
     color: WarshPalette.ink,
@@ -2630,7 +2822,7 @@ const styles = StyleSheet.create({
     bottom: 104,
     left: 24,
     borderWidth: StyleSheet.hairlineWidth,
-    borderRadius: 12,
+    borderRadius: Radii.md,
     padding: 12,
   },
   feedbackCorrect: {
@@ -2698,8 +2890,8 @@ const styles = StyleSheet.create({
   revealEyebrow: {
     color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
-    fontSize: 10,
-    lineHeight: 14,
+    fontSize: 12,
+    lineHeight: 16,
     letterSpacing: 1.4,
     textAlign: "center",
   },
@@ -2717,7 +2909,7 @@ const styles = StyleSheet.create({
   revealAyahCard: {
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: 22,
+    borderRadius: Radii.md,
     paddingHorizontal: 22,
     paddingVertical: 26,
     backgroundColor: WarshPalette.parchmentBg,
@@ -2749,8 +2941,8 @@ const styles = StyleSheet.create({
   revealListenLabel: {
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: 11,
-    lineHeight: 16,
+    fontSize: 13,
+    lineHeight: 18,
   },
   revealLearnedSection: {
     marginTop: 22,
@@ -2761,8 +2953,8 @@ const styles = StyleSheet.create({
   revealLearnedLabel: {
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.semiBold,
-    fontSize: 10,
-    lineHeight: 14,
+    fontSize: 12,
+    lineHeight: 16,
     textAlign: "center",
   },
   revealWordChips: {
@@ -2776,7 +2968,7 @@ const styles = StyleSheet.create({
   revealWordChip: {
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: WarshPalette.highlightBorder,
-    borderRadius: 999,
+    borderRadius: Radii.full,
     paddingHorizontal: 13,
     paddingVertical: 4,
     backgroundColor: WarshPalette.highlightBgSoft,
@@ -2789,12 +2981,51 @@ const styles = StyleSheet.create({
   revealHighlightNote: {
     alignSelf: "center",
     maxWidth: 300,
-    marginTop: 16,
+    marginTop: 12,
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: 11,
-    lineHeight: 17,
+    fontSize: 13,
+    lineHeight: 19,
     textAlign: "center",
+  },
+  closeSection: {
+    alignSelf: "stretch",
+    marginTop: 24,
+  },
+  closeSectionEyebrow: {
+    color: WarshPalette.goldText,
+    fontFamily: Fonts.semiBold,
+    fontSize: 12,
+    lineHeight: 16,
+    letterSpacing: 1.2,
+  },
+  closeSectionTitle: {
+    marginTop: 4,
+    marginBottom: 12,
+    color: WarshPalette.ink,
+    fontFamily: Fonts.semiBold,
+    fontSize: 17,
+    lineHeight: 24,
+  },
+  closeWeekHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 10,
+  },
+  closeWeekStatus: {
+    color: WarshPalette.sageDeep,
+    fontFamily: Fonts.regular,
+    fontSize: 13,
+    lineHeight: 18,
+  },
+  closeWeekCard: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: WarshPalette.parchmentCardBorder,
+    borderRadius: Radii.md,
+    paddingHorizontal: 12,
+    paddingVertical: 14,
+    backgroundColor: WarshPalette.parchmentBg,
   },
   closeScreen: {
     backgroundColor: WarshPalette.creamBg,
@@ -2815,7 +3046,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: WarshPalette.gold,
-    borderRadius: 20,
+    borderRadius: Radii.xl,
     paddingHorizontal: 24,
     paddingVertical: 24,
     backgroundColor: WarshPalette.navy,
@@ -2869,8 +3100,8 @@ const styles = StyleSheet.create({
   completionKicker: {
     color: WarshPalette.parchment,
     fontFamily: Fonts.semiBold,
-    fontSize: 9,
-    lineHeight: 13,
+    fontSize: 12,
+    lineHeight: 16,
     letterSpacing: 1.6,
   },
   noorMonogram: {
@@ -2905,7 +3136,7 @@ const styles = StyleSheet.create({
     marginTop: 14,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: 18,
+    borderRadius: Radii.md,
     paddingVertical: 15,
     backgroundColor: WarshPalette.parchmentBg,
   },
@@ -2923,8 +3154,8 @@ const styles = StyleSheet.create({
     marginTop: 2,
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: 9,
-    lineHeight: 13,
+    fontSize: 12,
+    lineHeight: 16,
     textAlign: "center",
   },
   completionMetricDivider: {
@@ -2944,7 +3175,7 @@ const styles = StyleSheet.create({
     marginTop: 14,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: WarshPalette.sageSoft,
-    borderRadius: 18,
+    borderRadius: Radii.md,
     paddingHorizontal: 16,
     paddingVertical: 14,
     backgroundColor: WarshPalette.correctBg,
@@ -2959,33 +3190,33 @@ const styles = StyleSheet.create({
     flex: 1,
     color: WarshPalette.sageDeep,
     fontFamily: Fonts.semiBold,
-    fontSize: 11,
-    lineHeight: 16,
+    fontSize: 13,
+    lineHeight: 18,
   },
   meaningLanguageBadge: {
-    borderRadius: 999,
+    borderRadius: Radii.full,
     paddingHorizontal: 9,
     paddingVertical: 4,
     overflow: "hidden",
     color: WarshPalette.sageDeep,
     backgroundColor: WarshPalette.white,
     fontFamily: Fonts.regular,
-    fontSize: 8,
-    lineHeight: 11,
+    fontSize: 12,
+    lineHeight: 16,
   },
   noorTip: {
     marginTop: 8,
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: 11,
-    lineHeight: 17,
+    fontSize: 14,
+    lineHeight: 21,
   },
   nextLessonReady: {
     marginTop: 15,
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.italic,
-    fontSize: 10,
-    lineHeight: 15,
+    fontSize: 13,
+    lineHeight: 19,
     textAlign: "center",
   },
   errorText: {
@@ -3008,14 +3239,14 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: 10,
+    fontSize: 12,
     textAlign: "center",
   },
   spPhraseCard: {
     flex: 1,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: 12,
+    borderRadius: Radii.md,
     padding: 20,
     backgroundColor: WarshPalette.parchmentBg,
     alignItems: "center",
@@ -3056,7 +3287,7 @@ const styles = StyleSheet.create({
   verbRootPill: {
     alignSelf: "center",
     backgroundColor: WarshPalette.gold,
-    borderRadius: 999,
+    borderRadius: Radii.full,
     paddingHorizontal: 14,
     paddingVertical: 5,
     marginBottom: 20,
@@ -3090,7 +3321,7 @@ const styles = StyleSheet.create({
   verbTableCard: {
     alignSelf: "stretch",
     backgroundColor: WarshPalette.white,
-    borderRadius: 12,
+    borderRadius: Radii.md,
     borderWidth: 0.5,
     borderColor: WarshPalette.parchmentCardBorder,
     overflow: "hidden",
@@ -3119,8 +3350,8 @@ const styles = StyleSheet.create({
   },
   verbPronounEn: {
     fontFamily: Fonts.regular,
-    fontSize: 10,
-    lineHeight: 14,
+    fontSize: 12,
+    lineHeight: 16,
     color: WarshPalette.goldText,
   },
   verbConjugatedForm: {
@@ -3134,7 +3365,7 @@ const styles = StyleSheet.create({
   verbPatternFallbackCard: {
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: 12,
+    borderRadius: Radii.md,
     padding: 24,
     backgroundColor: WarshPalette.parchmentBg,
     alignItems: "center",
@@ -3161,7 +3392,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
     paddingHorizontal: 12,
     paddingVertical: 4,
-    borderRadius: 999,
+    borderRadius: Radii.full,
     backgroundColor: WarshPalette.sage,
     color: WarshPalette.creamBg,
     fontFamily: Fonts.bold,

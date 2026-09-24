@@ -274,7 +274,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     padding: Spacing.xl,
     gap: Spacing.md,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     backgroundColor: Colors.bg.surface,
     borderWidth: 1,
     borderColor: WarshPalette.defaultCardBorder,

@@ -148,7 +148,6 @@ export default function AppLayout() {
       <Stack.Screen name="tadabbur" />
       <Stack.Screen name="milestones" />
       <Stack.Screen name="milestone-celebration" />
-      <Stack.Screen name="streak-celebration" />
       <Stack.Screen name="edit-profile" />
       <Stack.Screen name="streak-detail" />
       <Stack.Screen name="surah-celebration" />

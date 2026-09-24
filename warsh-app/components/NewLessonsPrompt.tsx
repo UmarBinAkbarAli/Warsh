@@ -240,7 +240,7 @@ const styles = StyleSheet.create({
     gap: Spacing.sm,
     paddingVertical: Spacing.sm,
     paddingHorizontal: Spacing.md,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.cream,
     backgroundColor: WarshPalette.white,
@@ -296,7 +296,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     gap: Spacing.sm,
     padding: Spacing.md,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     backgroundColor: WarshPalette.sageTintBg,
   },
   reassuranceText: {

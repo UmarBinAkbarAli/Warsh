@@ -156,7 +156,7 @@ function formatDate(iso: string | null, language: string) {
 
 const styles = StyleSheet.create({
   banner: {
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     paddingVertical: Spacing.md + 2,
     paddingHorizontal: Spacing.lg,

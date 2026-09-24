@@ -3,6 +3,7 @@ import { prisma } from "../../../../lib/prisma";
 import { getUserIdFromRequest } from "../../../../lib/auth";
 import { isSupportedLanguage } from "../../../../lib/language";
 import { formatDateOfBirth, isAgePermitted, isMinor, parseDateOfBirth } from "../../../../lib/age";
+import { DISPLAY_NAME_MAX_LENGTH, parseDisplayName } from "../../../../lib/displayName";
 
 const VALID_DAILY_GOALS = [5, 10, 15, 30];
 const VALID_STREAK_GOALS = [3, 7, 14, 30];
@@ -22,6 +23,14 @@ export async function PATCH(request: Request) {
       return NextResponse.json({ error: "dailyGoalMinutes must be 5, 10, 15, or 30", code: "bad_request" }, { status: 400 });
     }
     updateData.dailyGoalMinutes = body.dailyGoalMinutes;
+  }
+
+  if (body.name !== undefined) {
+    const name = parseDisplayName(body.name);
+    if (!name) {
+      return NextResponse.json({ error: `Name must be 1-${DISPLAY_NAME_MAX_LENGTH} characters`, code: "invalid_name" }, { status: 400 });
+    }
+    updateData.name = name;
   }
 
   if (body.nativeLanguage !== undefined) {
@@ -70,7 +79,7 @@ export async function PATCH(request: Request) {
   const user = await prisma.user.update({
     where: { id: userId },
     data: updateData,
-    select: { id: true, dailyGoalMinutes: true, nativeLanguage: true, translationLanguage: true, streakGoalDays: true, dateOfBirth: true },
+    select: { id: true, name: true, dailyGoalMinutes: true, nativeLanguage: true, translationLanguage: true, streakGoalDays: true, dateOfBirth: true },
   });
 
   return NextResponse.json({

@@ -1,10 +1,13 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Platform, ScrollView, StyleSheet, Text, TouchableOpacity, useWindowDimensions, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, WarshAlpha } from "../../constants/theme";
 import api from "@services/api";
+import { useT } from "@i18n/index";
+import { StreakWeekRow } from "@components/StreakWeekRow";
+import { ScreenHeader } from "@components/ScreenHeader";
 
 interface StreakData {
   streak: number;
@@ -20,32 +23,15 @@ const MILESTONES = [
   { days: 100, xp: 2000, label: "100 day streak" },
 ];
 
-const DAY_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-
-function getWeekCompletedDays(): boolean[] {
-  // Mark days up to and including today as "completed" (mock)
-  const now = new Date();
-  // getDay() returns 0=Sun…6=Sat; convert to Mon=0…Sun=6
-  const dow = (now.getDay() + 6) % 7; // today index in Mon-Sun order
-  return DAY_LABELS.map((_, i) => i <= dow);
-}
-
-function getTodayDayIndex(): number {
-  const now = new Date();
-  return (now.getDay() + 6) % 7;
-}
-
 export default function StreakDetailScreen() {
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
   const desktopWeb = Platform.OS === "web" && width >= 960;
   const router = useRouter();
+  const t = useT();
 
   const [data, setData] = useState<StreakData | null>(null);
   const [loading, setLoading] = useState(true);
-
-  const weekCompleted = getWeekCompletedDays();
-  const todayIndex = getTodayDayIndex();
 
   useEffect(() => {
     api
@@ -69,14 +55,7 @@ export default function StreakDetailScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
-      {/* Header */}
-      <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
-        <TouchableOpacity accessibilityRole="button" accessibilityLabel="Back" onPress={() => router.back()} hitSlop={8}>
-          <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Streak · الاستمرار</Text>
-        <View style={{ width: 30 }} />
-      </View>
+      <ScreenHeader title="Streak · الاستمرار" style={desktopWeb ? styles.webHeaderRow : null} />
 
       <ScrollView
         contentContainerStyle={[
@@ -102,31 +81,16 @@ export default function StreakDetailScreen() {
           <View style={[styles.statCard, styles.statCardHalf]}>
             <Text style={styles.statLabel}>Streak Freezes</Text>
             <Text style={styles.statValue}>{loading ? "—" : (data?.streakFreezes ?? 0)}</Text>
-            <Text style={styles.statUnit}>remaining</Text>
+            <Text style={styles.statUnit}>
+              {!loading && (data?.streakFreezes ?? 0) === 0 ? t("streak.freezeEarnHint") : t("streak.freezeRemaining")}
+            </Text>
           </View>
         </View>
 
         {/* This Week */}
         <Text style={styles.sectionHeader}>This Week</Text>
-        <View style={styles.weekRow}>
-          {DAY_LABELS.map((day, i) => {
-            const isToday = i === todayIndex;
-            const isDone = weekCompleted[i];
-            return (
-              <View
-                key={day}
-                style={[
-                  styles.dayPill,
-                  isToday ? styles.dayPillToday : isDone ? styles.dayPillDone : null,
-                ]}
-              >
-                <Text style={[styles.dayLabel, isToday ? styles.dayLabelToday : null]}>{day}</Text>
-                <Text style={[styles.dayCheck, isToday ? styles.dayCheckToday : null]}>
-                  {isDone ? "✓" : "·"}
-                </Text>
-              </View>
-            );
-          })}
+        <View style={[styles.card, styles.weekCard]}>
+          <StreakWeekRow streak={currentStreak} lastActiveDate={data?.lastActiveDate ?? null} />
         </View>
 
         {/* Streak Milestones */}
@@ -143,7 +107,7 @@ export default function StreakDetailScreen() {
                     achieved ? styles.milestoneRowAchieved : null,
                   ]}
                 >
-                  <Text style={styles.milestoneEmoji}>🔥</Text>
+                  <Ionicons name="flame-outline" size={18} color={achieved ? WarshPalette.gold : WarshPalette.subtleBrown} style={styles.milestoneEmoji} />
                   <Text style={[styles.milestoneLabel, achieved ? styles.milestoneLabelAchieved : null]}>
                     {m.label}
                   </Text>
@@ -284,45 +248,10 @@ const styles = StyleSheet.create({
     marginTop: Spacing.sm,
   },
 
-  // Week pills
-  weekRow: {
-    flexDirection: "row",
-    gap: Spacing.xs,
+  weekCard: {
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.md,
     marginBottom: Spacing.xl,
-  },
-  dayPill: {
-    flex: 1,
-    alignItems: "center",
-    backgroundColor: WarshPalette.parchmentBg,
-    borderRadius: Radii.sm,
-    paddingVertical: Spacing.sm,
-    borderWidth: 0.5,
-    borderColor: WarshPalette.defaultCardBorder,
-  },
-  dayPillToday: {
-    backgroundColor: WarshPalette.gold,
-    borderColor: WarshPalette.gold,
-  },
-  dayPillDone: {
-    backgroundColor: WarshPalette.cream,
-    borderColor: WarshPalette.defaultCardBorder,
-  },
-  dayLabel: {
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.label ?? FontSizes.caption,
-    color: WarshPalette.bodyBrown,
-  },
-  dayLabelToday: {
-    color: WarshPalette.white,
-  },
-  dayCheck: {
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
-    color: WarshPalette.subtleBrown,
-    marginTop: 2,
-  },
-  dayCheckToday: {
-    color: WarshPalette.white,
   },
 
   // Milestones card
@@ -350,7 +279,6 @@ const styles = StyleSheet.create({
     backgroundColor: WarshAlpha.goldWash,
   },
   milestoneEmoji: {
-    fontSize: 18,
     width: 24,
     textAlign: "center",
   },

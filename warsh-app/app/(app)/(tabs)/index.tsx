@@ -19,10 +19,9 @@ import { prefetchChapter } from "@services/chapterPrefetch";
 import { pickLocalized, pickTranslation, useLanguage, useTranslationLanguage, type AppLanguage } from "@services/language";
 import { useAuthStore } from "@stores/authStore";
 import { useFocusEffect, useRouter } from "expo-router";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   ActivityIndicator,
-  Animated,
   Modal,
   Platform,
   Pressable,
@@ -153,7 +152,6 @@ export default function HomeScreen() {
   const [subscriptionActiveUntil, setSubscriptionActiveUntil] = useState<string | null>(null);
   const [trialBannerDismissed, setTrialBannerDismissed] = useState(false);
   const [showStreakEndedModal, setShowStreakEndedModal] = useState(false);
-  const [showDailyGoalToast, setShowDailyGoalToast] = useState(false);
   const [showTranslationPrompt, setShowTranslationPrompt] = useState(false);
   const [lessonNotices, setLessonNotices] = useState<LessonNotice[]>([]);
   const [translationPromptSaving, setTranslationPromptSaving] = useState(false);
@@ -161,8 +159,6 @@ export default function HomeScreen() {
   const [checklistDismissed, setChecklistDismissed] = useState(false);
   const [meaningLanguageChosen, setMeaningLanguageChosen] = useState(false);
   const [commitmentMade, setCommitmentMade] = useState(false);
-  const toastOpacity = useRef(new Animated.Value(0)).current;
-  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // On web `width` is the full browser viewport, but the app is constrained
   // to the centered WebShell column — cap to the frame width so content fits
@@ -171,27 +167,6 @@ export default function HomeScreen() {
   const availableWebWidth = desktopWeb ? width - 260 : width;
   const contentWidth = Math.min(availableWebWidth, isWeb ? WEB_MAX_WIDTH : 720);
   const pagePadding = contentWidth >= 600 ? Spacing.xxl : Spacing.gutter;
-
-  useEffect(() => {
-    if (!showDailyGoalToast) return undefined;
-
-    Animated.timing(toastOpacity, {
-      toValue: 1,
-      duration: 300,
-      useNativeDriver: true,
-    }).start();
-    toastTimer.current = setTimeout(() => {
-      Animated.timing(toastOpacity, {
-        toValue: 0,
-        duration: 300,
-        useNativeDriver: true,
-      }).start(() => setShowDailyGoalToast(false));
-    }, 3000);
-
-    return () => {
-      if (toastTimer.current) clearTimeout(toastTimer.current);
-    };
-  }, [showDailyGoalToast, toastOpacity]);
 
   useEffect(() => {
     if (!userId) return undefined;
@@ -240,7 +215,6 @@ export default function HomeScreen() {
         wordOfDayResponse,
         lastStreakRaw,
         streakEndedShownDate,
-        dailyGoalToastFlag,
         checklistDismissedFlag,
         langTouchedFlag,
       ] = await Promise.all([
@@ -252,7 +226,6 @@ export default function HomeScreen() {
         api.get("/api/vocabulary/word-of-day").catch(() => null),
         AsyncStorage.getItem(`${LAST_STREAK_KEY}_${userId}`),
         AsyncStorage.getItem(`${STREAK_ENDED_SHOWN_KEY}_${userId}`),
-        AsyncStorage.getItem(`warsh_daily_goal_toast_${today}`),
         userId ? AsyncStorage.getItem(`${ONBOARDING_CHECKLIST_DISMISSED_KEY}_${userId}`) : null,
         userId ? AsyncStorage.getItem(`${ONBOARDING_LANG_TOUCHED_KEY}_${userId}`) : null,
       ]);
@@ -327,10 +300,6 @@ export default function HomeScreen() {
       }
       await AsyncStorage.setItem(`${LAST_STREAK_KEY}_${userId}`, String(streak));
 
-      if (dailyGoalToastFlag) {
-        await AsyncStorage.removeItem(`warsh_daily_goal_toast_${today}`);
-        setShowDailyGoalToast(true);
-      }
     } catch {
       setError(t("learn.loadError"));
     } finally {
@@ -533,27 +502,6 @@ export default function HomeScreen() {
         onDismiss={() => setShowTranslationPrompt(false)}
       />
 
-      {showDailyGoalToast ? (
-        <Animated.View
-          style={[
-            styles.dailyGoalToast,
-            { top: insets.top + Spacing.sm, opacity: toastOpacity },
-          ]}
-        >
-          <Ionicons name="checkmark-circle" size={18} color={WarshPalette.sage} />
-          <Text style={styles.dailyGoalToastText}>{t("learn.dailyGoalToast")}</Text>
-          <TouchableOpacity
-            onPress={() => {
-              if (toastTimer.current) clearTimeout(toastTimer.current);
-              setShowDailyGoalToast(false);
-            }}
-            hitSlop={8}
-            accessibilityLabel={t("common.close")}
-          >
-            <Ionicons name="close" size={16} color={WarshPalette.bodyBrown} />
-          </TouchableOpacity>
-        </Animated.View>
-      ) : null}
 
       <ScrollView
         style={styles.scroll}
@@ -1111,7 +1059,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: Spacing.md,
     backgroundColor: WarshPalette.navy,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     padding: Spacing.lg,
   },
   core500Badge: {
@@ -1127,7 +1075,7 @@ const styles = StyleSheet.create({
     minHeight: 150,
     padding: 22,
     gap: 8,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.sageSoft,
     backgroundColor: WarshPalette.white,
@@ -1141,7 +1089,7 @@ const styles = StyleSheet.create({
   statLabel: {
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.bold,
-    fontSize: 11,
+    fontSize: 12,
     letterSpacing: 1.4,
   },
   statValue: {
@@ -1174,7 +1122,7 @@ const styles = StyleSheet.create({
   heroCard: {
     minHeight: 252,
     padding: Spacing.lg,
-    borderRadius: 22,
+    borderRadius: Radii.xl,
     borderWidth: 1,
     borderColor: WarshPalette.gold,
     backgroundColor: WarshPalette.navy,
@@ -1265,7 +1213,7 @@ const styles = StyleSheet.create({
     flex: 1,
     color: WarshAlpha.onNavyMuted,
     fontFamily: Fonts.regular,
-    fontSize: 11,
+    fontSize: 12,
     lineHeight: 16,
   },
   continueButton: {
@@ -1307,7 +1255,7 @@ const styles = StyleSheet.create({
     minWidth: 0,
     minHeight: 132,
     padding: Spacing.md,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     ...Shadows.card,
   },
@@ -1330,8 +1278,8 @@ const styles = StyleSheet.create({
     flexShrink: 1,
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.semiBold,
-    fontSize: 9,
-    lineHeight: 13,
+    fontSize: 12,
+    lineHeight: 16,
     textTransform: "uppercase",
     letterSpacing: 0.55,
   },
@@ -1354,8 +1302,8 @@ const styles = StyleSheet.create({
     marginTop: 4,
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: 10,
-    lineHeight: 14,
+    fontSize: 12,
+    lineHeight: 16,
   },
   goalRing: {
     width: 49,
@@ -1371,7 +1319,7 @@ const styles = StyleSheet.create({
   goalRingValue: {
     color: WarshPalette.ink,
     fontFamily: Fonts.bold,
-    fontSize: 10,
+    fontSize: 12,
   },
   wordArabic: {
     color: WarshPalette.navy,
@@ -1383,7 +1331,7 @@ const styles = StyleSheet.create({
   wordMeaning: {
     color: WarshPalette.ink,
     fontFamily: Fonts.regular,
-    fontSize: 11,
+    fontSize: 12,
     lineHeight: 17,
   },
   wordPlaceholder: {
@@ -1412,7 +1360,7 @@ const styles = StyleSheet.create({
   },
   journeyCard: {
     overflow: "hidden",
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.cream,
     backgroundColor: WarshPalette.parchmentBg,
@@ -1454,8 +1402,8 @@ const styles = StyleSheet.create({
   journeyLabel: {
     color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
-    fontSize: 9,
-    lineHeight: 13,
+    fontSize: 12,
+    lineHeight: 16,
     textTransform: "uppercase",
     letterSpacing: 0.6,
   },
@@ -1468,7 +1416,7 @@ const styles = StyleSheet.create({
   journeySubtitle: {
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.urduFallback,
-    fontSize: 11,
+    fontSize: 12,
     lineHeight: 17,
     writingDirection: "rtl",
     textAlign: "left",
@@ -1488,7 +1436,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: Spacing.md,
     padding: Spacing.lg,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.gold,
     backgroundColor: WarshPalette.navy,
@@ -1515,7 +1463,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
     color: WarshAlpha.onNavyMuted,
     fontFamily: Fonts.regular,
-    fontSize: 11,
+    fontSize: 12,
     lineHeight: 16,
   },
   tadabburArabic: {
@@ -1545,7 +1493,7 @@ const styles = StyleSheet.create({
   tadabburPercent: {
     color: WarshPalette.parchment,
     fontFamily: Fonts.regular,
-    fontSize: 9,
+    fontSize: 12,
   },
   allChaptersLink: {
     minHeight: 52,
@@ -1691,27 +1639,4 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.xl,
   },
   modalCta: { width: "100%" },
-  dailyGoalToast: {
-    position: "absolute",
-    left: Spacing.lg,
-    right: Spacing.lg,
-    zIndex: 100,
-    flexDirection: "row",
-    alignItems: "center",
-    gap: Spacing.sm,
-    paddingVertical: Spacing.md,
-    paddingHorizontal: Spacing.lg,
-    borderRadius: Radii.lg,
-    borderWidth: 1.5,
-    borderColor: WarshPalette.gold,
-    backgroundColor: WarshPalette.white,
-    ...Shadows.goldGlow,
-  },
-  dailyGoalToastText: {
-    flex: 1,
-    color: WarshPalette.ink,
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyM,
-    lineHeight: LineHeights.bodyM,
-  },
 });

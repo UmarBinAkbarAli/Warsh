@@ -16,6 +16,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { ArabicText } from "@components/ArabicText";
 import { PlayButton } from "@components/PlayButton";
+import { ScreenHeader } from "@components/ScreenHeader";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../../constants/theme";
 import { getVocabularyWordDetail, updateUserVocabularyWord } from "@services/api";
 import { useTranslationLanguage, pickTranslation, pickLocalized } from "@services/language";
@@ -158,12 +159,12 @@ export default function WordDetailScreen() {
     }
   }
 
-  async function toggleFavorite() {
+  async function toggleSaved() {
     if (!word || saving) return;
-    const newVal = !(userWord?.isFavorite ?? false);
+    const save = !(userWord?.isFavorite ?? false);
     setSaving(true);
     try {
-      const res = await updateUserVocabularyWord(word.id, { isFavorite: newVal });
+      const res = await updateUserVocabularyWord(word.id, save ? { isFavorite: true, markForReview: true } : { isFavorite: false });
       setUserWord(res.data.data);
     } finally {
       setSaving(false);
@@ -182,23 +183,10 @@ export default function WordDetailScreen() {
     }
   }
 
-  async function markForReview() {
-    if (!word || saving) return;
-    setSaving(true);
-    try {
-      const res = await updateUserVocabularyWord(word.id, { markForReview: true });
-      setUserWord(res.data.data);
-    } finally {
-      setSaving(false);
-    }
-  }
-
   if (loading || !word) {
     return (
-      <View style={[styles.screen, { paddingTop: insets.top + Spacing.xl }]}>
-        <TouchableOpacity onPress={() => router.back()} style={{ paddingHorizontal: Spacing.xl }}>
-          <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
-        </TouchableOpacity>
+      <View style={[styles.screen, { paddingTop: insets.top }]}>
+        <ScreenHeader />
         <ActivityIndicator color={WarshPalette.gold} style={{ marginTop: Spacing.xl * 2 }} />
       </View>
     );
@@ -211,19 +199,7 @@ export default function WordDetailScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: desktopWeb ? 0 : insets.top }]}>
-      {/* Header */}
-      <View style={[styles.header, desktopWeb && styles.webHeader]}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
-        </TouchableOpacity>
-        <TouchableOpacity accessibilityRole="button" accessibilityLabel={t(userWord?.isFavorite ? "a11y.unsaveWord" : "a11y.saveWord")} onPress={toggleFavorite} disabled={saving}>
-          <Ionicons
-            name={userWord?.isFavorite ? "heart" : "heart-outline"}
-            size={24}
-            color={userWord?.isFavorite ? WarshPalette.gold : WarshPalette.bodyBrown}
-          />
-        </TouchableOpacity>
-      </View>
+      <ScreenHeader style={desktopWeb ? styles.webHeader : null} />
 
       <ScrollView contentContainerStyle={[styles.content, desktopWeb && styles.webContent]}>
         {/* Main Arabic display */}
@@ -337,10 +313,26 @@ export default function WordDetailScreen() {
 
         {/* Actions */}
         <View style={styles.actionsCard}>
-          <TouchableOpacity style={styles.actionRow} onPress={markForReview} disabled={saving}>
-            <Ionicons name="repeat-outline" size={20} color={WarshPalette.sage} />
-            <Text style={styles.actionText}>{t("vocabulary.markForReview")}</Text>
-            <Ionicons name="chevron-forward" size={16} color={WarshPalette.subtleBrown} />
+          <TouchableOpacity
+            style={styles.actionRow}
+            onPress={toggleSaved}
+            disabled={saving}
+            accessibilityRole="button"
+            accessibilityState={{ checked: Boolean(userWord?.isFavorite) }}
+          >
+            <Ionicons
+              name={userWord?.isFavorite ? "bookmark" : "bookmark-outline"}
+              size={20}
+              color={userWord?.isFavorite ? WarshPalette.gold : WarshPalette.sageDeep}
+            />
+            <View style={styles.actionBody}>
+              <Text style={styles.actionText}>
+                {userWord?.isFavorite ? t("vocabulary.savedForReview") : t("vocabulary.saveForReview")}
+              </Text>
+              <Text style={styles.actionHint}>
+                {userWord?.isFavorite ? t("vocabulary.savedForReviewHint") : t("vocabulary.saveForReviewHint")}
+              </Text>
+            </View>
           </TouchableOpacity>
           <View style={styles.actionDivider} />
           <TouchableOpacity style={styles.actionRow} onPress={toggleHidden} disabled={saving}>
@@ -385,29 +377,13 @@ export default function WordDetailScreen() {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: Colors.bg.primary },
 
-  header: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingHorizontal: Spacing.xl,
-    paddingVertical: Spacing.md,
-    borderBottomWidth: 0.5,
-    borderBottomColor: WarshPalette.parchmentCardBorder,
-  },
-  backBtn: {
-    color: WarshPalette.goldText, fontFamily: Fonts.regular,
-    fontSize: FontSizes.bodyL,
-  },
 
   content: { paddingHorizontal: Spacing.xl, paddingBottom: Spacing.xl * 3 },
   webHeader: {
     width: "100%",
     maxWidth: 680,
     alignSelf: "center",
-    paddingHorizontal: 0,
     paddingTop: 36,
-    paddingBottom: Spacing.md,
-    borderBottomWidth: 0,
   },
   webContent: {
     width: "100%",
@@ -424,7 +400,7 @@ const styles = StyleSheet.create({
     width: 160,
     height: 160,
     marginBottom: Spacing.lg,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
   },
   arabicMain: { color: WarshPalette.ink, textAlign: "center" },
   translit: {
@@ -468,7 +444,7 @@ const styles = StyleSheet.create({
   card: {
     marginBottom: Spacing.md,
     padding: Spacing.lg,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 0.5,
     borderColor: WarshPalette.parchmentCardBorder,
     backgroundColor: WarshPalette.parchmentBg,
@@ -533,7 +509,7 @@ const styles = StyleSheet.create({
 
   actionsCard: {
     marginVertical: Spacing.md,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 0.5,
     borderColor: WarshPalette.parchmentCardBorder,
     backgroundColor: WarshPalette.white,
@@ -543,9 +519,14 @@ const styles = StyleSheet.create({
     flexDirection: "row", alignItems: "center",
     padding: Spacing.md, gap: Spacing.md,
   },
+  actionBody: { flex: 1 },
   actionText: {
     flex: 1, color: WarshPalette.ink,
     fontFamily: Fonts.regular, fontSize: FontSizes.bodyL,
+  },
+  actionHint: {
+    marginTop: 2, color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.regular, fontSize: FontSizes.caption,
   },
   actionDivider: {
     height: 0.5, backgroundColor: WarshPalette.parchmentCardBorder,

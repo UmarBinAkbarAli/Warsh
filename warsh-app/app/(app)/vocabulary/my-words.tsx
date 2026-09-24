@@ -25,6 +25,7 @@ import {
   Spacing,
   Radii,
 } from "../../../constants/theme";
+import { ScreenHeader } from "@components/ScreenHeader";
 
 type Filter = "all" | "new" | "mastered" | "needs_review";
 type Sort = "date" | "alpha" | "topic";
@@ -135,18 +136,7 @@ export default function MyWordsScreen() {
 
   return (
     <View style={styles.container}>
-      {/* Header */}
-      <View style={[styles.header, desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.xl }]}>
-        {!desktopWeb ? (
-          <TouchableOpacity accessibilityRole="button" accessibilityLabel={t("common.back")}
-            onPress={() => router.back()}
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          >
-            <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
-          </TouchableOpacity>
-        ) : null}
-        <Text style={styles.headerTitle}>{t("vocabulary.myWords")}</Text>
-      </View>
+      <ScreenHeader title={t("vocabulary.myWords")} style={desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.xl }} showBack={!desktopWeb} />
 
       {/* Filter chips */}
       <ScrollView
@@ -309,7 +299,7 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.parchmentBg,
     marginBottom: Spacing.sm,
     padding: Spacing.md,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 0.5,
     borderColor: WarshPalette.defaultCardBorder,
   },

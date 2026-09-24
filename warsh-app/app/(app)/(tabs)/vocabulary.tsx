@@ -230,6 +230,7 @@ export default function VocabularyScreen() {
   const [allWords, setAllWords] = useState<VocabWord[]>([]);
   const [srsDueCount, setSrsDueCount] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [countsLoading, setCountsLoading] = useState(true);
   const [searching, setSearching] = useState(false);
   const desktopWeb = Platform.OS === "web" && width >= 960;
 
@@ -252,19 +253,22 @@ export default function VocabularyScreen() {
     return collected;
   }
 
+  // The word of the day and the review card come back in one round trip; the
+  // topic counts need every page of the word bank, so they fill in afterwards
+  // instead of holding the whole tab on a spinner.
   async function fetchInitialData() {
-    setLoading(true);
+    setLoading(allWords.length === 0 && !wordOfDay);
+    fetchAllWords()
+      .then(setAllWords)
+      .catch(() => {})
+      .finally(() => setCountsLoading(false));
     try {
-      const [wotdRes, allWords, srsRes] = await Promise.all([
-        getWordOfDay(),
-        fetchAllWords(),
+      const [wotdRes, srsRes] = await Promise.all([
+        getWordOfDay().catch(() => null),
         getSRSDueWords().catch(() => ({ data: { data: [] } })),
       ]);
-      setWordOfDay(wotdRes.data.data);
-      setAllWords(allWords);
+      if (wotdRes) setWordOfDay(wotdRes.data.data);
       setSrsDueCount((srsRes.data.data as unknown[]).length);
-    } catch {
-      // silently fall back to empty state
     } finally {
       setLoading(false);
     }
@@ -328,8 +332,20 @@ export default function VocabularyScreen() {
           </View>
         </TouchableOpacity>
 
-        {loading ? (
-          <ActivityIndicator color={WarshPalette.gold} style={{ marginTop: Spacing.xl }} />
+        {loading && !isSearching ? (
+          <View accessibilityLabel={t("common.loading")} accessibilityRole="progressbar">
+            <View style={[styles.skeleton, styles.skeletonHero]} />
+            <View style={styles.statsRow}>
+              <View style={[styles.skeleton, styles.skeletonStat]} />
+              <View style={[styles.skeleton, styles.skeletonStat]} />
+            </View>
+            <View style={[styles.skeleton, styles.skeletonRow]} />
+            <View style={styles.skeletonGrid}>
+              {Array.from({ length: 6 }, (_, index) => (
+                <View key={index} style={[styles.skeleton, styles.skeletonTile]} />
+              ))}
+            </View>
+          </View>
         ) : isSearching ? (
           /* Search results */
           <View style={{ marginTop: Spacing.lg }}>
@@ -385,7 +401,7 @@ export default function VocabularyScreen() {
             {/* Stats */}
             <View style={styles.statsRow}>
               <View style={styles.statBox}>
-                <Text style={styles.statValue}>{allWords.length}</Text>
+                <Text style={styles.statValue}>{countsLoading && allWords.length === 0 ? "—" : allWords.length}</Text>
                 <Text style={styles.statLabel}>{t("vocabulary.wordsInBank")}</Text>
               </View>
               <View style={styles.statBox}>
@@ -431,6 +447,33 @@ export default function VocabularyScreen() {
 // ─── styles ───────────────────────────────────────────────────────────────────
 
 const styles = StyleSheet.create({
+  // Loading placeholders in the shape of the content they stand in for.
+  skeleton: {
+    borderRadius: Radii.md,
+    backgroundColor: WarshPalette.parchmentSoft,
+  },
+  skeletonHero: {
+    height: 196,
+    marginTop: Spacing.lg,
+  },
+  skeletonStat: {
+    flex: 1,
+    height: 72,
+  },
+  skeletonRow: {
+    height: 64,
+    marginTop: Spacing.md,
+  },
+  skeletonGrid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: Spacing.sm,
+    marginTop: Spacing.xl,
+  },
+  skeletonTile: {
+    width: "48%",
+    height: 88,
+  },
   screen: { flex: 1, backgroundColor: Colors.bg.primary },
   content: { paddingHorizontal: Spacing.xl, paddingBottom: Spacing.xl * 2 },
   webContent: {
@@ -457,7 +500,7 @@ const styles = StyleSheet.create({
 
   // Word of Day
   wotdCard: {
-    padding: Spacing.lg, borderRadius: Radii.lg,
+    padding: Spacing.lg, borderRadius: Radii.md,
     borderWidth: 1, borderColor: WarshPalette.gold + "55",
     backgroundColor: WarshPalette.parchmentBg,
   },

@@ -33,6 +33,7 @@ import { DAILY_UNIT_MINUTES, STREAK_GOAL_OPTIONS } from "../../constants/commitm
 import { useT } from "@i18n/index";
 import { ConfirmDialog } from "@components/ConfirmDialog";
 import { type AppLanguage } from "@services/language";
+import { ScreenHeader } from "@components/ScreenHeader";
 
 // AsyncStorage keys for local preferences
 const PREFS_KEY = "warsh_settings";
@@ -317,13 +318,7 @@ export default function SettingsScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
-      <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>{t("settings.title")}</Text>
-        <View style={{ width: 60 }} />
-      </View>
+      <ScreenHeader title={t("settings.title")} style={desktopWeb ? styles.webHeaderRow : null} />
 
       <ScrollView
         ref={scrollViewRef}
@@ -711,7 +706,7 @@ const styles = StyleSheet.create({
   },
 
   card: {
-    borderRadius: Radii.lg, borderWidth: 0.5,
+    borderRadius: Radii.md, borderWidth: 0.5,
     borderColor: WarshPalette.parchmentCardBorder,
     backgroundColor: WarshPalette.white,
     overflow: "hidden",

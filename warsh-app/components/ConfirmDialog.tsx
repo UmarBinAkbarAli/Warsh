@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     maxWidth: 420,
     alignSelf: "center",
     padding: Spacing.xl,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.cream,
     backgroundColor: WarshPalette.parchmentBg,

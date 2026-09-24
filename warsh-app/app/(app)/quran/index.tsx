@@ -324,7 +324,7 @@ const styles = StyleSheet.create({
     gap: Spacing.md,
     paddingHorizontal: Spacing.lg,
     paddingVertical: Spacing.md,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     backgroundColor: WarshPalette.navy,
   },
   continueCopy: {

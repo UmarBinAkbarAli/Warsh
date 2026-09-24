@@ -18,6 +18,7 @@ import { BrandButton } from "@components/BrandButton";
 import { useTranslationLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette } from "../../../constants/theme";
+import { ScreenHeader } from "@components/ScreenHeader";
 
 type LocalizedText = { en: string; ur: string };
 type TestOption = LocalizedText & { arabic?: string };
@@ -100,9 +101,11 @@ export default function ChapterTestScreen() {
   }
   if (!assessment || error) {
     return (
-      <View style={[styles.center, { paddingTop: insets.top }]}>
-        <Text style={styles.errorText}>{error ?? t("chapterTest.loadError")}</Text>
-        <TouchableOpacity onPress={() => router.back()}><Text style={styles.backLink}>‹ {t("common.back")}</Text></TouchableOpacity>
+      <View style={{ flex: 1, paddingTop: insets.top, backgroundColor: WarshPalette.parchmentDeep }}>
+        <ScreenHeader />
+        <View style={styles.center}>
+          <Text style={styles.errorText}>{error ?? t("chapterTest.loadError")}</Text>
+        </View>
       </View>
     );
   }
@@ -322,15 +325,15 @@ const styles = StyleSheet.create({
   headerTitle: { color: WarshPalette.navy, fontFamily: Fonts.display, fontSize: 26, lineHeight: 32 },
   headerSubtitle: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption, marginTop: 2 },
   introContent: { padding: Spacing.gutter, gap: Spacing.lg, paddingBottom: 110 },
-  hero: { height: 190, borderRadius: 24, backgroundColor: WarshPalette.navy, alignItems: "center", justifyContent: "center", gap: Spacing.md, padding: Spacing.lg },
+  hero: { height: 190, borderRadius: Radii.xl, backgroundColor: WarshPalette.navy, alignItems: "center", justifyContent: "center", gap: Spacing.md, padding: Spacing.lg },
   heroIcon: { width: 58, height: 58, borderRadius: 29, backgroundColor: WarshPalette.gold, alignItems: "center", justifyContent: "center" },
   heroTitle: { color: WarshPalette.white, fontFamily: Fonts.display, fontSize: 26 },
   heroArabic: { color: WarshPalette.parchment, textAlign: "center" },
-  metricsCard: { flexDirection: "row", backgroundColor: WarshPalette.white, borderRadius: Radii.lg, borderWidth: 1, borderColor: WarshPalette.defaultCardBorder, paddingVertical: Spacing.lg },
+  metricsCard: { flexDirection: "row", backgroundColor: WarshPalette.white, borderRadius: Radii.md, borderWidth: 1, borderColor: WarshPalette.defaultCardBorder, paddingVertical: Spacing.lg },
   metric: { flex: 1, alignItems: "center", gap: 3 },
   metricValue: { color: WarshPalette.navy, fontFamily: Fonts.bold, fontSize: FontSizes.h2 },
   metricLabel: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.label, textAlign: "center" },
-  rulesCard: { backgroundColor: WarshPalette.correctBg, borderRadius: Radii.lg, borderWidth: 1, borderColor: WarshPalette.defaultCardBorder, padding: Spacing.lg, gap: Spacing.sm },
+  rulesCard: { backgroundColor: WarshPalette.correctBg, borderRadius: Radii.md, borderWidth: 1, borderColor: WarshPalette.defaultCardBorder, padding: Spacing.lg, gap: Spacing.sm },
   ruleRow: { flexDirection: "row", gap: Spacing.sm },
   ruleBullet: { color: WarshPalette.sageDeep, fontFamily: Fonts.bold },
   ruleText: { flex: 1, color: Colors.text.secondary, fontFamily: Fonts.regular, fontSize: FontSizes.bodyM, lineHeight: LineHeights.bodyM },
@@ -353,7 +356,7 @@ const styles = StyleSheet.create({
   privateResultNote: { flexDirection: "row", alignItems: "center", gap: Spacing.sm, backgroundColor: WarshPalette.parchmentBg, borderRadius: Radii.md, padding: Spacing.md, marginTop: Spacing.lg },
   privateResultText: { flex: 1, color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption },
   resultContent: { padding: Spacing.gutter, gap: Spacing.md, paddingBottom: 150 },
-  resultHero: { minHeight: 245, borderRadius: 24, alignItems: "center", justifyContent: "center", gap: Spacing.sm, padding: Spacing.lg, borderWidth: 1 },
+  resultHero: { minHeight: 245, borderRadius: Radii.xl, alignItems: "center", justifyContent: "center", gap: Spacing.sm, padding: Spacing.lg, borderWidth: 1 },
   resultHeroPassed: { backgroundColor: WarshPalette.navy, borderColor: WarshPalette.navy },
   resultHeroRetry: { backgroundColor: WarshPalette.white, borderColor: WarshPalette.wrongBorder },
   resultIcon: { width: 62, height: 62, borderRadius: 31, backgroundColor: WarshPalette.gold, alignItems: "center", justifyContent: "center" },
@@ -364,17 +367,17 @@ const styles = StyleSheet.create({
   resultScorePassed: { color: WarshPalette.parchment },
   resultNote: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption },
   resultNotePassed: { color: WarshPalette.white },
-  outcomeCard: { borderRadius: Radii.lg, padding: Spacing.lg, borderWidth: 1, gap: Spacing.sm },
+  outcomeCard: { borderRadius: Radii.md, padding: Spacing.lg, borderWidth: 1, gap: Spacing.sm },
   outcomePassed: { backgroundColor: WarshPalette.correctBg, borderColor: WarshPalette.defaultCardBorder },
   outcomeRetry: { backgroundColor: WarshPalette.wrongBg, borderColor: WarshPalette.wrongBorder },
   outcomeTitle: { color: WarshPalette.sageDeep, fontFamily: Fonts.bold, fontSize: FontSizes.bodyL },
   outcomeTitleRetry: { color: WarshPalette.wrongText },
   outcomeText: { color: Colors.text.secondary, fontFamily: Fonts.regular, fontSize: FontSizes.bodyM, lineHeight: LineHeights.bodyM },
-  topicsCard: { borderRadius: Radii.lg, padding: Spacing.lg, borderWidth: 1, borderColor: WarshPalette.defaultCardBorder, backgroundColor: WarshPalette.white, gap: Spacing.sm },
+  topicsCard: { borderRadius: Radii.md, padding: Spacing.lg, borderWidth: 1, borderColor: WarshPalette.defaultCardBorder, backgroundColor: WarshPalette.white, gap: Spacing.sm },
   topicsTitle: { color: WarshPalette.navy, fontFamily: Fonts.bold, fontSize: FontSizes.bodyM },
   topicsText: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption, lineHeight: LineHeights.caption },
   resultActions: { gap: Spacing.sm, paddingHorizontal: Spacing.gutter, paddingBottom: Spacing.lg },
-  secondaryButton: { height: 54, borderRadius: Radii.lg, borderWidth: 1, borderColor: WarshPalette.sageSoft, alignItems: "center", justifyContent: "center" },
+  secondaryButton: { height: 54, borderRadius: Radii.md, borderWidth: 1, borderColor: WarshPalette.sageSoft, alignItems: "center", justifyContent: "center" },
   secondaryButtonText: { color: WarshPalette.navy, fontFamily: Fonts.bold, fontSize: FontSizes.bodyM },
   errorText: { color: Colors.error, fontFamily: Fonts.regular, fontSize: FontSizes.bodyM, textAlign: "center" },
   backLink: { color: WarshPalette.goldText, fontFamily: Fonts.bold, fontSize: FontSizes.bodyL },

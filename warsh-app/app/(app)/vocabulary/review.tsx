@@ -20,6 +20,7 @@ import { trackSRSReviewCompleted } from "@services/analytics";
 import { useTranslationLanguage, pickTranslation } from "@services/language";
 import { useT } from "@i18n/index";
 import { prefetchVocabWordAudio } from "@services/audioCache";
+import { ScreenHeader } from "@components/ScreenHeader";
 
 interface QuranicExample {
   surahNameEn: string;
@@ -129,11 +130,7 @@ export default function SRSReviewScreen() {
   if (stage === "loading") {
     return (
       <View style={[styles.screen, { paddingTop: insets.top }]}>
-        <View style={styles.header}>
-          <TouchableOpacity onPress={() => router.back()}>
-            <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
-          </TouchableOpacity>
-        </View>
+        <ScreenHeader title={t("vocabulary.review")} />
         <ActivityIndicator color={WarshPalette.gold} style={{ marginTop: Spacing.xl * 3 }} />
       </View>
     );
@@ -142,11 +139,7 @@ export default function SRSReviewScreen() {
   if (stage === "empty") {
     return (
       <View style={[styles.screen, { paddingTop: insets.top }]}>
-        <View style={styles.header}>
-          <TouchableOpacity onPress={() => router.back()}>
-            <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
-          </TouchableOpacity>
-        </View>
+        <ScreenHeader title={t("vocabulary.review")} />
         <View style={[styles.centerContent, desktopWeb && styles.webNarrow]}>
           <ArabicText size="xl" style={styles.emptyArabic}>ما شاء الله</ArabicText>
           <Text style={styles.emptyTitle}>{t("vocabulary.reviewNoWords")}</Text>
@@ -162,11 +155,7 @@ export default function SRSReviewScreen() {
   if (stage === "pre") {
     return (
       <View style={[styles.screen, { paddingTop: insets.top }]}>
-        <View style={styles.header}>
-          <TouchableOpacity onPress={() => router.back()}>
-            <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
-          </TouchableOpacity>
-        </View>
+        <ScreenHeader title={t("vocabulary.review")} />
         <View style={[styles.centerContent, desktopWeb && styles.webNarrow]}>
           <ArabicText size="lg" style={styles.preArabic}>مُرَاجَعَة الكَلِمَات</ArabicText>
           <Text style={styles.preTitle}>{t("vocabulary.review")}</Text>
@@ -184,11 +173,7 @@ export default function SRSReviewScreen() {
     const totalReviewed = results.hard + results.good + results.easy;
     return (
       <View style={[styles.screen, { paddingTop: insets.top }]}>
-        <View style={styles.header}>
-          <TouchableOpacity onPress={() => router.back()}>
-            <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
-          </TouchableOpacity>
-        </View>
+        <ScreenHeader title={t("vocabulary.review")} />
         <View style={[styles.centerContent, desktopWeb && styles.webNarrow]}>
           <ArabicText size="xl" style={styles.doneArabic}>بَارَكَ اللّٰهُ فِيكَ</ArabicText>
           <Text style={styles.doneTitle}>{t("vocabulary.reviewDone")}</Text>
@@ -219,12 +204,10 @@ export default function SRSReviewScreen() {
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
       {/* Header with progress */}
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
-        </TouchableOpacity>
-        <Text style={styles.progressLabel}>{currentIndex + 1} / {total}</Text>
-      </View>
+      <ScreenHeader
+        title={t("vocabulary.review")}
+        right={<Text style={styles.progressLabel}>{currentIndex + 1} / {total}</Text>}
+      />
 
       {/* Progress bar */}
       <View style={styles.progressBarBg}>
@@ -380,7 +363,7 @@ const styles = StyleSheet.create({
   },
   beginBtn: {
     backgroundColor: WarshPalette.navy, paddingHorizontal: Spacing.xl * 1.5,
-    paddingVertical: Spacing.md, borderRadius: Radii.lg, minWidth: 180,
+    paddingVertical: Spacing.md, borderRadius: Radii.md, minWidth: 180,
     alignItems: "center",
   },
   beginBtnText: {
@@ -419,7 +402,7 @@ const styles = StyleSheet.create({
   },
   doneBtn: {
     backgroundColor: WarshPalette.navy, paddingHorizontal: Spacing.xl * 1.5,
-    paddingVertical: Spacing.md, borderRadius: Radii.lg, minWidth: 180,
+    paddingVertical: Spacing.md, borderRadius: Radii.md, minWidth: 180,
     alignItems: "center",
   },
   doneBtnText: {

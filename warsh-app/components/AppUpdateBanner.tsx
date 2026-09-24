@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     padding: Spacing.md,
     borderWidth: 1,
     borderColor: WarshPalette.gold,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     backgroundColor: WarshPalette.parchmentBg,
     ...Shadows.goldGlow,
   },

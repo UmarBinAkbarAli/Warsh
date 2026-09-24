@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: Spacing.md + 2,
     padding: Spacing.lg,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     backgroundColor: WarshPalette.parchmentBg,
     borderWidth: 1,
     borderColor: WarshPalette.parchment,
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   tile: {
     width: 52,
     height: 64,
-    borderRadius: 10,
+    borderRadius: Radii.md,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: WarshPalette.navy,

@@ -616,8 +616,8 @@ const styles = StyleSheet.create({
   },
   sheet: {
     backgroundColor: WarshPalette.white,
-    borderTopLeftRadius: Radii.lg,
-    borderTopRightRadius: Radii.lg,
+    borderTopLeftRadius: Radii.md,
+    borderTopRightRadius: Radii.md,
     paddingHorizontal: Spacing.xxl,
     paddingTop: Spacing.md,
     maxHeight: "70%",

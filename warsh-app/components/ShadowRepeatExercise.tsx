@@ -7,7 +7,7 @@ import { ArabicText } from "./ArabicText";
 import { WaveformBars } from "./WaveformBars";
 import { BrandButton } from "./BrandButton";
 import { recheckMicPermission, requestMicPermission } from "@services/micPermission";
-import { WarshPalette, Fonts, WarshAlpha } from "../constants/theme";
+import { WarshPalette, Fonts, WarshAlpha, Radii } from "../constants/theme";
 import { useT } from "@i18n/index";
 
 type Props = {
@@ -465,7 +465,7 @@ const styles = StyleSheet.create({
     marginBottom: 24,
     borderWidth: 1,
     borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: 12,
+    borderRadius: Radii.md,
     padding: 20,
     backgroundColor: WarshPalette.parchmentBg,
     alignItems: "center",
@@ -506,7 +506,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: 8,
     paddingVertical: 14,
-    borderRadius: 10,
+    borderRadius: Radii.md,
     backgroundColor: WarshPalette.navy,
   },
   playBtnActive: {
@@ -523,7 +523,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: 8,
     paddingVertical: 14,
-    borderRadius: 10,
+    borderRadius: Radii.md,
   },
   speakBtnEnabled: {
     backgroundColor: WarshPalette.sage,
@@ -552,7 +552,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: WarshPalette.goldText,
     fontFamily: Fonts.regular,
-    fontSize: 11,
+    fontSize: 12,
     lineHeight: 16,
   },
   comparisonPanel: {
@@ -565,7 +565,7 @@ const styles = StyleSheet.create({
     gap: 10,
     borderWidth: 1,
     borderColor: WarshPalette.defaultCardBorder,
-    borderRadius: 10,
+    borderRadius: Radii.md,
     padding: 12,
     backgroundColor: WarshPalette.white,
   },
@@ -577,7 +577,7 @@ const styles = StyleSheet.create({
     width: 52,
     color: WarshPalette.bodyBrown,
     fontFamily: Fonts.regular,
-    fontSize: 11,
+    fontSize: 12,
     lineHeight: 16,
   },
   compareBtn: {
@@ -585,7 +585,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderWidth: 1,
     borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: 8,
+    borderRadius: Radii.sm,
     backgroundColor: WarshPalette.creamBg,
   },
   compareBtnText: {
@@ -605,7 +605,7 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     borderWidth: 1,
     borderColor: WarshPalette.defaultCardBorder,
-    borderRadius: 10,
+    borderRadius: Radii.md,
     backgroundColor: WarshPalette.creamBg,
   },
   reRecordText: {
@@ -638,7 +638,7 @@ const styles = StyleSheet.create({
   },
   modalCard: {
     width: "100%",
-    borderRadius: 16,
+    borderRadius: Radii.md,
     padding: 24,
     backgroundColor: WarshPalette.creamBg,
     alignItems: "center",
@@ -665,7 +665,7 @@ const styles = StyleSheet.create({
   modalPrivacy: {
     color: WarshPalette.goldText,
     fontFamily: Fonts.italic,
-    fontSize: 11,
+    fontSize: 12,
     fontStyle: "italic",
     lineHeight: 16,
     textAlign: "center",

@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.parchmentBg,
     borderWidth: 1,
     borderColor: WarshPalette.parchmentCardBorder,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     padding: Spacing.xl,
     alignItems: "center",
     marginBottom: Spacing.md,

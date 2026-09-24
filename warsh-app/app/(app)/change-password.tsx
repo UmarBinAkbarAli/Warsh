@@ -25,6 +25,7 @@ import {
   Spacing,
   Radii,
 } from "../../constants/theme";
+import { ScreenHeader } from "@components/ScreenHeader";
 
 export default function ChangePasswordScreen() {
   const router = useRouter();
@@ -81,17 +82,7 @@ export default function ChangePasswordScreen() {
       style={styles.container}
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
-      <View style={[styles.header, desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.sm }]}>
-        {!desktopWeb ? (
-          <TouchableOpacity accessibilityRole="button" accessibilityLabel="Back"
-            onPress={() => router.back()}
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          >
-            <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
-          </TouchableOpacity>
-        ) : null}
-        <Text style={styles.headerTitle}>Change Password</Text>
-      </View>
+      <ScreenHeader title="Change Password" style={desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.sm }} showBack={!desktopWeb} />
 
       <ScrollView contentContainerStyle={[styles.content, desktopWeb && styles.webRow]} keyboardShouldPersistTaps="handled">
         {error ? <Text style={styles.errorText}>{error}</Text> : null}

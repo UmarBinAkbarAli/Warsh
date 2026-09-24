@@ -24,6 +24,7 @@ import {
   WarshAlpha,
   WarshPalette,
 } from "../../constants/theme";
+import { ScreenHeader } from "@components/ScreenHeader";
 
 interface Stats {
   userName: string;
@@ -94,16 +95,7 @@ export default function ShareStatsScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
-      {/* Header */}
-      <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
-        <TouchableOpacity accessibilityRole="button" accessibilityLabel="Back"
-          onPress={() => router.back()}
-          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-        >
-          <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Share your progress</Text>
-      </View>
+      <ScreenHeader title="Share your progress" style={desktopWeb ? styles.webHeaderRow : null} />
 
       {loading ? (
         <ActivityIndicator color={WarshPalette.gold} style={{ marginTop: Spacing.xxl }} />
@@ -313,7 +305,7 @@ const styles = StyleSheet.create({
     gap: Spacing.sm,
     marginHorizontal: Spacing.xl,
     backgroundColor: WarshPalette.navy,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     paddingVertical: Spacing.md,
     minHeight: 52,
   },

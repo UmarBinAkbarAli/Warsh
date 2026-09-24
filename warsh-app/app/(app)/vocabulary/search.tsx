@@ -256,7 +256,7 @@ const styles = StyleSheet.create({
   searchInput: {
     flex: 1,
     backgroundColor: WarshPalette.parchmentBg,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     paddingHorizontal: Spacing.md,
     paddingVertical: Spacing.sm,
     fontFamily: Fonts.regular,
@@ -297,7 +297,7 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.parchmentBg,
     marginBottom: Spacing.sm,
     padding: Spacing.md,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 0.5,
     borderColor: WarshPalette.defaultCardBorder,
   },

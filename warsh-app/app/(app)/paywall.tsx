@@ -852,7 +852,7 @@ const styles = StyleSheet.create({
     gap: Spacing.sm,
     paddingHorizontal: Spacing.md,
     paddingVertical: Spacing.sm,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.defaultCardBorder,
     backgroundColor: WarshPalette.parchmentBg,
@@ -904,7 +904,7 @@ const styles = StyleSheet.create({
   primaryButton: {
     width: "100%",
     minHeight: 56,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     marginBottom: Spacing.sm,
   },
   reassuranceRow: {
@@ -967,7 +967,7 @@ const styles = StyleSheet.create({
   modalInput: {
     minHeight: 52,
     paddingHorizontal: Spacing.md,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.defaultCardBorder,
     backgroundColor: WarshPalette.parchmentBg,
@@ -996,10 +996,10 @@ const styles = StyleSheet.create({
   },
   legal: {
     fontFamily: Fonts.regular,
-    fontSize: 9,
+    fontSize: 12,
     color: WarshPalette.subtleBrown,
     textAlign: "center",
-    lineHeight: 13,
+    lineHeight: 16,
     marginTop: 4,
   },
   webNote: {
@@ -1007,7 +1007,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     gap: Spacing.sm,
     padding: Spacing.md,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     backgroundColor: WarshPalette.sageTintBg,
     borderWidth: 1,
     borderColor: WarshPalette.sageSoft,

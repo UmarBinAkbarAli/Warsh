@@ -8,6 +8,8 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ArabicText } from "@components/ArabicText";
 import { BrandButton } from "@components/BrandButton";
 import { CelebrationEmblem } from "@components/CelebrationEmblem";
+import { shouldOfferCommitmentPrompt } from "@services/commitmentPrompt";
+import { useAuthStore } from "@stores/authStore";
 import {
   Colors,
   FontSizes,
@@ -56,11 +58,11 @@ function getBadge(key: string): IconName {
 export default function MilestoneCelebrationScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { achievements: achievementsParam, nextRoute, streak } =
+  const userId = useAuthStore((state) => state.user?.id);
+  const { achievements: achievementsParam, nextRoute } =
     useLocalSearchParams<{
       achievements: string;
       nextRoute: string;
-      streak: string;
     }>();
 
   const achievements: Achievement[] = (() => {
@@ -100,10 +102,10 @@ export default function MilestoneCelebrationScreen() {
       setIndex((value) => value + 1);
       return;
     }
-    if (nextRoute === "streak-celebration") {
-      router.replace({
-        pathname: "/(app)/streak-celebration",
-        params: { streak: streak ?? "1" },
+    if (nextRoute === "commitment") {
+      void shouldOfferCommitmentPrompt(userId).then((offer) => {
+        if (offer) router.replace({ pathname: "/(app)/streak-commitment", params: { source: "celebration" } });
+        else router.replace("/(app)/(tabs)");
       });
     } else if (nextRoute === "chat") {
       router.replace("/(app)/(tabs)/chat");
@@ -282,7 +284,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.lg,
     paddingVertical: Spacing.md,
     alignItems: "center",
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: WarshPalette.defaultCardBorder,
     backgroundColor: WarshPalette.parchmentBg,

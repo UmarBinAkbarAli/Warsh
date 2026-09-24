@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     height: 38,
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 11,
+    borderRadius: Radii.md,
     backgroundColor: WarshPalette.navy,
   },
   markGlyph: {
@@ -214,6 +214,6 @@ const styles = StyleSheet.create({
   footerMeta: {
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
-    fontSize: 11,
+    fontSize: 12,
   },
 });

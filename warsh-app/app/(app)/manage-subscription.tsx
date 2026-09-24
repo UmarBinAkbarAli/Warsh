@@ -21,6 +21,7 @@ import { useLanguage } from "@services/language";
 import { useT } from "@i18n/index";
 
 import { PLAY_SUBSCRIPTION_URL } from "../../constants/subscription";
+import { ScreenHeader } from "@components/ScreenHeader";
 
 // Normalized store states persisted by the backend (source of truth).
 type StoreState =
@@ -196,13 +197,7 @@ export default function ManageSubscriptionScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
-      <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.backBtn}>‹ {t("common.back")}</Text>
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>{t("manageSub.title")}</Text>
-        <View style={{ width: 60 }} />
-      </View>
+      <ScreenHeader title={t("manageSub.title")} style={desktopWeb ? styles.webHeaderRow : null} />
 
       {loading ? (
         <View style={styles.centered}>
@@ -305,7 +300,7 @@ const styles = StyleSheet.create({
 
   statusCard: {
     padding: Spacing.lg,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 0.5,
     borderColor: WarshPalette.parchmentCardBorder,
     backgroundColor: WarshPalette.white,
@@ -341,7 +336,7 @@ const styles = StyleSheet.create({
   actions: { marginTop: Spacing.xl, gap: Spacing.sm },
   primaryBtn: {
     backgroundColor: WarshPalette.navy, padding: Spacing.lg,
-    borderRadius: Radii.lg, alignItems: "center",
+    borderRadius: Radii.md, alignItems: "center",
   },
   primaryBtnText: {
     color: WarshPalette.parchment, fontFamily: Fonts.bold,
@@ -349,7 +344,7 @@ const styles = StyleSheet.create({
   },
   secondaryBtn: {
     flexDirection: "row", alignItems: "center", justifyContent: "center", gap: Spacing.sm,
-    padding: Spacing.lg, borderRadius: Radii.lg,
+    padding: Spacing.lg, borderRadius: Radii.md,
     borderWidth: 1, borderColor: WarshPalette.defaultCardBorder,
     backgroundColor: WarshPalette.white,
   },

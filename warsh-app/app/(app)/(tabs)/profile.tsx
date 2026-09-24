@@ -375,7 +375,7 @@ const styles = StyleSheet.create({
     gap: Theme.Spacing.md,
   },
   webHeaderCard: {
-    borderRadius: Theme.Radii.lg,
+    borderRadius: Theme.Radii.md,
     paddingTop: Theme.Spacing.xl,
   },
   webStreakCard: {
@@ -643,8 +643,8 @@ const styles = StyleSheet.create({
   achievementTitle: {
     marginTop: 4,
     color: Theme.WarshPalette.subtleBrown,
-    fontSize: 8,
-    lineHeight: 12,
+    fontSize: 12,
+    lineHeight: 16,
     textAlign: "center",
   },
   achievementMore: {

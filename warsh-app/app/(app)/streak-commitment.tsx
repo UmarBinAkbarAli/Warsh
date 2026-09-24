@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingVertical: Spacing.md,
     paddingHorizontal: Spacing.lg,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.gold,
     backgroundColor: WarshPalette.highlightBg,

@@ -25,6 +25,7 @@ import {
   Spacing,
   WarshPalette,
 } from "../../../constants/theme";
+import { ScreenHeader } from "@components/ScreenHeader";
 
 interface CoreWord {
   id: string;
@@ -90,22 +91,11 @@ export default function Core500WordsScreen() {
 
   return (
     <View style={styles.container}>
-      <View
-        style={[
-          styles.header,
-          desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.xl },
-        ]}
-      >
-        {!desktopWeb ? (
-          <TouchableOpacity accessibilityRole="button" accessibilityLabel={t("common.back")}
-            onPress={() => router.back()}
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          >
-            <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
-          </TouchableOpacity>
-        ) : null}
-        <Text style={styles.headerTitle}>{t("core500.wordsYouKnow")}</Text>
-      </View>
+      <ScreenHeader
+        title={t("core500.wordsYouKnow")}
+        showBack={!desktopWeb}
+        style={desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.sm }}
+      />
 
       <View style={styles.controls}>
         <TextInput

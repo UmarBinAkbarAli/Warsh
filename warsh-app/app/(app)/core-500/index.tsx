@@ -25,6 +25,7 @@ import {
   Spacing,
   WarshPalette,
 } from "../../../constants/theme";
+import { ScreenHeader } from "@components/ScreenHeader";
 
 interface CoreSet {
   setNumber: number;
@@ -118,22 +119,11 @@ export default function Core500Screen() {
 
   return (
     <View style={styles.container}>
-      <View
-        style={[
-          styles.header,
-          desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.xl },
-        ]}
-      >
-        {!desktopWeb ? (
-          <TouchableOpacity accessibilityRole="button" accessibilityLabel={t("common.back")}
-            onPress={() => router.back()}
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          >
-            <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
-          </TouchableOpacity>
-        ) : null}
-        <Text style={styles.headerTitle}>{t("core500.title")}</Text>
-      </View>
+      <ScreenHeader
+        title={t("core500.title")}
+        showBack={!desktopWeb}
+        style={desktopWeb ? styles.webHeaderRow : { paddingTop: insets.top + Spacing.sm }}
+      />
 
       <ScrollView
         contentContainerStyle={[
@@ -294,7 +284,7 @@ const styles = StyleSheet.create({
 
   hero: {
     backgroundColor: WarshPalette.parchmentSoft,
-    borderRadius: Radii.lg,
+    borderRadius: Radii.md,
     borderWidth: 1,
     borderColor: WarshPalette.parchmentCardBorder,
     padding: Spacing.lg,

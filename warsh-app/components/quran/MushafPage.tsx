@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { StyleSheet, Text, View, type StyleProp, type TextStyle } from "react-native";
 
-import { Fonts, MushafPalette, TajweedPalette, WarshPalette } from "../../constants/theme";
+import { Fonts, MushafPalette, TajweedPalette, WarshPalette, Radii } from "../../constants/theme";
 import {
   BASMALA,
   WORD_GAP_EM,
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
     backgroundColor: MushafPalette.page,
     borderWidth: 1,
     borderColor: MushafPalette.frame,
-    borderRadius: 6,
+    borderRadius: Radii.sm,
     paddingHorizontal: FRAME_PADDING_X,
     paddingVertical: FRAME_PADDING_Y,
   },
@@ -324,7 +324,7 @@ const styles = StyleSheet.create({
   },
   selectedWord: {
     backgroundColor: TajweedPalette.nasalTint,
-    borderRadius: 6,
+    borderRadius: Radii.sm,
   },
   surahFrame: {
     flex: 1,

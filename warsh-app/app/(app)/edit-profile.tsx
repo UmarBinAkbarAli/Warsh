@@ -16,9 +16,13 @@ import { Colors, FontSizes, Fonts, LineHeights, Radii, Spacing, WarshPalette, Wa
 import api from "@services/api";
 import { useAuthStore } from "@stores/authStore";
 import { BrandButton } from "@components/BrandButton";
+import { ScreenHeader } from "@components/ScreenHeader";
 import { useT } from "@i18n/index";
 
 type Lang = "en" | "ur";
+
+// Mirrors DISPLAY_NAME_MAX_LENGTH in warsh-backend/lib/displayName.ts.
+const NAME_MAX_LENGTH = 60;
 
 export default function EditProfileScreen() {
   const insets = useSafeAreaInsets();
@@ -32,18 +36,27 @@ export default function EditProfileScreen() {
   const [selectedLang, setSelectedLang] = useState<Lang>(
     (user?.nativeLanguage as Lang) ?? "en"
   );
+  const [name, setName] = useState(user?.name ?? "");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
+  const trimmedName = name.replace(/\s+/g, " ").trim();
+  const nameChanged = trimmedName !== (user?.name ?? "");
+  const nameValid = trimmedName.length > 0 && trimmedName.length <= NAME_MAX_LENGTH;
+
   async function handleSave() {
     if (saving) return;
+    if (!nameValid) {
+      setError(t("editProfile.nameInvalid"));
+      return;
+    }
     setSaving(true);
     setError(null);
     setSuccess(false);
     try {
-      await api.patch("/api/users/me", { nativeLanguage: selectedLang });
-      patchUser({ nativeLanguage: selectedLang });
+      await api.patch("/api/users/me", { nativeLanguage: selectedLang, ...(nameChanged ? { name: trimmedName } : {}) });
+      patchUser({ nativeLanguage: selectedLang, ...(nameChanged ? { name: trimmedName } : {}) });
       setSuccess(true);
       setTimeout(() => router.back(), 800);
     } catch {
@@ -55,23 +68,7 @@ export default function EditProfileScreen() {
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
-      {/* Header */}
-      <View style={[styles.header, desktopWeb && styles.webHeaderRow]}>
-        <TouchableOpacity accessibilityRole="button" accessibilityLabel={t("common.back")} onPress={() => router.back()} style={styles.headerSide} hitSlop={8}>
-          <Ionicons name="arrow-back" size={22} color={WarshPalette.ink} />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>{t("editProfile.title")}</Text>
-        <TouchableOpacity
-          onPress={handleSave}
-          disabled={saving}
-          style={[styles.headerSide, styles.saveBtn]}
-          hitSlop={8}
-        >
-          <Text style={[styles.saveBtnText, saving ? styles.saveBtnDisabled : null]}>
-            {saving ? t("common.saving") : t("common.save")}
-          </Text>
-        </TouchableOpacity>
-      </View>
+      <ScreenHeader title={t("editProfile.title")} style={desktopWeb ? styles.webHeaderRow : null} />
 
       <ScrollView
         contentContainerStyle={[
@@ -81,14 +78,6 @@ export default function EditProfileScreen() {
         ]}
         keyboardShouldPersistTaps="handled"
       >
-        {/* Avatar */}
-        <View style={styles.avatarSection}>
-          <View style={styles.avatarCircle}>
-            <Text style={styles.avatarEmoji}>👤</Text>
-          </View>
-          <Text style={styles.avatarHint}>{t("editProfile.changePhotoSoon")}</Text>
-        </View>
-
         {/* Feedback banners */}
         {success ? (
           <View style={styles.successBanner}>
@@ -107,11 +96,15 @@ export default function EditProfileScreen() {
           <Text style={styles.fieldLabel}>{t("editProfile.name")}</Text>
           <TextInput
             style={styles.textInput}
-            value={user?.name ?? ""}
-            editable={false}
+            value={name}
+            onChangeText={setName}
+            maxLength={NAME_MAX_LENGTH}
+            autoCapitalize="words"
+            autoComplete="name"
+            textContentType="name"
+            accessibilityLabel={t("editProfile.name")}
             placeholderTextColor={WarshPalette.subtleBrown}
           />
-          <Text style={styles.comingSoonNote}>{t("editProfile.nameSoon")}</Text>
         </View>
 
         {/* Language section */}
@@ -167,40 +160,6 @@ const styles = StyleSheet.create({
     backgroundColor: WarshPalette.parchmentBg,
   },
 
-  // Header
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: Spacing.xl,
-    paddingVertical: Spacing.md,
-    borderBottomWidth: 0.5,
-    borderBottomColor: WarshPalette.defaultCardBorder,
-    backgroundColor: WarshPalette.parchmentBg,
-  },
-  headerSide: {
-    width: 60,
-    alignItems: "flex-start",
-  },
-  headerTitle: {
-    fontFamily: Fonts.bold,
-    fontSize: FontSizes.h1,
-    lineHeight: LineHeights.h1,
-    color: WarshPalette.ink,
-    textAlign: "center",
-  },
-  saveBtn: {
-    alignItems: "flex-end",
-  },
-  saveBtnText: {
-    fontFamily: Fonts.bold,
-    fontSize: FontSizes.bodyL,
-    color: WarshPalette.goldText,
-  },
-  saveBtnDisabled: {
-    opacity: 0.5,
-  },
-
   // Content
   content: {
     paddingHorizontal: Spacing.xl,
@@ -215,34 +174,7 @@ const styles = StyleSheet.create({
     width: "100%",
     maxWidth: 560,
     alignSelf: "center",
-    borderBottomWidth: 0,
     paddingTop: 36,
-  },
-
-  // Avatar
-  avatarSection: {
-    alignItems: "center",
-    marginBottom: Spacing.xl,
-  },
-  avatarCircle: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    borderWidth: 2,
-    borderColor: WarshPalette.gold,
-    backgroundColor: WarshPalette.parchmentBg,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  avatarEmoji: {
-    fontSize: 36,
-  },
-  avatarHint: {
-    marginTop: Spacing.sm,
-    fontFamily: Fonts.italic,
-    fontSize: FontSizes.caption,
-    color: WarshPalette.subtleBrown,
-    fontStyle: "italic",
   },
 
   // Feedback banners
@@ -317,16 +249,9 @@ const styles = StyleSheet.create({
     borderRadius: Radii.sm,
     paddingHorizontal: Spacing.md,
     paddingVertical: Spacing.sm,
-    opacity: 0.5,
-    backgroundColor: WarshPalette.creamBg,
+    backgroundColor: WarshPalette.white,
   },
-  comingSoonNote: {
-    marginTop: Spacing.xs,
-    fontFamily: Fonts.italic,
-    fontSize: FontSizes.caption,
-    color: WarshPalette.subtleBrown,
-    fontStyle: "italic",
-  },
+
 
   // Language cards
   langRow: {
