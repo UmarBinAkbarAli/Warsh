@@ -363,7 +363,12 @@ files remain release evidence.
 
 Implemented from the 2026-09-24 UX evaluation (owner asked to implement
 directly; Pen section 31 holds the proposals). Web ships with the push;
-Android learners get these in the next Play release.
+Android ships in **1.0.14 (38), submitted to Production 2026-09-25**: release
+gate passed (fixtures, Urdu audit, backend build, app lint + tsc,
+`verify:release-api-url` incl. R8 mapping + Sentry UUID, `verify:play-signing`);
+the matching APK was smoke-tested on the API 34 emulator against production
+(Learn tab, Vocabulary, a Chapter 21 lesson showing a new picture). Play: full
+rollout, no errors or warnings on the release page; in review.
 
 - One lesson-complete screen: result, Quran connection, this week and
   Continue. The separate reveal beat, the streak-celebration screen and the
