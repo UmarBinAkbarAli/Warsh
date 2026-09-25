@@ -770,8 +770,12 @@ Everything below this list is either done and verified, or one of these:
    open) uploaded to `images/discover/`, plus the 40 reuse cards wired by
    `scripts/wire-reused-lesson-images.ts`; 301 cards across 42 lessons,
    published with a commit-scoped `content:sync --git-ref=HEAD^..HEAD`
-   (media only); all 227 URLs answer 200. Still to draw: the rest of Ch20,
-   Ch21–25 (`lesson-illustrations-needed.md`).
+   (media only); all 227 URLs answer 200. **2026-09-25:** the 73 faceless
+   redraws (Ch5–20) and 35 new scenes (Ch1: 3, Ch20: last 6, Ch21: 26)
+   checked for faces and published with `--replace`: 108 files, 149 cards,
+   56 lessons, previous `contentUpdatedAt` restored (no "Updated" notices).
+   Still to draw: one Ch21 scene, Ch22–25 and the open Ch1–11 scenes
+   (`lesson-illustrations-needed.md`).
    **Chapter 24 (`Docs/proposals/chapter-24-content-proposal.md`) is built,
    staging-verified and promoted to production 2026-09-24** on the owner's
    instruction. The review confirmed the proposal's defects (Lesson 2 taught
