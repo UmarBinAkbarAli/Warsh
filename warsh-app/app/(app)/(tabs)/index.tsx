@@ -8,15 +8,33 @@ import {
   type OnboardingStep,
   type OnboardingStepKey,
 } from "@components/OnboardingChecklist";
-import { NewLessonsPrompt, type LessonNotice } from "@components/NewLessonsPrompt";
+import {
+  ChapterPath,
+  type PathChapter,
+  type PathLesson,
+} from "@components/learn/ChapterPath";
+import { LearnRow } from "@components/learn/LearnRow";
+import {
+  NewLessonsPrompt,
+  type LessonNotice,
+} from "@components/NewLessonsPrompt";
 import { QuranCard } from "@components/quran/QuranCard";
 import { SubscriptionBanner } from "@components/SubscriptionBanner";
 import { TranslationLanguagePrompt } from "@components/TranslationLanguagePrompt";
 import { useT } from "@i18n/index";
-import { trackSubscriptionBannerCta, trackSubscriptionBannerShown } from "@services/analytics";
+import {
+  trackSubscriptionBannerCta,
+  trackSubscriptionBannerShown,
+} from "@services/analytics";
 import api, { updateUserProfile } from "@services/api";
 import { prefetchChapter } from "@services/chapterPrefetch";
-import { pickLocalized, pickTranslation, useLanguage, useTranslationLanguage, type AppLanguage } from "@services/language";
+import {
+  pickLocalized,
+  pickTranslation,
+  useLanguage,
+  useTranslationLanguage,
+  type AppLanguage,
+} from "@services/language";
 import { useAuthStore } from "@stores/authStore";
 import { useFocusEffect, useRouter } from "expo-router";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -24,7 +42,6 @@ import {
   ActivityIndicator,
   Modal,
   Platform,
-  Pressable,
   ScrollView,
   StyleSheet,
   Text,
@@ -43,10 +60,8 @@ import {
   Radii,
   Shadows,
   Spacing,
-  WarshAlpha,
   WarshPalette,
 } from "../../../constants/theme";
-import { DAILY_UNIT_MINUTES } from "../../../constants/commitment";
 import {
   isPremiumSuspended,
   toSubscriptionHealthState,
@@ -60,7 +75,8 @@ const FREEZE_BANNER_KEY = "warsh_freeze_banner_shown";
 const LAST_STREAK_KEY = "warsh_last_streak";
 const STREAK_ENDED_SHOWN_KEY = "warsh_streak_ended_shown";
 const TRANSLATION_PROMPT_SHOWN_KEY = "warsh_translation_prompt_shown";
-const ONBOARDING_CHECKLIST_DISMISSED_KEY = "warsh_onboarding_checklist_dismissed";
+const ONBOARDING_CHECKLIST_DISMISSED_KEY =
+  "warsh_onboarding_checklist_dismissed";
 // Also written from settings.tsx (changeLanguage/changeDailyGoal) — keep the
 // literal in sync there if this ever changes.
 const ONBOARDING_LANG_TOUCHED_KEY = "warsh_onboarding_meaning_lang_set";
@@ -116,13 +132,6 @@ interface Core500Summary {
   wordsLeftInNextSet: number;
 }
 
-// Authoring codes such as "R15 — " lead some Arabic titles; the Latin letters
-// and digits then reorder around the Arabic under the bidi algorithm, so the
-// learner sees only the Arabic (finding H9).
-function learnerArabicTitle(title: string | null | undefined) {
-  return (title ?? "").replace(/^[A-Za-z]+\d*\s*[—–-]\s*/, "").trim();
-}
-
 export default function HomeScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
@@ -136,7 +145,15 @@ export default function HomeScreen() {
   const t = useT();
 
   const [chapters, setChapters] = useState<Chapter[]>([]);
-  const [tadabburFocus, setTadabburFocus] = useState<TadabburFocus | null>(null);
+  // The active chapter's own lessons route adds what the list omits: which
+  // lesson is the chapter test, its pass rule and its lock.
+  // undefined while loading, null when the request failed.
+  const [activeChapterDetail, setActiveChapterDetail] = useState<
+    PathChapter | null | undefined
+  >(undefined);
+  const [tadabburFocus, setTadabburFocus] = useState<TadabburFocus | null>(
+    null,
+  );
   const [core500, setCore500] = useState<Core500Summary | null>(null);
   const [wordOfDay, setWordOfDay] = useState<WordOfDay | null>(null);
   const [loading, setLoading] = useState(true);
@@ -145,11 +162,14 @@ export default function HomeScreen() {
   const [currentStreak, setCurrentStreak] = useState(0);
   const [lessonsToday, setLessonsToday] = useState(0);
   const [xp, setXp] = useState(0);
-  const [dailyGoalMet, setDailyGoalMet] = useState(false);
   const [showFreezeBanner, setShowFreezeBanner] = useState(false);
-  const [trialDaysRemaining, setTrialDaysRemaining] = useState<number | null>(null);
+  const [trialDaysRemaining, setTrialDaysRemaining] = useState<number | null>(
+    null,
+  );
   const [subscriptionStatus, setSubscriptionStatus] = useState("trial");
-  const [subscriptionActiveUntil, setSubscriptionActiveUntil] = useState<string | null>(null);
+  const [subscriptionActiveUntil, setSubscriptionActiveUntil] = useState<
+    string | null
+  >(null);
   const [trialBannerDismissed, setTrialBannerDismissed] = useState(false);
   const [showStreakEndedModal, setShowStreakEndedModal] = useState(false);
   const [showTranslationPrompt, setShowTranslationPrompt] = useState(false);
@@ -190,7 +210,10 @@ export default function HomeScreen() {
     try {
       await updateUserProfile({ translationLanguage: value });
       if (userId) {
-        await AsyncStorage.setItem(`${ONBOARDING_LANG_TOUCHED_KEY}_${userId}`, "1");
+        await AsyncStorage.setItem(
+          `${ONBOARDING_LANG_TOUCHED_KEY}_${userId}`,
+          "1",
+        );
       }
       setMeaningLanguageChosen(true);
     } catch {
@@ -226,8 +249,14 @@ export default function HomeScreen() {
         api.get("/api/vocabulary/word-of-day").catch(() => null),
         AsyncStorage.getItem(`${LAST_STREAK_KEY}_${userId}`),
         AsyncStorage.getItem(`${STREAK_ENDED_SHOWN_KEY}_${userId}`),
-        userId ? AsyncStorage.getItem(`${ONBOARDING_CHECKLIST_DISMISSED_KEY}_${userId}`) : null,
-        userId ? AsyncStorage.getItem(`${ONBOARDING_LANG_TOUCHED_KEY}_${userId}`) : null,
+        userId
+          ? AsyncStorage.getItem(
+              `${ONBOARDING_CHECKLIST_DISMISSED_KEY}_${userId}`,
+            )
+          : null,
+        userId
+          ? AsyncStorage.getItem(`${ONBOARDING_LANG_TOUCHED_KEY}_${userId}`)
+          : null,
       ]);
 
       setChapters(chaptersResponse.data.data.chapters);
@@ -238,10 +267,11 @@ export default function HomeScreen() {
       setCurrentStreak(streak);
       setLessonsToday(progress.lessonsCompletedToday ?? 0);
       setXp(progress.xp ?? 0);
-      setDailyGoalMet(progress.dailyGoalMet ?? false);
 
       const completedLessonsCount = progress.completedLessons?.length ?? 0;
-      setIsFirstTimeUser((progress.xp ?? 0) === 0 && completedLessonsCount === 0 && streak === 0);
+      setIsFirstTimeUser(
+        (progress.xp ?? 0) === 0 && completedLessonsCount === 0 && streak === 0,
+      );
       setChecklistDismissed(!!checklistDismissedFlag);
       setMeaningLanguageChosen(!!langTouchedFlag);
       // The commitment step is done when the server holds a streak goal, so it
@@ -250,13 +280,19 @@ export default function HomeScreen() {
 
       if (progress.subscription) {
         setTrialDaysRemaining(progress.subscription.trialDaysRemaining ?? null);
-        setSubscriptionStatus(progress.subscription.subscriptionStatus ?? "trial");
-        setSubscriptionActiveUntil(progress.subscription.subscriptionActiveUntil ?? null);
+        setSubscriptionStatus(
+          progress.subscription.subscriptionStatus ?? "trial",
+        );
+        setSubscriptionActiveUntil(
+          progress.subscription.subscriptionActiveUntil ?? null,
+        );
       }
 
       if (tadabburResponse) {
         const { surahs, focusSurahId } = tadabburResponse.data.data;
-        const focus = surahs.find((surah: TadabburFocus) => surah.id === focusSurahId);
+        const focus = surahs.find(
+          (surah: TadabburFocus) => surah.id === focusSurahId,
+        );
         if (focus) {
           setTadabburFocus({
             id: focus.id,
@@ -293,13 +329,25 @@ export default function HomeScreen() {
         setShowFreezeBanner(true);
       }
 
-      const lastStreak = lastStreakRaw ? Number.parseInt(lastStreakRaw, 10) : null;
-      if (streak === 0 && lastStreak !== null && lastStreak > 0 && streakEndedShownDate !== today) {
+      const lastStreak = lastStreakRaw
+        ? Number.parseInt(lastStreakRaw, 10)
+        : null;
+      if (
+        streak === 0 &&
+        lastStreak !== null &&
+        lastStreak > 0 &&
+        streakEndedShownDate !== today
+      ) {
         setShowStreakEndedModal(true);
-        await AsyncStorage.setItem(`${STREAK_ENDED_SHOWN_KEY}_${userId}`, today);
+        await AsyncStorage.setItem(
+          `${STREAK_ENDED_SHOWN_KEY}_${userId}`,
+          today,
+        );
       }
-      await AsyncStorage.setItem(`${LAST_STREAK_KEY}_${userId}`, String(streak));
-
+      await AsyncStorage.setItem(
+        `${LAST_STREAK_KEY}_${userId}`,
+        String(streak),
+      );
     } catch {
       setError(t("learn.loadError"));
     } finally {
@@ -319,7 +367,10 @@ export default function HomeScreen() {
       chapters.find(
         (chapter) =>
           !chapter.isLocked &&
-          !(chapter.isSatisfied ?? (chapter.isCompleted || chapter.isSkippedByPlacement)),
+          !(
+            chapter.isSatisfied ??
+            (chapter.isCompleted || chapter.isSkippedByPlacement)
+          ),
       ) ??
       [...chapters].reverse().find((chapter) => !chapter.isLocked) ??
       chapters[0] ??
@@ -336,6 +387,43 @@ export default function HomeScreen() {
     void prefetchChapter(activeChapter.id);
   }, [activeChapter]);
 
+  useEffect(() => {
+    if (!activeChapter || activeChapter.isLocked) {
+      setActiveChapterDetail(null);
+      return undefined;
+    }
+    let cancelled = false;
+    setActiveChapterDetail((current) =>
+      current?.id === activeChapter.id ? current : undefined,
+    );
+    api
+      .get(`/api/chapters/${activeChapter.id}/lessons`)
+      .then((response) => {
+        if (!cancelled) setActiveChapterDetail(response.data.data.chapter);
+      })
+      .catch(() => {
+        if (!cancelled) setActiveChapterDetail(null);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [activeChapter]);
+
+  // The path waits for the detail so the chapter test never flashes up as an
+  // ordinary lesson; if that request fails, the list's lessons still draw it.
+  const pathChapter: PathChapter | null = !activeChapter
+    ? null
+    : activeChapterDetail?.id === activeChapter.id
+      ? activeChapterDetail
+      : activeChapterDetail === null
+        ? activeChapter
+        : null;
+  const upcomingChapters = activeChapter
+    ? chapters
+        .filter((chapter) => chapter.order > activeChapter.order)
+        .slice(0, 2)
+    : [];
+
   const activeLessonIndex = useMemo(() => {
     if (!activeChapter) return -1;
     const index = activeChapter.lessons.findIndex(
@@ -348,20 +436,12 @@ export default function HomeScreen() {
     activeChapter && activeLessonIndex >= 0
       ? activeChapter.lessons[activeLessonIndex]
       : null;
-  const nextLesson =
-    activeChapter && activeLessonIndex >= 0
-      ? activeChapter.lessons[activeLessonIndex + 1] ?? null
-      : null;
-  const chapterProgress = activeChapter?.lessons.length
-    ? Math.round(
-        (activeChapter.completedLessonCount / activeChapter.lessons.length) * 100,
-      )
-    : 0;
-  const lessonProgress = activeChapter?.lessons.length
-    ? `${Math.min(activeLessonIndex + 1, activeChapter.lessons.length)} ${t("learn.of")} ${activeChapter.lessons.length}`
-    : "";
   const lessonsCompleted = useMemo(
-    () => chapters.reduce((total, chapter) => total + chapter.completedLessonCount, 0),
+    () =>
+      chapters.reduce(
+        (total, chapter) => total + chapter.completedLessonCount,
+        0,
+      ),
     [chapters],
   );
 
@@ -393,7 +473,8 @@ export default function HomeScreen() {
   // are locked server-side, but the fix is a payment method, not the paywall.
   const premiumSuspended = isPremiumSuspended(subscriptionStatus);
   // The Learn tab's one banner slot. "expired" keeps its own banner below.
-  const healthState: SubscriptionHealthState | null = toSubscriptionHealthState(subscriptionStatus);
+  const healthState: SubscriptionHealthState | null =
+    toSubscriptionHealthState(subscriptionStatus);
 
   useEffect(() => {
     if (healthState) trackSubscriptionBannerShown(healthState);
@@ -411,16 +492,34 @@ export default function HomeScreen() {
     }
   }
 
+  function openPathLesson(lesson: PathLesson) {
+    if (premiumSuspended) {
+      router.push("/(app)/manage-subscription");
+      return;
+    }
+    if (lesson.isChapterTest) {
+      if (!lesson.isLocked) router.push(`/chapter-test/${lesson.id}`);
+      return;
+    }
+    router.push(`/lessons/${lesson.id}/play`);
+  }
+
   const showOnboardingChecklist = isFirstTimeUser && !checklistDismissed;
 
   const onboardingSteps: OnboardingStep[] = useMemo(
     () => [
-      { key: "account", done: true, meta: t("onboardingChecklist.stepAccountMeta") },
+      {
+        key: "account",
+        done: true,
+        meta: t("onboardingChecklist.stepAccountMeta"),
+      },
       { key: "language", done: meaningLanguageChosen },
       {
         key: "commitment",
         done: commitmentMade,
-        meta: commitmentMade ? undefined : t("onboardingChecklist.stepCommitmentMeta"),
+        meta: commitmentMade
+          ? undefined
+          : t("onboardingChecklist.stepCommitmentMeta"),
       },
       { key: "firstLesson", done: lessonsCompleted > 0 },
     ],
@@ -429,7 +528,10 @@ export default function HomeScreen() {
 
   async function dismissOnboardingChecklist() {
     if (userId) {
-      await AsyncStorage.setItem(`${ONBOARDING_CHECKLIST_DISMISSED_KEY}_${userId}`, "1");
+      await AsyncStorage.setItem(
+        `${ONBOARDING_CHECKLIST_DISMISSED_KEY}_${userId}`,
+        "1",
+      );
     }
     setChecklistDismissed(true);
   }
@@ -444,9 +546,15 @@ export default function HomeScreen() {
 
   function handleOnboardingStepPress(key: OnboardingStepKey) {
     if (key === "language") {
-      router.push({ pathname: "/(app)/settings", params: { open: "meaningLanguage" } });
+      router.push({
+        pathname: "/(app)/settings",
+        params: { open: "meaningLanguage" },
+      });
     } else if (key === "commitment") {
-      router.push({ pathname: "/(app)/streak-commitment", params: { source: "checklist" } });
+      router.push({
+        pathname: "/(app)/streak-commitment",
+        params: { source: "checklist" },
+      });
     } else if (key === "firstLesson") {
       openActiveLesson();
     }
@@ -473,11 +581,17 @@ export default function HomeScreen() {
         <View style={styles.modalOverlay}>
           <View style={styles.modalCard}>
             <View style={styles.modalIcon}>
-              <Ionicons name="leaf-outline" size={28} color={WarshPalette.sageDeep} />
+              <Ionicons
+                name="leaf-outline"
+                size={28}
+                color={WarshPalette.sageDeep}
+              />
             </View>
             <Text style={styles.modalTitle}>{t("learn.streakEndedTitle")}</Text>
             <Text style={styles.modalBody}>{t("learn.streakEndedBody")}</Text>
-            <Text style={styles.modalHadith}>{t("learn.streakEndedFooter")}</Text>
+            <Text style={styles.modalHadith}>
+              {t("learn.streakEndedFooter")}
+            </Text>
             <BrandButton
               title={t("learn.beginAgain")}
               onPress={() => setShowStreakEndedModal(false)}
@@ -501,7 +615,6 @@ export default function HomeScreen() {
         onSelect={selectTranslationLanguage}
         onDismiss={() => setShowTranslationPrompt(false)}
       />
-
 
       <ScrollView
         style={styles.scroll}
@@ -529,8 +642,14 @@ export default function HomeScreen() {
             onPress={() => router.push("/(app)/paywall")}
             activeOpacity={0.85}
           >
-            <Ionicons name="lock-closed-outline" size={16} color={WarshPalette.white} />
-            <Text style={styles.trialExpiredText}>{t("learn.trialExpired")}</Text>
+            <Ionicons
+              name="lock-closed-outline"
+              size={16}
+              color={WarshPalette.white}
+            />
+            <Text style={styles.trialExpiredText}>
+              {t("learn.trialExpired")}
+            </Text>
           </TouchableOpacity>
         ) : null}
 
@@ -540,8 +659,14 @@ export default function HomeScreen() {
             onPress={() => router.push("/(app)/paywall")}
             activeOpacity={0.85}
           >
-            <Ionicons name="lock-closed-outline" size={16} color={WarshPalette.white} />
-            <Text style={styles.trialExpiredText}>{t("learn.webAccessEnded")}</Text>
+            <Ionicons
+              name="lock-closed-outline"
+              size={16}
+              color={WarshPalette.white}
+            />
+            <Text style={styles.trialExpiredText}>
+              {t("learn.webAccessEnded")}
+            </Text>
           </TouchableOpacity>
         ) : null}
 
@@ -569,14 +694,20 @@ export default function HomeScreen() {
             </Text>
             <View style={styles.trialBannerActions}>
               <TouchableOpacity onPress={() => router.push("/(app)/paywall")}>
-                <Text style={styles.trialBannerCta}>{t("learn.subscribe")}</Text>
+                <Text style={styles.trialBannerCta}>
+                  {t("learn.subscribe")}
+                </Text>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => setTrialBannerDismissed(true)}
                 hitSlop={8}
                 accessibilityLabel={t("common.close")}
               >
-                <Ionicons name="close" size={14} color={WarshPalette.bodyBrown} />
+                <Ionicons
+                  name="close"
+                  size={14}
+                  color={WarshPalette.bodyBrown}
+                />
               </TouchableOpacity>
             </View>
           </View>
@@ -584,10 +715,18 @@ export default function HomeScreen() {
 
         {showFreezeBanner ? (
           <View style={styles.freezeBanner}>
-            <Ionicons name="shield-checkmark" size={20} color={WarshPalette.sageDeep} />
+            <Ionicons
+              name="shield-checkmark"
+              size={20}
+              color={WarshPalette.sageDeep}
+            />
             <View style={styles.freezeBannerText}>
-              <Text style={styles.freezeBannerTitle}>{t("learn.freezeUsedTitle")}</Text>
-              <Text style={styles.freezeBannerBody}>{t("learn.freezeUsedBody")}</Text>
+              <Text style={styles.freezeBannerTitle}>
+                {t("learn.freezeUsedTitle")}
+              </Text>
+              <Text style={styles.freezeBannerBody}>
+                {t("learn.freezeUsedBody")}
+              </Text>
             </View>
             <TouchableOpacity
               onPress={dismissFreezeBanner}
@@ -600,21 +739,48 @@ export default function HomeScreen() {
 
         <View style={styles.headerRow}>
           <View style={styles.headerCopy}>
-            <Text style={[styles.greeting, desktopWeb ? styles.greetingDesktop : null]} numberOfLines={2}>
-              {t("learn.greeting", { name: userName || t("learn.learner") })}
+            <Text
+              style={[
+                styles.greeting,
+                desktopWeb ? styles.greetingDesktop : null,
+              ]}
+              numberOfLines={1}
+            >
+              {userName || t("learn.learner")}
             </Text>
-            <Text style={styles.greetingSubtitle}>{t("learn.greetingSubtitle")}</Text>
+            <Text style={styles.greetingSubtitle} numberOfLines={1}>
+              {activeChapter
+                ? t("learn.headerSub", { chapter: activeChapter.order })
+                : t("learn.salaam")}
+            </Text>
           </View>
           <TouchableOpacity
             style={styles.streakChip}
             onPress={() => router.push("/(app)/streak-detail")}
             activeOpacity={0.78}
             accessibilityRole="button"
-            accessibilityLabel={t(currentStreak === 1 ? "learn.streakDay" : "learn.streakDays", { count: currentStreak })}
+            accessibilityLabel={t(
+              currentStreak === 1 ? "learn.streakDay" : "learn.streakDays",
+              { count: currentStreak },
+            )}
           >
-            <Ionicons name="flame-outline" size={17} color={WarshPalette.goldDeep} />
-            <Text style={styles.streakText}>
-              {t(currentStreak === 1 ? "learn.streakDay" : "learn.streakDays", { count: currentStreak })}
+            <Ionicons
+              name="flame-outline"
+              size={17}
+              color={WarshPalette.goldDeep}
+            />
+            <Text style={styles.streakText}>{currentStreak}</Text>
+          </TouchableOpacity>
+          {/* Owner decision 2026-09-25: the avatar opens the You tab. */}
+          <TouchableOpacity
+            style={styles.avatar}
+            onPress={() => router.push("/(app)/(tabs)/profile")}
+            activeOpacity={0.78}
+            accessibilityRole="button"
+            accessibilityLabel={t("learn.openYou")}
+          >
+            <Text style={styles.avatarText}>
+              {(userName || t("learn.learner")).trim().charAt(0).toUpperCase()}
             </Text>
           </TouchableOpacity>
         </View>
@@ -629,142 +795,155 @@ export default function HomeScreen() {
 
         <View style={desktopWeb ? styles.desktopDashboardGrid : undefined}>
           <View style={desktopWeb ? styles.desktopPrimaryColumn : undefined}>
-        {showOnboardingChecklist && activeChapter && lessonsCompleted === 0 ? (
-          <View style={styles.coachMarkBubble}>
-            <Ionicons name="information-circle-outline" size={16} color={WarshPalette.white} />
-            <Text style={styles.coachMarkText}>{t("onboardingChecklist.coachMark")}</Text>
-          </View>
-        ) : null}
-        {activeChapter ? (
-          <Pressable
-            onPress={openActiveLesson}
-            style={({ pressed }) => [styles.heroCard, pressed && styles.cardPressed]}
-            accessibilityRole="button"
-            accessibilityLabel={t("learn.continueLearning")}
-          >
-            <View style={styles.heroTopRow}>
-              <Text style={styles.heroEyebrow}>
-                {t("learn.chapterLesson", {
-                  chapter: activeChapter.order,
-                  lesson: Math.max(activeLessonIndex + 1, 1),
-                })}
-              </Text>
-              <View style={styles.heroBookIcon}>
+            {showOnboardingChecklist &&
+            activeChapter &&
+            lessonsCompleted === 0 ? (
+              <View style={styles.coachMarkBubble}>
                 <Ionicons
-                  name={premiumSuspended ? "lock-closed-outline" : "book-outline"}
-                  size={19}
-                  color={WarshPalette.parchment}
+                  name="information-circle-outline"
+                  size={16}
+                  color={WarshPalette.white}
+                />
+                <Text style={styles.coachMarkText}>
+                  {t("onboardingChecklist.coachMark")}
+                </Text>
+              </View>
+            ) : null}
+            {pathChapter ? (
+              <ChapterPath
+                chapter={pathChapter}
+                language={translationLanguage}
+                locked={premiumSuspended}
+                onOpenChapter={() => router.push(`/lessons/${pathChapter.id}`)}
+                onOpenLesson={openPathLesson}
+              />
+            ) : null}
+
+            {upcomingChapters.length === 0 ? (
+              <View style={styles.listSection}>
+                <LearnRow
+                  icon="list-outline"
+                  title={t("learn.allChapters", { count: chapters.length })}
+                  onPress={() => router.push("/(app)/chapters")}
                 />
               </View>
-            </View>
-
-            <ArabicText size="lg" style={styles.heroArabic} numberOfLines={2}>
-              {learnerArabicTitle(activeLesson?.titleAr || activeChapter.titleAr)}
-            </ArabicText>
-            <Text style={styles.heroTitle} numberOfLines={2}>
-              {pickLocalized(activeLesson?.title, activeLesson?.titleUr, translationLanguage) ||
-                pickLocalized(activeChapter.title, activeChapter.titleUr, translationLanguage)}
-            </Text>
-
-            <View style={styles.progressLabelRow}>
-              <Text style={styles.heroMeta}>{t("learn.progress")}</Text>
-              <Text style={styles.heroProgressValue}>{lessonProgress}</Text>
-            </View>
-            <View style={styles.heroProgressTrack}>
-              <View style={[styles.heroProgressFill, { width: `${chapterProgress}%` }]} />
-            </View>
-
-            <View style={styles.heroFooter}>
-              <Text style={styles.heroHint} numberOfLines={2}>
-                {t("learn.heroHint")}
-              </Text>
-              {premiumSuspended ? (
-                <View style={[styles.continueButton, styles.continueButtonLocked]}>
-                  <Text style={[styles.continueButtonText, styles.continueButtonTextLocked]}>
-                    {t("learn.premiumSuspendedContinue")}
-                  </Text>
-                  <Ionicons name="lock-closed-outline" size={14} color={WarshPalette.disabledText} />
+            ) : (
+              <View style={styles.listSection}>
+                <View style={styles.sectionHeadingRow}>
+                  <Text style={styles.sectionTitle}>{t("learn.comingUp")}</Text>
+                  <TouchableOpacity
+                    onPress={() => router.push("/(app)/chapters")}
+                    style={styles.sectionAction}
+                    accessibilityRole="button"
+                  >
+                    <Text style={styles.sectionActionText}>
+                      {t("learn.allChapters", { count: chapters.length })}
+                    </Text>
+                  </TouchableOpacity>
                 </View>
-              ) : (
-                <View style={styles.continueButton}>
-                  <Text style={styles.continueButtonText}>{t("learn.continue")}</Text>
-                  <Ionicons name="arrow-forward" size={16} color={WarshPalette.navy} />
-                </View>
-              )}
-            </View>
-          </Pressable>
-        ) : null}
-
-        {/* Free Quran reader (Pen section 27) — no lesson or subscription
-            gate, so the Learn tab always has something to open. */}
-        <QuranCard />
-
-        <Text style={styles.sectionTitle}>{t("learn.today")}</Text>
-        <View style={styles.todayGrid}>
-          <Pressable
-            onPress={openActiveLesson}
-            style={({ pressed }) => [
-              styles.todayCard,
-              styles.goalCard,
-              pressed && styles.lightCardPressed,
-            ]}
-          >
-            <View style={styles.todayCardHeader}>
-              <Text style={styles.cardEyebrow}>{t("learn.goalTitle")}</Text>
-              <Ionicons name="flag-outline" size={16} color={WarshPalette.sageDeep} />
-            </View>
-            <View style={styles.goalContentRow}>
-              <View style={styles.goalCopy}>
-                <Text style={styles.goalValue} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.75}>
-                  {dailyGoalMet ? t("learn.goalCompleteShort") : t("learn.oneLesson")}
-                </Text>
-                <Text style={styles.goalHint} numberOfLines={2}>
-                  {dailyGoalMet
-                    ? "بَارَكَ اللّٰهُ فِيكَ"
-                    : t("learn.goalAboutMinutes", { minutes: DAILY_UNIT_MINUTES })}
-                </Text>
+                {upcomingChapters.map((chapter) => (
+                  <LearnRow
+                    key={chapter.id}
+                    leading={
+                      <Text style={styles.chapterNumber}>{chapter.order}</Text>
+                    }
+                    title={`${translationLanguage === "ur" ? "‏" : "‎"}${pickLocalized(chapter.title, chapter.titleUr, translationLanguage)}`}
+                    locked={chapter.isLocked}
+                    onPress={
+                      chapter.isLocked
+                        ? undefined
+                        : () => router.push(`/lessons/${chapter.id}`)
+                    }
+                  />
+                ))}
               </View>
-              <View style={[styles.goalRing, dailyGoalMet && styles.goalRingComplete]}>
-                <Text style={styles.goalRingValue}>{dailyGoalMet ? "100%" : "0%"}</Text>
-              </View>
-            </View>
-          </Pressable>
+            )}
 
-          {wordOfDay ? (
-            <Pressable
-              onPress={() => router.push(`/(app)/vocabulary/word/${wordOfDay.id}`)}
-              style={({ pressed }) => [
-                styles.todayCard,
-                styles.wordCard,
-                pressed && styles.lightCardPressed,
-              ]}
-            >
-              <View style={styles.todayCardHeader}>
-                <Text style={styles.cardEyebrow}>{t("learn.wordOfDay")}</Text>
-                <Ionicons name="sparkles-outline" size={16} color={WarshPalette.goldDeep} />
-              </View>
-              <ArabicText size="lg" style={styles.wordArabic} numberOfLines={1}>
-                {wordOfDay.arabic}
-              </ArabicText>
-              <Text style={styles.wordMeaning} numberOfLines={2}>
-                {pickTranslation(wordOfDay, translationLanguage)}
-              </Text>
-            </Pressable>
-          ) : (
-            <View style={[styles.todayCard, styles.wordCard]}>
-              <Text style={styles.cardEyebrow}>{t("learn.wordOfDay")}</Text>
-              <Text style={styles.wordPlaceholder}>{t("learn.wordUnavailable")}</Text>
+            <View style={styles.listSection}>
+              <Text style={styles.sectionTitle}>{t("learn.moreForToday")}</Text>
+              {/* Free Quran reader (Pen section 27) — no lesson or subscription
+              gate, so the Learn tab always has something to open. */}
+              <QuranCard />
+              {tadabburFocus ||
+              subscriptionStatus === "expired" ||
+              premiumSuspended ? (
+                <LearnRow
+                  icon="moon-outline"
+                  title={
+                    subscriptionStatus === "expired" || premiumSuspended
+                      ? t("learn.tadabburLockedTitle")
+                      : `${t("learn.tadabbur")} · ${tadabburFocus?.nameEn ?? ""}`
+                  }
+                  meta={
+                    premiumSuspended
+                      ? t("learn.tadabburSuspendedBody")
+                      : subscriptionStatus === "expired"
+                        ? t("learn.tadabburLockedBody")
+                        : t("learn.understoodPercent", {
+                            percent: tadabburFocus?.comprehensionPercent ?? 0,
+                          })
+                  }
+                  locked={subscriptionStatus === "expired" || premiumSuspended}
+                  onPress={() =>
+                    router.push(
+                      premiumSuspended
+                        ? "/(app)/manage-subscription"
+                        : subscriptionStatus === "expired"
+                          ? "/(app)/paywall"
+                          : "/(app)/tadabbur",
+                    )
+                  }
+                />
+              ) : null}
+              {/* Quranic Core 500 — free for everyone, so no subscription gate here.
+              Progress reads as Quran coverage rather than a word count. */}
+              {core500?.ready ? (
+                <LearnRow
+                  icon="layers-outline"
+                  title={t("learn.core500")}
+                  meta={
+                    core500.knownCount > 0
+                      ? t("learn.core500Progress", {
+                          set:
+                            core500.nextSetNumber ?? core500.completedSetCount,
+                          words: core500.wordsLeftInNextSet,
+                        })
+                      : t("learn.core500Body")
+                  }
+                  onPress={() => router.push("/(app)/core-500")}
+                />
+              ) : null}
+              {wordOfDay ? (
+                <LearnRow
+                  icon="sparkles-outline"
+                  title={t("learn.wordOfDay")}
+                  meta={pickTranslation(wordOfDay, translationLanguage)}
+                  trailing={
+                    <ArabicText
+                      size="md"
+                      style={styles.wordArabic}
+                      numberOfLines={1}
+                    >
+                      {wordOfDay.arabic}
+                    </ArabicText>
+                  }
+                  onPress={() =>
+                    router.push(`/(app)/vocabulary/word/${wordOfDay.id}`)
+                  }
+                />
+              ) : null}
             </View>
-          )}
-        </View>
-
           </View>
           {desktopWeb ? (
             <View style={styles.desktopRail}>
               <View style={styles.statCard}>
                 <View style={styles.statTop}>
                   <Text style={styles.statLabel}>POINTS</Text>
-                  <Ionicons name="sparkles-outline" size={17} color={WarshPalette.goldDeep} />
+                  <Ionicons
+                    name="sparkles-outline"
+                    size={17}
+                    color={WarshPalette.goldDeep}
+                  />
                 </View>
                 <Text style={styles.statValue}>{xp}</Text>
                 <Text style={styles.statCaption}>points earned</Text>
@@ -772,7 +951,11 @@ export default function HomeScreen() {
               <View style={styles.statCard}>
                 <View style={styles.statTop}>
                   <Text style={styles.statLabel}>LESSONS</Text>
-                  <Ionicons name="book-outline" size={17} color={WarshPalette.goldDeep} />
+                  <Ionicons
+                    name="book-outline"
+                    size={17}
+                    color={WarshPalette.goldDeep}
+                  />
                 </View>
                 <Text style={styles.statValue}>{lessonsCompleted}</Text>
                 <Text style={styles.statCaption}>lessons completed</Text>
@@ -781,199 +964,7 @@ export default function HomeScreen() {
           ) : null}
         </View>
 
-        {activeChapter && activeLesson ? (
-          <View style={styles.journeySection}>
-            <View style={styles.sectionHeadingRow}>
-              <Text style={styles.sectionTitle}>{t("learn.chapterJourney")}</Text>
-              <TouchableOpacity
-                onPress={() => router.push(`/lessons/${activeChapter.id}`)}
-                style={styles.sectionAction}
-                accessibilityLabel={t("learn.openChapter")}
-              >
-                <Text style={styles.sectionActionText}>{t("learn.viewChapter")}</Text>
-                <Ionicons name="chevron-forward" size={15} color={WarshPalette.goldDeep} />
-              </TouchableOpacity>
-            </View>
-
-            <View style={styles.journeyCard}>
-              <Pressable
-                onPress={openActiveLesson}
-                style={({ pressed }) => [
-                  styles.journeyRow,
-                  pressed && styles.lightCardPressed,
-                ]}
-              >
-                <View style={styles.journeyIconCurrent}>
-                  <Ionicons name="book-outline" size={18} color={WarshPalette.navy} />
-                </View>
-                <View style={styles.journeyCopy}>
-                  <Text style={styles.journeyLabel}>{t("learn.current")}</Text>
-                  <Text style={styles.journeyTitle} numberOfLines={2}>
-                    {pickLocalized(activeLesson.title, activeLesson.titleUr, translationLanguage)}
-                  </Text>
-                  <ArabicText size="md" style={styles.journeyArabic} numberOfLines={2}>
-                    {learnerArabicTitle(activeLesson.titleAr)}
-                  </ArabicText>
-                </View>
-              </Pressable>
-
-              <View style={styles.journeyDivider} />
-
-              <Pressable
-                disabled
-                accessibilityState={{ disabled: true }}
-                style={({ pressed }) => [
-                  styles.journeyRow,
-                  !nextLesson && styles.journeyRowDisabled,
-                  pressed && styles.lightCardPressed,
-                ]}
-              >
-                <View style={styles.journeyIconNext}>
-                  <Ionicons name="lock-closed-outline" size={16} color={WarshPalette.white} />
-                </View>
-                <View style={styles.journeyCopy}>
-                  <Text style={styles.journeyLabel}>{t("learn.next")}</Text>
-                  <Text style={styles.journeyTitle} numberOfLines={2}>
-                    {nextLesson
-                      ? pickLocalized(nextLesson.title, nextLesson.titleUr, translationLanguage)
-                      : t("learn.chapterComplete")}
-                  </Text>
-                  {nextLesson ? (
-                    <ArabicText size="md" style={styles.journeyArabic} numberOfLines={2}>
-                      {learnerArabicTitle(nextLesson.titleAr)}
-                    </ArabicText>
-                  ) : null}
-                </View>
-                {!nextLesson ? (
-                  <Ionicons name="checkmark-circle" size={22} color={WarshPalette.sageDeep} />
-                ) : null}
-              </Pressable>
-            </View>
-          </View>
-        ) : null}
-
-        {tadabburFocus || subscriptionStatus === "expired" || premiumSuspended ? (
-          <View style={styles.tadabburSection}>
-            <Text style={styles.sectionTitle}>{t("learn.tadabbur")}</Text>
-            <Pressable
-              onPress={() =>
-                router.push(
-                  premiumSuspended
-                    ? "/(app)/manage-subscription"
-                    : subscriptionStatus === "expired"
-                      ? "/(app)/paywall"
-                      : "/(app)/tadabbur",
-                )
-              }
-              style={({ pressed }) => [styles.tadabburCard, pressed && styles.cardPressed]}
-            >
-              <View style={styles.tadabburIcon}>
-                <Ionicons name="moon-outline" size={22} color={WarshPalette.parchment} />
-              </View>
-              <View style={styles.tadabburCopy}>
-                <Text style={styles.tadabburTitle}>
-                  {subscriptionStatus === "expired" || premiumSuspended
-                    ? t("learn.tadabburLockedTitle")
-                    : t("learn.tadabburPrompt")}
-                </Text>
-                <Text style={styles.tadabburBody} numberOfLines={2}>
-                  {premiumSuspended
-                    ? t("learn.tadabburSuspendedBody")
-                    : subscriptionStatus === "expired"
-                      ? t("learn.tadabburLockedBody")
-                      : t("learn.tadabburBody", { surah: tadabburFocus?.nameEn ?? "" })}
-                </Text>
-                {tadabburFocus ? (
-                  <View style={styles.tadabburProgressRow}>
-                    <View style={styles.tadabburProgressTrack}>
-                      <View
-                        style={[
-                          styles.tadabburProgressFill,
-                          { width: `${tadabburFocus.comprehensionPercent}%` },
-                        ]}
-                      />
-                    </View>
-                    <Text style={styles.tadabburPercent}>
-                      {t("learn.understoodPercent", {
-                        percent: tadabburFocus.comprehensionPercent,
-                      })}
-                    </Text>
-                  </View>
-                ) : null}
-              </View>
-              {tadabburFocus && !premiumSuspended ? (
-                <ArabicText size="md" style={styles.tadabburArabic}>
-                  {tadabburFocus.nameAr}
-                </ArabicText>
-              ) : (
-                <Ionicons name="lock-closed-outline" size={22} color={WarshPalette.parchment} />
-              )}
-            </Pressable>
-          </View>
-        ) : null}
-
-        {/* Quranic Core 500 — free for everyone, so no subscription gate here.
-            Progress reads as Quran coverage rather than a word count: the top
-            words are frequent enough that a few sets move it a long way. */}
-        {core500?.ready ? (
-          <View style={styles.core500Section}>
-            <Text style={styles.sectionTitle}>{t("learn.core500")}</Text>
-            <Pressable
-              onPress={() => router.push("/(app)/core-500")}
-              style={({ pressed }) => [styles.core500Card, pressed && styles.cardPressed]}
-            >
-              <View style={styles.core500Badge}>
-                <ArabicText size="sm" style={styles.core500BadgeText}>
-                  ٥٠٠
-                </ArabicText>
-              </View>
-              <View style={styles.tadabburCopy}>
-                <Text style={styles.tadabburTitle}>{t("learn.core500Title")}</Text>
-                {core500.knownCount > 0 ? (
-                  <>
-                    <Text style={styles.tadabburBody} numberOfLines={1}>
-                      {t("learn.core500Progress", {
-                        set: core500.nextSetNumber ?? core500.completedSetCount,
-                        words: core500.wordsLeftInNextSet,
-                      })}
-                    </Text>
-                    <View style={styles.tadabburProgressRow}>
-                      <View style={styles.tadabburProgressTrack}>
-                        <View
-                          style={[
-                            styles.tadabburProgressFill,
-                            { width: `${Math.min(100, core500.coveragePercent)}%` },
-                          ]}
-                        />
-                      </View>
-                      <Text style={styles.tadabburPercent}>
-                        {t("learn.core500Coverage", { percent: core500.coveragePercent })}
-                      </Text>
-                    </View>
-                  </>
-                ) : (
-                  <Text style={styles.tadabburBody} numberOfLines={2}>
-                    {t("learn.core500Body")}
-                  </Text>
-                )}
-              </View>
-              <Ionicons name="chevron-forward" size={20} color={WarshPalette.parchment} />
-            </Pressable>
-          </View>
-        ) : null}
-
         {error ? <Text style={styles.errorText}>{error}</Text> : null}
-
-        <TouchableOpacity
-          onPress={() => router.push("/(app)/chapters")}
-          activeOpacity={0.75}
-          style={styles.allChaptersLink}
-        >
-          <Text style={styles.allChaptersText}>
-            {t("learn.allChapters", { count: chapters.length })}
-          </Text>
-          <Ionicons name="arrow-forward" size={16} color={WarshPalette.goldDeep} />
-        </TouchableOpacity>
       </ScrollView>
       <StatusBarBacking />
     </View>
@@ -1007,8 +998,8 @@ const styles = StyleSheet.create({
   greeting: {
     color: WarshPalette.ink,
     fontFamily: Fonts.bold,
-    fontSize: 24,
-    lineHeight: 31,
+    fontSize: 26,
+    lineHeight: 33,
     letterSpacing: -0.35,
   },
   greetingDesktop: {
@@ -1032,13 +1023,33 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.md,
     borderRadius: Radii.full,
     borderWidth: 1,
-    borderColor: WarshPalette.sageSoft,
-    backgroundColor: WarshPalette.sageTintBg,
+    borderColor: WarshPalette.cream,
+    backgroundColor: WarshPalette.white,
   },
   streakText: {
     color: WarshPalette.ink,
     fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.caption,
+    fontSize: FontSizes.bodyM,
+  },
+  avatar: {
+    width: 42,
+    height: 42,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: Radii.full,
+    backgroundColor: WarshPalette.navy,
+  },
+  avatarText: {
+    color: WarshPalette.parchment,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyL,
+  },
+  listSection: { gap: Spacing.sm, marginBottom: Spacing.xl },
+  chapterNumber: {
+    minWidth: 20,
+    color: WarshPalette.subtleBrown,
+    fontFamily: Fonts.semiBold,
+    fontSize: FontSizes.bodyM + 1,
   },
   desktopDashboardGrid: {
     flexDirection: "row",
@@ -1053,24 +1064,6 @@ const styles = StyleSheet.create({
     width: 280,
     gap: Spacing.lg,
   },
-  core500Section: { marginTop: Spacing.xl, gap: Spacing.md },
-  core500Card: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: Spacing.md,
-    backgroundColor: WarshPalette.navy,
-    borderRadius: Radii.md,
-    padding: Spacing.lg,
-  },
-  core500Badge: {
-    width: 44,
-    height: 44,
-    borderRadius: Radii.full,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: WarshPalette.highlightBorder,
-  },
-  core500BadgeText: { color: WarshPalette.navy },
   statCard: {
     minHeight: 150,
     padding: 22,
@@ -1119,123 +1112,6 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.caption,
     lineHeight: LineHeights.caption,
   },
-  heroCard: {
-    minHeight: 252,
-    padding: Spacing.lg,
-    borderRadius: Radii.xl,
-    borderWidth: 1,
-    borderColor: WarshPalette.gold,
-    backgroundColor: WarshPalette.navy,
-    marginBottom: Spacing.xl,
-    ...Shadows.goldGlow,
-  },
-  cardPressed: { transform: [{ scale: 0.985 }], opacity: 0.96 },
-  lightCardPressed: { backgroundColor: WarshPalette.highlightBgSoft },
-  heroTopRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginBottom: Spacing.sm,
-  },
-  heroEyebrow: {
-    color: WarshPalette.parchment,
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.caption,
-    lineHeight: LineHeights.caption,
-  },
-  heroBookIcon: {
-    width: 34,
-    height: 34,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: Radii.full,
-    borderWidth: 1,
-    borderColor: WarshAlpha.goldLightBorder,
-  },
-  heroArabic: {
-    color: WarshPalette.white,
-    textAlign: "right",
-    fontSize: 36,
-    lineHeight: 54,
-    marginBottom: 1,
-  },
-  heroTitle: {
-    color: WarshPalette.white,
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.bodyL,
-    lineHeight: LineHeights.bodyL,
-  },
-  heroUrdu: {
-    color: WarshPalette.parchment,
-    fontFamily: Fonts.urduFallback,
-    fontSize: FontSizes.bodyM,
-    lineHeight: 24,
-    writingDirection: "rtl",
-    textAlign: "left",
-  },
-  progressLabelRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: Spacing.md,
-    marginBottom: 6,
-  },
-  heroMeta: {
-    color: WarshAlpha.onNavyMuted,
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
-  },
-  heroProgressValue: {
-    color: WarshPalette.white,
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.caption,
-  },
-  heroProgressTrack: {
-    height: 6,
-    overflow: "hidden",
-    borderRadius: Radii.full,
-    backgroundColor: WarshAlpha.onNavySurface,
-  },
-  heroProgressFill: {
-    height: "100%",
-    minWidth: 5,
-    borderRadius: Radii.full,
-    backgroundColor: WarshPalette.gold,
-  },
-  heroFooter: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: Spacing.md,
-    marginTop: Spacing.lg,
-  },
-  heroHint: {
-    flex: 1,
-    color: WarshAlpha.onNavyMuted,
-    fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 16,
-  },
-  continueButton: {
-    minHeight: 42,
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 7,
-    paddingHorizontal: Spacing.lg,
-    borderRadius: Radii.full,
-    backgroundColor: WarshPalette.gold,
-  },
-  continueButtonLocked: {
-    backgroundColor: WarshPalette.navyDeep,
-  },
-  continueButtonTextLocked: {
-    color: WarshPalette.disabledText,
-  },
-  continueButtonText: {
-    color: WarshPalette.navy,
-    fontFamily: Fonts.bold,
-    fontSize: FontSizes.caption,
-  },
   sectionTitle: {
     color: WarshPalette.ink,
     fontFamily: Fonts.bold,
@@ -1244,103 +1120,12 @@ const styles = StyleSheet.create({
     letterSpacing: -0.2,
     marginBottom: Spacing.sm,
   },
-  todayGrid: {
-    flexDirection: "row",
-    alignItems: "stretch",
-    gap: Spacing.md,
-    marginBottom: Spacing.xl,
-  },
-  todayCard: {
-    flex: 1,
-    minWidth: 0,
-    minHeight: 132,
-    padding: Spacing.md,
-    borderRadius: Radii.md,
-    borderWidth: 1,
-    ...Shadows.card,
-  },
-  goalCard: {
-    borderColor: WarshPalette.cream,
-    backgroundColor: WarshPalette.parchmentBg,
-  },
-  wordCard: {
-    borderColor: WarshPalette.sageSoft,
-    backgroundColor: WarshPalette.sageTintBg,
-  },
-  todayCardHeader: {
-    minHeight: 20,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: 4,
-  },
-  cardEyebrow: {
-    flexShrink: 1,
-    color: WarshPalette.subtleBrown,
-    fontFamily: Fonts.semiBold,
-    fontSize: 12,
-    lineHeight: 16,
-    textTransform: "uppercase",
-    letterSpacing: 0.55,
-  },
-  goalContentRow: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: Spacing.sm,
-    marginTop: Spacing.sm,
-  },
-  goalCopy: { flex: 1, minWidth: 0 },
-  goalValue: {
-    color: WarshPalette.ink,
-    fontFamily: Fonts.bold,
-    fontSize: FontSizes.bodyL,
-    lineHeight: LineHeights.bodyL,
-  },
-  goalHint: {
-    marginTop: 4,
-    color: WarshPalette.subtleBrown,
-    fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 16,
-  },
-  goalRing: {
-    width: 49,
-    height: 49,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: Radii.full,
-    borderWidth: 5,
-    borderColor: WarshPalette.cream,
-    backgroundColor: WarshPalette.parchmentBg,
-  },
-  goalRingComplete: { borderColor: WarshPalette.gold },
-  goalRingValue: {
-    color: WarshPalette.ink,
-    fontFamily: Fonts.bold,
-    fontSize: 12,
-  },
   wordArabic: {
+    maxWidth: 120,
     color: WarshPalette.navy,
-    textAlign: "right",
-    fontSize: 37,
-    lineHeight: 50,
-    marginTop: 1,
+    fontSize: 24,
+    lineHeight: 36,
   },
-  wordMeaning: {
-    color: WarshPalette.ink,
-    fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 17,
-  },
-  wordPlaceholder: {
-    marginTop: Spacing.lg,
-    color: WarshPalette.subtleBrown,
-    fontFamily: Fonts.regular,
-    fontSize: FontSizes.caption,
-  },
-  journeySection: { marginBottom: Spacing.xl },
   sectionHeadingRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -1357,157 +1142,6 @@ const styles = StyleSheet.create({
     color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.caption,
-  },
-  journeyCard: {
-    overflow: "hidden",
-    borderRadius: Radii.md,
-    borderWidth: 1,
-    borderColor: WarshPalette.cream,
-    backgroundColor: WarshPalette.parchmentBg,
-    ...Shadows.card,
-  },
-  journeyRow: {
-    minHeight: 118,
-    flexDirection: "row",
-    alignItems: "center",
-    gap: Spacing.md,
-    paddingHorizontal: Spacing.md,
-    paddingVertical: Spacing.sm,
-  },
-  journeyRowDisabled: { opacity: 0.76 },
-  journeyDivider: {
-    height: 1,
-    marginLeft: 66,
-    backgroundColor: WarshPalette.cream,
-  },
-  journeyIconCurrent: {
-    width: 42,
-    height: 42,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: Radii.full,
-    borderWidth: 1,
-    borderColor: WarshPalette.gold,
-    backgroundColor: WarshPalette.highlightBg,
-  },
-  journeyIconNext: {
-    width: 42,
-    height: 42,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: Radii.full,
-    backgroundColor: WarshPalette.sageSoft,
-  },
-  journeyCopy: { flex: 1, minWidth: 0 },
-  journeyLabel: {
-    color: WarshPalette.goldText,
-    fontFamily: Fonts.semiBold,
-    fontSize: 12,
-    lineHeight: 16,
-    textTransform: "uppercase",
-    letterSpacing: 0.6,
-  },
-  journeyTitle: {
-    color: WarshPalette.ink,
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.bodyM,
-    lineHeight: LineHeights.bodyM,
-  },
-  journeySubtitle: {
-    color: WarshPalette.subtleBrown,
-    fontFamily: Fonts.urduFallback,
-    fontSize: 12,
-    lineHeight: 17,
-    writingDirection: "rtl",
-    textAlign: "left",
-  },
-  journeyArabic: {
-    width: "100%",
-    color: WarshPalette.ink,
-    textAlign: "right",
-    fontSize: 22,
-    lineHeight: 31,
-    marginTop: 2,
-  },
-  tadabburSection: { marginBottom: Spacing.md },
-  tadabburCard: {
-    minHeight: 132,
-    flexDirection: "row",
-    alignItems: "center",
-    gap: Spacing.md,
-    padding: Spacing.lg,
-    borderRadius: Radii.md,
-    borderWidth: 1,
-    borderColor: WarshPalette.gold,
-    backgroundColor: WarshPalette.navy,
-    ...Shadows.card,
-  },
-  tadabburIcon: {
-    width: 44,
-    height: 44,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: Radii.full,
-    backgroundColor: WarshAlpha.goldTintSoft,
-    borderWidth: 1,
-    borderColor: WarshAlpha.goldBorder,
-  },
-  tadabburCopy: { flex: 1, minWidth: 0 },
-  tadabburTitle: {
-    color: WarshPalette.white,
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.bodyM,
-    lineHeight: LineHeights.bodyM,
-  },
-  tadabburBody: {
-    marginTop: 2,
-    color: WarshAlpha.onNavyMuted,
-    fontFamily: Fonts.regular,
-    fontSize: 12,
-    lineHeight: 16,
-  },
-  tadabburArabic: {
-    maxWidth: 78,
-    color: WarshPalette.parchment,
-    fontSize: 22,
-    lineHeight: 34,
-  },
-  tadabburProgressRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: Spacing.sm,
-    marginTop: Spacing.sm,
-  },
-  tadabburProgressTrack: {
-    flex: 1,
-    height: 4,
-    overflow: "hidden",
-    borderRadius: Radii.full,
-    backgroundColor: WarshAlpha.onNavySurface,
-  },
-  tadabburProgressFill: {
-    height: "100%",
-    borderRadius: Radii.full,
-    backgroundColor: WarshPalette.gold,
-  },
-  tadabburPercent: {
-    color: WarshPalette.parchment,
-    fontFamily: Fonts.regular,
-    fontSize: 12,
-  },
-  allChaptersLink: {
-    minHeight: 52,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: Spacing.sm,
-    marginTop: Spacing.sm,
-    borderRadius: Radii.md,
-  },
-  allChaptersText: {
-    color: WarshPalette.goldText,
-    fontFamily: Fonts.semiBold,
-    fontSize: FontSizes.bodyM,
   },
   errorText: {
     color: Colors.text.danger,

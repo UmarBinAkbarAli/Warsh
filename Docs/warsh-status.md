@@ -396,6 +396,17 @@ rollout, no errors or warnings on the release page; in review.
 - Radii collapsed to 4/8/12/20 (+full); nothing under 12pt; product spec and
   Pen variables now say Inter, `#F8F4ED`, radius 12 for cards.
 
+- Learn tab rebuilt to Pen section 31 Row E (owner-approved 2026-09-25,
+  after a reference pass on the Qara'a home screen): one navy band for the
+  current chapter, then its next three lessons (picture, title + Arabic,
+  progress, one round action) with "Show all" expanding in place; the
+  chapter test is a gold row with its pass rule. "Coming up" lists the next
+  two chapters with "All 72 chapters"; Quran, Tadabbur, Core 500 and the
+  word of the day are calm white rows. The avatar opens You. The navy hero,
+  Today goal/word grid and "Chapter journey" card are gone
+  (`components/learn/ChapterPath.tsx`, `components/learn/LearnRow.tsx`).
+  Not in 1.0.14 — ships in the next build.
+
 Still open from the evaluation:
 
 - **Laptop web type (M18).** A global CSS `zoom` was tried on app.warsh.app
