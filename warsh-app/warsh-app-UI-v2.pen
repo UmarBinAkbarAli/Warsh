@@ -1118,8 +1118,8 @@
     {
       "type": "frame",
       "id": "HM3xF",
-      "x": 940,
-      "y": 0,
+      "x": 945,
+      "y": 15,
       "name": "Language Preferences Flow",
       "width": 2270,
       "height": 1300,
@@ -5890,17 +5890,6 @@
       ]
     },
     {
-      "type": "text",
-      "id": "IBFSp",
-      "x": 0,
-      "y": 0,
-      "fill": "#000000",
-      "content": "D:\\Code\\Warsh\\warsh-app\\warsh-app-UI-v2.pen",
-      "fontFamily": "Inter",
-      "fontSize": 12,
-      "fontWeight": "normal"
-    },
-    {
       "type": "frame",
       "id": "jgc8x",
       "x": 4270,
@@ -7882,7 +7871,7 @@
       "type": "frame",
       "id": "AMMfb",
       "x": 0,
-      "y": 1420,
+      "y": 1480,
       "name": "00 — Cover & Audit Legend",
       "clip": true,
       "width": 1320,
@@ -190298,6 +190287,3985 @@
                           ]
                         }
                       ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "kcNxpv",
+      "x": -1238,
+      "y": 0,
+      "name": "Learn Home · Revamped (Step 3 proposal)",
+      "width": 390,
+      "height": 1103,
+      "fill": "$screen-bg",
+      "cornerRadius": 26,
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "qZ9i8T",
+          "name": "Status bar",
+          "width": "fill_container",
+          "height": 44,
+          "fill": "$screen-bg",
+          "padding": [
+            0,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "raCjEW",
+              "name": "Time",
+              "fill": "$ink",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "SBbAIt",
+              "name": "System Icons",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "Bbwjtm",
+                  "name": "Signal",
+                  "width": 16,
+                  "height": 16,
+                  "library": "Material Symbols Rounded",
+                  "fill": "$ink"
+                },
+                {
+                  "type": "icon",
+                  "id": "agudtC",
+                  "name": "Wifi",
+                  "width": 16,
+                  "height": 16,
+                  "library": "Material Symbols Rounded",
+                  "fill": "$ink"
+                },
+                {
+                  "type": "icon",
+                  "id": "TwORKn",
+                  "name": "Battery",
+                  "width": 16,
+                  "height": 16,
+                  "library": "Material Symbols Rounded",
+                  "fill": "$ink"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LCOgbW",
+          "name": "Body",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            8,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "CETSiZ",
+              "name": "Header",
+              "width": "fill_container",
+              "gap": 12,
+              "padding": [
+                4,
+                0,
+                8,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ST30Mq",
+                  "name": "H text",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "5lONg1",
+                      "name": "Name",
+                      "fill": "$ink",
+                      "content": "Umar",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "clXonX",
+                      "name": "Sub",
+                      "fill": "$ink-muted",
+                      "content": "Assalamu alaikum · Chapter 10",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qjeUwE",
+                  "name": "Streak chip",
+                  "height": 40,
+                  "fill": "$pure-white",
+                  "cornerRadius": 20,
+                  "gap": 6,
+                  "padding": [
+                    0,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "ij6N5P",
+                      "name": "flame",
+                      "width": 16,
+                      "height": 16,
+                      "library": "Material Symbols Rounded",
+                      "fill": "$gold-text"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LqEpJM",
+                      "name": "Days",
+                      "fill": "$ink",
+                      "content": "12",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "r1akcr",
+                  "name": "Avatar",
+                  "width": 40,
+                  "height": 40,
+                  "fill": "$navy-deep",
+                  "cornerRadius": 20,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Zs5eoI",
+                      "name": "Initial",
+                      "fill": "$gold-muted",
+                      "content": "U",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ccX1fz",
+              "name": "Chapter band",
+              "width": "fill_container",
+              "fill": "$navy-deep",
+              "cornerRadius": 20,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                18,
+                20
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "M8qwJx",
+                  "name": "Eyebrow",
+                  "fill": "$gold-muted",
+                  "content": "CHAPTER 10  ·  LESSON 3 OF 8",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "h4BRdz",
+                  "name": "Title",
+                  "fill": "$pure-white",
+                  "content": "Plural pronouns, before and after",
+                  "fontFamily": "Inter",
+                  "fontSize": 19,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "IjlNGZ",
+                  "name": "Arabic Title",
+                  "fill": "#D4B06A",
+                  "content": "الضَّمَائِرُ",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "vHMJAF",
+                  "name": "Progress Track",
+                  "width": 200,
+                  "height": 6,
+                  "fill": "#FFFFFF25",
+                  "cornerRadius": 3,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 3,
+                      "id": "4SGKw9",
+                      "name": "Fill",
+                      "fill": "$gold",
+                      "width": "fit_content(0)",
+                      "height": 6
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "YvrIIu",
+                  "name": "Progress Label",
+                  "fill": "#FFFFFF99",
+                  "content": "3 of 8 lessons",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZDeqwD",
+              "name": "Lessons",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "QaN7BH",
+                  "name": "Lesson card · Introduction to Pron",
+                  "width": "fill_container",
+                  "fill": "$pure-white",
+                  "cornerRadius": 12,
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "CVPfHo",
+                      "name": "Icon box",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "$parchment-deep",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "pCPapg",
+                          "name": "ic",
+                          "width": 20,
+                          "height": 20,
+                          "library": "Material Symbols Rounded",
+                          "fill": "$gold-text"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "JJuF76",
+                      "name": "Txt",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bGVTDi",
+                          "name": "Order",
+                          "fill": "$ink-muted",
+                          "content": "LESSON 1",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "fDj48w",
+                          "name": "Title",
+                          "fill": "$ink",
+                          "content": "Introduction to Pronouns",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "oAn8cN",
+                          "name": "Progress Done",
+                          "gap": 6,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "KPOIH8",
+                              "name": "Bar",
+                              "fill": "$gold",
+                              "width": 100,
+                              "height": 4
+                            },
+                            {
+                              "type": "text",
+                              "id": "j1kV2c",
+                              "name": "Pct",
+                              "fill": "$sage-deep",
+                              "content": "100%",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ktGM2u",
+                      "name": "Action",
+                      "width": 36,
+                      "height": 36,
+                      "fill": "$success-tint",
+                      "cornerRadius": 10,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "TNyMcm",
+                          "name": "check",
+                          "width": 16,
+                          "height": 16,
+                          "library": "Material Symbols Rounded",
+                          "fill": "$sage-deep"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "p6rrNb",
+                  "name": "Lesson card · Dual Pronouns",
+                  "width": "fill_container",
+                  "fill": "$pure-white",
+                  "cornerRadius": 12,
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vl9oTM",
+                      "name": "Icon box",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "$parchment-deep",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "gOmnoK",
+                          "name": "ic",
+                          "width": 20,
+                          "height": 20,
+                          "library": "Material Symbols Rounded",
+                          "fill": "$gold-text"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "8kwlbi",
+                      "name": "Txt",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "kG9XtQ",
+                          "name": "Order",
+                          "fill": "$ink-muted",
+                          "content": "LESSON 2",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "TfrwYk",
+                          "name": "Title",
+                          "fill": "$ink",
+                          "content": "Dual Pronouns",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "vRLX1S",
+                          "name": "Progress Done",
+                          "gap": 6,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "zkEN9U",
+                              "name": "Bar",
+                              "fill": "$gold",
+                              "width": 100,
+                              "height": 4
+                            },
+                            {
+                              "type": "text",
+                              "id": "bNytQ9",
+                              "name": "Pct",
+                              "fill": "$sage-deep",
+                              "content": "100%",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "usgZGU",
+                      "name": "Action",
+                      "width": 36,
+                      "height": 36,
+                      "fill": "$success-tint",
+                      "cornerRadius": 10,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "wWPu6V",
+                          "name": "check",
+                          "width": 16,
+                          "height": 16,
+                          "library": "Material Symbols Rounded",
+                          "fill": "$sage-deep"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "1SCDHm",
+                  "name": "Lesson card · Plural Pronouns",
+                  "width": "fill_container",
+                  "fill": "$pure-white",
+                  "cornerRadius": 12,
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "pO2f1g",
+                      "name": "Icon box",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "$parchment-deep",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "EBcjLI",
+                          "name": "ic",
+                          "width": 20,
+                          "height": 20,
+                          "library": "Material Symbols Rounded",
+                          "fill": "$gold-text"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "VitMmY",
+                      "name": "Txt",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "BR6iBy",
+                          "name": "Up next chip",
+                          "fill": "$parchment-deep",
+                          "cornerRadius": 6,
+                          "padding": [
+                            2,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nQrEBM",
+                              "name": "chip_lbl",
+                              "fill": "$gold-text",
+                              "content": "UP NEXT",
+                              "fontFamily": "Inter",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZFsVTf",
+                          "name": "Title",
+                          "fill": "$ink",
+                          "content": "Plural Pronouns",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "FHP1jJ",
+                          "name": "Arabic",
+                          "fill": "$gold-text",
+                          "content": "ضَمَائِرُ الْجَمْع",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "JNN6cz",
+                      "name": "Action",
+                      "width": 36,
+                      "height": 36,
+                      "fill": "$navy-deep",
+                      "cornerRadius": 10,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "2QCm3x",
+                          "name": "chevron",
+                          "width": 16,
+                          "height": 16,
+                          "library": "Material Symbols Rounded",
+                          "fill": "$gold-muted"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aQbOEp",
+                  "name": "Lesson card · Before & After in Ar",
+                  "width": "fill_container",
+                  "fill": "$pure-white",
+                  "cornerRadius": 12,
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "qkw8FL",
+                      "name": "Icon box",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "$parchment-deep",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "hAkog7",
+                          "name": "ic",
+                          "width": 20,
+                          "height": 20,
+                          "library": "Material Symbols Rounded",
+                          "fill": "$ink-muted"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "z4MD9T",
+                      "name": "Txt",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WsbCaw",
+                          "name": "Order",
+                          "fill": "$ink-muted",
+                          "content": "LESSON 4",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Ah2yUI",
+                          "name": "Title",
+                          "fill": "$ink",
+                          "content": "Before & After in Arabic",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "z0eq7g",
+                          "name": "Arabic",
+                          "fill": "$gold-text",
+                          "content": "قَبْلَ وَ بَعْدَ",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "3StS87",
+                      "name": "Action",
+                      "width": 36,
+                      "height": 36,
+                      "fill": "$parchment-deep",
+                      "cornerRadius": 10,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "TLbbBK",
+                          "name": "lock",
+                          "width": 16,
+                          "height": 16,
+                          "library": "Material Symbols Rounded",
+                          "fill": "$ink-muted"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Yg5bkh",
+                  "name": "Chapter Test Card",
+                  "width": "fill_container",
+                  "fill": "$parchment-soft",
+                  "cornerRadius": 12,
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "N0Pahi",
+                      "name": "Icon box",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "$parchment-soft",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "MeXqbW",
+                          "name": "medal",
+                          "width": 22,
+                          "height": 22,
+                          "library": "Material Symbols Rounded",
+                          "fill": "$gold-text"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WNFC7H",
+                      "name": "Txt",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "gSIrpN",
+                          "name": "Order",
+                          "fill": "$gold-text",
+                          "content": "CHAPTER TEST",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "w1UAHw",
+                          "name": "Title",
+                          "fill": "$ink",
+                          "content": "Chapter 10 Exam",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "NQ7tkl",
+                          "name": "Meta",
+                          "fill": "$ink-muted",
+                          "content": "Complete all lessons to unlock",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rk4VU6",
+                      "name": "Action",
+                      "width": 36,
+                      "height": 36,
+                      "fill": "$parchment-deep",
+                      "cornerRadius": 10,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "bz0dDm",
+                          "name": "lock",
+                          "width": 16,
+                          "height": 16,
+                          "library": "Material Symbols Rounded",
+                          "fill": "$gold-text"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cpQ2Yt",
+              "name": "Show all",
+              "gap": 6,
+              "padding": [
+                4,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "7oeyyr",
+                  "name": "Label",
+                  "fill": "$gold-text",
+                  "content": "Show all 8 lessons",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "icon",
+                  "id": "MUGc5T",
+                  "name": "chev",
+                  "width": 16,
+                  "height": 16,
+                  "library": "Material Symbols Rounded",
+                  "fill": "$gold-text"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "3cvKmG",
+              "name": "Next chapters",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                10,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "uguodd",
+                  "name": "Head",
+                  "width": "fill_container",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8gMBt2",
+                      "name": "H",
+                      "fill": "$ink",
+                      "content": "Coming up",
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "0iY72J",
+                      "name": "All",
+                      "fill": "$gold-text",
+                      "content": "All 72 chapters →",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "9trjt1",
+                  "name": "Chapter 11 row",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "$pure-white",
+                  "cornerRadius": 10,
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NnsitW",
+                      "name": "Num",
+                      "fill": "$ink-muted",
+                      "content": "11",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "6MQKbC",
+                      "name": "Title",
+                      "fill": "$ink",
+                      "content": "Family words",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "noQBuK",
+                      "name": "lock",
+                      "width": 16,
+                      "height": 16,
+                      "library": "Material Symbols Rounded",
+                      "fill": "$ink-muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Fb9G1V",
+                  "name": "Chapter 12 row",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "$pure-white",
+                  "cornerRadius": 10,
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BbXIPU",
+                      "name": "Num",
+                      "fill": "$ink-muted",
+                      "content": "12",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "sgFfPH",
+                      "name": "Title",
+                      "fill": "$ink",
+                      "content": "Introductions and work",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "l5saZD",
+                      "name": "lock",
+                      "width": 16,
+                      "height": 16,
+                      "library": "Material Symbols Rounded",
+                      "fill": "$ink-muted"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "QNEsJj",
+              "name": "More today",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                10,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "TXpvvo",
+                  "name": "H",
+                  "fill": "$ink",
+                  "content": "More for today",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "13a3Bi",
+                  "name": "Row · Tadabbur · Al-Baqara",
+                  "width": "fill_container",
+                  "height": 64,
+                  "fill": "$pure-white",
+                  "cornerRadius": 12,
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "minsZv",
+                      "name": "moon",
+                      "width": 22,
+                      "height": 22,
+                      "library": "Material Symbols Rounded",
+                      "fill": "$gold-text"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9miEST",
+                      "name": "Txt",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "4kDFcp",
+                          "name": "Title",
+                          "fill": "$ink",
+                          "content": "Tadabbur · Al-Baqarah",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "pWgtsB",
+                          "name": "Meta",
+                          "fill": "$ink-muted",
+                          "content": "3 of 29 words understood",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "Zs9D5Z",
+                      "name": "chevron-right",
+                      "width": 16,
+                      "height": 16,
+                      "library": "Material Symbols Rounded",
+                      "fill": "$ink-muted"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "MluTA",
+      "x": -794,
+      "y": 15,
+      "name": "Learn Home — Refined Layout Proposal",
+      "clip": true,
+      "width": 390,
+      "height": 1108,
+      "fill": "$screen-bg",
+      "cornerRadius": 20,
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "FbOC4",
+          "x": 20,
+          "y": 10,
+          "name": "Android Status Bar",
+          "width": 350,
+          "height": 24,
+          "fill": "#FFFFFF00",
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "Pnr35",
+              "x": 0,
+              "y": 4,
+              "name": "Status Time",
+              "fill": "$warsh-ink",
+              "content": "9:41",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 13,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "aYKMr",
+              "x": 34,
+              "y": 9,
+              "name": "Status Notification One",
+              "width": 6,
+              "height": 6,
+              "fill": "$warsh-muted",
+              "cornerRadius": 3,
+              "layout": "none"
+            },
+            {
+              "type": "frame",
+              "id": "oBSKb",
+              "x": 46,
+              "y": 9,
+              "name": "Status Notification Two",
+              "width": 6,
+              "height": 6,
+              "fill": "$warsh-muted",
+              "cornerRadius": 3,
+              "layout": "none"
+            },
+            {
+              "type": "frame",
+              "id": "NlFco",
+              "x": 58,
+              "y": 9,
+              "name": "Status Notification Three",
+              "width": 6,
+              "height": 6,
+              "fill": "$warsh-muted",
+              "cornerRadius": 3,
+              "layout": "none"
+            },
+            {
+              "type": "icon",
+              "id": "BlJrj",
+              "x": 308,
+              "y": 3,
+              "name": "Status Wifi",
+              "width": 18,
+              "height": 18,
+              "icon": "wifi",
+              "library": "lucide",
+              "fill": "$warsh-ink"
+            },
+            {
+              "type": "icon",
+              "id": "s9Rzf",
+              "x": 332,
+              "y": 3,
+              "name": "Status Battery",
+              "width": 18,
+              "height": 18,
+              "icon": "battery-full",
+              "library": "lucide",
+              "fill": "$warsh-ink"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xxhN7",
+          "x": 20,
+          "y": 46,
+          "name": "Learn Header",
+          "width": 350,
+          "height": 48,
+          "fill": "#FFFFFF00",
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "l2TZtW",
+              "x": 0,
+              "y": 4,
+              "name": "Learner Name",
+              "fill": "$warsh-ink",
+              "textGrowth": "fixed-width",
+              "width": 220,
+              "content": "Umar",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 20,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "j36jk",
+              "x": 0,
+              "y": 30,
+              "name": "Chapter Greeting",
+              "fill": "$warsh-muted",
+              "textGrowth": "fixed-width",
+              "width": 220,
+              "content": "Assalamu alaikum · Chapter 10",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "oWszI",
+              "x": 251,
+              "y": 8,
+              "name": "Streak Chip",
+              "width": 51,
+              "height": 32,
+              "fill": "$warsh-white",
+              "cornerRadius": 16,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "wemFI",
+                  "x": 10,
+                  "y": 9,
+                  "name": "Streak Flame",
+                  "width": 14,
+                  "height": 14,
+                  "icon": "flame",
+                  "library": "lucide",
+                  "fill": "$gold-text"
+                },
+                {
+                  "type": "text",
+                  "id": "SFQPP",
+                  "x": 28,
+                  "y": 9,
+                  "name": "Streak Count",
+                  "fill": "$warsh-ink",
+                  "content": "12",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$font-body",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "l2daL",
+              "x": 310,
+              "y": 4,
+              "name": "Learner Avatar",
+              "width": 40,
+              "height": 40,
+              "fill": "$warsh-navy",
+              "cornerRadius": 20,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jtuiq",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Avatar Initial",
+                  "fill": "$warsh-white",
+                  "textGrowth": "fixed-width-height",
+                  "width": 40,
+                  "height": 40,
+                  "content": "U",
+                  "lineHeight": 1.2,
+                  "textAlign": "center",
+                  "textAlignVertical": "middle",
+                  "fontFamily": "$font-body",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "t9QKA",
+          "x": 20,
+          "y": 110,
+          "name": "Current Lesson Hero",
+          "width": 350,
+          "fill": "$warsh-navy",
+          "cornerRadius": 22,
+          "layout": "vertical",
+          "gap": 14,
+          "padding": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "UUmah",
+              "name": "Hero Top Row",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "crgy5",
+                  "name": "Hero Eyebrow",
+                  "fill": "#F3EAD6",
+                  "content": "Chapter 10 · Lesson 3",
+                  "fontFamily": "$font-body",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "CQfd7",
+              "name": "Hero Lesson Title",
+              "fill": "$warsh-white",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Plural pronouns, before and after",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "XJld1",
+              "name": "Hero Progress",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ugbsj",
+                  "name": "Hero Progress Track",
+                  "width": "fill_container",
+                  "height": 6,
+                  "fill": "#FFFFFF26",
+                  "cornerRadius": 3,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "dOftj",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Hero Progress Fill",
+                      "width": 58,
+                      "height": 6,
+                      "fill": "$warsh-gold",
+                      "cornerRadius": 3
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "YRWjL",
+                  "name": "Hero Progress Count",
+                  "fill": "#D5DAE5",
+                  "content": "2 of 8 done",
+                  "fontFamily": "$font-body",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "FhGcj",
+              "name": "Hero Continue Button",
+              "width": "fill_container",
+              "height": 48,
+              "fill": "$warsh-gold",
+              "cornerRadius": 24,
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "whdIj",
+                  "name": "Hero Continue Label",
+                  "fill": "$warsh-navy",
+                  "content": "Continue lesson",
+                  "fontFamily": "$font-body",
+                  "fontSize": 15,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "icon",
+                  "id": "ZcMOg",
+                  "name": "Hero Continue Arrow",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "arrow-right",
+                  "library": "lucide",
+                  "fill": "$warsh-navy"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "R27mZ",
+          "x": 20,
+          "y": 345,
+          "name": "Lesson 1 Row",
+          "width": 350,
+          "height": 64,
+          "fill": "$warsh-white",
+          "cornerRadius": 12,
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "LEGX4",
+              "x": 12,
+              "y": 12,
+              "name": "Lesson 1 Question Mark",
+              "width": 40,
+              "height": 40,
+              "fill": "$parchment-deep",
+              "cornerRadius": 12,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UUwsv",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Lesson 1 Question Mark Question",
+                  "fill": "$gold-text",
+                  "textGrowth": "fixed-width-height",
+                  "width": 40,
+                  "height": 40,
+                  "content": "?",
+                  "lineHeight": 1.2,
+                  "textAlign": "center",
+                  "textAlignVertical": "middle",
+                  "fontFamily": "$font-body",
+                  "fontSize": 18,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "wCkiv",
+              "x": 64,
+              "y": 9,
+              "name": "Lesson 1 Eyebrow",
+              "fill": "$warsh-muted",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "LESSON 1",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 9,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "u6nLOn",
+              "x": 64,
+              "y": 22,
+              "name": "Lesson 1 Title",
+              "fill": "$warsh-ink",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "Introduction to Pronouns",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "Lhpip",
+              "x": 64,
+              "y": 47,
+              "name": "Lesson 1 Progress Track",
+              "width": 84,
+              "height": 4,
+              "fill": "$parchment-deep",
+              "cornerRadius": 2,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "SdvdZ",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Lesson 1 Progress Fill",
+                  "width": 84,
+                  "height": 4,
+                  "fill": "$warsh-sage",
+                  "cornerRadius": 2,
+                  "layout": "none"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "i4amG7",
+              "x": 156,
+              "y": 43,
+              "name": "Lesson 1 Completion",
+              "fill": "$sage-deep",
+              "textGrowth": "fixed-width",
+              "width": 52,
+              "content": "100%",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 10,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "YtnhB",
+              "x": 302,
+              "y": 16,
+              "name": "Lesson 1 Status Well",
+              "width": 36,
+              "height": 32,
+              "fill": "$success-tint",
+              "cornerRadius": 8,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "vXyHs",
+                  "x": 9,
+                  "y": 7,
+                  "name": "Lesson 1 Status Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "check",
+                  "library": "lucide",
+                  "fill": "$sage-deep"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "TMxm4",
+          "x": 20,
+          "y": 417,
+          "name": "Lesson 2 Row",
+          "width": 350,
+          "height": 64,
+          "fill": "$warsh-white",
+          "cornerRadius": 12,
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "eiY6M",
+              "x": 12,
+              "y": 12,
+              "name": "Lesson 2 Question Mark",
+              "width": 40,
+              "height": 40,
+              "fill": "$parchment-deep",
+              "cornerRadius": 12,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xzsEY",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Lesson 2 Question Mark Question",
+                  "fill": "$gold-text",
+                  "textGrowth": "fixed-width-height",
+                  "width": 40,
+                  "height": 40,
+                  "content": "?",
+                  "lineHeight": 1.2,
+                  "textAlign": "center",
+                  "textAlignVertical": "middle",
+                  "fontFamily": "$font-body",
+                  "fontSize": 18,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "jyDeS",
+              "x": 64,
+              "y": 9,
+              "name": "Lesson 2 Eyebrow",
+              "fill": "$warsh-muted",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "LESSON 2",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 9,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "dT1pY",
+              "x": 64,
+              "y": 22,
+              "name": "Lesson 2 Title",
+              "fill": "$warsh-ink",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "Dual Pronouns",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "Wl4Er",
+              "x": 64,
+              "y": 47,
+              "name": "Lesson 2 Progress Track",
+              "width": 84,
+              "height": 4,
+              "fill": "$parchment-deep",
+              "cornerRadius": 2,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "J1827D",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Lesson 2 Progress Fill",
+                  "width": 84,
+                  "height": 4,
+                  "fill": "$warsh-sage",
+                  "cornerRadius": 2,
+                  "layout": "none"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "FJKMb",
+              "x": 156,
+              "y": 43,
+              "name": "Lesson 2 Completion",
+              "fill": "$sage-deep",
+              "textGrowth": "fixed-width",
+              "width": 52,
+              "content": "100%",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 10,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "CBR9l",
+              "x": 302,
+              "y": 16,
+              "name": "Lesson 2 Status Well",
+              "width": 36,
+              "height": 32,
+              "fill": "$success-tint",
+              "cornerRadius": 8,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "b1N1uX",
+                  "x": 9,
+                  "y": 7,
+                  "name": "Lesson 2 Status Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "check",
+                  "library": "lucide",
+                  "fill": "$sage-deep"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "WZ9L7",
+          "x": 20,
+          "y": 489,
+          "name": "Lesson 3 Row",
+          "width": 350,
+          "height": 64,
+          "fill": "$warsh-white",
+          "cornerRadius": 12,
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "wee7i",
+              "x": 12,
+              "y": 12,
+              "name": "Lesson 3 Question Mark",
+              "width": 40,
+              "height": 40,
+              "fill": "$parchment-deep",
+              "cornerRadius": 12,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "udIRo",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Lesson 3 Question Mark Question",
+                  "fill": "$gold-text",
+                  "textGrowth": "fixed-width-height",
+                  "width": 40,
+                  "height": 40,
+                  "content": "?",
+                  "lineHeight": 1.2,
+                  "textAlign": "center",
+                  "textAlignVertical": "middle",
+                  "fontFamily": "$font-body",
+                  "fontSize": 18,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "XPmzh",
+              "x": 64,
+              "y": 15,
+              "name": "Lesson 3 Up Next Badge",
+              "width": 47,
+              "height": 14,
+              "fill": "$parchment-soft",
+              "cornerRadius": 7,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Q7JefY",
+                  "x": 6,
+                  "y": 2,
+                  "name": "Up Next Label",
+                  "fill": "$gold-text",
+                  "content": "UP NEXT",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$font-body",
+                  "fontSize": 8,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "m2iYiF",
+              "x": 64,
+              "y": 32,
+              "name": "Lesson 3 Title",
+              "fill": "$warsh-ink",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "Plural Pronouns",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "XrB5B",
+              "x": 302,
+              "y": 16,
+              "name": "Lesson 3 Status Well",
+              "width": 36,
+              "height": 32,
+              "fill": "$warsh-navy",
+              "cornerRadius": 8,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "kQPhS",
+                  "x": 9,
+                  "y": 7,
+                  "name": "Lesson 3 Status Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "arrow-right",
+                  "library": "lucide",
+                  "fill": "$warsh-gold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NafVW",
+          "x": 20,
+          "y": 561,
+          "name": "Lesson 4 Row",
+          "width": 350,
+          "height": 64,
+          "fill": "$warsh-white",
+          "cornerRadius": 12,
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "rmSGa",
+              "x": 12,
+              "y": 12,
+              "name": "Lesson 4 Question Mark",
+              "width": 40,
+              "height": 40,
+              "fill": "$parchment-deep",
+              "cornerRadius": 12,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Y2lYNm",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Lesson 4 Question Mark Question",
+                  "fill": "$gold-text",
+                  "textGrowth": "fixed-width-height",
+                  "width": 40,
+                  "height": 40,
+                  "content": "?",
+                  "lineHeight": 1.2,
+                  "textAlign": "center",
+                  "textAlignVertical": "middle",
+                  "fontFamily": "$font-body",
+                  "fontSize": 18,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "ro8QI",
+              "x": 64,
+              "y": 17,
+              "name": "Lesson 4 Eyebrow",
+              "fill": "$warsh-muted",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "LESSON 4",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 9,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "efDNB",
+              "x": 64,
+              "y": 30,
+              "name": "Lesson 4 Title",
+              "fill": "$warsh-ink",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "Before & After in Arabic",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "TLkbX",
+              "x": 302,
+              "y": 16,
+              "name": "Lesson 4 Status Well",
+              "width": 36,
+              "height": 32,
+              "fill": "$parchment-soft",
+              "cornerRadius": 8,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "Tis0c",
+                  "x": 9,
+                  "y": 7,
+                  "name": "Lesson 4 Status Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "lock",
+                  "library": "lucide",
+                  "fill": "$warsh-muted"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "VZVXh",
+          "x": 20,
+          "y": 633,
+          "name": "Chapter Test Card",
+          "width": 350,
+          "height": 64,
+          "fill": "$parchment-soft",
+          "cornerRadius": 12,
+          "stroke": "#85672C33",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "oWso9",
+              "x": 12,
+              "y": 12,
+              "name": "Chapter Test Help Mark",
+              "fill": "$gold-text",
+              "textGrowth": "fixed-width-height",
+              "width": 40,
+              "height": 40,
+              "content": "?",
+              "lineHeight": 1.2,
+              "textAlign": "center",
+              "textAlignVertical": "middle",
+              "fontFamily": "$font-body",
+              "fontSize": 20,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "KL509",
+              "x": 64,
+              "y": 9,
+              "name": "Chapter Test Eyebrow",
+              "fill": "$gold-text",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "CHAPTER TEST",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 9,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "D13Je",
+              "x": 64,
+              "y": 22,
+              "name": "Chapter Test Title",
+              "fill": "$warsh-ink",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "Chapter 10 Exam",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "RwSUu",
+              "x": 64,
+              "y": 43,
+              "name": "Chapter Test Helper",
+              "fill": "$warsh-muted",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "Complete all lessons to unlock",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 10,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "wm1Ea",
+              "x": 302,
+              "y": 16,
+              "name": "Chapter Test Lock Well",
+              "width": 36,
+              "height": 32,
+              "fill": "$parchment-deep",
+              "cornerRadius": 8,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "ZM6bx",
+                  "x": 10,
+                  "y": 8,
+                  "name": "Chapter Test Lock",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "lock",
+                  "library": "lucide",
+                  "fill": "$gold-text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "Sguux",
+          "x": 20,
+          "y": 709,
+          "name": "Show All Lessons Link",
+          "fill": "$gold-text",
+          "textGrowth": "fixed-width",
+          "width": 350,
+          "content": "Show all 8 lessons  ⓘ",
+          "lineHeight": 1.2,
+          "fontFamily": "$font-body",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "tsg6y",
+          "x": 20,
+          "y": 748,
+          "name": "Coming Up Heading",
+          "fill": "$warsh-ink",
+          "textGrowth": "fixed-width",
+          "width": 200,
+          "content": "Coming up",
+          "lineHeight": 1.2,
+          "fontFamily": "$font-body",
+          "fontSize": 16,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "Vanoj",
+          "x": 220,
+          "y": 751,
+          "name": "All Chapters Link",
+          "fill": "$gold-text",
+          "textGrowth": "fixed-width",
+          "width": 150,
+          "content": "All 72 chapters  →",
+          "lineHeight": 1.2,
+          "textAlign": "right",
+          "fontFamily": "$font-body",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "SXLMu",
+          "x": 20,
+          "y": 779,
+          "name": "Upcoming Chapter 11 Row",
+          "width": 350,
+          "height": 44,
+          "fill": "$warsh-white",
+          "cornerRadius": 12,
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "ua9G1",
+              "x": 12,
+              "y": 0,
+              "name": "Upcoming Chapter 11 Number",
+              "fill": "$warsh-muted",
+              "textGrowth": "fixed-width-height",
+              "width": 40,
+              "height": 44,
+              "content": "11",
+              "lineHeight": 1.2,
+              "textAlign": "center",
+              "textAlignVertical": "middle",
+              "fontFamily": "$font-body",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "vK04P",
+              "x": 64,
+              "y": 14,
+              "name": "Upcoming Chapter 11 Title",
+              "fill": "$warsh-ink",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "Family words",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "xycTk",
+              "x": 302,
+              "y": 0,
+              "name": "Upcoming Chapter 11 Info",
+              "fill": "$warsh-muted",
+              "textGrowth": "fixed-width-height",
+              "width": 36,
+              "height": 44,
+              "content": "i",
+              "lineHeight": 1.2,
+              "textAlign": "center",
+              "textAlignVertical": "middle",
+              "fontFamily": "$font-body",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "t3bYz6",
+          "x": 20,
+          "y": 831,
+          "name": "Upcoming Chapter 12 Row",
+          "width": 350,
+          "height": 44,
+          "fill": "$warsh-white",
+          "cornerRadius": 12,
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "WvbTY",
+              "x": 12,
+              "y": 0,
+              "name": "Upcoming Chapter 12 Number",
+              "fill": "$warsh-muted",
+              "textGrowth": "fixed-width-height",
+              "width": 40,
+              "height": 44,
+              "content": "12",
+              "lineHeight": 1.2,
+              "textAlign": "center",
+              "textAlignVertical": "middle",
+              "fontFamily": "$font-body",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "rQ7uv",
+              "x": 64,
+              "y": 14,
+              "name": "Upcoming Chapter 12 Title",
+              "fill": "$warsh-ink",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "Introductions and work",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "qlik3",
+              "x": 302,
+              "y": 0,
+              "name": "Upcoming Chapter 12 Info",
+              "fill": "$warsh-muted",
+              "textGrowth": "fixed-width-height",
+              "width": 36,
+              "height": 44,
+              "content": "i",
+              "lineHeight": 1.2,
+              "textAlign": "center",
+              "textAlignVertical": "middle",
+              "fontFamily": "$font-body",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "BlEdD",
+          "x": 20,
+          "y": 899,
+          "name": "More for Today Heading",
+          "fill": "$warsh-ink",
+          "textGrowth": "fixed-width",
+          "width": 350,
+          "content": "More for today",
+          "lineHeight": 1.2,
+          "fontFamily": "$font-body",
+          "fontSize": 16,
+          "fontWeight": "500"
+        },
+        {
+          "type": "frame",
+          "id": "v15CW",
+          "x": 20,
+          "y": 930,
+          "name": "Tadabbur Today Card",
+          "width": 350,
+          "height": 64,
+          "fill": "$warsh-white",
+          "cornerRadius": 12,
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "JllOq",
+              "x": 12,
+              "y": 12,
+              "name": "Tadabbur Mark",
+              "fill": "$gold-text",
+              "textGrowth": "fixed-width-height",
+              "width": 40,
+              "height": 40,
+              "content": "?",
+              "lineHeight": 1.2,
+              "textAlign": "center",
+              "textAlignVertical": "middle",
+              "fontFamily": "$font-body",
+              "fontSize": 20,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "StsdF",
+              "x": 64,
+              "y": 16,
+              "name": "Tadabbur Title",
+              "fill": "$warsh-ink",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "Tadabbur · Al-Baqarah",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 13,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "AoH3C",
+              "x": 64,
+              "y": 35,
+              "name": "Tadabbur Progress",
+              "fill": "$warsh-muted",
+              "textGrowth": "fixed-width",
+              "width": 230,
+              "content": "3 of 29 words understood",
+              "lineHeight": 1.2,
+              "fontFamily": "$font-body",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "W1p5rp",
+              "x": 302,
+              "y": 16,
+              "name": "Tadabbur Info",
+              "fill": "$warsh-muted",
+              "textGrowth": "fixed-width-height",
+              "width": 36,
+              "height": 32,
+              "content": "i",
+              "lineHeight": 1.2,
+              "textAlign": "center",
+              "textAlignVertical": "middle",
+              "fontFamily": "$font-body",
+              "fontSize": 14,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "E6zYMc",
+          "x": 20,
+          "y": 1024,
+          "name": "Existing Five Tab Android Dock",
+          "width": 350,
+          "height": 56,
+          "fill": "$warsh-navy",
+          "cornerRadius": 20,
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "IJjsS",
+              "x": 8,
+              "y": 8,
+              "name": "Learn Active Tab",
+              "width": 82,
+              "height": 40,
+              "fill": "$screen-bg",
+              "cornerRadius": 12,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "PzKFa",
+                  "x": 12,
+                  "y": 11,
+                  "name": "Learn Tab Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "book-open",
+                  "library": "lucide",
+                  "fill": "$warsh-navy"
+                },
+                {
+                  "type": "text",
+                  "id": "A0usL",
+                  "x": 36,
+                  "y": 13,
+                  "name": "Learn Tab Label",
+                  "fill": "$warsh-navy",
+                  "content": "Learn",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$font-body",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hRMIX",
+              "x": 113,
+              "y": 8,
+              "name": "Vocabulary Inactive Tab",
+              "width": 40,
+              "height": 40,
+              "fill": "#FFFFFF00",
+              "cornerRadius": 8,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "bwCbj",
+                  "x": 10,
+                  "y": 10,
+                  "name": "Vocabulary Tab Icon",
+                  "width": 20,
+                  "height": 20,
+                  "icon": "layers",
+                  "library": "lucide",
+                  "fill": "#FFFFFFB3"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "AKESk",
+              "x": 176,
+              "y": 8,
+              "name": "Quran Inactive Tab",
+              "width": 40,
+              "height": 40,
+              "fill": "#FFFFFF00",
+              "cornerRadius": 8,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "MVNlh",
+                  "x": 10,
+                  "y": 10,
+                  "name": "Quran Tab Icon",
+                  "width": 20,
+                  "height": 20,
+                  "icon": "book",
+                  "library": "lucide",
+                  "fill": "#FFFFFFB3"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "p6X2Up",
+              "x": 239,
+              "y": 8,
+              "name": "Noor Inactive Tab",
+              "width": 40,
+              "height": 40,
+              "fill": "#FFFFFF00",
+              "cornerRadius": 8,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "xbap9",
+                  "x": 10,
+                  "y": 10,
+                  "name": "Noor Tab Icon",
+                  "width": 20,
+                  "height": 20,
+                  "icon": "message-circle",
+                  "library": "lucide",
+                  "fill": "#FFFFFFB3"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jmWeY",
+              "x": 302,
+              "y": 8,
+              "name": "Profile Inactive Tab",
+              "width": 40,
+              "height": 40,
+              "fill": "#FFFFFF00",
+              "cornerRadius": 8,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "S0Mtf",
+                  "x": 10,
+                  "y": 10,
+                  "name": "Profile Tab Icon",
+                  "width": 20,
+                  "height": 20,
+                  "icon": "user",
+                  "library": "lucide",
+                  "fill": "#FFFFFFB3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LM1vR",
+          "x": 156,
+          "y": 1095,
+          "name": "Android Gesture Bar",
+          "width": 78,
+          "height": 4,
+          "fill": "$warsh-ink",
+          "cornerRadius": 2,
+          "layout": "none"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Hponm",
+      "x": -1238,
+      "y": 1183,
+      "name": "Chapter Detail — Minimal Redesign Proposal",
+      "width": 1160,
+      "height": 1100,
+      "fill": "#F8F4ED",
+      "cornerRadius": 20,
+      "layout": "vertical",
+      "gap": 20,
+      "padding": 36,
+      "children": [
+        {
+          "type": "frame",
+          "id": "gbCLq",
+          "name": "Proposal Header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 6,
+          "children": [
+            {
+              "type": "text",
+              "id": "y25BK",
+              "name": "Eyebrow",
+              "fill": "#85672C",
+              "content": "CHAPTER DETAIL · ANDROID",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "700",
+              "letterSpacing": 1.2
+            },
+            {
+              "type": "text",
+              "id": "kjNOj",
+              "name": "Proposal Title",
+              "fill": "#1A1A1A",
+              "content": "A quieter learning path",
+              "fontFamily": "Cormorant Garamond",
+              "fontSize": 30,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "kHlbo",
+              "name": "Proposal Summary",
+              "fill": "#5F5F5F",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Keep the chapter identity and progress visible, then let compact lesson rows do the work. The bottom tab bar stays with the Learn tab; this remains a stack screen.",
+              "lineHeight": 1.4,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "VYtDW",
+          "name": "Proposal Body",
+          "width": "fill_container",
+          "gap": 44,
+          "children": [
+            {
+              "type": "frame",
+              "id": "OdlzF",
+              "name": "Chapter Detail · Proposed Android Screen",
+              "clip": true,
+              "width": 390,
+              "height": 900,
+              "fill": "#F8F4ED",
+              "cornerRadius": 20,
+              "stroke": "#9DAB94",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "aXdGK",
+                  "name": "Android Status Bar",
+                  "width": "fill_container",
+                  "height": 44,
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ep2XE",
+                      "name": "Status Time",
+                      "fill": "#1A1A1A",
+                      "content": "9:41",
+                      "lineHeight": 1.1428571428571428,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hKO5C",
+                      "name": "Status Icons",
+                      "fill": "#1A1A1A",
+                      "textGrowth": "fixed-width-height",
+                      "width": 50,
+                      "height": 20,
+                      "content": "●  ◉  ▰",
+                      "lineHeight": 1.6666666666666667,
+                      "textAlign": "right",
+                      "textAlignVertical": "middle",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ySOZx",
+                  "name": "Scrollable Chapter Content",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    6,
+                    20,
+                    20,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "fScOG",
+                      "name": "Stack Header",
+                      "width": "fill_container",
+                      "height": 44,
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "SCH30",
+                          "name": "Back Chevron",
+                          "width": 22,
+                          "height": 22,
+                          "icon": "chevron-left",
+                          "library": "lucide",
+                          "fill": "#1A1A1A"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Rkt3F",
+                          "name": "Chapter Number",
+                          "fill": "#1A1A1A",
+                          "content": "Chapter 10",
+                          "lineHeight": 1.25,
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xSYON",
+                      "name": "Chapter Introduction",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "U4CkT",
+                          "name": "Chapter Title",
+                          "fill": "#1A1A1A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Plural pronouns, before and after",
+                          "lineHeight": 1.15,
+                          "fontFamily": "Inter",
+                          "fontSize": 26,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Z9TG3y",
+                          "name": "Chapter Arabic Title",
+                          "fill": "#85672C",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "الضَّمَائِرُ",
+                          "lineHeight": 1.35,
+                          "textAlign": "right",
+                          "fontFamily": "Scheherazade New",
+                          "fontSize": 22,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "r8N5Aw",
+                          "name": "Chapter Description",
+                          "fill": "#5F5F5F",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Recognize who a pronoun refers to before and after a word.",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "w1pst",
+                      "name": "Compact Progress",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "bAiwl",
+                          "name": "Progress Summary",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Ioyfj",
+                              "name": "Progress Label",
+                              "fill": "#3D3D3D",
+                              "content": "3 of 8 lessons completed",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Bb5cs",
+                              "name": "Progress Count",
+                              "fill": "#85672C",
+                              "content": "38%",
+                              "lineHeight": 1.3333333333333333,
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "tzP4d",
+                          "name": "Progress Track",
+                          "clip": true,
+                          "width": "fill_container",
+                          "height": 4,
+                          "fill": "#E7E1D3",
+                          "cornerRadius": 2,
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "oehHz",
+                              "x": 0,
+                              "y": 0,
+                              "name": "Progress Fill",
+                              "fill": "#C49B4D",
+                              "width": 131,
+                              "height": 4
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fdQqq",
+                      "name": "Lesson List",
+                      "clip": true,
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "gI6y2",
+                          "name": "Lesson 1 · done",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "gap": 12,
+                          "padding": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "QMjkL",
+                              "name": "Lesson 1 Number",
+                              "width": 28,
+                              "height": 28,
+                              "fill": "#EDF1E4",
+                              "cornerRadius": 14,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "IySi2",
+                                  "name": "Lesson 1 Index",
+                                  "fill": "#5A6953",
+                                  "textGrowth": "fixed-width",
+                                  "width": 28,
+                                  "content": "✓",
+                                  "lineHeight": 1.1666666666666667,
+                                  "textAlign": "center",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "FXR79",
+                              "name": "Lesson 1 Details",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "EXSbI",
+                                  "name": "Lesson 1 Title Line",
+                                  "width": "fill_container",
+                                  "gap": 8,
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "DPuls",
+                                      "name": "Lesson 1 Title",
+                                      "fill": "#1A1A1A",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Introduction to pronouns",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 14,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "jQ0UU",
+                                  "name": "Lesson 1 Meta",
+                                  "fill": "#5F5F5F",
+                                  "content": "Lesson · 100%",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon",
+                              "id": "Faqg0",
+                              "name": "Lesson 1 Trailing State",
+                              "width": 18,
+                              "height": 18,
+                              "icon": "circle-check",
+                              "library": "lucide",
+                              "fill": "#5A6953"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "b8K7dg",
+                          "name": "Lesson Divider 1",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#E8E3D9"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "c3l6rR",
+                          "name": "Lesson 2 · done",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "gap": 12,
+                          "padding": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "B7Nc4i",
+                              "name": "Lesson 2 Number",
+                              "width": 28,
+                              "height": 28,
+                              "fill": "#EDF1E4",
+                              "cornerRadius": 14,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "KhkCe",
+                                  "name": "Lesson 2 Index",
+                                  "fill": "#5A6953",
+                                  "textGrowth": "fixed-width",
+                                  "width": 28,
+                                  "content": "✓",
+                                  "lineHeight": 1.1666666666666667,
+                                  "textAlign": "center",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "xF50z",
+                              "name": "Lesson 2 Details",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "C0pAX",
+                                  "name": "Lesson 2 Title Line",
+                                  "width": "fill_container",
+                                  "gap": 8,
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "lR8Pw",
+                                      "name": "Lesson 2 Title",
+                                      "fill": "#1A1A1A",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Dual pronouns",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 14,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "FIAWz",
+                                  "name": "Lesson 2 Meta",
+                                  "fill": "#5F5F5F",
+                                  "content": "Lesson · 100%",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon",
+                              "id": "qCDDU",
+                              "name": "Lesson 2 Trailing State",
+                              "width": 18,
+                              "height": 18,
+                              "icon": "circle-check",
+                              "library": "lucide",
+                              "fill": "#5A6953"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "i3gSS",
+                          "name": "Lesson Divider 2",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#E8E3D9"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "UBNDG",
+                          "name": "Lesson 3 · next",
+                          "width": "fill_container",
+                          "fill": "#FBF3DC",
+                          "gap": 12,
+                          "padding": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "hWcnR",
+                              "name": "Lesson 3 Number",
+                              "width": 28,
+                              "height": 28,
+                              "fill": "#071B44",
+                              "cornerRadius": 14,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "F1Rvj",
+                                  "name": "Lesson 3 Index",
+                                  "fill": "#FFFFFF",
+                                  "textGrowth": "fixed-width",
+                                  "width": 28,
+                                  "content": "3",
+                                  "lineHeight": 1.1666666666666667,
+                                  "textAlign": "center",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "KeOGE",
+                              "name": "Lesson 3 Details",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "Y6vhQ",
+                                  "name": "Lesson 3 Title Line",
+                                  "width": "fill_container",
+                                  "gap": 8,
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "YIEkO",
+                                      "name": "Lesson 3 Title",
+                                      "fill": "#1A1A1A",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Plural pronouns",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 14,
+                                      "fontWeight": "600"
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "O7LGW",
+                                      "name": "Up Next Chip",
+                                      "fill": "#F4EBD0",
+                                      "cornerRadius": 8,
+                                      "padding": [
+                                        2,
+                                        7
+                                      ],
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "ZI57d",
+                                          "name": "Up Next Label",
+                                          "fill": "#85672C",
+                                          "content": "UP NEXT",
+                                          "lineHeight": 1.3,
+                                          "fontFamily": "Inter",
+                                          "fontSize": 10,
+                                          "fontWeight": "700"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "GuqIF",
+                                  "name": "Lesson 3 Meta",
+                                  "fill": "#5F5F5F",
+                                  "content": "Lesson · 10 XP",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon",
+                              "id": "i1X0R",
+                              "name": "Lesson 3 Trailing State",
+                              "width": 18,
+                              "height": 18,
+                              "icon": "chevron-right",
+                              "library": "lucide",
+                              "fill": "#5F5F5F"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "lxGAq",
+                          "name": "Lesson Divider 3",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#E8E3D9"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "I6pbhL",
+                          "name": "Lesson 4 · idle",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "gap": 12,
+                          "padding": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "pyMNw",
+                              "name": "Lesson 4 Number",
+                              "width": 28,
+                              "height": 28,
+                              "fill": "#F4EBD0",
+                              "cornerRadius": 14,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "l27Ep",
+                                  "name": "Lesson 4 Index",
+                                  "fill": "#85672C",
+                                  "textGrowth": "fixed-width",
+                                  "width": 28,
+                                  "content": "4",
+                                  "lineHeight": 1.1666666666666667,
+                                  "textAlign": "center",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "lw2DF",
+                              "name": "Lesson 4 Details",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "d8oyC",
+                                  "name": "Lesson 4 Title Line",
+                                  "width": "fill_container",
+                                  "gap": 8,
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "SVVNo",
+                                      "name": "Lesson 4 Title",
+                                      "fill": "#1A1A1A",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Before and after in Arabic",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 14,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "BHwVl",
+                                  "name": "Lesson 4 Meta",
+                                  "fill": "#5F5F5F",
+                                  "content": "Lesson · 10 XP",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon",
+                              "id": "D52Jl",
+                              "name": "Lesson 4 Trailing State",
+                              "width": 18,
+                              "height": 18,
+                              "icon": "chevron-right",
+                              "library": "lucide",
+                              "fill": "#5F5F5F"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "bIAPJ",
+                          "name": "Lesson Divider 4",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#E8E3D9"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "UDsw6",
+                          "name": "Lesson 5 · idle",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "gap": 12,
+                          "padding": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "MU6JX",
+                              "name": "Lesson 5 Number",
+                              "width": 28,
+                              "height": 28,
+                              "fill": "#F4EBD0",
+                              "cornerRadius": 14,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "E7tTs",
+                                  "name": "Lesson 5 Index",
+                                  "fill": "#85672C",
+                                  "textGrowth": "fixed-width",
+                                  "width": 28,
+                                  "content": "5",
+                                  "lineHeight": 1.1666666666666667,
+                                  "textAlign": "center",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "HmZLP",
+                              "name": "Lesson 5 Details",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "hExrj",
+                                  "name": "Lesson 5 Title Line",
+                                  "width": "fill_container",
+                                  "gap": 8,
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "f43w4",
+                                      "name": "Lesson 5 Title",
+                                      "fill": "#1A1A1A",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Practice with pronouns",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 14,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "GpKcn",
+                                  "name": "Lesson 5 Meta",
+                                  "fill": "#5F5F5F",
+                                  "content": "Practice · 10 XP",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon",
+                              "id": "My4uT",
+                              "name": "Lesson 5 Trailing State",
+                              "width": 18,
+                              "height": 18,
+                              "icon": "chevron-right",
+                              "library": "lucide",
+                              "fill": "#5F5F5F"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "sC2ja",
+                          "name": "Lesson Divider 5",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#E8E3D9"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "xImHc",
+                          "name": "Lesson 6 · idle",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "gap": 12,
+                          "padding": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "QcUMf",
+                              "name": "Lesson 6 Number",
+                              "width": 28,
+                              "height": 28,
+                              "fill": "#F4EBD0",
+                              "cornerRadius": 14,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "JhtQH",
+                                  "name": "Lesson 6 Index",
+                                  "fill": "#85672C",
+                                  "textGrowth": "fixed-width",
+                                  "width": 28,
+                                  "content": "6",
+                                  "lineHeight": 1.1666666666666667,
+                                  "textAlign": "center",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "nQUHo",
+                              "name": "Lesson 6 Details",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "AyCoV",
+                                  "name": "Lesson 6 Title Line",
+                                  "width": "fill_container",
+                                  "gap": 8,
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "ZWeHz",
+                                      "name": "Lesson 6 Title",
+                                      "fill": "#1A1A1A",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Pronouns in a sentence",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 14,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "ei4on",
+                                  "name": "Lesson 6 Meta",
+                                  "fill": "#5F5F5F",
+                                  "content": "Lesson · 10 XP",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon",
+                              "id": "mAV9q",
+                              "name": "Lesson 6 Trailing State",
+                              "width": 18,
+                              "height": 18,
+                              "icon": "chevron-right",
+                              "library": "lucide",
+                              "fill": "#5F5F5F"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Pza0B",
+                          "name": "Lesson Divider 6",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#E8E3D9"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "mKOzn",
+                          "name": "Lesson 7 · idle",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "gap": 12,
+                          "padding": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "rxw7H",
+                              "name": "Lesson 7 Number",
+                              "width": 28,
+                              "height": 28,
+                              "fill": "#F4EBD0",
+                              "cornerRadius": 14,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "P8bVGI",
+                                  "name": "Lesson 7 Index",
+                                  "fill": "#85672C",
+                                  "textGrowth": "fixed-width",
+                                  "width": 28,
+                                  "content": "7",
+                                  "lineHeight": 1.1666666666666667,
+                                  "textAlign": "center",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "J6uLW",
+                              "name": "Lesson 7 Details",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "grWAc",
+                                  "name": "Lesson 7 Title Line",
+                                  "width": "fill_container",
+                                  "gap": 8,
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "j1o6e",
+                                      "name": "Lesson 7 Title",
+                                      "fill": "#1A1A1A",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Before or after a noun",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 14,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "s9wwx",
+                                  "name": "Lesson 7 Meta",
+                                  "fill": "#5F5F5F",
+                                  "content": "Lesson · 10 XP",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon",
+                              "id": "k70Jj",
+                              "name": "Lesson 7 Trailing State",
+                              "width": 18,
+                              "height": 18,
+                              "icon": "chevron-right",
+                              "library": "lucide",
+                              "fill": "#5F5F5F"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "EkLGv",
+                          "name": "Lesson Divider 7",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#E8E3D9"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dsptO",
+                          "name": "Lesson 8 · idle",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "gap": 12,
+                          "padding": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "ZaICs",
+                              "name": "Lesson 8 Number",
+                              "width": 28,
+                              "height": 28,
+                              "fill": "#F4EBD0",
+                              "cornerRadius": 14,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "WAG4T",
+                                  "name": "Lesson 8 Index",
+                                  "fill": "#85672C",
+                                  "textGrowth": "fixed-width",
+                                  "width": 28,
+                                  "content": "8",
+                                  "lineHeight": 1.1666666666666667,
+                                  "textAlign": "center",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "XNDlR",
+                              "name": "Lesson 8 Details",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "M64wA2",
+                                  "name": "Lesson 8 Title Line",
+                                  "width": "fill_container",
+                                  "gap": 8,
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "Rqk5p",
+                                      "name": "Lesson 8 Title",
+                                      "fill": "#1A1A1A",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Chapter review",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 14,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "qCWEH",
+                                  "name": "Lesson 8 Meta",
+                                  "fill": "#5F5F5F",
+                                  "content": "Review · 10 XP",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "icon",
+                              "id": "GM3wP",
+                              "name": "Lesson 8 Trailing State",
+                              "width": 18,
+                              "height": 18,
+                              "icon": "chevron-right",
+                              "library": "lucide",
+                              "fill": "#5F5F5F"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rR8MG",
+                      "name": "Chapter Test · Locked",
+                      "width": "fill_container",
+                      "fill": "#FAF2DD",
+                      "cornerRadius": 12,
+                      "gap": 12,
+                      "padding": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "EkDSn",
+                          "name": "Test Lock Icon",
+                          "width": 28,
+                          "height": 28,
+                          "fill": "#F4EBD0",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "iEW3H",
+                              "name": "Test Lock",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "lock-keyhole",
+                              "library": "lucide",
+                              "fill": "#85672C"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "d9Lzf",
+                          "name": "Test Details",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "t8JKyY",
+                              "name": "Test Title",
+                              "fill": "#1A1A1A",
+                              "content": "Chapter 10 Test",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "MzqXs",
+                              "name": "Test Helper",
+                              "fill": "#5F5F5F",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Complete all lessons to unlock",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EPfGE",
+                  "name": "Android Gesture Bar Area",
+                  "width": "fill_container",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vBY5P",
+                      "name": "Android Gesture Bar",
+                      "width": 64,
+                      "height": 4,
+                      "fill": "#1A1A1A",
+                      "cornerRadius": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "s97Tf",
+              "name": "Design Notes",
+              "width": 550,
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nBZRO",
+                  "name": "Notes Heading",
+                  "fill": "#85672C",
+                  "content": "WHAT CHANGED",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "wnM2q",
+                  "name": "Design Note 1",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    10,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Iac72",
+                      "name": "Design Note 1 Title",
+                      "fill": "#1A1A1A",
+                      "content": "01 · One clear chapter header",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "N9JeG",
+                      "name": "Design Note 1 Body",
+                      "fill": "#5F5F5F",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Chapter number stays in the shared stack header. Title, Arabic title and one-line context form a single compact introduction.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mjLx8",
+                  "name": "Design Note 2",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    10,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Q1E3hM",
+                      "name": "Design Note 2 Title",
+                      "fill": "#1A1A1A",
+                      "content": "02 · Progress without another card",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "i7QE2",
+                      "name": "Design Note 2 Body",
+                      "fill": "#5F5F5F",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Completion count and a thin progress line sit directly above lessons. No oversized progress panel competes with the learning path.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aBZbH",
+                  "name": "Design Note 3",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    10,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cAwmA",
+                      "name": "Design Note 3 Title",
+                      "fill": "#1A1A1A",
+                      "content": "03 · Lessons scan as one path",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "aOMSe",
+                      "name": "Design Note 3 Body",
+                      "fill": "#5F5F5F",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Compact rows share a simple baseline and dividers. Number, title, Arabic support and lesson meta stay grouped; the active row gets a quiet parchment tint.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZVkgA",
+                  "name": "Design Note 4",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    10,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mMckA",
+                      "name": "Design Note 4 Title",
+                      "fill": "#1A1A1A",
+                      "content": "04 · States use small cues",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "eKPDc",
+                      "name": "Design Note 4 Body",
+                      "fill": "#5F5F5F",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Completed uses a check and sage; Up next uses one navy number and a small label; upcoming stays neutral. New, updated and placement-skipped badges remain supported.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DYUtr",
+                  "name": "Design Note 5",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    10,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "i2jVk",
+                      "name": "Design Note 5 Title",
+                      "fill": "#1A1A1A",
+                      "content": "05 · Chapter test stays distinct",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Y09bv",
+                      "name": "Design Note 5 Body",
+                      "fill": "#5F5F5F",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "The test has a calm cream surface and a lock cue until every regular lesson is complete.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "A748N3",
+                  "name": "Design Note 6",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    10,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "C4VRd",
+                      "name": "Design Note 6 Title",
+                      "fill": "#1A1A1A",
+                      "content": "06 · Theme stays consistent",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "F9tw4z",
+                      "name": "Design Note 6 Body",
+                      "fill": "#5F5F5F",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Inter for UI and numbers, Cormorant Garamond for the display title, Scheherazade New for Arabic. Use theme colors and radii 8 / 12 / 20.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pmHIE",
+                  "name": "Design Note 7",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    10,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "v6rfSK",
+                      "name": "Design Note 7 Title",
+                      "fill": "#1A1A1A",
+                      "content": "Navigation",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "O3Iff2",
+                      "name": "Design Note 7 Body",
+                      "fill": "#5F5F5F",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "This is a stack destination and keeps the shared back header. The four-tab bottom navigation remains unchanged on the Learn tab.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
                     }
                   ]
                 }

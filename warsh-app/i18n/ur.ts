@@ -1,6 +1,7 @@
 export const ur = {
   "tabs.learn": "سیکھیں",
   "tabs.vocabulary": "الفاظ",
+  "tabs.quran": "قرآن",
   "tabs.noor": "نور",
   "tabs.profile": "آپ",
 
@@ -138,6 +139,11 @@ export const ur = {
   "learn.salaam": "السلام علیکم",
   "learn.openYou": "اپنا پروفائل کھولیں",
   "learn.chapterBandEyebrow": "باب {{chapter}} · {{total}} میں سے {{done}}",
+  "learn.completedProgressCount": "{{total}} میں سے {{current}} مکمل",
+  "learn.continueLesson": "سبق جاری رکھیں",
+  "learn.chapterTestLabel": "باب کا امتحان",
+  "learn.chapterTestLockedShort": "کھولنے کے لیے تمام اسباق مکمل کریں",
+  "learn.lessonNumber": "سبق {{lesson}}",
   "learn.chapterAllLessons": "باب {{chapter}} · تمام {{count}} اسباق",
   "learn.showAllLessons": "تمام {{count}} اسباق دیکھیں",
   "learn.showLess": "کم دکھائیں",
@@ -295,6 +301,7 @@ export const ur = {
   "chapter.cancel": "منسوخ",
   "chapter.xp": "{{count}} پوائنٹس",
   "chapter.lessonsCompleted": "{{done}} / {{total}} اسباق مکمل",
+  "chapter.lessonsCompletedOf": "{{total}} میں سے {{done}} اسباق مکمل",
   "chapter.chapterProgress": "باب کی پیش رفت",
 
   "vocabulary.title": "الفاظ",

@@ -300,7 +300,7 @@ export default function ChatScreen() {
         style={
           desktopWeb
             ? styles.webColumn
-            : { flex: 1, padding: Spacing.lg }
+            : { flex: 1, padding: Spacing.lg, paddingBottom: insets.bottom + 80 }
         }
       >
         {/* Header */}

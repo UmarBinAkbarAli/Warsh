@@ -184,6 +184,7 @@ export default function HomeScreen() {
   // to the centered WebShell column — cap to the frame width so content fits
   // instead of overflowing and clipping. Native keeps its wider cap.
   const desktopWeb = isWeb && width >= 960;
+  const android = Platform.OS === "android";
   const availableWebWidth = desktopWeb ? width - 260 : width;
   const contentWidth = Math.min(availableWebWidth, isWeb ? WEB_MAX_WIDTH : 720);
   const pagePadding = contentWidth >= 600 ? Spacing.xxl : Spacing.gutter;
@@ -623,7 +624,10 @@ export default function HomeScreen() {
           {
             width: contentWidth,
             paddingHorizontal: pagePadding,
-            paddingTop: desktopWeb ? Spacing.xxxl : insets.top + Spacing.md,
+            paddingTop: desktopWeb
+              ? Spacing.xxxl
+              : insets.top + Spacing.md,
+            paddingBottom: insets.bottom + 90,
           },
         ]}
         showsVerticalScrollIndicator={false}
@@ -737,25 +741,35 @@ export default function HomeScreen() {
           </View>
         ) : null}
 
-        <View style={styles.headerRow}>
-          <View style={styles.headerCopy}>
+        <View
+          style={[
+            styles.headerRow,
+            android && styles.headerRowAndroid,
+            android && translationLanguage === "ur" && styles.headerRowAndroidRtl,
+          ]}
+        >
+          <View style={[styles.headerCopy, android && translationLanguage === "ur" && styles.headerCopyAndroidRtl]}>
             <Text
               style={[
                 styles.greeting,
+                android ? styles.greetingAndroid : null,
                 desktopWeb ? styles.greetingDesktop : null,
               ]}
               numberOfLines={1}
             >
               {userName || t("learn.learner")}
             </Text>
-            <Text style={styles.greetingSubtitle} numberOfLines={1}>
+            <Text
+              style={[styles.greetingSubtitle, android && styles.greetingSubtitleAndroid]}
+              numberOfLines={1}
+            >
               {activeChapter
                 ? t("learn.headerSub", { chapter: activeChapter.order })
                 : t("learn.salaam")}
             </Text>
           </View>
           <TouchableOpacity
-            style={styles.streakChip}
+            style={[styles.streakChip, android && styles.streakChipAndroid]}
             onPress={() => router.push("/(app)/streak-detail")}
             activeOpacity={0.78}
             accessibilityRole="button"
@@ -766,20 +780,22 @@ export default function HomeScreen() {
           >
             <Ionicons
               name="flame-outline"
-              size={17}
-              color={WarshPalette.goldDeep}
+              size={android ? 14 : 17}
+              color={android ? WarshPalette.goldText : WarshPalette.goldDeep}
             />
-            <Text style={styles.streakText}>{currentStreak}</Text>
+            <Text style={[styles.streakText, android && styles.streakTextAndroid]}>
+              {currentStreak}
+            </Text>
           </TouchableOpacity>
           {/* Owner decision 2026-09-25: the avatar opens the You tab. */}
           <TouchableOpacity
-            style={styles.avatar}
+            style={[styles.avatar, android && styles.avatarAndroid]}
             onPress={() => router.push("/(app)/(tabs)/profile")}
             activeOpacity={0.78}
             accessibilityRole="button"
             accessibilityLabel={t("learn.openYou")}
           >
-            <Text style={styles.avatarText}>
+            <Text style={[styles.avatarText, android && styles.avatarTextAndroid]}>
               {(userName || t("learn.learner")).trim().charAt(0).toUpperCase()}
             </Text>
           </TouchableOpacity>
@@ -820,35 +836,64 @@ export default function HomeScreen() {
             ) : null}
 
             {upcomingChapters.length === 0 ? (
-              <View style={styles.listSection}>
+              <View
+                style={[styles.listSection, android && styles.listSectionAndroid]}
+              >
                 <LearnRow
                   icon="list-outline"
                   title={t("learn.allChapters", { count: chapters.length })}
+                  compact={android}
                   onPress={() => router.push("/(app)/chapters")}
                 />
               </View>
             ) : (
-              <View style={styles.listSection}>
-                <View style={styles.sectionHeadingRow}>
-                  <Text style={styles.sectionTitle}>{t("learn.comingUp")}</Text>
+              <View
+                style={[styles.listSection, android && styles.listSectionAndroid]}
+              >
+                  <View
+                    style={[
+                      styles.sectionHeadingRow,
+                      android && translationLanguage === "ur" && styles.sectionHeadingRowAndroidRtl,
+                    ]}
+                  >
+                  <Text
+                    style={[
+                      styles.sectionTitle,
+                      android && styles.sectionTitleAndroid,
+                      android && translationLanguage === "ur" && styles.sectionTitleAndroidRtl,
+                    ]}
+                  >
+                    {t("learn.comingUp")}
+                  </Text>
                   <TouchableOpacity
                     onPress={() => router.push("/(app)/chapters")}
-                    style={styles.sectionAction}
+                    style={[
+                      styles.sectionAction,
+                      android && styles.sectionActionAndroid,
+                      android && translationLanguage === "ur" && styles.sectionActionRtl,
+                    ]}
                     accessibilityRole="button"
                   >
-                    <Text style={styles.sectionActionText}>
+                    <Text style={[styles.sectionActionText, android && styles.sectionActionTextAndroid]}>
                       {t("learn.allChapters", { count: chapters.length })}
                     </Text>
+                    <Ionicons
+                      name={translationLanguage === "ur" ? "arrow-back" : "arrow-forward"}
+                      size={12}
+                      color={WarshPalette.goldText}
+                    />
                   </TouchableOpacity>
                 </View>
                 {upcomingChapters.map((chapter) => (
                   <LearnRow
                     key={chapter.id}
                     leading={
-                      <Text style={styles.chapterNumber}>{chapter.order}</Text>
+                      <Text style={[styles.chapterNumber, android && styles.chapterNumberAndroid]}>{chapter.order}</Text>
                     }
                     title={`${translationLanguage === "ur" ? "‏" : "‎"}${pickLocalized(chapter.title, chapter.titleUr, translationLanguage)}`}
                     locked={chapter.isLocked}
+                    compact={android}
+                    rtl={translationLanguage === "ur"}
                     onPress={
                       chapter.isLocked
                         ? undefined
@@ -859,11 +904,19 @@ export default function HomeScreen() {
               </View>
             )}
 
-            <View style={styles.listSection}>
-              <Text style={styles.sectionTitle}>{t("learn.moreForToday")}</Text>
-              {/* Free Quran reader (Pen section 27) — no lesson or subscription
-              gate, so the Learn tab always has something to open. */}
-              <QuranCard />
+            <View
+              style={[styles.listSection, android && styles.listSectionAndroid]}
+            >
+              <Text
+                style={[
+                  styles.sectionTitle,
+                  android && styles.sectionTitleAndroid,
+                  android && translationLanguage === "ur" && styles.sectionTitleAndroidRtl,
+                ]}
+              >
+                {t("learn.moreForToday")}
+              </Text>
+              {!android ? <QuranCard /> : null}
               {tadabburFocus ||
               subscriptionStatus === "expired" ||
               premiumSuspended ? (
@@ -884,6 +937,8 @@ export default function HomeScreen() {
                           })
                   }
                   locked={subscriptionStatus === "expired" || premiumSuspended}
+                  compact={android}
+                  rtl={translationLanguage === "ur"}
                   onPress={() =>
                     router.push(
                       premiumSuspended
@@ -901,6 +956,8 @@ export default function HomeScreen() {
                 <LearnRow
                   icon="layers-outline"
                   title={t("learn.core500")}
+                  compact={android}
+                  rtl={translationLanguage === "ur"}
                   meta={
                     core500.knownCount > 0
                       ? t("learn.core500Progress", {
@@ -918,10 +975,12 @@ export default function HomeScreen() {
                   icon="sparkles-outline"
                   title={t("learn.wordOfDay")}
                   meta={pickTranslation(wordOfDay, translationLanguage)}
+                  compact={android}
+                  rtl={translationLanguage === "ur"}
                   trailing={
                     <ArabicText
                       size="md"
-                      style={styles.wordArabic}
+                      style={android ? { ...styles.wordArabic, ...styles.wordArabicAndroid } : styles.wordArabic}
                       numberOfLines={1}
                     >
                       {wordOfDay.arabic}
@@ -994,13 +1053,22 @@ const styles = StyleSheet.create({
     gap: Spacing.md,
     marginBottom: Spacing.lg,
   },
+  headerRowAndroid: { gap: Spacing.sm, marginBottom: Spacing.lg },
+  headerRowAndroidRtl: { flexDirection: "row-reverse" },
   headerCopy: { flex: 1 },
+  headerCopyAndroidRtl: { alignItems: "flex-end" },
   greeting: {
     color: WarshPalette.ink,
     fontFamily: Fonts.bold,
     fontSize: 26,
     lineHeight: 33,
     letterSpacing: -0.35,
+  },
+  greetingAndroid: {
+    fontFamily: Fonts.medium,
+    fontSize: 20,
+    lineHeight: 24,
+    letterSpacing: 0,
   },
   greetingDesktop: {
     color: WarshPalette.navy,
@@ -1015,6 +1083,11 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.caption,
     lineHeight: LineHeights.caption,
   },
+  greetingSubtitleAndroid: {
+    marginTop: 2,
+    color: WarshPalette.metaGrey,
+    lineHeight: 14,
+  },
   streakChip: {
     minHeight: 42,
     flexDirection: "row",
@@ -1025,6 +1098,18 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: WarshPalette.cream,
     backgroundColor: WarshPalette.white,
+  },
+  streakChipAndroid: {
+    minHeight: 32,
+    height: 32,
+    gap: 4,
+    paddingHorizontal: 10,
+    borderWidth: 0,
+  },
+  streakTextAndroid: {
+    fontFamily: Fonts.medium,
+    fontSize: FontSizes.caption,
+    lineHeight: 14,
   },
   streakText: {
     color: WarshPalette.ink,
@@ -1039,17 +1124,31 @@ const styles = StyleSheet.create({
     borderRadius: Radii.full,
     backgroundColor: WarshPalette.navy,
   },
+  avatarAndroid: { width: 40, height: 40 },
+  avatarTextAndroid: {
+    color: WarshPalette.white,
+    fontFamily: Fonts.medium,
+    fontSize: 15,
+  },
   avatarText: {
     color: WarshPalette.parchment,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyL,
   },
   listSection: { gap: Spacing.sm, marginBottom: Spacing.xl },
+  listSectionAndroid: { gap: Spacing.sm, marginBottom: Spacing.xl },
   chapterNumber: {
     minWidth: 20,
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.bodyM + 1,
+  },
+  chapterNumberAndroid: {
+    width: 40,
+    color: WarshPalette.metaGrey,
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.label - 1,
+    textAlign: "center",
   },
   desktopDashboardGrid: {
     flexDirection: "row",
@@ -1120,6 +1219,15 @@ const styles = StyleSheet.create({
     letterSpacing: -0.2,
     marginBottom: Spacing.sm,
   },
+  sectionTitleAndroid: {
+    fontFamily: Fonts.medium,
+    fontSize: FontSizes.bodyL,
+    lineHeight: 19,
+    letterSpacing: 0,
+    marginBottom: Spacing.xs,
+  },
+  sectionTitleAndroidRtl: { textAlign: "right" },
+  wordArabicAndroid: { fontSize: 18, lineHeight: 28 },
   wordArabic: {
     maxWidth: 120,
     color: WarshPalette.navy,
@@ -1132,17 +1240,21 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     gap: Spacing.md,
   },
+  sectionHeadingRowAndroidRtl: { flexDirection: "row-reverse" },
   sectionAction: {
     minHeight: 32,
     flexDirection: "row",
     alignItems: "center",
     gap: 2,
   },
+  sectionActionAndroid: { minHeight: 24 },
+  sectionActionRtl: { flexDirection: "row-reverse" },
   sectionActionText: {
     color: WarshPalette.goldText,
     fontFamily: Fonts.semiBold,
     fontSize: FontSizes.caption,
   },
+  sectionActionTextAndroid: { fontFamily: Fonts.regular, fontSize: FontSizes.label - 1 },
   errorText: {
     color: Colors.text.danger,
     fontFamily: Fonts.regular,

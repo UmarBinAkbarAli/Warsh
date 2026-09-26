@@ -35,7 +35,7 @@ type Row = {
 };
 
 /** Surah, juz (parah) and bookmark lists for the Quran reader (Pen sections 27 and 28). */
-export default function QuranIndexScreen() {
+export default function QuranIndexScreen({ isTab = false }: { isTab?: boolean }) {
   const router = useRouter();
   const t = useT();
   const insets = useSafeAreaInsets();
@@ -105,16 +105,22 @@ export default function QuranIndexScreen() {
   return (
     <View style={[styles.screen, { paddingTop: insets.top + Spacing.sm }]}>
       <View style={styles.topBar}>
-        <Pressable
-          onPress={() => (router.canGoBack() ? router.back() : router.replace("/(app)/(tabs)"))}
-          hitSlop={10}
-          style={styles.titleButton}
-          accessibilityRole="button"
-          accessibilityLabel={t("common.back")}
-        >
-          <Ionicons name="chevron-back" size={24} color={WarshPalette.navy} />
-          <Text style={styles.title}>{t("quran.title")}</Text>
-        </Pressable>
+        {isTab ? (
+          <View style={styles.titleButton}>
+            <Text style={styles.title}>{t("quran.title")}</Text>
+          </View>
+        ) : (
+          <Pressable
+            onPress={() => (router.canGoBack() ? router.back() : router.replace("/(app)/(tabs)"))}
+            hitSlop={10}
+            style={styles.titleButton}
+            accessibilityRole="button"
+            accessibilityLabel={t("common.back")}
+          >
+            <Ionicons name="chevron-back" size={24} color={WarshPalette.navy} />
+            <Text style={styles.title}>{t("quran.title")}</Text>
+          </Pressable>
+        )}
         <View style={styles.actions}>
           <Pressable
             onPress={() => {
@@ -142,7 +148,10 @@ export default function QuranIndexScreen() {
       <FlatList
         data={rows}
         keyExtractor={(row) => row.key}
-        contentContainerStyle={[styles.content, { paddingBottom: insets.bottom + Spacing.xl }]}
+        contentContainerStyle={[
+          styles.content,
+          { paddingBottom: isTab ? insets.bottom + 90 : insets.bottom + Spacing.xl },
+        ]}
         keyboardShouldPersistTaps="handled"
         ListHeaderComponent={
           <View style={styles.header}>

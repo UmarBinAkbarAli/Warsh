@@ -30,6 +30,12 @@ const NAV_ITEMS: NavItem[] = [
     active: (path) => path.includes("/vocabulary"),
   },
   {
+    label: "Quran",
+    icon: "book",
+    href: "/(app)/(tabs)/quran",
+    active: (path) => path.includes("/quran"),
+  },
+  {
     label: "Noor",
     icon: "message-circle",
     href: "/(app)/(tabs)/chat",

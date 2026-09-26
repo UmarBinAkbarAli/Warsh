@@ -307,7 +307,10 @@ export default function ProfileScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
+      <ScrollView
+        style={styles.screen}
+        contentContainerStyle={[styles.content, { paddingBottom: insets.bottom + 90 }]}
+      >
         {profileHeader}
         {error ? <Text style={styles.errorText}>{error}</Text> : null}
         {streakCard}

@@ -9,6 +9,11 @@ export const WarshPalette = {
   deep: "#3D3D3D", // --ink-soft (secondary text)
   navy: "#071B44", // brand navy (A1 CTA surface)
   navyDeep: "#04122E", // navy pressed state
+  navyMuted: "#D5DAE5", // secondary progress text on navy (Learn hero)
+  heroEyebrow: "#F3EAD6", // chapter · lesson eyebrow on the navy Learn hero
+  metaGrey: "#6F7169", // Learn row eyebrows, meta and inactive states
+  progressTrack: "#E7E1D3", // neutral progress track (chapter detail)
+  listDivider: "#E8E3D9", // hairline between rows of one grouped list
   gold: "#C49B4D", // --gold (A1 gold)
   goldDeep: "#A88648", // --gold-deep (pressed states and borders; too light for text)
   // Any gold-coloured TEXT on a light surface: 4.8:1 on creamBg, 4.9:1 on
@@ -90,6 +95,7 @@ export const WarshAlpha = {
   goldTintSoft: "rgba(196, 155, 77, 0.13)", // gold @ 13% — chips, user bubbles
   goldTint: "rgba(196, 155, 77, 0.27)", // gold @ 27% — decorative bands
   goldBorder: "rgba(196, 155, 77, 0.45)", // gold @ 45% — hairline on navy
+  goldTextBorder: "rgba(133, 103, 44, 0.2)", // goldText @ 20% — chapter test card outline
   goldLightBorder: "rgba(212, 176, 106, 0.45)", // parchment @ 45% — hairline on navy
   // On navy surfaces
   onNavyMuted: "rgba(255, 255, 255, 0.7)", // secondary text on navy
@@ -145,6 +151,7 @@ export const Fonts: Record<string, string | undefined> = {
   arabicMedium: "Scheherazade New Medium",
   // UI/body role — Inter (replaced Lora app-wide, user decision 2026-08-16).
   regular: "Inter-Regular",
+  medium: "Inter-Medium",
   semiBold: "Inter-SemiBold",
   bold: "Inter-Bold",
   italic: "Inter-Italic",

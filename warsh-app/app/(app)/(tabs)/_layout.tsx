@@ -1,72 +1,19 @@
-import { Feather } from "@expo/vector-icons";
 import { useT } from "@i18n/index";
 import { Tabs } from "expo-router";
-import { Platform, useWindowDimensions, View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { Colors, Fonts, WarshPalette } from "../../../constants/theme";
-
-// Spec-11 §5.5: active tab has a small gold dot indicator ABOVE the icon
-function TabIcon({
-  name,
-  color,
-  size,
-  focused,
-}: {
-  name: keyof typeof Feather.glyphMap;
-  color: string;
-  size: number;
-  focused: boolean;
-}) {
-  return (
-    <View style={{ alignItems: "center", justifyContent: "center" }}>
-      <View
-        style={{
-          marginBottom: 4,
-          width: 4,
-          height: 4,
-          borderRadius: 999,
-          backgroundColor: focused ? Colors.accent.gold : "transparent",
-        }}
-      />
-      <Feather name={name} color={color} size={size} />
-    </View>
-  );
-}
+import { FloatingTabBar } from "../../../components/navigation/FloatingTabBar";
+import { Colors } from "../../../constants/theme";
 
 export default function TabsLayout() {
   const t = useT();
-  const { width } = useWindowDimensions();
-  const insets = useSafeAreaInsets();
-  const desktopWeb = Platform.OS === "web" && width >= 960;
 
   return (
     <Tabs
+      tabBar={(props) => <FloatingTabBar {...props} />}
       screenOptions={{
-        // Frees about 130px for the answer while typing to Noor (finding M11).
-        tabBarHideOnKeyboard: true,
         headerShown: false,
         sceneStyle: {
           backgroundColor: Colors.bg.primary,
-        },
-        // Spec-11 §5.5: parchment bar, 1pt sage-soft top border.
-        // A custom height replaces React Navigation's own inset handling, so the
-        // system navigation bar inset is added back here — without it the labels
-        // sit under the gesture pill / 3-button bar on edge-to-edge Android.
-        tabBarStyle: {
-          display: desktopWeb ? "none" : "flex",
-          backgroundColor: Colors.bg.primary,
-          borderTopWidth: 1,
-          borderTopColor: WarshPalette.sageSoft,
-          height: 64 + insets.bottom,
-          paddingTop: 6,
-          paddingBottom: 6 + insets.bottom,
-        },
-        tabBarActiveTintColor: Colors.accent.gold,
-        tabBarInactiveTintColor: WarshPalette.sage,
-        tabBarLabelStyle: {
-          fontSize: 12,
-          fontFamily: Fonts.regular,
         },
       }}
     >
@@ -74,28 +21,30 @@ export default function TabsLayout() {
         name="index"
         options={{
           title: t("tabs.learn"),
-          tabBarIcon: (p) => <TabIcon name="book-open" {...p} />,
         }}
       />
       <Tabs.Screen
         name="vocabulary"
         options={{
           title: t("tabs.vocabulary"),
-          tabBarIcon: (p) => <TabIcon name="layers" {...p} />,
+        }}
+      />
+      <Tabs.Screen
+        name="quran"
+        options={{
+          title: t("tabs.quran"),
         }}
       />
       <Tabs.Screen
         name="chat"
         options={{
           title: t("tabs.noor"),
-          tabBarIcon: (p) => <TabIcon name="message-circle" {...p} />,
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: t("tabs.profile"),
-          tabBarIcon: (p) => <TabIcon name="user" {...p} />,
         }}
       />
     </Tabs>

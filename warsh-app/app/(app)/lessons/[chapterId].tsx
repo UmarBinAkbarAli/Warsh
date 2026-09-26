@@ -19,7 +19,7 @@ import { ArabicText } from "@components/ArabicText";
 import { ScreenHeader } from "@components/ScreenHeader";
 import { StatusBarBacking } from "@components/StatusBarBacking";
 import { BrandButton } from "@components/BrandButton";
-import { useTranslationLanguage, pickLocalized } from "@services/language";
+import { useLanguage, useTranslationLanguage, pickLocalized } from "@services/language";
 import { useT } from "@i18n/index";
 import {
   Colors,
@@ -67,6 +67,12 @@ const TEMPLATE_LABEL_KEYS: Record<string, string> = {
   SPOKEN_PHRASES: "chapter.typeSpoken",
 };
 
+// Android lays a paragraph out right-to-left when its first strong character
+// is Arabic; the mark pins mixed titles to the reading language.
+function withDirectionMark(text: string, language: string): string {
+  return (language === "ur" ? "\u200F" : "\u200E") + text;
+}
+
 function lessonKindLabel(lesson: any, t: ReturnType<typeof useT>) {
   if (lesson.isConversationLab) return t("lab.typeLabel");
   if (lesson.type) return lessonTypeLabel(lesson.type, t);
@@ -101,10 +107,10 @@ function lessonTypeIcon(type: string): React.ComponentProps<typeof Ionicons>["na
 
 // ─── status badge ─────────────────────────────────────────────────────────────
 
-function StatusBadge({ label }: { label: string }) {
+function StatusBadge({ label, compact = false }: { label: string; compact?: boolean }) {
   return (
-    <View style={styles.statusBadge}>
-      <Text style={styles.statusBadgeText}>{label}</Text>
+    <View style={[styles.statusBadge, compact && styles.androidStatusBadge]}>
+      <Text style={[styles.statusBadgeText, compact && styles.androidStatusBadgeText]}>{label}</Text>
     </View>
   );
 }
@@ -188,8 +194,11 @@ export default function ChapterScreen() {
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
   const desktopWeb = Platform.OS === "web" && width >= 960;
+  const androidMinimal = Platform.OS === "android";
   const { chapterId } = useLocalSearchParams<{ chapterId: string }>();
   const language = useTranslationLanguage();
+  const uiLanguage = useLanguage();
+  const isUrduUi = uiLanguage === "ur";
   const t = useT();
   const [chapter, setChapter] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -291,11 +300,31 @@ export default function ChapterScreen() {
     </View>
   );
 
+  const androidProgress = (
+    <View style={styles.androidProgress}>
+      <View style={[styles.androidProgressSummary, isUrduUi && styles.androidProgressSummaryRtl]}>
+        <Text style={[styles.androidProgressLabel, isUrduUi && styles.androidRtlText]}>
+          {t("chapter.lessonsCompletedOf", { done: chapter.completedLessonCount, total: lessonCount })}
+        </Text>
+        <Text style={styles.androidProgressPercent}>{Math.round(progressPct)}%</Text>
+      </View>
+      <View style={styles.androidProgressTrack}>
+        <View style={[styles.androidProgressFill, { width: `${progressPct}%` as any }]} />
+      </View>
+    </View>
+  );
+
   // The first lesson that is neither done nor skipped is the one to do next.
   const upNextId = regularLessons.find((lesson: any) => !lesson.isCompleted && !(lesson.isSkippedByPlacement && !lesson.isConversationLab && !lesson.isNew))?.id;
 
   const lessonList = (
-    <View style={desktopWeb ? undefined : { marginTop: Spacing.xl }}>
+    <View
+      style={[
+        desktopWeb ? undefined : { marginTop: Spacing.xl },
+        androidMinimal && styles.androidLessonListWrap,
+      ]}
+    >
+      <View style={androidMinimal ? styles.androidLessonList : undefined}>
       {regularLessons.map((lesson: any, idx: number) => {
         const done = lesson.isCompleted;
         const upNext = lesson.id === upNextId;
@@ -308,47 +337,104 @@ export default function ChapterScreen() {
         const skipped = lesson.isSkippedByPlacement && !isNewLab;
         const updated = lesson.isUpdated && done;
         return (
-          <TouchableOpacity
-            key={lesson.id}
-            style={[styles.lessonCard, desktopWeb && styles.webLessonCard, done && styles.lessonCardDone, skipped && styles.lessonCardSkipped, isNewLab && styles.lessonCardNewLab, upNext && styles.lessonCardUpNext]}
-            onPress={() => handleLessonTap(lesson)}
-            activeOpacity={0.8}
-          >
-            {upNext ? <StatusBadge label={t("chapter.upNext")} /> : null}
-            {skipped ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
-            {isNewLab ? <StatusBadge label={t("lab.newBadge")} /> : null}
-            {updated ? <StatusBadge label={t("lessonNotice.badgeUpdated")} /> : null}
-            <View style={styles.lessonCardTop}>
-              <View style={[styles.lessonIndex, upNext && styles.lessonIndexUpNext]}>
-                {done ? (
-                  <Ionicons name="checkmark" size={14} color={WarshPalette.sage} />
-                ) : (
-                  <Text style={[styles.lessonIndexText, upNext && styles.lessonIndexTextUpNext]}>{idx + 1}</Text>
-                )}
-              </View>
-              <View style={styles.lessonInfo}>
-                <Text style={styles.lessonTitle}>{pickLocalized(lesson.title, lesson.titleUr, language)}</Text>
-                {lesson.titleAr ? (
-                  <ArabicText size="sm" style={styles.lessonTitleAr}>
-                    {lesson.titleAr}
-                  </ArabicText>
-                ) : null}
-                <View style={styles.lessonMeta}>
-                  <Ionicons name={lessonKindIcon(lesson)} size={12} color={WarshPalette.gold} />
-                  <Text style={styles.lessonMetaText}>{lessonKindLabel(lesson, t)}</Text>
-                  <Text style={styles.lessonMetaDot}>·</Text>
-                  <Text style={styles.lessonMetaText}>{t("chapter.xp", { count: lesson.xpReward })}</Text>
+          <View key={lesson.id}>
+            <TouchableOpacity
+              style={[
+                styles.lessonCard,
+                desktopWeb && styles.webLessonCard,
+                !androidMinimal && done && styles.lessonCardDone,
+                !androidMinimal && skipped && styles.lessonCardSkipped,
+                !androidMinimal && isNewLab && styles.lessonCardNewLab,
+                !androidMinimal && upNext && styles.lessonCardUpNext,
+                androidMinimal && styles.androidLessonRow,
+                androidMinimal && upNext && styles.androidLessonRowUpNext,
+
+              ]}
+              onPress={() => handleLessonTap(lesson)}
+              activeOpacity={0.8}
+            >
+              {androidMinimal ? (
+                <View style={[styles.androidLessonCardTop, isUrduUi && styles.androidLessonCardTopRtl]}>
+                  <View style={[styles.androidLessonIndex, done && styles.androidLessonIndexDone, upNext && styles.androidLessonIndexUpNext]}>
+                    {done ? (
+                      <Ionicons name="checkmark" size={15} color={WarshPalette.sageDeep} />
+                    ) : (
+                      <Text style={[styles.androidLessonIndexText, upNext && styles.androidLessonIndexTextUpNext]}>{idx + 1}</Text>
+                    )}
+                  </View>
+                  <View style={styles.androidLessonInfo}>
+                    <View style={[styles.androidLessonTitleLine, isUrduUi && styles.androidLessonTitleLineRtl]}>
+                      <Text
+                        style={[styles.androidLessonTitle, upNext && styles.androidLessonTitleUpNext, (isUrduUi || language === "ur") && styles.androidRtlText]}
+                        numberOfLines={2}
+                      >
+                        {withDirectionMark(pickLocalized(lesson.title, lesson.titleUr, language), language)}
+                      </Text>
+                      {upNext ? <StatusBadge compact label={t("chapter.upNext")} /> : null}
+                      {isNewLab ? <StatusBadge compact label={t("lab.newBadge")} /> : null}
+                      {updated ? <StatusBadge compact label={t("lessonNotice.badgeUpdated")} /> : null}
+                    </View>
+                    <Text style={[styles.androidLessonMeta, isUrduUi && styles.androidRtlText]} numberOfLines={1}>
+                      {withDirectionMark(
+                        `${lessonKindLabel(lesson, t)} · ${
+                          done
+                            ? "100%"
+                            : skipped
+                              ? t("chapter.skippedByPlacement")
+                              : t("chapter.xp", { count: lesson.xpReward })
+                        }`,
+                        isUrduUi ? "ur" : "en",
+                      )}
+                    </Text>
+                  </View>
+                  <Ionicons
+                    name={done ? "checkmark-circle-outline" : isUrduUi ? "chevron-back" : "chevron-forward"}
+                    size={18}
+                    color={done ? WarshPalette.sageDeep : WarshPalette.subtleBrown}
+                  />
                 </View>
-              </View>
-              <Ionicons
-                name={done ? "checkmark-circle" : "chevron-forward"}
-                size={20}
-                color={done ? WarshPalette.sage : WarshPalette.subtleBrown}
-              />
-            </View>
-          </TouchableOpacity>
+              ) : (
+                <>
+                  {upNext ? <StatusBadge label={t("chapter.upNext")} /> : null}
+                  {skipped ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
+                  {isNewLab ? <StatusBadge label={t("lab.newBadge")} /> : null}
+                  {updated ? <StatusBadge label={t("lessonNotice.badgeUpdated")} /> : null}
+                  <View style={styles.lessonCardTop}>
+                    <View style={[styles.lessonIndex, upNext && styles.lessonIndexUpNext]}>
+                      {done ? (
+                        <Ionicons name="checkmark" size={14} color={WarshPalette.sage} />
+                      ) : (
+                        <Text style={[styles.lessonIndexText, upNext && styles.lessonIndexTextUpNext]}>{idx + 1}</Text>
+                      )}
+                    </View>
+                    <View style={styles.lessonInfo}>
+                      <Text style={styles.lessonTitle}>{pickLocalized(lesson.title, lesson.titleUr, language)}</Text>
+                      {lesson.titleAr ? (
+                        <ArabicText size="sm" style={styles.lessonTitleAr}>
+                          {lesson.titleAr}
+                        </ArabicText>
+                      ) : null}
+                      <View style={styles.lessonMeta}>
+                        <Ionicons name={lessonKindIcon(lesson)} size={12} color={WarshPalette.gold} />
+                        <Text style={styles.lessonMetaText}>{lessonKindLabel(lesson, t)}</Text>
+                        <Text style={styles.lessonMetaDot}>·</Text>
+                        <Text style={styles.lessonMetaText}>{t("chapter.xp", { count: lesson.xpReward })}</Text>
+                      </View>
+                    </View>
+                    <Ionicons
+                      name={done ? "checkmark-circle" : "chevron-forward"}
+                      size={20}
+                      color={done ? WarshPalette.sage : WarshPalette.subtleBrown}
+                    />
+                  </View>
+                </>
+              )}
+            </TouchableOpacity>
+            {androidMinimal && idx < regularLessons.length - 1 ? <View style={styles.androidLessonDivider} /> : null}
+          </View>
         );
       })}
+      </View>
       {chapterTest ? (
         <TouchableOpacity
           style={[
@@ -356,30 +442,48 @@ export default function ChapterScreen() {
             desktopWeb && styles.webLessonCard,
             chapterTest.isLocked && styles.chapterTestCardLocked,
             chapterTest.isCompleted && styles.chapterTestCardCompleted,
+            androidMinimal && styles.androidChapterTestCard,
+            androidMinimal && chapterTest.isLocked && styles.androidChapterTestCardLocked,
+            androidMinimal && chapterTest.isCompleted && styles.androidChapterTestCardCompleted,
+            androidMinimal && isUrduUi && styles.androidChapterTestCardRtl,
           ]}
           onPress={() => handleLessonTap(chapterTest)}
           activeOpacity={chapterTest.isLocked ? 1 : 0.8}
           accessibilityState={{ disabled: chapterTest.isLocked }}
         >
-          <View style={[styles.chapterTestIcon, chapterTest.isLocked && styles.chapterTestIconLocked]}>
+          <View style={[
+            styles.chapterTestIcon,
+            chapterTest.isLocked && styles.chapterTestIconLocked,
+            androidMinimal && styles.androidChapterTestIcon,
+            androidMinimal && chapterTest.isLocked && styles.androidChapterTestIconLocked,
+            androidMinimal && chapterTest.isCompleted && styles.androidChapterTestIconCompleted,
+          ]}>
             <Ionicons
               name={chapterTest.isCompleted ? "trophy-outline" : chapterTest.isLocked ? "lock-closed-outline" : "clipboard-outline"}
-              size={20}
-              color={chapterTest.isLocked ? WarshPalette.disabledText : WarshPalette.navy}
+              size={androidMinimal ? 16 : 20}
+              color={chapterTest.isLocked ? WarshPalette.goldText : chapterTest.isCompleted ? WarshPalette.sageDeep : WarshPalette.navy}
             />
           </View>
           <View style={styles.lessonInfo}>
-            <Text style={[styles.chapterTestTitle, chapterTest.isLocked && styles.chapterTestTextLocked]}>
-              {pickLocalized(chapterTest.title, chapterTest.titleUr, language)}
+            <Text style={[styles.chapterTestTitle, chapterTest.isLocked && styles.chapterTestTextLocked, androidMinimal && styles.androidChapterTestTitle, isUrduUi && styles.androidRtlText]}>
+              {androidMinimal
+                ? withDirectionMark(pickLocalized(chapterTest.title, chapterTest.titleUr, language), language)
+                : pickLocalized(chapterTest.title, chapterTest.titleUr, language)}
             </Text>
-            <Text style={[styles.chapterTestMeta, chapterTest.isLocked && styles.chapterTestTextLocked]}>
+            <Text style={[styles.chapterTestMeta, chapterTest.isLocked && styles.chapterTestTextLocked, androidMinimal && styles.androidChapterTestMeta, isUrduUi && styles.androidRtlText]}>
               {chapterTest.isLocked
-                ? t("chapterTest.locked")
+                ? androidMinimal
+                  ? t("learn.chapterTestLockedShort")
+                  : t("chapterTest.locked")
                 : t("chapterTest.questionsToPass", { count: chapterTest.questionCount, required: chapterTest.requiredCorrect })}
             </Text>
           </View>
           {!chapterTest.isLocked ? (
-            <Ionicons name={chapterTest.isCompleted ? "checkmark-circle" : "chevron-forward"} size={20} color={chapterTest.isCompleted ? WarshPalette.sage : WarshPalette.white} />
+            <Ionicons
+              name={chapterTest.isCompleted ? "checkmark-circle" : isUrduUi ? "chevron-back" : "chevron-forward"}
+              size={20}
+              color={chapterTest.isCompleted ? WarshPalette.sage : androidMinimal ? WarshPalette.subtleBrown : WarshPalette.white}
+            />
           ) : null}
         </TouchableOpacity>
       ) : null}
@@ -390,27 +494,44 @@ export default function ChapterScreen() {
     <View style={[styles.screen, desktopWeb ? null : { paddingTop: insets.top }]}>
       <ScreenHeader
         title={chapter.order ? t("chapter.number", { count: chapter.order }) : undefined}
-        style={desktopWeb ? styles.webHeader : null}
+        style={desktopWeb ? styles.webHeader : androidMinimal ? styles.androidHeader : null}
       />
       <ScrollView
         style={styles.scroll}
         contentContainerStyle={[
           styles.content,
-          desktopWeb ? styles.webContent : { paddingTop: Spacing.sm },
+          desktopWeb
+            ? styles.webContent
+            : androidMinimal
+              ? styles.androidContent
+              : { paddingTop: Spacing.sm },
         ]}
       >
-        <View style={desktopWeb ? styles.webMain : undefined}>
+        <View style={[desktopWeb && styles.webMain, androidMinimal && styles.androidMain]}>
           {chapter.isSkippedByPlacement ? <StatusBadge label={t("chapter.skippedByPlacement")} /> : null}
 
-          <Text style={styles.chapterTitle}>{pickLocalized(chapter.title, chapter.titleUr, language)}</Text>
+          <Text style={[styles.chapterTitle, androidMinimal && styles.androidChapterTitle, (isUrduUi || language === "ur") && styles.androidRtlText]}>
+            {androidMinimal
+              ? withDirectionMark(pickLocalized(chapter.title, chapter.titleUr, language), language)
+              : pickLocalized(chapter.title, chapter.titleUr, language)}
+          </Text>
           {chapter.titleAr ? (
-            <ArabicText size="sm" style={styles.chapterTitleAr}>
+            <ArabicText
+              size="sm"
+              style={androidMinimal
+                ? { ...styles.chapterTitleAr, ...styles.androidChapterTitleAr }
+                : styles.chapterTitleAr}
+            >
               {chapter.titleAr}
             </ArabicText>
           ) : null}
-          <Text style={styles.chapterDesc}>{pickLocalized(chapter.description, chapter.descriptionUr, language)}</Text>
+          <Text style={[styles.chapterDesc, androidMinimal && styles.androidChapterDesc, (isUrduUi || language === "ur") && styles.androidRtlText]}>
+            {androidMinimal
+              ? withDirectionMark(pickLocalized(chapter.description, chapter.descriptionUr, language), language)
+              : pickLocalized(chapter.description, chapter.descriptionUr, language)}
+          </Text>
 
-          {desktopWeb ? null : progressCard}
+          {desktopWeb ? null : androidMinimal ? androidProgress : progressCard}
           {lessonList}
         </View>
 
@@ -452,6 +573,32 @@ const styles = StyleSheet.create({
   errorText: { fontSize: FontSizes.bodyL, color: Colors.text.secondary, textAlign: "center" },
 
   webHeader: { width: "100%", maxWidth: 1180, alignSelf: "center", paddingTop: 24 },
+  androidHeader: { minHeight: 48 },
+  androidContent: { paddingHorizontal: Spacing.gutter, paddingTop: Spacing.sm, paddingBottom: Spacing.xl * 3 },
+  androidMain: { width: "100%" },
+  androidChapterTitle: {
+    fontSize: 26,
+    lineHeight: 30,
+    fontFamily: Fonts.semiBold,
+    letterSpacing: -0.2,
+    marginBottom: Spacing.xs,
+  },
+  androidChapterTitleAr: { fontSize: 22, lineHeight: 30, textAlign: "right", marginBottom: Spacing.xs },
+  androidChapterDesc: {
+    color: WarshPalette.subtleBrown,
+    fontSize: FontSizes.bodyM,
+    lineHeight: 20,
+    marginBottom: 0,
+  },
+  androidRtlText: { textAlign: "right" },
+
+  androidProgress: { marginTop: Spacing.lg, gap: Spacing.sm },
+  androidProgressSummary: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
+  androidProgressSummaryRtl: { flexDirection: "row-reverse" },
+  androidProgressLabel: { color: WarshPalette.bodyBrown, fontFamily: Fonts.semiBold, fontSize: 13, lineHeight: 16 },
+  androidProgressPercent: { color: WarshPalette.goldText, fontFamily: Fonts.semiBold, fontSize: FontSizes.caption, lineHeight: 16 },
+  androidProgressTrack: { height: 4, borderRadius: 2, overflow: "hidden", backgroundColor: WarshPalette.progressTrack },
+  androidProgressFill: { height: 4, borderRadius: 2, backgroundColor: WarshPalette.gold },
 
   statusBadge: {
     alignSelf: "flex-start",
@@ -464,6 +611,22 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.sm,
   },
   statusBadgeText: { color: Colors.text.secondary, fontFamily: Fonts.bold, fontSize: FontSizes.caption },
+  androidStatusBadge: {
+    alignSelf: "center",
+    paddingHorizontal: 7,
+    paddingVertical: 2,
+    borderRadius: Radii.sm,
+    backgroundColor: WarshPalette.parchmentDeep,
+    borderWidth: 0,
+    marginBottom: 0,
+  },
+  androidStatusBadgeText: {
+    color: WarshPalette.goldText,
+    fontFamily: Fonts.bold,
+    fontSize: 10,
+    lineHeight: 13,
+    textTransform: "uppercase",
+  },
 
   chapterTitle: {
     color: WarshPalette.ink,
@@ -550,6 +713,62 @@ const styles = StyleSheet.create({
   lessonMeta: { flexDirection: "row", alignItems: "center", gap: 4, marginTop: 4 },
   lessonMetaText: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption },
   lessonMetaDot: { color: WarshPalette.subtleBrown, fontSize: FontSizes.caption },
+  androidLessonList: {
+    backgroundColor: WarshPalette.white,
+    borderRadius: Radii.md,
+    overflow: "hidden",
+  },
+  androidLessonListWrap: { marginTop: Spacing.lg },
+  androidLessonRow: {
+    minHeight: 58,
+    justifyContent: "center",
+    marginBottom: 0,
+    padding: Spacing.md,
+    borderRadius: 0,
+    borderWidth: 0,
+    borderColor: "transparent",
+    backgroundColor: WarshPalette.white,
+  },
+  androidLessonRowUpNext: { backgroundColor: WarshPalette.highlightBg },
+  androidLessonCardTop: { flexDirection: "row", alignItems: "center", gap: Spacing.md },
+  androidLessonCardTopRtl: { flexDirection: "row-reverse" },
+  androidLessonIndex: {
+    width: 28,
+    height: 28,
+    borderRadius: Radii.full,
+    backgroundColor: WarshPalette.parchmentDeep,
+    alignItems: "center",
+    justifyContent: "center",
+    flexShrink: 0,
+  },
+  androidLessonIndexDone: { backgroundColor: WarshPalette.correctBg },
+  androidLessonIndexUpNext: { backgroundColor: WarshPalette.navy },
+  androidLessonIndexText: { color: WarshPalette.goldText, fontFamily: Fonts.bold, fontSize: FontSizes.caption, lineHeight: 14, fontVariant: ["lining-nums", "tabular-nums"] },
+  androidLessonIndexTextUpNext: { color: WarshPalette.white },
+  androidLessonInfo: { flex: 1, minWidth: 0, gap: 2 },
+  androidLessonTitleLine: { flexDirection: "row", alignItems: "center", gap: Spacing.sm },
+  androidLessonTitleLineRtl: { flexDirection: "row-reverse" },
+  androidLessonTitle: { flex: 1, minWidth: 0, color: WarshPalette.ink, fontFamily: Fonts.medium, fontSize: FontSizes.bodyM, lineHeight: 17 },
+  androidLessonTitleUpNext: { fontFamily: Fonts.semiBold },
+  androidLessonMeta: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption, lineHeight: 15 },
+  androidLessonDivider: { height: 1, backgroundColor: WarshPalette.listDivider },
+  androidChapterTestCard: {
+    minHeight: 58,
+    marginTop: Spacing.lg,
+    marginBottom: Spacing.sm,
+    padding: Spacing.md,
+    gap: Spacing.md,
+    borderRadius: Radii.md,
+    backgroundColor: WarshPalette.parchmentSoft,
+  },
+  androidChapterTestCardRtl: { flexDirection: "row-reverse" },
+  androidChapterTestCardLocked: { backgroundColor: WarshPalette.parchmentSoft, borderWidth: 0 },
+  androidChapterTestCardCompleted: { backgroundColor: WarshPalette.correctBg, borderWidth: 0 },
+  androidChapterTestIcon: { width: 28, height: 28, borderRadius: Radii.sm, backgroundColor: WarshPalette.parchmentDeep },
+  androidChapterTestIconLocked: { backgroundColor: WarshPalette.parchmentDeep },
+  androidChapterTestIconCompleted: { backgroundColor: WarshPalette.sageSoft },
+  androidChapterTestTitle: { color: WarshPalette.ink, fontFamily: Fonts.semiBold, fontSize: FontSizes.bodyM, lineHeight: 17 },
+  androidChapterTestMeta: { color: WarshPalette.subtleBrown, fontFamily: Fonts.regular, fontSize: FontSizes.caption, lineHeight: 15, marginTop: 2 },
   chapterTestCard: {
     minHeight: 76,
     marginTop: Spacing.sm,

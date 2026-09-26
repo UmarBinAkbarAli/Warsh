@@ -5,6 +5,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import {
   Fonts,
   FontSizes,
+  LineHeights,
   Radii,
   Spacing,
   WarshPalette,
@@ -23,6 +24,9 @@ export function LearnRow({
   meta,
   trailing,
   locked,
+  trailingIcon,
+  rtl = false,
+  compact = false,
   onPress,
 }: {
   icon?: IconName;
@@ -33,6 +37,11 @@ export function LearnRow({
   /** Shown before the chevron, e.g. a Surah name in Arabic. */
   trailing?: ReactNode;
   locked?: boolean;
+  /** Replaces the default chevron, e.g. the Learn screen's info affordance. */
+  trailingIcon?: IconName;
+  rtl?: boolean;
+  /** Compact treatment for the Android Learn path's secondary rows. */
+  compact?: boolean;
   onPress?: () => void;
 }) {
   return (
@@ -42,24 +51,55 @@ export function LearnRow({
       accessibilityRole="button"
       accessibilityState={{ disabled: !onPress }}
       accessibilityLabel={meta ? `${title}, ${meta}` : title}
-      style={({ pressed }) => [styles.row, pressed && styles.pressed]}
+      style={({ pressed }) => [
+        styles.row,
+        compact && styles.rowCompact,
+        compact && rtl && styles.rowCompactRtl,
+        compact && meta && styles.rowCompactWithMeta,
+        pressed && styles.pressed,
+      ]}
     >
       {leading ??
         (icon ? (
-          <Ionicons name={icon} size={20} color={WarshPalette.goldText} />
+          <View style={[styles.iconWell, compact && styles.iconWellCompact]}>
+            <Ionicons name={icon} size={20} color={WarshPalette.goldText} />
+          </View>
         ) : null)}
       <View style={styles.copy}>
-        <Text style={styles.title} numberOfLines={2}>
+        <Text
+          style={[
+            styles.title,
+            compact && styles.titleCompact,
+            compact && meta && styles.titleCompactWithMeta,
+          ]}
+          numberOfLines={2}
+        >
           {title}
         </Text>
-        {meta ? <Text style={styles.meta}>{meta}</Text> : null}
+        {meta ? (
+          <Text style={[styles.meta, compact && styles.metaCompact]}>{meta}</Text>
+        ) : null}
       </View>
       {trailing}
-      <Ionicons
-        name={locked ? "lock-closed-outline" : "chevron-forward"}
-        size={locked ? 16 : 18}
-        color={WarshPalette.subtleBrown}
-      />
+      {compact ? (
+        <View style={styles.trailingIconWell}>
+          <Ionicons
+            name={
+              locked
+                ? "lock-closed-outline"
+                : trailingIcon ?? (rtl ? "chevron-back" : "chevron-forward")
+            }
+            size={16}
+            color={WarshPalette.metaGrey}
+          />
+        </View>
+      ) : (
+        <Ionicons
+          name={locked ? "lock-closed-outline" : trailingIcon ?? "chevron-forward"}
+          size={locked ? 16 : trailingIcon ? 14 : 18}
+          color={WarshPalette.subtleBrown}
+        />
+      )}
     </Pressable>
   );
 }
@@ -77,6 +117,22 @@ const styles = StyleSheet.create({
     borderColor: WarshPalette.cream,
     backgroundColor: WarshPalette.white,
   },
+  rowCompact: {
+    minHeight: 44,
+    gap: Spacing.md,
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.sm,
+    borderWidth: 0,
+  },
+  rowCompactRtl: { flexDirection: "row-reverse" },
+  rowCompactWithMeta: { minHeight: 64 },
+  iconWell: { alignItems: "center", justifyContent: "center" },
+  iconWellCompact: { width: 40, height: 40 },
+  trailingIconWell: {
+    width: 36,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   pressed: { backgroundColor: WarshPalette.highlightBgSoft },
   copy: { flex: 1, minWidth: 0, gap: 2 },
   title: {
@@ -85,10 +141,22 @@ const styles = StyleSheet.create({
     fontSize: FontSizes.bodyM + 1,
     lineHeight: 20,
   },
+  titleCompact: {
+    fontFamily: Fonts.regular,
+    fontSize: FontSizes.bodyM - 1,
+    lineHeight: 16,
+  },
+  titleCompactWithMeta: { fontFamily: Fonts.medium },
   meta: {
     color: WarshPalette.subtleBrown,
     fontFamily: Fonts.regular,
     fontSize: FontSizes.caption + 1,
     lineHeight: 18,
+  },
+  metaCompact: {
+    color: WarshPalette.metaGrey,
+    fontSize: FontSizes.label - 1,
+    lineHeight: 13,
+    marginTop: 1,
   },
 });

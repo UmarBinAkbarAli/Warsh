@@ -1,6 +1,7 @@
 export const en = {
   "tabs.learn": "Learn",
   "tabs.vocabulary": "Vocabulary",
+  "tabs.quran": "Quran",
   "tabs.noor": "Noor",
   "tabs.profile": "You",
 
@@ -141,6 +142,11 @@ export const en = {
   "learn.salaam": "Assalamu alaikum",
   "learn.openYou": "Open your profile",
   "learn.chapterBandEyebrow": "Chapter {{chapter}} · {{done}} of {{total}}",
+  "learn.completedProgressCount": "{{current}} of {{total}} done",
+  "learn.continueLesson": "Continue lesson",
+  "learn.chapterTestLabel": "Chapter test",
+  "learn.chapterTestLockedShort": "Complete all lessons to unlock",
+  "learn.lessonNumber": "Lesson {{lesson}}",
   "learn.chapterAllLessons": "Chapter {{chapter}} · all {{count}} lessons",
   "learn.showAllLessons": "Show all {{count}} lessons",
   "learn.showLess": "Show less",
@@ -298,6 +304,7 @@ export const en = {
   "chapter.cancel": "Cancel",
   "chapter.xp": "{{count}} points",
   "chapter.lessonsCompleted": "{{done}} / {{total}} lessons completed",
+  "chapter.lessonsCompletedOf": "{{done}} of {{total}} lessons completed",
   "chapter.chapterProgress": "Chapter progress",
 
   "vocabulary.title": "Vocabulary",

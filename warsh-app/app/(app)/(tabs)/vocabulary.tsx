@@ -304,7 +304,10 @@ export default function VocabularyScreen() {
         contentContainerStyle={[
           styles.content,
           desktopWeb && styles.webContent,
-          { paddingTop: desktopWeb ? 40 : insets.top + Spacing.xl },
+          {
+            paddingTop: desktopWeb ? 40 : insets.top + Spacing.xl,
+            paddingBottom: desktopWeb ? 48 : insets.bottom + 90,
+          },
         ]}
         keyboardShouldPersistTaps="handled"
       >
