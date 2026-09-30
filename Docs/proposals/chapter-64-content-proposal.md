@@ -1,0 +1,83 @@
+# Chapter 64 — Nominal and Verbal Sentences: Content Proposal
+
+**Status:** Proposal only; not approved or implemented  
+**Scope:** Chapter 64 map and learner-facing fixtures; coordinate the **كان وأخواتها** boundary with Chapter 65  
+**Current sources:** `warsh-backend/prisma/curriculum-books7-8.cjs` and `warsh-backend/prisma/fixtures/chapter-64-lesson-01.json` through `chapter-64-lesson-05.json`
+
+## Recommendation
+
+Retain Chapter 64 as a higher-level sentence-structure spiral, not as another first introduction. The learner has already encountered nominal/verbal sentences in Chapter 29, sentence analysis in Chapter 32, complex constructions in Chapter 49, integrated sentence reading in Chapter 52, and higher syntax/parsing in Chapters 58–59. Chapter 64 should therefore consolidate and extend those outcomes with a clear focus on the forms of **خَبَر**, clause boundaries, and a scaffolded Quran-reading capstone—not repeat elementary definitions.
+
+Remove the full **كان وأخواتها** lesson from Chapter 64 and leave it to the dedicated Chapter 65 unit. Correct the categorical claim that nominal sentences inherently mean permanence and verbal sentences inherently mean renewal; teach any discourse effect as context-sensitive, not as a reliable translation or parse rule. The present Quran hooks and map also need realignment: Al-Fatiha 1:1 is a prepositional phrase, not a model simple nominal/verbal contrast, and the map's parsing extract does not fully analyze its cited verse, Al-Kahf 18:107.
+
+## Audit findings
+
+| Severity | Finding | Proposed correction |
+|---|---|---|
+| Critical | **The permanence/renewal contrast is taught as a grammar rule.** The map and review say nominal sentences express permanent states, while verbal sentences express renewed actions; the review's examples claim **اللَّهُ غَفُورٌ رَحِيمٌ** encodes an eternal attribute and **غَفَرَ اللَّهُ لَكُمْ** a completed action at a specific time. These may be useful interpretive tendencies in a context, but they do not safely classify every sentence or determine its meaning by themselves. The map's **كَانَ غَفُورًا** explanation (“always is, not just once”) also adds a theological conclusion not licensed by the grammar lesson. | Center the contrast on structure and morphology: identify the sentence/clause pattern, roles, particles, and verb tense/aspect. If discussing rhetorical effect, label it as a contextual reading and give counterexamples/limits. Do not claim a sentence form alone proves permanence, renewal, or a theological proposition. Have Quranic interpretation reviewed separately from grammatical parsing. |
+| Critical | **The “chapter review” lesson introduces a full topic belonging to Chapter 65.** Chapter 64 Lesson 3 is a `STANDARD` lesson on **كان وأخواتها**, including nominative **اسم كان**, accusative **خبر كان**, and several sisters. Lesson 5 then includes a “complete vs incomplete verb” preview, uses **كَانَ** in its Quran hook, and explicitly calls it “Chapter 65 territory.” Chapter 65 is itself titled and mapped as the dedicated **كان وأخواتها** unit. | Remove the standalone **كان** lesson and the premature test/review items from Chapter 64. Keep one brief, non-assessed transition note if needed, then teach **كان وأخواتها** systematically in Chapter 65. Keep Chapter 64's outcomes on nominal/verbal structure and khabar types. |
+| High | **Sentence-type definitions are overly positional and absolute.** Chapter 64 says nominal sentences “begin with a noun” and verbal sentences “begin with a verb,” presents that as sufficient to parse any sentence, and says a verbal-sentence **فَاعِل** follows the verb. These are useful introductory prototypes, but particles, fronted elements, embedded clauses, and subject pronouns attached to or omitted with verbs complicate a first-word-only test. Chapter 29, Chapter 32, and later sentence units have already introduced the basic distinction. | Briefly retrieve the learner's original definition, then teach a two-step analysis: identify the clause's governing structure and locate its grammatical roles; use opening word/order as a clue, not a universal substitute for parsing. Include a preposed complement/object example, a verb with an attached or implicit subject, and a nominal sentence with an embedded verbal predicate. Explicitly distinguish **مبتدأ** from verbal **فاعل** rather than translating both simply as “subject.” |
+| High | **The rule “both مبتدأ and خبر are nominative” is overgeneralized in the exercise.** A discover card qualifies this for a basic sentence with nominal-word components, but an unqualified TRUE/FALSE exercise repeats it as universal. Chapter 29 and 32 already introduce **إِنَّ**, which changes the case of its noun; a predicate may also be a clause or a prepositional/adverbial phrase and has no simple visible nominative ending in the same sense. | Restrict the rule to the appropriate simple nominal construction, and label the other predicate forms accurately: **خبر مفرد**, **خبر جملة**, and **خبر شبه جملة**. Revisit the effects of particles only as previously learned context. Do not ask an unqualified question whose answer conflicts with already-taught **إِنَّ**. |
+| High | **The predicate categories use nonstandard or misleading labels.** Lesson 2 calls the forms **خبر كَلِمِيّ، خبر جُمْلِيّ، خبر جَارِّي** and describes the first as a “single word” or adjective. The common pedagogical categories are **خبر مفرد، خبر جملة، خبر شبه جملة**. “Mufrad” here does not simply mean exactly one written word; a khabar mufrad need not be an adjective. | Use standard labels and define them carefully: a non-sentence nominal predicate (**خبر مفرد**), a nominal or verbal sentence functioning as predicate (**خبر جملة**), and a prepositional/adverbial phrase functioning as predicate (**خبر شبه جملة**). Use multiple reviewed examples and make clear that case marking inside each form differs. |
+| High | **Several hooks do not teach the stated target.** Lesson 1 uses Al-Fatiha 1:1 (**بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ**), a prepositional phrase. The Quranic Arabic Corpus parses **بِسْمِ** as a prefixed preposition and the remaining nouns/adjectives as genitive, so it is not a simple example of either sentence type. Lesson 2's An-Nahl 16:3 hook is a verbal clause but the lesson is about predicate types. Lesson 3's Al-Baqarah 2:184 hook introduces **كان**—outside Chapter 64's approved map scope. | Select or shorten a hook so the phrase actually illustrates that lesson's objective. If using 1:1, identify it honestly as a prepositional phrase within a larger recitation context, not a complete nominal sentence. Avoid using **كان** as an instructional hook before its Chapter 65 lesson. [QAC, Al-Fatiha 1:1 word-by-word](https://corpus.quran.com/wordbyword.jsp?chapter=1&verse=1) |
+| High | **The map claims complete parsing of Al-Kahf 18:107, but its parse extract is only a partial rewrite.** The map's `parseText` is **إِنَّ الَّذِينَ آمَنُوا لَهُمْ جَنَّاتٌ**, which omits **وَعَمِلُوا الصَّالِحَاتِ** and the verse's **كَانَتْ لَهُمْ جَنَّاتُ الْفِرْدَوْسِ نُزُلًا**. Its tokens label **لَهُمْ** as **خبر إن** and **جَنَّاتٌ** as **مبتدأ مؤخر**, but do not show that the full **لَهُمْ جَنَّاتٌ** nominal clause is the predicate of **إنّ**, nor the remaining structure of the cited verse. | Either teach a deliberately bounded excerpt and state that it is an excerpt, or provide the exact complete passage and a hierarchical parse of the clauses and phrases. Identify the **اسم إنّ**, the relative clause(s), the complete predicate clause, and—if retained—the separate **كان** structure only after Chapter 65 teaches it. The corpus provides a verse-specific grammatical analysis for checking the proposed parse. [QAC, Al-Kahf 18:107](https://corpus.quran.com/grammar.jsp?chapter=18&verse=107) |
+| High | **The map, lesson sequence, and fixtures disagree.** The map lists nominal permanence, verbal renewal, **إِنَّ**, and parsing Al-Kahf 18:107; fixtures add a full **كان** unit and predicate types, then include two review-like lessons. Lesson 4 is called “Chapter Review” but uses `STANDARD`; Lesson 5 is a `REVIEW`. The map's “formal spiral” also duplicates concepts from Chapters 29, 32, 49, 52, 58, and 59 without defining a new mastery outcome. | Reconcile the map with one approved sequence and label every outcome as retrieval, extension, or integration. Give Lesson 4 a real applied purpose rather than a second summary. Keep a formative `REVIEW`, and add a separate final assessment. The Chapter 29/32/49/52/58/59 content is evidence of prior coverage, not a reason to repeat beginner lessons unchanged. |
+| High | **Chapter completion assessment is missing.** Chapter 64 has a formative `REVIEW` fixture, but there is no separate final lesson with `assessment.type: "CHAPTER_TEST"`. Product specification requires a distinct final `REVIEW` lesson with an assessment payload; the formative review does not fill that role. | Preserve a formative retrieval review and add a separate canonical Chapter 64 final test. Assess only the approved chapter outcomes, with items mapped to instruction and fair, explained distractors. |
+| Medium | **Examples and translations need editorial and grammatical review.** Lesson 3 gives **كَانَ عَلَىُّ صَادِقًا** for “Ali was truthful,” which has a malformed spelling/vocalization for **عَلِيّ**. It lists **مَا بَلَغَ** as one of **كان**'s sisters although this is not a standard member of the **كان وأخواتها** list. Lesson 4's 2:164 excerpt is extremely long for a chapter summary and includes more embedded structures than the lesson's review outcome supports. | Correct names, Arabic spelling, transliteration, Urdu, and the verb list. Remove **مَا بَلَغَ** unless a reviewer can document the intended construction and why it belongs. Shorten or scaffold 2:164; verify which exact clause is being assessed and align the item to it. |
+
+## Continuity and placement
+
+1. **Chapters 29 and 32:** These already teach nominal/verbal sentences, **إِنَّ**, **لَيْسَ**, and passage analysis. Chapter 64 should not re-teach the same beginner rules as “formal grammar” without new practice or a mastery standard.
+2. **Chapters 49, 52, and 58–59:** These extend sentence construction, word order, preposed predicates, and complex Quranic parsing. Use them as prerequisites and build one demanding but scaffolded retrieval/application experience rather than repeating every concept in isolation.
+3. **Chapter 63 → Chapter 64:** Use correct iḍāfa phrases from Chapter 63 as constituents within sentence analysis, but don't reteach the iḍāfa rules here.
+4. **Chapter 64 → Chapter 65:** Defer **كان وأخواتها** instruction, case tables, and chapter-test outcomes to Chapter 65. The handoff should preview only that a verb can alter a nominal structure; the learner should not be asked to master it before its unit.
+
+Cambridge's *A Reference Grammar of Modern Standard Arabic* treats basic sentence structure, construct phrases, and adjective/predicate behavior in distinct sections, supporting a more deliberately bounded sequence than the present mixture. [Cambridge: contents for Ryding's reference grammar](https://www.cambridge.org/core/books/abs/reference-grammar-of-modern-standard-arabic/contents/8C34C4914328A53A043C1822B1F0D9B5)
+
+## Proposed lesson sequence
+
+Recommend four instructional lessons, one formative review, and one distinct final test. Keep the total at six because the current chapter has an in-scope predicate-forms outcome that deserves guided practice, while removing the duplicative **كان** lesson and converting the misnamed “review” into a useful application lesson.
+
+1. **Sentence structures: retrieve, refine, and classify** (`STANDARD`, rebuild). Briefly retrieve the Chapter 29/32 distinction, then distinguish sentence-level structure from the first written word. Practice recognizing nominal and verbal clauses with particles, fronted elements, embedded clauses, and attached/implicit verbal subjects. Keep definitions to reviewed standard usage and do not score simplistic permanence/renewal inferences.
+2. **Three forms of خَبَر** (`STANDARD`, rebuild). Teach **خبر مفرد، خبر جملة، خبر شبه جملة** with simple sentences, a sentence predicate that contains a resumptive pronoun, and an appropriate prepositional/adverbial predicate. Include agreement and case only where applicable, and avoid calling every khabar an adjective or a single word.
+3. **Follow the clause: subject, predicate, verb, and complements** (`STANDARD`, rebuild). Guide learners through short examples that distinguish **مبتدأ** from **فاعل**, find the clause functioning as a nominal predicate, and recognize a fronted element. Reuse structures already taught as retrieval; reserve new **كان وأخواتها** learning for Chapter 65.
+4. **Scaffolded Quranic sentence analysis** (`STANDARD`, rebuild). Analyze a short, exact, corpus-checked excerpt in stages: mark clause boundaries, identify the governing structure, locate the roles, and translate in context. A selected excerpt from Al-Fatiha 1:2–5 or a carefully shortened, fully parsed passage may work; use Al-Kahf 18:107 only if **كان** is treated as a preview and not a scored skill. Include one authored transfer sentence clearly labeled as authored, not Qur'anic.
+5. **Sentence-structure retrieval review** (`REVIEW`, rebuild). Mixed, low-stakes retrieval of prior sentence classification, predicate types, and clause-role analysis. Include explanatory feedback and do not retest Chapter 65's **كان** rules.
+6. **Chapter 64 final assessment** (`REVIEW`, add). Add the canonical `CHAPTER_TEST` payload with `chapter_order: 64`. Sample each taught outcome, include a contextual clause analysis and one predicate-type item, and map each scored item to instruction. No theological permanence claim or untaught **كان** inflection should be graded.
+
+## Assessment and acceptance criteria
+
+Before authoring the final test, specify each item's outcome, source lesson, sentence context, accepted answer(s), distractor rationale, and point value. Have a qualified Arabic reviewer verify the distinction between nominal and verbal clauses, the khabar category labels, sentence/clause hierarchy, case descriptions, particle effects, and each Quranic parse. Verify Quran text, translation, and cited references against a reliable source. Have English and Urdu reviewed independently.
+
+Chapter 64 is ready to implement only when:
+
+- prior teaching from Chapters 29, 32, 49, 52, and 58–59 is explicitly treated as prerequisite/retrieval rather than repeated as new;
+- permanence/renewal is no longer asserted as an automatic grammatical meaning;
+- the learner distinguishes **مبتدأ** from **فاعل** and does not rely only on the first written token;
+- the khabar categories use accurate terminology and examples;
+- **كان وأخواتها** instruction and assessment are reserved for Chapter 65;
+- hooks and Quranic parses are exact, relevant, and complete to the scope claimed;
+- map, fixtures, titles, templates, outcomes, and sequence agree;
+- a formative `REVIEW` and distinct final canonical `CHAPTER_TEST` exist; and
+- Arabic, case marks, English, Urdu, transliteration, answer keys, and feedback have been reviewed.
+
+After approval and implementation, run lesson-schema validation, Quran-text/reference audits, Urdu audit, and assessment/backend completion tests. Check `npm run content:check` before any fixture sync. This proposal authorizes no fixture edits, database writes, content synchronization, or publication.
+
+## Review amendments (2026-10-01)
+
+Applies the shared rules S1–S13 in [chapters-26-68-review.md](chapters-26-68-review.md): test ID and length, fixture naming, learner progress, illustrations, provenance and scholarly review. Where this section and the text above disagree, this section wins.
+
+**Final plan**
+
+| Order | ID | Template | Fixture file |
+|---|---|---|---|
+| 1–4 | `ch64-l01`–`ch64-l04` | `STANDARD` | `chapter-64-lesson-01.json`–`-04.json` |
+| 5 | `ch64-l05` | `REVIEW` | `chapter-64-lesson-05-review.json` |
+| 6 | `ch64-test` (new) | `REVIEW` + `CHAPTER_TEST` | `chapter-64-lesson-06-final-test.json` |
+
+**Corrections**
+
+1. **إِنَّ** and **لَيْسَ** were introduced in Chapters 24–25, not 29/32; Chapter 32's proposal removes them from that chapter.
+2. **كَانَ** is not new here either: Chapter 57 Lesson 4 teaches **كَانَ** and its case effect. What Chapter 64 must not do is teach the *sisters* (Chapter 65). Lesson 4 may therefore read 18:107's **كَانَتْ لَهُمْ جَنَّاتُ الْفِرْدَوْسِ نُزُلًا** as retrieval of Chapter 57.
+3. Lesson 2's **خبر شبه جملة** retrieves the fronted predicate named in Chapter 58 Lesson 3.
+4. Test: 12 questions at 80 % (S1).

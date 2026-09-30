@@ -765,6 +765,18 @@ Everything below this list is either done and verified, or one of these:
    tap/true-false/fill exercises. Not done: scholarly review of the grammar
    and Quran-context wording the proposals ask for, and an Android emulator
    pass.
+   **Chapters 26–68: proposals reviewed 2026-10-01, awaiting owner approval —
+   not built.** All 43 `Docs/proposals/chapter-NN-content-proposal.md` files
+   were read against the fixtures, the map, the built Chapters 1–25 and each
+   other, and every Quran reference (214 verses) was checked against the
+   quran.com text. Each proposal now ends with "Review amendments
+   (2026-10-01)" — the final order / ID / template / fixture table and the
+   chapter's corrections — which override the body. Shared build rules
+   (12-question test at 80 % as new `chNN-test`, never converting a completed
+   row into the test, surplus rows to `DRAFT`, file names by display order,
+   Updated-notice policy, illustrations, topic ownership, CL10–CL17
+   placement) and six owner decisions (D1–D6) are in
+   `Docs/proposals/chapters-26-68-review.md`. Proposals 69–72 are not part of this review.
    **Chapter 25 (`Docs/proposals/chapter-25-content-correction.md`) is
    corrected, staging-verified and promoted to production 2026-09-24** on the
    owner's instruction. The first rewrite was reviewed and fixed before
