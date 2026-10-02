@@ -2,125 +2,94 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 46, Lesson 3 - Commands and prohibition: imperative verbs and لَا النَّاهِيَة.",
+    "_note": "Chapter 46, Lesson 3 — the positive command (اِذْهَبْ, اتَّقِ) is its own form; the prohibition لَا + jussive imperfect (لَا تَذْهَبْ, لَا تُطِعْ). 33:1.",
     "chapter_order": 46,
     "lesson_order": 3,
     "chapter_title": "The Three States of المضارع (Application)",
-    "title": "Commands and Prohibition — Imperative and لَا النَّاهِيَة",
-    "titleAr": "الْأَمْرُ وَالنَّهْيُ — الْمُضَارِعُ الْمَجْزُومُ",
-    "source": "book5_lesson2_states_application.md",
+    "title": "Command and Prohibition",
+    "titleAr": "الْأَمْرُ وَالنَّهْيُ",
     "estimated_minutes": 8,
-    "xp_reward": 10
+    "xp_reward": 10,
+    "titleUr": "امر اور نہی"
   },
   "hook": {
     "ayah": {
       "surah": 33,
       "ayah": 1,
       "label": "Al-Ahzab 33:1",
-      "ar": "يَا أَيُّهَا النَّبِيُّ اتَّقِ اللَّهَ وَلَا تُطِعِ الْكَافِرِينَ وَالْمُنَافِقِينَ ۗ إِنَّ اللَّهَ كَانَ عَلِيمًا حَكِيمًا",
-      "en": "O Prophet, fear Allāh and do not obey the disbelievers and the hypocrites. Indeed, Allāh is ever Knowing and Wise.",
-      "ur": "اے پیغمبر خدا سے ڈرتے رہنا اور کافروں اور منافقوں کا کہا نہ ماننا۔ بےشک خدا جاننے والا اور حکمت والا ہے",
+      "ar": "يَا أَيُّهَا النَّبِيُّ اتَّقِ اللَّهَ وَلَا تُطِعِ الْكَافِرِينَ وَالْمُنَافِقِينَ",
+      "en": "O Prophet, be mindful of Allah and do not obey the disbelievers and the hypocrites.",
+      "ur": "اے نبی! اللہ سے ڈرتے رہیں اور کافروں اور منافقوں کی بات نہ مانیں۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033001.mp3"
     },
+    "autoplay": true,
     "noor_intro": {
-      "en": "Commands in Arabic work through the jussive mood. The base form drops the prefix and adjusts the vowel. لَا النَّاهِيَةُ (no longer) also triggers jazm for prohibition.",
-      "ur": "عربی میںCommands jussive mood کے ذریعے کام کرتے ہیں۔ بنیادی form prefix ڈرا کر اور vowel adjust کر کے بنتی ہے۔ لَا النَّاهِيَةُ (اب نہیں) بھی prohibition کے لیے jazm trigger کرتی ہے۔"
-    },
-    "autoplay": true
+      "en": "اتَّقِ اللَّهَ وَلَا تُطِعِ — \"be mindful of Allah, and do not obey\". A command and a prohibition in one ayah — two different forms.",
+      "ur": "اتَّقِ اللَّهَ وَلَا تُطِعِ — \"اللہ سے ڈرتے رہیں، اور بات نہ مانیں\"۔ ایک آیت میں امر اور نہی — دو الگ صورتیں۔"
+    }
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Imperative (command) — the base form",
-        "ar": "الْأَمْرُ — الْمُضَارِعُ الْمَجْزُومُ بِحَذْفِ الْبَادِئِ",
-        "ur": "حکم — prefix ہٹا کر بنیادی مضارع مجزوم"
+        "en": "Command: its own form",
+        "ar": "فِعْلُ الْأَمْرِ",
+        "ur": "امر: الگ صورت"
       },
       "explanation": {
-        "en": "To form a command in Arabic: remove the present-tense prefix (يَ-، تَ-، نَ-، أَ-) from the base verb. The remaining verb is in jazm. For example: تَذْهَبُ → ذَهَبْ (go!). The dropped prefix identifies the person.",
-        "ur": "عربی میں command بنانے کے لیے: بنیادی فعل سے present-tense prefix (يَ-، تَ-، نَ-، أَ-) ہٹا دیں۔ باقی فعل jazm میں ہوتا ہے۔ مثال: تَذْهَبُ → ذَهَبْ (جا!)۔ ڈرا ہوا prefix شخص کی شناخت کرتا ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "ذَهَبْ",
-        "ar_plain": "ذهب",
-        "translit": "dhahab",
-        "en": "Go! (you masc. sg.)",
-        "ur": "جا! (تو مذکر واحد)"
-      },
-      "explanation": {
-        "en": "From تَذْهَبُ (you go) → drop تَ → ذَهَبْ (go!). The command is to a single masculine person.",
-        "ur": "تَذْهَبُ (تو جاتا ہے) سے → تَ ڈرا → ذَهَبْ (جا!)۔ ایک مذکر واحد شخص کو command ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "اُكْتُبْ",
-        "ar_plain": "اكتب",
-        "translit": "uktub",
-        "en": "Write! (you masc. sg.)",
-        "ur": "لکھ! (تو مذکر واحد)"
-      },
-      "explanation": {
-        "en": "From تَكْتُبُ (you write) → drop تَ → اُكْتُبْ (write!). Note: when the prefix vowel is fatha (تَ-), the command vowel on the first letter becomes damma (اُكْتُبْ).",
-        "ur": "تَكْتُبُ (تو لکھتا ہے) سے → تَ ڈرا → اُكْتُبْ (لکھ!)۔ نوٹ: جب prefix vowel fatha ہو (تَ-)، command vowel پہلے حرف پر damma ہوتا ہے (اُكْتُبْ)۔"
+        "en": "\"Go!\" is اِذْهَبْ; \"write!\" is اُكْتُبْ. The command (فِعْلُ أَمْرٍ) is a separate verb form, not an imperfect in a state. (ذَهَبْ alone is not a correct form.)",
+        "ur": "\"جاؤ!\" اِذْهَبْ ہے؛ \"لکھو!\" اُكْتُبْ ہے۔ امر (فعلِ امر) فعل کی الگ صورت ہے، کسی حالت میں مضارع نہیں۔ (صرف ذَهَبْ درست صورت نہیں۔)"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "لَا النَّاهِيَةُ — no longer / stop doing",
-        "ar": "لَا النَّاهِيَةُ — الْمَنْعُ مِنَ الْمُضَارِعِ",
-        "ur": "لَا النَّاهِيَةُ — مضارع سے منع"
+        "en": "Prohibition: لَا + jussive",
+        "ar": "لَا النَّاهِيَةُ",
+        "ur": "نہی: لَا + مجزوم"
       },
       "explanation": {
-        "en": "لَا النَّاهِيَةُ means 'no longer' or 'stop doing X.' It triggers jazm: لَا تَفْعَلْ = do not do! (ongoing action that must stop).",
-        "ur": "لَا النَّاهِيَةُ کا مطلب ہے 'اب نہیں' یا 'X کرنا بند کرو'۔ یہ jazm trigger کرتی ہے: لَا تَفْعَلْ = مت کرو! ( ongoing action جو روکنا ہے)۔"
+        "en": "\"Don't go!\" is لَا تَذْهَبْ: the لَا of prohibition + an imperfect in the مَجْزُوم state.",
+        "ur": "\"مت جاؤ!\" لَا تَذْهَبْ ہے: نہی کا لَا + مجزوم حالت میں مضارع۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "لَا تَكْذِبْ",
-        "ar_plain": "لا تكذب",
-        "translit": "laa takdhib",
-        "en": "Do not lie!",
-        "ur": "جھوٹ مت بولو!"
+        "ar": "اتَّقِ اللَّهَ",
+        "ar_plain": "اتق الله",
+        "translit": "ittaqillaah",
+        "en": "be mindful of Allah (33:1)",
+        "ur": "اللہ سے ڈرو (33:1)"
       },
       "explanation": {
-        "en": "لَا + تَكْذِبْ (jazm) = do not lie! This is a prohibition for an ongoing action. The jazm form is required.",
-        "ur": "لَا + تَكْذِبْ (جزم) = جھوٹ مت بولو! یہ ongoing action کے لیے prohibition ہے۔ jazm form ضروری ہے۔"
+        "en": "A command form (from اتَّقَى). Not an imperfect.",
+        "ur": "امر کی صورت (اتَّقَى سے)۔ مضارع نہیں۔"
       }
     },
     {
-      "type": "AYAH_PREVIEW",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "اتَّقُوا اللَّهَ",
-        "ar_plain": "اتقوا الله",
-        "translit": "ittaqoo allaaha",
-        "en": "Fear Allah! (pl.)",
-        "ur": "اللہ سے ڈرو! (جمع)"
+        "ar": "وَلَا تُطِعِ الْكَافِرِينَ",
+        "ar_plain": "ولا تطع الكافرين",
+        "translit": "wa laa tuti'il-kaafiriin",
+        "en": "and do not obey the disbelievers (33:1)",
+        "ur": "اور کافروں کی بات نہ مانو (33:1)"
       },
       "explanation": {
-        "en": "اتَّقُوا from تَتَّقُونَ (you pl. fear) → drop تَ → اِتَّقُوا. The doubled ت becomes part of the root for the command form. This is one of the most repeated commands in the Quran.",
-        "ur": "اتَّقُوا تَتَّقُونَ (تم جمع ڈرتے ہو) سے → تَ ڈرا → اِتَّقُوا۔ double ت command form کا حصہ بن جاتی ہے۔ یہ قرآن میں سب سے repeat ہونے والے commands میں سے ایک ہے۔"
+        "en": "لَا + تُطِعْ (مَجْزُوم; said with kasra before الْكَافِرِينَ).",
+        "ur": "لَا + تُطِعْ (مجزوم؛ الْكَافِرِينَ سے پہلے کسرہ کے ساتھ پڑھا جاتا ہے)۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "اِتَّقُوا",
-        "ar_plain": "اتقوا",
-        "translit": "ittaquu",
-        "en": "fear (pl. command)",
-        "ur": "ڈرو (جمع حکم)"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Keep them apart",
+        "ur": "انہیں الگ رکھیں"
       },
-      "explanation": {
-        "en": "اِتَّقُوا is the plural imperative from the root و-ق-ي (to protect/guard). The command is to multiple people: 'fear Allah' — an ongoing instruction for a community.",
-        "ur": "اِتَّقُوا root و-ق-ي (بچانا/حفظ کرنا) سے plural imperative ہے۔ کثیر افراد کو command ہے: 'اللہ سے ڈرو' — ایک community کے لیے ongoing instruction۔"
+      "body": {
+        "en": "اِذْهَبْ — command. لَا تَذْهَبْ — prohibition (jussive imperfect). لَا تَذْهَبُ — plain negation, \"you do not go\" (مَرْفُوع).",
+        "ur": "اِذْهَبْ — امر۔ لَا تَذْهَبْ — نہی (مجزوم مضارع)۔ لَا تَذْهَبُ — سادہ نفی، \"تم نہیں جاتے\" (مرفوع)۔"
       }
     }
   ],
@@ -129,300 +98,300 @@
       "type": "TAP_TRANSLATION",
       "id": "ch46-l03-ex01",
       "prompt": {
-        "ar": "ذَهَبْ",
-        "ar_plain": "ذهب",
-        "translit": "dhahab",
-        "en": "Go!",
-        "ur": "جا!"
+        "ar": "اتَّقِ اللَّهَ وَلَا تُطِعِ الْكَافِرِينَ",
+        "ar_plain": "اتق الله ولا تطع الكافرين",
+        "translit": "ittaqillaaha wa laa tuti'il-kaafiriin",
+        "en": "Be mindful of Allah and do not obey the disbelievers.",
+        "ur": "اللہ سے ڈرو اور کافروں کی بات نہ مانو۔"
       },
       "options": [
         {
-          "en": "Go!",
-          "ur": "جا!"
+          "en": "Be mindful of Allah and do not obey the disbelievers.",
+          "ur": "اللہ سے ڈرو اور کافروں کی بات نہ مانو۔"
         },
         {
-          "en": "He went",
-          "ur": "وہ گیا"
+          "en": "You are mindful of Allah and you do not obey the disbelievers.",
+          "ur": "تم اللہ سے ڈرتے ہو اور کافروں کی بات نہیں مانتے۔"
         },
         {
-          "en": "Do not go!",
-          "ur": "مت جاؤ!"
+          "en": "The disbelievers did not obey Allah.",
+          "ur": "کافروں نے اللہ کی بات نہیں مانی۔"
         },
         {
-          "en": "I went",
-          "ur": "میں گیا"
+          "en": "Obey the disbelievers.",
+          "ur": "کافروں کی بات مانو۔"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "ذَهَبْ is the imperative (command) form from تَذْهَبُ (you go). Drop the prefix تَ, keep the jazm ending.",
-        "ur": "ذَهَبْ imperative form ہے تَذْهَبُ (تو جاتا ہے) سے۔ prefix تَ ڈرائیں، jazm ending برقرار رکھیں۔"
-      }
+      "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch46-l03-ex02",
       "statement": {
-        "en": "لَا النَّاهِيَةُ triggers jazm and means 'no longer' or 'stop doing'.",
-        "ur": "لَا النَّاهِيَةُ jazm trigger کرتی ہے اور کا مطلب ہے 'اب نہیں' یا 'کرنا بند کرو'۔"
+        "en": "اِذْهَبْ (\"go!\") is an imperfect verb in the مَجْزُوم state.",
+        "ur": "اِذْهَبْ (\"جاؤ!\") مجزوم حالت میں مضارع فعل ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. It is a command form (فِعْلُ أَمْرٍ).",
+        "ur": "غلط۔ یہ امر (فعلِ امر) ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch46-l03-ex03",
       "mode": "TAP",
-      "sentence_ar": "___ تَكْذِبْ",
+      "sentence_ar": "لَا ___ فِي الْفَصْلِ",
       "hint": {
-        "en": "Do not lie!",
-        "ur": "جھوٹ مت بولو!"
+        "en": "Don't sleep in class.",
+        "ur": "کلاس میں مت سو۔"
       },
       "options": [
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no (prohibition)",
-          "ur": "نہیں (منع)"
+          "ar": "تَنَمْ",
+          "ar_plain": "تنم",
+          "translit": "tanam",
+          "en": "sleep (مَجْزُوم)",
+          "ur": "سو (مجزوم)"
         },
         {
-          "ar": "لَمْ",
-          "ar_plain": "لم",
-          "translit": "lam",
-          "en": "did not",
-          "ur": "نہیں (ماضی)"
+          "ar": "تَنَامُ",
+          "ar_plain": "تنام",
+          "translit": "tanaamu",
+          "en": "you sleep (مَرْفُوع)",
+          "ur": "تم سوتے ہو (مرفوع)"
         },
         {
-          "ar": "لَنْ",
-          "ar_plain": "لن",
-          "translit": "lan",
-          "en": "never",
-          "ur": "کبھی نہیں"
+          "ar": "نَمْ",
+          "ar_plain": "نم",
+          "translit": "nam",
+          "en": "sleep! (command)",
+          "ur": "سو جاؤ! (امر)"
         },
         {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "not",
-          "ur": "نہیں"
+          "ar": "نَامَ",
+          "ar_plain": "نام",
+          "translit": "naama",
+          "en": "slept",
+          "ur": "سویا"
         }
       ],
       "correct_answer": {
-        "ar": "لَا",
-        "ar_plain": "لا",
-        "translit": "laa",
-        "en": "no (prohibition)",
-        "ur": "نہیں (منع)"
+        "ar": "تَنَمْ",
+        "ar_plain": "تنم",
+        "translit": "tanam",
+        "en": "sleep (مَجْزُوم)",
+        "ur": "سو (مجزوم)"
       },
-      "xp_value": 1
-    },
-    {
-      "type": "BUILD_SENTENCE",
-      "id": "ch46-l03-ex04",
-      "target_translation": {
-        "en": "Fear Allah! (plural)",
-        "ur": "اللہ سے ڈرو! (جمع)"
-      },
-      "tiles": [
-        {
-          "ar": "اِتَّقُوا",
-          "ar_plain": "اتقوا",
-          "translit": "ittaquu",
-          "en": "fear (pl. command)",
-          "ur": "ڈرو (جمع حکم)"
-        },
-        {
-          "ar": "اللَّهَ",
-          "ar_plain": "الله",
-          "translit": "allaaha",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "يَتَّقُونَ",
-          "ar_plain": "يتقون",
-          "translit": "yattaqiina",
-          "en": "they fear",
-          "ur": "وہ ڈرتے ہیں"
-        }
-      ],
-      "correct_order": [
-        0,
-        1
-      ],
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Prohibition: لَا + مَجْزُوم. تَنَامُ → تَنَمْ (the long ā shortens before sukūn — learn this form whole).",
+        "ur": "نہی: لَا + مجزوم۔ تَنَامُ ← تَنَمْ (سکون سے پہلے لمبا آ چھوٹا ہو جاتا ہے — یہ صورت مکمل یاد کریں)۔"
+      }
     },
     {
       "type": "MATCHING",
-      "id": "ch46-l03-ex05",
+      "id": "ch46-l03-ex04",
       "left_column": [
         {
-          "ar": "ذَهَبْ",
-          "ar_plain": "ذهب",
-          "translit": "dhahab",
-          "en": "go! (sg.)",
-          "ur": "جا! (واحد)"
-        },
-        {
-          "ar": "اُكْتُبْ",
-          "ar_plain": "اكتب",
-          "translit": "uktub",
-          "en": "write! (sg.)",
-          "ur": "لکھ! (واحد)"
+          "ar": "اِذْهَبْ",
+          "ar_plain": "اذهب",
+          "translit": "idh-hab",
+          "en": "go!",
+          "ur": "جاؤ!"
         },
         {
           "ar": "لَا تَذْهَبْ",
           "ar_plain": "لا تذهب",
-          "translit": "laa tadhahab",
-          "en": "do not go!",
-          "ur": "مت جاؤ!"
+          "translit": "laa tadh-hab",
+          "en": "don't go",
+          "ur": "مت جاؤ"
         },
         {
-          "ar": "لَا تَكْتُبْ",
-          "ar_plain": "لا تكتب",
-          "translit": "laa taktub",
-          "en": "do not write!",
-          "ur": "مت لکھو!"
+          "ar": "لَا تَذْهَبُ",
+          "ar_plain": "لا تذهب",
+          "translit": "laa tadh-habu",
+          "en": "you do not go",
+          "ur": "تم نہیں جاتے"
+        },
+        {
+          "ar": "اتَّقِ",
+          "ar_plain": "اتق",
+          "translit": "ittaqi",
+          "en": "be mindful",
+          "ur": "ڈرو"
         }
       ],
       "right_column": [
         {
-          "en": "go! (sg.)",
-          "ur": "جا! (واحد)"
+          "en": "prohibition — مَجْزُوم",
+          "ur": "نہی — مجزوم"
         },
         {
-          "en": "write! (sg.)",
-          "ur": "لکھ! (واحد)"
+          "en": "command (33:1)",
+          "ur": "امر (33:1)"
         },
         {
-          "en": "do not go!",
-          "ur": "مت جاؤ!"
+          "en": "command",
+          "ur": "امر"
         },
         {
-          "en": "do not write!",
-          "ur": "مت لکھو!"
+          "en": "plain negation — مَرْفُوع",
+          "ur": "سادہ نفی — مرفوع"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
+          0
+        ],
+        [
+          2,
           3
+        ],
+        [
+          3,
+          1
         ]
       ],
       "xp_value": 1
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch46-l03-ex06",
-      "sentence_ar": "اتَّقُوا اللَّهَ",
-      "words": [
+      "type": "BUILD_SENTENCE",
+      "id": "ch46-l03-ex05",
+      "target_translation": {
+        "en": "Don't go to the market.",
+        "ur": "بازار مت جاؤ۔"
+      },
+      "tiles": [
         {
-          "ar": "اتَّقُوا",
-          "ar_plain": "اتقوا",
-          "translit": "ittaquu",
-          "en": "fear! (pl.)",
-          "ur": "خوف! (pl.)"
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "don't",
+          "ur": "مت"
         },
         {
-          "ar": "اللَّهَ",
-          "ar_plain": "الله",
-          "translit": "allaaha",
-          "en": "Allah",
-          "ur": "اللہ"
+          "ar": "تَذْهَبْ",
+          "ar_plain": "تذهب",
+          "translit": "tadh-hab",
+          "en": "go",
+          "ur": "جاؤ"
+        },
+        {
+          "ar": "إِلَى",
+          "ar_plain": "الى",
+          "translit": "ilaa",
+          "en": "to",
+          "ur": "کو"
+        },
+        {
+          "ar": "السُّوقِ",
+          "ar_plain": "السوق",
+          "translit": "as-suuq",
+          "en": "the market",
+          "ur": "بازار"
+        },
+        {
+          "ar": "اِذْهَبْ",
+          "ar_plain": "اذهب",
+          "translit": "idh-hab",
+          "en": "go!",
+          "ur": "جاؤ!"
         }
       ],
-      "available_roles": [
-        "VERB",
-        "SUBJECT",
-        "OBJECT"
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
       ],
-      "correct_roles": [
-        "VERB",
-        "OBJECT"
-      ],
+      "xp_value": 1
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch46-l03-ex06",
+      "statement": {
+        "en": "In لَا تُطِعِ الْكَافِرِينَ, تُطِعِ is مَجْزُوم.",
+        "ur": "لَا تُطِعِ الْكَافِرِينَ میں تُطِعِ مجزوم ہے۔"
+      },
+      "correct_answer": true,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "اتَّقُوا is the plural imperative (command) from تَتَّقُونَ (you pl. fear). It is a verb in jazm state. اللَّهَ is the direct object (مفعول به) — the thing feared.",
-        "ur": "اتَّقُوا plural imperative (حکم) ہے تَتَّقُونَ (تم جمع ڈرتے ہو) سے۔ یہ jazm حالت میں verb ہے۔ اللَّهَ direct object (مفعول به) ہے — وہ چیز جس سے ڈرا جاتا ہے۔"
+        "en": "True: the لَا of prohibition; the sukūn is said as kasra before الْكَافِرِينَ.",
+        "ur": "درست: نہی کا لَا؛ سکون الْكَافِرِينَ سے پہلے کسرہ کے ساتھ پڑھا جاتا ہے۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch46-l03-ex07",
       "prompt": {
-        "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
-        "ar_plain": "يا أيها الذين آمنوا اتقوا الله",
-        "translit": "yaa ayyuhaa alladhiina aamannuu ittaquu allaaha",
-        "en": "O believers, fear Allah.",
-        "ur": "اے ایمان والو! اللہ سے ڈرو۔"
+        "ar": "اُكْتُبِ الدَّرْسَ",
+        "ar_plain": "اكتب الدرس",
+        "translit": "uktubid-dars",
+        "en": "Write the lesson!",
+        "ur": "سبق لکھو!"
       },
       "options": [
         {
-          "en": "O believers, fear Allah.",
-          "ur": "اے ایمان والو! اللہ سے ڈرو۔"
+          "en": "Write the lesson!",
+          "ur": "سبق لکھو!"
         },
         {
-          "en": "O believers, they fear Allah.",
-          "ur": "اے ایمان والو! وہ اللہ سے ڈرتے ہیں۔"
+          "en": "Don't write the lesson.",
+          "ur": "سبق مت لکھو۔"
         },
         {
-          "en": "O believers, do not fear Allah.",
-          "ur": "اے ایمان والو! اللہ سے مت ڈرو۔"
+          "en": "He writes the lesson.",
+          "ur": "وہ سبق لکھتا ہے۔"
         },
         {
-          "en": "Believers fear Allah.",
-          "ur": "مومنین اللہ سے ڈرتے ہیں۔"
+          "en": "I wrote the lesson.",
+          "ur": "میں نے سبق لکھا۔"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "اتَّقُوا is a command (imperative, plural). يَا أَيُّهَا is vocative address. الَّذِينَ آمَنُوا means 'those who believed.' This is one of the most common Quranic address forms.",
-        "ur": "اتَّقُوا حکم ہے (imperative، جمع)۔ يَا أَيُّهَا vocative address ہے۔ الَّذِينَ آمَنُوا کا مطلب ہے 'وہ لوگ جنہوں نے ایمان لایا'۔ یہ قرآنی address کی سب سے عام form ہے۔"
-      }
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Commands and prohibition — jazm",
-      "ar": "الْأَمْرُ وَالنَّهْيُ — الْمُضَارِعُ الْمَجْزُومُ",
-      "ur": "حکم اور منع — مضارع مجزوم"
+      "en": "A command and a prohibition",
+      "ar": "الْأَمْرُ وَالنَّهْيُ",
+      "ur": "امر اور نہی"
     },
     "ayah": {
       "surah": 33,
       "ayah": 1,
       "label": "Al-Ahzab 33:1",
-      "ar": "يَا أَيُّهَا النَّبِيُّ اتَّقِ اللَّهَ وَلَا تُطِعِ الْكَافِرِينَ وَالْمُنَافِقِينَ ۗ إِنَّ اللَّهَ كَانَ عَلِيمًا حَكِيمًا",
-      "en": "O Prophet, fear Allāh and do not obey the disbelievers and the hypocrites. Indeed, Allāh is ever Knowing and Wise.",
-      "ur": "اے پیغمبر خدا سے ڈرتے رہنا اور کافروں اور منافقوں کا کہا نہ ماننا۔ بےشک خدا جاننے والا اور حکمت والا ہے",
+      "ar": "يَا أَيُّهَا النَّبِيُّ اتَّقِ اللَّهَ وَلَا تُطِعِ الْكَافِرِينَ وَالْمُنَافِقِينَ",
+      "en": "O Prophet, be mindful of Allah and do not obey the disbelievers and the hypocrites.",
+      "ur": "اے نبی! اللہ سے ڈرتے رہیں اور کافروں اور منافقوں کی بات نہ مانیں۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033001.mp3"
     },
     "highlighted_word_indices": [
-      4
+      3,
+      6
+    ],
+    "highlighted_words": [
+      "اتَّقِ",
+      "تُطِعِ"
     ],
     "noor_explanation": {
-      "en": "اتَّقُوا is the plural command form of وَقَى (to protect/guard). The person addressed is يَا أَيُّهَا الَّذِينَ آمَنُوا — 'O those who have believed.' This command appears over 20 times in the Quran.",
-      "ur": "اتَّقُوا وَقَى (بچانا/حفظ کرنا) کی plural command form ہے۔ مخاطب یہ ہے يَا أَيُّهَا الَّذِينَ آمَنُوا — 'اے جنہوں نے ایمان لایا'۔ یہ حکم قرآن میں 20 سے زائد بار آتا ہے۔"
+      "en": "اتَّقِ — a command form. لَا تُطِعِ — a prohibition: لَا + jussive imperfect.",
+      "ur": "اتَّقِ — امر۔ لَا تُطِعِ — نہی: لَا + مجزوم مضارع۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Commands in Arabic are simple: drop the prefix, keep the jazm. اِتَّقُوا — fear Allah. This one word appears over 20 times in the Quran. Now you can read every one of them.",
-      "ur": "عربی میں Commands آسان ہیں: prefix ڈرائیں، jazm برقرار رکھیں۔ اِتَّقُوا — اللہ سے ڈرو۔ یہ ایک لفظ قرآن میں 20 سے زائد بار آتا ہے۔ اب آپ ہر ایک پڑھ سکتے ہیں۔"
+      "en": "Command: اِذْهَبْ (its own form). Prohibition: لَا تَذْهَبْ (لَا + مَجْزُوم). Plain negation: لَا تَذْهَبُ (مَرْفُوع).",
+      "ur": "امر: اِذْهَبْ (الگ صورت)۔ نہی: لَا تَذْهَبْ (لَا + مجزوم)۔ سادہ نفی: لَا تَذْهَبُ (مرفوع)۔"
     }
   }
 }

@@ -2,15 +2,15 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 46, Lesson 4 — Al-Masad Tadabbur unlock. Parsing تَبَّتْ and the jussive context.",
+    "_note": "Chapter 46, Lesson 4 — Al-Masad 111:1–3: perfect verbs (تَبَّتْ، تَبَّ، أَغْنَىٰ، كَسَبَ) vs the imperfect سَيَصْلَىٰ with the future prefix سَـ. Recognition only.",
     "chapter_order": 46,
     "lesson_order": 4,
     "chapter_title": "The Three States of المضارع (Application)",
-    "title": "Al-Masad — تَبَّتْ يَدَا أَبِي لَهَبٍ",
-    "titleAr": "الْمَسَدُ — تَبَّتْ يَدَا أَبِي لَهَبٍ",
-    "source": "book5_lesson2_al_masad.md",
+    "title": "Al-Masad 1–3: Past and Present Verbs",
+    "titleAr": "الْمَسَدُ ١–٣: الْمَاضِي وَالْمُضَارِعُ",
     "estimated_minutes": 10,
-    "xp_reward": 10
+    "xp_reward": 10,
+    "titleUr": "المسد 1–3: ماضی اور مضارع"
   },
   "hook": {
     "ayah": {
@@ -18,97 +18,82 @@
       "ayah": 1,
       "label": "Al-Masad 111:1",
       "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
-      "en": "May the hands of Abu Lahab be ruined, and may he be ruined.",
-      "ur": "ابی لہب کے ہاتھ تباہ ہوں اور وہ خود بھی تباہ ہو۔",
+      "en": "May the hands of Abu Lahab be ruined, and ruined is he.",
+      "ur": "ابو لہب کے دونوں ہاتھ ٹوٹ جائیں اور وہ ہلاک ہو گیا۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/111001.mp3"
     },
+    "autoplay": true,
     "noor_intro": {
-      "en": "Today Al-Masad unlocks. This is the fifth Tadabbur Surah in your journey. تَبَّتْ is a past-tense verb — but its grammar connects to what we've been studying. Let's understand this Surah word by word.",
-      "ur": "آج Al-Masad unlock ہوتا ہے۔ یہ آپ کے سفر میں پانچویں Tadabbur Surah ہے۔ تَبَّتْ ماضی tense کا فعل ہے — لیکن اس کا grammar ہم جو study کر رہے ہیں اس سے جڑتا ہے۔ آئیں اس Surah کو لفظ بہ لفظ سمجھیں۔"
-    },
-    "autoplay": true
+      "en": "تَبَّتْ … وَتَبَّ — two past (perfect) verbs. Past verbs have no مَرْفُوع/مَنْصُوب/مَجْزُوم state. Today: sort the verbs of Al-Masad 1–3.",
+      "ur": "تَبَّتْ … وَتَبَّ — ماضی کے دو فعل۔ ماضی کے فعل کی کوئی مرفوع/منصوب/مجزوم حالت نہیں ہوتی۔ آج: المسد 1–3 کے افعال کو ترتیب دیں۔"
+    }
   },
   "discover_cards": [
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Al-Masad — The Palm Fiber",
-        "ar": "سُورَةُ الْمَسَدِ — الْهَدْفُ بِالْكَفِّ",
-        "ur": "سورۃ المسد — کھوجل کی رسی سے گرفت"
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+        "ar_plain": "تبت يدا ابي لهب وتب",
+        "translit": "tabbat yadaa abii lahabin wa tabb",
+        "en": "May the hands of Abu Lahab be ruined, and ruined is he. (111:1)",
+        "ur": "ابو لہب کے دونوں ہاتھ ٹوٹ جائیں اور وہ ہلاک ہو گیا۔ (111:1)"
       },
       "explanation": {
-        "en": "Al-Masad is the 111th Surah. It describes Abu Lahab, an enemy of the Prophet ﷺ, and his wife who would harm the believers. The name الْمَسَدِ refers to the palm-fiber rope — something worthless that will burn.",
-        "ur": "Al-Masad 111 ویں سورت ہے۔ یہ ابو لہب کا ذکر کرتی ہے، جو نبی ﷺ کا دشمن تھا، اور اس کی بیوی کا جو تکلیف پہنچاتی تھی۔ نام الْمَسَدِ کھجور کی چھال کی بٹی ہوئی رسی سے ہے۔"
+        "en": "تَبَّتْ and تَبَّ are perfect (past-form) verbs. يَدَا is a dual noun, \"two hands\".",
+        "ur": "تَبَّتْ اور تَبَّ ماضی کے فعل ہیں۔ يَدَا تثنیہ اسم ہے، \"دونوں ہاتھ\"۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "تَبَّتْ",
-        "ar_plain": "تبت",
-        "translit": "tabbat",
-        "en": "may it be ruined / destroyed",
-        "ur": "تباہ ہو جائے"
+        "ar": "مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ",
+        "ar_plain": "ما اغنى عنه ماله وما كسب",
+        "translit": "maa aghnaa 'anhu maaluhu wa maa kasab",
+        "en": "His wealth will not avail him, nor what he gained. (111:2)",
+        "ur": "نہ اس کا مال اس کے کام آیا اور نہ اس کی کمائی۔ (111:2)"
       },
       "explanation": {
-        "en": "تَبَّتْ is a past tense verb from the root ت-ب-ت. It expresses a prayer/wish for destruction. Grammatically it is a فعل ماضٍ but structurally related to the jussive system through its effect on associated nouns.",
-        "ur": "تَبَّتْ root ت-ب-ت سے ماضی tense کا فعل ہے۔ یہ تباہی کے لیے prayer/wish ظاہر کرتا ہے۔ Grammar کے لحاظ سے یہ فعل ماض ہے لیکن structure کے لحاظ سے اس کا اثر associated nouns پر jussive system سے جڑتا ہے۔"
+        "en": "أَغْنَىٰ and كَسَبَ: perfect verbs. مَالُهُ is the subject.",
+        "ur": "أَغْنَىٰ اور كَسَبَ: ماضی کے فعل۔ مَالُهُ فاعل ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "يَدَا",
-        "ar_plain": "يدا",
-        "translit": "yadaa",
-        "en": "two hands",
-        "ur": "دو ہاتھ"
+        "ar": "سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ",
+        "ar_plain": "سيصلى نارا ذات لهب",
+        "translit": "sa-yaslaa naaran dhaata lahab",
+        "en": "He will burn in a Fire of blazing flame. (111:3)",
+        "ur": "وہ عنقریب بھڑکتی آگ میں داخل ہو گا۔ (111:3)"
       },
       "explanation": {
-        "en": "يَدَا is the dual form of يَدٌ (hand). In the Quranic phrase يَدَا أَبِي لَهَبٍ, يَدَا is the subject (مبتدأ) and أَبِي لَهَبٍ is an idafa possession chain meaning 'the hands of Abu Lahab.'",
-        "ur": "يَدَا یَدٌ (ہاتھ) کی dual form ہے۔ قرآنی phrase يَدَا أَبِي لَهَبٍ میں، يَدَا subject (مبتدأ) ہے اور أَبِي لَهَبٍ idafa possession chain ہے جس کا مطلب ہے 'ابی لہب کے ہاتھ'۔"
+        "en": "سَيَصْلَىٰ = سَـ (future: \"will\") + يَصْلَىٰ (imperfect). سَـ marks the future; it is not a governor.",
+        "ur": "سَيَصْلَىٰ = سَـ (مستقبل: \"گا\") + يَصْلَىٰ (مضارع)۔ سَـ مستقبل بتاتا ہے؛ یہ عامل نہیں۔"
       }
     },
     {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "أَبِي لَهَبٍ",
-        "ar_plain": "أبي لهب",
-        "translit": "abii lahabin",
-        "en": "Abu Lahab (father of flame)",
-        "ur": "ابی لہب (آگ کے باپ)"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Sorting the verbs",
+        "ur": "افعال کی ترتیب"
       },
-      "explanation": {
-        "en": "أَبِي is 'my father' (with ي attached). لَهَبٍ means 'of flame' — a nickname for the man whose real name was عبد العزیز بن عبد المطلب. He was called 'father of flame' because of his bright, red face.",
-        "ur": "أَبِي کا مطلب ہے 'میرا باپ' (ي attached کے ساتھ)۔ لَهَبٍ کا مطلب ہے 'آگ کا' — اس شخص کے لیے nickname جو اصل میں عبد العزیز بن عبد المطلب تھا۔ اسے 'آگ کے باپ' اس کی روشن، سرخ چہرے کی وجہ سے کہا جاتا تھا۔"
-      }
-    },
-    {
-      "type": "AYAH_PREVIEW",
-      "text": {
-        "ar": "وَتَبَّ",
-        "ar_plain": "وتب",
-        "translit": "wa tabb",
-        "en": "and may he be ruined",
-        "ur": "اور وہ خود بھی تباہ ہو"
-      },
-      "explanation": {
-        "en": "وَتَبَّ repeats the prayer, referring now to Abu Lahab himself (not just his hands). وَوْ is a conjunction, تَبَّ is the same past-tense verb, referring back to the subject implicitly.",
-        "ur": "وَتَبَّ prayer کو دہراتا ہے، اب Abu Lahab خود کو reference کرتا ہے (صرف اس کے ہاتھ نہیں)۔ وَوْ conjunction ہے، تَبَّ وہی ماضی tense کا فعل ہے، implicitly subject کو reference کرتا ہے۔"
+      "body": {
+        "en": "Perfect: تَبَّتْ, تَبَّ, أَغْنَىٰ, كَسَبَ. Imperfect: سَيَصْلَىٰ. (Its ending is a long vowel, so its state is not shown by a ḍamma — that is studied in Chapter 57.)",
+        "ur": "ماضی: تَبَّتْ، تَبَّ، أَغْنَىٰ، كَسَبَ۔ مضارع: سَيَصْلَىٰ۔ (اس کا آخر لمبی آواز ہے، اس لیے اس کی حالت ضمہ سے ظاہر نہیں ہوتی — یہ باب 57 میں پڑھا جائے گا۔)"
       }
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "الْمَسَدِ",
-        "ar_plain": "المسد",
-        "translit": "al-masadi",
-        "en": "the palm fiber / twisted rope",
-        "ur": "کھوجل کی رسی"
+        "ar": "يَدَا",
+        "ar_plain": "يدا",
+        "translit": "yadaa",
+        "en": "two hands",
+        "ur": "دونوں ہاتھ"
       },
       "explanation": {
-        "en": "الْمَسَدِ is the name of this Surah — from مَسَدٌ (palm fiber rope). It refers metaphorically to Abu Lahab's wealth and family as being as useless as palm fiber — something that burns quickly.",
-        "ur": "الْمَسَدِ اس Surah کا نام ہے — مَسَدٌ (کھوجل کی رسی) سے۔ یہ Abu Lahab کے مال اور کنبے کو metaphorically reference کرتا ہے — کھوجل کی رسی کی طرح بےکار — جو جلدی جل جاتی ہے۔"
+        "en": "The dual of يَدٌ. In an iḍāfa (يَدَا أَبِي لَهَبٍ) the dual ـَانِ loses its نِ: يَدَانِ → يَدَا.",
+        "ur": "يَدٌ کا تثنیہ۔ اضافت میں (يَدَا أَبِي لَهَبٍ) تثنیہ ـَانِ کا نِ گر جاتا ہے: يَدَانِ ← يَدَا۔"
       }
     }
   ],
@@ -117,205 +102,201 @@
       "type": "TAP_TRANSLATION",
       "id": "ch46-l04-ex01",
       "prompt": {
-        "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ",
-        "ar_plain": "تبت يدا أبي لهب",
-        "translit": "tabbat yadaa abii lahabin",
-        "en": "May the hands of Abu Lahab be ruined",
-        "ur": "ابی لہب کے ہاتھ تباہ ہوں"
+        "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+        "ar_plain": "تبت يدا ابي لهب وتب",
+        "translit": "tabbat yadaa abii lahabin wa tabb",
+        "en": "May the hands of Abu Lahab be ruined, and ruined is he.",
+        "ur": "ابو لہب کے دونوں ہاتھ ٹوٹ جائیں اور وہ ہلاک ہو گیا۔"
       },
       "options": [
         {
-          "en": "May the hands of Abu Lahab be ruined",
-          "ur": "ابی لہب کے ہاتھ تباہ ہوں"
+          "en": "May the hands of Abu Lahab be ruined, and ruined is he.",
+          "ur": "ابو لہب کے دونوں ہاتھ ٹوٹ جائیں اور وہ ہلاک ہو گیا۔"
         },
         {
-          "en": "Abu Lahab's hands were destroyed",
-          "ur": "ابی لہب کے ہاتھ تباہ ہو گئے"
+          "en": "Abu Lahab raised his hands.",
+          "ur": "ابو لہب نے اپنے ہاتھ اٹھائے۔"
         },
         {
-          "en": "The hands of the flame are ruined",
-          "ur": "آگ کے ہاتھ تباہ ہیں"
+          "en": "Do not ruin the hands of Abu Lahab.",
+          "ur": "ابو لہب کے ہاتھ برباد مت کرو۔"
         },
         {
-          "en": "May the father of flame be destroyed",
-          "ur": "آگ کے باپ کو تباہ کیا جائے"
+          "en": "Abu Lahab will be ruined tomorrow.",
+          "ur": "ابو لہب کل برباد ہو گا۔"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "تَبَّتْ is a prayer/wish (past form used for jussive meaning), not a statement of fact. يَدَا is dual (two hands). أَبِي لَهَبٍ is an idafa chain: 'father of flame' — Abu Lahab's nickname.",
-        "ur": "تَبَّتْ prayer/wish ہے (jussive meaning کے لیے ماضی form used)، fact statement نہیں۔ يَدَا dual ہے (دو ہاتھ)۔ أَبِي لَهَبٍ idafa chain ہے: 'آگ کے باپ' — Abu Lahab کا nickname۔"
-      }
+      "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch46-l04-ex02",
       "statement": {
-        "en": "يَدَا is the dual form of يَدٌ (hand) and is the subject (مبتدأ) of the sentence.",
-        "ur": "يَدَا یَدٌ (ہاتھ) کی dual form ہے اور sentence کا subject (مبتدأ) ہے۔"
+        "en": "تَبَّتْ in 111:1 is a jussive verb.",
+        "ur": "111:1 میں تَبَّتْ مجزوم فعل ہے۔"
       },
-      "correct_answer": true,
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. تَبَّتْ is a perfect (past-form) verb; the three states belong to the imperfect.",
+        "ur": "غلط۔ تَبَّتْ ماضی کا فعل ہے؛ تین حالتیں مضارع کی ہیں۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch46-l04-ex03",
+      "mode": "TAP",
+      "sentence_ar": "___ نَارًا ذَاتَ لَهَبٍ",
+      "hint": {
+        "en": "He will burn in a Fire of blazing flame. (111:3)",
+        "ur": "وہ عنقریب بھڑکتی آگ میں داخل ہو گا۔ (111:3)"
+      },
+      "options": [
+        {
+          "ar": "سَيَصْلَىٰ",
+          "ar_plain": "سيصلى",
+          "translit": "sa-yaslaa",
+          "en": "he will burn",
+          "ur": "داخل ہو گا"
+        },
+        {
+          "ar": "صَلَّى",
+          "ar_plain": "صلى",
+          "translit": "sallaa",
+          "en": "he prayed",
+          "ur": "اس نے نماز پڑھی"
+        },
+        {
+          "ar": "تَبَّتْ",
+          "ar_plain": "تبت",
+          "translit": "tabbat",
+          "en": "ruined",
+          "ur": "ٹوٹ جائیں"
+        },
+        {
+          "ar": "كَسَبَ",
+          "ar_plain": "كسب",
+          "translit": "kasaba",
+          "en": "he gained",
+          "ur": "کمایا"
+        }
+      ],
+      "correct_answer": {
+        "ar": "سَيَصْلَىٰ",
+        "ar_plain": "سيصلى",
+        "translit": "sa-yaslaa",
+        "en": "he will burn",
+        "ur": "داخل ہو گا"
+      },
       "xp_value": 1
     },
     {
       "type": "MATCHING",
-      "id": "ch46-l04-ex03",
+      "id": "ch46-l04-ex04",
       "left_column": [
         {
           "ar": "تَبَّتْ",
           "ar_plain": "تبت",
           "translit": "tabbat",
-          "en": "may it be ruined",
-          "ur": "تباہ ہو جائے"
+          "en": "be ruined",
+          "ur": "ٹوٹ جائیں"
+        },
+        {
+          "ar": "أَغْنَىٰ",
+          "ar_plain": "اغنى",
+          "translit": "aghnaa",
+          "en": "availed",
+          "ur": "کام آیا"
+        },
+        {
+          "ar": "سَيَصْلَىٰ",
+          "ar_plain": "سيصلى",
+          "translit": "sa-yaslaa",
+          "en": "will burn",
+          "ur": "داخل ہو گا"
         },
         {
           "ar": "يَدَا",
           "ar_plain": "يدا",
           "translit": "yadaa",
           "en": "two hands",
-          "ur": "دو ہاتھ"
-        },
-        {
-          "ar": "أَبِي",
-          "ar_plain": "أبي",
-          "translit": "abii",
-          "en": "my father",
-          "ur": "میرا باپ"
-        },
-        {
-          "ar": "لَهَبٍ",
-          "ar_plain": "لهب",
-          "translit": "lahabin",
-          "en": "of flame",
-          "ur": "آگ کا"
+          "ur": "دونوں ہاتھ"
         }
       ],
       "right_column": [
         {
-          "en": "may it be ruined",
-          "ur": "تباہ ہو جائے"
+          "en": "perfect verb (111:2)",
+          "ur": "ماضی (111:2)"
         },
         {
-          "en": "two hands",
-          "ur": "دو ہاتھ"
+          "en": "dual noun",
+          "ur": "تثنیہ اسم"
         },
         {
-          "en": "my father",
-          "ur": "میرا باپ"
+          "en": "perfect verb",
+          "ur": "ماضی"
         },
         {
-          "en": "of flame",
-          "ur": "آگ کا"
+          "en": "سَـ + imperfect: future",
+          "ur": "سَـ + مضارع: مستقبل"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
+          0
+        ],
+        [
+          2,
           3
+        ],
+        [
+          3,
+          1
         ]
       ],
       "xp_value": 1
     },
     {
-      "type": "GRAMMAR_PARSE",
-      "id": "ch46-l04-ex04",
-      "sentence_ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ",
-      "words": [
-        {
-          "ar": "تَبَّتْ",
-          "ar_plain": "تبت",
-          "translit": "tabbat",
-          "en": "may it be ruined",
-          "ur": "یہ برباد ہو سکتا ہے"
-        },
-        {
-          "ar": "يَدَا",
-          "ar_plain": "يدا",
-          "translit": "yadaa",
-          "en": "two hands",
-          "ur": "دو ہاتھ"
-        },
-        {
-          "ar": "أَبِي",
-          "ar_plain": "أبي",
-          "translit": "abii",
-          "en": "my father",
-          "ur": "میرے والد"
-        },
-        {
-          "ar": "لَهَبٍ",
-          "ar_plain": "لهب",
-          "translit": "lahabin",
-          "en": "of flame",
-          "ur": "شعلے کی"
-        }
-      ],
-      "available_roles": [
-        "VERB",
-        "SUBJECT",
-        "POSSESSIVE",
-        "ADJECTIVE"
-      ],
-      "correct_roles": [
-        "VERB",
-        "SUBJECT",
-        "POSSESSIVE",
-        "ADJECTIVE"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "تَبَّتْ = prayer verb (ماضی used for wish). يَدَا = subject in dual. أَبِي لَهَبٍ = idafa chain meaning 'father of flame.' Abu Lahab was known for his bright-red face.",
-        "ur": "تَبَّتْ = prayer verb (wish کے لیے used ماضی)۔ يَدَا = subject dual میں۔ أَبِي لَهَبٍ = idafa chain جس کا مطلب 'آگ کے باپ'۔ Abu Lahab اپنے چمکدار سرخ چہرے کی وجہ سے مشہور تھا۔"
-      }
-    },
-    {
       "type": "BUILD_SENTENCE",
       "id": "ch46-l04-ex05",
       "target_translation": {
-        "en": "May Abu Lahab's hands be ruined.",
-        "ur": "ابی لہب کے ہاتھ تباہ ہوں۔"
+        "en": "His wealth will not avail him. (111:2)",
+        "ur": "اس کا مال اس کے کام نہیں آیا۔ (111:2)"
       },
       "tiles": [
         {
-          "ar": "تَبَّتْ",
-          "ar_plain": "تبت",
-          "translit": "tabbat",
-          "en": "may be ruined (prayer)",
-          "ur": "تباہ ہو جائے ( دعا)"
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "maa",
+          "en": "not",
+          "ur": "نہ"
         },
         {
-          "ar": "يَدَا",
-          "ar_plain": "يدا",
-          "translit": "yadaa",
-          "en": "two hands",
-          "ur": "دو ہاتھ"
+          "ar": "أَغْنَىٰ",
+          "ar_plain": "اغنى",
+          "translit": "aghnaa",
+          "en": "availed",
+          "ur": "کام آیا"
         },
         {
-          "ar": "أَبِي",
-          "ar_plain": "أبي",
-          "translit": "abii",
-          "en": "father of",
-          "ur": "باپ"
+          "ar": "عَنْهُ",
+          "ar_plain": "عنه",
+          "translit": "'anhu",
+          "en": "him",
+          "ur": "اس کے"
         },
         {
-          "ar": "لَهَبٍ",
-          "ar_plain": "لهب",
-          "translit": "lahabin",
-          "en": "flame",
-          "ur": "آگ"
+          "ar": "مَالُهُ",
+          "ar_plain": "ماله",
+          "translit": "maaluhu",
+          "en": "his wealth",
+          "ur": "اس کا مال"
         }
       ],
       "correct_order": [
@@ -327,82 +308,83 @@
       "xp_value": 1
     },
     {
-      "type": "TAP_TRANSLATION",
+      "type": "TRUE_FALSE",
       "id": "ch46-l04-ex06",
-      "prompt": {
-        "ar": "وَتَبَّ",
-        "ar_plain": "وتب",
-        "translit": "wa tabb",
-        "en": "and may he be ruined",
-        "ur": "اور وہ خود بھی تباہ ہو"
+      "statement": {
+        "en": "In سَيَصْلَىٰ, سَـ is a governor that makes the verb مَنْصُوب.",
+        "ur": "سَيَصْلَىٰ میں سَـ عامل ہے جو فعل کو منصوب کرتا ہے۔"
       },
-      "options": [
-        {
-          "en": "and may he be ruined",
-          "ur": "اور وہ خود بھی تباہ ہو"
-        },
-        {
-          "en": "and the flame was ruined",
-          "ur": "اور آگ جل گئی"
-        },
-        {
-          "en": "and two were destroyed",
-          "ur": "اور دو تباہ ہو گئے"
-        },
-        {
-          "en": "and his father was destroyed",
-          "ur": "اور اس کا باپ تباہ ہوا"
-        }
-      ],
-      "correct_index": 0,
+      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "وَتَبَّ is the conjunction وَوْ (and) plus the verb تَبَّ repeated, referring back to the person Abu Lahab himself. تَبَّ here is short for تَبَّ رَجُلٌ (may the man be ruined).",
-        "ur": "وَتَبَّ conjunction وَوْ (اور) plus verb تَبَّ repeated ہے، شخص Abu Lahab خود کو reference کرتا ہے۔ تَبَّ یہاں تَبَّ رَجُلٌ (آدمی تباہ ہو جائے) کا مختصر ہے۔"
+        "en": "False. سَـ only marks the future; it governs nothing.",
+        "ur": "غلط۔ سَـ صرف مستقبل بتاتا ہے؛ یہ عمل نہیں کرتا۔"
       }
     },
     {
-      "type": "TRUE_FALSE",
+      "type": "TAP_TRANSLATION",
       "id": "ch46-l04-ex07",
-      "statement": {
-        "en": "The Surah is named الْمَسَدِ after the palm-fiber rope, metaphorically describing Abu Lahab's useless wealth.",
-        "ur": "Surah کا نام الْمَسَدِ کھوجل کی رسی کے بعد رکھا گیا ہے، Abu Lahab کے بےکار مال کی metaphorical description۔"
+      "prompt": {
+        "ar": "سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ",
+        "ar_plain": "سيصلى نارا ذات لهب",
+        "translit": "sa-yaslaa naaran dhaata lahab",
+        "en": "He will burn in a Fire of blazing flame.",
+        "ur": "وہ عنقریب بھڑکتی آگ میں داخل ہو گا۔"
       },
-      "correct_answer": true,
+      "options": [
+        {
+          "en": "He lit a fire.",
+          "ur": "اس نے آگ جلائی۔"
+        },
+        {
+          "en": "He will burn in a Fire of blazing flame.",
+          "ur": "وہ عنقریب بھڑکتی آگ میں داخل ہو گا۔"
+        },
+        {
+          "en": "The fire did not burn him.",
+          "ur": "آگ نے اسے نہیں جلایا۔"
+        },
+        {
+          "en": "Do not go near the fire.",
+          "ur": "آگ کے قریب مت جاؤ۔"
+        }
+      ],
+      "correct_index": 1,
       "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Al-Masad — Tadabbur unlock complete",
-      "ar": "سُورَةُ الْمَسَدِ — تَمَّ الْفَهْمُ",
-      "ur": "سورۃ المسد — سمجھ مکمل"
+      "en": "Perfect verbs in 111:1",
+      "ar": "الْفِعْلُ الْمَاضِي",
+      "ur": "111:1 میں ماضی کے افعال"
     },
     "ayah": {
       "surah": 111,
       "ayah": 1,
       "label": "Al-Masad 111:1",
       "ar": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
-      "en": "May the hands of Abu Lahab be ruined, and may he be ruined.",
-      "ur": "ابی لہب کے ہاتھ تباہ ہوں اور وہ خود بھی تباہ ہو۔",
+      "en": "May the hands of Abu Lahab be ruined, and ruined is he.",
+      "ur": "ابو لہب کے دونوں ہاتھ ٹوٹ جائیں اور وہ ہلاک ہو گیا۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/111001.mp3"
     },
     "highlighted_word_indices": [
       0,
-      1,
-      2,
-      3,
       4
     ],
+    "highlighted_words": [
+      "تَبَّتْ",
+      "وَتَبَّ"
+    ],
     "noor_explanation": {
-      "en": "Five Tadabbur Surahs now complete: Al-Fatiha, An-Nas, Al-Falaq, Al-Ikhlas, Al-Masad. You have earned the Al-Masad badge. تَبَّتْ يَدَا أَبِي لَهَبٍ — you now understand every word of this Surah. The remaining ayat of Al-Masad build on this foundation. Continue.",
-      "ur": "پانچ Tadabbur Surahs اب مکمل: الفاتحہ، الناس، الفلق، الإخلاص، المسد۔ آپ نے Al-Masad badge حاصل کیا ہے۔ تَبَّتْ يَدَا أَبِي لَهَبٍ — اب آپ اس Surah کا ہر لفظ سمجھتے ہیں۔ المسد کی باقی ayat اس بنیاد پر built ہیں۔ جاری رکھیں۔"
+      "en": "تَبَّتْ and تَبَّ are perfect verbs — no three-state ending applies to them.",
+      "ur": "تَبَّتْ اور تَبَّ ماضی کے فعل ہیں — ان پر تین حالتوں والا آخر لاگو نہیں ہوتا۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Al-Masad is now unlocked. You have read the entire Surah word by word and understood its grammar. تَبَّتْ يَدَا أَبِي لَهَبٍ — this phrase will stay with you. Five Surahs deep in Tadabbur. Keep going.",
-      "ur": "المسد اب unlock ہو گئی ہے۔ آپ نے پوری Surah لفظ بہ لفظ پڑھی اور اس کی grammar سمجھی۔ تَبَّتْ يَدَا أَبِي لَهَبٍ — یہ phrase آپ کے ساتھ رہے گی۔ Tadabbur میں پانچ Surahs گہرائی میں۔ جاری رکھیں۔"
+      "en": "Al-Masad 1–3: four perfect verbs and one imperfect with سَـ. Sort the verb first; only an imperfect has a state.",
+      "ur": "المسد 1–3: ماضی کے چار فعل اور سَـ کے ساتھ ایک مضارع۔ پہلے فعل کی قسم پہچانیں؛ حالت صرف مضارع کی ہوتی ہے۔"
     }
   }
 }
