@@ -20,13 +20,16 @@ npm run audio:audit-catalog:db          # must end "missing: 0"
 
 Then empty the table below.
 
-## Missing (12) — production audit 2026-10-02, R2 coverage 3845/3857
+## Missing (20) — production audit 2026-10-02, R2 coverage 3834/3854
 
 Card and exercise numbers are 1-based, as the learner sees them.
 
 | Lesson | Where | Arabic | Key (prefix) |
 |---|---|---|---|
 | Ch 36 L2 | Discover card 1 | مَصْدَرُ فَعَّلَ: تَفْعِيلٌ | `1780770d` |
+| Ch 46 L5 | Discover card 3 | هُوَ لَا يَذْهَبُ | `974a2e73` |
+| Ch 46 L5 | Discover card 4 | أُرِيدُ أَنْ أَذْهَبَ | `602480a0` |
+| Ch 46 L5 | Exercise 2 | مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ | `40911728` |
 | Ch 59 L2 | Discover card 4 | مُتَصَدِّعًا | `4008d749` |
 | Ch 59 L2 | Exercise 4 | لَوْ أَنزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ لَّرَأَيْتَهُ خَاشِعًا مُتَصَدِّعًا | `2cd4fdd3` |
 | Ch 61 L4 | Discover card 7 | بَابُ اسْمِ الْآلَةِ — مِفْعَل، مِفْعَال، مِفْعَلَة | `398224ca` |
@@ -36,6 +39,11 @@ Card and exercise numbers are 1-based, as the learner sees them.
 | Ch 67 L4 | Discover card 4 | وَلَوْ أَنَّ قُرْآنًا سُيِّرَتْ بِهِ الْجِبَالُ أَوْ قُطِّعَتْ بِهِ الْأَرْضُ أَوْ كُلِّمَ بِهِ الْمَوْتَىٰ | `c7f5c07d` |
 | Ch 67 L4, L5 | L4 exercise 1, L5 exercise 7 | وَلَوْ أَنَّ قُرْآنًا سُيِّرَتْ بِهِ الْجِبَالُ | `7d303b2a` |
 | Ch 67 L4 | Exercise 8 | سُيِّرَتْ | `66865656` |
+| Ch 69 L2 | Discover card 2 | ادْعُونِي أَسْتَجِبْ لَكُمْ | `a03bd765` |
+| Ch 69 L2 | Discover card 3 | فَاذْكُرُونِي أَذْكُرْكُمْ | `4d914160` |
+| Ch 69 L2 | Discover card 4 | أَمْرٌ بَعْدَ أَمْرٍ | `4c731563` |
+| Ch 69 L2 | Exercise 3 | اِجْتَهِدْ ___ | `8ffdce7b` |
+| Ch 69 L2 | Exercise 7 | أَذْكُرْكُمْ | `d8c38f4f` |
 | Ch 70 L6 | Discover card 1 | مراجعة: أنواع الاستثناء بـ إِلَّا | `83bd1a88` |
 | Ch 72 L6 | Discover card 3 | أَيُّهَا لا يتغير | `e3a60405` |
 

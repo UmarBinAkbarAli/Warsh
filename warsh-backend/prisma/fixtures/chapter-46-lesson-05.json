@@ -2,13 +2,12 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 46, Lesson 5 — Parsing ayat with mixed verb states, and verse 2 of Al-Masad.",
+    "_note": "Chapter 46, Lesson 5 — sort verbs one at a time: perfect verbs have no state; the three states of the imperfect, with Al-Masad 111:2–3.",
     "chapter_order": 46,
     "lesson_order": 5,
     "chapter_title": "The Three States of المضارع (Application)",
     "title": "Parsing Mixed-State Ayat",
     "titleAr": "الْآيَاتُ ذَاتُ الْأَحْوَالِ الْمُخْتَلِفَةِ",
-    "source": "book5_lesson2_states_application.md",
     "estimated_minutes": 8,
     "xp_reward": 10
   },
@@ -23,8 +22,8 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/111002.mp3"
     },
     "noor_intro": {
-      "en": "Verse 2 of Al-Masad introduces لَا تُفْنِي — a present-tense verb in the jussive state, triggered by لَا النَّاهِيَة. This lesson practices parsing mixed-state ayat where commands and descriptions coexist.",
-      "ur": "Al-Masad کی verse 2 میں لَا تُفْنِي ہے — jussive حالت میں present-tense verb، لَا النَّاهِيَة سے trigger ہوا۔ اس lesson میں mixed-state ayat parse کرنے کی practice ہو گی جہاں commands اور descriptions اکٹھے ہیں۔"
+      "en": "Verse 2 has two verbs, أَغْنَىٰ and كَسَبَ — both perfect (past). The three states belong only to the present-tense verb. This lesson sorts verbs one at a time.",
+      "ur": "آیت 2 میں دو فعل ہیں، أَغْنَىٰ اور كَسَبَ — دونوں ماضی ہیں۔ تین حالتیں صرف مضارع فعل کی ہوتی ہیں۔ اس سبق میں ہم ایک ایک فعل کو الگ پہچانیں گے۔"
     },
     "autoplay": true
   },
@@ -37,89 +36,89 @@
         "ur": "مختلف حالتوں والی ایک ayat میں تجزیہ"
       },
       "explanation": {
-        "en": "A single ayah can contain multiple verb states. The key is to look at each verb independently and identify what triggers its state. لَا النَّاهِيَة triggers jazm; أَنْ triggers nasb; no trigger means raf'.",
-        "ur": "ایک ayat میں متعدد verb states ہو سکتے ہیں۔ کلید یہ ہے کہ ہر فعل کو independently دیکھیں اور اس کی حالت trigger کرنے والے کو پہچانیں۔ لَا النَّاهِيَة جزم trigger کرتی ہے؛ أَنْ نصب trigger کرتی ہے؛ کوئی trigger نہیں تو رفع۔"
+        "en": "A single ayah can hold several verbs. Look at each verb on its own: first ask whether it is present tense, then find what governs it. لَا النَّاهِيَة → مَجْزُوم; أَنْ → مَنْصُوب; no governor → مَرْفُوع.",
+        "ur": "ایک آیت میں کئی فعل ہو سکتے ہیں۔ ہر فعل کو الگ دیکھیں: پہلے پوچھیں کہ کیا یہ مضارع ہے، پھر اس پر اثر ڈالنے والا لفظ تلاش کریں۔ لَا النَّاهِيَة → مَجْزُوم؛ أَنْ → مَنْصُوب؛ کوئی عامل نہیں → مَرْفُوع۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "لَا تُفْنِي",
-        "ar_plain": "لا تفني",
-        "translit": "laa tufnii",
-        "en": "it does not use up (jazm)",
-        "ur": "وہ ختم نہیں کرتی (جزم)"
+        "ar": "لَا تَذْهَبْ",
+        "ar_plain": "لا تذهب",
+        "translit": "laa tadhhab",
+        "en": "Don't go. (constructed)",
+        "ur": "مت جاؤ۔ (بنائی گئی مثال)"
       },
       "explanation": {
-        "en": "لَا تُفْنِي — the لَا is النَّاهِيَة (prohibition: no longer), triggering jazm on the verb. تَ (she) is the prefix, ف-ن-ي is the root (to use up/exhaust). With jussive: تُفْنِي (kasra on ت).",
-        "ur": "لَا تُفْنِي — لَا ہے النَّاهِيَة (prohibition: اب نہیں)، جو verb پر jazm trigger کرتی ہے۔ تَ (وہ) prefix ہے، ف-ن-ي root ہے (ختم کرنا/ exhaustion)۔ jazm کے ساتھ: تُفْنِي (تَ پر kasra)۔"
+        "en": "Constructed example. This لَا forbids — it is لَا النَّاهِيَة, so the verb is مَجْزُوم: see the sukūn on the last letter, تَذْهَبْ.",
+        "ur": "بنائی گئی مثال۔ یہ لَا منع کرتا ہے — یہ لَا النَّاهِيَة ہے، اس لیے فعل مَجْزُوم ہے: آخری حرف پر سکون دیکھیں، تَذْهَبْ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "مَالَهُ",
-        "ar_plain": "ماله",
-        "translit": "maalahu",
-        "en": "his wealth",
-        "ur": "اس کا مال"
+        "ar": "هُوَ لَا يَذْهَبُ",
+        "ar_plain": "هو لا يذهب",
+        "translit": "huwa laa yadhhabu",
+        "en": "He does not go. (constructed)",
+        "ur": "وہ نہیں جاتا۔ (بنائی گئی مثال)"
       },
       "explanation": {
-        "en": "مَالَهُ — مَالٌ (wealth) + هُ (his). The attached pronoun هُ means 'his.' This is a possession structure with an attached pronoun, not idafa.",
-        "ur": "مَالَهُ — مَالٌ (مال) + هُ (اس کا)۔ attached pronoun هُ کا مطلب ہے 'اس کا'۔ یہ attached pronoun کے ساتھ possession structure ہے، idafa نہیں۔"
+        "en": "Constructed example. This لَا only negates a statement — it is لَا النَّافِيَة, which governs nothing, so the verb stays مَرْفُوع with ḍamma: يَذْهَبُ. Same لَا on the page, a different job.",
+        "ur": "بنائی گئی مثال۔ یہ لَا صرف بات کی نفی کرتا ہے — یہ لَا النَّافِيَة ہے جو فعل پر اثر نہیں ڈالتا، اس لیے فعل ضمہ کے ساتھ مَرْفُوع رہتا ہے: يَذْهَبُ۔ لکھنے میں وہی لَا، کام مختلف۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "وَمَا كَسَبَ",
-        "ar_plain": "وما كسب",
-        "translit": "wa maa kasaba",
-        "en": "and what he earned",
-        "ur": "اور جسے اس نے کمایا"
+        "ar": "أُرِيدُ أَنْ أَذْهَبَ",
+        "ar_plain": "اريد ان اذهب",
+        "translit": "uriidu an adhhaba",
+        "en": "I want to go. (constructed)",
+        "ur": "میں جانا چاہتا ہوں۔ (بنائی گئی مثال)"
       },
       "explanation": {
-        "en": "وَمَا كَسَبَ — وَوْ is conjunction, مَا is relative pronoun (what), كَسَبَ is past tense (he earned). The relative clause مَا كَسَبَ modifies implicitly something from the previous context.",
-        "ur": "وَمَا كَسَبَ — وَوْ conjunction ہے، مَا relative pronoun ہے (جو)، كَسَبَ ماضی tense ہے (اس نے کمایا)۔ relative clause مَا كَسَبَ پچھلے context سے کچھ implicitly modify کرتا ہے۔"
+        "en": "Constructed example. أَنْ makes the verb after it مَنْصُوب — see the fatḥa: أَذْهَبَ. أُرِيدُ has no governor, so it is مَرْفُوع.",
+        "ur": "بنائی گئی مثال۔ أَنْ اپنے بعد والے فعل کو مَنْصُوب کرتا ہے — فتحہ دیکھیں: أَذْهَبَ۔ أُرِيدُ پر کوئی عامل نہیں، اس لیے وہ مَرْفُوع ہے۔"
       }
     },
     {
       "type": "GRAMMAR_NOTE",
       "title": {
-        "en": "Parsing: لَا تُفْنِي مَالَهُ وَمَا كَسَبَ",
-        "ur": "تجزیہ: لَا تُفْنِي مَالَهُ وَمَا كَسَبَ"
+        "en": "Parsing Al-Masad 111:2: مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ",
+        "ur": "تجزیہ، المسد 111:2: مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ"
       },
       "body": {
-        "en": "لَا (النَّاهِيَة) → تُفْنِي (jazm, she) → مَالَهُ (object: his wealth) → وَ (conjunction) → مَا (relative pronoun) → كَسَبَ (past: he earned). The whole ayah says: his wealth and his earnings do not avail him.",
-        "ur": "لَا (النَّاهِيَة) → تُفْنِي (جزم، وہ) → مَالَهُ (object: اس کا مال) → وَ (conjunction) → مَا (relative pronoun) → كَسَبَ (ماضی: اس نے کمایا)۔ پوری ayah کہتی ہے: اس کا مال اور اس کی کمائی اسے فائدہ نہیں دیں گی۔"
+        "en": "مَا (negation: not) → أَغْنَىٰ (perfect verb: availed) → عَنْهُ (him) → مَالُهُ (subject: his wealth) → وَمَا كَسَبَ (and what he earned; كَسَبَ is a perfect verb). There is no present-tense verb here, so there is no state to find.",
+        "ur": "مَا (نفی: نہیں) → أَغْنَىٰ (فعل ماضی: کام آیا) → عَنْهُ (اس کے) → مَالُهُ (فاعل: اس کا مال) → وَمَا كَسَبَ (اور جو اس نے کمایا؛ كَسَبَ فعل ماضی ہے)۔ یہاں کوئی مضارع فعل نہیں، اس لیے کوئی حالت تلاش کرنے کو نہیں۔"
       }
     },
     {
       "type": "WORD",
       "text": {
-        "ar": "تُفْنِي",
-        "ar_plain": "تفني",
-        "translit": "tufnii",
-        "en": "she uses up / exhausts",
-        "ur": "وہ ختم کرتی ہے"
+        "ar": "أَغْنَىٰ",
+        "ar_plain": "اغنى",
+        "translit": "aghnaa",
+        "en": "availed, was of use",
+        "ur": "کام آیا، فائدہ دیا"
       },
       "explanation": {
-        "en": "تُفْنِي from the root ف-ن-ي (to be exhausted, to use up). لَا تُفْنِي means 'it does not use up' — the prohibition particle creates a universal negation in the present, not a command.",
-        "ur": "تُفْنِي root ف-ن-ي (ختم ہو جانا،ختم کرنا) سے۔ لَا تُفْنِي کا مطلب ہے 'وہ ختم نہیں کرتی' — prohibition particle present میں universal negation بناتی ہے، command نہیں۔"
+        "en": "أَغْنَىٰ — root غ-ن-ي, a perfect (past) verb: 'availed'. With مَا before it: 'did not avail'. Perfect verbs never take the three states.",
+        "ur": "أَغْنَىٰ — مادہ غ-ن-ي، فعل ماضی: 'کام آیا'۔ پہلے مَا کے ساتھ: 'کام نہ آیا'۔ ماضی فعل پر تین حالتیں لاگو نہیں ہوتیں۔"
       }
     },
     {
       "type": "AYAH_PREVIEW",
       "text": {
         "ar": "سَيَصْلَى نَارًا ذَاتَ لَهَبٍ",
-        "ar_plain": "سيصلی نارا ذا لهبا",
-        "translit": "sa-yaslaa naarun dhaata lahabin",
+        "ar_plain": "سيصلى نارا ذات لهب",
+        "translit": "sa-yaslaa naaran dhaata lahab",
         "en": "He will enter a Fire of blazing flame.",
         "ur": "وہ آگ میں داخل ہو گا جس کا شعلہ بھڑکتا ہے۔"
       },
       "explanation": {
-        "en": "Verse 3 introduces سَيَصْلَى — future tense with سَـ prefix. يَصْلَى is the present tense (he enters/burns). We'll study this structure in the next lesson.",
-        "ur": "Verse 3 میں سَيَصْلَى ہے — سَـ prefix کے ساتھ future tense۔ يَصْلَى present tense ہے (وہ داخل ہوتا ہے/جلتا ہے)۔ ہم اس structure کو اگلے lesson میں study کریں گے۔"
+        "en": "Verse 3: سَيَصْلَى — the prefix سَـ marks the future ('will'). سَـ is not a governor, so the present-tense verb يَصْلَى stays مَرْفُوع.",
+        "ur": "آیت 3: سَيَصْلَى — سَـ مستقبل بتاتا ہے ('گا')۔ سَـ عامل نہیں، اس لیے مضارع فعل يَصْلَى مَرْفُوع رہتا ہے۔"
       }
     }
   ],
@@ -127,28 +126,35 @@
     {
       "type": "GRAMMAR_PARSE",
       "id": "ch46-l05-ex01",
-      "sentence_ar": "لَا تُفْنِي مَالَهُ",
+      "sentence_ar": "لَا يَكْتُبُ الطَّالِبُ الدَّرْسَ",
       "words": [
         {
           "ar": "لَا",
           "ar_plain": "لا",
           "translit": "laa",
-          "en": "not (no longer)",
-          "ur": "نہیں (اب نہیں)"
+          "en": "not",
+          "ur": "نہیں"
         },
         {
-          "ar": "تُفْنِي",
-          "ar_plain": "تفني",
-          "translit": "tufnii",
-          "en": "she uses up",
-          "ur": "وہ استعمال کرتا ہے"
+          "ar": "يَكْتُبُ",
+          "ar_plain": "يكتب",
+          "translit": "yaktubu",
+          "en": "writes",
+          "ur": "لکھتا ہے"
         },
         {
-          "ar": "مَالَهُ",
-          "ar_plain": "ماله",
-          "translit": "maalahu",
-          "en": "his wealth",
-          "ur": "اس کی دولت"
+          "ar": "الطَّالِبُ",
+          "ar_plain": "الطالب",
+          "translit": "at-taalibu",
+          "en": "the student",
+          "ur": "طالب علم"
+        },
+        {
+          "ar": "الدَّرْسَ",
+          "ar_plain": "الدرس",
+          "translit": "ad-darsa",
+          "en": "the lesson",
+          "ur": "سبق"
         }
       ],
       "available_roles": [
@@ -160,126 +166,131 @@
       "correct_roles": [
         "PARTICLE",
         "VERB",
+        "SUBJECT",
         "OBJECT"
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَا is النَّاهِيَة triggering jazm on تُفْنِي (jussive state). مَالَهُ is the object (مفعول به) — 'his wealth.' The entire phrase means: his wealth does not use up/burn.",
-        "ur": "لَا ہے النَّاهِيَة جو تُفْنِي پر jazm trigger کرتی ہے (jussive حالت)۔ مَالَهُ object (مفعول به) ہے — 'اس کا مال'۔ پوری phrase کا مطلب: اس کا مال ختم نہیں کرتا/نہیں جلائے گی۔"
+        "en": "Constructed sentence: 'The student does not write the lesson.' لَا = particle (negation); يَكْتُبُ = verb, مَرْفُوع; الطَّالِبُ = subject; الدَّرْسَ = object.",
+        "ur": "بنایا گیا جملہ: 'طالب علم سبق نہیں لکھتا۔' لَا = حرف (نفی)؛ يَكْتُبُ = فعل، مَرْفُوع؛ الطَّالِبُ = فاعل؛ الدَّرْسَ = مفعول۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch46-l05-ex02",
       "prompt": {
-        "ar": "لَا تُفْنِي مَالَهُ وَمَا كَسَبَ",
-        "ar_plain": "لا تفني ماله وما كسب",
-        "translit": "laa tufnii maalahu wa maa kasaba",
-        "en": "Neither his wealth nor his earnings avail him.",
-        "ur": "نہ اس کا مال اسے فائدہ دے گا اور نہ اس کی کمائی۔"
+        "ar": "مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ",
+        "ar_plain": "ما اغنى عنه ماله وما كسب",
+        "translit": "maa aghnaa 'anhu maaluhu wa maa kasab",
+        "en": "His wealth will not avail him, nor what he gained.",
+        "ur": "نہ اس کا مال اس کے کام آیا اور نہ وہ جو اس نے کمایا۔"
       },
       "options": [
         {
-          "en": "Neither his wealth nor his earnings avail him.",
-          "ur": "نہ اس کا مال اسے فائدہ دے گا اور نہ اس کی کمائی۔"
+          "en": "His wealth used up what he earned.",
+          "ur": "اس کے مال نے اس کی کمائی ختم کر دی۔"
         },
         {
-          "en": "His wealth uses up what he earned.",
-          "ur": "اس کا مال اس کی کمائی ختم کر دیتا ہے۔"
+          "en": "His wealth will not avail him, nor what he gained.",
+          "ur": "نہ اس کا مال اس کے کام آیا اور نہ وہ جو اس نے کمایا۔"
         },
         {
-          "en": "He does not use up his wealth.",
-          "ur": "وہ اپنا مال ختم نہیں کرتا۔"
+          "en": "He did not use up his wealth.",
+          "ur": "اس نے اپنا مال ختم نہیں کیا۔"
         },
         {
-          "en": "His wealth is not burned.",
-          "ur": "اس کا مال نہیں جلتا۔"
+          "en": "His wealth and earnings will save him.",
+          "ur": "اس کا مال اور کمائی اسے بچا لیں گے۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَا تُفْنِي is 'it does not use up' ( النَّاهِيَة = no longer/not). مَالَهُ = his wealth. وَمَا كَسَبَ = and what he earned. The ayah says all his resources will not save him.",
-        "ur": "لَا تُفْنِي ہے 'وہ ختم نہیں کرتی' (النَّاهِيَة = اب نہیں/نہیں)۔ مَالَهُ = اس کا مال۔ وَمَا كَسَبَ = اور جسے اس نے کمایا۔ ayah کہتی ہے کہ اس کے تمام resources اسے بچا نہیں سکیں گے۔"
+        "en": "مَا أَغْنَىٰ = 'did not avail'; عَنْهُ = 'him'; مَالُهُ = 'his wealth' (the subject); وَمَا كَسَبَ = 'nor what he gained'.",
+        "ur": "مَا أَغْنَىٰ = 'کام نہ آیا'؛ عَنْهُ = 'اس کے'؛ مَالُهُ = 'اس کا مال' (فاعل)؛ وَمَا كَسَبَ = 'اور نہ وہ جو اس نے کمایا'۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch46-l05-ex03",
       "statement": {
-        "en": "لَا النَّاهِيَةُ in this ayah is a negation of an ongoing action, not a prohibition command.",
-        "ur": "اس ayah میں لَا النَّاهِيَةُ ongoing action کی نفی ہے، prohibition command نہیں۔"
+        "en": "In هُوَ لَا يَذْهَبُ, لَا is the prohibition لا and the verb is مَجْزُوم.",
+        "ur": "هُوَ لَا يَذْهَبُ میں لَا منع کرنے والا لا ہے اور فعل مَجْزُوم ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. Here لَا only negates ('he does not go'), so the verb stays مَرْفُوع — يَذْهَبُ with ḍamma. The prohibition would be لَا تَذْهَبْ.",
+        "ur": "غلط۔ یہاں لَا صرف نفی کرتا ہے ('وہ نہیں جاتا')، اس لیے فعل مَرْفُوع رہتا ہے — ضمہ کے ساتھ يَذْهَبُ۔ منع ہوتا تو لَا تَذْهَبْ ہوتا۔"
+      }
     },
     {
       "type": "MATCHING",
       "id": "ch46-l05-ex04",
       "left_column": [
         {
-          "ar": "تُفْنِي",
-          "ar_plain": "تفني",
-          "translit": "tufnii",
-          "en": "she uses up (jazm)",
-          "ur": "وہ ختم کرتی ہے (جزم)"
+          "ar": "لَا تَذْهَبْ",
+          "ar_plain": "لا تذهب",
+          "translit": "laa tadhhab",
+          "en": "don't go",
+          "ur": "مت جاؤ"
         },
         {
-          "ar": "مَالَهُ",
-          "ar_plain": "ماله",
-          "translit": "maalahu",
-          "en": "his wealth",
-          "ur": "اس کا مال"
+          "ar": "لَا يَذْهَبُ",
+          "ar_plain": "لا يذهب",
+          "translit": "laa yadhhabu",
+          "en": "he does not go",
+          "ur": "وہ نہیں جاتا"
+        },
+        {
+          "ar": "أَنْ يَذْهَبَ",
+          "ar_plain": "ان يذهب",
+          "translit": "an yadhhaba",
+          "en": "that he goes",
+          "ur": "کہ وہ جائے"
         },
         {
           "ar": "كَسَبَ",
           "ar_plain": "كسب",
           "translit": "kasaba",
-          "en": "he earned (past)",
-          "ur": "اس نے کمایا (ماضی)"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not / no longer",
-          "ur": "نہیں / اب نہیں"
+          "en": "he earned",
+          "ur": "اس نے کمایا"
         }
       ],
       "right_column": [
         {
-          "en": "she uses up (jazm)",
-          "ur": "وہ ختم کرتی ہے (جزم)"
+          "en": "after أَنْ — مَنْصُوب",
+          "ur": "أَنْ کے بعد — مَنْصُوب"
         },
         {
-          "en": "his wealth",
-          "ur": "اس کا مال"
+          "en": "perfect verb — no state",
+          "ur": "فعل ماضی — کوئی حالت نہیں"
         },
         {
-          "en": "he earned (past)",
-          "ur": "اس نے کمایا (ماضی)"
+          "en": "prohibition — مَجْزُوم",
+          "ur": "منع — مَجْزُوم"
         },
         {
-          "en": "not / no longer",
-          "ur": "نہیں / اب نہیں"
+          "en": "negation — مَرْفُوع",
+          "ur": "نفی — مَرْفُوع"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
           3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
         ]
       ],
       "xp_value": 1
@@ -382,7 +393,7 @@
       "id": "ch46-l05-ex07",
       "prompt": {
         "ar": "نَارًا ذَاتَ لَهَبٍ",
-        "ar_plain": "نارا ذا لهبا",
+        "ar_plain": "نارا ذات لهب",
         "translit": "naaran dhaata lahabin",
         "en": "a Fire of blazing flame",
         "ur": "آگ جس کا شعلہ بھڑکتا ہے"
@@ -408,16 +419,16 @@
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "نَارًا is 'a Fire' (accusative). ذَاتَ is 'possessing/having' — from ذَاتُ meaning 'the one who has.' لَهَبٍ is 'of flame.' This is an idafa chain: Fire possessing flame.",
-        "ur": "نَارًا 'آگ' ہے (accusative)۔ ذَاتَ 'کی / والی' ہے — ذَاتُ سے جس کا مطلب 'وہ جس کے پاس ہو'۔ لَهَبٍ 'آگ کا' ہے۔ یہ idafa chain ہے: آگ جس میں شعلہ ہو۔"
+        "en": "نَارًا is 'a Fire' (accusative). ذَاتَ لَهَبٍ describes it: ذَاتَ ('possessing') is in iḍāfa with لَهَبٍ ('flame') — 'a Fire possessing flame'.",
+        "ur": "نَارًا 'آگ' ہے (منصوب)۔ ذَاتَ لَهَبٍ اس کی صفت ہے: ذَاتَ ('والی') لَهَبٍ ('شعلہ') کے ساتھ اضافت میں ہے — 'شعلے والی آگ'۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Mixed-state parsing in Al-Masad",
-      "ar": "تجزیہ الْمَسَدِ — حَالَاتٌ مُخْتَلِفَةٌ",
-      "ur": "المسد کا تجزیہ — مختلف حالتیں"
+      "en": "One verb at a time: perfect or present, then its state",
+      "ar": "فِعْلًا فِعْلًا: مَاضٍ أَمْ مُضَارِعٌ",
+      "ur": "ایک ایک فعل: ماضی یا مضارع، پھر اس کی حالت"
     },
     "ayah": {
       "surah": 111,
@@ -429,18 +440,18 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/111002.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      1
+      1,
+      5
     ],
     "noor_explanation": {
-      "en": "لَا تُفْنِي مَالَهُ — two different verb states in one ayah. لَا (النَّاهِيَة) triggers jazm on تُفْنِي. كَسَبَ is a past-tense verb. These mixed states are common in Quranic Arabic. The next lesson finishes Al-Masad.",
-      "ur": "لَا تُفْنِي مَالَهُ — ایک ayah میں دو مختلف verb states۔ لَا (النَّاهِيَة) تُفْنِي پر jazm trigger کرتی ہے۔ كَسَبَ ماضی tense کا فعل ہے۔ یہ mixed states قرآنی عربی میں عام ہیں۔ اگلا lesson Al-Masad ختم کرتا ہے۔"
+      "en": "Both verbs in 111:2 — أَغْنَىٰ and كَسَبَ — are past, so they have no state. Find the present-tense verb first; then look for its governor.",
+      "ur": "111:2 کے دونوں فعل — أَغْنَىٰ اور كَسَبَ — ماضی ہیں، اس لیے ان کی کوئی حالت نہیں۔ پہلے مضارع فعل تلاش کریں؛ پھر اس کا عامل دیکھیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "You can now parse an ayah with multiple verb states. لَا تُفْنِي — the النَّاهِيَة triggers jazm. كَسَبَ — past tense stands separately. Al-Masad is almost complete. One more lesson.",
-      "ur": "آپ اب ایک ayat parse کر سکتے ہیں جس میں متعدد verb states ہوں۔ لَا تُفْنِي — النَّاهِيَة jazm trigger کرتی ہے۔ كَسَبَ — ماضی tense separately کھڑا ہے۔ المسد تقریباً مکمل ہے۔ ایک اور lesson۔"
+      "en": "You can now sort verbs one at a time. لَا تَذْهَبْ forbids (مَجْزُوم); لَا يَذْهَبُ only negates (مَرْفُوع); أَنْ يَذْهَبَ is مَنْصُوب; and past verbs like كَسَبَ have no state at all.",
+      "ur": "اب آپ ایک ایک فعل کو پہچان سکتے ہیں۔ لَا تَذْهَبْ منع کرتا ہے (مَجْزُوم)؛ لَا يَذْهَبُ صرف نفی ہے (مَرْفُوع)؛ أَنْ يَذْهَبَ مَنْصُوب ہے؛ اور كَسَبَ جیسے ماضی فعل کی کوئی حالت نہیں۔"
     }
   }
 }

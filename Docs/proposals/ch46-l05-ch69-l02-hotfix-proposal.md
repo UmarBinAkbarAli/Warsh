@@ -1,6 +1,6 @@
 # Hotfix proposal — Ch 46 Lesson 5 and Ch 69 Lesson 2
 
-**Status:** proposal, 2026-10-02. Not approved, not implemented.
+**Status:** applied and published to production 2026-10-02 (owner approved). Ch 69 L1 still open.
 
 The 2026-10-02 content hotfix cleaned the corrupted Urdu in both lessons, but the
 Arabic they teach is still wrong. Both are listed as **Critical** in their chapter
