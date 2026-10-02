@@ -2,43 +2,43 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 45, Lesson 3 - Third state of المضارع: jazm (مجزوم) — jussive.",
+    "_note": "Chapter 45, Lesson 3 — مَجْزُوم after لَمْ, لَمَّا and the لَا of prohibition (sukūn on regular verbs); the positive command is a separate form.",
     "chapter_order": 45,
     "lesson_order": 3,
     "chapter_title": "The Three States of المضارع (مرفوع/منصوب/مجزوم)",
-    "title": "The jazm State — Jussive",
+    "title": "The مَجْزُوم State",
     "titleAr": "الْمُضَارِعُ — حَالَةُ الْجَزْمِ",
-    "source": "madina_reader_grammar_mood.md",
     "estimated_minutes": 9,
-    "xp_reward": 10
+    "xp_reward": 10,
+    "titleUr": "حالتِ جزم"
   },
   "hook": {
     "ayah": {
-      "surah": 104,
-      "ayah": 1,
-      "label": "Al-Humazah 104:1",
-      "ar": "وَيْلٌ لِكُلِّ هُمَزَةٍ لُمَزَةٍ",
-      "en": "Woe to every scorner and mocker.",
-      "ur": "تباہی ہر اس شخص کے لیے جو طعن وتشنیم کرتا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/104001.mp3"
+      "surah": 31,
+      "ayah": 13,
+      "label": "Luqman 31:13",
+      "ar": "يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ",
+      "en": "O my son, do not associate anything with Allah.",
+      "ur": "اے میرے بیٹے! اللہ کے ساتھ شریک نہ ٹھہرانا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/031013.mp3"
     },
+    "autoplay": true,
     "noor_intro": {
-      "en": "The third and final state of المضارع: jazm. This is the mood of negation, command, and condition. It is formed by removing the vowel from the verb's first letter.",
-      "ur": "مضارع کی تیسری اور آخری حالت: jazm۔ یہ negation، command، اور condition کی mood ہے۔ یہ فعل کے پہلے حرف سے vowel ہٹا کر بنتی ہے۔"
-    },
-    "autoplay": true
+      "en": "لَا تُشْرِكْ — \"do not associate\". The لَا of prohibition makes the verb مَجْزُوم: sukūn at the end.",
+      "ur": "لَا تُشْرِكْ — \"شریک نہ ٹھہراؤ\"۔ نہی کا لَا فعل کو مَجْزُوم کرتا ہے: آخر میں سکون۔"
+    }
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "jazm — the jussive state",
-        "ar": "الْجَزْمُ — حَالَةُ النَّفْي وَ الْحُكْمِ",
-        "ur": "جزم — نفی اور حکم کی حالت"
+        "en": "مَجْزُوم — sukūn",
+        "ar": "الْجَزْمُ",
+        "ur": "مَجْزُوم — سکون"
       },
       "explanation": {
-        "en": "jazm (مجزوم) appears after: لَمْ (past negation), لَمَّا (not yet), لَا النَّاهِيَةُ (no longer), andCommands (imperative). It is formed by removing the vowel from the fa'iil letter.",
-        "ur": "jazm (مجزوم) ان کے بعد آتا ہے: لَمْ (ماضی نفی)، لَمَّا (ابھی نہیں)، لَا النَّاهِيَةُ (اب نہیں)، اورCommands (imperative)۔ یہ فیہ کے fa'iil حرف سے vowel ہٹا کر بنتی ہے۔"
+        "en": "After لَمْ (\"did not\"), لَمَّا (\"not yet\") and the لَا of prohibition (\"do not\"), a regular present-tense verb ends in sukūn: لَمْ يَذْهَبْ, لَا تَذْهَبْ.",
+        "ur": "لَمْ (\"نہیں کیا\")، لَمَّا (\"ابھی تک نہیں\") اور نہی کے لَا (\"مت\") کے بعد عام مضارع فعل سکون پر ختم ہوتا ہے: لَمْ يَذْهَبْ، لَا تَذْهَبْ۔"
       }
     },
     {
@@ -46,27 +46,13 @@
       "text": {
         "ar": "لَمْ يَذْهَبْ",
         "ar_plain": "لم يذهب",
-        "translit": "lam yadhahab",
-        "en": "he did not go",
-        "ur": "اس نے نہیں گیا"
+        "translit": "lam yadh-hab",
+        "en": "he did not go (مَجْزُوم)",
+        "ur": "وہ نہیں گیا (مجزوم)"
       },
       "explanation": {
-        "en": "لَمْ causes يَذْهَبُ to become يَذْهَبْ — the Dhamma on يَ is removed, leaving just يْ. This is the jazm form.",
-        "ur": "لَمْ cursor يَذْهَبُ کو يَذْهَبْ بنا دیتا ہے — يَ پر Dhamma ہٹایا جاتا ہے، صرف يْ باقی۔ یہ jazm شکل ہے۔"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "لَمَّا أَذْهَبْ",
-        "ar_plain": "لما أذهب",
-        "translit": "lamaa adhahab",
-        "en": "I have not gone yet",
-        "ur": "میں ابھی نہیں گیا"
-      },
-      "explanation": {
-        "en": "لَمَّا also takes the verb in jazm. Notice the vowel removal: أَذْهَبُ → أَذْهَبْ.",
-        "ur": "لَمَّا بھی فعل کو jazm میں لیتا ہے۔ vowel کے خاتمے پر غور کریں: أَذْهَبُ → أَذْهَبْ۔"
+        "en": "يَذْهَبُ → لَمْ يَذْهَبْ: the ending changes; يَـ stays.",
+        "ur": "يَذْهَبُ ← لَمْ يَذْهَبْ: آخر بدلتا ہے؛ يَـ وہی رہتا ہے۔"
       }
     },
     {
@@ -74,55 +60,38 @@
       "text": {
         "ar": "لَا تَذْهَبْ",
         "ar_plain": "لا تذهب",
-        "translit": "laa tadhahab",
-        "en": "do not go!",
-        "ur": "مت جاؤ!",
-        "type": "EXAMPLE"
+        "translit": "laa tadh-hab",
+        "en": "don't go (مَجْزُوم)",
+        "ur": "مت جاؤ (مجزوم)"
       },
       "explanation": {
-        "en": "Commands in Arabic use negative form with لَا + jazm: لَا تَذْهَبْ = do not go! The positive command simply drops the pronoun: ذَهَبْ = go!",
-        "ur": "عربی میںCommands منفی شکل لَا + jazm سے بنتے ہیں: لَا تَذْهَبْ = مت جاؤ! مثبت command صرف ضمیر ہٹا کر بنتا ہے: ذَهَبْ = جاؤ!"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "How jazm is formed — dropping the vowel",
-        "ar": "جَزْمٌ",
-        "ur": "جزم کیسے بنتا ہے — vowel گرانا"
-      },
-      "explanation": {
-        "en": "In jazm, the final vowel of the verb becomes a sukūn: يَذْهَبُ → لَمْ يَذْهَبْ. First person: أَكْتُبُ → لَمْ أَكْتُبْ.",
-        "ur": "jazm میں فعل کے آخری حرف کی حرکت ساکن ہو جاتی ہے: يَذْهَبُ → لَمْ يَذْهَبْ۔ متکلم: أَكْتُبُ → لَمْ أَكْتُبْ۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "لُمَزَةٌ",
-        "ar_plain": "لمزة",
-        "translit": "lumazatun",
-        "en": "a mocker",
-        "ur": "طعن کرنے والا"
-      },
-      "explanation": {
-        "en": "لُمَزَةٌ means one who reviles and mocks others constantly. Surah Al-Humazah pairs هُمَزَةٌ (the slanderer) and لُمَزَةٌ (the mocker).",
-        "ur": "لُمَزَةٌ کا مطلب ہے وہ جو بار بار دوسروں پر طعنہ زنی اور عیب جوئی کرتا ہے۔ سورۃ الہُمَزَة میں هُمَزَةٌ (غیبت کرنے والا) اور لُمَزَةٌ (طعنہ دینے والا) ساتھ آئے ہیں۔"
+        "en": "لَا of prohibition + تَذْهَبْ = \"don't go\". Compare لَا تَذْهَبُ (\"you do not go\") — plain negation, مَرْفُوع.",
+        "ur": "نہی کا لَا + تَذْهَبْ = \"مت جاؤ\"۔ لَا تَذْهَبُ (\"تم نہیں جاتے\") سے موازنہ کریں — سادہ نفی، مرفوع۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "لَا تَكُونُوا",
-        "ar_plain": "لا تكونوا",
-        "translit": "laa takuunuu",
-        "en": "do not be!",
-        "ur": "مت ہو!",
-        "type": "EXAMPLE"
+        "ar": "يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ",
+        "ar_plain": "يا بني لا تشرك بالله",
+        "translit": "yaa bunayya laa tushrik billaah",
+        "en": "O my son, do not associate anything with Allah. (Luqman 31:13)",
+        "ur": "اے میرے بیٹے! اللہ کے ساتھ شریک نہ ٹھہرانا۔ (لقمان 31:13)"
       },
       "explanation": {
-        "en": "لَا تَكُونُوا is the jussive form used for a negative command to plural: do not be! Related to كُنْ (be!).",
-        "ur": "لَا تَكُونُوا jussive شکل ہے جو جمع کے لیے منفی command کے طور پر آتی ہے: مت ہو! كن (be!) سے متعلق۔"
+        "en": "لَا + تُشْرِكْ (sukūn): a prohibition.",
+        "ur": "لَا + تُشْرِكْ (سکون): نہی۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "A command is a different form",
+        "ur": "امر الگ صورت ہے"
+      },
+      "body": {
+        "en": "\"Go!\" is اِذْهَبْ — a command form, made differently. It is not the مَجْزُوم imperfect. ذَهَبْ on its own is not a correct word for \"go\".",
+        "ur": "\"جاؤ!\" اِذْهَبْ ہے — امر کی صورت، جو الگ طرح بنتی ہے۔ یہ مجزوم مضارع نہیں۔ صرف ذَهَبْ \"جاؤ\" کے لیے درست لفظ نہیں۔"
       }
     }
   ],
@@ -131,43 +100,43 @@
       "type": "TAP_TRANSLATION",
       "id": "ch45-l03-ex01",
       "prompt": {
-        "ar": "لَمْ يَذْهَبْ",
-        "ar_plain": "لم يذهب",
-        "translit": "lam yadhahab",
-        "en": "He did not go",
-        "ur": "اس نے نہیں گیا"
+        "ar": "لَا تَذْهَبْ",
+        "ar_plain": "لا تذهب",
+        "translit": "laa tadh-hab",
+        "en": "Don't go.",
+        "ur": "مت جاؤ۔"
       },
       "options": [
         {
-          "en": "He did not go",
-          "ur": "اس نے نہیں گیا"
+          "en": "Don't go.",
+          "ur": "مت جاؤ۔"
         },
         {
-          "en": "He has not gone yet",
-          "ur": "اس نے ابھی نہیں گیا"
+          "en": "You do not go.",
+          "ur": "تم نہیں جاتے۔"
         },
         {
-          "en": "He will not go",
-          "ur": "وہ نہیں جائے گا"
+          "en": "Go!",
+          "ur": "جاؤ!"
         },
         {
-          "en": "He does not go",
-          "ur": "وہ نہیں جاتا"
+          "en": "You did not go.",
+          "ur": "تم نہیں گئے۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَمْ يَذْهَبْ uses jazm because لَمْ requires the verb in jussive mood: يْ instead of يَ.",
-        "ur": "لَمْ يَذْهَبْ cursor jazm استعمال کرتی ہے کیونکہ لَمْ فعل کو jussive mood میں مانگتی ہے: يْ کی جگہ يَ۔"
+        "en": "لَا + مَجْزُوم = a prohibition: \"don't\".",
+        "ur": "لَا + مجزوم = نہی: \"مت\"۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch45-l03-ex02",
       "statement": {
-        "en": "jazm is formed by removing the vowel from the فَاعِل letter of the verb.",
-        "ur": "jazm فعل کے فَاعِل حرف سے vowel ہٹا کر بنتی ہے۔"
+        "en": "After لَمْ, a regular present-tense verb ends in sukūn.",
+        "ur": "لَمْ کے بعد عام مضارع فعل سکون پر ختم ہوتا ہے۔"
       },
       "correct_answer": true,
       "xp_value": 1
@@ -176,49 +145,53 @@
       "type": "FILL_BLANK",
       "id": "ch45-l03-ex03",
       "mode": "TAP",
-      "sentence_ar": "لَا ___",
+      "sentence_ar": "لَمْ ___ الدَّرْسَ",
       "hint": {
-        "en": "Do not go!",
-        "ur": "مت جاؤ!"
+        "en": "I did not understand the lesson.",
+        "ur": "میں سبق نہیں سمجھا۔"
       },
       "options": [
         {
-          "ar": "تَذْهَبْ",
-          "ar_plain": "تذهب",
-          "translit": "tadhahab",
-          "en": "you go (jussive)",
-          "ur": "تم جاؤ (مجزوم)"
+          "ar": "أَفْهَمِ",
+          "ar_plain": "افهم",
+          "translit": "afhami",
+          "en": "understand (مَجْزُوم)",
+          "ur": "سمجھا (مجزوم)"
         },
         {
-          "ar": "تَذْهَبُ",
-          "ar_plain": "تذهب",
-          "translit": "tadhahabu",
-          "en": "you go",
-          "ur": "تم جاتے ہو"
+          "ar": "أَفْهَمُ",
+          "ar_plain": "افهم",
+          "translit": "afhamu",
+          "en": "(مَرْفُوع)",
+          "ur": "(مرفوع)"
         },
         {
-          "ar": "يَذْهَبْ",
-          "ar_plain": "يذهب",
-          "translit": "yadhahab",
-          "en": "he goes (jussive)",
-          "ur": "وہ جاتا ہے (مجزوم)"
+          "ar": "أَفْهَمَ",
+          "ar_plain": "افهم",
+          "translit": "afhama",
+          "en": "(مَنْصُوب)",
+          "ur": "(منصوب)"
         },
         {
-          "ar": "أَذْهَبْ",
-          "ar_plain": "أذهب",
-          "translit": "adhahab",
-          "en": "I go (jussive)",
-          "ur": "میں جاؤں (مجزوم)"
+          "ar": "فَهِمْتُ",
+          "ar_plain": "فهمت",
+          "translit": "fahimtu",
+          "en": "I understood",
+          "ur": "میں سمجھا"
         }
       ],
       "correct_answer": {
-        "ar": "تَذْهَبْ",
-        "ar_plain": "تذهب",
-        "translit": "tadhahab",
-        "en": "you go (jussive)",
-        "ur": "تم جاؤ (مجزوم)"
+        "ar": "أَفْهَمِ",
+        "ar_plain": "افهم",
+        "translit": "afhami",
+        "en": "understand (مَجْزُوم)",
+        "ur": "سمجھا (مجزوم)"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَمْ + مَجْزُوم: أَفْهَمْ — said with kasra before الدَّرْسَ.",
+        "ur": "لَمْ + مجزوم: أَفْهَمْ — الدَّرْسَ سے پہلے کسرہ کے ساتھ پڑھا جاتا ہے۔"
+      }
     },
     {
       "type": "MATCHING",
@@ -227,66 +200,66 @@
         {
           "ar": "لَمْ يَذْهَبْ",
           "ar_plain": "لم يذهب",
-          "translit": "lam yadhahab",
-          "en": "he did not go (jazm)",
-          "ur": "اس نے نہیں گیا (جزم)"
-        },
-        {
-          "ar": "لَمَّا أَذْهَبْ",
-          "ar_plain": "لما أذهب",
-          "translit": "lamaa adhahab",
-          "en": "I have not gone yet (jazm)",
-          "ur": "میں ابھی نہیں گیا (جزم)"
+          "translit": "lam yadh-hab",
+          "en": "he did not go (مَجْزُوم)",
+          "ur": "وہ نہیں گیا (مجزوم)"
         },
         {
           "ar": "لَا تَذْهَبْ",
           "ar_plain": "لا تذهب",
-          "translit": "laa tadhahab",
-          "en": "do not go! (jazm)",
-          "ur": "مت جاؤ! (جزم)"
+          "translit": "laa tadh-hab",
+          "en": "don't go (مَجْزُوم)",
+          "ur": "مت جاؤ (مجزوم)"
         },
         {
-          "ar": "ذَهَبْ",
-          "ar_plain": "ذهب",
-          "translit": "dhahab",
-          "en": "go! (imperative)",
-          "ur": "جا! (حکم)"
+          "ar": "اِذْهَبْ",
+          "ar_plain": "اذهب",
+          "translit": "idh-hab",
+          "en": "go! (a command form)",
+          "ur": "جاؤ! (امر)"
+        },
+        {
+          "ar": "لَا تَذْهَبُ",
+          "ar_plain": "لا تذهب",
+          "translit": "laa tadh-habu",
+          "en": "you do not go",
+          "ur": "تم نہیں جاتے"
         }
       ],
       "right_column": [
         {
-          "en": "he did not go (jazm)",
-          "ur": "اس نے نہیں گیا (جزم)"
+          "en": "prohibition — مَجْزُوم",
+          "ur": "نہی — مجزوم"
         },
         {
-          "en": "I have not gone yet (jazm)",
-          "ur": "میں ابھی نہیں گیا (جزم)"
+          "en": "plain negation — مَرْفُوع",
+          "ur": "سادہ نفی — مرفوع"
         },
         {
-          "en": "do not go! (jazm)",
-          "ur": "مت جاؤ! (جزم)"
+          "en": "did not — مَجْزُوم",
+          "ur": "نہیں کیا — مجزوم"
         },
         {
-          "en": "go! (imperative)",
-          "ur": "جا! (حکم)"
+          "en": "command form",
+          "ur": "امر"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
+          0
+        ],
+        [
+          2,
           3
+        ],
+        [
+          3,
+          1
         ]
       ],
       "xp_value": 1
@@ -295,42 +268,52 @@
       "type": "BUILD_SENTENCE",
       "id": "ch45-l03-ex05",
       "target_translation": {
-        "en": "I did not write.",
-        "ur": "میں نے نہیں لکھا۔"
+        "en": "O my son, do not associate anything with Allah. (31:13)",
+        "ur": "اے میرے بیٹے! اللہ کے ساتھ شریک نہ ٹھہرانا۔ (31:13)"
       },
       "tiles": [
         {
-          "ar": "لَمْ",
-          "ar_plain": "لم",
-          "translit": "lam",
-          "en": "did not",
-          "ur": "نہیں"
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaa",
+          "en": "O",
+          "ur": "اے"
         },
         {
-          "ar": "أَكْتُبْ",
-          "ar_plain": "أكتب",
-          "translit": "aktub",
-          "en": "I write (jazm)",
-          "ur": "میں لکھتا ہوں (جزم)"
+          "ar": "بُنَيَّ",
+          "ar_plain": "بني",
+          "translit": "bunayya",
+          "en": "my son",
+          "ur": "میرے بیٹے"
         },
         {
-          "ar": "أَكْتُبُ",
-          "ar_plain": "أكتب",
-          "translit": "aktubu",
-          "en": "I write (raf')",
-          "ur": "میں لکھتا ہوں (رفع)"
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "do not",
+          "ur": "مت"
         },
         {
-          "ar": "ذَهَبْ",
-          "ar_plain": "ذهب",
-          "translit": "dhahab",
-          "en": "go!",
-          "ur": "جا!"
+          "ar": "تُشْرِكْ",
+          "ar_plain": "تشرك",
+          "translit": "tushrik",
+          "en": "associate",
+          "ur": "شریک ٹھہراؤ"
+        },
+        {
+          "ar": "بِاللَّهِ",
+          "ar_plain": "بالله",
+          "translit": "billaah",
+          "en": "with Allah",
+          "ur": "اللہ کے ساتھ"
         }
       ],
       "correct_order": [
         0,
-        1
+        1,
+        2,
+        3,
+        4
       ],
       "xp_value": 1
     },
@@ -338,71 +321,84 @@
       "type": "TRUE_FALSE",
       "id": "ch45-l03-ex06",
       "statement": {
-        "en": "Commands in Arabic (imperative) are related to the jussive mood.",
-        "ur": "عربی میںCommands (imperative) jussive mood سے متعلق ہیں۔"
+        "en": "اِذْهَبْ (\"go!\") is an example of the مَجْزُوم imperfect.",
+        "ur": "اِذْهَبْ (\"جاؤ!\") مجزوم مضارع کی مثال ہے۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. اِذْهَبْ is a command form, not an imperfect verb.",
+        "ur": "غلط۔ اِذْهَبْ امر ہے، مضارع نہیں۔"
+      }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch45-l03-ex07",
       "prompt": {
-        "ar": "ذَهَبْ",
-        "ar_plain": "ذهب",
-        "translit": "dhahab",
-        "en": "Go!",
-        "ur": "جا!"
+        "ar": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+        "ar_plain": "لم يلد ولم يولد",
+        "translit": "lam yalid wa lam yuulad",
+        "en": "He did not beget, nor was He begotten.",
+        "ur": "نہ اس نے کسی کو جنا اور نہ وہ جنا گیا۔"
       },
       "options": [
         {
-          "en": "Go!",
-          "ur": "جا!"
+          "en": "He begets and is begotten.",
+          "ur": "وہ جنتا ہے اور جنا جاتا ہے۔"
         },
         {
-          "en": "He went",
-          "ur": "وہ گیا"
+          "en": "He did not beget, nor was He begotten.",
+          "ur": "نہ اس نے کسی کو جنا اور نہ وہ جنا گیا۔"
         },
         {
-          "en": "Do not go!",
-          "ur": "مت جاؤ!"
+          "en": "Do not beget.",
+          "ur": "مت جنو۔"
         },
         {
-          "en": "You go",
-          "ur": "تم جاتے ہو"
+          "en": "He will not beget.",
+          "ur": "وہ نہیں جنے گا۔"
         }
       ],
-      "correct_index": 0,
-      "xp_value": 1
+      "correct_index": 1,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "لَمْ + مَجْزُوم = \"did not\".",
+        "ur": "لَمْ + مجزوم = \"نہیں کیا\"۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "jazm — the jussive state",
-      "ar": "الْجَزْمُ — حَالَةُ النَّفْي وَ الْحُكْمِ",
-      "ur": "جزم — نفی اور حکم کی حالت"
+      "en": "مَجْزُوم: sukūn",
+      "ar": "الْمُضَارِعُ الْمَجْزُومُ",
+      "ur": "مجزوم: سکون"
     },
     "ayah": {
-      "surah": 104,
-      "ayah": 1,
-      "label": "Al-Humazah 104:1",
-      "ar": "وَيْلٌ لِكُلِّ هُمَزَةٍ لُمَزَةٍ",
-      "en": "Woe to every scorner and mocker.",
-      "ur": "تباہی ہر اس شخص کے لیے جو طعن وتشنیم کرتا ہے۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/104001.mp3"
+      "surah": 31,
+      "ayah": 13,
+      "label": "Luqman 31:13",
+      "ar": "يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ",
+      "en": "O my son, do not associate anything with Allah.",
+      "ur": "اے میرے بیٹے! اللہ کے ساتھ شریک نہ ٹھہرانا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/031013.mp3"
     },
     "highlighted_word_indices": [
+      2,
       3
     ],
+    "highlighted_words": [
+      "لَا",
+      "تُشْرِكْ"
+    ],
     "noor_explanation": {
-      "en": "The three states of المضارع are now complete. raf' (base), nasb (after certain particles), jazm (after negation/command). This is the grammar apex of the entire curriculum.",
-      "ur": "مضارع کی تین حالتیں اب مکمل ہیں۔ raf' (بنيادي)، nasb (کچھ particles کے بعد)، jazm (نفی/command کے بعد)۔ یہ پورے نصاب کا grammar apex ہے۔"
+      "en": "لَا تُشْرِكْ — the لَا of prohibition makes تُشْرِكْ مَجْزُوم.",
+      "ur": "لَا تُشْرِكْ — نہی کا لَا، تُشْرِكْ کو مجزوم کرتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Three states — raf', nasb, jazm — all three are now yours. This is where the real grammar science begins. Chapter 45 is your gateway to full Quranic parser.",
-      "ur": "تین حالتیں — raf'، nasb، jazm — تینوں اب آپ کے ہیں۔ یہی وہ جگہ ہے جہاں اصل grammar science شروع ہوتی ہے۔ باب 45 آپ کا مکمل قرآنی parser کے لیے دروازہ ہے۔"
+      "en": "لَمْ يَذْهَبْ, لَمَّا يَذْهَبْ, لَا تَذْهَبْ — مَجْزُوم, sukūn. اِذْهَبْ is a command form of its own.",
+      "ur": "لَمْ يَذْهَبْ، لَمَّا يَذْهَبْ، لَا تَذْهَبْ — مجزوم، سکون۔ اِذْهَبْ امر کی الگ صورت ہے۔"
     }
   }
 }
