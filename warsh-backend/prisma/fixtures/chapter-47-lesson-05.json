@@ -2,113 +2,99 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 47, Lesson 5 — Consolidation of sound masculine plural, idafa effects, and Al-Humazah connection.",
+    "_note": "Chapter 47, Lesson 5 — telling a sound masculine plural noun (الْمُؤْمِنُونَ) from plural verbs (يُؤْمِنُونَ, آمَنُوا).",
     "chapter_order": 47,
     "lesson_order": 5,
     "chapter_title": "Sound Masculine Plural — Full Treatment",
-    "title": "Sound Masculine Plural — Mastery Consolidation",
-    "titleAr": "جَمْعُ الْمُذَكَّرِ السَّالِمُ — تَمْكِينٌ",
-    "source": "book5_lesson3_sound_masculine_plural.md",
+    "title": "Plural Noun or Plural Verb?",
+    "titleAr": "اسْمٌ أَمْ فِعْلٌ؟",
     "estimated_minutes": 8,
-    "xp_reward": 10
+    "xp_reward": 10,
+    "titleUr": "جمع اسم یا جمع فعل؟"
   },
   "hook": {
     "ayah": {
-      "surah": 104,
-      "ayah": 9,
-      "label": "Al-Humazah 104:9",
-      "ar": "فِي عَمَدٍ مُّمَدَّدَةٍ",
-      "en": "In extended columns.",
-      "ur": "(یعنی آگ کے) لمبے لمبے ستونوں میں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/104009.mp3"
+      "surah": 2,
+      "ayah": 5,
+      "label": "Al-Baqarah 2:5",
+      "ar": "أُولَٰئِكَ عَلَىٰ هُدًى مِنْ رَبِّهِمْ ۖ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ",
+      "en": "Those are on guidance from their Lord, and it is they who are the successful.",
+      "ur": "یہی لوگ اپنے رب کی طرف سے ہدایت پر ہیں اور یہی کامیاب ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002005.mp3"
     },
+    "autoplay": true,
     "noor_intro": {
-      "en": "Last lesson of Chapter 47. We consolidate everything: raf' vs nasb/jazm endings, idafa with ن dropped, and the Quranic application of each form. Al-Humazah is our final stop before R10.",
-      "ur": "Chapter 47 کا آخری lesson۔ ہم سب کو consolidate کرتے ہیں: رفع بمقابلہ نصب/جزم endings، نون ڈری ہوئی کے ساتھ اضافت، اور ہر form کا قرآنی application۔ Al-Humazah ہمارا R10 سے پہلے آخری stop ہے۔"
-    },
-    "autoplay": true
+      "en": "الْمُفْلِحُونَ ends in ـُونَ — and so does يُؤْمِنُونَ. One is a noun, the other a verb. Today you tell them apart.",
+      "ur": "الْمُفْلِحُونَ ـُونَ پر ختم ہوتا ہے — اور يُؤْمِنُونَ بھی۔ ایک اسم ہے، دوسرا فعل۔ آج آپ ان میں فرق کریں گے۔"
+    }
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Three forms — one meaning",
-        "ar": "ثَلَاثُ صِيَغٍ — مَعْنًى وَاحِدٌ",
-        "ur": "تین شکلیں — ایک ہی معنی"
+        "en": "Same ending, different words",
+        "ar": "اسْمٌ أَمْ فِعْلٌ",
+        "ur": "ایک لاحقہ، الگ الفاظ"
       },
       "explanation": {
-        "en": "مُسْلِمُونَ / مُسْلِمِينَ / مُسْلِمُو all mean 'Muslims' — but the grammatical function changes the ending. Raf': وُونَ. Nasb/jazm: يَنَ. Idafa: وُ (no nun). Always ask: what is the noun's role in this sentence?",
-        "ur": "مُسْلِمُونَ / مُسْلِمِينَ / مُسْلِمُو سب کا مطلب 'مسلمان' ہے — لیکن grammatical function ending بدل دیتی ہے۔ رفع: وُونَ۔ نصب/جزم: يَنَ۔ اضافت: وُ (کوئی nun نہیں)۔ ہمیشہ پوچھیں: noun کا یہاں sentence میں کیا کردار ہے؟"
+        "en": "الْمُؤْمِنُونَ (noun: \"the believers\") — can take ال, and its ending shows case. يُؤْمِنُونَ (imperfect verb: \"they believe\") — starts with a present-tense prefix يُـ. آمَنُوا (perfect verb: \"they believed\") — ends in ـُوا.",
+        "ur": "الْمُؤْمِنُونَ (اسم: \"ایمان والے\") — ال لے سکتا ہے، اور اس کا لاحقہ اعراب بتاتا ہے۔ يُؤْمِنُونَ (مضارع: \"وہ ایمان لاتے ہیں\") — مضارع کے سابقے يُـ سے شروع ہوتا ہے۔ آمَنُوا (ماضی: \"وہ ایمان لائے\") — ـُوا پر ختم ہوتا ہے۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الْمُسْلِمُونَ يَقْرَأُونَ (raf')",
-        "ar_plain": "المسلمون يقرؤون",
-        "translit": "al-muslimoona yaqra'uuna",
-        "en": "The Muslims read",
-        "ur": "مسلمان پڑھتے ہیں"
+        "ar": "الْمُؤْمِنُونَ",
+        "ar_plain": "المؤمنون",
+        "translit": "al-mu'minuuna",
+        "en": "the believers (nominative)",
+        "ur": "مومن (مرفوع)"
       },
       "explanation": {
-        "en": "الْمُسْلِمُونَ is subject (مرفوع). يَقْرَأُونَ is the present tense verb — both take وُونَ in raf'. The noun and verb agree in case state.",
-        "ur": "الْمُسْلِمُونَ فاعل ہے (مرفوع)۔ يَقْرَأُونَ present tense verb ہے — دونوں رفع میں وُونَ لیتے ہیں۔ noun اور verb case state میں agree کرتے ہیں۔"
+        "en": "A noun: ال at the start, case ending ـُونَ.",
+        "ur": "اسم: شروع میں ال، اعراب کا لاحقہ ـُونَ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "أَرَى الْمُسْلِمِينَ (nasb)",
-        "ar_plain": "أرى المسلمين",
-        "translit": "araa al-muslimeen",
-        "en": "I see the Muslims",
-        "ur": "میں مسلمانوں کو دیکھتا ہوں"
+        "ar": "يُؤْمِنُونَ",
+        "ar_plain": "يؤمنون",
+        "translit": "yu'minuuna",
+        "en": "they believe (imperfect verb)",
+        "ur": "وہ ایمان لاتے ہیں (مضارع)"
       },
       "explanation": {
-        "en": "أَرَى (I see) takes a direct object. الْمُسْلِمِينَ is the object in nasb — the ن dropped, ending يَنَ. The noun is منصوب (nasb).",
-        "ur": "أَرَى (میں دیکھتا ہوں) direct object لیتا ہے۔ الْمُسْلِمِينَ nasb میں object ہے — نون ڈرا، ending يَنَ۔ noun منصوب (نصب) ہے۔"
+        "en": "A verb: the prefix يُـ. Its ـُونَ belongs to the five verbs, not to noun case.",
+        "ur": "فعل: سابقہ يُـ۔ اس کا ـُونَ افعالِ خمسہ کا ہے، اسم کے اعراب کا نہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "مُسْلِمُو هَذَا الْبَلَدِ (idafa)",
-        "ar_plain": "مسلموي هذا البلد",
-        "translit": "muslimu haadhaa al-baldi",
-        "en": "Muslims of this city",
-        "ur": "اس شہر کے مسلمان"
+        "ar": "آمَنُوا",
+        "ar_plain": "امنوا",
+        "translit": "aamanuu",
+        "en": "they believed (perfect verb)",
+        "ur": "وہ ایمان لائے (ماضی)"
       },
       "explanation": {
-        "en": "In اضافة, the ن is dropped: مُسْلِمُو instead of مُسْلِمُونَ or مُسْلِمِينَ. هَذَا الْبَلَدِ is the second element of the اضافة — 'this city.' The whole chain means 'the Muslims belonging to this city.'",
-        "ur": "اضافت میں، نون ڈرا دی جاتی ہے: مُسْلِمُو بجائے مُسْلِمُونَ یا مُسْلِمِينَ۔ هَذَا الْبَلَدِ اضافت کا دوسرا element ہے — 'یہ شہر'۔ پوری chain کا مطلب 'اس شہر سے تعلق رکھنے والے مسلمان'۔"
+        "en": "A past verb: ends in ـُوا.",
+        "ur": "ماضی کا فعل: ـُوا پر ختم ہوتا ہے۔"
       }
     },
     {
-      "type": "AYAH_PREVIEW",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "عَلَى قُلُوبِهَا ثَلَاثٌ",
-        "ar_plain": "على قلوبها ثلاث",
-        "translit": "alaa quluubihaa thalaathun",
-        "en": "Upon their hearts are three",
-        "ur": "ان کے دلوں پر تین"
+        "ar": "وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ",
+        "ar_plain": "واولئك هم المفلحون",
+        "translit": "wa ulaa-ika humul-muflihuun",
+        "en": "and it is they who are the successful (2:5)",
+        "ur": "اور یہی کامیاب ہیں (2:5)"
       },
       "explanation": {
-        "en": "قُلُوبِهَا is قُلُوبٌ (hearts) + attached pronoun هَا (their) in the genitive (مجرور). عَلَى is a preposition requiring the genitive. ثَلَاثٌ is the predicate — 'three (things).' This verse speaks of the result of slander.",
-        "ur": "قُلُوبِهَا قُلُوبٌ (دل) + attached pronoun هَا (ان کے) genitive (مجرور) میں ہے۔ عَلَى ایک حرف جر ہے جو genitive مانگتا ہے۔ ثَلَاثٌ predicate ہے — 'تین (چیزیں)'۔ یہ verse fitnah (فتنہ) کے نتیجے کی بات کر رہا ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "ثَلَاثٌ",
-        "ar_plain": "ثلاث",
-        "translit": "thalaathun",
-        "en": "three",
-        "ur": "تین"
-      },
-      "explanation": {
-        "en": "ثَلَاثٌ is the feminine form of ثَلَاثَةٌ (three). It modifies قُلُوبٌ which is grammatically feminine despite referring to both male and female hearts. This is one of several nouns that are grammatically feminine but refer to both genders.",
-        "ur": "ثَلَاثٌ ثَلَاثَةٌ (تین) کی feminine form ہے۔ یہ قُلُوبٌ کو modify کرتی ہے جو گرامر کے لحاظ سے مؤنث ہے اگرچہ مرد اور عورت دونوں کے دلوں کو reference کرتا ہے۔ یہ ان کئی nouns میں سے ایک ہے جو گرامر کے لحاظ سے مؤنث ہیں لیکن دونوں genders کو reference کرتی ہیں۔"
+        "en": "الْمُفْلِحُونَ: a noun with ال, nominative.",
+        "ur": "الْمُفْلِحُونَ: ال والا اسم، مرفوع۔"
       }
     }
   ],
@@ -117,96 +103,96 @@
       "type": "TAP_TRANSLATION",
       "id": "ch47-l05-ex01",
       "prompt": {
-        "ar": "مُسْلِمُو هَذَا الْبَلَدِ",
-        "ar_plain": "مسلموي هذا البلد",
-        "translit": "muslimu haadhaa al-baldi",
-        "en": "Muslims of this city",
-        "ur": "اس شہر کے مسلمان"
+        "ar": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ",
+        "ar_plain": "الذين يؤمنون بالغيب",
+        "translit": "alladhiina yu'minuuna bil-ghayb",
+        "en": "those who believe in the unseen (2:3)",
+        "ur": "جو غیب پر ایمان لاتے ہیں (2:3)"
       },
       "options": [
         {
-          "en": "Muslims of this city",
-          "ur": "اس شہر کے مسلمان"
+          "en": "those who believe in the unseen (2:3)",
+          "ur": "جو غیب پر ایمان لاتے ہیں (2:3)"
         },
         {
-          "en": "The Muslim city",
-          "ur": "مسلمان شہر"
+          "en": "the believers in the unseen",
+          "ur": "غیب کے مومن"
         },
         {
-          "en": "The city of Muslims",
-          "ur": "مسلمانوں کا شہر"
+          "en": "those who believed in the unseen",
+          "ur": "جو غیب پر ایمان لائے"
         },
         {
-          "en": "Muslims are in this city",
-          "ur": "مسلمان اس شہر میں ہیں"
+          "en": "believe in the unseen!",
+          "ur": "غیب پر ایمان لاؤ!"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "مُسْلِمُو is in اضافة (idafa) — the ن is dropped. هَذَا الْبَلَدِ is the second element. 'Muslims of this city' means the Muslims who belong to this city.",
-        "ur": "مُسْلِمُو اضافت (idafa) میں ہے — نون ڈرا دی گئی۔ هَذَا الْبَلَدِ دوسرا element ہے۔ 'اس شہر کے مسلمان' کا مطلب ہے مسلمان جو اس شہر سے تعلق رکھتے ہیں۔"
+        "en": "يُؤْمِنُونَ: imperfect verb (prefix يُـ), \"they believe\".",
+        "ur": "يُؤْمِنُونَ: مضارع (سابقہ يُـ)، \"وہ ایمان لاتے ہیں\"۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch47-l05-ex02",
       "statement": {
-        "en": "In idafa, the sound masculine plural takes the same ending as nasb: يَنَ.",
-        "ur": "اضافت میں، جمع مذکر سالم کا ending نصب جیسا ہی ہوتا ہے: يَنَ۔"
+        "en": "يُؤْمِنُونَ is a sound masculine plural noun.",
+        "ur": "يُؤْمِنُونَ جمع مذکر سالم اسم ہے۔"
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "In idafa, the ending is وُ (not يَنَ). The ن is dropped but no يَنَ ending appears. مُسْلِمُو not مُسْلِمِينَ in idafa.",
-        "ur": "اضافت میں، ending وُ ہوتا ہے (يَنَ نہیں)۔ نون ڈرا دی جاتی ہے لیکن كوئی يَنَ ending نہیں آتا۔ اضافت میں مُسْلِمُو مُسْلِمِينَ نہیں۔"
+        "en": "False. It is an imperfect verb: it begins with the prefix يُـ.",
+        "ur": "غلط۔ یہ مضارع فعل ہے: یہ سابقہ يُـ سے شروع ہوتا ہے۔"
       }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch47-l05-ex03",
       "mode": "TAP",
-      "sentence_ar": "الْمُسْلِمُونَ ___ اللَّهَ",
+      "sentence_ar": "قَدْ أَفْلَحَ ___",
       "hint": {
-        "en": "The Muslims worship Allah.",
-        "ur": "مسلمان اللہ کی عبادت کرتے ہیں۔"
+        "en": "The believers have certainly succeeded. (23:1)",
+        "ur": "یقیناً ایمان والے کامیاب ہو گئے۔ (23:1)"
       },
       "options": [
         {
-          "ar": "يَعْبُدُونَ",
-          "ar_plain": "يعبدون",
-          "translit": "ya'buduuna",
-          "en": "they worship (raf')",
-          "ur": "وہ عبادت کرتے ہیں (رفع)"
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minuun",
+          "en": "the believers (noun)",
+          "ur": "ایمان والے (اسم)"
         },
         {
-          "ar": "يَعْبُدِينَ",
-          "ar_plain": "يعبدين",
-          "translit": "ya'badeen",
-          "en": "they worship (nasb/jazm)",
-          "ur": "وہ عبادت کرتے ہیں (نصب/جزم)"
+          "ar": "يُؤْمِنُونَ",
+          "ar_plain": "يؤمنون",
+          "translit": "yu'minuun",
+          "en": "they believe (verb)",
+          "ur": "وہ ایمان لاتے ہیں (فعل)"
         },
         {
-          "ar": "أَعْبُدُ",
-          "ar_plain": "أعبد",
-          "translit": "a'budu",
-          "en": "I worship",
-          "ur": "میں عبادت کروں"
+          "ar": "آمَنُوا",
+          "ar_plain": "امنوا",
+          "translit": "aamanuu",
+          "en": "they believed (verb)",
+          "ur": "وہ ایمان لائے (فعل)"
         },
         {
-          "ar": "تَعْبُدُونَ",
-          "ar_plain": "تعبدون",
-          "translit": "ta'buduuna",
-          "en": "you (pl.) worship",
-          "ur": "تم عبادت کرتے ہو"
+          "ar": "الْمُؤْمِنِينَ",
+          "ar_plain": "المؤمنين",
+          "translit": "al-mu'miniin",
+          "en": "(acc./gen.)",
+          "ur": "(منصوب/مجرور)"
         }
       ],
       "correct_answer": {
-        "ar": "يَعْبُدُونَ",
-        "ar_plain": "يعبدون",
-        "translit": "ya'buduuna",
-        "en": "they worship (raf')",
-        "ur": "وہ عبادت کرتے ہیں (رفع)"
+        "ar": "الْمُؤْمِنُونَ",
+        "ar_plain": "المؤمنون",
+        "translit": "al-mu'minuun",
+        "en": "the believers (noun)",
+        "ur": "ایمان والے (اسم)"
       },
       "xp_value": 1
     },
@@ -215,68 +201,68 @@
       "id": "ch47-l05-ex04",
       "left_column": [
         {
-          "ar": "مُسْلِمُونَ",
-          "ar_plain": "مسلمون",
-          "translit": "muslimoona",
-          "en": "Muslims (raf')",
-          "ur": "مسلمان (رفع)"
+          "ar": "الْمُؤْمِنُونَ",
+          "ar_plain": "المؤمنون",
+          "translit": "al-mu'minuuna",
+          "en": "the believers (nominative)",
+          "ur": "مومن (مرفوع)"
         },
         {
-          "ar": "مُسْلِمِينَ",
-          "ar_plain": "مسلمين",
-          "translit": "muslimeen",
-          "en": "Muslims (nasb/jazm)",
-          "ur": "مسلمان (نصب/جزم)"
+          "ar": "يُؤْمِنُونَ",
+          "ar_plain": "يؤمنون",
+          "translit": "yu'minuuna",
+          "en": "they believe (imperfect verb)",
+          "ur": "وہ ایمان لاتے ہیں (مضارع)"
         },
         {
-          "ar": "مُسْلِمُو",
-          "ar_plain": "مسلموي",
-          "translit": "muslimu",
-          "en": "Muslims of (idafa)",
-          "ur": "مسلمانوں کے (اضافت)"
+          "ar": "آمَنُوا",
+          "ar_plain": "امنوا",
+          "translit": "aamanuu",
+          "en": "they believed (perfect verb)",
+          "ur": "وہ ایمان لائے (ماضی)"
         },
         {
-          "ar": "مُسْلِمٌ",
-          "ar_plain": "مسلم",
-          "translit": "muslimun",
-          "en": "a Muslim (sg.)",
-          "ur": "ایک مسلمان (واحد)"
+          "ar": "الْمُؤْمِنِينَ",
+          "ar_plain": "المؤمنين",
+          "translit": "al-mu'miniina",
+          "en": "the believers (accusative/genitive)",
+          "ur": "مومن (منصوب/مجرور)"
         }
       ],
       "right_column": [
         {
-          "en": "Muslims (raf')",
-          "ur": "مسلمان (رفع)"
+          "en": "imperfect verb",
+          "ur": "مضارع فعل"
         },
         {
-          "en": "Muslims (nasb/jazm)",
-          "ur": "مسلمان (نصب/جزم)"
+          "en": "noun — accusative/genitive",
+          "ur": "اسم — منصوب/مجرور"
         },
         {
-          "en": "Muslims of (idafa)",
-          "ur": "مسلمانوں کے (اضافت)"
+          "en": "noun — nominative",
+          "ur": "اسم — مرفوع"
         },
         {
-          "en": "a Muslim (sg.)",
-          "ur": "ایک مسلمان (واحد)"
+          "en": "perfect verb",
+          "ur": "ماضی فعل"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
+          0
+        ],
+        [
+          2,
           3
+        ],
+        [
+          3,
+          1
         ]
       ],
       "xp_value": 1
@@ -285,153 +271,122 @@
       "type": "BUILD_SENTENCE",
       "id": "ch47-l05-ex05",
       "target_translation": {
-        "en": "The believers of this city are righteous.",
-        "ur": "اس شہر کے مومنین نیک ہیں۔"
+        "en": "and it is they who are the successful (2:5)",
+        "ur": "اور یہی کامیاب ہیں (2:5)"
       },
       "tiles": [
         {
-          "ar": "مُؤْمِنُو",
-          "ar_plain": "مؤمنو",
-          "translit": "mu'minu",
-          "en": "believers of (idafa)",
-          "ur": "مومنین کے (اضافت)"
+          "ar": "وَأُولَٰئِكَ",
+          "ar_plain": "واولئك",
+          "translit": "wa ulaa-ika",
+          "en": "and those",
+          "ur": "اور یہی لوگ"
         },
         {
-          "ar": "هَذَا",
-          "ar_plain": "هذا",
-          "translit": "haadhaa",
-          "en": "this (masc.)",
-          "ur": "یہ (مذکر)"
+          "ar": "هُمُ",
+          "ar_plain": "هم",
+          "translit": "humu",
+          "en": "they",
+          "ur": "وہ"
         },
         {
-          "ar": "الْمَدِينَةِ",
-          "ar_plain": "المدينة",
-          "translit": "al-madiinati",
-          "en": "the city",
-          "ur": "شہر"
+          "ar": "الْمُفْلِحُونَ",
+          "ar_plain": "المفلحون",
+          "translit": "al-muflihuun",
+          "en": "the successful",
+          "ur": "کامیاب"
         },
         {
-          "ar": "صَالِحُونَ",
-          "ar_plain": "صالحون",
-          "translit": "saalihoona",
-          "en": "are righteous (raf')",
-          "ur": "نیک ہیں (رفع)"
+          "ar": "يُفْلِحُونَ",
+          "ar_plain": "يفلحون",
+          "translit": "yuflihuun",
+          "en": "they succeed (verb)",
+          "ur": "وہ کامیاب ہوتے ہیں"
         }
       ],
       "correct_order": [
         0,
         1,
-        2,
-        3
+        2
       ],
       "xp_value": 1
     },
     {
-      "type": "GRAMMAR_PARSE",
+      "type": "TRUE_FALSE",
       "id": "ch47-l05-ex06",
-      "sentence_ar": "الْمُسْلِمُونَ يَعْبُدُونَ اللَّهَ",
-      "words": [
-        {
-          "ar": "الْمُسْلِمُونَ",
-          "ar_plain": "المسلمون",
-          "translit": "al-muslimoona",
-          "en": "the Muslims",
-          "ur": "مسلمانوں"
-        },
-        {
-          "ar": "يَعْبُدُونَ",
-          "ar_plain": "يعبدون",
-          "translit": "ya'buduuna",
-          "en": "they worship",
-          "ur": "وہ عبادت کرتے ہیں"
-        },
-        {
-          "ar": "اللَّهَ",
-          "ar_plain": "الله",
-          "translit": "allaaha",
-          "en": "Allah",
-          "ur": "اللہ"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "VERB",
-        "OBJECT"
-      ],
-      "correct_roles": [
-        "SUBJECT",
-        "VERB",
-        "OBJECT"
-      ],
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "الْمُسْلِمُونَ is subject in raf' (وُونَ). يَعْبُدُونَ is present tense verb in raf' (وُونَ). اللَّهَ is direct object in nasb (fatha on لام). All three follow their correct case states.",
-        "ur": "الْمُسْلِمُونَ رفع میں فاعل ہے (وُونَ)۔ يَعْبُدُونَ present tense verb ہے رفع میں (وُونَ)۔ اللَّهَ nasb میں direct object ہے (لام پر fatha)۔ تینوں اپنی درست case states follow کرتے ہیں۔"
-      }
+      "statement": {
+        "en": "آمَنُوا is a past (perfect) verb meaning \"they believed\".",
+        "ur": "آمَنُوا ماضی کا فعل ہے جس کا مطلب \"وہ ایمان لائے\" ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch47-l05-ex07",
       "prompt": {
-        "ar": "عَلَى قُلُوبِهَا ثَلَاثٌ",
-        "ar_plain": "على قلوبها ثلاث",
-        "translit": "alaa quluubihaa thalaathun",
-        "en": "Upon their hearts are three",
-        "ur": "ان کے دلوں پر تین"
+        "ar": "الْمُؤْمِنُونَ يُؤْمِنُونَ بِاللَّهِ",
+        "ar_plain": "المؤمنون يؤمنون بالله",
+        "translit": "al-mu'minuuna yu'minuuna billaah",
+        "en": "The believers believe in Allah.",
+        "ur": "ایمان والے اللہ پر ایمان رکھتے ہیں۔"
       },
       "options": [
         {
-          "en": "Upon their hearts are three",
-          "ur": "ان کے دلوں پر تین"
+          "en": "They believed in the believers.",
+          "ur": "وہ ایمان والوں پر ایمان لائے۔"
         },
         {
-          "en": "Their hearts are three",
-          "ur": "ان کے دل تین ہیں"
+          "en": "Believe in Allah, O believers!",
+          "ur": "اے ایمان والو، اللہ پر ایمان لاؤ!"
         },
         {
-          "en": "Three hearts are upon them",
-          "ur": "تین دل ان پر ہیں"
+          "en": "The believers believe in Allah.",
+          "ur": "ایمان والے اللہ پر ایمان رکھتے ہیں۔"
         },
         {
-          "en": "He placed three upon their hearts",
-          "ur": "اس نے ان کے دلوں پر تین رکھے"
+          "en": "The believer believes in Allah.",
+          "ur": "مومن اللہ پر ایمان رکھتا ہے۔"
         }
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "قُلُوبِهَا = قُلُوبٌ (hearts) + هَا (their). عَلَى requires genitive — hence قُلُوبِهَا in مجرور. ثَلَاثٌ is the predicate of a nominal sentence — 'three (things).' عَلَى قُلُوبِهَا = 'upon their hearts.'",
-        "ur": "قُلُوبِهَا = قُلُوبٌ (دل) + هَا (ان کے)۔ عَلَى genitive مانگتا ہے — اس لیے قُلُوبِهَا مجرور میں۔ ثَلَاثٌ nominal sentence کا predicate ہے — 'تین (چیزیں)'۔ عَلَى قُلُوبِهَا = 'ان کے دلوں پر'۔"
+        "en": "الْمُؤْمِنُونَ (noun, subject) + يُؤْمِنُونَ (verb).",
+        "ur": "الْمُؤْمِنُونَ (اسم، مبتدا) + يُؤْمِنُونَ (فعل)۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Sound masculine plural — three forms, one meaning",
-      "ar": "جَمْعُ الْمُذَكَّرِ السَّالِمُ — ثَلَاثُ صِيَغٍ، مَعْنًى وَاحِدٌ",
-      "ur": "جمع مذکر سالم — تین شکلیں، ایک ہی معنی"
+      "en": "A plural noun",
+      "ar": "اسْمٌ مَجْمُوعٌ",
+      "ur": "جمع اسم"
     },
     "ayah": {
-      "surah": 104,
-      "ayah": 9,
-      "label": "Al-Humazah 104:9",
-      "ar": "فِي عَمَدٍ مُّمَدَّدَةٍ",
-      "en": "In extended columns.",
-      "ur": "(یعنی آگ کے) لمبے لمبے ستونوں میں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/104009.mp3"
+      "surah": 2,
+      "ayah": 5,
+      "label": "Al-Baqarah 2:5",
+      "ar": "أُولَٰئِكَ عَلَىٰ هُدًى مِنْ رَبِّهِمْ ۖ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ",
+      "en": "Those are on guidance from their Lord, and it is they who are the successful.",
+      "ur": "یہی لوگ اپنے رب کی طرف سے ہدایت پر ہیں اور یہی کامیاب ہیں۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002005.mp3"
     },
     "highlighted_word_indices": [
-      1
+      8
+    ],
+    "highlighted_words": [
+      "الْمُفْلِحُونَ"
     ],
     "noor_explanation": {
-      "en": "قُلُوبِهَا uses an attached pronoun — هَا (their) — with the noun in the genitive state after the preposition عَلَى. ثَلَاثٌ is the predicate showing what is 'upon' the hearts. Al-Humazah shows us the three destructive traits that prevent a person from being saved.",
-      "ur": "قُلُوبِهَا ایک attached pronoun استعمال کرتا ہے — هَا (ان کے) — noun کے ساتھ genitive state میں preposition عَلَى کے بعد۔ ثَلَاثٌ predicate ہے جو دکھاتا ہے کہ 'دلوں پر' کیا ہے۔ Al-Humazah ہمیں تین destructive traits دکھاتی ہے جو کسی شخص کو بچنے سے روکتی ہیں۔"
+      "en": "الْمُفْلِحُونَ: ال + noun, nominative ـُونَ — not a verb.",
+      "ur": "الْمُفْلِحُونَ: ال + اسم، مرفوع ـُونَ — فعل نہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 47 is complete. You now know the three forms of sound masculine plural: وُونَ (raf'), يَنَ (nasb/jazm), وُ (idafa). مُسْلِمُونَ، مُسْلِمِينَ، مُسْلِمُو — same meaning, different endings. R10 is next — Mid-Book 5 Review. You've earned it.",
-      "ur": "Chapter 47 مکمل ہو گیا۔ اب آپ کو جمع مذکر سالم کی تین forms معلوم ہیں: وُونَ (رفع)، يَنَ (نصب/جزم)، وُ (اضافت)۔ مُسْلِمُونَ، مُسْلِمِينَ، مُسْلِمُو — وہی meaning، مختلف endings۔ R10 اگلا ہے — Mid-Book 5 Review۔ آپ نے اسے حاصل کیا ہے۔"
+      "en": "Noun or verb? Look for ال and a case ending (الْمُؤْمِنُونَ), a present prefix (يُؤْمِنُونَ), or the past ـُوا (آمَنُوا).",
+      "ur": "اسم یا فعل؟ ال اور اعراب کا لاحقہ (الْمُؤْمِنُونَ)، مضارع کا سابقہ (يُؤْمِنُونَ)، یا ماضی کا ـُوا (آمَنُوا) دیکھیں۔"
     }
   }
 }
