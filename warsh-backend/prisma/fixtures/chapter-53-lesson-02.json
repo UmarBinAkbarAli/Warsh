@@ -18,7 +18,7 @@
       "ayah": 1,
       "label": "Al-Asr 103:1",
       "ar": "وَالْعَصْرِ",
-      "en": "By the afternoon/age",
+      "en": "By time,",
       "ur": " العصر کی قسم سے",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/103001.mp3"
     },
@@ -51,8 +51,8 @@
         "ur": "عصر / زمانہ"
       },
       "explanation": {
-        "en": "الْعَصْرِ is in the genitive (مجرور) — it is the object of the oath particle understood before it. The word means 'the afternoon' literally, but in this context it is commonly understood as 'the age' or 'time' — the entirety of human history.",
-        "ur": "الْعَصْرِ genitive (مجرور) میں ہے — یہ oath particle کا object ہے جو اس سے پہلے implicitly موجود ہے۔ لفظ کا literal مطلب 'عصر' ہے، لیکن اس context میں اسے عام طور پر 'زمانہ' سمجھا جاتا ہے — پوری انسانی تاریخ۔"
+        "en": "In وَالْعَصْرِ the وَ is the وَ of oath (\"By …\"), and it makes الْعَصْرِ genitive (kasra). الْعَصْر is literally \"the afternoon\"; here it is usually understood as \"time\" or \"the age\".",
+        "ur": "وَالْعَصْرِ میں وَ قسم کا وَ ہے (\"قسم ہے …\")، اور یہ الْعَصْرِ کو مجرور کرتا ہے (کسرہ)۔ الْعَصْر کا لفظی مطلب \"سہ پہر\" ہے؛ یہاں عموماً \"زمانہ\" سمجھا جاتا ہے۔"
       }
     },
     {
@@ -65,8 +65,8 @@
         "ur": "بیشک انسان نقصان میں ہے"
       },
       "explanation": {
-        "en": "إِنَّ opens a nominal sentence. الْإِنْسَانَ is the subject (accusative after إِنَّ). لَفِي خُسْرٍ 'certainly in loss' is the predicate. The exception and condition follow.",
-        "ur": "إِنَّ ایک nominal sentence کھولتی ہے۔ الْإِنْسَانَ subject ہے (إِنَّ کے بعد accusative)۔ لَفِي خُسْرٍ 'یقیناً نقصان میں' predicate ہے۔ exception اور condition follow کرتے ہیں۔"
+        "en": "Al-'Aṣr 103:2. إِنَّ opens a nominal sentence. الْإِنْسَانَ is the subject of إِنَّ (accusative). لَفِي خُسْرٍ = \"surely in loss\" — the predicate, with the emphatic لَـ. The exception follows in 103:3.",
+        "ur": "سورۃ العصر 103:2۔ إِنَّ جملہ اسمیہ شروع کرتا ہے۔ الْإِنْسَانَ إِنَّ کا اسم ہے (منصوب)۔ لَفِي خُسْرٍ = \"یقیناً خسارے میں\" — خبر، تاکید کے لَـ کے ساتھ۔ استثنا 103:3 میں آتا ہے۔"
       }
     },
     {
@@ -98,19 +98,19 @@
       "options": [
         {
           "en": "Indeed, mankind is in loss",
-          "ur": "بیشک انسان نقصان میں ہے"
+          "ur": "بے شک انسان خسارے میں ہے"
         },
         {
-          "en": "The human is in great loss",
-          "ur": "انسان بڑے نقصان میں ہے"
+          "en": "Indeed, mankind is in gain",
+          "ur": "بے شک انسان فائدے میں ہے"
         },
         {
           "en": "Indeed, loss is mankind",
-          "ur": "بیشک نقصان انسان ہے"
+          "ur": "بے شک خسارہ انسان ہے"
         },
         {
-          "en": "Mankind will surely be in loss",
-          "ur": "انسان یقیناً نقصان میں ہو گا"
+          "en": "Mankind was not in loss",
+          "ur": "انسان خسارے میں نہیں تھا"
         }
       ],
       "correct_index": 0,
@@ -128,7 +128,11 @@
         "ur": "الْعَصْرِ ayah وَالْعَصْرِ میں مرفوع ہے۔"
       },
       "correct_answer": false,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. The وَ of oath makes الْعَصْرِ genitive — the kasra on the last letter shows it.",
+        "ur": "غلط۔ قسم کا وَ الْعَصْرِ کو مجرور کرتا ہے — آخری حرف کا کسرہ یہی بتاتا ہے۔"
+      }
     },
     {
       "type": "FILL_BLANK",
@@ -213,20 +217,20 @@
       ],
       "right_column": [
         {
-          "en": "Subject in nominal sentence",
-          "ur": "اسمی جملے میں فاعل"
+          "en": "Nominative — ḍamma",
+          "ur": "مرفوع — ضمہ"
         },
         {
-          "en": "Subject after إِنَّ",
-          "ur": "إِنَّ کے بعد subject"
+          "en": "Accusative — fatḥa, e.g. after إِنَّ",
+          "ur": "منصوب — فتحہ، جیسے إِنَّ کے بعد"
         },
         {
-          "en": "After preposition",
-          "ur": "حرف جر کے بعد"
+          "en": "Genitive — kasra, with الْ",
+          "ur": "مجرور — کسرہ، الْ کے ساتھ"
         },
         {
-          "en": "Predicate or object",
-          "ur": "خبر یا مفعول"
+          "en": "Genitive — kasra with tanwīn",
+          "ur": "مجرور — تنوین والا کسرہ"
         }
       ],
       "correct_pairs": [
@@ -280,8 +284,8 @@
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "إِلَّا introduces an exception after the negation in the previous sentence. الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ — 'those who believed and did righteous deeds.' This is the exception to the general statement of loss.",
-        "ur": "إِلَّا ایک exception متعارف کراتا ہے پچھلی sentence میں negation کے بعد۔ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ — 'وہ لوگ جو ایمان لائے اور نیک اعمال کیے'۔ یہ loss کے general statement کی exception ہے۔"
+        "en": "Al-'Aṣr 103:3. إِلَّا makes an exception to the statement before it (\"mankind is in loss\"). الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ = \"those who believe and do righteous deeds\".",
+        "ur": "سورۃ العصر 103:3۔ إِلَّا پچھلی بات (\"انسان خسارے میں ہے\") سے استثنا کرتا ہے۔ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ = \"جو ایمان لائے اور نیک عمل کیے\"۔"
       }
     },
     {
@@ -338,20 +342,20 @@
     },
     "ayah": {
       "surah": 103,
-      "ayah": 1,
-      "label": "Al-Asr 103:1-3",
-      "ar": "وَالْعَصْرِ",
-      "en": "By time,",
-      "ur": "عصر کی قسم",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/103001.mp3"
+      "ayah": 2,
+      "label": "Al-'Asr 103:2",
+      "ar": "إِنَّ الْإِنسَانَ لَفِي خُسْرٍ",
+      "en": "Indeed, mankind is in loss,",
+      "ur": "کہ انسان نقصان میں ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/103002.mp3"
     },
     "highlighted_word_indices": [
       1,
-      2
+      3
     ],
     "noor_explanation": {
-      "en": "Three ayahs of Al-Asr: oath, general statement of loss for mankind, then the exception. Those who believe and do righteous deeds are the exception to the universal loss.",
-      "ur": "الْعَصْرِ کی تین ayahs: oath، mankind کے لیے loss کا general statement، پھر exception۔ جو ایمان لائے اور نیک اعمال کیے وہ universal loss کی exception ہیں۔"
+      "en": "Three ayahs, one argument: an oath (وَالْعَصْرِ), a general statement — الْإِنْسَانَ لَفِي خُسْرٍ, \"mankind is in loss\" — and then the exception: those who believe, do righteous deeds, and urge one another to truth and patience.",
+      "ur": "تین آیات، ایک دلیل: قسم (وَالْعَصْرِ)، ایک عام بات — الْإِنْسَانَ لَفِي خُسْرٍ، \"انسان خسارے میں ہے\" — پھر استثنا: جو ایمان لائے، نیک عمل کیے، اور ایک دوسرے کو حق اور صبر کی تلقین کی۔"
     }
   },
   "close": {
