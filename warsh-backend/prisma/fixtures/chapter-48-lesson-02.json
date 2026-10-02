@@ -2,15 +2,15 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 48, Lesson 2 — Numbers 1-20 in Arabic.",
+    "_note": "Chapter 48, Lesson 2 — numbers 1–10: 1 and 2 as fixed chunks; 3–10 with gender polarity and a plural genitive counted noun (2:196). 11–20 for recognition only.",
     "chapter_order": 48,
     "lesson_order": 2,
     "chapter_title": "Time, Numbers, and Measurements",
-    "title": "Numbers 1-20",
-    "titleAr": "الْأَعْدَادُ مِنْ 1 إِلَى 20",
-    "source": "book5_lesson4_time_numbers.md",
+    "title": "Numbers 1–10",
+    "titleAr": "الْأَعْدَادُ مِنْ ١ إِلَى ١٠",
     "estimated_minutes": 8,
-    "xp_reward": 10
+    "xp_reward": 10,
+    "titleUr": "اعداد 1 سے 10"
   },
   "hook": {
     "ayah": {
@@ -18,99 +18,92 @@
       "ayah": 196,
       "label": "Al-Baqarah 2:196",
       "ar": "فَمَنْ لَمْ يَجِدْ فَصِيَامُ ثَلَاثَةِ أَيَّامٍ",
-      "en": "And whoever cannot find [to fast], then three days of fasting.",
+      "en": "And whoever cannot find [one], then a fast of three days.",
       "ur": "اور جو نہ پائے تو تین دن کے روزے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002196.mp3"
     },
+    "autoplay": true,
     "noor_intro": {
-      "en": "Numbers in Arabic follow a specific pattern. Today we learn 1 to 20. Some numbers are sound masculine plural (اثْنَانِ, ثَلَاثَةٌ, أَرْبَعَةٌ), others have their own forms. Pay attention to the gender agreement.",
-      "ur": "عربی میں numbers ایک خاص pattern follow کرتے ہیں۔ آج ہم 1 سے 20 سیکھتے ہیں۔ کچھ numbers sound masculine plural ہیں (اثْنَانِ, ثَلَاثَةٌ, أَرْبَعَةٌ)، دوسروں کی اپنی forms ہیں۔ gender agreement پر attention دیں۔"
-    },
-    "autoplay": true
+      "en": "ثَلَاثَةِ أَيَّامٍ — \"three days\". The number ends in ة, and the counted noun is plural. Today: numbers 1–10 and how they join a noun.",
+      "ur": "ثَلَاثَةِ أَيَّامٍ — \"تین دن\"۔ عدد ة پر ختم ہوتا ہے، اور معدود جمع ہے۔ آج: 1 سے 10 تک اعداد اور اسم کے ساتھ ان کا استعمال۔"
+    }
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "وَاحِدٌ",
-        "ar_plain": "واحد",
-        "translit": "waahidun",
-        "en": "one (m)",
-        "ur": "ایک (مذکر)"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Number words",
+        "ar": "أَسْمَاءُ الْأَعْدَادِ",
+        "ur": "اعداد کے الفاظ"
       },
       "explanation": {
-        "en": "وَاحِدٌ is 'one' for masculine nouns. For feminine: وَاحِدَةٌ. Numbers 3-10 require the noun to be in the singular genitive: ثَلَاثَةُ أَيَّامٍ (three days), أَرْبَعَةُ مَسَاجِدَ (four mosques).",
-        "ur": "وَاحِدٌ مذکر nouns کے لیے 'ایک' ہے۔ مؤنث کے لیے: وَاحِدَةٌ۔ Numbers 3-10 کے لیے noun singular genitive میں ہوتا ہے: ثَلَاثَةُ أَيَّامٍ (تین دن)، أَرْبَعَةُ مَسَاجِدَ (چار مسجدیں)۔"
+        "en": "وَاحِدٌ 1 · اثْنَانِ 2 · ثَلَاثَةٌ 3 · أَرْبَعَةٌ 4 · خَمْسَةٌ 5 · سِتَّةٌ 6 · سَبْعَةٌ 7 · ثَمَانِيَةٌ 8 · تِسْعَةٌ 9 · عَشَرَةٌ 10. These are number words (numerals), not plural nouns.",
+        "ur": "وَاحِدٌ 1 · اثْنَانِ 2 · ثَلَاثَةٌ 3 · أَرْبَعَةٌ 4 · خَمْسَةٌ 5 · سِتَّةٌ 6 · سَبْعَةٌ 7 · ثَمَانِيَةٌ 8 · تِسْعَةٌ 9 · عَشَرَةٌ 10۔ یہ اعداد کے الفاظ ہیں، جمع اسم نہیں۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "اثْنَانِ",
-        "ar_plain": "اثنان",
-        "translit": "ithnaani",
-        "en": "two (m)",
-        "ur": "دو (مذکر)"
+        "ar": "كِتَابٌ وَاحِدٌ — كِتَابَانِ اثْنَانِ",
+        "ar_plain": "كتاب واحد كتابان اثنان",
+        "translit": "kitaabun waahid — kitaabaani-thnaan",
+        "en": "one book — two books",
+        "ur": "ایک کتاب — دو کتابیں"
       },
       "explanation": {
-        "en": "اثْنَانِ is 'two' for masculine — it is dual and takes the dual ending. For feminine: اثْنَتَانِ. ثَلَاثَةُ أَيَّامٍ (three days), ثَلَاثُ لَيَالٍ (three nights). Note: when counting, the counted noun is always singular.",
-        "ur": "اثْنَانِ مذکر کے لیے 'دو' ہے — یہ dual ہے اور dual ending لیتا ہے۔ مؤنث کے لیے: اثْنَتَانِ۔ ثَلَاثَةُ أَيَّامٍ (تین دن)، ثَلَاثُ لَيَالٍ (تین راتیں)۔ نوٹ: count کرتے وقت، counted noun ہمیشہ singular ہوتا ہے۔"
+        "en": "1 and 2 come after the noun, like adjectives. (Learn these as fixed phrases for now.)",
+        "ur": "1 اور 2 اسم کے بعد صفت کی طرح آتے ہیں۔ (فی الحال انہیں مقررہ جملوں کے طور پر یاد کریں۔)"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "ثَلَاثَةٌ",
-        "ar_plain": "ثلاثة",
-        "translit": "thalaathatu",
-        "en": "three (m)",
-        "ur": "تین (مذکر)"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "3–10: opposite gender, plural noun",
+        "ar": "الْأَعْدَادُ مِنْ ٣ إِلَى ١٠",
+        "ur": "3–10: الٹی جنس، جمع اسم"
       },
       "explanation": {
-        "en": "ثَلَاثَةٌ is 'three' for masculine. ثَلَاثٌ is the shortened form used before nouns in genitive: ثَلَاثَةُ أَبْنَاءٍ → ثَلَاثُ بَنِينَ. The feminine form is ثَلَاثٌ: ثَلَاثُ لَيَالٍ (three nights).",
-        "ur": "ثَلَاثَةٌ مذکر کے لیے 'تین' ہے۔ ثَلَاثٌ shortened form ہے جو nouns سے پہلے genitive میں used ہوتا ہے: ثَلَاثَةُ أَبْنَاءٍ → ثَلَاثُ بَنِينَ۔ feminine form ثَلَاثٌ ہے: ثَلَاثُ لَيَالٍ (تین راتیں)۔"
+        "en": "3–10: the number takes the opposite gender ending to the singular of the counted noun, and the counted noun is plural and genitive: ثَلَاثَةُ أَيَّامٍ (يَوْمٌ is masculine → number with ة), ثَلَاثُ لَيَالٍ (لَيْلَةٌ is feminine → number without ة).",
+        "ur": "3 سے 10: عدد معدود کے واحد کے الٹ جنس کا لاحقہ لیتا ہے، اور معدود جمع اور مجرور ہوتا ہے: ثَلَاثَةُ أَيَّامٍ (يَوْمٌ مذکر ہے ← عدد ة کے ساتھ)، ثَلَاثُ لَيَالٍ (لَيْلَةٌ مؤنث ہے ← عدد ة کے بغیر)۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "أَرْبَعَةٌ",
-        "ar_plain": "أربعة",
-        "translit": "arba'atu",
-        "en": "four (m)",
-        "ur": "چار (مذکر)"
+        "ar": "ثَلَاثَةُ أَيَّامٍ",
+        "ar_plain": "ثلاثة ايام",
+        "translit": "thalaathatu ayyaam",
+        "en": "three days (Al-Baqarah 2:196)",
+        "ur": "تین دن (البقرہ 2:196)"
       },
       "explanation": {
-        "en": "أَرْبَعَةٌ is 'four' for masculine. أَرْبَعٌ is the form used before nouns in genitive: أَرْبَعَةُ أَشْهُرٍ → أَرْبَعُ شَهْرٍ. The feminine form is أَرْبَعٌ: أَرْبَعُ لَيَالٍ (four nights).",
-        "ur": "أَرْبَعَةٌ مذکر کے لیے 'چار' ہے۔ أَرْبَعٌ form nouns سے پہلے genitive میں used ہوتا ہے: أَرْبَعَةُ أَشْهُرٍ → أَرْبَعُ شَهْرٍ۔ feminine form أَرْبَعٌ ہے: أَرْبَعُ لَيَالٍ (چار راتیں)۔"
+        "en": "يَوْمٌ (day) is masculine, so the number is ثَلَاثَةُ (with ة). The counted noun is plural and genitive: أَيَّامٍ.",
+        "ur": "يَوْمٌ (دن) مذکر ہے، اس لیے عدد ثَلَاثَةُ (ة کے ساتھ) ہے۔ معدود جمع اور مجرور ہے: أَيَّامٍ۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "عَشَرَةٌ",
-        "ar_plain": "عشرة",
-        "translit": "'asharatu",
-        "en": "ten",
-        "ur": "دس"
+        "ar": "أَرْبَعَةُ أَشْهُرٍ",
+        "ar_plain": "اربعة اشهر",
+        "translit": "arba'atu ash-hur",
+        "en": "four months (Al-Baqarah 2:226)",
+        "ur": "چار مہینے (البقرہ 2:226)"
       },
       "explanation": {
-        "en": "عَشَرَةٌ is 'ten.' Numbers 11-19 are compounds: أَحَدَ عَشَرَ (11m), اثْنَا عَشَرَ (12m), ثَلَاثَةَ عَشَرَ (13m). The pattern is [unit] + عَشَرَ with special dual/masculine/feminine forms for 12.",
-        "ur": "عَشَرَةٌ 'دس' ہے۔ Numbers 11-19 compounds ہیں: أَحَدَ عَشَرَ (11م), اثْنَا عَشَرَ (12م), ثَلَاثَةَ عَشَرَ (13م)۔ pattern ہے [unit] + عَشَرَ جس میں 12 کے لیے special dual/masculine/feminine forms ہیں۔"
+        "en": "شَهْرٌ is masculine → أَرْبَعَةُ; counted noun plural genitive: أَشْهُرٍ.",
+        "ur": "شَهْرٌ مذکر ہے ← أَرْبَعَةُ؛ معدود جمع مجرور: أَشْهُرٍ۔"
       }
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "عِشْرُونَ",
-        "ar_plain": "عشرون",
-        "translit": "'ishruuna",
-        "en": "twenty",
-        "ur": "بیس"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "11–20, for recognition",
+        "ur": "11–20، پہچان کے لیے"
       },
-      "explanation": {
-        "en": "عِشْرُونَ is 'twenty.' For numbers 21-99, the pattern is: [ones] + وَوْ + عِشْرُونَ (e.g., وَاحِدٌ وَعِشْرُونَ = 21, ثَلَاثَةٌ وَعِشْرُونَ = 23). The ones come first, then وَوْ, then twenty.",
-        "ur": "عِشْرُونَ 'بیس' ہے۔ Numbers 21-99 کے لیے pattern ہے: [ones] + وَوْ + عِشْرُونَ (e.g., وَاحِدٌ وَعِشْرُونَ = 21, ثَلَاثَةٌ وَعِشْرُونَ = 23)۔ ones پہلے آتے ہیں، پھر وَوْ، پھر بیس۔"
+      "body": {
+        "en": "أَحَدَ عَشَرَ (11), اثْنَا عَشَرَ (12), ثَلَاثَةَ عَشَرَ (13) … عِشْرُونَ (20). These have their own rules — just recognise them for now.",
+        "ur": "أَحَدَ عَشَرَ (11)، اثْنَا عَشَرَ (12)، ثَلَاثَةَ عَشَرَ (13) … عِشْرُونَ (20)۔ ان کے اپنے قاعدے ہیں — فی الحال صرف پہچانیں۔"
       }
     }
   ],
@@ -120,8 +113,8 @@
       "id": "ch48-l02-ex01",
       "prompt": {
         "ar": "ثَلَاثَةُ أَيَّامٍ",
-        "ar_plain": "ثلاثة أيام",
-        "translit": "thalaathatu ayyaamin",
+        "ar_plain": "ثلاثة ايام",
+        "translit": "thalaathatu ayyaam",
         "en": "three days",
         "ur": "تین دن"
       },
@@ -131,34 +124,38 @@
           "ur": "تین دن"
         },
         {
-          "en": "the three days",
-          "ur": "تینوں دن"
+          "en": "three nights",
+          "ur": "تین راتیں"
         },
         {
-          "en": "third day",
+          "en": "the third day",
           "ur": "تیسرا دن"
         },
         {
-          "en": "three nights",
-          "ur": "تین راتیں"
+          "en": "thirty days",
+          "ur": "تیس دن"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "ثَلَاثَةُ is 'three' (masc.). أَيَّامٍ is the plural of يَوْمٌ (day) in the genitive — required after numbers 3-10. ثَلَاثَةُ أَيَّامٍ = 'three days.'",
-        "ur": "ثَلَاثَةُ 'تین' ہے (مذکر)۔ أَيَّامٍ يَوْمٌ (دن) کی plural ہے genitive میں — numbers 3-10 کے بعد required۔ ثَلَاثَةُ أَيَّامٍ = 'تین دن'۔"
+        "en": "ثَلَاثَةُ = three; أَيَّامٍ = days (plural genitive).",
+        "ur": "ثَلَاثَةُ = تین؛ أَيَّامٍ = دن (جمع مجرور)۔"
       }
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch48-l02-ex02",
       "statement": {
-        "en": "Numbers 3-10 require the counted noun to be in the singular genitive form.",
-        "ur": "Numbers 3-10 کے لیے counted noun singular genitive form میں ہوتا ہے۔"
+        "en": "After the numbers 3–10, the counted noun is plural and genitive.",
+        "ur": "3 سے 10 کے بعد معدود جمع اور مجرور ہوتا ہے۔"
       },
       "correct_answer": true,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "True: ثَلَاثَةُ أَيَّامٍ, خَمْسَةُ كُتُبٍ.",
+        "ur": "درست: ثَلَاثَةُ أَيَّامٍ، خَمْسَةُ كُتُبٍ۔"
+      }
     },
     {
       "type": "FILL_BLANK",
@@ -172,39 +169,39 @@
       "options": [
         {
           "ar": "أَشْهُرٍ",
-          "ar_plain": "أشهر",
-          "translit": "ashhurin",
-          "en": "months",
-          "ur": "مہینے"
+          "ar_plain": "اشهر",
+          "translit": "ash-hurin",
+          "en": "months (plural genitive)",
+          "ur": "مہینے (جمع مجرور)"
         },
         {
           "ar": "شَهْرٌ",
           "ar_plain": "شهر",
           "translit": "shahrun",
-          "en": "a month (nom.)",
-          "ur": "ایک مہینہ (مرفوع)"
+          "en": "a month (singular)",
+          "ur": "ایک مہینہ (واحد)"
         },
         {
           "ar": "شَهْرٍ",
           "ar_plain": "شهر",
           "translit": "shahrin",
-          "en": "a month (gen.)",
-          "ur": "ایک مہینہ (جر)"
+          "en": "a month (singular genitive)",
+          "ur": "ایک مہینہ (واحد مجرور)"
         },
         {
           "ar": "شَهْرًا",
           "ar_plain": "شهرا",
           "translit": "shahran",
-          "en": "a month (acc.)",
-          "ur": "ایک مہینہ (نصب)"
+          "en": "a month (singular accusative)",
+          "ur": "ایک مہینہ (واحد منصوب)"
         }
       ],
       "correct_answer": {
         "ar": "أَشْهُرٍ",
-        "ar_plain": "أشهر",
-        "translit": "ashhurin",
-        "en": "months",
-        "ur": "مہینے"
+        "ar_plain": "اشهر",
+        "translit": "ash-hurin",
+        "en": "months (plural genitive)",
+        "ur": "مہینے (جمع مجرور)"
       },
       "xp_value": 1
     },
@@ -213,68 +210,68 @@
       "id": "ch48-l02-ex04",
       "left_column": [
         {
-          "ar": "وَاحِدٌ",
-          "ar_plain": "واحد",
-          "translit": "waahidun",
-          "en": "one",
-          "ur": "ایک"
+          "ar": "ثَلَاثَةُ أَيَّامٍ",
+          "ar_plain": "ثلاثة ايام",
+          "translit": "thalaathatu ayyaam",
+          "en": "three days",
+          "ur": "تین دن"
         },
         {
-          "ar": "اثْنَانِ",
-          "ar_plain": "اثنان",
-          "translit": "ithnaani",
-          "en": "two",
-          "ur": "دو"
+          "ar": "ثَلَاثُ لَيَالٍ",
+          "ar_plain": "ثلاث ليال",
+          "translit": "thalaathu layaal",
+          "en": "three nights",
+          "ur": "تین راتیں"
         },
         {
-          "ar": "ثَلَاثَةٌ",
-          "ar_plain": "ثلاثة",
-          "translit": "thalaathatu",
-          "en": "three",
-          "ur": "تین"
+          "ar": "كِتَابٌ وَاحِدٌ",
+          "ar_plain": "كتاب واحد",
+          "translit": "kitaabun waahid",
+          "en": "one book",
+          "ur": "ایک کتاب"
         },
         {
-          "ar": "عَشَرَةٌ",
-          "ar_plain": "عشرة",
-          "translit": "'asharatu",
-          "en": "ten",
-          "ur": "دس"
+          "ar": "عَشَرَةُ رِجَالٍ",
+          "ar_plain": "عشرة رجال",
+          "translit": "'asharatu rijaal",
+          "en": "ten men",
+          "ur": "دس آدمی"
         }
       ],
       "right_column": [
         {
-          "en": "one",
-          "ur": "ایک"
+          "en": "feminine noun → number without ة",
+          "ur": "مؤنث اسم ← بغیر ة کا عدد"
         },
         {
-          "en": "two",
-          "ur": "دو"
+          "en": "10 + plural genitive",
+          "ur": "10 + جمع مجرور"
         },
         {
-          "en": "three",
-          "ur": "تین"
+          "en": "masculine noun → number with ة",
+          "ur": "مذکر اسم ← ة والا عدد"
         },
         {
-          "en": "ten",
-          "ur": "دس"
+          "en": "1 after the noun, like an adjective",
+          "ur": "1 اسم کے بعد، صفت کی طرح"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
+          0
+        ],
+        [
+          2,
           3
+        ],
+        [
+          3,
+          1
         ]
       ],
       "xp_value": 1
@@ -290,12 +287,12 @@
         {
           "ar": "عِنْدِي",
           "ar_plain": "عندي",
-          "translit": "indii",
-          "en": "I have (possession)",
-          "ur": "میرے پاس ہے"
+          "translit": "'indii",
+          "en": "I have",
+          "ur": "میرے پاس"
         },
         {
-          "ar": "خَمْسَةٌ",
+          "ar": "خَمْسَةُ",
           "ar_plain": "خمسة",
           "translit": "khamsatu",
           "en": "five",
@@ -305,15 +302,15 @@
           "ar": "كُتُبٍ",
           "ar_plain": "كتب",
           "translit": "kutubin",
-          "en": "books (gen.)",
-          "ur": "کتابیں (جر)"
+          "en": "books (plural genitive)",
+          "ur": "کتابیں"
         },
         {
-          "ar": "كِتَابٌ",
+          "ar": "كِتَابٍ",
           "ar_plain": "كتاب",
-          "translit": "kitaabun",
-          "en": "a book (nom.)",
-          "ur": "ایک کتاب (مرفوع)"
+          "translit": "kitaabin",
+          "en": "book (singular)",
+          "ur": "کتاب (واحد)"
         }
       ],
       "correct_order": [
@@ -328,35 +325,34 @@
       "id": "ch48-l02-ex06",
       "prompt": {
         "ar": "فَمَنْ لَمْ يَجِدْ فَصِيَامُ ثَلَاثَةِ أَيَّامٍ",
-        "ar_plain": "فمن لم يجد فصيام ثلاثة أيام",
-        "translit": "faman lam yajid fa siyaamu thalaathati ayyaamin",
-        "en": "And whoever cannot find, then three days of fasting.",
-        "ur": "اور جو نہ پائے تو تین دن کے روزے۔",
-        "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002196.mp3"
+        "ar_plain": "فمن لم يجد فصيام ثلاثة ايام",
+        "translit": "faman lam yajid fa-siyaamu thalaathati ayyaam",
+        "en": "And whoever cannot find [one], then a fast of three days.",
+        "ur": "اور جو نہ پائے تو تین دن کے روزے۔"
       },
       "options": [
         {
-          "en": "And whoever cannot find, then three days of fasting.",
+          "en": "And whoever cannot find [one], then a fast of three days.",
           "ur": "اور جو نہ پائے تو تین دن کے روزے۔"
         },
         {
-          "en": "And those who did not find, three days of fasting.",
-          "ur": "اور جنہوں نے نہیں پایا، تین دن کے روزے۔"
+          "en": "Whoever finds three days should fast.",
+          "ur": "جو تین دن پائے وہ روزہ رکھے۔"
         },
         {
-          "en": "So he did not find three days of fasting.",
-          "ur": "تو اس نے تین دن کے روزے نہیں پائے۔"
+          "en": "He did not fast for three days.",
+          "ur": "اس نے تین دن روزہ نہیں رکھا۔"
         },
         {
-          "en": "And whoever finds three days to fast.",
-          "ur": "اور جو تین دن روزہ رکھنے کو پائے۔"
+          "en": "Fasting is three days a month.",
+          "ur": "روزہ مہینے میں تین دن ہے۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "فَمَنْ لَمْ يَجِدْ = 'and whoever cannot find.' فَصِيَامُ = 'then fasting.' ثَلَاثَةِ أَيَّامٍ = 'three days' — genitive after the number. This is from the fasting fidyah rules in Surah Al-Baqarah.",
-        "ur": "فَمَنْ لَمْ يَجِدْ = 'اور جو نہ پائے'۔ فَصِيَامُ = 'تو روزے'۔ ثَلَاثَةِ أَيَّامٍ = 'تین دن' — number کے بعد genitive۔ یہ سورۃ البقرہ میں fasting fidyah rules سے ہے۔"
+        "en": "صِيَامُ ثَلَاثَةِ أَيَّامٍ = \"a fast of three days\" — ثَلَاثَةِ is genitive here (after صِيَامُ), and أَيَّامٍ is plural genitive.",
+        "ur": "صِيَامُ ثَلَاثَةِ أَيَّامٍ = \"تین دن کے روزے\" — یہاں ثَلَاثَةِ مجرور ہے (صِيَامُ کے بعد)، اور أَيَّامٍ جمع مجرور ہے۔"
       }
     },
     {
@@ -364,68 +360,68 @@
       "id": "ch48-l02-ex07",
       "left_column": [
         {
+          "ar": "أَحَدَ عَشَرَ",
+          "ar_plain": "احد عشر",
+          "translit": "ahada 'ashar",
+          "en": "eleven",
+          "ur": "گیارہ"
+        },
+        {
+          "ar": "اثْنَا عَشَرَ",
+          "ar_plain": "اثنا عشر",
+          "translit": "ithnaa 'ashar",
+          "en": "twelve",
+          "ur": "بارہ"
+        },
+        {
           "ar": "عِشْرُونَ",
           "ar_plain": "عشرون",
-          "translit": "'ishruuna",
+          "translit": "'ishruun",
           "en": "twenty",
           "ur": "بیس"
         },
         {
-          "ar": "وَاحِدٌ وَعِشْرُونَ",
-          "ar_plain": "واحد وعشرون",
-          "translit": "waahidun wa 'ishruuna",
-          "en": "twenty-one",
-          "ur": "اکیس"
-        },
-        {
-          "ar": "خَمْسُونَ",
-          "ar_plain": "خمسون",
-          "translit": "khamsuuna",
-          "en": "fifty",
-          "ur": "پچاس"
-        },
-        {
-          "ar": "مِائَةٌ",
-          "ar_plain": "مائة",
-          "translit": "mi'atu",
-          "en": "one hundred",
-          "ur": "سو"
+          "ar": "عَشَرَةٌ",
+          "ar_plain": "عشرة",
+          "translit": "'asharah",
+          "en": "ten",
+          "ur": "دس"
         }
       ],
       "right_column": [
         {
-          "en": "twenty",
-          "ur": "بیس"
+          "en": "12",
+          "ur": "12"
         },
         {
-          "en": "twenty-one",
-          "ur": "اکیس"
+          "en": "10",
+          "ur": "10"
         },
         {
-          "en": "fifty",
-          "ur": "پچاس"
+          "en": "11",
+          "ur": "11"
         },
         {
-          "en": "one hundred",
-          "ur": "سو"
+          "en": "20",
+          "ur": "20"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
+          0
+        ],
+        [
+          2,
           3
+        ],
+        [
+          3,
+          1
         ]
       ],
       "xp_value": 1
@@ -433,31 +429,36 @@
   ],
   "reveal": {
     "concept_name": {
-      "en": "Arabic numbers 1-20",
-      "ar": "الْأَعْدَادُ الْعَرَبِيَّةُ مِنْ 1 إِلَى 20",
-      "ur": "عربی numbers 1 سے 20 تک"
+      "en": "3–10 + plural genitive",
+      "ar": "الْعَدَدُ وَالْمَعْدُودُ",
+      "ur": "3–10 + جمع مجرور"
     },
     "ayah": {
       "surah": 2,
       "ayah": 196,
       "label": "Al-Baqarah 2:196",
       "ar": "فَمَنْ لَمْ يَجِدْ فَصِيَامُ ثَلَاثَةِ أَيَّامٍ",
-      "en": "And whoever cannot find [to fast], then three days of fasting.",
+      "en": "And whoever cannot find [one], then a fast of three days.",
       "ur": "اور جو نہ پائے تو تین دن کے روزے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002196.mp3"
     },
     "highlighted_word_indices": [
-      4
+      4,
+      5
+    ],
+    "highlighted_words": [
+      "ثَلَاثَةِ",
+      "أَيَّامٍ"
     ],
     "noor_explanation": {
-      "en": "ثَلَاثَةِ is the genitive form of 'three' — ثَلَاثَةُ أَيَّامٍ means 'three days.' The counted noun أَيَّامٍ is in the genitive because the number ثَلَاثَةٌ governs it. This rule applies to all numbers 3-10.",
-      "ur": "ثَلَاثَةِ 'تین' کی genitive form ہے — ثَلَاثَةُ أَيَّامٍ کا مطلب 'تین دن'۔ counted noun أَيَّامٍ genitive میں ہے کیونکہ number ثَلَاثَةٌ اسے govern کرتی ہے۔ یہ rule numbers 3-10 پر لاگو ہوتی ہے۔"
+      "en": "ثَلَاثَةِ أَيَّامٍ: يَوْمٌ is masculine, so the number has ة; أَيَّامٍ is plural and genitive.",
+      "ur": "ثَلَاثَةِ أَيَّامٍ: يَوْمٌ مذکر ہے، اس لیے عدد پر ة ہے؛ أَيَّامٍ جمع اور مجرور ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Numbers in Arabic are systematic once you know the pattern. ثَلَاثَةُ أَيَّامٍ, أَرْبَعَةُ مَسَاجِدَ, خَمْسَةُ كُتُبٍ — the noun is always singular genitive after 3-10. Next lesson: measurements and more everyday vocabulary.",
-      "ur": "عربی میں numbers ایک بار pattern جاننے کے بعد systematic ہوتے ہیں۔ ثَلَاثَةُ أَيَّامٍ, أَرْبَعَةُ مَسَاجِدَ, خَمْسَةُ كُتُبٍ — noun 3-10 کے بعد ہمیشہ singular genitive ہوتا ہے۔ اگلا lesson: measurements اور مزید everyday vocabulary۔"
+      "en": "1 and 2 follow the noun; 3–10 take the opposite gender ending and a plural genitive noun: ثَلَاثَةُ أَيَّامٍ, ثَلَاثُ لَيَالٍ.",
+      "ur": "1 اور 2 اسم کے بعد آتے ہیں؛ 3–10 الٹی جنس کا لاحقہ اور جمع مجرور اسم لیتے ہیں: ثَلَاثَةُ أَيَّامٍ، ثَلَاثُ لَيَالٍ۔"
     }
   }
 }

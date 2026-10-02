@@ -47,6 +47,19 @@ Card and exercise numbers are 1-based, as the learner sees them.
 | Ch 70 L6 | Discover card 1 | مراجعة: أنواع الاستثناء بـ إِلَّا | `83bd1a88` |
 | Ch 72 L6 | Discover card 3 | أَيُّهَا لا يتغير | `e3a60405` |
 
+## Spoken-phrase recordings to re-record
+
+These phrases had their wording corrected, so their existing recordings
+(`audio/spoken/<id>.mp3`) no longer match the text. Re-record them when the
+rest of the audio is generated.
+
+| Lesson | Phrase id | Corrected text |
+|---|---|---|
+| Ch 48 L5 (SP8) | sp8-p1 | بِسْمِ اللَّهِ |
+| Ch 48 L5 (SP8) | sp8-p4 | اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ |
+| Ch 48 L5 (SP8) | sp8-p7 | إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ |
+| Ch 48 L5 (SP8) | sp8-p10 | اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى |
+
 ### Fix the text before generating these two
 
 - **Ch 70 L6 card 1** and **Ch 72 L6 card 3** are unvoweled heading/label text,
