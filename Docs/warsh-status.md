@@ -777,6 +777,19 @@ Everything below this list is either done and verified, or one of these:
    Updated-notice policy, illustrations, topic ownership, CL10–CL17
    placement) and six owner decisions (D1–D6) are in
    `Docs/proposals/chapters-26-68-review.md`. Proposals 69–72 are not part of this review.
+   **Interim correctness pass, Chapters 26–72: live in production 2026-10-02.**
+   Separate from those proposals (no new tests, no reordering, no CL labs):
+   every existing lesson in Ch 26–72 was corrected in place — wrong grammar
+   rules, invented or misquoted ayahs, broken keys and duplicate matching
+   labels — one commit per chapter (`fix(content): Ch NN — …`), Urdu
+   throughout. Ch 45–72 were rebuilt lesson by lesson (Ch 72: built vs
+   accusative vocatives, أَيُّهَا + marfūʿ نعت, رَبِّ/رَبَّنَا/اللَّهُمَّ, 9:119
+   quoted whole, review scoped to Ch 72). Published with `content:sync
+   --content --git-ref=…` (content:check 452/452), titles with
+   `scripts/sync-lesson-titles.cjs --all --apply` (63 rows), catalogue audio
+   regenerated. `ch03-l07` (display order 4) differed only in
+   `_meta.lesson_order` and was synced too. Not done: scholarly review of the Arabic/Urdu and
+   an Android emulator pass; the full proposals above still await approval.
    **Chapter 25 (`Docs/proposals/chapter-25-content-correction.md`) is
    corrected, staging-verified and promoted to production 2026-09-24** on the
    owner's instruction. The first rewrite was reviewed and fixed before
