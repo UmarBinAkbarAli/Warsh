@@ -2,97 +2,99 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 49, Lesson 3 — Relative clauses and adjective agreement in complex sentences.",
+    "_note": "Chapter 49, Lesson 3 — adjective agreement (gender, number, definiteness, case), the non-human plural, and a noun + prepositional phrase vs. iḍāfa (76:1).",
     "chapter_order": 49,
     "lesson_order": 3,
     "chapter_title": "Advanced Sentence Construction",
-    "title": "Relative Clauses and Agreement",
-    "titleAr": "الْجُمَلُ الْوَصْفِيَّةُ وَالِاتِّفَاقُ",
-    "source": "book5_lesson5_advanced_sentence.md",
+    "title": "Descriptions and Agreement",
+    "titleAr": "الصِّفَةُ وَالْمُطَابَقَةُ",
     "estimated_minutes": 8,
-    "xp_reward": 10
+    "xp_reward": 10,
+    "titleUr": "صفت اور مطابقت"
   },
   "hook": {
     "ayah": {
       "surah": 76,
       "ayah": 1,
       "label": "Al-Insan 76:1",
-      "ar": "هَلْ أَتَىٰ عَلَى الْإِنسَانِ حِينٌ مِّنَ الدَّهْرِ",
-      "en": "Has there not come upon the man a period of time",
-      "ur": "کیا انسان پر کوئی وقت گزرا ہے",
+      "ar": "هَلْ أَتَىٰ عَلَى الْإِنْسَانِ حِينٌ مِنَ الدَّهْرِ لَمْ يَكُنْ شَيْئًا مَذْكُورًا",
+      "en": "Has there come upon man a period of time when he was not a thing worth mentioning?",
+      "ur": "کیا انسان پر زمانے میں ایک ایسا وقت نہیں گزرا جب وہ کوئی قابلِ ذکر چیز نہ تھا؟",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/076001.mp3"
     },
+    "autoplay": true,
     "noor_intro": {
-      "en": "Today we study how relative clauses (الْجُمَلُ الْوَصْفِيَّة) work inside complex sentences, and how the adjective agrees with its noun across all forms — number, gender, and case.",
-      "ur": "آج ہم study کرتے ہیں کہ relative clauses (الْجُمَلُ الْوَصْفِيَّة) complex sentences کے اندر کیسے کام کرتے ہیں، اور صفت اپنے noun سے کیسے agree کرتی ہے — تعداد، جنس، اور case میں۔"
-    },
-    "autoplay": true
+      "en": "حِينٌ مِنَ الدَّهْرِ — \"a period of time\". A noun followed by a prepositional phrase — not an iḍāfa. Today: how descriptions attach to nouns.",
+      "ur": "حِينٌ مِنَ الدَّهْرِ — \"زمانے کا ایک وقت\"۔ اسم کے بعد حرفِ جر والا جملہ — اضافت نہیں۔ آج: صفات اسموں سے کیسے جڑتی ہیں۔"
+    }
   },
   "discover_cards": [
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Relative clauses in complex sentences",
-        "ar": "الْجُمَلُ الْوَصْفِيَّةُ فِي الْجُمَلِ الْمُرَكَّبَةِ",
-        "ur": "مركب جملوں میں وصفی جملے"
+        "en": "Adjective agreement",
+        "ar": "مُطَابَقَةُ الصِّفَةِ",
+        "ur": "صفت کی مطابقت"
       },
       "explanation": {
-        "en": "A relative clause describes a noun in the same sentence: الَّذِينَ آمَنُوا (those who believed) — الَّذِينَ is the relative pronoun (who), آمَنُوا is the relative clause (believed). In a complex sentence, multiple clauses can chain together.",
-        "ur": "A relative clause ایک noun کو same sentence میں describe کرتا ہے: الَّذِينَ آمَنُوا (جو لوگ ایمان لائے) — الَّذِينَ relative pronoun ہے (جو)، آمَنُوا relative clause ہے (ایمان لایا)۔ ایک complex sentence میں، multiple clauses chain ہو سکتے ہیں۔"
+        "en": "An adjective matches its noun in gender, number, definiteness and case: الطَّالِبُ الْمُجْتَهِدُ, الطَّالِبَةُ الْمُجْتَهِدَةُ, رَأَيْتُ طَالِبًا مُجْتَهِدًا. Case is رَفْع / نَصْب / جَرّ — nouns have no jazm.",
+        "ur": "صفت اپنے اسم سے جنس، عدد، معرفہ/نکرہ اور اعراب میں مطابقت رکھتی ہے: الطَّالِبُ الْمُجْتَهِدُ، الطَّالِبَةُ الْمُجْتَهِدَةُ، رَأَيْتُ طَالِبًا مُجْتَهِدًا۔ اعراب رفع / نصب / جر ہے — اسم پر جزم نہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "الْكِتَابُ الَّذِي قَرَأْتُهُ",
-        "ar_plain": "الكتاب الذي قرأته",
-        "translit": "al-kitaabu alladhii qara'tu hu",
-        "en": "the book that I read",
-        "ur": "وہ کتاب جسے میں نے پڑھا"
+        "ar": "الْكُتُبُ الْجَدِيدَةُ",
+        "ar_plain": "الكتب الجديدة",
+        "translit": "al-kutubul-jadiida",
+        "en": "the new books",
+        "ur": "نئی کتابیں"
       },
       "explanation": {
-        "en": "الْكِتَابُ (the book) is the main noun. الَّذِي (that/which) is the relative pronoun referring back to the book. قَرَأْتُهُ is the relative clause 'I read it.' The whole phrase is: the book + that + I read.",
-        "ur": "الْكِتَابُ (کتاب) main noun ہے۔ الَّذِي (وہ/جسے) relative pronoun ہے جو کتاب کو reference کرتا ہے۔ قَرَأْتُهُ relative clause ہے 'میں نے پڑھا'۔ پوری phrase ہے: کتاب + جسے + میں نے پڑھا۔"
+        "en": "A plural of things (not people) usually takes a feminine singular adjective: الْكُتُبُ الْجَدِيدَةُ, not الْجُدُدُ.",
+        "ur": "چیزوں (لوگ نہیں) کی جمع کے ساتھ عموماً مؤنث واحد صفت آتی ہے: الْكُتُبُ الْجَدِيدَةُ۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "رَجُلٌ كَانَ يَعِيشُ فِي الْقَرْيَةِ",
-        "ar_plain": "رجل كان يعيش في القرية",
-        "translit": "rajulun kaan ya'iishu fii al-qaryati",
-        "en": "a man who used to live in the village",
-        "ur": "ایک آدمی جو قریے میں رہتا تھا"
+        "ar": "الْمُعَلِّمُونَ الْمُخْلِصُونَ",
+        "ar_plain": "المعلمون المخلصون",
+        "translit": "al-mu'allimuunal-mukhlisuun",
+        "en": "the sincere teachers",
+        "ur": "مخلص اساتذہ"
       },
       "explanation": {
-        "en": "رَجُلٌ (a man) is the main noun. كَانَ يَعِيشُ (he used to live) is a verbal clause describing the man. فِي الْقَرْيَةِ (in the village) is a prepositional phrase adding location. كَانَ + present tense = past continuous.",
-        "ur": "رَجُلٌ (ایک آدمی) main noun ہے۔ كَانَ يَعِيشُ (وہ رہتا تھا) ایک verbal clause ہے جو آدمی کو describe کرتی ہے۔ فِي الْقَرْيَةِ (قریے میں) ایک prepositional phrase ہے جو location شامل کرتی ہے۔ كَانَ + present tense = past continuous۔"
+        "en": "A plural of people takes a plural adjective: الْمُخْلِصُونَ.",
+        "ur": "لوگوں کی جمع کے ساتھ جمع صفت آتی ہے: الْمُخْلِصُونَ۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Adjective agreement in complex sentences",
-        "ar": "الِاتِّفَاقُ فِي الْجُمَلِ الْمُرَكَّبَةِ",
-        "ur": "مركب جملوں میں موافقت"
-      },
-      "explanation": {
-        "en": "In complex sentences, the adjective must agree with its noun in: number (singular/plural), gender (masculine/feminine), and case state (raf'/nasb/jazm). الْمُسْلِمُونَ الْكِرَامُ (the noble Muslims) — both are plural masculine in raf'.",
-        "ur": "Complex sentences میں، صفت اپنے noun سے agree کرنی چاہیے: تعداد (واحد/جمع)، جنس (مذکر/مؤنث)، اور case state (رفع/نصب/جزم) میں۔ الْمُسْلِمُونَ الْكِرَامُ (شریف مسلمان) — دونوں plural masculine رفع میں ہیں۔"
-      }
-    },
-    {
-      "type": "AYAH_PREVIEW",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "عَلَى الْإِنسَانِ حِينٌ مِّنَ الدَّهْرِ",
-        "ar_plain": "على الإنسان حين من الدهر",
-        "translit": "alaa al-insaani hiinun mina ad-dahri",
-        "en": "upon the man a period of time",
-        "ur": "انسان پر کوئی وقت گزرا ہے"
+        "ar": "حِينٌ مِنَ الدَّهْرِ",
+        "ar_plain": "حين من الدهر",
+        "translit": "hiinun minad-dahr",
+        "en": "a period of time (Al-Insan 76:1)",
+        "ur": "زمانے کا ایک وقت (الانسان 76:1)"
       },
       "explanation": {
-        "en": "حِينٌ (a period/time) is the subject. مِنَ الدَّهْرِ (of time/the age) is an idafa chain: 'a period of the age.' عَلَى is a preposition requiring the genitive. The phrase describes a stage of life.",
-        "ur": "حِينٌ (کوئی وقت/مدت) subject ہے۔ مِنَ الدَّهْرِ (وقت کی/عہد کا) ایک idafa chain ہے: 'عہد کی ایک مدت'۔ عَلَى ایک حرف جر ہے جو genitive مانگتا ہے۔ Phrase زندگی کے ایک stage کو describe کرتا ہے۔"
+        "en": "حِينٌ (a period) + مِنَ الدَّهْرِ (a prepositional phrase: مِنْ + genitive الدَّهْرِ). Not an iḍāfa — an iḍāfa joins two nouns directly, like بَابُ الْبَيْتِ.",
+        "ur": "حِينٌ (ایک وقت) + مِنَ الدَّهْرِ (حرفِ جر والا جملہ: مِنْ + مجرور الدَّهْرِ)۔ اضافت نہیں — اضافت دو اسموں کو سیدھا جوڑتی ہے، جیسے بَابُ الْبَيْتِ۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "لَمْ يَكُنْ شَيْئًا مَذْكُورًا",
+        "ar_plain": "لم يكن شيئا مذكورا",
+        "translit": "lam yakun shay-an madhkuuraa",
+        "en": "he was not a thing worth mentioning (76:1)",
+        "ur": "وہ کوئی قابلِ ذکر چیز نہ تھا (76:1)"
+      },
+      "explanation": {
+        "en": "شَيْئًا مَذْكُورًا: noun + adjective, both indefinite and مَنْصُوب (the predicate of يَكُنْ).",
+        "ur": "شَيْئًا مَذْكُورًا: اسم + صفت، دونوں نکرہ اور منصوب (يَكُنْ کی خبر)۔"
       }
     }
   ],
@@ -101,92 +103,92 @@
       "type": "TAP_TRANSLATION",
       "id": "ch49-l03-ex01",
       "prompt": {
-        "ar": "الْكِتَابُ الَّذِي قَرَأْتُهُ",
-        "ar_plain": "الكتاب الذي قرأته",
-        "translit": "al-kitaabu alladhii qara'tu hu",
-        "en": "the book that I read",
-        "ur": "وہ کتاب جسے میں نے پڑھا"
+        "ar": "الْكُتُبُ الْجَدِيدَةُ",
+        "ar_plain": "الكتب الجديدة",
+        "translit": "al-kutubul-jadiida",
+        "en": "the new books",
+        "ur": "نئی کتابیں"
       },
       "options": [
         {
-          "en": "the book that I read",
-          "ur": "وہ کتاب جسے میں نے پڑھا"
+          "en": "the new books",
+          "ur": "نئی کتابیں"
         },
         {
-          "en": "the book which reads me",
-          "ur": "وہ کتاب جو مجھے پڑھتا ہے"
+          "en": "the new book",
+          "ur": "نئی کتاب"
         },
         {
-          "en": "I read the book",
-          "ur": "میں نے کتاب پڑھی"
+          "en": "a new book",
+          "ur": "ایک نئی کتاب"
         },
         {
-          "en": "the book of reading",
-          "ur": "پڑھنے کی کتاب"
+          "en": "the books are new",
+          "ur": "کتابیں نئی ہیں"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "الْكِتَابُ (the book) is the main noun. الَّذِي (that) is the relative pronoun. قَرَأْتُهُ (I read it) is the relative clause. The structure: noun + relative pronoun + clause describing it.",
-        "ur": "الْكِتَابُ (کتاب) main noun ہے۔ الَّذِي (وہ) relative pronoun ہے۔ قَرَأْتُهُ (میں نے پڑھا) relative clause ہے۔ Structure: noun + relative pronoun + clause describing it۔"
-      }
+      "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
       "id": "ch49-l03-ex02",
       "statement": {
-        "en": "The adjective must agree with its noun in number, gender, and case state.",
-        "ur": "صفت اپنے noun سے تعداد، جنس، اور case state میں agree کرنی چاہیے۔"
+        "en": "Adjectives agree with their noun in rafʿ, naṣb or jazm.",
+        "ur": "صفات اپنے اسم سے رفع، نصب یا جزم میں مطابقت رکھتی ہیں۔"
       },
-      "correct_answer": true,
-      "xp_value": 1
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "False. Nouns and adjectives take rafʿ, naṣb or jarr — never jazm.",
+        "ur": "غلط۔ اسم اور صفات رفع، نصب یا جر لیتے ہیں — جزم کبھی نہیں۔"
+      }
     },
     {
       "type": "FILL_BLANK",
       "id": "ch49-l03-ex03",
       "mode": "TAP",
-      "sentence_ar": "رَجُلٌ ___ فِي الْقَرْيَةِ",
+      "sentence_ar": "رَأَيْتُ طَالِبًا ___",
       "hint": {
-        "en": "a man who used to live in the village",
-        "ur": "ایک آدمی جو قریے میں رہتا تھا"
+        "en": "I saw a hardworking student.",
+        "ur": "میں نے ایک محنتی طالب علم دیکھا۔"
       },
       "options": [
         {
-          "ar": "كَانَ يَعِيشُ",
-          "ar_plain": "كان يعيش",
-          "translit": "kaan ya'iishu",
-          "en": "he used to live (past cont.)",
-          "ur": "وہ رہتا تھا (ماضی continuous)"
+          "ar": "مُجْتَهِدًا",
+          "ar_plain": "مجتهدا",
+          "translit": "mujtahidan",
+          "en": "hardworking (acc., indef.)",
+          "ur": "محنتی (منصوب، نکرہ)"
         },
         {
-          "ar": "يَعِيشُ",
-          "ar_plain": "يعيش",
-          "translit": "ya'iishu",
-          "en": "he lives (present)",
-          "ur": "وہ رہتا ہے (حال)"
+          "ar": "مُجْتَهِدٌ",
+          "ar_plain": "مجتهد",
+          "translit": "mujtahidun",
+          "en": "(nom.)",
+          "ur": "(مرفوع)"
         },
         {
-          "ar": "عَاشَ",
-          "ar_plain": "عاش",
-          "translit": "'aasha",
-          "en": "he lived (past)",
-          "ur": "وہ رہا (ماضی)"
+          "ar": "الْمُجْتَهِدَ",
+          "ar_plain": "المجتهد",
+          "translit": "al-mujtahida",
+          "en": "(definite)",
+          "ur": "(معرفہ)"
         },
         {
-          "ar": "سَكَنَ",
-          "ar_plain": "سكن",
-          "translit": "sakana",
-          "en": "he resided (past)",
-          "ur": "وہ رہا (ماضی)"
+          "ar": "مُجْتَهِدَةً",
+          "ar_plain": "مجتهدة",
+          "translit": "mujtahidatan",
+          "en": "(feminine)",
+          "ur": "(مؤنث)"
         }
       ],
       "correct_answer": {
-        "ar": "كَانَ يَعِيشُ",
-        "ar_plain": "كان يعيش",
-        "translit": "kaan ya'iishu",
-        "en": "he used to live (past cont.)",
-        "ur": "وہ رہتا تھا (ماضی continuous)"
+        "ar": "مُجْتَهِدًا",
+        "ar_plain": "مجتهدا",
+        "translit": "mujtahidan",
+        "en": "hardworking (acc., indef.)",
+        "ur": "محنتی (منصوب، نکرہ)"
       },
       "xp_value": 1
     },
@@ -195,68 +197,68 @@
       "id": "ch49-l03-ex04",
       "left_column": [
         {
-          "ar": "الْمُسْلِمُونَ الْكِرَامُ",
-          "ar_plain": "المسلمون الكرام",
-          "translit": "al-muslimuuna al-kiraamu",
-          "en": "the noble Muslims (pl. m.)",
-          "ur": "شریف مسلمان (جمع مذکر)"
+          "ar": "الْكُتُبُ الْجَدِيدَةُ",
+          "ar_plain": "الكتب الجديدة",
+          "translit": "al-kutubul-jadiida",
+          "en": "the new books",
+          "ur": "نئی کتابیں"
         },
         {
-          "ar": "الْمُسْلِمَةُ الْكَرِيمَةُ",
-          "ar_plain": "المسلمة الكريمة",
-          "translit": "al-muslimahtu al-kariimatu",
-          "en": "the noble Muslim woman (sg. f.)",
-          "ur": "شریف مسلمان عورت (واحد مؤنث)"
+          "ar": "الْمُعَلِّمُونَ الْمُخْلِصُونَ",
+          "ar_plain": "المعلمون المخلصون",
+          "translit": "al-mu'allimuunal-mukhlisuun",
+          "en": "the sincere teachers",
+          "ur": "مخلص اساتذہ"
         },
         {
-          "ar": "كِتَابٌ جَدِيدٌ",
-          "ar_plain": "كتاب جديد",
-          "translit": "kitaabun jadiidun",
-          "en": "a new book (sg. m.)",
-          "ur": "ایک نئی کتاب (واحد مذکر)"
+          "ar": "حِينٌ مِنَ الدَّهْرِ",
+          "ar_plain": "حين من الدهر",
+          "translit": "hiinun minad-dahr",
+          "en": "a period of time",
+          "ur": "زمانے کا ایک وقت"
         },
         {
-          "ar": "كُتُبٌ جَدِيدَةٌ",
-          "ar_plain": "كتب جديدة",
-          "translit": "kutubun jadiidatun",
-          "en": "new books (pl. f.)",
-          "ur": "نئی کتابیں (جمع مؤنث)"
+          "ar": "بَابُ الْبَيْتِ",
+          "ar_plain": "باب البيت",
+          "translit": "baabul-bayt",
+          "en": "the door of the house",
+          "ur": "گھر کا دروازہ"
         }
       ],
       "right_column": [
         {
-          "en": "the noble Muslims (pl. m.)",
-          "ur": "شریف مسلمان (جمع مذکر)"
+          "en": "people plural + plural adjective",
+          "ur": "لوگوں کی جمع + جمع صفت"
         },
         {
-          "en": "the noble Muslim woman (sg. f.)",
-          "ur": "شریف مسلمان عورت (واحد مؤنث)"
+          "en": "iḍāfa",
+          "ur": "اضافت"
         },
         {
-          "en": "a new book (sg. m.)",
-          "ur": "ایک نئی کتاب (واحد مذکر)"
+          "en": "things plural + feminine singular adjective",
+          "ur": "چیزوں کی جمع + مؤنث واحد صفت"
         },
         {
-          "en": "new books (pl. f.)",
-          "ur": "نئی کتابیں (جمع مؤنث)"
+          "en": "noun + prepositional phrase",
+          "ur": "اسم + حرفِ جر والا جملہ"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
+          0
+        ],
+        [
+          2,
           3
+        ],
+        [
+          3,
+          1
         ]
       ],
       "xp_value": 1
@@ -265,163 +267,126 @@
       "type": "BUILD_SENTENCE",
       "id": "ch49-l03-ex05",
       "target_translation": {
-        "en": "the woman who lives in the large city",
-        "ur": "بڑے شہر میں رہنے والی عورت"
+        "en": "a period of time (76:1)",
+        "ur": "زمانے کا ایک وقت (76:1)"
       },
       "tiles": [
         {
-          "ar": "امْرَأَةٌ",
-          "ar_plain": "امرأة",
-          "translit": "imra'atun",
-          "en": "a woman",
-          "ur": "ایک عورت"
+          "ar": "حِينٌ",
+          "ar_plain": "حين",
+          "translit": "hiinun",
+          "en": "a period",
+          "ur": "ایک وقت"
         },
         {
-          "ar": "تَعِيشُ",
-          "ar_plain": "تعيش",
-          "translit": "ta'iishu",
-          "en": "she lives (pres.)",
-          "ur": "وہ رہتی ہے (حال)"
+          "ar": "مِنَ",
+          "ar_plain": "من",
+          "translit": "mina",
+          "en": "of",
+          "ur": "کا"
         },
         {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
+          "ar": "الدَّهْرِ",
+          "ar_plain": "الدهر",
+          "translit": "ad-dahr",
+          "en": "time",
+          "ur": "زمانہ"
         },
         {
-          "ar": "الْمَدِينَةِ الْكَبِيرَةِ",
-          "ar_plain": "المدينة الكبيرة",
-          "translit": "al-madiinati al-kabiirati",
-          "en": "the large city",
-          "ur": "بڑا شہر"
+          "ar": "الدَّهْرُ",
+          "ar_plain": "الدهر",
+          "translit": "ad-dahru",
+          "en": "(nominative)",
+          "ur": "(مرفوع)"
         }
       ],
       "correct_order": [
         0,
         1,
-        2,
-        3
+        2
       ],
       "xp_value": 1
     },
     {
-      "type": "GRAMMAR_PARSE",
+      "type": "TRUE_FALSE",
       "id": "ch49-l03-ex06",
-      "sentence_ar": "رَجُلٌ كَانَ يَعِيشُ فِي الْقَرْيَةِ",
-      "words": [
-        {
-          "ar": "رَجُلٌ",
-          "ar_plain": "رجل",
-          "translit": "rajulun",
-          "en": "a man",
-          "ur": "ایک آدمی"
-        },
-        {
-          "ar": "كَانَ",
-          "ar_plain": "كان",
-          "translit": "kaan",
-          "en": "he was",
-          "ur": "وہ تھا"
-        },
-        {
-          "ar": "يَعِيشُ",
-          "ar_plain": "يعيش",
-          "translit": "ya'iishu",
-          "en": "he lives",
-          "ur": "وہ رہتا ہے"
-        },
-        {
-          "ar": "فِي الْقَرْيَةِ",
-          "ar_plain": "في القرية",
-          "translit": "fii al-qaryati",
-          "en": "in the village",
-          "ur": "گاؤں میں"
-        }
-      ],
-      "available_roles": [
-        "SUBJECT",
-        "VERB",
-        "PREPOSITION",
-        "ADJECTIVE"
-      ],
-      "correct_roles": [
-        "SUBJECT",
-        "VERB",
-        "VERB",
-        "PREPOSITION"
-      ],
+      "statement": {
+        "en": "حِينٌ مِنَ الدَّهْرِ is an iḍāfa.",
+        "ur": "حِينٌ مِنَ الدَّهْرِ اضافت ہے۔"
+      },
+      "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "رَجُلٌ is the subject. كَانَ يَعِيشُ is the past continuous verb 'he used to live.' فِي الْقَرْيَةِ is a prepositional phrase adding location. The relative clause describes the man.",
-        "ur": "رَجُلٌ subject ہے۔ كَانَ يَعِيشُ past continuous verb ہے 'وہ رہتا تھا'۔ فِي الْقَرْيَةِ prepositional phrase ہے جو location شامل کرتی ہے۔ Relative clause آدمی کو describe کرتی ہے۔"
+        "en": "False. مِنَ الدَّهْرِ is a prepositional phrase after the noun حِينٌ.",
+        "ur": "غلط۔ مِنَ الدَّهْرِ اسم حِينٌ کے بعد حرفِ جر والا جملہ ہے۔"
       }
     },
     {
       "type": "TAP_TRANSLATION",
       "id": "ch49-l03-ex07",
       "prompt": {
-        "ar": "هَلْ أَتَىٰ عَلَى الْإِنسَانِ حِينٌ مِّنَ الدَّهْرِ",
-        "ar_plain": "هل أتى على الإنسان حين من الدهر",
-        "translit": "hal ataa 'alaa al-insaani hiinun mina ad-dahri",
-        "en": "Has there not come upon the man a period of time",
-        "ur": "کیا انسان پر کوئی وقت گزرا ہے"
+        "ar": "الْمُعَلِّمُونَ الْمُخْلِصُونَ",
+        "ar_plain": "المعلمون المخلصون",
+        "translit": "al-mu'allimuunal-mukhlisuun",
+        "en": "the sincere teachers",
+        "ur": "مخلص اساتذہ"
       },
       "options": [
         {
-          "en": "Has there not come upon the man a period of time",
-          "ur": "کیا انسان پر کوئی وقت گزرا ہے"
+          "en": "the sincere teachers",
+          "ur": "مخلص اساتذہ"
         },
         {
-          "en": "Did the man come at the time of the age?",
-          "ur": "کیا آدمی عہد کے وقت پر آیا؟"
+          "en": "the sincere teacher",
+          "ur": "مخلص استاد"
         },
         {
-          "en": "The man came during a time.",
-          "ur": "آدمی کسی وقت پر آیا۔"
+          "en": "the teachers are sincere",
+          "ur": "اساتذہ مخلص ہیں"
         },
         {
-          "en": "Has there not come upon a human a long time?",
-          "ur": "کیا انسان پر کوئی لمبا وقت گزرا ہے؟"
+          "en": "sincerity of the teachers",
+          "ur": "اساتذہ کا اخلاص"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "هَلْ is the question particle. أَتَىٰ is 'came/arrived.' عَلَى is 'upon.' الْإِنسَانِ is 'the man' in the genitive after عَلَى. حِينٌ مِّنَ الدَّهْرِ is 'a period of time/the age' — an idafa chain.",
-        "ur": "هَلْ question particle ہے۔ أَتَىٰ 'آیا/پہنچا' ہے۔ عَلَى 'پر' ہے۔ الْإِنسَانِ عَلَى کے بعد genitive میں 'آدمی' ہے۔ حِينٌ مِّنَ الدَّهْرِ 'وقت کی/عہد کی ایک مدت' ہے — ایک idafa chain۔"
-      }
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Relative clauses and adjective agreement",
-      "ar": "الْجُمَلُ الْوَصْفِيَّةُ وَالِاتِّفَاقُ",
-      "ur": "وصفی جملے اور موافقت"
+      "en": "Noun + prepositional phrase",
+      "ar": "اسْمٌ وَجَارٌّ وَمَجْرُورٌ",
+      "ur": "اسم + حرفِ جر والا جملہ"
     },
     "ayah": {
       "surah": 76,
       "ayah": 1,
       "label": "Al-Insan 76:1",
-      "ar": "هَلْ أَتَىٰ عَلَى الْإِنسَانِ حِينٌ مِّنَ الدَّهْرِ",
-      "en": "Has there not come upon the man a period of time",
-      "ur": "کیا انسان پر کوئی وقت گزرا ہے",
+      "ar": "هَلْ أَتَىٰ عَلَى الْإِنْسَانِ حِينٌ مِنَ الدَّهْرِ لَمْ يَكُنْ شَيْئًا مَذْكُورًا",
+      "en": "Has there come upon man a period of time when he was not a thing worth mentioning?",
+      "ur": "کیا انسان پر زمانے میں ایک ایسا وقت نہیں گزرا جب وہ کوئی قابلِ ذکر چیز نہ تھا؟",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/076001.mp3"
     },
     "highlighted_word_indices": [
-      2,
-      3
+      4,
+      5,
+      6
+    ],
+    "highlighted_words": [
+      "حِينٌ",
+      "مِنَ",
+      "الدَّهْرِ"
     ],
     "noor_explanation": {
-      "en": "حِينٌ مِّنَ الدَّهْرِ is an idafa chain: a period of time. The preposition عَلَى requires the genitive (الْإِنسَانِ). The question form هَلْ asks: has this period of life not come upon every person?",
-      "ur": "حِينٌ مِّنَ الدَّهْرِ ایک idafa chain ہے: عہد کی ایک مدت۔ Preposition عَلَى genitive (الْإِنسَانِ) مانگتا ہے۔ Question form هَلْ پوچھتا ہے: کیا یہ زندگی کا period ہر شخص پر نہیں آیا؟"
+      "en": "حِينٌ + مِنَ الدَّهْرِ: a noun described by a prepositional phrase, not an iḍāfa.",
+      "ur": "حِينٌ + مِنَ الدَّهْرِ: حرفِ جر والے جملے سے بیان کیا گیا اسم، اضافت نہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Complex sentences build from the inside out: noun + relative clause + adjective + preposition. الَّذِي, كَانَ يَعِيشُ, فِي — each element connects. Practice seeing the whole structure before getting lost in individual words.",
-      "ur": "Complex sentences اندر سے باہر بنتی ہیں: noun + relative clause + adjective + preposition۔ الَّذِي، كَانَ يَعِيشُ، فِي — ہر element جڑتی ہے۔ individual لفظوں میں کھو جانے سے پہلے پوری structure دیکھنے کی practice کریں۔"
+      "en": "Adjectives match their noun; things-plurals take a feminine singular adjective; and مِنْ + noun is a prepositional phrase, not an iḍāfa.",
+      "ur": "صفات اپنے اسم کے مطابق ہوتی ہیں؛ چیزوں کی جمع مؤنث واحد صفت لیتی ہے؛ اور مِنْ + اسم حرفِ جر والا جملہ ہے، اضافت نہیں۔"
     }
   }
 }
