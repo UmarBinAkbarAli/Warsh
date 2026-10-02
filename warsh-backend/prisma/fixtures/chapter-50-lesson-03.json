@@ -70,17 +70,17 @@
       }
     },
     {
-      "type": "AYAH_PREVIEW",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "أَلَمْ يَعْلَمْ أَنَّ اللَّهَ هُوَ الْحَقُّ الْمُبِينُ",
-        "ar_plain": "ألم يعلم إن الله هو الحق المبين",
-        "translit": "a-lam ya'alam anna allaaha huwa al-haqqu al-mubiinu",
-        "en": "Does he not know that Allah is the clear Truth?",
-        "ur": "کیا اسے معلوم نہیں کہ اللہ ہی روشن حق ہے؟"
+        "ar": "وَيَعْلَمُونَ أَنَّ اللَّهَ هُوَ الْحَقُّ الْمُبِينُ",
+        "ar_plain": "ويعلمون ان الله هو الحق المبين",
+        "translit": "wa ya'lamuuna annallaaha huwal-haqqul-mubiin",
+        "en": "and they will know that Allah is the clear Truth (An-Nur 24:25)",
+        "ur": "اور وہ جان لیں گے کہ اللہ ہی کھلا حق ہے (النور 24:25)"
       },
       "explanation": {
-        "en": "أَلَمْ is the question form (أَلْ + لَمْ). يَعْلَمْ is 'he knows.' أَنَّ اللَّهَ is the subject of knowing. هُوَ الْحَقُّ الْمُبِينُ is the predicate: 'He is the clear Truth.'",
-        "ur": "أَلَمْ question form ہے (أَلْ + لَمْ)۔ يَعْلَمْ 'وہ جانتا ہے' ہے۔ أَنَّ اللَّهَ knowing کا subject ہے۔ هُوَ الْحَقُّ الْمُبِينُ predicate ہے: 'وہ روشن سچ ہے'۔"
+        "en": "أَنَّ + اللَّهَ (its noun) + هُوَ الْحَقُّ الْمُبِينُ (its predicate). الْمُبِينُ (\"clear\") describes الْحَقُّ.",
+        "ur": "أَنَّ + اللَّهَ (اس کا اسم) + هُوَ الْحَقُّ الْمُبِينُ (اس کی خبر)۔ الْمُبِينُ (\"کھلا\") الْحَقُّ کی صفت ہے۔"
       }
     }
   ],
@@ -89,36 +89,32 @@
       "type": "TAP_TRANSLATION",
       "id": "ch50-l03-ex01",
       "prompt": {
-        "ar": "أَلَمْ يَعْلَمْ أَنَّ اللَّهَ هُوَ الْحَقُّ الْمُبِينُ",
-        "ar_plain": "ألم يعلم إن الله هو الحق المبين",
-        "translit": "a-lam ya'alam anna allaaha huwa al-haqqu al-mubiinu",
-        "en": "Does he not know that Allah is the clear Truth?",
-        "ur": "کیا اسے معلوم نہیں کہ اللہ ہی روشن حق ہے؟"
+        "ar": "وَيَعْلَمُونَ أَنَّ اللَّهَ هُوَ الْحَقُّ الْمُبِينُ",
+        "ar_plain": "ويعلمون ان الله هو الحق المبين",
+        "translit": "wa ya'lamuuna annallaaha huwal-haqqul-mubiin",
+        "en": "and they will know that Allah is the clear Truth",
+        "ur": "اور وہ جان لیں گے کہ اللہ ہی کھلا حق ہے"
       },
       "options": [
         {
-          "en": "Does he not know that Allah is the clear Truth?",
-          "ur": "کیا اسے معلوم نہیں کہ اللہ ہی روشن حق ہے؟"
+          "en": "and they will know that Allah is the clear Truth",
+          "ur": "اور وہ جان لیں گے کہ اللہ ہی کھلا حق ہے"
         },
         {
-          "en": "Does he know that Allah is the truth?",
-          "ur": "کیا اسے معلوم ہے کہ اللہ سچ ہے؟"
+          "en": "Do they not know the truth?",
+          "ur": "کیا وہ حق نہیں جانتے؟"
         },
         {
-          "en": "He knows that Allah is the truth.",
-          "ur": "اسے معلوم ہے کہ اللہ سچ ہے۔"
+          "en": "Allah knows the clear truth.",
+          "ur": "اللہ کھلا حق جانتا ہے۔"
         },
         {
-          "en": "Does he not know the clear truth?",
-          "ur": "کیا اسے روشن سچ معلوم نہیں؟"
+          "en": "They knew that the truth is clear.",
+          "ur": "انہوں نے جانا کہ حق واضح ہے۔"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "أَلَمْ is the question form with لَمْ negation. يَعْلَمْ is 'he knows.' أَنَّ اللَّهَ is 'that Allah.' هُوَ الْحَقُّ الْمُبِينُ is 'He is the clear Truth.'",
-        "ur": "أَلَمْ لَمْ negation کے ساتھ question form ہے۔ يَعْلَمْ 'وہ جانتا ہے' ہے۔ أَنَّ اللَّهَ 'کہ اللہ' ہے۔ هُوَ الْحَقُّ الْمُبِينُ 'وہ روشن سچ ہے' ہے۔"
-      }
+      "xp_value": 1
     },
     {
       "type": "TRUE_FALSE",
@@ -134,49 +130,53 @@
       "type": "FILL_BLANK",
       "id": "ch50-l03-ex03",
       "mode": "TAP",
-      "sentence_ar": "أَلَمْ يَعْلَمْ أَنَّ اللَّهَ هُوَ ال ___",
+      "sentence_ar": "وَيَعْلَمُونَ أَنَّ اللَّهَ هُوَ الْحَقُّ ___",
       "hint": {
-        "en": "Does he not know that Allah is the Truth?",
-        "ur": "کیا اسے معلوم نہیں کہ اللہ سچ ہے؟"
+        "en": "and they will know that Allah is the clear Truth (24:25)",
+        "ur": "اور وہ جان لیں گے کہ اللہ ہی کھلا حق ہے (24:25)"
       },
       "options": [
         {
-          "ar": "حَقُّ الْمُبِينُ",
-          "ar_plain": "الحق المبين",
-          "translit": "al-haqqu al-mubiinu",
-          "en": "the clear Truth",
-          "ur": "روشن سچ"
+          "ar": "الْمُبِينُ",
+          "ar_plain": "المبين",
+          "translit": "al-mubiin",
+          "en": "the clear",
+          "ur": "کھلا"
         },
         {
-          "ar": "بَاطِلٌ",
-          "ar_plain": "باطل",
-          "translit": "baatilun",
+          "ar": "الْبَاطِلُ",
+          "ar_plain": "الباطل",
+          "translit": "al-baatil",
           "en": "falsehood",
           "ur": "باطل"
         },
         {
-          "ar": "عَالِمٌ",
-          "ar_plain": "عالم",
-          "translit": "aalimun",
-          "en": "the knowing",
-          "ur": "جاننے والا"
+          "ar": "الْمُبِينَ",
+          "ar_plain": "المبين",
+          "translit": "al-mubiina",
+          "en": "(accusative)",
+          "ur": "(منصوب)"
         },
         {
-          "ar": "مُلْكٌ",
-          "ar_plain": "ملك",
-          "translit": "mulkkun",
-          "en": "the sovereignty",
-          "ur": "بادشاہی"
+          "ar": "مُبِينٌ",
+          "ar_plain": "مبين",
+          "translit": "mubiinun",
+          "en": "(indefinite)",
+          "ur": "(نکرہ)"
         }
       ],
       "correct_answer": {
-        "ar": "حَقُّ الْمُبِينُ",
-        "ar_plain": "الحق المبين",
-        "translit": "al-haqqu al-mubiinu",
-        "en": "the clear Truth",
-        "ur": "روشن سچ"
+        "ar": "الْمُبِينُ",
+        "ar_plain": "المبين",
+        "translit": "al-mubiin",
+        "en": "the clear",
+        "ur": "کھلا"
       },
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "الْمُبِينُ describes الْحَقُّ: definite and nominative like it.",
+        "ur": "الْمُبِينُ، الْحَقُّ کی صفت ہے: اسی کی طرح معرفہ اور مرفوع۔"
+      }
     },
     {
       "type": "MATCHING",
@@ -401,8 +401,8 @@
       4
     ],
     "noor_explanation": {
-      "en": "الْحَقُّ الْمُبِينُ is one of the most beautiful descriptions of Allah in the Quran. It means 'the clear, evident Truth' — the reality that needs no proof. When you read this, remember: Allah is the Truth. Everything else is a test.",
-      "ur": "الْحَقُّ الْمُبِينُ قرآن میں اللہ کی سب سے خوبصورت descriptors میں سے ایک ہے۔ اس کا مطلب ہے 'صاف، ظاہر سچ' — حقیقت جو کسی proof کی ضرورت نہیں رکھتی۔ جب آپ یہ پڑھیں، یاد رکھیں: اللہ سچ ہے۔ ہر دوسری چیز ایک امتحان ہے۔"
+      "en": "This ayah contrasts those who know with those who do not: قُلْ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لَا يَعْلَمُونَ — \"Say: are those who know equal to those who do not know?\"",
+      "ur": "یہ آیت جاننے والوں اور نہ جاننے والوں کا موازنہ کرتی ہے: قُلْ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لَا يَعْلَمُونَ — \"کہو: کیا جاننے والے اور نہ جاننے والے برابر ہیں؟\""
     }
   },
   "close": {

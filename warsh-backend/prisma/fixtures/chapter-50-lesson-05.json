@@ -2,87 +2,96 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 50, Lesson 5 — Integrated comprehension and dialogue practice.",
+    "_note": "Chapter 50, Lesson 5 — a connected reading of Ar-Rahman 55:1–4: one subject (الرَّحْمَٰنُ) and three verbs.",
     "chapter_order": 50,
     "lesson_order": 5,
     "chapter_title": "Reading Comprehension and Dialogue Expansion",
-    "title": "Integrated Comprehension",
-    "titleAr": "التَّمْكِينُ فِي الْفَهْمِ",
-    "source": "book5_lesson6_reading_comprehension.md",
+    "title": "Connected Reading: Ar-Rahman 1–4",
+    "titleAr": "قِرَاءَةٌ مُتَّصِلَةٌ: الرَّحْمَٰنُ ١–٤",
     "estimated_minutes": 8,
-    "xp_reward": 10
+    "xp_reward": 10,
+    "titleUr": "مسلسل مطالعہ: الرحمٰن 1–4"
   },
   "hook": {
     "ayah": {
       "surah": 55,
       "ayah": 1,
-      "label": "Ar-Rahman 55:1",
-      "ar": "الرَّحْمَٰنُ",
-      "en": "The Most Merciful",
-      "ur": "(خدا جو) نہایت مہربان",
+      "label": "Ar-Rahman 55:1–4",
+      "ar": "الرَّحْمَٰنُ عَلَّمَ الْقُرْآنَ خَلَقَ الْإِنْسَانَ عَلَّمَهُ الْبَيَانَ",
+      "en": "The Most Merciful taught the Quran, created man, and taught him clear expression.",
+      "ur": "رحمٰن نے قرآن سکھایا، انسان کو پیدا کیا، اسے بیان سکھایا۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/055001.mp3"
     },
+    "autoplay": true,
     "noor_intro": {
-      "en": "Final lesson of Chapter 50. We integrate all reading comprehension skills: vocabulary recognition, grammatical parsing, and overall meaning. This closes our reading comprehension work before verb pattern reinforcement in Chapter 51.",
-      "ur": "Chapter 50 کا آخری lesson۔ ہم سب reading comprehension skills کو integrate کرتے ہیں: vocabulary recognition، grammatical parsing، اور overall meaning۔ یہ ہمارا reading comprehension work بند کرتا ہے Chapter 51 میں verb pattern reinforcement سے پہلے۔"
-    },
-    "autoplay": true
+      "en": "Four short ayat, one connected passage: الرَّحْمَٰنُ, then three verbs that tell what He did. Read them together.",
+      "ur": "چار مختصر آیات، ایک مسلسل عبارت: الرَّحْمَٰنُ، پھر تین فعل جو بتاتے ہیں کہ اس نے کیا کیا۔ انہیں ساتھ پڑھیں۔"
+    }
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "اللَّهُمَّ",
-        "ar_plain": "اللهم",
-        "translit": "allaahumma",
-        "en": "O Allah (vocative)",
-        "ur": "اے اللہ (پکار)"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "Reading across ayat",
+        "ar": "الْقِرَاءَةُ الْمُتَّصِلَةُ",
+        "ur": "آیات میں مسلسل پڑھنا"
       },
       "explanation": {
-        "en": "اللَّهُمَّ is the vocative form 'O Allah' — used when calling upon Allah directly. It is different from اللَّهَ in formal address. The duaاللَّهُمَّ الصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّه is the durood shareef.",
-        "ur": "اللَّهُمَّ vocative form 'اے اللہ' ہے — اللہ کو directly پکارتے وقت used۔ یہ formal address میں اللَّهَ سے different ہے۔ دعا اللَّهُمَّ الصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّه durood shareef ہے۔"
+        "en": "In 55:1–4, الرَّحْمَٰنُ is the subject, and عَلَّمَ, خَلَقَ, عَلَّمَهُ all tell what He did. The meaning runs across the ayat.",
+        "ur": "55:1–4 میں الرَّحْمَٰنُ مبتدا ہے، اور عَلَّمَ، خَلَقَ، عَلَّمَهُ سب بتاتے ہیں کہ اس نے کیا کیا۔ معنی آیات میں مسلسل چلتا ہے۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "الصَّلَاةُ",
-        "ar_plain": "الصلاة",
-        "translit": "as-salaatu",
-        "en": "prayer / blessings",
-        "ur": "رحمت / درود"
+        "ar": "عَلَّمَ الْقُرْآنَ",
+        "ar_plain": "علم القران",
+        "translit": "'allamal-qur'aan",
+        "en": "He taught the Quran (55:2)",
+        "ur": "اس نے قرآن سکھایا (55:2)"
       },
       "explanation": {
-        "en": "الصَّلَاةُ means 'prayer' but in the context of durood it means 'send blessings upon.' وَالسَّلَامُ means 'and peace.' عَلَى رَسُولِ اللَّه = 'upon the Messenger of Allah.'",
-        "ur": "الصَّلَاةُ کا مطلب 'رحمت' لیکن durood کے context میں اس کا مطلب 'پر blessings نازل کرو' ہے۔ وَالسَّلَامُ کا مطلب 'اور سلامتی' ہے۔ عَلَى رَسُولِ اللَّه = 'رسول اللہ پر'۔"
+        "en": "عَلَّمَ (taught) + الْقُرْآنَ (object).",
+        "ur": "عَلَّمَ (سکھایا) + الْقُرْآنَ (مفعول)۔"
       }
     },
     {
-      "type": "AYAH_PREVIEW",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "الصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّه",
-        "ar_plain": "الصلاة والسلام على رسول الله",
-        "translit": "as-salaatu was-salaamu 'alaa rasooli allaah",
-        "en": "Blessings and peace upon the Messenger of Allah",
-        "ur": "رسول اللہ پر رحمتیں اور سلامتی"
+        "ar": "خَلَقَ الْإِنْسَانَ",
+        "ar_plain": "خلق الانسان",
+        "translit": "khalaqal-insaan",
+        "en": "He created man (55:3)",
+        "ur": "اس نے انسان کو پیدا کیا (55:3)"
       },
       "explanation": {
-        "en": "الصَّلَاةُ وَالسَّلَامُ = 'blessings and peace.' عَلَى رَسُولِ اللَّه = 'upon the Messenger of Allah.' This is the durood, the most recited supplication after the shahada.",
-        "ur": "الصَّلَاةُ وَالسَّلَامُ = 'رحمتیں اور سلامتی'۔ عَلَى رَسُولِ اللَّه = 'رسول اللہ پر'۔ یہ durood ہے، shahada کے بعد سب سے زیادہ पढ़ा जाने والا supplication۔"
+        "en": "خَلَقَ (created) + الْإِنْسَانَ (object).",
+        "ur": "خَلَقَ (پیدا کیا) + الْإِنْسَانَ (مفعول)۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "رَسُولِ",
-        "ar_plain": "رسول",
-        "translit": "rasooli",
-        "en": "Messenger of (genitive)",
-        "ur": "رسول (جر)"
+        "ar": "عَلَّمَهُ الْبَيَانَ",
+        "ar_plain": "علمه البيان",
+        "translit": "'allamahul-bayaan",
+        "en": "He taught him clear expression (55:4)",
+        "ur": "اس نے اسے بیان سکھایا (55:4)"
       },
       "explanation": {
-        "en": "رَسُولِ means 'messenger' or 'apostle' — one sent with a message from Allah. It comes from the root ر-س-ل (to send). رَسُولِ اللَّه = 'the Messenger of Allah' — a title for Prophet Muhammad. In the durood, رَسُولِ is in the genitive after عَلَى, showing the direction of the prayer.",
-        "ur": "رَسُولِ کا مطلب 'رسول' ہے — وہ شخص جو اللہ کی طرف سے message لے کر بھیجا گیا ہو۔ یہ root ر-س-ل (بھیجنا) سے آیا ہے۔ رَسُولِ اللَّه = 'اللہ کے رسول' — نبی محمد کے لیے ایک title۔ durood میں، رَسُولِ عَلَى کے بعد genitive میں ہے، prayer کی direction دکھاتا ہے۔"
+        "en": "عَلَّمَ + هُ (\"him\" = the man of 55:3) + الْبَيَانَ: two objects.",
+        "ur": "عَلَّمَ + هُ (\"اسے\" = 55:3 کا انسان) + الْبَيَانَ: دو مفعول۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Following the reference",
+        "ur": "حوالے کا پیچھا"
+      },
+      "body": {
+        "en": "The هُ in عَلَّمَهُ points back to الْإِنْسَانَ in the ayah before. Connected reading means following such links.",
+        "ur": "عَلَّمَهُ کا هُ پچھلی آیت کے الْإِنْسَانَ کی طرف لوٹتا ہے۔ مسلسل پڑھنے کا مطلب ہے ایسے ربط کا پیچھا کرنا۔"
       }
     }
   ],
@@ -91,28 +100,28 @@
       "type": "TAP_TRANSLATION",
       "id": "ch50-l05-ex01",
       "prompt": {
-        "ar": "اللَّهُمَّ الصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّه",
-        "ar_plain": "اللهم الصلاة والسلام على رسول الله",
-        "translit": "allaahumma as-salaatu was-salaamu 'alaa rasooli allaah",
-        "en": "O Allah, send blessings and peace upon the Messenger of Allah",
-        "ur": "اے اللہ! رسول اللہ پر رحمتیں اور سلامتی نازل فرما"
+        "ar": "الرَّحْمَٰنُ عَلَّمَ الْقُرْآنَ خَلَقَ الْإِنْسَانَ عَلَّمَهُ الْبَيَانَ",
+        "ar_plain": "الرحمن علم القران خلق الانسان علمه البيان",
+        "translit": "ar-rahmaanu 'allamal-qur'aan, khalaqal-insaan, 'allamahul-bayaan",
+        "en": "The Most Merciful taught the Quran, created man, and taught him clear expression.",
+        "ur": "رحمٰن نے قرآن سکھایا، انسان کو پیدا کیا، اسے بیان سکھایا۔"
       },
       "options": [
         {
-          "en": "O Allah, send blessings and peace upon the Messenger of Allah",
-          "ur": "اے اللہ! رسول اللہ پر رحمتیں اور سلامتی نازل فرما"
+          "en": "The Most Merciful taught the Quran, created man, and taught him clear expression.",
+          "ur": "رحمٰن نے قرآن سکھایا، انسان کو پیدا کیا، اسے بیان سکھایا۔"
         },
         {
-          "en": "Allah is the source of prayers and peace upon the Messenger",
-          "ur": "اللہ رسول پر رحمت اور سلامتی کا source ہے"
+          "en": "Man taught the Quran to the Most Merciful.",
+          "ur": "انسان نے رحمٰن کو قرآن سکھایا۔"
         },
         {
-          "en": "O Allah, send blessings upon the religion of Allah",
-          "ur": "اے اللہ! اللہ کے دین پر رحمت نازل فرما"
+          "en": "The Quran created man.",
+          "ur": "قرآن نے انسان کو پیدا کیا۔"
         },
         {
-          "en": "Peace and blessings be upon the messenger of Allah",
-          "ur": "اللہ کے رسول پر سلامتی اور رحمتیں ہوں"
+          "en": "The Most Merciful will teach man the Quran.",
+          "ur": "رحمٰن انسان کو قرآن سکھائے گا۔"
         }
       ],
       "correct_index": 0,
@@ -123,68 +132,68 @@
       "id": "ch50-l05-ex02",
       "left_column": [
         {
-          "ar": "اللَّهُمَّ",
-          "ar_plain": "اللهم",
-          "translit": "allaahumma",
-          "en": "O Allah",
-          "ur": "اے اللہ!"
+          "ar": "الرَّحْمَٰنُ",
+          "ar_plain": "الرحمن",
+          "translit": "ar-rahmaanu",
+          "en": "the Most Merciful",
+          "ur": "رحمٰن"
         },
         {
-          "ar": "الصَّلَاةُ",
-          "ar_plain": "الصلاة",
-          "translit": "as-salaatu",
-          "en": "blessings",
-          "ur": "برکتیں"
+          "ar": "عَلَّمَ",
+          "ar_plain": "علم",
+          "translit": "'allama",
+          "en": "taught",
+          "ur": "سکھایا"
         },
         {
-          "ar": "السَّلَامُ",
-          "ar_plain": "السلام",
-          "translit": "as-salaamu",
-          "en": "peace",
-          "ur": "امن"
+          "ar": "الْإِنْسَانَ",
+          "ar_plain": "الانسان",
+          "translit": "al-insaana",
+          "en": "man",
+          "ur": "انسان"
         },
         {
-          "ar": "رَسُولِ",
-          "ar_plain": "رسول",
-          "translit": "rasooli",
-          "en": "Messenger of",
-          "ur": "کا رسول"
+          "ar": "هُ (in عَلَّمَهُ)",
+          "ar_plain": "ه",
+          "translit": "hu",
+          "en": "him",
+          "ur": "اسے"
         }
       ],
       "right_column": [
         {
-          "en": "O Allah",
-          "ur": "اے اللہ"
+          "en": "a verb",
+          "ur": "فعل"
         },
         {
-          "en": "blessings",
-          "ur": "رحمتیں"
+          "en": "refers back to الْإِنْسَانَ",
+          "ur": "الْإِنْسَانَ کی طرف لوٹتا ہے"
         },
         {
-          "en": "peace",
-          "ur": "سلامتی"
+          "en": "the subject of the passage",
+          "ur": "عبارت کا مبتدا"
         },
         {
-          "en": "Messenger of",
-          "ur": "رسول"
+          "en": "object of خَلَقَ",
+          "ur": "خَلَقَ کا مفعول"
         }
       ],
       "correct_pairs": [
         [
           0,
-          0
-        ],
-        [
-          1,
-          1
-        ],
-        [
-          2,
           2
         ],
         [
-          3,
+          1,
+          0
+        ],
+        [
+          2,
           3
+        ],
+        [
+          3,
+          1
         ]
       ],
       "xp_value": 1
@@ -193,8 +202,8 @@
       "type": "TRUE_FALSE",
       "id": "ch50-l05-ex03",
       "statement": {
-        "en": "اللَّهُمَّ is the vocative form used when calling upon Allah.",
-        "ur": "اللَّهُمَّ پکارنے کی form ہے جو اللہ کو پکارتے وقت used ہوتی ہے۔"
+        "en": "In عَلَّمَهُ الْبَيَانَ, هُ refers to the man mentioned in 55:3.",
+        "ur": "عَلَّمَهُ الْبَيَانَ میں هُ، 55:3 میں مذکور انسان کی طرف لوٹتا ہے۔"
       },
       "correct_answer": true,
       "xp_value": 1
@@ -203,44 +212,35 @@
       "type": "BUILD_SENTENCE",
       "id": "ch50-l05-ex04",
       "target_translation": {
-        "en": "O Allah, send blessings upon our Prophet.",
-        "ur": "اے اللہ! ہمارے نبی پر رحمت نازل فرما۔"
+        "en": "He created man. (55:3)",
+        "ur": "اس نے انسان کو پیدا کیا۔ (55:3)"
       },
       "tiles": [
         {
-          "ar": "اللَّهُمَّ",
-          "ar_plain": "اللهم",
-          "translit": "allaahumma",
-          "en": "O Allah",
-          "ur": "اے اللہ"
+          "ar": "خَلَقَ",
+          "ar_plain": "خلق",
+          "translit": "khalaqa",
+          "en": "created",
+          "ur": "پیدا کیا"
         },
         {
-          "ar": "الصَّلَاةُ",
-          "ar_plain": "الصلاة",
-          "translit": "as-salaatu",
-          "en": "blessings",
-          "ur": "رحمتیں"
+          "ar": "الْإِنْسَانَ",
+          "ar_plain": "الانسان",
+          "translit": "al-insaana",
+          "en": "man",
+          "ur": "انسان"
         },
         {
-          "ar": "عَلَى",
-          "ar_plain": "على",
-          "translit": "alaa",
-          "en": "upon",
-          "ur": "پر"
-        },
-        {
-          "ar": "نَبِيِّنَا",
-          "ar_plain": "نبينا",
-          "translit": "nabiyyinaa",
-          "en": "our Prophet",
-          "ur": "ہمارے نبی"
+          "ar": "الْإِنْسَانُ",
+          "ar_plain": "الانسان",
+          "translit": "al-insaanu",
+          "en": "(nominative)",
+          "ur": "(مرفوع)"
         }
       ],
       "correct_order": [
         0,
-        1,
-        2,
-        3
+        1
       ],
       "xp_value": 1
     },
@@ -248,165 +248,154 @@
       "type": "TAP_TRANSLATION",
       "id": "ch50-l05-ex05",
       "prompt": {
-        "ar": "اللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ",
-        "ar_plain": "اللهم صل على سيدنا محمد",
-        "translit": "allaahumma salli 'alaa sayyidinaa muhammadin",
-        "en": "O Allah, send blessings upon our Master Muhammad",
-        "ur": "اے اللہ! ہمارے سردار محمد پر رحمت نازل فرما"
+        "ar": "عَلَّمَهُ الْبَيَانَ",
+        "ar_plain": "علمه البيان",
+        "translit": "'allamahul-bayaan",
+        "en": "He taught him clear expression.",
+        "ur": "اس نے اسے بیان سکھایا۔"
       },
       "options": [
         {
-          "en": "O Allah, send blessings upon our Master Muhammad",
-          "ur": "اے اللہ! ہمارے سردار محمد پر رحمت نازل فرما"
+          "en": "He taught him clear expression.",
+          "ur": "اس نے اسے بیان سکھایا۔"
         },
         {
-          "en": "O Allah, pray for our Master Muhammad",
-          "ur": "اے اللہ! ہمارے سردار محمد کے لیے دعا کرو"
+          "en": "He learned clear expression.",
+          "ur": "اس نے بیان سیکھا۔"
         },
         {
-          "en": "Allah sends blessings upon the master Muhammad",
-          "ur": "اللہ سردار محمد پر رحمتیں نازل کرتا ہے"
+          "en": "Expression taught him.",
+          "ur": "بیان نے اسے سکھایا۔"
         },
         {
-          "en": "O Allah, the master of Muhammad",
-          "ur": "اے اللہ! محمد کے سردار"
+          "en": "Teach him expression!",
+          "ur": "اسے بیان سکھاؤ!"
         }
       ],
       "correct_index": 0,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "صَلِّ is the imperative 'send blessings' from صَلَّى. سَيِّدِنَا = our master. مُحَمَّدٍ = Muhammad. This is the durood in its most common form.",
-        "ur": "صَلِّ imperative 'رحمت نازل کرو' ہے صَلَّى سے۔ سَيِّدِنَا = ہمارے سردار۔ مُحَمَّدٍ = محمد۔ یہ durood اپنی سب سے عام form میں ہے۔"
-      }
+      "xp_value": 1
     },
     {
       "type": "FILL_BLANK",
       "id": "ch50-l05-ex06",
       "mode": "TAP",
-      "sentence_ar": "اللَّهُمَّ ___ عَلَى رَسُولِ اللَّه",
+      "sentence_ar": "الرَّحْمَٰنُ عَلَّمَ ___",
       "hint": {
-        "en": "O Allah, send blessings upon the Messenger of Allah.",
-        "ur": "اے اللہ! رسول اللہ پر رحمت نازل فرما۔"
+        "en": "The Most Merciful taught the Quran. (55:1–2)",
+        "ur": "رحمٰن نے قرآن سکھایا۔ (55:1–2)"
       },
       "options": [
         {
-          "ar": "الصَّلَاةَ",
-          "ar_plain": "الصلاة",
-          "translit": "as-salaata",
-          "en": "blessings (acc.)",
-          "ur": "رحمتیں (نصب)"
+          "ar": "الْقُرْآنَ",
+          "ar_plain": "القران",
+          "translit": "al-qur'aana",
+          "en": "the Quran (object)",
+          "ur": "قرآن (مفعول)"
         },
         {
-          "ar": "السَّلَامَ",
-          "ar_plain": "السلام",
-          "translit": "as-salaama",
-          "en": "peace (acc.)",
-          "ur": "سلامتی (نصب)"
+          "ar": "الْقُرْآنُ",
+          "ar_plain": "القران",
+          "translit": "al-qur'aanu",
+          "en": "(nominative)",
+          "ur": "(مرفوع)"
         },
         {
-          "ar": "الرَّحْمَةَ",
-          "ar_plain": "الرحمة",
-          "translit": "ar-rahmata",
-          "en": "mercy (acc.)",
-          "ur": "رحمت (نصب)"
+          "ar": "الْقُرْآنِ",
+          "ar_plain": "القران",
+          "translit": "al-qur'aani",
+          "en": "(genitive)",
+          "ur": "(مجرور)"
         },
         {
-          "ar": "الْعَافِيَةَ",
-          "ar_plain": "العافية",
-          "translit": "al-aafiyata",
-          "en": "wellness (acc.)",
-          "ur": "عافیت (نصب)"
+          "ar": "الْإِنْسَانُ",
+          "ar_plain": "الانسان",
+          "translit": "al-insaanu",
+          "en": "man (nominative)",
+          "ur": "انسان (مرفوع)"
         }
       ],
       "correct_answer": {
-        "ar": "الصَّلَاةَ",
-        "ar_plain": "الصلاة",
-        "translit": "as-salaata",
-        "en": "blessings (acc.)",
-        "ur": "رحمتیں (نصب)"
+        "ar": "الْقُرْآنَ",
+        "ar_plain": "القران",
+        "translit": "al-qur'aana",
+        "en": "the Quran (object)",
+        "ur": "قرآن (مفعول)"
       },
       "xp_value": 1
     },
     {
       "type": "GRAMMAR_PARSE",
       "id": "ch50-l05-ex07",
-      "sentence_ar": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ",
+      "sentence_ar": "خَلَقَ الْإِنْسَانَ",
       "words": [
         {
-          "ar": "اللَّهُمَّ",
-          "ar_plain": "اللهم",
-          "translit": "allaahumma",
-          "en": "O Allah",
-          "ur": "اے اللہ!"
+          "ar": "خَلَقَ",
+          "ar_plain": "خلق",
+          "translit": "khalaqa",
+          "en": "created",
+          "ur": "پیدا کیا"
         },
         {
-          "ar": "صَلِّ",
-          "ar_plain": "صل",
-          "translit": "salli",
-          "en": "send blessings",
-          "ur": "درود بھیجیں"
-        },
-        {
-          "ar": "عَلَى",
-          "ar_plain": "على",
-          "translit": "alaa",
-          "en": "upon",
-          "ur": "پر"
-        },
-        {
-          "ar": "مُحَمَّدٍ",
-          "ar_plain": "محمد",
-          "translit": "muhammadin",
-          "en": "Muhammad",
-          "ur": "محمد"
+          "ar": "الْإِنْسَانَ",
+          "ar_plain": "الانسان",
+          "translit": "al-insaana",
+          "en": "man",
+          "ur": "انسان"
         }
       ],
       "available_roles": [
-        "VOCATIVE",
+        "PARTICLE",
         "VERB",
-        "PREPOSITION",
+        "SUBJECT",
         "OBJECT"
       ],
       "correct_roles": [
-        "VOCATIVE",
         "VERB",
-        "PREPOSITION",
         "OBJECT"
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "اللَّهُمَّ is the vocative 'O Allah.' صَلِّ is the imperative verb 'send blessings.' عَلَى is the preposition 'upon.' مُحَمَّدٍ is the object (genitive after عَلَى).",
-        "ur": "اللَّهُمَّ vocative 'اے اللہ' ہے۔ صَلِّ imperative verb 'رحمتیں نازل کرو' ہے۔ عَلَى preposition 'پر' ہے۔ مُحَمَّدٍ object ہے (عَلَى کے بعد genitive)۔"
+        "en": "خَلَقَ = verb (its doer is الرَّحْمَٰنُ, understood); الْإِنْسَانَ = object.",
+        "ur": "خَلَقَ = فعل (اس کا فاعل الرَّحْمَٰنُ ہے، سمجھا ہوا)؛ الْإِنْسَانَ = مفعول۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "The durood — sending blessings upon the Prophet ﷺ",
-      "ar": "الصَّلَاةُ عَلَى النَّبِيِّ ﷺ",
-      "ur": "نبی پر رحمتیں"
+      "en": "One subject, three verbs",
+      "ar": "مُبْتَدَأٌ وَثَلَاثَةُ أَفْعَالٍ",
+      "ur": "ایک مبتدا، تین فعل"
     },
     "ayah": {
       "surah": 55,
       "ayah": 1,
-      "label": "Ar-Rahman 55:1",
-      "ar": "الرَّحْمَٰنُ",
-      "en": "The Most Merciful",
-      "ur": "(خدا جو) نہایت مہربان",
+      "label": "Ar-Rahman 55:1–4",
+      "ar": "الرَّحْمَٰنُ عَلَّمَ الْقُرْآنَ خَلَقَ الْإِنْسَانَ عَلَّمَهُ الْبَيَانَ",
+      "en": "The Most Merciful taught the Quran, created man, and taught him clear expression.",
+      "ur": "رحمٰن نے قرآن سکھایا، انسان کو پیدا کیا، اسے بیان سکھایا۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/055001.mp3"
     },
     "highlighted_word_indices": [
-      1
+      0,
+      1,
+      3,
+      5
+    ],
+    "highlighted_words": [
+      "الرَّحْمَٰنُ",
+      "عَلَّمَ",
+      "خَلَقَ",
+      "عَلَّمَهُ"
     ],
     "noor_explanation": {
-      "en": "The durood shareef is the supplication Muslims send upon the Prophet ﷺ. Saying it with understanding: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ — the complete form includes his family. Reading it in Arabic adds depth to your spiritual connection.",
-      "ur": "درود شریف supplication ہے جو مسلمان نبی ﷺ پر بھیجتے ہیں۔ اسے سمجھ کے ساتھ کہنا: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ — مکمل form میں ان کے اہل خانے بھی شامل ہیں۔ اسے عربی میں پڑھنا آپ کے روحانی تعلق میں گہرائی شامل کرتا ہے۔"
+      "en": "الرَّحْمَٰنُ, then عَلَّمَ, خَلَقَ, عَلَّمَهُ — the passage tells what the Most Merciful did.",
+      "ur": "الرَّحْمَٰنُ، پھر عَلَّمَ، خَلَقَ، عَلَّمَهُ — عبارت بتاتی ہے کہ رحمٰن نے کیا کیا۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "Chapter 50 complete. You have mastered reading comprehension in Arabic. From creation ayat to durood, you have read real texts with real understanding. Chapter 51 brings verb pattern reinforcement. Keep the momentum.",
-      "ur": "Chapter 50 مکمل۔ آپ نے عربی میں reading comprehension میں mastery حاصل کر لیا ہے۔ تخلیق کی ayat سے لے کر درود تک، آپ نے real texts کو real سمجھ کے ساتھ پڑھا ہے۔ Chapter 51 verb pattern reinforcement لاتا ہے۔ momentum برقرار رکھیں۔"
+      "en": "Chapter 50 done. You read passages across several ayat, following the subject and its references.",
+      "ur": "باب 50 مکمل۔ آپ نے کئی آیات پر پھیلی عبارتیں پڑھیں، مبتدا اور اس کے حوالوں کا پیچھا کرتے ہوئے۔"
     }
   }
 }
