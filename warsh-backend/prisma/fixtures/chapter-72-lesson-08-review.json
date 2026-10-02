@@ -1,29 +1,30 @@
 {
   "schema_version": "1.0",
+  "template": "REVIEW",
   "_meta": {
+    "_note": "Chapter 72, Lesson 8 — REVIEW lesson for النداء (Chapter 72 only).",
     "chapter_order": 72,
     "lesson_order": 8,
     "chapter_title": "المنادى",
-    "title": "R15 — Capstone Comprehensive 72-Chapter Review",
-    "titleAr": "R15 — مراجعة شاملة للفصول ال 72",
-    "source": "Warsh-backend/prisma/fixtures",
+    "title": "Review: النِّدَاء",
+    "titleAr": "مُرَاجَعَةٌ: النِّدَاءُ",
+    "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 5
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 185,
-      "label": "Al-Baqarah 2:185",
-      "ar": "شَهْرُ رَمَضَانَ الَّذِي أُنْزِلَ فِيهِ الْقُرْآنُ هُدًى لِّلنَّاسِ وَبَيِّنَاتٍ مِّنَ الْهُدَىٰ وَالْفُرْقَانِ",
-      "en": "The month of Ramadan in which the Quran was revealed as guidance for mankind and clear proofs of guidance and the criterion.",
-      "ur": "رمضان کا مہینہ جس میں قرآن نازل ہوا ہدایت کے لیے اور ہدایت اور فرقان کی کھلی دلیلیں۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002185.mp3"
+      "surah": 49,
+      "ayah": 13,
+      "label": "Al-Hujurat 49:13",
+      "ar": "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ",
+      "en": "O mankind, indeed We have created you from male and female.",
+      "ur": "اے لوگو، ہم نے تمہیں ایک مرد اور ایک عورت سے پیدا کیا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/049013.mp3"
     },
     "noor_intro": {
-      "ar": "R15 is the final review of your entire 72-chapter journey. We'll test everything — from الحروف to النِّدَاء, from basic sentence structure to Quranic rhetoric. You've earned this.",
-      "en": "R15 is the final review of your entire 72-chapter journey. We'll test everything — from الحروف to النِّدَاء, from basic sentence structure to Quranic rhetoric. You've earned this.",
-      "ur": "R15 آپ کے پورے 72 ابواب کے سفر کا آخری جائزہ ہے۔ ہم ہر چیز کی جانچ کریں گے — حروف سے لے کر نداء تک، بنیادی جملے کی ساخت سے لے کر قرآنی بلاغت تک۔ آپ نے یہ حاصل کیا ہے۔"
+      "en": "يَا أَيُّهَا النَّاسُ — you can now say what each piece is. This review brings together the forms of calling from this chapter.",
+      "ur": "يَا أَيُّهَا النَّاسُ — اب آپ بتا سکتے ہیں کہ ہر حصہ کیا ہے۔ یہ جائزہ اس باب کے ندا کے صیغوں کو یکجا کرتا ہے۔"
     },
     "autoplay": true
   },
@@ -31,81 +32,78 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Comprehensive Review — 72 Chapters",
-        "ar": "مراجعة شاملة — 72 فصلاً",
-        "ur": "جامع جائزہ — 72 ابواب"
+        "en": "Which ending?",
+        "ar": "حَرَكَةُ الْمُنَادَى",
+        "ur": "منادیٰ کا آخر کیا ہو؟"
       },
       "explanation": {
-        "en": "From الحروف to المنادى — all fundamental concepts. Letters → Names → Verbs → Sentences → Parsing → Arguments → Exception → حال/تمييز → Vocative. Each chapter built on the previous one.",
-        "ar": "من الحروف إلى المنادى — كل المفاهيم الأساسية. كل فصل بني على الذي قبله.",
-        "ur": "الحروف سے المنادى تک— تمام بنیادی تصورات۔ حروف → نام → فعل → جملے → تجزیہ → دلائل → استثنیٰ → حال/تمييز → حرفی۔ ہر باب پچھلے ایک پر بنایا گیا ہے۔"
-      },
-      "highlight": true
+        "en": "Name or particular listener: ḍamma, no tanwīn (يَا نُوحُ، يَا أَرْضُ). Muḍāf: fatḥa (يَا أَهْلَ الْكِتَابِ، رَبَّنَا). No particular listener: fatḥa with tanwīn (يَا غَافِلًا). ال noun: يَا أَيُّهَا / يَا أَيَّتُهَا, then the noun with ḍamma (يَا أَيُّهَا النَّاسُ).",
+        "ur": "نام یا خاص سننے والا: ضمہ، بغیر تنوین (يَا نُوحُ، يَا أَرْضُ)۔ مضاف: فتحہ (يَا أَهْلَ الْكِتَابِ، رَبَّنَا)۔ کوئی خاص سننے والا نہیں: تنوین کے ساتھ فتحہ (يَا غَافِلًا)۔ ال والا اسم: يَا أَيُّهَا / يَا أَيَّتُهَا، پھر اسم ضمہ کے ساتھ (يَا أَيُّهَا النَّاسُ)۔"
+      }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Linguistic Intelligence",
-        "ar": "الذكاء اللغوي",
-        "ur": "لسانی ذہانت"
+        "en": "Calls you will meet in the Quran",
+        "ar": "نِدَاءَاتٌ قُرْآنِيَّةٌ",
+        "ur": "قرآن میں ملنے والی ندائیں"
       },
       "explanation": {
-        "en": "Your understanding of the Quran is now not just memorization — it's structural comprehension. When you see يَا أَيُّهَا الَّذِينَ آمَنُوا — you now know exactly what each word does grammatically, what its case is, and why it's there. This is real linguistic intelligence.",
-        "ar": "فهمك الآن للقرآن ليس مجرد حفظ، بل فهم هياكل. عندما تقرأ 'اے ایمان والو' — الآن تعرف بالضبط ما يفعله كل كلمة نحويًا.",
-        "ur": "قرآن کی آپ کی سمجھ اب صرف حفظ نہیں بلکہ ساختی فہم ہے۔ جب آپ يَا أَيُّهَا الَّذِينَ آمَنُوا — ​​دیکھیں گے تو اب آپ کو بخوبی معلوم ہوگا کہ ہر لفظ گرامر کے لحاظ سے کیا کرتا ہے، اس کا معاملہ کیا ہے، اور یہ وہاں کیوں ہے۔ یہ حقیقی لسانی ذہانت ہے۔"
+        "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا، يَا أَيُّهَا النَّاسُ، يَا بَنِي إِسْرَائِيلَ، يَا أَهْلَ الْكِتَابِ، يَا قَوْمِ، يَا أَبَتِ، يَا بُنَيَّ — and in duʿāʾ, without يَا: رَبِّ، رَبَّنَا، اللَّهُمَّ. After each call, read the message that follows for the one called.",
+        "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا، يَا أَيُّهَا النَّاسُ، يَا بَنِي إِسْرَائِيلَ، يَا أَهْلَ الْكِتَابِ، يَا قَوْمِ، يَا أَبَتِ، يَا بُنَيَّ — اور دعا میں يَا کے بغیر: رَبِّ، رَبَّنَا، اللَّهُمَّ۔ ہر ندا کے بعد منادیٰ کے لیے آنے والا پیغام پڑھیے۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch72l08-ex01",
       "type": "MATCHING",
+      "id": "ch72-l08-ex01",
       "left_column": [
         {
-          "ar": "إِلَّا — الاستثناء",
-          "ar_plain": "إلا",
-          "translit": "illā",
-          "en": "إِلَّا — Exception",
-          "ur": "إِلَّا — استثناء"
+          "ar": "يَا دَاوُودُ",
+          "ar_plain": "يا داوود",
+          "translit": "yaa daawuudu",
+          "en": "O Dawud",
+          "ur": "اے داؤد"
         },
         {
-          "ar": "الحال والتمييز",
-          "ar_plain": "الحال والتمييز",
-          "translit": "al-ḥāl wa-t-tamyīz",
-          "en": "Hāl and Tamyīz",
-          "ur": "حل اور تمیز"
+          "ar": "يَا أَهْلَ الْكِتَابِ",
+          "ar_plain": "يا أهل الكتاب",
+          "translit": "yaa ahla al-kitaabi",
+          "en": "O People of the Book",
+          "ur": "اے اہلِ کتاب"
         },
         {
-          "ar": "النِّدَاء",
-          "ar_plain": "النداء",
-          "translit": "an-nidāʾ",
-          "en": "النِّدَاء — Vocative",
-          "ur": "النِّدَاء — آوازی"
+          "ar": "يَا حَسْرَةً",
+          "ar_plain": "يا حسرة",
+          "translit": "yaa hasratan",
+          "en": "O regret",
+          "ur": "ہائے افسوس"
         },
         {
-          "ar": "الجمل الشرطية",
-          "ar_plain": "الجمل الشرطية",
-          "translit": "al-jumal ash-sharṭiyya",
-          "en": "Conditional Sentences",
-          "ur": "مشروط جملے"
+          "ar": "يَا أَيُّهَا النَّاسُ",
+          "ar_plain": "يا أيها الناس",
+          "translit": "yaa ayyuhaa an-naasu",
+          "en": "O mankind",
+          "ur": "اے لوگو"
         }
       ],
       "right_column": [
         {
-          "en": "الفصل 70",
-          "ur": "الفصل 70"
+          "en": "Name: ḍamma, no tanwīn",
+          "ur": "نام: ضمہ، بغیر تنوین"
         },
         {
-          "en": "الفصل 71",
-          "ur": "الفصل 71"
+          "en": "Muḍāf: fatḥa",
+          "ur": "مضاف: فتحہ"
         },
         {
-          "en": "الفصل 72",
-          "ur": "الفصل 72"
+          "en": "Not a particular listener: fatḥa with tanwīn",
+          "ur": "خاص سننے والا نہیں: تنوین کے ساتھ فتحہ"
         },
         {
-          "en": "الفصل 62",
-          "ur": "الفصل 62"
+          "en": "ال noun after أَيُّهَا: ḍamma",
+          "ur": "أَيُّهَا کے بعد ال والا اسم: ضمہ"
         }
       ],
       "correct_pairs": [
@@ -125,318 +123,345 @@
           3,
           3
         ]
-      ]
-    },
-    {
-      "id": "ch72l08-ex02",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
-      "words": [
-        {
-          "ar": "يا",
-          "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
-          "ur": "اے"
-        },
-        {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "those who",
-          "ur": "وہ لوگ جو"
-        },
-        {
-          "ar": "الذين",
-          "ar_plain": "الذين",
-          "translit": "alladhīna",
-          "en": "who",
-          "ur": "کون"
-        },
-        {
-          "ar": "آمنوا",
-          "ar_plain": "آمنوا",
-          "translit": "āmanū",
-          "en": "believed",
-          "ur": "یقین کیا"
-        },
-        {
-          "ar": "اتقوا",
-          "ar_plain": "اتقوا",
-          "translit": "ittaqū",
-          "en": "fear",
-          "ur": "خوف"
-        },
-        {
-          "ar": "الله",
-          "ar_plain": "الله",
-          "translit": "Allāh",
-          "en": "Allah",
-          "ur": "اللہ"
-        }
       ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "NOUN",
-        "PREPOSITION",
-        "OBJECT",
-        "RELATIVE_PRONOUN"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "PARTICLE",
-        "RELATIVE_PRONOUN",
-        "VERB",
-        "VERB",
-        "OBJECT"
-      ]
+      "xp_value": 1
     },
     {
-      "id": "ch72l08-ex03",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "تمييز clarifies/specifies what precedes — حال describes the manner/state of صاحب الحال",
-        "ur": "تمييز وضاحت کرتی ہے — حال صاحب الحال کی حالت بیان کرتی ہے"
-      },
-      "correct_answer": true
-    },
-    {
-      "id": "ch72l08-ex04",
       "type": "FILL_BLANK",
+      "id": "ch72-l08-ex02",
       "mode": "TAP",
-      "sentence_ar": "غرض 72 فصلاً هو الوصول إلى ___",
+      "sentence_ar": "يَا ___ اسْكُنْ أَنتَ وَزَوْجُكَ الْجَنَّةَ",
       "hint": {
-        "en": "The ultimate goal",
-        "ur": "آخری مقصد"
+        "en": "'O Adam, dwell, you and your wife, in Paradise' (2:35).",
+        "ur": "'اے آدم، تم اور تمہاری بیوی جنت میں رہو' (2:35)۔"
       },
       "options": [
         {
-          "ar": "التقوى",
-          "ar_plain": "التقوى",
-          "translit": "at-taqwā",
-          "en": "التقوى",
-          "ur": "التقوى"
+          "ar": "آدَمُ",
+          "ar_plain": "آدم",
+          "translit": "aadamu",
+          "en": "Adam (ḍamma)",
+          "ur": "آدم (ضمہ)"
         },
         {
-          "ar": "النحو",
-          "ar_plain": "النحو",
-          "translit": "an-naḥw",
-          "en": "النحو",
-          "ur": "النحو"
+          "ar": "آدَمَ",
+          "ar_plain": "آدم",
+          "translit": "aadama",
+          "en": "Adam (fatḥa)",
+          "ur": "آدم (فتحہ)"
         },
         {
-          "ar": "الفهم",
-          "ar_plain": "الفهم",
-          "translit": "al-fahm",
-          "en": "الفهم",
-          "ur": "الفهم"
+          "ar": "آدَمٌ",
+          "ar_plain": "آدم",
+          "translit": "aadamun",
+          "en": "Adam (tanwīn)",
+          "ur": "آدم (تنوین)"
         },
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
-          "ur": "نہیں"
+          "ar": "آدَمِ",
+          "ar_plain": "آدم",
+          "translit": "aadami",
+          "en": "Adam (kasra)",
+          "ur": "آدم (کسرہ)"
         }
       ],
       "correct_answer": {
-        "ar": "التقوى",
-        "ar_plain": "التقوى",
-        "translit": "at-taqwā",
-        "en": "التقوى",
-        "ur": "التقوى"
+        "ar": "آدَمُ",
+        "ar_plain": "آدم",
+        "translit": "aadamu",
+        "en": "Adam (ḍamma)",
+        "ur": "آدم (ضمہ)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A one-word name called with يَا is built on ḍamma: يَا آدَمُ.",
+        "ur": "يَا کے ساتھ پکارا گیا ایک لفظ والا نام ضمہ پر مبنی ہوتا ہے: يَا آدَمُ۔"
       }
     },
     {
-      "id": "ch72l08-ex05",
+      "type": "TRUE_FALSE",
+      "id": "ch72-l08-ex03",
+      "statement": {
+        "en": "Every vocative after يَا is nominative.",
+        "ur": "يَا کے بعد ہر منادیٰ مرفوع ہوتا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "No. Names and particular listeners are built on ḍamma, but a muḍāf (يَا أَهْلَ الْكِتَابِ) or a non-specific call (يَا غَافِلًا) is accusative.",
+        "ur": "نہیں۔ نام اور خاص سننے والے ضمہ پر مبنی ہوتے ہیں، مگر مضاف (يَا أَهْلَ الْكِتَابِ) یا غیر مقصود پکار (يَا غَافِلًا) منصوب ہوتی ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch72-l08-ex04",
+      "mode": "TAP",
+      "sentence_ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَ___ مَعَ الصَّادِقِينَ",
+      "hint": {
+        "en": "'…fear Allah and be with those who are true' (9:119). A plural command.",
+        "ur": "'…اللہ سے ڈرو اور سچوں کے ساتھ رہو' (9:119)۔ جمع کا حکم۔"
+      },
+      "options": [
+        {
+          "ar": "كُونُوا",
+          "ar_plain": "كونوا",
+          "translit": "kuunuu",
+          "en": "be (plural command)",
+          "ur": "رہو (جمع امر)"
+        },
+        {
+          "ar": "كَانُوا",
+          "ar_plain": "كانوا",
+          "translit": "kaanuu",
+          "en": "they were",
+          "ur": "وہ تھے"
+        },
+        {
+          "ar": "يَكُونُونَ",
+          "ar_plain": "يكونون",
+          "translit": "yakuunuuna",
+          "en": "they are",
+          "ur": "وہ ہوتے ہیں"
+        },
+        {
+          "ar": "كُنْ",
+          "ar_plain": "كن",
+          "translit": "kun",
+          "en": "be (singular)",
+          "ur": "ہو جا (واحد)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "كُونُوا",
+        "ar_plain": "كونوا",
+        "translit": "kuunuu",
+        "en": "be (plural command)",
+        "ur": "رہو (جمع امر)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The believers are addressed as a group, so the second command is plural: كُونُوا.",
+        "ur": "ایمان والوں سے جماعت کے طور پر خطاب ہے، اس لیے دوسرا حکم جمع ہے: كُونُوا۔"
+      }
+    },
+    {
       "type": "BUILD_SENTENCE",
+      "id": "ch72-l08-ex05",
       "target_translation": {
-        "en": "ما جاء أحد إلا محمد — No one came except Muhammad",
-        "ur": "کوئی نہیں آیا مگر محمد"
+        "en": "O People of the Book, come!",
+        "ur": "اے اہلِ کتاب، آؤ!"
       },
       "tiles": [
         {
-          "ar": "ما",
-          "ar_plain": "ما",
-          "translit": "mā",
-          "en": "not",
-          "ur": "نہیں"
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaa",
+          "en": "O (particle of calling)",
+          "ur": "اے (حرفِ ندا)"
         },
         {
-          "ar": "أحد",
-          "ar_plain": "أحد",
-          "translit": "aḥad",
-          "en": "anyone",
-          "ur": "کوئی بھی"
+          "ar": "أَهْلَ",
+          "ar_plain": "أهل",
+          "translit": "ahla",
+          "en": "people",
+          "ur": "اہل"
         },
         {
-          "ar": "جاء",
-          "ar_plain": "جاء",
-          "translit": "jā'a",
-          "en": "came",
-          "ur": "آیا"
+          "ar": "الْكِتَابِ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitaabi",
+          "en": "of the Book",
+          "ur": "کتاب"
         },
         {
-          "ar": "إلا",
-          "ar_plain": "إلا",
-          "translit": "illā",
-          "en": "except",
-          "ur": "سوائے"
+          "ar": "تَعَالَوْا",
+          "ar_plain": "تعالوا",
+          "translit": "ta'aalaw",
+          "en": "come",
+          "ur": "آؤ"
         },
         {
-          "ar": "محمد",
-          "ar_plain": "محمد",
-          "translit": "muḥammad",
-          "en": "Muhammad",
-          "ur": "محمد"
+          "ar": "أَهْلُ",
+          "ar_plain": "أهل",
+          "translit": "ahlu",
+          "en": "people (ḍamma)",
+          "ur": "اہل (ضمہ)"
         }
       ],
       "correct_order": [
         0,
-        2,
         1,
-        3,
-        4
-      ]
+        2,
+        3
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch72l08-ex06",
       "type": "CONVERSATION_BUILDER",
+      "id": "ch72-l08-ex06",
       "prompt_line": {
-        "ar": "ما أهم شيء تعلمته من هذه الدورة؟",
-        "ar_plain": "ما أهم شيء تعلمته من هذه الدورة",
-        "translit": "mā ahammu shay' ta'allamtahu min hādhihi ad-dawra?",
-        "en": "What is the most important thing you learned from this course?",
-        "ur": "اس کورس سے آپ نے سب سے اہم چیز کیا سیکھی؟"
+        "ar": "يَا أَحْمَدُ، افْتَحِ الْكِتَابَ",
+        "ar_plain": "يا أحمد، افتح الكتاب",
+        "translit": "yaa ahmadu, iftahi al-kitaaba",
+        "en": "The teacher says: 'Ahmad, open the book.' Reply: 'Yes, teacher.'",
+        "ur": "استاد کہتے ہیں: 'احمد، کتاب کھولو۔' جواب دیجیے: 'جی، استاد صاحب۔'"
       },
       "response_mode": "PICK",
-      "correct_option_index": 0,
       "options": [
         {
-          "ar": "يا زيد = direct address to one person",
-          "ar_plain": "يا زيد",
-          "translit": "yaa zayd",
-          "en": "Direct address to one person",
-          "ur": "ایک شخص کو براہ راست مخاطب کرنا"
+          "ar": "نَعَمْ يَا أُسْتَاذُ",
+          "ar_plain": "نعم يا أستاذ",
+          "translit": "na'am yaa ustaadhu",
+          "en": "Yes, teacher. (ḍamma, no tanwīn)",
+          "ur": "جی، استاد صاحب۔ (ضمہ، بغیر تنوین)"
         },
         {
-          "ar": "يا أيها زيد = also one person but with identity emphasis",
-          "ar_plain": "يا أيها زيد",
-          "translit": "yaa ayyuhaa zayd",
-          "en": "Also one person but with identity emphasis",
-          "ur": "بھی ایک شخص مگر شناخت پر زور کے ساتھ"
-        }
-      ]
-    },
-    {
-      "id": "ch72l08-ex07",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "ما هي الخطوة التالية بعد إكمال 72 فصلاً؟",
-        "ar_plain": "ما هي الخطوة التالية بعد إكمال 72 فصلاً",
-        "translit": "mā hiya al-khutuwa al-jāmiḥ ba'da ikmāl 72 faṣlan?",
-        "en": "What is the next step after completing 72 chapters?",
-        "ur": "72 ابواب مکمل کرنے کے بعد اگلا مرحلہ کیا ہے؟"
-      },
-      "options": [
-        {
-          "en": "Study more grammar rules",
-          "ur": "مزید قواعد پڑھنا"
+          "ar": "نَعَمْ يَا أُسْتَاذٌ",
+          "ar_plain": "نعم يا أستاذ",
+          "translit": "na'am yaa ustaadhun",
+          "en": "Yes, teacher. (with tanwīn)",
+          "ur": "جی، استاد صاحب۔ (تنوین کے ساتھ)"
         },
         {
-          "en": "Read the Quran with understanding",
-          "ur": "فہم کے ساتھ قرآن پڑھنا"
+          "ar": "نَعَمْ يَا الْأُسْتَاذُ",
+          "ar_plain": "نعم يا الأستاذ",
+          "translit": "na'am yaa al-ustaadhu",
+          "en": "Yes, teacher. (يَا + ال)",
+          "ur": "جی، استاد صاحب۔ (يَا + ال)"
         },
         {
-          "en": "Forget everything you learned",
-          "ur": "سب کچھ بھول جانا"
-        },
-        {
-          "en": "Option 4",
-          "ur": "آپشن 4"
+          "ar": "نَعَمْ أَيُّهَا الْأُسْتَاذِ",
+          "ar_plain": "نعم أيها الأستاذ",
+          "translit": "na'am ayyuhaa al-ustaadhi",
+          "en": "Yes, teacher. (kasra after أَيُّهَا)",
+          "ur": "جی، استاد صاحب۔ (أَيُّهَا کے بعد کسرہ)"
         }
       ],
-      "correct_index": 1
+      "correct_option_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "You are speaking to one particular teacher, so أُسْتَاذُ is built on ḍamma with no tanwīn. يَا does not go straight onto ال, and after أَيُّهَا the noun is marfūʿ.",
+        "ur": "آپ ایک خاص استاد سے بات کر رہے ہیں، اس لیے أُسْتَاذُ ضمہ پر مبنی ہے، تنوین کے بغیر۔ يَا براہِ راست ال پر نہیں آتا، اور أَيُّهَا کے بعد اسم مرفوع ہوتا ہے۔"
+      }
     },
     {
-      "id": "ch72l08-ex08",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "72 فصلاً من النحو — الغاية: فهم القرآن والوصول إلى ___",
-      "hint": {
-        "en": "The goal of taqwa",
-        "ur": "تقویٰ کا مقصد"
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l08-ex07",
+      "prompt": {
+        "ar": "رَبِّ اغْفِرْ لِي وَلِوَالِدَيَّ",
+        "ar_plain": "رب اغفر لي ولوالدي",
+        "translit": "rabbi ighfir lii wa-li-waalidayya",
+        "en": "My Lord, forgive me and my parents.",
+        "ur": "اے میرے رب، مجھے اور میرے والدین کو بخش دے۔"
       },
       "options": [
         {
-          "ar": "التقوى",
-          "ar_plain": "التقوى",
-          "translit": "at-taqwā",
-          "en": "التقوى",
-          "ur": "التقوى"
+          "en": "My Lord, forgive me and my parents.",
+          "ur": "اے میرے رب، مجھے اور میرے والدین کو بخش دے۔"
         },
         {
-          "ar": "السعادة",
-          "ar_plain": "السعادة",
-          "translit": "as-saʿāda",
-          "en": "السعادة",
-          "ur": "السعادة"
+          "en": "Our Lord, forgive us and our parents.",
+          "ur": "اے ہمارے رب، ہمیں اور ہمارے والدین کو بخش دے۔"
         },
         {
-          "ar": "المعرفة",
-          "ar_plain": "المعرفة",
-          "translit": "al-maʿrifa",
-          "en": "المعرفة",
-          "ur": "المعرفة"
+          "en": "My Lord forgave me and my parents.",
+          "ur": "میرے رب نے مجھے اور میرے والدین کو بخش دیا۔"
         },
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
-          "ur": "نہیں"
+          "en": "O my father, forgive me.",
+          "ur": "اے میرے ابا، مجھے معاف کر دیجیے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "71:28. رَبِّ is رَبِّي ('my Lord') used as a call, and اغْفِرْ is a request.",
+        "ur": "71:28۔ رَبِّ، رَبِّي ('میرا رب') ہے جو ندا کے طور پر آیا، اور اغْفِرْ درخواست ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch72-l08-ex08",
+      "mode": "TAP",
+      "sentence_ar": "___ رَبَّنَا أَنزِلْ عَلَيْنَا مَائِدَةً مِّنَ السَّمَاءِ",
+      "hint": {
+        "en": "'O Allah, our Lord, send down to us a table from heaven' (5:114).",
+        "ur": "'اے اللہ، اے ہمارے رب، ہم پر آسمان سے دسترخوان اتار' (5:114)۔"
+      },
+      "options": [
+        {
+          "ar": "اللَّهُمَّ",
+          "ar_plain": "اللهم",
+          "translit": "allaahumma",
+          "en": "O Allah",
+          "ur": "اے اللہ"
+        },
+        {
+          "ar": "يَا اللَّهُمَّ",
+          "ar_plain": "يا اللهم",
+          "translit": "yaa allaahumma",
+          "en": "yaa + allaahumma",
+          "ur": "يَا + اللَّهُمَّ"
+        },
+        {
+          "ar": "أَيُّهَا",
+          "ar_plain": "أيها",
+          "translit": "ayyuhaa",
+          "en": "ayyuhaa",
+          "ur": "أَيُّهَا"
+        },
+        {
+          "ar": "أَمَّا",
+          "ar_plain": "أما",
+          "translit": "ammaa",
+          "en": "as for",
+          "ur": "رہا"
         }
       ],
       "correct_answer": {
-        "ar": "التقوى",
-        "ar_plain": "التقوى",
-        "translit": "at-taqwā",
-        "en": "التقوى",
-        "ur": "التقوى"
+        "ar": "اللَّهُمَّ",
+        "ar_plain": "اللهم",
+        "translit": "allaahumma",
+        "en": "O Allah",
+        "ur": "اے اللہ"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "'O Allah' is اللَّهُمَّ on its own; its مَّ replaces يَا.",
+        "ur": "'اے اللہ' اکیلا اللَّهُمَّ ہے؛ اس کا مَّ، يَا کی جگہ ہے۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "72 فصلاً — من البداية إلى التقوى",
-      "en": "72 Chapters — From Beginning to Taqwa",
-      "ur": "72 ابواب — شروع سے تقویٰ تک"
+      "en": "النِّدَاء — the one called and the message",
+      "ar": "النِّدَاءُ: الْمُنَادَى وَالْخِطَابُ",
+      "ur": "ندا — منادیٰ اور پیغام"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 2,
-      "label": "Al-Baqarah 2:2",
-      "ar": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ",
-      "en": "This is the Book about which there is no doubt, a guidance for those who are conscious of Allah.",
-      "ur": "یہ کتاب ہے جس میں کوئی شک نہیں، متقین کے لیے ہدایت۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002002.mp3"
+      "surah": 39,
+      "ayah": 10,
+      "label": "Az-Zumar 39:10",
+      "ar": "قُلْ يَا عِبَادِ الَّذِينَ آمَنُوا اتَّقُوا رَبَّكُمْ",
+      "en": "Say, 'O My servants who have believed, fear your Lord.'",
+      "ur": "کہہ دیجیے: اے میرے بندو جو ایمان لائے ہو، اپنے رب سے ڈرو۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/039010.mp3"
     },
     "highlighted_word_indices": [
-      3
+      1,
+      2,
+      3,
+      4
     ],
     "noor_explanation": {
-      "ar": "هُدًى لِلْمُتَّقِينَ — 'a guidance for those who are conscious of Allah.' المتقون هم الذين اتقوا الله — الذين سمعوا يَا أَيُّهَا الَّذِينَ آمَنُوا واتقوا الله. هذا ليس نهاية — هذا هو البداية. من فهم النص إلى فهم الذات إلى التقوى.",
-      "en": "A guidance for those who are conscious of Allah — المتقون are those who feared Allah. Those who heard يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ and acted on it. This is not an ending — this is a beginning. From understanding the text, to understanding the self, to Taqwa.",
-      "ur": "متقین — وہ لوگ جنہوں نے 'اے ایمان والو، اللہ سے ڈرو' سنی اور اس پر عمل کیا۔ یہ اختتام نہیں — یہ آغاز ہے۔ متن کی سمجھ سے، نفس کی سمجھ تک، تقویٰ تک۔"
+      "en": "يَا عِبَادِ — عِبَادِي ('My servants') with the ي dropped, a muḍāf vocative. الَّذِينَ آمَنُوا describes them, and اتَّقُوا رَبَّكُمْ is the message. Every piece of this call is one you have now studied.",
+      "ur": "يَا عِبَادِ — عِبَادِي ('میرے بندے') جس کی ي گر گئی، مضاف منادیٰ۔ الَّذِينَ آمَنُوا ان کی صفت ہے، اور اتَّقُوا رَبَّكُمْ پیغام ہے۔ اس ندا کا ہر حصہ اب آپ پڑھ چکے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "You have completed all 72 chapters of the Warsh Arabic Grammar Curriculum. This is not an ending — it is a beginning. The grammar you learned is a key that unlocks the Quran's meaning. Now go and read the Quran with new eyes. And remember: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ — this is the purpose of everything you learned. May Allah accept your effort and grant you understanding.",
-      "en": "You have completed all 72 chapters of the Warsh Arabic Grammar Curriculum. This is not an ending — it is a beginning. The grammar you learned is a key that unlocks the Quran's meaning. Now go and read the Quran with new eyes. And remember: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ — this is the purpose of everything you learned. May Allah accept your effort and grant you understanding.",
-      "ur": "آپ نے Warsh عربی گرامر نصاب کے تمام 72 ابواب مکمل کر لیے ہیں۔ یہ اختتام نہیں — یہ آغاز ہے۔ جو گرامر آپ نے سیکھی ہے وہ ایک کنجی ہے جو قرآن کے meaning کو کھولتی ہے۔ اب جاؤ اور نئی آنکھوں سے قرآن پڑھو۔ اور یاد رکھو: 'اے ایمان والو، اللہ سے ڈرو' — یہ ہر چیز کا مقصد ہے جو آپ نے سیکھا۔ اللہ آپ کی کوشش قبول کرے اور آپ کو سمجھ عطا فرمائے۔"
+      "en": "This is the last chapter of the course. You can now recognise how the Quran calls its listeners and find the message that follows each call. Keep reading, and keep coming back to review.",
+      "ur": "یہ کورس کا آخری باب ہے۔ اب آپ پہچان سکتے ہیں کہ قرآن اپنے سننے والوں کو کیسے پکارتا ہے، اور ہر ندا کے بعد آنے والا پیغام تلاش کر سکتے ہیں۔ پڑھتے رہیے، اور دہرانے کے لیے لوٹتے رہیے۔"
     }
-  },
-  "template": "REVIEW"
+  }
 }

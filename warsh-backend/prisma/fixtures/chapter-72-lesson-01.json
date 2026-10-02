@@ -1,315 +1,259 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 72, Lesson 1 — النداء: the particle يا and the one called (المنادى).",
     "chapter_order": 72,
     "lesson_order": 1,
     "chapter_title": "المنادى",
-    "title": "Introduction to النِّدَاء — The Vocative",
-    "titleAr": "مقدمة في النداء — المنادى",
+    "title": "Calling Someone — يَا and the مُنَادَى",
+    "titleAr": "النِّدَاءُ: يَا وَالْمُنَادَى",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 33,
-      "ayah": 70,
-      "label": "Al-Ahzab 33:70",
-      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
-      "en": "O you who believe, fear Allah and speak a right word.",
-      "ur": "اے ایمان والو، اللہ سے ڈرو اور درست بات کہو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033070.mp3"
+      "surah": 20,
+      "ayah": 11,
+      "label": "Ta-Ha 20:11",
+      "ar": "فَلَمَّا أَتَاهَا نُودِيَ يَا مُوسَىٰ",
+      "en": "And when he came to it, he was called, 'O Moses,'",
+      "ur": "پھر جب موسیٰ وہاں پہنچے تو انہیں پکارا گیا: اے موسیٰ!",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/020011.mp3"
     },
     "noor_intro": {
-      "ar": "Welcome to Chapter 72 — the grand finale of our 72-chapter curriculum. Today we begin النِّدَاء, the vocative — the grammatical tool for calling, addressing, and invoking. This is the most common Quranic address.",
-      "en": "Welcome to Chapter 72 — the grand finale of our 72-chapter curriculum. Today we begin النِّدَاء, the vocative — the grammatical tool for calling, addressing, and invoking. This is the most common Quranic address.",
-      "ur": "باب 72 میں خوش آمدید — ہمارے 72 ابواب کے نصاب کا آخری باب۔ آج ہم النِّدَاء، یعنی ندا (پکارنا اور مخاطب کرنا) شروع کرتے ہیں۔ یہ قرآن میں خطاب کا بہت عام انداز ہے۔"
+      "en": "نُودِيَ يَا مُوسَىٰ — 'he was called: O Musa!' You met يَا back in Chapter 3. This chapter looks at calling (النِّدَاء) closely: who is being called, and what happens to the ending of their name.",
+      "ur": "نُودِيَ يَا مُوسَىٰ — 'انہیں پکارا گیا: اے موسیٰ!' يَا سے آپ باب 3 میں مل چکے ہیں۔ اس باب میں ہم ندا (پکارنے) کو قریب سے دیکھیں گے: کسے پکارا جا رہا ہے، اور اس کے نام کے آخر کا کیا ہوتا ہے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "النِّدَاء",
-        "ar_plain": "النداء",
-        "translit": "an-nidaa'",
-        "en": "The Vocative / Calling",
-        "ur": "ندا / بلانا"
-      },
-      "definition": {
-        "en": "A particle the speaker uses to call/address the person being spoken to",
-        "ar": "أداة تنادى بها المتكلم من يخاطبه",
-        "ur": "ایک ذرہ جسے اسپیکر اس شخص کو کال کرنے/پتہ کرنے کے لیے استعمال کرتا ہے جس سے بات کی جا رہی ہے۔"
-      },
-      "examples": [
-        {
-          "ar": "يَا زَيْدُ",
-          "ar_plain": "يا زيد",
-          "translit": "yā zayd",
-          "en": "O Zayd! (يا is the vocative particle)",
-          "ur": "اے زید! (يا آوازی ذرہ ہے)"
-        }
-      ],
-      "highlight": true
-    },
-    {
       "type": "CONCEPT",
       "concept": {
-        "en": "Vocative Particles",
-        "ar": "أدوات النداء",
-        "ur": "آوازی ذرات"
+        "en": "النِّدَاء — calling",
+        "ar": "النِّدَاءُ",
+        "ur": "ندا — پکارنا"
       },
       "explanation": {
-        "en": "The actual word used to initiate the vocative — يا, أَيُّهَا, or أَمَّا",
-        "ar": "الكلمة الفعلية المستخدمة لبدء النداء — يا، أَيُّهَا، أو أَمَّا",
-        "ur": "اصل لفظ جو آواز کو شروع کرنے کے لیے استعمال کیا جاتا ہے — يا، أَيُّهَا، یا أَمَّا"
+        "en": "النِّدَاء is calling someone to get their attention before you speak to them. It has two parts: the particle of calling يَا (حَرْفُ النِّدَاءِ) and the one called, الْمُنَادَى: يَا مُوسَى — 'O Musa!'",
+        "ur": "ندا کا مطلب ہے بات کرنے سے پہلے کسی کو پکار کر اس کی توجہ لینا۔ اس کے دو حصے ہیں: حرفِ ندا يَا، اور جسے پکارا جائے یعنی منادیٰ: يَا مُوسَى — 'اے موسیٰ!'"
       },
       "examples": [
         {
-          "ar": "يَا زَيْدُ",
-          "ar_plain": "يا زيد",
-          "translit": "yā zayd",
-          "en": "يا directly addresses — أَمَّا draws special attention",
-          "ur": "يا براہ راست خطاب کرتا ہے — أَمَّا خصوصی توجہ مبذول کرتا ہے۔"
+          "ar": "يَا مُوسَى",
+          "ar_plain": "يا موسى",
+          "translit": "yaa muusaa",
+          "en": "O Musa!",
+          "ur": "اے موسیٰ!"
         }
       ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "The Vocative Noun (The One Being Called)",
-        "ar": "المنادى",
-        "ur": "حرفی اسم (جسے پکارا جا رہا ہے)"
+        "en": "الْمُنَادَى — the one called",
+        "ar": "الْمُنَادَى",
+        "ur": "منادیٰ — جسے پکارا جائے"
       },
       "explanation": {
-        "en": "The noun that receives the call — marked as مرفوع when preceded by يا",
-        "ar": "الاسم الذي يُنادى به — في حالة الرفع عندما يسبقه يا",
-        "ur": "وہ اسم جو کال وصول کرتا ہے — بطور نشان زد مرفوع جب يا سے پہلے ہوتا ہے"
-      }
+        "en": "The الْمُنَادَى is the noun right after يَا. After the call comes the message, very often a command addressed to the same person: يَا آدَمُ اسْكُنْ — 'O Adam, dwell'. The call tells you who the command is for.",
+        "ur": "منادیٰ وہ اسم ہے جو يَا کے فوراً بعد آتا ہے۔ پکار کے بعد پیغام آتا ہے، اکثر اسی شخص کے لیے کوئی حکم: يَا آدَمُ اسْكُنْ — 'اے آدم، رہو'۔ پکار بتاتی ہے کہ حکم کس کے لیے ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "يَا آدَمُ اسْكُنْ",
+          "ar_plain": "يا آدم اسكن",
+          "translit": "yaa aadamu uskun",
+          "en": "O Adam, dwell!",
+          "ur": "اے آدم، رہو!"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "يا for Direct Address",
-        "ar": "يا لنداء مباشرة",
-        "ur": "يا براہ راست پتہ"
+        "en": "The ending depends on the kind of noun",
+        "ar": "حَرَكَةُ الْمُنَادَى",
+        "ur": "منادیٰ کی آخری حرکت"
       },
       "explanation": {
-        "en": "The simplest form — يا immediately followed by the noun in nominative case",
-        "ar": "أبسط شكل — يا متبوع مباشرة بالاسم في حالة الرفع",
-        "ur": "سادہ ترین شکل — يا فوری طور پر اسم کے بعد نامزد صورت میں"
+        "en": "The منادى is not always nominative. A one-word name keeps a single ḍamma with no tanwīn: يَا نُوحُ. A two-word phrase whose first word is a muḍāf takes fatḥa: يَا أَهْلَ الْكِتَابِ. The next lessons take these one at a time.",
+        "ur": "منادیٰ ہمیشہ مرفوع نہیں ہوتا۔ ایک لفظ والا نام ایک ضمہ لیتا ہے، تنوین کے بغیر: يَا نُوحُ۔ اور اگر منادیٰ مضاف ہو تو اس پر فتحہ آتا ہے: يَا أَهْلَ الْكِتَابِ۔ اگلے اسباق میں یہ ایک ایک کر کے آئیں گے۔"
       },
       "examples": [
         {
-          "ar": "يَا رَبِّ",
-          "ar_plain": "يا رب",
-          "translit": "yā rabbin",
-          "en": "O Lord! (direct address to Allah)",
-          "ur": "اے رب! (اللہ سے براہ راست خطاب)"
+          "ar": "يَا نُوحُ",
+          "ar_plain": "يا نوح",
+          "translit": "yaa nuuhu",
+          "en": "O Nuh!",
+          "ur": "اے نوح!"
         },
         {
-          "ar": "يَا مُحَمَّدُ",
-          "ar_plain": "يا محمد",
-          "translit": "yā muḥammad",
-          "en": "O Muhammad! (direct address to Prophet)",
-          "ur": "اے محمد! (رسول اللہ سے براہ راست خطاب)"
+          "ar": "يَا أَهْلَ الْكِتَابِ",
+          "ar_plain": "يا أهل الكتاب",
+          "translit": "yaa ahla al-kitaabi",
+          "en": "O People of the Book!",
+          "ur": "اے اہلِ کتاب!"
         }
       ]
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "أَيُّهَا for Address to Group",
-        "ar": "أَيُّهَا لنداء مجموعة",
-        "ur": "گروپ کے ایڈریس کے لیے أَيُّهَا"
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "قَالُوا يَا نُوحُ قَدْ جَادَلْتَنَا",
+        "ar_plain": "قالوا يا نوح قد جادلتنا",
+        "translit": "qaaluu yaa nuuhu qad jaadaltanaa",
+        "en": "They said, 'O Nuh, you have disputed with us.'",
+        "ur": "انہوں نے کہا: اے نوح، تم نے ہم سے بحث کی۔"
       },
       "explanation": {
-        "en": "أَيُّهَا is used when addressing a specific group with a descriptive label. أَيُّهَا is always followed by a noun in the genitive (مضاف إليه)",
-        "ar": "أَيُّهَا يُستخدم عند مخاطبة مجموعة محددة بوصف. أَيُّهَا يتبعه اسم في حالة الجر (مضاف إليه)",
-        "ur": "أَيُّهَا استعمال کیا جاتا ہے جب کسی مخصوص گروپ کو وضاحتی لیبل کے ساتھ ایڈریس کیا جائے۔ أَيُّهَا ہمیشہ ایک اسم کے بعد genitive میں ہوتا ہے (مضاف إليه)"
-      },
-      "examples": [
-        {
-          "ar": "أَيُّهَا الَّذِينَ آمَنُوا",
-          "ar_plain": "أيها الذين آمنوا",
-          "translit": "ayyuhā alladhīna āmanū",
-          "en": "O those who believe! — الَّذِينَ is في منصوب by أَيُّهَا",
-          "ur": "اے ایمان والو! — الَّذِينَ is في منصوب by أَيُّهَا"
-        }
-      ]
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Vocative in Accusative (منصوب)",
-        "ar": "المنادى في حالة النصب",
-        "ur": "الزامی (منصوب) میں آواز"
-      },
-      "explanation": {
-        "en": "The منادى can be in accusative under specific grammatical conditions",
-        "ar": "المنادى قد ينصب في حالات خاصة",
-        "ur": "منادى مخصوص گرامر کی شرائط کے تحت الزامی ہو سکتا ہے۔"
+        "en": "From 11:32. The callers are Nuh's people (قَالُوا), the one called is نُوحُ, and the message is قَدْ جَادَلْتَنَا. Find these three parts in every call.",
+        "ur": "11:32 سے۔ پکارنے والے نوح علیہ السلام کی قوم ہے (قَالُوا)، جسے پکارا گیا وہ نُوحُ ہیں، اور پیغام قَدْ جَادَلْتَنَا ہے۔ ہر ندا میں یہ تین حصے تلاش کیجیے۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch72l01-ex01",
       "type": "TAP_TRANSLATION",
+      "id": "ch72-l01-ex01",
       "prompt": {
-        "ar": "ما هو المنادى في: يَا رَبِّ؟",
-        "ar_plain": "ما هو المنادى في يا رب",
-        "translit": "mā huwa al-munādā fī: yā rabbin?",
-        "en": "What is the منادى in: يَا رَبِّ?",
-        "ur": "کیا ہے منادى in: يَا رَبِّ?"
+        "ar": "قِيلَ يَا نُوحُ اهْبِطْ",
+        "ar_plain": "قيل يا نوح اهبط",
+        "translit": "qiila yaa nuuhu ihbit",
+        "en": "It was said, 'O Nuh, disembark.'",
+        "ur": "کہا گیا: اے نوح، اتر جاؤ۔"
       },
       "options": [
         {
-          "en": "يا (particle of calling)",
-          "ur": "یا (بلانے کا لفظ)"
+          "en": "Nuh is the one being called",
+          "ur": "نوح کو پکارا جا رہا ہے"
         },
         {
-          "en": "رب (Lord — the one being called)",
-          "ur": "رب (وہ جسے بلانا ہے)"
+          "en": "Nuh is the one calling",
+          "ur": "نوح پکار رہے ہیں"
         },
         {
-          "en": "There is no منادى",
-          "ur": "کوئی منادى نہیں"
+          "en": "The ark is being called",
+          "ur": "کشتی کو پکارا جا رہا ہے"
         },
         {
-          "en": "الله (the one being called)",
-          "ur": "اللہ (وہ جسے بلانا ہے)"
+          "en": "Nobody is being called",
+          "ur": "کسی کو نہیں پکارا جا رہا"
         }
       ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch72l01-ex02",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "In 'O those who believe' — الَّذِينَ is منصوب by أَيُّهَا because it is مضاف إليه",
-        "ur": "'اے وہ لوگو جو ایمان لائے' میں — 'الذین' 'ایہ' کی وجہ سے مضاف الیہ ہے"
-      },
-      "correct_answer": true
-    },
-    {
-      "id": "ch72l01-ex03",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "___ زيدُ — يا directly followed by noun in nominative",
-      "hint": {
-        "en": "The vocative particle",
-        "ur": "ندا particle"
-      },
-      "options": [
-        {
-          "ar": "يا",
-          "ar_plain": "يا",
-          "translit": "yā",
-          "en": "يا",
-          "ur": "يا"
-        },
-        {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "أَيُّهَا",
-          "ur": "أَيُّهَا"
-        },
-        {
-          "ar": "أما",
-          "ar_plain": "أما",
-          "translit": "ammā",
-          "en": "أَمَّا",
-          "ur": "أَمَّا"
-        },
-        {
-          "ar": "من",
-          "ar_plain": "من",
-          "translit": "min",
-          "en": "من",
-          "ur": "من"
-        }
-      ],
-      "correct_answer": {
-        "ar": "يا",
-        "ar_plain": "يا",
-        "translit": "yā",
-        "en": "يا",
-        "ur": "يا"
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "نُوحُ comes straight after يَا, so he is the الْمُنَادَى. اهْبِطْ is the command given to him.",
+        "ur": "نُوحُ، يَا کے فوراً بعد ہے، اس لیے وہی منادیٰ ہیں۔ اهْبِطْ انہیں دیا گیا حکم ہے۔"
       }
     },
     {
-      "id": "ch72l01-ex04",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "يَا رَبِّ",
-      "words": [
-        {
-          "ar": "يا",
-          "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
-          "ur": "اے"
-        },
-        {
-          "ar": "رب",
-          "ar_plain": "رب",
-          "translit": "rabbin",
-          "en": "Lord",
-          "ur": "رب"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "NOUN",
-        "POSSESSIVE",
-        "PREPOSITION"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "NOUN"
-      ]
+      "type": "TRUE_FALSE",
+      "id": "ch72-l01-ex02",
+      "statement": {
+        "en": "In يَا آدَمُ اسْكُنْ, يَا is the particle of calling and آدَمُ is the مُنَادَى.",
+        "ur": "يَا آدَمُ اسْكُنْ میں يَا حرفِ ندا ہے اور آدَمُ منادیٰ ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes: يَا calls, آدَمُ is the one called, and اسْكُنْ is the command addressed to him.",
+        "ur": "جی ہاں: يَا پکارتا ہے، آدَمُ کو پکارا گیا ہے، اور اسْكُنْ انہیں دیا گیا حکم ہے۔"
+      }
     },
     {
-      "id": "ch72l01-ex05",
-      "type": "MATCHING",
-      "left_column": [
+      "type": "FILL_BLANK",
+      "id": "ch72-l01-ex03",
+      "mode": "TAP",
+      "sentence_ar": "___ قَوْمِ اعْبُدُوا اللَّهَ",
+      "hint": {
+        "en": "'O my people, worship Allah' (7:59). Choose the particle of calling.",
+        "ur": "'اے میری قوم، اللہ کی عبادت کرو' (7:59)۔ حرفِ ندا چنیے۔"
+      },
+      "options": [
         {
-          "ar": "يا",
+          "ar": "يَا",
           "ar_plain": "يا",
-          "translit": "yā",
-          "en": "يا",
-          "ur": "يا"
-        },
-        {
-          "ar": "أَيُّهَا",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "أَيُّهَا",
-          "ur": "أَيُّهَا"
+          "translit": "yaa",
+          "en": "O (calling)",
+          "ur": "اے (ندا)"
         },
         {
           "ar": "أَمَّا",
           "ar_plain": "أما",
-          "translit": "ammā",
-          "en": "أَمَّا",
-          "ur": "أَمَّا"
+          "translit": "ammaa",
+          "en": "as for",
+          "ur": "رہا / جہاں تک"
+        },
+        {
+          "ar": "مِنْ",
+          "ar_plain": "من",
+          "translit": "min",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
+        }
+      ],
+      "correct_answer": {
+        "ar": "يَا",
+        "ar_plain": "يا",
+        "translit": "yaa",
+        "en": "O (calling)",
+        "ur": "اے (ندا)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَا is the particle of calling. أَمَّا means 'as for' and calls no one.",
+        "ur": "يَا حرفِ ندا ہے۔ أَمَّا کا مطلب 'رہا / جہاں تک' ہے، یہ کسی کو نہیں پکارتا۔"
+      }
+    },
+    {
+      "type": "MATCHING",
+      "id": "ch72-l01-ex04",
+      "left_column": [
+        {
+          "ar": "يَا مُوسَى",
+          "ar_plain": "يا موسى",
+          "translit": "yaa muusaa",
+          "en": "O Musa",
+          "ur": "اے موسیٰ"
+        },
+        {
+          "ar": "يَا أَرْضُ",
+          "ar_plain": "يا أرض",
+          "translit": "yaa ardu",
+          "en": "O earth",
+          "ur": "اے زمین"
+        },
+        {
+          "ar": "يَا أَهْلَ الْكِتَابِ",
+          "ar_plain": "يا أهل الكتاب",
+          "translit": "yaa ahla al-kitaabi",
+          "en": "O People of the Book",
+          "ur": "اے اہلِ کتاب"
         }
       ],
       "right_column": [
         {
-          "en": "Direct address: يَا زيدُ، يَا رَبِّ",
-          "ur": "براہ راست پتہ: يَا زيدُ، يَا رَبِّ"
+          "en": "Called: a prophet, by name",
+          "ur": "پکارا گیا: ایک نبی، نام لے کر"
         },
         {
-          "en": "Group address: أَيُّهَا الَّذِينَ آمَنُوا",
-          "ur": "گروپ کا پتہ: أَيُّهَا الَّذِينَ آمَنُوا"
+          "en": "Called: the earth itself",
+          "ur": "پکاری گئی: خود زمین"
         },
         {
-          "en": "Special attention: أَمَّا الَّذِينَ آمَنُوا",
-          "ur": "خصوصی توجہ: أَمَّا الَّذِينَ آمَنُوا"
+          "en": "Called: a whole community",
+          "ur": "پکاری گئی: ایک پوری جماعت"
         }
       ],
       "correct_pairs": [
@@ -325,153 +269,141 @@
           2,
           2
         ]
-      ]
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch72l01-ex06",
+      "type": "GRAMMAR_PARSE",
+      "id": "ch72-l01-ex05",
+      "sentence_ar": "يَا آدَمُ اسْكُنْ",
+      "words": [
+        {
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaa",
+          "en": "O (particle of calling)",
+          "ur": "اے (حرفِ ندا)"
+        },
+        {
+          "ar": "آدَمُ",
+          "ar_plain": "آدم",
+          "translit": "aadamu",
+          "en": "Adam",
+          "ur": "آدم"
+        },
+        {
+          "ar": "اسْكُنْ",
+          "ar_plain": "اسكن",
+          "translit": "uskun",
+          "en": "dwell",
+          "ur": "رہو"
+        }
+      ],
+      "available_roles": [
+        "PARTICLE",
+        "VOCATIVE",
+        "VERB",
+        "SUBJECT",
+        "OBJECT"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VOCATIVE",
+        "VERB"
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَا is the particle, آدَمُ is the vocative (the one called), and اسْكُنْ is a command verb.",
+        "ur": "يَا حرف ہے، آدَمُ منادیٰ ہے (جسے پکارا گیا)، اور اسْكُنْ فعلِ امر ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch72-l01-ex06",
+      "statement": {
+        "en": "أَمَّا is another particle of calling, like يَا.",
+        "ur": "أَمَّا بھی يَا کی طرح ایک حرفِ ندا ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَمَّا … فَـ means 'as for …, then …'. It introduces a topic; it does not call anyone.",
+        "ur": "أَمَّا … فَـ کا مطلب ہے 'رہا … تو …'۔ یہ موضوع شروع کرتا ہے، کسی کو پکارتا نہیں۔"
+      }
+    },
+    {
       "type": "BUILD_SENTENCE",
+      "id": "ch72-l01-ex07",
       "target_translation": {
-        "en": "O my friend, listen! يا + noun in nominative + verb",
-        "ur": "اے میرے دوست، سنو!"
+        "en": "O Zayd, sit down!",
+        "ur": "اے زید، بیٹھ جاؤ!"
       },
       "tiles": [
         {
-          "ar": "يا",
+          "ar": "يَا",
           "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O (vocative)",
-          "ur": "O (آواز)"
+          "translit": "yaa",
+          "en": "O (particle of calling)",
+          "ur": "اے (حرفِ ندا)"
         },
         {
-          "ar": "صديقي",
-          "ar_plain": "صديقي",
-          "translit": "ṣadīqī",
-          "en": "my friend",
-          "ur": "میرے دوست"
+          "ar": "زَيْدُ",
+          "ar_plain": "زيد",
+          "translit": "zaydu",
+          "en": "Zayd",
+          "ur": "زید"
         },
         {
-          "ar": "اسمع",
-          "ar_plain": "اسمع",
-          "translit": "ismaʿ",
-          "en": "listen",
-          "ur": "سنو"
+          "ar": "اجْلِسْ",
+          "ar_plain": "اجلس",
+          "translit": "ijlis",
+          "en": "sit down",
+          "ur": "بیٹھ جاؤ"
+        },
+        {
+          "ar": "أَمَّا",
+          "ar_plain": "أما",
+          "translit": "ammaa",
+          "en": "as for",
+          "ur": "رہا"
         }
       ],
       "correct_order": [
         0,
         1,
         2
-      ]
-    },
-    {
-      "id": "ch72l01-ex07",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "ما الفرق بين يا زيد و أَيُّهَا الَّذِينَ آمَنُوا؟",
-        "ar_plain": "ما الفرق بين يا زيد وأيها الذين آمنوا",
-        "translit": "mā al-farq bayna yā zayd wa-ayyuhā alladhīna āmanū?",
-        "en": "What's the difference between يا زيد and أَيُّهَا الَّذِينَ آمَنُوا?",
-        "ur": "يا زيد اور أَيُّهَا الَّذِينَ آمَنُوا? میں کیا فرق ہے"
-      },
-      "options": [
-        {
-          "en": "No difference — both mean the same thing",
-          "ur": "کوئی فرق نہیں — دونوں کا مطلب ایک ہے"
-        },
-        {
-          "en": "يا addresses one person directly; أَيُّهَا addresses a group with a descriptive label",
-          "ur": "یا ایک شخص سے براہ راست خطاب کرتا ہے؛ ایہ ایک گروہ کو تفصیل کے ساتھ خطاب کرتا ہے"
-        },
-        {
-          "en": "أَيُّهَا is formal; يا is informal",
-          "ur": "ایہ رسمی ہے؛ یا غیر رسمی ہے"
-        },
-        {
-          "en": "يا is for casual address; أيها is for formal address",
-          "ur": "یا casual خطاب کے لیے؛ ایہ رسمی کے لیے"
-        }
       ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch72l01-ex08",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "المنادى بعد يا يكون في حالة ___",
-      "hint": {
-        "en": "The grammatical case",
-        "ur": "گرامر کیس"
-      },
-      "options": [
-        {
-          "ar": "رفع",
-          "ar_plain": "رفع",
-          "translit": "rafʿ",
-          "en": "nominative (رفع)",
-          "ur": "نامزد (رفع)"
-        },
-        {
-          "ar": "نصب",
-          "ar_plain": "نصب",
-          "translit": "naṣb",
-          "en": "accusative (نصب)",
-          "ur": "الزام لگانے والا (نصب)"
-        },
-        {
-          "ar": "جر",
-          "ar_plain": "جر",
-          "translit": "jar",
-          "en": "genitive (جر)",
-          "ur": "جینیاتی (جر)"
-        },
-        {
-          "ar": "جمل",
-          "ar_plain": "جمل",
-          "translit": "jamal",
-          "en": "sentence (جمل)",
-          "ur": "جملہ (جمل)"
-        }
-      ],
-      "correct_answer": {
-        "ar": "رفع",
-        "ar_plain": "رفع",
-        "translit": "rafʿ",
-        "en": "رفع",
-        "ur": "رفع"
-      }
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "The Vocative — Calling and Addressing in the Quran",
-      "ar": "النِّدَاء — المنادى في القرآن",
-      "ur": "ندا — قرآن میں پکارنا اور مخاطب کرنا"
+      "en": "النِّدَاء — calling: يَا + the one called",
+      "ar": "النِّدَاءُ: يَا + الْمُنَادَى",
+      "ur": "ندا: يَا + منادیٰ"
     },
     "ayah": {
       "surah": 2,
-      "ayah": 21,
-      "label": "Al-Baqarah 2:21",
-      "ar": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ وَالَّذِينَ مِنْ قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ",
-      "en": "O mankind, worship your Lord who created you and those before you so that you may become righteous.",
-      "ur": "اے لوگو، اپنے رب کی عبادت کرو جس نے تمہیں اور تم سے پہلے والوں کو پیدا کیا تاکہ تم متقی ہو جاؤ۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002021.mp3"
+      "ayah": 35,
+      "label": "Al-Baqarah 2:35",
+      "ar": "وَقُلْنَا يَا آدَمُ اسْكُنْ أَنتَ وَزَوْجُكَ الْجَنَّةَ",
+      "en": "And We said, 'O Adam, dwell, you and your wife, in Paradise.'",
+      "ur": "اور ہم نے کہا: اے آدم، تم اور تمہاری بیوی جنت میں رہو۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002035.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      1
+      1,
+      2
     ],
     "noor_explanation": {
-      "en": "In 'O mankind' — يا is the vocative particle, أَيُّهَا introduces the group, and الناس is مضاف إليه (genitive). This is the complete vocative form: particle + أَيُّهَا + noun in genitive. Note: أَيُّهَا itself is invariable — it never changes case. It's the noun after it that changes.",
-      "ar": "في \"يَا أَيُّهَا النَّاسُ\" — يا هو أداة النداء، أَيُّهَا introduces the group، والناس is مضاف إليه. هذا هو النداء الكامل: أداة + أَيُّهَا + اسم في الجر. لاحظ: أَيُّهَا itself is invariable.",
-      "ur": "'اے لوگو' میں — 'یا' ندا particle ہے، 'ایہ' گروہ متعارف کراتا ہے، اور 'الناس' مضاف الیہ ہے۔ یہ مکمل ندا ہے: particle + ایہ + اسم جر میں۔ نوٹ: 'ایہ' خود unchanged ہے۔"
+      "en": "يَا آدَمُ — يَا calls and آدَمُ is the one called. Then comes the message, the command اسْكُنْ. Noticing the call first tells you who every following command is for.",
+      "ur": "يَا آدَمُ — يَا پکارتا ہے اور آدَمُ کو پکارا گیا ہے۔ پھر پیغام آتا ہے، یعنی حکم اسْكُنْ۔ پہلے ندا پہچان لیں تو معلوم ہو جاتا ہے کہ آگے کے احکام کس کے لیے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "Chapter 72 begins — the final chapter of our curriculum. النِّدَاء is how the Quran calls to humanity, to believers, to specific people. يَا أَيُّهَا الَّذِينَ آمَنُوا has been heard in every corner of the Muslim world for fourteen centuries. Tomorrow we'll study it in depth.",
-      "en": "Chapter 72 begins — the final chapter of our curriculum. النِّدَاء is how the Quran calls to humanity, to believers, to specific people. يَا أَيُّهَا الَّذِينَ آمَنُوا has been heard in every corner of the Muslim world for fourteen centuries. Tomorrow we'll study it in depth.",
-      "ur": "باب 72 شروع ہوتا ہے — ہمارے نصاب کا آخری باب۔ النِّدَاء وہ طریقہ ہے جس سے قرآن انسانیت، مومنین، اور خاص لوگوں کو بلاتا ہے۔ 'اے ایمان والو' چودہ صدیوں سے دنیا بھر میں سنی گئی ہے۔ کل ہم اسے گہرائی میں دیکھیں گے۔"
+      "en": "Every call has a caller, a particle, the one called, and a message. Next: why يَا نُوحُ has one ḍamma and no tanwīn.",
+      "ur": "ہر ندا میں پکارنے والا، حرفِ ندا، منادیٰ اور پیغام ہوتا ہے۔ آگے: يَا نُوحُ میں ایک ضمہ کیوں ہے اور تنوین کیوں نہیں۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }

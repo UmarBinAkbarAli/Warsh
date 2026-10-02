@@ -1,29 +1,30 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 72, Lesson 3 — The accusative vocative: muḍāf, 'my …' shortened, and non-specific listeners.",
     "chapter_order": 72,
     "lesson_order": 3,
     "chapter_title": "المنادى",
-    "title": "أَيُّهَا in Detail — With and Without الَّذِينَ",
-    "titleAr": "أَيُّهَا بالتفصيل — مع الذين وعدمه",
+    "title": "The Accusative Vocative — يَا أَهْلَ الْكِتَابِ",
+    "titleAr": "الْمُنَادَى الْمَنْصُوبُ",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 39,
-      "ayah": 10,
-      "label": "Az-Zumar 39:10",
-      "ar": "قُلْ يَا عِبَادِ الَّذِينَ آمَنُوا اتَّقُوا رَبَّكُمْ ۚ لِلَّذِينَ أَحْسَنُوا فِي هَٰذِهِ الدُّنْيَا حَسَنَةٌ ۗ وَأَرْضُ اللَّهِ وَاسِعَةٌ ۗ إِنَّمَا يُوَفَّى الصَّابِرُونَ أَجْرَهُم بِغَيْرِ حِسَابٍ",
-      "en": "Say, \"O My servants who have believed, fear your Lord. For those who do good in this world is good, and the earth of Allāh is spacious. Indeed, the patient will be given their reward without account [i.e., limit].\"",
-      "ur": "کہہ دو کہ اے میرے بندو جو ایمان لائے ہو اپنے پروردگار سے ڈرو۔ جنہوں نے اس دنیا میں نیکی کی ان کے لئے بھلائی ہے۔ اور خدا کی زمین کشادہ ہے۔ جو صبر کرنے والے ہیں ان کو بےشمار ثواب ملے گا",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/039010.mp3"
+      "surah": 3,
+      "ayah": 64,
+      "label": "Aal Imran 3:64",
+      "ar": "قُلْ يَا أَهْلَ الْكِتَابِ تَعَالَوْا إِلَىٰ كَلِمَةٍ سَوَاءٍ بَيْنَنَا وَبَيْنَكُمْ",
+      "en": "Say, 'O People of the Scripture, come to a word that is equitable between us and you.'",
+      "ur": "کہہ دیجیے: اے اہلِ کتاب، ایک ایسی بات کی طرف آؤ جو ہمارے اور تمہارے درمیان برابر ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003064.mp3"
     },
     "noor_intro": {
-      "ar": "أَيُّهَا can be used alone or with الَّذِينَ following it. Both forms are correct but serve different purposes. Today we'll understand exactly when each form is used.",
-      "en": "أَيُّهَا can be used alone or with الَّذِينَ following it. Both forms are correct but serve different purposes. Today we'll understand exactly when each form is used.",
-      "ur": "أَيُّهَا تنہا یا 'الذین' کے ساتھ استعمال ہو سکتا ہے۔ دونوں شکلیں درست ہیں لیکن مختلف مقاصد کے لیے کام کرتی ہیں۔ آج ہم سمجھیں گے کہ کب کون سی شکل استعمال ہوتی ہے۔"
+      "en": "يَا أَهْلَ الْكِتَابِ — 'O People of the Book'. Here the one called, أَهْلَ, ends in fatḥa, not ḍamma. When the منادى is the first part of an iḍāfa, it is accusative.",
+      "ur": "يَا أَهْلَ الْكِتَابِ — 'اے اہلِ کتاب'۔ یہاں منادیٰ أَهْلَ پر فتحہ ہے، ضمہ نہیں۔ جب منادیٰ اضافت کا پہلا حصہ ہو تو منصوب ہوتا ہے۔"
     },
     "autoplay": true
   },
@@ -31,291 +32,219 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "أَيُّهَا used alone — without الَّذِينَ",
-        "ar": "أَيُّهَا منفردا",
-        "ur": "أَيُّهَا تنہا استعمال کیا گیا — بغیر الَّذِينَ کے"
+        "en": "A muḍāf vocative is accusative",
+        "ar": "الْمُنَادَى الْمُضَافُ",
+        "ur": "مضاف منادیٰ"
       },
       "explanation": {
-        "en": "أَيُّهَا by itself followed by a noun in genitive, no relative clause. أَيُّهَا النَّاسُ = 'O people' — just addressing humanity without specifying further.",
-        "ar": "أَيُّهَا وحدها مع اسم في الجر بعده، بدون جملة صفة. أَيُّهَا النَّاسُ = 'يا للناس' بدون تحديد أكثر.",
-        "ur": "أَيُّهَا خود اس کے بعد genitive میں ایک اسم، کوئی رشتہ دار شق نہیں۔ أَيُّهَا النَّاسُ = 'اے لوگو' — مزید وضاحت کیے بغیر صرف انسانیت سے خطاب کرنا۔"
+        "en": "If the one called is a muḍāf — the first word of an iḍāfa — it is accusative and shows fatḥa: يَا أَهْلَ الْكِتَابِ، يَا عَبْدَ اللَّهِ، يَا رَسُولَ اللَّهِ. The second word stays genitive as مُضَافٌ إِلَيْهِ.",
+        "ur": "اگر منادیٰ مضاف ہو — یعنی اضافت کا پہلا لفظ — تو منصوب ہوتا ہے اور فتحہ دکھاتا ہے: يَا أَهْلَ الْكِتَابِ، يَا عَبْدَ اللَّهِ، يَا رَسُولَ اللَّهِ۔ دوسرا لفظ مضاف الیہ ہونے کی وجہ سے مجرور رہتا ہے۔"
       },
       "examples": [
         {
-          "ar": "أَيُّهَا النَّاسُ",
-          "ar_plain": "أيها الناس",
-          "translit": "ayyuhā an-nāsu",
-          "en": "O people (no further description)",
-          "ur": "اے لوگو (مزید تفصیل نہیں)"
+          "ar": "يَا عَبْدَ اللَّهِ",
+          "ar_plain": "يا عبد الله",
+          "translit": "yaa 'abda allaahi",
+          "en": "O servant of Allah!",
+          "ur": "اے اللہ کے بندے!"
         }
       ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "أَيُّهَا with الَّذِينَ — the most common Quranic form",
-        "ar": "أَيُّهَا + الذين",
-        "ur": "أَيُّهَا with الَّذِينَ — سب سے عام قرآنی شکل"
+        "en": "Plurals show it with ي",
+        "ar": "يَا بَنِي إِسْرَائِيلَ",
+        "ur": "جمع میں ی"
       },
       "explanation": {
-        "en": "أَيُّهَا followed by الَّذِينَ with a verb describing them. This is the full form: أَيُّهَا + مضاف إليه (الذين) + relative clause (verb).",
-        "ar": "أَيُّهَا متبوع بـ الَّذِينَ مع فعل يصفهم. هذه هي الصورة الكاملة.",
-        "ur": "أَيُّهَا اس کے بعد الَّذِينَ ان کی وضاحت کرنے والے فعل کے ساتھ۔ یہ مکمل شکل ہے: أَيُّهَا + مضاف إليه (الذين) + رشتہ دار شق (فعل)۔"
+        "en": "Words that mark case with letters show the accusative with ي: يَا بَنِي إِسْرَائِيلَ — 'O Children of Israel'. بَنِي is accusative, and the ن of بَنُونَ drops because it is muḍāf (Chapter 63).",
+        "ur": "جو الفاظ حروف سے اعراب دکھاتے ہیں ان کا نصب ي سے ہوتا ہے: يَا بَنِي إِسْرَائِيلَ — 'اے بنی اسرائیل'۔ بَنِي منصوب ہے، اور مضاف ہونے کی وجہ سے بَنُونَ کا ن گر گیا ہے (باب 63)۔"
+      }
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "'My …' shortened: يَا قَوْمِ",
+        "ar": "الْمُضَافُ إِلَى يَاءِ الْمُتَكَلِّمِ",
+        "ur": "یائے متکلم کی طرف مضاف"
+      },
+      "explanation": {
+        "en": "'My people' is قَوْمِي, a muḍāf. In a call the ي is often dropped and only its kasra remains: يَا قَوْمِ — 'O my people'. Likewise يَا عِبَادِ = يَا عِبَادِي, and رَبِّ = رَبِّي.",
+        "ur": "'میری قوم' قَوْمِي ہے، جو مضاف ہے۔ ندا میں یہ ي اکثر گر جاتی ہے اور صرف اس کا کسرہ رہ جاتا ہے: يَا قَوْمِ — 'اے میری قوم'۔ اسی طرح يَا عِبَادِ = يَا عِبَادِي، اور رَبِّ = رَبِّي۔"
       },
       "examples": [
         {
-          "ar": "أَيُّهَا الَّذِينَ آمَنُوا",
-          "ar_plain": "أيها الذين آمنوا",
-          "translit": "ayyuhā alladhīna āmanū",
-          "en": "O those who believed (آمنوا describes them)",
-          "ur": "اے ایمان والو (آمنوا انہیں بیان کرتا ہے)"
+          "ar": "يَا قَوْمِ اعْبُدُوا اللَّهَ",
+          "ar_plain": "يا قوم اعبدوا الله",
+          "translit": "yaa qawmi u'buduu allaaha",
+          "en": "O my people, worship Allah!",
+          "ur": "اے میری قوم، اللہ کی عبادت کرو!"
         }
       ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Noun after أَيُّهَا must be in genitive (مضاف إليه)",
-        "ar": "الاسم بعد أيها في الجر",
-        "ur": "أَيُّهَا کے بعد کا اسم genitive میں ہونا چاہیے (مضاف إليه)"
+        "en": "No particular listener: fatḥa with tanwīn",
+        "ar": "النَّكِرَةُ غَيْرُ الْمَقْصُودَةِ",
+        "ur": "نکرہ غیر مقصودہ"
       },
       "explanation": {
-        "en": "أَيُّهَا always governs the following noun as مضاف إليه (genitive). When you see أَيُّهَا followed by a noun, that noun is always in genitive.",
-        "ar": "أَيُّهَا يحول الاسم الذي بعده إلى مضاف إليه. عندما ترى أيها متبوعًا باسم، ذلك الاسم دائمًا في الجر.",
-        "ur": "أَيُّهَا ہمیشہ مندرجہ ذیل اسم کو مضاف إليه (genitive) کے بطور کنٹرول کرتا ہے۔ جب آپ أَيُّهَا کو اسم کے بعد دیکھتے ہیں، تو وہ اسم ہمیشہ genitive میں ہوتا ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Purpose of أَيُّهَا — getting attention",
-        "ar": "الهدف من أيها",
-        "ur": "أَيُّهَا کا مقصد— توجہ حاصل کرنا"
-      },
-      "explanation": {
-        "en": "أَيُّهَا functions to focus attention on a specific group before delivering the main message. This two-step structure (identify + command) is the Quran's primary way of addressing specific audiences.",
-        "ar": "أَيُّهَا يُستخدم عندما يريد المتكلم إيلاء مجموعة محددة الانتباه قبل إيصال الرسالة الرئيسية.",
-        "ur": "أَيُّهَا کام اہم پیغام کی فراہمی سے پہلے کسی مخصوص گروپ پر توجہ مرکوز کرنا۔ یہ دو قدمی ڈھانچہ (شناخت + حکم) مخصوص سامعین سے خطاب کرنے کا قرآن کا بنیادی طریقہ ہے۔"
+        "en": "If the call is not aimed at anyone in particular, the noun is accusative with tanwīn: يَا غَافِلًا تَنَبَّهْ — 'O heedless one (whoever you are), wake up!'. A noun with its own complement is also accusative: يَا طَالِعًا جَبَلًا — 'O you climbing a mountain'. In 36:30, يَا حَسْرَةً عَلَى الْعِبَادِ is accusative with tanwīn too. Recognise these; you will not be tested on telling them apart.",
+        "ur": "اگر پکار کسی خاص شخص کے لیے نہ ہو تو اسم تنوین کے ساتھ منصوب ہوتا ہے: يَا غَافِلًا تَنَبَّهْ — 'اے غافل (جو بھی ہو)، جاگ جا!'۔ جس اسم کے ساتھ اس کا متعلق جڑا ہو وہ بھی منصوب ہوتا ہے: يَا طَالِعًا جَبَلًا — 'اے پہاڑ پر چڑھنے والے'۔ 36:30 میں يَا حَسْرَةً عَلَى الْعِبَادِ بھی تنوین کے ساتھ منصوب ہے۔ انہیں پہچانیے؛ ان کا آپس میں فرق ٹیسٹ نہیں ہوگا۔"
       },
       "examples": [
         {
-          "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا",
-          "ar_plain": "يا أيها الذين آمنوا",
-          "translit": "yā ayyuhā alladhīna āmanū",
-          "en": "First identifies the group (believers), then gives the command",
-          "ur": "پہلے گروہ (مومنین) کی شناخت کرتا ہے، پھر حکم دیتا ہے۔"
+          "ar": "يَا غَافِلًا تَنَبَّهْ",
+          "ar_plain": "يا غافلا تنبه",
+          "translit": "yaa ghaafilan tanabbah",
+          "en": "O heedless one, wake up!",
+          "ur": "اے غافل، جاگ جا!"
         }
       ]
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "أَيُّهَا + noun without الذين — broader address",
-        "ar": "النداء المختصر",
-        "ur": "أَيُّهَا + اسم بغیر الذين — وسیع تر پتہ"
-      },
-      "explanation": {
-        "en": "When no specific characteristic is needed to define the group, أَيُّهَا is used alone with the noun. This is broader and less specific. يَا أَيُّهَا النَّاسُ = O people (general, wide address).",
-        "ar": "عندما لا تكون هناك حاجة إلى تحديد مجموعة معينة، يُستخدم أيها بمفرده مع الاسم. هذا أوسع وأقل تحديدًا.",
-        "ur": "جب گروپ کی وضاحت کے لیے کسی خاص خصوصیت کی ضرورت نہیں ہوتی ہے، تو أَيُّهَا اسم کے ساتھ اکیلے استعمال ہوتا ہے۔ یہ وسیع اور کم مخصوص ہے۔ يَا أَيُّهَا النَّاسُ = اے لوگو (عام، وسیع پتہ)۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "يا زيد vs. يا أَيُّهَا زيد",
-        "ar": "الفرق بين يا زيد ويا أيهازيد",
-        "ur": "يا زيد بمقابلہ يا أَيُّهَا زيد"
-      },
-      "explanation": {
-        "en": "يا + name is direct address to one individual. يا أيها + name (in genitive) is addressing one person but with emphasis on their identity/role. يا زيد = 'Hey Zayd!' يا أَيُّهَا زَيْدُ = 'O Zayd' (more formal, emphatic).",
-        "ar": "يا + اسم لنداء شخص مباشرة. يا أيها + اسم (في الجر) لمناداة شخص مع emphasis على هويته. يا زيد = direct casual; يا أيها زيد = formal emphatic.",
-        "ur": "يا + نام ایک فرد کا براہ راست پتہ ہے۔ يا أيها + نام (جینیٹیو میں) ایک شخص کو مخاطب کر رہا ہے لیکن ان کی شناخت/کردار پر زور دے کر۔ يا زيد = 'ارے زید!' يا أَيُّهَا زَيْدُ = 'اے زید' (زیادہ رسمی، زور دار)۔"
-      }
     }
   ],
   "exercises": [
     {
-      "id": "ch72l03-ex01",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "أَيُّهَا النَّاسُ — ما نوع هذه الجملة؟",
-        "ar_plain": "أيها الناس ما نوع هذه الجملة",
-        "translit": "ayyuhā an-nāsu — mā nawʿu hādhihi al-jumlati?",
-        "en": "أَيُّهَا النَّاسُ — what type of sentence is this?",
-        "ur": "أَيُّهَا النَّاسُ — یہ کس قسم کا جملہ ہے؟"
-      },
-      "options": [
-        {
-          "en": "Short vocative — أيها + noun in genitive, no الذين",
-          "ur": "مختصر ندا — ایہ + اسم جر میں، ذین کے بغیر"
-        },
-        {
-          "en": "Complete vocative — أيها + الذين + verb",
-          "ur": "مکمل ندا — ایہ + ذین + فعل"
-        },
-        {
-          "en": "Conditional sentence",
-          "ur": "شرطی جملہ"
-        },
-        {
-          "en": "Option 4",
-          "ur": "آپشن 4"
-        }
-      ],
-      "correct_index": 0
-    },
-    {
-      "id": "ch72l03-ex02",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "In 'O people' — الناس is مضاف إليه (genitive) governed by أيها",
-        "ur": "'اے لوگو' میں — الناس ایہ کے ذریعے مضاف الیہ (genitive) ہے"
-      },
-      "correct_answer": true
-    },
-    {
-      "id": "ch72l03-ex03",
       "type": "FILL_BLANK",
+      "id": "ch72-l03-ex01",
       "mode": "TAP",
-      "sentence_ar": "أَيُّهَا ___ — نداء مختصر (بدون الذين)",
+      "sentence_ar": "قُلْ يَا ___ الْكِتَابِ",
       "hint": {
-        "en": "A general noun for all people",
-        "ur": "سب لوگوں کے لیے ایک عام noun"
+        "en": "'Say, O People of the Book' (3:64). The one called is a muḍāf.",
+        "ur": "'کہہ دیجیے: اے اہلِ کتاب' (3:64)۔ منادیٰ مضاف ہے۔"
       },
       "options": [
         {
-          "ar": "الناس",
-          "ar_plain": "الناس",
-          "translit": "an-nāsu",
-          "en": "الناس (people)",
-          "ur": "الناس (لوگ)"
+          "ar": "أَهْلَ",
+          "ar_plain": "أهل",
+          "translit": "ahla",
+          "en": "people (fatḥa)",
+          "ur": "اہل (فتحہ)"
         },
         {
-          "ar": "المؤمنون",
-          "ar_plain": "المؤمنون",
-          "translit": "al-mu'minūna",
-          "en": "المؤمنون (believers)",
-          "ur": "المؤمنون (مومنین)"
+          "ar": "أَهْلُ",
+          "ar_plain": "أهل",
+          "translit": "ahlu",
+          "en": "people (ḍamma)",
+          "ur": "اہل (ضمہ)"
         },
         {
-          "ar": "الذين",
-          "ar_plain": "الذين",
-          "translit": "alladhīna",
-          "en": "الذين",
-          "ur": "الذين"
+          "ar": "أَهْلِ",
+          "ar_plain": "أهل",
+          "translit": "ahli",
+          "en": "people (kasra)",
+          "ur": "اہل (کسرہ)"
         },
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
-          "ur": "نہیں"
+          "ar": "أَهْلٌ",
+          "ar_plain": "أهل",
+          "translit": "ahlun",
+          "en": "people (tanwīn)",
+          "ur": "اہل (تنوین)"
         }
       ],
       "correct_answer": {
-        "ar": "الناس",
-        "ar_plain": "الناس",
-        "translit": "an-nāsu",
-        "en": "الناس",
-        "ur": "الناس"
+        "ar": "أَهْلَ",
+        "ar_plain": "أهل",
+        "translit": "ahla",
+        "en": "people (fatḥa)",
+        "ur": "اہل (فتحہ)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A muḍāf vocative is accusative: يَا أَهْلَ الْكِتَابِ.",
+        "ur": "مضاف منادیٰ منصوب ہوتا ہے: يَا أَهْلَ الْكِتَابِ۔"
       }
     },
     {
-      "id": "ch72l03-ex04",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمْ",
-      "words": [
-        {
-          "ar": "يا",
-          "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
-          "ur": "اے"
-        },
-        {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "those who",
-          "ur": "وہ لوگ جو"
-        },
-        {
-          "ar": "الناس",
-          "ar_plain": "الناس",
-          "translit": "an-nāsu",
-          "en": "people",
-          "ur": "لوگ"
-        },
-        {
-          "ar": "اتقوا",
-          "ar_plain": "اتقوا",
-          "translit": "ittaqū",
-          "en": "fear",
-          "ur": "خوف"
-        },
-        {
-          "ar": "ربكم",
-          "ar_plain": "ربكم",
-          "translit": "rabbukum",
-          "en": "your Lord",
-          "ur": "تمہارا رب"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "NOUN",
-        "PREPOSITION",
-        "OBJECT",
-        "POSSESSIVE"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "PARTICLE",
-        "NOUN",
-        "VERB",
-        "OBJECT"
-      ]
+      "type": "TRUE_FALSE",
+      "id": "ch72-l03-ex02",
+      "statement": {
+        "en": "In يَا عَبْدَ اللَّهِ, عَبْدَ takes fatḥa because it is a muḍāf vocative.",
+        "ur": "يَا عَبْدَ اللَّهِ میں عَبْدَ پر فتحہ اس لیے ہے کہ یہ مضاف منادیٰ ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes. عَبْدَ is the first word of the iḍāfa عَبْدَ اللَّهِ, so as a vocative it is accusative.",
+        "ur": "جی ہاں۔ عَبْدَ اضافت عَبْدَ اللَّهِ کا پہلا لفظ ہے، اس لیے منادیٰ ہو کر منصوب ہے۔"
+      }
     },
     {
-      "id": "ch72l03-ex05",
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l03-ex03",
+      "prompt": {
+        "ar": "يَا قَوْمِ اعْبُدُوا اللَّهَ",
+        "ar_plain": "يا قوم اعبدوا الله",
+        "translit": "yaa qawmi u'buduu allaaha",
+        "en": "O my people, worship Allah.",
+        "ur": "اے میری قوم، اللہ کی عبادت کرو۔"
+      },
+      "options": [
+        {
+          "en": "O my people, worship Allah.",
+          "ur": "اے میری قوم، اللہ کی عبادت کرو۔"
+        },
+        {
+          "en": "O people of Allah, worship.",
+          "ur": "اے اللہ کے لوگو، عبادت کرو۔"
+        },
+        {
+          "en": "My people worshipped Allah.",
+          "ur": "میری قوم نے اللہ کی عبادت کی۔"
+        },
+        {
+          "en": "The people called on Allah.",
+          "ur": "لوگوں نے اللہ کو پکارا۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The kasra in قَوْمِ is what remains of قَوْمِي — 'my people'. اعْبُدُوا is a plural command.",
+        "ur": "قَوْمِ کا کسرہ قَوْمِي کا باقی حصہ ہے — 'میری قوم'۔ اعْبُدُوا جمع کا حکم ہے۔"
+      }
+    },
+    {
       "type": "MATCHING",
+      "id": "ch72-l03-ex04",
       "left_column": [
         {
-          "ar": "يَا أَيُّهَا النَّاسُ",
-          "ar_plain": "يا أيها الناس",
-          "translit": "yā ayyuhā an-nāsu",
-          "en": "يَا أَيُّهَا النَّاسُ",
-          "ur": "يَا أَيُّهَا النَّاسُ"
+          "ar": "يَا نُوحُ",
+          "ar_plain": "يا نوح",
+          "translit": "yaa nuuhu",
+          "en": "O Nuh",
+          "ur": "اے نوح"
         },
         {
-          "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا",
-          "ar_plain": "يا أيها الذين آمنوا",
-          "translit": "yā ayyuhā alladhīna āmanū",
-          "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا",
-          "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا"
+          "ar": "يَا أَهْلَ الْكِتَابِ",
+          "ar_plain": "يا أهل الكتاب",
+          "translit": "yaa ahla al-kitaabi",
+          "en": "O People of the Book",
+          "ur": "اے اہلِ کتاب"
         },
         {
-          "ar": "يَا أَيُّهَا عِبَادِي",
-          "ar_plain": "يا أيها عبادي",
-          "translit": "yā ayyuhā ʿibādī",
-          "en": "يَا أَيُّهَا عِبَادِي",
-          "ur": "يَا أَيُّهَا عِبَادِي"
+          "ar": "يَا غَافِلًا",
+          "ar_plain": "يا غافلا",
+          "translit": "yaa ghaafilan",
+          "en": "O heedless one",
+          "ur": "اے غافل"
         }
       ],
       "right_column": [
         {
-          "en": "Short vocative — noun in genitive alone",
-          "ur": "مختصر لفظی - صرف جینیاتی میں اسم"
+          "en": "Name: ḍamma, no tanwīn",
+          "ur": "نام: ضمہ، بغیر تنوین"
         },
         {
-          "en": "Full vocative — الذين + verb",
-          "ur": "مکمل لفظی — الذين + فعل"
+          "en": "Muḍāf: fatḥa",
+          "ur": "مضاف: فتحہ"
         },
         {
-          "en": "Short vocative — possessive form",
-          "ur": "مختصر لفظی - ملکیتی شکل"
+          "en": "No particular listener: fatḥa with tanwīn",
+          "ur": "کوئی خاص سننے والا نہیں: تنوین کے ساتھ فتحہ"
         }
       ],
       "correct_pairs": [
@@ -331,176 +260,188 @@
           2,
           2
         ]
-      ]
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch72l03-ex06",
+      "type": "FILL_BLANK",
+      "id": "ch72-l03-ex05",
+      "mode": "TAP",
+      "sentence_ar": "يَا ___ إِسْرَائِيلَ اذْكُرُوا نِعْمَتِيَ",
+      "hint": {
+        "en": "'O Children of Israel, remember My favour' (2:40). Muḍāf, plural.",
+        "ur": "'اے بنی اسرائیل، میری نعمت یاد کرو' (2:40)۔ مضاف، جمع۔"
+      },
+      "options": [
+        {
+          "ar": "بَنِي",
+          "ar_plain": "بني",
+          "translit": "banii",
+          "en": "children (accusative)",
+          "ur": "اولاد (منصوب)"
+        },
+        {
+          "ar": "بَنُو",
+          "ar_plain": "بنو",
+          "translit": "banuu",
+          "en": "children (nominative)",
+          "ur": "اولاد (مرفوع)"
+        },
+        {
+          "ar": "بَنُونَ",
+          "ar_plain": "بنون",
+          "translit": "banuuna",
+          "en": "sons (with ن)",
+          "ur": "بیٹے (ن کے ساتھ)"
+        },
+        {
+          "ar": "ابْنُ",
+          "ar_plain": "ابن",
+          "translit": "ibnu",
+          "en": "son (singular)",
+          "ur": "بیٹا (واحد)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "بَنِي",
+        "ar_plain": "بني",
+        "translit": "banii",
+        "en": "children (accusative)",
+        "ur": "اولاد (منصوب)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A muḍāf vocative is accusative, shown here by ي, and the ن drops: يَا بَنِي إِسْرَائِيلَ.",
+        "ur": "مضاف منادیٰ منصوب ہوتا ہے، یہاں ي سے، اور ن گر جاتا ہے: يَا بَنِي إِسْرَائِيلَ۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch72-l03-ex06",
+      "sentence_ar": "يَا أَهْلَ الْكِتَابِ",
+      "words": [
+        {
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaa",
+          "en": "O (particle of calling)",
+          "ur": "اے (حرفِ ندا)"
+        },
+        {
+          "ar": "أَهْلَ",
+          "ar_plain": "أهل",
+          "translit": "ahla",
+          "en": "people",
+          "ur": "اہل"
+        },
+        {
+          "ar": "الْكِتَابِ",
+          "ar_plain": "الكتاب",
+          "translit": "al-kitaabi",
+          "en": "of the Book",
+          "ur": "کتاب کے"
+        }
+      ],
+      "available_roles": [
+        "PARTICLE",
+        "VOCATIVE",
+        "POSSESSIVE",
+        "SUBJECT",
+        "ADJECTIVE"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VOCATIVE",
+        "POSSESSIVE"
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَا is the particle, أَهْلَ the vocative (muḍāf, accusative), and الْكِتَابِ the مُضَافٌ إِلَيْهِ (genitive).",
+        "ur": "يَا حرف ہے، أَهْلَ منادیٰ (مضاف، منصوب)، اور الْكِتَابِ مضاف الیہ (مجرور)۔"
+      }
+    },
+    {
       "type": "BUILD_SENTENCE",
+      "id": "ch72-l03-ex07",
       "target_translation": {
-        "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ — O you who believed, fear Allah",
-        "ur": "اے ایمان والو، اللہ سے ڈرو"
+        "en": "O servant of Allah, listen!",
+        "ur": "اے اللہ کے بندے، سنو!"
       },
       "tiles": [
         {
-          "ar": "يا",
+          "ar": "يَا",
           "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
-          "ur": "اے"
+          "translit": "yaa",
+          "en": "O (particle of calling)",
+          "ur": "اے (حرفِ ندا)"
         },
         {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "those who",
-          "ur": "وہ لوگ جو"
+          "ar": "عَبْدَ",
+          "ar_plain": "عبد",
+          "translit": "'abda",
+          "en": "servant",
+          "ur": "بندے"
         },
         {
-          "ar": "الذين",
-          "ar_plain": "الذين",
-          "translit": "alladhīna",
-          "en": "who",
-          "ur": "کون"
-        },
-        {
-          "ar": "آمنوا",
-          "ar_plain": "آمنوا",
-          "translit": "āmanū",
-          "en": "believed",
-          "ur": "یقین کیا"
-        },
-        {
-          "ar": "اتقوا",
-          "ar_plain": "اتقوا",
-          "translit": "ittaqū",
-          "en": "fear",
-          "ur": "خوف"
-        },
-        {
-          "ar": "الله",
+          "ar": "اللَّهِ",
           "ar_plain": "الله",
-          "translit": "Allāh",
-          "en": "Allah",
-          "ur": "اللہ"
+          "translit": "allaahi",
+          "en": "of Allah",
+          "ur": "اللہ کے"
+        },
+        {
+          "ar": "اسْمَعْ",
+          "ar_plain": "اسمع",
+          "translit": "isma'",
+          "en": "listen",
+          "ur": "سنو"
+        },
+        {
+          "ar": "عَبْدُ",
+          "ar_plain": "عبد",
+          "translit": "'abdu",
+          "en": "servant (ḍamma)",
+          "ur": "بندہ (ضمہ)"
         }
       ],
       "correct_order": [
         0,
         1,
         2,
-        3,
-        4,
-        5
-      ]
-    },
-    {
-      "id": "ch72l03-ex07",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "ما الفرق بين يا زيد و يا أيهازيد؟",
-        "ar_plain": "ما الفرق بين يا زيد ويا أيهازيد",
-        "translit": "mā al-farq bayna yā zayd wa-yā ayyuhā zayd?",
-        "en": "What's the difference between يا زيد and يا أَيُّهَا زيد?",
-        "ur": "يا زيد اور يا أَيُّهَا زيد? میں کیا فرق ہے"
-      },
-      "options": [
-        {
-          "en": "No difference — both mean 'O Zayd'",
-          "ur": "کوئی فرق نہیں — دونوں کا مطلب 'اے زید'"
-        },
-        {
-          "en": "يا + name is direct; يا أيها + name emphasizes identity/role",
-          "ur": "یا + نام direct ہے؛ یا ایہ + نام identity/role پر emphasis کرتا ہے"
-        },
-        {
-          "en": "يا أيهازيد is longer; يا زيد is shorter — no difference in meaning",
-          "ur": "یا ایہ زید لمبا ہے؛ یا زید چھوٹا ہے — معنی میں کوئی فرق نہیں"
-        },
-        {
-          "en": "Option 4",
-          "ur": "آپشن 4"
-        }
+        3
       ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch72l03-ex08",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "أَيُّهَا يبقى دائمًا ___ — لا يتغير case",
-      "hint": {
-        "en": "Always the same",
-        "ur": "ہمیشہ ایک جیسے"
-      },
-      "options": [
-        {
-          "ar": "ثابتا",
-          "ar_plain": "ثابتا",
-          "translit": "thābitan",
-          "en": "ثابتا (unchanged)",
-          "ur": "ثابتا (بغیر تبدیل شدہ)"
-        },
-        {
-          "ar": "متغيرا",
-          "ar_plain": "متغيرا",
-          "translit": "mutaghayyiran",
-          "en": "متغيرا (changing)",
-          "ur": "متغيرا (تبدیل)"
-        },
-        {
-          "ar": "مرفوعا",
-          "ar_plain": "مرفوعا",
-          "translit": "marfūʿan",
-          "en": "مرفوعا (nominative)",
-          "ur": "مرفوعا (نامزد)"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
-          "ur": "نہیں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "ثابتا",
-        "ar_plain": "ثابتا",
-        "translit": "thābitan",
-        "en": "ثابتا",
-        "ur": "ثابتا"
-      }
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "أَيُّهَا — أداة نداء تركز الانتباه",
-      "en": "أَيُّهَا — A Vocative Tool That Focuses Attention",
-      "ur": "ایہ — توجہ مرکوز کرنے والا ندا ٹول"
+      "en": "Accusative vocatives: muḍāf and non-specific",
+      "ar": "الْمُنَادَى الْمَنْصُوبُ",
+      "ur": "منصوب منادیٰ: مضاف اور غیر مقصود"
     },
     "ayah": {
-      "surah": 39,
-      "ayah": 10,
-      "label": "Az-Zumar 39:10",
-      "ar": "قُلْ يَا عِبَادِ الَّذِينَ آمَنُوا اتَّقُوا رَبَّكُمْ ۚ لِلَّذِينَ أَحْسَنُوا فِي هَٰذِهِ الدُّنْيَا حَسَنَةٌ ۗ وَأَرْضُ اللَّهِ وَاسِعَةٌ ۗ إِنَّمَا يُوَفَّى الصَّابِرُونَ أَجْرَهُم بِغَيْرِ حِسَابٍ",
-      "en": "Say, \"O My servants who have believed, fear your Lord. For those who do good in this world is good, and the earth of Allāh is spacious. Indeed, the patient will be given their reward without account [i.e., limit].\"",
-      "ur": "کہہ دو کہ اے میرے بندو جو ایمان لائے ہو اپنے پروردگار سے ڈرو۔ جنہوں نے اس دنیا میں نیکی کی ان کے لئے بھلائی ہے۔ اور خدا کی زمین کشادہ ہے۔ جو صبر کرنے والے ہیں ان کو بےشمار ثواب ملے گا",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/039010.mp3"
+      "surah": 2,
+      "ayah": 40,
+      "label": "Al-Baqarah 2:40",
+      "ar": "يَا بَنِي إِسْرَائِيلَ اذْكُرُوا نِعْمَتِيَ الَّتِي أَنْعَمْتُ عَلَيْكُمْ",
+      "en": "O Children of Israel, remember My favor which I have bestowed upon you.",
+      "ur": "اے بنی اسرائیل، میری وہ نعمت یاد کرو جو میں نے تم پر کی۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002040.mp3"
     },
     "highlighted_word_indices": [
-      0
+      0,
+      1,
+      2
     ],
     "noor_explanation": {
-      "ar": "ملاحظة: هذه الآية ليس فيها أيها أو نداء — إنها جملة أمر ('قل'). النداء يأتي في سياقات مختلفة — ليس كل آية في القرآن نداء.",
-      "en": "Note: This ayah contains no أَيُّهَا or vocative — it's an imperative sentence ('Say'). Vocatives appear in different contexts — not every ayah in the Quran is a vocative. Understanding when أَيُّهَا appears vs. when it doesn't helps you read the Quran more precisely.",
-      "ur": "نوٹ: اس آیت میں کوئی ایہ یا ندا نہیں ہے — یہ ایک حکمی جملہ ہے ('کہو')۔ ندا مختلف سیاقوں میں آتی ہے — ہر آیت ندا نہیں ہوتی۔ سمجھنا کہ کب ایہ آتا ہے اور کب نہیں آتا آپ کو قرآن زیادہ درست پڑھنے میں مدد کرتا ہے۔"
+      "en": "يَا بَنِي إِسْرَائِيلَ — بَنِي is a muḍāf vocative, so it is accusative (with ي) and loses its ن. إِسْرَائِيلَ is the مُضَافٌ إِلَيْهِ; it shows fatḥa only because it is a foreign name that never takes kasra.",
+      "ur": "يَا بَنِي إِسْرَائِيلَ — بَنِي مضاف منادیٰ ہے، اس لیے منصوب (ي کے ساتھ) ہے اور اس کا ن گر گیا ہے۔ إِسْرَائِيلَ مضاف الیہ ہے؛ اس پر فتحہ صرف اس لیے ہے کہ یہ عجمی نام ہے جو کسرہ نہیں لیتا۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "Now you can distinguish between the short vocative (أَيُّهَا + noun) and the full vocative (أَيُّهَا + الذين + verb). Both are grammatically correct and serve different purposes. Tomorrow we cover other vocative particles beyond يا and أَيُّهَا.",
-      "en": "Now you can distinguish between the short vocative (أَيُّهَا + noun) and the full vocative (أَيُّهَا + الذين + verb). Both are grammatically correct and serve different purposes. Tomorrow we cover other vocative particles beyond يا and أَيُّهَا.",
-      "ur": "اب آپ مختصر ندا (ایہ + noun) اور مکمل ندا (ایہ + ذین + فعل) کے درمیان فرق کر سکتے ہیں۔ دونوں گرامر کے لحاظ سے درست ہیں اور مختلف مقاصد کے لیے کام کرتے ہیں۔ کل ہم 'یا' اور 'ایہ' کے علاوہ دوسرے ندا particles کEMU کور کریں گے۔"
+      "en": "Two endings, two reasons: ḍamma for names and particular listeners, fatḥa for a muḍāf or a non-specific call. Next: how to call a noun that has ال.",
+      "ur": "دو آخر، دو وجہیں: نام اور خاص سننے والے کے لیے ضمہ، مضاف یا غیر مقصود پکار کے لیے فتحہ۔ آگے: ال والے اسم کو کیسے پکاریں۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }

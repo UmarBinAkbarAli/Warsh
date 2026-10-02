@@ -1,11 +1,13 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 72, Lesson 5 — Calling Allah in duʿāʾ: رَبِّ، رَبَّنَا، اللَّهُمَّ.",
     "chapter_order": 72,
     "lesson_order": 5,
     "chapter_title": "المنادى",
-    "title": "The Vocative to Allah — يَا رَبِّ، يَا اللَّه",
-    "titleAr": "المنادى في القرآن — يا رب، يا الله",
+    "title": "Calling Allah — رَبِّ، رَبَّنَا، اللَّهُمَّ",
+    "titleAr": "نِدَاءُ اللَّهِ فِي الدُّعَاءِ",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
@@ -15,301 +17,245 @@
       "surah": 3,
       "ayah": 8,
       "label": "Aal Imran 3:8",
-      "ar": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِنْ لَدُنْكَ رَحْمَةً إِنَّكَ أَنْتَ الْوَهَّابُ",
-      "en": "Our Lord, do not let our hearts deviate after You have guided us. And grant us mercy from Yourself. Indeed, You are the Bestower.",
-      "ur": "اے ہمارے رب، ہمارے دلوں کو اس کے بعد کہ تو نے ہمیں ہدایت کی ہے ڈیڑھ نہ کر۔ اور ہمیں اپنی طرف سے رحمت عنایت فرما۔ بیشک تو ہی بہت دینے والا ہے۔",
+      "ar": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً ۚ إِنَّكَ أَنتَ الْوَهَّابُ",
+      "en": "Our Lord, let not our hearts deviate after You have guided us and grant us from Yourself mercy. Indeed, You are the Bestower.",
+      "ur": "اے ہمارے رب، ہمیں ہدایت دینے کے بعد ہمارے دلوں کو ٹیڑھا نہ کر، اور ہمیں اپنی طرف سے رحمت عطا فرما۔ بے شک تو ہی بہت عطا کرنے والا ہے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003008.mp3"
     },
     "noor_intro": {
-      "ar": "في القرآن يدعو الداعون الله بقولهم: رَبِّ ورَبَّنَا، وهو نداء قريب مباشر. نحلّل اليوم هذه النداءات.",
-      "en": "In the Quran, those who pray call on Allah with رَبِّ ('my Lord') or رَبَّنَا ('our Lord'). It is a close, direct form of address. Today we analyze these addresses.",
-      "ur": "قرآن میں دعا کرنے والے اللہ کو 'رَبِّ' یا 'رَبَّنَا' کہہ کر پکارتے ہیں۔ یہ بہت قریبی اور براہ راست خطاب ہے۔ آج ہم ان خطابوں کا تجزیہ کرتے ہیں۔"
+      "en": "رَبَّنَا — 'our Lord'. There is no يَا, yet this is a call, and رَبَّ shows fatḥa. Most duʿāʾ in the Quran opens this way. Today: the forms used to call on Allah.",
+      "ur": "رَبَّنَا — 'اے ہمارے رب'۔ یہاں يَا نہیں، پھر بھی یہ ندا ہے، اور رَبَّ پر فتحہ ہے۔ قرآن کی اکثر دعائیں اسی طرح شروع ہوتی ہیں۔ آج: اللہ کو پکارنے کے صیغے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "يا رَبِّ",
-        "ar_plain": "يا رب",
-        "translit": "yā rabbin",
-        "en": "يَا رَبِّ — O Lord / Rabb",
-        "ur": "اے رب — رب کو بلانا"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "رَبَّنَا — a muḍāf vocative",
+        "ar": "رَبَّنَا",
+        "ur": "رَبَّنَا — مضاف منادیٰ"
       },
-      "definition": {
-        "en": "Direct address to Allah — يا + منادى in nominative (رب). رَبَّنَا = 'Our Lord' — the most common direct address to Allah in the Quran.",
-        "ar": "نداء مباشر لله — يا + منادى مرفوع (رب)",
-        "ur": "اللہ سے براہ راست خطاب — يا + منادى نامزد (رب) میں۔ رَبَّنَا = 'ہمارا رب' - قرآن میں اللہ سے سب سے عام براہ راست خطاب۔"
+      "explanation": {
+        "en": "رَبَّنَا is رَبَّ + نَا ('our'). It is a muḍāf vocative, so it is accusative with fatḥa (Lesson 3). In duʿāʾ the يَا is usually left out: رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً.",
+        "ur": "رَبَّنَا = رَبَّ + نَا ('ہمارا')۔ یہ مضاف منادیٰ ہے، اس لیے فتحہ کے ساتھ منصوب ہے (سبق 3)۔ دعا میں عام طور پر يَا چھوڑ دیا جاتا ہے: رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً۔"
       },
-      "highlight": true
+      "examples": [
+        {
+          "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
+          "ar_plain": "ربنا آتنا في الدنيا حسنة",
+          "translit": "rabbanaa aatinaa fii ad-dunyaa hasanatan",
+          "en": "Our Lord, give us good in this world.",
+          "ur": "اے ہمارے رب، ہمیں دنیا میں بھلائی دے۔"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Rabb al-Aalameen — Lord of all creation",
-        "ar": "رب العالمين",
-        "ur": "رب العالمین - تمام مخلوقات کا رب"
+        "en": "رَبِّ — 'my Lord', shortened",
+        "ar": "رَبِّ",
+        "ur": "رَبِّ — 'میرے رب'، مختصر"
       },
       "explanation": {
-        "en": "رَبِّ is the مضاف and الْعَالَمِينَ the مضاف إليه — it describes Allah as the Lord and Master of all creation. رَبِّ الْعَالَمِينَ = 'Lord of all the worlds', as in Surah Al-Fatiha: الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ.",
-        "ar": "رب مضاف إلى العالمين — يصف الله بأنه مربي الخلق كلهم ومالكهم. وتأتي هذه العبارة في سورة الفاتحة: الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ.",
-        "ur": "رَبِّ مضاف اور الْعَالَمِينَ مضاف الیہ ہے — یہ اللہ کو تمام مخلوقات کا رب اور مالک بتاتا ہے۔ رَبِّ الْعَالَمِينَ = 'تمام جہانوں کا رب'، جیسے سورۃ الفاتحہ میں: الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ۔"
-      }
+        "en": "رَبِّي ('my Lord') loses its ي in a call, leaving the kasra: رَبِّ اغْفِرْ لِي — 'My Lord, forgive me' (71:28). Same pattern as يَا قَوْمِ.",
+        "ur": "ندا میں رَبِّي ('میرا رب') کی ي گر جاتی ہے اور کسرہ رہ جاتا ہے: رَبِّ اغْفِرْ لِي — 'اے میرے رب، مجھے بخش دے' (71:28)۔ یہ يَا قَوْمِ والا طریقہ ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "رَبِّ اغْفِرْ لِي",
+          "ar_plain": "رب اغفر لي",
+          "translit": "rabbi ighfir lii",
+          "en": "My Lord, forgive me.",
+          "ur": "اے میرے رب، مجھے بخش دے۔"
+        }
+      ]
     },
     {
-      "type": "WORD",
-      "text": {
-        "ar": "يَا اللَّه",
-        "ar_plain": "يا الله",
-        "translit": "yā Allāh",
-        "en": "يَا اللَّه — O Allah",
-        "ur": "اے اللہ — اللہ کو براہ راست بلانا"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "اللَّهُمَّ — 'O Allah'",
+        "ar": "اللَّهُمَّ",
+        "ur": "اللَّهُمَّ — 'اے اللہ'"
       },
-      "definition": {
-        "en": "Direct vocative using the proper name of God (الله). This is more formal than يَا رَبِّ.",
-        "ar": "نداء مباشر باستخدام اسم الجلالة. هذا أكثر رسمية من يا رَبِّ.",
-        "ur": "خدا کے مناسب نام کا استعمال کرتے ہوئے براہ راست آواز (الله)۔ یہ يَا رَبِّ سے زیادہ رسمی ہے۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَا الرَّحْمَٰنِ",
-        "ar_plain": "يا الرحمن",
-        "translit": "yā ar-Raḥmān",
-        "en": "يَا الرَّحْمَٰنِ — O Most Gracious",
-        "ur": "اے رحمان — اللہ کے نام سے بلانا"
-      },
-      "definition": {
-        "en": "Vocative using one of Allah's beautiful names (الرحمن). This emphasizes a particular attribute of Allah when calling upon Him.",
-        "ar": "نداء باسم من أسماء الله الحسنى. هذا يركز على صفة معينة من صفات الله عند مناداته.",
-        "ur": "اللہ کے خوبصورت ناموں میں سے ایک کا استعمال کرتے ہوئے (الرحمن)۔ یہ اللہ کو پکارتے وقت اس کی ایک خاص صفت پر زور دیتا ہے۔"
+      "explanation": {
+        "en": "اللَّهُمَّ means 'O Allah'. The مَّ at the end takes the place of يَا at the start, so the two are not used together: say اللَّهُمَّ, not يَا اللَّهُمَّ. In the Quran: قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ (3:26).",
+        "ur": "اللَّهُمَّ کا مطلب ہے 'اے اللہ'۔ آخر کا مَّ شروع کے يَا کی جگہ ہے، اس لیے دونوں اکٹھے نہیں آتے: اللَّهُمَّ کہیے، يَا اللَّهُمَّ نہیں۔ قرآن میں: قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ (3:26)۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Supplication Pattern — رَبَّنَا + طلب",
-        "ar": "دعاء Pattern",
-        "ur": "درخواست کا نمونہ — رَبَّنَا + طلب"
+        "en": "يَا اللَّهُ — the one ال word",
+        "ar": "يَا اللَّهُ",
+        "ur": "يَا اللَّهُ — واحد ال والا لفظ"
       },
       "explanation": {
-        "en": "The pattern for Quranic دعا is always: call upon Allah (رَبَّنَا or يَا رَبِّ) + make your request. رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً — Our Lord, grant us goodness in this world.",
-        "ar": "نداء + طلب = structure of Quranic supplication. رَبَّنَا = address, آتِنَا = request.",
-        "ur": "قرآنی دعا کا نمونہ ہمیشہ ہے: اللہ کو پکارو (رَبَّنَا یا يَا رَبِّ) + اپنی درخواست کریں۔ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً — اے ہمارے رب ہمیں اس دنیا میں بھلائی عطا فرما۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Vocative with Allah's Beautiful Names",
-        "ar": "يا حافظ",
-        "ur": "اللہ کے خوبصورت ناموں کے ساتھ بولنا"
-      },
-      "explanation": {
-        "en": "When calling upon Allah using one of His names, the name itself becomes the منادى. يَا حَافِظَ الدَّارِ — O Guardian of the house. This is how the Quran teaches us to call upon Allah's specific attributes.",
-        "ar": "عندما ننادي الله بأحد أسمائه، يصبح الاسم نفسه هو المنادى. هذا كيف يعلمنا القرآن أن ننادي صفات الله المحددة.",
-        "ur": "جب اللہ کو اس کے ناموں میں سے کسی ایک کا استعمال کرتے ہوئے پکارا جائے تو نام ہی __AR__0__ بن جاتا ہے۔ يَا حَافِظَ الدَّارِ — اے گھر کے رکھوالے اس طرح قرآن ہمیں اللہ کی مخصوص صفات کو پکارنے کا درس دیتا ہے۔"
+        "en": "Lesson 4 said يَا does not go straight onto ال. The name of Allah is the exception: يَا اللَّهُ is correct. You will hear it in duʿāʾ; in the Quran's own prayers, the forms you will meet are رَبِّ، رَبَّنَا and اللَّهُمَّ.",
+        "ur": "سبق 4 میں تھا کہ يَا براہِ راست ال پر نہیں آتا۔ اللہ کا نام اس سے مستثنیٰ ہے: يَا اللَّهُ درست ہے۔ یہ آپ دعاؤں میں سنیں گے؛ قرآن کی اپنی دعاؤں میں آپ کو رَبِّ، رَبَّنَا اور اللَّهُمَّ ملیں گے۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch72l05-ex01",
       "type": "TAP_TRANSLATION",
+      "id": "ch72-l05-ex01",
       "prompt": {
-        "ar": "ما هو المنادى في: رَبَّنَا لَا تُزِغْ؟",
-        "ar_plain": "ما هو المنادى في ربنا لا تزغ",
-        "translit": "mā huwa al-munādā fī: rabbanā lā tuzigh?",
-        "en": "What is the منادى in: رَبَّنَا لَا تُزِغْ؟",
-        "ur": "کیا ہے منادى in: رَبَّنَا لَا تُزِغْ؟"
+        "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
+        "ar_plain": "ربنا آتنا في الدنيا حسنة",
+        "translit": "rabbanaa aatinaa fii ad-dunyaa hasanatan",
+        "en": "Our Lord, give us good in this world.",
+        "ur": "اے ہمارے رب، ہمیں دنیا میں بھلائی دے۔"
       },
       "options": [
         {
-          "en": "ربنا (Our Lord)",
-          "ur": "ہمارے رب"
+          "en": "Our Lord, give us good in this world.",
+          "ur": "اے ہمارے رب، ہمیں دنیا میں بھلائی دے۔"
         },
         {
-          "en": "لا",
-          "ur": "نہیں"
+          "en": "Our Lord gave us good in this world.",
+          "ur": "ہمارے رب نے ہمیں دنیا میں بھلائی دی۔"
         },
         {
-          "en": "قلوبنا",
-          "ur": "ہمارے دل"
+          "en": "My Lord, give me good in this world.",
+          "ur": "اے میرے رب، مجھے دنیا میں بھلائی دے۔"
         },
         {
-          "en": "Option 4",
-          "ur": "آپشن 4"
+          "en": "Lord of the world, we have done good.",
+          "ur": "اے دنیا کے رب، ہم نے نیکی کی۔"
         }
       ],
-      "correct_index": 0
-    },
-    {
-      "id": "ch72l05-ex02",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "رب in 'Our Lord' is مرفوع because it is منادى",
-        "ur": "'ہمارے رب' میں 'رب' مرفوع ہے کیونکہ یہ منادى ہے"
-      },
-      "correct_answer": true
-    },
-    {
-      "id": "ch72l05-ex03",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "يَا ___ نَا لَا تُزِغْ قُلُوبَنَا",
-      "hint": {
-        "en": "The noun being called",
-        "ur": "وہ noun جسے بلانا ہے"
-      },
-      "options": [
-        {
-          "ar": "رب",
-          "ar_plain": "رب",
-          "translit": "rabb",
-          "en": "رب",
-          "ur": "رب"
-        },
-        {
-          "ar": "الله",
-          "ar_plain": "الله",
-          "translit": "Allāh",
-          "en": "الله",
-          "ur": "الله"
-        },
-        {
-          "ar": "رحمن",
-          "ar_plain": "رحمن",
-          "translit": "Raḥmān",
-          "en": "الرحمن",
-          "ur": "الرحمن"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
-          "ur": "نہیں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "رب",
-        "ar_plain": "رب",
-        "translit": "rabb",
-        "en": "رب",
-        "ur": "رب"
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "2:201. رَبَّنَا is a call ('Our Lord'), and آتِنَا is a request: 'give us'.",
+        "ur": "2:201۔ رَبَّنَا ندا ہے ('اے ہمارے رب')، اور آتِنَا درخواست ہے: 'ہمیں دے'۔"
       }
     },
     {
-      "id": "ch72l05-ex04",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا",
-      "words": [
-        {
-          "ar": "ربنا",
-          "ar_plain": "ربنا",
-          "translit": "rabbanā",
-          "en": "Our Lord",
-          "ur": "ہمارے رب"
-        },
-        {
-          "ar": "لا",
-          "ar_plain": "لا",
-          "translit": "lā",
-          "en": "not",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "تزغ",
-          "ar_plain": "تزغ",
-          "translit": "tuzigh",
-          "en": "cause to deviate",
-          "ur": "انحراف کا سبب بنتا ہے"
-        },
-        {
-          "ar": "قلوبنا",
-          "ar_plain": "قلوبنا",
-          "translit": "qulūbanā",
-          "en": "our hearts",
-          "ur": "ہمارے دل"
-        },
-        {
-          "ar": "بعد",
-          "ar_plain": "بعد",
-          "translit": "baʿd",
-          "en": "after",
-          "ur": "کے بعد"
-        },
-        {
-          "ar": "هدينا",
-          "ar_plain": "هدينا",
-          "translit": "hadaynā",
-          "en": "You guided us",
-          "ur": "آپ نے ہماری رہنمائی کی۔"
-        }
-      ],
-      "available_roles": [
-        "NOUN",
-        "VERB",
-        "PARTICLE",
-        "PREPOSITION",
-        "OBJECT",
-        "NOUN"
-      ],
-      "correct_roles": [
-        "NOUN",
-        "PARTICLE",
-        "VERB",
-        "OBJECT",
-        "PREPOSITION",
-        "VERB"
-      ]
+      "type": "TRUE_FALSE",
+      "id": "ch72-l05-ex02",
+      "statement": {
+        "en": "In رَبَّنَا, the fatḥa on رَبَّ shows an accusative vocative, because رَبَّ is muḍāf to نَا.",
+        "ur": "رَبَّنَا میں رَبَّ کا فتحہ منصوب منادیٰ کی علامت ہے، کیونکہ رَبَّ، نَا کی طرف مضاف ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes. رَبَّنَا = يَا رَبَّنَا with يَا left out; a muḍāf vocative is accusative.",
+        "ur": "جی ہاں۔ رَبَّنَا = يَا رَبَّنَا، يَا کو چھوڑ کر؛ مضاف منادیٰ منصوب ہوتا ہے۔"
+      }
     },
     {
-      "id": "ch72l05-ex05",
+      "type": "FILL_BLANK",
+      "id": "ch72-l05-ex03",
+      "mode": "TAP",
+      "sentence_ar": "___ اغْفِرْ لِي وَلِوَالِدَيَّ",
+      "hint": {
+        "en": "'My Lord, forgive me and my parents' (71:28).",
+        "ur": "'اے میرے رب، مجھے اور میرے والدین کو بخش دے' (71:28)۔"
+      },
+      "options": [
+        {
+          "ar": "رَبِّ",
+          "ar_plain": "رب",
+          "translit": "rabbi",
+          "en": "my Lord (call)",
+          "ur": "اے میرے رب"
+        },
+        {
+          "ar": "رَبُّ",
+          "ar_plain": "رب",
+          "translit": "rabbu",
+          "en": "Lord (ḍamma)",
+          "ur": "رب (ضمہ)"
+        },
+        {
+          "ar": "رَبٌّ",
+          "ar_plain": "رب",
+          "translit": "rabbun",
+          "en": "a lord",
+          "ur": "کوئی رب"
+        },
+        {
+          "ar": "الرَّبُّ",
+          "ar_plain": "الرب",
+          "translit": "ar-rabbu",
+          "en": "the Lord",
+          "ur": "رب (ال کے ساتھ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "رَبِّ",
+        "ar_plain": "رب",
+        "translit": "rabbi",
+        "en": "my Lord (call)",
+        "ur": "اے میرے رب"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "رَبِّ is رَبِّي ('my Lord') with the ي dropped; only the kasra remains.",
+        "ur": "رَبِّ دراصل رَبِّي ('میرا رب') ہے جس کی ي گر گئی؛ صرف کسرہ باقی ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch72-l05-ex04",
+      "statement": {
+        "en": "يَا اللَّهُمَّ is the normal way to say 'O Allah'.",
+        "ur": "'اے اللہ' کہنے کا عام طریقہ يَا اللَّهُمَّ ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The مَّ of اللَّهُمَّ already does the job of يَا, so say اللَّهُمَّ alone (or يَا اللَّهُ).",
+        "ur": "اللَّهُمَّ کا مَّ پہلے ہی يَا کا کام کرتا ہے، اس لیے صرف اللَّهُمَّ کہیے (یا يَا اللَّهُ)۔"
+      }
+    },
+    {
       "type": "MATCHING",
+      "id": "ch72-l05-ex05",
       "left_column": [
         {
-          "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً",
-          "ar_plain": "ربنا آتنا في الدنيا حسنة",
-          "translit": "rabbanā ātinā fī ad-dunyā ḥasanatan",
-          "en": "Our Lord, grant us goodness",
-          "ur": "اے ہمارے رب ہمیں بھلائی عطا فرما"
+          "ar": "رَبِّ",
+          "ar_plain": "رب",
+          "translit": "rabbi",
+          "en": "rabbi",
+          "ur": "رَبِّ"
         },
         {
-          "ar": "يَا رَبِّ إِنِّي لَعَظِيمٌ",
-          "ar_plain": "يا رب إني لعظيم",
-          "translit": "yā rabbin innī laʿaẓīm",
-          "en": "My Lord, I am indeed great",
-          "ur": "میرے رب، میں واقعی عظیم ہوں۔"
+          "ar": "رَبَّنَا",
+          "ar_plain": "ربنا",
+          "translit": "rabbanaa",
+          "en": "rabbanaa",
+          "ur": "رَبَّنَا"
         },
         {
-          "ar": "رَبِّ اشْرَحْ لِي صَدْرِي",
-          "ar_plain": "رب اشرح لي صدري",
-          "translit": "rabbi ishraḥ lī ṣadrī",
-          "en": "My Lord, expand my chest for me",
-          "ur": "میرے رب، میرے لیے میرا سینہ کشادہ کر"
+          "ar": "اللَّهُمَّ",
+          "ar_plain": "اللهم",
+          "translit": "allaahumma",
+          "en": "allaahumma",
+          "ur": "اللَّهُمَّ"
         }
       ],
       "right_column": [
         {
-          "en": "منادى مضاف إلى المتكلم (رب + نحن)",
-          "ur": "منادى مضاف إلى المتكلم (رب + نحن)"
+          "en": "My Lord",
+          "ur": "اے میرے رب"
         },
         {
-          "en": "يا + منادى منفردة + صفة المتكلم",
-          "ur": "يا + منادى منفردة + صفة المتكلم"
+          "en": "Our Lord",
+          "ur": "اے ہمارے رب"
         },
         {
-          "en": "ربّ + نا = منادى مضاف",
-          "ur": "ربّ + نا = منادى مضاف"
+          "en": "O Allah",
+          "ur": "اے اللہ"
         }
       ],
       "correct_pairs": [
         [
           0,
-          2
+          0
         ],
         [
           1,
@@ -317,178 +263,136 @@
         ],
         [
           2,
-          0
+          2
         ]
-      ]
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch72l05-ex06",
+      "type": "FILL_BLANK",
+      "id": "ch72-l05-ex06",
+      "mode": "TAP",
+      "sentence_ar": "قُلِ ___ مَالِكَ الْمُلْكِ",
+      "hint": {
+        "en": "'Say, O Allah, Owner of Sovereignty' (3:26).",
+        "ur": "'کہو: اے اللہ، بادشاہی کے مالک' (3:26)۔"
+      },
+      "options": [
+        {
+          "ar": "اللَّهُمَّ",
+          "ar_plain": "اللهم",
+          "translit": "allaahumma",
+          "en": "O Allah",
+          "ur": "اے اللہ"
+        },
+        {
+          "ar": "يَا اللَّهُمَّ",
+          "ar_plain": "يا اللهم",
+          "translit": "yaa allaahumma",
+          "en": "yaa + allaahumma",
+          "ur": "يَا + اللَّهُمَّ"
+        },
+        {
+          "ar": "أَيُّهَا اللَّهُ",
+          "ar_plain": "أيها الله",
+          "translit": "ayyuhaa allaahu",
+          "en": "ayyuhaa + Allah",
+          "ur": "أَيُّهَا + اللہ"
+        },
+        {
+          "ar": "رَبُّنَا",
+          "ar_plain": "ربنا",
+          "translit": "rabbunaa",
+          "en": "our Lord (ḍamma)",
+          "ur": "ہمارا رب (ضمہ)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اللَّهُمَّ",
+        "ar_plain": "اللهم",
+        "translit": "allaahumma",
+        "en": "O Allah",
+        "ur": "اے اللہ"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The Quran says قُلِ اللَّهُمَّ. مَالِكَ after it, with fatḥa, is read as a second call: '(O) Owner of Sovereignty'.",
+        "ur": "قرآن میں قُلِ اللَّهُمَّ ہے۔ اس کے بعد فتحہ والا مَالِكَ دوسری ندا کے طور پر پڑھا جاتا ہے: '(اے) بادشاہی کے مالک'۔"
+      }
+    },
+    {
       "type": "BUILD_SENTENCE",
+      "id": "ch72-l05-ex07",
       "target_translation": {
-        "en": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً — Our Lord, grant us goodness in this world",
-        "ur": "ہمارے رب، ہمیں اس دنیا میں اچھائی دے"
+        "en": "Our Lord, forgive us.",
+        "ur": "اے ہمارے رب، ہمیں بخش دے۔"
       },
       "tiles": [
         {
-          "ar": "رب",
-          "ar_plain": "رب",
-          "translit": "rabb",
-          "en": "Lord",
-          "ur": "رب"
+          "ar": "رَبَّنَا",
+          "ar_plain": "ربنا",
+          "translit": "rabbanaa",
+          "en": "our Lord",
+          "ur": "اے ہمارے رب"
         },
         {
-          "ar": "نا",
-          "ar_plain": "نا",
-          "translit": "nā",
-          "en": "our",
-          "ur": "ہمارے"
+          "ar": "اغْفِرْ",
+          "ar_plain": "اغفر",
+          "translit": "ighfir",
+          "en": "forgive",
+          "ur": "بخش دے"
         },
         {
-          "ar": "آتنا",
-          "ar_plain": "آتنا",
-          "translit": "ātinā",
-          "en": "grant us",
-          "ur": "ہمیں عطا فرما"
+          "ar": "لَنَا",
+          "ar_plain": "لنا",
+          "translit": "lanaa",
+          "en": "us",
+          "ur": "ہمیں"
         },
         {
-          "ar": "في",
-          "ar_plain": "في",
-          "translit": "fī",
-          "en": "in",
-          "ur": "میں"
-        },
-        {
-          "ar": "الدنيا",
-          "ar_plain": "الدنيا",
-          "translit": "ad-dunyā",
-          "en": "this world",
-          "ur": "یہ دنیا"
-        },
-        {
-          "ar": "حسنة",
-          "ar_plain": "حسنة",
-          "translit": "ḥasanatan",
-          "en": "goodness",
-          "ur": "نیکی"
+          "ar": "رَبُّنَا",
+          "ar_plain": "ربنا",
+          "translit": "rabbunaa",
+          "en": "our Lord (ḍamma)",
+          "ur": "ہمارا رب (ضمہ)"
         }
       ],
       "correct_order": [
         0,
         1,
-        2,
-        3,
-        4,
-        5
-      ]
-    },
-    {
-      "id": "ch72l05-ex07",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "ما معنى: رَبِّ اشْرَحْ لِي صَدْرِي؟",
-        "ar_plain": "ما معنى رب اشرح لي صدري",
-        "translit": "mā maʿnā: rabbi ishraḥ lī ṣadrī?",
-        "en": "What does رَبِّ اشْرَحْ لِي صَدْرِي mean?",
-        "ur": "رَبِّ اشْرَحْ لِي صَدْرِي کا کیا مطلب ہے؟"
-      },
-      "options": [
-        {
-          "en": "My Lord, expand my chest for me",
-          "ur": "میرے رب، میرے لیے سینہ کھول"
-        },
-        {
-          "en": "My Lord, broaden my knowledge",
-          "ur": "میرے رب، میرے علم کو وسیع کر"
-        },
-        {
-          "en": "My Lord, open my heart",
-          "ur": "میرے رب، میرے دل کو کھول"
-        },
-        {
-          "en": "Option 4",
-          "ur": "آپشن 4"
-        }
+        2
       ],
-      "correct_index": 0
-    },
-    {
-      "id": "ch72l05-ex08",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "Pattern الدعاء في القرآن: نداء + ___",
-      "hint": {
-        "en": "What follows the vocative",
-        "ur": "ندا کے بعد کیا آتا ہے"
-      },
-      "options": [
-        {
-          "ar": "طلب",
-          "ar_plain": "طلب",
-          "translit": "ṭalab",
-          "en": "request",
-          "ur": "درخواست"
-        },
-        {
-          "ar": "جواب",
-          "ar_plain": "جواب",
-          "translit": "jawāb",
-          "en": "answer",
-          "ur": "جواب"
-        },
-        {
-          "ar": "سؤال",
-          "ar_plain": "سؤال",
-          "translit": "su'āl",
-          "en": "question",
-          "ur": "سوال"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
-          "ur": "نہیں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "طلب",
-        "ar_plain": "طلب",
-        "translit": "ṭalab",
-        "en": "طلب",
-        "ur": "طلب"
-      }
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "المنادى لله — المحادثة الإلهية",
-      "en": "The Vocative to Allah — Divine Conversation",
-      "ur": "اللہ کو بلانا — الہی گفتگو"
+      "en": "Calling Allah: رَبِّ، رَبَّنَا، اللَّهُمَّ",
+      "ar": "رَبِّ، رَبَّنَا، اللَّهُمَّ",
+      "ur": "اللہ کو پکارنا: رَبِّ، رَبَّنَا، اللَّهُمَّ"
     },
     "ayah": {
       "surah": 3,
       "ayah": 26,
       "label": "Aal Imran 3:26",
-      "ar": "قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَنْ تَشَاءُ وَتَنْزِعُ الْمُلْكَ مِمَّنْ تَشَاءُ وَتُعِزُّ مَنْ تَشَاءُ وَتُذِلُّ مَنْ تَشَاءُ",
-      "en": "Say: 'O Allah, Owner of Sovereignty, You give sovereignty to whom You will and You remove sovereignty from whom You will. You honor whom You will and You humble whom You will.'",
-      "ur": "کہو: 'اے اللہ، بادشاہت کے مالک، تو جسے چاہے بادشاہت دے اور جس سے چاہے بادشاہت چھین لے۔ تو جسے چاہے عزت دے اور جسے چاہے ذلیل کرے۔'",
+      "ar": "قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَن تَشَاءُ وَتَنزِعُ الْمُلْكَ مِمَّن تَشَاءُ",
+      "en": "Say, 'O Allah, Owner of Sovereignty, You give sovereignty to whom You will and You take sovereignty away from whom You will.'",
+      "ur": "کہو: اے اللہ، بادشاہی کے مالک، تو جسے چاہے بادشاہی دیتا ہے اور جس سے چاہے بادشاہی چھین لیتا ہے۔",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/003026.mp3"
     },
     "highlighted_word_indices": [
-      1
+      1,
+      2
     ],
     "noor_explanation": {
-      "ar": "في «قُلِ اللَّهُمَّ»: اللَّهُمَّ بمعنى يا الله، حُذفت ياء النداء وعُوِّض عنها بالميم المشددة في آخره.",
-      "en": "In 'قُلِ اللَّهُمَّ' — اللَّهُمَّ means 'O Allah': the vocative يَا is dropped and the doubled مّ at the end takes its place. It is a special way of calling upon Allah.",
-      "ur": "'قُلِ اللَّهُمَّ' میں — اللَّهُمَّ کا مطلب 'اے اللہ' ہے؛ اس میں يَا حذف ہے اور آخر میں مِّ اس کے بدلے آئی ہے۔ یہ اللہ کو پکارنے کا ایک خاص انداز ہے۔"
+      "en": "اللَّهُمَّ — 'O Allah'. Then مَالِكَ الْمُلْكِ with fatḥa: a muḍāf, read as a second call with يَا left out — '(O) Owner of Sovereignty'. The verbs that follow speak to Him directly: تُؤْتِي، تَنزِعُ — 'You give, You take'.",
+      "ur": "اللَّهُمَّ — 'اے اللہ'۔ پھر فتحہ کے ساتھ مَالِكَ الْمُلْكِ: مضاف، جسے يَا کے بغیر دوسری ندا کے طور پر پڑھا جاتا ہے — '(اے) بادشاہی کے مالک'۔ بعد کے افعال براہِ راست اسی سے خطاب ہیں: تُؤْتِي، تَنزِعُ — 'تو دیتا ہے، تو چھینتا ہے'۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "Calling upon Allah directly — رَبَّنَا، يَا رَبِّ، اللَّهُمَّ — is the most powerful use of the vocative. These are the words the Quran gives us to speak directly to our Creator. Tomorrow we do a comprehensive review of all النِّدَاء rules.",
-      "en": "Calling upon Allah directly — رَبَّنَا، يَا رَبِّ، اللَّهُمَّ — is the most powerful use of the vocative. These are the words the Quran gives us to speak directly to our Creator. Tomorrow we do a comprehensive review of all النِّدَاء rules.",
-      "ur": "اللہ کو براہ راست بلانا — 'ہمارے رب'، 'اے رب'، 'اللہم' — ندا کا سب سے طاقتور استعمال ہے۔ یہ وہ الفاظ ہیں جنہوں نے قرآن ہمیں ہمارے خالق سے براہ راست بات کرنے کے لیے دیئے ہیں۔ کل ہم تمام نداء rules کا جامع جائزہ لیتے ہیں۔"
+      "en": "رَبِّ (my Lord), رَبَّنَا (our Lord), اللَّهُمَّ (O Allah): three ways to call on Allah, all without يَا. Next: the Quran's most frequent call, يَا أَيُّهَا الَّذِينَ آمَنُوا.",
+      "ur": "رَبِّ (اے میرے رب)، رَبَّنَا (اے ہمارے رب)، اللَّهُمَّ (اے اللہ): اللہ کو پکارنے کے تین طریقے، تینوں يَا کے بغیر۔ آگے: قرآن کی سب سے زیادہ آنے والی ندا، يَا أَيُّهَا الَّذِينَ آمَنُوا۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }

@@ -1,29 +1,30 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 72, Lesson 7 — Address in the Quran's family stories: يَا أَبَتِ، يَا بُنَيَّ، and calls without يَا.",
     "chapter_order": 72,
     "lesson_order": 7,
     "chapter_title": "المنادى",
-    "title": "The Emotional Climax — يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
-    "titleAr": "الذروة العاطفية — يا أيها الذين آمنوا اتقوا الله",
+    "title": "Calling Family — يَا أَبَتِ، يَا بُنَيَّ",
+    "titleAr": "نِدَاءُ الْأَهْلِ: يَا أَبَتِ، يَا بُنَيَّ",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 66,
-      "ayah": 6,
-      "label": "At-Tahrim 66:6",
-      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا قُوا أَنفُسَكُمْ وَأَهْلِيكُمْ نَارًا وَقُودُهَا النَّاسُ وَالْحِجَارَةُ عَلَيْهَا مَلَائِكَةٌ غِلَاظٌ شِدَادٌ لَّا يَعْصُونَ اللَّهَ مَا أَمَرَهُمْ وَيَفْعَلُونَ مَا يُؤْمَرُونَ",
-      "en": "O you who have believed, protect yourselves and your families from a Fire whose fuel is people and stones, over which are [appointed] angels, harsh and severe; they do not disobey Allāh in what He commands them but do what they are commanded.",
-      "ur": "مومنو! اپنے آپ کو اور اپنے اہل عیال کو آتش (جہنم) سے بچاؤ جس کا ایندھن آدمی اور پتھر ہیں اور جس پر تند خو اور سخت مزاج فرشتے (مقرر) ہیں جو ارشاد خدا ان کو فرماتا ہے اس کی نافرمانی نہیں کرتے اور جو حکم ان کو ملتا ہے اسے بجا لاتے ہیں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/066006.mp3"
+      "surah": 12,
+      "ayah": 4,
+      "label": "Yusuf 12:4",
+      "ar": "إِذْ قَالَ يُوسُفُ لِأَبِيهِ يَا أَبَتِ إِنِّي رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًا وَالشَّمْسَ وَالْقَمَرَ رَأَيْتُهُمْ لِي سَاجِدِينَ",
+      "en": "When Joseph said to his father, 'O my father, indeed I have seen eleven stars and the sun and the moon; I saw them prostrating to me.'",
+      "ur": "جب یوسف نے اپنے والد سے کہا: اے میرے ابا، میں نے گیارہ ستاروں اور سورج اور چاند کو دیکھا، میں نے انہیں اپنے آگے سجدہ کرتے دیکھا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/012004.mp3"
     },
     "noor_intro": {
-      "ar": "This is it — the spiritual and pedagogical climax of our entire 72-chapter curriculum. يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ is the most repeated command in the Quran. It is the final and most important lesson of this course.",
-      "en": "This is it — the spiritual and pedagogical climax of our entire 72-chapter curriculum. يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ is the most repeated command in the Quran. It is the final and most important lesson of this course.",
-      "ur": "یہ ہے — ہمارے پورے 72 ابواب کے نصاب کا روحانی اور تعلیمی عروج۔ 'اے ایمان والو، اللہ سے ڈرو' قرآن میں سب سے زیادہ دہرایا گیا حکم ہے۔ یہ اس کورس کا آخری اور سب سے اہم سبق ہے۔"
+      "en": "يَا أَبَتِ — 'O my father'. Yusuf speaks to Yaʿqub. Family members in the Quran call one another with special forms: يَا أَبَتِ، يَا بُنَيَّ. Today you read them in their stories.",
+      "ur": "يَا أَبَتِ — 'اے میرے ابا'۔ یوسف علیہ السلام یعقوب علیہ السلام سے بات کر رہے ہیں۔ قرآن میں گھر والے ایک دوسرے کو خاص صیغوں سے پکارتے ہیں: يَا أَبَتِ، يَا بُنَيَّ۔ آج آپ انہیں ان کے قصوں میں پڑھیں گے۔"
     },
     "autoplay": true
   },
@@ -31,516 +32,361 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "O you who believe, fear Allah — The Central Command",
-        "ar": "يا أيها الذين آمنوا اتقوا الله",
-        "ur": "اے ایمان والو اللہ سے ڈرو - مرکزی حکم"
+        "en": "يَا أَبَتِ — 'O my father'",
+        "ar": "يَا أَبَتِ",
+        "ur": "يَا أَبَتِ — 'اے میرے ابا'"
       },
       "explanation": {
-        "en": "The most repeated command in the Quran — combines vocative, object, and verb in one imperative. يَا أَيُّهَا الَّذِينَ آمَنُوا = identify who is being addressed (believers). اتَّقُوا اللَّهَ = the command (fear Allah) + its object. This is the structural pattern: Call + Command + Reason.",
-        "ar": "أكثر أوامر القرآن تكرارًا — يجمع النداء والمفعول به والفعل في أمر واحد",
-        "ur": "قرآن میں سب سے زیادہ دہرایا جانے والا حکم - لفظی، اعتراض، اور فعل کو ایک لازمی میں جمع کرتا ہے۔ يَا أَيُّهَا الَّذِينَ آمَنُوا = شناخت کریں کہ کس کو مخاطب کیا جا رہا ہے (مومنین)۔ اتَّقُوا اللَّهَ = حکم (اللہ سے ڈرو) + اس کا مقصد۔ یہ ساختی نمونہ ہے: کال + کمانڈ + وجہ۔"
+        "en": "يَا أَبَتِ means يَا أَبِي, 'O my father': the تِ takes the place of 'my'. Yusuf uses it with Yaʿqub (12:4), and Ibrahim uses it again and again with his father (19:42–45).",
+        "ur": "يَا أَبَتِ کا مطلب ہے يَا أَبِي، 'اے میرے ابا': تِ 'میرے' کی جگہ ہے۔ یوسف علیہ السلام یعقوب علیہ السلام کے لیے اسے استعمال کرتے ہیں (12:4)، اور ابراہیم علیہ السلام اپنے والد سے بار بار (19:42–45)۔"
       },
-      "highlight": true
+      "examples": [
+        {
+          "ar": "يَا أَبَتِ",
+          "ar_plain": "يا أبت",
+          "translit": "yaa abati",
+          "en": "O my father!",
+          "ur": "اے میرے ابا!"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Taqwa After Vocative — The Righteous Response",
-        "ar": "موقف التقوى بعد النداء",
-        "ur": "تقویٰ کے بعد آواز - صحیح جواب"
+        "en": "يَا بُنَيَّ — 'O my dear son'",
+        "ar": "يَا بُنَيَّ",
+        "ur": "يَا بُنَيَّ — 'اے میرے پیارے بیٹے'"
       },
       "explanation": {
-        "en": "اتقوا is an imperative verb, الله is its direct object. This is the core response every believer must give when called by the Quran. Every time you read يَا أَيُّهَا الَّذِينَ آمَنُوا, the Quran is reminding you: you have been addressed as a believer, now act like one by fearing Allah.",
-        "ar": "اتقوا الله = اتقوا is فعل أمر، الله is مفعول به. هذه هي الإجابة الأساسية التي يجب أن يقدمها كل مؤمن عندما يناديه القرآن.",
-        "ur": "اتقوا ایک لازمی فعل ہے، الله اس کا براہ راست اعتراض ہے۔ یہ وہ بنیادی ردعمل ہے جو ہر مومن کو قرآن کے ذریعے بلانے پر دینا چاہیے۔ جب بھی آپ يَا أَيُّهَا الَّذِينَ آمَنُوا پڑھتے ہیں، قرآن آپ کو یاد دلا رہا ہے: آپ کو مومن کہہ کر مخاطب کیا گیا ہے، اب اللہ سے ڈرتے ہوئے ایک جیسا عمل کریں۔"
+        "en": "بُنَيّ is a small, tender form of ابْن ('son'), and the final يَّ is 'my': 'my dear son'. Luqman uses it with his son: يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ (31:13). Like يَا قَوْمِ, it is muḍāf to 'my'.",
+        "ur": "بُنَيّ لفظ ابْن ('بیٹا') کی چھوٹی، پیار بھری شکل ہے، اور آخر کا يَّ 'میرا' ہے: 'میرے پیارے بیٹے'۔ لقمان اپنے بیٹے سے کہتے ہیں: يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ (31:13)۔ يَا قَوْمِ کی طرح یہ بھی 'میرے' کی طرف مضاف ہے۔"
+      },
+      "examples": [
+        {
+          "ar": "يَا بُنَيَّ",
+          "ar_plain": "يا بني",
+          "translit": "yaa bunayya",
+          "en": "O my dear son!",
+          "ur": "اے میرے پیارے بیٹے!"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "A call without يَا",
+        "ar": "حَذْفُ حَرْفِ النِّدَاءِ",
+        "ur": "حرفِ ندا کے بغیر ندا"
+      },
+      "explanation": {
+        "en": "يَا can be left out when the context makes the call clear: يُوسُفُ أَعْرِضْ عَنْ هَٰذَا — 'Yusuf, turn away from this' (12:29). The name keeps its vocative ḍamma, and a command follows. You saw the same with رَبِّ and رَبَّنَا.",
+        "ur": "جب سیاق سے ندا واضح ہو تو يَا چھوڑا جا سکتا ہے: يُوسُفُ أَعْرِضْ عَنْ هَٰذَا — 'یوسف، اس بات کو جانے دو' (12:29)۔ نام پر منادیٰ کا ضمہ رہتا ہے، اور بعد میں حکم آتا ہے۔ یہی آپ رَبِّ اور رَبَّنَا میں دیکھ چکے ہیں۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Historical Context — Why This Ayah Was Revealed",
-        "ar": "السياق التاريخي",
-        "ur": "تاریخی سیاق و سباق - یہ آیت کیوں نازل ہوئی؟"
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يُوسُفُ أَيُّهَا الصِّدِّيقُ أَفْتِنَا",
+        "ar_plain": "يوسف أيها الصديق أفتنا",
+        "translit": "yuusufu ayyuhaa as-siddiiqu aftinaa",
+        "en": "Yusuf, O man of truth, explain to us.",
+        "ur": "یوسف، اے بڑے سچے، ہمیں بتائیے۔"
       },
       "explanation": {
-        "en": "At-Tahrim 66:6 was revealed in the context of prohibiting interest (riba) — Allah warns believers about the danger of interest. The structure 'if you should be believers' (إِنْ كُنْتُمْ مُؤْمِنِينَ) is not a condition for faith — it's a rhetorical challenge: if you truly are believers, then prove it by abandoning interest.",
-        "ar": "At-Tahrim 66:6 نزلت في سياق تحريم الربا — الله يحذر المؤمنين من خطر الربا. جملة 'إن كنتم مؤمنين' ليست شرطًا للإيمان — إنها تحدٍّ بلاغي.",
-        "ur": "التحریم 66:6 سود کی ممانعت کے تناظر میں نازل ہوئی ہے - اللہ مومنوں کو سود کے خطرے سے خبردار کرتا ہے۔ ڈھانچہ 'اگر آپ کو مومن ہونا چاہیے' (إِنْ كُنْتُمْ مُؤْمِنِينَ) ایمان کے لیے شرط نہیں ہے - یہ ایک بیاناتی چیلنج ہے: اگر آپ واقعی مومن ہیں، تو مفاد کو ترک کرکے ثابت کریں۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Interest (Riba) and the Warning",
-        "ar": "الربا والتحذير",
-        "ur": "سود (ربا) اور تنبیہ"
-      },
-      "explanation": {
-        "en": "Riba = interest or usury — strictly prohibited in Islam. The command to abandon, not just to avoid — ذَرُوا means physically leave it behind, not merely refrain from new involvement. وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا — abandon what remains of interest.",
-        "ar": "الربا = الفائدة/الربا — محرّم في الإسلام. الأمر بالترك، لا مجرد الامتناع — ذروا تعني اتركوها فعليًا، لا تمتنعوا فقط.",
-        "ur": "ربا = سود یا سود - اسلام میں سختی سے ممنوع ہے۔ ترک کرنے کا حکم، نہ صرف بچنے کے لیے — ذَرُوا کا مطلب ہے جسمانی طور پر اسے پیچھے چھوڑنا، نہ کہ محض نئی شمولیت سے پرہیز کرنا۔ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا — جو دلچسپی باقی ہے اسے چھوڑ دو۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "The Spiritual Meaning — Taqwa is the Goal",
-        "ar": "المعنى الروحي",
-        "ur": "روحانی معنی - تقویٰ مقصد ہے۔"
-      },
-      "explanation": {
-        "en": "اتقوا comes from the root وقاية — taking protective measures against Allah's displeasure. Taqwa is the goal of the entire curriculum. The entire curriculum — from الحروف to النِّدَاء — has been preparing you to understand this single command: fear Allah.",
-        "ar": "اتقوا من الجذر وقاية — اتخاذ التدابير الوقائية ضد سخط الله. التقوى هي هدف النصاب بأكمله.",
-        "ur": "اتقوا جڑ سے آتا ہے وقاية — اللہ کی ناراضگی کے خلاف حفاظتی اقدامات کرنا۔ تقویٰ پورے نصاب کا ہدف ہے۔ پورا نصاب — الحروف سے النِّدَاء — آپ کو اس ایک حکم کو سمجھنے کے لیے تیار کر رہا ہے: اللہ سے ڈرو۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "What Comes After the Command — The Conditional",
-        "ar": "ما بعد الأمر",
-        "ur": "کمانڈ کے بعد کیا آتا ہے - مشروط"
-      },
-      "explanation": {
-        "en": "إِنْ كُنْتُمْ مُؤْمِنِينَ is a conditional sentence whose response is implied: 'then you have truly feared Allah'. This ayah is the spiritual climax because it says: you have learned 72 chapters of grammar, but if you are truly a believer, the real test is: do you fear Allah enough to abandon what He has forbidden?",
-        "ar": "إن كنتم مؤمنين جملة شرطية — جوابها محذوف تقديره: فقد اتقيتم الله. هذه الآية هي الذروة الروحية لأنها تقول: لقد تعلمت 72 بابًا من القواعد، لكن إذا كنت مؤمنًا حقًا، فالاختبار الحقيقي هو: هل تتقي الله بما يكفي لترك ما حرمه؟",
-        "ur": "إِنْ كُنْتُمْ مُؤْمِنِينَ ایک مشروط جملہ ہے جس کا جواب یہ ہے: 'پھر تم نے واقعی اللہ سے ڈر لیا'۔ یہ آیت روحانی عروج ہے کیونکہ اس میں کہا گیا ہے: آپ نے گرامر کے 72 ابواب سیکھے ہیں، لیکن اگر آپ واقعی مومن ہیں، تو اصل امتحان یہ ہے کہ: کیا آپ اللہ سے اتنا ڈرتے ہیں کہ اس کی حرام کردہ چیزوں کو چھوڑ دیں؟"
+        "en": "12:46. Two calls: يُوسُفُ (no يَا), then أَيُّهَا الصِّدِّيقُ, with الصِّدِّيقُ marfūʿ as in Lesson 4. Then the request أَفْتِنَا.",
+        "ur": "12:46۔ دو ندائیں: يُوسُفُ (يَا کے بغیر)، پھر أَيُّهَا الصِّدِّيقُ، جس میں الصِّدِّيقُ سبق 4 کی طرح مرفوع ہے۔ پھر درخواست أَفْتِنَا۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch72l07-ex01",
       "type": "TAP_TRANSLATION",
+      "id": "ch72-l07-ex01",
       "prompt": {
-        "ar": "ما معنى: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ؟",
-        "ar_plain": "ما معنى يا أيها الذين آمنوا اتقوا الله",
-        "translit": "mā maʿnā: yā ayyuhā alladhīna āmanū ittaqū Allāh?",
-        "en": "What does يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ mean?",
-        "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ کا کیا مطلب ہے؟"
+        "ar": "يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ",
+        "ar_plain": "يا بني لا تشرك بالله",
+        "translit": "yaa bunayya laa tushrik billaahi",
+        "en": "O my son, do not associate [anything] with Allah.",
+        "ur": "اے میرے بیٹے، اللہ کے ساتھ شرک نہ کرنا۔"
       },
       "options": [
         {
-          "en": "O you who have believed, fear Allah",
-          "ur": "اے جنہوں نے ایمان لایا ہے، اللہ سے ڈرو"
+          "en": "O my son, do not associate [anything] with Allah.",
+          "ur": "اے میرے بیٹے، اللہ کے ساتھ شرک نہ کرنا۔"
         },
         {
-          "en": "O Allah, make the believers fear",
-          "ur": "اے اللہ، مومنین کو ڈراؤ"
+          "en": "O my father, do not associate [anything] with Allah.",
+          "ur": "اے میرے ابا، اللہ کے ساتھ شرک نہ کیجیے۔"
         },
         {
-          "en": "Believers, if you fear",
-          "ur": "مومنین، اگر تم ڈرتے ہو"
+          "en": "My son did not associate anything with Allah.",
+          "ur": "میرے بیٹے نے اللہ کے ساتھ شرک نہیں کیا۔"
         },
         {
-          "en": "Option 4",
-          "ur": "آپشن 4"
+          "en": "O people, do not associate [anything] with Allah.",
+          "ur": "اے لوگو، اللہ کے ساتھ شرک نہ کرو۔"
         }
       ],
-      "correct_index": 0
-    },
-    {
-      "id": "ch72l07-ex02",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "إِنْ كُنْتُمْ مُؤْمِنِينَ in this ayah means: if you are truly believers, then fear Allah",
-        "ur": "اس آیت میں 'اگر تم مومن ہو' کا مطلب ہے: اگر تم واقعی مومن ہو تو اللہ سے ڈرو"
-      },
-      "correct_answer": true
-    },
-    {
-      "id": "ch72l07-ex03",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "وَذَرُوا مَا بَقِيَ مِنَ ___ — abandon what remains of interest",
-      "hint": {
-        "en": "The prohibited thing",
-        "ur": "وہ چیز جو حرام ہے"
-      },
-      "options": [
-        {
-          "ar": "الربا",
-          "ar_plain": "الربا",
-          "translit": "ar-ribā",
-          "en": "الربا (interest)",
-          "ur": "الربا (سود)"
-        },
-        {
-          "ar": "المال",
-          "ar_plain": "المال",
-          "translit": "al-māl",
-          "en": "المال (wealth)",
-          "ur": "المال (دولت)"
-        },
-        {
-          "ar": "الدين",
-          "ar_plain": "الدين",
-          "translit": "ad-dayn",
-          "en": "الدين (debt)",
-          "ur": "الدين (قرض)"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
-          "ur": "نہیں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "الربا",
-        "ar_plain": "الربا",
-        "translit": "ar-ribā",
-        "en": "الربا",
-        "ur": "الربا"
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "31:13. يَا بُنَيَّ is Luqman calling his son; لَا تُشْرِكْ is a prohibition.",
+        "ur": "31:13۔ يَا بُنَيَّ میں لقمان اپنے بیٹے کو پکار رہے ہیں؛ لَا تُشْرِكْ نہی ہے۔"
       }
     },
     {
-      "id": "ch72l07-ex04",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا إِنْ كُنْتُمْ مُؤْمِنِينَ",
-      "words": [
-        {
-          "ar": "يا",
-          "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
-          "ur": "اے"
-        },
-        {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "those who",
-          "ur": "وہ لوگ جو"
-        },
-        {
-          "ar": "الذين",
-          "ar_plain": "الذين",
-          "translit": "alladhīna",
-          "en": "who",
-          "ur": "کون"
-        },
-        {
-          "ar": "آمنوا",
-          "ar_plain": "آمنوا",
-          "translit": "āmanū",
-          "en": "believed",
-          "ur": "یقین کیا"
-        },
-        {
-          "ar": "اتقوا",
-          "ar_plain": "اتقوا",
-          "translit": "ittaqū",
-          "en": "fear",
-          "ur": "خوف"
-        },
-        {
-          "ar": "الله",
-          "ar_plain": "الله",
-          "translit": "Allāh",
-          "en": "Allah",
-          "ur": "اللہ"
-        },
-        {
-          "ar": "ذرروا",
-          "ar_plain": "ذروا",
-          "translit": "dharū",
-          "en": "abandon",
-          "ur": "ترک کرنا"
-        },
-        {
-          "ar": "ما",
-          "ar_plain": "ما",
-          "translit": "mā",
-          "en": "what",
-          "ur": "کیا"
-        },
-        {
-          "ar": "بقي",
-          "ar_plain": "بقي",
-          "translit": "baqiya",
-          "en": "remains",
-          "ur": "باقی ہے"
-        },
-        {
-          "ar": "من",
-          "ar_plain": "من",
-          "translit": "min",
-          "en": "of",
-          "ur": "کی"
-        },
-        {
-          "ar": "الربا",
-          "ar_plain": "الربا",
-          "translit": "ar-ribā",
-          "en": "interest",
-          "ur": "دلچسپی"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "NOUN",
-        "PREPOSITION",
-        "OBJECT",
-        "RELATIVE_PRONOUN",
-        "NOUN"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "PARTICLE",
-        "RELATIVE_PRONOUN",
-        "VERB",
-        "VERB",
-        "OBJECT",
-        "VERB",
-        "RELATIVE_PRONOUN",
-        "VERB",
-        "PREPOSITION",
-        "NOUN"
-      ]
+      "type": "TRUE_FALSE",
+      "id": "ch72-l07-ex02",
+      "statement": {
+        "en": "In يُوسُفُ أَعْرِضْ عَنْ هَٰذَا, يُوسُفُ is a vocative even though there is no يَا.",
+        "ur": "يُوسُفُ أَعْرِضْ عَنْ هَٰذَا میں يُوسُفُ منادیٰ ہے حالانکہ يَا نہیں ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Yes. The command أَعْرِضْ is addressed to Yusuf, so يُوسُفُ is a call with يَا left out.",
+        "ur": "جی ہاں۔ حکم أَعْرِضْ یوسف کو دیا گیا ہے، اس لیے يُوسُفُ ندا ہے جس میں يَا چھوڑا گیا ہے۔"
+      }
     },
     {
-      "id": "ch72l07-ex05",
       "type": "MATCHING",
+      "id": "ch72-l07-ex03",
       "left_column": [
         {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "أَيُّهَا",
-          "ur": "أَيُّهَا"
+          "ar": "يَا أَبَتِ",
+          "ar_plain": "يا أبت",
+          "translit": "yaa abati",
+          "en": "yaa abati",
+          "ur": "يَا أَبَتِ"
         },
         {
-          "ar": "آمنوا",
-          "ar_plain": "آمنوا",
-          "translit": "āmanū",
-          "en": "آمنوا",
-          "ur": "آمنوا"
+          "ar": "يَا بُنَيَّ",
+          "ar_plain": "يا بني",
+          "translit": "yaa bunayya",
+          "en": "yaa bunayya",
+          "ur": "يَا بُنَيَّ"
         },
         {
-          "ar": "اتقوا",
-          "ar_plain": "اتقوا",
-          "translit": "ittaqū",
-          "en": "اتقوا",
-          "ur": "اتقوا"
-        },
-        {
-          "ar": "الربا",
-          "ar_plain": "الربا",
-          "translit": "ar-ribā",
-          "en": "الربا",
-          "ur": "الربا"
+          "ar": "يَا قَوْمِ",
+          "ar_plain": "يا قوم",
+          "translit": "yaa qawmi",
+          "en": "yaa qawmi",
+          "ur": "يَا قَوْمِ"
         }
       ],
       "right_column": [
         {
-          "en": "فعل ماضٍ (جملة صفة)",
-          "ur": "فعل ماضٍ (جملة صفة)"
+          "en": "O my father",
+          "ur": "اے میرے ابا"
         },
         {
-          "en": "اسم بمعنى المدعو (ثابت)",
-          "ur": "اسم بمعنى المدعو (ثابت)"
+          "en": "O my dear son",
+          "ur": "اے میرے پیارے بیٹے"
         },
         {
-          "en": "فعل أمر (امري)",
-          "ur": "فعل أمر (امري)"
-        },
-        {
-          "en": "مضاف إليه (مجرور)",
-          "ur": "مضاف إليه (مجرور)"
+          "en": "O my people",
+          "ur": "اے میری قوم"
         }
       ],
       "correct_pairs": [
         [
           0,
-          1
+          0
         ],
         [
           1,
-          0
+          1
         ],
         [
           2,
           2
-        ],
-        [
-          3,
-          3
         ]
-      ]
-    },
-    {
-      "id": "ch72l07-ex06",
-      "type": "BUILD_SENTENCE",
-      "target_translation": {
-        "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ — O you who have believed, fear Allah",
-        "ur": "اے ایمان والو، اللہ سے ڈرو"
-      },
-      "tiles": [
-        {
-          "ar": "يا",
-          "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
-          "ur": "اے"
-        },
-        {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "those who",
-          "ur": "وہ لوگ جو"
-        },
-        {
-          "ar": "الذين",
-          "ar_plain": "الذين",
-          "translit": "alladhīna",
-          "en": "who",
-          "ur": "کون"
-        },
-        {
-          "ar": "آمنوا",
-          "ar_plain": "آمنوا",
-          "translit": "āmanū",
-          "en": "believed",
-          "ur": "یقین کیا"
-        },
-        {
-          "ar": "اتقوا",
-          "ar_plain": "اتقوا",
-          "translit": "ittaqū",
-          "en": "fear",
-          "ur": "خوف"
-        },
-        {
-          "ar": "الله",
-          "ar_plain": "الله",
-          "translit": "Allāh",
-          "en": "Allah",
-          "ur": "اللہ"
-        }
       ],
-      "correct_order": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
+      "xp_value": 1
     },
     {
-      "id": "ch72l07-ex07",
       "type": "TAP_TRANSLATION",
+      "id": "ch72-l07-ex04",
       "prompt": {
-        "ar": "لماذا تُعتبر هذه الآية الذروة الروحية للنص؟",
-        "ar_plain": "لماذا تعتبر هذه الآية الذروة الروحية للنص",
-        "translit": "li-mādhā tuʿtabaru hādhihi al-āyah adh-dhāt al-ḥimyah ar-rūḥiyah li-nnaṣṣ?",
-        "en": "Why is this ayah considered the spiritual climax of the entire curriculum?",
-        "ur": "اس آیت کو پورے نصاب کا روحانی عروج کیوں سمجھا جاتا ہے؟"
+        "ar": "يَا أَبَتِ لِمَ تَعْبُدُ مَا لَا يَسْمَعُ وَلَا يُبْصِرُ",
+        "ar_plain": "يا أبت لم تعبد ما لا يسمع ولا يبصر",
+        "translit": "yaa abati lima ta'budu maa laa yasma'u wa-laa yubsiru",
+        "en": "O my father, why do you worship that which does not hear and does not see?",
+        "ur": "اے میرے ابا، آپ ان کی عبادت کیوں کرتے ہیں جو نہ سنتے ہیں نہ دیکھتے ہیں؟"
       },
       "options": [
         {
-          "en": "Because it combines vocative and command in one sentence",
-          "ur": "کیونکہ یہ ندا اور حکم کو ایک جملے میں ملا کر بات کرتی ہے"
+          "en": "His father — Ibrahim is speaking to him",
+          "ur": "ان کے والد — ابراہیم ان سے بات کر رہے ہیں"
         },
         {
-          "en": "Because it closes 72 chapters with the most important command: fear Allah",
-          "ur": "کیونکہ یہ 72 ابواب کو سب سے اہم حکم: 'اللہ سے ڈرو' کے ساتھ ختم کرتی ہے"
+          "en": "His son — the father is speaking",
+          "ur": "ان کا بیٹا — والد بات کر رہے ہیں"
         },
         {
-          "en": "Because it mentions interest (riba)",
-          "ur": "کیونکہ اس میں سود ہے"
+          "en": "His people as a whole",
+          "ur": "ان کی پوری قوم"
         },
         {
-          "en": "Option 4",
-          "ur": "آپشن 4"
+          "en": "The idols",
+          "ur": "بت"
         }
       ],
-      "correct_index": 1
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "19:42. يَا أَبَتِ means 'O my father': Ibrahim is calling his father, then asks him a question (لِمَ).",
+        "ur": "19:42۔ يَا أَبَتِ کا مطلب ہے 'اے میرے ابا': ابراہیم اپنے والد کو پکار کر ان سے سوال (لِمَ) کرتے ہیں۔"
+      }
     },
     {
-      "id": "ch72l07-ex08",
       "type": "FILL_BLANK",
+      "id": "ch72-l07-ex05",
       "mode": "TAP",
-      "sentence_ar": "غرض النصاب الـ 72 بابًا هو الوصول إلى ___",
+      "sentence_ar": "إِذْ قَالَ يُوسُفُ لِأَبِيهِ يَا ___",
       "hint": {
-        "en": "The goal of all grammar study",
-        "ur": "گرامر سیکھنے کا مقصد"
+        "en": "'When Yusuf said to his father, O my father…' (12:4).",
+        "ur": "'جب یوسف نے اپنے والد سے کہا: اے میرے ابا…' (12:4)۔"
       },
       "options": [
         {
-          "ar": "التقوى",
-          "ar_plain": "التقوى",
-          "translit": "at-taqwā",
-          "en": "التقوى (taqwa)",
-          "ur": "التقوى (تقویٰ)"
+          "ar": "أَبَتِ",
+          "ar_plain": "أبت",
+          "translit": "abati",
+          "en": "my father (call)",
+          "ur": "اے میرے ابا"
         },
         {
-          "ar": "النحو",
-          "ar_plain": "النحو",
-          "translit": "an-naḥw",
-          "en": "النحو (grammar)",
-          "ur": "النحو (گرامر)"
+          "ar": "أَبُو",
+          "ar_plain": "أبو",
+          "translit": "abuu",
+          "en": "father (nominative)",
+          "ur": "باپ (مرفوع)"
         },
         {
-          "ar": "الفهم",
-          "ar_plain": "الفهم",
-          "translit": "al-fahm",
-          "en": "الفهم (understanding)",
-          "ur": "الفهم (سمجھنا)"
+          "ar": "أَبٌ",
+          "ar_plain": "أب",
+          "translit": "abun",
+          "en": "a father",
+          "ur": "کوئی باپ"
         },
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
-          "ur": "نہیں"
+          "ar": "أَبِيهِ",
+          "ar_plain": "أبيه",
+          "translit": "abiihi",
+          "en": "his father",
+          "ur": "اس کے والد"
         }
       ],
       "correct_answer": {
-        "ar": "التقوى",
-        "ar_plain": "التقوى",
-        "translit": "at-taqwā",
-        "en": "التقوى",
-        "ur": "التقوى"
+        "ar": "أَبَتِ",
+        "ar_plain": "أبت",
+        "translit": "abati",
+        "en": "my father (call)",
+        "ur": "اے میرے ابا"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The call 'O my father' is يَا أَبَتِ.",
+        "ur": "'اے میرے ابا' کی ندا يَا أَبَتِ ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch72-l07-ex06",
+      "sentence_ar": "يُوسُفُ أَعْرِضْ عَنْ هَٰذَا",
+      "words": [
+        {
+          "ar": "يُوسُفُ",
+          "ar_plain": "يوسف",
+          "translit": "yuusufu",
+          "en": "Yusuf",
+          "ur": "یوسف"
+        },
+        {
+          "ar": "أَعْرِضْ",
+          "ar_plain": "أعرض",
+          "translit": "a'rid",
+          "en": "turn away",
+          "ur": "جانے دو"
+        },
+        {
+          "ar": "عَنْ",
+          "ar_plain": "عن",
+          "translit": "'an",
+          "en": "from",
+          "ur": "سے"
+        },
+        {
+          "ar": "هَٰذَا",
+          "ar_plain": "هذا",
+          "translit": "haadhaa",
+          "en": "this",
+          "ur": "اس"
+        }
+      ],
+      "available_roles": [
+        "VOCATIVE",
+        "SUBJECT",
+        "VERB",
+        "PREPOSITION",
+        "DEMONSTRATIVE"
+      ],
+      "correct_roles": [
+        "VOCATIVE",
+        "VERB",
+        "PREPOSITION",
+        "DEMONSTRATIVE"
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يُوسُفُ is a vocative without يَا; أَعْرِضْ the command; عَنْ a preposition; هَٰذَا a demonstrative.",
+        "ur": "يُوسُفُ يَا کے بغیر منادیٰ ہے؛ أَعْرِضْ حکم؛ عَنْ حرفِ جر؛ هَٰذَا اسمِ اشارہ۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch72-l07-ex07",
+      "statement": {
+        "en": "In يُوسُفُ أَيُّهَا الصِّدِّيقُ, the word الصِّدِّيقُ is genitive.",
+        "ur": "يُوسُفُ أَيُّهَا الصِّدِّيقُ میں الصِّدِّيقُ مجرور ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "After أَيُّهَا the ال noun is marfūʿ: الصِّدِّيقُ, with ḍamma.",
+        "ur": "أَيُّهَا کے بعد ال والا اسم مرفوع ہوتا ہے: الصِّدِّيقُ، ضمہ کے ساتھ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "الذروة — اتقوا الله",
-      "en": "The Climax — Fear Allah",
-      "ur": "عروج — اللہ سے ڈرو"
+      "en": "Family address: يَا أَبَتِ، يَا بُنَيَّ, and calls without يَا",
+      "ar": "يَا أَبَتِ، يَا بُنَيَّ، وَحَذْفُ يَا",
+      "ur": "گھر والوں کی ندا: يَا أَبَتِ، يَا بُنَيَّ، اور يَا کے بغیر ندا"
     },
     "ayah": {
-      "surah": 33,
-      "ayah": 70,
-      "label": "Al-Ahzab 33:70-71",
-      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
-      "en": "O you who have believed, fear Allāh and speak words of appropriate justice.",
-      "ur": "مومنو خدا سے ڈرا کرو اور بات سیدھی کہا کرو",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033070.mp3"
+      "surah": 19,
+      "ayah": 43,
+      "label": "Maryam 19:43",
+      "ar": "يَا أَبَتِ إِنِّي قَدْ جَاءَنِي مِنَ الْعِلْمِ مَا لَمْ يَأْتِكَ فَاتَّبِعْنِي أَهْدِكَ صِرَاطًا سَوِيًّا",
+      "en": "O my father, indeed there has come to me of knowledge that which has not come to you, so follow me; I will guide you to an even path.",
+      "ur": "اے میرے ابا، میرے پاس وہ علم آیا ہے جو آپ کے پاس نہیں آیا، تو میری پیروی کیجیے، میں آپ کو سیدھی راہ دکھاؤں گا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/019043.mp3"
     },
     "highlighted_word_indices": [
       0,
-      1,
-      2
+      1
     ],
     "noor_explanation": {
-      "ar": "هذه الآية تحتوي على ثلاثة أوامر: اتقوا الله (الأهم)، قولوا قولًا سديدًا (ثانوي)، ويتبعها وعد: يُصْلِحُ لَكُمْ أَعْمَالَكُمْ وَيُغْفِرُ لَكُمْ ذُنُوبَكُمْ — Allah يَعِدُ من اتقاه بالصلاح والمغفرة. هذا هو الوعد الرباني لمن اتقوا.",
-      "en": "This ayah contains three commands: fear Allah (the most important), speak a right word (secondary), followed by a promise: He will rectify your deeds and forgive your sins. This is Allah's promise to those who fear Him — صلاح ومغفرة. After 72 chapters of grammar, the reward is not grammar mastery — it is Allah's forgiveness.",
-      "ur": "یہ آیت تین احکام پر مشتمل ہے: اللہ سے ڈرو (سب سے اہم)، درست بات کہو (ثانوی)، پھر ایک وعدہ: وہ تمہارے کاموں کو درست کرے گا اور گناہ معاف کرے گا۔ یہ اللہ کا تقویٰ والوں کو وعدہ ہے — اصلاح اور مغفرت۔ 72 ابواب کی گرامر کے بعد، انعام گرامر میں مہارت نہیں — یہ اللہ کی مغفرت ہے۔"
+      "en": "يَا أَبَتِ — Ibrahim opens with the same tender call each time he speaks to his father (19:42, 43, 44, 45). Notice also فَاتَّبِعْنِي أَهْدِكَ: a command, then a jussive answer, as in Chapter 69.",
+      "ur": "يَا أَبَتِ — ابراہیم علیہ السلام ہر بار اپنے والد سے بات کرتے ہوئے یہی نرم ندا استعمال کرتے ہیں (19:42، 43، 44، 45)۔ فَاتَّبِعْنِي أَهْدِكَ پر بھی غور کیجیے: حکم، پھر مجزوم جواب، جیسا کہ باب 69 میں تھا۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "You have completed all 72 chapters of this curriculum. يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ is the culmination of everything you've learned. Grammar is the tool — Taqwa is the goal. Allah promises صلاح ومغفرة to those who fear Him. This is not just the end of Chapter 72 — it is the beginning of your real journey with the Quran.",
-      "en": "You have completed all 72 chapters of this curriculum. يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ is the culmination of everything you've learned. Grammar is the tool — Taqwa is the goal. Allah promises صلاح ومغفرة to those who fear Him. This is not just the end of Chapter 72 — it is the beginning of your real journey with the Quran.",
-      "ur": "آپ نے اس نصاب کے تمام 72 ابواب مکمل کر لیے ہیں۔ 'اے ایمان والو، اللہ سے ڈرو' آپ نے جو کچھ سیکھا ہے اس کا مجموعہ ہے۔ گرامر ٹول ہے — تقویٰ مقصد ہے۔ اللہ تقویٰ والوں کو اصلاح اور مغفرت کا وعدہ کرتا ہے۔ یہ صرف باب 72 کا اختتام نہیں — یہ قرآن کے ساتھ آپ کے اصل سفر کا آغاز ہے۔"
+      "en": "يَا أَبَتِ، يَا بُنَيَّ, and a name alone can each open a conversation in the Quran. Next: the chapter review.",
+      "ur": "قرآن میں يَا أَبَتِ، يَا بُنَيَّ، اور صرف نام — ہر ایک گفتگو شروع کر سکتا ہے۔ آگے: باب کا جائزہ۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }

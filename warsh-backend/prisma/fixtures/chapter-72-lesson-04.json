@@ -1,483 +1,461 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 72, Lesson 4 — يا أيها / يا أيتها before a noun with ال; the following noun is marfūʿ (نعت).",
     "chapter_order": 72,
     "lesson_order": 4,
     "chapter_title": "المنادى",
-    "title": "Other Vocative Particles — أَمَّا، يَا أَيُّهَا النَّاس",
-    "titleAr": "أدوات نداء أخرى — أما، يا أيها الناس",
+    "title": "يَا أَيُّهَا and يَا أَيَّتُهَا — Calling a Noun with ال",
+    "titleAr": "يَا أَيُّهَا وَيَا أَيَّتُهَا",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 4,
-      "ayah": 1,
-      "label": "An-Nisa 4:1",
-      "ar": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ مِنْ نَفْسٍ وَاحِدَةٍ وَخَلَقَ مِنْهَا زَوْجَهَا وَبَثَّ مِنْهُمَا رِجَالًا كَثِيرًا وَنِسَاءً وَاتَّقُوا اللَّهَ الَّذِي تَسَاءَلُونَ بِهِ وَالْأَرْحَامَ",
-      "en": "O mankind, fear your Lord who created you from a single soul and created from it its mate and dispersed from them many men and women. And fear Allah, by whom you ask one another, and maintain family ties.",
-      "ur": "اے لوگو، اپنے رب سے ڈرو جس نے تمہیں ایک جان سے پیدا کیا اور اسی سے اس کا جوڑا بنایا اور ان دونوں سے بہت سارے مرد اور عورتیں پھیلائے۔ اور اللہ سے ڈرو جس سے تم ایک دوسرے سے پوچھتے ہو اور رشتے نبض کرو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/004001.mp3"
+      "surah": 89,
+      "ayah": 27,
+      "label": "Al-Fajr 89:27",
+      "ar": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ",
+      "en": "O reassured soul,",
+      "ur": "اے اطمینان والی جان!",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/089027.mp3"
     },
     "noor_intro": {
-      "ar": "Beyond يا and أَيُّهَا, there are other vocative particles in Arabic — أَمَّا being the most notable. Today we explore the full landscape of نِّدَاء tools.",
-      "en": "Beyond يا and أَيُّهَا, there are other vocative particles in Arabic — أَمَّا being the most notable. Today we explore the full landscape of نِّدَاء tools.",
-      "ur": "'یا' اور 'ایہ' کے علاوہ عربی میں دوسرے ندا particles بھی ہیں — 'اما' سب سے قابل ذکر ہے۔ آج ہم نِّدَاء ٹولز کی مکمل زمینے کو دریافت کرتے ہیں۔"
+      "en": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ — 'O reassured soul'. النَّفْسُ has ال, and يَا does not go straight onto ال. Arabic puts أَيُّهَا (or أَيَّتُهَا) in between.",
+      "ur": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ — 'اے اطمینان والی جان'۔ النَّفْسُ پر ال ہے، اور يَا براہِ راست ال والے اسم پر نہیں آتا۔ عربی بیچ میں أَيُّهَا (یا أَيَّتُهَا) لاتی ہے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "أَمَّا",
-        "ar_plain": "أما",
-        "translit": "ammā",
-        "en": "أَمَّا — Vocative of Emphasis / 'As for...'",
-        "ur": "اما — توجہ اور emphasis کی ندا"
+      "type": "CONCEPT",
+      "concept": {
+        "en": "يَا does not go straight onto ال",
+        "ar": "يَا لَا تَدْخُلُ عَلَى مَا فِيهِ ال",
+        "ur": "يَا براہِ راست ال پر نہیں آتا"
       },
-      "definition": {
-        "en": "A vocative particle used for emphasis and drawing attention — like saying 'Now then...' or 'Attention...'",
-        "ar": "حرف نداء يُستخدم للتنبيه والإلتفات — مثل قول ' nun...' أو 'انتبه...'",
-        "ur": "زور دینے اور توجہ مبذول کرنے کے لیے استعمال ہونے والا ایک صوتی ذرہ — جیسے کہ 'اب پھر...' یا 'توجہ...'"
+      "explanation": {
+        "en": "You do not say يَا النَّاسُ. To call a noun with ال, Arabic places أَيُّهَا between: يَا أَيُّهَا النَّاسُ — 'O mankind'. (The name of Allah is the one exception; see the next lesson.)",
+        "ur": "يَا النَّاسُ نہیں کہا جاتا۔ ال والے اسم کو پکارنے کے لیے عربی بیچ میں أَيُّهَا لاتی ہے: يَا أَيُّهَا النَّاسُ — 'اے لوگو'۔ (اللہ کا نام واحد استثنا ہے؛ اگلا سبق دیکھیے۔)"
       },
       "examples": [
         {
-          "ar": "أَمَّا الَّذِينَ آمَنُوا فَإِنَّهُمْ يَعْلَمُونَ",
-          "ar_plain": "أما الذين آمنوا فإنهم يعلمون",
-          "translit": "ammā alladhīna āmanū fa-innahum yaʿlamūna",
-          "en": "As for those who believed, they truly know",
-          "ur": "جہاں تک وہ لوگ جو ایمان لائے ہیں، وہ واقعی جانتے ہیں۔"
+          "ar": "يَا أَيُّهَا النَّاسُ",
+          "ar_plain": "يا أيها الناس",
+          "translit": "yaa ayyuhaa an-naasu",
+          "en": "O mankind!",
+          "ur": "اے لوگو!"
         }
-      ],
-      "highlight": true
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "يَا أَيُّهَا النَّاسُ",
-        "ar_plain": "يا أيها الناس",
-        "translit": "yā ayyuhā an-nāsu",
-        "en": "يَا أَيُّهَا النَّاسُ — O Mankind",
-        "ur": "اے لوگو — تمام انسانیت کو خطاب"
-      },
-      "definition": {
-        "en": "A general vocative addressing all humanity — not just believers. This is the broadest vocative in the Quran.",
-        "ar": "نداء عام يخاطب جميع البشر — ليس المؤمنين فقط. هذا هو أوسع نداء في القرآن.",
-        "ur": "تمام انسانیت کو مخاطب کرنے والا ایک عمومی آواز — نہ صرف مومنوں کو۔ یہ قرآن میں سب سے زیادہ وسیع و عریض ہے۔"
-      },
-      "highlight": true
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "الناس vs. الْمُؤْمِنُونَ as Addressees",
-        "ar": "الفرق بين الناس و المؤمنون",
-        "ur": "الناس بمقابلہ الْمُؤْمِنُونَ بطور ایڈریسز"
+        "en": "Three pieces: يَا + أَيُّ + هَا",
+        "ar": "يَا + أَيُّ + هَا",
+        "ur": "تین حصے: يَا + أَيُّ + هَا"
       },
       "explanation": {
-        "en": "When القرآن addresses الناس, it speaks to everyone. When it addresses المؤمنون specifically, it speaks to the believers alone. يَا أَيُّهَا النَّاسُ is universal — every human must listen. يَا أَيُّهَا الَّذِينَ آمَنُوا is specific — only those who already believe.",
-        "ar": "عندما يخاطب القرآن الناس، فهو يخاطب الجميع. عندما يخاطب المؤمنون تحديدًا، فهو يخاطب المؤمنين فقط.",
-        "ur": "جب القرآن الناس کو ایڈریس کرتا ہے، تو یہ سب سے بات کرتا ہے۔ جب یہ المؤمنون خاص طور پر مخاطب ہوتا ہے، تو یہ اکیلے مومنین سے بات کرتا ہے۔ يَا أَيُّهَا النَّاسُ عالمگیر ہے — ہر انسان کو سننا چاہیے۔ يَا أَيُّهَا الَّذِينَ آمَنُوا مخصوص ہے — صرف وہی جو پہلے سے یقین رکھتے ہیں۔"
+        "en": "يَا is the particle of calling. أَيُّ is the الْمُنَادَى, built on ḍamma like يَا نُوحُ. هَا is a small particle of attention (حَرْفُ تَنْبِيهٍ). The ال noun after it describes أَيُّ: it is a نَعْت.",
+        "ur": "يَا حرفِ ندا ہے۔ أَيُّ منادیٰ ہے، يَا نُوحُ کی طرح ضمہ پر مبنی۔ هَا توجہ دلانے کا چھوٹا سا حرف (حرفِ تنبیہ) ہے۔ اس کے بعد ال والا اسم أَيُّ کی صفت ہے: یعنی نعت۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "أَمَّا in the Quran",
-        "ar": "أَمَّا في القرآن",
-        "ur": "أَمَّا قرآن میں"
+        "en": "The noun after أَيُّهَا is marfūʿ",
+        "ar": "مَا بَعْدَ أَيُّهَا مَرْفُوعٌ",
+        "ur": "أَيُّهَا کے بعد والا اسم مرفوع"
       },
       "explanation": {
-        "en": "أَمَّا often appears in contexts of reminder and warning. أَمَّا sets up a contrast — 'as for X, it has this quality' — often used to contrast worldly life vs. the afterlife.",
-        "ar": "أَمَّا تأتي غالبًا في سياق التذكير والتحذير. أما تُقيم-contrast — 'جہاں تک X، یہ صفت رکھتا ہے' — اکثر used to contrast الدنيا vs. الآخرة.",
-        "ur": "أَمَّا اکثر یاد دہانی اور تنبیہ کے سیاق و سباق میں ظاہر ہوتا ہے۔ أَمَّا ایک تضاد قائم کرتا ہے — 'جیسا کہ X کے لیے، اس میں یہ خوبی ہے' — اکثر دنیاوی زندگی بمقابلہ آخرت کی زندگی کو متضاد کرنے کے لیے استعمال کیا جاتا ہے۔"
-      }
+        "en": "The ال noun follows the ḍamma of أَيُّ, so it is always marfūʿ: يَا أَيُّهَا النَّاسُ، يَا أَيُّهَا النَّبِيُّ، يَا أَيُّهَا الْإِنسَانُ. It is never genitive — أَيُّهَا is not a muḍāf. (Some books call this noun بَدَل rather than نَعْت; either way it is marfūʿ.)",
+        "ur": "ال والا اسم أَيُّ کے ضمہ کے پیچھے چلتا ہے، اس لیے ہمیشہ مرفوع ہوتا ہے: يَا أَيُّهَا النَّاسُ، يَا أَيُّهَا النَّبِيُّ، يَا أَيُّهَا الْإِنسَانُ۔ یہ کبھی مجرور نہیں ہوتا — أَيُّهَا مضاف نہیں۔ (بعض کتابیں اسے نعت کے بجائے بدل کہتی ہیں؛ دونوں صورتوں میں یہ مرفوع ہے۔)"
+      },
+      "examples": [
+        {
+          "ar": "يَا أَيُّهَا النَّبِيُّ",
+          "ar_plain": "يا أيها النبي",
+          "translit": "yaa ayyuhaa an-nabiyyu",
+          "en": "O Prophet!",
+          "ur": "اے نبی!"
+        }
+      ]
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Invariable Vocative Particles",
-        "ar": "أدوات نداء ثابتة",
-        "ur": "ناقابل تغیر آوازی ذرات"
+        "en": "أَيَّتُهَا for a feminine noun",
+        "ar": "أَيَّتُهَا لِلْمُؤَنَّثِ",
+        "ur": "مؤنث کے لیے أَيَّتُهَا"
       },
       "explanation": {
-        "en": "Vocative particles like يا and أَمَّا don't change case — they're always invariable. أَمَّا literally means 'as for' — it identifies the subject and then makes a statement about them.",
-        "ar": "أدوات النداء مثل يا و أما لا تتغير case — هي دائمًا ثابتة. أما حرفيًا تعني 'جہاں تک' — تحدد الموضوع ثم تبني عليه.",
-        "ur": "آوازی ذرات جیسے يا اور أَمَّا Don't change case — وہ ہمیشہ غیر متغیر ہوتے ہیں۔ أَمَّا لفظی معنی ہے 'جیسے کے لیے' — یہ موضوع کی شناخت کرتا ہے اور پھر ان کے بارے میں بیان دیتا ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "يا — Universal Vocative",
-        "ar": "يا نداء عام",
-        "ur": "يا — یونیورسل ووکیٹیو"
-      },
-      "explanation": {
-        "en": "يا is the most flexible vocative — can address anyone or anything, even abstract concepts or inanimate objects in poetic contexts. يَا دُنْيَا — O world. يَا رَبِّ — O Lord. يَا جَلِيلُ — O majestic one.",
-        "ar": "یا most versatile vocative — can address anyone or anything, even abstract concepts or inanimate objects in poetic contexts.",
-        "ur": "يا سب سے زیادہ لچکدار آواز ہے — شاعرانہ سیاق و سباق میں کسی کو یا کسی بھی چیز سے، یہاں تک کہ تجریدی تصورات یا بے جان اشیاء کو بھی مخاطب کر سکتا ہے۔ يَا دُنْيَا — اے دنیا۔ يَا رَبِّ — اے رب! يَا جَلِيلُ — اے عظیم الشان۔"
+        "en": "Before a feminine noun, أَيُّ becomes أَيَّتُ: يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ. For masculine nouns, singular or plural, it stays أَيُّهَا: يَا أَيُّهَا النَّبِيُّ، يَا أَيُّهَا النَّاسُ.",
+        "ur": "مؤنث اسم سے پہلے أَيُّ، أَيَّتُ بن جاتا ہے: يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ۔ مذکر کے لیے، واحد ہو یا جمع، أَيُّهَا ہی رہتا ہے: يَا أَيُّهَا النَّبِيُّ، يَا أَيُّهَا النَّاسُ۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch72l04-ex01",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "ما الأداة في: أَمَّا الَّذِينَ آمَنُوا؟",
-        "ar_plain": "ما الأداة في أما الذين آمنوا",
-        "translit": "mā al-adah fī: ammā alladhīna āmanū?",
-        "en": "What is the particle in: أَمَّا الَّذِينَ آمَنُوا?",
-        "ur": "اس میں ذرہ کیا ہے: أَمَّا الَّذِينَ آمَنُوا?"
-      },
-      "options": [
-        {
-          "en": "يا",
-          "ur": "یا"
-        },
-        {
-          "en": "أَمَّا (vocative of emphasis)",
-          "ur": "اما (emphasis کی ندا)"
-        },
-        {
-          "en": "أيها",
-          "ur": "ایہ"
-        },
-        {
-          "en": "Option 4",
-          "ur": "آپشن 4"
-        }
-      ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch72l04-ex02",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "يَا أَيُّهَا النَّاسُ addresses only Muslims",
-        "ur": "'اے لوگو' صرف مسلمانوں کو خطاب کرتا ہے"
-      },
-      "correct_answer": false,
-      "explanation_on_wrong": {
-        "en": "يَا أَيُّهَا النَّاسُ addresses all of humanity — النَّاسُ means 'people' in general, not just believers. This is why it's used in universal calls like fearing Allah.",
-        "ar": "يَا أَيُّهَا النَّاسُ يخاطب جميع البشر — النَّاسُ تعني 'الناس' بشكل عام، ليس المؤمنين فقط",
-        "ur": "يَا أَيُّهَا النَّاسُ تمام انسانیت کو مخاطب کرتا ہے — النَّاسُ کا مطلب عام طور پر 'لوگ' ہے، نہ صرف مومنین۔ یہی وجہ ہے کہ یہ اللہ سے ڈرنے جیسی آفاقی کالوں میں استعمال ہوتا ہے۔"
-      }
-    },
-    {
-      "id": "ch72l04-ex03",
       "type": "FILL_BLANK",
+      "id": "ch72-l04-ex01",
       "mode": "TAP",
-      "sentence_ar": "أَمَّا الَّذِينَ ___ فَإِنَّهُمْ فَرِحُونَ",
+      "sentence_ar": "يَا أَيُّهَا ___ اعْبُدُوا رَبَّكُمُ",
       "hint": {
-        "en": "The verb describing the believers",
-        "ur": "مومنین کو بیان کرنے والا فعل"
+        "en": "'O mankind, worship your Lord' (2:21). The ال noun after أَيُّهَا.",
+        "ur": "'اے لوگو، اپنے رب کی عبادت کرو' (2:21)۔ أَيُّهَا کے بعد ال والا اسم۔"
       },
       "options": [
         {
-          "ar": "آمنوا",
-          "ar_plain": "آمنوا",
-          "translit": "āmanū",
-          "en": "آمنوا",
-          "ur": "آمنوا"
+          "ar": "النَّاسُ",
+          "ar_plain": "الناس",
+          "translit": "an-naasu",
+          "en": "mankind (ḍamma)",
+          "ur": "لوگ (ضمہ)"
         },
         {
-          "ar": "كفروا",
-          "ar_plain": "كفروا",
-          "translit": "kafarū",
-          "en": "كفروا",
-          "ur": "كفروا"
+          "ar": "النَّاسِ",
+          "ar_plain": "الناس",
+          "translit": "an-naasi",
+          "en": "mankind (kasra)",
+          "ur": "لوگ (کسرہ)"
         },
         {
-          "ar": "عملوا",
-          "ar_plain": "عملوا",
-          "translit": "ʿamilū",
-          "en": "عملوا",
-          "ur": "عملوا"
+          "ar": "النَّاسَ",
+          "ar_plain": "الناس",
+          "translit": "an-naasa",
+          "en": "mankind (fatḥa)",
+          "ur": "لوگ (فتحہ)"
         },
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
-          "ur": "نہیں"
+          "ar": "نَاسٌ",
+          "ar_plain": "ناس",
+          "translit": "naasun",
+          "en": "people (no ال)",
+          "ur": "لوگ (بغیر ال)"
         }
       ],
       "correct_answer": {
-        "ar": "آمنوا",
-        "ar_plain": "آمنوا",
-        "translit": "āmanū",
-        "en": "آمنوا",
-        "ur": "آمنوا"
+        "ar": "النَّاسُ",
+        "ar_plain": "الناس",
+        "translit": "an-naasu",
+        "en": "mankind (ḍamma)",
+        "ur": "لوگ (ضمہ)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The ال noun after أَيُّهَا is marfūʿ: يَا أَيُّهَا النَّاسُ.",
+        "ur": "أَيُّهَا کے بعد ال والا اسم مرفوع ہوتا ہے: يَا أَيُّهَا النَّاسُ۔"
       }
     },
     {
-      "id": "ch72l04-ex04",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمْ",
-      "words": [
-        {
-          "ar": "يا",
-          "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
-          "ur": "اے"
-        },
-        {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "those who",
-          "ur": "وہ لوگ جو"
-        },
-        {
-          "ar": "الناس",
-          "ar_plain": "الناس",
-          "translit": "an-nāsu",
-          "en": "people",
-          "ur": "لوگ"
-        },
-        {
-          "ar": "اتقوا",
-          "ar_plain": "اتقوا",
-          "translit": "ittaqū",
-          "en": "fear",
-          "ur": "خوف"
-        },
-        {
-          "ar": "ربكم",
-          "ar_plain": "ربكم",
-          "translit": "rabbukum",
-          "en": "your Lord",
-          "ur": "تمہارا رب"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "NOUN",
-        "PREPOSITION",
-        "OBJECT",
-        "POSSESSIVE"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "PARTICLE",
-        "NOUN",
-        "VERB",
-        "OBJECT"
-      ]
+      "type": "TRUE_FALSE",
+      "id": "ch72-l04-ex02",
+      "statement": {
+        "en": "The noun after أَيُّهَا is genitive, because it is a مُضَافٌ إِلَيْهِ.",
+        "ur": "أَيُّهَا کے بعد والا اسم مجرور ہوتا ہے کیونکہ وہ مضاف الیہ ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "أَيُّهَا is not a muḍāf. The ال noun after it describes أَيُّ and is marfūʿ: يَا أَيُّهَا النَّاسُ.",
+        "ur": "أَيُّهَا مضاف نہیں۔ اس کے بعد ال والا اسم أَيُّ کی صفت ہے اور مرفوع ہے: يَا أَيُّهَا النَّاسُ۔"
+      }
     },
     {
-      "id": "ch72l04-ex05",
+      "type": "FILL_BLANK",
+      "id": "ch72-l04-ex03",
+      "mode": "TAP",
+      "sentence_ar": "يَا ___ النَّفْسُ الْمُطْمَئِنَّةُ",
+      "hint": {
+        "en": "'O reassured soul' (89:27). نَفْس is feminine.",
+        "ur": "'اے اطمینان والی جان' (89:27)۔ نَفْس مؤنث ہے۔"
+      },
+      "options": [
+        {
+          "ar": "أَيَّتُهَا",
+          "ar_plain": "أيتها",
+          "translit": "ayyatuhaa",
+          "en": "(feminine)",
+          "ur": "(مؤنث)"
+        },
+        {
+          "ar": "أَيُّهَا",
+          "ar_plain": "أيها",
+          "translit": "ayyuhaa",
+          "en": "(masculine)",
+          "ur": "(مذکر)"
+        },
+        {
+          "ar": "أَمَّا",
+          "ar_plain": "أما",
+          "translit": "ammaa",
+          "en": "as for",
+          "ur": "رہا"
+        },
+        {
+          "ar": "أَيْنَ",
+          "ar_plain": "أين",
+          "translit": "ayna",
+          "en": "where",
+          "ur": "کہاں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "أَيَّتُهَا",
+        "ar_plain": "أيتها",
+        "translit": "ayyatuhaa",
+        "en": "(feminine)",
+        "ur": "(مؤنث)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "Before a feminine noun, use أَيَّتُهَا.",
+        "ur": "مؤنث اسم سے پہلے أَيَّتُهَا آتا ہے۔"
+      }
+    },
+    {
       "type": "MATCHING",
+      "id": "ch72-l04-ex04",
       "left_column": [
         {
-          "ar": "يا",
+          "ar": "يَا",
           "ar_plain": "يا",
-          "translit": "yā",
-          "en": "يا",
-          "ur": "يا"
+          "translit": "yaa",
+          "en": "O (particle of calling)",
+          "ur": "اے (حرفِ ندا)"
         },
         {
-          "ar": "أما",
-          "ar_plain": "أما",
-          "translit": "ammā",
-          "en": "أما",
-          "ur": "أما"
+          "ar": "أَيُّ",
+          "ar_plain": "أي",
+          "translit": "ayyu",
+          "en": "ayy",
+          "ur": "أَيُّ"
         },
         {
-          "ar": "أيا",
-          "ar_plain": "أيا",
-          "translit": "ayā",
-          "en": "أيا",
-          "ur": "أيا"
+          "ar": "هَا",
+          "ar_plain": "ها",
+          "translit": "haa",
+          "en": "haa",
+          "ur": "هَا"
+        },
+        {
+          "ar": "النَّاسُ",
+          "ar_plain": "الناس",
+          "translit": "an-naasu",
+          "en": "mankind",
+          "ur": "لوگ"
         }
       ],
       "right_column": [
         {
-          "en": "تنبيه وإلتفات — 'As for...'",
-          "ur": "تنبيه وإلتفات — 'جہاں تک...'"
+          "en": "Particle of calling",
+          "ur": "حرفِ ندا"
         },
         {
-          "en": "نداء عام — لجميع الناس",
-          "ur": "نداء عام — لجميع الناس"
+          "en": "The one called (built on ḍamma)",
+          "ur": "منادیٰ (ضمہ پر مبنی)"
         },
         {
-          "en": "نداء لمخاطب واحد أو صفة",
-          "ur": "نداء لمخاطب واحد أو صفة"
+          "en": "Particle of attention",
+          "ur": "حرفِ تنبیہ"
+        },
+        {
+          "en": "Describes أَيُّ (نَعْت), marfūʿ",
+          "ur": "أَيُّ کی صفت (نعت)، مرفوع"
         }
       ],
       "correct_pairs": [
         [
           0,
-          1
+          0
         ],
         [
           1,
-          0
+          1
         ],
         [
           2,
           2
+        ],
+        [
+          3,
+          3
         ]
-      ]
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch72l04-ex06",
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l04-ex05",
+      "prompt": {
+        "ar": "يَا أَيُّهَا الْإِنسَانُ مَا غَرَّكَ بِرَبِّكَ الْكَرِيمِ",
+        "ar_plain": "يا أيها الإنسان ما غرك بربك الكريم",
+        "translit": "yaa ayyuhaa al-insaanu maa gharraka bi-rabbika al-kariimi",
+        "en": "O mankind, what has deceived you concerning your Lord, the Generous?",
+        "ur": "اے انسان، تجھے اپنے کریم رب کے بارے میں کس چیز نے دھوکے میں ڈالا؟"
+      },
+      "options": [
+        {
+          "en": "O mankind, what has deceived you concerning your Lord, the Generous?",
+          "ur": "اے انسان، تجھے اپنے کریم رب کے بارے میں کس چیز نے دھوکے میں ڈالا؟"
+        },
+        {
+          "en": "O man, how did your generous Lord deceive you?",
+          "ur": "اے انسان، تیرے کریم رب نے تجھے کیسے دھوکا دیا؟"
+        },
+        {
+          "en": "Mankind was deceived by a generous man.",
+          "ur": "انسان کو ایک کریم آدمی نے دھوکا دیا۔"
+        },
+        {
+          "en": "As for man, his Lord is generous.",
+          "ur": "رہا انسان، تو اس کا رب کریم ہے۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "82:6. يَا أَيُّهَا الْإِنسَانُ is the call; مَا غَرَّكَ ('what deceived you') is the question put to the one called.",
+        "ur": "82:6۔ يَا أَيُّهَا الْإِنسَانُ ندا ہے؛ مَا غَرَّكَ ('تجھے کس چیز نے دھوکا دیا') منادیٰ سے پوچھا گیا سوال ہے۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch72-l04-ex06",
+      "sentence_ar": "يَا أَيُّهَا النَّاسُ",
+      "words": [
+        {
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaa",
+          "en": "O (particle of calling)",
+          "ur": "اے (حرفِ ندا)"
+        },
+        {
+          "ar": "أَيُّهَا",
+          "ar_plain": "أيها",
+          "translit": "ayyuhaa",
+          "en": "O you",
+          "ur": "اے"
+        },
+        {
+          "ar": "النَّاسُ",
+          "ar_plain": "الناس",
+          "translit": "an-naasu",
+          "en": "mankind",
+          "ur": "لوگو"
+        }
+      ],
+      "available_roles": [
+        "PARTICLE",
+        "VOCATIVE",
+        "ADJECTIVE",
+        "POSSESSIVE",
+        "SUBJECT"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VOCATIVE",
+        "ADJECTIVE"
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَا is the particle, أَيُّ(هَا) the vocative, and النَّاسُ its نَعْت — marfūʿ, not a مُضَافٌ إِلَيْهِ.",
+        "ur": "يَا حرف ہے، أَيُّ(هَا) منادیٰ، اور النَّاسُ اس کی نعت — مرفوع، مضاف الیہ نہیں۔"
+      }
+    },
+    {
       "type": "BUILD_SENTENCE",
+      "id": "ch72-l04-ex07",
       "target_translation": {
-        "en": "أَمَّا الْمُؤْمِنُونَ فَهُمْ يَعْلَمُونَ — As for the believers, they indeed know",
-        "ur": "جہاں تک مومنین کا تعلق ہے، وہ جانتے ہیں"
+        "en": "O Prophet, Allah is sufficient for you.",
+        "ur": "اے نبی، تمہارے لیے اللہ کافی ہے۔"
       },
       "tiles": [
         {
-          "ar": "أما",
-          "ar_plain": "أما",
-          "translit": "ammā",
-          "en": "as for",
-          "ur": "کے طور پر"
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaa",
+          "en": "O (particle of calling)",
+          "ur": "اے (حرفِ ندا)"
         },
         {
-          "ar": "المؤمنون",
-          "ar_plain": "المؤمنون",
-          "translit": "al-mu'minūna",
-          "en": "the believers",
-          "ur": "مومنین"
+          "ar": "أَيُّهَا",
+          "ar_plain": "أيها",
+          "translit": "ayyuhaa",
+          "en": "O you",
+          "ur": "اے"
         },
         {
-          "ar": "فهم",
-          "ar_plain": "فهم",
-          "translit": "fa-hum",
-          "en": "then they",
-          "ur": "پھر وہ"
+          "ar": "النَّبِيُّ",
+          "ar_plain": "النبي",
+          "translit": "an-nabiyyu",
+          "en": "Prophet",
+          "ur": "نبی"
         },
         {
-          "ar": "يعلمون",
-          "ar_plain": "يعلمون",
-          "translit": "yaʿlamūna",
-          "en": "know",
-          "ur": "جانتے ہیں"
+          "ar": "حَسْبُكَ",
+          "ar_plain": "حسبك",
+          "translit": "hasbuka",
+          "en": "sufficient for you",
+          "ur": "تمہارے لیے کافی"
+        },
+        {
+          "ar": "اللَّهُ",
+          "ar_plain": "الله",
+          "translit": "allaahu",
+          "en": "Allah",
+          "ur": "اللہ"
+        },
+        {
+          "ar": "النَّبِيِّ",
+          "ar_plain": "النبي",
+          "translit": "an-nabiyyi",
+          "en": "Prophet (kasra)",
+          "ur": "نبی (کسرہ)"
         }
       ],
       "correct_order": [
         0,
         1,
         2,
-        3
-      ]
-    },
-    {
-      "id": "ch72l04-ex07",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "ما معنى: أَمَّا فِي الدُّنْيَا؟",
-        "ar_plain": "ما معنى أما في الدنيا",
-        "translit": "mā maʿnā: ammā fī ad-dunyā?",
-        "en": "What does أَمَّا فِي الدُّنْيَا mean?",
-        "ur": "أَمَّا فِي الدُّنْيَا کا کیا مطلب ہے؟"
-      },
-      "options": [
-        {
-          "en": "Yes in this world",
-          "ur": "جی ہاں اس دنیا میں"
-        },
-        {
-          "en": "But I am in this world",
-          "ur": "لیکن میں اس دنیا میں ہوں"
-        },
-        {
-          "en": "As for this world",
-          "ur": "جہاں تک اس دنیا کا تعلق ہے"
-        },
-        {
-          "en": "Option 4",
-          "ur": "آپشن 4"
-        }
+        3,
+        4
       ],
-      "correct_index": 2
-    },
-    {
-      "id": "ch72l04-ex08",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "أداة النداء ___ يمكن أن تخاطب أي شيء — شخص، اللَّه، أو حتى concept مجرد",
-      "hint": {
-        "en": "The universal vocative particle",
-        "ur": "universal ندا particle"
-      },
-      "options": [
-        {
-          "ar": "يا",
-          "ar_plain": "يا",
-          "translit": "yā",
-          "en": "يا",
-          "ur": "يا"
-        },
-        {
-          "ar": "أما",
-          "ar_plain": "أما",
-          "translit": "ammā",
-          "en": "أَمَّا",
-          "ur": "أَمَّا"
-        },
-        {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "أَيُّهَا",
-          "ur": "أَيُّهَا"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
-          "ur": "نہیں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "يا",
-        "ar_plain": "يا",
-        "translit": "yā",
-        "en": "يا",
-        "ur": "يا"
-      }
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "أدوات النداء — المشهد الكامل",
-      "en": "Vocative Particles — The Complete Picture",
-      "ur": "ندا particles — مکمل تصویر"
+      "en": "يَا أَيُّهَا + ال noun (marfūʿ)",
+      "ar": "يَا أَيُّهَا + الِاسْمُ الْمُعَرَّفُ بِأَلْ",
+      "ur": "يَا أَيُّهَا + ال والا اسم (مرفوع)"
     },
     "ayah": {
-      "surah": 39,
-      "ayah": 8,
-      "label": "Az-Zumar 39:8",
-      "ar": "وَإِذَا مَسَّ الْإِنسَانَ ضُرٌّ دَعَا رَبَّهُ مُنِيبًا إِلَيْهِ ثُمَّ إِذَا خَوَّلَهُ نِعْمَةً مِّنْهُ نَسِيَ مَا كَانَ يَدْعُو إِلَيْهِ مِن قَبْلُ وَجَعَلَ لِلَّهِ أَندَادًا لِّيُضِلَّ عَن سَبِيلِهِ ۚ قُلْ تَمَتَّعْ بِكُفْرِكَ قَلِيلًا ۖ إِنَّكَ مِنْ أَصْحَابِ النَّارِ",
-      "en": "And when adversity touches man, he calls upon his Lord, turning to Him [alone]; then when He bestows on him a favor from Himself, he forgets Him whom he called upon before, and he attributes to Allāh equals to mislead [people] from His way. Say, \"Enjoy your disbelief for a little; indeed, you are of the companions of the Fire.\"",
-      "ur": "اور جب انسان کو تکلیف پہنچتی ہے تو اپنے پروردگار کو پکارتا (اور) اس کی طرف دل سے رجوع کرتا ہے۔ پھر جب وہ اس کو اپنی طرف سے کوئی نعمت دیتا ہے تو جس کام کے لئے پہلے اس کو پکارتا ہے اسے بھول جاتا ہے اور خدا کا شریک بنانے لگتا ہے تاکہ (لوگوں کو) اس کے رستے سے گمراہ کرے۔ کہہ دو کہ (اے کافر نعمت) اپنی ناشکری سے تھوڑا سا فائدہ اٹھالے۔ پھر تُو تو دوزخیوں میں ہوگا",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/039008.mp3"
+      "surah": 2,
+      "ayah": 21,
+      "label": "Al-Baqarah 2:21",
+      "ar": "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ وَالَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ",
+      "en": "O mankind, worship your Lord, who created you and those before you, that you may become righteous.",
+      "ur": "اے لوگو، اپنے رب کی عبادت کرو جس نے تمہیں اور تم سے پہلے لوگوں کو پیدا کیا، تاکہ تم پرہیزگار بنو۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002021.mp3"
     },
     "highlighted_word_indices": [
-      0
+      0,
+      1,
+      2
     ],
     "noor_explanation": {
-      "ar": "في \"أَمَّنْ هُوَ خَاشِعٌ\" — أَمَّنْ here is interrogative (question), not vocative. أَمَّ in questions means 'or' and introduces a comparison. لاحظ: ليس كل 'أم' هو نداء — بعضها حرف استفهام.",
-      "en": "In 'Or one who is reverent' — أَمَّنْ here is interrogative (a question), not a vocative. أَمَّ in questions means 'or' and introduces a comparison. Note: not every 'أَمَّ' is a vocative — some are interrogative particles.",
-      "ur": "'یا وہ شخص جو عاجزی کے ساتھ ہے' میں — 'امَن' یہاں سوالی (question) ہے، ندا نہیں۔ 'ام' سوالات میں 'یا' کا مطلب رکھتا ہے۔ نوٹ: ہر 'ام' ندا نہیں ہوتا — کچھ سوالی particles ہوتے ہیں۔"
+      "en": "يَا أَيُّهَا النَّاسُ — يَا calls, أَيُّ is the one called, هَا draws attention, and النَّاسُ (marfūʿ) says who is meant: all people. The command اعْبُدُوا follows, addressed to them.",
+      "ur": "يَا أَيُّهَا النَّاسُ — يَا پکارتا ہے، أَيُّ منادیٰ ہے، هَا توجہ دلاتا ہے، اور النَّاسُ (مرفوع) بتاتا ہے کہ مراد کون ہے: تمام لوگ۔ پھر انہی کے لیے حکم اعْبُدُوا آتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "You now know three vocative particles: يا (universal), أَيُّهَا (group-specific), and أَمَّا (emphatic). Each serves a different purpose. يَا أَيُّهَا النَّاسُ is the broadest address in the Quran — it calls to every single human being. Tomorrow we see المنادى in the Quran directly.",
-      "en": "You now know three vocative particles: يا (universal), أَيُّهَا (group-specific), and أَمَّا (emphatic). Each serves a different purpose. يَا أَيُّهَا النَّاسُ is the broadest address in the Quran — it calls to every single human being. Tomorrow we see المنادى in the Quran directly.",
-      "ur": "اب آپ تین vocative particles جانتے ہیں: 'یا' (universal)، 'ایہ' (گروہ-specific)، اور 'اما' (emphatic)۔ ہر ایک کا مختلف مقصد ہے۔ 'اے لوگو' قرآن میں سب سے وسیع خطاب ہے — یہ ہر انسان کو بلاتا ہے۔ کل ہم براہ راست قرآن میں المنادى دیکھیں گے۔"
+      "en": "To call an ال noun: يَا أَيُّهَا (masculine) or يَا أَيَّتُهَا (feminine), then the noun in ḍamma. Next: calling Allah — رَبِّ، رَبَّنَا، اللَّهُمَّ.",
+      "ur": "ال والے اسم کو پکارنے کے لیے: يَا أَيُّهَا (مذکر) یا يَا أَيَّتُهَا (مؤنث)، پھر اسم ضمہ کے ساتھ۔ آگے: اللہ کو پکارنا — رَبِّ، رَبَّنَا، اللَّهُمَّ۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }

@@ -1,29 +1,30 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 72, Lesson 6 — يا أيها الذين آمنوا: الذين as the description of أيّ, then the command.",
     "chapter_order": 72,
     "lesson_order": 6,
     "chapter_title": "المنادى",
-    "title": "Full Review of النِّدَاء Rules",
-    "titleAr": "مراجعة شاملة لقواعد النداء",
+    "title": "يَا أَيُّهَا الَّذِينَ آمَنُوا — The Call, Then the Command",
+    "titleAr": "يَا أَيُّهَا الَّذِينَ آمَنُوا: النِّدَاءُ ثُمَّ الْأَمْرُ",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 33,
-      "ayah": 70,
-      "label": "Al-Ahzab 33:70",
-      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
-      "en": "O you who believe, fear Allah and speak a right word.",
-      "ur": "اے ایمان والو، اللہ سے ڈرو اور درست بات کہو۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033070.mp3"
+      "surah": 9,
+      "ayah": 119,
+      "label": "At-Tawbah 9:119",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ",
+      "en": "O you who have believed, fear Allah and be with those who are true.",
+      "ur": "اے ایمان والو، اللہ سے ڈرو اور سچوں کے ساتھ رہو۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/009119.mp3"
     },
     "noor_intro": {
-      "ar": "Chapter 72 review — today we consolidate everything we learned about النِّدَاء. From يا to أَمَّا, from المنادى to the pattern of Quranic دعاء. You'll identify, parse, and translate all forms.",
-      "en": "Chapter 72 review — today we consolidate everything we learned about النِّدَاء. From يا to أَمَّا, from المنادى to the pattern of Quranic دعاء. You'll identify, parse, and translate all forms.",
-      "ur": "باب 72 کا جائزہ — آج ہم نِّدَاء کے بارے میں سب کچھ ملا کر دیکھتے ہیں۔ 'یا' سے 'اما' تک، منادى سے لے کر قرآنی دعا کے نمونے تک۔ آپ شناخت، تجزیہ، اور ترجمہ کریں گے۔"
+      "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا — 'O you who have believed'. Then two commands joined by وَ: اتَّقُوا اللَّهَ and كُونُوا مَعَ الصَّادِقِينَ. Today: how this call is built, and how to read what follows it.",
+      "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا — 'اے ایمان والو'۔ پھر وَ سے جڑے دو حکم: اتَّقُوا اللَّهَ اور كُونُوا مَعَ الصَّادِقِينَ۔ آج: یہ ندا کیسے بنی ہے، اور اس کے بعد والے حصے کو کیسے پڑھیں۔"
     },
     "autoplay": true
   },
@@ -31,298 +32,361 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Review: Vocative Particles",
-        "ar": "مراجعة: أدوات النداء",
-        "ur": "جائزہ: آوازی ذرات"
+        "en": "الَّذِينَ after أَيُّهَا",
+        "ar": "أَيُّهَا الَّذِينَ",
+        "ur": "أَيُّهَا کے بعد الَّذِينَ"
       },
       "explanation": {
-        "en": "يا — direct vocative (followed by noun in nominative). أَيُّهَا — group vocative with description (followed by genitive). أَمَّا — emphatic vocative for emphasis/contrast.",
-        "ar": "يا — نداء مباشر (متبوع بنوع في مرفوع). أَيُّهَا — نداء لمجموعة بوصف (متبوع بمضاف إليه). أَمَّا — نداء للتأكيد والتنبيه.",
-        "ur": "يا — براہِ راست لفظی (نامزد میں اسم کے بعد)۔ أَيُّهَا — وضاحت کے ساتھ گروپ ووکیٹیو (اس کے بعد جینیاتی)۔ أَمَّا — زور/تضاد کے لیے پرزور الفاظ۔"
-      },
-      "highlight": true
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "منادى after يا — always مرفوع",
-        "ar": "المنادى case after يا",
-        "ur": "منادى بعد يا — ہمیشہ مرفوع"
-      },
-      "explanation": {
-        "en": "The منادى after يا is always in the nominative (مرفوع). يَا رَبِّ — رَبّ is مرفوع by يا. The vocative particle يا always raises the noun it addresses.",
-        "ar": "المنادى بعد يا يكون دائمًا في حالة الرفع. يا رَبِّ — رب مرفوع باليا.",
-        "ur": "منادى بعد يا ہمیشہ نامزد (مرفوع) میں ہوتا ہے۔ يَا رَبِّ — رَبّ is مرفوع by يا صوتی ذرہ يا ہمیشہ اس اسم کو بلند کرتا ہے جس سے یہ مخاطب ہوتا ہے۔"
+        "en": "This is the same pattern as يَا أَيُّهَا النَّاسُ. الَّذِينَ ('those who') is a relative noun with ال, so أَيُّهَا comes first. It describes أَيُّ like النَّاسُ does; being built, it shows no ending, but its position is marfūʿ. آمَنُوا is its صِلَة: 'who believed'.",
+        "ur": "یہ وہی طریقہ ہے جو يَا أَيُّهَا النَّاسُ میں ہے۔ الَّذِينَ ('وہ جو') ال والا اسم موصول ہے، اس لیے پہلے أَيُّهَا آتا ہے۔ یہ النَّاسُ کی طرح أَيُّ کی صفت ہے؛ مبنی ہونے کی وجہ سے اس پر اعراب نظر نہیں آتا، مگر اس کا مقام رفع کا ہے۔ آمَنُوا اس کا صلہ ہے: 'جو ایمان لائے'۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "أَيُّهَا is always invariable — never changes case",
-        "ar": "أَيُّهَا لا يتغير",
-        "ur": "أَيُّهَا ہمیشہ غیر متغیر ہوتا ہے — کبھی بھی کیس تبدیل نہیں ہوتا ہے۔"
+        "en": "What follows the call",
+        "ar": "مَا بَعْدَ النِّدَاءِ",
+        "ur": "ندا کے بعد کیا آتا ہے"
       },
       "explanation": {
-        "en": "أَيُّهَا never changes case — the noun after it changes instead (to genitive as مضاف إليه). أَيُّهَا الَّذِينَ آمَنُوا — الذين is مضاف إليه, not أيها.",
-        "ar": "أَيُّهَا حرف ثابت لا يتغير — الذي يتغير هو الاسم بعده. الذين after أيها is always مضاف إليه.",
-        "ur": "أَيُّهَا کبھی بھی کیس تبدیل نہیں ہوتا ہے - اسم تبدیل ہونے کے بعد اس کی بجائے (جینیٹیو میں بطور مضاف إليه)۔ أَيُّهَا الَّذِينَ آمَنُوا — الذين ہے مضاف إليه، نہیں أيها۔"
+        "en": "After the call comes the message for the same people: a command (اتَّقُوا), a prohibition (لَا تَقُولُوا), or a statement (كُتِبَ عَلَيْكُمُ الصِّيَامُ). The verbs and pronouns use plural 'you', because the call has just named who 'you' are.",
+        "ur": "ندا کے بعد انہی لوگوں کے لیے پیغام آتا ہے: حکم (اتَّقُوا)، نہی (لَا تَقُولُوا)، یا خبر (كُتِبَ عَلَيْكُمُ الصِّيَامُ)۔ افعال اور ضمیریں جمع 'تم' کی ہوتی ہیں، کیونکہ ندا ابھی بتا چکی ہے کہ 'تم' کون ہیں۔"
+      },
+      "examples": [
+        {
+          "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الصِّيَامُ",
+          "ar_plain": "يا أيها الذين آمنوا كتب عليكم الصيام",
+          "translit": "yaa ayyuhaa alladhiina aamanuu kutiba 'alaykumu as-siyaamu",
+          "en": "O you who have believed, fasting is prescribed for you.",
+          "ur": "اے ایمان والو، تم پر روزے فرض کیے گئے ہیں۔"
+        }
+      ]
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ",
+        "ar_plain": "يا أيها الذين آمنوا استعينوا بالصبر والصلاة",
+        "translit": "yaa ayyuhaa alladhiina aamanuu ista'iinuu bis-sabri was-salaati",
+        "en": "O you who have believed, seek help through patience and prayer.",
+        "ur": "اے ایمان والو، صبر اور نماز سے مدد لو۔"
+      },
+      "explanation": {
+        "en": "2:153. Call (يَا أَيُّهَا الَّذِينَ آمَنُوا), command (اسْتَعِينُوا), and then a reason: إِنَّ اللَّهَ مَعَ الصَّابِرِينَ — 'Allah is with the patient'.",
+        "ur": "2:153۔ ندا (يَا أَيُّهَا الَّذِينَ آمَنُوا)، حکم (اسْتَعِينُوا)، اور پھر وجہ: إِنَّ اللَّهَ مَعَ الصَّابِرِينَ — 'اللہ صبر کرنے والوں کے ساتھ ہے'۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Quranic دعاء pattern — Address + Request",
-        "ar": "دعاء pattern",
-        "ur": "قرآنی دعاء pattern — پتہ + درخواست"
+        "en": "Quote the ayah whole",
+        "ar": "اقْرَأِ الْآيَةَ كَامِلَةً",
+        "ur": "آیت پوری نقل کیجیے"
       },
       "explanation": {
-        "en": "The Quran teaches us to call upon Allah (رَبَّنَا, يَا رَبِّ, اللَّهُمَّ) and then make our request. رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً.",
-        "ar": "نداء + طلب = structure of Quranic supplication. رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً.",
-        "ur": "قرآن ہمیں اللہ کو پکارنا سکھاتا ہے (رَبَّنَا, يَا رَبِّ, اللَّهُمَّ) اور پھر اپنی درخواست کریں۔ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً"
+        "en": "9:119 has two commands: اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ. Writing 'يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا مَعَ الصَّادِقِينَ' drops the first one and is not the ayah. When you quote, keep every word between the call and the part you need.",
+        "ur": "9:119 میں دو حکم ہیں: اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ۔ 'يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا مَعَ الصَّادِقِينَ' لکھنے سے پہلا حکم چھوٹ جاتا ہے اور یہ آیت نہیں رہتی۔ نقل کرتے وقت ندا اور مطلوبہ حصے کے درمیان کا ہر لفظ رکھیے۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch72l06-ex01",
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l06-ex01",
+      "prompt": {
+        "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ",
+        "ar_plain": "يا أيها الذين آمنوا اتقوا الله وكونوا مع الصادقين",
+        "translit": "yaa ayyuhaa alladhiina aamanuu ittaquu allaaha wa-kuunuu ma'a as-saadiqiina",
+        "en": "O you who have believed, fear Allah and be with those who are true.",
+        "ur": "اے ایمان والو، اللہ سے ڈرو اور سچوں کے ساتھ رہو۔"
+      },
+      "options": [
+        {
+          "en": "O you who have believed, fear Allah and be with those who are true.",
+          "ur": "اے ایمان والو، اللہ سے ڈرو اور سچوں کے ساتھ رہو۔"
+        },
+        {
+          "en": "O you who have believed, be with those who are true.",
+          "ur": "اے ایمان والو، سچوں کے ساتھ رہو۔"
+        },
+        {
+          "en": "Those who believed feared Allah and were truthful.",
+          "ur": "ایمان والے اللہ سے ڈرے اور سچے رہے۔"
+        },
+        {
+          "en": "O people, the truthful believe in Allah.",
+          "ur": "اے لوگو، سچے اللہ پر ایمان رکھتے ہیں۔"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "9:119 has two commands after the call: اتَّقُوا اللَّهَ and كُونُوا مَعَ الصَّادِقِينَ. The second option drops the first.",
+        "ur": "9:119 میں ندا کے بعد دو حکم ہیں: اتَّقُوا اللَّهَ اور كُونُوا مَعَ الصَّادِقِينَ۔ دوسرے جواب میں پہلا حکم چھوٹ گیا ہے۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch72-l06-ex02",
+      "statement": {
+        "en": "In يَا أَيُّهَا الَّذِينَ آمَنُوا, the word آمَنُوا is the command given to the believers.",
+        "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا میں آمَنُوا ایمان والوں کو دیا گیا حکم ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "آمَنُوا is past tense — 'who believed' — the صِلَة of الَّذِينَ. The command comes after the call.",
+        "ur": "آمَنُوا ماضی ہے — 'جو ایمان لائے' — الَّذِينَ کا صلہ۔ حکم ندا کے بعد آتا ہے۔"
+      }
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch72-l06-ex03",
+      "mode": "TAP",
+      "sentence_ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا ___ بِالصَّبْرِ وَالصَّلَاةِ",
+      "hint": {
+        "en": "'O you who have believed, seek help through patience and prayer' (2:153). A plural command.",
+        "ur": "'اے ایمان والو، صبر اور نماز سے مدد لو' (2:153)۔ جمع کا حکم۔"
+      },
+      "options": [
+        {
+          "ar": "اسْتَعِينُوا",
+          "ar_plain": "استعينوا",
+          "translit": "ista'iinuu",
+          "en": "seek help (plural command)",
+          "ur": "مدد لو (جمع امر)"
+        },
+        {
+          "ar": "اسْتَعَانُوا",
+          "ar_plain": "استعانوا",
+          "translit": "ista'aanuu",
+          "en": "they sought help",
+          "ur": "انہوں نے مدد لی"
+        },
+        {
+          "ar": "يَسْتَعِينُونَ",
+          "ar_plain": "يستعينون",
+          "translit": "yasta'iinuuna",
+          "en": "they seek help",
+          "ur": "وہ مدد لیتے ہیں"
+        },
+        {
+          "ar": "اسْتَعِنْ",
+          "ar_plain": "استعن",
+          "translit": "ista'in",
+          "en": "seek help (singular)",
+          "ur": "مدد لو (واحد)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "اسْتَعِينُوا",
+        "ar_plain": "استعينوا",
+        "translit": "ista'iinuu",
+        "en": "seek help (plural command)",
+        "ur": "مدد لو (جمع امر)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The call addresses a group, so the command is plural: اسْتَعِينُوا.",
+        "ur": "ندا ایک جماعت سے ہے، اس لیے حکم جمع کا ہے: اسْتَعِينُوا۔"
+      }
+    },
+    {
       "type": "MATCHING",
+      "id": "ch72-l06-ex04",
       "left_column": [
         {
-          "ar": "يَا رَبِّ",
-          "ar_plain": "يا رب",
-          "translit": "yā rabbin",
-          "en": "يَا رَبِّ",
-          "ur": "يَا رَبِّ"
+          "ar": "اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
+          "ar_plain": "اتقوا الله وقولوا قولا سديدا",
+          "translit": "ittaquu allaaha wa-quuluu qawlan sadiidan",
+          "en": "fear Allah and speak words of justice",
+          "ur": "اللہ سے ڈرو اور سیدھی بات کہو"
         },
         {
-          "ar": "أَمَّا الَّذِينَ آمَنُوا",
-          "ar_plain": "أما الذين آمنوا",
-          "translit": "ammā alladhīna āmanū",
-          "en": "أَمَّا الَّذِينَ آمَنُوا",
-          "ur": "أَمَّا الَّذِينَ آمَنُوا"
+          "ar": "كُتِبَ عَلَيْكُمُ الصِّيَامُ",
+          "ar_plain": "كتب عليكم الصيام",
+          "translit": "kutiba 'alaykumu as-siyaamu",
+          "en": "fasting is prescribed for you",
+          "ur": "تم پر روزے فرض کیے گئے"
         },
         {
-          "ar": "يَا أَيُّهَا النَّاسُ",
-          "ar_plain": "يا أيها الناس",
-          "translit": "yā ayyuhā an-nāsu",
-          "en": "يَا أَيُّهَا النَّاسُ",
-          "ur": "يَا أَيُّهَا النَّاسُ"
-        },
-        {
-          "ar": "يَا زَيْدُ",
-          "ar_plain": "يا زيد",
-          "translit": "yā zayd",
-          "en": "يَا زَيْدُ",
-          "ur": "يَا زَيْدُ"
+          "ar": "لَا تَقُولُوا رَاعِنَا",
+          "ar_plain": "لا تقولوا راعنا",
+          "translit": "laa taquuluu raa'inaa",
+          "en": "do not say raa'inaa",
+          "ur": "رَاعِنَا نہ کہو"
         }
       ],
       "right_column": [
         {
-          "en": "يا + منادى مرفوع (شخص)",
-          "ur": "يا + منادى مرفوع (شخص)"
+          "en": "Two commands (33:70)",
+          "ur": "دو حکم (33:70)"
         },
         {
-          "en": "يا + أيها + اسم في الجر (جماعة)",
-          "ur": "يا + أيها + اسم في الجر (جماعة)"
+          "en": "A statement of what is prescribed (2:183)",
+          "ur": "فرض ہونے کی خبر (2:183)"
         },
         {
-          "en": "أما (تنبيه)",
-          "ur": "أما (تنبيه)"
-        },
-        {
-          "en": "يا + منادى للہ (نداء إلهي)",
-          "ur": "يا + منادى للہ (نداء إلهي)"
+          "en": "A prohibition (2:104)",
+          "ur": "نہی (2:104)"
         }
       ],
       "correct_pairs": [
         [
           0,
-          3
+          0
         ],
         [
           1,
-          2
-        ],
-        [
-          2,
           1
         ],
         [
-          3,
-          0
+          2,
+          2
         ]
-      ]
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch72l06-ex02",
       "type": "GRAMMAR_PARSE",
+      "id": "ch72-l06-ex05",
       "sentence_ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
       "words": [
         {
-          "ar": "يا",
+          "ar": "يَا",
           "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
+          "translit": "yaa",
+          "en": "O (particle of calling)",
+          "ur": "اے (حرفِ ندا)"
+        },
+        {
+          "ar": "أَيُّهَا",
+          "ar_plain": "أيها",
+          "translit": "ayyuhaa",
+          "en": "O you",
           "ur": "اے"
         },
         {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "those who",
-          "ur": "وہ لوگ جو"
-        },
-        {
-          "ar": "الذين",
+          "ar": "الَّذِينَ",
           "ar_plain": "الذين",
-          "translit": "alladhīna",
+          "translit": "alladhiina",
           "en": "who",
-          "ur": "کون"
+          "ur": "جو"
         },
         {
-          "ar": "آمنوا",
+          "ar": "آمَنُوا",
           "ar_plain": "آمنوا",
-          "translit": "āmanū",
+          "translit": "aamanuu",
           "en": "believed",
-          "ur": "یقین کیا"
+          "ur": "ایمان لائے"
         },
         {
-          "ar": "اتقوا",
+          "ar": "اتَّقُوا",
           "ar_plain": "اتقوا",
-          "translit": "ittaqū",
+          "translit": "ittaquu",
           "en": "fear",
-          "ur": "خوف"
+          "ur": "ڈرو"
         },
         {
-          "ar": "الله",
+          "ar": "اللَّهَ",
           "ar_plain": "الله",
-          "translit": "Allāh",
+          "translit": "allaaha",
           "en": "Allah",
-          "ur": "اللہ"
+          "ur": "اللہ سے"
         }
       ],
       "available_roles": [
         "PARTICLE",
+        "VOCATIVE",
+        "RELATIVE_PRONOUN",
         "VERB",
-        "NOUN",
-        "PREPOSITION",
         "OBJECT",
-        "RELATIVE_PRONOUN"
+        "SUBJECT"
       ],
       "correct_roles": [
         "PARTICLE",
-        "PARTICLE",
+        "VOCATIVE",
         "RELATIVE_PRONOUN",
         "VERB",
         "VERB",
         "OBJECT"
-      ]
-    },
-    {
-      "id": "ch72l06-ex03",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "In 'O Lord' — رَبّ is مرفوع by يا",
-        "ur": "'اے رب' میں — رب 'یا' کی وجہ سے مرفوع ہے"
-      },
-      "correct_answer": true
-    },
-    {
-      "id": "ch72l06-ex04",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "أَمَّا الَّذِينَ ___ — أما + الذين + فعل",
-      "hint": {
-        "en": "The defining verb",
-        "ur": "تصریفی فعل"
-      },
-      "options": [
-        {
-          "ar": "آمنوا",
-          "ar_plain": "آمنوا",
-          "translit": "āmanū",
-          "en": "آمنوا",
-          "ur": "آمنوا"
-        },
-        {
-          "ar": "كفروا",
-          "ar_plain": "كفروا",
-          "translit": "kafarū",
-          "en": "كفروا",
-          "ur": "كفروا"
-        },
-        {
-          "ar": "عملوا",
-          "ar_plain": "عملوا",
-          "translit": "ʿamilū",
-          "en": "عملوا",
-          "ur": "عملوا"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
-          "ur": "نہیں"
-        }
       ],
-      "correct_answer": {
-        "ar": "آمنوا",
-        "ar_plain": "آمنوا",
-        "translit": "āmanū",
-        "en": "آمنوا",
-        "ur": "آمنوا"
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَا particle, أَيُّ(هَا) vocative, الَّذِينَ relative noun, آمَنُوا its صِلَة verb, اتَّقُوا the command, اللَّهَ its object.",
+        "ur": "يَا حرف، أَيُّ(هَا) منادیٰ، الَّذِينَ اسم موصول، آمَنُوا اس کا صلہ (فعل)، اتَّقُوا حکم، اللَّهَ اس کا مفعول۔"
       }
     },
     {
-      "id": "ch72l06-ex05",
+      "type": "TRUE_FALSE",
+      "id": "ch72-l06-ex06",
+      "statement": {
+        "en": "'يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا مَعَ الصَّادِقِينَ' is an exact quotation of 9:119.",
+        "ur": "'يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا مَعَ الصَّادِقِينَ' آیت 9:119 کا بالکل درست اقتباس ہے۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "It leaves out اتَّقُوا اللَّهَ وَ. The ayah is: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ.",
+        "ur": "اس میں اتَّقُوا اللَّهَ وَ چھوٹ گیا ہے۔ آیت یہ ہے: يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ۔"
+      }
+    },
+    {
       "type": "BUILD_SENTENCE",
+      "id": "ch72-l06-ex07",
       "target_translation": {
-        "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا قُومُوا الصَّلَاةَ — O you who believed, stand for prayer",
-        "ur": "اے ایمان والو، نماز کے لیے کھڑے ہو"
+        "en": "O you who have believed, seek help through patience.",
+        "ur": "اے ایمان والو، صبر سے مدد لو۔"
       },
       "tiles": [
         {
-          "ar": "يا",
+          "ar": "يَا",
           "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
+          "translit": "yaa",
+          "en": "O (particle of calling)",
+          "ur": "اے (حرفِ ندا)"
+        },
+        {
+          "ar": "أَيُّهَا",
+          "ar_plain": "أيها",
+          "translit": "ayyuhaa",
+          "en": "O you",
           "ur": "اے"
         },
         {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "those who",
-          "ur": "وہ لوگ جو"
-        },
-        {
-          "ar": "الذين",
+          "ar": "الَّذِينَ",
           "ar_plain": "الذين",
-          "translit": "alladhīna",
+          "translit": "alladhiina",
           "en": "who",
-          "ur": "کون"
+          "ur": "جو"
         },
         {
-          "ar": "آمنوا",
+          "ar": "آمَنُوا",
           "ar_plain": "آمنوا",
-          "translit": "āmanū",
+          "translit": "aamanuu",
           "en": "believed",
-          "ur": "یقین کیا"
+          "ur": "ایمان لائے"
         },
         {
-          "ar": "قوموا",
-          "ar_plain": "قوموا",
-          "translit": "qūmū",
-          "en": "stand",
-          "ur": "کھڑے ہو جاؤ"
+          "ar": "اسْتَعِينُوا",
+          "ar_plain": "استعينوا",
+          "translit": "ista'iinuu",
+          "en": "seek help",
+          "ur": "مدد لو"
         },
         {
-          "ar": "الصلاة",
-          "ar_plain": "الصلاة",
-          "translit": "aṣ-ṣalāh",
-          "en": "prayer",
-          "ur": "دعا"
+          "ar": "بِالصَّبْرِ",
+          "ar_plain": "بالصبر",
+          "translit": "bis-sabri",
+          "en": "through patience",
+          "ur": "صبر سے"
+        },
+        {
+          "ar": "آمَنَ",
+          "ar_plain": "آمن",
+          "translit": "aamana",
+          "en": "he believed",
+          "ur": "وہ ایمان لایا"
         }
       ],
       "correct_order": [
@@ -332,146 +396,40 @@
         3,
         4,
         5
-      ]
-    },
-    {
-      "id": "ch72l06-ex06",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "ما هي الأداة وما هو المنادى في: اللهم؟",
-        "ar_plain": "ما هي الأداة وما هو المنادى في اللهم",
-        "translit": "mā hiya al-ādah wa-mā huwa al-munādā fī: al-luhm?",
-        "en": "What is the particle and what is the منادى in: اللهم؟",
-        "ur": "ذرہ کیا ہے اور کیا ہے منادى in: اللهم؟"
-      },
-      "options": [
-        {
-          "en": "Particle: اللهم / منادى: الله",
-          "ur": "particle: اللهم / منادى: اللہ"
-        },
-        {
-          "en": "Particle: يا / منادى: الله",
-          "ur": "particle: یا / منادى: اللہ"
-        },
-        {
-          "en": "Particle: أما / منادى: اللهم",
-          "ur": "particle: اما / منادى: اللہم"
-        },
-        {
-          "en": "Option 4",
-          "ur": "آپشن 4"
-        }
       ],
-      "correct_index": 0
-    },
-    {
-      "id": "ch72l06-ex07",
-      "type": "CONVERSATION_BUILDER",
-      "prompt_line": {
-        "ar": "ما الفرق بين يا زيد وياأيهازيد؟",
-        "ar_plain": "ما الفرق بين يا زيد وياأيهازيد",
-        "translit": "mā al-farq bayna yā zayd wa-yā ayyuhā zayd?",
-        "en": "What's the difference between يا زيد and يا أَيُّهَا زيد?",
-        "ur": "يا زيد اور يا أَيُّهَا زيد? میں کیا فرق ہے"
-      },
-      "response_mode": "PICK",
-      "correct_option_index": 0,
-      "options": [
-        {
-          "ar": "يا زيد = direct address to one person",
-          "ar_plain": "يا زيد",
-          "translit": "yaa zayd",
-          "en": "Direct address to one person",
-          "ur": "ایک شخص کو براہ راست مخاطب کرنا"
-        },
-        {
-          "ar": "يا أيها زيد = also one person but with identity emphasis",
-          "ar_plain": "يا أيها زيد",
-          "translit": "yaa ayyuhaa zayd",
-          "en": "Also one person but with identity emphasis",
-          "ur": "بھی ایک شخص مگر شناخت پر زور کے ساتھ"
-        }
-      ]
-    },
-    {
-      "id": "ch72l06-ex08",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "يا directly addresses one person; أَيُّهَا addresses a ___",
-      "hint": {
-        "en": "A group of people",
-        "ur": "لوگوں کا گروہ"
-      },
-      "options": [
-        {
-          "ar": "group",
-          "ar_plain": "group",
-          "translit": "jamāʿa",
-          "en": "group",
-          "ur": "گروپ"
-        },
-        {
-          "ar": "person",
-          "ar_plain": "person",
-          "translit": "shakṣ",
-          "en": "person",
-          "ur": "شخص"
-        },
-        {
-          "ar": "concept",
-          "ar_plain": "concept",
-          "translit": "mafahim",
-          "en": "concept",
-          "ur": "تصور"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
-          "ur": "نہیں"
-        }
-      ],
-      "correct_answer": {
-        "ar": "group",
-        "ar_plain": "group",
-        "translit": "jamāʿa",
-        "en": "group",
-        "ur": "گروپ"
-      }
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "النداء في القرآن — من الرب إلى العبد",
-      "en": "Vocative in the Quran — From Lord to Servant",
-      "ur": "قرآن میں ندا — رب سے بندے تک"
+      "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا + the message",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا + الْخِطَابُ",
+      "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا + پیغام"
     },
     "ayah": {
-      "surah": 39,
-      "ayah": 53,
-      "label": "Az-Zumar 39:53",
-      "ar": "قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنْفُسِهِمْ لَا تَقْنَطُوا مِنْ رَحْمَةِ اللَّهِ إِنَّ اللَّهَ يَغْفِرُ الذُّنُوبَ جَمِيعًا",
-      "en": "Say: 'O My servants who have committed excess against themselves, do not despair of the mercy of Allah. Indeed, Allah forgives all sins.'",
-      "ur": "کہو: 'اے میرے بندوں جو اپنے آپ پر زیادتی کر چکے ہیں، اللہ کی رحمت سے مایوس نہ ہو۔ بیشک اللہ تمام گناۧ معاف کر دیتا ہے۔'",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/039053.mp3"
+      "surah": 33,
+      "ayah": 70,
+      "label": "Al-Ahzab 33:70",
+      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَقُولُوا قَوْلًا سَدِيدًا",
+      "en": "O you who have believed, fear Allah and speak words of appropriate justice.",
+      "ur": "اے ایمان والو، اللہ سے ڈرو اور سیدھی بات کہو۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/033070.mp3"
     },
     "highlighted_word_indices": [
+      0,
       1,
-      2
+      2,
+      3
     ],
     "noor_explanation": {
-      "ar": "في \"يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا\" — يا عِبَادِيّ is يَا + عِبَاد + ي (مضاف إلى المتكلم). Notice the ي at the end of عِبَادِيّ — this is the خاتمة متكلم (pronoun marker for 'my'). The structure: يا + عبد + ي = 'O my servant.'",
-      "en": "In 'O My servants who have committed excess' — يا عِبَادِيّ is يَا + عِبَاد + ي (genitive with 'my' attached). Notice the ي at the end of عِبَادِيّ — this is the pronoun marker for 'my'. The structure: يا + عبد + ي = 'O my servant.'",
-      "ur": "'اے میرے بندوں جو اپنے آپ پر زیادتی کر چکے' میں — 'یا عبادی' یہ 'یا' + 'عباد' + 'ی' (مضاف الیہ 'میرے' کے ساتھ)۔ 'عبادی' کے آخر میں 'ی' نوٹ کریں — یہ 'میرے' کا pronoun marker ہے۔"
+      "en": "The call is the first four words. Then come two plural commands joined by وَ: اتَّقُوا اللَّهَ and قُولُوا قَوْلًا سَدِيدًا. The call tells you exactly who both commands are for.",
+      "ur": "پہلے چار الفاظ ندا ہیں۔ پھر وَ سے جڑے جمع کے دو حکم آتے ہیں: اتَّقُوا اللَّهَ اور قُولُوا قَوْلًا سَدِيدًا۔ ندا ٹھیک ٹھیک بتاتی ہے کہ دونوں حکم کس کے لیے ہیں۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "Chapter 72 is nearly complete. You now know every form of النِّدَاء — يا, أَيُّهَا, and أَمَّا. You understand the difference between direct address and group address. Tomorrow we reach the emotional and spiritual climax of the entire curriculum.",
-      "en": "Chapter 72 is nearly complete. You now know every form of النِّدَاء — يا, أَيُّهَا, and أَمَّا. You understand the difference between direct address and group address. Tomorrow we reach the emotional and spiritual climax of the entire curriculum.",
-      "ur": "باب 72 تقریباً مکمل ہو گیا ہے۔ اب آپ نِّدَاء کی ہر شکل جانتے ہیں — 'یا'، 'ایہ'، اور 'اما'۔ آپ براہ راست خطاب اور گروہ خطاب کے درمیان فرق سمجھتے ہیں۔ کل ہم پورے نصاب کے جذابی اور روحانی عروج تک پہنچتے ہیں۔"
+      "en": "Read the call first, then every command after it until the address changes. Next: calls between family members in the Quran's stories.",
+      "ur": "پہلے ندا پڑھیے، پھر اس کے بعد کا ہر حکم جب تک خطاب نہ بدلے۔ آگے: قرآن کے قصوں میں گھر والوں کے درمیان ندا۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }

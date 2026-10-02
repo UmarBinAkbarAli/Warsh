@@ -1,486 +1,446 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 72, Lesson 2 — The built vocative: names and intended indefinites take one ḍamma, no tanwīn.",
     "chapter_order": 72,
     "lesson_order": 2,
     "chapter_title": "المنادى",
-    "title": "يَا أَيُّهَا الَّذِينَ آمَنُوا — The Most Common Quranic Address",
-    "titleAr": "يا أيها الذين آمنوا — أكثر نداءات القرآن",
+    "title": "The Built Vocative — يَا نُوحُ، يَا أَرْضُ",
+    "titleAr": "الْمُنَادَى الْمَبْنِيُّ عَلَى الضَّمِّ",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 104,
-      "label": "Al-Baqarah 2:104",
-      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَقُولُوا رَاعِنَا وَقُولُوا انظُرْنَا وَاسْمَعُوا ۗ وَلِلْكَافِرِينَ عَذَابٌ أَلِيمٌ",
-      "en": "O you who have believed, say not [to Allāh's Messenger], \"Rāʿinā\" but say, \"Unẓurnā\" and listen. And for the disbelievers is a painful punishment.",
-      "ur": "اے اہل ایمان! (گفتگو کے وقت پیغمبرِ خدا سے) راعنا نہ کہا کرو۔ انظرنا کہا کرو۔ اور خوب سن رکھو، اور کافروں کے لیے دکھ دینے والا عذاب ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002104.mp3"
+      "surah": 11,
+      "ayah": 44,
+      "label": "Hud 11:44",
+      "ar": "وَقِيلَ يَا أَرْضُ ابْلَعِي مَاءَكِ وَيَا سَمَاءُ أَقْلِعِي",
+      "en": "And it was said, 'O earth, swallow your water, and O sky, withhold [your rain].'",
+      "ur": "اور کہا گیا: اے زمین، اپنا پانی نگل لے، اور اے آسمان، تھم جا۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/011044.mp3"
     },
     "noor_intro": {
-      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا appears over 70 times in the Quran — more than any other vocative address. Today we analyze its grammar and understand why it targets specifically believers.",
-      "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا appears over 70 times in the Quran — more than any other vocative address. Today we analyze its grammar and understand why it targets specifically believers.",
-      "ur": "'اے ایمان والو' قرآن میں 70 سے زائد بار آتا ہے — کسی بھی دوسری ندا سے زیادہ۔ آج ہم اس کی گرامر تجزیہ کرتے ہیں اور سمجھتے ہیں کہ یہ خاص طور پر مومنین کو کیوں خطاب کرتا ہے۔"
+      "en": "يَا أَرْضُ … وَيَا سَمَاءُ — the earth and the sky are spoken to directly. Look at the endings: أَرْضُ and سَمَاءُ have one ḍamma and no tanwīn. Today you learn when a vocative looks like this.",
+      "ur": "يَا أَرْضُ … وَيَا سَمَاءُ — زمین اور آسمان سے براہِ راست بات کی گئی ہے۔ آخر دیکھیے: أَرْضُ اور سَمَاءُ پر ایک ضمہ ہے، تنوین نہیں۔ آج آپ سیکھیں گے کہ منادیٰ کب ایسا ہوتا ہے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا",
-        "ar_plain": "يا أيها الذين آمنوا",
-        "translit": "yā ayyuhā alladhīna āmanū",
-        "en": "O those who believe",
-        "ur": "اے ایمان والو"
-      },
-      "definition": {
-        "en": "يا (vocative particle) + أيها (calling word) + الذين (genitive/مضاف إليه) + آمنوا (past verb)",
-        "ar": "يا (حرف نداء) + أيها (اسم بمعنى المدعو) + الذين (مضاف إليه) + آمنوا (فعل ماضٍ)",
-        "ur": "يا (صوتی ذرہ) + أيها (بلانے والا لفظ) + الذين (genitive/مضاف إليه) + آمنوا (ماضی فعل)"
-      },
-      "highlight": true
-    },
-    {
       "type": "CONCEPT",
       "concept": {
-        "en": "أَيُّهَا stays unchanged (invariable)",
-        "ar": "أيها في الجر",
-        "ur": "أَيُّهَا غیر تبدیل شدہ رہتا ہے (غیر متغیر)"
+        "en": "A one-word name: one ḍamma, no tanwīn",
+        "ar": "الْعَلَمُ الْمُفْرَدُ",
+        "ur": "ایک لفظ والا نام"
       },
       "explanation": {
-        "en": "أَيُّهَا is invariable — the particle itself never changes case. It's the noun after it that gets marked. When you see أَيُّهَا followed by a noun, that noun will be in the genitive (مضاف إليه) because أيها is a construct that requires a genitive after it.",
-        "ar": "أَيُّهَا حرف نداء ثابت لا يتغير — الذي يتغير هو الاسم الذي بعده",
-        "ur": "أَيُّهَا غیر متغیر ہے — ذرہ خود کبھی بھی کیس نہیں بدلتا۔ یہ اسم ہے جو اس کے بعد نشان زد ہوتا ہے۔ جب آپ دیکھیں گے کہ أَيُّهَا کے بعد کوئی اسم ہے، تو وہ اسم genitive (مضاف إليه) میں ہوگا کیونکہ أيها ایک ایسی ساخت ہے جس کے بعد اسم کی ضرورت ہوتی ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Believers as Primary Addressees",
-        "ar": "المؤمنون كمخاطبين",
-        "ur": "مومنین بطور بنیادی مخاطب"
-      },
-      "explanation": {
-        "en": "The Quran directly addresses believers in most vocative ayahs — when you read 'O you who believe', the text is speaking directly TO you. This is not hypothetical or abstract. The Quran addresses the one reading it.",
-        "ar": "القرآن يخاطب المؤمنين مباشرة في معظم آيات النداء — عندما تقرأ 'يا أيها الذين آمنوا' فالنص يخاطبك مباشرة",
-        "ur": "قرآن ایمانداروں سے براہ راست زیادہ تر الفاظی آیات میں مخاطب ہے - جب آپ 'اے ایمان والو' پڑھتے ہیں تو متن براہ راست آپ سے بات کر رہا ہوتا ہے۔ یہ فرضی یا تجریدی نہیں ہے۔ قرآن پڑھنے والے سے مخاطب ہے۔"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Verb After الذين — Relative Clause",
-        "ar": "الفعل بعد الذين",
-        "ur": "فعل کے بعد الذين — متعلقہ شق"
-      },
-      "explanation": {
-        "en": "آمنوا (they believed) is a relative clause that specifies which group is being called — 'those who have believed'",
-        "ar": "آمنوا هو جملة صفة نسبية تحدد المجموعة المخاطبة",
-        "ur": "آمنوا (وہ مانتے ہیں) ایک متعلقہ شق ہے جو بتاتی ہے کہ کس گروہ کو بلایا جا رہا ہے - 'وہ لوگ جو ایمان لائے ہیں'"
-      }
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Vocative Followed by Command — Purpose Pattern",
-        "ar": "النداء مع الأمر",
-        "ur": "ووکیٹیو جس کے بعد کمانڈ - مقصد کا نمونہ"
-      },
-      "explanation": {
-        "en": "After يَا أَيُّهَا الَّذِينَ آمَنُوا comes an imperative, prohibition, or request — the pattern is: call + command. This is the most common pattern in the Quran — identify who is being addressed, then tell them what to do.",
-        "ar": "بعد يا أيها الذين آمنوا يأتي أمر أو نهي أو طلب — النمط: نداء + أمر",
-        "ur": "يَا أَيُّهَا الَّذِينَ آمَنُوا کے بعد ایک لازمی، ممانعت، یا درخواست آجاتی ہے — پیٹرن یہ ہے: کال + کمانڈ۔ یہ قرآن میں سب سے زیادہ عام نمونہ ہے - شناخت کریں کہ کس سے خطاب کیا جا رہا ہے، پھر انہیں بتائیں کہ کیا کرنا ہے۔"
+        "en": "When the one called is a single-word name, it ends in one ḍamma with no tanwīn: يَا نُوحُ، يَا دَاوُودُ، يَا زَيْدُ (not زَيْدٌ). Names ending in alif, like مُوسَى and عِيسَى, show no change at all.",
+        "ur": "جب منادیٰ ایک لفظ والا نام ہو تو اس کے آخر میں ایک ضمہ آتا ہے، تنوین نہیں: يَا نُوحُ، يَا دَاوُودُ، يَا زَيْدُ (زَيْدٌ نہیں)۔ الف پر ختم ہونے والے نام، جیسے مُوسَى اور عِيسَى، میں کوئی تبدیلی نظر نہیں آتی۔"
       },
       "examples": [
         {
-          "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
-          "ar_plain": "يا أيها الذين آمنوا اتقوا الله",
-          "translit": "yā ayyuhā alladhīna āmanū ittaqū Allāh",
-          "en": "Call + command to fear Allah",
-          "ur": "اللہ سے ڈرنے کا حکم + پکارو"
+          "ar": "يَا دَاوُودُ",
+          "ar_plain": "يا داوود",
+          "translit": "yaa daawuudu",
+          "en": "O Dawud!",
+          "ur": "اے داؤد!"
+        },
+        {
+          "ar": "يَا زَيْدُ",
+          "ar_plain": "يا زيد",
+          "translit": "yaa zaydu",
+          "en": "O Zayd!",
+          "ur": "اے زید!"
         }
       ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "A specific listener without a name",
+        "ar": "النَّكِرَةُ الْمَقْصُودَةُ",
+        "ur": "نکرہ مقصودہ"
+      },
+      "explanation": {
+        "en": "An ordinary noun aimed at one particular listener behaves like a name: يَا رَجُلُ — 'O man!' (to the man in front of you). In the Quran: يَا أَرْضُ، يَا سَمَاءُ، يَا نَارُ، يَا جِبَالُ — each one particular thing, spoken to directly.",
+        "ur": "عام اسم جب کسی خاص سننے والے کے لیے ہو تو نام کی طرح چلتا ہے: يَا رَجُلُ — 'اے آدمی!' (سامنے کھڑے آدمی سے)۔ قرآن میں: يَا أَرْضُ، يَا سَمَاءُ، يَا نَارُ، يَا جِبَالُ — ہر ایک خاص چیز، جس سے براہِ راست بات کی گئی۔"
+      },
+      "examples": [
+        {
+          "ar": "يَا رَجُلُ",
+          "ar_plain": "يا رجل",
+          "translit": "yaa rajulu",
+          "en": "O man! (a particular man)",
+          "ur": "اے آدمی! (ایک خاص آدمی)"
+        }
+      ]
+    },
+    {
+      "type": "CONCEPT",
+      "concept": {
+        "en": "'Built' on ḍamma",
+        "ar": "مَبْنِيٌّ عَلَى الضَّمِّ",
+        "ur": "مبنی بر ضمہ"
+      },
+      "explanation": {
+        "en": "Grammarians call this ending مَبْنِيٌّ عَلَى الضَّمِّ — 'built on ḍamma'. The ḍamma is fixed: it is not the nominative of a subject, and it does not change. The word's position is accusative (فِي مَحَلِّ نَصْبٍ), which is why other kinds of vocative show fatḥa.",
+        "ur": "نحوی اسے مَبْنِيٌّ عَلَى الضَّمِّ کہتے ہیں — 'ضمہ پر مبنی'۔ یہ ضمہ ثابت رہتا ہے: یہ فاعل کا رفع نہیں، اور بدلتا نہیں۔ لفظ کا مقام نصب کا ہے (فِي مَحَلِّ نَصْبٍ)، اسی لیے منادیٰ کی دوسری قسموں پر فتحہ آتا ہے۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "قُلْنَا يَا نَارُ كُونِي بَرْدًا وَسَلَامًا عَلَىٰ إِبْرَاهِيمَ",
+        "ar_plain": "قلنا يا نار كوني بردا وسلاما على إبراهيم",
+        "translit": "qulnaa yaa naaru kuunii bardan wa-salaaman 'alaa ibraahiima",
+        "en": "We said, 'O fire, be coolness and safety upon Ibrahim.'",
+        "ur": "ہم نے کہا: اے آگ، ابراہیم پر ٹھنڈی اور سلامتی والی ہو جا۔"
+      },
+      "explanation": {
+        "en": "21:69. نَارُ is one particular fire, spoken to directly: one ḍamma, no tanwīn. نَار is feminine, so the command is كُونِي.",
+        "ur": "21:69۔ نَارُ ایک خاص آگ ہے جس سے براہِ راست بات کی گئی: ایک ضمہ، تنوین نہیں۔ نَار مؤنث ہے، اس لیے حکم كُونِي ہے۔"
+      }
     }
   ],
   "exercises": [
     {
-      "id": "ch72l02-ex01",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "ما الذي بعد أيها في: يَا أَيُّهَا الَّذِينَ آمَنُوا؟",
-        "ar_plain": "ما الذي بعد أيها في يا أيها الذين آمنوا",
-        "translit": "mā alladhī ba'da ayyuhā fī: yā ayyuhā alladhīna āmanū?",
-        "en": "What comes after أيها in: يَا أَيُّهَا الَّذِينَ آمَنُوا?",
-        "ur": "أيها in کے بعد کیا آتا ہے: يَا أَيُّهَا الَّذِينَ آمَنُوا?"
-      },
-      "options": [
-        {
-          "en": "آمنوا — a verb",
-          "ur": "ایمان لایا — ایک فعل"
-        },
-        {
-          "en": "الذين — in genitive (مضاف إليه)",
-          "ur": "ذین — مضاف الیہ میں"
-        },
-        {
-          "en": "الناس — subject",
-          "ur": "ناس — مبتدأ"
-        },
-        {
-          "en": "Option 4",
-          "ur": "آپشن 4"
-        }
-      ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch72l02-ex02",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "أَيُّهَا changes case depending on what follows it",
-        "ur": "ایہ اپنا case اس کے بعد آنے والے کے مطابق بدلتا ہے"
-      },
-      "correct_answer": false,
-      "explanation_on_wrong": {
-        "en": "أَيُّهَا is an invariable particle — it doesn't change case by itself. It never takes مرفوع, منصوب, or مجر. What changes is the noun that follows it.",
-        "ar": "أَيُّهَا حرف ثابت لا يتغير — لا يرفع ولا ينصب ولا يجر بنفسه. الذي يتغير هو الاسم الذي بعده.",
-        "ur": "أَيُّهَا ایک ناقابل تغیر ذرہ ہے - یہ خود سے کیس تبدیل نہیں کرتا ہے۔ یہ کبھی بھی مرفوع، منصوب، یا مجر نہیں لیتا ہے۔ کیا تبدیلیاں اسم ہے جو اس کے بعد آتی ہے۔"
-      }
-    },
-    {
-      "id": "ch72l02-ex03",
       "type": "FILL_BLANK",
+      "id": "ch72-l02-ex01",
       "mode": "TAP",
-      "sentence_ar": "يَا أَيُّهَا الَّذِينَ ___ — أكثر نداءات القرآن",
+      "sentence_ar": "يَا ___ اهْبِطْ بِسَلَامٍ مِّنَّا",
       "hint": {
-        "en": "The verb in the relative clause",
-        "ur": "جملہ میں فعل"
+        "en": "'O Nuh, disembark in safety from Us' (11:48). A one-word name after يَا.",
+        "ur": "'اے نوح، ہماری طرف سے سلامتی کے ساتھ اتر جاؤ' (11:48)۔ يَا کے بعد ایک لفظ والا نام۔"
       },
       "options": [
         {
-          "ar": "آمنوا",
-          "ar_plain": "آمنوا",
-          "translit": "āmanū",
-          "en": "آمنوا",
-          "ur": "آمنوا"
+          "ar": "نُوحُ",
+          "ar_plain": "نوح",
+          "translit": "nuuhu",
+          "en": "Nuh (ḍamma, no tanwīn)",
+          "ur": "نوح (ضمہ، بغیر تنوین)"
         },
         {
-          "ar": "كفروا",
-          "ar_plain": "كفروا",
-          "translit": "kafarū",
-          "en": "كفروا",
-          "ur": "كفروا"
+          "ar": "نُوحٌ",
+          "ar_plain": "نوح",
+          "translit": "nuuhun",
+          "en": "Nuh (ḍamma with tanwīn)",
+          "ur": "نوح (تنوین والا ضمہ)"
         },
         {
-          "ar": "جاهدوا",
-          "ar_plain": "جاهدوا",
-          "translit": "jāhadū",
-          "en": "جاهدوا",
-          "ur": "جاهدوا"
+          "ar": "نُوحًا",
+          "ar_plain": "نوحا",
+          "translit": "nuuhan",
+          "en": "Nuh (fatḥa with tanwīn)",
+          "ur": "نوح (تنوین والا فتحہ)"
         },
         {
-          "ar": "صلوا",
-          "ar_plain": "صلوا",
-          "translit": "ṣallū",
-          "en": "صلوا",
-          "ur": "صلوا"
+          "ar": "نُوحٍ",
+          "ar_plain": "نوح",
+          "translit": "nuuhin",
+          "en": "Nuh (kasra with tanwīn)",
+          "ur": "نوح (تنوین والا کسرہ)"
         }
       ],
       "correct_answer": {
-        "ar": "آمنوا",
-        "ar_plain": "آمنوا",
-        "translit": "āmanū",
-        "en": "آمنوا",
-        "ur": "آمنوا"
+        "ar": "نُوحُ",
+        "ar_plain": "نوح",
+        "translit": "nuuhu",
+        "en": "Nuh (ḍamma, no tanwīn)",
+        "ur": "نوح (ضمہ، بغیر تنوین)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A one-word name after يَا is built on one ḍamma with no tanwīn: يَا نُوحُ.",
+        "ur": "يَا کے بعد ایک لفظ والا نام ایک ضمہ پر مبنی ہوتا ہے، تنوین کے بغیر: يَا نُوحُ۔"
       }
     },
     {
-      "id": "ch72l02-ex04",
-      "type": "GRAMMAR_PARSE",
-      "sentence_ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ",
-      "words": [
-        {
-          "ar": "يا",
-          "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
-          "ur": "اے"
-        },
-        {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "those who",
-          "ur": "وہ لوگ جو"
-        },
-        {
-          "ar": "الذين",
-          "ar_plain": "الذين",
-          "translit": "alladhīna",
-          "en": "who",
-          "ur": "کون"
-        },
-        {
-          "ar": "آمنوا",
-          "ar_plain": "آمنوا",
-          "translit": "āmanū",
-          "en": "believed",
-          "ur": "یقین کیا"
-        },
-        {
-          "ar": "اتقوا",
-          "ar_plain": "اتقوا",
-          "translit": "ittaqū",
-          "en": "fear",
-          "ur": "خوف"
-        },
-        {
-          "ar": "الله",
-          "ar_plain": "الله",
-          "translit": "Allāh",
-          "en": "Allah",
-          "ur": "اللہ"
-        }
-      ],
-      "available_roles": [
-        "PARTICLE",
-        "VERB",
-        "NOUN",
-        "PREPOSITION",
-        "OBJECT",
-        "RELATIVE_PRONOUN"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "PARTICLE",
-        "RELATIVE_PRONOUN",
-        "VERB",
-        "VERB",
-        "OBJECT"
-      ]
+      "type": "TRUE_FALSE",
+      "id": "ch72-l02-ex02",
+      "statement": {
+        "en": "In يَا زَيْدُ, the name should carry tanwīn: يَا زَيْدٌ.",
+        "ur": "يَا زَيْدُ میں نام پر تنوین ہونی چاہیے: يَا زَيْدٌ۔"
+      },
+      "correct_answer": false,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A name called with يَا loses its tanwīn: يَا زَيْدُ.",
+        "ur": "يَا کے ساتھ پکارا گیا نام تنوین کھو دیتا ہے: يَا زَيْدُ۔"
+      }
     },
     {
-      "id": "ch72l02-ex05",
+      "type": "TAP_TRANSLATION",
+      "id": "ch72-l02-ex03",
+      "prompt": {
+        "ar": "يَا جِبَالُ أَوِّبِي مَعَهُ",
+        "ar_plain": "يا جبال أوبي معه",
+        "translit": "yaa jibaalu awwibii ma'ahu",
+        "en": "O mountains, repeat [praises] with him.",
+        "ur": "اے پہاڑو، ان کے ساتھ تسبیح دہراؤ۔"
+      },
+      "options": [
+        {
+          "en": "جِبَالُ: particular mountains spoken to directly — ḍamma, no tanwīn",
+          "ur": "جِبَالُ: خاص پہاڑ جن سے براہِ راست بات ہوئی — ضمہ، تنوین نہیں"
+        },
+        {
+          "en": "جِبَالُ: a muḍāf — so it takes fatḥa",
+          "ur": "جِبَالُ: مضاف ہے — اس لیے فتحہ"
+        },
+        {
+          "en": "جِبَالُ: the subject of أَوِّبِي",
+          "ur": "جِبَالُ: أَوِّبِي کا فاعل"
+        },
+        {
+          "en": "جِبَالُ: genitive after a preposition",
+          "ur": "جِبَالُ: حرفِ جر کے بعد مجرور"
+        }
+      ],
+      "correct_index": 0,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "34:10. The mountains are spoken to directly, so جِبَالُ is an intended indefinite, built on ḍamma.",
+        "ur": "34:10۔ پہاڑوں سے براہِ راست بات ہوئی، اس لیے جِبَالُ نکرہ مقصودہ ہے، ضمہ پر مبنی۔"
+      }
+    },
+    {
       "type": "MATCHING",
+      "id": "ch72-l02-ex04",
       "left_column": [
         {
-          "ar": "يا",
-          "ar_plain": "يا",
-          "translit": "yā",
-          "en": "يا",
-          "ur": "يا"
+          "ar": "يَا دَاوُودُ",
+          "ar_plain": "يا داوود",
+          "translit": "yaa daawuudu",
+          "en": "O Dawud",
+          "ur": "اے داؤد"
         },
         {
-          "ar": "أَيُّهَا",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "أَيُّهَا",
-          "ur": "أَيُّهَا"
+          "ar": "يَا سَمَاءُ",
+          "ar_plain": "يا سماء",
+          "translit": "yaa samaa'u",
+          "en": "O sky",
+          "ur": "اے آسمان"
         },
         {
-          "ar": "الذين",
-          "ar_plain": "الذين",
-          "translit": "alladhīna",
-          "en": "الذين",
-          "ur": "الذين"
+          "ar": "يَا رَجُلُ",
+          "ar_plain": "يا رجل",
+          "translit": "yaa rajulu",
+          "en": "O man",
+          "ur": "اے آدمی"
         }
       ],
       "right_column": [
         {
-          "en": "يحدد المجموعة (مضاف إليه)",
-          "ur": "يحدد المجموعة (مضاف إليه)"
+          "en": "A prophet's name",
+          "ur": "ایک نبی کا نام"
         },
         {
-          "en": "حرف نداء ثابت",
-          "ur": "حرف نداء ثابت"
+          "en": "Part of nature, spoken to",
+          "ur": "فطرت کا ایک حصہ، جس سے بات ہوئی"
         },
         {
-          "en": "يدعو الانتباه (اسم بمعنى المدعو)",
-          "ur": "يدعو الانتباه (اسم بمعنى المدعو)"
+          "en": "A person whose name is not used",
+          "ur": "ایک شخص جس کا نام نہیں لیا گیا"
         }
       ],
       "correct_pairs": [
         [
           0,
-          1
+          0
         ],
         [
           1,
-          2
+          1
         ],
         [
           2,
-          0
+          2
         ]
-      ]
+      ],
+      "xp_value": 1
     },
     {
-      "id": "ch72l02-ex06",
+      "type": "FILL_BLANK",
+      "id": "ch72-l02-ex05",
+      "mode": "TAP",
+      "sentence_ar": "يَا ___ ، اجْلِسْ هُنَا",
+      "hint": {
+        "en": "'O man (the one in front of you), sit here.' A particular listener without a name.",
+        "ur": "'اے آدمی (جو سامنے ہے)، یہاں بیٹھو۔' ایک خاص سننے والا، نام کے بغیر۔"
+      },
+      "options": [
+        {
+          "ar": "رَجُلُ",
+          "ar_plain": "رجل",
+          "translit": "rajulu",
+          "en": "man (ḍamma, no tanwīn)",
+          "ur": "آدمی (ضمہ، بغیر تنوین)"
+        },
+        {
+          "ar": "رَجُلٌ",
+          "ar_plain": "رجل",
+          "translit": "rajulun",
+          "en": "man (with tanwīn)",
+          "ur": "آدمی (تنوین کے ساتھ)"
+        },
+        {
+          "ar": "الرَّجُلُ",
+          "ar_plain": "الرجل",
+          "translit": "ar-rajulu",
+          "en": "the man",
+          "ur": "وہ آدمی"
+        },
+        {
+          "ar": "رَجُلٍ",
+          "ar_plain": "رجل",
+          "translit": "rajulin",
+          "en": "man (genitive)",
+          "ur": "آدمی (مجرور)"
+        }
+      ],
+      "correct_answer": {
+        "ar": "رَجُلُ",
+        "ar_plain": "رجل",
+        "translit": "rajulu",
+        "en": "man (ḍamma, no tanwīn)",
+        "ur": "آدمی (ضمہ، بغیر تنوین)"
+      },
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "A particular listener called by an ordinary noun takes one ḍamma with no tanwīn: يَا رَجُلُ. يَا does not go directly onto ال.",
+        "ur": "عام اسم سے کسی خاص سننے والے کو پکاریں تو ایک ضمہ آتا ہے، تنوین نہیں: يَا رَجُلُ۔ يَا براہِ راست ال والے اسم پر نہیں آتا۔"
+      }
+    },
+    {
+      "type": "GRAMMAR_PARSE",
+      "id": "ch72-l02-ex06",
+      "sentence_ar": "يَا نُوحُ اهْبِطْ",
+      "words": [
+        {
+          "ar": "يَا",
+          "ar_plain": "يا",
+          "translit": "yaa",
+          "en": "O (particle of calling)",
+          "ur": "اے (حرفِ ندا)"
+        },
+        {
+          "ar": "نُوحُ",
+          "ar_plain": "نوح",
+          "translit": "nuuhu",
+          "en": "Nuh",
+          "ur": "نوح"
+        },
+        {
+          "ar": "اهْبِطْ",
+          "ar_plain": "اهبط",
+          "translit": "ihbit",
+          "en": "disembark",
+          "ur": "اتر جاؤ"
+        }
+      ],
+      "available_roles": [
+        "PARTICLE",
+        "VOCATIVE",
+        "VERB",
+        "SUBJECT",
+        "PREPOSITION"
+      ],
+      "correct_roles": [
+        "PARTICLE",
+        "VOCATIVE",
+        "VERB"
+      ],
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "يَا is the particle, نُوحُ the vocative built on ḍamma, and اهْبِطْ the command.",
+        "ur": "يَا حرف ہے، نُوحُ ضمہ پر مبنی منادیٰ، اور اهْبِطْ حکم ہے۔"
+      }
+    },
+    {
       "type": "BUILD_SENTENCE",
+      "id": "ch72-l02-ex07",
       "target_translation": {
-        "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا — O you who believed, pray!",
-        "ur": "اے ایمان والو، نماز پڑھو!"
+        "en": "O earth, swallow your water.",
+        "ur": "اے زمین، اپنا پانی نگل لے۔"
       },
       "tiles": [
         {
-          "ar": "يا",
+          "ar": "يَا",
           "ar_plain": "يا",
-          "translit": "yā",
-          "en": "O",
-          "ur": "اے"
+          "translit": "yaa",
+          "en": "O (particle of calling)",
+          "ur": "اے (حرفِ ندا)"
         },
         {
-          "ar": "أيها",
-          "ar_plain": "أيها",
-          "translit": "ayyuhā",
-          "en": "those who",
-          "ur": "وہ لوگ جو"
+          "ar": "أَرْضُ",
+          "ar_plain": "أرض",
+          "translit": "ardu",
+          "en": "earth",
+          "ur": "زمین"
         },
         {
-          "ar": "الذين",
-          "ar_plain": "الذين",
-          "translit": "alladhīna",
-          "en": "who",
-          "ur": "کون"
+          "ar": "ابْلَعِي",
+          "ar_plain": "ابلعي",
+          "translit": "ibla'ii",
+          "en": "swallow",
+          "ur": "نگل لے"
         },
         {
-          "ar": "آمنوا",
-          "ar_plain": "آمنوا",
-          "translit": "āmanū",
-          "en": "believed",
-          "ur": "یقین کیا"
+          "ar": "مَاءَكِ",
+          "ar_plain": "ماءك",
+          "translit": "maa'aki",
+          "en": "your water",
+          "ur": "اپنا پانی"
         },
         {
-          "ar": "صلوا",
-          "ar_plain": "صلوا",
-          "translit": "ṣallū",
-          "en": "pray",
-          "ur": "دعا"
+          "ar": "أَرْضٌ",
+          "ar_plain": "أرض",
+          "translit": "ardun",
+          "en": "earth (with tanwīn)",
+          "ur": "زمین (تنوین کے ساتھ)"
         }
       ],
       "correct_order": [
         0,
         1,
         2,
-        3,
-        4
-      ]
-    },
-    {
-      "id": "ch72l02-ex07",
-      "type": "TAP_TRANSLATION",
-      "prompt": {
-        "ar": "ما مفعول اتقوا في: اتَّقُوا اللَّهَ؟",
-        "ar_plain": "ما مفعول اتقوا في اتقوا الله",
-        "translit": "mā mafʿūl ittaqā fī: ittaqū Allāh?",
-        "en": "What is the object of اتقوا in: اتَّقُوا اللَّهَ?",
-        "ur": "اتقوا in کا اعتراض کیا ہے: اتَّقُوا اللَّهَ?"
-      },
-      "options": [
-        {
-          "en": "اتقوا itself (no object)",
-          "ur": "خود اتقوا (کوئی مفعول نہیں)"
-        },
-        {
-          "en": "Allah (مفعول به منصوب)",
-          "ur": "اللہ (مفعول به منصوب)"
-        },
-        {
-          "en": "آمنوا",
-          "ur": "ایمان لایا"
-        },
-        {
-          "en": "Option 4",
-          "ur": "آپشن 4"
-        }
+        3
       ],
-      "correct_index": 1
-    },
-    {
-      "id": "ch72l02-ex08",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "Pattern after يَا أَيُّهَا الَّذِينَ آمَنُوا is: Address + ___",
-      "hint": {
-        "en": "What comes after the address",
-        "ur": "خطاب کے بعد کیا آتا ہے"
-      },
-      "options": [
-        {
-          "ar": "command",
-          "ar_plain": "command",
-          "translit": "amr",
-          "en": "command",
-          "ur": "حکم"
-        },
-        {
-          "ar": "question",
-          "ar_plain": "question",
-          "translit": "istifhām",
-          "en": "question",
-          "ur": "سوال"
-        },
-        {
-          "ar": "exclamation",
-          "ar_plain": "exclamation",
-          "translit": "ta'ajjub",
-          "en": "exclamation",
-          "ur": "فجائیہ"
-        },
-        {
-          "ar": "جواب",
-          "ar_plain": "جواب",
-          "translit": "jawāb",
-          "en": "answer",
-          "ur": "جواب"
-        }
-      ],
-      "correct_answer": {
-        "ar": "command",
-        "ar_plain": "command",
-        "translit": "amr",
-        "en": "command",
-        "ur": "حکم"
-      }
+      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "يا أيها الذين آمنوا — الطابع المباشر",
-      "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا — The Direct Address",
-      "ur": "اے ایمان والو — براہ راست خطاب"
+      "en": "Built on ḍamma: names and particular listeners",
+      "ar": "الْمُنَادَى الْمَبْنِيُّ عَلَى الضَّمِّ",
+      "ur": "ضمہ پر مبنی منادیٰ: نام اور خاص سننے والے"
     },
     "ayah": {
-      "surah": 5,
-      "ayah": 6,
-      "label": "Al-Ma'idah 5:6",
-      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قُمْتُمْ إِلَى الصَّلَاةِ فَاغْسِلُوا وُجُوهَكُمْ وَأَيْدِيَكُمْ إِلَى الْمَرَافِقِ وَامْسَحُوا بِرُءُوسِكُمْ وَأَرْجُلَكُمْ إِلَى الْكَعْبَيْنِ",
-      "en": "O you who believe, when you rise for prayer, wash your faces and your hands to the elbows and wipe your heads and your feet to the ankles.",
-      "ur": "اے ایمان والو، جب تم نماز کے لیے کھڑے ہو تو اپنے چہرے اور ہاتھ کہنیوں تک دھو لو اور اپنے سر پونچھ لو اور اپنے پاؤں کانٹوں تک۔",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/005006.mp3"
+      "surah": 38,
+      "ayah": 26,
+      "label": "Sad 38:26",
+      "ar": "يَا دَاوُودُ إِنَّا جَعَلْنَاكَ خَلِيفَةً فِي الْأَرْضِ",
+      "en": "O David, indeed We have made you a successor upon the earth.",
+      "ur": "اے داؤد، ہم نے تمہیں زمین میں خلیفہ بنایا ہے۔",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/038026.mp3"
     },
     "highlighted_word_indices": [
       0,
-      1,
-      2,
-      3
+      1
     ],
     "noor_explanation": {
-      "ar": "في \"يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قُمْتُمْ\" — الآية تامة النداء مع جملة شرطية. Note: قُمْتُمْ is فعل شرط requiring جواب (فَاغْسِلُوا). كل آية بدءًا بـ يَا أَيُّهَا الَّذِينَ آمَنُوا هي نداء للمؤمنين يليه أمر أو شرط أو نهي أو دعاء.",
-      "en": "In 'O you who believe, when you rise for prayer' — this is a complete vocative followed by a conditional clause. قُمْتُمْ (you rise) is a conditional verb requiring a response (فَاغْسِلُوا — then wash). Every ayah starting with يَا أَيُّهَا الَّذِينَ آمَنُوا is a call to believers followed by a command, condition, prohibition, or supplication.",
-      "ur": "'اے ایمان والو، جب تم نماز کے لیے کھڑے ہو' — یہ مکمل ندا ہے جس کے بعد ایک شرطی جملہ ہے۔ قُمْتُمْ ایک فعل شرط ہے جس کے جواب کی ضرورت ہے (پھر دھو لو)۔ ہر آیت 'اے ایمان والو' سے شروع ہو کر حکم، شرط، نہی، یا دعا کے ساتھ ختم ہوتی ہے۔"
+      "en": "يَا دَاوُودُ — a one-word name, so one ḍamma and no tanwīn. Compare 34:10, where Dawud is not called: آتَيْنَا دَاوُودَ, with fatḥa as an object. The vocative ending is fixed; the object ending comes from the verb.",
+      "ur": "يَا دَاوُودُ — ایک لفظ والا نام، اس لیے ایک ضمہ اور تنوین نہیں۔ 34:10 سے موازنہ کیجیے جہاں داؤد کو پکارا نہیں گیا: آتَيْنَا دَاوُودَ، مفعول ہونے کی وجہ سے فتحہ۔ منادیٰ کا آخر ثابت ہے؛ مفعول کا آخر فعل سے آتا ہے۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "يَا أَيُّهَا الَّذِينَ آمَنُوا is not just a grammatical form — it's an invitation. Every time you read these words, the Quran is calling YOU. The grammar and the spiritual message are inseparable. Tomorrow we study أَيُّهَا in more detail.",
-      "en": "يَا أَيُّهَا الَّذِينَ آمَنُوا is not just a grammatical form — it's an invitation. Every time you read these words, the Quran is calling YOU. The grammar and the spiritual message are inseparable. Tomorrow we study أَيُّهَا in more detail.",
-      "ur": "'اے ایمان والو' صرف ایک گرامر کی شکل نہیں — یہ ایک دعوت ہے۔ ہر بار جب آپ یہ الفاظ پڑھتے ہیں، قرآن آپ کو بلاتا ہے۔ گرامر اور روحانی پیغام جدا نہیں کیے جا سکتے۔ کل ہم 'ایہ' کو مزید تفصیل سے دیکھیں گے۔"
+      "en": "Names and particular listeners are built on ḍamma: يَا نُوحُ، يَا أَرْضُ، يَا رَجُلُ. Next: the vocatives that show fatḥa.",
+      "ur": "نام اور خاص سننے والے ضمہ پر مبنی ہوتے ہیں: يَا نُوحُ، يَا أَرْضُ، يَا رَجُلُ۔ آگے: وہ منادیٰ جن پر فتحہ آتا ہے۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }
