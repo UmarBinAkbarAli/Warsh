@@ -33,8 +33,8 @@
       "type": "CONCEPT",
       "concept": {
         "en": "Prepositions govern nouns, not verbs",
-        "ar": "حُرُوفُ الْجَرِّ تَحْتَكُمُ الْأَسْمَاءَ لَا الْأَفْعَالَ",
-        "ur": "Prepositions nouns کو govern کرتے ہیں، verbs کو نہیں"
+        "ar": "حُرُوفُ الْجَرِّ تَعْمَلُ فِي الْأَسْمَاءِ لَا فِي الْأَفْعَالِ",
+        "ur": "حروف جر اسموں پر عمل کرتے ہیں، افعال پر نہیں"
       },
       "explanation": {
         "en": "Prepositions (فِي، إِلَى، مِنْ، عَلَى، بِ، لِ، عَنْ، كَ) govern the noun that follows them in the genitive. They do not affect the grammatical state of nearby verbs. Only particles like أَنْ، لَنْ، لَمْ determine raf', nasb, jazm.",
@@ -58,15 +58,15 @@
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "لَنْ نَؤْمِنَ بِكُمْ",
+        "ar": "لَنْ نُؤْمِنَ بِكُمْ",
         "ar_plain": "لن نؤمن بكم",
         "translit": "lan nu'mina bikum",
-        "en": "We will never believe in you",
-        "ur": "ہم تم پر کبھی ایمان نہیں لائیں گے"
+        "en": "We will not believe in you",
+        "ur": "ہم ہرگز تم پر ایمان نہیں لائیں گے"
       },
       "explanation": {
-        "en": "لَنْ — future negation (nasb trigger). نَؤْمِنَ — present tense in nasb (Alif ending). بِكُمْ — preposition 'in/with' + you-pl in genitive. Two independent grammatical facts: the verb is nasb because of لَنْ, the noun is genitive because of بِ.",
-        "ur": "لَنْ — future negation (nasb trigger)۔ نَؤْمِنَ — present tense nasb میں (Alif ending)۔ بِكُمْ — preposition 'میں/ساتھ' + you-pl genitive میں۔ دو independent grammatical facts: verb nasb ہے لَنْ کی وجہ سے، noun genitive ہے بِ کی وجہ سے۔"
+        "en": "لَنْ puts the verb in naṣb: نُؤْمِنَ (final fatḥa). بِكُمْ = the preposition بِ + \"you\". Two separate facts: the verb is naṣb because of لَنْ; the pronoun follows بِ.",
+        "ur": "لَنْ فعل کو منصوب کرتا ہے: نُؤْمِنَ (آخر میں فتحہ)۔ بِكُمْ = حرف جر بِ + \"تم\"۔ دو الگ باتیں: فعل لَنْ کی وجہ سے منصوب ہے؛ ضمیر بِ کے بعد آئی ہے۔"
       }
     },
     {
@@ -79,8 +79,8 @@
         "ur": "کہو کہ بیشک میری نماز، میرا ritual، میاں زندگی اور میرا مرنا اللہ کے لیے ہے جو جہانوں کا رب ہے"
       },
       "explanation": {
-        "en": "لِلَّهِ — لِ (preposition) + Allah in genitive. رَبِّ الْعَالَمِينَ — idafa chain following the preposition. The preposition لِ governs the entire phrase لِلَّهِ رَبِّ الْعَالَمِينَ as a single noun in the genitive.",
-        "ur": "لِلَّهِ — لِ (preposition) + Allah genitive میں۔ رَبِّ الْعَالَمِينَ — preposition کے بعد idafa chain۔ Preposition لِ پوری phrase لِلَّهِ رَبِّ الْعَالَمِينَ کو ایک single noun کے طور پر genitive میں govern کرتا ہے۔"
+        "en": "Al-An'ām 6:162. لِلَّهِ = لِ + اللَّهِ (genitive). رَبِّ الْعَالَمِينَ describes اللَّهِ, so رَبِّ is genitive too. Nothing here changes a verb.",
+        "ur": "سورۃ الانعام 6:162۔ لِلَّهِ = لِ + اللَّهِ (مجرور)۔ رَبِّ الْعَالَمِينَ اللَّهِ کی صفت ہے، اس لیے رَبِّ بھی مجرور ہے۔ یہاں کوئی چیز فعل کو نہیں بدلتی۔"
       }
     }
   ],
@@ -136,8 +136,8 @@
       "mode": "TAP",
       "sentence_ar": "لَنْ ___ بِاللَّهِ",
       "hint": {
-        "en": "We will never believe in Allah.",
-        "ur": "ہم اللہ پر کبھی ایمان نہیں لائیں گے۔"
+        "en": "We will not believe in Allah.",
+        "ur": "ہم ہرگز اللہ پر ایمان نہیں لائیں گے۔"
       },
       "options": [
         {
@@ -295,8 +295,8 @@
           "ar": "لَنْ",
           "ar_plain": "لن",
           "translit": "lan",
-          "en": "never (nasb trigger)",
-          "ur": "کبھی نہیں (NASB ٹرگر)"
+          "en": "will not (causes naṣb)",
+          "ur": "ہرگز نہیں (نصب دیتا ہے)"
         },
         {
           "ar": "نُؤْمِنَ",
@@ -325,16 +325,16 @@
       ],
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَنْ triggers nasb on the verb — نُؤْمِنَ (Alif ending). بِ is the preposition 'in' governing كُمْ (you-pl) in the genitive. Two separate grammatical facts coexisting.",
-        "ur": "لَنْ verb پر nasb trigger کرتا ہے — نُؤْمِنَ (Alif ending)۔ بِ preposition 'میں' ہے جو كُمْ (تم-pl) کو genitive میں govern کرتی ہے۔ دو الگ grammatical facts جو ایک ساتھ موجود ہیں۔"
+        "en": "لَنْ = particle; it puts the verb in naṣb. نُؤْمِنَ = verb, final fatḥa. بِكُمْ = preposition بِ + the pronoun كُمْ (\"you\").",
+        "ur": "لَنْ = حرف؛ یہ فعل کو منصوب کرتا ہے۔ نُؤْمِنَ = فعل، آخر میں فتحہ۔ بِكُمْ = حرف جر بِ + ضمیر كُمْ (\"تم\")۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "en": "Two independent systems: prepositions govern nouns; particles govern verbs",
-      "ar": "نِظَامَانِ مُسْتَقِلَّانِ: الْحُرُوفُ تَحْتَكُمُ الْأَسْمَاءَ; الْجَوَازِمُ تَحْتَكُمُ الْأَفْعَالَ",
-      "ur": "دو independent systems: prepositions nouns کو govern کرتے ہیں؛ particles verbs کو govern کرتے ہیں"
+      "en": "Prepositions govern nouns; particles govern verbs",
+      "ar": "حُرُوفُ الْجَرِّ لِلْأَسْمَاءِ وَالنَّوَاصِبُ وَالْجَوَازِمُ لِلْأَفْعَالِ",
+      "ur": "حروف جر اسموں کے لیے، نواصب اور جوازم افعال کے لیے"
     },
     "ayah": {
       "surah": 2,
@@ -346,12 +346,14 @@
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002186.mp3"
     },
     "highlighted_word_indices": [
-      1,
-      2
+      3,
+      7,
+      14,
+      16
     ],
     "noor_explanation": {
-      "en": "طَلَبَةُ is the subject of the verbal sentence سَأَلَهُمْ. اللَّيْلِ وَالنَّهَارِ is a noun phrase governed by the preposition implied in طَلَبَةُ. Two systems working in parallel: prepositions governing nouns, verbs governing their own state.",
-      "ur": "طَلَبَةُ verbal sentence سَأَلَهُمْ کا subject ہے۔ اللَّيْلِ وَالنَّهَارِ ایک noun phrase ہے جو implied preposition کے ذریعے طَلَبَةُ سے govern ہوتی ہے۔ دو systems parallel کام کر رہے ہیں: prepositions nouns کو govern کر رہے ہیں، verbs اپنی state govern کر رہے ہیں۔"
+      "en": "أُجِيبُ (\"I respond\") is a present-tense verb in raf' — nothing before it changes its ending. عَنِّي, لِي and بِي are prepositions with the attached \"Me\": they govern the pronoun, not the verbs around them.",
+      "ur": "أُجِيبُ (\"میں جواب دیتا ہوں\") مرفوع مضارع ہے — اس سے پہلے کوئی لفظ اس کا آخر نہیں بدلتا۔ عَنِّي، لِي اور بِي حروف جر ہیں متصل \"مجھ\" کے ساتھ: یہ ضمیر پر عمل کرتے ہیں، آس پاس کے افعال پر نہیں۔"
     }
   },
   "close": {
