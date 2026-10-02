@@ -2,29 +2,29 @@
   "schema_version": "1.0",
   "template": "STANDARD",
   "_meta": {
-    "_note": "Chapter 70, Lesson 1 — Introduction to الاستثناء with إِلَّا (exception).",
+    "_note": "Chapter 70, Lesson 1 — Introduction to الاستثناء with إِلَّا: the three parts, and the accusative after an affirmative sentence.",
     "chapter_order": 70,
     "lesson_order": 1,
     "chapter_title": "الاستثناء",
     "title": "Introduction to الاستثناء — Exception with إِلَّا",
-    "titleAr": "الْمُقَدِّمَة: الِاسْتِثْنَاءُ بِإِلَّا",
+    "titleAr": "الْمُقَدِّمَةُ: الِاسْتِثْنَاءُ بِإِلَّا",
     "source": "book_8_lesson_4_istithna_intro.md",
     "estimated_minutes": 9,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 6,
-      "label": "Al-Baqarah 2:6",
-      "ar": "إِنَّ الَّذِينَ كَفَرُوا سَوَاءٌ عَلَيْهِمْ أَأَنذَرْتَهُمْ أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ",
-      "en": "Indeed, those who disbelieve - it is all the same for them whether you warn them or do not warn them - they will not believe.",
-      "ur": "جو لوگ کافر ہیں انہیں تم نصیحت کرو یا نہ کرو ان کے لیے برابر ہے۔ وہ ایمان نہیں لانے کے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002006.mp3"
+      "surah": 37,
+      "ayah": 35,
+      "label": "As-Saffat 37:35",
+      "ar": "إِنَّهُمْ كَانُوا إِذَا قِيلَ لَهُمْ لَا إِلَٰهَ إِلَّا اللَّهُ يَسْتَكْبِرُونَ",
+      "en": "Indeed they, when it was said to them, \"There is no deity but Allah,\" were arrogant.",
+      "ur": "ان کا حال یہ تھا کہ جب ان سے کہا جاتا تھا کہ اللہ کے سوا کوئی معبود نہیں تو وہ تکبر کرتے تھے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/037035.mp3"
     },
     "noor_intro": {
-      "en": "لَا إِلَٰهَ إِلَّا اللَّه — 'there is no god except Allah.' This is the Shahada — the ultimate exception structure with إِلَّا. This chapter is spiritually significant.",
-      "ur": "لَا إِلَٰهَ إِلَّا اللَّه — 'کوئی معبود نہیں مگر اللہ'۔ یہ شہادت ہے — إِلَّا کے ساتھ حتمی استثنائی ساخت۔ یہ باب روحانی طور پر اہم ہے۔"
+      "en": "لَا إِلَٰهَ إِلَّا اللَّهُ — 'there is no deity but Allah'. The words the ayah says they turned away from are built on إِلَّا, the particle of exception. This chapter is about how إِلَّا works.",
+      "ur": "لَا إِلَٰهَ إِلَّا اللَّهُ — 'اللہ کے سوا کوئی معبود نہیں'۔ جن الفاظ سے آیت کے مطابق وہ تکبر کرتے تھے وہ إِلَّا، یعنی حرفِ استثنا، پر قائم ہیں۔ یہ باب إِلَّا کے کام کے بارے میں ہے۔"
     },
     "autoplay": true
   },
@@ -32,67 +32,66 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "الاستثناء — Exception with إِلَّا",
-        "ar": "الِاسْتِثْنَاءُ بِإِلَّا",
-        "ur": "إِلَّا کے ساتھ استثنا"
+        "en": "الاستثناء — taking something out",
+        "ar": "الِاسْتِثْنَاءُ",
+        "ur": "استثنا — کسی چیز کو الگ کرنا"
       },
       "explanation": {
-        "en": "إِلَّا is the particle of exception — 'except' or 'but.' It creates a استثنائی sentence (exception sentence) where something is excluded from a general statement.",
-        "ur": "إِلَّا استثنائی ذرہ ہے — 'سوائے' یا 'مگر'۔ یہ ایک استثنائی جملہ (exception sentence) بناتا ہے جہاں کوئی چیز عمومی بیان سے مستثنیٰ ہوتی ہے۔"
+        "en": "An exception sentence has three parts: the مُسْتَثْنَى مِنْهُ (the whole group), the tool إِلَّا, and the مُسْتَثْنَى (what is taken out of the group). جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا — 'the students came, except Ali'.",
+        "ur": "استثنا والے جملے کے تین حصے ہیں: مستثنیٰ منہ (پورا گروہ)، آلہ إِلَّا، اور مستثنیٰ (جو گروہ سے نکالا گیا)۔ جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا — 'طالب علم آئے، سوائے علی کے'۔"
       }
     },
     {
       "type": "WORD",
       "text": {
         "ar": "إِلَّا",
-        "ar_plain": "الا",
+        "ar_plain": "إلا",
         "translit": "illaa",
-        "en": "except / but",
-        "ur": "سوائے / مگر"
+        "en": "except",
+        "ur": "سوائے، مگر"
       },
       "explanation": {
-        "en": "إِلَّا means 'except' or 'but.' In لَا إِلَٰهَ إِلَّا اللَّه, the first لَا negates 'god' and إِلَّا exceptions 'Allah' from the negation. The structure is: negated general + إِلَّا + exception.",
-        "ur": "إِلَّا کا مطلب 'سوائے' یا 'مگر' ہے۔ لَا إِلَٰهَ إِلَّا اللَّه میں، پہلا لَا 'معبود' کو منفی کرتا ہے اور إِلَّا 'اللہ' کو منفی سے مستثنیٰ کرتا ہے۔ ساخت: منفی عمومی + إِلَّا + مستثنیٰ۔"
+        "en": "إِلَّا means 'except'. Whatever comes after it is outside the ruling of the sentence: everyone came — but not Ali.",
+        "ur": "إِلَّا کا معنی 'سوائے' ہے۔ اس کے بعد جو آئے وہ جملے کے حکم سے باہر ہوتا ہے: سب آئے — مگر علی نہیں۔"
       }
     },
     {
       "type": "EXAMPLE",
       "text": {
-        "ar": "لَا إِلَٰهَ إِلَّا اللَّه",
+        "ar": "جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا",
+        "ar_plain": "جاء الطلاب إلا عليا",
+        "translit": "jaa'a at-tullaabu illaa 'aliyyan",
+        "en": "The students came, except Ali.",
+        "ur": "طالب علم آئے، سوائے علی کے۔"
+      },
+      "explanation": {
+        "en": "The sentence is affirmative and the group (الطُّلَّابُ) is mentioned, so the مُسْتَثْنَى is accusative: عَلِيًّا.",
+        "ur": "جملہ مثبت ہے اور گروہ (الطُّلَّابُ) مذکور ہے، اس لیے مستثنیٰ منصوب ہے: عَلِيًّا۔"
+      }
+    },
+    {
+      "type": "EXAMPLE",
+      "text": {
+        "ar": "لَا إِلَٰهَ إِلَّا اللَّهُ",
         "ar_plain": "لا إله إلا الله",
-        "translit": "laa ilaaha illaa Allah",
-        "en": "There is no god but Allah.",
-        "ur": "کوئی معبود نہیں مگر اللہ۔"
+        "translit": "laa ilaaha illaa allaahu",
+        "en": "There is no deity but Allah.",
+        "ur": "اللہ کے سوا کوئی معبود نہیں۔"
       },
       "explanation": {
-        "en": "لَا (negation) + إِلَٰهَ (god) + إِلَّا (exception) + اللَّه (Allah). This is the complete exception structure. لَا negates the general 'god,' and إِلَّا exceptions Allah from it.",
-        "ur": "لَا (انکار) + إِلَٰهَ (معبود) + إِلَّا (استثنا) + اللَّه (اللہ)۔ یہ مکمل استثنائی ساخت ہے۔ لَا عمومی 'معبود' کو منفی کرتا ہے، اور إِلَّا اللہ کو اس منفی سے مستثنیٰ کرتا ہے۔"
+        "en": "لَا denies the whole category 'deity'; إِلَّا takes Allah out of the denial. Because the sentence is negative, اللَّهُ follows the position of the denied noun and is nominative. Next lesson explains why.",
+        "ur": "لَا 'معبود' کی پوری جنس کی نفی کرتا ہے؛ إِلَّا اللہ کو اس نفی سے نکالتا ہے۔ چونکہ جملہ منفی ہے، اس لیے اللَّهُ نفی والے اسم کے محل کے تابع ہو کر مرفوع ہے۔ وجہ اگلے سبق میں۔"
       }
     },
     {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Types of استثنائی sentences (مُسْتَثْنَى)",
-        "ar": "أَنْوَاعُ الْجُمَلِ الِاسْتِثْنَائِيَّةِ",
-        "ur": "استثنائی جملوں کی قسمیں"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "First rule",
+        "ur": "پہلا قاعدہ"
       },
-      "explanation": {
-        "en": "There are four types of exception sentences:\n1. Full affirmative (مُثْبَتَة): أَعْلَمُ أَنَّهُ كُلٌّ يَمُوتُ إِلَّا عَلِيًّا — 'I know everyone dies except Ali.'\n2. Full negative (مُنْفِيَّة): مَا رَأَيْتُ أَحَدًا إِلَّا عَلِيًّا — 'I saw no one except Ali.'\n3. Incomplete affirmative (مُثْبَتَة غَيْرُ كَامِلَة)\n4. Incomplete negative (مُنْفِيَّة غَيْرُ كَامِلَة)",
-        "ur": "استثنائی جملوں کی چار قسمیں ہیں:\n1. مکمل مثبتہ: میں جانتی ہوں کہ سب مرتے ہیں سوائے علی کے۔\n2. مکمل منفیہ: میں نے کوئی نہیں دیکا سوائے علی کے۔\n3. نامکمل مثبتہ\n4. نامکمل منفیہ"
-      }
-    },
-    {
-      "type": "EXAMPLE",
-      "text": {
-        "ar": "مَا أَحَدٌ إِلَّا رَحِيمٌ",
-        "ar_plain": "ما أحد إلا رحيم",
-        "translit": "maa ahadun illaa rahiimun",
-        "en": "There is no one except [that he is] merciful.",
-        "ur": "کوئی نہیں مگر (وہ) رحم کرنے والا ہے۔"
-      },
-      "explanation": {
-        "en": "مَا أَحَدٌ إِلَّا رَحِيمٌ is an incomplete negative exception. The مستثنیٰ (رَحِيمٌ) is incomplete — it needs the implied يكون to be complete. This is a common Quranic structure.",
-        "ur": "مَا أَحَدٌ إِلَّا رَحِيمٌ نامکمل منفی استثنا ہے۔ مستثنیٰ (رَحِيمٌ) نامکمل ہے — اسے مکمل ہونے کے لیے محذوف يكون کی ضرورت ہے۔ یہ قرآنی ساخت میں عام ہے۔"
+      "body": {
+        "en": "Affirmative sentence + the group is mentioned → the مُسْتَثْنَى after إِلَّا is accusative: نَجَحَ الطُّلَّابُ إِلَّا خَالِدًا.",
+        "ur": "مثبت جملہ + گروہ مذکور → إِلَّا کے بعد مستثنیٰ منصوب: نَجَحَ الطُّلَّابُ إِلَّا خَالِدًا۔"
       }
     }
   ],
@@ -101,66 +100,45 @@
       "type": "TAP_TRANSLATION",
       "id": "ch70-l01-ex01",
       "prompt": {
-        "ar": "لَا إِلَٰهَ إِلَّا اللَّه",
+        "ar": "لَا إِلَٰهَ إِلَّا اللَّهُ",
         "ar_plain": "لا إله إلا الله",
-        "translit": "laa ilaaha illaa Allah",
-        "en": "There is no god but Allah.",
-        "ur": "کوئی معبود نہیں مگر اللہ۔"
+        "translit": "laa ilaaha illaa allaahu",
+        "en": "There is no deity but Allah.",
+        "ur": "اللہ کے سوا کوئی معبود نہیں۔"
       },
       "options": [
         {
-          "en": "There is no god but Allah.",
-          "ur": "کوئی معبود نہیں مگر اللہ۔"
+          "en": "There is no deity but Allah.",
+          "ur": "اللہ کے سوا کوئی معبود نہیں۔"
         },
         {
-          "en": "There is a god except Allah.",
-          "ur": "کوئی معبود ہے سوائے اللہ کے۔"
+          "en": "There is a deity besides Allah.",
+          "ur": "اللہ کے علاوہ بھی ایک معبود ہے۔"
         },
         {
-          "en": "Allah is the only god.",
-          "ur": "اللہ واحد معبود ہے۔"
+          "en": "There is no deity and no Allah.",
+          "ur": "نہ کوئی معبود ہے نہ اللہ۔"
         },
         {
-          "en": "There is no god and no Allah.",
-          "ur": "کوئی معبود نہیں اور نہ اللہ ہے۔"
+          "en": "Allah is not a deity.",
+          "ur": "اللہ معبود نہیں۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "لَا إِلَٰهَ is the negated general 'no god.' إِلَّا exceptions اللَّه from this negation. The structure is لَا (negation) + noun + إِلَّا + exception. This is the complete exception (استثنائے تام).",
-        "ur": "لَا إِلَٰهَ منفی عمومی 'کوئی معبود نہیں' ہے۔ إِلَّا اللَّه کو اس منفی سے مستثنیٰ کرتا ہے۔ ساخت لَا (انکار) + اسم + إِلَّا + مستثنیٰ ہے۔ یہ مکمل استثنا (استثنائے تام) ہے۔"
-      }
-    },
-    {
-      "type": "TRUE_FALSE",
-      "id": "ch70-l01-ex02",
-      "statement": {
-        "en": "إِلَّا always exceptions something from a negative sentence.",
-        "ur": "إِلَّا ہمیشہ کسی منفی جملے سے کوئی چیز مستثنیٰ کرتا ہے۔",
-        "ar_example": {
-          "ar": "لَا تَأْكُلُ إِلَّا حَلَالًا",
-          "ar_plain": "لا تأكل إلا حلالا",
-          "translit": "laa ta'kulu illaa halaalan",
-          "en": "Do not eat except what is lawful.",
-          "ur": "سوائے حلال کے مت کھاؤ۔"
-        }
-      },
-      "correct_answer": false,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "إِلَّا can exception from both affirmative and negative sentences. Example: أَأْكُلُ إِلَّا حَلَالًا — 'I eat only what is lawful' (affirmative + exception). The key is that the exception structure itself uses إِلَّا.",
-        "ur": "إِلَّا مثبت اور منفی دونوں جملوں سے مستثنیٰ کر سکتا ہے۔ مثال: أَأْكُلُ إِلَّا حَلَالًا — 'میں سوائے حلال کے کھاتا ہوں' (مثبت + استثنا)۔ کلید یہ ہے کہ استثنائی ساخت خود إِلَّا استعمال کرتی ہے۔"
+        "en": "لَا negates every deity; إِلَّا then takes Allah out of that negation. The result is the strongest possible affirmation: Allah alone is God.",
+        "ur": "لَا ہر معبود کی نفی کرتا ہے؛ پھر إِلَّا اللہ کو اس نفی سے باہر نکالتا ہے۔ نتیجہ سب سے مضبوط اثبات ہے: صرف اللہ ہی معبود ہے۔"
       }
     },
     {
       "type": "FILL_BLANK",
-      "id": "ch70-l01-ex03",
+      "id": "ch70-l01-ex02",
       "mode": "TAP",
-      "sentence_ar": "مَا رَأَيْتُ أَحَدًا ___ عَلِيًّا",
+      "sentence_ar": "جَاءَ الطُّلَّابُ ___ عَلِيًّا",
       "hint": {
-        "en": "I saw no one except Ali.",
-        "ur": "میں نے کوئی نہیں دیکا سوائے علی کے۔"
+        "en": "'The students came, except Ali.'",
+        "ur": "'طالب علم آئے، سوائے علی کے۔'"
       },
       "options": [
         {
@@ -178,18 +156,18 @@
           "ur": "نہیں"
         },
         {
-          "ar": "غَيْرُ",
-          "ar_plain": "غير",
-          "translit": "ghayr",
-          "en": "other than",
-          "ur": "سوا"
-        },
-        {
           "ar": "مَعَ",
           "ar_plain": "مع",
           "translit": "ma'a",
           "en": "with",
           "ur": "ساتھ"
+        },
+        {
+          "ar": "فِي",
+          "ar_plain": "في",
+          "translit": "fii",
+          "en": "in",
+          "ur": "میں"
         }
       ],
       "correct_answer": {
@@ -202,54 +180,53 @@
       "xp_value": 1
     },
     {
+      "type": "TRUE_FALSE",
+      "id": "ch70-l01-ex03",
+      "statement": {
+        "en": "In جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا, الطُّلَّابُ is the مُسْتَثْنَى مِنْهُ (the group something is taken out of) and عَلِيًّا is the مُسْتَثْنَى.",
+        "ur": "جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا میں الطُّلَّابُ مستثنیٰ منہ (وہ گروہ جس سے نکالا گیا) اور عَلِيًّا مستثنیٰ ہے۔"
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
       "type": "MATCHING",
       "id": "ch70-l01-ex04",
       "left_column": [
         {
-          "ar": "لَا إِلَٰهَ إِلَّا اللَّه",
-          "ar_plain": "لا إله إلا الله",
-          "translit": "laa ilaaha illaa Allah",
-          "en": "no god except Allah",
-          "ur": "کوئی معبود نہیں مگر اللہ"
+          "ar": "الطُّلَّابُ",
+          "ar_plain": "الطلاب",
+          "translit": "at-tullaabu",
+          "en": "the students",
+          "ur": "طالب علم"
         },
         {
-          "ar": "مَا رَأَيْتُ أَحَدًا إِلَّا عَلِيًّا",
-          "ar_plain": "ما رأيت أحدا إلا عليا",
-          "translit": "maa ra'aytu ahadan illaa 'aliyyan",
-          "en": "I saw no one except Ali",
-          "ur": "میں نے کوئی نہیں دیکا سوائے علی کے"
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except",
+          "ur": "سوائے"
         },
         {
-          "ar": "حَضَرَ الطُّلَّابُ إِلَّا عَلِيًّا",
-          "ar_plain": "حضر الطلاب إلا عليا",
-          "translit": "hadara at-tullaabu illaa 'aliyyan",
-          "en": "the students attended except Ali",
-          "ur": "علی کے سوا سب طالب علم آئے"
-        },
-        {
-          "ar": "مَا جَاءَ إِلَّا عَلِيٌّ",
-          "ar_plain": "ما جاء إلا علي",
-          "translit": "maa jaa'a illaa 'aliyyun",
-          "en": "only Ali came",
-          "ur": "صرف علی آیا"
+          "ar": "عَلِيًّا",
+          "ar_plain": "عليا",
+          "translit": "'aliyyan",
+          "en": "Ali",
+          "ur": "علی"
         }
       ],
       "right_column": [
         {
-          "en": "full negative exception",
-          "ur": "مکمل منفی استثنا"
+          "en": "مُسْتَثْنَى مِنْهُ — the whole group",
+          "ur": "مستثنیٰ منہ — پورا گروہ"
         },
         {
-          "en": "full negative exception",
-          "ur": "مکمل منفی استثنا"
+          "en": "أَدَاةُ الِاسْتِثْنَاءِ — the tool of exception",
+          "ur": "حرفِ استثنا"
         },
         {
-          "en": "full affirmative exception",
-          "ur": "مکمل مثبت استثنا"
-        },
-        {
-          "en": "incomplete negative exception",
-          "ur": "نامکمل منفی استثنا"
+          "en": "مُسْتَثْنَى — the one taken out",
+          "ur": "مستثنیٰ — جسے نکالا گیا"
         }
       ],
       "correct_pairs": [
@@ -264,49 +241,79 @@
         [
           2,
           2
-        ],
-        [
-          3,
-          3
         ]
       ],
       "xp_value": 1
     },
     {
-      "type": "BUILD_SENTENCE",
+      "type": "FILL_BLANK",
       "id": "ch70-l01-ex05",
+      "mode": "TAP",
+      "sentence_ar": "نَجَحَ الطُّلَّابُ إِلَّا ___",
+      "hint": {
+        "en": "'The students passed, except Khalid.' In an affirmative sentence the مُسْتَثْنَى is accusative.",
+        "ur": "'طالب علم کامیاب ہوئے سوائے خالد کے۔' مثبت جملے میں مستثنیٰ منصوب ہوتا ہے۔"
+      },
+      "options": [
+        {
+          "ar": "خَالِدًا",
+          "ar_plain": "خالدا",
+          "translit": "khaalidan",
+          "en": "Khalid (accusative)",
+          "ur": "خالد (منصوب)"
+        },
+        {
+          "ar": "خَالِدٌ",
+          "ar_plain": "خالد",
+          "translit": "khaalidun",
+          "en": "Khalid (nominative)",
+          "ur": "خالد (مرفوع)"
+        },
+        {
+          "ar": "خَالِدٍ",
+          "ar_plain": "خالد",
+          "translit": "khaalidin",
+          "en": "Khalid (genitive)",
+          "ur": "خالد (مجرور)"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "not",
+          "ur": "نہیں"
+        }
+      ],
+      "correct_answer": {
+        "ar": "خَالِدًا",
+        "ar_plain": "خالدا",
+        "translit": "khaalidan",
+        "en": "Khalid (accusative)",
+        "ur": "خالد (منصوب)"
+      },
+      "xp_value": 1
+    },
+    {
+      "type": "BUILD_SENTENCE",
+      "id": "ch70-l01-ex06",
       "target_translation": {
-        "en": "There is no one in the house except the believers.",
-        "ur": "گھر میں کوئی نہیں مگر مومنین۔"
+        "en": "The students attended, except Ali.",
+        "ur": "طالب علم حاضر ہوئے، سوائے علی کے۔"
       },
       "tiles": [
         {
-          "ar": "مَا",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "not",
-          "ur": "نہیں"
+          "ar": "حَضَرَ",
+          "ar_plain": "حضر",
+          "translit": "hadara",
+          "en": "attended",
+          "ur": "حاضر ہوئے"
         },
         {
-          "ar": "أَحَدٌ",
-          "ar_plain": "أحد",
-          "translit": "ahadun",
-          "en": "anyone",
-          "ur": "کوئی"
-        },
-        {
-          "ar": "فِي",
-          "ar_plain": "في",
-          "translit": "fii",
-          "en": "in",
-          "ur": "میں"
-        },
-        {
-          "ar": "الْبَيْتِ",
-          "ar_plain": "البيت",
-          "translit": "al-bayti",
-          "en": "the house",
-          "ur": "گھر"
+          "ar": "الطُّلَّابُ",
+          "ar_plain": "الطلاب",
+          "translit": "at-tullaabu",
+          "en": "the students",
+          "ur": "طالب علم"
         },
         {
           "ar": "إِلَّا",
@@ -316,70 +323,94 @@
           "ur": "سوائے"
         },
         {
-          "ar": "الْمُؤْمِنُونَ",
-          "ar_plain": "المؤمنون",
-          "translit": "al-mu'minuuna",
-          "en": "the believers",
-          "ur": "مومنین"
+          "ar": "عَلِيًّا",
+          "ar_plain": "عليا",
+          "translit": "'aliyyan",
+          "en": "Ali",
+          "ur": "علی"
+        },
+        {
+          "ar": "عَلِيٌّ",
+          "ar_plain": "علي",
+          "translit": "'aliyyun",
+          "en": "Ali (nominative)",
+          "ur": "علی (مرفوع)"
         }
       ],
       "correct_order": [
         0,
         1,
         2,
-        3,
-        4,
-        5
+        3
       ],
       "xp_value": 1
     },
     {
-      "type": "IDENTIFY_ROOT",
-      "id": "ch70-l01-ex06",
-      "word": {
-        "ar": "إِلَّا",
-        "ar_plain": "إلا",
-        "translit": "illaa",
-        "en": "except",
-        "ur": "سوائے"
+      "type": "TAP_TRANSLATION",
+      "id": "ch70-l01-ex07",
+      "prompt": {
+        "ar": "فَشَرِبُوا مِنْهُ إِلَّا قَلِيلًا مِنْهُمْ",
+        "ar_plain": "فشربوا منه إلا قليلا منهم",
+        "translit": "fa-sharibuu minhu illaa qaliilan minhum",
+        "en": "But they drank from it, except a few of them.",
+        "ur": "تو تھوڑے لوگوں کے سوا سب نے اس سے پی لیا۔"
       },
       "options": [
-        "إ ل ا",
-        "ع ب د",
-        "ن ص ر",
-        "ك ف ر"
+        {
+          "en": "But they drank from it, except a few of them.",
+          "ur": "تو تھوڑے لوگوں کے سوا سب نے اس سے پی لیا۔"
+        },
+        {
+          "en": "Only a few of them drank from it.",
+          "ur": "ان میں سے صرف تھوڑوں نے اس سے پیا۔"
+        },
+        {
+          "en": "They did not drink from it at all.",
+          "ur": "انہوں نے اس سے بالکل نہیں پیا۔"
+        },
+        {
+          "en": "A few of them drank, and the rest refused.",
+          "ur": "تھوڑوں نے پیا اور باقی نے انکار کیا۔"
+        }
       ],
       "correct_index": 0,
-      "xp_value": 1
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "The sentence is affirmative — 'they drank' — and إِلَّا takes a few out of it. So most drank and only a few held back (2:249). قَلِيلًا is accusative.",
+        "ur": "جملہ مثبت ہے — 'انہوں نے پیا' — اور إِلَّا تھوڑوں کو اس سے نکالتا ہے۔ یعنی اکثر نے پیا اور صرف تھوڑے رکے رہے (2:249)۔ قَلِيلًا منصوب ہے۔"
+      }
     }
   ],
   "reveal": {
     "concept_name": {
       "en": "الاستثناء with إِلَّا — the grammar of exception",
-      "ar": "الِاسْتِثْنَاءُ بِإِلَّا — قَوَاعِدُ الِاسْتِثْنَاءِ",
-      "ur": "إِلَّا کے ساتھ استثنا — استثنا کے قواعد"
+      "ar": "الِاسْتِثْنَاءُ بِإِلَّا",
+      "ur": "إِلَّا کے ساتھ استثنا"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 6,
-      "label": "Al-Baqarah 2:6",
-      "ar": "إِنَّ الَّذِينَ كَفَرُوا سَوَاءٌ عَلَيْهِمْ أَأَنذَرْتَهُمْ أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ",
-      "en": "Indeed, those who disbelieve - it is all the same for them whether you warn them or do not warn them - they will not believe.",
-      "ur": "جو لوگ کافر ہیں انہیں تم نصیحت کرو یا نہ کرو ان کے لیے برابر ہے۔ وہ ایمان نہیں لانے کے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002006.mp3"
+      "surah": 37,
+      "ayah": 35,
+      "label": "As-Saffat 37:35",
+      "ar": "إِنَّهُمْ كَانُوا إِذَا قِيلَ لَهُمْ لَا إِلَٰهَ إِلَّا اللَّهُ يَسْتَكْبِرُونَ",
+      "en": "Indeed they, when it was said to them, \"There is no deity but Allah,\" were arrogant.",
+      "ur": "ان کا حال یہ تھا کہ جب ان سے کہا جاتا تھا کہ اللہ کے سوا کوئی معبود نہیں تو وہ تکبر کرتے تھے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/037035.mp3"
     },
     "highlighted_word_indices": [
-      3
+      5,
+      6,
+      7,
+      8
     ],
     "noor_explanation": {
-      "en": "إِلَّا appears in this ayah within كَفَرُوا but not as the exception particle. The chapter on الاستثناء focuses on the grammatically proper use of إِلَّا as the exception particle — لَا إِلَٰهَ إِلَّا اللَّه is the paradigm.",
-      "ur": "إِلَّا اس آیت میں كَفَرُوا کے اندر آتا ہے مگر استثنائی ذرہ کے طور پر نہیں۔ الاستثناء پر باب إِلَّا کو استثنائی ذرہ کے طور پر grammatically صحیح استعمال پر focus کرتا ہے — لَا إِلَٰهَ إِلَّا اللَّه نمونہ ہے۔"
+      "en": "لَا إِلَٰهَ إِلَّا اللَّهُ: لَا denies the whole category, إِلَٰهَ is the denied noun, and إِلَّا اللَّهُ takes Allah out of that denial. Every exception has these parts — a group, the tool إِلَّا, and what is taken out.",
+      "ur": "لَا إِلَٰهَ إِلَّا اللَّهُ: لَا پوری جنس کی نفی کرتا ہے، إِلَٰهَ نفی کیا گیا اسم ہے، اور إِلَّا اللَّهُ اللہ کو اس نفی سے نکالتا ہے۔ ہر استثنا کے یہی حصے ہیں — گروہ، آلہ إِلَّا، اور نکالا گیا۔"
     }
   },
   "close": {
     "noor_message": {
-      "en": "إِلَّا is the particle of exception — 'except' or 'but.' لَا إِلَٰهَ إِلَّا اللَّه is the most important exception structure in all of Arabic — the Shahada. When you see إِلَّا, ask: what is being exceptions? What is the general category? And what is the specific exception? This is the grammar of لَا إِلَٰهَ إِلَّا اللَّه.",
-      "ur": "إِلَّا استثنائی ذرہ ہے — 'سوائے' یا 'مگر'۔ لَا إِلَٰهَ إِلَّا اللَّه تمام عربی میں سب سے اہم استثنائی ساخت ہے — شہادت۔ جب تم إِلَّا دیکھو، پوچھو: کیا مستثنیٰ ہو رہا ہے؟ عمومی زمرہ کیا ہے؟ اور مخصوص استثنا کیا ہے؟ یہ لَا إِلَٰهَ إِلَّا اللَّه کا grammar ہے۔"
+      "en": "إِلَّا takes something out of a group. Ask three questions: what is the group (مُسْتَثْنَى مِنْهُ)? What is taken out (مُسْتَثْنَى)? Is the sentence affirmative? If so, the مُسْتَثْنَى is accusative.",
+      "ur": "إِلَّا کسی چیز کو گروہ سے نکالتا ہے۔ تین سوال پوچھیے: گروہ کیا ہے (مستثنیٰ منہ)؟ کیا نکالا گیا (مستثنیٰ)؟ کیا جملہ مثبت ہے؟ اگر ہاں تو مستثنیٰ منصوب ہے۔"
     }
   }
 }

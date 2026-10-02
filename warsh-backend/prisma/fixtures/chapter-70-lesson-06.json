@@ -1,11 +1,13 @@
 {
   "schema_version": "1.0",
+  "template": "REVIEW",
   "_meta": {
+    "_note": "Chapter 70, Lesson 6 — REVIEW lesson for الاستثناء.",
     "chapter_order": 70,
     "lesson_order": 6,
-    "chapter_title": "Exception with إِلَّا",
-    "title": "REVIEW — Exception Patterns Ch. 70",
-    "titleAr": "مراجعة — أنماط الاستثناء",
+    "chapter_title": "الاستثناء",
+    "title": "Review: Exception",
+    "titleAr": "مُرَاجَعَةٌ: الِاسْتِثْنَاءُ",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 5
@@ -15,15 +17,14 @@
       "surah": 59,
       "ayah": 22,
       "label": "Al-Hashr 59:22",
-      "ar": "هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمٰنُ الرَّحِيمُ",
-      "en": "He is Allah, there is no god but He, Knower of the unseen and the witnessed, the Most Gracious, the Most Merciful.",
-      "ur": "وہ اللہ ہے جس کے سوا کوئی معبود نہیں، غیب وشہادت کا علم رکھنے والا، بڑا مہربان، بڑا رحیم۔",
+      "ar": "هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ ۖ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ ۖ هُوَ الرَّحْمَٰنُ الرَّحِيمُ",
+      "en": "He is Allah, other than whom there is no deity, Knower of the unseen and the witnessed. He is the Entirely Merciful, the Especially Merciful.",
+      "ur": "وہی اللہ ہے جس کے سوا کوئی معبود نہیں، پوشیدہ اور ظاہر کا جاننے والا، وہ بڑا مہربان، نہایت رحم والا ہے",
       "audio_url": "https://everyayah.com/data/Alafasy_128kbps/059022.mp3"
     },
     "noor_intro": {
-      "ar": "Let's consolidate everything we've learned about الاستثناء — exception patterns from this chapter. You'll identify, parse, and translate all four types.",
-      "en": "Let's consolidate everything we've learned about الاستثناء — exception patterns from this chapter. You'll identify, parse, and translate all four types.",
-      "ur": "آئیے سب کو ملا کر دیکھتے ہیں جو ہم نے الاستثناء — استثنا نمونے کے بارے میں سیکھا ہے۔ آپ شناخت، تجزیہ، اور ترجمہ کریں گے۔"
+      "en": "هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ — 'He is Allah, other than whom there is no deity'. Let's consolidate the chapter: the parts of an exception, the three sentence types, connected and disconnected, and غَيْر and سِوَى.",
+      "ur": "هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ — 'وہی اللہ ہے جس کے سوا کوئی معبود نہیں'۔ آئیے باب کو یکجا کریں: استثنا کے حصے، جملوں کی تین قسمیں، متصل اور منقطع، اور غَيْر اور سِوَى۔"
     },
     "autoplay": true
   },
@@ -31,94 +32,90 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Review: Four Types of إِلَّا",
-        "ar": "مراجعة: أنواع الاستثناء بـ إِلَّا",
-        "ur": "جائزہ: إِلَّا کی چار قسمیں"
+        "en": "Review: the case after إِلَّا",
+        "ar": "مُرَاجَعَةٌ: إِعْرَابُ الْمُسْتَثْنَى بِإِلَّا",
+        "ur": "جائزہ: إِلَّا کے بعد اعراب"
       },
       "explanation": {
-        "en": "مثبت، منفي تام، منفي جزئي، منفي غير منجز — Four exception types: Positive, Fully Negative, Partially Negative, Unfulfilled Negative.",
-        "ur": "إِلَّا کی چار قسمیں: مثبت، مکمل نفی، جزوی نفی، غیر مکمل نفی۔"
+        "en": "Affirmative, group named → accusative (إِلَّا زَيْدًا). Negative, group named → accusative or the group's case (إِلَّا زَيْدٌ). Negative, no group (مُفَرَّغ) → the word's own role decides, and the meaning is 'only'.",
+        "ur": "مثبت، گروہ مذکور → منصوب (إِلَّا زَيْدًا)۔ منفی، گروہ مذکور → منصوب یا گروہ کا اعراب (إِلَّا زَيْدٌ)۔ منفی، گروہ نہیں (مفرّغ) → لفظ کا اپنا کردار طے کرتا ہے، اور معنی 'صرف'۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Connected vs. Disconnected Exception",
-        "ar": "متصل vs. منقطع",
-        "ur": "متصل بمقابل منقطع"
+        "en": "Connected vs disconnected",
+        "ar": "الْمُتَّصِلُ وَالْمُنْقَطِعُ",
+        "ur": "متصل اور منقطع"
       },
       "explanation": {
-        "en": "متصل: المستثنى منه مذكور/معلوم. منقطع: المستثنى ليس من جنس المتقدم — Connected: مستثنى منه is explicit/known. Disconnected: مستثنى is from different category.",
-        "ur": "متصل: مستثنى منه بیان شدہ/واضح ہے۔ منقطع: مستثنى پچھلی لفظ کے زمرے سے تعلق نہیں رکھتا۔"
+        "en": "Connected: the excepted one is part of the group (Ali among the students). Disconnected: it is of another kind, and إِلَّا means 'but rather' (no knowledge — only assumption, 4:157).",
+        "ur": "متصل: مستثنیٰ گروہ کا حصہ ہے (طالب علموں میں علی)۔ منقطع: دوسری جنس سے ہے، اور إِلَّا کا معنی 'بلکہ' (کوئی علم نہیں — بس گمان، 4:157)۔"
       }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Exception Particles: غير، سوى، إلَّا",
-        "ar": "أدوات الاستثناء",
-        "ur": "استثنا کے ذرے"
+        "en": "غَيْر and سِوَى",
+        "ar": "غَيْرٌ وَسِوًى",
+        "ur": "غَيْر اور سِوَى"
       },
       "explanation": {
-        "en": "إلَّا = standard. غير وارد = في النفي فقط. سوى = في الإثبات والنفي — إِلَّا is standard; غير وارد is negative only; سوى works in both affirmative and negative.",
-        "ur": "إِلَّا = معیاری۔ غیر وارد = صرف منفی میں۔ سوى = مثبت اور منفی دونوں میں۔"
+        "en": "Both are followed by a genitive noun. غَيْر takes the case the excepted noun would have had (غَيْرَ / غَيْرُ); سِوَى never shows its case.",
+        "ur": "دونوں کے بعد مجرور اسم آتا ہے۔ غَيْر وہ اعراب لیتا ہے جو مستثنیٰ کو ملتا (غَيْرَ / غَيْرُ)؛ سِوَى کا اعراب کبھی ظاہر نہیں ہوتا۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch70-l06-ex01",
       "type": "MATCHING",
+      "id": "ch70-l06-ex01",
       "left_column": [
         {
-          "ar": "مثبت",
-          "ar_plain": "مثبت",
-          "translit": "muthabbit",
-          "en": "Everything ate except fish",
-          "ur": "مچھلی کے علاوہ سب کچھ کھایا"
+          "ar": "جَاءَ الْقَوْمُ إِلَّا زَيْدًا",
+          "ar_plain": "جاء القوم إلا زيدا",
+          "translit": "jaa'a al-qawmu illaa zaydan",
+          "en": "the people came except Zayd",
+          "ur": "لوگ آئے سوائے زید کے"
         },
         {
-          "ar": "منفي تام",
-          "ar_plain": "منفي تام",
-          "translit": "manfiyyat taam",
-          "en": "No one came except Zayd",
+          "ar": "مَا جَاءَ أَحَدٌ إِلَّا زَيْدٌ",
+          "ar_plain": "ما جاء أحد إلا زيد",
+          "translit": "maa jaa'a ahadun illaa zaydun",
+          "en": "no one came except Zayd",
           "ur": "زید کے سوا کوئی نہیں آیا"
         },
         {
-          "ar": "منفي جزئي",
-          "ar_plain": "منفي جزئي",
-          "translit": "manfiyyat jaze",
-          "en": "Only ate apples",
-          "ur": "صرف سیب کھایا"
+          "ar": "مَا أَكَلْتُ إِلَّا تُفَّاحَةً",
+          "ar_plain": "ما أكلت إلا تفاحة",
+          "translit": "maa akaltu illaa tuffaahatan",
+          "en": "I ate only an apple",
+          "ur": "میں نے صرف ایک سیب کھایا"
         },
         {
-          "ar": "غير منجز",
-          "ar_plain": "غير منجز",
-          "translit": "ghayr munajjaz",
-          "en": "If I had helped you, I would have given except a dirham",
-          "ur": "اگر میں تمہاری مدد کرتا تو ایک درہم کے علاوہ دیتا"
+          "ar": "مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ",
+          "ar_plain": "ما لهم به من علم إلا اتباع الظن",
+          "translit": "maa lahum bihi min 'ilmin illaa ittibaa'a az-zanni",
+          "en": "no knowledge — only assumption",
+          "ur": "کوئی علم نہیں — بس گمان"
         }
       ],
       "right_column": [
         {
-          "ar": "أكلتُ كلَّ شيءٍ إلَّا السمكَ",
-          "en": "I ate everything except fish",
-          "ur": "میں نے ہر چیز کھائی مگر مچھلی نہیں"
+          "en": "affirmative, group named",
+          "ur": "مثبت، گروہ مذکور"
         },
         {
-          "ar": "ما جاءني أحدٌ إلَّا زيدٌ",
-          "en": "No one came except Zayd",
-          "ur": "کوئی نہیں آیا مگر زید"
+          "en": "negative, group named",
+          "ur": "منفی، گروہ مذکور"
         },
         {
-          "ar": "ما أكلتُ إلَّا التفاحَ",
-          "en": "I only ate apples",
-          "ur": "میں نے صرف سیب کھائے"
+          "en": "مُفَرَّغ — no group",
+          "ur": "مفرّغ — گروہ نہیں"
         },
         {
-          "ar": "لو ساعدتني لأعطيتُكَ إلَّا درهماً",
-          "en": "If I had helped you, I would have given except a dirham",
-          "ur": "اگر میں نے مدد کی ہوتی تو دیتا مگر ایک درہم کے سوا"
+          "en": "مُنْقَطِع — a different kind",
+          "ur": "منقطع — دوسری جنس"
         }
       ],
       "correct_pairs": [
@@ -142,52 +139,66 @@
       "xp_value": 1
     },
     {
-      "id": "ch70-l06-ex02",
       "type": "TRUE_FALSE",
+      "id": "ch70-l06-ex02",
       "statement": {
-        "en": "In \"No one came except Zayd\" — Zayd is the المستثنى منه (original rule)",
-        "ur": "\"کوئی نہیں آیا مگر زید\" میں — زید مستثنى منه ہے",
+        "en": "In مَا جَاءَنِي أَحَدٌ إِلَّا زَيْدٌ, زَيْدٌ is the مُسْتَثْنَى مِنْهُ.",
+        "ur": "مَا جَاءَنِي أَحَدٌ إِلَّا زَيْدٌ میں زَيْدٌ مستثنیٰ منہ ہے۔",
         "ar_example": {
-          "ar": "ما جاءني أحدٌ إلَّا زيدٌ",
+          "ar": "مَا جَاءَنِي أَحَدٌ إِلَّا زَيْدٌ",
           "ar_plain": "ما جاءني أحد إلا زيد",
-          "translit": "maa jaa'aani ahadun illaa zaydun",
-          "en": "No one came except Zayd",
-          "ur": "کوئی نہیں آیا مگر زید"
+          "translit": "maa jaa'anii ahadun illaa zaydun",
+          "en": "No one came to me except Zayd.",
+          "ur": "زید کے سوا میرے پاس کوئی نہیں آیا۔"
         }
       },
       "correct_answer": false,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "زيد is the المستثنى (excluded item), not the المستثنى منه. أحد is the المستثنى منه (the thing being negated). The negation applies to أحد, and زيد is what remains outside that negation.",
-        "ur": "زید مستثنى (مستثنا شدہ) ہے، مستثنى منه نہیں۔ أحد مستثنى منه ہے (وہ چیز جو رد کی جا رہی ہے)۔ نفی أحد پر لاگو ہوتی ہے، اور زید اس نفی سے باہر ہے۔"
+        "en": "False. زَيْدٌ is the مُسْتَثْنَى (the one taken out). أَحَدٌ is the مُسْتَثْنَى مِنْهُ — the group the negation covers.",
+        "ur": "غلط۔ زَيْدٌ مستثنیٰ ہے (جسے نکالا گیا)۔ أَحَدٌ مستثنیٰ منہ ہے — وہ گروہ جس پر نفی ہے۔"
       }
     },
     {
-      "id": "ch70-l06-ex03",
       "type": "TRUE_FALSE",
+      "id": "ch70-l06-ex03",
       "statement": {
-        "en": "\"غير\" and \"سوى\" can both be used to mean exception in negative sentences",
-        "ur": "\"غير\" اور \"سوى\" دونوں منفی جملوں میں استثنا کے معنی میں استعمال ہو سکتے ہیں"
+        "en": "After غَيْر and سِوَى the excepted noun is genitive.",
+        "ur": "غَيْر اور سِوَى کے بعد مستثنیٰ مجرور ہوتا ہے۔"
       },
       "correct_answer": true,
       "xp_value": 1
     },
     {
-      "id": "ch70-l06-ex04",
       "type": "FILL_BLANK",
+      "id": "ch70-l06-ex04",
       "mode": "TAP",
-      "sentence_ar": "ما أعرفُ أحدًا ___ زيدٍ",
+      "sentence_ar": "مَا أَعْرِفُ أَحَدًا ___ زَيْدٍ",
       "hint": {
-        "en": "I don't know anyone ___ Zayd",
-        "ur": "میں کسی کو نہیں جانتَا ___ زید کے"
+        "en": "'I know no one except Zayd.' Zayd is genitive, so choose a word that takes a genitive after it — in the right case.",
+        "ur": "'میں زید کے سوا کسی کو نہیں جانتا۔' زید مجرور ہے، اس لیے ایسا لفظ چنیے جس کے بعد مجرور آتا ہو — درست اعراب میں۔"
       },
       "options": [
+        {
+          "ar": "سِوَى",
+          "ar_plain": "سوى",
+          "translit": "siwaa",
+          "en": "except",
+          "ur": "سوا"
+        },
         {
           "ar": "إِلَّا",
           "ar_plain": "إلا",
           "translit": "illaa",
-          "en": "except",
-          "ur": "سوائے"
+          "en": "except (needs زَيْدًا)",
+          "ur": "سوائے (زَيْدًا چاہیے)"
+        },
+        {
+          "ar": "غَيْرُ",
+          "ar_plain": "غير",
+          "translit": "ghayru",
+          "en": "other than (nominative)",
+          "ur": "سوا (مرفوع)"
         },
         {
           "ar": "لَا",
@@ -195,61 +206,47 @@
           "translit": "laa",
           "en": "not",
           "ur": "نہیں"
-        },
-        {
-          "ar": "غَيْرُ",
-          "ar_plain": "غير",
-          "translit": "ghayr",
-          "en": "other than",
-          "ur": "سوا"
-        },
-        {
-          "ar": "سِوَى",
-          "ar_plain": "سوى",
-          "translit": "siwaa",
-          "en": "except/save",
-          "ur": "سوائے"
         }
       ],
       "correct_answer": {
         "ar": "سِوَى",
         "ar_plain": "سوى",
         "translit": "siwaa",
-        "en": "except/save",
-        "ur": "سوائے"
+        "en": "except",
+        "ur": "سوا"
       },
       "xp_value": 1
     },
     {
-      "id": "ch70-l06-ex05",
       "type": "FILL_BLANK",
+      "id": "ch70-l06-ex05",
       "mode": "TAP",
-      "sentence_ar": "كلَّ الطلابِ ___ خالدٍ",
+      "sentence_ar": "نَجَحَ الطُّلَّابُ ___ خَالِدٍ",
       "hint": {
-        "en": "Every student ___ Khalid",
-        "ur": "ہر طالب علم ___ خالد"
+        "en": "'The students passed, other than Khalid.' Affirmative with the group named: غَيْر takes the accusative.",
+        "ur": "'طالب علم کامیاب ہوئے، خالد کے سوا۔' مثبت جملہ اور گروہ مذکور: غَيْر منصوب ہوگا۔"
       },
       "options": [
         {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except",
-          "ur": "سوائے"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
+          "ar": "غَيْرَ",
+          "ar_plain": "غير",
+          "translit": "ghayra",
+          "en": "other than (accusative)",
+          "ur": "سوا (منصوب)"
         },
         {
           "ar": "غَيْرُ",
           "ar_plain": "غير",
-          "translit": "ghayr",
-          "en": "other than",
-          "ur": "سوا"
+          "translit": "ghayru",
+          "en": "other than (nominative)",
+          "ur": "سوا (مرفوع)"
+        },
+        {
+          "ar": "إِلَّا",
+          "ar_plain": "إلا",
+          "translit": "illaa",
+          "en": "except (needs خَالِدًا)",
+          "ur": "سوائے (خَالِدًا چاہیے)"
         },
         {
           "ar": "مَعَ",
@@ -260,40 +257,40 @@
         }
       ],
       "correct_answer": {
-        "ar": "إِلَّا",
-        "ar_plain": "إلا",
-        "translit": "illaa",
-        "en": "except",
-        "ur": "سوائے"
+        "ar": "غَيْرَ",
+        "ar_plain": "غير",
+        "translit": "ghayra",
+        "en": "other than (accusative)",
+        "ur": "سوا (منصوب)"
       },
       "xp_value": 1
     },
     {
-      "id": "ch70-l06-ex06",
       "type": "BUILD_SENTENCE",
+      "id": "ch70-l06-ex06",
       "target_translation": {
-        "en": "No one succeeded except Umar",
-        "ur": "کوئی کامیاب نہیں ہوا مگر عمر"
+        "en": "No one succeeded except Umar.",
+        "ur": "عمر کے سوا کوئی کامیاب نہیں ہوا۔"
       },
       "tiles": [
         {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no/not",
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "maa",
+          "en": "not",
           "ur": "نہیں"
         },
         {
           "ar": "نَجَحَ",
           "ar_plain": "نجح",
-          "translit": "najaHa",
+          "translit": "najaha",
           "en": "succeeded",
           "ur": "کامیاب ہوا"
         },
         {
           "ar": "أَحَدٌ",
           "ar_plain": "أحد",
-          "translit": "aHad",
+          "translit": "ahadun",
           "en": "anyone",
           "ur": "کوئی"
         },
@@ -305,124 +302,130 @@
           "ur": "سوائے"
         },
         {
-          "ar": "عُمَر",
+          "ar": "عُمَرُ",
           "ar_plain": "عمر",
-          "translit": "umar",
+          "translit": "'umaru",
           "en": "Umar",
           "ur": "عمر"
+        },
+        {
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "no",
+          "ur": "نہیں"
         }
       ],
       "correct_order": [
         0,
-        2,
         1,
+        2,
         3,
         4
       ],
       "xp_value": 1
     },
     {
-      "id": "ch70-l06-ex07",
       "type": "TAP_TRANSLATION",
+      "id": "ch70-l06-ex07",
       "prompt": {
-        "ar": "ما أكلتُ إلَّا تفاحًا",
-        "ar_plain": "ما أكلت إلا تفاحا",
-        "translit": "maa akaltu illaa tuuffaahan",
-        "en": "I didn't eat except an apple",
-        "ur": "میں نے صرف ایک سیب کھایا"
+        "ar": "مَا أَكَلْتُ إِلَّا تُفَّاحَةً",
+        "ar_plain": "ما أكلت إلا تفاحة",
+        "translit": "maa akaltu illaa tuffaahatan",
+        "en": "I ate nothing but an apple.",
+        "ur": "میں نے ایک سیب کے سوا کچھ نہیں کھایا۔"
       },
       "options": [
         {
-          "en": "I didn't eat anything except an apple",
-          "ur": "میں نے کوئی چیز نہیں کھائی مگر ایک سیب"
+          "en": "I ate nothing but an apple.",
+          "ur": "میں نے ایک سیب کے سوا کچھ نہیں کھایا۔"
         },
         {
-          "en": "I only ate an apple",
-          "ur": "میں نے صرف ایک سیب کھایا"
+          "en": "I did not eat the apple.",
+          "ur": "میں نے سیب نہیں کھایا۔"
         },
         {
-          "en": "I didn't eat the apple",
-          "ur": "میں نے سیب نہیں کھایا"
+          "en": "I ate everything except an apple.",
+          "ur": "میں نے سیب کے سوا سب کچھ کھایا۔"
         },
         {
-          "en": "I ate something except an apple",
-          "ur": "میں نے کوئی چیز کھائی مگر ایک سیب"
+          "en": "An apple did not eat me.",
+          "ur": "سیب نے مجھے نہیں کھایا۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "منفي جزئي — the negation covers everything, then إِلَّا establishes what actually was eaten: an apple. This is a partial negation that actually specifies what did happen.",
-        "ur": "منفي جزئي — نفی ہر چیز پر ہے، پھر إِلَّا بتاتی ہے کہ actually کیا کھایا: ایک سیب۔"
+        "en": "مَا + إِلَّا with no group named is مُفَرَّغ: 'I ate only an apple'. تُفَّاحَةً is accusative because it is the object of أَكَلْتُ.",
+        "ur": "مَا + إِلَّا، گروہ مذکور نہیں، مفرّغ ہے: 'میں نے صرف ایک سیب کھایا'۔ تُفَّاحَةً اس لیے منصوب ہے کہ وہ أَكَلْتُ کا مفعول ہے۔"
       }
     },
     {
-      "id": "ch70-l06-ex08",
       "type": "TAP_TRANSLATION",
+      "id": "ch70-l06-ex08",
       "prompt": {
-        "ar": "لو أتيتني لأعطيتُكَ إلَّا زيدًا",
-        "ar_plain": "لو أتيتني لأعطيتك إلا زيدا",
-        "translit": "law ataytani la'a'taytuka illaa zaydan",
-        "en": "If I had come to you, I would have given you except Zayd",
-        "ur": "اگر میں آیا ہوتا تمہارے پاس تو دیتا مگر زید کے سوا"
+        "ar": "إِنْ هُوَ إِلَّا ذِكْرٌ لِلْعَالَمِينَ",
+        "ar_plain": "إن هو إلا ذكر للعالمين",
+        "translit": "in huwa illaa dhikrun lil-'aalamiina",
+        "en": "It is not except a reminder to the worlds.",
+        "ur": "یہ تو تمام جہانوں کے لیے بس ایک نصیحت ہے۔"
       },
       "options": [
         {
-          "en": "Positive exception — I would give you and exclude Zayd",
-          "ur": "مثبت استثنا — میں دیتا اور زید کو مستثنیٰ کرتا"
+          "en": "It is only a reminder to the worlds.",
+          "ur": "یہ تو تمام جہانوں کے لیے بس ایک نصیحت ہے۔"
         },
         {
-          "en": "Fully negative — nobody would get anything except Zayd",
-          "ur": "مکمل نفی — کوئی کچھ نہیں پاتا مگر زید"
+          "en": "If it is a reminder, it is for the worlds.",
+          "ur": "اگر یہ نصیحت ہے تو جہانوں کے لیے ہے۔"
         },
         {
-          "en": "Unfulfilled negative — the condition was never met, exception is moot",
-          "ur": "غیر مکمل نفی — شرط کبھی پوری نہیں ہوئی، استثنا لاگو نہیں"
+          "en": "It is not a reminder to the worlds.",
+          "ur": "یہ جہانوں کے لیے نصیحت نہیں۔"
         },
         {
-          "en": "Partially negative — only Zayd would be excluded",
-          "ur": "جزوی نفی — صرف زید کو مستثنیٰ کیا جاتا"
+          "en": "Everything except the reminder is for the worlds.",
+          "ur": "نصیحت کے سوا سب جہانوں کے لیے ہے۔"
         }
       ],
-      "correct_index": 2,
+      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "This is منفي غير منجز — the conditional clause (لو clause) was never fulfilled, so the exception does not apply. The exception is moot because the condition wasn't met.",
-        "ur": "یہ منفي غير منجز ہے — شرطی جملہ (لو clause) کبھی پوری نہیں ہوئی، تو استثنا لاگو نہیں ہوتی۔ اس لیے استثنا بےمعنی ہے کیونکہ شرط پوری نہیں ہوئی۔"
+        "en": "إِنْ … إِلَّا = 'only' (81:27). ذِكْرٌ is the nominative predicate — a مُفَرَّغ sentence.",
+        "ur": "إِنْ … إِلَّا = 'صرف' (81:27)۔ ذِكْرٌ مرفوع خبر ہے — مفرّغ جملہ۔"
       }
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "الاستثناء — من القواعد إلى الفهم",
-      "en": "Exception — From Rules to Understanding",
-      "ur": "استثنا — قواعد سے سمجھ تک"
+      "en": "Exception — from rules to understanding",
+      "ar": "الِاسْتِثْنَاءُ — مِنَ الْقَاعِدَةِ إِلَى الْفَهْمِ",
+      "ur": "استثنا — قاعدے سے فہم تک"
     },
     "ayah": {
-      "surah": 2,
-      "ayah": 256,
-      "label": "Al-Baqarah 2:256",
-      "ar": "لَا إِكْرَاهَ فِي الدِّينِ ۖ قَد تَّبَيَّنَ الرُّشْدُ مِنَ الْغَيِّ ۚ فَمَن يَكْفُرْ بِالطَّاغُوتِ وَيُؤْمِن بِاللَّهِ فَقَدِ اسْتَمْسَكَ بِالْعُرْوَةِ الْوُثْقَىٰ لَا انفِصَامَ لَهَا ۗ وَاللَّهُ سَمِيعٌ عَلِيمٌ",
-      "en": "There shall be no compulsion in [acceptance of] the religion. The right course has become distinct from the wrong. So whoever disbelieves in ṭāghūt and believes in Allāh has grasped the most trustworthy handhold with no break in it. And Allāh is Hearing and Knowing.",
-      "ur": "دین (اسلام) میں زبردستی نہیں ہے ہدایت (صاف طور پر ظاہر اور) گمراہی سے الگ ہو چکی ہے تو جو شخص بتوں سے اعتقاد نہ رکھے اور خدا پر ایمان لائے اس نے ایسی مضبوط رسی ہاتھ میں پکڑ لی ہے جو کبھی ٹوٹنے والی نہیں اور خدا (سب کچھ) سنتا اور (سب کچھ) جانتا ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002256.mp3"
+      "surah": 59,
+      "ayah": 22,
+      "label": "Al-Hashr 59:22",
+      "ar": "هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ ۖ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ ۖ هُوَ الرَّحْمَٰنُ الرَّحِيمُ",
+      "en": "He is Allah, other than whom there is no deity, Knower of the unseen and the witnessed. He is the Entirely Merciful, the Especially Merciful.",
+      "ur": "وہی اللہ ہے جس کے سوا کوئی معبود نہیں، پوشیدہ اور ظاہر کا جاننے والا، وہ بڑا مہربان، نہایت رحم والا ہے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/059022.mp3"
     },
     "highlighted_word_indices": [
-      7,
-      8
+      3,
+      4,
+      5,
+      0
     ],
     "noor_explanation": {
-      "ar": "هذه الآية تحتوي على استثناء منقطع: أَحَدٌ مِنَ الَّذِينَ أُوتُوا الْكِتَابَ إِلَّا اللَّه — 'no one among the People of the Scripture' is negated, but اللَّه is not من جنس أحد، فهذه منقطع. المعرفة بالاستثناء تساعدك على فهم النصوص على مستوى أعمق.",
-      "en": "This ayah contains a منقطع exception: أَحَدٌ مِنَ الَّذِينَ أُوتُوا الْكِتَابَ إِلَّا اللَّه — 'no one among the People of the Scripture' is negated, but اللَّه is not from the same category as أَحَدٌ, so this is منقطع. Knowing exception patterns helps you understand texts at a deeper level.",
-      "ur": "یہ آیت میں منقطع استثنا ہے: 'اہل کتاب میں سے کوئی نہیں' رد کیا گیا، لیکن اللہ 'احد' کے زمرے سے تعلق نہیں رکھتا، تو یہ منقطع ہے۔ استثنا نمونے جاننا آپ کو متن کو گہرائی میں سمجھنے میں مدد کرتا ہے۔"
+      "en": "لَا إِلَٰهَ إِلَّا هُوَ — the group (every deity) is named and the sentence is negative, so the exception copies the group's position: هُوَ, nominative. Everything this chapter taught meets in this phrase: a group, إِلَّا, and the One taken out of it.",
+      "ur": "لَا إِلَٰهَ إِلَّا هُوَ — گروہ (ہر معبود) مذکور ہے اور جملہ منفی، اس لیے مستثنیٰ گروہ کے محل کا اعراب لیتا ہے: هُوَ، مرفوع۔ اس باب کی ہر بات اس ایک جملے میں جمع ہے: گروہ، إِلَّا، اور وہ ایک جسے اس سے الگ کیا گیا۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "Chapter 70 is complete. You now know إِلَّا inside and out — the four types, connected vs. disconnected, and the related particles. You've also seen it in its most powerful form: the Shahadah. You're ready for what comes next.",
-      "en": "Chapter 70 is complete. You now know إِلَّا inside and out — the four types, connected vs. disconnected, and the related particles. You've also seen it in its most powerful form: the Shahadah. You're ready for what comes next.",
-      "ur": "باب 70 مکمل ہو گیا۔ اب آپ إِلَّا کو اندرونی اور بیرونی دونوں طرح جانتے ہیں — چار قسمیں، متصل بمقابل منقطع، اور متعلقہ ذرات۔ آپ نے اسے سب سے طاقتور شکل میں بھی دیکھا: شہادت۔ آپ اگلے کے لیے تیار ہیں۔"
+      "en": "Chapter 70 is complete. You can now find the group and the excepted word, decide the case after إِلَّا, tell connected from disconnected, and read غَيْر and سِوَى — and you know the grammar of لَا إِلَٰهَ إِلَّا اللَّهُ.",
+      "ur": "باب 70 مکمل۔ اب آپ گروہ اور مستثنیٰ پہچان سکتے ہیں، إِلَّا کے بعد کا اعراب طے کر سکتے ہیں، متصل اور منقطع میں فرق کر سکتے ہیں، غَيْر اور سِوَى پڑھ سکتے ہیں — اور لَا إِلَٰهَ إِلَّا اللَّهُ کی ترکیب جانتے ہیں۔"
     }
-  },
-  "template": "REVIEW"
+  }
 }

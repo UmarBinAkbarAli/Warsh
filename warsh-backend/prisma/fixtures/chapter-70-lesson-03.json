@@ -1,45 +1,43 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 70, Lesson 3 — Deciding the case after إِلَّا: a three-question routine.",
     "chapter_order": 70,
     "lesson_order": 3,
-    "chapter_title": "Exception with إِلَّا",
-    "title": "Exception in Grammar — إِلَّا and Its Types",
-    "titleAr": "الاستثناء بالمفترق إِلَّا وأنواعه",
+    "chapter_title": "الاستثناء",
+    "title": "The Case After إِلَّا — Practice",
+    "titleAr": "إِعْرَابُ الْمُسْتَثْنَى بِإِلَّا",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 2,
-      "ayah": 284,
-      "label": "Al-Baqarah 2:284",
-      "ar": "لِّلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ وَإِن تُبْدُوا مَا فِي أَنفُسِكُمْ أَوْ تُخْفُوهُ يُحَاسِبْكُم بِهِ اللَّهُ ۖ فَيَغْفِرُ لِمَن يَشَاءُ وَيُعَذِّبُ مَن يَشَاءُ ۗ وَاللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
-      "en": "To Allāh belongs whatever is in the heavens and whatever is in the earth. Whether you show what is within yourselves or conceal it, Allāh will bring you to account for it. Then He will forgive whom He wills and punish whom He wills, and Allāh is over all things competent.",
-      "ur": "جو کچھ آسمانوں میں اور جو کچھ زمین میں ہے سب خدا ہی کا ہے۔ تم اپنے دلوں کی بات کو ظاہر کرو گے تو یا چھپاؤ گے تو خدا تم سے اس کا حساب لے گا پھر وہ جسے چاہے مغفرت کرے اور جسے چاہے عذاب دے۔ اور خدا ہر چیز پر قادر ہے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002284.mp3"
+      "surah": 11,
+      "ayah": 40,
+      "label": "Hud 11:40",
+      "ar": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ",
+      "en": "But none had believed with him, except a few.",
+      "ur": "اور ان کے ساتھ تھوڑے ہی لوگ ایمان لائے تھے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/011040.mp3"
     },
     "noor_intro": {
-      "ar": "إِلَّا is one of the most nuanced particles in Arabic grammar. Today you'll discover how the same little word creates four fundamentally different grammatical situations.",
-      "en": "إِلَّا is one of the most nuanced particles in Arabic grammar. Today you'll discover how the same little word creates four fundamentally different grammatical situations.",
-      "ur": "إِلَّا عربی گرامر کے اہم ابواب میں سے ہے۔ آج آپ دیکھیں گے کہ یہ ایک چھوٹا سا لفظ مختلف ساختوں میں کیسے آتا ہے۔"
+      "en": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ — 'and none believed with him except a few'. Why is it قَلِيلٌ here, but قَلِيلًا in 2:249? Today you learn to decide in three questions.",
+      "ur": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ — 'اور ان کے ساتھ تھوڑوں کے سوا کوئی ایمان نہیں لایا'۔ یہاں قَلِيلٌ کیوں ہے، جبکہ 2:249 میں قَلِيلًا؟ آج آپ تین سوالوں میں فیصلہ کرنا سیکھیں گے۔"
     },
     "autoplay": true
   },
   "discover_cards": [
     {
-      "type": "WORD",
-      "text": {
-        "ar": "الاسْتِثْنَاء",
-        "ar_plain": "الاستثناء",
-        "translit": "al-istithnaa",
-        "en": "Exception / Exclusion",
-        "ur": "استثنا / خارج کرنا"
+      "type": "GRAMMAR_NOTE",
+      "title": {
+        "en": "Three questions",
+        "ur": "تین سوال"
       },
-      "explanation": {
-        "en": "إخراج الشيء من حكمه المذكور — Excluding something from a previously mentioned ruling.",
-        "ur": "کسی چیز کو مذکورہ قاعدے سے خارج کرنا۔"
+      "body": {
+        "en": "(1) Is the group (مُسْتَثْنَى مِنْهُ) mentioned? If not → مُفَرَّغ: remove إِلَّا and parse normally. (2) If it is, is the sentence affirmative? → accusative. (3) If negative → accusative is allowed, but copying the group's case (بَدَل) is preferred.",
+        "ur": "(1) کیا گروہ (مستثنیٰ منہ) مذکور ہے؟ اگر نہیں → مفرّغ: إِلَّا ہٹا کر عام ترکیب کیجیے۔ (2) اگر ہے تو کیا جملہ مثبت ہے؟ → منصوب۔ (3) اگر منفی ہے → منصوب جائز ہے، مگر گروہ کا اعراب (بدل) بہتر ہے۔"
       }
     },
     {
@@ -47,13 +45,13 @@
       "text": {
         "ar": "الْمُسْتَثْنَى",
         "ar_plain": "المستثنى",
-        "translit": "al-mustathna",
-        "en": "The Excluded Item",
-        "ur": "مستثنا — وہ چیز جو خارج کی گئی"
+        "translit": "al-mustathnaa",
+        "en": "the one taken out",
+        "ur": "مستثنیٰ"
       },
       "explanation": {
-        "en": "الشيء الذي أُخرج من الحكم — The thing that is excluded from the ruling.",
-        "ur": "وہ چیز جو قاعدے سے خارج کی گئی۔"
+        "en": "The word after إِلَّا that is taken out of the ruling: عَلِيًّا in جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا.",
+        "ur": "إِلَّا کے بعد کا لفظ جو حکم سے نکالا گیا: جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا میں عَلِيًّا۔"
       }
     },
     {
@@ -61,131 +59,162 @@
       "text": {
         "ar": "الْمُسْتَثْنَى مِنْهُ",
         "ar_plain": "المستثنى منه",
-        "translit": "al-mustathna minhu",
-        "en": "The Original Rule (Inclusive)",
-        "ur": "مستثنى منه — وہ عمومی قاعدہ جس سے استثنا ہوا"
+        "translit": "al-mustathnaa minhu",
+        "en": "the group taken from",
+        "ur": "مستثنیٰ منہ"
       },
       "explanation": {
-        "en": "الحكم العام الذي أُخرج منه — The general ruling from which exclusion is made.",
-        "ur": "وہ عمومی بیان جس سے سے استثنا کیا گیا۔"
+        "en": "The whole group the exception is made from: الطُّلَّابُ in the same sentence. When it is missing, the exception is مُفَرَّغ.",
+        "ur": "وہ پورا گروہ جس سے استثنا کیا گیا: اسی جملے میں الطُّلَّابُ۔ جب یہ نہ ہو تو استثنا مفرّغ ہوتا ہے۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "الْمُفْتَرَقُ",
-        "ar_plain": "المفترق",
-        "translit": "al-muftaraq",
-        "en": "Exclusive Exception Particle",
-        "ur": "مفترق — آزاد استثنائی ذرہ"
+        "ar": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ",
+        "ar_plain": "وما آمن معه إلا قليل",
+        "translit": "wa-maa aamana ma'ahu illaa qaliilun",
+        "en": "But none had believed with him, except a few.",
+        "ur": "اور ان کے ساتھ تھوڑے ہی لوگ ایمان لائے تھے۔"
       },
       "explanation": {
-        "en": "كلمة الاستثناء المستقلة — The independent exception particle (إِلَّا).",
-        "ur": "آزاد استثنائی ذرہ (إِلَّا)۔"
+        "en": "No group is named → مُفَرَّغ. Remove إِلَّا: آمَنَ مَعَهُ قَلِيلٌ — قَلِيلٌ is the doer, nominative.",
+        "ur": "کوئی گروہ مذکور نہیں → مفرّغ۔ إِلَّا ہٹائیں: آمَنَ مَعَهُ قَلِيلٌ — قَلِيلٌ فاعل ہے، مرفوع۔"
       }
     },
     {
-      "type": "WORD",
+      "type": "EXAMPLE",
       "text": {
-        "ar": "الْمَعْطُوفُ",
-        "ar_plain": "المعطوف",
-        "translit": "al-ma'tuuf",
-        "en": "Coordinated Item (Not Exception)",
-        "ur": "معطوف — استثنا نہیں بلکہ عطف"
+        "ar": "مَا قَامَ الْقَوْمُ إِلَّا زَيْدٌ",
+        "ar_plain": "ما قام القوم إلا زيد",
+        "translit": "maa qaama al-qawmu illaa zaydun",
+        "en": "The people did not stand, except Zayd.",
+        "ur": "زید کے سوا لوگ کھڑے نہیں ہوئے۔"
       },
       "explanation": {
-        "en": "ما بعد إلَّا إذا كان حرف عطف — What follows إِلَّا when it's actually a conjunction (لا بمعنى but).",
-        "ur": "إِلَّا کے بعد اگر وہ عطف کا حرف ہو تو معطوف ہے، استثنا نہیں۔"
-      }
-    },
-    {
-      "type": "WORD",
-      "text": {
-        "ar": "الْقَوْلُ بِإِلَّا",
-        "ar_plain": "القول بإلا",
-        "translit": "al-qawlu bi-illaa",
-        "en": "The Four Grammatical Positions",
-        "ur": "إِلَّا کے چار گرامری مقامات"
-      },
-      "explanation": {
-        "en": "إلَّا تأخذ أربعة مواضع حسب سياق الجملة — إِلَّا takes four positions depending on sentence context: مثبت، منفي كامل، منفي جزئي، منفي غير منجز.",
-        "ur": "إِلَّا جملے کے سیاق کے مطابق چار مقامات لیتا ہے: مثبت، مکمل نفی، جزوی نفی، غیر مکمل نفی۔"
+        "en": "Negative, with the group الْقَوْمُ named. زَيْدٌ copies its nominative as a بَدَل; زَيْدًا would also be correct.",
+        "ur": "منفی، گروہ الْقَوْمُ مذکور۔ زَيْدٌ بدل بن کر اس کا رفع لیتا ہے؛ زَيْدًا بھی درست ہوتا۔"
       }
     }
   ],
   "exercises": [
     {
-      "id": "ch70-l03-ex01",
       "type": "TAP_TRANSLATION",
+      "id": "ch70-l03-ex01",
       "prompt": {
-        "ar": "جاء القومُ إلَّا زيدًا",
+        "ar": "جَاءَ الْقَوْمُ إِلَّا زَيْدًا",
         "ar_plain": "جاء القوم إلا زيدا",
         "translit": "jaa'a al-qawmu illaa zaydan",
-        "en": "The people came except Zayd",
-        "ur": "قوم آئے مگر زید کے سوا"
+        "en": "The people came, except Zayd.",
+        "ur": "لوگ آئے، سوائے زید کے۔"
       },
       "options": [
         {
-          "en": "Positive — قوم came, Zayd is excluded",
-          "ur": "مثبت — قوم آئے، زید مستثنیٰ ہے"
+          "en": "Affirmative, group mentioned — مُسْتَثْنَى accusative",
+          "ur": "مثبت، گروہ مذکور — مستثنیٰ منصوب"
         },
         {
-          "en": "Full negation — nobody came",
-          "ur": "مکمل نفی — کوئی نہیں آیا"
+          "en": "Negative, group mentioned — accusative or the group's case",
+          "ur": "منفی، گروہ مذکور — منصوب یا گروہ کا اعراب"
         },
         {
-          "en": "Unfulfilled negative — would have come",
-          "ur": "غیر مکمل نفی — آنا چاہیے تھا"
+          "en": "Negative, no group — case by role (مُفَرَّغ)",
+          "ur": "منفی، گروہ نہیں — کردار کے مطابق (مفرّغ)"
         },
         {
-          "en": "Partially negative — only Zayd came",
-          "ur": "جزوی نفی — صرف زید آیا"
+          "en": "Not an exception at all",
+          "ur": "یہ استثنا ہے ہی نہیں"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "This is مثبت (positive exception) — came القوم, excluded زيد. The المستثنى منه is القوم (came) and المستثنى is زيد (excluded from coming).",
-        "ur": "یہ مثبت (مثبت استثنا) ہے — قوم آئی، زید مستثنیٰ۔ مستثنى منه قوم (آیا) ہے اور مستثنى زید (آنے سے مستثنیٰ) ہے۔"
+        "en": "The sentence is affirmative (جَاءَ) and the group الْقَوْمُ is named, so زَيْدًا must be accusative.",
+        "ur": "جملہ مثبت ہے (جَاءَ) اور گروہ الْقَوْمُ مذکور ہے، اس لیے زَيْدًا کا منصوب ہونا لازم ہے۔"
       }
     },
     {
+      "type": "TAP_TRANSLATION",
       "id": "ch70-l03-ex02",
-      "type": "TRUE_FALSE",
-      "statement": {
-        "en": "In \"I didn't drink except water\" — 'water' is the excluded thing from a positive rule (مثبت)",
-        "ur": "\"میں نے پانی کے سوا کچھ نہیں پیا\" — پانی مستثنیٰ ہے مثبت قاعدے سے",
-        "ar_example": {
-          "ar": "ما شربتُ إلَّا الماءَ",
-          "ar_plain": "ما شربت إلا الماء",
-          "translit": "maa shirbtu illaa al-maa'a",
-          "en": "I didn't drink except water",
-          "ur": "میں نے پانی کے سوا کچھ نہیں پیا"
-        }
-      },
-      "correct_answer": true,
-      "xp_value": 1,
-      "explanation_on_wrong": {
-        "en": "Actually this is منفي جزئي (partially negative), not مثبت. The negation applies to everything, then إِلَّا establishes what was actually consumed (water). The المستثنى is الماء.",
-        "ur": "دراصل یہ منفي جزئي ہے، مثبت نہیں۔ نفی ہر چیز پر لاگو ہوتی ہے، پھر إِلَّا بتاتی ہے کہ actually کیا پیا (پانی)۔ مستثنى الماء ہے۔"
-      }
-    },
-    {
-      "id": "ch70-l03-ex03",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "قرأ الطلابُ كلَّ الدرسِ ___ واحدًا",
-      "hint": {
-        "en": "The students read all the lesson ___ one person",
-        "ur": "طلباء نے پورے درس کو پڑھا ___ ایک آدمی کے سوا"
+      "prompt": {
+        "ar": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ",
+        "ar_plain": "وما آمن معه إلا قليل",
+        "translit": "wa-maa aamana ma'ahu illaa qaliilun",
+        "en": "But none had believed with him, except a few.",
+        "ur": "اور ان کے ساتھ تھوڑے ہی لوگ ایمان لائے تھے۔"
       },
       "options": [
         {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except",
-          "ur": "سوائے"
+          "en": "Affirmative, group mentioned — مُسْتَثْنَى accusative",
+          "ur": "مثبت، گروہ مذکور — مستثنیٰ منصوب"
+        },
+        {
+          "en": "Negative, group mentioned — accusative or the group's case",
+          "ur": "منفی، گروہ مذکور — منصوب یا گروہ کا اعراب"
+        },
+        {
+          "en": "Negative, no group — case by role (مُفَرَّغ)",
+          "ur": "منفی، گروہ نہیں — کردار کے مطابق (مفرّغ)"
+        },
+        {
+          "en": "Not an exception at all",
+          "ur": "یہ استثنا ہے ہی نہیں"
+        }
+      ],
+      "correct_index": 2,
+      "xp_value": 1,
+      "explanation_on_wrong": {
+        "en": "مَا negates and no group is named — 'none believed except a few'. So it is مُفَرَّغ: قَلِيلٌ is the doer of آمَنَ, nominative (11:40).",
+        "ur": "مَا نفی کرتا ہے اور کوئی گروہ مذکور نہیں — 'تھوڑوں کے سوا کوئی ایمان نہیں لایا'۔ اس لیے یہ مفرّغ ہے: قَلِيلٌ، آمَنَ کا فاعل ہے، مرفوع (11:40)۔"
+      }
+    },
+    {
+      "type": "TRUE_FALSE",
+      "id": "ch70-l03-ex03",
+      "statement": {
+        "en": "In مَا شَرِبْتُ إِلَّا الْمَاءَ, الْمَاءَ is accusative because it is the object of شَرِبْتُ — إِلَّا itself changes nothing here.",
+        "ur": "مَا شَرِبْتُ إِلَّا الْمَاءَ میں الْمَاءَ اس لیے منصوب ہے کہ وہ شَرِبْتُ کا مفعول ہے — یہاں إِلَّا خود کچھ نہیں بدلتا۔",
+        "ar_example": {
+          "ar": "مَا شَرِبْتُ إِلَّا الْمَاءَ",
+          "ar_plain": "ما شربت إلا الماء",
+          "translit": "maa sharibtu illaa al-maa'a",
+          "en": "I drank nothing but water.",
+          "ur": "میں نے پانی کے سوا کچھ نہیں پیا۔"
+        }
+      },
+      "correct_answer": true,
+      "xp_value": 1
+    },
+    {
+      "type": "FILL_BLANK",
+      "id": "ch70-l03-ex04",
+      "mode": "TAP",
+      "sentence_ar": "قَرَأَ الطُّلَّابُ الدَّرْسَ إِلَّا ___",
+      "hint": {
+        "en": "'The students read the lesson, except one.'",
+        "ur": "'طالب علموں نے سبق پڑھا، سوائے ایک کے۔'"
+      },
+      "options": [
+        {
+          "ar": "وَاحِدًا",
+          "ar_plain": "واحدا",
+          "translit": "waahidan",
+          "en": "one (accusative)",
+          "ur": "ایک (منصوب)"
+        },
+        {
+          "ar": "وَاحِدٌ",
+          "ar_plain": "واحد",
+          "translit": "waahidun",
+          "en": "one (nominative)",
+          "ur": "ایک (مرفوع)"
+        },
+        {
+          "ar": "وَاحِدٍ",
+          "ar_plain": "واحد",
+          "translit": "waahidin",
+          "en": "one (genitive)",
+          "ur": "ایک (مجرور)"
         },
         {
           "ar": "لَا",
@@ -193,48 +222,35 @@
           "translit": "laa",
           "en": "not",
           "ur": "نہیں"
-        },
-        {
-          "ar": "غَيْرُ",
-          "ar_plain": "غير",
-          "translit": "ghayr",
-          "en": "other than",
-          "ur": "سوا"
-        },
-        {
-          "ar": "مَعَ",
-          "ar_plain": "مع",
-          "translit": "ma'a",
-          "en": "with",
-          "ur": "ساتھ"
         }
       ],
       "correct_answer": {
-        "ar": "إِلَّا",
-        "ar_plain": "إلا",
-        "translit": "illaa",
-        "en": "except",
-        "ur": "سوائے"
+        "ar": "وَاحِدًا",
+        "ar_plain": "واحدا",
+        "translit": "waahidan",
+        "en": "one (accusative)",
+        "ur": "ایک (منصوب)"
       },
       "xp_value": 1
     },
     {
-      "id": "ch70-l03-ex04",
       "type": "GRAMMAR_PARSE",
+      "id": "ch70-l03-ex05",
+      "sentence_ar": "مَا شَرِبْتُ إِلَّا الْمَاءَ",
       "words": [
         {
-          "ar": "أكلتُ",
-          "ar_plain": "أكلت",
-          "translit": "akaltu",
-          "en": "I ate",
-          "ur": "میں نے کھا لیا۔"
+          "ar": "مَا",
+          "ar_plain": "ما",
+          "translit": "maa",
+          "en": "not",
+          "ur": "نہیں"
         },
         {
-          "ar": "التفاحَ",
-          "ar_plain": "التفاح",
-          "translit": "al-uffaah",
-          "en": "the apples",
-          "ur": "سیب"
+          "ar": "شَرِبْتُ",
+          "ar_plain": "شربت",
+          "translit": "sharibtu",
+          "en": "I drank",
+          "ur": "میں نے پیا"
         },
         {
           "ar": "إِلَّا",
@@ -244,104 +260,70 @@
           "ur": "سوائے"
         },
         {
-          "ar": "ثمنَ",
-          "ar_plain": "ثمن",
-          "translit": "thaman",
-          "en": "the price of",
-          "ur": "کی قیمت"
-        },
-        {
-          "ar": "حبة",
-          "ar_plain": "حبة",
-          "translit": "habba",
-          "en": "one piece",
-          "ur": "ایک ٹکڑا"
+          "ar": "الْمَاءَ",
+          "ar_plain": "الماء",
+          "translit": "al-maa'a",
+          "en": "water",
+          "ur": "پانی"
         }
       ],
       "available_roles": [
-        "VERB",
-        "OBJECT",
         "PARTICLE",
-        "NOUN",
-        "PREPOSITION",
-        "SUBJECT"
+        "VERB",
+        "SUBJECT",
+        "OBJECT",
+        "PREDICATE"
       ],
       "correct_roles": [
-        "VERB",
-        "OBJECT",
         "PARTICLE",
-        "NOUN",
-        "NOUN"
+        "VERB",
+        "PARTICLE",
+        "OBJECT"
       ],
-      "analysis": {
-        "إلَّا_position": "مثبت (positive) — ثمنَ is مستثنى, excluded from the positive statement أكلتُ التفاحَ",
-        "grammatical_role": "حال أو مفعول به",
-        "note": "This is a complete exception — everything mentioned was eaten"
-      },
       "xp_value": 1,
-      "sentence_ar": "أكلتُ التفاحَ إلَّا ثمنَ حبة"
+      "explanation_on_wrong": {
+        "en": "مَا negates, شَرِبْتُ is the verb (its doer is the attached تُ), إِلَّا restricts, and الْمَاءَ is the object — a مُفَرَّغ sentence, so the word keeps the case of its role.",
+        "ur": "مَا نفی کرتا ہے، شَرِبْتُ فعل ہے (فاعل متصل تُ)، إِلَّا حصر کرتا ہے، اور الْمَاءَ مفعول ہے — مفرّغ جملہ، اس لیے لفظ اپنے کردار کا اعراب رکھتا ہے۔"
+      }
     },
     {
-      "id": "ch70-l03-ex05",
       "type": "MATCHING",
+      "id": "ch70-l03-ex06",
       "left_column": [
         {
-          "ar": "مثبت",
-          "ar_plain": "مثبت",
-          "translit": "muthabbit",
-          "en": "Positive",
-          "ur": "مثبت"
+          "ar": "نَجَحَ الطُّلَّابُ إِلَّا وَاحِدًا",
+          "ar_plain": "نجح الطلاب إلا واحدا",
+          "translit": "najaha at-tullaabu illaa waahidan",
+          "en": "the students passed except one",
+          "ur": "سوائے ایک کے سب کامیاب ہوئے"
         },
         {
-          "ar": "منفي تام",
-          "ar_plain": "منفي تام",
-          "translit": "manfiyyat taam",
-          "en": "Fully negative",
-          "ur": "مکمل طور پر منفی"
+          "ar": "مَا نَجَحَ أَحَدٌ إِلَّا خَالِدٌ",
+          "ar_plain": "ما نجح أحد إلا خالد",
+          "translit": "maa najaha ahadun illaa khaalidun",
+          "en": "no one passed except Khalid",
+          "ur": "خالد کے سوا کوئی کامیاب نہیں ہوا"
         },
         {
-          "ar": "منفي جزئي",
-          "ar_plain": "منفي جزئي",
-          "translit": "manfiyyat jaze",
-          "en": "Partially negative",
-          "ur": "جزوی طور پر منفی"
-        },
-        {
-          "ar": "منفي غير منجز",
-          "ar_plain": "منفي غير منجز",
-          "translit": "manfiyyat ghayr munajjaz",
-          "en": "Unfulfilled negative",
-          "ur": "ادھوری منفی"
+          "ar": "مَا نَجَحَ إِلَّا خَالِدٌ",
+          "ar_plain": "ما نجح إلا خالد",
+          "translit": "maa najaha illaa khaalidun",
+          "en": "only Khalid passed",
+          "ur": "صرف خالد کامیاب ہوا"
         }
       ],
       "right_column": [
         {
-          "ar": "ما جاءني أحدٌ إلَّا زيدٌ",
-          "ar_plain": "ما جاءني أحد إلا زيد",
-          "translit": "maa jaa'aani ahadun illaa zaydun",
-          "en": "No one came except Zayd (and Zayd actually came)",
-          "ur": "کوئی نہیں آیا مگر زید (اور زید آیا)"
+          "en": "Affirmative, group mentioned — مُسْتَثْنَى accusative",
+          "ur": "مثبت، گروہ مذکور — مستثنیٰ منصوب"
         },
         {
-          "ar": "أكلتُ كلَّ شيءٍ إلَّا السمكَ",
-          "ar_plain": "أكلت كل شيء إلا السمك",
-          "translit": "akaltu kulla shay-in illaa al-samak",
-          "en": "I ate everything except fish",
-          "ur": "میں نے ہر چیز کھائی مگر مچھلی نہیں"
+          "en": "Negative, group mentioned — accusative or the group's case",
+          "ur": "منفی، گروہ مذکور — منصوب یا گروہ کا اعراب"
         },
         {
-          "ar": "ما أكلتُ إلَّا التفاحَ",
-          "ar_plain": "ما أكلت إلا التفاح",
-          "translit": "maa akaltu illaa at-tuffaah",
-          "en": "I only ate apples",
-          "ur": "میں نے صرف سیب کھائے"
-        },
-        {
-          "ar": "لو سافرتُ لأدركتُهُ إلَّا زيدًا",
-          "ar_plain": "لو سافرت لأدركته إلا زيدا",
-          "translit": "law saafartu la'adraktuHu illaa zaydan",
-          "en": "If I had traveled I would have caught up except Zayd (condition never met)",
-          "ur": "اگر میں سفر کرتا تو اسے لے لیتا مگر زید کے سوا (شرط کبھی پوری نہیں ہوئی)"
+          "en": "Negative, no group — case by role (مُفَرَّغ)",
+          "ur": "منفی، گروہ نہیں — کردار کے مطابق (مفرّغ)"
         }
       ],
       "correct_pairs": [
@@ -356,35 +338,31 @@
         [
           2,
           2
-        ],
-        [
-          3,
-          3
         ]
       ],
       "xp_value": 1
     },
     {
-      "id": "ch70-l03-ex06",
       "type": "BUILD_SENTENCE",
+      "id": "ch70-l03-ex07",
       "target_translation": {
-        "en": "The students succeeded except one person",
-        "ur": "طلباء کامیاب ہوئے مگر ایک کے سوا"
+        "en": "The students succeeded, except one.",
+        "ur": "سوائے ایک کے سب طالب علم کامیاب ہوئے۔"
       },
       "tiles": [
         {
           "ar": "نَجَحَ",
           "ar_plain": "نجح",
-          "translit": "najaHa",
+          "translit": "najaha",
           "en": "succeeded",
-          "ur": "کامیاب ہوا"
+          "ur": "کامیاب ہوئے"
         },
         {
           "ar": "الطُّلَّابُ",
           "ar_plain": "الطلاب",
           "translit": "at-tullaabu",
           "en": "the students",
-          "ur": "طلباء"
+          "ur": "طالب علم"
         },
         {
           "ar": "إِلَّا",
@@ -396,134 +374,91 @@
         {
           "ar": "وَاحِدًا",
           "ar_plain": "واحدا",
-          "translit": "waaHidan",
-          "en": "one person",
-          "ur": "ایک آدمی"
+          "translit": "waahidan",
+          "en": "one",
+          "ur": "ایک"
+        },
+        {
+          "ar": "وَاحِدٍ",
+          "ar_plain": "واحد",
+          "translit": "waahidin",
+          "en": "one (genitive)",
+          "ur": "ایک (مجرور)"
         }
       ],
       "correct_order": [
-        1,
         0,
+        1,
         2,
         3
       ],
       "xp_value": 1
     },
     {
-      "id": "ch70-l03-ex07",
       "type": "TAP_TRANSLATION",
+      "id": "ch70-l03-ex08",
       "prompt": {
-        "ar": "ما كان معنا أحدٌ إلَّا عمرو",
+        "ar": "مَا كَانَ مَعَنَا أَحَدٌ إِلَّا عَمْرٌو",
         "ar_plain": "ما كان معنا أحد إلا عمرو",
-        "translit": "maa kaana ma'ana ahadun illaa 'amrun",
-        "en": "No one was with us except Amr",
-        "ur": "ہمارے ساتھ کوئی نہیں تھا مگر عمرو"
+        "translit": "maa kaana ma'anaa ahadun illaa 'amrun",
+        "en": "No one was with us except Amr.",
+        "ur": "عمرو کے سوا ہمارے ساتھ کوئی نہیں تھا۔"
       },
       "options": [
         {
-          "en": "Positive — we were with everyone except Amr",
-          "ur": "مثبت — ہم سب کے ساتھ تھے مگر عمرو کے سوا"
+          "en": "No one was with us except Amr.",
+          "ur": "عمرو کے سوا ہمارے ساتھ کوئی نہیں تھا۔"
         },
         {
-          "en": "Fully negative — nobody was with us, but Amr was an exception",
-          "ur": "مکمل نفی — کوئی ہمارے ساتھ نہیں تھا، مگر عمرو مستثنا ہے"
+          "en": "Everyone was with us except Amr.",
+          "ur": "عمرو کے سوا سب ہمارے ساتھ تھے۔"
         },
         {
-          "en": "Partially negative — we were with some, except Amr",
-          "ur": "جزوی نفی — ہم کچھ کے ساتھ تھے، مگر عمرو کے سوا"
+          "en": "Amr was not with us.",
+          "ur": "عمرو ہمارے ساتھ نہیں تھا۔"
         },
         {
-          "en": "Unfulfilled negative — we would have been with everyone except Amr",
-          "ur": "غیر مکمل نفی — ہم ہر کسی کے ساتھ ہوتے مگر عمرو کے سوا"
+          "en": "No one was with Amr.",
+          "ur": "عمرو کے ساتھ کوئی نہیں تھا۔"
         }
       ],
-      "correct_index": 1,
+      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "This is منفي تام (fully negative) — لَا negates everything (أحد), إِلَّا introduces the exception (عمرو). The exception affirms that عمرو was indeed with us.",
-        "ur": "یہ مکمل نفی (منفي تام) ہے — لَا ہر چیز کو رد کرتا ہے (أحد)، إِلَّا استثنا متعارف کراتا ہے (عمرو)۔ استثنا تصدیق کرتی ہے کہ عمرو ہمارے ساتھ تھا۔"
+        "en": "Negative sentence with the group (أَحَدٌ) named: عَمْرٌو copies the nominative of أَحَدٌ as a بَدَل. Meaning: Amr — and only Amr — was with us.",
+        "ur": "منفی جملہ، گروہ (أَحَدٌ) مذکور: عَمْرٌو بدل بن کر أَحَدٌ کا رفع لیتا ہے۔ معنی: عمرو — اور صرف عمرو — ہمارے ساتھ تھا۔"
       }
-    },
-    {
-      "id": "ch70-l03-ex08",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "___ أكلتُ التفاحَ",
-      "hint": {
-        "en": "___ I ate the apple",
-        "ur": "___ میں نے سیب کھایا"
-      },
-      "options": [
-        {
-          "ar": "ما",
-          "ar_plain": "ما",
-          "translit": "maa",
-          "en": "not",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "no",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except",
-          "ur": "سوائے"
-        },
-        {
-          "ar": "غَيْرُ",
-          "ar_plain": "غير",
-          "translit": "ghayr",
-          "en": "other than",
-          "ur": "سوا"
-        }
-      ],
-      "correct_answer": {
-        "ar": "ما",
-        "ar_plain": "ما",
-        "translit": "maa",
-        "en": "not",
-        "ur": "نہیں"
-      },
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "أربعة مواضع إِلَّا في العربية",
-      "en": "The Four Grammatical Positions of إِلَّا in Arabic",
-      "ur": "عربی میں إِلَّا کی مختلف ساختیں"
+      "en": "Deciding the case after إِلَّا",
+      "ar": "إِعْرَابُ الْمُسْتَثْنَى بِإِلَّا",
+      "ur": "إِلَّا کے بعد اعراب کا فیصلہ"
     },
     "ayah": {
-      "surah": 56,
-      "ayah": 12,
-      "label": "Al-Waqi'ah 56:12",
-      "ar": "فِي جَنَّاتِ النَّعِيمِ",
-      "en": "In the Gardens of Pleasure,",
-      "ur": "نعمت کے بہشتوں میں",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/056012.mp3"
+      "surah": 11,
+      "ayah": 40,
+      "label": "Hud 11:40",
+      "ar": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ",
+      "en": "But none had believed with him, except a few.",
+      "ur": "اور ان کے ساتھ تھوڑے ہی لوگ ایمان لائے تھے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/011040.mp3"
     },
     "highlighted_word_indices": [
+      0,
       3,
       4
     ],
     "noor_explanation": {
-      "ar": "في هذه الآية، إِلَّا في \"فَاذْهَبُوا يُونُسَ\" تأخذ موقف منفي جزئي — نهية نفي كل شيء except what follows إِلَّا. كل آية هي درس في الاستثناء.",
-      "en": "In this verse, إِلَّا takes a منفي تام position — it fully negates the preceding ruling then introduces the exception. The same word, four entirely different meanings. This is why Arabic grammar rewards patience.",
-      "ur": "اس آیت میں جملہ منفی ہے اور إِلَّا سے پہلے والا حصہ مکمل ہے۔ ایسی صورت میں إِلَّا کے بعد والا اسم ایک مخصوص استثنا ہوتا ہے۔"
+      "en": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ — question 1: is the group mentioned? No. So this is مُفَرَّغ, and قَلِيلٌ is simply the doer of آمَنَ. In 2:249 the group was there and the sentence affirmative, so it was قَلِيلًا. Same word, two cases, one routine.",
+      "ur": "وَمَا آمَنَ مَعَهُ إِلَّا قَلِيلٌ — پہلا سوال: کیا گروہ مذکور ہے؟ نہیں۔ اس لیے یہ مفرّغ ہے، اور قَلِيلٌ بس آمَنَ کا فاعل ہے۔ 2:249 میں گروہ موجود تھا اور جملہ مثبت، اس لیے قَلِيلًا تھا۔ ایک لفظ، دو اعراب، ایک طریقہ۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "Excellent, your understanding of إِلَّا now covers all four grammatical positions. These distinctions separate advanced Arabic learners from intermediate ones. Tomorrow's lesson will show you how إِلَّا appears throughout the Quran.",
-      "en": "Excellent, your understanding of إِلَّا now covers all four grammatical positions. These distinctions separate advanced Arabic learners from intermediate ones. Tomorrow's lesson will show you how إِلَّا appears throughout the Quran.",
-      "ur": "بہت اچھا، اب آپ نے إِلَّا کی مختلف ساختیں دیکھ لی ہیں۔ اگلا سبق دکھائے گا کہ إِلَّا قرآن میں کہاں کہاں آتا ہے۔"
+      "en": "Three questions decide the case after إِلَّا: Is the group there? Is the sentence affirmative? If negative with the group, copy its case or use the accusative. Next: إِلَّا in the Quran's most important sentence.",
+      "ur": "تین سوال إِلَّا کے بعد کا اعراب طے کرتے ہیں: کیا گروہ موجود ہے؟ کیا جملہ مثبت ہے؟ اگر منفی ہو اور گروہ موجود، تو اس کا اعراب لیں یا نصب۔ آگے: قرآن کے سب سے اہم جملے میں إِلَّا۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }

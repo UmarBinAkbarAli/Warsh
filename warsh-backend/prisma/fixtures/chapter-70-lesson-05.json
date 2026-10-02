@@ -1,29 +1,30 @@
 {
   "schema_version": "1.0",
+  "template": "STANDARD",
   "_meta": {
+    "_note": "Chapter 70, Lesson 5 — Connected and disconnected exception; exception with غَيْر and سِوَى.",
     "chapter_order": 70,
     "lesson_order": 5,
-    "chapter_title": "Exception with إِلَّا",
-    "title": "Advanced Exception — Multiple Exception Patterns",
-    "titleAr": "الاستثناء المتقدم — أنماط متعددة",
+    "chapter_title": "الاستثناء",
+    "title": "Connected, Disconnected, غَيْر and سِوَى",
+    "titleAr": "الْمُتَّصِلُ وَالْمُنْقَطِعُ، وَالِاسْتِثْنَاءُ بِغَيْرٍ وَسِوًى",
     "source": "arabai-backend/prisma/fixtures",
     "estimated_minutes": 10,
     "xp_reward": 10
   },
   "hook": {
     "ayah": {
-      "surah": 18,
-      "ayah": 29,
-      "label": "Al-Kahf 18:29",
-      "ar": "وَقُلِ الْحَقُّ مِن رَّبِّكُمْ ۖ فَمَن شَاءَ فَلْيُؤْمِن وَمَن شَاءَ فَلْيَكْفُرْ ۚ إِنَّا أَعْتَدْنَا لِلظَّالِمِينَ نَارًا أَحَاطَ بِهِمْ سُرَادِقُهَا ۚ وَإِن يَسْتَغِيثُوا يُغَاثُوا بِمَاءٍ كَالْمُهْلِ يَشْوِي الْوُجُوهَ ۚ بِئْسَ الشَّرَابُ وَسَاءَتْ مُرْتَفَقًا",
-      "en": "And say, \"The truth is from your Lord, so whoever wills - let him believe; and whoever wills - let him disbelieve.\" Indeed, We have prepared for the wrongdoers a fire whose walls will surround them. And if they call for relief, they will be relieved with water like murky oil, which scalds [their] faces. Wretched is the drink, and evil is the resting place.",
-      "ur": "اور کہہ دو کہ (لوگو) یہ قرآن تمہارے پروردگار کی طرف سے برحق ہے تو جو چاہے ایمان لائے اور جو چاہے کافر رہے۔ ہم نے ظالموں کے لئے دوزخ کی آگ تیار کر رکھی ہے جس کی قناتیں ان کو گھیر رہی ہوں گی۔ اور اگر فریاد کریں گے تو ایسے کھولتے ہوئے پانی سے ان کی دادرسی کی جائے گی (جو) پگھلے ہوئے تانبے کی طرح (گرم ہوگا اور جو) مونہوں کو بھون ڈالے گا (ان کے پینے کا) پانی بھی برا اور آرام گاہ بھی بری",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/018029.mp3"
+      "surah": 2,
+      "ayah": 34,
+      "label": "Al-Baqarah 2:34",
+      "ar": "وَإِذْ قُلْنَا لِلْمَلَائِكَةِ اسْجُدُوا لِآدَمَ فَسَجَدُوا إِلَّا إِبْلِيسَ أَبَىٰ وَاسْتَكْبَرَ وَكَانَ مِنَ الْكَافِرِينَ",
+      "en": "And [mention] when We said to the angels, 'Prostrate before Adam'; so they prostrated, except for Iblees. He refused and was arrogant and became of the disbelievers.",
+      "ur": "اور جب ہم نے فرشتوں سے کہا کہ آدم کو سجدہ کرو تو ابلیس کے سوا سب نے سجدہ کیا، اس نے انکار کیا اور تکبر کیا اور وہ کافروں میں سے ہو گیا",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/002034.mp3"
     },
     "noor_intro": {
-      "ar": "Real Quranic sentences don't come with grammar labels. They layer multiple exception patterns, conditionals, and coordinate structures — today we put it all together.",
-      "en": "Real Quranic sentences don't come with grammar labels. They layer multiple exception patterns, conditionals, and coordinate structures — today we put it all together.",
-      "ur": "حقیقی قرآنی جملے gramática لیبلز کے ساتھ نہیں آتے۔ وہ متعدد استثنا نمونے، شرطی، اور معطوف ساختیں اکٹھی کرتے ہیں — آج ہم سب کو ملا کر دیکھتے ہیں۔"
+      "en": "فَسَجَدُوا إِلَّا إِبْلِيسَ — 'so they prostrated, except Iblis'. Was Iblis one of the angels? The Quran says he was of the jinn (18:50). That question — is the excepted one from the same kind as the group? — is today's first topic.",
+      "ur": "فَسَجَدُوا إِلَّا إِبْلِيسَ — 'تو ابلیس کے سوا سب نے سجدہ کیا'۔ کیا ابلیس فرشتوں میں سے تھا؟ قرآن کہتا ہے وہ جنوں میں سے تھا (18:50)۔ یہی سوال — کیا مستثنیٰ گروہ کی جنس سے ہے؟ — آج کا پہلا موضوع ہے۔"
     },
     "autoplay": true
   },
@@ -31,196 +32,132 @@
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Connected Exception (متصل)",
-        "ar": "استثناء متصل",
+        "en": "Connected exception (مُتَّصِل)",
+        "ar": "الِاسْتِثْنَاءُ الْمُتَّصِلُ",
         "ur": "متصل استثنا"
       },
       "explanation": {
-        "en": "الاستثناء من لفظ متقدم في المعنى (كل، جميع) — Exception from a word that precedes it in meaning. The المستثنى منه is explicit and from the same category.",
-        "ur": "استثنا لفظ متقدم سے جس کا مطلب پہلے سے واضح ہو — متصل کیونکہ مستثنى منه بیان کردہ ہے اور اسی زمرے سے تعلق رکھتا ہے۔"
-      },
-      "examples": [
-        {
-          "ar": "كلُّ الناسِ إلَّا زيدًا",
-          "en": "Everyone came except Zayd — زيد is excluded from كل الناس",
-          "ur": "ہر شخص آیا مگر زید — زید کو سب سے الگ کیا گیا",
-          "ar_plain": "كل الناس إلا زيدا",
-          "translit": "—"
-        }
-      ]
+        "en": "The excepted one belongs to the group: جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا — Ali is one of the students. This is the normal case.",
+        "ur": "مستثنیٰ گروہ میں شامل ہوتا ہے: جَاءَ الطُّلَّابُ إِلَّا عَلِيًّا — علی طالب علموں میں سے ہے۔ عام صورت یہی ہے۔"
+      }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Disconnected Exception (منقطع)",
-        "ar": "استثناء منقطع",
+        "en": "Disconnected exception (مُنْقَطِع)",
+        "ar": "الِاسْتِثْنَاءُ الْمُنْقَطِعُ",
         "ur": "منقطع استثنا"
       },
       "explanation": {
-        "en": "الاستثناء من غير اللفظ المتقدم — Exception from something other than the preceding word. The مستثنى is from a different category than the مستثنى منه.",
-        "ur": "استثنا لفظ متقدم سے نہیں بلکہ اس کے علاوہ سے — منقطع کیونکہ مستثنى مستثنى منه کے زمرے سے تعلق نہیں رکھتا۔"
-      },
-      "examples": [
-        {
-          "ar": "ما جاءني أحدٌ إلَّا حجرًا",
-          "en": "No one came to me except a stone — منقطع because حجر isn't related to أحد",
-          "ur": "مجھے کوئی نہیں آیا مگر پتھر — منقطع کیونکہ پتھر 'کوئی' کے زمرے سے تعلق نہیں رکھتا",
-          "ar_plain": "ما جاءني أحد إلا حجرا",
-          "translit": "—"
-        }
-      ]
+        "en": "The excepted one is from a different kind, and إِلَّا means 'but rather': مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ — 'they have no knowledge of it, only the following of assumption' (4:157). The مُسْتَثْنَى is accusative. Many scholars read فَسَجَدُوا إِلَّا إِبْلِيسَ this way, since Iblis was of the jinn.",
+        "ur": "مستثنیٰ دوسری جنس سے ہوتا ہے، اور إِلَّا کا معنی 'بلکہ' ہوتا ہے: مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ — 'ان کو اس کا کوئی علم نہیں، بس گمان کی پیروی ہے' (4:157)۔ مستثنیٰ منصوب ہوتا ہے۔ بہت سے علما فَسَجَدُوا إِلَّا إِبْلِيسَ کو بھی اسی طرح پڑھتے ہیں، کیونکہ ابلیس جنوں میں سے تھا۔"
+      }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Exception using غير",
-        "ar": "الاستثناء بغير",
-        "ur": "غیر سے استثنا"
+        "en": "Exception with غَيْر",
+        "ar": "الِاسْتِثْنَاءُ بِغَيْرٍ",
+        "ur": "غَيْر کے ساتھ استثنا"
       },
       "explanation": {
-        "en": "غير بمعنى إلَّا في الإخراج — غير means the same as إِلَّا in terms of exclusion.",
-        "ur": "غیر کا مطلب إِلَّا کی طرح استثنا میں ہے۔"
-      },
-      "examples": [
-        {
-          "ar": "جاء القومُ غيرَ زيدٍ = جاء القومُ إلَّا زيدًا",
-          "en": "The people came, excluding Zayd — identical meaning to إلَّا",
-          "ur": "قوم آئی مگر زید کے سوا — إلَّا کے معنی میں بالکل وہی",
-          "ar_plain": "جاء القوم غير زيد  جاء القوم إلا زيدا",
-          "translit": "—"
-        }
-      ]
+        "en": "غَيْر works like إِلَّا, but the excepted noun becomes its مُضَاف إِلَيْه (genitive), and غَيْر itself takes the case the excepted noun would have taken: جَاءَ الْقَوْمُ غَيْرَ زَيْدٍ (like إِلَّا زَيْدًا); مَا جَاءَ غَيْرُ زَيْدٍ (like إِلَّا زَيْدٌ).",
+        "ur": "غَيْر، إِلَّا کی طرح کام کرتا ہے، مگر مستثنیٰ اس کا مضاف الیہ (مجرور) بن جاتا ہے، اور خود غَيْر وہ اعراب لیتا ہے جو مستثنیٰ کو ملتا: جَاءَ الْقَوْمُ غَيْرَ زَيْدٍ (جیسے إِلَّا زَيْدًا)؛ مَا جَاءَ غَيْرُ زَيْدٍ (جیسے إِلَّا زَيْدٌ)۔"
+      }
     },
     {
       "type": "CONCEPT",
       "concept": {
-        "en": "Exception using سوى",
-        "ar": "الاستثناء بسوى",
-        "ur": "سوى سے استثنا"
+        "en": "Exception with سِوَى",
+        "ar": "الِاسْتِثْنَاءُ بِسِوًى",
+        "ur": "سِوَى کے ساتھ استثنا"
       },
       "explanation": {
-        "en": "سوى بمعنى إلَّا — في الإثبات والنفي — سوى means إِلَّا — used in both positive and negative sentences.",
-        "ur": "سوى کا مطلب إِلَّا ہے — مثبت اور منفی دونوں میں کام کرتا ہے۔"
-      },
-      "examples": [
-        {
-          "ar": "ما جاءني أحدٌ سِوى زيدٍ = ما جاءني أحدٌ إلَّا زيدًا",
-          "en": "No one came except Zayd — سواء works just like إلَّا",
-          "ur": "کوئی نہیں آیا مگر زید — سواء بھی إِلَّا کی طرح کام کرتا ہے",
-          "ar_plain": "ما جاءني أحد سوى زيد  ما جاءني أحد إلا زيدا",
-          "translit": "—"
-        }
-      ]
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Combining Exception Particles",
-        "ar": "الجمع بين أدوات الاستثناء",
-        "ur": "استثنا کے ذروں کا امتزاج"
-      },
-      "explanation": {
-        "en": "يمكن الجمع: غير، سوى، إلَّا، لَا — You can combine exception particles in the same sentence.",
-        "ur": "متعدد استثنا ذرے ایک جملے میں جمع ہو سکتے ہیں: غير، سوى، إلَّا، لَا۔"
-      },
-      "examples": [
-        {
-          "ar": "كلَّ الناسِ غيرَ زيدٍ سوى عمروٍ",
-          "en": "Everyone except Zayd and Amr — multiple exceptions layered",
-          "ur": "ہر شخص مگر زید اور عمرو کے — متعدد استثنا ایک ساتھ",
-          "ar_plain": "كل الناس غير زيد سوى عمرو",
-          "translit": "—"
-        }
-      ]
-    },
-    {
-      "type": "CONCEPT",
-      "concept": {
-        "en": "Exception in Conditional Sentences",
-        "ar": "الاستثناء في الجملة الشرطية",
-        "ur": "شرطی جملے میں استثنا"
-      },
-      "explanation": {
-        "en": "إلَّا in a conditional sentence — if the condition is not fulfilled, the exception is moot.",
-        "ur": "إلَّا شرطی جملے میں — اگر شرط پوری نہیں ہوتی تو استثنا لاگو نہیں ہوتا۔"
-      },
-      "examples": [
-        {
-          "ar": "لو أتيتني لأعطيتُكَ إلَّا زيدًا",
-          "en": "If I had come to you, I would have given you — except Zayd. The condition was never met.",
-          "ur": "اگر میں آیا ہوتا تو تجھے دیتا — مگر زید کے سوا۔ شرط پوری نہیں ہوئی، استثنا لاگو نہیں۔",
-          "ar_plain": "لو أتيتني لأعطيتك إلا زيدا",
-          "translit": "—"
-        }
-      ]
+        "en": "سِوَى is like غَيْر: the noun after it is genitive. سِوَى ends in alif, so its own case never shows: مَا جَاءَ سِوَى زَيْدٍ; جَاءَ الْقَوْمُ سِوَى زَيْدٍ.",
+        "ur": "سِوَى، غَيْر جیسا ہے: اس کے بعد والا اسم مجرور ہوتا ہے۔ سِوَى کے آخر میں الف ہے، اس لیے اس کا اپنا اعراب کبھی ظاہر نہیں ہوتا: مَا جَاءَ سِوَى زَيْدٍ؛ جَاءَ الْقَوْمُ سِوَى زَيْدٍ۔"
+      }
     }
   ],
   "exercises": [
     {
-      "id": "ch70-l05-ex01",
       "type": "TAP_TRANSLATION",
+      "id": "ch70-l05-ex01",
       "prompt": {
-        "ar": "كلَّ الناسِ إلَّا زيدًا",
-        "ar_plain": "كل الناس إلا زيدا",
-        "translit": "kulla al-naasi illaa zaydan",
-        "en": "Everyone except Zayd",
-        "ur": "زید کے علاوہ سب"
+        "ar": "فَسَجَدُوا إِلَّا إِبْلِيسَ",
+        "ar_plain": "فسجدوا إلا إبليس",
+        "translit": "fa-sajaduu illaa ibliisa",
+        "en": "So they prostrated, except Iblis.",
+        "ur": "تو ابلیس کے سوا سب نے سجدہ کیا۔"
       },
       "options": [
         {
-          "en": "Connected (متصل) — زيد is excluded from كل الناس",
-          "ur": "متصل — زید کو سب سے الگ کیا گیا"
+          "en": "So they prostrated, except Iblis.",
+          "ur": "تو ابلیس کے سوا سب نے سجدہ کیا۔"
         },
         {
-          "en": "Disconnected (منقطع) — زيد is from different category than الناس",
-          "ur": "منقطع — زید ایک مختلف زمرے سے ہے الناس سے"
+          "en": "Only Iblis prostrated.",
+          "ur": "صرف ابلیس نے سجدہ کیا۔"
         },
         {
-          "en": "Unfulfilled (غير منجز) — condition not met",
-          "ur": "غیر منجز — شرط پوری نہیں ہوئی"
+          "en": "They did not prostrate to Iblis.",
+          "ur": "انہوں نے ابلیس کو سجدہ نہیں کیا۔"
         },
         {
-          "en": "Partially negative — زيد is partially excluded",
-          "ur": "جزوی نفی — زید جزوی طور پر مستثنیٰ"
+          "en": "Iblis made them prostrate.",
+          "ur": "ابلیس نے انہیں سجدہ کروایا۔"
         }
       ],
       "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "This is متصل (connected exception) — زيد is from the same category as كل الناس (people). The exception is directly connected to the preceding noun.",
-        "ur": "یہ متصل (منسلک استثنا) ہے — زید کل الناس (لوگوں) کے زمرے سے ہے۔ استثنا متقدم اسم سے براہ راست جڑی ہے۔"
+        "en": "Affirmative sentence ('they prostrated') with the group named (the angels), so إِبْلِيسَ is accusative and is the one who did NOT prostrate (2:34).",
+        "ur": "مثبت جملہ ('انہوں نے سجدہ کیا') اور گروہ (فرشتے) مذکور، اس لیے إِبْلِيسَ منصوب ہے اور وہی ہے جس نے سجدہ نہیں کیا (2:34)۔"
       }
     },
     {
-      "id": "ch70-l05-ex02",
       "type": "TRUE_FALSE",
+      "id": "ch70-l05-ex02",
       "statement": {
-        "en": "\"No one came to me except a stone\" is an example of استثناء متصل (connected exception)",
-        "ur": "مجھے کوئی نہیں آیا مگر پتھر استثنا متصل کی مثال ہے"
+        "en": "In مَا جَاءَنِي أَحَدٌ إِلَّا حِمَارًا ('no one came to me except a donkey'), the exception is مُتَّصِل (connected).",
+        "ur": "مَا جَاءَنِي أَحَدٌ إِلَّا حِمَارًا ('میرے پاس کوئی نہیں آیا سوائے ایک گدھے کے') میں استثنا متصل ہے۔"
       },
       "correct_answer": false,
+      "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "This is منقطع — حجر (stone) is not from the same category as أحد (anyone). The negation and exception are disconnected.",
-        "ur": "یہ منقطع ہے — پتھر 'کوئی' کے زمرے سے تعلق نہیں رکھتا۔ نفی اور استثنا کا تعلق نہیں۔"
-      },
-      "xp_value": 1
+        "en": "False. A donkey is not one of the people meant by أَحَدٌ, so the exception is مُنْقَطِع (disconnected): the excepted thing is from a different kind. The مُسْتَثْنَى is then accusative.",
+        "ur": "غلط۔ گدھا ان لوگوں میں سے نہیں جو أَحَدٌ سے مراد ہیں، اس لیے استثنا منقطع ہے: مستثنیٰ دوسری جنس سے ہے۔ ایسے میں مستثنیٰ منصوب ہوتا ہے۔"
+      }
     },
     {
-      "id": "ch70-l05-ex03",
       "type": "FILL_BLANK",
+      "id": "ch70-l05-ex03",
       "mode": "TAP",
-      "sentence_ar": "ما جاءني أحدٌ ___ زيدٍ",
+      "sentence_ar": "جَاءَ الْقَوْمُ غَيْرَ ___",
       "hint": {
-        "en": "No one came to me ___ Zayd",
-        "ur": "مجھے کوئی نہیں آیا ___ زید کے"
+        "en": "'The people came, other than Zayd.' The noun after غَيْر is its مُضَاف إِلَيْه.",
+        "ur": "'لوگ آئے، زید کے سوا۔' غَيْر کے بعد والا اسم اس کا مضاف الیہ ہے۔"
       },
       "options": [
         {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except",
-          "ur": "سوائے"
+          "ar": "زَيْدٍ",
+          "ar_plain": "زيد",
+          "translit": "zaydin",
+          "en": "Zayd (genitive)",
+          "ur": "زید (مجرور)"
+        },
+        {
+          "ar": "زَيْدًا",
+          "ar_plain": "زيدا",
+          "translit": "zaydan",
+          "en": "Zayd (accusative)",
+          "ur": "زید (منصوب)"
+        },
+        {
+          "ar": "زَيْدٌ",
+          "ar_plain": "زيد",
+          "translit": "zaydun",
+          "en": "Zayd (nominative)",
+          "ur": "زید (مرفوع)"
         },
         {
           "ar": "لَا",
@@ -228,175 +165,142 @@
           "translit": "laa",
           "en": "not",
           "ur": "نہیں"
-        },
-        {
-          "ar": "غَيْرُ",
-          "ar_plain": "غير",
-          "translit": "ghayr",
-          "en": "other than",
-          "ur": "سوا"
-        },
-        {
-          "ar": "مَعَ",
-          "ar_plain": "مع",
-          "translit": "ma'a",
-          "en": "with",
-          "ur": "ساتھ"
         }
       ],
       "correct_answer": {
-        "ar": "إِلَّا",
-        "ar_plain": "إلا",
-        "translit": "illaa",
-        "en": "except",
-        "ur": "سوائے"
+        "ar": "زَيْدٍ",
+        "ar_plain": "زيد",
+        "translit": "zaydin",
+        "en": "Zayd (genitive)",
+        "ur": "زید (مجرور)"
       },
       "xp_value": 1
     },
     {
+      "type": "FILL_BLANK",
       "id": "ch70-l05-ex04",
-      "type": "GRAMMAR_PARSE",
-      "words": [
+      "mode": "TAP",
+      "sentence_ar": "مَا جَاءَ ___ زَيْدٍ",
+      "hint": {
+        "en": "'No one came except Zayd' — a مُفَرَّغ sentence, so غَيْر itself is the doer of جَاءَ.",
+        "ur": "'زید کے سوا کوئی نہیں آیا' — مفرّغ جملہ، اس لیے خود غَيْر، جَاءَ کا فاعل ہے۔"
+      },
+      "options": [
         {
-          "ar": "وَإِنْ",
-          "ar_plain": "وإن",
-          "translit": "wa-in",
-          "en": "and if",
-          "ur": "اور اگر"
+          "ar": "غَيْرُ",
+          "ar_plain": "غير",
+          "translit": "ghayru",
+          "en": "other than (nominative)",
+          "ur": "سوا (مرفوع)"
         },
         {
-          "ar": "يَسْتَغِيثُوا",
-          "ar_plain": "يستغيثوا",
-          "translit": "yastaghiithuu",
-          "en": "they beg for water",
-          "ur": "وہ پانی مانگتے ہیں۔"
+          "ar": "غَيْرَ",
+          "ar_plain": "غير",
+          "translit": "ghayra",
+          "en": "other than (accusative)",
+          "ur": "سوا (منصوب)"
         },
         {
-          "ar": "يُغَاثُوا",
-          "ar_plain": "يغاثوا",
-          "translit": "yughaathuu",
-          "en": "they will be given water",
-          "ur": "انہیں پانی دیا جائے گا۔"
+          "ar": "غَيْرِ",
+          "ar_plain": "غير",
+          "translit": "ghayri",
+          "en": "other than (genitive)",
+          "ur": "سوا (مجرور)"
         },
         {
-          "ar": "بِمَاءٍ",
-          "ar_plain": "بماء",
-          "translit": "bimaa-in",
-          "en": "with water",
-          "ur": "پانی کے ساتھ"
-        },
-        {
-          "ar": "كَالْمُهْلِ",
-          "ar_plain": "كالمهل",
-          "translit": "ka-al-muhl",
-          "en": "like molten copper",
-          "ur": "پگھلے ہوئے تانبے کی طرح"
+          "ar": "لَا",
+          "ar_plain": "لا",
+          "translit": "laa",
+          "en": "not",
+          "ur": "نہیں"
         }
       ],
-      "available_roles": [
-        "VERB",
-        "OBJECT",
-        "PARTICLE",
-        "NOUN",
-        "PREPOSITION",
-        "SUBJECT",
-        "ADJECTIVE"
-      ],
-      "correct_roles": [
-        "PARTICLE",
-        "VERB",
-        "VERB",
-        "PREPOSITION",
-        "NOUN"
-      ],
-      "analysis": {
-        "structure": "جملة شرطية + جملة جوابية",
-        "conditional": "وَإِنْ يَسْتَغِيثُوا — if they beg for water",
-        "response": "يُغَاثُوا بِمَاءٍ — they will be given water"
+      "correct_answer": {
+        "ar": "غَيْرُ",
+        "ar_plain": "غير",
+        "translit": "ghayru",
+        "en": "other than (nominative)",
+        "ur": "سوا (مرفوع)"
       },
-      "xp_value": 1,
-      "sentence_ar": "وَإِنْ يَسْتَغِيثُوا يُغَاثُوا بِمَاءٍ كَالْمُهْلِ"
+      "xp_value": 1
     },
     {
-      "id": "ch70-l05-ex05",
       "type": "MATCHING",
+      "id": "ch70-l05-ex05",
       "left_column": [
         {
-          "ar": "إلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "Standard exception particle",
-          "ur": "معیاری استثنائی ذرہ"
+          "ar": "جَاءَ الْقَوْمُ إِلَّا زَيْدًا",
+          "ar_plain": "جاء القوم إلا زيدا",
+          "translit": "jaa'a al-qawmu illaa zaydan",
+          "en": "the people came except Zayd",
+          "ur": "لوگ آئے سوائے زید کے"
         },
         {
-          "ar": "غير",
-          "ar_plain": "غير",
-          "translit": "ghayr",
-          "en": "Other than — negative only",
-          "ur": "اس کے علاوہ — صرف منفی"
+          "ar": "جَاءَ الْقَوْمُ غَيْرَ زَيْدٍ",
+          "ar_plain": "جاء القوم غير زيد",
+          "translit": "jaa'a al-qawmu ghayra zaydin",
+          "en": "the people came, other than Zayd",
+          "ur": "لوگ آئے، زید کے سوا"
         },
         {
-          "ar": "سوى",
-          "ar_plain": "سوى",
-          "translit": "siwaa",
-          "en": "Except/save — both affirmative and negative",
-          "ur": "سوائے/محفوظ کرنے کے — اثبات اور منفی دونوں"
+          "ar": "مَا جَاءَ سِوَى زَيْدٍ",
+          "ar_plain": "ما جاء سوى زيد",
+          "translit": "maa jaa'a siwaa zaydin",
+          "en": "none came but Zayd",
+          "ur": "زید کے سوا کوئی نہیں آیا"
         }
       ],
       "right_column": [
         {
-          "ar": "أعرفُ زيدًا سِوى عمروٍ",
-          "en": "I know Zayd except Amr (affirmative)",
-          "ur": "میں زید کو جانتا ہوں سوائے عمرو کے (اثبات میں)"
+          "en": "إِلَّا — the excepted noun itself takes the case",
+          "ur": "إِلَّا — مستثنیٰ خود اعراب لیتا ہے"
         },
         {
-          "ar": "ما أعرفُ أحدًا إلَّا زيدًا",
-          "en": "I know no one except Zayd (negative)",
-          "ur": "میں زید کے علاوہ کسی کو نہیں جانتا (منفی)"
+          "en": "غَيْر — غَيْر takes the case; the noun after it is genitive",
+          "ur": "غَيْر — اعراب غَيْر پر؛ بعد والا اسم مجرور"
         },
         {
-          "ar": "كلَّ الناسِ غيرَ زيدٍ",
-          "en": "Everyone other than Zayd (negative)",
-          "ur": "زید کے علاوہ ہر کوئی (منفی)"
+          "en": "سِوَى — the noun after it is genitive; سِوَى shows no case",
+          "ur": "سِوَى — بعد والا اسم مجرور؛ سِوَى پر اعراب ظاہر نہیں"
         }
       ],
       "correct_pairs": [
         [
           0,
-          1
+          0
         ],
         [
           1,
-          2
+          1
         ],
         [
           2,
-          0
+          2
         ]
       ],
       "xp_value": 1
     },
     {
-      "id": "ch70-l05-ex06",
       "type": "BUILD_SENTENCE",
+      "id": "ch70-l05-ex06",
       "target_translation": {
-        "en": "Every scholar except Ibn Sulaiman",
-        "ur": "ہر عالم مگر ابن سلیمان"
+        "en": "The angels prostrated, except Iblis.",
+        "ur": "ابلیس کے سوا فرشتوں نے سجدہ کیا۔"
       },
       "tiles": [
         {
-          "ar": "كُلُّ",
-          "ar_plain": "كل",
-          "translit": "kull",
-          "en": "all/every",
-          "ur": "تمام/ہر"
+          "ar": "سَجَدَ",
+          "ar_plain": "سجد",
+          "translit": "sajada",
+          "en": "prostrated",
+          "ur": "سجدہ کیا"
         },
         {
-          "ar": "الْعُلَمَاءُ",
-          "ar_plain": "العلماء",
-          "translit": "al-'ulamaa",
-          "en": "scholars",
-          "ur": "علماء"
+          "ar": "الْمَلَائِكَةُ",
+          "ar_plain": "الملائكة",
+          "translit": "al-malaa'ikatu",
+          "en": "the angels",
+          "ur": "فرشتے"
         },
         {
           "ar": "إِلَّا",
@@ -406,145 +310,94 @@
           "ur": "سوائے"
         },
         {
-          "ar": "ابْنُ",
-          "ar_plain": "ابن",
-          "translit": "ibn",
-          "en": "the son of",
-          "ur": "کا بیٹا"
+          "ar": "إِبْلِيسَ",
+          "ar_plain": "إبليس",
+          "translit": "ibliisa",
+          "en": "Iblis",
+          "ur": "ابلیس"
         },
         {
-          "ar": "سُلَيْمَانَ",
-          "ar_plain": "سليمان",
-          "translit": "Sulaiman",
-          "en": "Sulaiman",
-          "ur": "سلیمان"
+          "ar": "إِبْلِيسُ",
+          "ar_plain": "إبليس",
+          "translit": "ibliisu",
+          "en": "Iblis (nominative)",
+          "ur": "ابلیس (مرفوع)"
         }
       ],
       "correct_order": [
         0,
         1,
         2,
-        3,
-        4
+        3
       ],
       "xp_value": 1
     },
     {
-      "id": "ch70-l05-ex07",
       "type": "TAP_TRANSLATION",
+      "id": "ch70-l05-ex07",
       "prompt": {
-        "ar": "سافرنا إلى مكة غيرَ المدينة",
-        "ar_plain": "سافرنا إلى مكة غير المدينة",
-        "translit": "safarna ilaa Makkah ghayra al-Madiinah",
-        "en": "We traveled to Makkah, excluding Madinah",
-        "ur": "ہم نے مدینہ کو چھوڑ کر مکہ مکرمہ کا سفر کیا۔"
+        "ar": "مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ",
+        "ar_plain": "ما لهم به من علم إلا اتباع الظن",
+        "translit": "maa lahum bihi min 'ilmin illaa ittibaa'a az-zanni",
+        "en": "They have no knowledge of it except the following of assumption.",
+        "ur": "ان کو اس کا کچھ علم نہیں، سوائے گمان کی پیروی کے۔"
       },
       "options": [
         {
-          "en": "We traveled to Makkah then to Madinah",
-          "ur": "ہم مکہ پھر مدینہ گئے"
+          "en": "They have no knowledge of it — only assumption.",
+          "ur": "ان کو اس کا کچھ علم نہیں — بس گمان ہے۔"
         },
         {
-          "en": "We traveled to Makkah and did not go to Madinah",
-          "ur": "ہم مکہ گئے اور مدینہ نہیں گئے"
+          "en": "They know it, except for some assumptions.",
+          "ur": "وہ اسے جانتے ہیں، سوائے کچھ گمانوں کے۔"
         },
         {
-          "en": "We traveled to Madinah then to Makkah",
-          "ur": "ہم مدینہ پھر مکہ گئے"
+          "en": "Following assumption is a kind of knowledge.",
+          "ur": "گمان کی پیروی بھی ایک قسم کا علم ہے۔"
         },
         {
-          "en": "We traveled between Makkah and Madinah",
-          "ur": "ہم مکہ اور مدینہ کے درمیان سفر کیا"
+          "en": "They have knowledge and they follow it.",
+          "ur": "ان کے پاس علم ہے اور وہ اس پر چلتے ہیں۔"
         }
       ],
-      "correct_index": 1,
+      "correct_index": 0,
       "xp_value": 1,
       "explanation_on_wrong": {
-        "en": "غيرَ المدينة is a disconnected exception (منقطع) — excluding Madinah from the travel destination list. We went to Makkah, not Madinah.",
-        "ur": "غير المدينة ایک منقطع استثنا ہے — مدینہ کو سفر کے مقصد سے خارج کیا۔ ہم مکہ گئے، مدینہ نہیں۔"
+        "en": "Following assumption is not a kind of knowledge, so this is a مُنْقَطِع exception: 'no knowledge — only assumption' (4:157). اتِّبَاعَ is accusative.",
+        "ur": "گمان کی پیروی علم کی قسم نہیں، اس لیے یہ منقطع استثنا ہے: 'کوئی علم نہیں — بس گمان' (4:157)۔ اتِّبَاعَ منصوب ہے۔"
       }
-    },
-    {
-      "id": "ch70-l05-ex08",
-      "type": "FILL_BLANK",
-      "mode": "TAP",
-      "sentence_ar": "ما أعرفُ أحدًا ___ زيدًا",
-      "hint": {
-        "en": "I don't know anyone ___ Zayd",
-        "ur": "میں کسی کو نہیں جانتَا ___ زید کے"
-      },
-      "options": [
-        {
-          "ar": "إِلَّا",
-          "ar_plain": "إلا",
-          "translit": "illaa",
-          "en": "except",
-          "ur": "سوائے"
-        },
-        {
-          "ar": "لَا",
-          "ar_plain": "لا",
-          "translit": "laa",
-          "en": "not",
-          "ur": "نہیں"
-        },
-        {
-          "ar": "غَيْرُ",
-          "ar_plain": "غير",
-          "translit": "ghayr",
-          "en": "other than",
-          "ur": "سوا"
-        },
-        {
-          "ar": "مَعَ",
-          "ar_plain": "مع",
-          "translit": "ma'a",
-          "en": "with",
-          "ur": "ساتھ"
-        }
-      ],
-      "correct_answer": {
-        "ar": "إِلَّا",
-        "ar_plain": "إلا",
-        "translit": "illaa",
-        "en": "except",
-        "ur": "سوائے"
-      },
-      "xp_value": 1
     }
   ],
   "reveal": {
     "concept_name": {
-      "ar": "أنماط الاستثناء المتقدمة في القرآن",
-      "en": "Advanced Exception Patterns in the Quran",
-      "ur": "قرآن میں جدید استثنا نمونے"
+      "en": "Connected and disconnected; غَيْر and سِوَى",
+      "ar": "الْمُتَّصِلُ وَالْمُنْقَطِعُ وَغَيْرٌ وَسِوًى",
+      "ur": "متصل، منقطع، غَيْر اور سِوَى"
     },
     "ayah": {
       "surah": 4,
-      "ayah": 173,
-      "label": "An-Nisa 4:173",
-      "ar": "فَأَمَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ فَيُوَفِّيهِمْ أُجُورَهُمْ وَيَزِيدُهُم مِّن فَضْلِهِ ۖ وَأَمَّا الَّذِينَ اسْتَنكَفُوا وَاسْتَكْبَرُوا فَيُعَذِّبُهُمْ عَذَابًا أَلِيمًا وَلَا يَجِدُونَ لَهُم مِّن دُونِ اللَّهِ وَلِيًّا وَلَا نَصِيرًا",
-      "en": "And as for those who believed and did righteous deeds, He will give them in full their rewards and grant them extra from His bounty. But as for those who disdained and were arrogant, He will punish them with a painful punishment, and they will not find for themselves besides Allāh any protector or helper.",
-      "ur": "تو جو لوگ ایمان لائے اور نیک کام کرتے رہے وہ ان کو ان کا پورا بدلا دے گا اور اپنے فضل سے کچھ زیادہ بھی عنایت کرے گا۔ اور جنہوں نے (بندوں ہونے سے) عاروانکار اور تکبر کیا ان کو تکلیف دینے والا عذاب دے گا۔ اور یہ لوگ خدا کے سوا اپنا حامی اور مددگار نہ پائیں گے",
-      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/004173.mp3"
+      "ayah": 157,
+      "label": "An-Nisa 4:157",
+      "ar": "مَا لَهُم بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ",
+      "en": "They have no knowledge of it except the following of assumption.",
+      "ur": "ان کو اس کا کچھ بھی علم نہیں، سوائے گمان کی پیروی کے",
+      "audio_url": "https://everyayah.com/data/Alafasy_128kbps/004157.mp3"
     },
     "highlighted_word_indices": [
-      0,
-      1,
-      2
+      4,
+      5,
+      6,
+      7
     ],
     "noor_explanation": {
-      "ar": "لاحظ: الجملة الشرطية لا تحتاج استثناء — الفاء تفعل العمل. فَإِخْوَانَكُمْ هو نتيجة طبيعية للتوبة، لا استثناء.",
-      "en": "Note: This conditional sentence doesn't need إِلَّا — the فاء (fa) does the logical work. فَإِخْوَانَكُمْ is the natural consequence of repentance, not an exception to a rule.",
-      "ur": "نوٹ: یہ شرطی جملہ إِلَّا کی ضرورت نہیں ہے — فاء کام کرتی ہے۔ توبہ کا نتیجہ ہے، قاعدے سے استثنا نہیں۔"
+      "en": "مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ — about the claim that 'Isa was killed: they had no knowledge, only assumption. Assumption is not a kind of knowledge, so the exception is مُنْقَطِع and اتِّبَاعَ is accusative. The grammar itself says their claim had no knowledge behind it.",
+      "ur": "مَا لَهُمْ بِهِ مِنْ عِلْمٍ إِلَّا اتِّبَاعَ الظَّنِّ — عیسیٰ علیہ السلام کے قتل کے دعوے کے بارے میں: ان کے پاس کوئی علم نہیں، بس گمان تھا۔ گمان علم کی قسم نہیں، اس لیے استثنا منقطع ہے اور اتِّبَاعَ منصوب۔ ترکیب خود بتاتی ہے کہ ان کے دعوے کے پیچھے کوئی علم نہیں تھا۔"
     }
   },
   "close": {
     "noor_message": {
-      "ar": "You've now mastered all four types of إِلَّا, both exception particles, and the connected vs. disconnected distinction. This chapter closes our exception unit. The next REVIEW will consolidate everything. You're building something solid.",
-      "en": "You've now mastered all four types of إِلَّا, both exception particles, and the connected vs. disconnected distinction. This chapter closes our exception unit. The next REVIEW will consolidate everything. You're building something solid.",
-      "ur": "آپ نے اب إِلَّا کی چاروں قسموں، دونوں استثنا ذروں، اور متصل بمقابل منقطع کی تمییز کو مکمل کر لیا ہے۔ یہ باب استثنا یونٹ کو بند کرتی ہے۔ اگلا REVIEW سب کو ملاے گا۔ آپ کچھ مضبوط بنا رہے ہیں۔"
+      "en": "Connected: the excepted one is from the group. Disconnected: it is from another kind, and إِلَّا means 'but rather'. With غَيْر and سِوَى the excepted noun is genitive; غَيْر carries the case instead. The review comes next.",
+      "ur": "متصل: مستثنیٰ گروہ میں سے ہے۔ منقطع: دوسری جنس سے، اور إِلَّا کا معنی 'بلکہ'۔ غَيْر اور سِوَى کے ساتھ مستثنیٰ مجرور ہوتا ہے؛ اعراب غَيْر پر آتا ہے۔ آگے جائزہ ہے۔"
     }
-  },
-  "template": "STANDARD"
+  }
 }
